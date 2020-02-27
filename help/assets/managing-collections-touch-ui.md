@@ -4,7 +4,7 @@ description: コレクションの作成、表示、削除、編集、ダウン�
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0ffda4a6919f2a7ba9f49321fbb59f076bf5c406
+source-git-commit: 97bb17ce719f82449e28f9b32eb651b632b0f8b5
 
 ---
 
@@ -19,9 +19,8 @@ source-git-commit: 0ffda4a6919f2a7ba9f49321fbb59f076bf5c406
 
 コレクションは、アセットを照合する方法に基づいて次のタイプに分かれます。
 
-* アセット、フォルダーおよび他のコレクションの静的参照リストを含むコレクション
-
-* 検索条件に基づいてアセットを動的に含むスマートコレクション
+* アセット、フォルダーおよび他のコレクションの静的参照リストを含むコレクションです。
+* 検索条件に基づいてアセットを動的に含めるスマートコレクション。
 
 ## コレクションコンソールにアクセスする {#navigating-the-collections-console}
 
@@ -162,19 +161,33 @@ Smart collections are built by saving a search so you can alter their content by
 1. **[!UICONTROL コレクションメタデータ]**&#x200B;ページの「**[!UICONTROL 基本]**」タブと「**[!UICONTROL 詳細]**」タブでコレクションメタデータを表示します。
 1. Modify the metadata, as necessary, and then tap/click **[!UICONTROL Save &amp; Close]** from the toolbar to save the changes.
 
-### Edit collection metadata in bulk {#editing-collection-metadata-in-bulk}
+### 複数のコレクションのメタデータを一括編集 {#editing-collection-metadata-in-bulk}
 
 複数のコレクションのメタデータを同時に編集できます。この機能により、複数のコレクションで共通のメタデータをすばやくレプリケートできます。
 
 1. コレクションコンソールで、メタデータを編集する 2 つ以上のコレクションを選択します。
-1. From the toolbar, tap/click the **[!UICONTROL Properties]** icon.
+1. ツールバーで、「プロパティ」をタップまたはクリ **[!UICONTROL ックしま]**&#x200B;す。
 1. 必要に応じて、**[!UICONTROL コレクションメタデータ]**&#x200B;ページの「**[!UICONTROL 基本]**」タブと「**[!UICONTROL 詳細]**」タブでメタデータを編集します。
+1. 特定のコレクションのメタデータのプロパティを表示するには、コレクションリストの残りのコレクションの選択を解除します。メタデータエディターのフィールドには、その特定のコレクションのメタデータが入力されています。
+
+   >[!NOTE]
+   >
+   >* コレクションのプロパティページで、コレクションのリストからコレクションの選択を解除することで、そのコレクションを削除できます。コレクションリストは、デフォルトではすべてのコレクションが選択されています。削除するコレクションのメタデータは更新されていません。
+   >* At the top of the list, select the check box near **[!UICONTROL Title]** to toggle between selecting the collections and clearing the list.
+
+
 1. Tap/click **[!UICONTROL Save &amp; Close]** from the toolbar, and then close the confirmation dialog to complete the process.
 1. To append the new metadata with the existing metadata, select **[!UICONTROL Append mode]**. このオプションを選択しないと、フィールド内の既存のメタデータが新しいメタデータに置換されます。「**[!UICONTROL 送信]**」をタップまたはクリックします。
 
    >[!NOTE]
    >
-   >追加モードは、複数の値を指定できるフィールドに対してのみ機能します。1 つの値のみを指定できるフィールドの場合、「**[!UICONTROL 追加モード]**」を選択しても、フィールド内の既存の値に新しいメタデータが追加されません。
+   >選択したコレクションに追加したメタデータは、これらのコレクションの以前のメタデータを上書きします。 追加モード [!UICONTROL を使用して] 、複数の値を含めることができるフィールド内の既存のメタデータに新しい値を追加します。 単一値フィールドは常に上書きされます。 Any tags you add in the [!UICONTROL Tags] field, are appended to the existing list of tags in the metadata.
+
+To customize the metadata [!UICONTROL Properties] page, including adding, modifying, deleting metadata properties, use the Schema editor.
+
+>[!TIP]
+>
+>バルク編集方法は、コレクションで使用可能なアセットに対して機能します。 複数のフォルダーで使用できるアセットや共通の条件に一致するアセットについては、これらのアセットを検索した後でメタデータを一括更新できます。
 
 ## コレクションの検索 {#searching-collections}
 
@@ -288,6 +301,5 @@ Assets ユーザーインターフェイスでは、特定のルール、検索�
 >[!MORELIKETHIS]
 >
 >* [Experience Manager Assets電子メール通知の設定](/help/sites-administering/notification.md#assetsconfig)
->* [複数コレクションのメタデータプロパティの編集](managing-multiple-assets.md)
 >* [コレクション用レビュータスクの作成](bulk-approval.md)
 
