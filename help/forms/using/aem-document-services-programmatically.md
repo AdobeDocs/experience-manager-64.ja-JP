@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: 90ea3f4aa53b00e975542a62da08b348f6097be1
 
 ---
 
@@ -4441,39 +4441,38 @@ GeneratePDFService は、さまざまなファイル形式（.doc、.docx、.ppt
 
 #### PDF Generator API（Microsoft WindowsおよびLinuxで利用可能） {#pdf-generator-api-available-on-microsoft-windows-and-linux}
 
-<table> 
- <tbody> 
-  <tr> 
-   <td><strong>API</strong></td> 
-   <td><p><strong>Microsoft Windows </strong></p> </td> 
-   <td><strong>Linux </strong></td> 
-  </tr> 
-  <tr> 
-   <td>createPDF</td> 
-   <td><strong>✓</strong></td> 
-   <td><strong>✓</strong></td> 
-  </tr> 
-  <tr> 
-   <td>exportPDF</td> 
-   <td><strong>✓</strong></td> 
-   <td><strong>✓</strong></td> 
-  </tr> 
-  <tr> 
-   <td>optimizePDF</td> 
-   <td><strong>✓</strong></td> 
-   <td>✖</td> 
-  </tr> 
-  <tr> 
-   <td>exportPDF</td> 
-   <td><strong>✓</strong></td> 
-   <td>✖</td> 
-  </tr> 
-  <tr> 
-   <td>OCR PDF（検索可能なPDF）</td> 
-   <td><strong>✓</strong></td> 
-   <td>✖</td> 
-  </tr> 
- </tbody> 
+<table>
+ <tbody>
+  <tr>
+   <td><strong>API</strong></td>
+   <td><p><strong>Microsoft Windows </strong></p> </td>
+   <td><strong>Linux </strong></td>
+  </tr>
+  <tr>
+   <td>createPDF</td>
+   <td><strong>✓</strong></td>
+   <td><strong>✓</strong></td>
+  </tr>
+  <tr>
+   <td>htmlToPDF</td>
+   <td><strong>✓</strong></td>
+   <td><strong>✓</strong></td>
+  </tr>
+   <td>optimizePDF</td>
+   <td><strong>✓</strong></td>
+   <td>✖</td>
+  </tr>
+  <tr>
+   <td>exportPDF</td>
+   <td><strong>✓</strong></td>
+   <td>✖</td>
+  </tr>
+  <tr>
+   <td>OCR PDF（検索可能なPDF）</td>
+   <td><strong>✓</strong></td>
+   <td>✖</td>
+  </tr>
+ </tbody>
 </table>
 
 #### createPDF {#createpdf}
