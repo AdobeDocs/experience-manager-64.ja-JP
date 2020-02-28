@@ -1,0 +1,110 @@
+---
+title: Dynamic Media アセットのプレビュー
+seo-title: Dynamic Media アセットのプレビュー
+description: ダイナミックメディアでアセットをプレビューする方法を説明します。
+seo-description: ダイナミックメディアでアセットをプレビューする方法を説明します。
+uuid: f0ff2fc4-a263-4dbe-ba46-b07077b49ae0
+contentOwner: Rick Brough
+products: SG_EXPERIENCEMANAGER/6.4/ASSETS
+topic-tags: dynamic-media
+content-type: reference
+discoiquuid: 77296bff-8429-4240-af93-26076ae431ec
+translation-type: tm+mt
+source-git-commit: 8c6fdcea0def7720062edfc564c536f8d47e8402
+
+---
+
+
+# Dynamic Media アセットのプレビュー {#previewing-assets}
+
+You can use **[!UICONTROL Preview]** to see how a Dynamic Media digital asset looks when it is viewed by a customer in their own web browser. The default embedded, cross-device viewer that is assigned to the asset is used for the **[!UICONTROL Preview]**.
+
+ビューアは、コンピューター画面やモバイルデバイスでのリッチメディアアセットの表示方法を決定する、様々な設定（「プリセット」と呼ばれます）のコレクションです。この設定には、ビューアのディスプレイサイズ、ズーム時の動作、配色、境界線、フォントなどが含まれます。
+
+ビデオ、スピンセットおよび画像セット専用のプレビュー機能を使用する以外に、作成したビューアプリセットを使用してアセットをプレビューすることもできます。または、画像プリセットを使用して、画像のレンディションをプレビューします。
+
+* [画像プリセットの適用](image-presets.md)
+* [ビューアプリセットの適用](viewer-presets.md)
+
+>[!NOTE]
+>
+>AEM の Web ページ（Sites）で操作しているときは、**[!UICONTROL 編集]**&#x200B;モードでアセットをプレビューできません。**[!UICONTROL プレビュー]**&#x200B;モードに移るには、右上隅の「**プレビュー**」をクリックする必要があります。
+
+**アセットをプレビューするには**:
+
+1. **Adobe Experience Managerのナビゲーションページで**、「アセット **[!UICONTROL 」をタップし、「ファイル]** 」をタ **ップしてアセットにア&#x200B;******クセスします。
+1. Near the upper-right corner of the page, from the **[!UICONTROL View]** drop-down list, tap **[!UICONTROL List View]**.
+1. （オプション）「**[!UICONTROL 種類]**」列を使用して、プレビューする種類でアセットを並べ替えます。
+1. 「**[!UICONTROL タイトル]**」列で、プレビューするアセットの（サムネール画像ではなく）タイトル名をクリックします。
+1. クリックしたアセットの種類に応じて、次のいずれかの操作をおこないます。
+
+<table> 
+ <tbody>
+  <tr>
+   <td><strong>タップしたアセットタイプ</strong><br /> </td> 
+   <td><strong>特定のレンディションでアセットをプレビューできるか</strong></td> 
+   <td><strong>特定のビューアでアセットをプレビューできるか</strong></td> 
+  </tr>
+  <tr>
+   <td><p>画像</p> </td> 
+   <td>可</td> 
+   <td>可</td> 
+   <td><p><strong>特定のレンディションでアセットをプレビューするには：</strong></p> 
+    <ul> 
+     <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>レンディション</strong>」をクリックし、プレビューする特定のレンディションを選択します。</li> 
+    </ul> <p><strong>特定のビューアでアセットをプレビューするには：</strong></p> 
+    <ul> 
+     <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>ビューア</strong>」をクリックして、アセットに適用するビューアを選択します。</li> 
+    </ul> <p>「<strong>+</strong>」および「<strong>-</strong>」アイコンを使用して、選択した画像のズームを増減します。Click <strong>Reset</strong> to return the image to the original zoom.<br />モバイルデバイスを使用している場合は、画像をダブルタップして、画像を少しずつズームインできます。最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> <p>To enable or disable viewer presets in the user interface, see <a href="/help/assets/managing-viewer-presets.md">Managing Viewer Presets</a>.<br /> </p> </td> 
+  </tr>
+  <tr>
+   <td>マルチメディア</td> 
+   <td>可</td> 
+   <td>可</td> 
+   <td><p><strong>特定のレンディションでアセットをプレビューするには：</strong></p> 
+    <ul> 
+     <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>レンディション</strong>」をクリックし、プレビューする特定のレンディションを選択します。</li> 
+    </ul> <p>高解像度のビデオレンディションをプレビュー用に選択すると、ビデオが切り詰められて表示される場合があります。 これは、レンディションのプレビューで、プレビューに使用される埋め込みビューアのコンテキスト内で、ユーザが表示する正確な解像度が表示されるからです。</p> <p>アセットレベルでアダプティブビデオセットをプレビューすると、レンディションは1つの再生エクスペリエンスにグループ化されます。 That is, the adaptive video is sized properly for viewing and played back using the best resolution in the context of your viewing device and connection speed.<br /> </p> <p><strong>特定のビューアでアセットをプレビューするには：</strong></p> 
+    <ul> 
+     <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>ビューア</strong>」をクリックして、アセットに適用するビューアを選択します。</li> 
+    </ul> <p>To enable or disable viewer presets in the user interface, see <a href="/help/assets/managing-viewer-presets.md">Managing Viewer Presets</a>.</p> </td> 
+  </tr>
+  <tr>
+   <td>画像セット</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
+   <td><p><strong>特定のビューアでアセットをプレビューするには：</strong></p> 
+    <ul> 
+     <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>ビューア</strong>」をクリックして、アセットに適用するビューアを選択します。</li> 
+    </ul> <p>「<strong>+</strong>」および「<strong>-</strong>」アイコンを使用して、選択した画像のズームを増減します。Click <strong>Reset</strong> to return the image to the original zoom.<br />モバイルデバイスを使用している場合は、画像をダブルタップして、画像を少しずつズームインできます。最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> <p>To enable or disable viewer presets in the user interface, see <a href="/help/assets/managing-viewer-presets.md">Managing Viewer Presets</a>.</p> </td> 
+  </tr>
+  <tr>
+   <td>スピンセット</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
+   <td><p><strong>特定のビューアでアセットをプレビューするには：</strong></p> 
+    <ul> 
+     <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>ビューア</strong>」をクリックして、アセットに適用するビューアを選択します。</li> 
+    </ul> <p>「<strong>+</strong>」および「<strong>-</strong>」アイコンを使用して、選択した画像のズームを増減します。Click <strong>Reset</strong> to return the image to the original zoom.<br />モバイルデバイスを使用している場合は、画像をダブルタップして、画像を少しずつズームインできます。最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> <p>To enable or disable viewer presets in the user interface, see <a href="/help/assets/managing-viewer-presets.md">Managing Viewer Presets</a>.</p> </td> 
+  </tr>
+  <tr>
+   <td>混在メディアセット</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
+   <td><p><strong>特定のビューアでアセットをプレビューするには：</strong></p> 
+    <ul> 
+     <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>ビューア</strong>」をクリックして、アセットに適用するビューアを選択します。</li> 
+    </ul> <p>「<strong>+</strong>」および「<strong>-</strong>」アイコンを使用して、選択した画像のズームを増減します。Click <strong>Reset</strong> to return the image to the original zoom.<br />モバイルデバイスを使用している場合は、画像をダブルタップして、画像を少しずつズームインできます。最大ズームに達してから、画像を再度ダブルタップすると、ズーム状態がリセットされます。画像全体をドラッグするように動かすと、パンします。</p> <p>To enable or disable viewer presets in the user interface, see <a href="/help/assets/managing-viewer-presets.md">Managing Viewer Presets</a>.</p> </td> 
+  </tr>
+  <tr>
+   <td>カルーセルセット</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
+   <td><p><strong>特定のビューアでアセットをプレビューするには：</strong></p> 
+    <ul> 
+     <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。アセットに適用するビューアを選択します。</li> 
+    </ul> <p>To enable or disable viewer presets in the user interface, see <a href="/help/assets/managing-viewer-presets.md">Managing Viewer Presets</a>.</p> </td> 
+  </tr>
+ </tbody>
+</table>
+
