@@ -1,0 +1,58 @@
+---
+title: 選択したユーザーグループにルールエディターへのアクセスを許可する
+seo-title: 選択したユーザーグループにルールエディターへのアクセスを許可する
+description: 選択したユーザーグループにルールエディターへの制限付きアクセスを許可します。
+seo-description: 選択したユーザーグループにルールエディターへの制限付きアクセスを許可します。
+uuid: 3d982858-b2b5-4370-a9d7-5a95842a7897
+content-type: reference
+topic-tags: develop
+products: SG_EXPERIENCEMANAGER/6.4/FORMS
+discoiquuid: 6bd58e37-085e-4057-8200-1404d54f41cc
+translation-type: tm+mt
+source-git-commit: 73d0dea62c294bea435364fb9c6892d80751d90d
+
+---
+
+
+# 選択したユーザーグループにルールエディターへのアクセスを許可する {#grant-rule-editor-access-to-select-user-groups}
+
+## 概要 {#overview}
+
+アダプティブフォームで作業を行うユーザーのタイプやスキルは、それぞれ異なっています。正しい知識を使用してスクリプトや複雑なルールを操作できる上級ユーザーもいれば、アダプティブフォームのレイアウトや基本的なプロパティ以外の操作はできない初心者レベルのユーザーもいます。
+
+AEM Forms では、各ユーザーの役割や職務に応じて、ルールエディターへのアクセスを制限することができます。In the Adaptive Forms Configuration Service settings, you can specify the [user groups](/help/sites-administering/security.md) that can view and access rule editor.
+
+## ルールエディターにアクセスできるユーザーグループの指定 {#specify-user-groups-that-can-access-rule-editor}
+
+1. 管理者として AEM Forms にログインします。
+1. In the author instance, click ![adobeexperiencemanager](assets/adobeexperiencemanager.png)Adobe Experience Manager > Tools ![hammer](assets/hammer.png) > Operations > Web Console. をクリックします。新しいウィンドウが Web コンソールに表示されます。
+
+   ![1](assets/1.png)
+
+1. In Web Console Window, locate and click **Adaptive Form Configuration Service**. **Adaptive Form Configuration Serviceダイアログが表示されます** 。 値を変更せずに、「**保存**」をクリックします。
+
+   これにより、CRX リポジトリに /apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config ファイルが作成されます。
+
+1. 管理者として CRXDE にログインします。編集のため、/apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config ファイルを開きます。
+1. Use the following property to specify the name of a group that can access rule editor (For example, RuleEditorsUserGroup) and click **Save All**.
+
+   `af.ruleeditor.custom.groups=["RuleEditorsUserGroup"]`
+
+   複数のグループに対するアクセスを有効にするには、コンマ区切り値のリストを指定します。
+
+   `af.ruleeditor.custom.groups=["RuleEditorsUserGroup", "PermittedUserGroup"]`
+
+   ![create-user](assets/create-user.png)
+
+   Now, when a user that is not a part of the specified user group (here RuleEditorsUserGroup) taps a field, the Edit Rule icon ( ![edit-rules1](assets/edit-rules1.png)) is not available for her in the components toolbar:
+
+   ![componentstoolbarwither](assets/componentstoolbarwithre.png)
+
+   ルールエディターのアクセス権を持つユーザーに表示されるコンポーネントツールバー
+
+   ![componentstorelbarwithouter](assets/componentstoolbarwithoutre.png)
+
+   ルールエディターのアクセス権を持たないユーザーに表示されるコンポーネントツールバー
+
+   For instructions on adding users to groups, see [User Administration and Security](/help/sites-administering/security.md).
+
