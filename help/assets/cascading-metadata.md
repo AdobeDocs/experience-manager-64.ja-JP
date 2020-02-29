@@ -3,7 +3,7 @@ title: カスケードメタデータ
 description: この記事では、アセットのカスケードメタデータを定義する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: e6c3254b1913f300f5c4bf99c75734c4a38cf021
 
 ---
 
@@ -106,9 +106,8 @@ source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
 
    ![ビデオアセットのカスケードメタデータ](assets/video_asset.png)
 
-   **** 図：ビデオア *セットのカスケードメタデータ*
+   *図：ビデオアセットのカスケードメタデータ*
 
    ![ドキュメントアセットのカスケードメタデータ](assets/doc_type_fields.png)
 
-   **** 図：ドキュメン *トアセットのカスケードメタデータ*
-
+   *図：ドキュメントアセットのカスケードメタデータ*
