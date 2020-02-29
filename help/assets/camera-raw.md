@@ -3,7 +3,7 @@ title: Camera Raw サポート
 description: Adobe Experience Manager AssetsでCamera rawサポートを有効にする方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: a2404241676daeb5e4b53149c03a23d5ee2f2667
+source-git-commit: e6c3254b1913f300f5c4bf99c75734c4a38cf021
 
 ---
 
@@ -55,9 +55,13 @@ Adobe Experience Manager AssetsでCamera rawのサポートを有効にするに
 
 これで、Camera Raw ファイルを AEM Assets に読み込むことができます。After you install the Camera RAW package and configure the required workflow, **[!UICONTROL Image Adjust]** option appears in the list of side panes.
 
-![chlimage_1-337](assets/chlimage_1-337.png)*図：サイドペインのオプション。*
+![chlimage_1-337](assets/chlimage_1-337.png)
 
-![chlimage_1-338](assets/chlimage_1-338.png)*図：画像に軽量な編集を行う場合は、このオプションを使用します。*
+*図：サイドペインのオプション。*
+
+![chlimage_1-338](assets/chlimage_1-338.png)
+
+*図：画像に軽量な編集を行う場合は、このオプションを使用します。*
 
 Camera Raw 画像に対する編集を保存すると、その画像に対して、新しいレンディション「`AdjustedPreview.jpg`」が生成されます。Camera Raw 以外の画像タイプの場合は、変更内容がすべてのレンディションに反映されます。
 
