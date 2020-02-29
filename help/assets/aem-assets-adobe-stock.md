@@ -3,7 +3,7 @@ title: AEM Assets での Adobe Stock アセットの使用
 description: AEM で Adobe Stock を検索、取得、ライセンスおよび管理します。ライセンスされたアセットをその他の AEM アセットとして扱います。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ff098a599f1c5230ce12a9c5cdbd1b118030a5f8
+source-git-commit: e6c3254b1913f300f5c4bf99c75734c4a38cf021
 
 ---
 
@@ -52,7 +52,9 @@ AEM と Adobe Stock の間でやり取りができるようにするには、AEM
 
 AEM 内で Adobe Stock アセットのライセンスを取得すると、そのアセットを通常のアセットと同様に使用および管理できます。AEMでは、ユーザーはアセットを検索してプレビューできます。アセットをコピーして公開する。ブランドポータルでアセットを共有する。aemデスクトップアプリケーションを使用してアセットにアクセスし、使用する。など。
 
-![Adobe stockアセットを検索し、AEM workspace図から結果をフィルターし](assets/adobe-stock-search-results-workspace.png)*ます。Adobe stockアセットの検索とAEM Workspaceからの結果のフィルター*
+![AEM Workspace から Adobe Stock アセットを検索して結果を絞り込む](assets/adobe-stock-search-results-workspace.png)
+
+*図：Adobe stockアセットの検索とAEM Workspaceからの結果のフィルター*
 
 **A.** Adobe Stock ID が提供されているアセットと類似したアセットを検索します。**B.** 選択した形状や向きと一致するアセットを検索します。**C.** サポートされているアセットタイプのいずれかを検索します。**D.** フィルターウィンドウを開く／折りたたみます。**E.** 選択したアセットのライセンスを許諾して AEM に保存します。**F.** アセットを透かし付きで AEM に保存します。**G.** 選択したアセットと類似したアセットを Adobe Stock Web サイトで調べます。**H.** 選択したアセットを Adobe Stock Web サイトに表示します。**I.** 検索結果から選択したアセットの数。**J.** カード表示とリスト表示を切り替えます。
 
@@ -70,7 +72,9 @@ Alternatively, start typing `Location: Adobe Stock` in the search bar to select 
 >
 >Adobe Stock から検索されたアセットは AEM に表示されるだけです。[アセットを保存](aem-assets-adobe-stock.md#saveassets)するか、[アセットのライセンスを許諾](aem-assets-adobe-stock.md#licenseassets)した後でないと、Adobe Stock アセットを取得して AEM リポジトリに保存することはできません。既に AEM に保存されているアセットが表示され、参照やアクセスが簡単にできるようにハイライトされます。また、これらのアセットは、ソースが Adobe Stock であることを示すいくつかの追加メタデータとともに保存されます。
 
-![AEMでの検索フィルター、および検索結果でハイライト表示されたAdobe stockアセット](assets/aem-search-filters2.jpg)*の図：AEMでの検索フィルターと検索結果でのハイライト表示されたAdobe stockアセット*
+![AEM の検索フィルターと、検索結果内でハイライトされている Adobe Stock アセット](assets/aem-search-filters2.jpg)
+
+*図：AEMでの検索フィルターと検索結果でのハイライト表示されたAdobe stockアセット*
 
 ### 必要なアセットの保存と表示 {#saveassets}
 
@@ -86,7 +90,9 @@ AEM に保存するアセットを選択します。上部ツールバーの「�
 
 Adobe Stock エンタープライズプランの割り当てを使用することで、Adobe Stock アセットのライセンスを許諾できます。ライセンスを許諾されたアセットは透かしなしで保存され、AEM Assets で検索することも使用することも可能になります。
 
-![AEM Assets図でAdobe stockアセットのライセンスを取得して保存するためのダイアログ](assets/aem-stock_licenseandsave.jpg)*です。AEM AssetsでAdobe stockアセットをライセンス認証して保存するためのダイアログ*
+![Adobe Stock アセットのライセンスを許諾して AEM Assets に保存するためのダイアログ](assets/aem-stock_licenseandsave.jpg)
+
+*図：AEM AssetsでAdobe stockアセットをライセンス認証して保存するためのダイアログ*
 
 ### メタデータおよびアセットプロパティへのアクセス {#access-metadata-and-asset-properties}
 
@@ -96,7 +102,7 @@ Adobe Stock エンタープライズプランの割り当てを使用するこ�
 
 ![保存されているアセットのメタデータとライセンス参照の表示、アクセス](assets/metadata_properties.jpg)
 
-**** 図：保存さ *れたアセットのメタデータおよびライセンス参照の表示とアクセス*
+*図：保存されたアセットのメタデータおよびライセンス参照の表示とアクセス*
 
 ## 既知の制限 {#known-limitations}
 
