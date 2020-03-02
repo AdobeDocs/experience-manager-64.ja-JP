@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: c703f4af30c2093d9600d0771dc1034cd6465c8c
+source-git-commit: 1d02401f6b1946062eb238baa2fb70bbd47881a6
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: c703f4af30c2093d9600d0771dc1034cd6465c8c
 | バージョン | 6.4.7.0 |
 | タイプ | Service Pack のリリース |
 | 日付 | 2019 年 12 月 12 日 |
-| ダウンロード URL | PackageShare [,](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.7.0)[Software DistributionのAEM 6.4.7.0](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aem.html#package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/servicepack/aem-service-pkg-6.4.7.zip) |
+| ダウンロード URL | AEM 6.4.7.0 on [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.7.0) |
 
 ## AEM 6.4.7.0 に含まれる機能 {#what-s-included-in-aem}
 
@@ -2138,7 +2138,7 @@ AEM 6.4.7.0 に含まれているコンテンツパッケージの一覧
 * [AEM 製品ページ](https://www.adobe.com/solutions/web-experience-management.html)
 * [AEM 開発者のサポート](https://docs.adobe.com/content/ddc/en.html)
 * [AEM 6.4 ドキュメント](https://helpx.adobe.com/support/experience-manager/6-4.html)
-* Subscribe to [Adobe Priority Product Updates](https://www.adobe.com/subscription/priority-product-update.html)
+* Subscribe to [Adobe priority product updates](https://www.adobe.com/subscription/priority-product-update.html)
 
 ### 制限付きサイト {#restricted-sites-new}
 
