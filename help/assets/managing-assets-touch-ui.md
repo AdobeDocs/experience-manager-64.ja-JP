@@ -4,7 +4,7 @@ description: AEM Assetsのタッチ操作向けユーザーインターフェイ
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 56e5fd252b860e95a81293407f51db9f5ae296c2
+source-git-commit: 174c100a55bd8b2f4d33b07683e359d77f13983d
 
 ---
 
@@ -21,7 +21,9 @@ When organizing a collection of assets, for example, all `Nature` images, you ca
 
 >[!NOTE]
 >
->Sharing an Assets folder of the type `sling:OrderedFolder` is not supported when sharing to Marketing Cloud. フォルダーを共有する場合は、フォルダーを作成するときに「Ordered」を選択しないでください。
+>* Sharing an Assets folder of the type `sling:OrderedFolder` is not supported when sharing to Marketing Cloud. フォルダーを共有する場合は、フォルダーを作成するときに「Ordered」を選択しないでください。
+>* Experience Managerでは、フォルダーの名前とし `subassets` てwordを使用することはできません。 これは、複合アセットのサブアセットを含むノード用に予約されたキーワードです。
+
 
 1. 新しいフォルダーを作成するデジタルアセットフォルダーの場所に移動します。
 1. メニューで、「**[!UICONTROL 作成]**」をクリックします。Select **[!UICONTROL New Folder]**.
