@@ -1,15 +1,15 @@
 ---
 title: PhoneGap
 seo-title: Adobe PhoneGap Enterprise 用のコンテンツのオーサリング
-description: 'このページでは、AEM と PhoneGap Enterprise を連携させたアプリ開発の概要について説明します。AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単に作成できます。PhoneGap と連携することで、そのコンテンツを利用するユーティリティアプリを作成できます。 '
-seo-description: 'このページでは、AEM と PhoneGap Enterprise を連携させたアプリ開発の概要について説明します。AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単に作成できます。PhoneGap と連携することで、そのコンテンツを利用するユーティリティアプリを作成できます。 '
+description: このページでは、AEM と PhoneGap Enterprise を連携させたアプリ開発の概要について説明します。AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単に作成できます。PhoneGap と連携することで、そのコンテンツを利用するユーティリティアプリを作成できます。
+seo-description: このページでは、AEM と PhoneGap Enterprise を連携させたアプリ開発の概要について説明します。AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単に作成できます。PhoneGap と連携することで、そのコンテンツを利用するユーティリティアプリを作成できます。
 uuid: c6ac02fa-d41c-4b57-95d8-171a96540dd6
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: bc61e495-b53b-49c5-99e5-c2e35873e6bd
 translation-type: tm+mt
-source-git-commit: 6b1052ff03f336fa102b8863fe138e91c6e9f2f7
+source-git-commit: 9d03a3988b2c8e34b9009d80a53d8b8508b5f0aa
 
 ---
 
@@ -35,7 +35,7 @@ Adobe PhoneGap と連携して AEM Mobile を使用するには、以下のリ�
 * [AEM Mobile コンテンツサービス：概要](/help/mobile/develop-content-as-a-service.md)
 
    * To enable Content Services and Data Models, see [Administering Content Services](/help/mobile/developing-content-services.md)
-   * To learn about Creating Models, see [Developing Models](/help/mobile/models-in-repository.md)
+   * To learn about Creating Models, see [Developing Models](/help/mobile/administer-mobile-apps.md)
    * To learn about Rendering and Delivery, see [Rendering and Delivery of Content Services](/help/mobile/rendering-and-delivery.md)
 
 >[!NOTE]
