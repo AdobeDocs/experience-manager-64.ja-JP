@@ -3,18 +3,18 @@ title: Brand Portal へのフォルダーの公開
 description: Brand Portal へのフォルダーの公開および非公開の方法を説明します。
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 33210032c45e38963aed429e70eec4095c5d75f1
 
 ---
 
 
 # Brand Portal へのフォルダーの公開 {#publish-folders-to-brand-portal}
 
-Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォルダーを組織の AEM Assets Brand Portal インスタンスに公開（または公開ワークフローを未来の日時で設定）できます。ただし、最初に AEM Assets を Brand Portal と統合する必要があります。For details, see [Configure AEM Assets integration with Brand Portal](brand-portal-configuring-integration.md).
+Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォルダーを組織の AEM Assets Brand Portal インスタンスに公開（または公開ワークフローを未来の日時で設定）できます。ただし、最初に AEM Assets を Brand Portal と統合する必要があります。For details, see [Configure AEM Assets with Brand Portal](configure-aem-assets-with-brand-portal.md).
 
-アセットまたはフォルダーを公開すると、Brand portalのユーザーがそのアセットまたはフォルダーを使用できるようになります。
+アセットまたはフォルダを公開すると、Brand Portalでそのアセットまたはフォルダをユーザが使用できるようになります。
 
-AEM Assetsの元のアセットまたはフォルダーに後で変更を加えた場合、その変更はアセットまたはフォルダーを再公開するまでBrand Portalに反映されません。 この機能により、作業中の変更がBrand Portalで使用できなくなります。 Brand portalでは、管理者が発行した承認済みの変更のみを利用できます。
+AEM Assetsの元のアセットまたはフォルダーに対して後で変更を行った場合、その変更は、アセットまたはフォルダーを再公開するまでBrand Portalに反映されません。 この機能を使用すると、作業中の変更がBrand Portalで使用できなくなります。 Brand Portalでは、管理者が発行した承認済みの変更のみを利用できます。
 
 ## Brand Portal へのフォルダーの公開 {#publish-folders-to-brand-portal-1}
 
@@ -38,7 +38,7 @@ AEM Assetsの元のアセットまたはフォルダーに後で変更を加え�
 
    **フォルダーを後で公開**
 
-   アセットフォルダーのBrand Portalへの投稿ワークフローを後日にスケジュールするには：
+   アセットフォルダのBrand Portalへの投稿ワークフローを後日にスケジュールするには：
 
    1. Once you have selected assets/folders to publish, select **[!UICONTROL Manage Publication]** from the tool bar at the top.
    2. On **[!UICONTROL Manage Publication]** page, select **[!UICONTROL Publish to Brand Portal]** from **[!UICONTROL Action]** and select **[!UICONTROL Later]** from **[!UICONTROL Scheduling]**.
@@ -53,7 +53,7 @@ AEM Assetsの元のアセットまたはフォルダーに後で変更を加え�
 
 ## Brand Portal へのフォルダーの公開の取り消し {#unpublish-folders-from-brand-portal}
 
-AEM オーサーインスタンスからアセットインスタンスの公開を取り消すことで、Brand Portal に公開されているアセットフォルダーを削除できます。元のフォルダーの公開を取り消すと、そのコピーはBrand portalユーザーは使用できなくなります。
+AEM オーサーインスタンスからアセットインスタンスの公開を取り消すことで、Brand Portal に公開されているアセットフォルダーを削除できます。元のフォルダーの公開を取り消すと、そのコピーはBrand Portalユーザーは使用できなくなります。
 
 Brand Portal へのフォルダーの公開をすぐに取り消すことも、取り消しのスケジュールを未来の日時で設定することもできます。Brand Portal へのアセットフォルダーの公開を取り消すには、次のようにします。
 
@@ -70,9 +70,9 @@ Brand Portal へのフォルダーの公開をすぐに取り消すことも、�
    1. On **[!UICONTROL Manage Publication]** page, from **[!UICONTROL Action]** select **[!UICONTROL Unpublish from Brand Portal]** and from **[!UICONTROL Scheduling]** select **[!UICONTROL Now]**.
    2. Tap/ click **[!UICONTROL Next].**
    3. Within **[!UICONTROL Scope]**, confirm your selection and tap **[!UICONTROL Unpublish from Brand Portal]**.
-   ![confirm-unpublish](assets/confirm-unpublish.png)
+   ![非公開の確認](assets/confirm-unpublish.png)
 
-   **後でBrand portalから非公開にする**
+   **後でBrand Portalから非公開にする**
 
    Brand Portal へのフォルダーの公開を停止するスケジュールを未来の日時で設定するには、次のようにします。
 
@@ -86,4 +86,4 @@ Brand Portal へのフォルダーの公開をすぐに取り消すことも、�
 
 >[!NOTE]
 >
->Brand Portalに対してアセットを発行/非公開する手順は、フォルダーに対する対応手順と似ています。
+>Brand Portalに対してアセットを公開/非公開する手順は、フォルダの対応する手順と似ています。
