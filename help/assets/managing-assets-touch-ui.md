@@ -13,7 +13,7 @@ source-git-commit: 174c100a55bd8b2f4d33b07683e359d77f13983d
 
 AEM Assets のタッチ対応 UI で実行できる様々なアセット管理／編集タスクについて説明します。
 
-この記事では、Adobe Experience Manager(AEM)Assetsのタッチ操作向けユーザーインターフェイスを使用して、アセットを管理および編集する方法について説明します。 For an elementary knowledge about the user interface, see [Basic handling of Touch UI](/help/sites-authoring/basic-handling.md). コンテンツフラグメントを管理するには、「コンテンツフラグメ [ントアセットの管理](content-fragments-managing.md) 」を参照してください。
+この記事では、Adobe Experience Manager(AEM)Assetsのタッチ操作向けユーザーインターフェイスを使用して、アセットを管理および編集する方法について説明します。 For an elementary knowledge about the user interface, see [Basic handling of Touch UI](/help/sites-authoring/basic-handling.md). コンテンツフラグメントを管理する方法については、「コンテ [ンツフラグメント](content-fragments-managing.md) 」アセットの管理を参照してください。
 
 ## フォルダーの作成 {#create-folders}
 
@@ -22,7 +22,7 @@ When organizing a collection of assets, for example, all `Nature` images, you ca
 >[!NOTE]
 >
 >* Sharing an Assets folder of the type `sling:OrderedFolder` is not supported when sharing to Marketing Cloud. フォルダーを共有する場合は、フォルダーを作成するときに「Ordered」を選択しないでください。
->* Experience Managerでは、フォルダーの名前とし `subassets` てwordを使用することはできません。 これは、複合アセットのサブアセットを含むノード用に予約されたキーワードです。
+>* Experience Managerでは、単語をフォルダーの名 `subassets` 前として使用することはできません。 これは、複合アセットのサブアセットを含むノード用に予約されたキーワードです。
 
 
 1. 新しいフォルダーを作成するデジタルアセットフォルダーの場所に移動します。
@@ -47,7 +47,7 @@ When organizing a collection of assets, for example, all `Nature` images, you ca
 
 処理プロファイルが割り当てられているフォルダーの場合、プロファイル名がカード表示のサムネールに表示されます。リスト表示では、プロファイル名が「**[!UICONTROL 処理プロファイル]**」に表示されます。詳しくは、[処理プロファイル](processing-profiles.md)を参照してください。
 
-アセットをアップロードする前に、アセットがサポートされている形式であるこ [とを確認しま](assets-formats.md)す。
+アセットをアップロードする前に、サポートされている形式であることを [確認しま](assets-formats.md)す。
 
 **アセットをアップロードするには**:
 
@@ -58,7 +58,7 @@ When organizing a collection of assets, for example, all `Nature` images, you ca
    * HTML5をサポートするブラウザーで、アセットをインターフェイス上に直接ドラッグします。 ファイル名を変更するためのダイアログは表示されません。
    ![create_menu](assets/create_menu.png)
 
-   複数のファイルを選択するには、ファイル選択ダイアログで、Ctrl キーまたは Command キーを押しながらアセットを選択します。iPadからは、一度に1つのファイルしか選択できません。
+   複数のファイルを選択するには、ファイル選択ダイアログで、Ctrl キーまたは Command キーを押しながらアセットを選択します。iPadでは、一度に1つのファイルしか選択できません。
 
    サイズの大きなアセット（500 MB 超）のアップロードを一時停止して、同じページから後で再開できます。アップロードが開始されたら、プログレスバーの横に表示される&#x200B;**[!UICONTROL 一時停止]**&#x200B;アイコンをタップしてください。
 
@@ -74,7 +74,7 @@ When organizing a collection of assets, for example, all `Nature` images, you ca
 
    ![chlimage_1-6](assets/chlimage_1-6.png)
 
-   To cancel an ongoing upload, click the `X` button beside the progress bar. アップロード操作をキャンセルすると、AEM Assetsはアセットの部分的にアップロードされた部分を削除します。
+   To cancel an ongoing upload, click the `X` button beside the progress bar. アップロード操作をキャンセルすると、AEM Assetsはアセットの一部がアップロードされた部分を削除します。
 
    アップロードを再開する機能は、帯域幅が狭く、ネットワークの誤作動によりサイズの大きなアセットのアップロードに時間がかかるシナリオで特に便利です。アップロード処理を一時停止して、後で状況が改善したときに処理を再開できます。再開すると、処理を一時停止した箇所からアップロードが開始されます。
 
@@ -84,7 +84,7 @@ When organizing a collection of assets, for example, all `Nature` images, you ca
 
    アセットのアップロード先に既に存在するアセットと同じ名前のアセットをアップロードすると、警告ダイアログが表示されます。
 
-   既存のアセットを置き換えるか、別のバージョンを作成するか、アップロードする新しいアセットの名前を変更して両方のアセットを残すかを選択できます。既存のアセットを置き換えると、アセットのメタデータと、以前の変更および履歴（注釈、切り抜きなど）が削除されます。 両方のアセットを保持する場合は、新しいアセットの名前が変更されます。
+   既存のアセットを置き換えるか、別のバージョンを作成するか、アップロードする新しいアセットの名前を変更して両方のアセットを残すかを選択できます。既存のアセットを置き換えると、アセットのメタデータと、以前の変更および履歴（注釈、切り抜きなど）が削除されます。 両方のアセットを保持する場合、新しいアセットの名前が変更されます。
 
    ![chlimage_1-7](assets/chlimage_1-7.png)
 
@@ -123,7 +123,7 @@ When organizing a collection of assets, for example, all `Nature` images, you ca
 
 ### 順次アップロード {#serial-uploads}
 
-多数のアセットを一括してアップロードすると、システムリソースが大量に消費され、AEMデプロイメントのパフォーマンスに悪影響を与える可能性があります。 潜在的なボトルネックは、インターネット接続、ディスク上の読み取り/書き込み操作、同時アセットのアップロード時のPOST要求数に関するWebブラウザの制限などです。 バルクアップロード操作が失敗したり、処理の途中で終了したりする場合があります。 つまり、AEM Assets で多数のファイルを取り込むときに、一部のファイルを取り込めないことがあったり、まったくファイルを取り込めないことがあります。
+多数のアセットを一括してアップロードすると、システムリソースが大量に消費され、AEMデプロイメントのパフォーマンスに悪影響を与える可能性があります。 潜在的なボトルネックは、インターネット接続、ディスク上の読み取り/書き込み操作、同時アセットのアップロード時のPOST要求数に関するWebブラウザの制限などです。 一括アップロード操作が失敗したり、処理の途中で終了したりする場合があります。 つまり、AEM Assets で多数のファイルを取り込むときに、一部のファイルを取り込めないことがあったり、まったくファイルを取り込めないことがあります。
 
 この状況を回避するために、AEM Assets は一括アップロード操作時にすべてのアセットを同時に取り込まず、一度に 1 つずつアセットを取り込みます（順次アップロード）。
 
@@ -131,7 +131,7 @@ When organizing a collection of assets, for example, all `Nature` images, you ca
 
 ### Upload assets using FTP {#uploading-assets-using-ftp}
 
-ダイナミックメディアを使用すると、FTPサーバーを介したアセットのバッチアップロードが可能になります。 大きなアセット（1 GBを超える）をアップロードする場合、またはフォルダとサブフォルダ全体をアップロードする場合は、FTPを使用する必要があります。 定期的にFTPアップロードを行うように設定することもできます。
+ダイナミックメディアを使用すると、FTPサーバーを介してアセットをバッチアップロードできます。 大きなアセット（1 GBを超える）をアップロードする場合、またはフォルダとサブフォルダ全体をアップロードする場合は、FTPを使用する必要があります。 定期的にFTPアップロードを行うように設定することもできます。
 
 >[!NOTE]
 >
@@ -139,7 +139,7 @@ When organizing a collection of assets, for example, all `Nature` images, you ca
 
 >[!NOTE]
 >
->ダイナミックメディア — Scene7モードインストール機能パック(FP)18912のAEM作成者で、FTP経由でアセットをアップロードするには アドビサポートに問い合わせて FP-18912 にアクセスし、FTP アカウントの設定を完了します。[一括アセット移行用の機能パック 18912 のインストール](/help/assets/bulk-ingest-migrate.md)を参照してください。アセットのアップロードに FTP を使用する場合、AEM で指定したアップロード設定は無視されます。代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
+>ダイナミックメディア — Scene7モードインストール機能パック(FP)18912で、FTP経由でアセットをAEM作成者にアップロードする場合。 アドビサポートに問い合わせて FP-18912 にアクセスし、FTP アカウントの設定を完了します。[一括アセット移行用の機能パック 18912 のインストール](/help/assets/bulk-ingest-migrate.md)を参照してください。アセットのアップロードに FTP を使用する場合、AEM で指定したアップロード設定は無視されます。代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
 
 **FTP によりアセットをアップロードするには**
 
@@ -174,7 +174,7 @@ When organizing a collection of assets, for example, all `Nature` images, you ca
 | オプション |  | Tap/ click **[!UICONTROL Job Options]** to open the [!UICONTROL Upload Job Options] dialog box and choose options that affect the entire upload job. これらのオプションはすべてのファイルタイプで同じです。<br>アプリケーションの全般設定ページから、ファイルのアップロード用のデフォルトオプションを選択できます。このページを開くには、**[!UICONTROL セットアップ]**／**[!UICONTROL アプリケーション設定]**&#x200B;を選択します。Tap the **[!UICONTROL Default Upload Options]** button to open the [!UICONTROL Upload Job Options] dialog box. |
 |  | 実行時 | 「一時」または「定期」を選択します。定期ジョブを設定するには、繰り返しオプション（毎日、毎週、またはカスタム）を選択し、FTP アップロードジョブを反復する頻度を指定します。次に、必要に応じてスケジューリングオプションを指定します。 |
 |  | サブフォルダーを含める | アップロードしたいフォルダー内のすべてのサブフォルダーをアップロードします。アップロードするフォルダーとそのサブフォルダーの名前は AEM Assets に自動的に登録されます。 |
-|  | 切り抜きツールオプション | 画像の端から手動で切り抜くには、切り抜きメニューを選択し、「手動」を選択します。次に、画像のいずれかの辺または各辺から切り抜くピクセル数を入力します。画像から切り抜かれる範囲は、画像ファイルの ppi（画素密度）設定に応じて異なります。例えば、画像が 150 ppi で表示されている場合に、「上」、「右」、「下」、「左」テキストボックスに 75 と入力すると、各辺から 0.5 inch ずつ切り抜かれます。<br>画像からホワイトスペースを自動的に切り抜くには、切り抜きメニューを開き、「手動」を選択し、「上」、「右」、「下」、「左」フィールドに画像の各辺から切り抜くピクセル数を入力します。また、切り抜きメニューで「トリミング」を選択し、以下のオプションを選択することもできます。<br> **トリミング対象カラー** <ul><li>**Color** - 「カラー」オプションを選択します。 次に、隅メニューを選択し、切り抜きたいホワイトスペースの色を最も表現している色の画像の角を選択します。</li><li>****&#x200B;透明度 - 「透明度」オプションを選択します。<br> **Tolerance** — スライダをドラッグして、許容値を0 ～ 1の範囲で指定します。カラーに基づくトリミングの場合は、0に設定すると、画像の隅で選択した色と正確に一致するピクセルのみが切り抜かれます。 1 に近いほど、色の違いに対する許容度が高くなります。<br> 透明度に基づくトリミングでは、切り抜くピクセルが透明な場合のみ、0 を指定してください。1 に近いほど、不透明さに対する許容度が高くなります。</li></ul><br>これらの切り抜きツールオプションは、非破壊です（何度でも修正できます）。 |
+|  | 切り抜きツールオプション | 画像の端から手動で切り抜くには、切り抜きメニューを選択し、「手動」を選択します。次に、画像のいずれかの辺または各辺から切り抜くピクセル数を入力します。画像から切り抜かれる範囲は、画像ファイルの ppi（画素密度）設定に応じて異なります。例えば、画像が 150 ppi で表示されている場合に、「上」、「右」、「下」、「左」テキストボックスに 75 と入力すると、各辺から 0.5 inch ずつ切り抜かれます。<br>画像からホワイトスペースを自動的に切り抜くには、切り抜きメニューを開き、「手動」を選択し、「上」、「右」、「下」、「左」フィールドに画像の各辺から切り抜くピクセル数を入力します。また、切り抜きメニューで「トリミング」を選択し、以下のオプションを選択することもできます。<br> **トリミング対象カラー** <ul><li>**色** - 「色」オプションを選択します。 次に、隅メニューを選択し、切り抜きたいホワイトスペースの色を最も表現している色の画像の角を選択します。</li><li>****&#x200B;透明度 - 「透明度」オプションを選択します。<br> **許容値** — スライダをドラッグして、許容値を0 ～ 1の範囲で指定します。色に基づいてトリミングする場合は、0を指定すると、画像の隅で選択した色と正確に一致する場合にのみピクセルが切り抜かれます。 1 に近いほど、色の違いに対する許容度が高くなります。<br> 透明度に基づくトリミングでは、切り抜くピクセルが透明な場合のみ、0 を指定してください。1 に近いほど、不透明さに対する許容度が高くなります。</li></ul><br>これらの切り抜きツールオプションは、非破壊です（何度でも修正できます）。 |
 |  | カラープロファイルオプション | 配信に使用される最適なファイルを作成するときのカラー変換を選択します。<ul><li>デフォルトの色保存：画像にカラースペース情報が含まれる場合はソース画像の色を保持します。カラー変換はおこなわれません。今日ほぼすべての画像に適切なカラープロファイルが埋め込まれています。ただし、CMYK のソース画像にカラープロファイルが埋め込まれていないと、色が standard Red Green Blue（sRGB）カラースペースに変換されます。sRGB は Web ページでの画像表示に最適なカラースペースです。</li><li>オリジナルカラースペースを維持：アップロード時にカラー変換をおこなわずに元の色を保持します。カラープロファイルが埋め込まれていない画像の場合、カラー変換はすべて、公開設定で設定したデフォルトのカラープロファイルを使用しておこなわれます。このカラープロファイルは、このオプションで作成したファイルのカラーと一致しない可能性があります。したがって、「デフォルトの色保存」オプションを使用することをお勧めします。</li><li>カスタム アップロード元／アップロード先<br> アップロード元とアップロード先のカラースペースを選択できるメニューが開きます。この詳細オプションは、ソースファイルに埋め込まれたカラー情報より優先されます。送信するすべての画像のカラープロファイルデータが正しくないか不足している場合に、このオプションを選択します。</li></ul> |
 |  | 画像編集オプション | 画像のクリッピングマスクを保持し、カラープロファイルを選択できます。<br>[アップロード時の画像編集オプションの設定](#setting-image-editing-options-at-upload)を参照してください。 |
 |  | Postscript オプション | PostScript® ファイルのラスタライズ、ファイルの切り抜き、透明背景の維持、解像度の選択、カラースペースの選択をおこなうことができます。<br>[PostScript および Illustrator のアップロードオプションの設定](#setting-postscript-and-illustrator-upload-options)を参照してください。 |
@@ -201,7 +201,7 @@ When uploading image files, including AI, EPS, and PSD files, you can take the f
 | アンシャープマスク |  | 最後のダウンサンプル済み画像でシャープニングフィルター効果を調整し、効果の強さと半径（ピクセル単位）および無視されるコントラストのしきい値を制御することができます。<br>この効果では、Photoshop のアンシャープマスクフィルターと同じオプションが使用されます。名前から連想される機能と違い、アンシャープマスクとはシャープニングフィルターのことです。「アンシャープマスク」の下で、必要なオプションを設定します。以下の説明に従ってオプションを設定します。 |
 |  | 量 | 端のピクセルに適用するコントラストを制御します。<br>この量は、効果の強さと考えることができます。Dynamic Media と Adobe Photoshop での「アンシャープマスク」の値の主な違いは、Photoshop では範囲が 1%～500% である点です。一方、Dynamic Media では、値範囲は 0.0～5.0 です。5.0 という値は Photoshop の 500% にほぼ相当し、0.9 という値は 90% に相当するようになっています。 |
 |  | 半径 | 効果の半径を制御します。値の範囲は 0～250 です。<br>効果は画像内の全ピクセルに切れ目なく続き、すべてのピクセルから全方向に放射されます。半径はピクセル単位です。例えば、2000 x 2000 ピクセルの画像と 500 x 500 ピクセルの画像で同じシャープニング効果を得たい場合、2000 x 2000 ピクセルの画像では半径を 2 ピクセルに設定し、500 x 500 ピクセルの画像では 1 ピクセルに設定します。ピクセル数の多い画像には大きい値を使用します。 |
-|  | しきい値 | しきい値とは、アンシャープマスクフィルターの適用時に無視されるコントラストの範囲です。このフィルターの使用中に画像に「ノイズ」が加わるのを防ぐために重要です。値範囲は 0～255 で、グレースケール画像の明るさのステップ数です。0=黒、128=50% グレー、255=白です。<br> 例えば、しきい値を12に設定すると、肌のトーンの明るさに関するわずかな変化は無視され、ノイズの追加は避けられますが、まつげが皮膚と接触する場所など、コントラストの強い領域にエッジのコントラストが追加されます。<br> 例えば、ある人の顔写真を撮影した場合、アンシャープマスクは画像のコントラストの強い部分に影響を与えます。例えば、まつげと皮膚が接触して明らかなコントラストが生じる部分や、滑らかな肌自体が影響を受けます。 非常に滑らかな肌でも、明るさの値はわずかに変化しています。しきい値を使用しないと、このフィルターはこのような肌部分のピクセルのわずかな変化を強調します。同様に、まつげのコントラストを強めてシャープさを強調し、ノイズのある望ましくない効果を生み出してしまいます。<br>しきい値は、この問題を解決するために導入されたもので、フィルターに対し、滑らかな肌のようにコントラストが大きく変化しないピクセルは無視するよう指示します。<br>先ほど示したファスナーのグラフィックで、ファスナーの横の生地に注目してください。しきい値が低すぎてノイズを抑制できなかったので、画像ノイズが発生しています。 |
+|  | しきい値 | しきい値とは、アンシャープマスクフィルターの適用時に無視されるコントラストの範囲です。このフィルターの使用中に画像に「ノイズ」が加わるのを防ぐために重要です。値範囲は 0～255 で、グレースケール画像の明るさのステップ数です。0=黒、128=50% グレー、255=白です。<br> 例えば、しきい値を12に設定すると、肌のトーンの明るさの微妙な変化は無視され、ノイズの追加は避けられますが、まつげが肌と交わる場所など、コントラストの強い領域にエッジのコントラストが追加されます。<br> 例えば、ある人の顔の写真を撮った場合、アンシャープマスクは画像のコントラストの強い部分（例えば、まつげと皮膚が接触して明確なコントラストを生み出す部分、滑らかな肌自体に影響を与えます）。 非常に滑らかな肌でも、明るさの値はわずかに変化しています。しきい値を使用しないと、このフィルターはこのような肌部分のピクセルのわずかな変化を強調します。同様に、まつげのコントラストを強めてシャープさを強調し、ノイズのある望ましくない効果を生み出してしまいます。<br>しきい値は、この問題を解決するために導入されたもので、フィルターに対し、滑らかな肌のようにコントラストが大きく変化しないピクセルは無視するよう指示します。<br>先ほど示したファスナーのグラフィックで、ファスナーの横の生地に注目してください。しきい値が低すぎてノイズを抑制できなかったので、画像ノイズが発生しています。 |
 |  | モノクロ | 選択すると、画像の明るさ（強さ）にアンシャープマスクが適用されます。<br>選択を解除すると、それぞれの色成分に別々にアンシャープマスクが適用されます。 |
 | ノックアウトの背景 |  | アップロード時に画像の背景を自動的に削除します。この技術は、特定の対象に注目を集め、賑やかな背景から際立たせるのに便利です。選択すると、ノックアウトの背景機能および以下のサブオプションが「オン」になります。 |
 |  | 隅 | 必須.<br>ノックアウトする背景色の定義に使用される画像の隅。<br>「**左上**」、「**左下**」、「**右上**」、「**右下**」から選択できます。 |
@@ -276,9 +276,9 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
 | Option | サブオプション | 説明 |
 |---|---|---|
-| アダプティブビデオ |  | モバイル、タブレットおよびデスクトップに配信するビデオを作成するための、任意の縦横比で機能する単一のエンコーディングプリセットです。 このプリセットでエンコードされたアップロード済みソースビデオは、固定の高さに設定されます。ただし、幅はビデオの縦横比を保持して自動的に拡大・縮小します。<br>ベストプラクティスは、アダプティブビデオエンコーディングを使用することです。 |
-| シングルエンコーディングプリセット | エンコードプリセットの並べ替え | 「名前」または「サイズ」を選択して、「デスクトップ」、「モバイル」および「タブレット」に一覧表示されたエンコーディングプリセットを名前順または解像度サイズ順に並べ替えます。 |
-|  | デスクトップ | ストリーミングビデオまたはプログレッシブビデオをデスクトップコンピュータに配信するMP4ファイルを作成します。解像度サイズと目的のデータレートを持つ1つ以上の縦横比を選択します。 |
+| アダプティブビデオ |  | モバイル、タブレットおよびデスクトップに配信するビデオを作成するための、任意の縦横比で機能する単一のエンコーディングプリセットです。 このプリセットでエンコードされたアップロード済みソースビデオは、固定の高さに設定されます。ただし、幅はビデオの縦横比を保持して自動的に拡大・縮小します。<br>ベストプラクティスは、アダプティブビデオのエンコーディングを使用することです。 |
+| シングルエンコーディングプリセット | エンコードプリセットの並べ替え | 「名前」または「サイズ」を選択して、「デスクトップ」、「モバイル」および「タブレット」の下に表示されるエンコーディングプリセットを、名前または解像度サイズで並べ替えます。 |
+|  | デスクトップ | デスクトップコンピュータにストリーミングビデオまたはプログレッシブビデオを配信するMP4ファイルを作成します。解像度サイズと目的のデータレートを持つ1つ以上の縦横比を選択します。 |
 |  | Mobile | iPhoneまたはAndroid携帯端末に配信するMP4ファイルを作成します。解像度サイズと目的のデータレートを使用して、1つ以上の縦横比を選択します。 |
 |  | タブレットなど）のアクティブマーカーを確認する。 | iPadまたはAndroidタブレットデバイスに配信するMP4ファイルを作成します。解像度サイズと目的のデータレートを使用して、1つ以上の縦横比を選択します。 |
 
@@ -345,17 +345,17 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 1. アセットをアクティベートする特定の日付と時間をスケジュールするには、「**[!UICONTROL オンタイム]**」フィールドの横にある日付選択を使用します。
 
-   ![オン/オフの間の一定の期間、アセットを使用できるようにするアセットのオン時間を設定](assets/chlimage_1-12.png)
+   ![オンとオフの間の一定の期間のアセットを使用可能にするアセットのオン時間を設定](assets/chlimage_1-12.png)
 
 1. To deactivate the asset after a particular duration, choose the deactivation date and time from the date picker beside the **[!UICONTROL Off Time]** field.
 
-   アクティベートを解除する日付は、アセットに設定されたアクティベート日より後の日付にしてください。オフ時間の後 [!UICONTROL は]、アセットとそのレンディションは、アセットWebインターフェイスまたはHTTP API経由では使用できません。
+   アクティベートを解除する日付は、アセットに設定されたアクティベート日より後の日付にしてください。「オフ」の [!UICONTROL 後は]、アセットとそのレンディションは、アセットWebインターフェイスまたはHTTP API経由では使用できなくなります。
 
-   ![一定期間後にアセットの可用性が停止するまでの時間を設定](assets/chlimage_1-13.png)
+   ![特定の期間が経過した後にアセットの可用性が停止するまでの時間を設定](assets/chlimage_1-13.png)
 
 1. 「**[!UICONTROL タグ]**」フィールドで、タグを 1 つ以上選択します。To add a custom tag, type the name of the tag in the box and press **[!UICONTROL Enter]**. 新しいタグが AEM に保存されます。
 
-   YouTubeには、投稿するためのタグとYouTubeへのリンクが必要です（適切なリンクが見つかる場合）。
+   YouTubeには、YouTubeに投稿するタグとYouTubeへのリンクが必要です（適切なリンクが見つかる場合）。
 To create tags, you require write permission for `/content/cq:tags/default` in the CRX repository.
 
 1. To provide a rating to the asset, tap the **[!UICONTROL Advanced]** tab and then tap the star at the appropriate position to assign the desired rating.
@@ -382,7 +382,7 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
 
 アセットの特定のコピーに一意に関連付けられる属性は継承されません。例えば、以下のものが該当します。
 
-* アセットID、作成日時、バージョンおよびバージョン履歴。 Some of these properties are indicated by the properties `jcr:uuid`, `jcr:created`, and `cq:name`.
+* アセットID、作成日時、バージョンとバージョン履歴。 Some of these properties are indicated by the properties `jcr:uuid`, `jcr:created`, and `cq:name`.
 
 * 作成時間と参照パスは、各アセットとその各レンディションに対して一意です。
 
@@ -458,7 +458,7 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
 
    ![chlimage_1-15](assets/chlimage_1-15.png)
 
-1. グローバルナビゲ **[!UICONTROL ーション]** アイコンをタップし、リストから **[!UICONTROL 「レンディション]** 」を選択します。
+1. グローバルナビゲ **[!UICONTROL ーション]** アイコンをタップし、リス **[!UICONTROL トから「レンディション]** 」を選択します。
 
    ![renditions_menu](assets/renditions_menu.png)
 
@@ -492,7 +492,7 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
 
    To configure rendition dimensions of an image at the asset detail level, overlay the **[!UICONTROL renditionpicker]** node `libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker` and configure the value of the width property. 画像サイズに基づいてアセットの詳細ページでレンディションをカスタマイズするには、幅の代わりに **[!UICONTROL size (Long) in KB]** プロパティを設定します。サイズベースのカスタマイズの場合、**[!UICONTROL preferOriginal]** プロパティを使用すると、一致するレンディションのサイズがオリジナルより大きい場合でも、オリジナルが優先されます。
 
-   同様に、Annotationページの画像を重ねてカ **[!UICONTROL スタマイズする]** こともできま `libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`す。
+   同様に、Annotationページの画像をオーバーレイ **[!UICONTROL することで]** 、カスタマイズできま `libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`す。
 
    ![chlimage_1-17](assets/chlimage_1-17.png)
 
@@ -510,7 +510,7 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
 
 また、オーバーレイを使用して「削除を強制」ボタンを無効にすることで、参照されているアセットの削除と壊れたリンクの放置を禁止します。
 
-アセットを削除するには、dam/assetに対する削除権限が必要です。 変更権限のみ付与されている場合、アセットのメタデータの編集とアセットへの注釈の追加のみが可能で、アセットやそのメタデータの削除は実行できません。
+アセットを削除するには、dam/assetの削除権限が必要です。 変更権限のみ付与されている場合、アセットのメタデータの編集とアセットへの注釈の追加のみが可能で、アセットやそのメタデータの削除は実行できません。
 
 **アセットを削除するには**:
 
@@ -520,10 +520,10 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
 
    ![delete_icon](assets/delete_icon.png)
 
-1. 確認ダイアログボックスで、以下をタップします。
+1. 確認ダイアログボックスで、次をタップします。
 
    * **[!UICONTROL キャンセル]**：アクションを停止します。
-   * **[!UICONTROL 「削除]** 」で、次の内容に基づいて操作を確定します。
+   * **[!UICONTROL 「削除]** 」で、次の操作を確認します。
 
       * アセットに参照がない場合は、アセットが削除されます。
       * If the asset has references, an error-message informs you that **[!UICONTROL One or more assets are referenced]**. You can select **[!UICONTROL Force Delete]** or **[!UICONTROL Cancel]**.
@@ -539,7 +539,7 @@ See [Download assets from AEM](download-assets-from-aem.md)
 
 ## Publish assets {#publishing-assets}
 
-処理中のアセットを公開した場合は、オリジナルのコンテンツのみが公開されます。処理中のレンディションは失われます。処理が完了するのを待ってから、処理が完了した後でアセットを発行または再発行します。
+処理中のアセットを公開した場合は、オリジナルのコンテンツのみが公開されます。処理中のレンディションは失われます。処理が完了するのを待ってから、処理が完了した後でアセットを公開するか、再公開します。
 
 公開したいフォルダーに空のフォルダーが含まれる場合、空のフォルダーは公開されません。
 
@@ -547,7 +547,7 @@ For more information specific to Dynamic Media, see [Publishing Dynamic Media As
 
 **アセットを公開するには**:
 
-1. 発行するアセットまたはフォルダーの場所に移動します
+1. 公開するアセットまたはフォルダーの場所に移動します。
 
 1. Either select the **[!UICONTROL Publish]** quick action from the asset card, or select the asset and tap the **[!UICONTROL Quick Publish]** icon from the toolbar.
 1. アセットが他のアセットを参照する場合は、その参照がウィザードに表示されます。前回公開または未公開だった後に未公開または変更された参照のみが表示されます。 公開する参照を選択します。
@@ -608,7 +608,7 @@ CUGは、アセットへのアクセスを制限する追加の方法です。 �
 
 ![filters_panel](assets/filters_panel.png)
 
-最近アップロードしたアセットのメタデータ（タイトル、タグなど）は、「Omnisearch」ボックスに入力したときに表示される提案のリストには表示されません。
+最近アップロードしたアセットのメタデータ（タイトル、タグなど）は、「Omnisearch」ボックスに入力したときに表示される候補のリストにすぐには表示されません。
 
 これは、AEM Assets ではタイムアウト期間（デフォルトは 1 時間）が経過してから、新しくアップロードまたは更新されたすべてのアセットのメタデータにインデックスを付け、候補のリストに追加するバックグラウンドジョブが実行されるからです。
 
@@ -619,7 +619,7 @@ CUGは、アセットへのアクセスを制限する追加の方法です。 �
 * タッチデバイス：タッチ＆ホールド。例えば、iPadでは、アセットをタップ&amp;ホールドして、クイックアクションを表示することができます。
 * 非タッチデバイス：マウスポインターで指す。例えば、デスクトップデバイスで、アセットのサムネールにポインターを合わせると、クイックアクションバーが表示されます。
 
-### アセットに移動して選択します {#navigating-and-selecting-assets}
+### アセットに移動して選択します。 {#navigating-and-selecting-assets}
 
 You can view, navigate through, and select assets with any of the available views (card, column, list) using the **[!UICONTROL Select]** icon. **[!UICONTROL 「選択」は]** 、カード表示にクイックアクションとして表示されます。
 
@@ -657,7 +657,7 @@ To edit a TXT file, set **[!UICONTROL Day CQ Link Externalizer]** from within Co
 1. 編集モードでアセットを開くには、次のいずれかの操作をおこないます。
 
    * Select the asset and then click the **[!UICONTROL Edit]** icon in the toolbar.
-   * カード **[!UICONTROL 表示のアセットに表示される「編集]** 」オプションをタップします。
+   * カード **[!UICONTROL 表示の]** 「編集」オプションをタップします。
    * In the asset page, tap the **[!UICONTROL Edit]** icon in the toolbar.
    ![edit_icon](assets/edit_icon.png)
 
@@ -670,7 +670,7 @@ To edit a TXT file, set **[!UICONTROL Day CQ Link Externalizer]** from within Co
    ![chlimage_1-23](assets/chlimage_1-23.png)
 
 1. 切り抜く領域を選択し、画像上でサイズ変更または位置変更を行います。
-1. 画像を切 **[!UICONTROL り抜くには]** 、右上隅の「終了」オプションを使用します。 「完了」 **[!UICONTROL をタップすると]** 、レンディションの再生成も行われます。
+1. 画像を切 **[!UICONTROL り抜くには]** 、右上隅の「終了」オプションを使用します。 「完了」を **[!UICONTROL タップす]** ると、レンディションの再生成も行われます。
 
    ![chlimage_1-24](assets/chlimage_1-24.png)
 
@@ -701,7 +701,7 @@ The **[!UICONTROL Timeline]** lets you view various events for a selected item, 
 **タイムラインを使用するには**:
 
 1. アセットのアセットページを開くか、Assets UI でアセットページを開きます。
-1. グローバルナビゲ **[!UICONTROL ーション]** アイコンをタップし、リス **** トから「タイムライン」を選択します。
+1. グローバルナビゲ **[!UICONTROL ーション]** (Global Navigation)アイコンをタップし、リス **** トから「タイムライン」を選択します。
 
    ![timeline](assets/timeline.png)
 
@@ -711,9 +711,9 @@ The **[!UICONTROL Timeline]** lets you view various events for a selected item, 
 
 ## 注釈を追加 {#annotating}
 
-注釈とは、画像やビデオに追加するコメントまたは注記です。注釈を使用すると、マーケターはアセットに関する共同作業やフィードバックの送信を行うことができます。
+注釈とは、画像やビデオに追加するコメントまたは注記です。注釈を使用すると、マーケターはアセットに関する共同作業やフィードバックを残すことができます。
 
-ビデオの注釈は、HTML5 互換のビデオ形式に対応したブラウザーでのみサポートされます。AEM Assetsがサポートするビデオ形式は、ブラウザーによって異なります。
+ビデオの注釈は、HTML5 互換のビデオ形式に対応したブラウザーでのみサポートされます。AEM Assetsでサポートされるビデオ形式は、ブラウザーによって異なります。
 
 For Content Fragments, [annotations are created in the editor](content-fragments-variations.md#annotating-a-content-fragment); this functionality requires [AEM 6.4 Service Pack 2 (6.4.2.0)](/help/release-notes/sp-release-notes.md) or later.
 
@@ -721,7 +721,7 @@ For Content Fragments, [annotations are created in the editor](content-fragments
 
 ビデオアセットに注釈を追加できます。 ビデオに注釈を追加する際は、ユーザーがフレームに注釈を追加できるようにプレーヤーが一時停止します。For details, see [managing video assets](managing-video-assets.md).
 
-コレクションにも注釈を追加できます。ただし、コレクションに子コレクションが含まれる場合は、親コレクションにのみ注釈またはコメントを追加できます。 The **[!UICONTROL Annotate]** option is not available for child collections.
+コレクションにも注釈を追加できます。ただし、コレクションに子コレクションが含まれている場合は、親コレクションにのみ注釈やコメントを追加できます。 The **[!UICONTROL Annotate]** option is not available for child collections.
 
 **注釈を追加するには**:
 
@@ -736,7 +736,7 @@ For Content Fragments, [annotations are created in the editor](content-fragments
 
    ![chlimage_1-30](assets/chlimage_1-30.png)
 
-1. 注釈についてユーザーに通知するには、ユーザーの電子メールアドレスを指定して、コメントを追加します。例えば、注釈をアーロン・マクドナルドに通知するには、@aaと入力します。 一致するすべてのユーザーに関するヒントがリストに表示されます。リストからAaronの電子メールアドレスを選択し、コメントのタグを付けます。 同様に、注釈内の任意の場所、またはコメントの前後で追加のユーザーにタグ付けできます。
+1. 注釈についてユーザーに通知するには、ユーザーの電子メールアドレスを指定して、コメントを追加します。例えば、注釈をAaron McDonaldに通知するには、@aaと入力します。 一致するすべてのユーザーに関するヒントがリストに表示されます。リストからAaronの電子メールアドレスを選択し、コメントのタグを付けます。 同様に、注釈内の任意の場所、またはコメントの前後で追加のユーザーにタグ付けできます。
 
    >[!NOTE]
    >
@@ -748,7 +748,7 @@ For Content Fragments, [annotations are created in the editor](content-fragments
 
    ![chlimage_1-32](assets/chlimage_1-32.png)
 
-1. 「閉じる」 **[!UICONTROL をタップし]** 、注釈モ **[!UICONTROL ードを終了します]** 。
+1. 「閉じる」 **[!UICONTROL をタップし]** 、 **[!UICONTROL Annotationモードを終了します]** 。
 1. To view the notification, log in to AEM Assets with Aaron MacDonald&#39;s credentials and tap the **[!UICONTROL Notifications]** icon to view the notification.
 
 1. To choose a different color so you can differentiate between users, tap the **[!UICONTROL Profile]** icon and tap **[!UICONTROL My Preferences]**.
@@ -779,7 +779,7 @@ For Content Fragments, [annotations are created in the editor](content-fragments
 
 ### 注釈の印刷 {#printing-annotations}
 
-アセットに注釈が含まれている場合や、アセットがレビューワークフローの対象となっている場合は、注釈と共にアセットを印刷し、オフラインレビュー用のPDFファイルとしてステータスをレビューできます。
+アセットに注釈が含まれている場合や、アセットがレビューワークフローの対象になっている場合は、アセットを注釈と共に印刷し、オフラインレビュー用のPDFファイルとしてステータスを確認できます。
 
 注釈またはレビューステータスのみ印刷することも選択できます。
 
@@ -811,7 +811,7 @@ To print the annotations and review status, tap the **[!UICONTROL Print]** icon 
 
    注釈やステータスを印刷するPDF内の位置に応じて、その他の設定を選択できます。 If you want the annotations or status to appear in a page that is separate from the printed asset, choose **[!UICONTROL Next Page]**.
 
-1. 「印刷」を **[!UICONTROL タップしま]**&#x200B;す。 手順2で選択したオプションに応じて、生成されたPDFには、指定した位置に注釈またはステータスが表示されます。 例えば、注釈とレビューステータスの両方を「**[!UICONTROL 左上]**」設定を使用して印刷することを選択した場合、生成される PDF ファイルは次のようになります。
+1. 「印刷」を **[!UICONTROL タップしま]**&#x200B;す。 手順2で選択したオプションに応じて、指定した位置に注釈またはステータスが生成されたPDFが表示されます。 例えば、注釈とレビューステータスの両方を「**[!UICONTROL 左上]**」設定を使用して印刷することを選択した場合、生成される PDF ファイルは次のようになります。
 
    ![chlimage_1-42](assets/chlimage_1-42.png)
 
@@ -829,23 +829,23 @@ To print the annotations and review status, tap the **[!UICONTROL Print]** icon 
 
    レンダリングされた PDF ファイルに戻り、更新します。更新された PDF に、変更が反映されています。
 
-**注釈を外国語で印刷するには**:アセットに外国語（特に非ラテン言語）の注釈が含まれる場合は、まずAEMサーバーでCQ-DAM-Handler-Gibson Font Manager Serviceを設定して、これらの注釈を印刷できるようにする必要があります。 CQ-DAM-Handler-Gibson Font Manager サービスの設定では、必要な言語のフォントがある場所を指定します。
+**外国語で注釈を印刷するには**:アセットに外国語（特に非ラテン言語）の注釈が含まれる場合は、まずAEMサーバーでCQ-DAM-Handler-Gibson Font Manager Serviceを設定し、これらの注釈を印刷できるようにする必要があります。 CQ-DAM-Handler-Gibson Font Manager サービスの設定では、必要な言語のフォントがある場所を指定します。
 
-1. Open the **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Service]** configuration page from the URL [https://&lt;server>:&lt;port>/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl](http://localhost:4502/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl).
-1. **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Serviceを設定するには]**、次のいずれかの操作を行います。
+1. **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Service]** configurationページを、https://&lt;server>:&lt;port>/system/console/configMgr/com.day [&lt;server>:&lt;port>.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImplのURLから開きます](http://localhost:4502/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl)。
+1. **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Serviceを設定するには]**、次のいずれかを実行します。
 
    * In the **[!UICONTROL System Fonts]** directory option, specify the complete path to the fonts directory on your system. For example, if you&#39;re a Mac user, you can specify the path as `/Library/Fonts` in the **[!UICONTROL System Fonts]** directory option. AEM はこのディレクトリからフォントを取得します。
-   * **[!UICONTROL crx-quickstart]** フォルダー内に **fonts** という名前のディレクトリを作成する。**[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Serviceは]** 、場所のフォントを自動的に取得します `crx-quickstart/fonts`。 You can override this default path from within the **[!UICONTROL Adobe Server Fonts]** directory option.
+   * **[!UICONTROL crx-quickstart]** フォルダー内に **fonts** という名前のディレクトリを作成する。**[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Serviceは]** 、この場所のフォントを自動的に取得します `crx-quickstart/fonts`。 You can override this default path from within the **[!UICONTROL Adobe Server Fonts]** directory option.
    * システムにフォント用の新しいフォルダーを作成し、必要なフォントをこのフォルダーに保存する。Then, specify the complete path to that folder in the **[!UICONTROL Customer Fonts]** directory option.
 
 1. Access the **[!UICONTROL Annotation PDF]** configuration from the URL [https://&lt;server>:&lt;port>/system/console/configMgr/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig](http://localhost:4502/system/console/configMgr/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig).
 1. Configure the **[!UICONTROL Annotation PDF]** with the correct set of font-family as follows:
 
-   * 文字列をfont-family `<font_family_name_of_custom_font, sans-serif>` オプション内に含めます。 For example, if you want to print annotations in CJK (Chinese, Japanese and Korean), include the string `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` in the font-family option. ヒンディー語で注釈を印刷する場合は、適切なフォントをダウンロードし、フォントファミリーをArial Unicode MS、Not Sans、Not Sans CJK JP、Not Sans Devanagari、sans-serifとして設定します。
+   * 文字列をfont-family `<font_family_name_of_custom_font, sans-serif>` オプション内に含めます。 For example, if you want to print annotations in CJK (Chinese, Japanese and Korean), include the string `Arial Unicode MS, Noto Sans, Noto Sans CJK JP, sans-serif` in the font-family option. ヒンディー語で注釈を印刷する場合は、適切なフォントをダウンロードし、フォントファミリーをArial Unicode MS、Noto Sans、Noto Sans CJK JP、Noto Sans Devanagari、sans-serifとして設定します。
 
 1. AEM インスタンスを再起動します。
 
-次に、CJK（中国語、日本語、韓国語）で注釈を印刷するようにAEMを設定する例を示します。
+CJK（中国語、日本語、韓国語）で注釈を印刷するようにAEMを設定する例を次に示します。
 
 1. 以下のリンクから Google Noto CJK フォントをダウンロードし、Font Manager サービスで設定したフォントディレクトリに保存します。
 
@@ -864,7 +864,7 @@ To print the annotations and review status, tap the **[!UICONTROL Print]** icon 
 
 * 別のアプリケーションで画像を変更し、AEM Assets にアップロードします。元の画像が上書きされないように画像のバージョンが作成されます。
 * アセットのメタデータを編集します。
-* AEMデスクトップアプリを使用して、既存のアセットをチェックアウトし、変更を保存します。 アセットが保存されるたびに新しいバージョンが作成されます。
+* AEMデスクトップアプリを使用して、既存のアセットをチェックアウトし、変更を保存します。 アセットが保存されるたびに、新しいバージョンが作成されます。
 
 また、ワークフローを使用して、自動バージョン管理を有効にすることもできます。アセットのバージョンを作成すると、メタデータとレンディションがバージョンと共に保存されます。 レンディションによって、同じ画像の代替となる画像が表示されます（例えば、アップロードされた JPEG ファイルの PNG レンディション）。
 
@@ -874,9 +874,9 @@ To print the annotations and review status, tap the **[!UICONTROL Print]** icon 
 * アセットの現在のリビジョンを表示する。
 * 以前のバージョンにアセットを復元する。
 
-**アセットのバージョン管理を作成するには**:
+**アセットのバージョンを作成するには**:
 
-1. バージョンを作成するアセットの場所に移動し、アセットページをタップして開きます。
+1. バージョンを作成するアセットの場所に移動し、そのアセットのページをタップして開きます。
 
 1. Tap the **[!UICONTROL Global Navigation]** icon, and the choose **[!UICONTROL Timeline]** from the menu.
 
