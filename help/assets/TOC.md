@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.4 Assets User Guide
 translation-type: tm+mt
-source-git-commit: 978c6e5cffb557f0d42f961bdde597fabf278ddd
+source-git-commit: 939da6b84ebfe5b3bbd97cd6a8b7556ea5189a13
 
 ---
 
@@ -65,7 +65,7 @@ source-git-commit: 978c6e5cffb557f0d42f961bdde597fabf278ddd
    + [ルールセットを使用した URL の変換](using-rulesets-to-transform-urls.md)
    + [Dynamic Media アセットの公開](publishing-dynamicmedia-assets.md)
    + [CDN にキャッシュされたコンテンツの無効化](invalidate-cdn-cached-content.md)
-   + [一括アセット移行用の機能パック18912のインストール](bulk-ingest-migrate.md)
+   + [一括アセット移行用の機能パック18912をインストールしています](bulk-ingest-migrate.md)
    + [セレクターの操作](working-with-selectors.md)
 + アセットの拡張 {#extending}
    + [アセットのカスタマイズと拡張](extending-assets.md)
@@ -89,7 +89,7 @@ source-git-commit: 978c6e5cffb557f0d42f961bdde597fabf278ddd
    + [アセットエディタページの作成と設定](assets-finder-editor.md)
    + [アセットサイズガイド](assets-sizing-guide.md)
    + [メタデータのスキーマに関する参照情報](meta-ref.md)
-   + [アセットの効率的な翻訳のベストプラクティス](best-practices-for-translating-assets-efficiently.md)
+   + [アセットの効率的な変換のベストプラクティス](best-practices-for-translating-assets-efficiently.md)
    + [アセットパフォーマンス調整ガイド](performance-tuning-guidelines.md)
    + [メタデータの編集と追加](meta-edit.md)
    + [アセット移行ガイド](assets-migration-guide.md)
@@ -98,7 +98,7 @@ source-git-commit: 978c6e5cffb557f0d42f961bdde597fabf278ddd
    + [AEM Assets と AEM Media Library との比較](medialibrary.md)
    + [PDFラスタライザの使用](aem-pdf-rasterizer.md)
    + [アセットのアップロード制限の設定](configuring-asset-upload-restrictions.md)
-   + [AEMとCreative cloudの統合のベストプラクティス](aem-cc-integration-best-practices.md)
+   + [AEMとCreative Cloudの統合のベストプラクティス](aem-cc-integration-best-practices.md)
    + [AEM AssetsとInDesignサーバーの統合](indesign.md)
    + [メタデータプロファイル](metadata-profiles.md)
    + [アセットのデジタル著作権管理](drm.md)
@@ -119,7 +119,8 @@ source-git-commit: 978c6e5cffb557f0d42f961bdde597fabf278ddd
    + [フォルダーメタデータスキーマ](folder-metadata-schema.md)
    + [スマートタグの管理](managing-smart-tags.md)
 + Brand Portal {#brandportal}
-   + [AEM Assets と Brand Portal の統合の設定](brand-portal-configuring-integration.md)
+   + [Brand PortalでのAEM Assetsの設定](configure-aem-assets-with-brand-portal.md)
+   + [Brand Portal へのアセットの公開](brand-portal-publish-assets.md)
    + [Brand Portal へのコレクションの公開](brand-portal-publish-collection.md)
    + [Brand Portal へのフォルダーの公開](brand-portal-publish-folder.md)
 + コンテンツフラグメント {#fragments}
@@ -174,5 +175,5 @@ source-git-commit: 978c6e5cffb557f0d42f961bdde597fabf278ddd
    + [3Dサイトコンポーネントの操作](using-the-3d-sites-component.md)
    + [AEM 3D と Autodesk Maya の統合](integrate-maya-with-3d.md)
    + [IBL ステージの使用について](working-with-ibl-stages.md)
-   + [AEM 3DとAutodesk 3ds maxの統合](integrating-aem-3d-with-autodesk-3ds-max.md)
+   + [AEM 3DとAutodesk 3ds Maxの統合](integrating-aem-3d-with-autodesk-3ds-max.md)
    + [Autodesk Maya および Mental Ray での IBL ステージの設定](setting-up-an-ibl-stage-with-autodesk-maya-and-mental-ray.md)
