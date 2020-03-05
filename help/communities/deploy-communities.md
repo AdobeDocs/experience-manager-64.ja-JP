@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: d0249609-2a9c-4d3b-92ee-dbc5fbdeaac6
 translation-type: tm+mt
-source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
+source-git-commit: 9d03a3988b2c8e34b9009d80a53d8b8508b5f0aa
 
 ---
 
@@ -39,14 +39,14 @@ source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
 * [暗号鍵のレプリケーション](#replicate-the-crypto-key)
 * グローバル化をサポートする場合は、自動 [翻訳をセットアップします。](../../help/sites-administering/translation.md)
 
-   （開発用のサンプル設定が用意されています）
+   （開発用のサンプル設定）
 
 **[Communities 機能](overview.md)**用
 
 * If deploying a [publish farm](../../help/sites-deploying/recommended-deploys.md#tarmk-farm), [identify the primary publisher](#primary-publisher)
 
-* [トンネルサービスを有効にする](#tunnel-service-on-author)
-* [ソーシャルログインを有効にする](social-login.md#adobe-granite-oauth-authentication-handler)
+* [トンネルサービスの有効化](#tunnel-service-on-author)
+* [ソーシャルログインの有効化](social-login.md#adobe-granite-oauth-authentication-handler)
 * [Adobe Analytics の設定](analytics.md)
 * Setup a [default email service](email.md)
 * Identify the choice for [shared UGC storage](working-with-srp.md) (**SRP**)
@@ -77,7 +77,7 @@ source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
 
    * [FFmpegのインストールと設定](ffmpeg.md)
    * [MySQL用JDBCドライバーのインストール](#jdbc-driver-for-mysql)
-   * [AEM Communities SCORM-Engineのインストール](#scorm-package)
+   * [AEM Communities SCORMエンジンのインストール](#scorm-package)
    * [MySQLのインストールと有効化の設定](mysql.md)
 
 
@@ -112,18 +112,18 @@ MySQL コネクタを別途入手し、インストールする必要があり�
 
 1. Download the ZIP archive from [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
 
-   * バージョンは5.1.38以上である必要があります
+   * バージョンは5.1.38以上にする必要があります
 
-1. アーカイブからmysql-connector-java-&lt;version>-bin.jar (bundle)を抽出します。
+1. アーカイブからmysql-connector-java-&lt;version>-bin.jar（バンドル）を抽出します。
 
-1. Webコンソールを使用して、バンドルをインストールして起動します。
+1. Webコンソールを使用して、バンドルをインストールし、開始します。
 
    * 例：http://localhost:4502/system/console/bundles
    *  **`Install/Update`**
    * ダウンロードした ZIP アーカイブから抽出したバンドルを参照し、選択します。
-   * Check that *Oracle Corporation&#39;s JDBC Driver for MySQLcom.mysql.jdbc* is active, and start it if not (or check the logs)
+   * ** Oracle CorporationのMySQLcom.mysql.jdbc用JDBCドライバーがアクティブであることを確認し、アクティブでない場合は起動します（またはログを確認します）。
 
-1. JDBCの設定後に既存のデプロイメントにインストールする場合は、WebコンソールからJDBC設定を再保存して、JDBCを新しいコネクタに再連結します。
+1. JDBCの設定後に既存のデプロイメントにインストールする場合は、WebコンソールからJDBC設定を再保存して、JDBCを新しいコネクタに再バインドします。
 
    * 例：http://localhost:4502/system/console/configMgr
    * 設定の `Day Commons JDBC Connections Pool` 検索
@@ -132,7 +132,7 @@ MySQL コネクタを別途入手し、インストールする必要があり�
 
 1. すべての作成者インスタンスと発行インスタンスで手順3と4を繰り返します。
 
-Further information on installing bundles is found on the [Web Console](../../help/sites-deploying/configuring-web-console.md#bundles) page.
+Further information on installing bundles is found on the [Web Console](/help/sites-deploying/web-console.md#bundles) page.
 
 #### 例：インストール済みの MySQL コネクタバンドル {#example-installed-mysql-connector-bundle}
 
@@ -146,7 +146,7 @@ AEM Communities SCORM エンジンは[イネーブルメント](overview.md#enab
 
 * **[cq -social-scorm -package、バージョン1.2.11](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-pkg)**。 この SCORM パッケージは、AEM 6.4 Communities の全バージョンでサポートされています。
 
-* **[cq -social-scorm -package、バージョン2.2.2には](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)**SCORM 2017.1エンジンが含まれています[](https://rusticisoftware.com/blog/scorm-engine-2017-released/)。 このSCORMパッケージは、AEM 6.4.2.x Communities以降でサポートされています。
+* **[cq -social-scorm -package、バージョン2.2.2にはSCORM 2017.1](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)**エンジ[ンが含まれています](https://rusticisoftware.com/blog/scorm-engine-2017-released/)。 このSCORMパッケージは、AEM 6.4.2.x Communities以降でサポートされています。
 
 For a new installation of SCORM engine, the package containing [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) (which is [  cq -social-  scorm -package, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)) should be used. それによって、SCORM 2017 でサポートされているラーニングリソースを再生できます。
 
@@ -162,7 +162,7 @@ Existing SCORM installations can be upgraded to [**cq-social-scorm-package, vers
 
 >[!NOTE]
 >
->SCORM 2017.1パッケージにアップグレードするには、既存のデータベースの移行が必要です（詳しくは、この移行を参照してください）。
+>SCORM 2017.1パッケージにアップグレードするには、既存のデータベースの移行が必要です（詳細を参照）。
 
 <!--This section used to be an accordion until converted to straight Markdown. When accordions are enabled, revert-->
 
@@ -172,7 +172,7 @@ Existing SCORM installations can be upgraded to [**cq-social-scorm-package, vers
 1. Install the **[cq-social-scorm-package, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg).**
 1. Download the package from `/libs/social/config/scorm/ScormEngine.zip` and extract the same.
 1. Go to **Installer** folder of the extracted directory.
-1. ファイル `SystemDatabaseConnectionString` EngineInstall.xml `scorm db connection url` を使用し **[!UICONTROL て更新します]**。
+1. ファイル `SystemDatabaseConnectionString` EngineInstall.xml `scorm db connection url` を使用して **[!UICONTROL 更新します]**。
 1. 次のコマンドを使用して、Installer フォルダー内で mysql スキーマアップグレードツールを実行します。
 
    `java -Dlogback.configurationFile=logback.xml -cp "lib/*" RusticiSoftware.ScormContentPlayer.Logic.Upgrade.ConsoleApp EngineInstall.xml`
@@ -195,7 +195,7 @@ SRP コレクション（MSRP または DSRP）で高度な多言語検索（MLS
 
 * [AEM-SOLR-MLS-phasetwo](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/tat/AEM-SOLR-MLS-phasetwo/1.2.40/)
 
-   * バージョン1.2.40、2016年4月7日
+   * バージョン1.2.40、2016年4月6日
    * AEM-SOLR-MLS-phasetwo-1.2.40.zipをダウンロードします。
 
 For details and installation information, visit [Solr Configuration](solr.md) for SRP.
@@ -256,8 +256,8 @@ By default, the `AEM Communities Publisher Configuration` OSGi configuration is 
 
    * For example, [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* Folio Builderで `AEM Communities Publisher Configuration`
-* 編集アイコンを選択します
+* を検索します。 `AEM Communities Publisher Configuration`
+* 編集アイコンの選択
 * Uncheck the **[!UICONTROL Primary Publisher]** box
 * Select **[!UICONTROL Save]**
 
@@ -306,7 +306,7 @@ When using the author environment to [create sites](sites-console.md), [modify s
 
 * On **author**
 * 管理者権限でサインイン
-* 発行者がlocalhost:4503でない場合、またはトランスポートユーザーがローカルホストでな `admin`い場合、
+* 発行者がlocalhost:4503でないか、トランスポートユーザーでない場 `admin`合、
 
    次に、レプ [リケーションエージェントを構成します](#replication-agents-on-author)
 
@@ -314,8 +314,8 @@ When using the author environment to [create sites](sites-console.md), [modify s
 
    * For example, [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 
-* Folio Builderで `AEM Communities Publish Tunnel Service`
-* 編集アイコンを選択します
+* を検索します。 `AEM Communities Publish Tunnel Service`
+* 編集アイコンの選択
 * Check the **[!UICONTROL enable]** box
 * Select **[!UICONTROL Save]**
 
@@ -325,11 +325,11 @@ When using the author environment to [create sites](sites-console.md), [modify s
 
 AEM Communities には、すべての AEM サーバーインスタンスで同じ暗号鍵を使用する必要がある機能が 2 つあります。These are [Analytics](analytics.md) and [ASRP](asrp.md).
 
-AEM 6.3では、主要な資料はファイルシステムに保存され、リポジトリには保存されません。
+AEM 6.3以降、主要な資料はファイルシステムに保存され、リポジトリには保存されなくなります。
 
 オーサー環境から他のすべてのインスタンスに鍵の素材をコピーするには、以下の操作をおこなう必要があります。
 
-* コピーする主要な資料を含むAEMインスタンス（通常は作成者インスタンス）にアクセスします
+* コピーする主要な素材を含むAEMインスタンス（通常は作成者インスタンス）にアクセスします。
 
    * Locate the `com.adobe.granite.crypto.file` bundle in the local file system
 
@@ -337,7 +337,7 @@ AEM 6.3では、主要な資料はファイルシステムに保存され、リ�
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
       * The `bundle.info` file will identify the bundle
-   * データフォルダーに移動します
+   * データフォルダーに移動します。
 
       例：
 
@@ -348,7 +348,7 @@ AEM 6.3では、主要な資料はファイルシステムに保存され、リ�
 
 * 各ターゲットAEMインスタンス
 
-   * データフォルダーに移動します
+   * データフォルダーに移動します。
 
       例：
 
@@ -377,7 +377,7 @@ AEM 6.2以前と同様に、主要なマテリアルをリポジトリに保存�
 
 * browse to [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
 * select `/etc/key`
-* 「開く」 `Replication` タブ
+* タブを `Replication` 開く
 * select `Replicate`
 
 * [Granite 暗号バンドルを更新](#refresh-the-granite-crypto-bundle)します。
