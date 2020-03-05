@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 616d42c8-2316-4c56-b89f-660903270620
 translation-type: tm+mt
-source-git-commit: d2b4e6599a7b1c01dc220a03b2be9aa55e5d7458
+source-git-commit: 11d4d4c4aa633974df2047631cf92f3226aaf6ca
 
 ---
 
@@ -77,7 +77,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
 
    ![screen_shot_2018-03-23at102603-1](assets/screen_shot_2018-03-23at102603-1.png)
 
-   ナビゲーションから利用可能なコンソールは次のとおりです。
+   ナビゲーションから、使用可能なコンソールは次のとおりです。
 
 <table> 
  <tbody>
@@ -112,10 +112,6 @@ You can close the global navigation panel by clicking or tapping **Close** to re
   <tr>
    <td>プロジェクト</td> 
    <td><a href="/help/sites-authoring/touch-ui-managing-projects.md">プロジェクトコンソールは、プロジェクトへのダイレクトアクセスを提供</a>します。プロジェクトは仮想ダッシュボードです。この仮想ダッシュボードを使用すれば、チームを結成して、そのチームがリソース、ワークフローおよびタスクにアクセスできるので、チームメンバーが共通の目標に向かって作業できるようになります。<br /> </td> 
-  </tr>
-  <tr>
-   <td>スクリーン</td> 
-   <td><a href="/help/screens/authoring-screens.md">スクリーン</a>では、あらゆる場所、あらゆるサイズの対顧客画面をすべて管理できます。</td> 
   </tr>
   <tr>
    <td>Sites</td> 
@@ -239,7 +235,7 @@ You can close the global navigation panel by clicking or tapping **Close** to re
    * **開発者向けリソース**&#x200B;開発者向けリソースおよびダウンロードです。
    >[!NOTE]
    >
-   >コンソールでは、ホットキー（疑問符）を使用して、いつでも使用でき `?` るショートカットキーの概要にアクセスできます。
+   >コンソール内でホットキー（疑問符）を使用して、いつでも使用できるシ `?` ョートカットキーの概要にアクセスできます。
    >
    >すべてのキーボードショートカットの概要については、次のドキュメントを参照してください。
    >
@@ -318,13 +314,13 @@ How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-
    <td>カード表示<br /> </td> 
    <td>
     <ul> 
-     <li><br /> デスクトップ：マウスオーバーして、チェックマーククイックアクションを使用します</li> 
+     <li>Desktop:<br /> Mouseover, then use the checkmark quick action</li> 
      <li>モバイルデバイス：<br />カードをタップ＆ホールドする</li> 
     </ul> </td> 
    <td>
     <ul> 
-     <li><br /> デスクトップ：カードをクリックします</li> 
-     <li><br /> モバイルデバイス：カードをタップします</li> 
+     <li>Desktop:<br /> Click the card</li> 
+     <li>Mobile device:<br /> Tap the card</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -437,7 +433,7 @@ How you [select a resource](/help/sites-authoring/basic-handling.md#viewing-and-
       * すべてを選択解除するには、再度チェックボックスをクリックまたはタップします。
 
 
-* [ビュー]ボタンの下にある[**ビュー設定**]オプションを使用して、表示する列を選択します。 次の列を表示できます。
+* 「ビュー」ボタンの下にある「**ビュー設定**」オプションを使用して、表示する列を選択します。 次の列を表示できます。
 
    * **名前** - ページ名。ページの URL の一部で、言語にかかわらず変更されないので、多言語オーサリング環境で便利です
    * **変更** - 最終変更日および最終変更者
@@ -543,5 +539,5 @@ These options accessible via the chevron next to the **Comment** field.
 
 これを使用すると、適切な場所フィルターが既に設定された状態で[検索](/help/sites-authoring/search.md)と同じようにパネルが開き、表示したいコンテンツをさらにフィルタリングできます。
 
-![screen_shot_2018-03-23at11509](assets/screen_shot_2018-03-23at111509.png)
+![screen_shot_2018-03-23at111509](assets/screen_shot_2018-03-23at111509.png)
 
