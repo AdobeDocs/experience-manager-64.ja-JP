@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: 3037d1e5c9f97778c55ee2734ded3c9ef668df4d
+source-git-commit: 9f6da11b6fd5630dd2a81d1745f7f157ffb2bf34
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: 3037d1e5c9f97778c55ee2734ded3c9ef668df4d
 | バージョン | 6.4.8.0 |
 | タイプ | Service Pack のリリース |
 | 日付 | 2020年3月5日 |
-| ダウンロード URL | AEM 6.4.8.0 on [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.8.0) |
+| ダウンロード URL | AEM 6.4.8.0 on [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.8.0), [Software Distribution(Beta)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/servicepack/aem-service-pkg-6.4.8.zip) |
 
 ## AEM 6.4.8.0 に含まれる機能 {#what-s-included-in-aem}
 
@@ -51,6 +51,9 @@ AEM 6.4.8.0は、新機能、お客様から要望された主な機能強化、
 
 ### Sites {#sites}
 
+* AEMサイトのページのURLにコロンまたは割合の記号が含まれている場合、基になるブラウザーが応答を停止し、CPUサイクルがスパイクを示します(NPR-32368、NPR-31917)。
+* AEMサイトページを編集用に開き、コンポーネントをコピーした場合、一部のプレースホルダー(NPR-32328)では貼り付け操作が使用できないままになります。
+* アクティブ化ワークフローの要求に、参照されたアセットが含まれていません(NPR-32304)。
 * Blueprintを作成すると、レコード数が80を超える場合は、最初の80レコードのみが表示されます。 Blueprintでは、残りのレコード(NPR-32058)の空白行が表示されます。
 * ユーザーは、必須フィールドに情報を入力しないで、コンテンツフラグメントを保存できます(NPR-31988)。
 * コアエクスペリエンスフラグメントコンポーネント(NPR-31921)で設定されたパスに対して、自動ナビゲーションが機能しない。
@@ -58,7 +61,6 @@ AEM 6.4.8.0は、新機能、お客様から要望された主な機能強化、
    `Error: No common ancestor found, cannot continue` (NPR-31916)。
 * コンテンツが同じフォルダー内に移動されると、ページ移動オプションは無効になります(NPR-31841)。
 * BUNSET方式を使用して日本語の文を分割し、適切な位置で改行するサポートを追加しました(NPR-31836)。
-* またはで終わるURL `/_jcr_content/.html` にア `/jcr:content/.html` クセスすると、CPUのスパイクとAEMの応答が停止します(NPR-31755)。
 * リッチテキストエディター(RTE)でハイパーリンクを編集すると、新しく選択したパスは保存されません(NPR-31659)。
 * マルチフィールドコンポーネントを削除し、削除を取り消すと、コンポーネントは復元されますが、データは復元されません(NPR-31617)。
 
@@ -109,10 +111,6 @@ AEM 6.4.8.0は、新機能、お客様から要望された主な機能強化、
 ### 翻訳 {#translation-6480}
 
 * 複数の言語に対する翻訳プロジェクトの作成は、すべてではなく一部の言語に対してのみプロジェクトを生成し、エラー（リソースリゾルバーが既に閉じられている）がログで観察される(NPR-32212)。
-
-### WCMテンプレートエディタ {#wcm-template-editor-6480}
-
-* URLがで終わるか、またはで終わるURLにアクセスすると、CPUのスパイクとExperience Manager `/_jcr_content/.html` が応 `/jcr:content/.html` 答しなくなります(CQ-4280770)。
 
 ### WCM-MSM {#wcm-msm-6480}
 
@@ -1285,7 +1283,7 @@ AEM 6.4.2.0の主な特徴は次のとおりです。
 * MongoDB Enterprise 3.6のサポートを追加しました。
 * サイトページエディターでは、 <a href="../sites-developing/spa-walkthrough.md">AEMのSPA Editor JS SDKと組み合わせて、ReactまたはAngularで構築されたクライアント側コンポーネントを使用したコンテキスト内編集と組版のサポートが追加されます</a>。
 * コンテンツフラグメントの機能強化：テキストフィールドに注釈を付ける機能と、バージョンを並べて比較する機能が追加されました。
-* Adobe Stockとの [統合を追加し、](/help/assets/aem-assets-adobe-stock.md) AEMユーザーインターフェイスからAdobe Stockアセットを直接検索、プレビュー、保存、ライセンス認証できるようになりました。 詳しくは、AEM AssetsでのAdobe Stockアセ [ットの使用を参照してください](https://helpx.adobe.com/experience-manager/kt/assets/stock-assets-feature-video-use.md)。
+* Adobe Stockとの [統合を追加し、](/help/assets/aem-assets-adobe-stock.md) AEMユーザーインターフェイスからAdobe Stockアセットを直接検索、プレビュー、保存、ライセンス認証できるようにしました。 詳しくは、AEM AssetsでのAdobe Stockアセ [ットの使用を参照してください](https://helpx.adobe.com/experience-manager/kt/assets/stock-assets-feature-video-use.md)。
 * アセットで、動的な条件付きメタスキーマのサポートと、アセットフォルダーのメタデータスキーマの設定機能が追加されました。
 * 各コンポーネントに、フォルダーサムネールの作成/更新機能を有効/無効にする設定を追加しました。
 * ページオーサリングの画像エディタの機能強化。
