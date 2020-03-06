@@ -4,7 +4,7 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.4 Deploying Guide
 translation-type: tm+mt
-source-git-commit: 24aa210f1c7079c3e25fc5ccf346336b2121c142
+source-git-commit: d9a2b00fa0ed9b9660aaf5b17d1790747f339e91
 
 ---
 
@@ -57,6 +57,7 @@ source-git-commit: 24aa210f1c7079c3e25fc5ccf346336b2121c142
    + [アセットパフォーマンスガイド](assets-performance-sizing.md)
    + [設定方法に関する記事](ht-deploy.md)
    + [Geometrixx サイトの削除](removing-the-geometrixx-sites.md)
+   + [Webコンソールの設定](configuring-web-console.md)
 + AEM 6.4 へのアップグレード {#upgrading}
    + [AEM 6.4 へのアップグレード](upgrade.md)
    + [アップグレードの計画](upgrade-planning.md)
