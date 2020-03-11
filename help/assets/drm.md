@@ -3,7 +3,7 @@ title: アセットのデジタル著作権管理
 description: AEM でライセンスされているアセットの状態と有効期限の情報を管理する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 ---
 
@@ -12,11 +12,13 @@ source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
 
 多くの場合、デジタルアセットはライセンスに関連付けられています。ライセンスは、利用条件とその期間を指定します。Adobe Experience Manager(AEM)AssetsはAEMプラットフォームと完全に統合されているので、アセットの有効期限情報とアセットの状態を効率的に管理できます。 ライセンス情報をアセットに関連付けることもできます。
 
+<!-- TBD see if adding more UICONTROL tags is needed -->
+
 ## アセットの有効期限 {#asset-expiration}
 
 アセットの有効期限は、アセットのライセンス要件を徹底する有効な方法です。公開済みアセットの有効期限が切れたらアセットを非公開にすることで、ライセンス違反が発生する可能性を回避します。管理者権限のないユーザーは、有効期限切れのアセットを編集、コピー、移動、公開、ダウンロードできません。
 
-アセットの有効期限ステータスは、カード表示とリスト表示の両方のアセットコンソールで確認できます。
+アセットの有効期限ステータスは、カード表示とリスト表示の両方のアセットコンソールで表示できます。
 
 **カード表示**
 
@@ -34,7 +36,7 @@ For expired assets, the **[!UICONTROL Status]** column displays the **[!UICONTRO
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
-You can also view the expiration status of assets in the **[!UICONTROL References]** rail. アセットの有効期限のステータスと、複合アセットと参照先のサブアセット、コレクション、プロジェクト間の関係を管理します。
+You can also view the expiration status of assets in the **[!UICONTROL References]** rail. アセットの有効期限のステータスと、複合アセットと、参照されるサブアセット、コレクション、プロジェクトとの関係を管理します。
 
 1. 参照元の Web ページと複合アセットを表示するアセットに移動します。
 1. アセットを選択し、グローバルナビゲーションアイコンをクリックまたはタップします。
@@ -86,7 +88,7 @@ When you choose the **Expired** option, the Assets console only displays the exp
 アセットコンソールに有効期限切れのサブアセットとともに参照元の複合アセットを表示するには、AEM Configuration Manager で **Adobe CQ DAM Expiry Notification** ワークフローを設定します。
 
 1. AEM Configuration Manager を開きます。
-1. Choose **[!UICONTROL Adobe CQ DAM Expiry Notification]**. By default, **[!UICONTROL Time based Scheduler]** is selected, which schedules a job to check at a specific time whether an asset has expired subassets. ジョブが完了すると、期限切れのサブアセットと参照アセットを含むアセットが検索結果に期限切れとして表示されます。
+1. Choose **[!UICONTROL Adobe CQ DAM Expiry Notification]**. By default, **[!UICONTROL Time based Scheduler]** is selected, which schedules a job to check at a specific time whether an asset has expired subassets. ジョブが完了すると、期限切れのサブアセットと参照アセットを含むアセットが、検索結果に期限切れとして表示されます。
 
    ![chlimage_1-154](assets/chlimage_1-154.png)
 
