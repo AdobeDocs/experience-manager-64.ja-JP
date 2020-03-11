@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: ff0f006d-461c-4cc4-b6eb-d665f3f3b498
 translation-type: tm+mt
-source-git-commit: 89f920203342a55280eaee4a89bbdb8497344b49
+source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 ---
 
@@ -24,17 +24,13 @@ AEM は以下の両方をサポートします。
 
 >[!NOTE]
 >
->関連トピック:
->
->* [WCAG 2.0 のクイックガイド](/help/managing/qg-wcag.md)
+>* [WCAG 2.0 クイックガイド](/help/managing/qg-wcag.md)
 >* [アクセス可能なコンテンツ（WCAG 2.0 適合）の作成](/help/sites-authoring/creating-accessible-content.md)
->
-
 
 
 コンテンツ作成者は、RTE の機能を使用して、アクセシビリティ情報を提供し、同時にコンテンツをページに追加できます。これには、見出しや段落の要素を使用した構造情報の追加が含まれる場合があります。
 
-コンポーネン [トのRTEプラグインを設定することで](#configuring-the-plugin-features) 、これらの機能を設定およびカスタマイズできます。 例えば、このプラグ `paraformat` インを使用すると、基本的な要素を超えてサポートされ、デフォルトで提供される見出しレベルの数を拡張するなど、ブロックレベルのセマンティッ `H1`ク要素を `H2` 追加 `H3` できます。
+コンポーネン [トのRTEプラグインを設定することで](#configuring-the-plugin-features) 、これらの機能を設定およびカスタマイズできます。 例えば、プラグインを使 `paraformat` 用すると、追加のブロックレベルセマンティック要素を追加できます。例えば、基本の範囲を超えてサポートされ、デフォルトで提供される見出しレ `H1`ベルの数 `H2` を拡張 `H3` するなどです。
 
 RTEは、タッチ対応UIとクラシックUIの両方から、様々なコンポーネントで使用できます。 ただし、RTEを使用する主なコンポーネントは **Text** コンポーネントです。
 
@@ -42,7 +38,7 @@ AEMの **Text** コンポーネントは、タッチ対応UIとクラシックUI
 
 * The **Text** component in the touch-enabled UI:
 
-   ![タッチ対応UIのフルスクリーンモードのテキストコンポーネント(RTE)。](assets/chlimage_1-206.png)
+   ![タッチ操作対応UIのフルスクリーンモードのテキストコンポーネント(RTE)。](assets/chlimage_1-206.png)
 
 * クラシック UI の&#x200B;**テキスト**&#x200B;コンポーネント：
 
@@ -50,7 +46,7 @@ AEMの **Text** コンポーネントは、タッチ対応UIとクラシックUI
 
 >[!NOTE]
 >
->クラシックUIで使用できるRTE機能とタッチ操作対応UIでは異なります。 詳しくは、以下を参照してください。
+>クラシックUIのRTE機能とタッチ操作対応UIの間には違いがあります。 詳しくは、以下を参照してください。
 >
 >* [プラグインとその機能](/help/sites-administering/rich-text-editor.md#aboutplugins)
 >* [プラグインとその機能 — タッチ対応UI](/help/sites-administering/rich-text-editor.md#aboutplugins)
@@ -90,7 +86,7 @@ CRXDE Lite の該当する `rtePlugins` サブブランチ内でプラグイン�
 
 ## ソース編集機能の使用 {#use-of-the-source-edit-feature}
 
-In some cases, content authors will find it necessary to examine and adjust the HTML source code created using the RTE. For example, a piece of content created within the RTE may require additional markup to ensure compliance with WCAG 2.0. This can be done with the [source edit](/help/sites-administering/rich-text-editor.md#aboutplugins) option of the RTE. この機能はプラグイン [ で `sourceedit` 指定でき `misctools` ます](/help/sites-administering/rich-text-editor.md#aboutplugins)。
+In some cases, content authors will find it necessary to examine and adjust the HTML source code created using the RTE. For example, a piece of content created within the RTE may require additional markup to ensure compliance with WCAG 2.0. This can be done with the [source edit](/help/sites-administering/rich-text-editor.md#aboutplugins) option of the RTE. この機能はプラグイン [ で指 `sourceedit` 定でき `misctools` ます](/help/sites-administering/rich-text-editor.md#aboutplugins)。
 
 >[!CAUTION]
 >
@@ -106,7 +102,7 @@ The following procedure illustrates how to extend the **Table** component with a
 
 のコンストラクターで、 `TablePropertiesDialog`キャプションの編集に使用する追加のテキスト入力フィールドを追加します。 コンテンツ `itemId` を自動的に処理す `caption` るには、に設定する必要があります（DOM属性の名前など）。
 
-表で **は** 、DOM要素に対する属性を明示的に設定または削除する必要があります。 値は、オブジェクトのダイアログによって渡さ `config` れます。 ブラウザー実装での一般的な問題を回避するため、DOM属性は、対応するメソッド(のショートカッ `CQ.form.rte.Common` ト) `com` を使用して設 `CQ.form.rte.Common`定または削除する必要があります。
+表で **は** 、DOM要素に対する属性を明示的に設定または削除する必要があります。 値は、オブジェクトのダイアログによって渡さ `config` れます。 ブラウザーの実装で一般的な問題が発生するのを防ぐために、DOM属性は、対応するメソッド(のシ `CQ.form.rte.Common` ョートカット) `com` を使用して設 `CQ.form.rte.Common`定または削除する必要があります。
 
 >[!NOTE]
 >
@@ -196,15 +192,14 @@ The following procedure illustrates how to extend the **Table** component with a
    }
    ```
 
-1. Save your changes using **Save All …**
+1. Save your changes using **Save All**
 
 >[!NOTE]
 >
->キャプション要素の値に許可される入力のタイプは、プレーンテキストフィールドだけではありません。 キャプションの値をメソッドを通じて提供するExtJSウィジェッ `getValue()` トを使用できます。
+>キャプション要素の値に対して許可される入力のタイプは、プレーンテキストフィールドだけではありません。 キャプションの値をメソッドを通じて提供するExtJSウィジェッ `getValue()` トは、どれでも使用できます。
 >
 >追加の要素および属性用に編集機能を追加するには、以下の両方を確認します。
 >
 >* The `itemId` property for each corresponding field is set to the name of the appropriate DOM attribute (`TablePropertiesDialog`).
 >* DOM 要素で属性が設定／削除されていること（`Table`）。
-
 
