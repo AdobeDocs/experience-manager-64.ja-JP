@@ -3,7 +3,7 @@ title: AEM でのアセットの検索
 description: AEM のフィルターパネルを使用した必要なアセットの検索方法と検索で表示されたアセットの使用方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 57952323a3ae0990232506d551b91b724f830f20
+source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 ---
 
@@ -26,6 +26,8 @@ AEM のフィルターパネルを使用した必要なアセットの検索方�
 * 向き
 * スタイル
 * インサイト
+
+<!-- TBD keystroke 65 article and port applicable changes here. This content goes. -->
 
 You can customize the Filters panel and add/remove search predicates using [search facets](search-facets.md). フィルターパネルを表示するには、次の手順を実行します。
 
@@ -68,7 +70,7 @@ You can customize the Filters panel and add/remove search predicates using [sear
 
 ![last_modified_dates](assets/last_modified_dates.png)
 
-次のオプションを使用して、検索の精度を高めることもできます。
+また、次のオプションを使用して、検索の精度を高めることもできます。
 
 ![timestamp](assets/timestamp.png)
 
@@ -95,4 +97,4 @@ You can customize the Filters panel and add/remove search predicates using [sear
 * クリック
 * アセットが表示されるメディアチャネル
 
-![insights](assets/insights.png)
+![洞察](assets/insights.png)
