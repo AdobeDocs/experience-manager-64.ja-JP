@@ -1,22 +1,22 @@
 ---
 title: Camera Raw サポート
-description: Adobe Experience Manager AssetsでCamera rawサポートを有効にする方法を説明します。
+description: Adobe Experience Manager AssetsでCamera Rawサポートを有効にする方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e6c3254b1913f300f5c4bf99c75734c4a38cf021
+source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 ---
 
 
-# Camera rawを使用した画像の処理のサポート {#camera-raw-support}
+# Camera Rawを使用した画像の処理のサポート {#camera-raw-support}
 
-Camera rawのサポートを有効にして、CR2、NEF、RAFなどのRAWファイル形式を処理し、画像をJPEG形式でレンダリングできます。 この機能は、パッケージ共有で使用できる [Camera rawパッケージを使用して、Adobe Experience Manager](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) Assetsでサポートされます。
+Camera Rawのサポートを有効にして、CR2、NEF、RAFなどのRAWファイル形式を処理し、画像をJPEG形式でレンダリングできます。 この機能は、パッケージ共有で使用できる [Camera Rawパッケージを使用して](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) 、Adobe Experience Manager Assetsでサポートされます。
 
 >[!NOTE]
 >
->この機能は JPEG レンディションのみをサポートします。Windows 64ビット、Mac OSおよびRHEL 7.xでサポートされています。
+>この機能は JPEG レンディションのみをサポートします。Windows 64ビット、Mac OS、RHEL 7.xでサポートされています。
 
-Adobe Experience Manager AssetsでCamera rawのサポートを有効にするには、次の手順に従います。
+Adobe Experience Manager AssetsでCamera Rawのサポートを有効にするには、次の手順に従います。
 
 1. Download the [Camera Raw package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) from the Package Share.
 
@@ -28,17 +28,17 @@ Adobe Experience Manager AssetsでCamera rawのサポートを有効にするに
 
    * **[!UICONTROL サムネール]**: `140:100:false, 48:48:false, 319:319:false`
    * **[!UICONTROL スキップ MIME タイプ]**: `skip:image/dng, skip:image/x-raw-(.*)`
-   ![小石](assets/chlimage_1-334.png)
+   ![縮歩](assets/chlimage_1-334.png)
 
-1. 「 **[!UICONTROL Web対応の画像」タブの]** 「リストをスキ **[!UICONTROL ップ]** 」フィールドで、を指定しま `audio/mpeg, video/(.*), image/dng, image/x-raw-(.*)`す。
+1. 「 **[!UICONTROL Web対応の画像]** 」タブの「リスト **[!UICONTROL をスキップ]** 」フィールドに `audio/mpeg, video/(.*), image/dng, image/x-raw-(.*)`、
 
-   ![小石](assets/chlimage_1-335.png)
+   ![縮歩](assets/chlimage_1-335.png)
 
 1. From the side panel, add the **[!UICONTROL Camera Raw/DNG Handler]** step below the **[!UICONTROL Thumbnail creation]** step.
 
 1. In the **[!UICONTROL Camera Raw/DNG Handler]** step, add the following configuration in the **[!UICONTROL Arguments]** tab:
 
-   * **[!UICONTROL Mime Types]**: `image/dng` と `image/x-raw-(.*)`
+   * **[!UICONTROL Mime Types]**: `image/dng` および `image/x-raw-(.*)`
    * **[!UICONTROL コマンド]**:
 
       * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.web.1280.1280.jpeg 1280 1280`
@@ -57,11 +57,11 @@ Adobe Experience Manager AssetsでCamera rawのサポートを有効にするに
 
 ![chlimage_1-337](assets/chlimage_1-337.png)
 
-*図：サイドペインのオプション。*
+*図：サイドペインのオプション*
 
 ![chlimage_1-338](assets/chlimage_1-338.png)
 
-*図：画像に軽量な編集を行う場合は、このオプションを使用します。*
+*図：オプションを使用して、画像に軽量な編集を行います。*
 
 Camera Raw 画像に対する編集を保存すると、その画像に対して、新しいレンディション「`AdjustedPreview.jpg`」が生成されます。Camera Raw 以外の画像タイプの場合は、変更内容がすべてのレンディションに反映されます。
 
@@ -71,4 +71,4 @@ Camera Raw 画像に対する編集を保存すると、その画像に対して
 
 * この機能は JPEG レンディションのみをサポートします。これは、Windows 64 ビット、Mac OS および RHEL 7.x でサポートされます。
 * メタデータの書き戻しは、RAW および DNG 形式ではサポートされていません。
-* Camera Raw ライブラリには、一度に処理できる合計ピクセルに関する制限があります。現在、ファイルの長辺で最大6,5000ピクセル、または最初に検出される条件に応じて512 MPを処理できます。
+* Camera Raw ライブラリには、一度に処理できる合計ピクセルに関する制限があります。現在、ファイルの長辺で最大65000ピクセル、または最初に検出される条件に合わせて512 MPを処理できます。
