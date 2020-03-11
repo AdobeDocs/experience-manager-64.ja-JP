@@ -1,17 +1,9 @@
 ---
 title: リッチテキストエディタープラグインの設定
-seo-title: リッチテキストエディタープラグインの設定
 description: AEM リッチテキストエディタープラグインを設定して、個々の機能を有効にする方法について説明します。
-seo-description: AEM リッチテキストエディタープラグインを設定して、個々の機能を有効にする方法について説明します。
-uuid: d6a029fb-e431-4f12-9002-7d794e4beb0d
-contentOwner: asgupta
-products: SG_EXPERIENCEMANAGER/6.4/SITES
-topic-tags: operations
-content-type: reference
-discoiquuid: e0328f9c-26c6-4c40-8594-3190c38cebd8
-noindex: true
+contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 89f920203342a55280eaee4a89bbdb8497344b49
+source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 ---
 
@@ -211,16 +203,16 @@ The paste-as-Microsoft-Word (`paste-wordhtml`) mode can be further configured so
   <tr> 
    <td>table</td> 
    <td>nt:unstructured</td> 
-   <td><p>テーブルを貼り付けるときの動作を定義します。<br /> </p> <p>このノードには、テーブルの貼り付けを許可するかどうかを定義するプロパティ <code>allow</code>（型は <code>Boolean</code>）が必要です。</p> <p>をに設 <code>allow</code> 定した場 <code>false</code>合、貼り付けたテーブルコンテンツの <code>ignoreMode</code> 処理方法を定義するプロパティ(type<code> String</code>)を指定する必要があります。 有効な値は次のとお <code>ignoreMode</code> りです。</p> 
+   <td><p>テーブルを貼り付けるときの動作を定義します。<br /> </p> <p>このノードには、テーブルの貼り付けを許可するかどうかを定義するプロパティ <code>allow</code>（型は <code>Boolean</code>）が必要です。</p> <p>をに設 <code>allow</code> 定した場合 <code>false</code>、貼り付けたテーブルコンテンツの処理方法 <code>ignoreMode</code> を定義するプロパティ(タイプ<code> String</code>)を指定する必要があります。 有効な値は次のと <code>ignoreMode</code> おりです。</p> 
     <ul> 
-     <li><code>remove</code>:テーブルのコンテンツを削除します。</li> 
+     <li><code>remove</code>:表の内容を削除します。</li> 
      <li><code>paragraph</code>:表のセルを段落に変換します。</li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td>list</td> 
    <td>nt:unstructured</td> 
-   <td><p>リストを貼り付けるときの動作を定義します。<br /> </p> <p>リストの貼り付けを許可するかどうかを定義するプロパティ <code>allow</code>（型は <code>Boolean</code>）が必要です。</p> <p>をに設 <code>allow</code> 定した場合、貼り <code>false</code>付けたリストコンテンツの処理方法を <code>ignoreMode</code> 定義するプロパ <code>String</code>ティ（タイプ）を指定する必要があります。 有効な値は次のとお <code>ignoreMode</code> りです。</p> 
+   <td><p>リストを貼り付けるときの動作を定義します。<br /> </p> <p>リストの貼り付けを許可するかどうかを定義するプロパティ <code>allow</code>（型は <code>Boolean</code>）が必要です。</p> <p>をに設 <code>allow</code> 定した場合、貼り <code>false</code>付けるリストコンテンツの処理方法を定義する <code>ignoreMode</code> プロパティ( <code>String</code>タイプ)を指定する必要があります。 有効な値は次のと <code>ignoreMode</code> おりです。</p> 
     <ul> 
      <li><code>remove</code>:リストの内容を削除します。</li> 
      <li><code>paragraph</code>:リスト項目を段落に変換します。</li> 
@@ -279,7 +271,7 @@ Example of a valid `htmlPasteRules` structure:
 
    * **名前** `features`
    * **タイプ** `String`
-   * **Value** (ア `*` スタリスク)
+   * **値** (ア `*` スタリスク)
 
 1. すべての変更を保存します。
 
@@ -294,7 +286,7 @@ Example of a valid `htmlPasteRules` structure:
 1. Add the property `externalStyleSheets` to the parent node of `<rtePlugins-node>`:
 
    * **名前** `externalStyleSheets`
-   * **Type** ( `String[]` 複数文字列；crxdeで **Multi** （複数）をクリック
+   * **Type** ( `String[]` 複数文字列、「 **Multi** in CRXDE」をクリックします。
    * **値** 使用する各スタイルシートのパスとファイル名。リポジトリパスを使用します。
    >[!NOTE]
    参照先のスタイルシートは後から追加できます。
@@ -305,7 +297,7 @@ Example of a valid `htmlPasteRules` structure:
 RTE をダイアログ（クラシック UI）で使用する場合は、リッチテキスト編集用に最適化されたスタイルシートを指定できます。技術上の制限により、CSS コンテキストはエディターから失われるので、CSS コンテキストをエミュレートして WYSIWYG 環境を改善できます。
 リッチテキストエディターでは、`CQrte` という ID を持つコンテナ DOM 要素を使用します。これを使用して、表示や編集用に様々なスタイルを提供できます。
 # CQ td {
-// defines style for viewing }
+//表示するスタイルを定義}
 # CQrte td {
 // defines style for editing }
 
@@ -327,7 +319,7 @@ RTE をダイアログ（クラシック UI）で使用する場合は、リッ�
 
    * **名前** `cssName`
    * **タイプ** `String`
-   * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。;例えば、代 `cssClass` わりに `.cssClass`)
+   * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。;例えば、代わ `cssClass` りに `.cssClass`)
 
 1. `text` プロパティを同じノードに追加します。これは、選択ボックスに表示されるテキストを定義します。
 
@@ -365,7 +357,7 @@ Any text authored in RTE is placed within a block tag, the default being `<p>`. 
 
    * **名前** `features`
    * **タイプ** `String`
-   * **Value** (ア `*` スタリスク)
+   * **値** (ア `*` スタリスク)
 
 >[!NOTE]
 プラグインをこれ以上設定しない場合は、次のデフォルトの書式が有効になります。
@@ -398,9 +390,9 @@ RTE の段落書式を設定する際に、書式オプションとしての段�
 
    * **名前** `tag`
    * **タイプ** `String`
-   * **Value** ：書式のブロックタグ例：p、h1、h2など
+   * **値** ：形式のブロックタグ例：p、h1、h2など
 
-      区切りの山括弧を入力する必要はありません。
+      区切り文字の山括弧を入力する必要はありません。
 
 1. 同じノードに、説明テキストをドロップダウンリストに表示するための別のプロパティを追加します。
 
@@ -454,11 +446,11 @@ If you define custom formats, the default formats (`<p>`, `<h1>`, `<h2>`, and `<
 
    * **名前** `entity`
    * **タイプ** `String`
-   * **必要な** 文字のHTML表現の値。例えば、分数 `&189;` の場合は半分です。
+   * **必要な** 文字のHTML表現の値。例えば、分数 `&189;` の半分を表します。
 
 1. 変更内容を保存します。
 
-プロパティを保存すると、表示される文字がCRXDEに表示されます。 下の半分の例を参照してください。 上記の手順を繰り返して、作成者が特殊文字を使用できるようにします。
+プロパティが保存されると、表示される文字がCRXDEに表示されます。 下の半分の例を参照してください。 上記の手順を繰り返して、作成者が特殊文字を使用できるようにします。
 
 ![CRXDE で、単一の文字を追加して RTE ツールバーで使用できるようにします。](assets/chlimage_1-412.png)
 
@@ -476,11 +468,11 @@ CRXDE で、単一の文字を追加して RTE ツールバーで使用できる
 
    * **名前** `rangeStart`
       **タイプ** `Long`
-      **範囲内の** 最初の文字のUnicode [](https://unicode.org/) （10進数）表現の値
+      **範囲内** の最初の文字のUnicode [](https://unicode.org/) （10進数）表現の値
 
    * **名前** `rangeEnd`
       **タイプ** `Long`
-      **範囲内** の最後の文字のUnicode [](https://unicode.org/) （10進数）表現の値
+      **範囲内** の最後の文字のUnicode [](https://unicode.org/) （10進数）表現を値として指定します。
 
 1. 変更内容を保存します。
 
@@ -502,21 +494,21 @@ CRXDE で、単一の文字を追加して RTE ツールバーで使用できる
 テーブルとセルのスタイルはクラシック UI 用にのみ定義できます。
 
 >[!NOTE]
-RTE コンポーネント内または RTE コンポーネントからのテーブルのコピーおよび貼り付けはブラウザーに依存します。デフォルトでは一部のブラウザーしかサポートされていません。結果はテーブルの構造やブラウザーに応じて様々です。例えば、Mozilla FirefoxのRTEコンポーネントで表をコピーして貼り付けると、Classic UIとTouch UIで表のレイアウトが保持されません。
+RTE コンポーネント内または RTE コンポーネントからのテーブルのコピーおよび貼り付けはブラウザーに依存します。デフォルトでは一部のブラウザーしかサポートされていません。結果はテーブルの構造やブラウザーに応じて様々です。例えば、Mozilla FirefoxのClassic UIとTouch UIでRTEコンポーネントの表をコピーして貼り付けた場合、表のレイアウトは保持されません。
 
 1. Within your component navigate to the node `<rtePlugins-node>/table`. このノードが存在しない場合は作成します。詳しくは、[プラグインのアクティベート](#activateplugin)を参照してください。
 1. Create the `features` property on the `table` node:
 
    * **名前** `features`
    * **タイプ** `String`
-   * **Value** (ア `*` スタリスク)
+   * **値** (ア `*` スタリスク)
    >[!NOTE]
    テーブルの機能をすべて有効にはしない場合は、`features` プロパティを次のように作成します。
    * **タイプ** `String[]`
 
    * **値** 必要に応じて、以下のいずれかまたは両方：
-      * `table` を使用して、テーブルプロパティの編集を許可します。スタイルを含めます。
-      * `cellprops` を使用して、スタイルなどのセルのプロパティを編集できます。
+      * `table` を使用して、テーブルプロパティの編集を許可します。スタイルを含める。
+      * `cellprops` を使用して、スタイルを含むセルのプロパティを編集できます。
 
 
 1. 参照する CSS スタイルシートの場所を定義します。これは、[テキストのスタイル](#textstyles)を定義する場合と同じなので、[スタイルシートの場所の指定](#locationofstylesheet)を参照してください。他のスタイルを定義済みであれば、場所は定義されている可能性があります。
@@ -543,7 +535,7 @@ RTE コンポーネント内または RTE コンポーネントからのテー�
 
       * **名前** `cssName`
       * **タイプ** `String`
-      * **CSS** クラスの名前(例えば、 `.`の代わりに前 `cssClass` 付き `.cssClass`)
+      * **CSS** クラスの名前(前には `.`付けず、代わりに `cssClass` 付け `.cssClass`)
    * ドロップダウンセレクターに表示する説明テキストを定義するには
 
       * **名前** `text`
@@ -561,8 +553,8 @@ RTE コンポーネント内または RTE コンポーネントからのテー�
 
 このようなシナリオでアクセシビリティを向上させるために、RTE は非表示のヘッダーセルをサポートします。また、テーブルの非表示のヘッダーに関連する設定が用意されています。これらの設定を使用すると、編集モードとプレビューモードで非表示のヘッダーにCSSスタイルを適用できます。 作成者が編集モードで非表示のヘッダーを特定できるように、コードに次のパラメーターを追加してください。
 
-* `hiddenHeaderEditingCSS`:RTEを編集する際にhidden-headerセルに適用されるCSSクラスの名前を指定します。
-* `hiddenHeaderEditingStyle`:RTEの編集時に非表示ヘッダーセルに適用するスタイル文字列を指定します。
+* `hiddenHeaderEditingCSS`:RTEを編集する際に、hidden-headerセルに適用されるCSSクラスの名前を指定します。
+* `hiddenHeaderEditingStyle`:RTEの編集時に非表示ヘッダーのセルに適用するスタイル文字列を指定します。
 
 コードに CSS とスタイル文字列の両方を指定すると、CSS がスタイル文字列に優先され、スタイル文字列によって加えられたすべての設定の変更が上書きされることがあります。
 
@@ -662,7 +654,7 @@ RTE では、以前の編集を取り消す、またはやり直すことがで�
 1. 変更内容を保存します。
 
 >[!NOTE]
-これは、ダイアログでRTEを使用する場合にのみ適用されます（クラシックUIでのインプレイス編集では適用されません）。
+これは、ダイアログでRTEを使用する場合にのみ適用されます（クラシックUIのインプレイス編集では適用されません）。
 
 ## リンクのスタイルとプロトコルの設定 {#linkstyles}
 
@@ -699,12 +691,12 @@ AEM にリンクを追加する場合、次の定義が可能です。
 
       * **名前** `cssInternal`
       * **タイプ** `String`
-      * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。;例えば、代 `cssClass` わりに `.cssClass`)
+      * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。;例えば、代わ `cssClass` りに `.cssClass`)
    * 外部リンクの CSS スタイル：
 
       * **名前** `cssExternal`
       * **タイプ** `String`
-      * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。;例えば、代 `cssClass` わりに `.cssClass`)
+      * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。;例えば、代わ `cssClass` りに `.cssClass`)
    * Array of valid **protocols** (including https://, https:// file://, mailto:, amongst others)
 
       * **名前** `protocols`
@@ -737,7 +729,7 @@ AEM にリンクを追加する場合、次の定義が可能です。
 
          * **名前** `targetInternal`
          * **タイプ** `String`
-         * **内部リンク** （「モード」の場合にのみ使用）のターゲットを設定しま `auto`す。
+         * **内部リンク**`auto`(「」モードが
       * 外部リンクのターゲット：
 
          * **名前** `targetExternal`
