@@ -10,7 +10,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e00e7cc9-b777-4f9e-906d-824bcb2bbd41
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: e269c0cf002f4b2db5454c315d35f4101b652540
 
 ---
 
@@ -39,7 +39,9 @@ source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
 
 1. [複数ビュー用のマスター画像をアップロードします。](#uploading-assets-in-image-sets)
 
-   まずは画像セット用の画像をアップロードします。ユーザーは画像セットビューアで画像をズームできるので、画像を選択する際にはズームを考慮します。最大サイズで 2,000 ピクセル以上の画像を使用してください。AEM Assets では多くの画像ファイル形式がサポートされますが、可逆圧縮 TIFF、PNG および EPS 画像の使用が推奨されます。
+   まずは画像セット用の画像をアップロードします。ユーザーは画像セットビューアで画像をズームできるので、画像を選択する際にはズームを考慮します。最適なズームディテールを得るために、最大寸法の画像が少なくとも2000 pixelであることを確認します。 ダイナミックメディアでは、各画像を最大25メガピクセルまでレンダリングできます。 例えば、5000 x 5000メガピクセルの画像や、その他のサイズの組み合わせを25メガピクセルまで使用できます。
+
+   AEM Assets では多くの画像ファイル形式がサポートされますが、可逆圧縮 TIFF、PNG および EPS 画像の使用が推奨されます。
 
 1. [画像セットを作成します。](#creating-image-sets)
 
@@ -49,7 +51,7 @@ source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
 
    [バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用して画像セットを自動的に作成することもできます。
 
-   **重要** —バッチセットは、アセット取り込みの一部としてIPS(Image Production System)によって作成され、ダイナミックメディア — Scene7モードでのみ使用できます。
+   **重要** — バッチセットは、IPS(Image Production System)によってアセット取り込みの一部として作成され、ダイナミックメディア — Scene7モードでのみ使用できます。
 
    See [Preparing Image Set assets for upload and Uploading your files](#uploading-assets-in-image-sets).
 
@@ -110,7 +112,7 @@ To edit Image Sets, see [editing Image Sets.](#editing-image-sets) また、画�
 
 ## 画像セットの作成 {#creating-image-sets}
 
-画像セットは、ユーザーインターフェイスまたはAPIを使用して作成できます。 ここでは、ユーザインターフェイスで画像セットを作成する方法について説明します。
+画像セットは、ユーザーインターフェイスまたはAPIを通じて作成できます。 この節では、ユーザインターフェイスで画像セットを作成する方法について説明します。
 
 >[!NOTE]
 >
@@ -169,7 +171,7 @@ To edit Image Sets, see [editing Image Sets.](#editing-image-sets) また、画�
 
 画像セットは、ユーザーインターフェイスで作成することも、[バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用して自動的に作成することもできます。
 
-**重要** —バッチセットは、IPS [Image Production Systemによってアセット取り込みの一部として作成され] 、ダイナミックメディア — Scene7モードでのみ使用できます。
+**重要** — バッチセットは、IPS [Image Production Systemによってアセット取り込みの一部として作成され] 、ダイナミックメディア — Scene7モードでのみ使用できます。
 
 However, sets created using batch set presets, do *not* appear in the user interface. これらのセットは、3つの方法で表示できます。 （これらの方法は、画像セットをユーザーインターフェイスで作成した場合も使用できます）。
 
@@ -212,10 +214,10 @@ However, sets created using batch set presets, do *not* appear in the user inter
 1. 画像セット内の画像を編集するには、次のいずれかの操作をおこないます。
 
    * アセットを並べ替えるには、画像を新しい位置までドラッグします（並べ替えアイコンを選択して項目を移動します）。
-   * 項目を昇順または降順に並べ替えるには、列見出しをタップします。
+   * 項目を昇順または降順で並べ替えるには、列見出しをタップします。
    * To add an asset or update an existing asset, tap the **[!UICONTROL Add Asset]**. アセットに移動して選択し、ページの右上隅にある「]**選択**[!UICONTROL 」をタップしますページ。
    >[!NOTE]
-   >AEMがサムネールに使用する画像を削除し、別の画像に置き換えても、元のアセットは表示されたままになります。
+   >AEMがサムネールに使用する画像を削除し、別の画像に置き換えた場合、元のアセットが表示されたままになります。
 
    * To delete an asset, select it, then tap **[!UICONTROL Delete Asset]**.
    * プリセットを適用するには、ページの右上隅付近にある「**[!UICONTROL プリセット]**」をタップ し、ビューアプリセットを選択します。
