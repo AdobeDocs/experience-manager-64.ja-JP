@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: 9f6da11b6fd5630dd2a81d1745f7f157ffb2bf34
+source-git-commit: 6684e78caf43b49660de3c1a90e2cccd9a204420
 
 ---
 
@@ -369,7 +369,7 @@ AEM 6.4.6.0の主な特徴は次のとおりです。
 * ACP API で生成された URL およびフォルダーメタデータのアセットパスが URL エンコードされません。GRANITE-26198：CQ-4271814 のホットフィックス
 * ペイロードが定義されていないため、レビュータスクの作成機能が動作しません。 NPR-30469:修正プログラムCQ-4274263
 * アセットピッカーでOmniSearchを実行すると、カード表示からリスト表示に切り替えたり、逆に切り替えたりする機能が消えます。 NPR-29852：CQ-4269369 のホットフィックス
-* （タッチ操作対応UI）パブリケーションの管理ウィザード中に、ページの追加後にアセットがレプリケーションキューに追加されるので、数秒後に一部のアセットが表示されます。 NPR-29985：CQ-4270724 のホットフィックス
+* （タッチ操作対応UI）パブリケーションの管理ウィザード中に、ページの追加後にアセットがレプリケーションキューに追加され、数秒後に一部のアセットが表示されます。 NPR-29985：CQ-4270724 のホットフィックス
 * 検索クエリを関連度で並べ替えると、InDesign ドキュメントと InDesign テンプレートが一緒に返されます。CQ-4273864 のホットフィックス
 * ユーザーのメール ID が大文字の場合、以前にチェックアウトしたアセットをチェックインできません。CQ-4276575 のホットフィックス
 * Configuring Dynamic Media Cloud Services in `DMHybrid` mode results in multiple empty report suites created in Analytics with no report suite id stored on AEM resulting in report suite duplication. CQ-4276855 のホットフィックス
@@ -1648,7 +1648,7 @@ AEM 6.4.2.0 フォームの主なハイライトは次のとおりです。
 
 **Assets**
 
-* Adobe Stockとの [統合を追加し、](/help/assets/aem-assets-adobe-stock.md) AEMユーザーインターフェイスからAdobe Stockアセットを直接検索、プレビュー、保存、ライセンス認証できるようにしました。 詳しくは、AEMアセットでのAdobe Stockア [セットの使用(https://helpx.adobe.com/experience-manager/kt/assets/using/stock-assets-feature-video-use.html])を参照してください。 NPR-15779：CQ-30857 のホットフィックス
+* Adobe Stockとの [統合を追加し、](/help/assets/aem-assets-adobe-stock.md) AEMユーザーインターフェイスから直接Adobe Stockアセットを検索、プレビュー、保存、ライセンス認証できるようになりました。 詳しくは、AEMアセットでのAdobe Stockア [セットの使用(https://helpx.adobe.com/experience-manager/kt/assets/using/stock-assets-feature-video-use.html])を参照してください。 NPR-15779：CQ-30857 のホットフィックス
 * 動的な条件付きメタスキーマのサポートを追加しました。 For more information, see [Cascading Metadata](/help/assets/cascading-metadata.md). NPR-25189：CQ-4237413 のホットフィックス
 * コンテンツフラグメントで「アセットのダウンロード」オプションを有効にしました。 For more information, see [Asset Reports](/help/assets/asset-reports.md). NPR-25186：CQ-4237410 のホットフィックス
 * アセットフォルダのメタデータスキーマを設定する機能。 詳しくは、「フォルダーメタデ [ータスキーマ](/help/assets/folder-metadata-schema.md) 」を参照し、 [AEM 6.4.2.0のインストール後の設定](#configuration-settings-required-for-npr) （英語のみ）を参照してください。 NPR-21268：CQ-4221574 のホットフィックス
@@ -2206,7 +2206,7 @@ To use Uber Jar in a Maven project, refer to the article, [How to use Uber jar](
 <dependency>
       <code>com.adobe.aem</groupId>
       <artifactId>uber-jar</artifactId>
-      <version>6.4.8.0</version>
+      <version>6.4.8</version>
       <classifier>apis</classifier>
       <scope>provided</scope>
 </dependency>
