@@ -3,7 +3,7 @@ title: AEM Assets と Brand Portal の連携の設定
 description: 'Brand PortalでAEM Assetsを設定し、アセットとコレクションをBrand Portalに公開する方法を説明します。 '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: c269402e253ae71f51de5bf7c05970abb51ef192
+source-git-commit: bd6ae2ddf49091c3b25bac97761a593cdd0a56cc
 
 ---
 
@@ -195,7 +195,6 @@ Adobe I/O統合により、IMSアカウント設定の設定で必要なAPIキ�
 >
 >構成が正常であることを確認します。 構成が正常でない場合は、構成を削除し、新しい正常な構成を作成します。
 
-<br/> <br/>
 
 ### Configure cloud service {#configure-the-cloud-service}
 
