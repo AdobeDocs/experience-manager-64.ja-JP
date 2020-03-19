@@ -1,28 +1,28 @@
 ---
-title: Brand PortalでのAEM Assetsの設定
+title: AEM Assets と Brand Portal の連携の設定
 description: 'Brand PortalでAEM Assetsを設定し、アセットとコレクションをBrand Portalに公開する方法を説明します。 '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: 16ed5bc3a06976d2cd616da9987cb7e70f87210f
+source-git-commit: c269402e253ae71f51de5bf7c05970abb51ef192
 
 ---
 
 
-# Configure AEM Assets with Brand Portal {#configure-integration-64}
+# AEM Assets と Brand Portal の連携の設定 {#configure-integration-64}
 
-Adobe Experience Manager (AEM)Assetsは、Adobe I/Oを通じてBrand Portalで設定され、Brand Portalテナントの認証用にIMSトークンを取得します。
+Adobe Experience Manager（AEM）Assets と Brand Portal の連携が、Adobe I/O を通じて設定されます。Adobe I/O は Brand Portal テナントの認証用の IMS トークンを取得します。
 
 >[!NOTE]
 >
->Adobe I/Oを介したBrand PortalでのAEM Assetsの設定は、AEM 6.4.8.0以降でサポートされています。
+>Adobe I/O を使用した AEM Assets と Brand Portal の連携の設定は、AEM 6.4.8.0 以降でサポートされています。
 >
->以前は、Brand Portalは従来のOAuth Gatewayを介してクラシックUIで設定されていました。レガシーOAuth Gatewayは、JWTトークン交換を使用して認証用のIMSアクセストークンを取得します。
+>これまで、Brand Portal は、旧来の OAuth ゲートウェイを通じてクラシック UI で設定されていました。このゲートウェイは、JWT トークン交換を使用して認証用の IMS アクセストークンを取得します。
 >
->レガシーOAuth Gatewayの設定を持つ既存のBrand Portalユーザーの場合は、既存の設定を削除し、Adobe I/Oで新しい設定を作成することをお勧めします。
+>旧来の OAuth ゲートウェイを使用して設定された Brand Portal を既に使用している場合は、既存の設定を削除し、Adobe I/O で新しい設定を作成することをお勧めします。
 >
->レガシーOAuth Gatewayの設定を持つ既存のBrand Portalユーザーの場合は、既存の設定を削除し、Adobe I/Oで新しい設定を作成することをお勧めします。
+>旧来の OAuth ゲートウェイを使用して設定された Brand Portal を既に使用している場合は、既存の設定を削除し、Adobe I/O で新しい設定を作成することをお勧めします。
 >
->ただし、設定を変更しない場合は、既存の設定が引き続き機能します。
+>ただし、設定を変更しない場合、既存の設定が引き続き機能します。
 
 このヘルプでは、次の2つの使用例について説明します。
 * [新しい設定](#configure-new-integration-64):新しいBrand Portalユーザーで、AEM Assets作成者インスタンスをBrand Portalで設定する場合は、Adobe I/Oで新しい設定を作成できます。
@@ -36,11 +36,11 @@ Adobe Experience Manager (AEM)Assetsは、Adobe I/Oを通じてBrand Portalで�
 
 ## 前提条件 {#prerequisites}
 
-AEM AssetsをBrand Portalで設定するには、次が必要です。
+AEM Assets と Brand Portal の連携を設定するには以下が必要です。
 
-* 最新のService Packを含むAEM Assets作成者インスタンスを起動および実行します。
-* ブランドポータルテナントURL。
-* Brand PortalテナントのIMS組織に対するシステム管理者権限を持つユーザー。
+* 最新のサービスパックを適用した実行中の AEM Assets オーサーインスタンス
+* Brand Portal テナント URL
+* Brand Portal テナントの IMS 組織に対するシステム管理者権限を持つユーザー
 
 
 [AEM 6.4のダウンロードとインストール](#aemquickstart)
@@ -65,7 +65,7 @@ AEMをダウンロードした後、AEMオーサーインスタンスを設定�
 
 **最新のAEMパッケージ** またはService Packが見つからない場合は、サポートにお問い合わせください。
 
-## Create configuration {#configure-new-integration-64}
+##  設定の作成{#configure-new-integration-64}
 
 AEM AssetsをBrand Portalで初めて設定する場合は、一覧に示された手順を実行します。
 1. [公開証明書の取得](#public-certificate)
@@ -88,7 +88,7 @@ IMS設定には、次の2つの手順が含まれます。
 公開証明書を使用すると、Adobe I/Oでプロファイルを認証できます。
 
 1. AEM Assets作成者インスタンスにログインします。デフォルトのURL:http:// localhost:4502/aem/start.html
-1. ツー **ル** / ![Security](assets/tools.png) / **[!UICONTROL Adobe]** IMS Configurations **[!UICONTROL に移]**&#x200B;動します。
+1. ツー **ル** / ![Security](assets/tools.png) / **[!UICONTROL Adobe]** IMS Configurationsに移動し ****&#x200B;ます。
 
    ![Adobe IMSアカウント設定UI](assets/ims-config1.png)
 
@@ -183,17 +183,19 @@ Adobe I/O統合により、IMSアカウント設定の設定で必要なAPIキ�
 
    ![IMSアカウントの設定](assets/create-new-integration6.png)
 
-   >[!CAUTION]
-   >
-   >IMS設定を1つだけ作成します。 複数のIMS設定を作成しないでください。
-
 1. IMS設定を選択し、「ヘルスを確認」を **[!UICONTROL クリックしま]**&#x200B;す。 ダイアログボックスが表示されます。
 
    [チェック **をクリック]**。 接続が成功すると、「 *Token retrieved successfully* 」メッセージが表示されます。
 
    ![](assets/create-new-integration5.png)
 
-   <br/> <br/>
+>[!CAUTION]
+>
+>有効なIMS設定を1つだけ作成します。 複数のIMS設定を作成しないでください。
+>
+>構成が正常であることを確認します。 構成が正常でない場合は、構成を削除し、新しい正常な構成を作成します。
+
+<br/> <br/>
 
 ### Configure cloud service {#configure-the-cloud-service}
 
@@ -277,12 +279,12 @@ Brand Portalは、AEM Assets作成者インスタンスを使用して正常に�
 * [AEM Assetsからブランドポータルにコレクションを公開する](../assets/brand-portal-publish-collection.md)
 * [Brand Portalユーザが](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) 、アセットをAEM Assetsに寄稿および公開できるように、アセットソーシングを設定します。
 
-## アップグレード設定 {#upgrade-integration-64}
+## 設定のアップグレード {#upgrade-integration-64}
 
 既存の設定をアップグレードするには、次の手順を一覧の手順で実行します。
 1. [実行中のジョブの確認](#verify-jobs)
 1. [既存の設定の削除](#delete-existing-configuration)
-1. [設定の作成](#configure-new-integration-64)
+1. [ 設定の作成](#configure-new-integration-64)
 
 ### 実行中のジョブの確認 {#verify-jobs}
 
