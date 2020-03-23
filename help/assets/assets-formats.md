@@ -1,9 +1,9 @@
 ---
 title: AEM Assets でサポートされているファイル形式
-description: AEM Assetsでサポートされるファイル形式とMIMEタイプ、および各形式でサポートされる機能のリストです。
+description: AEM Assetsでサポートされるファイル形式とMIMEタイプ、および各形式でサポートされる機能の一覧です。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: e71ae585919f3745d36bcbce4eebe49f4477e840
+source-git-commit: 75d2bdc6cda9a608d622e31769abfa36e847e3a3
 
 ---
 
@@ -24,7 +24,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 
 ## ラスターイメージ形式 {#supported-raster-image-formats}
 
-アセット管理機能でサポートされるラスターイメージ形式は次のとおりです。
+アセット管理機能でサポートされるラスターイメージ形式は、次のとおりです。
 
 | 形式 | ストレージ | メタデータの管理 | メタデータの抽出 | サムネールの生成 | インタラクティブ編集 | メタデータの書き戻し | インサイト |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -37,12 +37,14 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 | PGM | ✓ | ✓ |  |  |  |  | ✓ |
 | PBM | ✓ | ✓ |  |  |  |  | ✓ |
 | PPM | ✓ | ✓ |  |  |  |  | ✓ |
-| PSD* | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
+| PSD **¹** | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ |  | ✓ |  |
 | PICT |  |  |  |  |  |  | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
 
-ダイナミックメディア機能でサポートされるラスターイメージ形式は次のとおりです。
+**§** PSDファイルから結合画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+
+ダイナミックメディア機能でサポートされるラスターイメージ形式は、次のとおりです。
 
 | 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -55,16 +57,16 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 | PGM |  |  |  |  |  |
 | PBM |  |  |  |  |  |
 | PPM |  |  |  |  |  |
-| PSD* | ✓ |  |  |  |  |
+| PSD **¹** | ✓ |  |  |  |  |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ |  |  |  |  |
 | PSB |  |  |  |  |  |
 
-&amp;ast;結合した画像がPSDファイルから抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+**§** PSDファイルから結合画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
 上記の情報に加えて、以下を考慮してください。
 
-* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick](best-practices-for-imagemagick.md) を設定してください。サードパーティのツールを統合して追加機能を有効にする方法については、「コマンドラインベースのメ [ディアハンドラ」を参照してくださ](media-handlers.md#command-line-based-media-handler)い。
+* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick](best-practices-for-imagemagick.md) を設定してください。サードパーティのツールを統合して追加機能を有効にする方法については、コマンドラインベースのメ [ディアハンドラを参照してくださ](media-handlers.md#command-line-based-media-handler)い。
 
 * Metadata writeback works for PSB file format when it is added to the `NComm` handler.
 
@@ -84,7 +86,7 @@ See [Using PDF Rasterizer](aem-pdf-rasterizer.md).
 
 ## 画像トランスコーディングライブラリ {#supported-image-transcoding-library}
 
-Adobe Imaging Transcoding Libraryは、エンコード、トランスコード、リサンプリング、サイズ変更など、主な画像処理機能を実行する画像処理ソリューションです。
+Adobe Imaging Transcoding Libraryは、エンコード、トランスコード、再サンプリング、サイズ変更など、主要な画像処理機能を実行する画像処理ソリューションです。
 
 Imaging Transcoding Libraryは、JPG/JPEG、PNG（8-bitおよび16-bit）、GIF、BMP、TIFF/Compressed TIFF（32-bit TIFFファイルおよびPTIFFファイルを除く）、ICOおよびICNのMIMEタイプをサポートします。
 
@@ -94,7 +96,7 @@ See [Imaging Transcoding Library](imaging-transcoding-library.md).
 
 Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像を取り込むことができます。See [Camera Raw Support](camera-raw.md).
 
-## ドキュメント形式 {#supported-document-formats}
+## ドキュメントの形式 {#supported-document-formats}
 
 アセット管理機能でサポートされるドキュメント形式は次のとおりです。
 
@@ -119,7 +121,7 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 | QXP | ✓ | ✓ |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |
 
-ダイナミックメディアの機能でサポートされるドキュメント形式は次のとおりです。
+ダイナミックメディア機能でサポートされるドキュメント形式は次のとおりです。
 
 | 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -190,7 +192,7 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 | MTS | AVCHD | H264/AVC |  |
 | MKV | Matroska | H264/AVC |  |
 | R3D、RM | Red Raw Video | MJPEG 2000 |  |
-| RAM、RM | RealVideo | Unsupported | Real G2（RV20）、Real 8（RV30）、Real 10（RV40） |
+| RAM、RM | RealVideo | 未サポート | Real G2（RV20）、Real 8（RV30）、Real 10（RV40） |
 | FLAC | Native Flac | Free lossless audio codec |  |
 | MJ2 | Motion JPEG2000 | Motion JPEG 2000 codec |  |
 
@@ -204,9 +206,9 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 | JAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | RAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | TAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| ZIP* | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| ZIP **²** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-**** &amp;ast;アルゴリズムを使用して作成されたZIPア `Deflate64` ーカイブは、AEMでのサポートに制限があります。 アーカイブ操作とアーカイブ解除操作はサポートされていません。 アップロード、参照、ダウンロードなどの操作はサポートされています。
+**²** PSDファイルから結合画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。The ZIP archives created using `Deflate64` algorithm have limited support in AEM. アーカイブ操作とアーカイブ解除操作はサポートされていません。 アップロード、参照、ダウンロードなどの操作はサポートされています。
 
 ## その他のサポートされる形式 {#other-supported-formats}
 
@@ -214,20 +216,20 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 
 | 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| * | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| **³** | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript（独自の配信ドメインで設定する場合） |  |  |  |  |  | ✓ |
 
-**** &amp;ast;その他の形式は、DAMでの保存、バージョン管理、ACL、ワークフロー、投稿、およびメタデータ管理に対応しています。
+**3その他の形式は** 、DAMでの保存、バージョン管理、ACL、ワークフロー、投稿、メタデータ管理に対応しています。
 
 ## サポートされる MIME タイプ {#supported-mime-types}
 
-デフォルトでは、AEMはファイル拡張子を使用してファイルタイプを検出します。 AEMは、ファイルの内容からそれを検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the AEM Web Console.
+デフォルトでは、AEMはファイル拡張子を使用してファイルの種類を検出します。 AEMは、ファイルの内容からこのファイルを検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the AEM Web Console.
 
-サポートされるMIMEタイプのリストは、CRXDE Lite()で入手できま `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`す。
+CRXDE Liteでは、サポートされているMIMEタイプのリストを次の場所で使用できま `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`す。
 
 [アップロードジョブパラメーターサポートの MIME タイプベースの設定](config-dynamic.md)を参照してください。
 
