@@ -3,7 +3,7 @@ title: レンディションへの XMP の書き戻し
 description: XMP の書き戻し機能を使用して、アセットのメタデータの変更を、そのアセットのすべてのレンディションまたは特定のレンディションに反映させる方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 5ef4c4e42165819191c6e3810c36183110f3f34a
 
 ---
 
@@ -12,11 +12,11 @@ source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
 
 Adobe Experience Manager（AEM）Assets のこの XMP の書き戻し機能は、アセットメタデータの変更をアセットのレンディションにレプリケートします。
 
-AEM Assets内から、またはアセットのアップロード中に、アセットのメタデータを変更すると、変更は最初にCrx-Deのアセットノード内に保存されます。
+AEM Assets内から、またはアセットのアップロード中に、アセットのメタデータを変更すると、変更はCrx-Deのアセットノード内に最初に保存されます。
 
 XMPの書き戻し機能は、アセットのすべてのレンディションまたは特定のレンディションにメタデータの変更を反映します。
 
-「**Classic Leather**」というタイトルのアセットの「タイトル」プロパティを「**Nylon**」に変更するシナリオについて考えます。
+Consider a scenario where you modify the [!UICONTROL Title] property of the asset titled `Classic Leather` to `Nylon`.
 
 ![メタデータ](assets/metadata.png)
 
@@ -32,8 +32,8 @@ XMPの書き戻し機能を使用すると、メタデータの変更をアセ�
 
 To enable the metadata changes to be propagated to the renditions of the asset when uploading it, modify the **Adobe CQ DAM Rendition Maker** configuration in Configuration Manager.
 
-1. からConfiguration Managerを開きま `https://[AEM_server]:[port]/system/console/configMgr`す。
-1. Open the **[!UICONTROL Adobe CQ DAM Rendition Maker]** configuration.
+1. からConfiguration Managerを開きま `https://[aem_server]:[port]/system/console/configMgr`す。
+1. **[!UICONTROL Adobe CQ DAM Rendition Makerの設定を開きます]** 。
 1. Select the **[!UICONTROL Propagate XMP]** option, and then save the changes.
 
    ![chlimage_1-346](assets/chlimage_1-346.png)
@@ -44,21 +44,18 @@ XMP の書き戻し機能によって、選択されたレンディションに�
 
 XMP の書き戻し機能でメタデータをレンディションサムネール 140.100.png および 319.319.png に反映するには、次の手順を実行します。
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール／ワークフロー／モデル]**&#x200B;に移動します。
-1. From the Models page, open the **DAM Metadata Writeback** workflow model.
+1. Experience Managerで、ツール/ワークフロー/ **[!UICONTROL モデルに移動します]**。
+1. From the [!UICONTROL Models] page, open the **[!UICONTROL DAM Metadata Writeback]** workflow model.
 1. **[!UICONTROL DAM メタデータの書き戻し]**&#x200B;ページで、「**[!UICONTROL XMP の書き戻しプロセス]**」ステップを開きます。
-1. ステップのプロパティダイアログボックスで、「**[!UICONTROL プロセス]**」タブをタップまたはクリックします。
-1. In the **[!UICONTROL Arguments]** box, add `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`, andd then tap/click **[!UICONTROL OK]**.
+1. **[!UICONTROL ステップのプロパティ]**&#x200B;ダイアログボックスで、「**[!UICONTROL プロセス]**」タブをタップまたはクリックします。
+1. 「 **[!UICONTROL Arguments]** 」ボックスにを追加しま `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`す。「 **[!UICONTROL OK」をタップまたはクリックしま]**&#x200B;す。
 
    ![step_properties](assets/step_properties.png)
 
-1. 変更内容を保存します。
-1. To regenerate the pyramid TIF renditions for Dynamic Media images with the new attributes, add the **[!UICONTROL Dynamic Media Process Image Assets]** step to the DAM Metadata Writeback workflow.
-PTIFF レンディションは、Dynamic Media ハイブリッド実装でのみ、ローカルで作成および格納されます。
+1. To regenerate the pyramid TIFF renditions for Dynamic Media images with the new attributes, add the **[!UICONTROL Dynamic Media Process Image Assets]** step to the DAM Metadata Writeback workflow.
+PTIFFレンディションは、ダイナミックメディアハイブリッドモードでのみローカルに作成および保存されます。 ワークフローを保存します。
 
-1. ワークフローを保存します。
-
-メタデータの変更は、アセットのレンディションレンディションthumbnail.140.100.pngおよびthumbnail.319.319.pngに反映され、他のレンディションレンディションレンディションには反映されません。
+The metadata changes are propagated to the renditions `thumbnail.140.100.png` and `thumbnail.319.319.png` of the asset, and not the others.
 
 >[!NOTE]
 >
@@ -66,7 +63,7 @@ PTIFF レンディションは、Dynamic Media ハイブリッド実装でのみ
 >
 >For more information about supported platforms, see [XMP metadata write-back prerequisites](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back).
 
-## XMPメタデータのフィルター {#filtering-xmp-metadata}
+## XMPメタデータのフィルタ {#filtering-xmp-metadata}
 
 AEM Assetsは、アセットバイナリから読み取られ、アセットの取り込み時にJCRに保存されるXMPメタデータのプロパティ/ノードのブラックリストフィルターとホワイトリストフィルターの両方をサポートしています。
 
@@ -78,17 +75,14 @@ AEM Assetsは、アセットバイナリから読み取られ、アセットの�
 >
 >フィルタリングは、アセットバイナリの XMP ソースから派生したプロパティに対してのみ機能します。EXIF 形式や IPTC 形式などの XMP 以外のソースから派生したプロパティについては、フィルタリングは機能しません。例えば、アセットの作成日は、`CreateDate` という名前のプロパティに EXIF TIFF 形式で格納されています。AEM では、この値を `exif:DateTimeOriginal`.という名前のメタデータフィールドに格納します。この場合は XMP 以外のソースなので、このプロパティにはフィルタリングは機能しません。
 
-1. からConfiguration Managerを開きま `https://[AEM_server]:[port]/system/console/configMgr`す。
-1. Open the **[!UICONTROL Adobe CQ DAM XmpFilter]** configuration.
+1. からConfiguration Managerを開きま `https://[aem_server]:[port]/system/console/configMgr`す。
+1. **[!UICONTROL Adobe CQ DAM XmpFilter設定を開きます]** 。
 1. ホワイトリストフィルターを適用するには、「**[!UICONTROL XMP プロパティにホワイトリストを追加]**」を選択し、「**[!UICONTROL XMP フィルタリングのホワイトリスト登録 XML 名]**」ボックスで読み込むプロパティを指定します。
 
    ![chlimage_1-347](assets/chlimage_1-347.png)
 
-1. ホワイトリストフィルターを適用した後、ブラックリストに登録された XMP プロパティを除外するには、それらのプロパティを「**[!UICONTROL フィルタリングのブラックリスト登録 XML 名]**」ボックスに指定します。
+1. ホワイトリストフィルターを適用した後、ブラックリストに登録された XMP プロパティを除外するには、それらのプロパティを「**[!UICONTROL フィルタリングのブラックリスト登録 XML 名]**」ボックスに指定します。変更内容を保存します。
 
    >[!NOTE]
    >
-   >「**[!UICONTROL Apply Blacklist to XMP Properties]**」チェックボックスは、デフォルトでオンになっています。つまり、ブラックリストフィルターは、デフォルトで有効になっています。To disable blacklist filtering, unselect the **[!UICONTROL Apply Blacklist to XMP Properties]** option.
-
-1. 変更内容を保存します。
-
+   >「**[!UICONTROL Apply Blacklist to XMP Properties]**」チェックボックスは、デフォルトでオンになっています。つまり、ブラックリストフィルターは、デフォルトで有効になっています。To disable blacklist filtering, deselect **[!UICONTROL Apply Blacklist to XMP Properties]**.
