@@ -8,7 +8,7 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: ef873c07-be89-4cd0-8913-65765b989f90
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: 9327fd06957fafc7c711f1726f5d8a363ae0c1ad
 
 ---
 
@@ -23,7 +23,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 ## このチュートリアルについて {#about-the-tutorial}
 
-AEM Formsデータ統合モジュールを使用すると、AEMユーザープロファイル、RESTful webサービス、SOAPベースのWebサービス、ODataサービス、リレーショナルデータベースなど、異なるバックエンドデータソースからフォームデータモデルを作成できます。 フォームデータモデル内でデータモデルオブジェクトとサービスを設定し、そのフォームデータモデルをアダプティブフォームに関連付けることができます。アダプティブフォームのフィールドは、データモデルオブジェクトのプロパティに連結されます。フォームデータモデル内のサービスを使用して、アダプティブフォームに事前にデータを取り込み、送信されたフォームデータをデータモデルオブジェクトに書き込むことができます。
+AEM Formsデータ統合モジュールを使用すると、AEMユーザープロファイル、RESTful Webサービス、SOAPベースのWebサービス、ODataサービス、リレーショナルデータベースなど、異なるバックエンドデータソースからフォームデータモデルを作成できます。 フォームデータモデル内でデータモデルオブジェクトとサービスを設定し、そのフォームデータモデルをアダプティブフォームに関連付けることができます。アダプティブフォームのフィールドは、データモデルオブジェクトのプロパティに連結されます。フォームデータモデル内のサービスを使用して、アダプティブフォームに事前にデータを取り込み、送信されたフォームデータをデータモデルオブジェクトに書き込むことができます。
 
 フォームデータの統合機能とフォームデータモデルについて詳しくは、「[AEM Forms のデータ統合機能](https://helpx.adobe.com/experience-manager/6-3/forms/using/data-integration.html)」を参照してください。
 
@@ -37,9 +37,9 @@ AEM Formsデータ統合モジュールを使用すると、AEMユーザープ�
 
 フォームデータモデルは以下に類似しています。
 
-![form_data_model_callouts](assets/form_data_model_callouts.png)
+![form_data_model_callout](assets/form_data_model_callouts.png)
 
-**********A.設定済みのデータソ**&#x200B;ースB。データソーススキ **ーマC.** Available services **D.データモデルオブジェ**&#x200B;クトE.設定済みサービス
+**A.** 設定済みのデータソ **ースB。** データソーススキ **ーマC.** Available services **D.** データモデルのオブジェ **クトE.** 設定済みのサービス
 
 ## 前提条件 {#prerequisites}
 
@@ -55,9 +55,61 @@ AEM Formsデータ統合モジュールを使用すると、AEMユーザープ�
 
 ![sample_data_cust](assets/sample_data_cust.png)
 
-通話テーブルには、通話の日付、通話の時間、通話番号、通話時間、通話料金などの詳細が含まれます。顧客テーブルは携帯電話番号（mobilenum）フィールドにより通話テーブルとリンクしています。顧客テーブルにリストされた各携帯電話番号ごとに、通話テーブルに複数の記録があります。For example, you can retrieve the call details for the **1457892541** mobile number by referring to the calls table.
+次のDDL文を使用して、データベースに顧客 **表を** 作成します。
 
-請求テーブルには請求日、請求期間、月額利用料、通話料金などの請求明細が含まれます。顧客テーブルは請求プランフィールドにより請求テーブルとリンクしています。顧客テーブルには、各顧客と関連付けられたプランがあります。請求テーブルには、既存のすべてのプランの価格の詳細が含まれます。例えば、**Sarah** のプランの詳細を顧客テーブルから取得し、この情報を使って請求テーブルから価格の詳細を取得することができます。
+```sql
+CREATE TABLE `customer` (
+   `mobilenum` int(11) NOT NULL,
+   `name` varchar(45) NOT NULL,
+   `address` varchar(45) NOT NULL,
+   `alternatemobilenumber` int(11) DEFAULT NULL,
+   `relationshipnumber` int(11) DEFAULT NULL,
+   `customerplan` varchar(45) DEFAULT NULL,
+   PRIMARY KEY (`mobilenum`),
+   UNIQUE KEY `mobilenum_UNIQUE` (`mobilenum`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+```
+
+次のDDL文を使用して、データベースに **bills** 表を作成します。
+
+```sql
+CREATE TABLE `bills` (
+   `billplan` varchar(45) NOT NULL,
+   `latepayment` decimal(4,2) NOT NULL,
+   `monthlycharges` decimal(4,2) NOT NULL,
+   `billdate` date NOT NULL,
+   `billperiod` varchar(45) NOT NULL,
+   `prevbal` decimal(4,2) NOT NULL,
+   `callcharges` decimal(4,2) NOT NULL,
+   `confcallcharges` decimal(4,2) NOT NULL,
+   `smscharges` decimal(4,2) NOT NULL,
+   `internetcharges` decimal(4,2) NOT NULL,
+   `roamingnational` decimal(4,2) NOT NULL,
+   `roamingintnl` decimal(4,2) NOT NULL,
+   `vas` decimal(4,2) NOT NULL,
+   `discounts` decimal(4,2) NOT NULL,
+   `tax` decimal(4,2) NOT NULL,
+   PRIMARY KEY (`billplan`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+```
+
+次のDDL文を使用して、データベースに呼び出し **表を** 作成します。
+
+```sql
+CREATE TABLE `calls` (
+   `mobilenum` int(11) DEFAULT NULL,
+   `calldate` date DEFAULT NULL,
+   `calltime` varchar(45) DEFAULT NULL,
+   `callnumber` int(11) DEFAULT NULL,
+   `callduration` varchar(45) DEFAULT NULL,
+   `callcharges` decimal(4,2) DEFAULT NULL,
+   `calltype` varchar(45) DEFAULT NULL
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+```
+
+The **calls** table includes the call details such as call date, call time, call number, call duration, and call charges. The **customer** table is linked to the calls table using the Mobile Number (mobilenum) field. For each mobile number listed in the **customer** table, there are multiple records in the **calls** table. For example, you can retrieve the call details for the **1457892541** mobile number by referring to the **calls** table.
+
+The **bills** table includes the bill details such as bill date, bill period, monthly charges, and call charges. The **customer** table is linked to the **bills** table using the Bill Plan field. There is a plan associated to each customer in the **customer** table. The **bills** table includes the pricing details for all the existing plans. 例えば、**Sarah** のプランの詳細を顧客テーブルから取得し、この情報を使って請求テーブルから価格の詳細を取得することができます。********
 
 ## 手順 2：MySQL データベースをデータソースとして設定する {#step-configure-mysql-database-as-data-source}
 
@@ -83,8 +135,8 @@ MySQL データベースを設定するには、以下の手順を実行しま�
       * **JDBC connection URI**：データベースの接続 URL を指定します。For MySQL database running on port 3306 and schema teleca, the URL is: `jdbc:mysql://[server]:3306/teleca?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
       * **Username**：データベースのユーザー名を指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
       * **Password**：データベースのパスワードを指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
-      * **** 借入のテスト：[借用時にテ **スト** ]オプションを有効化
-      * **** リターン時のテスト：「リターン時にテ **スト」オプションを有効にします** 。
+      * **借用時のテスト：** [借用時にテ **スト]オプションを有効** にします。
+      * **リターン時のテスト：** 「リターン時にテ **スト」オプションを有効** にします。
       * **Validation Query**：プールからの接続状態を確認するための SQL SELECT クエリを指定します。このクエリでは、1 行以上の行が返される必要があります。例えば、&amp; **amp;ast；を選択します。顧客**。
       * **Transaction Isolation**：このオプションの値を「**READ_COMMITTED**」に設定します。
    Leave other properties with default [values](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) and tap **Save**.
@@ -106,7 +158,7 @@ AEM Forms provide an intuitive user interface to [create a form data mode](https
 
    ![fdm_mysql_data_source](assets/fdm_mysql_data_source.png)
 
-1. 「**完了**」をクリックします。**** FDM_Create_First_ICフォーム・データ・モデルが作成されます。
+1. 「**完了**」をクリックします。**FDM_Create_First_ICフォーム・データ・モデル** が作成されます。
 
 ## 手順 4：フォームデータモデルを設定する {#step-configure-form-data-model}
 
@@ -152,9 +204,9 @@ AEM Forms provide an intuitive user interface to [create a form data mode](https
 
 ユースケースに基づき、以下の数式を使って&#x200B;**請求**&#x200B;データモデルオブジェクトの **usagecharges** 計算済み子プロパティを作成します。
 
-* 使用料金=通話料+電話会議料金+ SMS料金+モバイルインターネット料金+ローミング国際料金+ローミング国際料金+ VAS （これらのプロパティはすべて、請求書データモデルオブジェクトに存在します）
+* 使用料=通話料+会議通話料+ SMS料金+モバイルインターネット料金+ローミング国際通話+ローミング国際通話+ VAS （これらのプロパティはすべて請求書データモデルオブジェクトに存在）
 
-   usagechargesの子計算済みプロパティの詳 **細については** 、「インタラクティブ通信の計画 [」を参照してください](/help/forms/using/planning-interactive-communications.md)。
+   Usagechargesの子計算済みプロパティの **詳細について** は、「インタラクティブ通信の計画 [」を参照してください](/help/forms/using/planning-interactive-communications.md)。
 
 請求データモデルオブジェクト用の計算済み子プロパティを作成するには、次の手順を実行します。
 
@@ -303,7 +355,7 @@ AEM Forms provide an intuitive user interface to [create a form data mode](https
 1. In the **Test Form Data Model** window, select **Read model object** from the **Select Model/Service** drop-down list.
 1. In the **Input** section, specify a value for the **mobilenum** property that exists in the configured MySQL database and tap **Test**.
 
-   指定したmobilenumプロパティに関連付けられた顧客の詳細が取得され、次のように「Output」セクションに表示されます。 ダイアログボックスを閉じます。
+   指定したmobilenumプロパティに関連付けられた顧客の詳細が取得され、次に示すように「出力」セクションに表示されます。 ダイアログボックスを閉じます。
 
    ![test_data_model](assets/test_data_model.png)
 
@@ -311,7 +363,7 @@ AEM Forms provide an intuitive user interface to [create a form data mode](https
 1. Select the **get** service and tap **Test Service.**
 1. In the **Input** section, specify a value for the **mobilenum** property that exists in the configured MySQL database and tap **Test**.
 
-   指定したmobilenumプロパティに関連付けられた顧客の詳細が取得され、次のように「Output」セクションに表示されます。 ダイアログボックスを閉じます。
+   指定したmobilenumプロパティに関連付けられた顧客の詳細が取得され、次に示すように「出力」セクションに表示されます。 ダイアログボックスを閉じます。
 
    ![test_service](assets/test_service.png)
 
