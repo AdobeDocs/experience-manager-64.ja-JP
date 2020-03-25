@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: a8e5786731c24dc4c0122dbc75e59a6c3be82cf7
+source-git-commit: 8a612282df46f5f54ebe73c4b297eba6515ea35d
 
 ---
 
@@ -28,7 +28,7 @@ source-git-commit: a8e5786731c24dc4c0122dbc75e59a6c3be82cf7
 
 ### 計画 {#planning}
 
-コンポーネントを実際に設定またはコード化する前に、次の点を確認する必要があります。
+実際にコンポーネントを設定またはコード化する前に、次のことを確認する必要があります。
 
 * そもそも新しいコンポーネントで何をするか
 
@@ -58,7 +58,7 @@ source-git-commit: a8e5786731c24dc4c0122dbc75e59a6c3be82cf7
 コンポーネントの開発について本格的な検討を始める前に、作成者がどちらの UI を使用するかを知っておく必要があります。
 
 * **タッチ操作対応 UI**
-   [AEM 5.6.0でプレビューとして導入され](/help/sites-developing/touch-ui-concepts.md) 、6.xで拡張された標準のユーザーインターフェイス。これは、 [Coral UIと](/help/sites-developing/touch-ui-concepts.md#coral-ui) Granite UIの基盤技術を使用して、Adobe Marketing cloudの統合ユーザーエクスペリエンスに基づ [きます](/help/sites-developing/touch-ui-concepts.md#granite-ui)。
+   [AEM 5.6.0でプレビューとして導入され](/help/sites-developing/touch-ui-concepts.md) 、6.xで拡張された標準のユーザーインターフェイス。これは、 [Coral UIと](/help/sites-developing/touch-ui-concepts.md#coral-ui) Granite UIの基盤テクノロジーを使用して、Adobe Marketing Cloudの統合されたユーザーエクスペリエンスに基づ [きます](/help/sites-developing/touch-ui-concepts.md#granite-ui)。
 
 * **クラシック UI** CQ 5.1 で導入された、ExtJS テクノロジーに基づくユーザーインターフェイスです。
 
@@ -69,7 +69,7 @@ source-git-commit: a8e5786731c24dc4c0122dbc75e59a6c3be82cf7
 このため、このページでは両 UI の基本と識別方法について説明します。
 
 >[!NOTE]
-> 最新のテクノロジーを活用するために、タッチ対応UIの活用をお勧めします。 [AEM Modernation Tools&amp;(modernition-tools.md)を使用すると、移行が簡単になります。
+> 最新のテクノロジーを活用するために、タッチ操作対応UIの活用をお勧めします。 [AEM Modernation Tools&amp;(moderniation-tools.md)を使用すると、移行が簡単になります。
 
 ### コンテンツのロジックとマークアップのレンダリング  {#content-logic-and-rendering-markup}
 
@@ -173,7 +173,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
    * リソース:
 
-      これらは、コンポーネントで使用される静的要素を定義します。
+      これらは、コンポーネントで使用される静的な要素を定義します。
 
    * スクリプト:
    コンポーネントの結果のインスタンスの動作を実装するために使用されます。
@@ -197,11 +197,11 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
 * **重要な子ノード**：
 
-   * `cq:editConfig (cq:EditConfig)`  — コンポーネントの編集プロパティを定義し、コンポーネントをコンポーネントブラウザーまたはサイドキックに表示できるようにします。
+   * `cq:editConfig (cq:EditConfig)`  — コンポーネントの編集プロパティを定義し、コンポーネントをコンポーネントブラウザまたはサイドキックに表示できるようにします。
 
       注意：コンポーネントにダイアログがある場合は、cq:editConfig が存在しなくても、コンポーネントは自動的にコンポーネントブラウザーまたはサイドキックに表示されます。
 
-   * `cq:childEditConfig (cq:EditConfig)`  — 独自に定義されていない子コンポーネントの作成者UI外観を制御しま `cq:editConfig`す。
+   * `cq:childEditConfig (cq:EditConfig)`  — 独自に定義されていない子コンポーネントの作成者UIの外観を制御しま `cq:editConfig`す。
    * タッチ操作対応 UI：
 
       * `cq:dialog` ( `nt:unstructured`) — このコンポーネントのダイアログ。 ユーザーがコンポーネントを設定したり、コンテンツを編集したりできるインターフェイスを定義します。
@@ -220,7 +220,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
    * Coral アイコンの HTML 属性の値を使用します。
 
-1. `abbreviation`  — コンポーネントブラウザでコンポーネント名の省略形をカスタマイズする文字列プロパティ
+1. `abbreviation`  — コンポーネントブラウザでコンポーネント名の省略形をカスタマイズする文字列プロパティ。
 
    * 省略形は 最大2 文字までにする必要があります。
    * Providing an empty string will build the abbreviation from first two characters of the `jcr:title` property.
@@ -235,11 +235,11 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
    * 20 x 20 pixel は、標準的なコンポーネントのアイコンのサイズです。
 
       * 大きいアイコンはクライアント側で縮小されます。
-   * 推奨されるカラーはrgb(112, 112, 112) > #707070です。
+   * 推奨されるカラーは、rgb(112, 112, 112) > #707070です。
    * 標準的なコンポーネントアイコンの背景は、透明です。
    * Only `.png` and `.svg` files are supported.
    * If importing from the file system via Eclipse plugin, filenames need to be esacaped as `_cq_icon.png` or `_cq_icon.svg` for example.
-   * `.png` 両者が存在する場合 `.svg` に先例を取る
+   * `.png` 両方が存在する場合 `.svg` に先例を取る
 
 
 If none of the above properties ( `cq:icon`, `abbreviation`, `cq:icon.png` or `cq:icon.svg`) are found on the component:
@@ -425,7 +425,7 @@ The [Component Console](/help/sites-authoring/default-components-console.md#comp
 
 特に重要な子ノードを次に示します。
 
-* `cq:editConfig` ( `cq:EditConfig`) — 視覚的側面を制御します。例えば、バーやウィジェットの外観を定義したり、カスタマイズしたコントロールを追加したりできます
+* `cq:editConfig` ( `cq:EditConfig`) — 視覚的側面を制御します。例えば、バーやウィジェットの外観を定義したり、カスタマイズしたコントロールを追加したりできます。
 
 * `cq:childEditConfig` ( `cq:EditConfig`) — 独自の定義を持たない子コンポーネントの視覚的な外観を制御します。
 
@@ -436,7 +436,7 @@ The [Component Console](/help/sites-authoring/default-components-console.md#comp
 
 * クラシック UI：
 
-   * `dialog` ( `cq:Dialog`) — このコンポーネントのコンテンツを編集するためのダイアログを定義します（クラシックUI専用）。
+   * `dialog` ( `cq:Dialog`) — このコンポーネントのコンテンツを編集するためのダイアログを定義します（クラシックUIに固有）。
    * `design_dialog` ( `cq:Dialog`) — このコンポーネントのデザイン編集オプションを指定します。
    * `icon.png` - サイドキック内のコンポーネントのアイコンとして使用されるグラフィックファイル
    * `thumbnail.png` - サイドキックからコンポーネントをドラッグしている間、そのサムネールとして使用されるグラフィックファイル
@@ -465,7 +465,7 @@ The [Component Console](/help/sites-authoring/default-components-console.md#comp
       * タッチ操作対応 UI 専用です。
       * Granite UI コンポーネントを使用して定義されます。
       * have a property `sling:resourceType`, as standard Sling content structure
-      * `helpPath` プロパティを指定できます。このプロパティでは、ヘルプアイコン（「?」アイコン)が選択されている。
+      * `helpPath` プロパティを指定できます。このプロパティでは、ヘルプアイコン（「?」アイコン)が選択されていることを確認します。
 
          * 既成のコンポーネントでは多くの場合、ドキュメントのページが参照されます。
          * `helpPath` が指定されていない場合、デフォルトのURL（ドキュメントの概要ページ）が表示されます。
@@ -571,7 +571,7 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
 
 * **階層を含む**
 
-   これは、インクルードのシーケンスによって実行時に課されます。
+   これは、実行時にインクルードのシーケンスによって課されます。
 
    この階層は、デザイナーによって使用され、レンダリングの様々なデザイン側面、特にレイアウト情報、CSS 情報、parsys で使用可能なコンポーネントの基礎として機能します。
 
@@ -590,8 +590,8 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
    * `cq:dialogMode` ( `String`):クラシックUIでコンポーネントダイアログを開く方法を定義します。
 
       * タッチ操作対応 UI のダイアログは、デスクトップモードでは常に浮動し、モバイルでは自動的に全画面表示として開きます。
-   * `cq:emptyText` ( `String`):ビジュアルコンテンツが存在しない場合に表示するテキストを定義します。
-   * `cq:inherit` ( `Boolean`):欠落した値が継承元のコンポーネントから継承されるかどうかを定義します。
+   * `cq:emptyText` ( `String`):ビジュアルコンテンツが存在しない場合に表示されるテキストを定義します。
+   * `cq:inherit` ( `Boolean`):見つからない値が、その値の継承元のコンポーネントから継承されるかどうかを定義します。
    * `dialogLayout`（String）：ダイアログの開き方を定義します。
 
 
@@ -657,6 +657,10 @@ The `cq:actions` property ( `String array`) defines one or several actions that 
    <td><code>edit</code></td> 
    <td>コンポーネントを編集するボタンを追加します.</td> 
   </tr> 
+    <tr>
+    <td><code>editannotate</code></td>
+    <td>コンポーネントを編集するボタンと注釈を許可するボタンを追加 <a href="/help/sites-authoring/annotations.md">します</a>。</td>
+   </tr>
   <tr> 
    <td><code>delete</code></td> 
    <td>コンポーネントを削除するボタンを追加します</td> 
@@ -805,11 +809,11 @@ Each child node of type `cq:DropTargetConfig` defines a drop target in the compo
  <node name of the drop target in the edit configuration>
 ```
 
-は、Java `<*drag and drop prefix*>` プロパティで定義します。
+は、Java `<*drag and drop prefix*>` プロパティで定義されます。
 
 `com.day.cq.wcm.api.components.DropTarget.CSS_CLASS_PREFIX` です。
 
-例えば、ダウンロードコンポーネントのJSPでは、クラス名は次のように定義されます\
+例えば、クラス名は、ダウンロードコンポーネントのJSPでは次のように定義されます\
 ( `/libs/foundation/components/download/download.jsp`)。ここで、 `file` はダウンロードコンポーネントの編集設定でのドロップターゲットのノード名です。
 
 `String ddClassName = DropTarget.CSS_CLASS_PREFIX + "file";`
@@ -837,7 +841,7 @@ Each child node of type `cq:DropTargetConfig` defines a drop target in the compo
  </tbody> 
 </table>
 
-ダウンロードコンポーネントから次の設定を取得します。 この設定では、`media` グループの任意のアセット（MIME タイプが任意の文字列でよい）をコンテンツファインダーからコンポーネントにドロップすることが可能です。ドロップをおこなうと、コンポーネントのプロパティ `fileReference` が更新されます。
+次の設定は、ダウンロードコンポーネントから取得されます。 この設定では、`media` グループの任意のアセット（MIME タイプが任意の文字列でよい）をコンテンツファインダーからコンポーネントにドロップすることが可能です。ドロップをおこなうと、コンポーネントのプロパティ `fileReference` が更新されます。
 
 ```
     <cq:dropTargets jcr:primaryType="nt:unstructured">
@@ -966,7 +970,7 @@ The `cq:listeners` node (node type `cq:EditListenersConfig`) defines what happen
   </tr> 
   <tr> 
    <td><code>beforeinsert</code></td> 
-   <td>コンポーネントを挿入する前にハンドラーが呼び出されます。<br /> タッチ対応UIでのみ動作します。</td> 
+   <td>コンポーネントを挿入する前にハンドラーが呼び出されます。<br /> タッチ操作対応UIでのみ動作します。</td> 
    <td> </td> 
   </tr> 
   <tr> 
@@ -1001,7 +1005,7 @@ The `cq:listeners` node (node type `cq:EditListenersConfig`) defines what happen
   </tr> 
   <tr> 
    <td><code>afterchildinsert</code></td> 
-   <td>ハンドラーは、コンポーネントが別のコンポーネント内に挿入された後にトリガーされます（コンテナのみ）。</td> 
+   <td>ハンドラーは、コンポーネントが別のコンポーネント（コンテナのみ）内に挿入された後にトリガーされます。</td> 
    <td> </td> 
   </tr> 
  </tbody> 
