@@ -3,7 +3,7 @@ title: アセットパフォーマンス調整ガイド
 description: AEM Assets のボトルネックを解消し、パフォーマンスを最適化するための、AEM の設定、ハードウェア、ソフトウェアおよびネットワークコンポーネントの変更に関する留意点。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 82b3998d5c1add6a759812e45ecd08b421d3b0df
 
 ---
 
@@ -16,13 +16,13 @@ Adobe Experience Manager(AEM)Assetsのセットアップには、多数のハー
 
 AEM Assets のパフォーマンスが低下すると、インタラクティブパフォーマンス、アセット処理、ダウンロード速度などの領域におけるユーザーエクスペリエンスに影響します。
 
-実際、パフォーマンスの最適化は、プロジェクトのターゲット指標を設定する前に実行する基本的なタスクです。
+実際、パフォーマンスの最適化は、プロジェクトのタスク指標を設定する前に実行する基本的なターゲットです。
 
 ユーザーに影響を及ぼす前にパフォーマンス上の問題を検出して修正する必要がある主な領域は次のとおりです。
 
 ## プラットフォーム {#platform}
 
-AEMは多くのプラットフォームでサポートされていますが、LinuxおよびWindows上でネイティブツールのサポートが最も多くなり、最適なパフォーマンスと実装のしやすさに貢献しています。 AEM Assets のデプロイメントでは、高いメモリ要件を満たすために 64 ビットのオペレーティングシステムを採用するのが理想です。あらゆる AEM のデプロイメントにおいて、可能である場合は TarMK を実装してください。TarMK は単一のオーサーインスタンスを超えて拡張できませんが、パフォーマンスは MongoMK よりも優れています。TarMK オフロードインスタンスを追加すると、AEM Assets のデプロイメントのワークフローの処理能力を高めることができます。
+AEMは多くのプラットフォームでサポートされていますが、LinuxおよびWindows上で最も高いネイティブツールのサポートを見つけたので、最適なパフォーマンスと実装のしやすさに貢献しています。 AEM Assets のデプロイメントでは、高いメモリ要件を満たすために 64 ビットのオペレーティングシステムを採用するのが理想です。あらゆる AEM のデプロイメントにおいて、可能である場合は TarMK を実装してください。TarMK は単一のオーサーインスタンスを超えて拡張できませんが、パフォーマンスは MongoMK よりも優れています。TarMK オフロードインスタンスを追加すると、AEM Assets のデプロイメントのワークフローの処理能力を高めることができます。
 
 ### 一時フォルダー {#temp-folder}
 
@@ -39,7 +39,7 @@ mkfs -q /dev/ram1 800000
 
 Windows OS の場合、サードパーティ製ドライバーを使用して RAM ドライブを作成するか、SSD などの高性能ストレージを使用する必要があります。
 
-高性能一時ボリュームの準備ができたら、JVM パラメーター -Djava.io.tmpdir を設定します。例えば、AEMのbin/startスクリプトのCQ_JVM_OPTS変数に以下のJVMパラメーターを追加できます。
+高性能一時ボリュームの準備ができたら、JVM パラメーター -Djava.io.tmpdir を設定します。例えば、AEMのbin/開始スクリプトのCQ_JVM_OPTS変数に、次のJVMパラメーターを追加できます。
 
 `-Djava.io.tmpdir=/mnt/aem-tmp`
 
@@ -67,7 +67,7 @@ Oracleは2015年4月にJava 7のアップデートのリリースを停止した
 
 ### バッファーされる画像キャッシュの最大サイズの設定 {#configure-the-maximum-size-of-the-buffered-image-cache}
 
-大量のアセットをAdobe Experience Managerにアップロードする場合、メモリ消費量が予期せず急増し、OutOfMemoryErrorsでJVMが失敗するのを防ぐために、バッファーされた画像キャッシュの設定済みの最大サイズを小さくします。 Consider an example that you have a system with a maximum heap (- `Xmx`param) of 5 GB, an Oak BlobCache set at 1 GB, and document cache set at 2 GB. このときに、バッファーされるキャッシュが最大 1.25 GB のメモリを使用した場合、予期しないスパイクに使用できるメモリは 0.75 GB のみとなります。
+大量のアセットをAdobe Experience Managerにアップロードする場合、メモリ消費量が予期せず急増し、OutOfMemoryErrorsでJVMが失敗するのを防ぐために、バッファーされた画像キャッシュの最大サイズを小さくします。 Consider an example that you have a system with a maximum heap (- `Xmx`param) of 5 GB, an Oak BlobCache set at 1 GB, and document cache set at 2 GB. このときに、バッファーされるキャッシュが最大 1.25 GB のメモリを使用した場合、予期しないスパイクに使用できるメモリは 0.75 GB のみとなります。
 
 バッファーされるキャッシュサイズは OSGi Web コンソールで設定します。で、プ `https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache`ロパティをバイト単位 `cq.dam.image.cache.max.memory` で設定します。 例えば、1073741824 は 1 GB です（1024 x 1024 x 1024 = 1 GB）。
 
@@ -156,7 +156,7 @@ accessKey=<snip>
 
 ### オフロード {#offloading}
 
-大量のワークフローや、リソースを大量に消費するワークフロー（ビデオトランスコードなど）では、DAMアセットの更新ワークフローを2番目の作成者インスタンスにオフロードすることができます。 オフロードに関するよくある問題点は、ワークフローの処理のオフロードによって節約される負荷はすべて、インスタンス間で互いにコンテンツをレプリケートするコストによって相殺される点です。
+ビデオのトランスコードなど、大量のワークフローやワークフローが大量にリソースを消費する場合は、DAMの更新アセットのワークフローを2番目の作成者インスタンスにオフロードすることがあります。 オフロードに関するよくある問題点は、ワークフローの処理のオフロードによって節約される負荷はすべて、インスタンス間で互いにコンテンツをレプリケートするコストによって相殺される点です。
 
 AEM 6.2 と AEM 6.1 の機能パックでは、バイナリなしのレプリケーションでオフロードを実行できます。このモデルでは、オーサーインスタンスが共通のデータストアを共有し、転送のレプリケーションを通じて互いにメタデータの送信のみをおこないます。このアプローチは共有ファイルデータストアに適していますが、S3 データストアでは問題が発生することがあります。背景でのスレッドの書き込みは遅延を誘発するおそれがあるので、オフロードジョブが開始する前にアセットがデータストアに書き込まれないこともあります。
 
@@ -180,7 +180,7 @@ AEM 6.2 と AEM 6.1 の機能パックでは、バイナリなしのレプリケ
 
 多くの Sites のお客様はリクエストされた時点で画像のサイズを変更および切り抜く画像サーブレットを実装しています。これにより、パブリッシュインスタンスにさらに負荷がかけられます。ただし、これらの画像をキャッシュできる限り、問題を減らすことができます。
 
-もう 1 つの方法では、Scene7 テクノロジーを使用して画像の操作をすべて引き渡します。さらに、AEMインフラストラクチャのレンディション生成の責任を引き継ぐだけでなく、公開層全体の責任を引き継ぐBrand portalをデプロイできます。
+もう 1 つの方法では、Scene7 テクノロジーを使用して画像の操作をすべて引き渡します。さらに、AEMインフラストラクチャのレンディションの生成の責任を引き継ぐだけでなく、公開層全体のレンディションの生成の責任を引き継ぐBrand Portalをデプロイできます。
 
 #### ImageMagick {#imagemagick}
 
@@ -242,31 +242,33 @@ To disable Page Extraction:
 1. Click **[!UICONTROL OK]**
 1. Repeat steps 3-6 for other launcher items that use **DAM Parse Word Documents **workflow model 
 
---># Sub-asset generation and page extraction {#sub-asset-generation-and-page-extraction}
+-->
 
-アセットのアップロード中に、AEM のワークフローによって、PDF および Office ドキュメントのページごとに個別のアセットが作成されます。これらのページはそれ自体がアセットであり、追加のディスク領域を消費するほか、バージョン管理や追加のワークフロー処理を必要とします。個別のページが必要ない場合は、サブアセットの生成とページの抽出を無効にしてください。
+<!--
+# Sub-asset generation and page extraction {#sub-asset-generation-and-page-extraction}
 
-サブアセットの生成を無効にするには、次の手順を実行します。
+During asset uploads, AEM's workflow creates a separate asset for each page in PDF and Office documents. Each of these pages is an asset by itself, which consumes additional disk space, requires versioning and additional workflow processing. If you do not require separate pages, disable Sub Asset Generation and Page Extraction.
+
+To disable Sub Asset generation, do the following:
 
 1. Open the **[!UICONTROL Workflow Console]** tool by going to */libs/cq/workflow/content/console.html*
 
 1. Select the **[!UICONTROL Models]** tab
 1. Double click the **[!UICONTROL DAM Update Asset]** workflow model
-1. **[!UICONTROL DAM Update Assetワークフローモデルから]** 「Delete Process Sub Asset **** 」ステップを削除します。
+1. Delete **[!UICONTROL Process Sub Asset]** step from **[!UICONTROL DAM Update Asset]** workflow model.
 
-1. 「**[!UICONTROL 保存]**」をクリックします。
+1. Click on **[!UICONTROL Save]**
 
-ページの抽出を無効にするには：
+To disable Page Extraction:
 
 1. Open the **[!UICONTROL Workflow Console]** tool by going to */libs/cq/workflow/content/console.html*
 
 1. Select the **[!UICONTROL Launchers]** tab
-1. Select a launcher that launches **[!UICONTROL DAM Parse Word Documents]** workflow model
-1. 「**[!UICONTROL 編集]**」をクリックします。
-1. 「**[!UICONTROL 無効にする]**」を選択します。
-1. 「**[!UICONTROL OK]**」をクリックします。
-1. **DAM Parse wordドキュメント**ワークフローモデルを使用する他のランチャー項目に対して手順3 ～ 6を繰り返します。
-
+1. Select a launcher that launches **[!UICONTROL DAM Parse Word Documents]** workflow model.
+1. Click **[!UICONTROL Edit]**
+1. Select **[!UICONTROL Disable]**
+1. Click **[!UICONTROL OK]**
+1. Repeat steps 3-6 for other launcher items that use **DAM Parse Word Documents** workflow model.
 -->
 
 ### XMP の書き戻し {#xmp-writeback}
@@ -345,11 +347,11 @@ LuceneIndexProvider 設定を更新します。
 
    type=&quot;String&quot;
 
-1. On the /oak:index/ntBaseLucene node, set the property *reindex=true*
+1. On the /oak:index/ntBaseLucene node, set the property `reindex=true`
 1. Click **[!UICONTROL Save All]**
-1. error.logを監視して、インデックス作成が完了したかどうかを確認します。
+1. error.logを監視して、インデックス作成が完了したことを確認します。
 
-   インデックスの再インデックスが完了しました： [/oak:index/ntBaseLucene]
+   インデックスのインデックスの再作成が完了しました： [/oak:index/ntBaseLucene]
 
 1. CRXDe で /oak:index/ntBaseLucene ノードを更新すると reindex プロパティが false に戻るので、インデックス構築が完了したかどうかを確認することもできます。
 1. Once indexing is completed then go back to CRXDe and set the **[!UICONTROL type]** property to disabled on these two indexes
@@ -376,7 +378,7 @@ Lucene テキスト抽出の無効化：
 
 ### サイズの大きなファイル {#large-files}
 
-AEMの大きなファイルに関連する2つの主な既知の問題があります。 ファイルのサイズが 2 GB 以上に到達すると、コールドスタンバイの同期でメモリ不足のエラーが発生することがあります。場合によっては、スタンバイの同期が実行されなくなります。また、プライマリインスタンスのクラッシュを引き起こすこともあります。このシナリオは、コンテンツパッケージを含む、AEM 内の 2 GB を超えるすべてのファイルが該当します。
+AEMの大きなファイルに関しては、2つの主な既知の問題があります。 ファイルのサイズが 2 GB 以上に到達すると、コールドスタンバイの同期でメモリ不足のエラーが発生することがあります。場合によっては、スタンバイの同期が実行されなくなります。また、プライマリインスタンスのクラッシュを引き起こすこともあります。このシナリオは、コンテンツパッケージを含む、AEM 内の 2 GB を超えるすべてのファイルが該当します。
 
 同様に、S3 共有データストアを使用している間にファイルのサイズが 2 GB に到達すると、キャッシュからファイルシステムにファイルが完全に保持されるまで、少し時間がかかることがあります。結果として、バイナリなしのレプリケーションを使用しているとき、レプリケーションが完了する前にバイナリデータが保持されていなかった可能性があります。この状況は、オフロードのシナリオなど、データの可用性が特に重要である場合に問題を引き起こす可能性があります。
 
@@ -403,17 +405,17 @@ CPU を効率的に使用し、負荷を分割することで遅延を最小限�
 
 ## AEM Assets のパフォーマンスチェックリスト {#aem-assets-performance-checklist}
 
-* HTTPS を有効化して企業の HTTP トラフィックスニッファーに対応する
-* サイズの大きなアセットのアップロードには有線接続を使用する
-* Java 8 にデプロイする
-* 最適な JVM パラメーターを設定する
-* ファイルシステムデータストアまたは S3 データストアを設定する
-* 一時的なワークフローを有効化する
-* Granite のワークフローキューを調整して同時に実行されるジョブ数を制限する
-* ImageMagick を設定してリソースの消費を制限する
-* 「DAM アセットの更新」ワークフローから不要な手順を削除する
-* ワークフローとバージョンのパージを設定する
-* 6.2 より前のバージョンの場合は Lucene Index の設定を最適化する
-* 最新のサービスパックとホットフィックスでインデックスを最適化する。利用可能な追加のインデックスの最適化については、アドビのサポートにお問い合わせください。
+* HTTPS を有効化して企業の HTTP トラフィックスニッファーに対応する.
+* サイズの大きなアセットのアップロードには有線接続を使用する.
+* 最適な JVM パラメーターを設定する.
+* ファイルシステムデータストアまたは S3 データストアを設定する.
+* サブアセットの生成を無効にします。 この機能が有効な場合、AEMのワークフローは複数ページのアセット内の各ページに対して個別のアセットを作成します。 これらの各ページは、追加のディスク領域を消費する個々のアセットで、バージョン管理や追加のワークフロー処理が必要です。 別々のページを必要としない場合は、サブアセットの生成とページ抽出アクティビティを無効にします。
+* 一時的なワークフローを有効化する.
+* Granite のワークフローキューを調整して同時に実行されるジョブ数を制限する.
+* ImageMagick を設定してリソースの消費を制限する.
+* DAMアセットの更新ワークフローから不要な手順を削除します。
+* ワークフローとバージョンのパージを設定する.
+* Luceneインデックスの設定を最適化します。
+* 最新のサービスパックとホットフィックスでインデックスを最適化する。利用可能なインデックスのその他の最適化については、アドビサポートにお問い合わせください。
 * Use `guessTotal` to optimize query performance.
 * If you configure AEM to detect file types from the content of the files (by configuring [!UICONTROL Day CQ DAM Mime Type Service] in the [!UICONTROL AEM Web Console]), upload many files in bulk during non-peak hours as the operation is resource-intensive.
