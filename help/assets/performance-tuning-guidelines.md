@@ -10,25 +10,25 @@ source-git-commit: 82b3998d5c1add6a759812e45ecd08b421d3b0df
 
 # Assets performance tuning guide {#assets-performance-tuning-guide}
 
-Adobe Experience Manager(AEM)Assetsのセットアップには、多数のハードウェア、ソフトウェアおよびネットワークコンポーネントが含まれています。 導入のシナリオによっては、パフォーマンス上のボトルネックを排除するために、ハードウェア、ソフトウェアおよびネットワークコンポーネントに対して特殊な設定変更が必要になる場合があります。
+Adobe Experience Manager (AEM) Assets のセットアップには、数多くのハードウェア、ソフトウェアおよびネットワークコンポーネントが含まれています。導入のシナリオによっては、パフォーマンス上のボトルネックを排除するために、ハードウェア、ソフトウェアおよびネットワークコンポーネントに対して特殊な設定変更が必要になる場合があります。
 
 また、特定のハードウェアおよびソフトウェアを最適化するガイドラインを識別してそれに従うことで優良な基盤を構築し、AEM Assets の導入によりパフォーマンス、スケーラビリティおよび信頼性の面で期待どおりの結果を得られます。
 
 AEM Assets のパフォーマンスが低下すると、インタラクティブパフォーマンス、アセット処理、ダウンロード速度などの領域におけるユーザーエクスペリエンスに影響します。
 
-実際、パフォーマンスの最適化は、プロジェクトのタスク指標を設定する前に実行する基本的なターゲットです。
+パフォーマンスの最適化は、すべてのプロジェクトでターゲット指標を確立する前に実行する、基本的なタスクです。
 
 ユーザーに影響を及ぼす前にパフォーマンス上の問題を検出して修正する必要がある主な領域は次のとおりです。
 
 ## プラットフォーム {#platform}
 
-AEMは多くのプラットフォームでサポートされていますが、LinuxおよびWindows上で最も高いネイティブツールのサポートを見つけたので、最適なパフォーマンスと実装のしやすさに貢献しています。 AEM Assets のデプロイメントでは、高いメモリ要件を満たすために 64 ビットのオペレーティングシステムを採用するのが理想です。あらゆる AEM のデプロイメントにおいて、可能である場合は TarMK を実装してください。TarMK は単一のオーサーインスタンスを超えて拡張できませんが、パフォーマンスは MongoMK よりも優れています。TarMK オフロードインスタンスを追加すると、AEM Assets のデプロイメントのワークフローの処理能力を高めることができます。
+AEM は数々のプラットフォームでサポートされていますが、Linux や Windows ではパフォーマンスを最適化し実装を簡単にする優れたネイティブツールがサポートされています。AEM Assets のデプロイメントでは、高いメモリ要件を満たすために 64 ビットのオペレーティングシステムを採用するのが理想です。あらゆる AEM のデプロイメントにおいて、可能である場合は TarMK を実装してください。TarMK は単一のオーサーインスタンスを超えて拡張できませんが、パフォーマンスは MongoMK よりも優れています。TarMK オフロードインスタンスを追加すると、AEM Assets のデプロイメントのワークフローの処理能力を高めることができます。
 
 ### 一時フォルダー {#temp-folder}
 
-アセットのアップロード時間を短縮するには、Java 一時ディレクトリに高性能ストレージを使用します。LinuxおよびWindowsでは、RAMドライブまたはSSDを使用できます。 クラウドベースの環境では、同等の高速ストレージタイプを使用できます。 For example in Amazon EC2, an [ephemeral drive](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) drive can be used for the temp folder.
+アセットのアップロード時間を短縮するには、Java 一時ディレクトリに高性能ストレージを使用します。Linux および Windows の場合は、RAM ドライブまたは SSD を使用できます。クラウドベースの環境では、同等の高速ストレージタイプを使用できます。For example in Amazon EC2, an [ephemeral drive](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) drive can be used for the temp folder.
 
-サーバーに十分なメモリがあるという前提で、RAM ドライブを設定します。Linuxでは、次のコマンドを実行して8 GBのRAMドライブを作成します。
+サーバーに十分なメモリがあるという前提で、RAM ドライブを設定します。Linux の場合、8GB RAM ドライブを作成するには、次のコマンドを実行します。
 
 ```
 mkfs -q /dev/ram1 800000
@@ -39,7 +39,7 @@ mkfs -q /dev/ram1 800000
 
 Windows OS の場合、サードパーティ製ドライバーを使用して RAM ドライブを作成するか、SSD などの高性能ストレージを使用する必要があります。
 
-高性能一時ボリュームの準備ができたら、JVM パラメーター -Djava.io.tmpdir を設定します。例えば、AEMのbin/開始スクリプトのCQ_JVM_OPTS変数に、次のJVMパラメーターを追加できます。
+高性能一時ボリュームの準備ができたら、JVM パラメーター -Djava.io.tmpdir を設定します。例えば、AEM の bin/start スクリプト内の CQ_JVM_OPTS 変数の下に次の JVM パラメーターを追加できます。
 
 `-Djava.io.tmpdir=/mnt/aem-tmp`
 
@@ -47,7 +47,7 @@ Windows OS の場合、サードパーティ製ドライバーを使用して RA
 
 ### Java バージョン {#java-version}
 
-Oracleは2015年4月にJava 7のアップデートのリリースを停止したので、Java 8にAEM Assetsをデプロイすることをお勧めします。 場合によってはパフォーマンスの改善が見られます。
+2015 年 4 月を最後に Oracle は Java 7 の更新プログラムのリリースを停止しているので、AEM Assets を Java 8 にデプロイすることをお勧めします。場合によってはパフォーマンスの改善が見られます。
 
 ### JVM パラメーター {#jvm-parameters}
 
@@ -63,13 +63,13 @@ Oracleは2015年4月にJava 7のアップデートのリリースを停止した
 
 ### ファイルデータストアの設定 {#file-data-store-configuration}
 
-すべての AEM Assets のユーザーに、データストアをセグメントストアから分離することをお勧めします。また、`maxCachedBinarySize` パラメーターと `cacheSizeInMB` パラメーターを設定することでパフォーマンスを最大化するのに役立ちます。Set `maxCachedBinarySize` to the smallest file size that can be held in the cache. Specify the size of the in-memory cache to use for the datastore within `cacheSizeInMB`. この値は合計ヒープサイズの 2～10 ％に設定することをお勧めします。ただし、負荷テストやパフォーマンステストが理想的な設定を決定するのに役立ちます。
+すべての AEM Assets のユーザーに、データストアをセグメントストアから分離することをお勧めします。また、`maxCachedBinarySize` パラメーターと `cacheSizeInMB` パラメーターを設定することでパフォーマンスを最大化するのに役立ちます。キャッシュに含めることができるように、`maxCachedBinarySize` を最小のファイルサイズに設定します。`cacheSizeInMB` 内のデータストアで使用するインメモリキャッシュのサイズを指定します。この値は合計ヒープサイズの 2～10％に設定することをお勧めします。ただし、負荷テストやパフォーマンステストが理想的な設定を決定するのに役立ちます。
 
 ### バッファーされる画像キャッシュの最大サイズの設定 {#configure-the-maximum-size-of-the-buffered-image-cache}
 
-大量のアセットをAdobe Experience Managerにアップロードする場合、メモリ消費量が予期せず急増し、OutOfMemoryErrorsでJVMが失敗するのを防ぐために、バッファーされた画像キャッシュの最大サイズを小さくします。 Consider an example that you have a system with a maximum heap (- `Xmx`param) of 5 GB, an Oak BlobCache set at 1 GB, and document cache set at 2 GB. このときに、バッファーされるキャッシュが最大 1.25 GB のメモリを使用した場合、予期しないスパイクに使用できるメモリは 0.75 GB のみとなります。
+多数のアセットを Adobe Experience Manager にアップロードするときは、メモリ消費の予期しないスパイクに対応するために、また OutOfMemoryErrors による JVM エラーを避けるために、バッファーされる画像キャッシュの最大サイズを減らしてください。例えば、最大ヒープ（-`Xmx` パラメーター）が 5 GB のシステムで、Oak BlobCache が 1 GB、文書キャッシュが 2 GB に設定されているとします。このときに、バッファーされるキャッシュが最大 1.25 GB のメモリを使用した場合、予期しないスパイクに使用できるメモリは 0.75 GB のみとなります。
 
-バッファーされるキャッシュサイズは OSGi Web コンソールで設定します。で、プ `https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache`ロパティをバイト単位 `cq.dam.image.cache.max.memory` で設定します。 例えば、1073741824 は 1 GB です（1024 x 1024 x 1024 = 1 GB）。
+バッファーされるキャッシュサイズは OSGi Web コンソールで設定します。`https://host:port/system/console/configMgr/com.day.cq.dam.core.impl.cache.CQBufferedImageCache` で、プロパティ `cq.dam.image.cache.max.memory` をバイト単位で指定します。例えば、1073741824 は 1 GB です（1024 x 1024 x 1024 = 1 GB）。
 
 AEM 6.1 SP1 以降で `sling:osgiConfig` ノードを使用してこのプロパティを設定する場合は、データタイプを必ず Long にします。詳しくは、[CQBufferedImageCache がアセットのアップロード中にヒープを消費する](https://helpx.adobe.com/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html)を参照してください。
 
@@ -79,7 +79,7 @@ S3 または共有ファイルデータストアの実装は、ディスク領�
 
 ### S3 データストア {#s-data-store}
 
-次の S データストアの設定（`org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.cfg`3）は、アドビが 12.8 TB のバイナリラージオブジェクト（BLOB）を既存のファイルデータストアから顧客サイトの S3 データストアに抽出するのに役立ちました。
+次の S3 データストアの設定（`org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.cfg`）は、アドビが 12.8 TB のバイナリラージオブジェクト（BLOB）を既存のファイルデータストアから顧客サイトの S3 データストアに抽出するのに役立ちました。
 
 ```
 accessKey=<snip>
@@ -104,12 +104,12 @@ accessKey=<snip>
 
 ## ネットワークの最適化 {#network-optimization}
 
-多くの企業には HTTP トラフィックをスニッフィングするファイアウォールがあり、ファイルのアップロードに干渉しファイルを破損するので、HTTPS を有効にすることをお勧めします。大きなファイルをアップロードする場合は、WiFiネットワークが急速に飽和状態になるので、ユーザーがネットワークに有線接続していることを確認します。 For guidelines on identifying network bottlenecks, see [Assets Sizing Guide](assets-sizing-guide.md). To assess network performance by analyzing network topology, see [Assets Network Considerations](assets-network-considerations.md).
+多くの企業には HTTP トラフィックをスニッフィングするファイアウォールがあり、ファイルのアップロードに干渉しファイルを破損するので、HTTPS を有効にすることをお勧めします。サイズの大きなファイルのアップロードについては、Wi-Fi ネットワークでは簡単に飽和するおそれがあるので、必ず有線でネットワークに接続してください。For guidelines on identifying network bottlenecks, see [Assets Sizing Guide](assets-sizing-guide.md). ネットワークトポロジを分析してネットワークのパフォーマンスを評価するには、[Assets のネットワークに関する考慮事項](assets-network-considerations.md)を参照してください。
 
 第一に、ネットワークの最適化戦略は使用できる帯域幅や、AEM インスタンスに対する負荷によって変わります。ファイアウォールやプロキシなどの一般的な設定オプションは、ネットワークのパフォーマンスの改善に役立ちます。留意点は次のとおりです。
 
 * インスタンスタイプ（小、中、大）によって、AEM インスタンスに十分なネットワーク帯域幅があることを確認します。AEM が AWS にホストされている場合、帯域幅が適切に分散されていることが特に重要です。
-* AEM インスタンスが AWS にホストされている場合、広い用途に対応するスケールポリシーがあると便利です。ユーザーが高い負荷を予想する場合は、インスタンスをアップサイズします。 負荷が標準的または低い場合は、インスタンスのサイズを小さくします。
+* AEM インスタンスが AWS にホストされている場合、広い用途に対応するスケールポリシーがあると便利です。高い負荷が予想される場合は、インスタンスのサイズを大きくします。負荷が標準的または低い場合は、インスタンスのサイズを小さくします。
 * HTTPS：ユーザーの多くは HTTP トラフィックをスニッフィングするファイアウォールを装備しており、ファイルのアップロード操作に干渉しファイルを破損することもあります。
 * サイズの大きなファイルのアップロード：必ず有線でネットワークに接続してください（Wi-Fi 接続は簡単に飽和するおそれがあります）。
 
@@ -142,7 +142,7 @@ accessKey=<snip>
 
    パージの実行時間が長すぎる場合、タイムアウトします。このため、ワークフローの数が多すぎることが原因でパージワークフローが終わらない状況を避けるために、パージジョブが確実に終わるようにする必要があります。
 
-   For example, after running numerous non-transient workflows (that creates workflow instance nodes), you can run [ACS AEM Commons Workflow Remover](https://adobe-consulting-services.github.io/acs-aem-commons/features/workflow-remover.html) on an ad-hoc basis. これにより、冗長および完了したワークフローのインスタンスが即座に削除されるので、Adobe Granite のワークフローのパージスケジューラーが実行されるのを待つ必要がありません。
+   例えば、一時的でない多数のワークフロー（ワークフローのインスタンスノードを作成する）を実行した後に、[ACS AEM Commons Workflow Remover](https://adobe-consulting-services.github.io/acs-aem-commons/features/workflow-remover.html) をアドホックベースで実行できます。これにより、冗長および完了したワークフローのインスタンスが即座に削除されるので、Adobe Granite のワークフローのパージスケジューラーが実行されるのを待つ必要がありません。
 
 ### 並列ジョブの最大数 {#maximum-parallel-jobs}
 
@@ -152,7 +152,7 @@ accessKey=<snip>
 1. 実装に関連する各ワークフローキュー（Granite の一時的なワークフローキューなど）で「編集」をクリックします。
 1. 並列ジョブの最大数の値を変更し、「保存」をクリックします。
 
-まずは、キューを使用できるプロセッサーの半分に設定してください。ただし、場合によっては最大のスループットを得るためにこの値をお使いの環境に合わせて増減させる必要があります。一時的および一時的でないワークフローには別個のキューが用意されているほか、外部ワークフローなどその他の処理も存在します。プロセッサーの 50 ％に設定された複数のキューが同時にアクティブになると、システムはすぐにオーバーロードします。頻繁に使用されるキューは、ユーザーの実装により大きく異なります。このため、サーバーの安定性を損なうことなく効率を最大化するには、これらを慎重に設定する必要がある場合があります。
+まずは、キューを使用できるプロセッサーの半分に設定してください。ただし、場合によっては最大のスループットを得るためにこの値をお使いの環境に合わせて増減させる必要があります。一時的および一時的でないワークフローには別個のキューが用意されているほか、外部ワークフローなどその他の処理も存在します。プロセッサーの 50％に設定された複数のキューが同時にアクティブになると、システムはすぐにオーバーロードします。頻繁に使用されるキューは、ユーザーの実装により大きく異なります。このため、サーバーの安定性を損なうことなく効率を最大化するには、これらを慎重に設定する必要がある場合があります。
 
 ### オフロード {#offloading}
 
@@ -281,7 +281,7 @@ XMP の書き戻しにより、AEM でメタデータが変更されたときは
 
 上記の結果により、大量のリソースが消費されます。このため、この機能が必要でない場合は、[XMP の書き戻しを無効化する](https://helpx.adobe.com/experience-manager/kb/disable-xmp-writeback.html)ことをお勧めします。
 
-ワークフロー実行フラグがチェックされている場合、大量のメタデータをインポートすると、リソースを集中的に使用する XMP 書き戻しアクティビティが発生するおそれがあります。このようなインポートは、他のユーザーのパフォーマンスに影響しないように、サーバー使用率が低いときに計画します。
+ワークフロー実行フラグがチェックされている場合、大量のメタデータを読み込むと、リソースを集中的に使用する XMP 書き戻しアクティビティが発生するおそれがあります。このような読み込みは、他のユーザーのパフォーマンスに影響しないように、サーバー使用率が低いときに計画します。
 
 ## レプリケーション {#replication}
 
@@ -289,7 +289,7 @@ Sites の実装などで、アセットを多数のパブリッシュインス�
 
 ### チェーンレプリケーションの設定 {#configure-chain-replication}
 
-1. レプリケーションのチェーンに使用する発行インスタンスを選択します
+1. レプリケーションのチェーン先に使用するパブリッシュインスタンスを選択します。
 1. そのパブリッシュインスタンスで、他のパブリッシュインスタンスを指すレプリケーションエージェントを追加します。
 1. On each of those replication agents, enable **[!UICONTROL On Receive]** on the **[!UICONTROL Triggers]** tab
 
@@ -299,7 +299,7 @@ Sites の実装などで、アセットを多数のパブリッシュインス�
 
 ## 検索インデックス {#search-indexes}
 
-システムインデックスの更新が含まれている場合が多いので、最新のサービスパックやパフォーマンス関連のホットフィックスを実装してください。See [Performance tuning tips | 6.x](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) for some index optimizations that can be applied, depending on your version of AEM.
+システムインデックスの更新が含まれている場合が多いので、最新のサービスパックやパフォーマンス関連のホットフィックスを実装してください。AEM のバージョンに応じて適用できるインデックスの最適化については、[パフォーマンスチューニングヒント | 6.x](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) を参照してください。
 
 頻繁に実行するクエリにカスタムインデックスを作成します。詳しくは、[スロークエリの分析手法（英語）](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html)と[カスタムインデックスの作成](/help/sites-deploying/queries-and-indexing.md)を参照してください。For additional insights around query and index best practices, see [Best Practices for Queries and Indexing](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 
@@ -323,7 +323,7 @@ LuceneIndexProvider 設定を更新します。
 
 （AEM 6.1 および 6.2 のみ）ntBaseLucene インデックスを更新して、アセットの削除および移動のパフォーマンスを向上させます。
 
-1. Browse to */oak:index/ntBaseLucene/indexRules/nt:base/properties*
+1. */oak:index/ntBaseLucene/indexRules/nt:base/properties* を参照します。
 1. Add two nt:unstructured nodes **[!UICONTROL slingResource]** and **[!UICONTROL damResolvedPath]** under */oak:index/ntBaseLucene/indexRules/nt:base/properties*
 1. ノード上で以下のプロパティを設定します(orderedプロパティとpropertyIndexプロパティは *Boolean型です*)。
 
@@ -347,7 +347,7 @@ LuceneIndexProvider 設定を更新します。
 
    type=&quot;String&quot;
 
-1. On the /oak:index/ntBaseLucene node, set the property `reindex=true`
+1. /oak:index/ntBaseLucene ノードで、プロパティ `reindex=true` を設定します。
 1. Click **[!UICONTROL Save All]**
 1. error.logを監視して、インデックス作成が完了したことを確認します。
 
@@ -378,7 +378,7 @@ Lucene テキスト抽出の無効化：
 
 ### サイズの大きなファイル {#large-files}
 
-AEMの大きなファイルに関しては、2つの主な既知の問題があります。 ファイルのサイズが 2 GB 以上に到達すると、コールドスタンバイの同期でメモリ不足のエラーが発生することがあります。場合によっては、スタンバイの同期が実行されなくなります。また、プライマリインスタンスのクラッシュを引き起こすこともあります。このシナリオは、コンテンツパッケージを含む、AEM 内の 2 GB を超えるすべてのファイルが該当します。
+AEM では、サイズの大きなファイルに関連する既知の問題が主に 2 つあります。ファイルのサイズが 2 GB 以上に到達すると、コールドスタンバイの同期でメモリ不足のエラーが発生することがあります。場合によっては、スタンバイの同期が実行されなくなります。また、プライマリインスタンスのクラッシュを引き起こすこともあります。このシナリオは、コンテンツパッケージを含む、AEM 内の 2 GB を超えるすべてのファイルが該当します。
 
 同様に、S3 共有データストアを使用している間にファイルのサイズが 2 GB に到達すると、キャッシュからファイルシステムにファイルが完全に保持されるまで、少し時間がかかることがあります。結果として、バイナリなしのレプリケーションを使用しているとき、レプリケーションが完了する前にバイナリデータが保持されていなかった可能性があります。この状況は、オフロードのシナリオなど、データの可用性が特に重要である場合に問題を引き起こす可能性があります。
 
@@ -391,7 +391,7 @@ AEMの大きなファイルに関しては、2つの主な既知の問題があ�
 お客様からのネットワークのパフォーマンスに関するすべての懸念については、次のタスクを実行してください。
 
 * お客様のネットワーク内からネットワークのパフォーマンスをテストする
-* アドビのネットワーク内からネットワークのパフォーマンスをテストする.AMSのお客様は、アドビのネットワーク内でCSEを使用してテストを行います。
+* アドビのネットワーク内からネットワークのパフォーマンスをテストする. AMS ユーザーの場合、CSE を使用してアドビのネットワーク内からテストしてください。
 * 別のアクセスポイントからネットワークのパフォーマンスをテストする
 * ネットワークのベンチマークツールを使用する
 * ディスパッチャーに対してテストする
@@ -416,6 +416,6 @@ CPU を効率的に使用し、負荷を分割することで遅延を最小限�
 * DAMアセットの更新ワークフローから不要な手順を削除します。
 * ワークフローとバージョンのパージを設定する.
 * Luceneインデックスの設定を最適化します。
-* 最新のサービスパックとホットフィックスでインデックスを最適化する。利用可能なインデックスのその他の最適化については、アドビサポートにお問い合わせください。
+* 最新のサービスパックとホットフィックスでインデックスを最適化する。その他のインデックスの最適化方法については、アドビサポートに問い合わせてください。
 * Use `guessTotal` to optimize query performance.
 * If you configure AEM to detect file types from the content of the files (by configuring [!UICONTROL Day CQ DAM Mime Type Service] in the [!UICONTROL AEM Web Console]), upload many files in bulk during non-peak hours as the operation is resource-intensive.
