@@ -8,7 +8,7 @@ content-type: troubleshooting
 topic-tags: publish
 discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
 translation-type: tm+mt
-source-git-commit: 835618e8e0d01905ad7b476b0172dfecec41cf9d
+source-git-commit: 68ab70332a16a9a043f0db0ede75049b85188750
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 835618e8e0d01905ad7b476b0172dfecec41cf9d
 
 大規模な組織では、プロセスのユーザーを動的に選択する必要があります。例えば、お客様に対応するフィールドエージェントを、お客様とエージェントの近さを基準として選択します。このようなシナリオで、エージェントは動的に選択されます。
 
-Assign task and Adobe Sign steps of [Forms-centric workflows on OSGi](/help/forms/using/aem-forms-workflow.md) provide options to dynamically select a user. ECMAScriptまたはOSGiバンドルを使用して、タスクの割り当て手順の担当者を動的に選択したり、ドキュメントに署名手順の署名者を選択したりできます。
+Assign task and Adobe Sign steps of [Forms-centric workflows on OSGi](/help/forms/using/aem-forms-workflow.md) provide options to dynamically select a user. ECMAScriptまたはOSGiバンドルを使用して、タスクの割り当て手順の担当者を動的に選択したり、署名のドキュメント手順の署名者を選択したりできます。
 
 ## ECMAScript を使用して、ユーザーまたはグループを動的に選択 {#use-ecmascript-to-dynamically-select-a-user-or-group}
 
@@ -29,7 +29,7 @@ ECMAScript はスクリプト言語です。この言語は、クライアント
 1. 次のパスに、拡張子が .ecma のファイルを作成します。パス（ノード構造）が存在しない場合は作成します。
 
    * (Path for Assign Task step) `/apps/fd/dashboard/scripts/participantChooser`
-   * （署名ステップのパス） `/apps/fd/workflow/scripts/adobesign`
+   * （署名手順のパス） `/apps/fd/workflow/scripts/adobesign`
 
 1. 動的にユーザーを選択するロジックを含む ECMAScript を .ecma ファイルに追加します。「**[!UICONTROL すべて保存]**」をクリックします。
 
@@ -39,7 +39,7 @@ ECMAScript はスクリプト言語です。この言語は、クライアント
 
    1. スクリプトノードを拡張します。**[!UICONTROL jcr:content]**&#x200B;ノードを右クリックしてから、「**[!UICONTROL Mixins]**」をクリックします。
    1. Mixin を編集ダイアログに `mix:title` プロパティを追加して、「**OK**」をクリックします。
-   1. 次のプロパティをスクリプトのjcr:contentノードに追加します。
+   1. ス追加クリプトのjcr:contentノードに対する次のプロパティ。
 
       | 名前 | タイプ | 値 |
       |--- |--- |--- |
@@ -155,8 +155,8 @@ function getAdobeSignRecipients() {
        <dependencies>
            <dependency>
                <groupId>com.adobe.aemfd</groupId>
-               <artifactId>aemfd-client-sdk-test</artifactId>
-               <version>4.0.70</version>
+               <artifactId>aemfd-client-sdk</artifactId>
+               <version>5.1.100</version>
            </dependency>
            <dependency>
                <groupId>com.adobe.granite</groupId>
