@@ -1,9 +1,9 @@
 ---
 title: AEM Assets でサポートされているファイル形式
-description: AEM Assetsでサポートされるファイル形式とMIMEタイプ、および各形式でサポートされる機能の一覧です。
+description: AEM Assetsでサポートされるファイル形式とMIMEタイプのリストと、各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 75d2bdc6cda9a608d622e31769abfa36e847e3a3
+source-git-commit: 171186251e675094e716931b64c77e7897c03ca7
 
 ---
 
@@ -20,13 +20,13 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 |:---:|---|
 | ✓ | 対応 |
 | * | アドオン機能により対応 |
-| - | 適用なし |
+| − | 適用なし |
 
 ## ラスターイメージ形式 {#supported-raster-image-formats}
 
 アセット管理機能でサポートされるラスターイメージ形式は、次のとおりです。
 
-| 形式 | ストレージ | メタデータの管理 | メタデータの抽出 | サムネールの生成 | インタラクティブ編集 | メタデータの書き戻し | インサイト |
+| ファイル形式 | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | インタラクティブ編集 | メタデータの書き戻し | インサイト |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
@@ -37,16 +37,16 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 | PGM | ✓ | ✓ |  |  |  |  | ✓ |
 | PBM | ✓ | ✓ |  |  |  |  | ✓ |
 | PPM | ✓ | ✓ |  |  |  |  | ✓ |
-| PSD **¹** | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
+| PSD **‡** | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ |  | ✓ |  |
 | PICT |  |  |  |  |  |  | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
 
-**§** PSDファイルから結合画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+**‡ PSDフ** ァイルから、結合された画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
 ダイナミックメディア機能でサポートされるラスターイメージ形式は、次のとおりです。
 
-| 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
+| ファイル形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -57,12 +57,12 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 | PGM |  |  |  |  |  |
 | PBM |  |  |  |  |  |
 | PPM |  |  |  |  |  |
-| PSD **¹** | ✓ |  |  |  |  |
+| PSD **‡** | ✓ |  |  |  |  |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ |  |  |  |  |
 | PSB |  |  |  |  |  |
 
-**§** PSDファイルから結合画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+**‡ PSDフ** ァイルから、結合された画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
 上記の情報に加えて、以下を考慮してください。
 
@@ -96,11 +96,11 @@ See [Imaging Transcoding Library](imaging-transcoding-library.md).
 
 Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像を取り込むことができます。See [Camera Raw Support](camera-raw.md).
 
-## ドキュメントの形式 {#supported-document-formats}
+## ドキュメント形式 {#supported-document-formats}
 
-アセット管理機能でサポートされるドキュメント形式は次のとおりです。
+ドキュメント管理機能でサポートされるアセット形式は次のとおりです。
 
-| 形式 | ストレージ | Metadata<br> management | Fulltext<br> extraction | Metadata<br> extraction | Thumbnail<br> generation | Subasset<br> extraction | Metadata<br> writeback |
+| ファイル形式 | ストレージ | Metadata<br> management | Fulltext<br> extraction | Metadata<br> extraction | Thumbnail<br> generation | Subasset<br> extraction | Metadata<br> writeback |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |
 | DOC | ✓ | ✓ | ✓ | ✓ |  |  |  |
@@ -121,9 +121,9 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 | QXP | ✓ | ✓ |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |
 
-ダイナミックメディア機能でサポートされるドキュメント形式は次のとおりです。
+ドキュメント形式は、ダイナミックメディアの機能で次のとおりです。
 
-| 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
+| ファイル形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ |  |  |  |  |
 | DOC |  |  |  |  |  |
@@ -154,18 +154,18 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 
 ## マルチメディア形式 {#supported-multimedia-formats}
 
-| 形式 | ストレージ | メタデータの管理 | メタデータの抽出 | サムネールの生成 | FFMPEG トランスコーディング |
+| ファイル形式 | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | FFMPEG トランスコーディング |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| AAC | ✓ | ✓ |  | - | * |
-| MIDI | ✓ | ✓ |  | - | * |
-| 3GP | ✓ | ✓ |  | - | * |
-| MP3 | ✓ | ✓ | ✓ | - | * |
-| MPG | ✓ | ✓ |  | - | * |
-| OGA | ✓ | ✓ |  | - | * |
-| OGG | ✓ | ✓ |  | - | * |
-| RA | ✓ | ✓ |  | - | * |
-| WAV | ✓ | ✓ |  | - | * |
-| WMA | ✓ | ✓ |  | - | * |
+| AAC | ✓ | ✓ |  | − | * |
+| MIDI | ✓ | ✓ |  | − | * |
+| 3GP | ✓ | ✓ |  | − | * |
+| MP3 | ✓ | ✓ | ✓ | − | * |
+| MPG | ✓ | ✓ |  | − | * |
+| OGA | ✓ | ✓ |  | − | * |
+| OGG | ✓ | ✓ |  | − | * |
+| RA | ✓ | ✓ |  | − | * |
+| WAV | ✓ | ✓ |  | − | * |
+| WMA | ✓ | ✓ |  | − | * |
 | DVI | ✓ | ✓ |  | * | * |
 | FLV | ✓ | ✓ |  | * | * |
 | M4V | ✓ | ✓ |  | * | * |
@@ -200,36 +200,36 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 
 サポートされるアーカイブ形式と一般的な DAM ワークフローの適用性については、次の表で説明します。
 
-| 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
+| ファイル形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | TGZ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | JAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | RAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | TAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| ZIP **²** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| ZIP **†** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-**²** PSDファイルから結合画像が抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。The ZIP archives created using `Deflate64` algorithm have limited support in AEM. アーカイブ操作とアーカイブ解除操作はサポートされていません。 アップロード、参照、ダウンロードなどの操作はサポートされています。
+**†結** 合した画像はPSDファイルから抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。The ZIP archives created using `Deflate64` algorithm have limited support in AEM. アーカイブ操作とアーカイブ解除操作はサポートされていません。 アップロード、参照、ダウンロードなどの操作はサポートされています。
 
 ## その他のサポートされる形式 {#other-supported-formats}
 
 他のいくつかのファイル形式に対する一般的な DAM ワークフローの適用性については、以下の表で説明します。
 
-| 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
+| ファイル形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **³** | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| **#** | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JavaScript（独自の配信ドメインで設定する場合） |  |  |  |  |  | ✓ |
 
-**3その他の形式は** 、DAMでの保存、バージョン管理、ACL、ワークフロー、投稿、メタデータ管理に対応しています。
+**#** その他の形式は、ストレージ、バージョン管理、ACL、ワークフロー、投稿およびメタデータ管理のためにDAMでサポートされています。
 
 ## サポートされる MIME タイプ {#supported-mime-types}
 
 デフォルトでは、AEMはファイル拡張子を使用してファイルの種類を検出します。 AEMは、ファイルの内容からこのファイルを検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the AEM Web Console.
 
-CRXDE Liteでは、サポートされているMIMEタイプのリストを次の場所で使用できま `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`す。
+サポートされるMIMEタイプのリストは、CRXDE Lite()で入手できま `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`す。
 
 [アップロードジョブパラメーターサポートの MIME タイプベースの設定](config-dynamic.md)を参照してください。
 
