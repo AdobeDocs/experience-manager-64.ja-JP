@@ -1,11 +1,11 @@
 ---
-source-git-commit: 56f859e9e6a31d81364b327e744749f8d5ff4da6
+source-git-commit: 56d3b9ccfa274ffb6305317bfe262060555b46a0
 translation-type: tm+mt
 
 ---
-# AEM 6.4ドキュメント
+# Adobe Experience Manager 6.4 ドキュメント
 
-これは、Adobe Experience Manager 6.4ドキュメントのリポジトリです。 このドキュメントでは、インストール、管理、オーサリングの使用、およびAEMのカスタマイズ方法について説明します。
+これは、Adobe Experience Manager 6.4ドキュメントのリポジトリです。 このドキュメントには、インストール、管理、オーサリングの使用、およびAEMのカスタマイズ方法が含まれます。
 
 ドキュメントに対する貢献を歓迎します。次のリソースを参照してください。
 
