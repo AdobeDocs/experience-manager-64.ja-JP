@@ -10,21 +10,21 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 15819d42-4897-40fa-a013-e019d1580fa2
 translation-type: tm+mt
-source-git-commit: 1ce49a86e954f48a7cd213558da93861794cfd33
+source-git-commit: d79b5f7204cb7a00cef6d31a1fdd2cbe93a6cfbe
 
 ---
 
 
 # 廃止される機能および削除された機能 {#deprecated-and-removed-features}
 
-アドビは、製品の機能を常に評価し、長期的には古い機能をより最新の代替手段に置き換えて、全体的な顧客価値を向上させ、常に下位互換性を慎重に検討します。
+アドビでは、製品の機能を絶えず評価して、常に後方互換性を慎重に考慮しながら、古い機能を作成し直したり、より近代的な機能に置き換えて、お客様にとっての全体的な価値を向上させています。
 
 近い将来おこなわれる AEM 機能の削除や置換を通知するため、次のルールが適用されます。
 
-1. 廃止の発表がまずおこなわれます。廃止中は、機能はまだ使用可能ですが、それ以上の強化はおこなわれません。
+1. まず、非推奨（廃止予定）の発表がおこなわれます。廃止中は、機能はまだ使用可能ですが、それ以上の強化はおこなわれません。
 1. 廃止された機能の削除は、早ければ、次のメジャーリリースでおこなわれます。削除の実際の期日が発表されます。
 
-このプロセスにより、機能が実際に削除されるまでに、廃止される機能の新しいバージョンまたは後継機能にお客様が実装を合わせるためのリリースサイクルが少なくとも 1 回あります。
+このプロセスにより、機能が実際に削除されるまでに、非推奨（廃止予定）の機能の新しいバージョンまたは後継機能にお客様が実装を合わせるためのリリースサイクルが少なくとも 1 回あります。
 
 ## 廃止される機能 {#deprecated-features}
 
@@ -57,7 +57,7 @@ source-git-commit: 1ce49a86e954f48a7cd213558da93861794cfd33
   </tr>
   <tr>
    <td>コンポーネント</td> 
-   <td><p>以下の基盤コンポーネントの機能がさらに強化される予定はありません。AEM 6.4にはFoundationコンポーネントが含まれており、以前のリリースからアップグレードしたお客様は、これらのコンポーネントをそのまま使用できます。 Foundationコンポーネントは、非推奨の間も完全にサポートされたままです。 </p> 
+   <td><p>以下の基盤コンポーネントの機能がさらに強化される予定はありません。AEM 6.4にはFoundation Componentsが含まれており、以前のリリースからアップグレードしたお客様は、引き続きそのまま使用できます。 Foundation Componentsは、非推奨の間も完全にサポートされたままです。 </p> 
     <ul> 
      <li>foundation/components/account/accountname</li> 
      <li>foundation/components/account/actions</li> 
@@ -88,15 +88,15 @@ source-git-commit: 1ce49a86e954f48a7cd213558da93861794cfd33
   </tr>
   <tr>
    <td>コンポーネント</td> 
-   <td><p>以下の基盤コンポーネントの機能がさらに強化される予定はありません。AEM 6.4にはFoundationコンポーネントが含まれており、以前のリリースからアップグレードしたお客様は、これらのコンポーネントをそのまま使用できます。 Foundationコンポーネントは、非推奨の間も完全にサポートされたままです。</p> 
+   <td><p>以下の基盤コンポーネントの機能がさらに強化される予定はありません。AEM 6.4にはFoundation Componentsが含まれており、以前のリリースからアップグレードしたお客様は、引き続きそのまま使用できます。 Foundation Componentsは、非推奨の間も完全にサポートされたままです。</p> 
     <ul> 
      <li>foundation/components/timing</li> 
     </ul> </td> 
    <td>書き換えの予定はありません。</td> 
   </tr>
   <tr>
-   <td>ポータル・ダイレクタ</td> 
-   <td><p>ポータルディレクターは、ポートレットを介してサードパーティサーバーにAEMコンテンツをホストする機能のセットです。</p> <p>アドビでは、以下の場所でPortal Director機能をさらに強化する予定はありません。 AEM 6.4にはポータルディレクタが含まれており、以前のリリースからアップグレードしたお客様は、このディレクタをそのまま使用できます。 Portal directは、非推奨の間も完全にサポートされます。</p> 
+   <td>ポータル・ディレクター</td> 
+   <td><p>ポータルディレクターは、サードパーティサーバーのポートレットを介してAEMコンテンツをホストする機能のセットです。</p> <p>アドビでは、以下に示す場所で、Portal Director機能をさらに強化する予定はありません。 AEM 6.4にはPortal Directorが含まれており、以前のリリースからアップグレードしたお客様は、引き続きそのまま使用できます。 非推奨の間も、Portal Directは引き続き完全にサポートされます。</p> 
     <ul> 
      <li>/libs/portal/director</li> 
     </ul> </td> 
@@ -104,7 +104,7 @@ source-git-commit: 1ce49a86e954f48a7cd213558da93861794cfd33
   </tr>
   <tr>
    <td>ポートレットコンポーネント</td> 
-   <td><p>/foundation/components/portletの下のポートレットコンポーネントは、AEMのJSRポートレットをコンポーネントとしてホストできます。</p> <p>アドビでは、ポートレットコンポーネント機能をさらに強化する予定はありません。 AEM 6.4にはポートレットコンポーネントが含まれており、以前のリリースからアップグレードしたお客様は、このコンポーネントをそのまま使用できます。 ポートレットコンポーネントは、非推奨の間も完全にサポートされ続けます。</p> </td> 
+   <td><p>/foundation/components/portletの下のポートレットコンポーネントを使用すると、AEM内のJSRポートレットをコンポーネントとしてホストできます。</p> <p>アドビでは、ポートレットコンポーネント機能をさらに強化する予定はありません。 AEM 6.4にはポートレットコンポーネントが含まれており、以前のリリースからアップグレードしたお客様は、このコンポーネントをそのまま使用し続けることができます。 ポートレットコンポーネントは、非推奨の間も完全にサポートされます。</p> </td> 
    <td>書き換えの予定はありません。</td> 
   </tr>
   <tr>
@@ -122,7 +122,7 @@ source-git-commit: 1ce49a86e954f48a7cd213558da93861794cfd33
 
 ## 削除された機能 {#removed-features}
 
-この節では、AEM 6.4 で削除された機能について説明します。以前のリリースでは、これらの機能は「廃止」とマークされていました。
+この節では、AEM 6.4から削除された機能に関するリストを説明します。以前のリリースでは、これらの機能は非推奨としてマークされていました。
 
 <table> 
  <tbody>
@@ -132,9 +132,9 @@ source-git-commit: 1ce49a86e954f48a7cd213558da93861794cfd33
    <td><strong>代替手段</strong></td> 
   </tr>
   <tr>
-   <td>Analytics Activity Map</td> 
-   <td>AEMに含まれるActivity mapのバージョン。</td> 
-   <td>Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。<br><br>Adobe Analyticsが提 <a href="https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html">供するActivityMapプラグインを使用するよう</a> になりました。</td> 
+   <td>Analyticsアクティビティマップ</td> 
+   <td>AEMに含まれるアクティビティマップのバージョン。</td> 
+   <td>Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。<br><br>Adobe Analyticsが提 <a href="https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html">供するActivityMapプラグインを使用する</a> 。</td> 
   </tr>
   <tr>
    <td>コンポーネント</td> 
@@ -174,7 +174,7 @@ source-git-commit: 1ce49a86e954f48a7cd213558da93861794cfd33
   <tr>
    <td>Forms</td> 
    <td>PDF Generator を使用して PDF を PDF/E-1 形式に書き出す機能は削除されました。</td> 
-   <td>PDF Generatorでは、PDFからPDF/A-1a/b、PDF/A-2a/bおよびPDF/A-3a/b形式への書き出しが引き続きサポートされます。</td> 
+   <td>PDF Generatorでは、引き続きPDFのPDF/A-1a/b、PDF/A-2a/bおよびPDF/A-3a/b形式への書き出しがサポートされます。</td> 
   </tr>
   <tr>
    <td>Forms</td> 
@@ -185,6 +185,41 @@ source-git-commit: 1ce49a86e954f48a7cd213558da93861794cfd33
    <td>Forms</td> 
    <td>ドキュメントフラグメント内では画像がサポートされなくなりました。 </td> 
    <td>インタラクティブコミュニケーションでは、印刷および Web チャネルで画像を直接使用できます。<br /> </td> 
+  </tr>
+    <tr>
+   <td>Forms</td> 
+   <td> アウトオブプレースアップグレード </td> 
+   <td>アウトオブプレースアップグレードのサポートは利用できません <br/> </td> 
+  </tr>
+  <tr>
+   <td>Forms</td> 
+   <td> TarMKからDocumentMKへの移行のサイドグレード </td> 
+   <td> 古いシステムからデータを書き出し、新しいセットアップシステムで読み込むことができます。 詳しい手順については、「JEE上のAEM Formsアップグレードドキュメント」を参照してください。 <br/> </td> 
+  </tr>
+    <tr>
+   <td>Forms</td> 
+ <td>JEE上のAEM Forms 32ビット版のインストーラーは使用できません。</td> 
+   <td>アドビは、JEE 32ビット版のAEM Formsインストーラーの出荷を停止しました。 引き続き64ビットインストーラーを使用して、JEE上のAEM Formsをインストールできます。 </td>  
+  </tr>
+    <tr>
+    <td>Forms</td> 
+    <td>DAM画像を使用するためのサポートをドキュメントフラグメントコンポーネントで削除。</td> 
+    <td> インタラクティブな通信の印刷チャネルで、画像とグラフコンポーネントを使用できます。 アダプティブフォームでアダプティブドキュメントのドキュメントフラグメントコンポーネントを使用している場合、AEM 6.4 Formsにアップグレードすると機能しなくなります。 </td>  
+  </tr>
+  <tr>
+   <td>Forms</td> 
+   <td> アダプティブドキュメント機能の削除</td> 
+   <td> インタラクティブな通信機能を使用して、印刷およびWebベースの通信を作成できます。 <br/> </td> 
+  </tr>
+    <tr>
+    <td>Forms</td> 
+    <td>JEE上のAEM Forms固有のランディングページを削除。</td> 
+    <td>「JEE上のAEM Forms」ランディングページはAEMランディングページ(/aem/start.html)に置き換えられます。 </td>  
+  </tr>
+   <tr>
+   <td>Forms</td> 
+   <td>デフォルトのCaptchaのサポートを削除しました。</td> 
+   <td>GoogleのreCAPTCHAサービスを使用します。</td> 
   </tr>
   <tr>
    <td>Communities</td> 
@@ -213,7 +248,7 @@ source-git-commit: 1ce49a86e954f48a7cd213558da93861794cfd33
   <tr>
    <td>Foundation</td> 
    <td>UI フレームワーク</td> 
-   <td>アドビでは、2019年にCoral UI 2コンポーネントを非推奨とします。 AEM 6.4は、Coral UI 3（AEM 6.2で導入）に完全に基づいています。 Coral 2を使用してカスタムUIを構築した顧客およびパートナーは、Coral 3にリファクタリングすることをお勧めします。 Adobe offers a tool to convert Coral 2 dialogs to Coral 3 - <a href="/help/sites-developing/dialog-conversion.md">Read more</a>.</td> 
+   <td>2019年には、Coral UI 2コンポーネントを非推奨とします。 AEM 6.4は、Coral UI 3（AEM 6.2で導入）に完全に基づいています。 Coral 2を使用してカスタムUIを構築した顧客およびパートナーは、Coral 3にリファクタリングすることをお勧めします。 Adobe offers a tool to convert Coral 2 dialogs to Coral 3 - <a href="/help/sites-developing/dialog-conversion.md">Read more</a>.</td> 
   </tr>
  </tbody>
 </table>
