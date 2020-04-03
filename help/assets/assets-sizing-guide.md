@@ -6,7 +6,7 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 82c1725e-a092-42e2-a43b-72f2af3a8e04
 translation-type: tm+mt
-source-git-commit: 8e9f7aa39832351084bc335580b2d40ed432cd84
+source-git-commit: 6aec5927c00f70ce2c044ffd56cabbf68a81071a
 
 ---
 
@@ -79,7 +79,7 @@ AWS の操作では、EBS ボリュームの RAID アレイを構築するので
 
 #### パフォーマンス上の懸念 {#performance-concerns}
 
-共有データストアでは、すべてのインスタンス間で共有されるネットワークにマウントされたドライブにバイナリを保存する必要があります。これらのバイナリはネットワーク経由でアクセスされるので、システムのパフォーマンスに悪影響が及びます。 ネットワーク接続やディスクアレイを高速化することで、その影響を一部軽減できます。しかし、これにはコストがかかります。AWSの運用の場合、すべてのディスクはリモートで、ネットワーク接続が必要です。 エフェメラルボリュームでは、インスタンスが開始または停止するときにデータが失われます。
+共有データストアでは、すべてのインスタンス間で共有されるネットワークにマウントされたドライブにバイナリを保存する必要があります。これらのバイナリはネットワーク経由でアクセスされるので、システムのパフォーマンスに悪影響が出ます。 ネットワーク接続やディスクアレイを高速化することで、その影響を一部軽減できます。しかし、これにはコストがかかります。AWSの操作の場合、すべてのディスクはリモートで、ネットワーク接続が必要です。 エフェメラルボリュームでは、インスタンスが開始または停止するときにデータが失われます。
 
 #### 待ち時間 {#latency}
 
@@ -96,13 +96,13 @@ S3 の実装では、バックグラウンドの書き込みスレッドによ�
 
 バイナリはデータストアに保存されるので、各バイナリが空き容量を一部占有します。大部分のリポジトリのサイズは 100 GB を下回ります。ただし、最大で 1 TB のサイズの大きなリポジトリが存在することもあります。また、オフラインコンパクションを実行するには、コンパクション済みのリポジトリをコンパクション前のバージョンの横に書き直すための十分な空き容量がボリュームに必要です。経験則としては、ディスクのサイズをリポジトリの予想サイズの 1.5 倍にすることです。
 
-リポジトリには、IOPS レベルが 3 キロバイト以上の SSD またはディスクを使用します。IOPS がパフォーマンスのボトルネックとなる可能性を排除するために、CPU の入出力待機レベルを監視して問題の兆候を早めに把握するようにしてください。
+リポジトリの場合は、IOPSレベルが3000を超えるSSDまたはディスクを使用します。 IOPS がパフォーマンスのボトルネックとなる可能性を排除するために、CPU の入出力待機レベルを監視して問題の兆候を早めに把握するようにしてください。
 
 [ファイルを入手](assets/aem_environment_sizingtool.xlsx)
 
 ## ネットワーク {#network}
 
-AEM Assets には、他の多くの AEM プロジェクトよりネットワークのパフォーマンスが重要になる使用例がいくつかあります。顧客は高速サーバーを使用できますが、システムからアセットをアップロードおよびダウンロードするユーザーの負荷をサポートするのに十分なネットワーク接続がない場合は、遅いように見えます。 There is a good methodology for determining the choke point in a user&#39;s network connection to AEM at [AEM Asset considerations for user experience, instance sizing, workflow evaluation, and network topology](assets-network-considerations.md).
+AEM Assets には、他の多くの AEM プロジェクトよりネットワークのパフォーマンスが重要になる使用例がいくつかあります。お客様は高速なサーバを使用できますが、システムからアセットをアップロードおよびダウンロードするユーザの負荷をサポートするのに十分なネットワーク接続がない場合は、動作が遅いように見えます。 There is a good methodology for determining the choke point in a user&#39;s network connection to AEM at [AEM Asset considerations for user experience, instance sizing, workflow evaluation, and network topology](assets-network-considerations.md).
 
 ## WebDAV {#webdav}
 
@@ -136,11 +136,11 @@ While the limit for the number of nodes in a repository has not been determined,
 
 データストア内のファイル数は、ファイルシステムの制限により 21 億に制限されています。おそらくリポジトリについては、データストアの制限に到達するかなり前に、ノードが多すぎることによる問題に直面します。
 
-レンディションが誤って生成される場合は、Camera Raw ライブラリを使用します。ただしこの場合、画像の長いほうのサイズが 65000 ピクセルを超えてはいけません。さらに、画像に512 MP(512 &amp;ast；を超える画像を含めることはできません。1024 &amp;ast;1024 pixels)&#39;. *アセットのサイズは重要ではありません*。
+レンディションが誤って生成される場合は、Camera Raw ライブラリを使用します。ただしこの場合、画像の長いほうのサイズが 65000 ピクセルを超えてはいけません。また、画像に512 MP(512 &amp;ast；を超える画像を含めることはできません。1024 &amp;ast;1024 pixel)&#39;. *アセットのサイズは重要ではありません*。
 
 AEM では、ピクセルサイズなど他の要因が処理に影響を与えるので、デフォルト（OOTB）で特定のヒープでサポートできる TIFF ファイルのサイズを正確に予想することは困難です。AEM がデフォルトで 255 MB のサイズのファイルを処理できても、そのファイルに比べて非常にピクセル数が多ければ 18 MB のファイルでも処理できないことがあります。
 
 
 ## アセットのサイズ {#size-of-assets}
 
-デフォルトでは、AEMは最大2 GBのファイルサイズのアセットをアップロードできます。 非常に大きなアセットをAEMにアップロードする方法については、非常に大きなア [セットをアップロードするための設定を参照してくださ](managing-video-assets.md#configuration-to-upload-video-assets-that-are-larger-than-gb)い。
+デフォルトでは、AEMでは最大2 GBのファイルサイズのアセットをアップロードできます。 AEMで非常に大きなアセットをアップロードする方法については、非常に大きなア [セットをアップロードするための設定を参照してくださ](managing-video-assets.md#configuration-to-upload-video-assets-that-are-larger-than-gb)い。
