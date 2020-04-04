@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: a80f5bd7be1de577a46c8aae880d6713e2d50f30
+source-git-commit: 9b372645792d3e9181c3c1c1e03f0b9cbb7ef14a
 
 ---
 
@@ -232,7 +232,7 @@ AEM 6.4.7.0の主な特徴は次のとおりです。
 
 * DMに送信されるPDFオプションのextractKeywordsは、デフォルトでtrueに設定されています(CQ-4280101)。
 
-* DM以外のアセットを含むフォルダでScene 7の再処理ワークフローを実行すると、Null Point Exceptionが発生する(CQ-4279555)。
+* DM以外のアセットを含むフォルダでScene 7の再処理ワークフローを実行すると、Null Point Exceptionが発生する(CQ-427955)。
 
 * 重複名を持つアセットがScene 7に既に存在する場合、AEMでのアセット名の変更がScene 7と同期されません(CQ-4276763)。
 
@@ -1694,6 +1694,7 @@ AEM 6.4.1.0はAEM 6.4 GAにインストールできます。 サービスパッ�
 * 印刷と印刷ダイアログにARIAのサポートを追加しました。
 * 電子メールの検証ARIAのサポートを追加しました。
 * Proactive Backport for platform.clientlibsの修正。
+* 明示的なdataTypeへの入力がない場合のスクリプトの自動実行の防止。
 
 **アセット**
 
