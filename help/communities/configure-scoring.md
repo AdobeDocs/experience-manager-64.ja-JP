@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: ddb86546-d04b-4967-937b-50a19b0237a0
 translation-type: tm+mt
-source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
+source-git-commit: d653a5db1b12ae2d650db2894dfa602326f7a295
 
 ---
 
@@ -120,9 +120,9 @@ slinglog ファイルをすばやく設定するには、次の手順に従い�
 
 ここでは、JSRP を例に挙げて、スコアおよびバッジデータにアクセスする方法を説明しています。この場合、[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) を使用して UGC に容易にアクセスできます。
 
-**作成者のJSRP**:作成者環境で実験を行うと、UGCは作成者環境からのみ表示されます。
+**作成者のJSRP**:作成者の環境を試すと、UGCが作成者の環境からのみ表示されます。
 
-**発行時のJSRP**:同様に、パブリッシュ環境でテストする場合は、パブリッシュインスタンスの管理者権限を持つCRXDE Liteにアクセスする必要があります。 If the publish instance is running in [production mode](../../help/sites-administering/production-ready.md) (nosamplecontent runmode), it will be necessary to [enable CRXDE Lite](../../help/sites-administering/enabling-crxde-lite.md).
+**JSRP on publish**:同様に、パブリッシュ環境でテストする場合は、パブリッシュインスタンスの管理者権限を持つCRXDE Liteにアクセスする必要があります。 If the publish instance is running in [production mode](../../help/sites-administering/production-ready.md) (nosamplecontent runmode), it will be necessary to [enable CRXDE Lite](../../help/sites-administering/enabling-crxde-lite.md).
 
 The base location of UGC on JSRP is `/content/usergenerated/asi/jcr/`.
 
@@ -147,21 +147,21 @@ The latest Javadocs for the installed [releases](deploy-communities.md#LatestRel
    * フォーラムページのノードを見つけます。
 
       * `/content/sites/engage/en/forum/jcr:content`
-   * スコアリングおよびバッジングプロパティの追加
+   * ス追加コアおよびバッジのプロパティ
 
-      * scoringRules = [/etc/community/scoring/rules/comments-scoring,
-/etc/community/scoring/rules/forums-scoring]
-      * badgingRules =[/etc/community/badging/rules/comments-scoring,
-/etc/community/badging/rules/forums-scoring]
-   * フォーラムコンポーネントノードを探します
+      * `scoringRules = [/etc/community/scoring/rules/comments-scoring,
+/etc/community/scoring/rules/forums-scoring]`
+      * `badgingRules =[/etc/community/badging/rules/comments-scoring,
+/etc/community/badging/rules/forums-scoring]`
+   * フォーラムコンポーネントノードを検索します。
 
       * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 
          ( `sling:resourceType = social/forum/components/hbs/forum`)
-   * バッジを表示するプロパティの追加
+   * バ追加ッジを表示するプロパティ
 
       * `allowBadges = true`
-   * ユーザーがログインし、フォーラムトピックを作成し、ブロンズのバッジを授与されます
+   * ユーザーがログインし、フォーラムトピックを作成し、青銅のバッジを受け取ります
 
 
 
@@ -173,7 +173,7 @@ The latest Javadocs for the installed [releases](deploy-communities.md#LatestRel
    * フォーラムページのノードを見つけます。
 
       * `/content/community-components/en/forum/jcr:content`
-   * スコアリングおよびバッジングプロパティの追加
+   * ス追加コアおよびバッジのプロパティ
 
       * 
          ```
@@ -186,27 +186,27 @@ The latest Javadocs for the installed [releases](deploy-communities.md#LatestRel
          badgingRules =[/etc/community/badging/rules/comments-scoring,
          /etc/community/badging/rules/forums-scoring]
          ```
-   * フォーラムコンポーネントノードを探します
+   * フォーラムコンポーネントノードを検索します。
 
       * `/content/community-components/en/forum/jcr:content/content/forum`
 
          ( `sling:resourceType = social/forum/components/hbs/forum`)
-   * バッジを表示するプロパティの追加
+   * バ追加ッジを表示するプロパティ
 
       * `allowBadges = true`
-   * ユーザーがログインし、フォーラムトピックを作成し、ブロンズのバッジを授与されます
+   * ユーザーがログインし、フォーラムトピックを作成し、青銅のバッジを受け取ります
 
 
 
 
 
-1. ユーザーにはcURLを使用してモデレーターバッジが割り当てられます。
+1. ユーザーにcURLを使用してモデレーターバッジが割り当てられます。
 
 ```shell
 curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/etc/community/badging/images/moderator/jcr:content/moderator.png" http://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
 ```
 
-ユーザーが2つの青銅バッジを取得し、モデレーターバッジを授与されたので、ユーザーは次のようにフォーラムエントリと共に表示されます。
+ユーザーが銅のバッジを2つ獲得し、モデレーターバッジを授与されたので、ユーザーは次のようにフォーラムエントリを表示します。
 
 ![chlimage_1-250](assets/chlimage_1-250.png)
 
@@ -233,7 +233,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 
 * `/content/usergenerated/asi/jcr/scoring`
 
-`scoring` の子ノードがスコアルール名になります。したがって、サーバー上のスコアリングルール名はグローバルに一意になることがベストプラクティスです。
+`scoring` の子ノードがスコアルール名になります。したがって、サーバー上のスコアリングルール名は、グローバルに一意になることがベストプラクティスです。
 
 For the Geometrixx Engage site, the user and their score is in a path contstructed with the scoring rule name, community site&#39;s site id ( `engage-ba81p`), an unique id, and the user&#39;s id:
 
