@@ -10,7 +10,7 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 707b150b-7759-437f-9150-9f4784856754
 translation-type: tm+mt
-source-git-commit: 793305a07cc23e5e551871362e8898ee7bafc0c2
+source-git-commit: 39c9ca8fb7b73d74904a56d9e6a5418950a8c98b
 
 ---
 
@@ -61,7 +61,7 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
 >
 >ユーザー同期を有効にした結果、新しい設定が追加されることはありません。
 
-ユーザー同期では、オーサー環境で作成されていないユーザーデータでもその配布の管理はオーサー環境に依存します。すべての設定は作成者環境で行われますが、各手順では、作成者と発行のどちらで実行するかが明確に示されます。
+ユーザー同期では、オーサー環境で作成されていないユーザーデータでもその配布の管理はオーサー環境に依存します。すべての設定は作成者の環境で行われ、各手順で作成者と発行のどちらで実行するかが明確に示されます。
 
 次にユーザー同期の有効化に必要な手順と、[トラブルシューティング](#troubleshooting)の節を示します。
 
@@ -73,7 +73,7 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
 
 1. 最新のコードがインストールされていることを確認します。
 
-* [AEM プラットフォームの更新](https://helpx.adobe.com/experience-manager/kb/aem62-available-hotfixes.html)
+* [AEM プラットフォームの更新](https://helpx.adobe.com/jp/experience-manager/kb/aem62-available-hotfixes.html)
 * [AEM Communities の更新](/help/communities/deploy-communities.md#latest-releases)
 
 ### 1. Apache Sling Distribution Agent - Sync Agents Factory {#apache-sling-distribution-agent-sync-agents-factory}
@@ -140,7 +140,7 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
 * select the `+` button to add an ACL entry
 
    * **プリンシパル**：ユーザー同期用に作成されたユーザーを検索&#x200B;**
-   * **タイプ**: `Allow`
+   * **Type**: `Allow`
    * **権限**: `jcr:all`
    * **制限** :rep:glob: `*/activities/*`
    * 「**OK**」を選択します。
@@ -305,7 +305,7 @@ Once an authorized user, a member of the **`administrators`**user group, has bee
 
 * **ノードタイプ**
 
-   同期するノードタイプのリストです。 sling:Folder 以外のすべてのノードタイプがここにリストされます（sling:folder は別個に処理されます）。
+   これは、同期するリストタイプのノードです。 sling:Folder 以外のすべてのノードタイプがここにリストされます（sling:folder は別個に処理されます）。
 
     同期されるノードタイプのデフォルトのリストは次のとおりです。
 
@@ -370,7 +370,7 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
          `use windows explorer and search for *sling.id.file*`
 
-1. 発行インスタンスの開始
+1. 開始発行インスタンス
 
    * スタートアップ時に新しい Sling ID が割り当てられる
 
@@ -514,7 +514,7 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 `java.lang.IllegalStateException: This tree does not exist`
 
-Then verify that the section [2. 認証ユーザーの作成](/content/docs/en/aem/6-1/administer/security/security/sync.md#2. 認証されたユーザーの作成を参照)が正しく実行されていることを確認します。
+Then verify that the section [2. Create Authorized User](#createauthuser) was properly followed.
 
 この節では、すべてのパブリッシュインスタンスに存在する承認済みユーザーを作成し、それらをオーサー環境の「秘密鍵プロバイダー」OSGi 設定で特定する方法について説明します。By default, the user is `admin`.
 
@@ -522,15 +522,15 @@ Then verify that the section [2. 認証ユーザーの作成](/content/docs/en/a
 
 承認済みユーザーは、すべてのパブリッシュインスタンスに対する次の権限および制限を明示的に保持している必要があります。
 
-| **path** | **jcr:all** | **rep:glob** |
+| **パス** | **jcr:all** | **rep:glob** |
 |---|---|---|
-| /home | X | &amp;ast;/activities/&amp;ast; |
-| /home/users | X | &amp;ast;/activities/&amp;ast; |
-| /home/groups | X | &amp;ast;/activities/&amp;ast; |
+| /home | X | &amp;ast;/アクティビティ/&amp;ast; |
+| /home/users | X | &amp;ast;/アクティビティ/&amp;ast; |
+| /home/groups | X | &amp;ast;/アクティビティ/&amp;ast; |
 
 As a member of the `administrators` group, the authorized user should have the following privileges on all publish instances :
 
-| **path** | **jcr:all** | **jcr:read** | **rep:write** |
+| **パス** | **jcr:all** | **jcr:read** | **rep:write** |
 |---|---|---|---|
 | /etc/packages/sling/distribution |  |  | X |
 | /libs/sling/distribution |  | X |  |
@@ -568,7 +568,7 @@ To configure or enable user sync, go to step 1: [Apache Sling Distribution Agent
 
 パブリッシュインスタンスが使用不能になっても、今後オンラインに戻る場合は削除しないでください。変更は発行者に対してキューアップされ、オンラインに戻ると、変更が処理されます。
 
-パブリッシュインスタンスがオンラインに戻らない場合は、完全にオフラインの場合は、キューの構築によって作成者環境でディスク領域の使用が著しく増加するので、インスタンスを削除する必要があります。
+パブリッシュインスタンスがオンラインに戻らない場合は、完全にオフラインの場合は、キューの構築によって作成者環境のディスク領域の使用が著しく増加するので、インスタンスを削除する必要があります。
 
 パブリッシャーが停止した場合、オーサー環境のログに次のような例外が記録されます。
 
