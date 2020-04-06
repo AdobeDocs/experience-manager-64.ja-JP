@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 53595ac8-ca7e-4adc-9214-5d0b7cdf71a0
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: 48ea1c456e6f43fb5b348aa65f2380ee0b72a3f1
 
 ---
 
@@ -30,13 +30,13 @@ Correspondence Management uses the back end, customer, `` ``or recipient-specifi
 ### データディクショナリワークフロー {#data-dictionary-workflow}
 
 1. 作成者が[データディクショナリを作成](#createdatadictionary)します。作成には、スキーマを読み込むか、または新規に作成します。
-1. 作成者は、データディクショナリに基づいてレターとインタラクティブコミュニケーションを作成し、レターとインタラクティブコミュニケーションのデータディクショナリ要素を必要な箇所に関連付けます。
+1. 作成者は、データディクショナリに基づいてレターとインタラクティブコミュニケーションを作成し、レターとインタラクティブコミュニケーションのデータディクショナリ要素を必要な場所に関連付けます。
 1. 作成者はダウンロードデータの XML ファイルを書き出すことができます。これはデータディクショナリのスキーマに基づいたものです。作成者はサンプルデータのXMLファイルを変更でき、テストデータとしてデータディクショナリに関連付けることができます。 レターのプレビューでも同様の操作が可能です。
-1. [レターのプレビュー](/help/forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p)時に、作成者はレターをデータと共にプレビューすることができます（「カスタムプレビュー」）。レターが開き、作成者が指定したデータが事前入力されます。 通信を作成インターフェイスで開きます。このレターをプレビューしているエージェントは、このレターの内容、データ、添付ファイルを変更し、最終レターを送信できます。 レターの作成に関する詳細は、「[通信の作成](/help/forms/using/create-letter.md)」を参照してください。
+1. [レターのプレビュー](/help/forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p)時に、作成者はレターをデータと共にプレビューすることができます（「カスタムプレビュー」）。レターが開き、作成者が指定したデータが事前入力されます。 通信を作成インターフェイスで開きます。このレターをプレビューしているエージェントは、このレターの内容、データ、および添付ファイルを変更し、最終的なレターを送信できます。 レターの作成に関する詳細は、「[通信の作成](/help/forms/using/create-letter.md)」を参照してください。
 
 ## 前提条件 {#prerequisite}
 
-Install the [Compatibility Package](https://helpx.adobe.com/in/experience-manager/6-4/forms/using/compatibility-package.html) to view the **Data Dictionaries** option on the **Forms** page.
+Install the [Compatibility Package](https://helpx.adobe.com/jp/in/experience-manager/6-4/forms/using/compatibility-package.html) to view the **Data Dictionaries** option on the **Forms** page.
 
 ## データディクショナリの作成 {#createdatadictionary}
 
@@ -50,12 +50,12 @@ Install the [Compatibility Package](https://helpx.adobe.com/in/experience-manage
 1. Tap **Create Data Dictionary**.
 1. プロパティ画面で以下を追加します。
 
-   * **** タイトル：（オプション）データディクショナリのタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。レターなどのドキュメントフラグメントは、タイトル（利用可能な場合）を用いて参照されます。タイトルは、サムネイルやアセットプロパティなどで使用されます。データディクショナリは、名前ではなく、タイトルで参照されます。
+   * **タイトル：** （オプション）データディクショナリのタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。レターなどのドキュメントフラグメントは、タイトル（利用可能な場合）を用いて参照されます。タイトルは、サムネイルやアセットプロパティなどで使用されます。データディクショナリは、名前ではなく、タイトルで参照されます。
    * **名前**：データディクショナリの一意の名前。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力された特殊文字、スペース、および英数字以外の文字はハイフンに置き換えられます。「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
 
    * **説明**:（オプション）データディクショナリの説明。
-   * **** タグ：（オプション）カスタムタグを作成するには、テキストフィールドに値を入力し、Enterキーを押します。 タグのテキストフィールドの下にカスタムタグが表示されます。このテキストを保存すると、新しく追加したタグも作成されます。
-   * **拡張プロパティ**:（オプション）「フィール **ドの追加** 」をタップして、データディクショナリのメタデータ属性を指定します。 「プロパティ名」列に、固有のプロパティ名を入力します。「値」列に、プロパティに関連付ける値を入力します。
+   * **タグ：** （オプション）カスタムタグを作成するには、テキストフィールドに値を入力し、Enterキーを押します。 タグのテキストフィールドの下にカスタムタグが表示されます。このテキストを保存すると、新しく追加したタグも作成されます。
+   * **拡張プロパティ**:（オプション）「フィー **追加ルド** 」をタップして、データディクショナリのメタデータ属性を指定します。 「プロパティ名」列に、固有のプロパティ名を入力します。「値」列に、プロパティに関連付ける値を入力します。
    ![ドイツ語で定義されたデータディクショナリのプロパティ](do-not-localize/1_ddproperties.png)
 
 1. (Optional) To upload an XSD schema definition for your data dictionary, under the Data Dictionary Structure pane, tap **Upload XML Schema**. Browse to XSD file, select it, and tap **Open**. データディクショナリは、アップロードされた XML スキーマに基づいて作成されます。データディクショナリで要素の表示名や説明を調整する必要があります。これを行うには、要素の名前をタップして選択し、右側のペインのフィールドで説明、表示名、およびその他の詳細を編集します。
@@ -81,7 +81,7 @@ Install the [Compatibility Package](https://helpx.adobe.com/in/experience-manage
    次に、データディクショナリ作成の例を示します。
 
    * データディクショナリ内のトップレベル DDE として使用できるのは、複合タイプのみです。
-   * 名前、参照名および要素タイプは、データディクショナリおよびDDEに対する必須フィールドです。
+   * 名前、参照名および要素タイプは、データディクショナリおよびDDEの必須フィールドです。
    * 参照名は一意にする必要があります。
    * 親 DDE（複合）には、同じ名前の 2 つの子を指定できません。
    * 列挙型には、プリミティブな String 型のみが含まれます。
@@ -188,13 +188,13 @@ Install the [Compatibility Package](https://helpx.adobe.com/in/experience-manage
 
    >[!NOTE]
    >
-   >この例では、XMLはコレクション要素に対して3つの値のスペースを作成しますが、値の数は必要に応じて増減できます。
+   >この例では、XMLはコレクション要素の3つの値に対してスペースを作成しますが、値の数は要件に応じて増減できます。
 
 1. データエントリの作成後は、テストデータを含むレターをプレビューする際に、この XML ファイルを使用することができます。
 
    このテストデータはDDで追加できます（「DD」を選択し、「テストデータをアップロード」をタップして、このxmlファイルをアップロードします）。
 
-   したがって、レターを通常（カスタムではなく）プレビューする場合は、このXMLデータがレターで使用されます。 「カスタム」をタップして、この XML をアップロードすることもできます。
+   したがって、通常（カスタムではなく）プレビュー文字を使用した後は、このXMLデータがレターで使用されます。 「カスタム」をタップして、この XML をアップロードすることもできます。
 
 ## サンプル {#samples}
 
@@ -267,32 +267,32 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   </tr> 
   <tr> 
    <td>名前</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>必須.<br />DDE の名前。一意にする必要があります。</td> 
   </tr> 
   <tr> 
    <td>参照<br />名</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>必須. データディクショナリの階層や構造の変更に左右されない、DDE への参照を可能にする DDE の一意の参照名です。テキストモジュールは、この名前を使用してマップされます。</td> 
   </tr> 
   <tr> 
    <td>displayname</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>ユーザーにわかりやすい DDE の名前（オプション）。</td> 
   </tr> 
   <tr> 
    <td>description</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>DDE の説明。</td> 
   </tr> 
   <tr> 
    <td>elementType</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>必須. DDEのタイプ：STRING、NUMBER、DATE、Boolean、COMPOSITE、COLLECTION のいずれかです。</td> 
   </tr> 
   <tr> 
    <td>elementSubType</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>DDE のサブタイプ: ENUM。elementType が STRING および NUMBER の場合のみ使用できます。</td> 
   </tr> 
   <tr> 
@@ -307,7 +307,7 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   </tr> 
   <tr> 
    <td>式</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>「computed」DDEの式。デフォルトで提供される式評価サービスは、JSP EL 式をサポートしています。式サービスをカスタム実装に置き換えることができます。</td> 
   </tr> 
   <tr> 
@@ -424,25 +424,21 @@ XSD を書き出すには、固有のデータマッピングが必要になり�
 1. Tap **OK** in the alert. Correspondence Managementは、DataDictionary-&lt;DDname>.zipという名前のzipファイルをコンピューターにダウンロードします。
 1. Zip ファイルには、.properties ファイルが含まれています。このファイルでは、ダウンロードされたデータディクショナリを定義します。プロパティファイルのコンテンツは次のようになります。
 
-   # 2015年5月20日（水）16:06:23
-
+   ```
+   #Wed May 20 16:06:23 BST 2015
    DataDictionary.EmployeeDD.description=
-
    DataDictionary.EmployeeDD.displayName=EmployeeDataDictionary
-
    DataDictionaryElement.name.description=
-
    DataDictionaryElement.name.displayName=name
-
    DataDictionaryElement.person.description=
-
    DataDictionaryElement.person.displayName=person
+   ```
 
    プロパティファイルは、データディクショナリの内容と表示名およびデータディクショナリ内の各データディクショナリ要素を各行で定義する構造になっています。さらに、プロパティファイルは各データディクショナリ要素の列挙値セットを 1 行で定義します。データディクショナリと同様に、対応するプロパティファイルは複数のデータディクショナリ要素の定義を持つことができます。さらに、ファイルには 1 つ以上の列挙値セットの定義を含めることができます。
 
 1. 別のロケールの .properties ファイルを更新するには、ファイルの表示名と説明の値を更新します。ローカライズする各言語でさらにファイルのインスタンスを作成します。サポートされる言語はフランス語、ドイツ語、日本語、英語のみです。
 
-1. 更新したプロパティファイルを次の名前で保存します。
+1. 次の名前を付けて、更新したプロパティファイルを保存します。
 
    _fr_FR.properties French
 
