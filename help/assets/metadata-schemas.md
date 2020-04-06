@@ -1,18 +1,18 @@
 ---
-title: メタデータのスキーマ
+title: メタデータスキーマ
 description: 'メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。  '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 57952323a3ae0990232506d551b91b724f830f20
+source-git-commit: 9674b07fa8ddaee1d77f5a171ca00745e7545d0b
 
 ---
 
 
 # メタデータスキーマ {#metadata-schemas}
 
-Adobe Experience Manager(AEM)Assetsでは、メタデータスキーマは、特定のスキーマを使用するアセットに対して表示されるプロパティページのレイアウトとメタデータプロパティを定義します。 メタデータプロパティには、タイトル、説明、MIME タイプなどが含まれます。
+Adobe Experience Manager (AEM) Assets では、メタデータスキーマを使用することで、プロパティページのレイアウトと、その特定のスキーマを使用するアセットに関して表示されるメタデータプロパティを定義します。メタデータプロパティには、タイトル、説明、MIME タイプなどが含まれます。
 
-メタデータスキーマフォームエディターを使用して、既存のスキーマを変更したり、カスタムメタデータスキーマを追加したりできます。
+既存のスキーマを変更したり、カスタムのメタデータスキーマを追加するには、メタデータスキーマフォームエディターを使用します。
 
 1. To view the properties page for an asset, click or tap the **[!UICONTROL View Properties]** from **[!UICONTROL Quick Actions]** on the asset tile in Card view.
 
@@ -30,31 +30,25 @@ Adobe Experience Manager(AEM)Assetsでは、メタデータスキーマは、特
 
 1. フォームやテンプレートのリストを表示するには、AEM のロゴをクリックし、**[!UICONTROL ツール／アセット／メタデータスキーマ]**&#x200B;に移動します。
 
-   ![chlimage_1-173](assets/chlimage_1-173.png)
+   ![chlimage_1-37](assets/chlimage_1-173.png)
 
    AEM では次のテンプレートが用意されています。
-
    * **デフォルト**：アセットのメタデータスキーマの基本フォームです。
-   次の子フォームは、デフォルトフォームのプロパティを継承します。
 
-   i. **image**: Schema form for assets with the MIME type `image`, for example, `image/jpeg`, `image/png`, and so on.
+      次の子フォームは、デフォルトフォームのプロパティを継承します。
 
-   「image」フォームには、次の子フォームテンプレートがあります。
+      1. **image**:MIMEタイプが「image」（、など）のアセットの `image/jpeg`スキーマ `image/png`フォームです。
 
-   a. **jpeg**: Schema form for assets with sub type jpeg.
+         「image」フォームには、次の子フォームテンプレートがあります。
+         * **jpeg**:スキーマのサブタイプを持つアセットのアセットフォ `jpeg`ーム。
+         * **tiff**:スキーマのサブタイプを持つアセットのアセットフォー `tiff`ム。
+      1. **application**：`application` や `application/pdf` など、MIME タイプが「`application/zip`」のアセットのスキーマフォーム。
 
-   b. **tiff**: Schema form for the assets with sub type TIFF.
-
-   ii.**application**:MIMEタイプがapplicationのアセット（、など）のスキ `application/pdf`ーマ `application/zip`フォームです。
-
-   a. **pdf**: Schema form for assets with sub type PDF.
-
-   iii. **ビデオ**:MIMEタイプがビデオのアセット（など）のスキ `video/avi`ーマ `video/mp4` フォーム。
-
-   * **コレクション**:コレクションのスキーマフォーム
-   * **** contentfragment:コンテンツフラグメントのスキーマフォーム
-   * **forms**:このスキーマフォームは [Adobe Experience Manager Formsに関連しています](/help/forms/home.md)
-
+         * **pdf**:スキーマのサブタイプを持つアセットのアセットフォ `pdf`ーム。
+      1. **video**：`video/avi` や `video/mp4` など、MIME タイプが「`video`」のアセットのスキーマフォーム。
+   * **collection**：コレクションのスキーマフォームです。
+   * **contentfragment**：コンテンツフラグメントのスキーマフォームです。
+   * **forms**:このスキーマフォームは [Adobe Experience Manager Formsに関連しています](/help/forms/home.md)。
 
 >[!NOTE]
 >
@@ -62,7 +56,7 @@ Adobe Experience Manager(AEM)Assetsでは、メタデータスキーマは、特
 
 ## メタデータスキーマフォームの追加 {#adding-a-metadata-schema-form}
 
-1. To add a custom template to the list, click **[!UICONTROL Create]** from the toolbar.
+1. リストにカスタムテンプレートを追加するには、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
 
    >[!NOTE]
    >
@@ -81,13 +75,13 @@ Adobe Experience Manager(AEM)Assetsでは、メタデータスキーマは、特
 
 これらのフォーム項目を CRX リポジトリのメタデータノード内のフィールドにマップしたり、フォーム項目を設定したりできます。
 
-新しいタブまたはフォーム項目をメタデータスキーマフォームに追加できます。親から派生したタブとフォームアイテムはロック状態です。 子レベルではこれらを変更できません。
+新しいタブまたはフォーム項目をメタデータスキーマフォームに追加できます。親から派生したタブおよびフォーム項目はロック状態です。子レベルではこれらを変更できません。
 
 1. In the **[!UICONTROL Schema Forms]** page, select the check box before a form and then click **[!UICONTROL Edit]** on the toolbar.
 
    ![chlimage_1-175](assets/chlimage_1-175.png)
 
-1. **[!UICONTROL メタデータスキーマエディター]**&#x200B;ページで、アセットのプロパティページをカスタマイズします。「**[!UICONTROL フォームを作成]**」タブのコンポーネントタイプのリストから「**[!UICONTROL 基本]**」タブに、1 つ以上のコンポーネントをドラッグします。
+1. **[!UICONTROL メタデータスキーマエディター]**&#x200B;ページで、アセットのプロパティページをカスタマイズします。それには、「**[!UICONTROL フォームを作成]**」タブのコンポーネントタイプのリストから「**[!UICONTROL 基本]**」タブに、1 つ以上のコンポーネントをドラッグします。
 
    ![chlimage_1-176](assets/chlimage_1-176.png)
 
@@ -95,7 +89,7 @@ Adobe Experience Manager(AEM)Assetsでは、メタデータスキーマは、特
 
 ### 「フォームを作成」タブ内のコンポーネント{#components-within-the-build-form-tab}
 
-The **[!UICONTROL Build Form]** tab lists form items that you use in your schema form. 「**[!UICONTROL 設定]**」タブに、「**[!UICONTROL フォームを作成]**」タブで選択した各項目の属性が表示されます。「**[!UICONTROL フォームを作成]**」タブで使用できるフォーム項目を次の表に示します。
+「**[!UICONTROL フォームを作成]**」タブには、スキーマフォーム内で使用するフォーム項目が表示されます。「**[!UICONTROL 設定]**」タブに、「**[!UICONTROL フォームを作成]**」タブで選択した各項目の属性が表示されます。「**[!UICONTROL フォームを作成]**」タブで使用できるフォーム項目を次の表に示します。
 
 | コンポーネント名 | 説明 |
 |---|---|
@@ -118,15 +112,15 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 
 フォームのメタデータコンポーネントのプロパティを編集するには、コンポーネントをクリックし、「**[!UICONTROL 設定]**」タブで次のすべてのプロパティまたはサブセットを編集します。
 
-**フィールドラベル**:アセットのプロパティページに表示されるメタデータプロパティの名前。
+**フィールドラベル**：アセットのプロパティページに表示されるメタデータプロパティの名前。
 
-**プロパティにマッピング**：このプロパティには、CRX リポジトリ内の保存先のアセットノードへの相対パスまたは名前を指定します。It starts with `./` because indicating that the path is under the asset&#39;s node.
+**プロパティにマッピング**：このプロパティには、CRX リポジトリ内の保存先のアセットノードへの相対パスまたは名前を指定します。この値は、パスがアセットノードの配下にあることを示しているので、「`./`」で始まります。
 
 このプロパティの有効な値は次のとおりです。
 
-* `./jcr:content/metadata/dc:title`：アセットのメタデータノードにプロパティ `dc:title` として値を格納します。
+* `./jcr:content/metadata/dc:title`：アセットのメタデータノードにある値を、プロパティ `dc:title` として格納します。
 
-* `./jcr:created`:アセットのノードにJCRプロパティを表示します。 表示プロパティ上でこれらのプロパティを設定する場合は、これらのプロパティは保護されているので、「編集を無効にする」としてマークすることをお勧めします。Otherwise, the error [!UICONTROL Asset(s) failed to modify] results when you save the asset&#39;s properties.
+* `./jcr:created`:アセットのノードでJCRプロパティを表示します。 表示プロパティ上でこれらのプロパティを設定する場合は、これらのプロパティは保護されているので、「編集を無効にする」としてマークすることをお勧めします。Otherwise, the error [!UICONTROL Asset(s) failed to modify] results when you save the asset&#39;s properties.
 
 コンポーネントがメタデータスキーマフォームに適切に表示されるように、プロパティのパスにはスペースを含めないでください。
 
@@ -138,7 +132,7 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 
 **空白のフィールドを読み取り専用として表示**：プロパティページでメタデータプロパティに値がなくても表示するには、このプロパティをオンにします。デフォルトでは、メタデータプロパティに値がない場合、プロパティページには表示されません。
 
-**順序付きリストを表示**:このプロパティを使用して、選択肢の順番付きリストを表示します
+**リストを並べ替えて表示**：選択肢のリストを並べ替えて表示するには、このプロパティを使用します。
 
 **選択肢**：リストの選択肢を指定するには、このプロパティを使用します。
 
@@ -146,7 +140,7 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 
 **クラス**：プロパティに関連付けられているオブジェクトクラス。
 
-**削除アイコン** ：スキーマフォームからコンポーネントを削除するには、このアイコンをクリックします。
+**削除アイコン** ：コンポーネントを削除フォームから削除するには、このスキーマをクリックします。
 
 >[!NOTE]
 >
@@ -156,7 +150,7 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 
 ![chlimage_1-178](assets/chlimage_1-178.png)
 
-任意のスキーマフォームの任意のタブにコンテキストメタデータコンポーネントを追加すると、そのコンポーネントは、特定のスキーマが適用されるアセットのプロパティページにリストとして表示されます。 このリストには、Contextual Metadataコンポーネントを適用したタブを除く他のすべてのタブが含まれます。 現在、この機能は、コンテキストに応じてメタデータの表示を制御する基本的な機能を提供しています。
+コンテキストメタデータコンポーネントを任意のスキーマフォームの任意のタブに追加すると、そのコンポーネントは、特定のスキーマが適用されるアセットのプロパティページにリストとして表示されます。 このリストには、コンテキストメタデータコンポーネントを適用したタブを除く、他のすべてのタブが含まれます。現在、この機能は、コンテキストに応じてメタデータの表示を制御する基本的な機能を提供しています。
 
 ![chlimage_1-179](assets/chlimage_1-179.png)
 
@@ -164,17 +158,17 @@ The **[!UICONTROL Build Form]** tab lists form items that you use in your schema
 
 ![chlimage_1-180](assets/chlimage_1-180.png)
 
-### Specify properties in JSON file {#specifying-properties-in-json-file}
+### JSON ファイルでのプロパティの指定 {#specifying-properties-in-json-file}
 
 「**[!UICONTROL 設定]**」タブのオプションでプロパティを指定する代わりに、対応するキーと値のペアを指定することで JSON ファイルでオプションを定義できます。「**[!UICONTROL JSON パス]**」フィールドに JSON ファイルのパスを指定します。
 
 ### スキーマフォームでのタブの追加または削除 {#adding-deleting-a-tab-in-the-schema-form}
 
-スキーマエディターで、タブを追加または削除できます。デフォルトのスキーマフォームには、「**[!UICONTROL 基本]**」、「**[!UICONTROL 詳細]**」、「**[!UICONTROL IPTC]**」および「**[!UICONTROL IPTC 拡張]**」タブがデフォルトで含まれています。
+スキーマエディターで、タブを追加または削除できます。デフォルトのスキーマフォームには、「**[!UICONTROL 基本]**」、「**[!UICONTROL 詳細]**」、「**[!UICONTROL IPTC]**」および「**[!UICONTROL IPTC 拡張]**」の各タブがデフォルトで含まれています。
 
 ![chlimage_1-181](assets/chlimage_1-181.png)
 
-Click `+` to add a new tab on a schema form. By default, the new tab has the name `Unnamed-1`. You can modify the name from the **[!UICONTROL Settings]** tab. Click `X` to delete a tab.
+「`+`」をクリックすると、スキーマフォームに新しいタブを追加できます。新しいタブにはデフォルトで「`Unnamed-1`」という名前が付けられます。この名前は、「**[!UICONTROL 設定]**」タブで編集できます。タブを削除するには、「`X`」をクリックします。
 
 ![chlimage_1-182](assets/chlimage_1-182.png)
 
@@ -198,18 +192,18 @@ AEM Assets には、様々な MIME タイプですぐに使用できるデフォ
 
 ### Add new forms for MIME types {#adding-new-forms-for-mime-types}
 
-適切なフォームタイプの下で新規フォームを作成します。For example, to add a new template for the `image/png` subtype, create the form under the `image` forms. スキーマフォームのタイトルはサブタイプ名です。In this case, the title is `png`.
+適切なフォームタイプに新規フォームを作成します。For example, to add a new template for the `image/png` subtype, create the form under the `image` forms. スキーマフォームのタイトルはサブタイプ名です。In this case, the title is `png`.
 
 ### Use an existing schema template for various MIME types {#using-an-existing-schema-template-for-various-mime-types}
 
-別のMIMEタイプに対して既存のテンプレートを使用できます。 例えば、MIMEタイプのアセ `image/jpeg` ットに対してフォームを使用しま `image/png`す。
+別の MIME タイプに対して既存のテンプレートを使用できます。例えば、MIME タイプ `image/png` のアセットに対して `image/jpeg` フォームを使用します。
 
 この場合は、CRX リポジトリ内の `/etc/dam/metadataeditor/mimetypemappings` に新しいノードを作成します。そのノードの名前を指定し、次のプロパティを定義します。
 
 | 名前 | 説明 | タイプ | 値 |
 |---|---|---|---|
-| `exposedmimetype` | マッピングする既存のフォームの名前 | `String` | `image/jpeg` |
-| `mimetypes` | List of MIME types that use the form defined in the `exposedmimetype` attribute | `String` | `image/png` |
+| `exposedmimetype` | マッピングする既存フォームの名前 | `String` | `image/jpeg` |
+| `mimetypes` | `exposedmimetype` 属性で定義したフォームを使用する MIME タイプのリスト | `String` | `image/png` |
 
 AEM Assets では、次の MIME タイプとスキーマフォームがマッピングされます。
 
@@ -229,7 +223,7 @@ AEM Assets では、次の MIME タイプとスキーマフォームがマッピ
 
 ## メタデータスキーマへのアクセス権の付与 {#granting-access-to-metadata-schemas}
 
-メタデータスキーマ機能は、管理者のみが使用できます。 ただし、管理者は、フォルダーに対して **[!UICONTROL Create]**、 **[!UICONTROL Modify]**、 **[!UICONTROL Delete]** の各権限を指定することで、管理者以外のユーザーにアクセス権を付与で `/conf` きます。
+メタデータスキーマ機能は、管理者のみが使用できます。 ただし、管理者は、フォルダに対して **[!UICONTROL Create]**、 **[!UICONTROL Modify]**、 **[!UICONTROL Deleteの各権限を指定することで、管理者以外のユーザ]** ーにアクセスを提供で `/conf` きます。
 
 ## フォルダー固有のメタデータの適用 {#applying-folder-specific-metadata}
 
@@ -246,13 +240,13 @@ AEM Assets では、メタデータスキーマのバリアントを定義して
 フォルダーにサブフォルダーがあり、サブフォルダーレベルで別のスキーマが適用されている場合、そのサブフォルダー内のアセットはそのサブフォルダーレベルで適用されているスキーマからメタデータを継承します。ただし、サブフォルダーレベルにスキーマが適用されていない、または同じスキーマが適用されている場合、サブフォルダーのアセットは親フォルダーレベルに適用されているスキーマからメタデータを継承します。
 
 1. AEM のロゴをクリックし、**[!UICONTROL ツール／アセット／メタデータスキーマ]**&#x200B;に移動します。**[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページが表示されます。
-1. フォーム（デフォルトのメタデータフォームなど）の前にあるチェックボックスをオンにし、「**[!UICONTROL コピー]**」アイコンをクリックまたはタップしてカスタムフォームとして保存します。Specify a custom name for the form, for example `my_default`. カスタムフォームを作成することもできます。
+1. フォーム（デフォルトのメタデータフォームなど）の前にあるチェックボックスをオンにし、「**[!UICONTROL コピー]**」アイコンをクリックまたはタップしてカスタムフォームとして保存します。そのフォームに `my_default` などの名前を付けます。カスタムフォームを作成することもできます。
 
    ![chlimage_1-184](assets/chlimage_1-184.png)
 
 1. In the **[!UICONTROL Metadata Schema Forms]** page, select the `my_default` form, and then click **[!UICONTROL Edit]**.
 
-1. In the **[!UICONTROL Metadata Schema Editor]** page, add a text field to the schema form. For example add a field with the label **[!UICONTROL Category]**.
+1. **[!UICONTROL メタデータスキーマエディター]**&#x200B;ページで、スキーマフォームにテキストフィールドを追加します。例えば、「**[!UICONTROL カテゴリ]**」というラベルのフィールドを追加します。
 
    ![chlimage_1-186](assets/chlimage_1-186.png)
 
@@ -261,12 +255,12 @@ AEM Assets では、メタデータスキーマのバリアントを定義して
 
    ![chlimage_1-187](assets/chlimage_1-187.png)
 
-1. Select the folder on which to apply the modified schema and then click/tap **[!UICONTROL Apply]**.
+1. 変更されたスキーマを適用するフォルダーを選択し、「**[!UICONTROL 適用]**」をクリックまたはタップします。
 
    ![chlimage_1-188](assets/chlimage_1-188.png)
 
-1. フォルダーに他のメタデータが適用されている場合は、既存のメタデータスキーマを上書きする旨の警告メッセージが表示されます。Click **[!UICONTROL Overwrite]**.
-1. Click **[!UICONTROL OK]** to close the success message.
+1. フォルダーに他のメタデータが適用されている場合は、既存のメタデータスキーマを上書きする旨の警告メッセージが表示されます。「**[!UICONTROL 上書き]**」をクリックします。
+1. 「**[!UICONTROL OK]**」をクリックして、成功メッセージを閉じます。
 1. 変更したメタデータスキーマを適用したフォルダーに移動します。
 
 ## 必須メタデータの定義 {#defining-mandatory-metadata}
@@ -278,25 +272,25 @@ AEM Assets では、メタデータスキーマのバリアントを定義して
 >メタデータフィールドは、別のフィールドの値に基づいて、必須フィールドとして定義できます。AEM のカード表示では、このような必須メタデータフィールドのメタデータがなくても警告メッセージは表示されません。
 
 1. AEM のロゴをクリックし、**[!UICONTROL ツール／アセット／メタデータスキーマ]**&#x200B;に移動します。**[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページが表示されます。
-1. デフォルトのメタデータフォームをカスタムフォームとして保存します。For example, save it as `my_default`.
+1. デフォルトのメタデータフォームをカスタムフォームとして保存します。例えば、`my_default` として保存します。
 
    ![chlimage_1-189](assets/chlimage_1-189.png)
 
-1. カスタムフォームを編集します。必須フィールドを追加します。For example, add a **Category** field and make the field mandatory.
+1. カスタムフォームを編集します。必須フィールドを追加します。例えば、「**カテゴリ**」フィールドを追加して、それを必須フィールドにします。
 
    ![chlimage_1-190](assets/chlimage_1-190.png)
 
-1. 「**[!UICONTROL 保存]**」をクリックします。変更されたフォームは&#x200B;**[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページにリストされます。カスタムメタデータをフォルダーに適用するには、フォームを選択し、ツールバーの「 **[!UICONTROL Apply to Folder(s)]** 」をクリックまたはタップします。
+1. 「**[!UICONTROL 保存]**」をクリックします。変更されたフォームは&#x200B;**[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページにリストされます。カスタムメタデータをフォルダーに適用するには、フォームを選択し、ツールバーの「フ **[!UICONTROL ォルダーに適用」をクリックまたはタップし]** ます。
 
 1. フォルダーに移動し、カスタムフォームに追加した必須フィールドにメタデータが指定されていないアセットをアップロードします。アセットのカード表示に、必須フィールドに指定されていないメタデータについてメッセージが表示されます。
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-1. （オプション）アクセス `http://[server]:[port]/system/console/components/`。 Configure and enable `com.day.cq.dam.core.impl.MissingMetadataNotificationJob` component that is disabled by default. AEM がアセット上にあるメタデータの妥当性をチェックする頻度を設定します。この設定により、`hasValidMetadata` プロパティがアセットの jcr:content に追加されます。AEM はこのプロパティを使用して検索の結果をフィルターできます。
+1. （オプション）`http://[server]:[port]/system/console/components/` にアクセスします。`com.day.cq.dam.core.impl.MissingMetadataNotificationJob` コンポーネントを設定して有効にします。このコンポーネントはデフォルトで無効になっています。AEM がアセット上にあるメタデータの妥当性をチェックする頻度を設定します。この設定により、`hasValidMetadata` プロパティがアセットの jcr:content に追加されます。AEM はこのプロパティを使用して検索の結果をフィルターできます。
 
 >[!NOTE]
 >
->If an asset is added after the scheduled check, the asset is not flagged with `hasValidMetadata` until  the next scheduled check. アセットは中間検索結果に表示されません。
+>スケジュール済みチェックの後に追加されたアセットは、次回のスケジュール済みチェックが実行されるまでは `hasValidMetadata` のフラグが設定されません。アセットは中間検索結果に表示されません。
 
 >[!C注意]
 >
