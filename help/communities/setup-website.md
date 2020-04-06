@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d18c0ece-4c4f-499c-ac94-a9aaa7f883c4
 translation-type: tm+mt
-source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+source-git-commit: bd2eb8787a98fa9910cc540ba329466a0e72e0db
 
 ---
 
@@ -20,13 +20,13 @@ source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
 Web サイトをセットアップするために、後述の手順では、次の場所に作成するフォルダーについて説明します。
 
 * `/apps/an-scf-sandbox`
-カスタムアプリケーションとテンプレートが存在する場所
+ここにカスタムアプリケーションとテンプレートが存在します。
 
 * `/etc/designs/an-scf-sandbox`
-ここはダウンロード可能なデザイン要素が存在する場所です
+これは、ダウンロード可能なデザイン要素が存在する場所です
 
 * `/content/an-scf-sandbox`
-ここにダウンロード可能なWebページがあります
+ここは、ダウンロード可能なWebページがある場所です。
 
 このチュートリアル内のコードは、アプリケーション、デザインおよびコンテンツについてメインフォルダー名が同じであるという前提に基づきます。If you choose some other name for your website, then always replace `an-scf-sandbox` with the name you have chosen.
 
@@ -38,9 +38,9 @@ Web サイトをセットアップするために、後述の手順では、次�
 >* ノード名にはスペースを含めることができますが、URIで使用する場合は、スペースを「%20」または「+」としてエンコードする必要があります
 >* ノード名にはハイフンやアンダースコアを含めることができますが、Javaファイル内でパッケージ名として参照する場合はエンコードする必要があります。 ハイフンとアンダースコアは共に、アンダースコアでエスケープされ、その後にUnicode値が続きます。
    >
-   >  
-* ハイフンが「_002d」になる
->  * アンダースコアは「_005f」になります。
+   >   
+   * ハイフンが「_002d」になる
+   >   * アンダースコアは「_005f」になります。
 
 
 ## アプリケーションディレクトリ(/apps)の設定 {#setup-the-application-directory-apps}
@@ -54,8 +54,8 @@ Web サイトをセットアップするために、後述の手順では、次�
    **[!UICONTROL CRXDE Lite]** を使用して、エクスプローラーペインで次の手順を実行します。
 
    1. Select the `/apps` folder
-   1. **[!UICONTROL [作成]****[!UICONTROL ...]を右クリックまたは「作成」を]**&#x200B;プルダウンメニュー
-   1. **[!UICONTROL [フォ]**&#x200B;ルダの作成…]を選択します。.
+   1. Right-click **[!UICONTROL Create]**... or pull down the **[!UICONTROL Create...]** menu
+   1. Select **[!UICONTROL Create Folder...]** .
    1. In the **[!UICONTROL Create Folder]** dialog, enter `an-scf-sandbox`
    1. 「**[!UICONTROL OK]**」をクリックします。
 
@@ -111,4 +111,4 @@ Web サイトをセットアップするために、後述の手順では、次�
 
 リポジトリの /content ディレクトリには、Web サイトコンテンツが格納されます。/contentの下のパスは、ブラウザーリクエストのURLのパスを構成します。
 
-*ページ* ・テ [ンプレートを初期アプリケーションの一部として作成した後は](initial-app.md#createthepagetemplate) 、そのテンプレートに基づいて初期ページ・コンテンツを作成することができる。. [****](initial-app.md)
+*ページ* ・テ [ンプレートを初期アプリの一部として作成した後](initial-app.md#createthepagetemplate) 、そのテンプレートに基づいて初期ページ・コンテンツを作成できる。. [****](initial-app.md)
