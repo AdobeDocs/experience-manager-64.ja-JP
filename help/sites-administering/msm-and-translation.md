@@ -10,7 +10,7 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: d045065f530a643268a84276b067830b0547cbf9
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 Web サイトとページを管理するための以下の管理ツールが用意されています。
 
-* マルチサイトマネージャー(MSM)では、複数の場所で同じサイトコンテンツを使用できると同時に、様々なバリエーションを作成できます。
+* マルチサイトマネージャ(MSM)を使用すると、複数の場所で同じサイトコンテンツを使用しながら、次のようなバリエーションを作成できます。
 
    * [コンテンツの再利用：マルチサイトマネージャーとライブコピー](/help/sites-administering/msm.md)
 
@@ -61,10 +61,9 @@ Web サイトとページを管理するための以下の管理ツールが用�
 >
 >* [MSM のベストプラクティス](/help/sites-administering/msm-best-practices.md)（特に次の事項）
    >
-   >  
-* [サイトの作成](/help/sites-administering/msm-best-practices.md#create-site)
->  * [MSM と多言語の Web サイト](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
-   >
-   >
-* [翻訳のベストプラクティス](/help/sites-administering/tc-bp.md)
+   >   
+   * [サイトの作成](/help/sites-administering/msm-best-practices.md#create-site)
+   >   * [MSM と多言語の Web サイト](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
+>
+>* [翻訳のベストプラクティス](/help/sites-administering/tc-bp.md)
 
