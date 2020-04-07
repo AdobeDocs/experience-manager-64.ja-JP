@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: 9b372645792d3e9181c3c1c1e03f0b9cbb7ef14a
+source-git-commit: 730a08c0c02b5d44b5483c733252e0e76236061a
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: 9b372645792d3e9181c3c1c1e03f0b9cbb7ef14a
 | バージョン | 6.4.8.0 |
 | タイプ | Service Pack のリリース |
 | 日付 | 2020年3月5日 |
-| ダウンロード URL | AEM 6.4.8.0 on [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.8.0), [Software Distribution(Beta)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/servicepack/aem-service-pkg-6.4.8.zip) |
+| ダウンロード URL | AEM 6.4.8.0 on [PackageShare](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/AEM-6.4.8.0-Service-Pack), [Software Distribution(Beta)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/servicepack/aem-service-pkg-6.4.8.zip) |
 
 ## AEM 6.4.8.0 に含まれる機能 {#what-s-included-in-aem}
 
@@ -98,7 +98,7 @@ AEM 6.4.8.0は、新機能、お客様から要望された主な機能強化、
 
 * Experience Managerクラウドサービス(NPR-31729)で **Adobe Analyticsを設定中に「****Adobe** Source **** 」をレポートすると、「会社」と「レポートスイート」のドロップダウンメニューが非表示になります。
 
-* Adobe Campaignにリンクされたニュースレターの言語コピーを作成しても、Adobe Campaignのプロパティは消去されません。一方、Adobe Campaignにリンクされたニュースレターをコピーまたは貼り付けると、クリーンアップが発生します(NPR-32540)。
+* Adobe Campaignにリンクされたニュースレターの言語コピーが作成されても、Adobe Campaignのプロパティは消去されません。一方、Adobe Campaignにリンクされたニュースレターがコピーまたは貼り付けられた場合は、クリーンアップが行われます(NPR-32540)。
 
 ### Sling {#sling-6480}
 
@@ -232,7 +232,7 @@ AEM 6.4.7.0の主な特徴は次のとおりです。
 
 * DMに送信されるPDFオプションのextractKeywordsは、デフォルトでtrueに設定されています(CQ-4280101)。
 
-* DM以外のアセットを含むフォルダでScene 7の再処理ワークフローを実行すると、Null Point Exceptionが発生する(CQ-427955)。
+* DM以外のアセットを含むフォルダでScene 7の再処理ワークフローを実行すると、Null Point Exceptionが発生する(CQ-4279555)。
 
 * 重複名を持つアセットがScene 7に既に存在する場合、AEMでのアセット名の変更がScene 7と同期されません(CQ-4276763)。
 
@@ -1332,7 +1332,7 @@ AEM 6.4.2.0の主な特徴は次のとおりです。
 * オン/オフ時間はcrx/deに保存されますが、ページプロパティUIコンソールでは同じ時間を取得しません。 NPR-25154：CQ-4243431 のホットフィックス
 * [スタイル] [システム]は、ダイアログの初期プロパティの値を破棄します。 NPR-25648：CQ-4250073 のホットフィックス
 * cq:htmlTagノードでcq:tagNameプロパティを定義する場合、コンポーネントがJSPを介して含まれている場合、タグ名は考慮されません。 NPR-24154：CQ-4244120 のホットフィックス
-* ネストされたparsysコンポーネントの場合、デザインを満たす最初の（ネストされたパスが最も少ない）パスが、複数の使用可能なコンポーネントから常に適用されます。 詳しくは、「デザインパスの解 [像度」を参照してください](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/page-templates-static.html)。 NPR-24973：CQ-4246276 のホットフィックス
+* ネストされたparsysコンポーネントの場合、デザインを満たす最初の（ネストされたパスが最も少ない）パスが、複数の使用可能なコンポーネントから常に適用されます。 詳しくは、「デザインパスの解 [像度」を参照してください](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/page-templates-static.html)。 NPR-24973：CQ-4246276 のホットフィックス
 * RTEコンポーネントにテキストを貼り付けると、ポップアップダイアログが表示されますが、正しくレンダリングされません。 NPR-24895：CQ-4245901 のホットフィックス
 * (RTE)必須フィールドインジケーターのパフォーマンスの問題。 NPR-24894：CQ-4241895 のホットフィックス
 * （ページコンポーネント） Parsysにコンポーネントを追加すると、右から切り抜かれ、デバイスのフレーム幅になります。 NPR-25536：CQ-4238224 のホットフィックス
@@ -1660,7 +1660,7 @@ AEM 6.4.2.0 フォームの主なハイライトは次のとおりです。
 * 削除権限なしでコンテンツフラグメントを編集できるようにします。 詳しくは、「コンテンツフラグメントのカ [スタマイズと拡張」を参照してください](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/customizing-content-fragments.html#AssetPermissions)。 NPR-25793：CQ-4248750 のホットフィックス
 * コンテンツフラグメントに注釈を付ける機能を追加しました。 For more information, see [Variations-Authoring Fragments](https://helpx.adobe.com/experience-manager/6-4/assets/using/content-fragments-variations.html#AnnotatingaContentFragment). NPR-25188：CQ-4235336 のホットフィックス
 * バージョン管理：コンテンツフラグメントを並べて比較します。 詳しくは、「コンテンツフラグメントの管 [理」を参照してください](https://helpx.adobe.com/experience-manager/6-4/assets/using/content-fragments-managing.html#ComparingFragmentVersions)。 NPR-25187：CQ-4237412 のホットフィックス
-* AEM 6.4.2.0にバックポートされたイメージエディターの機能強化。詳しくは、画像エディタを参照 [してください](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/image-editor.html)。 NPR-24467
+* AEM 6.4.2.0にバックポートされたイメージエディターの機能強化。詳しくは、画像エディタを参照 [してください](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/image-editor.html)。 NPR-24467
 
 **OSGIバンドルおよび含まれるコンテンツパッケージ**
 
@@ -1694,7 +1694,7 @@ AEM 6.4.1.0はAEM 6.4 GAにインストールできます。 サービスパッ�
 * 印刷と印刷ダイアログにARIAのサポートを追加しました。
 * 電子メールの検証ARIAのサポートを追加しました。
 * Proactive Backport for platform.clientlibsの修正。
-* 明示的なdataTypeへの入力がない場合のスクリプトの自動実行の防止。
+* 明示的なdataTypeへの入力がない場合のスクリプトの自動実行を防ぎます（CVE-2015-9251を解決します）。
 
 **アセット**
 
@@ -1710,7 +1710,7 @@ AEM 6.4.1.0はAEM 6.4 GAにインストールできます。 サービスパッ�
 **Sites**
 
 * 移動中にページの名前を変更すると、ページの移動は成功しますが、名前の変更機能は動作しません。 NPR-22923：CQ-4235907 のホットフィックス
-* Adobe Campaignsのインポーターページを指すライブコピーページを公開する際にエラーが発生する。 NPR-23053：CQ-4237164 のホットフィックス
+* インポーターページを指すライブコピーページを公開する際にエラーが発生しました(Adobe Campaign)。 NPR-23053：CQ-4237164 のホットフィックス
 * クラシックUIでの移動/名前変更は、「ページの移動中にエラーが発生しました」というエラーが表示され、名前が変更されないので失敗します。 NPR-23051：CQ-4235907 のホットフィックス
 * 列表示からリスト表示にコンテンツを切り替えると、空白のページがレンダリングされ、OffTimeが設定され、OnTimeが空白のページに対してNull Pointer Exceptionがトリガされます。 NPR-22968、NPR-23052：CQ-4238940 のホットフィックス
 
@@ -2065,7 +2065,7 @@ AEM Forms の主なハイライトは次のとおりです。
 
 **Sites**
 
-* （ページオーサリング）画像エディターの機能強化。 For more information, see [Image Editor](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/image-editor.html). NPR-24267：CQ-4245502 のホットフィックス
+* （ページオーサリング）画像エディターの機能強化。 For more information, see [Image Editor](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/image-editor.html). NPR-24267：CQ-4245502 のホットフィックス
 
 **OSGIバンドルおよび含まれるコンテンツパッケージ**
 
@@ -2166,7 +2166,7 @@ To determine the certified platform for running with this release of AEM Sites a
 >AEM 6.4.8.0 には、[AEM Forms 互換性パッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/AEM-FORMS-6.4.7.0-COMPAT)の新しいバージョンが含まれています。古いバージョンのAEM Forms互換性パッケージを使用し、AEM 6.4.8.0に更新する場合は、Forms-Onパッケージのインストール後に、最新バージョンのAEM Forms互換性パッケージをインストールし追加ます。
 
 1. AEM Service Pack がインストールされていることを確認してください。
-1. Download the corresponding forms add-on package listed at [AEM Forms releases](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) for your operating system.
+1. Download the corresponding forms add-on package listed at [AEM Forms releases](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) for your operating system.
 1. Install the forms add-on package as described in [Installing AEM forms add-on packages](https://helpx.adobe.com/experience-manager/6-4/forms/using/installing-configuring-aem-forms-osgi.html#InstallAEMFormsaddonpackage).
 
 ### AEM Forms JEE インストーラーのインストール {#install-aem-forms-jee-installer}
@@ -2175,7 +2175,7 @@ To determine the certified platform for running with this release of AEM Sites a
 >
 >JEE で AEM Forms を使用していない場合はスキップします。AEM Forms JEE の修正は別のインストーラーを介して配布されます。
 
-AEM Forms JEE の累積インストーラーのインストールとデプロイメント後の設定について詳しくは、[AEM Forms JEE パッチインストーラー 0015](https://helpx.adobe.com/aem-forms/quick-fixes/6-4/jee-patch-0015.html) を参照してください。
+AEM Forms JEE の累積インストーラーのインストールとデプロイメント後の設定について詳しくは、[AEM Forms JEE パッチインストーラー 0015](https://helpx.adobe.com/jp/aem-forms/quick-fixes/6-4/jee-patch-0015.html) を参照してください。
 
 #### NPR-21268 に必要な設定 {#configuration-settings-required-for-npr}
 
@@ -2264,7 +2264,7 @@ AEM 6.4.8.0 に含まれているコンテンツパッケージの一覧
 
 * [AEM 6.4 リリースノート](../release-notes/release-notes.md)
 * [AEM 製品ページ](https://www.adobe.com/solutions/web-experience-management.html)
-* [AEM 6.4 ドキュメント](https://helpx.adobe.com/support/experience-manager/6-4.html)
+* [AEM 6.4 ドキュメント](https://helpx.adobe.com/jp/support/experience-manager/6-4.html)
 * Subscribe to [Adobe priority product updates](https://www.adobe.com/subscription/priority-product-update.html)
 
 ### 制限付きサイト {#restricted-sites-new}
