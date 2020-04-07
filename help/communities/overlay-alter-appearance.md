@@ -31,13 +31,19 @@ comment.hbsスクリプトは、各コメントの全体的なHTMLを作成し�
 1. Open the overlaid `comment.hbs`
    * のノードをダブルクリ `comment.hbs`ック `/apps/social/commons/components/hbs/comments/comment folder`
 1. 次の行を探し、削除するかコメントアウトします。
-   `xml <aside class="scf-comment-author">
-<img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>`
+
+```xml
+<aside class="scf-comment-author">
+        <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
+```
 
 行を削除するか、「&lt;!--」と「-->」で囲んでコメントアウトします。Also, the characters &#39;xxx&#39; are being added as a visual indicator of where the avatar would have been.
-`xml <!-- do not display avatar with comment
-<aside class="scf-comment-author">
-<img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>`
+
+```xml
+<!-- do not display avatar with comment
+    <aside class="scf-comment-author">
+        <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
+```
 
 ## オーバーレイのレプリケート {#replicate-the-overlay}
 
