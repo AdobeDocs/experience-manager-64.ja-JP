@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: da3891d3-fa07-4c88-b4ac-077926b3a674
 translation-type: tm+mt
-source-git-commit: 63001012f0d865c2548703ea387c780679128ee7
+source-git-commit: 1ae2d7f99286e0b958d343778159e2d35095510e
 
 ---
 
@@ -19,25 +19,25 @@ source-git-commit: 63001012f0d865c2548703ea387c780679128ee7
 
 ## スクリプトの変更 {#modify-the-script}
 
-comment.hbsスクリプトは、各コメントの全体的なHTMLを作成します。
+comment.hbsスクリプトは、各コメントのHTML全体を作成します。
 
 投稿された各コメントの横のアバターを表示しないようにするには：
 
-1. コピ `comment.hbs`ー元 `libs`: `apps`
+1. コピー `comment.hbs`元の `libs`先 `apps`
    1.  `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
    1. Select **[!UICONTROL Copy]**
    1.  `/apps/social/commons/components/hbs/comments/comment`
    1. Select **[!UICONTROL Paste]**
 1. Open the overlaid `comment.hbs`
-   * のノードをダブルクリ `comment.hbs`ック `/apps/social/commons/components/hbs/comments/comment folder`
+   * 重複クリッ `comment.hbs`ク `/apps/social/commons/components/hbs/comments/comment folder`
 1. 次の行を探し、削除するかコメントアウトします。
 
-```xml
-<aside class="scf-comment-author">
-        <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
-```
+   ```xml
+   <aside class="scf-comment-author">
+           <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
+   ```
 
-行を削除するか、「&lt;!--」と「-->」で囲んでコメントアウトします。Also, the characters &#39;xxx&#39; are being added as a visual indicator of where the avatar would have been.
+行を削除するか、「&lt;!--」と「-->」で囲んでコメントアウトします。また、「xxx」という文字が、アバターの場所を視覚的に示すインジケーターとして追加されています。
 
 ```xml
 <!-- do not display avatar with comment
@@ -61,7 +61,7 @@ For the Start Path enter `/apps/social/commons` and select **[!UICONTROL Activat
 
 ## 結果の表示 {#view-results}
 
-例えば、http://localhost:4503/crx/de as admin/adminなどの管理者として発行インスタンスにログインすると、オーバーレイされたコンポーネントが存在することを確認できます。
+管理者(例：http://localhost:4503/crx/de as admin/admin)として発行インスタンスにログインすると、オーバーレイされたコンポーネントが存在することを確認できます。
 
 ログアウトして `aaron.mcdonald@mailinator.com/password` として再ログインし、ページを更新した場合は、投稿されたコメントはアバターと一緒には表示されなくなっており、代わりに単純な「xxx」が表示されることがわかります。
 
