@@ -10,7 +10,7 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 15819d42-4897-40fa-a013-e019d1580fa2
 translation-type: tm+mt
-source-git-commit: d79b5f7204cb7a00cef6d31a1fdd2cbe93a6cfbe
+source-git-commit: 3316dbc8ef268be2b305d22da9003ae40414b4e1
 
 ---
 
@@ -96,7 +96,7 @@ source-git-commit: d79b5f7204cb7a00cef6d31a1fdd2cbe93a6cfbe
   </tr>
   <tr>
    <td>ポータル・ディレクター</td> 
-   <td><p>ポータルディレクターは、サードパーティサーバーのポートレットを介してAEMコンテンツをホストする機能のセットです。</p> <p>アドビでは、以下に示す場所で、Portal Director機能をさらに強化する予定はありません。 AEM 6.4にはPortal Directorが含まれており、以前のリリースからアップグレードしたお客様は、引き続きそのまま使用できます。 非推奨の間も、Portal Directは引き続き完全にサポートされます。</p> 
+   <td><p>ポータルディレクターは、サードパーティサーバーのポートレットを介してAEMコンテンツをホストする機能のセットです。</p> <p>アドビでは、以下に示す場所で、Portal Directorの機能をさらに強化する予定はありません。 AEM 6.4にはPortal Directorが含まれており、以前のリリースからアップグレードしたお客様は、引き続きそのまま使用できます。 非推奨の間も、Portal Directは引き続き完全にサポートされます。</p> 
     <ul> 
      <li>/libs/portal/director</li> 
     </ul> </td> 
@@ -110,7 +110,14 @@ source-git-commit: d79b5f7204cb7a00cef6d31a1fdd2cbe93a6cfbe
   <tr>
    <td>Forms</td> 
    <td><p>Adobe Central 製品がサポートされなくなったので、Adobe Central Migration Bridge サービスのサポートは廃止されました。</p> </td> 
-   <td> </td> 
+   <td>代替手段はありません。 </td> 
+  </tr>
+    <tr>
+   <td>Forms</td> 
+   <td><p>OptionとOperationOptionsでのJSONObjectの使用が廃止されました。クエリとOptionsを参照してください。 次のAPIは廃止されました。
+   <ul><li>setArguments（JSONObject引数）</li><li>JSONObject getArguments()</li><li>OperationOptions(String operationId, JSONObject引数</li><li>JSONObject getArguments()</li><li>void setArguments（JSONObject引数）</li></ul>
+   </p> </td> 
+   <td>IValueMap APIの使用 </td> 
   </tr>
   <tr>
    <td>Assets</td> 
@@ -134,7 +141,7 @@ source-git-commit: d79b5f7204cb7a00cef6d31a1fdd2cbe93a6cfbe
   <tr>
    <td>Analyticsアクティビティマップ</td> 
    <td>AEMに含まれるアクティビティマップのバージョン。</td> 
-   <td>Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。<br><br>Adobe Analyticsが提 <a href="https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html">供するActivityMapプラグインを使用する</a> 。</td> 
+   <td>Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。<br><br>Adobe Analyticsが提 <a href="https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html">供するActivityMapプラグインを使用する</a> 。</td> 
   </tr>
   <tr>
    <td>コンポーネント</td> 
@@ -209,12 +216,17 @@ source-git-commit: d79b5f7204cb7a00cef6d31a1fdd2cbe93a6cfbe
   <tr>
    <td>Forms</td> 
    <td> アダプティブドキュメント機能の削除</td> 
-   <td> インタラクティブな通信機能を使用して、印刷およびWebベースの通信を作成できます。 <br/> </td> 
+   <td> インタラクティブな通信機能を使用して、印刷およびWebベースの通信を作成できます。 アダプティブドキュメントを使用する場合は、互換性パッケージをインストールして、既存のアダプティブドキュメントの使用を継続します<br/> </td> 
   </tr>
     <tr>
     <td>Forms</td> 
     <td>JEE上のAEM Forms固有のランディングページを削除。</td> 
     <td>「JEE上のAEM Forms」ランディングページはAEMランディングページ(/aem/start.html)に置き換えられます。 </td>  
+  </tr>
+   <tr>
+   <td>Forms</td> 
+   <td>デフォルトのCaptchaのサポートを削除しました。</td> 
+   <td>GoogleのreCAPTCHAサービスを使用します。</td> 
   </tr>
    <tr>
    <td>Forms</td> 
