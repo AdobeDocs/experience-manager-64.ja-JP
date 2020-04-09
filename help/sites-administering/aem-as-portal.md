@@ -10,7 +10,7 @@ topic-tags: integration
 content-type: reference
 discoiquuid: f25d901a-c62c-46b4-aab7-3ca3da1cea5b
 translation-type: tm+mt
-source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
+source-git-commit: 1c751a81550086371623d0ba66e4de40f7daaa16
 
 ---
 
@@ -32,7 +32,7 @@ AEM ポータルのアーキテクチャには、ポータルおよびポート�
 
 ポータルとは、パーソナライゼーション、シングルサインオン、様々なソースからのコンテンツ統合の機能を備え、情報システムのプレゼンテーションレイヤーをホストする Web アプリケーションです。
 
-AEMでJSR 286準拠のポートレットを実行できます。 ポートレットコンポーネントによって、ページにポートレットを埋め込むことができます。[AEM コンテンツポートレットの管理](#administering-the-aem-content-portlet)を参照してください。
+JSR 286準拠のポートレットはAEMで実行できます。 ポートレットコンポーネントによって、ページにポートレットを埋め込むことができます。[AEM コンテンツポートレットの管理](#administering-the-aem-content-portlet)を参照してください。
 
 ### What is a portlet? {#what-is-a-portlet}
 
@@ -44,7 +44,7 @@ AEMでJSR 286準拠のポートレットを実行できます。 ポートレッ
 
 >[!CAUTION]
 >
->AEM Portal Director は、AEM 6.4 以降では使用されなくなりました。[廃止される機能および削除された機能](https://helpx.adobe.com/experience-manager/6-4/release-notes/deprecated-removed-features.html)を参照してください。
+>AEM Portal Director は、AEM 6.4 以降では使用されなくなりました。[廃止される機能および削除された機能](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/deprecated-removed-features.html)を参照してください。
 
 ## AEM コンテンツポートレットの管理 {#administering-the-aem-content-portlet}
 
@@ -103,37 +103,37 @@ AEM コンテンツポートレットでは、ポータル内に AEM コンテ�
 
 ポートレットは次の環境設定を使用して設定できます。
 
-<table> 
- <tbody> 
-  <tr> 
-   <td>startPath</td> 
-   <td><p>ポートレットの開始パス。最初に表示されるコンテンツを定義します。</p> <p><strong>重要</strong>:/<strong> /</strong>とは異なるコンテキストパスで実行されているAEMオーサーに接続し、発行インスタンスに接続するようにポートレットを設定する場合は、これらのAEMインスタンスのHtml Library Manager設定で <strong></strong> CQUrlInfoを強制的に有効にする必要があります。</p> </td> 
-  </tr> 
-  <tr> 
-   <td>htmlSelector</td> 
-   <td>各 URL に追加されるセレクター。By default this is <strong>portlet</strong>, so all requests to html pages use urls ending in <strong>.portlet.html.</strong>このセレクター設定により、ポートレットのレンダリングのために、AEM 内でカスタムスクリプトを使用できるようになります。</td> 
-  </tr> 
-  <tr> 
-   <td>addCssToPortalHeader</td> 
-   <td><p>デフォルトでは、AEM からの HTML ページにインクルードされる CSS ファイルが、ポートレットにインクルードされます。このオプションを無効にすると、このデフォルトの CSS ファイルがインクルードされません。</p> <p>このオプションを有効にすると、ポータルの状態に応じて、CSS ファイルが HTML ページの head 部に追加されるか、HTML ページ内に埋め込まれます。</p> </td> 
-  </tr> 
-  <tr> 
-   <td>includeToolbar</td> 
-   <td>デフォルトで、管理用のツールバーがコンテンツポートレット内部にレンダリングされます。このオプションを無効にすると、ツールバーがレンダリングされなくなります。</td> 
-  </tr> 
-  <tr> 
-   <td>urlParameterNames</td> 
-   <td><p>ポートレット用に表示する新しいコンテンツ URL を含む代替 URL パラメーター名のリスト。このリストは上から順に処理され、値が格納された最初のパラメーターが使用されます。URL が見つからない場合は、デフォルトの URL パラメーターが使用されます。指定した URL は、それ以上変更されずに指定したとおりに使用されます。</p> <p>この設定はデプロイされたポートレットごとの設定ですが、OSGi 設定で「Day Portal Director Portlet Bridge」に対して一部の URL パラメーターをグローバルに設定することもできます。</p> </td> 
-  </tr> 
-  <tr> 
-   <td>preferenceDialog</td> 
-   <td>AEM 内の環境設定ダイアログへのパス。空白の場合、組み込みの環境設定ダイアログが使用されます。ダイアログのデフォルトは、/libs/portal/content/prefs.html です。</td> 
-  </tr> 
-  <tr> 
-   <td>initialRedirect</td> 
-   <td>デフォルトでは、ポートレットは最初の呼び出し時にポータルページ全体の JavaScript リダイレクトを実行します。これは、最新型ポータルサーバーのドラッグ＆ドロップシナリオに対応するための設定です。実稼動環境ではこのリダイレクトはほとんど必要ないので、この環境設定を <em>false</em> に設定してオフにすることができます。</td> 
-  </tr> 
- </tbody> 
+<table>
+ <tbody>
+  <tr>
+   <td>startPath</td>
+   <td><p>ポートレットの開始パス。最初に表示されるコンテンツを定義します。</p> <p><strong>重要</strong>:/<strong> /</strong>とは異なるコンテキストパスで実行されているAEMオーサーに接続し、発行インスタンスに接続するようにポートレットが設定されている場合は、これらのAEMインスタンスのHtml Library Manager設定で <strong></strong> CQUrlInfoを強制的に有効にする必要があります。</p> </td>
+  </tr>
+  <tr>
+   <td>htmlSelector</td>
+   <td>各 URL に追加されるセレクター。By default this is <strong>portlet</strong>, so all requests to html pages use urls ending in <strong>.portlet.html.</strong>このセレクター設定により、ポートレットのレンダリングのために、AEM 内でカスタムスクリプトを使用できるようになります。</td>
+  </tr>
+  <tr>
+   <td>addCssToPortalHeader</td>
+   <td><p>デフォルトでは、AEM からの HTML ページにインクルードされる CSS ファイルが、ポートレットにインクルードされます。このオプションを無効にすると、このデフォルトの CSS ファイルがインクルードされません。</p> <p>このオプションを有効にすると、ポータルの状態に応じて、CSS ファイルが HTML ページの head 部に追加されるか、HTML ページ内に埋め込まれます。</p> </td>
+  </tr>
+  <tr>
+   <td>includeToolbar</td>
+   <td>デフォルトで、管理用のツールバーがコンテンツポートレット内部にレンダリングされます。このオプションを無効にすると、ツールバーがレンダリングされなくなります。</td>
+  </tr>
+  <tr>
+   <td>urlParameterNames</td>
+   <td><p>ポートレット用に表示する新しいコンテンツ URL を含む代替 URL パラメーター名のリスト。このリストは上から順に処理され、値が格納された最初のパラメーターが使用されます。URL が見つからない場合は、デフォルトの URL パラメーターが使用されます。指定した URL は、それ以上変更されずに指定したとおりに使用されます。</p> <p>この設定はデプロイされたポートレットごとの設定ですが、OSGi 設定で「Day Portal Director Portlet Bridge」に対して一部の URL パラメーターをグローバルに設定することもできます。</p> </td>
+  </tr>
+  <tr>
+   <td>preferenceDialog</td>
+   <td>AEM 内の環境設定ダイアログへのパス。空白の場合、組み込みの環境設定ダイアログが使用されます。ダイアログのデフォルトは、/libs/portal/content/prefs.html です。</td>
+  </tr>
+  <tr>
+   <td>initialRedirect</td>
+   <td>デフォルトでは、ポートレットは最初の呼び出し時にポータルページ全体の JavaScript リダイレクトを実行します。これは、最新型ポータルサーバーのドラッグ＆ドロップシナリオに対応するための設定です。実稼動環境ではこのリダイレクトはほとんど必要ないので、この環境設定を <em>false</em> に設定してオフにすることができます。</td>
+  </tr>
+ </tbody>
 </table>
 
 ### OSGi Web コンソール {#osgi-web-console}
@@ -152,7 +152,7 @@ AEM コンテンツポートレットでは、ポータル内に AEM コンテ�
 
 起動時に、システムプロパティの **com.day.cq.portet.config** が読み取られ、現在の環境が検出されます。通常、このプロパティの値は **dev**、**prod**、**test** などになります。環境を設定していない場合、設定は読み取られません。
 
-If an environment is set, a config file is searched in the classpath at* ***com/day/cq/portlet/{env}.config** where **env** is replaced with the actual value for the environment. このファイルに、その環境のすべての設定ファイルを一覧で指定しておく必要があります。これらのファイルは、config ファイルからの相対位置として検索されます。例えば、ファイルに行が含まれている場合、このファイルは `my.service.xml,` 「 `com/day/cq/portlet/my.service.config.` The name of the file」でクラスパスから読み取られ、その後にサービスの永続性IDが続き **ます**。 先ほどの例では、永続性 ID は **my.service** です。設定ファイルの形式は、Apache Sling OSGi インストーラーによって使用されている形式と同じです。
+If an environment is set, a config file is searched in the classpath at* ***com/day/cq/portlet/{env}.config** where **env** is replaced with the actual value for the environment. このファイルに、その環境のすべての設定ファイルを一覧で指定しておく必要があります。これらのファイルは、config ファイルからの相対位置として検索されます。例えば、ファイルに行が含まれている場合、このファイルは `my.service.xml,` 「 `com/day/cq/portlet/my.service.config.` The name of the file」（ファイルの名前）にあるクラスパスから読み取られ、その後にサービスの永続性IDが続いて **.configが続きます**。 先ほどの例では、永続性 ID は **my.service** です。設定ファイルの形式は、Apache Sling OSGi インストーラーによって使用されている形式と同じです。
 
 つまり、環境ごとに、対応する config ファイルを追加する必要があります。すべての環境に適用される設定については、これらすべてのファイルに入力する必要があります。1 つの環境にのみ適用される設定については、そのファイルだけに入力します。このメカニズムによって、どの環境でどの設定を読み取るのかを完全に管理できます。
 
@@ -183,7 +183,7 @@ AEM ポートレットを実行する複数のポータルノードを運用し�
 
 1. オーサーインスタンスにログインします。
 1. In the Websites tab, click the *Tools* tab.
-1. **** [新規ペ **ージ]をクリックします。複製エージェント**&#x200B;の新規作成…メニューに追加します。
+1. Click **New Page...** in the replication agents **New...** menu.
 
    ![screen_shot_2012-02-15at40647pm](assets/screen_shot_2012-02-15at40647pm.png)
 
@@ -328,10 +328,10 @@ AEM WCM で SSO を有効にする前に、基盤のリポジトリが AEM WCM �
 
 AEM WCM で SSO を有効にするには、AEM WCM の Apache Felix Web 管理コンソール（OSGi）で関連する設定エントリにアクセスします。
 
-1. https://&lt;AEM-host>:&lt;port>/system/consoleのURIを使用してコンソールにアクセスします。
+1. https://&lt;AEM-host>:&lt;port>/system/consoleのURIを通じてコンソールにアクセスします。
 1. Configuration メニューで、「SSO Authentication Handler」を選択します。この例では、SSO ハンドラーは AEM ポートレットによって提供された cookie に基づいて、すべてのパスの SSO リクエストを受け入れます。実際の設定はこれとは異なる可能性があります。
 
-   | パス | / | すべてのリクエストに対して SSO ハンドラーを有効にします。 |
+   | パス | ／ | すべてのリクエストに対して SSO ハンドラーを有効にします。 |
    |---|---|---|
    | Cookie Names | cqpsso | ポートレットの OSGi コンソール内で設定されている、ポートレットによって提供される cookie の名前。 |
 
@@ -345,7 +345,7 @@ In order for the underlying AEM WCM instance to accept SSO requests, the portlet
 
 AEM ポートレットで SSO 認証を有効にするには：
 
-1. https://&lt;aem-host>:&lt;port>/system/consoleのURIを使用してコンソールにアクセスします。
+1. https://&lt;aem-host>:&lt;port>/system/consoleのURIからコンソールにアクセスします。
 1. Configuration メニューで、使用可能な設定のリストから「Day Portal Director Authenticator」を選択します。
 1. 「Mode」で、「SSO」を選択します。それ以外のパラメーターについてはデフォルト値のままにします。
 
@@ -478,7 +478,7 @@ Maven などのツールを使用してこのバンドルをビルドするか�
 
 | プレースホルダー文字列 | 説明 |
 |---|---|
-| {buttonManage} | プレースホルダーは、「**Manage **」ボタンに置き換えられ、ポートレット状態が管理状態に切り替わります。 |
+| {buttonManage} | プレースホルダは、「**Manage **」ボタンに置き換えられ、ポートレットの状態が管理の状態に切り替わります。 |
 
 #### 管理ビュー {#manage-view}
 
@@ -488,7 +488,7 @@ Maven などのツールを使用してこのバンドルをビルドするか�
 
 | プレースホルダー文字列 | 説明 |
 |---|---|
-| {buttonEdit} | プレースホルダーは「**編集**」ボタンに置き換えられ、AEMの編集モードで現在のページを含む新しいウィンドウが開きます。 |
+| {buttonEdit} | プレースホルダーは「**編集**」ボタンに置き換えられ、AEMの編集モードで現在のページを使用して新しいウィンドウが開きます。 |
 | {buttonWebsites tab} | AEM WCM の「Web サイト」タブを開くボタンに置き換えられるプレースホルダーです。 |
 | {buttonRefresh} | 現在のビューを更新します。 |
 | {buttonBack} | ポートレットを公開ビューに戻します。 |
@@ -503,7 +503,7 @@ Maven などのツールを使用してこのバンドルをビルドするか�
 
 | プレースホルダー文字列 | 説明 |
 |---|---|
-| {name} | ボタンの名前（** author、back、refresh**など）。 |
+| {name} | ボタンの名前（例：** author、back、refresh**）。 |
 | {id} | ボタンの CSS ID。 |
 | {url} | ボタンのターゲット URL。 |
 | {text} | ボタンのラベル。 |
@@ -516,7 +516,7 @@ button.html ファイルの例：
 
  <a href="#" onclick="{onclick}">
 
- <img src="/wps/PA_CQ5_Portlet/cqbridge/static/{id}.gif" alt="{text}" 
+ <img src="/wps/PA_CQ5_Portlet/cqbridge/static/{id}.gif" alt="{text}"
 title="{text}"/>
 
  </a>
@@ -556,60 +556,60 @@ The Portal Director Locale Handler can be configured with the paths to check for
 
 オプションの OSGi サービスを実装して、ポートレットの様々な部分をカスタマイズできます。各サービスが 1 つの Java インターフェイスに対応します。このインターフェイスを実装して、バンドルによってポートレットにデプロイすることができます。
 
-<table> 
- <tbody> 
-  <tr> 
-   <td>RequestTracker</td> 
-   <td>リクエストトラッカーは、ポートレットによってコンテンツが表示されるときに常に通知を受けます。リクエストトラッカーを使用して、ポートレットの呼び出しを追跡できます。</td> 
-  </tr> 
-  <tr> 
-   <td>InvocationContextListener</td> 
-   <td>ポートレットへの各リクエストの最初と最後に呼び出されるリスナー。このリスナーを使用して、現在のリクエストの情報を変更したり追加したりすることができます。<br /> </td> 
-  </tr> 
-  <tr> 
-   <td>ErrorHandler</td> 
-   <td>レンダリングフェーズでのエラーを処理するカスタムエラーハンドラー。</td> 
-  </tr> 
-  <tr> 
-   <td>HttpProcessor</td> 
-   <td>このサービスを使用して、AEM への各 HTTP 呼び出しに情報を追加できます。</td> 
-  </tr> 
-  <tr> 
-   <td>PortletAction</td> 
-   <td>ポートレットに独自のアクションを追加します。このアクションは、ポートレットのアクションリンクから呼び出すことができます。</td> 
-  </tr> 
-  <tr> 
-   <td>PortletDecoratorService</td> 
-   <td>このサービスを使用して、ポートレットのコンテンツを修飾することができます。</td> 
-  </tr> 
-  <tr> 
-   <td>ResourceProvider</td> 
-   <td>独自のリソースプロバイダーを追加して、ポートレットのリソースリンク経由で何らかのリソースをクライアントに送信します。</td> 
-  </tr> 
-  <tr> 
-   <td>TextMapper</td> 
-   <td>HTML、CSS および JavaScript ファイルの後処理ができます。</td> 
-  </tr> 
-  <tr> 
-   <td>ToolbarButton</td> 
-   <td>ツールバーに独自のボタンを追加します。</td> 
-  </tr> 
-  <tr> 
-   <td>UrlMapper</td> 
-   <td>カスタム URL マッピングまたは書き換えを適用するためのサービスを追加します。</td> 
-  </tr> 
-  <tr> 
-   <td>UserInfoProvider</td> 
-   <td>ユーザーに関する独自の情報を追加します。このサービスを使用して、ポータルからポートレットに渡す情報を取得できます。</td> 
-  </tr> 
- </tbody> 
+<table>
+ <tbody>
+  <tr>
+   <td>RequestTracker</td>
+   <td>リクエストトラッカーは、ポートレットによってコンテンツが表示されるときに常に通知を受けます。リクエストトラッカーを使用して、ポートレットの呼び出しを追跡できます。</td>
+  </tr>
+  <tr>
+   <td>InvocationContextListener</td>
+   <td>ポートレットへの各リクエストの最初と最後に呼び出されるリスナー。このリスナーを使用して、現在のリクエストの情報を変更したり追加したりすることができます。<br /> </td>
+  </tr>
+  <tr>
+   <td>ErrorHandler</td>
+   <td>レンダリングフェーズでのエラーを処理するカスタムエラーハンドラー。</td>
+  </tr>
+  <tr>
+   <td>HttpProcessor</td>
+   <td>このサービスを使用して、AEM への各 HTTP 呼び出しに情報を追加できます。</td>
+  </tr>
+  <tr>
+   <td>PortletAction</td>
+   <td>ポートレットに独自のアクションを追加します。このアクションは、ポートレットのアクションリンクから呼び出すことができます。</td>
+  </tr>
+  <tr>
+   <td>PortletDecoratorService</td>
+   <td>このサービスを使用して、ポートレットのコンテンツを修飾することができます。</td>
+  </tr>
+  <tr>
+   <td>ResourceProvider</td>
+   <td>独自のリソースプロバイダーを追加して、ポートレットのリソースリンク経由で何らかのリソースをクライアントに送信します。</td>
+  </tr>
+  <tr>
+   <td>TextMapper</td>
+   <td>HTML、CSS および JavaScript ファイルの後処理ができます。</td>
+  </tr>
+  <tr>
+   <td>ToolbarButton</td>
+   <td>ツールバーに独自のボタンを追加します。</td>
+  </tr>
+  <tr>
+   <td>UrlMapper</td>
+   <td>カスタム URL マッピングまたは書き換えを適用するためのサービスを追加します。</td>
+  </tr>
+  <tr>
+   <td>UserInfoProvider</td>
+   <td>ユーザーに関する独自の情報を追加します。このサービスを使用して、ポータルからポートレットに渡す情報を取得できます。</td>
+  </tr>
+ </tbody>
 </table>
 
 #### デフォルトサービスの置き換え {#replacing-default-services}
 
 次のサービスには、コンテンツポートレット内にデフォルト実装（と対応する Java インターフェイス）があります。カスタマイズするには、新しいサービス実装を含むバンドルをポートレットアプリケーションにデプロイする必要があります。
 
-そのサービスを実装する際に、サービスの **service.ranking** プロパティに正の値を必ず設定するようにしてください。デフォルトの実装ではランキング*** 0**が使用され、ポートレットでは最もランクの高いサービスが使用されます。
+そのサービスを実装する際に、サービスの **service.ranking** プロパティに正の値を必ず設定するようにしてください。デフォルトの実装ではランキング** 0**が使用され、ポートレットでは最上位のサービスが使用されます。
 
 | **名前** | **説明** | **デフォルトの動作** |
 |---|---|---|
@@ -642,13 +642,13 @@ AEM をポータルとして使用するには、次のタスクを実行しま�
 
 >[!NOTE]
 >
->ポートレットコンポーネントは、AEM が Web アプリケーションとしてデプロイされている場合に限り使用できます(「AEMをア[プリケーションサーバーにインストールする」](/content/docs/en/aem/6-3/deploy/installing.md#installing adobe experience manager with an application server)を参照)。
+>ポートレットコンポーネントは、AEM が Web アプリケーションとしてデプロイされている場合に限り使用できます（[アプリケーションサーバーによる AEM のインストール](/help/sites-deploying/application-server-install.md)を参照してください）。
 
 ### ポートレットコンポーネントのインストール {#installing-the-portlet-component}
 
 AEM Quickstart JAR ファイルには、ポートレットコンポーネントファイルが含まれています。ファイル（cq-portlet-components.zip）を取得するには、Quickstart を実行するか、その内容を抽出します。
 
-1. Quickstart JARファイルの内容を実行または抽出し、それに従ってcq-portlet-components.zipファイルを探します。
+1. Quickstart JARファイルの内容を実行または抽出し、それに応じてcq-portlet-components.zipファイルを探します。
 
    * Quickstart を実行する場合：crx-quickstart/opt/portal
    * Quickstart の内容を抽出する場合：static/opt/portal
@@ -657,7 +657,7 @@ AEM Quickstart JAR ファイルには、ポートレットコンポーネント�
 
 1. Use Package Manager to [Upload and install](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system) the cq-portlets-components.zip package.
 
-   パッケージは、リポジトリの/libs/portal/directorフォルダーにcq-portlet-director-sharedlibs-x.x.x.jarをインストールします。
+   パッケージは、リポジトリの/libs/portal/directorフォルダーにcq-portlet-director-sharedlibs-x.x.jarをインストールします。
 
 1. cq-portlet-director-sharedlibs-x.x.x.jar をハードドライブにコピーします。FileVault や WebDAV クライアントなどを使用して、このファイルを取得します。
 1. cq-portlet-director-sharedlibs.x.x.x.jar ファイルをアプリケーションサーバーの共有ライブラリフォルダーに移動して、ライブラリのクラスをデプロイ済みのポートレットアプリケーションから使用できるようにします。
@@ -679,10 +679,10 @@ AEM Quickstart JAR ファイルには、ポートレットコンポーネント�
 
 1. ポートレット・アプリケーションのWARファイルの内容を抽出します。
 
-   **** ヒント：jar xf *nameofapp*.warコマンドは、ファイルを抽出します。
+   **ヒント：** jar xf *nameofapp*.warコマンドは、ファイルを抽出します。
 
 1. web.xml ファイルをテキストエディターで開きます。
-1. Web-app要素内に次のサーブレット設定を追加します。
+1. web追加アプリ要素内の次のサーブレット設定：
 
    ```xml
    <servlet>
@@ -698,7 +698,7 @@ AEM Quickstart JAR ファイルには、ポートレットコンポーネント�
 
 1. web.xml ファイルを保存し、WAR ファイルを再度パッケージ化します。
 
-   **** ヒント：このコ `jar cvf nameofapp.war *` マンドは、現在のディレクトリの内容をnameofapp.warファイルに追加します。
+   **ヒント：** このコ `jar cvf nameofapp.war *` マンドは、現在のディレクトリの内容をnameofapp.warファイルに追加します。
 
 1. ポートレットアプリケーションをアプリケーションサーバーにデプロイします。詳しくは、アプリケーションサーバーのドキュメントを参照してください。
 
