@@ -2,9 +2,9 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.4 Assets User Guide
+user-guide-title: AEM 6.4 Assetsユーザガイド
 translation-type: tm+mt
-source-git-commit: 939da6b84ebfe5b3bbd97cd6a8b7556ea5189a13
+source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
 
 ---
 
@@ -17,14 +17,14 @@ source-git-commit: 939da6b84ebfe5b3bbd97cd6a8b7556ea5189a13
 + [ユーザーエクスペリエンスの改善](ux-improvements.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
 + AEM Assetsの使用 {#using}
-   + [AEM Assetsのホームページエクスペリエンス](assets-home-page.md)
+   + [AEM Assetsのホームページ体験](assets-home-page.md)
    + [AEM でのアセットの検索](search-assets.md)
    + [GQL 全文検索](gql-search.md)
-   + [多言語アセット](multilingual-assets.md)
+   + [多言語のアセット](multilingual-assets.md)
    + [AEM Assets での Adobe Stock アセットの使用](aem-assets-adobe-stock.md)
    + [フォルダーのアセットとコレクションのレビュー](bulk-approval.md)
    + [タイムラインのアクティビティストリーム](activity-stream.md)
-   + [アセットへのワークフローの適用](assets-workflow.md)
+   + [アセットの処理](assets-workflow.md)
    + [画像マップの追加](image-maps.md)
    + [MSMを使用したアセットの再利用](reuse-assets-using-msm.md)
 + Dynamic Media{#dynamic}
@@ -69,7 +69,7 @@ source-git-commit: 939da6b84ebfe5b3bbd97cd6a8b7556ea5189a13
    + [セレクターの操作](working-with-selectors.md)
 + アセットの拡張 {#extending}
    + [アセットのカスタマイズと拡張](extending-assets.md)
-   + [メディアハンドラーとワークフローを使用したアセットの処理](media-handlers.md)
+   + [メディアハンドラーとメディアハンドラーを使用したアセットのワークフロー](media-handlers.md)
    + [Assets の検索機能の拡張](searchx.md)
    + [AEM Assets と連携するための ImageMagick のインストールと設定](best-practices-for-imagemagick.md)
    + [Assets とアクティビティストリームの統合](extending-activity-stream.md)
@@ -94,11 +94,11 @@ source-git-commit: 939da6b84ebfe5b3bbd97cd6a8b7556ea5189a13
    + [メタデータの編集と追加](meta-edit.md)
    + [アセット移行ガイド](assets-migration-guide.md)
    + [XMP メタデータ](xmp.md)
-   + [アセットネットワークに関する考慮事項](assets-network-considerations.md)
+   + [Assets のネットワークに関する考慮事項](assets-network-considerations.md)
    + [AEM Assets と AEM Media Library との比較](medialibrary.md)
    + [PDFラスタライザの使用](aem-pdf-rasterizer.md)
    + [アセットのアップロード制限の設定](configuring-asset-upload-restrictions.md)
-   + [AEMとCreative Cloudの統合のベストプラクティス](aem-cc-integration-best-practices.md)
+   + [AEM と Creative Cloud の統合のベストプラクティス](aem-cc-integration-best-practices.md)
    + [AEM AssetsとInDesignサーバーの統合](indesign.md)
    + [メタデータプロファイル](metadata-profiles.md)
    + [アセットのデジタル著作権管理](drm.md)
@@ -119,7 +119,7 @@ source-git-commit: 939da6b84ebfe5b3bbd97cd6a8b7556ea5189a13
    + [フォルダーメタデータスキーマ](folder-metadata-schema.md)
    + [スマートタグの管理](managing-smart-tags.md)
 + Brand Portal {#brandportal}
-   + [Brand PortalでのAEM Assetsの設定](configure-aem-assets-with-brand-portal.md)
+   + [AEM Assets と Brand Portal の連携の設定](configure-aem-assets-with-brand-portal.md)
    + [Brand Portal へのアセットの公開](brand-portal-publish-assets.md)
    + [Brand Portal へのコレクションの公開](brand-portal-publish-collection.md)
    + [Brand Portal へのフォルダーの公開](brand-portal-publish-folder.md)
@@ -136,7 +136,7 @@ source-git-commit: 939da6b84ebfe5b3bbd97cd6a8b7556ea5189a13
 + Manage Assets {#managing}
    + [タッチ対応 UI を使用したアセットの管理](managing-assets-touch-ui.md)
    + [複数のアセットとコレクションの管理](managing-multiple-assets.md)
-   + [アセットの選択](asset-selector.md)
+   + [アセットセレクター](asset-selector.md)
    + [コレクションの管理](managing-collections-touch-ui.md)
    + [アセットのファイルのチェックインとチェックアウト](check-out-and-submit-assets.md)
    + [Smart Content Serviceを使用したアセットのタグ付けの設定](config-smart-tagging.md)
