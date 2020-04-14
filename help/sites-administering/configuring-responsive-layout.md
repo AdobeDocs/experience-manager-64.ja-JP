@@ -1,8 +1,8 @@
 ---
 title: レイアウトコンテナおよびレイアウトモードの設定
 seo-title: レイアウトコンテナおよびレイアウトモードの設定
-description: レイアウトコンテナおよびレイアウトモードの設定方法について学習します。
-seo-description: レイアウトコンテナおよびレイアウトモードの設定方法について学習します。
+description: レイアウトモードとレイアウトコンテナの設定方法を説明します。
+seo-description: レイアウトモードとレイアウトコンテナの設定方法を説明します。
 uuid: 952b7c86-76ab-4699-8530-8638e46bb50f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 10940000-808a-48ae-8e46-61eccef71eab
 legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/configuring-responsive-layouting
 translation-type: tm+mt
-source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
+source-git-commit: 3097133c42e1d9c291706516a0dbc2aa2d15ef50
 
 ---
 
@@ -26,7 +26,7 @@ source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
 
 AEM は、次のメカニズムを組み合わせて使用することにより、ページのレスポンシブレイアウトを実現します。
 
-* [**Layout Containerコンポーネント&#x200B;**](/help/sites-authoring/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode)
+* [**レイアウトコンテナ&#x200B;**](/help/sites-authoring/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode)コンポーネント
 
    このコンポーネントは、レスポンシブグリッド内にコンポーネントを追加および配置できるグリッド段落システムを提供します。ページのデフォルトのparsysとして使用したり、コンポーネントブラウザの作成者が使用できるようにしたりできます。
 
@@ -40,9 +40,9 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
       * ページのデフォルトの parsys として。
       * 両方.
 
-         ページの標準としてレイアウトコンテナを使用できますが、ユーザーはこの中にさらにレイアウトコンテナを追加できます。例えば、列の制御を行う場合などです。
+         ページの標準としてレイアウトコンテナを設定し、その中にレイアウトコンテナを追加できます。例えば、列の制御を行う場合などです。
 
-* **[レイアウトモード](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**レイアウトコンテナがページ上に配置されたら、レイアウトモードを使用し&#x200B;**て**、レスポンシブグリッド内にコンテンツを配置できます。
+* **[レイアウトモ](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**ードレイアウトコンテナをページ上に配置したら、レイアウトモードを使用し&#x200B;**て**、レスポンシブグリッド内にコンテンツを配置できます。
 
 * [**エミュレーター&#x200B;**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)コンポーネントをインタラクティブにサイズ変更することによってデバイスやウィンドウのサイズに従ってレイアウトを再編成する、レスポンシブ Web サイトを作成および編集できます。その後、エミュレーターを使用して、コンテンツのレンダリング方法を確認できます。
 
@@ -202,7 +202,7 @@ These procedures are required so you can resize components in the **Layout** mod
 
 AEM では、LESS を使用して、必要な CSS の一部を生成します。これらをプロジェクトに含める必要があります。
 
-さらに、[クライアントライブラリ](https://docs.adobe.com/content/docs/en/aem/6-0/develop/the-basics/clientlibs.html)を使用して、設定および関数呼び出しを追加する必要があります。以下の LESS の抜粋は、プロジェクトに最低限追加する必要のあるものの例です。
+さらに、[クライアントライブラリ](https://docs.adobe.com/content/docs/ja/aem/6-0/develop/the-basics/clientlibs.html)を使用して、設定および関数呼び出しを追加する必要があります。以下の LESS の抜粋は、プロジェクトに最低限追加する必要のあるものの例です。
 
 ```java
 @import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";
@@ -268,7 +268,7 @@ To properly resize and update the content of an adaptive image included in a res
 
 >[!CAUTION]
 >
->カスタムスタイルシートclientlibをヘッダの一部として読み込み、作成者と発行で適切に機能させる必要があります。
+>作成者と発行で正しく機能するには、カスタムスタイルシートclientlibをヘッダの一部として読み込む必要があります。
 
 ## ページ用にレイアウトコンテナコンポーネントを有効化 {#enable-the-layout-container-component-for-page}
 
