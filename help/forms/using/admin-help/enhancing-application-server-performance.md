@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: fad65765-d56d-4a9f-82d5-bcceb1758953
 translation-type: tm+mt
-source-git-commit: a417e571d7c3b8da8f38f3d1ad814610636eabbc
+source-git-commit: 39e579a6a295324af35a2c811ec3acc9c621160b
 
 ---
 
@@ -105,11 +105,11 @@ AEM Forms に送信して処理するドキュメントのサイズがデフォ�
 
    >[!NOTE]
    >
-   >JEE上のAEM Forms環境ではDocument Max Inline sizeプロパティの値が同じである必要があります。JEE上のAEM Formsは、JEE上のAEM Formsバンドルに含まれているOSGi上のAEM Forms環境です。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
+   >JEE上のAEM Forms環境とOSGi上のAEM FormsにJEE上のAEM Formsバンドルに含まれているAEM Forms環境では、ドキュメントの最大インラインサイズプロパティの値が同じである必要があります。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
 
 1. 次のシステムプロパティでアプリケーションサーバーを再起動します。
 
-   com.adobe.idp.defaultDocumentMaxInlineSize=[*value specified in Step 2*]
+   com.adobe.idp.defaultDocumentMaxInlineSize=`[value specified in Step 2]`
 
    >[!NOTE]
    >
@@ -161,7 +161,7 @@ Configuration Manager を実行しているとき、またはコマンドライ�
    * (Linux and UNIX) `ejbdeploy.sh`
 
 1. Find the `-Xmx256M` parameter and change it to a higher value, such as `-Xmx1024M`.
-1. ファイルを保存します。
+1.  ファイルを保存します。
 1. `ejbdeploy` コマンドを実行するか、または Configuration Manager を使用して再デプロイします。
 
 ## LDAP を使用した Windows Server 2003 のパフォーマンスの向上 {#improving-windows-server-2003-performance-with-ldap}
@@ -173,7 +173,7 @@ Configuration Manager を実行しているとき、またはコマンドライ�
 ### 接続プールを使用するための Windows Server の設定 {#configure-your-windows-server-for-connection-pooling}
 
 1. スタート／ファイル名を指定して実行をクリックし、「名前」ボックスに `regedit` と入力して「OK」をクリックし、レジストリエディターを起動します。
-1. レジストリキーに移動します `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
+1. レジストリキーに移動します。 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 1. レジストリエディターの右側のウィンドウで、TcpTimedWaitDelay という値の名前を探します。値の名前が表示されない場合は、メニューバーから編集／新規／DWORD 値を選択して名前を追加します。
 1. 「名前」ボックスにフラグメント名として「`TcpTimedWaitDelay`
 
