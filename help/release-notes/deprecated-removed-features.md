@@ -10,7 +10,7 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 15819d42-4897-40fa-a013-e019d1580fa2
 translation-type: tm+mt
-source-git-commit: 3316dbc8ef268be2b305d22da9003ae40414b4e1
+source-git-commit: 08cf51186b7e9ad62b92a266e95022d7d7a34a9b
 
 ---
 
@@ -144,7 +144,7 @@ source-git-commit: 3316dbc8ef268be2b305d22da9003ae40414b4e1
    <td>Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。<br><br>Adobe Analyticsが提 <a href="https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html">供するActivityMapプラグインを使用する</a> 。</td> 
   </tr>
   <tr>
-   <td>コンポーネント</td> 
+   <td>コンポーネント — フォーム</td> 
    <td>フォームキャプチャ<br />（foundation/components/form/captcha）</td> 
    <td>Google の ReCaptcha コンポーネントを代わりに使用します。</td> 
   </tr>
@@ -185,11 +185,6 @@ source-git-commit: 3316dbc8ef268be2b305d22da9003ae40414b4e1
   </tr>
   <tr>
    <td>Forms</td> 
-   <td>アダプティブフォームでのデフォルトのAEM Captchaサービスのサポートが削除されました。 </td> 
-   <td>Google の ReCaptcha を代わりに使用します。</td> 
-  </tr>
-  <tr>
-   <td>Forms</td> 
    <td>ドキュメントフラグメント内では画像がサポートされなくなりました。 </td> 
    <td>インタラクティブコミュニケーションでは、印刷および Web チャネルで画像を直接使用できます。<br /> </td> 
   </tr>
@@ -222,11 +217,6 @@ source-git-commit: 3316dbc8ef268be2b305d22da9003ae40414b4e1
     <td>Forms</td> 
     <td>JEE上のAEM Forms固有のランディングページを削除。</td> 
     <td>「JEE上のAEM Forms」ランディングページはAEMランディングページ(/aem/start.html)に置き換えられます。 </td>  
-  </tr>
-   <tr>
-   <td>Forms</td> 
-   <td>デフォルトのCaptchaのサポートを削除しました。</td> 
-   <td>GoogleのreCAPTCHAサービスを使用します。</td> 
   </tr>
    <tr>
    <td>Forms</td> 
