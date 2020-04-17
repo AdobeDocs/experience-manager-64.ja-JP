@@ -3,7 +3,7 @@ title: AEM Assets と Brand Portal の連携の設定
 description: 'Brand PortalでAEM Assetsを設定し、アセットとコレクションをBrand Portalに公開する方法を説明します。 '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: 608280909877d522fc69ed9723ff615dfaa0a50a
+source-git-commit: a2bd2734b1ec923c87f707c5183b3813e4511f10
 
 ---
 
@@ -67,7 +67,7 @@ AEM をダウンロードしたら、「[デプロイメントと保守](https:/
 
 **最新のAEMパッケージ** またはService Packが見つからない場合は、サポートにお問い合わせください。
 
-##  設定の作成{#configure-new-integration-64}
+## 設定の作成 {#configure-new-integration-64}
 
 AEM AssetsをBrand Portalで初めて設定する場合は、一覧に示された手順を実行します。
 1. [公開証明書の取得](#public-certificate)
@@ -193,9 +193,10 @@ Adobe I/O統合により、IMSアカウント設定の設定で必要なAPIキ�
 
 >[!CAUTION]
 >
->有効なIMS設定を1つだけ作成します。
+>IMS設定は1つだけにする必要があります。 複数のIMS設定を作成しないでください。
 >
->構成が正常であることを確認します。 構成が正常でない場合は、構成を削除し、新しい正常な構成を作成します。
+>IMS設定がヘルスチェックに合格していることを確認します。 設定がヘルスチェックに合格しない場合は無効です。 削除して、新しい有効な設定を作成する必要があります。
+
 
 
 ### Configure cloud service {#configure-the-cloud-service}
@@ -285,7 +286,7 @@ Brand Portalは、AEM Assets作成者インスタンスを使用して正常に�
 既存の設定をアップグレードするには、次の手順を一覧の手順で実行します。
 1. [実行中のジョブの確認](#verify-jobs)
 1. [既存の設定の削除](#delete-existing-configuration)
-1. [ 設定の作成](#configure-new-integration-64)
+1. [設定の作成](#configure-new-integration-64)
 
 ### 実行中のジョブの確認 {#verify-jobs}
 
