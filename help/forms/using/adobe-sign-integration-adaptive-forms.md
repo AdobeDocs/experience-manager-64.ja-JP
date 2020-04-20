@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 7d494c2e-d457-4d52-89be-a77ffa07eb88
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: abdcde27b33f290a4288b09c39bffb0d4f1918a1
 
 ---
 
@@ -22,15 +22,15 @@ Adobe Sign により、アダプティブフォームの電子署名ワークフ
 
 Adobe Sign とアダプティブフォームの一般的なシナリオでは、サービスを申し込むためのアダプティブフォームをユーザーが入力します。例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームの入力、送信、署名を行うと、サービスプロバイダーにそのフォームが送信され、追加の処理が実行されます。サービスプロバイダーは受信した申込フォームを確認し、Adobe Sign を使用してそのフォームを承認します。これに類似した電子署名ワークフローを有効にするには、Adobe Sign を AEM Forms に統合します。
 
-AEM formsでAdobe signを使用するには、AEMクラウドサービスでAdobe signを設定します。
+AEM FormsでAdobe Signを使用するには、AEMクラウドサービスでAdobe Signを設定します。
 
 ## 前提条件 {#prerequisites}
 
 Adobe Sign を AEM Forms に統合するには、以下のものが必要になります。
 
-* An active [Adobe Sign developer account](https://acrobat.adobe.com/us/en/why-adobe/developer-form.html).
+* An active [Adobe Sign developer account](https://acrobat.adobe.com/jp/ja/why-adobe/developer-form.html).
 * [SSL が有効になっている](/help/sites-administering/ssl-by-default.md) AEM Forms サーバー
-* [Adobe Sign API アプリケーション](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobeio/adobeio-documentation/master/sign/gstarted/create_app.md).
+* [Adobe Sign API アプリケーション](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
 * Adobe Sign API アプリケーションの資格情報（クライアントの ID と秘密鍵）
 
 ## AEM Forms を使用して Adobe Sign を設定する {#configure-adobe-sign-with-aem-forms}
@@ -82,27 +82,27 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 
    「**[!UICONTROL 作成]**」をタップして、Adobe Sign 設定を作成します。
 
-1. AEM Web コンソールを開きます。URLは `https://[server]:[port]/system/console/configMgr`
+1. AEM Web コンソールを開きます。The URL is `https://[server]:[port]/system/console/configMgr`
 1. Open **[!UICONTROL Forms Common Configuration Service]**.
 1. In the **[!UICONTROL Allow]** field, select **[!UICONTROL All users]** - All the users, anonymous or logged in, can preview attachments, verify and sign forms, and click **[!UICONTROL Save]**. オーサーインスタンスが Adobe Sign を使用するように設定されます。
 1. [パブリッシュ](/help/sites-deploying/deploy.md)インスタンスにログインし、以下の URL を開きます。
 
    `https://<server-name>:<port>/libs/granite/configurations/content/view.html/conf`
 
-1. 手順 1 ～ 12 を繰り返して、AEM Forms で Adobe Sign を設定します。設定に同じタイトル（手順3で指定）を使用し、同じ名前（手順6で指定）を使用して、作成者インスタンスに設定された設定を複製します。
+1. 手順 1 ～ 12 を繰り返して、AEM Forms で Adobe Sign を設定します。設定に同じタイトル（手順3で指定）を使用し、同じ名前（手順6で指定）を使用して、作成者インスタンスで設定された設定を複製します。
 
    これで Adobe Sign が AEM Forms に統合され、アダプティブフォームで使用できるようになりました。To [use Adobe Sign service in an adaptive form](/help/forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form), specify the configuration container created above in adaptive form properties.
 
 ## Adobe Sign スケジューラーを設定して署名ステータスを同期する {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
 
-Adobe Sign が有効になっているアダプティブフォームは、すべての署名者がフォームに署名するまで送信されません。Adobe Sign スケジューラーサービスは、デフォルトで、署名者からの応答を 24 時間ごとにチェック（ポーリング）するように設定されています。現在の環境に合わせて、このデフォルト値を変更することができます。デフォルトの間隔を変更するには、次の手順を実行します。
+Adobe Sign が有効になっているアダプティブフォームは、すべての署名者がフォームに署名するまで送信されません。Adobe Sign スケジューラーサービスは、デフォルトで、署名者からの応答を 24 時間ごとにチェック（ポーリング）するように設定されています。現在の環境に合わせて、このデフォルト値を変更することができます。次の手順を実行して、デフォルトの間隔を変更します。
 
 1. 管理者の資格情報を使用して AEM Forms サーバーにログインし、**[!UICONTROL ツール]**／**操作**／**Web コンソール**&#x200B;に移動します。
 
-   また、ブラウザーウィンドウで次のURLを開くこともできます。
+   次のURLをブラウザーウィンドウで開くこともできます。
 
    `https://[localhost]:[port]/system/console/configMgr`
 
-1. 「**[!UICONTROL Adobe Sign 設定サービス]**」オプションを探して選択します。「[ステータス更新スケジューラーの式](https://en.wikipedia.org/wiki/Cron#CRON_expression)」フィールドで **[!UICONTROL Cron 式]**&#x200B;を指定して「**[!UICONTROL 保存]**」をクリックします。例えば、毎日午前0時に設定サービスを実行するには、「ステータス更新スケジューラ `0 0 0 1/1 * ? *` ー式」フ **[!UICONTROL ィールドにを指定します]** 。
+1. 「**[!UICONTROL Adobe Sign 設定サービス]**」オプションを探して選択します。「[ステータス更新スケジューラーの式](https://en.wikipedia.org/wiki/Cron#CRON_expression)」フィールドで **[!UICONTROL Cron 式]**&#x200B;を指定して「**[!UICONTROL 保存]**」をクリックします。例えば、毎日午前0時に設定サービスを実行するには、「ステータス更新の `0 0 0 1/1 * ? *` スケジューラー式 **** 」フィールドに
 
 これで、Adobe Sign のステータスを同期するデフォルトの間隔が変更されました。
