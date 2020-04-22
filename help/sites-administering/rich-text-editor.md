@@ -3,7 +3,7 @@ title: リッチテキストエディターの設定
 description: AEM リッチテキストエディターの設定について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
+source-git-commit: c86d1ac76d97fa716cf70bdebe91d2b6dec46b0b
 
 ---
 
@@ -12,9 +12,7 @@ source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
 
 リッチテキストエディター（RTE）には、テキストコンテンツの編集に使用できる幅広い機能が用意されています。アイコン、選択ボックス、ツールバーおよびメニューを使用して、テキストを WYSIWYG で編集できます。
 
-RTE の設定をおこなうことで、オーサリングコンポーネント内で使用可能な機能を有効化、無効化および拡張できます。RTE 機能をオーサリングに使用する方法については、[リッチテキストエディターをオーサリングに使用](/help/sites-authoring/rich-text-editor.md)を参照してください。
-
-以下に、RTE 設定タスクの推奨されるワークフローを示します。
+RTE 機能をオーサリングに使用する方法については、[リッチテキストエディターをオーサリングに使用](/help/sites-authoring/rich-text-editor.md)を参照してください。RTE の設定をおこなうことで、オーサリングコンポーネント内で使用可能な機能を有効化、無効化および拡張できます。次のワークフローは、Experience ManagerでRTE設定ワークフローを完了する際に推奨されるタスクの順序を示しています。
 
 ![リッチテキストエディターを設定する標準的なワークフロー](assets/rte_workflow_v1.png)
 
@@ -44,45 +42,12 @@ RTE の設定をおこなうことで、オーサリングコンポーネント�
 
 AEM では、コンポーネントの各種モードを使用して、テキストコンテンツを作成および編集できます。コンテンツを作成およびフォーマットするためのツールバーオプションと、各種編集モードにおける RTE 対応コンポーネントのユーザーエクスペリエンスは、RTE 設定によって異なります。
 
-<table> 
- <tbody> 
-  <tr> 
-   <th>編集モード</th> 
-   <th>編集領域</th> 
-   <th>有効化が推奨される機能<br /> </th> 
-   <th>タッチ UI</th> 
-   <th>クラシック UI</th> 
-  </tr> 
-  <tr> 
-   <td>インライン</td> 
-   <td>小さな編集をすばやくおこなうのに適したインプレース編集。ダイアログボックスを開かないフォーマット</td> 
-   <td>最小限の RTE 機能</td> 
-   <td>○</td> 
-   <td>○</td> 
-  </tr> 
-  <tr> 
-   <td>RTE フルスクリーン</td> 
-   <td>ページ全体に広がる<br /> </td> 
-   <td>必要なすべての RTE 機能<br /> </td> 
-   <td>○</td> 
-   <td>×<br /> </td> 
-  </tr> 
-  <tr> 
-   <td>ダイアログ</td> 
-   <td>ページコンテンツの上面にダイアログボックスが表示されるが、ページ全体に広がらない</td> 
-   <td>クラシック UI の場合、必要なすべての RTE 機能。タッチ UI の場合、必要に応じて機能を有効化／無効化<br /> </td> 
-   <td>○</td> 
-   <td>○</td> 
-  </tr> 
-  <tr> 
-   <td>ダイアログ（フルスクリーン）<br /> </td> 
-   <td>フルスクリーンモードと同じ。RTE の横にダイアログのフィールドを含む<br /> </td> 
-   <td>必要なすべての RTE 機能</td> 
-   <td>○</td> 
-   <td>×</td> 
-  </tr> 
- </tbody> 
-</table>
+| 編集モード | 編集領域 | 有効化が推奨される機能 | タッチ UI | クラシック UI |
+|--- |--- |--- |--- |--- |
+| インライン | 小さな編集をすばやくおこなうのに適したインプレース編集。ダイアログボックスを開かないフォーマット | 最小限の RTE 機能 | ○ | ○ |
+| RTE フルスクリーン | ページ全体に広がる | 必要なすべての RTE 機能 | ○ | × |
+| ダイアログ | ページコンテンツの上面にダイアログボックスが表示されるが、ページ全体に広がらない | クラシック UI の場合、必要なすべての RTE 機能。タッチ UI の場合、必要に応じて機能を有効化／無効化 | ○ | ○ |
+| ダイアログ（フルスクリーン） | フルスクリーンモードと同じ。RTE の横にダイアログのフィールドを含む | 必要なすべての RTE 機能 | ○ | × |
 
 >[!NOTE]
 >
@@ -139,93 +104,23 @@ RTE の基本機能は、該当するプラグインのノードにある `featu
 * `features` プロパティの許可されている値。
 * プラグインが提供する機能の説明。
 
-<table> 
- <tbody> 
-  <tr> 
-   <td><p>プラグイン ID<br /> <br /> </p> </td> 
-   <td><p>features<br /> <br /> </p> </td> 
-   <td><p>説明<br /> <br /> </p> </td> 
-  </tr> 
-  <tr> 
-   <td><p>edit</p> </td> 
-   <td><p>cut<br /> copy<br /> paste-default<br /> paste-plaintext<br /> paste-wordhtml</p> </td> 
-   <td><p><a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles" target="_blank">切り取り、コピーおよび 3 つの貼り付けモード</a>。</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FindReplacePlugin">findreplace</a></p> </td> 
-   <td><p>find<br /> replace</p> </td> 
-   <td><p>検索と置換.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FormatPlugin">形式</a></p> </td> 
-   <td><p>bold<br /> italic<br /> underline</p> </td> 
-   <td><p><a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles" target="_blank">基本的なテキストフォーマット</a>。</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin">画像</a></p> </td> 
-   <td><p>画像</p> </td> 
-   <td><p>整列や代替テキストのような画像プロパティを設定します。コンテンツファインダーから画像をドラッグ＆ドロップするための基本サポートは、このプラグインなしでも機能します。</p> <p><em></em>注意：このオーサリング動作はブラウザーによって異なる可能性があります。例えば、Mozilla Firefoxには再サイズ化機能がありますが、Google Chromeにはありません。</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.KeyPlugin">keys</a></p> </td> 
-   <td><p> </p> </td> 
-   <td><p>この値を定義するには、<a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize" target="_blank">タブサイズ</a>を参照してください。</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.JustifyPlugin">justify</a></p> </td> 
-   <td><p>justifyleft<br /> justifycenter<br /> justifyright</p> </td> 
-   <td><p>段落の整列。</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.LinkPlugin">links</a></p> </td> 
-   <td><p>modifylink<br /> unlink<br /> anchor</p> </td> 
-   <td><p><a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles" target="_blank">ハイパーリンクおよびアンカー</a>。</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ListPlugin">lists</a></p> </td> 
-   <td><p>ordered<br />
-unordered<br />
-indent<br />
-outdent</p> </td> 
-   <td><p>This plug-in controls both <a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#indentmargin" target="_blank">indentation and lists</a>; including nested lists.</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.MiscToolsPlugin">misctools</a></p> </td> 
-   <td><p>specialchars<br /> sourceedit</p> </td> 
-   <td>Miscellaneous tools allow authors to enter <a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#spchar" target="_blank">special characters</a> or edit the HTML source. Also, you can add a whole <a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#definerangechar" target="_blank">range of special characters</a> if you want to define your own list.</td> 
-  </tr> 
-  <tr> 
-   <td><p>Paraformat</p> </td> 
-   <td><p>paraformat</p> </td> 
-   <td>デフォルトの段落フォーマットは、段落、見出し 1、見出し 2 および見出し 3（&lt;p&gt;、&lt;h1&gt;、&lt;h2&gt; および &lt;h3&gt;）です。<a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#paraformats" target="_blank">他の段落フォーマットを追加</a>したり、リストを拡張したりできます。</td> 
-  </tr> 
-  <tr> 
-   <td><p>spellcheck</p> </td> 
-   <td><p>checktext</p> </td> 
-   <td><p><a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#adddict" target="_blank">言語ごとのスペルチェッカー</a>。</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p>styles</p> </td> 
-   <td><p>styles</p> </td> 
-   <td>CSS クラスを使用したスタイル設定のサポート。<a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles" target="-blank">テキストで使用する</a> 、独自のスタイル範囲を追加（または拡張）する場合は、新しいテキストスタイルを追加します。</td> 
-  </tr> 
-  <tr> 
-   <td><p>subsuperscript</p> </td> 
-   <td><p>subscript<br /> superscript</p> </td> 
-   <td><p>基本形式の拡張で、サブスクリプトとスーパースクリプトを追加します。</p> </td> 
-  </tr> 
-  <tr> 
-   <td><p>table</p> </td> 
-   <td><p>table<br /> removetable<br /> insertrow<br /> removerow<br /> insertcolumn<br /> removecolumn<br /> cellprops<br /> mergecells<br /> splitcell<br /> selectrow<br /> selectcolumns</p> </td> 
-   <td>See <a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles" target="_blank">configure table styles</a>, if you want to add your own styles for either entire tables or individual cells.</td> 
-  </tr> 
-  <tr> 
-   <td><p>undo</p> </td> 
-   <td><p>undo<br /> redo</p> </td> 
-   <td>History size of <a href="/help/sites-administering/configure-rich-text-editor-plug-ins.md#undohistory" target="_blank">undo and redo</a> operations.</td> 
-  </tr> 
- </tbody> 
-</table>
+| プラグイン ID | features | 説明 |
+|--- |--- |--- |
+| edit | cut copy paste-default paste-plaintext paste-wordhtml | [切り取り、コピーおよび 3 つの貼り付けモード](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles)。 |
+| [findreplace](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FindReplacePlugin) | find replace | 検索と置換. |
+| [format](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FormatPlugin) | bold italic underline | [基本的なテキストフォーマット](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles)。 |
+| [画像](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin) | 画像 | 基本的な画像のサポート（コンテンツまたはコンテンツファインダーからのドラッグ）。 ブラウザーに応じて、サポートの動作が異なります |
+| [keys](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.KeyPlugin) |  | この値を定義するには、[タブサイズ](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize)を参照してください。 |
+| [justify](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.JustifyPlugin) | justifyleft justifycenter justifyright | 段落の整列。 |
+| [links](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.LinkPlugin) | modifylink unlink anchor | [ハイパーリンクおよびアンカー](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles)。 |
+| [lists](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ListPlugin) | ordered unordered indent outdent | This plug-in controls both [indentation and lists](/help/sites-administering/configure-rich-text-editor-plug-ins.md#indentmargin); including nested lists. |
+| [misctools](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.MiscToolsPlugin) | specialchars sourceedit | Miscellaneous tools allow authors to enter [special characters](/help/sites-administering/configure-rich-text-editor-plug-ins.md#spchar) or edit the HTML source. Also, you can add a whole [range of special characters](/help/sites-administering/configure-rich-text-editor-plug-ins.md#definerangechar) if you want to define your own list. |
+| Paraformat | paraformat | The default paragraph formats are Paragraph, Heading 1, Heading 2, and Heading 3 (`<p>`, `<h1>`, `<h2>`, and `<h3>`). [他の段落フォーマットを追加](/help/sites-administering/configure-rich-text-editor-plug-ins.md#paraformats)したり、リストを拡張したりできます。 |
+| spellcheck | checktext | [言語ごとのスペルチェッカー](/help/sites-administering/configure-rich-text-editor-plug-ins.md#adddict)。 |
+| styles | styles | CSS クラスを使用したスタイル設定のサポート。[新し追加い文字スタイルを作成します。](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles) |
+| subsuperscript | subscript superscript | 基本形式の拡張で、サブスクリプトとスーパースクリプトを追加します。 |
+| table | table removetable insertrow removerow insertcolumn removecolumn cellprops mergecells splitcell selectrow selectcolumns | See [configure table styles](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles), if you want to add your own styles for either entire tables or individual cells. |
+| undo | undo redo | History size of [undo and redo](/help/sites-administering/configure-rich-text-editor-plug-ins.md#undohistory) operations. |
 
 >[!NOTE]
 >
@@ -247,12 +142,8 @@ outdent</p> </td>
 >Do not name the node under `cq:inplaceEditing` as `config`. On `cq:inplaceEditing` node, define the following properties:
 >
 >* **名前**: `configPath`
-   >
-   >
-* **タイプ**: `String`
-   >
-   >
-* **値**：実際の設定を含むノードのパス
+>* **Type**: `String`
+>* **値**：実際の設定を含むノードのパス
 >
 >
 RTE 設定ノードの名前を `config` にしないでください。Otherwise, the RTE configurations take effect for only the administrators and not for the users in the group `content-author`.
@@ -276,7 +167,6 @@ RTE 設定ノードの名前を `config` にしないでください。Otherwise
 リッチテキストエディター（RTE）の各機能は一連のプラグインを介して使用可能になり、それぞれに features プロパティがあります。features プロパティを設定することで、各プラグインの各種機能を有効化または無効化できます。
 
 RTE プラグインの設定について詳しくは、[RTE プラグインのアクティベートおよび設定方法に関する説明](/help/sites-administering/configure-rich-text-editor-plug-ins.md)を参照してください。
-
 
 RTE の設定方法について理解するには、このサンプル設定をダウンロードしてください。このパッケージではすべての機能が有効になっています。
 
@@ -358,7 +248,7 @@ AEM 6.4 Service Pack 3 以降では、RTE フローで使用可能なオプシ�
 * RTEのユーザーインターフェイス設定が削除された場合、または項目が有効になっていない場合、コンテンツポリシーは項目を設定できません。
 * オーサーは、ユーザーインターフェイス設定およびコンテンツポリシーによって使用可能となっている機能にのみアクセスできます。
 
-例については、[テキストコアコンポーネントのドキュメント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor)を参照してください。
+例については、[テキストコアコンポーネントのドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor)を参照してください。
 
 ## ツールバーアイコンとコマンドのマッピングのカスタマイズ {#iconstoolbar}
 
@@ -407,7 +297,7 @@ Below is a sample snippet to map the command Bold to the Coral icon named `textI
 
 1. ノードを下に重ね `/libs/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui3` て表示 `/libs/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui2` しま `/apps`す。
 
-   カテゴリを `cq.authoring.dialog` から削 `/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui3` 除し、に追加しま `/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui2`す。
+   からカテゴリ `cq.authoring.dialog` を削 `/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui3` 除し、に追加しま `/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui2`す。
 
 1. ページに含まれている他の依存関係を `rte.coralui3` から `rte.coralui2` に変更します。For example, after overlaying the node `/libs/mcm/campaign/components/touch-ui/clientlibs/rte` under `/apps`, change any dependency on it from `rte.coralui3` to `rte.coralui2`.
 
@@ -419,27 +309,27 @@ Below is a sample snippet to map the command Bold to the Coral icon named `textI
 
 ## その他の情報 {#further-information}
 
-RTE の設定について詳しくは、[AEM ウィジェット API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html) リファレンスを参照してください。
+RTE の設定について詳しくは、[AEM ウィジェット API](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html) リファレンスを参照してください。
 
 特に、使用可能なプラグインおよび関連オプションを確認するには、以下を参照してください。
 
 * [CQ.form.RichText](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.RichText) コンポーネントは、スタイル設定されたテキスト情報（リッチテキスト）を編集するためのフォームフィールドを提供します。リッチテキストフォームに使用可能なすべてのパラメーターについては、「設定オプション」を参照してください。
 * The RichText component provides a wide range of functionality using plug-ins listed under [CQ.form.rte.plugins.Plugin](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin). For each plug-in:
 
-   * 有効化（または無効化）が可能な機能の詳細については「機能」を参照してください。
-   * 該当するプラグインの詳細設定に使用可能なすべてのパラメーターについては、「設定オプション」を参照してください。
+   * 有効（または無効）にできる機能の詳細については、機能を参照してください。
+   * 適切なプラグインの詳細な設定については、利用可能なすべてのパラメータの設定オプションを参照してください。
 
 * リンクの HTML ルールに関する詳細も参照できます。
 
 上記のオプションは、独自の RTE を拡張およびカスタマイズするために使用できます。例えば、リンク作成時にページで使用できるアンカーをリストするために、`LinkPlugin` を独自に実装できます。
 
-## 既知の制限 {#known-limitations}
+## 既知の制限事項 {#known-limitations}
 
 AEM RTE 機能には次の制限があります。
 
-* RTE 機能は AEM コンポーネントダイアログでのみサポートされます。RTE は、ウィザードやタッチ操作向け UI の基盤フォーム（[ページプロパティ](../sites-developing/page-properties-views.md)や[基礎モード](../sites-authoring/scaffolding.md)など）ではサポートされません。
+* RTE 機能は AEM コンポーネントダイアログでのみサポートされます。RTE は、ウィザードやタッチ操作向け UI の基盤フォーム（[ページプロパティ](/help/sites-developing/page-properties-views.md)や[基礎モード](/help/sites-authoring/scaffolding.md)など）ではサポートされません。
 
-* AEM は[ハイブリッドデバイス](../release-notes/known-issues.md)では機能しません。
+* AEM は[ハイブリッドデバイス](/help/release-notes/known-issues.md)では機能しません。
 
 * Do not name the RTE configuration node `config`. Otherwise, the RTE configuration takes effect for only the administrators and not for the users in the group `content-author`.
 
