@@ -8,7 +8,7 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 40c0a17b-6894-44cc-b1f7-490913061532
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: 813675c7cd770008e8c986f87f37f36b0b193dd2
 
 ---
 
@@ -46,10 +46,10 @@ Web チャネル用のテンプレートは AEM で作成されます。テン�
 Based on the [use case](/help/forms/using/create-your-first-interactive-communication.md) and [anatomy](/help/forms/using/planning-interactive-communications.md), create the following subforms in the XDP template:
 
 * 請求明細：ドキュメントフラグメントが含まれます
-* 顧客の詳細：ドキュメントフラグメントを含む
-* 請求書要約：ドキュメントフラグメントを含む
-* サマリ：ドキュメントフラグメント（Chargesサブフォーム）とグラフ（Chartsサブフォーム）を含めます
-* 通話の項目化：テーブルを含む（レイアウトフラグメント）
+* 顧客の詳細：ドキュメントフラグメント
+* 請求書要約：ドキュメントフラグメント
+* 概要：ドキュメントフラグメント（Chargesサブフォーム）とグラフ（Chartsサブフォーム）を含みます
+* 通話の項目別：テーブルを含む（レイアウトフラグメント）
 * 今すぐ支払う：画像を含む
 * 付加価値サービス：画像を含む
 
@@ -109,8 +109,8 @@ XDP ファイルを Forms サーバーにアップロード後、これらのサ
 
 Forms Designer を使用して XDP テンプレートの作成が終わったら、AEM Forms サーバーにアップロードする必要があります。これにより、作成されたテンプレートは、インタラクティブ通信を作成する際に使用できるようになります。
 
-1. **フォーム**／**フォームとドキュメント**&#x200B;を選択します。
-1. **作成**／**ファイルのアップロード**&#x200B;をタップします。
+1. **[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;を選択します。
+1. **作成**／**ファイルのアップロード**&#x200B;の順にタップします。
 
    Navigate and select the **create_first_ic_print_template** template (XDP) and tap **Open** to import the XDP template to the AEM Forms server.
 
@@ -134,7 +134,7 @@ Forms Designer を使用して XDP テンプレートの作成が終わったら
 
    同様に、**Cell2**、**Cell3**、**Cell4**&#x200B;および&#x200B;**Cell5** の名前をそれぞれ&#x200B;**時刻**、**番号**、**時間**&#x200B;および&#x200B;**料金**&#x200B;に変更します。
 
-1. **Designerビューで「ヘッダー」テキストフィールドをクリックし、** Time **、** Number **、** Duration、Charges Time、Charges Timeに名前を ********&#x200B;変更します。
+1. **Designer表示の「Header」テキストフィールドをクリックし、** Time **、Number**、 **Duration、Charges Charges Cloudに名前**********&#x200B;を変更します。
 
    ![layout_fragment_print](assets/layout_fragment_print.png)
 
@@ -183,10 +183,10 @@ Web チャネルテンプレートを作成するには、作成したテンプ�
 Based on the [use case](/help/forms/using/create-your-first-interactive-communication.md) and [anatomy](/help/forms/using/planning-interactive-communications.md), create the following panels in the Web template:
 
 * 請求明細：ドキュメントフラグメントが含まれます
-* 顧客の詳細：ドキュメントフラグメントを含む
-* 請求書要約：ドキュメントフラグメントを含む
-* 料金の概要：ドキュメントフラグメントとグラフを含めます（2列レイアウト）
-* 通話の項目化：テーブルを含む
+* 顧客の詳細：ドキュメントフラグメント
+* 請求書要約：ドキュメントフラグメント
+* 料金の概要：ドキュメントフラグメントとグラフ（2列レイアウト）を含みます。
+* 通話の項目別：テーブルを含む
 * Pay Now: Includes a **Pay Now** button and an image
 * Value Added Services: Includes an image and a **Subscribe** button.
 
@@ -214,7 +214,7 @@ Based on the [use case](/help/forms/using/create-your-first-interactive-communic
 
    ![content_tree_root_panel](assets/content_tree_root_panel.png)
 
-1. パネルを選択し、「 ![configure_icon](assets/configure_icon.png) （設定）」をタップします。
+1. パネルを選択し、「 ![configure_icon](assets/configure_icon.png) (Configure)」をタップします。
 1. プロパティペインで、次の手順を実行します。
 
    1. 「名前」フィールドに&#x200B;**billdetails** と入力します。
