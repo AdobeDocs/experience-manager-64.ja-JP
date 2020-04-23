@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: b74a0933-2b96-4a88-9995-6fb21df141aa
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: a5cac0d369bb40659cfde011e5d6ef9a68dc4012
 
 ---
 
@@ -141,12 +141,10 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
    * 追加の: `/libs/ws/js/runtime/templates/`
    * を: `/apps/ws/js/runtime/templates/`
 
-1. に新しい情報を追加しま `/apps/ws/js/runtime/templates/task.html`す。
+1. に追加新しい情報を追加しま `/apps/ws/js/runtime/templates/task.html`す。
 
    例えば、次の下に追加しま `div class="taskProperties"`す。
 
    ```
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
    ```
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
