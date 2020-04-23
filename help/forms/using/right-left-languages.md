@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: b8465471-0458-42d6-8209-8ba90f41154a
 translation-type: tm+mt
-source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -22,4 +22,3 @@ HTML5 フォームは、ヘブライ語のような右から左に書く言語�
 
 Mobile Forms は、Internet Explorer 以外のすべてのブラウザーで右から左に書く言語をサポートしています。
 
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
