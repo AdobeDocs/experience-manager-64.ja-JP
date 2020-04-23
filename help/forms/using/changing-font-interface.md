@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 487e3966-443a-408e-b5af-899fcba6fca6
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -74,8 +74,6 @@ Follow the [Generic steps for AEM Forms workspace customization](/help/forms/usi
 
 1. Workspace を再起動して変更が表示されるようにブラウザのキャッシュをクリアします。
 
-![](assets/change_font_before.png) change_font_before ****&#x200B;図：フォントをカ *スタマイズする前の上部ナビゲーションバー*
+![change_font_before](assets/change_font_before.png)**図：** フォントをカ *スタマイズする前の上部ナビゲーションバー*
 
-![](assets/change_font_after.png) change_font_after ****&#x200B;図：最初のタブ *のフォントをカスタマイズした後の上部ナビゲーションバー*
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
+![change_font_after](assets/change_font_after.png)**図：** 最初のタ *ブのフォントをカスタマイズした後の上部ナビゲーションバー*
