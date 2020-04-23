@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: c88a3013-5da2-4b09-9f29-ac1fb00822ec
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -39,7 +39,7 @@ source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
    sharequeuemodel : pathprefix + 'runtime/myModels/mySharequeue',
    ```
 
-1. にエイリアス `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` の変更/追加がある場合に更新しま `main.js`す。
+1. にエイリアス `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` の変更または追加がある場合に更新しま `main.js`す。
 
    たとえば、新しい Sharequeue モデル、mySharequeue を追加する場合は、
 
@@ -72,5 +72,3 @@ source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
 >[!NOTE]
 >
 >縮小した場合は、アップグレードに影響が出ます。
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
