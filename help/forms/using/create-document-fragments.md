@@ -8,7 +8,7 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e9b78e2b-af7d-49d7-b37f-c96ec732015e
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 813675c7cd770008e8c986f87f37f36b0b193dd2
 
 ---
 
@@ -24,7 +24,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 ドキュメントフラグメントとは再利用可能な通信のコンポーネントを指し、インタラクティブ通信の作成に使用されます。ドキュメントフラグメントは、次のいずれかの種類になります。
 
 * テキスト — テキストアセットは、1つ以上の段落で構成されるコンテンツの一部です。 段落は静的または動的にすることができます。
-* リスト — リストは、テキスト、リスト、条件、画像を含む、ドキュメントフラグメントのグループです。
+* リスト-リストは、テキスト、ドキュメント、条件、画像を含むリストフラグメントのグループです。
 * 条件 — 条件を使用すると、フォームデータモデルから受信したデータに基づいて、インタラクティブ通信に含めるコンテンツを定義できます。
 
 This tutorial walks you through the steps to create multiple text document fragments based on the anatomy provided in [Plan the Interactive Communication](/help/forms/using/planning-interactive-communications.md) section. このチュートリアルを完了すると、次の操作を実行できるようになります。
@@ -33,7 +33,7 @@ This tutorial walks you through the steps to create multiple text document fragm
 * 変数の作成
 * ルールを作成して適用
 
-![text_document_fragments](assets/text_document_fragments.gif)
+![text_ドキュメント_fragments](assets/text_document_fragments.gif)
 
 このチュートリアルで作成されたドキュメントフラグメントのリストは次のとおりです。
 
@@ -61,7 +61,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](/help/
 
 エージェント UI をデータソースとしてフィールドの変数やスタティックテキストを作成して、ドキュメントフラグメント内でフォームデータモデル要素を使用するには、次の手順を実行します。
 
-1. 「**フォーム**／**ドキュメントフラグメント**」を選択します。
+1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
 
 1. Select **Create** > **Text**.
 1. 次の情報を指定します。
@@ -120,7 +120,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](/help/
 
 エージェント UI をデータソースとしてフィールドの変数やスタティックテキストを作成して、ドキュメントフラグメント内でフォームデータモデル要素を使用するには、次の手順を実行します。
 
-1. 「**フォーム**／**ドキュメントフラグメント**」を選択します。
+1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
 1. Select **Create** > **Text**.
 1. 次の情報を指定します。
 
@@ -179,7 +179,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](/help/
 
 エージェント UI をデータソースとしてフィールドの変数やスタティックテキストを作成して、ドキュメントフラグメント内でフォームデータモデル要素を使用するには、次の手順を実行します。
 
-1. 「**フォーム**／**ドキュメントフラグメント**」を選択します。
+1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
 1. Select **Create** > **Text**.
 1. 次の情報を指定します。
 
@@ -226,7 +226,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](/help/
 
 ## 手順 4：請求概要テキストドキュメントフラグメントの作成 {#step-create-summary-of-charges-text-document-fragment}
 
-請求の概要ドキュメントフラグメントには、次のフィールドが含まれます。
+課金の概要ドキュメントフラグメントには、次のフィールドが含まれます。
 
 | フィールド | データソース |
 |---|---|
@@ -242,7 +242,7 @@ Use **FDM_Create_First_IC**, as described in the [Create form data model](/help/
 
 スタティックテキストを作成してドキュメントフラグメント内でフォームデータモデル要素を使用するには、次の手順を実行します。
 
-1. 「**フォーム**／**ドキュメントフラグメント**」を選択します。
+1. 「**[!UICONTROL フォーム]**／**[!UICONTROL ドキュメントフラグメント]**」を選択します。
 1. Select **Create** > **Text**.
 1. 次の情報を指定します。
 
