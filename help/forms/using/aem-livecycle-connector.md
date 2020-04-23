@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: 0ce79686522da4fb3d017068b623c76f81c6b23a
 
 ---
 
@@ -28,7 +28,7 @@ AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/form
 
 プロパティは説明がなくても分かりますが、重要なプロパティは次のとおりです。
 
-* **サーバー URL** - LiveCycle Server への URL を指定します。LiveCycleとAEMがhttps経由で通信するようにする場合は、次のJVMを使用してAEMを起動します
+* **サーバー URL** - LiveCycle Server への URL を指定します。LiveCycleとAEMの間でhttps経由で通信する場合は、AEMを次のJVMと開始します
 
    ```
    argument 
@@ -79,7 +79,7 @@ AEM LiveCycle Connector は、標準的な OSGi の方法を使ってアクセ�
    </dependency>
    ```
 
-   サービスを開始するには、サービスに対応する Maven 依存性を追加します。依存性のリストについて詳しくは、「[Document Service リスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)」を参照してください。例えば、Generate PDFサービスの場合は、次の依存関係を追加します。
+   サービスを開始するには、サービスに対応する Maven 依存性を追加します。依存性のリストについて詳しくは、「[Document Service リスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)」を参照してください。例えば、Generate PDFサービスの場合、次の依存関係を追加します。
 
    ```xml
    <dependency>
@@ -113,7 +113,7 @@ AEM LiveCycle Connector は、標準的な OSGi の方法を使ってアクセ�
                );
    ```
 
-   上記のコードスニペットでは、ドキュメントを PDF に変換するために GeneratePdfServiceClient の createPDF API を開始します。次のコードを使用し、JSP で同じ呼び出しを実行できます。主な違いは、次のコードではSling scriptHelperを使用してGeneratePdfServiceClientにアクセスする点です。
+   上記のコードスニペットでは、ドキュメントを PDF に変換するために GeneratePdfServiceClient の createPDF API を開始します。次のコードを使用し、JSP で同じ呼び出しを実行できます。主な違いは、次のコードではSling ScriptHelperを使用してGeneratePdfServiceClientにアクセスする点です。
 
    ```java
    <%@ page import="com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient" %>
@@ -478,5 +478,3 @@ InvocationResponse response = serviceClientFactory.getServiceClient().invoke(ir)
   <version>11.0.0</version>
 </dependency>
 ```
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
