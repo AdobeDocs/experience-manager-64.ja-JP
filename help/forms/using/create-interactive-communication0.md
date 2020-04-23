@@ -8,7 +8,7 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 39262cb1-1447-469a-9c01-886f66eeec74
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: 813675c7cd770008e8c986f87f37f36b0b193dd2
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
 
 すべての構築ブロックを使ってインタラクティブ通信を作成する
 
-![対話的なコミュニケーションのスタイルを作る](assets/styleaf.png)
+![対話型のコミュニケーションをスタイル化する](assets/styleaf.png)
 
 This tutorial is a step in the [Create your first Interactive Communication](/help/forms/using/create-your-first-interactive-communication.md) series. チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
 
@@ -37,17 +37,17 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 以下は、本チュートリアル内で既に作成済みで、印刷チャネル用のインタラクティブ通信を作成する際に必要になるリソース一覧です。
 
-**** 印刷テンプレート： [create_first_ic_print_template](/help/forms/using/create-templates-print-web.md)
+**印刷テンプレート：**[create_first_ic_print_template](/help/forms/using/create-templates-print-web.md)
 
-**** Form Data Model: [FDM_Create_First_IC](/help/forms/using/create-form-data-model0.md)
+**Form Data Model:**[FDM_Create_First_IC](/help/forms/using/create-form-data-model0.md)
 
-**** ドキュメントフラグメント： [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](/help/forms/using/create-document-fragments.md)
+**ドキュメントフラグメント：**[bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](/help/forms/using/create-document-fragments.md)
 
 **レイアウトフラグメント：** [table_lf](/help/forms/using/create-templates-print-web.md)
 
 **画像：** PayNow および ValueAddedServices
 
-1. AEM オーサーインスタンスにログインし、**Adobe Experience Manager**／**フォーム**／**フォームとドキュメント**&#x200B;に移動します。
+1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
 1. Tap **Create** and select **Interactive Communication**. The **Create Interactive Communication** wizard is displayed.
 1. 「**タイトル**」と「**名前**」フィールドに **create_first_ic** と入力します。Select **FDM_Create_First_IC** as the Form Data Model and tap **Next**.
 1. In the **Channels** wizard:
@@ -75,9 +75,9 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
    1. グラフ名を指定します。
    1. 「**グラフのタイプ**」ドロップダウンリストから「**円グラフ**」を選択します。
-   1. **X 軸**&#x200B;セクションの&#x200B;**通話**&#x200B;データモデルオブジェクトタイプから **Calltype** プロパティを選択します。「 ![done_icon」をタップします](assets/done_icon.png)。
+   1. **X 軸**&#x200B;セクションの&#x200B;**通話**&#x200B;データモデルオブジェクトタイプから **Calltype** プロパティを選択します。「 ![done_icon](assets/done_icon.png)」をタップ
    1. 「**関数**」ドロップダウンリストから&#x200B;**頻度**&#x200B;を選択します。
-   1. **Y-axisセクションのcalls** data modelオ **ブジェクトタイプから** calltypeプロパティを選択します **** 。 「 ![done_icon」をタップします](assets/done_icon.png)。
+   1. Select the **calltype** property from the **calls** data model object type in the **Y-axis** section. 「 ![done_icon](assets/done_icon.png)」をタップ
    1. Tap ![done_icon](assets/done_icon.png) to save the chart properties.
 
 1. Go to the **Assets** tab and apply the filter to display only the layout fragments in the left pane. **table_lf** レイアウトフラグメントを&#x200B;**通話明細**&#x200B;のターゲット領域にドラッグアンドドロップします。
@@ -99,15 +99,15 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 以下は、本チュートリアル内で既に作成済みで、Web チャネル用のインタラクティブ通信を作成する際に必要になるリソース一覧です。
 
-**** Webテンプレート： [Create_First_IC_Web_Template](/help/forms/using/create-templates-print-web.md)
+**Webテンプレート：**[Create_First_IC_Web_Template](/help/forms/using/create-templates-print-web.md)
 
-**** Form Data Model: [FDM_Create_First_IC](/help/forms/using/create-form-data-model0.md)
+**Form Data Model:**[FDM_Create_First_IC](/help/forms/using/create-form-data-model0.md)
 
-**** ドキュメントフラグメント： [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](/help/forms/using/create-document-fragments.md)
+**ドキュメントフラグメント：**[bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](/help/forms/using/create-document-fragments.md)
 
-**** 画像：PayNowWebおよびValueAddedServicesWeb
+**画像：** PayNowWebおよびValueAddedServicesWeb
 
-1. AEM オーサーインスタンスにログインし、**Adobe Experience Manager**／**フォーム**／**フォームとドキュメント**&#x200B;に移動します。
+1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
 1. Tap **Create** and select **Interactive Communication**. The **Create Interactive Communication** wizard is displayed.
 1. 「**タイトル**」と「**名前**」フィールドに **create_first_ic** と入力します。Select **FDM_Create_First_IC** as the Form Data Model and tap **Next**.
 1. In the **Channels** wizard:
@@ -134,9 +134,9 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
    1. グラフ名を指定します。
    1. 「**グラフのタイプ**」ドロップダウンリストから「**円グラフ**」を選択します。
-   1. **X 軸**&#x200B;セクションの&#x200B;**通話**&#x200B;データモデルオブジェクトタイプから **Calltype** プロパティを選択します。「 ![done_icon」をタップします](assets/done_icon.png)。
+   1. **X 軸**&#x200B;セクションの&#x200B;**通話**&#x200B;データモデルオブジェクトタイプから **Calltype** プロパティを選択します。「 ![done_icon](assets/done_icon.png)」をタップ
    1. 「**関数**」ドロップダウンリストから&#x200B;**頻度**&#x200B;を選択します。
-   1. **Y-axisセクションのcalls** data modelオ **ブジェクトタイプから** calltypeプロパティを選択します **** 。 「 ![done_icon」をタップします](assets/done_icon.png)。
+   1. Select the **calltype** property from the **calls** data model object type in the **Y-axis** section. 「 ![done_icon](assets/done_icon.png)」をタップ
    1. Tap ![done_icon](assets/done_icon.png) to save the chart properties.
 
 1. 左側のペインから「**データソース**」タブを選択し、**通話** データモデルオブジェクトを&#x200B;**通話明細**&#x200B;のターゲット領域にドラッグアンドドロップします。All properties in the **calls** data model object are displayed as table columns in the **Itemised Calls** target area in the right pane.
@@ -186,7 +186,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 印刷チャネルを使って Web チャネルのコンテンツを派生するには、次の手順を実行します。
 
-1. AEM オーサーインスタンスにログインし、**Adobe Experience Manager**／**フォーム**／**フォームとドキュメント**&#x200B;に移動します。
+1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
 1. Tap **Create** and select **Interactive Communication**. The **Create Interactive Communication** wizard is displayed.
 1. 「**タイトル**」と「**名前**」フィールドに **create_first_ic** と入力します。Select **FDM_Create_First_IC** as the Form Data Model and tap **Next**.
 1. In the **Channels** wizard:
@@ -206,7 +206,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
    Hover over the relevant target area in the web channel and select ![cancelinheritance](assets/cancelinheritance.png) (Cancel Inheritance) and then in the **Cancel Inheritance** dialog, tap **Yes**.
 
-   ![cancel_inheritance_web_channel](assets/cancel_inheritance_web_channel.png)
+   ![cancel_inheritance_web_チャネル](assets/cancel_inheritance_web_channel.png)
 
    コンポーネントの継承をキャンセルした場合は、その継承を再度有効にすることができます。To re-enable inheritance, hover over the boundary of the relevant target area, which includes the component, and tap ![reenableinheritance](assets/reenableinheritance.png).
 
