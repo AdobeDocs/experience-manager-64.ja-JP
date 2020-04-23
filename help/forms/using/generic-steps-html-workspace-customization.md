@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 54326a05-3fb0-4111-a6ec-230b6473052e
 translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -77,17 +77,16 @@ source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
    1. Create a folder named `js`at `/apps/ws`. 「**[!UICONTROL すべて保存]**」をクリックします。
    1. Create a folder named `libs`at `/apps/ws/js`. 「**[!UICONTROL すべて保存]**」をクリックします。
    1. Create a folder named `jqueryui`at `/apps/ws/js/libs`. 「**[!UICONTROL すべて保存]**」をクリックします。
-   1. にコピ `/libs/ws/js/libs/jqueryui/jquery.ui.datepicker-ja.js` ーしま `/apps/ws/js/libs/jqueryui`す。 「**[!UICONTROL すべて保存]**」をクリックします。
+   1. `/libs/ws/js/libs/jqueryui/jquery.ui.datepicker-ja.js` を `/apps/ws/js/libs/jqueryui` にコピーします。「**[!UICONTROL すべて保存]**」をクリックします。
 
 1. HTML のカスタマイズは以下のようにして実行します。
 
    1. の下で、 `/apps/ws/js`という名前のフォルダを作成しま `runtime`す。 「**[!UICONTROL すべて保存]**」をクリックします。
    1. の下で、 `/apps/ws/js/runtime`という名前のフォルダを作成しま `templates`す。 「**[!UICONTROL すべて保存]**」をクリックします。
-   1. にコピ `/libs/ws/js/main.js` ーしま `/apps/ws/js/main.js`す。
+   1. `/libs/ws/js/main.js` を `/apps/ws/js/main.js` にコピーします。
    1. Copy /libs/ws/js/registry.js to `/apps/ws/js/registry.js`.
 
 1. 「**[!UICONTROL Save All]**」をクリックし、キャッシュをクリアして AEM Forms Workspace を更新します。
 
    URLにアクセスし、管 `https://[server]:[port]/lc/ws` 理者/パスワードの資格情報を使用してログインします。 ブラウザーがにリダイレクトされま `https://[server]:[port]/lc/apps/ws/index.html`す。
 
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
