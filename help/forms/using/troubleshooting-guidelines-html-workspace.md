@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 5dae9ed9-77a3-44f5-a94d-ca5c355c8730
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: dca22290646025c5e0309162e3cfae857311c9ea
 
 ---
 
@@ -153,9 +153,9 @@ AEM Forms Workspace では次の操作が可能です。
 
 スクリプトおよびスタイルは異なるブラウザーにデバッグすることができます。
 
-* **IEでのデバッグ**:IEでAEM Forms Workspaceをデバッグするには、次を参照してください。https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx [](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx).
+* **IEでのデバッグ**:IEでAEM Forms Workspaceをデバッグするには、次を参照してください。 [https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx)。
 
-* **Chromeでのデバッグ**:Chromeでデバッガーを開くには、次のショートカットを使用します。Ctrl + Shift + I。詳しくは、次を参照してください。https://developer.chrome.com/extensions/tut_debugging.html [](https://developer.chrome.com/extensions/tut_debugging.html).
+* **Chromeでのデバッグ**:Chromeでデバッガーを開くには、次のショートカットを使用します。Ctrl + Shift + I。詳しくは、次を参照してください。 [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html)。
 
 * **Firefox でのデバッグ**：複数のアドオンを Firefox でスクリプトおよびスタイルのデバッグに使用することができます。For example, Firebug is one such debugging utility ([https://getfirebug.com](https://getfirebug.com)).
 
@@ -192,5 +192,3 @@ AEM Forms Workspace では次の操作が可能です。
 1. デザインにプロセスプロパティを使用している HTML フォームを AEM Forms Workspace でレンダリングすると、フォーム内に「送信」ボタンが表示されます。
 
    フォームのデザイン中にプロセスプロパティを使用すると、フォーム内に「送信」ボタンが追加されます。AEM Forms Workspace で PDF としてレンダリングすると、「送信」ボタンはエンドユーザーに表示されなくなります。ただし、AEM Forms Workspace で HTML フォームとしてレンダリングすると、「送信」ボタンがエンドユーザーに表示されます。フォーム内で「送信」ボタンをクリックしても、いずれのアクションも開始されません。AEM Forms Workspace の下部（フォームの外側）にある「送信」ボタンをクリックすると、タスクは完了します。
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
