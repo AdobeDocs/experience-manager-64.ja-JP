@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: 3c2a44a7-24e7-49ee-bf18-eab0e44efa42
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -132,7 +132,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
   </tr>
   <tr>
    <td>click : function()</td> 
-   <td>フィールドにフォーカスを置き、XFA_CLICK_EVENTを呼び出します。</td> 
+   <td>フィールドにフォーカスし、XFA_CLICK_イベントを呼び出します。</td> 
   </tr>
   <tr>
    <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>erorrMessage: string </em>representing the error<br /> <em>errorType: string (“warning”/”error”)</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td> 
@@ -154,7 +154,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 <table> 
  <tbody>
   <tr>
-   <th>Option</th> 
+   <th>オプション</th> 
    <th>説明</th> 
   </tr>
   <tr>
@@ -177,7 +177,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 <table> 
  <tbody>
   <tr>
-   <th>Option</th> 
+   <th>オプション</th> 
    <th>説明</th> 
   </tr>
   <tr>
@@ -212,8 +212,8 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
    <th>説明</th> 
   </tr>
   <tr>
-   <td><p><em> addItem:function(itemValues)<br /> itemValues:displayとsaveの値を含むオブジ <br /> ェクト{sDisplayVal:&lt;displayValue&gt;, sSaveVal:&lt;値を保存&gt;}</em></p> </td> 
-   <td>項目をリストに追加します。</td> 
+   <td><p>addItem:<em> function(itemValues)<br /> itemValues: object containing the display and save value <br /> {sDisplayVal: &lt;displayValue&gt;, sSaveVal: &lt;save Value&gt;}</em></p> </td> 
+   <td>アイテムをリストに追加</td> 
   </tr>
   <tr>
    <td>deleteItem<em>: function(nIndex)<br /> nIndex：リストから削除する項目のインデックス<br /> </em><br /> <br /> </td> 
@@ -261,11 +261,10 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 
 ### DateTimeEdit: (DateField) {#datetimeedit-datefield}
 
-| Option | 説明 |
+| オプション | 説明 |
 |---|---|
 | days | そのフィールドのローカライズされた曜日の名前。 |
 | months | そのフィールドのローカライズされた月の名前。 |
 | zero | 数字の 0 のローカライズされたテキスト。 |
 | clearText | 「クリア」ボタンのローカライズされたテキスト。 |
 
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
