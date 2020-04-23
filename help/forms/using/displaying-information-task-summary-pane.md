@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 90d0f584-b598-4b21-85d7-31da5f13d404
 translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
 
 AEM Forms ワークスペースでタスクを開くと、タスクの概要ペインはタスクのサマリーを表示できます。タスクに対するこの追加の関連情報は、AEM Forms ワークスペースのエンドユーザーにとってより価値のあるものになります。
 
-AEM Forms Workspaceでは、タスクの概要ペインに選択したWebページを表示できます。 Workbench を使用してタスクの概要ペインを表示するためのプロセスを作成することができます。
+AEM Forms Workspaceでは、選択したWebページをタスクの概要ペインに表示できます。 Workbench を使用してタスクの概要ペインを表示するためのプロセスを作成することができます。
 
 1. Workbench で「Assign Task」処理を作成します。「Assign Task」操作についての詳細は、[Workbench ヘルプ](https://help.adobe.com/en_US/AEMForms/6.1/WorkbenchHelp/)のサービスリファレンストピックを参照してください。
 
@@ -30,9 +30,9 @@ AEM Forms Workspaceでは、タスクの概要ペインに選択したWebペー�
 1. タスクの概要 URL フィールドを設定します。リテラル値、テンプレート、変数、または XPath 式を指定できます。
 1. タスクの概要ページに関する情報を表示する例を以下に示します。
 
-   * でCRXDE Lite環境にログインします `https://[server]:[port]/lc/crx/de`。
-   * `Create a node`**SampleSummary **/` under `content:` with type ``. In the properties of this node, add `` of type String and value ``. In the Access Control List of this node, add an entry for `unstructuredsling:` allowing `resourceTypeSampleSummaryPERM_WORKSPACE_USERjcr:read` privileges.`
-   * `Create a folder`**SampleSummaryを参照&#x200B;**してくだ`/apps`さい。 の「アクセス制御リスト」で、許`/apps/SampleSummary`可するエントリを追加`PERM_WORKSPACE_USER`しま`jcr:readprivileges`す。
+   * でCRXDE Lite環境にログインしま `https://[server]:[port]/lc/crx/de`す。
+   * `Create a node`**SampleSummary **/` under `` with type `contentnt:`. In the properties of this node, add `` of type String and value ``. In the Access Control List of this node, add an entry for `` allowing `unstructuredsling:resourceTypeSampleSummaryPERM_WORKSPACE_USERjcr:read` privileges.`
+   * `Create a folder`**SampleSummaryを参照&#x200B;**してくだ`/apps`さい。 のアクセス制御リストで、許`/apps/SampleSummary`可するエントリを追加`PERM_WORKSPACE_USER`しま`jcr:readprivileges`す。
    * `Create a file `html.esp` at `/apps/`. For example, add the following lines in `SampleSummaryhtml.esp`.`
 
    ```
@@ -50,6 +50,3 @@ AEM Forms Workspaceでは、タスクの概要ペインに選択したWebペー�
 
    * Set the value of task summary url as `/lc/content/SampleSummary.html` in Assign Task step.
    * When the task associated with this Assign Task step is opened in AEM Forms workspace, the `html.esp` at `/apps/SampleSummary` is rendered in task summary pane.
-
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
