@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: e135fa01-fede-4285-b4dd-2d23acbb4d26
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
 
 # HTML5 フォーム用のフォームテンプレートのデザイン {#designing-form-templates-for-html-forms}
 
-AEM の HTML5 フォームコンポーネントは、HTML5 形式への XFA フォームテンプレートのレンダリングを提供します。フォームデザイナーは [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) を使用してフォームテンプレートをデザインし、HTML5 レンダリングの機能を使用することができます。これらのフォームテンプレートはアセットとともに、AEM リポジトリやファイルシステムに配置するか、http で公開することができます。ただし、Forms Managerを使用してフォームを管理する場合は、テンプレートとアセットをAEMリポジトリに置く必要があります。
+AEM の HTML5 フォームコンポーネントは、HTML5 形式への XFA フォームテンプレートのレンダリングを提供します。フォームデザイナーは [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) を使用してフォームテンプレートをデザインし、HTML5 レンダリングの機能を使用することができます。これらのフォームテンプレートはアセットとともに、AEM リポジトリやファイルシステムに配置するか、http で公開することができます。ただし、Forms Managerを使用してフォームを管理する場合は、テンプレートとアセットをAEMリポジトリに格納する必要があります。
 
 HTML5 フォームの動作は、その大部分が PDF フォームの動作に一致していますが、両方の形式には他方の形式で適用されない機能がいくつかあります。例えば、Adobe ReaderでPDFフォームにバーコードを適用する方法はMobileフォームとは異なり、フォームの電子署名の方法も形式によって異なります。 For more information on such variations, see [Feature differentiation between HTML5 forms and PDF Forms](/help/forms/using/feature-differentiation-html5-forms-pdf-forms.md).
 
@@ -30,8 +30,6 @@ HTML5 フォームの動作は、その大部分が PDF フォームの動作に
 
 ### 手書きの署名 {#scribble-signature}
 
-HTML5 フォームの主な対象はタッチデバイスです。そのため、AEM Forms Designer に新しい手書き署名コントロールが追加されました。手書き署名コントロールは、フォームテンプレート上でクリックまたはドラッグ&amp;ドロップして設定できます。 これはHTML5レンダリングで手書きフィールドとしてレンダリングされ、タッチデバイスで手書き署名を行うために使用できます。 デスクトップマシンでは、それはマウスコントロールの使用により手書きフィールドとして使用できます。For more information on how to use this feature, see [XFA Scribble Field](/help/forms/using/scribble-signature.md).
+HTML5 フォームの主な対象はタッチデバイスです。そのため、AEM Forms Designer に新しい手書き署名コントロールが追加されました。手書き署名コントロールは、フォームテンプレート上でクリックまたはドラッグ&amp;ドロップして設定できます。 HTML5レンダリングでは手書きフィールドとしてレンダリングされ、タッチデバイスで手書き署名を行うのに使用できます。 デスクトップマシンでは、それはマウスコントロールの使用により手書きフィールドとして使用できます。For more information on how to use this feature, see [XFA Scribble Field](/help/forms/using/scribble-signature.md).
 
 ![4](assets/4.png)
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
