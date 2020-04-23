@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 265eee8a-364e-4edf-b2a0-f42617169944
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -31,7 +31,7 @@ To initiate a process from the AEM Forms app, you need to have a startpoint of t
 1. AEM Forms アプリケーションで使用可能なスタートポイントを表示するには、[ホーム画面](/help/forms/using/home-screen.md)に移動してください。
 1. On the **[!UICONTROL Home]** screen, by default, the **[!UICONTROL All Forms]** list is displayed.
 
-   スタートポイントはフォームに関連付けられています。リスト内でスタートポイントに関連付けられたフォームをタップして開きます。
+   スタートポイントはフォームに関連付けられています。スタートポイントに関連付けられたフォームをリストでタップして開きます。
 
    スタートポイントに関連付けられているフォームが開きます。
 
@@ -46,5 +46,3 @@ To initiate a process from the AEM Forms app, you need to have a startpoint of t
 アプリケーションがオンラインの場合、タスクは AEM Forms Server と同期され、プロセスで指定されたユーザーに割り当てられます。
 
 タスクリスト内のタスクを実行するには、「[タスクを開く](/help/forms/using/open-task.md)」を参照してください。
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
