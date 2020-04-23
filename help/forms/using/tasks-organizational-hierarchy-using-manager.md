@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: c7cf28bf-2806-47bc-a803-8bc0e803fc4d
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -19,13 +19,13 @@ source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
 
 AEM Forms ワークスペースで、マネージャーは階層のメンバー（直属または直属ではない部下）に割り当てられたタスクにアクセスし、さまざまなアクションを実行できるようになりました。タスクは、AEM Forms ワークスペースの「TODO」タブで利用できます。直属の部下のタスクでサポートされているアクションを以下に示します。
 
-**タスクを** 直属の部下から任意のユーザーに転送します。
+**ダイレクト** ・レポートから任意のタスクに転送します。
 
 **要求** ：直属の部下のタスクを要求します。
 
 **要求して開く** 直属の部下のタスクを要求し、管理者のTODOリストで自動的に開きます。
 
-**拒否** (Reject)他のユーザーによって直属の部下に転送されたタスクを拒否します。 このオプションは、他のユーザーによって直属の部下に転送されたタスクで使用できます。
+**拒否** ：他のユーザーによって直属の部下に転送されたタスクを拒否します。 このオプションは、他のユーザーによって直属の部下に転送されたタスクで使用できます。
 
 AEM Forms は、ユーザーのアクセスをアクセス制御（ACL）を持つユーザーのタスクのみに制限しています。そのようなチェックを行うことで、ユーザーは自分がアクセス許可を持つタスクのみを取得できることを確認します。サードパーティの Web サービスと実装を使用して階層を定義すると、組織はマネージャーと直属の部下をニーズに合うようにカスタマイズできます。
 
@@ -109,13 +109,12 @@ AEM Forms は、ユーザーのアクセスをアクセス制御（ACL）を持�
    </component>
    ```
 
-1.  Workbench を介して DSC をデプロイします。サービスを `ProcessManagementTeamTasksService` 再起動します。
+1.  Workbench を介して DSC をデプロイします。サービスを再 `ProcessManagementTeamTasksService` 起動します。
 1. ブラウザーを更新するか、または再度ユーザーでログアウト / ログインする必要がある場合があります。
 
 次の画面は、直属の部下のタスクへのアクセスと利用可能なアクションを示しています。
 
-![cu_manager_view](assets/cu_manager_view.png)
+![cu_manager_表示](assets/cu_manager_view.png)
 
 直属の部下のタスクへのアクセスとタスクで実行するアクション
 
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
