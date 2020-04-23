@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 23bc7cd2-7d06-4ef8-977a-778e290daef9
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
 
 次の手順を実行して、サーバーサイドログを構成します。
 
-1. 移動 `https://[server]:[port]/system/console/configMgr`. Locate and open the *Apace Sling logging logger configuration* option. ダイアログボックスが表示されます。
+1. `https://[server]:[port]/system/console/configMgr` にアクセスします。Locate and open the *Apace Sling logging logger configuration* option. ダイアログボックスが表示されます。
 
    ![ Apace Sling ロギングのロガー設定オプションのダイアログボックス](assets/logconfig.png)
 
@@ -167,13 +167,13 @@ source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
 >[!NOTE]
 >
 >a（xfa）、b（xfaView）、および c（xfaPerf）のそれぞれのログカテゴリに対するデフォルトログレベルは 2（エラー）です。そのため、ログ設定 2-b6 では、異なるカテゴリのログレベルは：\
->a(xfa):2（デフォルトのレベルERROR）\
+>a (xfa):2（デフォルトのレベルERROR）\
 >b (xfaView):6（ユーザー指定のTRACE）\
 >a (xfaPerf):2（デフォルトのレベルERROR）
 
 ### Configuration Manager の使用によるログの有効化 {#enabling-logging-using-configuration-manager}
 
-Configuration Managerを使用してログを有効にすると、ログが再び無効になるまで、すべてのレンダリング要求に対してログが生成されます。
+ログを有効にするためにConfiguration Managerを使用する場合、ログが再び無効になるまで、すべてのレンダリング要求に対してログが生成されます。
 
 1. Log in to CQ Configuration Manager at `https://[server]:[port]/system/console/configMgr` and log in with admin credentials.
 1. **「LC Forms Configurations」**&#x200B;を探してクリックします。
@@ -185,7 +185,7 @@ Configuration Managerを使用してログを有効にすると、ログが再�
 
 ## ログのアップロード {#uploading-logs}
 
-宛先が 1 として設定されている場合、すべてのクライアントスクリプトのログメッセージはコンソールに送信されます。管理者がサーバーログと共にこれらのログを必要とする場合は、宛先レベルを2に設定します。 At this level, all logs are collected in a JS object on client side and if form is rendered with default Profile then a **Send Logs** button appears to the left of **Highlight Existing Fields** button in toolbar. ユーザーがリンクをクリックすると、収集されたすべてのログがサーバーにポストされ、サーバー上の設定済みのエラーログファイルにログインされます。
+宛先が 1 として設定されている場合、すべてのクライアントスクリプトのログメッセージはコンソールに送信されます。管理者がサーバーログと共にこれらのログを必要とする場合は、宛先レベルを2に設定します。 At this level, all logs are collected in a JS object on client side and if form is rendered with default Profile then a **Send Logs** button appears to the left of **Highlight Existing Fields** button in toolbar. ユーザーがリンクをクリックすると、収集されたすべてのログがサーバーにポストされ、サーバー上の設定済みのエラーログファイルに記録されます。
 
 デフォルトでは、すべての情報が /crx-repository/logs/ ディレクトリに保存されている error.log ファイルに追加されます。
 
@@ -206,4 +206,3 @@ Configuration Managerを使用してログを有効にすると、ログが再�
 
 1. Change the **Logger** to **HTMLFormsPerfLogger** and click **Save**.
 
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
