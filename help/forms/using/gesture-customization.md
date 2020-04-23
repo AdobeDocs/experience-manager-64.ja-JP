@@ -10,18 +10,18 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 747d13d3-e7cc-4aa1-bcc8-4b57157e71ed
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
 
 # ジェスチャーのカスタマイズ {#gesture-customization}
 
-AEM Formsアプリケーションのジェスチャーをカスタマイズして、アプリケーションと対話する独自の方法を提供できます。 例えば、新しいジェスチャーを追加して、タスクまたはStartpointを開いたり閉じたりできます。
+AEM Formsアプリケーションのジェスチャーをカスタマイズして、アプリケーションと対話する独自の方法を提供できます。 例えば、新しいジェスチャーを追加して、ジェスチャーまたはスタートポイントを開いたり閉じたりするタスクを追加できます。
 
 ## AEM Forms アプリケーションのジェスチャーをカスタマイズするには {#to-customize-gestures-in-aem-forms-app}
 
-AEM Forms アプリケーションで、左スワイプは新しいタスクまたは Startpoint を開き、右スワイプは何もしません。次の例は、AEM formsアプリケーションで右スワイプジェスチャーを実行したときに新しいタスクまたはStartpointを開く手順を示しています。
+AEM Forms アプリケーションで、左スワイプは新しいタスクまたは Startpoint を開き、右スワイプは何もしません。次の例は、AEM Formsアプリケーションで右スワイプジェスチャーを実行したときに新しいタスクまたはStartpointを開く手順を示しています。
 
 1. プロジェクトを開きます。
 
@@ -40,7 +40,7 @@ AEM Forms アプリケーションで、左スワイプは新しいタスクま�
 
 1. In the `task.js` file, search for the events property of the view.
 
-   eventsプロパティは、次の形式の各エントリとのマップです。
+   イベントプロパティは、次の形式の各エントリを持つマップです。
 
    `"EventName Selector": "Function"`
 
@@ -52,7 +52,7 @@ AEM Forms アプリケーションで、左スワイプは新しいタスクま�
 
       &quot;tap .taskOpenArea&quot; :&quot;onTaskClick&quot;,
 
-      &quot;tap .task-content&quot;:&quot;onTaskClick&quot;,
+      &quot;tap .タスク-content&quot; :&quot;onTaskClick&quot;,
 
       &quot;tap .last_empty_div&quot; :&quot;onTaskClick&quot;,
    これを
@@ -61,7 +61,7 @@ AEM Forms アプリケーションで、左スワイプは新しいタスクま�
 
       &quot;swipe .taskOpenArea&quot; :&quot;onTaskClick&quot;,
 
-      &quot;スワイプ.task-content&quot;:&quot;onTaskClick&quot;,
+      &quot;swipe .タスクコンテンツ&quot;:&quot;onTaskClick&quot;,
 
       &quot;swipe .last_empty_div&quot; :&quot;onTaskClick&quot;,
 
@@ -71,4 +71,3 @@ AEM Forms アプリケーションで、左スワイプは新しいタスクま�
 
 同様に、さまざまな組み合わせのジェスチャー、HTML 要素、および関数に対して、他のビューで変更を行うことができます。
 
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
