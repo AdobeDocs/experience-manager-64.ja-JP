@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6be87939-007e-42c7-8a41-e34ac2b8bed4
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
 
 AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusable-components.md) を固有の Web アプリケーションで使用することができます。以下のサンプルの実装は、CRX™ インスタンスにインストールされた AEM Forms Workspace Dev パッケージのコンポーネントを使用して Web アプリケーションを作成します。下記のソリューションをカスタマイズして、個々のニーズに合わせます。The sample implementation reuses `UserInfo`, `FilterList`, and `TaskList`components inside a web portal.
 
-1. でCRXDE lite環境にログインします `https://[server]:[port]/lc/crx/de/`。 AEM Forms Workspace Dev パッケージがインストールされていることを確認します。
+1. でCRXDE Lite環境にログインしま `https://[server]:[port]/lc/crx/de/`す。 AEM Forms Workspace Dev パッケージがインストールされていることを確認します。
 1. パスを作成しま `/apps/sampleApplication/wscomponents`す。
 1. css、images、js/libs、js/runtime、および js/registry.js を
 
@@ -41,7 +41,7 @@ AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusab
    ```
 
 1. Create a node under /content by name `sampleApplication` and type `nt:unstructured`. In the properties of this node add `sling:resourceType` of type String and value `sampleApplication`. このノードのアクセス制御リストで、jcr:read 権限を許可する `PERM_WORKSPACE_USER` にエントリを追加します。Also, in the Access Control List of `/apps/sampleApplication` add an entry for `PERM_WORKSPACE_USER` allowing jcr:read privileges.
-1. からのパ `/apps/sampleApplication/wscomponents/js/registry.js` スをテンプレート値 `/lc/libs/ws/` に対して更 `/lc/apps/sampleApplication/wscomponents/` 新する場合。
+1. で、テン `/apps/sampleApplication/wscomponents/js/registry.js` プレート値のから `/lc/libs/ws/` へのパ `/lc/apps/sampleApplication/wscomponents/` スを更新します。
 1. In your portal home page JSP file at `/apps/sampleApplication/GET.jsp`, add the following code to include the required components inside the portal.
 
    ```as3
@@ -89,5 +89,3 @@ AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusab
        margin: 0 auto;
    }
    ```
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
