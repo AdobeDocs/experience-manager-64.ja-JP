@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: ef5c957a-9d5a-42be-ad85-bdca876f56bc
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -27,4 +27,3 @@ AEM Forms Workspaceは新しいワークスペースです。 AEM Forms Workspac
 * 承認コンテナまたはカスタムコンテナをユーザータスクに設定することは、AEM Forms Workspace では推奨されません。
 * テンプレートを検索するオプションはTracking タブで使用できますが、ToDo タブでは使用できません。
 
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
