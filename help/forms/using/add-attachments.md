@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 184b5c7f-a704-4b8c-b1ec-f4d6616a1afc
 translation-type: tm+mt
-source-git-commit: 07192aee6699fa113db7b7983c548bcd0d291ebb
+source-git-commit: 0ce79686522da4fb3d017068b623c76f81c6b23a
 
 ---
 
@@ -68,14 +68,14 @@ The **Notes** option lets you add freehand scribbles and text attachments in you
 1. 起動した「メモ」ユーザーインターフェイスで、フリーハンドの手書きメモをキャプチャします。
 
    ![「手書きメモ」インターフェイス](assets/scribble-ui.png)
-   **** 図：手書 *き*
+   **図：** 手書き *メモ*
 
    「手書きメモ」インターフェイスでは、以下のオプションを使用できます。
 
    * **[!UICONTROL クリア]**：スクリーンをクリアします。
    * **[!UICONTROL 完了]**:現在の手書きメモを添付します。
-   * **[!UICONTROL キャンセル]**:現在の手書きメモを破棄し、手書きメモユーザーインターフェイスを終了します。
-   * ![キーボード](assets/keyboard.png):手書きメモをクリアし、テキストメモを追加できます。
+   * **[!UICONTROL キャンセル]**:現在の手書きメモを破棄し、手書きメモのユーザーインターフェイスを閉じます。
+   * ![キーボード](assets/keyboard.png):手書きメモをクリアし、テキストメモを追加できるようにします。
    ![AEM Forms アプリの手書きメモ画面に表示されたキーボード](assets/keyboard-inapp.png)
 
 ## Attachments in forms synced with the AEM Forms servers without AEM Forms Workflow (AEM Forms on OSGi) {#attachments-in-forms-synced-with-the-aem-forms-servers-without-aem-forms-workflow-aem-forms-on-osgi}
@@ -85,5 +85,3 @@ AEM Forms OSGi サーバーと同期するモバイル向けフォームの添�
 フォームレベルの添付ファイルは、アプリ上で AEM Forms OSGi サーバーから読み込んだアダプティブフォームではサポートされません。画像やテキストメモを添付するには、フォームの作成時に、フィールドレベルの添付ファイルを有効にします。ファイルの添付コンポーネントを、コンポーネントブラウザーからフィールド上にドラッグ＆ドロップします。
 
 アダプティブフォームでは、添付されたファイルをレコードのドキュメント（DoR）に表示することができます。See, [Generate Document of Record for non-XFA adaptive forms](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
