@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
 translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -71,7 +71,7 @@ source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
       これには 3 つの入力変数が必要です。
 
       * **フォルダパス**：新しい CRX ノードが作成されるパスです。パスを **/content** に設定します。
-      * **ノード名**：入力変数 nodeName をこのフィールドに割り当てます。一意のノード名文字列です。
+      * **ノード名**：入力変数 nodeName をこのフィールドに割り当てます。これは一意のノード名文字列です。
       * **ノードタイプ**:タイプを **nt:unstructuredと定義します**。 このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
    1. 送信されたフォームデータ（**employeeName**、**employeeID**、**ptoReason**、および **totalDays**）を新しいプロセス **create PTO summary** への入力として渡します。**ptoSummaryNodePath** として出力を取得します。
 
@@ -84,4 +84,3 @@ AEM Forms Workspace で、タスクを開くと、サマリー URL は CRX ノ�
 
 サマリーのレイアウトはプロセスを変更することなく変更することができます。HTML レンダラーはサマリーを適宜表示します。
 
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
