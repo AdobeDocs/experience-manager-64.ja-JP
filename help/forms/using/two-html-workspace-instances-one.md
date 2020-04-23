@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 1254a7c2-2c67-4661-803e-afd53e817916
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -79,9 +79,9 @@ AEM Forms 管理者はワークスペースをカスタマイズして、2 つ�
    }
    ```
 
-1. atと `userinfo.js` で、string `/apps/ws2/js/runtime/models` を `/apps/ws2/js/runtime/views`に変更し `/lc/content/ws` ます `lc/content/ws2`。
+1. atおよ `userinfo.js` びで、string `/apps/ws2/js/runtime/models` を `/apps/ws2/js/runtime/views`に変更し `/lc/content/ws` ます `lc/content/ws2`。
 
-1. で、関 `/apps/ws2/js/runtime/services/service.js`数内のパスをポイン `getLocalizationData` トするように変更しま `/lc/apps/ws2/Locale.html`す。
+1. で、関 `/apps/ws2/js/runtime/services/service.js`数内のパスをに変 `getLocalizationData` 更します `/lc/apps/ws2/Locale.html`。
 
 1. To refer to `pdf.html` of the new Workspace, change the path of `pdf.html` in `/apps/ws2/js/runtime/views/forms/pdftaskform.js`.
 
@@ -92,5 +92,3 @@ AEM Forms 管理者はワークスペースをカスタマイズして、2 つ�
 1. In properties of `ws2`, change value of `sling:redirect` to `content/ws2`.
 
 1. の値をからに変 `sling:match` 更します `^[^/\||]/[^/\||]/ws2$`。
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
