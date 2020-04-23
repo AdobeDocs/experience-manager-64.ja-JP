@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 16e57cf6-aaa1-406d-a6ad-71ec60b15386
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -53,9 +53,9 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
    >
    >対応するキーと値のペアをすべてのサポートされている言語に追加します。
 
-1. にコピ `/libs/ws/js/runtime/templates/taskdetails.html` ーしま `/apps/ws/js/runtime/templates/taskdetails.html`す。
+1. `/libs/ws/js/runtime/templates/taskdetails.html` を `/apps/ws/js/runtime/templates/taskdetails.html` にコピーします。
 
-   に新しい情報を追加しま `/apps/ws/js/runtime/templates/taskdetails.html`す。 次に例を示します。
+   に追加新しい情報を追加しま `/apps/ws/js/runtime/templates/taskdetails.html`す。 次に例を示します。
 
    ```css
    <div class="detailsContainer">
@@ -85,5 +85,3 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
 >To customize the task details page with tasks created in the **Start Process **tab of AEM Forms workspace, add the new information to `/apps/ws/js/runtime/templates/startprocess.html`.
 >
 >To add new styles for the information added in the details page, modify the CSS file by using the *User interface changes* section in [Workspace Customization](/help/forms/using/changing-locale-user-interface.md#main-pars-header-3).
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
