@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: c9d3f369-3744-41d5-b340-390ab7e03f36
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -45,7 +45,7 @@ Adobe PDF、HTML、および SWF ファイルを含め、様々なタイプの�
 
 1. タスクをクリックしてプロセスを選択します。プロセスに関連付けられているフォームが「フォーム」タブに開きます。
 
-   プロセス内の各フォームには、一意のURLが割り当てられます。 固有のURLを使用して、特定のプロセスとフォームでHTML Workspaceを直接起動できます。 URLの形式はhttps://&lt;server>:&lt;port>/lc/libs/ws/index.html#/startprocess/&lt;ApplicationName>%2F&lt;ProcessName>です。 &lt;ApplicationName>%2F&lt;ProcessName>文字列は常にURLエンコードされます。 URLの例はhttp://localhost:8080/lc/libs/ws/index.html#/startprocess/MyApplication%2FNewProcessです。 この例のApplicationName%2FProcessName文字列はURLエンコードされています。
+   プロセス内の各フォームには、一意のURLが割り当てられます。 固有のURLを使用して、特定のプロセスとフォームでHTML Workspaceを直接起動できます。 URLの形式は、https://&lt;server>:&lt;port>/lc/libs/ws/index.html#/startprocess/&lt;ApplicationName>%2F&lt;ProcessName>です。 &lt;ApplicationName>%2F&lt;ProcessName>文字列は、常にURLエンコードされます。 URLの例はhttp://localhost:8080/lc/libs/ws/index.html#/startprocess/MyApplication%2FNewProcessです。 この例のApplicationName%2FProcessName文字列はURLエンコードされています。
 
 1. フォームと共に表示される指示に従ってフォームに入力します。If necessary, click **Maximize** to increase the visible area of the form.
 1. 「添付ファイル」タブが使用可能である場合は、必要に応じて添付ファイルを追加します。
@@ -94,7 +94,7 @@ Adobe PDF、HTML、および SWF ファイルを含め、様々なタイプの�
 1. 「添付ファイル」****&#x200B;タブをクリックして、「添付ファイル」****&#x200B;を選択します。
 1. 「参照」****&#x200B;をクリックして、添付するファイルを選択します。
 1. プロセスに参加している他のユーザーに許可する、添付ファイルに対する権限&#x200B;****&#x200B;レベルを選択します。**「読み取り」**&#x200B;を選択した場合、他のユーザーはファイルをローカルに保存できます。いずれかの編集権限を与えると、他のユーザーも新しいファイルをアップロードして添付ファイルを置き換えることができます。
-1. 「**OK**」をクリックします。ファイルがフォームに添付されます。添付ファイルの横にあるごみ箱の削除ボタン **画像を**![クリックして、ファイルを削除できます](assets/icondelete.png) 。
+1. 「**OK**」をクリックします。ファイルがフォームに添付されます。添付ファイルの横にあるごみ箱の画像を削除 **ボタン**![をクリックして](assets/icondelete.png) 、ファイルを削除できます。
 
 ## フォームのドラフトコピーの保存 {#saving-draft-copies-of-forms}
 
@@ -128,4 +128,3 @@ Adobe PDF、HTML、および SWF ファイルを含め、様々なタイプの�
 
 プロセスにお気に入りのマークを付けるには、そのカテゴリのタスクを選択し、白抜きの星をクリックします。星はゴールドに変わります。プロセスのお気に入りのマークをはずす場合は、ゴールドの星を再度クリックします。
 
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
