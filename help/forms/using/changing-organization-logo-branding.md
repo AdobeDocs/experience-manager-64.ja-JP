@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 2c651302-f4ef-4211-b897-f5942ed0ffb1
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: a5cac0d369bb40659cfde011e5d6ef9a68dc4012
 
 ---
 
@@ -34,9 +34,6 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
    ```css
    #logo {
    
-          background: url(../images/NewWorkspace.png) no-repeat 14px 11px;
-   
-   }
+          background: url(../images/NewWorkspace.png) no-repeat 14px 11px; 
+         }
    ```
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
