@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: cfaa6b49-3fd0-4c08-84a2-e86c7e7e3532
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -23,13 +23,13 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 1. Log in at `/lc/crx/de` with Administrator permissions.
 1. 次のアクションを実行します。
 
-   1. 階層構造を複製します。の `/libs/livecycle/core/content` 位置 `/apps/livecycle/core/content`。 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
+   1. 階層構造を複製します。の `/libs/livecycle/core/content` 場 `/apps/livecycle/core/content`所 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
    1. Copy the content folder: from `/libs/livecycle/core` to `/apps/livecycle/core`.
    1. Delete the contents of `/apps/livecycle/core` folder.
 
 1. 次の操作を実行します。
 
-   1. 階層構造を複製します。の `/libs/livecycle/core/components/login` 位置 `/apps/livecycle/core/components/login`。 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
+   1. 階層構造を複製します。の `/libs/livecycle/core/components/login` 場 `/apps/livecycle/core/components/login`所 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
    1. Copy the components folder: from `/libs/livecycle/core` to `/apps/livecycle/core`.
    1. Delete the contents of the folder: `/apps/livecycle/core/components/login`.
 
@@ -43,7 +43,7 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 1. Delete all the folders inside `i18n` except one, say `en`.
 1. フォルダー `en` で、以下のアクションを実行します。
 
-   1. フォルダーの名前をサポートするロケール名に変更します。For example, `ar`.
+   1. フォルダーの名前をサポートするロケール名に変更します。例： `ar`
    1. Change the property `jcr:language` value to `ar`(for the `ar` folder).
    >[!NOTE]
    >
@@ -222,7 +222,7 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 1. CSS ファイルのスタイルを変更します。
 1. 新しいスタイルを追加するには：
 
-   1. 新しいスタイルの追加先 `/apps/livecycle/core/content/login/login.css`
+   1. ～追加の新しいスタイル `/apps/livecycle/core/content/login/login.css`
    1. コピー `login.jsp`
 
       * 追加の `/libs/livecycle/core/components/login`
@@ -257,14 +257,14 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
 ## 新しい画像の追加 {#add-new-images}
 
-1. 「新しいスタイルを追加する」または「既存のスタイルを変更する」の手順に従います（前述）。
+1. 「新しいスタイルの追加」または「既存のスタイルの変更」の手順に従います（前述）。
 1. Add new images in `/apps/livecycle/core/content/login`. 画像を追加するには：
 
    1. WebDAV クライアントをインストールします。
    1. Navigate to `/apps/livecycle/core/content/login` folder, using webDAV client. For more information, see: [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
    1. 新しい画像を追加します。
 
-1. に追加した新しい画像に対 `/apps/livecycle/core/content/login/login.css,` 応して、に新しいスタイルを追加しま `/apps/livecycle/core/content/login`す。
+1. に追加追加された新しい画像に対応する新しいスタイ `/apps/livecycle/core/content/login/login.css,``/apps/livecycle/core/content/login`ル。
 1. Use the new styles in `login.jsp` at `/apps/livecycle/core/components`.
 1. 以下に例を示します。
 
@@ -288,5 +288,3 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
    
    <div class="newLginContainerBkg">
    ```
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
