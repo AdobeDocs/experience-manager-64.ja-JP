@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: bdb9edc2-6a37-4d3f-97d5-0fc5664316be
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -82,4 +82,3 @@ Apache は HTTP または AJP プロトコルを使用して JBoss と通信で�
 
 1. To access the AEM server, use https://[Apache_server]:80.
 
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
