@@ -10,16 +10,16 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: e4ca8188-fb9a-44bf-8437-a98abaa7521a
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: a5cac0d369bb40659cfde011e5d6ef9a68dc4012
 
 ---
 
 
 # AEM Forms Workspace ユーザーインターフェイスのロケールの変更 {#changing-the-locale-of-aem-forms-workspace-user-interface}
 
-AEM Forms Workspaceは、英語、フランス語、ドイツ語、日本語のサポートをすぐに使用できます。 また、AEM Forms Workspaceユーザーインターフェイスを他の言語にローカライズする機能も提供します。
+AEM Forms Workspaceは、英語、フランス語、ドイツ語、日本語のサポートを標準で提供しています。 また、AEM Forms Workspaceのユーザーインターフェイスを他の言語にローカライズする機能も提供します。
 
-AEM Forms Workspaceユーザーインターフェイスを任意の言語にローカライズするには：
+AEM Forms Workspaceのユーザーインターフェイスを任意の言語にローカライズするには：
 
 * AEM Forms Workspace のテキストをローカライズします。
 * 折りたたまれているカテゴリ、キュー、およびプロセスをローカライズする。
@@ -40,7 +40,7 @@ Perform the following steps to add support for a language *New* and the browser 
    The default URL of CRXDE Lite is `https://[server]:[port]/lc/crx/de/index.jsp`.
 
 1. Navigate to the location `apps/ws/locales` and create a new folder `nw.`
-1. 場所から場 `translation.json`所にファイルをコ `/apps/ws/locales/en-US` ピーしま `/apps/ws/locales/nw`す。
+1. ファイルを場所 `translation.json`から場所にコ `/apps/ws/locales/en-US` ピーしま `/apps/ws/locales/nw`す。
 1. Navigate to `/apps/ws/locales/nw` and open `translation.json` for editing. translation.json ファイルにロケール固有の変更を行います。
 
    次の例では、AEM Forms Workspace の英語およびフランス語のロケールの translation.json ファイルを示します。
@@ -49,7 +49,7 @@ Perform the following steps to add support for a language *New* and the browser 
 
 ## 折りたたまれているカテゴリ、キュー、およびプロセスのローカライズ {#localizing-collapsed-categories-queues-and-processes}
 
-AEM Forms Workspaceは、画像を使用してカテゴリ、キュー、プロセスのヘッダーを表示します。 これらのヘッダをローカライズするには、開発パッケージが必要です。For detailed information about creating development package, see [Building AEM Forms workspace code.](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)
+AEM Forms Workspaceは、画像、キュー、プロセスのヘッダーを表示するカテゴリを使用します。 これらのヘッダをローカライズするには、開発パッケージが必要です。For detailed information about creating development package, see [Building AEM Forms workspace code.](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3)
 
 次の手順では、新しくローカライズされた画像ファイルは&#x200B;*Categories_nw.png*、*Queue_nw.png*、および *Processes_nw.png* であると想定しています。画像の推奨幅は19pxです。
 
@@ -113,7 +113,7 @@ AEM Forms Workspaceは、画像を使用してカテゴリ、キュー、プロ�
 1. [jQuery UI パッケージ](https://jqueryui.com/download/all/)をダウンロードして抽出し、*&lt;抽出された jquery UI パッケージ>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n に移動します。
 1. ロケールコード nw の jquery.ui.datepicker-nw.js ファイルを apps/ws/js/libs/jqueryui にコピーして、ファイルにロケール固有の変更を行います。
 1. Navigate to `apps/ws/js` and open the `jquery.ui.datepicker-nw.js` file for editing.
-1. main.jsファイルで、ファイルのエイリアスを作成す `jquery.ui.datepicker-nw.js.` るコードは次のとおり `jquery.ui.datepicker-nw.js` です。
+1. main.jsファイルで、ファイルのエイリアスを作成し `jquery.ui.datepicker-nw.js.` ます。ファイルのエイリアスを作成するコードは次の `jquery.ui.datepicker-nw.js` とおりです。
 
    ```
    jqueryuidatepickernw : pathprefix + 'libs/jqueryui/jquery.ui.datepicker-nw'
@@ -178,18 +178,18 @@ AEM Forms Workspaceは、画像を使用してカテゴリ、キュー、プロ�
    }
    ```
 
-   ```
-   if (locale === 'ja-JP') {
-       $.datepicker.setDefaults($.datepicker.regional.ja);
-   } else if (locale === 'de-DE') {
-       $.datepicker.setDefaults($.datepicker.regional.de);
-   } else if (locale === 'fr-FR') {
-       $.datepicker.setDefaults($.datepicker.regional.fr);
-   } else if (locale === 'nw') {
-       $.datepicker.setDefaults($.datepicker.regional.nw);
-   } else {
-       $.datepicker.setDefaults($.datepicker.regional['']);
-   }
-   ```
+を
 
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
+```
+if (locale === 'ja-JP') {
+    $.datepicker.setDefaults($.datepicker.regional.ja);
+} else if (locale === 'de-DE') {
+    $.datepicker.setDefaults($.datepicker.regional.de);
+} else if (locale === 'fr-FR') {
+    $.datepicker.setDefaults($.datepicker.regional.fr);
+} else if (locale === 'nw') {
+    $.datepicker.setDefaults($.datepicker.regional.nw);
+} else {
+    $.datepicker.setDefaults($.datepicker.regional['']);
+}
+```
