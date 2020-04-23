@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
 translation-type: tm+mt
-source-git-commit: 7e58d1d861f832d073fb178868804995ee8d855b
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -43,10 +43,10 @@ Field 要素にはネストされた要素が 2 つ（widget と caption）あ�
 
 **Widget 要素**
 
-Widget 要素にはユーザーとやりとりするためのユーザーインターフェイス要素が含まれています。3つのCSSクラスがあります。
+Widget 要素にはユーザーとやりとりするためのユーザーインターフェイス要素が含まれています。CSSクラスは3つあります。
 
 * **ウィジェット**:すべてのウィジェットにこのクラスがあります。
-* **name**:AEMに付属のウィジェットには、ウィジェット名のクラスが含まれています。 カスタムウィジェットの場合、ウィジェット開発者はウィジェット名クラスを提供します。
+* **name**:AEMに付属するすべてのウィジェットには、ウィジェット名のクラスが含まれます。 カスタムウィジェットの場合、ウィジェット開発者はウィジェット名のクラスを提供します。
 * **type**:すべてのウィジェットにはユーザインターフェイス要素があります。 このクラスは、ユーザーインターフェイス要素のタイプを定義します。
 
 ```xml
@@ -235,7 +235,7 @@ AEM Forms Designer を使用して、テキスト、画像など、スタティ�
 
 ## フォームにおける他の部分のスタイル設定 {#styling-other-parts-of-the-form}
 
-HTMLフォームでのUIコンポーネントの外観に加えて、インラインエラー、インライン警告、検証エラーのあるフィールドなどの要素のスタイルを変更できます。
+HTMLフォームでのUIコンポーネントの外観に加え、インラインエラー、インライン警告、検証エラーのあるフィールドなどの要素のスタイルを変更できます。
 
 `Styling Inline Errors`
 
@@ -248,5 +248,3 @@ HTMLフォームでのUIコンポーネントの外観に加えて、インラ�
 `Styling Fields with Validation Errors`
 
 フィールドの検証に失敗すると、ウィジェットのスタイルが変更されます。This style change is done by applying a CSS class **widgetError** on the widget component. To modify the default styling, override the **widgetError** class.
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
