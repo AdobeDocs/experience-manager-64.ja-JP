@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: f2bde2e8-da95-48ac-a652-85ead87f2cd3
 translation-type: tm+mt
-source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -23,7 +23,7 @@ AEM Forms Workspace では、フォームおよびドキュメントでタスク
 
 ## Correspondence Management アセットの作成 {#create-correspondence-management-assets}
 
-まず、AEM Forms WorkspaceにレンダリングされるサンプルのCorrespondence Managementテンプレートを作成します。 For more details, see [Create a letter template](/help/forms/using/create-letter.md).
+AEM Forms WorkspaceでレンダリングされるサンプルのCorrespondence Managementテンプレートを作成することによる開始。 For more details, see [Create a letter template](/help/forms/using/create-letter.md).
 
 URLでCorrespondence Managementテンプレートにアクセスし、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは、 `https://[server]:[port]/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
 
@@ -47,7 +47,7 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
 
    1. プレゼンテーションデータで、「CRX アセットの使用」を選択します。
 
-      ![usearcxasset](assets/useacrxasset.png)
+      ![useacrxasset](assets/useacrxasset.png)
 
    1. アセットを参照します。フォームアセットの選択ダイアログの「レター」タブに、サーバーのすべてのレターが表示されます。
 
@@ -98,7 +98,7 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
    }
    ```
 
-   [Get File](assets/dscsample.zip)Download DSC:サンプルDSCは、上記に添付したDSCSample.zipファイルで入手できます。 DSCSample.zip ファイルをダウンロードして展開します。DSC サービスを使用する前に、設定する必要があります。For information, see [Configure the DSC Service](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
+   [Get File](assets/dscsample.zip)Download DSC:サンプルDSCは、上述のDSCSample.zipファイルで入手できます。 DSCSample.zip ファイルをダウンロードして展開します。DSC サービスを使用する前に、設定する必要があります。For information, see [Configure the DSC Service](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
 
    Define Activity ダイアログで、getLetterInstanceInfo などの適切なアクティビティを選択し、「**OK**」をクリックします。
 
@@ -114,4 +114,3 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
    >
    >「送信」ボタンはレターの必須変数がすべて入力されるまで有効になりません。
 
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
