@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 7efc8ad6-2bb1-41a6-ac0b-7f8ddddbf2a6
 translation-type: tm+mt
-source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -30,4 +30,3 @@ AEM Forms Workspaceは、より多くのデバイスやフォームファクタ�
 * AEM Forms Workspace アプリケーションを使用し、オンラインおよびオフラインのモバイル作業者にビジネスプロセスを拡張します。
 * レポートを表示してバックログ、作業クエリ、KPIs (key performance indicators)をモニタリングします。 APIs を使用して、第三者報告ツールによる将来の分析のためのデータ抽出が可能です。
 
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
