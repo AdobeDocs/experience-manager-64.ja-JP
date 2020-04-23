@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: ccc59dd5-c0cf-415a-b71a-5bc0cf452ede
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
 
 # アクセス可能な HTML5 フォームの設計 {#designing-accessible-html-forms}
 
-HTML5 フォームは ARIA HTML5 アクセシビリティ標準を基に、アクセシビリティを備えた HTML フォームを生成します。これらのフォームは、タブナビゲーション（Mozilla FireFox を除く）をサポートし、一般的な画面読み上げアプリケーションと互換性があります。To generate an HTML5 form with good accessibility features, design the XFA form template based on some [basic designing guidelines](/help/forms/using/best-practices-for-html5-forms.md). デザインガイドラインには正しいタブ順序の設定、および各フォームコントロールのために読み上げテキストコンテンツの提供などが含まれます。AEM Forms Designerは、アクセシブルなPDFおよびHTML5フォームを生成する際に、これらのフォームコントロール属性の設定をサポートしています。
+HTML5 フォームは ARIA HTML5 アクセシビリティ標準を基に、アクセシビリティを備えた HTML フォームを生成します。これらのフォームは、タブナビゲーション（Mozilla FireFox を除く）をサポートし、一般的な画面読み上げアプリケーションと互換性があります。To generate an HTML5 form with good accessibility features, design the XFA form template based on some [basic designing guidelines](/help/forms/using/best-practices-for-html5-forms.md). デザインガイドラインには正しいタブ順序の設定、および各フォームコントロールのために読み上げテキストコンテンツの提供などが含まれます。AEM Forms Designerは、アクセシブルなPDFおよびHTML5フォームを生成するために、これらのフォームコントロール属性の設定をサポートしています。
 
 *注意：タブナビゲーションは、値の合計を表示する計算フィールドなどの保護付きフィールドには適用されません。スクリーンリーダーが保護フィールドの値を読み取れるようにするには、空の読み取り専用フィールドを保護フィールドの上、または横のいずれかに配置します。保護フィールドの値を新しい読み取り専用フィールドに割り当てます。スクリーンリーダーやタブナビゲーションはこの読み取り専用フィールドを選択し、保護フィールドの値として読み上げることができます。*
 
@@ -30,5 +30,3 @@ AEM Forms Designer にはスクリーンリーダーに渡すことが可能な�
 ![アクセシビリティ](assets/accessibility.png)
 
 ツールヒント、スクリーンリーダーテキスト、およびキャプションなど、複数のオプションがフォームコントロールで使用可能なとき、スクリーンリーダーはこれらのプロパティを 1 つだけ使用します。デフォルト順序はカスタムスクリーンリーダーテキスト、ツールヒント、キャプション、名前です。デフォルト順序はアクセシビリティパレットにある「**スクリーンリーダーの優先順位**」オプションを使用してオーバーライドできます。
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
