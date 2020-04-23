@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: b8cd2656-8bc2-4bd7-a3d6-dc76b0a2d429
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -44,5 +44,3 @@ HTML5 フォームは標準の HTML5 構造に基づいてドキュメントを�
 ### フォームのカスタマイズ {#forms-customization}
 
 HTML5 フォームは、標準 HTML5 構成を使用してフォームテンプレートをレンダリングします。これにより、Web テクノロジ、主にCSS および JavaScript を使用した、HTML5 形式のフォームの拡張およびカスタマイズが容易になります。 既存のウィジェットの外観を簡単にカスタマイズし、独自のウィジェットを作成するか、フォームのカスタムスタイルを使用できます。 For more information about creating custom widgets and customizing existing widgets, see [Plug in custom widgets with HTML5 forms](/help/forms/using/custom-widgets.md).
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
