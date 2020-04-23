@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 61b7246d-ed28-4470-a0a2-a4aaf1a061a4
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -440,7 +440,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>dateRanges<br type="_moz" /> </td> 
    <td>F</td> 
-   <td>ユーザーの不在スケジュールの配列オブジェクトが含まれます。各スケジュールオブジェクトで、startDateフィールドにスケジュールの開始日が含まれ、endDateフィールドにスケジュールの終了日が含まれます。 If endDate is null in schedule, it implies that user has not scheduled the end date of out-of-office schedule.<br type="_moz" /> </td> 
+   <td>ユーザーの不在スケジュールの配列オブジェクトが含まれます。各スケジュールオブジェクトでは、startDateフィールドにスケジュールの開始日が含まれ、endDateフィールドにはスケジュールの終了日が含まれます。 If endDate is null in schedule, it implies that user has not scheduled the end date of out-of-office schedule.<br type="_moz" /> </td> 
   </tr>
   <tr>
    <td>isNoPrimaryDesignate<br type="_moz" /> </td> 
@@ -851,5 +851,3 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   </tr>
  </tbody>
 </table>
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
