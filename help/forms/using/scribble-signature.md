@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: designer
 discoiquuid: abb5513f-c824-4dc2-8617-29ea47684afe
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -62,7 +62,7 @@ source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
 
 ![geolocation](assets/geolocation.png)
 
-******** A.ブラ **シB消しゴム** C.**Geolocation** D.位置情報
+**A.** ブラ **シB** 消しゴ **ムC.** Geolocation **D.** 位置情報
 
 ### ジオタグ付け {#geo-tagging}
 
@@ -100,5 +100,3 @@ While using this feature, a user can click the **Eraser** icon to clear the fiel
 
 * （モバイルデバイス）署名フィールドを長押しし、確認ダイアログで「**はい**」をタップします。
 * （デスクトップ）署名フィールドにマウスポインターを置いて「**キャンセル**」アイコンをクリックし、確認ダイアログで「**はい**」をクリックします。
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
