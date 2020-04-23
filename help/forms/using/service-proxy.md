@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 2791c9a1-38a2-4154-8bea-2f7c564b46c8
 translation-type: tm+mt
-source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -42,7 +42,7 @@ HTML5 forms は AEM サーバーに接続して、サービス側スクリプト
 
 ### サーバー側スクリプトと Web サービスの実行 {#execute-server-sided-scripts-and-web-services}
 
-サーバー上で実行するようにマークされているスクリプトは「サーバー側スクリプト」といいます。次の表に、サーバー側スクリプトおよびWebサービスで使用されるすべてのパラメーターを示します。
+サーバー上で実行するようにマークされているスクリプトは「サーバー側スクリプト」といいます。次の表に、リスト側スクリプトとWebサービスで使用されるすべてのパラメーターを示します。
 
 <table> 
  <tbody> 
@@ -133,4 +133,3 @@ HTML5 forms は AEM サーバーに接続して、サービス側スクリプト
 
 * データ（POST リクエスト）をサーバーに送信する前に、HTML5 forms はサーバーに接続していて使用できることを確認します。接続と可用性を確認するために、HTML forms は空のヘッドリクエストをサーバーに送信します。サーバーが使用できる場合は、HTML5 forms はデータ（POST リクエスト）をサーバーに送信します。If the server is not available, an error message, *Could’t connect to the server,* is displayed. この事前の検出により、ユーザーがフォームに再記入するなどの問題を回避できます。プロキシサーブレットはヘッドリクエストを処理し、例外をスローしません。
 
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
