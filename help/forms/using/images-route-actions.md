@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -46,7 +46,7 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
 
 1. Create a task list action popup, see [Building AEM Forms workspace code](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3). これには、Dev パッケージを使用する必要があります。
 
-1. にコピ `/libs/ws/js/runtime/templates/task.html` ーしま `/apps/ws/js/runtime/templates/task.html`す。
+1. `/libs/ws/js/runtime/templates/task.html` を `/apps/ws/js/runtime/templates/task.html` にコピーします。
 
 1. If the name of the CSS style is same as the route action name coming from the server, modify the following code in `/apps/ws/js/runtime/templates/task.html`:
 
@@ -116,7 +116,7 @@ To
 
 ## タスクの詳細タスクアクションポップアップ {#task-details-task-action-popup}
 
-1. にコピ `/libs/ws/js/runtime/templates/taskdetails.html` ーしま `/apps/ws/js/runtime/templates/taskdetails.html`す。
+1. `/libs/ws/js/runtime/templates/taskdetails.html` を `/apps/ws/js/runtime/templates/taskdetails.html` にコピーします。
 
 1. If the name of the CSS style is same as the route action name coming from the server, modify the following code in `/apps/ws/js/runtime/templates/taskdetails.html`:
 
@@ -169,7 +169,6 @@ To
 1. Open `/apps/ws/js/registry.js` for editing and look for the following text :\
    `"text!/lc/libs/ws/js/runtime/templates/taskdetails.html"`
 
-1. テキストを次の文字列に置き換えます。\
+1. テキストを次の値に置き換えます。\
    `"text!/lc/apps/ws/js/runtime/templates/taskdetails.html"`
 
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
