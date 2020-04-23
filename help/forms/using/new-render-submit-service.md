@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 58f95138-5439-4540-a8dc-193b4cb42203
 translation-type: tm+mt
-source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -115,7 +115,7 @@ Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブ�
 1. レンダリングを変更する対象のプロセスを開きます。
 1. 対象のスタートポイント／タスクを開き、「Presentation &amp; Data」セクションに移動して、「**Manage Action Profiles**」をクリックします。
 
-   Manage Action Profilesダイアログが表示されます。
+   アクションプロファイルの管理ダイアログが表示されます。
 1. Change Default render profile configurations from PDF to HTML and click **OK**.
 1. プロセスをチェックインします。
 1. 手順を繰り返して、他のプロセスのレンダリングを変更します。
@@ -127,7 +127,7 @@ Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブ�
 
 アクションプロファイルに関するよくある質問の一部を次に示します。
 
-![gen_question_b_20](assets/gen_question_b_20.png) **What Render / Submit processes will be available out of the box?**
+![gen_question_b_20追加設定なし](assets/gen_question_b_20.png)**で使用できるレンダリング/送信プロセスは何ですか。**
 
 * Guide のレンダリング（Guide は推奨されていません）
 * Render Form Guide
@@ -138,7 +138,7 @@ Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブ�
 
 および同等の送信プロセス。
 
-![gen_question_b_20](assets/gen_question_b_20.png) **What Action Profiles will be available out the box?**
+![gen_question_b_20追加設定不](assets/gen_question_b_20.png)**要なアクションプロファイルは何ですか。**
 
 XDP フォームの場合：
 
@@ -148,11 +148,11 @@ XDP フォームの場合：
 
 何も必要ありません。デフォルトのアクションプロファイルが自動的に選択されて、レンダリングのモードも同じく自動的に対処されます。
 
-![gen_question_b_20](assets/gen_question_b_20.png) デス **クトップでフォームをHTMLでレンダリングするには、何を行う必要がありますか。**
+![gen_question_b_20](assets/gen_question_b_20.png) What needs **to enable the form to be rendered in a HTML on a desktop?**
 
 ユーザーは、デフォルトプロファイルで HTML ラジオボタンを選択する必要があります。
 
-![gen_question_b_20デフォルトのアク](assets/gen_question_b_20.png)**ションプロファイルの動作の変更にアップグレードの影響はありますか。**
+![gen_question_b_20デフォルトのアク](assets/gen_question_b_20.png)**ションプロファイル動作の変更に対するアップグレードの影響はありますか。**
 
 はい。デフォルトのアクションプロファイルに関連付けられた以前のレンダリングと送信サービスは異なるため、それらは既存のフォームのカスタマイズとして処理されます。On clicking **[!UICONTROL Restore Defaults]**, the default render and submit services are set instead.
 
@@ -160,5 +160,3 @@ XDP フォームの場合：
 
 デバイス上では HTML、デスクトップ上では PDF にフォームをレンダリングする場合、プロセスデザイナーは何を行う必要がありますか？\
 デバイス上では HTML、デスクトップ上では PDF にフォームをレンダリングする場合、プロセスデザイナーは何を行う必要がありますか？
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
