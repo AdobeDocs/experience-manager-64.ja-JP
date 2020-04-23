@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 90cd8ba5-4f47-4074-bc54-6a7bb8afe256
 translation-type: tm+mt
-source-git-commit: 07192aee6699fa113db7b7983c548bcd0d291ebb
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -33,11 +33,9 @@ AEM Forms アプリケーション用 Xcode プロジェクトをアーカイブ
 1. Xcode、iOS SDK がインストールおよび設定済みの Mac マシンにログインします。
 1. Xcode で `AEM Forms.xcodeproj` プロジェクトを開きます。
 1. 「**[!UICONTROL TARGETS]**」の「**[!UICONTROL AEM Forms]**」をクリックし、**[!UICONTROL AEM Forms]**」を選択します。Select the **[!UICONTROL Build Settings]** tab, locate the **[!UICONTROL Code Signing Entitlement]** section and in the Entitlements dropdown, select the **[!UICONTROL LC Enterprise]** option.
-1. Xcode 内にある `LC Enterprise.entitlements` ファイルを探して、編集するために開きます。**XCode entitlementsの下で、**プロビジョニングプロファイルに存在するものと同じキーと値のペアを追加します。
+1. Xcode 内にある `LC Enterprise.entitlements` ファイルを探して、編集するために開きます。**XCode entitlementsの下で、**プロビジョニングプロファイルに存在するのと同じキーと値のペアを追加します。
 1. 「**[!UICONTROL Build Settings]**」タブで、「**[!UICONTROL All]**」をクリックし、「**[!UICONTROL Combined]**」をクリックします。
 1. 「**[!UICONTROL Settings]**」リストで、「**[!UICONTROL Code Signing]**」を展開します。
 1. 「**[!UICONTROL Code Signing Identity]**」から、適切な署名を選択します。「**[!UICONTROL Debug]**」、「**[!UICONTROL Release]**」、「**[!UICONTROL Any iOS SDK]**」に同じ署名が選択されていることを確認します。
 1. Under **[!UICONTROL PROJECT]**, select **[!UICONTROL AEM Forms]** and ensure that the appropriate signature is selected for **[!UICONTROL Code Signing Identity]**, **[!UICONTROL Debug]**, **[!UICONTROL Release]** and **[!UICONTROL Any iOS SDK]**.
 1. AEM Forms アプリケーションを構築し、配布します。AEM Forms Workspace アプリケーションを構築・配信する詳細な手順については、[AEM Forms アプリケーション用のインストーラーの構築](/help/forms/using/setup-xcode-project-build-installer.md#main-pars-text-12)を参照してください。
-
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
