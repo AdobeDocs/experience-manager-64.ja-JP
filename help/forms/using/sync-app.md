@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: dae1ce32-702e-4cf0-b3c6-976551208d09
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -46,4 +46,3 @@ Tap the Synchronize button ![sync-app](assets/sync-app.png) at the lower-right c
 * syncSubmittedTask() および syncSavedTask() 関数は、個別のタスクに操作を実行します。
 * ユーザーがサーバーへのオフライン状態の同期またはバックグラウンドスレッドによる自動同期を選択した後、タスクリストコンポーネントによって、processOfflineSubmittedSavedTasks() 関数への呼び出しが開始されます。
 
-[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
