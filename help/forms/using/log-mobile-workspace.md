@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: e5aa84a5-9b47-4cc8-8622-510a0a2950bf
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ---
 
@@ -36,5 +36,3 @@ AEM Forms アプリケーションを起動するときは、最初にログイ�
 >[!NOTE]
 >
 >オフラインモードでは、最後にログインしたユーザーのみがアプリケーションにログインできます。
-
-**[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)**
