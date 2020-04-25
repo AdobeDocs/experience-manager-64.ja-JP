@@ -10,7 +10,7 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 15819d42-4897-40fa-a013-e019d1580fa2
 translation-type: tm+mt
-source-git-commit: 08cf51186b7e9ad62b92a266e95022d7d7a34a9b
+source-git-commit: 45849a1a22f99d149369cd91781de4de0260c8e3
 
 ---
 
@@ -21,14 +21,14 @@ source-git-commit: 08cf51186b7e9ad62b92a266e95022d7d7a34a9b
 
 近い将来おこなわれる AEM 機能の削除や置換を通知するため、次のルールが適用されます。
 
-1. まず、非推奨（廃止予定）の発表がおこなわれます。廃止中は、機能はまだ使用可能ですが、それ以上の強化はおこなわれません。
+1. まず、非推奨（廃止予定）の発表がおこなわれます。非推奨の機能は引き続き使用できますが、機能はさらに強化されません。
 1. 廃止された機能の削除は、早ければ、次のメジャーリリースでおこなわれます。削除の実際の期日が発表されます。
 
 このプロセスにより、機能が実際に削除されるまでに、非推奨（廃止予定）の機能の新しいバージョンまたは後継機能にお客様が実装を合わせるためのリリースサイクルが少なくとも 1 回あります。
 
 ## 廃止される機能 {#deprecated-features}
 
-この節では、AEM 6.4 で廃止予定になっている機能について説明します。通常、将来のリリースで削除される予定になっている機能は、まず廃止予定に設定されて代替の機能が提供されます。
+次の表に、AEM 6.4で非推奨とマークされたリストの機能を示します。一般に、将来のリリースで削除される予定の機能は、代替機能と共に非推奨に設定されます。
 
 現在のデプロイメントでその機能を利用しているかどうかを確認し、提示される代替手段を使用するために実装の変更を計画するようにお勧めします。
 
@@ -120,6 +120,11 @@ source-git-commit: 08cf51186b7e9ad62b92a266e95022d7d7a34a9b
    <td>IValueMap APIの使用 </td> 
   </tr>
   <tr>
+   <td>Forms</td> 
+   <td><p>非推奨のCentral Migration Bridgeサービス</p> </td> 
+   <td> 代替手段はありません。 </td> 
+  </tr>
+  <tr>
    <td>Assets</td> 
    <td><p>AEM 6.4以降では、アセットのオフロードは非推奨となりました。</p> </td> 
    <td> </td> 
@@ -129,7 +134,7 @@ source-git-commit: 08cf51186b7e9ad62b92a266e95022d7d7a34a9b
 
 ## 削除された機能 {#removed-features}
 
-この節では、AEM 6.4から削除された機能に関するリストを説明します。以前のリリースでは、これらの機能は非推奨としてマークされていました。
+次の表に、AEM 6.4から削除されたリストの機能を示します。以前のリリースでは、これらの機能は非推奨としてマークされていました。
 
 <table> 
  <tbody>
@@ -141,7 +146,7 @@ source-git-commit: 08cf51186b7e9ad62b92a266e95022d7d7a34a9b
   <tr>
    <td>Analyticsアクティビティマップ</td> 
    <td>AEMに含まれるアクティビティマップのバージョン。</td> 
-   <td>Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。<br><br>Adobe Analyticsが提 <a href="https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html">供するActivityMapプラグインを使用する</a> 。</td> 
+   <td>Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。<br><br>これで <a href="https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html">、Adobe Analyticsが提供するActivity Mapプラグインが</a> 、使用されます。</td> 
   </tr>
   <tr>
    <td>コンポーネント — フォーム</td> 
@@ -224,6 +229,11 @@ source-git-commit: 08cf51186b7e9ad62b92a266e95022d7d7a34a9b
    <td>GoogleのreCAPTCHAサービスを使用します。</td> 
   </tr>
   <tr>
+   <td>Forms</td> 
+   <td>AEM DesignerでFlashフィールドのサポートが削除されました。 AEM Designerでは、フォームで使用されるFlashフィールドの編集は許可されていません。</td> 
+   <td>以前のバージョン用にリリースされたAEM Designerを使用して、このようなフォームを編集できます。</td> 
+  </tr>
+  <tr>
    <td>Communities</td> 
    <td>Captcha検証のサポートが削除されました。</td> 
    <td>検証には、カスタムcaptcha統合（GoogleによるreCAPTCHAなど）を使用します。</td> 
@@ -233,14 +243,15 @@ source-git-commit: 08cf51186b7e9ad62b92a266e95022d7d7a34a9b
 
 ## 次期リリースに関する予告 {#pre-announcement-for-next-release}
 
-このセクションで予告する将来のリリースの変更内容は、廃止ではありませんが、お客様に影響します。計画を立てる際の参考情報としてご覧ください。
+
+次の表に、今後のリリースで行われる変更のリストを示します。これらの変更は非推奨ではありませんが、お客様に影響を与える可能性があります。 計画を立てる際の参考情報としてご覧ください。
 
 <table> 
  <tbody>
   <tr>
    <td>領域<br /> </td> 
    <td>機能<br /> </td> 
-   <td>予告</td> 
+   <td>お知らせ</td> 
   </tr>
   <tr>
    <td>ブラウザーのサポート</td> 
