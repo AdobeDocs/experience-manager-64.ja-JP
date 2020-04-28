@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: introduction
 discoiquuid: d748decb-a614-4c9e-a502-d6176b720f1a
 translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+source-git-commit: 9b1b0bd53d6c9e0c2c2857ef34b3409fff8485d2
 
 ---
 
@@ -27,7 +27,11 @@ source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
 
 When [editing a page](/help/sites-authoring/editing-content.md), links are not active.
 
-* [プレビューモ **ードに切り替え**](/help/sites-authoring/editing-content.md#preview-mode) 、コンテンツ内のリンクを使用してナビゲーションします。
+* [コンテンツ内の **** プレビューを使用して](/help/sites-authoring/editing-content.md#preview-mode) 、リンクモードに切り替えます。
+
+### ページの構造 {#structure-pages}
+
+ページに名前を付けることはできませ `structure`ん。 この名前のページは、ペ `structure` ージエディターで編集することはできません。
 
 ## CSS の制限 {#css-limitations}
 
@@ -41,7 +45,7 @@ When [editing a page](/help/sites-authoring/editing-content.md), links are not a
 
 ### vh 単位 {#vh-units}
 
-`vh` iframeの高さはAEMによって自動的に調整される必要があるので、単位はサポートされません。
+`vh` iframeの高さはAEMで自動的に調整される必要があるので、単位はサポートされません。
 
 ### 固定の背景画像 {#fixed-background-images}
 
@@ -53,7 +57,7 @@ When [editing a page](/help/sites-authoring/editing-content.md), links are not a
 
 ページの body 要素では、100 ％の高さはサポートされていません。
 
-* 次のようにbody要素を「ストレッチ」してフルスクリーンボディを実装するには、回避策があります。
+* 次のように、body要素を「ストレッチ」してフルスクリーンボディを実装するための回避策があります。
 
 ```xml
 body {
