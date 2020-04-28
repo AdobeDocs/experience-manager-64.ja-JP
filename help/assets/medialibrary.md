@@ -3,7 +3,7 @@ title: AEM AssetsとAEM Media Libraryで使用できる機能の比較
 description: AEM AssetsとAEM Media Libraryに関する、相違点を含むよくある質問(FAQ)です。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 48426d3e2bd204b3cfcae217591016c14afafbda
+source-git-commit: 6a1013715c538c39eaf40a22dbffc7f2df36f968
 
 ---
 
@@ -51,7 +51,7 @@ AEM Assets のお客様だけが使用できる独自の機能は次のとおり
 
 ### 自分が AEM Assets のライセンスを所持していない場合、ユーザーが AEM Assets を使用しないようにする方法はありますか。 {#how-can-i-prevent-my-users-from-using-aem-assets-if-i-did-not-license-aem-assets}
 
-すべての AEM Assets 固有ワークフロー、コンポーネント、分類、オプション、AEM Assets 管理機能を AEM から削除できます。これによって、ライセンスを所持していない AEM Assets の機能をユーザーが誤って使用することを防ぐことができます。
+すべての AEM Assets 固有ワークフロー、コンポーネント、分類、オプション、AEM Assets 管理機能を AEM から削除できます。これにより、ライセンスを取得していないAEM Assets機能を誤って使用するのを防ぐことができます。
 
 ### ページに画像を追加し、その画像の切り抜きやサイズ変更を実行したいのですが、その場合 AEM Assets は必要ですか。 {#i-want-to-add-images-to-a-page-and-want-to-crop-and-resize-these-images-do-i-need-aem-assets}
 
