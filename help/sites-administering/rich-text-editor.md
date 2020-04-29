@@ -3,7 +3,7 @@ title: リッチテキストエディターの設定
 description: AEM リッチテキストエディターの設定について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c86d1ac76d97fa716cf70bdebe91d2b6dec46b0b
+source-git-commit: 7849a3e2d9d8241382652fb1c8e6e302ffd853e0
 
 ---
 
@@ -161,6 +161,15 @@ RTE 設定ノードの名前を `config` にしないでください。Otherwise
 * `rte-start`：このイベントを RTE の `contenteditable-div`（RTE の編集を開始するタイミング）で呼び出します。これは、`customStart` が true に設定されている場合にのみ機能します。
 
 タッチ操作ダイアログで RTE を使用する場合は、問題の発生を避けるために、プロパティ `useFixedInlineToolbar` に true を設定する必要があります。
+
+## インプレイス編集のカスタマイズ {#customizing-in-place-editing}
+
+次のプロパティを設定することで、どのHTMLセレクターにテキストエディターの開始を設定するかを定義できます。
+
+* **`editElementQuery`**  — 定義がオンの `cq:InplaceEditingConfig`場合、このプロパティは、テキストコンポーネントのインライン編集を開始するHTML要素のセレクターを指定するために使用されます。 指定しなかった場合、インライン編集はテキストコンポーネントのHTMLで直接開始されます。
+* **`textPropertyName`**  — このプロパティ `cq:InplaceEditingConfig`は、インライン編集後にテキストコンポーネントのHTML値が保持されるコンテンツノードに保存されるプロパティの名前を指定するために使用されます。
+
+ダイアログモードに対応するプロパティはで `name`す。
 
 ## プラグインのアクティベートによる RTE 機能の有効化 {#enable-rte-functionalities-by-activating-plug-ins}
 
