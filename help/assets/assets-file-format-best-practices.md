@@ -3,7 +3,7 @@ title: Assets のファイル形式に関するベストプラクティス
 description: AEM Assets のファイルサポートに関するベストプラクティスを紹介します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: a892ef7ab018aca715693125808d7ade540c8242
 
 ---
 
@@ -43,7 +43,7 @@ IDML や HTML など Adobe InDesign 固有のレンディションを抽出す�
 
 Dynamic Media は、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、様々なバリエーションのリッチコンテンツをリアルタイムで生成および配信します。インタラクティブな表示エクスペリエンスを提供し、デジタルキャンペーンの管理プロセスを促進します。Dynamic Media の有効化について詳しくは、[Dynamic Media の設定](config-dynamic.md)を参照してください。
 
-現在、Dynamic Media では、1 ファイルにつき最大 20 GB のコンテンツのビデオをサポートしています。
+現在、Dynamic Media では、1 ファイルにつき最大 15 GB のコンテンツのビデオをサポートしています。
 
 ## ImageMagick ライブラリ {#imagemagick-library}
 
