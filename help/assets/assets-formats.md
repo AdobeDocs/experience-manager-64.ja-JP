@@ -3,7 +3,7 @@ title: AEM Assets でサポートされているファイル形式
 description: AEM Assetsでサポートされるファイル形式とMIMEタイプのリストと、各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b54b51f03f8d5f8b9fd5888f4b59510bfd7847a8
+source-git-commit: d4539e538c299f3b2a076ef4fa60f7013621394e
 
 ---
 
@@ -74,7 +74,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 
 * EPS ファイルの場合、メタデータの書き戻しは、PostScript Document Structuring Convention（PS-Adobe）バージョン 3.0 以降でサポートされています。
 
-## ダイナミックメディアでサポートされていないラスターイメージ形式(#unsupported-image-formats-dynamic-media)
+## ダイナミックメディアでサポートされていないラスターイメージ形式 {#unsupported-image-formats-dynamic-media}
 
 次のリストでは、ダイナミックメディアでサポートされていないラスターイメージファイル形式のサブタイプにつ *いて説明します* 。
 
