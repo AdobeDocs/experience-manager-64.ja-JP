@@ -10,7 +10,7 @@ topic-tags: components
 content-type: reference
 discoiquuid: efbe46a3-c37f-4b67-8b3a-188cfc75118b
 translation-type: tm+mt
-source-git-commit: d6c10927d437cfc9371e4baeff5a91ed9a0503c8
+source-git-commit: 185bdd83b8b67671a31aa3f341b80614ed819b6c
 
 ---
 
@@ -35,15 +35,8 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >* （ページの編集時に）タッチ操作対応 UI でのみ使用できます。
 >* モバイルデバイスまたはデスクトップ上の小さいウィンドウでは、スペースの制約があるので使用できません。
-   >
-   >  
-* ウィンドウの幅が 1024 px 未満の場合は使用できません。
-   >
-   >
-* 次の適切な権限を必要とします。
-   >
-   >  
-* Access to Developer Mode is given to users who have write access on `/apps`.
+   >   * ウィンドウの幅が 1024 px 未満の場合は使用できません。
+>* グループのメンバーであるユーザーのみが使用でき `administrators` ます。
 
 
 >[!CAUTION]
@@ -52,7 +45,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >必要に応じて、次の環境で使用するように設定できます。
 >
->* nosamplecontent実行モードを使用した作成者インスタンスの場合
+>* nosamplecontent実行モードを使用した作成者インスタンスに対する
 >* パブリッシュインスタンス
 >
 >
@@ -62,7 +55,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >詳しくは以下を参照してください。
 >
->* ナレッジベースの記事「[Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)」（有用なヒントとツールに関する記述あり）
+>* ナレッジベースの記事「[Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/jp/experience-manager/kb/troubleshooting-aem-touchui-issues.html)」（有用なヒントとツールに関する記述あり）
 >* [AEM 6.0 の開発者モード](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html)に関する AEM Gems セッション
 
 
@@ -74,7 +67,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 パネルは、次の 2 つのタブで構成されています。
 
-* **[コンポーネント](/help/sites-developing/developer-mode.md#components)**— 作成者のコンテンツツリーと同様のコンポーネントツリ[ーを表示](/help/sites-authoring/author-environment-tools.md#content-tree)します。
+* **[コンポーネント](/help/sites-developing/developer-mode.md#components)**— 作成者の[コンテンツツリーと同様のコンポーネントツリー](/help/sites-authoring/author-environment-tools.md#content-tree)。
 
 * **[エラー](/help/sites-developing/developer-mode.md#errors)**- 問題が発生すると、各コンポーネントの詳細が表示されます。
 
@@ -142,6 +135,6 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 >[!CAUTION]
 >
->AEM 6.2では、開発者モードのテスト機能がスタンドアロンのツールアプリケーションとして再実装されました。
+>AEM 6.2では、開発者モードのテスト機能は、スタンドアロンのツールアプリケーションとして再実装されました。
 >
 >For full details see [Testing Your UI](/help/sites-developing/hobbes.md).
