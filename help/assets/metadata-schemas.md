@@ -3,21 +3,21 @@ title: メタデータスキーマ
 description: 'メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。  '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b774b23028f642436b9a17f94da61f8e40bdae9a
+source-git-commit: 1a6c2e9603ae8cb5017abd9bec9fe0c3fdf62dea
 workflow-type: tm+mt
-source-wordcount: '2511'
-ht-degree: 80%
+source-wordcount: '2527'
+ht-degree: 78%
 
 ---
 
 
 # メタデータスキーマ {#metadata-schemas}
 
-Adobe Experience Manager (AEM) Assets では、メタデータスキーマを使用することで、プロパティページのレイアウトと、その特定のスキーマを使用するアセットに関して表示されるメタデータプロパティを定義します。メタデータプロパティには、タイトル、説明、MIME タイプなどが含まれます。
+In [!DNL Experience Manager Assets], a metadata schema defines the layout of the properties page and the metadata properties displayed for assets that use the particular schema. メタデータプロパティには、タイトル、説明、MIME タイプなどが含まれます。
 
-既存のスキーマを変更したり、カスタムのメタデータスキーマを追加するには、メタデータスキーマフォームエディターを使用します。
+既存のスキーマを変更したり、カスタムのメタデータスキーマを追加するには、メタデータスキーマフォームエディターを使用します。アセットのプロパティページを表示して編集するには、次の手順に従います。
 
-1. To view the properties page for an asset, click or tap the **[!UICONTROL View Properties]** from **[!UICONTROL Quick Actions]** on the asset tile in Card view.
+1. カード表示のアセットタイルにあるクイックアクションから **[!UICONTROL 表示のプロパティ]** (Properties)をクリックまたはタップします。
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
@@ -25,7 +25,7 @@ Adobe Experience Manager (AEM) Assets では、メタデータスキーマを使
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
 
-1. 様々なタブで編集可能なメタデータプロパティを編集します。
+1. 使用可能なタブで、編集可能なメタデータプロパティを編集できます。 However, you cannot modify the asset [!UICONTROL Type] in the [!UICONTROL Basic] tab of properties page.
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
