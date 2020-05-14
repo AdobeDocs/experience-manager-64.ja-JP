@@ -3,9 +3,9 @@ title: メタデータスキーマ
 description: 'メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。  '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 1a6c2e9603ae8cb5017abd9bec9fe0c3fdf62dea
+source-git-commit: c5317d96ed5fccbc1bf03176f75dbaec6d8cb0b4
 workflow-type: tm+mt
-source-wordcount: '2527'
+source-wordcount: '2528'
 ht-degree: 78%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 78%
 
 # メタデータスキーマ {#metadata-schemas}
 
-In [!DNL Experience Manager Assets], a metadata schema defines the layout of the properties page and the metadata properties displayed for assets that use the particular schema. メタデータプロパティには、タイトル、説明、MIME タイプなどが含まれます。
+In [!DNL Experience Manager Assets], a metadata schema defines the layout of the properties page and the metadata properties displayed for assets that use the particular schema. メタデータプロパティには、タイトル、説明、MIME タイプなどが含まれます。既存のスキーマを変更したり、カスタムのメタデータスキーマを追加するには、メタデータスキーマフォームエディターを使用します。
 
-既存のスキーマを変更したり、カスタムのメタデータスキーマを追加するには、メタデータスキーマフォームエディターを使用します。アセットのプロパティページを表示して編集するには、次の手順に従います。
+アセットのプロパティページを表示して編集するには、次の手順に従います。
 
 1. カード表示のアセットタイルにあるクイックアクションから **[!UICONTROL 表示のプロパティ]** (Properties)をクリックまたはタップします。
 
@@ -25,7 +25,7 @@ In [!DNL Experience Manager Assets], a metadata schema defines the layout of the
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
 
-1. 使用可能なタブで、編集可能なメタデータプロパティを編集できます。 However, you cannot modify the asset [!UICONTROL Type] in the [!UICONTROL Basic] tab of properties page.
+1. 使用可能なタブで、編集可能な様々なメタデータプロパティを編集できます。 However, you cannot modify the asset [!UICONTROL Type] in the [!UICONTROL Basic] tab of properties page.
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
