@@ -3,7 +3,10 @@ title: DTM でのアセットインサイトの有効化
 description: Adobe Dynamic Tag Management（DTM）を使用してアセットインサイトを有効にする方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+workflow-type: tm+mt
+source-wordcount: '629'
+ht-degree: 57%
 
 ---
 
@@ -25,7 +28,7 @@ DTM を使用してアセットインサイトを有効にするには、次の�
 1. Web プロパティを作成するか既存の Web プロパティを開きます。
 
    * Select the **[!UICONTROL Web Properties]** tab, and then tap/click **[!UICONTROL Add Property]**.
-   * Update the fields as appropriate, and tap/click **[!UICONTROL Create Property]** (see [documentation](https://helpx.adobe.com/experience-manager/using/dtm.html)).
+   * Update the fields as appropriate, and tap/click **[!UICONTROL Create Property]** (see [documentation](https://helpx.adobe.com/jp/experience-manager/using/dtm.html)).
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
 1. In the **[!UICONTROL Rules]** tab, select **[!UICONTROL Page Load Rules]** from the navigation pane and tap/click **[!UICONTROL Create New Rule]**.
@@ -41,7 +44,7 @@ DTM を使用してアセットインサイトを有効にするには、次の�
 
    >[!NOTE]
    >
-   >* `AppMeasurement.js` が削除されました。 これは、DTM の Adobe Analytics ツールで使用できるはずです。
+   >* `AppMeasurement.js` は削除されました。 これは、DTM の Adobe Analytics ツールで使用できるはずです。
    >* The call to `assetAnalytics.dispatcher.init()` is removed. この関数は、DTM の Adobe Analytics ツールの読み込みが完了すると呼び出されるはずです。
    >* アセットインサイトページトラッカーがホストされる場所（例えば、AEM や CDN など）によっては、スクリプトソースのオリジナルを変更する必要があります。
    >* AEMがホストするページトラッカーの場合、ソースは、ディスパッチャーインスタンスのホスト名を使用して発行インスタンスを指す必要があります。
@@ -64,7 +67,7 @@ DTM を使用してアセットインサイトを有効にするには、次の�
 
 1. 次のコードをウィンドウに貼り付けます。
 
-   ```
+   ```java
    var sObj;
    
    if (arguments.length > 0) {
