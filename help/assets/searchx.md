@@ -3,18 +3,21 @@ title: Assets の検索機能の拡張
 description: AEM Assets のあらかじめ用意されている文字列によるアセットの検索機能を拡張します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+workflow-type: tm+mt
+source-wordcount: '830'
+ht-degree: 90%
 
 ---
 
 
 # Assets の検索機能の拡張 {#extending-assets-search}
 
-Adobe Experience Manager(AEM)Assets検索機能を拡張できます。 AEM Assets はデフォルトで、文字列によってアセットを検索します。
+Adobe Experience Manager (AEM) Assets の検索機能を拡張できます。AEM Assets は、デフォルトの設定では、文字列でアセットを検索します。
 
-検索は QueryBuilder インターフェイスを介して実行されるので、複数の述語を使用することで検索をカスタマイズできます。You can overlay the default set of predicates in the following directory: `/apps/dam/content/search/searchpanel/facets`.
+検索は QueryBuilder インターフェイスを介して実行されるので、複数の述語を使用して検索をカスタマイズできます。`/apps/dam/content/search/searchpanel/facets` ディレクトリにあるデフォルトの述語セットをオーバーレイできます。
 
-AEM Assetsの管理パネルにタブを追加することもできます。
+また、AEM Assets 管理パネルにタブを追加することもできます。
 
 >[!CAUTION]
 >
@@ -22,7 +25,7 @@ AEM Assetsの管理パネルにタブを追加することもできます。
 
 ## オーバーレイ {#overlaying}
 
-To overlay the preconfigured predicates, copy the `facets` node from `/libs/dam/content/search/searchpanel` to `/apps/dam/content/search/searchpanel/` or specify another `facetURL` property in the searchpanel configuration (the default is to `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`).
+事前設定済みの述語をオーバーレイするには、`facets` ノードを `/libs/dam/content/search/searchpanel` から `/apps/dam/content/search/searchpanel/` にコピーするか、searchpanel 設定に別の `facetURL` プロパティを指定します（デフォルトでは `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json` になります）。
 
 ![screen_shot_2012-06-05at113619am](assets/screen_shot_2012-06-05at113619am.png)
 
@@ -33,10 +36,10 @@ To overlay the preconfigured predicates, copy the `facets` node from `/libs/dam/
 
 ## タブの追加 {#adding-tabs}
 
-追加の検索タブを追加するには、AEM Assets管理者で設定します。 追加のタブは以下の手順で作成します。
+AEM Assets 管理パネルで追加の「検索」タブを設定することで、タブを追加できます。追加のタブは以下の手順で作成します。
 
-1. Create the folder structure `/apps/wcm/core/content/damadmin/tabs,`if it does not already exist, and copy the `tabs` node from `/libs/wcm/core/content/damadmin` and paste it.
-1. 必要に応じて、2 つ目のタブを作成して設定します。
+1. フォルダー構造 `/apps/wcm/core/content/damadmin/tabs,` がまだ存在しない場合は作成し、`tabs` ノードを `/libs/wcm/core/content/damadmin` からコピーして貼り付けます。
+1. 必要に応じて、2 つ目のタブを作成し設定します。
 
    >[!NOTE]
    >
@@ -44,13 +47,13 @@ To overlay the preconfigured predicates, copy the `facets` node from `/libs/dam/
 
 ## カスタムの述語の作成 {#creating-custom-predicates}
 
-AEM Assetsには、アセット共有ページのカスタマイズに使用できる事前定義済み述語のセットが付属しています。 この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
+AEM Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みの一連の述語が付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
 AEM 開発者は、既存の述語を使用するだけでなく、[Query Builder API](/help/sites-developing/querybuilder-api.md) を使用して独自の述語を作成することもできます。
 
-カスタムの述語を作成するには、[ウィジェットフレームワーク](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html)に関する基本的な知識が必要です。
+カスタム述語を作成するには、[ウィジェットフレームワーク](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html)に関する基本的な知識が必要です。
 
-ベストプラクティスとしては、既存の述語をコピー後に変更することです。Sample predicates are located in `/libs/cq/search/components/predicates`.
+ベストプラクティスは、既存の述語をコピー後に変更することです。Sample predicates are located in `/libs/cq/search/components/predicates`.
 
 ### 例：シンプルなプロパティ述語の作成 {#example-build-a-simple-property-predicate}
 
@@ -71,7 +74,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
        componentGroup="Search"/>
    ```
 
-1. ページの URL の末尾に `titlepredicate.jsp`.
+1. 次の `titlepredicate.jsp`.を追加します。
 
    ```xml
    <%--
@@ -139,10 +142,10 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
    </script>
    ```
 
-1. コンポーネントを使用するには、編集できるようにする必要があります。To make a component editable, in CRXDE, add a node `cq:editConfig` of primary type `cq:EditConfig`. 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として **DELETE** のみを設定します。
+1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。To make a component editable, in CRXDE, add a node `cq:editConfig` of primary type `cq:EditConfig`. 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として **DELETE** のみを設定します。
 1. ブラウザーを開き、サンプルページ（`press.html` など）でデザインモードに切り替えて、述語段落システムの新しいコンポーネント（「**左揃え**」など）を有効にします。
 
-1. **編集**&#x200B;モードで、新しいコンポーネントがサイドキック（**検索**&#x200B;グループ）で使用できるようになります。「**Predicates**」列にコンポーネントを挿入し、「**Diamond**」などの検索語句を入力して、虫眼鏡アイコンをクリックして検索を開始します。
+1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。「**Predicates**」列にコンポーネントを挿入し、「**Diamond**」などの検索語句を入力して、虫眼鏡アイコンをクリックして検索を開始します。
 
    >[!NOTE]
    >
@@ -169,7 +172,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 1. ページの URL の末尾に `titlepredicate.jsp`:
 
-   ```xml
+   ```java
    <%--
    
      Sample group predicate component
@@ -246,9 +249,9 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
        });
    ```
 
-1. コンポーネントを使用するには、編集できるようにする必要があります。To make a component editable, in CRXDE, add a node `cq:editConfig` of primary type `cq:EditConfig`. 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として `DELETE` のみを設定します。
+1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。To make a component editable, in CRXDE, add a node `cq:editConfig` of primary type `cq:EditConfig`. 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として `DELETE` のみを設定します。
 1. ブラウザーを開き、サンプルページ（`press.html` など）でデザインモードに切り替えて、述語段落システムの新しいコンポーネント（「**左揃え**」など）を有効にします。
-1. **編集**&#x200B;モードで、新しいコンポーネントがサイドキック（**検索**&#x200B;グループ）で使用できるようになります。「**Predicates**」列にコンポーネントを挿入します。
+1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。「**Predicates**」列にコンポーネントを挿入します。
 
 ### インストール済みの述語ウィジェット {#installed-predicate-widgets}
 
@@ -258,45 +261,45 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 | プロパティ | タイプ | 説明 |
 |---|---|---|
-| predicateName | 文字列 | 述語の名前。デフォルト に設定`fulltext` |
+| predicateName | String | 述語の名前。デフォルト に設定`fulltext` |
 | searchCallback | Function | Callback for triggering search on event `keyup`. デフォルト に設定`CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
 | プロパティ | タイプ | 説明 |
 |---|---|---|
-| predicateName | 文字列 | 述語の名前。デフォルト に設定`property` |
-| propertyName | 文字列 | JCR プロパティの名前。デフォルト に設定`jcr:title` |
-| defaultValue | 文字列 | 事前設定されるデフォルト値 |
+| predicateName | String | 述語の名前。デフォルト に設定`property` |
+| propertyName | String | JCR プロパティの名前。デフォルト に設定`jcr:title` |
+| defaultValue | String | 事前設定されるデフォルト値 |
 
 ### PathPredicate {#pathpredicate}
 
 | プロパティ | タイプ | 説明 |
 |---|---|---|
-| predicateName | 文字列 | 述語の名前。デフォルト に設定`path` |
-| rootPath | 文字列 | 述語のルートパス。デフォルト に設定`/content/dam` |
-| pathFieldPredicateName | 文字列 | デフォルト に設定`folder` |
-| showFlatOption | Boolean | チェックボックスを表示するフラ `search in subfolders`グ。 デフォルトは true です |
+| predicateName | String | 述語の名前。デフォルト に設定`path` |
+| rootPath | String | 述語のルートパス。デフォルト に設定`/content/dam` |
+| pathFieldPredicateName | String | デフォルト に設定`folder` |
+| showFlatOption | Boolean | チェックボックスを表示するフラグ `search in subfolders`。 デフォルトは true です |
 
 ### DatePredicate {#datepredicate}
 
 | プロパティ | タイプ | 説明 |
 |---|---|---|
-| predicateName | 文字列 | 述語の名前。デフォルト に設定`daterange` |
-| propertyname | 文字列 | JCR プロパティの名前。デフォルト に設定`jcr:content/jcr:lastModified` |
-| defaultValue | 文字列 | 事前設定されるデフォルト値 |
+| predicateName | String | 述語の名前。デフォルト に設定`daterange` |
+| propertyname | String | JCR プロパティの名前。デフォルト に設定`jcr:content/jcr:lastModified` |
+| defaultValue | String | 事前設定されるデフォルト値 |
 
 ### OptionsPredicate {#optionspredicate}
 
 | プロパティ | タイプ | 説明 |
 |---|---|---|
-| title | 文字列 | 最上部のタイトルを追加します |
-| predicateName | 文字列 | 述語の名前。デフォルト に設定`daterange` |
-| propertyname | 文字列 | JCR プロパティの名前。デフォルト に設定`jcr:content/metadata/cq:tags` |
-| collapse | 文字列 | 折りたたみのレベル。デフォルト に設定`level1` |
+| title | String | 最上部のタイトルを追加します |
+| predicateName | String | 述語の名前。デフォルト に設定`daterange` |
+| propertyname | String | JCR プロパティの名前。デフォルト に設定`jcr:content/metadata/cq:tags` |
+| collapse | String | 折りたたみのレベル。デフォルト に設定`level1` |
 | triggerSearch | Boolean | チェック時の検索を呼び出すためのフラグ。デフォルトは false です |
 | searchCallback | Function | 検索を呼び出すためのコールバック。デフォルト に設定`CQ.wcm.SiteAdmin.doSearch` |
-| searchTimeoutTime | 番号 | タイムアウト。この時間を過ぎると searchCallback が呼び出されます。デフォルトは 800ms です |
+| searchTimeoutTime | Number | タイムアウト。この時間を過ぎると searchCallback が呼び出されます。デフォルトは 800ms です |
 
 ## 検索結果のカスタマイズ {#customizing-search-results}
 
