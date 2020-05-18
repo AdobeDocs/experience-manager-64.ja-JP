@@ -3,7 +3,10 @@ title: アセットパフォーマンス調整ガイド
 description: AEM Assets のボトルネックを解消し、パフォーマンスを最適化するための、AEM の設定、ハードウェア、ソフトウェアおよびネットワークコンポーネントの変更に関する留意点。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: af5f8a24db589ecdbe28d603ab9583f11d29212c
+source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+workflow-type: tm+mt
+source-wordcount: '3201'
+ht-degree: 84%
 
 ---
 
@@ -30,7 +33,7 @@ AEM は数々のプラットフォームでサポートされていますが、L
 
 サーバーに十分なメモリがあるという前提で、RAM ドライブを設定します。Linux の場合、8GB RAM ドライブを作成するには、次のコマンドを実行します。
 
-```
+```shell
 mkfs -q /dev/ram1 800000
  mkdir -p /mnt/aem-tmp
  mount /dev/ram1 /mnt/aem-tmp
@@ -81,7 +84,7 @@ S3 または共有ファイルデータストアの実装は、ディスク領�
 
 次の S3 データストアの設定（`org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.cfg`）は、アドビが 12.8 TB のバイナリラージオブジェクト（BLOB）を既存のファイルデータストアから顧客サイトの S3 データストアに抽出するのに役立ちました。
 
-```
+```conf
 accessKey=<snip>
  secretKey=<snip>
  s3Bucket=<snip>
@@ -156,7 +159,7 @@ accessKey=<snip>
 
 ### オフロード {#offloading}
 
-ビデオのトランスコードなど、大量のワークフローやワークフローが大量にリソースを消費する場合は、DAMの更新アセットのワークフローを2番目の作成者インスタンスにオフロードすることがあります。 オフロードに関するよくある問題点は、ワークフローの処理のオフロードによって節約される負荷はすべて、インスタンス間で互いにコンテンツをレプリケートするコストによって相殺される点です。
+ビデオトランスコードなど、リソースを大量に消費する大量のワークフローまたはワークフローの場合は、DAM更新アセットワークフローを2番目の作成者インスタンスにオフロードすることがあります。 オフロードに関するよくある問題点は、ワークフローの処理のオフロードによって節約される負荷はすべて、インスタンス間で互いにコンテンツをレプリケートするコストによって相殺される点です。
 
 AEM 6.2 と AEM 6.1 の機能パックでは、バイナリなしのレプリケーションでオフロードを実行できます。このモデルでは、オーサーインスタンスが共通のデータストアを共有し、転送のレプリケーションを通じて互いにメタデータの送信のみをおこないます。このアプローチは共有ファイルデータストアに適していますが、S3 データストアでは問題が発生することがあります。背景でのスレッドの書き込みは遅延を誘発するおそれがあるので、オフロードジョブが開始する前にアセットがデータストアに書き込まれないこともあります。
 
@@ -180,7 +183,7 @@ AEM 6.2 と AEM 6.1 の機能パックでは、バイナリなしのレプリケ
 
 多くの Sites のお客様はリクエストされた時点で画像のサイズを変更および切り抜く画像サーブレットを実装しています。これにより、パブリッシュインスタンスにさらに負荷がかけられます。ただし、これらの画像をキャッシュできる限り、問題を減らすことができます。
 
-もう 1 つの方法では、Scene7 テクノロジーを使用して画像の操作をすべて引き渡します。さらに、AEMインフラストラクチャのレンディションの生成の責任を引き継ぐだけでなく、公開層全体のレンディションの生成の責任を引き継ぐBrand Portalをデプロイできます。
+もう 1 つの方法では、Scene7 テクノロジーを使用して画像の操作をすべて引き渡します。さらに、AEMインフラストラクチャのレンディションの生成責任を引き継ぐだけでなく、公開層全体を引き継ぐBrand Portalをデプロイできます。
 
 #### ImageMagick {#imagemagick}
 
@@ -211,7 +214,7 @@ In addition, set the path of ImageMagick&#39;s temporary folder in the *configur
 >
 >The ImageMagick `policy.xml` and `configure.xml` files may be found under `/usr/lib64/ImageMagick-*/config/` instead of `/etc/ImageMagick/`. See [ImageMagick documentation](https://www.imagemagick.org/script/resources.php) for details on the configuration file locations.
 
-AEM on Adobe Managed Services(AMS)を使用している場合は、大量のPSDまたはPSBファイルを処理する予定の場合は、アドビカスタマーケアにお問い合わせください。 3000 x 23000ピクセルを超える高解像度のPSBファイルは、Experience Managerでは処理されない場合があります。
+AEM on Adobe Managed Services(AMS)を使用している場合は、大量のPSDファイルまたはPSBファイルを処理する予定の場合は、アドビカスタマーケアにお問い合わせください。 3000 x 23000ピクセルを超える高解像度のPSBファイルは、Experience Managerでは処理されない場合があります。
 
 <!-- 
 
@@ -323,7 +326,7 @@ LuceneIndexProvider 設定を更新します。
 
 1. */oak:index/ntBaseLucene/indexRules/nt:base/properties* を参照します。
 1. Add two nt:unstructured nodes **[!UICONTROL slingResource]** and **[!UICONTROL damResolvedPath]** under */oak:index/ntBaseLucene/indexRules/nt:base/properties*
-1. ノード上で以下のプロパティを設定します(orderedプロパティとpropertyIndexプロパティは *Boolean型です*)。
+1. ノード上で以下のプロパティを設定します(orderedプロパティとpropertyIndexプロパティのタイプは *Boolean*:
 
    slingResource
 
@@ -347,9 +350,9 @@ LuceneIndexProvider 設定を更新します。
 
 1. /oak:index/ntBaseLucene ノードで、プロパティ `reindex=true` を設定します。
 1. Click **[!UICONTROL Save All]**
-1. error.logを監視して、インデックス作成が完了したことを確認します。
+1. error.logを監視して、インデックス作成が完了したかどうかを確認します。
 
-   インデックスのインデックスの再作成が完了しました： [/oak:index/ntBaseLucene]
+   インデックスの再インデックスが完了しました： [/oak:index/ntBaseLucene]
 
 1. CRXDe で /oak:index/ntBaseLucene ノードを更新すると reindex プロパティが false に戻るので、インデックス構築が完了したかどうかを確認することもできます。
 1. Once indexing is completed then go back to CRXDe and set the **[!UICONTROL type]** property to disabled on these two indexes
@@ -407,7 +410,7 @@ CPU を効率的に使用し、負荷を分割することで遅延を最小限�
 * サイズの大きなアセットのアップロードには有線接続を使用する.
 * 最適な JVM パラメーターを設定する.
 * ファイルシステムデータストアまたは S3 データストアを設定する.
-* サブアセットの生成を無効にします。 この機能が有効な場合、AEMのワークフローは複数ページのアセット内の各ページに対して個別のアセットを作成します。 これらの各ページは、追加のディスク領域を消費する個々のアセットで、バージョン管理や追加のワークフロー処理が必要です。 別々のページを必要としない場合は、サブアセットの生成とページ抽出アクティビティを無効にします。
+* サブアセットの生成を無効にします。 この機能が有効な場合、AEMのワークフローは、複数ページのアセット内の各ページに対して個別のアセットを作成します。 これらの各ページは、追加のディスク領域を消費し、バージョン管理や追加のワークフロー処理が必要な個々のアセットです。 別々のページが必要ない場合は、サブアセットの生成とページ抽出のアクティビティを無効にします。
 * 一時的なワークフローを有効化する.
 * Granite のワークフローキューを調整して同時に実行されるジョブ数を制限する.
 * ImageMagick を設定してリソースの消費を制限する.
