@@ -3,7 +3,10 @@ title: Web ページでのページトラッカーと埋め込みコードの使
 description: ページトラッカーコードと埋め込み JavaScript コードを Web サイトコードに組み込んで、Adobe Analytics でアセットの使用状況データを収集できるようにする方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 100%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
 
 アセット固有のイベント（クリックなど）を取得するには、サードパーティの Web サイトコードに埋め込みコードも含めます。
 
-次のサンプルコードは、ページトラッカーコードと埋め込みコードの両方を含むWebページの見え方を示しています。
+次のサンプルコードは、ページトラッカーコードと埋め込みコードの両方を含む Web ページです。
 
 ```
 <!DOCTYPE html>
@@ -58,7 +61,7 @@ source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
 
 ## ページトラッカーコードの追加 {#adding-page-tracker-code}
 
-ページトラッカーコードは、Webサイトコードのヘッダーセクション内に追加します。 次のコードスニペットは、サンプル Web ページに組み込まれたページトラッカーコードです。
+ページトラッカーコードは Web サイトコードのヘッダーセクションに追加します。次のコードスニペットは、サンプル Web ページに組み込まれたページトラッカーコードです。
 
 ```xml
  <head>
@@ -78,7 +81,7 @@ source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
 
 ## 埋め込みコードの追加 {#adding-embed-code}
 
-埋め込みコードは、Webサイトコードの本文内に追加します。 次のコードスニペットは、サンプル Web ページに組み込まれた埋め込みコードです。
+埋め込みコードは Web サイトコードの本文に追加します。次のコードスニペットは、サンプル Web ページに組み込まれた埋め込みコードです。
 
 ```xml
 <body>
