@@ -10,10 +10,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d1f45751-1761-4d6b-b17d-110b2f1117ea
 translation-type: tm+mt
-source-git-commit: 9b19484596948e9e166f5310622b7e6eacd78f93
+source-git-commit: 58482f492b7a44685af2c69b2df9aec47812d989
 workflow-type: tm+mt
-source-wordcount: '2843'
-ht-degree: 50%
+source-wordcount: '2865'
+ht-degree: 51%
 
 ---
 
@@ -45,12 +45,13 @@ You add dynamic media assets directly to the page if you are using AEM as your W
    ![chlimage_1-537](assets/chlimage_1-537.png)
 
 1. 使用するダイナミックメディアコンポーネントをページの目的の位置にドラッグします。
-1. Click the blue box around the component, then tap the **[!UICONTROL Configuration]** (wrench) icon.
+1. コンポーネントの上に直接マウスポインターを置きます。コンポーネントが青色のボックスで囲まれた時点で 1 回タップすると、コンポーネントのツールバーが表示されます。****&#x200B;設定（レンチ） アイコンをタップします。
 1. [必要に応じてコンポーネントを編集し](#dynamic-media-components) 、チェックマークをクリックして変更を保存します。
+1. 
 
 ### Enabling Dynamic Media components {#enabling-dynamic-media-components}
 
-ページに追加できるダイナミックメディアコンポーネントがない場合は、コンポーネントを有効にする必要がある可能性があります。
+ページに追加できるダイナミックメディアコンポーネントがない場合は、まず使用するコンポーネントを有効にする必要がある可能性があります。
 
 1. AEM で、Dynamic Media コンポーネントを追加するページを開きます。
 1. ツールバーの左側で、ページ上部近くにあります。ページ情報アイコンをタップし、ドロップダウンリストから「テンプレート **[!UICONTROL の編集]** 」をタップします。
@@ -59,17 +60,17 @@ You add dynamic media assets directly to the page if you are using AEM as your W
 
 1. ツールバーの右側で、ページの上部に近いドロップダウンリストから「 **[!UICONTROL 構造]**」をタップします。
 
-![ポリシー](/help/assets/assets-dm/structure-mode.png)
+   ![ポリシー](/help/assets/assets-dm/structure-mode.png)
 
 1. ページ下部近くにある「 **[!UICONTROL レイアウトコンテナ]** 」をタップしてツールバーを開き、ポリシーアイコンをタップします。
 1. レイ **[!UICONTROL アウトコンテナ]** ページの「 **[!UICONTROL プロパティ]** 」見出しの下で、「 **[!UICONTROL 許可されているコンポーネント]** 」タブが選択されていることを確認します。
 
-![許可されているコンポーネント](/help/assets/assets-dm/allowed-components.png)
+   ![許可されているコンポーネント](/help/assets/assets-dm/allowed-components.png)
 
 1. ダイナミックメディアが表示されるまでスクロ **[!UICONTROL ールし]**&#x200B;ます。
 1. ダイナミックメディア **[!UICONTROL の左にある>アイコンをタップして]** リストを展開し、有効にするダイナミックメディアコンポーネントを選択します。
 
-![ダイナミックメディアコンポーネントリスト](/help/assets/assets-dm/dm-components-select.png)
+   ![ダイナミックメディアコンポーネントリスト](/help/assets/assets-dm/dm-components-select.png)
 
 1. レイ **[!UICONTROL アウトコンテナ]** ページの右上隅近くにある「完了」（チェックマーク）アイコンをタップします。
 
