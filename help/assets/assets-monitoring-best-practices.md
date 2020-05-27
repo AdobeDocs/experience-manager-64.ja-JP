@@ -3,7 +3,10 @@ title: Assets の監視のベストプラクティス
 description: AEM インスタンスをデプロイした後の環境およびパフォーマンスの監視に関するベストプラクティス。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: c407cecf4f4de9aa00ba987f96df3c75784e0171
+workflow-type: tm+mt
+source-wordcount: '1765'
+ht-degree: 87%
 
 ---
 
@@ -29,7 +32,7 @@ Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の�
 
 開発のパフォーマンステストの段階、または高負荷な状態になったときに、環境のパフォーマンス特性を把握するためにライブ監視を実行する必要があります。通常、ライブ監視はいくつかのツールを使用して実行します。以下にお勧めのツールを示します。
 
-* [ビジュアルVM](https://visualvm.github.io/):Visual VMを使用すると、CPU使用率、Javaメモリ使用量など、Java VMの詳細な情報を表示できます。 また、インスタンス上で実行されるコードをサンプリングおよび評価できます。
+* [ビジュアルVM](https://visualvm.github.io/): Visual VMを使用すると、CPU使用率、Javaメモリ使用量など、Java VMの詳細な情報を表示できます。 また、インスタンス上で実行されるコードをサンプリングおよび評価できます。
 * [Top](http://man7.org/linux/man-pages/man1/top.1.html)：Top は、CPU、メモリ、IO 使用量などの使用量統計を表示するダッシュボードを開く Linux コマンドです。インスタンスの状況の概要を示します。
 * [Htop](https://hisham.hm/htop/)：Htop は、インタラクティブなプロセスビューアです。Top が提供する情報に加えて、詳細な CPU およびメモリ使用状況が表示されます。Htop can be installed on most Linux systems using `yum install htop` or `apt-get install htop`.
 
@@ -55,7 +58,7 @@ AEM インスタンスの長期的監視では、ライブで監視されるの�
 
 ### ログの集約とレポート {#log-aggregation-and-reporting}
 
-Splunk（TM）や Elastic Search/Logstash/Kabana（ELK）など、いくつかのログ集約ツールがあります。AEM インスタンスの稼動時間を評価するには、システムに固有のログイベントを理解し、それに基づきアラートを作成することが重要です。開発と運用の慣行に関する十分な知識があれば、重要なアラートを生成するログ集計プロセスを調整する方法をより深く理解するのに役立ちます。
+Splunk（TM）や Elastic Search/Logstash/Kabana（ELK）など、いくつかのログ集約ツールがあります。AEM インスタンスの稼動時間を評価するには、システムに固有のログイベントを理解し、それに基づきアラートを作成することが重要です。開発と運用に関する慣習を十分に理解しておくと、重要なアラートを生成するログ集計プロセスを調整する方法をより深く理解できます。
 
 ### 環境の監視 {#environment-monitoring}
 
@@ -82,7 +85,7 @@ JMX MBean へのリモートアクセスは、デフォルトで無効になっ�
 
 他の Java ベースのアプリケーションスタックと同様に、AEM は基盤となる Java Virtual Machine から提供されたリソースを利用します。JVM により公開されているプラットフォーム MXBean によって、それらのリソースの多くの状態を監視できます。MXBean について詳しくは、[プラットフォーム MBean サーバーおよびプラットフォーム MXBean の使用](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html)を参照してください。
 
-JVMで監視できるベースラインパラメーターの一部を以下に示します。
+JVMの基準パラメーターの一部を以下に示します。
 
 メモリ
 
@@ -117,7 +120,7 @@ AEM で監視できるベースラインパラメーターをいくつか示し�
 
 * アラーム定義：システムにブロックされたキューが存在しており、レプリケーションターゲットがダウンしているか、または到達不能であることを示しています。多くの場合、ネットワークまたはインフラストラクチャの問題により過剰なエントリがキューに登録されています。それによってシステムのパフォーマンスに悪影響が生じる可能性があります。
 
-**注意**:MBeanおよびURLパラメータの場合は、を、監 `<AGENT_NAME>` 視する複製エージェントの名前に置き換えます。
+**注意**: MBeanおよびURLパラメーターの場合は、を、監視 `<AGENT_NAME>` する複製エージェントの名前に置き換えます。
 
 セッションカウンター
 
@@ -186,12 +189,10 @@ AEM で監視できるベースラインパラメーターをいくつか示し�
 監視中に問題が発生した場合は、以下のトラブルシューティングを実行して、AEM インスタンスでよくある問題を解決できます。
 
 * TarMK を使用している場合は、Tar 圧縮を頻繁に実行します。For more details, see [Maintaining the Repository](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
-* ログを確 `OutOfMemoryError` 認します。 詳しくは、[メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)を参照してください。
-
+* ログを確認 `OutOfMemoryError` します。 詳しくは、[メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)を参照してください。
 * ログを確認し、インデックス化されていないクエリ、ツリートラバーサル、インデックストラバーサルへの参照がないかを確認します。これらは、インデックス化されていないクエリ、または不適切にインデックス化されたクエリを示しています。For For best practices on optimizing query and indexing performance, see [Best Practices for Queries and Indexing](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 * ワークフローが予期したとおりに動作していることを確認するには、ワークフローコンソールを使用します。可能な場合は、複数のワークフローを単一のワークフローにまとめます。
 * ライブ監視を再確認し、他にボトルネックがないか、または特定のリソースを大量に使用している箇所がないかを確認します。
 * ディスパッチャーを含むクライアントネットワークからの出口ポイントおよび AEM インスタンスへの入り口ポイントを調査します。多くの場合、これらがボトルネックが発生する領域となります。詳しくは、[Assets のネットワークにおける考慮事項](assets-network-considerations.md)を参照してください。
-* AEM サーバーを拡張します。AEM インスタンスのサイジングが不適切な可能性があります。アドビのサポートは、サーバーのサイジングが適切かどうかを判断するお手伝いをします。
+* AEM サーバーを拡張します。AEM インスタンスのサイジングが不適切な可能性があります。アドビカスタマーケアは、お使いのサーバーが小さすぎるかどうかを特定するのに役立ちます。
 * `access.log` および `error.log` ファイルで、不具合の発生した時刻付近のエントリを調査します。カスタムコードの異常の兆候となるパターンを探します。それらを監視するイベントのリストに追加します。
-
