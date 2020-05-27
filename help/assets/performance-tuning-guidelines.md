@@ -3,10 +3,10 @@ title: アセットパフォーマンス調整ガイド
 description: AEM Assets のボトルネックを解消し、パフォーマンスを最適化するための、AEM の設定、ハードウェア、ソフトウェアおよびネットワークコンポーネントの変更に関する留意点。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+source-git-commit: c407cecf4f4de9aa00ba987f96df3c75784e0171
 workflow-type: tm+mt
-source-wordcount: '3201'
-ht-degree: 84%
+source-wordcount: '3202'
+ht-degree: 83%
 
 ---
 
@@ -417,6 +417,6 @@ CPU を効率的に使用し、負荷を分割することで遅延を最小限�
 * DAMアセットの更新ワークフローから不要な手順を削除します。
 * ワークフローとバージョンのパージを設定する.
 * Luceneインデックスの設定を最適化します。
-* 最新のサービスパックとホットフィックスでインデックスを最適化する。その他のインデックスの最適化方法については、アドビサポートに問い合わせてください。
+* 最新のサービスパックとホットフィックスでインデックスを最適化する。利用可能なインデックスのその他の最適化については、アドビカスタマーケアにお問い合わせください。
 * Use `guessTotal` to optimize query performance.
 * If you configure AEM to detect file types from the content of the files (by configuring [!UICONTROL Day CQ DAM Mime Type Service] in the [!UICONTROL AEM Web Console]), upload many files in bulk during non-peak hours as the operation is resource-intensive.
