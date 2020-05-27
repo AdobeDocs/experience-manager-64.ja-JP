@@ -4,9 +4,9 @@ description: タッチ操作向けAEM Assetsのユーザーインターフェイ
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c564271c88de0183df81557f1e3ab00eafb44b34
+source-git-commit: c407cecf4f4de9aa00ba987f96df3c75784e0171
 workflow-type: tm+mt
-source-wordcount: '9812'
+source-wordcount: '9813'
 ht-degree: 67%
 
 ---
@@ -142,7 +142,7 @@ AEM Assets のタッチ対応 UI で実行できる様々なアセット管理�
 
 >[!NOTE]
 >
->ダイナミックメディア — Scene7モードインストール機能パック(FP)18912のAEMオーサーで、FTP経由でアセットをアップロードするには アドビサポートに問い合わせて FP-18912 にアクセスし、FTP アカウントの設定を完了します。[一括アセット移行用の機能パック 18912 のインストール](/help/assets/bulk-ingest-migrate.md)を参照してください。アセットのアップロードに FTP を使用する場合、AEM で指定したアップロード設定は無視されます。代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
+>ダイナミックメディア — Scene7モードインストール機能パック(FP)18912のAEMオーサーで、FTP経由でアセットをアップロードするには FP-18912へのアクセス権を取得し、FTPアカウントのセットアップを完了するには、アドビカスタマーケアにお問い合わせください。 [一括アセット移行用の機能パック 18912 のインストール](/help/assets/bulk-ingest-migrate.md)を参照してください。アセットのアップロードに FTP を使用する場合、AEM で指定したアップロード設定は無視されます。代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
 
 **FTP によりアセットをアップロードするには**
 
