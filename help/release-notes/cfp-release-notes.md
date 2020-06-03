@@ -4,7 +4,7 @@ description: Adobe Experience Manager 6.4の累積Fix Packに関するリリー�
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 04002fdd004e11ec7a4a950dac6565fec109e55d
+source-git-commit: 2aa3037b63f745d158eb87c5156808237277990d
 workflow-type: tm+mt
 source-wordcount: '2142'
 ht-degree: 24%
@@ -237,7 +237,7 @@ To use Uber Jar in a Maven project, refer to the article, [How to use Uber jar](
 
 ## 既知の問題 {#known-issues}
 
-* バージョン83の更新により、 [!DNL chrome] パッケージの構築で問題が発生しています。 この問題を解決するには、 [!DNL Internet Explorer] およびなどの他の利用可能なブラウザー、 [!DNL Edge]またはAEM標準のパッケージインストールオプションを使用します。
+* バージョン83の更新により、 [!DNL chrome] パッケージの構築で問題が発生しています。 この問題を解決するには、 [!DNL Internet Explorer] およびなどの他の利用可能なブラウザー、 [!DNL Firefox]またはAEM標準のパッケージインストールオプションを使用します。
 
 * AEM既定のメール送信者を使用してリモートSMTPサーバーに電子メールを送信できません。TLS v1.2を使用した通信のみが可能です。バンドルを削除し、更新し `javax.mail:mail:1.5.0-b01` て問題を解決し `system/console` てください。
 
