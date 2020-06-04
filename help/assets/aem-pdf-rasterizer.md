@@ -1,9 +1,12 @@
 ---
 title: PDFラスタライザを使用
-description: Adobe PDFラスタライザーライブラリを使用して、高品質のサムネールとレンディションを生成します。
+description: Adobe PDF Rasterizerライブラリを使用して、高品質のサムネールとレンディションを生成します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 69976917f19a695908f1d7e5276d969587671761
+workflow-type: tm+mt
+source-wordcount: '763'
+ht-degree: 60%
 
 ---
 
@@ -14,13 +17,13 @@ source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
 
 次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
 
-* コンテンツを大量に消費する重量のAIまたはPDFファイル。
-* サムネールがすぐに生成されないAIまたはPDFファイル。
+* 大量のコンテンツを必要とする重量のAIまたはPDFファイル。
+* サムネールを含むAIファイルまたはPDFファイルは、初期設定の状態では生成されません。
 * Pantone Matching System（PMS）カラーを使用した AI ファイル.
 
 PDF Rasterizer を使用して生成されたサムネールおよびプレビューは、何もしなくてもすぐに使用できる出力に比べて高品質です。そのため、デバイス全体で一貫した表示エクスペリエンスを得ることができます。Adobe PDF Rasterizer ライブラリはカラースペース変換をサポートしません。ソースファイルのカラースペースに関わらず、RGB として出力されます。
 
-1. [パッケージ共有](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)にある PDF Rasterizer パッケージを AEM インスタンスにインストールします。
+1. Install the PDF Rasterizer package on your AEM instance from [Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg) or [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg).
 
    >[!NOTE]
    >
@@ -30,10 +33,12 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
 1. Open the **[!UICONTROL DAM Update Asset]** workflow page.
 1. PDFおよびAIファイルのデフォルトのサムネールとWebレンディションの生成をスキップするには、次の設定を行います。
 
-   * 「サムネー **[!UICONTROL ルプロセス]** 」ステップを開き、「 `application/pdf` Skip Mime Types `application/postscript` 」フィールドに **** 、またはを追加します。
+   * 「 **[!UICONTROL サムネール処理]** 」の手順を開き、「MIMEタイプを `application/pdf` スキップ `application/postscript`**** 」フィールドにまたはを追加します。
+
    ![skip_mime_types-2](assets/skip_mime_types-2.png)
 
    * In the **[!UICONTROL Web Enabled Image]** tab, add `application/pdf` or `application/postscript` under **[!UICONTROL Skip List]** depending upon your requirements.
+
    ![web_enabled_imageskiplist](assets/web_enabled_imageskiplist.png)
 
 1. Open the **[!UICONTROL Rasterize PDF/AI Image Preview Rendition]** step, and remove the MIME type for which you want to skip the default generation of preview image renditions. For example, remove the MIME type *application/pdf*, *application/postscript,* or *application/illustrator* from the **[!UICONTROL MIME Types]** list.
@@ -41,16 +46,17 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
    ![process_arguments](assets/process_arguments.png)
 
 1. 「**[!UICONTROL PDF Rasterizer Handler]**」ステップをサイドパネルから「**[!UICONTROL サムネールを処理]**」ステップの下にドラッグします。
-1. **[!UICONTROL PDFラスタライザーハンドラー手順に対して次の引数を設定します]** 。
+1. Configure the following arguments for the **[!UICONTROL PDF Rasterizer Handler]** step:
 
    * Mime Types: *application/pdf* or *application/postscript*
    * コマンド: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
    * 追加するサムネールのサイズ：319:319、140:100、48:48。必要に応じて、サムネールのカスタム設定を追加します。
+
    `PDFRasterizer` コマンドのコマンドライン引数には、以下のものがあります。
 
    **-d**：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグ。高い画質の画像が作成されます。ただし、このパラメーターを指定すると、コマンドの実行速度が遅くなり、画像サイズも増大します。
 
-   `-p`:ページ番号。 デフォルト値は、すべてのページです。「*」は、すべてのページを示します。
+   `-p`: ページ番号。 デフォルト値は、すべてのページです。「*」は、すべてのページを示します。
 
    **-s**：画像の最大サイズ（高さまたは幅）。これは各ページで DPI に変換されます。異なるサイズのページが混在している場合、ページごとに異なる比率で拡大縮小される場合があります。デフォルトは実際のページサイズです。
 
@@ -72,16 +78,17 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
 1. ワークフローを保存します。
 1. To enable PDF Rasterizer to process PDF pages with PDF libraries, open the **[!UICONTROL DAM Process Subasset]** model from the Workflow console.
 1. From the side panel, drag the PDF Rasterizer Handler step under the **[!UICONTROL Create Web-Enabled Image Rendition]** step.
-1. **[!UICONTROL PDFラスタライザーハンドラー手順に対して次の引数を設定します]** 。
+1. Configure the following arguments for the **[!UICONTROL PDF Rasterizer Handler]** step:
 
    * MIMEタイプ： `application/pdf` または `application/postscript`
    * コマンド: `PDFRasterizer -d -p 1 -s 1280 -t PNG -i ${file}`
    * 追加するサムネールのサイズ：319:319、140:100、48:48。必要に応じて、サムネールのカスタム設定を追加します。
+
    PDFRasterizer コマンドのコマンドライン引数には、以下のものがあります。
 
    **-d**：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグ。高い画質の画像が作成されます。ただし、このパラメーターを指定すると、コマンドの実行速度が遅くなり、画像サイズも増大します。
 
-   **-p**：ページ番号。デフォルト値は、すべてのページです。アスタリスクは `*` すべてのページを表します。
+   **-p**：ページ番号。デフォルト値は、すべてのページです。アスタリスク `*` はすべてのページを表します。
 
    **-s**：画像の最大サイズ（高さまたは幅）。これは各ページで DPI に変換されます。異なるサイズのページが混在している場合、ページごとに異なる比率で拡大縮小される場合があります。デフォルトは実際のページサイズです。
 
