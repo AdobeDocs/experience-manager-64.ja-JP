@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 5a771d8c-cc56-4979-aeab-b508755a2078
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 6de5e6f12f123ca2ec45358a138becc410c89e4e
+workflow-type: tm+mt
+source-wordcount: '691'
+ht-degree: 96%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 >[!CAUTION]
 >
->The user must have the **Modify/Create/Delete** permission on the node `/content/versionhistory` in order to use the feature.
+>AEM 6.4.3より前のバージョンを実行している場合、この機能を使用するには、ノードで **変更/作成** /削除の権限が必要 `/content/versionhistory` です。
 >
 >この機能の技術的詳細については、[開発とページの差分](/help/sites-developing/pagediff.md#operation-details)を参照してください。
 
@@ -33,10 +36,10 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 並列比較による差分表示では、次のものを比較できます。
 
-* [バージョン](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page) — 現在の状態を持つページの以前のバージョン
-* [ライブコピー](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page) - bluePrintとライブコピー
-* [起動回数](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page) — ソースで起動
-* [言語コピー](/help/sites-administering/tc-manage.md#comparing-language-copies) — 翻訳前後のページ
+* [バージョン](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page) - ページの以前のバージョンとその現在の状態
+* [](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page)ライブコピー - ライブコピーとそのブループリント
+* [ローンチ](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page) - ローンチとそのソース
+* [](/help/sites-administering/tc-manage.md#comparing-language-copies)言語コピー - （再）翻訳前と（再）翻訳後のページ
 
 それらのコンテキスト内で差分の確認を開始する方法については、それぞれのトピックを参照してください。
 
@@ -67,23 +70,23 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 **HTML の変更**
 
 * ダークグリーン - 追加された HTML
-* 赤 — HTML削除
+* 赤 - 削除された HTML
 
 >[!NOTE]
 >
->言語コピーを比較する場合は、翻訳ですべてが変更され、強調表示をしても意味がないため、強調表示は無効になります。
+>言語コピーを比較する場合は、翻訳ですべてが変更され、強調表示をしても意味がないので、強調表示は無効になります。
 
-### フルスクリーンおよび終了 {#fullscreen-and-exiting}
+### 全画面表示および終了 {#fullscreen-and-exiting}
 
 特定のコンテンツに集中するために、並列比較による差分表示のいずれかの「側」の全画面表示アイコンをクリックして、それをフルブラウザーウィンドウに拡大することができます。
 
 ![](do-not-localize/chlimage_1-24.png)
 
-選択された側がウィンドウ全体に表示されますが、バーは上部に残るため、2 枚のページを切り替えることができます。
+選択された側がウィンドウ全体に表示されますが、バーは上部に残るので、2 枚のページを切り替えることができます。
 
 ![chlimage_1-356](assets/chlimage_1-356.png)
 
-またフルスクリーン終了アイコンをクリックして、全画面表示を閉じることができます。
+また全画面表示終了アイコンをクリックして、全画面表示を閉じることができます。
 
 ![](do-not-localize/chlimage_1-25.png)
 
@@ -95,7 +98,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 * バージョンおよびローンチが異なるとき、差分は、パンくずリスト、メニュー、製品リスト、ロゴなどのダイナミックコンポーネント（コンテンツを表示する際にサイト構造に依存するコンポーネント）を考慮しません。
 * バージョンの差分表示では、アクセスコントロールポリシーおよびライブコピー関係は再現されません。
-* alt、title、srcの属性の変更など、イメージに変更が加えられると、変更されたときに青でハイライト表示されます。 ただし、イメージにsrc属性のBase64表現が含まれ、両方のイメージが同じように見える場合でも、src属性が異なるので、diffによってマークされることがあります。
+* alt、title、src 属性の変更など、画像を変更する場合、差分は青色で強調表示されます。たとえ両方の画像が同じに見える場合でも、画像に src 属性の Base64 による表示があるときに src 属性が異なれば、それが差分としてマークされます。
 * 差分表示では、画像の回転を検出できません。
 * ページを移動すると、移動前に作成したバージョンとの差分を実行できなくなります。
 
@@ -103,7 +106,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 >[!NOTE]
 >
->バージョンは互いに比較できません。現在のバージョンのみ、ページの他のバージョンと比較できます。 必ず変更が強調表示されるのは、現在のバージョンです。
+>古いバージョン同士を比較することはできません。比較できるのは、現在のバージョンと古いバージョンの組み合わせだけです。変更の強調表示は、必ず現在のバージョンに対しておこなわれます。
 
 >[!NOTE]
 >
