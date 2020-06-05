@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: Configuration
 discoiquuid: 71412f5d-ff34-415f-baf8-d300756b93a9
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: 17f5041c16996ec3f230650451a816c08170837c
+workflow-type: tm+mt
+source-wordcount: '272'
+ht-degree: 99%
 
 ---
 
@@ -64,14 +67,6 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
    <td>
     <ul> 
      <li>アダプティブフォームやインタラクティブ通信テンプレートを作成およびプレビューする</li> 
-    </ul> </td> 
-  </tr>
-  <tr>
-   <td>template-power-user</td> 
-   <td>
-    <ul> 
-     <li>アダプティブフォームやインタラクティブ通信テンプレートを作成およびプレビューする</li> 
-     <li>コードエディターを使用して、アダプティブフォームまたはインタラクティブな通信テンプレート用のスクリプトを作成する</li> 
     </ul> </td> 
   </tr>
   <tr>
