@@ -10,7 +10,10 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aee5f5a7-8462-4d42-8d96-8a7eb317770e
 translation-type: tm+mt
-source-git-commit: 0e3c64b43ceba3b8ebee134872123f5c5d03affa
+source-git-commit: 377922cc2ccf40a02467b17910a8750420202b61
+workflow-type: tm+mt
+source-wordcount: '2247'
+ht-degree: 68%
 
 ---
 
@@ -41,7 +44,7 @@ Maven に基づく AEM プロジェクトのビルドには以下のメリット
 
 これまで、開発者は様々な AEM ライブラリに対する個別の依存関係を比較的多数管理し、新しい API が使用されるたびに、個別の依存関係を 1 つ以上プロジェクトに追加する必要がありました。1 つのプロジェクトに UberJar を導入すると、30 個の個別の依存関係がプロジェクトから削除されます。
 
-### UberJar の使用方法 {#how-to-i-use-the-uberjar}
+### How do I use the UberJar? {#how-do-i-use-the-uberjar}
 
 If you are using Apache Maven as a build system (which is the case for most AEM Java projects), you will need to add one or two elements to your *pom.xml* file. The first is a *dependency* element adding the actual dependency to your project:
 
@@ -82,7 +85,7 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでaem-uberjar-demoプロジェクトを開く](https://github.com/justinedelson/aem-uberjar-demo)
+* [GitHubでaem-uberjar-demoプロジェクトを開きます。](https://github.com/justinedelson/aem-uberjar-demo)
 * プロジェクトを [ZIP ファイル](https://github.com/justinedelson/aem-uberjar-demo/archive/6.2-unobfuscated.zip)としてダウンロードします
 
 >[!NOTE]
@@ -381,7 +384,7 @@ For example, the archetype uses a `.vltignore` file to prevent the JAR file that
 
 ファイルシステムとリポジトリとの間で特定のパスの同期を維持し、AEM にインストールするためにビルドするパッケージにはそのパスをインクルードしない場合があります。
 
-一般的なケースはパス `/libs/foundation` です。 開発目的で、このパスの内容をファイルシステムで使用できるようにし、例えば、IDEがにJSPを含むJSP挿入を解決できるようにします `/libs`。 ただし、カスタム実装で変更する必要のない製品コードがパーツに含まれているので、構築するパ `/libs` ーツはパッケージに含めないでください。
+通常は `/libs/foundation` パスです。 開発のためには、このパスの内容をファイルシステムで使用できるようにし、例えば、IDEで、内のJSPを含むJSP挿入を解決できるようにし `/libs`ます。 ただし、カスタム実装で変更してはならない製品コードがパーツに含まれているので、構築するパッケージにその `/libs` パーツを含めたくありません。
 
 To achieve this, you can provide a file `src/main/content/META-INF/vault/filter-vlt.xml`. If this file exists, it will be used by the VLT tool, e.g. when you perform `vlt up` and `vlt ci`, or when you have set `vlt sync` set up. The content-package-maven-plugin will continue to use the file `src/main/content/META-INF/vault/filter.xml` when creating the package.
 
@@ -448,7 +451,7 @@ AEM でのコンポーネントの動作はまったく同じですが、Maven �
 
 >[!NOTE]
 >
->上記のように製品の依存関係を読み込まない限り、前述のようにAEM設定に一致するバージョンと共に、親POMに依存関係を追加する必要もあります。 以下の各エントリのコメントは、依存関係ファインダーで検索するパッケージを示しています。
+>前述のとおりに製品の依存関係を読み込まない限り、前述のAEM設定に一致するバージョンと共に、それらの依存関係も親POMに追加する必要があります。 以下の各エントリのコメントは、依存関係ファインダーで検索するパッケージを示しています。
 
 >[!NOTE]
 >
@@ -469,7 +472,7 @@ To compile JSPs in Maven&#39;s `compile` phase, we use Apache Sling&#39;s [Maven
 
 また、Maven JspC Plugin の結果を OSGi バンドルの一部としてバンドルおよびデプロイすることもできますが、これにより他の影響や副作用が生じ、JSP の検証という目的を逸脱してしまいます。
 
-JSPからコンパイルされたクラスを削除するために、Maven Clean pluginを次のように設定します。 Maven JspCプラグインの結果を調べたい場合は、を実行し `mvn compile` ます。 `myproject/content` その後、結果はに表示されま `myproject/content/target/ignoredjspc`す。
+JSPからコンパイルされたクラスを削除するために、Maven Clean Pluginを次のように設定しました。 Maven JspCプラグインの結果を調べたい場合は、を実行 `mvn compile` し `myproject/content` ます。その後、結果はに表示され `myproject/content/target/ignoredjspc`ます。
 
 #### myproject/content/pom.xml {#myproject-content-pom-xml-1}
 
@@ -573,7 +576,7 @@ JSPからコンパイルされたクラスを削除するために、Maven Clean
 
 #### SCM から除外するパターン {#patterns-to-exclude-from-scm}
 
-次に、SCMから含めるパターンの一般的なリストを示します。 例えば、gitを使用している場合は、プロジェクトのファイルに追加でき `.gitignore` ます。
+次に、SCMから含めるパターンの一般的なリストを示します。 例えば、gitを使用している場合は、これらをプロジェクトの `.gitignore` ファイルに追加できます。
 
 #### サンプルの .gitignore {#sample-gitignore}
 
@@ -625,7 +628,7 @@ maven-eclipse.xml
 *.jar
 ```
 
-を参照してください。ファ `gitignore` イルはリポジトリ()にも含めないでください。 `vltignore` ファイルを拡張して、を含める必要があります。 `gitignore` file:
+を参照してください。 `gitignore` ファイルはリポジトリ(. `vltignore` ファイルを拡張して、を含める必要があります。 `gitignore` file:
 
 #### src/main/content/jcr_root/apps/myproject/install/.vltignore {#src-main-content-jcr-root-apps-myproject-install-vltignore-2}
 
