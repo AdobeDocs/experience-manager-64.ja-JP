@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: cad8b5cb9a0e2c602d12e5d529b037b3ebcbcfbe
+source-git-commit: 774f0e8b631f6f8328e7bd9d4172498df58459bc
 workflow-type: tm+mt
-source-wordcount: '21556'
+source-wordcount: '21555'
 ht-degree: 24%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 24%
 | バージョン | 6.4.8.0 |
 | タイプ | Service Pack のリリース |
 | 日付 | 2020年3月5日 |
-| ダウンロード URL | PackageShare [、](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/AEM-6.4.8.0-Service-Pack)ソフトウェア配布 [（ベータ版）のAEM 6.4.8.0](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/servicepack/aem-service-pkg-6.4.8.zip) |
+| ダウンロード URL | PackageShare [,](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/AEM-6.4.8.0-Service-Pack)[Software DistributionのAEM 6.4.8.0](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/servicepack/aem-service-pkg-6.4.8.zip) |
 
 ## AEM 6.4.8.0 に含まれる機能 {#what-s-included-in-aem}
 
@@ -143,7 +143,7 @@ AEM 6.4.8.0は、2018 **年4月のAEM 6.4の一般リリース(GA)以降にリ�
 
 * 無効な文字がButtonコンポーネント(NPR-32684)に追加されたURLに表示される。
 
-### Forms {#forms}
+### フォーム {#forms}
 
 >[!NOTE]
 >
@@ -317,7 +317,7 @@ AEM 6.4.7.0の主な特徴は次のとおりです。
 * 制限付きグループの管理者は、グループカードを表示できず、AEMオーサーインスタンス(NPR-30810)でクイックリンク操作（グループの編集/公開/削除）を実行できません。
 * AEMオーサーインスタンスで新しいサイトを作成すると、メンバーグループ/グループ情報が表示されません(NPR-28840)。
 
-##### Forms {#forms-6470}
+##### フォーム {#forms-6470}
 
 >[!NOTE]
 >
@@ -388,7 +388,7 @@ AEM 6.4.6.0の主な特徴は次のとおりです。
 * タグの管理にカルーセルを使用する場合、ナビゲーションボタンは機能しません。 CQ-4275499 のホットフィックス
 * 一括移動アセット機能が機能しないため、アセットが移動しない。 CQ-4272987 のホットフィックス
 
-**サイト**
+**Sites**
 
 * `pageinfo.json` 要求は非常に遅く、読み込みに時間がかかりすぎます。 NPR-29709：CQ-4269560 のホットフィックス
 * `onTime` または、アセットに保存された `offTime` メタデータプロパティは、AEMサーバーを再起動しても呼び出されません。 NPR-30413：CQ-4272784 のホットフィックス
@@ -561,7 +561,7 @@ AEM 6.4.5.0の主な特徴は次のとおりです。
 * AEM 6.4.3にアップグレードした後、アセットレポートに関する問題がクエリで制限されました。NPR-28588: CQ-4262022、CQ-4260697の修正プログラム
 * ダウンロード機能は、assetdownloadサーブレットを介してAEM Assetsを利用し、匿名ユーザーがすべてのアセットをダウンロードできるようにします。 NPR-27315、CQ-4254732用の修正プログラム
 
-**サイト**
+**Sites**
 
 * JCR準拠タグ名は、タグタイトルに基づいて自動入力する必要があります。 NPR-28990：CQ-4199411 のホットフィックス
 * ページプロパティに追加された一部のフィールドに、継承のキャンセルボタンが表示されない。 NPR-29079：CQ-4265686 のホットフィックス
@@ -785,7 +785,7 @@ AEM 6.4.4.0の主な特徴は次のとおりです。
 * SiteCatalyst設定で、サービスリゾルバーが閉じられていません。 NPR-28015：CQ-4259397 のホットフィックス
 * DAM内でアセットを移動しても、Scene7上では同様の移動が行われません(p2p config)。 NPR-28313：CQ-4261091 のホットフィックス
 
-**サイト**
+**Sites**
 
 * （クラシックUI）一部のライブコピーがロールアウトリストに表示されます。 NPR-28598、NPR-28574：CQ-4263410 のホットフィックス
 * cq:masterが空か無効な場合、LiveRelationshipManagerImplは例外をスローします。 NPR-28590：CQ-4263115 のホットフィックス
@@ -1007,7 +1007,7 @@ Forms Managerの開始レビューウィザードおよび移動アセットウ�
 
 **含まれている機能パック**
 
-**サイト**
+**Sites**
 
 * コンテンツフラグメントのバージョン管理では、AEM 6.4の違いの改善点を比較しています。NPR-26760: CQ-4248839のFP
 * AEM 6.4のコンテンツフラグメントのバリエーションの違いの改善。NPR-27866: CQ-4248839のFP
@@ -1064,7 +1064,7 @@ AEM 6.4.3.0の主な特徴は次のとおりです。
 * メタデータエディタページに、無効な項目パラメータのNULLポインタの例外が含まれています。 NPR-26169; CQ-4241368の修正プログラム。
 * ドロップダウンに選択ルールと必須ルールが適用されている場合、その必須ルールはメタデータエディタで満たされません。 NPR-27479; CQ-4251428の修正プログラム
 
-**サイト**
+**Sites**
 
 * ユーザーは、コンテンツポリシーを使用してインラインフルスクリーンモードでリッチテキストエディター機能を制御できますが、コンテンツポリシーを使用して編集ダイアログリッチテキストエディター機能を制御することはできません。 NPR-26750：CQ-4241130 のホットフィックス
 * リッチテキストエディターは、フルスクリーンからフローティングダイアログに切り替えると使用できなくなります。 フローティング表示には、2つのリッチテキストエディターが含まれています。 NPR-25589：CQ-4206008 のホットフィックス
@@ -1075,7 +1075,7 @@ AEM 6.4.3.0の主な特徴は次のとおりです。
 * 子ルールが作成者インスタンスから発行インスタンスに対してアクティブ化されると、発行インスタンスは動作を停止します。 NPR-26601：CQ-4253588 のホットフィックス
 * リッチテキストエディターを複数のフィールドと組み合わせると、Uncaught TypeError: fieldAPI.getName is not a function at foundation.js エラーが発生する。NPR-27146：CQ-4253155 のホットフィックス
 * Salesforce統合は、プロキシ設定を使用できません。 NPR-27244：CQ-4245300 のホットフィックス
-* 「投稿の管理」オプションを使用して後日アクティベーションするようにページをスケジュールし、リスト表示に切り替えると、カレンダーアイコンが表示されません。 NPR-26974：CQ-4239206 のホットフィックス
+* 後日、[パブリケーションの管理]オプションを使用してページのアクティベーションスケジュールを設定し、リスト表示に切り替えると、カレンダーアイコンが表示されません。 NPR-26974：CQ-4239206 のホットフィックス
 * ユーザーは、ページプロパティの閉じたユーザーグループの権限を編集できません。 NPR-27138: CQ-4256089用の修正プログラムタグ付けでタグを編集できません。 NPR-26957：CQ-4254858 のホットフィックス
 * 構造化コンテンツフラグメントモデルから参照されるタグを移動しても、コンテンツフラグメント内のタグへの既存の参照は更新されません。 これは、コンテンツフラグメントモデルの編集画面で発生します。 NPR-26776：CQ-4251805 のホットフィックス
 * 複数のページを含む起動を作成してプロモートする場合、各ページに対して複数のバージョンが作成されます。 NPR-26917：CQ-4254663 のホットフィックス
@@ -1332,7 +1332,7 @@ AEM 6.4.2.0の主な特徴は次のとおりです。
 * アセットまたはフォルダーの選択時に、列表示のブラウザーコンソールでJavaScriptエラーが発生する。 NPR-25939：CQ-4250228 のホットフィックス
 * (列の表示)キーファイルが空白の白いエントリとして表示されるので、タスクを識別できません。 NPR-25903：CQ-4246307 のホットフィックス
 
-**サイト**
+**Sites**
 
 * AEM 6.2でのdatasource.jspのクエリはAEM 6.4とは異なります。NPR-24968: CQ-4244235の修正プログラム
 * （クラシックUI）ページにタグを追加できません。 NPR-25255、NPR-25612：CQ-4249615 のホットフィックス
@@ -1664,7 +1664,7 @@ AEM 6.4.2.0 フォームの主なハイライトは次のとおりです。
 * コンテンツフラグメントで「アセットのダウンロード」オプションを有効にしました。 For more information, see [Asset Reports](/help/assets/asset-reports.md). NPR-25186：CQ-4237410 のホットフィックス
 * アセットフォルダのメタデータスキーマを設定する機能。 詳しくは、「 [フォルダーメタデータスキーマ](/help/assets/folder-metadata-schema.md) 」を参照し、AEM 6.4.2.0のインストール後の [設定](#configuration-settings-required-for-npr) （英語のみ）を参照してください。 NPR-21268：CQ-4221574 のホットフィックス
 
-**サイト**
+**Sites**
 
 * 削除権限なしでコンテンツフラグメントを編集できるようにします。 詳しくは、「コンテンツフラグメントの [カスタマイズと拡張](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/customizing-content-fragments.html#AssetPermissions)」を参照してください。 NPR-25793：CQ-4248750 のホットフィックス
 * コンテンツフラグメントに注釈を付ける機能が追加されました。 For more information, see [Variations-Authoring Fragments](https://helpx.adobe.com/experience-manager/6-4/assets/using/content-fragments-variations.html#AnnotatingaContentFragment). NPR-25188：CQ-4235336 のホットフィックス
@@ -1716,7 +1716,7 @@ AEM 6.4.1.0はAEM 6.4 GAにインストールできます。 サービスパッ�
 * Scene7ListInfoProviderによるXMPメタデータ抽出は、リソースを大量に消費します。 NPR-23754
 * (dam-配信)HTTPフォワーダーはHTTPプロキシ設定を考慮しません。 NPR-24002：CQ-4244140 のホットフィックス
 
-**サイト**
+**Sites**
 
 * 移動中にページの名前を変更すると、ページの移動は成功しますが、名前の変更機能は動作しません。 NPR-22923：CQ-4235907 のホットフィックス
 * Adobe Campaignのインポーターページを指すLive Copyページを公開する際にエラーが発生する。 NPR-23053：CQ-4237164 のホットフィックス
@@ -2072,7 +2072,7 @@ AEM Forms の主なハイライトは次のとおりです。
 * 拡張スマートタグの機能が追加されました。 詳しくは、「 [拡張スマートタグ](https://helpx.adobe.com/experience-manager/6-4/assets/using/enhanced-smart-tags.html)」を参照してください。 NPR-21951：CQ-4234883 のホットフィックス
 * InDesignにAEM Assetsリファレンスが導入されました。 For more information, see [AEM Assets References in InDesign](/help/assets/managing-linked-subassets.md). NPR-23386
 
-**サイト**
+**Sites**
 
 * （ページオーサリング）画像エディターの機能強化。 For more information, see [Image Editor](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/image-editor.html). NPR-24267：CQ-4245502 のホットフィックス
 
@@ -2228,7 +2228,7 @@ To use Uber Jar in a Maven project, refer to the article, [How to use Uber jar](
 
 このセクションでは、AEM 6.4 で廃止される機能および削除された機能について説明します。
 
-| 領域 | 機能 | 代替機能 | バージョン |
+| 領域 | 機能 | 代替手段 | バージョン |
 |---|---|---|---|
 | Assets | サブアセットのタグアクションの管理 | 代替機能はありません | AEM 6.4.2.0 |
 | Assets と Adobe Creative Cloud の統合 | [AEMからCreative Cloudへのフォルダー共有](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/creative-cloud.html) （AEMからCreative Cloudへ）は、クリエイティブユーザーにAEMのアセットへのアクセスを提供する方法としてAEM 6.2で導入されました。 Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが大幅に向上し、Photoshop、InDesign、Illustrator 内から AEM のアセットへの直接アクセスが強化されています。アドビは、このフォルダー共有機能をさらに強化する予定はありません。この機能はAEMに含まれていますが、お客様には置き換えの使用を強くお勧めします。 | Adobe Asset Linkまたはデスクトップアプリケーション。 詳細については、[AEM Creative Cloud の統合](/help/assets/aem-cc-integration-best-practices.md)記事を参照してください。 | AEM 6.4.4.0 |
