@@ -8,7 +8,10 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7677327a-cc56-413b-b2e3-7b10d0d0319d
 translation-type: tm+mt
-source-git-commit: a6d50dbcbfec85d21072d51a5fa48e3667835f06
+source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+workflow-type: tm+mt
+source-wordcount: '2255'
+ht-degree: 63%
 
 ---
 
@@ -19,23 +22,23 @@ source-git-commit: a6d50dbcbfec85d21072d51a5fa48e3667835f06
 
 ## 概要 {#overview}
 
-テキストドキュメントフラグメントは、1 つ以上のテキスト段落で構成されています。段落は静的または動的にすることができます。動的な段落には、フォームデータモデルのプロパティと変数を含めることができます。また、ルールを適用し、テキストドキュメントフラグメント内で繰り返すこともできます。 例えば、挨拶の顧客名は、フォームデータモデル(FDM)のプロパティで、実行時に値が使用可能になります。 これらの値を変更すると、エージェントUIを使用して、異なる顧客向けに同じInteractive Communicationを使用してInteractive Communicationを準備できます。
+テキストドキュメントフラグメントは、1 つ以上のテキスト段落で構成されています。段落は静的または動的にすることができます。動的な段落には、フォームデータモデルのプロパティと変数を含めることができます。また、ルールを適用し、テキストドキュメントフラグメント内で繰り返すこともできます。 例えば、あいさつ文の顧客名は、フォーム・データ・モデル(FDM)のプロパティで、実行時に値が使用可能になります。 これらの値を変更すると、エージェントUIを使用して、異なる顧客向けの対話型通信を作成する際に、同じ対話型通信を使用できます。
 
-インタラクティブ通信のテキストドキュメントフラグメントは、次の種類のダイナミックデータをサポートします。
+Interactive Communicationのテキストドキュメントフラグメントは、次の種類の動的データをサポートします。
 
-* **データモデルオブジェクト**:データプロパティはバックエンドデータソースを使用します。
-* **ルールベースのコンテンツ**：ルールに基づいて表示と非表示が切り替わる、テキスト内の特定のコンテンツ。また、フォームデータモデルのプロパティと変数に基づいてルールを作成することもできます。
-* **変数**：テキストドキュメントフラグメントでは、バックエンドのデータソースに変数が連結されることはありません。エージェントは、変数の値を入力/選択したり、データソースに変数を連結したりし、インタラクティブ通信を後処理に送信する準備を行います。
-* **繰り返し**:クレジットカード明細のトランザクションなど、生成された各インタラクティブコミュニケーションとの間で発生する可能性のある動的な情報をインタラクティブコミュニケーションに含めることができます。 繰り返し構造を使用すると、このような動的な情報の書式設定と構造化を行うことができます。For more information, see [Inline condition and repeat](https://helpx.adobe.com/experience-manager/6-3/forms/using/cm-inline-condition.html).
+* **データモデルオブジェクト**: dataプロパティはバックエンドデータソースを使用します。
+* **ルールベースのコンテンツ**：ルールに基づいて表示と非表示が切り替わる、テキスト内の特定のコンテンツ。また、フォームデータモデルのプロパティと変数に基づくルールを作成することもできます。
+* **変数**：テキストドキュメントフラグメントでは、バックエンドのデータソースに変数が連結されることはありません。エージェントは、後処理への送信用にインタラクティブ通信を準備する際に、変数の値を入力または選択するか、変数をデータソースに連結します。
+* **繰り返し**: クレジット・カード明細のトランザクションなど、インタラクティブ・コミュニケーションに動的な情報を持つことがあります。このトランザクションの発生回数は、生成された各インタラクティブ・コミュニケーションと共に変化を続ける可能性があります。 繰り返し構造を使用すると、このような動的な情報の書式設定と構造化を行うことができます。For more information, see [Inline condition and repeat](cm-inline-condition.md).
 
 ## テキストの作成 {#createtext}
 
 1. Select **`[!UICONTROL Forms]`** > **[!UICONTROL Document Fragments]**.
-1. /テキ **`[!UICONTROL Create]`** ストを選 **[!UICONTROL 択します]**。
+1. 「 **`[!UICONTROL Create]`** / **[!UICONTROL テキスト]**」を選択します。
 1. 次の情報を指定します。
 
-   * **[!UICONTROL タイトル]**:（オプション）テキストドキュメントフラグメントのタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。テキストは、そのタイトル（利用可能な場合）によって、サムネールやプロパティとして参照されます。
-   * **[!UICONTROL 名前]**:フォルダー内のテキストの一意の名前。 どのような状態であっても、1 つのフォルダー内に、同じ名前を持つ 2 つのドキュメントフラグメント（テキスト、条件、リスト）を保管することはできません。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力した特殊文字、スペース、数字および英語以外の文字は、ハイフンに置き換えられます。 「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
+   * **[!UICONTROL タイトル]**: （オプション）テキストドキュメントフラグメントのタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。テキストは、そのタイトル（利用可能な場合）によって、サムネールやプロパティとして参照されます。
+   * **[!UICONTROL 名前]**: フォルダー内のテキストの一意の名前。 どのような状態であっても、1 つのフォルダー内に、同じ名前を持つ 2 つのドキュメントフラグメント（テキスト、条件、リスト）を保管することはできません。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力した特殊文字、スペース、数字および英数字以外の文字は、ハイフンに置き換えられます。 「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
    * **[!UICONTROL 説明]**：テキストの説明を入力します。
    * **[!UICONTROL フォームデータモデル]**：（任意）フォームデータモデルに基づいてテキストを作成する場合は、「フォームデータモデル」ラジオボタンを選択します。「フォームデータモデル」ラジオボタンを選択すると、「**[!UICONTROL フォームデータモデル]**」*フィールドが表示されます。フォームデータモデルを参照して選択します。インタラクティブ通信用のテキストを作成する場合は、そのインタラクティブ通信で使用するものと同じデータモデルを使用する必要があります。For more information on Form Data Model, see [Data Integration](/help/forms/using/data-integration.md).
    * **[!UICONTROL タグ]**：（オプション）テキストフィールドにカスタムタグの値を入力し、Enter キーを押します。このテキストを保存すると、新しく追加されたタグが作成されます。
@@ -65,7 +68,7 @@ source-git-commit: a6d50dbcbfec85d21072d51a5fa48e3667835f06
 
 ## テキストの編集 {#edittext}
 
-以下の手順により、既存のテキストドキュメントフラグメントを編集することができます。また、インタラクティブコミュニケーションエディター内からテキストドキュメントフラグメントを編集するように選択することもできます。
+以下の手順により、既存のテキストドキュメントフラグメントを編集することができます。また、Interactive Communication Editor内からテキストドキュメントフラグメントを編集することもできます。
 
 1. Select **`[!UICONTROL Forms]`** > **[!UICONTROL Document Fragments]**.
 1. 目的のテキストドキュメントフラグメントに移動して選択します。
@@ -75,13 +78,13 @@ source-git-commit: a6d50dbcbfec85d21072d51a5fa48e3667835f06
 
 ## フォームデータモデルのプロパティを使用してテキストドキュメントフラグメントをカスタマイズする {#formdatamodel}
 
-フォームデータモデルのプロパティを挿入することにより、テキストドキュメントフラグメントをカスタマイズすることができます。フォームデータモデルのプロパティをテキストに挿入すると、インタラクティブ通信をプレビューしながら、関連するデータソースから受信者固有のデータを取得して入力できます。 For more information on form data model, see [AEM Forms Data Integration](/help/forms/using/data-integration.md).
+フォームデータモデルのプロパティを挿入することにより、テキストドキュメントフラグメントをカスタマイズすることができます。フォームデータモデルのプロパティをテキストに挿入すると、インタラクティブコミュニケーションをプレビューしながら、関連するデータソースから受信者固有のデータを取得し、データを埋め込むことができます。 For more information on form data model, see [AEM Forms Data Integration](/help/forms/using/data-integration.md).
 
-テキストの作成中にフォームデータモデルを指定した場合は、フォームデータモデルのプロパティがテキストエディターの左ペインに表示されます。 指定するフォームデータモデルは、テキストドキュメントフラグメントと、そのフラグメントを含むインタラクティブ通信に対して同じである必要があります。
+テキストの作成時にフォームデータモデルを指定した場合は、フォームデータモデルのプロパティがテキストエディターの左ペインに表示されます。 テキストドキュメントフラグメントと、そのフラグメントを含むインタラクティブ通信について、指定したフォームデータモデルが同じである必要があります。
 
 ![insertfdmelementtext](assets/insertfdmelementtext.png)
 
-* To insert an FDM property into text, place the cursor where you want to insert the property, then select the **`[A]`** property in the left pane by tapping on it, and tap **`[B]`** **[!UICONTROL Add Selected]**. You can also just double-tap the property to insert it at the **`[C]`** cursor position. フォームデータモデルのプロパティは、茶色がかった背景色でハイライト表示されます。
+* To insert an FDM property into text, place the cursor where you want to insert the property, then select the **`[A]`** property in the left pane by tapping on it, and tap **`[B]`** **[!UICONTROL Add Selected]**. You can also just double-tap the property to insert it at the **`[C]`** cursor position. フォームデータモデルのプロパティは、茶色の背景色でハイライト表示されます。
 
 * To allow the agents to edit an FDM property&#39;s value in the agent UI while [Prepare and send Interactive Communication](/help/forms/using/prepare-send-interactive-communication.md) using the Agent UI, tap the **`[D]`** lock icon for that property and ensure it is in an unlocked state. プロパティのデフォルトの状態はロックされ、エージェントはエージェントUIでプロパティを編集できません。
 
@@ -107,7 +110,7 @@ source-git-commit: a6d50dbcbfec85d21072d51a5fa48e3667835f06
 
    変数ペインが表示されます。
 
-   ![変数ペイン](assets/variablespane.png)
+   ![variablepane](assets/variablespane.png)
 
 1. 「**[!UICONTROL 作成]**」をタップします。
 
@@ -116,8 +119,8 @@ source-git-commit: a6d50dbcbfec85d21072d51a5fa48e3667835f06
 1. Enter the following information and tap **[!UICONTROL Create]**:
 
    * **[!UICONTROL 名前*]**：変数の名前を入力します。
-   * **[!UICONTROL 説明]**:必要に応じて、変数の説明を入力します。
-   * **[!UICONTROL タイプ*]**:変数のタイプを選択します。文字列、数値、ブール値または日付。
+   * **[!UICONTROL 説明]**: 必要に応じて、変数の説明を入力します。
+   * **[!UICONTROL タイプ*]**: 変数のタイプを選択します。 文字列、数値、ブール値または日付。
    * **[!UICONTROL 特定の値のみ許可]**：文字列タイプまたは数値タイプの変数の場合、このオプションを選択すると、エージェント UI のプレースホルダーの特定の値セットから、エージェントによって値が選択されます。To specify the set of values, select this option and then specify comma-separated values that are allowed in the **[!UICONTROL Values]** field.
 
 1. 「**[!UICONTROL 作成]**」をタップします。
@@ -126,7 +129,7 @@ source-git-commit: a6d50dbcbfec85d21072d51a5fa48e3667835f06
 
 1. To insert a variable in the text, place the cursor at the appropriate place, select the variable, and tap **[!UICONTROL Add Selected]**.
 
-   ![変数挿入の](assets/variableinserted.png)
+   ![variableinserted](assets/variableinserted.png)
 
    変数が明るい青の背景色でハイライト表示され、フォームデータモデルのプロパティが茶色の背景色でハイライト表示されます。
 
@@ -157,13 +160,13 @@ source-git-commit: a6d50dbcbfec85d21072d51a5fa48e3667835f06
    * 作成済みの任意の変数
    評価するオプションを選択します。
 
-   ![ルールエディタ](assets/ruleeditor.png)
+   ![ruleeditor](assets/ruleeditor.png)
 
    ![ruleeditorfdm](assets/ruleeditorfdm.png)
 
    >[!NOTE]
    >
-   >コレクションプロパティは、テキストを条件付けおよび表示するルールの作成に対してはサポートされていません。
+   >コレクションプロパティは、テキストを条件付きで表示するルールの作成に対してはサポートされていません。
 
 1. 「次の値と等しい」、「次の値を含む」、「次の値で始まる」など、ルールを評価するための適切な演算子を選択します。
 
@@ -175,11 +178,11 @@ source-git-commit: a6d50dbcbfec85d21072d51a5fa48e3667835f06
 
    フォームデータモデルのソースデータに基づき、受信者が米国に居住している場合に、選択されたテキストを表示するためのルール
 
-   * While creating or editing a rule, you can also tap ![icon_resize](assets/icon_resize.png) (Resize) to expand the Create Rule/Edit Rule dialog. ダイアログを拡張して全画面表示にすると、フォームデータモデルのプロパティと変数をドラッグアンドドロップして、変数を作成できるようになります。「サイズ変更」を再度タップして、ルールの作成ダイアログに戻ります。
+   * While creating or editing a rule, you can also tap ![icon_resize](assets/icon_resize.png) (Resize) to expand the Create Rule/Edit Rule dialog. ダイアログを拡張して全画面表示にすると、フォームデータモデルのプロパティと変数をドラッグアンドドロップして、変数を作成できるようになります。「サイズ変更」を再度タップして、ルールを作成ダイアログに戻ります。
    * 1 つのルールで複数の条件を作成することもできます。
    * 既にルールが適用されているコンテンツの一部に対して、別のルールを作成して適用することもできます。
 
-1. 「**[!UICONTROL Done]**」をタップします。
+1. 「**[!UICONTROL 完了]**」をタップします。
 
    これで、ルールが適用されました。ルールが適用されたテキストまたはコンテンツは、緑色でハイライト表示されます。ハイライト表示されているテキストやコンテンツの左側に表示されているハンドルにカーソルを置くと、適用されているルールが表示されます。
 
@@ -194,7 +197,7 @@ While creating or editing text, the toolbar changes depending on the type of edi
 
 ツールバーのタイプの選択：段落、整列、またはリスト
 
-](assets/toolbarselection.png)フォント編集 ![ツールバー](do-not-localize/paragraphtoolbar-1.png)
+](assets/toolbarselection.png) ![フォント編集ツールバー](do-not-localize/paragraphtoolbar-1.png)
 
 フォント編集ツールバー
 
@@ -240,7 +243,7 @@ Optionally, you can also go to the Advanced tab to select the appropriate Hue, L
 
 * 通貨記号（€、¥、£など）
 * 数学記号（∑、√、∂、^など）
-* 「」や「」などの句‟読点記号
+* や‟&quot;などの句読点記号
 
 ![specialcharacters-2](assets/specialcharacters-2.png)
 
