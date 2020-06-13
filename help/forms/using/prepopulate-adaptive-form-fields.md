@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 2ddb33a5-0d62-46f4-8f8c-0f0807a975cb
 translation-type: tm+mt
-source-git-commit: 8b5a3e1f6616c3a07da91e4347596961ac4a8e22
+source-git-commit: f234d368163f4260563d69230a2cbda37b6d315a
+workflow-type: tm+mt
+source-wordcount: '2032'
+ht-degree: 78%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: 8b5a3e1f6616c3a07da91e4347596961ac4a8e22
 アダプティブフォームの連結されたフィールドと連結されていないフィールドの両方を事前入力できます。事前入力データには afBoundData セクションと afUnBoundData セクションが含まれており、アダプティブフォームの連結されたフィールドと連結されていないフィールドの両方を事前入力できます。`afBoundData` セクションには連結されたフィールドとパネルの事前入力データが含まれています。このデータは関連するフォームモデルスキーマに準拠している必要があります。
 
 * [XFA フォームテンプレート](/help/forms/using/prepopulate-adaptive-form-fields.md)を使用しているアダプティブフォームの場合は、XFA テンプレートのデータスキーマに準拠している事前入力 XML を使用します。
-* [XML スキーマ](/help/forms/using/prepopulate-adaptive-form-fields.md#main-pars-header-3)を使用しているアダプティブフォームの場合は、XML スキーマ構造に準拠している事前入力 XML を使用します。
+* [XML スキーマ](#xml-schema-af)を使用しているアダプティブフォームの場合は、XML スキーマ構造に準拠している事前入力 XML を使用します。
 * [JSON スキーマ](/help/forms/using/prepopulate-adaptive-form-fields.md#json-schema-based-adaptive-forms)を使用しているアダプティブフォームの場合は、JSON スキーマに準拠している事前入力 JSON を使用します。
 * FDM スキーマを使用しているアダプティブフォームの場合は、FDM スキーマに準拠している事前入力 JSON を使用します。
 * [フォームモデルのない](/help/forms/using/prepopulate-adaptive-form-fields.md#p-adaptive-form-with-no-form-model-p)アダプティブフォームの場合、連結されたデータはありません。すべてのフィールドは、連結されていないフィールドであり、連結されていないXMLを使用して事前入力されています。
@@ -77,7 +80,7 @@ source-git-commit: 8b5a3e1f6616c3a07da91e4347596961ac4a8e22
 
 ## XFAフォームテンプレートを使用したアダプティブフォーム {#xfa-based-af}
 
-XFAベースのアダプティブフォームの事前入力XMLと送信済みXMLの構造は、次のとおりです。
+XFAベースのアダプティブフォームにおける事前入力XMLと送信済みXMLの構造は、次のとおりです。
 
 * **事前入力 XML 構造**：XFA ベースのアダプティブフォームのための事前入力 XML は、XFA フォームテンプレートのデータスキーマに準拠していなければなりません。To prefill unbound fields, wrap the prefill XML structure into `/afData/afBoundData` tag.
 
@@ -85,14 +88,14 @@ XFAベースのアダプティブフォームの事前入力XMLと送信済みXM
 
 Prefill-Submit-Data-ContentPackage.zip
 
-[事前入力データと送](assets/prefill-submit-data-contentpackage.zip)信データを含むGet File Sample
+[事前入力データと送信データを含むファイル](assets/prefill-submit-data-contentpackage.zip)サンプルの取得
 
 ## XMLスキーマベースのアダプティブフォーム{#xml-schema-af}
 
 XML スキーマをベースとするアダプティブフォームの事前入力 XML と送信済み XML の構造は次のとおりです。
 
 * **事前入力 XML 構造**：事前入力 XML は、関連する XML スキーマに準拠していなければなりません。連結されていないフィールドを事前入力するには、事前入力 XML 構造を /afData/afBoundData タグにラップします。
-* **送信されたXML構造**:事前入力XMLが使用されていない場合、送信されたXMLには、ラッパータグ内の連結されたフィールドと連結されていないフィールドの両方のデータ `afData` が含まれます。 事前入力 XML が使用された場合、送信済み XML は、事前入力 XML と同じ構造をしています。事前入力 XML が `afData` のルートタグで開始する場合、出力 XML もまた同じフォーマットとなります。事前入力 XML に `afData/afBoundData` のラッパーが無く、直接 `employeeData` のようなスキーマルートタグから開始する場合は、送信済み XML もまた `employeeData` タグから開始します。
+* **送信済みXML構造**: 事前入力XMLが使用されない場合、送信されたXMLには、 `afData` wrapperタグ内の連結されたフィールドと連結されていないフィールドの両方のデータが含まれます。 事前入力 XML が使用された場合、送信済み XML は、事前入力 XML と同じ構造をしています。事前入力 XML が `afData` のルートタグで開始する場合、出力 XML もまた同じフォーマットとなります。事前入力 XML に `afData/afBoundData` のラッパーが無く、直接 `employeeData` のようなスキーマルートタグから開始する場合は、送信済み XML もまた `employeeData` タグから開始します。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?> 
@@ -144,8 +147,8 @@ XML スキーマをモデルとするフィールドの場合、以下の XML �
 
 JSON スキーマをベースとするアダプティブフォームの場合、事前入力 JSON と送信済み JSON の構造は次のようになります。詳しくは、「[JSON スキーマを使ったアダプティブフォームの作成](/help/forms/using/adaptive-form-json-schema-form-model.md)」を参照してください。
 
-* **事前入力 JSON スキーマ**：事前入力 JSON は、関連する JSON スキーマに準拠していなければなりません。また、連結されていないフィールドを事前入力する場合は、オプションで/afData/afBoundDataオブジェクトにまとめることができます。
-* **送信されたJSON構造**:事前入力JSONを使用しない場合、送信されたJSONには、afDataのラッパータグ内の連結されたフィールドと連結されていないフィールドの両方のデータが含まれます。 事前入力JSONを使用する場合、送信されたJSONは事前入力JSONと同じ構造を持ちます。 事前入力JSONがafDataルートオブジェクトで始まる場合、出力JSONは同じ形式になります。 事前入力JSONにafData/afBoundDataラッパーがなく、その代わりにuserなどのスキーマルートオブジェクトから直接開始する場合、送信されたJSONもユーザーオブジェクトから開始します。
+* **事前入力 JSON スキーマ**：事前入力 JSON は、関連する JSON スキーマに準拠していなければなりません。また、連結されていないフィールドを事前入力する場合は、オプションで、/afData/afBoundDataオブジェクトにまとめることができます。
+* **送信されたJSON構造**: 事前入力JSONが使用されない場合、送信されたJSONには、afDataのwrapperタグ内の連結されたフィールドと連結されていないフィールドの両方のデータが含まれます。 事前入力JSONを使用する場合、送信されたJSONは事前入力JSONと同じ構造を持ちます。 afDataルートオブジェクトを使用して事前入力JSON開始を設定した場合、出力JSONも同じ形式になります。 事前入力JSONにafData/afBoundDataのラッパーがなく、代わりにuserなどのスキーマルートオブジェクトから直接開始が含まれていない場合、送信されたJSONもユーザーオブジェクトと開始します。
 
 ```
 {
@@ -225,7 +228,7 @@ For adaptive forms with no form model, the data for all the fields is under the 
 
 ## Configuration Manager を使用した事前入力サービスの設定 {#configuring-prefill-service-using-configuration-manager}
 
-事前入力サービスを有効にするには、AEM webコンソール設定で「デフォルトの事前入力サービス設定」を指定します。 次の手順を使用して、事前入力サービスを設定します。
+事前入力サービスを有効にするには、AEM Webコンソール設定で「デフォルトの事前入力サービスの設定」を指定します。 次の手順を使用して、事前入力サービスを設定します。
 
 >[!NOTE]
 >
@@ -282,7 +285,7 @@ http://localhost:4502/content/forms/af/someAF.html?wcmmode=disabled&dataRef=file
 
 参照元ファイルは、同じサーバー上になければなりません。
 
-### https://プロトコル {#the-http-protocol}
+### The https:// protocol {#the-http-protocol}
 
 ```xml
 http://localhost:4502/content/forms/af/xml.html?wcmmode=disabled&dataRef=http://localhost:8000/somesamplexmlfile.xml
@@ -329,7 +332,7 @@ You can also set the `data` attribute in `slingRequest`, where the `data` attrib
 
 prefill-page component.zip
 
-[ページコンポー](assets/prefill-page-component.zip)ネント内のFileSample prefill.jspの取得
+[ページコンポーネント内のFile](assets/prefill-page-component.zip)Sample prefill.jspの取得
 
 ## AEM Forms カスタム事前入力サービス {#aem-forms-custom-prefill-service}
 
@@ -339,7 +342,7 @@ prefill-page component.zip
 
 事前入力サービスは OSGi サービスで、OSGi バンドルを使用してパッケージ化します。OSGi バンドルを作成し、アップロードし、AEM Forms バンドルにインストールします。バンドルの作成を開始する前に、以下を行います。
 
-* [AEM Forms Client SDK をダウンロードします](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
+* [AEM Forms Client SDK をダウンロードします](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)
 * [ボイラープレートパッケージをダウンロードします](assets/prefill-sumbit-xmlsandcontentpackage.zip)
 
 * データ（事前入力データ）ファイルを crx-repository に配置します。ファイルは crx-repository の \contents フォルダー内の任意の場所に配置できます。
