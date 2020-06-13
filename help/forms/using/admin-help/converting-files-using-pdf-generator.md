@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 translation-type: tm+mt
-source-git-commit: ce8849ae94fd643147df2a3a9d5e49264e6cb638
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '1130'
+ht-degree: 95%
 
 ---
 
@@ -73,15 +76,19 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
    * 「アップロードするファイル」に、HTML ファイルまたは ZIP ファイルのパスとファイル名を入力するか、「参照」をクリックして該当するファイルを探して選択します。
    * 「URL の指定」ボックスに、変換するページまたは Web サイトの URL を入力します。
 
-      ***注意&#x200B;**：変換するファイルのファイル拡張子は、.html、.htm または .zip である必要があります。*
+   >[!NOTE]
+   >
+   >変換するファイルのファイル拡張子は、.html、.htm または .zip である必要があります。
 
 1. 環境設定を次のように指定します。
 
    * カスタム設定を使用するには、「カスタム設定を使用」を選択し、セキュリティおよびファイルタイプの設定を指定して、タイムアウト値を指定します。デフォルト値は 270 秒です。
-
-      ***Note**: If you configured the Generate PDF service to use Acrobat WebCapture, the File Type Settings that you select on this page do not affect the PDF produced. 代わりに、サーバーにインストールされているAcrobatのバージョンに適切な変更を加えます。*
+   >[!NOTE]
+   >
+   >Acrobat WebCapture を使用するように Generate PDF サービスを設定している場合、このページで選択する「ファイルタイプごとの設定」は、生成される PDF には影響しません。代わりに、サーバーにインストールされている Acrobat のバージョンに適切な変更を行います。
 
    * 既存の設定ファイルを使用するには、「設定ファイルをアップロード」を選択し、「参照」をクリックしてファイルの場所に移動します。
+
 
 1. XMP ファイルをアップロードするには、「参照」をクリックしてファイルの場所に移動します。XMP ファイルは、標準のメタデータ情報を含めるのに使用できます（[XMP ファイルについて](converting-files-using-pdf-generator.md#about-xmp-files)を参照）。
 1. 「作成」をクリックします。ファイルが作成されると、その PDF ファイルへのリンクが表示されます。
@@ -98,7 +105,7 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 
    ファイル変換時に「変換時間」に表示される値は、ここで指定する値よりも長くなる場合があります。「変換時間」の値には、スレッドまたはプロセスの待機時間、ファイルの変換時間、およびフォールバックコンバーターにかかる時間（該当する場合）なども含まれています。時刻. 「タイムアウト時間の指定」の値は、ファイルの変換にかかる正確な時間です。
 
-1. (Optional) In the **Specify custom Preflight profile** option, click Browse, and select a [custom Preflight profile](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html). プリフライトプロファイルは、ドキュメントをPDFアーカイブ(PDF/A)形式に変換する場合にのみ使用されます。
+1. (Optional) In the **Specify custom Preflight profile** option, click Browse, and select a [custom Preflight profile](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html). プリフライトプロファイルは、ドキュメントをPDFアーカイブ(PDF/A)形式に変換する場合にのみ使用します。
 1. 「書き出し」をクリックします。変換が終了すると、書き出されたファイルへのリンクが表示されます。
 1. 変換されたファイルを表示するには、そのリンクをクリックします。
 
