@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 1c751a81550086371623d0ba66e4de40f7daaa16
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '5409'
+ht-degree: 88%
 
 ---
 
@@ -43,7 +46,7 @@ Adobe Developer の Web サイトには、Java API を使用して AEM Forms サ
 
 [AEM Forms Java ライブラリファイルを含める](#including-aem-forms-java-library-files)
 
-[人間中心の長期間有効なプロセスの呼び出し](/help/forms/developing/invoking-human-centric-long-lived.md#main-pars-text-0)
+[人間中心の長期間有効なプロセスの呼び出し](invoking-human-centric-long-lived.md)
 
 [Web サービスを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md)
 
@@ -66,7 +69,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 
 >[!NOTE]
 >
->（自動オプションのみ）AEM Formsサーバーを開始し、EJB用のサー `standalone.bat -b <Server IP> -c lc_turnkey.xml` バーIPを指定するコマンドを使用します。
+>（自動オプションのみ）AEM Formsサーバーに開始し、EJB用のサーバーIPを指定す `standalone.bat -b <Server IP> -c lc_turnkey.xml` るコマンドを指定します。
 
 * AEM Forms のデプロイ先 J2EE アプリケーションサーバー。
 
@@ -262,7 +265,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
   </tr>
   <tr>
    <td><p> jboss-client.jar</p> </td>
-   <td><p>AEM Forms が JBoss Application Server 上にデプロイされている場合は、この JAR ファイルを含めます。</p> <p>jboss-client.jarと参照先のjarが共存していない場合、必須のクラスはクラスローダーで見つかりません。</p> </td>
+   <td><p>AEM Forms が JBoss Application Server 上にデプロイされている場合は、この JAR ファイルを含めます。</p> <p>jboss-client.jarと参照jarが共存していない場合、必要なクラスはクラスローダーで見つかりません。</p> </td>
    <td><p>JBoss クライアントの lib ディレクトリ</p> <p>クライアントアプリケーションを同じ J2EE アプリケーションサーバー上にデプロイする場合は、このファイルを含める必要はありません。</p> </td>
   </tr>
   <tr>
@@ -444,13 +447,18 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
    * If you set this connection property to `WebLogic`, the `java.naming.factory.initial` value is set to `weblogic.jndi.WLInitialContextFactory`.
    * Likewise, if you set this connection property to `JBoss`, the `java.naming.factory.initial` value is set to `org.jnp.interfaces.NamingContextFactory`.
    * デフォルトの値を使用しない場合、`java.naming.factory.initial` プロパティを要件を満たす値に設定することができます。
-   ***Note**: Instead of using a string to set the `DSC_SERVER_TYPE` connection property, you can use a static member of the `ServiceClientFactoryProperties` class. The following values can be used: `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`, `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`, or `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`.
+
+   >[!NOTE]
+   >
+   >Instead of using a string to set the `DSC_SERVER_TYPE` connection property, you can use a static member of the `ServiceClientFactoryProperties` class. The following values can be used: `ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`, `ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`, or `ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`.
 
 * **DSC_CREDENTIAL_USERNAME**：AEM Forms ユーザー名を指定します。ユーザーが AEM Forms サービスを正常に呼び出すには、サービスユーザーのロールが必要です。ユーザーは、サービス呼び出し権限を含む別のロールを持つこともできます。権限を持たないユーザーの場合、サービスの呼び出しを試行するときに例外が発生します。サービスセキュリティが無効の場合、この接続プロパティを指定する必要はありません。
 * **DSC_CREDENTIAL_PASSWORD**：対応するパスワード値を指定します。サービスセキュリティが無効の場合、この接続プロパティを指定する必要はありません。
 * **DSC_REQUEST_TIMEOUT**：SOAP 要求のデフォルト要求タイムアウト制限は、1200000 ミリ秒（20 分）です。場合によって、要求の操作が完了するのに長い時間を要することがあります。例えば、大量のレコードセットを取得する SOAP 要求では、より長いタイムアウト制限が必要になることがあります。`ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` を使用して、SOAP 要求の要求呼び出しタイムアウト制限を増やすことができます。
 
-   **注意**:DSC_REQUEST_TIMEOUTプロパティは、SOAPベースの呼び出しのみサポートされます。
+   >[!NOTE]
+   >
+   >DSC_REQUEST_TIMEOUTプロパティは、SOAPベースの呼び出しのみサポートされます。
 
 接続プロパティを設定するには、次のタスクを実行します。
 
@@ -459,6 +467,7 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
 
    * The `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT` enumeration value
    * AEM Forms をホストする J2EE アプリケーションサーバーの URL を指定する文字列値
+
    >[!NOTE]
    >
    >If you are using the SOAP connection mode, specify the `ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT` enumeration value instead of the `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT` enumeration value.
@@ -467,13 +476,14 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
 
    * The `ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL` enumeration value
    * The `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` enumeration value
+
    >[!NOTE]
    >
    >If you are using the SOAP connection mode, specify the `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`enumeration value instead of the `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` enumeration value.
 
 1. To set the `DSC_SERVER_TYPE` connection property, invoke the `java.util.Properties` object’s `setProperty` method and pass the following values:
 
-   * `ServiceClientFactoryProperties.DSC_SERVER_TYPE`定義済みリスト値
+   * The `ServiceClientFactoryProperties.DSC_SERVER_TYPE`enumeration value
    * AEM Forms をホストする J2EE アプリケーションサーバーを指定する文字列値（例えば、AEM Forms が にデプロイされている場合は `JBoss`JBoss を指定します）。
 
       1. To set the `DSC_CREDENTIAL_USERNAME` connection property, invoke the `java.util.Properties` object’s `setProperty` method and pass the following values:
@@ -756,9 +766,9 @@ An application can contain both `com.adobe.idp.Document` and `org.w3c.dom.Docume
 
 * バイト配列
 * An existing `com.adobe.idp.Document` object
-* オブジェクト `java.io.File` です。
-* オブジェクト `java.io.InputStream` です。
-* オブジェクト `java.net.URL` です。
+* オブジェクト `java.io.File`
+* オブジェクト `java.io.InputStream`
+* オブジェクト `java.net.URL`
 
 #### バイト配列に基づいたドキュメントの作成 {#creating-a-document-based-on-a-byte-array}
 
@@ -851,8 +861,8 @@ C:/temp/input.pdf ファイルは、（サーバーコンピューターでは�
 
 PDF ドキュメント（または XML データなどの他のデータ型）を出力値として返すサービス操作では、`com.adobe.idp.Document` オブジェクトが返されます。受け取った `com.adobe.idp.Document` オブジェクトは、次の形式に変換できます。
 
-* オブジェクト `java.io.File` です。
-* オブジェクト `java.io.InputStream` です。
+* オブジェクト `java.io.File`
+* オブジェクト `java.io.InputStream`
 * バイト配列
 
 次のコード行では、`com.adobe.idp.Document` オブジェクトを `java.io.InputStream` オブジェクトに変換します。Assume that `myPDFDocument` represents a `com.adobe.idp.Document` object:
@@ -984,6 +994,7 @@ Java クライアントライブラリを使用して次の手順を実行する
    * A unique ID value by specifying `new Id()`.
    * A unique UUID value by specifying `new Lid()`.
    * リソースの名前。XDP ファイルのファイル名を指定できます。
+
    戻り値を `Resource` にキャストします。
 
 1. Create a `ResourceContent` object by invoking the `RepositoryInfomodelFactoryBean` object’s `newImage` method and casting the return value to `ResourceContent`. このオブジェクトはリポジトリに追加されるコンテンツを表します。
@@ -1044,7 +1055,7 @@ Java 呼び出し API を使用して短時間のみ有効なプロセスの `My
 
 1. Create an `InvocationRequest` object by invoking the `ServiceClientFactory` object’s `createInvocationRequest` method and passing the following values:
 
-   * 長期間有効なプロセスを指定する文字列値。プロセスを呼び出す `MyApplication/EncryptDocument` には、を指定しま `MyApplication/EncryptDocument`す。
+   * 長期間有効なプロセスを指定する文字列値。プロセスを呼び出すには、 `MyApplication/EncryptDocument` を指定し `MyApplication/EncryptDocument`ます。
    * プロセス操作名を表す文字列値。通常、短時間のみ有効なプロセス操作の名前は `invoke` です。
    * サービス操作に必要なパラメーター値を含む `java.util.HashMap` オブジェクト。
    * `true` を指定するブール値。これを渡すと同期要求が作成されます（この値は、短時間のみ有効なプロセスを呼び出すために適用されます）。
