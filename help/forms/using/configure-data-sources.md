@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integration
 discoiquuid: 1dafd400-16c0-416d-9e81-7bf53b761f98
 translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '1334'
+ht-degree: 68%
 
 ---
 
@@ -27,7 +30,7 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
 * SOAP ベース Web サービス
 * OData サービス
 
-データ統合では、OAuth2.0、基本認証、APIキーの認証タイプがすぐに使用でき、Webサービスにアクセスするためのカスタム認証を実装できます。 RESTful サービス、SOAP ベースサービス、OData サービスは AEM クラウドサービスで設定し、リレーショナルデータベース用の JDBC と AEM ユーザープロファイル用のコネクターは、AEM Web コンソールで設定します。
+データ統合では、OAuth2.0、基本認証、およびAPIキーの認証タイプをすぐに使用でき、Webサービスにアクセスするためのカスタム認証を実装できます。 RESTful サービス、SOAP ベースサービス、OData サービスは AEM クラウドサービスで設定し、リレーショナルデータベース用の JDBC と AEM ユーザープロファイル用のコネクターは、AEM Web コンソールで設定します。
 
 ## リレーショナルデータベースの設定 {#configure-relational-database}
 
@@ -46,7 +49,7 @@ AEM Web Console Configuration を使用してリレーショナルデータベ�
    >
    >データソースを設定する前に、パスワードなどの機密情報を必ず暗号化してください。暗号化するには、以下の手順を実行します。
    >
-   >1. 移動 `https://[server]:[port]/system/console/crypto`.
+   >1. `https://[server]:[port]/system/console/crypto` にアクセスします。
    >1. 「**[!UICONTROL プレーンテキスト]**」フィールドに暗号化する文字列（パスワードなど）を入力して「**[!UICONTROL 保護]**」をクリックします。
    >
    >暗号化されたテキストは、設定で指定できる「保護されたテキスト」フィールドに表示されます。
@@ -75,13 +78,15 @@ AEM Web コンソールでユーザープロファイルコネクター設定を
    * `name=profile/empLocation/*/city,type=string`
    >[!NOTE] {grayBox=&quot;true&quot;}
    >
-   >**The**&amp;ast;上記の例では、CRXDE構造のAEMユーザープロファイル内の `profile/empLocation/` ノードの下にあるすべてのノードを示しています。 It means that the form data model can access the `city` property of type `string` present in any node under the `profile/empLocation/` node. ただし、指定されたプロパティが存在するノードの構造が統一されている必要があります。
+   >The **&amp;ast;** in the above example denotes all nodes under the `profile/empLocation/` node in AEM user profile in CRXDE structure. It means that the form data model can access the `city` property of type `string` present in any node under the `profile/empLocation/` node. ただし、指定されたプロパティが存在するノードの構造が統一されている必要があります。
 
 1. Tap **[!UICONTROL Save]** to save the configuration.
 
 ## クラウドサービス設定用フォルダーの構成 {#cloud-folder}
 
-**注**：RESTful サービス、SOAP サービス、OData サービスを設定するには、クラウドサービス用のフォルダーを構成する必要があります。
+>[!NOTE]
+>
+>RESTful、SOAP、ODataサービス用のクラウドサービスを設定するには、クラウドサービスフォルダーの設定が必要です。
 
 All cloud service configurations in AEM are consolidated in the `/conf` folder in AEM repository. デフォルトの場合、`conf` フォルダーには `global` フォルダーが含まれています。このフォルダーで、クラウドサービスの設定を作成することができます。ただし、このフォルダーを手動でクラウド設定用に有効にする必要があります。追加のフォルダーを `conf` フォルダー内に作成して、クラウドサービスの作成と編集を行うこともできます。
 
@@ -112,7 +117,7 @@ RESTful サービスを設定するには、以下の手順を実行します。
 1. 以下に示す RESTful サービスの詳細情報を指定します。
 
    * 「Swagger ソース」ドロップダウンで「URL」または「ファイル」を選択します。「URL」を選択した場合は、Swagger 定義ファイルに対する Swagger の URL を指定し、「ファイル」を選択した場合は、ローカルのファイルシステムから Swagger ファイルをアップロードします。
-   * 認証タイプの選択 — なし、OAuth2.0、基本認証、APIキーまたはカスタム認証 — を使用してRESTfulサービスにアクセスし、認証の詳細を指定します。
+   * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「APIキー」、「カスタム認証」）を選択してRESTfulサービスにアクセスし、認証の詳細を指定します。
 
 1. 「**[!UICONTROL 作成]**」をタップして、RESTful サービス用のクラウド設定を作成します。
 
@@ -128,7 +133,7 @@ SOAP ベースの Web サービスは、[Web Services Description Language（WSD
 1. 以下に示す SOAP Web サービスの詳細情報を指定します。
 
    * Web サービスの WSDL URL を指定します。
-   * 認証タイプの選択 — なし、OAuth2.0、基本認証、またはカスタム認証 — を使用してSOAPサービスにアクセスし、認証の詳細を指定します。
+   * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「カスタム認証」）を選択してSOAPサービスにアクセスし、認証の詳細を指定します。
 
 1. 「**[!UICONTROL 作成]**」をタップして、SOAP Web サービス用のクラウド設定を作成します。
 
@@ -148,7 +153,7 @@ OData サービスは、そのサービスのルート URL によって識別さ
 1. 以下に示す OData サービスの詳細情報を指定します。
 
    * 設定する OData サービスのルート URL を指定します。
-   * 認証タイプの選択 — なし、OAuth2.0、基本認証、またはカスタム認証 — を使用してODataサービスにアクセスし、それに従って認証の詳細を指定します。
+   * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「カスタム認証」）を選択してODataサービスにアクセスし、認証の詳細を入力します。
    >[!NOTE]
    >
    >OData エンドポイントをサービスルートとして使用して Microsoft Dynamics サービスに接続する場合は、OAuth 2.0 認証を選択する必要があります。
