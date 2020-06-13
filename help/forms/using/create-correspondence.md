@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 2c1be479-9f44-4348-b074-a08af8df51fa
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+workflow-type: tm+mt
+source-wordcount: '3726'
+ht-degree: 63%
 
 ---
 
@@ -34,12 +37,13 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
    >[!NOTE]
    >
-   >データディクショナリがレターと関連付けされていない場合、レターのプレビューが開きます。レターがデータディクショナリベースの場合、Correspondence Managementのプレビューメニューに「プレビュー」と「カスタム」オプションが表示され、2つのオプションのいずれかを選択できます。 テストデータをデータディクショナリに関連付けることもできます。When the [Data Dictionary has associated test data](/help/forms/using/data-dictionary.md#p-working-with-test-data-p), then on selecting the preview option, the normal preview opens with the test data populated.
+   >データディクショナリがレターと関連付けされていない場合、レターのプレビューが開きます。それ以外の場合は、レターがデータディクショナリベースの場合、Correspondence Managementは、プレビューとカスタムのオプションをプレビューメニューに表示し、2つのオプションのいずれかを選択できます。 テストデータをデータディクショナリに関連付けることもできます。When the [Data Dictionary has associated test data](/help/forms/using/data-dictionary.md#p-working-with-test-data-p), then on selecting the preview option, the normal preview opens with the test data populated.
 
-1. 通信をプレビュー中にレンダリングするには、管理者か、次のいずれかのグループの一部である必要があります。
+1. プレビュー中に通信をレンダリングするには、管理者か、次のいずれかのグループの一部である必要があります。
 
    * forms-users（オーサーインスタンスをプレビューする場合）
    * cm-agent-users（発行インスタンスをレンディションする場合）
+
    必要なアクセス権を持っていない場合は、管理者に適切なアクセス権を要求します。For more information on creating and adding users to groups, see [Adding Users or Groups to a Group](/help/sites-administering/security.md). 適切な権限を持たない通信をレンダリングしようとすると、404エラーページが表示されます。
 
 1. If you&#39;ve selected **Preview** >  **Custom**, a dialog opens. In the dialog, select a data file, corresponding to the data dictionary, to preview the letter with and then select **Preview**. 特定のレターのデータディクショナリに基づいてデータファイルが作成されます。For more information on the data file, see [Data Dictionary](/help/forms/using/data-dictionary.md#p-working-with-test-data-p).
@@ -48,13 +52,13 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
 1. デフォルトでは、使用中の「データ」タブでレターの HTML プレビュー（モバイルフォームプレビュー）が開きます。
 
-   For more information on mobile forms and the features they support, see [Feature differentiation between Mobile Forms and PDF Forms](https://helpx.adobe.com/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html).
+   For more information on mobile forms and the features they support, see [Feature differentiation between Mobile Forms and PDF Forms](https://helpx.adobe.com/jp/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html).
 
    3 つのタブ（データ、コンテンツ、および添付ファイル）があります。データ要素（プレースホルダー変数およびレイアウトフィールド）がない場合、表示される「コンテンツ」タブで直接レターは開きます。「添付ファイル」タブは、添付ファイルが存在するか、ライブラリアクセスが有効な場合にのみ使用できます。
 
    >[!NOTE]
 
-   >For more information on switching between HTML or PDF rendition mode of letter preview, see [Change rendition mode of letter](#changerenditionmode). For more information on PDF support in Correspondence Management and AEM, see [Discontinuation of NPAPI browser plug-ins and its impact](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html) and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html).
+   >For more information on switching between HTML or PDF rendition mode of letter preview, see [Change rendition mode of letter](#changerenditionmode). For more information on PDF support in Correspondence Management and AEM, see [Discontinuation of NPAPI browser plug-ins and its impact](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html) and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/jp/aem-forms/kb/pdf-forms-to-html5-forms.html).
 
 ### データを入力 {#enterdata}
 
@@ -64,7 +68,7 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
    「データ」タブで HTML レタープレビューのデータフィールド値をタップして、対応するデータフィールドをハイライト表示します。
 
-   ![レター](assets/2_enterdata.png)![2_1_enterdataにデータを入力](assets/2_1_enterdata.png)
+   ![レター](assets/2_enterdata.png) 2_1_enterdataにデータを入力し ![ます](assets/2_1_enterdata.png)
 
 ### コンテンツを管理 {#managecontent}
 
@@ -82,7 +86,7 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
    In the Content or Data tab, by tapping Highlight Selected Modules ( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png)) on upper left of the HTML letter preview, you can disable or enable functionality to go to the content/data module when the relevant text, paragraph, or data field is selected in the letter preview.
 
-   For more information on the actions available for various modules in the Create Correspondence user interface, see [Actions and info available in the Create Correspondence user interface](/help/forms/using/create-letter.md#main-pars-header-9).
+   For more information on the actions available for various modules in the Create Correspondence user interface, see [Actions and info available in the Create Correspondence user interface](create-letter.md).
 
 1. コンテンツモジュールを配置するには、「検索」フィールドを使用します。コンテンツモジュールの名前やタイトルの一部または全部を入力して、通信を検索します。
 1. Tap the Display icon ( ![display](assets/display.png)) in front of a list, text, condition, or target area to show or hide it in the letter.
@@ -92,9 +96,9 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
    ブラウザーのデフォルトのスペルチェッカーにより、テキストエディターのスペルチェックが行われます。スペルチェックや文法チェックを管理するにはブラウザーのスペルチェッカーの設定を編集するか、スペルチェックや文法チェックのためのブラウザーのプラグインまたはアドオンをインストールします。
 
-   また、テキストエディターの様々なキーボードショートカットを使用して、テキストの管理、編集、書式設定を行うこともできます。 For more information on [Text Editor](/help/forms/using/keyboard-shortcuts.md#correspondence-management) keyboard shortcuts in Correspondence Management Keyboard Shortcuts.
+   また、テキストエディタで様々なキーボードショートカットを使用して、テキストの管理、編集、書式設定を行うこともできます。 For more information on [Text Editor](/help/forms/using/keyboard-shortcuts.md#correspondence-management) keyboard shortcuts in Correspondence Management Keyboard Shortcuts.
 
-   ![5_edittextmodule](assets/5_edittextmodule.png)
+   ![5.edittextmodule](assets/5_edittextmodule.png)
 
    別のアプリケーションから複数の段落のテキストを再利用することもできます。MS Word や HTML ページ、または別のアプリケーションからテキストを直接コピーして貼り付けることができます。
 
@@ -124,7 +128,8 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
    * 通貨記号（€、¥、£など）
    * 数学記号（∑、√、∂、^など）
-   * 「」や「」などの句‟読点記号
+   * や‟&quot;などの句読点記号
+
    ![specialcharacters-1](assets/specialcharacters-1.png)
 
    Correspondence Managementhas では、210 種類の特殊文字に初期状態から対応しています。The admin can [add support for more/custom special characters by customization](/help/forms/using/custom-special-characters.md).
@@ -155,16 +160,18 @@ After a [letter template is created in Correspondence Management](/help/forms/us
    * 必須フィールド。
    * 必須かつユーザーにバインドされている場合はレイアウトフィールド。
    * 一意の変数インスタンスのみ。モジュール、ターゲット領域、またはレターテンプレートに、同じ変数の 2 つ以上のインスタンスが含まれている場合、カウントは 1 と表示されます。ただし、各インスタンスに対してカウントは 1 と表示されます。
+
    未入力変数のカウントには、未選択のモジュールは含まれません。モジュールがレターテンプレートには含まれているがレターには含まれていない場合は、このモジュール内の未入力変数のカウントは表示されません。
 
-   ターゲット領域、モジュール、および変数の場合、カウントは、レターテンプレート内の各オブジェクトの右に表示されます。ただし、完全なテンプレートの場合は、通信を作成ステータスバーにカウントが表示されます。
+   ターゲット領域、モジュール、および変数の場合、カウントは、レターテンプレート内の各オブジェクトの右に表示されます。ただし、完全なテンプレートの場合は、数は通信を作成ステータスバーに表示されます。
 
    レターテンプレート内のモジュールは、未入力変数カウントを以下のように表示します。
 
    * **テキスト** ：テキストモジュールに含まれる一意の未入力プレースホルダー変数とデータディクショナリ要素の合計を表示します。
    * **条件** ：条件に含まれる一意の未入力条件変数と、結果のモジュールに含まれる変数の合計を表示します。
-   * **リスト** ：リストに割り当てられたモジュールに含まれる一意の未入力変数の合計を表示します。
-   * **ターゲット領域** ：ターゲット領域に割り当てられたモジュールに含まれる一意の未入力変数の合計を表示します。
+   * **リスト** :リストに割り当てられたモジュールに含まれるすべての一意の未入力変数を表示します。
+   * **ターゲット領域** :ターゲット領域に割り当てられたモジュールに含まれるすべての一意の未入力変数を表示します。
+
    デフォルト値を持つ変数について次のことに留意してください。
 
    * A Boolean variable field defaults to *false*. ただし、この変数は未入力として解釈されます。This implies that the variable count includes all Boolean variable fields with value *false*.
@@ -186,7 +193,7 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 * 選択（目のアイコン）： レターにモジュールを含めたり除外したりします。
 * 箇条書きをスキップ（リストモジュールとその子モジュールに適用可能）： 特定のモジュール内の箇条書きをスキップします。
 * 直前に改ページ（ターゲット領域の子モジュールに適用可能）： モジュールの前に改ページを挿入します。
-* 後で改ページ（ターゲット領域の子モジュールに適用）:モジュールの前に改ページを挿入します。
+* 直後に改ページ(ターゲット領域の子モジュールに適用): モジュールの前に改ページを挿入します。
 * 未入力値（情報）： ターゲット領域の未入力変数の個数を示します。
 * 編集（テキストモジュールのみ）： テキストモジュールを編集するためにリッチテキストエディターを開きます。
 * データパネル（テキストと条件モジュール）： モジュールのすべての変数を開きます。
@@ -195,12 +202,12 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
 * 空白行を挿入： 空白行を挿入します。
 * コンテンツライブラリ： コンテンツライブラリを開き、リストにモジュールを追加します。
-* リスト設定（ネストされたリストのみ）:
+* リスト設定(ネストされたリストのみ):
 * 順序ロック（情報）： リスト項目の順序が変更できないことを示します。
 
 ### 添付ファイルの管理 {#manage-attachments}
 
-1. Select **Attachments**. Correspondence Managementには、レターテンプレートの作成時に設定した、使用可能な添付ファイルが表示されます。
+1. Select **Attachments**. Correspondence Managementには、レターテンプレートの作成時に設定された、使用可能な添付ファイルが表示されます。
 1. ビューアイコンをタップすることで、レターの添付ファイルを送信しないように選択できます。また、添付ファイルの × 印をタップすると、添付ファイルをレターから削除できます。指定された添付ファイルがレターテンプレートの作成時に必須として設定されたものに対しては、ビューアイコンと削除アイコンは表示されません。
 1. Tap the Library Access ( ![libraryaccess](assets/libraryaccess.png)) icon to access Content Library to insert DAM assets as attachments.
 
@@ -228,7 +235,7 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
    By tapping Highlight Selected Modules in Content ( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png)), you can disable or enable functionality to highlight the content module in Content tab when the relevant text, paragraph, or data field is tapped in the letter preview.
 
-   For more information on the actions available for various modules in the Create Correspondence user interface, see [Actions and info available in the Create Correspondence user interface](/help/forms/using/create-letter.md#main-pars-header-9).
+   For more information on the actions available for various modules in the Create Correspondence user interface, see [Actions and info available in the Create Correspondence user interface](create-letter.md).
 
 1. To add a page break to the letter, tap where you want to insert a page break and select Page Break Before or Page Break After ( ![pagebreakbeforeafter](assets/pagebreakbeforeafter.png)).
 
@@ -242,9 +249,9 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
 1. レターをドラフトとして保存して後で作業を続けるには、「ドラフトとして保存」をタップします。このオプションを使用するには、レターが[発行済み](/help/forms/using/publishing-unpublishing-forms.md#publishanasset)になっている必要があります。詳しくは、「[ドラフトの保存とレターインスタンスの送信](#savingdrafts)」の「ドラフトインスタンス」を参照してください。
 
-   ![保険料](assets/saveasdraft.png)
+   ![saveddraft](assets/saveasdraft.png)
 
-   ドラフトレター名ダイアログにレターインスタンス ID が表示されます。この ID はオプションで編集することができます。レター ID をメモした後、「**完了**」をタップします。後でこの ID を使用して、[ドラフトレターを再読み込み](/help/forms/using/submit-letter-topostprocess.md#main-pars-header-1)できます。
+   ドラフトレター名ダイアログにレターインスタンス ID が表示されます。この ID はオプションで編集することができます。レター ID をメモした後、「**完了**」をタップします。後でこの ID を使用して、[ドラフトレターを再読み込み](submit-letter-topostprocess.md#reloaddraft)できます。
 
 1. To preview the letter as a flattened PDF with the exact layout and page breaks as it will be submitted, tap ( ![preview](assets/preview.png)) Preview.
 
@@ -254,7 +261,7 @@ After a [letter template is created in Correspondence Management](/help/forms/us
    >
    >Mozilla Firefox と HTML レンディションを使用する場合、統合された PDF をプレビューするには、Acrobat のプラグインではなく、必ずネイティブのブラウザプラグインを使用してください。ネイティブのブラウザプラグインを選択するには、Mozilla Firefox の設定に移動し、「ファイルの種類（Content Type）」の「PDF文書」から「Firefox でプレビュー表示」を選択してください。
 
-1. If you find the flattened PDF preview to be satisfactory, tap **Submit** to submit the letter. Or to make changes to the letter, tap **Exit Preview** to go back to the Create Correspondence UI preview of the letter to make changes in the letter. 「送信」をタップすると、発行インスタンスでレターインスタンスの管理設定が有効になっている場合、送信レターインスタンスが生成されます。
+1. If you find the flattened PDF preview to be satisfactory, tap **Submit** to submit the letter. Or to make changes to the letter, tap **Exit Preview** to go back to the Create Correspondence UI preview of the letter to make changes in the letter. 「送信」をタップすると、レターインスタンスの管理設定が発行インスタンスで有効になっている場合、レターの送信インスタンスが生成されます。
 
    詳しくは、「ドラフトの保存とレターインスタンスの送信」の「ドラフトインスタンス」を参照してください。
 
@@ -266,7 +273,7 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
 ## ドラフトの保存とレターインスタンスの送信 {#savingdrafts}
 
-通信を作成ユーザーインターフェイスでレターがレンダリングされると、レターを表示中に保存できます。
+通信を作成ユーザーインターフェイスでレターがレンダリングされると、レターの表示中に保存できます。
 
 保存できるレターインスタンスには 2 つのタイプ（ドラフトインスタンスと送信インスタンス）があります。
 
@@ -276,7 +283,7 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
 これらのインスタンスは、レターが発行インスタンスで表示されているときにのみ保存できます。デフォルトでは、インスタンスでの保存は無効になっています。レターインスタンスの保存を有効にするには、次の手順を実行します。
 
-1. AEMで、次のURLを使用して、ご使用のサーバーのAdobe Experience Manager Web Console Configurationを開きます。https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/console/configMgr
+1. AEMで、次のURLを使用して、ご使用のサーバーのAdobe Experience Manager Web Console Configurationを開きます。 https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/console/configMgr
 1. Locate **[!UICONTROL Correspondence Management Configurations]** and click it.
 1. Check **[!UICONTROL Manage Letter Instances on Publish]** configuration and then click **[!UICONTROL Save]**.
 
@@ -284,7 +291,7 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
 ### ローカル保存 {#local-save}
 
-レターインスタンスは発行インスタンス上に保存され、作成者インスタンス上で逆複製されます。
+レターインスタンスは発行インスタンスで保存され、作成者インスタンスで逆複製されます。
 
 ### リモート保存 {#remote-save}
 
@@ -332,7 +339,7 @@ HTML および PDF プレビューの利点と使用できる機能は以下の�
 
 **PDF プレビューの利点**
 
-* **改ページ**:PDFプレビューでは、レターの改ページが出力に与える影響を正確に確認できます。
+* **改ページ**: PDFプレビューでは、レター内の改ページが出力に与える影響を正確に表示できます。
 * **最終プレビュー**： PDF プレビューでは、レターが出力に表示されるため、レターの書式や表示をそのまま確認できます。
 
 For information on scripting support in PDF forms, see [Scripting Support](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html).
@@ -341,9 +348,9 @@ For more information on scripting support in HTML5 forms, see [Scripting support
 
 ### レターのレンディションモードの変更 {#changerenditionmode}
 
-デフォルトでは、「通信を作成」UI は HTML フォームまたはモバイルフォームを使用してレタープレビューをレンダリングします。モバイルフォームのプレビューは、ブラウザのネイティブプラグインを使用し、追加のプラグインを必要としないため、どのブラウザでレンダリングしても問題はありません。レターのプレビューモードをPDFに変更できます。 ただし、ブラウザの制約により、レターのインタラクティブな PDF プレビューの異なる機能で問題が発生する可能性があります。
+デフォルトでは、「通信を作成」UI は HTML フォームまたはモバイルフォームを使用してレタープレビューをレンダリングします。モバイルフォームのプレビューは、ブラウザのネイティブプラグインを使用し、追加のプラグインを必要としないため、どのブラウザでレンダリングしても問題はありません。レターのプレビューモードはPDFに変更できます。 ただし、ブラウザの制約により、レターのインタラクティブな PDF プレビューの異なる機能で問題が発生する可能性があります。
 
-For more information on browser compatibility with letter preview, see [Discontinuation of NPAPI browser plug-ins and its impact](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html).
+For more information on browser compatibility with letter preview, see [Discontinuation of NPAPI browser plug-ins and its impact](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html).
 
 レターのプレビューモードを変更するには、次の手順を完了してください。
 
