@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '2206'
+ht-degree: 90%
 
 ---
 
@@ -134,8 +137,10 @@ SQL Server には、次の 2 つのバックアップと回復ツールもあり
 
 MySQLAdmin を使用するか Windows で INI ファイルを変更して、MySQL データベースがバイナリログモードで実行されるように設定します（「[MySQL binary logging](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)」を参照）。MySQL のホットバックアップツールも InnoBase ソフトウェアから利用できます（「[Innobase Hot Backup](https://www.innodb.com/hot-backup/features.md)」を参照）。
 
-**注意**:MySQLのデ *フォルトのバイナリログモードは「Statement」で、Content Services（非推奨）で使用されるテーブルとの互換性がありません。 このデフォルトのモードでバイナリログを使用すると、Content Services（非推奨）でエラーが発生します。システム内に Content Services（非推奨）が含まれている場合は、「MIXED」ログモードを使用します。「MIXED」ログを有効にするには、my.ini ファイルに次の引数を追加します。*
-`binlog_format=mixed log-bin=logname`
+>[!NOTE]
+>
+>MySQL のデフォルトのバイナリログモードは「STATEMENT」です。このモードでは、Content Services（非推奨）で使用されるテーブルとの互換性がありません。このデフォルトのモードでバイナリログを使用すると、Content Services（非推奨）でエラーが発生します。システム内に Content Services（非推奨）が含まれている場合は、「MIXED」ログモードを使用します。「MIXED」ログを有効にするには、my.ini ファイルに次の引数を追加します。*
+`binlog_format=mixed log-bin=logname`.
 
 mysqldump ユーティリティを使用して、完全なデータベースバックアップを取得できます。完全バックアップは必要ですが、その実行が容易ではない場合があります。完全バックアップによって大量のバックアップファイルが生成され、処理に時間がかかります。To do an incremental backup, ensure that you start the server with the - `log-bin` option as described in the previous section. MySQL サーバーが再起動するたびに、現在のバイナリログへの書き込みが停止し、新しいログが作成され、以降はそのログが現在のバイナリログになります。You can force a switch manually with the `FLUSH LOGS SQL` command. 最初の完全バックアップ後の増分バックアップは、mysqladmin ユーティリティと `flush-logs` コマンドを使用して実行されます。これにより新しいログファイルが作成されます。
 
