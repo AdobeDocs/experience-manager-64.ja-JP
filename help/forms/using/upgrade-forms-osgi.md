@@ -10,14 +10,17 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 translation-type: tm+mt
-source-git-commit: d2657bc364b7a814fac9228afdec60f96faaf175
+source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+workflow-type: tm+mt
+source-wordcount: '883'
+ht-degree: 86%
 
 ---
 
 
 # OSGi 上の AEM 6.4 Forms へのアップグレード {#upgrade-to-aem-forms-osgi}
 
-お使いの環境に合わせて、次のアップグレードパスのいずれかを使用します。
+ご使用の環境に合わせて、次のアップグレードパスのいずれかを使用します。
 
 ## AEM 6.2 Forms または AEM 6.3 Forms から AEM 6.4 Forms へのアップグレード {#upgrade-aem-forms-62-63-to-64}
 
@@ -27,9 +30,9 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
 
    1. AEM 6.2 Forms または AEM 6.3 Forms の最新のサービスパックおよびパッチをインストールします。詳しくは、次を参照してください。
 
-      * [AEM 6.2 リリースノート](https://helpx.adobe.com/experience-manager/6-2/release-notes.html)
-      * [AEM 6.3 リリースノート](https://helpx.adobe.com/experience-manager/6-3/release-notes.html)
-      * [AEM Sustenance Hub](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)
+      * [AEM 6.2 リリースノート](https://helpx.adobe.com/jp/experience-manager/6-2/release-notes.html)
+      * [AEM 6.3 リリースノート](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html)
+      * [AEM Sustenance Hub](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)
    1. アップグレードのソースインスタンスを準備します。詳しくは、「[AEM 6.4 へのアップグレード](/help/sites-deploying/upgrade.md#preparing%20the%20source%20instance)」を参照してください。
    1. [AEM 6.4 QuickStart](/help/sites-deploying/deploy.md#getting%20the%20software) をダウンロードします。
    1. **（Unix/Linux ベースのインストールのみ）** 基盤のオペレーティングシステムとして UNIX または Linux を使用している場合は、ターミナルウィンドウを開いて crx-quickstart が含まれているフォルダーに移動し、次のコマンドを実行します。
@@ -42,7 +45,7 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
 
       >[!NOTE]
       >
-      >サーバーが起動して実行した後、いくつかの AEM Forms バンドルはインストール状態のままです。バンドルの数はインストールごとに異なる可能性があります。これらのバンドルの状態は無視しても問題はありません。バンドルは、に一覧表示されま `https://[server]:[port]/system/console/`す。
+      >サーバーが起動して実行した後、いくつかの AEM Forms バンドルはインストール状態のままです。バンドルの数はインストールごとに異なる可能性があります。これらのバンドルの状態は無視しても問題はありません。バンドルはに一覧が表示され `https://[server]:[port]/system/console/`ます。
 
 
 1. AEM Forms アドオンパッケージのインストール. 手順は次のとおりです。
@@ -50,11 +53,11 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
    1. AEM サーバーに管理者としてログインし、パッケージ共有を開きます。The default URL of the package share is `https://[server]:[port]/crx/packageshare`.
    1. パッケージ共有で **[!UICONTROL AEM 6.4 Forms add-on packages]** を検索し、お使いのオペレーティングシステムに対応するパッケージをクリックして、「**[!UICONTROL ダウンロード]**」をクリックします。ライセンス使用許諾契約書を読んでから同意し、「**[!UICONTROL OK]**」をクリックします。ダウンロードが開始します。ダウンロードが完了したら、パッケージの横に「**[!UICONTROL ダウンロード済み]**」というテキストが表示されます。
 
-      Alternately, you can also use the hyperlinks listed in [AEM Forms releases](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) to manually download a package.
+      Alternately, you can also use the hyperlinks listed in [AEM Forms releases](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) to manually download a package.
 
    1. ダウンロードが完了したら、「**[!UICONTROL ダウンロード済み]**」をクリックします。パッケージマネージャーに切り替わります。In the package manager, search the downloaded package, and click **[!UICONTROL Install]**.
 
-      「[AEM Forms のリリース](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)」に記載されているダイレクトリンクを使用して手動でパッケージをダウンロードした場合は、AEM Package Manager を起動して「**[!UICONTROL パッケージをアップロード]**」をクリックし、ダウンロードしたパッケージを選択して「アップロード」をクリックします。After the package is uploaded, click package name, and click **[!UICONTROL Install]**.
+      「[AEM Forms のリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)」に記載されているダイレクトリンクを使用して手動でパッケージをダウンロードした場合は、AEM Package Manager を起動して「**[!UICONTROL パッケージをアップロード]**」をクリックし、ダウンロードしたパッケージを選択して「アップロード」をクリックします。After the package is uploaded, click package name, and click **[!UICONTROL Install]**.
 
       >[!NOTE]
       >
@@ -73,7 +76,7 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
 
       移行ユーティリティにより、以前のバージョンのアダプティブフォームや対応する管理アセットが AEM 6.4 Forms で使用できるようになります。AEM パッケージ共有からユーティリティをダウンロードできます。移行ユーティリティの詳しい設定方法と使用方法については、[移行ユーティリティ](/help/forms/using/migration-utility.md)に関する説明を参照してください。
 
-      [ドラフト統合とコンポーネント送信のサンプル](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html)をデータベースで使用して旧バージョンのアップグレードを行う場合は、アップグレードの実行後に、以下の SQL クエリを実行してください。
+      [ドラフト統合とコンポーネント送信のサンプル](integrate-draft-submission-database.md)をデータベースで使用して旧バージョンのアップグレードを行う場合は、アップグレードの実行後に、以下の SQL クエリを実行してください。
 
       ```
       UPDATE metadata m, additionalmetadatatable am
@@ -87,7 +90,7 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
       WHERE `key` = 'dataType'
       ```
 
-   * **（AEM 6.2 Formsまたは以前のバージョンからアップグレードした場合のみ）Adobe signの再設定**
+   * **（AEM 6.2 Formsまたは以前のバージョンからアップグレードした場合のみ）Adobe Signの再設定**
 
       Adobe Sign を以前のバージョンの AEM Forms で設定してある場合は、AEM Cloud サービスから Adobe Sign を再設定します。詳細については、「[Adobe Sign を AEM Forms に統合する](/help/forms/using/adobe-sign-integration-adaptive-forms.md)」を参照してください。
 
