@@ -9,7 +9,10 @@ content-type: reference
 topic-tags: correspondence-management
 discoiquuid: 010e3639-b1a9-40fb-8615-7d18c4784b73
 translation-type: tm+mt
-source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+workflow-type: tm+mt
+source-wordcount: '1172'
+ht-degree: 79%
 
 ---
 
@@ -27,16 +30,16 @@ source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
 | 選択したアダプティブフォームコンポーネントの変更内容をプロパティブラウザーに保存する | Ctrl + S | Command + S |
 | 選択したアダプティブフォームコンポーネントのルールの編集 | Ctrl + Alt + Enter | Command + Alt + Return |
 | プレビューと現在選択されているモード（編集モードや基礎モードなど）を切り替える | Ctrl + Shift + M | Ctrl + Shift + M&amp;ast; |
-| 最後に行った変更操作を取り消す | Ctrl + Z | Ctrl + Z&amp;ast; |
-| 最後に行った変更操作をやり直す | Ctrl + Y | Ctrl + Y(&amp;A);ast; |
+| 最後におこなった変更操作を取り消す | Ctrl + Z | Ctrl + Z&amp;ast; |
+| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl + Y&amp;ast; |
 | 複数のコンポーネントを選択する | Shift キーを押しながらクリック | Shift キーを押しながらクリック |
-| 選択したコンポーネントをコピーする | Ctrl + C | Ctrl-C&amp;A;ast; |
-| 選択した 1 つ以上のコンポーネントを切り取る切り取ったコンポーネントは、新しい位置に貼り付けられるまで表示されません。 | Ctrl + X | Ctrl-X&amp;A;ast; |
+| 選択したコンポーネントをコピーする | Ctrl + C | Ctrl-C&amp;ast; |
+| 選択した 1 つ以上のコンポーネントを切り取る切り取ったコンポーネントは、新しい位置に貼り付けられるまで表示されません。 | Ctrl + X | Ctrl-X&amp;ast; |
 | コンポーネントを貼り付け | Ctrl + V | Ctrl + V |
 | 選択した 1 つ以上のコンポーネントを削除する | Ctrl + Del | Ctrl + Del&amp;ast; |
 | 選択した 1 つ以上のコンポーネントを削除する | Ctrl + Backspace | Ctrl + Backspace&amp;ast; |
 | プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + B | Ctrl + B&amp;A;ast; |
-| プレビューモードでリッチテキストエディターコンポーネントを使用している場合は、テキストを斜体にします。 | Ctrl + I | Ctrl + I&amp;A;ast; |
+| プレビューモードでリッチテキストエディターコンポーネントを使用している場合、テキストを斜体にします。 | Ctrl + I | Ctrl + I&amp;A;ast; |
 | プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + U | Ctrl + U&amp;A;ast; |
 
 >[!NOTE]
@@ -49,6 +52,7 @@ source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
 >
 >* Windows：Ctrl キーを押しながら、目的のコンポーネントをクリックします。
 >* MAC OS：Command キーを押しながら、目的のコンポーネントをクリックします。
+
 >
 
 
@@ -59,8 +63,8 @@ source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
 |---|---|---|
 | テーマで選択したコンポーネントのプロパティブラウザーを開く | Alt + Enter | Alt + Return |
 | テーマで選択したコンポーネントのプロパティブラウザーを閉じる | Ctrl + Alt + W | Command + Alt + W |
-| 最後に行った変更操作を取り消す | Ctrl + Z | Ctrl + Z&amp;ast; |
-| 最後に行った変更操作をやり直す | Ctrl + Y | Ctrl + Y(&amp;A);ast; |
+| 最後におこなった変更操作を取り消す | Ctrl + Z | Ctrl + Z&amp;ast; |
+| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl + Y&amp;ast; |
 | テーマで選択したコンポーネントのプロパティブラウザーでの変更の保存 | Ctrl + S | Ctrl + S&amp;ast; |
 
 >[!NOTE]
@@ -71,21 +75,21 @@ source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
 
 | **アクション** | **Windows のショートカットキー** | **Mac OS のショートカットキー** |
 |---|---|---|
-| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを展開する | Ctrl + aキーを押してすべてのアコーディオンを選択し、右向き矢印キーを押して展開します | すべてのアコーディオンを選択するにはCommand + aキーを押し、展開するには右向き矢印キーを押します |
-| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを折りたたむ | Ctrl + aキーを押してすべてのアコーディオンを選択し、左向き矢印キーを押して折りたたむ | すべてのアコーディオンを選択する場合はCommand + aを押し、折りたたむ場合は左向き矢印を押します |
+| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを展開する | すべてのアコーディオンを選択する場合はCtrl + Aキーを押し、展開する場合は右向き矢印キーを押します | すべてのアコーディオンを選択する場合はCommand + Aを押し、次に右向き矢印を押して展開します。 |
+| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを折りたたむ | Ctrl + Aキーを押してすべてのアコーディオンを選択し、左向き矢印キーを押して折りたたむ | Command + Aキーを押すと、すべてのアコーディオンを選択し、左向き矢印キーを押すと折りたたまれます |
 | 選択したアコーディオンをフォームオブジェクトツリーで展開する | 右向き矢印 | 右向き矢印 |
 | 選択したアコーディオンをフォームオブジェクトツリーで折りたたむ | 左向き矢印 | 左向き矢印 |
 | フォームオブジェクトツリーで次の項目を選択する | 下向き矢印 | 下向き矢印 |
 | フォームオブジェクトツリーで前の項目を選択する | 上向き矢印 | 上向き矢印 |
 
-[1は] 、Windowsの場合はCtrl +右向き矢印、Mac OSの場合はCommand +右向き矢印に置き換わります。\
+[1] Windowsの場合はCtrl +右向き矢印、Mac OSの場合はCommand +右向き矢印に置き換わります。\
 [2] Windowsの場合はCtrl +左向き矢印、Mac OSの場合はCommand +左向き矢印に置き換わります。
 
 ## Correspondence Management {#correspondence-management}
 
 このセクションでは、Correspondence Management のテキストエディターで使用できる各種キーボードとアクセシビリティのショートカットキーについて説明します。これらのショートカットキーを使用して、以下の操作を行うことができます。
 
-* Creating or editing a [Text](/help/forms/using/document-fragments.md#main-pars-header-0) asset
+* [テキスト](document-fragments.md) アセットの作成と編集
 * Editing a text module after tapping the relevant Edit icon ( ![edittextmodule](assets/edittextmodule.png)) when [creating a correspondence](/help/forms/using/create-correspondence.md).
 
 ### テキストの選択とカーソルの移動 {#text-selection-and-moving-the-cursor-around}
