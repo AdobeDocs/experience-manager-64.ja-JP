@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '2657'
+ht-degree: 90%
 
 ---
 
@@ -55,7 +58,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 
 >[!NOTE]
 >
->AEM formsリリースでは、Flex Workspaceは非推奨です。
+>AEM Formsのリリースでは、Flex Workspaceは非推奨です。
 
 デフォルトでは、AEM forms によって送信される電子メールは Flex Workspace（JEE 上の AEM forms では廃止されています）へのリンクを含みます。AEM forms によって送信される電子メールが AEM Forms Workspace へのリンクを含むように設定できます。Flex Workspace（JEE 上の AEM forms では廃止されています）を上回る AEM Forms Workspace のメリットについて詳しくは、こちらの[記事](/help/forms/using/features-html-workspace-available-flex.md)を参照してください。
 
@@ -193,17 +196,19 @@ forms ワークフローが、管理者に送信される電子メール通知�
 
 If your solution is deployed in a clustered environment, replace `@@notification-host@@` with the cluster address.
 
-`<`*PORTは&#x200B;*、アプリケーション`>`サーバーのHTTPリスナーのポート番号です。 サポートされるアプリケーションサーバーのデフォルトの HTTP リスナーポートは、以下のとおりです。
+`<`*PORT *`>`は、アプリケーションサーバーのHTTPリスナーのポート番号です。 サポートされるアプリケーションサーバーのデフォルトの HTTP リスナーポートは、以下のとおりです。
 
 **JBoss：** 8080
 
-**** Oracle webLogic Server:7001
+**Oracle WebLogic Server:** 7001
 
-**** IBM webSphere:9080
+**IBM WebSphere:** 9080
 
 To make these URLs function correctly, replace `<`*PORT *`>`with the port number that is appropriate for your environment.
 
-***注意&#x200B;**：Forms 以外のカスタム Web アプリケーションを使用して、タスクへのアクセスをユーザーに提供する場合は、そのカスタムアプリケーションに適した URL 形式を使用する必要があります。*
+>[!NOTE]
+>
+>Forms 以外のカスタム Web アプリケーションを使用して、タスクへのアクセスをユーザーに提供する場合は、そのカスタムアプリケーションに適した URL 形式を使用する必要があります。
 
 ### 変数選択 {#variable-picker}
 
@@ -211,33 +216,35 @@ To make these URLs function correctly, replace `<`*PORT *`>`with the port number
 
 ユーザーまたはグループへのリマインダー、タスクの割り当て、およびデッドラインの場合、「件名」ボックスと「通知テンプレート」ボックスで以下の変数を使用できます。
 
-**description** :Workbenchのプロセスのユーザーステップ（スタートポイント、Assign task操作またはAssign Multiple tasks操作）で定義される、Descriptionプロパティの内容。
+**description** :Workbenchのプロセスのユーザーステップ(開始ポイント、「タスクの割り当て」操作または「複数のタスクの割り当て」操作)で定義される、Descriptionプロパティの内容。
 
-**instructions** Workbenchのプロセスのユーザー手順で定義される、Task Instructionsプロパティの内容。
+**instructions** :Workbenchのプロセスのタスク手順で定義される、User Instructionsプロパティの内容。
 
-**notification-host** :AEM formsアプリケーションサーバーのホスト名。
+**notification-host** :AEM formsアプリケーションサーバーのホスト名です。
 
 **process-name** ：プロセスの名前。
 
 **operation-name** ：ステップの名前。
 
-**taskid** 現在のタスクの一意の識別子。
+**taskid** ：現在のタスクの一意の識別子。
 
-**actions** ：受信者がクリックできる有効なルート（例えば、Approve、Reject）の番号付きリストを作成します。
+**actions** :受信者がクリックできる有効なルート（Approve、Rejectなど）の番号付きリストを作成します。
 
 また、グループリマインダー、グループタスクの割り当ておよびグループのデッドラインの場合、次の変数も使用できます。
 
 **group-name** ：作業項目に割り当てられているグループの名前。
 
-**注意**:変 *数に値がない場合、何も返されません。*
+>[!NOTE]
+>
+>変数に値が設定されていない場合は、何も返されません。
 
 停止したブランチの場合は、次の変数を「件名」ボックスおよび「通知テンプレート」ボックスで使用できます。
 
 **branch-id** ：ブランチの識別子。
 
-**process-id** ：プロセスインスタンス識別子。
+**process-id** ：プロセスインスタンスの識別子。
 
-**notification-host** :AEM formsアプリケーションサーバーのホスト名。
+**notification-host** :AEM formsアプリケーションサーバーのホスト名です。
 
 停止した操作の場合は、次の変数を「件名」ボックスおよび「通知テンプレート」ボックスで使用できます。
 
@@ -245,9 +252,9 @@ To make these URLs function correctly, replace `<`*PORT *`>`with the port number
 
 **branch-id** ：ブランチの識別子。
 
-**process-id** ：プロセスインスタンス識別子。
+**process-id** ：プロセスインスタンスの識別子。
 
-**notification-host** :AEM formsアプリケーションサーバーのホスト名。
+**notification-host** :AEM formsアプリケーションサーバーのホスト名です。
 
 ### 「件名」ボックスでの変数の使用{#using-a-variable-in-the-subject-box}
 
