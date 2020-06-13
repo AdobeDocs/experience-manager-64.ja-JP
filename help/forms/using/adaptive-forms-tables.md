@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: e7d53127-3a0f-4c74-a656-25d9cf969f98
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '2044'
+ht-degree: 88%
 
 ---
 
@@ -43,7 +46,7 @@ AEM Forms を使用すると、サイドバーにあるコンポーネントブ�
 
 例えば、次の表の最初のボディ行には、テキストボックス、日付選択、ドロップダウンリストのコンポーネントが含まれています。
 
-![行セル型](assets/row-cell-types.png)
+![行セルの種類](assets/row-cell-types.png)
 
 結合したいセルを選択し、右クリックして「**結合**」を選択することにより、複数のセルを結合することができます。また、結合されたセルを右クリックして「**セルの分割**」を選択することにより、セルを分割することができます。
 
@@ -112,7 +115,7 @@ At runtime, you will see **`+`** and *`-`* buttons to add or delete a row.
 表と行では、数式によって返される値を基にその視認性をコントロールする視認性の数式のみがサポートされていますが、セルでは、次の数式がサポートされています。
 
 * **初期化スクリプト：**&#x200B;フィールドの初期化で操作を実行します。
-* **** 値コミットスクリプト：フィールドの値が変更された後にフォームのコンポーネントを変更する場合。
+* **値コミットスクリプト：** フィールドの値を変更した後にフォームのコンポーネントを変更する場合。
 
 >[!NOTE]
 >
@@ -129,7 +132,7 @@ At runtime, you will see **`+`** and *`-`* buttons to add or delete a row.
 
 ## モバイルレイアウト {#mobile-layouts}
 
-アダプティブフォームの表は、その流動的でレスポンシブなレイアウトで、モバイルデバイスでの卓越したエクスペリエンスを提供します。AEM Formsでは、表用のモバイルレイアウトを、左側にヘッダーと折りたたみ可能な列の2種類用意しています。
+アダプティブフォームの表は、その流動的でレスポンシブなレイアウトで、モバイルデバイスでの卓越したエクスペリエンスを提供します。AEM Formsオファーは、表に使用するモバイルレイアウトを、左側にヘッダーと折りたたみ可能な列の2種類用意しています。
 
 表のモバイルレイアウトは、表の編集コンポーネントダイアログの「スタイル設定」タブから設定することができます。
 
@@ -137,21 +140,23 @@ At runtime, you will see **`+`** and *`-`* buttons to add or delete a row.
 
 左側にヘッダーのレイアウトでは、表のヘッダーが左側に転置され、ヘッダーに寄せてセルがひとつだけ表示されている形になっています。このレイアウトでの各行は、個別のセクションとして表示されます。次の画像では、デスクトップ上での表とモバイルデバイス上での表を比較しています。
 
-![](assets/desktopview.png) desktopview ****&#x200B;図：左側にヘ *ッダーレイアウトのテーブルのデスクトップビュー*
+![desktopview](assets/desktopview.png)**図：** *左側にヘッダーレイアウトを使用した表のデスクトップ表示*
 
-![](assets/headersontheleft.png) headersonthelft ****&#x200B;図：左側に *ヘッダーレイアウトのテーブルのモバイルビュー*
+![headersonthelft](assets/headersontheleft.png)**図：** *左側にヘッダーレイアウトを使用した表のモバイル表示*
 
 ### 折りたたみ可能な列のレイアウト {#collapsible-columns-layout}
 
 折りたたみ可能な列のレイアウトでは、デバイスの大きさによって 1 つまたは 2 つの列が表示され、その他の列は折りたたまれます。折りたたみ/展開アイコンをクリックすると、表の他の列を表示することができます。
 
-***Note**: While Collapsible column layout is optimized for mobile devices, it will work on desktop as well, if the width available is not enough to show all the columns in a table. *
+>[!NOTE]
+>
+>折りたたみ可能な列のレイアウトはモバイルデバイス向けに最適化されていますが、表のすべての列を表示するのに十分な幅がない場合は、デスクトップでも使用できます。
 
 次の画像では、列が折りたたまれた状態と展開された状態で、表がどのように表示されるかを比較しています。
 
-![](assets/collapsed-column.png) collapsed-column **** Figure:モバ *イルデバイス上で2つの列のみが表示される表の折りたたまれた列*
+![collapsed-column](assets/collapsed-column.png)**図：** *モバイルデバイス上で列が2つだけ表示されている表の折りたたまれた列*
 
-![](assets/collapsible_column.png) collapsible_column **** Figure:モバ *イルデバイス上の表の展開された列*
+![collapsible_column](assets/collapsible_column.png)**図：** *モバイルデバイス上で展開された表の列*
 
 ## 表におけるデータの統合 {#merge-data-in-a-table}
 
