@@ -10,7 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: fa6e0246-6bd2-4ffb-b54c-15eda605f213
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+workflow-type: tm+mt
+source-wordcount: '1016'
+ht-degree: 81%
 
 ---
 
@@ -25,9 +28,9 @@ AEM Forms Workspace では、以下のタスクを実行できます。
 
 ## AEM Forms Workspace 内の移動 {#navigating-html-workspace}
 
-AEM Forms Workspaceユーザーインターフェイスの様々な項目が、操作するプロセスとタスクに応じて表示されます。 「要約」、「フォーム」、「詳細」、「履歴」、「添付ファイル」または「メモ」の各タブ、およびこのヘルプで説明するボタンはすべて、表示される場合とされない場合があります。
+AEM Forms Workspaceユーザーインターフェイスの各項目は、操作するプロセスとタスクに応じて表示されます。 「要約」、「フォーム」、「詳細」、「履歴」、「添付ファイル」または「メモ」の各タブ、およびこのヘルプで説明するボタンはすべて、表示される場合とされない場合があります。
 
-AEM Forms Workspaceのメインのユーザーインターフェイスは、次のいずれかの方法を使用して移動できます。
+AEM Forms Workspaceの主なユーザーインターフェイスは、次の方法のいずれかで操作できます。
 
 * 「開始プロセス」、「TODO リスト」、「環境設定」、「追跡」、「ヘルプ」、およびログアウトオプションにアクセスするには、上部ナビゲーションバーのアイテムをクリックします。
 * 「開始プロセス」、「TODO」または「追跡」タブをクリックして、3 つの主要な作業領域にアクセスします。
@@ -39,33 +42,33 @@ AEM Forms Workspaceのメインのユーザーインターフェイスは、次�
 
 ## AEM Forms Workspace でのスクリーンリーダーの使用 {#using-html-workspace-with-screen-readers}
 
-AEM Forms WorkspaceはWebベースのHTMLアプリケーションで、スクリーンリーダーとの互換性があります。 AEM Forms Workspaceのインターフェイス内を移動するには、キーボードを使用します。
+AEM Forms WorkspaceはWebベースのHTMLアプリケーションで、スクリーンリーダーと互換性があります。 AEM Forms Workspaceインターフェイス内を移動するには、キーボードを使用します。
 
-AEM Forms Workspaceをスクリーンリーダーと共に使用するには、次の点に注意してください。
+AEM Forms Workspaceでスクリーンリーダーを使用する場合は、次の点に注意してください。
 
-* AEM Forms Workspaceは、標準のスクリーンリーダーツールに準拠した標準のHTMLアプリケーションです。 スクリーンリーダーツールを実行するのに特別なスクリプトは必要ありません。
-* AEM Forms Workspaceのナビゲーションはすべてアンカータグを通じて行われ、タブから簡単にアクセスできます。
+* AEM Forms Workspaceは、標準的なスクリーンリーダーツールに準拠した標準的なHTMLアプリケーションです。 スクリーンリーダーツールを実行するのに特別なスクリプトは必要ありません。
+* AEM Forms Workspaceのすべてのナビゲーションは、アンカータグを通って行われ、タブから簡単にアクセスできます。
 * フォームの読み込みには数秒かかる場合があります。スクリーンリーダーでは、フォームが読み込まれていること、および待機の必要があることは音声で通知されません。
 
 ## キーボードを使用した AEM Forms Workspace 内の移動 {#navigating-html-workspace-using-a-keyboard}
 
-キーボードを使用してAEM Forms Workspace内を移動する場合、ナビゲーションはHTMLのアクセシビリティ規則に準拠します。 特定の状況下では、タブ移動の順序は通常の順序とは異なります。インターフェイス内での移動時には、以下のヒントを参考にしてください。
+キーボードを使用してAEM Forms Workspace内を移動する場合、移動はアクセシビリティ規則に準拠したものになります。 特定の状況下では、タブ移動の順序は通常の順序とは異なります。インターフェイス内での移動時には、以下のヒントを参考にしてください。
 
 * ブラウザーの上部にあるツールバーの範囲外にタブ移動できない場合は、Ctrl + Tab キーを押して、ブラウザーウィンドウのコンテンツにタブ移動します。
-* AEM Forms Workspaceヘルプが別のブラウザーウィンドウで開きます。 ヘルプを表示したら、フォーカスは AEM Forms Workspace が含まれているブラウザーウィンドウに戻ります。フォーカスが戻ると、ヘルプメニューはフォーカスされたままになります。
+* AEM Forms Workspaceヘルプが別のブラウザーウィンドウに開きます。 ヘルプを表示したら、フォーカスは AEM Forms Workspace が含まれているブラウザーウィンドウに戻ります。フォーカスが戻ると、ヘルプメニューはフォーカスされたままになります。
 * プロセスを開始したり、タスクを完了するためにフォームを開く場合、フォーカスは既存の要素に残り、フォームには移動しません。タブを使用してフォーカスをフォームに移動し、それを通して参照します。フォーム内のタブ移動の順序は、フォームの種類やデザインによって異なります。
 
    PDF フォームでは、フォームの一番下にタブ移動したり、フォームを送信したりすると、カーソルのフォーカスはブラウザーのアドレスバーにジャンプします。「ドラフトとして保存」や「完了」などのフォームのアクションボタンに移動するには、再度（フォーム全体ではなく）メニュー内をタブ移動する必要があります。フォームがまだ開いている場合は、ボタンをタブでスキップして、フォームに戻ることもできます。
 
 ## 環境設定の管理 {#managing-preferences}
 
-AEM Forms Workspaceの様々な環境設定は、次のカテゴリで設定できます。
+次のカテゴリで、様々なAEM Forms Workspace環境設定を設定できます。
 
-**不在設定を管理：**&#x200B;環境設定を指定し、不在時に他のユーザーにタスクを割り当てる方法を管理します。[不在時の環境設定の指定](/help/forms/using/todo-lists.md#main-pars-heading-22)を参照してください。
+**不在設定を管理：**&#x200B;環境設定を指定し、不在時に他のユーザーにタスクを割り当てる方法を管理します。[不在時の環境設定の指定](/help/forms/using/todo-lists.md#setting-out-of-office-preferences)を参照してください。
 
-**キューを管理：**&#x200B;他のユーザーと TODO リストを共有するか、別のユーザーのリストへのアクセス権限を要求するように環境設定を指定します。[グループキューと共有キューのタスクの操作](/help/forms/using/todo-lists.md#main-pars-heading-19)を参照してください。
+**キューを管理：**&#x200B;他のユーザーと TODO リストを共有するか、別のユーザーのリストへのアクセス権限を要求するように環境設定を指定します。[グループキューと共有キューのタスクの操作](/help/forms/using/todo-lists.md#working-with-tasks-from-group-and-shared-queues)を参照してください。
 
-**UI 設定の管理：** AEM Forms Workspace とのやり取りの方法について環境設定を指定します。[ユーザーインターフェイスの環境設定の指定](/help/forms/using/getting-started-livecycle-html-workspace.md#main-pars-heading-5)を参照してください。
+**UI 設定の管理：** AEM Forms Workspace とのやり取りの方法について環境設定を指定します。[ユーザーインターフェイスの環境設定の指定](#set-user-interface-preferences)を参照してください。
 
 ### ユーザーインターフェイスの環境設定の指定 {#set-user-interface-preferences}
 
