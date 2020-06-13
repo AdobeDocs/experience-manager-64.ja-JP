@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 translation-type: tm+mt
-source-git-commit: da967c43a6b4c0021ac591477bd13f3fdb026287
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '1493'
+ht-degree: 88%
 
 ---
 
@@ -44,7 +47,8 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
 1. パッケージ **aem-fp-db-integration-sample-pkg-6.1.2.zip** を参照して選択し、「**[!UICONTROL OK]**」をクリックします。
 1. パッケージの隣にある「**[!UICONTROL インストール]**」をクリックし、パッケージをインストールします。
-1. **[!UICONTROL AEM Web Console Configuration]**&#x200B;ページ(https://[*host*]:[*port*]/system/console/configMgr)に移動します。
+1. Go to **[!UICONTROL AEM Web Console Configuration]**
+page at https://[*host*]:[*port*]/system/console/configMgr.
 1. **[!UICONTROL Forms Portal Draft and Submission Configuration]** をクリックし、編集モードで開きます。
 
 1. 次の表の説明に従って、プロパティの値を指定します。
@@ -77,7 +81,9 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
    データテーブルに別の名前を設定するには、以下の手順を実行してください。
 
    * Web コンソール設定で、「Forms Portal Data Service Sample Implementation」を見つけてクリックします。データソースおよびデータテーブル名の値は変更できます。
-   **注意**:テーブル名を変更する場合は、フォームポータル設定で指定します。
+   >[!NOTE]
+   >
+   >テーブル名を変更する場合は、フォームポータル設定で名前を指定します。
 
 1. 他の設定はそのままにし、「**[!UICONTROL 保存]**」をクリックします。
 
@@ -414,5 +420,5 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
    >
    >guideRuntimeおよびguideRuntimeWithXfaクライアントライブラリの代わりにカスタムクライアントライブラリを使用する場合は、カテゴリ名を使用して、この手順で作成したクライアントライブラリを実行時に読み込むカスタムライブラリに埋め込みます。
 
-1. 「**[!UICONTROL すべて保存」をクリックします。]** 現在は、ファイル名が150文字（拡張子を含む）を超える場合、メッセージが表示されます。
+1. 「**[!UICONTROL すべて保存」をクリックします。]** 現在は、ファイル名が150文字（拡張子を含む）を超える場合に、メッセージが表示されます。
 
