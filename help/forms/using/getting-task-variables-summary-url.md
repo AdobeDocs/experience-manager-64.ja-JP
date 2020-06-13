@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '456'
+ht-degree: 87%
 
 ---
 
@@ -28,7 +31,10 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
    * empid
    * reason
    * duration
-   **注意**：このレンダラーは要約ページのテンプレートです。
+
+   >[!NOTE]
+   >
+   >このレンダラーは概要ページのテンプレートです。
 
    このレンダラーの以下のサンプルコードは、
 
@@ -58,7 +64,7 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
    1. プロセス **create PTO summary** を作成し、これをオーケストレーションで **Assign Task** 操作の前のサブプロセスとして使用します。
    1. **employeeName**、**employeeID**、**ptoReason**、**totalDays**、および **nodeName**&#x200B;を新しいプロセスで入力変数として定義します。これらの変数は送信されたフォームデータとして渡されます。
 
-      また、概要URLの設定時に使用する出力変数**ptoNodePath **を定義します。
+      サマリURLの設定時に使用する出力変数**ptoNodePath **を定義します。
 
    1. In the **create PTO summary** process, use the **set value** component to set the input details in a **nodeProperty **(**nodeProps**) map.
 
@@ -72,7 +78,7 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
       * **フォルダパス**：新しい CRX ノードが作成されるパスです。パスを **/content** に設定します。
       * **ノード名**：入力変数 nodeName をこのフィールドに割り当てます。これは一意のノード名文字列です。
-      * **ノードタイプ**:タイプを **nt:unstructuredと定義します**。 このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
+      * **ノードタイプ**: タイプを **nt:unstructured**. このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
    1. 送信されたフォームデータ（**employeeName**、**employeeID**、**ptoReason**、および **totalDays**）を新しいプロセス **create PTO summary** への入力として渡します。**ptoSummaryNodePath** として出力を取得します。
 
 
