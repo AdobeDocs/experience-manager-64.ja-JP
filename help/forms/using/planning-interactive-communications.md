@@ -8,7 +8,10 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 75b2d424-91d3-45b4-a5d7-fb49ab558582
 translation-type: tm+mt
-source-git-commit: 9327fd06957fafc7c711f1726f5d8a363ae0c1ad
+source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+workflow-type: tm+mt
+source-wordcount: '665'
+ht-degree: 88%
 
 ---
 
@@ -31,9 +34,9 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 * **バックエンドシステムが作成元のデータ（フォームデータモデル）**&#x200B;は、顧客固有で、インタラクティブ通信と動的にマージされます。例えば、ポリシー番号や住所はフォームデータモデルを使用することができます。
 * 印刷および Web 版のインタラクティブ通信用の&#x200B;**レイアウトまたはテンプレート**。
 * インタラクティブ通信に配置する多様なテキスト段落の&#x200B;**順序**。
-* **通信を送信する前に通信をカスタマイズする最前線の従業員(エージェントUI** )が入力したデータ。 例えば、支払期日です。
+* **通信を送信する前にカスタマイズする最前線の従業員（エージェントUI）** が入力したデータ。 例えば、支払期日です。
 
-* **条件付きデータ**&#x200B;は、事前定義された条件に基づいて作成されます。例えば、インタラクティブな通信が生成された日付です。
+* **条件付きデータ**&#x200B;は、事前定義された条件に基づいて作成されます。例えば、対話型通信が生成された日付。
 * ロゴや署名画像など&#x200B;**リポジトリに保存された画像**。会社ロゴなどの画像は、ほとんど、またはすべての通信に表示されます。
 * **グラフやテーブル**&#x200B;は、インタラクティブ通信の複雑なデータ表示を簡略化する必要があります。
 
@@ -49,7 +52,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 * 条件付きデータ
 * 画像
 
-各セクションの太字のテキストはスタティックテキストを表します。データベースには、顧客、請求書、および通話表が含まれます。 フォームデータモデルは、これらのテーブルのいずれかのデータを受信することができます。For more information, see [Create form data model](/help/forms/using/create-form-data-model0.md).
+各セクションの太字のテキストはスタティックテキストを表します。データベースには、顧客、請求書、および呼び出し表が含まれます。 フォームデータモデルは、これらのテーブルのいずれかのデータを受信することができます。For more information, see [Create form data model](create-form-data-model-tutorial.md).
 
 次のテーブルに、インタラクティブ通信の分析内の各フィールドのデータソースを示します。
 
@@ -120,7 +123,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
      <li>国際ローミング料金</li> 
      <li>付加価値サービス料金</li> 
      <li>合計請求金額（usagecharges 計算フィールド）</li> 
-     <li>買掛金合計（usagecharges計算済フィールド）</li> 
+     <li>買掛金合計（使用目的計算済フィールド）</li> 
     </ul> <p>テーブル - 請求</p> </td> 
    <td>フィールドなし</td> 
    <td>--</td> 
@@ -131,7 +134,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
     <ul> 
      <li>日付</li> 
      <li>時刻</li> 
-     <li>番号</li> 
+     <li>数値</li> 
      <li>デュレーション (ms)</li> 
      <li>料金</li> 
     </ul> </td> 
