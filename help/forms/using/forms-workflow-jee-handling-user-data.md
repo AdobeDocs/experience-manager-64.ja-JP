@@ -8,7 +8,10 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
 translation-type: tm+mt
-source-git-commit: 8afc09103b34b12e0218a133b87422456cb20d35
+source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+workflow-type: tm+mt
+source-wordcount: '1371'
+ht-degree: 70%
 
 ---
 
@@ -23,7 +26,7 @@ AEM Forms JEEワークフローは、ビジネスプロセスを設計、作成�
 * 監視フォルダーの使用
 * 電子メールの使用
 
-For more information about creating AEM Forms JEE workflow process, see [Workbench Help](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/WorkbenchHelp.pdf).
+For more information about creating AEM Forms JEE workflow process, see [Workbench Help](https://helpx.adobe.com/jp/content/dam/help/en/experience-manager/6-4/forms/pdf/WorkbenchHelp.pdf).
 
 ## ユーザーデータとデータストア {#user-data-and-data-stores}
 
@@ -31,13 +34,13 @@ For more information about creating AEM Forms JEE workflow process, see [Workben
 
 ## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
 
-プロセスがトリガーされると、一意のプロセスインスタンスIDと長時間有効な呼び出しIDが生成され、プロセスインスタンスに関連付けられます。 永続的呼び出し ID に基づいて、プロセスインスタンスのデータへアクセスしてデータを削除できます。タスクを送信したプロセス開始者またはプロセス参加者のユーザー名を持つ、プロセスインスタンスの長期間有効な呼び出しIDを推定できます。
+プロセスがトリガーされると、一意のプロセスインスタンスIDと長期間有効な呼び出しIDが生成され、プロセスインスタンスに関連付けられます。 永続的呼び出し ID に基づいて、プロセスインスタンスのデータへアクセスしてデータを削除できます。プロセスインスタンスの長期間有効な呼び出しIDは、プロセスの開始者のユーザー名、またはタスクを送信したプロセス参加者のユーザー名を使用して推定できます。
 
 ただし、以下のシナリオでは開始者のプロセスインスタンス ID を特定することはできません。
 
 * **監視フォルダーを介してトリガーされたプロセス**：プロセスが監視フォルダーによりトリガーされた場合、そのプロセスの開始者を使用してプロセスインスタンスを特定することはできません。この場合、ユーザー情報は格納済みデータでエンコードされます。
 * **AEM の発行インスタンスから開始されたプロセス**：AEM 発行インスタンスからトリガーされたすべてのプロセスインスタンスは、開始者に関する情報を取得しません。ただし、ユーザーデータは、ワークフロー変数に格納されているプロセスに関連付けられたフォームに取得される場合があります。
-* **Eメールを通じて開始されたプロセス**:送信者の電子メールIDは、データベーステーブルの不透明なBLOB列のプロパティとして取り込まれ `tb_job_instance` ます。この列は、直接照会できません。
+* **電子メールを使用して開始されたプロセス**: 送信者の電子メールIDは、 `tb_job_instance` データベーステーブルの不透明なblob列のプロパティとして取得され、直接クエリーすることはできません。
 
 ### ワークフローの開始者または参加者が分かっている場合のプロセスインスタンス ID の特定 {#initiator-participant}
 
@@ -59,7 +62,7 @@ For more information about creating AEM Forms JEE workflow process, see [Workben
 
    The query returns tasks initiated by the specified `initiator`_ `principal_id`. タスクには次の 2 つのタイプがあります。
 
-   * **完了したタスク**:これらのタスクが送信され、フィールドに英数字の値が表示され `process_instance_id` ます。 送信済みタスクのすべてのプロセスインスタンス ID をメモして、手順を続行します。
+   * **完了したタスク**: これらのタスクは送信済みで、フィールドに英数字の値が表示され `process_instance_id` ます。 送信済みタスクのすべてのプロセスインスタンス ID をメモして、手順を続行します。
    * **開始されたが完了していないタスク**：これらのタスクは開始されていますが、まだ送信されていません。The value in the `process_instance_id` field for these tasks is **0** (zero). この場合、対応するタスク ID をメモして、「[オーファンタスクの操作](#orphan)」を参照してください。
 
 1. (**For workflow participants**) Execute the following command to retrieve process instance IDs associated with the principal ID of the process participant for the initiator from the `tb_assignment` database table.
@@ -78,7 +81,7 @@ For more information about creating AEM Forms JEE workflow process, see [Workben
 
 ### ユーザーデータがプリミティブ変数に格納されている場合のプロセスインスタンス ID の特定 {#primitive}
 
-ワークフローは、ユーザーデータがデータベースにBLOBとして保存される変数に取り込まれるように設計できます。 このような場合、次のプリミティブ型変数のいずれかに格納されている場合にのみ、ユーザーデータのクエリを実行できます。
+ワークフローは、ユーザーデータがデータベース内のBLOBとして格納される変数に取り込まれるように設計できます。 このような場合、次のプリミティブ型変数のいずれかに格納されている場合にのみ、ユーザーデータのクエリを実行できます。
 
 * **文字列**：ユーザー ID は直接またはサブ文字列として含まれ、SQL を使用してクエリを実行できます。
 * **数値**：ユーザー ID は直接含まれています。
@@ -126,11 +129,11 @@ For more information about creating AEM Forms JEE workflow process, see [Workben
 
 1. Create an instance of the public `ProcessManager` client ( `com.adobe.idp.workflow.client.ProcessManager`) using a `ServiceClientFactory` instance with the correct connection settings.
 
-   詳しくは、「[Class ProcessManager](https://helpx.adobe.com/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html)」の Java API リファレンスを参照してください。
+   詳しくは、「[Class ProcessManager](https://helpx.adobe.com/jp/experience-manager/6-4/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html)」の Java API リファレンスを参照してください。
 
 1. ワークフローインスタンスのステータスを確認します。ステータスが2(COMPLETE)または4(TERMINATED)以外の場合は、次のメソッドを呼び出して、最初にインスタンスを終了します。
 
-   `ProcessManager.terminateProcess(<long_lived_invocation_id>)` です。
+   `ProcessManager.terminateProcess(<long_lived_invocation_id>)`。
 
 1. 次のメソッドを呼び出して、ワークフローインスタンスを削除します。
 
