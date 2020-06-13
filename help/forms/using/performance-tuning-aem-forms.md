@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: Configuration
 discoiquuid: 5d672b56-00c4-46a0-974b-e174fbdf07d6
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '900'
+ht-degree: 81%
 
 ---
 
@@ -54,7 +57,9 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:PermSize=256m
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 ```
 
-**注意**：推奨設定は、Windows 2008 R2 8 コアおよび Oracle HotSpot 1.7（64 ビット）JDK に対するもので、ご使用のシステム設定に従ってスケールアップまたはスケールダウンする必要があります。
+>[!NOTE]
+>
+>推奨設定は、Windows 2008 R2 8コアおよびOracle HotSpot 1.7 （64ビット） JDK用で、システム設定に従って拡大または縮小する必要があります。
 
 ## Web サーバーの使用 {#using-a-web-server}
 
@@ -62,7 +67,9 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 例えば、次の手順を実行して、JBoss 搭載の Apache Web Server 2.0 32 ビット上で圧縮を有効にします。
 
-***注意&#x200B;**：次の手順は Apache Web Server 2.0 32 ビット以外のサーバーには適用されません。その他のサーバーに固有の手順については、対応する製品ドキュメントを参照してください。*
+>[!NOTE]
+>
+>次の手順は、Apache Web Server 2.0 32ビット以外のサーバーには適用されません。 その他のサーバーに固有の手順については、対応する製品ドキュメントを参照してください。
 
 次の手順では、Apache Web サーバーで圧縮を有効にするために必要な変更を示します。
 
@@ -166,7 +173,7 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 >
 >* If you are using a different location for GDS and temporary directory, open the AdminUI at `https://[server]:[port]/adminui)`, navigate to **Home > Settings > Core System Settings > Core Configurations** to confirm the location in use.
 
-* 推奨ディレクトリを除外した後でもAEM Formsサーバーのパフォーマンスが低下する場合は、Java実行可能ファイル(java.exe)も除外します。
+* 推奨ディレクトリを除外した後でもAEM Formsサーバーの動作が遅い場合は、Java実行ファイル(java.exe)も除外します。
 
 
 
