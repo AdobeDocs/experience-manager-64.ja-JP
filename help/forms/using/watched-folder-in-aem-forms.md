@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 442cd4bb-21b8-4d9d-89a4-402ee22c79a7
 translation-type: tm+mt
-source-git-commit: 9d13589ea95329dc6a9d3dbf3a5a9930998597f5
+source-git-commit: 3cc4e08b3a69851e5d4e79eb8159ee00e8f333a0
 workflow-type: tm+mt
-source-wordcount: '7663'
+source-wordcount: '7662'
 ht-degree: 92%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 92%
 
 # AEM Forms の監視フォルダー {#watched-folder-in-aem-forms}
 
-管理者は、ネットワークフォルダーを監視フォルダーとして設定することにより、ユーザーが任意のファイル（例えば PDF ファイル）を監視フォルダーに追加した時点から、事前に設定されたワークフロー、サービス、またはスクリプティング操作を開始し、追加されたファイルを処理することができます。指定された操作をサービスが実行した後、指定された出力フォルダーに出力ファイルが保存されます。ワークフロー、サービス、スクリプトについて詳しくは、「[さまざまなファイル処理方法](/help/forms/using/watched-folder-in-aem-forms.md#main-pars-header-4)」を参照してください。
+管理者は、ネットワークフォルダーを監視フォルダーとして設定することにより、ユーザーが任意のファイル（例えば PDF ファイル）を監視フォルダーに追加した時点から、事前に設定されたワークフロー、サービス、またはスクリプティング操作を開始し、追加されたファイルを処理することができます。指定された操作をサービスが実行した後、指定された出力フォルダーに出力ファイルが保存されます。ワークフロー、サービス、スクリプトについて詳しくは、「[さまざまなファイル処理方法](#variousmethodsforprocessingfiles)」を参照してください。
 
 ## 監視フォルダーの作成 {#create-a-watched-folder}
 
@@ -29,7 +29,7 @@ ht-degree: 92%
 
    フォル `MyWatchedFolder`ダーが存在しない場合、AEM Formsは指定されたパスにフォルダーを作成しようとします。
 
-* ファイルシステム上にフォルダーを作成してから監視フォルダーエンドポイントを設定し、folderPath プロパティにフルパスを入力します。folderPath プロパティについて詳しくは、「[監視フォルダーのプロパティ](/help/forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)」を参照してください。
+* ファイルシステム上にフォルダーを作成してから監視フォルダーエンドポイントを設定し、folderPath プロパティにフルパスを入力します。folderPath プロパティについて詳しくは、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
 
 >[!NOTE]
 >
@@ -53,7 +53,8 @@ ht-degree: 92%
    * `inputProcessorType`
    * `inputProcessorId`
    * `outputFilePattern`
-   サポートされているプロパティの完全なリストについては、「[監視フォルダーのプロパティ](/help/forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)」を参照してください。
+
+   サポートされているプロパティの完全なリストについては、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
 
 1. 「**すべて保存**」をクリックします。ノードの作成後、プロパティが保存されます。The `input`, `result`, `failure`, `preserve`, and `stage`folders are created at the path specified in the `folderPath` property.
 
@@ -80,8 +81,9 @@ ht-degree: 92%
    * author, publish
 
    * publish, author
-
-**注意**：*監視フォルダーをホストしているサーバーで実行モードが指定されていない場合、サーバー上の実行モードにかかわらず、監視フォルダーはアクティブになります。*
+   >[!NOTE]
+   >
+   >監視フォルダーをホストしているサーバーで実行モードが指定されていない場合、サーバー上の実行モードにかかわらず、監視フォルダーはアクティブになります。
 
 * **outputFilePattern（文字列型）**：出力ファイルのパターンです。フォルダーパターンまたはファイルパターンを 1 つ指定できます。フォルダーパターンを指定した場合は、出力ファイル名はワークフローでの設定に従います。ファイルパターンを指定した場合は、出力ファイル名はファイルパターンでの設定に従います。[ファイルパターンおよびフォルダーパターン](/help/forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)から、出力ファイルのディレクトリ構造を指定することもできます。これは必須プロパティです。
 
@@ -139,6 +141,7 @@ ht-degree: 92%
    * %l = ミリ秒
    * %R = 乱数（0～9）
    * %P = プロセス ID またはジョブ ID
+
    例えば、2009 年 7 月 17 日午後 8 時に C:/Test/WF0/failure/%Y/%M/%D/%H/ と指定した場合、結果フォルダーは C:/Test/WF0/failure/2009/07/17/20 となります。
 
    絶対パスではなく相対パスを指定すると、そのフォルダーは監視フォルダーの中に作成されます。デフォルト値は result/%Y/%M/%D/ であり、監視フォルダー内の結果フォルダーです。ファイルパターンについて詳しくは、「[ファイルパターンについて](/help/forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)」を参照してください。
@@ -533,6 +536,7 @@ log.info("Exiting workflow script!")
 
    * 監視フォルダーに対する includeFilePattern プロパティを、どの新しい入力ファイルにも一致しない値に変更します（例えば、NOMATCH と入力します）。
    * 新しい入力ファイルを作成しているプロセスを休止します。
+
    AEM Forms がすべてのファイルを回復して処理するまで待機します。ファイルの大多数は回復され、新しい入力ファイルは正しく処理されます。監視フォルダーがファイルを回復し、処理するまでの待機時間の長さは、呼び出す操作の長さおよび回復するファイルの数によって異なります。
 
 1. 処理できないファイルを特定します。適切な待機時間が経過し、前の手順を完了した上、ステージフォルダーに未処理のファイルが残っている場合は、次の手順に進みます。
@@ -668,7 +672,7 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
    * inputProcessorId（文字列型）：inputProcessorId プロパティの動作は、inputProcessorType プロパティに指定した値に基づきます。この例では、inputProcessorType プロパテイの値は workflow です。そのため inputProcessorId プロパティに PDFG ワークフローの次のパスを指定します。/etc/workflow/models/pdfg/jcr:content/model
 
    * outputFilePattern（文字列型）：出力ファイルのパターンです。フォルダーパターンまたはファイルパターンを 1 つ指定できます。フォルダーパターンを指定した場合は、出力ファイル名はワークフローでの設定に従います。ファイルパターンを指定した場合は、出力ファイル名はファイルパターンでの設定に従います。
-   上記の必須プロパティに加えて、監視フォルダーはオプションのプロパティもいくつかサポートしています。オプションのプロパティの完全な一覧と説明については、「[監視フォルダーのプロパティ](/help/forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)」を参照してください。
+   上記の必須プロパティに加えて、監視フォルダーはオプションのプロパティもいくつかサポートしています。オプションのプロパティの完全な一覧と説明については、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
 
 ## Central Migration Bridge（非推奨）と監視フォルダーの連携 {#using-central-migration-bridge-deprecated-with-a-watched-folder}
 
@@ -749,4 +753,4 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
 
    * **outputFilePattern（文字列型）**：出力ファイルのパターンです。フォルダーパターンまたはファイルパターンを 1 つ指定できます。フォルダーパターンを指定した場合は、出力ファイル名はワークフローでの設定に従います。ファイルパターンを指定した場合は、出力ファイル名はファイルパターンでの設定に従います。
 
-上記の必須プロパティに加えて、監視フォルダーはオプションのプロパティもいくつかサポートしています。オプションのプロパティの完全な一覧と説明については、「[監視フォルダーのプロパティ](/help/forms/using/watched-folder-in-aem-forms.md#main-pars-header-1)」を参照してください。
+上記の必須プロパティに加えて、監視フォルダーはオプションのプロパティもいくつかサポートしています。オプションのプロパティの完全な一覧と説明については、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
