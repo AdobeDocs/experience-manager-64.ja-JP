@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6f775933-e989-4456-ad01-9bdf5dee3dad
 translation-type: tm+mt
-source-git-commit: 36d12ff07b1cdd1e6c6fee052a335d3f49eee3bb
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '1122'
+ht-degree: 97%
 
 ---
 
@@ -44,7 +47,7 @@ source-git-commit: 36d12ff07b1cdd1e6c6fee052a335d3f49eee3bb
 <table>
  <thead>
   <tr>
-   <th><p>フォルダー</p></th> 
+   <th><p>Folder</p></th> 
    <th><p>T1</p></th> 
    <th><p>T2</p></th> 
    <th><p>T3</p></th> 
@@ -163,9 +166,12 @@ source-git-commit: 36d12ff07b1cdd1e6c6fee052a335d3f49eee3bb
    * **ステージ 3：**&#x200B;ステージフォルダーにコピーされており、プロセスが開始されています。
    * **ステージ 4：**&#x200B;プロセスが進行中です。
    * **ステージ 5：**&#x200B;結果が返されています。
+
    ファイルがステージ 1 にある場合、ファイルは操作されます。ファイルがステージ 2 または 3 にある場合、再操作用に入力フォルダーに配置されます。
 
-   **注意**:ファイルの操作が複数回発生した場合、データの損失は防げますが、結果が重複する場合があります。*
+   >[!NOTE]
+   >
+   >ファイルの操作が複数回発生した場合は、データ損失は防げますが、結果が重複する場合があります。
 
 ## まとめ {#conclusion}
 
