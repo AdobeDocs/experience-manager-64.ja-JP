@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: c142d7b3-301b-447c-a715-452c905565d1
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: 79dcf6816e1156604c0c9279b727ea436ad1826a
+workflow-type: tm+mt
+source-wordcount: '846'
+ht-degree: 79%
 
 ---
 
@@ -27,9 +30,9 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 ### Apache Sling Authentication Service の設定 {#configure-apache-sling-authentication-service}
 
-1. OSGiで実行しているAEM Forms [*のhttps://*] server [*:port*]/system/console/configMgrに移動するか、
+1. OSGi上で実行されているAEM Formsで、https://[*server*]:[*port*]/system/console/configMgrに移動します。または
 
-   JEE上で実行されているAEM Formsでのhttps://[*server*]:port [**]/lc/system/console/configMgr。
+   JEE上で実行されているAEM Forms上のhttps://[*server*]:[*port*]/lc/system/console/configMgr。
 
 1. **Apache Sling Authentication Service** 設定を探してクリックし、編集モードで開きます。 
 
@@ -43,6 +46,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
       * -/content/xfaforms
       * -/etc/clientlibs/fd/xfaforms
+
    >[!NOTE]
    >
    >Authentication Requirements フィールドで指定した値をコピーアンドペーストしないでください。値に使用されている特殊文字が文字化けするおそれがあります。代わりに、フィールドに指定の値を入力します。
@@ -69,7 +73,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
    * **Server URL**：AEM Forms サーバーの URL です。
    * **HTTP port number**：AEM サーバーポート。デフォルト値は 4502 です。
-   * **** HTML Preview Context:XFAフォームのレンダリング用のプロファイルのパス。 次のデフォルトのプロファイルを使用して、Designerでフォームをプレビューします。 ただし、カスタムプロファイルへのパスを指定することもできます。
+   * **HTMLプレビューコンテキスト：** XFAフォームのレンダリング用プロファイルのパス。 次のデフォルトプロファイルを使用して、Designerでフォームのプレビューを行います。 ただし、カスタムプロファイルへのパスを指定することもできます。
 
       * `/content/xfaforms/profiles/default.html` (OSGi 上の AEM Forms)
       * `/lc/content/xfaforms/profiles/default.html` (JEE 上の AEM Forms)
@@ -77,6 +81,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
       * `/aem/forms` (OSGi 上の AEM Forms)
       * `/lc/forms` (JEE 上の AEM Forms)
+
    **注：***サーバーが起動および実行されていることを確認してください。The HTML preview connects to the CRX server to* generate *a preview.*
 
    ![AEM Forms Designer のオプション ](assets/server_options.png)
@@ -103,7 +108,7 @@ Designer では、サンプル XML データを使用してフォームをプレ
 
 1. **ファイル／フォームのプロパティ**&#x200B;を選択します。
 
-1. 「**プレビュー**」タブをクリックし、「データファイル」ボックスにテストデータファイルのフルパスを入力します。 参照ボタンを使用してファイルを指定することもできます。
+1. 「**プレビュー**」タブをクリックし、「データファイル」ボックスに、テストデータファイルへの完全なパスを入力します。参照ボタンを使用してファイルを指定することもできます。
 
 1. 「**OK**」をクリックします。次回に「**HTML プレビュー**」タブでフォームをプレビューするときには、それぞれのオブジェクトにサンプル XML ファイルからのデータ値が表示されます。
 
@@ -111,4 +116,4 @@ Designer では、サンプル XML データを使用してフォームをプレ
 
 AEM Forms では、リポジトリにあるフォームやドキュメントをプレビューすることができます。プレビューを使用すると、エンドユーザーによって使用される際にどのように見え、作動するのかを明確に理解できます。
 
-[**サポートへのお問い合わせ&#x200B;**](https://www.adobe.com/account/sign-in.supportportal.html)
+[**サポートへのお問い合わせ&#x200B;**](https://www.adobe.com/jp/account/sign-in.supportportal.html)
