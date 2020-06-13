@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+workflow-type: tm+mt
+source-wordcount: '327'
+ht-degree: 48%
 
 ---
 
@@ -44,7 +47,7 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ## タスクリストタスクアクションポップアップ {#task-list-task-action-popup}
 
-1. Create a task list action popup, see [Building AEM Forms workspace code](/help/forms/using/introduction-customizing-html-workspace.md#main-pars-heading-3). これには、Dev パッケージを使用する必要があります。
+1. Create a task list action popup, see [Building AEM Forms workspace code](introduction-customizing-html-workspace.md#building-html-workspace-code). これには、Dev パッケージを使用する必要があります。
 
 1. `/libs/ws/js/runtime/templates/task.html` を `/apps/ws/js/runtime/templates/task.html` にコピーします。
 
@@ -169,6 +172,6 @@ To
 1. Open `/apps/ws/js/registry.js` for editing and look for the following text :\
    `"text!/lc/libs/ws/js/runtime/templates/taskdetails.html"`
 
-1. テキストを次の値に置き換えます。\
+1. テキストを次の文字列に置き換えます。\
    `"text!/lc/apps/ws/js/runtime/templates/taskdetails.html"`
 
