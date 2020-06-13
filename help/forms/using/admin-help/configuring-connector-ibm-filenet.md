@@ -10,7 +10,10 @@ geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: be4994de-12f8-436e-926a-49a6783b006e
 translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 94%
 
 ---
 
@@ -78,14 +81,15 @@ FileNet と共に使用するリポジトリサービスプロバイダーを設
 
 以下のオプションが利用できます。
 
-**** 現在のリポジトリプロバイダー名：現在のリポジトリサービスプロバイダーの名前
+**現在のリポジトリプロバイダー名：** 現在のリポジトリサービスプロバイダーの名前
 
-**** IBM fileNetリポジトリプロバイダー：FileNetリポジトリプロバイダーをリポジトリのプロバイダーにします。 このオプションは非推奨です。
+**IBM FileNetリポジトリプロバイダー：** FileNetリポジトリプロバイダーをリポジトリのプロバイダーにします。 このオプションは非推奨です。
 
-**** リポジトリプロバイダー：ネイティブリポジトリプロバイダーをリポジトリのプロバイダーにします。
+**リポジトリプロバイダー：** ネイティブのリポジトリプロバイダーをリポジトリのプロバイダーにします。
 
-***メモ&#x200B;**：リストに表示された以外のリポジトリサービスプロバイダーを選択するには、アプリケーションおよびサービスで「RepositoryService」を設定します<!-- Fix broken link(See Managing Services) -->*
+>[!NOTE]
+>
+>リストに表示された以外のリポジトリサービスプロバイダーを選択するには、アプリケーションおよびサービスで「RepositoryService」を設定します<!-- Fix broken link(See Managing Services) -->
 
 1. 管理コンソールで、サービス／Connector for IBM FileNet をクリックします。
 1. 「リポジトリサービスプロバイダー」領域で、代替リポジトリサービスプロバイダーを選択し、「保存」をクリックします。
-
