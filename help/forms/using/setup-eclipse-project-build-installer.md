@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: f5d6d9bd-4f36-4a4f-8008-15fb853a9219
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: f234d368163f4260563d69230a2cbda37b6d315a
+workflow-type: tm+mt
+source-wordcount: '744'
+ht-degree: 62%
 
 ---
 
@@ -18,9 +21,9 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 AEM Forms Android アプリケーションを構築するには、以下の手順を、記載されている順序で実行します。
 
-1. [AEM Forms アプリケーションのソースコードパッケージのダウンロード](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-277929160)
-1. [環境変数の設定](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-111803610)
-1. [標準的な AEM Forms アプリケーションの構築](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-heading-0)
+1. [AEM Forms アプリケーションのソースコードパッケージのダウンロード](#download-android-zip)
+1. [環境変数の設定](#set-environment-variable-android)
+1. [標準的な AEM Forms アプリケーションの構築](#set-up-the-xcode-project)
 
 ## AEM Forms アプリケーションのソースコードパッケージのダウンロード {#download-android-zip}
 
@@ -28,7 +31,7 @@ AEM Forms App Source Code Package refers to the `adobe-lc-mobileworkspace-src-<v
 
 Perform the following steps to download the `adobe-aemfd-forms-app-src-pkg-<version>.zip` file:
 
-1. [AEMサーバーの作成者インスタンスに管理者としてログインし](http://localhost:4502/) 、パッケージ共有を [開きます](http://localhost:4502/crx/packageshare)。 パッケージ共有にログインするには、Adobe ID が必要です。
+1. [AEMサーバーのオーサーインスタンスに管理者としてログインし](http://localhost:4502/) 、 [パッケージ共有を開きます](http://localhost:4502/crx/packageshare)。 パッケージ共有にログインするには、Adobe ID が必要です。
 1. In [AEM package share](http://localhost:4502/crx/packageshare/login.html), search `adobe-aemfd-forms-app-src-pkg-<version>.zip`, click the package applicable to your operating system, and click **Download**. ライセンス使用許諾契約書を読んでから同意し、「**OK**」をクリックします。ダウンロードが開始します。ダウンロードが完了したら、パッケージの横に「**ダウンロード済み**」というテキストが表示されます。
 1. ダウンロードが完了したら、「**ダウンロード済み**」をクリックします。パッケージマネージャーに切り替わります。In the package manager, search the downloaded package, and click **Install**.
 1. To download the source-code archive, open **https://&lt;server>:&lt;port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-&lt;version>.zip** in your browser. Androidアプリの.zipファイルがデバイスにダウンロードされます。
@@ -50,8 +53,8 @@ AEM Forms アプリケーションの構築プロセスを開始する前に、�
 
 adobe-lc-mobileworkspace-src-&lt;version>.zipファイルをローカルファイルシステムに保存し、環境変数を設定したら、次のいずれかのオプションを使用して、標準のAEM Forms Androidアプリを作成します。
 
-* [Android Studio を使用した AEM Forms アプリケーションの構築](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-1347434739)
-* [Android Studio を使用した .apk ファイルの生成](/help/forms/using/setup-eclipse-project-build-installer.md#main-pars-header-0)
+* [Android Studio を使用した AEM Forms アプリケーションの構築](#using-android-studio)
+* [Android Studio を使用した .apk ファイルの生成](#generate-apk-android-studio)
 
 ### Android Studio を使用した AEM Forms アプリケーションの構築 {#using-android-studio}
 
@@ -66,13 +69,14 @@ Android Studio を使用して AEM Forms アプリケーションを構築する
    ![android_folder_studio](assets/android_folder_studio.png)
 
 1. Select **android** from the left pane and click **Run** > **Run &#39;android&#39;**.
-1. Select Deployment Devicesダイアログボックスの「Connected Devices」セクションからAndroidターゲットを選択し、「OK」をクリックします。
+1. デプロイメントターゲットを選択ダイアログボックスの「接続されているデバイス」セクションでAndroidデバイスを選択し、「OK」をクリックします。
 
     開発環境を正しく構築すると、アプリケーションをカスタマイズできるようになります。アプリケーションをカスタマイズする場合は、次の記事を参照してください。
 
    * [ブランディングのカスタマイズ](/help/forms/using/branding-customization.md)
    * [テーマのカスタマイズ](/help/forms/using/theme-customization.md)
    * [ジェスチャーのカスタマイズ](/help/forms/using/gesture-customization.md)
+
    アプリケーションを適切にカスタマイズした後、.apk ファイルを生成して配布できます。
 
 ### Android Studio を使用した .apk ファイルの生成 {#generate-apk-android-studio}
