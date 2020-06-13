@@ -1,24 +1,27 @@
 ---
-title: 「はじめに」プロセスレポート
-seo-title: 「はじめに」プロセスレポート
-description: JEE上のAEM Formsのプロセスの使用を開始するために必要な手順のレポート
-seo-description: JEE上のAEM Formsのプロセスの使用を開始するために必要な手順のレポート
+title: プロセスレポートの概要
+seo-title: プロセスレポートの概要
+description: JEE上のAEM Forms Processレポートを開始するために必要な手順
+seo-description: JEE上のAEM Forms Processレポートを開始するために必要な手順
 uuid: 86ba17da-57e5-4e7a-a864-583d8c0f830e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: process-reporting
 discoiquuid: a0f81621-6ccd-46e2-85d7-2eb4ee3cdb91
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: f6b6d8559bb0b899a78afd6410eb316626ecaa18
+workflow-type: tm+mt
+source-wordcount: '1737'
+ht-degree: 3%
 
 ---
 
 
 # Getting Started with Process Reporting {#getting-started-with-process-reporting}
 
-プロセスレポートを使用すると、AEM Formsユーザーは、現在AEM Forms実装で定義されているAEM Formsプロセスに関する情報をクエリできます。 ただし、プロセスレポートはAEM Formsリポジトリからデータに直接アクセスすることはありません。 データは、最初に（ProcessDataPublisherおよびProcessDataStorageサービスによって）スケジュールに基づい&#x200B;*てプロセスレポートリポジトリに発*&#x200B;行されます。 次に、プロセスレポートのレポートとクエリは、リポジトリに発行されたプロセスレポートデータから生成されます。 プロセスレポートは、Forms Workflowモジュールの一部としてインストールされます。
+プロセスのレポートにより、AEM Formsユーザーは、AEM Forms実装で現在定義されているAEM Formsプロセスに関するクエリを実行できます。 ただし、プロセスレポートはAEM Formsリポジトリから直接データにアクセスすることはできません。 データは、最初に、ProcessDataPublisherおよびProcessDataStorage *サービスによってスケジュール設定された状態でプロセスレポートリポジトリ*&#x200B;に発行されます。 次に、プロセスレポート内のレポートとクエリは、リポジトリに発行されたプロセスレポートデータから生成されます。 プロセスレポートは、Forms Workflowモジュールの一部としてインストールされます。
 
-この記事では、AEM Formsデータをプロセスリポジトリに発行する手順について詳しく説明します。レポート その後、プロセスレポートを使用してレポートとクエリを実行 この記事では、プロセスレポートサービスの設定に使用できるオプションも扱います。
+この記事では、AEM Formsデータをプロセスレポートリポジトリに発行できるようにする手順について詳しく説明します。 その後、プロセスレポートを使用してレポートやクエリを実行できます。 この記事では、プロセスレポートサービスを設定するために使用できるオプションについても説明します。
 
 ## プロセスレポートの前提条件 {#process-reporting-pre-requisites}
 
@@ -26,21 +29,21 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 現在Forms Workflowを使用している場合、AEM Formsデータベースに大量のデータが含まれている可能性があります
 
-プロセスレポート発行サービスは、データベースで現在使用可能なすべてのAEM Formsデータを発行します。 つまり、データベースにレポートやクエリを実行したくないレガシーデータが含まれている場合、レポートの必要がなくても、そのデータはすべてリポジトリに発行されます。 サービスを実行してデータをプロセスレポートリポジトリに発行する前に、このデータを削除することをお勧めします。 これにより、Publisherサービスと、データをレポートするためにクエリするサービスの両方のパフォーマンスが向上します。
+プロセスレポート発行サービスは、データベースで現在使用可能なすべてのAEM Formsデータを発行します。 つまり、レポートやクエリを実行したくないレガシーデータがデータベースに含まれている場合、レポートの必要がなくても、そのデータはすべてリポジトリに発行されます。 サービスを実行してデータをプロセスレポートリポジトリに発行する前に、このデータを削除することをお勧めします。 これにより、Publisherサービスと、レポート用にデータをクエリするサービスの両方のパフォーマンスが向上します。
 
-AEM Formsプロセスデータの削除について詳しくは、「プロセスデータの削 [除」を参照してくださ](https://help.adobe.com/en_US/livecycle/11.0/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7cb2.2.html)い。
+AEM Formsプロセスデータの削除について詳しくは、「プロセスデータの [削除](https://help.adobe.com/en_US/livecycle/11.0/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7cb2.2.html)」を参照してください。
 
 >[!NOTE]
 >
->パージユーティリティのヒントとテクニックについては、プロセスとジョブの削除に関するAdobe Developer Connectionの記 [事を参照してください](https://www.adobe.com/content/dam/Adobe/en/devnet/livecycle/pdfs/purging_processes_jobs.pdf)。
+>パージユーティリティのヒントとテクニックについては、プロセスとジョブの [削除に関するAdobe Developer Connectionの記事を参照してください](https://www.adobe.com/content/dam/Adobe/en/devnet/livecycle/pdfs/purging_processes_jobs.pdf)。
 
 ## プロセスレポートサービスの設定 {#configuring-process-reporting-services}
 
 ### プロセスデータの公開のスケジュール {#schedule-process-data-publishing}
 
-プロセスレポートサービスは、AEM Formsデータベースのデータをスケジュールに基づいてプロセスレポートリポジトリに発行します。
+プロセスレポートサービスは、AEM Formsデータベースからプロセスレポートリポジトリにデータをスケジュール設定して発行します。
 
-この操作はリソースを大量に消費し、AEM Formsサーバーのパフォーマンスに影響を与える可能性があります。 このスケジュールは、AEM Formsサーバーの外部でビジータイムスロットを使用する場合に行うことをお勧めします。
+この操作はリソースを大量に消費する可能性があり、AEM Formsサーバーのパフォーマンスに影響を与える可能性があります。 AEM Formsサーバーがビジー状態のタイムスロットの外部でスケジュールを設定することをお勧めします。
 
 デフォルトでは、データの公開は毎日午前2時に実行されるようにスケジュールされています。
 
@@ -48,21 +51,25 @@ AEM Formsプロセスデータの削除について詳しくは、「プロセ�
 
 >[!NOTE]
 >
->AEM Forms実装をクラスターで実行する場合は、クラスターの各ノードで次の手順を実行します。
+>AEM Forms実装をクラスター上で実行する場合は、クラスターの各ノードで次の手順を実行します。
+
+#### JBoss Application Server {#jboss-application-server}
 
 1. AEM Formsサーバーインスタンスを停止します。
-   * （Windowsの場合）ファイルをエデ `[*JBoss root*]/bin/run.conf.bat` ィターで開きます。
-   * （Linux、AIXおよびSolarisの場合）エディタ `[*JBoss root*]/bin/run.conf.sh` ー内のファイル。
+   * （Windowsの場合）エディターで `[*JBoss root*]/bin/run.conf.bat` ファイルを開きます。
+   * （Linux、AIXおよびSolarisの場合） `[*JBoss root*]/bin/run.conf.sh` ファイルをエディターで開きます。
 
-1. JVM追加引数 `-Dreporting.publisher.cron = <expression>.`
+1. 追加JVM引数 `-Dreporting.publisher.cron = <expression>.`
 
-   例：次のcron式を使用すると、プロセスレポートは5時間ごとにAEM Formsデータをプロセスレポートリポジトリに発行します。
+   例： 次のcron式を実行すると、プロセスレポートは5時間ごとにAEM Formsデータをプロセスレポートリポジトリに発行します。
 
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
 1. Save and close the `run.conf.bat` file.
 
 1. AEM Formsサーバーインスタンスを再起動します。
+
+#### WebSphere Application Server {#websphere-application-server}
 
 1. AEM Formsサーバーインスタンスを停止します。
 1. Log in to the WebSphere Administrative Console. In the navigation tree, click **Servers** >  **Application servers** and then, in the right pane, click the server name.
@@ -73,7 +80,7 @@ AEM Formsプロセスデータの削除について詳しくは、「プロセ�
 
    In the Generic JVM arguments box, add the argument `-Dreporting.publisher.cron = <expression>.`
 
-   **例**:次のcron式を使用すると、プロセスレポートは5時間ごとにAEM Formsデータをプロセスレポートリポジトリに発行します。
+   **例**: 次のcron式を実行すると、プロセスレポートは5時間ごとにAEM Formsデータをプロセスレポートリポジトリに発行します。
 
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
@@ -81,8 +88,10 @@ AEM Formsプロセスデータの削除について詳しくは、「プロセ�
 
 1. AEM Formsサーバーインスタンスを再起動します。
 
+#### WebLogic Application Server {#weblogic-application-server}
+
 1. AEM Formsサーバーインスタンスを停止します。
-1. WebLogic管理コンソールにログインします。 WebLogic管理コンソールのデフォルトのアドレスはで `https://[hostname]:[port]/console`す。
+1. WebLogic管理コンソールにログインします。 WebLogic管理コンソールのデフォルトアドレスはです `https://[hostname]:[port]/console`。
 
 1. Change Center で、「**Lock &amp; Edit**」をクリックします。
 
@@ -90,9 +99,9 @@ AEM Formsプロセスデータの削除について詳しくは、「プロセ�
 
 1. 次の画面で、「**Configuration**」タブ／「**Server Start**」タブをクリックします。
 
-1. 「Arguments」ボックスにJVM引数を追加します `-Dreporting.publisher.cron = <expression>`。
+1. 「Arguments」ボックスに、JVM引数を追加し `-Dreporting.publisher.cron = <expression>`ます。
 
-   **例**:次のcron式を使用すると、プロセスレポートは5時間ごとにAEM Formsデータをプロセスレポートリポジトリに発行します。
+   **例**: 次のcron式を実行すると、プロセスレポートは5時間ごとにAEM Formsデータをプロセスレポートリポジトリに発行します。
 
    `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
@@ -104,22 +113,22 @@ AEM Formsプロセスデータの削除について詳しくは、「プロセ�
 
 ### ProcessDataStorageサービス {#processdatastorage-service}
 
-ProcessDataStorageProviderサービスは、ProcessDataPublisherサービスからプロセスデータを受け取り、そのデータをプロセスレポートリポジトリに保存します。
+ProcessDataStorageProviderサービスは、ProcessDataPublisherサービスからプロセスデータを受け取り、データをプロセスレポートリポジトリに保存します。
 
-各公開サイクルで、データは事前定義されたルートフォルダのサブフォルダに保存されます。
+公開サイクルごとに、データは事前定義されたルートフォルダーのサブフォルダーに保存されます。
 
-管理コンソールを使用して、ルートを設定できます(デフォル&#x200B;**ト**: `/content/reporting/pm`)場所とサブフォルダ(デフォ&#x200B;**ルト**: `/yyyy/mm/dd/hh/mi/ss`)プロセスデータが保存される階層形式。
+管理コンソールを使用してルートを設定できます(**デフォルト**: `/content/reporting/pm`)の場所とサブフォルダ(**デフォルト**: `/yyyy/mm/dd/hh/mi/ss`)階層形式。プロセスデータが格納されます。
 
-#### プロセスリポジトリの場所をレポートするには {#to-configure-the-process-reporting-repository-locations}
+#### プロセスレポートリポジトリの場所を設定するには {#to-configure-the-process-reporting-repository-locations}
 
-1. 管理者の資格情報を使 **用して** 、管理コンソールにログインします。 The default URL of Administration Console is `https://[server]:[port]/adminui`
-1. ホーム/サービス/ **アプリケーション** / **サービス** /サービス **/サービスの管理とオープン・ストレ********** ージ・ストレージ・プロバイダ・サービスに移動します。
+1. 管理者の資格情報を使用して **管理コンソール** にログインします。 The default URL of Administration Console is `https://[server]:[port]/adminui`
+1. ホー **ム** / **サービス** /アプリケーションおよびサービス **/サービス管理/サービス管理を開き、ストレージ・プロセスDataProvider********** Serviceを開きます。
 
-   ![プロセスデータストレージサービス](assets/process-data-storage-service.png)
+   ![process-data-ストレージサービス](assets/process-data-storage-service.png)
 
    **RootFolder**
 
-   プロセスデータが保存されるCRXのレポート。
+   レポートのためにプロセスデータが格納されるCRXの場所です。
 
    `Default`: `/content/reporting/pm`
 
@@ -133,15 +142,15 @@ ProcessDataStorageProviderサービスは、ProcessDataPublisherサービスか�
 
 ### ReportConfigurationサービス {#reportconfiguration-service}
 
-ReportConfigurationサービスは、プロセスレポートがプロセス設定サービスをレポートするために使用します。
+ReportConfigurationサービスは、プロセスレポートがプロセスレポートクエリサービスを設定する際に使用します。
 
 #### To configure the ReportingConfiguration service {#to-configure-the-reportingconfiguration-service}
 
-1. CRX管理者の資格情 **報を使用して** 、Configuration Managerにログインします。 Configuration ManagerのデフォルトのURLは、 `https://[*server*]:[*port*]/lc/system/console/configMgr`
-1. ReportingConfigurationサービスを **開きます** 。
+1. CRX管理者の資格情報を使用して **Configuration Manager** にログインします。 Configuration ManagerのデフォルトのURLは `https://[*server*]:[*port*]/lc/system/console/configMgr`
+1. ReportingConfiguration **** サービスを開きます。
 1. **レコード数**
 
-   リポジトリでクエリを実行すると、結果に大量のレコードが含まれる可能性があります。 結果セットが大きい場合、クエリの実行でサーバーリソースが消費されます。
+   リポジトリでクエリを実行すると、結果に大量のレコードが含まれる可能性があります。 結果セットのサイズが大きい場合、クエリの実行によってサーバーリソースが消費される可能性があります。
 
    大きな結果セットを処理するために、ReportConfigurationサービスはクエリ処理をレコードのバッチに分割します。 これにより、システムの負荷が軽減されます。
 
@@ -149,37 +158,37 @@ ReportConfigurationサービスは、プロセスレポートがプロセス設�
 
    **CRXストレージパス**
 
-   プロセスデータを保存するCRXのレポート。
+   レポートのためにプロセスデータが格納されるCRX上の場所。
 
    `Default`: `/content/reporting/pm`
 
    >[!NOTE]
    >
-   >これは、ProcessDataStorage設定オプションの **Root Folderで指定した場所と同じです**。
+   >これは、ProcessDataStorage設定オプションの **ルートフォルダーで指定した場所と同じです**。
    >
-   >ProcessDataStorage設定で「Root Folder」オプションを更新する場合は、ReportConfigurationサービスのCRXストレージパスの場所を更新する必要があります。
+   >ProcessDataStorage設定の「Root Folder」オプションを更新する場合は、ReportConfigurationサービスのCRXストレージパスの場所を更新する必要があります。
 
-1. 「 **Save** 」をクリッ **クし、CQ Configuration Managerを閉じます**。
+1. 「 **保存** 」をクリックし、 **CQ Configuration Managerを閉じます**。
 
 ### ProcessDataPublisherサービス {#processdatapublisher-service}
 
-ProcessDataPublisherサービスは、AEM Formsデータベースからプロセスデータを読み込み、データをProcessDataStorageProviderサービスに発行してストレージします。
+ProcessDataPublisherサービスは、AEM Formsデータベースからプロセスデータをインポートし、ストレージのためにデータをProcessDataStorageProviderサービスに発行します。
 
-#### ProcessDataPublisherサービスを設定するには {#to-configure-processdatapublisher-service-nbsp}
+#### ProcessDataPublisherサービスを設定するには   {#to-configure-processdatapublisher-service-nbsp}
 
-1. 管理者の資格情報を使 **用して** 、管理コンソールにログインします。
+1. 管理者の資格情報を使用して **管理コンソール** にログインします。
 
    デフォルトの URL は `https://[server]:port]/adminui/` です。
 
-1. ホーム/サービ **ス** /アプリケーション **/サービス** /サービスに移動し、デ ************ ータ・パブリッシャ・データ・サービスに移動します。
+1. 「 **ホーム****」>「** サービス **」>「アプリケーションおよびサービス」>「** サービス管理」>「Data Publisherサービス」にナビゲートし、「Data Publisherサービス」を開きます ******** 。
 
 ![processdatapublisherservice-1](assets/processdatapublisherservice-1.png)
 
 **データの発行**
 
-このオプションを有効にすると、開始パブリッシングプロセスデータが表示されます。 デフォルトでは、このオプションは無効になっています。
+開始発行プロセスデータに対してこのオプションを有効にします。 デフォルトでは、このオプションは無効になっています。
 
-「プロセスレポート」は、プロセスレポートコンポーネントに関連するすべての設定が適切に設定されている場合にのみ有効にします。
+プロセスレポートコンポーネントに関連するすべての設定が適切に設定されている場合にのみ、プロセスレポートを有効にします。
 
 または、不要になったプロセスデータの公開を無効にする場合は、このオプションを使用します。
 
@@ -187,11 +196,11 @@ ProcessDataPublisherサービスは、AEM Formsデータベースからプロセ
 
 **バッチ間隔（秒）**
 
-ProcessDataPublisherサービスが実行されるたびに、サービスは、最後に実行されたサービスからの時間をBatch Intervalで最初に分割します。 次に、AEM Formsデータの各間隔を別々に処理します。
+ProcessDataPublisherサービスが実行されるたびに、サービスが最後に実行された後の時間をBatch Intervalで分割します。 次に、サービスはAEM Formsデータの各間隔を個別に処理します。
 
-これは、サイクル内の各実行（バッチ）の間に、パブリッシャが処理するデータのサイズを制御するのに役立ちます。
+これは、サイクル内の各実行（バッチ）中に、発行者が処理するデータのサイズを制御するのに役立ちます。
 
-例えば、発行者が毎日実行する場合、1日分のデータ全体を1回の実行で処理する代わりに、デフォルトでは、各処理を24バッチの1時間に分割します。
+例えば、発行者が毎日実行する場合、1回の実行で1日分のデータ全体を処理する代わりに、デフォルトでは、1日に1時間ずつ24個のバッチに分割されます。
 
 `Default`: `3600`
 
@@ -199,9 +208,9 @@ ProcessDataPublisherサービスが実行されるたびに、サービスは、
 
 **ロックタイムアウト（秒）**
 
-パブリッシャ・サービスは、開始がデータを処理する際にロックを取得するので、パブリッシャの複数のインスタンスが同時に開始を実行してデータを処理することはありません。
+パブリッシャーサービスは、開始がデータを処理する際にロックを取得するので、パブリッシャーの複数のインスタンスが開始を実行して同時にデータを処理することがないようにします。
 
-ロックを取得したパブリッシャーサービスが、Lock Timeout値で定義された秒数の間アイドル状態の場合、そのロックが解放され、他のパブリッシャーサービスインスタンスの処理を続行できます。
+ロックを取得したパブリッシャーサービスが、ロックのタイムアウト値で定義された秒数だけアイドル状態の場合、そのロックは解放され、他のパブリッシャーサービスインスタンスの処理を続行できます。
 
 `Default`: `3600`
 
@@ -209,29 +218,29 @@ ProcessDataPublisherサービスが実行されるたびに、サービスは、
 
 **データの発行元**
 
-AEM Forms環境には、データが設定された時点の環境が含まれます。
+AEM Forms環境には、環境が設定された時点のデータが含まれます。
 
 デフォルトでは、ProcessDataPublisherサービスはAEM Formsデータベースからすべてのデータをインポートします。
 
-レポートのニーズに応じて、特定の日時以降にレポートやクエリをデータで実行する場合は、日時を指定することをお勧めします。 その後、公開サービスはその日付以降に公開されます。
+レポートのニーズに応じて、特定の日時以降にデータのレポートやクエリを実行する場合は、日時を指定することをお勧めします。 その後、発行サービスはその時刻以降の日付を発行します。
 
 `Default`: `01-01-1970 00:00:00`
 
 `Format`: `dd-MM-yyyy HH:mm:ss`
 
-## プロセスレポートのユーザーインターフェイス {#accessing-the-process-reporting-user-interface}
+## プロセスレポートユーザーインターフェイスへのアクセス {#accessing-the-process-reporting-user-interface}
 
-プロセスユーザーのユーザーインターフェイスは、レポートベースのものです。
+プロセスレポートのユーザーインターフェイスはブラウザーベースです。
 
-プロセスレポートの設定後、AEM Formsのインストール先の次の場所で、プロセスレポートの操作を開始できます。
+プロセスレポートを設定した後、AEM Formsインストールの次の場所でプロセスレポートの操作に開始を設定できます。
 
 `https://<server>:<port>/lc/pr`
 
-### 「Log in to Process」レポート {#log-in-to-process-reporting}
+### プロセスレポートへのログイン {#log-in-to-process-reporting}
 
-プロセスレポートURL(https://&lt;server>:&lt;port>/lc/pr)に移動すると、ログイン画面が表示されます。
+プロセスレポートのURL(https://&lt;server>:&lt;port>/lc/pr)に移動すると、ログイン画面が表示されます。
 
-資格情報を指定して、プロセスレポートモジュールにログインします。
+資格情報を指定してプロセスレポートモジュールにログインします。
 
 >[!NOTE]
 >
@@ -239,48 +248,48 @@ AEM Forms環境には、データが設定された時点の環境が含まれ�
 >
 >`PERM_PROCESS_REPORTING_USER`
 
-![捕獲](assets/capture.png)
+![capture](assets/capture.png)
 
-プロセスレポートにログインすると、ホ **[!UICONTROL ーム]** 画面が表示されます。
+プロセスレポートにログインすると、 **[!UICONTROL ホーム]** 画面が表示されます。
 
 ### プロセスレポートのホーム画面 {#process-reporting-home-screen}
 
 ![process-レポート-home-screen](assets/process-reporting-home-screen.png)
 
-**プロセスレポートツリー表示:** ホーム画面の左側のツリー表示には、プロセスモジュールモジュールの項目が含まれています。レポート
+**プロセスレポートツリー表示:** ホーム画面の左側のツリー表示には、プロセスレポートモジュールの項目が含まれています。
 
 ツリー表示は、次の最上位レベルの項目で構成されます。
 
 **レポート：** この項目には、プロセスレポートに付属のあらかじめ用意されているレポートが含まれています。
 
-事前定義済みのレポートについて詳しくは、「プロセス [レポートの事前定義済みレポート](pre-defined-reports-in-process-reporting.md)」を参照。
+事前定義済みのレポートについて詳しくは、「 [プロセスレポートでの事前定義済みのレポート](pre-defined-reports-in-process-reporting.md)」を参照してください。
 
-**アドホッククエリ:** この項目には、プロセスとオプションのフィルターベースの検索を実行するためのオプションが含まれています。タスク
+**アドホッククエリ:** この項目には、プロセスおよびタスクに対してフィルターベースの検索を実行するためのオプションが含まれます。
 
-アドホッククエリについて詳しくは、プロセス [レポートのアドホッククエリを参照してください](adhoc-queries-in-process-reporting.md)。
+アドホッククエリについて詳しくは、プロセスレポートの [アドホッククエリを参照してください](adhoc-queries-in-process-reporting.md)。
 
-**カスタム：** 「カスタム」ノードには、作成したカスタムレポートが表示されます。
+**カスタム：** カスタムノードには、作成したカスタムレポートが表示されます。
 
-カスタムレポートの作成と表示の手順については、「プロセスレポートのカス [タムレポート」を参照してくださ](/help/forms/using/process-reporting/process-reporting-custom-reports.md)い。
+カスタムレポートを作成して表示する手順については、「プロセスレポートでの [カスタムレポート](/help/forms/using/process-reporting/process-reporting-custom-reports.md)」を参照してください。
 
 **プロセスレポートのタイトルバー：** プロセスレポートのタイトルバーには、ユーザーインターフェイスで作業する際に使用できる一般的なオプションがいくつか含まれています。
 
-**プロセスレポートのタイトル：** プロセスレポートのタイトルがタイトルバーの左隅に表示されます。
+**プロセスレポートのタイトル：** プロセスレポートのタイトルは、タイトルバーの左隅に表示されます。
 
-タイトルをクリックすると、ホーム画面に戻ります。
+タイトルをクリックすると、いつでもホーム画面に戻ります。
 
 **最終更新時刻：** プロセスデータは、スケジュールに基づいてAEM Formsデータベースからプロセスレポートリポジトリに発行されます。
 
-「最終更新時刻」には、データ更新がプロセスレポートリポジトリにプッシュされた最終日時が表示されます。
+「Last Update Time」には、データ更新がプロセスレポートリポジトリにプッシュされた最後の日時が表示されます。
 
-データ公開サービスとこのサービスのスケジュール方法について詳しくは、「プロセスレポート [— はじめに](/help/forms/using/process-reporting/install-start-process-reporting.md#p-schedule-process-data-publishing-p) 」の「プロセスデータの公開のスケジュール」を参照してください。
+データ発行サービスについて詳しくは、プロセスレポートの「プロセスデータの発行の [スケジュール](/help/forms/using/process-reporting/install-start-process-reporting.md#p-schedule-process-data-publishing-p) 」を参照してください。
 
 **プロセスレポートユーザー：** ログインしたユーザー名は、最終更新時刻の右側に表示されます。
 
-**プロセスレポートのタイトルバーのドロップダウンリスト:** プロセスリストのタイトルバーの右隅にあるドロップダウンレポートには、次のオプションが含まれます。
+**プロセスレポートのタイトルバードロップダウンリスト:** プロセスレポートのタイトルバーの右隅にあるドロップダウンリストには、次のオプションが含まれています。
 
-* **[!UICONTROL 同期]**:埋め込みのプロセスレポートリポジトリをAEM Formsデータベースと同期します。
-* **[!UICONTROL ヘルプ]**:表示プロセスのレポート。
-* **[!UICONTROL ログアウト]**:「Log out of Process」レポート
+* **[!UICONTROL 同期]**: 埋め込まれたプロセスレポートリポジトリをAEM Formsデータベースと同期します。
+* **[!UICONTROL ヘルプ]**: プロセスレポートのヘルプドキュメントの表示
+* **[!UICONTROL ログアウト]**: プロセスレポートからのログアウト
 
 
