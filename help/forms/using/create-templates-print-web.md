@@ -8,7 +8,10 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 40c0a17b-6894-44cc-b1f7-490913061532
 translation-type: tm+mt
-source-git-commit: 813675c7cd770008e8c986f87f37f36b0b193dd2
+source-git-commit: 8922b6cfecfbb592e4f073254be68b24add6c5c7
+workflow-type: tm+mt
+source-wordcount: '1824'
+ht-degree: 65%
 
 ---
 
@@ -46,12 +49,12 @@ Web チャネル用のテンプレートは AEM で作成されます。テン�
 Based on the [use case](/help/forms/using/create-your-first-interactive-communication.md) and [anatomy](/help/forms/using/planning-interactive-communications.md), create the following subforms in the XDP template:
 
 * 請求明細：ドキュメントフラグメントが含まれます
-* 顧客の詳細：ドキュメントフラグメント
-* 請求書要約：ドキュメントフラグメント
-* 概要：ドキュメントフラグメント（Chargesサブフォーム）とグラフ（Chartsサブフォーム）を含みます
-* 通話の項目別：テーブルを含む（レイアウトフラグメント）
-* 今すぐ支払う：画像を含む
-* 付加価値サービス：画像を含む
+* 顧客の詳細： ドキュメントフラグメントを含む
+* 請求書要約： ドキュメントフラグメントを含む
+* サマリ： ドキュメントフラグメント（Chargesサブフォーム）とグラフ（Chartsサブフォーム）を含みます
+* 呼び出しの項目別： テーブルを含む（レイアウトフラグメント）
+* 今すぐ支払う： 画像を含む
+* 付加価値サービス： 画像を含む
 
 ![create_print_template](assets/create_print_template.gif)
 
@@ -70,12 +73,14 @@ XDP ファイルを Forms サーバーにアップロード後、これらのサ
 
    1. Specify **BillDetails** in the **Name** field.
    1. 「**データ連結**」ドロップダウンリストから「**データ連結なし**」を選択します。
+
    ![forms_designer_subform](assets/forms_designer_subform.png)
 
 1. Similarly, select the root subform, select the **Subform** tab, and select **Flowed** from the **Content** drop-down list. 「**連結**」タブで、次の手順を実行します。
 
    1. Specify **TelecaBill** in the **Name** field.
    1. 「**データ連結**」ドロップダウンリストから「**データ連結なし**」を選択します。
+
    ![root_subform_print_template](assets/root_subform_print_template.png)
 
 1. 手順 2～5 を繰り返し、次のサブフォームを作成します。
@@ -90,6 +95,7 @@ XDP ファイルを Forms サーバーにアップロード後、これらのサ
    * ItemisedCalls
    * PayNow
    * ValueAddedServices
+
    時間を節約するには、既存のサブフォームをコピー＆ペーストして新しいサブフォームを作成することもできます。
 
    To shift the **Charts** subform to the right of the Charges subform, select the **Charts** subform from the left pane, select the **Layout** tab, and specify a value for **AnchorX** field. 指定する値は、**料金**&#x200B;サブフォームの「**幅**」フィールドの値よりも大きい値である必要があります。Select the **Charges** subform and select the **Layout** tab to view the value of the **Width** field.
@@ -134,7 +140,7 @@ Forms Designer を使用して XDP テンプレートの作成が終わったら
 
    同様に、**Cell2**、**Cell3**、**Cell4**&#x200B;および&#x200B;**Cell5** の名前をそれぞれ&#x200B;**時刻**、**番号**、**時間**&#x200B;および&#x200B;**料金**&#x200B;に変更します。
 
-1. **Designer表示の「Header」テキストフィールドをクリックし、** Time **、Number**、 **Duration、Charges Charges Cloudに名前**********&#x200B;を変更します。
+1. **Designer表示の「Header」テキストフィールドをクリックし、** Time **、Number** Duration、Duration、Charges Charges **Charges********** Headerという名前に変更します。
 
    ![layout_fragment_print](assets/layout_fragment_print.png)
 
@@ -153,6 +159,7 @@ Forms Designer を使用して XDP テンプレートの作成が終わったら
    1. Navigate to the location to save the file and specify the name as **table_lf**.
    1. 「**ファイルの種類**」ドロップダウンリストから&#x200B;**.xdp** を選択します。
    1. 「**保存**」をタップします。
+
    Forms Designer を使用してレイアウトフラグメント用 XDP テンプレートの作成が終わったら、AEM Forms サーバーに[アップロード](/help/forms/using/create-templates-print-web.md#upload-xdp-template-to-the-aem-forms-server)する必要があります。これにより、作成されたテンプレートは、レイアウトフラグメントを作成する際に使用できるようになります。
 
 ## Web チャネル用テンプレートの作成 {#create-template-for-web-channel}
@@ -170,7 +177,7 @@ Web チャネルテンプレートを作成するには、作成したテンプ�
 
 編集可能なテンプレート用のフォルダーを作成するには、次の手順を実行します。
 
-1. Tap **Tools** ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/icons/Tools.png) > **Configuration Browser**.
+1. **ツール** / ![ツール](assets/tools-icon.svg) / **設定ブラウザーをタップします**。
 1. In the Configuration Browser page, tap **Create**.
 1. In the **Create Configuration** dialog, specify **Create_First_IC_templates** as the title for the folder, check **Editable Templates**, and tap **Create**.
 
@@ -183,10 +190,10 @@ Web チャネルテンプレートを作成するには、作成したテンプ�
 Based on the [use case](/help/forms/using/create-your-first-interactive-communication.md) and [anatomy](/help/forms/using/planning-interactive-communications.md), create the following panels in the Web template:
 
 * 請求明細：ドキュメントフラグメントが含まれます
-* 顧客の詳細：ドキュメントフラグメント
-* 請求書要約：ドキュメントフラグメント
-* 料金の概要：ドキュメントフラグメントとグラフ（2列レイアウト）を含みます。
-* 通話の項目別：テーブルを含む
+* 顧客の詳細： ドキュメントフラグメントを含む
+* 請求書要約： ドキュメントフラグメントを含む
+* 料金の概要： ドキュメントフラグメントとグラフを含みます（2列レイアウト）
+* 呼び出しの項目別： テーブルを含む
 * Pay Now: Includes a **Pay Now** button and an image
 * Value Added Services: Includes an image and a **Subscribe** button.
 
@@ -214,13 +221,14 @@ Based on the [use case](/help/forms/using/create-your-first-interactive-communic
 
    ![content_tree_root_panel](assets/content_tree_root_panel.png)
 
-1. パネルを選択し、「 ![configure_icon](assets/configure_icon.png) (Configure)」をタップします。
+1. パネルを選択し、 ![configure_icon](assets/configure_icon.png) （設定）をタップします。
 1. プロパティペインで、次の手順を実行します。
 
    1. 「名前」フィールドに&#x200B;**billdetails** と入力します。
    1. 「タイトル」フィールドに、**請求明細**&#x200B;と入力します。
    1. 「**列数**」ドロップダウンリストから、**1** を選択します。
    1. Tap ![done_icon](assets/done_icon.png) to save the properties.
+
    コンテンツツリーの&#x200B;**請求明細**&#x200B;に更新パネル名が更新されます。
 
 1. 手順 7～11 を繰り返し、次のプロパティを含むパネルをテンプレートに追加します。
@@ -244,7 +252,7 @@ Web テンプレートの作成が終わったら、インタラクティブ通�
 
 Web テンプレートを有効にするには、次の手順を実行します。
 
-1. Tap **Tools** ![](https://helpx.adobe.com/content/dam/help/en/aem-forms/icons/Tools.png) > **Templates**.
+1. **ツール** / ![ツール](assets/tools-icon.svg) / **テンプレートをタップします**。
 1. Navigate to the **Create_First_IC_Web_Template** template, select it, and tap **Enable**.
 1. 再度「**有効**」をタップして確認します。
 
