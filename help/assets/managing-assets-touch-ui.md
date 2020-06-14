@@ -4,9 +4,9 @@ description: タッチ操作向けAEM Assetsのユーザーインターフェイ
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c407cecf4f4de9aa00ba987f96df3c75784e0171
+source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
 workflow-type: tm+mt
-source-wordcount: '9813'
+source-wordcount: '9812'
 ht-degree: 67%
 
 ---
@@ -59,6 +59,7 @@ AEM Assets のタッチ対応 UI で実行できる様々なアセット管理�
 
    * ツールバーの「**[!UICONTROL 作成]**」アイコンをタップします。次に、メニューで「**[!UICONTROL ファイル]**」をタップします。表示されたダイアログで、必要に応じてファイル名を変更できます。
    * HTML5をサポートするブラウザーで、アセットをインターフェイス上に直接ドラッグします。 ファイル名を変更するためのダイアログは表示されません。
+
    ![create_menu](assets/create_menu.png)
 
    複数のファイルを選択するには、ファイル選択ダイアログで、Ctrl キーまたは Command キーを押しながらアセットを選択します。iPadでは、一度に1つのファイルしか選択できません。
@@ -116,6 +117,7 @@ AEM Assets のタッチ対応 UI で実行できる様々なアセット管理�
    ただし、以下の文字（スペース区切りリスト）はサポートされていません。
    * アセットファイル名に含めてはいけない文字：`* / : [ \ \ ] | # % { } ? &`
    * アセットフォルダー名に含めてはいけない文字：`* / : [ \ \ ] | # % { } ? \" . ^ ; + & \t`
+
    In addition, the Assets interface displays the most recent asset that you upload or the folder you create first in all the views (**[!UICONTROL Card view]**, **[!UICONTROL List view]**, and **[!UICONTROL Column view]**).
 
    大きなアセットや複数のアセットを同時にアップロードする場合に、視覚的なインジケーターを使用すると、進行状況を評価できます。 The **[!UICONTROL Upload Progress]** dialog box displays the count of successfully uploaded files and the files that failed to upload.
@@ -191,7 +193,7 @@ AEM Assets のタッチ対応 UI で実行できる様々なアセット管理�
 
 When uploading image files, including AI, EPS, and PSD files, you can take the following editing actions in the **[!UICONTROL Upload Job Options]** dialog box:
 
-* 画像の端からホワイトスペースを切り抜く（上の表の説明を参照してください）。
+* 画像の端の空白の切り抜き（上の表の説明を参照）
 * 画像の側面から手動で切り抜く（上の表の説明を参照してください）。
 * カラープロファイルを選択する（上の表でオプションの説明を参照してください）。
 * クリッピングパスからマスクを作成する。
@@ -209,7 +211,7 @@ When uploading image files, including AI, EPS, and PSD files, you can take the f
 | ノックアウトの背景 |  | アップロード時に画像の背景を自動的に削除します。この技術は、特定の対象に注目を集め、賑やかな背景から際立たせるのに便利です。選択すると、ノックアウトの背景機能および以下のサブオプションが「オン」になります。 |
 |  | 隅 | 必須.<br>ノックアウトする背景色の定義に使用される画像の隅。<br>「**左上**」、「**左下**」、「**右上**」、「**右下**」から選択できます。 |
 |  | 塗り方 | 必須.<br>設定した隅の位置からのピクセルの透明度を制御します。<br>以下の塗り方から選択できます。 <ul><li>**塗りつぶし** - 指定した隅と一致し、隣接しているすべてのピクセルを透明にします。</li><li>**一致ピクセル** - 画像内での場所に関係なく、一致するすべてのピクセルを透明にします。</li></ul> |
-|  | 許容値 | （オプション）<br>設定した隅の場所に基づいて、ピクセル色の一致に許容される差を制御します。<br>ピクセル色を正確に一致させるには値を 0.0 に、最大差を許容するには値を 1.0 にします。 |
+|  | 許容値 | オプション.<br>設定した隅の場所に基づいて、ピクセル色の一致に許容される差を制御します。<br>ピクセル色を正確に一致させるには値を 0.0 に、最大差を許容するには値を 1.0 にします。 |
 
 #### Set PostScript and Illustrator upload options {#setting-postscript-and-illustrator-upload-options}
 
@@ -378,6 +380,7 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
    * アセットが表示またはダウンロードされた回数。
    * アセットが使用されたチャネルまたはデバイス。
    * アセットが最近使用されたクリエイティブソリューション。
+
    詳しくは、[アセットインサイト](touch-ui-asset-insights.md)を参照してください。
 
 1. 「**[!UICONTROL 保存して閉じる]**」をタップします。
@@ -431,6 +434,7 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
 
    * 移動後のアセットの名前を指定します。Then tap **[!UICONTROL Next]** to proceed.
    * Tap **[!UICONTROL Cancel]** to stop the process.
+
    >[!NOTE]
    >
    >新しい場所に同じ名前のアセットがない場合は、同じ名前を指定できます。ただし、アセットの移動先に同じ名前のアセットが既に存在する場合は、別の名前を使用する必要があります。同じ名前を使用すると、その名前のバリエーションが自動的に生成されます。例えば、「Square」という名前のアセットの場合、自動的にそのコピーの名前が「Square1」として生成されます。
@@ -455,6 +459,7 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
    * From the **[!UICONTROL Adjust]** column, select or deselect references to the assets.
    * Tap **[!UICONTROL Back]** to return to the **[!UICONTROL Select Destination]** page.
    * Tap **[!UICONTROL Cancel]** to stop the move operation.
+
    参照を更新しなければ、引き続きアセットの以前のパスが示されます。参照を調整すると、更新され、アセットの新しいパスが反映されます。
 
 ## レンディションの管理 {#managing-renditions}
@@ -481,7 +486,7 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
 
    **レンディションの削除**
 
-   Select a rendition from the **[!UICONTROL Renditions]** panel, and then tap the **[!UICONTROL Delete Rendition]** icon from the [toolbar](/help/sites-authoring/basic-handling.md). アセット処理の完了後、レンディションを一括で削除することはできません。 個々のアセットについて、レンディションをユーザインターフェイスから手動で削除できます。 複数のアセットを作成する場合は、Experience Managerをカスタマイズして特定のレンディションを削除するか、アセットを削除して削除したアセットを再度アップロードできます。
+   Select a rendition from the **[!UICONTROL Renditions]** panel, and then tap the **[!UICONTROL Delete Rendition]** icon from the [toolbar](/help/sites-authoring/basic-handling.md). アセット処理の完了後は、レンディションを一括削除することはできません。個々のアセットについては、ユーザインターフェイスからレンディションを手動で削除できます。複数のアセットを作成する場合は、Experience Managerをカスタマイズして特定のレンディションを削除するか、アセットを削除して削除したアセットを再度アップロードできます。
 
    ![delete_renditionicon](assets/delete_renditionicon.png)
 
@@ -534,6 +539,7 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
 
       * アセットに参照がない場合は、アセットが削除されます。
       * If the asset has references, an error-message informs you that **[!UICONTROL One or more assets are referenced]**. You can select **[!UICONTROL Force Delete]** or **[!UICONTROL Cancel]**.
+
    >[!NOTE]
    >
    >他のページからの入力参照を解決または削除するには、アセットを削除する前に、関連する参照を更新します。
@@ -666,6 +672,7 @@ To edit a TXT file, set **[!UICONTROL Day CQ Link Externalizer]** from within Co
    * Select the asset and then click the **[!UICONTROL Edit]** icon in the toolbar.
    * カード表示のアセットに表示する「 **[!UICONTROL 編集]** 」オプションをタップします。
    * In the asset page, tap the **[!UICONTROL Edit]** icon in the toolbar.
+
    ![edit_icon](assets/edit_icon.png)
 
 1. 画像を切り抜くには、「切り抜き ****」をタップします。
@@ -737,6 +744,7 @@ For Content Fragments, [annotations are created in the editor](content-fragments
 
    * [クイックアクション](managing-assets-touch-ui.md#quick-actions)
    * アセットを選択した後またはアセットページに移動した後に、ツールバーから
+
    ![chlimage_1-29](assets/chlimage_1-29.png)
 
 1. タイムラインの一番下の&#x200B;**[!UICONTROL コメント]**&#x200B;ボックスにコメントを追加します。Alternatively, mark up an area on the image and add an annotation in the **[!UICONTROL Add Annotation]** dialog box.
@@ -818,7 +826,7 @@ To print the annotations and review status, tap the **[!UICONTROL Print]** icon 
 
    注釈やステータスを印刷したPDFに表示する位置に応じて、その他の設定を選択できます。 If you want the annotations or status to appear in a page that is separate from the printed asset, choose **[!UICONTROL Next Page]**.
 
-1. 「 **[!UICONTROL 印刷]**」をタップします。 手順2で選択したオプションに応じて、生成されるPDFには、注釈またはステータスが指定した位置に表示されます。 例えば、注釈とレビューステータスの両方を「**[!UICONTROL 左上]**」設定を使用して印刷することを選択した場合、生成される PDF ファイルは次のようになります。
+1. Tap **[!UICONTROL Print]**. 手順2で選択したオプションに応じて、生成されるPDFには、注釈またはステータスが指定した位置に表示されます。 例えば、注釈とレビューステータスの両方を「**[!UICONTROL 左上]**」設定を使用して印刷することを選択した場合、生成される PDF ファイルは次のようになります。
 
    ![chlimage_1-42](assets/chlimage_1-42.png)
 
