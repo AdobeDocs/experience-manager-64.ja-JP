@@ -10,9 +10,9 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 897ff73f-15a5-484f-a3a2-616de8ac59dc
 translation-type: tm+mt
-source-git-commit: 940faa5a783eacf5505f001cf3696200babc6231
+source-git-commit: c842bd832a63ed9e96801c56ff35489ee6df630b
 workflow-type: tm+mt
-source-wordcount: '1698'
+source-wordcount: '1703'
 ht-degree: 54%
 
 ---
@@ -89,7 +89,7 @@ SPAエディターの主要要素に留意し、AEM内でSPAを編集する高�
 
 1. SPAエディタが読み込まれます。
 
-1. SPAは、別のフレームに読み込まれます。
+1. SPAは、別のフレームにロードされます。
 1. SPAはJSONコンテンツを要求し、コンポーネントをクライアント側でレンダリングします。
 1. SPAエディタは、レンダリングされたコンポーネントを検出し、オーバーレイを生成します。
 1. 作成者がオーバーレイをクリックし、コンポーネントの編集ツールバーが表示されます。
@@ -104,6 +104,7 @@ SPAエディターの主要要素に留意し、AEM内でSPAを編集する高�
 >* SPAは常にその表示を担当します。
 >* SPAエディタはSPA自体から切り離されています。
 >* 実稼動（公開）では、SPAエディタは読み込まれません。
+
 >
 
 
@@ -194,8 +195,8 @@ SPAエディターの主要要素に留意し、AEM内でSPAを編集する高�
 
 SPAエディターSDKは、以下の最小バージョンをサポートしています。
 
-* React 16.3
-* Angular 6.x
+* 16.x以降に対応
+* Angular 6.x以上
 
 これらのフレームワークの以前のバージョンは、AEM SPA Editor SDKで動作する可能性がありますが、サポートされていません。
 
