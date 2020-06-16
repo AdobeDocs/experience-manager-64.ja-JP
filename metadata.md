@@ -8,10 +8,13 @@ getting-started-url: https://helpx.adobe.com/jp/experience-manager/tutorials.htm
 tutorials-title: チュートリアル
 tutorials-url: https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-4-videos.html
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/experience-manager-64.en
+git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-64.ja-JP
 index: y
 translation-type: tm+mt
-source-git-commit: 9b01573286810356a93d7bc632363624523cd48c
+source-git-commit: a58558fe18743e1aee0d65da7a2140561bc97e98
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 70%
 
 ---
 
@@ -22,17 +25,17 @@ metadata.md ファイルには、リポジトリ内にあるユーザーガイ�
 
 | メタデータ | 動作 |
 |--- |--- |
-| solution-title | 記事ヘッダーでリンクとして使用されます。 |
-| solution-hub-url | helpx ハブページを開きます。 |
-| solution-icon | ソリューションタイトルの横にソリューションアイコンを表示します。まだ実装されていません。 |
-| getting-started-url | helpx の「はじめに」のページへのリンク |
-| tutorials-url | ビデオチュートリアル（helpx チュートリアルまたは KT チュートリアル）へのリンク |
-| mini-toc-levels | 右側のレールに表示される見出しレベルの数を決定します。デフォルトは 2 です。 |
-| git-repo | 内部使用のマスターリポジトリの場所を指定します。 |
+| solution-title | 記事ヘッダーでリンクとして使用されます。。 |
+| solution-hub-url | 学習とサポートのハブページを開きます。 |
+| solution-icon | ソリューションタイトルの横にソリューションアイコンを表示します。まだ実装されていません。。 |
+| getting-started-url | 「はじめに」ページへのリンクです。 |
+| tutorials-url | ビデオチュートリアルへのリンク |
+| mini-toc-levels | 右側のレールに表示される見出しレベルの数を決定します。デフォルト値は 2 です。 |
+| git-repo | 内部で使用するメインレポートの場所を指定します。 |
 
 TOC.mdファイル内
 
 | メタデータ | 動作 |
 |--- |--- |
-| user-guide-title | 記事ヘッダーでリンクとして使用されます。 |
-| user-guide-url | helpx ハブページを開きます。 |
+| user-guide-title | 記事のヘッダーにリンクとして使用されます。 |
+| user-guide-url | 学習とサポートのハブページを開きます。 |
