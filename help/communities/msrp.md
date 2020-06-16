@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
 translation-type: tm+mt
-source-git-commit: f78f83ef3b9373bcbee3e5179a9bbec4d9462255
+source-git-commit: 09f8adac1d5fc4edeca03d6955faddf5ea045405
+workflow-type: tm+mt
+source-wordcount: '1202'
+ht-degree: 49%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: f78f83ef3b9373bcbee3e5179a9bbec4d9462255
 
 ## MSRP について {#about-msrp}
 
-AEM CommunitiesがMSRPを共通ストアとして使用するように設定されている場合、ユーザー生成コンテンツ(UGC)は、同期や複製を必要とせずに、すべての作成者インスタンスとパブリッシュインスタンスからアクセスできます。
+MSRPを共通ストアとして使用するようにAEM Communitiesを設定した場合、ユーザー生成コンテンツ(UGC)は、すべての作成者インスタンスと発行インスタンスからアクセスでき、同期や複製は不要です。
 
 [SRP オプションの特性](working-with-srp.md#characteristics-of-srp-options)と[推奨されるトポロジ](topologies.md)も参照してください。
 
@@ -28,9 +31,9 @@ AEM CommunitiesがMSRPを共通ストアとして使用するように設定さ�
 * [MongoDB](https://www.mongodb.org/)：
 
    * バージョン2.6以降
-   * モンゴや共有を設定する必要がない
+   * Mongoや共有を設定する必要がない
    * Strongly recommend use of a [replica set](#mongoreplicaset)
-   * AEMと同じホスト上で実行することも、リモートで実行することもできます。
+   * AEMと同じホストで実行することも、リモートで実行することも可能
 
 * [Apache Solr](https://lucene.apache.org/solr/)：
 
@@ -48,7 +51,7 @@ AEM CommunitiesがMSRPを共通ストアとして使用するように設定さ�
 
 ### MSRP の選択 {#select-msrp}
 
-The [Storage Configuration console](srp-config.md) allows for the selection of the default storage configuration, which identifies which implementation of SRP to use.
+[ストレージ設定コンソール](srp-config.md) では、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
 
 オーサー環境でストレージ設定コンソールにアクセスするには:
 
@@ -61,19 +64,19 @@ The [Storage Configuration console](srp-config.md) allows for the selection of t
 
    * **[!UICONTROL MongoDB URI]**
 
-      *default*:mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
+      *default*: mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
 
    * **[!UICONTROL MongoDB データベース]**
 
-      *default*:コミュニティ
+      *default*: コミュニティ
 
    * **[!UICONTROL MongoDB UGC コレクション]**
 
-      *default*:content
+      *default*: content
 
    * **[!UICONTROL MongoDB 添付ファイルコレクション]**
 
-      *default*:attachments
+      *default*: attachments
 
 * **[!UICONTROL SolrConfiguration]**
 
@@ -83,10 +86,12 @@ The [Storage Configuration console](srp-config.md) allows for the selection of t
 For a ZooKeeper Ensemble, enter comma-separated `HOST:PORT` values, such as *host1:2181,host2:2181*
 Leave blank if running Solr in standalone mode using the internal ZooKeeper.\
       *デフォルト*: *&lt;空白>*
-   * **[!UICONTROL Solr URL]**&#x200B;スタンドアロンモードで Solr と通信するために使用する URL。SolrCloud モードで実行している場合は、空白のままにします。\
-      *デフォルト*:https://127.0.0.1:8983/solr/
-   * **[!UICONTROL Solr コレクション]** Solr コレクションの名前。\
-      *デフォルト*:collection1
+   * **[!UICONTROL Solr URL]**&#x200B;スタンドアロンモードで Solr と通信するために使用する URL。SolrCloud モードで実行している場合は、空白のままにします。
+\
+      *デフォルト*: https://127.0.0.1:8983/solr/
+   * **[!UICONTROL Solr コレクション]** Solr コレクションの名前。
+\
+      *デフォルト*: collection1
 * Select **[!UICONTROL Submit]**
 
 >[!NOTE]
@@ -95,7 +100,7 @@ Leave blank if running Solr in standalone mode using the internal ZooKeeper.\
 
 ### MongoDB レプリカセット {#mongodb-replica-set}
 
-実稼動環境では、レプリカセットをセットアップすることを強く推奨します。レプリカセットとは、マスタースレーブ型レプリケーションと自動フェイルオーバーを実装している MongoDB サーバーのクラスターです。
+本番環境では、プライマリ/セカンダリ・レプリケーションと自動フェイルオーバーを実装するMongoDBサーバのクラスタであるレプリカ・セットをセットアップすることを強くお勧めします。
 
 レプリカセットについて詳しくは、MongoDB の [レプリケーション](https://docs.mongodb.org/manual/replication/)に関するドキュメントを参照してください。
 
@@ -126,7 +131,7 @@ For production environments, [SolrCloud mode](solr.md#solrcloud-mode) provides i
 MSRPを使用して設定された以前のバージョンからアップグレードする場合は、
 
 1. Perform the [upgrade to AEM Communities](upgrade.md)
-1. 新しいSolr設定ファイルのインストール
+1. 新しいSolr構成ファイルのインストール
    * For [standard MLS](solr.md#installing-standard-mls)
    * For [advanced MLS](solr.md#installing-advanced-mls)
 1. Reindex MSRP
@@ -158,16 +163,16 @@ See section [MSRP Reindex Tool](#msrp-reindex-tool)
 
 このツールでは、MongoDB が MSRP の情報源になるので、バックアップを取るときは MongoDB だけで十分です。**
 
-UGCツリー全体のインデックスを再作成するか、*path *dataパラメータで指定した特定のサブツリーのみを再作成できます。
+UGCツリー全体のインデックスを再作成するか、*path *dataパラメータで指定した特定のサブツリーのみを再インデックスできます。
 
 このツールは、コマンドラインから cURL などの HTTP ツールを使用して実行できます。
 
-インデックスを再作成する場合、メモリとパフォーマンスの間にトレードオフがあり、*batchSize *dataパラメーターで制御されます。これは、バッチごとに再インデックスされるUGCレコードの数を指定します。
+インデックスを再構築する際、メモリとパフォーマンスの間には、*batchSize *dataパラメータで制御されるトレードオフがあります。このパラメータは、バッチごとに再インデックスされるUGCレコードの数を指定します。
 
 適切なデフォルト値は 5000 です。
 
-* メモリに問題がある場合は、小さい数値を指定します
-* 速度に問題がある場合は、速度を上げるには、大きい数値を指定します
+* メモリに問題がある場合は、より小さい数値を指定します
+* 速度に問題がある場合は、速度を上げるには、大きい値を指定します
 
 ### cURL コマンドを使用した MSRP インデックス再作成ツールの実行 {#running-msrp-reindex-tool-using-curl-command}
 
@@ -178,18 +183,18 @@ UGCツリー全体のインデックスを再作成するか、*path *dataパラ
 cURL -u *signin* -d *data* *reindex-url*
 
 *signin* = administrator-id:password\
-例：admin:admin
+次に例を示します。 admin:admin
 
 *data* = &quot;batchSize=*size*&amp;path=*path&quot;*
 
 *size* = 1回の操作で再インデックスするUGCエントリの数\
 `/content/usergenerated/asi/mongo/`
 
-*path* =インデックスを再作成するUGCのツリーのルート位置
+*path* =再インデックスするUGCツリーのルート位置
 
-* すべてのUGCのインデックスを再作成するには、次のプロパティの値 `asipath`を指定します。\
+* すべてのUGCのインデックスを再作成するには、 `asipath`\
    `/etc/socialconfig/srpc/defaultconfiguration`
-* インデックスを一部のUGCに制限するには、 `asipath`
+* インデックスを一部のUGCに限定するには、 `asipath`
 
 *reindex-url* = SRPの再インデックスのエンドポイント\
 `http://localhost:4503/services/social/datastore/mongo/reindex`
@@ -225,11 +230,11 @@ On all author and publish AEM instances, revisit the [Storage Configuration cons
 
 If upgrading from an exisitng AEM Communities 6.0 site, any pre-existing UGC must be converted to conform to the structure required for the [SRP](srp.md) API after upgrading to AEM Communities 6.3.
 
-GitHubには、次の目的で使用できるオープンソースツールがあります。
+GitHubには、この目的で使用できるオープンソースツールがあります。
 
 * [AEM Communities UGC Migration Tool](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
-移行ツールは、AEM Communities 6.1以降に読み込むために、以前のバージョンのAEM SocialコミュニティからUGCを書き出すようにカスタマイズできます。
+移行ツールは、以前のバージョンのAEM SocialコミュニティからUGCを書き出すようにカスタマイズして、AEM Communities6.1以降に読み込むことができます。
 
 ### エラー - undefined field provider_id {#error-undefined-field-provider-id}
 
