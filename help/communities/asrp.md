@@ -10,7 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 86349e4d-29ff-4baa-9fcd-c0ab1f0753e9
 translation-type: tm+mt
-source-git-commit: 565604feff7fa365a1c6b52b62a0b0eb681bb192
+source-git-commit: 09f8adac1d5fc4edeca03d6955faddf5ea045405
+workflow-type: tm+mt
+source-wordcount: '829'
+ht-degree: 47%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 565604feff7fa365a1c6b52b62a0b0eb681bb192
 
 ## ASRP について {#about-asrp}
 
-AEM CommunitiesがASRPを共通ストアとして使用するように設定されている場合、ユーザー生成コンテンツ(UGC)は、同期や複製を必要とせずに、すべての作成者インスタンスとパブリッシュインスタンスからアクセスできます。
+ASRPを共通ストアとして使用するようにAEM Communitiesを設定した場合、ユーザー生成コンテンツ(UGC)は、すべてのオーサーインスタンスとパブリッシュインスタンスからアクセスでき、同期や複製は不要です。
 
 [SRP オプションの特性](working-with-srp.md#characteristics-of-srp-options)と[推奨されるトポロジ](topologies.md)も参照してください。
 
@@ -27,7 +30,7 @@ AEM CommunitiesがASRPを共通ストアとして使用するように設定さ�
 
 ASRP の使用には追加ライセンスが必要です。
 
-AEM CommunitiesサイトでUGCにASRPを使用するように設定するには、次の点についてアカウント担当者にお問い合わせください。
+UGC用のASRPを使用するようにAEM Communitiesサイトを設定するには、次の点についてアカウント担当者にお問い合わせください。
 
 * データセンター URL（ASRP エンドポイントのアドレス）
 * 消費者キー
@@ -40,7 +43,7 @@ AEM CommunitiesサイトでUGCにASRPを使用するように設定するには�
 
 ### ASRP の選択 {#select-asrp}
 
-The [Storage Configuration console](srp-config.md) allows for the selection of the default storage configuration, which identifies which implementation of SRP to use.
+[ストレージ設定コンソール](srp-config.md) では、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
 
 **作成者**:
 
@@ -53,25 +56,25 @@ The [Storage Configuration console](srp-config.md) allows for the selection of t
 
    * **[!UICONTROL データセンター URL]**
 
-      プルダウンして、アカウント担当者が特定した本番データセンターを選択します。
+      プルダウンから、アカウント担当者が特定した本番データセンターを選択します。
 
    * **[!UICONTROL デフォルトのレポートスイート]**
 
-      デフォルトのレポートスイートの名前を入力します
+      デフォルトのレポートスイート名を入力します
 
    * **[!UICONTROL 消費者キー]**
 
-      コンシューマーキーの入力
+      Consumer keyを入力
 
    * **[!UICONTROL 暗号鍵]**
 
-      秘密キーを入力します
+      秘密鍵を入力します
 
 * Select **[!UICONTROL Submit]**
 
 以下を実行してパブリッシュインスタンスを用意します。
 
-* [暗号化キーを複製する](#replicate-the-crypto-key)
+* [暗号化キーを複製します](#replicate-the-crypto-key)
 * [設定を複製する](#publishing-the-configuration)
 
 設定を送信したら、以下の手順で接続をテストします。
@@ -83,7 +86,7 @@ for each author and publish instance, test the connection to the data center fro
 
 ### 暗号鍵のレプリケーション {#replicate-the-crypto-key}
 
-消費者キーと秘密鍵は暗号化されます。キーを正しく暗号化/復号化するには、マスターGranite CryptoキーがすべてのAEMインスタンスで同じである必要があります。
+消費者キーと秘密鍵は暗号化されます。キーを正しく暗号化/復号化するためには、すべてのAEMインスタンスでプライマリGranite Cryptoキーが同じである必要があります。
 
 Follow the instructions at [Replicate the Crypto Key](deploy-communities.md#replicate-the-crypto-key).
 
@@ -120,7 +123,7 @@ ASRP エンドポイントでの認証を正常におこなうには、[ネッ�
 >
 >If you enable ASRP on a published community site, any UGC already stored in [JCR](jsrp.md) will no longer be visible as there is no synchronization of data between on-premise storage and cloud storage.
 
-**`AEM Communities Extension`** は、AEM 6.0のソーシャルコミュニティでクラウドサービスとして導入されていました。 As of AEM 6.1 Communities, no cloud configuration is necessary, simply select ASRP from the [storage configuration console](srp-config.md).
+**`AEM Communities Extension`** は、AEM 6.0のソーシャルコミュニティでクラウドサービスとして以前に導入されています。 As of AEM 6.1 Communities, no cloud configuration is necessary, simply select ASRP from the [storage configuration console](srp-config.md).
 
 新しいストレージ構造により、ソーシャルコミュニティからコミュニティにアップグレードするときは、[アップグレード](upgrade.md#adobe-cloud-storage)手順に従う必要があります。
 
