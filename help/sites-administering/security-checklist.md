@@ -10,7 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: a91e1264-8441-42f8-aa83-1d9c983d214a
 translation-type: tm+mt
-source-git-commit: 0e04ab8cd32dfdff47e333169c4f202e81a82fe3
+source-git-commit: 6ac5f288de51e39bccd080123ba9e094406263f8
+workflow-type: tm+mt
+source-wordcount: '2843'
+ht-degree: 86%
 
 ---
 
@@ -43,7 +46,7 @@ source-git-commit: 0e04ab8cd32dfdff47e333169c4f202e81a82fe3
 
 ### セキュリティホットフィックスのインストール {#install-security-hotfixes}
 
-[アドビが提供する最新のセキュリティホットフィックス](https://helpx.adobe.com/experience-manager/kb/aem63-available-hotfixes.html)がインストールされていることを確認してください。
+[アドビが提供する最新のセキュリティホットフィックス](https://helpx.adobe.com/jp/experience-manager/kb/aem63-available-hotfixes.html)がインストールされていることを確認してください。
 
 ### AEM および OSGi コンソールの admin アカウントのデフォルトパスワードの変更 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
@@ -51,11 +54,11 @@ source-git-commit: 0e04ab8cd32dfdff47e333169c4f202e81a82fe3
 
 以下のアカウントが該当します。
 
-* AEMアカウ `admin` ント
+* AEM `admin` アカウント
 
    AEM管理者アカウントのパスワードを変更した後は、CRXにアクセスする際に新しいパスワードを使用する必要があります。
 
-* OSGi webコ `admin` ンソールのパスワード
+* OSGi Webコンソールの `admin` パスワード
 
    この変更は、Webコンソールへのアクセスに使用する管理者アカウントにも適用されるので、アクセスする際に同じパスワードを使用する必要があります。
 
@@ -84,7 +87,7 @@ Web コンソールのパスワードの変更について詳しくは、以下�
 
 You must also change the password used for accessing the Web console. This is done by configuring the following properties of the [Apache Felix OSGi Management Console](/help/sites-deploying/osgi-configuration-settings.md):
 
-**ユーザー名** とパ **スワード**。Apache Felix Web Management Console自体にアクセスするための資格情報です。\
+**ユーザー名** と **パスワード**。Apache Felix Web Management Consoleにアクセスするための資格情報です。\
 インスタンスのセキュリティを確保するために、最初のインストール後にパスワードを変更する必要があります。
 
 次の手順を実行します。
@@ -102,7 +105,7 @@ You must also change the password used for accessing the Web console. This is do
 
 >[!NOTE]
 >
->詳しくは、[カスタムスクリプトまたはエラーハンドラーの作成方法](https://helpx.adobe.com/experience-manager/kb/CustomErrorHandling.html)に関するナレッジベースの記事を参照してください。
+>詳しくは、[カスタムスクリプトまたはエラーハンドラーの作成方法](https://helpx.adobe.com/jp/experience-manager/kb/CustomErrorHandling.html)に関するナレッジベースの記事を参照してください。
 
 ### ディスパッチャーのセキュリティチェックリストの確認 {#complete-dispatcher-security-checklist}
 
@@ -170,24 +173,24 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
 * フィルター処理する HTTP メソッド
 * 空のリファラーヘッダーを使用できるかどうか
-* サーバーホスト以外に許可されるサーバーのホワイトリスト
+* サーバ・ホストに加えて、サーバのリストも許可されます。
 
-デフォルトでは、localhost のすべてのバリエーションおよびサーバーのバインド先の現在のホストの名前がホワイトリストに含まれます。
+   デフォルトでは、localhostとサーバーがバインドされる現在のホスト名のすべてのバリエーションがリスト内にあります。
 
 リファラーフィルターサービスを設定するには：
 
-1. 次の場所でApache Felixコンソール(**Configurations**)を開きます。
+1. 次の場所にあるApache Felixコンソール(**設定**)を開きます。
 
    `https://<server>:<port_number>/system/console/configMgr`
 
-1. ログインしま `admin`す。
+1. ログイン名 `admin`。
 1. **Configurations** メニューで、次の項目を選択します。
 
    `Apache Sling Referrer Filter`
 
-1. 「`Allow Hosts`」フィールドに、リファラーとして許可するすべてのホストを入力します。各エントリは、次の形式である必要があります。
+1. 「`Allow Hosts`」フィールドに、リファラーとして許可するすべてのホストを入力します。各エントリは、次の形式にする必要があります。
 
-   &lt;プロトコル>://&lt;サーバー>:&lt;ポート>
+   &lt;protocol>://&lt;server>:&lt;port>
 
    次に例を示します。
 
@@ -258,11 +261,12 @@ AEM を操作しているときは、このようなサービスの設定を管�
 
 * 無制限の数の URL を含むコンテンツページを要求する。URL にはハンドル、複数のセレクター、拡張子およびサフィックスを含めることができます。それらのいずれかを変更できます。
 
-   例えば、次のよ `.../en.html` うにリクエストすることもできます。
+   例えば、 `.../en.html` 次のように要求することもできます。
 
    * `.../en.ExtensionDosAttack`
    * `.../en.SelectorDosAttack.html`
    * `.../en.html/SuffixDosAttack`
+
    有効なすべてのバリエーション（例えば、`200` という応答が返され、バリエーションをキャッシュするように設定されている場合）がディスパッチャーによってキャッシュされるので、最終的にはファイルシステムがいっぱいになり、以降の要求に対してサービスを提供できなくなります。
 
 このような攻撃を防ぐための設定のポイントは多数ありますが、ここでは AEM に直接関連する設定についてのみ説明します。
@@ -318,7 +322,7 @@ DoS の悪用を防ぐ方法は次のとおりです。
 >
 >この軽減策は、Forms を使用していない AEM 環境でのみ実行するべきです。
 
-AEM は `FormChooserServlet` 用の標準インデックスを提供していないため、クエリでフォームセレクターを使用すると、高コストのリポジトリートラバーサルが発生し、大抵の場合 AEM インスタンスが停止します。フォームセレクターは、 **&amp;ast;.formの存在によって検出できます。** &amp;ast;文字列をクエリに含めます。
+AEM は `FormChooserServlet` 用の標準インデックスを提供していないため、クエリでフォームセレクターを使用すると、高コストのリポジトリートラバーサルが発生し、大抵の場合 AEM インスタンスが停止します。フォームセレクターは、 **&amp;ast;.formの存在によって検出できます。&amp;ast;** 文字列をクエリで指定します。
 
 これを軽減するために、以下の手順に従ってください。
 
@@ -345,7 +349,7 @@ WebDAV は、オーサリングとパブリッシュの両方の環境で無効�
 
    `https://<*host*>:<*port*>/system/console`
 
-   For example `http://localhost:4503/system/console/bundles`.
+   例えば、`http://localhost:4503/system/console/bundles` のように指定します。
 
 1. バンドルのリストで、次の名前のバンドルを探します。
 
@@ -411,6 +415,7 @@ For more [information on clickjacking please see the OWASP site](https://www.owa
 1. ローカルファイルシステム内で、com.adobe.granite.crypto.file を見つけます。例えば、次のパスにあります。
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
+
    各フォルダー内の `bundle.info` ファイルは、バンドル名を示します。 
 
 1. データフォルダーに移動します。次に例を示します。
