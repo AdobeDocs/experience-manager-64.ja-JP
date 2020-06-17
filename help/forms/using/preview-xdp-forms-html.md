@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: c142d7b3-301b-447c-a715-452c905565d1
 translation-type: tm+mt
-source-git-commit: 79dcf6816e1156604c0c9279b727ea436ad1826a
+source-git-commit: 801941c060e1a912f3969bca1e89962241e7fbe0
 workflow-type: tm+mt
-source-wordcount: '846'
-ht-degree: 79%
+source-wordcount: '820'
+ht-degree: 81%
 
 ---
 
@@ -30,9 +30,9 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 ### Apache Sling Authentication Service の設定 {#configure-apache-sling-authentication-service}
 
-1. OSGi上で実行されているAEM Formsで、https://[*server*]:[*port*]/system/console/configMgrに移動します。または
+1. OSGiで実行され `https://[server]:[port]/system/console/configMgr` ているAEM Formsに移動または
 
-   JEE上で実行されているAEM Forms上のhttps://[*server*]:[*port*]/lc/system/console/configMgr。
+   `https://[server]:[port]/lc/system/console/configMgr` (JEEで実行しているAEM Forms)
 
 1. **Apache Sling Authentication Service** 設定を探してクリックし、編集モードで開きます。 
 
@@ -46,7 +46,6 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
       * -/content/xfaforms
       * -/etc/clientlibs/fd/xfaforms
-
    >[!NOTE]
    >
    >Authentication Requirements フィールドで指定した値をコピーアンドペーストしないでください。値に使用されている特殊文字が文字化けするおそれがあります。代わりに、フィールドに指定の値を入力します。
@@ -60,8 +59,8 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 1. 管理者として AEM Web コンソールにログインします。
 
-   * URL for AEM Forms on OSGi is https://[server]:[port]/system/console/configMgr
-   * URL for AEM Forms on JEE is https://[*server*]:[*port*]/lc/system/console/configMgr
+   * URL for AEM Forms on OSGi is `https://[server]:[port]/system/console/configMgr`
+   * JEE上のAEM FormsのURLは `https://[server]:[port]/lc/system/console/configMgr`
 
 1. **[!UICONTROL Mobile Forms の設定]**&#x200B;を編集用に開きます。
 1. 「**[!UICONTROL 保護モード]**」オプションの選択を解除して「**[!UICONTROL 保存]**」をクリックします。
@@ -81,7 +80,6 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
       * `/aem/forms` (OSGi 上の AEM Forms)
       * `/lc/forms` (JEE 上の AEM Forms)
-
    **注：***サーバーが起動および実行されていることを確認してください。The HTML preview connects to the CRX server to* generate *a preview.*
 
    ![AEM Forms Designer のオプション ](assets/server_options.png)
