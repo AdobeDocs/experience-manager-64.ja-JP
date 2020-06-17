@@ -10,7 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: e5323ae8-bc37-4bc6-bca6-9763e18c8e76
 translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+source-git-commit: 280c2b3cc8026988472d4ad0cf6649fa8a7c9c38
+workflow-type: tm+mt
+source-wordcount: '509'
+ht-degree: 88%
 
 ---
 
@@ -43,9 +46,9 @@ AEM では、[Apache Jackrabbit](https://jackrabbit.apache.org/) と [Apache Sli
 
 ## 5. クロスサイトリクエストフォージェリ（CSRF） {#cross-site-request-forgery-csrf}
 
-クロスサイト要求偽造(CSRF)は、すべてのフォームとAJAX要求に暗号化トークンを自動的に挿入し、各POSTに対してサーバー上でこのトークンを検証することで軽減されます。
+クロスサイト要求偽造(CSRF)は、すべてのフォームとAJAXリクエストに暗号化トークンを自動的に挿入し、各POSTに対してサーバー上でこのトークンを検証することで軽減されます。
 
-さらに、AEM に搭載されているリファラーヘッダーベースのフィルターを設定して、ホワイトリストに明示的に登録されたホストからの POST リクエストのみを許可することができます。
+In addition, AEM ships with a referrer-header based filter, which can be configured to *only* allow POST requests from specific hosts (defined in a list).
 
 ## 6. セキュリティ設定のミス {#security-misconfiguration}
 
