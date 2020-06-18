@@ -10,7 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: e3f2dc5a-ef5e-432c-be07-b3dedbd6549b
 translation-type: tm+mt
-source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
+source-git-commit: 97d60c4d18b7842f9fc7c81be33ac1acfca8b24d
+workflow-type: tm+mt
+source-wordcount: '1610'
+ht-degree: 71%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
 
 Microsoft SharePoint 2010 および Microsoft SharePoint 2013 用 Day JCR コネクター（バージョン 4.0）
 
-この記事には、Adobe JCR Connector for Microsoft sharePoint 2010およびMicrosoft sharePoint 2013、バージョン4.0に関する詳細が含まれています。
+この記事には、Adobe JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013バージョン4.0に関する詳細が含まれています。
 
 SharePoint コネクターでは次の基本機能がサポートされています。
 
@@ -33,7 +36,7 @@ SharePoint コネクターでは次の基本機能がサポートされていま
 
 >[!NOTE]
 >
->SharePoint コネクターは AEM 6.1 サービスパック 2 でもサポートされています。コネクタは、仮想リポジトリマウントをサポートしなくなったため、マウントできません。 Java APIを使用してSharepointリポジトリにアクセスする場合は、プロジェクトでSharepoint ConnectorのJCRリポジトリ実装を使用します。
+>SharePoint コネクターは AEM 6.1 サービスパック 2 でもサポートされています。コネクタは、仮想リポジトリのマウントをサポートしなくなったため、マウントできません。 Java APIを使用してSharepointリポジトリにアクセスする場合は、プロジェクトでSharepoint ConnectorのJCRリポジトリ実装を使用します。
 >
 >このドキュメントでは、SharePoint サーバーおよび関連する IT インフラストラクチャのインストール、設定、管理および IT 運営については取り上げていません。See vendor documentation on [SharePoint](https://www.microsoft.com/sharepoint) for information about these topics. コネクターを使用するには、これらのインフラストラクチャ要素を適切にインストール、設定および運用する必要があります。
 
@@ -53,7 +56,7 @@ SharePoint コネクターでは次の基本機能がサポートされていま
 ## SharePoint コネクターのインストール {#installing-sharepoint-connector}
 
 このコネクターは、インストールが容易なコンテンツパッケージとして提供されています。パッケージマネージャーを使用してパッケージをインストールし、SharePointサーバーのURLを設定します\
-などの設定オプションを指定できます。 SharePoint コンテンツは AEM リポジトリに格納されています。
+およびその他の設定オプション。 SharePoint コンテンツは AEM リポジトリに格納されています。
 
 ### インストール要件 {#installation-requirements}
 
@@ -101,7 +104,7 @@ To access Package Share on the AEM Welcome page, tap/click **Tools** and then se
 1. Tap/click **Install** from the package description page.
 1. From the **Install Package** dialog, tap/click **Install**.
 
-   **注意**:管理者としてログインしていることを確認します。
+   **注意**: 管理者としてログインしていることを確認します。
 
 1. When the package is installed, tap/click **Close**.
 
@@ -132,11 +135,11 @@ SharePoint サーバーの URL および高度なオプションを設定する�
 `<name>` はJCRワークスペースの名前で、\
 `<url>` は、そのワークスペースのSharePointサーバーのURLです。
 
-AEM では、前述の設定手順とは別に、もう 1 つ手順を実行します。「**com.day.cq.dam.cq-dam-jcr-connectors**」バンドルをホワイトリストに追加します。
+AEM では、前述の設定手順とは別に、もう 1 つ手順を実行します。「**com.day.cq.dam.cq-dam-jcr-connectors**」バンドルの許可リスト。
 
-AEM でバンドルをホワイトリストに追加するには、次の手順を実行します。
+AEMで許可リストバンドルを作成するには、次の手順を実行します。
 
-1. OSGi管理コンソールに移動します。http://localhost:4502/system/console/configMgr.
+1. OSGi管理コンソールに移動します。 http://localhost:4502/system/console/configMgr
 
 1. 「Apache Sling Login Admin Whitelist」サービスを検索します。
 
@@ -200,10 +203,10 @@ SharePoint ではクラシック認証方式と要求ベースの認証方式を
 * 要求-基本
 * 要求-フォームベース
 
-AEM JCR Connector for Microsoft sharePoint 2010およびMicrosoft sharePoint 2013、バージョン4.0。は、次のモードで動作する、要求ベースの認証（Microsoftが推奨）をサポートしています。
+AEM JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013バージョン4.0.は、次のモードで動作する要求ベースの認証（Microsoftによって推奨される）をサポートしています。
 
 * **基本／NTLM 認証**：コネクターでの最初の接続試行では、基本認証が使用されます。基本認証が使用できない場合は、NTLM ベースの認証に切り替えられます。
-* **フォームベースの認証**:Sharepointは、ユーザーがログインフォーム（通常はWebページ）に入力した資格情報に基づいてユーザーを検証します。 認証された要求にはシステムによってトークンが発行されます。このトークンには、後続要求で ID の再確立に使用されるキーが含まれています。
+* **フォームベースの認証**: Sharepointは、ログインフォーム（通常はWebページ）にユーザーが入力した資格情報に基づいてユーザーを検証します。 認証された要求にはシステムによってトークンが発行されます。このトークンには、後続要求で ID の再確立に使用されるキーが含まれています。
 
 **フォームベースの認証の設定**
 
@@ -236,7 +239,7 @@ AEMでユーザーを作成するには：
 1. 「セキュリティ」をクリックします。
 1. 「ユーザー」をクリックします。
 1. Click **Create User**
-1. ユーザーID（SharePointでのアクセス権を持つユーザー名）の指定
+1. ユーザーID （SharePointでアクセスできるユーザー名）を指定する
 1. 対応するパスワードを指定します。
 1. 緑色のチェックマークをクリックして、ユーザーを作成します。
 
@@ -254,7 +257,7 @@ admin グループにユーザーを追加するには：
 
 1. クイックスタートを閉じます。
 1. ファイル *\crx-quickstart\repository\repository.xml* を開きます。
-1. タグを検索します。 `<LoginModule class="com.day.crx.core.CRXLoginModule"> ... </LoginModule>.`
+1. タグの検索 `<LoginModule class="com.day.crx.core.CRXLoginModule"> ... </LoginModule>.`
 1. Insert the tag `<param name="disableTokenAuth" value="true"/>` inside the tag mentioned in step 4.
 1. xml ファイルを保存して閉じます。
 1. QuickStartを再起動し、資格情報を使用してログインします。
