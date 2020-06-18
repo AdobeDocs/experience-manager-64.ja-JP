@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.4 Deploying Guide
+user-guide-title: AEM 6.4デプロイガイド
 translation-type: tm+mt
-source-git-commit: d9a2b00fa0ed9b9660aaf5b17d1790747f339e91
+source-git-commit: b7be355f788f07eea2d1333abb4220dd645ef53f
+workflow-type: tm+mt
+source-wordcount: '323'
+ht-degree: 95%
 
 ---
 
@@ -112,7 +115,5 @@ To be removed:
 /help/sites-deploying/consistency-check.md
 
 Redirects:
-[(Redirect)Glossary](screens-glossary.md) to /help/screens/aem-screens-introduction.md
-[(Redirect)What is AEM Screens?](aem-screens-introduction.md) redirect to /help/screens/aem-screens-introduction.md
 [(Enabling HTTP Over SSL)](config-ssl.md) redirect to /content/help/en/experience-manager/6-4/sites-administering/ssl-by-default
 -->
