@@ -10,7 +10,10 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 translation-type: tm+mt
-source-git-commit: d97828afee7a65e7a4036912c1cc8726404088c9
+source-git-commit: 97d60c4d18b7842f9fc7c81be33ac1acfca8b24d
+workflow-type: tm+mt
+source-wordcount: '2803'
+ht-degree: 80%
 
 ---
 
@@ -72,7 +75,7 @@ JobManager でジョブが作成されると、オフロードフレームワー
 
 クラスターの各インスタンスについて、複数のトポロジ関連プロパティを確認できます。
 
-* インスタンスの JobConsumer のトピックのホワイトリスト
+* インスタンスのジョブ・コンシューマー用のトピックの許可リスト。
 * トポロジとの接続用に公開されるエンドポイント
 * インスタンスがどのジョブトピックについてオフロード用に登録されているか
 * インスタンスによって処理されるジョブトピック
@@ -105,10 +108,10 @@ Web コンソールを使用してトポロジ情報を表示することもで�
 
 Experience Manager インスタンスとトポロジとのインタラクション方法を制御するために、Apache Sling のリソースベースの Discovery Service が各インスタンスで実行されます。
 
-Discovery Service によって、トポロジとの接続を確立および維持するために、定期的な POST 要求（ハートビート）が Topology Connector サービスに送信されます。Topology Connector サービスでは、トポロジへの参加が許可される IP アドレスまたはホスト名のホワイトリストが維持されます。
+Discovery Service によって、トポロジとの接続を確立および維持するために、定期的な POST 要求（ハートビート）が Topology Connector サービスに送信されます。Topology Connectorサービスは、トポロジに参加できるIPアドレスまたはホスト名の許可リストを維持します。
 
 * インスタンスをトポロジに参加させるには、ルートメンバーの Topology Connector サービスの URL を指定します。
-* インスタンスがトポロジに参加できるようにするには、ルートメンバーの Topology Connector サービスのホワイトリストにインスタンスを追加します。
+* インスタンスがトポロジを結合できるようにするには、ルートメンバーのTopology Connectorサービスの許可リストにそのインスタンスを追加します。
 
 Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apache.sling.discovery.impt.Config サービスの以下のプロパティを設定します。
 
@@ -135,7 +138,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
   <tr> 
    <td>最小イベント遅延（秒）</td> 
    <td>minEventDelay</td> 
-   <td><p>トポロジに変更が発生した場合、状態の変更をTOPOLOGY_CHANGINGからTOPOLOGY_CHANGEDに遅延する時間です。状態がTOPOLOGY_CHANGINGの場合に発生する各変更は、この時間だけ遅延を増やします。</p> <p>この遅延によって、リスナーに大量のイベントが送られるのを防ぎます。 </p> <p>遅延を使用しない場合は、0 または負の数を指定します。</p> </td> 
+   <td><p>トポロジに変更が発生した場合、状態の変更をTOPOLOGY_CHANGINGからTOPOLOGY_CHANGEDに遅延する時間。 状態がTOPOLOGY_CHANGINGの場合に発生する各変更は、この時間だけ遅延を増やします。</p> <p>この遅延によって、リスナーに大量のイベントが送られるのを防ぎます。 </p> <p>遅延を使用しない場合は、0 または負の数を指定します。</p> </td> 
    <td>3</td> 
   </tr> 
   <tr> 
@@ -145,7 +148,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
    <td>http://localhost:4502/libs/sling/topology/connector</td> 
   </tr> 
   <tr> 
-   <td>Topology Connector ホワイトリスト</td> 
+   <td>トポロジコネクタ許可リスト</td> 
    <td>topologyConnectorWhitelist</td> 
    <td>ローカル Topology Connector サービスによってトポロジ内で許可される IP アドレスまたはホスト名のリスト。 </td> 
    <td><p>localhost</p> <p>127.0.0.1</p> </td> 
@@ -164,14 +167,14 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
 1. ブラウザーで Web コンソールを開きます（[http://localhost:4502/system/console](http://localhost:4502/system/console)）。
 1. Main／Topology Management をクリックします。
 1. 「 Configure Discovery Service」をクリックします。
-1. Topology Connector URL プロパティに項目を追加し、ルートトポロジメンバーの Topology Connector サービスの URL を指定します。URLはhttps://rootservername:4502/libs/sling/topology/connectorの形式で指定します。
+1. Topology Connector URL プロパティに項目を追加し、ルートトポロジメンバーの Topology Connector サービスの URL を指定します。URLは、https://rootservername:4502/libs/sling/topology/connectorの形式で指定します。
 
-トポロジのルートメンバーで以下の手順を実行します。この手順では、その Discovery Service ホワイトリストに他のトポロジメンバーの名前を追加します。
+トポロジのルートメンバーで以下の手順を実行します。この手順では、他のトポロジメンバの名前がDiscovery Service許可リストに追加されます。
 
 1. ブラウザーで Web コンソールを開きます（[http://localhost:4502/system/console](http://localhost:4502/system/console)）。
 1. Main／Topology Management をクリックします。
 1. 「 Configure Discovery Service」をクリックします。
-1. トポロジの各メンバーについて、Topology Connector ホワイトリストプロパティに項目を追加し、トポロジメンバーのホスト名または IP アドレスを指定します。
+1. トポロジの各メンバに対して、[トポロジコネクタ許可リスト]プロパティに項目を追加し、トポロジメンバのホスト名またはIPアドレスを指定します。
 
 ## トピック使用の設定 {#configuring-topic-consumption}
 
@@ -197,6 +200,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
    * 有効：このインスタンスはこのトピックのジョブを使用します。
    * 無効：このインスタンスはこのトピックのジョブを使用しません。
    * 排他：このインスタンスはこのトピックのみのジョブを使用します。
+
    **注意：**&#x200B;あるトピックに対して「排他」を選択すると、他のすべてのトピックは自動的に「無効」に設定されます。
 
 ### インストール済みの JobConsumer {#installed-job-consumers}
@@ -205,23 +209,23 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
 
 | ジョブトピック | サービス PID | 説明 |
 |---|---|---|
-| / | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | Apache Sling とともにインストールされます。下位互換性のために、OSGi イベント管理によって生成されたジョブを処理します。 |
+| ／ | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | Apache Sling とともにインストールされます。下位互換性のために、OSGi イベント管理によって生成されたジョブを処理します。 |
 | com/day/cq/replication/job/&amp;ast; | com.day.cq.replication.impl.AgentManagerImpl | ジョブペイロードをレプリケートするレプリケーションエージェント。 |
 | com/adobe/granite/workflow/offloading | com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer | DAM アセット更新オフローダーワークフローによって生成されたジョブを処理します。 |
 
 ### インスタンスのトピックの無効化と有効化 {#disabling-and-enabling-topics-for-an-instance}
 
-Apache Sling JobConsumer Manager サービスによって、トピックのホワイトリストおよびブラックリストのプロパティが提供されます。これらのプロパティを設定して、Experience Manager インスタンスでの特定のトピックの処理を有効または無効にします。
+Apache Sling Job Consumer Managerサービスには、トピックの許可リストおよびブロックリストのプロパティが用意されています。 これらのプロパティを設定して、Experience Manager インスタンスでの特定のトピックの処理を有効または無効にします。
 
 **注意：**&#x200B;インスタンスがトポロジに属している場合は、トポロジ内の任意のコンピューターでオフロードするブラウザーを使用して、トピックを有効または無効にすることもできます。
 
-The logic that creates the list of enabled topics first allows all of the topics that are in the whitelist, and then removes topics that are on the blacklist.By default, all topics are enabled (the whitelist value is `*`) and no topics are disabled (the blacklist has no value).
+The logic that creates the list of enabled topics first allows all of the topics that are in the allow list, and then removes topics that are on the block list.By default, all topics are enabled (the allow list value is `*`) and no topics are disabled (the block list has no value).
 
 Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以下のプロパティを設定します。`sling:OsgiConfig` ノードの場合、JobConsumer Manager サービスの PID は、org.apache.sling.event.impl.jobs.JobConsumerManager です。
 
 | Web コンソールでのプロパティ名 | OSGi ID | 説明 |
 |---|---|---|
-| トピックホワイトリスト | job.consumermanager.whitelist | ローカル JobManager サービスによって処理されるトピックのリスト。&amp;ast；のデフォルト値を指定すると、すべてのトピックが登録済みのTopicConsumerサービスに送信されます。 |
+| トピックホワイトリスト | job.consumermanager.whitelist | ローカル JobManager サービスによって処理されるトピックのリスト。&amp;ast；のデフォルト値 を指定すると、すべてのトピックが登録済みのTopicConsumerサービスに送信されます。 |
 | トピックブラックリスト | job.consumermanager.blacklist | ローカル JobManager サービスによって処理されないトピックのリスト。 |
 
 ## オフロードのレプリケーションエージェントの作成 {#creating-replication-agents-for-offloading}
@@ -232,7 +236,7 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 >
 >自動的に生成されるレプリケーションエージェントには既知の問題があるので、新しいレプリケーションエージェントを手動で作成する必要があります。オフロードのエージェントを作成する前に、[自動生成されたレプリケーションエージェントの使用に関する問題](/help/sites-deploying/offloading.md#problems-using-the-automatically-generated-replication-agents)の手順に従ってください。
 
-オフロードのためにインスタンス間でジョブペイロードを転送するレプリケーションエージェントを作成します。以下の図に、作成者からワーカーインスタンスへのオフロードに必要なエージェントを示します。作成者のSling IDは1、ワーカーインスタンスのSling IDは2です。
+オフロードのためにインスタンス間でジョブペイロードを転送するレプリケーションエージェントを作成します。以下の図に、作成者からワーカーインスタンスへのオフロードに必要なエージェントを示します。作成者のSling IDは1で、ワーカーインスタンスのSling IDは2です。
 
 ![chlimage_1-115](assets/chlimage_1-115.png)
 
@@ -254,13 +258,13 @@ Use a specific format for the ***Name*** property of the replication agents so t
 
 **オーサーインスタンスの送信エージェントの命名：**
 
-`offloading_<slingid>`は、ワーカ `<slingid>` ーインスタンスのSling IDです。
+`offloading_<slingid>`( `<slingid>` は、ワーカーインスタンスのSling IDです)。
 
 例: `offloading_f5c8494a-4220-49b8-b079-360a72f71559`
 
 **オーサーインスタンスのリバースエージェントの命名：**
 
-`offloading_reverse_<slingid>`は、ワーカ `<slingid>` ーインスタンスのSling IDです。
+`offloading_reverse_<slingid>`( `<slingid>` は、ワーカーインスタンスのSling IDです)。
 
 例: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
@@ -275,7 +279,7 @@ Use a specific format for the ***Name*** property of the replication agents so t
 
    | プロパティ | 値 |
    |---|---|
-   | 設定／シリアル化の種類 | デフォルト値は |
+   | 設定／シリアル化の種類 | デフォルト |
    | トランスポート／トランスポート URI | https://*`<ip of target instance>`*:*`<port>`*`/bin/receive?sling:authRequestLogin=1` |
    | トランスポート／トランスポートユーザー | ターゲットインスタンスのレプリケーションユーザー |
    | トランスポート／トランスポートパスワード | ターゲットインスタンスのレプリケーションユーザーパスワード |
@@ -289,7 +293,7 @@ Use a specific format for the ***Name*** property of the replication agents so t
 
    | プロパティ | 値 |
    |---|---|
-   | 設定／シリアル化の種類 | デフォルト値は |
+   | 設定／シリアル化の種類 | デフォルト |
    | トランスポート／トランスポート URI | https://*`<ip of target instance>`*:*`<port>`*`/bin/receive?sling:authRequestLogin=1` |
    | トランスポート／トランスポートユーザー | ターゲットインスタンスのレプリケーションユーザー |
    | トランスポート／トランスポートパスワード | ターゲットインスタンスのレプリケーションユーザーパスワード |
@@ -302,7 +306,7 @@ Use a specific format for the ***Name*** property of the replication agents so t
 
    | プロパティ | 値 |
    |---|---|
-   | 設定／シリアル化の種類 | デフォルト値は |
+   | 設定／シリアル化の種類 | デフォルト |
    | トランスポート／トランスポート URI | repo://var/replication/outbox |
    | トリガー／デフォルトを無視 | True |
 
@@ -321,7 +325,7 @@ DAM で追加または更新されたアセットのバックグラウンド処�
 
 >[!CAUTION]
 >
->ワークフローのオフロードで使用する場合、ワークフローは一時的ではありません。 例えば、アセットのオフロードに対して使用するときに DAM アセット更新ワークフローを一時的にすることはできません。To set/unset the transient flag on a workflow, see [Transient Workflows](/help/assets/performance-tuning-guidelines.md#workflows).
+>ワークフローのオフロードで使用する場合、ワークフローは一時的なものではありません。 例えば、アセットのオフロードに対して使用するときに DAM アセット更新ワークフローを一時的にすることはできません。To set/unset the transient flag on a workflow, see [Transient Workflows](/help/assets/performance-tuning-guidelines.md#workflows).
 
 以下の手順では、次の特徴を持つオフロードトポロジを想定しています。
 
@@ -329,7 +333,7 @@ DAM で追加または更新されたアセットのバックグラウンド処�
 * ユーザーは、DAM アセットを処理する 1 つ以上の Experience Manager インスタンスと直接的にはやり取りしません。これらのインスタンスは、DAM アセットのバックグラウンド処理専用です。
 
 1. 各 Experience Manager インスタンスで、ルート Topology Connector を指すように Discovery Service を設定します（[トポロジメンバーシップの設定](#title4)を参照）。
-1. 接続するインスタンスをホワイトリストが含まれるようにルート Topology Connector を設定します。
+1. 接続するインスタンスが許可リスト上に来るようにルートの地形コネクタを設定します。
 1. Open Offloading Browser and disable the `com/adobe/granite/workflow/offloading` topic on the instances with which users interact to upload or change DAM assets.
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
