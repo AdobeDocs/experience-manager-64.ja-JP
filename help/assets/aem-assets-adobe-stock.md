@@ -3,7 +3,10 @@ title: AEM Assets での Adobe Stock アセットの使用
 description: AEM で Adobe Stock を検索、取得、ライセンスおよび管理します。ライセンスされたアセットをその他の AEM アセットとして扱います。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 04462c7162d8478d48f41e84c2f91ae7d025e423
+source-git-commit: 31d652ee04fe75e96f96c9ddc5a6f2c3c64bd630
+workflow-type: tm+mt
+source-wordcount: '1176'
+ht-degree: 94%
 
 ---
 
@@ -34,6 +37,9 @@ AEM と Adobe Stock の間でやり取りができるようにするには、AEM
 1. 「**[!UICONTROL タイトル]**」、「**[!UICONTROL 認証サーバー]**」、「**[!UICONTROL API キー]**」、「**[!UICONTROL クライアントの秘密鍵]**」および「**[!UICONTROL ペイロード]**」の各フィールドに適切な値を指定します。これらの値を Adobe I/O から取得する方法について詳しくは、[JWT 認証のクイックスタート](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md)（英語）を参照してください。
 1. ダウンロードした公開鍵を Adobe I/O サービスアカウントに追加します。
 
+<!-- TBD: Update the URL when the new URL is available. Logged issue github.com/AdobeDocs/adobeio-auth/issues/63.
+-->
+
 ### AEM での Adobe Stock 設定の作成 {#create-adobe-stock-configuration-in-aem}
 
 1. In AEM user interface, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**.
@@ -54,7 +60,7 @@ AEM 内で Adobe Stock アセットのライセンスを取得すると、その
 
 ![AEM Workspace から Adobe Stock アセットを検索して結果を絞り込む](assets/adobe-stock-search-results-workspace.png)
 
-*図：Adobe Stockアセットの検索とAEM Workspaceからの結果のフィルター*
+*図： Adobe Stockアセットの検索とAEM Workspaceからの結果のフィルター*
 
 **A.** 指定された Adobe Stock ID のアセットと類似しているアセットを検索します。**B.** 選択した形状や向きと一致するアセットを検索します。**C.** サポートされているアセットタイプのいずれかを検索します。**D.** フィルターウィンドウを開く／折りたたみます。**E.** 選択したアセットのライセンスを取得して AEM に保存します。**F.** アセットを透かし付きで AEM に保存します。**G.** 選択したアセットと類似したアセットを Adobe Stock Web サイトで調べます。**H.** 選択したアセットを Adobe Stock Web サイトに表示します。**I.** 検索結果から選択したアセットの数。**J.** カード表示とリスト表示を切り替えます。
 
@@ -74,7 +80,7 @@ AEM と Adobe Stock の両方でアセットを検索できます。検索場所
 
 ![AEM の検索フィルターと、検索結果内でハイライトされている Adobe Stock アセット](assets/aem-search-filters2.jpg)
 
-*図：AEMの検索フィルターと検索結果でのハイライト表示されたAdobe Stockアセット*
+*図： AEMの検索フィルターと検索結果でのAdobe Stockアセットのハイライト*
 
 ### 必要なアセットの保存と表示 {#saveassets}
 
@@ -92,7 +98,7 @@ Adobe Stock エンタープライズプランの割り当てを使用するこ�
 
 ![Adobe Stock アセットのライセンスを許諾して AEM Assets に保存するためのダイアログ](assets/aem-stock_licenseandsave.jpg)
 
-*図：AEM AssetsでAdobe Stockアセットのライセンスを取得し、保存するためのダイアログ*
+*図： AEM AssetsーでAdobe Stockアセットをライセンス認証して保存するためのダイアログ*
 
 ### メタデータおよびアセットプロパティへのアクセス {#access-metadata-and-asset-properties}
 
@@ -102,7 +108,7 @@ Adobe Stock エンタープライズプランの割り当てを使用するこ�
 
 ![保存されているアセットのメタデータとライセンス参照の表示、アクセス](assets/metadata_properties.jpg)
 
-*図：表示とアクセス、保存されたアセットのメタデータとライセンス参照*
+*図： 保存されたアセットのメタデータとライセンス参照の表示とアクセス*
 
 ## 既知の制限事項 {#known-limitations}
 
