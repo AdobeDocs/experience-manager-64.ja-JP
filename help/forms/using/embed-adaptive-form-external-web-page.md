@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: author
 discoiquuid: b99c7b93-ba05-42ee-9ca8-0079e15d8602
 translation-type: tm+mt
-source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
 workflow-type: tm+mt
-source-wordcount: '1271'
-ht-degree: 49%
+source-wordcount: '1274'
+ht-degree: 47%
 
 ---
 
@@ -29,7 +29,7 @@ You can [Embed adaptive form in AEM Sites](/help/forms/using/embed-adaptive-form
 * AEM パブリッシュインスタンスにアダプティブフォームをパブリッシュします。
 * Web サイト上で、アダプティブフォームをホストする Web ページを決定するか、新規に作成します。Ensure that the webpage can [read jQuery files from a CDN](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) or has a local copy of the jQuery embeded. アダプティブフォームをレンダリングするには、jQueryが必要です。
 * When AEM server and the web page are on different domains, perform the steps listed in sectiion, [enable AEM Forms to serve adaptive forms to a cross domain site](#cross-domain-sites).
-* [外部ページとAEM Formsサーバー間の通信を有効にするには、リバースプロキシ](#reveseproxy) を設定します。
+* [外部ページとAEM Formsサーバー間の通信を有効にするには、リバースプロキシ](#reveseproxy) (reverse proxy)を設定します。
 
 ## アダプティブフォームの埋め込み {#embed-adaptive-form}
 
@@ -155,7 +155,7 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 >[!NOTE]
 >
->その他のトポロジーをセットアップする場合は、ディスパッチャーレイヤーの送信、事前入力、およびその他の URL を必ずホワイトリストに登録してください。
+>その他のトポロジを設定する場合は、送信、事前入力およびその他のURLをディスパッチャーレイヤーの許可リストに追加します。
 
 ## ベストプラクティス {#best-practices}
 
