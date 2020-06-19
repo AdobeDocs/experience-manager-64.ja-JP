@@ -3,7 +3,7 @@ title: レンディションへの XMP の書き戻し
 description: XMP の書き戻し機能を使用して、アセットのメタデータの変更を、そのアセットのすべてのレンディションまたは特定のレンディションに反映させる方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b7180dcc7b50dca1c101a3fd28e031ef8e08f37f
+source-git-commit: 31d652ee04fe75e96f96c9ddc5a6f2c3c64bd630
 workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 46%
@@ -73,16 +73,6 @@ The metadata changes are propagated to the renditions `thumbnail.140.100.png` an
 ブロックリストを使用してフィルタリングすると、除外用に指定したプロパティを除く、すべてのXMPメタデータプロパティを読み込むことができます。 ただし、膨大な量の XMP メタデータ（例えば、10,000 個のプロパティを持つ 1,000 個のノード）を含む INDD ファイルなどのアセットタイプの場合、フィルタリングするノードの名前が必ずしも事前にわかるわけではありません。ブロックリストを使用してフィルタリングすると、多数のXMPメタデータを持つ大量のアセットを読み込める場合、AEMインスタンスまたはクラスターで、ログに記録された監視キューなど、安定性の問題が発生する可能性があります。
 
 許可リストを介したXMPメタデータのフィルタリングにより、読み込むXMPプロパティを定義できるので、この問題は解決されます。 この方法では、その他のXMPプロパティや不明なXMPプロパティは無視されます。 下位互換性を確保するために、ブロックリストを使用するフィルターにこれらのプロパティの一部を追加できます。
-
-<!-- TBD: The instructions don't seem to match the UI. I see com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.description
-in Config Manager. And the settings are,
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_whitelist.name
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.whitelist.name
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.apply_blacklist.name
-com.day.cq.dam.commons.metadata.XmpFilterBlackWhite.xmp.filter.blacklist.name
- 
-TBD: Make updates to configurations for allow and block list after product updates are done.
--->
 
 >[!NOTE]
 >
