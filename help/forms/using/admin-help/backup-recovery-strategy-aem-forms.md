@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f192a8a3-1116-4d32-9b57-b53d532c0dbf
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
 workflow-type: tm+mt
 source-wordcount: '1520'
-ht-degree: 93%
+ht-degree: 92%
 
 ---
 
@@ -88,7 +88,7 @@ AEM Forms を異なる環境に回復する場合、次のような変更点が�
    1. **Admin Options** をクリックします。
    1. **Start** をクリックして、リポジトリのアセットを同期します。
 
-1. クラスター環境では、マスターノード（AEM に関して）はスレーブノードよりも前に立ち上げなければなりません。
+1. クラスター環境では、プライマリノード（AEMに関して）はセカンダリノードの前に立ち上がっている必要があります。
 1. システムの通常処理が有効になるまで、Web、SOAP、EJB のプロセスイニシエーターなど、内部ソースまたは外部ソースからプロセスが開始されないようにします。
 
 メイン AEM Forms データベースを移動または変更した場合は、ご使用のアプリケーションサーバーに対応するインストールガイドを参照して、AEM Forms データソースの IDP_DS および EDC_DS のデータベース接続情報を更新します。
