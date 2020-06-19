@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 442cd4bb-21b8-4d9d-89a4-402ee22c79a7
 translation-type: tm+mt
-source-git-commit: 3cc4e08b3a69851e5d4e79eb8159ee00e8f333a0
+source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
 workflow-type: tm+mt
 source-wordcount: '7662'
 ht-degree: 92%
@@ -27,7 +27,7 @@ ht-degree: 92%
 
 * 監視フォルダー設定ノードのプロパティを設定する際に、folderPathプロパティに親ディレクトリのフルパスを入力し、作成する監視フォルダーの名前を追加します。次に例を示します。 `C:/MyPDFs/MyWatchedFolder`
 
-   フォル `MyWatchedFolder`ダーが存在しない場合、AEM Formsは指定されたパスにフォルダーを作成しようとします。
+   フォルダーが存在しま `MyWatchedFolder`せん。AEM Formsは、指定されたパスにフォルダーを作成しようとします。
 
 * ファイルシステム上にフォルダーを作成してから監視フォルダーエンドポイントを設定し、folderPath プロパティにフルパスを入力します。folderPath プロパティについて詳しくは、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
 
@@ -53,7 +53,6 @@ ht-degree: 92%
    * `inputProcessorType`
    * `inputProcessorId`
    * `outputFilePattern`
-
    サポートされているプロパティの完全なリストについては、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
 
 1. 「**すべて保存**」をクリックします。ノードの作成後、プロパティが保存されます。The `input`, `result`, `failure`, `preserve`, and `stage`folders are created at the path specified in the `folderPath` property.
@@ -141,7 +140,6 @@ ht-degree: 92%
    * %l = ミリ秒
    * %R = 乱数（0～9）
    * %P = プロセス ID またはジョブ ID
-
    例えば、2009 年 7 月 17 日午後 8 時に C:/Test/WF0/failure/%Y/%M/%D/%H/ と指定した場合、結果フォルダーは C:/Test/WF0/failure/2009/07/17/20 となります。
 
    絶対パスではなく相対パスを指定すると、そのフォルダーは監視フォルダーの中に作成されます。デフォルト値は result/%Y/%M/%D/ であり、監視フォルダー内の結果フォルダーです。ファイルパターンについて詳しくは、「[ファイルパターンについて](/help/forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)」を参照してください。
@@ -164,7 +162,7 @@ ht-degree: 92%
 
 * **overwriteDuplicateFilename（ブール型）**：この値を True に設定すると、結果フォルダーと保存用フォルダーにあるファイルが上書きされます。「False」に設定すると、ファイル名とフォルダー名の最後に数字のインデックスが付加されます。デフォルト値は False です。
 * **preserveOnFailure（ブール型）**：サービスで操作の実行に失敗した場合に、入力ファイルを保存します。デフォルト値は true です。
-* **inputFilePattern（文字列型）**：監視フォルダー向けに入力ファイルのパターンを指定します。ファイルのホワイトリストを作成します。
+* **inputFilePattern（文字列型）**：監視フォルダー向けに入力ファイルのパターンを指定します。ファイルの許可リストを作成します。
 * **asynch（ブール型）**：呼び出しを非同期型にするか同期型にするかを指定します。デフォルト値は true（非同期型）です。ファイル処理はリソースを消費するタスクです。asynch フラグの値を true のままにして、スキャンジョブのメインスレッドが停止しないようにしてください。クラスター環境では、フラグを true のままにしておいて、利用可能なサーバー間で処理されているファイルのロードバランシング機能を有効化することが非常に重要です。フラグを false に設定すると、スキャンジョブは、トップレベルのファイルまたはフォルダーを順にそれぞれのスレッド内で処理しようとします。単一のサーバー環境上でワークフローベースの処理を行うなど、特別な理由がある場合を除き、フラグは false に設定しないでください。
 
 >[!NOTE]
@@ -536,7 +534,6 @@ log.info("Exiting workflow script!")
 
    * 監視フォルダーに対する includeFilePattern プロパティを、どの新しい入力ファイルにも一致しない値に変更します（例えば、NOMATCH と入力します）。
    * 新しい入力ファイルを作成しているプロセスを休止します。
-
    AEM Forms がすべてのファイルを回復して処理するまで待機します。ファイルの大多数は回復され、新しい入力ファイルは正しく処理されます。監視フォルダーがファイルを回復し、処理するまでの待機時間の長さは、呼び出す操作の長さおよび回復するファイルの数によって異なります。
 
 1. 処理できないファイルを特定します。適切な待機時間が経過し、前の手順を完了した上、ステージフォルダーに未処理のファイルが残っている場合は、次の手順に進みます。
