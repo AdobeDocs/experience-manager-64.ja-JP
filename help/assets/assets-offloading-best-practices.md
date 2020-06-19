@@ -3,7 +3,7 @@ title: Assets のオフロードのベストプラクティス
 description: AEM Assets におけるアセットの取り込みやレプリケーションのワークフローのオフロードの推奨される使用例およびベストプラクティス。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+source-git-commit: 31d652ee04fe75e96f96c9ddc5a6f2c3c64bd630
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 72%
@@ -112,6 +112,7 @@ AEM および Oak を使用する場合、複数の導入シナリオが考え�
 1. Change value of the property `default.transport.agent-to-master.prefix` from `offloading_reverse` to `offloading`.
 
 <!-- TBD: Make updates to the configuration for allow and block list after product updates are done.
+TBD: Update the property in the last step when GRANITE-30586 is fixed.
 -->
 
 ### オーサーとワーカーの間での共有データストアおよびバイナリレスレプリケーションの使用  {#using-shared-datastore-and-binary-less-replication-between-author-and-workers}
