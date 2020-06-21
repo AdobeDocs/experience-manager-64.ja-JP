@@ -10,7 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 translation-type: tm+mt
-source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+source-git-commit: 13e1da76d72277687f35d783de6d887ab7c1b52d
+workflow-type: tm+mt
+source-wordcount: '441'
+ht-degree: 72%
 
 ---
 
@@ -19,12 +22,12 @@ source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
 
 [ページプロパティの一括編集](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages)を使用すると、複数のページのプロパティを一度に編集できます。
 
-さまざまな値が存在する可能性があるので、ページプロパティの一括編集はデフォルトでは無効になっています。明示的にホワイトリストを作成（有効化）する必要があります。ページプロパティを一括編集可能なように定義するには、次のような関連事項を考慮する必要があります。
+異なる値が存在する可能性があるため、ページプロパティはデフォルトでバルク編集に対して有効になっていません。 明示的に許可（有効）する必要があります。 バルク編集で使用できるようにページプロパティを定義する場合は、次のような特定の意味を考慮する必要があります。
 
 * ページタイトルなど、通常は一意なフィールドがあります。1 つの値が適用される場合に、そのようなフィールドの一括編集を有効にして意味があるかどうかを決断する必要があります。
 * 特定のフィールドには、複数の値を持たせることができます。そのためには、レンダリング時に意味のある表現が必要です。
 
-   例えば、「発行の準備ができました」を示すチェックボックスを選択します。 この値は、バルク編集の前に複数の値を持つ場合があります（例：準備完了、レビュー中、進行中）。
+   例えば、「発行の準備ができた」を示すチェックボックスです。 これは、バルク編集の前に複数の値を持つ場合があります（例：準備完了、レビュー中、進行中）。
 
 >[!CAUTION]
 >
@@ -33,6 +36,7 @@ source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
 >* クラシック UI では使用できません。
 >* ライブコピー内のページでは使用できません。
 >* リソースタイプが同じページでのみ使用できます。
+
 >
 
 
@@ -53,6 +57,7 @@ source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
 >* `/libs/granite/ui/components/foundation/form/datepicker`
 >* `/libs/granite/ui/components/foundation/form/pathbrowser`
 >* `/libs/granite/ui/components/foundation/form/checkbox`
+
 >
 
 
@@ -61,18 +66,19 @@ source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
 
 1. CRXDE Lite（または同等のメソッド）を使用して、ページコンポーネントを開きます。
 
-   次に例を示します。`/apps/core/wcm/components/page/v1/page`
+   例：`/apps/core/wcm/components/page/v1/page`
 
    >[!NOTE]
    >
-   >この例では、コアコンポーネントがインスタンスにインストールされ、インスタンスが We.Retail サンプルコンテンツと共に実行されていることを想定しています。詳しくは、[コアコンポーネントのドキュメント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)を参照してください。
+   >この例では、コアコンポーネントがインスタンスにインストールされ、インスタンスが We.Retail サンプルコンテンツと共に実行されていることを想定しています。詳しくは、[コアコンポーネントのドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を参照してください。
 
 1. Navigate to the required field within the `cq:dialog` definition.
 1. フィールドノードで次のプロパティを定義します。
 
-   * **名前**: `allowBulkEdit`
-   * **タイプ**: `Boolean`
+   * **名前**：`allowBulkEdit`
+   * **Type**: `Boolean`
    * **値**: `true`
+
    例えば、標準的なページの[基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)の場合：
 
    `/libs/foundation/components/page`
@@ -83,14 +89,14 @@ source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
 
    >[!CAUTION]
    >
-   >You ***must*** not change anything in the `/libs` path.
+   >`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
    >
-   >This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may well be overwritten when you apply either a hotfix or feature pack).
+   >`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
    >
    >設定およびその他の変更に推奨される方法は次のとおりです。
    >
    >    1. Recreate the required item (i.e. as it exists in `/libs`) under `/apps`
-   >    1. Make any changes within `/apps`
+   >    1. `/apps` 内で変更作業をおこないます。
 
 
 1. 「**すべて保存**」を選択して更新内容を保持します。
