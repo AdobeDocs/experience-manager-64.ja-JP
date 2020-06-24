@@ -10,7 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: a84fd0ab-0bcd-48cf-bba3-fb29308fa0f8
 translation-type: tm+mt
-source-git-commit: 152f60a7c9579d89cca5dc326679dc5a08d4dd5f
+source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+workflow-type: tm+mt
+source-wordcount: '540'
+ht-degree: 81%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 152f60a7c9579d89cca5dc326679dc5a08d4dd5f
 
 ## Adobe Target の登録 {#registering-with-adobe-target}
 
-AEM と Adobe Target を統合するには、有効な Adobe Target アカウントが必要です。このアカウントには、**approver **level権限が最低限必要です。 Adobe Target に登録すると、クライアントコードを受け取ります。AEM を Adobe Target に接続するには、クライアントコードおよび Adobe Target のログイン名とパスワードが必要です。
+AEM と Adobe Target を統合するには、有効な Adobe Target アカウントが必要です。このアカウントには、最低でも**approver **levelの権限が必要です。 Adobe Target に登録すると、クライアントコードを受け取ります。AEM を Adobe Target に接続するには、クライアントコードおよび Adobe Target のログイン名とパスワードが必要です。
 
 クライアントコードは、Adobe Target サーバーを呼び出すときに Adobe Target の顧客アカウントを識別します。
 
@@ -30,7 +33,7 @@ AEM と Adobe Target を統合するには、有効な Adobe Target アカウン
 >統合を使用するには、Target チームによってご自身のアカウントも有効にされている必要があります。
 >
 >
->そうでない場合は、[Adobe Target カスタマーケア](https://marketing.adobe.com/resources/help/en_US/target/target/r_problem.html)にご連絡ください。
+>そうでない場合は、[Adobe Target カスタマーケア](https://docs.adobe.com/content/help/en/target/using/cmp-resources-and-contact-information.html)にご連絡ください。
 
 ## Target レプリケーションエージェントの有効化 {#enabling-the-target-replication-agent}
 
@@ -51,7 +54,7 @@ Test &amp; Target [レプリケーションエージェント](/help/sites-deplo
 
 権限のないユーザーがアクセスできないように、パブリッシュインスタンスでアクティビティ設定ノード **cq:ActivitySettings** を保護する必要があります。アクティビティ設定ノードには、Adobe Target へのアクティビティの同期を処理するサービスのみがアクセスできるようにしてください。
 
-**cq:ActivitySettingsノ**&#x200B;ードは、activities jcr:contentノードの下の`/content/campaigns/*nameofbrand*` * **&#x200B;の下のCRXDE liteで使用できます。*例 `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`: このノードは、コンポーネントのターゲティング後にのみ作成されます。
+The **cq:ActivitySettings** node is available in CRXDE lite under `/content/campaigns/*nameofbrand*`* *under the activities jcr:content node;* *for example `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. このノードは、コンポーネントのターゲティング後にのみ作成されます。
 
 The **cq:ActivitySettings** node under the activity&#39;s jcr:content is protected by the following ACLs:
 
