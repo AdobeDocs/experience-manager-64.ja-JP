@@ -10,7 +10,10 @@ topic-tags: Dynamic-Media
 content-type: reference
 discoiquuid: b721dc7c-b056-47f5-9489-9f4db45b68a0
 translation-type: tm+mt
-source-git-commit: a892ef7ab018aca715693125808d7ade540c8242
+source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+workflow-type: tm+mt
+source-wordcount: '10507'
+ht-degree: 78%
 
 ---
 
@@ -25,17 +28,18 @@ source-git-commit: a892ef7ab018aca715693125808d7ade540c8242
 
 >[!NOTE]
 >
->Dynamic Media のビデオを操作する前に、AEM 管理者が既に Dynamic Media クラウドサービスを有効にして設定を完了していることを確認してください。
+>Dynamic Media のビデオを操作する前に、AEM 管理者が既に Dynamic Media Cloud Services を有効にして設定を完了していることを確認してください。
 >
 >* [Dynamic Media - ハイブリッドモードの設定の Dynamic Media クラウドサービスの設定を参照してください。](/help/assets/config-dynamic.md)
 >* [ダイナミックメディア - Scene7 モードの設定](config-dms7.md)および[ダイナミックメディア - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)を参照してください。
+
 >
 
 
 
 1. 次の手順を実行して、**Dynamic Media ビデオをアップロードします**。
 
-   * 独自のビデオエンコーディングプロファイルを作成します。 または、ダイナミックメディアに付属の定義済みの「アダプティブビデオエンコーディング」プロファイルを使用するだけでもかまいません。
+   * 独自のビデオエンコーディングプロファイルを作成します。 または、Dynamic Mediaに付属の定義済みの「アダプティブビデオエンコーディング」プロファイルを使用するだけでもかまいません。
 
       * [ビデオエンコーディングプロファイルの作成](video-profiles.md)
       * [ビデオエンコーディングのベストプラクティス](#best-practices-for-encoding-videos)に関する詳細
@@ -105,10 +109,10 @@ source-git-commit: a892ef7ab018aca715693125808d7ade540c8242
 
       * URL を使用したビデオの統合：
 
-         [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md).
+         [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)。
       * Web ページの埋め込みコードを使用したビデオの統合：
 
-         [Web ページへのビデオビューアの埋め込み](embed-code.md).
+         [Web ページへのビデオビューアの埋め込み](embed-code.md)。
    * [YouTube にビデオを公開します](#publishing-videos-to-youtube)。
    * [ビデオレポートを生成します](#viewing-video-reports)。
    * [ビデオにキャプションを追加します](#adding-captions-to-video)。
@@ -144,7 +148,7 @@ Dynamic Media のビデオは、高品質のアダプティブビデオを簡単
 * 効率的なビデオアセット管理のための、メタデータが完全にサポートされたビデオの整理、参照および検索。
 * Web やデスクトップおよびモバイルデバイス（iPhone、iPad、Android、Blackberry および Windows Phone を含む）へのアダプティブビデオセットの配信。
 
-アダプティブビデオのストリーミングは、各種 iOS プラットフォームでサポートされています。See the [Adobe Viewers Reference Guide](https://marketing.adobe.com/resources/help/ja_JP/s7/_ref/c_viewers_about.html).
+アダプティブビデオのストリーミングは、各種 iOS プラットフォームでサポートされています。See the [Adobe Viewers Reference Guide](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
 
 Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサポートされています。このビデオ形式をサポートする Blackberry デバイスについては、[Blackberry でサポートされているビデオ形式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)のページで確認できます。
 
@@ -160,7 +164,7 @@ Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサ�
 
 詳しくは、[動的なビデオ再生](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480)を参照してください。
 
-『Adobe Scene7 ビューアリファレンスガイド』の [HTML5 ビューアについて](https://marketing.adobe.com/resources/help/ja_JP/s7/viewers_ref/c_html5_viewers_about.html)も参照してください。
+『Adobe Scene7 ビューアリファレンスガイド』の [HTML5 ビューアについて](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html)も参照してください。
 
 ## ベストプラクティス：HTML5 ビデオビューアの使用 {#best-practice-using-the-html-video-viewer}
 
@@ -172,7 +176,7 @@ Dynamic Media の HTML5 ビデオビューアプリセットは堅牢なビデ�
 
 HTML5 と CSS を使用して再生コンポーネントをデザインできる機能、埋め込み再生の機能、ブラウザーの機能に応じてアダプティブストリーミングまたはプログレッシブストリーミングを使用できる機能を 1 つのプレーヤーにまとめることで、リッチメディアコンテンツを配信する範囲をデスクトップユーザーとモバイルユーザーの両方に拡大して、ビデオエクスペリエンスを効率化することができます。
 
-『Adobe ビューアリファレンスガイド』の [HTML5 ビューアについて](https://marketing.adobe.com/resources/help/ja_JP/s7/viewers_ref/c_html5_viewers_about.html)も参照してください。
+『Adobe ビューアリファレンスガイド』の [HTML5 ビューアについて](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html)も参照してください。
 
 ### HTML5 ビデオビューアを使用した、デスクトップコンピューターおよびモバイルデバイス上でのビデオ再生 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
 
@@ -479,7 +483,7 @@ YouTubeに投稿するには、Googleアカウントが必要です。 GMAILア�
 1. **[!UICONTROL ダッシュボード]** ページで、「プロジェクトを **[!UICONTROL 作成]**」をタップします。
 1. In the **[!UICONTROL New Project]** dialog box, enter in a project name.
 
-    プロジェクト ID は、プロジェクト名に基づいて付けられます。そのため、プロジェクト名は慎重に選んでください。プロジェクト名を後で変更することはできません。また、後でAdobe Experience ManagerでYouTubeを設定する場合は、同じプロジェクトIDを再度入力する必要があります。 このプロジェクト ID はメモしておいてください。
+    プロジェクト ID は、プロジェクト名に基づいて付けられます。そのため、プロジェクト名は慎重に選んでください。プロジェクト名を後で変更することはできません。また、後でYouTubeをAdobe Experience Managerで設定する場合は、同じプロジェクトIDを再度入力する必要があります。 このプロジェクト ID はメモしておいてください。
 1. 「**[!UICONTROL 作成]**」をタップします。
 
 1. On your project’s **[!UICONTROL Dashboard]**, in the **[!UICONTROL Getting Started]** card, tap **[!UICONTROL Enable APIs and get credentials like keys]**.
@@ -597,7 +601,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
 
    次は、公開用タグを設定します。
 
-1. **投稿用のタグの設定** - **[!UICONTROL クラウドサービス/YouTubeページで、]** 鉛筆 **** アイコンをタップし、使用するタグのリストを編集します。
+1. **投稿用のタグの設定** - **[!UICONTROL Cloud Service/YouTubeページで、]** 鉛筆 **** アイコンをタップし、使用するタグのリストを編集します。
 1. ドロップダウンリストアイコン（上下逆のキャレット）をタップして、AEM で利用可能なタグのリストを表示します。
 1. 1 つ以上のタグをタップして追加します。
 
@@ -779,6 +783,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
    >* Apache Sling Job Queue Configuration
    >* Adobe Granite Workflow External Process Job Handler
    >* Granite Workflow Timeout Queue
+
    > 
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
 
@@ -811,6 +816,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
    >* Apache Sling Job Queue Configuration
    >* Adobe Granite Workflow External Process Job Handler
    >* Granite Workflow Timeout Queue
+
    >
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
 
@@ -841,6 +847,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
    * **[!UICONTROL 公開開始]**
    * **[!UICONTROL 公開の失敗]**
    * **[!UICONTROL 投稿完了]**(チャネルとURLに関する情報を含む)
+
    チェックボックスをオフにすると、YouTube の公開ワークフローから指定された電子メール通知は届きません。
 
    >[!NOTE]
@@ -849,7 +856,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 
 ## ビデオレポートの表示 {#viewing-video-reports}
 
-ビデオレポートは、ダイナミックメディア — ハイブリッドモードを実行する場合に使用できます。 ダイナミックメディア — Scene7モードを実行している場合、レポートは使用できません。
+ビデオレポートは、Dynamic Media — ハイブリッドモードを実行する場合に使用できます。 レポートは、Dynamic Media- Scene7モードを実行している場合は使用できません。
 
 ビデオレポートには、指定した期間における様々な集計指標が表示されます。ユーザーはビデオレポートを使用して、公開済みの個々のビデオやビデオの集合が期待どおりに動作しているかを監視できます。次のトップの指標データは、Web サイト全体のすべての公開済みビデオについて集計されるものです。
 
@@ -873,7 +880,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 
 デフォルトでは、ビデオレポートを最初に開いたときに、今月初めから今月の今日の日付までのビデオデータが表示されます。ただし、このデフォルトの日付範囲を上書きして、独自の日付範囲を指定することができます。次回ビデオレポートを開くと、指定した日付範囲が使用されます。
 
-ビデオレポートの正常動作のために、Dynamic Media クラウドサービスの設定時に、レポートスイート ID が自動的に作成されます。そのときに、そのレポートスイート ID がパブリッシュサーバーにプッシュされ、アセットのプレビューの際に URL のコピー機能で使用できるようになります。ただし、そのためにはパブリッシュサーバーを事前にセットアップしておく必要があります。パブリッシュサーバーがセットアップされていない場合でも、公開してビデオレポートを確認することはできますが、その際には Dynamic Media クラウド設定に戻って「**OK**」をタップする必要があります。
+ビデオレポートの正常動作のために、Dynamic Media Cloud Services の設定時に、レポートスイート ID が自動的に作成されます。そのときに、そのレポートスイート ID がパブリッシュサーバーにプッシュされ、アセットのプレビューの際に URL のコピー機能で使用できるようになります。ただし、そのためにはパブリッシュサーバーを事前にセットアップしておく必要があります。パブリッシュサーバーがセットアップされていない場合でも、公開してビデオレポートを確認することはできますが、その際には Dynamic Media クラウド設定に戻って「**OK**」をタップする必要があります。
 
 **ビデオレポートを表示するには**:
 
@@ -897,7 +904,7 @@ Dynamic Media で標準提供されているビデオビューアを使用して
 
 独自のビデオビューアを作成するには、Scene7 ビューアリファレンスと Scene7 HTML5 ビューア SDK を使用します。
 
-詳しくは、[Scene7 ビューアリファレンスガイド](https://marketing.adobe.com/resources/help/ja_JP/s7/viewers_ref/index.html)を参照してください。
+詳しくは、[Scene7 ビューアリファレンスガイド](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)を参照してください。
 
 Scene7 HTML ビューア SDK は、Adobe Developer Connection からダウンロードできます。
 
@@ -973,7 +980,7 @@ Scene7 HTML5 ビューア SDK を使用して作成したビデオビューア�
 
 Dynamic Media には、キャプションファイルを JSON（JavaScript Object Notation）形式に変換する機能があります。このように変換できるので、JSON テキストを、ビデオの完全なトランスクリプトとして表示せずに Web ページに埋め込むことができます。この後、検索エンジンがコンテンツをクロールしてインデックスを作成できます。これにより、ビデオを検索しやすくなり、ビデオコンテンツの詳細がユーザーに提供されます。
 
-URL で JSON 機能を使用する方法について詳しくは、Scene7 画像サービング API ヘルプの[静的コンテンツ（画像以外）の提供（英語）](https://marketing.adobe.com/resources/help/ja_jp/s7/is_ir_api/is_api/c_serving_static_nonimage_contents.html)を参照してください。**
+URL で JSON 機能を使用する方法について詳しくは、Scene7 画像サービング API ヘルプの[静的コンテンツ（画像以外）の提供（英語）](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html)を参照してください。**
 
 **ビデオにキャプションまたはサブタイトルを追加するには**：
 
@@ -1008,7 +1015,7 @@ URL で JSON 機能を使用する方法について詳しくは、Scene7 画像
 
 1. 次のいずれかの操作をおこないます。
 
-   * ポップアップビデオビューアエクスペリエンスの場合「 **[!UICONTROL URL]**」をタップします。 URL ダイアログボックスで、URL を選択してクリップボードにコピーし、その URL を単純なテキストエディターに貼り付けます。コピーしたビデオの URL を次の構文で追加します。
+   * ポップアップビデオビューアエクスペリエンスの場合、「**[!UICONTROL URL]**」をタップします。URL ダイアログボックスで、URL を選択してクリップボードにコピーし、その URL を単純なテキストエディターに貼り付けます。コピーしたビデオの URL を次の構文で追加します。
 
       `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
 
