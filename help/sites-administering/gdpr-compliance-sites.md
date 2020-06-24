@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
 translation-type: tm+mt
-source-git-commit: 0db56cb77628b3e81b69382a314c30b43887bde6
+source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+workflow-type: tm+mt
+source-wordcount: '850'
+ht-degree: 91%
 
 ---
 
@@ -19,13 +22,13 @@ source-git-commit: 0db56cb77628b3e81b69382a314c30b43887bde6
 
 >[!IMPORTANT]
 >
->以下の節ではGDPRを例として挙げているが、詳細はデータ保護とプライバシーに関する規制に適用される。（GDPR、CCPAなど）
+>以下の節ではGDPRを例に挙げていますが、詳細はデータ保護とプライバシーに関するすべての規制に適用されます。 GDPR、CCPAなど
 
 データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018 年 5 月に発効します。
 
 AEM Sites は、GDPR コンプライアンスの義務に関してお客様を支援する準備ができています。このページでは、AEM Sites での GDPR 要求の処理手順について詳しく説明します。プライベートデータの格納場所や、それらのデータを手動で、またはコードを使用して削除する方法について説明します。
 
-詳しくは、[アドビプライバシーセンターの GDPR ページ](https://www.adobe.com/privacy/general-data-protection-regulation.html)を参照してください。
+詳しくは、[アドビプライバシーセンターの GDPR ページ](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html)を参照してください。
 
 >[!NOTE]
 >
@@ -49,13 +52,13 @@ AEM has a [cookie opt-out service](/help/sites-developing/cookie-optout.md) that
 
 AEM Sitesには、Adobe Analytics On-demand サービス内の機能を使用した、Analytics によるインサイトの拡張との統合（オプション）が含まれています。
 
-Adobe Analytics に関連する GDPR データサブジェクトリクエストの管理についての詳細は、[Adobe Analytics と GDPR](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/) を参照してください。
+Adobe Analytics に関連する GDPR データサブジェクトリクエストの管理についての詳細は、[Adobe Analytics と GDPR](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html) を参照してください。
 
 ## Target によるパーソナライゼーションの拡張 {#enhanced-personalization-by-target}
 
 AEM Sitesには、Adobe Target On-demand サービス内の機能を使用した、Target によるパーソナライゼーションの拡張との統合（オプション）が含まれています。
 
-Adobe Target に関連する GDPR データサブジェクトリクエストの管理についての詳細は、[Adobe Target - プライバシーと一般データ保護規則](https://marketing.adobe.com/resources/help/en_US/target/target/privacy-and-general-data-protection-regulation.html)を参照してください。
+Adobe Target に関連する GDPR データサブジェクトリクエストの管理についての詳細は、[Adobe Target - プライバシーと一般データ保護規則](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)を参照してください。
 
 ## ContextHub {#contexthub}
 
