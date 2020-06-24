@@ -10,10 +10,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d1f45751-1761-4d6b-b17d-110b2f1117ea
 translation-type: tm+mt
-source-git-commit: fbf38e7e41ef33bca5867c7b6eb1f6806ca70a08
+source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
 workflow-type: tm+mt
-source-wordcount: '2865'
-ht-degree: 51%
+source-wordcount: '2830'
+ht-degree: 61%
 
 ---
 
@@ -30,50 +30,50 @@ You add dynamic media assets directly to the page if you are using AEM as your W
 
 ## ページへの Dynamic Media コンポーネントの追加 {#adding-a-dynamic-media-component-to-a-page}
 
-ダイナミックメディアコンポーネントをページに追加するのは、コンポーネントをページに追加するのと同じです。 ダイナミックメディアコンポーネントについては、以下の節で詳しく説明します。
+Dynamic Mediaコンポーネントをページに追加するのは、任意のページにコンポーネントを追加するのと同じです。 Dynamic Mediaコンポーネントについては、以下の節で詳しく説明します。
 
 >[!NOTE]
 >
->読み取り専用権限を持つユーザーがWebページにアクセスするダイナミックメディアコンポーネントがある場合、ページが壊れ、コンポーネントが正しくレンダリングされません。 これは、コンポーネントのプロパティが適切で、参照されているアセットや設定にアクセスできることを確認するためにページが再構築されるためです。 次に、ページが再びレンダリングされ、コンポーネントが壊れます。 ユーザーの読み取り専用アクセス権が原因で、ページ上の各コンポーネントコードを再レンダリングできません。
+>読み取り専用権限を持つDynamic MediaがWebページにアクセスするユーザーコンポーネントがある場合、ページは壊れ、コンポーネントは正しくレンダリングされません。 これは、コンポーネントのプロパティが適切で、参照されているアセットや設定にアクセスできることを確認するためにページが再構築されるためです。 次に、ページが再びレンダリングされ、コンポーネントが壊れます。 ユーザーの読み取り専用アクセス権が原因で、ページ上の各コンポーネントコードを再レンダリングできません。
 >  
->この問題を回避するには、AEMサイトのユーザーに、アセットにアクセスするために必要な権限があることを確認してください。
+>この問題を回避するには、AEM Sitesユーザーに、アセットへのアクセスに必要な権限があることを確認してください。
 
 1. AEM で、Dynamic Media コンポーネントを追加するページを開きます。
 1. ページの左側にあるパネル（サイドパネルの表示を切り替える必要がある場合があります）で、 **[!UICONTROL コンポーネント]** アイコンをクリックします。
-1. 「 **[!UICONTROL コンポーネント]** 」見出しのドロップダウンリストで、「 **[!UICONTROL ダイナミックメディア]**」を選択します。 使用可能なダイナミックメディアコンポーネントのリストがない場合は、使用するダイナミックメディアコンポーネントを有効にする必要がある可能性があります。 See [Enabling Dynamic Media components](#enabling-dynamic-media-components).
+1. 「 **[!UICONTROL コンポーネント]** 」見出しのドロップダウンリストで、「 **[!UICONTROL Dynamic Media」を選択します]**。 Dynamic Media コンポーネントのリストがない場合は、使用する Dynamic Media コンポーネントを有効にしなければならない可能性があります。詳しくは、[Dynamic Media コンポーネントの有効化](#enabling-dynamic-media-components)を参照してください。
 
    ![chlimage_1-537](assets/chlimage_1-537.png)
 
-1. 使用するダイナミックメディアコンポーネントをページの目的の位置にドラッグします。
+1. 使用するDynamic Mediaコンポーネントをページ上の目的の位置にドラッグします。
 1. コンポーネントの上に直接マウスポインターを置きます。コンポーネントが青色のボックスで囲まれた時点で 1 回タップすると、コンポーネントのツールバーが表示されます。****&#x200B;設定（レンチ） アイコンをタップします。
 1. [必要に応じてコンポーネントを編集し](#dynamic-media-components) 、チェックマークをクリックして変更を保存します。
 
-### Enabling Dynamic Media components {#enabling-dynamic-media-components}
+### Dynamic Media コンポーネントの有効化 {#enabling-dynamic-media-components}
 
-ページに追加できるダイナミックメディアコンポーネントがない場合は、まず使用するコンポーネントを有効にする必要がある可能性があります。
+ページに追加できる Dynamic Media コンポーネントがない場合は、使用するコンポーネントをまず有効にしなければならない可能性があります。
 
 1. AEM で、Dynamic Media コンポーネントを追加するページを開きます。
-1. ツールバーの左側で、ページ上部近くにあります。ページ情報アイコンをタップし、ドロップダウンリストから「テンプレート **[!UICONTROL の編集]** 」をタップします。
+1. ページ上部付近のツールバーの左側にあるページ情報アイコンをタップした後、ドロップダウンリストから「**[!UICONTROL テンプレートを編集]**」をタップします。
 
    ![edit-template](/help/assets/assets-dm/edit-template.png)
 
-1. ツールバーの右側で、ページの上部に近いドロップダウンリストから「 **[!UICONTROL 構造]**」をタップします。
+1. ページ上部付近のツールバーの右側で、ドロップダウンリストから「**[!UICONTROL 構造]**」をタップします。
 
    ![ポリシー](/help/assets/assets-dm/structure-mode.png)
 
-1. ページ下部近くにある「 **[!UICONTROL レイアウトコンテナ]** 」をタップしてツールバーを開き、ポリシーアイコンをタップします。
-1. レイ **[!UICONTROL アウトコンテナ]** ページの「 **[!UICONTROL プロパティ]** 」見出しの下で、「 **[!UICONTROL 許可されているコンポーネント]** 」タブが選択されていることを確認します。
+1. ページ下部付近の「**[!UICONTROL レイアウトコンテナ]**」をタップしてツールバーを開き、ポリシーアイコンをタップします。
+1. **[!UICONTROL レイアウトコンテナ]**&#x200B;ページの「**[!UICONTROL プロパティ]**」見出しの下で、「**[!UICONTROL 許可されたコンポーネント]**」タブが選択されていることを確認します。
 
-   ![許可されているコンポーネント](/help/assets/assets-dm/allowed-components.png)
+   ![許可されたコンポーネント](/help/assets/assets-dm/allowed-components.png)
 
-1. ダイナミックメディアが表示されるまでスクロ **[!UICONTROL ールし]**&#x200B;ます。
-1. ダイナミックメディア **[!UICONTROL の左にある>アイコンをタップして]** リストを展開し、有効にするダイナミックメディアコンポーネントを選択します。
+1. **[!UICONTROL Dynamic Media]** が表示されるまでスクロールします。
+1. **[!UICONTROL Dynamic Media]** の左側にある「>」アイコンをタップしてリストを展開し、有効にする Dynamic Media コンポーネントを選択します。
 
-   ![ダイナミックメディアコンポーネントリスト](/help/assets/assets-dm/dm-components-select.png)
+   ![Dynamic Media コンポーネントリスト](/help/assets/assets-dm/dm-components-select.png)
 
-1. レイ **[!UICONTROL アウトコンテナ]** ページの右上隅近くにある「完了」（チェックマーク）アイコンをタップします。
+1. **[!UICONTROL レイアウトコンテナ]**&#x200B;ページの右上隅付近にある「完了」（チェックマーク）アイコンをタップします。
 
-1. ツールバーの右側のページの上部付近にあるドロップダウンリストで、「 **[!UICONTROL 初期コンテンツ]**」をタップし、通常どおりにページにダイナミックメディアコンポーネントを [追加します](#adding-a-dynamic-media-component-to-a-page) 。
+1. ページ上部付近のツールバーの右側で、ドロップダウンリストから「**[!UICONTROL 初期コンテンツ]**」をタップした後、通常どおりに[ページに Dynamic Media コンポーネントを追加](#adding-a-dynamic-media-component-to-a-page)します。
 
 ## Localizing Dynamic Media components {#localizing-dynamic-media-components}
 
@@ -91,23 +91,23 @@ Dynamic Media コンポーネントのローカライズの方法は 2 つあり
 
 ## Dynamic Media components {#dynamic-media-components}
 
-Dynamic Media and Interactive Media are available under the [!UICONTROL Dynamic Media] tab in [!UICONTROL Components]. インタラクティブビデオ、インタラクティブ画像、カルーセルセットなどのインタラクティブアセットには、Interactive Media]コンポーネントを使用します。 その他すべてのダイナミックメディアコンポーネントでは、ダイナミックメディアコンポーネントを使用します。
+Dynamic Media and Interactive Media are available under the [!UICONTROL Dynamic Media] tab in [!UICONTROL Components]. [!UICONTROL インタラクティブメディア]コンポーネントは、すべてのインタラクティブアセット（インタラクティブビデオ、インタラクティブ画像、カルーセルセットなど）に使用します。その他すべてのダイナミックメディアコンポーネントでは、ダイナミックメディアコンポーネントを使用します。
 
 >[!NOTE]
 >
->これらのコンポーネントはデフォルトでは使用できないので、使用前にテンプレートエディターで使用可能にする必要があります。[テンプレートエディタ](/help/sites-authoring/templates.md#editing-templates-template-authors)ーで使用可能になったコンポーネントは、他のAEMコンポーネントと同様にページに追加できます。
+>これらのコンポーネントはデフォルトでは使用できないので、使用前にテンプレートエディターで使用可能にする必要があります。[テンプレートエディターでコンポートを使用可能にした後は、他の AEM コンポーネントと同様にページに追加することができます。](/help/sites-authoring/templates.md#editing-templates-template-authors)
 
 ![chlimage_1-539](assets/chlimage_1-539.png)
 
 ### Dynamic Media コンポーネント {#dynamic-media-component}
 
-ダイナミックメディアコンポーネントはスマートです。画像を追加するかビデオを追加するかに応じて、様々なオプションがあります。 このコンポーネントは画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートします。また、ビューアはレスポンシブです。 つまり、画面のサイズは、画面のサイズに基づいて自動的に変更されます。 すべてのビューアは HTML5 ビューアです。
+Dynamic Mediaコンポーネントはスマートです。画像とビデオのどちらを追加するかに応じて、様々なオプションがあります。 このコンポーネントは画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートします。また、ビューアはレスポンシブです。 つまり、画面のサイズは、画面のサイズに基づいて自動的に変更されます。 すべてのビューアは HTML5 ビューアです。
 
 >[!NOTE]
 >
->読み取り専用権限を持つユーザーがWebページにアクセスするダイナミックメディアコンポーネント、インタラクティブメディアコンポーネント、またはその両方がある場合、ページの切れ目とコンポーネントは正しくレンダリングされません。 これは、コンポーネントのプロパティが適切で、参照されているアセットや設定にアクセスできることを確認するためにページが再構築されるためです。 次に、ページが再びレンダリングされ、コンポーネントが壊れます。 ユーザーの読み取り専用アクセス権が原因で、ページ上の各コンポーネントコードを再レンダリングできません。
+>読み取り専用権限を持つDynamic MediaがWebページにアクセスするユーザーコンポーネント、インタラクティブメディアコンポーネント、またはその両方がある場合、ページの切れ目とコンポーネントは正しくレンダリングされません。 これは、コンポーネントのプロパティが適切で、参照されているアセットや設定にアクセスできることを確認するためにページが再構築されるためです。 次に、ページが再びレンダリングされ、コンポーネントが壊れます。 ユーザーの読み取り専用アクセス権が原因で、ページ上の各コンポーネントコードを再レンダリングできません。
 >  
->この問題を回避するには、AEMサイトのユーザーに、アセットにアクセスするために必要な権限があることを確認してください。
+>この問題を回避するには、AEM Sitesユーザーに、アセットへのアクセスに必要な権限があることを確認してください。
 
 >[!NOTE]
 >
@@ -115,6 +115,7 @@ Dynamic Media and Interactive Media are available under the [!UICONTROL Dynamic 
 >
 >* [Dynamic Media を有効にしている](config-dynamic.md)こと。Dynamic Media はデフォルトで無効になっています。
 >* 画像が PTIFF（Pyramid TIFF）ファイルであること。Dynamic Media を有効にする前に読み込まれた画像には、pyramid tiff ファイルはありません。
+
 >
 
 
@@ -170,8 +171,8 @@ You must edit the following Dynamic Media Settings by clicking **[!UICONTROL Edi
 
    例えば、ビューア修飾子を使用して、次の操作を行うことができます。
 
-   * Associate a caption file with a video [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_video_viewer_url_caption.html](https://marketing.adobe.com/resources/help/ja_JP/s7/viewers_ref/r_html5_video_viewer_url_caption.html)
-   * Associate a navigation file with a video [https://marketing.adobe.com/resources/help/en_US/s7/viewers_ref/r_html5_video_viewer_url_navigation.html](https://marketing.adobe.com/resources/help/ja_JP/s7/viewers_ref/r_html5_video_viewer_url_navigation.html)
+   * Associate a caption file with a video [caption](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
+   * Associate a navigation file with a video [navigation](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
 
 You can edit the following [!UICONTROL Advanced Settings] by clicking **[!UICONTROL Edit]** in the component.
 
@@ -214,9 +215,9 @@ You can edit the following **[!UICONTROL Advanced]** settings by clicking **[!UI
 
 >[!NOTE]
 >
->読み取り専用権限を持つユーザーがWebページにアクセスするダイナミックメディアコンポーネント、インタラクティブメディアコンポーネント、またはその両方がある場合、ページの切れ目とコンポーネントは正しくレンダリングされません。 これは、コンポーネントのプロパティが適切で、参照されているアセットや設定にアクセスできることを確認するためにページが再構築されるためです。 次に、ページが再びレンダリングされ、コンポーネントが壊れます。 ユーザーの読み取り専用アクセス権が原因で、ページ上の各コンポーネントコードを再レンダリングできません。
+>読み取り専用権限を持つDynamic MediaがWebページにアクセスするユーザーコンポーネント、インタラクティブメディアコンポーネント、またはその両方がある場合、ページの切れ目とコンポーネントは正しくレンダリングされません。 これは、コンポーネントのプロパティが適切で、参照されているアセットや設定にアクセスできることを確認するためにページが再構築されるためです。 次に、ページが再びレンダリングされ、コンポーネントが壊れます。 ユーザーの読み取り専用アクセス権が原因で、ページ上の各コンポーネントコードを再レンダリングできません。
 > 
->この問題を回避するには、AEMサイトのユーザーに、アセットにアクセスするために必要な権限があることを確認してください。
+>この問題を回避するには、AEM Sitesユーザーに、アセットへのアクセスに必要な権限があることを確認してください。
 
 ![chlimage_1-541](assets/chlimage_1-541.png)
 
