@@ -10,10 +10,10 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 36ea97a4-4e13-4e89-866b-495f3c30cb94
 translation-type: tm+mt
-source-git-commit: 09f8adac1d5fc4edeca03d6955faddf5ea045405
+source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
 workflow-type: tm+mt
-source-wordcount: '2792'
-ht-degree: 56%
+source-wordcount: '2787'
+ht-degree: 54%
 
 ---
 
@@ -88,16 +88,16 @@ Analytics をコミュニティ機能と連携するよう設定するには、�
 
 ## Adobe Analytics Report Suite for Video Reporting {#adobe-analytics-report-suite-for-video-reporting}
 
-Using the Adobe Marketing Cloud&#39;s [Report Suite Manager](https://marketing.adobe.com/resources/help/ja_JP/reference/new_report_suite.html), Analytics report suites can be configured so that a community site may be enabled to provide reports for Communities features.
+Using the Adobe Marketing Cloud&#39;s [Report Suite Manager](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html), Analytics report suites can be configured so that a community site may be enabled to provide reports for Communities features.
 
-By signing in to [Adobe Marketing Cloud](https://marketing.adobe.com/resources/help/ja_JP/analytics/getting-started/analytics-navigation.html) with [Company Name and Username](analytics.md#prerequisites), it is possible to configure a new or existing report suite to have:
+By signing in to [Adobe Marketing Cloud](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/home.html) with [Company Name and Username](analytics.md#prerequisites), it is possible to configure a new or existing report suite to have:
 
-* [11 個のコンバージョン変数](https://marketing.adobe.com/resources/help/ja_JP/reference/conversion_var_admin.html)（evar）
+* [11 個のコンバージョン変数](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)（evar）
 
    * **`evar1`** 有効 **`evar11`** にする
    * 既存のeVarを再利用（名前変更）したり、Communities機能で使用する新しいeVarを作成できます。
 
-* [7 個の成功イベント](https://marketing.adobe.com/resources/help/ja_JP/reference/success_event.html)（event）
+* [7 個の成功イベント](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/success-events/success-event.html)（event）
 
    * **`event1`** 有効 **`event7`** にする
    * タイプ **`Counter`**
@@ -106,7 +106,7 @@ By signing in to [Adobe Marketing Cloud](https://marketing.adobe.com/resources/h
    * 既存のイベントを再利用（名前変更）したり、Communities機能で使用する新しいユーザーを作成できます。
 
 
-* [ビデオ管理](https://marketing.adobe.com/resources/help/ja_JP/sc/appmeasurement/hbvideo/video_analytics_config.html)
+* [ビデオ管理](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)
 
    * ビデオレポートコンソール
 
@@ -547,11 +547,11 @@ The polling interval controls the frequency of requests to Adobe Analytics for d
 
 ## Analytics でのユーザーデータの管理 {#manage-user-data-in-analytics}
 
-Adobe Analytics は、ユーザーデータのアクセス、書き出し、削除をおこなう API を提供しています。詳しくは、[アクセス要求および削除要求の送信](https://marketing.adobe.com/resources/help/ja_JP/analytics/gdpr/gdpr_submit_access_delete.html)を参照してください。
+Adobe Analytics は、ユーザーデータのアクセス、書き出し、削除をおこなう API を提供しています。詳しくは、[アクセス要求および削除要求の送信](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html)を参照してください。
 
 ## リソース {#resources}
 
-* Adobe Marketing Cloud：[Analytics ヘルプとリファレンス](https://marketing.adobe.com/resources/help/ja_JP/reference/)
+* Adobe Marketing Cloud：[Analytics ヘルプとリファレンス](https://docs.adobe.com/content/help/en/analytics/landing/home.html)
 * AEM: [Integrating with Adobe Analytics](../../help/sites-administering/adobeanalytics.md)
 * AEM: [Analytics with External Providers](../../help/sites-administering/external-providers.md)
 
