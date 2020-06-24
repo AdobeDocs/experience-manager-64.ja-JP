@@ -4,7 +4,7 @@ seo-title: AEM 6.4デプロイユーザーガイド
 description: 'このガイドでは、AEMのインストールやデプロイなど、すべてのAEMデプロイタスクについて説明します。 '
 seo-description: 'AEMのインストールやデプロイなど、AEMデプロイのすべてのタスクを対象としています。 '
 translation-type: tm+mt
-source-git-commit: 6be9e5049600420c86120d0b6c84c1c321d7dc63
+source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 29%
@@ -39,7 +39,7 @@ ht-degree: 29%
 | [開発ユーザーガイド](/help/sites-developing/home.md) | AEMインスタンスを構築する方法を説明します。 |
 | [ユーザガイドの管理](/help/managing/home.md) | このガイドでは、AEMプロジェクトを正常に管理する方法について説明します。 |
 | [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
-| [AEM Livefyre](https://marketing.adobe.com/resources/help/en_US/livefyre/home.html) | このガイドでは、ユーザー生成コンテンツをLivefyreと共有する方法を説明します。 |
+| [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | このガイドでは、ユーザー生成コンテンツをLivefyreと共有する方法を説明します。 |
 
 ## 主なAEMリソース
 
