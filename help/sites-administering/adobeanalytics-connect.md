@@ -10,17 +10,20 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 88dbfd34-1f8d-47a2-893d-20faf1a80f95
 translation-type: tm+mt
-source-git-commit: e99e29425578005ed9d215946d63f67e7229e8d6
+source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+workflow-type: tm+mt
+source-wordcount: '1546'
+ht-degree: 64%
 
 ---
 
 
 # Adobe Analytics への接続とフレームワークの作成{#connecting-to-adobe-analytics-and-creating-frameworks}
 
-Adobe AnalyticsでAEMページからのWebデータを追跡するには、Adobe Analyticsクラウドサービス設定とAdobe Analyticsフレームワークを作成します。
+アドビAnalyticsのAEMページからWebデータを追跡するには、AdobeAnalyticsCloud Service設定とAdobeAnalyticsフレームワークを作成します。
 
-* **** Adobe Analytics設定：Adobe Analyticsアカウントに関する情報。 Adobe Analyticsの設定により、AEMはAdobe Analyticsに接続できます。 使用するアカウントごとに Adobe Analytics 設定を作成します。
-* **** Adobe Analytics Framework:Adobe AnalyticsレポートスイートプロパティとCQ変数間のマッピングのセット。 フレームワークを使用して、Web サイトデータを Adobe Analytics レポートにどのように入力するかを設定します。フレームワークは、Adobe Analytics設定に関連付けられています。 設定ごとに複数のフレームワークを作成できます。
+* **AdobeAnalytics設定：** アドビのAnalyticsアカウントに関する情報。 アドビのAnalytics設定により、AEMはアドビのAnalyticsに接続できます。 使用するアカウントごとに Adobe Analytics 設定を作成します。
+* **AdobeAnalyticsフレームワーク：** アドビのAnalyticsレポートスイートプロパティとCQ変数間の一連のマッピング。 フレームワークを使用して、Web サイトデータを Adobe Analytics レポートにどのように入力するかを設定します。フレームワークは、アドビのAnalytics設定に関連付けられています。 設定ごとに複数のフレームワークを作成できます。
 
 Web ページをフレームワークに関連付けると、フレームワークがそのページおよび子ページの追跡を実行します。ページビューは、Adobe Analytics から取得され、Sites コンソールに表示されます。
 
@@ -28,9 +31,9 @@ Web ページをフレームワークに関連付けると、フレームワー�
 
 ### Adobe Analytics アカウント {#adobe-analytics-account}
 
-Adobe AnalyticsでAEMデータを追跡するには、有効なAdobe Marketing cloudのAdobe Analyticsアカウントが必要です。
+アドビのAnalyticsでAEMデータを追跡するには、有効なAdobe Marketing CloudのアドビAnalyticsアカウントが必要です。
 
-Adobe Analyticsアカウントは、次の操作を行う必要があります。
+アドビのAnalyticsアカウントは、次の要件を満たす必要があります。
 
 * **管理者** 権限がある
 * **Web サービスアクセス**&#x200B;ユーザーグループに割り当てられている
@@ -49,7 +52,7 @@ Adobe Analyticsアカウントは、次の操作を行う必要があります�
 
 ### Adobe Analytics データセンターを使用するように AEM を設定 {#configuring-aem-to-use-your-adobe-analytics-data-centers}
 
-Adobe Analytics [data centers](https://developer.omniture.com/en_US/content_page/concepts-terminology/c-how-is-data-stored) collect, process and store data associated with your Adobe Analytics report suite. Adobe Analyticsレポートスイートをホストするデータセンターを使用するようにAEMを設定する必要があります。 次の表に、使用可能なデータセンターとその URL を示します。
+Adobe Analytics [data centers](https://developer.omniture.com/en_US/content_page/concepts-terminology/c-how-is-data-stored) collect, process and store data associated with your Adobe Analytics report suite. アドビのAnalyticsレポートスイートをホストするデータセンターを使用するようにAEMを設定する必要があります。 次の表に、使用可能なデータセンターとその URL を示します。
 
 | データセンター | URL |
 |---|---|
@@ -84,7 +87,7 @@ AEM は、デフォルトではサンノゼのデータセンター（https://ap
 >
 >Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。
 >
->The [ActivityMap plugin provided by Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) should now be used.
+>The [ActivityMap plugin provided by Adobe Analytics](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html) should now be used.
 
 ## Activity Map の設定 {#configuring-for-the-activity-map}
 
@@ -92,7 +95,7 @@ AEM は、デフォルトではサンノゼのデータセンター（https://ap
 >
 >Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。
 >
->The [ActivityMap plugin provided by Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) should now be used.
+>The [ActivityMap plugin provided by Adobe Analytics](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html) should now be used.
 
 ## Adobe Analytics フレームワークの作成 {#creating-a-adobe-analytics-framework}
 
@@ -114,9 +117,10 @@ AEM は、デフォルトではサンノゼのデータセンター（https://ap
 
 4. **フレームワークを作成**&#x200B;ダイアログで、次の操作を実行します。
 
-   * **タイトル**&#x200B;を指定します。
+   * 「**タイトル**」を指定します。
    * オプションで、リポジトリにフレームワークの詳細を保存するノードの&#x200B;**名前**&#x200B;を指定できます。
    * Select **Adobe Analytics Framework**
+
    「**作成**」をクリックします。
 
    フレームワークが編集用に開きます。
@@ -125,7 +129,7 @@ AEM は、デフォルトではサンノゼのデータセンター（https://ap
 
    >[!NOTE]
    >
-   >左側のコンテンツファインダーは、レポートスイートIDを選択すると、Adobe Analytics変数（SiteCatalyst変数）を使用して入力されます。
+   >左側のコンテンツファインダーでは、レポートスイートIDを選択すると、AdobeAnalytics変数（SiteCatalyst変数）が入力されます。
 
 6. 次に、**実行モード**&#x200B;ドロップダウン（レポートスイート ID の横）を使用して、レポートスイートに情報を送信するサーバーインスタンスを選択します。
 
@@ -135,7 +139,7 @@ AEM は、デフォルトではサンノゼのデータセンター（https://ap
 
 ### Adobe Analytics のサーバー設定の設定 {#configuring-server-settings-for-adobe-analytics}
 
-フレームワークシステムを使用すると、各Adobe Analyticsフレームワーク内のサーバー設定を変更できます。
+フレームワークシステムを使用すると、各AdobeAnalyticsフレームワーク内のサーバー設定を変更できます。
 
 >[!CAUTION]
 >
@@ -147,9 +151,9 @@ AEM は、デフォルトではサンノゼのデータセンター（https://ap
 
 * **トラッキングサーバー**
 
-   * には、Adobe Analytics呼び出しの送信に使用するURLが含まれます。
+   * には、アドビのAnalytics呼び出しの送信に使用するURLが含まれます
 
-      * cname — デフォルトでAdobe Analyticsアカウントの*会社名*
+      * cname — デフォルトは、アドビAnalyticsアカウントの*会社名*です。
       * d1 - 情報が送信されるデータセンターに対応しています（d1、d2 または d3 ）。
       * sc.omtrdc.net — ドメイン名
 
@@ -165,11 +169,11 @@ AEM は、デフォルトではサンノゼのデータセンター（https://ap
 
 ## Adobe Analytics フレームワークへのページの関連付け {#associating-a-page-with-a-adobe-analytics-framework}
 
-ページがAdobe Analyticsフレームワークに関連付けられている場合、ページが読み込まれると、そのページからAdobe Analyticsにデータが送信されます。 ページに設定される変数は、フレームワークの Adobe Analytics 変数からマッピングされ、取得されます。例えば、ページビューは Adobe Analytics から取得されます。
+ページがアドビのAnalyticsフレームワークに関連付けられている場合、ページが読み込まれると、そのページはアドビAnalyticsにデータを送信します。 ページに設定される変数は、フレームワークの Adobe Analytics 変数からマッピングされ、取得されます。例えば、ページビューは Adobe Analytics から取得されます。
 
 ページの子は、フレームワークとの関連付けを継承します。例えば、サイトのルートページをフレームワークに関連付けると、サイトのすべてのページがそのフレームワークに関連付けられます。
 
-1. From the **Sites** console, select the page you wish to set up with tracking.
+1. **サイト** コンソールから、追跡を設定するページを選択します。
 1. コンソールから直接、またはページエディターから&#x200B;**[ページのプロパティ](/help/sites-authoring/editing-page-properties.md)**を開きます。
 1. 「**クラウドサービス**」タブを開きます。
 
@@ -180,12 +184,12 @@ AEM は、デフォルトではサンノゼのデータセンター（https://ap
 1. 「**保存して閉じる**」を選択します。
 1. ページを&#x200B;**[公開](/help/sites-authoring/publishing-pages.md)**して、ページおよび接続された設定／ファイルをアクティベートします。
 1. 最後に、パブリッシュインスタンス上のページを訪問し、**検索**&#x200B;コンポーネントを使用してキーワード（例：aubergine）を検索します。
-1. You can then check the calls made to Adobe Analytics using an appropriate tool; for example, [Adobe Marketing Cloud Debugger](https://marketing.adobe.com/resources/help/en_US/sc/implement/debugger_install.html).
+1. You can then check the calls made to Adobe Analytics using an appropriate tool; for example, [Adobe Experience Cloud Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html).
 1. 提供されている呼び出しの例では、入力された値（例：aubergine）が eVar7 に格納され、イベントリストが event3 に格納されます。
 
 ### ページビュー {#page-views}
 
-ページがAdobe Analyticsフレームワークに関連付けられている場合は、サイトコンソールのリストビューにページビュー数を表示できます。
+ページがアドビのAnalyticsフレームワークに関連付けられている場合、ページ表示数は、サイトコンソールのリスト表示に表示できます。
 
 詳しくは、[ページ分析データの表示](/help/sites-authoring/pa-using.md)を参照してください。
 
@@ -195,7 +199,7 @@ AEM は、デフォルトではサンノゼのデータセンター（https://ap
 
 * **ポーリング間隔**:
 
-   サービスがAdobe Analyticsからページビューデータを取得する間隔（秒単位）です。
+   サービスがアドビのAnalyticsからページ表示データを取得する間隔（秒単位）です。
 
    デフォルトの間隔は 43200000 ms（12 時間）です。
 
