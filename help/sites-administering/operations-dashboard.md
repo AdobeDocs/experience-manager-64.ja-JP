@@ -10,7 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 7599fa42-3a47-49c9-8a7f-e0b6be302ff0
 translation-type: tm+mt
-source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
+source-git-commit: 6eb03b035793a21eafd120ac848a6d62eaf6e6ec
+workflow-type: tm+mt
+source-wordcount: '6231'
+ht-degree: 76%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
 
 ## 概要 {#introduction}
 
-AEM 6 の操作ダッシュボードは、システムオペレーターが AEM のシステムヘルスを一目で監視するために役立ちます。また、AEMの関連性に関する自動生成診断情報を提供し、自己完結型のメンテナンス自動化を設定および実行して、プロジェクトの運用やサポートケースを大幅に削減できます。 操作ダッシュボードは、カスタムのヘルスチェックおよびメンテナンスタスクによって拡張できます。さらに、外部監視ツールから JMX を使用して操作ダッシュボードのデータにアクセスできます。
+AEM 6 の操作ダッシュボードは、システムオペレーターが AEM のシステムヘルスを一目で監視するために役立ちます。また、AEMの関連性に関する自動生成された診断情報も提供し、自己完結型のメンテナンス自動化を設定および実行して、プロジェクトの運用やサポートケースを大幅に削減できます。 操作ダッシュボードは、カスタムのヘルスチェックおよびメンテナンスタスクによって拡張できます。さらに、外部監視ツールから JMX を使用して操作ダッシュボードのデータにアクセスできます。
 
 **操作ダッシュボードの特徴は次のとおりです。**
 
@@ -103,14 +106,15 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
    新しいノードに次のプロパティを設定する必要があります。
 
-   * **名前:** `sling:resourceType`
+   * **名前：**`sling:resourceType`
 
-      * **タイプ:** `String`
+      * **Type:** `String`
       * **値:** `granite/operations/components/mbean`
-   * **名前:** `resource`
+   * **名前：**`resource`
 
-      * **タイプ:** `String`
+      * **Type:** `String`
       * **値:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
+
    >[!NOTE]
    >
    >The resource path above is created as follows: if the mbean name of your Health Check is &quot;test&quot;, add &quot;test&quot; to the end of the path `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck`
@@ -150,6 +154,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    * **Tags（hc.tags）：**&#x200B;このヘルスチェックのタグ。この複合ヘルスチェックを別の複合ヘルスチェックの一部とする場合（ヘルスチェックの階層内など）は、この複合が関連付けられているタグを追加します。
    * **MBean Name（hc.mbean.name）：**&#x200B;この複合ヘルスチェックの JMX MBean に付けられる Mbean の名前。
    * **Filter Tags（filter.tags）：**&#x200B;これは複合ヘルスチェック専用のプロパティです。複合が集約するタグを指定します。複合ヘルスチェックは、そのグループの下に、この複合のいずれかのフィルタータグに一致するタグを持つすべてのヘルスチェックを集約します。例えば、**test** および **check** というフィルタータグを持つ複合ヘルスチェックは、タグプロパティ（**）に** test **タグと** check`hc.tags` タグのいずれかが含まれているすべての個別および複合ヘルスチェックを集約します。
+
    >[!NOTE]
    >
    >Apache Sling 複合ヘルスチェックの新しい設定ごとに、新しい JMX Mbean が 1 つずつ作成されます。**
@@ -158,19 +163,21 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
    例えば、設定を作成して **hc.mbean.name** 値を **diskusage** に設定した場合、設定ノードは次のようになります。
 
-   * **名前:** `Composite Health Check`
+   * **名前：**`Composite Health Check`
 
-      * **タイプ:** `nt:unstructured`
+      * **Type:** `nt:unstructured`
+
    次のようにプロパティを定義します。
 
-   * **名前:** `sling:resourceType`
+   * **名前：**`sling:resourceType`
 
-      * **タイプ:** `String`
+      * **Type:** `String`
       * **値:** `granite/operations/components/mbean`
-   * **名前:** `resource`
+   * **名前：**`resource`
 
-      * **タイプ:** `String`
+      * **Type:** `String`
       * **値:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
+
    >[!NOTE]
    >
    >既にデフォルトでダッシュボードに存在する複合チェックに論理的に属する個別ヘルスチェックを作成する場合、ヘルスチェックは自動的にキャプチャされ、各複合チェックの下にグループ化されます。このため、これらのチェック用に新しい設定ノードを作成する必要はありません。
@@ -223,10 +230,10 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
       <ul> 
        <li>2時間以上前の場合は、重大ステータスを返します。 </li> 
        <li>2時間から45分前の場合に警告ステータスを返します </li> 
-       <li>45分未満の場合はOKステータスを返します </li> 
+       <li>45分未満の場合はOKステータスを返す </li> 
       </ul> </li> 
      <li>いずれの条件も満たさない場合は、OK ステータスを返します。</li> 
-    </ul> <p>重要および警告ステータスのしきい値は、どちらも設定可能です。The Mbean for this health check is <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DasyncIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=asyncIndexHealthCheck,type=HealthCheck</a>.</p> <p><strong>注意：こ </strong>のヘルスチェックはAEM 6.4で利用でき、AEM 6.3.0.1にバックポートされています。</p> </td> 
+    </ul> <p>重要および警告ステータスのしきい値は、どちらも設定可能です。The Mbean for this health check is <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DasyncIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=asyncIndexHealthCheck,type=HealthCheck</a>.</p> <p><strong>注意： </strong>このヘルスチェックはAEM 6.4で利用可能で、AEM 6.3.0.1にバックポートされています。</p> </td> 
   </tr> 
   <tr> 
    <td>大きい Lucene インデックス</td> 
@@ -240,7 +247,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    <td>システムメンテナンス</td> 
    <td><p>システムメンテナンスは複合チェックです。すべてのメンテナンスタスクが設定どおりに実行されている場合に、OK を返します。次の点に注意してください。</p> 
     <ul> 
-     <li>各メンテナンスタスクには、関連するヘルスチェックが付いている</li> 
+     <li>各メンテナンスタスクには、関連するヘルスチェックが付属しています</li> 
      <li>タスクがメンテナンスウィンドウに追加されていない場合、そのヘルスチェックは重要ステータスを返します</li> 
      <li>監査ログおよびワークフローのパージのメンテナンスタスクを設定するか、メンテナンスウィンドウからこれらのメンテナンスタスクを削除する必要があります。設定しなかった場合、これらのタスクは最初に実行しようとしたときに失敗します。したがって、システムメンテナンスチェックは重要ステータスを返します。</li> 
      <li><strong>AEM 6.4 では</strong>、<a href="/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks">Lucene バイナリメンテナンスタスク</a> のチェックもあります。</li> 
@@ -290,7 +297,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
   </tr> 
   <tr> 
    <td>セキュリティチェック</td> 
-   <td><p>セキュリティチェックは、複数のセキュリティ関連チェックを集計する複合チェックです。These individual health checks address different concerns from the security checklist available at the <a href="/help/sites-administering/security-checklist.md">Security Checklist documentation page.</a> このチェックは、インスタンスの起動時にセキュリティ煙テストを行う場合に役立ちます。 </p> <p>The MBean for this health check is <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=securitych</a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank"></a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank"></a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">ecks,type=HealthCheck</a></p> </td> 
+   <td><p>セキュリティチェックは、複数のセキュリティ関連チェックを集計する複合チェックです。These individual health checks address different concerns from the security checklist available at the <a href="/help/sites-administering/security-checklist.md">Security Checklist documentation page.</a> このチェックは、インスタンスの起動時のセキュリティ煙テストとして役立ちます。 </p> <p>The MBean for this health check is <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=securitych</a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank"></a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank"></a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">ecks,type=HealthCheck</a></p> </td> 
   </tr> 
   <tr> 
    <td>アクティブなバンドル</td> 
@@ -336,6 +343,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    1. 左側のウィンドウで、「**Advanced Configuration**」の下の「**Core Config Manager**」をクリックします。
    1. Press the **Hosts** link under the **Monitoring** section.
    1. ホスト定義を追加します。
+
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
    以下は、Nagios Core を使用している場合のホスト設定ファイルの例です。
@@ -404,7 +412,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 ログメッセージユーザーインターフェイスには、デフォルトですべてのエラーメッセージが表示されます。表示されるログメッセージを増やす場合は、該当するログレベルでロガーを設定する必要があります。
 
-ログメッセージはメモリ内ログアペンダーを使用するので、ログファイルとは関係ありません。もう1つの結果として、このUIのログレベルを変更しても、従来のログファイルに記録される情報は変更されません。このUIでロガーを追加および削除すると、メモリ内ロガーにのみ影響します。また、ロガー設定の変更はメモリ内ロガーの将来に反映されます。既にログに記録され、関連のなくなったエントリは削除されませんが、今後同様のエントリはログに記録されなくなります。
+ログメッセージはメモリ内ログアペンダーを使用するので、ログファイルとは関係しません。 もう1つの結果として、このUIでログレベルを変更しても、従来のログファイルに記録される情報は変更されません。 このUIでロガーを追加および削除すると、メモリ内ロガーにのみ影響します。 また、ロガー設定の変更はメモリ内ロガーの将来に反映されます。既にログに記録され、関連しなくなったエントリは削除されませんが、今後同様のエントリはログに記録されません。
 
 ログに記録する内容を設定するには、UI の左上にあるギアボタンから、ロガーを設定します。そこで、ロガーの設定を追加、削除または更新できます。ロガーの設定は、**ログレベル**（警告／情報／デバッグ）と&#x200B;**フィルター名**&#x200B;で構成されます。**フィルター名**&#x200B;には、記録されるログメッセージのソースをフィルター処理する役割があります。また、指定したレベルのすべてのログメッセージをロガーで取り込む必要がある場合は、フィルター名を「**root**」とします。ロガーのレベルを設定すると、指定したレベル以上のすべてのメッセージの取り込みがトリガーされます。
 
@@ -431,7 +439,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 >[!NOTE]
 >
->**AEM 6.4では**、メンテナンスタスクはINFOレベルでより詳細な情報リッチ形式で初期設定の状態でログアウトされます。 これにより、メンテナンスタスクの状態がよりわかりやすくなっています。
+>**AEM 6.4**&#x200B;では、メンテナンスタスクは、INFOレベルでより詳細な情報を豊富な形式で初期設定の状態でログアウトされます。 これにより、メンテナンスタスクの状態がよりわかりやすくなっています。
 >
 >メンテナンスタスクのアクティビティを監視し、対処するためにサードパーティツール（Splunk など）を使用している場合、次のログステートメントを使用できます。
 
@@ -460,7 +468,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 ### クエリパフォーマンス {#query-performance}
 
-クエリーのパフォーマンスページでは、システムで実行される最も遅いクエリーを分析できます。この情報は、JMX Mbeanのリポジトリによって提供されます。 Jackrabbitでは、 `com.adobe.granite.QueryStat` JMX Mbeanがこの情報を提供し、Oakリポジトリでは、 `org.apache.jackrabbit.oak.QueryStats.`
+[クエリのパフォーマンス]ページでは、システムが実行する最も遅いクエリを分析できます。 この情報は、JMX Mbeanのリポジトリによって提供されます。 Jackrabbitでは、 `com.adobe.granite.QueryStat` JMX Mbeanがこの情報を提供し、Oakリポジトリでは、 `org.apache.jackrabbit.oak.QueryStats.`
 
 このページには以下の項目が表示されます。
 
@@ -478,7 +486,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 クエリの説明を実行は、Oak によるクエリの実行方法を説明するツールです。これには、AEM のようこそ画面から&#x200B;**ツール／操作／診断**&#x200B;を選択し、「**クエリパフォーマンス**」をクリックして「**クエリの説明を実行**」タブに切り替えることでアクセスできます。
 
-**機能**
+**特長**
 
 * Xpath、JCR-SQL および JCR-SQL2 クエリ言語をサポート
 * 指定したクエリの実際の実行時間をレポート
@@ -513,7 +521,7 @@ It can also be accessed directly at this URL: `https://serveraddress:port/libs/g
 
 ### ステータス ZIP をダウンロード {#download-status-zip}
 
-これは、システムステータスおよび設定に関する有益な情報を含む zip のダウンロードをトリガーします。アーカイブには、インスタンス設定、バンドルのリスト、OSGI、Sling指標および統計情報が含まれており、この結果、ファイルが大きくなる可能性があります。 「**ダウンロードステータスZIP **」ウィンドウを使用すると、大きなステータスファイルの影響を軽減できます。 The window can be accessed from: **AEM > Tools > Operations > Diagnosis > Download Status ZIP.**
+これは、システムステータスおよび設定に関する有益な情報を含む zip のダウンロードをトリガーします。アーカイブには、インスタンス設定、バンドルのリスト、OSGI、Sling指標および統計情報が含まれており、これにより大きなファイルが作成される場合があります。 **ダウンロードステータスZIP **ウィンドウを使用すると、大きなステータスファイルの影響を軽減できます。 The window can be accessed from: **AEM > Tools > Operations > Diagnosis > Download Status ZIP.**
 
 このウィンドウでは、エクスポートするもの（ログファイルやスレッドダンプ）および現在の日付を基準にしてダウンロードに含めるログの日数を選択できます。
 
@@ -570,7 +578,7 @@ Lucene バイナリクリーンアップタスクを使用することで、Luce
 メンテナンスタスクは Lucene に関連したリビジョンガベージを減らすために開発されましたが、このタスクを実行すると、次のように全般的に効率が向上します。
 
 * データストアのガベージコレクションタスクの毎週の実行は、より迅速に完了します。
-* また、AEM全体のパフォーマンスがわずかに向上する場合もあります。
+* また、AEM全体のパフォーマンスがわずかに向上する可能性があります
 
 You can access the Lucene Binaries Cleanup task from: **AEM > Tools > Operations > Maintenance > Daily Maintenance Window > Lucene Binaries Cleanup**.
 
@@ -597,7 +605,7 @@ You can access the Lucene Binaries Cleanup task from: **AEM > Tools > Operations
 
 バージョンのパージメンテナンスタスクをスケジュールして、古いバージョンを自動的に削除できます。As a result, this minimizes the need to manually use the [Version Purge tools](/help/sites-deploying/version-purging.md). You can schedule and configure the Version Purge task by accessing **Tools > Operations > Maintenance > Weekly Maintenance Window** and following these steps:
 
-1. Click the **Add** button.
+1. **** 追加ボタンをクリックします。
 1. Choose **Version Purge** from the drop-down menu.
 
    ![version_purge_maintenancetask](assets/version_purge_maintenancetask.png)
@@ -666,9 +674,9 @@ Apache Sling のジョブ処理では、このトピックからジョブを開�
  </tbody> 
 </table>
 
-上記のサービスプロパティ以外に、イン `process()` ターフェイスのメソッ `JobConsumer` ドは、メンテナンスタスクに対して実行する必要があるコードを追加して実装する必要があります。 提供された `JobExecutionContext` は、ステータス情報を出力し、ジョブがユーザーによって停止されているかどうかを確認し、結果（成功または失敗）を作成するために使用できます。
+上記のサービスプロパティ以外に、インター `process()` フェイスの `JobConsumer` メソッドは、メンテナンスタスクに対して実行する必要があるコードを追加することで実装する必要があります。 提供されたは、ステータス情報を出力するために `JobExecutionContext` 使用したり、ジョブがユーザーによって停止されているかどうかを確認したり、結果（成功または失敗）を作成したりできます。
 
-For situations where a maintenance task should not be run on all installations (for example, run only on the publish instance), you can make the service require a configuration in order to be active by adding `@Component(policy=ConfigurationPolicy.REQUIRE)`. You can then mark the according configuration as being run mode dependent in the repository. 詳しくは、「OSGiの設定」を参 [照してください](/help/sites-deploying/configuring-osgi.md#creating-the-configuration-in-the-repository)。
+For situations where a maintenance task should not be run on all installations (for example, run only on the publish instance), you can make the service require a configuration in order to be active by adding `@Component(policy=ConfigurationPolicy.REQUIRE)`. You can then mark the according configuration as being run mode dependent in the repository. 詳しくは、「OSGiの [設定](/help/sites-deploying/configuring-osgi.md#creating-the-configuration-in-the-repository)」を参照してください。
 
 以下のカスタムメンテナンスタスクの例では、設定可能な一時ディレクトリから、過去 24 時間以内に変更されたファイルを削除します。
 
@@ -692,7 +700,7 @@ This will add a corresponding resource at /apps/granite/operations/config/mainte
 
 ## システム概要 {#system-overview}
 
-The **System Overview Dashboard** displays a high-level overview of the configuration, hardware and health of the AEM instance. つまり、システムヘルスのステータスが明白になり、すべての情報が 1 つのダッシュボードに集約されます。
+**システム概要ダッシュボード** には、AEMインスタンスの設定、ハードウェア、正常性の概要が表示されます。 つまり、システムヘルスのステータスが明白になり、すべての情報が 1 つのダッシュボードに集約されます。
 
 >[!NOTE]
 >
@@ -702,7 +710,7 @@ The **System Overview Dashboard** displays a high-level overview of the configur
 
 To access the System Overview Dashboard, navigate to **Tools > Operations > System Overview**.
 
-![system_overview_dashboard](assets/system_overview_dashboard.png)
+![system_overview_ダッシュボード](assets/system_overview_dashboard.png)
 
 ### システム概要ダッシュボードの説明 {#system-overview-dashboard-explained}
 
@@ -844,7 +852,7 @@ You can also download a `JSON` file summarizing the dashboard information by cli
       </ul> </li> 
     </ul> 
     <ul> 
-     <li>ワークフロー数 — 特定のステータスのワークフローの数（存在する場合）: 
+     <li>ワークフロー数 — 特定のステータスのワークフロー数（存在する場合）: 
       <ul> 
        <li>実行中</li> 
        <li>失敗</li> 
@@ -882,7 +890,7 @@ You can also download a `JSON` file summarizing the dashboard information by cli
      <li>タグ</li> 
      <li>許可可能</li> 
      <li>ノードの合計数<br /> </li> 
-    </ul> <p>ノードの総数はnodeCounterMBeanから取得され、残りの統計はIndexInfoServiceから取得されます。</p> </td> 
+    </ul> <p>ノードの合計数はnodeCounterMBeanから取得され、残りの統計はIndexInfoServiceから取得されます。</p> </td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
