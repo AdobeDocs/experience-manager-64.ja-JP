@@ -10,7 +10,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 163a4887-7c33-4305-8c48-882630f2caa1
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: a87e078e1a8f49dc899ce9b160d789cb254338e2
+workflow-type: tm+mt
+source-wordcount: '1555'
+ht-degree: 96%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 * すべての内容を網羅しているわけではありません。
 * 詳細を示すドキュメントへのリンクが用意されています。
 
-AEM によるオーサリングについて詳しくは、次のページを参照してください。
+AEM によるオーサリングについて詳しくは、以下を参照してください。
 
 * [作成者が行う最初の手順](/help/sites-authoring/first-steps.md)
 * [オーサー環境の操作](/help/sites-authoring/author-environment-tools.md)
@@ -37,11 +40,11 @@ AEM によるオーサリングについて詳しくは、次のページを参�
 
 * **作成**
 
-   * このボタンは多くのコンソールで使用できます。表示されるオプションはコンテキストに依存するため、シナリオによって変わることがあります。
+   * このボタンは多くのコンソールで使用できます。表示されるオプションはコンテキストに依存するので、シナリオによって変わることがあります。
 
 * フォルダー内のページの並べ替え
 
-   * This can be done in [List View](/help/sites-authoring/basic-handling.md#list-view). The changes will be applied and be visible in other views.
+   * これは[リスト表示](/help/sites-authoring/basic-handling.md#list-view)でおこなえます。変更内容は他の表示にも反映されます。
 
 * UI の変更
 
@@ -64,8 +67,6 @@ AEM によるオーサリングについて詳しくは、次のページを参�
 >
 >* [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
 >* [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
->
-
 
 
 ## ページの検索 {#finding-your-page}
@@ -76,13 +77,13 @@ AEM によるオーサリングについて詳しくは、次のページを参�
 
    ![screen_shot_2018-03-21at160214](assets/screen_shot_2018-03-21at160214.png)
 
-1. Navigate up the tree using [the breadcrumb in the header](/help/sites-authoring/basic-handling.md#the-header), which allows you to return to the selected location:
+1. [ヘッダーのパンくず](/help/sites-authoring/basic-handling.md#the-header)を使用してツリーの上に移動します。これにより、選択した場所に戻ることができます。
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
 ### 新しいページの作成 {#creating-a-new-page}
 
-1. 新しいページを作成する[場所に移動](#finding-your-page)します。
+1. [新しいページを作成する場所に移動します。](#finding-your-page)
 1. 「**作成**」アイコンを使用して、リストから「**ページ**」を選択します。
 
    ![screen_shot_2018-03-21at160324](assets/screen_shot_2018-03-21at160324.png)
@@ -95,28 +96,29 @@ AEM によるオーサリングについて詳しくは、次のページを参�
 
 ページを選択する方法は、コンソールで使用している表示によって異なります。
 
-1. カード表示:
+1. カード表示：
 
    * [必要なリソースを選択](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)して選択モードに入ります。次のように選択します。
 
       * モバイルデバイス：タップ＆ホールドする
       * デスクトップ：[クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions) - チェックマークアイコン
-   ![screen_shot_2018-03-21at160503](assets/screen_shot_2018-03-21at160503.png)
 
-   * ページが選択されていることを示すために、カードにチェックマークが付けられます。
+         ![screen_shot_2018-03-21at160503](assets/screen_shot_2018-03-21at160503.png)
+
+      * ページが選択されていることを示すために、カードにチェックマークが付けられます。
    >[!NOTE]
    >
    >選択モードを開始すると、**選択**&#x200B;アイコン（チェックマーク）が&#x200B;**選択を解除**&#x200B;アイコン（バツマーク）に変わります。
 
-1. リスト表示:
+1. リスト表示：
 
-   * 必要なリソースのサムネイルをタップまたはクリックします。サムネイルが選択されていることを示すために、サムネイルにチェックマークが付けられます。
+   * 必要なリソースのサムネールをタップまたはクリックします。サムネールが選択されていることを示すために、サムネールにチェックマークが付けられます。
 
-1. 列表示:
+1. 列表示：
 
-   * 必要なリソースのサムネイルをタップまたはクリックします。サムネイルが選択されていることを示すために、サムネイルにチェックマークが付けられます。
+   * 必要なリソースのサムネールをタップまたはクリックします。サムネールが選択されていることを示すために、サムネールにチェックマークが付けられます。
 
-## Quick Actions (Card View/Desktop Only) {#quick-actions-card-view-desktop-only}
+## クイックアクション（カード表示／デスクトップのみ） {#quick-actions-card-view-desktop-only}
 
 1. アクションを実行する[ページに移動](#finding-your-page)します。
 1. 必要なリソースを表すカードの上にマウスポインターを置きます。クイックアクションが表示されます。
@@ -143,14 +145,15 @@ AEM によるオーサリングについて詳しくは、次のページを参�
       * 「コンポーネント」タブを選択する（[コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)）。
       * 必要なコンポーネントをページにドラッグする。
       サイドパネルは、次のアイコンで開く（および閉じる）ことができます。
-   ![](do-not-localize/screen_shot_2018-03-21at160738.png)
+
+      ![](do-not-localize/screen_shot_2018-03-21at160738.png)
 
    * ページ上の[既存のコンポーネントのコンテンツを編集](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)します。
 
       * タップまたはクリックしてコンポーネントツールバーを開きます。ダイアログを開くには、**編集**（鉛筆）アイコンを使用します。
       * タップ＆ホールドを使用するか、またはゆっくりダブルクリックして、コンポーネント用のインプレースエディターを開きます。使用可能なアクションが表示されます（一部のコンポーネントでは、このアクションが限定されます）。
       * 実行できるすべてのアクションを表示するには、次のアイコンを使用して全画面表示モードに切り替えます。
-   ![](do-not-localize/screen_shot_2018-03-21at160706.png)
+      ![](do-not-localize/screen_shot_2018-03-21at160706.png)
 
    * [既存のコンポーネントのプロパティを設定します。](/help/sites-authoring/editing-content.md#component-edit-dialog)
 
@@ -158,21 +161,21 @@ AEM によるオーサリングについて詳しくは、次のページを参�
    * 次のいずれかの方法で[コンポーネントを移動します。](/help/sites-authoring/editing-content.md#moving-a-component)
 
       * 必要なコンポーネントを新しい位置までドラッグします。
-      * Open the component toolbar with either tap or click. Use the **Cut** then **Paste** icons where required.
+      * タップまたはクリックしてコンポーネントツールバーを開きます。必要に応じて、**切り取り**&#x200B;アイコン、続いて&#x200B;**貼り付け**&#x200B;アイコンを使用します。
    * コンポーネントを[コピー（および貼り付け）](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)します。
 
-      * Open the component toolbar with either tap or click. Use the **Copy** then **Paste** icons as required.
-   >[!NOTE]
-   >
-   >同じページ、または別のページにコンポーネントを&#x200B;**貼り付ける**&#x200B;ことができます。切り取り／コピー操作を実行する前に開かれていたページに貼り付けるには、そのページを更新する必要があります。
+      * タップまたはクリックしてコンポーネントツールバーを開きます。必要に応じて、**コピー**&#x200B;アイコン、続いて&#x200B;**貼り付け**&#x200B;アイコンを使用します。
+      >[!NOTE]
+      >
+      >同じページ、または別のページにコンポーネントを&#x200B;**貼り付ける**&#x200B;ことができます。切り取り／コピー操作を実行する前に開かれていたページに貼り付けるには、そのページを更新する必要があります。
 
    * コンポーネントを[削除します。](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)
 
-      * Open the component toolbar with either tap or click, then use the **Delete** icon.
+      * タップまたはクリックしてコンポーネントツールバーを開き、**削除**&#x200B;アイコンを使用します。
    * ページに[注釈を追加](/help/sites-authoring/annotations.md#annotations)します。
 
       * **注釈**&#x200B;モード（吹き出しアイコン）を選択します。**注釈を追加**（プラス）アイコンを使用して注釈を追加します。右上の X を使用して注釈モードを終了します。
-   ![](do-not-localize/screen_shot_2018-03-21at160813.png)
+      ![](do-not-localize/screen_shot_2018-03-21at160813.png)
 
    * [ページをプレビューします](/help/sites-authoring/editing-content.md#preview-mode)（パブリッシュ環境での表示方法を確認します）。
 
@@ -195,7 +198,7 @@ AEM によるオーサリングについて詳しくは、次のページを参�
       * ツールバー（[ページが選択されている](#selecting-your-page-for-further-action)場合）
    ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
 
-* ページのプロパティが表示されます。 必要に応じて変更を加え、「保存」を使用してそれらを保持します。
+* ページのプロパティが表示されます。必要に応じて変更を加え、「保存」を使用してそれらを保持します。
 
    * [ページの編集](#editing-your-page-content)中に次の操作を実行します。
 
@@ -204,14 +207,14 @@ AEM によるオーサリングについて詳しくは、次のページを参�
 
          ![screen_shot_2018-03-21at160920](assets/screen_shot_2018-03-21at160920.png)
 
-## Publishing Your Page (or Unpublishing) {#publishing-your-page-or-unpublishing}
+## ページの公開（または非公開） {#publishing-your-page-or-unpublishing}
 
 [ページを公開する](/help/sites-authoring/publishing-pages.md)（および非公開にする）には、主に 2 つの方法があります。
 
 * **サイト**&#x200B;コンソールから：
 
    1. 公開する[ページに移動します。](#finding-your-page)
-   1. Select the **Quick Publish** icon from either:
+   1. 次のいずれかで「**クイック公開**」アイコンをクリックします。
 
       * 該当するリソースの[クイックアクション（カード表示／デスクトップのみ）](#quick-actions-card-view-desktop-only)
       * （[ページが選択されている](#selecting-your-page-for-further-action)場合）ツールバー（「[後で公開する](/help/sites-authoring/publishing-pages.md#manage-publication)」にアクセスすることもできます）
@@ -239,20 +242,20 @@ AEM によるオーサリングについて詳しくは、次のページを参�
    * 必要なリソースの[クイックアクション（カード表示／デスクトップのみ）。](#quick-actions-card-view-desktop-only)
    * ツールバー（[ページが選択されている](#selecting-your-page-for-further-action)場合）
 
-   * コピー:
+   * コピー：
 
       * 新しい場所に移動して、貼り付けをおこなう必要があります。
-   * 移動:
+   * 移動：
 
       * ページの移動に必要な情報を収集するためのウィザードが開きます。画面に表示される手順に従ってください。
-   * 削除:
+   * 削除：
 
       * この操作の確認が求められます。
    >[!NOTE]
    >
    >削除は、クイックアクションでは使用できません。
 
-## Locking Your Page (then Unlocking) {#locking-your-page-then-unlocking}
+## ページのロック（およびロック解除） {#locking-your-page-then-unlocking}
 
 [ページのロック](/help/sites-authoring/editing-content.md#locking-a-page)によって、自分の作業中に他の作成者が作業するのを防ぐことができます。ロック（およびロック解除）アイコン／ボタンは次の場所にあります。
 
