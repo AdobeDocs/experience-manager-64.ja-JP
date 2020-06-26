@@ -10,10 +10,10 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 1cdb2dfc-623b-44cf-9a7b-98cfabbb1d0c
 translation-type: tm+mt
-source-git-commit: 69976917f19a695908f1d7e5276d969587671761
+source-git-commit: dea673f8999656a5c5364f74f45eba41dd17b947
 workflow-type: tm+mt
-source-wordcount: '1845'
-ht-degree: 90%
+source-wordcount: '1762'
+ht-degree: 91%
 
 ---
 
@@ -193,12 +193,13 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 >
 >英語版は標準で提供されています。
 >
->他の言語は、Package ShareまたはSoftware Distributionの言語モデルパッケージとして利用できます。
+>その他の言語は、ソフトウェア配布の言語モデルパッケージとして提供されています。
 >
->* [Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr) （パッケージ共有）のフランス語(fr)または [Software Distribution（ソフトウェア配布）のフランス語(fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [パッケージ共有のドイツ語(de)またはソフトウェア配布の](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)[ドイツ語(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it) （パッケージ共有）のイタリア語(it)、またはソフトウェア配布の [イタリア語(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [パッケージ共有のスペイン語(es)またはソフトウェア配布の](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es)[スペイン語(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+>* [フランス語(fr)（ソフトウェア配布版）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+>* [ソフトウェア配布のドイツ語(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+>* [ソフトウェア配布のイタリア語(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+>* [ソフトウェア配布によるスペイン語(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+
 >
 
 
@@ -216,6 +217,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
    * 削除される文には取り消し線が付けられ、赤く表示されます。
    * 強調表示された文をクリックすると、その文書はコンテンツの要約に保持されます。
    * 強調表示されていない文をクリックすると、削除されます。
+
    ![cfm-6420-23](assets/cfm-6420-23.png)
 
 1. 変更を確定するには、「**[!UICONTROL 要約]**」を選択します。
@@ -277,6 +279,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
    * DAM で必要なアセットへの移動
    * DAM でアセットの検索
+
    必要なアセットが見つかったら、サムネールをクリックしてアセットを選択します。
 
 1. 「**[!UICONTROL 選択]**」を使用して、コンテンツフラグメント段落システムの現在の位置にアセットを追加します。
@@ -372,6 +375,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
    * 緑は追加されたコンテンツを示します（バリエーションへの追加）
    * 赤は削除されたコンテンツを示します（バリエーションからの削除）
+
    ![cfm-6420-27](assets/cfm-6420-27.png)
 
 4. 「**[!UICONTROL 同期]**」を選択すると、バリエーションが更新され、表示されます。
