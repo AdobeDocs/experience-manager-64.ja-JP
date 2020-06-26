@@ -1,25 +1,25 @@
 ---
 title: Camera Raw サポート
-description: Adobe Experience Manager AssetsでCamera Rawサポートを有効にする方法を説明します。
+description: Adobe Experience ManagerアセットでCamera Rawサポートを有効にする方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 69976917f19a695908f1d7e5276d969587671761
+source-git-commit: 53db84e56fa972824b90719c3c2b45b20109d45e
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '443'
 ht-degree: 37%
 
 ---
 
 
-# Camera Rawを使用した画像の処理のサポート {#camera-raw-support}
+# Camera Rawを使用した画像の処理 {#camera-raw-support}
 
-Camera Rawサポートを有効にして、CR2、NEF、RAFなどの生ファイル形式を処理し、画像をJPEG形式でレンダリングできます。 この機能は、パッケージ共有または [ソフトウェア配布から利用できる](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) Camera Rawパッケージ [(Camera Rawパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg))を使用して、Adobe Experience Manager Assetsでサポートされます。
+Camera Rawサポートを有効にして、CR2、NEF、RAFなどの生ファイル形式を処理し、画像をJPEG形式でレンダリングできます。 この機能は、Package Shareまたは [Software Distribution](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) （ソフトウェア配布）で使用できる [Camera Rawパッケージを使用して、Adobe Experience Managerアセットでサポートされます](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)。
 
 >[!NOTE]
 >
 >この機能は JPEG レンディションのみをサポートします。Windows 64ビット、Mac OS、およびRHEL 7.xでサポートされています。
 
-Adobe Experience Manager AssetsでCamera Rawサポートを有効にするには、次の手順に従います。
+Adobe Experience ManagerアセットでCamera Rawサポートを有効にするには、次の手順に従います。
 
 1. Camera Rawパッケージは、パッケージ共有または [ソフトウェア配布](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) ( [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg))からダウンロードします。
 
