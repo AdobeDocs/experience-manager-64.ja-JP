@@ -3,19 +3,19 @@ title: 複数のインプレースエディター用にRTEを設定します。
 description: リッチテキストエディターを設定して、Adobe Experience Managerに複数のインプレースエディターを作成します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6a7d9ea37d26c2eb51d136de630e737616e7cf5b
+source-git-commit: 44e7afdd5a5738dde73ab1d05a1c83a4bb24df92
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 26%
+source-wordcount: '445'
+ht-degree: 25%
 
 ---
 
 
 # 複数のインプレースエディターの設定 {#configure-multiple-in-place-editors}
 
-リッチテキストエディタは、複数のインプレースエディタを持つようにAdobe Experience Managerで設定できます。 このような設定にすると、適切なコンテンツを選択して、適切なエディターを開くことができます。次に例を示します。
+リッチテキストエディタは、複数のインプレースエディタを持つようにAdobe Experience Managerで設定できます。 このような設定にすると、適切なコンテンツを選択して、適切なエディターを開くことができます。
 
-![chlimage_1-8](assets/chlimage_1-8.png)
+![特定のインプレイスエディタ](assets/rte-inplace-editor.png)
 
 ## 複数のエディターの設定 {#configure-multiple-editors}
 
@@ -42,7 +42,7 @@ ht-degree: 26%
 
     /**
       * Configures one child editor for a sub-component. The name of the this node is
-      * be used as DD ID.
+      * used as DD ID.
       *
       * @prop type type of the inline editor. For example, ["image"].
       * @prop title Title of the inline editor.
