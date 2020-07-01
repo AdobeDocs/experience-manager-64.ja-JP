@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integration
 discoiquuid: 1dafd400-16c0-416d-9e81-7bf53b761f98
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: f614e0e47d12f6155364e498cf5fd04c777a25c4
 workflow-type: tm+mt
-source-wordcount: '1334'
-ht-degree: 68%
+source-wordcount: '1414'
+ht-degree: 64%
 
 ---
 
@@ -45,12 +45,14 @@ AEM Web Console Configuration を使用してリレーショナルデータベ�
    * JDBC ドライバーの Java クラス名
    * JDBC 接続 URI
    * JDBC ドライバーとの接続を確立するためのユーザー名とパスワード
+
    >[!NOTE] {grayBox=&quot;true&quot;}
    >
    >データソースを設定する前に、パスワードなどの機密情報を必ず暗号化してください。暗号化するには、以下の手順を実行します。
    >
    >1. `https://[server]:[port]/system/console/crypto` にアクセスします。
    >1. 「**[!UICONTROL プレーンテキスト]**」フィールドに暗号化する文字列（パスワードなど）を入力して「**[!UICONTROL 保護]**」をクリックします。
+
    >
    >暗号化されたテキストは、設定で指定できる「保護されたテキスト」フィールドに表示されます。
 
@@ -76,6 +78,7 @@ AEM Web コンソールでユーザープロファイルコネクター設定を
 
    * `name=profile/phoneNumber,type=string`
    * `name=profile/empLocation/*/city,type=string`
+
    >[!NOTE] {grayBox=&quot;true&quot;}
    >
    >The **&amp;ast;** in the above example denotes all nodes under the `profile/empLocation/` node in AEM user profile in CRXDE structure. It means that the form data model can access the `city` property of type `string` present in any node under the `profile/empLocation/` node. ただし、指定されたプロパティが存在するノードの構造が統一されている必要があります。
@@ -133,7 +136,11 @@ SOAP ベースの Web サービスは、[Web Services Description Language（WSD
 1. 以下に示す SOAP Web サービスの詳細情報を指定します。
 
    * Web サービスの WSDL URL を指定します。
-   * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「カスタム認証」）を選択してSOAPサービスにアクセスし、認証の詳細を指定します。
+   * サービスエンドポイント. WSDLで指定されているサービスエンドポイントを上書きするには、このフィールドの値を指定します。
+   * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「カスタム認証」、「X509トークン」）を選択してSOAPサービスにアクセスし、認証の詳細を入力します。
+
+      認証の種類として「X509トークン」を選択した場合は、X509証明書を設定します。 詳しくは、証明書の [設定を参照してください](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)。
+「 **[!UICONTROL Key Alias]** 」フィールドに、X509証明書のKeyStoreエイリアスを指定します。 認証要求が有効なままになるまでの時間を秒単位でTime To Live **** Fieldに指定します。 オプションで、メッセージの本文ヘッダーとタイムスタンプヘッダー、またはその両方に署名する場合に選択します。
 
 1. 「**[!UICONTROL 作成]**」をタップして、SOAP Web サービス用のクラウド設定を作成します。
 
@@ -154,6 +161,7 @@ OData サービスは、そのサービスのルート URL によって識別さ
 
    * 設定する OData サービスのルート URL を指定します。
    * 認証の種類（「なし」、「OAuth2.0」、「基本認証」、「カスタム認証」）を選択してODataサービスにアクセスし、認証の詳細を入力します。
+
    >[!NOTE]
    >
    >OData エンドポイントをサービスルートとして使用して Microsoft Dynamics サービスに接続する場合は、OAuth 2.0 認証を選択する必要があります。
