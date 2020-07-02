@@ -1,106 +1,96 @@
 ---
-title: 非同期操作によるパフォーマンス向上
-description: AEM Assets での非同期操作の概要
+title: で非同期操作を設定します [!DNL Adobe Experience Manager]。
+description: リソースを大量に消費する一部のタスクを非同期的に完了して、でパフォーマンスを最適化します [!DNL Experience Manager Assets]。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: f6aa1ab2c7a0ddeda1504e95ce4bd57fe74a65fd
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 15%
 
 ---
 
 
 # 非同期操作 {#asynchronous-operations}
 
-Adobe Experience Manger（AEM）Assets では、パフォーマンスを悪化させないために、長時間実行され、リソースを集中的に消費する特定のアセット操作は、非同期的に処理されます。このような操作には以下のようなものがあります。
+パフォーマンスへの悪影響を軽減するために、特定の長時間実行およびリソースを大量に消費するアセット操作を非同期に [!DNL Adobe Experience Manger Assets] 処理します。 非同期処理では、複数のタスクをエンキューし、システムリソースの可用性に応じて順次実行します。 このような操作には以下のようなものがあります。
 
 * 多数のアセットの削除。
-* 多数の参照を含む複数のアセットまたはアセットの移動。
-* アセットメタデータの一括での書き出しまたは読み込み
+* 多数のアセットまたは多数の参照があるアセットの移動.
+* アセットメタデータの一括書き出しと読み込み。
 
-非同期処理では複数のジョブがエンキューされ、システムリソースの可用性に応じた順序でジョブが実行されます。
-
-You can view the status of asynchronous jobs from the **[!UICONTROL Async Job Status]** page.
+You can view the status of asynchronous tasks from the **[!UICONTROL Async Job Status]** page.
 
 >[!NOTE]
 >
->デフォルトでは、AEM Assets でのジョブは並行して実行されます。N を CPU コアの数とすると、デフォルトでは N/2 のジョブを並行して実行できます。ジョブキューのカスタム設定を使用するには、Web コンソールで「**[!UICONTROL Async Operation Default Queue]**」設定を変更します。For more information, see [Queue Configurations](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations).
+>デフォルトでは、 [!DNL Assets] タスクは並行して実行されます。 If `N` is the number of CPU cores, `N/2` tasks can execute in parallel, by default. To use custom settings for the task queue, modify the **[!UICONTROL Async Operation Default Queue]** configuration from the [!UICONTROL Web Console]. For more information, see [queue configurations](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations).
 
 ## Monitor the status of asynchronous operations {#monitoring-the-status-of-asynchronous-operations}
 
-AEM Assets で非同期的に操作がおこなわれると、インボックスと電子メールに通知が届きます。
+操作が非同期 [!DNL Assets] で処理される場合は常に、インボックス [!DNL Experience Manager][](/help/sites-authoring/inbox.md) 、および電子メール経由で通知を受け取ります。 非同期操作のステータスの詳細を表示するには、**[!UICONTROL 非同期ジョブステータス]**&#x200B;ページに移動します。
 
-To view the status of the asynchronous operations in detail, navigate to the **Async Job Status** page.
+1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL 操作]** / **[!UICONTROL ジョブをクリックします]**。
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL アセット／ジョブ]**&#x200B;に移動します。
-1. In the **[!UICONTROL Async Job Status]** page, review the details of the operations.
+1. **[!UICONTROL 非同期ジョブステータス]**&#x200B;ページで、操作の詳細をレビューします。
 
-   ![job_status](assets/job_status.png)
+   ![非同期操作のステータスと詳細](assets/job_status.png)
 
-   特定の操作の進行状況を確認するには、「**[!UICONTROL ステータス]**」列の値を参照します。進行状況に応じて、以下のいずれかのステータスが表示されます。
+   操作の進行状況を確認するには、「 **[!UICONTROL Status]** 」列を参照してください。 進行状況に応じて、以下のいずれかのステータスが表示されます。
 
-   **アクティブ**：操作は処理中です。
+   * **[!UICONTROL アクティブ]**：操作は処理中です。。
+   * **[!UICONTROL 成功]**: 操作が完了しました。
+   * **[!UICONTROL 失敗]** または **[!UICONTROL エラー]**: 操作を処理できませんでした。
+   * **[!UICONTROL スケジュール済み]**: 操作は後で処理するようにスケジュールされます。
 
-   **成功**：操作は完了しました。
+1. To stop an active operation, select it from the list and click **[!UICONTROL Stop]** ![stop icon](assets/do-not-localize/stop_icon.svg) from the toolbar.
 
-   **失敗**：操作を処理できませんでした。
+1. To view extra details, for example description and logs, select the operation and click **[!UICONTROL Open]** ![open_icon](assets/do-not-localize/edit_icon.svg) from the toolbar. タスクの詳細ページが表示されます。
 
-   **スケジュール済み**：操作は後で処理するためにスケジュールされています。
+   ![メタデータ読み込みタスクの詳細](assets/job_details.png)
 
-1. アクティブな操作を停止するには、リストから対象の操作を選択し、ツールバーの「**[!UICONTROL 停止]**」アイコンをタップまたはクリックします。
-
-   ![stop_icon](assets/stop_icon.png)
-
-1. 説明やログなど、その他の詳細を表示するには、操作を選択し、ツールバーの「**[!UICONTROL 開く]**」アイコンをタップまたはクリックします。
-
-   ![open_icon](assets/open_icon.png)
-
-   ジョブの詳細ページが表示されます。
-
-   ![job_details](assets/job_details.png)
-
-1. リストから操作を削除するには、ツールバーの「**[!UICONTROL 削除]**」を選択します。詳細を CSV ファイルでダウンロードするには、「**[!UICONTROL ダウンロード]**」アイコンをタップまたはクリックします。
+1. リストから操作を削除するには、ツールバーの「**[!UICONTROL 削除]**」を選択します。To download the details in a CSV file, click **[!UICONTROL Download]**.
 
    >[!NOTE]
    >
-   >ステータスがアクティブまたは待機中のジョブは削除できません。
+   >ステータスがアクティブまたはキューに登録されているタスクは削除できません。
 
-## 完了したジョブの削除 {#purging-completed-jobs}
+## 完了したタスクの削除 {#purge-completed-tasks}
 
-AEM Assets は、毎日午前 1 時にパージジョブを実行して、1 日以上経過した完了済みの非同期ジョブを削除します。
+[!DNL Experience Manager Assets] 毎日0100時間にパージタスクを実行し、1日以上経過している完了済みの非同期タスクを削除します。
 
-パージジョブのスケジュールと、完了済みジョブの詳細を削除するまでの保持期間を変更できます。また、任意の時点での詳細を保持する、完了済みジョブの最大数を設定することもできます。
+<!-- TBD: Find out from the engineering team and mention the time zone of this 1:00 am task.
+-->
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール／操作／Web コンソール]**&#x200B;に移動します。
-1. Open the **[!UICONTROL Adobe CQ DAM Async Jobs Purge Scheduled]** job.
-1. 完了したジョブが削除されてからのしきい値と、詳細が履歴に保持されるジョブの最大数を指定します。
+削除タスクのスケジュールと、削除前に完了したタスクの詳細を保持する期間を変更できます。 完了したタスクの最大数を設定し、その詳細をいつでも保持することもできます。
 
-   ![purge_job](assets/purge_job.png)
+1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL Webコンソールをクリックします]**。
+1. Open the **[!UICONTROL Adobe CQ DAM Async Jobs Purge Scheduled]** task.
+1. 完了したタスクが削除されてからの日数と、詳細が履歴に保持されるタスクの最大数を指定します。 変更内容を保存します。
 
-1. 変更内容を保存します。
+   ![非同期タスクの削除をスケジュールする設定](assets/purge_job.png)
 
-## 非同期処理のしきい値の設定 {#configuring-thresholds-for-asynchronous-processing}
+## 非同期削除操作のしきい値の設定 {#configure-thresholds-for-asynchronous-delete-operations}
 
-AEM Assets が特定の操作を非同期的に処理する際の、アセットまたは参照の数のしきい値を設定できます。
+削除するアセットまたはフォルダーの数が、設定したしきい値を超える場合は、非同期に削除操作が実行されます。
 
-### 非同期削除操作のしきい値の設定 {#configuring-thresholds-for-asynchronous-delete-operations}
+1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL Webコンソールをクリックします]**。
+1. [!UICONTROL Webコンソールから]、 **[!UICONTROL Async Delete Operation Job Processing]** Configurationを開きます。
+1. 「アセット数の **[!UICONTROL しきい値]** 」ボックスに、アセット、フォルダーまたは参照を非同期に削除するしきい値を指定します。 変更内容を保存します。
 
-削除するアセットまたはフォルダーの数がしきい値を超えると、削除操作が非同期的に実行されます。
+   ![アセットを削除するタスクのしきい値制限を設定](assets/delete_threshold.png)
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール／操作／Web コンソール]**&#x200B;に移動します。
-1. From the web console, open the **[!UICONTROL Async Delete Operation Job Processing]** configuration.
-1. In the **[!UICONTROL Threshold number of assets]** box, specify the threshold number of assets/folders for asynchronous processing of delete operations.
+## 非同期移動操作のしきい値の設定 {#configure-thresholds-for-asynchronous-move-operations}
 
-   ![delete_threshold](assets/delete_threshold.png)
+移動するアセット、フォルダーまたは参照の数が、設定したしきい値を超える場合は、移動操作は非同期に実行されます。
 
-1. 変更内容を保存します。
+1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL Webコンソールをクリックします]**。
+1. [!UICONTROL Webコンソールから]、 **[!UICONTROL Async Move操作ジョブ処理の設定を開きます]** 。
+1. 「アセット/参照の **[!UICONTROL しきい値」ボックスで、アセット、フォルダーまたは参照を非同期に移動するしきい値を指定します]** 。 変更内容を保存します。
 
-### 非同期移動操作のしきい値の設定 {#configuring-thresholds-for-asynchronous-move-operations}
+   ![タスクがアセットを移動するしきい値の制限を設定](assets/move_threshold.png)
 
-移動するアセットやフォルダーまたは参照の数がしきい値を超えると、移動操作が非同期的に実行されます。
+>[!MORELIKETHIS]
+>
+>* [Experience Managerで電子メールを設定します](/help/sites-administering/notification.md)。
+>* [アセットメタデータの一括読み込みおよび書き出し](/help/assets/metadata-import-export.md).
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール／操作／Web コンソール]**&#x200B;に移動します。
-1. From the web console, open the **[!UICONTROL Async Move Operation Job Processing]** configuration.
-1. In the **[!UICONTROL Threshold number of assets/references]** box, specify the threshold number of assets/folders or references for asynchronous processing of move operations.
-
-   ![move_threshold](assets/move_threshold.png)
-
-1. 変更内容を保存します。
