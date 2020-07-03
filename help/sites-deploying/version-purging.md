@@ -10,7 +10,10 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: 56f36dcf-8fbd-43f8-bf74-e88d5b686160
 translation-type: tm+mt
-source-git-commit: 510b6765e11a5b3238407322d847745f09183d63
+source-git-commit: 0dced2f56fcebfb03fa6264e98cd686e8e7902c6
+workflow-type: tm+mt
+source-wordcount: '727'
+ht-degree: 64%
 
 ---
 
@@ -29,11 +32,11 @@ source-git-commit: 510b6765e11a5b3238407322d847745f09183d63
 
 AEM には、リポジトリの管理に役立つ様々なメカニズムが備わっています。
 
-* バージ [ョン管理](#version-manager)
+* バー [ジョンマネージャ](#version-manager)
 
    新しいバージョンを作成する際に古いバージョンを削除するように設定できます。
 
-* [バージ [ョンの削除](/help/sites-deploying/monitoring-and-maintaining.md#version-purging) ]ツール
+* [ [バージョンの削除](/help/sites-deploying/monitoring-and-maintaining.md#version-purging) ]ツール
 
    これは、リポジトリの監視と管理の一部として使用されます。
 
@@ -63,33 +66,33 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
 以下のオプションが利用できます。
 
-* `versionmanager.createVersionOnActivation` (ブール値、デフォルト：true)
+* `versionmanager.createVersionOnActivation` (ブール値、デフォルト： true)
 
    ページがアクティブ化されたときにバージョンを作成するかどうか。
 
-   バージョンの作成が許可されない限り、レプリケーションエージェントがバージョンの作成を禁止するように設定されていない場合は、バージョンが作成されます。バージョンマネージャーはこの設定を行います
+   バージョンの作成が許可されていない場合は、レプリケーションエージェントがバージョンの作成を禁止するように構成されていない限り、バージョンが作成されます。バージョンマネージャーでは、
 
-   バージョンは、versionmanager.ivPathsに含まれるパスでアクティベートが発生した場合にのみ作成されます（以下を参照）。
+   バージョンは、versionmanager.ivPathsに含まれるパスでアクティベーションが発生した場合にのみ作成されます（以下を参照）。
 
-* `versionmanager.ivPaths` (String[], default:{&quot;/&quot;})
+* `versionmanager.ivPaths` (文字列[]、デフォルト： {&quot;/&quot;})
 
-   versionmanager.createVersionOnActivationがtrueの場合に、アクティベーション時にバージョンが暗黙的に作成されるパス。
+   versionmanager.createVersionOnActivationがtrueの場合に、アクティベーションでバージョンが暗黙的に作成されるパスです。
 
-* `versionmanager.purgingEnabled` (ブール値、デフォルト：false)
+* `versionmanager.purgingEnabled` (ブール値、デフォルト： false)
 
-   新しいバージョンが作成された場合に削除を有効にするかどうか
+   新しいバージョンの作成時に削除を有効にするかどうか
 
-* `versionmanager.purgePaths` (String[], default:{&quot;/content&quot;})
+* `versionmanager.purgePaths` (文字列[]、デフォルト： {&quot;/content&quot;})
 
    新しいバージョンが作成されたときにバージョンを削除するパス。
 
-* `versionmanager.maxAgeDays` (int、デフォルト：30)
+* `versionmanager.maxAgeDays` (int、デフォルト： 30)
 
-   削除時に、この値より古いバージョンは削除されます。 この値が1未満の場合、バージョンの経過時間に基づいて削除は実行されません
+   削除すると、この値より古いバージョンはすべて削除されます。 この値が1より小さい場合、バージョンの古さに基づいて削除は実行されません
 
 * `versionmanager.maxNumberVersions` （int、デフォルト5）
 
-   削除すると、n番目に新しいバージョンより古いバージョンが削除されます。 この値が1未満の場合、バージョン数に基づいて削除は実行されません
+   削除すると、n番目に新しいバージョンより古いバージョンは削除されます。 この値が1より小さい場合、バージョン数に基づいて削除は実行されません
 
 * `versionmanager.minNumberVersions` （int、デフォルト0）
 
