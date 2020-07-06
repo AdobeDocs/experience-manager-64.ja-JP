@@ -10,7 +10,10 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 19cb3946-32ba-4f0b-89f0-f9272f2373d2
 translation-type: tm+mt
-source-git-commit: 4e6442ec089b7d07cc68debb5a630fb474716f4d
+source-git-commit: f98eccdb0251ff0262017fa42529576ba5feac97
+workflow-type: tm+mt
+source-wordcount: '2152'
+ht-degree: 88%
 
 ---
 
@@ -21,15 +24,14 @@ source-git-commit: 4e6442ec089b7d07cc68debb5a630fb474716f4d
 
 使用可能な他の開発環境について詳しくは、概要のドキュメントを参照してください。
 
-CRXDE Lite は AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Lite を使用すると、SVN によるログ記録や SVN との統合をおこなう間に、プロジェクトの作成や、ファイル（.jsp や .java など）、フォルダー、テンプレート、コンポーネント、ダイアログ、ノード、プロパティおよびバンドルの作成と編集を実行することができます。
+CRXDE Lite は AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Liteでは、ログ記録時に、プロジェクトの作成、ファイル（.jspや.javaなど）の作成、ファイルの作成と編集、フォルダ、テンプレート、コンポーネント、ダイアログ、ノード、プロパティおよびバンドルを実行できます。
 
 CRXDE Lite は、AEM サーバーに直接アクセスできない場合、すぐに使用可能なコンポーネントと Java バンドルを拡張または変更してアプリケーションを開発する場合、または専用のデバッガー、コード補完および構文のハイライト表示を必要としない場合にお勧めします。
 
 >[!NOTE]
 >
->By default, all AEM users can access CRXDE Lite. If desired, [configure ACLs](/help/sites-administering/security.md#permissions-and-acls) for the following node so that only developers can access CRX DE Lite:
->
->`/libs/granite/crxde`
+>AEM 6.4.8.1以降では、CRXDE Liteの匿名アクセスは不可能になりました。
+>ユーザーはログイン画面にリダイレクトされます。
 
 >[!NOTE]
 >
@@ -40,7 +42,7 @@ CRXDE Lite は、AEM サーバーに直接アクセスできない場合、す�
 CRXDE Lite の使用を開始するには、次の手順に従ってください。
 
 1. AEM をインストールします。
-1. ブラウザーにhttps://`<host>`:`<port>`/crx/deと入力します。 デフォルトではです `http://localhost:4502/crx/de`。
+1. ブラウザーにhttps://`<host>`:`<port>`/crx/deと入力します。 デフォルトでは有効で `http://localhost:4502/crx/de`す。
 1. **ユーザー名**&#x200B;と&#x200B;**パスワード**&#x200B;を入力します。By default it is `admin` and `admin`.
 
 1. 「**OK**」をクリックします。
@@ -99,10 +101,10 @@ CRXDE Lite には以下の機能があります。
   </tr> 
   <tr> 
    <td>すべて保存</td> 
-   <td><p><strong>すべて保存</strong>：<br /> </p> <p>おこなわれたすべての変更を保存します。「保存」をクリックするまで変更は一時的なものと見なされ、コンソールを終了すると失われます。</p> <p><strong>元に戻す</strong>：</p> <p>前回の保存アクションの後に、選択したノードに対しておこなった変更をすべて破棄し、選択したノード用にリポジトリの現在の状態を再読み込みします。</p> <p><strong>すべて元に戻す</strong>：</p> <p>前回の保存アクションの後に、リポジトリ全体でおこなった変更をすべて破棄し、リポジトリの現在の状態を再読み込みします。</p> </td> 
+   <td><p><strong>すべて保存</strong>：<br /> </p> <p>おこなわれたすべての変更を保存します。「保存」をクリックするまで変更は一時的なものと見なされ、コンソールを終了すると失われます。</p> <p><strong>元に戻す</strong>:</p> <p>前回の保存アクションの後に、選択したノードに対しておこなった変更をすべて破棄し、選択したノード用にリポジトリの現在の状態を再読み込みします。</p> <p><strong>すべて元に戻す</strong>：</p> <p>前回の保存アクションの後に、リポジトリ全体でおこなった変更をすべて破棄し、リポジトリの現在の状態を再読み込みします。</p> </td> 
   </tr> 
   <tr> 
-   <td>作成<br /> </td> 
+   <td>作成 ...<br /> </td> 
    <td><p>選択したノードの下に次の項目を作成するためのドロップダウンメニューです。<br /> </p> <p>- <strong>ノード</strong>：任意のノードタイプを持つノード<br /> </p> <p>- <strong>File</strong>: nt:file node and its nt:resource subnode</p> <p>- <strong>フォルダー</strong>：nt:folder ノード</p> <p>- <strong>テンプレート</strong>：AEM テンプレート</p> <p>- <strong>コンポーネント</strong>：AEM コンポーネント</p> <p>- <strong>ダイアログ</strong>：AEM ダイアログ</p> </td> 
   </tr> 
   <tr> 
@@ -118,20 +120,16 @@ CRXDE Lite には以下の機能があります。
    <td>Pastes the copied node under the selected node.<br /> </td> 
   </tr> 
   <tr> 
-   <td>移動<br /> </td> 
+   <td>移動 ...<br /> </td> 
    <td>選択したノードを、ダイアログを使用して設定されたノードに移動します。</td> 
   </tr> 
   <tr> 
-   <td>名前を変更<br /> </td> 
+   <td>名前を変更 ...<br /> </td> 
    <td>選択したノードの名前を変更します。<br /> </td> 
   </tr> 
   <tr> 
    <td>Mixin<br /> </td> 
    <td>Mixin タイプをノードタイプに追加できます。ほとんどの場合、Mixin タイプは高度な機能（バージョン管理、アクセス制御、参照、ロックなど）をノードに追加するために使用されます。</td> 
-  </tr> 
-  <tr> 
-   <td>チーム<br /> </td> 
-   <td><p>標準のバージョン管理タスクを実行するためのドロップダウンメニューです。</p> <p>- SVN サーバーからリポジトリを<strong>更新する</strong></p> <p>- ローカルの変更を SVN サーバーに<strong>コミットする</strong></p> <p>- 現在のノードの<strong>ステータス</strong>を確認する</p> <p>- 現在のノードのサブツリーの<strong>再帰的なステータス</strong>を確認する</p> <p>- 作業用コピーを SVN サーバーから<strong>チェックアウトする</strong></p> <p>- SVN サーバーからプロジェクトを（作業用コピーを作成せずに）<strong>書き出す</strong></p> <p>- リポジトリから SVN サーバーにプロジェクトを<strong>読み込む<br /></strong> </p> <p>一部のタスクを実行できる十分な権限（特に、ローカルリポジトリに書き込む権限）を持つユーザーとしてログインする必要があります。<br /> </p> </td> 
   </tr> 
   <tr> 
    <td>ツール<br /> </td> 
@@ -144,54 +142,12 @@ CRXDE Lite には以下の機能があります。
  </tbody> 
 </table>
 
-### プロジェクトの作成 {#creating-a-project}
-
-CRXDE Lite では、クリック 3 回で作業用プロジェクトを作成できます。The project wizard creates a new project under `/apps`, some content under `/conten`t and a package wrapping all the project the content under `/etc/packages`. リポジトリからプロパティをレンダリングし、Java クラスを呼び出して一部のテキストをレンダリングする jsp スクリプトを基に、作成したプロジェクトをすぐに使用して、**Hello World** を表示するサンプルページをレンダリングできます。
-
-CRXDE Lite でプロジェクトを作成するには：
-
-1. ブラウザーで CRXDE Lite を開きます。
-1. **ナビゲーションペインでノードを右クリックし、「作成…」**&#x200B;を選択して&#x200B;**、「プロジ**&#x200B;ェクトを作成…」を選択します。.
-
-   注意：ツリーナビゲーションでノードを右クリックすると、新しいプロジェクトノードが設計上、およびの下に作成され `/apps,` ま `/content``/etc/packages`す。
-
-1. 以下を定義します。
-
-   * **プロジェクト名** - プロジェクト名は、新しいノードとバンドルを作成するために使用します。例えば、`myproject` と指定します。
-   * **Java パッケージ** - Java パッケージ名のプレフィックス（例：`com.mycompany`）です。
-
-1. 「**作成**」をクリックします。
-1. 「**すべて保存**」をクリックして、サーバーに変更を保存します。
-
-**Hello World** を表示するサンプルページにアクセスするには、ブラウザーで次の URL を指定します。
-
-`http://localhost:4502/content/<project-name>.html`
-
-**Hello World** ページは、`sling:resourceType` プロパティを使用して jsp スクリプトを呼び出すコンテンツノードに基づいています。このスクリプトは、リポジトリから `jcr:title` プロパティを読み取り、プロジェクトバンドルで使用可能な SampleUtil クラスのメソッドを呼び出して本文のコンテンツを取得します。
-
-以下のノードが作成されます。
-
-* `/apps/<project-name>`:アプリケーションコンテナ。
-* `/apps/<project-name>/components`:ページのレンダリングに使用するサンプルhtml.jspファイルを含むコンポーネントコンテナ。
-
-* `/apps/<project-name>/src`:バンドルコンテナ。サンプルプロジェクトバンドルが含まれます。
-
-* `/apps/<project-name>/install`:コンパイル済みのバンドルコンテナ。コンパイル済みのサンプルプロジェクトバンドルが含まれます。
-* `/content/<project-name>`:コンテンツコンテナです。
-* `/etc/packages/<java-suffix>/<project-name>.zip`の場合、すべてのプロジェクトアプリとコンテンツを含むパッケージが含まれます。 このパッケージを使用して、追加のデプロイメント用（例：他の環境へのデプロイメント）またはパッケージ共有を使用した共有用のプロジェクトを再ビルドできます。
-
-**myproject** という名前のプロジェクトと **mycompany** という Java パッケージのサフィックスを含む構造は、CRXDE Lite では次のように表示されます。
-
-![chlimage_1-239](assets/chlimage_1-239.png)
-
-![chlimage_1-240](assets/chlimage_1-240.png)
-
 ### フォルダーの作成 {#creating-a-folder}
 
 CRXDE Lite でフォルダーを作成するには：
 
 1. ブラウザーで CRXDE Lite を開きます。
-1. **ナビゲーションペインで、新しいフォルダを作成するフォルダを右クリックし、[作成…**]、[フォルダの&#x200B;****&#x200B;作成…]の順に選択します。.
+1. In the Navigation pane, right-click the folder under which you want to create the new folder, select **Create ...**, then **Create Folder ...**.
 
 1. フォルダーの&#x200B;**名前**&#x200B;を入力して、「**OK**」をクリックします。
 
@@ -224,7 +180,7 @@ CRXDE Lite でテンプレートを作成するには：
 
 ### コンポーネントの作成 {#creating-a-component}
 
-ここで説明する機能は、ノードタイプがリポジトリで使用可能な場 `cq:Component` 合にのみ使用できます。
+ここで説明する機能は、ノードタイプがリポジトリで使用可能な場合 `cq:Component` にのみ使用できます。
 
 CRXDE Lite でコンポーネントを作成するには：
 
@@ -252,7 +208,7 @@ CRXDE Lite でコンポーネントを作成するには：
 CRXDE Lite でダイアログを作成するには：
 
 1. ブラウザーで CRXDE Lite を開きます。
-1. **ナビゲーションペインで、ダイアログを作成するコンポーネントを右クリックし、「** Create ...**」、「** Create Dialog ...」の順に選択します。.
+1. In the Navigation pane, right-click the component where you want to create the dialog, select **Create ...**, then **Create Dialog ...**.
 
 1. **ラベル**&#x200B;と&#x200B;**タイトル**&#x200B;を入力します。「**OK**」をクリックします。
 
@@ -307,167 +263,6 @@ CRXDE Lite でプロパティを作成するには：
 1. 新しいファイルが編集ウィンドウ内のタブとして開きます。
 1. ファイルを編集します。
 1. 「**すべて保存**」をクリックして変更を保存します。
-
-### バンドルの管理 {#managing-a-bundle}
-
-CRXDE Lite では、OSGi バンドルの作成、OSGi バンドルへの Java クラスの追加および OSGi バンドルのビルドを簡単におこなうことができます。その後で、バンドルは OSGi コンテナに自動的にインストールされ、起動されます。
-
-この節では、 `Test``HelloWorld`**Hello World!** がブラウザーに表示されます。
-
-#### バンドルの作成 {#creating-a-bundle}
-
-CRXDE Lite で Test バンドルを作成するには：
-
-1. CRXDE Lite で、`myapp`プロジェクトウィザードを使用して [](#creating-a-project) プロジェクトを作成します。その他にも以下のノードが作成されます。
-
-   * `/apps/myapp/src`
-   * `/apps/myapp/install`
-
-1. `/apps/myapp/src`バンドルを含むフォルダ `Test` ーを右クリックし、「作 **成…」**&#x200B;を選択して、「バンドルを&#x200B;****&#x200B;作成…」を選択します。.
-
-1. バンドルのプロパティを次のように設定します。
-
-   * Symbolic Bundle Name: `com.mycompany.test.TestBundle`
-   * バンドル名: `Test Bundle`
-   * バンドルの説明： `This is my Test Bundle`
-   * パッケージ:`com.mycompany.test`
-
-      「**OK**」をクリックします。
-
-1. 「**すべて保存**」をクリックして、サーバーに変更を保存します。
-
-以下の要素がウィザードで作成されます。
-
-* The node `com.mycompany.test.TestBundle` of type `nt:folder.` It is the bundle container node.
-
-* The file `com.mycompany.test.TestBundle.bnd`. It acts as deployment descriptor for your bundle and consists of a set of headers.
-
-* フォルダー構造は次のとおりです。
-
-   * `src/main/java/com/mycompany/test` です。パッケージと Java クラスが格納されます。
-   * `src/main/resources` です。バンドル内で使用されるリソースが格納されます。
-
-* ファ `Activator.java` イル。 これは、バンドルの開始イベントと停止イベントが通知されるオプションのリスナークラスです。
-
-次の表は、.bnd ファイルのすべてのプロパティと、その値および説明を示しています。
-
-<table> 
- <tbody> 
-  <tr> 
-   <td><strong>プロパティ</strong></td> 
-   <td><strong>値（バンドル作成時）<br /> </strong></td> 
-   <td><strong>説明</strong></td> 
-  </tr> 
-  <tr> 
-   <td>Export-Package:</td> 
-   <td><p>*</p> <p>注意：この値は、バンドルの特異性を反映するように変更してください。</p> </td> 
-   <td>Export-Package ヘッダーは、バンドルから書き込まれるパッケージ（パッケージのコンマ区切りリスト）を定義します。書き込まれるパッケージは、バンドルの公開ビューを構成します。<br />
-<br /> </td> 
-  </tr> 
-  <tr> 
-   <td>Import-Package:</td> 
-   <td><p>*</p> <p>注意：この値は、バンドルの特異性を反映するように変更してください。</p> </td> 
-   <td>Import-Package ヘッダーは、バンドル用に読み込むパッケージ（パッケージのコンマ区切りリスト）を定義します。</td> 
-  </tr> 
-  <tr> 
-   <td>Private-Package:</td> 
-   <td><p>*</p> <p>注意：この値は、バンドルの特異性を反映するように変更してください。</p> </td> 
-   <td>Private-Package ヘッダーは、バンドル用のプライベートパッケージ（パッケージのコンマ区切りリスト）を定義します。プライベートパッケージは内部実装を構成します。<br /> </td> 
-  </tr> 
-  <tr> 
-   <td>Bundle-Name:</td> 
-   <td>Test Bundle</td> 
-   <td>バンドルのわかりやすく簡単な名前を定義します。</td> 
-  </tr> 
-  <tr> 
-   <td>Bundle-Description:</td> 
-   <td>This is my Test Bundle</td> 
-   <td>バンドルのわかりやすく簡単な説明を定義します。</td> 
-  </tr> 
-  <tr> 
-   <td>Bundle-SymbolicName:</td> 
-   <td>com.mycompany.test.TestBundle</td> 
-   <td>バンドルのローカライズできない一意の名前を指定します。</td> 
-  </tr> 
-  <tr> 
-   <td>Bundle-Version:</td> 
-   <td>1.0.0-SNAPSHOT</td> 
-   <td>バンドルのバージョンを指定します。</td> 
-  </tr> 
-  <tr> 
-   <td>Bundle-Activator:</td> 
-   <td>com.mycompany.test.Activator</td> 
-   <td>バンドルの開始イベントと停止イベントが通知されるオプションのリスナークラスの名前を指定します。</td> 
-  </tr> 
- </tbody> 
-</table>
-
-bnd 形式について詳しくは、OSGi バンドルを作成するために CRXDE で使用される [bnd ユーティリティ](https://bndtools.org/)に関するページを参照してください。
-
-#### Java クラスの作成 {#creating-a-java-class}
-
-Test バンドル内に `HelloWorld` Java クラスを作成するには：
-
-1. ブラウザーで CRXDE Lite を開きます。
-1. `Activator.java`ナビゲーションペインで、ファイルを含むノード( `/apps/myapp/src/com.mycompany.test.TestBundle/src/main/java` )を右クリックし、「作成… **」を選択し、「フ******&#x200B;ァイルを作成…」を選択します。.
-
-1. Name the file `HelloWorld.java`. 「**OK**」をクリックします。
-
-1. `HelloWorld.java` ファイルが編集ウィンドウで開きます。
-1. 次の行を `HelloWorld.java` に追加します。
-
-   ```
-   package com.mycompany.test;  
-   
-   public class HelloWorld { 
-     public String getString(){ 
-     return "Hello World!"; 
-     } 
-   }
-   ```
-
-1. 「**すべて保存**」をクリックして、サーバーに変更を保存します。
-
-#### バンドルのビルド {#building-a-bundle}
-
-Test バンドルをビルドするには：
-
-1. ブラウザーで CRXDE Lite を開きます。
-1. ナビゲーションウィンドウで、.bnd ファイルを右クリックし、「**ツール**」、「**バンドル**」の順に選択します。
-
-バンドルを作成ウィザードの役割を次に示します。
-
-* Java クラスをコンパイルします。
-* コンパイル済みの Java クラスとリソースを格納する .jar ファイルを作成して、`myapp/install` フォルダーに配置します。
-* OSGi コンテナにバンドルをインストールして起動します。
-
-Test バンドルの効果を確認するには、Java メソッド HelloWorld.getString() を使用するコンポーネントおよびそのコンポーネントによってレンダリングされるリソースを作成します。
-
-1. コンポーネントを下に作 `mycomp` 成しま `myapp/components`す。
-
-1. コード `mycomp.jsp` を編集し、次の行に置き換えます。
-
-   ```
-   <%@ page import="com.mycompany.test.HelloWorld"%><% 
-   %><%@ include file="/libs/foundation/global.jsp"%><% 
-   %><% HelloWorld hello = new HelloWorld();%><% 
-   %> 
-   <html> 
-   <body> 
-   <b><%= hello.getString() %></b><br> 
-   </body> 
-   </html>
-   ```
-
-1. Create the resource `test_node` of type `nt:unstructured` under `/content`.
-
-1. For `test_node`, create the following property: Name = `sling:resourceType`, Type = `String`, Value = `myapp/components/mycomp`.
-
-1. 「**すべて保存**」をクリックして、サーバーに変更を保存します。
-
-1. ブラウザーで、次をリクエストしま `test_node`す。 `https://<hostname>:<port>/content/test_node.html`.
-
-1. **Hello World!** というメッセージと共にページが表示されます。
 
 ### ノードタイプの書き出しと読み込み {#exporting-and-importing-node-types}
 
