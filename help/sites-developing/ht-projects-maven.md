@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aee5f5a7-8462-4d42-8d96-8a7eb317770e
 translation-type: tm+mt
-source-git-commit: 377922cc2ccf40a02467b17910a8750420202b61
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
 workflow-type: tm+mt
 source-wordcount: '2247'
 ht-degree: 68%
@@ -552,6 +552,7 @@ JSPからコンパイルされたクラスを削除するために、Maven Clean
 >Depending on whether you actually make use of JSP code in `/libs` (i.e. include JSPs from there), you will need to refine which JSPs are copied for compilation.
 >
 >E.g. if you include `/libs/foundation/global.jsp`, you can use the following configuration for the `maven-resources-plugin` instead of the configuration above which completely skips over `/libs`.
+>
 >
 ```
 > <resource>  
