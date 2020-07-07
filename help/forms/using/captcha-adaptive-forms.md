@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 32369b0b-5abf-487d-ae6b-972c254eb7e2
 translation-type: tm+mt
-source-git-commit: b9d2a5b65f7ae48a9bde5580b5ddd3e55fc68d61
+source-git-commit: 4dbb6af1c0a76aabc003749d7fa76f8c6e41e726
+workflow-type: tm+mt
+source-wordcount: '665'
+ht-degree: 83%
 
 ---
 
@@ -20,16 +23,17 @@ CAPTCHA（Completely Automated Public Turing test to tell Computers and Humans A
 
 AEM によるアダプティブフォームの CAPTCHA のサポートGoogleのreCAPTCHAサービスを使用して、CAPTCHAを実装できます。
 
->[!NOTE] {grayBox=&quot;true&quot;}
+>[!NOTE]
 >
 >AEM Forms は reCaptcha v2 のみをサポートします。その他のバージョンはサポートされません。
+>
 >アダプティブフォームの CAPTCHA は、AEM Forms アプリケーションのオフラインモードではサポートされていません。
 
 ## Google が提供する reCAPTCHA サービスの設定 {#google-recaptcha}
 
 フォームの作成者は、Google による reCAPTCHA サービスを使用してアダプティブフォームに CAPTCHA を実装することができます。これにより、サイトを保護する高度な CAPTCHA 機能が提供されます。reCAPTCHA の仕組みについて詳しくは、「[Google reCAPTCHA](https://developers.google.com/recaptcha/)」を参照してください。
 
-![recaptcha](assets/recaptcha.png)
+![奪い取る](assets/recaptcha.png)
 
 AEM Forms で reCAPTCHAを実装するには：
 
