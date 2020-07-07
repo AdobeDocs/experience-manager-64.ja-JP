@@ -5,7 +5,7 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
 workflow-type: tm+mt
 source-wordcount: '3158'
 ht-degree: 85%
@@ -39,7 +39,7 @@ MSM では、ソースアセットとそのライブコピーとのライブ関�
 
 ### MSM for Assets の用語集 {#glossary-msm-for-assets}
 
-* **ソース：** 元のアセットまたはフォルダー。 ライブ・コピーの派生元となるプライマリ・コピー。
+* **ソース：** 元のアセットまたはフォルダー。 ライブコピーの派生元となるプライマリコピー。
 
 * **ライブコピー：** ソースと同期しているソースアセット/フォルダーのコピー。 ライブコピーは、さらに別のライブコピーのソースになることができます。[LC の作成方法](#create-live-copy-asset)を参照してください。
 
@@ -252,9 +252,9 @@ AEM では、MSM Java API を使用して機能を拡張することができま
 
 >[!NOTE]
 >
-> * MSM for Sites におけるブループリントは、MSM for Assets ではライブコピーソースと呼ばれます。
-> * サイトを作成ウィザードでの章ステップの削除は、MSM for Assets ではサポートされていません。
-> * ページプロパティに対する MSM ロックの設定（タッチ操作対応 UI）は、MSM for Assets ではサポートされていません。
+>* MSM for Sites におけるブループリントは、MSM for Assets ではライブコピーソースと呼ばれます。
+>* サイトを作成ウィザードでの章ステップの削除は、MSM for Assets ではサポートされていません。
+>* ページプロパティに対する MSM ロックの設定（タッチ操作対応 UI）は、MSM for Assets ではサポートされていません。
 
 
 ## ライブコピーに対するアセット管理タスクの影響 {#impact-of-asset-management-tasks-on-live-copies}
