@@ -10,7 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: eb8fd2b3-0a31-425e-b0f1-38f09e1106df
 translation-type: tm+mt
-source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+workflow-type: tm+mt
+source-wordcount: '392'
+ht-degree: 42%
 
 ---
 
@@ -89,7 +92,7 @@ source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
 
 * [メッセージングの設定](configure-messaging.md)
 
-* [SCFコンポーネント用のメッセージング](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) ・クライアントAPI
+* [SCFコンポーネント用メッセージングクライアントAPI](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html)
 
 * [メッセージング API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html)（サービス用）
 
@@ -99,21 +102,20 @@ source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
 
 >[!CAUTION]
 >
->次のMessageBuilderメソッドの場合、Stringパラメーターの末尾にスラッシュ「/」を*含めることはできません。
+>次のMessageBuilderメソッドの場合、Stringパラメーターに末尾にスラッシュ「/」を含めることはできません*。
 >
 >* `setInboxPath`()
 >* `setSentItemsPath`()
+
 >
 >
 次に例を示します。
 >
 >
-```>
+```
 >valid: mb.setInboxPath( "/mail/inbox" );
 > not valid: mb.setInboxPath( "/mail/inbox/" );
->```>
-
-
+>```
 
 ### コミュニティサイト {#community-site}
 
@@ -121,18 +123,18 @@ source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
 
 ### サンプルコード：メッセージ受信通知 {#sample-code-message-received-notification}
 
-ソーシャルメッセージ機能は、例えば、操作に対してイベントを `send`スロー `marking read`しま `marking delete`す。 これらのイベントは、イベントに含まれるデータに対して実行されるアクションを取得できます。
+ソーシャルメッセージ機能では、操作(例えば、 `send`、など)に対してイベントが発生し `marking read``marking delete`ます。 これらのイベントは、イベントに含まれるデータに対して取得し、実行されるアクションです。
 
 The following example is of an event handler which listens for the `message sent` event and sends an email to all message recipients using the `Day CQ Mail Service`.
 
 サーバー側サンプルスクリプトを試すには、開発環境と OSGi バンドルのビルド機能が必要です。
 
 1. Login as an administrator to ` [CRXDE|Lite](http://localhost:4502/crx/de)`
-1. 任意の `bundle node`名 `/apps/engage/install` 前(
+1. 任意 `bundle node``/apps/engage/install` の名前(
 
-   * **[!UICONTROL シンボリック名]**:com.engage.media.social.messaging.MessagingNotification
+   * **[!UICONTROL シンボリック名]**: com.engage.media.social.messaging.MessagingNotification
    * ****&#x200B;名前：Getting Started Tutorial Message Notificaton
-   * **[!UICONTROL 説明]**:ユーザーがメッセージを受け取ったときに電子メール通知を送信するサンプルサービス
+   * **[!UICONTROL 説明]**: ユーザーがメッセージを受け取ったときに電子メール通知を送信するサンプルサービス
    * **[!UICONTROL パッケージ]**: `com.engage.media.social.messaging.notification`
 
 1. `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification` に移動します。
