@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 translation-type: tm+mt
-source-git-commit: 9b7bab63c5c0b9a0a86289e895cd35a4df277e1e
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
 workflow-type: tm+mt
 source-wordcount: '2331'
 ht-degree: 83%
@@ -172,7 +172,6 @@ hybris で管理されている製品データを AEM で使用できるよう�
 * hybris 拡張はポーリングインポーター（&quot;hybris&quot; scheme&quot;）を提供します。このインポーターは、変更を指定の時間間隔で AEM に読み込むように設定できます（例えば 24 時間おきにする場合は、秒単位で以下のように指定します）。
 
    * 
-
       ```
       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
        {
@@ -226,12 +225,10 @@ Any product resource can be represented by a `Product API`. Most calls in the pr
 >1. `size`
    >
    >
-1. もう一度\
-   >   This additional variant is selected via the `variationAxis` property of the product reference (usually `color` for Geometrixx Outdoors).
-
+1. もう一度
 >
-
-
+>   
+This additional variant is selected via the `variationAxis` property of the product reference (usually `color` for Geometrixx Outdoors).
 
 #### 製品リファレンスと製品データ {#product-references-and-product-data}
 
