@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 7599fa42-3a47-49c9-8a7f-e0b6be302ff0
 translation-type: tm+mt
-source-git-commit: 6eb03b035793a21eafd120ac848a6d62eaf6e6ec
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
 workflow-type: tm+mt
 source-wordcount: '6231'
 ht-degree: 76%
@@ -106,15 +106,14 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
    新しいノードに次のプロパティを設定する必要があります。
 
-   * **名前：**`sling:resourceType`
+   * **名前:** `sling:resourceType`
 
-      * **Type:** `String`
+      * **型:** `String`
       * **値:** `granite/operations/components/mbean`
-   * **名前：**`resource`
+   * **名前:** `resource`
 
-      * **Type:** `String`
+      * **型:** `String`
       * **値:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
-
    >[!NOTE]
    >
    >The resource path above is created as follows: if the mbean name of your Health Check is &quot;test&quot;, add &quot;test&quot; to the end of the path `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck`
@@ -154,7 +153,6 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    * **Tags（hc.tags）：**&#x200B;このヘルスチェックのタグ。この複合ヘルスチェックを別の複合ヘルスチェックの一部とする場合（ヘルスチェックの階層内など）は、この複合が関連付けられているタグを追加します。
    * **MBean Name（hc.mbean.name）：**&#x200B;この複合ヘルスチェックの JMX MBean に付けられる Mbean の名前。
    * **Filter Tags（filter.tags）：**&#x200B;これは複合ヘルスチェック専用のプロパティです。複合が集約するタグを指定します。複合ヘルスチェックは、そのグループの下に、この複合のいずれかのフィルタータグに一致するタグを持つすべてのヘルスチェックを集約します。例えば、**test** および **check** というフィルタータグを持つ複合ヘルスチェックは、タグプロパティ（**）に** test **タグと** check`hc.tags` タグのいずれかが含まれているすべての個別および複合ヘルスチェックを集約します。
-
    >[!NOTE]
    >
    >Apache Sling 複合ヘルスチェックの新しい設定ごとに、新しい JMX Mbean が 1 つずつ作成されます。**
@@ -163,21 +161,19 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
    例えば、設定を作成して **hc.mbean.name** 値を **diskusage** に設定した場合、設定ノードは次のようになります。
 
-   * **名前：**`Composite Health Check`
+   * **名前:** `Composite Health Check`
 
-      * **Type:** `nt:unstructured`
-
+      * **型:** `nt:unstructured`
    次のようにプロパティを定義します。
 
-   * **名前：**`sling:resourceType`
+   * **名前:** `sling:resourceType`
 
-      * **Type:** `String`
+      * **型:** `String`
       * **値:** `granite/operations/components/mbean`
-   * **名前：**`resource`
+   * **名前:** `resource`
 
-      * **Type:** `String`
+      * **型:** `String`
       * **値:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
-
    >[!NOTE]
    >
    >既にデフォルトでダッシュボードに存在する複合チェックに論理的に属する個別ヘルスチェックを作成する場合、ヘルスチェックは自動的にキャプチャされ、各複合チェックの下にグループ化されます。このため、これらのチェック用に新しい設定ノードを作成する必要はありません。
@@ -343,7 +339,6 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    1. 左側のウィンドウで、「**Advanced Configuration**」の下の「**Core Config Manager**」をクリックします。
    1. Press the **Hosts** link under the **Monitoring** section.
    1. ホスト定義を追加します。
-
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
    以下は、Nagios Core を使用している場合のホスト設定ファイルの例です。
@@ -595,7 +590,7 @@ You can access the Lucene Binaries Cleanup task from: **AEM > Tools > Operations
 
 >[!NOTE]
 >
-> ワークフローメンテナンスの詳細については、[このページ](workflows-administering.md#regular-purging-of-workflow-instances)を参照してください。
+>ワークフローメンテナンスの詳細については、[このページ](workflows-administering.md#regular-purging-of-workflow-instances)を参照してください。
 
 ### 監査ログのメンテナンス {#audit-log-maintenance}
 
@@ -637,7 +632,7 @@ You can access the Lucene Binaries Cleanup task from: **AEM > Tools > Operations
    <td><strong>サービスプロパティ名</strong><br /> </td> 
    <td><strong>説明</strong></td> 
    <td><strong>例</strong><br /> </td> 
-   <td><strong>タイプ</strong></td> 
+   <td><strong>型</strong></td> 
   </tr> 
   <tr> 
    <td>granite.maintenance.isStoppable</td> 
