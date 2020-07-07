@@ -9,9 +9,9 @@ topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f06b8cb2-6f98-465f-beec-1e91e3f45707
 translation-type: tm+mt
-source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+source-git-commit: 4dbb6af1c0a76aabc003749d7fa76f8c6e41e726
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2042'
 ht-degree: 83%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 83%
 
    アダプティブフォームのオーサリングインターフェースと使用可能なコンポーネントについて詳しくは、「[アダプティブフォームの作成について](/help/forms/using/introduction-forms-authoring.md)」を参照してください。
 
-   >[!NOTE] {grayBox=&quot;true&quot;}
+   >[!NOTE]
    >
    >新しく作成されたフォームを新しいタブで開くには、ブラウザでポップアップを許可してください。
 
@@ -130,7 +130,7 @@ XML スキーマと JSON スキーマは、組織内のバックエンドシス�
    * **[!UICONTROL ディスクからアップロード]** - このオプションを選択して「スキーマの定義をアップロード」をタップし、ファイルシステムから XML スキーマまたは JSON スキーマをアップロードします。アップロードされたスキーマファイルはフォームとともに保存されますが、他のアダプティブフォームからアクセスすることはできません。
    * **[!UICONTROL リポジトリ内を検索]** - このオプションを選択して、リポジトリで使用できるスキーマ定義ファイルのリストからスキーマを選択します。XML または JSON スキーマファイルをフォームモデルとして選択します。選択したスキーマが参照されてフォームに関連付けられ、他のアダプティブフォームからアクセスして使用できるようになります。
 
-   >[!CAUTION] {grayBox=&quot;true&quot;}
+   >[!CAUTION]
    >
    >JSON スキーマファイル名が **.schema.json** で終わることを確認してください。例：mySchema.schema.json
 
