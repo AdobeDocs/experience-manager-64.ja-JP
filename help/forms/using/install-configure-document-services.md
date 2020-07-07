@@ -7,7 +7,7 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: 4c99cf4852ea21a85013d8745ade48500110e58a
+source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
 workflow-type: tm+mt
 source-wordcount: '4353'
 ht-degree: 68%
@@ -197,7 +197,7 @@ Unix ベースのオペレーティングシステムを使用する場合は、
 
 ### Adobe Acrobat とサードパーティアプリケーションのインストール {#install-adobe-acrobat-and-third-party-applications}
 
-PDF Generatorサービスを使用して、Microsoft Word、Microsoft Excel、Microsoft PowerPoint、OpenOffice、WordPerfect X7、Adobe Acrobatなどのネイティブファイル形式をPDFドキュメントに変換する場合は、これらのアプリケーションがAEM Formsサーバーにインストールされていることを確認してください。
+PDF Generatorサービスを使用して、Microsoft Word、Microsoft Excel、Microsoft PowerPoint、OpenOffice、WordPerfect X7、Adobe Acrobatなどのネイティブファイル形式をPDFドキュメントに変換する場合は、これらのアプリケーションがAEM Formsサーバーにインストールされていることを確認します。
 
 >[!NOTE]
 >
@@ -257,11 +257,11 @@ Acrobat をインストールしてから、Microsoft Word を開きます。「
 >* 環境変数 OpenOffice_PATH は、実行ファイルではなく、インストールフォルダーのパスに設定します。
 >* Word、PowerPoint、Excel、ProjectなどのMicrosoft Officeアプリケーション、またはAutoCADの環境変数を設定しないでください。 これらのアプリケーションがサーバーにインストールされている場合は、Generate PDF サービスが自動的にこれらのアプリケーションを起動します。
 >* UNIX ベースのプラットフォームでは、OpenOffice を /root としてインストールします。OpenOffice が root としてインストールされていないと、PDF Generator サービスは OpenOffice ドキュメントを PDF ドキュメントに変換できません。OpenOffice を非 root ユーザーとしてインストールして実行する必要がある場合は、非 root ユーザーに sudo 権限を与えます。
->* UNIXベースのプラットフォームでOpenOfficeを使用している場合は、次のコマンドを実行してパス変数を設定します。\
-   >  `export OpenOffice_PATH=/opt/openoffice.org4`
+>* UNIXベースのプラットフォームでOpenOfficeを使用している場合は、次のコマンドを実行してパス変数を設定します。
 
 >
-
+>  
+`export OpenOffice_PATH=/opt/openoffice.org4`
 
 
 ### （IBM WebSphere のみ）IBM SSL ソケットプロバイダーの設定{#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
@@ -357,8 +357,7 @@ PDF Generatorサービスは、HTMLファイルをPDFドキュメントに変換
 
 >[!NOTE]
 >
-> フォントフォルダーに新しいフォントをインストールする場合は、必ずAEM Formsインスタンスを再起動します。
-
+>フォントフォルダーに新しいフォントをインストールする場合は、必ずAEM Formsインスタンスを再起動します。
 
 ### （UNIXベースのプラットフォームのみ）HTMLからPDFへの変換の追加設定  {#extra-configurations-for-html-to-pdf-conversion}
 
@@ -413,7 +412,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
    `[AEM installation directory]\crx-quickstart\bin\start.bat` を使用して AEM インスタンスを起動する場合は、`[AEM_root]\crx-quickstart\` フォルダー内の sling.properties ファイルを編集用として開きます。
 
-1. 以下のプロパティを sling.properties ファイルに追加します。 
+1. 以下のプロパティを sling.properties ファイルに追加します。
 
    ```
    sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*
