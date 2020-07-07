@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integration
 discoiquuid: 1dafd400-16c0-416d-9e81-7bf53b761f98
 translation-type: tm+mt
-source-git-commit: f614e0e47d12f6155364e498cf5fd04c777a25c4
+source-git-commit: 4dbb6af1c0a76aabc003749d7fa76f8c6e41e726
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1410'
 ht-degree: 64%
 
 ---
@@ -46,7 +46,7 @@ AEM Web Console Configuration を使用してリレーショナルデータベ�
    * JDBC 接続 URI
    * JDBC ドライバーとの接続を確立するためのユーザー名とパスワード
 
-   >[!NOTE] {grayBox=&quot;true&quot;}
+   >[!NOTE]
    >
    >データソースを設定する前に、パスワードなどの機密情報を必ず暗号化してください。暗号化するには、以下の手順を実行します。
    >
@@ -79,7 +79,7 @@ AEM Web コンソールでユーザープロファイルコネクター設定を
    * `name=profile/phoneNumber,type=string`
    * `name=profile/empLocation/*/city,type=string`
 
-   >[!NOTE] {grayBox=&quot;true&quot;}
+   >[!NOTE]
    >
    >The **&amp;ast;** in the above example denotes all nodes under the `profile/empLocation/` node in AEM user profile in CRXDE structure. It means that the form data model can access the `city` property of type `string` present in any node under the `profile/empLocation/` node. ただし、指定されたプロパティが存在するノードの構造が統一されている必要があります。
 
