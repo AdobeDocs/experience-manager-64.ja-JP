@@ -10,7 +10,7 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 4b680d17-383b-4173-a444-0b7bdb24e6c8
 translation-type: tm+mt
-source-git-commit: eebb765465c90c0ede5957c8bf79a028e1b4f6ce
+source-git-commit: 4dbb6af1c0a76aabc003749d7fa76f8c6e41e726
 workflow-type: tm+mt
 source-wordcount: '1908'
 ht-degree: 42%
@@ -184,6 +184,7 @@ In order for application developers to attach tagging to a content type, the nod
    >
    >
 * アセット( `cq:Asset`)を使用します。この場合、 `jcr:content/metadata` ノードには `cq:Taggable` mixinが常に含まれます。
+
 >
 
 
@@ -259,14 +260,17 @@ AEM に含まれるノードタイプの基本的な定義は、次のように�
 
 ## タグの移行 {#tags-migration}
 
-Experience Manager 6.4以降のタグはに保存され `/content/cq:tags`ます。以前はに保存されていました `/etc/tags`。 ただし、Adobe Experience Managerが以前のバージョンからアップグレードされた場合でも、タグは古い場所に残り `/etc/tags`ます。 アップグレードしたシステムのタグは、に移行する必要があり `/content/cq:tags`ます。
+Experience Manager6.4以降のタグはに格納され `/content/cq:tags`ます。以前はに格納されていました `/etc/tags`。 ただし、Adobe Experience Managerが以前のバージョンからアップグレードされた場合、タグは古い場所に残り `/etc/tags`ます。 アップグレードしたシステムのタグは、に移行する必要があり `/content/cq:tags`ます。
 
-> [!NOTE]
-> タグページのページプロパティでは、タグベースパス（例えば、）をハードコーディングする代わりに、タグID( `geometrixx-outdoors:activity/biking`例えば、 `/etc/tags/geometrixx-outdoors/activity/biking`)を使用することをお勧めします。
-> リストタグを使用す `com.day.cq.tagging.servlets.TagListServlet` るには、を使用します。
+>[!NOTE]
+>
+>タグページのページプロパティでは、タグベースパス（例えば、）をハードコーディングする代わりに、タグID( `geometrixx-outdoors:activity/biking`例えば、 `/etc/tags/geometrixx-outdoors/activity/biking`)を使用することをお勧めします。
+>
+>リストタグを使用す `com.day.cq.tagging.servlets.TagListServlet` るには、を使用します。
 
-> [!NOTE]
-> タグマネージャーAPIをリソースとして使用することをお勧めします。
+>[!NOTE]
+>
+>タグマネージャーAPIをリソースとして使用することをお勧めします。
 
 **アップグレードしたAEMインスタンスがTagManager APIをサポートする場合**
 
@@ -332,9 +336,9 @@ println "---------------------------------Success-------------------------------
 
 **アップグレードしたAEMインスタンスがClasic UIで実行される場合**
 
-> [!NOTE]
-> クラシックUIは、ダウンタイムゼロの互換性がなく、新しいタグ基本パスをサポートしていません。 作成する必要のないクラシックUIを使用する場合は、コンポー `/etc/tags``cq-tagging` ネントを再起動する必要があります。
-
+>[!NOTE]
+>
+>クラシックUIは、ダウンタイムゼロの互換性がなく、新しいタグ基本パスをサポートしていません。 作成する必要のないクラシックUIを使用する場合は、コンポー `/etc/tags``cq-tagging` ネントを再起動する必要があります。
 
 アップグレードしたAEMインスタンスがTagManager APIでサポートされ、クラシックUIで実行される場合：
 
