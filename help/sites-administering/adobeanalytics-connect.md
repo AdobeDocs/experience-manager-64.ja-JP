@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 88dbfd34-1f8d-47a2-893d-20faf1a80f95
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: fb4e6aef84d733c578e0f2ee7407016715e77cf5
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 64%
+source-wordcount: '1556'
+ht-degree: 63%
 
 ---
 
@@ -44,11 +44,11 @@ Web ページをフレームワークに関連付けると、フレームワー�
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
-先に進む前に、お使いの資格情報で Adobe Analytics にログインできることを確認してください（次のどちらかから）。
+先に進む前に、資格情報で次のいずれかの方法を使用してAdobeAnalyticsにサインインできることを確認してください。
 
-* [https://marketing.adobe.com](https://marketing.adobe.com)
+* [Adobe Experience Cloudのサインイン](https://login.experiencecloud.adobe.com/exc-content/login.html)
 
-* [https://sc.omniture.com/login/](https://sc.omniture.com/login/)
+* [AdobeAnalyticsサインイン](https://sc.omniture.com/login/)
 
 ### Adobe Analytics データセンターを使用するように AEM を設定 {#configuring-aem-to-use-your-adobe-analytics-data-centers}
 
