@@ -10,10 +10,10 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 translation-type: tm+mt
-source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+source-git-commit: 6a8fa45ec61014acebe09048066972ecb1284641
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 86%
+source-wordcount: '849'
+ht-degree: 78%
 
 ---
 
@@ -50,14 +50,16 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
 
 1. AEM Forms アドオンパッケージのインストール. 手順は次のとおりです。
 
-   1. AEM サーバーに管理者としてログインし、パッケージ共有を開きます。The default URL of the package share is `https://[server]:[port]/crx/packageshare`.
-   1. パッケージ共有で **[!UICONTROL AEM 6.4 Forms add-on packages]** を検索し、お使いのオペレーティングシステムに対応するパッケージをクリックして、「**[!UICONTROL ダウンロード]**」をクリックします。ライセンス使用許諾契約書を読んでから同意し、「**[!UICONTROL OK]**」をクリックします。ダウンロードが開始します。ダウンロードが完了したら、パッケージの横に「**[!UICONTROL ダウンロード済み]**」というテキストが表示されます。
+   1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Adobe IDがソフトウェア配布物にログインする必要があります。
+   1. ヘッダーメニューで **[!UICONTROL Adobe Experience Manager]** をタップします。
+   1. In the **[!UICONTROL Filters]** section:
+      1. 「 **[!UICONTROL ソリューション]** 」ドロップダウンリストから「 **[!UICONTROL フォーム]** 」を選択します。
+      1. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
+   1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「EULA条項に **[!UICONTROL 同意します]**」を選択して、「 **[!UICONTROL ダウンロード]**」をタップします。
+   1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
+   1. Select the package and click **[!UICONTROL Install]**.
 
-      Alternately, you can also use the hyperlinks listed in [AEM Forms releases](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) to manually download a package.
-
-   1. ダウンロードが完了したら、「**[!UICONTROL ダウンロード済み]**」をクリックします。パッケージマネージャーに切り替わります。In the package manager, search the downloaded package, and click **[!UICONTROL Install]**.
-
-      「[AEM Forms のリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)」に記載されているダイレクトリンクを使用して手動でパッケージをダウンロードした場合は、AEM Package Manager を起動して「**[!UICONTROL パッケージをアップロード]**」をクリックし、ダウンロードしたパッケージを選択して「アップロード」をクリックします。After the package is uploaded, click package name, and click **[!UICONTROL Install]**.
+      「 [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) 」記事に一覧表示されている直接リンクを使用して、パッケージをダウンロードすることもできます。
 
       >[!NOTE]
       >
@@ -74,7 +76,7 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
 
    * **移行ユーティリティの実行**
 
-      移行ユーティリティにより、以前のバージョンのアダプティブフォームや対応する管理アセットが AEM 6.4 Forms で使用できるようになります。AEM パッケージ共有からユーティリティをダウンロードできます。移行ユーティリティの詳しい設定方法と使用方法については、[移行ユーティリティ](/help/forms/using/migration-utility.md)に関する説明を参照してください。
+      移行ユーティリティにより、以前のバージョンのアダプティブフォームや対応する管理アセットが AEM 6.4 Forms で使用できるようになります。このユーティリティは、AEMソフトウェア配布からダウンロードできます。 移行ユーティリティの詳しい設定方法と使用方法については、[移行ユーティリティ](/help/forms/using/migration-utility.md)に関する説明を参照してください。
 
       [ドラフト統合とコンポーネント送信のサンプル](integrate-draft-submission-database.md)をデータベースで使用して旧バージョンのアップグレードを行う場合は、アップグレードの実行後に、以下の SQL クエリを実行してください。
 
@@ -107,6 +109,7 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
       * `https://[server]:[port]/crx/packmgr`
       * `https://[server]:[port]/crx/de`
       * `https://[server]:[port]/aem/forms.html/content/dam/formsanddocuments`
+
    >[!NOTE]
    AEM 6.4 Forms では crx-repository の構造が変更されています。AEM 6.4 Forms にアップグレードしたあと、新規作成するカスタマイズについては、変更後のパスを使用してください。変更後のパスの一覧については、「[AEM 6.4 Forms におけるリポジトリの再構築](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md)」を参照してください。
 
