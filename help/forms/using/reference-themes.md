@@ -1,14 +1,17 @@
 ---
 title: リファレンステーマ
 seo-title: リファレンステーマ
-description: 'AEM Forms には、パッケージ共有から取得してフォームのスタイル設定に使用できるアダプティブフォームテーマが用意されています。 '
-seo-description: 'AEM Forms には、パッケージ共有から取得してフォームのスタイル設定に使用できるアダプティブフォームテーマが用意されています。 '
+description: 'AEM Formsは、ソフトウェアの配布から取得し、フォームのスタイル設定に使用できるアダプティブフォームテーマを提供します。 '
+seo-description: 'AEM Formsは、ソフトウェアの配布から取得し、フォームのスタイル設定に使用できるアダプティブフォームテーマを提供します。 '
 uuid: a39bc3da-0bb8-4f11-b0d5-9403cfc6e384
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 78d7d4b6-95dd-429b-870b-30aba5a3fea3
 translation-type: tm+mt
-source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+source-git-commit: 6a8fa45ec61014acebe09048066972ecb1284641
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 75%
 
 ---
 
@@ -69,12 +72,12 @@ Ultramarine テーマは、濃い青色のシェーディングを使用して�
 
 ## Urbane {#urbane}
 
-Urbaneテーマは、フォームのミニマリズム的で機能的な外観を強調します。 フォームにUrbaneテーマを適用すると、コンポーネントがフラットであることがわかります。 パネルには細いアウトラインが付けられ、モダンな外観を作成します。![Urbane テーマ](assets/urbane.png)
+あか抜けテーマは、フォームのミニマリスト的で機能的な外観を強調します。 Urbaneテーマをフォームに適用すると、コンポーネントがフラットであることがわかります。 パネルには細いアウトラインが付けられ、モダンな外観を作成します。![Urbane テーマ](assets/urbane.png)
 
 [クリックして拡大](assets/urbane-1.png)
 
 ## U.S. Web Design Standards {#u-s-web-design-standards}
 
-U.S. Web Design Standardsテーマは、名前の通り、Draft U.S. Web Design Standardsサイトで説明されている書体とスタイルを使用します。 この Web 標準は、連邦政府の Web サイト間での Web エクスペリエンスを統一するために、連邦政府機関で使用されています。![U.S. Web Design Standards テーマ](assets/us-web-standards.png)
+米国のウェブデザイン標準テーマは、その名の通り、米国のドラフトウェブデザイン標準サイトに記載されている書体とスタイルを使用します。 この Web 標準は、連邦政府の Web サイト間での Web エクスペリエンスを統一するために、連邦政府機関で使用されています。![U.S. Web Design Standards テーマ](assets/us-web-standards.png)
 
 [クリックして拡大](assets/usgov.png)
