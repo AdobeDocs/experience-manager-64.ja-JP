@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: fdea5ede-d44f-463e-af8a-111ee7469ede
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: f1bf1545689b977a0f5074954df224db58cbd695
 workflow-type: tm+mt
-source-wordcount: '1573'
-ht-degree: 66%
+source-wordcount: '1559'
+ht-degree: 73%
 
 ---
 
@@ -30,9 +30,9 @@ AEM Livefyre パッケージでは初期設定済みの実装が提供されま�
 
 ### AEM の統合 {#aem-integration}
 
-Livefyre Adobe Experience Manager パッケージは、AEM 6.1、6.2Sp1、6.3、6.4、6.4 SP1 で使用できます。AEM 5.x および 6.0 ではサポートされていません。For detailed instructions, see [Integrating with Livefyre](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
+Livefyre Adobe Experience Manager パッケージは、AEM 6.1、6.2Sp1、6.3、6.4、6.4 SP1 で使用できます。AEM 5.x および 6.0 ではサポートされていません。For detailed instructions, see [Integrating with Livefyre](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html).
 
-To see which Livefyre Apps are supported, see the [AEM Support Matrix for Livefyre Apps](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#AEMSupportMatrixforLivefyreApps).
+To see which Livefyre Apps are supported, see the [AEM Support Matrix for Livefyre Apps](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/livefyre.html#AEMSupportMatrixforLivefyreApps).
 
 ### Traditional Implementation (for customized AEM components) {#traditional-implementation-for-customized-aem-components}
 
@@ -65,7 +65,7 @@ Make sure you follow [Twitter](https://developer.twitter.com/en/developer-terms/
 
 認証を必要とする Media Wall の統合については、以下を参照してください。
 
-* [AEMIdentity Management用のシングルサインオンの統合](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
+* [AEMIdentity Management用のシングルサインオンの統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
 * サードパーティ製認証プラットフォーム用 [ID 統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)
 
 ### ユースケースの概要 {#use-case-overview}
@@ -74,9 +74,9 @@ AEM の顧客として、標準 Livefyre AEM コンポーネントを使用し�
 
 実装手順：
 
-1. [概要](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html)
-1. [Livefyre を使用するための AEM の設定](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html)
-1. [AEM Media Wall コンポーネントをページにドラッグアンドドロップ](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#UseLivefyrewithAEMSites)
+1. [概要](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/livefyre.html)
+1. [Livefyre を使用するための AEM の設定](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/livefyre.html)
+1. [AEM Media Wall コンポーネントをページにドラッグアンドドロップ](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/livefyre.html#UseLivefyrewithAEMSites)
 1. [UGC をキュレートして Media Wall コンポーネントに表示するための、ストリームの設定とルールの追加](https://docs.adobe.com/content/help/en/livefyre/using/streams/c-streams.html)
 
 For training videos on streaming UGC, see [Create Automatic Content Streams and Search Social Content in Adobe Experience Manager Livefyre](https://helpx.adobe.com/jp/experience-manager/tutorials.html).
@@ -97,7 +97,7 @@ For Livefyre Apps requiring authentication, please see [Identity Integration](ht
 
 ### AEM の統合 {#aem-integration-1}
 
-Livefyre Adobe Experience Manager パッケージは、AEM 6.1、6.2Sp1、6.3、6.4、6.4 SP1 で使用できます。AEM 5.x および 6.0 ではサポートされていません。For detailed instructions, see [Integrating with Livefyre](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
+Livefyre Adobe Experience Manager パッケージは、AEM 6.1、6.2Sp1、6.3、6.4、6.4 SP1 で使用できます。AEM 5.x および 6.0 ではサポートされていません。For detailed instructions, see [Integrating with Livefyre](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html).
 
 ### Traditional Implementation (for customized AEM components) {#traditional-implementation-for-customized-aem-components-1}
 
@@ -129,7 +129,7 @@ For advanced customizations using the SDK, please see [StreamHub SDKs](https://g
 
 ### コメントアプリ認証の統合 {#comments-app-authentication-integration}
 
-* [AEMIdentity Management用のシングルサインオンの統合](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
+* [AEMIdentity Management用のシングルサインオンの統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
 * サードパーティ製認証プラットフォーム用 [ID 統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)
 
 ### お客様の例 {#customer-examples-1}
@@ -152,9 +152,9 @@ For advanced customizations using the SDK, please see [StreamHub SDKs](https://g
 
 **AEM セットアップ（AEM Assets に UGC を読み込むため）**
 
-1. [概要](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#GettingStarted)
-1. [Livefyre を使用するための AEM の設定](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#ConfigureAEMtouseLivefyre)
-1. [Livefyre によってキュレーションされた UGC の AEM Assets への読み込み](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#UseLivefyrewithAEMAssets)
+1. [概要](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/livefyre.html#GettingStarted)
+1. [Livefyre を使用するための AEM の設定](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/livefyre.html#ConfigureAEMtouseLivefyre)
+1. [Livefyre によってキュレーションされた UGC の AEM Assets への読み込み](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/livefyre.html#UseLivefyrewithAEMAssets)
 
 * [Tourism Australia](https://www.australia.com/en-us)
 
@@ -162,9 +162,9 @@ For advanced customizations using the SDK, please see [StreamHub SDKs](https://g
 
 ### AEM の統合 {#aem-integration-2}
 
-Livefyre Adobe Experience Manager パッケージは、AEM 6.1、6.2Sp1、6.3、6.4、6.4 SP1 で使用できます。AEM 5.x および 6.0 ではサポートされていません。For detailed instructions, see [Integrating with Livefyre](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html).
+Livefyre Adobe Experience Manager パッケージは、AEM 6.1、6.2Sp1、6.3、6.4、6.4 SP1 で使用できます。AEM 5.x および 6.0 ではサポートされていません。For detailed instructions, see [Integrating with Livefyre](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html).
 
-レビューコンポーネントは、AEM 6.1 ではサポートされていないコンポーネントです。[Livefyre アプリの AEM サポート一覧](https://https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/livefyre.html#AEMSupportMatrixforLivefyreApps)を確認してください。
+レビューコンポーネントは、AEM 6.1 ではサポートされていないコンポーネントです。[Livefyre アプリの AEM サポート一覧](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/livefyre.html#AEMSupportMatrixforLivefyreApps)を確認してください。
 
 ### 従来の実装（カスタマイズされた AEM コンポーネント用） {#traditional-implementation-for-customized-aem-components-2}
 
@@ -191,7 +191,7 @@ Additional Ratings and Reviews APIs can be found [here](https://api.livefyre.com
 
 ### コメントアプリ認証の統合 {#comments-app-authentication-integration-1}
 
-* [AEMIdentity Management用のシングルサインオンの統合](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
+* [AEMIdentity Management用のシングルサインオンの統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
 * サードパーティ製認証プラットフォーム用 [ID 統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)
 
 ### お客様の例 {#customer-examples-2}
