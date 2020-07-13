@@ -10,9 +10,9 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 translation-type: tm+mt
-source-git-commit: 6be9e5049600420c86120d0b6c84c1c321d7dc63
+source-git-commit: f1bf1545689b977a0f5074954df224db58cbd695
 workflow-type: tm+mt
-source-wordcount: '2746'
+source-wordcount: '2745'
 ht-degree: 85%
 
 ---
@@ -290,7 +290,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 使用している AEM 6.4 インスタンスに Livefyre を統合することができます。Livefyre と AEM の統合方法については、以下を参照してください。
 
-* [Livefyre との連携](https://https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html)
+* [Livefyre との連携](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html)
 
 ### 顧客中心開発の強化 {#leverage-customer-focused-development}
 
