@@ -10,9 +10,9 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 translation-type: tm+mt
-source-git-commit: fb4e6aef84d733c578e0f2ee7407016715e77cf5
+source-git-commit: 1b6254e98b65b64071ab4634706bd1ad3d2fd8df
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1652'
 ht-degree: 66%
 
 ---
@@ -39,22 +39,13 @@ AEM 6.4 には、Livefyre 機能パッケージ 1.2.6 がプリインストー�
 
    ![livefyre-aem-uninstall-64](assets/livefyre-aem-uninstall-64.png)
 
-1. Return to the AEM homepage, click Tools, then navigate to **Deployment > Package Share**.
+1. Livefyreパッケージを [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)(SDK)からダウンロードします。
 
-   ダウンロード可能な機能パックとホットフィックスのリストが表示されます。
-
-1. キーワード検索で &quot;Livefyre&quot; を検索して、お使いの AEM バージョンに対応する Livefyre 機能パックを選択します。
-
-   ![livefyre-aem3-6-4](assets/livefyre-aem3-6-4.png)
-
-1. On the feature pack information page, click **Download**, then read the Package License Agreement and click **Accept**.
-1. Return to the Package Manager, locate the newly downloaded package, and click **Install**.
+1. パッケージマネージャーから、ダウンロードしたパッケージをインストールします。 AEMでソフトウェアの配布とパッケージを使用する手順については、「パッケージの [作業方法](/help/sites-administering/package-manager.md)」を参照してください。
 
    ![livefyre-aem4-6-4](assets/livefyre-aem4-6-4.png)
 
    Livefyre-AEM パッケージがインストールされます。統合機能を使い始める前に、Livefyre を使用するように AEM を設定する必要があります。
-
-   For more information on packages, see [How to Work With Packages](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/package-manager.html).
 
    For more information and release notes on feature packs, see [Feature Packs](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes/feature-packs-release-notes.html).
 
