@@ -10,10 +10,10 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 translation-type: tm+mt
-source-git-commit: f1bf1545689b977a0f5074954df224db58cbd695
+source-git-commit: 5cf67e97775b39d6ec78ea0db46b5bc4a4476b78
 workflow-type: tm+mt
-source-wordcount: '2745'
-ht-degree: 85%
+source-wordcount: '2780'
+ht-degree: 81%
 
 ---
 
@@ -320,10 +320,10 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 * 様々なプラットフォーム向けの AEM Screens Players（[ダウンロード](https://download.macromedia.com/screens/)）
 * スマートコンテンツの言語モデル。英語は事前インストール済み。ほかに以下の言語がダウンロード可能
 
-   * [ドイツ語](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-de)
-   * [スペイン語](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-es)
-   * [イタリア語](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-it)
-   * [フランス語](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/smartcontent-model-fr)
+   * [ドイツ語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+   * [スペイン語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+   * [イタリア語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+   * [フランス語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
 * クラシック UI コンポーネントを Coral 3 に移行するための[ダイアログ変換ツール](/help/sites-developing/dialog-conversion.md)
 
@@ -331,7 +331,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 * Adobe Experience Manager desktop app ([read more](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html) and [download](https://helpx.adobe.com/jp/experience-manager/kb/download-companion-app.html))
 
-* 強化された PDF Rasterizer を追加するためのパッケージ（[詳細](/help/assets/aem-pdf-rasterizer.md)および[ダウンロード](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/product/assets/aem-assets-pdf-rasterizer-pkg)）
+* 強化された PDF Rasterizer を追加するためのパッケージ（[詳細](/help/assets/aem-pdf-rasterizer.md)および[ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)）
 
 * 強化された RAW 画像のサポートを追加するためのパッケージ（[詳細](/help/assets/camera-raw.md)）
 
