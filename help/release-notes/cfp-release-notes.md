@@ -1,13 +1,13 @@
 ---
 title: AEM 6.4累積Fix Packリリースノート
-description: Adobe Experience Manager 6.4の累積Fix Packに関するリリースノートです。
+description: Adobe Experience Manager6.4の累積Fix Packに関するリリースノートです。
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b1deed95174e271bbd91814ef4aa6d4fa578cc45
+source-git-commit: 1b6254e98b65b64071ab4634706bd1ad3d2fd8df
 workflow-type: tm+mt
-source-wordcount: '2152'
-ht-degree: 24%
+source-wordcount: '2119'
+ht-degree: 23%
 
 ---
 
@@ -19,10 +19,10 @@ ht-degree: 24%
 | 製品 | **Adobe Experience Manager（AEM）6.4** |
 |---|---|
 | バージョン | 6.4.8.1 |
-| タイプ | 累積修正パック |
+| 型 | 累積修正パック |
 | 日付 | 2020年6月4日 |
 | 前提条件 | [AEM 6.4 サービスパック 8（6.4.8.0）](sp-release-notes.md) |
-| ダウンロード URL | AEM 6.4.8.1 on [Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/cumulativefixpack/AEM-CFP-6.4.8.1), [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fcumulativefixpack%2Faem-6.4.8-cfp-1.0.zip) |
+| ダウンロード URL | AEM 6.4.8.1( [ソフトウェア配布版)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fcumulativefixpack%2Faem-6.4.8-cfp-1.0.zip) |
 
 ## AEM 6.4.8.1 に含まれる機能 {#what-s-included-in-aem}
 
@@ -32,14 +32,14 @@ AEM Cumulative Fix Pack 6.4.8.1は、AEM 6.4 Service Pack 8に依存していま
 
 AEM 6.4.8.1の主な特徴は次のとおりです。
 
-* Adobe Experience Managerとのパッケージ共有の統合が削除されました。
+* Adobe Experience Managerとのパッケージ共有の統合を削除しました。
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.8.21 に更新しました。
 
 For information on CFP and other types of releases, see [AEM Update Release Vehicle Definitions](../sites-deploying/update-release-vehicle-definitions.md)
 
 ## 変更点の一覧 {#list-of-changes}
 
-Adobe Experience Manager 6.4.8.1では、次の問題が修正されました。
+Adobe Experience Manager6.4.8.1では、次の問題が修正されました。
 
 ### Sites {#sites-6481}
 
@@ -48,13 +48,13 @@ Adobe Experience Manager 6.4.8.1では、次の問題が修正されました。
 * Coral.SelectオプションでemptyOption=trueが設定されるか、値= &quot;&quot;のデフォルト項目が含まれている場合、dropdownshowide.jsファイルで次のエラーが発生します。 Uncaught TypeError: component.getValueが関数ではありません(NPR-33163)。
 * コンポーネントがデータを含む別のコンポーネントをデータを含む場合、親コンテナコンポーネントプレースホルダは内部コンポーネントプレースホルダ(NPR-33119)に置き換えられる。
 * スキーマに基づくコンテンツフラグメントの基本で、そのコンテンツに必須のテキスト領域またはパスフィールドが含まれている場合、コンテンツフラグメントの保存は失敗します(NPR-33007)。
-* 既製のエクスペリエンスフラグメントコンポーネントを使用してカスタムコンポーネントを作成し、それをAEMサイトページで使用する場合、AEMはカスタムコンポーネント(NPR-32852)の参照（使用）を表示しません。
-* AEMサイトページが複数のライブコピーを持つ大きなコンテンツセットに含まれている場合、ページバージョン履歴プレビューの読み込みに失敗します(NPR-32772)。
+* 既製のエクスペリエンスフラグメントコンポーネントを使用してカスタムコンポーネントを作成し、AEM Sitesページで使用する場合、AEMはカスタムコンポーネントの参照（使用）を表示しません(NPR-32852)。
+* AEM Sitesページが、複数のライブコピーが設定された大きなコンテンツの一部である場合、ページバージョン履歴プレビューの読み込みに失敗します(NPR-32772)。
 * 起動をプロモートすると、「cq:LiveRelationship」ミックスインが起動に追加されたすべてのコンポーネントに追加されます。 「 —Inherit source page live data — 」オプションを選択して（または選択せずに）起動が作成された場合には関係なく、すべての起動に影響します。(NPR-32664)
 * ページ番号の開始では、エクスペリエンスフラグメントピッカーはすべての項目を読み込みません(NPR-32605)。
-* AEMサイトページの開始を作成できません。 起動の作成の結果、エラーが発生します(NPR-32544)。
+* AEM Sitesページの開始を作成できません。 起動の作成の結果、エラーが発生します(NPR-32544)。
 * 「パブリケーションを管理」では、アクティベーションワークフローの要求に参照先のアセットが含まれません(NPR-32463)。
-* ディスパッチャーの正常性チェックで、ログファイルに `Invalid cookie header` 警告メッセージが表示されます(NPR-33630)。
+* Dispatcherの正常性チェックで、ログファイルに `Invalid cookie header` 警告メッセージが表示されます(NPR-33630)。
 
 ### Assets {#assets-6481}
 
@@ -102,17 +102,17 @@ Adobe Experience Manager 6.4.8.1では、次の問題が修正されました。
 
 * 左側のレールの「 [!UICONTROL タイムライン] 」オプションの読み込みに予想以上に時間がかかります(NPR-32850)。
 
-### Forms {#forms-6481}
+### フォーム {#forms-6481}
 
 >[!NOTE]
 >
->AEM Cumulative Fix PackにはAEM Formsの修正は含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsの修正を含む累積インストーラーがリリースされました。 For more information, see [Install AEM Forms add-on package](#install-aem-forms-add-on-package) and [Install AEM Forms JEE installer](#install-aem-forms-jee-installer).
+>AEM Cumulative Fix Packには、AEM Formsに対する修正は含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsに関する修正を含む累積インストーラーがリリースされました。 For more information, see [Install AEM Forms add-on package](#install-aem-forms-add-on-package) and [Install AEM Forms JEE installer](#install-aem-forms-jee-installer).
 
 * Correspondence Management: ユーザが [!DNL Word] ドキュメントからコンテンツを貼り付けると、テキストドキュメントフラグメントは書式を保持しません(NPR-33213)。
 * アダプティブフォーム： アダプティブフォームの辞書の文字列に対する新しい行で、 `&#xa;` 文字が辞書(NPR-33265)に追加されます。
 * アダプティブフォーム： 複数の添付ファイルが含まれるアダプティブフォームを保存できません(NPR-33214)。
 * アダプティブフォーム： `AddInstance` と、Instance Managerクラスの `RemoveInstance` メソッドは、遅延読み込みフラグメントの動的な数のインスタンスを [!DNL Internet Explorer 11] (NPR-33201)に追加しません。
-* アダプティブフォーム： ページに埋め込まれたアダプティブフォームで有効にされている解析で、送信イベントおよび放棄のデータが記録されません(NPR-31359)。 [!DNL Sites]
+* アダプティブフォーム： ページに埋め込まれたアダプティブフォームで有効にされているAnalyticsは、送信イベントと放棄のデータを記録しません(NPR-31359)。 [!DNL Sites]
 * アダプティブフォーム： ユーザーがドキュメントのコンテンツをアダプティブフォームに貼り付けて送信すると、送信されたアダプティブフォームにはUnicode文字が含まれます。 [!DNL Word] また、PDFからPDF/Aへの変換は、Unicode文字(NPR-33348)のため失敗します。
 * BackendIntegration: 非アクティブな状態が正しくないために更新トークンの期限が切れると、フォームデータモデルの要求は失敗します(NPR-33168)。
 * ドキュメントサービス： Convert PDFサービスで、サー [!DNL WebLogic][!DNL Linux] バー上のGibson jarが見つからないため、PDFドキュメントをPostScriptに変換できません(NPR-33515、CQ-4292239)。
@@ -149,11 +149,11 @@ Adobe Experience Manager 6.4.8.1では、次の問題が修正されました。
 
 既存の AEM 6.4.8.0 インスタンスに累積修正パックをインストールするには、次の手順を実行します。
 
-1. 「 [Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/cumulativefixpack/AEM-CFP-6.4.8.1) 」または「 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/cumulativefixpack/aem-6.4.8-cfp-1.0.zip) 」リンクをクリックして、パッケージをダウンロードします。
+1. 「 [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/cumulativefixpack/aem-6.4.8-cfp-1.0.zip) 」リンクをクリックして、パッケージをダウンロードします。
 
-1. パッ [ケージマネージャーを開き](http://localhost:4502/crx/packmgr/index.jsp) 、「パッケージを **アップロード** 」をクリックしてパッケージをアップロードします。
+1. パッ [ケージマネージャーを開き](http://localhost:4502/crx/packmgr/index.jsp) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
 
-1. パッケージ名を選択し、「 **インストール**」をクリックします。
+1. パッケージ名を選択し、「 **[!UICONTROL インストール]**」をクリックします。
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ B. Use the [HTTP API from Package Manager](https://docs.adobe.com/content/docs/e
 
 ### インストールの検証 {#validate-install}
 
-1. 製品情報ページ(*/system/console/ productinfo *)の「インストール済み製品」に、更新されたバージョン文字列「Adobe Experience Manager, Version 6.4.8.1」が表示されるようになりました。
+1. 製品情報ページ(*/system/console/ productinfo *)の「インストール済みの製品」に、更新されたバージョン文字列「Adobe Experience Manager、バージョン6.4.8.1」が表示されるようになりました。
 1. すべての OSGI バンドルは、OSGI コンソール（Web コンソールを使用：/system/console/bundles）で ACTIVE または FRAGMENT です。
 1. OSGIバンドルorg.apache.jackrabbit.oak-coreがバージョン1.8.17以降に搭載されています(Webコンソールを使用： /system/console/bundles)。
 
@@ -184,9 +184,9 @@ To determine the certified platform for running with this release of AEM Sites a
 >[!Note]
 >On successful installation of the package, an >informational message appears indicating that the content >package has installed successfully,  such as **&quot;Content Package AEM-6.4-Service-Pack-7 installed successfully.&quot;**
 
-### ダイナミックメディアビューアの更新(5.10.1) {#update-dynamic-media-viewers}
+### Dynamic Mediaビューアの更新(5.10.1) {#update-dynamic-media-viewers}
 
-<p id="Dynamic">AEM 6.4.8.1には、画像プリセットページの重複名を確認できるようにする、新しいバージョンのダイナミックメディアビューア(5.10.1)が含まれています。 ダイナミックメディアのお客様には、次のコマンドを実行して、初期設定のビューアプリセットを最新の状態にすることをお勧めします。
+<p id="Dynamic">AEM 6.4.8.1には、Dynamic Mediaビューアの新しいバージョン(5.10.1)が含まれています。このバージョンを使用すると、画像プリセットページで重複名を確認できます。 Dynamic Mediaでは、次のコマンドを実行して、初期設定のビューアプリセットを最新の状態にすることをお勧めします。
 
 `curl -u admin:admin http://localhost:4502/libs/settings/dam/dm/presets/viewer.pushviewerpresets`
 
