@@ -3,9 +3,9 @@ title: メタデータスキーマ
 description: 'メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。  '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c5317d96ed5fccbc1bf03176f75dbaec6d8cb0b4
+source-git-commit: ed87c419557f65667bde46a9f4b32a484e3300f5
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2536'
 ht-degree: 78%
 
 ---
@@ -41,7 +41,8 @@ In [!DNL Experience Manager Assets], a metadata schema defines the layout of the
 |---|---|---|
 | [!UICONTROL default] |  | アセットのベースメタデータスキーマフォーム。 |
 |  | The following child forms inherit the properties of the [!UICONTROL default] form: |  |
-|  | <ul><li> [!UICONTROL 画像]</li></ul> | MIMEタイプが「image」であるアセットのスキーマフォーム（例：image/jpeg、image/png）。 <br> [!UICONTROL 画像フォームには] 、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]: サブタイプが [!UICONTROL jpegのアセットのスキーマフォーム]。</li> <li>[!UICONTROL tiff]: サブタイプが [!UICONTROL tiffのアセットのスキーマフォーム]。</li></ul> |
+|  | [!UICONTROL dm_video] | Dynamic Mediaビデオのスキーマフォーム。 |
+|  | <ul><li> [!UICONTROL image]</li></ul> | MIMEタイプが「image」であるアセットのスキーマフォーム（例：image/jpeg、image/png）。 <br> [!UICONTROL 画像フォームには] 、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]: サブタイプが [!UICONTROL jpegのアセットのスキーマフォーム]。</li> <li>[!UICONTROL tiff]: サブタイプが [!UICONTROL tiffのアセットのスキーマフォーム]。</li></ul> |
 |  | <ul><li> [!UICONTROL アプリケーション]</li></ul> | application/ pdf、application/ zipなど、MIMEタイプが「application」のアセットのスキーマフォーム。 <br>[!UICONTROL pdf]: サブタイプpdfのアセットのスキーマフォーム |
 |  | <ul><li>[!UICONTROL ビデオ]</li></ul> | video/avi、video/mp4など、MIMEタイプが「video」のアセットのスキーマフォーム。 |
 | [!UICONTROL collection] |  | コレクションのスキーマフォーム。 |
