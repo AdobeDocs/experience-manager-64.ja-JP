@@ -1,63 +1,66 @@
 ---
 title: アセットコレクションの管理
-description: コレクションの作成、表示、削除、編集、ダウンロードなど、アセットのコレクションを管理するタスクについて説明します。
+description: 作成、表示、削除、編集、コレクションのダウンロードなど、アセットのコレクションを管理するタスクについて説明します。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 97bb17ce719f82449e28f9b32eb651b632b0f8b5
+source-git-commit: dfe5d976da937162e902ba8afac862f290702f5b
+workflow-type: tm+mt
+source-wordcount: '2328'
+ht-degree: 83%
 
 ---
 
 
 # コレクションの管理 {#managing-collections}
 
-コレクションは、Adobe Experience Manager Assets内のアセットのセットです。 コレクションを使用して、ユーザー間でアセットを共有します。セットは、静的コレクションまたは検索結果に基づく動的コレクションにすることができます。
+コレクションとは、Adobe Experience Manager Assets 内の一連のアセットです。コレクションを使用して、ユーザー間でアセットを共有します。セットは、静的コレクションまたは検索結果に基づく動的コレクションにすることができます。
 
-フォルダーとは異なり、コレクションには異なる場所のアセットを含めることができます。 異なるレベルの権限（表示、編集など）が割り当てられている様々なユーザーとコレクションを共有できます。
+フォルダーとは異なり、1 つのコレクションに異なる複数の場所のアセットを含めることができます。異なるレベルの特権（表示、編集など）が割り当てられている様々なユーザーとコレクションを共有できます。
 
 1 人のユーザーと複数のコレクションを共有できます。各コレクションには、アセットへの参照が含まれます。アセットの参照整合性はコレクション間で維持されます。
 
 コレクションは、アセットを照合する方法に基づいて次のタイプに分かれます。
 
-* アセット、フォルダーおよび他のコレクションの静的参照リストを含むコレクションです。
-* 検索条件に基づいてアセットを動的に含めるスマートコレクション。
+* アセット、フォルダーおよび他のコレクションの静的な参照リストを含むコレクション。
+* 検索条件に基づいたアセットを動的に含むスマートコレクション。
 
-## コレクションコンソールにアクセスする {#navigating-the-collections-console}
+## コレクションコンソールのアクセス {#navigating-the-collections-console}
 
-コレクションを開く **[!UICONTROL には]**、Experience Managerのロゴをタップまたはクリックします。 From the navigation page, go to **[!UICONTROL Assets]** > **[!UICONTROL Collections]**.
+**[!UICONTROL コレクション]**&#x200B;を開くには、Experience Manager ロゴをタップまたはクリックします。ナビゲーションページで、**[!UICONTROL アセット]**／**[!UICONTROL コレクション]**&#x200B;に移動します。
 
 ## コレクションを作成 {#creating-a-collection}
 
-You can create a collection either with [static references](#creating-a-collection-with-static-references) or based on a [search criteria-based filter](#creating-a-smart-collection). You can also create a collection from a lightbox.
+[静的な参照](#creating-a-collection-with-static-references)を含むコレクション、または[検索条件ベースのフィルター](#creating-a-smart-collection)に基づいたコレクションを作成できます。Lightbox からコレクションを作成することもできます。
 
-### Create a collection with static references {#creating-a-collection-with-static-references}
+### 静的な参照を含むコレクションの作成 {#creating-a-collection-with-static-references}
 
 静的な参照を含むコレクションを作成できます。例えば、アセット、フォルダー、コレクション、スピンセット、画像セットへの参照を含むコレクションなどがあります。
 
 1. **[!UICONTROL コレクション]**&#x200B;コンソールに移動します。
-1. From the toolbar, tap/click **[!UICONTROL Create]**.
+1. ツールバーの「**[!UICONTROL 作成]**」をタップまたはクリックします。
 1. **[!UICONTROL コレクションを作成]**&#x200B;ページで、コレクションのタイトルとオプションの説明を入力します。
 1. メンバーをコレクションに追加して、適切な権限を割り当てます。または、「**[!UICONTROL 公開コレクション]**」を選択すると、すべてのユーザーがコレクションにアクセスできるようになります。
 
    >[!NOTE]
    >
-   >メンバーが他のユーザーとコレクションを共有するには、`dam-users` グループにパス `home/users` への読み取り権限を付与します。Give permission to the users at `/content/dam/collections` location to allow the users to view the Collections in pop up lists. または、ユーザーを `dam-users` グループのメンバーにします。
+   >メンバーが他のユーザーとコレクションを共有するには、`dam-users` グループにパス `home/users` への読み取り権限を付与します。ユーザーがポップアップリストでコレクションを表示できるようにするには、`/content/dam/collections` の場所への権限をユーザーに与えます。または、ユーザーを `dam-users` グループのメンバーにします。
 
 1. （オプション）コレクションのサムネール画像を追加します。
-1. 「**[!UICONTROL 作成]**」をタップまたはクリックしてから、「**[!UICONTROL OK]**」をタップまたはクリックしてダイアログを閉じます。指定されたタイトルとプロパティを含むコレクションがコレクションコンソールに表示されます。
+1. 「**[!UICONTROL 作成]**」をタップまたはクリックし、「**[!UICONTROL OK]**」をタップまたはクリックしてダイアログを閉じます。指定されたタイトルとプロパティを含むコレクションがコレクションコンソールに表示されます。
 
    >[!NOTE]
    >
-   >Experience Manager Assetsでは、アセットフォルダーのレビュータスクを作成するのと同じ方法で、コレクションのレビュータスクを作成できます。
+   >Experience Manager Assets では、アセットフォルダーのレビュータスクを作成するのと同じ方法で、コレクションのレビュータスクを作成できます。
 
-   コレクションにアセットを追加するには、Assets ユーザーインターフェイスに移動します。For details, see [Add assets to a collection](/help/assets/managing-collections-touch-ui.md#adding-assets-to-a-collection).
+   コレクションにアセットを追加するには、Assets ユーザーインターフェイスに移動します。詳しくは、[コレクションへのアセットの追加](/help/assets/managing-collections-touch-ui.md#adding-assets-to-a-collection)を参照してください。
 
-### Create collections using dropzone {#create-collections-using-dropzone}
+### ドロップゾーンを使用したコレクションの作成 {#create-collections-using-dropzone}
 
-Assets の UI からコレクションに、アセットをドラッグできます。コレクションのコピーを作成して、そこにアセットをドラッグすることもできます。
+Assets UI からコレクションに、アセットをドラッグできます。コレクションのコピーを作成して、そこにアセットをドラッグすることもできます。
 
 1. Assets UI で、コレクションに追加するアセットを選択します。
-1. Drag the assets to the **[!UICONTROL Drop in Collection]** zone.
+1. アセットを「**[!UICONTROL コレクションにドロップ]**」ゾーンにドラッグします。
 
    ![drop_in_collection](assets/drop_in_collection.png)
 
@@ -74,7 +77,7 @@ Assets の UI からコレクションに、アセットをドラッグできま
    既存のコレクションにアセットを追加する場合は、ページからコレクションを選択して、「**[!UICONTROL 追加]**」をタップまたはクリックします。デフォルトでは、最も新しく更新されたコレクションが選択されます。
 
 1. **[!UICONTROL 新しいコレクションを作成]**&#x200B;ダイアログで、コレクションの名前を指定します。すべてのユーザーがコレクションにアクセスできるようにする場合は、「**[!UICONTROL 公開コレクション]**」を選択します。
-1. Tap/click **[!UICONTROL Continue]** to create the collection.
+1. 「**[!UICONTROL 続行]**」をタップまたはクリックして、コレクションを作成します。
 
 ### スマートコレクションの作成 {#creating-a-smart-collection}
 
@@ -101,7 +104,7 @@ Assets の UI からコレクションに、アセットをドラッグできま
 
 1. 「**[!UICONTROL 保存]**」をタップまたはクリックしてスマートコレクションを作成し、メッセージボックスを閉じてプロセスを完了します。
 
-   The new smart collection is also added to the **[!UICONTROL Saved Searches]** list.
+   新しいスマートコレクションは「**[!UICONTROL 保存済みの検索結果]**」リストにも追加されます。
 
    ![collection_listing](assets/collection_listing.png)
 
@@ -109,39 +112,39 @@ Assets の UI からコレクションに、アセットをドラッグできま
 
    ![chlimage_1-112](assets/chlimage_1-112.png)
 
-## Add assets to a collection {#adding-assets-to-a-collection}
+## コレクションへのアセットの追加 {#adding-assets-to-a-collection}
 
-参照されているアセットまたはフォルダーのリストを含むコレクションにアセットを追加できます。スマートコレクションでは、検索クエリを使用してアセットを設定します。そのため、アセットおよびフォルダーへの静的な参照はスマートコレクションに適用できません。
+参照元のアセットまたはフォルダーのリストを含むコレクションにアセットを追加できます。スマートコレクションでは、検索クエリを使用してアセットを設定します。そのため、アセットおよびフォルダーへの静的な参照はスマートコレクションに適用できません。
 
 1. In the Assets user interface, select the asset and tap/click the **[!UICONTROL To Collection]** icon from the toolbar.
 
    ![chlimage_1-113](assets/chlimage_1-113.png)
 
-   または、インターフェイスの「コレクションにドロップ **[!UICONTROL 」領域にアセットを]** 「ドラッグ」できます。 領域のラベルが「ドロップして追加」に変わったら、アセ **[!UICONTROL ットを追加します]**。
+   または、インターフェイスの「コレクションに **[!UICONTROL ドロップ]** 」領域にアセットをドラッグすることもできます。 領域追加のラベルが「ドロップ」に変わった場合のアセット追加。 ****
 
-1. In the **[!UICONTROL Add To Collection]** page, select the collection to which you want to add the asset.
+1. **[!UICONTROL コレクションに追加]**&#x200B;ページで、アセットを追加するコレクションを選択します。
 
 1. 「**[!UICONTROL 追加]**」をタップまたはクリックして、確認メッセージを閉じます。アセットがコレクションに追加されます。
 
 ## スマートコレクションの編集 {#editing-a-smart-collection}
 
-Smart collections are built by saving a search so you can alter their content by modifying the search parameters of the [saved search](#editing-saved-searches).
+スマートコレクションは検索を保存することによって構築されるので、内容を変更するには、[保存済みの検索](#editing-saved-searches)の検索パラメーターを変更します。
 
-1. アセットユーザーインターフェイスで、ツールバーの検索アイコンをタップまたはクリックします。
+1. Assets ユーザーインターフェイスで、ツールバーの検索アイコンをタップまたはクリックします。
 
    ![chlimage_1-114](assets/chlimage_1-114.png)
 
-1. 「Omnisearch」ボックスにカーソルを置き、Returnキーを押します。
+1. オムニサーチボックスにカーソルを置き、Enter キーを押します。
 
 1. グローバルナビゲーションアイコンをタップまたはクリックして、フィルターパネルを表示します。
 
-1. 「**[!UICONTROL 保存済みの検索結果]**」リストから、変更するスマートコレクションを選択します。検索パネルには、保存済みの検索用に設定されたフィルターが表示されます。
+1. 「**[!UICONTROL 保存済みの検索結果]**」リストから、変更するスマートコレクションを選択します。検索パネルに、該当する保存済みの検索用に設定されているフィルターが表示されます。
 
    ![select_smart_collection](assets/select_smart_collection.png)
 
 1. 「**[!UICONTROL ファイルとフォルダー]**」リストから「**[!UICONTROL ファイル]**」を選択します。
 
-1. 必要に応じて、1 つ以上のフィルターを変更します。Tap/click **[!UICONTROL Edit Smart Collection]**.
+1. 必要に応じて、1 つ以上のフィルターを変更します。「**[!UICONTROL スマートコレクションを編集]**」をタップまたはクリックします。
 
    スマートコレクションの名前を編集することもできます。
 
@@ -153,41 +156,41 @@ Smart collections are built by saving a search so you can alter their content by
 
 1. 確認ダイアログで、「**[!UICONTROL 保存]**」をタップまたはクリックしてプロセスを完了します。
 
-## View and edit collection metadata {#viewing-and-editing-collection-metadata}
+## コレクションのメタデータの表示と編集 {#viewing-and-editing-collection-metadata}
 
 コレクションのメタデータは、コレクションに関するデータ（追加されたタグを含む）で構成されます。
 
-1. From the Collections console, select a collection and tap/click the **[!UICONTROL Properties]** icon from the toolbar.
+1. コレクションコンソールからコレクションを選択し、ツールバーの「**[!UICONTROL プロパティ]**」アイコンをタップまたはクリックします。
 1. **[!UICONTROL コレクションメタデータ]**&#x200B;ページの「**[!UICONTROL 基本]**」タブと「**[!UICONTROL 詳細]**」タブでコレクションメタデータを表示します。
-1. Modify the metadata, as necessary, and then tap/click **[!UICONTROL Save &amp; Close]** from the toolbar to save the changes.
+1. 必要に応じてメタデータを変更し、ツールバーの「**[!UICONTROL 保存して閉じる]**」をタップまたはクリックして変更を保存します。
 
-### 複数のコレクションのメタデータを一括編集 {#editing-collection-metadata-in-bulk}
+### 複数のコレクションのメタデータを一括で編集 {#editing-collection-metadata-in-bulk}
 
 複数のコレクションのメタデータを同時に編集できます。この機能により、複数のコレクションで共通のメタデータをすばやくレプリケートできます。
 
 1. コレクションコンソールで、メタデータを編集する 2 つ以上のコレクションを選択します。
-1. ツールバーで、「プロパティ」をタップまたはクリ **[!UICONTROL ックしま]**&#x200B;す。
+1. ツールバーで、「 **[!UICONTROL プロパティ]**」をタップまたはクリックします。
 1. 必要に応じて、**[!UICONTROL コレクションメタデータ]**&#x200B;ページの「**[!UICONTROL 基本]**」タブと「**[!UICONTROL 詳細]**」タブでメタデータを編集します。
 1. 特定のコレクションのメタデータのプロパティを表示するには、コレクションリストの残りのコレクションの選択を解除します。メタデータエディターのフィールドには、その特定のコレクションのメタデータが入力されています。
 
    >[!NOTE]
    >
    >* コレクションのプロパティページで、コレクションのリストからコレクションの選択を解除することで、そのコレクションを削除できます。コレクションリストは、デフォルトではすべてのコレクションが選択されています。削除するコレクションのメタデータは更新されていません。
-   >* At the top of the list, select the check box near **[!UICONTROL Title]** to toggle between selecting the collections and clearing the list.
+   >* リストの上部で、「**[!UICONTROL タイトル]**」の横にあるチェックボックスをオンにして、コレクションの選択とリストの消去を切り替えます。
 
 
-1. Tap/click **[!UICONTROL Save &amp; Close]** from the toolbar, and then close the confirmation dialog to complete the process.
+1. ツールバーの「**[!UICONTROL 保存して閉じる]**」をタップまたはクリックし、確認ダイアログを閉じてプロセスを完了します。
 1. To append the new metadata with the existing metadata, select **[!UICONTROL Append mode]**. このオプションを選択しないと、フィールド内の既存のメタデータが新しいメタデータに置換されます。「**[!UICONTROL 送信]**」をタップまたはクリックします。
 
    >[!NOTE]
    >
-   >選択したコレクションに追加したメタデータは、これらのコレクションの以前のメタデータを上書きします。 追加モード [!UICONTROL を使用して] 、複数の値を含めることができるフィールド内の既存のメタデータに新しい値を追加します。 単一値フィールドは常に上書きされます。 Any tags you add in the [!UICONTROL Tags] field, are appended to the existing list of tags in the metadata.
+   >選択したコレクションに追加したメタデータは、これらのコレクションの以前のメタデータを上書きします。 [!UICONTROL 追加モードを使用して] 、複数の値を含むことができるフィールド内の既存のメタデータに新しい値を追加します。 単一値フィールドは常に上書きされます。 「[!UICONTROL タグ]」フィールドに追加する新しいタグはすべて、メタデータのタグの既存のリストに追加されます。
 
-To customize the metadata [!UICONTROL Properties] page, including adding, modifying, deleting metadata properties, use the Schema editor.
+メタデータの[!UICONTROL プロパティ]ページをカスタマイズ（メタデータのプロパティの追加、編集、削除など）するには、スキーマエディターを使用します。
 
 >[!TIP]
 >
->バルク編集方法は、コレクションで使用可能なアセットに対して機能します。 複数のフォルダーで使用できるアセットや共通の条件に一致するアセットについては、これらのアセットを検索した後でメタデータを一括更新できます。
+>バルク編集方法は、コレクションで使用可能なアセットに対して機能します。 複数のフォルダーで使用できるアセットや共通の条件に一致するアセットについては、これらのアセットを検索した後にメタデータを一括更新できます。
 
 ## コレクションの検索 {#searching-collections}
 
@@ -195,7 +198,7 @@ To customize the metadata [!UICONTROL Properties] page, including adding, modify
 
 トップレベルからコレクションを検索する場合は、個々のコレクションのみ検索結果に返されます。コレクション内のアセットやフォルダーは除外されます。他のすべての場合（例：個々のコレクション内またはフォルダー階層内）では、関連するすべてのアセット、フォルダー、コレクションが返されます。
 
-## コレクション内の検索 {#searching-within-collections}
+## Search within collections {#searching-within-collections}
 
 コレクションコンソールで、コレクションをタップまたはクリックして開きます。
 
@@ -205,16 +208,16 @@ To customize the metadata [!UICONTROL Properties] page, including adding, modify
 
 コレクション設定（タイトルや説明など）を編集したり、コレクションにメンバーを追加したりできます。
 
-1. Select a collection, and tap/click the **[!UICONTROL Settings]** icon in the toolbar. または、コレクションのサムネールの&#x200B;**[!UICONTROL 設定]**&#x200B;クイックアクションを使用します。
+1. コレクションを選択し、ツールバーの「**[!UICONTROL 設定]**」アイコンをタップまたはクリックします。または、コレクションのサムネールの&#x200B;**[!UICONTROL 設定]**&#x200B;クイックアクションを使用します。
 1. Modify the collection settings in the **[!UICONTROL Collection Settings]** page. For example, modify the collection title, descriptions, members, and permissions as discussed in [Adding Collections](#creating-a-collection).
 
-1. 変更を保存するには、「保存」をタップまたはクリ **[!UICONTROL ックしま]**&#x200B;す。
+1. 変更を保存するには、「 **[!UICONTROL 保存]**」をタップまたはクリックします。
 
 ## コレクションの削除 {#deleting-a-collection}
 
-1. コレクションコンソールから、1つ以上のコレクションを選択し、ツールバーの削除アイコンをタップまたはクリックします。
+1. コレクションコンソールから 1 つ以上のコレクションを選択し、ツールバーの「削除」アイコンをタップまたはクリックします。
 
-1. In the dialog, tap/click **[!UICONTROL Delete]** to confirm the delete action.
+1. ダイアログで、「**[!UICONTROL 削除]**」をタップまたはクリックして、削除アクションを確定します。
 
    >[!NOTE]
    >
@@ -225,16 +228,16 @@ To customize the metadata [!UICONTROL Properties] page, including adding, modify
 コレクションをダウンロードすると、フォルダーや子コレクションを含む、コレクション内のアセットの階層全体がダウンロードされます。
 
 1. コレクションコンソールから、ダウンロードする 1 つ以上のコレクションを選択します。
-1. ツールバーで、ダウンロードアイコンをタップまたはクリックします。
+1. ツールバーの「ダウンロード」アイコンをタップまたはクリックします。
 1. **[!UICONTROL ダウンロード]**&#x200B;ダイアログで、「**[!UICONTROL ダウンロード]**」をタップまたはクリックします。コレクション内のアセットのレンディションをダウンロードする場合は、「**[!UICONTROL レンディション]**」を選択します。コレクションの所有者に電子メールで通知を送信するには、「**[!UICONTROL 電子メール]**」オプションを選択します。
 
-   ダウンロードするコレクションを選択すると、そのコレクションの下位のフォルダーの階層全体がダウンロードされます。To include each collection you download (including assets in child collections nested under the parent collection) in an individual folder, select **[!UICONTROL Create separate folder for each asset]**.
+   ダウンロードするコレクションを選択すると、そのコレクションの下位のフォルダーの階層全体がダウンロードされます。ダウンロードする各コレクション（親コレクションの下にネストされている子コレクションのアセットを含む）を個々のフォルダーに格納するには、「**[!UICONTROL アセットごとに別のフォルダーを作成]**」を選択します。
 
 ## ネストされたコレクションの作成 {#creating-nested-collections}
 
 別のコレクションにコレクションを追加できます。これにより、ネストされたコレクションが作成されます。
 
-1. From the Collections console, select the desired collection or group of collections, and tap or click the **[!UICONTROL To Collection]** icon in the toolbar.
+1. コレクションコンソールから目的のコレクションを 1 つ以上選択し、ツールバーの「**[!UICONTROL コレクションに追加]**」アイコンをタップまたはクリックします。
 
    ![chlimage_1-117](assets/chlimage_1-117.png)
 
@@ -242,7 +245,7 @@ To customize the metadata [!UICONTROL Properties] page, including adding, modify
 
    >[!NOTE]
    >
-   >The most recently updated collection is selected by default in the **[!UICONTROL Add To Collection]** page.
+   >**[!UICONTROL コレクションに追加]**&#x200B;ページでは、直近に更新されたコレクションがデフォルトで選択されています。
 
 1. 「**[!UICONTROL 追加]**」をタップまたはクリックします。ターゲットコレクションにコレクションが追加されたことを確認するメッセージが&#x200B;**[!UICONTROL 宛先を選択]**&#x200B;ページに表示されます。メッセージを閉じてプロセスを完了します。
 
@@ -254,11 +257,11 @@ To customize the metadata [!UICONTROL Properties] page, including adding, modify
 
 Assets ユーザーインターフェイスでは、特定のルール、検索条件またはカスタム検索ファセットに基づいてアセットの検索または絞り込みをおこなうことができます。その結果を&#x200B;**[!UICONTROL 保存済みの検索結果]**&#x200B;として保存すると、後でフィルターパネルの「**[!UICONTROL 保存済みの検索結果]**」リストからアクセスできます。保存済みの検索結果を作成すると、スマートコレクションも作成されます。
 
-![saved_searches_list](assets/saved_searches_list.png)
+![saved_searches_リスト](assets/saved_searches_list.png)
 
 ### 保存済みの検索結果の作成 {#creating-saved-searches}
 
-スマートコレクションの作成時には、保存済みの検索結果が作成されます。スマートコレクションは、「**[!UICONTROL 保存済みの検索結果]**」リストに自動的に追加されます。The Saved Searches query for the collection is saved in the `dam:query` property in crxde at the relative location `/content/dam/collections/`.
+スマートコレクションの作成時には、保存済みの検索結果が作成されます。スマートコレクションは、「**[!UICONTROL 保存済みの検索結果]**」リストに自動的に追加されます。The Saved Searches query for the collection is saved in the `dam:query` property in crxde at the relative location `/content/dam/collections/`. 保存できる検索と、リストに表示される保存済みの検索に制限はありません。
 
 >[!NOTE]
 >
@@ -270,11 +273,11 @@ Assets ユーザーインターフェイスでは、特定のルール、検索�
 
 ### 保存済みの検索結果の削除 {#deleting-saved-searches}
 
-1. アセットユーザーインターフェイスで、ツールバーの検索アイコンをタップまたはクリックします。
+1. Assets ユーザーインターフェイスで、ツールバーの検索アイコンをタップまたはクリックします。
 
    ![chlimage_1-118](assets/chlimage_1-118.png)
 
-1. Omnisearchフィールドにカーソルを置き、Enterキーを押します。
+1. 「オムニサーチ」フィールドにカーソルを置き、Enter キーを押します。
 
 1. グローバルナビゲーションアイコンをクリックまたはタップして、フィルターパネルを表示します。
 
@@ -282,14 +285,14 @@ Assets ユーザーインターフェイスでは、特定のルール、検索�
 
    ![select_smart_collection-1](assets/select_smart_collection-1.png)
 
-1. In the dialog, tap/click **[!UICONTROL Delete]** to delete the saved search.
+1. ダイアログボックスで、「**[!UICONTROL 削除]**」をタップまたはクリックして、保存済みの検索結果を削除します。
 
-## Execute a workflow on a collection {#running-a-workflow-on-a-collection}
+## コレクションでのワークフローの実行 {#running-a-workflow-on-a-collection}
 
 コレクション内のアセットのワークフローを実行できます。コレクションにネストされたコレクションが含まれている場合は、ネストされたコレクション内のアセットでもワークフローが実行されます。ただし、コレクションとネストされたコレクションでアセットが重複する場合、そのアセットのワークフローは 1 回しか実行されません。
 
 1. コレクションコンソールから、ワークフローを実行するコレクションを選択します。
-1. Tap/click the GlobalNav icon, and choose **[!UICONTROL Timeline]** from the list.
+1. グローバルナビゲーションアイコンをタップまたはクリックし、リストから「**[!UICONTROL タイムライン]**」を選択します。
 1. タイムラインで、下部のキャレットアイコンをクリックまたはタップして、「**[!UICONTROL ワークフローを開始]**」をタップまたはクリックします。
 
    ![chlimage_1-119](assets/chlimage_1-119.png)
@@ -300,6 +303,6 @@ Assets ユーザーインターフェイスでは、特定のルール、検索�
 
 >[!MORELIKETHIS]
 >
->* [Experience Manager Assets電子メール通知の設定](/help/sites-administering/notification.md#assetsconfig)
+>* [Experience Managerアセットの電子メール通知の設定](/help/sites-administering/notification.md#assetsconfig)
 >* [コレクション用レビュータスクの作成](bulk-approval.md)
 
