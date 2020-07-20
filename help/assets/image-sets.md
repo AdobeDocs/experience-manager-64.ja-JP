@@ -54,7 +54,7 @@ ht-degree: 81%
 
    [バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用して画像セットを自動的に作成することもできます。
 
-   **重要** ：バッチセットは、アセット取り込みの一環としてIPS(Image Production System)によって作成され、ダイナミックメディア — Scene7モードでのみ使用できます。
+   **重要** ：バッチセットは、アセット取り込みの一環としてIPS(Image Production System)によって作成され、Dynamic Media（Scene7モード）でのみ使用できます。
 
    詳しくは、[アップロード用の画像セットアセットの準備およびファイルのアップロード](#uploading-assets-in-image-sets)を参照してください。
 
@@ -64,7 +64,7 @@ ht-degree: 81%
 
    Administrators can create or modify Image **[!UICONTROL Set Viewer Presets]**. 画像セットを特定のビューアプリセットで表示するには、画像セットを選択し、左側のレールのドロップダウンメニューで「**[!UICONTROL ビューア]**」を選択します。
 
-   **[!UICONTROL ツール／アセット／ビューアプリセット]**&#x200B;を選択して、ビューアプリセットを作成または編集します。
+   **[!UICONTROL ツール／Assets／ビューアプリセット]**&#x200B;を選択して、ビューアプリセットを作成または編集します。
 
 1. （オプション）バッチセットプリセットを使用して作成した[画像セットの表示](image-sets.md#viewing-image-sets)
 1. [画像セットをプレビューします。](previewing-assets.md)
@@ -176,7 +176,7 @@ ht-degree: 81%
 
 画像セットは、ユーザーインターフェイスで作成することも、[バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用して自動的に作成することもできます。
 
-**重要** ：バッチセットは、アセット取り込みの一環としてIPS [Image Production System] によって作成され、ダイナミックメディア — Scene7モードでのみ使用できます。
+**重要** ：バッチセットは、アセット取り込みの一環としてIPS [Image Production System] によって作成され、Dynamic Media（Scene7モード）でのみ使用できます。
 
 ただし、バッチセットプリセットを使用して作成したセットは、ユーザーインターフェイスに表示&#x200B;*されません*。これらのセットは 3 つの異なる方法で表示できます（これらの方法は、画像セットをユーザーインターフェイスで作成した場合も使用できます）。
 
