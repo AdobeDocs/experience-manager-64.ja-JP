@@ -100,7 +100,7 @@ By signing in to [Adobe Marketing Cloud](https://docs.adobe.com/content/help/en/
 * [7 個の成功イベント](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/success-events/success-event.html)（event）
 
    * **`event1`** 有効 **`event7`** にする
-   * タイプ **`Counter`**
+   * 型 **`Counter`**
 
       * **string not required****`Counter (no subrelations)`**
    * 既存のイベントを再利用（名前変更）したり、Communities機能で使用する新しいユーザーを作成できます。
