@@ -89,12 +89,12 @@ To add a new configuration, select the plus &#39;**+**&#39; icon next to the ser
 * **[!UICONTROL maxTotalAttachmentSize.name]**「supportAttachments」をオンにすると、この値によりすべての添付ファイルの最大許容合計サイズ（バイト単位）が指定されます。初期設定は です。 
 *104857600* (100 MB)。
 
-* **[!UICONTROL attachmentTypeBlocklist.name]**&#x200B;ファイル拡張子のブロックリストで、先頭に「
-**。**」というプレフィックス付き）のブラックリストです。ブロックリストに含まれていない場合は、拡張が許可されます。 Extensions may be added or removed using the &#39;**+**&#39; and &#39;**-**&#39; icons. Default is *DEFAULT*.
+* **[!UICONTROL attachmentTypeBlocklist.name]**&#x200B;ファイル拡張子ブロックリストので、先頭に「
+**。**」というプレフィックス付き）のブラックリストです。そうでないブロックリストに加える場合は、拡張が許可されます。 Extensions may be added or removed using the &#39;**+**&#39; and &#39;**-**&#39; icons. Default is *DEFAULT*.
 
 * **[!UICONTROL allowedAttachmentTypes.name]**
 
-   **(*操作が必要*)** ファイル拡張子の許可リスト(ブロックリストの逆)。 To allow all file extensions, except for those blocklisted, use the &#39;**-**&#39; icon to remove the single empty entry.
+   **(*必要な*操作** )ファイル拡張子の許可リスト(の逆)。 To allow all file extensions, except for those blocklisted, use the &#39;**-**&#39; icon to remove the single empty entry.
 
 * **[!UICONTROL serviceSelector.name]**(*必須*)サービスを呼び出す絶対パス（エンドポイント）（仮想リソース）。 The root of the path chosen must be one included in the *Execution Paths* configuration setting of OSGi config [ `Apache Sling Servlet/Script Resolver and Error Handler`](http://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver), such as `/bin/`, `/apps/`, and `/services/`. サイトのメッセージング機能に対してこの設定を選択するには、このエンドポイントをの **`Service selector`** 値として指定します `Message List and Compose Message components` ( [メッセージ機能](configure-messaging.md))。 初期設定は */bin/messaging* です。
 
