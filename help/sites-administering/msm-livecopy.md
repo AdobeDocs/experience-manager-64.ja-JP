@@ -10,7 +10,10 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 161b591b-5871-4b5f-9c63-823b6e67b1fd
 translation-type: tm+mt
-source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
+source-git-commit: d4357905fe6b7acc70f828d9b73581393e003cd5
+workflow-type: tm+mt
+source-wordcount: '3964'
+ht-degree: 90%
 
 ---
 
@@ -77,6 +80,7 @@ source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
 
    * **プロパティ**：設定のプロパティを表示して編集するために使用します。
    * **削除**
+
    ![chlimage_1-211](assets/chlimage_1-211.png)
 
 ## ライブコピーの作成 {#creating-a-live-copy}
@@ -90,7 +94,7 @@ source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
 
 以下のような任意のページのライブコピーを作成できます。
 
-* [ブループリント設定](#creating-a-blueprint-configuration)によって参照されるページ。
+* Pages that are referenced by a [blueprint configuration](#creating-a-blueprint-configuration).
 * ブループリント設定に接続されていないページ。
 * AEM では、ライブコピーを別のライブコピーのページ内に作成することもできます。
 
@@ -121,6 +125,7 @@ source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
 
    * ページの&#x200B;**タイトル**。
    * URL で使用される&#x200B;**名前**。
+
    ![chlimage_1-215](assets/chlimage_1-215.png)
 
 1. 「**サブページを除外**」チェックボックスを次のように使用します。
@@ -143,7 +148,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
 サイトを作成する場合は、以下のプロパティに値を指定します。
 
-* **初期言語**:ライブコピーに含めるBluePrintソースの言語ブランチ。
+* **初期言語**: ライブコピーに含めるブループリントソースの言語ブランチ。
 * **初期の章**：ライブコピーに含めるブループリントの言語ブランチの子ページ。
 * **宛先のパス**：ライブコピーサイトのルートページの場所。
 * **タイトル**：ライブコピーサイトのルートページのタイトル。
@@ -199,7 +204,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
    >[!NOTE]
    >
-   >詳しくは、[ライブコピーのステータスのメッセージ - 最新／グリーン／同期中](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)に関するナレッジベースの記事も参照してください。
+   >詳しくは、[ライブコピーのステータスのメッセージ - 最新／グリーン／同期中](https://helpx.adobe.com/jp/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)に関するナレッジベースの記事も参照してください。
 
 ### ブループリントページのライブコピーの確認 {#seeing-the-live-copies-of-a-blueprint-page}
 
@@ -215,7 +220,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
 >[!NOTE]
 >
->同じページ名を持つ新しいページがBlueprintブランチと依存ライブコピーブランチの両方で作成される場合、競合が発生する可能性があります。
+>同じページ名を持つ新しいページがBlueprintブランチと依存ライブコピーブランチの両方に作成された場合、競合が発生する可能性があります。
 >
 >このような[競合はロールアウト時に処理および解決](/help/sites-administering/msm-rollout-conflicts.md)する必要があります。
 
@@ -234,7 +239,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
 #### 参照レールからのブループリントのロールアウト {#roll-out-a-blueprint-from-the-reference-rail}
 
-1. In the **Sites** console, select the page in the blueprint and open the **[References](/help/sites-authoring/basic-handling.md#references)**panel (from the toolbar).
+1. **サイト** コンソールで、Blueprintのページを選択し、(ツールバーから **[)](/help/sites-authoring/basic-handling.md#references)**参照パネルを開きます。
 1. リストから「**ブループリント**」オプションを選択し、このページに関連付けられているブループリントを表示します。
 1. リストから必要なブループリントを選択します。
 1. 「**ロールアウト**」をクリックまたはタップします。
@@ -246,7 +251,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
    * **背景ロールアウト**:
 
-      多くのページ/サブページが関与している場合は、バックグラウンドタスクとしてロールアウトを実行できます。
+      ページ数/サブページ数が多い場合は、背景タスクとしてロールアウトを実行できます。
    ![chlimage_1-222](assets/chlimage_1-222.png)
 
 1. これらの詳細を確認したら、「**ロールアウト**」を選択してアクションを実行します。
@@ -291,6 +296,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
    * **ページとサブページ**
    * **ページのみ**
+
    ![chlimage_1-225](assets/chlimage_1-225.png)
 
 ## ライブコピーのコンテンツの変更 {#changing-live-copy-content}
@@ -308,7 +314,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
 >[!NOTE]
 >
->同じページ名を持つ新しいページがBlueprintブランチと依存ライブコピーブランチの両方で作成される場合、競合が発生する可能性があります。
+>同じページ名を持つ新しいページがBlueprintブランチと依存ライブコピーブランチの両方に作成された場合、競合が発生する可能性があります。
 >
 >このような[競合はロールアウト時に処理および解決](/help/sites-administering/msm-rollout-conflicts.md)する必要があります。
 
@@ -356,6 +362,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
    * **休止**
    * **子ページも休止**
+
    ![chlimage_1-226](assets/chlimage_1-226.png)
 
 1. Confirm the **Suspend** action in the **Suspend Live Copy **dialog:
@@ -423,6 +430,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 
    * オン：ディープライブコピー（子ページが含まれる）
    * オフ：シャローライブコピー（子ページが除外される）
+
    >[!CAUTION]
    >
    >シャローライブコピーへの切り替えは即座に反映され、元に戻すことはできません。
@@ -464,7 +472,7 @@ If you omit some language branches or chapters from the live copy, you can add t
 あるライブコピーに段落システムの一部であるコンポーネントが含まれている場合、段落システムの継承は次のルールに従います。
 
 * 段落システム内のコンポーネントの順序は、継承が確立していても変更できます。
-* ロールアウト時に、コンポーネントの順序はブループリントから復元されます。ロールアウト前に新しいコンポーネントがライブコピーに追加された場合、追加されたコンポーネントと共に順序が変更されます。
+* ロールアウト時に、コンポーネントの順序はブループリントから復元されます。ロールアウト前に新しいコンポーネントがライブコピーに追加された場合は、追加されたコンポーネントと共に順序が変更されます。
 * 段落システムの継承がキャンセルされた場合、コンポーネントの順序はロールアウト時に復元されず、ライブコピーにそのまま残ります。
 
 >[!NOTE]
@@ -545,12 +553,13 @@ To track the changes you have made, you can view the blueprint page in **Referen
 1. **[参照](/help/sites-authoring/basic-handling.md#references)**パネルを開き、次のいずれかを選択します。
 
    * **Blueprint** （ライブコピーページが選択された場合）
-   * **ライブコピー** （Blueprintページが選択された場合）
+   * **ライブコピー** （BluePrintページが選択された場合）
 
 1. 特定のライブコピーを選択してから、次のいずれかを選択します。
 
    * **ブループリントと比較**（ライブコピーページを選択した場合）
-   * **ライブコピーと比較** （Blueprintページが選択された場合）
+   * **ライブコピーと比較** （BluePrintページが選択された場合）
+
    次に例を示します。
 
    ![chlimage_1-235](assets/chlimage_1-235.png)
@@ -583,12 +592,14 @@ To track the changes you have made, you can view the blueprint page in **Referen
 
    * そのサブページ（またはブランチ）のライブ関係が削除されます。
    * ライブコピーブランチの（サブ）ページは手動で作成されたかのように扱われます。
+
    *ただし*、サブページは引き続き親ブランチのライブ関係の対象であり、ブループリントページの今後のロールアウトでは、次のように処理されます。
 
    1. 分離されたページの名前が変更されます。
 
       * これは、手動で作成されたページは作成するライブコピーページと同じ名前を持つので、競合が発生すると MSM が判断するためです。
    1. ロールアウトからの変更を含む新しい（ライブコピー）ページが元の名前で作成されます。
+
    >[!NOTE]
    >
    >このような状況について詳しくは、[MSM ロールアウトの競合](/help/sites-administering/msm-rollout-conflicts.md)を参照してください。
