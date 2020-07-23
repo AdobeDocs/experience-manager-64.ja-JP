@@ -1,8 +1,8 @@
 ---
-title: ページへのSearch&amp;Promote機能の追加
-seo-title: ページへのSearch&amp;Promote機能の追加
-description: WebサイトでのSearch&Promote機能の統合、Search&amp;Promoteコンポーネントを使用して、キーワード検索、検索結果ページ検索の絞り込み、バナーなどの機能をページに追加できます。
-seo-description: WebサイトでのSearch&Promote機能の統合、Search&amp;Promoteコンポーネントを使用して、キーワード検索、検索結果ページ検索の絞り込み、バナーなどの機能をページに追加できます。
+title: Search&amp;Promote機能のページへの追加
+seo-title: Search&amp;Promote機能のページへの追加
+description: Search&amp;Promote機能をWebサイトに統合すると、Search&amp;Promoteコンポーネントを使用して、キーワード検索、検索結果ページ検索の絞り込み、バナーなどの機能をページに追加できます。
+seo-description: Search&amp;Promote機能をWebサイトに統合すると、Search&amp;Promoteコンポーネントを使用して、キーワード検索、検索結果ページ検索の絞り込み、バナーなどの機能をページに追加できます。
 uuid: 8831aa56-9d7f-44ca-9d32-5901bf762154
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,7 +10,10 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 277d7e67-5778-48cb-89bb-29bcc734a485
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 263a1e514fa48f7aa7b696c801718ceff1e43ed7
+workflow-type: tm+mt
+source-wordcount: '1253'
+ht-degree: 64%
 
 ---
 
@@ -39,7 +42,7 @@ Search&amp;Promote サーバーでは、ファセットや各コンポーネン�
    <td>バナー広告を表示します。バナーは Search&amp;Promote を通じて収集されたデータに基づいて選択されます。<br /> </td> 
   </tr> 
   <tr> 
-   <td>パンくず</td> 
+   <td>パンくずリスト</td> 
    <td>検索キーワードとユーザーが検索結果に適用したフィルターの結果が表示されます。</td> 
   </tr> 
   <tr> 
@@ -79,22 +82,22 @@ WCM Web サイトコンソールを使用して、検索結果を表示するペ
 
 **[!UICONTROL ページネーション]**&#x200B;コンポーネントでは、複数ページの検索結果を移動できます。ユーザーはページ数を確認し、次のページや前のページに移動したり、ページを選択して開いたり、すべての結果を 1 つのページに表示したりできます。
 
-![文字列化](assets/srchpagination.png)
+![srchpagination](assets/srchpagination.png)
 
 You can configure the following component properties in [!UICONTROL Edit] mode to control runtime behavior:
 
-* **[!UICONTROL 単一の結果ページを非表示]** — 検索で結果の単一ページが返された場合にページナビゲーションコントロールを非表示にするには、このオプションを選択します。
+* **[!UICONTROL 単一の結果ページを非表示にする]** — 検索で結果の1ページが返された場合に、ページナビゲーションコントロールを非表示にするには、このオプションを選択します。
 * **[!UICONTROL 最初/最後を非表示]** — ユーザーが結果の最初または最後のページにジャンプしないようにするには、このオプションを選択します。
-* **[!UICONTROL 前へ/次へを非表示]** — ユーザーが現在のページを基準にして結果ページを移動できるかどうかを指定します。
-* **[!UICONTROL Hide view all]** — ユーザーが単一ページですべての検索結果を統合できるかどうかを指定します。 通常、ページ分割されたデータを提供するとサーバーのリソースをより効率的に使用できます。サイズの大きなデータセットを 1 つの応答メッセージで転送されないようにするには、このオプションを選択します。
+* **[!UICONTROL 前/次を非表示]** — ユーザーが現在のページを基準にして結果ページをナビゲートできるかどうかを指定します。
+* **[!UICONTROL 表示をすべて非表示]** — 検索結果を1ページにまとめて表示するかどうかを指定します。 通常、ページ分割されたデータを提供するとサーバーのリソースをより効率的に使用できます。サイズの大きなデータセットを 1 つの応答メッセージで転送されないようにするには、このオプションを選択します。
 
 ## ファセットによる結果のフィルタリングの有効化 {#enabling-the-filtering-of-results-by-facets}
 
 ユーザーが検索結果をファセットでフィルタリングできるように設定できます。The **[!UICONTROL Checkbox List Facet]**, **[!UICONTROL Dropdown Facet]**, and **[!UICONTROL Link List Facet]** components enable users to select one or more facets for filtering. これらのコンポーネントを使用する際には、**[!UICONTROL パンくず]**&#x200B;コンポーネントも指定することをお勧めします。パンくずは、現在使用されているフィルターを示します。
 
-The **[!UICONTROL Checkbox List Facet**, **[!UICONTROL Dropdown Facet]**, and **[!UICONTROL Link List Facet]** components each have the following properties that you configure in **[!UICONTROL Edit]** mode:
+The **[!UICONTROL Checkbox List Facet]**, **[!UICONTROL Dropdown Facet]**, and **[!UICONTROL Link List Facet]** components each have the following properties that you configure in **[!UICONTROL Edit]** mode:
 
-* **[!UICONTROL Facet Name]** — フィルターに使用するファセットの名前。
+* **[!UICONTROL ファセット名]** -フィルターに使用されるファセットの名前。
 
 **[!UICONTROL チェックボックスリストファセット]**&#x200B;コンポーネントにファセットのリストと関連するチェックボックスが表示されます。**[!UICONTROL チェックボックスリストファセット]**&#x200B;を使用して、ユーザーが複数のファセットからの項目が含まれる結果のサブセットを表示できるようにします。例えば、複数のブランドが同じ種類の製品を供給する場合は、ブランドファセットが適切です。
 
@@ -122,8 +125,8 @@ The links in the list also changes when a filter is applied from a different typ
 
 編集モードで次のパンくずのプロパティを設定して、コンポーネントの外観をカスタマイズできます。
 
-* **[!UICONTROL Delimiter]** — 各階層リンクの区切り文字として使用する文字または文字列を定義します。 Delimiterフィールドは、任意の文字列を入力として受け付けます。 デフォルトの設定は、&quot;>&quot;（引用符なし）です。
-* **[!UICONTROL トレーリング区切り]** — パンくずリストの末尾に表示する文字または文字列を定義します。 「トレーリング区切り」フィールドは、任意の文字列を入力として受け付けます。 このデフォルト設定は「空白」です（階層リンクラインの末尾に何も表示されません）
+* **[!UICONTROL Delimiter]** — 各パンくずリスト間の区切り文字として使用する文字または文字列を定義します。 Delimiterフィールドは、任意の文字列を入力として受け付けます。 デフォルトの設定は、&quot;>&quot;（引用符なし）です。
+* **[!UICONTROL トレーリング区切り]** — パンくずリストの末尾に表示する文字または文字列を定義します。 「トレーリング区切り文字」フィールドは、任意の文字列を入力として受け付けます。 このデフォルト設定は「空白」です（階層リンクの最後に何も表示されません）。
 
 ## 検索ボックスの追加 {#adding-search-boxes}
 
@@ -132,13 +135,13 @@ The **[!UICONTROL Search]** component enables customers to perform keyword searc
 Configure the following properties in **[!UICONTROL Edit]** mode to control runtime behavior:
 
 * **[!UICONTROL Result Page Path]** — 検索結果を表示するページへのパス。
-* **[!UICONTROL オートコンプリートを有効にする]** — 顧客が検索ボックスに入力し始めたときに推奨検索キーワードを表示させる場合に選択します。
+* **[!UICONTROL オートコンプリートを有効にする]** — 顧客が検索ボックスに入力し始めたときに推奨検索キーワードが表示されるようにする場合に選択します。
 
 ![sandsearchcomp](assets/sandpsearchcomp.png)
 
 ## バナーの追加 {#adding-banners}
 
-The **[!UICONTROL Banners]** component displays banner advertisements according to the customer&#39;s Search&amp;Promote searches. Search&amp;Replace サーバーのロジックにより表示されるバナーが決まります。例えば、「ジーンズ」を検索するとファッション関連のバナーが表示されます。「男性」部門でフィルタリングすると、バナーがさらに絞り込まれます。
+**[!UICONTROL Bannersコンポーネントは]** 、顧客のSearch&amp;Promote検索に従ってバナー広告を表示します。 Search&amp;Replace サーバーのロジックにより表示されるバナーが決まります。例えば、「ジーンズ」を検索するとファッション関連のバナーが表示されます。「男性」部門でフィルタリングすると、バナーがさらに絞り込まれます。
 
 The **[!UICONTROL Banners]** component provides one configurable property named **[!UICONTROL Banner Area]**. In **[!UICONTROL Edit]** mode, select one of the property values to specify how the banner appears. Search&amp;Promote サービスにより、値のリストの選択元が決まります。
 
