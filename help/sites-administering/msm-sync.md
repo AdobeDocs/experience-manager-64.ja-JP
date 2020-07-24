@@ -10,9 +10,9 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: c491f0f3-375d-4203-bdf3-234987bbf685
 translation-type: tm+mt
-source-git-commit: 8cf319b54e1a2afa1385f9bea1e946eaad0e60f7
+source-git-commit: 52cefb850f413570d375b1b19f983339d743b486
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2671'
 ht-degree: 83%
 
 ---
@@ -188,7 +188,7 @@ ht-degree: 83%
   </tr> 
   <tr> 
    <td>workflow</td> 
-   <td><p>target プロパティで定義されるワークフローを開始し（ページの場合のみ）、ライブコピーをペイロードと見なします。</p> <p>ターゲットパスは model ノードのパスです（例：/etc/workflow/models/request_for_activation/jcr:content/model）。</p> </td> 
+   <td><p>target プロパティで定義されるワークフローを開始し（ページの場合のみ）、ライブコピーをペイロードと見なします。</p> <p>ターゲットパスは、モデルノードのパスです。</p> </td> 
    <td>target：（文字列）ワークフローモデルのパス。<br /> </td> 
   </tr> 
   <tr> 
@@ -417,4 +417,4 @@ MSM を使用すると、通常使用するロールアウト設定のセット�
 * Web コンソールの場合、設定するプロパティの名前は「Default rollout config」です。
 * Using a repository node, the name of the property to configure is `liverelationshipmgr.relationsconfig.default`.
 
-このプロパティの値を、システムのデフォルトとして使用するロールアウト設定のパスに指定します。The default value is `/etc/msm/rolloutconfigs/default`, which is the **Standard Rollout Config**.
+このプロパティの値を、システムのデフォルトとして使用するロールアウト設定のパスに指定します。The default value is `/libs/msm/wcm/rolloutconfigs/default`, which is the **Standard Rollout Config**.
