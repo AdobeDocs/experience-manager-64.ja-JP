@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aee5f5a7-8462-4d42-8d96-8a7eb317770e
 translation-type: tm+mt
-source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+source-git-commit: 52cefb850f413570d375b1b19f983339d743b486
 workflow-type: tm+mt
 source-wordcount: '2247'
 ht-degree: 68%
@@ -360,10 +360,6 @@ To add to the paths, add more `<filter>` elements:
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/apps/myproject"/>
-    <filter root="/etc/msm/rolloutconfigs/myrolloutconfig"/>
-    <filter root="/etc/blueprints/mysite/globalsite"/>
-    <filter root="/etc/workflow/models/myproject"/>
-    <filter root="/etc/designs/myproject"/>
     <filter root="/content/myproject/sample-content"/>
 </workspaceFilter>
 ```
