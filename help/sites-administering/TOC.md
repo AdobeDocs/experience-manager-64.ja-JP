@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: admin-user
-user-guide-title: AEM 6.4 Administering User Guide
+user-guide-title: AEM 6.4管理ユーザーガイド
+user-guide-description: Learn about administering AEM.
 translation-type: tm+mt
-source-git-commit: 2cd539dd645f1e3a823a17b57410ca4b9fc1364a
+source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+workflow-type: tm+mt
+source-wordcount: '619'
+ht-degree: 97%
 
 ---
 
@@ -88,7 +92,7 @@ source-git-commit: 2cd539dd645f1e3a823a17b57410ca4b9fc1364a
    + [AEM の基盤での GDPR 要求の処理](handling-gdpr-requests-for-aem-platform.md)
    + [Content Disposition フィルター](content-disposition-filter.md)
 + パーソナライゼーション {#personalization}
-   + [パーソナライゼーション](personalization.md)
+   + [パーソナライズ機能](personalization.md)
    + [ContextHub の設定](contexthub-config.md)
    + [ClientContext](client-context.md)
    + [キャンペーン](campaigns.md)
@@ -98,7 +102,7 @@ source-git-commit: 2cd539dd645f1e3a823a17b57410ca4b9fc1364a
    + [ランディングページと Adobe Analytics の統合](integrating-landing-pages-with-adobe-analytics.md)
 + e コマース {#ecommerce}
    + [e コマース](ecommerce.md)
-   + [概念](concepts.md)
+   + [概念 ](concepts.md)
    + [汎用eコマースの管理](generic.md)
    + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
@@ -123,7 +127,7 @@ source-git-commit: 2cd539dd645f1e3a823a17b57410ca4b9fc1364a
    + [関連するコミュニティ記事](related-community-articles.md)
    + [Adobe Campaign Standard との統合](campaignstandard.md)
    + [Flash ビューアのサポート終了に関する通知](flash-viewers-eol.md)
-   + [Adobe Creative Cloud との統合](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/aem-cc-integration-best-practices.html)
+   + [Adobe Creative Cloud との統合](https://docs.adobe.com/content/help/ja-JP/experience-manager-64/assets/administer/aem-cc-integration-best-practices.html)
    + [製品フィード](product-feed.md)
    + [Adobe Dynamic Tag Management との統合](dtm.md)
    + [Adobe Analytics および Adobe Target との統合のオプトイン](opt-in.md)
