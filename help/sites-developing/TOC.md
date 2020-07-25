@@ -2,16 +2,20 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.4 Developing User Guide
+user-guide-title: AEM 6.4開発ユーザーガイド
+user-guide-description: This guide covers how to build out your AEM instance.
 translation-type: tm+mt
-source-git-commit: 44f2d12a5261f0649319f84516856c9522e0df62
+source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+workflow-type: tm+mt
+source-wordcount: '804'
+ht-degree: 80%
 
 ---
 
 
 # AEM 6.4 Developing User Guide {#developing}
 
-+ [ユーザガイドの開発の概要](home.md)
++ [開発ユーザガイドの概要](home.md)
 + 開発者向けの概要{#introduction}
    + [AEM Sites の開発の手引き - WKND チュートリアル](getting-started.md)
    + [AEM の中心概念](the-basics.md)
@@ -66,7 +70,7 @@ source-git-commit: 44f2d12a5261f0649319f84516856c9522e0df62
       + [開発（汎用）](generic.md)
       + [SAP Commerce Cloud を使用した開発](sap-commerce-cloud.md)
 + コンポーネント{#components}
-   + [コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+   + [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
    + [スタイルシステム](/help/sites-authoring/style-system.md)
    + [コンポーネントの概要](components.md)
    + [AEM コンポーネント - 基本](components-basics.md)
@@ -99,17 +103,17 @@ source-git-commit: 44f2d12a5261f0649319f84516856c9522e0df62
       + [SPAの概要とチュートリアル](spa-walkthrough.md)
       + [SPA WKNDチュートリアル](spa-wknd.md)
       + [AEMのSPA使用の手引き — React](spa-getting-started-react.md)
-      + [AEMのSPA使用の手引き — Angular](spa-getting-started-angular.md)
+      + [AEMでのSPAの使用の手引き — Angular](spa-getting-started-angular.md)
       + [SPA用のReactコンポーネントの実装](spa-implementing-react-component.md)
-      + [スパディープディーブ](spa-deep-dives.md)
+      + [スパディープディブス](spa-deep-dives.md)
       + [SPA エディターの概要](spa-overview.md)
       + [AEM用SPAの開発](spa-architecture.md)
       + [SPA ブループリント](spa-blueprint.md)
       + [SPAページコンポーネント](spa-page-component.md)
       + [SPAの動的モデルとコンポーネントのマッピング](spa-dynamic-model-to-component-mapping.md)
-      + [SPAモデルのルーティング](spa-routing.md)
-      + [SPAとAdobe Experience Platform Launchの統合](spa-launch.md)
-      + [SPAとサーバ側のレンダリング](spa-ssr.md)
+      + [SPAモデルルーティング](spa-routing.md)
+      + [SPAとAdobe Experience Platform起動の統合](spa-launch.md)
+      + [SPAとサーバー側のレンダリング](spa-ssr.md)
       + [SPA JavaScript API リファレンス](spa-reference-materials.md)
    + [HTTP API](/help/assets/mac-api-assets.md)
    + [コンテンツフラグメント](/help/assets/content-fragments.md)
@@ -117,7 +121,7 @@ source-git-commit: 44f2d12a5261f0649319f84516856c9522e0df62
    + [AEMのコンテンツフラグメントとコンテンツサービスについて](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
 + 開発ツール{#devtools}
    + [開発ツール](dev-tools.md)
-   + [AEM最新化ツール](modernization-tools.md)
+   + [AEM Modernization Tools](modernization-tools.md)
    + [ダイアログエディター](dialog-editor.md)
    + [ダイアログ変換ツール](dialog-conversion.md)
    + [CRXDE Lite による開発](developing-with-crxde-lite.md)
@@ -157,16 +161,16 @@ source-git-commit: 44f2d12a5261f0649319f84516856c9522e0df62
       + [ワークフローのベストプラクティス](workflows-best-practices.md)
       + [ワークフロープロセスのリファレンス](workflows-process-ref.md)
    + [Multi Site Manager の拡張](extending-msm.md)
-   + 追跡と分析{#extending-analytics}
+   + トラッキングとAnalytics{#extending-analytics}
       + [イベント追跡の拡張](extending-analytics.md)
-      + [コンポーネントへのAdobe Analytics追跡の追加](extending-analytics-components.md)
-      + [Adobe Analytics Frameworkのカスタマイズ](extending-analytics-framework.md)
+      + [コンポーネントへのAdobeAnalyticsトラッキングの追加](extending-analytics-components.md)
+      + [Adobe Service Frameworkのカスタマイズ](extending-analytics-framework.md)
       + [Analytics 用のサーバー側ページネーミングの実装](extending-analytics-pa-naming.md)
-   + クラウドサービス{#extending-cloud-services}
-      + [クラウドサービスの設定](extending-cloud-config.md)
+   + Cloud Services {#extending-cloud-services}
+      + [クラウドサービス設定](extending-cloud-config.md)
       + [カスタムクラウドサービスの作成](extending-cloud-config-custom-cloud.md)
    + [カスタム拡張の作成](extending-campaign-extensions.md)
-   + Forms{#extending-forms}
+   + フォーム{#extending-forms}
       + [カスタムフォームマッピングの作成](extending-campaign-form-mapping.md)
       + [Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成](extending-campaign-custom-template.md)
       + [リクエスト分析スクリプト](analyze-request.md)
@@ -177,7 +181,7 @@ source-git-commit: 44f2d12a5261f0649319f84516856c9522e0df62
       + [ようこそコンソールのカスタマイズ（クラシック UI）](customizing-the-welcome-console.md)
       + [レポートの開発](dev-reports.md)
 + テスト{#testing}
-   + [プランニング](planning.md)
+   + [計画](planning.md)
    + [必要になるテスト環境の種類](test-environments.md)
    + [テストケースの定義](test-cases.md)
    + [テスト - 実行のタイミングとテスター](when-who.md)
@@ -202,7 +206,7 @@ source-git-commit: 44f2d12a5261f0649319f84516856c9522e0df62
       + [We.Retail の編集可能テンプレートの使用](we-retail-editable-templates.md)
       + [We.Retail のレスポンシブレイアウトの使用](we-retail-responsive-layout.md)
       + [We.Retail のグローバル化されたサイト構造の使用](we-retail-globalized-site-structure.md)
-      + [We.Retailでのエクスペリエンスフラグメントの試用](we-retail-experience-fragments.md)
+      + [Web.Retailでのエクスペリエンスフラグメントの試用](we-retail-experience-fragments.md)
    + [コーディングのヒント](coding-tips.md)
    + [コードの落とし穴](code-pitfalls.md)
    + [OSGi バンドル](osgi-bundles.md)
