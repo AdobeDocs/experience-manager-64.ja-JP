@@ -4,8 +4,9 @@ product: adobe experience manager
 sub-product: 'フォーム[ふぉーむ] '
 audience: end-user
 user-guide-title: AEM 6.4 Forms ユーザーガイド
+user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: 4f6b0555b681d257c6d92490daa85a3ae2439a96
+source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
 workflow-type: tm+mt
 source-wordcount: '3702'
 ht-degree: 73%
@@ -62,11 +63,11 @@ ht-degree: 73%
       + [JEE上のAEM formsでサポートされるプラットフォーム](using/aem-forms-jee-supported-platforms.md)
       + [JEE上のAEM Formsのインストールおよびデプロイ（JBoss自動インストールを使用）](http://www.adobe.com/go/learn_aemforms_installTurnkey_64_jp)
       + [ドキュメントセキュリティサーバーのみのインストールと設定](using/installing-and-configuring-the-document-security-server.md)
-      + [AEM Formsシングルサーバーのインストールの準備](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)
+      + [AEM Formsのシングルサーバーインストールの準備](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)
       + [JEE上のAEM Formsのインストールおよびデプロイ（JBoss版）](http://www.adobe.com/go/learn_aemforms_installJBoss_64_jp)
       + [JEE上のAEM Formsのインストールおよびデプロイ（WebLogic版）](http://www.adobe.com/go/learn_aemforms_installWebLogic_64_jp)
       + [JEE上のAEM Formsのインストールおよびデプロイ（WebSphere版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_64_jp)
-      + [AEM Forms Workbenchのインストール](http://help.adobe.com/ja_JP/AEMForms/6.1/InstallWorkbench/index.html)
+      + [AEM FormsWorkbenchのインストール](http://help.adobe.com/ja_JP/AEMForms/6.1/InstallWorkbench/index.html)
       + [Designerのインストールと設定](using/installing-configuring-designer.md)
       + [AEM Formsサーバークラスターのインストールの準備](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64_jp)
       + [JBossクラスターでのJEE上のAEM Formsの設定](http://www.adobe.com/go/learn_aemforms_clusterJBoss_64_jp)
@@ -80,8 +81,8 @@ ht-degree: 73%
       + [Connector for Microsoft SharePoint の設定](http://help.adobe.com/ja_JP/AEMForms/6.1/SharePointConfig/index.html)
       + [AEM Forms と Adobe LiveCycle の接続](using/aem-livecycle-connector.md)
       + [AEM Forms がフォームデータを JEE 上の AEM Forms プロセスに送信するための設定](using/submit-form-data-livecycle-process.md)
-      + [AEM Forms用AEMデスクトップアプリケーション](/help/forms/using/aem-desktop-app-for-aem-forms.md)
-+ AEM Formsのアップグレード {#upgrade-aem-forms}
+      + [AEM Forms用AEMデスクトップアプリ](/help/forms/using/aem-desktop-app-for-aem-forms.md)
++ アップグレードAEM Forms {#upgrade-aem-forms}
    + [有効なアップグレードパス](using/upgrade.md)
    + OSGiでのAEM Formsのアップグレード {#aem-forms-osgi-upgrade}
       + [OSGi上のAEM 6.4 formsへのアップグレード](using/upgrade-forms-osgi.md)
@@ -91,14 +92,14 @@ ht-degree: 73%
       + [AEM Formsのアップグレードの準備](http://www.adobe.com/go/learn_aemforms_prepareupgrade_64_jp)
       + [アップグレードのチェックリストと計画](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_64_jp)
       + [JEE上のAEM 6.4 Formsへのアップグレード](using/upgrade-forms-jee.md)
-      + [AEM FormsリリースからJEE上のAEM 6.4 Formsへのアップグレード（JBoss版）](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_64_jp)
+      + [JEE上のAEM 6.4 FormsへのAEM Formsリリースからのアップグレード（JBoss版）](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_64_jp)
       + [LiveCycle ES4 SP1 から JEE 上の Adobe Experience Manager Forms へのアップグレード（JBoss 版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-jboss-livecycle.pdf)
-      + [AEM FormsリリースからJEE上のAEM 6.4 Formsへの自動アップグレード（JBoss版）](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_64_jp)
-      + [LiveCycle ES4 SP1からJEE上のAEM Formsへのアップグレード（JBoss自動インストール版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-turnkey-livecycle.pdf)
-      + [AEM FormsリリースからJEE上のAEM 6.4 Formsへのアップグレード（WebLogic版）](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_64_jp)
+      + [JEE上のAEM 6.4 Formsへの自動AEM Formsリリースからのアップグレード（JBoss版）](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_64_jp)
+      + [LiveCycle ES4 SP1からJEE上のAEM Formsへの自動アップグレード（JBoss版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-turnkey-livecycle.pdf)
+      + [JEE上のAEM 6.4 FormsへのAEM Formsリリースからのアップグレード（WebLogic版）](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_64_jp)
       + [LiveCycle ES4 SP1からJEE上のAEM Formsへのアップグレード（WebLogic版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-weblogic-livecycle.pdf)
-      + [AEM FormsリリースからJEE上のAEM 6.4 Formsへのアップグレード（WebSphere版）](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_64_jp)
-      + [LiveCycle ES4 SP1からJEE上のAEM Formsへのアップグレード（WebSphere版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-websphere-livecycle.pdf)
+      + [JEE上のAEM 6.4 FormsへのAEM Formsリリースからのアップグレード（WebSphere版）](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_64_jp)
+      + [LiveCycle ES4 SP1からJEE上のAEM Forms（WebSphere版）へのアップグレード](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-websphere-livecycle.pdf)
 + AEM Forms の管理 {#manage-administer-aem-forms}
    + [OSGi 上の AEM Forms のグループと権限](using/forms-groups-privileges-tasks.md)
    + [フォームを分類するための新しいフォルダーの作成](using/creating-new-folders-categorize-forms.md)
@@ -121,7 +122,7 @@ ht-degree: 73%
       + [OSGi 環境における AEM Forms のセキュリティの強化](using/hardening-securing-aem-forms-environment.md)
       + [JEE上のAEM Formsのセキュリティに関する一般的な考慮事項](using/general-security-considerations.md)
       + [JEE 上の AEM Forms 環境の堅牢化](using/hardening-aem-forms-jee-environment.md)
-      + [JEE上のAEM Formsのセキュリティ管理設定の指定](using/configuring-secure-administration-settings-aem.md)
+      + [JEE上のAEM Formsのセキュア管理設定の指定](using/configuring-secure-administration-settings-aem.md)
 + フォームデータモデル {#form-data-model}
    + [AEM Forms データ統合機能の概要](using/data-integration.md)
    + [データソースの設定](using/configure-data-sources.md)
@@ -243,7 +244,7 @@ ht-degree: 73%
    + [TODO リストの操作](using/todo-lists.md)
    + [AEM Forms Workspace のトラブルシューティングガイドライン](using/troubleshooting-guidelines-html-workspace.md)
 + AEM Forms アプリケーション {#aem-forms-app}
-   + [AEM Formsアプリケーションの概要](using/aem-forms-app.md)
+   + [AEM Formsアプリの概要](using/aem-forms-app.md)
    + [AEM Forms アプリケーションの環境設定](using/setup-environment-mobile-workspace.md)
    + [Xcode プロジェクトの設定と iOS アプリケーションの構築](using/setup-xcode-project-build-installer.md)
    + [セキュアな AEM Forms アプリケーション（iOS 用）の構築](using/building-secure-mobile-workspace-app.md)
@@ -391,7 +392,7 @@ ht-degree: 73%
    + [取引レポートの表示と理解](using/viewing-and-understanding-transaction-reports.md)
    + [トランザクションレポート請求可能API](using/transaction-reports-billable-apis.md)
    + [カスタム実装用のトランザクションの記録](using/record-transaction-custom-implementation.md)
-+ JEE上のAEM Formsの管理ヘルプ {#administrator-help}
++ JEE上のAEM Forms向け管理ヘルプ {#administrator-help}
    + はじめに {#get-started}
       + [AEM Forms の一般設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md)
       + [デプロイメントのライセンスの種類の更新](/help/forms/using/admin-help/update-license-type-deployment.md)
@@ -578,7 +579,7 @@ ht-degree: 73%
    + [HTML5 フォームの Form Bridge API](using/form-bridge-apis.md)
    + [Assembler サービスおよび DDX リファレンス](http://www.adobe.com/go/learn_aemforms_ddxRef_64_jp)
    + [Workbench ヘルプ](http://www.adobe.com/go/learn_aemforms_workbench_64_jp)
-   + JEE上のAEM Formsによるプログラミング {#programming-aem-forms-jee}
+   + JEE上のAEM Formsを使用したプログラミング {#programming-aem-forms-jee}
       + JEE上のAEM Formsによるプログラミングの概要 {#introduction-programming-aem-forms-jee}
          + [Java API QuickStartの概要](developing/introducing-java-api-soap-quick.md)
          + [APIを使用したAEM Formsの呼び出し](developing/invoking-aem-forms-using-apis.md)
@@ -649,7 +650,7 @@ ht-degree: 73%
          + [クライアントでのフォームのレンダリング](developing/rendering-forms-client.md)
          + [カスタムCSSファイルを使用したHTMLフォームのレンダリング](developing/rendering-html-forms-using-custom.md)
          + [CustomToolbarsでのHTMLフォームのレンダリング](developing/rendering-html-forms-custom-toolbars.md)
-         + [インタラクティブPDFフォームのレンダリング](developing/rendering-interactive-pdf-forms.md)
+         + [インタラクティブPDF formsのレンダリング](developing/rendering-interactive-pdf-forms.md)
          + [使用権限を付与されたフォームのレンダリング](developing/rendering-rights-enabled-forms.md)
          + [DDXドキュメントの検証](developing/validating-ddx-documents.md)
          + [PDFからPostscriptおよび画像ファイルへの変換](developing/converting-pdf-postscript-image-files.md)
@@ -665,7 +666,7 @@ ht-degree: 73%
          + [PDF/Aドキュメントの操作](developing/pdf-a-documents.md)
          + [PDF Utilitiesの操作](developing/pdf-utilities.md)
          + [XMP Utilitiesの使用](developing/xmp-utilities.md)
-         + [AEM Formsのバックアップの準備](developing/preparing-aem-forms-backup.md)
+         + [バックアップ用のAEM Formsの準備](developing/preparing-aem-forms-backup.md)
          + [エンドポイントのプログラム管理](developing/programmatically-endpoints.md)
          + [環境設定ノードのプログラム管理](developing/programmatically-preferences-nodes.md)
          + [ポリシーによるドキュメントの保護](developing/protecting-documents-policies.md)
