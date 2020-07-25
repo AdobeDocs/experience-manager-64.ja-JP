@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.4 Classic UI Authoring User Guide
+user-guide-title: AEM 6.4 Classic UIオーサリングユーザーガイド
+user-guide-description: This guide covers the concepts of authoring in AEM in the classic user interface.
 translation-type: tm+mt
-source-git-commit: d5166447bc03c33f20b1ee528ac0b4768da5727a
+source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+workflow-type: tm+mt
+source-wordcount: '307'
+ht-degree: 91%
 
 ---
 
@@ -32,7 +36,7 @@ source-git-commit: d5166447bc03c33f20b1ee528ac0b4768da5727a
    + [ページプロパティの編集](classic-page-author-edit-page-properties.md)
    + [ページ編集時の注釈](classic-page-author-annotations.md)
    + [オーサリング時の AEM のトラブルシューティング](classic-page-author-troubleshooting.md)
-   + [アクセス可能なコンテンツ（WCAG 2.0 適合）の作成](classic-page-author-accessible-content.md)
+   + [アクセシブルなコンテンツ（WCAG 2.0 適合）の作成 ](classic-page-author-accessible-content.md)
    + [モバイルデバイス用のページのオーサリング](classic-feature-mobile.md)
    + [ページオーサリング用コンポーネント](classic-page-author-edit-mode.md)
    + [ページ編集時のキーボードショートカット](classic-page-author-keyboard-shortcuts.md)
