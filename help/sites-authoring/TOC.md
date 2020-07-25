@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.4 Authoring User Guide
+user-guide-title: AEM 6.4オーサリングユーザーガイド
+user-guide-description: Learn key concepts for creating content and authoring in AEM.
 translation-type: tm+mt
-source-git-commit: 3a1b35b9b6591953dd6e8c03490aee15aa0780d2
+source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+workflow-type: tm+mt
+source-wordcount: '268'
+ht-degree: 88%
 
 ---
 
@@ -12,7 +16,7 @@ source-git-commit: 3a1b35b9b6591953dd6e8c03490aee15aa0780d2
 # AEM 6.4 Authoring User Guide {#authoring}
 
 + [オーサリングユーザーガイドの概要](home.md)
-+ AEMオーサリングにとって重要なタスク、ツールおよび概念 {#essentials}
++ AEMオーサリングに不可欠なタスク、ツール、概念 {#essentials}
    + [作成者が行う最初の手順](first-steps.md)
    + [ページのオーサリングのクイックガイド](qg-page-authoring.md)
    + [オーサリングの概念](author.md)
@@ -47,7 +51,7 @@ source-git-commit: 3a1b35b9b6591953dd6e8c03490aee15aa0780d2
    + [コンポーネントコンソール](default-components-console.md)
    + [レスポンシブレイアウト](responsive-layout.md)
    + [コンテンツインサイト](content-insights.md)
-   + [アクセス可能なコンテンツ（WCAG 2.0 適合）の作成](creating-accessible-content.md)
+   + [アクセシブルなコンテンツ（WCAG 2.0 適合）の作成 ](creating-accessible-content.md)
    + [基礎モード](scaffolding.md)
    + [デザインモードでのコンポーネントの設定](default-components-designmode.md)
    + [基盤コンポーネント](default-components-foundation.md)
@@ -74,8 +78,8 @@ source-git-commit: 3a1b35b9b6591953dd6e8c03490aee15aa0780d2
    + [ページ分析データの表示](pa-using.md)
    + [ページへの Search&amp;Promote 機能の追加](search-and-promote.md)
 + パーソナライゼーション {#personalization}
-   + [パーソナライゼーション](personalization.md)
-   + [ContextHub データを使用したページのプレビュー](ch-previewing.md)
+   + [パーソナライズ機能](personalization.md)
+   + [ContextHub データを使用したページのプレビュー ](ch-previewing.md)
    + [ターゲットモードを使用したターゲットコンテンツのオーサリング](content-targeting-touch.md)
    + [マルチサイトでのターゲットコンテンツの操作](multisite-support-targeted-content.md)
    + [ターゲットコンテンツ用マルチサイト管理の構造](technical-multisite-targeted.md)
@@ -83,7 +87,7 @@ source-git-commit: 3a1b35b9b6591953dd6e8c03490aee15aa0780d2
    + [オーディエンスの管理](managing-audiences.md)
    + [オファーの作成と管理](offerlib.md)
    + [セグメント化について](segmentation-overview.md)
-+ AEMとAdobe Campaign {aem-adobe-campaign}
++ AEMとAdobe Campaign{aem-adobe-キャンペーン}
    + [Adobe Campaign の使用](adobe-campaign.md)
    + [Adobe Campaign Classic および Adobe Campaign Standard の使用](campaign.md)
    + [Adobe Campaign のターゲット設定](target-adobe-campaign.md)
