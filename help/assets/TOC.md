@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.4 Assetsユーザガイド
+user-guide-title: AEM 6.4 Assetsユーザーガイド
+user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
+source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+workflow-type: tm+mt
+source-wordcount: '718'
+ht-degree: 76%
 
 ---
 
@@ -17,7 +21,7 @@ source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
 + [ユーザーエクスペリエンスの改善](ux-improvements.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
 + AEM Assetsの使用 {#using}
-   + [AEM Assetsのホームページ体験](assets-home-page.md)
+   + [AEM Assetsホームページ体験](assets-home-page.md)
    + [AEM でのアセットの検索](search-assets.md)
    + [GQL 全文検索](gql-search.md)
    + [多言語のアセット](multilingual-assets.md)
@@ -41,7 +45,7 @@ source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
    + [Dynamic Media 画像プリセットの管理](managing-image-presets.md)
    + [Dynamic Media 画像プリセットの適用](image-presets.md)
    + [Dynamic Media のビデオプロファイル](video-profiles.md)
-   + [Dynamic Media の画像プロファイル](image-profiles.md)
+   + [Dynamic Media イメージプロファイル](image-profiles.md)
    + [スマートイメージング](imaging-faq.md)
    + [ビデオ](s7-video.md)
    + [ページへのScene7機能の追加](scene7.md)
@@ -65,11 +69,11 @@ source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
    + [ルールセットを使用した URL の変換](using-rulesets-to-transform-urls.md)
    + [Dynamic Media アセットの公開](publishing-dynamicmedia-assets.md)
    + [CDN にキャッシュされたコンテンツの無効化](invalidate-cdn-cached-content.md)
-   + [一括アセット移行用の機能パック18912をインストールしています](bulk-ingest-migrate.md)
+   + [一括アセット移行のための機能パック18912のインストール](bulk-ingest-migrate.md)
    + [セレクターの操作](working-with-selectors.md)
 + アセットの拡張 {#extending}
    + [アセットのカスタマイズと拡張](extending-assets.md)
-   + [メディアハンドラーとメディアハンドラーを使用したアセットのワークフロー](media-handlers.md)
+   + [メディアハンドラーとワークフローを使用したアセットの処理](media-handlers.md)
    + [Assets の検索機能の拡張](searchx.md)
    + [AEM Assets と連携するための ImageMagick のインストールと設定](best-practices-for-imagemagick.md)
    + [Assets とアクティビティストリームの統合](extending-activity-stream.md)
@@ -87,9 +91,9 @@ source-git-commit: a7d6e9fa5d72eba0899f0aadea393fe0e9126a34
    + [メタデータ、画像およびビデオを処理するためのプロファイル](processing-profiles.md)
    + [カスケードメタデータ](cascading-metadata.md)
    + [アセットエディタページの作成と設定](assets-finder-editor.md)
-   + [アセットサイズガイド](assets-sizing-guide.md)
+   + [アセットサイズ変更ガイド](assets-sizing-guide.md)
    + [メタデータのスキーマに関する参照情報](meta-ref.md)
-   + [アセットの効率的な変換のベストプラクティス](best-practices-for-translating-assets-efficiently.md)
+   + [アセットの効率的な翻訳のベストプラクティス](best-practices-for-translating-assets-efficiently.md)
    + [アセットパフォーマンス調整ガイド](performance-tuning-guidelines.md)
    + [メタデータの編集と追加](meta-edit.md)
    + [アセット移行ガイド](assets-migration-guide.md)
