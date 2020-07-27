@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fd393bb9-f77e-4fe0-a7a9-97181ca58136
 translation-type: tm+mt
-source-git-commit: 3309352520878fd5b2bff91ce4d18d5b1a90b97d
+source-git-commit: 6d0bd714548e62dcb63298e3d26c84c1a3d37bc9
 workflow-type: tm+mt
-source-wordcount: '2598'
+source-wordcount: '2597'
 ht-degree: 68%
 
 ---
@@ -85,7 +85,7 @@ Multi Site Management は、以下のパッケージで構成されています�
 
    * 初めてライブコピーを設定するときは、（LiveAction を呼び出す）RolloutConfig も使用します。
 
-### 新しい同期アクションの作成 {#creating-a-new-synchronization-action}
+## 新しい同期アクションの作成 {#creating-a-new-synchronization-action}
 
 カスタム同期アクションを作成して、ロールアウト設定と併用します。[インストール済みのアクション](/help/sites-administering/msm-sync.md#installed-synchronization-actions)が特定のアプリケーション要件を満たさない場合に同期アクションを作成します。同期アクションを作成するには、次の 2 つのクラスを作成します。
 
@@ -105,7 +105,7 @@ The `LiveActionFactory` creates instances of the `LiveAction` class for a given 
    * `createAction`: のインスタンスを作成し `LiveAction`ます。 オプションの `Resource` パラメーターを使用して、設定情報を提供できます。
    * `createsAction`: 関連付けられたの名前を返し `LiveAction`ます。
 
-#### LiveAction 設定ノードへのアクセス {#accessing-the-liveaction-configuration-node}
+### LiveAction 設定ノードへのアクセス {#accessing-the-liveaction-configuration-node}
 
 リポジトリ内の `LiveAction` 設定ノードを使用して、`LiveAction` インスタンスの実行時動作に影響を与える情報を保存します。`LiveAction` 設定を保存するリポジトリ内のノードは、実行時に `LiveActionFactory` オブジェクトに使用できます。そのため、設定ノードにプロパティを追加し、必要に応じて `LiveActionFactory` 実装内で使用することができます。
 
@@ -125,7 +125,7 @@ public LiveAction createAction(Resource resource) throws WCMException {
 }
 ```
 
-#### ターゲットノード、ソースノード、LiveRelationship へのアクセス {#accessing-target-nodes-source-nodes-and-the-liverelationship}
+### ターゲットノード、ソースノード、LiveRelationship へのアクセス {#accessing-target-nodes-source-nodes-and-the-liverelationship}
 
 `execute` オブジェクトの `LiveAction` メソッドのパラメーターとして、以下のオブジェクトを指定します。
 
@@ -150,7 +150,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 >
 >The `Resource` arguments may be `null` or `Resources` objects that do not adapt to `Node` objects, such as [`NonExistingResource`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/NonExistingResource.html) objects.
 
-### 新しいロールアウト設定の作成 {#creating-a-new-rollout-configuration}
+## 新しいロールアウト設定の作成 {#creating-a-new-rollout-configuration}
 
 インストールされるロールアウト設定がアプリケーションの要件を満たさない場合は、ロールアウト設定を作成します。
 
@@ -163,7 +163,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 >
 >[ロールアウトのカスタマイズのベストプラクティス](/help/sites-administering/msm-best-practices.md#customizing-rollouts)も参照してください。
 
-#### ロールアウト設定の作成 {#create-the-rollout-configuration}
+### ロールアウト設定の作成 {#create-the-rollout-configuration}
 
 新しいロールアウト設定を作成するには：
 
@@ -212,7 +212,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. 「**すべて保存**」をクリックします。
 
-#### ロールアウト設定への同期アクションの追加 {#add-synchronization-actions-to-the-rollout-configuration}
+### ロールアウト設定への同期アクションの追加 {#add-synchronization-actions-to-the-rollout-configuration}
 
 ロールアウト設定は、ノードの下に作成した [ロールアウト設定ノード](#create-the-rollout-configuration) の下に保存され `/apps/msm/<your-project>/rolloutconfigs` ます。
 
@@ -232,7 +232,7 @@ Add child nodes of type `cq:LiveSyncAction` to add synchronization actions to th
 
 1. 「**すべて保存**」をクリックします。
 
-### シンプルな LiveActionFactory クラスの作成と使用 {#creating-and-using-a-simple-liveactionfactory-class}
+## シンプルな LiveActionFactory クラスの作成と使用 {#creating-and-using-a-simple-liveactionfactory-class}
 
 この節の手順を実行して `LiveActionFactory` を作成し、ロールアウト設定で使用します。この手順では、Maven と Eclipse を使用して、`LiveActionFactory` を作成およびデプロイします。
 
@@ -251,7 +251,7 @@ GitHub のコード
 * [GitHub上のExperienceManager-java-msmrolloutプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout/archive/master.zip)としてダウンロードします
 
-#### Maven プロジェクトの作成 {#create-the-maven-project}
+### Maven プロジェクトの作成 {#create-the-maven-project}
 
 以下の手順では、adobe-public プロファイルを Maven 設定ファイルに追加している必要があります。
 
@@ -277,7 +277,7 @@ GitHub のコード
 
 1. Eclipse を起動して、[Maven プロジェクトを読み込みます](/help/sites-developing/howto-projects-eclipse.md#import-the-maven-project-into-eclipse)。
 
-#### POM ファイルへの依存関係の追加 {#add-dependencies-to-the-pom-file}
+### POM ファイルへの依存関係の追加 {#add-dependencies-to-the-pom-file}
 
 `LiveActionFactory` コード内で使用されるクラスを Eclipse コンパイラーが参照できるようにするために、依存関係を追加します。
 
@@ -367,7 +367,7 @@ GitHub のコード
     </dependency>
    ```
 
-#### LiveActionFactory の実装 {#implement-liveactionfactory}
+### LiveActionFactory の実装 {#implement-liveactionfactory}
 
 次の `LiveActionFactory` クラスは、ソースページとターゲットページに関するメッセージをログに記録し、ソースノードからターゲットノードに `LiveAction` プロパティをコピーする `cq:lastModifiedBy` を実装します。The name of the live action is `exampleLiveAction`.
 
@@ -533,7 +533,7 @@ GitHub のコード
    13.08.2013 14:34:55.454 *INFO* [OsgiInstallerImpl] org.apache.sling.audit.osgi.installer Started bundle com.adobe.example.msm.MyLiveActionFactory-bundle [316]
    ```
 
-#### ロールアウト設定例の作成 {#create-the-example-rollout-configuration}
+### ロールアウト設定例の作成 {#create-the-example-rollout-configuration}
 
 作成した `LiveActionFactory` を使用する MSM ロールアウト設定を作成します。
 
@@ -543,7 +543,7 @@ GitHub のコード
    * **名前**： examplerolloutconfig
    * **cq:trigger**: `publish`
 
-#### ロールアウト設定例へのライブアクションの追加 {#add-the-live-action-to-the-example-rollout-configuration}
+### ロールアウト設定例へのライブアクションの追加 {#add-the-live-action-to-the-example-rollout-configuration}
 
 Configure the rollout configuration that you created in the previous procedure so that it uses the `ExampleLiveActionFactory` class.
 
@@ -564,7 +564,7 @@ Configure the rollout configuration that you created in the previous procedure s
 
 1. 「**すべて保存**」をクリックします。
 
-#### ライブコピーの作成 {#create-the-live-copy}
+### ライブコピーの作成 {#create-the-live-copy}
 
 ロールアウト設定を使用して、We.Retail 参照サイトの English/Products ブランチの[ライブコピーを作成](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)します。
 
@@ -580,7 +580,7 @@ Configure the rollout configuration that you created in the previous procedure s
 ```
 
 <!--
-### Removing the Chapters Step in the Create Site Wizard {#removing-the-chapters-step-in-the-create-site-wizard}
+## Removing the Chapters Step in the Create Site Wizard {#removing-the-chapters-step-in-the-create-site-wizard}
 
 In some cases, the **Chapters** selection is not required in the create site wizard (only the **Languages** selection is required). To remove this step in the default We.Retail English blueprint:
 
@@ -599,7 +599,7 @@ In some cases, the **Chapters** selection is not required in the create site wiz
     1. **Name** = `xtype`; **Type** = `String`; **Value** = `hidden`
 -->
 
-### 言語名とデフォルトの国の変更 {#changing-language-names-and-default-countries}
+## 言語名とデフォルトの国の変更 {#changing-language-names-and-default-countries}
 
 AEM では、言語コードと国コードのデフォルトセットを使用します。
 
@@ -629,9 +629,7 @@ The language list is stored below the `/libs/wcm/core/resources/languages` node.
 
    Name the new folder `wcm`.
 
-1. Repeat the previous step to create the `/apps/wcm/core` folder tree. Create a node of type `sling:Folder` in core called `resources`.
-
-   ![chlimage_1-39](assets/chlimage_1-39.png)
+1. Repeat the previous step to create the `/apps/wcm/core` folder tree. Create a node of type `sling:Folder` in core called `resources`. <!-- ![chlimage_1-39](assets/chlimage_1-39.png) -->
 
 1. Right-click the `/libs/wcm/core/resources/languages` node and click **Copy**.
 1. Right-click the `/apps/wcm/core/resources` folder and click **Paste**. 必要に応じて子ノードを変更します。
@@ -641,7 +639,7 @@ The language list is stored below the `/libs/wcm/core/resources/languages` node.
 
    ![chlimage_1-40](assets/chlimage_1-40.png)
 
-### Configuring MSM Locks on Page Properties (Touch-Enabled UI) {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
+## Configuring MSM Locks on Page Properties (Touch-Enabled UI) {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
 カスタムページプロパティの作成時に、新しいプロパティをすべてのライブコピーへのロールアウトの対象にするかどうかを検討しなければならない場合があります。
 
