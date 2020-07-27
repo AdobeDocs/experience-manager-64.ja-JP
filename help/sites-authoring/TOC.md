@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: AEM 6.4オーサリングユーザーガイド
 user-guide-description: Learn key concepts for creating content and authoring in AEM.
 translation-type: tm+mt
-source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+source-git-commit: e0b25517821971098978db078b2f205a8a380459
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 88%
+source-wordcount: '267'
+ht-degree: 89%
 
 ---
 
@@ -87,7 +87,7 @@ ht-degree: 88%
    + [オーディエンスの管理](managing-audiences.md)
    + [オファーの作成と管理](offerlib.md)
    + [セグメント化について](segmentation-overview.md)
-+ AEMとAdobe Campaign{aem-adobe-キャンペーン}
++ AEMとAdobe Campaign {#aem-adobe-campaign}
    + [Adobe Campaign の使用](adobe-campaign.md)
    + [Adobe Campaign Classic および Adobe Campaign Standard の使用](campaign.md)
    + [Adobe Campaign のターゲット設定](target-adobe-campaign.md)
