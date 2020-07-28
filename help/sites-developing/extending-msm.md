@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fd393bb9-f77e-4fe0-a7a9-97181ca58136
 translation-type: tm+mt
-source-git-commit: 6d0bd714548e62dcb63298e3d26c84c1a3d37bc9
+source-git-commit: 0cb1a323ac56b5b8ecd07f84c4840f1b466d5796
 workflow-type: tm+mt
-source-wordcount: '2597'
+source-wordcount: '2588'
 ht-degree: 68%
 
 ---
@@ -24,8 +24,9 @@ ht-degree: 68%
 
 * MSM Java API の主な構成要素について学習します。
 * ロールアウト設定で使用できる、新しい同期アクションを作成します。
-* サイトを作成ウィザードで「章」ステップを削除します。
 * デフォルトの言語コードと国コードを変更します。
+
+<!-- * Remove the "Chapters" step in the Create Site wizard. -->
 
 >[!NOTE]
 >
