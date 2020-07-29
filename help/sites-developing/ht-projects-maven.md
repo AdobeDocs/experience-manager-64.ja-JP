@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aee5f5a7-8462-4d42-8d96-8a7eb317770e
 translation-type: tm+mt
-source-git-commit: 52cefb850f413570d375b1b19f983339d743b486
+source-git-commit: b46164c81890a41e3811a65534c264884e8562fc
 workflow-type: tm+mt
 source-wordcount: '2247'
 ht-degree: 68%
@@ -447,7 +447,7 @@ AEM でのコンポーネントの動作はまったく同じですが、Maven �
 
 >[!NOTE]
 >
->前述のとおりに製品の依存関係を読み込まない限り、前述のAEM設定に一致するバージョンと共に、それらの依存関係も親POMに追加する必要があります。 以下の各エントリのコメントは、依存関係ファインダーで検索するパッケージを示しています。
+>上記のように製品の依存関係を読み込まない限り、上記のようにAEMの設定に合ったバージョンと共に、親POMに追加する必要もあります。 以下の各エントリのコメントは、依存関係ファインダーで検索するパッケージを示しています。
 
 >[!NOTE]
 >
@@ -551,14 +551,14 @@ JSPからコンパイルされたクラスを削除するために、Maven Clean
 >
 >
 ```
-> <resource>  
->           <directory>src/main/content/jcr_root</directory>  
->           <includes>  
->                   <include>apps/**</include>  
->                   <include>libs/foundation/global.jsp</include>
->       </includes>  
->   </resource>  
->  ```
+><resource>
+>       <directory>src/main/content/jcr_root</directory>
+>       <includes>
+>               <include>apps/**</include>
+>               <include>libs/foundation/global.jsp</include>
+>       </includes>
+></resource>
+>```
 
 ### SCM システムを使用する方法 {#how-to-work-with-scm-systems}
 
