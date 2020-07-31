@@ -10,7 +10,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: cd3adbac-9868-4838-9d8a-37dde8973df4
 translation-type: tm+mt
-source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+source-git-commit: 92017a4c2c9ab9f139440e40f368958bcc3bb2ef
 workflow-type: tm+mt
 source-wordcount: '5552'
 ht-degree: 75%
@@ -40,7 +40,7 @@ ht-degree: 75%
 
 >[注意]
 >
->Dynamic Media- Scene7モードは、AEM Authorインスタンス専用です。 したがって、AEM Publishインスタンス `runmode=dynamicmedia_scene7`ではなく、AEM Authorインスタンスに対して設定する必要があります。
+>Dynamic Media-Scene7モードは、AEM Authorインスタンス専用です。 したがって、AEM Publishインスタンス `runmode=dynamicmedia_scene7`ではなく、AEM Authorインスタンスに対して設定する必要があります。
 
 To enable Dynamic Media, you must startup AEM using the `dynamicmedia_scene7` runmode from the command line by entering the folllowing in a terminal window (example port used is 4502):
 
@@ -66,7 +66,7 @@ To migrate your custom presets and configurations from `/etc` to `/conf`, run th
 
 ## (Optional) Installing feature pack 18912 for bulk asset migration {#installing-feature-pack}
 
-機能パック18912では、FTPを使用してアセットを一括インジェストするか、Dynamic Media — ハイブリッドモードまたはDynamic MediaClassicからDynamic Media- AEMのScene7モードにアセットを移行できます。 Adobe Professional Servicesから入手できます。
+機能パック18912では、FTPを使用してアセットを一括インジェストするか、Dynamic Media — ハイブリッドモードまたはDynamic Media — クラシックからAEMのDynamic Media-Scene7モードにアセットを移行できます。 Adobe Professional Servicesから入手できます。
 
 詳しくは、一括アセット移行について [機能パック18912のインストールを参照してください](bulk-ingest-migrate.md) 。
 
@@ -76,7 +76,7 @@ To migrate your custom presets and configurations from `/etc` to `/conf`, run th
 
 >[!NOTE]
 >
->デフォルトでは、Cloud Serviceの設定パスはです `/content/dam`。 その他の設定パスは、Dynamic Media- Scene7モードではサポートされません。
+>デフォルトでは、Cloud Serviceの設定パスはです `/content/dam`。 その他の構成パスは、Dynamic Media-Scene7モードではサポートされません。
 
 Dynamic MediaCloud Serviceを設定するには：
 
@@ -97,7 +97,7 @@ Dynamic MediaCloud Serviceを設定するには：
    * **[!UICONTROL アセットを公開]** - 「**[!UICONTROL 即時]**」オプションは、アセットがアップロードされると、システムによってアセットが取り込まれ、URL／埋め込みがすぐに提供されることを意味します。アセットを公開するためにユーザーが操作する必要はありません。「**[!UICONTROL アクティベーション時]**」オプションは、URL／埋め込みリンクが提供される前に、最初にアセットを明示的に公開する必要があることを意味します。
    * **[!UICONTROL プレビューサーバーを保護]** - セキュアなレンディションプレビューサーバーへの URL パスを指定できます。つまり、レンディションが生成されると、AEM は、リモートの Dynamic Media レンディションに安全にアクセスしてプレビューできます（バイナリは AEM インスタンスに送り返されません）。
 
-      独自の会社サーバーまたは特別なサーバーを使用する特別な設定がない限り、デフォルト設定を使用することをお勧めします。
+      独自の会社のサーバまたは特別なサーバを使用する特別な配置がない限り、Adobeはデフォルト設定を使用することを推奨します。
    >[!NOTE]
    >
    >DMS7 ではバージョン管理はサポートされていません。また、遅延アクティベーションは、Dynamic Media 設定を編集ページの「**[!UICONTROL アセットを公開]**」が「**[!UICONTROL アクティベーション時]**」に設定されている場合にのみ、アセットが最初にアクティベートされるまでの間に限って適用されます。
@@ -469,7 +469,7 @@ When the Spin Set is uploaded and published, you activate the name of the 2D Spi
 
 ### （オプション）Dynamic Media - Scene7 モードのパフォーマンスの調整 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-Dynamic Media- Scene7モードのスムーズな実行を維持するには、次の同期パフォーマンス/スケーラビリティの微調整に関するヒントを推奨します。
+Dynamic Media-Scene7・モードの円滑な動作を維持するために、Adobeでは、次の同期パフォーマンス/スケーラビリティの最適な調整のヒントを推奨します。
 
 * 様々なファイル形式の処理に対応する定義済みのジョブパラメーターを更新する。
 * 事前定義済みの Granite のワークフロー（ビデオアセット）キューワーカースレッドを更新する。
@@ -482,10 +482,14 @@ Dynamic Media- Scene7モードのスムーズな実行を維持するには、�
 
 PDF ファイル、Postscript ファイル、PSD ファイルには、以下の「調整済み」ジョブパラメーターを使用することをお勧めします。
 
+<!-- OLD PDF JOB PARAMETERS `pdfprocess=Rasterize&resolution=150&colorspace=Auto&pdfbrochure=false&keywords=false&links=false` -->
+
+<!-- OLD POSTSCRIPT JOB PARAMETERS `psprocess=Rasterize&psresolution=150&pscolorspace=Auto&psalpha=false&psextractsearchwords=false&aiprocess=Rasterize&airesolution=150&aicolorspace=Auto&aialpha=false` -->
+
 | ファイルタイプ | 推奨されるジョブパラメーター |
 | ---| ---|
-| PDF | `pdfprocess=Rasterize&resolution=150&colorspace=Auto&pdfbrochure=false&keywords=false&links=false` |
-| Postscript | `psprocess=Rasterize&psresolution=150&pscolorspace=Auto&psalpha=false&psextractsearchwords=false&aiprocess=Rasterize&airesolution=150&aicolorspace=Auto&aialpha=false` |
+| PDF | `pdfprocess=Thumbnail&resolution=150&colorspace=Auto&pdfbrochure=false&keywords=false&links=false` |
+| Postscript | `psprocess=Rasterize&psresolution=150&pscolorspace=Auto&psalpha=false&psextractsearchwords=false&aiprocess=Thumbnail&airesolution=150&aicolorspace=Auto&aialpha=false` |
 | PSD | `process=None&layerNaming=Layername&anchor=Center&createTemplate=false&extractText=false&extendLayers=false` |
 
 これらのパラメーターのいずれかを更新するには、[MIME タイプベースの Assets／Dynamic Media Classic アップロードジョブパラメーターサポートの有効化](#enabling-mime-type-based-assets-scene-upload-job-parameter-support)の手順に従います。
@@ -555,7 +559,7 @@ Scene7 アップロード接続の設定は、AEM Assets を Dynamic Media Class
 
 ### （オプション）レプリケーション用のアセットのフィルタリング{#optional-filtering-assets-for-replication}
 
-Dynamic Media以外のデプロイメントでは、AEM作成者環境からAEM発行ノードに、*すべての*アセット（画像とビデオの両方）を複製します。 AEMパブリッシュサーバーもアセットを配信するので、このワークフローは必要です。
+Dynamic Media以外のデプロイメントでは、AEM作成者環境からAEM発行ノードに、*すべての*アセット（画像とビデオの両方）を複製します。 AEMパブリッシュサーバーもアセットを配信するので、このワークフローが必要です。
 
 ただし、Dynamic Mediaのデプロイメントでは、アセットはクラウドサービスを介して配信されるので、AEM発行ノードに同じアセットを複製する必要はありません。 このような「ハイブリッドパブリッシング」ワークフローは、アセットの複製に伴うストレージの余分なコストと処理時間を回避します。 サイトページなどのその他のコンテンツは、引き続き AEM パブリッシュノードから配信されます。
 
