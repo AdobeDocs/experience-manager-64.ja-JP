@@ -8,7 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: f2bde2e8-da95-48ac-a652-85ead87f2cd3
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 3c67867637cb3fdcdce77a5d494b9b150f128a20
+workflow-type: tm+mt
+source-wordcount: '641'
+ht-degree: 84%
 
 ---
 
@@ -23,9 +26,9 @@ AEM Forms Workspace では、フォームおよびドキュメントでタスク
 
 ## Correspondence Management アセットの作成 {#create-correspondence-management-assets}
 
-AEM Forms WorkspaceでレンダリングされるサンプルのCorrespondence Managementテンプレートを作成することによる開始。 For more details, see [Create a letter template](/help/forms/using/create-letter.md).
+AEM FormsワークスペースにレンダリングされるサンプルのCorrespondence Managementテンプレートを作成して開始します。 For more details, see [Create a letter template](/help/forms/using/create-letter.md).
 
-URLでCorrespondence Managementテンプレートにアクセスし、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは、 `https://[server]:[port]/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
+Correspondence ManagementテンプレートにそのURLでアクセスし、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは、 `https://[server]:[port]/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
 
 ここで、`encodedLetterId` は URL エンコードされたレター ID です。Workbench で Workspace タスクにレンダリングプロセスを定義する場合は、同じレター ID を指定します。
 
@@ -42,12 +45,12 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
 
 1. Workbench を起動します。ローカルホストに管理者としてログインします。
 1. 「ファイル／新規／アプリケーション」をクリックします。アプリケーション名フィールドで、`CMDemoSample` を入力して「終了」をクリックします。
-1. を選択 `CMDemoSample/1.0` し、右クリックしま `NewProcess`す。 名前フィールドで、`CMRenderer` を入力して「終了」をクリックします。
+1. を選択 `CMDemoSample/1.0` して右クリックし `NewProcess`ます。 名前フィールドで、`CMRenderer` を入力して「終了」をクリックします。
 1. 開始ポイントアクティビティピッカーをドラッグして設定します。
 
    1. プレゼンテーションデータで、「CRX アセットの使用」を選択します。
 
-      ![useacrxasset](assets/useacrxasset.png)
+      ![usearcxasset](assets/useacrxasset.png)
 
    1. アセットを参照します。フォームアセットの選択ダイアログの「レター」タブに、サーバーのすべてのレターが表示されます。
 
@@ -98,7 +101,7 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
    }
    ```
 
-   [Get File](assets/dscsample.zip)Download DSC:サンプルDSCは、上述のDSCSample.zipファイルで入手できます。 DSCSample.zip ファイルをダウンロードして展開します。DSC サービスを使用する前に、設定する必要があります。For information, see [Configure the DSC Service](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
+   [Get File](assets/dscsample.zip)Download DSC: 上記に添付した `DSCSample.zip` ファイルには、サンプルのDSCがあります。 Download and unzip the `DSCSample.zip` file. DSC サービスを使用する前に、設定する必要があります。For information, see [Configure the DSC Service](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
 
    Define Activity ダイアログで、getLetterInstanceInfo などの適切なアクティビティを選択し、「**OK**」をクリックします。
 
