@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 481856df-5db1-4ef5-80d3-3722b5bf8b67
 translation-type: tm+mt
-source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
+source-git-commit: 3c67867637cb3fdcdce77a5d494b9b150f128a20
 workflow-type: tm+mt
-source-wordcount: '1912'
-ht-degree: 52%
+source-wordcount: '1896'
+ht-degree: 53%
 
 ---
 
@@ -106,7 +106,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
    | **名前** | **説明** |
    |---|---|
-   | 名前 | 実行するアクションの英数字による名前。 このタグの値は必須です。modelExtension タグ内で一意であり、アルファベットで始まる必要があります。 |
+   | name | 実行するアクションの英数字による名前。 このタグの値は必須です。modelExtension タグ内で一意であり、アルファベットで始まる必要があります。 |
    | label | アクションボタンに表示するラベル。 |
    | tooltip | ボタンのツールチップテキスト。ボタンにカーソルを置くと表示されます。 |
    | styleName | アクションボタンに適用するカスタムスタイルの名前。 |
@@ -163,7 +163,7 @@ ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザー
 
 #### Adobe Asset Composer 構築ブロックバンドルの再起動 {#restart-the-adobe-asset-composer-building-block-bundle}
 
-サーバー側の変更をすべて加えた後、Adobe Asset Composer 構築ブロックバンドルを再起動します。このシナリオでは、サーバー側のacmExtensionsConfig.xmlファイルとACMExtensionsMessages.propertiesファイルが編集されるので、Adobe Asset Composer構築ブロックバンドルを再起動する必要があります。
+サーバー側の変更をすべて加えた後、Adobe Asset Composer 構築ブロックバンドルを再起動します。このシナリオでは、サーバー側のacmExtensionsConfig.xmlファイルとACMExtensionsMessages.propertiesファイルが編集されるので、AdobeAsset Composer構築ブロックバンドルを再起動する必要があります。
 
 >[!NOTE]
 >
@@ -326,11 +326,10 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
 
 このシナリオでは、次のコンポーネントを有効にします。これらのコンポーネントは、添付されたcomponents.zipファイルの一部です。
 
-* DSC コンポーネント jar（DSCSample.jar）
-* レビュープロセス LCA（SendLetterForReview.lca）用の送信レター
+* DSC component jar (`DSCSample.jar`)
+* Send letter for review process LCA (`SendLetterForReview.lca`)
 
-components.zipファイルをダウンロードして解凍し、DSCSample.jarファイルとSendLetterForReview.lcaファイルを取得します。 これらのファイルは、次の手順に従って使用します。\
-components.zip
+Download and unzip the `components.zip` file to get `DSCSample.jar` and `SendLetterForReview.lca` files. これらのファイルは、次の手順に従って使用します。
 
 [ファイルを入手](assets/components.zip)
 
@@ -387,7 +386,7 @@ AEM サーバーにアクセスする必要のある LiveCycle サービスを A
 
 1. 管理者としてにログインし `https:/[host]/:[port]/system/console/configMgr`ます。
 
-1. Locate and click **[!UICONTROL Adobe LiveCycle Client SDK Configuration]**. Adobe LiveCycle Client SDK Configurationパネルが表示されます。
+1. Locate and click **[!UICONTROL Adobe LiveCycle Client SDK Configuration]**. AdobeLiveCycleのクライアントSDKの設定パネルが表示されます。
 1. In the Service Name list, click + icon and add a serviceName **[!UICONTROL SendLetterForReview/SendLetterForReviewProcess]**.
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
@@ -408,37 +407,37 @@ AEM サーバーにアクセスする必要のある LiveCycle サービスを A
 
 #### DSC サービスの設定 {#configure-the-dsc-service}
 
-Correspondence Management APIを使用するには、DSCSample.jar(このドキュメントに添付されているcomponents.zipに含まれています)をダウンロードし、LiveCycleサーバーにアップロードします。 DSCSample.jarファイルがLiveCycleサーバーにアップロードされると、AEMサーバーはDSCSample.jarファイルを使用してrenderLetter APIにアクセスします。
+To use the Correspondence Management API, download the `DSCSample.jar` (attached in this document as part of `components.zip`) and upload it to the LiveCycle server. After the `DSCSample.jar` file is uploaded to the LiveCycle server, the AEM server uses the `DSCSample.jar` file to access the renderLetter API.
 
 For more information, see [Connecting AEM Forms with Adobe LiveCycle](/help/forms/using/aem-livecycle-connector.md).
 
-1. DSCSample.jarのcmsa.propertiesでAEMサーバーのURLを更新します。次の場所にあります。
+1. Update the AEM server URL in cmsa.properties in `DSCSample.jar`, which is at the following location:
 
    DSCSample.jar\com\adobe\livecycle\cmsa.properties
 
 1. 設定ファイルに次のパラメーターを指定します。
 
-   * **crx.serverUrl**=https:/[]host[/:]port[/]context path[/AEM URL]
+   * **crx.serverUrl**=https:/[host]/:[port]/[context path]/[context AEM URL]
    * **crx.username**= AEM ユーザー名
-   * **crx.password**= AEMパスワード
+   * **crx.password**= AEM password
    * **crx.appRoot**=/content/apps/cm
 
    >[!NOTE]
    >
    >サーバー側で変更を加えるたびに LiveCycle サーバーは再起動します。独自の LiveCycle コンポーネントの作成について詳しくは、「[カスタムの DSC 開発を通じた LiveCycle ES ソフトウェアの拡張](https://www.adobe.com/devnet/livecycle/articles/dsc_development.html)」を参照してください。
 
-   DSCSample.jarファイルはrenderLetter APIを使用します。 For more Information about the renderLetter API, see [Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
+   この `DSCSample.jar` ファイルはAPIを使用し `renderLetter` ます。 For more Information about the renderLetter API, see [Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
 
 #### LiveCyle への DSC の読み込み {#import-dsc-to-livecyle}
 
-DSCSample.jarファイルはrenderLetter APIを使用して、Cが入力として与えたXMLデータからのPDFバイトとしてレターをレンダリングします。 renderLetter およびその他の API について詳しくは、「[レターのレンダリングサービス](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)」を参照してください。
+`DSCSample.jar``renderLetter` ファイルは API を使用して、C で入力された XML データの PDF バイト列として レターをレンダリングします。renderLetter およびその他の API について詳しくは、「[レターのレンダリングサービス](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)」を参照してください。
 
 1. Livecycle Workbenchを起動してログインします。
 1. **[!UICONTROL Window/Show表示/Componentsを選択します]**。 コンポーネント表示がWorkbench ES2に追加されます。
 
 1. Right-click **[!UICONTROL Components]** and select **[!UICONTROL Install Component]**.
 
-1. Select the **[!UICONTROL DSCSample.jar]** file through the file browser and click **[!UICONTROL Open]**.
+1. Select the `DSCSample.jar` file through the file browser and click **[!UICONTROL Open]**.
 1. Right-click **[!UICONTROL RenderWrapper]** and select **[!UICONTROL Start Component]**. コンポーネントが起動すると、コンポーネント名の横に緑色の矢印が表示されます。
 
 ## レビュー用のレターの送信 {#send-letter-for-review}
