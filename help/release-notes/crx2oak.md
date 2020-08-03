@@ -10,7 +10,10 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: cfdaceac-a5b3-4070-ad4c-f1457b1e2e4b
 translation-type: tm+mt
-source-git-commit: 715cff841252d79504d702817f91db92df919bfc
+source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+workflow-type: tm+mt
+source-wordcount: '268'
+ht-degree: 62%
 
 ---
 
@@ -21,24 +24,24 @@ source-git-commit: 715cff841252d79504d702817f91db92df919bfc
 
 ### 1.8.6 (June 2018) {#june}
 
-* OAK-7339 LoopbackBlobStoreを導入し、MissingBlobStoreでのUnsupportedOperationExceptionによるサイドデグレープのすべての中断を修正しました。
+* OAK-7339 LoopbackBlobStoreを導入し、MissingBlobStoreでUnsupportedOperationExceptionが発生してサイドデデレイがすべて中断される問題を修正しました。
 * Oak 1.8.4を使用
 
 ### 1.8.4 (April 2018) {#april}
 
 * Oakバージョン1.8.2を使用
-* GRANITE-18104 6.3から6.4へのリポジトリ移行エラーは、より意味のあるものにする必要があります。
+* GRANITE-18104 6.3から6.4へのレポ移行エラーは、より意味のあるものにする必要があります。
 * GRANITE-16571 SHA-1の使用を置き換えます。
 
    * —versionオプションを使用した場合、ツールのチェックサムがSHA-512になりました。
 
-* GRANITE-17601 CRX2Oakにoak-blob-cloudを埋め込み、oak-upgrade
+* GRANITE-17601 Embed oak-upgrade in CRX2Oak with oak-blob-cloud
 * GRANITE-18553 crx2oakは、バージョンが移行されない場合でも、バージョンのプロパティをノードに残します。
 
 ### Version 1.6.8 (March 2017) {#version-march}
 
-* Oakバージョン1.6.1に更新
-* CQ-61847 crx2oak-quickstart-extensionとcrx2oakのマージ（移行プロファイルの追加）
+* Oakバージョンを1.6.1に更新
+* CQ-61847 crx2oak-quickstart-extensionとcrx2oakのマージ(移行プロファイルの追加)
 * CQ-97488 AEM 実行モードのプロモートおよびドロップ（sling.options.file の書き直しによる）
 * GRANITE-12798/OAK-4260 Oak SegmentからOak Segment Tarへのサイドグレード機能
 
