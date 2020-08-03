@@ -10,7 +10,10 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 55a0b70e-5212-408b-8560-6e758bd8bb10
 translation-type: tm+mt
-source-git-commit: 242f60c70c7cc00871d2ff9f42d2ade4125eaa31
+source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+workflow-type: tm+mt
+source-wordcount: '327'
+ht-degree: 77%
 
 ---
 
@@ -58,16 +61,16 @@ source-git-commit: 242f60c70c7cc00871d2ff9f42d2ade4125eaa31
 
 AEM 6.4 における基盤の変更と完全に互換性があります。
 
-Note: all these features are also available for AEM 6.3. Please check the AEM Communities release notes for [6.3](https://helpx.adobe.com/experience-manager/6-3/release-notes.html).
+Note: all these features are also available for AEM 6.3. Please check the AEM Communities release notes for [6.3](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html).
 
 ## 既知の問題 {#known-issues}
 
 * **モデレート**：一括モデレート UI から 1 回の削除操作で親投稿を削除できない（CQ-4236797）
-* **コンソール** - 「ユーザー名またはパスワードを忘れた場合」リンクが、対応するパスワード取得フォームではなく「ログインページ」にリダイレクトされる(CQ-4237682)
+* **コンソール** - [ユーザ名を忘れた場合]または[パスワードを忘れた場合]のリンクが、対応するパスワード取得フォームではなく、ログインページにリダイレクトされる(CQ-4237682)
 
 ## 高度な機能 {#select-features}
 
-エキスパートスコアリング（*Adobe Sensei を利用*）を使用すると、ゲーミフィケーションを有効にすることができます。これは、コミュニティでの有益な行動を奨励し、それに報いる効果的な手段です。また、レコメンデーションやマーケティングの目的で、エキスパートを識別するためにも使用できます。
+エキスパートスコアリング（*Adobe Sensei を利用*）を使用すると、ゲーミフィケーションを有効にすることができます。これは、コミュニティでの有益な行動を奨励し、それに報いる効果的な手段です。また、レコメンデーションやマーケティングの目的で専門家を識別するためにも使用できます。
 
 ## デモ {#demonstrations}
 
