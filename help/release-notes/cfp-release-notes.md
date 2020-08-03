@@ -4,10 +4,10 @@ description: Adobe Experience Manager6.4の累積Fix Packに関するリリー�
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1b6254e98b65b64071ab4634706bd1ad3d2fd8df
+source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
 workflow-type: tm+mt
-source-wordcount: '2119'
-ht-degree: 23%
+source-wordcount: '2125'
+ht-degree: 24%
 
 ---
 
@@ -26,9 +26,9 @@ ht-degree: 23%
 
 ## AEM 6.4.8.1 に含まれる機能 {#what-s-included-in-aem}
 
-AEM Cumulative Fix Pack 6.4.8.1は重要なアップデートで、2020年3月のAEM 6.4 Service Pack 8(6.4.8.0)の一般リリース以降に行われた、社内およびお客様向けのいくつかの修正が含まれています。
+AEM Cumulative Fix Pack 6.4.8.1は重要なアップデートで、2020年3月のAEM 6.4 Service Pack 8(6.4.8.0)の一般リリース以降の社内およびお客様向けの修正が含まれています。
 
-AEM Cumulative Fix Pack 6.4.8.1は、AEM 6.4 Service Pack 8に依存しています。 したがって、AEM 6.4 Service Pack 8のインストール後にAEM Cumulative Fix Pack 6.4.8.1パッケージをインストールする必要があります。
+AEMの累積Fix Pack 6.4.8.1は、AEM 6.4 Service Pack 8に依存します。 そのため、AEM 6.4 Service Pack 8をインストールした後で、AEM Cumulative Fix Pack 6.4.8.1パッケージをインストールする必要があります。
 
 AEM 6.4.8.1の主な特徴は次のとおりです。
 
@@ -48,7 +48,7 @@ Adobe Experience Manager6.4.8.1では、次の問題が修正されました。
 * Coral.SelectオプションでemptyOption=trueが設定されるか、値= &quot;&quot;のデフォルト項目が含まれている場合、dropdownshowide.jsファイルで次のエラーが発生します。 Uncaught TypeError: component.getValueが関数ではありません(NPR-33163)。
 * コンポーネントがデータを含む別のコンポーネントをデータを含む場合、親コンテナコンポーネントプレースホルダは内部コンポーネントプレースホルダ(NPR-33119)に置き換えられる。
 * スキーマに基づくコンテンツフラグメントの基本で、そのコンテンツに必須のテキスト領域またはパスフィールドが含まれている場合、コンテンツフラグメントの保存は失敗します(NPR-33007)。
-* 既製のエクスペリエンスフラグメントコンポーネントを使用してカスタムコンポーネントを作成し、AEM Sitesページで使用する場合、AEMはカスタムコンポーネントの参照（使用）を表示しません(NPR-32852)。
+* 既製のエクスペリエンスフラグメントコンポーネントを使用してカスタムコンポーネントを作成し、AEM Sitesページで使用する場合、AEMはカスタムコンポーネント(NPR-32852)の参照（使用）を表示しません。
 * AEM Sitesページが、複数のライブコピーが設定された大きなコンテンツの一部である場合、ページバージョン履歴プレビューの読み込みに失敗します(NPR-32772)。
 * 起動をプロモートすると、「cq:LiveRelationship」ミックスインが起動に追加されたすべてのコンポーネントに追加されます。 「 —Inherit source page live data — 」オプションを選択して（または選択せずに）起動が作成された場合には関係なく、すべての起動に影響します。(NPR-32664)
 * ページ番号の開始では、エクスペリエンスフラグメントピッカーはすべての項目を読み込みません(NPR-32605)。
@@ -109,11 +109,11 @@ Adobe Experience Manager6.4.8.1では、次の問題が修正されました。
 >AEM Cumulative Fix Packには、AEM Formsに対する修正は含まれていません。 別の Forms アドオンパッケージを使用して配布されます。さらに、JEE上のAEM Formsに関する修正を含む累積インストーラーがリリースされました。 For more information, see [Install AEM Forms add-on package](#install-aem-forms-add-on-package) and [Install AEM Forms JEE installer](#install-aem-forms-jee-installer).
 
 * Correspondence Management: ユーザが [!DNL Word] ドキュメントからコンテンツを貼り付けると、テキストドキュメントフラグメントは書式を保持しません(NPR-33213)。
-* アダプティブフォーム： アダプティブフォームの辞書の文字列に対する新しい行で、 `&#xa;` 文字が辞書(NPR-33265)に追加されます。
-* アダプティブフォーム： 複数の添付ファイルが含まれるアダプティブフォームを保存できません(NPR-33214)。
-* アダプティブフォーム： `AddInstance` と、Instance Managerクラスの `RemoveInstance` メソッドは、遅延読み込みフラグメントの動的な数のインスタンスを [!DNL Internet Explorer 11] (NPR-33201)に追加しません。
-* アダプティブフォーム： ページに埋め込まれたアダプティブフォームで有効にされているAnalyticsは、送信イベントと放棄のデータを記録しません(NPR-31359)。 [!DNL Sites]
-* アダプティブフォーム： ユーザーがドキュメントのコンテンツをアダプティブフォームに貼り付けて送信すると、送信されたアダプティブフォームにはUnicode文字が含まれます。 [!DNL Word] また、PDFからPDF/Aへの変換は、Unicode文字(NPR-33348)のため失敗します。
+* アダプティブForms: アダプティブフォームの辞書の文字列に対する新しい行で、 `&#xa;` 文字が辞書(NPR-33265)に追加されます。
+* アダプティブForms: 複数の添付ファイルが含まれるアダプティブフォームを保存できません(NPR-33214)。
+* アダプティブForms: `AddInstance` と、Instance Managerクラスの `RemoveInstance` メソッドは、遅延読み込みフラグメントの動的な数のインスタンスを [!DNL Internet Explorer 11] (NPR-33201)に追加しません。
+* アダプティブForms: ページに埋め込まれたアダプティブフォームで有効にされているAnalyticsは、送信イベントと放棄のデータを記録しません(NPR-31359)。 [!DNL Sites]
+* アダプティブForms: ユーザーがドキュメントのコンテンツをアダプティブフォームに貼り付けて送信すると、送信されたアダプティブフォームにはUnicode文字が含まれます。 [!DNL Word] また、PDFからPDF/Aへの変換は、Unicode文字(NPR-33348)のため失敗します。
 * BackendIntegration: 非アクティブな状態が正しくないために更新トークンの期限が切れると、フォームデータモデルの要求は失敗します(NPR-33168)。
 * ドキュメントサービス： Convert PDFサービスで、サー [!DNL WebLogic][!DNL Linux] バー上のGibson jarが見つからないため、PDFドキュメントをPostScriptに変換できません(NPR-33515、CQ-4292239)。
 * ドキュメントサービス： ユーザーがテキストファイルをPDFに変換すると、日本語の文字は正しくレンダリングされません(NPR-33239)。
@@ -134,11 +134,11 @@ Adobe Experience Manager6.4.8.1では、次の問題が修正されました。
 
 >[!CAUTION]
 >
->AEM 6.4にFeature Packをインストールしているお客様向け。アドビが提供するオプションのFeature Packは、リリースバージョンとサービスパックに依存しています。 機能パックがインストールされている場合は、AEMカスタマーケアチームに連絡して、これらの機能パックとAEM 6.4の累積修正パックとの互換性を検証してください。
+>AEM 6.4にFeature Packをインストールしているお客様の場合。Adobeが提供するオプションのFeature Packは、リリースバージョンとサービスパックに依存しています。 機能パックがインストールされている場合は、AEMカスタマーケアチームに問い合わせて、AEM 6.4用の累積的な修正パックとこれらの機能パックの互換性を検証してください。
 
 * AEM 6.4.8.1 requires AEM 6.4.8.0. Please visit [upgrade documentation](../sites-deploying/upgrade.md) for detailed instructions.
 * MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用してオーサーインスタンスの 1 つに AEM 6.4.8.1 をインストールしてください。
-* 累積的な修正パックをインストールする前に、AEMインスタンスのスナップショットまたは新規バックアップが必要です。
+* 累積修正パックをインストールする前に、AEMインスタンスのスナップショットまたは新規バックアップが必要です。
 * インストールする前にインスタンスを再起動してください。これは、インスタンスがまだ更新モードになっている場合（インスタンスが以前のバージョンから更新されたばかりの場合）にのみ必要ですが、インスタンスが長期間実行されている場合は、一般的に推奨されます。
 
 >[!NOTE]
@@ -175,18 +175,18 @@ B. Use the [HTTP API from Package Manager](https://docs.adobe.com/content/docs/e
 
 ### インストールの検証 {#validate-install}
 
-1. 製品情報ページ(*/system/console/ productinfo *)の「インストール済みの製品」に、更新されたバージョン文字列「Adobe Experience Manager、バージョン6.4.8.1」が表示されるようになりました。
+1. 製品情報ページ（*/system/console/productinfo*）のインストール済み製品には、更新されたバージョン文字列「Adobe Experience Manager, Version 6.4.8.1」が表示されます。
 1. すべての OSGI バンドルは、OSGI コンソール（Web コンソールを使用：/system/console/bundles）で ACTIVE または FRAGMENT です。
 1. OSGIバンドルorg.apache.jackrabbit.oak-coreがバージョン1.8.17以降に搭載されています(Webコンソールを使用： /system/console/bundles)。
 
 To determine the certified platform for running with this release of AEM Sites and Assets, see [Technical Requirements](../sites-deploying/technical-requirements.md).
 
 >[!Note]
->On successful installation of the package, an >informational message appears indicating that the content >package has installed successfully,  such as **&quot;Content Package AEM-6.4-Service-Pack-7 installed successfully.&quot;**
+>On successful installation of the package, an informational message appears indicating that the content package has installed successfully, such as **&quot;Content Package AEM-6.4-Service-Pack-7 installed successfully.&quot;**
 
 ### Dynamic Mediaビューアの更新(5.10.1) {#update-dynamic-media-viewers}
 
-<p id="Dynamic">AEM 6.4.8.1には、Dynamic Mediaビューアの新しいバージョン(5.10.1)が含まれています。このバージョンを使用すると、画像プリセットページで重複名を確認できます。 Dynamic Mediaでは、次のコマンドを実行して、初期設定のビューアプリセットを最新の状態にすることをお勧めします。
+AEM 6.4.8.1には、Dynamic Mediaプリセットページで重複名を確認できる新しいバージョンの画像ビューア(5.10.1)が含まれています。 Dynamic Mediaでは、次のコマンドを実行して、初期設定のビューアプリセットを最新の状態にすることをお勧めします。
 
 `curl -u admin:admin http://localhost:4502/libs/settings/dam/dm/presets/viewer.pushviewerpresets`
 
@@ -200,7 +200,7 @@ To determine the certified platform for running with this release of AEM Sites a
 
 1. AEM Cumulative Fix Packがインストールされていることを確認します。
 1. Download the corresponding forms add-on package listed at [AEM Forms releases](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) for your operating system.
-1. Install the forms add-on package as described in [Installing AEM forms add-on packages](https://helpx.adobe.com/experience-manager/6-4/forms/using/installing-configuring-aem-forms-osgi.html#InstallAEMFormsaddonpackage).
+1. Install the forms add-on package as described in [Installing AEM forms add-on packages](https://docs.adobe.com/content/help/en/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
 
 ### AEM Forms JEE インストーラーのインストール {#install-aem-forms-jee-installer}
 
@@ -233,19 +233,19 @@ To use Uber Jar in a Maven project, refer to the article, [How to use Uber jar](
 | 領域 | 機能 | 代替手段 | バージョン |
 |---|---|---|---|
 | Assets | サブアセットのタグアクションの管理 | 代替機能はありません | AEM 6.4.2.0 |
-| Assets と Adobe Creative Cloud の統合 | [AEMからCreative Cloudへのフォルダー共有](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/creative-cloud.html) （AEMからCreative Cloudへ）は、クリエイティブユーザーにAEMのアセットへのアクセスを提供する方法としてAEM 6.2で導入されました。 Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが大幅に向上し、Photoshop、InDesign、Illustrator 内から AEM のアセットへの直接アクセスが強化されています。アドビは、このフォルダー共有機能をさらに強化する予定はありません。この機能はAEMに含まれていますが、お客様には置き換えの使用を強くお勧めします。 | Adobe Asset Linkまたはデスクトップアプリケーション。 詳細については、[AEM Creative Cloud の統合](/help/assets/aem-cc-integration-best-practices.md)記事を参照してください。 | AEM 6.4.4.0 |
+| Assets と Adobe Creative Cloud の統合 | [AEM 6.2では、クリエイティブユーザーにAEMのアセットへのアクセスを許可する方法として、AEMからCreative Cloudへのフォルダ共有が導入されました。](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html) Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが大幅に向上し、Photoshop、InDesign、Illustrator 内から AEM のアセットへの直接アクセスが強化されています。アドビは、このフォルダー共有機能をさらに強化する予定はありません。この機能はAEMに含まれていますが、お客様には交換の使用を強くお勧めします。 | Adobeアセットリンクまたはデスクトップアプリ 詳細については、[AEM Creative Cloud の統合](/help/assets/aem-cc-integration-best-practices.md)記事を参照してください。 | AEM 6.4.4.0 |
 
 ## 既知の問題 {#known-issues}
 
-* AEM 6.4.8.1のインストール時に、バージョン83のアップデートが原因でパッケージの構築に問題が発生して [!DNL Chrome] います。 この問題を解決するには、 [!DNL Internet Explorer] およびなどの他の利用可能なブラウザー、 [!DNL Firefox]またはAEM標準のパッケージインストールオプションを使用します。 この問題はAEM 6.4.8.1のインストール後に解決されます。
+* AEM 6.4.8.1のインストール時に、バージョン83のアップデートが原因でパッケージの構築に問題が発生して [!DNL Chrome] います。 問題を解決するには、 [!DNL Internet Explorer] およびなどの他の利用可能なブラウザー、 [!DNL Firefox]またはAEM標準のパッケージインストールオプションを使用します。 この問題はAEM 6.4.8.1のインストール後に解決されます。
 
-* AEM既定のメール送信者を使用してリモートSMTPサーバーに電子メールを送信できません。TLS v1.2を使用した通信のみが可能です。バンドルを削除し、更新し `javax.mail:mail:1.5.0-b01` て問題を解決し `system/console` てください。
+* AEMの既定のメール送信者を使用してリモートSMTPサーバーに電子メールを送信できません。TLS v1.2を使用した通信のみが可能です。バンドルを削除し、更新して問題 `javax.mail:mail:1.5.0-b01` を解決し `system/console` てください。
 
-AEM 6.4.8.0 Service Packの既知の問題について詳しくは、「 [AEM 6.4.8.0 Service Packリリースノート](sp-release-notes.md)」を参照してください。
+AEM 6.4.8.0 Service Packの既知の問題については、『 [AEM 6.4.8.0 Service Packリリースノート](sp-release-notes.md)』を参照してください。
 
 ## OSGi バンドルとコンテンツパッケージが含まれています {#osgi-bundles-and-content-packages-included}
 
-AEM 6.4.8.1に含まれるOSGiバンドルとコンテンツパッケージに関する次のテキストドキュメントリストを参照してください。
+次のテキストドキュメントリストは、AEM 6.4.8.1に含まれるOSGiバンドルとコンテンツパッケージを示します。
 
 AEM 6.4.8.1 に含まれている OSGi バンドルの一覧
 
@@ -260,7 +260,7 @@ AEM 6.4.8.1 に含まれているコンテンツパッケージの一覧
 * [AEM 6.4 リリースノート](../release-notes/release-notes.md)
 * [AEM 製品ページ](https://www.adobe.com/solutions/web-experience-management.html)
 * [AEM 6.4 ドキュメント](https://helpx.adobe.com/jp/support/experience-manager/6-4.html)
-* Subscribe to [Adobe priority product updates](https://www.adobe.com/subscription/priority-product-update.html)
+* [Adobe優先度の製品アップデートの購読](https://www.adobe.com/subscription/priority-product-update.html)
 
 ## 制限付きサイト {#restricted-sites-new}
 
