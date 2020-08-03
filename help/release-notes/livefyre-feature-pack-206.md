@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4
 contentOwner: alba
 discoiquuid: d445bcfb-7712-472f-bfb4-a8811c2bc4f1
 translation-type: tm+mt
-source-git-commit: f1bf1545689b977a0f5074954df224db58cbd695
+source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 6%
+source-wordcount: '657'
+ht-degree: 4%
 
 ---
 
@@ -20,38 +20,14 @@ ht-degree: 6%
 
 ## リリース情報 {#release-information}
 
-<table> 
- <tbody>
-  <tr>
-   <td>製品</td> 
-   <td>Livefyre機能パック2.0.6</td> 
-  </tr>
-  <tr>
-   <td>バージョン</td> 
-   <td>2.0.6</td> 
-  </tr>
-  <tr>
-   <td>型</td> 
-   <td>機能リリース</td> 
-  </tr>
-  <tr>
-   <td>日付</td> 
-   <td>2018 年 9 月 1 日</td> 
-  </tr>
-  <tr>
-   <td>ダウンロード URL<br /> </td> 
-   <td>管理者に問い合わせてください</td> 
-  </tr>
-  <tr>
-   <td>互換性 (*)</td> 
-   <td>AEM 6.4 SP1、6.4、6.3 GA、6.2 SP1</td> 
-  </tr>
-  <tr>
-   <td>説明</td> 
-   <td>このパッケージを使用すると、Livefyreの業界トップクラスのキュレーション機能をAEMインスタンスに統合でき、ソーシャルネットワークから貴重なユーザー生成コンテンツ(UGC)を数分でサイトに公開できます。</td> 
-  </tr>
- </tbody>
-</table>
+| 製品 | Livefyre機能パック2.0.6 |
+|--- |--- |
+| バージョン | 2.0.6 |
+| 型 | 機能リリース |
+| 日付 | 2018 年 9 月 1 日 |
+| ダウンロード URL | 管理者に問い合わせてください |
+| 互換性 (*) | AEM 6.4 SP1、6.4、6.3 GA、6.2 SP1 |
+| 説明 | このパッケージを使用すると、Livefyreの業界トップクラスのキュレーション機能をAEMインスタンスと統合でき、ソーシャルネットワークから貴重なユーザー生成コンテンツ(UGC)を数分でサイトに公開できます。 |
 
 ## What is included in Livefyre Feature Pack 2.0.6 {#what-is-included-in-livefyre-feature-pack}
 
@@ -72,9 +48,9 @@ ht-degree: 6%
 **AEM Commerce を使用した製品カタログの Livefyre への読み込み**
 
 * 既存の製品カタログをLivefyreにシームレスに統合して、サイト内でのユーザーの関与やコンバージョンを促進し、買い物かごの多いUGCエクスペリエンスを提供します。
-* AEM Commerce製品カタログ内の項目を編集または削除し、Livefyre内の変更を自動的に更新します。
+* AEM Commerce Product Catalog内の項目を編集または削除して、Livefyre内の変更を自動的に更新します。
 
-インストールに関するヘルプについては、Livefyreとの [統合を参照してください](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html)。
+インストールに関するヘルプについては、Livefyreとの [統合を参照してください](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html)。
 
 ### その他のリリース情報 {#additional-release-information}
 
@@ -87,15 +63,15 @@ Instagramの非ビジネスユーザーアカウントからのコンテンツ�
 #### 新機能または改善点 {#new-feature-or-improvement}
 
 * Livefyreで権限リクエストのソーシャルアカウントを設定する前に、UGCを検索する機能を追加しました。 権限を要求するソーシャルアカウントを設定するか、コンテンツを所有している場合は権限要求を上書きする必要があります。
-* InstagramとTwitterの [UGC権限要求ワークフロー](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html) が、最新のAPIに準拠するように更新されました。
+* InstagramとTwitterの [UGC権限要求ワークフロー](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html) が、最新のAPIに準拠するように更新されました。
 * 権限のステータスと適切なアクションが、権限の要求画面に表示されるようになりました。
 
 #### バグの修正 {#bug-fixes}
 
-* Livefyre Studioで権限リクエストに使用するソーシャルアカウントを削除すると、AEMでUGCライブラリを読み込む際にエラーが発生する問題を修正しました。
+* 権利要求に使用するLivefyre Studioでソーシャルアカウントを削除すると、AEMでUGCライブラリを読み込む際にエラーが発生する問題を修正しました。
 * Livefyre studioのアセット数がAEM UGCライブラリのアセット数と一致しない問題を修正しました。
 * UGCライブラリで、フィルターオプションをリセットするとフィルターされた結果が表示される問題を修正しました。
-* AEM Commerceで、「行動喚起」ボタンを使用すると、ユーザーが正しくないURLにリダイレクトされる問題が修正されました。
+* AEMコマースで、アクションの呼び出しボタンが誤ったURLにリダイレクトされる問題を修正しました。
 * 複数のコンポーネントをparsysプレースホルダーにドラッグ&amp;ドロップするとプレースホルダーが消えるAEM Sitesの問題が修正されました。
 * 無効になったソーシャルアカウントを、権限リクエストの送信時に選択できる問題を修正しました。
 * アセットからサイトにUGCをドラッグ&amp;ドロップするとエラーが発生する問題を修正しました。
@@ -108,4 +84,3 @@ Instagramの非ビジネスユーザーアカウントからのコンテンツ�
 * タッチ操作対応UI機能とインライン編集の問題を修正しました。
 * 特定のInstagram画像アセットを読み込む際にエラーが発生する問題を修正しました。
 * AEMのLivefyre HTTPクライアントがプロキシ設定をサポートしていなかった問題を修正しました。
-
