@@ -10,7 +10,7 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 266634ab-21d3-4aac-acfa-b799a7485507
 translation-type: tm+mt
-source-git-commit: 55b9105fab3947322649c7ed2b750497e486ec63
+source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
 workflow-type: tm+mt
 source-wordcount: '1040'
 ht-degree: 44%
@@ -27,11 +27,13 @@ ht-degree: 44%
 ハイブリッドデバイスはサポートされません。こうしたデバイスを使用するときは多様な問題が発生する恐れがあります。次の推奨手順は、多くの問題の解決に役立ちます。
 
 Google Chromeをブラウザーとして使用している場合：
+
 * Type `chrome://flags/` in the address bar and press Enter.
 * タッチイベントを有効にする/無効をクリックします。
 * ブラウザーを再起動します（すべてのタブとウィンドウ）。
 
 Mozilla Firefoxをブラウザーとして使用している場合：
+
 * Type `about:config` in the address bar and press Enter.
 * Filter the settings to `dom.w3c`.
 * 設定が「および」であることを確認 `0` し `false`ます。
@@ -139,5 +141,5 @@ Microsoft Edgeをブラウザーとして使用する場合：
 ### アダプティブフォームの作成
 
 * アダプティブフォームのグラフコンポーネントが通常より多くの領域を占有する。
-* アダプティブフォーム、アダプティブフォームフラグメント、またはForms Manager UIでインタラクティブ通信のプロパティを保存する場合、例外が返されます。
+* アダプティブフォーム、アダプティブフォームフラグメント、またはインタラクティブ通信のプロパティをFormsマネージャーUIに保存すると、例外が返されます。
 * Samsung の Android 6.0 デバイスでは、アダプティブフォームのテキストボックスに指定された最大文字数が適用されない（参照 # CQ-4235205）。
