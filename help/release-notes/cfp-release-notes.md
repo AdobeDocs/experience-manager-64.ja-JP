@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.4の累積Fix Packに関するリリー�
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+source-git-commit: 87843465e8e0b372dc457630b84bcb5e50628dea
 workflow-type: tm+mt
-source-wordcount: '2125'
+source-wordcount: '2159'
 ht-degree: 24%
 
 ---
@@ -55,6 +55,8 @@ Adobe Experience Manager6.4.8.1では、次の問題が修正されました。
 * AEM Sitesページの開始を作成できません。 起動の作成の結果、エラーが発生します(NPR-32544)。
 * 「パブリケーションを管理」では、アクティベーションワークフローの要求に参照先のアセットが含まれません(NPR-32463)。
 * Dispatcherの正常性チェックで、ログファイルに `Invalid cookie header` 警告メッセージが表示されます(NPR-33630)。
+* Salesforce統合はSSRF(NPR-32671)に対して脆弱です。
+* PreferencesServlet(NPR-33439)でXSSが反映されている。
 
 ### Assets {#assets-6481}
 
@@ -74,6 +76,8 @@ Adobe Experience Manager6.4.8.1では、次の問題が修正されました。
 
 * バルクアップロード中にアセットの処理が停止する(CQ-4293916)。
 
+* Experience ManagerのSSRF脆弱性(NPR-33437)。
+
 ### プラットフォーム {#platform-6481}
 
 * マップエントリが [!DNL Sling]`sling:match``/etc/maps` (NPR-33308)の下に作成された場合、フィルターは呼び出されません。
@@ -89,12 +93,17 @@ Adobe Experience Manager6.4.8.1では、次の問題が修正されました。
 
 * 翻訳ジョブの実行時にログに `NullPointerException` エラーが表示されます(NPR-32220)。
 
+### 統合 {#integrations-6481}
+
+* JSONのクロスサイトスクリプティング(NPR-32745)。
+
 ### Communities {#communities-6481}
 
 * 作成者は、新しいグループを作成した後、11の [!UICONTROL コミュニティグループ][!DNL Internet Explorer] (NPR-33202)セクションにリダイレクトされません。
 * [!UICONTROL アクティビティストリーム] ページ(NPR-33152)へのアクセス時にエラーが発生します。
 * グループを編集してサムネール画像を変更しても、グループサムネール画像は更新されません(NPR-32603)。 [!DNL Communities]
 * ユーザー生成コンテンツ(UGC)の通知と購読のバージョンを作成すると、ソースページの誤ったIDが保存されます(CQ-4289703)。
+* クロスサイトスクリプティングの問題(NPR-33212)。
 
 ### ワークフロー {#workflow-6481}
 
@@ -117,6 +126,8 @@ Adobe Experience Manager6.4.8.1では、次の問題が修正されました。
 * BackendIntegration: 非アクティブな状態が正しくないために更新トークンの期限が切れると、フォームデータモデルの要求は失敗します(NPR-33168)。
 * ドキュメントサービス： Convert PDFサービスで、サー [!DNL WebLogic][!DNL Linux] バー上のGibson jarが見つからないため、PDFドキュメントをPostScriptに変換できません(NPR-33515、CQ-4292239)。
 * ドキュメントサービス： ユーザーがテキストファイルをPDFに変換すると、日本語の文字は正しくレンダリングされません(NPR-33239)。
+* GuideSOMProviderServlet(NPR-32701)に格納されたXSS。
+
 
 ## Install 6.4.8.1 {#install}
 
