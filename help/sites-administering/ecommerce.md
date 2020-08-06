@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 68799110-8183-40fe-be4f-2a7c7a7b3018
 translation-type: tm+mt
 source-git-commit: eb1ae2b4910e7adef48865996db4837175f588d9
+workflow-type: tm+mt
+source-wordcount: '776'
+ht-degree: 80%
 
 ---
 
 
 # e コマース{#ecommerce}
 
-* [概念](/help/sites-administering/concepts.md)
+* [概念 ](/help/sites-administering/concepts.md)
 * [管理（汎用）](/help/sites-administering/generic.md)
 * [SAP Commerce Cloud](/help/sites-administering/sap-commerce-cloud.md)
 * [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
@@ -28,13 +31,13 @@ source-git-commit: eb1ae2b4910e7adef48865996db4837175f588d9
 |  | CIF オンプレミス | CIF クラウド |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | サポートされている AEM バージョン | AEM オンプレミスまたは AMS 6.x | AEM AMS 6.4 および 6.5 |
-| バックエンド | - AEM、Java <br> — モノリシック統合、ビルド前のマッピング（テンプレート）<br> - JCRリポジトリ | - Magento <br>- javaとJavaScript <br>- JCRリポジトリにコマースデータが保存されていません |
+| バックエンド | - AEM、Java <br> - Monolisic統合、ビルド前のマッピング（テンプレート）<br> - JCRリポジトリ | -Magento <br>- JavaおよびJavaScript <br>- JCRリポジトリにコマースデータが保存されていない |
 | フロントエンド | AEM サーバー側によってページをレンダリング | 混在型ページアプリケーション（ハイブリッドレンダリング） |
-| 製品カタログ |  — 製品インポーター、エディター、AEMでのキャッシュ — AEMま <br>たはプロキシページを含む通常のカタログ |  — 製品のインポートな <br>し — 汎用テンプレ <br>ート — コネクタ経由のオンデマンドデータ |
-| スケーラビリティ |  — 最大で数百万個の製品をサポート可能（使用事例に依存） <br> — ディスパッチャーでのキャッシュ |  — ボリューム制限な <br>し — ディスパッチャーまたはCDNでのキャッシュ |
-| 標準化されたデータモデル | いいえ | あり。Magento GraphQL スキーマ |
-| 利用可能場所 | <br> はい：- SAP Commerce Cloud(AEM 6.4およびHybris 5をサポートするように更新（デフォルト）。Hybris 4 <br>- Salesforce Commerce Cloud（AEM 6.4をサポートするためにオープンソースのコネクタ）との互換性を維持します。 | あり。GitHub 経由のオープンソース。<br>Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり） |
-| 用途 | 使用例の制限：小さな静的カタログの読み込みが必要な場合 | ほとんどの使用例で好ましいソリューション |
+| 製品カタログ |  — 製品インポーター、エディター、AEMでのキャッシュ <br>-AEMまたはプロキシページを含む通常のカタログ |  — 製品のインポートなし — 汎用テンプレ <br>ート <br>— コネクタを介したオンデマンドデータ |
+| スケーラビリティ |  — 数百万個までの製品をサポート可能（使用事例によって異なります） <br> — ディスパッチャーでのキャッシュ |  — ボリュームに制限 <br>なし — ディスパッチャーまたはCDNでのキャッシュ |
+| 標準化されたデータモデル | 不可 | あり。Magento GraphQL スキーマ |
+| 入手方法 | はい：<br> - SAPCommerce Cloud(AEM 6.4とHybris 5 （デフォルト）をサポートするように更新)、Hybris 4 <br>- SalesforceCommerce Cloud(サポートAEM 6.4をオープンソースにするコネクタ)との互換性を維持 | あり。GitHub 経由のオープンソース。<br>Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり） |
+| 用途 | 限定的な使用例： 小さい静的なカタログの読み込みが必要な場合 | ほとんどの使用例で好ましいソリューション |
 
 e コマースフレームワークは、商品情報管理（PIM）と連動して、オンラインストアでの商品の販売に焦点を合わせた Web サイトの以下のアクティビティを扱います。
 
@@ -76,6 +79,7 @@ AEM e コマースフレームワークは、以下の機能を提供します�
    * 最近表示した商品
    * 割引券
    * その他
+
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
    >[!NOTE]
@@ -88,6 +92,7 @@ AEM e コマースフレームワークは、以下の機能を提供します�
    * e コマースシステムの検索
    * サードパーティの検索（Search&amp;Promote など）
    * またはこれらの組み合わせ
+
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
 * Uses the AEM ability to **present your content on multiple channels**, be that full browser window or mobile device. これにより、訪問者が必要とする形式でコンテンツが提供されます。
@@ -102,6 +107,7 @@ AEM e コマースフレームワークは、以下の機能を提供します�
 
    * 1 つの例としては、合計注文金額が特定の金額を超えた場合に送料を下げることができます。
    * もう 1 つの例としては、プロファイルデータ（場所など）を使用したシーズンオファーを提供できます。必要な場合は、やはり他の要因に応じて、これらのオファーを強調表示できます。
+
    以下の例では、買い物かごの中身が 75 ドル未満なので、1 つのティーザーが表示されています。
 
    ![chlimage_1-153](assets/chlimage_1-153.png)
