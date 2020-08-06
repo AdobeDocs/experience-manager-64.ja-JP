@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 49c9c9ab-632a-40f7-8c30-d6a8c0f1b420
 translation-type: tm+mt
 source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
+workflow-type: tm+mt
+source-wordcount: '1106'
+ht-degree: 80%
 
 ---
 
@@ -114,7 +117,7 @@ You can combine these traits using the boolean operators OR and AND (see [Creati
 
 >[!NOTE]
 >
->Properties with the **_i18n** suffix are set by a script which is a part of personalization&#39;s UI clientlib. UI は公開時には必要ないので、UI 関連の clientlib はすべて作成時に読み込まれます。
+>**_i18n** サフィックスを持つプロパティは、パーソナライズのUI clientlibの一部であるスクリプトによって設定されます。 UI は公開時には必要ないので、UI 関連の clientlib はすべて作成時に読み込まれます。
 >
 >Therefore when creating a segment with such properties is it normally necessary to rely on **browserFamily** for instance instead of **browserFamily_i18n**.
 
