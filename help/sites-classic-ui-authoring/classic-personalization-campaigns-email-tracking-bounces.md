@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: fde9027b-9057-48c3-ae34-3f3258c5b371
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '761'
+ht-degree: 89%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 >[!NOTE]
 >
->アドビでは、AEM SMTPサービスによって送信される、開かれた電子メールやバウンスされた電子メールの追跡機能をさらに強化する予定はありません。
+>Adobeは、AEM SMTPサービスから送信される開封済み/バウンス済み電子メールの追跡をさらに強化する予定はありません。
 >
->推奨事項は、Adobe CampaignとAEM [の統合を活用することです](/help/sites-administering/campaign.md)。
+>Adobe CampaignとAEM統合の [活用を推奨](/help/sites-administering/campaign.md)。
 
 多数のユーザーにニュースレターを送信する場合、一般的に、リスト内に無効な電子メールアドレスが一部含まれています。それらのアドレスにニュースレターを送信すると、配信不能として戻ってきます。AEM にはそうしたバウンスを管理する機能があり、バウンスカウンターの設定値を超えると、それらのアドレスへのニュースレターの送信を停止できます。デフォルトでは、バウンス率は 3 ですが、設定可能です。
 
@@ -51,7 +54,7 @@ AEM でバウンス電子メールを追跡するには、バウンス電子メ�
 
    **POP3 設定のプロパティ：**
 
-   `pop3.leave.on.server`:メッセージをサーバーに残すかどうかを定義します。 サーバーにメッセージを残す場合は true を、そうでない場合は false を設定します。デフォルトは true です。
+   `pop3.leave.on.server`: メッセージをサーバーに残すかどうかを定義します。 サーバーにメッセージを残す場合は true を、そうでない場合は false を設定します。デフォルトは true です。
 
    **POP3 の例：**
 
