@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a727c57c-87a9-46c2-8d9b-1348f1ed8ac4
 translation-type: tm+mt
 source-git-commit: 1bbcf870170a5bfae68861614fe1a0a83d86ff61
+workflow-type: tm+mt
+source-wordcount: '2307'
+ht-degree: 94%
 
 ---
 
@@ -74,7 +77,7 @@ Depending on the configuration of your instance, use of `/content` might be opti
  /...
 ```
 
-この構造は&#x200B;**サイト**&#x200B;コンソールから表示でき、[Web サイトのページ間を移動したり](/help/sites-authoring/basic-handling.md#product-navigation)、ページ上でアクションを実行したりできます。新しいサイトや[新しいページ](#creating-a-new-page)を作成することもできます。
+この構造は **Sites** コンソールから表示でき、[Web サイトのページ間を移動したり](/help/sites-authoring/basic-handling.md#product-navigation)、ページ上でアクションを実行したりできます。新しいサイトや[新しいページ](#creating-a-new-page)を作成することもできます。
 
 どの地点からでも、ヘッダーバーのパンくず（経路表示）から上位のブランチを確認できます。
 
@@ -131,7 +134,7 @@ When creating a new page, AEM will [validate the page name according to the conv
 | タイトル | 派生された名前 |
 |---|---|
 | Schön | schoen.html |
-| SC%&amp;ast;cs+ | sc---c-.html |
+| SC%&amp;ast;cis+ | sc---c-.html |
 
 #### 名前 {#name}
 
@@ -195,12 +198,14 @@ Components are the elements provided by AEM so that you can add specific types o
 
    * 新しいページの作成時に使用するテンプレートを選択し、「**次へ**」をクリックまたはタップして次に進みます。
    * 「**キャンセル**」を使用してプロセスを中止します。
+
    ![chlimage_1-8](assets/chlimage_1-8.png)
 
 1. ウィザードの最後のステージで、次のいずれかを実行できます。
 
    * 3 つのタブを使用して、新しいページに割り当てる[ページプロパティ](/help/sites-authoring/editing-page-properties.md)を入力し、「**作成**」をクリックまたはタップしてページを実際に作成します。
    * 「**戻る**」を使用してテンプレートの選択に戻ります。
+
    主なフィールドは次のとおりです。
 
    * **タイトル**：
@@ -211,6 +216,7 @@ Components are the elements provided by AEM so that you can add specific types o
       * これは URI の生成に使用されます。指定しない場合、名前はタイトルから派生します。
       * 新しいページを作成するときにページの&#x200B;**名前**&#x200B;を指定すると、AEM では AEM と JCR によって課された[規則に基づいてページ名が検証](/help/sites-developing/naming-conventions.md)されます。
       * 「**名前**」フィールドに&#x200B;**無効な文字は指定できません**。AEM で無効な文字が検出されると、そのフィールドは強調表示され、対象の文字を削除または置換する必要があることを示す説明メッセージが表示されます。
+
    >[!NOTE]
    >
    >[ページ命名規則](#page-naming-conventions)を参照してください。
@@ -239,12 +245,13 @@ Components are the elements provided by AEM so that you can add specific types o
 
 ページを作成するか、既存ページ（コンソール内）に移動した後、そのページを開いて編集できます。
 
-1. **サイト**&#x200B;コンソールを開きます。
+1. **Sites** コンソールを開きます。
 1. 編集対象のページが表示されるまで移動します。
 1. 次のいずれかを使用してページを選択します。
 
    * [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選択モード](/help/sites-authoring/basic-handling.md#product-navigation)とツールバー
+
    その後、「**編集**」アイコンを選択します。
 
    ![screen_shot_2018-03-22at105355](assets/screen_shot_2018-03-22at105355.png)
@@ -259,11 +266,12 @@ Components are the elements provided by AEM so that you can add specific types o
 
 ページとそのすべてのサブページを新しい場所にコピーできます。
 
-1. **サイト**&#x200B;コンソールで、コピー対象のページが表示されるまで移動します。
+1. **Sites** コンソールで、コピー対象のページが表示されるまで移動します。
 1. 次のいずれかを使用してページを選択します。
 
    * [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選択モード](/help/sites-authoring/basic-handling.md#product-navigation)とツールバー
+
    「**コピー**」ページアイコンを選択します。
 
    ![screen_shot_2018-03-22at105425](assets/screen_shot_2018-03-22at105425.png)
@@ -306,6 +314,7 @@ AEM では、名前変更または移動がおこなわれるページへの内�
 
    * [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選択モード](/help/sites-authoring/basic-handling.md#product-navigation)とツールバー
+
    「**移動**」ページアイコンをクリックします。
 
    ![screen_shot_2018-03-22at105534](assets/screen_shot_2018-03-22at105534.png)
@@ -316,6 +325,7 @@ AEM では、名前変更または移動がおこなわれるページへの内�
 
    * 移動後にページに付ける名前を指定し、「**次へ**」をクリックまたはタップして次に進みます。
    * 「**キャンセル**」を使用してプロセスを中止します。
+
    ![chlimage_1-11](assets/chlimage_1-11.png)
 
    ページを移動するだけの場合は、ページ名はそのままにできます。
@@ -331,6 +341,7 @@ AEM では、名前変更または移動がおこなわれるページへの内�
       * 移動先のサムネールをクリックして、移動先を選択します。
       * 「**次へ**」をクリックして次に進みます。
    * 「**戻る**」を使用してページ名の指定に戻ります。
+
    ![chlimage_1-12](assets/chlimage_1-12.png)
 
    >[!NOTE]
@@ -364,10 +375,10 @@ AEM では、名前変更または移動がおこなわれるページへの内�
 
 1. 確認を求めるダイアログが表示されます。
 
-   * **削除する前にページをアーカイブしますか？**  — 選択すると、削除対象として選択したページのバージョンが削除時に作成されます。
-      * [バージョンは後で復元できます。](/help/sites-authoring/working-with-page-versions.md)
-      * 以前のバージョンがない場合は、ページを削除しても復元できません。
-      * このオプションはAEMバージョン6.4.7.0からのみ使用できます。
+   * **削除する前にページをアーカイブしますか？** - 選択すると、削除対象として選択したページのバージョンが削除時に作成されます。
+      * [バージョンは、後日復元できます。](/help/sites-authoring/working-with-page-versions.md)
+      * 以前のバージョンがない場合は、ページを復元できません。
+      * このオプションは、AEMバージョン6.4.7.0からのみ使用できます。
    * **キャンセル**：アクションを停止します。
    * **削除**：アクションの実行を確定します。
 
@@ -394,14 +405,15 @@ AEM では、名前変更または移動がおこなわれるページへの内�
 
 >[!CAUTION]
 >
->* フォルダーは、**サイト**&#x200B;直下か、他のフォルダーの下にのみ作成できます。ページの下には作成できません。
+>* フォルダーは、**Sites** 直下か、他のフォルダーの下にのみ作成できます。ページの下には作成できません。
 >* 標準のアクション（移動、コピー、貼り付け、削除、公開、非公開、プロパティの表示／編集）は、フォルダーに対して実行できます。
 >* ライブコピー内ではフォルダーを選択できません。
+
 >
 
 
 
-1. **サイト**&#x200B;コンソールを開いて、必要な場所まで移動します。
+1. **Sites** コンソールを開いて、必要な場所まで移動します。
 1. オプションリストを開くには、ツールバーの「**作成**」を選択します。
 1. 「**フォルダー**」を選択してダイアログを開きます。ここで、「**名前**」と「**タイトル**」を入力できます。
 
