@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 47201e2d-338d-40e0-af82-c681a552807b
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '537'
+ht-degree: 48%
 
 ---
 
@@ -23,9 +26,9 @@ AEM Communities には、サインインしているコミュニティメンバ�
 
 通知は[アクティビティ](essentials-activities.md)や[購読](subscriptions.md)と同様に、以下に基づいて生成されます。
 
-* メンバーがコンテンツを投稿する
+* コンテンツを投稿するメンバ
 * 別のメンバーに従うことを選択したメンバー
-* 特定のトピック、記事、およびコンテンツの他のスレッドに従うことを選択するメンバー
+* 特定のトピック、記事、およびコンテンツの他のスレッドをフォローすることを選択したメンバー
 
 通知は以下の点でアクティビティや購読と異なります。
 
@@ -33,13 +36,13 @@ AEM Communities には、サインインしているコミュニティメンバ�
    * Activities require the [activity stream function](functions.md#activity-stream-function) to be included in the community site&#39;s structure
    * Subscriptions require [configuration of email](email.md)
 * 通知の実装は、拡張性とプラグ可能なチャネルを通じて行われます。
-   * アクティビティはWebでのみ使用できます
-   * 購読は電子メールでのみ利用可能
+   * アクティビティはWeb上でのみ使用できます
+   * 購読は電子メールでのみ使用できます
 
 Communities [FP1](deploy-communities.md#latestfeaturepack) 以降、使用可能な通知チャネルは以下のとおりです。
 
 * The web channel, accessed using the `Notifications` link
-* 電子メールチャネル（電子メールが正しく設定されている場合に使用可能）
+* 電子メールチャネル。電子メールが正しく設定されている場合に使用できます
 
 今後のチャネルとしてモバイルおよびデスクトップがあります。
 
@@ -59,7 +62,7 @@ Communities [FP1](deploy-communities.md#latestfeaturepack) 以降、使用可能
 
 * Components used within community [site templates](sites.md) and [group templates](tools-groups.md) may already be configured to allow following
 
-* 他のメンバーが従うようにメンバープロファイルが既に構成されています
+* メンバプロファイルは、他のメンバが従うように既に構成されています
 
 ## フォローによる通知 {#notifications-from-following}
 
@@ -73,9 +76,9 @@ The **Follow** button will appear
 
 * 別のメンバーのプロファイルを表示する場合
 * フォーラム、QnA、ブログなどのメイン機能ページ
-   * その一般機能のすべてのアクティビティに従います
-* フォーラムトピック、QnA質問、ブログ記事などの特定のエントリ
-   * その特定のエントリのすべてのアクティビティに従う
+   * その一般的な機能のすべてのアクティビティに従う
+* フォーラムトピック、QnA質問、ブログ記事など、特定のエントリ
+   * 特定のエントリのすべてのアクティビティに従う
 
 ## 通知設定の管理 {#managing-notification-settings}
 
@@ -99,7 +102,7 @@ Web チャネルは常に有効になっています。
 
 ### Web 通知 {#web-notifications}
 
-A [wizard created community site](sites-console.md) now includes a link to the `Notifications` feature in the site&#39;s header bar above the banner. メッセージとは異なり、通知は各コミュニティサイトに対して作成され、メッセージはサイトの作成プロセス中に有効にする必要があります。
+A [wizard created community site](sites-console.md) now includes a link to the `Notifications` feature in the site&#39;s header bar above the banner. メッセージとは異なり、通知はすべてのコミュニティサイトに対して作成されますが、メッセージはサイト作成プロセス中に有効にする必要があります。
 
 When visiting the published site, selecting the `Notifications` link will display all notifications for the member.
 
