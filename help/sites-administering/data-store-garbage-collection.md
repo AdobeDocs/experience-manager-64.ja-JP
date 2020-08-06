@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5ee9d11a-85c2-440d-b487-a38d04dc040b
 translation-type: tm+mt
 source-git-commit: 3c4b8bf3fd912406657c4cecb75eb2b77dd41bc7
+workflow-type: tm+mt
+source-wordcount: '1905'
+ht-degree: 81%
 
 ---
 
@@ -53,7 +56,7 @@ AEM では、以下に示す様々な内部アクティビティやハウスキ�
 
 >[!NOTE]
 >
->（Mongo または Segment Tar を備えた）クラスターまたは共有データストアのセットアップでガベージコレクションを実行するときに、特定の blob ID を削除できないことを知らせる警告がログに表示される場合があります。これは、以前のガベージコレクションで削除されたBLOB IDが、ID削除に関する情報を持たない他のクラスターまたは共有ノードによって誤って参照されるためです。 その結果、前回の実行時に既に削除された ID を、ガベージコレクションで再度削除しようとするので、警告がログに記録されます。この動作はパフォーマンスや機能に影響しません。
+>（Mongo または Segment Tar を備えた）クラスターまたは共有データストアのセットアップでガベージコレクションを実行するときに、特定の blob ID を削除できないことを知らせる警告がログに表示される場合があります。これは、以前のガベージコレクションで削除されたblob IDが、ID削除に関する情報を持たない他のクラスターまたは共有ノードによって誤って参照されるためです。 その結果、前回の実行時に既に削除された ID を、ガベージコレクションで再度削除しようとするので、警告がログに記録されます。この動作はパフォーマンスや機能に影響しません。
 
 ## データストアのガベージコレクションの実行 {#running-data-store-garbage-collection}
 
@@ -78,22 +81,22 @@ TarMK がノードストアとデータストアの両方として使用され�
   <tr> 
    <td>TarMK</td> 
    <td>TarMK</td> 
-   <td>リビジョンのクリーンアップ（バイナリはセグメントストアと共にインライン化）</td> 
+   <td>リビジョンのクリーンアップ（バイナリはセグメントストアと共にインライン）</td> 
   </tr> 
   <tr> 
    <td>TarMK</td> 
    <td>外部ファイルシステム</td> 
-   <td><p>操作ダッシュボードを使用したデータストアのガベージコレクションタスク</p> <p>JMX コンソール</p> </td> 
+   <td><p>オペレーションダッシュボードを介したデータストアのガベージコレクションタスク</p> <p>JMX コンソール</p> </td> 
   </tr> 
   <tr> 
    <td>MongoDB</td> 
    <td>MongoDB</td> 
-   <td><p>操作ダッシュボードを使用したデータストアのガベージコレクションタスク</p> <p>JMX コンソール</p> </td> 
+   <td><p>オペレーションダッシュボードを介したデータストアのガベージコレクションタスク</p> <p>JMX コンソール</p> </td> 
   </tr> 
   <tr> 
    <td>MongoDB</td> 
    <td>外部ファイルシステム</td> 
-   <td><p>操作ダッシュボードを使用したデータストアのガベージコレクションタスク</p> <p>JMX コンソール</p> </td> 
+   <td><p>オペレーションダッシュボードを介したデータストアのガベージコレクションタスク</p> <p>JMX コンソール</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -134,7 +137,7 @@ TarMK がノードストアとデータストアの両方として使用され�
 ガベージコレクションを実行するには：
 
 1. Apache Felix OSGi Management Console で、「**メイン**」タブをアクティブにし、次のメニューから「**JMX**」を選択して、
-1. 次に、「 **Repository Manager** MBean」を検索してクリックします(またはに進み `https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`ます)。
+1. 次に、「 **Repository Manager** MBean」を検索してクリックします(またはに移動 `https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`)。
 1. 「**startDataStoreGC(boolean markOnly)**」をクリックします。
 1. enter &quot;`true`&quot; for the `markOnly` parameter if required:
 
@@ -150,7 +153,7 @@ TarMK がノードストアとデータストアの両方として使用され�
 
 >[!NOTE]
 >
->データストアのガベージコレクションタスクは、外部ファイルのデータストアを設定した場合にのみ開始されます。 If an external file data store has not been configured, the task will return the message `Cannot perform operation: no service of type BlobGCMBean found` after invoking. See [Configuring node stores and data stores in AEM 6](/help/sites-deploying/data-store-config.md#file-data-store) for information on how to set up a file data store.
+>データストアのガベージコレクションタスクは、外部ファイルのデータストアを設定した場合にのみ開始します。 If an external file data store has not been configured, the task will return the message `Cannot perform operation: no service of type BlobGCMBean found` after invoking. See [Configuring node stores and data stores in AEM 6](/help/sites-deploying/data-store-config.md#file-data-store) for information on how to set up a file data store.
 
 ## データストアのガベージコレクションの自動化 {#automating-data-store-garbage-collection}
 
@@ -160,9 +163,9 @@ TarMK がノードストアとデータストアの両方として使用され�
 
 >[!NOTE]
 >
->同時に実行しないのは、古い（未使用の）データストアファイルもバックアップされ、古いリビジョンにロールバックする必要がある場合でも、バイナリはバックアップに残るからです。
+>同時に実行しないのは、古い（および未使用の）データストアファイルもバックアップされるため、古いリビジョンに戻す必要がある場合でも、バイナリはバックアップに残るためです。
 
-オペレーションダッシュボードの週別メンテナンスウィンドウでデータストアのガベージコレクションを実行しない場合は、wgetまたはcurl HTTPクライアントを使用して自動化することもできます。 curlを使用してバックアップを自動化する方法の例を次に示します。
+オペレーションダッシュボードの週別メンテナンスウィンドウでデータストアのガベージコレクションを実行しない場合は、wgetまたはcurl HTTPクライアントを使用して自動化することもできます。 次の例は、curlを使用してバックアップを自動化する方法を示しています。
 
 >[!CAUTION]
 >
