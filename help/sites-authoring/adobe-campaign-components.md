@@ -11,6 +11,9 @@ topic-tags: personalization
 discoiquuid: f328cd1e-30a3-42d2-88b7-64455ee9eb1f
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '2778'
+ht-degree: 74%
 
 ---
 
@@ -21,7 +24,7 @@ Adobe Campaign と統合しているときは、ニュースレター用とフ�
 
 ## Adobe Campaign ニュースレターコンポーネント {#adobe-campaign-newsletter-components}
 
-すべての Adobe Campaign コンポーネントは、[電子メールテンプレートのベストプラクティス](/help/sites-administering/best-practices-for-email-templates.md)で概説されているベストプラクティスに従います。また、Adobe マークアップ言語 [HTL](https://helpx.adobe.com/experience-manager/htl/using/overview.html) をベースとしています。
+すべての Adobe Campaign コンポーネントは、[電子メールテンプレートのベストプラクティス](/help/sites-administering/best-practices-for-email-templates.md)で概説されているベストプラクティスに従います。また、Adobe マークアップ言語 [HTL](https://helpx.adobe.com/jp/experience-manager/htl/using/overview.html) をベースとしています。
 
 Adobe Campaign と連携するように設定されているニュースレターまたは電子メールを開くと、「**Adobe Campaign ニュースレター**」セクションに以下のコンポーネントが表示されます。
 
@@ -93,7 +96,7 @@ After the image is uploaded (and not before) you can use [inplace editing](/help
 
 * **Map**
 
-   画像をマップするには、「マップ」を選択します。 画像マップの作成方法（長方形、多角形など）を指定し、領域が指す位置を指定します。
+   画像をマップする場合は、「マップ」を選択します。 画像マップの作成方法（長方形、多角形など）を指定し、領域が指す位置を指定します。
 
 * **切り抜き**
 
@@ -121,7 +124,7 @@ After the image is uploaded (and not before) you can use [inplace editing](/help
 
 * **リンク先**
 
-   Webサイト内のアセットや他のページへのリンクを作成します。
+   Webサイト内のアセットまたは他のページへのリンクを作成します。
 
 * **説明**
 
@@ -148,7 +151,7 @@ After the image is uploaded (and not before) you can use [inplace editing](/help
 
 以下の項目を「**表示**」、「**URL 情報**」または「**詳細**」タブで設定できます。
 
-* **リンクキャプション**
+* **リンクのキャプション**
 
    リンクのキャプション。 ユーザーに表示されるテキストです。
 
@@ -162,7 +165,7 @@ After the image is uploaded (and not before) you can use [inplace editing](/help
 
 * **追加の URL パラメータ**
 
-   追加のURLパラメーターを追加します。 「項目を追加」をクリックして、複数の項目を追加します。
+   追加追加のURLパラメーター。 「項目を追加」をクリックして、複数の項目を追加します。
 
 >[!NOTE]
 >
@@ -177,7 +180,7 @@ After the image is uploaded (and not before) you can use [inplace editing](/help
 
 ### Scene7 画像テンプレート (Campaign) {#scene-image-template-campaign}
 
-[Scene7の画像テンプレートは](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) 、レイヤー化された画像ファイルです。コンテンツやプロパティを可変性のためにパラメータ化できます。 **画像テンプレート**&#x200B;コンポーネントを使用すると、ニュースレター内で Scene7 テンプレートを使用して、テンプレートパラメーターの値を変更できます。また、パラメーター内でAdobe Campaignメタデータ変数を使用して、各ユーザーがパーソナライズされた方法で画像を体験できるようにすることができます。
+[Scene7画像テンプレート](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) (Templates)はレイヤー化された画像ファイルで、コンテンツとプロパティを可変性のためにパラメータ化できます。 **画像テンプレート**&#x200B;コンポーネントを使用すると、ニュースレター内で Scene7 テンプレートを使用して、テンプレートパラメーターの値を変更できます。また、Adobe Campaignのメタデータ変数をパラメーター内で使用できるので、各ユーザーがパーソナライズされた方法で画像を体験できます。
 
 ![chlimage_1-111](assets/chlimage_1-111.png)
 
@@ -223,7 +226,7 @@ After the image is uploaded (and not before) you can use [inplace editing](/help
 
    コンテンツファインダーから画像をドラッグするか、クリックして画像を参照します。必要に応じてトリミングや回転を行います。
 
-* **画像プロパティ** (詳&#x200B;**細な画像プロパティ**)
+* **画像プロパティ** (**詳細な画像プロパティ**)
 
    以下を指定できます。
 
@@ -237,7 +240,7 @@ After the image is uploaded (and not before) you can use [inplace editing](/help
 
    * **リンク先**
 
-      Webサイト内のアセットや他のページへのリンクを作成します。
+      Webサイト内のアセットまたは他のページへのリンクを作成します。
 
    * **説明**
 
@@ -272,6 +275,7 @@ The Text &amp; Personalization (Campaign) component lets you enter a text block 
 >
 >* 使用できるパーソナライゼーションフィールドは、ニュースレターがリンクされている Adobe Campaign テンプレートによって異なります。
 >* ContextHub からペルソナを選択すると、選択したプロファイルのデータでパーソナライゼーションフィールが自動的に置き換えられます。
+
 >
 >
 [パーソナライゼーションの挿入](/help/sites-authoring/campaign.md#inserting-personalization)を参照してください。
@@ -365,7 +369,7 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 * **説明**
 
-   フィールドに説明を追加して、ユーザーに詳細情報を提供します。
+   フィ追加ールドの説明を入力し、ユーザーに対して詳細情報を提供します。
 
 * **値の表示のみ**
 
@@ -377,11 +381,11 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 * **マッピング**
 
-   必要に応じて、「Adobe Campaignパーソナライゼーション」フィールドを選択します。
+   必要に応じて、Adobe Campaignのパーソナライゼーションフィールドを選択します。
 
 * **調整キー**
 
-   このフィールドが調整キーの一部である場合は、このチェックボックスを選択します。
+   このフィールドが紐付けキーの一部である場合は、このチェックボックスをオンにします。
 
 ![chlimage_1-119](assets/chlimage_1-119.png)
 
@@ -389,7 +393,7 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 * **必須**
 
-   このコンポーネントを必須にするには、このチェックボックスを選択します。つまり、ユーザーは値を入力する必要があります。
+   このコンポーネントを必須にするには、このチェックボックスを選択します。 つまり、ユーザーは値を入力する必要があります。
 
 * **必須メッセージ**
 
@@ -421,12 +425,13 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 * **[拘束 — 拘束** ]ドロップダウン
 
-   You can select - **None** or **Date**- to add the constraint of a date or no constraint. 日付を選択した場合、ユーザーがフィールドに入力する回答は日付形式である必要があります。
+   You can select - **None** or **Date**- to add the constraint of a date or no constraint. 日付を選択した場合は、回答ユーザーがフィールドに入力する日付形式を使用する必要があります。
 
 * **制約メッセージ**
 
-   さらに、制約メッセージを追加して、ユーザーが回答を適切にフォーマットする方法を理解できるようにすることができます。
-* **スタイル設定 — 幅**+アイコンと **— アイコンをクリックまたはタップするか、数値を入** 力して **** 、フィールドの幅を調整します。
+   さらに、制約メッセージを追加して、回答の適切な書式設定方法をユーザーに知らせることもできます。
+* **スタイル設定 — 幅**&#x200B;フィールドの幅を調整するには、「 
+**+** と **-** アイコンを押すか、数値を入力します。
 
 幅が調整された日付フィールド（Campaign）コンポーネントの表示例を以下に示します。
 
@@ -443,7 +448,8 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 * **タイトルとテキスト — 要素名**
 
    デフォルトはencryptedPKです。 フォーム上の別のエレメント名と競合する場合にのみ、エレメント名を変更する必要があります。2 つのフォームフィールドが同じエレメント名を持つことはできません。
-* **Adobe Campaign - URL パラメーター** EPK 用の URL パラメーターを追加します。例えば、値 **epk** を使用できます。
+* **Adobe Campaign - URL パラメーター** EPK 用の URL パラメーターを追加します。例えば、 
+**epk**.
 
 暗号化されたプライマリキー（Campaign）コンポーネントの表示例を以下に示します。
 
@@ -459,7 +465,7 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 ### 非表示の調整キー (Campaign) {#hidden-reconciliation-key-campaign}
 
-「非表示の調整キー（キャンペーン）」コンポーネントを使用すると、調整キーの一部として非表示のフィールドをフォームに追加できます。
+非表示紐付けキー(キャンペーン)コンポーネントを使用すると、紐付けキーの一部として非表示フィールドをフォームに追加できます。
 
 非表示の調整キー（Campaign）コンポーネントでは、次の項目を設定できます。
 
@@ -484,8 +490,9 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 * **制約メッセージ**
 
-   さらに、制約メッセージを追加して、ユーザーが回答を適切にフォーマットする方法を理解できるようにすることができます。
-* **スタイル設定 — 幅**+アイコンと **— アイコンをクリックまたはタップするか、数値を入** 力して **** 、フィールドの幅を調整します。
+   さらに、制約メッセージを追加して、回答の適切な書式設定方法をユーザーに知らせることもできます。
+* **スタイル設定 — 幅**&#x200B;フィールドの幅を調整するには、「 
+**+** と **-** アイコンを押すか、数値を入力します。
 
 幅が設定された数値フィールド（Campaign）コンポーネントの表示例を以下に示します。
 
@@ -527,11 +534,11 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 * **[拘束 — 拘束** ]ドロップダウン
 
-   You can select - **None, Email,** or **Name (no umlauts)**- to add the constraint of either an email address, name, or no constraint. 「電子メール」を選択した場合は、このフィールドに電子メールアドレスを入力する必要があります。「name」を選択する場合は、名前を指定する必要があります（ウムラウトは使用できません）。
+   You can select - **None, Email,** or **Name (no umlauts)**- to add the constraint of either an email address, name, or no constraint. 「電子メール」を選択した場合は、このフィールドに電子メールアドレスを入力する必要があります。nameを選択する場合は、名前にする必要があります（ウムラウトは使用できません）。
 
 * **制約メッセージ**
 
-   さらに、制約メッセージを追加して、ユーザーが回答を適切にフォーマットする方法を理解できるようにすることができます。
+   さらに、制約メッセージを追加して、回答の適切な書式設定方法をユーザーに知らせることもできます。
 
 * **スタイル設定 — 幅**
 
