@@ -12,6 +12,9 @@ discoiquuid: fccf9a0f-ebab-45ab-8460-84c86b3c4192
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/introduction-to-oak
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '789'
+ht-degree: 94%
 
 ---
 
@@ -22,7 +25,7 @@ AEM 6 の AEM プラットフォームは、Apache Jackrabbit Oak に基づい�
 
 Apache Jackrabbit Oak は、昨今の世界規模の Web サイトおよび要求の厳しいその他のコンテンツアプリケーションの基盤として使用する、スケーラビリティとパフォーマンスに優れた階層構造のコンテンツリポジトリを実装するための取り組みです。
 
-Jackrabbit 2の後継で、AEM 6でコンテンツリポジトリCRXのデフォルトバックエンドとして使用されます。
+これはJackrabbit 2の後継で、AEM 6ではコンテンツリポジトリCRXのデフォルトバックエンドとして使用されます。
 
 ## 設計の原則と目的 {#design-principles-and-goals}
 
