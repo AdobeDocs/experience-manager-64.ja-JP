@@ -12,6 +12,9 @@ discoiquuid: ba90b25f-f672-42c5-8b06-07bb32cc51de
 targetaudience: target-audience upgrader
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '835'
+ht-degree: 93%
 
 ---
 
@@ -80,7 +83,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. コンテンツのオーサリングを停止します。
 1. バックアップ用のデータストアのクローンを作成します。
 1. 1 つの AEM オーサーインスタンス（プライマリオーサー）以外をすべて停止します。
-1. 1つを除くすべてのMongoDBノードをレプリカ・セットから削除します。プライマリMongoインスタンス
+1. 1つを除くすべてのMongoDBノードをレプリカセットから削除します。プライマリMongoインスタンスです
 1. Update the `DocumentNodeStoreService.cfg` file on the primary Author to reflect your single member replica set
 1. プライマリオーサーを再起動して、正常に再起動することを確認します。
 1. プライマリオーサーのレプリケーションエージェントを無効にします。
@@ -89,7 +92,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 
 ### アップグレードの実行 {#execution}
 
-![モンゴ実行](assets/mongo-execution.jpg)
+![モンゴ処刑](assets/mongo-execution.jpg)
 
 1. プライマリオーサーで[インプレースアップグレード](/help/sites-deploying/in-place-upgrade.md)を実行します。
 1. *必要に応じて*、Dispatcher モジュールまたは Web モジュールを更新します。
@@ -107,7 +110,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 
 ### If Unsuccessful (Rollback)  {#if-unsuccessful}
 
-![月帰り](assets/mongo-rollback.jpg)
+![1回のロールバック](assets/mongo-rollback.jpg)
 
 1. クローン作成されたデータストアに接続するために、セカンダリオーサーインスタンスを再設定します。
 1. アップグレードされたオーサープライマリインスタンスをシャットダウンします。
@@ -171,4 +174,4 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. コンテンツのオーサリングを再開します。
 1. [アップグレード後のチェック](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)を実行します。
 
-![最終](assets/final.jpg)
+![final](assets/final.jpg)
