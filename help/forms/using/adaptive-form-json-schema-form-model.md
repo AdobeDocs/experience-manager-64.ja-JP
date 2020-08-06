@@ -9,6 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: bcda96ff-6c7d-46c4-a9e8-7e0fb245cde9
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '1233'
+ht-degree: 78%
 
 ---
 
@@ -43,7 +46,7 @@ JSON 要素とアダプティブフォームコンポーネントのマッピン
    <th><strong>アダプティブフォームコンポーネント</strong></th> 
   </tr> 
   <tr> 
-   <td><p>enumとenumNames制約を持つ文字列プロパティ。</p> <p>構文,</p> <p> <code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"enum" : ["M", "F"]</code></p> <p><code>"enumNames" : ["Male", "Female"]</code></p> <p><code>}</code></p> <p> </p> </td> 
+   <td><p>enum制約とenumNames制約を含む文字列プロパティ。</p> <p>構文,</p> <p> <code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"enum" : ["M", "F"]</code></p> <p><code>"enumNames" : ["Male", "Female"]</code></p> <p><code>}</code></p> <p> </p> </td> 
    <td><p>ドロップダウンコンポーネント：</p> 
     <ul> 
      <li>enumNames にリストされた値はドロップボックスに表示されます。</li> 
@@ -94,12 +97,12 @@ JSON 要素とアダプティブフォームコンポーネントのマッピン
 * defaultプロパティは、アダプティブフォームフィールドの初期値として機能します。
 * maxLengthプロパティは、テキストフィールドコンポーネントのmaxlength属性として設定されます。
 * minimum、maximum、exclusiveMinimumおよびexclusiveMaximumプロパティは、数値ボックスコンポーネントに使用されます。
-* DatePickerコンポーネントの範囲をサポートするために、追加のJSONスキーマプロパティminDateとmaxDateが提供されます。
-* minItemsプロパティとmaxItemsプロパティは、パネルコンポーネントに追加またはパネルコンポーネントから削除できる項目/フィールドの数を制限するために使用します。
+* DatePickerコンポーネントの範囲をサポートするために、minDateとmaxDateの追加のJSONスキーマプロパティが用意されています。
+* minItemsプロパティとmaxItemsプロパティは、パネルコンポーネントに追加または削除できる項目/フィールドの数を制限するために使用します。
 * readOnlyプロパティは、アダプティブフォームコンポーネントの読み取り専用属性を設定します。
-* requiredプロパティはアダプティブフォームフィールドを必須としてマークしますが、panel（typeはobject）の場合、最終的に送信されたJSONデータにはそのオブジェクトに対応する空の値を持つフィールドが含まれます。
-* patternプロパティは、アダプティブフォームの検証パターン（正規表現）として設定されます。
-* JSONスキーマファイルの拡張子は.schema.jsonにする必要があります。 例えば、&lt;filename>.schema.jsonのように指定します。
+* requiredプロパティはアダプティブフォームフィールドを必須としてマークしますが、typeがobjectの場合は最終送信JSONデータのフィールドはそのオブジェクトに対応する空の値を持ちます。
+* patternプロパティは、アダプティブフォームで検証パターン(正規式)として設定されます。
+* JSONスキーマファイルの拡張子は。スキーマ.jsonにする必要があります。 例えば、&lt;filename>.スキーマ.jsonのように指定します。
 
 ## JSON スキーマのサンプル {#sample-json-schema}
 
@@ -285,7 +288,7 @@ JSON スキーマの例を示します。
 
 ### 再使用可能なスキーマ定義 {#reusable-schema-definitions}
 
-定義キーを使用して再使用可能なスキーマを識別します。再利用可能なスキーマ定義は、フラグメントの作成に使用されます。 これは、XSD での複合型の識別と同じです。定義付きの JSON スキーマのサンプルは以下のとおりです。
+定義キーを使用して再使用可能なスキーマを識別します。フラグメントの作成には、再利用可能なスキーマ定義が使用されます。 これは、XSD での複合型の識別と同じです。定義付きの JSON スキーマのサンプルは以下のとおりです。
 
 ```
 {
@@ -338,7 +341,7 @@ You can use the **aem:afProperties** property to preconfigure JSON Schema field 
 
 ## アダプティブフォームコンポーネントで許容される値の制限 {#limit-acceptable-values-for-an-adaptive-form-component}
 
-JSONスキーマ要素に次の制限を追加して、アダプティブフォームコンポーネントに許容される値を制限できます。
+JSONスキーマ要素に次の制限を追加して、アダプティブフォームコンポーネントに許容される値を制限することができます。
 
 <table> 
  <tbody> 
@@ -350,7 +353,7 @@ JSONスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr> 
   <tr> 
    <td><p><code>maximum</code></p> </td> 
-   <td><p>文字列</p> </td> 
+   <td><p>String</p> </td> 
    <td><p>数値および日付の上限を指定します。デフォルトでは、最大値が含まれます。</p> </td> 
    <td> 
     <ul> 
@@ -361,7 +364,7 @@ JSONスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr> 
   <tr> 
    <td><p><code>minimum</code></p> </td> 
-   <td><p>文字列</p> </td> 
+   <td><p>String</p> </td> 
    <td><p>数値および日付の下限を指定します。デフォルトでは、最小値が含まれます。</p> </td> 
    <td> 
     <ul> 
@@ -394,7 +397,7 @@ JSONスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr> 
   <tr> 
    <td><p><code>minLength</code></p> </td> 
-   <td><p>文字列</p> </td> 
+   <td><p>String</p> </td> 
    <td><p>コンポーネントで許可される最小文字数を指定します。最小の長さは 0 以上である必要があります。</p> </td> 
    <td> 
     <ul> 
@@ -403,7 +406,7 @@ JSONスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr> 
   <tr> 
    <td><code>maxLength</code></td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>コンポーネントで許可される最大文字数を指定します。最大の長さは 0 以上である必要があります。</td> 
    <td> 
     <ul> 
@@ -412,22 +415,22 @@ JSONスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr> 
   <tr> 
    <td><p><code>pattern</code></p> </td> 
-   <td><p>文字列</p> </td> 
+   <td><p>String</p> </td> 
    <td><p>文字のシーケンスを指定します。文字が指定されたパターンに適合すると、コンポーネントはその文字を受け入れます。</p> <p>この pattern プロパティは、対応するアダプティブフォームコンポーネントの検証パターンにマッピされます。</p> </td> 
    <td> 
     <ul> 
-     <li>XSDスキーマにマッピングされるすべてのアダプティブフォームコンポーネント </li> 
+     <li>XSDスキーマにマップされているすべてのアダプティブフォームコンポーネント </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td>maxItems</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>配列の項目の最大数を指定します。項目の最大数は 0 以上である必要があります。</td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>minItems</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>配列の項目の最小数を指定します。項目の最小数は 0 以上である必要があります。</td> 
    <td> </td> 
   </tr> 
