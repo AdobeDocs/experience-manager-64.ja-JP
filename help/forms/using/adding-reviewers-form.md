@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: 7c39383b-b430-40a1-9bcb-f5aaccb616ad
 translation-type: tm+mt
 source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+workflow-type: tm+mt
+source-wordcount: '520'
+ht-degree: 67%
 
 ---
 
@@ -32,7 +35,7 @@ AEM Forms では、レビュー担当者グループをフォームへ関連付�
 1. 作成者モードを使用して、Experience Manager の「**[!UICONTROL ツール／アセット／メタデータスキーマ]**」をクリックします。
 1. In the Schema Forms page, navigate to **[!UICONTROL Forms > Forms Authored in AEM]**.
 
-   ページのURLは次のとおりです。
+   ページのURL:
 
    ```
    https://<hostname>:<port>/mnt/overlay/dam/gui/content/metadataschemaeditor/
@@ -45,7 +48,7 @@ AEM Forms では、レビュー担当者グループをフォームへ関連付�
 1. In the Advanced tab, drag-and-drop the **[!UICONTROL Single Line Text]** component available under Build Form.
 1. 追加されたテキストコンポーネントを選択し、その設定を確認します。
 
-   「設定」で、「プロパティ `./jcr:content/metadata/form-submission-reviewer-group` にマップ」フィールドにと入力します。
+   「設定」の下の「プロパティ `./jcr:content/metadata/form-submission-reviewer-group` にマップ」フィールドにと入力します。
 
    アダプティブフォームの詳細属性の送信レビュー担当者グループフィールドが、フィールドラベルで指定した名前で有効化されます。
 
@@ -58,7 +61,7 @@ AEM Forms では、レビュー担当者グループをフォームへ関連付�
 
 To create a group and add members to it, navigate to **[!UICONTROL Tools > Operations > Security > Groups]**.\
 For more information, see [User Administration and Services](/help/sites-administering/security.md).\
-Ensure that you add the group you create as a member of the out-of-the-box user group: **forms-submission-reviewers**. このユーザーグループはAEM Formsに付属し、送信レビュー担当者として追加されます。
+Ensure that you add the group you create as a member of the out-of-the-box user group: **forms-submission-reviewers**. このユーザーグループはAEM Formsに出荷され、送信レビュー担当者として追加されていることを確認します。
 
 アダプティブフォームにユーザーグループを関連付けるには、次の手順に従います。
 
