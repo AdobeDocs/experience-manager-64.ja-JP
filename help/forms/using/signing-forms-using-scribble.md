@@ -9,13 +9,16 @@ topic-tags: author
 discoiquuid: 6a806727-28c5-430e-9a83-b43e0e9d9e1c
 translation-type: tm+mt
 source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+workflow-type: tm+mt
+source-wordcount: '511'
+ht-degree: 71%
 
 ---
 
 
 # 手書き署名を使用したフォームへの電子署名の適用 {#apply-electronic-signatures-to-a-form-using-scribble-signatures}
 
-**手書き署名**&#x200B;コンポーネントや&#x200B;**署名ステップ**&#x200B;コンポーネントを使用すると、アダプティブフォームに手書きで署名することができます。署名ステップコンポーネントでは、アダプティブフォームのPDF バージョンが表示されます。「レコードのドキュメント」オプションを有効にするか、フォームテンプレートベースのアダプティブフォームで署名ステップコンポーネントを使用する必要があります。
+**手書き署名**&#x200B;コンポーネントや&#x200B;**署名ステップ**&#x200B;コンポーネントを使用すると、アダプティブフォームに手書きで署名することができます。署名ステップコンポーネントでは、アダプティブフォームのPDF バージョンが表示されます。「レコードのドキュメント」オプションを有効にするか、フォームテンプレートベースのアダプティブフォームで、署名手順コンポーネントを使用する必要があります。
 
 両方のコンポーネントでは、フォームに署名するために、下記のようなウィンドウが表示されます。You can also click the geolocation icon ![aem_6_3_geolocation](assets/aem_6_3_geolocation.png) to add geolocation to the signature.
 
@@ -26,13 +29,13 @@ source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
 1. レコードのドキュメントオプションが有効になっている、またはフォームテンプレートベースのアダプティブフォームを作成します。For step-by-step information, see [Creating an adaptive form](/help/forms/using/creating-adaptive-form.md).
 1. Drag-and-drop the **Scribble Signature** component from component browser to the adaptive form.
 1. Tap the **Configure** ![configure](assets/configure.png) icon. この操作により、手書き署名コンポーネントのプロパティを表示するプロパティブラウザーが開きます。手書き署名コンポーネントのプロパティを設定します。
-1. 署名手順コンポーネントをコンポーネントブラウザーからアダプティブフォームにドラッグ&amp;ドロップします。
+1. 「署名手順」コンポーネントをコンポーネントブラウザーからアダプティブフォームにドラッグ&amp;ドロップします。
 
    >[!NOTE]
    >
    >署名ステップコンポーネントは、フォームの幅いっぱいに表示されます。そのため、署名ステップコンポーネントが含まれているセクションに他のコンポーネントを配置しないようにすることをお勧めします。
 
-1. In the Content browser, tap **Form Container**, and tap the **Configure** ![configure](assets/configure.png) icon. この操作により、アダプティブフォームのコンテナプロパティを表示するプロパティブラウザーが開きます。**アダプティブフォームコンテナ**／**電子署名**&#x200B;に移動して、「**Adobe Sign を有効にする**」オプションを選択解除します。「 ![aem_6_3_forms_save」アイコンをタップして](assets/aem_6_3_forms_save.png) 、変更を保存します。
+1. In the Content browser, tap **Form Container**, and tap the **Configure** ![configure](assets/configure.png) icon. この操作により、アダプティブフォームのコンテナプロパティを表示するプロパティブラウザーが開きます。**アダプティブフォームコンテナ**／**電子署名**&#x200B;に移動して、「**Adobe Sign を有効にする**」オプションを選択解除します。「 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 」アイコンをタップして、変更を保存します。
 
    >[!NOTE]
    >
@@ -45,7 +48,8 @@ source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
    * **テンプレートメッセージ：**&#x200B;署名 PDF の読み込み中に表示するメッセージを指定します。Adobe Sign サービスによる署名 PDF の準備と読み込みには、ある程度の時間がかかります。
    * **署名サービス：** 「**手書き署名**」オプションを選択します。
    * **CSS クラス**：クライアントライブラリの CSS クラスを指定します（存在する場合）。CSS クラスの代わりに[テーマ](/help/forms/using/themes.md)や[インラインスタイル](/help/forms/using/inline-style-adaptive-forms.md)を使用することをお勧めします。
-   「 ![aem_6_3_forms_save」アイコンをタップして](assets/aem_6_3_forms_save.png) 、変更を保存します。 署名が正常に設定されました。
+
+   「 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 」アイコンをタップして、変更を保存します。 署名が正常に設定されました。
 
    これで、フォームを記入する際に、PDF バージョンのアダプティブフォームが表示され、PDF ドキュメントの署名オプションが提供されます。For detailed information, see [Sign an adaptive form using Scribble Signature](/help/forms/using/signing-forms-using-scribble.md#p-sign-an-adaptive-form-using-scribble-signature-p).
 
