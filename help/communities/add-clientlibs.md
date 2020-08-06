@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: c84040b0-7850-4960-b676-ffa0a74c8cb2
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '704'
+ht-degree: 59%
 
 ---
 
@@ -23,12 +26,12 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
 
 このクライアントライブラリに指定する `categories` プロパティの値は、clientlib をコンテンツページから直接含めたり、その他の clientlib に埋め込んだりする場合に使用される識別子です。
 
-1. Using **[!UICONTROL CRXDE Lite]**, expand `/etc/designs`
+1. **[!UICONTROL CRXDE Liteを使用する場合]**、展開します `/etc/designs`
 
-1. 右クリックし `an-scf-sandbox` て、 `Create Node`
+1. を右クリックし、「 `an-scf-sandbox` `Create Node`
 
-   * 名前: `clientlibs`
-   * タイプ: `cq:ClientLibraryFolder`
+   * 名前：`clientlibs`
+   * 型：`cq:ClientLibraryFolder`
 
 1. 「**[!UICONTROL OK]**」をクリックします。
 
@@ -42,7 +45,7 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
 * Click **[!UICONTROL Add]**
 * Click **[!UICONTROL Save All]**
 
-注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要：プレースホルダーとフ `js.txt` ァイルを追 `css.txt` 加します。 （正式にはcq:ClientLibraryFolderが存在しない場合は除きます）。
+注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要： プ追加レースホルダー `js.txt` と `css.txt` ファイル （正式には、cq:ClientLibraryFolderが存在しない場合は除きます）。
 
 
 1. 右クリックして **`/etc/designs/an-scf-sandbox/clientlibs`**
@@ -65,7 +68,7 @@ css.txt の内容を次のように設定します。：
  style.css
 ```
 
-次に、clientlibsの下にstyle.cssという名前のファイルを作成し、内容を次のように設定します。
+次に、clientlibsにstyle.cssという名前のファイルを作成し、内容を次のように設定します。
 
 `body {`
 
@@ -83,15 +86,15 @@ css.txt の内容を次のように設定します。：
 
 ここでは、それらをすべて挿入するので、オーサー clientlib である、より基本的な SCF clientlib が適しています。
 
-* 名前: **`embed`**
-* タイプ: **`String`**
+* 名前：**`embed`**
+* 型：**`String`**
 
 * クリック **`Multi`**
-* 値: **`cq.social.scf`**
+* 値：**`cq.social.scf`**
 
-   *&lt;enter>はダイアログを表示します*
+   *&lt;enter>を指定すると、ダイアログが表示されます*
 
-   *各エン&#x200B;**[トリの後]**にある+をクリックして、次のclientlibカテゴリを追加します。*
+   *各エントリの&#x200B;**[後に+]**をクリックして、次のclientlibカテゴリを追加します。*
 
    * **`cq.ckeditor`**
    * **`cq.social.author.hbs.comments`**
@@ -121,7 +124,7 @@ apps.an-scf-sandbox clientlibs を含めると、SCF コメントコンポーネ
 
 ![chlimage_1-225](assets/chlimage_1-225.png)
 
-インクルードステートメントは、 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 」セクション <html> script. The default **`foundation head.jsp`** includes a script that can be overlaid: **`headlibs.jsp`**.
+includeステートメントは、 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> セクション <html> script. The default **`foundation head.jsp`** includes a script that can be overlaid: **`headlibs.jsp`**.
 
 **headlibs.jsp をコピーし、clientlibs を含めます。**
 
@@ -130,7 +133,7 @@ apps.an-scf-sandbox clientlibs を含めると、SCF コメントコンポーネ
 1.  **`/apps/an-scf-sandbox/components/playpage`**
 1. Right click and select **[!UICONTROL Paste]** (or select Paste from the tool bar)
 1. Double click on **`headlibs.jsp`** to open it
-1. ファイルの末尾に次の行を追加します
+1. ファイルの末尾に次の行を追加します。
 
    **`<ui:includeClientLib categories="apps.an-scf-sandbox"/>`**
 
@@ -162,7 +165,7 @@ Web サイトをブラウザーに読み込み、背景が青の網掛けでな�
 パッケージを作成するには：
 
 
-* From **[!UICONTROL CRXDE Lite]**, click the [Package icon](http://localhost:4502/crx/packmgr/)
+* **[!UICONTROL CRXDE Liteから]**、 [パッケージアイコンをクリックします](http://localhost:4502/crx/packmgr/)
 * Click **[!UICONTROL Create Package]**
 
    * パッケージ名: `an-scf-sandbox-minimal-pkg`
