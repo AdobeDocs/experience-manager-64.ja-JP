@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 4849da13-518c-40c8-b80e-1b2264d7f8f5
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '168'
+ht-degree: 61%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
 
 ## 例 {#example}
 
-コメント機能を変更してWebサイトのデザインと一致させる場合は、コメントヘッダーを変更して、コメントのアバターが表示されないようにします。 アバターを非表示にするソリューションは、CSSを使用するか、ここで説明するように、アバターを含むHTMLがクライアントに送信されないように、appsフォルダー内のheader.jspをオーバーレイします。
+コメント機能を変更して、Webサイトのデザインと一致するようにし、コメントヘッダーを変更して、どのコメントのアバターも表示されないようにしたいとします。 アバターを非表示にするソリューションは、CSSを使用するか、ここで説明するように、appsフォルダーのheader.jspをオーバーレイして、アバターを含むHTMLがクライアントに送信されないようにします。
 
 コメントをオーバーレイするには、次の手順を実行する必要があります。
 
