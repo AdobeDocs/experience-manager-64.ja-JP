@@ -10,6 +10,9 @@ topic-tags: forms-workspace
 discoiquuid: 40d7d43f-ee0a-4e34-ae93-20c9c940f76b
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 81%
 
 ---
 
@@ -18,12 +21,12 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 プロセスインスタンスリストは、AEM Forms Workspace のトラッキングタブに表示されます。
 
-プロセスインスタンスリストで、各プロセスインスタンスに対して AEM Forms Workspace はそのインスタンスのいくつかのプロパティを表示します。次のプロパティが各プロセスインスタンスで使用できます。これらのプロパティは、プロセスインスタンスコンポーネントモデルに属性として保存され、その表示とテンプレートで使用できます。
+プロセスインスタンスリストで、各プロセスインスタンスに対して AEM Forms Workspace はそのインスタンスのいくつかのプロパティを表示します。次のプロパティが各プロセスインスタンスで使用できます。これらのプロパティは、プロセスインスタンスコンポーネントモデルに属性として保存され、表示とテンプレートで使用できます。
 
 <table> 
  <tbody> 
   <tr> 
-   <td><strong>プロパティ</strong></td> 
+   <td><strong>Property</strong></td> 
    <td><strong>コメント</strong></td> 
   </tr> 
   <tr> 
@@ -73,7 +76,7 @@ To display the `description` property of the process instance in the process ins
 1. 以下の操作を実行してください。
 
    1. 存在しない場合は、/libs/ws/js/runtime/templates/processinstance.html を /apps/ws/js/runtime/templates/ にコピーします。「**すべて保存**」をクリックします。
-   1. プロセ追加スの説明div(class = &#39;processDescription&#39;)がprocessinstance.html内にある。
+   1. processinstance.html内の追加class = &#39;processDescription&#39;を持つプロセス説明div。
 
    ```
    <div class="processDescription" title="<%= description%>"><%= description%></div>
@@ -82,7 +85,7 @@ To display the `description` property of the process instance in the process ins
 1. 以下の操作を実行してください。
 
    1. /apps/ws/js/registry.js を開いて編集します。
-   1. 検索して、apps `text!/lc/libs/ws/js/runtime/templates/processinstance.html`/ws/js/runtime/templates/processinstance.htmlに置 `text!/lc/`**き換&#x200B;**えます。
+   1. 検索して、 `text!/lc/libs/ws/js/runtime/templates/processinstance.html`apps `text!/lc/`****/ws/js/runtime/templates/processinstance.htmlで置き換えます。
 
 1. 上記の変更には、次のようにしてスタイルシート /apps/ws/css/newStyle.css にエントリを追加することによって、CSS ファイルを更新する必要があります。
 
