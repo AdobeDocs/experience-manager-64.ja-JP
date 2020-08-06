@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: c012d639-c6e6-4f73-bbd8-78a4baa38c17
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '638'
+ht-degree: 62%
 
 ---
 
@@ -23,14 +26,14 @@ source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
 
 基本的には：
 
-* [各カタログにタグ名前空間](../../help/sites-administering/tags.md#creating-a-namespace) を作成します。
+* [各カタログのタグ名前空間](../../help/sites-administering/tags.md#creating-a-namespace) （タグ）の作成
 
    * [タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)
 
-      * コミュニティメンバー専用（非公開コミュニティ）
+      * コミュニティメンバーのみ（非公開コミュニティ）
 
          * Allow read access for the [community site&#39;s member group](users.md#publish-group-roles)
-      * サイトの訪問者に対して、ログイン済みか匿名か（オープンコミュニティ）を問わず、
+      * サイト訪問者に対して、ログイン済みか匿名か（オープンコミュニティ）を問わず、
 
          * Allow read access for the `Everyone`group
    * [タグを公開する](../../help/sites-administering/tags.md#publishing-tags)
@@ -39,14 +42,14 @@ source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
 
 * [コミュニティサイトのタグの範囲の定義](sites-console.md#tagging)
 
-   * [サイトの構造に存在するカタログの設定](functions.md#catalog-function)
+   * [サイトの構造に存在するカタログを設定する](functions.md#catalog-function)
 
       * カタログインスタンスにタグを追加して、UIフィルターに表示されるタグのリストを制御できます。
       * Can add [pre-filters](catalog-developer-essentials.md#pre-filters), to restrict a catalog&#39;s included resources
 
 * [コミュニティサイトの公開](sites-console.md#publishing-the-site)
-* [タグを有効化リソースに適用して](resources.md#create-a-resource) 、カテゴリ別にフィルタリングできるようにする
-* [有効化リソースの発行](resources.md#publish)
+* [タグを有効化リソースに適用して](resources.md#create-a-resource) 、カテゴリに基づいてフィルタリングされる可能性がある
+* [有効化リソースを発行する](resources.md#publish)
 
 ## コミュニティサイトタグ {#community-site-tags}
 
@@ -64,15 +67,15 @@ The following is how it appears in CRXDE when an administrator applies read perm
 
 ## カタログのタグ名前空間 {#catalog-tag-namespaces}
 
-カタログ機能は、自身を定義するためにタグを使用します。コミュニティサイトでカタログ機能を設定する場合、選択するタグ名前空間のセットは、コミュニティサイト用に設定されたタグ名前空間の範囲によって定義されます。
+カタログ機能は、自身を定義するためにタグを使用します。コミュニティサイトでカタログ機能を設定する際、選択するタグ名前空間のセットは、コミュニティサイトに設定されたタグメッセージの範囲によって定義されます。
 
-カタログ機能には、カタログのフィルター UI に表示されるタグを定義するタグ設定が含まれています。「すべての名前空間」の設定は、コミュニティサイト用に選択されたタグ名前空間の範囲を参照します。
+カタログ機能には、カタログのフィルター UI に表示されるタグを定義するタグ設定が含まれています。「すべての名前空間」の設定は、コミュニティサイトに対して選択されたタグ名前空間の範囲を指します。
 
 ![chlimage_1-421](assets/chlimage_1-421.png)
 
 ## イネーブルメントリソースへのタグの適用 {#applying-tags-to-enablement-resources}
 
-Enablement resources and learning paths will appear in all catalog when `Show in Catalog` is checked. リソースと学習パスにタグを追加すると、特定のカタログに事前にフィルタリングしたり、カタログUIでフィルタリングしたりできます。
+Enablement resources and learning paths will appear in all catalog when `Show in Catalog` is checked. リソースおよび学習パスにタグを追加すると、特定のカタログに事前フィルタリングしたり、カタログUIでフィルタリングしたりできます。
 
 Restricting enablement resources and learning paths to specific catalogs is accomplished by creating [pre-filters](catalog-developer-essentials.md#pre-filters).
 
