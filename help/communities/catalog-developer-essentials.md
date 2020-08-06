@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
 translation-type: tm+mt
 source-git-commit: 59d40b5bddc42a4ac057ef600243f396aefc926b
+workflow-type: tm+mt
+source-wordcount: '363'
+ht-degree: 46%
 
 ---
 
@@ -35,7 +38,7 @@ The [ `enablement catalog` component](catalog.md) allows community members to ac
   </tr> 
   <tr> 
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
   </tr> 
   <tr> 
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td> 
@@ -64,7 +67,7 @@ A community site structure that includes the [Catalog function](functions.md#cat
 
 ### 事前フィルター {#pre-filters}
 
-コミュニティサイトにカタログ機能が追加されている場合、事前フィルターを指定することで、カタログに表示されるイネーブルメントリソースと学習パスを制限できます。これは、サイトのカタログリソースのインスタンスに対してプロパティを設定することで行います。
+コミュニティサイトにカタログ機能が追加されている場合、事前フィルターを指定することで、カタログに表示されるイネーブルメントリソースと学習パスを制限できます。これは、サイトのカタログリソースのインスタンスにプロパティを設定することで行います。
 
 Using the example of the [Enablement Tutorial](getting-started-enablement.md):
 
@@ -77,22 +80,22 @@ Using the example of the [Enablement Tutorial](getting-started-enablement.md):
 
    * 例：`/content/sites/enable/en/catalog/jcr:content/content/primary/catalog`
 
-* 子フィルターノードの追加
+* 追加子フィルターノード
 
    * Select the `catalog`node
    * Select **[!UICONTROL Create Node]**
 
-      * 名前: `filters`
-      * タイプ: `nt:unstructured`
+      * 名前：`filters`
+      * 型：`nt:unstructured`
    * 「**[!UICONTROL すべて保存]**」を選択します。
 
 
-* ノード `se_resource-tags` にプロパティを追加 `filters` する
+* 追加 `se_resource-tags``filters` ノードのプロパティ
 
    * Select the `filters` node
-   * マルチプロパティの追加
+   * マルチ追加プロパティ
 
-      * 名前: `se_resource-tags`
+      * 名前：`se_resource-tags`
       * タイプ：String
       * 値：&lt;*TagID[を入力](#pre-filter-tagids)>*
       * Select **[!UICONTROL Multi]**
