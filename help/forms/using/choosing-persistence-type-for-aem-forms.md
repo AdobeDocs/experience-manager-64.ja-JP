@@ -11,6 +11,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: a972fb35-38a7-4b83-99bd-6a6dddf8043b
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '398'
+ht-degree: 93%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
 >
 >LiveCycle ES4 SP1 では TarPM 永続性を使用してコンテンツを格納します。
 
-次の表に、サポートされるすべての永続性タイプと、お使いの環境に合わせた永続性タイプの選択に役立つ様々なパラメーターを示します。
+次の表に、サポートされるすべての永続性タイプと、環境の永続性タイプを選択する際に役立つ様々なパラメーターをリストします。
 
 <table> 
  <tbody>
@@ -49,7 +52,7 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
   </tr>
   <tr>
    <th><strong>ライセンスコスト</strong></th> 
-   <td>AEMに含まれる </td> 
+   <td>AEMに付属 </td> 
    <td>別途ライセンスが必要</td> 
    <td>別途ライセンスが必要</td> 
   </tr>
