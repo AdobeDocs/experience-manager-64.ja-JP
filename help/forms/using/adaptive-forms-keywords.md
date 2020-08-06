@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '223'
+ht-degree: 96%
 
 ---
 
@@ -55,7 +58,7 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
    <td><p>instances</p> </td> 
   </tr>
   <tr>
-   <td><p>ページのタイトルではなく、</p> </td> 
+   <td><p>title</p> </td> 
    <td><p>resolveNode</p> </td> 
    <td><p>syncXFAProps</p> </td> 
   </tr>
@@ -97,7 +100,7 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
   <tr>
    <td><p>editPictureClause</p> </td> 
    <td><p>xsdRef</p> </td> 
-   <td><p>名前</p> </td> 
+   <td><p>name</p> </td> 
   </tr>
   <tr>
    <td><p>mandatory</p> </td> 
