@@ -42,10 +42,11 @@ Adobe Experience Manager には、AEM に保存された様々なアセットを
 1. AEM Configuration Manager を開き、管理者としてログインします。デフォルトのURLはhttps://&lt;serverName>:&lt;port>/lc/system/console/configMgrです。
 1. AEM Forms Client SDK Bundle を探して開きます。次の各プロパティの値を指定します。
 
-   * **サーバー URL**：JEE サーバー上の AEM Forms の HTTP URL を指定します。HTTPS経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEEキーストアファイル上のAEM Formsのパス>パラメーターを使用して、JEEサーバー上のAEM Formsを再起動します。
+   * **サーバー URL**：JEE サーバー上の AEM Forms の HTTP URL を指定します。HTTPS経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEEキーストアファイルのAEM Formsのパス>パラメーターを使用して、JEEサーバー上のAEM Formsを再起動します。
    * **サービス名**：指定されたサービスの一覧に RightsManagementService を追加します。
    * **ユーザー名：** JEE サーバー上の AEM Forms からの呼び出しの開始に使用される JEE アカウントの AEM Forms のユーザー名を指定します。指定したアカウントは、JEE サーバー上の AEM Forms で Document Services を呼び出すことができる権限が付与されている必要があります。
    * **パスワード**：「ユーザー名」フィールドに表示される JEE 上の AEM Forms アカウントのパスワードを指定します。
+
    「**保存**」をクリックします。AEM は、Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントの検索が有効になっています。
 
 ### 相互認証を使用して AEM Forms Client SDK Bundle を設定します {#configure-aem-forms-client-sdk-bundle-using-mutual-authentication}
@@ -54,13 +55,14 @@ Adobe Experience Manager には、AEM に保存された様々なアセットを
 1. AEM Configuration Manager を開き、管理者としてログインします。デフォルトのURLはhttps://&lt;serverName>:&lt;port>/lc/system/console/configMgrです。
 1. AEM Forms Client SDK Bundle を探して開きます。次の各プロパティの値を指定します。
 
-   * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEEキーストアファイル上のAEM Formsのパス>パラメーターを使用して、JEEサーバー上のAEM Formsを再起動します。
+   * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEEキーストアファイルのAEM Formsのパス>パラメーターを使用して、JEEサーバー上のAEM Formsを再起動します。
    * **2way SSL の有効化**：「2way SSL の有効化」を有効にします。
    * **キーストアファイル URL**：キーストアファイルの URL を指定します。
    * **TrustStore ファイル URL**：Truststore ファイルの URL を指定します.
    * **キーストアパスワード**：キーストアファイルのパスワードを指定します。
    * **TrustStore パスワード**：Truststore ファイルのパスワードを指定します。
    * **サービス名**：指定されたサービスの一覧に RightsManagementService を追加します。
+
    「**保存**」をクリックします。AEM は、Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントの検索が有効になっています。
 
 ## サンプルポリシーで保護された PDF ドキュメントまたは Microsoft Office ドキュメントのインデックス作成 {#index-a-sample-policy-protected-pdf-or-microsoft-office-document}
