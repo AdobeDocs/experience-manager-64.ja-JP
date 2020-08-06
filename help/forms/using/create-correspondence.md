@@ -283,7 +283,7 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
 これらのインスタンスは、レターが発行インスタンスで表示されているときにのみ保存できます。デフォルトでは、インスタンスでの保存は無効になっています。レターインスタンスの保存を有効にするには、次の手順を実行します。
 
-1. AEMで、次のURLを使用して、ご使用のサーバーのAdobe Experience Manager Web Console Configurationを開きます。 https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/console/configMgr
+1. AEMで、次のURLを使用して、ご使用のサーバのAdobe Experience ManagerWebコンソール設定を開きます。 https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/console/configMgr
 1. Locate **[!UICONTROL Correspondence Management Configurations]** and click it.
 1. Check **[!UICONTROL Manage Letter Instances on Publish]** configuration and then click **[!UICONTROL Save]**.
 
