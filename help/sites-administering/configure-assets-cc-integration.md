@@ -1,12 +1,15 @@
 ---
 title: Experience Cloud および Creative Cloud との AEM Assets 統合の設定
-description: Experience cloudとCreative cloudのAEM Assets統合を設定する方法を説明します。
+description: Experience CloudとCreative CloudとのAEM Assets統合の設定方法を学びます。
 uuid: 73f90846-71d0-4f72-8784-dc877e0e9c41
 contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: c2f190af-656e-4435-9f44-2698d41c4ad1
 translation-type: tm+mt
 source-git-commit: fb2567cdf5a0ae210270366899b49db256374f25
+workflow-type: tm+mt
+source-wordcount: '1367'
+ht-degree: 72%
 
 ---
 
@@ -25,7 +28,7 @@ Adobe Experience Cloud のお客様は、Adobe Experience Manager（AEM）Assets
 
 >[!NOTE]
 >
->AEMからAdobe Creative cloudへのフォルダー共有機能は廃止されました。 Learn more and find a better method in [AEM and Creative Cloud integration best practices](../assets/aem-cc-integration-best-practices.md). AEM から Marketing Cloud へのレプリケーションおよび AEM Assets と Marketing Cloud 間でのアセット交換の設定は、廃止されていません。
+>AEMからAdobe Creative Cloudへのフォルダ共有機能は非推奨です。 Learn more and find a better method in [AEM and Creative Cloud integration best practices](../assets/aem-cc-integration-best-practices.md). AEM から Marketing Cloud へのレプリケーションおよび AEM Assets と Marketing Cloud 間でのアセット交換の設定は、廃止されていません。
 
 ![AEM Assets と Creative Cloud の統合時のデータフロー](assets/chlimage_1-287.png)
 
@@ -48,7 +51,7 @@ AEM Assets と Creative Cloud の統合時のデータフロー
    >アプリケーション ID を作成するには管理者権限が必要です。
 
 1. From the left pane, navigate to **[!UICONTROL Developer Tools]** > **[!UICONTROL Applications]** to view a list of applications.
-1. 「 **[!UICONTROL aem]** _assets_addcircle_iconを追加」をクリックして ![](assets/aem_assets_addcircle_icon.png) 、アプリケーションを作成します。
+1. 「 **[!UICONTROL aem_assets_addcircle_icon]** 追加」をクリックしてアプリケーションを作成します ![](assets/aem_assets_addcircle_icon.png) 。
 1. 「**[!UICONTROL クライアント資格情報]**」リストから「**[!UICONTROL サービスアカウント（JWT アサーション）]**」を選択します。これは、サーバー認証用のサーバー間通信サービスです。
 
    ![chlimage_1-288](assets/chlimage_1-288.png)
@@ -70,7 +73,7 @@ AEM Assets と Creative Cloud の統合時のデータフロー
 
 1. AEM Assets のローカルインスタンスの UI で AEM のロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL 従来のクラウドサービス]**&#x200B;の順に移動します。
 
-1. Locate the **[!UICONTROL Adobe Marketing Cloud]** service. If no configurations exist, click **[!UICONTROL Configure Now]**. If configurations exist, click **[!UICONTROL Show Configurations]** and click **[!UICONTROL [+]]** to add a new configuration.
+1. **[!UICONTROL Adobe Marketing Cloud]** ・サービスを見つけます。 If no configurations exist, click **[!UICONTROL Configure Now]**. If configurations exist, click **[!UICONTROL Show Configurations]** and click **[!UICONTROL [+]]** to add a new configuration.
 
    >[!NOTE]
    >
@@ -114,7 +117,7 @@ AEM Assets と Creative Cloud の統合時のデータフロー
 
    ![chlimage_1-293](assets/chlimage_1-293.png)
 
-1. 「**[!UICONTROL 更新]**」をクリックします。アセットをAEM Assetsインスタンスと今すぐ同期します。
+1. 「**[!UICONTROL 更新]**」をクリックします。アセットを今すぐAEM Assetsインスタンスと同期します。
 
 ## 同期のテスト {#test-the-synchronization}
 
@@ -132,7 +135,7 @@ AEM Assets と Creative Cloud の統合時のデータフロー
 1. 管理者の資格情報を使用して Marketing Cloud にログインします。
 1. From the rails, go to **[!UICONTROL Administration]**and then click/tap **[!UICONTROL Launch Enterprise Dashboard]**.
 1. レールの「**[!UICONTROL ユーザー]**」をクリックして、**[!UICONTROL ユーザー管理]**&#x200B;ページを開きます。
-1. ツールバーで「 **aem_assets** _add_iconを ![追加」をクリックまたはタップします](assets/aem_assets_add_icon.png)。
+1. ツールバーで、 **aem_assets_add_icon**![](assets/aem_assets_add_icon.png)をクリックまたはタップします。
 1. Creative Cloud とアセットを共有できるようにするユーザーを 1 人以上追加します。
 
    >[!NOTE]
@@ -150,7 +153,7 @@ AEM Assets と Creative Cloud の統合時のデータフロー
    >[!NOTE]
    `sling:OrderedFolder` タイプの Assets フォルダーの共有は、Adobe Marketing Cloud での共有の文脈ではサポートされません。フォルダーを共有したい場合は、AEM Assets でフォルダーを作成するときに「**[!UICONTROL 並べ替え]**」オプションを選択しないでください。
 
-1. AEM Assetsユーザーインターフェイスを更新します。 ローカルのAEM Assetsインスタンスのアセットコンソールで作成したフォルダーがMarketing Cloud UIにコピーされます。 AEM Assets内のフォルダーにアップロードしたアセットは、AEMサーバーで処理された後、Marketing cloud内のフォルダーのコピーに表示されます。
+1. AEM Assetsのユーザインターフェイスを更新します。 ローカルのAEM Assetsインスタンスのアセットコンソールで作成したMarketing Cloudーが、フォルダーUIにコピーされます。 AEM Assetsのフォルダにアップロードしたアセットは、AEMサーバで処理された後、Marketing Cloud内のフォルダのコピーに表示されます。
 1. Marketing Cloud 内にレプリケートされたフォルダーのコピーにアセットをアップロードすることもできます。処理された後、アセットは AEM Assets 内の共有フォルダーに表示されます。
 
 ## AEM Assets と Creative Cloud 間でのアセットの交換 {#exchange-assets-between-aem-assets-and-creative-cloud}
@@ -170,7 +173,7 @@ AEM Assets では、アセットを含むフォルダーを Adobe Creative Cloud
 
 AEM Assets と Marketing Cloud 間の同期は、アセットのアップロード元のユーザーのマシンのインスタンスがアセットを変更する権限を保持するように設計されています。これらの変更のみが他のインスタンスに反映されます。
 
-例えば、アセットが AEM Assets の（オンプレミス）インスタンスからアップロードされている場合、このインスタンスのアセットに対する変更は Marketing Cloud のインスタンスに反映されます。ただし、Marketing cloudインスタンスから同じアセットに対して行った変更はAEMインスタンスに反映されず、Marketing cloudからアップロードされたアセットも同じです。
+例えば、アセットが AEM Assets の（オンプレミス）インスタンスからアップロードされている場合、このインスタンスのアセットに対する変更は Marketing Cloud のインスタンスに反映されます。ただし、Marketing Cloudインスタンスから同じアセットに対して行われた変更はAEMインスタンスに反映されず、Marketing Cloudからアップロードされたアセットの場合はインスタンスに反映されません。
 
 >[!MORELIKETHIS]
 * [AEM と Creative Cloud の統合のベストプラクティス](../assets/aem-cc-integration-best-practices.md)
