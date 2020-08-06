@@ -40,7 +40,7 @@ AssemblerサービスでJava API Quick開始(SOAP)を使用できます
 
 [クイック開始（SOAPモード）: Java APIを使用したDDXドキュメントの動的な作成](assembler-service-java-api-quick.md#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api)
 
-[クイック開始（SOAPモード）: Java APIを使用したPDFポートフォリオのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したPDFPortfolioのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
 [クイック開始（SOAPモード）: Java APIを使用した複数のXDPフラグメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
 
@@ -48,7 +48,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsでのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
@@ -1381,9 +1381,9 @@ public class AssemblePDFWithDynamicDDXSOAP {
 }
 ```
 
-## クイック開始（SOAPモード）: Java APIを使用したPDFポートフォリオのアセンブリ {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用したPDFPortfolioのアセンブリ {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
 
-以下のJavaコードの例を使用して、PDFポートフォリオを作成します。 PDFポートフォリオは、AssemblerResultPortfolio.pdfというPDFファイル *として保存されます*。 (PDFポートフォリオの [アセンブリを参照](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios))。
+以下のJavaコードの例を使用して、PDFポートフォリオを作成します。 PDFポートフォリオは、AssemblerResultPortfolio.pdfというPDFファイル *として保存されます*。 (PDFPortfolioの [アセンブリを参照](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios))。
 
 ```as3
  /* 
@@ -1691,7 +1691,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
 
 >[!NOTE]
 >
->`PDFUtility` 修正対象としてマークされているPDFのみを、Acrobatを使用して修正できます。
+>`PDFUtility` Acrobatを使用して修正対象としてマークされたPDFのみを修正できます。
 
 ```as3
 /* 
