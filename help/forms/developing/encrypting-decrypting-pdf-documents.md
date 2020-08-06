@@ -39,7 +39,7 @@ Encryptionサービスを使用して、次のタスクを実行できます。
 
 ## Encrypting PDF Documents with a Password {#encrypting-pdf-documents-with-a-password}
 
-PDF ドキュメントをパスワードで暗号化する場合、ユーザーは Adobe Reader または Acrobat で PDF ドキュメントを開くためのパスワードを指定する必要があります。また、PDFドキュメントへの電子署名など、別のAEM Forms操作をドキュメントで実行する前に、パスワードで暗号化されたPDFドキュメントのロックを解除する必要があります。
+PDF ドキュメントをパスワードで暗号化する場合、ユーザーは Adobe Reader または Acrobat で PDF ドキュメントを開くためのパスワードを指定する必要があります。また、PDFドキュメントのデジタル署名など、別のAEM Forms操作をドキュメントで実行する前に、パスワードで暗号化されたPDFドキュメントをロック解除する必要があります。
 
 >[!NOTE]
 >
@@ -69,8 +69,8 @@ PDFドキュメントをパスワードで暗号化するには、次の手順�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar（JBossにAEM Formsがデプロイされている場合に必要）
-* jbossall-client.jar（AEM FormsがJBossにデプロイされている場合に必要）
+* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
+* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
 **暗号化クライアントAPIオブジェクトの作成**
 
@@ -179,17 +179,17 @@ Encryption API（Webサービス）を使用して、PDFドキュメントをパ
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. 暗号化クライアントAPIオブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して `EncryptionServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `EncryptionServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `EncryptionServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -206,7 +206,7 @@ Encryption API（Webサービス）を使用して、PDFドキュメントをパ
 
    * コンストラクタを使用して `PasswordEncryptionOptionSpec` オブジェクトを作成します。
    * 暗号化するPDFドキュメントリソースを指定するには、 `PasswordEncryptionOption` オブジェクトの `PasswordEncryptionOptionSpec``encryptOption` データメンバーに定義済みリスト値を割り当てます。 メタデータと添付ファイルを含むPDF全体を暗号化するには、このデータメンバ `PasswordEncryptionOption.ALL` ーに割り当てます。
-   * オブジェクトの `PasswordEncryptionCompatability` データメンバに `PasswordEncryptionOptionSpec``compatability` 定義済みリスト値を割り当てて、Acrobatの互換性オプションを指定します。 例えば、このデータメンバ `PasswordEncryptionCompatability.ACRO_7` ーに割り当てます。
+   * Acrobat互換性オプションを指定するには、オ `PasswordEncryptionCompatability` ブジェクトの `PasswordEncryptionOptionSpec``compatability` データメンバに定義済みリスト値を割り当てます。 例えば、このデータメンバ `PasswordEncryptionCompatability.ACRO_7` ーに割り当てます。
    * ユーザーが暗号化されたPDFドキュメントを開くためのpassword値を指定します。この値には、 `PasswordEncryptionOptionSpec` オブジェクトの `documentOpenPassword` データメンバーに開いているパスワードを表すstring値を割り当てます。
    * ユーザーがPDFドキュメントから暗号化を削除できるように、マスターパスワードを表すstring値を `PasswordEncryptionOptionSpec` オブジェクトの `permissionPassword` データメンバーに割り当てるためのpassword値を指定します。
 
@@ -251,7 +251,7 @@ Encryption API（Webサービス）を使用して、PDFドキュメントをパ
 
 >[!NOTE]
 >
->PDFドキュメントを証明書で暗号化する前に、証明書がAEM Formsに追加されていることを確認する必要があります。 証明書は、管理コンソールを使用して、またはTrust Manager APIをプログラムで使用して追加します。 (Trust Manager APIを使用した秘密鍵証明書の [読み込みを参照](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api))。
+>PDFドキュメントを証明書で暗号化する前に、証明書をAEM Formsに追加しておく必要があります。 証明書は、管理コンソールを使用して、またはTrust Manager APIをプログラムで使用して追加します。 (Trust Manager APIを使用した秘密鍵証明書の [読み込みを参照](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api))。
 
 >[!NOTE]
 >
@@ -278,8 +278,8 @@ PDFドキュメントを証明書で暗号化するには、次の手順を実�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar（JBoss Application ServerにAEM Formsをデプロイする場合に必要）
-* jbossall-client.jar（AEM FormsがJBoss Application Serverにデプロイされている場合に必要）
+* adobe-utilities.jar(AEM FormsがJBoss Application Serverにデプロイされている場合に必要)
+* jbossall-client.jar(AEM FormsがJBoss Application Serverにデプロイされている場合に必要)
 
 **暗号化クライアントAPIオブジェクトの作成**
 
@@ -394,17 +394,17 @@ Encryption API（Webサービス）を使用して、PDFドキュメントを証
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. 暗号化クライアントAPIオブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して `EncryptionServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `EncryptionServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `EncryptionServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -434,7 +434,7 @@ Encryption API（Webサービス）を使用して、PDFドキュメントを証
 
    * コンストラクタを使用して `CertificateEncryptionOptionSpec` オブジェクトを作成します。
    * 暗号化するPDFドキュメントリソースを指定するには、 `CertificateEncryptionOption` オブジェクトの `CertificateEncryptionOptionSpec``option` データメンバーに定義済みリスト値を割り当てます。 メタデータと添付ファイルを含むPDFドキュメント全体を暗号化するには、このデータメンバー `CertificateEncryptionOption.ALL` に割り当てます。
-   * オブジェクトの `CertificateEncryptionCompatibility` データメンバに `CertificateEncryptionOptionSpec``compat` 定義済みリスト値を割り当てて、Acrobatの互換性オプションを指定します。 例えば、このデータメンバ `CertificateEncryptionCompatibility.ACRO_7` ーに割り当てます。
+   * Acrobat互換性オプションを指定するには、オ `CertificateEncryptionCompatibility` ブジェクトの `CertificateEncryptionOptionSpec``compat` データメンバに定義済みリスト値を割り当てます。 例えば、このデータメンバ `CertificateEncryptionCompatibility.ACRO_7` ーに割り当てます。
 
 1. 証明書で暗号化されたPDFドキュメントを作成します。
 
@@ -463,7 +463,7 @@ Encryption API（Webサービス）を使用して、PDFドキュメントを証
 
 ## 証明書ベースの暗号化の削除 {#removing-certificate-based-encryption}
 
-証明書ベースの暗号化は、PDFドキュメントから削除して、Adobe ReaderまたはAcrobatでPDFドキュメントを開くことができるようにすることができます。 証明書で暗号化されたPDFドキュメントから暗号化を削除するには、公開鍵を参照する必要があります。 暗号化がPDFドキュメントから削除されると、その暗号化は保護されなくなります。
+証明書ベースの暗号化をPDFドキュメントから削除して、Adobe ReaderまたはAcrobatでPDFドキュメントを開くことができるようにすることができます。 証明書で暗号化されたPDFドキュメントから暗号化を削除するには、公開鍵を参照する必要があります。 暗号化がPDFドキュメントから削除されると、その暗号化は保護されなくなります。
 
 >[!NOTE]
 >
@@ -488,8 +488,8 @@ PDFドキュメントから証明書ベースの暗号化を削除するには�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar（JBoss Application ServerにAEM Formsをデプロイする場合に必要）
-* jbossall-client.jar（AEM FormsがJBoss Application Serverにデプロイされている場合に必要）
+* adobe-utilities.jar(AEM FormsがJBoss Application Serverにデプロイされている場合に必要)
+* jbossall-client.jar(AEM FormsがJBoss Application Serverにデプロイされている場合に必要)
 
 **Encryptionサービスクライアントの作成**
 
@@ -505,7 +505,7 @@ PDFドキュメントから証明書ベースの暗号化を削除するには�
 
 >[!NOTE]
 >
->秘密鍵はAEM Forms Trust Storeに保存されます。 証明書がそこに配置されると、エイリアス値が指定されます。
+>秘密鍵はAEM FormsTrust Storeに保存されます。 証明書がそこに配置されると、エイリアス値が指定されます。
 
 **PDFドキュメントの保存**
 
@@ -575,17 +575,17 @@ Encryption API（Webサービス）を使用して、証明書ベースの暗号
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Encryptionサービスクライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `EncryptionServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `EncryptionServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `EncryptionServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -624,7 +624,7 @@ Encryption API（Webサービス）を使用して、証明書ベースの暗号
 
 ## パスワード暗号化の削除 {#removing-password-encryption}
 
-パスワードベースの暗号化は、PDFドキュメントから削除できるので、パスワードを指定しなくてもAdobe ReaderまたはAcrobatでPDFドキュメントを開くことができます。 パスワードベースの暗号化をPDFドキュメントから削除すると、ドキュメントのセキュリティは保護されなくなります。
+パスワードベースの暗号化をPDFドキュメントから削除して、パスワードを指定しなくても、Adobe ReaderまたはAcrobatでPDFドキュメントを開くことができるようにすることができます。 パスワードベースの暗号化をPDFドキュメントから削除すると、ドキュメントのセキュリティは保護されなくなります。
 
 >[!NOTE]
 >
@@ -649,8 +649,8 @@ PDFドキュメントからパスワードベースの暗号化を削除する�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar（JBossにAEM Formsがデプロイされている場合に必要）
-* jbossall-client.jar（AEM FormsがJBossにデプロイされている場合に必要）
+* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
+* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
 **Encryptionサービスクライアントの作成**
 
@@ -666,7 +666,7 @@ PDFドキュメントからパスワードベースの暗号化を削除する�
 
 **PDFドキュメントの保存**
 
-EncryptionサービスでPDFドキュメントからパスワードベースの暗号化を削除した後、PDFドキュメントをPDFファイルとして保存できます。 ユーザーは、パスワードを指定しなくても、Adobe ReaderまたはAcrobatでPDFドキュメントを開くことができます。
+EncryptionサービスでPDFドキュメントからパスワードベースの暗号化を削除した後、PDFドキュメントをPDFファイルとして保存できます。 ユーザーは、パスワードを指定せずに、Adobe ReaderまたはAcrobatでPDFドキュメントを開くことができます。
 
 **関連トピック**
 
@@ -724,17 +724,17 @@ Encryption API（Webサービス）を使用して、パスワードベースの
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Encryptionサービスクライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `EncryptionServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `EncryptionServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `EncryptionServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -771,7 +771,7 @@ Encryption API（Webサービス）を使用して、パスワードベースの
 
 ## 暗号化されたPDFドキュメントのロック解除 {#unlocking-encrypted-pdf-documents}
 
-パスワードで暗号化または証明書で暗号化されたPDFドキュメントは、ロックを解除しないと、別のAEM Forms操作を実行できません。 暗号化されたPDFドキュメントに対して操作を実行しようとすると、例外が生成されます。 暗号化されたPDFドキュメントのロックを解除した後、暗号化されたPDF画像に対して1つ以上の操作を実行できます。 これらの操作は、Acrobat Reader DCエクステンションサービスなど、他のサービスに属する場合があります。
+パスワードで暗号化または証明書で暗号化されたPDFドキュメントは、ロックを解除しないと、別のAEM Forms操作を実行できません。 暗号化されたPDFドキュメントに対して操作を実行しようとすると、例外が生成されます。 暗号化されたPDFドキュメントのロックを解除した後、暗号化されたPDF画像に対して1つ以上の操作を実行できます。 これらの操作は、Acrobat Reader DC拡張サービスなど、他のサービスに属することができます。
 
 >[!NOTE]
 >
@@ -796,8 +796,8 @@ Encryption API（Webサービス）を使用して、パスワードベースの
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar（JBoss Application ServerにAEM Formsをデプロイする場合に必要）
-* jbossall-client.jar（AEM FormsがJBoss Application Serverにデプロイされている場合に必要）
+* adobe-utilities.jar(AEM FormsがJBoss Application Serverにデプロイされている場合に必要)
+* jbossall-client.jar(AEM FormsがJBoss Application Serverにデプロイされている場合に必要)
 
 **Encryptionサービスクライアントの作成**
 
@@ -815,7 +815,7 @@ Encryption API（Webサービス）を使用して、パスワードベースの
 
 **AEM Forms操作の実行**
 
-暗号化されたPDFドキュメントのロックが解除された後、その画像に対して別のサービス操作（使用権限の適用など）を実行できます。 この操作は、Acrobat Reader DCエクステンションサービスに属しています。
+暗号化されたPDFドキュメントのロックが解除された後、その画像に対して別のサービス操作（使用権限の適用など）を実行できます。 この操作は、Acrobat Reader DC拡張サービスに属します。
 
 **関連トピック**
 
@@ -861,11 +861,11 @@ Encryption API（Webサービス）を使用して、パスワードベースの
    * A `com.adobe.idp.Document` object that contains the certificate-encrypted PDF document.
    * PDFドキュメントの暗号化に使用される秘密鍵に対応する公開鍵のエイリアス名を指定するstring値。
 
-   メソッド `unlockPDFUsingPassword` と `unlockPDFUsingCredential``com.adobe.idp.Document` メソッドは共に、操作を実行するために別のAEM Forms Javaメソッドに渡すオブジェクトを返します。
+   メソッド `unlockPDFUsingPassword` と `unlockPDFUsingCredential` メソッドは共に、別のAEM FormsJavaメソッドに渡した `com.adobe.idp.Document` オブジェクトを返し、操作を実行します。
 
 1. AEM Forms操作を実行します。
 
-   ロック解除されたPDFドキュメントに対してAEM Forms操作を実行し、ビジネス要件に合わせて実行します。 例えば、ロック解除されたPDFドキュメントに使用権限を適用する場合は、またはのメソッドによって返された `com.adobe.idp.Document` オブジェクトをその `unlockPDFUsingPassword` オブジェクトの `unlockPDFUsingCredential``ReaderExtensionsServiceClient``applyUsageRights` メソッドに渡します。
+   ロック解除されたPDFドキュメントに対して、ビジネス要件に合わせてAEM Forms操作を実行します。 例えば、ロック解除されたPDFドキュメントに使用権限を適用する場合は、またはのメソッドによって返された `com.adobe.idp.Document` オブジェクトをその `unlockPDFUsingPassword` オブジェクトの `unlockPDFUsingCredential``ReaderExtensionsServiceClient``applyUsageRights` メソッドに渡します。
 
 **関連トピック**
 
@@ -889,17 +889,17 @@ Encryption API（Webサービス）を使用して暗号化されたPDFドキュ
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Encryptionサービスクライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `EncryptionServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `EncryptionServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `EncryptionServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -926,11 +926,11 @@ Encryption API（Webサービス）を使用して暗号化されたPDFドキュ
    * A `BLOB` object that contains the certificate-encrypted PDF document.
    * PDfドキュメントの暗号化に使用される秘密鍵に対応する公開鍵のエイリアス名を指定するstring値。
 
-   メソッド `unlockPDFUsingPassword` と `unlockPDFUsingCredential``com.adobe.idp.Document` メソッドは共に、操作を実行するために別のAEM Formsメソッドに渡すオブジェクトを返します。
+   メソッド `unlockPDFUsingPassword` と `unlockPDFUsingCredential` メソッドは共に、別のAEM Formsメソッドに渡した `com.adobe.idp.Document` オブジェクトを返し、操作を実行します。
 
 1. AEM Forms操作を実行します。
 
-   ロック解除されたPDFドキュメントに対してAEM Forms操作を実行し、ビジネス要件に合わせて実行します。 例えば、ロック解除されたPDFドキュメントに使用権限を適用する場合は、またはのメソッドによって返された `BLOB` オブジェクトをその `unlockPDFUsingPassword` オブジェクトの `unlockPDFUsingCredential``ReaderExtensionsServiceClient``applyUsageRights` メソッドに渡します。
+   ロック解除されたPDFドキュメントに対して、ビジネス要件に合わせてAEM Forms操作を実行します。 例えば、ロック解除されたPDFドキュメントに使用権限を適用する場合は、またはのメソッドによって返された `BLOB` オブジェクトをその `unlockPDFUsingPassword` オブジェクトの `unlockPDFUsingCredential``ReaderExtensionsServiceClient``applyUsageRights` メソッドに渡します。
 
 **関連トピック**
 
@@ -973,8 +973,8 @@ PDFドキュメントを保護する暗号化の種類を決定するには、�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-encryption-client.jar
-* adobe-utilities.jar（JBoss Application ServerにAEM Formsをデプロイする場合に必要）
-* jbossall-client.jar（AEM FormsがJBoss Application Serverにデプロイされている場合に必要）
+* adobe-utilities.jar(AEM FormsがJBoss Application Serverにデプロイされている場合に必要)
+* jbossall-client.jar(AEM FormsがJBoss Application Serverにデプロイされている場合に必要)
 
 **サービスクライアントの作成**
 
@@ -1045,17 +1045,17 @@ Encryption API（Webサービス）を使用して、PDFドキュメントを保
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. サービスクライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `EncryptionServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * コンストラクターを使用して `EncryptionServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/EncryptionService?WSDL`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `EncryptionServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `EncryptionServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `EncryptionServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
