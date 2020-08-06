@@ -11,6 +11,9 @@ topic-tags: platform
 discoiquuid: a8c0cd0f-268f-4b37-83de-0ccbd819a016
 translation-type: tm+mt
 source-git-commit: 3cdb22af4d3b9b8450263fd843c8af13fc772bfe
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 65%
 
 ---
 
@@ -47,5 +50,5 @@ e コマース API は、次のパッケージで提供されます。
 
 >[!NOTE]
 >
->For a complete article detailing all the steps to build an eCommerce provider see [Creating custom Adobe Experience Manager 6.2 eCommerce providers](https://helpx.adobe.com/experience-manager/using/ecommerce62.html).
+>For a complete article detailing all the steps to build an eCommerce provider see [Creating custom Adobe Experience Manager 6.2 eCommerce providers](https://helpx.adobe.com/jp/experience-manager/using/ecommerce62.html).
 
