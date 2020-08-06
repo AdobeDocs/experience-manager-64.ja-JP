@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 93a112fc-ef34-4281-89b8-a0f1b3d3aca9
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 39%
 
 ---
 
@@ -35,7 +38,7 @@ Data for the `Community Activity List` is only available when Adobe Analytics is
 
 ## コミュニティのアクティビティリストをページに追加 {#adding-a-community-activity-list-to-a-page}
 
-作成者モードでペ `Community Activity List` ージにコンポーネントを追加するには、コンポーネントを見つけ `Communities / Community Activity List` てページ上の所定の位置にドラッグします。
+作成者モードでページに `Community Activity List` コンポーネントを追加するには、コンポーネントを見つけ `Communities / Community Activity List` てページ上の位置にドラッグします。
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
@@ -53,18 +56,19 @@ Select the placed `Community Activity List` component to access and select the `
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
-* **[!UICONTROL タイプ]**
+* **[!UICONTROL 型]**
 
    コミュニティメンバーに関するデータを表示するか、ユーザー生成コンテンツ(UGC)を表示するかを指定します。
 
    次から選択
    * `Members`
    * `Content`
+
    デフォルトは `Members` です。
 
 * **[!UICONTROL 表示タイトル]**
 
-   データの上に表示する説明的なタイトル（など） `Trending Content`。
+   データの上に表示する説明的なタイトル（例：） `Trending Content`。
 
    初期設定では、タイトルはありません。
 
@@ -76,33 +80,35 @@ Select the placed `Community Activity List` component to access and select the `
 
 * **[!UICONTROL アクティビティタイプ]**
 
-   次のいずれかを選択します。
+   いずれかを選択
    * `Views`（ページ訪問数）
    * `Posts`（UGCの作成）
    * `Follows`
    * `Likes`
+
    初期設定は「ビュー」です。
 
 * **[!UICONTROL 期間]**
 
-   次のいずれかを選択します。
+   いずれかを選択
    * `Last 24 hours`
    * `Last 7 days`
    * `Last 30 days`
    * `Last 90 days`
    * `This year (since Jan 1st)`
    * `Total`
+
    デフォルトは `Total` です。
 
 * **[!UICONTROL コンテキストパス]**
 
-   特定のブログなど、サイトのサブセットに対するアクティビティのスコープを設定できます。
+   特定のブログなど、サイトのサブセットに対するアクティビティのスコープを設定する機能を提供します。
 
    初期設定は、コミュニティサイト全体です。
 
 * **[!UICONTROL メンバー数の集計]**
 
-   オフ（オフ）の場合、最上位の投稿のみがカウントされます。 For example, if the context is the root page (the default), then an `Activity Type`of `Posts`will never show any activity as there is no ability to post content to the root page. オンにすると、すべての下位のページがカウントに含まれます。
+   オフにする（オフにする）と、最上位レベルの投稿のみがカウントされます。 For example, if the context is the root page (the default), then an `Activity Type`of `Posts`will never show any activity as there is no ability to post content to the root page. オンにすると、すべての下位のページがカウントに含まれます。
 
    初期設定はオンです。
 
@@ -110,10 +116,10 @@ Select the placed `Community Activity List` component to access and select the `
 
 **上位の訪問者**&#x200B;の設定：タイプ = メンバー、アクティビティタイプ = ビュー
 
-**上位の寄稿者** :タイプ=メンバー、アクティビティタイプ=投稿
+**上位の寄稿者** : タイプ=メンバー、アクティビティタイプ=投稿
 
-**Top Content** config:タイプ=コンテンツ、アクティビティタイプ=ビュー
+**最上位のコンテンツ** : Type = Content、アクティビティタイプ=表示、
 
-**Trending Content** config:タイプ=コンテンツ、アクティビティタイプ=投稿
+**トレンドコンテンツ** の設定： タイプ=コンテンツ、アクティビティタイプ=投稿
 
 ![chlimage_1-230](assets/chlimage_1-230.png)
