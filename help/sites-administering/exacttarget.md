@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: d1cff2bb-9fdf-49cb-a695-d437bba5653d
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '465'
+ht-degree: 78%
 
 ---
 
 
 # ExactTarget との統合{#integrating-with-exacttarget}
 
-AEMとExact targetの統合により、AEMで作成した電子メールをExact target経由で管理および送信できます。 また、AEMページ上のAEM formsを介したExact targetのリード管理機能を使用することもできます。
+AEMと完全一致ターゲットを統合すると、AEMで作成した電子メールを管理し、完全一致ターゲットを使用して送信できます。 また、AEMページのAEM formsを介した正確なターゲットのリード管理機能を使用することもできます。
 
 この統合によって次の機能を使用できるようになります。
 
@@ -34,7 +37,7 @@ ExactTarget 設定は、クラウドサービスまたはツールを使用し�
 
 クラウドサービスで ExactTarget 設定を作成するには：
 
-1. ようこそページで「**クラウドサービス**」をクリックします(または、で直接アク `https://<hostname>:<port>/etc/cloudservices.html`セス)。
+1. ようこそページで「**クラウドサービス**」をクリックします(Or directly access at `https://<hostname>:<port>/etc/cloudservices.html`.)
 1. Click **ExactTarget** and then **Configure**. ExactTarget 設定ウィンドウが開きます。
 
    ![chlimage_1-182](assets/chlimage_1-182.png)
@@ -62,7 +65,7 @@ ExactTarget 設定は、クラウドサービスまたはツールを使用し�
 
 ツールで ExactTarget 設定を作成するには：
 
-1. ようこそページで「**ツール**」をクリックします。または、に移動して直接移動しま `https://<hostname>:<port>/misadmin#/etc`す。
+1. ようこそページで「**ツール**」をクリックします。または、に移動して直接移動し `https://<hostname>:<port>/misadmin#/etc`ます。
 1. 「**ツール**」、「**クラウドサービス設定**」、「**ExactTarget**」の順に選択します。
 1. Click **New** to open the **Create Page **window.
 
