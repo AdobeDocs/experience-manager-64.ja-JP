@@ -1,8 +1,8 @@
 ---
 title: コンテンツフラグメントの管理
 seo-title: コンテンツフラグメントの管理
-description: コンテンツフラグメントはアセットとして保存されるので、主にアセットコンソールから管理します。
-seo-description: コンテンツフラグメントはアセットとして保存されるので、主にアセットコンソールから管理します。
+description: コンテンツフラグメントは Assets として保存されるので、主に Assets コンソールから管理します。
+seo-description: コンテンツフラグメントは Assets として保存されるので、主に Assets コンソールから管理します。
 uuid: 0659cf03-b4e8-4b8b-bec7-0082f980115a
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: da8f968b-91cc-45a8-ae4b-757b4f840b8e
 translation-type: tm+mt
 source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
+workflow-type: tm+mt
+source-wordcount: '1509'
+ht-degree: 98%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、 [AEM 6.4 Service Pack 2(6.4.2.0)以降が必要です](/help/release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2(6.4.2.0)以降が [必要です](/help/release-notes/sp-release-notes.md)。
 
-コンテンツフラグメントは&#x200B;**[!UICONTROL アセット]**&#x200B;として保存されるので、主に&#x200B;**[!UICONTROL アセット]**&#x200B;コンソールから管理します。
+コンテンツフラグメントは **[!UICONTROL Assets]** として保存されるので、主に **[!UICONTROL Assets]** コンソールから管理します。
 
 >[!NOTE]
 >
@@ -41,15 +44,16 @@ source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
 
 コンテンツフラグメントの作成方法は基本的に単純なフラグメントと構造化フラグメントで同じです。
 
-1. フラグメントを作成する&#x200B;**[!UICONTROL アセット]**&#x200B;フォルダーに移動します。
+1. フラグメントを作成する **[!UICONTROL Assets]** フォルダーに移動します。
 1. 「**[!UICONTROL 作成]**」を選択し、「**[!UICONTROL コンテンツフラグメント]**」を選択して、ウィザードを開きます。
 1. ウィザードの最初の手順では、新しいフラグメントの基盤を指定することを求められます。
 
    * 以下を指定します。
 
-      * [テンプレート](/help/sites-developing/content-fragment-templates.md) - **[!UICONTROL 単純なフラグメント]**&#x200B;など
+      * [](/help/sites-developing/content-fragment-templates.md)テンプレート - **[!UICONTROL 単純なフラグメント]**&#x200B;など
       * [モデル](content-fragments-models.md) - **空港**&#x200B;モデルなど、構造化コンテンツを必要とするフラグメントの作成に使用されます
    * 使用可能なテンプレートとモデルがすべて表示されます。
+
    選択した後、「**[!UICONTROL 次へ]**」を使用して続けます。
 
    ![cfm-6420-15](assets/cfm-6420-15.png)
@@ -70,16 +74,16 @@ source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
 
       * **[!UICONTROL 名前]**
 
-         名前がURLの形成に使用されます。
+         URL の作成に使用される名前です。
 
           必須。タイトルから自動的に派生しますが、変更が可能です。
 
 
-1. 「**[!UICONTROL 作成]**」を選択して操作を完了し、「**[!UICONTROL 開く]**」を選択してフラグメントを編集するか、「**[!UICONTROL 完了]**」を選択してコンソールに戻ります。
+1. 「**[!UICONTROL 作成]**」を選択して操作を完了してから、編集するためにフラグメントを&#x200B;**[!UICONTROL 開く]**&#x200B;か、「**[!UICONTROL 完了]**」でコンソールに戻ります。
 
 ## コンテンツフラグメントのアクション {#actions-for-a-content-fragment}
 
-**[!UICONTROL アセット]**&#x200B;コンソールでは、次のいずれかからコンテンツフラグメントに対して様々なアクションを使用できます。
+**[!UICONTROL Assets]** コンソールでは、次のいずれかからコンテンツフラグメントに対して様々なアクションを使用できます。
 
 * ツールバーから。フラグメントを選択すると、該当するすべてのアクションを使用できるようになります。
 * [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)として。個別のフラグメントカードに使用可能なアクションのサブセット。
@@ -100,7 +104,7 @@ source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
 
 * **[!UICONTROL 編集]**
 
-   * Allows you to [open the fragment for editing content](content-fragments-variations.md) together with its elements, variations, associated content and metadata.
+   * フラグメントの要素、バリエーション、および関連付けられているコンテンツやメタデータと共に[コンテンツを編集するためにフラグメントを開く](content-fragments-variations.md)ことができます。
 
 * **[!UICONTROL タグを管理]**
 * **[!UICONTROL コレクションに追加]**
@@ -116,7 +120,7 @@ source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
 
 >[!NOTE]
 >
->Many of these are [standard actions for Assets](managing-assets-touch-ui.md) and/or the [desktop app](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html).
+>これらの多くは、[Assets](managing-assets-touch-ui.md) や [ デスクトップアプリケーション](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html)に対する標準的なアクションです。
 
 ## フラグメントエディターを開く {#opening-the-fragment-editor}
 
@@ -130,7 +134,8 @@ source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
 1. フラグメントを開いて編集するには、以下のいずれかを実行します。
 
    * フラグメントまたはフラグメントリンクをクリック／タップ（これはコンソールビューによって異なります）。
-   * Selecting the fragment, then **[!UICONTROL Edit]** from the toolbar.
+   * フラグメントを選択してから、ツールバーの「**[!UICONTROL 編集]**」を選択。
+
    フラグメントエディターが開きます。
 
    ![cfm-6420-18](assets/cfm-6420-18.png)
@@ -140,7 +145,7 @@ source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
    >1. フラグメントがコンテンツページで既に参照されている場合は、メッセージが表示されます。
       >
       >
-   2. The side panel can be hidden/shown using the **[!UICONTROL Toggle Side Panel]** icon.
+   2. **[!UICONTROL サイドパネルを切り替え]**&#x200B;アイコンを使用してサイドパネルを非表示／表示できます。
 
 
 1. サイドパネルのアイコンを使用して、3 つのモデル間を移動します。
@@ -149,6 +154,7 @@ source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
    * [注釈](content-fragments-variations.md#annotating-a-content-fragment)
    * [関連コンテンツ](#associating-content-with-your-fragment)
    * [メタデータ](#viewing-and-editing-the-metadata-properties-of-your-fragment)
+
    ![cfm-10](assets/cfm-10.png)
 
 1. 変更を加えた後、必要に応じて「**[!UICONTROL 保存]**」または「**[!UICONTROL キャンセル]**」をクリックします。
@@ -179,7 +185,7 @@ source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
 
    >[!CAUTION]
    >
-   >「**[!UICONTROL 保存]**」では、変更を保存するだけでなく、参照を更新し、必要に応じてディスパッチャーがフラッシュされます。これらの変更が処理されるまでに時間がかかることがあります。このため、大きなシステムや複雑なシステム、高負荷のシステムのパフォーマンスに影響することがあります。
+   >「**[!UICONTROL 保存]**」では、変更を保存するだけでなく、参照を更新し、必要に応じて Dispatcher がフラッシュされます。これらの変更が処理されるまでに時間がかかることがあります。このため、大きなシステムや複雑なシステム、高負荷のシステムのパフォーマンスに影響することがあります。
    >
    >
    >「**[!UICONTROL 保存]**」を使用する際はこの点に留意し、フラグメントエディターを迅速に開いて、変更をおこない、保存してください。
@@ -190,23 +196,23 @@ source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
 
 コンテンツフラグメントを編集する際には、AEM によって自動的にバージョンが作成されます。これにより、変更内容を&#x200B;**[!UICONTROL キャンセル]**&#x200B;しても以前のコンテンツを復元できるようになります。
 
-1. When a content fragment is opened for editing AEM checks for the existence of the cookie-based token that indicates whether an *editing session* exists:
+1. コンテンツフラグメントを開いて編集しようとすると、AEM は&#x200B;*編集セッション*&#x200B;が存在しているかどうかを示す cookie ベースのトークンの存在を確認します。
 
-   1. トークンが見つかると、そのフラグメントは既存の編集セッションの一部であるとみなされます。
+   1. トークンが見つかると、そのフラグメントは既存の編集セッションの一部であると見なされます。
    1. トークンが&#x200B;**&#x200B;ないときにユーザーが編集を開始すると、バージョンが作成され、この新しい編集セッションのトークンがクライアントに送られ、cookie に保存されます。
 
 1. **&#x200B;アクティブな編集セッションがあるとき、編集中のコンテンツは自動的に 600 秒ごとに保存されます（デフォルト）。
 
    >[!NOTE]
    >
-   >The auto save interval is configurable using the `/conf` mechanism.
+   >自動保存間隔は `/conf` メカニズムを使用して設定できます。
    >
    >デフォルト値については、以下を参照してください。
    >
    >`/libs/settings/dam/cfm/jcr:content/autoSaveInterval`
 
-1. If the user selects to **[!UICONTROL Cancel]** the edit, the version created at the start of the editing session is restored and the token is removed to end the editing session.
-1. If the user selects to **[!UICONTROL Save]** the edits, the updated elements/variations are persisted and the token is removed to end the editing session.
+1. ユーザーが「**[!UICONTROL キャンセル]**」を選択して編集をキャンセルすると、編集セッションの開始時に作成されたバージョンが復元され、トークンが削除されて編集セッションが終了します。
+1. ユーザーが編集内容の「**[!UICONTROL 保存]**」を選択すると、更新された要素とバリエーションが保存され、トークンが削除されて編集セッションが終了します。
 
 ## フラグメントのコンテンツの編集 {#editing-the-content-of-your-fragment}
 
@@ -247,6 +253,7 @@ source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
 >* すべてのアセットの標準機能
 >* タイムラインで追加
 >* フラグメントアセットに関連付けられる
+
 >
 >
 注釈（コンテンツフラグメント用）は次のとおりです。
@@ -277,7 +284,7 @@ source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
    * 挿入されたテキスト - 緑
    * 置き換えられたテキスト - 青
 
-* フルスクリーンアイコンを使用すれば、どちらかのバージョンで開いた後で、並列表示に切り替えることができます
+* 全画面表示アイコンを使用すれば、どちらかのバージョンで開いた後で、並列表示に切り替えることができます
 * 特定のバージョンに&#x200B;**[!UICONTROL 戻す]**&#x200B;ことができます
 * 「**[!UICONTROL 完了]**」を選択すると、コンソールに戻ります
 
