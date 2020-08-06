@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6ab07b5b-ee37-4029-95da-be2031779107
 translation-type: tm+mt
 source-git-commit: aac5026a249e1cb09fec66313cc03b58597663f0
+workflow-type: tm+mt
+source-wordcount: '1019'
+ht-degree: 37%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: aac5026a249e1cb09fec66313cc03b58597663f0
 
 AEM では、画像、.js ファイルおよび .css ファイルを含む完全な Web ページとしてページを書き出すことができます。
 
-書き出しを設定したら、URLのをに置き換えてブラウザーでページを要求し、レンダリングされたページをHTML形式で含み、参照アセットを含むzipファイルダウンロードを取得します。 `html``export.zip` ページ内のパス（画像へのパスなど）は、zipファイルに含まれるファイルまたはサーバー上のリソースを指すように書き換えられます。
+書き出しが設定されたら、URL内のをに置き換えてブラウザーでページを要求し、html形式でレンダリングされたページと参照アセットを含むzipファイルダウンロードを取得します。 `html``export.zip` ページ内のすべてのパス（画像へのパスなど）が、zipファイルに含まれるファイルまたはサーバー上のリソースを指すように書き換えられます。
 
 ## ページの書き出し {#exporting-a-page}
 
@@ -41,13 +44,13 @@ The following steps describe how to export a page, and assume that an export con
 1. ファイルシステムで、ファイルを解凍します。
 
    * the page html file ( `<page-name>.html`) is available below `<unzip-dir>/<page-path>`
-   * その他のリソース（.jsファイル、.cssファイル、画像など）は、書き出しテンプレートの設定に従って配置されます。 この例では、以下のリソースと、次のリソ `<unzip-dir>/etc`ースのいくつかを示しま `<unzip-dir>/<page-path>`す。
+   * 書き出しテンプレートの設定に従って、その他のリソース（.jsファイル、.cssファイル、画像など）が配置されます。 この例では、以下のリソース `<unzip-dir>/etc`と、以下のリソースがあり `<unzip-dir>/<page-path>`ます。
 
 1. Open the page html file ( `<unzip-dir>/<page-path>.html`) in your browser to check the rendering.
 
 ## サイト用のページエクスポーター設定の作成 {#creating-a-page-exporter-configuration-for-your-site}
 
-ページエクスポーターは、コンテンツ同期フレームワークに基づいています。ページプロパティダイアログで使用できる設定は、設定テンプレートです。ページに必要な依存関係をすべて定義します。ページの書き出しがトリガーされると、設定テンプレートが使用され、ページパスとデザインパスの両方が設定に動的に適用されます。その後、標準のコンテンツ同期機能を使用してzipファイルを作成します。
+ページエクスポーターは、コンテンツ同期フレームワークに基づいています。 ページプロパティダイアログで使用できる設定は、設定テンプレートです。 ページに必要なすべての依存関係を定義します。 ページの書き出しがトリガーされると、設定テンプレートが使用され、ページパスとデザインパスの両方が設定に動的に適用されます。 その後、標準のコンテンツ同期機能を使用してzipファイルを作成します。
 
 AEM では、以下を含むいくつかのテンプレートが埋め込まれます。
 
@@ -63,20 +66,20 @@ AEM では、以下を含むいくつかのテンプレートが埋め込まれ�
 1. In **CRXDE Lite**, create a node below `/etc/contentsync/templates`:
 
    * Name: e.g. `mysite`. The name appears in the page properties dialog when choosing the page exporter template.
-   * タイプ: `nt:unstructured`
+   * 型：`nt:unstructured`
 
 1. テンプレートノード（ここでは `mysite`）の下に、以下で説明する設定ノードを使用してノード構造を作成します。
 
 ### ページエクスポーター設定ノード {#page-exporter-configuration-nodes}
 
-設定テンプレートはノード構造で構成されます。 各ノードには、zipフ `type` ァイルの作成プロセスでの特定のアクションを定義するプロパティがあります。 typeプロパティについて詳しくは、コンテンツ同期フレームワークページの「設定タイプの概要」を参照してください。
+設定テンプレートは、ノード構造で構成されます。 各ノードには、zipファイルの作成プロセスでの特定のアクションを定義する `type` プロパティがあります。 typeプロパティの詳細については、コンテンツ同期フレームワークページの「設定タイプの概要」の節を参照してください。
 
 書き出し設定テンプレートを作成するには、以下のノードを使用できます。
 
-**page node** ：ページノードは、ページhtmlをzipファイルにコピーするために使用します。 次の特徴があります。
+**ページノード** ：ページノードは、ページhtmlをzipファイルにコピーするために使用されます。 次の特性を持ちます。
 
 * 必須ノードである。
-* は下にあります `/etc/contentsync/templates/<sitename>`。
+* は下にあり `/etc/contentsync/templates/<sitename>`ます。
 * Its name is `page`.
 * Its node type is `nt:unstructured`
 
@@ -86,16 +89,16 @@ AEM では、以下を含むいくつかのテンプレートが埋め込まれ�
 
 * `path` プロパティはありません。現在のページパスが設定に動的にコピーされます。
 
-* その他のプロパティは、コンテンツ同期フレームワークの「設定タイプの概要」セクションで説明されています。
+* その他のプロパティは、コンテンツ同期フレームワークの「設定の種類の概要」セクションに説明されています。
 
-**rewrite node** ：書き出したページでリンクを書き換える方法はrewriteノードで定義します。 書き換え後のリンクは、zip ファイルに含まれるファイルまたはサーバー上のリソースを指すことができます。
+**rewrite node** :rewriteノードは、書き出されたページでリンクを書き換える方法を定義します。 書き換え後のリンクは、zip ファイルに含まれるファイルまたはサーバー上のリソースを指すことができます。
 
 `rewrite` ノードについて詳しくは、コンテンツ同期ページを参照してください。
 
-**デザインノード** ：デザインノードは、書き出したページで使用するデザインをコピーするために使用されます。 次の特徴があります。
+**デザインノード** ：デザインノードは、書き出したページで使用されるデザインのコピーに使用されます。 次の特性を持ちます。
 
 * オプションである。
-* は下にあります `/etc/contentsync/templates/<sitename>`。
+* は下にあり `/etc/contentsync/templates/<sitename>`ます。
 * Its name is `design`.
 * Its node type is `nt:unstructured`.
 
@@ -105,10 +108,10 @@ AEM では、以下を含むいくつかのテンプレートが埋め込まれ�
 
 * `path` プロパティはありません。現在のページパスが設定に動的にコピーされます。
 
-**汎用ノード** :clientlibs .jsや.cssファイルなどのリソースをzipファイルにコピーするために使用される汎用ノードです。 次の特徴があります。
+**汎用ノード** :clientlibs .jsや.cssファイルなどのリソースをzipファイルにコピーする際に使用される汎用ノードです。 次の特性を持ちます。
 
 * オプションである。
-* は下にあります `/etc/contentsync/templates/<sitename>`。
+* は下にあり `/etc/contentsync/templates/<sitename>`ます。
 * 特定の名前を持たない。
 * Its node type is `nt:unstructured`.
 * Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.
@@ -130,7 +133,7 @@ AEM では、以下を含むいくつかのテンプレートが埋め込まれ�
 
 **カスタム設定の実装**
 
-ノード構造に気付いたかもしれませんが、 **Geometrixx** ページ書き出し設定テンプレートには、「」というプ `logo` ロパティが設定され `type` たノードがありま `image`す。 これは、画像のロゴをzipファイルにコピーするために作成された特別な設定タイプです。 特定の要件を満たすには、カスタムプロパティの実装が必要になる場合があ `type` ります。これを行うには、コンテンツの同期ページの「カスタムアップデートハンドラーの実装」の節を参照してください。
+ノード構造に気付いたかもしれませんが、 **Geometrixx**`logo` ページ書き出し設定テンプレートには、 `type` プロパティがに設定された `image`ノードがあります。 これは、画像のロゴをzipファイルにコピーするために作成された特別な設定タイプです。 特定の要件を満たすには、カスタム `type` プロパティの実装が必要になる場合があります。 これを行うには、コンテンツの同期ページの「カスタム更新ハンドラーの実装」の節を参照してください。
 
 ## プログラムによるページの書き出し {#programmatically-exporting-a-page}
 
