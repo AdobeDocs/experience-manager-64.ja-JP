@@ -1,6 +1,6 @@
 ---
-title: Distiller Service Java API QuickStart(SOAP)
-seo-title: Distiller Service Java API QuickStart(SOAP)
+title: DistillerサービスJava API QuickStart(SOAP)
+seo-title: DistillerサービスJava API QuickStart(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 7781f074-cea4-4109-892b-118cfad4ec36
@@ -18,9 +18,9 @@ ht-degree: 1%
 ---
 
 
-# Distiller Service Java APIクイック開始(SOAP) {#distiller-service-java-api-quickstart-soap}
+# DistillerサービスJava APIクイック開始(SOAP) {#distiller-service-java-api-quickstart-soap}
 
-Distiller®サービスでJava API Quick開始(SOAP)を使用できます。
+Java API Quick開始(SOAP)は、Distiller®サービスで使用できます。
 
 [クイック開始（SOAPモード）: Java APIを使用したPostScriptファイルのPDFドキュメントへの変換](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
@@ -28,7 +28,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）: Java APIを使用したPostScriptファイルのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
 
