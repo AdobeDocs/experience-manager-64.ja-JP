@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '406'
+ht-degree: 59%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
 
 ## 概要 {#overview}
 
-AEM Communities により、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能の作成およびカスタマイズが簡素化されます。これらの機能により、ユーザ生成コンテンツ(UGC)が発行環境に入ります。
+AEM Communities により、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能の作成およびカスタマイズが簡素化されます。これらの機能により、ユーザ生成コンテンツ(UGC)が公開環境に入力されます。
 
 The foundation of a [community site](overview.md#communitiessites) is the [social component framework](scf.md) (SCF). Creation of a community site begins with the selection of a [community site template](sites-console.md) that is composed of [community functions](functions.md).
 
@@ -40,13 +43,13 @@ The foundation of a [community site](overview.md#communitiessites) is the [socia
 
 ## ソーシャルコンポーネントフレームワーク {#social-component-framework}
 
-* [Social Component Framework](scf.md):フレームワークとAPIの概要
-* [SCFハンドルヘルパー](handlebars-helpers.md):デフォルトヘルパーとカスタムヘルパーの作成方法
-* [クライアント側のカスタマイズ](client-customize.md):ブラウザーで実行するコードのカスタマイズ
-* [サーバー側のカスタマイズ](server-customize.md):サーバーで実行するコードのカスタマイズ
-* [ストレージリソースプロバイダー(SRP)](srp.md):コミュニティコンテンツストレージの概要
-* [Coding Guidelines](code-guide.md):ガイドライン、ヒント、テクニック
-* [コミュニティコンポーネントガイド](components-guide.md):対話型開発ツール
+* [Social Component Framework](scf.md): フレームワークとAPIの概要
+* [SCFハンドルヘルパー](handlebars-helpers.md): デフォルトヘルパーとカスタムヘルパーの作成方法
+* [クライアント側のカスタマイズ](client-customize.md): ブラウザーで実行するコードのカスタマイズ
+* [サーバー側のカスタマイズ](server-customize.md): サーバーで実行するコードのカスタマイズ
+* [ストレージリソースプロバイダ(SRP)](srp.md): コミュニティコンテンツストレージの概要
+* [コーディングのガイドライン](code-guide.md): ガイドライン、ヒントとテクニック
+* [コミュニティコンポーネントガイド](components-guide.md): 対話型開発ツール
 
 ## コンポーネントおよび機能の基本事項 {#component-function-and-feature-essentials}
 
@@ -65,7 +68,7 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 
 ## コミュニティグループ {#community-groups}
 
-[コミュニティグループ](overview.md#communitygroups)は、コミュニティメンバーがコミュニティサイト内でサブコミュニティを形成できるようにする概念です。コミュニティグループの作成は、発行環境または作成者環境で行われる場合があります。
+[コミュニティグループ](overview.md#communitygroups)は、コミュニティメンバーがコミュニティサイト内でサブコミュニティを形成できるようにする概念です。コミュニティグループの作成は、発行環境または作成者フォルダーで行うことができます。
 
 * [コミュニティグループの基本事項](essentials-groups.md)
 * [グループ機能](functions.md#groups-function)
@@ -75,8 +78,8 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 
 ## データの管理 {#managing-data}
 
-* [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP APIユーティリティのメソッドと例
-* [Tag Essentials](tag.md) — コミュニティメンバーがUGCやカタログ化された実施可能リソースにタグ付けする機能
+* [SRPとUGC Essentials](srp-and-ugc.md) - SRP APIユーティリティのメソッドと例
+* [Tag Essentials](tag.md) — コミュニティメンバーがUGCやカタログ化された有効化リソースにタグ付けする機能
 
 ## チュートリアル {#tutorials}
 
