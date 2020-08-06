@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 1445437e-7f22-49ad-9bde-f3c0ff7d5142
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1218'
+ht-degree: 95%
 
 ---
 
@@ -46,7 +49,7 @@ MCM から、以下にアクセスできます。
       特定のセグメントを選択すると、セグメント定義ページが開きます。
 
    * [レポート](/help/sites-administering/reporting.md)\
-      AEMは、インスタンスの状態を分析および監視するのに役立つ様々なレポートを提供します。 この MCM ウィンドウにはレポートが一覧表示されます。
+      AEMには、インスタンスの状態を分析および監視するのに役立つ様々なレポートが用意されています。 この MCM ウィンドウにはレポートが一覧表示されます。
 
       レポートを選択すると、レポートページが開きます。
 
@@ -72,7 +75,7 @@ MCM から、以下にアクセスできます。
 
 ダッシュボードには、（リードの）リスト、セグメント、レポートおよびキャンペーンの概要を提供する 4 つのウィンドウが表示されます。ダッシュボードから、これらの基本機能にアクセスすることもできます。
 
-![mcm_dashboard](assets/mcm_dashboard.png)
+![mcm_ダッシュボード](assets/mcm_dashboard.png)
 
 ## リード数 {#leads}
 
@@ -183,7 +186,7 @@ AEM MCM では、リードの構成および追加ができます。これをお
 
    ここから次の操作ができます。
 
-   * **新規作**&#x200B;成…経験例えば、Adobe targetオファー、ティーザー、ニュースレターなどです。
+   * Create a **New...** experience; for example, Adobe Target offers, teasers and newsletters.
    * 「**編集**」を使用して、特定のティーザーページまたはニュースレターの詳細を編集します（ダブルクリックも使用できます）。
    * 「**プロパティ...**」を使用して、特定のティーザーページまたはニュースレターのプロパティを定義します。
    * 「**シミュレート**」を使用して、エクスペリエンス（Teaser ページやニュースレター）の外観と操作性をシミュレートします。
