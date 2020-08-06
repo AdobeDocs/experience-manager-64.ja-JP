@@ -23,10 +23,10 @@ AEM Forms では、AEM Forms アプリケーションの完全なソースコー
 
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行します。
 
-1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Adobe IDがソフトウェア配布物にログインする必要があります。
-1. ヘッダーメニューで **[!UICONTROL Adobe Experience Manager]** をタップします。
+1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Software Distributionにログインするには、Adobe IDが必要です。
+1. ヘッダーメニューにある **[!UICONTROL Adobe Experience Manager]** をタップします。
 1. In the **[!UICONTROL Filters]** section:
-   1. 「 **[!UICONTROL ソリューション]** 」ドロップダウンリストから「 **[!UICONTROL フォーム]** 」を選択します。
+   1. [ **[!UICONTROL ソリューション]****ドロップダウンリストから[]** Forms]を選択します。
    2. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
 1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「EULA条項に **[!UICONTROL 同意します]**」を選択して、「 **[!UICONTROL ダウンロード]**」をタップします。
 1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
@@ -130,7 +130,7 @@ The following table details contents of the `adobe-lc-mobileworkspace-src-[versi
 
 1. Under **PROJECT**, select **AEM Forms** and ensure that the appropriate signature is selected for **Code Signing Identity**, **Debug**, **Release** and **Any iOS SDK**.
 1. プロビジョニング済み iPad を Mac マシンに接続します。
-1. **AEM Forms** ・プロジェクト用のプロビジョニング済みデバイスを選択します。
+1. **AEM Forms** プロジェクト用のプロビジョニング済みデバイスを選択します。
 
    ![ipad](assets/ipad.png)
 
@@ -144,7 +144,7 @@ The following table details contents of the `adobe-lc-mobileworkspace-src-[versi
  Xcode プロジェクトをアーカイブして、インストーラー（.ipa ファイル）とプロパティリストファイル（.plist ファイル）を構築する必要があります。プロパティリストファイルには、アプリケーションの名前やホストしているロケーションなど、ホストされているインハウスアプリケーションの設定情報が含まれます。 プロパティリストファイルについての詳細は、「[情報プロパティリストファイルについて](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html)」を参照してください。
 
 1. プロビジョニングされた iPad の Mac マシンへの接続For detailed information about provisioning an iPad, see [Creating and Downloading Development Provisioning Profiles](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/CreatingYourTeamProvisioningProfile/CreatingYourTeamProvisioningProfile.html)
-1. **AEM Forms** ・プロジェクト用のプロビジョニング済みデバイスを選択します。
+1. **AEM Forms** プロジェクト用のプロビジョニング済みデバイスを選択します。
 
    ![ipad-1](assets/ipad-1.png)
 
