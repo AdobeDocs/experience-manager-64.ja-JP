@@ -124,9 +124,9 @@ JGroups および Workspace について詳しくは、「[JGroups と AEM Forms
 
 **server_debugLevel:** この設定は変更しないでください。
 
-**client_pollingInterval:** 新しいタスクおよび変更されたを検出するためにFlex Workspace（JEE上のAEM formsでは廃止されています）で使用されるポーリング間隔（秒）を設定します。 デフォルト値は 3 秒です。これは AEM Forms Workspace では動作しません。
+**client_pollingInterval:** 新しいタスクおよび変更されたを検出するために、(JEE上のAEM formsでは廃止されています)Flexワークスペースで使用されるポーリング間隔（秒）を設定します。 デフォルト値は 3 秒です。これは AEM Forms Workspace では動作しません。
 
-**client_systemContext_name:** AEM Forms Workspaceでタスクの添付ファイルに対して（「添付ファイル」タブの）「追加者」フィールドに表示するカスタム名（例：市民）を指定します。
+**client_systemContext_name:** AEM Formsワークスペースのタスクの添付ファイルに対して（「添付ファイル」タブの）「追加者」フィールドに表示するカスタム名（例：市民）を指定します。
 
 カスタム名を定義するには：
 
