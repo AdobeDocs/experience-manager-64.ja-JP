@@ -4,13 +4,16 @@ description: Apache Tika を使用して、AEM Assets がアセットの MIME �
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '197'
+ht-degree: 37%
 
 ---
 
 
 # Apache Tikaを使用してデジタルアセットのMIMEタイプを検出する {#detecting-mime-type-of-assets-using-apache-tika}
 
-通常、Adobe Experience Manager(AEM)Assetsは、ファイル拡張子からアップロードするアセットのMIMEタイプを検出します。 Apache Tika を使用してアセットをアップロードすると、AEM Assets は、アセットの MIME タイプをファイル拡張子ではなくコンテンツストリームから、アップロード操作中に検出します。
+通常、Adobe Experience Manager(AEM) Assetsは、ファイルの拡張子からアップロードするアセットのMIMEタイプを検出します。 Apache Tika を使用してアセットをアップロードすると、AEM Assets は、アセットの MIME タイプをファイル拡張子ではなくコンテンツストリームから、アップロード操作中に検出します。
 
 この機能はデフォルトでは無効になっています。To enable the feature, configure the **Day CQ DAM Mime Type** service from Configuration Manager.
 
@@ -25,4 +28,4 @@ source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
 
    ![chlimage_1-333](assets/chlimage_1-333.png)
 
-1. 「**[!UICONTROL 保存]**」をクリックし、キャンペーンを保存します。
+1. 「**[!UICONTROL 保存]**」をクリックまたはタップして、変更を保存します。
