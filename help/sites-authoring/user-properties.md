@@ -11,15 +11,18 @@ content-type: reference
 discoiquuid: 6afbc889-c613-40e6-8a25-1570dff32d60
 translation-type: tm+mt
 source-git-commit: cfa09d2f1a78eac609cb6df7817234559c8d26dc
+workflow-type: tm+mt
+source-wordcount: '502'
+ht-degree: 95%
 
 ---
 
 
 # アカウント環境の設定{#configuring-your-account-environment}
 
-AEM では、アカウントおよび作成者オーサー環境の特定項目を設定できます。
+AEM では、アカウントおよびオーサー環境の特定項目を設定できます。
 
-Using the [User](/help/sites-authoring/user-properties.md#user-settings) option in the [header](/help/sites-authoring/basic-handling.md#the-header) and the associated [My Preferences](#my-preferences) dialog, you can modify your user options.
+[ヘッダーの](/help/sites-authoring/user-properties.md#user-settings) User [(](/help/sites-authoring/basic-handling.md#the-header) ユーザー [)オプションと、関連する](#my-preferences) My Preferences（マイプリファレンス）ダイアログを使用して、ユーザーオプションを変更できます。
 
 ## ユーザー設定 {#user-settings}
 
@@ -29,7 +32,7 @@ Using the [User](/help/sites-authoring/user-properties.md#user-settings) option 
 
    * [次のユーザーとして動作](/help/sites-administering/security.md#impersonating-another-user)機能では、ユーザーは別のユーザーに成り代わって作業をおこなうことができます。
 
-* Profile
+* プロファイル
 
    * [ユーザー設定](/help/sites-administering/security.md)への便利なリンクを提供します。
 
@@ -47,7 +50,7 @@ Using the [User](/help/sites-authoring/user-properties.md#user-settings) option 
 
 ![screen_shot_2018-03-20at102118](assets/screen_shot_2018-03-20at102118.png)
 
-* **言葉遣い**
+* **言語**
 
    オーサリング環境の UI で使用する言語を定義します。使用できるリストから必要な言語を選択します。
 
@@ -67,7 +70,7 @@ Using the [User](/help/sites-authoring/user-properties.md#user-settings) option 
 
 * **アセットのデスクトップアクションを表示**
 
-   このオプションを使用するには、AEM デスクトップアプリが必要です。
+   このオプションを使用するには、AEM デスクトップアプリケーションが必要です。
 
 * **注釈カラー**
 
@@ -95,6 +98,7 @@ Using the [User](/help/sites-authoring/user-properties.md#user-settings) option 
 
    * [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
    * [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
+
    このオプションは、キーボードショートカットを有効にします。デフォルトでは有効になっていますが、例えばユーザーに特定のアクセシビリティ要件がある場合に、無効にできます。
 
 * **従来のオーサリング機能を使用**
