@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
 translation-type: tm+mt
 source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+workflow-type: tm+mt
+source-wordcount: '485'
+ht-degree: 86%
 
 ---
 
@@ -46,6 +49,7 @@ We.Retail のページはすべて編集可能テンプレートに基づいて�
    * コンテナに既存のポリシーを選択するか、新しいポリシーを作成します。
    * コンテナで使用できるコンポーネントを選択します。
    * アセットがコンテナにドラッグされたときに配置されるデフォルトのコンポーネントを定義します。
+
    ![chlimage_1-140](assets/chlimage_1-140.png)
 
 1. テンプレートエディターに戻り、レイアウトコンテナ内のテキストコンポーネントのポリシーを編集できます。
@@ -59,6 +63,7 @@ We.Retail のページはすべて編集可能テンプレートに基づいて�
       * 書式設定オプション
       * 許可される段落スタイル
       * 許可される特殊文字
+
    コアコンポーネントに基づく多くのコンポーネントでは、編集可能テンプレートを通じて、コンポーネントレベルでオプションを設定できます。開発者がカスタマイズする必要はありません。
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
@@ -71,5 +76,5 @@ We.Retail のページはすべて編集可能テンプレートに基づいて�
 
 For further information please refer to the authoring document [Creating Page Templates](/help/sites-authoring/templates.md) or the developer document Page [Templates - Editable](/help/sites-developing/page-templates-editable.md) for complete technical details on editable templates.
 
-また、[コアコンポーネント](/help/sites-developing/we-retail-core-components.md)についても調べることをお勧めします。See the authoring document [Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) for an overview of the capabilities of the core components and the developer document [Developing Core Components](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) for a technical overview.
+また、[コアコンポーネント](/help/sites-developing/we-retail-core-components.md)についても調べることをお勧めします。See the authoring document [Core Components](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) for an overview of the capabilities of the core components and the developer document [Developing Core Components](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) for a technical overview.
 
