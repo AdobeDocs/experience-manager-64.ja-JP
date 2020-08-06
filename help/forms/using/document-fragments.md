@@ -2,13 +2,16 @@
 title: ドキュメントフラグメント
 seo-title: ドキュメントフラグメント
 description: Correspondence Management でドキュメントフラグメント（テキスト、リスト、条件、レイアウトフラグメントなど）を使用すると、顧客対応向けに静的コンポーネント、動的コンポーネント、および繰り返し可能なコンポーネントを生成できます。
-seo-description: ドキュメントフラグメントテキスト、リスト、条件、レイアウトフラグメントなど、Correspondence Managementでは、顧客対応の静的、動的および繰り返し可能なコンポーネントを作成できます。
+seo-description: ドキュメントフラグメント例えば、Correspondence Managementでは、テキスト、リスト、条件、レイアウトフラグメントなど、顧客対応の静的、動的、繰り返し可能なコンポーネントを作成できます。
 uuid: 053a17e5-69a5-463d-af4f-46a86534158f
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 1f48548c-4222-454d-ad16-53da37170de2
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '266'
+ht-degree: 91%
 
 ---
 
