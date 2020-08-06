@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 87e62346-98d5-40ec-a3ef-904adf667425
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '920'
+ht-degree: 53%
 
 ---
 
@@ -30,8 +33,9 @@ Web サイトから Adobe Search&amp;Promote サービスを呼び出すには�
 >
 >カスタムプロキシ設定で Search&amp;Promote を使用している場合、AEM には 3.x API を使用する機能と 4.x API を使用する機能があるので、両方の HTTP クライアントプロキシを設定する必要があります。
 >
->* 3.x is configured with [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
+>* 3.x は [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) のように設定します。
 >* 4.x は [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) のように設定します。
+
 >
 
 
@@ -45,7 +49,7 @@ The default URL that is configured for the Search&amp;Promote service is `https:
 1. Open the [!UICONTROL OSGi] console and tap the **[!UICONTROL Configuration]** tab. （[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）。
 
 1. Click the **[!UICONTROL Day CQ Search&amp;Promote Configuration]** item.
-1. 「 **[!UICONTROL Remote Server URI]** 」テキストフィールドにURLを入力し、「 **[!UICONTROL Save」をタップします]**。
+1. 「 **[!UICONTROL リモートサーバーURI]** 」テキストフィールドにURLを入力し、「 **[!UICONTROL 保存]**」をタップします。
 
 ## Search&amp;Promote への接続の設定 {#configuring-the-connection-to-search-promote}
 
@@ -53,13 +57,13 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
 
 **Search&amp;Promoteへの接続を設定するには**:
 
-1. From the **[!UICONTROL Tools]** icon > **[!UICONTROL Deployment]**, select **[!UICONTROL Cloud Services]**.
+1. **[!UICONTROL ツール]** アイコン **[!UICONTROL /]**&#x200B;導入 **[!UICONTROL から、]** Cloud Servicesを選択します。
 
    これにより、クラウドサービスダッシュボードが表示されます。ローカルマシンの場合、ダッシュボードの URI は、次のようになります。
 
    [http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)
 
-1. In the [!UICONTROL Cloud Services] page, tap the **[!UICONTROL Adobe Search&amp;Promote]** link or the **[!UICONTROL Search&amp;Promote]** icon.
+1. [!UICONTROL Cloud Services] ページで、 **[!UICONTROL AdobeSearch&amp;Promote]** リンクまたは **[!UICONTROL Search&amp;Promote]** アイコンをタップします。
 
 1. If this is the first time you are configuring Adobe Search&amp;Promote, tap **[!UICONTROL Configure Now]** to open the [!UICONTROL Create Configuration] panel.
 
@@ -73,10 +77,11 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
 
    ![chlimage_1-410](assets/chlimage_1-410.png)
 
-1. [コンポーネ [!UICONTROL ントを編集] ]ダイアログボックスで、以下をフィールドに追加します。
+1. 「コンポーネントを [!UICONTROL 編集] 」ダイアログボックスで、フィールドに次を追加します。
 
    * **[!UICONTROL メンバー ID]**
    * **[!UICONTROL アカウント番号]**
+
    >[!NOTE]
    >
    >この情報を自分で取得するには、次にログインします。
@@ -85,13 +90,13 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
    >
    >有効な Seach&amp;Promote 資格情報（電子メール／パスワード）を使用します。
    >
-   >ブラウザのアドレスバーにURLが表示されます。 次のようになります。
+   >ブラウザのアドレスバーにURLが表示されていることに注意してください。 次のようになります。
    >
    >[](https://searchandpromote.omniture.com/px/home/?sp_id=XXXXXXXX-spYYYYYYYY)
    >
    >[https://searchandpromote.omniture.com/px/home/?sp_id=XXXXXXXX-spYYYYYYYY](https://searchandpromote.omniture.com/px/home/?sp_id=XXXXXXXX-spYYYYYYYY)
    >
-   >ここで **XXXXXXXは** 、メンバ **[!UICONTROL ーID]** 、 **[!UICONTROL spYYYYYYYYは]** 、アカウント番号に対応します。
+   >ここで、 **XXXXXXXXX****[!UICONTROL は]** メンバIDに対応し、 **[!UICONTROL spYYYYYYYYYY]** はアカウント番号に対応します。
 
 1. Tap **[!UICONTROL Connect To Search&amp;Promote]**.
 
@@ -103,7 +108,7 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
 
 ## データセンターの設定 {#configuring-the-data-center}
 
-Search&amp;Promoteアカウントがアジアまたはヨーロッパにある場合は、デフォルトのデータセンターが正しいデータセンターを指すように変更する必要があります（デフォルトのデータセンターは北米のアカウント用です）。
+Search&amp;Promoteアカウントがアジアまたはヨーロッパにある場合は、デフォルトのデータセンターを変更して、適切なデータセンターを指すようにする必要があります（デフォルトのデータセンターは北米のアカウント用です）。
 
 **データセンターを設定するには**:
 
@@ -121,7 +126,7 @@ Search&amp;Promoteアカウントがアジアまたはヨーロッパにある�
 
 ## Search&amp;Promote コンポーネントのサイドキックへの追加 {#adding-search-promote-components-to-sidekick}
 
-In [!UICONTROL Design] mode, edit a **[!UICONTROL par]** component to allow the Search&amp;Promote components in [!UICONTROL Sidekick]. （詳しくは、[コンポーネント](/help/sites-developing/components.md)のドキュメントを参照）。
+[!UICONTROL デザインモードで、] 各コンポーネントを編集し **[!UICONTROL 、]** サイドキックのSearch&amp;Promoteコンポーネントを許可します 。 （詳しくは、[コンポーネント](/help/sites-developing/components.md)のドキュメントを参照）。
 
 For information about using the components, see [Adding Search&amp;Promote features to a Web Page](/help/sites-authoring/search-and-promote.md).
 
@@ -149,11 +154,11 @@ For information about using the components, see [Adding Search&amp;Promote featu
 
 ## 製品フィード {#product-feed}
 
-Search&amp;Promote統合では、次の操作を実行できます。
+Search&amp;Promote統合により、次のことが可能になります。
 
 * Use the [!UICONTROL eCommerce] API, independently of the underlying repository structure and commerce platform.
 * Leverage the [!UICONTROL Index Connector] feature of Search&amp;Promote to provide a product feed in XML format.
 * Leverage the [!UICONTROL Remote Control] feature of Search&amp;Promote to perform on-demand or scheduled requests of the product feed.
-* 様々なSearch&amp;Promoteアカウントのフィード生成（クラウドサービス設定として設定）。
+* 様々なSearch&amp;Promoteアカウントに対するフィードの生成（クラウドサービスの設定として設定）
 
 For more information, see [Product Feed](/help/sites-administering/product-feed.md).
