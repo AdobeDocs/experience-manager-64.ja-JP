@@ -4,21 +4,24 @@ description: この記事では、AEM 6.4 Assets のユーザーエクスペリ�
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '646'
+ht-degree: 70%
 
 ---
 
 
 # Assets のユーザーエクスペリエンスの強化 {#user-experience-enhancements-in-assets}
 
-AEM 6.4 Assetsでは、シームレスなユーザーエクスペリエンスを提供し、生産性を向上させるための操作性がいくつか改善されました。 市場開拓コンテンツの作成および管理速度の向上は、ビジネスのコンテンツ速度を改善します。
+AEM 6.4 Assetsには、シームレスなユーザーエクスペリエンスを提供し、生産性を向上させるいくつかの操作性の改善が含まれています。 市場開拓コンテンツの作成および管理速度の向上は、ビジネスのコンテンツ速度を改善します。
 
-インターフェイスの方が応答性が高く、大規模なアセットポートフォリオを効率的に管理できます。 項目リストが長い場合でも、迅速に検索、表示、並べ替えおよびスムーズなスクロールをおこなうことができます。
+インターフェイスが応答性に優れ、大きなアセットポートフォリオを効率的に管理できます。 項目リストが長い場合でも、迅速に検索、表示、並べ替えおよびスムーズなスクロールをおこなうことができます。
 
 カード、リスト、列などの様々な表示をパーソナライズできます。例えば、カード表示に表示するサムネールのサイズを設定できます。 リスト表示では、リスト内のアセットに対して表示する詳細レベルを設定できます。AEM 6.4 Assets には新しいツリー表示が含まれています。これを使用すると、簡単にアセットリポジトリ内を移動してアセットを見つけることができます。
 
 ## 遅延読み込み {#lazy-loading}
 
-AEM 6.4 Assets でアセットを参照または検索すると、一度に最大 200 個のアセットが表示されます。結果をすばやくスクロールできます。これは、長い結果のリストを閲覧する場合に特に便利です。 大量のアセットが一度に読み込まれるので、スムーズに参照することができます。
+AEM 6.4 Assets でアセットを参照または検索すると、一度に最大 200 個のアセットが表示されます。結果はより高速にスクロールでき、長いリストの結果を閲覧する場合に特に便利です。 大量のアセットが一度に読み込まれるので、スムーズに参照することができます。
 
 アセットをタップまたはクリックして詳細ページをレビューした場合に、結果ページに戻るには、ツールバーの「戻る」ボタンをタップまたはクリックします。
 
@@ -30,11 +33,11 @@ AEM 6.4 Assets でアセットを参照または検索すると、一度に最�
 
 1. Tap/click the Layout icon from the toolbar, and then choose the **[!UICONTROL View Settings]** option.
 
-   ![view_settings](assets/view_settings.png)
+   ![表示設定](assets/view_settings.png)
 
-1. From the **[!UICONTROL View Settings]** dialog, select the desired thumbnail size, and then tap/click **[!UICONTROL Update]**.
+1. **[!UICONTROL 表示設定]** ダイアログで、目的のサムネールサイズを選択し、「 **[!UICONTROL 更新]**」をタップまたはクリックします。
 
-   ![view_settings_dialog](assets/view_settings_dialog.png)
+   ![表示設定ダイアログ](assets/view_settings_dialog.png)
 
 1. 選択したサイズで表示されるサムネールをレビューします。
 
@@ -48,11 +51,11 @@ AEM 6.4 Assets でアセットを参照または検索すると、一度に最�
 
 リスト表示の最初の列には、デフォルトでアセットのファイル名が表示されます。公開ステータスや処理ステータス、ロケールなどの追加情報も表示されます。
 
-![list_view](assets/list_view.png)
+![リスト_表示](assets/list_view.png)
 
 表示する詳細の内容を設定できます。「レイアウト」アイコンをタップまたはクリックして「**[!UICONTROL 設定を表示]**」オプションを選択し、**[!UICONTROL 設定を表示]**&#x200B;ダイアログで表示する列を指定します。
 
-![view_settings_dialoglistview](assets/view_settings_dialoglistview.png)
+![表示_設定_ダイアログリストビュー](assets/view_settings_dialoglistview.png)
 
 ## 列表示の改善点 {#column-view-improvements}
 
