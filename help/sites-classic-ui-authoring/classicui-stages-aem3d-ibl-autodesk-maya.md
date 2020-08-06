@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 00f7ed25-276b-42c2-ae4c-11de357a9ec6
 translation-type: tm+mt
 source-git-commit: e0ce860380a28a9dcaa6f8ce94ad278cdbe49fad
+workflow-type: tm+mt
+source-wordcount: '541'
+ht-degree: 75%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: e0ce860380a28a9dcaa6f8ce94ad278cdbe49fad
 1. Image-Based Lighting を設定します。
 
    1. レンダラー設定で、「**[!UICONTROL 次を使用してレンダリング：Mental Ray]**」を選択し、「シーン」タブを開きます。****
-   1. Open the **[!UICONTROL Environment]** accordion, then click **[!UICONTROL Create Image Based Lighting]**.
+   1. **[!UICONTROL 環境アコーディオンを開き]** 、「画像ベースの照明を **[!UICONTROL 作成]**」をクリックします。
    1. Click the box icon that has a right arrow on the left side of the box to select the IBL node `mentalRayIblShape1`, then exit the [!UICONTROL Render Settings].
    1. In the **[!UICONTROL Attribute Editor]**, select the transform node `mentalRayIbl1`, then rename the transform node to `AdobeIbl`.
 
