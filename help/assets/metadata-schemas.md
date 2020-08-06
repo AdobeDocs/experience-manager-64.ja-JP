@@ -41,7 +41,7 @@ In [!DNL Experience Manager Assets], a metadata schema defines the layout of the
 |---|---|---|
 | [!UICONTROL default] |  | アセットのベースメタデータスキーマフォーム。 |
 |  | The following child forms inherit the properties of the [!UICONTROL default] form: |  |
-|  | <ul><li> [!UICONTROL dm_video]</li></ul> | Dynamic Mediaビデオのスキーマフォーム。 |
+|  | <ul><li> [!UICONTROL dm_video]</li></ul> | ダイナミックメディアビデオのスキーマフォーム。 |
 |  | <ul><li> [!UICONTROL image]</li></ul> | MIMEタイプが「image」であるアセットのスキーマフォーム（例：image/jpeg、image/png）。 <br> [!UICONTROL 画像フォームには] 、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]: サブタイプが [!UICONTROL jpegのアセットのスキーマフォーム]。</li> <li>[!UICONTROL tiff]: サブタイプが [!UICONTROL tiffのアセットのスキーマフォーム]。</li></ul> |
 |  | <ul><li> [!UICONTROL アプリケーション]</li></ul> | application/ pdf、application/ zipなど、MIMEタイプが「application」のアセットのスキーマフォーム。 <br>[!UICONTROL pdf]: サブタイプpdfのアセットのスキーマフォーム |
 |  | <ul><li>[!UICONTROL ビデオ]</li></ul> | video/avi、video/mp4など、MIMEタイプが「video」のアセットのスキーマフォーム。 |
@@ -293,4 +293,4 @@ AEM Assets では、メタデータスキーマのバリアントを定義して
 
 >[!C注意]
 >
->メタデータの検証チェックは、大量のリソースを必要とするので、システムのパフォーマンスに影響を及ぼす可能性があります。検証チェックのスケジュール設定は、適切におこなう必要があります。AEMデプロイメントにパフォーマンスの問題がある場合は、このジョブを無効にしてみてください。
+>メタデータの検証チェックは、大量のリソースを必要とするので、システムのパフォーマンスに影響を及ぼす可能性があります。検証チェックのスケジュール設定は、適切におこなう必要があります。AEM展開にパフォーマンスの問題がある場合は、このジョブを無効にしてみてください。
