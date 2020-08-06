@@ -228,7 +228,7 @@ For adaptive forms with no form model, the data for all the fields is under the 
 
 ## Configuration Manager を使用した事前入力サービスの設定 {#configuring-prefill-service-using-configuration-manager}
 
-事前入力サービスを有効にするには、AEM Webコンソール設定で「デフォルトの事前入力サービスの設定」を指定します。 次の手順を使用して、事前入力サービスを設定します。
+事前入力サービスを有効にするには、AEM Webコンソールの設定で「デフォルトの事前入力サービスの設定」を指定します。 次の手順を使用して、事前入力サービスを設定します。
 
 >[!NOTE]
 >
@@ -244,9 +244,10 @@ For adaptive forms with no form model, the data for all the fields is under the 
 
    * file:///C:/Users/public/Document/Prefill/&amp;ast;
    * http://localhost:8000/somesamplexmlfile.xml
+
    >[!NOTE]
    >
-   >デフォルトでは、すべてのタイプのアダプティブフォーム（XSD、XDP、JSON、FDM、フォームモデルベースではない）のcrxファイルを介して事前入力が許可されます。 事前入力は JSON ファイルおよび XML ファイルでのみ許可されます。
+   >デフォルトでは、すべてのタイプのアダプティブForms（XSD、XDP、JSON、FDM、フォームモデルベースではない）のcrxファイルを介して事前入力が許可されます。 事前入力は JSON ファイルおよび XML ファイルでのみ許可されます。
 
 1. 事前入力サービスがフォームに対して設定されました。
 
