@@ -4,6 +4,9 @@ description: AEM Assets の Lightbox について学習します。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 100%
 
 ---
 
@@ -19,22 +22,22 @@ Adobe Experience Manager（AEM）Assets のユーザーである場合、Lightbo
 ## Lightbox へのアセットの追加 {#adding-assets-to-lightbox}
 
 1. Assets のユーザーインターフェイスで、Lightbox に追加するアセットを選択します。
-1. Drag the assets to the **[!UICONTROL Drop in Lightbox]** zone. Release when the Dropzone becomes active, and its label changes to **[!UICONTROL Drop to Add]**.
+1. アセットを **[!UICONTROL Lightbox にドロップ]**&#x200B;ゾーンにドラッグします。ドロップゾーンがアクティブになり、ラベルが「**[!UICONTROL ドロップして追加]**」に変わったらアセットを放します。
 
    ![add_to_lightbox](assets/add_to_lightbox.png)
 
-1. In the dialog, tap/click **[!UICONTROL Add]**, and then close it to complete the process. 選択したアセットが Lightbox に追加されます。
-1. ライトボックスを表示するには、コレクションコンソールに移動します。
-1. Tap/click **[!UICONTROL Lightbox]** to view the assets in it.
+1. ダイアログで「**[!UICONTROL 追加]**」をタップまたはクリックし、ダイアログを閉じてプロセスを完了します。選択したアセットが Lightbox に追加されます。
+1. Lightbox を表示するには、コレクションコンソールに移動します。
+1. 「**[!UICONTROL Lightbox]**」をタップまたはクリックして、その中のアセットを表示します。
 
    >[!NOTE]
    >
    >Lightbox はコレクションに似ていますが、コレクションに対して通常実行するすべてのアクションを実行できるわけではありません。例えば、Lightbox の設定を削除、共有または表示することはできません。また、Lightbox を他のコレクションに追加することはできません。ただし、Lightbox 内のアセットを編集することはできます。
 
-## Removing assets from Lightbox {#removing-assets-from-lightbox}
+## Lightbox からのアセットの削除 {#removing-assets-from-lightbox}
 
 1. コレクションコンソールに移動し、「Lightbox」をタップまたはクリックしてそのアセットを表示します。
 1. 削除するアセットを選択します。
-1. From the toolbar, tap/click **[!UICONTROL Remove]**.
-1. In the dialog, tap/click **[!UICONTROL Remove]** to confirm the delete action. アセットが Lightbox から削除されます。
+1. ツールバーの「**[!UICONTROL 削除]**」をタップまたはクリックします。
+1. ダイアログで「**[!UICONTROL 削除]**」をタップまたはクリックして、削除アクションを確定します。アセットが Lightbox から削除されます。
 
