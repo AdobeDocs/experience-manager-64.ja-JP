@@ -9,6 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e9e0d8fb-955e-4021-9e9a-9c95c6ffe88d
 translation-type: tm+mt
 source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+workflow-type: tm+mt
+source-wordcount: '333'
+ht-degree: 89%
 
 ---
 
@@ -29,6 +32,6 @@ Adobe Sign 対応のアダプティブフォームには署名者に関する情
 
 ユーザーデータは契約書内で収集されますが、いずれのサービステーブルにも保存されません。Adobe Sign を使用すると、管理者はサービスで管理する管理データを自身で選択できます。Adobe Sign サービスのプライバシー管理者は、依頼者の電子メールアドレスに基づいて契約書のリストの作成または削除を行うことができます。
 
-Adobe Sign は、参加者による契約書の検索、および必要に応じて契約書の削除を実行できる Web アプリケーションを提供しています。詳しくは、 [Adobe Sign — 機能を参照してください。ユーザ情報の削除](https://helpx.adobe.com/sign/help/adobesign_gdpr_user_deletion.html)。
+Adobe Sign は、参加者による契約書の検索、および必要に応じて契約書の削除を実行できる Web アプリケーションを提供しています。詳しくは、 [Adobe Sign — 機能： ユーザー情報の削除](https://helpx.adobe.com/sign/help/adobesign_gdpr_user_deletion.html)。
 
 Forms Portal の送信アクションを使用するように構成されているアダプティブフォームの契約書データも、Forms Portal のデータストアに格納されます。Forms Portal のデータストアにアクセスしてデータを削除する方法については、「[Forms Portal | ユーザーデータの処理](/help/forms/using/forms-portal-handling-user-data.md)」を参照してください。
