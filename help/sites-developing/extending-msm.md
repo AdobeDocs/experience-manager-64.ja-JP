@@ -219,7 +219,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 Add child nodes of type `cq:LiveSyncAction` to add synchronization actions to the rollout configuration. 同期アクションノードの順序によって、アクションが実行される順序が決まります。
 
-1. CRXDE Liteでも、 [ロールアウト設定](#create-the-rollout-configuration) ノードを選択します。
+1. 引き続きCRXDE Liteで、[ [ロールアウト設定](#create-the-rollout-configuration) ]ノードを選択します。
 
    次に例を示します。
    `/apps/msm/myproject/rolloutconfigs/myrolloutconfig`
