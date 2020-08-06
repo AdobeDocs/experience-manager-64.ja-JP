@@ -12,6 +12,9 @@ discoiquuid: 81ceb91d-039e-45f0-9b0c-b8233901dea8
 targetaudience: target-audience upgrader
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '715'
+ht-degree: 71%
 
 ---
 
@@ -39,7 +42,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 >[!NOTE]
 >
->AEM 6.4は、アップグレードの信頼性を向上させるための取り組みの一環として、包括的なリポジトリの再構築を実施しています。 For more information on how to align with the new structure, see [Repository Restructuring in AEM 6.4](/help/sites-deploying/repository-restructuring.md)
+>AEM 6.4は、アップグレードの信頼性を向上させる努力の一環として、包括的なリポジトリの再構築を行っています。 For more information on how to align with the new structure, see [Repository Restructuring in AEM 6.4](/help/sites-deploying/repository-restructuring.md)
 
 ## What Has Changed? {#what-has-changed}
 
@@ -49,7 +52,7 @@ AEM 6.0 で、新しい Jackrabbit Oak リポジトリが導入されました�
 
 アセットインサイトを使用し、AEM 6.2 より前のバージョンからアップグレードする場合は、アセットを移行し、JMX Bean で ID を生成する必要があります。アドビの内部テストでは TarMK 環境の 12.5 万個のアセットが 1 時間で移行されましたが、ユーザーの結果は異なる場合があります。
 
-AEM 6.3 introduced a new format for the `SegmentNodeStore`, which is the basis of the TarMK implementation. AEM 6.3より古いバージョンからアップグレードする場合は、アップグレードの一環として、システムのダウンタイムを伴うリポジトリの移行が必要になります。
+AEM 6.3 introduced a new format for the `SegmentNodeStore`, which is the basis of the TarMK implementation. AEM 6.3より古いバージョンからアップグレードする場合は、システムのダウンタイムを伴う、アップグレードの一環としてリポジトリの移行が必要になります。
 
 アドビのエンジニアリング部は、この移行には約 20 分かかると予測しています。インデックスの再作成は必要ないことに注意してください。また、新しいリポジトリ形式で機能するように crx2oak ツールの新しいバージョンがリリースされました。
 
@@ -67,9 +70,9 @@ crx2oak ツールのコマンドライン使用オプションは、自動化し
 
 最近の AEM バージョンの変更点について詳しくは、完全版のリリースノートを参照してください。
 
-* [https://helpx.adobe.com/jp/experience-manager/6-2/release-notes.html](https://helpx.adobe.com/experience-manager/6-2/release-notes.html)
-* [https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html](https://helpx.adobe.com/experience-manager/6-3/release-notes.html)
-* [https://helpx.adobe.com/jp/experience-manager/6-4/release-notes.html](https://helpx.adobe.com/experience-manager/6-4/release-notes.html)
+* [https://helpx.adobe.com/jp/experience-manager/6-2/release-notes.html](https://helpx.adobe.com/jp/experience-manager/6-2/release-notes.html)
+* [https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html)
+* [https://helpx.adobe.com/jp/experience-manager/6-4/release-notes.html](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes.html)
 
 ## アップグレードの概要 {#upgrade-overview}
 
