@@ -40,11 +40,11 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->WebサービスAPIを使用して、ユーザーに割り当てられたタスクを検索することはできません。 このタスクを実行するために必要なメソッド呼び出しである `taskList` メソッドを呼び出すことができないためです。
+>WebサービスAPIを使用して、ユーザーに割り当てられたタスクを検索することはできません。 このタスクを実行するために必要なメソッド呼び出しである `taskList` メソッドは、呼び出せないためです。
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsとのプログラミング」にあるクイック開始は、Formsサーバのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）: Java APIを使用したタスクの割り当て {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
 
