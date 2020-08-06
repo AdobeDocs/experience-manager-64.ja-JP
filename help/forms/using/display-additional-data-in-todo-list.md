@@ -10,6 +10,9 @@ topic-tags: forms-workspace
 discoiquuid: b74a0933-2b96-4a88-9995-6fb21df141aa
 translation-type: tm+mt
 source-git-commit: a5cac0d369bb40659cfde011e5d6ef9a68dc4012
+workflow-type: tm+mt
+source-wordcount: '308'
+ht-degree: 90%
 
 ---
 
@@ -33,7 +36,7 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
 1. 「[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」に従います。
 1. タスクに追加の情報を表示するには、対応するキーと値のペアを `translation.json` のタスクブロック内に追加する必要があります。
 
-   例えば、英語を次のよ `/apps/ws/locales/en-US/translation.json` うに変更します。
+   例えば、英語 `/apps/ws/locales/en-US/translation.json` を次のように変更します。
 
    ```
    "task" : {
@@ -141,9 +144,9 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
    * 追加の: `/libs/ws/js/runtime/templates/`
    * を: `/apps/ws/js/runtime/templates/`
 
-1. に追加新しい情報を追加しま `/apps/ws/js/runtime/templates/task.html`す。
+1. に追加新しい情報を追加し `/apps/ws/js/runtime/templates/task.html`ます。
 
-   例えば、次の下に追加しま `div class="taskProperties"`す。
+   例えば、次の下にを追加し `div class="taskProperties"`ます。
 
    ```
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
