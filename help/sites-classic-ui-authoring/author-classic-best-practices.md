@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
 translation-type: tm+mt
 source-git-commit: ef7e013fc36bc06025b0cdedf9038c33206e4a1a
+workflow-type: tm+mt
+source-wordcount: '309'
+ht-degree: 82%
 
 ---
 
@@ -66,10 +69,10 @@ source-git-commit: ef7e013fc36bc06025b0cdedf9038c33206e4a1a
 
 Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
 
-オーサリング：作成者 [環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) — ページの作成方法の概要を示します。
+オーサリング： [作成者の環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) — ページの作成方法の概要を示します。
 
-## Forms {#forms}
+## フォーム {#forms}
 
-アダプティブフォーム：アダプテ [ィブフォームを使用するためのベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) — アダプティブフォームの設定、オーサリング、カスタマイズに関するベストプラクティスを説明します。
+アダプティブフォーム： [アダプティブフォームの使用に関するベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) — アダプティブフォームの設定、オーサリング、カスタマイズのベストプラクティスを説明します。
 
-HTML5フォーム：HTML5フォ [ームデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) - HTML5フォームのレイアウトとデザインを操作するためのベストプラクティスを説明します。
+HTML5フォーム： [HTML5フォームのデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) - HTML5フォームのレイアウトとデザインを操作する上でのベストプラクティスを説明します。
