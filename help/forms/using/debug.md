@@ -71,7 +71,7 @@ In the exception details, search for word **caused by**.
 
    (com.adobe.livecyclescala-lang.bundle)
 
-   * Adobe XFA Forms Renderer
+   * AdobeXFAFormsレンダラ
 
    (com.adobe.livecycle.adobe-lc-forms-core)
 
