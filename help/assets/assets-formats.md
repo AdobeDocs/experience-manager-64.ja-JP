@@ -1,6 +1,6 @@
 ---
 title: AEM Assets でサポートされているファイル形式
-description: AEM Assetsでサポートされるファイル形式とMIMEタイプのリスト、および各形式でサポートされる機能。
+description: AEM Assetsでサポートされるファイル形式とMIMEタイプのリストと、各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 2baa172088f646752e85168d432d46942ac8244e
@@ -47,7 +47,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 
 **△** 結合した画像はPSDファイルから抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
-Dynamic Media機能でサポートされるラスターイメージ形式は次のとおりです。
+ダイナミックメディアの機能でサポートされるラスターイメージ形式は、次のとおりです。
 
 | 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -77,11 +77,11 @@ Dynamic Media機能でサポートされるラスターイメージ形式は次�
 
 * EPS ファイルの場合、メタデータの書き戻しは、PostScript Document Structuring Convention（PS-Adobe）バージョン 3.0 以降でサポートされています。
 
-## Dynamic Mediaでサポートされていないラスターイメージ形式 {#unsupported-image-formats-dynamic-media}
+## ダイナミックメディアでサポートされていないラスターイメージ形式 {#unsupported-image-formats-dynamic-media}
 
-次のリストでは、Dynamic Mediaでサポートされていないラスターイメージファイル形式のサブタイプにつ *いて説明します* 。
+次のリストでは、ダイナミックメディアでサポートされていないラスターイメージファイル形式のサブタイプにつ *いて説明します* 。
 
-Dynamic Mediaーでサポートされていないファイル形式の [検出も参照してください](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)。
+ダイナミックメディアでサポートされていないファイル形式の [検出も参照してください](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)。
 
 * 100 MB を超える IDAT チャンクサイズを持つ PNG ファイル。
 * PSB ファイル。
@@ -102,7 +102,7 @@ See [Using PDF Rasterizer](aem-pdf-rasterizer.md).
 
 ## 画像トランスコーディングライブラリ {#supported-image-transcoding-library}
 
-Adobe Imaging Transcoding Libraryは、エンコード、トランスコード、リサンプリング、サイズ変更など、主な画像処理機能を実行する画像処理ソリューションです。
+Adobeイメージングトランスコーディングライブラリは、エンコーディング、トランスコード、リサンプリング、サイズ変更など、主要な画像処理機能を実行する画像処理ソリューションです。
 
 Imaging Transcoding Libraryは、JPG/JPEG、PNG（8ビットおよび16ビット）、GIF、BMP、TIFF/Compressed TIFF（32ビットのTIFFファイルおよびPTIFFファイルを除く）、ICOおよびICNのMIMEタイプをサポートしています。
 
@@ -137,7 +137,7 @@ Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像�
 | QXP | ✓ | ✓ |  |  |  |  |  |
 | EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |
 
-Dynamic Media機能でサポートされるドキュメント形式は次のとおりです。
+ダイナミックメディアの機能でサポートされるドキュメント形式は次のとおりです。
 
 | 形式 | Upload<br> (Input format) | Create<br> image<br> preset<br> (Output format) | Preview<br> dynamic<br> rendition | Deliver<br> dynamic<br> rendition | Download<br> dynamic<br> rendition |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -243,9 +243,9 @@ Dynamic Media機能でサポートされるドキュメント形式は次のと�
 
 ## サポートされる MIME タイプ {#supported-mime-types}
 
-デフォルトでは、AEMはファイル拡張子を使用してファイルの種類を検出します。 AEMは、ファイルの内容から検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the AEM Web Console.
+デフォルトでは、AEMはファイル拡張子を使用してファイルの種類を検出します。 AEMは、ファイルの内容からそれを検出できます。 For latter, select [!UICONTROL Detect MIME from content] option in [!UICONTROL Day CQ DAM Mime Type Service] in the AEM Web Console.
 
-サポートされるMIMEタイプのリストは、CRXDE Liteので使用でき `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`ます。
+サポートされるMIMEタイプのリストは、のCRXDE Liteで確認でき `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`ます。
 
 | ファイル拡張子 | MIME タイプ／インターネットメディアタイプ | デフォルトの jobParam 値 | 許可される jobParam 値 |
 |---|---|---|---|
