@@ -220,8 +220,8 @@ Target 設定にカスタム mbox.js ファイルが含まれます。これは�
 コンテキストメニューから「ターゲット」コマンドを削除するには、コンポーネントの cq:editConfig ノードに次のプロパティを追加します。
 
 * 名前：`cq:disableTargeting`
-* タイプ：`Boolean`
-* 値: `True`
+* 型：`Boolean`
+* 値：`True`
 
 For example, to disable targeting for the title components of the Geometrixx Demo Site pages, add the property to the `/apps/geometrixx/components/title/cq:editConfig` node.
 
@@ -317,12 +317,12 @@ String orderID = session.getOrderId();
 
 ## Target コンポーネントについて {#understanding-the-target-component}
 
-Target コンポーネントを使用すると、CQ コンテンツコンポーネントから動的 mbox を作成できます（[コンテンツのターゲティング](/help/sites-authoring/content-targeting-touch.md)を参照）。Targetコンポーネントは、/libs/cq/personalization/components/ターゲットにあります。
+Target コンポーネントを使用すると、CQ コンテンツコンポーネントから動的 mbox を作成できます（[コンテンツのターゲティング](/help/sites-authoring/content-targeting-touch.md)を参照）。ターゲットコンポーネントは、/libs/cq/personalization/components/ターゲットにあります。
 
 target.jsp スクリプトは、ページのプロパティにアクセスして、コンポーネントに使用するターゲティングエンジンを決定し、適切なスクリプトを実行します。
 
 * Adobe Target: `/libs/cq/personalization/components/target/engine_tnt.jsp`
-* [AT.JSとのAdobe Target](/help/sites-administering/target.md): `/libs/cq/personalization/components/target/engine_atjs.jsp`
+* [Adobe TargetとAT.JS](/help/sites-administering/target.md): `/libs/cq/personalization/components/target/engine_atjs.jsp`
 * [Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md): `/libs/cq/personalization/components/target/engine_cq_campaign.jsp`
 * クライアント側のルール/ContextHub: `/libs/cq/personalization/components/target/engine_cq.jsp`
 
