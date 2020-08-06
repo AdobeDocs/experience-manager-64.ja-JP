@@ -9,13 +9,16 @@ topic-tags: develop
 discoiquuid: f458054e-885c-4c7a-afcd-ad1e4465e0c1
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '274'
+ht-degree: 83%
 
 ---
 
 
 # Designer での Page Zero コンテンツの変更 {#changing-page-zero-content-in-designer}
 
-ChromeまたはFirefoxのデフォルトPDFビューアなど、Adobe以外のPDFビューアでPDF/XFAフォームのコンテンツを読み取れない場合、Page Zeroコンテンツがデフォルトで表示されます。 デフォルトの Page Zero メッセージは、次のとおりです。
+ChromeまたはFirefoxのデフォルトPDFビューアなど、Adobe PDF以外のビューアでPDF/XFAフォームのコンテンツを読み取れない場合、Page Zeroコンテンツはデフォルトで表示されます。 デフォルトの Page Zero メッセージは、次のとおりです。
 
 ![defaultpage0message](assets/defaultpage0message.png)
 
