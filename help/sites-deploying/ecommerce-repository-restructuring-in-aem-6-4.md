@@ -10,6 +10,9 @@ topic-tags: repo_restructuring
 discoiquuid: 28c92e7d-2106-4333-afa6-c5528a00d7b4
 translation-type: tm+mt
 source-git-commit: 6449921348ef3758ec95ddba8b478691008153f3
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 85%
 
 ---
 
@@ -49,7 +52,7 @@ As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-dep
     </ul> <p>大規模なカタログでは、以下の Java システムプロパティを AEM に渡して、コマース移行タスクを個別に実行することをお勧めします。</p> <p><code>propertyname: com.adobe.upgrade.forcemigration</code></p> <p><code>property value: com.day.cq.compat.codeupgrade.impl.cq64.CQ64CommerceMigrationTask</code></p> <p>移行後、AEM の再起動が必要です。</p> </td> 
   </tr>
   <tr>
-   <td><strong>メモ</strong></td> 
+   <td><strong>備考</strong></td> 
    <td>該当なし<br /> </td> 
   </tr>
  </tbody>
