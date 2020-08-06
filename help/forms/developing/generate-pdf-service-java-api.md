@@ -32,7 +32,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsでのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）: Java APIを使用したMicrosoft WordドキュメントのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}
 
@@ -150,7 +150,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 ## クイック開始（SOAPモード）: Java APIを使用したHTMLコンテンツのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例を使用すると、https://www.adobe.comにあるHTMLコンテンツを、 *AdobeHTML.pdfというPDFドキュメントに変換できます*。 (HTMLドキュメントのPDFドキュメントへの [変換を参照](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents))。
+次のJavaコードの例を使用すると、https://www.adobe.comにあるHTMLコンテンツを、AdobeHTML.pdfというPDFドキュメントに変換でき *ます*。 (HTMLドキュメントのPDFドキュメントへの [変換を参照](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents))。
 
 ```as3
  /* 
