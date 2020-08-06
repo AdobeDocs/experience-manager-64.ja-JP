@@ -11,6 +11,9 @@ topic-tags: forms-workspace
 discoiquuid: 54326a05-3fb0-4111-a6ec-230b6473052e
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '299'
+ht-degree: 52%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 カスタマイズを実行するための一般的な手順を以下に示します。
 
-1. にアクセスしてCRXDE Liteにログインしま `https://[server]:[port]/lc/crx/de/index.jsp`す。
+1. にアクセスしてCRXDE Liteにログインし `https://[server]:[port]/lc/crx/de/index.jsp`ます。
 1. Create a folder named `ws`at `/apps`, if it does not exist. 「**[!UICONTROL すべて保存]**」をクリックします。
 1. Browse to `/apps/ws`, and navigate to the **[!UICONTROL Access Control]** tab.
 1. In the **[!UICONTROL Access Control]** list, click **[!UICONTROL +]** to add a new entry. もう一度「**[!UICONTROL +]**」をクリックします。
@@ -30,7 +33,7 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 1. Give `jcr:read` privilege to the Principal.
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
 1. Copy the `GET.jsp` and `html.jsp`files from the `/libs/ws`folder to the `/apps/ws` folder.
-1. フォルダー内 `/libs/ws/locales` のフォルダーをコピ `/apps/ws` ーします。 「**[!UICONTROL すべて保存]**」をクリックします。
+1. フォルダー内の `/libs/ws/locales` フォルダーをコピー `/apps/ws` します。 「**[!UICONTROL すべて保存]**」をクリックします。
 1. Update the references and relative paths in the `GET.jsp` file, as shown below, and click **[!UICONTROL Save all]**.
 
    ```
@@ -81,12 +84,12 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 1. HTML のカスタマイズは以下のようにして実行します。
 
-   1. の下で、 `/apps/ws/js`という名前のフォルダを作成しま `runtime`す。 「**[!UICONTROL すべて保存]**」をクリックします。
-   1. の下で、 `/apps/ws/js/runtime`という名前のフォルダを作成しま `templates`す。 「**[!UICONTROL すべて保存]**」をクリックします。
+   1. の下 `/apps/ws/js`に、という名前のフォルダを作成し `runtime`ます。 「**[!UICONTROL すべて保存]**」をクリックします。
+   1. の下 `/apps/ws/js/runtime`に、という名前のフォルダを作成し `templates`ます。 「**[!UICONTROL すべて保存]**」をクリックします。
    1. `/libs/ws/js/main.js` を `/apps/ws/js/main.js` にコピーします。
    1. Copy /libs/ws/js/registry.js to `/apps/ws/js/registry.js`.
 
 1. 「**[!UICONTROL Save All]**」をクリックし、キャッシュをクリアして AEM Forms Workspace を更新します。
 
-   URLにアクセスし、管 `https://[server]:[port]/lc/ws` 理者/パスワードの資格情報を使用してログインします。 ブラウザーがにリダイレクトされま `https://[server]:[port]/lc/apps/ws/index.html`す。
+   URLにアクセス `https://[server]:[port]/lc/ws` し、管理者/パスワードの資格情報でログインします。 ブラウザーがにリダイレクト `https://[server]:[port]/lc/apps/ws/index.html`します。
 
