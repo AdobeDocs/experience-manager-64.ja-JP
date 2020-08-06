@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 0763f236-5648-49e9-8a24-dbc8f4c77ee3
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '739'
+ht-degree: 60%
 
 ---
 
@@ -25,13 +28,13 @@ source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
 
 ## StorageResourceProvider API {#storageresourceprovider-api}
 
-SocialResourceProvider API（SRP API）は、様々な Sling リソースプロバイダー API の拡張です。ページネーションとアトミック増分のサポートが含まれます（集計とスコアリングに役立ちます）。
+SocialResourceProvider API（SRP API）は、様々な Sling リソースプロバイダー API の拡張です。ページネーションとアトミックインクリメントのサポートが含まれます（割り込みとスコアリングに役立ちます）。
 
-日付、有用性、投票数などによる並べ替えが必要なので、SCF コンポーネントにはクエリが必要です。すべてのSRPオプションには、バケティングに依存しない柔軟なクエリメカニズムがあります。
+日付、有用性、投票数などによる並べ替えが必要なので、SCF コンポーネントにはクエリが必要です。すべてのSRPオプションには柔軟なクエリメカニズムがあり、これらはグループ発行に依存しません。
 
-SRP 格納場所には、コンポーネントのパスが組み込まれます。SRP APIは、ASRP、MSRP、JSRPなど、選択したSRPオプションに依存するルートパスなので、UGCへのアクセスに常に使用する必要があります。
+SRP 格納場所には、コンポーネントのパスが組み込まれます。ルートパスはASRP、MSRP、JSRPなどのSRPオプションの選択に依存するので、SRP APIを常に使用してUGCにアクセスする必要があります。
 
-SRP API は、抽象クラスではなくインターフェイスです。新しいリリースにアップグレードする場合、内部実装に対する将来の改善のメリットが失われるので、カスタム実装は軽易には実施しないでください。
+SRP API は、抽象クラスではなくインターフェイスです。新しいリリースにアップグレードする場合、内部実装に対する今後の改善のメリットが失われるので、カスタム実装は軽度に行うべきではありません。
 
 SRP API を使用するための手段は、提供されるユーティリティ（SocialResourceUtilities パッケージで見つかるものなど）です。
 
@@ -105,29 +108,29 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 メンバーがパブリッシュ環境で UGC を入力する場合、AEM サイトの一部としてのコンポーネントとやり取りしています。
 
-An example of such a component is the [comments component](http://localhost:4502/content/community-components/en/comments.html) that exists in the [Community Components Guide](components-guide.md) site. ローカルリポジトリ内のコメントノードのパスは次のとおりです。
+An example of such a component is the [comments component](http://localhost:4502/content/community-components/en/comments.html) that exists in the [Community Components Guide](components-guide.md) site. ローカルリポジトリ内のコメントノードへのパスは次のとおりです。
 
 * Component path = */content/community-components/en/comments/jcr:content/content/includable/comments*
 
 **シャドウノードの場所**
 
-UGC の作成によって、必要な ACL が適用される[シャドウノード](srp.md#about-shadow-nodes-in-jcr)も作成されます。ローカルリポジトリ内の対応するシャドウノードへのパスは、シャドウノードのルートパスをコンポーネントパスに先に付けた結果です。
+UGC の作成によって、必要な ACL が適用される[シャドウノード](srp.md#about-shadow-nodes-in-jcr)も作成されます。ローカルリポジトリ内の対応するシャドウノードへのパスは、シャドウノードのルートパスがコンポーネントパスの前に置かれた結果です。
 
 * ルートパス= /content/usergenerated
-* コメントシャドウノード= /content/usergenerated/content/community-components/ja/comments/jcr:content/content/includable/comments
+* コメントシャドウノード= /content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments
 
 **UGC の場所**
 
 UGC はこれらの場所のどちらにも作成されず、SRP API を呼び出す[ユーティリティメソッド](#utility-method-to-access-ugc)の使用によってのみアクセスする必要があります。
 
 * ルートパス= /content/usergenerated/asi/srp-choice
-* JSRPのUGCノード= /content/usergenerated/asi/jcr/content/community-components/jn/comments/jcr:content/includable/comments/srzd-let_it_be_
+* JSRPのUGCノード= /content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/includable/comments/srzd-let_it_be_
 
-** JSRP の場合、UGC ノードはそれが入力された AEM インスタンス（オーサーまたはパブリッシュ）上にのみ存在することに注意してください。**&#x200B;発行インスタンスに対して入力した場合、作成者のモデレートコンソールからモデレートを行うことはできません。
+** JSRP の場合、UGC ノードはそれが入力された AEM インスタンス（オーサーまたはパブリッシュ）上にのみ存在することに注意してください。**&#x200B;発行インスタンスに対して入力した場合、作成者のモデレートコンソールからモデレートを実行することはできません。
 
 ## 関連情報 {#related-information}
 
-* [ストレージ・リソース・プロバイダの概要](srp.md) — 概要とリポジトリの使用状況の概要
+* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリ使用の概要
 * [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン
-* [SocialUtilsリファクタリング](socialutils.md) — 廃止されたユーティリティメソッドを現在のSRPユーティリティメソッドにマッピング
+* [SocialUtilsリファクタリング](socialutils.md) — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピング
 
