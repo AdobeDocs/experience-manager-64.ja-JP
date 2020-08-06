@@ -10,6 +10,9 @@ topic-tags: Configuration
 discoiquuid: 1bada670-3e0e-40f4-b9be-8b090df910be
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 79%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 
 **- 要件**
 
-**必要な知識** AEM Forms WorkspaceをSharePoint serverに追加する前に、適切な権限を持つSharePoint serverにアクセスでき、WorkspaceにアクセスするためのURLを知っている必要があります。 以下の手順では、SharePoint Server に精通していることを前提としています。SharePoint Server 内の Web パーツの詳細については、「Windows SharePoint Services 内の Webパーツ」を参照してください。
+**必要な知識** AEM FormsワークスペースをSharePoint Serverに追加する前に、適切な権限を持つSharePoint Serverにアクセスでき、WorkspaceにアクセスするためのURLを知っている必要があります。 以下の手順では、SharePoint Server に精通していることを前提としています。SharePoint Server 内の Web パーツの詳細については、「Windows SharePoint Services 内の Webパーツ」を参照してください。
 
 **ユーザレベル**&#x200B;初心者
 
@@ -49,7 +52,7 @@ AEM Forms Workspace は、Microsoft Office SharePoint Server（たとえば、Mi
 
    ![Microsoft Office SharePoint サーバーの「ページビューアの Web パーツ」ボックス。](assets/page-viewer-web-part-box-in-microsoft-office-sharepoint-server.png)
 
-   **** 図：Microsoft Office sharePointサ *ーバーの[ページビューアWebパーツ]ボックスです。*
+   **図：** *Microsoft Office SharePointサーバーの[ページビューアのWebパーツ]ボックスです。*
 
 1. 「ページビューア」ページで、次のタスクを実行します。
 
@@ -67,5 +70,5 @@ AEM Forms Workspace は、Microsoft Office SharePoint Server（たとえば、Mi
 
 ![Microsoft Office SharePoint Server を統合した AEM Forms Workspace](assets/aem-forms-workspace.jpg)
 
-**** 図：Microsoft Office sharePoint serverと統合された *AEM Forms Workspace*
+**図：** *Microsoft Office SharePoint Serverと統合されたAEM Formsワークスペース*
 
