@@ -10,6 +10,9 @@ topic-tags: customization
 discoiquuid: 842d3a5a-8e09-4a21-b9a2-a8f4f5b699bd
 translation-type: tm+mt
 source-git-commit: 9229642edd5a91bee017d8c0680cd6c10bfe43df
+workflow-type: tm+mt
+source-wordcount: '1247'
+ht-degree: 68%
 
 ---
 
@@ -32,7 +35,7 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
 ## カスタムテンプレートの作成 {#creating-a-nbsp-custom-template}
 
-1. */apps *の下にsling:Folderノードを作成します。
+1. */apps *の下にsling:Folderノードを作成
 
    &quot;fpContentType&quot; プロパティを追加カスタムテンプレートを設定しようとしているコンポーネントに応じてプロパティの適切な値を指定します。
 
@@ -42,9 +45,10 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
       * ドラフトセクション：/libs/fd/fp/draftsTemplate
       * 送信セクション：/libs/fd/fp/submissionsTemplate
    * Link コンポーネント：&quot;/libs/fd/fp/formTemplate&quot;
+
    レイアウトテンプレートを選択する際に表示したいタイトルを追加します。
 
-   *注意：タイトルは、作成したsling:Folderのノード名とは異なる場合があります。 *
+   *注意： タイトルは、作成したsling:Folderのノード名とは異なる場合があります。 *
    *次の画像は、Search &amp; Listerコンポーネントの構成を示します。* ![sling:Folderの作成](assets/1-3.png)
 
 1. このフォルダー内に template.html ファイルを作成して、カスタムテンプレートとして使用します。
@@ -74,13 +78,13 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
 ## カスタムテンプレートの技術仕様 {#technical-specifications-for-custom-templates}
 
-すべてのフォームポータルコンポーネントのカスタムテンプレートには、繰り返し可能なエントリと繰り返し不可能なエントリが含まれます。 繰り返し可能なエントリは、リスト表示の基本エンティティです。Search &amp; Lister、ドラフト&amp;提出および Link コンポーネントなどが繰り返し可能なエントリの例です。
+すべてのFormsポータルコンポーネントのカスタムテンプレートには、繰り返し可能なエントリと繰り返し不可能なエントリが含まれています。 繰り返し可能なエントリは、リスト表示の基本エンティティです。Search &amp; Lister、ドラフト&amp;提出および Link コンポーネントなどが繰り返し可能なエントリの例です。
 
 フォームポータルは、プレースホルダに構文を提供してカスタム /OOTB メタデータを表示します。プレースホルダは、フォーム、ドラフトまたは提出の結果を表示した後に追加されます。
 
 To include a repeatable entry, configure the value of the attribute **data-repeatable** to **true**.
 
-*説明した例では、2つのDiv要素がカスタムテンプレートの最上部に存在します。 最初に、&quot;__FP_boxes-container&quot; CSSクラスで、リストされているフォームのコンテナエレメントとして機能します。2番目に、&quot;__FP_boxes&quot; CSSクラスで基本エンティティのテンプレート、この場合フォームになります。The **data-repeatable** attribute present in the Div element has the value **true**.
+*説明した例では、2つのDiv要素がカスタムテンプレートの一番上に存在します。 最初に、&quot;__FP_boxes-container&quot; CSSクラスで、リストされているフォームのコンテナエレメントとして機能します。2番目に、&quot;__FP_boxes&quot; CSSクラスで基本エンティティのテンプレート、この場合フォームになります。The **data-repeatable** attribute present in the Div element has the value **true**.
 
 それぞれのプレースホルダーには 1 つずつ OOTB メタデータセットがあります.To display custom metadata at a particular place on the form, add the **$metadata_prop property** at the place.
 
@@ -95,18 +99,18 @@ To include a repeatable entry, configure the value of the attribute **data-repea
 * **タイトル：**&#x200B;フォームのタイトル
 * **名前**：フォーム名（多くの場合、タイトルと同じです）
 * **説明**：フォームの説明
-* **formUrl**:フォームをHTMLとしてレンダリングするURL
-* **pdfUrl**:フォームをPDFとしてレンダリングするURL
+* **formUrl**: フォームをHTMLとしてレンダリングするURL
+* **pdfUrl**: フォームをPDFとしてレンダリングするURL
 * **アセットタイプ**：アセットの種類Valid values include **Form**, **PDF Form**, **Print Form**, and **Adaptive Form**
-* **htmlStyle**&amp; **pdfStyle**：HTML の表示スタイルと PDF アイコンはそれぞれレンダリングに使用されています。有効な値は「**__FP_display_none**」またはブラ **ンク**
+* **htmlStyle**&amp; **pdfStyle**：HTML の表示スタイルと PDF アイコンはそれぞれレンダリングに使用されています。有効な値は、「**__FP_display_none**」または **空白です。**
 
-   *注意：カスタムスタイルシートで__FP_display_noneクラスを必ず使用してください*
+   *注意： カスタムスタイルシートで__FP_display_noneクラスを忘れずに使用してください*
 
-* **downloadUrl**:アセットをダウンロードするURL。
+* **downloadUrl**: アセットをダウンロードするURL。
 
 ローカリゼーション、ソート、ユーザーインターフェイス上での設定プロパティ使用のサポート（Search &amp; Lister のみ）:
 
-1. **ローカリゼーションサポート**:静的テキストをローカライズするには、属性 **${localize-***YOUR_TEXT***** }を使用し、ローカライズされた値が存在しない場合は、その値を使用可能にします。
+1. **ローカライゼーションサポート**: スタティックテキストをローカライズするには、属性 **${localize-***YOUR_TEXT***}を使用し** 、ローカライズされた値が存在しない場合は、値を使用可能にします。
 
    *説明した例では、属性 ${localize-Apply} と ${localize-Download} は、「適用」と「ダウンロード」のテキストをローカライズするのに使用します。*
 
@@ -114,18 +118,18 @@ To include a repeatable entry, configure the value of the attribute **data-repea
 
    例えば、グリッド表示の「タイトル」ヘッダーでは、「data-sortKey」ヘッダーの値が「タイトル」 です。見出しをクリックして、特定の列の値を並べ替えます。
 
-1. **設定プロパティの使用**：Search &amp; Listerコンポーネントには、ユーザーインターフェイスに使える設定がいくつかあります。For example, to display HTML ToolTip text saved through the edit dialog, use the **${config-htmlLinkText} attribute.**&#x200B;同様に、PDFのツールヒントテキストには&#x200B;**、${config-pdfLinkText}属性を使用します** 。
+1. **設定プロパティの使用**：Search &amp; Listerコンポーネントには、ユーザーインターフェイスに使える設定がいくつかあります。For example, to display HTML ToolTip text saved through the edit dialog, use the **${config-htmlLinkText} attribute.**&#x200B;同様に、PDFツールヒントテキストにも、**${config-pdfLinkText}属性を使用します** 。
 
 ### リンクコンポーネント {#link-component}
 
 * **タイトル：**&#x200B;フォームのタイトル
-* **formUrl**:フォームをHTMLとしてレンダリングするURL
+* **formUrl**: フォームをHTMLとしてレンダリングするURL
 * **ターゲット**：リンクのターゲット属性有効な値は、“_blank” および “_self”。
 * **linkText**：リンクキャプション
 
 ### ドラフト&amp;送信コンポーネント:{#drafts-amp-submissions-component}
 
-* **パス**：ドラフト / 送信メタデータノードのパスドラフトまたは送信を開くURLとして.HTML拡張子と共に使用します。
+* **パス**：ドラフト / 送信メタデータノードのパスドラフトまたは送信を開くためのURLとして、このファイルを.HTML拡張子と共に使用します。
 * **contextPath**：AEM インスタンスのコンテキストパス
 * **firstLetter**：ドラフトとして保存または送信されたアダプティブフォームのタイトルの最初の文字（大文字）
 * **formName**：ドラフトとして保存または送信されたアダプティブフォームのタイトル
@@ -147,24 +151,24 @@ To include a repeatable entry, configure the value of the attribute **data-repea
 
 ![ドラフトと送信ノード](assets/raw-image-with-index.png)
 
-**A**. コンテナ要素
+**A**. コンテナ素子
 
-**** B.固定階層の「パス」メタデータ。各フォームに保存されたサムネールを取得します。
+**B.** 固定階層を持つ「パス」メタデータ。各フォームに保存されたサムネールを取得します。
 
-**C.** Data-repeatable属性。各フォームのテンプレートセクションに使用
+**C.** Data-repeatable属性を各フォームのテンプレートセクションに使用
 
-**** D.&quot;Apply&quot;文字列をローカライズするには
+**D.** &quot;Apply&quot;文字列をローカライズするには
 
-**** E.設定プロパティpdfLinkTextの使用
+**E.** pdfLinkText設定プロパティの使用
 
-**** F.「pdfUrl」メタデータの使用
+**F.** &quot;pdfUrl&quot;メタデータの使用
 
 ## ヒント、テクニックおよび既知の問題 {#tips-tricks-and-known-issues}
 
 1. カスタムテンプレートでは一重引用符（‘）を使用しないでください。
-1. For custom metadata, store this property on the **jcr:content/metadata** node only. 他の場所に保存した場合、フォームポータルはメタデータを表示できません。
+1. For custom metadata, store this property on the **jcr:content/metadata** node only. 他の場所に保存すると、Formsポータルはメタデータを表示できません。
 1. すべてのカスタムメタデータまたは既存のメタデータの名前にコロン（:）が含まれていないことを確認してください。含まれている場合、ユーザーインターフェイスに表示することができません。
-1. **data-repeatable** （繰り返し可能なデータ）は、 **Link** （リンク）コンポーネントにとって重要ではありません。 アドビシステムズ社は、お客様がこのプロパティのリンクコンポーネントのテンプレートにおける使用を避けることを推奨します。
+1. **data-repeatable** は、 **Link** コンポーネントに対して何の意味も持ちません。 アドビシステムズ社は、お客様がこのプロパティのリンクコンポーネントのテンプレートにおける使用を避けることを推奨します。
 
 ## 関連記事
 
