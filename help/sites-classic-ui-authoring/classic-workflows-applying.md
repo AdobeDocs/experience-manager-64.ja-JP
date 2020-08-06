@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 22712b73-90f2-4329-b32f-dbb7ce802d1d
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 86%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 * 適用されるワークフロー。
 
-   （AEM 管理者によって割り当てられた、アクセス権限がある）任意のワークフローを適用できます。
+    （AEM 管理者によって割り当てられた、アクセス権限がある）任意のワークフローを適用できます。
 * 省略可能：
 
    * ユーザーがワークフローを開始した理由に関する情報を提供するコメント。
@@ -35,7 +38,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 ワークフローは、Web サイトコンソールから、またはページの編集中にはサイドキックから開始できます。
 
-The **Status** column in the **Websites** console indicates whether a workflow has been applied to a page:
+**Webサイトコンソールの「** ステータス **** 」列には、ワークフローがページに適用されているかどうかが示されます。
 
 ![workflowstatus](assets/workflowstatus.png)
 
