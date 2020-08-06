@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: cd4f53ee-537b-4f10-a64f-474ba2c44576
 translation-type: tm+mt
 source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 41%
 
 ---
 
@@ -33,19 +36,19 @@ Using [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) on
 
 1. Browse to [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
 1. Create `/apps/social` (if it does not already exist)
-   * ノードを `/apps` 選択
+   * ノードを選択 `/apps`
    * **[!UICONTROL 作成／フォルダー...]** を選択します。
       * 名前を入力: `social`
-1. ノードを `social` 選択
+1. ノードを選択 `social`
    * **[!UICONTROL 作成／フォルダー...]** を選択します。
       * 名前を入力: `commons`
-1. ノードを `commons` 選択
+1. ノードを選択 `commons`
    * **[!UICONTROL 作成／フォルダー...]** を選択します。
       * 名前を入力: `components`
-1. ノードを `components` 選択
+1. ノードを選択 `components`
    * **[!UICONTROL 作成／フォルダー...]** を選択します。
       * 名前を入力: `hbs`
-1. ノードを `hbs` 選択
+1. ノードを選択 `hbs`
    * **[!UICONTROL 作成／コンポーネントを作成...]** を選択します。
       * ラベルを入力： `comments`
       * Enter Title: `Comments`
@@ -53,7 +56,7 @@ Using [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) on
       * スーパータイプ： `social/commons/components/comments`
       * グループの入力： `Communities`
       * Click **[!UICONTROL Next]** until **[!UICONTROL OK]**
-1. ノードを `comments` 選択
+1. ノードを選択 `comments`
 
    * **[!UICONTROL 作成／コンポーネントを作成...]** を選択します。
 
@@ -78,19 +81,20 @@ Using [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) on
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
+
 >
 
 
 
 The overlay&#39;s own `Type`(property `sling:resourceType`) must be a relative self-reference so that any content not found in /apps is then looked for in /libs.
-* 名前: `sling:resourceType`
-* タイプ: `String`
-* 値: `social/commons/components/hbs/comments`
+* 名前：`sling:resourceType`
+* 型：`String`
+* 値：`social/commons/components/hbs/comments`
 
 1. Select the green `[+] Add`
-   * 名前: `sling:resourceType`
-   * タイプ: `String`
-   * 値: `social/commons/components/hbs/comments/comment`
+   * 名前：`sling:resourceType`
+   * 型：`String`
+   * 値：`social/commons/components/hbs/comments/comment`
 1. Select the green `[+] Add`
    * 「**[!UICONTROL すべて保存]**」を選択します。
 
