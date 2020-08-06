@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: a0319701-21eb-4b7f-8b2e-ac81a7a75875
 translation-type: tm+mt
 source-git-commit: 5acb16b1734331767554261bbcf9640947f2e23f
+workflow-type: tm+mt
+source-wordcount: '821'
+ht-degree: 84%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 5acb16b1734331767554261bbcf9640947f2e23f
 
 [アセットのアップロード](managing-assets-touch-ui.md#uploading-assets)を参照してください。
 
-すべての参照ファイルは、プライマリ3Dモデルファイルをアップロードする前または同時にアップロードすることをお勧めします。 ただし、必須ではありません。
+Adobeでは、すべての参照ファイルをアップロードする前または同時に、プライマリ3Dモデルファイルをアップロードすることを推奨します。 ただし、必須ではありません。
 
 アップロードが完了すると、3D ファイルが変換され、アセットの表示およびレンダリングを準備するための追加処理が適用されます。
 
@@ -56,7 +59,7 @@ source-git-commit: 5acb16b1734331767554261bbcf9640947f2e23f
 
 ## アップロードされた 3D ファイルの処理ステータスの監視 {#monitoring-the-processing-status-of-your-uploaded-d-files}
 
-In **[!UICONTROL Card View]** only, the processing status and progression is displayed as a progress banner on the asset&#39;s card. アップロードされた各3Dモデルは、通常、次の4 ～ 6個の順序で処理されます。
+In **[!UICONTROL Card View]** only, the processing status and progression is displayed as a progress banner on the asset&#39;s card. アップロードされた各3Dモデルは、通常、次の4 ～ 6個の順番の処理ステージに従います。
 
 <table> 
  <tbody> 
@@ -83,17 +86,17 @@ In **[!UICONTROL Card View]** only, the processing status and progression is dis
   <tr> 
    <td>4</td> 
    <td>影付きの作成</td> 
-   <td>（オプション）3D オブジェクトの下のグラウンドプレーンにアンビエントオクルージョンのドロップシャドウを生成できます。この処理を <a href="/help/assets/advanced-config-3d.md">有効または無効にするには</a> 、詳細な設定を参照してください。</td> 
+   <td>オプション. 3D オブジェクトの下のグラウンドプレーンにアンビエントオクルージョンのドロップシャドウを生成できます。この処理を有効または無効にするには、 <a href="/help/assets/advanced-config-3d.md">詳細な設定</a> を参照してください。</td> 
   </tr> 
   <tr> 
    <td>5<br /> </td> 
    <td>ライトマップの作成</td> 
-   <td>（オプション）インタラクティブプレビューの品質を向上させ、デフォルトのレンダラーでのレンダリングを高速化できます。この処理を <a href="/help/assets/advanced-config-3d.md">有効または無効にするには</a> 、詳細な設定を参照してください。</td> 
+   <td>オプション. インタラクティブプレビューの品質を向上させ、デフォルトのレンダラーでのレンダリングを高速化できます。この処理を有効または無効にするには、 <a href="/help/assets/advanced-config-3d.md">詳細な設定</a> を参照してください。</td> 
   </tr> 
   <tr> 
    <td>6<br /> </td> 
    <td>アニメーションの作成</td> 
-   <td>（オプション）シンプルなアニメーションをレンダリングし、カード表示の視覚的なサムネールとして使用できます。この処理を <a href="/help/assets/advanced-config-3d.md">有効または無効にするには</a> 、詳細な設定を参照してください。</td> 
+   <td>オプション. シンプルなアニメーションをレンダリングし、カード表示の視覚的なサムネールとして使用できます。この処理を有効または無効にするには、 <a href="/help/assets/advanced-config-3d.md">詳細な設定</a> を参照してください。</td> 
   </tr> 
   <tr> 
    <td>7<br /> </td> 
@@ -105,5 +108,5 @@ In **[!UICONTROL Card View]** only, the processing status and progression is dis
 
 >[!NOTE]
 >
->You can view a 3D asset in **[!UICONTROL Detail View]** or render it after the Creating preview stage is complete. すべての処理ステージが完了するまで待つ必要はありません。
+>You can view a 3D asset in **[!UICONTROL Detail View]** or render it after the Creating preview stage is complete. すべての処理ステージが完了するのを待つ必要はありません。
 
