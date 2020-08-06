@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 72%
+ht-degree: 87%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Manager (AEM) Assets では、多言語アセットはフォル
 
 各言語のフォルダーは言語コピーと呼ばれます。言語コピーのルートフォルダー（言語ルート）が、言語コピー内のコンテンツの言語を識別します。For example, */content/dam/it* is the Italian language root for the Italian language copy. ソースアセットの翻訳の実行時に適切な言語がターゲットになるように、言語コピーは、[正しく設定された言語ルート](preparing-assets-for-translation.md#creating-a-language-root)を使用する必要があります。
 
-最初にアセットを追加した言語コピーは、言語の主要な言語です。 言語プライマリは、他の言語に翻訳されたソースです。
+最初にアセットを追加した言語コピーが言語プライマリです。言語プライマリは、他の言語に翻訳されるソースです。
 
 サンプルフォルダー階層にはいくつかの言語ルートが含まれています。
 
@@ -37,9 +37,9 @@ Adobe Experience Manager (AEM) Assets では、多言語アセットはフォル
 
 翻訳するアセットを準備するには、次の手順を実行します。
 
-1. 言語プライマリの言語ルートを作成します。 For example, the language root of the English language copy in the sample folder hierarchy is `/content/dam/en`. Ensure that the language root is correctly configured according to the information in [Creating a Language Root](preparing-assets-for-translation.md#creating-a-language-root).
+1. 言語プライマリの言語ルートを作成します。例えば、サンプルフォルダー階層の英語言語コピーの言語ルートは `/content/dam/en` です。Ensure that the language root is correctly configured according to the information in [Creating a Language Root](preparing-assets-for-translation.md#creating-a-language-root).
 
-1. ア追加セットを言語のプライマリに追加します。
+1. 言語プライマリにアセットを追加します。
 1. 言語コピーが必要な各ターゲット言語の言語ルートを作成します。
 
 ## 言語ルートの作成 {#creating-a-language-root}
@@ -62,7 +62,7 @@ Adobe Experience Manager (AEM) Assets では、多言語アセットはフォル
 
 タッチ対応 UI には参照パネルがあります。このパネルには、AEM Assets 内で作成された言語ルートのリストが表示されます。
 
-1. アセットコンソールで、言語コピーを作成する言語のプライマリ言語を選択します。
+1. アセットコンソールで、言語コピーを作成する言語プライマリを選択します。
 1. グローバルナビゲーションアイコンをクリックまたはタップして、「**[!UICONTROL 参照]**」を選択して参照パネルを開きます。
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
