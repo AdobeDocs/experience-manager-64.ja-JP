@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 1cc8ce66-2c03-44e4-9ddd-8d6944d85c99
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 81%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
 
 ユーザー生成コンテンツ（UGC）のタグ付けは、コミュニティメンバーが他のメンバーによるコンテンツの検索を支援するための手段です。
 
-通常、タグは作成者と管理者によってオーサー環境で適用されます。UGCのタグ付けは、UGCタグが発行環境のコミュニティメンバーによって適用される点で異なります。
+通常、タグは作成者と管理者によってオーサー環境で適用されます。UGCのタグ付けは、UGCタグが公開環境のコミュニティメンバーによって適用されるという点で異なります。
 
 タグ名前空間と分類は、どちらで適用する場合も同じです。
 
