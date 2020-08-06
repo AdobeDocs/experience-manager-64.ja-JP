@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a07a4690-0e47-4a76-84cb-96abdc70b835
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '271'
+ht-degree: 34%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
 
 The intention of [extending](client-customize.md#extensions) a default component is to alter the appearance or behavior of a component for specific uses.
 
-コンポーネントへのパスは一意で、デフォルトのコンポーネントをスーパーリソースタイプとして参照します。 コンポーネントオーバーレイのグローバルスコープと比較してスコープが制限されるので、リスクが少なくなります。
+コンポーネントへのパスは一意で、デフォルトコンポーネントをスーパーリソースタイプとして参照します。 コンポーネントオーバーレイのグローバルスコープと比較して、スコープが制限されるので、リスクは少なくなります。
 
 >[!NOTE]
 >
@@ -27,9 +30,9 @@ The intention of [extending](client-customize.md#extensions) a default component
 
 ## 例 {#example}
 
-コメントコンポーネントのヘッダーがAEMインスタンスの1つのサイトで代替の外観で表示され、別のサイトではデフォルトの表示で表示される必要があるとします。 デフォルトのコメントをオーバーレイしてすべてのインスタンスのコメントコンポーネントを変更する代わりに、様々なサイトで使用できる複数のコメントコンポーネントを確実に用意する方が効果的です。
+例えば、コメントコンポーネントのヘッダーがAEMインスタンスの1つのサイトで別の外観で表示され、別のサイトではデフォルト表示で表示される必要があるとします。 すべてのインスタンスのコメントコンポーネントを変更するデフォルトのコメントをオーバーレイする代わりに、様々なサイトで使用できる複数のコメントコンポーネントを確実に用意する方が効果的です。
 
-この解決策を実装するには、既存のコンポーネントを拡張（上書き）する新しいコンポーネントを作成し、Handlebars スクリプトを変更します。新しいコメントを使用するサイトの領域は拡張コメントを使用できますが、デフォルトの外観を使用するサイトは影響を受けません。
+この解決策を実装するには、既存のコンポーネントを拡張（上書き）する新しいコンポーネントを作成し、Handlebars スクリプトを変更します。新しいコメントを使用するサイトの領域では拡張されたコメントを使用できますが、デフォルトの外観を使用するサイトでは影響を受けません。
 
 コメントコンポーネントは実際には、コメントシステムを構成する 2 つのコンポーネントのうちの 1 つです。Thus, there are two components to extend: *comments* and *comment*. The script to edit is in the *comment *component&#39;s `header.hbs` file, while the parent *comments* component (the comment system) is what an author actually adds to the page.
 
