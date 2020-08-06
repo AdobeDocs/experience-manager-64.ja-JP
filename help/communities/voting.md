@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 071cac6d-05c5-47ab-85bc-ead6693ca1f4
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '244'
+ht-degree: 25%
 
 ---
 
@@ -21,11 +24,11 @@ The `Voting` component is a useful tool that allows community members to rate a 
 
 ## 投票をページに追加 {#adding-voting-to-a-page}
 
-作成者モード `Voting``Communities / Voting` でページにコンポーネントを追加するには、コンポーネントブラウザを使用してコンポーネントを検索し、ユーザが投票する機能に対する相対的な位置など、ページ上の配置にドラッグします。
+作成者モードでページに `Voting` コンポーネントを追加するには、コンポーネントブラウザを使用してコンポーネントを検索 `Communities / Voting` し、ページ上の位置（ユーザーが投票する機能に対する相対位置など）にドラッグします。
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](essentials-voting.md#essentials-for-client-side) are included, this is how the `Voting` component will appear.
+[必要なクライアント側のライブラリが含まれる場合](essentials-voting.md#essentials-for-client-side) 、これがコンポー `Voting` ネントの表示方法です。
 
 ![chlimage_1-307](assets/chlimage_1-307.png)
 
@@ -39,11 +42,17 @@ Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used t
 
 ![chlimage_1-309](assets/chlimage_1-309.png)
 
-* **[!UICONTROL Positive Response Label]**(必須&#x200B;**)ポジティブな応答の内部プロパティ名。
+* **[!UICONTROL 肯定的な返信ラベル]**
+(
+*必須*)ポジティブな反応を表す内部プロパティ名です。
 
-* **[!UICONTROL Negative Response Label]**(必須&#x200B;**)：否定的な応答の内部プロパティ名。
+* **[!UICONTROL 否定的な返信ラベル]**
+(
+*必須*)否定的な応答の内部プロパティ名です。
 
-* **[!UICONTROL 集計名]**(必&#x200B;*須*)投票コンポーネントのこのインスタンスの内部で識別可能なプロパティ名。
+* **[!UICONTROL 集計名]**
+(
+*必須*)投票コンポーネントのこのインスタンスの、内部で識別可能なプロパティ名。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
