@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 300aa9f3-596f-42bc-8d46-e535f2bc4379
 translation-type: tm+mt
 source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
+workflow-type: tm+mt
+source-wordcount: '1189'
+ht-degree: 47%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
 
 ## 概要 {#overview}
 
-検索機能は AEM Communities の基本機能です。In addition to the [AEM platform search](../../help/sites-deploying/queries-and-indexing.md) capabilities, AEM Communities provides the [UGC search API](#ugc-search-api) for the purpose of searching user generated content (UGC). UGCには、他のAEMコンテンツやユーザーデータとは別に入力および保存される一意のプロパティがあります。
+検索機能は AEM Communities の基本機能です。In addition to the [AEM platform search](../../help/sites-deploying/queries-and-indexing.md) capabilities, AEM Communities provides the [UGC search API](#ugc-search-api) for the purpose of searching user generated content (UGC). UGCには、他のAEMコンテンツやユーザーデータとは別に入力および保存されるので、固有のプロパティがあります。
 
-コミュニティの場合、一般に検索される2つの事項は次のとおりです。
+Communitiesでは、一般に検索される2つの項目は次のとおりです。
 
 * コミュニティメンバーが投稿したコンテンツ
 
@@ -29,7 +32,7 @@ source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
 
 * ユーザーとユーザーグループ（ユーザーデータ）
 
-   * AEMプラットフォームの検索機能を使用
+   * AEMプラットフォーム検索機能を使用
 
 ドキュメントのこの節は、UGC を作成または管理するためのカスタムコンポーネントの作成を担当する開発者を対象としています。
 
@@ -60,7 +63,7 @@ For [MSRP](msrp.md), UGC is stored in MongoDB configured to use Solr for searchi
 MSRP および Solr については、次の点に留意してください。
 
 * AEMプラットフォーム用の埋め込みSolrは、MSRPには使用されません
-* AEMプラットフォーム用のリモートSolrを使用する場合は、MSRPと共有できますが、異なるコレクションを使用する必要があります
+* AEMプラットフォームにリモートSolrを使用する場合、MSRPと共有できますが、異なるコレクションを使用する必要があります
 * Solr は、標準検索用としても、多言語検索（MLS）用としても設定できます。
 * For configuration details, see [Solr Configuration](msrp.md#solr-configuration) for MSRP
 
@@ -86,10 +89,10 @@ AEM プラットフォーム検索用に Oak インデックスが自動的に�
 
 To modify existing indices or create custom indices, refer to [Oak Queries and Indexing](../../help/sites-deploying/queries-and-indexing.md).
 
-The [Oak Index Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) is available from ACS AEM Commons. 次の機能を提供します。
+The [Oak Index Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/oak-index-manager.html) is available from ACS AEM Commons. 次の機能が提供されます。
 
-* 既存のインデックスのビュー
-* 再インデックスの開始機能
+* 既存のインデックスの表示
+* 再インデックスを開始する機能
 
 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) で既存の Oak インデックスを表示するには、次の場所に移動します。
 
@@ -139,7 +142,7 @@ When adding custom properties, in order for those properties to be visible to so
 
 サフィックスは、スキーマを使用するクエリ言語用です。
 
-* これは、プロパティが検索可能であることを示します
+* プロパティは検索可能であると識別します。
 * データタイプを識別します。
 
 Solr は、スキーマを使用するクエリー言語の一例です。
@@ -153,14 +156,14 @@ Solr は、スキーマを使用するクエリー言語の一例です。
 | _s | *String* |
 | _t | *テキスト* |
 
-**注意：**
+**備考:**
 
-* *Textは* 、トークン化された文字列で *す* 。Stringは、 Use *Text* for fuzzy (more like this) searches.
+* *Text* はトークン化された文字列です。 *String* はトークン化されません。 Use *Text* for fuzzy (more like this) searches.
 
 * 複数の値を持つタイプの場合、次のようにサフィックスに「s」を追加します。
 
-   * `viewDate_dt`:単一日付プロパティ
-   * `viewDates_dts`:日付プロパティのリスト
+   * `viewDate_dt`: 単一の日付プロパティ
+   * `viewDates_dts`: datesプロパティのリスト
 
 ## フィルター {#filters}
 
@@ -191,16 +194,16 @@ AND および OR ロジックのフィルター構文は次のようになりま
 
 コンポーネントが配置されるページではなく、コミュニティコンポーネント（リソース）を URL で参照することが重要です。
 
-* 正しい構文：フォーラム構成要素
+* 正しい構文： フォーラム要素
    * `/content/community-components/en/forum/jcr:content/content/forum.social.json`
-* 誤った例：フォーラムページ
+* 誤った例： フォーラムページ
    * `/content/community-components/en/forum.social.json`
 
 ## SRP ツール {#srp-tools}
 
 次のものをまとめた Adobe Marketing Cloud GitHub プロジェクトが公開されています。
 
-[AEM Communities SRPツール](https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools)
+[AEM CommunitiesSRPツール](https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools)
 
 このリポジトリには、SRP のデータを管理するためのツールが格納されています。
 
@@ -216,20 +219,20 @@ curl -X POST http://localhost:4502/services/social/srp/cleanup?path=/content/use
 
 ### Solr クエリ {#solr-query}
 
-Solrクエリの問題のトラブルシューティングを行うには、
+Solrクエリの問題のトラブルシューティングに役立つには、
 
-`com.adobe.cq.social.srp.impl.SocialSolrConnector` です。
+`com.adobe.cq.social.srp.impl.SocialSolrConnector`。
 
 実際の Solr クエリが、デバッグログに URL エンコードされて表示されます。
 
-Solrへのクエリ： `sort=timestamp+desc&bl=en&pl=en&start=0&rows=10 &q=%2Btitle_t:(hello)+%2Bprovider_id:\/content/usergenerated/asi/mongo/content/+%2Bresource_type_s:&df=provider_id&trf=verbatim&fq={!cost%3D100}report_suite:mongo`
+solrへのクエリ: `sort=timestamp+desc&bl=en&pl=en&start=0&rows=10 &q=%2Btitle_t:(hello)+%2Bprovider_id:\/content/usergenerated/asi/mongo/content/+%2Bresource_type_s:&df=provider_id&trf=verbatim&fq={!cost%3D100}report_suite:mongo`
 
-`q` パラメーターの値がクエリです。URLエンコーディングがデコードされると、クエリーをSolr管理クエリツールに渡して、さらに詳細なデバッグを行うことができます。
+`q` パラメーターの値がクエリです。URLエンコーディングがデコードされると、クエリをSolr管理者クエリツールに渡して、さらに詳細なデバッグを行うことができます。
 
 ## 関連リソース {#related-resources}
 
-* [コミュニティコンテンツ](working-with-srp.md) ・ストレージ — UGC共通ストアで利用可能なSRPの選択肢について説明します。
-* [ストレージ・リソース・プロバイダの概要](srp.md) — 概要とリポジトリの使用状況の概要
+* [コミュニティコンテンツストレージ](working-with-srp.md) - UGC共通ストアで使用できるSRPの選択肢について説明します。
+* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリ使用の概要
 * [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン
 * [SocialUtilsリファクタリング](socialutils.md) - SocialUtilsを置き換えるSRPのユーティリティメソッド
 * [検索および検索結果コンポーネント](search.md) — テンプレートへのUGC検索機能の追加
