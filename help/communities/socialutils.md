@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 4ade0d6b-041e-4a2f-98f8-3b8fcae0fb29
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 94%
 
 ---
 
@@ -43,11 +46,11 @@ The package **com.adobe.cq.social.ugcbase.SocialUtils** was deprecated in AEM 6.
 
 | utilities. `com.adobe.cq.social.`resource.api.SocialResourceUtilitiesのメソッド |
 |---|
-| SocialResourceProvider getSocialResourceProvider(Resource resource) | socialresourceprovider getConfiguredProvider(Resource resource)を置き換えます。 |
+| SocialResourceProvider getSocialResourceProvider(Resource resource) | replacesSocialResourceProvider getConfiguredProvider(Resource resource) |
 
 ## SCFUtilities パッケージ {#scfutilities-package}
 
-| utilities.scf.api. `com.adobe.cq.social.`SCFUtilitesのメソッド |
+| utilities.scf.api.SCFUtilites内の `com.adobe.cq.social.`メソッド |
 |---|
 | String getAvatar(UserProperties userProperties) |
 | String getAvatar(UserProperties userProperties, int size) |
