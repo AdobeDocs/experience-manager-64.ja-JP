@@ -10,6 +10,9 @@ topic-tags: forms-manager
 discoiquuid: 99da0d37-726e-42b9-b98a-5dd6c2165af6
 translation-type: tm+mt
 source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+workflow-type: tm+mt
+source-wordcount: '702'
+ht-degree: 93%
 
 ---
 
@@ -64,9 +67,9 @@ AEM Forms サーバーを使用することで、JavaScript コードを実行�
 
 保護モードは、デフォルトではオンになっています。必要に応じて、保護モードを無効にすることができます。
 
-1. AEM Web コンソールに管理者としてログインします。URLは `https://[server]:[port]/system/console/configMgr`
+1. AEM Web コンソールに管理者としてログインします。The URL is `https://[server]:[port]/system/console/configMgr`
 1. Mobile Forms の設定を編集用に開きます。
-1. 「保護モード」オプションの選択を解除し、「**保存**」をクリックします。保護モードは無効になっています。
+1. 「保護モード」オプションの選択を解除し、「**保存**」をクリックします。保護モードは無効です。
 
 ## 参照先 XFA フォームの更新 {#updating-referenced-xfa-forms}
 
