@@ -11,6 +11,9 @@ topic-tags: developing
 discoiquuid: a03145f7-6697-4797-b73e-6f8d241ce469
 translation-type: tm+mt
 source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
+workflow-type: tm+mt
+source-wordcount: '420'
+ht-degree: 73%
 
 ---
 
@@ -40,8 +43,8 @@ From global navigation on an author instance select **[!UICONTROL Tools > Commun
 *  `Create button`
 * 基本情報
 
-   * `Name`:単一ページのテンプレート
-   * `Description`:単一のページ関数で構成されるテンプレートです。
+   * `Name`: 単一ページのテンプレート
+   * `Description`: 単一のPage関数で構成されるテンプレートです。
    * select `Enabled`
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
@@ -51,7 +54,7 @@ From global navigation on an author instance select **[!UICONTROL Tools > Commun
    * Drag a `Page` function to the Template Builder
    * 「構成関数の詳細」に、
 
-      * `Title`:単一ページ
+      * `Title`: 単一ページ
       * `URL`: page
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
@@ -67,18 +70,18 @@ After creating the site template, from global navigation select **[!UICONTROL Co
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
-* 選択アイ **`Create`** コン
+* 選択 **`Create`** アイコン
 
 * 手順 `1 - Site Template`
 
-   * `Title`:簡易コミュニティサイト
-   * `Description`:実験用の単一ページで構成されるコミュニティサイト。
+   * `Title`: シンプルコミュニティサイト
+   * `Description`: 実験用の単一ページから成るコミュニティサイトです。
    * `Community Site Root: (leave blank)`
    * `Community Site Base Language: English`
    * `Name`: sample
 
       * url = http://localhost:4502/content/sites/sample
-   * `Template`:選択 `Single Page Template`
+   * `Template`: 選択 `Single Page Template`
 
 
 ![chlimage_1-86](assets/chlimage_1-86.png)
