@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '1506'
+ht-degree: 52%
 
 ---
 
@@ -21,12 +24,12 @@ source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
 
 フレームワークの利点
 
-* **機能**:すぐに使用できる統合が容易で、使用例の80 %をカスタマイズする必要がほとんどないか、まったくカスタマイズしない
-* **スキナブル**:CSSスタイルでのHTML属性の一貫した使用
-* **拡張可能**:コンポーネントの実装はオブジェクト指向でビジネスロジックが軽減 — サーバにビジネスログインを増やしやすく
-* **柔軟**:簡単にオーバーレイおよびカスタマイズできるシンプルなロジックのないJavaScriptテンプレート
-* **アクセシブル**:HTTP APIは、モバイルアプリを含む任意のクライアントからの投稿をサポートします
-* **ポータブル**:任意のテクノロジーで構築されたWebページに統合/埋め込み
+* **機能**: すぐに使用でき、80%の使用例に対してほとんどカスタマイズも行わない、またはカスタマイズも行わない統合が容易
+* **スキナブル**: CSSスタイルでのHTML属性の一貫した使用
+* **拡張可能**: コンポーネントの実装はオブジェクト指向でビジネスロジックが軽減 — サーバにビジネスログインを増やしやすい
+* **柔軟性**: 簡単にオーバーレイおよびカスタマイズできる、シンプルなロジックを使用しないJavaScriptテンプレート
+* **アクセシブル**: HTTP APIは、モバイルアプリを含む任意のクライアントからの投稿をサポートします
+* **ポータブル**: 任意のテクノロジーで構築された任意のWebページに統合/埋め込み
 
 インタラクティブな[コミュニティコンポーネントガイド](components-guide.md)を使用して、オーサーまたはパブリッシュインスタンスについて確認してください。
 
@@ -36,7 +39,7 @@ SCF では、コンポーネントは SocialComponent POJO、Handlebars JS テ�
 
 Handlebars JS テンプレートでは、モデル／ビュー JS コンポーネントを拡張して、クライアントでのコンポーネントとのユーザーインタラクションを処理できます。
 
-コンポーネントがデータの変更をサポートする必要がある場合は、従来の Web アプリケーションでのモデル／データオブジェクトと同様のデータの編集／保存をサポートするために、SocialComponent API の実装を記述できます。さらに、操作（コントローラー）および操作サービスを追加して、操作要求を処理し、ビジネスロジックを実行し、モデル/データオブジェクトでAPIを呼び出すことができます。
+コンポーネントがデータの変更をサポートする必要がある場合は、従来の Web アプリケーションでのモデル／データオブジェクトと同様のデータの編集／保存をサポートするために、SocialComponent API の実装を記述できます。また、操作（コントローラー）および操作サービスを追加して、操作要求の処理、ビジネスロジックの実行、モデル/データオブジェクトでのAPIの呼び出しを行うこともできます。
 
 クライアントが必要とするデータをビューレイヤーまたは HTTP クライアントに提供するために、SocialComponent API を拡張できます。
 
@@ -61,7 +64,7 @@ Handlebars JS テンプレートでは、モデル／ビュー JS コンポー�
 * 新しいカスタム操作を追加するには
    * Create a new [Sling Post Operation](server-customize.md#postoperation-class)
    * Use existing [OperationServices](server-customize.md#operationservice-class) as needed
-   * 必要に応じて、クライアント側から操作を呼び出すJavaScriptコードを追加します
+   * 必要に応じて追加クライアント側から操作を呼び出すJavaScriptコード
 
 ## サーバー側フレームワーク {#server-side-framework}
 
@@ -77,7 +80,7 @@ Visit [Storage Resource Provider Overview](srp.md) to learn about working with U
 
 ### HTTP API {#http-api}
 
-HTTP API によって、PhoneGap アプリ、ネイティブアプリ、その他の統合およびマッシュアップについて、カスタマイズの容易さとクライアントプラットフォームの選択がサポートされます。また、HTTP APIを使用すると、コミュニティサイトをクライアントなしでサービスとして実行でき、任意のテクノロジーで構築された任意のWebページにフレームワークコンポーネントを統合できます。
+HTTP API によって、PhoneGap アプリ、ネイティブアプリ、その他の統合およびマッシュアップについて、カスタマイズの容易さとクライアントプラットフォームの選択がサポートされます。また、HTTP APIを使用すると、コミュニティサイトをクライアントなしでサービスとして実行でき、フレームワークコンポーネントを任意のテクノロジーで構築されたWebページに統合できます。
 
 ### HTTP API - GET 要求 {#http-api-get-requests}
 
@@ -99,13 +102,13 @@ The `DefaultSocialGetServlet`
 
 ### HTTP API - POST 要求 {#http-api-post-requests}
 
-GET（読み取り）操作に加え、コンポーネントに対するその他の操作（作成、更新、削除など）を可能にするエンドポイントパターンがフレームワークによって定義されます。これらのエンドポイントは、入力を受け入れ、HTTPステータスコードまたはJSON応答オブジェクトを使用して応答するHTTP APIです。
+GET（読み取り）操作に加え、コンポーネントに対するその他の操作（作成、更新、削除など）を可能にするエンドポイントパターンがフレームワークによって定義されます。これらのエンドポイントは、HTTPステータスコードまたはJSON応答オブジェクトを使用して、入力を受け取り、応答するHTTP APIです。
 
 このフレームワークエンドポイントパターンにより、CUD 操作は拡張、再利用およびテストが可能になります。
 
 **`POST Request`**
 
-SocialComponent 操作ごとに Sling POST :operation があります。各操作のビジネスロジックとメンテナンスコードは、HTTP API経由で、またはOSGiサービスとして他の場所からアクセスできるOperationServiceに含まれています。 フックは、前/後のアクションに対するプラッガブルな操作拡張をサポートするように提供されます。
+SocialComponent 操作ごとに Sling POST :operation があります。各操作のビジネスロジックとメンテナンスコードは、HTTP API経由で、またはOSGiサービスとして他の場所からアクセスできるOperationServiceに含まれます。 フックは、アクション前/後のアクションに対するプラッガブルな操作拡張をサポートするように提供されます。
 
 ![chlimage_1-27](assets/chlimage_1-27.png)
 
@@ -113,8 +116,8 @@ SocialComponent 操作ごとに Sling POST :operation があります。各操�
 
 [コミュニティコンテンツストア](working-with-srp.md)に格納された UGC の処理については、以下を参照してください。
 
-* [ストレージ・リソース・プロバイダの概要](srp.md) — 概要とリポジトリの使用状況の概要
-* [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP APIユーティリティのメソッドと例
+* [ストレージリソースプロバイダの概要](srp.md) — 概要とリポジトリ使用の概要
+* [SRPとUGC Essentials](srp-and-ugc.md) - SRP APIユーティリティのメソッドと例
 * [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン
 
 ### サーバー側のカスタマイズ {#server-side-customizations}
@@ -129,7 +132,7 @@ HBS スクリプトは、単純で、ロジックがなく、サーバーとク�
 
 このフレームワークでは、SocialComponent の開発に便利な複数の [Handlebars ヘルパー](handlebars-helpers.md)が提供されます。
 
-サーバーで、Sling は GET 要求を解決するときに、要求への応答に使用されるスクリプトを識別します。スクリプトがHBSテンプレート(.hbs)の場合、Slingは要求をHandlers Engineに委任します。 次に、Handlebars Engineは、適切なSocialComponentFactoryからSocialComponentを取得し、コンテキストを構築し、HTMLをレンダリングします。
+サーバーで、Sling は GET 要求を解決するときに、要求への応答に使用されるスクリプトを識別します。スクリプトがHBSテンプレート(.hbs)の場合、Slingは要求をHandlebarsエンジンに委任します。 次に、Handlebarsエンジンは、適切なSocialComponentFactoryからSocialComponentを取得し、コンテキストを構築して、HTMLをレンダリングします。
 
 ### アクセス制限なし {#no-access-restriction}
 
@@ -155,7 +158,7 @@ In either case, the component&#39;s [required client libraries](clientlibs.md) m
 
 Including a component refers to the process of adding a reference to a [&quot;non-existing&quot; resource](srp.md#for-non-existing-resources-ners) (no JCR node) within the template, such as using a scripting language.
 
-AEM 6.1では、コンポーネントを追加する代わりに動的に追加する場合、コンポーネントのプロパティをauthor *design *modeで編集できます。
+AEM 6.1以降では、コンポーネントが追加される代わりに動的に含まれる場合、コンポーネントのプロパティをauthor *design *modeで編集できます。
 
 一部の AEM Communities コンポーネントのみを動的にインクルードできます。次の項目があります。
 
@@ -166,7 +169,7 @@ AEM 6.1では、コンポーネントを追加する代わりに動的に追加�
 
 The [Community Components Guide](components-guide.md) allows includable components to be toggled from being added to being included.
 
-**Handlebarsテンプレート言語を使用する場合** 、そのresourceTypeを指定することで、既存でないリソースが含め [られ](handlebars-helpers.md#include) 、含めるヘルパーを使用します。
+**Handlebars** テンプレート言語を使用する場合、既存でないリソースは、そのresourceTypeを指定して [includeヘルパーを使用して含められます](handlebars-helpers.md#include) 。
 
 `{{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}`
 
@@ -191,15 +194,15 @@ SCF で使用できるカスタムヘルパーのリストおよび説明につ�
 
 このフレームワークには、リッチでインタラクティブなコンポーネントの開発を促進するために、[Backbone.js](https://www.backbonejs.org/)（モデル - ビュー JavaScript フレームワーク）という拡張が含まれています。オブジェクト指向の特性は、拡張可能/再利用可能なフレームワークをサポートします。 HTTP APIを使用すると、クライアントとサーバー間の通信が簡単になります。
 
-フレームワークは、サーバー側のハンドルテンプレートを利用して、クライアントのコンポーネントをレンダリングします。 モデルは、HTTP APIによって生成されたJSON応答に基づいています。 ビューは、Handlebarsテンプレートによって生成されたHTMLに連結され、インタラクティブ機能を提供します。
+フレームワークは、サーバー側のハンドルテンプレートを利用して、クライアント用のコンポーネントをレンダリングします。 モデルは、HTTP APIによって生成されたJSON応答に基づいています。 表示は、Handlebarsテンプレートによって生成されるHTMLに連結され、インタラクティブ機能を提供します。
 
 ### CSS の規則 {#css-conventions}
 
 CSS クラスの定義と使用に推奨される規則を以下に示します。
 
 * 名前が明確なCSSクラスセレクター名を使用し、「heading」、「image」などの汎用名は使用しないでください。
-* 特定のクラスセレクタースタイルを定義し、CSSスタイルシートがページ上の他の要素やスタイルと適切に連動するようにします。 次に例を示します。`.social-forum .topic-list .li { color: blue; }`
-* スタイル設定用のCSSクラスを、JavaScriptによって駆動されるUX用のCSSクラスとは別に保持する
+* 特定のクラスセレクタースタイルを定義し、CSSスタイルシートがページ上の他の要素やスタイルと適切に連携するようにします。 例：`.social-forum .topic-list .li { color: blue; }`
+* スタイル設定のCSSクラスを、JavaScriptによって駆動されるUXのCSSクラスとは別にする
 
 ### クライアント側のカスタマイズ {#client-side-customizations}
 
