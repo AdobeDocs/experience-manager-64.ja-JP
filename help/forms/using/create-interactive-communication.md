@@ -9,6 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: c106aa41-cbc0-4daf-9ac6-6c0d23710010
 translation-type: tm+mt
 source-git-commit: 73d0dea62c294bea435364fb9c6892d80751d90d
+workflow-type: tm+mt
+source-wordcount: '3152'
+ht-degree: 48%
 
 ---
 
@@ -26,67 +29,68 @@ source-git-commit: 73d0dea62c294bea435364fb9c6892d80751d90d
 インタラクティブ通信を作成するための前提条件を以下に示します。
 
 * Set up a [Form Data Model](/help/forms/using/data-integration.md) containing test data or with an actual data source, such as an instance of Microsoft® Dynamics.
-* Ensure that you have the [Document fragments](/help/forms/using/document-fragments.md).
+* [ドキュメントフラグメントがあることを確認します](/help/forms/using/document-fragments.md)。
 * Ensure that you have [Templates for print and web channel](/help/forms/using/web-channel-print-channel.md).
 * Web チャネルで必要な[テーマ](/help/forms/using/themes.md)が設定されていること。
 
 ## インタラクティブ通信の作成 {#createic}
 
 1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
-1. Tap **[!UICONTROL Create]** and select **[!UICONTROL Interactive Communication]**. [インタラクティブコミュニケーションの作成]ページが表示されます。
+1. Tap **[!UICONTROL Create]** and select **[!UICONTROL Interactive Communication]**. [対話型通信の作成]ページが表示されます。
 
-   ![create-interactive-communication](assets/create-interactive-communication.png)
+   ![クリエイト・インタラクティブ・コミュニケーション](assets/create-interactive-communication.png)
 
 1. 以下の情報を入力します。：
 
    * **[!UICONTROL タイトル]**：インタラクティブ通信のタイトルを入力します。
-   * **[!UICONTROL 名前*]**:インタラクティブ通信の名前は、入力したタイトルから得られます。 必要に応じて編集します。
-   * **[!UICONTROL 説明]**:対話型通信に関する説明を入力します。
+   * **[!UICONTROL 名前*]**: 対話型通信の名前は、入力したタイトルから得られます。 必要に応じて編集します。
+   * **[!UICONTROL 説明]**: 対話型通信に関する説明を入力します。
    * **[!UICONTROL フォームデータモデル*]**：フォームデータモデルを参照して選択します。For more information on Form Data Model, see [AEM Forms Data Integration](/help/forms/using/data-integration.md).
-   * **[!UICONTROL 事前入力サービス]**:データを取得し、インタラクティブ通信を事前入力する前に、事前入力サービスを選択します。
-   * **[!UICONTROL 後処理のタイプ]**:Interactive Communicationが送信されたときにトリガーされるAEMまたはFormsワークフローを選択できます。 トリガーするワークフローのタイプを選択します。
-   * **[!UICONTROL 後処理]**：トリガーするワークフローの名前を選択します。AEMワークフローを選択する場合は、「添付ファイルのパス」、「レイアウトのパス」、「PDFのパス」、「印刷データのパス」および「Webデータのパス」を指定します。
-   * **[!UICONTROL タグ]**:インタラクティブ通信に適用するタグを選択します。 また、新しいタグ名またはカスタムタグ名を入力し、Enterキーを押して作成することもできます。
+   * **[!UICONTROL 事前入力サービス]**: データを取得し、インタラクティブ通信を事前入力するには、事前入力サービスを選択します。
+   * **[!UICONTROL 後処理タイプ]**: 対話型通信が送信されたときにトリガーされるAEMまたはFormsワークフローを選択できます。 トリガーするワークフローのタイプを選択します。
+   * **[!UICONTROL 後処理]**：トリガーするワークフローの名前を選択します。AEMワークフローを選択する場合は、「添付ファイルのパス」、「レイアウトのパス」、「PDFパス」、「印刷データのパス」および「Webデータのパス」を指定します。
+   * **[!UICONTROL タグ]**: 対話型通信に適用するタグを選択します。 また、新しいタグ名やカスタムタグ名を入力し、Enterキーを押して作成することもできます。
    * **[!UICONTROL 作成者]**：作成者名は、ログインしたユーザー名から自動的に取得されます。
-   * **** 発行日：インタラクティブコミュニケーションを公開する日付を入力します。
-   * **[!UICONTROL 非公開日]**:インタラクティブコミュニケーションの公開を取り消す日付を入力します。
+   * **[!UICONTROL 発行日：]** インタラクティブコミュニケーションを公開する日付を入力します。
+   * **[!UICONTROL 非公開日]**: 対話型通信の公開を取り消す日付を入力します。
 
 1. 「**[!UICONTROL 次へ]**」をタップします。印刷とWebチャネルの詳細を指定する画面が表示されます。
 1. 以下を入力します。
 
-   * **[!UICONTROL 印刷]**:Interactive Communicationの印刷チャネルを生成する場合は、このオプションを選択します。
-   * **** 印刷テンプレート*:XDPを参照し、印刷テンプレートとして選択します。
-   * **** Webチャネル用のマスターとして印刷を使用：このオプションは、印刷チャネルと同期するWebチャネルを作成する場合に選択します。 印刷チャネルを Web チャネルのマスターとして使用すると、Web チャネルに連結されたコンテンツとデータが印刷チャネルから取得され、「同期」をタップしたときに、印刷チャネルに対する変更内容が Web チャネルに反映されます。ただし、作成者は、Web チャネル内の特定のコンポーネントについて、必要に応じて継承設定を解除することができます。For more information, see [Synchronize Web channel with Print channel](/help/forms/using/create-interactive-communication.md#synchronize).
-   * **** Web:Interactive CommunicationのWebチャネルまたはレスポンシブ出力を生成する場合は、このオプションを選択します。
-   * **** Interactive Communication webテンプレート*:Webテンプレートを参照して選択します。
-   * **[!UICONTROL テーマ]** とテ **[!UICONTROL ーマを選択*]**:テーマを参照して選択し、インタラクティブコミュニケーションのWebチャネルのスタイルを設定します。 詳しくは、「[AEM Forms のテーマ](/help/forms/using/themes.md)」を参照してください。
+   * **[!UICONTROL 印刷]**: 対話型通信の印刷チャネルを生成する場合は、このオプションを選択します。
+   * **[!UICONTROL 印刷テンプレート*:]** XDPを参照し、印刷テンプレートとして選択します。
+   * **[!UICONTROL Webチャネルーに印刷マスターを使用：]** 印刷チャネルと同期するWebチャネルーを作成する場合は、このオプションを選択します。 印刷チャネルを Web チャネルのマスターとして使用すると、Web チャネルに連結されたコンテンツとデータが印刷チャネルから取得され、「同期」をタップしたときに、印刷チャネルに対する変更内容が Web チャネルに反映されます。ただし、作成者は、Web チャネル内の特定のコンポーネントについて、必要に応じて継承設定を解除することができます。For more information, see [Synchronize Web channel with Print channel](/help/forms/using/create-interactive-communication.md#synchronize).
+   * **[!UICONTROL Web:]** Interactive CommunicationのWebチャネルまたはレスポンシブ出力を生成する場合は、このオプションを選択します。
+   * **[!UICONTROL Interactive Communication Webテンプレート*:]** Webテンプレートを参照して選択します。
+   * **[!UICONTROL テーマ]** とテーマ **[!UICONTROL を選択*]**: 対話型通信のWebチャネルのスタイルを設定するテーマを参照して選択します。 詳しくは、「[AEM Forms のテーマ](/help/forms/using/themes.md)」を参照してください。
+
    For more information on print channel and web channel, see [Print channel and web channel](/help/forms/using/web-channel-print-channel.md).
 
-1. 「**[!UICONTROL 作成]**」をタップします。インタラクティブ通信が作成され、警告ボックスが表示されます。 Tap **[!UICONTROL Edit]** to start building the contents of the Interactive Communication as explained in [Add contents using Interactive Communication authoring user interface](#step2). Alternatively, you can tap **[!UICONTROL Done]** and choose to edit the Interactive Communication later.
+1. 「**[!UICONTROL 作成]**」をタップします。対話型通信が作成され、警告ボックスが表示されます。 Tap **[!UICONTROL Edit]** to start building the contents of the Interactive Communication as explained in [Add contents using Interactive Communication authoring user interface](#step2). Alternatively, you can tap **[!UICONTROL Done]** and choose to edit the Interactive Communication later.
 
 ## インタラクティブ通信にコンテンツを追加する {#step2}
 
-インタラクティブコミュニケーションを作成した後は、インタラクティブコミュニケーションオーサリングインターフェイスを使用してそのコンテンツを作成できます。
+対話型通信を作成した後、対話型通信オーサリングインターフェイスを使用してそのコンテンツを作成できます。
 
 For more information on the Interactive Communication authoring interface, see [Introduction to Interactive Communication authoring](/help/forms/using/introduction-interactive-communication-authoring.md).
 
 1. The Interactive Communication authoring interface is launched when you Tap Edit as mentioned in [Create Interactive Communication](#createic). Alternatively, you can navigate to an existing Interactive Communication asset on AEM, select it, and tap **[!UICONTROL Edit]** to launch the Interactive Communication authoring interface.
 
-   デフォルトでは、インタラクティブ通信がWebチャネルのみの場合を除き、インタラクティブ通信の印刷チャネルが表示されます。 インタラクティブ通信の印刷チャネルには、選択したXDP/印刷チャネルテンプレートで使用可能なターゲット領域が表示されます。 これらのターゲット領域とフィールドで、コンポーネントやアセットを追加することができます。
+   既定では、[対話型通信]が[Webチャネルのみ]でない限り、[対話型通信]の印刷チャネルが表示されます。 Interactive Communicationの印刷チャネルには、選択したXDP/印刷チャネルテンプレートで使用可能なターゲット領域が表示されます。 これらのターゲット領域とフィールドで、コンポーネントやアセットを追加することができます。
 
 1. With the Print channel selected, select the **[!UICONTROL Components]** tab. 印刷チャネルでは、以下のコンポーネントを使用することができます。
 
    | **コンポーネント** | **機能** |
    |---|---|
-   | グラフ | フォームデータモデルのコレクションから取得した2次元データを視覚的に表すために、Interactive Communicationで使用できるグラフを追加します。 For more information, see [Using charts in Interactive Communications](/help/forms/using/chart-component-interactive-communications.md). |
-   | ドキュメントフラグメント | テキスト、リスト、条件などの再利用可能なコンポーネントをインタラクティブ通信に追加できます。 インタラクティブ通信に追加する再利用可能なコンポーネントは、フォームデータモデルベースのコンポーネントでも、フォームデータモデルを持たないコンポーネントでもかまいません。 |
+   | グラフ | フォームデータモデルコレクションから取得した2次元データを視覚的に表すために、Interactive Communicationで使用できるグラフを追加します。 For more information, see [Using charts in Interactive Communications](/help/forms/using/chart-component-interactive-communications.md). |
+   | ドキュメントフラグメント | テキスト、リスト、条件などの再利用可能なコンポーネントをインタラクティブコミュニケーションに追加できます。 インタラクティブ通信に追加する再利用可能なコンポーネントは、フォームデータモデルベースのコンポーネントでも、フォームデータモデルを持たないコンポーネントでもかまいません。 |
    | 画像 | 画像を挿入できるようにします。。 |
 
-   コンポーネントをインタラクティブ通信にドラッグ&amp;ドロップし、必要に応じて設定します。
+   コンポーネントを対話型通信にドラッグ&amp;ドロップし、必要に応じて設定します。
 
 1. 印刷チャネルを選択した場合は、「**[!UICONTROL アセット]**」タブに移動して、必要なアセットだけを表示するためのフィルターを適用します。
 
-   アセットブラウザーを使用して、アセットをインタラクティブコミュニケーションのターゲット領域に直接ドラッグ&amp;ドロップすることもできます。
+   アセットブラウザを使用して、インタラクティブコミュニケーションターゲット領域にアセットを直接ドラッグ&amp;ドロップすることもできます。
 
    ![assets-docfragments](assets/assets-docfragments.png)
 
@@ -118,17 +122,18 @@ For more information on document fragments, see [Document Fragments](/help/forms
 1. To set up binding of variables, tap a variable and select ![configure_icon](assets/configure_icon.png) (Configure) and then set up the binding properties in the Properties panel in the sidebar.
 
    * **[!UICONTROL なし]**：このプロパティを選択すると、エージェントによって変数の値が設定されます。
-   * **[!UICONTROL テキストフラグメント]**：このプロパティを選択すると、フィールド内でコンテンツがレンダリングされるテキストドキュメントフラグメントを参照して選択できるようになります。変数を含まない変数に連結できるのは、テキストドキュメントフラグメントのみです。
-   * **[!UICONTROL Data Model Object]**:フィールドに値が入力されるフォームデータモデルのプロパティを選択します。
+   * **[!UICONTROL テキストフラグメント]**：このプロパティを選択すると、フィールド内でコンテンツがレンダリングされるテキストドキュメントフラグメントを参照して選択できるようになります。変数を含まない変数に連結できるのは、テキストドキュメントフラグメントだけです。
+   * **[!UICONTROL Data Model Object]**: フィールドに値が入力されるフォームデータモデルのプロパティを選択します。
+
    関連するテキストドキュメントフラグメントを設定することもできます。プロパティパネルには、そのテキストドキュメントフラグメントの変数リストが表示されます。You can tap ![edit](assets/edit.png) (Edit) next to a variable name to display that variable&#39;s settings for editing.
 
-1. テーブルを追加するには、印刷チャネルを選択した状態で、レイアウトフラグメントだけを表示するためのフィルターを「**[!UICONTROL アセット]**」タブで適用します。次に、必要なレイアウトフラグメントをインタラクティブ通信にドラッグアンドドロップします。レイアウトフラグメントはXDPに基づいており、動的データが埋め込まれるInteractive Communicationでグラフィカルレイアウトや静的および動的テーブルを作成するために使用できます。
+1. テーブルを追加するには、印刷チャネルを選択した状態で、レイアウトフラグメントだけを表示するためのフィルターを「**[!UICONTROL アセット]**」タブで適用します。次に、必要なレイアウトフラグメントをインタラクティブ通信にドラッグアンドドロップします。レイアウトフラグメントはXDPに基づいており、動的データが埋め込まれるInteractive Communicationのグラフィカルレイアウトや静的および動的テーブルの作成に使用できます。
 
    例えば、新しいポリシーと古いポリシーで、保険料の総額、特別割引率（%）、緊急ロードサイドサービスを表示するためのレイアウトテーブルを作成することができます。
 
    For more information on layout fragments, see [Document Fragments](/help/forms/using/document-fragments.md).
 
-1. 印刷チャネルを選択した状態で、画像を表示するためのフィルターを「**[!UICONTROL アセット]**」タブで適用します。必要な画像（会社のロゴなど）をInteractive Communicationにドラッグ&amp;ドロップします。
+1. 印刷チャネルを選択した状態で、画像を表示するためのフィルターを「**[!UICONTROL アセット]**」タブで適用します。必要な画像(会社のロゴなど)をInteractive Communicationにドラッグ&amp;ドロップします。
 
    また、インタラクティブ通信で以下の操作を行います。
 
@@ -144,18 +149,18 @@ For more information on document fragments, see [Document Fragments](/help/forms
    * [コンポーネントへのルールの追加](/help/forms/using/create-interactive-communication.md#rules)
 
 
-1. Switch to **[!UICONTROL Web Channel]**. WebチャネルがInteractive Communicationエディターに表示されます。 初めて印刷チャネルからWebチャネルに切り替えると、自動同期が行われます。 For more information, see [Synchronizing web channel from the print channel](/help/forms/using/create-interactive-communication.md#synchronize).
+1. **[!UICONTROL Webチャネルに切り替え]**。 Interactive Communication EditorにWebチャネルが表示されます。 印刷チャネルからWebチャネルに初めて切り替えると、自動同期が行われます。 For more information, see [Synchronizing web channel from the print channel](/help/forms/using/create-interactive-communication.md#synchronize).
 
    この例では、Web チャネルのマスターとして印刷チャネルを使用しているため、印刷チャネルのプレースホルダー、コンテンツ、データ連結が Web チャネルに同期されます。ただし、Web チャネルの特定のコンテンツを必要に応じてカスタマイズすることができます。
 
    ![webchannelassets](assets/webchannelassets.png)
 
-1. Web チャネルにコンポーネントを追加するには、Web チャネルを選択した状態で「**[!UICONTROL コンポーネント]**」をタップします。必要に応じて、Interactive CommunicationのWebチャネルにコンポーネントをドラッグ&amp;ドロップし、設定に進みます。
+1. Web チャネルにコンポーネントを追加するには、Web チャネルを選択した状態で「**[!UICONTROL コンポーネント]**」をタップします。必要に応じて、Interactive CommunicationのWebチャネルーにコンポーネントをドラッグ&amp;ドロップし、設定に進みます。
 
    | コンポーネント | 機能 |
    |---|---|
-   | グラフ | フォームデータモデルのコレクションから取得した2次元データを視覚的に表すために、Interactive Communicationで使用できるグラフを追加します。 For more information, see [Using chart component](/help/forms/using/chart-component-interactive-communications.md). |
-   | ドキュメントフラグメント | 再利用可能なコンポーネント、テキスト、リストまたは条件をインタラクティブ通信に追加できます。 インタラクティブ通信に追加する再利用可能なコンポーネントは、フォームデータモデルベースのコンポーネントでも、フォームデータモデルなしのコンポーネントでもかまいません。 |
+   | グラフ | フォームデータモデルのコレクションから取得した2次元のデータを視覚的に表すために、Interactive Communicationで使用できるグラフを追加します。 For more information, see [Using chart component](/help/forms/using/chart-component-interactive-communications.md). |
+   | ドキュメントフラグメント | 再利用可能なコンポーネント、テキスト、リスト、または条件をインタラクティブコミュニケーションに追加できます。 インタラクティブ通信に追加する再利用可能なコンポーネントは、フォームデータモデルベースのコンポーネントでも、フォームデータモデルなしのコンポーネントでもかまいません。 |
    | 画像 | 画像を挿入できるようにします。。 |
    | パネル | パネルコンポーネントは、他のコンポーネントをグループ化するためのプレースホルダーです。パネルコンポーネントにより、インタラクティブ通信内でのコンポーネントグループ（アコーディオンやタブなど）の配置方法が制御されます。パネルコンポーネントを使用して、エンドユーザーが繰り返し使用できるコンポーネントグループ（学歴を入力するための複数のエントリなど）を作成することもできます。 |
    | テーブル | 行と列のデータを整理するためのテーブルを追加することができます。 |
@@ -168,9 +173,9 @@ For more information on document fragments, see [Document Fragments](/help/forms
 
 ## インタラクティブ通信のプレビュー表示 {#previewic}
 
-You can use the **[!UICONTROL Preview]** option to evaluate appearance of the Interactive Communication. Interactive CommunicationのWebチャネルには、様々なデバイスに対するInteractive Communicationのエクスペリエンスをエミュレートするオプションも用意されています。 例えば、iPhone、iPad、デスクトップパソコンなどのデバイスについて、エミュレーションを行うことができます。You can use both **[!UICONTROL Preview]** and **[!UICONTROL Emulator]** ![ruler](assets/ruler.png) options in conjunction with each other to preview the web outputs for devices of different screen sizes. プレビューのサンプルデータは、指定したフォームデータモデルから入力されます。
+You can use the **[!UICONTROL Preview]** option to evaluate appearance of the Interactive Communication. Interactive CommunicationのWebチャネルは、様々なデバイスでのInteractive Communicationのエクスペリエンスをエミュレートするオプションも提供します。 例えば、iPhone、iPad、デスクトップパソコンなどのデバイスについて、エミュレーションを行うことができます。You can use both **[!UICONTROL Preview]** and **[!UICONTROL Emulator]** ![ruler](assets/ruler.png) options in conjunction with each other to preview the web outputs for devices of different screen sizes. プレビュー内のサンプルデータは、指定したフォームデータモデルから入力されます。
 
-1. プレビュー表示する印刷チャネルまたは Web チャネルを選択して「プレビュー」をタップします。[Interactive Communication]が表示されます。
+1. プレビュー表示する印刷チャネルまたは Web チャネルを選択して「プレビュー」をタップします。対話型通信が表示されます。
 
    >[!NOTE]
    >
@@ -201,13 +206,14 @@ Further, you can [Prepare and send Interactive Communication using the Agent UI]
    * **[!UICONTROL ライブラリのアクセスを許可]**：エージェント UI でエージェントによるライブラリへのアクセスを許可する場合は、このプロパティを選択します。このプロパティを選択すると、インタラクティブ通信の準備を行う際に、エージェントを使用してライブラリ内のファイルを追加できるようになります。
    * **[!UICONTROL 添付ファイルの順番の変更を許可]**：インタラクティブ通信の添付ファイルの順序を変更できるようにするには、このプロパティを選択します。
    * **[!UICONTROL 許可される添付ファイルの最大数]**：インタラクティブ通信で許可される添付ファイルの最大数を指定します。
-   * **[!UICONTROL 添付ファイル]**:「追加」 **[!UICONTROL をタップし]** 、添付するファイルを参照して選択し、次を指定します。
+   * **[!UICONTROL 添付ファイル]**: をタップし **[!UICONTROL 追加]** 、添付するファイルを参照して選択し、次の内容を指定します。
 
       * **[!UICONTROL デフォルトでドキュメントにこのファイルを添付する]**：ファイルの添付が必須でない場合のみ、このオプションを変更することができます。
       * **[!UICONTROL 必須]**：このオプションを選択すると、エージェント UI で添付ファイルを削除できなくなります。
+
    ![attachfiles](assets/attachfiles.png)
 
-1. 「**[!UICONTROL Done]**」をタップします。
+1. 「**[!UICONTROL 完了]**」をタップします。
 
 ### XDP またはレイアウトフィールドのプロパティの設定 {#xdplayoutfieldproperties}
 
@@ -219,22 +225,22 @@ Further, you can [Prepare and send Interactive Communication using the Agent UI]
 
 1. 以下のプロパティを指定します。
 
-   * **[!UICONTROL 名前]**:JCRノード名。
+   * **[!UICONTROL 名前]**: JCRノード名。
    * **[!UICONTROL タイトル]**：タイトルを入力します。ここで入力したタイトルは、エージェント UI とドキュメントコンテナツリーに表示されます。
-   * **[!UICONTROL 連結タイプ]**:フィールドに対して、次の連結タイプのいずれかを選択します。
+   * **[!UICONTROL 連結の種類]**: フィールドに対して、次のいずれかの連結の種類を選択します。
 
       * なし：このプロパティを選択すると、エージェントによってプロパティの値が設定されます。
       * テキストフラグメント：このプロパティを選択すると、フィールド内でコンテンツがレンダリングされるテキストドキュメントフラグメントを参照して選択できるようになります。
       * データモデルオブジェクト：フィールド内に値を取り込むデータモデルプロパティを選択します。
-   * **[!UICONTROL デフォルト値]**：指定したデータモデルオブジェクトまたはテキストフラグメントでフィールドの値を設定しなかった場合、そのフィールドにデフォルト値が設定されます。データ連結タイプがnoneの場合、デフォルト値がフィールドに事前入力されます。
+   * **[!UICONTROL デフォルト値]**：指定したデータモデルオブジェクトまたはテキストフラグメントでフィールドの値を設定しなかった場合、そのフィールドにデフォルト値が設定されます。データ連結の種類が「なし」の場合、デフォルト値はフィールドに事前入力されます。
    * **[!UICONTROL エージェントによる編集が可能]**：エージェント UI のフィールド値をエージェントを使用して編集できるようにするには、このオプションを選択します。この設定は、「連結の種類」が「テキストフラグメント」の場合は適用されません。
    * **[!UICONTROL ラベル]**：フィールドと共にエージェント UI に表示されるテキスト文字列を指定します。この設定は、「連結の種類」が「テキストフラグメント」の場合は適用されません。
-   * **[!UICONTROL ツールチップ]**:エージェントUIのエージェントにマウスを移動すると表示されるテキスト文字列を入力します。 この設定は、「連結の種類」が「テキストフラグメント」の場合は適用されません。
+   * **[!UICONTROL ツールチップ]**: エージェントUIのエージェントにマウスを移動すると表示されるテキスト文字列を入力します。 この設定は、「連結の種類」が「テキストフラグメント」の場合は適用されません。
    * **[!UICONTROL 必須]**：フィールドを入力必須にするには、このオプションを選択します。この設定は、「連結の種類」が「テキストフラグメント」の場合は適用されません。
    * **[!UICONTROL 複数行]**：フィールドに複数行のテキストを入力できるようにするには、このオプションを選択します。この設定は、「連結の種類」が「テキストフラグメント」の場合は適用されません。
 
 
-1. 「 ![done_icon」をタップします](assets/done_icon.png)。
+1. 「 ![done_icon](assets/done_icon.png)」をタップします。
 
 ## インタラクティブ通信のコンポーネントにルールを適用する {#rules}
 
@@ -249,10 +255,10 @@ To conditionalize components or content in the interactive communcation, tap the
 
 ### インタラクティブ通信の動的テーブル {#dynamic-tables-in-interactive-communication}
 
-動的テーブルは、レイアウトフラグメントを使用してインタラクティブ通信に追加できます。 以下の手順では、クレジットカードの取引明細を例として、レイアウトフラグメントを使用して、インタラクティブ通信内に動的なテーブルを作成する方法について説明します。
+レイアウトフラグメントを使用して、インタラクティブ通信に動的テーブルを追加できます。 以下の手順では、クレジットカードの取引明細を例として、レイアウトフラグメントを使用して、インタラクティブ通信内に動的なテーブルを作成する方法について説明します。
 
 1. テーブルを作成するために必要なレイアウトフラグメントが AEM で使用可能な状態になっていることを確認します。
-1. インタラクティブコミュニケーションの印刷チャネルで、レイアウトフラグメント（複数列のテーブルを含む）をアセットブラウザーからターゲット領域にドラッグ&amp;ドロップします。
+1. Interactive Communicationの印刷チャネルで、レイアウトフラグメント（複数列のテーブルを含む）をAsset Browserからターゲット領域にドラッグ&amp;ドロップします。
 
    ![lf_dragdrop](assets/lf_dragdrop.png)
 
@@ -270,28 +276,28 @@ To conditionalize components or content in the interactive communcation, tap the
 
    1. 以下のプロパティを設定します。
 
-      * **[!UICONTROL 名前]**:JCRノード名。
-      * **[!UICONTROL タイトル]**:インタラクティブコミュニケーションエディターに表示するタイトルを入力します。
-      * **[!UICONTROL 連結タイプ]**(&amp;A);ast;:フィールドに対して、次の連結タイプのいずれかを選択します。
+      * **[!UICONTROL 名前]**: JCRノード名。
+      * **[!UICONTROL タイトル]**: 対話型通信エディタに表示するタイトルを入力します。
+      * **[!UICONTROL バインディングタイプ]**(&amp;A);ast;: フィールドに対して、次のいずれかの連結の種類を選択します。
 
          * **[!UICONTROL なし]**
-         * **[!UICONTROL データモデルオブジェクト]**:フォームデータモデルのプロパティの値がフィールドに入力されます。
-      * **[!UICONTROL Data Model Object]**:フィールドに値が入力されるフォームデータモデルのプロパティ。
-      * **[!UICONTROL デフォルト値]**:デフォルト値を使用すると、指定したデータモデルオブジェクトで値が指定されていない場合に、フィールドが空ではなくなります。 デフォルト値はフィールドに事前に設定されます。
+         * **[!UICONTROL データモデルオブジェクト]**: フォームデータモデルのプロパティの値がフィールドに入力されます。
+      * **[!UICONTROL Data Model Object]**: フィールドに値が入力されるフォームデータモデルのプロパティ。
+      * **[!UICONTROL デフォルト値]**: デフォルト値では、指定したデータモデルオブジェクトに値が指定されていない場合、フィールドが空でないことを確認します。 デフォルト値はフィールドに事前入力されます。
       * **[!UICONTROL エージェントによる編集が可能]**：エージェント UI のフィールド値をエージェントを使用して編集できるようにするには、このオプションを選択します。
-   1. 「 ![done_icon」をタップします](assets/done_icon.png)。
+   1. 「 ![done_icon](assets/done_icon.png)」をタップします。
 
 
 
-1. インタラクティブ通信をプレビューして、データと共にレンダリングされたテーブルを確認します。
+1. 対話型通信をプレビューして、データと共にレンダリングされたテーブルを表示します。
 
-   ![lf_preview](assets/lf_preview.png)
+   ![lf_プレビュー](assets/lf_preview.png)
 
 ### Web チャネル専用テーブル {#web-channel-only-tables}
 
-Interactive Communicationでは、Webチャネル専用の動的テーブルを、型コレクションのデータモデルプロパティを使用して作成できます。 このようなテーブルは、コレクションプロパティの子プロパティを表します。 編集できるのは、テーブル内のセルの書式設定プロパティだけです。
+Interactive Communicationでは、型のコレクションのdata modelプロパティを使用して、Webチャネルのみの動的テーブルを作成できます。 このようなテーブルは、コレクションプロパティの子プロパティを表したものです。 編集できるのは、テーブル内のセルの書式設定プロパティだけです。
 
-1. Webチャネルに切り替え、データソースブラウザーの表示を選択します。
+1. Webチャネルーに切り替え、データソースブラウザーの表示を選択します。
 1. コレクションプロパティをサブフォームにドラッグアンドドロップします。
 
    サブフォーム内にテーブルが作成されます。
@@ -302,13 +308,13 @@ Interactive Communicationでは、Webチャネル専用の動的テーブルを�
 
 インタラクティブ通信を作成する際に、Web チャネルのマスターとして印刷チャネルを選択すると、印刷チャネルに同期された Web チャネルが作成されます。Web チャネルに連結されたコンテンツとデータは印刷チャネルから取得され、「同期」をタップすると、印刷チャネルに対する変更内容が Web チャネルに反映されます。
 
-ただし、作成者は、Web チャネル内のコンポーネントについて、必要に応じて継承設定を解除することができます。![printweb_2-3クリックし](assets/printweb_2-3.png)[て拡大](assets/printweb_2-3.png)
+ただし、作成者は、Web チャネル内のコンポーネントについて、必要に応じて継承設定を解除することができます。![printweb_2-3](assets/printweb_2-3.png)[Click to Enlarge](assets/printweb_2-3.png)
 
-![Interactive Communicationエディターでの印刷チャネルとWebチャネル](assets/printweb_2-1.png)
+![Interactive Communication Editorでの印刷チャネルとWebエディタ](assets/printweb_2-1.png)
 
 ### 自動同期 {#auto-sync}
 
-Web チャネルのマスターとして印刷チャネルを使用している場合、印刷チャネルから Web チャネルに切り替えると、自動同期が実行されます。自動同期により、印刷チャネルのプレースホルダー、コンテンツ、データ連結が Web チャネルに取り込まれます。インタラクティブ通信の複雑さと内容によっては、自動同期には少し時間がかかる場合があります。
+Web チャネルのマスターとして印刷チャネルを使用している場合、印刷チャネルから Web チャネルに切り替えると、自動同期が実行されます。自動同期により、印刷チャネルのプレースホルダー、コンテンツ、データ連結が Web チャネルに取り込まれます。Interactive Communicationの複雑さと内容によっては、自動同期には少し時間がかかる場合があります。
 
 >[!NOTE]
 >
@@ -330,7 +336,7 @@ Web チャネルでコンポーネントの継承をキャンセルした場合�
 
 ![復帰継承](assets/revertinheritance.png)
 
-必要に応じて、「**[!UICONTROL 継承を元に戻してからページを同期]**」を選択します。インタラクティブ通信全体を同期する場合は、このオプションを選択します。 このオプションを選択しない場合、継承を元に戻すと、関連するターゲット領域のみが同期されます。
+必要に応じて、「**[!UICONTROL 継承を元に戻してからページを同期]**」を選択します。対話型通信全体を同期するには、このオプションを選択します。 このオプションを選択しない場合、継承の復元時に関連するターゲット領域だけが同期されます。
 
 Tap **[!UICONTROL Yes]**.
 
@@ -340,12 +346,12 @@ Web チャネルのマスターとして印刷チャネルを使用している�
 
 1. To synchronize the Web channel with the Print channel, tap **[!UICONTROL Synchronize]**.
 
-   マスターチャネルからのコンテンツの同期ダイアログが表示されます。
+   マスターチャネルからコンテンツを同期ダイアログが表示されます。
 
    ![synchronizecontentfrommasterchannel](assets/synchronizecontentfrommasterchannel.png)
 
 1. 以下に示すいずれかのオプションをタップします。
 
-   * **[!UICONTROL 変更を破棄]**:Webチャネルで行われた変更に関係なく、Webチャネルに対して行われたすべての変更を破棄します。
-   * **[!UICONTROL 変更を保持]**:継承がキャンセルされないターゲット領域のコンテンツのみを同期します。
+   * **[!UICONTROL 変更を破棄]**: Webチャネルーで行われた変更に関係なく、Webチャネルーに対して行われたすべての変更を破棄します。
+   * **[!UICONTROL 変更を保持]**: 継承がキャンセルされないターゲット領域のコンテンツのみを同期します。
 
