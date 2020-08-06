@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
 translation-type: tm+mt
 source-git-commit: e99e29425578005ed9d215946d63f67e7229e8d6
+workflow-type: tm+mt
+source-wordcount: '457'
+ht-degree: 91%
 
 ---
 
@@ -67,7 +70,7 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 
 1. サイトコンソールで作成者に表示する指標を選択し、「**追加**」をクリックします。
 
-   表示される列はAdobe Analyticsから取得されます。
+   表示される列は、Adobe Analyticsから取得されます。
 
    ![aa-16](assets/aa-16.png)
 
@@ -86,4 +89,4 @@ Open [Content Insight](/help/sites-authoring/content-insights.md) from the Sites
 >
 >Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。
 >
->The [ActivityMap plugin provided by Adobe Analytics](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) should now be used.
+>The [ActivityMap plugin provided by Adobe Analytics](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html) should now be used.
