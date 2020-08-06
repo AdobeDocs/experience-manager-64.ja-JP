@@ -45,11 +45,11 @@ After you create the configuration, you need to [activate it](/help/sites-admini
 
 ## Microsoft Translator クラウドサービスのサンプル設定 {#sample-microsoft-translator-cloud-service-configurations}
 
-以下のMicrosoft Translatorクラウドサービス設定が、Geometrixxサンプルと共にインストールされます。 一部のサンプル設定では、Microsoftの体験版の翻訳アカウントを使用し、1か月に最大2,000,000の無料翻訳文字を使用できます。
+Geometrixxサンプルと共に、次のMicrosoft Translator Cloudサービス設定がインストールされます。 一部のサンプル設定では、Microsoftの体験版の翻訳アカウントを使用し、1か月に最大2,000,000の無料翻訳文字を使用できます。
 
 ### Microsoft Translator 試用版ライセンス {#microsoft-translator-trial-license}
 
-Microsoft Translator体験版ライセンスの設定は、Geometrixx Outdoorsサンプルパッケージと共にインストールされるサンプル設定です。 この設定では、無料の購読を持つMicrosoft Translatorアカウントを使用し、1か月に2000,000文字の翻訳を実行できます。
+Microsoft Translator体験版ライセンス設定は、Geometrixx Outdoorsサンプルパッケージと共にインストールされるサンプル設定です。 この設定では、無料の購読を持つMicrosoft Translatorアカウントを使用し、1か月に2000,000文字の翻訳を実行できます。
 
 ### Microsoft Translator 試用版ライセンス - Geometrixx-outdoors {#microsoft-translator-trial-license-geometrixx-outdoors}
 
