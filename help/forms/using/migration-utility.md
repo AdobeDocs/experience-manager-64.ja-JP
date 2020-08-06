@@ -12,18 +12,21 @@ content-strategy: max-2018
 discoiquuid: a8b1f7df-e36f-4d02-883a-72120fea7046
 translation-type: tm+mt
 source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+workflow-type: tm+mt
+source-wordcount: '1872'
+ht-degree: 68%
 
 ---
 
 
 # AEM Forms のアセットとドキュメントの移行 {#migrate-aem-forms-assets-and-documents}
 
-The Migration utility converts the [Adaptive Forms assets](/help/forms/using/introduction-forms-authoring.md), [cloud configrurations](/help/sites-developing/extending-cloud-config.md), and [Correspondence Management assets](/help/forms/using/cm-overview.md) from the format used in the earlier versions to the format used in AEM 6.4 Forms. 移行ユーティリティを実行すると、次の移行が行われます。
+The Migration utility converts the [Adaptive Forms assets](/help/forms/using/introduction-forms-authoring.md), [cloud configrurations](/help/sites-developing/extending-cloud-config.md), and [Correspondence Management assets](/help/forms/using/cm-overview.md) from the format used in the earlier versions to the format used in AEM 6.4 Forms. 移行ユーティリティを実行すると、次の項目が移行されます。
 
 * アダプティブフォームのカスタムコンポーネント
 * アダプティブフォームと Correspondence Management のテンプレート
 * クラウドの設定情報
-* Correspondence Managementとアダプティブフォームのアセット
+* Correspondence Managementとアダプティブフォームアセット
 
 >[!NOTE]
 >
@@ -43,21 +46,21 @@ Then you need to update the assets and documents by [running the Migration utili
 
 If it is an out of place (fresh) installation, before you can use the assets and documents, you will need to install [AEMFD Compatibility package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT) (includes the Correspondence Management Compatibility package).
 
-Then you need to import your asset package (zip or cmp) on the new setup and then update the assets and documents by [running the Migration utility](#runningmigrationutility). [後方互換性に関する要件](/help/sites-deploying/backward-compatibility.md)が変更されたことに伴い、CRX リポジトリ内のいくつかのフォルダーの場所が変更されています。以前の設定から新しい環境に、依存関係（カスタムライブラリとアセット）を手動で書き出し、読み込みます。
+Then you need to import your asset package (zip or cmp) on the new setup and then update the assets and documents by [running the Migration utility](#runningmigrationutility). [後方互換性に関する要件](/help/sites-deploying/backward-compatibility.md)が変更されたことに伴い、CRX リポジトリ内のいくつかのフォルダーの場所が変更されています。以前の設定から新規環境に対して、依存関係（カスタムライブラリおよびアセット）を手動で書き出しおよび読み込みます。
 
 ## Read before you proceed with the migration {#prerequisites}
 
 Correspondence Management のアセットを移行する場合は、以下の点に注意してください。
 
 * For the assets that are imported from the previous platform, a property gets added: **fd:version=1.0**.
-* AEM 6.1 Forms 以降、コメントは初期状態では使用できません。以前に追加したコメントはアセットで使用できますが、インターフェイスに自動的に表示されません。 コメントを表示させるには、AEM Forms のユーザーインターフェイスで extendedProperties プロパティをカスタマイズする必要があります。
+* AEM 6.1 Forms 以降、コメントは初期状態では使用できません。以前に追加したコメントはアセット内で使用できますが、インターフェイスには自動的に表示されません。 コメントを表示させるには、AEM Forms のユーザーインターフェイスで extendedProperties プロパティをカスタマイズする必要があります。
 * LiveCycle ES4 など、旧バージョンの一部では Flex RichTextEditor を使用してテキストを編集しましたが、AEM 6.1 Forms 以降では HTML エディターを使用します。このレンダリングにより、フォント、フォントサイズ、フォントマージンの外観は以前のバージョンの作成者ユーザーインターフェイスでの外観と異なる可能性があります。ただし、レターは同じように表示されます。
 * テキストモジュールのリストが改善され、別々にレンダリングされるようになりました。外観や表示が今までと異なるところがあります。テキストモジュールのリストを使用している場所で、レターのレンダリングや表示を行うことをお勧めします。
 * 移行中に画像コンテンツモジュールは DAM アセットおよびレイアウトに変換され、フラグメントはフォームに追加されるため、これらのモジュールの更新者プロパティは管理者に変更されます。
 * アセットのバージョン履歴は移行されず、移行後は使用できなくなります。移行後のバージョン履歴は保持されます。
 * AEM 6.1 Forms 以降では、「発行準備完了」の状態は廃止されました。このため、「発行準備完了」の状態にあったすべてのアセットは、変更済みの状態に変更されます。
 * AEM Forms 6.3 ではユーザーインターフェイスが更新されているため、カスタマイズを行うための手順も異なります。6.3 よりも前のバージョンのアセットを移行する場合は、カスタマイズをやり直す必要があります。
-* レイアウトフラグメントは、/content/apps/cm/layouts/fragmentlayouts/1001 から /content/apps/cm/modules/fragmentlayouts に移動しました。アセット内のデータディクショナリ参照は、名前の代わりにデータディクショナリのパスを表示します。
+* レイアウトフラグメントは、/content/apps/cm/layouts/fragmentlayouts/1001 から /content/apps/cm/modules/fragmentlayouts に移動しました。アセットのデータディクショナリ参照には、名前の代わりにデータディクショナリのパスが表示されます。
 * タブスペースを使用してテキストモジュールを調整した場合は、再調整する必要があります。詳しくは、「[Correspondence Management - タブスペースを使用したテキスト調整の詳細](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html)」を参照してください。
 * Asset Composerの設定がCorrespondence Managementの設定に変更されました。
 * アセットは、「Existing Text」や「Existing List」などの名前のフォルダーに移動されます。
@@ -66,7 +69,7 @@ Correspondence Management のアセットを移行する場合は、以下の点
 
 ### 移行ユーティリティの実行 {#runningmigrationutility}
 
-移行ユーティリティを実行した後で、アセットに変更を加えたり、アセットを作成したりします。移行ユーティリティは、アセットの変更や作成後に実行しないことをお勧めします。移行プロセスの実行中は、Correspondence Managementまたはアダプティブフォームアセットのユーザーインターフェイスが開いていないことを確認してください。
+移行ユーティリティを実行した後で、アセットに変更を加えたり、アセットを作成したりします。移行ユーティリティは、アセットの変更や作成後に実行しないことをお勧めします。移行プロセスの実行中は、Correspondence ManagementまたはAdaptiveFormsアセットのユーザーインターフェイスが開いていないことを確認してください。
 
 When you run the Migration Utility for the first time, a log is created with the following path and name: `\[aem-installation-directory]\cq-quickstart\logs\aem-forms-migration.log`. それ以降は、移行ユーティリティを実行するたびに、Correspondence Management とアダプティブフォームの移行に関する情報（アセットの移行に関する情報など）がこのログファイルに記録されます。
 
@@ -96,22 +99,24 @@ When you run the Migration Utility for the first time, a log is created with the
       * テーマ
       * レター
       * データディクショナリ
+
    >[!NOTE]
    >
-   >移行中、「競合が見つかりました...」のような警告メッセージが表示される場合があります。このメッセージは、アダプティブフォームの一部のコンポーネントのルールを移行できなかったことを示しています。 例えば、コンポーネントにルールとスクリプトの両方がある場合、スクリプトの後にルールが発生した場合はそのコンポーネントのルールは移行されません。ただし、そのようなルールは、アダプティブフォームのオーサリングでルールエディターを開くことで移行することができます。
+   >移行中、「競合が見つかりました...」のような警告メッセージが表示される場合があります。このようなメッセージは、アダプティブフォームの一部のコンポーネントのルールを移行できなかったことを示しています。 例えば、コンポーネントにルールとスクリプトの両方がある場合、スクリプトの後にルールが発生した場合はそのコンポーネントのルールは移行されません。ただし、そのようなルールは、アダプティブフォームのオーサリングでルールエディターを開くことで移行することができます。
    >
    >これらのコンポーネントは、アダプティブフォームのルールエディターで開くことで移行できます。
    >
-   >* カスタムコンポーネントのルールとスクリプト（6.3からアップグレードする場合は不要）を移行するには、「アダプティブフォームカスタムコンポーネントの移行」をタップし、次の画面で「移行を開始」をタップします。 次のものが移行されます。
+   >* カスタムコンポーネントのルールとスクリプト（6.3からアップグレードした場合は不要）を移行するには、「アダプティブFormsカスタムコンポーネントの移行」をタップし、次の画面で「開始の移行」をタップします。 次のものが移行されます。
       >
       >  
    * ルールエディターで作成されたルールとスクリプト（6.1 FP1 以降）
    >  * 6.1 以前の UI の「スクリプト」タブで作成されたスクリプト
-   >* テンプレートを移行する（6.3からアップグレードする場合は不要）には、「アダプティブフォームテンプレートの移行」をタップし、次の画面で「移行を開始」をタップします。 次のものが移行されます。
+   >* テンプレートを移行する（6.3からアップグレードした場合は不要）には、「アダプティブFormsテンプレートの移行」をタップし、次の画面で「開始の移行」をタップします。 次のものが移行されます。
+
       >
       >  
-   * 古いテンプレート — AEM 6.1 Forms以前を使用して/appsの下に作成されたアダプティブフォームテンプレート。 これには、テンプレートコンポーネントに定義されたスクリプトも含まれます。
-   >  * 新しいテンプレート — /confの下にあるテンプレートエディターを使用して作成されたアダプティブフォームテンプレート。 これには、ルールエディターで作成されたルールとスクリプトが含まれます。
+   * 古いテンプレート — AEM 6.1Forms以前を使用して/appsの下に作成されたアダプティブフォームテンプレート。 これには、テンプレートコンポーネントに定義されたスクリプトも含まれます。
+   >  * 新しいテンプレート — /confの下のテンプレートエディターを使用して作成されたアダプティブフォームテンプレート。 これには、ルールエディターで作成されたルールとスクリプトが含まれます。
 
 
    * To migrate adaptive form custom components, tap **Adaptive Forms Custom Components Migration** and in the Custom Components Migration page, tap **Start Migration**. 次のものが移行されます。
@@ -121,13 +126,14 @@ When you run the Migration Utility for the first time, a log is created with the
    * To migrate adaptive form templates, tap **Adaptive Forms Template Migration** and in the Custom Components Migration page, tap **Start Migration**. 次のものが移行されます。
 
       * AEM テンプレートエディターを使用して /apps フォルダーまたは /conf フォルダー内に作成されたアダプティブフォームテンプレート
-   * 新しいコンテキスト認識クラウドサービスメカニズムを使用するには、AEM Forms クラウド設定サービスを移行する必要があります。このメカニズムには、タッチ操作が可能な UI が用意されています（/conf フォルダーに保管されています）。AEM Formsクラウド設定サービスを移行すると、/etc内のクラウドサービスが/confに移動されます。 レガシーパス(/etc)に依存するクラウドサービスのカスタマイズを行っていない場合は、6.4にアップグレードした後すぐに移行ユーティリティを実行し、以降の作業にはクラウド設定のタッチUIを使用することをお勧めします。 既存のクラウドサービスがカスタマイズされている場合は、移行後のパス（/conf フォルダー）に合わせてカスタマイズ内容を更新するまでは、アップグレード後のセットアップ環境で既存の UI を使用してください。カスタマイズ内容の更新が完了したら、移行ユーティリティを実行してください。
+   * 新しいコンテキスト認識クラウドサービスメカニズムを使用するには、AEM Forms クラウド設定サービスを移行する必要があります。このメカニズムには、タッチ操作が可能な UI が用意されています（/conf フォルダーに保管されています）。AEM Formsクラウド設定サービスを移行すると、/etcのクラウドサービスは/confに移動されます。 レガシーパス(/etc)に依存するクラウドサービスのカスタマイズがない場合は、6.4にアップグレードした直後に移行ユーティリティを実行し、以降の作業にはクラウド設定のタッチUIを使用することをお勧めします。 既存のクラウドサービスがカスタマイズされている場合は、移行後のパス（/conf フォルダー）に合わせてカスタマイズ内容を更新するまでは、アップグレード後のセットアップ環境で既存の UI を使用してください。カスタマイズ内容の更新が完了したら、移行ユーティリティを実行してください。
+
    To migrate **AEM Forms cloud services**, which include the following, tap AEM Forms Cloud Configuration Migration (cloud config migration is independent of AEMFD Compatibility package), tap AEM Forms Cloud Configurations Migration and then on the Configuration Migration page, tap **Start Migration**:
 
    * フォームデータモデルのクラウドサービス
 
       * ソースパス：/etc/cloudservices/fdm
-      * ターゲットパス：/conf/global/settings/cloudconfigs/fdm
+      * ターゲットパス： /conf/global/settings/cloudconfigs/fdm
    * Recaptcha
 
       * ソースパス：/etc/cloudservices/recaptcha
@@ -140,15 +146,18 @@ When you run the Migration Utility for the first time, a log is created with the
 
       * ソースパス：/etc/cloudservices/typekit
       * ターゲットパス：/conf/global/settings/cloudconfigs/typekit
+
    移行プロセスの実行時は、ブラウザーウィンドウにそれぞれ以下が表示されます。
 
    * アセットを更新したとき：アセットは正しく更新されました。
    * 移行が完了したとき：アセットの移行が完了しました。
+
    完了後は、移行ユーティリティで以下を実行します。
 
-   * **タグをアセットに追加**：タグ「Correspondence Management：移行済みアセット」または「アダプティブフォーム：移行済みアセット」を移行済みのアセットに追加します。これにより、ユーザーは移行済みアセットを識別できます。移行ユーティリティを実行すると、システム内の既存のアセットはすべて移行済みとマークされます。
+   * **タグをアセットに追加**：タグ「Correspondence Management：移行済みアセット」または「アダプティブフォーム：移行済みアセット」を移行済みのアセットに追加します。これにより、ユーザーは移行済みアセットを識別できます。移行ユーティリティを実行すると、システム内の既存のアセットはすべて移行済みとしてマークされます。
    * **タグを生成**：以前のシステムに存在するカテゴリおよびサブカテゴリはタグとして作成され、これらのタグは AEM 内で関連する Correspondence Management アセットに関連付けられます。例えば、レターテンプレートのカテゴリ（「要求」）とサブカテゴリ（「要求」）は、タグとして生成されます。
    * **レイアウトおよびレイアウトフラグメントを AEM 6.4 Forms ユーザーインターフェイスに移動**：バージョン 6.2 をバージョン 6.4 にアップグレードすると、レイアウトテンプレートとレイアウトフラグメントが、AEM Forms 6.4 のユーザーインターフェイスセクションにフォームとして追加されます。
+
    >[!NOTE]
    >
    >バージョン 6.2 をバージョン 6.4 にアップグレードすると、アセットが保管された、Correspondence Management 用の新しいフォルダーが UI に表示される場合があります。アセットを見つけるためこれらのフォルダーを確認する必要がある場合があります。
@@ -159,9 +168,9 @@ When you run the Migration Utility for the first time, a log is created with the
 
 移行ユーティリティを実行した後、次のハウスキーピングタスクを行います。
 
-1. レイアウトおよびフラグメントレイアウトのXFAバージョンが3.3以降であることを確認します。 古いバージョンのレイアウトとフラグメントレイアウトを使用している場合、レターのレンダリングで問題が発生する可能性があります。 古いXFAのバージョンを最新バージョンに更新するには、次の手順を実行します。
+1. レイアウトおよびフラグメントレイアウトのXFAバージョンが3.3以降であることを確認します。 古いバージョンのレイアウトとフラグメントレイアウトを使用している場合は、レターのレンダリングで問題が発生する可能性があります。 古いXFAのバージョンを最新バージョンに更新するには、次の手順を実行します。
 
-   1. [FormsユーザーインターフェイスからXFAをzipファイルとして](/help/forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) 、ダウンロードします。
+   1. [XFAをzipファイルとしてFormsユーザーインターフェイス](/help/forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) からダウンロードします。
    1. ファイルを解凍します。
    1. 最新の Designer で XFA ファイルを開き、保存します。XFA が最新バージョンに更新されます。
    1. XFA を Forms ユーザーインターフェイスでアップロードします。
