@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5d607b9f-584b-4ffc-ab0b-d0318dc69dec
 translation-type: tm+mt
 source-git-commit: 0e7f4a78f63808bea2aa7a5abbb31e7e5b9d21b3
+workflow-type: tm+mt
+source-wordcount: '783'
+ht-degree: 10%
 
 ---
 
@@ -21,7 +24,7 @@ SPAでは、ページコンポーネントは子コンポーネントのHTML要�
 
 >[!NOTE]
 >
->シングルページアプリケーション(SPA)エディター機能を使用するには、AEM 6.4 Service Pack 2以降が必要です。
+>シングルページアプリケーション(SPA)エディタ機能を使用するには、AEM 6.4 Service Pack 2以降が必要です。
 >
 >SPAエディターは、SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトに推奨されるソリューションです。
 
@@ -31,7 +34,7 @@ SPAのページコンポーネントは、JSPまたはHTLファイルとリソ�
 
 ## ページモデルの管理 {#page-model-management}
 
-The resolution and the management of the page model is delegated to a provided [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) module. SPAは、初期化時に `PageModelManager` モジュールとやり取りし、初期ページモデルを取得し、モデル更新の登録を行う必要があります。主に、作成者がページエディターを使用してページを編集する際に生成されます。 は、SPAプロジェクト `PageModelManager` からnpmパッケージとしてアクセスできます。 AEMとSPAの間のインタープリタとして、はSPAに付き添う `PageModelManager` ことを意図しています。
+The resolution and the management of the page model is delegated to a provided [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) module. SPAは、初期化時に `PageModelManager` モジュールとやり取りし、初期ページモデルを取得し、モデル更新の登録を行う必要があります。主に、作成者がページエディターを使用してページを編集する際に生成されます。 は、SPAプロジェクト `PageModelManager` からnpmパッケージとしてアクセスできます。 AEMとSPAの間のインタプリタとして、はSPAに付き添うこと `PageModelManager` を意図しています。
 
 ページを作成できるようにするには、という名前のクライアントライブラリを追加し `cq.authoring.pagemodel.messaging` て、SPAとページエディター間の通信チャネルを提供する必要があります。 SPAページコンポーネントがページwcm/coreコンポーネントから継承している場合は、次のオプションを使用してクライアントライブラリカテゴリを使用できるように `cq.authoring.pagemodel.messaging` します。
 
@@ -42,7 +45,7 @@ The resolution and the management of the page model is delegated to a provided [
 
 ## 通信データタイプ {#communication-data-type}
 
-通信データ型は、属性を使用してAEMページコンポーネント内にHTML要素を設定し `data-cq-datatype` ます。 通信データ型がJSONに設定されている場合、GET要求はコンポーネントのSlingモデルエンドポイントに到達します。 ページエディターで更新が実行されると、更新されたコンポーネントの JSON 表記がページモデルのライブラリに送信されます。次に、ページモデルライブラリがSPAに更新の警告を表示します。
+通信データ型は、属性を使用してAEM Pageコンポーネント内にHTML要素を設定し `data-cq-datatype` ます。 通信データ型がJSONに設定されている場合、GET要求はコンポーネントのSlingモデルエンドポイントに届きます。 ページエディターで更新が実行されると、更新されたコンポーネントの JSON 表記がページモデルのライブラリに送信されます。次に、ページモデルライブラリがSPAに更新の警告を表示します。
 
 **SPAページコンポーネント —`body.html`**
 
@@ -92,7 +95,7 @@ SPAコンテンツを記述するメタリソースプロパティ。
 >
 >このドキュメントでは、We.Retailジャーナルアプリをデモ目的でのみ使用します。 どのプロジェクト作業にも使用しないでください。
 >
->AEMプロジェクトは、ReactまたはAngularを使用したSPAプロジェクトをサポートし、SPA SDKを利用する [AEMプロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用する必要があります。AEM上のすべてのSPAプロジェクトは、SPAスターターキット用のMavenアーキタイプに基づく必要があります。
+>AEMプロジェクトは、ReactまたはAngularを使用するSPAプロジェクトをサポートし、SPA SDKを活用する [AEM Project Archetype](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用する必要があります。AEMのすべてのSPAプロジェクトは、SPA Starter KitのMavenアーキタイプをベースにする必要があります。
 
 ## ページエディターオーバーレイの同期 {#page-editor-overlay-synchronization}
 
@@ -100,7 +103,7 @@ SPAコンテンツを記述するメタリソースプロパティ。
 
 ## SlingモデルJSONが書き出した構造の設定 {#sling-model-json-exported-structure-configuration}
 
-ルーティング機能が有効な場合、AEMナビゲーションコンポーネントのJSONエクスポートのおかげで、SPAのJSONエクスポートにアプリケーションの様々なルートが含まれていることを前提としています。 AEM ナビゲーションコンポーネントの JSON 出力は、次の 2 つのプロパティを使用し、SPA のルートページのコンテンツポリシーで設定することができます。
+ルーティング機能が有効な場合、AEMナビゲーションコンポーネントのJSONエクスポートのおかげで、SPAのJSONエクスポートにアプリケーションの様々なルートが含まれていることが前提となります。 AEM ナビゲーションコンポーネントの JSON 出力は、次の 2 つのプロパティを使用し、SPA のルートページのコンテンツポリシーで設定することができます。
 
 * `structureDepth`：書き出されたツリーの深度に対応する数字。
 * `structurePatterns`: 書き出すページに対応する正規表現
