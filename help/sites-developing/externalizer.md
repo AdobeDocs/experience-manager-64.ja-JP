@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 53342acb-c1a5-443d-8727-cb27cc9d6845
 translation-type: tm+mt
 source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
+workflow-type: tm+mt
+source-wordcount: '533'
+ht-degree: 48%
 
 ---
 
@@ -38,21 +41,23 @@ The **Externalizer** service allows you to centrally define multiple domains tha
 
    ![chlimage_1-44](assets/chlimage_1-44.png)
 
-1. ドメインマッピングの定義：マッピングは、ドメイン、スペースおよびドメインを参照するためにコードで使用できる一意の名前で構成されます。
+1. ドメインマッピングの定義： マッピングは、ドメイン、スペース、ドメインを参照するコードで使用できる一意の名前で構成されます。
 
    `<unique-name> [scheme://]server[:port][/contextpath]`, 条件:
 
-   * **schemeは** 、通常httpまたはhttpsですが、ftpなども使用できます。必要に応じてhttpsを使用し、httpsリンクを強制します。URLの外部化を要求する際に、クライアントコードがスキームを上書きしない場合に使用されます。
-   * **serverは** 、ホスト名（ドメイン名またはIPアドレス）です。
+   * **scheme** は通常、httpまたはhttpsですが、ftpなどを指定することもできます。 必要に応じてhttpsを使用し、httpsリンクを強制します。 URLの外部化を要求する際に、クライアントコードがスキームを上書きしない場合に使用されます。
+   * **server** はホスト名です（ドメイン名またはipアドレスを指定できます）。
    * **port** （オプション）はポート番号です。
-   * **contextpath** （オプション）は、AEMがWebアプリケーションとして別のコンテキストパスの下にインストールされている場合にのみ設定されます。
-   次に例を示します。`production https://my.production.instance`
+   * **contextpath** （オプション）は、AEMがwebアプリとして別のコンテキストパスの下にインストールされている場合にのみ設定されます。
 
-   次のマッピング名は事前に定義されており、AEMが依存するために常に設定する必要があります。
+   例：`production https://my.production.instance`
+
+   次のマッピング名は事前に定義されており、AEMがそれらに依存しているため、常に設定する必要があります。
 
    * **local** — ローカルインスタンス
    * **author** — オーサリングシステムのDNS
-   * **publish** — 公開されるWebサイトのDNS
+   * **publish** — 公開先のWebサイトDNS
+
    >[!NOTE]
    >
    >カスタム設定によって、「production」、「staging」などの新しいカテゴリや、「my-internal-webservice」などの AEM 以外の外部システムでも追加できます。このような設定は、プロジェクトのコードベースの様々な場所でそのような URL をハードコーディングするのを避けるために有効です。
