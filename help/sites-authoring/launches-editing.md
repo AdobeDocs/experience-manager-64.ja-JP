@@ -12,6 +12,9 @@ discoiquuid: a28539fc-c1dd-43bf-a47b-5f158c5611a7
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '515'
+ht-degree: 100%
 
 ---
 
@@ -41,19 +44,19 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 詳しくは、「[ライブコピーのコンテンツの変更](/help/sites-administering/msm-livecopy.md#changing-live-copy-content)」を参照してください。
 
-## ローンチページをそのソースページと比較 {#comparing-a-launch-page-to-its-source-page}
+## ローンチページとそのソースページの比較 {#comparing-a-launch-page-to-its-source-page}
 
 おこなった変更を追跡するために、ローンチを&#x200B;**参照**&#x200B;で表示して、ローンチページをそのソースページと比較することができます。
 
 1. **サイト**&#x200B;コンソールで、[ローンチのソースページに移動してそれを選択します](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
-1. **[参照](/help/sites-authoring/basic-handling.md#references)**パネルを開いて、「**ローンチ**」を選択します
-1. 特定のローンチを選択してから、次のように&#x200B;**ソースと比較します**
+1. **[参照](/help/sites-authoring/basic-handling.md#references)**パネルを開いて、「**ローンチ**」を選択します。
+1. 特定のローンチを選択してから、次のように&#x200B;**ソースと比較します**。
 
    ![chlimage_1-96](assets/chlimage_1-96.png)
 
 1. 2 つのページ（ローンチページとソースページ）が左右に並んで開きます。
 
-   この機能の使用方法について詳しくは、「[ページの差分](/help/sites-authoring/page-diff.md)」を参照してください。
+   この機能の使用方法について詳しくは、[ページの差分](/help/sites-authoring/page-diff.md)を参照してください。
 
 ## 使用するソースページの変更 {#changing-the-source-pages-used}
 
@@ -61,12 +64,13 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 1. 次のいずれかの方法を使用して、ローンチにアクセスして選択します。
 
-   * [ローンチコンソールの場合](/help/sites-authoring/launches.md#the-launches-console)：
+   * [ローンチコンソール](/help/sites-authoring/launches.md#the-launches-console)：
 
       * 「**編集**」を選択します。
-   * [「参照」（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)。使用可能なアクションを表示します。
+   * [「参照」（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
 
       * 「**ローンチを編集**」を選択します。
+
    ソースページが表示されます。
 
 1. 必要な変更を加え、「**保存**」で確定します。
@@ -81,12 +85,13 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 1. 次のいずれかの方法を使用して、ローンチにアクセスして選択します。
 
-   * [ローンチコンソールの場合](/help/sites-authoring/launches.md#the-launches-console)：
+   * [ローンチコンソール](/help/sites-authoring/launches.md#the-launches-console)：
 
       * 「**プロパティ**」を選択します。
-   * [「参照」（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)。使用可能なアクションを表示します。
+   * [「参照」（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
 
       * 「**プロパティを編集**」を選択します。
+
    詳細が表示されます。
 
 1. 必要な変更を加え、「**保存**」で確定します。
@@ -95,7 +100,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 ## ページのローンチステータスの確認 {#discovering-the-launch-status-of-a-page}
 
-ステータスは、「参照」タブから特定のローンチを選択すると表示されます（[「参照」のローンチ（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)を参照）。
+「参照」タブから特定のローンチを選択すると、ステータスが表示されます（[「参照」のローンチ（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)を参照）。
 
 ![chlimage_1-97](assets/chlimage_1-97.png)
 
