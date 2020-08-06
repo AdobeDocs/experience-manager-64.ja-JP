@@ -1,8 +1,8 @@
 ---
 title: 一括アセット移行のための機能パック18912のインストール
 seo-title: 一括アセット移行のための機能パック18912のインストール
-description: 機能パック18912では、FTPを使用してアセットを一括インジェストするか、アセットをDynamic MediaクラシックからAEMのDynamic Mediaに移行できます。 このオプションの機能パックは、アドビサポートから入手できます。
-seo-description: 機能パック18912では、FTPを使用してアセットを一括インジェストするか、アセットをDynamic MediaクラシックからAEMのDynamic Mediaに移行できます。 このオプションの機能パックは、アドビサポートから入手できます。
+description: 機能パック18912では、FTPを使用してアセットを一括取り込むか、AEMのDynamic Media Classicからダイナミックメディアにアセットを移行できます。 このオプションの機能パックは、アドビサポートから入手できます。
+seo-description: 機能パック18912では、FTPを使用してアセットを一括取り込むか、AEMのDynamic Media Classicからダイナミックメディアにアセットを移行できます。 このオプションの機能パックは、アドビサポートから入手できます。
 uuid: 316d77e3-3d61-4cf0-8955-726ee54e268c
 contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -22,15 +22,15 @@ ht-degree: 20%
 
 The installation of feature pack 18912 is _optional_.
 
-機能パック18912では、FTP経由でアセットを直接Dynamic Media- AEMのScene7モードに一括インジェストするか、Dynamic MediaClassicからDynamic Media- AEMのScene7モードに移行できます。 この機能パックは、 [Adobe Professional Servicesから入手できます](https://www.adobe.com/jp/experience-cloud/consulting-services.html)。
+機能パック18912では、FTP経由でアセットを直接AEMのダイナミックメディア — Scene7モードにバルクインジェストするか、AEMのDynamic Media Classicからダイナミックメディア —Scene7モードにアセットを移行できます。 機能パックは [Adobe Professional Servicesから入手できます](https://www.adobe.com/jp/experience-cloud/consulting-services.html)。
 
 >[!NOTE]
 >
->機能パックを使用して、Dynamic MediaクラシックからDynamic Mediaにアセットを一括移行することもできますが、Dynamic MediaクラシックのFTP機能を使用した一括移行は可能です ** 。複雑さが原因で、この方法をお勧めしません。
+>機能パックを使用して、AEMのDynamic Media ClassicからDynamic Media Scene 7モードにアセットを一括移行したり、Dynamic Media ClassicのFTP機能を使用してアセットを一括移行したりすることは可能ですが ** 、Adobeは複雑なためこの方法を推奨しません。
 >
 >したがって、このような移行機能パックは、 *Adobe Professional Servicesを通じた移行プロジェクトの一部としての* みサポートされます [](https://www.adobe.com/jp/experience-cloud/consulting-services.html)。
 
-この機能パックをインストールする前に、サービスユーザーを作成し、その情報をアドビに提供する必要があります。
+この機能パックをインストールする前に、サービスユーザーを作成し、Adobeに提供する必要があります。
 
 See also [Configuring Dynamic Media - Scene7 mode](https://helpx.adobe.com/jp/experience-manager/6-4/assets/using/config-dms7.html).
 
@@ -38,12 +38,12 @@ See also [Configuring Dynamic Media - Scene7 mode](https://helpx.adobe.com/jp/ex
 
 1. In your AEM instance, navigate to **[!UICONTROL Tools > Security > Users > Create User]**. This service user must have read/write permissions to `/content/dam`.
 1. 「**[!UICONTROL ID]**」および「**[!UICONTROL パスワード]**」フィールドで、ユーザー名およびパスワードを入力します（例：`FTP User`）。この名前は、アセットを作成したユーザーとしてタイムラインに表示されます。アセットが FTP からアップロードされる場合、アセットは、FTP サーバーにアップロードされて AEM にプッシュされる際に作成されたと見なされます。
-1. 機能パック18912のダウンロードをリクエストするには、 [Experience Manager](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) (Adobe Enterprise Support)にお問い合わせください。 サポートに問い合わせる際には、次の情報が必要になる場合があります。
+1. 機能パック18912のダウンロードをリクエストするには、 [AdobeエンタープライズサポートにExperience Manager](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) (ESS)にお問い合わせください。 サポートに問い合わせる際には、次の情報が必要になる場合があります。
 
    * 作成者インスタンスのサーバーIPアドレス。ポート番号（デフォルトでは、ポート番号は4502）を含みます。
    * 前の手順のAEMサービスユーザー名とパスワード。
 
-1. AEMのアドビエンタープライズサポートでは、FTP資格情報と機能パック18912へのアクセス権を提供します。
+1. AEMAdobeエンタープライズサポートでは、FTP資格情報と機能パック18912へのアクセスが提供されます。
 
 1. 機能パック18912を受け取ったら、インストールします。
 
