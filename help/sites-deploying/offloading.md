@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: 97d60c4d18b7842f9fc7c81be33ac1acfca8b24d
 workflow-type: tm+mt
 source-wordcount: '2803'
-ht-degree: 80%
+ht-degree: 82%
 
 ---
 
@@ -111,7 +111,7 @@ Experience Manager インスタンスとトポロジとのインタラクショ�
 Discovery Service によって、トポロジとの接続を確立および維持するために、定期的な POST 要求（ハートビート）が Topology Connector サービスに送信されます。Topology Connectorサービスは、トポロジに参加できるIPアドレスまたはホスト名の許可リストを維持します。
 
 * インスタンスをトポロジに参加させるには、ルートメンバーの Topology Connector サービスの URL を指定します。
-* インスタンスがトポロジを結合できるようにするには、ルートメンバーのTopology Connectorサービスの許可リストにそのインスタンスを追加します。
+* インスタンスがトポロジに参加できるようにするには、ルートメンバーの Topology Connector サービスの許可リストにインスタンスを追加します。
 
 Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apache.sling.discovery.impt.Config サービスの以下のプロパティを設定します。
 
@@ -169,7 +169,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
 1. 「 Configure Discovery Service」をクリックします。
 1. Topology Connector URL プロパティに項目を追加し、ルートトポロジメンバーの Topology Connector サービスの URL を指定します。URLは、https://rootservername:4502/libs/sling/topology/connectorの形式で指定します。
 
-トポロジのルートメンバーで以下の手順を実行します。この手順では、他のトポロジメンバの名前がDiscovery Service許可リストに追加されます。
+トポロジのルートメンバーで以下の手順を実行します。この手順では、ルートメンバーの Discovery Service 許可リストに他のトポロジメンバーの名前を追加します。
 
 1. ブラウザーで Web コンソールを開きます（[http://localhost:4502/system/console](http://localhost:4502/system/console)）。
 1. Main／Topology Management をクリックします。
@@ -215,7 +215,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
 
 ### インスタンスのトピックの無効化と有効化 {#disabling-and-enabling-topics-for-an-instance}
 
-Apache Sling Job Consumer Managerサービスには、トピックの許可リストおよびブロックリストのプロパティが用意されています。 これらのプロパティを設定して、Experience Manager インスタンスでの特定のトピックの処理を有効または無効にします。
+Apache Sling JobConsumer Manager サービスによって、トピックの許可リストプロパティとブロックリストプロパティが提供されます。これらのプロパティを設定して、Experience Manager インスタンスでの特定のトピックの処理を有効または無効にします。
 
 **注意：**&#x200B;インスタンスがトポロジに属している場合は、トポロジ内の任意のコンピューターでオフロードするブラウザーを使用して、トピックを有効または無効にすることもできます。
 
@@ -333,7 +333,7 @@ DAM で追加または更新されたアセットのバックグラウンド処�
 * ユーザーは、DAM アセットを処理する 1 つ以上の Experience Manager インスタンスと直接的にはやり取りしません。これらのインスタンスは、DAM アセットのバックグラウンド処理専用です。
 
 1. 各 Experience Manager インスタンスで、ルート Topology Connector を指すように Discovery Service を設定します（[トポロジメンバーシップの設定](#title4)を参照）。
-1. 接続するインスタンスが許可リスト上に来るようにルートの地形コネクタを設定します。
+1. 接続するインスタンスが許可リストに含まれるように、ルート Topology Connector を設定します。
 1. Open Offloading Browser and disable the `com/adobe/granite/workflow/offloading` topic on the instances with which users interact to upload or change DAM assets.
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
