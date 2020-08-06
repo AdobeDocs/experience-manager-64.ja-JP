@@ -1,8 +1,8 @@
 ---
-title: Dynamic Mediaビューアプリセットの管理
-seo-title: Dynamic Mediaビューアプリセットの管理
-description: Dynamic Mediaビューアプリセットの作成および管理方法
-seo-description: Dynamic Mediaビューアプリセットの作成および管理方法
+title: ダイナミックメディアビューアプリセットの管理
+seo-title: ダイナミックメディアビューアプリセットの管理
+description: ダイナミックメディアビューアプリセットの作成および管理方法
+seo-description: ダイナミックメディアビューアプリセットの作成および管理方法
 uuid: 31ef7a4e-2053-43b5-ac6c-cdc4b30c3914
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -21,14 +21,14 @@ ht-degree: 77%
 
 # Managing Dynamic Media viewer presets {#managing-viewer-presets}
 
-Dynamic Mediaビューアプリセットは、ユーザがコンピュータの画面や携帯端末上でリッチメディアアセットを表示する方法を決定する設定の集まりです。 管理者は、ビューアプリセットを作成できます。設定は、幅広いビューア設定オプションで使用できます。例えば、ビューアの表示サイズやズームの動作を変更できます。
+ダイナミックメディアビューアプリセットは、ユーザがコンピューターの画面や携帯端末上でリッチメディアアセットを表示する方法を決定する設定の集まりです。 管理者は、ビューアプリセットを作成できます。設定は、幅広いビューア設定オプションで使用できます。例えば、ビューアの表示サイズやズームの動作を変更できます。
 
 For instructions on creating and customizing your own HTML5 viewer presets, see the *Adobe Scene7 HTML5 Viewer SDK*. この SDK は、SDK 自体に組み込まれている IS パブリッシュサーバーで使用できます。ライブラリバージョンごとに、専用の SDK ドキュメントが付属しています。
 
 パス: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
 For example, 3.5 SDK: [https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.5/docs/jsdoc/index.html)
 
-[Adobe ビューアリファレンスガイド](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)も参照してください。
+[Adobe ビューアリファレンスガイド](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/home.translate.html)も参照してください。
 
 ここでは、ビューアプリセットを作成、編集および管理する方法について説明します。アセットをプレビューする際は、いつでもビューアプリセットを適用できます。詳しくは、[ビューアプリセットの適用](viewer-presets.md)を参照してください。
 
@@ -100,13 +100,13 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
 ## List of out-of-the-box viewer presets {#list-of-out-of-the-box-viewer-presets}
 
-次の表に、Dynamic Mediaに付属の定義済みの初期設定済みビューアプリセットを示します。
+次の表に、ダイナミックメディアに付属の定義済みの初期設定済みビューアプリセットを示します。
 
 ライブデモも参照して [ください](https://landing.adobe.com/jp/na/dynamic-media/ctir-2755/live-demos.html)。
 
 ビューアでサポートされている Web ブラウザーとオペレーティングシステムのバージョンについては、ビューアのリリースノートに記載されています。
 
-See *Viewers release notes* in the table of contents of the [Viewers Reference Guide](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
+See *Viewers release notes* in the table of contents of the [Viewers Reference Guide](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/home.translate.html).
 
 >[!NOTE]
 >
@@ -162,9 +162,9 @@ See *Viewers release notes* in the table of contents of the [Viewers Reference G
 
 **[!UICONTROL 詳細ビュー／ビューア]**&#x200B;でアセットを表示したとき、AEM には様々なビューアプリセットが表示されます。表示されるビューアの数を増減できます。
 
-**表示するDynamic Mediaビューアプリセットの数を増やすには**:
+**表示するダイナミックメディアビューアのプリセット数を増やすには**:
 
-1. Navigate to **[!UICONTROL CRXDE Lite]** ([http://localhost:4502/crx/de](http://localhost:4502/crx/de)).
+1. **[!UICONTROL CRXDE Lite]** ([http://localhost:4502/crx/de](http://localhost:4502/crx/de))に移動します。
 1. ビューアプリセットリストノード（`/libs/dam/gui/coral/content/commons/sidepanels/viewerpresets/viewerpresetslist`）に移動します。
 
    ![chlimage_1-221](assets/chlimage_1-221.png)
@@ -177,7 +177,7 @@ See *Viewers release notes* in the table of contents of the [Viewers Reference G
 1. In the **[!UICONTROL limit]** property, change the number to the desired number, for example `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
 1. 「**[!UICONTROL すべて保存]**」をタップします。
 
-## 新しいDynamic Mediaビューアプリセットの作成 {#creating-a-new-viewer-preset}
+## 新しいダイナミックメディアビューアプリセットの作成 {#creating-a-new-viewer-preset}
 
 ビューアプリセットを作成しておくと、アセットの表示やアセットとの対話のための様々な設定を適用できます。ただし、新しいビューアプリセットを作成する必要はありません。デフォルトの、すぐに使えるビューアプリセットが既に AEM Assets に付属していますので、これを使用できます。
 
@@ -189,7 +189,7 @@ See *Viewers release notes* in the table of contents of the [Viewers Reference G
 
 [カルーセルバナーのビューアプリセットの作成に関する考慮事項](#special-considerations-for-creating-a-carousel-banner-viewer-preset)を参照してください。
 
-**新しいDynamic Mediaビューアプリセットを作成するには**:
+**新しいダイナミックメディアビューアプリセットを作成するには**:
 
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Assets > Viewer Presets]**.
 
@@ -211,15 +211,15 @@ See *Viewers release notes* in the table of contents of the [Viewers Reference G
 
         Visual Editor を使用すると、特定のプロパティがスタイルに与える効果を確認できます。プロパティを設定または調整するだけで、Visual Editor の左にあるサンプルを使用して、ビューア上での効果を瞬時に確認できます。
 
-      The CSS styling properties for each type of viewer preset are described in the any &quot;Customizing *&lt;viewer_name>* Viewer&quot; Help topic in the [Viewers Reference Guide](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html).
+      The CSS styling properties for each type of viewer preset are described in the any &quot;Customizing *&lt;viewer_name>* Viewer&quot; Help topic in the [Viewers Reference Guide](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/home.translate.html).
 
-      例えば、`Mixed_Media` タイプのビューアプリセットを作成している場合、プロパティのリストと各プロパティの説明については、[混在メディアビューアのカスタマイズ](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.html)を参照してください。
+      例えば、`Mixed_Media` タイプのビューアプリセットを作成している場合、プロパティのリストと各プロパティの説明については、[混在メディアビューアのカスタマイズ](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/mixed-media/customing-mixed-media/c-html5-mixedmedia-viewer-customizingviewer.translate.html)を参照してください。
 
    * スタイル設定を別個の CSS ファイルで定義している場合は、その CSS ファイルを AEM Assets にアップロードできます。「選択したタイプ」プルダウンメニュー（表示するには Visual Editor を上にスクロールする必要が生じる場合があります）の下の「**[!UICONTROL CSS を読み込み]**」をタップし、アップロードした CSS ファイルを探してビューアプリセットと関連付けます。****
 
         CSS ファイルを読み込むと、Visual Editor は、その CSS に正しいビューアマーカーが使用されているかを確認します。例えば、ズームビューアを作成している場合、読み込むすべての CSS ルールが、親のビューアエレメントに定義されているズームビューアのクラス名 `.s7mixedmediaviewer` を使用して定義されている必要があります。
 
-      指定ビューアの CSS マーカーが正しく定義された CSS であれば、自作した任意の CSS を読み込むことができます（CSS マーカーについては、『[ビューアリファレンスガイド](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)』の「*&lt;viewer name>* ビューアのカスタマイズ」のヘルプトピックを参照してください。例えば、ズームビューアの CSS マーカーについては、[ズームビューアのカスタマイズ](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html)を参照してください）。ただし、Visual Editor が一部の CSS 値を理解できないこともありえます。そのような場合、Visual Editor は、CSS が正常に機能するように、エラーを上書きしようとします。
+      指定ビューアの CSS マーカーが正しく定義された CSS であれば、自作した任意の CSS を読み込むことができます（CSS マーカーについては、『[ビューアリファレンスガイド](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/home.translate.html)』の「*&lt;viewer name>* ビューアのカスタマイズ」のヘルプトピックを参照してください。例えば、ズームビューアの CSS マーカーについては、[ズームビューアのカスタマイズ](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.translate.html)を参照してください）。ただし、Visual Editor が一部の CSS 値を理解できないこともありえます。そのような場合、Visual Editor は、CSS が正常に機能するように、エラーを上書きしようとします。
    >[!NOTE]
    >
    >RAW 形式で CSS を直接編集する場合は、「選択したタイプ」プルダウンメニュー（表示するには Visual Editor を上にスクロールする必要が生じる場合があります）の下の「**[!UICONTROL CSS を表示／非表示]**」をタップします。****
@@ -236,7 +236,7 @@ See *Viewers release notes* in the table of contents of the [Viewers Reference G
 
    Visual Editor 内の多くのコンポーネントには、詳しい説明が関連付けられています。この説明は、コンポーネントを展開して関連パラメーターを表示したときに、青いボックス内に示されます。
 
-   一部のビューアタイプには、「**IS コマンド**」テキストフィールドに画像サービングコマンドを指定できるコンポーネントがあります。使用できるコマンドのリストについては、[画像サービング API リファレンス（英語）](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.html)を参照してください。
+   一部のビューアタイプには、「**IS コマンド**」テキストフィールドに画像サービングコマンドを指定できるコンポーネントがあります。使用できるコマンドのリストについては、[画像サービング API リファレンス（英語）](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-is-home.translate.html)を参照してください。
 
    >[!NOTE]
    >
@@ -303,11 +303,11 @@ When you create or edit an interactive video viewer preset, you access **[!UICON
 |---|---|---|
 | **ホットスポットアイコン** | ホットスポットに使用するアイコンを変更する | ホットスポットアイコンの画像を変更するには、「**[!UICONTROL 外観]**」タブで、「**[!UICONTROL 選択したコンポーネント]**」の「**[!UICONTROL ImageMapEffect]**」をタップします。「**[!UICONTROL アイコン]**」で「**[!UICONTROL 背景]**」を選択し、「**[!UICONTROL 画像]**」フィールドで目的に背景画像に移動します。 |
 
-## Dynamic Mediaビューアプリセットのアクティブ化/非アクティブ化 {#activating-or-deactivating-viewer-presets}
+## ダイナミックメディアビューアプリセットのアクティブ化/非アクティブ化 {#activating-or-deactivating-viewer-presets}
 
 オーサーモードでビューアプリセットがアクティベートされているかどうかで、ユーザーインターフェイスに表示されるビューアプリセットが変わります。By default, a viewer preset is *On* after you create it. プリセットをオフにすると、オーサーモードでは表示されなくなります。プリセットを公開する場合は、オン／オフに関係なく、常に公開されます。リストが不安定になった場合や、ビューアプリセットを使用可能にしないように設定した場合は、ビューアプリセットを非アクティブにすることができます。
 
-**Dynamic Mediaビューアプリセットをアクティブ化/非アクティブ化するには**:
+**ダイナミックメディアビューアのプリセットをアクティブ化または非アクティブ化するには**:
 
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Assets > Viewer Presets]**.
 1. On the **[!UICONTROL Viewer Preset]** page, under the **[!UICONTROL State]** column header, tap the toggle to activate or deactivate a viewer preset.
@@ -324,7 +324,7 @@ Activating (or turning *On*) the state of a viewer preset means that it is visib
 
 [アセットのプレビュー](previewing-assets.md)も参照してください。
 
-**Dynamic Mediaビューアプリセットを公開するには**:
+**ダイナミックメディアビューアプリセットを公開するには**:
 
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Assets > Viewer Presets]**.
 1. 公開するビューアプリセットを 1 つ以上選択します。
@@ -332,7 +332,7 @@ Activating (or turning *On*) the state of a viewer preset means that it is visib
 
 ## Sorting Dynamic Media viewer presets {#sorting-viewer-presets}
 
-**Dynamic Mediaビューアプリセットを並べ替えるには**:
+**ダイナミックメディアビューアのプリセットを並べ替えるには**:
 
 1. AEM の左上隅にある AEM ロゴをタップし、左側のパネルで&#x200B;**ツール**（ハンマーアイコン）／**[!UICONTROL Assets／ビューアプリセット]**&#x200B;をタップします。
 1. 「**[!UICONTROL プリセットのタイトル]**」、「**[!UICONTROL タイプ]**」、「**[!UICONTROL 公開]**」または「**[!UICONTROL 状態]**」をクリックして、その見出しの列でソートします。例えば、「**[!UICONTROL タイプ]**」をクリックすると、ビューアプリセットのタイプが、アルファベット順で、またはアルファベットの逆の順序でソートされます。
@@ -341,7 +341,7 @@ Activating (or turning *On*) the state of a viewer preset means that it is visib
 
 *事前に定義された標準提供ビューアプリセット*&#x200B;を編集するシナリオはサポートされていません。標準提供ビューアプリセットを編集すると、新しい名前で保存するように指示されます。
 
-**Dynamic Mediaビューアプリセットを編集するには**:
+**ダイナミックメディアビューアのプリセットを編集するには**:
 
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Assets > Viewer Presets]**.
 1. ビューアプリセットのタイトルの左側にあるチェックボックスをオンにして、プリセットを選択します。
@@ -352,11 +352,11 @@ Activating (or turning *On*) the state of a viewer preset means that it is visib
    * 「**[!UICONTROL 保存]**」をタップして変更内容を保存し、ビューアプリセットページに戻ります。****
    * 「**[!UICONTROL キャンセル]**」をタップして変更内容をキャンセルし、ビューアプリセットページに戻ります。****
 
-## カスタムDynamic Mediaビューアプリセットの削除 {#deleting-custom-viewer-presets}
+## カスタムのダイナミックメディアビューアプリセットの削除 {#deleting-custom-viewer-presets}
 
 作成して Dynamic Media に追加したビューアプリセットを削除できます。
 
-**カスタムDynamic Mediaビューアプリセットを削除するには**:
+**カスタムのダイナミックメディアビューアプリセットを削除するには**:
 
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Assets > Viewer Presets]**.
 1. On the **[!UICONTROL Viewer Presets]** page, check a **[!UICONTROL Preset Title]**, and then tap the **[!UICONTROL Trash]** icon.
@@ -366,7 +366,7 @@ Activating (or turning *On*) the state of a viewer preset means that it is visib
 
 アセットと選択したビューアを既に公開している場合は、ビューアプリセットの選択後に「**[!UICONTROL URL]**」ボタンと「**[!UICONTROL 埋め込み]**」ボタンが表示されます。
 
-**Dynamic Mediaビューアプリセットをアセットに適用するには**:
+**ダイナミックメディアビューアのプリセットをアセットに適用するには**:
 
 1. アセットを開き、ページの左上隅付近にあるドロップダウンメニュータップして、「**[!UICONTROL ビューア]**」を選択します。
 
@@ -378,7 +378,7 @@ Activating (or turning *On*) the state of a viewer preset means that it is visib
 
    [この URL をコピー](linking-urls-to-yourwebapplication.md)して、他のユーザーと共有できます。
 
-## Dynamic Mediaビューアプリセットを使用したアセットの配信 {#delivering-assets-with-viewer-presets}
+## ダイナミックメディアビューアプリセットを使用したアセットの配信 {#delivering-assets-with-viewer-presets}
 
 ビューアプリセットの URL を取得する方法については、[Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)を参照してください。[Web ページへのビデオビューアの埋め込み](embed-code.md)も参照してください。
 
