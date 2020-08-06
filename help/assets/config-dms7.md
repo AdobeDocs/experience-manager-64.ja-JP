@@ -40,7 +40,7 @@ ht-degree: 75%
 
 >[注意]
 >
->Dynamic Media-Scene7モードは、AEM Authorインスタンス専用です。 したがって、AEM Publishインスタンス `runmode=dynamicmedia_scene7`ではなく、AEM Authorインスタンスに対して設定する必要があります。
+>ダイナミックメディア —Scene7モードは、AEMオーサーインスタンス専用です。 したがって、AEM発行インスタンス `runmode=dynamicmedia_scene7`ではなく、AEM作成者インスタンスで設定する必要があります。
 
 To enable Dynamic Media, you must startup AEM using the `dynamicmedia_scene7` runmode from the command line by entering the folllowing in a terminal window (example port used is 4502):
 
@@ -66,19 +66,19 @@ To migrate your custom presets and configurations from `/etc` to `/conf`, run th
 
 ## (Optional) Installing feature pack 18912 for bulk asset migration {#installing-feature-pack}
 
-機能パック18912では、FTPを使用してアセットを一括インジェストするか、Dynamic Media — ハイブリッドモードまたはDynamic Media — クラシックからAEMのDynamic Media-Scene7モードにアセットを移行できます。 Adobe Professional Servicesから入手できます。
+機能パック18912では、FTPを使用してアセットを一括取り込むか、アセットをダイナミックメディア — ハイブリッドモードまたはダイナミックメディアクラシックからAEMのダイナミックメディア —Scene7モードに移行できます。 Adobe Professional Servicesから入手できます。
 
 詳しくは、一括アセット移行について [機能パック18912のインストールを参照してください](bulk-ingest-migrate.md) 。
 
 ## Dynamic Media クラウドサービスの設定 {#configuring-dynamic-media-cloud-services}
 
-パスワードCloud Serviceを設定する前に、Dynamic Mediaを変更します。 After you receive your provisioning email with Dynamic Media credentials, you must [log in](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html) to Dynamic Media Classic to change your password. プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
+ダイナミックメディアCloud Servicesを設定する前に、パスワードを変更します。 After you receive your provisioning email with Dynamic Media credentials, you must [log in](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html) to Dynamic Media Classic to change your password. プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
 >[!NOTE]
 >
->デフォルトでは、Cloud Serviceの設定パスはです `/content/dam`。 その他の構成パスは、Dynamic Media-Scene7モードではサポートされません。
+>デフォルトでは、Cloud Servicesの設定パスはです `/content/dam`。 その他の設定パスは、ダイナミックメディア —Scene7モードではサポートされません。
 
-Dynamic MediaCloud Serviceを設定するには：
+ダイナミックメディアCloud Servicesを設定するには：
 
 1. In AEM, tap the AEM logo to access the global navigation console and tap the Tools icon, then tap **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
 1. On the Dynamic Media Configuration Browser page, in the left pane, tap **[!UICONTROL global]** and tap **[!UICONTROL Create]**. グロー [!UICONTROL バルの左側にあるフォルダーアイコンをタップまたは選択しないでください]。
@@ -469,7 +469,7 @@ When the Spin Set is uploaded and published, you activate the name of the 2D Spi
 
 ### （オプション）Dynamic Media - Scene7 モードのパフォーマンスの調整 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-Dynamic Media-Scene7・モードの円滑な動作を維持するために、Adobeでは、次の同期パフォーマンス/スケーラビリティの最適な調整のヒントを推奨します。
+ダイナミックメディア —Scene7モードの円滑な動作を維持するために、Adobeでは、次の同期パフォーマンス/スケーラビリティの最適な調整のヒントを推奨します。
 
 * 様々なファイル形式の処理に対応する定義済みのジョブパラメーターを更新する。
 * 事前定義済みの Granite のワークフロー（ビデオアセット）キューワーカースレッドを更新する。
@@ -559,15 +559,15 @@ Scene7 アップロード接続の設定は、AEM Assets を Dynamic Media Class
 
 ### （オプション）レプリケーション用のアセットのフィルタリング{#optional-filtering-assets-for-replication}
 
-Dynamic Media以外のデプロイメントでは、AEM作成者環境からAEM発行ノードに、*すべての*アセット（画像とビデオの両方）を複製します。 AEMパブリッシュサーバーもアセットを配信するので、このワークフローが必要です。
+非ダイナミックメディアデプロイメントでは、AEMの作成者環境からAEMの公開ノードに、*すべての*アセット（画像とビデオの両方）を複製します。 AEMパブリッシュサーバーもアセットを配信するので、このワークフローが必要です。
 
-ただし、Dynamic Mediaのデプロイメントでは、アセットはクラウドサービスを介して配信されるので、AEM発行ノードに同じアセットを複製する必要はありません。 このような「ハイブリッドパブリッシング」ワークフローは、アセットの複製に伴うストレージの余分なコストと処理時間を回避します。 サイトページなどのその他のコンテンツは、引き続き AEM パブリッシュノードから配信されます。
+ただし、ダイナミックメディアデプロイメントでは、アセットはクラウドサービスを介して配信されるので、AEMの発行ノードに同じアセットを複製する必要はありません。 このような「ハイブリッドパブリッシング」ワークフローは、アセットの複製に伴うストレージの余分なコストと処理時間を回避します。 サイトページなどのその他のコンテンツは、引き続き AEM パブリッシュノードから配信されます。
 
 フィルターによって、アセットを AEM パブリッシュノードへのレプリケート対象から&#x200B;**&#x200B;除外することができます。
 
 #### レプリケーションへのデフォルトのアセットフィルターの使用 {#using-default-asset-filters-for-replication}
 
-画像処理やビデオ処理にDynamic Mediaを使用する場合は、そのまま提供する初期設定のフィルターを使用できます。 次のフィルターがデフォルトでアクティブです。
+画像処理やビデオ処理にダイナミックメディアを使用している場合は、そのまま提供する初期設定のフィルターを使用できます。 次のフィルターがデフォルトでアクティブです。
 
 <table> 
  <tbody> 
