@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '617'
+ht-degree: 53%
 
 ---
 
@@ -30,9 +33,9 @@ The first step is to add a resource super type property to the `/apps/an-scf-san
 CRXDE Lite を使用して、次の手順を実行します。
 
 <!--Resolve steps below-->
-    *名前：`sling:resourceSuperType`
-    *種類：`文字列`
-    *値：`foundation/components/page`
+    *名前： `sling:resourceSuperType`
+    *種類： `文字列`
+    *値： &#39;foundation/components/page&#39;
 
 1. Click the green **[!UICONTROL [+]Add]**
 1. Click **[!UICONTROL Save All]**
@@ -41,7 +44,7 @@ CRXDE Lite を使用して、次の手順を実行します。
 
 ### Head and body scripts {#head-and-body-scripts}
 
-1. In **CRXDE Lite** explorer pane, navigate to `/apps/an-scf-sandbox/components/playpage` and double-click the file `playpage.jsp` to open it in the edit pane.
+1. **CRXDE Lite** ・エクスプローラ・ペインで、ファイルに移動し `/apps/an-scf-sandbox/components/playpage``playpage.jsp` 、重複を押しながらクリックして、編集ペインで開きます。
 
 #### /apps/an-scf-sandbox/components/playpage/playpage.jsp {#apps-an-scf-sandbox-components-playpage-playpage-jsp}
 
@@ -87,11 +90,12 @@ CRXDE Lite を使用して、次の手順を実行します。
    To setup for authoring, overlay `body.jsp` with a local script and include a paragraph system (parsys) in the body:
 
    1. navigate to `/apps/an-scf-sandbox/components`
-   1. select the `playpage`node
+   1. `playpage`ノードを選択
    1. 右クリックして選択 `Create > Create File...`
 
       * 名前：**body.jsp**
    1. Click **[!UICONTROL Save All]**
+
    Open `/apps/an-scf-sandbox/components/playpage/body.jsp` and paste in the following text:
 
    ```xml
@@ -124,7 +128,7 @@ You should not only see the heading **Community Play**, but also the UI for edit
 
 * Classic UI: [http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html](http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html)
 
-コンテンツファインダー(cf)を含むクラシックUIでの再生ページの表示方法を次に示します。
+以下に、コンテンツファインダー(cf)を含むクラシックUIでの再生ページの表示方法を示します。
 
 ![chlimage_1-233](assets/chlimage_1-233.png)
 
@@ -159,7 +163,7 @@ In addition, choose **[!UICONTROL General]** components, such as
 
 多言語環境では、クライアントからの要求を解析して優先言語を特定するスクリプトがルートページに含まれます。
 
-この単純な例では、ルートページは静的に英語のページにリダイレクトするように設定されています。英語のページは、今後、再生ページへのリンクを持つメインランディングページとして開発される可能性があります。
+この単純な例では、ルートページは英語のページにリダイレクトするように静的に設定されています。英語は、今後、再生ページへのリンクを持つメインランディングページとして開発される可能性があります。
 
 ブラウザーの URL をルートページ [http://localhost:4502/editor.html/content/an-scf-sandbox.html](https://locahost:4502/editor.html/content/an-scf-sandbox.html) に変更します。
 
