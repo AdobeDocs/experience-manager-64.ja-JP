@@ -7,6 +7,9 @@ contentOwner: AG
 discoiquuid: 3394b56a-3054-419b-9547-5740f8c35071
 translation-type: tm+mt
 source-git-commit: 7771cbb218d80247f65e92cbe7e8cdfd9720b75e
+workflow-type: tm+mt
+source-wordcount: '458'
+ht-degree: 88%
 
 ---
 
@@ -29,13 +32,13 @@ source-git-commit: 7771cbb218d80247f65e92cbe7e8cdfd9720b75e
 
 ## スマートタグ付き AEM 検索結果について {#understand-search-results-with-smart-tags}
 
-デフォルトでは、検索用語どうしを `AND` 句で組み合わせて AEM 検索がおこなわれます。スマートタグを使用しても、このデフォルトの動作は変わりません。スマートタグを使用すると、適用されたスマートタグ内にある検索用語のいずれかを探すための `OR` 句が追加されます。For example, consider searching for `woman running`. デフォルトでは、「`woman`」のみ、または「`running`」のみがメタデータに含まれているアセットは、検索結果に表示されません。ただし、スマートタグを使用して `woman` か `running` のどちらかでタグ付けされたアセットは、そのような検索クエリの結果に表示されます。つまり、検索結果は、以下を組み合わせたものになります。
+デフォルトでは、検索用語同士を `AND` 句で組み合わせて AEM 検索がおこなわれます。スマートタグを使用しても、このデフォルトの動作は変わりません。スマートタグを使用すると、適用されたスマートタグ内にある検索用語のいずれかを探すための `OR` 句が追加されます。例えば、「`woman running`」を検索する場合を考えます。デフォルトでは、「`woman`」のみ、または「`running`」のみがメタデータに含まれているアセットは、検索結果に表示されません。ただし、スマートタグを使用して `woman` か `running` のどちらかでタグ付けされたアセットは、そのような検索クエリの結果に表示されます。つまり、検索結果は、以下を組み合わせたものになります。
 
-* との両方のキーワードを持つアセ `woman` ットと、 `running` メタデータ。
+* との両方のキーワードを持つアセット `woman` と、メタデータ `running` 内のアセット。
 * 上記どちらかのキーワードがメタデータ内にあるアセット。
 
 メタデータフィールド内のすべての検索用語に一致する検索結果が最初に表示され、スマートタグ内の検索用語のいずれかに一致する検索結果はその後に表示されます。上記の例の場合、検索結果が表示される順序はおおよそ次のようになります。
 
-1. matches of `woman running` in the various metadata fields.
-1. matches of `woman running` in smart tags.
-1. matches of `woman` or of `running` in smart tags.
+1. 各種メタデータフィールド内の「`woman running`」に一致するもの。
+1. スマートタグ内の「`woman running`」に一致するもの。
+1. スマートタグ内の「`woman`」または「`running`」に一致するもの。
