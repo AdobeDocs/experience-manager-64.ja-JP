@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 48f841b7-0e7f-4216-9ee8-fb6e843acaf0
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '862'
+ht-degree: 66%
 
 ---
 
@@ -43,7 +46,7 @@ Forms Portal は、次のシナリオではドラフトフォームと送信済�
    <td><p><strong>場所</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>デフォルト値は</p> </td> 
+   <td><p>デフォルト</p> </td> 
    <td><p>オーサーインスタンスおよび発行インスタンスの AEM リポジトリ</p> </td> 
    <td><p><code>/content/forms/fp/</code></p> </td> 
   </tr> 
@@ -55,7 +58,7 @@ Forms Portal は、次のシナリオではドラフトフォームと送信済�
   <tr> 
    <td><p>データベース</p> </td> 
    <td><p>オーサーインスタンスおよびデータベーステーブルの AEM リポジトリ</p> </td> 
-   <td>データベース <code>data</code>テーブル、 <code>metadata</code>および <code>additionalmetadata</code></td> 
+   <td>データベーステーブル <code>data</code>、 <code>metadata</code>および <code>additionalmetadata</code></td> 
   </tr> 
  </tbody> 
 </table>
