@@ -1,16 +1,19 @@
 ---
 title: フォルダーのアセットとコレクションのレビュー
-description: フォルダーまたはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
+description: フォルダー内またはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
+workflow-type: tm+mt
+source-wordcount: '814'
+ht-degree: 98%
 
 ---
 
 
 # フォルダーのアセットとコレクションのレビュー {#review-folder-assets-and-collections}
 
-フォルダーまたはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
+フォルダー内またはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 
 Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレクション内のアセットに対してアドホックレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 
@@ -27,7 +30,7 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
 
    ![chlimage_1-403](assets/chlimage_1-403.png)
 
-1. (Optional) From the **[!UICONTROL Project]** list, select the project to which you want to associate the review task. By default, the **[!UICONTROL None]** option is selected. If you do not want to associate any project with the review task, retain this selection.
+1. （オプション）「**[!UICONTROL プロジェクト]**」リストから、レビュータスクを関連付けるプロジェクトを選択します。デフォルトでは、「**[!UICONTROL なし]**」オプションが選択されています。レビュータスクにプロジェクトを関連付けない場合は、この選択状態のままにします。
 
    >[!NOTE]
    >
@@ -53,11 +56,11 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
    ![通知](assets/notification.png)
 
 1. **[!UICONTROL レビュータスク]**&#x200B;ページでレビュータスクの詳細を確認し、「**[!UICONTROL レビュー]**」をタップまたはクリックします。
-1. **[!UICONTROL レビュータスク]**&#x200B;ページでアセットを選択し、必要に応じて&#x200B;**[!UICONTROL 「承認」または「非承認」]**&#x200B;アイコンをタップまたはクリックして、承認するか非承認にします。
+1. **[!UICONTROL レビュータスク]**&#x200B;ページでアセットを選択し、必要に応じて&#x200B;**[!UICONTROL 「承認」または「非承認」]**&#x200B;アイコンをタップまたはクリックして、承認するか拒否します。
 
    ![review_task](assets/review_task.png)
 
-1. ツールバーの「**[!UICONTROL 完了]**」アイコンをタップまたはクリックします。In the dialog, enter a comment and tap/click  **[!UICONTROL Complete]** to confirm.
+1. ツールバーの「**[!UICONTROL 完了]**」アイコンをタップまたはクリックします。ダイアログでコメントを入力し、「**[!UICONTROL 完了]**」をタップまたはクリックして確認します。
 1. Assets UI に移動し、フォルダーを開きます。アセットの承認ステータスアイコンは、カード表示とリスト表示の両方に表示されます。
 
    **カード表示**
@@ -75,7 +78,7 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
 
    ![chlimage_1-405](assets/chlimage_1-405.png)
 
-1. (Optional) From the **[!UICONTROL Project]** list, select the project to which you want to associate the review task. By default, the **[!UICONTROL None]** option is selected. If you do not want to associate any project with the review task, retain this selection.
+1. （オプション）「**[!UICONTROL プロジェクト]**」リストから、レビュータスクを関連付けるプロジェクトを選択します。デフォルトでは、「**[!UICONTROL なし]**」オプションが選択されています。レビュータスクにプロジェクトを関連付けない場合は、この選択状態のままにします。
 
    >[!NOTE]
    >
@@ -92,13 +95,13 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
    ![task_details-collection](assets/task_details-collection.png)
 
 1. 「**[!UICONTROL 送信]**」、「**[!UICONTROL 完了]**」の順にタップまたはクリックし、確認メッセージを閉じます。新しいタスクに関する通知が承認者に送信されます。
-1. 承認者として AEM Assets にログインし、アセットコンソールに移動します。To approve assets, tap/click the **[!UICONTROL Notifications]** icon and then select the review task from the list.
+1. 承認者として AEM Assets にログインし、アセットコンソールに移動します。アセットを承認するには、**[!UICONTROL 通知]**&#x200B;アイコンをタップまたはクリックし、リストからレビュータスクを選択します。
 1. **[!UICONTROL レビュータスク]**&#x200B;ページでレビュータスクの詳細を確認し、「**[!UICONTROL レビュー]**」をタップまたはクリックします。
-1. コレクションのすべてのアセットがレビューページに表示されます。Select the assets and tap/click the **[!UICONTROL Approve/Reject]** icon to approve or reject assets, as appropriate.
+1. コレクションのすべてのアセットがレビューページに表示されます。アセットを選択し、必要に応じて&#x200B;**[!UICONTROL 「承認」または「非承認」]**&#x200B;アイコンをタップまたはクリックして、アセットを承認するか拒否します。
 
    ![review_task_collection](assets/review_task_collection.png)
 
-1. ツールバーの「**[!UICONTROL 完了]**」アイコンをタップまたはクリックします。In the dialog, enter a comment and tap/click **[!UICONTROL Complete]** to confirm.
+1. ツールバーの「**[!UICONTROL 完了]**」アイコンをタップまたはクリックします。ダイアログでコメントを入力し、「**[!UICONTROL 完了]**」をタップまたはクリックして確認します。
 1. コレクションコンソールに移動して、コレクションを開きます。アセットの承認ステータスアイコンは、カード表示とリスト表示の両方に表示されます。
 
    **カード表示**
