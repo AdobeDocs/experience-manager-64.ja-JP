@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '448'
+ht-degree: 59%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
 
 イネーブルメント機能では、[イネーブルメントコミュニティ](overview.md#enablement-community)を作成できます。
 
-* この機能を実稼働環境で使用するには、追加のライセンスが必要です。
+* この機能を使用するには、実稼働環境で使用する追加のライセンスが必要です。
 
 イネーブルメント機能を使用するには、次の必要があります。
 
@@ -35,7 +38,8 @@ source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
 
 以下をセットアップします。
 
-* **コミュニティマ**&#x200B;ネージャーコミュニティを有効にする場合、ユーザーグループのメンバーのみにロールを割り当てることができます。権限には、公開環境でのコンテンツの作成、割り当て、メンバ `Community Enablement Managers``*Community Site* Enablement Manager`ー管理が含まれます。
+* **コミュニティマネージャ**&#x200B;ー有効化コミュニティに対しては、 
+`Community Enablement Managers` ユーザーグループにのロールを割り当てるこ `*Community Site* Enablement Manager`とができます。このロールの権限には、公開環境でのコンテンツ作成、割り当て、メンバー管理が含まれます。
 
 オプションで以下を設定します。
 
@@ -51,15 +55,18 @@ source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
 
 **すべてのオーサー／パブリッシュインスタンスで、次の手順を実行します。**
 
-1. **[mysqlを使用Webコンソール用JDBCドライ](deploy-communities.md#jdbc-driver-for-mysql)**バーのインストール（バンドル）:*http://localhost:4502/system/console/bundles*Install *before install*before installing SCORM package
+1. **[MySQL](deploy-communities.md#jdbc-driver-for-mysql)**Use Web Console（バンドル）用のJDBCドライバーをインストールします。 
+SCORMパッケージをインスト*ールする前に*、http://localhost:4502/system/console/bundles **Installをインストールします。
 
-1. **[scormパッケージをインストール](deploy-communities.md#scorm-package)**Package Managerを使用します。http://localhost:4502/crx/packmgr/**
+1. **[SCORMパッケージのインストール](deploy-communities.md#scorm-package)**パッケージマネージャーを使用する：
+*http://localhost:4502/crx/packmgr/*
 
 **任意のサーバーで、次の手順を実行します。**
 
 1. **[MySQL、MySQL Workbench をインストール](mysql.md)**
 
-1. **[mysqlデータベースのインストール](mysql.md#database-setup)**作成者インスタンスからダウンロードしたSQLスクリプトの実行\
+1. **[MySQLデータベースのインストール](mysql.md#database-setup)**作成者インスタンスからダウンロードしたSQLの実行スクリプト
+\
    MySQL Workbenchの使用
 
 **オーサーインスタンスをホストしている同じサーバーで、次の手順を実行します。**
@@ -68,23 +75,28 @@ source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
 
 **すべてのオーサー／パブリッシュインスタンスで、次の手順を実行します。**
 
-1. **[jdbc接続プールの設定](mysql.md#configure-jdbc-connections)**Webコンソールを使用(configMgr):http://localhost:4502/system/console/configMgr **
+1. **[JDBC接続プールの設定](mysql.md#configure-jdbc-connections)**Webコンソールを使用(configMgr):
+*http://localhost:4502/system/console/configMgr*
 
-1. **[scormエンジンサービスの設定](mysql.md#aem-communities-scormengine-service)**Webコンソールを使用する(configMgr):http://localhost:4502/system/console/configMgr **
+1. **[SCORMエンジンサービスの設定](mysql.md#aem-communities-scormengine-service)**Webコンソールを使用(configMgr):
+*http://localhost:4502/system/console/configMgr*
 
-1. **[csrfフィルタの設定](mysql.md#adobe-granite-csrf-filter)**Webコンソールを使用(configMgr):http://localhost:4502/system/console/configMgr **
+1. **[CSRFフィルターの設定](mysql.md#adobe-granite-csrf-filter)**Webコンソールを使用(configMgr):
+*http://localhost:4502/system/console/configMgr*
 
 **オーサーインスタンスで、次の手順を実行します。**
 
-1. (*optional*) **[configure Analytics service](analytics.md)**Use Tools, Deployment, Cloud Services console:*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
+1. (*optional*) **[configure Analytics service](analytics.md)**Use Tools, Deployment, Cloud Services console:
+*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
-1. **[fmpegUse Workflow](ffmpeg.md#configure-ffmpeg-transcoding-service)**/Modelsコンソールの設定
+1. **[Fmpeg](ffmpeg.md#configure-ffmpeg-transcoding-service)**Use Workflow/Modelsコンソールの設定
 
-1. **[トンネルサービス](deploy-communities.md#tunnel-service-on-author)**Webコンソールを使用(configMgr)を有効にします。http://localhost:4502/system/console/configMgr **
+1. **[トンネルサービス](deploy-communities.md#tunnel-service-on-author)**を有効にするWebコンソールを使用(configMgr):
+*http://localhost:4502/system/console/configMgr*
 
-1. **[コミュニティ管理者の作成](users.md#creating-community-members)**作成者環境では、クラシックUIセキュリティコンソールを使用します。*http://localhost:4502/useradmin*パス= /home/users/communityを使用してユーザーを作成
+1. **[コミュニティ管理者の作成作成者環境](users.md#creating-community-members)**：クラシックUIセキュリティコンソールを使用します。*http://localhost:4502/useradmin*create user(s) with path = /home/users/community
 
-   * 次のグループにメンバーを追加します。
+   * メ追加ンバーを次のグループに追加します：
 
       * コミュニティイネーブルメントマネージャー
       * コミュニティ管理者
