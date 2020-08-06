@@ -10,6 +10,9 @@ topic-tags: forms-manager
 discoiquuid: 43fd720f-2a5a-47fb-b9d9-d19f866cd0a0
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '689'
+ht-degree: 85%
 
 ---
 
@@ -23,13 +26,13 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 ## レビューの設定 {#setting-up-a-review}
 
 1. 「フォーム」タブに移動し、フォームを選択します。
-1. If the asset does not have a review in progress, a Start Review ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) icon appears in the Action bar. 「レビューを開 ![始」aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) 」アイコンをクリックします。
+1. If the asset does not have a review in progress, a Start Review ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) icon appears in the Action bar. 開始レビューの ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) アイコンをクリックします。
 1. 以下の情報を入力します。
 
    * レビュー名：必須。使用可能な文字は、英数字、ハイフンまたはアンダースコアです。
    * レビュー説明：任意。レビューの目的／内容の説明。
    * レビューの期限：任意。レビューが終了する日付です。デッドラインを過ぎている場合、タスクが「期限切れ」と表示されます。
-   * レビュー担当者：最低1つは必須です。 コンボボックスを使って、レビュー担当者を追加します。名前を入力すると、一致するすべての名前が表示されます。
+   * レビュー担当者： 最低1つは必須です。 コンボボックスを使って、レビュー担当者を追加します。名前を入力すると、一致するすべての名前が表示されます。
 
 1. 残りの詳細情報を入力し、「開始」をクリックします。
 
@@ -41,7 +44,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 1. すべてのレビュー担当者にレビュータスクが割り当てられます。タスクが通知セクションに表示されます。レビュー担当者は、通知をクリックするか、またはインボックスに移動してタスクを表示することができます。レビュー担当者は、レビュータスクを開いてフォームを表示し、コメントの入力を開始することができます。
 
    ![レビュー担当者通知アラート](assets/noti.png)
-   **** 図：レビュ *ー担当者通知アラート*
+   **図：** *レビュー担当者通知アラート*
 
 1. コメントボックスは、レビューの開始者およびレビュー担当者が使用することができます。その他のユーザーは、コメントを表示することはできますが、コメントを書き込むことはできません。
 
@@ -55,7 +58,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 
 1. If an asset has a review in progress and you are the initiator of the review, a Manage Review ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) icons appears in the Action bar. レビューの開始者のみがレビューを管理（更新 / 終了）することができます。
 
-   「レビューの管理」 ![aem6forms_review_chat_commenticonをクリック](assets/aem6forms_review_chat_comment.png)します。
+   「レビューの管理」 ![をクリックします。 aem6forms_review_chat_](assets/aem6forms_review_chat_comment.png)commenticon.
 
    開始者以外のユーザーに対しては、「レビューの管理」アイコンは表示されません。
 
@@ -69,7 +72,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 1. フィールドを編集し、「更新」をクリックします。
 
    ![タスクマネージャーでのレビューの更新された状態](assets/tskmgr.png)
-   **** 図：タスクマ *ネージャーでのレビューの更新された状態*
+   **図：** *タスクマネージャーでのレビューの更新された状態*
 
 1. レビューを終了するには、「終了」をクリックします。
 
@@ -83,7 +86,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 1. レビュー担当者が削除された場合：
 
    ![レビュー担当者の削除](assets/removeduser.png)
-   **** 図：レビュ *ー担当者の削除*
+   **図：** *レビュー担当者の削除*
 
    1. 割り当てられているタスクが未完了の場合は、そのタスクが終了します。
    1. レビュー担当者は、アセットにコメントすることができなくなります。
@@ -91,7 +94,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 1. レビュー担当者が追加された場合：
 
    ![レビュー担当者の追加](assets/addedreviewer.png)
-   **** 図：レビュ *ー担当者の追加*
+   **図：** *レビュー担当者の追加*
 
    1. レビュータスクが作成され、新しく追加されたレビュー担当者に割り当てられます。
    1. 新しく追加されたレビュー担当者は、アセットに対してコメントを追加することができます。
