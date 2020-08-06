@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '1319'
+ht-degree: 49%
 
 ---
 
@@ -23,15 +26,15 @@ The `Reviews Summary (Display)` component provides a summary of an active or clo
 
 >[!NOTE]
 >
->匿名でのレビュー投稿はサポートされていません。サイト訪問者が参加するには、登録（会員になる）し、サインインする必要があります。 ログインした訪問者は、いつでもレビューを更新できます。
+>匿名でのレビュー投稿はサポートされていません。サイト訪問者は参加するには、登録（会員になる）し、サインインする必要があります。 ログインした訪問者は、いつでもレビューを更新できます。
 
 ## レビューをページに追加 {#adding-a-review-to-a-page}
 
-作成者モード `Reviews``Communities / Reviews` でページにコンポーネントを追加するには、コンポーネントブラウザを使用してコンポーネントを検索し、ユーザがレビューする機能に対する相対位置など、ページ上の位置にドラッグします。
+作成者モードでページに `Reviews` コンポーネントを追加するには、コンポーネントブラウザを使用してコンポーネントを検索 `Communities / Reviews` し、ページ上の位置（ユーザが確認できる機能に対する相対位置など）にドラッグします。
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](reviews-basics.md#essentials-for-client-side) are included, this is how the `Reviews`component will appear.
+[必要なクライアント側のライブラリが含まれる場合](reviews-basics.md#essentials-for-client-side) 、これがコンポー `Reviews`ネントの表示方法です。
 
 ![chlimage_1-340](assets/chlimage_1-340.png)
 
@@ -41,21 +44,21 @@ Select the placed `Reviews` component to access and select the `Configure` icon 
 
 ![chlimage_1-341](assets/chlimage_1-341.png)
 
-Under the **[!UICONTROL Allowed Ratings]** tab, specify the complete list of ratings to be shown to members. The first rating should be an overall/general rating, as it is the rating which provides the average rating for the `Review Summary (Display)` component. デフォルト設定の次の2つの評価には、「Subrating 1」または「Subrating 2」以外の異なるタイトルを付ける必要があります。
+Under the **[!UICONTROL Allowed Ratings]** tab, specify the complete list of ratings to be shown to members. The first rating should be an overall/general rating, as it is the rating which provides the average rating for the `Review Summary (Display)` component. デフォルト設定の次の2つの評価には、「サブレーティング1」または「サブレーティング2」以外の異なるタイトルを付ける必要があります。
 
 ![chlimage_1-342](assets/chlimage_1-342.png)
 
 * **[!UICONTROL 許可された評価]**
 
-   メンバーが選択できる評価のリストです。
+   メンバーが選択できる評価のリスト。
 
    表示される選択肢を変更するには、上向き矢印、下向き矢印および削除ボタンを使用します。
 
    評価の選択肢を追加するには、「**[!UICONTROL 項目を追加]**」をクリックします。
 
-Under the **[!UICONTROL Required Ratings]** tab, re-enter items from the list of **[!UICONTROL Allowed Ratings]** that are required to be rated. [レーティングの許可]タブで項目が指定されている場合は、その項目がメンバーから送信されたときにマークが付いていない状態になる場合があります。
+Under the **[!UICONTROL Required Ratings]** tab, re-enter items from the list of **[!UICONTROL Allowed Ratings]** that are required to be rated. [評価の許可]タブで項目が指定されていない場合は、その項目がメンバによって送信されたときにマークが付いていない状態になることがあります。
 
-Web サイト上では、必須の評価はアスタリスク付きで表示されます。アイテムが必須で、マークが付いていない場合は、すべての必須レーティングがマークされるまで、メッセージがメンバーに表示され、送信が拒否されます。
+Web サイト上では、必須の評価はアスタリスク付きで表示されます。項目が必須でマークが付いていない場合は、メンバーにメッセージが表示され、必須の評価がすべてマークされるまで送信が拒否されます。
 
 ![chlimage_1-343](assets/chlimage_1-343.png)
 
@@ -85,7 +88,7 @@ Under the **[!UICONTROL Reviews]** tab, specify how reviews are handled.
 
 * **[!UICONTROL メッセージの最大長]**&#x200B;テキストボックスに入力できる最大文字数です。初期設定は 4096 文字です。
 
-* **[!UICONTROL 許可されるファイルタイプ]**「**[!UICONTROL ファイルのアップロードを許可]**」がオンの場合にのみ関係します。ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルタイプを指定した場合、指定しなかったファイルは許可されません。 初期設定はnoneで、すべてのファイルタイプが許可されます。
+* **[!UICONTROL 許可されるファイルタイプ]**「**[!UICONTROL ファイルのアップロードを許可]**」がオンの場合にのみ関係します。ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類を指定すると、指定されていないファイルは許可されません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
 * **[!UICONTROL リッチテキストエディター]**&#x200B;オンにすると、マークアップを使用して投稿を入力できます。初期設定はオフです。
 
@@ -109,7 +112,7 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted reviews a
 
 * **[!UICONTROL カスタムフラグ設定理由]**&#x200B;オンにすると、メンバーはレビューに「不適切」のフラグを設定した独自の理由を入力できます。初期設定はオフです。
 
-* **[!UICONTROL モデレートのしきい値]**&#x200B;メンバーがレビューに何回フラグを設定したらモデレーターに通知するかを指定します。初期設定は1回(1)です。
+* **[!UICONTROL モデレートのしきい値]**&#x200B;メンバーがレビューに何回フラグを設定したらモデレーターに通知するかを指定します。初期設定は1回です。
 
 * **[!UICONTROL フラグ付けの制限]**&#x200B;レビューに何回フラグが設定されたら、公開表示から非公開にするかを指定します。This number must be greater than or equal to the **[!UICONTROL Moderation Threshold]**. 初期設定は 5 です。
 
@@ -123,7 +126,7 @@ To add a `Reviews Summary (Display)` component to a page in author mode, locate 
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](reviews-basics.md#essentials-for-client-side) are included, this is how the `Reviews Summary (Display)`component will appear.
+[必要なクライアント側のライブラリが含まれる場合](reviews-basics.md#essentials-for-client-side) 、これがコンポー `Reviews Summary (Display)`ネントの表示方法です。
 
 ![chlimage_1-346](assets/chlimage_1-346.png)
 
@@ -143,13 +146,13 @@ Select the placed `Reviews Summary (Display)` component to access and select the
 
 * `Review Path`
 
-   要約するコンポーネントの配置済みインスタンスを入 `reviews`力または参照します。例えば、 [Geometrixx EngageサイトのWebページに追加した場合](getting-started.md) 、パスは次のようになります。
+   要約するコン `reviews`ポーネントの配置インスタンスを入力または参照します。例えば、 [Geometrixxの関与サイトのWebページに追加した場合](getting-started.md) 、パスは次のようになります。
 
    /content/sites/engage/jp/page/jcr:content/content/primary/reviews
 
 * `Include histogram`
 
-   このチェックボックスをオンにすると、集計されるレビューに含まれる各星レーティングの数を示す棒グラフが表示されます。 初期設定はオフです。
+   選択した場合、集計するレビューに含まれる各星評価の数を示す棒グラフを表示します。 初期設定はオフです。
 
 ### カスタムレビュータイプへの変更 {#changing-to-a-custom-review-type}
 
@@ -165,19 +168,19 @@ Under the **[!UICONTROL Resource Types]** tab, specify the custom resourceType f
 
 * **[!UICONTROL コメントリソースタイプ]**
 
-   /apps内の拡張コンポーネント(1 `comment`つのコメント)のresourceTypeに移動します。 例：`/apps/social/commons/components/hbs/comments/comment`
+   /apps内の拡張 `comment`コンポーネント（1つのコメント）のresourceTypeに移動します。 例：`/apps/social/commons/components/hbs/comments/comment`
 
    このリソースは、訪問者がコメントを投稿したときに作成されたUGCのresourceTypeを識別します。
 
 * **[!UICONTROL 投票リソースタイプ]**
 
-   /apps内の拡張コンポーネントのresourceType `voting`に移動します。 例：`/apps/social/components/hbs/voting`
+   /apps内の拡張 `voting`コンポーネントのresourceTypeに移動します。 例：`/apps/social/components/hbs/voting`
 
    このリソースは、訪問者が投票を行ったときに作成されたUGCのリソースタイプを識別します。
 
 * **[!UICONTROL コメントシステムリソースタイプ]**
 
-   /apps内の拡張コンポーネント(コメン `comments`トシステム)のresourceTypeに移動します。 Leave blank unless the page template [dynamically includes](scf.md#add-or-include-a-communities-component) the Comment System in the underlying script instead of being added to the page as a resource (comments node). Learn more by reading about the [{{include}} helper](handlebars-helpers.md#include)
+   /apps内の拡張 `comments`コンポーネント（コメントシステム）のresourceTypeに移動します。 Leave blank unless the page template [dynamically includes](scf.md#add-or-include-a-communities-component) the Comment System in the underlying script instead of being added to the page as a resource (comments node). Learn more by reading about the [{{include}} helper](handlebars-helpers.md#include)
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
