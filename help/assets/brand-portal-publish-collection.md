@@ -4,15 +4,18 @@ description: Brand Portal を対象としたコレクションの公開および
 contentOwner: VG
 translation-type: tm+mt
 source-git-commit: 33210032c45e38963aed429e70eec4095c5d75f1
+workflow-type: tm+mt
+source-wordcount: '338'
+ht-degree: 63%
 
 ---
 
 
 # Brand Portal へのコレクションの公開 {#publish-collections-to-brand-portal}
 
-Adobe Experience Manager（AEM）Assets の管理者は、組織の AEM Assets Brand Portal のインスタンスにコレクションを公開できます。ただし、最初に AEM Assets を Brand Portal と統合する必要があります。For details, see [Configure AEM Assets with Brand Portal](configure-aem-assets-with-brand-portal.md).
+Adobe Experience Manager（AEM）Assets の管理者は、組織の AEM Assets Brand Portal のインスタンスにコレクションを公開できます。ただし、最初に AEM Assets を Brand Portal と統合する必要があります。詳しくは [AEM Assets と Brand Portal の連携の設定](configure-aem-assets-with-brand-portal.md)を参照してください。
 
-AEM Assetsの元のコレクションに後で変更を加えた場合、そのコレクションを再度公開するまで、変更はBrand Portalに反映されません。 この特性により、作業中の変更がBrand Portalで使用できなくなります。 Brand Portalでは、管理者が発行した承認済みの変更のみを利用できます。
+AEM Assetsの元のコレクションにその後変更を加えた場合、そのコレクションを再度公開するまで、その変更はBrand Portalに反映されません。 この特性により、処理中の変更がBrand Portalで利用できなくなります。 管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
 
 >[!NOTE]
 >
@@ -39,7 +42,7 @@ AEM Assetsの元のコレクションに後で変更を加えた場合、その�
 
 ## コレクションを非公開にする {#unpublish-collections}
 
-AEM AssetsからBrand Portalに公開するコレクションの公開を取り消すことができます。 元のコレクションの公開を取り消すと、そのコピーはBrand Portalユーザーは使用できなくなります。
+AEM Assetsからブランドポータルに公開するコレクションは公開取り消すことができます。 元のコレクションの公開を取り消すと、そのコピーはBrand Portalユーザーに対して使用できなくなります。
 
 1. AEM Assets インスタンスのコレクションコンソールから、非公開にしたいコレクションを選択します。
 
@@ -50,4 +53,4 @@ AEM AssetsからBrand Portalに公開するコレクションの公開を取り�
    ![remove_from_bp_icon](assets/remove_from_bp_icon.png)
 
 3. 確認ダイアログで「**[!UICONTROL 非公開]**」をタップまたはクリックします。
-4. 確認メッセージを閉じます。コレクションがBrand Portalインターフェイスから削除されます。
+4. 確認メッセージを閉じます。コレクションが Brand Portal インターフェイスから削除されます。
