@@ -1,8 +1,8 @@
 ---
 title: リファレンステーマ
 seo-title: リファレンステーマ
-description: 'AEM Formsは、ソフトウェアの配布から取得し、フォームのスタイル設定に使用できるアダプティブフォームテーマを提供します。 '
-seo-description: 'AEM Formsは、ソフトウェアの配布から取得し、フォームのスタイル設定に使用できるアダプティブフォームテーマを提供します。 '
+description: 'AEM Formsは、ソフトウェアの配布から取得し、フォームのスタイル設定に使用できるアダプティブフォームテーマを提供しています。 '
+seo-description: 'AEM Formsは、ソフトウェアの配布から取得し、フォームのスタイル設定に使用できるアダプティブフォームテーマを提供しています。 '
 uuid: a39bc3da-0bb8-4f11-b0d5-9403cfc6e384
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
