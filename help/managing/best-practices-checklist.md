@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 917b4fec-d5fe-4402-b69c-3c9645e6f934
 translation-type: tm+mt
 source-git-commit: 03d738e50be604959af93c863fbdc711ee4b083e
+workflow-type: tm+mt
+source-wordcount: '352'
+ht-degree: 82%
 
 ---
 
@@ -37,7 +40,7 @@ AEMプロジェクトのベストプラクティスのチェックリストv2
 * **[役割別のスタータス](/help/managing/best-practices.md#status-by-role)**
 * [ペルソナ](/help/managing/best-practices.md#persona)、[フェーズおよびマイルストーン](/help/managing/best-practices.md#phases-and-milestones)に応じた一連のチェックリスト
 * **用語集**
-   * 用語集には、プロジェクトのチェックリストにあるすべての成果物ドキュメントの詳細が一覧表示されます。
+   * 用語集リストでは、プロジェクトチェックリストのすべての成果物ドキュメントの詳細を説明します。
    * [用語集](/help/managing/best-practices-glossary.md)は、ドキュメントの一部としても入手できます。
 * **[ペルソナの定義](/help/managing/best-practices.md#persona)**
 
