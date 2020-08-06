@@ -8,6 +8,9 @@ uuid: 0010d274-a683-499e-9fa6-ce355d7898a0
 discoiquuid: 55c08940-8c25-4938-8e49-25bce20aaf22
 translation-type: tm+mt
 source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+workflow-type: tm+mt
+source-wordcount: '1416'
+ht-degree: 75%
 
 ---
 
@@ -42,7 +45,7 @@ source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
 
 1. 「**プロパティの追加**」オプションが表示されます。「**タイトル**」フィールドと「**名前**」フィールドは入力必須です。
 
-   * **** タイトル：「タイト `Add new or update shipping address` ル」フィールドで指定します。 「タイトル」フィールドに入力した値が、フォームの表示名になります。タイトルを指定すると、AEM Forms ユーザーインターフェイス内のフォームを特定しやすくなります。
+   * **タイトル：** 「タイトル」フィ `Add new or update shipping address` ールドで指定します。 「タイトル」フィールドに入力した値が、フォームの表示名になります。タイトルを指定すると、AEM Forms ユーザーインターフェイス内のフォームを特定しやすくなります。
    * **名前**：このフィールドに、「`shipping-address-add-update-form`」と入力します。「名前」フィールドに入力した値が、フォームの名前になります。指定された名前のノードがリポジトリに作成されます。タイトルを入力し始めると、名前フィールドの値が自動的に生成されます。候補として入力された値は変更可能です。「ドキュメント名」フィールドには、英数字、ハイフン、アンダースコアのみを使用することができます。無効な入力はすべてハイフンに置き換えられます。
 
 1. 「**作成**」をタップします。アダプティブフォームが作成され、フォームを編集用に開くためのダイアログが表示されます。Tap **Open** to open the newly created form in a new tab. フォームが編集モードで表示されます。新しく作成されたフォームを必要に応じてカスタマイズするためのサイドバーも表示されます。
@@ -55,22 +58,22 @@ source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
 
 AEM Forms には、アダプティブフォーム上で情報を表示するための様々なコンポーネントが用意されています。ヘッダーコンポーネントとフッターコンポーネントを使用すると、フォームの全体的な外観を統一することができます。ヘッダーには通常、会社のロゴ、フォームのタイトル、フォームの概要を指定します。フッターには通常、著作権に関する情報と他のページへのリンクを指定します。
 
-1. 切り替 ![えサイドパネル](assets/toggle-side-panel.png) /Treeexpandallをタ ![ップします](assets/treeexpandall.png)。 コンポーネントブラウザーが表示されます。Drag the **Header** component from component browser to the adaptive form.
-1. 「**ロゴ**」をタップします。ツールバーが表示されます。ツ ![ールバーのaem_6_3_edit](assets/aem_6_3_edit.png) 、「 **We.Retail**」と入力し、「aem_6_3_forms_save ![](assets/aem_6_3_forms_save.png)」をタップします。
+1. ト ![グルサイドパネル](assets/toggle-side-panel.png) / ![ツリー展開をタップします](assets/treeexpandall.png)。 コンポーネントブラウザーが表示されます。Drag the **Header** component from component browser to the adaptive form.
+1. 「**ロゴ**」をタップします。ツールバーが表示されます。ツールバーの ![aem_6_3_edit](assets/aem_6_3_edit.png) をタップし、「 **We.Retail**」と入力して、 ![](assets/aem_6_3_forms_save.png)aem_6_3_forms_saveをタップします。
 
-1. 「画像」をタップします。ツールバーが表示されます。「cmppr」をタ ![ップしま](assets/cmppr.png)す。 画面の左側にプロパティブラウザーが表示されます。「**参照**」をタップして、ロゴ画像をアップロードします。aem_ ![6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。 画像がヘッダーに表示されます。
+1. 「画像」をタップします。ツールバーが表示されます。「 ![cmppr](assets/cmppr.png)」をタップします。 画面の左側にプロパティブラウザーが表示されます。「**参照**」をタップして、ロゴ画像をアップロードします。「 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。 画像がヘッダーに表示されます。
 
    上記の「Get file」をタップすると、このチュートリアルで使用するロゴをダウンロードすることができます。
 
    [ファイルを入手](assets/logo.png)
 
-1. Drag the **Footer** component from ![treeexpandall](assets/treeexpandall.png) to the adaptive form. この段階では、フォームは次のようになります。
+1. **Footer** コンポーネントをtreeexpandallからアダプティブフォームにドラッグし ![](assets/treeexpandall.png) ます。 この段階では、フォームは次のようになります。
 
    ![adaptive-form-with-headers-and-footers](assets/adaptive-form-with-headers-and-footers.png)
 
 ## 手順 3：情報を取得して表示するためのコンポーネントを追加する {#step-add-components-to-capture-and-display-information}
 
-コンポーネントは、アダプティブフォームを構成するための構築ブロックです。AEM formsは、アダプティブフォーム内の情報を取得して表示するための多くのコンポーネントを提供します。 You can drag the components from ![treeexpandall](assets/treeexpandall.png) to a form. To learn about available components and corresponding functionality, see [Introduction to authoring adaptive forms](/help/forms/using/introduction-forms-authoring.md).
+コンポーネントは、アダプティブフォームを構成するための構築ブロックです。AEM Formsは、情報を取得してアダプティブフォームに表示するための多くのコンポーネントを提供しています。 You can drag the components from ![treeexpandall](assets/treeexpandall.png) to a form. To learn about available components and corresponding functionality, see [Introduction to authoring adaptive forms](/help/forms/using/introduction-forms-authoring.md).
 
 1. 数値ボックスコンポーネントをアダプティブフォームにドラッグし、フッターコンポーネントの前にドロップします。Open properties of the component, change **Title** of the component to **`Customer ID`**, change **Element Name** to **`customer_ID`**, enable the **Required Field** option, enable the **Use HTML5 Number Input Type** option, and tap ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 1. 3 つのテキストボックスコンポーネントをアダプティブフォームにドラッグし、フッターコンポーネントの前にドロップします。これらのテキストボックスについて、以下のプロパティを設定します。：
@@ -78,7 +81,7 @@ AEM Forms には、アダプティブフォーム上で情報を表示するた�
 <table> 
  <tbody> 
   <tr> 
-   <td>プロパティ</td> 
+   <td>Property</td> 
    <td>テキストボックス 1<br /> </td> 
    <td>テキストボックス 2<br /> </td> 
    <td>テキストボックス 3</td> 
@@ -159,21 +162,21 @@ AEM Forms には、アダプティブフォーム上で情報を表示するた�
 
 アダプティブフォームの「送信」ボタンをタップすると、送信アクションがトリガーされます。送信アクションを使用して、フォームデータをローカルリポジトリに保存したり、フォームデータを REST エンドポイントに送信したり、フォームデータを電子メールとして送信したりすることができます。アダプティブフォームには、そのほかにも、すぐに使用できる送信アクションがいくつか用意されています。詳しくは、「[送信アクションの設定](/help/forms/using/configuring-submit-actions.md)」を参照してください。
 
-次の手順を使用して、フォームの電子メール送信アクションとデモ送信アクションを設定できます。
+次の手順を使用して、フォームの電子メール送信アクションとデモの送信アクションを設定できます。
 
 1. 電子メールサーバーを設定します。詳しくは、「[電子メール通知の設定](/help/sites-administering/notification.md)」を参照してください。
 
    /content/help/en/experience-manager/6-4/sites-administering/notification.html
 
-1. Tap **Form Container** in the Content browser and tap ![cmppr](assets/cmppr.png). 左側にプロパティブラウザが開きます。
-1. **送信**／**送信アクション**&#x200B;に移動します。「**電子メールを送信**」を選択します。次の値を指定し、 ![aem_6_3_forms_saveをタップします](assets/aem_6_3_forms_save.png)。
+1. Tap **Form Container** in the Content browser and tap ![cmppr](assets/cmppr.png). プロパティブラウザが左側に開きます。
+1. **送信**／**送信アクション**&#x200B;に移動します。「**電子メールを送信**」を選択します。次の値を指定し、「 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。
 
    | プロパティ | 値 |
    |--- |--- |
    | 送信元 | `donotreply@weretail.com` |
    | To | `${customer_Email}` |
    | 件名 | Acknowledgement: You have added shipping address on We.Retail website. |
-   | 電子メールテンプレート | こち `${customer_Name}`ら、お客様のアカウントの配送先住所として次の住所が追加されました。 <br>`${customer_Name}`, `${customer_Shipping_Address}`, `${customer_State}`, `${customer_ZIPCode}`<br> Grezants, We.Retail |
+   | 電子メールテンプレート | こんにちは `${customer_Name}`。アカウントの配送先住所として次の住所が追加されます。 <br>`${customer_Name}`, `${customer_Shipping_Address}`, `${customer_State}`, `${customer_ZIPCode}`<br> Grazts, We.Retail |
    | 添付ファイルを含める | Enabled |
 
    これでフォームが作成されました。フォームのプレビューを表示して機能をテストすることができます。このチュートリアルに記載されている値を指定し、AEM Forms サーバーで稼働するマシン上に作成されたフォームにアクセスする場合は、対応するフォームが [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html) に用意されています。
