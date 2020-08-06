@@ -1,9 +1,12 @@
 ---
-title: AEM AssetsとAEM Media Libraryで使用できる機能の比較
-description: AEM AssetsとAEM Media Libraryに関する、相違点を含むよくある質問(FAQ)です。
+title: AEM AssetsとAEMメディアライブラリの機能の比較
+description: AEM AssetsとAEMメディアライブラリに関する、相違点を含むよくある質問(FAQ)です。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 6a1013715c538c39eaf40a22dbffc7f2df36f968
+workflow-type: tm+mt
+source-wordcount: '551'
+ht-degree: 79%
 
 ---
 
@@ -26,9 +29,9 @@ AEM Media Library は、画像やその他の共有リソースの保存専用�
 
 AEM Assets のお客様だけが使用できる独自の機能は次のとおりです。
 
-1. タイトル、タグ、説明以外のメタデータの抽出および編集機能。
+1. タイトル、タグ、説明以外のメタデータを抽出および編集する機能。
 1. the AEM Assets Admin, available from the welcome screen by clicking the second button next to the `siteadmin`.
-1. Digital Asset Managementに関連するすべてのワークフロー手順(AEM Assetsの取り込み、AEM Assetsの削除、AEM Assetsのサブアセットの処理、AEM Assetsのメタデータの抽出)。
+1. Digital Asset Managementに関連するすべてのワークフロー手順、つまり、AEMアセットの取り込み、AEM Assetsの削除、AEM Assetsのサブアセット処理、AEM Assetsのメタデータ抽出です。
 1. libraries including `dam` im package space.
 
 これらの機能を使用するには、AEM Assets の有効なライセンスが必要です。
@@ -59,5 +62,5 @@ AEM Assets のお客様だけが使用できる独自の機能は次のとおり
 
 >[!MORELIKETHIS]
 >
->* [機能のリストの詳細](https://docs.adobe.com/content/help/en/experience-manager-65/assets/administer/medialibrary.html#listoffeatures)
+>* [機能の違いの詳細リスト](https://docs.adobe.com/content/help/en/experience-manager-65/assets/administer/medialibrary.html#listoffeatures)
 
