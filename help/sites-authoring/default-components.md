@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 53c37f8c-eb75-4134-9f91-8adb0a574360
 translation-type: tm+mt
 source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+workflow-type: tm+mt
+source-wordcount: '445'
+ht-degree: 92%
 
 ---
 
@@ -55,16 +58,16 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 
 次のページには、コンポーネントに関する重要な追加情報へのリンクが記載されています。
 
-* [コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html) - コアコンポーネントは柔軟かつ機能豊富なオーサリング機能を提供します。ページを作成するうえで不可欠なコンテンツタイプが用意されています。
+* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) - コアコンポーネントは柔軟かつ機能豊富なオーサリング機能を提供します。ページを作成するうえで不可欠なコンテンツタイプが用意されています。
 
 * [コミュニティ](/help/communities/author-communities.md) - コンポーネントには、Web サイトのインタラクティブな機能（フォーラムやコメントなど）が用意されています。Many of these components are included when a [Community Site](/help/communities/overview.md) is created.
 
-* [eコマース](/help/sites-administering/ecommerce.md) - AEMのeコマース機能には、様々なコンポーネントも含まれています。実際の使用方法は、使用するコマースエンジンによって異なります。
+* [eコマース](/help/sites-administering/ecommerce.md) - AEMのeコマース機能には、様々なコンポーネントも含まれています。 実際の使用方法は、使用するコマースエンジンによって異なります。
 
 ### コンポーネントの設定 {#configuring-components}
 
 作成者が標準インストールからアクセスできるコンポーネントに加えて、他の様々なコンポーネントも使用できます。
 
-* If your page is based on the recommended, modern, editable template, you can [edit the template](/help/sites-authoring/templates.md) enable/disable these and edit parameters for specific components.
+* ページが最新の編集可能な推奨テンプレートに基づいている場合は、[テンプレートを編集](/help/sites-authoring/templates.md)して、コンポーネントを有効／無効にしたり、特定のコンポーネントのパラメーターを編集したりできます。
 * ページが静的テンプレートに基づいている場合は、[デザインモード](/help/sites-authoring/default-components-designmode.md#enable-disable-components)を使用して、コンポーネントを有効／無効にしたり、特定のコンポーネントのパラメーターを編集したりできます。
 
