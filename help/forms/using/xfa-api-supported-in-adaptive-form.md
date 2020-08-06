@@ -9,6 +9,9 @@ topic-tags: develop
 discoiquuid: eaf60421-097e-4feb-b661-433a512470ab
 translation-type: tm+mt
 source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+workflow-type: tm+mt
+source-wordcount: '700'
+ht-degree: 86%
 
 ---
 
@@ -129,7 +132,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
    <td><p>アダプティブフォームの speakPriority プロパティにマッピング済み。</p> </td> 
   </tr>
   <tr>
-   <td><p>アクセシビリティ：speakText</p> </td> 
+   <td><p>アクセシビリティ： speakText</p> </td> 
    <td><p>アダプティブフォームのカスタム Accessibility テキストにマッピング済み。</p> </td> 
   </tr>
   <tr>
@@ -150,7 +153,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
   </tr>
   <tr>
    <td><p>items<em> (List Box, Check Box)</em></p> </td> 
-   <td><p>アダプティブフォームの options プロパティにマッピング済み。Options式を使用して上書きできます。</p> </td> 
+   <td><p>アダプティブフォームの options プロパティにマッピング済み。これは、オプション式を使用して上書きできます。</p> </td> 
   </tr>
   <tr>
    <td><p>maxChar<em> (Text Field)</em></p> </td> 
