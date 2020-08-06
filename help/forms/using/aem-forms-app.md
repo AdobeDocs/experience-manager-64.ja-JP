@@ -24,9 +24,9 @@ ht-degree: 70%
 
 AEM Forms アプリケーションでは、アダプティブフォーム、モバイルフォーム、およびモバイルデバイスのフォームセットをサーバーに基づいて同期することができます。[OSGi 上の Forms 中心ワークフロー](/help/forms/using/aem-forms-workflow.md)または [JEE 上の Forms ワークフロー](/help/forms/using/finance-reference-site-walkthrough.md#approving-the-application)を定義することができます。例えば、金融関係の会社を経営していて、顧客の申請と問い合わせの管理に AEM Forms を使用するとします。顧客はフォームを記入し、それを送信して承認を求めます。モバイルデバイスのフォームを有効にしている場合、顧客はフォームを AEM Forms アプリケーションで記入することができます。また、会社側も、モバイルデバイス上でのフォームの認証を有効にすることで、承認のワークフローを管理することができます。フィールドワーカーはモバイルデバイスを顧客のところに持参し、詳細を検証して、フォームを送信します。AEM Forms アプリケーションは AEM Forms サーバーと同期して、モバイルデバイス用に有効化されたフォームを取得します。アプリがオフラインの場合、データはローカルに保存されます。
 
-AEM Forms版アプリのソースコードは、ソフトウェア配布(Software Distribution)を通じて、お客様が利用できます。 ソフトウェア配布のソースコードパッケージは、次の場所で入手できます。 `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
+AEM Forms版Appのソースコードは、ソフトウェア配布(Software Distribution)を通じて、お客様が入手できます。 ソフトウェア配布のソースコードパッケージは、次の場所で入手できます。 `adobe-aemfd-forms-app-src-pkg-<version>.zip`.
 
-AEM Forms アプリケーションは、iOS、Android、および Windows デバイスでサポートされます。Android向けのAEM Formsアプリは、Google Playから、iOSはApp Storeから、Windowsストアからインストールできます。
+AEM Forms アプリケーションは、iOS、Android、および Windows デバイスでサポートされます。Android用のAEM Formsアプリは、Google Playから、iOSはApp Storeから、Windowsストアからインストールできます。
 
     [ ![google_play](assets/google_play.png)
     
@@ -53,7 +53,7 @@ For more information on AEM Forms app working with AEM Forms server, see [Conard
 
 ### スタンドアロンのフォームまたは AEM Forms ワークフローを使用しないサーバーのある AEM Forms アプリケーション {#standalone-forms-or-aem-forms-app-with-servers-without-aem-forms-workflow}
 
-AEM Forms ワークフローを使用しない AEM Forms サーバーは、OSGi 上の AEM Forms またはスタンドアロンのモバイルフォームもしくはアダプティブフォームです。AEM Forms アプリケーションは、[OSGi](/help/sites-deploying/configuring-osgi.md) に AEM Forms を実装して機能します。AEM Forms版アプリケーションで有効にして発行するフォームは、アプリケーションで使用できます。
+AEM Forms ワークフローを使用しない AEM Forms サーバーは、OSGi 上の AEM Forms またはスタンドアロンのモバイルフォームもしくはアダプティブフォームです。AEM Forms アプリケーションは、[OSGi](/help/sites-deploying/configuring-osgi.md) に AEM Forms を実装して機能します。AEM Formsアプリで有効にして公開したFormsを、アプリで利用できます。
 
 フォームをアプリケーションにダウンロードして、オフラインで使用することができます。例えば、金融関係の会社を経営していて、顧客がサイトで申込書を記入したとします。 申込書はアダプティブフォームで、顧客からの情報を受け付け、レビュー用に保存します。管理者はフォームをレビューし、AEM オーサーインスタンスで検証フォームを作成します。管理者は AEM Forms アプリケーションによる同期を有効にして、発行します。検証フォームが AEM Forms アプリケーションで使用できる場合、フィールドエージェントは顧客の詳細の検証にモバイルデバイスを使用することができます。モバイルデバイスはサーバーと同期し、検証フォームがアプリケーションにロードされます。フィールドエージェントは顧客を訪問し、詳細を検証した上で、データをドラフトとして保存、または検証フォームとして提出します。アプリケーションがオンラインになるたびに、フォームはサーバーと同期されます。
 
@@ -96,7 +96,7 @@ AEM Forms ワークフローを使用しない AEM Forms Server がある場合�
 
 アプリケーションを AEM Forms ワークフローサーバーと同期して、モバイルデバイスでタスクやフォームを使用できます。
 
-A task on the mobile device contains an adaptive form, HTML5 form, or a form set and can also contain attachments and [summary URL](/help/forms/using/getting-task-variables-summary-url.md). デフォルトでは、自分に割り当てられたタスクが **[!UICONTROL Tasks]** フォルダーに保存されます。タスクで作業する場合、タスクを変更し、タスクのドラフトコピーをAEM Formsサーバーに保存できます。
+A task on the mobile device contains an adaptive form, HTML5 form, or a form set and can also contain attachments and [summary URL](/help/forms/using/getting-task-variables-summary-url.md). デフォルトでは、自分に割り当てられたタスクが **[!UICONTROL Tasks]** フォルダーに保存されます。タスクで作業する場合は、タスクを変更し、タスクの下書きをAEM Formsサーバに保存できます。
 
 モバイルデバイスのフォームは、アダプティブフォームまたはモバイルフォームになります。Foms アプリケーションで同期可能なフォームは、Forms フォルダーにあります。AEM Forms ワークフローを使用しない AEM Forms Server（OSGi での AEM Forms）で有効にされているフォームを同期することができます。
 
@@ -153,7 +153,7 @@ AEM Forms では、モバイルデバイス用のフォームを作成するこ�
 
 AEM Formsアプリは、フィールドワーカーが割り当てられたフォームを使用できるモバイルソリューションを提供します。 アプリケーションはサーバーから完全なデータをキャッシュし、すべての作業をローカルに保存することによって、十分なユーザーエクスペリエンスを提供します。ディスクからのデータは適時の同期更新によってサーバーに送信されます。
 
-AEM Formsアプリは、Backboneモデルを効率的に使用し、モデルに保存されたデータを表示で表示するPhoneGap 5.0ベースのアプリケーションです。 すべてのネイティブ操作は、PhoneGap プラグインによって実行されます。
+AEM Formsアプリは、モデルに保存されたデータを表示で表示するためにBackboneモデルが効率的に使用されたPhoneGap 5.0ベースのアプリケーションです。 すべてのネイティブ操作は、PhoneGap プラグインによって実行されます。
 
 ## AEM Forms アプリケーションのカスタマイズ、構築、配布 {#customize-build-distribute}
 
@@ -186,10 +186,10 @@ The source code for the AEM Forms app can be extracted from the `adobe-lc-mobile
 
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行します。
 
-1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Adobe IDがソフトウェア配布物にログインする必要があります。
-1. ヘッダーメニューで **[!UICONTROL Adobe Experience Manager]** をタップします。
+1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Software Distributionにログインするには、Adobe IDが必要です。
+1. ヘッダーメニューにある **[!UICONTROL Adobe Experience Manager]** をタップします。
 1. In the **[!UICONTROL Filters]** section:
-   1. 「 **[!UICONTROL ソリューション]** 」ドロップダウンリストから「 **[!UICONTROL フォーム]** 」を選択します。
+   1. [ **[!UICONTROL ソリューション]****ドロップダウンリストから[]** Forms]を選択します。
    2. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
 1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「EULA条項に **[!UICONTROL 同意します]**」を選択して、「 **[!UICONTROL ダウンロード]**」をタップします。
 1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
