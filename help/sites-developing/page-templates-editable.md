@@ -34,7 +34,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->編集可能なテンプレートを [SPAエディターで使用するには、AEM 6.4.5.0以降が必要です](/help/sites-developing/spa-overview.md)。
+>編集可能なテンプレートを [SPAエディタで使用するには、AEM 6.4.5.0以降が必要](/help/sites-developing/spa-overview.md)です。
 
 >[!NOTE]
 >
@@ -54,7 +54,7 @@ ht-degree: 70%
 >[!NOTE]
 >
 >次のチュートリアルは、新しいプロジェクトで編集可能なページテンプレートを設定する場合にも役立ちます。\
->[AEMサイトの概要パート2 — ベースページとテンプレートの作成](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part2.html)
+>[「AEM Sitesの使い始めに」パート2 — ベースページとテンプレートの作成](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part2.html)
 
 ## 新しいテンプレートの作成 {#creating-a-new-template}
 
@@ -185,7 +185,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
 ### CRXDE Lite の使用 {#using-crxde-lite}
 
-1. プログラムまたはCRXDE Liteを使用して、インスタンス用に新しいフォルダー（/confの下）を作成できます。
+1. インスタンスに対して（/confの下に）新しいフォルダーをプログラムで作成するか、CRXDE Liteを使用して作成できます。
 
    次の構造を使用する必要があります。
 
@@ -202,9 +202,9 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
    `<your-folder-name> [sling:Folder]`
 
-   名前: `jcr:title`
+   名前：`jcr:title`
 
-   * タイプ：`String`
+   * 型：`String`
    * 値：**テンプレート**&#x200B;コンソールに表示される（フォルダーの）タイトルです。
 
 1. 作成者が新しいフォルダーにテンプレートを作成できるようにするには、標準のオーサリング権限（*など）に加え*`content-authors`、グループを割り当てて作成者に必要なアクセス権限（ACL）を定義する必要があります。
@@ -497,11 +497,11 @@ Definitions for editable templates are stored [user-defined folders](/help/sites
 
 このノードは、テンプレートのプロパティを保持します。
 
-* **名前**: `jcr:title`
+* **名前**：`jcr:title`
 
-* **名前**: `status`
+* **名前**：`status`
 
-   * **Type**: `String`
+   * **型**：`String`
    * **値**: `draft`、 `enabled` または `disabled`
 
 ### 構造 {#structure}
@@ -536,7 +536,7 @@ When [editing a template you can define the layout](/help/sites-authoring/templa
 
 コンテンツ（またはデザイン）ポリシーでは、コンポーネントのデザインプロパティを定義します。例えば、使用できるコンポーネントや最小／最大サイズを定義できます。これらのポリシーは、テンプレートと、そのテンプレートを使用して作成されるページに適用されます。テンプレートエディターでコンテンツポリシーを作成して選択できます。
 
-* ノード `cq:policy``root` 上のプロパティ
+* The property `cq:policy`, on the `root` node
 
    `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
 
@@ -581,7 +581,7 @@ When [editing a template you can define the layout](/help/sites-authoring/templa
 
          * 名前：status
          * タイプ：String
-         * 値: `enabled`
+         * 値：`enabled`
 
 1. **許可されたテンプレート**
 
