@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7ec0698a-9e6e-48d4-bba2-5a6eee313900
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '1040'
+ht-degree: 97%
 
 ---
 
@@ -69,7 +72,7 @@ User Management を設定して、失敗したディレクトリ同期処理を�
 1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックします。
 1. 「同期完了の Cron 形式」に、失敗した同期を User Management で再試行する間隔を表す Cron 形式を入力します。Cron 形式の使用方法は、Quartz オープンソースジョブスケジュールシステムのバージョン 1.4.0 に基づきます
 
-   デフォルトは0 0/13 &amp;ast；です。? &amp;ast;の場合、チェックは13分ごとに行われます。
+   デフォルトは0 0/13 &amp;ast；です。 ? &amp;ast; これは、チェックが13分ごとに行われることを意味します。
 
 ## 手動によるディレクトリの同期 {#manually-synchronize-directories}
 
