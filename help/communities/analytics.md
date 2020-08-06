@@ -55,7 +55,7 @@ Adobe Analytics を AEM Communities と連携させ、サポートされるコ�
 1. すべての AEM インスタンス上で暗号化や復号化が正しく実行されるよう、[暗号鍵をレプリケート](#replicate-the-crypto-key)する
 1. Adobe Analytics の[レポートスイート](#adobe-analytics-report-suite-for-video-reporting)を準備する
 1. AEM Analytics [クラウドサービス](#aem-analytics-cloud-service-configuration)と[フレームワーク](#aem-analytics-framework-configuration)を作成する
-1. [コミュニティサイトでAnalytics](#enable-analytics-for-a-community-site) を有効にする
+1. [コミュニティサイトでのAnalytics](#enable-analytics-for-a-community-site) の有効化
 1. Analytics と AEM 変数との間のマッピングを[検証](#verify-analytics-to-aem-variable-mapping)する
 1. Identify [primary publisher](#primary-publisher)
 1. [コミュニティサイトの公開](#publish-community-site-and-analytics-cloud-service)
@@ -67,10 +67,10 @@ Analytics をコミュニティ機能と連携するよう設定するには、�
 
 * 会社名
 
-   アドビのAnalyticsアカウントに関連付けられている会社
+   Adobe Analyticsアカウントに関連付けられている会社
 * ユーザー名
 
-   Analyticsアカウントの管理を承認されたユーザーのログインユーザー名
+   Analyticsアカウントの管理を承認されたユーザーのログインユーザー名。
 
    （Webサービスアクセス権限を含む）
 
@@ -131,7 +131,7 @@ By signing in to [Adobe Marketing Cloud](https://docs.adobe.com/content/help/en/
 
 >
 >
-**次に、コミュニティサイトが公開される前に** 、Analyticsがコミュニティサイトを有効にしたときに、自動的にAnalytics変数にマッピングされたAEM変数を移動して、既存のマッピングを復元することが重要です。
+**次に、コミュニティサイトが公開される前に** 、Analyticsがコミュニティサイトに対して有効にされたときにAnalytics変数に自動的にマッピングされたAEM変数を移動して、既存のマッピングを復元することが重要です。
 >
 >To restore the pre-existing mapping and move AEM variables to other Analytics variables, see the section on [Modifying Analytics Variable Mapping](#modifying-analytics-variable-mapping).
 >
@@ -139,7 +139,7 @@ By signing in to [Adobe Marketing Cloud](https://docs.adobe.com/content/help/en/
 
 ### Video Heartbeat Analytics {#video-heartbeat-analytics}
 
-ビデオハートビートAnalyticsがライセンスを受けると、が割り当てら `Marketing Cloud Org Id` れます。
+Video Heartbeat Analyticsのライセンスを受けると、が割り当てら `Marketing Cloud Org Id` れます。
 
 To enable Video Heartbeat reporting after [configuring the Analytics report suite for video reporting](#adobe-analytics-report-suite-for-video-reporting):
 
@@ -157,7 +157,7 @@ Video Heartbeat Analytics が有効になっている場合、ビデオプレー
 
 ## AEM Analytics クラウドサービス設定 {#aem-analytics-cloud-service-configuration}
 
-オーサーインスタンスの標準UIを使用して、アドビのAnalyticsとAEMコミュニティサイトを統合する新しいAnalytics統合を作成するには：
+作成者インスタンスの標準UIを使用して、Adobe AnalyticsをAEMコミュニティサイトと統合する、新しいAnalytics統合を作成するには：
 
 * From global navigation: **[!UICONTROL Tools > Deployment > Cloud Services]**
 * Scroll down to **[!UICONTROL Adobe Analytics]**
@@ -201,11 +201,11 @@ Video Heartbeat Analytics が有効になっている場合、ビデオプレー
 
 * **[!UICONTROL 会社]**
 
-   アドビのAnalyticsアカウントに関連付けられている会社
+   Adobe Analyticsアカウントに関連付けられている会社
 
 * **[!UICONTROL ユーザー名]**
 
-   Analyticsアカウントの管理を承認されたユーザーのログインユーザー名
+   Analyticsアカウントの管理を承認されたユーザーのログインユーザー名。
 
 * **[!UICONTROL パスワード]**
 
@@ -327,7 +327,7 @@ Analytics クラウドサービスを[既存のコミュニティサイト](site
 * Navigate to the **[!UICONTROL Communities > Sites]** console
 * コミュニティサイトの[サイトの編集]アイコンを選択します
 * 設定を選択します
-* Analytics区間：
+* 「解析」セクションで、次の操作を行います。
 
    * Check the **[!UICONTROL Enable Analytics]** checkbox
    * ドロップダウンボックスからフレームワークを選択します
@@ -404,7 +404,7 @@ evar1 ～ evar11 および event1 ～ event7 の範囲内のいずれかの変�
 **eVar の値の例：**
 
 * [MIME type](https://www.iana.org/assignments/media-types): video/mp4
-* [コミュニティサイトのタイトル](sites-console.md#step13asitetemplate): Geometrixx Communities
+* [コミュニティサイトのタイトル](sites-console.md#step13asitetemplate): Geometrixxコミュニティ
 * [コミュニティ関数名](functions.md): フォーラム
 * [コミュニティグループ名](creating-groups.md#creating-a-new-group): ハイキング
 * コミュニティグループコンテンツへのパス： /content/sites/communities/jp/groups/hiking
@@ -460,7 +460,7 @@ Communities の ever および event がレポートスイート内の既存の�
 
 >
 >
-**次に、コミュニティサイトが公開される前に** 、既存のマッピングを復元し、自動的にマッピングされたCommunities AEM変数(コミュニティサイトでAnalyticsが有効になった場合)を他のAnalytics変数に移動することが重要です。 この再マッピングは、すべてのCommunitiesコンポーネントで一貫している必要があります。
+**次に、コミュニティサイトが公開される前に** 、既存のマッピングを復元し、自動的にマップされたCommunities AEM変数（コミュニティサイトでAnalyticsが有効な場合）を、他のAnalytics変数に移動することが重要です。 この再マッピングは、すべてのCommunitiesコンポーネントで一貫している必要があります。
 >
 >この作業をしておかないと、修復不可能なデータ損傷が発生することがあります。
 
@@ -520,7 +520,7 @@ The polling interval controls the frequency of requests to Adobe Analytics for d
 
 * プライマリパブリッシャ
 * 管理者権限でサインイン
-* Navigate to [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
+* [CRXDE Liteに移動](../../help/sites-developing/developing-with-crxde-lite.md)
 
    * 例：[http://localhost:4503/crx/de](http://localhost:4503/crx/de)
 
