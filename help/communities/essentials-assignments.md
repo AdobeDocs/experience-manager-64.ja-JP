@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 796781e6-5cab-4ea1-b484-0945bc8febbf
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 63%
 
 ---
 
@@ -31,7 +34,7 @@ source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td> 
