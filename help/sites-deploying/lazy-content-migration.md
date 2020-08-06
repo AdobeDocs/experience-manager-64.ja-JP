@@ -11,6 +11,9 @@ topic-tags: upgrading
 discoiquuid: 282a828a-edb2-4643-9bf7-ec30c29dc6ce
 translation-type: tm+mt
 source-git-commit: ba16a6870bc621a585b2b2d7c7536baef05adc72
+workflow-type: tm+mt
+source-wordcount: '678'
+ht-degree: 93%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: ba16a6870bc621a585b2b2d7c7536baef05adc72
 
 後方互換性に配慮し、AEM 6.3 以降では、 **/etc** および **/content** 内のコンテンツと設定は、アップグレードをおこなってもすぐに変更または変換されません。これは、これらの構造上にあるお客様のアプリケーションの依存関係が変更されないようにするためにおこなわれます。AEM 6.4 のすぐに使用できるコンテンツが別の場所でホストされていても、これらのコンテンツ構造に関連する機能は同じままです。
 
-これらのすべての場所が自動的に変換されるわけではありませんが、いくつかの遅延した `CodeUpgradeTasks` も遅延コンテンツ移行と見なされます。これにより、次のシステムプロパティを使用してインスタンスを再起動することで、これらの自動変換をトリガーできます。
+これらのすべての場所が自動的に変換されるわけではありませんが、いくつかの遅延した `CodeUpgradeTasks` も遅延コンテンツ移行と見なされます。これにより、次のsystemプロパティを使用してインスタンスを再起動することで、顧客はこれらの自動変換をトリガーできます。
 
 ```shell
 -Dcom.adobe.upgrade.forcemigration=true
@@ -56,4 +59,4 @@ source-git-commit: ba16a6870bc621a585b2b2d7c7536baef05adc72
 | `CQ64CommunitiesConfigsCleanupTask` | &lt; 6.3 | 遅延 | SRP クラウド設定、コミュニティウォッチワード設定を移動して、**/etc/social** および **/etc/enablement** をクリーンアップします（遅延移行が実行される際に、参照およびデータを調整する必要があります。アプリケーション部分がこの構造に依存しなくなるようにする必要があります）。 |
 | `CQ64LegacyCloudSettingsCleanupTask` | &lt; 6.4 | 遅延 | **/etc/cloudsettings** をクリーンアップします（ContextHub 設定を含む）。最初のアクセス時に設定が自動的に移行されます。アップグレードに伴って遅延コンテンツ移行が開始される場合、**/etc/cloudsettings** にあるこのコンテンツは、アップグレード前にパッケージを介して保持し、暗黙的な変換を開始するために再インストールする必要があります。パッケージは移行の完了後にアンインストールされます。 |
 | `CQ64UsersTitleFixTask` | &lt; 6.4 | 遅延 | 従来のタイトル構造をユーザープロファイルノードのタイトルに適合させます。 |
-| `CQ64CommerceMigrationTask` | &lt; 6.4 | 遅延 | コマースコンテンツを **/etc/commerceから** /var/commerce **に移行します**。 移行中に、コンテンツが移動され、移動されたコンテンツへの参照が新しい場所を反映するように更新されます。 |
+| `CQ64CommerceMigrationTask` | &lt; 6.4 | 遅延 | コマースコンテンツを/etc/commerce **から/var/commerce** に移行します ****。 移行中に、コンテンツが移動され、移動されたコンテンツへの参照が更新されて、新しい場所が反映されます。 |
