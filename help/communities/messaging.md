@@ -32,7 +32,7 @@ For additional information for developers, see [Messaging Essentials](essentials
 
 ## メッセージング操作サービス {#messaging-operations-service}
 
-The [AEM Communities Messaging Operations Service](http://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl) identifies the endpoint which handles messaging related requests, the folders the service should use for storing messages, and if messages may include file attachments, what file types are allowed.
+[AEM Communitiesメッセージング操作サービス](http://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl) は、メッセージング関連の要求を処理するエンドポイント、メッセージの格納にサービスが使用するフォルダー、およびメッセージに添付ファイルが含まれる場合に許可されるファイルの種類を識別します。
 
 For community sites created using the [Communities Sites console](sites-console.md), an instance of the service already exists, with the inbox set to `/mail/community/inbox`.
 
