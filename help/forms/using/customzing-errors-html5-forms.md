@@ -9,6 +9,9 @@ topic-tags: customization
 discoiquuid: 44e49789-9075-41b3-bce8-03e8efce2d5a
 translation-type: tm+mt
 source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+workflow-type: tm+mt
+source-wordcount: '541'
+ht-degree: 78%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
 
 この記事では、HTML5フォームのエラーメッセージをカスタマイズして、
 
-* エラーメッセージの外観および位置を変更できます。任意のフィールドの上、下および右にエラーを表示させることができます。
+* エラーメッセージの外観および位置を変更できます。任意のフィールドの上、下、右にエラーを表示させることができます。
 * 複数のフィールドのエラーメッセージをいつでも表示できます。
 * フィールドが選択されているかどうかに関係なく、エラーを表示します。
 
@@ -73,7 +76,7 @@ source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
            },
    ```
 
-1.  ファイルを保存して閉じます。
+1. ファイルを保存して閉じます。
 1. `CustomErrorManager-1.0-SNAPSHOT` フォルダーに移動し、jcr_root および META-INF フォルダーのアーカイブを作成します。アーカイブの名前を CustomErrorManager-1.0-SNAPSHOT.zip に変更します。
 1. パッケージマネージャーを使ってパッケージをアップロードし、インストールします。
 
@@ -111,15 +114,15 @@ source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
    Save the changes.
    ```
 
-1.  ファイルを保存して閉じます。
+1. ファイルを保存して閉じます。
 1. CustomErrorManager-1.0-SNAPSHOT フォルダーに移動し、jcr_root および META-INF フォルダーのアーカイブを作成します。アーカイブの名前を CustomErrorManager-1.0-SNAPSHOT.zip に変更します。
 1. パッケージマネージャーを使ってパッケージをアップロードし、インストールします。
 
 ## 新しいプロファイルでフォームをレンダリングします。  {#render-the-form-with-the-new-profile-nbsp}
 
-初期設定では、html5フォームはデフォルトのプロファイルを使用します。https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdpの名前>
+初期設定では、html5フォームは次のデフォルトのプロファイルを使用します。 https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
 
-カスタムエラーメッセージを含むフォームを表示するには、エラープロファイルを含むフォームをレンダリングします。https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;xdpの名前>
+カスタムエラーメッセージを使用してフォームを表示するには、次のエラープロファイルを使用してフォームをレンダリングします。 https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
 
 >[!NOTE]
 >
