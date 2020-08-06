@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f146202f-25f1-46a0-9943-c483f5f09f9f
 translation-type: tm+mt
 source-git-commit: f957ca343d12c325d012034a6fdbc36f77e41d87
+workflow-type: tm+mt
+source-wordcount: '862'
+ht-degree: 86%
 
 ---
 
@@ -196,15 +199,15 @@ source-git-commit: f957ca343d12c325d012034a6fdbc36f77e41d87
 
    * 完全なデータベースバックアップ（nsrnmddbf.bat）：
 
-      *[NetWorker_database_module_root]* `-s`*&lt;NetWorker_Server_Name>*`-U`*[username ]*password`-P`*[password password]*`-l full`*database_name>*
+      *[NetWorker_database_module_root]*`-s`**&lt;NetWorker_Server_Name`-U`*[ユーザ名&#x200B;]*password&lt;`-P`*[database]*`-l full`*_name>*
 
    * 増分データベースバックアップ（nsrnmddbi.bat）：
 
-      *[NetWorker_database_module_root]* `-s`*&lt;NetWorker_Server_Name>*`-U`*[username ]*password`-P`*[password password]*`-l 1 -R`*database_name>*
+      *[NetWorker_database_module_root]*`-s`**&lt;NetWorker_Server_Name`-U`*[ユーザ名&#x200B;]*password&lt;`-P`*[database]*`-l 1 -R`*_name>*
 
    * データベースログバックアップ（nsrnmddbl.bat）： 
 
-      *[NetWorker_database_module_root]* `-s`*&lt;NetWorker_Server_Name>*`-U`*[username ]*password`-P`*[password password]*`-l incr -R`*database_name>*
+      *[NetWorker_database_module_root]*`-s`**&lt;NetWorker_Server_Name`-U`*[ユーザ名&#x200B;]*password&lt;`-P`*[database]*`-l incr -R`*_name>*
 
       ここで、
 
@@ -212,7 +215,7 @@ source-git-commit: f957ca343d12c325d012034a6fdbc36f77e41d87
 
       `NetWorker_Server_Name` は、NetWorkerがインストールされているサーバです。
 
-      `username` &amp;は、 `password` データベース管理者ユーザーのユーザー名とパスワードです。
+      `username` &amp; `password` は、データベース管理者ユーザーのユーザー名とパスワードです。
 
       `database_name` は、バックアップするデータベースの名前です。
 
@@ -225,7 +228,7 @@ source-git-commit: f957ca343d12c325d012034a6fdbc36f77e41d87
 
    **Name：**&#x200B;共有ディレクトリのフルパス
 
-   **** メディアの種類： `File`
+   **メディアの種類：** `File`
 
 1. 新しいデバイスを右クリックして、「Operations」をクリックします。
 1. 「Label」をクリックし、名前を入力して「OK」をクリックしてから、「Mount」をクリックします。
