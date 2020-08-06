@@ -11,6 +11,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 38a80992-2eda-4535-89af-0de34b1a9686
 translation-type: tm+mt
 source-git-commit: 9a2ebded0068213903020d2c5633a05b6ffb07ef
+workflow-type: tm+mt
+source-wordcount: '387'
+ht-degree: 86%
 
 ---
 
@@ -36,7 +39,7 @@ For more information, see [Assets made compatible with AEM Forms 6.4 by installi
 
 アップグレードを実行した後、AEMFD 互換性パッケージをインストールしてアセットに 6.4 との互換性を持たせるには、以下を実行します。
 
-[AEM互換パッケージが事前にインストールされている](/help/sites-deploying/backward-compatibility.md) ことを確認します。
+Ensure that you have [AEM Compatibility package](/help/sites-deploying/backward-compatibility.md) pre-installed.
 
 1. Install the [Compatibility package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT).
 
@@ -49,7 +52,7 @@ For more information, see [Assets made compatible with AEM Forms 6.4 by installi
 
 ## 互換性パッケージをインストールすることにより AEM Forms 6.4 と互換性を持つようになったアセット {#assetsmadecompatible}
 
-互換性パッケージをインストールすると、次のアセットとテンプレートをAEM Forms 6.4と互換性のあるものにすることができます。
+互換性パッケージをインストールすると、次のアセットとテンプレートをAEM Forms6.4と互換性のあるものにすることができます。
 
 * AEM 6.3 以前の Correspondence Management アセット
 
