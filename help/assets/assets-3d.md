@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 32143da1-09c8-45ce-b50d-32adf6efe383
 translation-type: tm+mt
 source-git-commit: 7c850ed0d20dd2ba2626242c67ba190e371f049f
+workflow-type: tm+mt
+source-wordcount: '1143'
+ht-degree: 82%
 
 ---
 
@@ -38,7 +41,7 @@ AEM 3D で使用する 3D モデルを作成する場合は、以下の点に注
 
    [AEM での 3D アセットのアップロードと処理](upload-processing-3d-assets.md)を参照してください。
 
-* 一般的なシーンのライティングは、ステージに含まれます。したがって、3D モデルファイルにライトを含めることはお勧めしません。モデルにライトを含めることは可能です。ただし、そのモデル固有にする必要があります。例えば、他の部分で覆われたオブジェクトの部分を明るくするために追加のライティングを含める必要があることがあります。したがって、ステージライトだけでは十分に見えなくなります。
+* 一般的なシーンのライティングは、ステージに含まれます。したがって、3D モデルファイルにライトを含めることはお勧めしません。モデルにライトを含めることは可能です。ただし、そのモデル固有にする必要があります。例えば、他の部分で覆われたオブジェクトの部分を明るくするために追加のライティングを含める必要があることがあります。そのため、ステージライトだけでは十分に見えません。
 
 ## AEM 3D でサポートされているファイル {#supported-files-in-aem-d}
 
@@ -50,11 +53,11 @@ AEM 3D で使用する 3D モデルを作成する場合は、以下の点に注
 
 * Wavefront OBJファイル形式(`.obj`)
 
-   OBJ形式には、1つ以上の個別の外部MTLファイル（マテリアルテンプレートライブラリ）が必要`.mtl`です。
+   OBJ形式には、1つ以上の個別の外部MTLファイル（マテリアルテンプレートライブラリ） (`.mtl`)が必要です。
 
 * Autodesk FBX (Filmbox)ファイル形式(`.fbx`)
 
-   Autodesk 3Dファイル交換形式バイナリ形式とASCII形式の両方。
+   Autodesk 3Dファイル交換形式 バイナリ形式とASCII形式の両方。
 
    サードパーティアプリケーションで FBX ファイルを作成する場合は、以下の設定を推奨します（下の表を参照）。これらの設定を利用すると、AEM で使用する 3D ファイルに最適な結果が得られます。The option names are taken from the **[!UICONTROL Autodesk Maya FBX Export Options]** dialog box.
 
@@ -82,11 +85,11 @@ AEM 3D で使用する 3D モデルを作成する場合は、以下の点に注
   </tr> 
   <tr> 
    <td>Cameras</td> 
-   <td><p><strong>3Dステージを選択します</strong>。</p> <p>3Dモデルの場合は選択を解除します。</p> </td> 
+   <td><p>Select for <strong>3D stages</strong>.</p> <p>3Dモデルの場合は選択を解除します。</p> </td> 
   </tr> 
   <tr> 
    <td>Lights</td> 
-   <td><p><strong>3Dステージを選択します</strong>。</p> <p><strong>3Dモデルの選択を解除します</strong>。</p> </td> 
+   <td><p>Select for <strong>3D stages</strong>.</p> <p><strong>3Dモデルの場合は選択を解除</strong>。</p> </td> 
   </tr> 
   <tr> 
    <td>Units - Automatic</td> 
@@ -115,9 +118,9 @@ AEM 3D で使用する 3D モデルを作成する場合は、以下の点に注
 
 * Autodesk Maya
 
-   ASCII形式とバ `.ma` イナリ形式の `.mb` 両方。
+   ASCII形式 `.ma` とバイナリ `.mb` 形式の両方。
 
-* `Jupiter Tesselation (ISO 14306-1).jt` です。
+* `Jupiter Tesselation (ISO 14306-1).jt`。
 
     業界標準の CAD データ交換、コラボレーションおよび製品ビジュアライゼーション形式。
 
@@ -144,7 +147,7 @@ See [About working with IBL stages](working-with-ibl-stages.md).
 >[!NOTE]
 >
 >プライマリ 3D モデルファイル内に存在する上記以外のファイル参照は、現時点では無視されます。AEM 3D は、セカンダリ 3D モデルファイルへの参照をサポートしていません。
-Y-upは、このリリースで推奨されるFBXファイルの座標系です。
+Y-upは、このリリースではFBXファイルに適した座標系です。
 
 ## プライマリ 3D モデルファイル内のマテリアルシェーディング {#material-shading-in-a-primary-d-model-file}
 
@@ -158,5 +161,5 @@ Y-upは、このリリースで推奨されるFBXファイルの座標系です�
 
 ## プライマリ 3D モデルファイル内のマテリアルの命名 {#naming-materials-in-a-primary-d-model-file}
 
-*サーフェス*&#x200B;は、同じマテリアルでカバーされる 3D モデルのサーフェス領域として定義されます。このマテリアルは、サーフェスの命名にも使用されます。したがって、プライマリ 3D モデルファイルに含まれるマテリアルにはモデルに応じた名前を付けることをお勧めします。例えば、「Body」、「Windows」、「Tires」、「Rims」などの特定の名前を使用する場合は、「Red」、「Glass」、「Rubber」、「Aluminum」などのあいまいな名前を使用する方が好ましいです。
+*サーフェス*&#x200B;は、同じマテリアルでカバーされる 3D モデルのサーフェス領域として定義されます。このマテリアルは、サーフェスの命名にも使用されます。したがって、プライマリ 3D モデルファイルに含まれるマテリアルにはモデルに応じた名前を付けることをお勧めします。例えば、「Body」、「Windows」、「Tires」、「Rims」などの特定の名前を使用する場合は、「Red」、「Glass」、「Rubber」、「Aluminum」などの曖昧な名前を使用することをお勧めします。
 
