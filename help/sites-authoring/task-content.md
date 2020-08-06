@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 1b79d373-73f4-4228-b309-79e74d191f3e
 translation-type: tm+mt
 source-git-commit: 3addef2141ebb831f8677d011d68faf88e648dc2
+workflow-type: tm+mt
+source-wordcount: '596'
+ht-degree: 100%
 
 ---
 
@@ -53,7 +56,7 @@ source-git-commit: 3addef2141ebb831f8677d011d68faf88e648dc2
 
 #### タスクの詳細 {#task-details}
 
-特定のタスクの詳細については、「タスクリスト」でタスクをタップまたはクリックし、「**タスクの詳細**開く」を参照してください。
+特定のタスクの詳細を表示するには、タスクリストでタスクをタップまたはクリックして、タスクの詳細を開きます。
 
 ![chlimage_1-100](assets/chlimage_1-100.png)
 
