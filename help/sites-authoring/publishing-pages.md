@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8f2714bc-9d6c-4e6f-97a1-3b4f977348c5
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1630'
+ht-degree: 90%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 オーサー環境でコンテンツを作成およびレビューした後は、[公開 Web サイト（パブリッシュ環境）でコンテンツを利用できるようにする](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)ことが目標となります。
 
-この操作は、ページの公開と呼ばれます。パブリッシュ環境からページを削除する場合は、非公開と呼びます。ページは、公開／非公開を切り替えても、削除するまでは、さらなる変更に備えてオーサー環境で使用できます。
+この操作は、ページの公開と呼ばれます。パブリッシュ環境からページを削除する場合は、ページの非公開と呼ばれます。ページは、公開／非公開を切り替えても、削除するまでは、さらなる変更に備えてオーサー環境で使用できます。
 
 また、ページの公開または非公開は、即座におこなうことも、後で事前定義済みの日時におこなうこともできます。
 
@@ -27,27 +30,28 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 >
 >公開に関する用語には、紛らわしいものがあります。
 >
->* **発行／非公開**
-   >  コンテンツを公開環境で公開できる（または公開できない）アクションの主な用語は次のとおりです。
+>* **公開／非公開**
+   >  環境でコンテンツを公開する（または非公開にする）アクションに対して主に使用される用語です。
    >
    >
-* **アクティブ化/非アクティブ化**
-   >  これらの用語は、発行/非公開と同義語です。
+* **アクティブ化／非アクティブ化**
+   >  公開／非公開と同義です。
    >
    >
 * **レプリケート／レプリケーション**
-   >  これらは、ユーザーのコメントを発行または逆複製する場合など、ある環境から別の環境へのデータ（ページのコンテンツ、ファイル、コード、ユーザーのコメントなど）の移動を説明する技術用語です。
+   >  これらは、ユーザーコメントの発行時や逆複製時など、ある環境から別のユーザーへのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を説明する技術用語です。
 >
 
 
 
 >[!NOTE]
 >
->特定のページを公開するために必要な権限がない場合。
+>特定のページを公開するために必要な特権がない場合。
 >
 >* ワークフローがトリガーされ、公開リクエストの適切なユーザーに通知されます。
 >* この[ワークフローは、開発チームによってカスタマイズされている](/help/sites-developing/workflows-models.md)ことがあります。
 >* ワークフローがトリガーされたことを通知するメッセージが少しの間表示されます。
+
 >
 
 
@@ -63,20 +67,21 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 ページを編集している場合、エディターから直接公開できます。
 
-1. Select the **Page Information** icon to open the menu and then the **Publish Page** option.
+1. **ページ情報**&#x200B;アイコンを選択してメニューを開き、「**ページを公開**」オプションを選択します。
 
    ![screen_shot_2018-03-21at152734](assets/screen_shot_2018-03-21at152734.png)
 
 1. 公開が必要な参照がページに含まれているかどうかに応じて、次の操作をおこないます。
 
    * 公開する参照がない場合、ページが直接公開されます。
-   * 公開が必要な参照がページに含まれている場合は、それらのリストが&#x200B;**発行**&#x200B;ウィザードに表示され、ウィザードで次のいずれかを実行できます。
+   * 公開が必要な参照がページに含まれている場合は、それらのリストが&#x200B;**公開**&#x200B;ウィザードに表示され、ウィザードで次のいずれかを実行できます。
 
-      * Specify which of the assets/tags/etc. you want to publish together with the page, then use **Publish** to complete the process.
+      * ページと一緒に公開するアセットやタグなどを指定し、「**公開**」を使用してプロセスを完了します。
       * 「**キャンセル**」を使用してアクションを中止します。
+
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
-1. Selecting **Publish** will replicate the page to the publish environment. ページエディターに、公開アクションを確認する情報バナーが表示されます。
+1. 「**公開**」を選択して、パブリッシュ環境にページをレプリケートします。ページエディターに、公開アクションを確認する情報バナーが表示されます。
 
    ![screen_shot_2018-03-21at152840](assets/screen_shot_2018-03-21at152840.png)
 
@@ -101,7 +106,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 クイック公開でページを公開するには、次の手順を実行します。
 
-1. Select the page or pages in the sites console and click on the **Quick Publish** button.
+1. サイトコンソールで 1 つ以上のページを選択し、「**クイック公開**」ボタンをクリックします。
 
    ![screen_shot_2018-03-21at153115](assets/screen_shot_2018-03-21at153115.png)
 
@@ -117,7 +122,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 #### 公開を管理 {#manage-publication}
 
-**「パブリケーションの管理** 」には、「クイック発行」よりも多くのオプションが用意されており、子ページを含めたり、参照をカスタマイズしたり、該当するワークフローを開始したり、後日公開するオプションを提供したりできます。
+**公開を管理**&#x200B;には、クイック公開よりも多くのオプションがあります。子ページを含めたり、参照をカスタマイズしたり、使用可能なワークフローを開始したり、後日公開するためのオプションを提供したりします。
 
 公開を管理を使用してページを公開または非公開にするには、次の手順を実行します。
 
@@ -129,6 +134,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    * 選択したページの公開または非公開を選択する。
    * そのアクションを今すぐ実行するか後日実行するかを選択する。
+
    後で公開することを選択すると、指定した時間に選択したページを公開するワークフローが開始されます。逆に、後で非公開にすることを選択すると、特定の時間に選択したページを非公開にするワークフローが開始されます。
 
    公開／非公開を後からキャンセルする場合は、[ワークフローコンソール](/help/sites-administering/workflows.md)に移動して、対応するワークフローを終了します。
@@ -145,13 +151,14 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    「コンテンツを追加」ボタンをクリックすると、[パスブラウザー](/help/sites-authoring/author-environment-tools.md#path-browser)が開き、コンテンツを選択できます。
 
-   Select the required pages and then click **Select** to add the content to the wizard or **Cancel **to cancel the selection and return to the wizard.
+   必要なページを選択し、「**選択**」をクリックしてコンテンツをウィザードに追加するか、「キャンセル」をクリックして選択をキャンセルして、ウィザードに戻ります。
 
    ウィザードに戻ると、リストの項目を選択して、次のような追加のオプションを設定できます。
 
    * その子を含める。
    * 選択から削除する。
    * その公開済みの参照を管理する。
+
    ![screen_shot_2018-03-21at153450](assets/screen_shot_2018-03-21at153450.png)
 
    「**子を含める**」をクリックすると、次のことができるダイアログが開きます。
@@ -159,6 +166,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
    * 直近の子のみを含める。
    * 変更されたページのみを含める。
    * 既に公開済みのページのみを含める。
+
    「**追加**」をクリックして、選択オプションに基づいて公開または非公開にするページのリストに子ページを追加します。「**キャンセル**」をクリックして選択をキャンセルし、ウィザードに戻ります。
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
@@ -179,13 +187,13 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    ![screen_shot_2018-03-21at153925](assets/screen_shot_2018-03-21at153925.png)
 
-1. Click **Publish** to complete.
+1. 「**公開**」をクリックして完了します。
 
    サイトコンソールに戻ると、公開を確認する通知メッセージが表示されます。
 
    ![screen_shot_2018-03-21at153951](assets/screen_shot_2018-03-21at153951.png)
 
-1. If the published pages are associated with workflows, they may be shown in a final **Workflows** step of the publication wizard.
+1. 公開したページがワークフローに関連付けられている場合、公開ウィザードの最後の&#x200B;**ワークフロー**&#x200B;ステップに表示されます。
 
    >[!NOTE]
    >
@@ -196,6 +204,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
    * ワークフローのタイトルを定義する。
    * ワークフローが[複数のリソースをサポートする](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)場合、ワークフローパッケージを維持する。
    * ワークフローパッケージを維持するオプションが選択されている場合、ワークフローパッケージのタイトルを定義する。
+
    Click **Publish** or **Publish Later **to complete the publication.
 
    ![chlimage_1-54](assets/chlimage_1-54.png)
@@ -204,7 +213,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 ページを非公開にすると、そのページがパブリッシュ環境から削除され、読者に公開されなくなります。
 
-In a [manner similar to publishing](/help/sites-authoring/publishing-pages.md#publishing-pages), one or more pages can be unpublished:
+[公開と同様の方法](/help/sites-authoring/publishing-pages.md#publishing-pages)で、1 つ以上のページを非公開にすることができます。
 
 * [ページエディターから](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-editor)
 * [サイトコンソールから](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-console)
@@ -244,6 +253,7 @@ In a [manner similar to publishing](/help/sites-authoring/publishing-pages.md#pu
 
    * 直近の子のみを含める
    * 既に公開済みのページのみを含める
+
    これらのオプションは、デフォルトで選択されているので、忘れずに選択解除する必要があります。「**追加**」をクリックして、コンテンツを公開／非公開に追加します。
 
    ![chlimage_1-57](assets/chlimage_1-57.png)
@@ -252,9 +262,9 @@ In a [manner similar to publishing](/help/sites-authoring/publishing-pages.md#pu
 
    ![screen_shot_2018-03-21at154237](assets/screen_shot_2018-03-21at154237.png)
 
-   Remember that you can also review the references to be published via the **Published References** option.
+   「**公開済みの参照**」オプションを使用して、公開する参照を確認することもできます。
 
-1. [通常どおり[パブリケーションの管理](#manage-publication) ]ウィザードを続行し、ツリーのパブリケーションまたは非公開を完了します。
+1. [通常どおり](#manage-publication) 、[パブリケーションの管理]ウィザードを続行して、ツリーのパブリケーションまたはパブリケーション解除を完了します。
 
 ## 公開ステータスの判別 {#determining-publication-status}
 
@@ -266,11 +276,11 @@ In a [manner similar to publishing](/help/sites-authoring/publishing-pages.md#pu
 
    公開ステータスは、サイトコンソールの[カード](/help/sites-authoring/basic-handling.md#card-view)、[列](/help/sites-authoring/basic-handling.md#column-view)および[リスト](/help/sites-authoring/basic-handling.md#list-view)表示に表示されます。
 
-* In the [timeline](/help/sites-authoring/basic-handling.md#timeline)
+* [タイムライン](/help/sites-authoring/basic-handling.md#timeline)
 
    ![screen_shot_2018-03-21at154420](assets/screen_shot_2018-03-21at154420.png)
 
-* In the [Page Information menu](/help/sites-authoring/author-environment-tools.md#page-information) when editing a page
+* （ページ編集時の）[ページ情報メニュー](/help/sites-authoring/author-environment-tools.md#page-information)
 
    ![screen_shot_2018-03-21at154456](assets/screen_shot_2018-03-21at154456.png)
 
