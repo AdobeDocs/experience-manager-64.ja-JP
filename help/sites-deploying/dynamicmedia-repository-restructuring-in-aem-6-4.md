@@ -1,6 +1,6 @@
 ---
-title: AEM 6.4でのダイナミックメディアリポジトリの再構築
-seo-title: AEM 6.4でのダイナミックメディアリポジトリの再構築
+title: AEM 6.4でのDynamic Mediaリポジトリの再構築
+seo-title: AEM 6.4でのDynamic Mediaリポジトリの再構築
 description: AEM 6.4 での Dynamic Media の新しいリポジトリ構造に移行するために、必要な変更を加える方法について説明します。
 seo-description: AEM 6.4 での Dynamic Media の新しいリポジトリ構造に移行するために、必要な変更を加える方法について説明します。
 uuid: e26d61a4-47b6-493a-9ba2-4c58b200ddd9
@@ -10,6 +10,9 @@ topic-tags: repo_restructuring
 discoiquuid: 61cd5751-0dc8-48e0-873e-3a64899489bb
 translation-type: tm+mt
 source-git-commit: 5dce4bcf4b10cce65798fd142a3eeb1956caf726
+workflow-type: tm+mt
+source-wordcount: '440'
+ht-degree: 68%
 
 ---
 
@@ -45,7 +48,7 @@ As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-dep
    <td><p>次の移行スクリプトを使用して、新しい場所に移行できます：</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>または、AEM UI で設定を編集すると、変更内容が新しい場所に保存されます。</p> </td> 
   </tr>
   <tr>
-   <td><strong>メモ</strong></td> 
+   <td><strong>備考</strong></td> 
    <td>該当なし<br /> </td> 
   </tr>
  </tbody>
@@ -72,7 +75,7 @@ As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-dep
     </ul> </td> 
   </tr>
   <tr>
-   <td><strong>メモ</strong></td> 
+   <td><strong>備考</strong></td> 
    <td>該当なし</td> 
   </tr>
  </tbody>
@@ -95,7 +98,7 @@ As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-dep
    <td><p>最新のモデルに合わせるには、以下の移行スクリプトを実行できます:</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.jso</em></p> </td> 
   </tr>
   <tr>
-   <td><strong>メモ</strong></td> 
+   <td><strong>備考</strong></td> 
    <td>該当なし<br /> </td> 
   </tr>
  </tbody>
@@ -118,7 +121,7 @@ As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-dep
    <td><p>1. YouTube からすべての動画を非公開にする<br /> 2.Create the YouTube Configuration using the new TouchUI (from <code>/conf</code>) including copying all the Channels from the old location<br /> 3. すべての動画を YouTube に公開しなおします。</p> <p>このワークフローにより、新しいYouTube URLが生成されます。 新規のタッチ UI YouTube 設定を作成する前に非公開にしないと、再作成されたチャンネルは機会があれば再度公開されるため、プロパティの下に複数の YouTube URL が表示されます。つまり、プロパティの下に不要なURLが表示されていることになります。</p> </td> 
   </tr>
   <tr>
-   <td><strong>メモ</strong></td> 
+   <td><strong>備考</strong></td> 
    <td>該当なし<br /> </td> 
   </tr>
  </tbody>
@@ -141,7 +144,7 @@ As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-dep
    <td><p>ユーザーは以下の移行スクリプトを実行できます。</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>または、AEM UI で設定を編集すると、変更内容が新しい場所に保存されます。</p> </td> 
   </tr>
   <tr>
-   <td><strong>メモ</strong></td> 
+   <td><strong>備考</strong></td> 
    <td>該当なし</td> 
   </tr>
  </tbody>
@@ -162,7 +165,7 @@ As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-dep
    <td><p>ユーザーは以下の移行スクリプトを実行できます。</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> </td> 
   </tr>
   <tr>
-   <td><strong>メモ</strong></td> 
+   <td><strong>備考</strong></td> 
    <td>該当なし</td> 
   </tr>
  </tbody>
