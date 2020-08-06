@@ -10,13 +10,16 @@ topic-tags: Configuration
 discoiquuid: 03619a67-d1ea-4b80-b1a6-0c65a9e9212f
 translation-type: tm+mt
 source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+workflow-type: tm+mt
+source-wordcount: '358'
+ht-degree: 81%
 
 ---
 
 
 # AEM Forms がフォームデータを JEE 上の AEM Forms プロセスに送信するための設定 {#configuring-aem-forms-to-submit-form-data-to-an-aem-forms-on-jee-process}
 
-アダプティブフォームは、JEE 上の AEM Forms プロセスへのデータの送信をサポートしているため、データの追加処理を行えます。送信済みフォームの使用可能なデータを使用して JEE 上の AEM Forms プロセスをトリガーできます。AEM FormsインスタンスがアダプティブフォームをJEE上のAEM Formsに送信できるようにするには、次の手順を実行します。
+アダプティブフォームは、JEE 上の AEM Forms プロセスへのデータの送信をサポートしているため、データの追加処理を行えます。送信済みフォームの使用可能なデータを使用して JEE 上の AEM Forms プロセスをトリガーできます。次の手順を実行して、AEM FormsインスタンスがアダプティブフォームをJEE上のAEM Formsに送信するプロセスを有効にします。
 
 ## AEM Forms サーバーの設定 {#configure-your-aem-forms-server}
 
@@ -37,7 +40,7 @@ AEM Forms の設定が完了したら、データ XML と添付ファイルを�
 1. AEM Web Console Configuration で、**Guide LiveCycle Process Locator and Invoker** 設定をクリックして編集します。
 1. 以下のパラメーターを指定します。
 
-   * **データxmlパラメーターの名前** （必須）:送信されたデータを処理する必要があるJEE上のAEM FormsプロセスのXMLプロパティファイルを指定します。 デフォルト値は **dataxml** です。
+   * **Name of the data xml parameter** （必須）: 送信されたデータの処理に必要なJEE上のAEM FormsプロセスのXMLプロパティファイルを指定します。 デフォルト値は **dataxml** です。
    * **Name of the file attachments parameter**（オプション）：JEE 上の AEM Forms プロセスで処理する必要のあるドキュメントオブジェクトのリストを指定します。The default value is **fileAttachmentsList**.
 
 1. 設定を確認し、「**保存**」をクリックします。
