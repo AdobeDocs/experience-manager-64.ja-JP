@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
 workflow-type: tm+mt
 source-wordcount: '5374'
-ht-degree: 94%
+ht-degree: 95%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 94%
 
 AEM のターゲットモードを使用してターゲットコンテンツをオーサリングします。ターゲットモードとターゲットコンポーネントには、エクスペリエンス用のコンテンツを作成するためのツールが用意されています。次のことができます。
 
-* ページ上にあるターゲットコンテンツを容易に認識すべてのターゲットコンテンツの境界線を点線で表示
+* ページ上にあるターゲットコンテンツを容易に認識すべてのターゲットコンテンツのボーダーを点線で表示
 * エクスペリエンスを表示するブランドとアクティビティを選択
 * アクティビティのエクスペリエンスを追加または削除
 * A/B テストを実行し、勝者を採用（Adobe Target のみ）
@@ -266,7 +266,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 
 ターゲットコンポーネントはコンテナなので、他のコンポーネントのドロップ先として表示されます。
 
-ターゲットモードでは、ターゲットコンポーネントには青い境界線と、ターゲット設定可能であることを示すターゲットドロップのメッセージが表示されます。
+ターゲットモードでは、ターゲットコンポーネントには青いボーダーと、ターゲット設定可能であることを示すターゲットドロップのメッセージが表示されます。
 
 ![chlimage_1-70](assets/chlimage_1-70.png)
 
@@ -343,12 +343,15 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
    オファーピッカーを使用して、オファーを参照またはフィルタリングできます。参照またはフィルタリング時に、オファーを並べ替えて、オファーの表示方法を変更することもできます。右上の数字は、現在のライブラリで使用可能なオファーの数を示します。
 
    * 別のフォルダーに移動するには、「**参照**」をクリックまたはタップします。ナビゲーションウィンドウが開いたら、矢印をクリックしてフォルダーにドリルダウンします。ナビゲーションウィンドウを閉じるには、「**参照**」を再度クリックまたはタップします。
+
    ![chlimage_1-75](assets/chlimage_1-75.png)
 
    * キーワードまたはタグでオファーをフィルタリングするには、「**フィルター**」をクリックまたはタップします。キーワードを入力し、ドロップダウンメニューからタグを選択します。フィルタリングウィンドウを閉じるには、「**フィルター**」を再度クリックまたはタップします。
+
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
    * オファーの並べ替え方法を変更するには、「**新しいものから順に表示**」の横の矢印をクリックまたはタップします。オファーは新しい順または古い順に並べることができます。
+
    ![chlimage_1-77](assets/chlimage_1-77.png)
 
    オファーをタイル形式またはリスト形式で表示するには、「**表示形式**」の横のアイコンをクリックまたはタップします。
@@ -522,7 +525,7 @@ Adobe Target をターゲティングエンジンとして使用し、アカウ�
  </tbody> 
 </table>
 
-成功指標について詳しくは、[Adobe Target ドキュメント](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html)を参照してください。
+成功指標について詳しくは、[Adobe Target ドキュメント](https://docs.adobe.com/content/help/ja-JP/target/using/activities/success-metrics/success-metrics.translate.html)を参照してください。
 
 ### 設定の構成（AEM ターゲティング） {#configuring-settings-aem-targeting}
 
@@ -561,13 +564,13 @@ Adobe Target を使用する場合に目標と設定を構成するには：
 
    ![chlimage_1-84](assets/chlimage_1-84.png)
 
-1. 「**目標指標**」領域の「**主な目標**」で、コンバージョン、売上高、エンゲージメントなど追跡する成功指標を選択し、その指標の測定方法（または目標に達したことを示すためにオーディエンスが取るアクション）を入力します。成功指標については、前の表の目標指標の定義および [Adobe Target のドキュメント](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html)を参照してください。
+1. 「**目標指標**」領域の「**主な目標**」で、コンバージョン、売上高、エンゲージメントなど追跡する成功指標を選択し、その指標の測定方法（または目標に達したことを示すためにオーディエンスが取るアクション）を入力します。成功指標については、前の表の目標指標の定義および [Adobe Target のドキュメント](https://docs.adobe.com/content/help/ja-JP/target/using/activities/success-metrics/success-metrics.translate.html)を参照してください。
 
    右上隅の 3 つのドットをクリックし、「**名前を変更**」を選択して、目標の名前を変更できます。
 
    すべてのフィールドをクリアする必要がある場合は、右上隅の 3 つのドットをクリックし、「**すべてのフィールドをクリア**」を選択します。
 
-   どの指標にも定義可能な詳細設定があります。この設定にアクセスするには、「**詳細設定**」を選択します。前の表の成功指標のカウント方法の定義と [Adobe Target のドキュメント](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html)を参照してください。
+   どの指標にも定義可能な詳細設定があります。この設定にアクセスするには、「**詳細設定**」を選択します。前の表の成功指標のカウント方法の定義と [Adobe Target のドキュメント](https://docs.adobe.com/content/help/ja-JP/target/using/activities/success-metrics/success-metrics.translate.html)を参照してください。
 
    >[!NOTE]
    1 つ以上の目標を定義する必要があります。
