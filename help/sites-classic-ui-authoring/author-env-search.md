@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: b20e0f78-9ae4-47ba-8e9a-452a0a78b663
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '488'
+ht-degree: 87%
 
 ---
 
@@ -29,7 +32,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 
 ![chlimage_1-140](assets/chlimage_1-140.png)
 
-検索パネルでは、Webサイトのすべてのページを検索できます。以下のフィールドとウィジェットが含まれます。
+検索パネルでは、Webサイトのすべてのページを検索できます。 以下のフィールドとウィジェットが含まれます。
 
 * **フルテキスト**：指定したテキストを検索します。
 * **前後に変更**：特定の日付の期間に変更されたページのみを検索します。
@@ -42,11 +45,13 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 >
 >* [ワイルドカード](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Wildcard_Searches)
 >* [ブール演算子](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boolean_operators)
+
    >
    >
 * [正規表現](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Regexp_Searches)
 >* [フィールドグループ](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Field_Grouping)
 >* [ブースト](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
+
 >
 
 
@@ -75,6 +80,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
    * 置換後の語句を指定します。
    * 検索で大文字と小文字を区別するかどうかを指定します。
    * 完全に一致する語句のみを検索するかどうかを指定します（指定しなければ、サブ文字列も検索されます）。
+
    Clicking **Preview** lists where the term has been found. You can select/clear specific instances to be replaced:
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
