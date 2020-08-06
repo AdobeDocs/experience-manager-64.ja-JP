@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: bc8c9aa2-f669-41f3-a526-6146ff5cf0cd
 translation-type: tm+mt
 source-git-commit: 7e74796c60ffa785b712d21b34a909f373587cd9
+workflow-type: tm+mt
+source-wordcount: '1887'
+ht-degree: 89%
 
 ---
 
@@ -75,7 +78,7 @@ Navigate to the OSGi console `/system/console/bundles` and look to see if any bu
 
 ### Oak バージョンの確認 {#verify-oak-version}
 
-アップグレード後に、Oak バージョンが **1.8.2** に更新されていることを確認する必要があります。Oakバージョンを確認するには、OSGiコンソールに移動し、Oakバンドルに関連付けられているバージョンを確認します。Oak Core、Oak Commons、Oak Segment Tar。
+アップグレード後に、Oak バージョンが **1.8.2** に更新されていることを確認する必要があります。Oakバージョンを確認するには、OSGiコンソールに移動し、Oakバンドルに関連付けられているバージョンを確認します。 Oak Core、Oak Commons、Oak Segment Tar。
 
 ### PreUpgradeBackup フォルダーの検査 {#inspect-preupgradebackup-folder}
 
@@ -131,7 +134,7 @@ MongoMK または新しい TarMK セグメント形式を使用している場�
 
 ### アップグレード後のダイナミックメディアクラウド設定の再作成 {#dynamic-media-cloud-configuration}
 
-以前のバージョンからAEM 6.4にアップグレードした後、以前の設定からダイナミックメディアクラウド設定にアクセスできなくなる場合があります。 この問題を解決するには、CRXDE Liteを使用して以前の設定を削除し、新しいダイナミックメディアクラウド設定を作成します。 See also [Dynamic Media repository restructuring in AEM 6.4](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md).
+以前のバージョンからAEM 6.4にアップグレードした後、AEM 6.4 TouchUIから、以前の設定のDynamic Media Cloud Configurationにアクセスできなくなる場合があります。 この問題を解決するには、CRXDE Liteを使用して以前の設定を削除し、新しいダイナミックメディアクラウド設定を作成します。 See also [Dynamic Media repository restructuring in AEM 6.4](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md).
 
 ### リポジトリ移行の失敗  {#repository-migration-failing-}
 
@@ -179,7 +182,7 @@ CRX2 から Oak へのデータ移行は、CQ 5.4 ベースのソースインス
 
 ### Missing Customizations Under etc {#missing-customizations-under-etc}
 
-`/apps` とは、ア `/libs` ップグレードによって適切に処理されますが、での変更は、ア `/etc` ップグレード後に手動で復元する必要がある場合 `/var/upgrade/PreUpgradeBackup` があります。 手動で統合する必要があるコンテンツについては、この場所を確認してください。
+`/apps` とは、アップグレード `/libs` によって適切に処理されますが、での変更 `/etc` は、アップグレード後に手動で復元する必要がある場合があ `/var/upgrade/PreUpgradeBackup` ります。 手動で統合する必要があるコンテンツについては、この場所を確認してください。
 
 ### error.log と upgrade.log の分析 {#analyzing-the-error-log-and-upgrade-log}
 
@@ -195,9 +198,9 @@ grep -v UnrelatedErrorString
 
 * `grep -B` エラーの前に行を追加する
 
-「」または「」
+または
 
-* `grep -A` の後に行を追加する場合。
+* `grep -A` 」をクリックします。
 
 警告メッセージにエラーが見つかることもあります。有効なケースがこの状態になってしまうこともあり、実際にエラーであるかどうかをアプリケーションが常に判断できるとは限りません。これらの警告メッセージについても確認してください。
 
