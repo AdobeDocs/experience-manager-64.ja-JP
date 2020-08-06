@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 3d063268-17d7-4db6-8028-682537645377
 translation-type: tm+mt
 source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+workflow-type: tm+mt
+source-wordcount: '876'
+ht-degree: 37%
 
 ---
 
@@ -29,9 +32,9 @@ Autodesk Maya と統合する場合は、Autodesk Maya をインストールし�
 
 See [Advanced configuration settings](advanced-config-3d.md).
 
-AEM 3DとAutoDesk 3ds maxの連 [携も参照してください](integrating-aem-3d-with-autodesk-3ds-max.md)。
+AEM 3DとAutoDesk 3ds Max [との統合も参照してください](integrating-aem-3d-with-autodesk-3ds-max.md)。
 
-**AEM 3DをAutodesk mayaと統合するには**:
+**AEM 3DをAutodesk Mayaと統合するには**:
 
 1. AEMがホストされているサーバと同じサーバにAutodesk Maya 2016ソフトウェアをインストールします。
 
@@ -41,7 +44,7 @@ AEM 3DとAutoDesk 3ds maxの連 [携も参照してください](integrating-aem
    >
    >AEM は、Maya のコマンドラインレンダリングツール（`render.exe`）だけを使用します。1 つの Maya ネットワークライセンスで、5 台までのサーバーで同時に Maya コンテンツを処理およびレンダリングできます。
 
-1. Mayaで、Autodesk FBX®プラグインを有効にします。
+1. Mayaで、Autodesk FBX® Plug-Inを有効にします。
 1. MentalRay レンダリングプラグインまたは他の希望のレンダラーをインストールします。
 
    インストール後、MentalRay が Maya で利用できることを確認します。
@@ -52,13 +55,13 @@ AEM 3DとAutoDesk 3ds maxの連 [携も参照してください](integrating-aem
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
 
-1. Mayaの取り込みとレンダリングを有効にするには、 **[!UICONTROL CRXDE Lite]** を開き、 `/libs/settings/dam/v3D/assetTypes/maya` Enabled **[!UICONTROL プロパティをに]** 設定しま `true`す。
+1. 取り込みとレンダリングを可能にするには、 **[!UICONTROL CRXDE Lite]** を開き、 `/libs/settings/dam/v3D/assetTypes/maya` Enabled **[!UICONTROL プロパティをに設定]**`true`します。
 
    ![image2018-6-22_12-42-7](assets/image2018-6-22_12-42-7.png)
 
 1. To enable the JT (Siemens PLM Open CAD) file format, navigate to `/libs/settings/dam/v3D/assetTypes/jt` and set the **[!UICONTROL Enabled]** property to `true`.
 1. AEM で、Maya をレンダラーとして有効化します。まず、**[!UICONTROL ツール／一般／CRXDE Lite]** に移動します。
-1. From the **[!UICONTROL CRXDE Lite]** page, in the left panel, navigate to the following:
+1. **[!UICONTROL CRXDE Lite]** ページの左パネルで、次のページに移動します。
 
    `/libs/settings/dam/v3D/renderers/maya`
 
@@ -66,7 +69,7 @@ AEM 3DとAutoDesk 3ds maxの連 [携も参照してください](integrating-aem
 
 1. **[!UICONTROL Enabled]** プロパティを `true` に設定します。
 
-1. Near the upper-left corner of the **[!UICONTROL CRXDE Lite]** page, tap **[!UICONTROL Save All]**.
+1. **[!UICONTROL CRXDE Lite]** ページの左上隅近くにある「すべて **[!UICONTROL 保存]**」をタップします。
 
    これで、Maya がレンダラーとして有効化されました。
 
@@ -82,7 +85,7 @@ AEM 3DとAutoDesk 3ds maxの連 [携も参照してください](integrating-aem
 
 1. After all processing is finished, open the `logo-sphere.ma` asset and select the `stage-helipad.ma` stage.
 
-   プレビューエクスペリエンスは、とと同じ `logo_sphere.fbx` です `stage-helipad.fbx`。
+   プレビューエクスペリエンスは、 `logo_sphere.fbx` およびと同じで `stage-helipad.fbx`す。
 
 1. Near the upper-left corner of the page, tap or click the drop-down list and then select **[!UICONTROL CRender]**.
 
@@ -91,11 +94,11 @@ AEM 3DとAutoDesk 3ds maxの連 [携も参照してください](integrating-aem
 1. In the **[!UICONTROL Renderer]** drop-down list, select **[!UICONTROL Autodesk Maya]**, then tap **[!UICONTROL Start Render]**.
 1. Near the upper-right corner of the page, tap or click **[!UICONTROL Close]** to return to the **[!UICONTROL Card]** view.
 
-   レンダリング中の画像アセットのメッセージバナーを確認します(別の画像`logo-sphere`名が指定されていない場合)。 バナーのプログレスバーに、レンダリングの進行状況が表示されます。
+   レンダリングする画像アセットのメッセージバナーを確認します(別の画像名が指定されていない`logo-sphere`場合)。 バナーのプログレスバーに、レンダリングの進行状況が表示されます。
 
    >[!NOTE]
    >
-   >レンダリングはCPUに非常に負荷がかかり、完了までに数分かかる場合があります。
+   >レンダリングはCPU使用率が非常に高く、完了まで数分かかる場合があります。
 
 1. レンダリングが完了したら、レンダリングされた画像アセットを開きます。
 
@@ -103,26 +106,26 @@ AEM 3DとAutoDesk 3ds maxの連 [携も参照してください](integrating-aem
 
 ## Enabling Additional Formats Supported By Maya {#enabling-additional-formats-supported-by-maya}
 
-（オプション）Mayaは、AEMがファイルタイプを認識できるように、多数の3D入力フォーマットをサポートしています。 有効にすると、AEMはファイルをMayaに送信し、AEMが直接取り込むことのできる中間フォーマットに変換します。
+（オプション）Mayaは多数の3D入力フォーマットをサポートしており、どれもAEMがファイルタイプを認識できるように有効にできます。 有効にすると、AEMはファイルをMayaに送信し、AEMが直接取り込むことのできる中間フォーマットに変換します。
 
-形式によっては、フィーチャのサポートが制限され（たとえば、マテリアルが通過しない場合など）、品質/忠実度が制限される（たとえば、反転した面）場合があります。 アドビでは、一般的なメカニズムのみをサポートしていますが、特定の形式変換はサポートしていません。
+形式によっては、フィーチャのサポートが制限され（たとえば、マテリアルが通過しない場合）、品質/忠実度が制限される場合があります（たとえば、反転した面）。 アドビでは、一般的なメカニズムのみをサポートしていますが、特定の形式変換はサポートしていません。
 
 See [Supported Data Import Formats | Maya](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/Maya/files/GUID-69BC066D-D4D8-4B12-900C-CF42E798A5D6-htm.html) for information about the formats supported by Maya.
 
 **AEMでサポートされる追加の形式を有効にするには**:
 
-1. CRXDE Liteを使 **[!UICONTROL 用して]**、に移動しま `/libs/settings/dam/v3D/assetTypes`す。
-1. Make a copy of the **[!UICONTROL jt]** node. Right-click on the **[!UICONTROL jt]** node and select **[!UICONTROL Copy]**, then right-click the **[!UICONTROL assetTypes]** folder and select **[!UICONTROL Paste]**. 新しいノードが生成されま `/apps/cq-scene7-v3D/config/assetTypes/Copy of jt`す。
+1. **[!UICONTROL CRXDE Liteを使用して]**、に移動し `/libs/settings/dam/v3D/assetTypes`ます。
+1. Make a copy of the **[!UICONTROL jt]** node. Right-click on the **[!UICONTROL jt]** node and select **[!UICONTROL Copy]**, then right-click the **[!UICONTROL assetTypes]** folder and select **[!UICONTROL Paste]**. これにより、新しいノードが生成され `/apps/cq-scene7-v3D/config/assetTypes/Copy of jt`ます。
 1. 新しいノードの名前を変更して、追加するファイルタイプを表す一意の名前を付けます。ファイルのサフィックスを使用することや、その他の一意の識別子を使用することができます。
 
 1. Set the **[!UICONTROL Enabled]** property of the new node to `true`.
 
 1. Set the **[!UICONTROL Extension]** property of the new note to the file suffix/extension of the format being added.
-1. Set the **[!UICONTROL MimeType]** property to an appropriate value. `application/x-` ほとんどのファイルタイプでは、 **[!UICONTROL Extension]** プロパティの値が後に続いて使用されます。
+1. Set the **[!UICONTROL MimeType]** property to an appropriate value. `application/x-` ほとんどのファイルタイプでは、 **[!UICONTROL Extension]** プロパティの値が使用されます。
 1. Make certain that the **[!UICONTROL Conversion]** property is set to `fbx` and **[!UICONTROL IngestRegime]** to `Maya`.
 1. Click **[!UICONTROL Save All]** near the top left of the page.
 
-次のスクリーンショットは、COLLADA DAEを例として使用した追加ファイル形式を示しています。
+次のスクリーンショットは、COLLADA DAEを例として使用した、追加されたファイル形式を示しています。
 
 ![image2018-6-22_12-50-39](assets/image2018-6-22_12-50-39.png)
 
