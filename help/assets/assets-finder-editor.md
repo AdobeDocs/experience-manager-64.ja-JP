@@ -4,6 +4,9 @@ description: カスタムのアセットエディターページを作成し、�
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '3314'
+ht-degree: 79%
 
 ---
 
@@ -80,7 +83,7 @@ Digital Asset Manager を使用して新しいアセット共有ページを作�
 
 #### アクションのカスタマイズ {#customizing-actions}
 
-定義済みの一連のアクションから、選択したデジタルアセットに対してユーザーが実行できるアクションを決定できます。
+定義済みの一部のアクションから、選択したデジタルアセットに対してユーザーが実行できるアクションを決定できます。
 
 アセット共有ページにアクションを追加するには：
 
@@ -137,7 +140,7 @@ Digital Asset Manager を使用して新しいアセット共有ページを作�
 
 1. カスタマイズするアセット共有ページで、QueryBuilder の「**[!UICONTROL 編集]**」をクリックします。デフォルトでは、「**[!UICONTROL 一般]**」タブが開きます。
 
-1. ページあたりの結果数、アセットエディターのパス（カスタマイズしたアセットエディターがある場合）、およびアクションタイトルを選択します。
+1. ページあたりの結果数、アセットエディターのパス（カスタマイズされたアセットエディターを使用している場合）、および「アクション」タイトルを選択します。
 
    ![screen_shot_2012-04-23at15055pm](assets/screen_shot_2012-04-23at15055pm.png)
 
@@ -155,7 +158,7 @@ Digital Asset Manager を使用して新しいアセット共有ページを作�
 
    ![screen_shot_2012-04-23at15300pm](assets/screen_shot_2012-04-23at15300pm.png)
 
-#### 述語の追加 {#adding-predicates}
+#### 追加述部 {#adding-predicates}
 
 AEM Assets には、アセット共有ページに追加できる多数の述語が用意されています。述語を使用すると、ユーザーが検索をさらに絞り込むことができます。一部のケースでは、指定した述語がクエリビルダーのパラメーター（「パス」パラメーターなど）よりも優先されます。
 
@@ -165,7 +168,7 @@ AEM Assets には、アセット共有ページに追加できる多数の述語
 
    ![assetshare3](assets/assetshare3.bmp)
 
-1. 適切な述部を、クエリービルダーの下のアセット共有ページにドラッグします。 これによって、適切なフィールドが作成されます。
+1. 適切な述部を、クエリビルダーの下のアセット共有ページにドラッグします。 これによって、適切なフィールドが作成されます。
 
    ![assetshare4](assets/assetshare4.bmp)
 
@@ -180,7 +183,7 @@ AEM Assets には、アセット共有ページに追加できる多数の述語
 
 詳しくは、[述語の Javadoc](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/package-summary.html) を参照してください。
 
-1. 述語をさらに構成するには、述語をダブルクリックします。 例えば、「パスの述語」を開いたら、ルートパスを指定する必要があります。
+1. 述語をさらに構成するには、重複をクリックします。 例えば、「パスの述語」を開いたら、ルートパスを指定する必要があります。
 
    ![screen_shot_2012-04-23at15640pm](assets/screen_shot_2012-04-23at15640pm.png)
 
@@ -248,7 +251,7 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
    | コンポーネント | 説明 |
    |---|---|
-   | **[!UICONTROL Metadata Form]and[!UICONTROL Metadata Text Field]** | アセットにメタデータを追加し、そのアセットに対して送信などのアクションを実行できるようにします。 |
+   | **[!UICONTROL メタデータフォーム]と[!UICONTROL メタデータテキストフィールド]** | アセットにメタデータを追加し、そのアセットに対して送信などのアクションを実行できるようにします。 |
    | **[!UICONTROL サブアセット]** | サブアセットをカスタマイズできるようにします。 |
    | **タグ** | ユーザーがタグを選択してアセットに追加できるようにします。 |
    | **[!UICONTROL サムネール]** | アセットのサムネールとファイル名を表示し、代替テキストを追加できるようにします。ここでは、アセットエディターのアクションを追加することもできます。 |
@@ -361,14 +364,15 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
 ![chlimage_1-392](assets/chlimage_1-392.png)
 
-#### アセットエディタの追加アクション {#adding-asset-editor-actions}
+#### ア追加セットエディタのアクション {#adding-asset-editor-actions}
 
-定義済みの一連のアクションから、選択したデジタルアセットに対してユーザーが実行できるアクションを決定できます。
+定義済みの一部のアクションから、選択したデジタルアセットに対してユーザーが実行できるアクションを決定できます。
 
 アセットエディターページにアクションを追加するには：
 
 1. In the Asset Editor page that you want to customize, click **[!UICONTROL Asset Editor]** in the sidekick.<br>
-   ![サイドキックからアセットエディターを選択](assets/screen_shot_2012-04-23at35515pm.png)
+
+   ![sidekickでアセットエディタを選択](assets/screen_shot_2012-04-23at35515pm.png)
 
    次のアクションが使用可能です。
 
@@ -390,15 +394,16 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 AEM Assets では複数のアセットを同時に変更できます。アセットを選択した後、それらのアセットの次の情報を同時に変更できます。
 
 * タグ
-* メタデータ  
+* メタデータ
 
 アセットエディターページを使用してアセットをマルチ編集するには：
 
 1. Open the Geometrixx **[!UICONTROL Press Center]** page at `http://localhost:4502/content/geometrixx/en/company/press.html`.
 1. アセットを選択します。
 
-   * Windowsの場合：各アセ `Ctrl + click` ット。
-   * Macの場合：各アセ `Cmd + click` ット。
+   * Windowsの場合： `Ctrl + click` 各アセット。
+   * Macの場合： `Cmd + click` 各アセット。
+
    To select a range of assets: click the first asset then `Shift + click` the last asset.
 
 1. 「**Actions**」フィールド（ページの左側）の「**[!UICONTROL Edit Metadata]**」をクリックします。
@@ -414,14 +419,16 @@ AEM Assets では複数のアセットを同時に変更できます。アセッ
 
    * すべてのアセットではなく一部のアセットにのみ適用されるタグは、グレーの背景になります。
    * すべてのアセットに適用されるタグは白の背景になります。
+
    以下の操作を実行できます。
 
    * 「`x`」アイコンをクリックして、すべてのアセットのタグを削除します。
    * Click the `+` icon to add the tag to all the assets.
    * Click the `arrow` and select a tag to add a new tag to all the assets.
+
    「**[!UICONTROL OK]**」をクリックして、変更内容をフォームに書き込みます。「**Tags**」フィールドの横にあるチェックボックスが自動的にオンになります。
 
-1. 「説明」フィールドを編集します。例えば、次のように設定します。 `This is a common description`.フィールドを編集すると、フォームの送信時に、その値によって選択したアセットの既存の値が上書きされます。 フィールドの編集時に、フィールドの横にあるボックスが自動的にチェックされます。
+1. 「説明」フィールドを編集します。 例えば、次の値に設定します。 `This is a common description`. フィールドを編集すると、フォームが送信されると、その値によって選択したアセットの既存の値が上書きされます。 フィールドの編集時に、フィールドの横にあるボックスが自動的にチェックされます。
 
    `This is a common description`
 
