@@ -65,7 +65,7 @@ Make sure you follow [Twitter](https://developer.twitter.com/en/developer-terms/
 
 認証を必要とする Media Wall の統合については、以下を参照してください。
 
-* [AEMIdentity Management用のシングルサインオンの統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
+* [AEMIdentity Management用のシングルサインオン統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
 * サードパーティ製認証プラットフォーム用 [ID 統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)
 
 ### ユースケースの概要 {#use-case-overview}
@@ -129,7 +129,7 @@ For advanced customizations using the SDK, please see [StreamHub SDKs](https://g
 
 ### コメントアプリ認証の統合 {#comments-app-authentication-integration}
 
-* [AEMIdentity Management用のシングルサインオンの統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
+* [AEMIdentity Management用のシングルサインオン統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
 * サードパーティ製認証プラットフォーム用 [ID 統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)
 
 ### お客様の例 {#customer-examples-1}
@@ -191,7 +191,7 @@ Additional Ratings and Reviews APIs can be found [here](https://api.livefyre.com
 
 ### コメントアプリ認証の統合 {#comments-app-authentication-integration-1}
 
-* [AEMIdentity Management用のシングルサインオンの統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
+* [AEMIdentity Management用のシングルサインオン統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) （英語）のカスタマイズ
 * サードパーティ製認証プラットフォーム用 [ID 統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)
 
 ### お客様の例 {#customer-examples-2}
