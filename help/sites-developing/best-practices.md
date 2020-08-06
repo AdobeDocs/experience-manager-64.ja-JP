@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 translation-type: tm+mt
 source-git-commit: 8c37e09d9b00ff26fc5a0549766080d593769a24
+workflow-type: tm+mt
+source-wordcount: '482'
+ht-degree: 81%
 
 ---
 
@@ -60,7 +63,7 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
    <td>タッチ操作対応 UI の概念および構造の概要を説明しています。</td> 
   </tr>
   <tr>
-   <td>タッチ対応UI:コンソールのカスタマイズ </td> 
+   <td>タッチ対応UI: コンソールのカスタマイズ </td> 
    <td><a href="/help/sites-developing/customizing-consoles-touch.md">タッチ操作対応 UI のコンソールのカスタマイズ</a></td> 
    <td>タッチ操作対応 UI のコンソールを拡張するための最適な方法を説明しています。</td> 
   </tr>
@@ -79,14 +82,14 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
 
 ## Communities {#communities}
 
-[AEM Communitiesを使用すると](/help/communities/overview.md) 、オンプレミスコミュニティの作成と管理が簡単になります。
+[AEM Communities](/help/communities/overview.md) は、オンプレミスコミュニティの作成と管理を簡素化します。
 
 Communities のベストプラクティスは、こちらで説明しています。
 
 |  |  |  |
 |---|---|---|
-| ユーザー生成コンテンツ(UGC)の操作に関するベストプラクティス | [コーディングのガイドライン](/help/communities/code-guide.md) | Socialコンポーネントフレームワーク(SCF)用の柔軟でポータブル [なコードの開発に関するガイドライン](/help/communities/scf.md) 。 |
-| Communitiesコンポーネントの使用例 | [コミュニティコンポーネントガイド](/help/communities/components-guide.md) | インタラクティブ開発ツール。 |
+| ユーザー生成コンテンツ(UGC)を使用する場合のベストプラクティス | [コーディングのガイドライン](/help/communities/code-guide.md) | ソーシャルコンポーネントフレームワーク [](/help/communities/scf.md) (SCF)用の柔軟でポータブルなコードの開発に関するガイドラインです。 |
+| Communitiesコンポーネントの使用例 | [コミュニティコンポーネントガイド](/help/communities/components-guide.md) | 対話型の開発ツールです。 |
 
 ## ツール／HTL {#tooling-htl}
 
@@ -99,6 +102,6 @@ HTML Template Language（HTL）は、AEM 6.0 で導入された新しい HTML �
 
 >[!NOTE]
 >
->次のマルチパートチュートリアルは、コアコンポーネント、編集可能なテンプレート、クライアントライブラリ、およびコンポーネントの開発の詳細を含む、新しいAEMプロジェクトを設定する際のベストプラクティスとして役立ちます。\
+>次のマルチパートチュートリアルは、コアコンポーネント、編集可能なテンプレート、クライアントライブラリ、およびコンポーネントの開発の詳細を示す、新しいAEMプロジェクトを設定する際に役立つ場合があります。\
 >[AEM Sites の概要 - WKND チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
 
