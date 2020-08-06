@@ -11,20 +11,23 @@ topic-tags: introduction
 discoiquuid: 13c7e0bd-54af-49f3-9743-075ce6f3314d
 translation-type: tm+mt
 source-git-commit: 40c4631e29093e5425cf0b7bd4bcd543a969bd1e
+workflow-type: tm+mt
+source-wordcount: '500'
+ht-degree: 85%
 
 ---
 
 
 # AEM と Web アクセシビリティのガイドライン{#aem-and-the-web-accessibility-guidelines}
 
-Web コンテンツは、身体的障碍や制限の有無に関係なく、対象読者ができるだけアクセスしやすくなるように設計すべきとして、様々な社会的、経済的、法的動機が生まれています。そのため、優れた Web デザインの一側面として、Web アクセシビリティの重要性が高まってきています。
+様々な社会的、経済的、法的動機により、Web コンテンツを設計する際には、身体的障碍や制限の有無に関係なく、対象とするオーディエンスができるだけアクセスしやすくことが求められます。そのため、優れた Web デザインの側面として、Web アクセシビリティの重要性が高まってきています。
 
 AEM を使用して、アクセスしやすい Web サイトおよびコンテンツを作成する場合、次のような影響があります。
 
-* 管理者は、Adobe Experience Manager（AEM）の設定を通して、アクセシビリティ機能が正しく有効化されるようにする必要があります。
-* WCAG 2.0の主要なガイドラインをサポートするWebサイトを作成する際に、これらの機能を使用する作成者がいます。
+* 管理者は、アクセシビリティ機能が正しく有効化されるよう Adobe Experience Manager（AEM）の設定する必要があります。
+* WCAG 2.0の主要ガイドラインをサポートするWebサイトを作成する際に、これらの機能を使用する作成者がいます。
 
-   アクセシブルなコンテンツの作成はプロセスです。 AEM には各種機能が用意されていますが、コンテンツ作成者は、アクセスしやすいコンテンツを作成するために必要な手法に従う必要があります。
+   アクセシブルなコンテンツの作成はプロセスです。AEM には各種機能が用意されていますが、コンテンツ作成者は、アクセスしやすいコンテンツを作成するために必要な手法に従う必要があります。
 
 * テンプレート開発者も同様に、Web サイトデザインを実装する際に、こうした問題を認識する必要があります。
 
@@ -34,17 +37,17 @@ AEM を使用して、アクセスしやすい Web サイトおよびコンテ�
 
 * [アクセシブルなサイトを作成するためのリッチテキストエディタの設定](/help/sites-administering/rte-accessible-content.md)
 
-   管理者がアクセシブルなコンテンツを作成するためのAEMの設定方法に関するガイドラインです。
+   管理者がアクセシブルなコンテンツを作成する際にAEMを設定する方法に関するガイドラインです。
 
-* [アクセス可能なコンテンツ（WCAG 2.0 適合）の作成](/help/sites-authoring/creating-accessible-content.md)
+* [アクセシブルなコンテンツ（WCAG 2.0 適合）の作成 ](/help/sites-authoring/creating-accessible-content.md)
 
-   WCAG 2.0ガイドラインは、レベルAとレベルAAの準拠レベルに関する成功基準のリストを示しています。 このページでは、AEM がカバーしている達成基準を詳しく取り上げるとともに、コンテンツ生成時にそれらの達成基準を満たす方法について説明しています。
+   WCAG 2.0ガイドラインは、レベルAとレベルAAの準拠レベルに対する成功基準のリストを示しています。 このページでは、AEM がカバーしている達成基準を詳しく取り上げるとともに、コンテンツ生成時にそれらの達成基準を満たす方法について説明しています。
 
 * [WCAG 2.0 クイックガイド](/help/managing/qg-wcag.md)
 
    WCAG 2.0に関する背景情報です。
 
-* [アクセシブルなアダプティブフォームの作成](/help/forms/using/creating-accessible-adaptive-forms.md)
+* [アクセシブルな適応型Formsの作成](/help/forms/using/creating-accessible-adaptive-forms.md)
 
    Adobe Experience Manager (AEM) は、障害を持つ様々なユーザーに対するアダプティブフォームの可用性を向上するためのさまざまな特長や機能を備えています。このソリューションは、フォーム作成者がアクセスしやすいアダプティブフォームを作成する上でも役立ちます。
 
@@ -72,4 +75,4 @@ These, as they relate to AEM, are covered under [Level A and AA Conformance](/he
 
 ## Adobe におけるアクセシビリティ {#accessibility-at-adobe}
 
-For additional information, please visit the [Adobe Accessibility Resource Center](https://www.adobe.com/accessibility/).
+詳しくは、[アドビのアクセシビリティリソースセンター](https://www.adobe.com/accessibility/)にアクセスしてください。
