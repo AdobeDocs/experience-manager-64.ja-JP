@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 437fa139-2dde-41a0-9649-6bb110039618
 translation-type: tm+mt
 source-git-commit: aac5026a249e1cb09fec66313cc03b58597663f0
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 97%
 
 ---
 
@@ -41,6 +44,7 @@ source-git-commit: aac5026a249e1cb09fec66313cc03b58597663f0
    * **ログファイル：** logs/useraudit.log
    * **メッセージパターン：**&#x200B;レベルのデフォルト
    * **ロガー：** com.adobe.granite.security.user.internal.audit、com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
+
    両方のロガーを「**Logger**」フィールドに入力するには、1 つ目のロガーの名前を入力し、次に、「+」ボタンを押してフィールドをもう 1 つ作成し、2 つ目のロガーの名前を入力する必要があります。
 
 ## 出力例 {#example-output}
