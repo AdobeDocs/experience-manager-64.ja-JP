@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dfe0ad66-9df5-4ea3-9e66-543b5ccd594a
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '658'
+ht-degree: 93%
 
 ---
 
@@ -28,8 +31,8 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 >[!NOTE]
 >
->アドビでは、この機能をさらに強化する予定はありません(「Managing Leads and Lists」)。\
->推奨事項は、 [Adobe CampaignとAEM統合を活用することです](/help/sites-administering/campaign.md)。
+>Adobeは、この機能をさらに強化する予定はありません(リードとリストの管理)。\
+>推奨事項は、 [Adobe CampaignとAEM統合の活用](/help/sites-administering/campaign.md)。
 
 ## ニュースレター用リストの作成 {#creating-a-list-for-the-newsletter}
 
