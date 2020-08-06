@@ -79,7 +79,7 @@ Central Migration Bridge サービス（`CentralMigrationBridge`）は Adobe Cen
 
 Central Migration Bridge サービスでは、以下の設定を使用できます。
 
-**Central Install Directory:** Adobe Central 5.7がインストールされているディレクトリ。
+**Central Install Directory:** AdobeCentral 5.7がインストールされているディレクトリ。
 
 ## Content Repository Connector for EMC Documentum サービスの設定 {#content-repository-connector-for-emc-documentum-service-settings}
 
@@ -255,13 +255,13 @@ Generate PDF サービスでは、以下の設定を使用できます。
 
 **ファイルタイプ設定：** 変換ジョブに適用するために事前設定されたファイルタイプ設定の名前です（これらの設定がAPI呼び出しパラメーターの一部として指定されていない場合）。 ファイルタイプの設定は、管理コンソールで、サービス／PDF Generator／ファイルタイプごとの設定をクリックして指定します。
 
-**Use Acrobat WebCapture（Windowsのみ）:** この設定がtrueの場合、Generate PDFサービスはAcrobat X Proを使用して、すべてのHTMLからPDFへの変換を実行します。 これにより、HTML から生成される PDF ファイルの品質は改善されますが、パフォーマンスはやや低下します。デフォルト値は false です。
+**UseAcrobat WebCapture（Windowsのみ）:** この設定がtrueの場合、Generate PDFサービスはAcrobat XProを使用して、すべてのHTMLからPDFへの変換を実行します。 これにより、HTML から生成される PDF ファイルの品質は改善されますが、パフォーマンスはやや低下します。デフォルト値は false です。
 
-**Use Acrobat Image Conversion（Windowsのみ）:** この設定がtrueの場合、Generate PDFサービスはAcrobat X Proを使用して、すべての画像からPDFへの変換を実行します。 この設定は、デフォルトの Pure Java 変換メカニズムで入力画像の大部分を正常に変換できない場合にのみ有用です。デフォルト値は false です。
+**UseAcrobat画像Conversion（Windowsのみ）:** この設定がtrueの場合、Generate PDFサービスはAcrobat XProを使用して、すべての画像からPDFへの変換を実行します。 この設定は、デフォルトの Pure Java 変換メカニズムで入力画像の大部分を正常に変換できない場合にのみ有用です。デフォルト値は false です。
 
-**Enable Acrobat-based AutoCAD Conversions（Windowsのみ）:** この設定がtrueの場合、Generate PDFサービスはAcrobat X Proを使用して、すべてのDWGからPDFへの変換を実行します。 この設定が有用であるのは、AutoCAD がサーバーにインストールされていない場合や、AutoCAD 変換メカニズムではファイルを正常に変換できない場合のみです。
+**AcrobatベースのAutoCAD変換を有効にする（Windowsのみ）:** この設定がtrueの場合、Generate PDFサービスはAcrobat XProを使用して、すべてのDWGからPDFへの変換を実行します。 この設定が有用であるのは、AutoCAD がサーバーにインストールされていない場合や、AutoCAD 変換メカニズムではファイルを正常に変換できない場合のみです。
 
-**ユーザー名の禁止されている特殊文字を探す正規式（Windowsのみ）:** ユーザーの名前に含まれる文字を、「PDFの書き出し」および「PDFの最適化」の各操作の妨げとなる文字を指定します。
+**ユーザー名の禁止されている特殊文字を探す正規式（Windowsのみ）:** ユーザー名に含まれるExport PDFやOptimize PDFの操作を妨げる文字を指定します。
 
 **ImageToPDF Pool Size:** Generate PDFサービスのデフォルト(Pure Java)の画像からPDFへのコンバーターのプールサイズです。 この設定により、Generate PDF サービスで実行できる画像から PDF への最大同時変換が制御されます。この設定のデフォルト値（シングルプロセッサーシステムの場合に推奨）は 3 です。マルチプロセッサーシステムでは、この値を増やすことができます。
 
@@ -269,7 +269,7 @@ Generate PDF サービスでは、以下の設定を使用できます。
 
 **OCR Pool Size:** PDF GeneratorがOCRに使用するPaperCaptureServiceのプールサイズです。 この設定のデフォルト値（シングルプロセッサーシステムの場合に推奨）は 3 です。マルチプロセッサーシステムでは、この値を増やすことができます。この設定は Windows システムでのみ有効です。
 
-**Fallback Font Family For HTML To PDF Conversions:** 元のHTMLで使用されているフォントがAEM formsサーバーで使用できない場合にPDFドキュメントで使用するフォントファミリーの名前です。 変換対象の HTML ページで使用されているフォントが使用不可能なフォントである場合、ここでフォントファミリーを指定します。例えば、特定の地域の言語で作成されたページには、利用不可能なフォントが使用されていることがあります。
+**Fallback Font Family For HTML To PDF Conversions:** 元のHTMLで使用されているフォントがAEM formsサーバーで使用できない場合に、PDFドキュメントで使用するフォントファミリーの名前です。 変換対象の HTML ページで使用されているフォントが使用不可能なフォントである場合、ここでフォントファミリーを指定します。例えば、特定の地域の言語で作成されたページには、利用不可能なフォントが使用されていることがあります。
 
 **ネイティブ変換の再試行ロジック** ：最初の変換に失敗した場合に、PDF生成再試行が制御されます。
 
@@ -423,7 +423,7 @@ Microsoft SharePoint Configuration サービスでは、以下の設定を使用
 
 **暗号化：** モバイルデバイスに保存されたデータを暗号化するかどうかを指定します。
 
-**Forms Application:** モバイルクライアントアプリケーションでForms機能を有効にします。 このオプションを選択すると、ユーザーはフォームを開いて、モバイルデバイスからプロセスを開始できます。
+**Forms出願：** モバイルクライアントアプリケーションでForms機能を有効にします。 このオプションを選択すると、ユーザーはフォームを開いて、モバイルデバイスからプロセスを開始できます。
 
 **タスクアプリ：** モバイルクライアントアプリケーションでタスク機能を有効にします。 このオプションを選択すると、ユーザーはタスクリストにアクセスし、モバイルデバイスからタスクを完了できます。
 
@@ -439,11 +439,11 @@ Microsoft SharePoint Configuration サービスでは、以下の設定を使用
 
 **Apple iOS:** iPhoneおよびiPadがサーバーに接続できるようにします。
 
-**AIR:** Adobe AIR®ベースのアプリケーションを実行しているデバイスがサーバーに接続できるようにします。
+**AIR:** Adobe AIR®ベースのアプリを実行しているデバイスがサーバーに接続できるようにします。
 
 **BlackBerry:** BlackBerryデバイスからサーバーへの接続を許可します。
 
-**Android Microsoft Exchange ActiveSync Required:** Microsoft Exchange ActiveSyncポリシーマネージャー(EAS)をAndroidデバイスにインストールしてアクティブにする必要があるかどうかを指定します。 このオプションを選択した場合、AndroidデバイスにEASを適用する必要があります。 このオプションを選択しない場合、他の要件は引き続き適用されますが、チェックは行われません。
+**Android Microsoft Exchange ActiveSync Required:** Microsoft Exchange ActiveSyncポリシーマネージャー(EA)をAndroidデバイスにインストールしてアクティブにする必要があるかどうかを指定します。 このオプションを選択した場合、AndroidデバイスにEAを適用する必要があります。 このオプションを選択しない場合、他の要件は引き続き適用されますが、チェックは行われません。
 
 **Androidの最小PIN長：** Androidデバイスには、PINまたはパスワードがこの長さ以上になるグローバル設定が必要です。 指定した長さのPINを持つだけでは不十分です。 PINの長さは、後でユーザーがPINを削除または短縮できないように、システムによって適用される必要があります。 デフォルト値は 4 です。
 
@@ -478,17 +478,17 @@ Output サービスでは、以下の設定を使用できます。
 
 PDFG Config サービス（`PDFGConfigService`）では、以下の設定を使用できます。
 
-**User Job Options Directory:** cサービスがAcrobat Pro Extendedにアクセス可能なジョブオプションファイルを書き込むファイルシステムフォルダーのパスです。 The default value is [user.home]/Application Data/Adobe/Adobe PDF/Settings.
+**User Job Options Directory:** cサービスが、Acrobat Pro拡張にアクセス可能なジョブオプションファイルを書き込むファイルシステムフォルダーのパスです。 The default value is [user.home]/Application Data/Adobe/Adobe PDF/Settings.
 
-**PS Startup Directory:** Adobe Acrobat Distillerで必要な起動ファイルが保存されるファイルシステムフォルダーのパスです。 The default value is [user.home]/Application Data/Adobe/Adobe PDF/Distiller/Startup.
+**PS Startup Directory:** Adobe AcrobatDistillerに必要な起動ファイルが保存されるファイルシステムフォルダのパスです。 The default value is [user.home]/Application Data/Adobe/Adobe PDF/Distiller/Startup.
 
-**PS Startup File:** Adobe Acrobat Distillerで必要な起動ファイルの名前です。 デフォルト値は「example.ps」です。
+**PS Startup File:** Adobe AcrobatDistillerに必要な起動ファイルの名前。 デフォルト値は「example.ps」です。
 
-**サーバー変換タイムアウト：** Generate PDFサービスおよびDistillerサービスの最大ジョブ変換タイムアウト（秒）です。 この設定により、config.xml ファイルおよび PDF Generator の管理コンソールページで指定できる最大変換タイムアウトが制限されます。デフォルト値は 270 です。
+**サーバー変換タイムアウト：** Generate PDFサービスとDistillerサービスの最大ジョブ変換タイムアウト（秒）です。 この設定により、config.xml ファイルおよび PDF Generator の管理コンソールページで指定できる最大変換タイムアウトが制限されます。デフォルト値は 270 です。
 
 **Server Global Timeout:** PDFの変換中、formsサーバーではタイムアウトの制限が考慮されます。 この問題を解決するには、タイムアウトの値を設定します。
 
-**Job Options Prefix:** ジョブオプションファイルに短い文字列を追加するためにGenerate PDFサービスで使用されるプレフィックスです。このファイルは、Acrobat Distillerで一時的に使用するために作成されます。 デフォルト値は「pdfg」です。
+**Job Options Prefix:** ジョブオプションファイルに短い文字列を追加するためにGenerate PDFサービスで使用されるプレフィックスです。このファイルは、AcrobatDistillerで一時的に使用するために作成されます。 デフォルト値は「pdfg」です。
 
 **Non Unicode Apps:** Unicodeに対応していないことがわかっているアプリケーション名のコンマ区切りリスト。 このリストには複数のアプリケーションの名前が事前に入力されており、それらのアプリケーションのサポートが PDF Generator で事前設定されています。Unicode に対応していない他のサードパーティアプリケーションでの PDF 変換へのサポートを追加する場合は、それらをこのリストに追加する必要があります。デフォルト値は「Autocad,Excel,PowerPoint,Project,Publisher,Visio,Word,WordPerfect」です。
 
@@ -522,7 +522,7 @@ Remoting サービスでは、以下の設定を使用できます。
 
 **Flexクライアント認証方法：** 呼び出されたサービスがセキュリティが有効になっている場合に、呼び出された操作で匿名呼び出しがサポートされず、クライアントがnoまたはinvalidの資格情報を渡すときに、サーバーがクライアントに返す応答の種類を決定します。 「カスタム」または「基本」から選択します。デフォルト値は「基本」です。
 
-**Allow Serialization Of Non-Serializable Classes:** ほとんどのAEM formsエンドポイントでは、呼び出しに使用できるのはSerializableクラスのみです。 それより前のバージョンでは、Remoting エンドポイントで Flex ベースのクライアントからの呼び出しに Serializable 以外のクラスを使用できました。APS11-15 で説明されているセキュリティ脆弱性を防止するため、この変更が行われました。Flex の Remoting エンドポイントで Serializable 以外のクラスを引き続き使用する場合は、このチェックボックスをオンにします。
+**Allow Serialization Of Non-Serializable Classes:** ほとんどのAEMフォームエンドポイントでは、呼び出しにSerializableクラスのみを使用できます。 それより前のバージョンでは、Remoting エンドポイントで Flex ベースのクライアントからの呼び出しに Serializable 以外のクラスを使用できました。APS11-15 で説明されているセキュリティ脆弱性を防止するため、この変更が行われました。Flex の Remoting エンドポイントで Serializable 以外のクラスを引き続き使用する場合は、このチェックボックスをオンにします。
 
 ## Repository サービスの設定 {#repository-service-settings}
 
@@ -544,7 +544,7 @@ Signature サービスでは、以下の設定を使用できます。
 
 **Name Of The Remote HSM SPI Service:** このオプションは、HSMがリモートコンピューターにインストールされている場合に使用します。 AEM Forms が 64 ビット Windows にインストールされていて、署名に HSM デバイスを使用する場合は、このオプションを指定します。
 
-**Url Of The Remote HSM Web Service:** AEM Formsが64ビットWindowsにインストールされていて、署名にHSMデバイスを使用する場合は、このオプションを指定します。
+**Url Of The Remote HSM Web Service:** AEMフォームが64ビットWindowsにインストールされ、署名にHSMデバイスを使用する場合は、このオプションを指定します。
 
 **Certification To Include Form Load Changes:** このオプションを選択すると、XFAテンプレートに加えてXFAフォーム状態が認証されます。 このオプションを有効にすると、パフォーマンスに悪影響を及ぼす可能性があります。デフォルト値は true です。
 
@@ -562,7 +562,7 @@ Signature サービスでは、以下の設定を使用できます。
 
 **Maximum Size Of Revocation Archival Info:** 失効アーカイブ情報の最大サイズをキロバイト単位で指定します。 AEM Forms では、制限を超えない範囲で、できるだけ多くの失効情報が格納されます。デフォルト値は 10 KB です。
 
-**Support Signatures Created From PreRelease Builds Of Adobe Products:** このオプションを選択すると、プレリリースバージョンのAdobe製品を使用して作成された署名が正しく検証されます。 デフォルト値は false です。
+**Support Signatures Created From PreRelease Builds Of Adobe Products:** このオプションを選択すると、Adobe製品のプレリリースバージョンを使用して作成された署名が正しく検証されます。 デフォルト値は false です。
 
 **Verification Time Option:** 署名者の証明書を検証する時間を指定します。 デフォルト値は Secure Time Else Current Time です。
 
