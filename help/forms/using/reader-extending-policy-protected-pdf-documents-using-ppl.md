@@ -11,6 +11,9 @@ topic-tags: document_services
 discoiquuid: 83ca522e-d16e-4196-9aa7-84f85de8dee2
 translation-type: tm+mt
 source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+workflow-type: tm+mt
+source-wordcount: '833'
+ht-degree: 92%
 
 ---
 
@@ -23,7 +26,7 @@ Document Security を使用して、特定の PDF ドキュメントへのアク
 
 Reader Extensions により Acrobat Reader を介して Adobe PDF ドキュメントでインタラクティブ機能を使用できます。通常これらのインタラクティブ機能は、Adobe Acrobat Professional と Standard でのみ可能になります。To learn about the interactive features that reader extension can enable, see [Adobe Experience Manager Forms DocAssurance service](/help/forms/using/overview-aem-document-services.md)**.**
 
-Portable Protection Library を使用して、ネットワークにドキュメントを送信することなくドキュメントにポリシーを適用できます。ネットワークを経由するのは、セキュリティ証明書と保護ポリシーの詳細のみです。 実際のドキュメントはクライアントの手元から離れることはなく、保護ポリシーはクライアント側のローカルに適用されます。
+Portable Protection Library を使用して、ネットワークにドキュメントを送信することなくドキュメントにポリシーを適用できます。ネットワークに送信されるのは、セキュリティ証明書と保護ポリシーの詳細のみです。 実際のドキュメントはクライアントの手元から離れることはなく、保護ポリシーはクライアント側のローカルに適用されます。
 
 ## Document Security のポリシーで保護された PDF ドキュメントの Reader 用の拡張 {#reader-extending-document-security-policy-protected-pdf-documents}
 
@@ -45,7 +48,7 @@ Reader Extensions サービスを使用すると、次のタスクを実行で�
 
 `applyUsageRights` Java API を使用して、ポリシーで保護された PDF ドキュメントに使用権限を適用できます。使用権限は、Acrobat ではデフォルトで利用できるが Adobe Reader では利用できない機能（フォームにコメントを追加する機能や、フォームフィールドにデータを入力してフォームを保存する機能など）に関連しています。使用権限が与えられた PDF ドキュメントは、使用権限を付与されたドキュメントと呼ばれます。使用権限を付与されたドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。
 
-**** 構文： `InputStream applyUsageRights(InputStream inputFile, File certFile, String credentialPassword, UsageRights usageRights)`
+**構文：** `InputStream applyUsageRights(InputStream inputFile, File certFile, String credentialPassword, UsageRights usageRights)`
 
 <table> 
  <tbody> 
@@ -74,9 +77,9 @@ Reader Extensions サービスを使用すると、次のタスクを実行で�
 
 ### ポリシーで保護された PDF ドキュメントに適用された使用権限を復元。  {#retrieve-usage-rights-applied-to-a-policy-protected-pdf-document-nbsp}
 
-`getDocumentUsageRights` Java API を使用して、ポリシーで保護された PDF ドキュメントの Reader Extension の使用権限を復元できます。使用権限に関する情報を取得することで、ポリシーで保護されたPDFドキュメントに対してReader Extensionが有効になっている機能について学ぶことができます。
+`getDocumentUsageRights` Java API を使用して、ポリシーで保護された PDF ドキュメントの Reader Extension の使用権限を復元できます。使用権限に関する情報を取得することで、ポリシーで保護されたPDFドキュメントで有効になっているReader Extensionの機能を確認できます。
 
-**** 構文： `public GetUsageRightsResult getDocumentUsageRights(InputStream inDoc)`
+**構文：** `public GetUsageRightsResult getDocumentUsageRights(InputStream inDoc)`
 
 <table> 
  <tbody> 
@@ -141,7 +144,7 @@ System.out.println("RE rights for the file are :\n"+right1);
 
 `removeUsageRights` Java API を使用して、ポリシーで保護されたドキュメントから使用権限を削除することができます。ドキュメントに対してその他の AEM Forms の操作を実行するには、ポリシーで保護された PDF ドキュメントから使用権限を削除する必要があります。例えば、PDF ドキュメントに対する電子署名（または認証）は、使用権限を設定する前に実行する必要があります。したがって、ポリシーで保護されたドキュメントに対して操作を行う場合、その PDF ドキュメントから使用権限を削除し、PDF ドキュメントへの電子署名など、その他の操作を行った後にドキュメントに対して使用権限を再び適用します。
 
-**** 構文： `InputStream removeUsageRights(InputStream inputFile)`
+**構文：** `InputStream removeUsageRights(InputStream inputFile)`
 
 <table> 
  <tbody> 
