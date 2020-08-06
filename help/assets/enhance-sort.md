@@ -4,6 +4,9 @@ description: AEM Assets に導入されたサーバー側の並べ替え機能�
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '441'
+ht-degree: 93%
 
 ---
 
@@ -22,7 +25,7 @@ AEM Assets では、以下のフィールドに基づいてフォルダーアセ
 
 * ロケール
 * ステータス
-* タイプ
+* 型
 * サイズ
 * 評価
 * 修正日
@@ -55,7 +58,7 @@ AEM Assets では、以下のフィールドに基づいてフォルダーアセ
 
 * タイトル
 * ステータス
-* タイプ
+* 型
 * サイズ
 * 修正日
 * 公開日
