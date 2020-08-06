@@ -10,6 +10,9 @@ topic-tags: hTML5_forms
 discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
 translation-type: tm+mt
 source-git-commit: e12b8e370badfa0eb0d549cff18dc2ef43226758
+workflow-type: tm+mt
+source-wordcount: '290'
+ht-degree: 82%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: e12b8e370badfa0eb0d549cff18dc2ef43226758
 
 HTML5 フォームでのテーブルのデフォルト実装では、テーブルのレンダリングに HTML DIV 要素が使用されます。さらに、アクセシビリティ要件を満たす目的で ARIA ロールも使用されます。
 
-データテーブルで使用されるARIAロールを完全にサポートしていないスクリーンリーダーでのアクセシビリティの問題を回避するため、HTML5 formsではテーブル用の代替レンディションを提供しています。 これらのテーブルは、Designer で導入された新しいテーブル形式に基づいており、次の項目もサポートしています。
+ARIAロールを完全にはサポートしていないデータテーブルでのスクリーンリーダーのアクセシビリティの問題を回避するため、HTML5Formsではテーブル用の代替レンディションを提供しています。 これらのテーブルは、Designer で導入された新しいテーブル形式に基づいており、次の項目もサポートしています。
 
 * 行ヘッダー
 * 行幅
