@@ -138,7 +138,7 @@ WebページにJavaScriptの数行を挿入することで、アダプティブ�
 
    Replace `[AEM_Instance`] with the AEM server publish URL in the rules.
 
-AEMサーバーをコンテキストパスにマウントしない場合、Apacheレイヤーのプロキシルールは次のようになります。
+コンテキストパスにAEMサーバーをマウントしない場合、Apacheレイヤーのプロキシルールは次のようになります。
 
 ```java
 ProxyPass /content https://<AEM_Instance>/content
@@ -165,7 +165,7 @@ Web ページにアダプティブフォームを埋め込む場合、次のベ�
 * Web ページのフォームコンテナがウィンドウの幅全体を使用するようにしてください。これにより、モバイルデバイスに設定された CSS ルールが確実に変更なしで動作するようになります。フォームコンテナがウィンドウの幅全体に表示されない場合は、さまざまなモバイルデバイスに適合するようにカスタムの CSS を記述する必要があります。
 * Use  [getData](https://helpx.adobe.com/jp/experience-manager/6-4/forms/javascript-api/GuideBridge.html) API to get the XML or JSON representation of form data in client.
 * Use [unloadAdaptiveForm](https://helpx.adobe.com/jp/experience-manager/6-4/forms/javascript-api/GuideBridge.html) API to unload the adaptive form from HTML DOM.
-* AEMサーバーから応答を送信する際に、access-control-接触チャネルのヘッダーを設定します。
+* AEMサーバーから応答を送信する際に、アクセス制御接触チャネルのヘッダーを設定します。
 
 ## AEM Forms がクロスドメインサイトに対してアダプティブフォームをサーブできるようにする  {#cross-domain-sites}
 
