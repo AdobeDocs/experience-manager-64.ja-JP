@@ -11,6 +11,9 @@ topic-tags: deploying
 discoiquuid: cb041407-ec30-47f8-a01e-314c4835a5d9
 translation-type: tm+mt
 source-git-commit: 4ca6d4e59843656d289c0d650a68d8c9cf2ff0a0
+workflow-type: tm+mt
+source-wordcount: '2725'
+ht-degree: 78%
 
 ---
 
@@ -77,7 +80,8 @@ Tar Micro Kernel のコールドスタンバイ機能では、1 つ以上のス�
 >セグメントノードストアおよびスタンバイストアサービスの PID は、AEM 6.3 では以前のバージョンと比較して次のように変更されました。
 >
 >* org.apache.jackrabbit.oak.**plugins**.segment.standby.store.StandbyStoreServiceからorg.apache.jackrabbit.oak.segment.standby.store.StandbyStoreServiceへ
->* org.apache.jackrabbit.oak.**plugins**.segment.SegmentNodeStoreServiceからorg.apache.jackrabbit.oak.segment.SegmentNodeStoreServiceへ
+>* org.apache.jackrabbit.oak.**plugins**.segment.SegmentNodeStoreServiceからorg.apache.jackrabbit.oak.segment.SegmentNodeStoreServiceへの
+
 >
 >
 この変更が反映されるように、必要に応じて設定を調整してください。
@@ -97,11 +101,13 @@ TarMK コールドスタンバイセットアップを作成するには、ま�
    1. `org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config` というファイルを同じ場所に作成し、適切に設定します。設定オプションについて詳しくは、[設定](/help/sites-deploying/tarmk-cold-standby.md#configuration)を参照してください。
    1. If you are using an AEM TarMK instance with an external data store, create a folder named `crx3` under `aem-primary/crx-quickstart/install` named `crx3`
    1. データストア設定ファイルを `crx3` フォルダーに配置します。
+
    例えば、外部ファイルデータストアを使用して AEM TarMK インスタンスを実行している場合は、次の設定ファイルが必要です。
 
    * `aem-primary/crx-quickstart/install/install.primary/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
    * `aem-primary/crx-quickstart/install/install.primary/org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config`
    * `aem-primary/crx-quickstart/install/crx3/org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config`
+
    以下に、プライマリインスタンスのサンプル設定を示します。
 
    **org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config のサンプル**
@@ -150,6 +156,7 @@ TarMK コールドスタンバイセットアップを作成するには、ま�
 
       * org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config
    1. ファイルを編集し、必要な設定を作成します。
+
    以下に、典型的なスタンバイインスタンスのサンプル設定ファイルを示します。
 
    **org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config のサンプル**
@@ -259,17 +266,17 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 
 * **Persist Configuration：**&#x200B;有効にした場合、従来の OSGi 設定ファイルではなくリポジトリに設定が保存されます。本番システムでは、プライマリ設定がスタンバイによって取得されないように、この設定を無効にすることを推奨します。
 
-* **`mode`モード(**):これで、インスタンスの実行モードが選択されます。
+* **モード(`mode`):** これにより、インスタンスのrunmodeが選択されます。
 
 * **Port (port)：**&#x200B;通信に使用するポート。デフォルトは、`8023` です。
 
-* **`primary.host`プライマリホスト(**): — プライマリ・インスタンスのホスト。 この設定は、スタンバイにのみ適用されます。
-* **`interval`同期間隔(**): — この設定は、同期要求の間隔を決定し、スタンバイインスタンスにのみ適用されます。
+* **プライマリホスト(`primary.host`):**  — プライマリ・インスタンスのホスト。 この設定は、スタンバイにのみ適用されます。
+* **同期間隔(`interval`):**  — この設定は、同期要求間隔を決定します。この間隔は、スタンバイインスタンスにのみ適用されます。
 
-* **`primary.allowed-client-ip-ranges`許可されているIP範囲(**): — プライマリが接続を許可するIP範囲。
-* **`secure`セキュア(**):SSL暗号化を有効にします。 この設定を利用するには、すべてのインスタンスで有効にする必要があります。
-* **`standby.readtimeout`スタンバイ読み取りタイムアウト(**):スタンバイインスタンスから発行された要求のタイムアウト（ミリ秒）。 **推奨されるタイムアウト設定は 43200000 です。通常、タイムアウトは 12 時間以上の値に設定することをお勧めします。**
-* **`standby.autoclean`スタンバイ自動クリーンアップ(**):同期サイクルでストアのサイズが増えた場合は、cleanupメソッドを呼び出します。
+* **許可されているIP範囲(`primary.allowed-client-ip-ranges`):**  — プライマリが接続を許可するIP範囲。
+* **セキュア(`secure`):** SSL暗号化を有効にします。 この設定を利用するには、すべてのインスタンスで有効にする必要があります。
+* **スタンバイ読み取りタイムアウト(`standby.readtimeout`):** スタンバイインスタンスから発行された要求のタイムアウト（ミリ秒）。 **推奨されるタイムアウト設定は 43200000 です。通常、タイムアウトは 12 時間以上の値に設定することをお勧めします。**
+* **スタンバイ自動クリーンアップ(`standby.autoclean`):** 同期サイクルでストアのサイズが増加した場合は、cleanupメソッドを呼び出します。
 
 >[!NOTE]
 >
@@ -316,7 +323,7 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 
 ## 監視 {#monitoring}
 
-この機能は、JMXまたはMBeanを使用して情報を公開します。これにより、 [JMXコンソールを使用して、スタンバイとマスターの現在の状態を調べることができます](/help/sites-administering/jmx-console.md)。 この情報は、MBeanの名前で確認でき `type org.apache.jackrabbit.oak:type="Standby"`ます `Status`。
+この機能は、JMXまたはMBeanを使用して情報を公開します。 その場合は、 [JMXコンソールを使用して、スタンバイとマスターの現在の状態を調べます](/help/sites-administering/jmx-console.md)。 この情報は、 `type org.apache.jackrabbit.oak:type="Standby"`名前の付いたMBeanで確認でき `Status`ます。
 
 **スタンバイ**
 
@@ -325,27 +332,27 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 このノードには次の 5 つの読み取り専用属性があります。
 
 * `Running:` 同期プロセスが実行中かどうかを示すboolean値。
-* `Mode:` クライアント：インスタンスの識別に使用されるUUIDが続きます。 この UUID は、設定が更新されるたびに変更されます。
-* `Status:` 現在の状態（またはなど）のテキスト `running` 表現 `stopped`です。
+* `Mode:` クライアント： インスタンスの識別に使用されるUUIDが続きます。 この UUID は、設定が更新されるたびに変更されます。
+* `Status:` 現在の状態をテキストで表したもの( `running` やなど `stopped`)。
 * `FailedRequests:`連続したエラーの数。
-* `SecondsSinceLastSuccess:` サーバーとの最後の正常な通信からの秒数。 It will display `-1` if no successful communication has been made.
+* `SecondsSinceLastSuccess:` サーバーとの最後の通信が成功してからの秒数。 It will display `-1` if no successful communication has been made.
 
 次のような 3 つの呼び出し可能なメソッドもあります。
 
-* `start():` 同期プロセスを開始します。
-* `stop():` 同期処理を停止します。
+* `start():` 同期プロセスの開始。
+* `stop():` 同期プロセスを停止します。
 * `cleanup():` スタンバイでクリーンアップ操作を実行します。
 
 **プライマリ**
 
 プライマリを観察することで、MBean 経由で一般的な情報を取得できます。この MBean の ID 値は、TarMK スタンバイサービスが使用しているポート番号（デフォルトは 8023）です。メソッドと属性の大部分はスタンバイと同じですが、次の点で一部異なります。
 
-* `Mode:` は常に値を表示します `primary`。
+* `Mode:` は常に値を表示し `primary`ます。
 
 さらに、マスターに接続する最大 10 のクライアント（スタンバイインスタンス）の情報を取得できます。MBean ID はインスタンスの UUID です。これらの MBean には呼び出し可能なメソッドはありませんが、次のように非常に便利な読み取り専用属性が存在します。
 
 * `Name:` クライアントのID。
-* `LastSeenTimestamp:` テキスト表現での最後のリクエストのタイムスタンプ。
+* `LastSeenTimestamp:` テキスト表現での最後の要求のタイムスタンプ。
 * `LastRequest:` クライアントの最後のリクエスト。
 * `RemoteAddress:` クライアントのIPアドレス。
 * `RemotePort:` クライアントが最後の要求に使用したポート。
@@ -364,7 +371,7 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 >
 >プライマリインスタンスで[オンラインリビジョンクリーンアップ](/help/sites-deploying/revision-cleanup.md)を実行した場合は、以下に示す手動での手順は必要ありません。Additionally, if you are using Online Revision Cleanup, the `cleanup ()` operation on the standby instance will pe performed automatically.
 
-アドビでは、リポジトリが時間の経過と共に過剰に増加するのを防ぐため、定期的にメンテナンスを実行することをお勧めします。 コールドスタンバイリポジトリのメンテナンスを手動で実行するには、次の手順に従います。
+Adobeでは、時間の経過とともに過剰なリポジトリの増大を防ぐため、定期的にメンテナンスを実行することを推奨しています。 コールドスタンバイリポジトリのメンテナンスを手動で実行するには、次の手順に従います。
 
 1. JMX コンソールに移動し、**org.apache.jackrabbit.oak: Status（&quot;Standby&quot;）** bean を使用して、スタンバイインスタンスでスタンバイプロセスを停止します。この方法について詳しくは、[監視](/help/sites-deploying/tarmk-cold-standby.md#monitoring)に関する前述の節を参照してください。
 
@@ -372,10 +379,10 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 1. プライマリインスタンスで oak コンパクションツールを実行します。For more details, see [Maintaining the Repository](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
 1. プライマリインスタンスを起動します。
 1. 最初の手順で説明したものと同じ JMX bean を使用して、スタンバイインスタンスでスタンバイプロセスを開始します。
-1. ログを監視し、同期が完了するまで待ちます。スタンバイリポジトリの大幅な増加が、現時点で見られる可能性があります。
+1. ログを監視し、同期が完了するまで待ちます。この時点で、スタンバイリポジトリの大幅な増加が見られる可能性があります。
 1. Run the `cleanup()` operation on the standby instance, using the same JMX bean as described in the first step.
 
-オフラインコンパクションではリポジトリ履歴が実質的には書き直されるので、リポジトリでの変更の計算により多くの時間がかかり、スタンバイインスタンスとプライマリとの同期が完了するまで通常より時間がかかる場合があります。また、このプロセスが完了すると、スタンバイ側のリポジトリのサイズは、プライマリ側のリポジトリとほぼ同じサイズになる点に注意してください。
+オフラインコンパクションではリポジトリ履歴が実質的には書き直されるので、リポジトリでの変更の計算により多くの時間がかかり、スタンバイインスタンスとプライマリとの同期が完了するまで通常より時間がかかる場合があります。また、このプロセスが完了した後は、スタンバイ側のリポジトリのサイズは、プライマリ側のリポジトリとほぼ同じサイズになることに注意してください。
 
 別の方法として、プライマリでコンパクションを実行した後にプライマリリポジトリをスタンバイに手動でコピーすることもできます。つまり、コンパクションを実行するたびにスタンバイを再構築します。
 
@@ -388,6 +395,7 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 
    * On the primary, run the data store garbage collection via the relevant JMX bean as described in [this article](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-jmx-console).
    * On the standby, the data store garbage collection is available only via the **BlobGarbageCollection** MBean - `startBlobGC()`. The **RepositoryManagement** MBean is not available on the standby.
+
    >[!NOTE]
    >
    >共有データストアを使用していない場合は、ガベージコレクションを最初にプライマリで実行してから、スタンバイで実行する必要があります。
