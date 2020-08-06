@@ -11,6 +11,9 @@ topic-tags: configuring
 discoiquuid: e862c8a9-b5b6-4857-a154-03d3ffac3e67
 translation-type: tm+mt
 source-git-commit: a8e0a48466c046bf1f96ff240995b499818ed0a2
+workflow-type: tm+mt
+source-wordcount: '1282'
+ht-degree: 67%
 
 ---
 
@@ -29,13 +32,13 @@ source-git-commit: a8e0a48466c046bf1f96ff240995b499818ed0a2
 
 **「アクティベート」ボタンをクリックすると、レプリケーションがトリガーされますか。トリガーされない場合は、次の操作をおこないます。**
 
-1. /crx/explorer (CQ5.5)に移動し、adminとしてログインします。
+1. /crx/explorer(CQ5.5)に移動し、管理者としてログインします。
 1. 「Content Explorer」を開きます。
 1. ノード /bin/replicate または /bin/replicate.json が存在するかを確認します。ノードが存在する場合は、削除して保存します。
 
 **レプリケーションがレプリケーションエージェントのキュー内で待機している状態ですか。**
 
-/etc/replication/agents.author.htmlに移動し、確認する複製エージェントをクリックしてこれを確認します。
+/etc/replication/agents.author.htmlに移動し、レプリケーションエージェントをクリックして確認します。
 
 **1 つまたは複数のエージェントキューで動きがない場合：**
 
@@ -43,17 +46,17 @@ source-git-commit: a8e0a48466c046bf1f96ff240995b499818ed0a2
 1. Does the queue status show **Queue is active - # pending**? Basically the replication job could be stuck in a socket read waiting for the pubilsh instance or dispatcher to respond. This could mean that the publish instance or dispatcher is under high load or stuck in a lock. Take thread dumps from author and publish in this case.
 
    * スレッドダンプアナライザーでオーサーのスレッドダンプを開き、レプリケーションエージェントの sling イベントジョブが socketRead で動かなくなっていないかを確認します。
-   * 発行からのスレッドダンプをスレッドダンプアナライザーで開き、発行インスタンスが応答しない原因となっている可能性があるものを分析します。作成者から複製を受け取るスレッドであるPOST /bin/receiveを含むスレッドが表示されます。
+   * 発行からのスレッドダンプをスレッドダンプアナライザーで開き、発行インスタンスが応答しない原因となっている可能性があるものを分析します。 /bin/receiveというPOSTを持つスレッド（作成者からレプリケーションを受け取るスレッド）が名前に含まれているはずです。
 
 **すべてのエージェントキューに動きがない場合**
 
-1. リポジトリの破損やその他の問題が原因で、/var/replication/dataの下で特定のコンテンツをシリアル化できない可能性があります。関連するエラーがないか、logs/error.logを確認します。不正なレプリケーション項目を消去するには、次の手順を実行します。
+1. リポジトリの破損やその他の問題が原因で、/var/replication/dataの下で特定のコンテンツ部分をシリアライズできない可能性があります。 logs/error.logを参照して、関連するエラーがないか確認します。 不正なレプリケーションアイテムを消去するには、次の手順を実行します。
 
    1. https://&lt;host>:&lt;port>/crxに移動し、管理者ユーザーとしてログインします。 CQ5.5では、代わりにhttps://&lt;ホスト>:&lt;ポート>/crx/explorerに移動します。
    1. 「Content Explorer」をクリックします。
    1. Content Explorer ウィンドウの右上にある虫眼鏡ボタンをクリックすると、検索ダイアログがポップアップします。
    1. 「XPath」ラジオボタンを選択します。
-   1. 「Query」ボックスに、@slingevent:createdによる/jcr:root/var/eventing/jobs//element(&amp;ast;,slingevent:Job)順序を入力します。
+   1. 「クエリ」ボックスに、@slingevent:createdのクエリ/jcr:root/var/eventing/jobs//element(&amp;ast;,slingevent:Job)の順序を入力します。
    1. 「検索」をクリックします。
    1. 検索結果の上位の項目が、最新の Sling イベントジョブです。各ジョブをクリックして、キューの一番上に表示されるものと同じ、動きのないレプリケーションを見つけます。
 
@@ -65,7 +68,7 @@ source-git-commit: a8e0a48466c046bf1f96ff240995b499818ed0a2
 1. また、DefaultJobManager 設定に不整合がある状態になる場合もあります。OSGi コンソール経由で「Apache Sling Job Event Handler」を手動で変更したユーザーがいる場合にこのような事態になります（例えば、「Job Processing Enabled」プロパティを無効にした後に再度有効にして、設定を保存した場合）。
 
    * この時点で、crx-quickstart/launchpad/config/org/apache/sling/event/impl/jobs/DefaultJobManager.config に保存されている DefaultJobManager 設定に不整合がある状態になります。さらに、「Apache Sling Job Event Handler」プロパティで「Job Processing Enabled」がチェックされた状態でも、いずれかのユーザーが「Sling Eventing」タブに移動すると、「JOB PROCESSING IS DISABLED」というメッセージが表示され、レプリケーションが動作しません。
-   * この問題を解決するには、OSGiコンソールの設定ページに移動し、「Apache Sling Job Event Handler」設定を削除する必要があります。次に、クラスターのマスターノードを再起動して、構成を一貫した状態に戻します。この問題は修正され、レプリケーションが再び動作し始めます。
+   * この問題を解決するには、OSGiコンソールの設定ページに移動して、「Apache Slingジョブイベントハンドラ」の設定を削除する必要があります。 次に、クラスターのマスターノードを再起動して、設定を一貫した状態に戻します。 この問題は修正され、レプリケーションは再び機能します。
 
 **replication.log の作成**
 
@@ -75,9 +78,9 @@ source-git-commit: a8e0a48466c046bf1f96ff240995b499818ed0a2
 1. Find the Apache Sling Logging Logger factory and create an instance by clicking the **+** button on the right of the factory configuration. This will create a new logging logger.
 1. 次のように設定します。
 
-   * ログレベル：DEBUG
+   * ログレベル： DEBUG
    * Log File Path: *(CQ5.4 and 5.3)* ../logs/replication.log *(CQ5.5)* logs/replication.log
-   * カテゴリ：com.day.cq.replication
+   * カテゴリ: com.day.cq.replication
 
 1. 問題が何らかの形で Sling イベントまたはジョブに関連する疑いがある場合は、この Java パッケージをカテゴリ org.apache.sling.event に追加することもできます。
 
