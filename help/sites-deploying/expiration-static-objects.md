@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 73f37b3c-5dbe-4132-bb60-daa8de871884
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '436'
+ht-degree: 89%
 
 ---
 
@@ -72,7 +75,7 @@ source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
    </Location>
    ```
 
-   これにより、中間キャッシュ（ブラウザーのキャッシュなど）でCSS、Javascript、PNGおよびGIFファイルをクライアントキャッシュに最大1日保存できます。 この例では、以下のすべてのグローバル設定とを示し `/content` ますが、 `/etc/designs`より詳細な設定を行う必要があります。
+   これにより、中間キャッシュ（ブラウザーのキャッシュなど）でCSS、Javascript、PNG、GIFファイルをクライアントキャッシュに1日まで格納できます。 この例では、以下のすべてとのグローバル設定を説明しますが、こ `/content` れより詳細に設定する必要があり `/etc/designs`ます。
 
    サイトの更新頻度によっては、HTML ページのキャッシュも検討できます。妥当な期間は 1 時間です。
 
