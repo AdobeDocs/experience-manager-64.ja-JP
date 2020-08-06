@@ -11,6 +11,9 @@ topic-tags: platform
 discoiquuid: 4d3c4650-3e2a-43b1-ad2d-8d0ae2254ca9
 translation-type: tm+mt
 source-git-commit: 65346b3de98ec53e97c66fdac3be43b9c71e292a
+workflow-type: tm+mt
+source-wordcount: '3144'
+ht-degree: 84%
 
 ---
 
@@ -34,7 +37,7 @@ Adobe Experience Manager をインストールするための最小要件：
 
 ### 最小サイズ要件 {#minimum-sizing-requirements}
 
-Adobe Experience Managerを実行するための最小要件：
+Adobe Experience Managerを走らせるための最小要件：
 
 * 5 GB の空きディスク領域（インストールディレクトリ内）
 * 2 GB メモリ
@@ -43,6 +46,7 @@ Adobe Experience Managerを実行するための最小要件：
 >
 >* デジタルアセットを使用する場合は、より多くの基本メモリが必要になります。詳しくは、[デプロイおよびメンテナンス](/help/sites-deploying/deploy.md#default-local-install)を参照してください。
 >* [AEM Forms アドオンパッケージ](/help/forms/using/installing-configuring-aem-forms-osgi.md)には 15 GB の一時領域が必要です。
+
 >
 
 
@@ -192,14 +196,14 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
    <td>R：制限サポート（4）</td> 
   </tr> 
   <tr> 
-   <td>Oracle Database 12c (12.1.x)</td> 
+   <td>Oracle Database 12c(12.1.x)</td> 
    <td>リポジトリおよび Forms データベース</td> 
    <td>R：制限サポート</td> 
   </tr> 
   <tr> 
    <td>Microsoft SQL Server 2017</td> 
    <td>Forms データベース</td> 
-   <td>Z:非対応(4)</td> 
+   <td>Z: 非対応(4)</td> 
   </tr> 
   <tr> 
    <td>Microsoft SQL Server 2016</td> 
@@ -315,7 +319,7 @@ Adobe Experience Manager は次のサーバープラットフォームで動作�
  </tbody> 
 </table>
 
-1. Linux Kernel 2.6、3.xおよび4.xには、Red Hat Enterprise Linux、CentOS、Oracle Linux、Amazon linuxなど、Red Hatディストリビューションの派生物が含まれています。 AEM Formのアドオン機能は、CentOS 7およびRed Hat Enterprise Linux 6.5および7でのみサポートされます。
+1. Linux Kernel 2.6、3.x、4.xには、Red Hat Enterprise Linux、CentOS、Oracle Linux、およびAmazonLinuxを含む、Red Hatディストリビューションの派生物が含まれています。 AEMフォームのアドオン機能は、CentOS 7およびRed Hat Enterprise Linux 6.5および7でのみサポートされます。
 1. AEM Assets：[XMP メタデータの書き戻しのサポート](#requirements-for-aem-assets-xmp-metadata-write-back)の節を参照してください。
 1. AEM Assets：Dynamic Media 画像はサポートされていません。Dynamic Media ビデオはサポートされています。
 1. AEM Forms は Ubuntu 16.04 LTS でのみサポートされています。
@@ -336,7 +340,7 @@ Adobe Managed Services の外部で Azure または AWS に AEM をデプロイ�
 
 ### Dispatcher のプラットフォーム（Web サーバー） {#dispatcher-platforms-web-servers}
 
-Dispatcher は、キャッシュおよびロードバランシングコンポーネントです。[最新バージョンのDispatcherをダウンロードします](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html)。 Experience Manager 6.4 ではバージョン 4.3.1 以降の Dispatcher が必要です。
+Dispatcher は、キャッシュおよびロードバランシングコンポーネントです。[最新バージョンのDispatcherをダウンロードします](https://helpx.adobe.com/jp/experience-manager/dispatcher/release-notes.html)。 Experience Manager 6.4 ではバージョン 4.3.1 以降の Dispatcher が必要です。
 
 Dispatcher バージョン 4.3.1 で使用する場合は、次の Web サーバーがサポートされています。
 
@@ -487,7 +491,7 @@ Adobe Experience Manager のすべての要素（インスタンス、Dispatcher
 
 AEM Dynamic Media はデフォルトで無効になっています。See [Enabling Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media).
 
-ダイナミックメディアを有効にした場合、次の追加の必要システム構成が適用されます。
+ダイナミックメディアを有効にした場合は、次の追加の必要システム構成が適用されます。
 >[!NOTE]
 >
 >The following system requirements apply **_only_** if you use Dynamic Media - Hybrid mode; Dynamic Media - Hybrid mode has an embedded image server, which is only certified on certain operating systems.
@@ -496,14 +500,14 @@ AEM Dynamic Media はデフォルトで無効になっています。See [Enabli
 
 #### ハードウェア {#hardware}
 
-LinuxとWindowsの両方のオペレーティングシステムに適用されるハードウェア要件は次のとおりです。
+以下のハードウェア要件は、LinuxとWindowsの両方のオペレーティングシステムに適用されます。
 
 * Intel Xeon または AMD Opteron CPU（4 コア以上）
 * 16 GB 以上の RAM
 
 #### Linux {#linux}
 
-Linuxでのダイナミックメディアの使用には、次の前提条件が必要です。
+Linuxでダイナミックメディアを使用する場合は、次の前提条件が必要です。
 
 * RedHat Enterprise 7 または CentOS 7 以降（最新の修正パッチを適用）
 * 64 ビットのオペレーティングシステム
@@ -539,19 +543,19 @@ Linuxでのダイナミックメディアの使用には、次の前提条件が
 * Microsoft Windows Server 2016
 * 物理メモリ（RAM）の 2 倍以上のスワップ領域
 
-Windowsでダイナミックメディアを使用するには、Microsoft Visual Studio 2010、2013および2015のx64およびx86用再配布可能ファイルをインストールする必要があります。
+Windowsでダイナミックメディアを使用するには、x64およびx86用のMicrosoft Visual Studio 2010、2013および2015再頒布可能パッケージをインストールする必要があります。
 
 x64
 
-* The Microsoft Visual Studio 2010 redistributable can be found at [https://www.microsoft.com/en-us/download/details.aspx?id=13523](https://www.microsoft.com/en-us/download/details.aspx?id=13523)
-* The Microsoft Visual Studio 2013 redistributable can be found at [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
-* The Microsoft Visual Studio 2015 redistributable can be found at [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+* The Microsoft Visual Studio 2010 redistributable can be found at [https://www.microsoft.com/en-us/download/details.aspx?id=13523](https://www.microsoft.com/ja-jp/download/details.aspx?id=13523)
+* The Microsoft Visual Studio 2013 redistributable can be found at [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/ja-jp/download/details.aspx?id=40784)
+* The Microsoft Visual Studio 2015 redistributable can be found at [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/ja-jp/download/details.aspx?id=48145)
 
 x86
 
-* The Microsoft Visual Studio 2010 redistributable can be found at [https://www.microsoft.com/en-in/download/details.aspx?id=5555](https://www.microsoft.com/en-in/download/details.aspx?id=5555)
+* The Microsoft Visual Studio 2010 redistributable can be found at [https://www.microsoft.com/en-in/download/details.aspx?id=5555](https://www.microsoft.com/ja-jp/download/details.aspx?id=5555)
 * The Microsoft Visual Studio 2013 redistributable can be found at [https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)
-* The Microsoft Visual Studio 2015 redistributable can be found at [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)
+* The Microsoft Visual Studio 2015 redistributable can be found at [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/ja-jp/download/details.aspx?id=52685)
 
 #### MacOS {#macos}
 
@@ -596,11 +600,11 @@ x86
   </tr> 
   <tr> 
    <td>OpenOffice 4.1.2</td> 
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式(BMP、GIF、JPEG、JPG、TIF、TIFF、TIFF、TIFF、TIFF、TIFF、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTFおよびTXT</td> 
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLSX、DOC、DOCX、PPT、PPTX、画像形式(BMP、JPEG、JPG、TIF、TIFF、TIFF)JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、およびTXT</td> 
   </tr> 
   <tr> 
    <td><p>OpenOffice 3.4</p> </td> 
-   <td><p>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式(BMP、GIF、JPEG、JPG、TIF、TIFF、TIFF、TIFF、TIFF、TIFF、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTFおよびTXT</p> </td> 
+   <td><p>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLSX、DOC、DOCX、PPT、PPTX、画像形式(BMP、JPEG、JPG、TIF、TIFF、TIFF)JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、およびTXT</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -618,6 +622,7 @@ x86
 >* OpenOffice 用 PDF Generator 変換は、Windows、Linux および Solaris でのみサポートされます。
 >* OCR PDF、PDF を最適化および PDF を書き出しの機能は、Windows でのみサポートされます。
 >* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。For more information, refer to AEM Forms product description as per your deployment ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) or [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))”
+
 >
 
 
@@ -650,6 +655,6 @@ AEM Screens Player バージョン 3.3.x では、次のオペレーティング
 
 * Microsoft Windows 10 Enterprise LTSB
 * Google Chome OS 62 以上
-* Google Android 5.1.1（AndroidシステムWebViewバージョン52以降が更新されました）
+* Google Android 5.1.1とAndroidシステムWebViewバージョン52以降の更新
 * Apple iOS 10.3 以上
 * Apple macOS 10.12 以上
