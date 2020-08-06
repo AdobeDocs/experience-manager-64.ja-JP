@@ -76,7 +76,7 @@ PDFドキュメントをPostScriptファイルに変換する場合、作成さ�
 
 >[!NOTE]
 >
->設定できる実行時の値について詳しくは、『 `ToPSOptionsSpec` AEM Forms APIリファレンス』の「 [クラス参照](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)」を参照してください。
+>設定できる実行時の値について詳しくは、 `ToPSOptionsSpec` AEM FormsAPIリファレンスの [クラス参照を参照してください](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
 
 **PDFドキュメントのPostScriptファイルへの変換**
 
@@ -119,7 +119,7 @@ Convert PDF Service API(Java)を使用してPDFドキュメントをPostScript�
 1. 変換の実行時オプションを設定します。
 
    * Create a `ToPSOptionsSpec` object by invoking its constructor.
-   * オブジェクトに属する適切なメソッドを呼び出して、実行時オプションを設定し `ToPSOptionsSpec` ます。 例えば、作成されるPostScriptレベルを定義するには、 `ToPSOptionsSpec` オブジェクトの `setPsLevel` メソッドを呼び出し、PostScriptレベルを指定する `PSLevel` 定義済みリスト値を渡します。 設定可能なすべての実行時値について詳しくは、 `ToPSOptionsSpec` AEM Forms APIリファレンスの「 [クラス参照](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)」を参照してください。
+   * オブジェクトに属する適切なメソッドを呼び出して、実行時オプションを設定し `ToPSOptionsSpec` ます。 例えば、作成されるPostScriptレベルを定義するには、 `ToPSOptionsSpec` オブジェクトの `setPsLevel` メソッドを呼び出し、PostScriptレベルを指定する `PSLevel` 定義済みリスト値を渡します。 設定可能なすべての実行時値について詳しくは、 `ToPSOptionsSpec` AEM FormsAPIリファレンスの [クラス参照を参照してください](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
 
 1. PDFドキュメントをPostScriptファイルに変換します。
 
@@ -155,17 +155,17 @@ Convert PDF Service API（Webサービス）を使用してPDFドキュメント
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Convert PDFクライアントの作成を参照してください。
 
    * Create a `ConvertPdfServiceClient` object by using its default constructor.
-   * Create a `ConvertPdfServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 ただし、を指定し `?blob=mtom`ます。
+   * Create a `ConvertPdfServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 ただし、を指定し `?blob=mtom`ます。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `ConvertPdfServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `ConvertPdfServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `ConvertPdfServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `ConvertPdfServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -242,7 +242,7 @@ PDFドキュメントをサポートされている任意の種類に変換す�
 
 **実行時オプションの設定**
 
-画像形式や解像度の値など、実行時のオプションを設定する必要があります。 ランタイム値について詳しくは、『 `ToImageOptionsSpec` AEM Forms APIリファレンス』の「 [クラスリファレンス」を参照してください](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
+画像形式や解像度の値など、実行時のオプションを設定する必要があります。 実行時の値について詳しくは、 `ToImageOptionsSpec` AEM FormsAPIリファレンスの [クラス参照を参照してください](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
 
 **PDFを画像に変換します**
 
@@ -316,17 +316,17 @@ Convert PDF Service API（Webサービス）を使用してPDFドキュメント
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. convert PDFクライアントを作成します。
 
    * Create a `ConvertPdfServiceClient` object by using its default constructor.
-   * Create a `ConvertPdfServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 ただし、を指定し `?blob=mtom`ます。
+   * Create a `ConvertPdfServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 ただし、を指定し `?blob=mtom`ます。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `ConvertPdfServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `ConvertPdfServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `ConvertPdfServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `ConvertPdfServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
