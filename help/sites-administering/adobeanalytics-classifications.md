@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6787511a-2ce0-421a-bcfb-90d5f32ad35e
 translation-type: tm+mt
 source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
+workflow-type: tm+mt
+source-wordcount: '579'
+ht-degree: 72%
 
 ---
 
@@ -49,15 +52,15 @@ Adobe Classifications exports classifications data to [Adobe Analytics](/help/si
 
 ## ページサイズの変更 {#modifying-page-size}
 
-レコードは、ページで処理されます。デフォルトでは、Adobe分類はページサイズが1000のページを作成します。
+レコードは、ページで処理されます。デフォルトでは、「Adobeの分類」はページサイズが1000のページを作成します。
 
-1ページは、Adobe分類の定義ごとに最大で25,000ページで、Felixコンソールから変更できます。 エクスポート中に、Adobe分類はソースノードをロックして、同時に変更されないようにします。 ノードは、書き出し後、エラー時またはセッション終了時にロックを解除されます。
+ページのサイズは、Adobe分類の定義ごとに最大25,000個に設定でき、Felixコンソールから変更できます。 エクスポート中、Adobe分類はソースノードをロックし、同時に変更が行われないようにします。 ノードは、書き出し後、エラー時またはセッション終了時にロックを解除されます。
 
 ページサイズを変更するには：
 
 1. Navigate to the OSGI console at **https://&lt;host>:&lt;port>/system/console/configMgr** and select **Adobe AEM Classifications Exporter**.
 
-   ![aa-26](assets/aa-26.png)
+   ![aa-25](assets/aa-26.png)
 
 1. 「**書き出しページサイズ**」を必要に応じて更新し、**保存**&#x200B;をクリックします。
 
@@ -69,7 +72,7 @@ Adobe Classifications exports classifications data to [Adobe Analytics](/help/si
 
 SAINT Exporter は、変換サービスを使用して、書き出しデータを特別な形式に変換できます。For Adobe Classifications, a subinterface `SAINTTransformer<String[]>` implementing the Transformer interface has been provided. This interface is used to restrict the data type to `String[]` which is used by the SAINT API and to have a marker interface to find such services for selection.
 
-デフォルトの実装SAINTDefaultTransformerでは、エクスポーターソースの子リソースは、プロパティ名をキー、プロパティ値を値として持つレコードとして扱われます。 **キー**&#x200B;列は、最初の列に自動的に追加され、その値がノード名になります。名前空間プロパティ（：を含む）は無視されます。
+デフォルトの実装SAINTDefaultTransformerでは、エクスポーターソースの子リソースは、プロパティ名をキーとし、プロパティ値を値として持つレコードとして扱われます。 **キー**&#x200B;列は、最初の列に自動的に追加され、その値がノード名になります。名前空間プロパティ（：を含む）は無視されます。
 
 *ノード構造：*
 
