@@ -10,6 +10,9 @@ topic-tags: develop
 discoiquuid: 7d494c2e-d457-4d52-89be-a77ffa07eb88
 translation-type: tm+mt
 source-git-commit: abdcde27b33f290a4288b09c39bffb0d4f1918a1
+workflow-type: tm+mt
+source-wordcount: '907'
+ht-degree: 70%
 
 ---
 
@@ -62,6 +65,7 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
    * aggrement_send
    * widget_write
    * workflow_read
+
    Adobe Sign アプリケーション用に OAuth 設定を構成してキーを取得するための詳しい手順については、開発者用ドキュメントの「[アプリケーション用に OAuth 設定を構成する](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobeio/adobeio-documentation/master/sign/gstarted/configure_oauth.md)」を参照してください。
 
    ![OAuth 設定](assets/oauth_config.png)
@@ -89,7 +93,7 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 
    `https://<server-name>:<port>/libs/granite/configurations/content/view.html/conf`
 
-1. 手順 1 ～ 12 を繰り返して、AEM Forms で Adobe Sign を設定します。設定に同じタイトル（手順3で指定）を使用し、同じ名前（手順6で指定）を使用して、作成者インスタンスで設定された設定を複製します。
+1. 手順 1 ～ 12 を繰り返して、AEM Forms で Adobe Sign を設定します。設定に同じタイトル（手順3で指定）を、同じ名前（手順6で指定）を使用して、作成者インスタンスに設定された設定を複製します。
 
    これで Adobe Sign が AEM Forms に統合され、アダプティブフォームで使用できるようになりました。To [use Adobe Sign service in an adaptive form](/help/forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form), specify the configuration container created above in adaptive form properties.
 
@@ -103,6 +107,6 @@ Adobe Sign が有効になっているアダプティブフォームは、すべ
 
    `https://[localhost]:[port]/system/console/configMgr`
 
-1. 「**[!UICONTROL Adobe Sign 設定サービス]**」オプションを探して選択します。「[ステータス更新スケジューラーの式](https://en.wikipedia.org/wiki/Cron#CRON_expression)」フィールドで **[!UICONTROL Cron 式]**&#x200B;を指定して「**[!UICONTROL 保存]**」をクリックします。例えば、毎日午前0時に設定サービスを実行するには、「ステータス更新の `0 0 0 1/1 * ? *` スケジューラー式 **** 」フィールドに
+1. 「**[!UICONTROL Adobe Sign 設定サービス]**」オプションを探して選択します。「[ステータス更新スケジューラーの式](https://en.wikipedia.org/wiki/Cron#CRON_expression)」フィールドで **[!UICONTROL Cron 式]**&#x200B;を指定して「**[!UICONTROL 保存]**」をクリックします。例えば、毎日午前0時にConfiguration Serviceを実行するには、「 `0 0 0 1/1 * ? *` ステータス更新スケジューラー式 **** 」フィールドでを指定します。
 
 これで、Adobe Sign のステータスを同期するデフォルトの間隔が変更されました。
