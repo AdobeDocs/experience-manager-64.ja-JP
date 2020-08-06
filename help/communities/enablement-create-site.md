@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: aff8b79f-dd4e-486e-9d59-5d09dfe34f27
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '1744'
+ht-degree: 52%
 
 ---
 
@@ -19,13 +22,13 @@ source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
 
 ## コミュニティサイトを作成 {#create-community-site}
 
-[コミュニティサイトの作成](sites-console.md) (Community Site Creation)では、コミュニティサイトの作成手順を案内するウィザードを使用します。 It is possible to move forward to the `Next`step or `Back`to the previous step before committing the site in the final step.
+[コミュニティサイトの作成](sites-console.md) ：コミュニティサイトの作成手順を案内するウィザードを使用します。 It is possible to move forward to the `Next`step or `Back`to the previous step before committing the site in the final step.
 
 新しいコミュニティサイトの作成を開始するには：
 
 [オーサーインスタンス](http://localhost:4502/)を使用します。
 
-* 管理者権限でサインイン
+* 管理者権限でサインインする
 * Navigate to **[!UICONTROL Communities > Sites]**
 
 * 「**[!UICONTROL 作成]**」を選択します。
@@ -40,10 +43,10 @@ source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
 
 * **コミュニティサイトの説明**: `A site for enabling the community to learn.`
 
-* **コミュニティサイトのルート**:(デフォルトのルートの場合は空白のままにし `/content/sites`ます)。
+* **コミュニティサイトルート**: (デフォルトのルートの場合は空白のまま `/content/sites`)
 
 * **クラウド設定**：（クラウド設定が指定されていない場合は空欄のままにする）指定されたクラウド設定へのパスを入力します。
-* **コミュニティサイトの基本言語**:（単一言語の場合は手を付けないでください）。英語)プルダウンメニューを使用して ** 、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つ以上のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](../../help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
+* **コミュニティサイトの基本言語**: （単一言語の場合は手を付けないでください）。 英語)プルダウンメニューを使用して *、ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）の各言語から* 1つまたは複数のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](../../help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
 
 * **[!UICONTROL コミュニティサイト名]**: `enable`
 
@@ -52,7 +55,7 @@ source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
 
       *例えば*、http://localhost:4502/content/sites/ `enable/en.html`
 
-* **[!UICONTROL リファレンスサイトテンプレート]**:引っ張って選ぶ `Reference Structured Learning Site Template`
+* **[!UICONTROL リファレンスサイトテンプレート]**: 下に降りて～を選ぶ `Reference Structured Learning Site Template`
 
 「**[!UICONTROL 次へ]**」を選択します。
 
@@ -86,9 +89,9 @@ It is recommended that [enablement communities](overview.md#enablement-community
 
 Ensure most checkboxes are unchecked for [User Management](sites-console.md#user-management):
 
-* サイト訪問者の自己登録を許可しない
-* 匿名サイトの訪問者がサイトを閲覧することを許可しない
-* コミュニティメンバー間のメッセージングを許可するかどうか（オプション）
+* サイト訪問者が自己登録することを許可しない
+* 匿名サイト訪問者がサイトに表示することを許可しない
+* コミュニティメンバー間でのメッセージングを許可するかどうか（オプション）
 * Facebookでのログインを許可しない
 * Twitterでのログインを許可しない
 
@@ -102,25 +105,25 @@ The tags which may be applied to community content are controlled by selecting A
 
 名前空間は先行入力検索で簡単に検索できます。例：
 
-* タイプ&#39;tut&#39;
+* &#39;tut&#39;と入力します。
 *  `Tutorial`
 
 ![chlimage_1-286](assets/chlimage_1-286.png)
 
 ### 役割 {#roles}
 
-[コミュニティメンバの役割は](users.md) 、[役割]セクションの設定を通じて割り当てられます。
+[コミュニティメンバーの役割](users.md) は、[役割]セクションの設定を通じて割り当てられます。
 
-コミュニティメンバー（またはメンバーのグループ）がコミュニティマネージャーとしてサイトを体験できるようにするには、先読み検索を使用し、ドロップダウンのオプションからメンバー名またはグループ名を選択します。
+コミュニティメンバー（またはメンバーのグループ）がコミュニティマネージャーとしてサイトを体験できるようにするには、先頭入力検索を使用し、ドロップダウンのオプションからメンバーまたはグループ名を選択します。
 
 例：
 
-* タイプ「q」
+* 「q」と入力します。
 * Select [Quinn Harper](enablement-setup.md#publishcreateenablementmembers)
 
 >[!NOTE]
 >
->[トンネルサービス](deploy-communities.md#tunnel-service-on-author) では、パブリッシュ環境にのみ存在するメンバーとグループを選択できます。
+>[トンネルサービス](deploy-communities.md#tunnel-service-on-author) ：パブリッシュ環境にのみ存在するメンバーとグループを選択できます。
 
 ![community_roles](assets/community_roles.png)
 
@@ -151,12 +154,13 @@ The tags which may be applied to community content are controlled by selecting A
 
 1 つのイネーブルメントコミュニティに対し、1 人以上のコミュニティ実施可能マネージャーを指定する必要があります。
 
-* **[!UICONTROL 有効化マネージャ]**（必須）グループのメンバーを `Community Enablement Managers` 選択して、このコミュニティサイトを管理できます。
+* **[!UICONTROL 有効化マネージャ]**（必須） 
+`Community Enablement Managers` グループを選択して、このコミュニティサイトを管理できます。
 
-   * タイプ&quot;s&quot;
+   * 「s」と入力します。
    *  `Sirius Nilson`
 
-* **[!UICONTROL Marketing cloud組織ID]**（オプション）有効化レポートにビデオハートビート分析を含める [場合に必要なAdobe AnalyticsアカウントのID](analytics.md#video-heartbeat-analytics) 。
+* **[!UICONTROL Marketing Cloud組織ID]**（オプション）Adobe AnalyticsアカウントのID。有効化レポートに [Video Heartbeat Analytics](analytics.md#video-heartbeat-analytics) を含める場合に必要です。
 
 ![chlimage_1-290](assets/chlimage_1-290.png)
 
@@ -186,13 +190,13 @@ The tags which may be applied to community content are controlled by selecting A
 
 各アイコンの機能は次のとおりです（左から右の順に説明）。
 
-* **サイトを開く**&#x200B;鉛筆アイコンを選択して、コミュニティサイトを作成者編集モードで開き、ページコンポーネントを追加/設定します。
+* **サイトを開く**&#x200B;鉛筆アイコンを選択して、作成者編集モードでコミュニティサイトを開き、ページコンポーネントを追加/設定します。
 
 * **サイトの編集**&#x200B;プロパティアイコンを選択して、プロパティの変更（タイトルやテーマの変更など）を行うためにコミュニティサイトを開きます。
 
-* **サイトの公**&#x200B;開コミュニティサイトを公開する世界のアイコンを選択します（デフォルトでlocalhost:4503）。
+* **サイトを公開**&#x200B;コミュニティサイトを公開する（デフォルトでlocalhost:4503に）には、世界共通アイコンを選択します。
 
-* **サイトの書き出し**&#x200B;書き出しアイコンを選択して、Package Managerに保存され、ダウンロードされるコミュニティサイトのパッケ [ージを作成](../../help/sites-administering/package-manager.md) します。
+* **サイトの書き出し**&#x200B;書き出しアイコンを選択して、コミュニティサイトのパッケージを作成し、そのパッケージを [package managerに保存し](../../help/sites-administering/package-manager.md) 、ダウンロードします。
 
    UGC はサイトパッケージに含まれていません。
 
@@ -247,9 +251,9 @@ In this example, the group `Community Ski Class` is added as a member of the gro
 
 ### 認証エラーの設定 {#configure-for-authentication-error}
 
-Once a site has been configured and pushed to publish, [configure login mapping](sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) on the publish instance. 利点は、ログイン資格情報が正しく入力されない場合、認証エラーによってコミュニティサイトのログインページがエラーメッセージと共に再表示されることです。
+Once a site has been configured and pushed to publish, [configure login mapping](sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) on the publish instance. 利点は、ログイン資格情報が正しく入力されないと、認証エラーによってコミュニティサイトのログインページが再表示され、エラーメッセージが表示されることです。
 
-名前を付けて `Login Page Mapping` 追加
+追加～ `Login Page Mapping` の
 
 * /content/sites/enable/en/signin:/content/sites/enable/en
 
@@ -261,7 +265,7 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 
 開始するには、次のようにします。
 
-1. 公開時に、CRXDEにアクセスし、管理者権限でサインインします
+1. 公開時に、CRXDEにアクセスし、管理者権限でログインします
 
    * For example, browse to [http://localhost:4503/crx/de](http://localhost:4503/crx/de) and login with `admin/admin`
 
@@ -274,18 +278,18 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 
          (Do *not* use `:`)
 
-      * **Type** [sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+      * **Type** sling [:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
 1. With newly created `localhost.4503` node selected
 
-   * プロパティの追加
+   * 追加特性
 
       * **名前**：sling:match
       * **タイプ**：String
       * **値**：localhost.4503/\$
 
          （「$」文字で終わる必要があります）
-   * プロパティの追加
+   * 追加特性
 
       * **名前**：sling:internalRedirect
       * **タイプ**：String
@@ -312,7 +316,7 @@ Once a site has been configured and pushed to publish, [configure login mapping]
 
 #### トラブルシューティング：リダイレクト失敗 {#troubleshooting-fail-to-redirect}
 
-The &#39;**$**&#39; at the end of the regular expression `sling:match`string is crucial, so that only exactly `http://localhost:4503/` is mapped, else the redirect value is prepended to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると失敗します。
+The &#39;**$**&#39; at the end of the regular expression `sling:match`string is crucial, so that only exactly `http://localhost:4503/` is mapped, else the redirect value is prepended to any path that might exist after the server:port in the URL. したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
 
 ## コミュニティサイトの変更 {#modifying-the-community-site}
 
@@ -330,7 +334,7 @@ The &#39;**$**&#39; at the end of the regular expression `sling:match`string is 
 
 このコミュニティサイトに選択されたコミュニティサイトテンプレートには、カタログ機能が含まれています。
 
-含まれていない場合は、カタログ機能を簡単に追加できます。これにより、イネーブルメントリソースや学習パスに割り当てられていないコミュニティの他のメンバーが、カタログからイネーブルメントリソースを選択できるようになります。
+含まれていない場合は、カタログ機能を簡単に追加できます。これにより、有効化リソースや学習パスに割り当てられていないコミュニティの他のメンバーが、カタログから有効化リソースを選択できるようになります。
 
 サイト構造にカタログ機能が既に含まれている場合、タイトルが変わることがあります。
 
