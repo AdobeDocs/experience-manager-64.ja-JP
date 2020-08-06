@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '2267'
+ht-degree: 68%
 
 ---
 
@@ -41,15 +44,15 @@ The first 2 classifications of queries (index-less and poorly restricted) are sl
 
 クエリの制限を追加し、インデックスを調整すると、結果を迅速に取得できるように最適化された形式でインデックスデータを格納できます。また、結果候補セットを順次調査する必要性が低減するかなくなります。
 
-AEM 6.3 では、デフォルトでトラバースの回数が 100,000 回に達すると、クエリが失敗し、例外がスローされます。この制限は、AEM 6.3より前のAEMバージョンではデフォルトで存在しませんが、Apache Jackrabbit Query Engine Settings OSGi設定およびQueryEngineSettings JMX bean（プロパティLimitReads）を使用して設定できます。
+AEM 6.3 では、デフォルトでトラバースの回数が 100,000 回に達すると、クエリが失敗し、例外がスローされます。この制限は、AEM 6.3より前のAEMバージョンではデフォルトで存在しませんが、Apache Jackrabbitクエリエンジン設定OSGi設定およびQueryEngineSettings JMX bean （プロパティLimitReads）を介して設定できます。
 
 ### インデックスのないクエリの検出 {#detecting-index-less-queries}
 
 #### 開発時 {#during-development}
 
-Explain **all** queries and ensure their query plans do not contain the **/&amp;ast; traverse** explanation in them. クエリー・プランの調査例：
+Explain **all** queries and ensure their query plans do not contain the **/&amp;ast; traverse** explanation in them. トラバースクエリ計画の例：
 
-* **** プラン： `[nt:unstructured] as [a] /* traverse "/content//*" where ([a].[unindexedProperty] = 'some value') and (isdescendantnode([a], [/content])) */`
+* **プラン：** `[nt:unstructured] as [a] /* traverse "/content//*" where ([a].[unindexedProperty] = 'some value') and (isdescendantnode([a], [/content])) */`
 
 #### デプロイメント後 {#post-deployment}
 
@@ -80,6 +83,7 @@ cq:tags インデックスルールを追加する前
 * **Query Builder クエリ**
 
    * 
+
       ```
       type=cq:Page
        property=jcr:content/cq:tags
@@ -97,6 +101,7 @@ cq:tags インデックスルールを追加した後
 * **cq:tags インデックスルール**
 
    * 
+
       ```
       /oak:index/cqPageLucene/indexRules/cq:Page/properties/cqTags
        @name=jcr:content/cq:tags
@@ -106,6 +111,7 @@ cq:tags インデックスルールを追加した後
 * **Query Builder クエリ**
 
    * 
+
       ```
       type=cq:Page
        property=jcr:content/cq:tags
@@ -122,7 +128,7 @@ When a query with the `jcr:content/cq:tags` restriction is performed, the index 
 
   当然ながら、さらにクエリを制限すると、対象となる結果セットが少なくなり、クエリはさらに最適化されます。
 
-Similarly, without an additional index rule for the `cq:tags` property, even a fulltext query with a restriction on `cq:tags` would perform poorly as results from the index would return all fulltext matches. cq:tagsに対する制限は、その後にフィルタリングされます。
+Similarly, without an additional index rule for the `cq:tags` property, even a fulltext query with a restriction on `cq:tags` would perform poorly as results from the index would return all fulltext matches. cq:tagsに対する制限は、その後フィルタリングされます。
 
 インデックス後にフィルタリングされるもう 1 つの原因は、開発中に見落とされることがよくあるアクセス制御リストです。ユーザーがアクセスできない可能性のあるパスがクエリによって返されていないかどうかを確認してみます。これをおこなうには、通常、コンテキスト構造を改良すると共に、クエリに適切なパス制限を指定します。
 
@@ -146,7 +152,7 @@ oak.queryLimitInMemory とoak.queryLimitReads のしきい値を低く設定し�
 
 #### デプロイメント後 {#post-deployment-2}
 
-* クエリーが大きなノードトラバーサルまたは大きなヒープメモリの消費をトリガーするかどうかログを監視します。&quot;
+* クエリが大きなノードトラバーサルまたは大きなヒープメモリの消費をトリガーしているかどうかログを監視します。 &quot;
 
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read or traversed more than 100000 nodes. To avoid affecting other tasks, processing was stopped.`
    * クエリを最適化して、走査するノードの数を減らします。
@@ -188,6 +194,7 @@ AEM では、以下のクエリ言語がサポートされています。
    * **最適化されていないクエリ**
 
       * 
+
          ```
           property=jcr:content/contentType
           property.value=article-page
@@ -195,6 +202,7 @@ AEM では、以下のクエリ言語がサポートされています。
    * **最適化されたクエリ**
 
       * 
+
          ```
           type=cq:Page 
           property=jcr:content/contentType 
@@ -209,6 +217,7 @@ AEM では、以下のクエリ言語がサポートされています。
    * **最適化されていないクエリ**
 
       * 
+
          ```
          type=nt:hierarchyNode
          property=jcr:content/contentType
@@ -217,15 +226,17 @@ AEM では、以下のクエリ言語がサポートされています。
    * **最適化されたクエリ**
 
       * 
+
          ```
          type=cq:Page
          property=jcr:content/contentType
          property.value=article-page
          ```
-   `nt:hierarchyNode` はの親ノードタイプで、 `cq:Page`カスタムアプリケ `jcr:content/contentType=article-page` ーションを介し `cq:Page` てノードにのみ適用されると仮定して、このクエリはここにあるノードのみ `cq:Page` を返しま `jcr:content/contentType=article-page`す。 ただしこれは、以下の理由から、次善策としての制限となります。
+   `nt:hierarchyNode` はの親ノードタイプ `cq:Page`で、カスタムアプリケーションを介してノードにのみ適用さ `jcr:content/contentType=article-page` れると仮定して、このクエリは、の `cq:Page` ノードのみを返 `cq:Page``jcr:content/contentType=article-page`します。 ただしこれは、以下の理由から、次善策としての制限となります。
 
-   * Other node inherit from `nt:hierarchyNode` (eg. `dam:Asset`)を追加する際に、不必要に結果のセットに追加すること。
+   * Other node inherit from `nt:hierarchyNode` (eg. `dam:Asset`)を追加する際に、不必要に結果のセットに追加する必要があります。
    * No AEM-provided index exists for `nt:hierarchyNode`, however as there a provided index for `cq:Page`.
+
    `type=cq:Page` を設定すると、このクエリは `cq:Page` ノードのみに限定され、AEM の cqPageLucene に解決されます。これにより、結果は AEM のノードのサブセット（cq:Page ノードのみ）に限定されます。
 
 1. または、クエリが既存のプロパティインデックスに解決されるように、プロパティの制限を調整します。
@@ -233,6 +244,7 @@ AEM では、以下のクエリ言語がサポートされています。
    * **最適化されていないクエリ**
 
       * 
+
          ```
          property=jcr:content/contentType
          property.value=article-page
@@ -240,6 +252,7 @@ AEM では、以下のクエリ言語がサポートされています。
    * **最適化されたクエリ**
 
       * 
+
          ```
          property=jcr:content/sling:resourceType
          property.value=my-site/components/structure/article-page
@@ -248,11 +261,12 @@ AEM では、以下のクエリ言語がサポートされています。
 
    （Lucene プロパティインデックスではなく）プロパティインデックスの使用が最も適しているのは、クエリがノードタイプを認識せず、単一のプロパティ制限によって結果セットが決まる場合です。
 
-1. クエリに可能な限り厳密なパス制限を追加します。例えば、「上」また `/content/my-site/us/en` は「 `/content/my-site`上」を `/content/dam` 選択しま `/`す。
+1. クエリに可能な限り厳密なパス制限を追加します。例えば、「上」または「 `/content/my-site/us/en` 上」を選択し `/content/my-site`ま `/content/dam``/`す。
 
    * **最適化されていないクエリ**
 
       * 
+
          ```
          type=cq:Page
          path=/content
@@ -262,6 +276,7 @@ AEM では、以下のクエリ言語がサポートされています。
    * **最適化されたクエリ**
 
       * 
+
          ```
          type=cq:Page
          path=/content/my-site/us/en
@@ -277,6 +292,7 @@ AEM では、以下のクエリ言語がサポートされています。
    * **最適化されていないクエリ**
 
       * 
+
          ```
          type=cq:Page
          property=jcr:content/contentType
@@ -286,12 +302,13 @@ AEM では、以下のクエリ言語がサポートされています。
    * **最適化されたクエリ**
 
       * 
+
          ```
          type=cq:Page
          fulltext=article
          fulltext.relPath=jcr:content/contentType
          ```
-   テキストがワイルドカード(&quot;%...&#39;)で始まる場合、インデックスを使用できないので、LIKE条件の評価は遅くなります。 jcr:contains 条件は、フルテキストのインデックスの使用を可能にするので、推奨されています。This requires the resolved Lucene Property Index to have indexRule for `jcr:content/contentType` with `analayzed=true`.
+   ワイルドカード(「%...」)を含むテキスト開始の場合は、インデックスを使用できないので、LIKE条件の評価は低速です。 jcr:contains 条件は、フルテキストのインデックスの使用を可能にするので、推奨されています。This requires the resolved Lucene Property Index to have indexRule for `jcr:content/contentType` with `analayzed=true`.
 
    Using query functions like `fn:lowercase(..)` may be harder to optimize as there are not faster equivalents (outside more complex and obtrusive index analyzer configurations). 他の範囲制限を指定し、クエリ全体のパフォーマンスを向上させることをお勧めします。これには、関数の操作対象となる結果候補のセットをできるだけ小さくする必要があります。
 
@@ -302,6 +319,7 @@ AEM では、以下のクエリ言語がサポートされています。
    * **最適化されていないクエリ**
 
       * 
+
          ```
          type=cq:Page
          path=/content
@@ -309,6 +327,7 @@ AEM では、以下のクエリ言語がサポートされています。
    * **最適化されたクエリ**
 
       * 
+
          ```
          type=cq:Page
          path=/content
@@ -321,12 +340,13 @@ AEM では、以下のクエリ言語がサポートされています。
 ## 既存のインデックスのチューニング {#existing-index-tuning}
 
 1. 最適なクエリがプロパティインデックスに解決される場合、プロパティインデックスで可能なチューニングは最小限なので、できることはありません。
-1. それ以外の場合は、クエリはLuceneプロパティインデックスに解決されます。 解決できるインデックスがない場合は、「新しいインデックスの作成」に進んでください。
+1. それ以外の場合は、クエリはLuceneプロパティインデックスに解決する必要があります。 解決できるインデックスがない場合は、「新しいインデックスの作成」に進んでください。
 1. 必要に応じて、クエリを XPath または JCR-SQL2 に変換します。
 
    * **Query Builder クエリ**
 
       * 
+
          ```
          query type=cq:Page
          path=/content/my-site/us/en
@@ -338,6 +358,7 @@ AEM では、以下のクエリ言語がサポートされています。
    * **Query Builder クエリから生成された XPath**
 
       * 
+
          ```
          /jcr:root/content/my-site/us/en//element(*, cq:Page)[jcr:content/@contentType = 'article-page'] order by jcr:content/@publishDate descending
          ```
@@ -378,6 +399,7 @@ AEM では、以下のクエリ言語がサポートされています。
    * **Query Builder クエリ**
 
       * 
+
          ```
          type=myApp:Author
          property=firstName
@@ -386,6 +408,7 @@ AEM では、以下のクエリ言語がサポートされています。
    * **Query Builder クエリから生成された XPath**
 
       * 
+
          ```
          //element(*, myApp:Page)[@firstName = 'ira']
          ```
@@ -416,7 +439,7 @@ AEM では、以下のクエリ言語がサポートされています。
 
    このインデックスを初めてデプロイしたときに、AEM によってインデックスに必要なデータが追加されます。
 
-## インデックスレスクエリとトラバーサルクエリが正常な場合 {#when-index-less-and-traversal-queries-are-ok}
+## インデックスを使用しないクエリとトラバーサル・システムが正常に動作するのはいつですか。 {#when-index-less-and-traversal-queries-are-ok}
 
 AEM のコンテンツアーキテクチャは柔軟です。そのため、コンテンツ構造のトラバーサルが時間の経過と共に受け入れられないほど大きくならないことを予測したり保証したりすることは困難です。
 
@@ -474,7 +497,7 @@ Therefore, ensure an indexes satisfy queries, except if the combination of path 
 
    * XPath または JCR-SQL2 クエリステートメントから最適な Lucence プロパティインデックスを生成します。
 
-* **[AEM Chrome Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US)**
+* **[AEM Chrome Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=ja-JP)**
 
    * Google Chrome Web ブラウザーの拡張機能で、実行されたクエリとそのクエリプランなど、リクエストごとのログデータをブラウザーの開発ツールコンソールに公開します。
    * [Sling Log Tracer 1.0.2 以上](https://sling.apache.org/downloads.cgi)がインストールされ、AEM で有効になっている必要があります。
