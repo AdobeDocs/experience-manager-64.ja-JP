@@ -11,6 +11,9 @@ topic-tags: forms-workspace
 discoiquuid: c88a3013-5da2-4b09-9f29-ac1fb00822ec
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 85%
 
 ---
 
@@ -39,7 +42,7 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
    sharequeuemodel : pathprefix + 'runtime/myModels/mySharequeue',
    ```
 
-1. にエイリアス `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` の変更または追加がある場合に更新しま `main.js`す。
+1. でエイリアス `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` の変更/追加がある場合に更新 `main.js`します。
 
    たとえば、新しい Sharequeue モデル、mySharequeue を追加する場合は、
 
