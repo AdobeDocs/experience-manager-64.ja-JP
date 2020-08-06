@@ -11,6 +11,9 @@ topic-tags: Security
 discoiquuid: 3a1817cd-357b-473d-9a09-e18bbfc60dfd
 translation-type: tm+mt
 source-git-commit: eb3ac73ebe3189c144dafa02a2596ea5d512ffba
+workflow-type: tm+mt
+source-wordcount: '773'
+ht-degree: 81%
 
 ---
 
@@ -152,7 +155,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 または、以下の必要な項目が既に含まれているパッケージをアップロードすることにより、SSL 設定を自動化できます。
 
 * ssl-service ユーザーのキーストア。これは、リポジトリの */home/users/system/security/ssl-service/keystore* にあります。
-* 設 `GraniteSslConnectorFactory` 定
+* 設定 `GraniteSslConnectorFactory`
 
 ### ウィザードで使用する秘密鍵／証明書ペアの生成 {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
@@ -193,7 +196,7 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out loca
 
 >[!NOTE]
 >
->See [Using cURL with AEM](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html) for a centralized list of useful cURL commands in AEM.
+>See [Using cURL with AEM](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/curl.html) for a centralized list of useful cURL commands in AEM.
 
 cURL ツールを使用して SSL 設定を自動化することもできます。そのためには、設定パラメーターを次の URL に送信します。
 
@@ -203,11 +206,11 @@ cURL ツールを使用して SSL 設定を自動化することもできます�
 
 * `-F "keystorePassword=password"`  — キーストアパスワード；
 
-* `-F "keystorePasswordConfirm=password"`  — キーストアパスワードの確認；
+* `-F "keystorePasswordConfirm=password"`  — キーストアのパスワードの確認；
 
-* `-F "truststorePassword=password"` - truststore password;
+* `-F "truststorePassword=password"` - truststoreのパスワード；
 
-* `-F "truststorePasswordConfirm=password"` - truststoreパスワードの確認
+* `-F "truststorePasswordConfirm=password"` - truststoreのパスワードを確認します。
 
 * `-F "privatekeyFile=@localhostprivate.der"`  — 秘密鍵を指定します。
 
