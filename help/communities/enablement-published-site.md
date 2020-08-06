@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '1237'
+ht-degree: 46%
 
 ---
 
@@ -40,28 +43,28 @@ source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
 
 ## 匿名のサイト訪問者 {#anonymous-site-visitor}
 
-匿名のサイト訪問者には、この非公開のイネーブルメントコミュニティサイトのログインページがすぐに表示されます。自己登録やFacebookやTwitterへのログインのオプションはありません。
+匿名のサイト訪問者には、この非公開のイネーブルメントコミュニティサイトのログインページがすぐに表示されます。自己登録やFacebookやTwitterへのログインは選択できません。
 
 Notice this  home page  shows four menu items: `Assignments, Ski Catalog, What's New` and `Discussions`, but none may be reached without signing in.
 
 >[!NOTE]
 >
->サイト訪問者が自己登録を行うことなく、イネーブルメントサイトへの匿名アクセスを許可することができます。\
+>サイト訪問者に自己登録を許可することなく、イネーブルメントサイトへの匿名アクセスを許可することができます。\
 >If an enablement resource is set to `show in catalog` and `allow anonymous access`, it will be possible for anonymous site visitors to view resources in the catalog.
 
 ### JCRでの匿名アクセスの禁止 {#prevent-anonymous-access-on-jcr}
 
-既知の制限により、jcrコンテンツとjsonを通じてコミュニティサイトのコンテンツが匿名訪問者に公開されますが、 **[!UICONTROL サイトのコンテンツに対して]** 「匿名アクセスを許可」は無効になっています。 ただし、この動作は「Slingの制限」を回避策として使用して制御できます。
+既知の制限により、jcrコンテンツとjsonを介してコミュニティサイトのコンテンツが匿名訪問者に公開されますが、匿名アクセス **[!UICONTROL を許可]** (allow anonymous access)はサイトのコンテンツに対して無効になります。 ただし、この動作は、回避策として「Sling制限」を使用して制御できます。
 
-jcrコンテンツとjsonを介した匿名ユーザーによるコミュニティサイトのコンテンツへのアクセスを保護するには、次の手順に従います。
+jcrコンテンツとjsonを介した匿名ユーザーによるアクセスからコミュニティサイトのコンテンツを保護するには、次の手順に従います。
 
 1. AEM作成者インスタンスで、https://&lt;ホスト>:&lt;ポート>/editor.html/content/site/&lt;サイト名>.htmlに移動します。
 
    >[!NOTE]
    >
-   >ローカライズされたサイトには移動しないでください。
+   >ローカライズされたサイトに移動しないでください。
 
-1. 「ページプロパ **[!UICONTROL ティ」に移動]**。
+1. 「 **[!UICONTROL ページプロパティ]**」に移動。
 
    ![page-properties-1](assets/page-properties-1.png)
 
@@ -70,7 +73,7 @@ jcrコンテンツとjsonを介した匿名ユーザーによるコミュニテ�
 
    ![site-authentication-1](assets/site-authentication-1.png)
 
-1. ログインページのパスを追加します。 For example, `/content/......./GetStarted`.
+1. ログ追加インページのパス。 例： `/content/......./GetStarted`
 1. ページを公開します。
 
 ## 登録済みメンバー {#enrolled-member}
@@ -110,7 +113,7 @@ This experience relies on users `Riley Taylor` and `Sidney Croft` being [created
 
 「Ski Lesson 1」を選択すると、イネーブルメントリソースの詳細ページが表示されます。**
 
-From the details page, the member is able to learn, [rate](rating.md) the lesson and add [comments](comments.md). メンバーのアクティビティは、サイトの「新機能」セクションに反映されます。
+From the details page, the member is able to learn, [rate](rating.md) the lesson and add [comments](comments.md). メンバーのアクティビティはすべて、サイトの新機能セクションに反映されます。
 
 イネーブルメントリソースとのインタラクションは、オーサー環境からアクセスできるレポートセクションに表示されます。
 
@@ -136,7 +139,7 @@ Sidney Croft（sidney／password）としてログインおよびログインし
 
 ![chlimage_1-439](assets/chlimage_1-439.png)
 
-### 最新情報 {#what-s-new}
+### 新機能 {#what-s-new}
 
 The `What's New` menu item is the title given the [activity stream function](functions.md#activity-stream-function) in this community site&#39;s structure.
 
@@ -157,11 +160,11 @@ Once signed in, notice there is a new menu item, `Administration`, which appears
 
 ![chlimage_1-441](assets/chlimage_1-441.png)
 
-ホームページは、1 番目のメニュー項目として定義されている割り当てページです。Quinは、モデレーターおよびイネーブルメントリソースの連絡先で、イネーブルメントリソースまたは学習パスに登録されていなかったため、表示するものはありません。
+ホームページは、1 番目のメニュー項目として定義されている割り当てページです。Quinは、モデレーターで有効化リソースの連絡先で、有効化リソースや学習パスに登録されていなかったため、表示するものはありません。
 
 ### Administration {#administration}
 
-2人の学習者によるアクティビティがあり、モデレートコンソ `Riley Taylor` ールにア `Sidney Croft. By s`クセ `Administration`スするためのリンクを選択すると、Quinは一括モデレートコンソールを使用して [投稿をモデレートできます](moderation.md) 。
+2人の学習者によるアクティビティと、モデレートコンソールにアクセスするた `Riley Taylor` めの `Sidney Croft. By s`リンクを `Administration`[](moderation.md) 選択すると、Quinは一括モデレートコンソールを使用して投稿をモデレートできます。
 
 サイドパネルのアイコンを選択すると、コミュニティコンテンツの検索に使用するフィルターの展開／折りたたみが切り替わります。
 
@@ -175,16 +178,16 @@ Once signed in, notice there is a new menu item, `Administration`, which appears
 
 On author, navigate to the **Communities,[Resources console](resources.md)**, where the enablement resources are managed, and after selecting a community site, it is possible to generate reports for
 
-* すべてのイネーブルメントリソースと学習パス
-* 1つの特定の実施可能リソースまたは学習パス
+* すべての有効化リソースと学習パス
+* 有効化に関する1つのリソースまたは学習パス
 
 Navigate to the **Communities,[Reports console](reports.md)**, and generate reports according to
 
-* 実施可能なリソースと学習パスへの割り当て
+* 有効化リソースと学習パスの割り当て
 * 特定の期間におけるコミュニティサイトへの投稿
-* 特定の期間におけるコミュニティサイトの表示（サイト訪問）
+* 特定の期間のコミュニティサイトの表示（サイト訪問）
 
-* 投稿と表示は、すべてのコンテンツに対して行うことも、特定のコンテンツに対して行うこともできます。
+* 投稿や表示は、すべてのコンテンツに対して、または特定のコンテンツに対して行うことができます。
 
    * フォーラム
    * フォーラムトピック
@@ -202,7 +205,7 @@ Navigate to the **Communities,[Reports console](reports.md)**, and generate repo
 * 作成者
 * 管理者権限でサインイン
 * Navigate from the main menu to **[!UICONTROL Communities > Resources]**
-* サイトの `Enablement Tutorial` 選択
+* サイトの選択 `Enablement Tutorial`
 * Select the `Report`icon for a summary of all Resources
 * Select a Resource and then the `Report`icon for a report on that Resource
 
@@ -230,7 +233,7 @@ Adobe Analytics のデータを表示するには時期尚早のようです。�
 * コミュニティサイトの&#x200B;**表示**
 * コミュニティサイトの&#x200B;**投稿**
 
-割り当てに関するレポートの場合：
+割り当てのレポートの場合：
 
 * 作成者
 * 管理者権限でサインイン
@@ -245,7 +248,7 @@ Adobe Analytics のデータを表示するには時期尚早のようです。�
 
 ![chlimage_1-445](assets/chlimage_1-445.png)
 
-ビューに関するレポートの場合：
+表示のレポートの場合：
 
 * 作成者
 * 管理者権限でサインイン
@@ -254,7 +257,7 @@ Adobe Analytics のデータを表示するには時期尚早のようです。�
 
 * Select **[!UICONTROL Content Type]** (select `all`)
 
-* 日付範囲 **[!UICONTROL の選択]** (選択 `Last 7 days`)
+* **[!UICONTROL 日付範囲の選択]** (選択 `Last 7 days`)
 
 * Select **[!UICONTROL Generate]**
 
