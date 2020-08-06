@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 955a1876-4882-4926-82e9-846bc8bb332c
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '599'
+ht-degree: 53%
 
 ---
 
@@ -31,7 +34,7 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
 
 ![chlimage_1-53](assets/chlimage_1-53.png)
 
-グループ機能は、グループのインスタンスが作成されるフォルダーとして表示されます。グループフォルダーを選択して、開きます。公開時に作成されたグループが表示されます。
+グループ機能は、グループのインスタンスが作成されるフォルダーとして表示されます。グループフォルダーを選択して、開きます。公開時に作成されたグループは表示されます。
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
@@ -48,9 +51,10 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
    * コミュニティグループのルート：デフォルトのまま&#x200B;**
    * 追加の使用可能なコミュニティグループの言語：プルダウンメニューを使用して、使用可能なコミュニケーショングループの言語を選択します。このメニューには、親コミュニティサイトを作成できる言語がすべて表示されます。この中から言語を選択することで、1 回の手順で複数のロケールにグループを作成できます。指定した複数の言語で、それぞれのコミュニティサイトのグループコンソールに同じグループが作成されます。
    * コミュニティグループ名：arts
-   * テンプレート：下に降りて～を選ぶ `Reference Group`
+   * テンプレート： 下に降りて～を選ぶ `Reference Group`
    *  `Next`
-      ![parentonestedgroup](assets/parenttonestedgroup.png)
+
+      ![parenttonestedgroup](assets/parenttonestedgroup.png)
 
 引き続き、他のパネルで以下の値を設定します。
 
@@ -62,7 +66,7 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
       * 空のままにする（親サイトから継承）
    * **メンバーシップ**
       * use default `Optional Membership`
-   * **サムネイル**
+   * **サムネール**
       * `optional`
    *  `Next`
 * 「**[!UICONTROL 作成]**」を選択します。
@@ -83,17 +87,17 @@ The `groups` folder should now contain two groups (it may be necessary to refres
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
-The `arts` group should also contain a `groups` folder, but one that is empty and in which new groups can be created. アートグループフォルダーに移動し、3つのネストされたグループを作成し、それぞれ異なるメンバーシップ設定を持ちます。
+The `arts` group should also contain a `groups` folder, but one that is empty and in which new groups can be created. アートグループフォルダーに移動し、3つのネストされたグループを作成します。それぞれ異なるメンバーシップ設定になります。
 
 1. Visiual
    * タイトル: `Visual Arts`
-   * 名前: `visual`
+   * 名前：`visual`
    * テンプレート: `Reference Group`
    * Membership: select `Optional Membership`
 A public group, open to all members
 1. Auditory
    * タイトル: `Auditory Arts`
-   * 名前: `auditory`
+   * 名前：`auditory`
    * テンプレート: `Reference Group`
    * Membership: select `Required Membership`
 An open group, available for members to join
@@ -101,10 +105,10 @@ An open group, available for members to join
 1. History
 
    * タイトル: `Art History`
-   * 名前: `history`
+   * 名前：`history`
    * テンプレート: `Reference Group`
-   * Membership: select `Restricted Membership`
-A secret group, visible only to invited members as an example, invite [demo user](tutorials.md#demo-users) `emily.andrews@mailinator.com`
+   * メンバーシップ： 「 `Restricted Membership`秘密グループ」を選択します。例えば、招待されたメンバーにのみ表示され、招待を行います。 
+[デモユーザー](tutorials.md#demo-users) `emily.andrews@mailinator.com`
 
 ページを更新して、ネストされた 3 つのグループ（サブコミュニティ）すべてを表示します。
 
@@ -125,8 +129,8 @@ A secret group, visible only to invited members as an example, invite [demo user
 メインのコミュニティサイトを公開したら、以下のことが必要になります。
 
 * 各グループを個別に公開
-   * グループが発行されたことの確認を待っています
-* 親グループを公開してから、
+   * グループが公開されたことの確認を待っています
+* Publish parent group before publish any groups nested within
    * すべてのグループは、トップダウン方式で公開する必要があります。
 
 ![chlimage_1-59](assets/chlimage_1-59.png)
@@ -136,7 +140,7 @@ A secret group, visible only to invited members as an example, invite [demo user
 It is possible to experience the different groups when signed in, for example with the [demo users](tutorials.md#demo-users) used for
 
 * Art/History グループメンバー：emily.andrews@mailinator.com／password
-   * 制限付き（秘密）グループ、芸術/歴史が表示されます。
+   * 制限付き（秘密）グループ、アート/履歴が表示されます
    * オプションの（パブリック）グループを表示できます。
    * 制限付き（開いている）グループに参加できます
 * グループマネージャー：aaron.mcdonald@mailinator.com／password
