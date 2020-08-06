@@ -10,6 +10,9 @@ topic-tags: customization
 discoiquuid: 60d67c6b-5994-42ef-b159-ed6edf5cf9d4
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '476'
+ht-degree: 74%
 
 ---
 
@@ -33,7 +36,7 @@ Analytics が有効になっているアダプティブフォームでは次の�
    <td>formNam、formTitle、formInstance、source</td> 
   </tr> 
   <tr> 
-   <td>save</td> 
+   <td>保存</td> 
    <td>formName、formTitle、formInstance、panelName、source</td> 
   </tr> 
   <tr> 
@@ -77,7 +80,7 @@ You can evaluate value of *eventName *and *variableValueMap* arguments to change
 
 ### サンプル {#sample}
 
-In the following example, state for the *error* event of each *fieldName *attribute is maintained*. *このイベントは、再びエラーが発生した場合にのみ、Analyticsサーバーに送信されます。
+In the following example, state for the *error* event of each *fieldName *attribute is maintained*. *イベントは、再度エラーが発生した場合にのみAnalyticsサーバーに送信されます。
 
 ```
 case 'error':
