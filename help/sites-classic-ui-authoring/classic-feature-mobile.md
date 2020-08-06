@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 430a27b5-f344-404f-8bf8-0d91b49b605e
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '340'
+ht-degree: 92%
 
 ---
 
@@ -23,9 +26,9 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 >[!NOTE]
 >
->既存の標準サイトに基づいたモバイルサイトを作成するには、標準サイトのライブコピーを作成します(See [Creating a Live Copy for Different Channels](/help/sites-administering/msm-livecopy.md).)
+>既存の標準サイトに基づいたモバイルサイトを作成するには、標準サイトのライブコピーを作成します。(See [Creating a Live Copy for Different Channels](/help/sites-administering/msm-livecopy.md).)
 >
->AEM開発者は新しいデバイスグループを作成できます。 (See [Creating Device Group Filters.](/help/sites-developing/groupfilters.md))
+>AEM 開発者は、新しいデバイスグループを作成できます。(See [Creating Device Group Filters.](/help/sites-developing/groupfilters.md))
 
 次の手順を使用して、モバイルページをオーサリングします。
 
