@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 33c85af4-4c56-487a-ba60-55211cb9f72c
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 48%
 
 ---
 
@@ -27,7 +30,7 @@ Subscriptions are similar to [notifications](notifications.md) as members may su
 
 * 会員は、他の会員をフォローする場合は、引き受けることができない
 * The only action for members to take is to select `Email Subscriptions` when following
-* 電子メールの返信を設定すると、受信した電子メールに返信するだけで、メンバーはコンテンツを効果的に投稿できます
+* 電子メールの返信が設定されている場合、受信した電子メールに返信するだけで、メンバーは効果的にコンテンツを投稿できます。
 
 ### 要件 {#requirements}
 
@@ -51,13 +54,13 @@ Subscriptions are similar to [notifications](notifications.md) as members may su
 
 The **Follow** button will include the `Email Subscriptions` option only when a forum, QnA, or blog is configured to enable email subscriptions. このボタンが表示されます
 
-* 有効なフォーラム、QnAまたはブログのメイン機能ページ
+* 有効なフォーラム、QnA、ブログのメイン機能ページ
 
-   * この機能を使用するすべてのアクティビティに関する電子メールを送信します
+   * その機能を使用するすべてのアクティビティに対して電子メールを送信します
 
-* フォーラムトピック、QnA質問、ブログ記事などの特定のエントリ
+* フォーラムトピック、QnA質問、ブログ記事など、特定のエントリ
 
-   * 特定のエントリに対するアクティビティがある場合に電子メールを送信します
+   * 特定の参加者にアクティビティが発生した場合に電子メールを送信します
 
 ## 電子メールによる返信 {#reply-by-email}
 
