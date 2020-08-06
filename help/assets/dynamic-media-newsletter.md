@@ -2,14 +2,14 @@
 description: 'Experience League 提供の Dynamic Media ニュースレターは月刊ニュースレターです。Dynamic Media および Dynamic Media Classic をすばやく習得して価値の実現にすぐに着手できるように工夫されています。必要なものがすべて揃っているこのニュースレターでは、知識構築のための有益なリソースを利用できます。ハウツービデオやソリューション概要のほか、画像プリセット、ビューアプリセット、ビデオプロファイルといった主要な機能の紹介などです。 '
 keywords: dynamic media;newsletter;product updates;tips and tricks;events;customer success;blog;blogs;images;videos;features;capabilities
 seo-description: ビデオの使い方、ソリューションの概要、画像プリセット、ビューアプリセット、ビデオプロファイルなどの主な機能の紹介など、ナレッジビルディングリソースは、このワンストップショップニュースレターで入手できます。
-seo-title: 'AdobeDynamic Mediaニュースレター '
+seo-title: 'Adobeダイナミックメディアニュースレター '
 solution: Dynamic Media
 title: Dynamic Media ニュースレター
 translation-type: tm+mt
 source-git-commit: 787fcf312eabcb44cfe114b5b3b80341fa295637
 workflow-type: tm+mt
 source-wordcount: '1189'
-ht-degree: 95%
+ht-degree: 96%
 
 ---
 
