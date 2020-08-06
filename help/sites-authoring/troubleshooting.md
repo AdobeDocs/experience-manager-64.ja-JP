@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: da0a5644-2e1d-4394-a6aa-11bb41406ba6
 translation-type: tm+mt
 source-git-commit: a8e0a48466c046bf1f96ff240995b499818ed0a2
+workflow-type: tm+mt
+source-wordcount: '307'
+ht-degree: 100%
 
 ---
 
@@ -27,7 +30,7 @@ source-git-commit: a8e0a48466c046bf1f96ff240995b499818ed0a2
 >
 >管理者権限を持つユーザー、および AEM を使用して問題のトラブルシューティングをおこなうユーザーは、[AEM のトラブルシューティング（管理者向け）](/help/sites-administering/troubleshoot.md)に説明のあるトラブルシューティング方法を使用できます。十分な権限を持っていない場合は、AEM のトラブルシューティングに関してシステム管理者にお問い合わせください。
 
-## 古いページバージョンが公開されたサイト上にまだある {#old-page-version-still-on-published-site}
+## 公開されたサイト上に古いバージョンのページがまだある {#old-page-version-still-on-published-site}
 
 * **問題**：
 
@@ -37,12 +40,12 @@ source-git-commit: a8e0a48466c046bf1f96ff240995b499818ed0a2
 
    * いくつかの原因が考えられます。キャッシュ（ローカルブラウザーまたは Dispatcher のキャッシュ）が原因である場合がほとんどですが、レプリケーションキューに問題があることもあります。
 
-* **解決策**：
+* **ソリューション**:
 
    * これには、様々な原因が考えられます。
    * ページが正しくレプリケートされていることを確認します。ページのステータスや、必要に応じてレプリケーションキューの状態をチェックします。
    * ローカルブラウザーのキャッシュをクリアして、ページに再度アクセスします。
-   * ペー `?` ジURLの末尾に追加します。例：
+   * ページ URL の末尾に `?` を追加します。以下に例を示します。
 
       * `http://localhost:4502/sites.html/content?`
       *  これによって、ページが AEM から直接リクエストされ、Dispatcher がスキップされます。更新されたページを受け取った場合、Dispatcher のキャッシュをクリアする必要があることを表しています。
@@ -59,7 +62,7 @@ source-git-commit: a8e0a48466c046bf1f96ff240995b499818ed0a2
 
    * まれに、前のアクションがツールバーに影響を及ぼすことがあります。
 
-* **解決策**：
+* **解決策**:
 
    * ページを更新します。
 
