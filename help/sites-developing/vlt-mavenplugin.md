@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 943de371-0149-4307-be3a-b11c590b3451
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '3281'
+ht-degree: 81%
 
 ---
 
@@ -83,14 +86,14 @@ CRX または CQ サーバーにプロキシを使用するゴールでは、Mav
   <tr> 
    <td>failOnError</td> 
    <td>ブール型</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td>false</td> 
    <td>値 <code>true</code> を指定すると、エラーの発生時にビルドが失敗します。値 <code>false</code> を指定すると、ビルドの際にエラーが無視されます。</td> 
    <td>package を除くすべてのゴール</td> 
   </tr> 
   <tr> 
    <td>name</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>build：はい<br />
 install：いいえ<br />
 rm：はい</td> 
@@ -101,24 +104,24 @@ install：Maven プロジェクトの artifactId プロパティの値</td>
   </tr> 
   <tr> 
    <td>password</td> 
-   <td>文字列</td> 
-   <td>はい</td> 
+   <td>String</td> 
+   <td>可</td> 
    <td>admin</td> 
    <td>CRX サーバーでの認証に使用するパスワード。</td> 
    <td>package を除くすべてのゴール</td> 
   </tr> 
   <tr> 
    <td>serverId</td> 
-   <td>文字列</td> 
-   <td>いいえ</td> 
+   <td>String</td> 
+   <td>不可</td> 
    <td></td> 
    <td>認証用のユーザー名とパスワードの取得元のサーバー ID。</td> 
    <td>package を除くすべてのゴール</td> 
   </tr> 
   <tr> 
    <td>targetURL</td> 
-   <td>文字列</td> 
-   <td>はい</td> 
+   <td>String</td> 
+   <td>可</td> 
    <td>http://localhost:4502/<br />
 crx/packmgr/<br />
 service.jsp</td> 
@@ -128,7 +131,7 @@ service.jsp</td>
   <tr> 
    <td>timeout</td> 
    <td>int</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td>5</td> 
    <td>パッケージマネージャーサービスとの通信の接続タイムアウト（秒）。</td> 
    <td>package を除くすべてのゴール</td> 
@@ -136,15 +139,15 @@ service.jsp</td>
   <tr> 
    <td>useProxy</td> 
    <td>ブール型</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td>true</td> 
    <td>Maven 設定ファイルのプロキシ設定を使用するかどうかを指定します。A value of <code>true</code> causes the use of the first active proxy configuration found to proxy requests to the package manager. 値 false を指定すると、プロキシは使用されません。</td> 
    <td>package を除くすべてのゴール</td> 
   </tr> 
   <tr> 
    <td>userId</td> 
-   <td>文字列</td> 
-   <td>はい</td> 
+   <td>String</td> 
+   <td>可</td> 
    <td>admin</td> 
    <td>CRX サーバーで認証するユーザー名。</td> 
    <td>package を除くすべてのゴール</td> 
@@ -152,7 +155,7 @@ service.jsp</td>
   <tr> 
    <td>verbose</td> 
    <td>ブール型</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td>false</td> 
    <td>詳細ログを有効または無効にします。値 <code>true</code> を指定すると、詳細ログが有効になります。</td> 
    <td>package を除くすべてのゴール</td> 
@@ -162,7 +165,7 @@ service.jsp</td>
 
 ### build {#build}
 
-AEMインスタンスで既に定義されているコンテンツパッケージを構築します。
+AEMインスタンスで既に定義されているコンテンツパッケージをビルドします。
 
 >[!NOTE]
 >
@@ -174,7 +177,7 @@ build ゴール用のすべてのパラメーターについては、[共通パ�
 
 #### 例 {#example}
 
-次の例は、IPアドレス10.36.79.223を使用してAEMインスタンスにインストールされるworkflow-mbeanパッケージを構築します。目標は、次のコマンドを使用して実行します。
+次の例は、IPアドレス10.36.79.223を持つAEMインスタンスにインストールされるworkflow-mbeanパッケージを構築します。目標は次のコマンドを使用して実行されます。
 
 ```shell
 mvn content-package:build
@@ -226,57 +229,57 @@ In addition to the following parameters, see the descriptions in the [Common Par
   </tr> 
   <tr> 
    <td>artifact</td> 
-   <td>文字列</td> 
-   <td>いいえ</td> 
+   <td>String</td> 
+   <td>不可</td> 
    <td>Maven プロジェクトの artifactId プロパティの値</td> 
    <td>groupId:artifactId:version[:packaging] 形式の文字列</td> 
   </tr> 
   <tr> 
    <td>artifactId</td> 
-   <td>文字列</td> 
-   <td>いいえ</td> 
+   <td>String</td> 
+   <td>不可</td> 
    <td></td> 
    <td>インストールするアーティファクトの ID</td> 
   </tr> 
   <tr> 
    <td>groupId</td> 
-   <td>文字列</td> 
-   <td>いいえ</td> 
+   <td>String</td> 
+   <td>不可</td> 
    <td></td> 
    <td>インストールするアーティファクトのグループ ID</td> 
   </tr> 
   <tr> 
    <td>install</td> 
    <td>ブール型</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td>true</td> 
    <td>アップロード時にパッケージを自動的に解凍するかどうかを指定します。値 true を指定するとパッケージが解凍され、false を指定するとパッケージは解凍されません。</td> 
   </tr> 
   <tr> 
    <td>localRepository</td> 
    <td>org.apache.maven.<br /> artifact. repository.<br /> ArtifactRepository</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td>localRepository システム変数の値</td> 
    <td>ローカルの Maven リポジトリ。プラグイン設定を使用してこのパラメーターを設定することはできません。システムプロパティが常に使用されます。</td> 
   </tr> 
   <tr> 
    <td>packageFile</td> 
    <td>java.io.File</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td>Maven プロジェクト用に定義されるプライマリアーティファクト</td> 
    <td>インストールするパッケージファイルの名前</td> 
   </tr> 
   <tr> 
    <td>packaging</td> 
-   <td>文字列</td> 
-   <td>いいえ</td> 
+   <td>String</td> 
+   <td>不可</td> 
    <td>zip</td> 
    <td>インストールするアーティファクトのパッケージ化のタイプ</td> 
   </tr> 
   <tr> 
    <td>pomRemoteRepositories</td> 
    <td>java.util.List</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>Maven プロジェクト用に定義される remoteAtifactRepositories プロパティの値</td> 
    <td>プラグイン設定を使用してこの値を設定することはできません。この値はプロジェクトで指定する必要があります。 </td> 
   </tr> 
@@ -284,30 +287,30 @@ In addition to the following parameters, see the descriptions in the [Common Par
    <td>project</td> 
    <td>org.apache.maven.<br />
 project.MavenProject</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>プラグインが設定されるプロジェクト</td> 
    <td>Maven プロジェクト。このプロジェクトはプラグイン設定を格納するので、暗黙的なプロジェクトです。</td> 
   </tr> 
   <tr> 
    <td>repositoryId（POM）
 repoID（コマンドライン）<i> </i><br /><i> </i></td> 
-   <td>文字列</td> 
-   <td>いいえ</td> 
+   <td>String</td> 
+   <td>不可</td> 
    <td>temp</td> 
    <td>アーティファクトの取得元のリポジトリの ID。POM では repositoryID を使用します。コマンドラインでは repoID を使用します。</td> 
   </tr> 
   <tr> 
    <td>repositoryUrl（POM）
 repoURL（コマンドライン）<i> </i><br /><i> </i></td> 
-   <td>文字列</td> 
-   <td>いいえ</td> 
+   <td>String</td> 
+   <td>不可</td> 
    <td></td> 
    <td>アーティファクトの取得元のリポジトリの URL。POM では repositoryURL を使用します。コマンドラインでは repoURL を使用します。</td> 
   </tr> 
   <tr> 
    <td>version</td> 
-   <td>文字列</td> 
-   <td>いいえ</td> 
+   <td>String</td> 
+   <td>不可</td> 
    <td></td> 
    <td>インストールするアーティファクトのバージョン</td> 
   </tr> 
@@ -365,7 +368,7 @@ All parameters of the ls goal are described in the [Common Parameters](#common-p
 
 #### 例 {#example-2}
 
-次の例は、IPアドレス10.36.79.223を持つAEMインスタンスにインストールされるパッケージを示しています。目標は、次のコマンドを使用して実行します。
+次の例では、AEMインスタンスにインストールされたパッケージのIPアドレスが10.36.79.223のリストを行います。目標は、次のコマンドを使用して実行されます。
 
 ```shell
 mvn content-package:ls
@@ -406,7 +409,7 @@ All parameters of the rm goal are described in the [Common Parameters](#common-p
 
 #### 例 {#example-3}
 
-次の例では、IPアドレス10.36.79.223を持つAEMインスタンスにインストールされているWorkflow-mbeanパッケージを削除します。目標は、次のコマンドを使用して実行します。
+次の例では、AEMインスタンスにインストールされ、IPアドレス10.36.79.223を持つWorkflow-mbeanパッケージを削除します。目標は次のコマンドを使用して実行されます。
 
 ```shell
 mvn content-package:rm
@@ -448,7 +451,7 @@ All parameters of the uninstall goal are described in the [Common Parameters](#c
 
 #### 例 {#example-4}
 
-次の例では、IPアドレス10.36.79.223を持つAEMインスタンスにインストールされているworkflow-mbeanパッケージをアンインストールします。目標は、次のコマンドを使用して実行します。
+次の例では、IPアドレス10.36.79.223を持つAEMインスタンスにインストールされたworkflow-mbeanパッケージをアンインストールします。目標は次のコマンドを使用して実行されます。
 
 ```shell
 mvn content-package:uninstall
@@ -501,84 +504,84 @@ In addition to the following parameters, see the description of the `name` param
   <tr> 
    <td>archive</td> 
    <td>org.apache.maven.<br /> archiver.<br /> MavenArchiveConfiguration</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td></td> 
    <td>使用するアーカイブ設定。<a href="https://maven.apache.org/shared/maven-archiver/index.html">Maven Archiver のドキュメント</a>を参照してください。</td> 
   </tr> 
   <tr> 
    <td>builtContentDirectory</td> 
    <td>java.io.File</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>Maven ビルドの出力ディレクトリの値</td> 
    <td>パッケージに含めるコンテンツを格納するディレクトリ</td> 
   </tr> 
   <tr> 
    <td>dependencies</td> 
    <td>java.util.List</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td></td> 
    <td></td> 
   </tr> 
   <tr> 
    <td>embeddedTarget</td> 
    <td>java.lang.String</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td></td> 
    <td></td> 
   </tr> 
   <tr> 
    <td>embeddeds</td> 
    <td>java.util.List</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td></td> 
    <td></td> 
   </tr> 
   <tr> 
    <td>failOnMissingEmbed</td> 
    <td>ブール型</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>false</td> 
-   <td>値がtrueの場合、埋め込みアーティファクトがプロジェクトの依存関係に見つからないと、ビルドが失敗します。値offleを指定すると、ビルドでエラーが無視されます。</td> 
+   <td>値がtrueの場合、埋め込みアーティファクトがプロジェクトの依存関係に見つからない場合、ビルドは失敗します。 値がoffleの場合、ビルドでエラーが無視されます。</td> 
   </tr> 
   <tr> 
    <td>filterSource</td> 
    <td>java.io.File</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td></td> 
    <td>ワークスペースフィルターのソースを指定するファイル。設定で指定され、embeddeds または subpackages を使用して挿入されるフィルターはファイルコンテンツと結合されます。</td> 
   </tr> 
   <tr> 
    <td>filters</td> 
    <td>com.day.jcr.<br /> vault.maven.pack.impl.<br /> DefaultWorkspaceFilter</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td></td> 
    <td>パッケージのコンテンツを定義するフィルター要素を格納します。実行すると、filter.xml ファイルにフィルターが追加されます。以下の「フィルターの使用」の節を参照してください。</td> 
   </tr> 
   <tr> 
    <td>finalName</td> 
    <td>java.lang.String</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>Maven プロジェクト（build フェーズ）で定義される finalName</td> 
    <td>生成されるパッケージの ZIP ファイルの名前（ファイル拡張子 .zip を除く）</td> 
   </tr> 
   <tr> 
    <td>group</td> 
    <td>java.lang.String</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>Maven プロジェクトで定義される groupID</td> 
    <td>生成されるコンテンツパッケージのグループ ID。この値は、コンテンツパッケージのターゲットインストールパスに含まれます。</td> 
   </tr> 
   <tr> 
    <td>outputDirectory</td> 
    <td>java.io.File</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>Maven プロジェクトで定義されるビルドディレクトリ</td> 
    <td>コンテンツパッケージが保存されるローカルディレクトリ</td> 
   </tr> 
   <tr> 
    <td>prefix</td> 
    <td>java.lang.String</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td></td> 
    <td></td> 
   </tr> 
@@ -586,14 +589,14 @@ In addition to the following parameters, see the description of the `name` param
    <td>project</td> 
    <td>org.apache.maven.<br />
 project.MavenProject</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td></td> 
    <td>Maven プロジェクト。</td> 
   </tr> 
   <tr> 
    <td>properties</td> 
    <td>java.util.Map</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td></td> 
    <td>properties.xml ファイルで設定できる追加のプロパティ。これらのプロパティで定義済みの次のプロパティを上書きすることはできません。 
     <ul> 
@@ -613,28 +616,28 @@ project.MavenProject</td>
   <tr> 
    <td>requiresRoot</td> 
    <td>ブール型</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>false</td> 
    <td>パッケージにルートが必要かどうかを定義します。これは、properties.xml ファイルの &lt;code&gt;requiresRoot&lt;/code&gt; プロパティになります。</td> 
   </tr> 
   <tr> 
    <td>subPackages</td> 
    <td>java.util.List</td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
    <td></td> 
    <td></td> 
   </tr> 
   <tr> 
    <td>version</td> 
    <td>java.lang.String</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>Maven プロジェクトで定義されるバージョン</td> 
    <td>コンテンツパッケージのバージョン</td> 
   </tr> 
   <tr> 
    <td>workDirectory</td> 
    <td>java.io.File</td> 
-   <td>はい</td> 
+   <td>可</td> 
    <td>Maven プロジェクト（build フェーズ）で定義されるディレクトリ</td> 
    <td>パッケージに含めるコンテンツを格納するディレクトリ</td> 
   </tr> 
@@ -643,7 +646,7 @@ project.MavenProject</td>
 
 #### フィルターの使用 {#using-filters}
 
-パッケージのコンテンツを定義するには、フィルター要素を使用します。フィルターは、パッケージのファイル内のworkspaceFilter要素 `META-INF/vault/filter.xml` に追加されます。
+パッケージのコンテンツを定義するには、フィルター要素を使用します。フィルターは、パッケージの `META-INF/vault/filter.xml` ファイル内のworkspaceFilter要素に追加されます。
 
 次に示すフィルターの例は、使用する XML 構造を示しています。
 
@@ -666,7 +669,7 @@ project.MavenProject</td>
 `mode` 要素は、パッケージが読み込まれる際にリポジトリ内のコンテンツがどのような影響を受けるかを定義します。使用できる値は次のとおりです。
 
 * **merge：**&#x200B;まだリポジトリに含まれていないパッケージのコンテンツが追加されます。パッケージ内およびリポジトリ内のコンテンツは変更されません。コンテンツがリポジトリから削除されることはありません。
-* **** 置換：リポジトリにないパッケージ内のコンテンツがリポジトリに追加されます。リポジトリ内のコンテンツは、パッケージ内の一致するコンテンツに置き換えられます。コンテンツがパッケージに存在しない場合は、リポジトリからコンテンツが削除されます。
+* **置換：** リポジトリにないパッケージ内のコンテンツはリポジトリに追加されます。 リポジトリ内のコンテンツは、パッケージ内の一致するコンテンツに置き換えられます。 コンテンツがパッケージに存在しない場合、コンテンツはリポジトリから削除されます。
 * **update：**&#x200B;リポジトリに含まれていないパッケージのコンテンツがリポジトリに追加されます。リポジトリ内のコンテンツは、パッケージ内の一致するコンテンツに置き換えられます。既存のコンテンツはリポジトリから削除されます。
 
 フィルターに `mode` 要素が含まれていない場合は、デフォルト値 `replace` が使用されます。
@@ -748,10 +751,10 @@ Instead of expressing the `package` goal in the plugin `executions` section, you
 
 | 名前 | タイプ | 必須 | デフォルト値 | 説明 |
 |---|---|---|---|---|
-| detail | ブール型 | いいえ | false | 各ゴールに設定可能なプロパティをすべて表示するかどうかを指定します。値 true を指定すると、設定可能なプロパティがすべて表示されます。 |
-| goal | 文字列 | いいえ |  | ヘルプを表示するゴールの名前。値を指定しない場合は、すべてのゴールのヘルプが表示されます。 |
-| indentSize | int | いいえ | 2 | 各レベルのインデントに使用するスペースの数。値を指定する場合は、正の値を使用してください。 |
-| lineLength | int | いいえ | 80 | 表示行の最大長。値を指定する場合は、正の値を使用してください。 |
+| detail | ブール型 | 不可 | false | 各ゴールに設定可能なプロパティをすべて表示するかどうかを指定します。値 true を指定すると、設定可能なプロパティがすべて表示されます。 |
+| goal | String | 不可 |  | ヘルプを表示するゴールの名前。値を指定しない場合は、すべてのゴールのヘルプが表示されます。 |
+| indentSize | int | 不可 | 2 | 各レベルのインデントに使用するスペースの数。値を指定する場合は、正の値を使用してください。 |
+| lineLength | int | 不可 | 80 | 表示行の最大長。値を指定する場合は、正の値を使用してください。 |
 
 ## Content Package Maven Plugin の入手 {#obtaining-the-content-package-maven-plugin}
 
@@ -902,7 +905,7 @@ AEMプロジェクトの生成には、いくつかのMavenアーキタイプを
 
 >[!NOTE]
 >
->Apache Slingプロジェクトには、AEM開発に役立つアーキタイプも用意されています。 These are documented at [https://sling.apache.org/site/maven-archetypes.html](https://sling.apache.org/documentation/development/maven-archetypes.html).
+>Apache Slingプロジェクトは、AEM開発で役立つオファーアーキタイプも含みます。 These are documented at [https://sling.apache.org/site/maven-archetypes.html](https://sling.apache.org/documentation/development/maven-archetypes.html).
 
 各アーキタイプでは以下の項目を生成します。
 
@@ -924,11 +927,11 @@ Maven アーキタイププラグインは、シェルまたはコマンドプ�
 
 生成されるPOMファイルには、コードのコンパイル、バンドルの作成、パッケージ内のAEMへのデプロイを行うコマンドが含まれます。 The `groupID`, `artifactId`, `version`, and `name` properties of the Maven project are automatically populated using the values that you provide to the Maven `archetype:generate` interactive prompt.
 
-生成されたpom.xmlファイルでは、次のデフォルト値を変更できます。
+生成されたpom.xmlファイルで次のデフォルト値を変更できます。
 
-* CQサーバー名またはIPアドレス：デフォルト値はです `localhost`。 下の要 `crx.host` 素にこの値 `project/properties` が含まれています。
+* CQサーバーの名前またはIPアドレス： デフォルト値はで `localhost`す。 下の `crx.host` 要素には、この値が含ま `project/properties` れています。
 
-* CQサーバーのポート番号：デフォルト値はです `4502`。 下の要 `crx.port` 素にこの値 `project/properties` が含まれています。
+* CQサーバーのポート番号： デフォルト値はで `4502`す。 下の `crx.port` 要素には、この値が含ま `project/properties` れています。
 
 * Content Package Maven Plugin のバージョン：`version` の `artifactId` と共に、プラグインの `content-package-maven-plugin` 要素の内容として最新バージョンを使用します。デフォルト値は `0.0.24` です。
 
@@ -940,11 +943,11 @@ Maven アーキタイププラグインは、シェルまたはコマンドプ�
 
 1. テキストエディターで pom.xml ファイルを開き、必要に応じてデフォルト値を編集します。
 1. 生成されたフォルダーにリソースを配置します。
-1. コマンドを入 `mvn clean install` 力します。
+1. コマンドを入力し `mvn clean install` ます。
 
 ### simple-content-package-archetype {#simple-content-package-archetype}
 
-単純なAEMアプリケーションのリソースのインストールに適したMavenプロジェクトを作成します。 The folder structure is that used below the `/apps` folder of the AEM repository. POMは、フォルダーに配置するリソースをパッケージ化し、AEMインスタンスにパッケージをインストールするためのコマンドを定義します。
+簡単なAEMアプリケーションのリソースのインストールに適したMavenプロジェクトを作成します。 The folder structure is that used below the `/apps` folder of the AEM repository. POMは、フォルダーに配置するリソースをパッケージ化し、AEMインスタンスにパッケージをインストールするためのコマンドを定義します。
 
 **アーキタイプアーティファクトのプロパティ：**
 
@@ -1064,7 +1067,7 @@ AEMアプリケーションを開発し、リソースをサーバーにイン�
 * artifactID: `${artifactID}-bundle`.
 * Bundle-SymbolicName: `${groupId}.${artifactId}-bundle`.
 
-`${artifactID}` とは、 `${groupId}` アーキタイプの実行時にこれらのパラメーターに指定する値です。
+`${artifactID}` および `${groupId}` は、アーキタイプの実行時にこれらのパラメーターに指定する値です。
 
 The `content` folder contains the resources that are installed to the AEM instance. The value of artifactID is `${artifactID}multimodule-bundle`.
 
