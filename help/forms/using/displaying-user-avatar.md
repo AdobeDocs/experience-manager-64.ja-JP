@@ -11,13 +11,16 @@ topic-tags: forms-workspace
 discoiquuid: aec03ea5-17a6-4775-92cb-2ad361895fdf
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 80%
 
 ---
 
 
 # ユーザーアバターの表示 {#displaying-the-user-avatar}
 
-ログインユーザーのアバターは、AEM Forms Workspace の右上隅に表示されます。また、組織階層の直接レポートのアバターはマネージャービューに表示されます。AEM Forms Workspaceを設定して、LDAPサーバーなどのデータベースからユーザー画像を選択できます。
+ログインユーザーのアバターは、AEM Forms Workspace の右上隅に表示されます。また、組織階層の直接レポートのアバターはマネージャービューに表示されます。AEM Formsワークスペースを設定して、データベースからユーザー画像（LDAPサーバーなど）を選択できます。
 
 >[!NOTE]
 >
@@ -81,5 +84,5 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
    </component>
    ```
 
-1. Workbench を介して DSC をデプロイします。サービスを再 `ProcessManagementClientSessionService` 起動します。
+1. Workbench を介して DSC をデプロイします。サー `ProcessManagementClientSessionService` ビスを再起動します。
 1. ブラウザを更新するか、またはユーザーとログアウトして再度ログインする必要がある場合があります。
