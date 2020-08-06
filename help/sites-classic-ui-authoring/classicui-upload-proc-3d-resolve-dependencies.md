@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 14754023-e7c4-4dc5-a9d8-408b81861d95
 translation-type: tm+mt
 source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+workflow-type: tm+mt
+source-wordcount: '398'
+ht-degree: 56%
 
 ---
 
@@ -42,6 +45,7 @@ source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
 
       1. 見つからなかったパスとファイル名を書き留めます。
       1. プロパティページの右上隅にある「**[!UICONTROL 閉じる]**」をタップします。
+
    After the files are uploaded return to **[!UICONTROL View Properties > Dependencies]** page. 新たにアップロードされたアセットが、参照されているファイルとして正しく一覧表示されるようになります。
 
    * **[!UICONTROL 依存関係を無視する]**。
