@@ -9,6 +9,9 @@ topic-tags: develop
 discoiquuid: 93961c9c-b46c-4233-b070-7343245255d1
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '710'
+ht-degree: 88%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 
 ## メタデータへのフォーム要素の追加 {#adding-form-elements-to-metadata}
 
-メタデータに要素を追加するには、次の手順を実行します。
+次の手順を実行して、メタデータに要素を追加します。
 
 1. アダプティブフォームを編集モードで開きます。
 
@@ -41,7 +44,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
    `(agebox.value >= 21) ? true : false`
 
    ![メタデータスクリプト](assets/add-element-metadata.png)
-   **** 図：「メタ *データ」タブに入力されたスクリプト*
+   **図：** *「メタデータ」タブで入力されたスクリプト*
 
 1. 「**OK**」をクリックします。
 
