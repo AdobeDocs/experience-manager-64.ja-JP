@@ -1,5 +1,5 @@
 ---
-title: コンテンツフラグメントモデルのデータタイプのカスタマイズは、公開しないで削除しないでください。
+title: コンテンツフラグメントモデルのデータタイプをカスタマイズする場合は、公開しないでDELETEしないでください。
 seo-title: コンテンツフラグメントモデルのデータタイプのカスタマイズ
 description: コンテンツフラグメントモデルで使用されるデータタイプはカスタマイズできます。
 seo-description: コンテンツフラグメントモデルで使用されるデータタイプはカスタマイズできます。
@@ -10,17 +10,20 @@ discoiquuid: a8b8155c-852c-4d16-b59b-7e19527c2bd4
 noindex: true
 translation-type: tm+mt
 source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
+workflow-type: tm+mt
+source-wordcount: '1642'
+ht-degree: 2%
 
 ---
 
 
-# コンテンツフラグメントモデルのデータタイプのカスタマイズは、公開しないで削除しないでください。{#do-not-publish-but-do-not-delete-customizing-data-types-for-content-fragment-models}
+# コンテンツフラグメントモデルのデータタイプをカスタマイズする場合は、公開しないでDELETEしないでください。{#do-not-publish-but-do-not-delete-customizing-data-types-for-content-fragment-models}
 
-[コンテンツフラグメントは](/help/assets/content-fragments.md) 、コンテンツフラグメント [モデルに基づいていま](/help/assets/content-fragments-models.md)す。 これらのモデルは、様々なデータタイプ [の要素](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) から構築されます。
+[コンテンツフラグメント](/help/assets/content-fragments.md) は、 [コンテンツフラグメントモデルに基づいています](/help/assets/content-fragments-models.md)。 これらのモデルは、様々なデータタイプの [要素](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) 、
 
-1行テキスト、複数行リッチテキスト、数値フィールド、ブールセレクター、ドロップダウンメニューオプション、日時など、様々なデータタイプが標準で使用できます。 AEMユーザーは、対応するフラグメントの編集上の意図に基づいてデータタイプを選択できます。 これにより、単純なテキストモデルを様々な種類のコンテンツを持つ複雑なモデルや、関連するフラグメントオーサリングエクスペリエンスに導くことができます。
+1行テキスト、複数行リッチテキスト、数値フィールド、ブールセレクター、ドロップダウンメニューオプション、日付と時間など、あらかじめ用意されている様々なデータタイプを利用できます。 AEMユーザーは、対応するフラグメントの編集上の意図に基づいてデータタイプを選択できます。 これにより、単純なテキストモデルから、様々な種類のコンテンツを持つ複雑なモデルや、関連するフラグメントオーサリング体験に至るまで、様々な方法で作業を進めることができます。
 
-データ型は、リポジトリ内の特定の [場所に保持されるノード](#properties) ・プロパ [ティの組み合わせで定義されます](#locations-in-the-repository)。 独自のデータ型とfieldPropertiesを作 [成すること](#creating-your-data-type) もで [きます](#creating-your-own-fieldproperties-property)。
+データ型は、リポジトリ内の [特定の場所に保持されるノードプロパティの](#properties) 組み合わせによって定義されます [](#locations-in-the-repository)。 独自の [データ型](#creating-your-data-type) 、および [fieldPropertiesを作成することもできます](#creating-your-own-fieldproperties-property)。
 
 <!-- Please uncomment when files are used>
 >[!NOTE]
@@ -30,26 +33,26 @@ source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
 
 ## リポジトリ内の場所 {#locations-in-the-repository}
 
-そのまま使用できるすべてのデータ型は、以下の場所で宣言されます。
+そのまま使用できるすべてのデータ型は、次の場所で宣言されます。
 
 `/libs/settings`
 
-新しいデータ型を追加するには、次の節に示すようにノード構造をオーバーレイしま `/apps`す。
+新しいデータ型を追加するには、次の手順に従ってノード構造をオーバーレイし `/apps`ます。
 
 `/apps/settings/dam/cfm/models/formbuilderconfig/datatypes/items`
 
 >[!CAUTION]
 >
->You must not change anything in the `/libs` path.
+>`/libs` パス内の設定は一切変更しないでください。
 >
->次回のアップグレード、またはサービスまたは修正パックのインストール時に変更される可能性のある項目です。
+>次回のアップグレード時、またはサービスまたは修正パックのインストール時に変更される可能性がある項目です。
 
 ## プロパティ {#properties}
 
-ノードのプロパティは、データ型を定義するために使用されます。
+ノードプロパティは、データ型の定義に使用されます。
 
 * [データタイプのプロパティ](#data-type-properties)
-* およびそのfieldProperties内 [で](#fieldproperties)
+* とその [fieldProperties内](#fieldproperties)
 
 ### データタイプのプロパティ {#data-type-properties}
 
@@ -57,9 +60,9 @@ source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
 
 `/libs/settings/dam/cfm/models/formbuilderconfig/datatypes/items`
 
-の下の各ノードに `/items` は、モデルエディター内でのそのデータ型の表現方法を定義するプロパティがあります。
+の各ノード `/items` には、そのデータ型をモデルエディタ内でどのように表すかを定義するプロパティがあります。
 
-モデルエディターにデータ型を表示するには、次のすべてのプロパティが必要です。
+データタイプがモデルエディターに表示されるには、次のプロパティがすべて存在する必要があります。
 
 * `fieldIcon`
 
@@ -71,36 +74,36 @@ source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
 
 * `fieldResourceType`
 
-   コンテンツフラグメント内のデータタイプをレンダリングするために使用されるSlingリソースタイプです。 様々な方法でレンダリングできるデータ型（例えば、単純なテキスト入力や複数行テキスト入力）の場合、このプロパティはすべてのリソース型を含む配列として作成する必要があります。 プロパ `renderasfield` ティーが自動的ににに追加さ `fieldProperties` れ、モデルに追加する必要のあるリソースタイプをユーザーが選択できるようになります。
+   コンテンツフラグメント内のデータ型をレンダリングするために使用されるSlingリソースタイプです。 様々な方法でレンダリングできるデータ型（例えば、単純なテキスト入力や複数行のテキスト入力）の場合、このプロパティは配列として作成し、すべてのリソース型を含める必要があります。 プロパティ `renderasfield` はに自動的に追加され `fieldProperties` 、モデルに追加する必要のあるリソースの種類をユーザーが選択できるようになります。
 
 * `fieldPropResourceType`
 
    データ型のデフォルトプロパティをレンダリングするために使用されるSlingリソースタイプです。
 
-   例えば、次のデータタイプの場合、
+   例えば、データタイプが次のようになるとします。
 
-   * 1行テキスト、コンポーネ `fieldPropResourceType` ントになりま `textfield` す。
-   * ブール値。コンポ `fieldPropResourceType` ーネントになり `checkbox` ます
+   * 1行のテキスト。これ `fieldPropResourceType` はコンポー `textfield` ネントです
+   * ブール値。これ `fieldPropResourceType` はコンポー `checkbox` ネントです
 
 * `fieldViewResourceType`
 
-   モデルを構築する際に、プレビューでデータタイプをレンダリングするために使用されるSlingリソースタイプです。 ユーザがデータタイプをモデルエディターの左側にドラッグすると、そこでレンダリングされ `fieldViewResourceType` るコンポーネントがプロパティに表示されます。 これは、コンポーネント全体をレンダリングしないが、モデルエディタのオーバーヘッドを最小限に抑える代わりにレンダリングする場合に使用します。
+   モデルを構築する際に、プレビュー内でデータ型をレンダリングするために使用されるSlingリソースタイプです。 ユーザーがデータタイプをモデルエディターの左側にドラッグした場合、 `fieldViewResourceType` プロパティはそこでレンダリングされるコンポーネントを表します。 これは、コンポーネント全体をレンダリングしたくないが、モデルエディタのオーバーヘッドを最小限に抑える代わりをレンダリングする場合に使用します。
 
 * `fieldTitle`
 
-   このデータ型のタイトルを定義するプロパティです。 例えば、コンポーネ **ントの1行テキスト** 、マルチフィー `textfield` ルドコンポ **ーネントの複数行テキスト** などです。
+   このデータ型のタイトルを定義するプロパティです。 例えば、コンポーネントに **は1行のテキスト** 、マルチフィールドコンポーネントには `textfield` 1行のテキスト **** 、
 
 * `valueType`
 
-   これは、データ型が内部に保存された場合に返される値の型です。 「マッピ [ング](#mappings)」を参照。
+   これは、データ型が内部的に格納されたときに返す値の型です。 「 [マッピング](#mappings)」を参照してください。
 
 * `renderType`
 
-   これは、データタイプの内部表現です。 UIコンポーネン `valueType` トに接続します。 「マッピ [ング](#mappings)」を参照。
+   これは、データタイプの内部表現です。 UIコンポーネント `valueType` に接続します。 「 [マッピング](#mappings)」を参照してください。
 
 * `listOrder`
 
-   各データ型には、リスト内での順序を表す値が必要です。 これは、モデルエディターを保存する際に、様々なフィールド（ドラッグ&amp;ドロップで追加/移動）の正しい順序を保証するために使用します。 この値は整数である必要があり、昇順で番号を割り当てることをお勧めします。 新しいデータ型を作成する場合は、リスト内の最後のデータ型（データ型に存在する値の最も高い値）に基づいて値を割り当てるこ `listOrder` とをお勧めします。
+   各データ型には、リスト内での順序を表す値が必要です。 これは、モデルエディタを保存する際に、様々なフィールドの順序（ドラッグ&amp;ドロップで追加/移動）を正しく設定するために使用します。 この値は整数にする必要があり、昇順に番号を割り当てることをお勧めします。 新しいデータ型を作成する場合は、リスト内の最後のデータ型に基づいて値を割り当てることをお勧めします(データ型に存在する `listOrder` 値の最大値)。
 
 #### マッピング {#mappings}
 
@@ -127,7 +130,7 @@ source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
    <td>数値</td> 
   </tr> 
   <tr> 
-   <td>Number（倍精度浮動小数点数）</td> 
+   <td>数値(重複/浮動小数点)</td> 
    <td>double</td> 
    <td>数値</td> 
   </tr> 
@@ -143,8 +146,8 @@ source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
   </tr> 
   <tr> 
    <td>列挙</td> 
-   <td>文字列/長</td> 
-   <td>列挙</td> 
+   <td>string/long</td> 
+   <td>定義済みリスト</td> 
   </tr> 
   <tr> 
    <td>タグ</td> 
@@ -156,7 +159,7 @@ source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
 
 >[!NOTE]
 >
->複数の値を持つタイプ( `string`例え `long`ば、その他)もあります。 この場合、レンダリングと編集に使用されるコンポーネントは、通常、マルチフィールドコンポーネント( `granite/ui/components/coral/foundation/form/multifield`)でラップされます。 例外はタグで、編集コンポーネントが正しくレンダリングを行います。
+>複数の値を持つタイプもあります( `string`例えば、 `long`その他)。 この場合、レンダリングと編集に使用されるコンポーネントは、通常、マルチフィールドコンポーネント( `granite/ui/components/coral/foundation/form/multifield`)でラップされます。 例外はタグです。タグは、編集コンポーネントが正しくレンダリングする役割を持ちます。
 
 ### fieldProperties {#fieldproperties}
 
@@ -164,102 +167,102 @@ source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
 
 * `base`
 
-   これは、すべてのコンポーネントの基本 `fieldProperties` です。 その定義は下にある `/libs/dam/cfm/models/editor/components/datatypeproperties/base`。
+   これは、すべてのコンポー `fieldProperties` ネントの基本です。 その定義は下にある `/libs/dam/cfm/models/editor/components/datatypeproperties/base`。
 
-   変数が含まれ、その後で `fieldRoot`入力を作成し `fieldProperties` て正しいパスを取得する際に使用できます。
+   変数が含まれ `fieldRoot`ます。その後で、入力を作成して正しいパスを取得する際に使用で `fieldProperties` きます。
 
-   例：フィールドラベルの正しいパス **を取得するには** 、これが属するコンポーネントを識別するためのキーが必要です。このフィールドの入力は `fieldRoot` +です `<*fieldLabel*>`
+   例： フィールド **ラベルの正しいパスを取得するには** 、これが属するコンポーネントを識別するためのキーが必要です。このフィールドの入力は `fieldRoot` +です `<*fieldLabel*>`
 
 * `checkboxfields`
 
-   ここでは、データタイプのデフォルトのチェッ `Boolean` クボックスと、Slingパラメーターおよびが追加 `checked@Delete` されま `checked@TypeHint`す。
+   ここでは、 `Boolean` データタイプのデフォルトのチェックボックスと、Slingパラメーター `checked@Delete` と `checked@TypeHint`が追加されます。
 
 * `datepickerfields`
 
-   日付選択コンポーネントが機能するために必要な非表示の入力を追加するコンポーネント。 プロパティ、、、、お `defaultDateField`よびの `displayedFormat`作成が含ま `emptyText`れ `valueFormat`ます `minDate``maxDate`。
+   日付選択コンポーネントが機能するために必要な非表示の入力を追加するコンポーネントです。 プロパティ `defaultDateField`、、、、お `displayedFormat`よびの作成が含まれ `emptyText``valueFormat``minDate``maxDate`ます。
 
 * `datetimepickerfields`
 
-   これにより、とオプションを区別するた `Date&Time` めのデータ型の選択フィールド `Date` が追加 `Date&Time` されます。
+   これにより、 `Date&Time` データタイプに対して、とのオプションを区別する選択フィールド `Date` が追加され `Date&Time` ます。
 
 * `datevaluefield`
 
-   これにより、プロパティに日付選択が追加され、ユーザーがデータタイプのデフォルトを選択できるよ `Date&Time` うになります。
+   これによりプロパティに日付選択が追加され、ユーザーがデータタイプのデフォルトを選択できるようにな `Date&Time` ります。
 
 * `descriptionfield`
 
-   このコンポーネントは、複数行エディターで現在選択されているコンポーネントの説明を表す複数行のテキストフィールドを追加します。 各データタイププロパティの最後に、モデルエディターレンダラーによって自動的に追加されます。
+   このコンポーネントは、複数行エディターで現在選択されているコンポーネントの説明を表す複数行のテキストフィールドを追加します。 各データタイププロパティの最後に、モデルエディタレンダラーによって自動的に追加されます。
 
 * `labelfield`
 
-   フィールドラベルを持つこ `textfield` とができるデータ型のフィールドラベルを追加する入力を追加するコンポーネントです。
+   フィールドラベルを持つことのできるデータ型のフィールドラベルを追加する `textfield` 入力を追加するコンポーネント。
 
 * `maptopropertyfield`
 
-   このコンポーネントは、プ `Name` ロパティにフィールドを追加し、データ型の選択したコンポーネントに識別子を与えます。 すべてのデータ型に存在する必要があります。
+   このコンポーネントは、プロパティの `Name` フィールドを追加し、データ型の選択したコンポーネントに識別子を与えます。 この変数は、すべてのデータ型に存在する必要があります。
 
 * `maxlengthfield`
 
-   このプロパティを受け入れるデータ `maxLength` 型で使用するプロパティを追加するために使用します。 例えば、1行 **テキスト**、 **Number**、
+   このプロパティを受け入れるデータ型で使用する `maxLength` プロパティを追加するために使用されます。 例えば、 **1行テキスト**、 **数値**、
 
 * `multieditorfield`
 
-   これにより、複数行エディターが動作するのに必要なすべての非表示フィールドが追加されます。このフィールドは、 **Multi Line Text** （複数行テキスト）データ型で表されます。
+   これにより、複数行エディターが動作するのに必要なすべての非表示フィールドが追加されます。これは、 **複数行テキスト** データ型で表されます。
 
 * `mvfields`
 
-   複数フィールドコンポーネントを機能させるために必要なすべての非表示フィールドを追加するコンポーネント。 例えば、1行テキストデータ型の2番目のオ **プションの場合** 、 これは、マルチフィールドとしてレンダリングされるすべてのコンポーネントに対して追加する必要があります。
+   マルチフィールドコンポーネントの動作に必要なすべての非表示フィールドを追加するコンポーネント。 例えば、 **1行テキスト** データ型の2番目のオプションの場合、 これは、マルチフィールドとしてレンダリングされるすべてのコンポーネントに対して追加する必要があります。
 
 * `numbertypefield`
 
-   データ型として **Integer** または **Fraction** Number **Dataを選択するNumberデータ型の** オプションを選択し **** ます。
+   Number **データ型のNumber****データ型のオプションを選択します。Number** データ型の場合は、Integer **またはFraction****** を選択します。
 
 * `numbervaluefield`
 
-   [ `numberfield` Number **]の既定値セレクター** 。 `type.options` Enumeration **** データ型の入力オプションが追加されます。これは、選択ボックスコンポーネントの値を決定するために使用されます。
+   [ `numberfield` 数値 **** ]のデフォルト値セレクタ。これにより、 `type.options` 定義済みリスト **** データタイプの入力オプションが追加され、選択ボックスコンポーネントの値を決定するために使用されます。
 
 * `placeholderfield`
 
-   これは、コンポーネントのプロパティの入力として機能するテ `emptyText` キストフィールドです。 これは、プレースホルダーを受け入れるすべてのデータ型で使用する必要があります(あまり複雑ではありませんが、例：1行テ **キスト**、 **番号**、
+   これは、コンポーネントの `emptyText` プロパティの入力として機能するテキストフィールドです。 これは、プレースホルダーを受け入れるすべてのデータ型で使用する必要があります(あまり複雑ではありませんが、 (例： **1行テキスト**、 **数値**)。
 
 * `renderasfield`
 
-   これは、データタイプノードのプロパティに複数が存在する場合 `fieldResourceTypes` に自動的にレンダリングされるコンポーネントです。
+   これは、データタイプノードのプロパティに複数の要素が存在する場合 `fieldResourceTypes` に、自動的にレンダリングされるコンポーネントです。
 
 * `requiredfield`
 
-   これは、コンポーネントのプロパティを表 `required` すチェックボックスです。 ほとんどのコンポーネントがこのフ `required` ィールドを受け入れるので、このフィールドはほとんどのデータ型で使用できます。
+   これは、コンポーネントの `required` プロパティを表すチェックボックスです。 ほとんどのコンポーネントがこの `required` フィールドを受け入れるので、このフィールドはほとんどのデータ型で使用できます。
 
 * `tagsfields`
 
-   コンポーネントをレンダリングするために必要な入力を `tagfield` 追加するコンポーネントで、 **Tagsデータ型で使用されます** 。
+   コンポーネントをレンダリングするために必要な入力を追加するコンポーネント。 `tagfield` Tags **** データ型で使用されます。
 
 * `tagsroot`
 
-   コンポーネントのルートパスを設定す **るために** 、Tagsデータ型で使用されるパスピッ `tagsfield` カーです。
+   コンポー **ネントのルートパスを設定するために** Tags `tagsfield` データ型で使用されるパスピッカー。
 
 * `textfield`
 
-   このデータ型によっ `Boolean` て定義されるチェックボックスのフィールドラベルを設定するために、データ型によって使用されます。
+   このデータ型で定義されるチェックボックスのフィールドラベルを設定するために `Boolean` データ型で使用されます。
 
 * `textvaluefield`
 
-   Single Line Textデータ型のデフォ **ルト値プロパティ** 。
+   「 **1行テキスト** 」データ型のデフォルト値プロパティです。
 
-## データ型の作成 {#creating-your-data-type}
+## データタイプの作成 {#creating-your-data-type}
 
-独自のデータ型を作成するには、次の操作を行う必要があります。
+独自のデータ型を作成するには、次の操作が必要です。
 
 * [ノード構造の作成](#creating-the-node-structure)
 * [データ型のプロパティの定義](#defining-the-properties-for-your-data-type)
 
-その後、データ [型を使用できます](#using-your-data-type)。
+その後、データ型を [使用できます](#using-your-data-type)。
 
 You can also [create your own `fieldProperties`](#creating-your-own-fieldproperties-property).
 
-### ノード構造の作成 {#creating-the-node-structure}
+### Creating the Node Structure {#creating-the-node-structure}
 
-データタイプをオーバーレイするには、 `/apps` の下にノード構造を作成する必要があります。 まだ存在しない場合は、次を作成する必要があります。
+データタイプをオーバーレイするには、ノード構造 `/apps` をの下に作成する必要があります。 まだ存在しない場合は、次を作成する必要があります。
 
 1. まだ存在しない場合は、次を作成する必要があります。
 
@@ -280,63 +283,65 @@ You can also [create your own `fieldProperties`](#creating-your-own-fieldpropert
    >
    >`/cfm/models/formbuilderconfig/datatypes/items` は、nodetypesを指定して作成する必要があります。
 
-1. 新し `/items` いデータタイプを表す新しいノードを追加できます。
+1. 以下 `/items` に、新しいデータ型を表す新しいノードを追加できます。
 
    * Node Type: `nt:unstructured`
-   * 「プロパティ：詳しくは、 [データ型のプロパティの定義を参照してください。](#defining-the-properties-for-your-data-type)
+   * &quot;プロパティ： 「データ型のプロパティの [定義」を参照してください。](#defining-the-properties-for-your-data-type)
 
 ### データ型のプロパティの定義 {#defining-the-properties-for-your-data-type}
 
-1. 使用するデータ型に必要な [次のデータ型](#data-type-properties) ・プロパティの値を決定します。
+1. 使用するデータ型に必要な次の [データ型プロパティの値を決定します](#data-type-properties) 。
 
    * `fieldResourceType`
    * `fieldPropResourceType`
    * `fieldViewResourceType`
-   これらは、データ型のコンポーネントのレンダリング方法を定義します。 どんな要素でも構いません。独自のカスタムコンポーネントを含める(一致する一連のコンポーネントが必要 ` [fieldProperties](#fieldproperties)`です)。
 
-   適切な値を使用して、データ型のノード上でこれらのプロパティを定義します。
+   これらは、データ型のコンポーネントをレンダリングする方法を定義します。 どのような要素でも構いません。 独自のカスタムコンポーネントを含める(一致する一連のコンポーネントが必要 ` [fieldProperties](#fieldproperties)`)。
+
+   データ型のノード上で、適切な値を使用してこれらのプロパティを定義します。
 
 1. Determine the ` [fieldProperties](#fieldproperties)` to be used. これは、必要な属性またはプロパティに依存し `fieldResourceType` ます。
 
-   例えば、ラベル名、最大長 `granite/ui/components/coral/foundation/form/textfield`、プレースホルダ **ーテキスト************** 、初期設定値プロパティを持つ必要があります。
+   例えば、には、 `granite/ui/components/coral/foundation/form/textfield`ラベル名 **、**&#x200B;最大長 **、プレースホルダーテキスト**、デフォルト値プロパティを ******** 含める必要があります。
 
-   標準搭載のfieldPropertiesから選択するか、独自のプロパ [ティを作](#fieldproperties)成できます [](#creating-your-own-fieldproperties-property)。
+   標準搭載の [fieldPropertiesから選択するか](#fieldproperties)、独自のプロパティを [作成できます](#creating-your-own-fieldproperties-property)。
 
-   適切な値を使用して、データ型のノード上でこれらのプロパティを定義します。
+   データ型のノード上で、適切な値を使用してこれらのプロパティを定義します。
 
-1. 次のデータタイププロパティ [の値を決定します](#data-type-properties)。
+1. 次の [データタイププロパティの値を決定します](#data-type-properties)。
 
    * `fieldIcon`
    * `fieldTitle`
    * `renderType`
    * `valueType`
    * `listOrder`
-   適切な値を使用して、データ型のノード上でこれらのプロパティを定義します。
+
+   データ型のノード上で、適切な値を使用してこれらのプロパティを定義します。
 
 ### データタイプの使用 {#using-your-data-type}
 
-このノード構造を保存した後、すべてのプロパティが適用された状態で、モデルエディターで任意のモデルを開き、新しいデータ型を確認し、使用できます。
+このノード構造を保存すると、すべてのプロパティが適用された状態で、モデルエディタで任意のモデルを開き、新しいデータ型を確認し、使用できます。
 
 ## 独自のfieldPropertiesプロパティの作成 {#creating-your-own-fieldproperties-property}
 
-標準搭載のfieldPropertiesから選択するか、独自の [プロパティ](#fieldproperties)を作成できます。
+標準搭載の [fieldPropertiesから選択するか、独自の](#fieldproperties)fieldPropertiesを作成できます。
 
-1. 次の場所にコンポーネントを作成します。
+1. 次の場所でコンポーネントを作成します。
 
    `/apps/dam/cfm/models/editor/components/datatypeproperties/`
 
-   パスが存在しない場合は、ノードを使用して作成でき `nt:folder` ます。
+   パスが存在しない場合は、 `nt:folder` ノードを使用して作成できます。
 
-   1. 変数にアクセスするには、次の拡張が必要です。
+   1. 変数にアクセスするには、次のコンポーネントを拡張する必要があります。
 
       `/libs/dam/cfm/models/editor/components/datatypeproperties/base`* *
 
-   1. コンポーネントは、次の方法で組み込むことができます。
+   1. コンポーネントは、次の要素を通して含めることができます。
 
       `sling:include`
 
-   1. このコンポーネントは、フィールド（ユーザーがデータを導入する必要がある場合）またはデータ型に必要なプロパティを持つ非表示の入力をレンダリングする必要があります。 例えば、マルチフィールドコンポーネントには、複製するフィールドのタイプを持つ子ノードが必要なので、特定のタイプの子ノードを（Sling POSTメカニズムを通じて）作成できる入力が必要です。
+   1. このコンポーネントは、フィールド（ユーザーがデータを導入する必要がある場合）またはデータ型に必要なプロパティを持つ非表示の入力をレンダリングする必要があります。 例えば、マルチフィールドコンポーネントには、重複すべきフィールドのタイプを持つ子ノードが必要なので、特定のタイプの子ノードを(スリングPOST機構を通して)作成できる入力が必要です。
 
-1. このコンポーネントのベース名をに追加する必要がありま `fieldProperties`す。
+1. このコンポーネントのベース名はに追加する必要があり `fieldProperties`ます。
 1. 必要なすべてのプロパティに対して同じ手順を繰り返します。
 
