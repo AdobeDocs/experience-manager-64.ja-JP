@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 6faa69ee1d38ad16add95263c53f18ea0a413fd2
 workflow-type: tm+mt
 source-wordcount: '1061'
-ht-degree: 48%
+ht-degree: 50%
 
 ---
 
@@ -63,7 +63,7 @@ The [!DNL Assets] reporting framework uses [!DNL Sling] jobs to asynchronously p
 
    >[!NOTE]
    >
-   >ダウンロ [!UICONTROL ード] レポートには、個別に選択され、クイックアクションを使用してダウンロードまたはダウンロードされたアセットの詳細のみが表示されます。 ただし、ダウンロードしたフォルダー内にあったアセットの詳細は含まれません。
+   >The [!UICONTROL Download] report displays details of only those assets which are selected individually and downloaded or downloaded using Quick Action. ただし、ダウンロードされたフォルダー内にあったアセットの詳細は含まれません。
 
 1. タイトル、説明、サムネール、CRX リポジトリ内のフォルダーパス（レポートの保存場所）など、レポートの詳細を設定します。By default, the folder path is `/content/dam`. 別のパスを指定することもできます。
 
