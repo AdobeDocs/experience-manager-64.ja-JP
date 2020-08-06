@@ -4,6 +4,9 @@ description: AEM Assets の GQL 全文検索機能について詳しく確認し
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: adf44677a0ac833a131aad8187529b094aaca9ef
+workflow-type: tm+mt
+source-wordcount: '885'
+ht-degree: 76%
 
 ---
 
@@ -14,7 +17,7 @@ AEM Assets の GQL 全文検索機能について詳しく確認します。GQL 
 
 GQL 全文検索機能を使用すると、タイトル、説明、作成者などの特定のメタデータに基づいてアセットを検索できます。
 
-メタデータ（titleなど）に基づいてアセットを検索するには、検索パネルでメタデータキーワードを指定し、その後にその値を指定します。GQLの全文検索機能は、入力した値とメタデータが完全に一致するアセットのみを取得します。
+メタデータ（titleなど）に基づいてアセットを検索するには、メタデータキーワードを指定し、その後に値を検索パネルで指定します。 GQLの全文検索機能では、メタデータが入力した対応する値と完全に一致するアセットのみが取得されます。
 
 例えば、「Target」というタイトルのアセットを検索するには、次の手順を実行します。
 
@@ -36,48 +39,48 @@ GQL 全文検索機能を使用すると、タイトル、説明、作成者な�
 
 1. Press **[!UICONTROL Enter]**. The AEM Assets user interface displays only those assets whose title exactly matches &quot;Target.&quot;
 
-GQLの全文検索機能を使用すると、次の項目に基づいてアセットを検索できます。
+GQLの全文検索機能では、次の項目に基づいてアセットを検索できます。
 
 * 複数のメタデータフィールド（プロパティ）に指定した値が AND 演算子によって結合された複雑なクエリ
 * 1 つのメタデータフィールドの複数値
 * 文字列の部分一致
 
-GQLの全文検索機能を使用すると、次のメタデータプロパティに基づいてアセットを検索できます。プロパティの名前（作成者、タイトルなど）と値の大文字と小文字は区別されます。
+GQLの全文検索機能では、次のメタデータプロパティに基づいてアセットを検索できます。 プロパティの名前（作成者、タイトルなど）と値は大文字と小文字が区別されます。
 
 >[!NOTE]
 >
 >GQL 全文検索は、全文の述語に対してのみ使用できます。
 
-| プロパティ | 検索形式（ファセット値） |
+| Property | 検索形式（ファセット値） |
 |---|---|
 | [!UICONTROL タイトル] | title:John |
 | [!UICONTROL 作成者] | creator:John |
-| [!UICONTROL 貢献者] | contributor:John |
+| [!UICONTROL 投稿者] | contributor:John |
 | [!UICONTROL 場所] | location:India |
 | [!UICONTROL 説明] | description:&quot;Sample Image&quot; |
 | [!UICONTROL 作成ツール] | creatortool:&quot;Adobe Photoshop 7.0&quot; |
 | [!UICONTROL 著作権の所有者] | copyrightowner:&quot;Adobe Systems&quot; |
-| [!UICONTROL 貢献者] | contributor:John |
+| [!UICONTROL 投稿者] | contributor:John |
 | [!UICONTROL 使用条件] | usageterms:&quot;CopyRights Reserved&quot; |
 | [!UICONTROL 作成日] | created:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
 | [!UICONTROL 有効期限] | expires:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
 | [!UICONTROL オンタイム] | ontime:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
 | [!UICONTROL オフタイム] | offtime:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL 時間の範囲] (expires dateontime,offtime) | facet field : lowerbound..upperbound |
+| [!UICONTROL 期間] （有効期限が切れるdateontime、offtime） | facet field : lowerbound..upperbound |
 | [!UICONTROL パス] | /content/dam/&lt;folder name> |
 | [!UICONTROL PDF タイトル] | pdftitle:&quot;Adobe Document&quot; |
 | [!UICONTROL 件名] | subject:&quot;Training&quot; |
 | [!UICONTROL タグ] | tags:&quot;Location And Travel&quot; |
-| [!UICONTROL タイプ] | type:&quot;image\png&quot; |
+| [!UICONTROL 型] | type:&quot;image\png&quot; |
 | [!UICONTROL 画像の幅] | width:lowerbound..upperbound |
 | [!UICONTROL 画像の高さ] | height:lowerbound..upperbound |
 | [!UICONTROL 人] | person:John |
 
 複雑なクエリの検索形式の例：
 
-* 複数のファセットフィールドを持つアセットをすべて表示する（例：タイトル = John Doe、作成ツール = Adobe Photoshop）：
+* 複数のファセットフィールドを持つアセットをすべて表示する（例：title=John Doe および creatortool=Adobe Photoshop）：
 
-tiltle:&quot;John Doe&quot; creatortool :Adobe&amp;ast;
+tiltle:&quot;John Doe&quot; creatortool : Adobe(&amp;A);ast;
 
 * ファセット値が 1 語でなく文になっているアセットをすべて表示する（例：タイトル = Scott Reynolds）
 
@@ -97,11 +100,11 @@ title:&quot;Scott&quot;
 
 * プロパティ値に特定の文字列が含まれるアセットを表示する（例：タイトルが Basel Meeting Room）
 
-title:&quot;Meeting&quot;;
+title:&quot;会議&quot;;
 
 * 特定の文字列が含まれ、特定のプロパティ値を持つアセットを表示する（例：タイトル = John Doe のアセットで文字列「Adobe」を検索する）
 
-&amp;ast;Adobe&amp;ast;title:&quot;John Doe &quot;OR title:&quot;John Doe&quot; &amp;ast;Adobe&amp;ast;
+&amp;ast;Adobe&amp;ast; title:&quot;John Doe &quot;OR title:&quot;John Doe&quot; &amp;ast;Adobe&amp;ast;
 
 >[!NOTE]
 >
@@ -114,7 +117,7 @@ title:&quot;Meeting&quot;;
 >
 >JCR クエリを記述してサブアセットのみを検索した場合、一致する参照されているアセットも、一致するサブアセットと共に表示されます。
 
-全文検索では、-、^などの演算子もサポートされます。 これらの文字を文字列リテラルとして検索するには、検索式を二重引用符で囲みます。例えば、「Notebook - Beauty」の代わりに「Notebook - Beauty」を使用します。
+フルテキスト検索では、-、^などの演算子もサポートされます。 これらの文字を文字列リテラルとして検索するには、検索式を二重引用符で囲みます。例えば、「Notebook - Beauty」ではなく、「&quot;Notebook - Beauty&quot;」と指定します。
 
 ## 検索の強化 {#boosting-search}
 
