@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 translation-type: tm+mt
 source-git-commit: c53ad108620f9066179c79195f90b930d5cab0ff
+workflow-type: tm+mt
+source-wordcount: '956'
+ht-degree: 41%
 
 ---
 
@@ -78,20 +81,32 @@ Select `Create Member` in order to create a user in the publish environment.
 
 大部分のフィールドはオプションです。メンバーは後からフィールドに自分のプロファイルを入力できます。
 
-* **[!UICONTROL ID]**(必&#x200B;*須*)許可可能IDは、メンバーのログインIDです。
+* **[!UICONTROL ID]**
+(
+*required*)許可可能IDは、メンバーのログインIDです。
 デフォルトでは、ID は必須の電子メールアドレスの値に設定されています。
    *ID は一度作成すると変更できません。*
 
-* **[!UICONTROL 電子メールア]**&#x200B;ドレス&#x200B;**（必須）メンバーの電子メールアドレス。
-メンバーは、プロファイルの更新時に電子メールアドレスを変更できます。IDが電子メールアドレスにデフォルト設定されている場合 ** 、電子メールアドレスが変更されてもIDは変更されません。
+* **[!UICONTROL 電子メールアドレス]**
+(
+*必須*)メンバーの電子メールアドレス。
+メンバーは、プロファイルの更新時に自分の電子メールアドレスを変更できます。デフォルトで電子メールアドレスに設定されているIDの場合、電子メールアドレスが変更されても ** 、IDは変更されません。
 
-* **[!UICONTROL パスワード]**(必&#x200B;*須*)サインインパスワード。
+* **[!UICONTROL パスワード]**
+(
+*required*)サインインパスワード。
 
-* **[!UICONTROL パスワードの再入力]**(必&#x200B;*須*)確認のためにパスワードを再入力します。
+* **[!UICONTROL パスワードの確認入力]**
+(
+*required*)確認のためにパスワードを再入力します。
 
-* **[!UICONTROL [サイトにメンバを追加]**]*(オ*&#x200B;プション)コミュニティサイトのメンバグループにメンバを追加するには、既存のコミュニティサイトから選択します。
+* **[!UICONTROL メンバーをサイトに追加]**
+(
+*(オプション*)コミュニティサイトのメンバーグループにメンバーを追加するには、既存のコミュニティサイトから選択します。
 
-* **[!UICONTROL グループにメンバーを追加]**(オ&#x200B;*プション*)既存のメンバーグループから選択して、そのグループにメンバーを追加します。
+* **[!UICONTROL メンバーをグループに追加]**
+(
+*(オプション*)既存のメンバーグループから選択して、そのグループにメンバーを追加します。
 
 * Select **[!UICONTROL Save]**
 
@@ -101,9 +116,10 @@ Select `Create Member` in order to create a user in the publish environment.
 
 * **[!UICONTROL ステータス]**
    * 禁止されている\
-      メンバーがサインインできず、ページを表示できない、またはログインが必要なアクティビティに参加できない。 彼らは未だに匿名でオープンコミュニティサイトを訪れるかもしれない。
+      メンバーがサインインできないため、ページを表示できないか、ログインが必要なアクティビティに参加できません。 未だにオープンコミュニティサイトを匿名で訪問している可能性がある。
 
    * 禁止されていないメンバーはコミュニティサイトのすべての機能にアクセスできます。
+
    デフォルトは `Not Banned` です。
 
 * **[!UICONTROL 貢献度の制限]**&#x200B;オンにすると、メンバーによるコンテンツの投稿が制限されます。初期設定は、貢献度の制限の設定によって異なります。[メンバーの貢献度の制限](limits.md)を参照してください。
@@ -112,7 +128,7 @@ Select `Create Member` in order to create a user in the publish environment.
 
 ### 一般 - 写真 {#general-photo}
 
-メンバーのアバターを設定するには、まず「**[!UICONTROL 画像をアップロード]**」を選択して、.jpg、.png、.tif、.gif のいずれかから画像の種類を選択します。画像の推奨サイズは240 x 240ピクセル、72 dpiです。
+メンバーのアバターを設定するには、まず「**[!UICONTROL 画像をアップロード]**」を選択して、.jpg、.png、.tif、.gif のいずれかから画像の種類を選択します。画像の推奨されるサイズは、240 x 240ピクセル、72 dpiです。
 
 ### 一般 - メンバーをサイトに追加 {#general-add-member-to-sites}
 
@@ -130,16 +146,16 @@ The `BADGES` panel provides the ability to manually assign badges as well as rev
 
 ![chlimage_1-123](assets/chlimage_1-123.png)
 
-* **[!UICONTROL バッジの追加]**
-   * Begin typing to select from [available badges](badges.md). バッジを選択したら、各サイト、または会員のアバターと共にバッジを表示するすべてのサイトを選択します。
+* **[!UICONTROL 追加バッジ]**
+   * Begin typing to select from [available badges](badges.md). バッジを選択したら、各サイトまたはすべてのサイトを選択します。このサイト上に、会員のアバターと共にバッジを表示します。
    * 複数のバッジとサイトを選択できます。
-* **[!UICONTROL バッジの削除]**
+* **[!UICONTROL バッジを削除]**
    * バッジの横にあるごみ箱アイコンを選択して、削除します
 
 ## グループコンソール {#groups-console}
 
 グループコンソールはオーサー環境から使用でき、パブリッシュ環境で登録されたメンバーグループの作成や管理をおこなうことができます。特に、以下の目的で使用されます。
-* [特権メンバーグループ](users.md#privilegedmembersgroups)
+* [特権を持つメンバーグループ](users.md#privilegedmembersgroups)
 * Group-based assignment of [enablement resources](resources.md)
 
 グループコンソールにアクセスするには：
@@ -157,16 +173,24 @@ Select `Add Group` in order to create a group in the publish environment.
 
 パブリッシュ側の新しいメンバーグループを作成するには、以下のフィールドを指定します。
 
-* **[!UICONTROL ID]**(必&#x200B;*須*)グループ固有ID。
+* **[!UICONTROL ID]**
+(
+*必須*)グループ固有のID。
    *ID は一度作成すると変更できません。*
 
-* **[!UICONTROL Name]**(オプ&#x200B;*ション*)グループの表示名。
+* **[!UICONTROL 名前]**
+(
+*(オプション*)グループの表示名。
 
    デフォルトの値は ID です。
 
-* **[!UICONTROL 説明]**(オ&#x200B;*プション*)グループの目的と権限の説明。
+* **[!UICONTROL 説明]**
+(
+*(オプション*)グループの目的と権限の説明。
 
-* **[!UICONTROL グループにメンバーを追加]**(オ&#x200B;*プション*)グループの最初のメンバーとして含める公開側メンバーを選択します。
+* **[!UICONTROL メンバーをグループに追加]**
+(
+*(オプション*)グループの最初のメンバーとして含める公開側メンバーを選択します。
 
 * Select **[!UICONTROL Save]**
 
