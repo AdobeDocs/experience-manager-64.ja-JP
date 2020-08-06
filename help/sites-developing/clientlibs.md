@@ -102,7 +102,7 @@ JS、CSS またはテーマライブラリをフィルタリングするため�
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>`は、以前はクライアントライブラリを含めるためによく使用されていた機能ですが、AEM 5.6以降では非推奨です。この機能は、上記の説明の代わりに使用 [`<ui:includeClientLib>`](/help/sites-developing/taglib.md#amp-lt-ui-includeclientlib) してください。
+>`<cq:includeClientLib>`は、以前はクライアントライブラリを含めるために一般的に使用されていたもので、AEM 5.6以降では廃止されています。 [ この代わりに、上記の説明に従っ `<ui:includeClientLib>`](/help/sites-developing/taglib.md#amp-lt-ui-includeclientlib) て使用する必要があります。
 
 ## クライアントライブラリフォルダーの作成 {#creating-client-library-folders}
 
@@ -156,7 +156,7 @@ Then you set the `allowProxy` property on `foo` to true.
 
 >[!CAUTION]
 >
->プロキシ化されたクライアントライブラリを使用する場合、AEMディスパッチャーの設定で、拡張clientlibsを持つURIが許可されるように更新する必要がある場合があります。
+>プロキシ化されたクライアントライブラリを使用する場合、AEMディスパッチャーの設定で、拡張clientlibを持つURIが許可されるように更新する必要がある場合があります。
 
 >[!CAUTION]
 >
@@ -447,6 +447,7 @@ The `dumplibs` component includes a test selector that displays the source code 
    * Webブラウザーで次のURLを開きます（必要に応じて別のホストとポートを使用します）。
 
       * `http://<host>:<port>/libs/granite/ui/content/dumplibs.html`
+
    デフォルトページに、categories 属性の値がないタグの出力が表示されます。
 
 1. To see the output for a category, type the value of the client library&#39;s `categories` property and click **Submit Query**.
