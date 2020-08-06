@@ -13,7 +13,7 @@ ht-degree: 40%
 
 # アセットの透かしの設定 {#watermarking}
 
-Adobe Experience Manager(AEM)アセットを使用すると、画像に電子透かしを追加できます。この透かしを使用すると、アセットの信頼性と著作権の所有権を検証できます。 AEM Assets では、PNG および JPEG ファイル上の透かしとしてテキストを使用できます。
+Adobe Experience Manager(AEM)アセットを使用すると、画像に電子透かしを追加できます。これにより、アセットの信頼性と著作権の所有権を検証できます。 AEM Assets では、PNG および JPEG ファイル上の透かしとしてテキストを使用できます。
 
 To be able to apply watermark on assets, add the [!UICONTROL Watermark] step in the [!UICONTROL DAM Update Asset] workflow.
 
@@ -36,4 +36,4 @@ To be able to apply watermark on assets, add the [!UICONTROL Watermark] step in 
 1. 透かしステップを追加した **[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローを保存します。
 1. AEMユーザーインターフェイスから、サンプルアセットをアップロードします。 上記の手順で設定した位置に、フォントサイズ、色などの透かしが表示されます。
 
-プログラムによって、または動的なドキュメントを使用してPDFの透かしを埋め込むには、 [AEMドキュメントサービス](/help/forms/using/overview-aem-document-services.md) の機能を使用することを検討します。
+プログラムによって、または動的なドキュメントを使用してPDFの透かしを作成するには、 [AEMドキュメントサービス](/help/forms/using/overview-aem-document-services.md) の機能を使用することを検討します。
