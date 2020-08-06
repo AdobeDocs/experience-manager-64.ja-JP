@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: df8cfde3-543d-4150-9822-9be763908bd7
 translation-type: tm+mt
 source-git-commit: 3e5c3e56b950b39d0b0efe552ff54242f3d8d28a
+workflow-type: tm+mt
+source-wordcount: '1687'
+ht-degree: 87%
 
 ---
 
@@ -57,7 +60,7 @@ CQ5 または CRX リソースを管理するために作成する MBean は、j
 クラスは、インターフェイスに追加した注釈を利用する Dynamic MBean を作成するために指定します。
 
 * **AnnotatedStandardMBean：** javax.management.StandardMBean クラスのサブクラスで、注釈メタデータを JMX コンソールに自動的に提供します。
-* **** OpenAnnotatedStandardMBean:OpenTypeInfo注釈を使用するOpen Mbeanを作成するためのAnnotatedStandardMBeanクラスのサブクラスです。
+* **OpenAnnotatedStandardMBean:** OpenTypeInfo注釈を使用するOpen Mbeanを作成するためのAnnotatedStandardMBeanクラスのサブクラス。
 
 ### MBean のデプロイ {#developing-mbeans}
 
@@ -136,9 +139,9 @@ MBean を OSGi サービスとして登録すると、MBean サーバーに自�
 
 OSGi 関連メタデータ以外にも、Aries JMX Whiteboard モジュールが MBean を MBean サーバーに登録するために必要な次のメタデータを提供する必要があります。
 
-* **** DynamicMBeanインターフェイスの名前。MBeanサービスが `javax.management.DynamicMBea`nインターフェイスを実装することを宣言します。 この宣言によって、このサービスが MBean サービスであることが Aries JMX Whiteboard モジュールに通知されます。
+* **DynamicMBeanインターフェイスの名前：** MBeanサービスが `javax.management.DynamicMBea`nインターフェイスを実装することを宣言します。 この宣言によって、このサービスが MBean サービスであることが Aries JMX Whiteboard モジュールに通知されます。
 
-* **** MBeanドメインおよびキーのプロパティ：Felixでは、この情報をMBeanのOSGiサービスのプロパティとして指定します。 This is the same information that you ordinarily provide to the MBean Server in a `javax.management.ObjectName` object.
+* **MBeanドメインおよびキーのプロパティ：** Felixでは、この情報をMBeanのOSGiサービスのプロパティとして指定します。 This is the same information that you ordinarily provide to the MBean Server in a `javax.management.ObjectName` object.
 
 MBean が単一のサービスを表している場合、必要な MBean サービスのインスタンスは 1 つだけです。この場合、Felix SCR Maven プラグインを使用していれば、MBean 実装クラスに Apache Felix Service Component Runtime（SCR）注釈を使用して、JMX 関連メタデータを指定できます。複数の MBean インスタンスをインスタンス化するために、MBean の OSGi サービスの登録を実行する別のクラスを作成できます。この場合、JMX 関連メタデータは実行時に生成されます。
 
@@ -217,13 +220,13 @@ MBean サービスマネージャーは、サービス設定がリポジトリ�
 
 >[!NOTE]
 >
->簡潔にするため、この例のコードはログを実行せず、スローされた例外に対しても反応しません。
+>簡単にするために、この例のコードは、ログ記録やスローされた例外に対する反応を実行しません。
 
 WorkflowMBeanManagerImpl には、コンポーネントアクティベーションメソッドが含まれています。コンポーネントをアクティベートすると、このメソッドによって以下のタスクが実行されます。
 
 * バンドルの BundleContext を取得します。
 * リポジトリをクエリして、既存のワークフローモデルのパスを取得します。
-* 各ワークフローモデルに対してMBeanを作成します。
+* ワークフローモデルごとにMBeanを作成します。
 * MBean を OSGi サービスレジストリに登録します。
 
 JMX コンソールに、ドメインが com.adobe.example、タイプが workflow_model、プロパティがワークフローモデル設定ノードのパスである MBean メタデータが表示されます。
