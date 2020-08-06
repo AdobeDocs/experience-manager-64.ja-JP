@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 9941ba90-3d40-4c90-bca8-5db49603cbfa
 translation-type: tm+mt
 source-git-commit: ad744e91e8f94d7fefb939209ba186e3b18496b7
+workflow-type: tm+mt
+source-wordcount: '310'
+ht-degree: 57%
 
 ---
 
 
 # 集計の基本事項 {#tally-essentials}
 
-Tallyは抽象クラスで、メンバーが特定の製品やサービスをどのように評価するかに関する標準的なフィードバック収集方法を提供します。 匿名フィードバックはサポートされていません。 サイト訪問者は、登録してサインインし、フィードバックを変更する必要があります。 サインインする必要があると、モデレートが容易になり、複数の投稿を防ぎ、フィードバックの価値を高めることができます。
+Tallyは抽象クラスで、メンバーが特定の製品やサービスをどのように評価するかに関する標準的なフィードバック収集方法を提供します。 匿名フィードバックはサポートされていません。 サイト訪問者は、登録してサインインし、参加してフィードバックを変更する必要があります。 サインインする必要があるとモデレートが容易になり、複数の投稿を防ぎ、フィードバックの価値を高めることができます。
 
 抽象集計クラスを拡張することによってカスタム集計コンポーネントを作成できます。
 
@@ -29,7 +32,7 @@ Tallyは抽象クラスで、メンバーが特定の製品やサービスをど
 
 As of AEM 6.1, the *poll* component is no longer available.
 
-[レビュー](reviews-basics.md) は、コメントと評価のハイブリッドであるSCFコンポ [ーネ](essentials-comments.md) ント [](rating-basics.md)。
+[レビュー](reviews-basics.md) は、 [コメントと](essentials-comments.md) 評価を組み合わせたSCFコンポーネントです [](rating-basics.md)。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
