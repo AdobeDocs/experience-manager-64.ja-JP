@@ -1,8 +1,8 @@
 ---
 title: オーサリング環境とツール
 seo-title: オーサリング環境とツール
-description: AEM のオーサリング環境は、コンテンツを構造化および編集するための様々なメカニズムを提供しています
-seo-description: AEM のオーサリング環境は、コンテンツを構造化および編集するための様々なメカニズムを提供しています
+description: AEM のオーサリング環境は、コンテンツを編成および編集するための様々なメカニズムを提供しています
+seo-description: AEM のオーサリング環境は、コンテンツを編成および編集するための様々なメカニズムを提供しています
 uuid: 2fe17bbf-f431-49bc-9d27-7a95f1f76252
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: 4f6a525d-d291-426f-be22-d2ef92c57156
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '2142'
+ht-degree: 93%
 
 ---
 
 
 # オーサリング環境とツール{#authoring-the-environment-and-tools}
 
-AEMのオーサリング環境では、コンテンツを編成および編集するための様々なメカニズムが提供されます。提供されるツールは、様々なコンソールやページエディターからアクセスできます。
+AEM のオーサリング環境は、コンテンツを編成および編集するための様々なメカニズムを提供しています。提供されるツールには、様々なコンソールおよびページエディターからアクセスします。
 
 ## サイトの管理 {#managing-your-site}
 
@@ -68,9 +71,9 @@ AEMのオーサリング環境では、コンテンツを編成および編集�
 
 * **モバイルデバイス（iPad など）**
 
-   コンポーネントブラウザは、編集中のページを完全にカバーします。
+   コンポーネントブラウザーは、編集中のページを完全にカバーします。
 
-   ページにコンポーネントを追加するには、必要なコンポーネントをタッチ&amp;ホールドして右側に移動します。コンポーネントブラウザーを閉じて、ページを再度表示し、コンポーネントを配置できる場所に移動します。
+   ページにコンポーネントを追加するには、必要なコンポーネントをタッチ&amp;ホールドして右側に移動します。コンポーネントブラウザーが閉じてページが再度表示され、コンポーネントを配置できます。
 
    ![screen_shot_2018-03-22at141752](assets/screen_shot_2018-03-22at141752.png)
 
@@ -90,10 +93,12 @@ AEMのオーサリング環境では、コンテンツを編成および編集�
 
       * 標準コンポーネントのアイコンはモノクロです。
       * 略語は常にコンポーネント名の最初の 2 文字です。
+
    コンポーネントブラウザーの上部のツールバーでは、次の操作を実行できます。
 
    * コンポーネントを名前でフィルターします。
    * ドロップダウンから選択して特定のグループのみを表示します。
+
    コンポーネントについて詳しくは、コンポーネントブラウザー内のコンポーネントの横にある情報アイコンをクリックまたはタップしてください（使用可能な場合）。
 
    ![screen_shot_2018-03-22at141929](assets/screen_shot_2018-03-22at141929.png)
@@ -135,7 +140,7 @@ AEMのオーサリング環境では、コンテンツを編成および編集�
 * 名前
 * パス
 * アセットタイプ（画像、原稿、ドキュメント、ビデオ、ページ、段落、商品など）
-* 方向（縦長、横長、正方形）、スタイル（カラー、モノクロ、グレースケール）などのアセットの特性
+* 方向（縦長、横長、正方形）やスタイル（カラー、モノクロ、グレースケール）などのアセットの特性
 
    * 特定のアセットタイプでのみ使用可能
 
@@ -173,7 +178,7 @@ AEMのオーサリング環境では、コンテンツを編成および編集�
 
 ![](do-not-localize/screen_shot_2018-03-22at142042.png)
 
-サイドパネルを開く際、パネルは（左側から）スライドして開きます。Select the **Content Tree** tab if necessary. このタブを開くと、ページまたはテンプレートをツリービューで確認でき、コンテンツの階層的な構造を簡単に理解できます。また、複雑なページではページのコンポーネント間をジャンプしやすくなります。
+サイドパネルを開く際、パネルは（左側から）スライドして開きます。必要に応じて「**コンテンツツリー**」タブを選択します。このタブを開くと、ページまたはテンプレートをツリービューで確認でき、コンテンツの階層的な構造を簡単に理解できます。また、複雑なページではページのコンポーネント間をジャンプしやすくなります。
 
 ![screen_shot_2018-03-22at142526](assets/screen_shot_2018-03-22at142526.png)
 
@@ -195,7 +200,7 @@ AEMのオーサリング環境では、コンテンツを編成および編集�
 
 >[!NOTE]
 >
->モバイルデバイス上でページを編集している場合（ブラウザーの幅が1024px未満の場合）、コンテンツツリーは使用できません。
+>ページをモバイルデバイス（ブラウザーの幅が 1,024 px より小さい場合）で編集している場合、コンテンツツリーは表示されません。
 
 ## フラグメント - 関連コンテンツブラウザー {#fragments-associated-content-browser}
 
@@ -212,11 +217,11 @@ AEMのオーサリング環境では、コンテンツを編成および編集�
 * 参照コンポーネントの使用
 * 商品ページへの参照（コマース／商品コンソールから）
 
-Open the required console, then navigate to the required resource and open **References** using:
+必要なコンソールを開いたら、必要なリソースに移動し、次を使用して「**参照**」を開きます。
 
 ![screen_shot_2018-03-22at153653](assets/screen_shot_2018-03-22at153653.png)
 
-[必要なリソースを選択](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)し、そのリソースに関連する参照タイプの一覧を表示します。
+[必要なリソースを選択](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)し、そのリソースに関連する参照タイプのリストを表示します。
 
 ![screen_shot_2018-03-22at153731](assets/screen_shot_2018-03-22at153731.png)
 
@@ -225,7 +230,7 @@ Open the required console, then navigate to the required resource and open **Ref
 * 参照コンポーネントのインスタンス（例：参照元／参照先のページへの移動）
 * [商品ページへの参照](/help/sites-administering/generic.md#showing-product-references)（コマース／商品コンソールから使用可能）
 * [ローンチ](/help/sites-authoring/launches.md)
-* [ライブコピー](/help/sites-administering/msm.md) ：選択したリソースに基づくすべてのライブコピーのパスが表示されます。
+* [](/help/sites-administering/msm.md)ライブコピー（選択したリソースに基づくすべてのライブコピーのパスを表示）
 * [ブループリント](/help/sites-administering/msm-best-practices.md)
 * [言語コピー](/help/sites-administering/tc-manage.md#creating-translation-projects-using-the-references-panel)
 
@@ -237,7 +242,7 @@ Open the required console, then navigate to the required resource and open **Ref
 
 該当するリソース（例：**サイト**&#x200B;コンソールからのページ、**アセット**&#x200B;コンソールからのアセット）では、[タイムラインを使用して、選択した項目に対する最近のアクティビティを表示できます](/help/sites-authoring/basic-handling.md#timeline)。
 
-Open the required console, then navigate to the required resource and open **Timeline**, using:
+必要なコンソールを開いたら、必要なリソースに移動し、次を使用して「**タイムライン**」を開きます。
 
 ![screen_shot_2018-03-22at153952](assets/screen_shot_2018-03-22at153952.png)
 
@@ -264,9 +269,9 @@ Open the required console, then navigate to the required resource and open **Tim
 例えば、該当する場合、**ページ情報**&#x200B;には次のオプションもあります。
 
 * [ローンチを昇格](/help/sites-authoring/launches-promoting.md)（ページがローンチの場合）
-* [編集可能なテンプレート](/help/sites-authoring/templates.md) (ページが編集可能なテンプレートに基づいてい [る場合)](/help/sites-authoring/templates.md#editable-and-static-templates)
+* [ページが](/help/sites-authoring/templates.md)[編集可能なテンプレートに基づいている場合は、「テンプレートを編集」をクリックします。](/help/sites-authoring/templates.md#editable-and-static-templates)
 
-* [このオプションが管理者によって有効にされている場合は](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 、クラシックUI [で開く(Open in Classic UI)](/help/sites-administering/enable-classic-ui-editor.md)
+* [このオプションが管理者によって](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page)[有効にされている場合は、クラシックUIで開く](/help/sites-administering/enable-classic-ui-editor.md)
 
 該当する場合、**ページ情報**&#x200B;から分析や推奨を確認することもできます。
 
@@ -275,7 +280,7 @@ Open the required console, then navigate to the required resource and open **Tim
 ページの編集時には様々なモードがあり、異なるアクションをおこなうことができます。
 
 * [編集](/help/sites-authoring/editing-content.md) - ページコンテンツの編集時に使用するモード。
-* [レイアウト](/help/sites-authoring/responsive-layout.md) — デバイスに依存するレスポンシブレイアウトを作成および編集できます（ページがレイアウトコンテナに基づいている場合）。
+* [レイアウト](/help/sites-authoring/responsive-layout.md) - デバイスに応じたレスポンシブレイアウトを作成および編集できます（ページがレイアウトコンテナに基づいている場合）
 
 * [基礎モード](/help/sites-authoring/scaffolding.md) - 同じ構造を共有しながらコンテンツが異なるページを大量に作成する場合に役立ちます。
 * [開発者](/help/sites-developing/developer-mode.md) - 様々なアクションを実行できます（権限が必要です）。このアクションには、ページやそのコンポーネントの技術的な詳細の検査が含まれます。
@@ -298,16 +303,17 @@ Open the required console, then navigate to the required resource and open **Tim
 >[!NOTE]
 >
 >* ページの特性によっては、一部のモードを使用できないことがあります。
->* 一部のモードにアクセスするには、適切な権限が必要です。
+>* 一部のモードにアクセスするには、適切な権限または特権が必要です。
 >* 開発者モードは、スペースの制約により、モバイルデバイスでは利用できません。
->* [キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)（`Ctrl-Shift-M`）で、**プレビュー**&#x200B;と、現在選択されているモード（**編集**、**レイアウト**&#x200B;など）を切り替えることができます。
+>* [キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)（`Ctrl-Shift-M`）で、**プレビュー**&#x200B;と、現在選択されているモード（**編集モード**、**レイアウトモード**&#x200B;など）を切り替えることができます。
+
 >
 
 
 
 ## パスの選択 {#path-selection}
 
-オーサリング時に、別のリソースを選択する必要がある場合がよくあります（別のページまたはリソースへのリンクを定義する場合、画像を選択する場合など）。簡単にパスを選択するために、[パスフィールド](/help/sites-authoring/author-environment-tools.md#path-fields)にはオートコンプリート機能があり、[パスブラウザー](/help/sites-authoring/author-environment-tools.md#path-browser)には強力な選択機能があります。
+オーサリング時に、別のリソースを選択する必要が生じる場合がよくあります（別のページまたはリソースへのリンクを定義する場合、画像を選択する場合など）。簡単にパスを選択するために、[パスフィールド](/help/sites-authoring/author-environment-tools.md#path-fields)にはオートコンプリート機能があり、[パスブラウザー](/help/sites-authoring/author-environment-tools.md#path-browser)には強力な選択機能があります。
 
 ### パスフィールド {#path-fields}
 
@@ -349,4 +355,4 @@ Open the required console, then navigate to the required resource and open **Tim
 
 ## キーボードショートカット {#keyboard-shortcuts}
 
-様々な[キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)も利用できます。
+様々な[キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)を利用できます。
