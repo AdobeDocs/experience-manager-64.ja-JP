@@ -11,13 +11,16 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: ee54d9d4-190d-4665-925a-9740ac65fbd5
 translation-type: tm+mt
 source-git-commit: ccf4f4232d6a7af0781480106526c4c6fcb7c40e
+workflow-type: tm+mt
+source-wordcount: '1538'
+ht-degree: 95%
 
 ---
 
 
 # AEM forms でのシングルサインオンの有効化{#enabling-single-sign-on-in-aem-forms}
 
-AEM Formsでは、シングルサインオン(SSO)を有効にする方法として、HTTPヘッダーとSPNEGOの2つが用意されています。
+AEM formsでは、シングルサインオン(SSO)を有効にする方法が2つ用意されています（HTTPヘッダーとSPNEGO）。
 
 SSO を使用すると、ユーザーが会社のポータルで既に認証されている場合、AEM Forms ユーザーのログインページは不要になり、ログインページは表示されません。
 
@@ -99,7 +102,7 @@ Windows 環境で LDAP サーバーに Active Directory を使用している場
 1. KtPass ユーティリティを入手します。このユーティリティは、SPN を REALM にマップする場合に使用します。KtPass ユーティリティは、Windows Server ツールパックまたはリソースキットの一部として入手できます（「[Windows Server 2003 Service Pack 1 のサポートツール](https://support.microsoft.com/kb/892777)」を参照）。
 1. コマンドプロンプトで、次の引数を指定して `ktpass` を実行します。
 
-   `ktpass -princ HTTP/`*ホスト&#x200B;*REALM`@`**`-mapuser`*ユーザー&#x200B;*
+   `ktpass -princ HTTP/`*ホスト&#x200B;*`@`*REALM*`-mapuser`*ユーザー&#x200B;*
 
    例えば、次のようにテキストを入力します。
 
@@ -113,6 +116,7 @@ Windows 環境で LDAP サーバーに Active Directory を使用している場
 
    * 「マイコンピューター」を右クリックし、「プロパティ」を選択します。
    * 「コンピューター名」タブをクリックします。「ドメイン名」の値が領域名です。
+
    **user：**&#x200B;前のタスクで作成したユーザーアカウントのログイン名です。この例では、spnegodemo に設定しています。
 
 次のようなエラーが発生することがあります。
@@ -149,7 +153,7 @@ https://lcserver:8080*,*など、コンピューター名を使用してサー�
 1. イントラネットのアイコンをクリックし、「サイト」をクリックします。
 1. 「詳細設定」をクリックし、「次の Web サイトをゾーンに追加する」ボックスに、forms サーバーの URL を入力します。例えば、「`https://lcserver.um.lc.com`
 1. ダイアログボックスがすべて閉じるまで、各ダイアログボックスで「OK」をクリックします。
-1. AEM Forms サーバーの URL にアクセスして、設定をテストします。例えば、ブラウザーの「URL」ボックスに、 `https://lcserver.um.lc.com:8080/um/login?um_no_redirect=true`
+1. AEM Forms サーバーの URL にアクセスして、設定をテストします。例えば、ブラウザーのURLボックスに、 `https://lcserver.um.lc.com:8080/um/login?um_no_redirect=true`
 
 **Mozilla Firefox の設定**
 
@@ -160,7 +164,7 @@ https://lcserver:8080*,*など、コンピューター名を使用してサー�
 1. 「フィルター」ボックスに、`negotiate`
 1. 表示されたリストで、network.negotiate-auth.trusted-uri をダブルクリックし、環境に応じて、次のいずれかのコマンドを入力します。
 
-   `.um.lc.com`- um.lc.comで終わるURLに対してSPNEGOを許可するようにFirefoxが設定されます。 先頭に必ずドット（「.」）を含めてください。
+   `.um.lc.com`- um.lc.comで終わるURLでSPNEGOを許可するようにFirefoxが設定されます。 先頭に必ずドット（「.」）を含めてください。
 
    `lcserver.um.lc.com` - 特定のサーバーだけに SPNEGO を許可するように Firefox が設定されます。ドット（「.」）から始めないでください。
 
