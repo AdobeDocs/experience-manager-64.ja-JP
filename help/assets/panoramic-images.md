@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: fc285b25-2bce-493c-87bc-5f1a8a26eb42
 translation-type: tm+mt
 source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+workflow-type: tm+mt
+source-wordcount: '591'
+ht-degree: 47%
 
 ---
 
@@ -33,17 +36,17 @@ source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
-* Tagged with the keywords `equirectangular`, or `spherical`and `panorama`, or `spherical` and `panoramic`. [タグの使用](/help/sites-authoring/tags.md)を参照してください。
+* キーワード `equirectangular`、または `spherical` と `panorama`、または `spherical` と `panoramic` でタグ付けされている必要があります。[タグの使用](/help/sites-authoring/tags.md)を参照してください。
 
 縦横比とキーワードの両方の条件が、アセットの詳細ページと「**[!UICONTROL パノラマメディア]**」 コンポーネントのパノラマアセットに適用されます。
 
 パノラマ画像ビューアで使用するアセットをアップロードするには、[アセットのアップロード](managing-assets-touch-ui.md#uploading-assets)を参照してください。
 
-## ダイナミックメディアクラシックの設定 {#configuring-dynamic-media-classic-scene}
+## Configuring Dynamic Media Classic {#configuring-dynamic-media-classic-scene}
 
-パノラマ画像ビューアをAEM内で正しく動作させるには、パノラマ画像ビューアのプリセットをDynamic Media ClassicおよびDynamic Media Classic固有のメタデータと同期して、ビューアプリセットがJCRで更新されるようにする必要があります。 これを行うには、次の方法でDynamic Media Classicを設定します。
+パノラマ画像ビューアをAEM内で正しく動作させるには、パノラマ画像ビューアプリセットをDynamic Media ClassicおよびDynamic Media Classic固有のメタデータと同期して、JCRでビューアプリセットを更新する必要があります。 これを行うには、次の方法でDynamic Media Classicを設定します。
 
-1. [各会社アカウントのDynamic Media Classicのインスタンスにログ](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) インします。
+1. [各会社アカウントにDynamic Media Classic](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html) のインスタンスにログインします。
 
 1. ページの右上隅付近で、**[!UICONTROL 設定／アプリケーション設定／公開設定／Image Server]** をクリックします。
 1. On the **[!UICONTROL Image Server Publish]** page, from the **[!UICONTROL Publish Context]** drop-down menu near the top, select **[!UICONTROL Image Serving]**.
@@ -51,7 +54,7 @@ source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
 1. On the same **[!UICONTROL Image Server Publish]** page, locate the heading **[!UICONTROL Request Attributes]**.
 1. Under the **[!UICONTROL Request Attributes]** heading, locate **[!UICONTROL Reply Image Size Limit]**. Then, in the associated **[!UICONTROL Width]** and **[!UICONTROL Height]** fields, increase the maximum allowable image size for panoramic images.
 
-   Dynamic Media Classicの制限は25,000,000ピクセルです。 縦横比が2:1の画像の最大許容サイズは7000 x 3500です。 ただし、通常のデスクトップ画面の場合、4096 x 2048 ピクセルで十分です。
+   Dynamic Media Classicの制限は25,000,000ピクセルです。 縦横比が2:1の画像で許可される最大サイズは7000 x 3500です。 ただし、通常のデスクトップ画面の場合、4096 x 2048 ピクセルで十分です。
 
    >[!NOTE]
    >
@@ -61,9 +64,10 @@ source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
 
    * Set **[!UICONTROL Request Obfuscation Mode]** to **[!UICONTROL Disabled]**.
    * Set **[!UICONTROL Request Locking Mode]** to **[!UICONTROL Disabled]**.
+
    These settings are necessary for using the **[!UICONTROL Panoramic Media]** component in AEM.
 
-1. At the bottom of the **[!UICONTROL Image Server Publish]** page, on the left side, tap **[!UICONTROL Save]**.
+1. **[!UICONTROL Image Server公開]** ページの下部の左側で、「 **[!UICONTROL 保存]**」をタップします。
 
 1. In the lower-right corner, tap **[!UICONTROL Close]**.
 
