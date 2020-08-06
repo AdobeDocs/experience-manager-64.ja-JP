@@ -10,6 +10,9 @@ topic-tags: interactive-communications
 discoiquuid: f376b8c1-e176-4fe6-b298-f3d493c59319
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1715'
+ht-degree: 85%
 
 ---
 
@@ -36,7 +39,7 @@ AEM Forms では、テキストモジュール内でインライン条件を使�
 
 For more information, see Create rule in text in [Texts in Interactive Communications](/help/forms/using/texts-interactive-communications.md).
 
-インタラクティブ通信にテキストフラグメントを含め、エージェントがエージェントUIを使用してインタラクティブ通信を準備すると、受信者の（フォームデータモデル）データが評価され、テキストは米国内の受信者にのみ表示されます。
+Interactive Communicationにテキストフラグメントを含め、Agent UIを使用してInteractive Communicationを準備すると、受信者の（フォームデータモデル）データが評価され、テキストは米国の受信者にのみ表示されます。
 
 ### 例：レターでインライン条件を使用して、適切な呼称をレンダリングする場合  {#example-using-inline-condition-in-a-letter-to-render-the-appropriate-address}
 
@@ -44,7 +47,7 @@ For more information, see Create rule in text in [Texts in Interactive Communica
 
 >[!NOTE]
 >
->既存のアセットに古い（6.2 SP1 CFP 4 より前の）条件式や繰り返し式が含まれている場合は、アセットに古い構文の条件や繰り返しが表示されます。ただし、古い条件や繰り返しも正常に機能します。新しい条件/繰り返し式と古い条件/繰り返し式は互いに互換性があり、新しい条件/繰り返し式と古い式のネストされた組み合わせが作成されます。
+>既存のアセットに古い（6.2 SP1 CFP 4 より前の）条件式や繰り返し式が含まれている場合は、アセットに古い構文の条件や繰り返しが表示されます。ただし、古い条件や繰り返しも正常に機能します。新しい条件/繰り返し式と古い条件/繰り返し式は互いに互換性があり、古い条件/繰り返し条件と新しい条件/繰り返しがネストされて混在します。
 
 1. In the relevant text module, select the part of text that you want to conditionalize and tap **Condition**.
 
@@ -70,7 +73,7 @@ For more information, see Create rule in text in [Texts in Interactive Communica
 
    条件を挿入すると、条件の左側にあるハンドルの上にマウスを移動したときに条件が表示されます。ハンドルをタップすると、条件のポップアップメニューが表示され、条件を編集または削除できます。
 
-   ![3_hoverhandle](assets/3_hoverhandle.png) ![4_editconditionremoveconditionpopup](assets/4_editconditionremoveconditionpopup.png)
+   ![3_hoverhandle](assets/3_hoverhandle.png)![4_editconditionremoveconditionpopup](assets/4_editconditionremoveconditionpopup.png)
 
 1. テキスト「`Ma'am`」を選択して、同様の条件を挿入します。
 
@@ -82,6 +85,7 @@ For more information, see Create rule in text in [Texts in Interactive Communica
 
    * サンプルデータを含むレターのプレビュー中に関連するデータディクショナリに基づいて作成されたサンプル XML データファイル。
    * 関連するデータディクショナリに添付されている XML データファイル。
+
    詳しくは、「[データディクショナリ](/help/forms/using/data-dictionary.md)」を参照してください。
 
    ![5_letteroutput](assets/5_letteroutput.png)
@@ -98,7 +102,7 @@ For more information, see Create rule in text in [Texts in Interactive Communica
 
 1. フォームデータモデルベースのテキストドキュメントフラグメント内に、関連するフォームデータモデルオブジェクトと、ラベルに必要な組み込みテキストを挿入します（以下の図を参照）。
 
-   ![1_elementstext](assets/1_elementstext.png)
+   ![1.elementstext](assets/1_elementstext.png)
 
    >[!NOTE]
    >
@@ -114,7 +118,7 @@ For more information, see Create rule in text in [Texts in Interactive Communica
 
    ![3_repeatdialog](assets/3_repeatdialog.png)
 
-1. 必要に応じて、区切り文字として「改行」を選択し、「条件を追加」をタップしてルールを作成します。また、区切り文字としてテキストを使用し、区切り文字として使用するテキスト文字を指定することもできます。
+1. 必要に応じて、区切り文字として「改行」を選択し、「条件を追加」をタップしてルールを作成します。区切り文字としてテキストを使用し、区切り文字として使用するテキスト文字を指定することもできます。
 
    規則作成ダイアログが表示されます。
 
@@ -132,7 +136,7 @@ For more information, see Create rule in text in [Texts in Interactive Communica
 
    テキストドキュメントフラグメントにマウスをポイントすると、コンテンツに適用された繰り返し構造内で使用されている条件と区切り文字が表示されます。
 
-1. テキストドキュメントフラグメントを保存し、関連するインタラクティブ通信のプレビューを表示します。フォームデータモデルのデータに応じて、要素に繰り返しを適用すると、プレビューでは次のようなトランザクションの詳細がレンダリングされます。
+1. テキストドキュメントフラグメントを保存し、関連するインタラクティブ通信のプレビューを表示します。フォームデータモデル内のデータに応じて、プレビューに適用した繰り返しによって、要素内の次のようなトランザクションの詳細がレンダリングされます。
 
    ![screen_shot_2018-03-09at155516copy](assets/screen_shot_2018-03-09at155516copy.png)
 
@@ -169,7 +173,7 @@ For more information, see Create rule in text in [Texts in Interactive Communica
 
    ![2_repeat_selecttext](assets/2_repeat_selecttext.png)
 
-1. 「**繰り返し**」をタップします。繰り返しダイアログが開き、空のインライン条件が表示されます。
+1. 「**繰り返し**」をタップします。繰り返しダイアログに、空のインライン条件が表示されます。
 
    ![3_repeat_dialog](assets/3_repeat_dialog.png)
 
@@ -185,23 +189,25 @@ For more information, see Create rule in text in [Texts in Interactive Communica
 
    * **改行**：出力されるレターの各取引エントリの後に改行を挿入します。
    * **テキスト**：出力されるレターの各取引エントリの後に指定したテキスト文字を挿入します。
+
    条件を挿入すると、繰り返しを設定したテキストが赤色でハイライト表示され、その左側にハンドルが表示されます。繰り返しの左側にあるハンドルの上にマウスを移動すると、繰り返し構成体が表示されます。
 
    ![4_repeat_hoverdetail](assets/4_repeat_hoverdetail.png)
 
    ハンドルをタップすると、繰り返しのポップアップメニューが表示され、繰り返し構成体を編集または削除できます。
 
-   ![5_repeateditremove](assets/5_repeateditremove.png)
+   ![5.repeatditremove](assets/5_repeateditremove.png)
 
 1. 関連するレターをプレビューして、繰り返しに従ってテキストがレンダリングされていることを確認します。次のファイルを使用して DD 要素の値を入力できます。
 
    * サンプルデータを含むレターのプレビュー中に関連するデータディクショナリに基づいて作成されたサンプル XML データファイル。
    * 関連するデータディクショナリに添付されている XML データファイル。
+
    詳しくは、「[データディクショナリ](https://helpx.adobe.com/aem-forms/6-2/data-dictionary.html)」を参照してください。
 
-   ![6_repeatoutputpreview](assets/6_repeatoutputpreview.png)
+   ![6.repeatoutputpreview](assets/6_repeatoutputpreview.png)
 
-   取引の明細とともに静的テキストが繰り返されています。静止テキストの繰り返しは、この手順のテキストに適用する繰り返しによって容易になります。 条件「${DD_creditcard_TransactionAmount > 0.5}」があるので、0.5 米ドルを下回る取引はレターにレンダリングされません。
+   取引の明細とともに静的テキストが繰り返されています。静止テキストの繰り返しは、この手順でテキストに適用する繰り返しによって容易になります。 条件「${DD_creditcard_TransactionAmount > 0.5}」があるので、0.5 米ドルを下回る取引はレターにレンダリングされません。
 
    >[!NOTE]
    >
@@ -217,7 +223,7 @@ For more information, see Create rule in text in [Texts in Interactive Communica
 
 繰り返しによってクレジットカード取引がレンダリングされますが、条件「${DD_creditcard_nooftransactions > 0}」があるので、繰り返し構成体がレンダリングされるのは取引が少なくとも 1 回行われた場合のみです。
 
-![反復性条件](assets/repeatwitincondition.png)
+![repeatwitincondition](assets/repeatwitincondition.png)
 
 同様に、必要に応じて以下の操作が可能です。
 
