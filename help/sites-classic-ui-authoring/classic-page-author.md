@@ -1,8 +1,8 @@
 ---
 title: ページのオーサリング
 seo-title: ページのオーサリング
-description: AEMを使用したオーサリングに関する概要は2つあります。 (1)作成者向けの最初の手順 — 新規作成者の紹介、および(2)作成ページのクイックガイド — 主なアクションのクイックガイド（概要）です。
-seo-description: AEMを使用したオーサリングに関する概要は2つあります。 (1)作成者向けの最初の手順 — 新規作成者の紹介、および(2)作成ページのクイックガイド — 主なアクションのクイックガイド（概要）です。
+description: AEMでのオーサリングについては、概要が2つあります。 (1)作成者向けの最初の手順 — 新しい作成者向けの紹介、および(2)オーサリングページ向けのクイックガイド — メインアクションのクイックガイド（高レベル）
+seo-description: AEMでのオーサリングについては、概要が2つあります。 (1)作成者向けの最初の手順 — 新しい作成者向けの紹介、および(2)オーサリングページ向けのクイックガイド — メインアクションのクイックガイド（高レベル）
 uuid: 95d12bd6-c51d-4b7c-9d67-a152a822eb01
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
 translation-type: tm+mt
 source-git-commit: 040f776ee6a164cec57685f8a010ec82fd8bb48b
+workflow-type: tm+mt
+source-wordcount: '331'
+ht-degree: 78%
 
 ---
 
