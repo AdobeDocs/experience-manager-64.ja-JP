@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: b3cb8f12-197e-4f5e-bd7d-70b55e76b0ca
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '63'
+ht-degree: 61%
 
 ---
 
 
 # コメントページの作成 {#create-comments-page}
 
-**[⇐ Overlay Commentsコンポーネント](overlay-comments.md)[ノードの作成> nodes tormes](overlay-create-nodes.md)**
+**[⇐コメントをオーバーレイコンポーネントノードを](overlay-comments.md)[作成する>](overlay-create-nodes.md)**
 
 ## コメントページ {#comments-page}
 
@@ -29,4 +32,4 @@ The [Community Components guide](components-guide.md) provides the ability to ea
 
 ![chlimage_1-125](assets/chlimage_1-125.png)
 
-**[⇐ Overlay Commentsコンポーネント](overlay-comments.md)[ノードの作成> nodes tormes](overlay-create-nodes.md)**
+**[⇐コメントをオーバーレイコンポーネントノードを](overlay-comments.md)[作成する>](overlay-create-nodes.md)**
