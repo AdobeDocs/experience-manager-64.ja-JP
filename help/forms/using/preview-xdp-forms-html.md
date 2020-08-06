@@ -30,9 +30,9 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 ### Apache Sling Authentication Service の設定 {#configure-apache-sling-authentication-service}
 
-1. OSGiで実行され `https://[server]:[port]/system/console/configMgr` ているAEM Formsに移動または
+1. OSGiで実行中 `https://[server]:[port]/system/console/configMgr` のAEM Formsに移動または
 
-   `https://[server]:[port]/lc/system/console/configMgr` (JEEで実行しているAEM Forms)
+   `https://[server]:[port]/lc/system/console/configMgr` JEE上で動いているAEM Formsで
 
 1. **Apache Sling Authentication Service** 設定を探してクリックし、編集モードで開きます。 
 
@@ -46,6 +46,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
       * -/content/xfaforms
       * -/etc/clientlibs/fd/xfaforms
+
    >[!NOTE]
    >
    >Authentication Requirements フィールドで指定した値をコピーアンドペーストしないでください。値に使用されている特殊文字が文字化けするおそれがあります。代わりに、フィールドに指定の値を入力します。
@@ -80,6 +81,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
       * `/aem/forms` (OSGi 上の AEM Forms)
       * `/lc/forms` (JEE 上の AEM Forms)
+
    **注：***サーバーが起動および実行されていることを確認してください。The HTML preview connects to the CRX server to* generate *a preview.*
 
    ![AEM Forms Designer のオプション ](assets/server_options.png)
