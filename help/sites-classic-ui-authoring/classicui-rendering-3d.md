@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: bf155d8c-c012-4cb4-89a6-ceead715630e
 translation-type: tm+mt
 source-git-commit: 284339ee1ce0ffae97f732b569f73c732f063273
+workflow-type: tm+mt
+source-wordcount: '707'
+ht-degree: 71%
 
 ---
 
@@ -35,7 +38,7 @@ AEM で操作して保存した 3D アセットをレンダリングして、Web
 
 一般的に、Rapid Refine レンダラーで大きな画像をレンダリングするには数分かかります。しかし、サードパーティ製レンダラーを最高品質に設定すると、数十分、場合によっては数時間かかることがよくあります。
 
-サーバーの過負荷を防ぐために、必要に応じて変換、処理およびレンダリングジョブがサーバーのキューに登録されます。The message &quot;Waiting for rendering...&quot; is shown on recently uploaded assets in the [!UICONTROL Card View]. このステータスは、現在のレンダリングジョブを開始する前に、他の処理ジョブまたはレンダリングジョブが完了する必要があることを示します。
+サーバーの過負荷を防ぐために、必要に応じて変換、処理およびレンダリングジョブがサーバーのキューに登録されます。The message &quot;Waiting for rendering...&quot; is shown on recently uploaded assets in the [!UICONTROL Card View]. このステータスは、現在のレンダリングジョブが開始できるように、他の処理ジョブまたはレンダリングジョブが終了する必要があることを示します。
 
 >[!NOTE]
 >
@@ -47,7 +50,7 @@ AEM で操作して保存した 3D アセットをレンダリングして、Web
 
    [3D アセットの表示](/help/sites-classic-ui-authoring/classicui-view-3d-assets.md)を参照してください。
 
-1. **Adobe Experience Managerから**、ナビゲーショ **[!UICONTROL ンページで]** [ **!UICONTROL Assets**]をタップします。
+1. **Adobe Experience Managerから、**&#x200B;ナビゲーション **[!UICONTROL ページで]** [!UICONTROL Assets ****]をタップします。
 1. Near the upper-right corner of the page, from the **[!UICONTROL View** drop-down list, tap **[!UICONTROL Card View]**.
 1. レンダリングする 3D オブジェクトに移動します。
 
