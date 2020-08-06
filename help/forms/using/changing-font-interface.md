@@ -11,6 +11,9 @@ topic-tags: forms-workspace
 discoiquuid: 487e3966-443a-408e-b5af-899fcba6fca6
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '294'
+ht-degree: 73%
 
 ---
 
@@ -27,7 +30,7 @@ Follow the [Generic steps for AEM Forms workspace customization](/help/forms/usi
 
 例えば、トップナビゲーションバーのアンカーテキストのフォントを「Courier New」に変更するには、次の手順に従います。
 
-1. にアクセスしてCRXDE Liteにログインしま `https://[server]:[port]/lc/crx/de/index.jsp`す。
+1. にアクセスしてCRXDE Liteにログインし `https://[server]:[port]/lc/crx/de/index.jsp`ます。
 1. 次のいずれかの操作をおこないます。
 
    1. 既存のスタイルでフォントファミリーを変更するには、/apps/ws/css にある newStyle.css ファイルに以下を追加します。
@@ -74,6 +77,6 @@ Follow the [Generic steps for AEM Forms workspace customization](/help/forms/usi
 
 1. Workspace を再起動して変更が表示されるようにブラウザのキャッシュをクリアします。
 
-![change_font_before](assets/change_font_before.png)**図：** フォントをカ *スタマイズする前の上部ナビゲーションバー*
+![change_font_before](assets/change_font_before.png)**図：** *フォントをカスタマイズする前のトップナビゲーションバー*
 
-![change_font_after](assets/change_font_after.png)**図：** 最初のタ *ブのフォントをカスタマイズした後の上部ナビゲーションバー*
+![change_font_after](assets/change_font_after.png)**図：** *最初のタブのフォントをカスタマイズした後のトップナビゲーションバー*
