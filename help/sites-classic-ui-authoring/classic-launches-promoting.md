@@ -12,13 +12,16 @@ discoiquuid: 8d38c6f7-8fea-4d27-992d-03b604b9541f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '355'
+ht-degree: 96%
 
 ---
 
 
 # ローンチの昇格{#promoting-launches}
 
-コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。ローンチページが昇格されると、ソースページの対応するページが、昇格済みのページのコンテンツに置き換わります。ページを昇格させるときには、次のオプションを使用できます。
+コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。ローンチページが昇格されると、ソースページの対応するページが、昇格済みのページのコンテンツに置き換わります。ローンチページを昇格させるときには、次のオプションを使用できます。
 
 * 現在のページのみを昇格させるか、ローンチ全体を昇格させるか。
 * 現在のページの子ページを昇格するかどうか。
@@ -38,7 +41,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 1. 実稼動版ページをワークフローパッケージに追加する場合は、「**ワークフローパッケージに追加**」を選択してワークフローパッケージを選択します。
 1. 「**昇格**」をクリックします。
 
-## AEM ワークフローを使用した昇格済みページの処理{#processing-promoted-pages-using-aem-workflow}
+## AEM ワークフローを使用した昇格済みページの処理 {#processing-promoted-pages-using-aem-workflow}
 
 次のワークフローモデルを使用して、昇格済みのローンチページの一括処理をおこないます。
 
