@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '439'
+ht-degree: 80%
 
 ---
 
@@ -29,14 +32,14 @@ source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
 
 SCF コンポーネントを動的に追加する手順は、次のとおりです。
 
-1. [コンポーネントをDOMに追加します](#dynamically-add-component-to-dom)
+1. [DOM追加のコンポーネント](#dynamically-add-component-to-dom)
 
 1. [次の2つの方法のいずれかを使用して](#sideload-by-invoking-scf) 、コンポーネントをサイドロードします。
 
-* [動的包含](#dynamic-inclusion)
-   * 動的に追加されたすべてのコンポーネントをブートストラップ
+* [動的な組み込み](#dynamic-inclusion)
+   * 動的に追加されたすべてのコンポーネントをブーストラップ
 * [動的読み込み](#dynamic-loading)
-   * オンデマンドでの特定のコンポーネントの追加
+   * 追加特定の1つのコンポーネントのオンデマンド
 
 >[!NOTE]
 >
@@ -46,13 +49,13 @@ SCF コンポーネントを動的に追加する手順は、次のとおりで�
 
 動的なインクルードの場合も動的なロードの場合も、最初にコンポーネントを DOM に追加する必要があります。
 
-SCF コンポーネントを追加する際に最もよく使用されるタグは DIV タグですが、他のタグを使用することもできます。SCFはページが最初に読み込まれるときにのみDOMを調べるので、SCFが明示的に呼び出されるまで、DOMへのこの追加は気が付きません。
+SCF コンポーネントを追加する際に最もよく使用されるタグは DIV タグですが、他のタグを使用することもできます。SCFはページが最初に読み込まれるときにのみDOMを調べるので、SCFが明示的に呼び出されるまで、DOMへの追加は気づかれません。
 
 どのタグを使用する場合も、最低限、要素が通常の SCF ルート要素パターンに準拠している必要があります。そのためには、次の 2 つの属性を含めます。
 
-* **data-component-id追加したコン**&#x200B;ポーネントへの有効パス
+* **data-component-id**&#x200B;追加したコンポーネントへの有効パス
 
-* **data-scf-componentコンポーネ**&#x200B;ントのresourceType
+* **data-scf-component**&#x200B;コンポーネントのresourceType
 
 以下に示すのは、追加されるコメントコンポーネントの例です。
 
