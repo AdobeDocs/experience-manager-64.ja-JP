@@ -16,11 +16,11 @@ ht-degree: 76%
 # AEM 6.4 Assets User Guide {#assets}
 
 + [アセットユーザーガイド](home.md)
-+ [AEM 6.4 Assetsリリースノート](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/assets.html)
++ [AEM 6.4アセットリリースノート](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/assets.html)
 + [DAMについて](assets.md)
 + [ユーザーエクスペリエンスの改善](ux-improvements.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
-+ AEM Assetsの使用 {#using}
++ AEM Assetsを使用 {#using}
    + [AEM Assetsホームページ体験](assets-home-page.md)
    + [AEM でのアセットの検索](search-assets.md)
    + [GQL 全文検索](gql-search.md)
@@ -103,7 +103,7 @@ ht-degree: 76%
    + [PDFラスタライザの使用](aem-pdf-rasterizer.md)
    + [アセットのアップロード制限の設定](configuring-asset-upload-restrictions.md)
    + [AEM と Creative Cloud の統合のベストプラクティス](aem-cc-integration-best-practices.md)
-   + [AEM AssetsとInDesignサーバーの統合](indesign.md)
+   + [AEM AssetsとInDesignサーバの統合](indesign.md)
    + [メタデータプロファイル](metadata-profiles.md)
    + [アセットのデジタル著作権管理](drm.md)
    + [アセットインサイトでのデモパッケージの使用](touch-ui-using-demo-package-for-asset-insights.md)
