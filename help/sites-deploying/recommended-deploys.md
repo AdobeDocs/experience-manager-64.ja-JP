@@ -11,6 +11,9 @@ topic-tags: deploying
 discoiquuid: 5e903df9-6591-46e8-9251-45170c78aa21
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1801'
+ht-degree: 92%
 
 ---
 
@@ -73,7 +76,7 @@ MicroKernel は、AEM 6.4 の永続性マネージャーとして機能します
 
 >[!NOTE]
 >
->この TarMK の例のコールドスタンバイデプロイメントでは、フェイルオーバーサーバーに定期的にレプリケートされるので、プライマリインスタンスとスタンバイインスタンスの両方が個別にライセンスされている必要があります。For more information about licensing, please consult the [Adobe General Licensing Terms](https://www.adobe.com/legal/terms/enterprise-licensing.html).
+>この TarMK の例のコールドスタンバイデプロイメントでは、フェイルオーバーサーバーに定期的にレプリケートされるので、プライマリインスタンスとスタンバイインスタンスの両方が個別にライセンスされている必要があります。For more information about licensing, please consult the [Adobe General Licensing Terms](https://www.adobe.com/jp/legal/terms/enterprise-licensing.html).
 
 ### TarMK ファーム {#tarmk-farm}
 
@@ -172,7 +175,7 @@ AEM Communities の場合、ユーザー生成コンテンツ（UGC）はレプ�
 
 AEM 用の MongoMK デプロイメントを検討する場合の一連の前提条件と推奨事項があります。
 
-**MongoDBデプロイメントの必須前提条件：**
+**MongoDBの導入に必要な前提条件：**
 
 1. AEM を熟知したアドビのコンサルタントまたは MongoDB のアーキテクトの支援のもとで、MongoDB デプロイメントのアーキテクチャとサイジングをプロジェクトの実装に含める必要があります。
 1. 既存の、または新しい MongoDB 環境を適切に維持および保守できるように、MongoDB の専門知識をパートナーまたはカスタマーチーム内で共有しておく必要があります。
@@ -188,7 +191,7 @@ AEM 用の MongoMK デプロイメントを検討する場合の一連の前提�
 
 >[!NOTE]
 >
->前述のガイドライン、前提条件および推奨事項に関するその他のご質問については、[アドビのカスタマーケア](https://helpx.adobe.com/marketing-cloud/contact-support.html)までお問い合わせください。
+>前述のガイドライン、前提条件および推奨事項に関するその他のご質問については、[アドビのカスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)までお問い合わせください。
 
 ### AEM Communities に関する考慮事項 {#considerations-for-aem-communities}
 
