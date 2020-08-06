@@ -1,6 +1,6 @@
 ---
 title: AEM Assetsを使用したデジタルアセットの管理
-description: タッチ操作向けAEM Assetsのユーザーインターフェイスを使用して実行できる様々なアセット管理および編集タスクについて説明します。
+description: タッチ操作に対応したAEM Assetsのユーザーインターフェイスを使用して実行できる様々なアセット管理および編集タスクについて説明します。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
@@ -16,7 +16,7 @@ ht-degree: 67%
 
 AEM Assets のタッチ対応 UI で実行できる様々なアセット管理／編集タスクについて説明します。
 
-この記事では、タッチ操作向けに最適化されたAdobe Experience Manager(AEM)Assetsユーザーインターフェイスを使用して、アセットを管理および編集する方法について説明します。 For an elementary knowledge about the user interface, see [Basic handling of Touch UI](/help/sites-authoring/basic-handling.md). To manage Content Fragments, see [Managing Content Fragments](content-fragments-managing.md) assets.
+この記事では、Adobe Experience Manager(AEM)アセットのタッチ操作向けユーザーインターフェイスを使用して、アセットを管理および編集する方法について説明します。 For an elementary knowledge about the user interface, see [Basic handling of Touch UI](/help/sites-authoring/basic-handling.md). To manage Content Fragments, see [Managing Content Fragments](content-fragments-managing.md) assets.
 
 ## フォルダーの作成 {#create-folders}
 
@@ -108,7 +108,7 @@ AEM Assets のタッチ対応 UI で実行できる様々なアセット管理�
 
    Tap **[!UICONTROL Keep]** to retain the duplicate asset in AEM Assets. Tap  **[!UICONTROL Delete]** to delete the duplicate asset you uploaded.
 
-   AEM Assets では、ファイル名に禁止文字が含まれるアセットをアップロードできません。許可されていない文字を含むアセットをアップロードしようとすると、AEM Assetsは、ファイル名に使用できない文字が含まれていることに関する警告メッセージを表示し、これらの文字を削除するか、許可された名前でアップロードするまでアップロードを停止します。
+   AEM Assets では、ファイル名に禁止文字が含まれるアセットをアップロードできません。許可されていない文字を含むアセットをアップロードしようとすると、ファイル名に使用できない文字が含まれていることに関する警告メッセージが表示され、AEM Assetsは、これらの文字を削除するか、許可されている名前でアップロードするまで、アップロードを停止します。
 
    To suit specific file naming conventions for your organization, the **[!UICONTROL Upload Assets]** dialog box lets you specify long names for the files that you upload.
 
@@ -128,7 +128,7 @@ AEM Assets のタッチ対応 UI で実行できる様々なアセット管理�
 
 ### 順次アップロード {#serial-uploads}
 
-多数のアセットを一括してアップロードすると、システムリソースが大量に消費されるので、AEMデプロイメントのパフォーマンスに悪影響を与える可能性があります。 潜在的なボトルネックは、インターネット接続、ディスク上での読み取り/書き込み操作、同時アセットアップロード時のPOST要求数に関するWebブラウザの制限などです。 バルクアップロード操作は、失敗または途中で終了する可能性があります。 つまり、AEM Assets で多数のファイルを取り込むときに、一部のファイルを取り込めないことがあったり、まったくファイルを取り込めないことがあります。
+多数のアセットを一括してアップロードすると、システムリソースが大量に消費されるので、AEMデプロイメントのパフォーマンスに悪影響を与える可能性があります。 潜在的なボトルネックは、インターネット接続、ディスク上での読み取り/書き込み操作、同時アセットのアップロード時のPOST要求数に関するWebブラウザの制限などです。 バルクアップロード操作は、失敗または途中で終了する可能性があります。 つまり、AEM Assets で多数のファイルを取り込むときに、一部のファイルを取り込めないことがあったり、まったくファイルを取り込めないことがあります。
 
 この状況を回避するために、AEM Assets は一括アップロード操作時にすべてのアセットを同時に取り込まず、一度に 1 つずつアセットを取り込みます（順次アップロード）。
 
@@ -144,7 +144,7 @@ AEM Assets のタッチ対応 UI で実行できる様々なアセット管理�
 
 >[!NOTE]
 >
->ダイナミックメディア — Scene7モードインストール機能パック(FP)18912のAEMオーサーで、FTP経由でアセットをアップロードするには FP-18912へのアクセス権を取得し、FTPアカウントのセットアップを完了するには、アドビカスタマーケアにお問い合わせください。 [一括アセット移行用の機能パック 18912 のインストール](/help/assets/bulk-ingest-migrate.md)を参照してください。アセットのアップロードに FTP を使用する場合、AEM で指定したアップロード設定は無視されます。代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
+>ダイナミックメディア — AEMオーサー上のScene7モードインストール機能パック(FP)18912で、FTP経由でアセットをアップロードするには FP-18912にアクセスし、FTPアカウントのセットアップを完了するには、Adobeカスタマーケアにお問い合わせください。 [一括アセット移行用の機能パック 18912 のインストール](/help/assets/bulk-ingest-migrate.md)を参照してください。アセットのアップロードに FTP を使用する場合、AEM で指定したアップロード設定は無視されます。代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
 
 **FTP によりアセットをアップロードするには**
 
@@ -228,7 +228,7 @@ PostScript（EPS）または Illustrator（AI）画像ファイルのアップ�
 |  | CMYKとしてレンダリング | CMYK カラースペースに変換します。 |
 |  | グレースケールとして強制 | グレースケールカラースペースに変換します。 |
 
-#### Photoshopのアップロードオプションの設定 {#setting-photoshop-upload-options}
+#### Photoshopアップロードオプションの設定 {#setting-photoshop-upload-options}
 
 Photoshop Document（PSD）ファイルは、画像テンプレートの作成に最もよく使用されます。PSD ファイルをアップロードするときは、ファイルから画像テンプレートを自動的に作成できます（アップロード画面の「テンプレートを作成」オプションを選択します）。
 
@@ -486,7 +486,7 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
 
    **レンディションの削除**
 
-   Select a rendition from the **[!UICONTROL Renditions]** panel, and then tap the **[!UICONTROL Delete Rendition]** icon from the [toolbar](/help/sites-authoring/basic-handling.md). アセット処理の完了後は、レンディションを一括削除することはできません。個々のアセットについては、ユーザインターフェイスからレンディションを手動で削除できます。複数のアセットを作成する場合は、Experience Managerをカスタマイズして特定のレンディションを削除するか、アセットを削除して削除したアセットを再度アップロードできます。
+   Select a rendition from the **[!UICONTROL Renditions]** panel, and then tap the **[!UICONTROL Delete Rendition]** icon from the [toolbar](/help/sites-authoring/basic-handling.md). アセット処理の完了後は、レンディションを一括削除することはできません。個々のアセットについては、ユーザーインターフェイスからレンディションを手動で削除できます。複数のアセットの場合、Experience Managerをカスタマイズして、特定のレンディションを削除したり、アセットを削除して削除したアセットを再度アップロードしたりできます。
 
    ![delete_renditionicon](assets/delete_renditionicon.png)
 
@@ -595,7 +595,7 @@ For more information specific to Dynamic Media, see [Publishing Dynamic Media As
 
 ## Create a Closed User Group {#closed-user-group}
 
-CUG(Closed User Group)は、AEMから公開される特定のアセットフォルダーへのアクセスを制限するために使用します。 フォルダーに対して CUG を作成すると、そのフォルダー（フォルダーのアセットとサブフォルダーを含む）へのアクセスは、割り当てられたメンバーまたはグループのみに制限されます。フォルダーにアクセスするには、セキュリティ資格情報を使用してログインする必要があります。
+CUG(Closed User Group)は、AEMから発行された特定のアセットフォルダーへのアクセスを制限するために使用します。 フォルダーに対して CUG を作成すると、そのフォルダー（フォルダーのアセットとサブフォルダーを含む）へのアクセスは、割り当てられたメンバーまたはグループのみに制限されます。フォルダーにアクセスするには、セキュリティ資格情報を使用してログインする必要があります。
 
 CUGは、アセットへのアクセスを制限する追加の方法です。 また、フォルダーのログインページを設定することもできます。
 
@@ -710,7 +710,7 @@ The **[!UICONTROL Timeline]** lets you view various events for a selected item, 
 
 [コレクションコンソール](managing-collections-touch-ui.md#navigating-the-collections-console)の&#x200B;**[!UICONTROL すべて表示]**&#x200B;リストには、コメントとワークフローだけを表示するオプションがあります。さらに、タイムラインはコンソールにリストされているトップレベルのコレクションについてのみ表示されます。これらのコレクション内を移動する場合、タイムラインは表示されません。
 
-**[!UICONTROL タイムライン]** には、コンテンツフラグメントに固有の [オプションがいくつか含まれています](content-fragments-managing.md#timeline-for-content-fragments)。 この機能には、 [AEM 6.4 Service Pack 2(6.4.2.0)](/help/release-notes/sp-release-notes.md) 以降が必要です。
+**[!UICONTROL タイムライン]** には、コンテンツフラグメントに固有の [オプションがいくつか含まれています](content-fragments-managing.md#timeline-for-content-fragments)。 この機能には、AEM 6.4 [Service Pack 2(6.4.2.0)](/help/release-notes/sp-release-notes.md) 以降が必要です。
 
 **タイムラインを使用するには**:
 
@@ -845,7 +845,7 @@ To print the annotations and review status, tap the **[!UICONTROL Print]** icon 
    レンダリングされた PDF ファイルに戻り、更新します。更新された PDF に、変更が反映されています。
 
 **外国語で注釈を印刷するには**:
-アセットに外国語（特にラテン語以外の言語）の注釈が含まれる場合は、まずAEMサーバーでCQ-DAM-Handler-Gibson Font Manager Serviceを設定して、これらの注釈を印刷できるようにする必要があります。 CQ-DAM-Handler-Gibson Font Manager サービスの設定では、必要な言語のフォントがある場所を指定します。
+アセットに外国語（特にラテン語以外の言語）の注釈が含まれる場合は、まずAEMサーバーでCQ-DAM-Handler-Gibson Font Manager Serviceを設定し、これらの注釈を印刷できるようにする必要があります。 CQ-DAM-Handler-Gibson Font Manager サービスの設定では、必要な言語のフォントがある場所を指定します。
 
 1. Open the **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Service]** configuration page from the URL [https://&lt;server>:&lt;port>/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl](http://localhost:4502/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl).
 1. **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Serviceを設定するには、次のいずれかを実行します]**。
@@ -861,7 +861,7 @@ To print the annotations and review status, tap the **[!UICONTROL Print]** icon 
 
 1. AEM インスタンスを再起動します。
 
-次の例は、CJK（中国語、日本語、韓国語）で注釈を印刷するようにAEMを設定する方法を示しています。
+次の例は、AEMでCJK（中国語、日本語および韓国語）で注釈を印刷するように設定する方法を示しています。
 
 1. 以下のリンクから Google Noto CJK フォントをダウンロードし、Font Manager サービスで設定したフォントディレクトリに保存します。
 
