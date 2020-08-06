@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '1273'
+ht-degree: 58%
 
 ---
 
@@ -31,11 +34,11 @@ source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
 
 ## オーバーレイ {#overlays}
 
-コンポーネントのオーバーレイは、デフォルトのコンポーネントに変更を加え、デフォルトを使用するすべてのインスタンスに影響を与える方法です。
+コンポーネントのオーバーレイは、デフォルトのコンポーネントに変更を加える方法で、デフォルトを使用するすべてのインスタンスに影響を与えます。
 
-The overlay is accomplished by modifying a copy of the default component in the /**apps** directory, rather than modifying the original component in the /**libs** directory. コンポーネントは、同じ相対パスを使用して構築されますが、「libs」は「apps」に置き換えられます。
+The overlay is accomplished by modifying a copy of the default component in the /**apps** directory, rather than modifying the original component in the /**libs** directory. コンポーネントは、「libs」を「apps」に置き換える以外、同じ相対パスを使用して構築されます。
 
-/appsディレクトリは、リクエストを解決するために最初に検索される場所で、見つからない場合は、/libsディレクトリ内のデフォルトのバージョンが使用されます。
+/appsディレクトリは、要求を解決するために検索される最初の場所です。見つからない場合は、/libsディレクトリ内のデフォルトのバージョンが使用されます。
 
 /libs ディレクトリ内のデフォルトコンポーネントは変更しないでください。/libs ディレクトリは、今後のパッチおよびアップグレードによって、公開インターフェイスのメンテナンス中に必要な方法で自由に変更されます。
 
@@ -61,11 +64,11 @@ The value of the `data-scf-component` attribute may be the default, such as **`s
 
 * `data-component-id`=&quot;{{id}}&quot;
 
-   コンテキストからidプロパティに解決されます。
+   コンテキストのidプロパティに解決されます。
 
 * `data-scf-component`=&quot;*&lt;resourceType>*
 
-例えば、次のように入力しま `/apps/weretail/components/hbs/rating/rating.hbs`す。
+例えば、from `/apps/weretail/components/hbs/rating/rating.hbs`:
 
 ```xml
 <div class="we-Rating" data-component-id="{{id}}" data-scf-component="weretail/components/hbs/rating">
@@ -91,7 +94,7 @@ Web サイトの全体的なテーマに合うようにコンポーネントを�
 
 コンポーネントにスキンを適用するには、次の手順に従います。
 
-1. 変更する要素（例：コンポーザー領域、ツールバーボタン、メッセージフォントなど）を指定します。
+1. 変更する要素（コンポーザー領域、ツールバーボタン、メッセージフォントなど）を指定します。
 1. これらの要素に影響する CSS クラス／ルールを識別します。
 1. スタイルシートファイル（.css）を作成します。
 1. Include the stylesheet in a client library folder ([clientlibs](#clientlibs-for-scf)) for your site and make sure it is included from your templates and pages with [ui:includeClientLib](../../help/sites-developing/clientlibs.md).
@@ -102,19 +105,19 @@ Web サイトの全体的なテーマに合うようにコンポーネントを�
 
 >[!CAUTION]
 >
->**先頭に** scf-js-&amp;ast；が付く任意のCSSクラス名は、javascriptコードで特定の用途を持ちます。 これらのクラスは、コンポーネントの状態に影響を与え（例えば、非表示から表示に切り替える）、上書きも削除もしないでください。
+>Any CSS class name that is prefixed with **scf-js-&amp;ast;** has a specific use in javascript code. これらのクラスは、コンポーネントの状態に影響を与え（例えば、非表示から表示に切り替える）、上書きも削除もしないでください。
 >
->While the scf-js-amp;ast;クラスはスタイルに影響を与えません。クラス名は、要素の状態を制御するので、副作用が生じる可能性があることを示す注意を払ってスタイルシートで使用できます。
+>While the scf-js-&amp;ast; クラスはスタイルに影響を与えませんが、クラス名は、要素の状態を制御するので、副次的な影響が生じる可能性があるという注意を持つスタイルシートで使用できます。
 
 ## JavaScript の拡張 {#extending-javascript}
 
 コンポーネントの JavaScript 実装を拡張するには、以下のことのみが必要です。
 
-1. jcr:resourceSuperTypeを拡張コンポーネントのjcr:resourceTypeの値に設定したアプリ用のコンポーネントを作成します（例：social/forum/components/hbs/forum）。
-1. デフォルトのSCFコンポーネントのJavaScriptを調べて、SCF.registerComponent()を使用して登録する必要があるメソッドを判断します。
-1. 拡張コンポーネントのJavaScriptをコピーするか、最初から開始する
+1. jcr:resourceSuperTypeを拡張コンポーネントのjcr:resourceTypeの値（例：social/forum/components/hbs/forum）に設定したアプリ用のコンポーネントを作成します
+1. デフォルトのSCFコンポーネントのJavaScriptを調べ、SCF.registerComponent()を使用して登録する必要があるメソッドを判断します。
+1. 拡張コンポーネントのJavaScriptまたは開始を最初からコピーする
 1. メソッドの拡張
-1. SCF.registerComponent()を使用して、すべてのメソッドをデフォルトまたはカスタマイズされたオブジェクトとビューのいずれかに登録します。
+1. SCF.registerComponent()を使用して、すべてのメソッドをデフォルトまたはカスタマイズされたオブジェクトと表示のいずれかに登録します。
 
 ### forum.js：フォーラム - HBS のサンプル拡張  {#forum-js-sample-extension-of-forum-hbs}
 
@@ -143,7 +146,7 @@ Web サイトの全体的なテーマに合うようにコンポーネントを�
 
 ## スクリプトタグ {#script-tags}
 
-スクリプトタグは、クライアント側のフレームワークに固有の機能です。 これらは、サーバー側で生成されたマークアップをクライアント側のモデルおよびビューにバインドするために役立ちます。
+スクリプトタグは、クライアント側のフレームワークに固有の部分です。 これらは、サーバー側で生成されたマークアップをクライアント側のモデルおよびビューにバインドするために役立ちます。
 
 コンポーネントをオーバーレイまたは優先するときに SCF スクリプト内のスクリプトタグを削除しないでください。SCF script tags auto created for injecting JSON in the HTML are identified with the attribute `data-scf-json=`true.
 
@@ -168,8 +171,8 @@ SCF の clientlib は、カテゴリ名内の「author」の存在のみが異�
 
 次に例を示します。
 
-* クライアントフォルダーノード：/etc/clientlibs/social/hbs/forum
-* Categoriesプロパティ：cq.social.hbs.forum
+* クライアントフォルダーノード： /etc/clientlibs/social/hbs/forum
+* カテゴリプロパティ： cq.social.hbs.forum
 
 [コミュニティコンポーネントガイド](components-guide.md)によって、各 SCF コンポーネントに必要なすべての clientlib が一覧表示されます。
 
@@ -187,19 +190,19 @@ SCF の clientlib は、カテゴリ名内の「author」の存在のみが異�
 
 次に例を示します。
 
-* クライアントフォルダーノード：/libs/social/forum/hbs/forum/clientlibs
-* Categoriesプロパティ：cq.social.author.hbs.forum
+* クライアントフォルダーノード： /libs/social/forum/hbs/forum/clientlibs
+* カテゴリプロパティ： cq.social.author.hbs.forum
 
-注意：オーサー clientlib によって他のライブラリは埋め込まれませんが、依存関係は示されます。他のライブラリに埋め込む場合、依存関係は自動的に取り込まれず、埋め込む必要があります。
+注意：オーサー clientlib によって他のライブラリは埋め込まれませんが、依存関係は示されます。他のライブラリに埋め込まれた場合、依存関係は自動的に取り込まれず、埋め込む必要があります。
 
 必要なオーサー clientlib は、[コミュニティコンポーネントガイド](components-guide.md)で各 SCF コンポーネントについてリストされた clientlib に「author」を挿入することによって識別できます。
 
 ### 使用上の考慮事項 {#usage-considerations}
 
-サイトによってクライアントライブラリの管理方法は異なります。以下に様々な要因を示します。
+サイトによってクライアントライブラリの管理方法は異なります。次に、様々な要因を示します。
 
-* 全体的な速度：応答の速いサイトが目的ですが、最初のページのロードが少し遅いことは受け入れられる場合があります。多くのページが同じJavaScriptを使用している場合、様々なJavaScriptを1つのclientlibに埋め込み、最初のページから参照して読み込むことができます。 この1回のダウンロードでJavaScriptがキャッシュされたままになり、後続のページでダウンロードするデータ量が最小限に抑えられます。
-* 迅速な最初のページ：最初のページが迅速にロードされることが目的である場合があります。この場合、JavaScriptは複数の小さなファイルに含まれ、必要な場所でのみ参照されます。
+* 全体的な速度：応答の速いサイトが目的ですが、最初のページのロードが少し遅いことは受け入れられる場合があります。多くのページが同じJavaScriptを使用している場合、様々なJavaScriptを1つのclientlibに埋め込み、最初のページから参照して読み込むことができます。 この1回のダウンロードでJavaScriptがキャッシュされたままになり、以降のページでダウンロードするデータ量が最小限に抑えられます。
+* 迅速な最初のページ：最初のページが迅速にロードされることが目的である場合があります。この場合、JavaScriptは、必要な場所でのみ参照できるように、複数の小さなファイルに含まれています。
 * 最初のページのロードと後続のダウンロードとの間のバランス。
 
 | **[⇐ 機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
