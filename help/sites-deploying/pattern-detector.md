@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8cdcfd3a-7003-4cce-97f4-da7a1a887d1b
 translation-type: tm+mt
 source-git-commit: c4ac10736c937198aa0c81ecf547dd489ef93366
+workflow-type: tm+mt
+source-wordcount: '522'
+ht-degree: 93%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: c4ac10736c937198aa0c81ecf547dd489ef93366
 
 ## 設定方法 {#how-to-set-up}
 
-パターン検出は、AEM 6.5 のアップグレードを対象とした 6.1 から 6.5 のソース AEM バージョンで動作する [1 つのパッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/compatpack/pd-all-aem65)として個別にリリースされます。[パッケージマネージャー](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/package-manager.html)を使用してインストールできます。
+パターン検出は、AEM 6.5 のアップグレードを対象とした 6.1 から 6.5 のソース AEM バージョンで動作する [1 つのパッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/compatpack/pd-all-aem65)として個別にリリースされます。[パッケージマネージャー](https://helpx.adobe.com/jp/experience-manager/6-5/sites/administering/using/package-manager.html)を使用してインストールできます。
 
 ## 使用方法 {#how-to-use}
 
@@ -52,7 +55,7 @@ source-git-commit: c4ac10736c937198aa0c81ecf547dd489ef93366
 
 * **事後対応テキストベースまたは通常の JSON インターフェイスを使用**
 
-* **無効なJSON行インターフェイスを使用し**、各行に別々のJSONドキュメントを生成します。
+* **リアクティブなJSON行インターフェイス**。各行に個別のJSONドキュメントを生成します。
 
 これらの方法の詳細を次に示します。
 
