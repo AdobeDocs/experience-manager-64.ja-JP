@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 0be4a856-951b-4cb6-8103-8004052c63a0
 translation-type: tm+mt
 source-git-commit: e0ce860380a28a9dcaa6f8ce94ad278cdbe49fad
+workflow-type: tm+mt
+source-wordcount: '810'
+ht-degree: 85%
 
 ---
 
@@ -21,14 +24,14 @@ source-git-commit: e0ce860380a28a9dcaa6f8ce94ad278cdbe49fad
 
 [アセットのアップロード](/help/assets/managing-assets-touch-ui.md#uploading-assets)を参照してください。
 
-すべての参照ファイルは、プライマリ3Dモデルファイルをアップロードする前または同時にアップロードすることをお勧めします。 ただし、必須ではありません。
+Adobeでは、すべての参照ファイルをアップロードする前または同時に、プライマリ3Dモデルファイルをアップロードすることを推奨します。 ただし、必須ではありません。
 
 アップロードが完了すると、3D ファイルが変換され、アセットの表示およびレンダリングを準備するための追加処理が適用されます。
 
 ## 3D アセットのアップロードのベストプラクティス {#best-practices-for-uploading-d-assets}
 
 * 一般的に、3D コンテンツを AEM Assets フォルダー階層内のどこにアップロードするかに関する制約はありません。ただし、大規模なアセットリポジトリで検索に時間がかかりすぎないように、AEM 3D のファイル依存関係の自動解決には範囲制限が設けられています。そのため、3D アセットとその従属ファイルをアップロードする際は、それぞれのファイルにある程度近い場所（共通の祖父母フォルダー）にアップロードすることをお勧めします。ファイルの依存関係が解決されたら、確立された関係を失うことなく、リポジトリ内のどこにでも 3D アセットとその従属ファイルの両方を自由に移動できます。
-* アップロードの前に、*一貫した3Dコンテンツのフォルダ構造を決定することをお勧めします。 推奨されるいくつかのアプローチを以下に示します。
+* Adobeでは、*アップロードする前に、3Dコンテンツのフォルダ構造を統一することをお勧めします。 推奨されるいくつかのアプローチを以下に示します。
 
    * **アップロードする 3D アセットごとに個別のフォルダーを維持する**。
 
@@ -54,7 +57,7 @@ source-git-commit: e0ce860380a28a9dcaa6f8ce94ad278cdbe49fad
 
 ## アップロードされた 3D ファイルの処理ステータスの監視 {#monitoring-the-processing-status-of-your-uploaded-d-files}
 
-In **[!UICONTROL Card View]** only, the processing status and progression is displayed as a progress banner on the asset&#39;s card. アップロードされた各3Dモデルは、通常、次の4 ～ 6個の順序で処理されます。
+In **[!UICONTROL Card View]** only, the processing status and progression is displayed as a progress banner on the asset&#39;s card. アップロードされた各3Dモデルは、通常、次の4 ～ 6個の順番の処理ステージに従います。
 
 <table> 
  <tbody> 
@@ -81,12 +84,12 @@ In **[!UICONTROL Card View]** only, the processing status and progression is dis
   <tr> 
    <td>4</td> 
    <td>ライトマップの作成</td> 
-   <td>（オプション）インタラクティブプレビューの品質を向上させ、デフォルトのレンダラーでのレンダリングを高速化できます。</td> 
+   <td>オプション. インタラクティブプレビューの品質を向上させ、デフォルトのレンダラーでのレンダリングを高速化できます。</td> 
   </tr> 
   <tr> 
    <td>5</td> 
    <td>アニメーションの作成</td> 
-   <td>（オプション）シンプルなアニメーションをレンダリングし、カード表示の視覚的なサムネールとして使用できます。</td> 
+   <td>オプション. シンプルなアニメーションをレンダリングし、カード表示の視覚的なサムネールとして使用できます。</td> 
   </tr> 
   <tr> 
    <td>6</td> 
@@ -98,5 +101,5 @@ In **[!UICONTROL Card View]** only, the processing status and progression is dis
 
 >[!NOTE]
 >
->You can view a 3D asset in **[!UICONTROL Detail View]** or render it after the Creating preview stage is complete. すべての処理ステージが完了するまで待つ必要はありません。
+>You can view a 3D asset in **[!UICONTROL Detail View]** or render it after the Creating preview stage is complete. すべての処理ステージが完了するのを待つ必要はありません。
 
