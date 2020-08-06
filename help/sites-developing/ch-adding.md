@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ac8f44df-39fb-44ea-ae17-ead0dbd1f6c0
 translation-type: tm+mt
 source-git-commit: 39b6af8ee815e8f6fa6e0b4a0a6dc80f29165243
+workflow-type: tm+mt
+source-wordcount: '1033'
+ht-degree: 77%
 
 ---
 
@@ -51,14 +54,14 @@ ContextHub ストアは、次のいずれかの永続モードを使用します
 * **ローカル：** HTML5 localStorage を使用してデータを保持します。ローカルストレージは、セッションをまたがってブラウザー上に保持されます。
 * **セッション：** HTML5 sessionStorage を使用してデータを保持します。セッションストレージは、ブラウザーセッションが持続する間、保持され、すべてのブラウザーウィンドウで使用可能です。
 * **Cookie：**&#x200B;ブラウザーのデータストレージ用 cookie のネイティブサポートを使用します。cookie データは、HTTP 要求としてサーバーとの間で送受信されます。
-* **** Window.name:window.nameプロパティを使用してデータを永続化します。
-* **** メモリ：JavaScriptオブジェクトを使用してデータを永続化します。
+* **Window.name:** window.nameプロパティを使用してデータを永続化します。
+* **メモリ：** JavaScriptオブジェクトを使用してデータを永続化します。
 
 デフォルトでは、ContextHub は「ローカル」永続モードを使用します。ブラウザーが HTML5 localStorage をサポートまたは許可していない場合は、「セッション」永続モードが使用されます。ブラウザーが HTML5 sessionStorage をサポートまたは許可していない場合は、「Window.name」永続モードが使用されます。
 
 ### ストアデータ {#store-data}
 
-ストアデータは内部的にツリー構造を形成しており、値をプライマリタイプまたは複合オブジェクトとして追加できます。複合オブジェクトをストアに追加すると、オブジェクトのプロパティがデータツリーにブランチを形成します。例えば、次の複雑なオブジェクトは、locationという名前の空のストアに追加されます。
+ストアデータは内部的にツリー構造を形成しており、値をプライマリタイプまたは複合オブジェクトとして追加できます。複合オブジェクトをストアに追加すると、オブジェクトのプロパティがデータツリーにブランチを形成します。例えば、次の複合オブジェクトは、locationという名前の空のストアに追加されます。
 
 ```xml
 Object {
@@ -169,7 +172,7 @@ ContextHub segments are installed below the `/conf/we-retail/settings/wcm/segmen
 
 >[!WARNING]
 >
->インストールされたセグメントは、プロジェクト専用の設定を構築するのに役立つ参照設定として提供されます。したがって、直接使用しないでください。
+>インストールされたセグメントは、プロジェクト用の独自の専用設定を構築するのに役立つリファレンス設定として提供されます。したがって、直接使用しないでください。
 
 ## ContextHub のデバッグメッセージのログ {#logging-debug-messages-for-contexthub}
 
