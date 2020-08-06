@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
 translation-type: tm+mt
 source-git-commit: 835618e8e0d01905ad7b476b0172dfecec41cf9d
+workflow-type: tm+mt
+source-wordcount: '1074'
+ht-degree: 74%
 
 ---
 
@@ -93,8 +96,8 @@ keytool コマンドは通常 Java の jre/bin ディレクトリにあります
      <li><p><code><i>[Group Name]</i></code> は、キーストアの所有者が属する会社グループのIDです。</p></li> 
      <li><p><code><i>[Company Name]</i></code> は組織の名前です。</p></li> 
      <li><p><code><i>[City Name]</i></code> は、組織の所在地の市区町村です。</p></li> 
-     <li><p><code><i>[State or province]</i></code> は、組織が存在する都道府県です。</p></li> 
-     <li><p><code><i>[Country Code]</i></code> は、組織の所在地の2文字のコードです。</p></li> 
+     <li><p><code><i>[State or province]</i></code> は、組織の所在地の都道府県です。</p></li> 
+     <li><p><code><i>[Country Code]</i></code> は、組織の所在国を示す2文字のコードです。</p></li> 
     </ul></td> 
   </tr> 
  </tbody> 
@@ -177,7 +180,7 @@ The Custom Trust keystore file named ‘‘ads-ca.jks’’ is created in the [a
 1. 「**Change**」をクリックしてキーストアリストをドロップダウンリストとして取得し、「**Custom Identity And Custom Trust**」を選択します。
 1. 「ID」で、次の値を指定します。
 
-   **Custom Identity Keystore**: *[appserverdomain]*/adobe/*[server name]*/ads-credentials.jks。ここで、*[appserverdomain] *は実際のサーバー名、 *[]* サーバー名はアプリケーションサーバーの名前です。
+   **Custom Identity Keystore**: *[appserverdomain]*/adobe/*[server name]*/ads-credentials.jks。ここで、*[appserverdomain] *は実際のパス、 *[server name]* はアプリケーションサーバーの名前を表します。
 
    **Custom Identity Keystore Type**：JKS
 
@@ -185,7 +188,7 @@ The Custom Trust keystore file named ‘‘ads-ca.jks’’ is created in the [a
 
 1. 「Trust」で、次の値を指定します。
 
-   **Custom Trust Keystore File Name**: `*[appserverdomain]*/adobe/*[server]*/ads-ca.jks`は、 `*[appserverdomain]*` 実際のパス
+   **Custom Trust Keystore File Name**: `*[appserverdomain]*/adobe/*[server]*/ads-ca.jks`の場合、 `*[appserverdomain]*` は実際のパスです。
 
    **Custom Trust Keystore Type**：JKS
 
