@@ -10,6 +10,9 @@ topic-tags: forms-app
 discoiquuid: 265eee8a-364e-4edf-b2a0-f42617169944
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '262'
+ht-degree: 78%
 
 ---
 
@@ -31,7 +34,7 @@ To initiate a process from the AEM Forms app, you need to have a startpoint of t
 1. AEM Forms アプリケーションで使用可能なスタートポイントを表示するには、[ホーム画面](/help/forms/using/home-screen.md)に移動してください。
 1. On the **[!UICONTROL Home]** screen, by default, the **[!UICONTROL All Forms]** list is displayed.
 
-   スタートポイントはフォームに関連付けられています。スタートポイントに関連付けられたフォームをリストでタップして開きます。
+   スタートポイントはフォームに関連付けられています。リスト内でスタートポイントに関連付けられたフォームをタップして開きます。
 
    スタートポイントに関連付けられているフォームが開きます。
 
