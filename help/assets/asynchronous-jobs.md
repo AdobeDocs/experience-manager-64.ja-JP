@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: f6aa1ab2c7a0ddeda1504e95ce4bd57fe74a65fd
 workflow-type: tm+mt
 source-wordcount: '628'
-ht-degree: 15%
+ht-degree: 18%
 
 ---
 
@@ -23,13 +23,13 @@ You can view the status of asynchronous tasks from the **[!UICONTROL Async Job S
 
 >[!NOTE]
 >
->デフォルトでは、 [!DNL Assets] タスクは並行して実行されます。 If `N` is the number of CPU cores, `N/2` tasks can execute in parallel, by default. To use custom settings for the task queue, modify the **[!UICONTROL Async Operation Default Queue]** configuration from the [!UICONTROL Web Console]. For more information, see [queue configurations](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations).
+>デフォルトでは、 [!DNL Assets] タスクは並行して実行されます。 If `N` is the number of CPU cores, `N/2` tasks can execute in parallel, by default. To use custom settings for the task queue, modify the **[!UICONTROL Async Operation Default Queue]** configuration from the [!UICONTROL Web Console]. 詳しくは、[キューの設定](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations)を参照してください。
 
 ## Monitor the status of asynchronous operations {#monitoring-the-status-of-asynchronous-operations}
 
-操作が非同期 [!DNL Assets] で処理される場合は常に、インボックス [!DNL Experience Manager][](/help/sites-authoring/inbox.md) 、および電子メール経由で通知を受け取ります。 非同期操作のステータスの詳細を表示するには、**[!UICONTROL 非同期ジョブステータス]**&#x200B;ページに移動します。
+Whenever [!DNL Assets] processes an operation asynchronously, you receive a notification in your [!DNL Experience Manager] [Inbox](/help/sites-authoring/inbox.md) and via an email. 非同期操作のステータスの詳細を表示するには、**[!UICONTROL 非同期ジョブステータス]**&#x200B;ページに移動します。
 
-1. インター [!DNL Experience Manager] フェイスで、 **[!UICONTROL 操作]** / **[!UICONTROL ジョブをクリックします]**。
+1. In the [!DNL Experience Manager] interface click **[!UICONTROL Operations]** > **[!UICONTROL Jobs]**.
 
 1. **[!UICONTROL 非同期ジョブステータス]**&#x200B;ページで、操作の詳細をレビューします。
 
@@ -48,7 +48,7 @@ You can view the status of asynchronous tasks from the **[!UICONTROL Async Job S
 
    ![メタデータ読み込みタスクの詳細](assets/job_details.png)
 
-1. リストから操作を削除するには、ツールバーの「**[!UICONTROL 削除]**」を選択します。To download the details in a CSV file, click **[!UICONTROL Download]**.
+1. リストから操作を削除するには、ツールバーの「**[!UICONTROL 削除]**」を選択します。詳細を CSV ファイルでダウンロードするには、「**[!UICONTROL ダウンロード]**」をクリックします。
 
    >[!NOTE]
    >
@@ -92,5 +92,5 @@ You can view the status of asynchronous tasks from the **[!UICONTROL Async Job S
 >[!MORELIKETHIS]
 >
 >* [Experience Managerで電子メールを設定します](/help/sites-administering/notification.md)。
->* [アセットメタデータの一括読み込みおよび書き出し](/help/assets/metadata-import-export.md).
+>* [アセットメタデータの一括読み込みおよび書き出し](/help/assets/metadata-import-export.md)
 
