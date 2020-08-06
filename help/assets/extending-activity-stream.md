@@ -4,17 +4,20 @@ description: AEM の記録機能と、特定のイベントを記録するため
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '284'
+ht-degree: 77%
 
 ---
 
 
 # Assets とアクティビティストリームの統合 {#integrating-assets-with-activity-stream}
 
-Adobe Experience Manager(AEM)Assetsユーザーは、アセットの作成、アップロード、削除など、様々な操作を実行します。 ユーザーが何を実行かについて履歴を提供できるよう、これらのアクションを記録することができます。ここでは、AEM の記録機能と、特定のイベントを記録するための AEM の設定方法について説明します。
+Adobe Experience Manager(AEM)アセットのユーザは、アセットの作成、アップロード、削除など、様々な操作を実行します。 ユーザーが何を実行かについて履歴を提供できるよう、これらのアクションを記録することができます。ここでは、AEM の記録機能と、特定のイベントを記録するための AEM の設定方法について説明します。
 
 ## パフォーマンスに関する考慮事項とデフォルトの動作 {#performance-considerations-and-default-behavior}
 
-この統合は、一括して読み込むときなどに多くの CPU およびディスク領域を消費する可能性があります。これらの理由により、AEM AssetsとActivity streamの統合はデフォルトで無効になっています。
+この統合は、一括して読み込むときなどに多くの CPU およびディスク領域を消費する可能性があります。このため、AEM Assetsとアクティビティストリームの統合はデフォルトで無効になっています。
 
 ## サポートされるアクションイベント {#supported-action-events}
 
@@ -38,7 +41,7 @@ Adobe Experience Manager(AEM)Assetsユーザーは、アセットの作成、ア
 
 ## AEM Assets のイベント記録機能の設定 {#configuring-aem-assets-events-recording}
 
-The [Web console](/help/sites-deploying/configuring-osgi.md) provides access to the AEM Assets Event Recorder tuning. AEM Assetsイベントレコーダーを設定するには、次の手順に従います。
+[Webコンソールを使用して](/help/sites-deploying/configuring-osgi.md) 、AEM Assetsイベントレコーダーのチューニングを行うことができます。 AEM Assetsイベントレコーダーを設定するには、次の手順に従います。
 
 1. **[!UICONTROL Web コンソール]**&#x200B;に移動します。
 
