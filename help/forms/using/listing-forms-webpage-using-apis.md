@@ -10,6 +10,9 @@ topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
 translation-type: tm+mt
 source-git-commit: 9229642edd5a91bee017d8c0680cd6c10bfe43df
+workflow-type: tm+mt
+source-wordcount: '719'
+ht-degree: 84%
 
 ---
 
@@ -43,7 +46,7 @@ To search forms using the REST API, send a GET request to the server at `https:/
    <td><p>アセットと一緒に取得するプロパティを指定します。アスタリスク（*）を使用するとすべてのプロパティを一度に取得できます。複数のプロパティを指定する場合はパイプ（|）演算子を使用します。 </p> <p>例： <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>： </p>
     <ul>
      <li><em>ID、パス、名前などのプロパティは、常に取得されます。 </em></li>
-     <li><em>アセットごとにプロパティのセットが異なります。formUrl、pdfUrl、guideUrl などのプロパティは cutPoints 属性に依存しません。これらのプロパティはアセットタイプに依存し、それに従って取得されます。 </em></li>
+     <li><em>アセットごとにプロパティのセットが異なります。formUrl、pdfUrl、guideUrl などのプロパティは cutPoints 属性に依存しません。これらのプロパティはアセットタイプに依存し、アセットタイプに応じて取得されます。 </em></li>
     </ul> </td>
   </tr>
   <tr>
@@ -96,7 +99,7 @@ To search forms using the REST API, send a GET request to the server at `https:/
   </tr>
   <tr>
    <td>orderings<br /> </td>
-   <td><p>検索結果の順序条件を指定します。条件は JSON 形式で定義されます。複数のフィールドの検索結果を並べ替えることができます。検索結果は、フィールドがクエリー内で表示されている順番のとおりに並べ替えられています。</p> <p>例：</p> <p>titleプロパティで昇順に並べ替えたクエリー結果を取得するには、次のパラメーターを追加します。 </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
+   <td><p>検索結果の順序条件を指定します。条件は JSON 形式で定義されます。複数のフィールドの検索結果を並べ替えることができます。検索結果は、フィールドがクエリー内で表示されている順番のとおりに並べ替えられています。</p> <p>例：</p> <p>タイトルプロパティで昇順に並べ替えられたクエリ結果を取得するには、次のパラメーターを追加します。 </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
        JSONObject orderings=new JSONObject();
        orderings.put("name", "title");
        orderings.put("criteria", "ASC");
@@ -104,7 +107,7 @@ To search forms using the REST API, send a GET request to the server at `https:/
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
      <li><strong>name</strong>：検索結果の並べ替えに使用するプロパティの名前を指定します。</li>
-     <li><strong>criteria</strong>：結果の順序を指定します。order属性は次の値を受け取ります。
+     <li><strong>criteria</strong>：結果の順序を指定します。順序属性には次の値を指定できます。
       <ul>
        <li>ASC - ASC を使用すると、結果を昇順に並べ替えます。<br /> </li>
        <li>DES - DESを使用して、結果を降順に並べ替えます。</li>
