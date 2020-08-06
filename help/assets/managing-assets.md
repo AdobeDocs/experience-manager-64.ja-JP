@@ -1,8 +1,8 @@
 ---
-title: ダイナミックメディアアセットの管理について
-seo-title: ダイナミックメディアアセットの管理について
-description: ダイナミックメディアアセットの操作方法を説明します。
-seo-description: ダイナミックメディアアセットの操作方法を説明します。
+title: Dynamic Media アセットの管理について
+seo-title: Dynamic Media アセットの管理について
+description: Dynamic Media アセットの操作方法について説明します。
+seo-description: Dynamic Media アセットの操作方法について説明します。
 uuid: 9c7f9d4e-caab-434f-a1ae-eca16c883461
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
 translation-type: tm+mt
 source-git-commit: 0a29460e7212539b6805f0bcc04c94d7d57e9b98
+workflow-type: tm+mt
+source-wordcount: '131'
+ht-degree: 100%
 
 ---
 
 
-# About managing Dynamic Media assets {#managing-assets}
+# Dynamic Media アセットの管理について {#managing-assets}
 
-ダイナミックメディアアセット — 画像、ビデオおよびインタラクティブアセットのアップロード後の管理には、プレビュー、ダウンロード、公開など、多くのタスクが必要です。
+アップロード後の Dynamic Media アセット（画像、ビデオ、インタラクティブアセット）の管理には、アセットのプレビュー、ダウンロード、公開を含む数多くのタスクが必要になります。
 
 プレビューをするときには、画像プリセット（画像の場合のみ）またはビューアプリセット（ビデオおよび画像の場合）を適用することもできます。この両方をアセットに適用することはできません。詳しくは、[ビューアプリセットの適用](viewer-presets.md)および[画像プリセットの適用](image-presets.md)を参照してください。
 
-General information on managing assets is found in [Managing Assets with the Touch UI](managing-assets-touch-ui.md).
+アセットの管理に関する一般的な情報については、[タッチ UI を使用したアセットの管理](managing-assets-touch-ui.md)を参照してください。
 
-以下の各トピックでは、ダイナミックメディアアセットを管理するために必要な操作について説明します。
+次のトピックでは、Dynamic Media アセットの管理に必要な事項について説明します。
 
 * [画質最適化のベストプラクティス](best-practices-for-optimizing-the-quality-of-your-images.md)
 * [Dynamic Media アセットのプレビュー](previewing-assets.md)
