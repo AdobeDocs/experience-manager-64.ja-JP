@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: eaf65bdd-9091-4985-90bd-5eb2148965e3
 translation-type: tm+mt
 source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
+workflow-type: tm+mt
+source-wordcount: '468'
+ht-degree: 97%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、 [AEM 6.4 Service Pack 2(6.4.2.0)以降が必要です](/help/release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2(6.4.2.0)以降が [必要です](/help/release-notes/sp-release-notes.md)。
 
 ## 権限 - 削除または削除禁止 {#permissions-delete-or-not-delete}
 
-コンテンツを削除する機能は強力ですが、この権限の割り当て方法を制限および管理する必要がある多くの業界では、慎重な取り扱いが求められる可能性があります。
+コンテンツを削除する機能は強力ですが、この特権の割り当て方法を制限および管理する必要がある多くの業界では、慎重な取り扱いが求められる可能性があります。
 
 削除権限に関しては、コンテンツフラグメントを次の 2 つのレベルで考える必要があります。
 
@@ -57,7 +60,7 @@ source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
 >
 >コンテンツフラグメントの編集または更新に必要な削除権限は、[ユーザー管理やグループ管理で割り当てられた](/help/sites-administering/security.md#managing-permissions)削除権限に含まれています。
 
-The permissions needed to edit/update a fragment need to be applied to either the node containing the content fragment, or an appropriate parent node (at any level under `/content/dam`). このような親ノードに割り当てられた権限は、そのブランチ内のすべてのノードに適用されます。
+フラグメントの編集または更新に必要な権限は、コンテンツフラグメントを含んでいるノードまたは適切な親ノード（`/content/dam` 下の任意のレベル）のどちらかに適用する必要があります。このような親ノードに割り当てられた権限は、そのブランチ内のすべてのノードに適用されます。
 
 例えば、すべてのコンテンツフラグメントが格納される次のようなフォルダーです。
 
@@ -65,7 +68,7 @@ The permissions needed to edit/update a fragment need to be applied to either th
 
 >[!CAUTION]
 >
->Setting the permissions on `/content/dam` is also possible, as all content fragments are stored here.
+>`/content/dam` に権限を設定することもできます。すべてのコンテンツフラグメントがそこに格納されているからです。
 >
 >ただし、その場合は、他の&#x200B;*すべての*&#x200B;アセットタイプにも同じ削除権限が適用されます。
 
@@ -73,19 +76,19 @@ The permissions needed to edit/update a fragment need to be applied to either th
 
 >[!NOTE]
 >
->この一覧には、削除権限だけでなく、必要なすべての権限が含まれています。
+>このリストには、削除特権だけでなく、必要なすべての特権が含まれています。
 
 * コンテンツフラグメントノードまたはフォルダーの場合：
 
-   * `jcr:addChildNodes`, `jcr:modifyProperties`
+   * `jcr:addChildNodes`、`jcr:modifyProperties`
 
-* For the `jcr:content` node of all Content Fragments:
+* すべてのコンテンツフラグメントの `jcr:content` ノードの場合：
 
-   * `jcr:addChildNodes`, `jcr:modifyProperties` および `jcr:removeChildNodes`
+   * `jcr:addChildNodes`、`jcr:modifyProperties`、`jcr:removeChildNodes`
 
-* For all nodes below `jcr:content` of all Content Fragments:
+* すべてのコンテンツフラグメントの `jcr:content` 下にあるすべてのノードの場合：
 
-   * `jcr:addChildNodes`, `jcr:modifyProperties` および `jcr:removeChildNodes`, `jcr:removeNode`
+   * `jcr:addChildNodes`、`jcr:modifyProperties`、`jcr:removeChildNodes`、`jcr:removeNode`
 
 これらの `remove` 権限は、[CRXDE Lite 内でアクセス制御リストを使用して管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)する必要があります。
 
