@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 translation-type: tm+mt
 source-git-commit: 13d890d08a032fe4eef1dac793dcf2a3e682a52c
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 75%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 13d890d08a032fe4eef1dac793dcf2a3e682a52c
 
 ## 概要 {#overview}
 
-AEM Communitiesドキュメントのこのセクションには、次の内容に加えて、以下のセクションが含まれます。
+AEM Communitiesのドキュメントのこのセクションには、次のセクションが含まれます。
 
 * [Apache Maven を使用して AEM プロジェクトをビルドする方法](../../help/sites-developing/ht-projects-maven.md)
 
@@ -41,7 +44,7 @@ AEM Communities API jar の GAV の例を次に示します。
 </dependency>
 ```
 
-指定したバージョンが、AEM Communities用にインストールされたCommunitiesパッケージバージョンに対応していることを確認します。 インストールされているバージョン番号を確認するには：
+指定したバージョンが、AEM Communities用にインストールされたCommunitiesパッケージのバージョンに対応していることを確認します。 インストールされているバージョン番号を確認するには：
 
 1. 管理者権限でログインします。
 2. Browse to [Package Manager](../../help/sites-administering/package-manager.md). For example, [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
