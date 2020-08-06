@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '1540'
+ht-degree: 52%
 
 ---
 
@@ -37,7 +40,7 @@ AEM Communities に付属のカスタム SCF ヘルパーは、次の[クライ�
 
 maxWords および maxLength プロパティに準拠した省略形文字列を返すヘルパーです。
 
-省略対象の文字列は context で指定します。コンテキストが指定されない場合は、空の文字列が返されます。
+省略対象の文字列は context で指定します。コンテキストが指定されない場合、空の文字列が返されます。
 
 context は最初に maxLength にトリミングされ、その後、いくつかの単語に分割されてから maxWords まで縮小されます。
 
@@ -45,19 +48,19 @@ safeString を true に設定した場合は、SafeString が文字列として�
 
 ### パラメーター {#parameters}
 
-* **context**:文字列
+* **context**: 文字列
 
    （オプション）デフォルトは空の文字列です
 
-* **maxLength**:数値
+* **maxLength**: 数値
 
    （オプション）デフォルトは、コンテキストの長さです。
 
-* **maxWords**:数値
+* **maxWords**: 数値
 
-   （オプション）デフォルトは、トリミングされた文字列内の単語の数です。
+   （オプション）デフォルトは、トリミングされた文字列内の単語数です。
 
-* **safeString**:ブール値
+* **safeString**: ブール値
 
    （オプション）trueの場合はHandlebars.SafeString()を返します。 デフォルト値は false です。
 
@@ -93,23 +96,23 @@ div の下に 2 つの span を追加するヘルパーです。一方はフル�
 
 ### パラメーター {#parameters-1}
 
-* **context**:文字列
+* **context**: 文字列
 
    （オプション）デフォルトは空の文字列です。
 
-* **numChars**:数値
+* **numChars**: 数値
 
-   （オプション）フルテキストを表示しない場合に表示する文字の数です。 デフォルト値は 100 です。
+   （オプション）フルテキストを表示しない場合に表示する文字の数です。 初期設定は 100 です。
 
-* **moreText**:文字列
+* **moreText**: 文字列
 
-   （オプション）表示するテキストが増えていることを示すテキスト。 デフォルト値は「more」です。
+   （オプション）表示するテキストが増えていることを示すテキストです。 デフォルト値は「more」です。
 
-* **ellipsesText**:文字列
+* **ellipsesText**: 文字列
 
    （オプション）非表示のテキストがあることを示す表示テキストです。 デフォルト値は「...」です。
 
-* **safeString**:ブール値
+* **safeString**: ブール値
 
    （オプション）結果を返す前にHandlebars.SafeString()を適用するかどうかを示すブール値です。 デフォルト値は false です。
 
@@ -133,13 +136,13 @@ Then content-loadmore would return
 
 ### パラメーター {#parameters-2}
 
-* **context**:数値
+* **context**: 数値
 
-   （オプション） 1970年1月1日からのミリ秒オフセット値（エポック）。 初期設定は現在の日付です。
+   （オプション） 1970年1月1日（エポック）からのミリ秒オフセットの値。 初期設定は現在の日付です。
 
-* **format**:文字列
+* **format**: 文字列
 
-   （オプション）適用する日付形式。 初期設定は「YYYY-MM-DDTHH:mm:ss.sssZ」で、結果は「2015-03-18T18:17:13-07:00」と表示されます。
+   （オプション）適用する日付形式です。 初期設定は「YYYY-MM-DDTHH:mm:ss.sssZ」で、結果は「2015-03-18T18:17:13-07:00」と表示されます。
 
 ### 例 {#examples-1}
 
@@ -161,11 +164,11 @@ Then content-loadmore would return
 
 ### パラメーター {#parameters-3}
 
-* **lvalue**:文字列
+* **lvalue**: 文字列
 
    比較する左側の値
 
-* **rvalue**:文字列
+* **rvalue**: 文字列
 
    比較する右側の値
 
@@ -185,11 +188,11 @@ A block helper that tests the current value of [WCM mode](https://helpx.adobe.co
 
 ### パラメーター {#parameters-4}
 
-* **context**:文字列
+* **context**: 文字列
 
    （オプション）変換する文字列。 default を指定しない場合は必須です。
 
-* **mode**:文字列
+* **mode**: 文字列
 
    (optional) A comma separated list of [WCM modes](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) to test if set.
 
@@ -211,15 +214,15 @@ A block helper that tests the current value of [WCM mode](https://helpx.adobe.co
 
 ### パラメーター {#parameters-5}
 
-* **context**:文字列
+* **context**: 文字列
 
    （オプション）変換する文字列。 default を指定しない場合は必須です。
 
-* **default**:文字列
+* **default**: 文字列
 
-   （オプション）変換するデフォルトの文字列。 context を指定しない場合は必須です。
+   （オプション）変換するデフォルトの文字列です。 context を指定しない場合は必須です。
 
-* **comment**:文字列
+* **comment**: 文字列
 
    （オプション）翻訳ヒント
 
@@ -242,29 +245,29 @@ A block helper that tests the current value of [WCM mode](https://helpx.adobe.co
 
 ### パラメーター {#parameters-6}
 
-* **context**:文字列またはオブジェクト
+* **context**: 文字列またはオブジェクト
 
    （相対パスを指定しない場合はオプション）
 
-   現在のコ `this`ンテキストを渡すために使用
+   現在 `this`のコンテキストを渡すために使用
 
-   要求さ `this.id` れたresourceTypeのレンダリングに使用す `id` るリソースを取得するために使用
+   要求さ `this.id` れたresourceTypeのレンダリングに使用す `id` るリソースの取得に使用します。
 
-* **resourceType**:文字列
+* **resourceType**: 文字列
 
-   （オプション）リソースタイプは、コンテキストからリソースタイプにデフォルト設定されます。
+   （オプション）リソースタイプは、デフォルトでコンテキストからリソースタイプに設定されます。
 
-* **template**:文字列
+* **template**: 文字列
 
    コンポーネントスクリプトへのパス
 
-* **path**:文字列
+* **path**: 文字列
 
-   （必須）リソースへのパス。 パスが相対パスの場合、context を指定する必要があります。そうしないと、空の文字列が返されます。
+   （必須）リソースへのパスです。 パスが相対パスの場合、context を指定する必要があります。そうしないと、空の文字列が返されます。
 
-* **authoringDisabled**:ブール値
+* **authoringDisabled**: ブール値
 
-   （オプション）デフォルトはfalseです。 内部でのみ使用されます。
+   （オプション）初期設定はfalseです。 内部でのみ使用されます。
 
 ### 例 {#example-4}
 
@@ -276,27 +279,27 @@ A block helper that tests the current value of [WCM mode](https://helpx.adobe.co
 
 ## IncludeClientLib {#includeclientlib}
 
-AEM html クライアントライブラリとして js、css、または theme の各ライブラリをインクルードするヘルパーです。jsやcssなど、様々なタイプの複数の包含タグの場合、このタグをHandlebarsスクリプトで複数回使用する必要があります。
+AEM html クライアントライブラリとして js、css、または theme の各ライブラリをインクルードするヘルパーです。jsやcssなど、異なるタイプの複数の挿入タグの場合、このタグをHandlebarsスクリプトで複数回使用する必要があります。
 
 This helper, appropriate only on the server-side, provides functionality similar to [ui:includeClientLib](../../help/sites-developing/taglib.md) for JSP scripts.
 
 ### パラメーター {#parameters-7}
 
-* **カテゴリ**:文字列
+* **カテゴリ**: 文字列
 
-   （オプション）クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリの JavaScript ライブラリと CSS ライブラリがすべてインクルードされます。テーマ名は要求から抽出されます。
+   （オプション）カンマで区切られたクライアントライブラリカテゴリのリスト。 指定したカテゴリの JavaScript ライブラリと CSS ライブラリがすべてインクルードされます。テーマ名は要求から抽出されます。
 
-* **テーマ**:文字列
+* **テーマ**: 文字列
 
-   （オプション）クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリのテーマに関連するライブラリ（CSS と JS の両方）がすべてインクルードされます。テーマ名は要求から抽出されます。
+   （オプション）カンマで区切られたクライアントライブラリカテゴリのリスト。 指定したカテゴリのテーマに関連するライブラリ（CSS と JS の両方）がすべてインクルードされます。テーマ名は要求から抽出されます。
 
-* **js**:文字列
+* **js**: 文字列
 
-   （オプション）クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリの JavaScript ライブラリがすべてインクルードされます。
+   （オプション）カンマで区切られたクライアントライブラリカテゴリのリスト。 指定したカテゴリの JavaScript ライブラリがすべてインクルードされます。
 
-* **css**:文字列
+* **css**: 文字列
 
-   （オプション）クライアントライブラリのカテゴリをコンマで区切ったリスト。 指定したカテゴリの CSS ライブラリがすべてインクルードされます。
+   （オプション）カンマで区切られたクライアントライブラリカテゴリのリスト。 指定したカテゴリの CSS ライブラリがすべてインクルードされます。
 
 ### 例 {#examples-2}
 
@@ -349,13 +352,13 @@ This helper, appropriate only on the server-side, provides functionality similar
 
 ### パラメーター {#parameters-8}
 
-* **context**:数値
+* **context**: 数値
 
    「今」と比較する過去の時間。 時間は 1970 年 1 月 1 日（epoch）からのミリ秒単位のオフセットとして表されます。
 
-* **daysCutof**:数値
+* **daysCutofof**: 数値
 
-   実際の日付に切り替わる前の日数。 デフォルト値は 60 です。
+   実際の日付に切り替わる前の日数。 初期設定は 60 です。
 
 ### 例 {#example-5}
 
@@ -381,7 +384,7 @@ XSS に対する保護として、HTML 要素コンテンツのソース文字�
 
 ### パラメーター {#parameters-9}
 
-* **context**:object
+* **context**: object
 
    エンコードするHTML
 
@@ -399,7 +402,7 @@ XSS に対する保護として、HTML 属性値に記述するソース文字�
 
 ### パラメーター {#parameters-10}
 
-* **context**:オブジェクト
+* **context**: オブジェクト
 
    エンコードするHTML
 
@@ -417,7 +420,7 @@ XSS に対する保護として、JavaScript 文字列コンテンツに記述�
 
 ### パラメーター {#parameters-11}
 
-* **context**:オブジェクト
+* **context**: オブジェクト
 
    エンコードするHTML
 
@@ -435,9 +438,9 @@ XSS に対する保護として、HTML の href または src 属性値として
 
 ### パラメーター {#parameters-12}
 
-* **context**:オブジェクト
+* **context**: オブジェクト
 
-   削除するURL
+   不要部分を削除するURL
 
 ### 例 {#example-9}
 
@@ -447,7 +450,7 @@ XSS に対する保護として、HTML の href または src 属性値として
 
 ## Handlebars.js の基本的概要 {#handlebars-js-basic-overview}
 
-[Handlebars.jsドキュメントのヘルパー関数の概要を簡単に示します](https://handlebarsjs.com/expressions.html)。
+A quick overview of helper functions from [Handlebars.js documentation](https://handlebarsjs.com/expressions.html):
 
 * Handlebarsヘルパー呼び出しは、単純な識別子（ヘルパーの*name *）で、その後に0個以上の空白で区切られたパラメーターが続きます。
 * パラメーターには、単純な文字列、数値、ブール値、または JSON オブジェクトを指定し、オプションで最後のパラメーターとして一連のキー／値ペア（ハッシュ引数）を指定します。
@@ -457,14 +460,14 @@ XSS に対する保護として、HTML の href または src 属性値として
 * コンテキストは、文字列、数値、ブール値、またはJSONデータオブジェクトです。
 * `this.url` や `this.id` のように、現在のコンテキスト内にネストされているオブジェクトを context として渡すことができます（単純なヘルパーおよびブロックヘルパーを示す後述の例を参照）。
 
-* ブロックヘルパーとは、テンプレート内の任意の場所から呼び出すことができる関数です。テンプレートのブロックは、毎回異なるコンテキストを使用して0回以上呼び出すことができます。 They contain a context between {{#*name*}} and {{/*name*}}.
+* ブロックヘルパーとは、テンプレート内の任意の場所から呼び出すことができる関数です。テンプレートのブロックは、毎回異なるコンテキストで0回以上呼び出すことができます。 They contain a context between {{#*name*}} and {{/*name*}}.
 
 * Handlebars では、ヘルパーに対する最後のパラメーターとして「options」を使用します。特別なオブジェクト「options」には、
 
    * オプションのプライベートデータ(options.data)
-   * 呼び出しからのオプションのキー値プロパティ(options.hash)
+   * 呼び出しによるオプションのキー値プロパティ(options.hash)
    * 自身を呼び出す機能(options.fn())
-   * その逆関数を呼び出す機能(options.inverse())
+   * 逆関数を呼び出す機能(options.inverse())
 
 * ヘルパーから返される HTML 文字列コンテンツは SafeString になるようにすることをお勧めします。
 
@@ -517,12 +520,12 @@ template(data);
 レンダリング対象：\
 &lt;ul>\
 &lt;li>&lt;a href=&quot;/people/1&quot;>アラン&lt;/a>&lt;/li>\
-&lt;li>&lt;a href=&quot;/people/2&quot;>ユダ&lt;/a>&lt;/li>\
+&lt;li>&lt;a href=&quot;/people/2&quot;>Yeuda&lt;/a>&lt;/li>\
 &lt;/ul>
 
 ## カスタム SCF ヘルパー {#custom-scf-helpers}
 
-カスタムヘルパーは、特にデータを渡す場合に、クライアント側だけでなくサーバー側で実装する必要があります。SCFの場合、ページが要求されたときに、指定したコンポーネントのHTMLがサーバーで生成されるので、ほとんどのテンプレートはサーバー側でコンパイルおよびレンダリングされます。
+カスタムヘルパーは、特にデータを渡す場合に、クライアント側だけでなくサーバー側で実装する必要があります。SCFの場合、ほとんどのテンプレートは、ページが要求されたときに特定のコンポーネントのHTMLがサーバーで生成されるので、サーバー側でコンパイルおよびレンダリングされます。
 
 ### サーバー側カスタムヘルパー {#server-side-custom-helpers}
 
@@ -592,11 +595,11 @@ function(Handlebars, SCF, $CQ) {
 })(Handlebars, SCF, $CQ);
 ```
 
-カスタムのクライアント側ヘルパーは、カスタムのクライアントライブラリに追加する必要があります。\
+カスタムのクライアントサイドヘルパーは、カスタムのクライアントライブラリに追加する必要があります。\
 clientlib の条件は次のとおりです。
 
 * Include a dependency on `cq.social.scf`
-* ハンドルを読み込んだ後に読み込む
+* ハンドルが読み込まれた後に読み込む
 * Be [included](clientlibs.md)
 
 Note: the SCF helpers are defined in `/etc/clientlibs/social/commons/scf/helpers.js`.
