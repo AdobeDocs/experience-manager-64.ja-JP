@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: b1603091bb05493c9cfffa6067f414f73774edb2
 workflow-type: tm+mt
 source-wordcount: '1723'
-ht-degree: 53%
+ht-degree: 54%
 
 ---
 
@@ -30,7 +30,7 @@ AEMをWCMとして使用している場合は、ダイナミックメディア�
 
 ## ページへの Dynamic Media コンポーネントの追加 {#adding-a-dynamic-media-component-to-a-page}
 
-Adding the [!UICONTROL Dynamic Media] or [!UICONTROL Interactive Media] component to a page is the same as adding a component to any page. [!UICONTROL Dynamic Media] と [!UICONTROL インタラクティブメディア] コンポーネントについては、以下の各節で詳しく説明します。
+Adding the [!UICONTROL Dynamic Media] or [!UICONTROL Interactive Media] component to a page is the same as adding a component to any page. The [!UICONTROL Dynamic Media] and [!UICONTROL Interactive Media] components are described in detail in the following sections.
 
 ページにダイナミックメディアコンポーネント／ビューアを追加するには：
 
@@ -48,7 +48,7 @@ Adding the [!UICONTROL Dynamic Media] or [!UICONTROL Interactive Media] componen
 
 ## Dynamic Media コンポーネント {#dynamic-media-components}
 
-[!UICONTROL Dynamic Media] と [!UICONTROL インタラクティブメディア] は、「 [!UICONTROL Dynamic Media] 」の下のサイドキックで利用できます ****。 **[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントは、すべてのインタラクティブアセット（インタラクティブビデオ、インタラクティブ画像、カルーセルセットなど）に使用します。その他すべてのダイナミックメディアコンポーネントでは、**[!UICONTROL ダイナミックメディア]**&#x200B;コンポーネントを使用します。
+[!UICONTROL ダイナミックメディア] と [!UICONTROL インタラクティブメディア] は、ダイナミックメディアの [!UICONTROL 下のサイドキックで使用でき] ます ****。 **[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントは、すべてのインタラクティブアセット（インタラクティブビデオ、インタラクティブ画像、カルーセルセットなど）に使用します。その他すべてのダイナミックメディアコンポーネントでは、**[!UICONTROL ダイナミックメディア]**&#x200B;コンポーネントを使用します。
 
 ![chlimage_1-71](assets/chlimage_1-71.png)
 
@@ -58,7 +58,7 @@ Adding the [!UICONTROL Dynamic Media] or [!UICONTROL Interactive Media] componen
 
 ### Dynamic Media コンポーネント {#dynamic-media-component}
 
-Dynamic Mediaコンポーネントはスマートです。画像とビデオのどちらを追加するかに応じて、様々なオプションがあります。 このコンポーネントは画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートします。また、ビューアはレスポンシブです。 つまり、画面のサイズは、画面のサイズに基づいて自動的に変更されます。 すべてのビューアはHTML5ベースのビューアです。
+ダイナミックメディアコンポーネントはスマートです。画像を追加するかビデオを追加するかに応じて、様々なオプションがあります。 このコンポーネントは画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートします。また、ビューアはレスポンシブです。 つまり、画面のサイズは、画面のサイズに基づいて自動的に変更されます。 すべてのビューアはHTML5ベースのビューアです。
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ You can edit the following Dynamic Media settings by clicking **[!UICONTROL Edit
 
 このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
-**[!UICONTROL ブレークポイント]** — レスポンシブサイトでこのアセットを使用する場合は、ページのブレークポイントを追加する必要があります。 画像のブレークポイントをコンマ（,）で区切って指定する必要があります。このオプションを使用できるのは、画像プリセットで高さまたは幅が定義されていないときです。
+**[!UICONTROL Breakpoints]** – If you are using this asset on a responsive site, you need to add the page breakpoints. 画像のブレークポイントをコンマ（,）で区切って指定する必要があります。このオプションを使用できるのは、画像プリセットで高さまたは幅が定義されていないときです。
 
 このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
