@@ -11,13 +11,16 @@ topic-tags: forms-workspace
 discoiquuid: 80a70f5c-dcc4-425f-9971-9e0feec094d6
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '1784'
+ht-degree: 84%
 
 ---
 
 
 # AEM Forms Workspace のカスタマイズの概要 {#introduction-to-customizing-aem-form-workspace}
 
-AEM Form Workspaceは、プレゼンテーションのセマンティックとインターフェイスの機能を変更する機能を提供します。 スタイル、レイアウト、書式設定、ブランド、およびコア機能を変更するカスタマイズのタイプについては、以下に説明します。
+AEM form workspaceは、プレゼンテーションセマンティックとインターフェイスの機能を変更する機能を提供します。 スタイル、レイアウト、書式設定、ブランド、およびコア機能を変更するカスタマイズのタイプについては、以下に説明します。
 
 ![cu_customized_workspace_example](assets/cu_customized_workspace_example.png)
 
@@ -49,7 +52,7 @@ Workspace をカスタマイズするには、/libs/ws/css フォルダー内に
   </tr> 
   <tr> 
    <td><p>#ヘッダー</p> </td> 
-   <td><p>AEM Forms Workspaceのヘッダー</p> </td> 
+   <td><p>AEM Formsワークスペースのヘッダー</p> </td> 
   </tr> 
   <tr> 
    <td><p>.categoryList</p> </td> 
@@ -116,7 +119,7 @@ Workspace をカスタマイズするには、/libs/ws/css フォルダー内に
 
 #### CSS {#css}
 
-AEM Forms Workspaceの外観は、CSSの外観を借用します。 CSS をカスタマイズすることにより、フォント、色、ブランド、レイアウトなどの Workspace のプレゼンテーションセマンティックを変更することができます。
+AEM Formsワークスペースの外観は、CSSからの外観を借用します。 CSS をカスタマイズすることにより、フォント、色、ブランド、レイアウトなどの Workspace のプレゼンテーションセマンティックを変更することができます。
 
 CSS カスタマイズのためのトップレベルの手順を以下に示します。
 
@@ -124,11 +127,11 @@ CSS カスタマイズのためのトップレベルの手順を以下に示し�
 * この CSS にスタイルアイテムを追加します。詳細については、「CSS スタイルについて」を参照してください。
 * Update its references in `html.jsp`.
 
-For the exact steps to do these customizations, see [Generic steps for AEM Forms workspace customization](/help/forms/using/generic-steps-html-workspace-customization.md). AEM Forms Workspaceに付属のCSSファイルは、/libs/ws/css/にあります。 CSS 関連のカスタマイズの場合は、[出荷パッケージ](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。CSS 関連のカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
+For the exact steps to do these customizations, see [Generic steps for AEM Forms workspace customization](/help/forms/using/generic-steps-html-workspace-customization.md). AEM Formsワークスペースに付属のCSSファイルは、/libs/ws/css/にあります。 CSS 関連のカスタマイズの場合は、[出荷パッケージ](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。CSS 関連のカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
 
 #### 画像 {#image}
 
-AEM Forms Workspaceをカスタマイズして、ユーザーのアバターを追加したり、組織のロゴを追加したりできます。 これらのカスタマイズの場合は、[出荷パッケージ](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。
+AEM Formsのワークスペースをカスタマイズして、ユーザーのアバターを追加したり、組織のロゴを追加したりできます。 これらのカスタマイズの場合は、[出荷パッケージ](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。
 
 画像をカスタマイズするためのトップレベルの手順を以下に示します。
 
@@ -153,9 +156,9 @@ HTML テンプレートをカスタマイズするためのトップレベルの
 
 ### セマンティックの変更 {#semantic-changes}
 
-AEM Forms Workspaceの機能を変更するには、JavaScriptソースコードを変更します。 コア機能の変更は、セマンティックの変更としてラベル付けされます。AEM Forms Workspace のソースコードの一部として、モデル、ビュー、およびテンプレートを変更します。
+AEM Formsワークスペースの機能を変更するには、JavaScriptソースコードを変更します。 コア機能の変更は、セマンティックの変更としてラベル付けされます。AEM Forms Workspace のソースコードの一部として、モデル、ビュー、およびテンプレートを変更します。
 
-セマンティックの変更を行ってAEM Forms Workspaceの機能を変更するための最上位の手順は、次のとおりです。
+セマンティックの変更を行ってAEM Formsワークスペースの機能を変更するためのトップレベルの手順は、次のとおりです。
 
 * ユーザーが作成したフォルダーで、該当するデフォルトのファイルのコピーを作成します。
 * ユーザー定義フォルダーに新しいモデルおよびビューを追加します。
@@ -166,7 +169,7 @@ AEM Forms Workspaceの機能を変更するには、JavaScriptソースコード
 
 ### 再利用可能なコンポーネント {#reusable-components}
 
-AEM Forms Workspaceはコンポーネントベースのソフトウェアなので、簡単にカスタマイズして再利用できます。 Workspace コンポーネントを Web アプリケーションで容易に統合できます。
+AEM Formsワークスペースはコンポーネントベースのソフトウェアなので、簡単にカスタマイズして再利用できます。 Workspace コンポーネントを Web アプリケーションで容易に統合できます。
 
 For more conceptual information, see the [Description of reusable components](/help/forms/using/description-reusable-components.md) and for instruction about using the components, see [Integrating AEM Forms workspace components in web applications](/help/forms/using/description-reusable-components.md).
 
@@ -174,7 +177,7 @@ For more conceptual information, see the [Description of reusable components](/h
 
 ### SDK パッケージ {#sdk-package}
 
-パッケージには AEM Forms Workspace のソースコードが含まれます。パッケージは、で入手できま `[*LC root*]\sdk\html-workspace\adobe-lc-workspace-src.zip`す。
+パッケージには AEM Forms Workspace のソースコードが含まれます。パッケージは、で入手でき `[*LC root*]\sdk\html-workspace\adobe-lc-workspace-src.zip`ます。
 
 これは主としてカスタマイズ向けで、
 
@@ -190,7 +193,7 @@ For more conceptual information, see the [Description of reusable components](/h
 
 * client-html:
 
-   * assembly - AEM Forms Workspace SDKを作成するスクリプトで使用されるzip.xmlを含みます。
+   * assembly -AEM FormsワークスペースSDKを作成するスクリプトで使用されるzip.xmlを含みます。
    * src/main/webapp -
 
       * css - AEM Forms Workspace のスタイルシートを含みます。
@@ -213,7 +216,7 @@ For more conceptual information, see the [Description of reusable components](/h
             * views - AEM Forms Workspace 内のすべてのコンポーネントのバックボーンビューを含みます。
          * main.js
          * router.js
-      * libs/ws:pdf.htmlとpluginPing.pdfはAEM Forms WorkspaceでPDFフォームを読み込むために使用され、WSNextAdapter.swfはAEM Forms WorkspaceでSWFフォームとガイドを読み込むために使用されます。
+      * libs/ws: pdf.htmlとpluginPing.pdfはAEM FormsのワークスペースにPDF formsを読み込むために使用され、WSNextAdapter.swfはAEM FormsのワークスペースにSWFフォームとガイドを読み込むために使用されます。
       * locales:
 
          * de-DE - ドイツ語の translation.json を含みます。
