@@ -50,7 +50,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsとのプログラミング」にあるクイック開始は、Formsサーバのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）: Java APIを使用したポリシーの作成 {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
 
@@ -2056,7 +2056,7 @@ public class DeleteAbstractPolicySoap {
 }
 ```
 
-## クイック開始（SOAPモード）: Java APIを使用した既存ユーザーの文ワークフローでのPDFの保護 {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用した、既存のユーザー向けの文書ワークフローでのPDFの読み込み {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}
 
 次のJavaコードの例は、既存のユーザーに対してステートメントワークフロー内のドキュメントを保護する方法を示しています。
 
@@ -2164,7 +2164,7 @@ public class protectStatementWorkFlowExistingUserSoap {
 }
 ```
 
-## クイック開始（SOAPモード）: Java APIを使用した、新しいユーザー向けのステートメントワークフローでのPDFの保護 {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}
+## クイック開始（SOAPモード）: Java APIを使用した、新しいユーザー向けのステートメントワークフローでのPDFの読み込み {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}
 
 次のJavaコードの例は、ステートメントワークフローでドキュメントを保護する方法を示しています。 次に、2つの手順を示します。
 
