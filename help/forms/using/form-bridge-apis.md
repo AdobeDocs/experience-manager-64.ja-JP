@@ -10,15 +10,18 @@ topic-tags: developer-reference
 discoiquuid: c05c9911-7c49-4342-89de-61b8b9953c83
 translation-type: tm+mt
 source-git-commit: b9d2a5b65f7ae48a9bde5580b5ddd3e55fc68d61
+workflow-type: tm+mt
+source-wordcount: '968'
+ht-degree: 42%
 
 ---
 
 
 # HTML5 フォームの Form Bridge API {#form-bridge-apis-for-html-forms}
 
-Form Bridge APIを使用して、XFAベースのHTML5フォームとアプリケーション間の通信チャネルを開くことができます。 The Form Bridge APIs provides a **connect** API to create the connection.
+Form Bridge APIを使用して、XFAベースのHTML5フォームとお使いのアプリケーション間の通信チャネルを開くことができます。 The Form Bridge APIs provides a **connect** API to create the connection.
 
-**接続** API はハンドラーを引数として受け入れます。XFAベースのHTML5フォームとForm bridge間の接続が正常に作成された後、ハンドルが呼び出されます。
+**接続** API はハンドラーを引数として受け入れます。XFAベースのHTML5フォームとForm Bridge間の接続が正常に作成されると、ハンドルが呼び出されます。
 
 次のサンプルコードを使用して接続を作成できます。
 
@@ -44,27 +47,27 @@ window.addEventListener("FormBridgeInitialized",
 スクリプティングライブラリのバージョン番号を返す
 
 * **入力**：なし
-* **出力**:スクリプティングライブラリのバージョン番号
+* **出力**: スクリプティングライブラリのバージョン番号
 * **エラー**：なし
 
-**isConnected()** Checks if Form State has been initialized
+**isConnected()** ：フォーム状態が初期化されたかどうかを確認します
 
 * **入力**：なし
-* **出力**:XFA **** フォーム状態が初期化された場合はtrue
+* **出力**: **XFAフォーム状態が初期化された場合はtrue**
 
 * **エラー**：なし
 
-**connect(handler, context)** formBridgeに接続し、接続が確立され、フォーム状態が初期化された後に関数を実行します
+**connect(handler,context)** FormBridgeに接続し、接続が確立されてフォーム状態が初期化された後に関数を実行します
 
 * **必要情報**:
 
    * **handler**：Form Bridge が接続された後に実行する関数
-   * **context**:*handler *関数のコンテキスト(this)が設定されるオブジェクト。
+   * **context**: *handler *関数のコンテキスト(this)が設定されるオブジェクト。
 
 * **出力**：なし
 * **エラー**：なし
 
-**getDataXML(options)** 現在のフォームデータをXML形式で返す
+**getDataXML(options)** ：現在のフォームデータをXML形式で返します。
 
 * **必要情報:**
 
@@ -73,27 +76,27 @@ window.addEventListener("FormBridgeInitialized",
       * **error**：エラーハンドラー関数
       * **success**：サクセスハンドラー関数。 この関数には *data* プロパティに XML が含まれているオブジェクトが渡されます。
       * **context**：*success*&#x200B;関数のコンテキスト（this）の設定対象オブジェクト
-      * **validationChecker**:サーバーから受け取った検証エラーを確認するために呼び出す関数。 検証関数にはエラー文字列の配列が渡されます。
-      * **formState**:データXMLを返す必要があるXFAフォームのJSON状態。 指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
+      * **validationChecker**: サーバーから受信した検証エラーを確認するために呼び出す関数。 検証関数にはエラー文字列の配列が渡されます。
+      * **formState**: データXMLを返す必要があるXFAフォームのJSON状態。 指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**registerConfig(configName, config)** formBridgeにユーザー/ポータル固有の設定を登録します。 これらの設定はデフォルト設定をオーバーライドします。サポートされている設定は config セクションで指定されています。
+**registerConfig(configName, config)** FormBridgeにユーザー/ポータル固有の設定を登録します。 これらの設定はデフォルト設定をオーバーライドします。サポートされている設定は config セクションで指定されています。
 
 * **必要情報:**
 
-   * **** configName:上書きする設定の名前
+   * **configName:** 上書きする設定の名前
 
-      * **** widgetConfig:ユーザーがフォーム内のデフォルトのウィジェットをカスタムウィジェットで上書きできるようにします。 設定は次のようにオーバーライドされます。
+      * **widgetConfig:** ユーザーがフォーム内のデフォルトのウィジェットをカスタムウィジェットで上書きすることを許可します。 設定は次のようにオーバーライドされます。
 
          formBridge.registerConfig(&quot;widgetConfig&quot;:{/&amp;ast;configuration&amp;ast;/})
 
-      * **** pagingConfig:ユーザが最初のページのみをレンダリングするというデフォルトの動作を上書きできるようにします。 設定は次のようにオーバーライドされます。
+      * **pagingConfig:** 最初のページのみをレンダリングするというデフォルトの動作を上書きできます。 設定は次のようにオーバーライドされます。
 
          window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true | false>, shrinkPageDisabled: &lt;true | false> }).
 
-      * **** LoggingConfig:ユーザーがログのレベル、カテゴリのログの無効化、ログコンソールを表示するかサーバーに送信するかを上書きできます。 設定は次のようにオーバーライドできます。
+      * **LoggingConfig:** ユーザーがログのレベル、カテゴリのログの無効化、ログコンソールを表示するかサーバーに送信するかを上書きできます。 設定は次のようにオーバーライドできます。
 
       ```css
       formBridge.registerConfig{  
@@ -107,7 +110,7 @@ window.addEventListener("FormBridgeInitialized",
         }
       ```
 
-      * **** SubmitServiceProxyConfig:ユーザーが送信を登録し、プロキシサービスをロガーできるようにします。
+      * **SubmitServiceProxyConfig:** ユーザーが送信を登録し、プロキシサービスをロガーできるようにします。
 
          ```css
          window.formBridge.registerConfig("submitServiceProxyConfig",  
@@ -129,16 +132,16 @@ window.addEventListener("FormBridgeInitialized",
 
 * **必要情報:**
 
-   * **** fieldArray:非表示にするフィールドのSOM式の配列
+   * **fieldArray:** 非表示にするフィールドのSOM式の配列
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**showFields(fieldArray)** fieldArrayにSOM式が提供されるフィールドを表示します。 提供されたフィールドの presence プロパティを visible に設定します
+**showFields(fieldArray)** :fieldArrayでSOM式が提供されるフィールドを表示します。 提供されたフィールドの presence プロパティを visible に設定します
 
 * **必要情報:**
 
-   * **** fieldArray:表示するフィールドのSOM式の配列
+   * **fieldArray:** 表示するフィールドのSOM式の配列
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
@@ -152,7 +155,7 @@ window.addEventListener("FormBridgeInitialized",
 **getFormState()** ：フォーム状態を表すJSONを返します
 
 * **入力：**&#x200B;なし
-* **** 出力：dataプロパティの現在のフォーム状態を表すJSONを含むオ *ブジェクト* 。
+* **出力：** data ** プロパティ内の現在のフォーム状態を表すJSONが含まれているオブジェクト。
 
 * **エラー**：なし
 
@@ -160,36 +163,36 @@ window.addEventListener("FormBridgeInitialized",
 
 * **必要情報:**
 
-   * **** オプション：次のプロパティを含むJavaScriptオブジェクトです。
+   * **オプション：** 次のプロパティを含むJavaScriptオブジェクト。
 
       * **error**：エラーハンドラー関数
       * **success**：サクセスハンドラー関数
-      * **context**:success関数のコンテキスト(this)が設定され *る* オブジェクト
+      * **context**: *success関数のコンテキスト(this)の設定対象オブジェクト* 。
       * **formState**: フォームの JSON ステート。フォームがJSON状態に復元されます。
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**setFocus (som)** SOM式で指定されたフィールドにフォーカスを設定
+**setFocus (som)** SOM式で指定されたフィールドにフォーカスを置く
 
-* **** 入力：フォーカスを設定するフィールドのSOM式
+* **入力：** フォーカスを設定するフィールドの一部の式
 * **出力：**&#x200B;なし
 * **エラー：** SOM 式が間違っている場合、例外をスローする
 
-**setFieldValue (som, value)** SOM式のフィールドの値を設定
+**setFieldValue (som,value)** 特定のSOM式のフィールドの値を設定
 
 * **必要情報:**
 
    * **som：**&#x200B;フィールドの SOM 式が含まれている配列。フィールドの値を設定するSOM式。
-   * **** 値：SOM配列で提供されたSOM式に対応する値を含む **配列** 。 値のデータ型がfieldTypeと異なる場合、値は変更されません。
+   * **値：** SOM **配列で指定されたSOM式に対応する値が含まれている配列** 。 値のデータ型がfieldTypeと異なる場合、値は変更されません。
 
 * **出力：**&#x200B;なし
-* **** エラー：SOM式が正しくない場合に例外をスローする
+* **エラー：** SOM式が正しくない場合に例外をスローする
 
 **getFieldValue (som)** 指定したSOM式のフィールドの値を返す
 
-* **** 入力：値の取得が必要なフィールドのSOM式を含む配列
-* **** 出力：結果をArrayとしてdataプロパティに含むオ **ブジェクト** 。
+* **入力：** 値の取得が必要なフィールドのSOM式を含む配列
+* **出力：** 結果がArrayとして **data** プロパティに含まれるオブジェクト。
 
 * **エラー**：なし
 
@@ -206,24 +209,24 @@ if(a.errors) {
 }
 ```
 
-**getFieldProperties(som, property)** SOM式で指定されたフィールドの特定のプロパティの値のリストを取得
+**getFieldProperties(som,property)** SOM式で指定されたフィールドの特定のプロパティの値のリストを取得
 
 * **必要情報:**
 
    * **som：**&#x200B;フィールドの SOM 式が含まれている配列
    * **property：**&#x200B;値が要求されるプロパティの名前
 
-* **** 出力：結果を配列として含むオブジェクト(*data *property)
+* **出力：** 結果がArrayとして*data *propertyに含まれるオブジェクト
 
 * **エラー**：なし
 
-**setFieldProperties(som, property, values)** SOM式で指定されたすべてのフィールドに対して、指定されたプロパティの値を設定します
+**setFieldProperties(som, property, values)** SOM式で指定されたすべてのフィールドに対して、指定されたプロパティの値を設定
 
 * **必要情報:**
 
-   * **** som:値の設定が必要なフィールドのSOM式を含む配列
+   * **som:** 値の設定が必要なフィールドのSOM式を含む配列
    * **property：**&#x200B;値の設定が要求されるプロパティ
-   * **** 値：SOM式で指定されたフィールドの指定されたプロパティの値を含む配列
+   * **値：** SOM式で指定されたフィールドの指定されたプロパティの値を含む配列
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
