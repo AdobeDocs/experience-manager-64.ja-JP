@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 translation-type: tm+mt
 source-git-commit: 1bbd917ef20c4a618e93af66ffe8a6cfc8448e78
+workflow-type: tm+mt
+source-wordcount: '316'
+ht-degree: 62%
 
 ---
 
@@ -34,7 +37,7 @@ FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしている�
 
 1. OS の手順に従って FFmpeg をインストールします。
 
-1. システムパスにFFmpeg実行可能ファイルが設定されていることを確認します。
+1. システムパスにFmpeg実行可能ファイルが設定されていることを確認してください。
 
    システム内の任意のディレクトリからFFmpegを実行できるはずです。
 
@@ -48,17 +51,17 @@ FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしている�
 
 DAM アセットの更新のワークフローを変更するには（この例ではトランスコーディングをオフにするには）、次のようにします。
 
-* 管理者権限で作成者インスタンスにサインインします
+* 管理者権限を持つ作成者インスタンスにサインインします
 * From global navigation: **[!UICONTROL Tools > Workflow > Models]**
 * Locate **[!UICONTROL DAM Update Asset]**
-* ダブルクリックして、編集用のワークフローをクラシックUIで開きます
+* 重複を押しながらクリックすると、編集用のワークフローがクラシックUIで開きます
 
    Resulting location: [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
 * Double-click the **[!UICONTROL FFmpeg transcoding]** step to access the Step Properties dialog
 * Under the **[!UICONTROL Process]** tab:
 
-   * **[!UICONTROL 歩調]**:すべてのエントリを消去して、トランスコードのデフォルト値を無効にします。 `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
+   * **[!UICONTROL 軍備]**: すべてのエントリを消去してトランスコードのデフォルト値を無効にします。 `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
 
 ![chlimage_1-372](assets/chlimage_1-372.png)
 
