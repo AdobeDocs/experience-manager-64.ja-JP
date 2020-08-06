@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 83c4f18a-d7d6-4090-88c7-41a9075153b5
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 57%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
 
 コンポーネントを拡張する例では、実際には次の 2 つのコンポーネントで構成されるコメントシステムを使用します。
 
-* コメント — ページ上に配置されるコンポーネントである包括的なコメントシステム
+* コメント — ページ上に配置されるコンポーネントである包含コメントシステム
 * コメント — 投稿されたコメントのインスタンスをキャプチャするコンポーネント。
 
 投稿されたコメントの外観をカスタマイズする場合は特に、両方のコンポーネントを配置する必要があります。
@@ -52,7 +55,7 @@ These directions specify a **Group** value other than `.hidden` so the component
 
    * **[!UICONTROL 作成／コンポーネント...]** を選択します。
 
-      * **ラベル**:コメン *ト*
+      * **ラベル**: *コメント*
       * **タイトル**：Alt Comments **
       * **説明**：Alternative comments style **
       * **スーパータイプ**：social/commons/components/hbs/comments **
@@ -77,8 +80,8 @@ These directions set **Group** to `.hidden` as only the parent component should 
 
 デフォルトの HBS ファイルを代わりに使用するので、自動的に作成された JSP ファイルは削除します。
 
-1. ノードに移動しま `/apps/custom/components/comments` す
-1. ノードを右クリックします
+1. Navigate to the `/apps/custom/components/comments` node
+1. ノードを右クリック
 
    * **[!UICONTROL 作成／コンポーネント...]** を選択します。
 
@@ -116,7 +119,7 @@ These directions set **Group** to `.hidden` as only the parent component should 
 
       * 送信元 `social/commons/components/hbs/comments`
       * To `/apps/custom/components/comments`
-   * カスタムコメントコンポーネント（～行75）を含めるように変更します。
+   * カスタムコメントコンポーネントを含めるように変更（～行75）:
 
       * 置換 `{{include this resourceType='social/commons/components/hbs/comments/comment'}}`
       * を次のタグに置換します。`{{include this resourceType='/apps/custom/components/comments/comment'}}`
@@ -134,7 +137,7 @@ These directions set **Group** to `.hidden` as only the parent component should 
       * 送信元 `social/commons/components/hbs/comments/comment`
       * To `/apps/custom/components/comments/comment`
 
-* ノードを `/apps/custom` 選択
+* ノードを選択 `/apps/custom`
 * 「**[!UICONTROL すべて保存]**」を選択します。
 
 ## クライアントライブラリフォルダーの作成 {#create-a-client-library-folder}
@@ -143,21 +146,21 @@ These directions set **Group** to `.hidden` as only the parent component should 
 
 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) を使用して、次の手順を実行します。
 
-* ノードを `/apps/custom/components/comments` 選択
+* ノードを選択 `/apps/custom/components/comments`
 * Select **[!UICONTROL Create Node]**
 
-   * **名前**: `clientlibs`
-   * **タイプ**: `cq:ClientLibraryFolder`
+   * **名前**：`clientlibs`
+   * **型**：`cq:ClientLibraryFolder`
    * Add to **[!UICONTROL Properties]** tab:
 
-      * **Name** Type `categories` value **** Seartu `String`****`cq.social.author.hbs.comments` s `Multi`
-      * **Name** Type `dependencies` value **** Seartu `String`****`cq.social.scf` s `Multi`
+      * **Name** `categories` Type ****`String`**Value** `cq.social.author.hbs.comments` `Multi`
+      * **Name** `dependencies` Type ****`String`**Value** `cq.social.scf` `Multi`
 
 * 「**[!UICONTROL すべて保存]**」を選択します。
-* sノー `/apps/custom/components/comments/clientlib`ドを選択し、3つのファイルを作成します。
+* ノード `/apps/custom/components/comments/clientlib`を選択し、3つのファイルを作成します。
 
-   * **名前**: `css.txt`
-   * **名前**: `js.txt`
+   * **名前**：`css.txt`
+   * **名前**：`js.txt`
    * **名前**：customcommentsystem.js
 
 * Enter &#39;customcommentsystem.js&#39; as the content of `js.txt`
@@ -167,7 +170,7 @@ These directions set **Group** to `.hidden` as only the parent component should 
 
 ## SCF モデルおよびビューの登録 {#register-the-scf-model-view}
 
-When extending (overriding) an SCF component, the resourceType is different (overlaying makes use of the relative search mechanism that searches through `/apps` before `/libs` so that the resourceType remains the same). このため、カスタムresourceTypeのSCF JSモデルとビューを登録するには、JavaScript（クライアントライブラリ内）を作成する必要があります。
+When extending (overriding) an SCF component, the resourceType is different (overlaying makes use of the relative search mechanism that searches through `/apps` before `/libs` so that the resourceType remains the same). このため、カスタムresourceTypeのSCF JSモデルと表示を登録するために、（クライアントライブラリ内に）JavaScriptを作成する必要があります。
 
 Enter the following text as the content of `customcommentsystem.js`:
 
@@ -201,7 +204,7 @@ Enter the following text as the content of `customcommentsystem.js`:
 
    * Select **[!UICONTROL Tools > Deployment > Replication]**
    *  `Activate Tree`
-   * 設定 `Start Path`:to `/apps/custom`
+   * 設定 `Start Path`: to `/apps/custom`
    * Uncheck `Only Modified`
-   * 選択ボ `Activate`タン
+   * 選択 `Activate`ボタン
 
