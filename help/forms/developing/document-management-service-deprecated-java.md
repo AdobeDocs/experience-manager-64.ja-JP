@@ -24,7 +24,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2011年8月5日以降、Content Services ESのお客様は、Adobe Digital Enterprise Platform Experience Servicesに移行されます。 Content Servicesを使用するお客様向けの製品ロードマップは、AdobeによるDay Softwareの買収に伴い購入された最新のモジュラー型CRXアーキテクチャに基づいて構築されたネイティブのContent Repositoryを含む、新しいADEP Experience Services - Coreに移行することです。
+>2011年8月5日から、Adobeでは、Content Services ESのお客様をAdobe Digital Enterprise PlatformExperience Servicesに移行します。 Content Servicesを使用するお客様向けの製品ロードマップは、Day SoftwareのAdobe取得時に取得した最新のモジュラー型CRXアーキテクチャに基づいて構築されたネイティブのContent Repositoryを含む、新しいADEP Experience Services - Coreに移行することです。
 
 [クイック開始（SOAPモード）: Java APIを使用してContent Servicesのスペースを作成する](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
 
@@ -46,7 +46,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、JBossおよびWindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームのプログラミング」にあるクイック開始は、JBossおよびWindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）: Java API（非推奨）を使用してContent Servicesスペースを作成する {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
 
