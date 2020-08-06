@@ -12,6 +12,9 @@ discoiquuid: f176c42b-b16b-42c9-af22-4b6421de5a90
 pagetitle: Liking Essentials
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 55%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
 
 Placing multiple instances of a liking component on the same page is allowed; each instance must be configured with an unique `tally name` property.
 
-匿名での「いいね!」の設定の投稿はサポートされていません。サイトの訪問者は、「いいね！」に参加するには、登録してサインインする必要があります。 サインインした訪問者（メンバー）は、いつでもオンとオフを切り替えることができます。
+匿名での「いいね!」の設定の投稿はサポートされていません。サイト訪問者は、「いいね！」に参加するには登録してサインインする必要があります。 ログイン訪問者（メンバ）は、いつでも同様にオン/オフを切り替えることができます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
