@@ -4,13 +4,16 @@ description: 'この記事では、アセットのアクティビティログを
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '216'
+ht-degree: 99%
 
 ---
 
 
 # タイムラインのアクティビティストリーム {#activity-stream-in-timeline}
 
-この機能は、タイムラインにアセットのアクティビティログを表示します。Adobe Experience Manager（AEM）Assets で以下のアセット関連操作を実行すると、アクティビティストリーム機能により、タイムラインが更新され、そのアクティビティが反映されます。
+この機能は、タイムラインにアセットのアクティビティログを表示します。Adobe Experience Manager (AEM) Assets で以下のアセット関連操作を実行すると、アクティビティストリーム機能により、タイムラインが更新され、そのアクティビティが反映されます。
 
 アクティビティストリームでログに記録される操作は次のとおりです。
 
@@ -25,11 +28,11 @@ source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
 
 タイムラインに表示されるアクティビティログは、ログファイルが格納されている CRX の `/var/audit/com.day.cq.dam/content/dam` から取得されます。
 
-また、[Adobe Asset Link](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html) または [AEM デスクトップアプリケーション](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html)により、新しいアセットがアップロードされたり、既存のアセットが変更されて AEM にチェックインされたりすると、タイムラインアクティビティがログに記録されます。
+また、[Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html)[ または AEM デスクトップアプリケーション](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/introduction.html)により、新しいアセットがアップロードされたり、既存のアセットが変更されて AEM にチェックインされたりすると、タイムラインアクティビティがログに記録されます。
 
 >[!NOTE]
 >
->一時的なワークフローは、これらのワークフローの履歴情報が保存されないので、タイムラインに表示されません。
+>一時的なワークフローは、履歴情報が保存されないので、タイムラインに表示されません。
 
 アクティビティストリームを表示するには、アセットに対して 1 つ以上の操作を実行して、アセットを選択してから、グローバルナビゲーションリストから&#x200B;**[!UICONTROL タイムライン]**&#x200B;を選択します。
 
@@ -37,8 +40,8 @@ source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
 
 タイムラインに、アセットに対して実行した操作のアクティビティストリームが表示されます。
 
-![activity_stream](assets/activity_stream.png)
+![アクティビティ_ストリーム](assets/activity_stream.png)
 
 >[!NOTE]
 >
->「**公開**」および「**非公開**」タスクのデフォルトのログ保存場所は、`/var/audit/com.day.cq.replication/content` です。**移動**&#x200B;タスクの場合、デフォルトの場所は `/var/audit/com.day.cq.wcm.core.page` です。
+>**公開**&#x200B;タスクと&#x200B;**非公開**&#x200B;タスクのデフォルトのログ保管先は `/var/audit/com.day.cq.replication/content` です。**移動**&#x200B;タスクの場合は、デフォルトの保管先は `/var/audit/com.day.cq.wcm.core.page` になります。
