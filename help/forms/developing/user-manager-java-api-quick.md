@@ -40,12 +40,12 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用している場合、ドキュメントに基づきます。Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEMフォームのプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用している場合、ドキュメントに基づき、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 
 ## クイック開始（SOAPモード）: Java APIを使用したユーザの追加 {#quick-start-soap-mode-adding-users-using-the-java-api}
 
-次のコードの例は、Wendy Blueという名前のユーザーをAEM Formsに追加します。 (ユーザー [の追加を参照](/help/forms/developing/users.md#adding-users))。
+次のコード例は、Wendy Blueという名前のユーザをAEM Formsに追加します。 (ユーザー [の追加を参照](/help/forms/developing/users.md#adding-users))。
 
 ```as3
  /* 
@@ -163,7 +163,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 ## クイック開始（SOAPモード）: Java APIを使用したユーザーの削除 {#quick-start-soap-mode-deleting-users-using-the-java-api}
 
-次のコードの例は、Wendy Blueという名前のユーザーをAEM Formsから削除します。 (ユーザーの [削除を参照](/help/forms/developing/users.md#deleting-users))。
+次のコード例は、Wendy Blueという名前のユーザをAEM Formsから削除します。 (ユーザーの [削除を参照](/help/forms/developing/users.md#deleting-users))。
 
 ```as3
  /* 
@@ -635,7 +635,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 ## クイック開始（SOAPモード）: Java APIを使用したユーザの追加 {#quick_start_soap_mode_adding_users_using_the_java_api-1}
 
-次のコードの例は、Wendy Blueという名前のユーザーをAEM Formsに追加します。 (ユーザー [の追加を参照](/help/forms/developing/users.md#adding-users))。
+次のコード例は、Wendy Blueという名前のユーザをAEM Formsに追加します。 (ユーザー [の追加を参照](/help/forms/developing/users.md#adding-users))。
 
 ```as3
  /* 
