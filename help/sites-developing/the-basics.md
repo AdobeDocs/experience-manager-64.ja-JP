@@ -153,7 +153,7 @@ The path specified by the `sling:resourceType` can be either:
 * 絶対パス
 * 相対、設定パラメーターへ
 
-   移植性を高めるため、相対パスをアドビが推奨します。
+   移植性を高めるため、相対パスはAdobeが推奨します。
 
 All Sling scripts are stored in subfolders of either `/apps` or `/libs`, which will be searched in this order (see [Customizing Components and Other Elements](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)).
 
@@ -177,7 +177,7 @@ Using the above example, if the `sling:resourceType` is `hr/jobs` then for:
 
    スクリプトは/apps/hr/jobs/jobs.espになります。 sling:resourceTypeの最後のセクションがファイル名を形成します。
 
-* POSTリクエスト（GET/HEADを除くすべてのリクエストタイプ。メソッド名は大文字にする必要があります）
+* POST要求(GET/HEADを除くすべての要求タイプ。メソッド名は大文字にする必要があります)
 
    スクリプト名にPOSTが使用されます。
 
@@ -185,7 +185,7 @@ Using the above example, if the `sling:resourceType` is `hr/jobs` then for:
 
 * 他の形式のURL（.htmlで終わらない）
 
-   For example `../content/corporate/jobs/developer.pdf`
+   例：`../content/corporate/jobs/developer.pdf`
 
    スクリプトは次のとおりで `/apps/hr/jobs/jobs.pdf.esp`す。 スクリプト名にサフィックスが追加されます。
 
@@ -355,7 +355,7 @@ currentNodeを現在のノードオブジェクトにします。
 
 Node オブジェクトの操作方法について詳しくは、[Javadocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html) を参照してください。
 
-**ウィジェット** AEMでは、すべてのユーザー入力はウィジェットで管理されます。 多くの場合、これらはコンテンツの編集を制御するために使用されます。
+**Widget** AEMでは、すべてのユーザー入力はウィジェットで管理されます。 多くの場合、これらはコンテンツの編集を制御するために使用されます。
 
 ダイアログはウィジェットを組み合わせて構築されます。
 
@@ -432,7 +432,7 @@ With pageManager being the page manager object and myResource a resource object.
 
 * `/libs`
 
-   AEMのコアに属するライブラリと定義です。 のサブフォルダーは、検索やレプリケーションなど、AEMの初期設定の機能を `/libs` 表します。 のコンテンツは、AEMの動作に影響するので、変更しな `/libs` いでください。 Webサイトに固有の機能は、で開発する必要があります `/apps` (「コンポーネントとその他の要素の [カスタマイズ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)」を参照)。
+   AEMのコアに属するライブラリと定義。 のサブフォルダーは、検索やレプリケーションなど、 `/libs` 初期設定済みのAEM機能を表します。 のコンテンツは、AEMの動作方法に影響を与えるので、変更しないで `/libs` ください。 Webサイトに固有の機能は、で開発する必要があります `/apps` (「コンポーネントとその他の要素の [カスタマイズ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)」を参照)。
 
 * `/tmp`
 
