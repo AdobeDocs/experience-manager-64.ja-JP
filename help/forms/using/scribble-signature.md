@@ -11,6 +11,9 @@ topic-tags: designer
 discoiquuid: abb5513f-c824-4dc2-8617-29ea47684afe
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '696'
+ht-degree: 89%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
    >[!NOTE]
    >
-   >Forms Designerで選択したフィールドの寸法は、フィールドのレンダリング時に反映されます。 ただし、レンダリングされた署名ボックスの寸法は、Forms Designer で指定された寸法ではなく、フィールドの縦横比に基づいて計算されます。
+   >Formsデザイナーで選択したフィールドのDimensionは、フィールドがレンダリングされるときに反映されます。 ただし、レンダリングされた署名ボックスの寸法は、Forms Designer で指定された寸法ではなく、フィールドの縦横比に基づいて計算されます。
 
 1. 手書き署名フィールドを設定します。
 
@@ -62,7 +65,7 @@ source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
 
 ![geolocation](assets/geolocation.png)
 
-**A.** ブラ **シB** 消しゴ **ムC.** Geolocation **D.** 位置情報
+**A.** Brush **B.** Eraser **C.** Geolocation **D.** Geolocation情報
 
 ### ジオタグ付け {#geo-tagging}
 
