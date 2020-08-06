@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 7dc3ef57-05c3-45d4-ace3-bb3ba6ea768b
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '284'
+ht-degree: 48%
 
 ---
 
@@ -21,7 +24,7 @@ The rating component, a [tally](tally.md) subclass, allows signed in community m
 
 Placing multiple instances of a voting component on the same page is allowed; each instance must be configured with an unique `tally name` property.
 
-匿名での評価投稿はサポートされていません。サイト訪問者は、評価に1回だけ参加するには、登録してサインインする必要があります。 サインインした訪問者（メンバー）は、いつでも評価を変更できます。
+匿名での評価投稿はサポートされていません。サイト訪問者は、1回のみ評価に参加するには、登録してサインインする必要があります。 サインインした訪問者（メンバー）は、いつでも評価を変更できます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
