@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 707b150b-7759-437f-9150-9f4784856754
 translation-type: tm+mt
 source-git-commit: 39c9ca8fb7b73d74904a56d9e6a5418950a8c98b
+workflow-type: tm+mt
+source-wordcount: '2502'
+ht-degree: 67%
 
 ---
 
@@ -27,7 +30,7 @@ When the deployment is a [publish farm](/help/sites-deploying/recommended-deploy
 
 他のパブリッシュインスタンスが同じユーザーデータにアクセスするには、1 つのパブリッシュインスタンスに加えられた登録と変更をそれらのパブリッシュインスタンスに同期する必要があります。
 
-AEM 6.1以降、ユーザー同期が有効な場合、ユーザーデータはファーム内の発行インスタンス間で自動的に同期され、作成者には作成されません。
+AEM 6.1以降、ユーザー同期が有効になっている場合、ユーザーデータはファーム内の発行インスタンス間で自動的に同期され、作成者には作成されません。
 
 ## Sling 配布 {#sling-distribution}
 
@@ -39,7 +42,7 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
 
 * Sling 配布により JCR イベントにプロパティが設定されることで、レプリケーションが無限に繰り返されることなく、パブリッシュ側のイベントリスナーで実行できます
 * Sling 配布は派生元でないパブリッシュインスタンスにのみユーザーデータを送信するので、不要なトラフィックが発生しません
-* [ユーザー](/help/sites-administering/security.md) ・ノードに設定されたACLは同期に含まれる
+* [ユーザーノードに設定されたACL](/help/sites-administering/security.md) 、同期に含まれる
 
 >[!NOTE]
 >
@@ -47,7 +50,7 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
 
 >[!CAUTION]
 >
->Synchronization of the ***administrators** *group is not supported, even when user sync is enabled. 代わりに、「相違をインポート」に失敗した場合は、エラーログに記録されます。
+>Synchronization of the ***administrators** *group is not supported, even when user sync is enabled. 代わりに、「diffをインポート」できない場合は、エラーログに記録されます。
 >
 >Therefore, when the deployment is a publish farm, if a user is added to or removed from the ***administrators** *group, the modification must be manually made on each publish instance.
 
@@ -61,7 +64,7 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
 >
 >ユーザー同期を有効にした結果、新しい設定が追加されることはありません。
 
-ユーザー同期では、オーサー環境で作成されていないユーザーデータでもその配布の管理はオーサー環境に依存します。すべての設定は作成者の環境で行われ、各手順で作成者と発行のどちらで実行するかが明確に示されます。
+ユーザー同期では、オーサー環境で作成されていないユーザーデータでもその配布の管理はオーサー環境に依存します。すべての設定は作成者環境で行われるわけではありませんが、各手順では、作成者と公開のどちらで行うかが明確に示されます。
 
 次にユーザー同期の有効化に必要な手順と、[トラブルシューティング](#troubleshooting)の節を示します。
 
@@ -125,6 +128,7 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
 >
 >* デフォルトで割り当てられるユーザーは **`admin`** です。
 >* コンテンツに `*communities-user-admin *user*.*`
+
 >
 
 
@@ -135,12 +139,12 @@ The user data, along with their [ACLs](/help/sites-administering/security.md), a
 
    * 例：[http://localhost:4503/crx/de](http://localhost:4503/crx/de)
 
-* ノードを `/home` 選択
-* 右側のウィンドウで、タブを選択し `Access Control` ます
+* ノードを選択 `/home`
+* 右側のウィンドウで、 `Access Control` タブを選択します
 * select the `+` button to add an ACL entry
 
    * **プリンシパル**：ユーザー同期用に作成されたユーザーを検索&#x200B;**
-   * **Type**: `Allow`
+   * **型**：`Allow`
    * **権限**: `jcr:all`
    * **制限** :rep:glob: `*/activities/*`
    * 「**OK**」を選択します。
@@ -250,7 +254,7 @@ Once an authorized user, a member of the **`administrators`**user group, has bee
 
 ## 複数のパブリッシュインスタンスの設定 {#configure-for-multiple-publish-instances}
 
-デフォルトの設定は、単一のパブリッシュインスタンス用の設定です。ユーザー同期を有効にする理由は、複数の発行インスタンス（例えば、発行ファームの場合）を同期することなので、追加の発行インスタンスを同期エージェントファクトリに追加する必要があります。
+デフォルトの設定は、単一のパブリッシュインスタンス用の設定です。ユーザーの同期を有効にする理由は、発行ファームなど、複数の発行インスタンスを同期することです。そのため、追加の発行インスタンスを同期エージェントファクトリに追加する必要があります。
 
 ### 7. Apache Sling Distribution Agent - Sync Agents Factory {#apache-sling-distribution-agent-sync-agents-factory-1}
 
@@ -276,7 +280,7 @@ Once an authorized user, a member of the **`administrators`**user group, has bee
    * http://localhost:4503/libs/sling/distribution/services/exporters/socialpubsync-reverse
    * http://localhost:4504/libs/sling/distribution/services/exporters/socialpubsync-reverse
 
-* **インポーターエン**&#x200B;ドポイント各発行者のインポーターエンドポイントが必要です。 例えば、パブリッシャーが localhost:4503 と 4504 の 2 つの場合、次の 2 つのエントリが必要です。
+* **インポーターエンドポイント**&#x200B;各発行者にはインポーターエンドポイントが必要です。 例えば、パブリッシャーが localhost:4503 と 4504 の 2 つの場合、次の 2 つのエントリが必要です。
 
    * http://localhost:4503/libs/sling/distribution/services/importers/socialpubsync
    * http://localhost:4504/libs/sling/distribution/services/importers/socialpubsync
@@ -305,7 +309,7 @@ Once an authorized user, a member of the **`administrators`**user group, has bee
 
 * **ノードタイプ**
 
-   これは、同期するリストタイプのノードです。 sling:Folder 以外のすべてのノードタイプがここにリストされます（sling:folder は別個に処理されます）。
+   これは、同期するノードタイプのリストです。 sling:Folder 以外のすべてのノードタイプがここにリストされます（sling:folder は別個に処理されます）。
 
     同期されるノードタイプのデフォルトのリストは次のとおりです。
 
@@ -323,7 +327,7 @@ Once an authorized user, a member of the **`administrators`**user group, has bee
 
 * **無視可能なノード**
 
-   同期中に完全に無視されるサブパス。 このサブパスの下にあるものはどのタイミングでも同期されません。
+   同期中は完全に無視されるサブパス。 このサブパスの下にあるものはどのタイミングでも同期されません。
 
     無視されるデフォルトのノードは次のとおりです。
 
@@ -366,11 +370,11 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
          `rm -i $(find . -type f -name sling.id.file)`
 
-      * 例えば、Windowsシステムの場合：
+      * 例えば、Windowsシステムでは、次の操作を行います。
 
          `use windows explorer and search for *sling.id.file*`
 
-1. 開始発行インスタンス
+1. 発行インスタンスの開始
 
    * スタートアップ時に新しい Sling ID が割り当てられる
 
@@ -387,12 +391,12 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
    * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* 見つける `Apache Sling Distribution Packaging - Vault Package Builder Factor`
+* を探す `Apache Sling Distribution Packaging - Vault Package Builder Factor`
 
    * `Builder name: socialpubsync-vlt`
 
 * 編集アイコンを選択します。
-* 2を追加しま `Package Filters` す。
+* 2つ追加 `Package Filters` :
 
    * `/home/users|-.*/.tokens`
    * `/home/users|-.*/rep:cache`
@@ -421,7 +425,7 @@ When the topology is a [publish farm](/help/sites-deploying/recommended-deploys.
 
 仕様上、パブリッシュ環境で作成されたユーザーデータは、オーサー環境では表示されません。その反対も同様です。
 
-[ユーザー管理およびセキュリティ](/help/sites-administering/security.md)コンソールを使用してパブリッシュ環境で新しいユーザーを追加すると、ユーザーの同期機能により、新しいユーザーとそのグループメンバーシップがその他のパブリッシュインスタンスに同期されます（必要な場合）。また、ユーザー同期は、セキュリティコンソールを通じて作成されたユーザーグループを同期します。
+[ユーザー管理およびセキュリティ](/help/sites-administering/security.md)コンソールを使用してパブリッシュ環境で新しいユーザーを追加すると、ユーザーの同期機能により、新しいユーザーとそのグループメンバーシップがその他のパブリッシュインスタンスに同期されます（必要な場合）。ユーザー同期は、セキュリティコンソールを使用して作成されたユーザーグループも同期します。
 
 ## トラブルシューティング {#troubleshooting}
 
@@ -549,7 +553,7 @@ As a member of the `administrators` group, the authorized user should have the f
 * ユーザーおよびユーザーグループが存在するパブリッシャーで：
 
    * [ユーザー同期が有効になっている場合は無効にします](#how-to-take-user-sync-offline)
-   * [パッケージを作る](/help/sites-administering/package-manager.md#creating-a-new-package) . `/home`
+   * [パッケージを作る](/help/sites-administering/package-manager.md#creating-a-new-package) `/home`
 
       * パッケージの編集時
 
@@ -566,9 +570,9 @@ To configure or enable user sync, go to step 1: [Apache Sling Distribution Agent
 
 ### パブリッシャーが使用不能になった場合 {#when-a-publisher-becomes-unavailable}
 
-パブリッシュインスタンスが使用不能になっても、今後オンラインに戻る場合は削除しないでください。変更は発行者に対してキューアップされ、オンラインに戻ると、変更が処理されます。
+パブリッシュインスタンスが使用不能になっても、今後オンラインに戻る場合は削除しないでください。変更はパブリッシャにキューアップされ、オンラインに戻ると変更が処理されます。
 
-パブリッシュインスタンスがオンラインに戻らない場合は、完全にオフラインの場合は、キューの構築によって作成者環境のディスク領域の使用が著しく増加するので、インスタンスを削除する必要があります。
+発行インスタンスがオンラインに戻らない場合は、完全にオフラインの場合は、キューの構築によって作成者環境でディスク領域の使用量が著しく増加するので、インスタンスを削除する必要があります。
 
 パブリッシャーが停止した場合、オーサー環境のログに次のような例外が記録されます。
 
