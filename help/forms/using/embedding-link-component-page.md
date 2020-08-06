@@ -10,6 +10,9 @@ topic-tags: publish
 discoiquuid: a4a36e73-3f7a-4173-8807-931f26daa35a
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 92%
 
 ---
 
@@ -40,7 +43,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    * **アセットパス**：アセットが保存されるリポジトリパス。
    * **レンダリングタイプ**：レンダリング形式--PDF、HTML または自動。自動レンダリングタイプでは、ユーザーの環境が検出され、それに応じて HTML 形式または PDF 形式でフォームがレンダリングされます。例えば、フォームがモバイルデバイスからアクセスされる場合、自動レンダリングタイプでは HTML 形式でフォームがレンダリングされます。
-   * **** 送信URL: フォームデータが送信されるサーブレットへのURL。
+   * **送信URL:**  フォームデータが送信されるサーブレットへのURL。
    * **HTML プロファイル：** HTML 形式でのフォームのレンダリングのためのプロファイル。
    * **PDF プロファイル**：PDF 文書形式でのフォームのレンダリングのためのプロファイル。
 
