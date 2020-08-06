@@ -54,7 +54,7 @@ ht-degree: 81%
 
    [バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用して画像セットを自動的に作成することもできます。
 
-   **重要** ：バッチセットは、アセット取り込みの一環としてIPS(Image Production System)によって作成され、Dynamic Media（Scene7モード）でのみ使用できます。
+   **Important** — Batch sets are created by the IPS (Image Production System) as part of asset ingestion and are available only in Dynamic Media - Scene7 mode.
 
    詳しくは、[アップロード用の画像セットアセットの準備およびファイルのアップロード](#uploading-assets-in-image-sets)を参照してください。
 
@@ -176,7 +176,7 @@ ht-degree: 81%
 
 画像セットは、ユーザーインターフェイスで作成することも、[バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用して自動的に作成することもできます。
 
-**重要** ：バッチセットは、アセット取り込みの一環としてIPS [Image Production System] によって作成され、Dynamic Media（Scene7モード）でのみ使用できます。
+**重要** ：バッチセットは、アセット取り込みの一環としてIPS [Image Production System] によって作成され、ダイナミックメディア —Scene7モードでのみ使用できます。
 
 ただし、バッチセットプリセットを使用して作成したセットは、ユーザーインターフェイスに表示&#x200B;*されません*。これらのセットは 3 つの異なる方法で表示できます（これらの方法は、画像セットをユーザーインターフェイスで作成した場合も使用できます）。
 
