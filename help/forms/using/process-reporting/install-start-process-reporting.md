@@ -1,8 +1,8 @@
 ---
 title: プロセスレポートの概要
 seo-title: プロセスレポートの概要
-description: JEE上のAEM Forms Processレポートを開始するために必要な手順
-seo-description: JEE上のAEM Forms Processレポートを開始するために必要な手順
+description: JEE上のAEM Formsのプロセスレポートを開始するために必要な手順
+seo-description: JEE上のAEM Formsのプロセスレポートを開始するために必要な手順
 uuid: 86ba17da-57e5-4e7a-a864-583d8c0f830e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -19,31 +19,31 @@ ht-degree: 3%
 
 # Getting Started with Process Reporting {#getting-started-with-process-reporting}
 
-プロセスのレポートにより、AEM Formsユーザーは、AEM Forms実装で現在定義されているAEM Formsプロセスに関するクエリを実行できます。 ただし、プロセスレポートはAEM Formsリポジトリから直接データにアクセスすることはできません。 データは、最初に、ProcessDataPublisherおよびProcessDataStorage *サービスによってスケジュール設定された状態でプロセスレポートリポジトリ*&#x200B;に発行されます。 次に、プロセスレポート内のレポートとクエリは、リポジトリに発行されたプロセスレポートデータから生成されます。 プロセスレポートは、Forms Workflowモジュールの一部としてインストールされます。
+プロセスのレポートにより、AEM Formsのユーザーは、AEM Formsの実装で現在定義されているAEM Formsプロセスに関する情報をクエリできます。 ただし、プロセスレポートは、AEM Formsリポジトリから直接データにアクセスすることはありません。 データは、最初に、ProcessDataPublisherおよびProcessDataStorage *サービスによってスケジュール設定された状態でプロセスレポートリポジトリ*&#x200B;に発行されます。 次に、プロセスレポート内のレポートとクエリは、リポジトリに発行されたプロセスレポートデータから生成されます。 プロセスレポートは、Forms Workflowモジュールの一部としてインストールされます。
 
-この記事では、AEM Formsデータをプロセスレポートリポジトリに発行できるようにする手順について詳しく説明します。 その後、プロセスレポートを使用してレポートやクエリを実行できます。 この記事では、プロセスレポートサービスを設定するために使用できるオプションについても説明します。
+この記事では、AEM Formsデータをプロセスレポートリポジトリに発行する手順を説明します。 その後、プロセスレポートを使用してレポートやクエリを実行できます。 この記事では、プロセスレポートサービスを設定するために使用できるオプションについても説明します。
 
 ## プロセスレポートの前提条件 {#process-reporting-pre-requisites}
 
 ### 不要なプロセスの削除 {#purge-non-essential-processes}
 
-現在Forms Workflowを使用している場合、AEM Formsデータベースに大量のデータが含まれている可能性があります
+現在Forms Workflowを使用している場合、AEM Formsのデータベースに大量のデータが含まれている可能性があります
 
-プロセスレポート発行サービスは、データベースで現在使用可能なすべてのAEM Formsデータを発行します。 つまり、レポートやクエリを実行したくないレガシーデータがデータベースに含まれている場合、レポートの必要がなくても、そのデータはすべてリポジトリに発行されます。 サービスを実行してデータをプロセスレポートリポジトリに発行する前に、このデータを削除することをお勧めします。 これにより、Publisherサービスと、レポート用にデータをクエリするサービスの両方のパフォーマンスが向上します。
+プロセスレポート発行サービスは、現在データベースで使用可能なAEM Formsデータをすべて発行します。 つまり、レポートやクエリを実行したくないレガシーデータがデータベースに含まれている場合、レポートの必要がなくても、そのデータはすべてリポジトリに発行されます。 サービスを実行してデータをプロセスレポートリポジトリに発行する前に、このデータを削除することをお勧めします。 これにより、Publisherサービスと、レポート用にデータをクエリするサービスの両方のパフォーマンスが向上します。
 
-AEM Formsプロセスデータの削除について詳しくは、「プロセスデータの [削除](https://help.adobe.com/en_US/livecycle/11.0/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7cb2.2.html)」を参照してください。
+AEM Forms・プロセス・データのパージの詳細は、「プロセス・データの [パージ](https://help.adobe.com/en_US/livecycle/11.0/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7cb2.2.html)」を参照してください。
 
 >[!NOTE]
 >
->パージユーティリティのヒントとテクニックについては、プロセスとジョブの [削除に関するAdobe Developer Connectionの記事を参照してください](https://www.adobe.com/content/dam/Adobe/en/devnet/livecycle/pdfs/purging_processes_jobs.pdf)。
+>パージユーティリティのヒントとテクニックについては、Adobe Developer Connectionのプロセスとジョブの [削除に関する記事を参照してください](https://www.adobe.com/content/dam/Adobe/en/devnet/livecycle/pdfs/purging_processes_jobs.pdf)。
 
 ## プロセスレポートサービスの設定 {#configuring-process-reporting-services}
 
 ### プロセスデータの公開のスケジュール {#schedule-process-data-publishing}
 
-プロセスレポートサービスは、AEM Formsデータベースからプロセスレポートリポジトリにデータをスケジュール設定して発行します。
+プロセスレポートサービスは、AEM Formsデータベースからプロセスレポートリポジトリにデータをスケジュールに基づいて発行します。
 
-この操作はリソースを大量に消費する可能性があり、AEM Formsサーバーのパフォーマンスに影響を与える可能性があります。 AEM Formsサーバーがビジー状態のタイムスロットの外部でスケジュールを設定することをお勧めします。
+この操作はリソースを大量に消費し、AEM Formsサーバーのパフォーマンスに影響を与える可能性があります。 このスケジュールは、AEM Formsサーバーのビジータイムスロットの外側で行うことをお勧めします。
 
 デフォルトでは、データの公開は毎日午前2時に実行されるようにスケジュールされています。
 
@@ -51,7 +51,7 @@ AEM Formsプロセスデータの削除について詳しくは、「プロセ�
 
 >[!NOTE]
 >
->AEM Forms実装をクラスター上で実行する場合は、クラスターの各ノードで次の手順を実行します。
+>クラスターでAEM Forms実装を実行している場合は、クラスターの各ノードで次の手順を実行します。
 
 #### JBoss Application Server {#jboss-application-server}
 
@@ -61,7 +61,7 @@ AEM Formsプロセスデータの削除について詳しくは、「プロセ�
 
 1. 追加JVM引数 `-Dreporting.publisher.cron = <expression>.`
 
-   例： 次のcron式を実行すると、プロセスレポートは5時間ごとにAEM Formsデータをプロセスレポートリポジトリに発行します。
+   例： 次のcron式は、プロセスレポートがAEM Formsデータをプロセスレポートリポジトリに5時間ごとに発行する原因となります。
 
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
@@ -80,7 +80,7 @@ AEM Formsプロセスデータの削除について詳しくは、「プロセ�
 
    In the Generic JVM arguments box, add the argument `-Dreporting.publisher.cron = <expression>.`
 
-   **例**: 次のcron式を実行すると、プロセスレポートは5時間ごとにAEM Formsデータをプロセスレポートリポジトリに発行します。
+   **例**: 次のcron式は、プロセスレポートがAEM Formsデータをプロセスレポートリポジトリに5時間ごとに発行する原因となります。
 
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
@@ -101,7 +101,7 @@ AEM Formsプロセスデータの削除について詳しくは、「プロセ�
 
 1. 「Arguments」ボックスに、JVM引数を追加し `-Dreporting.publisher.cron = <expression>`ます。
 
-   **例**: 次のcron式を実行すると、プロセスレポートは5時間ごとにAEM Formsデータをプロセスレポートリポジトリに発行します。
+   **例**: 次のcron式は、プロセスレポートがAEM Formsデータをプロセスレポートリポジトリに5時間ごとに発行する原因となります。
 
    `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
@@ -196,7 +196,7 @@ ProcessDataPublisherサービスは、AEM Formsデータベースからプロセ
 
 **バッチ間隔（秒）**
 
-ProcessDataPublisherサービスが実行されるたびに、サービスが最後に実行された後の時間をBatch Intervalで分割します。 次に、サービスはAEM Formsデータの各間隔を個別に処理します。
+ProcessDataPublisherサービスが実行されるたびに、サービスが最後に実行された後の時間をBatch Intervalで分割します。 次に、AEM Formsデータの各間隔を別々に処理します。
 
 これは、サイクル内の各実行（バッチ）中に、発行者が処理するデータのサイズを制御するのに役立ちます。
 
@@ -220,7 +220,7 @@ ProcessDataPublisherサービスが実行されるたびに、サービスが最
 
 AEM Forms環境には、環境が設定された時点のデータが含まれます。
 
-デフォルトでは、ProcessDataPublisherサービスはAEM Formsデータベースからすべてのデータをインポートします。
+デフォルトでは、ProcessDataPublisherサービスは、AEM Formsデータベースからすべてのデータをインポートします。
 
 レポートのニーズに応じて、特定の日時以降にデータのレポートやクエリを実行する場合は、日時を指定することをお勧めします。 その後、発行サービスはその時刻以降の日付を発行します。
 
@@ -232,7 +232,7 @@ AEM Forms環境には、環境が設定された時点のデータが含まれ�
 
 プロセスレポートのユーザーインターフェイスはブラウザーベースです。
 
-プロセスレポートを設定した後、AEM Formsインストールの次の場所でプロセスレポートの操作に開始を設定できます。
+プロセスレポートを設定した後、AEM Formsのインストール先の次の場所で、プロセスレポートの操作に開始できます。
 
 `https://<server>:<port>/lc/pr`
 
@@ -278,7 +278,7 @@ AEM Forms環境には、環境が設定された時点のデータが含まれ�
 
 タイトルをクリックすると、いつでもホーム画面に戻ります。
 
-**最終更新時刻：** プロセスデータは、スケジュールに基づいてAEM Formsデータベースからプロセスレポートリポジトリに発行されます。
+**最終更新時刻：** プロセス・データは、AEM Forms・データベースからプロセス・レポート・リポジトリにスケジュール・ベースで発行されます。
 
 「Last Update Time」には、データ更新がプロセスレポートリポジトリにプッシュされた最後の日時が表示されます。
 
