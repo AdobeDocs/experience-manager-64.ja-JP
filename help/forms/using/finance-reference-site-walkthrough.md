@@ -168,7 +168,7 @@ OSGi 上の AEM Forms によって Forms 中心のワークフローが提供さ
 
 #### 実際の動作確認 {#see-it-yourself-2}
 
-we.financeサイトのAEMインボックスには、https://&lt;*hostname*>:&lt;*PublishPort*>/content/we-finance/global/en.htmlからアクセスできます。 ページで「 **[!UICONTROL サインイン]**」をタップし、「代表者として **[!UICONTROL ログイン]**`grios/password` 」チェックボックスを選択して、Gloria Riosのユーザー名/パスワードを使用してAEMインボックスにログインし、クレジットカード申込書を承認します。 For information about using AEM Inbox for forms-centric workflow tasks, see [Manage Forms applications and tasks in AEM Inbox](/help/forms/using/manage-applications-inbox.md).
+we.financeサイトのAEMインボックスにアクセスするには、https://&lt;*hostname*>:&lt;*PublishPort*>/content/we-finance/global/en.htmlを参照してください。 ページで「 **[!UICONTROL サインイン]**」をタップし、「代表者として **[!UICONTROL ログイン]**`grios/password` 」チェックボックスを選択して、Gloria Riosのユーザー名/パスワードを使用してAEMインボックスにログインし、クレジットカード申込書を承認します。 For information about using AEM Inbox for forms-centric workflow tasks, see [Manage Forms applications and tasks in AEM Inbox](/help/forms/using/manage-applications-inbox.md).
 
 ![inbox-1](assets/inbox-1.png)
 
@@ -210,7 +210,7 @@ Sarah は、クレジットカードの使用開始後に、自らのクレジ�
 
 ![電子メール — 明細](assets/statement-email.png)
 
-Sarah は「View Statement」（明細を表示）ボタンをクリックし、クレジットカード明細を確認します。この文は対話的な通信です。 Web版と印刷版(PDF)版があります。 このステートメントは、Forms Data Modelと統合され、顧客に固有のデータをデータベースから取得します。 この明細はインタラクティブステートメントであり、様々な要素から構成されています。
+Sarah は「View Statement」（明細を表示）ボタンをクリックし、クレジットカード明細を確認します。この文は対話的な通信です。 Web版と印刷版(PDF)版があります。 この文は、Forms・データ・モデルと統合され、顧客に固有のデータをデータベースから取得します。 この明細はインタラクティブステートメントであり、様々な要素から構成されています。
 
 * 明細概要
 * 支払細目レポート
@@ -240,7 +240,7 @@ https://&lt;*hostname*>:&lt;*port*>/content/aemforms-refsite/doclink.html?ドキ
 
 作成者インスタンスと発行インスタンスでアクセスできます。
 
-クレジットカード明細には、明細の終わりに近い販促オファーが表示されます。 Adobe TargetをAEM Forms Interactive Communicationと統合して、特定の顧客セグメントに基づいてプロモーションのターゲットを絞ったオファーを提供できます。 Adobe Targetを使用してカスタマイズおよびターゲット設定されたオファーに対してインタラクティブな通信を設定するには、「ターゲットを設定したエクスペリエンスの [作成](/help/forms/using/experience-targeting-forms.md)」を参照してください。
+クレジットカード明細には、明細の終わりに近い販促オファーが表示されます。 Adobe TargetをAEM Forms・インタラクティブ・コミュニケーションと統合して、特定の顧客セグメントに基づくプロモーションのターゲットオファーを提供できます。 カスタマイズおよびターゲット設定されたオファーに対してAdobe Targetを使用するようにインタラクティブコミュニケーションを設定するには、「ターゲットを設定したエクスペリエンスの [作成](/help/forms/using/experience-targeting-forms.md)」を参照してください。
 
 ![](do-not-localize/offers.png)
 
@@ -286,7 +286,7 @@ To configure Target in AEM Forms server, see [Set up and integrate Target in AEM
 
 以下の手順を実行し、We.Finance 社クレジットカード申込フォームのための A/B テストを試作しましょう。
 
-1. Go to **[!UICONTROL Forms &amp; Documents]** at https://&lt;*hostname*>:&lt;*AuthorPort*>/aem/forms.html/content/dam/formsanddocuments.
+1. **[!UICONTROL Formsとドキュメント]** (https://&lt;*ホスト名*>:&lt;*作成者ポート*>/aem/forms.html/content/dam/formsanddocuments)に移動します。
 
 1. **[!UICONTROL We.Finance]** フォルダーをクリックし、開きます。
 1. 「**[!UICONTROL Application for Credit Card]**」アダプティブフォームを選択します。
@@ -533,7 +533,7 @@ To configure Target in AEM Forms server, see [Set up and integrate Target in AEM
 
 作成者インスタンスで以下の手順を実行して、We.Finance 社の住宅ローン申込フォームのための A/B テストを試作しましょう。
 
-1. Go to **Forms &amp; Documents** at https://&lt;*hostname*>:&lt;*AuthorPort*>/aem/forms.html/content/dam/formsanddocuments.
+1. **Formsとドキュメント** (https://&lt;*ホスト名*>:&lt;*作成者ポート*>/aem/forms.html/content/dam/formsanddocuments)に移動します。
 
 1. **We.Finance** フォルダーをクリックし、開きます。
 1. 「 **Application for Home Mortgage** 」アダプティブフォームを選択します。
@@ -731,7 +731,7 @@ Sarah は、署名を行う住宅保険の保険契約書へのリンクを含�
 
 #### 仕組み {#how-it-works-16}
 
-Sarah が住宅保険の申込フォームを送信すると、Forms ワークフローがトリガーされ、Gloria の AEM インボックスにタスクが作成されます。Gloria が申込書を確認して承認したため、タスクは Frank De Costa に割り当てられます。1人の人から別の人へのタスクの流れは、保険申込書に関連付けられたAEM Workflowで定義されます。 For more information about workflows, see [Forms-centric workflow on OSGi](/help/forms/using/aem-forms-workflow.md).
+Sarah が住宅保険の申込フォームを送信すると、Forms ワークフローがトリガーされ、Gloria の AEM インボックスにタスクが作成されます。Gloria が申込書を確認して承認したため、タスクは Frank De Costa に割り当てられます。ある人から別の人へのタスクの流れは、保険申込書に関連付けられたAEMワークフローで定義されます。 For more information about workflows, see [Forms-centric workflow on OSGi](/help/forms/using/aem-forms-workflow.md).
 
 以下の図は、保険の申し込みに関連する AEM ワークフローを図式化したものです。
 
@@ -797,7 +797,7 @@ https://[publishHost]:publishPort[]/wefinanceのWe.Financeポータルに移動�
 
 ### Sarahは、Blue Chip Growth Fundの目論見書を調査し、その基金について知る {#sarah-explores-the-blue-chip-growth-fund-prospectus-to-learn-about-the-fund}
 
-Sarahは、目論見書の概要、価格とパフォーマンス、ポートフォリオ管理、料金と最小額、税金と支払いの各タブを調査し、現在と過去の価格、過去の成長、S&amp;P 500指数との比較、部門別多様化、資金管理者、資金に関連する費用を調べます。 関連情報は、異なるタブに分けられる。 目論見書は対話型のコミュニケーションです 対話型通信はレスポンシブデザインを持ちます。 どんな画面サイズのデバイスでも対話型のコミュニケーションを開くことができ、対話型のコミュニケーションは下のデバイスに合わせてデザインをリフローします。
+Sarahは、目論見書の概要、価格とパフォーマンス、Portfolio管理、手数料と最小額、税金と支払いの各タブを調査し、現在と過去の価格、過去の成長、S&amp;P 500指数との比較、部門別多様化、資金管理者、資金に関連する費用を調べます。 関連情報は、異なるタブに分けられる。 目論見書は対話型のコミュニケーションです 対話型通信はレスポンシブデザインを持ちます。 どんな画面サイズのデバイスでも対話型のコミュニケーションを開くことができ、対話型のコミュニケーションは下のデバイスに合わせてデザインをリフローします。
 
 ![slide1-1](assets/slide1-1.png)
 
@@ -819,7 +819,7 @@ Sarahは週末に田舎に旅行中です。 彼女は、ブルーチップス�
 
 #### 仕組み {#how-it-works-19}
 
-ブルーチップ・グループ・ファンドの目論見書は対話型のコミュニケーションです WebおよびPDFのチャネルが含まれます。 インタラクティブ通信はAEMワークフローと統合され、PDF版を電子メールで送信します。 ワークフローモデルはhttps://[authorHost]：で確認できます。[ authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html.
+ブルーチップ・グループ・ファンドの目論見書は対話型のコミュニケーションです WebおよびPDFのチャネルが含まれます。 インタラクティブな通信はAEMワークフローと統合され、PDFバージョンを電子メールで送信します。 ワークフローモデルは、https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html.
 
 ![資産管理](assets/wealth-management.png)
 
@@ -842,13 +842,13 @@ Sarahは電子メールに記載されている指示に従い、プロセスを
 
 ### Conrad sends an insurance policy renewal communication from We.Finance {#conrad-sends-an-insurance-policy-renewal-communication-from-we-finance}
 
-ConradはAEMインスタンスにログインし、Auto InsuranceダッシュボードがSarahの **顧客IDを指定して**、「 **Renew Policy**」をクリックします。 「 **エージェントUI** 」が開き、Sarah Roseのポリシーの詳細がすでに入力済みで表示されます。 Sarahの電子メールアドレスを指定し、「 **Submit**」をクリックします。 Sarah receives an email with the subject **Your Auto Insurance Renewal**.
+ConradはAEMインスタンスにログインし、Auto InsuranceダッシュボードでSarahの **顧客IDを指定し、「** Renew Policy ****」をクリックします。 「 **エージェントUI** 」が開き、Sarah Roseのポリシーの詳細がすでに入力済みで表示されます。 Sarahの電子メールアドレスを指定し、「 **Submit**」をクリックします。 Sarah receives an email with the subject **Your Auto Insurance Renewal**.
 
 ![cc-ダッシュボード](assets/cc-dashboard.png)
 
 #### 仕組み {#how-it-works-20}
 
-保険証書更新通信は、対話型の通信です。 Conrad Simmsは、エージェントUIを使用して、保険契約の更新に関する連絡をSarahに送信します。 通信は、印刷(PDF)と、インタラクティブ通信のWfcチャネルへのリンクを含む。 インタラクティブな通信は、AEM Workflowを使用して電子メールを送信します。 ワークフローは、https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html
+保険証書更新通信は、対話型の通信です。 Conrad Simmsは、エージェントUIを使用して、保険契約の更新に関する連絡をSarahに送信します。 通信は、印刷(PDF)と、インタラクティブ通信のWfcチャネルへのリンクを含む。 対話型の通信は、AEMワークフローを使用して電子メールを送信します。 ワークフローは、https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/we-finance-auto-insurance-renewal.html
 
 ![自動保険のワークフロー](assets/auto-insurance-workflow.png)
 
