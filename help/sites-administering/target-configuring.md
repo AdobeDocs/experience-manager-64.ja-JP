@@ -73,7 +73,7 @@ Adobe Targetの下の「設定を **表示**」をクリックまたはタップ
 
 これをおこなうには、Adobe Target クラウド設定を接続する A4T クラウド設定を指定する必要があります。
 
-1. **AEMロゴ** / **Tools** /Deployment Tools **/Deployments nolgentCloud Serviceを使用して、** Cloud Serviceに移動します。 **AEMロゴ** /Deployment Tools/Deployments nolginations **** nortus.
+1. Navigate to **Cloud Services** via the **AEM logo** > **Tools** > **Deployment** > **Cloud Services**.
 1. In the **Adobe Target** section, click **Configure Now**.
 1. Adobe Target 設定に再接続します。
 1. **A4T Analytics クラウド設定**&#x200B;ドロップダウンメニューで、フレームワークを選択します。
@@ -84,7 +84,7 @@ Adobe Targetの下の「設定を **表示**」をクリックまたはタップ
    >
    >AEM で A4T を設定する際には、「設定の参照が欠落しています」というエントリが表示される場合があります。分析フレームワークを選択できるようにするには、次の操作をおこないます。
    > 
-   >1. **ツール** / **一般** / **CRXDE Liteに移動します**。
+   >1. **ツール** / **一般** / **** CRXDE Liteに移動します。
    1. Navigate to **/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig**
    1. Set the property **disable** to **false**.
    1. 「**すべて保存**」をタップまたはクリックします。
@@ -118,7 +118,7 @@ Adobe Target からセグメントを同期するように、クラウド設定�
 
 次の手順を実行して、AEM に Target クラウド設定を作成します。
 
-1. **AEMロゴ** / **Tools** /Deployment Tools **/Deployments nolgentCloud Serviceを使用して、** Cloud Serviceに移動します。 **AEMロゴ** /Deployment Tools/Deployments nolginations **** nortus. （[http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)）。
+1. Navigate to **Cloud Services** via the **AEM logo** > **Tools** > **Deployment** > **Cloud Services**. （[http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)）。
 
    The **Adobe Marketing Cloud** overview page opens.
 
@@ -135,7 +135,7 @@ Adobe Target からセグメントを同期するように、クラウド設定�
 
    >[!NOTE]
    AEM で A4T を設定する際には、「設定の参照が欠落しています」というエントリが表示される場合があります。分析フレームワークを選択できるようにするには、次の操作をおこないます。
-   1. **ツール** / **一般** / **CRXDE Liteに移動します**。
+   1. **ツール** / **一般** / **** CRXDE Liteに移動します。
    1. Navigate to **/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig**
    1. Set the property **disable** to **false**.
    1. 「**すべて保存**」をタップまたはクリックします。
@@ -150,7 +150,7 @@ Adobe Target からセグメントを同期するように、クラウド設定�
    * **A4T Analytics クラウド設定**：ターゲットアクティビティの目標と指標に使用する Analytics クラウド設定。これは、コンテンツをターゲット化するときに、Adobe Analytics をレポートソースとして使用している場合に必要です。If you do not see your cloud configuration, see note in [Configuring A4T Analytics Cloud Configuration](#configuring-a-t-analytics-cloud-configuration).
 
    * **正確なターゲット設定を使用**：デフォルトでは、このチェックボックスはオンになっています。オンにすると、クラウドサービス設定はコンテンツが読み込まれるまでコンテキストの読み込みを待機します。続きのメモを確認してください。
-   * **Adobe Targetからのセグメントの同期：** このオプションを選択すると、Targetで定義されたセグメントをダウンロードしてAEMで使用できます。 「API のタイプ」プロパティが REST のときは、インラインのセグメントがサポートされておらず、常に Target からセグメントを使用する必要があるので、このオプションをオンにする必要があります（AEM の用語「セグメント」は、Target の「オーディエンス」と同じです）。
+   * **Adobe Targetからのセグメントの同期：** AEMで使用するターゲットで定義されたセグメントをダウンロードするには、このオプションを選択します。 「API のタイプ」プロパティが REST のときは、インラインのセグメントがサポートされておらず、常に Target からセグメントを使用する必要があるので、このオプションをオンにする必要があります（AEM の用語「セグメント」は、Target の「オーディエンス」と同じです）。
    * **クライアントライブラリ：** mbox.jsまたはAT.jsクライアントライブラリのどちらにするかを選択します。
    * **DTMを使用してクライアントライブラリを提供** - DTMまたは他のタグ管理システムのAT.jsまたはmbox.jsを使用する場合は、このオプションを選択します。 You must [configure the DTM integration](/help/sites-administering/dtm.md) to use this option. ライブラリの配信には AEM ではなく DTM を使用することをお勧めします。
    * **カスタム mbox.js**：DTM ボックスをオンにした場合またはデフォルトの mbox.js を使用する場合は空にします。それ以外の場合は、カスタム mbox.js をアップロードします。mbox.js を選択した場合にのみ表示されます。
@@ -201,7 +201,7 @@ Target クラウド設定を設定したら、Target フレームワークを追
 
 ### アクティビティと Target クラウド設定の関連付け  {#associating-activities-with-the-target-cloud-configuration}
 
-[AEMアクティビティ](/help/sites-authoring/activitylib.md) をTargetクラウド設定に関連付けて、アクティビティを [Adobe Targetでミラーリングできるようにします](https://docs.adobe.com/content/help/en/target/using/experiences/offers/manage-content.html)。
+[AEMアクティビティ](/help/sites-authoring/activitylib.md) をターゲットクラウド設定に関連付けて、 [Adobe Targetのアクティビティをミラーリングできるようにします](https://docs.adobe.com/content/help/en/target/using/experiences/offers/manage-content.html)。
 
 >[!NOTE]
 使用可能なアクティビティの種類は、次のオプションによって決まります。
