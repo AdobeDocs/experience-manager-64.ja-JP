@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 3c59ec8f-b72f-48dd-bac8-9817005ae210
 translation-type: tm+mt
 source-git-commit: 77997d6d8744cf1498add91a0aa2dab4e29f8e3d
+workflow-type: tm+mt
+source-wordcount: '6512'
+ht-degree: 93%
 
 ---
 
@@ -40,11 +43,11 @@ MongoDB は通常、次のいずれかの条件を満たす AEM オーサーの�
 
 ### AEM における MongoDB の最小デプロイメント {#minimal-mongodb-deployment-for-aem}
 
-MongoDB での AEM の最小デプロイメントは次のとおりです。簡潔にするために、SSL ターミネーションおよび HTTP プロキシコンポーネントは一般化されています。1つのMongoDBレプリカ・セットと1つのプライマリ・レプリカと2つのセカンダリ・レプリカで構成されます。
+MongoDB での AEM の最小デプロイメントは次のとおりです。簡潔にするために、SSL ターミネーションおよび HTTP プロキシコンポーネントは一般化されています。1つのMongoDBレプリカ・セットで構成され、1つのプライマリ・レプリカと2つのセカンダリ・レプリカがあります。
 
 ![chlimage_1-94](assets/chlimage_1-94.png)
 
-最小デプロイメントには、レプリカセットとして設定された 3 つの `mongod` インスタンスが必要です。1 つのインスタンスはプライマリとして選択され、その他のインスタンスはセカンダリとして選択されます。この選択は、`mongod` によって管理されます。各インスタンスにローカルディスクが接続されています。クラスタが負荷をサポートするためには、最低でも12 MB/秒まで、I/O操作数が3,000/秒(IOPS)を超えることを推奨します。
+最小デプロイメントには、レプリカセットとして設定された 3 つの `mongod` インスタンスが必要です。1 つのインスタンスはプライマリとして選択され、その他のインスタンスはセカンダリとして選択されます。この選択は、`mongod` によって管理されます。各インスタンスにローカルディスクが接続されています。クラスタが負荷をサポートするためには、最小12 MB/秒まで、1秒あたり3,000個を超えるI/O操作(IOPS)を持つことを推奨します。
 
 AEM オーサーは `mongod` インスタンスに接続されます。各 AEM オーサーは 3 つの `mongod` インスタンスすべてに接続します。書き込みはプライマリに送信され、読み取りはいずれのインスタンスからもおこなうことができます。トラフィックは、Dispatcher によって、負荷に基づいてアクティブな AEM オーサーインスタンスのいずれかに分散されます。OAK データストアは `FileDataStore` であり、MongoDB の監視は、デプロイメントの場所に応じて、MMS または MongoDB Ops Manager によって提供されます。オペレーティングシステムレベルの監視とログの監視は、Splunk や Ganglia のようなサードパーティソリューションによって提供されます。
 
@@ -187,8 +190,7 @@ blobCacheSize=1024
 
 * `cache`
 
-   
-キャッシュサイズ（MB単位）。 これは `DocumentNodeStore` で使用される様々なキャッシュに配分されます。デフォルト値は 256 MB です。ただし、キャッシュが大きいほうが Oak の読み取りパフォーマンスは向上します。
+   キャッシュサイズ（メガバイト）。 これは `DocumentNodeStore` で使用される様々なキャッシュに配分されます。デフォルト値は 256 MB です。ただし、キャッシュが大きいほうが Oak の読み取りパフォーマンスは向上します。
 
 * `blobCacheSize`
 
@@ -213,8 +215,7 @@ cacheSizeInMB=128
 
 * `minRecordLength`
 
-   
-サイズ（バイト）。 このサイズ以下のバイナリは、ドキュメントノードストアに格納されます。Blob の ID を格納するのではなく、バイナリの内容が格納されます。このサイズを超えるバイナリについては、バイナリの ID がドキュメントのプロパティとしてノードのコレクションに格納され、バイナリの本文はディスク上の `FileDataStore` に格納されます。一般的なファイルシステムのブロックサイズは 4,096 バイトです。
+   サイズ（バイト単位） このサイズ以下のバイナリは、ドキュメントノードストアに格納されます。Blob の ID を格納するのではなく、バイナリの内容が格納されます。このサイズを超えるバイナリについては、バイナリの ID がドキュメントのプロパティとしてノードのコレクションに格納され、バイナリの本文はディスク上の `FileDataStore` に格納されます。一般的なファイルシステムのブロックサイズは 4,096 バイトです。
 
 * `path`
 
@@ -230,7 +231,7 @@ cacheSizeInMB=128
 
 #### クエリヒントの無効化 {#disabling-the-query-hint}
 
-プロパティを追加して、すべてのクエリで送信されるクエリヒントを無効にすることをお勧めします
+すべてのクエリと共に送信されるクエリヒントを無効にするには、プロパティ
 
 `-Doak.mongo.disableIndexHint=true`
 
@@ -395,18 +396,15 @@ MongoDB プロセスの動作は、個々の割り当てポリシーによって
 
 * `-membind=<nodes>`
 
-   
-リストされたノードにのみ割り当てます。 mongod では、リストされているノードのメモリが割り当てられず、使用可能なメモリの一部が使用されない可能性があります。
+   一覧表示されたノードにのみ割り当てます。 mongod では、リストされているノードのメモリが割り当てられず、使用可能なメモリの一部が使用されない可能性があります。
 
 * `-cpunodebind=<nodes>`
 
-   
-ノードでのみ実行します。 mongod は、指定されたノードのみで実行され、それらのノードで使用可能なメモリのみを使用します。
+   ノードでのみ実行します。 mongod は、指定されたノードのみで実行され、それらのノードで使用可能なメモリのみを使用します。
 
 * `-physcpubind=<nodes>`
 
-   
-一覧表示されたCPU（コア）でのみ実行します。 mongod は、リストされている CPU のみで実行され、それらの CPU で使用可能なメモリのみを使用します。
+   一覧に表示されたCPU（コア）でのみ実行します。 mongod は、リストされている CPU のみで実行され、それらの CPU で使用可能なメモリのみを使用します。
 
 * `--localalloc`
 
@@ -414,8 +412,7 @@ MongoDB プロセスの動作は、個々の割り当てポリシーによって
 
 * `--preferred=<node>`
 
-   
-ノードに対する割り当てを優先しますが、優先ノードがいっぱいの場合は他のノードにフォールバックします。 ノードを定義するための相対注釈を使用できます。また、スレッドはすべてのノードで実行されます。
+   ノードに対する割り当てを優先しますが、優先ノードがいっぱいの場合は他のノードにフォールバックします。 ノードを定義するための相対注釈を使用できます。また、スレッドはすべてのノードで実行されます。
 
 一部のポリシーでは、`mongod` プロセスに割り当てられるメモリが、使用可能なすべての RAM よりも少ない場合があります。MySQL とは異なり、MongoDB はオペレーティングシステムレベルのページングを積極的に回避します。その結果、使用可能であると思われるメモリよりも少ない量のメモリが `mongod` プロセスに割り当てられることがあります。
 
@@ -425,11 +422,11 @@ MongoDB プロセスの動作は、個々の割り当てポリシーによって
 
 #### リモートファイルシステム {#remote-filesystems}
 
-MongoDBの内部データファイル（mongodプロセスデータベースファイル）には、遅延が多すぎるので、NFSのようなリモートファイルシステムは推奨されません。 Oak Blob の格納に必要な共有ファイルシステム（FileDataStore）と混同しないでください。この場合は、NFS が推奨されます。
+MongoDBの内部データファイル（mongodプロセスデータベースファイル）には、遅延が多すぎるので、NFSなどのリモートファイルシステムは推奨されません。 Oak Blob の格納に必要な共有ファイルシステム（FileDataStore）と混同しないでください。この場合は、NFS が推奨されます。
 
 #### 先読み {#read-ahead}
 
-ページがランダム読み取りを使用する際に、不要なブロックがディスクから読み取られないように先読みを調整し、I/O帯域幅が不要に消費されないようにする必要があります。
+ランダム読み取りを使用してページをページングする際に、不要なブロックがディスクから読み取られないように、読み取り先を調整する必要があります。これにより、I/O帯域幅が不要に消費されます。
 
 ### Linux に関する要件 {#linux-requirements}
 
@@ -589,11 +586,11 @@ VMWare ESX を使用して仮想化環境を管理およびデプロイする場
 1. Storage I/O Control を使用して、十分な I/O を `mongod` プロセスに割り当てます。
 1. [CPU 予約](https://pubs.vmware.com/vsphere-4-esx-vcenter/index.jsp?topic=/com.vmware.vsphere.vmadmin.doc_41/vsp_vm_guide/configuring_virtual_machines/t_allocate_cpu_resources.html)を設定して、MongoDB をホストするマシンの CPU リソースを確保します。
 
-1. 準仮想化 I/O ドライバーの使用を検討します。For more information on how to do this, check this [knowledgebase article](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1010398).
+1. 準仮想化 I/O ドライバーの使用を検討します。For more information on how to do this, check this [knowledgebase article](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1010398).
 
 ### Amazon Web Services {#amazon-web-services}
 
-MongoDBとアマゾンウェブサービスの設定方法に関するドキュメントについては、以下のAWSでのMongoDBガイドを参 [照してください](https://docs.aws.amazon.com/quickstart/latest/mongodb/welcome.html)。
+MongoDBをAmazonウェブサービスと共に設定する方法に関するドキュメントについては、以下のAWS [でのMongoDBガイドを参照してください](https://docs.aws.amazon.com/quickstart/latest/mongodb/welcome.html)。
 
 ## デプロイメントの前に MongoDB をセキュリティ保護する {#securing-mongodb-before-deployment}
 
@@ -701,4 +698,4 @@ If AEM is running on a MongoMK persistence manager deployment, [page names are l
 
 >[!NOTE]
 >
->[MongoDB自体の既知の制限としきい値についても](https://docs.mongodb.com/manual/reference/limits/) 、MongoDBのドキュメントを参照してください。
+>[MongoDB自体の既知の制限としきい値についても詳しくは](https://docs.mongodb.com/manual/reference/limits/) 、MongoDBのドキュメントを参照してください。
