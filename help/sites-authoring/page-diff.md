@@ -28,7 +28,7 @@ ht-degree: 96%
 
 >[!CAUTION]
 >
->AEM 6.4.3より前のバージョンを実行している場合、この機能を使用するには、ノードで **変更/作成** /削除の権限が必要 `/content/versionhistory` です。
+>AEM 6.4.3より前のバージョンを実行している場合、この機能を使用するには、ノードに対する **変更/作成/削除** 権限が必要 `/content/versionhistory` です。
 >
 >この機能の技術的詳細については、[開発とページの差分](/help/sites-developing/pagediff.md#operation-details)を参照してください。
 
