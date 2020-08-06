@@ -214,7 +214,7 @@ Sub-rules are nodes of type `cq:Page` with properties on its `jcr:content`node t
  <tbody> 
   <tr> 
    <th>プロパティ</th> 
-   <th>タイプ</th> 
+   <th>型</th> 
    <th> 値の説明</th> 
   </tr> 
   <tr> 
@@ -353,7 +353,7 @@ Included in the release are two scoring rules for the [Forum Function](functions
  <tbody> 
   <tr> 
    <th>プロパティ</th> 
-   <th>タイプ</th> 
+   <th>型</th> 
    <th>値の説明</th> 
   </tr> 
   <tr> 
@@ -428,6 +428,7 @@ cURL -i -X POST -H *header* -u *signin * -F *operation * -F *badge * *member-pro
 >
 >* May refer to an author instance if the [Tunnel Service](users.md#tunnel-service) is enabled
 >* May be an obscure, random name - see [Security Checklist](../../help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) regarding authorizable ID
+
 >
 
 
@@ -585,7 +586,7 @@ See the `scoringRules`property of [Badging Rules](#badging-rules).
 
 [Getting Started Tutorial](getting-started.md)（engage）サイトを使用すると、スコアとバッジを簡単に試すことができます。
 
-* 作成者のCRXDE Liteにアクセスする
+* 作成者のアクセスCRXDE Lite
 * ベースページを参照します。
 
    * /content/sites/engage/en/jcr:content
@@ -593,7 +594,7 @@ See the `scoringRules`property of [Badging Rules](#badging-rules).
 * badgingRules追加プロパティ：
 
    * **名前**：`badgingRules`
-   * **Type**: `String`
+   * **型**：`String`
    * Select **[!UICONTROL Multi]**
    * Select **[!UICONTROL Add]**
    * Enter `/etc/community/badging/rules/forums-badging`
@@ -604,7 +605,7 @@ See the `scoringRules`property of [Badging Rules](#badging-rules).
 * scoringRules追加プロパティ：
 
    * **名前**：`scoringRules`
-   * **Type**: `String`
+   * **型**：`String`
    * Select **[!UICONTROL Multi]**
    * Select **[!UICONTROL Add]**
    * Enter `/etc/community/scoring/rules/forums-scoring`
@@ -618,7 +619,7 @@ See the `scoringRules`property of [Badging Rules](#badging-rules).
 
 次に、フォーラムおよびコメントコンポーネントでバッジを表示できるようにします。
 
-* CRXDE Liteを再び使用する
+* 再びCRXDE Liteを使用
 * フォーラムコンポーネントを参照します。
 
    * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
@@ -626,7 +627,7 @@ See the `scoringRules`property of [Badging Rules](#badging-rules).
 * 必要に応じて、allowBadgesブール追加プロパティ(true)
 
    * **名前**：`allowBadges`
-   * **Type**: `Boolean`
+   * **型**：`Boolean`
    * **値**: `true`
 
 ![chlimage_1-371](assets/chlimage_1-371.png)
