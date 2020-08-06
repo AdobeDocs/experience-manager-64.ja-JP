@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5faf6ee5-9242-48f4-87a8-ada887a3be1e
 translation-type: tm+mt
 source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
+workflow-type: tm+mt
+source-wordcount: '1661'
+ht-degree: 94%
 
 ---
 
@@ -29,7 +32,7 @@ LDAP サーバーからアカウントが削除されると、検証はおこな
 
 AEM 6 の LDAP のサポートには、以前のバージョンとは異なるタイプの設定が必要な新しい実装が付属します。
 
-すべてのLDAP設定をOSGi設定として使用できるようになりました。Web管理コンソールを使用して、次の場所で設定できます。\
+すべてのLDAP設定をOSGi設定として使用できるようになりました。 これらは、Web管理コンソールから次の場所で設定できます。\
 `https://serveraddress:4502/system/console/configMgr`
 
 LDAP と AEM を連携させるには、次の 3 つの OSGi 設定を作成する必要があります。
@@ -42,7 +45,7 @@ LDAP と AEM を連携させるには、次の 3 つの OSGi 設定を作成す�
 >
 >External Login Module について詳しくは、[Oak の External Login Module - LDAP との認証および詳細（英語）](https://docs.adobe.com/content/ddc/en/gems/oak-s-external-login-module---authenticating-with-ldap-and-beyon.html#)をご覧ください。
 >
->Apache DS を使用した Experience Manager の設定例については、[Apache Directory Serviceを使用するための Adobe Experience Manager 6.4 の設定](https://helpx.adobe.com/experience-manager/using/configuring-aem64-apache-directory-service.html)を参照してください。
+>Apache DS を使用した Experience Manager の設定例については、[Apache Directory Serviceを使用するための Adobe Experience Manager 6.4 の設定](https://helpx.adobe.com/jp/experience-manager/using/configuring-aem64-apache-directory-service.html)を参照してください。
 
 ## LDAP Identity Provider の設定 {#configuring-the-ldap-identity-provider}
 
@@ -243,7 +246,7 @@ SSL 経由で LDAP を使用して認証をおこなうように AEM を設定�
 
 1. SSL ライブラリがインストールされ、機能していることを確認します。この手順では、例として OpenSSL を使用します。
 
-1. カスタマイズした OpenSSL 設定（cnf）ファイルを作成します。これは、デフォルトの**openssl.cnf **設定ファイルをコピーしてカスタマイズすることで可能です。 On UNIX systems, it is usually located at `/usr/lib/ssl/openssl.cnf`
+1. カスタマイズした OpenSSL 設定（cnf）ファイルを作成します。これは、デフォルトの**openssl.cnf **設定ファイルをコピーしてカスタマイズすることで実行できます。 On UNIX systems, it is usually located at `/usr/lib/ssl/openssl.cnf`
 
 1. ターミナルで次のコマンドを実行して CA ルートキーを作成します。
 
@@ -279,12 +282,12 @@ LDAP Identity Provider と External Login Module の両方に対してデバッ�
 
 * Log level：Debug
 * Log File：logs/ldap.log
-* メッセージパターン：{0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast;{2} {3} {5}
+* Message Pattern: {0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast; {2} {3} {5}
 * Logger：org.apache.jackrabbit.oak.security.authentication.ldap
 
 * Log level：Debug
 * Log File：logs/external.log
-* メッセージパターン：{0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast;{2} {3} {5}
+* Message Pattern: {0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast; {2} {3} {5}
 * Logger：org.apache.jackrabbit.oak.spi.security.authentication.external
 
 ## グループへの関連付けに関する注意事項 {#a-word-on-group-affiliation}
