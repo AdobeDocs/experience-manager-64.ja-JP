@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1215'
+ht-degree: 90%
 
 ---
 
@@ -24,6 +27,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
    >
 * 一部の機能はすべてのコンソールでは使用できず、一部のコンソールにしかない機能もあります。個別のコンソールや関連する機能に関する固有情報については、他のページで詳しく取り上げます。
 >* AEM 全体で（特に、[コンソールを使用する](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)場合と[ページを編集する](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)場合に）、キーボードショートカットを利用できます。
+
 >
 
 
@@ -43,7 +47,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 <table> 
  <tbody> 
   <tr> 
-   <td><strong>console</strong></td> 
+   <td><strong>コンソール</strong></td> 
    <td><strong>目的</strong></td> 
   </tr> 
   <tr> 
@@ -56,7 +60,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
   </tr> 
   <tr> 
    <td><strong>ローンチ</strong></td> 
-   <td>This helps you manage your <a href="/help/sites-classic-ui-authoring/classic-launches.md">launches</a>; these enable you to develop the content for a future release of one or more activated web pages.<br /> <i>注意：タッチ操作対応UIでは、リファレンスレールと共に、サイトコンソールでも同じ機能のほとんどが利用できます。</i> 必要に <i>応じて、このコンソールはツールコンソールから使用できます。「操作」、「起動」の順に選択します。</i></td> 
+   <td>This helps you manage your <a href="/help/sites-classic-ui-authoring/classic-launches.md">launches</a>; these enable you to develop the content for a future release of one or more activated web pages.<br /> <i>注意： タッチ対応UIでは、参照レールと共に、サイトコンソールでも同じ機能のほとんどが使用できます。</i> <i>必要に応じて、このコンソールはツールコンソールから使用できます。 「操作」、「起動」の順に選択します。</i></td> 
   </tr> 
   <tr> 
    <td><strong>インボックス </strong></td> 
@@ -91,11 +95,11 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    これにより、Webサイトのツリー構造と、そのWebサイト内のページが表示されます。
 
-   また、プロジェクト、Blueprint、アセットなど、他の側面やAEMに関する情報も表示されます。
+   また、プロジェクト、設計図、アセットなど、その他の側面やAEMに関する情報も表示されます。
 
 * 右側のウィンドウ
 
-   これにより、ページ（左側のペインで選択した場所）が表示され、アクションの実行に使用できます。
+   これは、ページ（左側のペインで選択した場所）を表示し、アクションの実行に使用できます。
 
 ここから、ツールバーやコンテキストメニューを使用するか、ページを開いて追加のアクションを実行することで、[ページを管理](/help/sites-authoring/managing-pages.md)できます。
 
