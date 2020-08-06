@@ -31,12 +31,12 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 
 ### IMS 設定の作成 {#create-an-ims-configuration}
 
-1. ユー [!DNL Experience Manager] ザーインターフェイスで、 **[!UICONTROL ツール]** / **[!UICONTROL セキュリティ]** / **[!UICONTROL Adobe IMS設定に移動します]**。 「**[!UICONTROL 作成]**」をクリックし、**[!UICONTROL クラウドソリューション]**／**[!UICONTROL Adobe Stock]** を選択します。
+1. In [!DNL Experience Manager] user interface, navigate to **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. 「**[!UICONTROL 作成]**」をクリックし、**[!UICONTROL クラウドソリューション]**／**[!UICONTROL Adobe Stock]** を選択します。
 1. 既存の証明書を再使用するか、「**[!UICONTROL 新しい証明書を作成]**」を選択します。
 1. 「**[!UICONTROL 証明書を作成]**」をクリックします。証明書を作成したら、公開鍵をダウンロードします。「**[!UICONTROL 次へ]**」をクリックします。
-1. Add the downloaded public key to your [!DNL Adobe Developer Console] service account. 「**[!UICONTROL 次へ]**」をクリックします。間もなく値を指定するには、 [!UICONTROL Adobe IMSテクニカルアカウント設定] 画面を開いたままにします。
-1. Adobe [Developer Consoleにアクセスします](https://console.adobe.io)。 アカウントに、統合が必要な組織の管理者権限があることを確認します。
-1. 「 **[!UICONTROL 新しいプロジェクトを]** 作成 **[!UICONTROL 」をクリックし、「]** API」をクリックします。 使用可能なAPIのリストから **[!UICONTROL 「Adobe Stock]** 」を選択 [!UICONTROL します]。 「 [!UICONTROL OAUTH 2.0 Web]」を選択します。 表示される様々な値を設定およびコピーします。
+1. Add the downloaded public key to your [!DNL Adobe Developer Console] service account. 「**[!UICONTROL 次へ]**」をクリックします。間もなく値を指定する場合は、 [!UICONTROL AdobeIMSテクニカルアカウント設定] 画面を開いたままにします。
+1. Adobe [開発者コンソールにアクセスします](https://console.adobe.io)。 アカウントに、統合が必要な組織の管理者権限があることを確認します。
+1. 「 **[!UICONTROL 新しいプロジェクトを]** 作成 **[!UICONTROL 」をクリックし、「]** API」をクリックします。 自分が **[!UICONTROL 利用できるAPIのリストから]** Adobe Stockを選択します 。 「 [!UICONTROL OAUTH 2.0 Web]」を選択します。 表示される様々な値を設定およびコピーします。
 1. In [!DNL Experience Manager] provide the values in the fields titled **[!UICONTROL Title]**, **[!UICONTROL Authorization Server]**, **[!UICONTROL API Key]**, **[!UICONTROL Client Secret]**, and **[!UICONTROL Payload]**. これらの値について詳しくは、 [JWT認証クイック開始](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md)（英語）を参照してください。
 
 <!-- TBD: Update the URL when the new URL is available. Logged issue github.com/AdobeDocs/adobeio-auth/issues/63.
@@ -60,7 +60,7 @@ Using this capability, organizations can allow its users to work using [!DNL Ado
 
 Once an [!DNL Adobe Stock] asset is licensed in [!DNL Experience Manager], it can be used and managed like a typical asset. In [!DNL Experience Manager], the users can search and preview the assets; copy and publish the assets; share the assets on [!DNL Brand Portal]; access and use the assets via [!DNL Experience Manager] desktop app; and so on.
 
-![Adobe Stockアセットの検索と、Adobe Experience Managerワークスペースからの結果のフィルター](assets/adobe-stock-search-results-workspace.png)
+![Adobe Experience ManagerのワークスペースでAdobe Stockのアセットを検索し、結果をフィルターします](assets/adobe-stock-search-results-workspace.png)
 
 *図： インターフェイスで[!DNL Adobe Stock]アセットを検索し、結果をフィルタリング[!DNL Experience Manager]します。*
 
@@ -80,7 +80,7 @@ Your [!DNL Experience Manager] users, can search for assets in both, [!DNL Exper
 >
 >Assets searched from [!DNL Adobe Stock] are just displayed in [!DNL Experience Manager]. [!DNL Adobe Stock] アセットは、ユーザーがアセット [!DNL Experience Manager] または [ライセンスを](/help/assets/aem-assets-adobe-stock.md#saveassets) 保存してアセットを保存した後にのみ、リポジトリに取得および保存され [](/help/assets/aem-assets-adobe-stock.md#licenseassets)ます。 Assets that are already stored in [!DNL Experience Manager] are displayed and highlighted for ease of reference and access. Also, the [!DNL Stock] assets are saved with some additional metadata to indicate the source as [!DNL Stock].
 
-![検索結果でExperience Managerの検索フィルターとハイライトされたAdobe Stockアセット](assets/aem-search-filters2.jpg)
+![検索結果でExperience Managerの検索フィルターとAdobe Stockアセットが強調表示される](assets/aem-search-filters2.jpg)
 
 *図： 検索結果でアセット[!DNL Experience Manager]を検索し、ハイライト[!DNL Adobe Stock]表示したフィルター。*
 
@@ -98,7 +98,7 @@ Next time when you search for assets, the saved assets are highlighted with a ba
 
 Users can license [!DNL Adobe Stock] assets by using the quota of their [!DNL Adobe Stock] enterprise plan. When you license an asset, it is saved without a watermark and is available for searching and using in [!DNL Experience Manager Assets].
 
-![Experience Managerアセット内のAdobe Stockアセットをライセンス認証して保存するためのダイアログ](assets/aem-stock_licenseandsave.jpg)
+![Experience ManagerアセットのAdobe Stockアセットをライセンス認証し、保存するためのダイアログ](assets/aem-stock_licenseandsave.jpg)
 
 *図： でア[!DNL Adobe Stock]セットのライセンスを取得して保存するダイアログ[!DNL Experience Manager Assets]。*
 
