@@ -4,6 +4,9 @@ description: AEM で重複アセットの検出を有効にする方法につい
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 26e860cd513d70d748f872e2ce445a042d075bc6
+workflow-type: tm+mt
+source-wordcount: '154'
+ht-degree: 61%
 
 ---
 
@@ -22,5 +25,5 @@ Adobe Experience Manager（AEM）Assets に存在するアセットをアップ�
 
 >[!MORELIKETHIS]
 >
->* [既存のリポジトリ内のアセットの複製（コミュニティメンバーのチュートリアル）](https://experience-aem.blogspot.com/2019/06/aem-65-find-duplicate-assets-binaries-in-existing-repository.html)
+>* [既存のリポジトリの重複アセット（コミュニティメンバーのチュートリアル）](https://experience-aem.blogspot.com/2019/06/aem-65-find-duplicate-assets-binaries-in-existing-repository.html)
 
