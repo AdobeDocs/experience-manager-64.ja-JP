@@ -1,31 +1,34 @@
 ---
-title: AEMとCreative cloudの統合のベストプラクティス
-description: AEMデプロイメントをAdobe Creative cloudと統合し、アセット転送ワークフローを合理化し、最大限の効率を達成するためのベストプラクティス
+title: AEM と Creative Cloud の統合のベストプラクティス
+description: AEM導入をAdobe Creative Cloudと統合し、アセット転送ワークフローを合理化し、最大の効率を達成するためのベストプラクティス
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 1f44950e3e0653df61289e1bd435d13829051365
+workflow-type: tm+mt
+source-wordcount: '3578'
+ht-degree: 85%
 
 ---
 
 
-# AEM and Creative Cloud integration best practices {#aem-and-creative-cloud-integration-best-practices}
+# AEM と Creative Cloud の統合のベストプラクティス {#aem-and-creative-cloud-integration-best-practices}
 
 <!-- TBD: Reconcile with 6.5 article that's ahead of this article now in terms of content streamlining and structuring.
 -->
 
-Adobe Experience Manager Assetsは、Adobe Creative cloudと統合できるデジタルアセット管理(DAM)ソリューションで、DAMユーザーがクリエイティブチームと連携し、コンテンツ作成プロセスでのコラボレーションを合理化するのに役立ちます。
+Adobe Experience Managerアセットは、Adobe Creative Cloudとの連携により、DAMのユーザーがクリエイティブチームと連携し、コンテンツ作成プロセスでのコラボレーションを効率化できるデジタルアセット管理(DAM)ソリューションです。
 
 Adobe Creative Cloud は、デジタルアセットの作成を支援するソリューションとサービスのエコシステムをクリエイティブチームに提供します。これには、デスクトップおよびモバイルアプリケーション、デスクトップ同期や Web エクスペリエンスを備えたストレージなどのクラウドサービス、および Adobe Stock などのマーケットプレイスが含まれます。
 
-ユースケースに基づいてデスクトップとエンタープライズクラスの DAM の間で選択すべき統合や、つながるワークフローに関連するベストプラクティスについては、このドキュメントで説明します。
+使用例に基づいてデスクトップとエンタープライズクラスの DAM の間で選択すべき統合や、つながるワークフローに関連するベストプラクティスについては、このドキュメントで説明します。
 
 >[!NOTE]
 >
->AEMからCreative cloudへのフォルダー共有は廃止され、本ガイドでは説明しません。 Adobe recommends using newer capabilities such as [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) or [AEM desktop app](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/introduction.html) to provide creative user with access to assets managed in AEM.
+>AEMからCreative Cloudへのフォルダー共有は非推奨となり、このガイドでは説明しなくなりました。 Adobe recommends using newer capabilities such as [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) or [AEM desktop app](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/introduction.html) to provide creative user with access to assets managed in AEM.
 
 ## Collaboration needs of creatives, marketers, and DAM users {#collaboration-needs-of-creatives-marketers-and-dam-users}
 
-| 要件 | 使用事例   | 関係するサーフェス |
+| 要件 | 使用例 | 関係するサーフェス |
 |---|---|---|
 | デスクトップ上でクリエイティブプロフェッショナル向けのエクスペリエンスを簡素化する | クリエイティブプロフェッショナル（より広い意味では、ネイティブアセット作成アプリケーションで作業しているデスクトップユーザー）向けに、DAM（AEM Assets）で管理されるアセットへのアクセスを効率化します。変更の検出、使用（開く）、編集、AEM への保存のほか、新しいファイルのアップロードを容易にわかりやすくおこなえる方法が必要です。 | Windows または Mac デスクトップ、Creative Cloud アプリ |
 | すぐに使用できる高品質なアセットを Adobe Stock から提供する | マーケティング担当者は、アセットの調達と検出を支援することでコンテンツ作成プロセスの促進に貢献します。クリエイティブプロフェッショナルは、承認されたアセットをクリエイティブツール内から直接使用します。 | AEM Assets、Adobe Stock マーケットプレイス、メタデータフィールド |
@@ -35,11 +38,11 @@ Adobe Creative Cloud は、デジタルアセットの作成を支援するソ�
 
 | 関係するユーザーに対する価値提案 | アドビ製品／サービス | 関係するサーフェス |
 |---|---|---|
-| クリエイティブユーザーは、Creative Cloud アプリを使用したまま、AEM からアセットを検出し、それらを開いて使用したり、編集して変更を AEM にアップロードするほか、新しいファイルを AEM にアップロードします。 | [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | Photoshop、Illustrator、InDesign |
-| ビジネスユーザーは、アセットを開いて使用する作業、AEMに対する変更の編集とアップロード、デスクトップ環境からAEMへの新しいファイルのアップロードを簡単に行うことができます。 汎用の統合を使用して、アドビ以外のアセットも含め、あらゆるアセットタイプをネイティブデスクトップアプリケーションで開きます。 | [AEM Desktop App](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) | Windows および Mac デスクトップ上の AEM Desktop App |
-| マーケティング担当者とビジネスユーザーは、AEM 内から Adobe Stock アセットの検出、プレビュー、ライセンス取得と保存、管理をおこなえます。ライセンスを取得し保存したアセットは、限定された Adobe Stock メタデータを提供してガバナンスの強化に役立ちます。 | [Experience ManagerとAdobe stockの統合](aem-assets-adobe-stock.md) | AEM Web インターフェイス |
+| クリエイティブユーザーは、Creative Cloud アプリを使用したまま、AEM からアセットを検出し、それらを開いて使用したり、編集して変更を AEM にアップロードするほか、新しいファイルを AEM にアップロードします。 | [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) | Photoshop、Illustrator、InDesign |
+| ビジネスユーザーは、アセットのオープンと使用、編集と AEM への変更のアップロード、AEM への新しいファイルのアップロードをデスクトップ環境から簡単におこなえます。汎用の統合を使用して、アドビ以外のアセットも含め、あらゆるアセットタイプをネイティブデスクトップアプリケーションで開きます。 | [AEM デスクトップアプリケーション](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html) | Windows および Mac デスクトップ上の AEM デスクトップアプリケーション |
+| マーケティング担当者とビジネスユーザーは、AEM 内から Adobe Stock アセットの検出、プレビュー、ライセンス取得と保存、管理をおこなえます。ライセンスを取得し保存したアセットは、限定された Adobe Stock メタデータを提供してガバナンスの強化に役立ちます。 | [Adobe Experience Manager と Adobe Stock との連携](aem-assets-adobe-stock.md) | AEM Web インターフェイス |
 
-ここでは、主に、コラボレーションニーズの最初の 2 つの側面に焦点を当てます。アセットの大規模な配布と調達については、ユースケースとして簡単に説明します。そのようなニーズに対するソリューションとしては、Adobe Brand Portal または Asset Share Commons を検討してください。[Brand Portal](https://helpx.adobe.com/experience-manager/brand-portal/user-guide.html)、 [Asset Share Commonsコンポーネントに基づいて構築できるソリューション、](https://adobe-marketing-cloud.github.io/asset-share-commons/) Link Share [、](/help/assets/link-sharing.md)Manager Assets Assetsを使用したリンク共有 [](/help/assets/managing-assets-touch-ui.md) 、特定の要件に基づいてレビューする必要があります。
+ここでは、主に、コラボレーションニーズの最初の 2 つの側面に焦点を当てます。アセットの大規模な配布と調達については、使用例として簡単に説明します。そのようなニーズに対するソリューションとしては、Adobe Brand Portal または Asset Share Commons を検討してください。[Brand Portalなどの別のソリューション](https://helpx.adobe.com/jp/experience-manager/brand-portal/user-guide.html)、 [Asset Share Commonsコンポーネントに基づいて構築できるソリューション、](https://adobe-marketing-cloud.github.io/asset-share-commons/) Link Share [、Using](/help/assets/link-sharing.md)[](/help/assets/managing-assets-touch-ui.md) Experience ManagerAssetsを使用するソリューションは、特定の要件に基づいて検討する必要があります。
 
 ![AEM 用の Creative Cloud 接続：使用する機能の決定](assets/creative-connections-aem.png)
 
@@ -61,14 +64,14 @@ The terms used in this document may have a different meaning in other contexts. 
 
 ### 使用事例のマッピング
 
-| 使用事例   | AEM デスクトップアプリケーション | フォルダー共有 | その他のソリューション |
+| 使用例 | AEM デスクトップアプリケーション | フォルダー共有 | その他のソリューション |
 |---|---|---|---|
-| より少ない数のDAMアセットをクリエイティブユーザーと共有 | ✔✔ | ✔ |  |
-| DAMアセットの数を増やしてクリエイティブユーザーと共有 | ✔✔ | ✘ | [Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) <br> [アセット共有](assets-finder-editor.md) |
+| DAMアセットの数が少ない(1)をクリエイティブユーザーと共有 | ✔✔ | ✔ |  |
+| DAMアセットの数(2)をクリエイティブユーザーと共有 | ✔✔ | ✘ | [Brand Portal](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/home.html) <br> [アセット共有](assets-finder-editor.md) |
 | DAM へのアクセス権を持っているユーザーと DAM アセットを共有する | ✔✔ | ✔ | [リンク共有](link-sharing.md) |
-| DAM へのアクセス権を持っていないユーザーと DAM アセットを共有する | ✘ | ✔✔ | [Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/home.html) <br> [アセット共有](assets-finder-editor.md) |
+| DAM へのアクセス権を持っていないユーザーと DAM アセットを共有する | ✘ | ✔✔ | [Brand Portal](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/home.html) <br> [アセット共有](assets-finder-editor.md) |
 | 少数／小さいボリュームのアセットを DAM に保存する | ✔✔ | ✔ | [Web UI によるアップロード](managing-assets-touch-ui.md) |
-| DAMへの大量のアセットの保存(3) | ✔✔ | ✘ | [Web UI によるアップロード](managing-assets-touch-ui.md) <br> Custom script / tool |
+| DAMに大きいアセット数を保存(3) | ✔✔ | ✘ | [Web UI によるアップロード](managing-assets-touch-ui.md) <br> Custom script / tool |
 | DAM へ膨大な量のアセットを移行する | ✘ | ✘ | [移行ガイド](assets-migration-guide.md) |
 | デスクトップですばやくアセットを開く | ✔✔ | ✘ |  |
 | デスクトップですばやくアセットを開いて変更する | ✔✔ | ✘ |  |
@@ -81,41 +84,41 @@ The terms used in this document may have a different meaning in other contexts. 
 
 補足：
 
-* (1)少ない資産数：例えば、プロジェクトやキャンペーンに関連するアセットの小さなセット
-* (2)資産数の増加例えば、組織内のすべての承認済みアセット
+* (1)少ない資産数 例えば、プロジェクトやキャンペーンに関連するアセットの小さなセット
+* (2)資産数の増加 例えば、組織内の承認済みアセットがすべて表示されます。
 * (3)AEMデスクトップアプリのアップロードフォルダー機能の使用
 
-アセット配布ユースケースをサポートするには、他のソリューションを考慮に入れる必要があります。
+アセット配布使用例をサポートするには、他のソリューションを考慮に入れる必要があります。
 
-* [Brand Portal](https://helpx.adobe.com/experience-manager/brand-portal/user-guide.html) for a configurable, saaS add-on to AEM Assets to publish assets.
+* [ Brand Portal](https://helpx.adobe.com/jp/experience-manager/brand-portal/user-guide.html)：AEM Assets への設定可能な SaaS アドオンで、アセットの公開に使用。
 * カスタムソリューションは [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) のコードベースに基づいて作成される。
 * AEM [リンク共有](/help/assets/link-sharing.md)：リンクを使用してアドホックでアセットを共有する。
-* [AEM Assets Web インターフェイス](/help/assets/managing-assets-touch-ui.md)：外部ユーザーが AEM にアクセスできるようにする、アクセスAEM アクセス制御の設定で保護されている外部関係者向けのエリア。必要な IT／ネットワーク設定の調整機能が備わっている。
+* [AEM Assets Web インターフェイス](/help/assets/managing-assets-touch-ui.md)：外部ユーザーが AEM にアクセスできるようにする、AEM アクセス制御の設定で保護されている外部関係者向けのエリア。必要な IT／ネットワーク設定の調整機能が備わっている。
 
-## 主な概念とユースケース {#key-concepts-and-use-cases}
+## 主な概念と使用例 {#key-concepts-and-use-cases}
 
 ### よく使用される用語 {#glossary-of-common-terms}
 
 * **作業中（WIP）またはクリエイティブ WIP：**&#x200B;アセットライフサイクルのフェーズ。アセットに対してまだ複数の変更がおこなわれている最中であり、通常は、より広範なチームと共有するための準備がまだできていない状態。
-* **クリエイティブレディアセット：**&#x200B;様々なチームと共有する準備ができているアセット、またはクリエイティブチームがマーケティングチームや LOB チームとの共有用に選択／承認したアセット。
+* **クリエイティブレディアセット：**&#x200B;より広範なチームと共有するための準備ができているアセット。または、マーケティングチームもしくは LOB チームと共有するためにクリエイティブチームによって選択／承認されているアセット。
 * **アセット承認：** 既に DAM にアップロードされているアセットに対して実行される承認プロセス。通常、ブランド承認および法的承認などが含まれます。
-* **最終アセット：**&#x200B;すべての承認／メタデータのタグ付けを経て、幅広いチームが使用できる状態にあるアセット。このようなアセットは DAM に保存され、すべてのユーザー（またはすべての関係者）が使用できるようになっています。マーケティングチャネルで使用したり、クリエイティブチームがデザインの作成に使用したりできます。
+* **最終アセット：**&#x200B;すべての          承認／メタデータタグ付けが完了し、より広範なチームに使用される準備ができているアセット。このようなアセットは DAM に保存され、すべてのユーザー（またはすべての関係者）が使用できるようになっています。マーケティングチャネルで使用したり、クリエイティブチームがデザインの作成に使用したりできます。
 * **アセットの小規模な更新／変更：**&#x200B;デジタルアセットに対する迅速で小規模な変更。多くの場合、リタッチ作業や小規模な編集の要求、アセットレビューまたは承認に対応するためにおこなわれます（例えば、再配置、テキストサイズの変更、彩度／明るさ、色などの調整）。
 * **アセットの大規模な更新／変更：**&#x200B;デジタルアセットに加えられる、大規模な作業が必要な変更。その変更作業は比較的長期にわたる場合もあります。通常は複数の変更が含まれます。アセットは、更新中、複数回保存する必要があります。アセットの大規模な更新により、ほとんどの場合、アセットのステージは WIP になります。
-* **DAM：**&#x200B;デジタルアセット管理。このドキュメントでは、特に断りのない限り、AEM Experience Manager Assets と同義です。
+* **DAM：**&#x200B;デジタルアセット管理。このドキュメントでは、特に断りのない限り、Adobe Experience Manager (AEM) Assets と同義です。
 * **クリエイティブユーザー：** Creative Cloud のアプリケーションとサービスを使用してデジタルアセットを作成するクリエイティブプロフェッショナル。クリエイティブチームに所属し、Creative Cloud を使用するが、デジタルアセットの作成はおこなわないメンバー（クリエイティブディレクターやクリエイティブチームマネージャーなど）を含む場合もあります。
-* **DAM ユーザー：** DAM システムの一般的な利用者。組織によっては、DAM ユーザーにマーケティング分野のユーザーもマーケティング以外の分野のユーザーも含まれます（例えば、事業部門（LOB）ユーザー、ライブラリアン、販売担当者など）。
+* **DAM ユーザー：** DAM システムの一般的な利用者。組織によっては、マーケティング分野のユーザーもマーケティング以外の分野のユーザーも含まれます（例えば、事業部門（LOB）ユーザー、ライブラリアン、販売担当者など）。
 
-### AEMとCreative cloudの統合を使用する場合の考慮事項 {#considerations-when-using-aem-and-creative-cloud-integration}
+### AEM と Creative Cloud の統合を使用する場合の考慮事項 {#considerations-when-using-aem-and-creative-cloud-integration}
 
 * See [desktop app best practices](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/troubleshoot.html#best-practices-to-prevent-troubles)
-* 「 [Adobe stockの統合」を参照](aem-assets-adobe-stock.md)
-* See [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
+* 「 [Adobe Stock統合」を参照](aem-assets-adobe-stock.md)
+* See [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)
 
-Experience ManagerとCreative cloudの統合に関するベストプラクティスの概要を示します。 以下のそれぞれの項目の詳細は、このドキュメントで後述されています。
+これは、Experience ManagerとCreative Cloudの統合に関するベストプラクティスの概要です。 以下のそれぞれの項目の詳細は、このドキュメントで後述されています。
 
 * **Photoshop、InDesign、Illustrator のいずれかで作業しているクリエイティブユーザーの場合：** Adobe Asset Link は、AEM からチェックアウトされたアセットの更新の適切な処理など、最適なユーザーエクスペリエンスを提供します。
-* **任意の汎用ファイル形式またはアプリケーションについてデスクトップからアセットへのアクセスを簡素化する場合：** AEM Desktop App を使用します。
+* **任意の汎用ファイル形式またはアプリケーションについてデスクトップからアセットへのアクセスを簡素化する場合：** AEM デスクトップアプリケーションを使用します。
 * **アセットを DAM に保存する理由とタイミングを理解する：**&#x200B;更新を組織内の広範なチームで利用できるようにする必要があります。
 * **共有するアセットの量に注意を払う：**&#x200B;アセットを配布する場合、ガバナンスとセキュリティが最も重要な要素になる可能性があります。Brand Portal のように、大規模なアセット配布を想定したツールの使用を検討してください。
 * **アセットのライフサイクルを理解する：**&#x200B;組織内のそれぞれのチームでアセットがどのように処理されるかを理解します。
@@ -123,20 +126,20 @@ Experience ManagerとCreative cloudの統合に関するベストプラクティ
 
 ### AEM Assets からの Adobe Stock アセットへのアクセス {#access-to-adobe-stock-assets-from-aem-assets}
 
-[AEMとAdobe stockの統合により](/help/assets/aem-assets-adobe-stock.md) 、AEMユーザーは、Adobe stockからAEMにアセットを検索、プレビュー、ライセンス認証および保存できます。 ライセンスを取得して保存したAdobe Stockアセットでは、選択したStockメタデータが使用され、追加のフィルターでアセットを検索するために使用できます。
+[AEM と Adobe Stock の統合](/help/assets/aem-assets-adobe-stock.md)により、AEM ユーザーは、Adobe Stock 内のアセットを検索、プレビュー、ライセンス取得し、AEM に保存できるようになります。ライセンス取得され保存された Adobe Stock アセットには、限定された Stock メタデータが付いており、このメタデータを使用してアセットをさらに絞り込むことができます。
 
 この統合に関するいくつかの重要な点を以下に示します。
 
 * Adobe Stock 内のアセットが AEM に保存されると、それらは通常の AEM Assets になり、バイナリが AEM リポジトリに保存されます。Adobe Stock に関係する一部のメタデータが AEM 内のアセットに保存されます。その他の点では、取り込みプロセスは他のあらゆるファイルの場合と同様です。例えば、スマートタグがアクティブな場合、保存時にこれらのアセットにタグが追加されます。
 * AEM に保存されたアセットはコピーであり、Adobe Stock へのリンクではありません。
 
-**Adobe Stock から Creative Cloud 内の AEM に保存されたアセットの操作**。この統合は Adobe Asset Link とは無関係ですが、Adobe Asset Link では Stock から保存されたこれらのアセットをそのように認識し、Photoshop、Illustrator、InDesign の Adobe Asset Link 拡張 UI でこれらのアセットに追加のメタデータと Stock アイコンを表示します。AEM に保存すると通常の AEM アセットになるので、ファイルを閲覧したり開いたりすることができます。Adobe Asset Link 拡張機能を備えた Creative Cloud アプリで作業している クリエイティブユーザーは、Adobe Stock から AEM に保存したライセンス取得済みアセットにアクセスできるだけでなく、Creative Cloud ライブラリパネルを使用して Adobe Stock アセットを検索、プレビューし、ライセンスを取得することもできます。Adobe Stock からライセンスを取得してAEM に保存したアセットは、AEM Assets デプロイメントにアクセスする広範なチームで利用できるようになります。ただし、.クリエイティブユーザーが Creative Cloud ライブラリパネル経由で Adobe Stock からアセットのライセンスを取得した場合、デフォルトでは、それらのアセットは自分の Creative Cloud アカウント内でしか使用できません。
+**Adobe Stock から Creative Cloud 内の AEM に保存されたアセットの操作**。この統合は Adobe Asset Link とは無関係ですが、Adobe Asset Link では Stock から保存されたこれらのアセットをそのように認識し、Photoshop、Illustrator、InDesign の Adobe Asset Link 拡張 UI でこれらのアセットに追加のメタデータと Stock アイコンを表示します。AEM に保存すると通常の AEM アセットになるので、ファイルを閲覧したり開いたりすることができます。Adobe Asset Link 拡張機能を備えた Creative Cloud アプリで作業しているクリエイティブユーザーは、Adobe Stock から AEM に保存したライセンス取得済みアセットにアクセスできるだけでなく、Creative Cloud ライブラリパネルを使用して Adobe Stock アセットを検索、プレビューし、ライセンスを取得することもできます。Adobe Stock からライセンスを取得して AEM に保存したアセットは、AEM Assets デプロイメントにアクセスする広範なチームで利用できるようになります。ただし、クリエイティブユーザーが Creative Cloud ライブラリパネル経由で Adobe Stock からアセットのライセンスを取得した場合、デフォルトでは、それらのアセットは自分の Creative Cloud アカウント内でしか使用できません。
 
 <!-- 
 TBD: A condensed version of the below content is better placed in the Adobe DAM article.
 -->
 
-## DAMへのアセットの保存について {#about-storing-assets-in-a-dam}
+## DAM へのアセットの保存について {#about-storing-assets-in-a-dam}
 
 クリエイティブチームとマーケティング／事業部門（LOB）チームの間の効率的なワークフローをデザインし、最適なサポート機能を選択するには、アセットを DAM に保存するタイミングと理由を理解することが重要です。
 
@@ -183,9 +186,9 @@ AEM Assets では、AEM Assets デプロイメントに対するアクセス権�
 
 #### DAM への直接アクセス権を持つクリエイティブユーザー {#creative-users-with-direct-access-to-dam}
 
-通常、社内ネットワークに接続されている社内のクリエイティブチームまたはエージェンシー/クリエイティブプロフェッショナルは、AEMログインを含むDAMインスタンスにアクセスできます。
+通常、社内のクリエイティブチームや、社内ネットワークにオンボーディングされたエージェンシー／クリエイティブプロフェッショナルは、（AEM ログインを含む）DAM インスタンスへのアクセス権を持っています。
 
-そのような場合、AEMデスクトップアプリケーションは、最終的な/承認済みのアセットに簡単にアクセスでき、クリエイティブなアセットをDAMに保存できます。
+そのような場合、AEMデスクトップアプリを使用すると、最終的な/承認済みのアセットに簡単にアクセスでき、クリエイティブに対応したアセットをDAMに保存できます。
 
 #### DAM へのアクセス権を持たないクリエイティブユーザー {#creative-users-without-access-to-dam}
 
@@ -195,9 +198,9 @@ DAM インスタンスへの直接アクセス権を持たない外部のエー�
 
 以下の方法で、最終／承認済みアセットへのアクセスを提供することができます。
 
-* To provide access to a large number assets: Use [AEM Assets Brand Portal](https://helpx.adobe.com/experience-manager/brand-portal/user-guide.html), or customer’s implementation of [Asset Share](assets-finder-editor.md) on AEM publish infrastructure
+* To provide access to a large number assets: Use [AEM Assets Brand Portal](https://helpx.adobe.com/jp/experience-manager/brand-portal/user-guide.html), or customer’s implementation of [Asset Share](assets-finder-editor.md) on AEM publish infrastructure
 
-* いくつかのアセットへのアクセスを提供するには：AEM Assets Brand portalまたはアセット共有に加えて、Adobe Creative cloudとのAEMフォルダー共有を使用できます。 この統合に関連するいくつかの制限があり、この記事で詳しく説明します。
+* いくつかのアセットへのアクセスを提供するには： AEM Assetsブランドポータルやアセット共有に加え、Adobe Creative CloudとのAEMフォルダ共有を使用できます。 この統合に関連するいくつかの制限事項があり、この記事で詳しく説明します。
 
 ### ユースケース {#use-cases}
 
@@ -213,15 +216,15 @@ DAM インスタンスへの直接アクセス権を持たない外部のエー�
 
 1. 承認済みアセットをクリエイティブデスクトップで共有する：DAM にある最終アセットがクリエイティブユーザーのデスクトップで使用できるようになります。
 1. 新しいデザイン（クリエイティブデジタルアセット）を作成する：新しいファイルが WIP 領域に保存されます。
-1. 承認されたアセットを新しいデザインで使用（配置）:クリエイティブユーザーは、Creative cloudアプリケーションで既に承認されたアセットを使用して新しいアセットを作成します
-1. WIP の更新を頻繁に保存する：クリエイティブユーザーが、ファイルを繰り返し更新し、頻繁に保存します。このステージでは、クリエイティブユーザーが他者と共同作業をおこない、頻繁に更新を保存します。ただし、この更新は、  通常、DAMユーザーには興味がありません。
+1. 承認されたアセットを新しいデザインで使用（配置）: クリエイティブユーザーは、Creative Cloudアプリケーションで既に承認されたアセットを使用して新しいアセットを作成します
+1. WIP の更新を頻繁に保存する：クリエイティブユーザーが、ファイルを繰り返し更新し、頻繁に保存します。このステージでは、クリエイティブユーザーが他者と共同作業をおこない、頻繁に更新を保存します。ただし、この更新は、  通常、DAMユーザーは興味を持ちません。
 1. アセットは、クリエイティブレディの状態になり、クリエイティブレディフォルダーに保存されます。
-1. アセットの  更新：DAMのユーザーがアセットの更新または新しいファイルを利用できる
-1. アセットを実稼働環境に配置：これはDAMプロセスで、組織によってはタグ付け、承認、アクセス制御の変更を構成する場合があります。 このステージでは、アセットは最終アセットと見なされ、DAM を使用している、より広範なチームが使用できるようになります。また、クリエイティブユーザーが、このアセットを使用して、別のアセットを作成することもできます。
+1. アセットの  更新： DAMのユーザーがアセットの更新または新しいファイルを使用できます
+1. アセットを実稼働環境に配置： これは、組織に応じて、タグ付け、承認、アクセス制御の変更を含むDAMプロセスです。 このステージでは、アセットは最終アセットと見なされ、DAM を使用している、より広範なチームが使用できるようになります。また、クリエイティブユーザーが、このアセットを使用して、別のアセットを作成することもできます。
 
 このプロセスでアセットを管理する方法について、いくつか一般的な推奨事項があります。
 
-* Adobe Creative Cloud Assets 同期フォルダーなど WIP ファイル専用のストレージ領域／システムを使用する：DAM ユーザーに関連のない頻繁な更新は、AEM Assets 内からではなく専用のシステムで処理することをお勧めします。WIPアセットは、Adobe Creative cloudデスクトップアプリケーションを使用してローカルディスクに同期したり、ローカルストレージに保存したりできます。
+* Adobe Creative Cloud Assets 同期フォルダーなど WIP ファイル専用のストレージ領域／システムを使用する：DAM ユーザーに関連のない頻繁な更新は、AEM Assets 内からではなく専用のシステムで処理することをお勧めします。WIPアセットは、Adobe Creative Cloudのデスクトップストレージを使用してローカルディスクに同期したり、ローカルディスクに保存したりできます。
 * 最終アセットと DAM にアップロードするアセットには別々のフォルダー／共有を使用する：わかりやすいように、最終アセットには専用のマッピングされた／共有フォルダー（上記の例の「最終」）、DAM にアップロードして戻す予定のアセットにも専用のフォルダー（同「クリエイティブレディ」）を使用します。
 
 #### Change existing assets managed in DAM {#changing-existing-assets-managed-in-dam}
@@ -244,7 +247,7 @@ And 6.5 content will be ported after updating it for AEM desktop app 2.0 best pr
 And it will be updated for DA2.0 best practices after 6.5 repo is available for writers to edit content in.
 -->
 
-* **** 1:DAMからデスクトップにアセットを共有するか、任意のアプリケーション（例えば、Adobe Photoshopなど）でデスクトップ上で直接開きます。 ファイルをチェックアウトしてロックすることをお勧めします。
+* **1:** DAMからデスクトップにアセットを共有するか、選択したアプリケーション(Adobe Photoshopなど)でデスクトップに直接開きます。 ファイルをチェックアウトしてロックすることをお勧めします。
 * **2：**&#x200B;小規模な更新：ファイルを編集して変更を保存します。
 * 手順 2 で考えられる別のフロー
 
@@ -253,7 +256,7 @@ And it will be updated for DA2.0 best practices after 6.5 repo is available for 
    * **C：**&#x200B;更新が完了したら、マッピングされたフォルダーにファイルをコピーバック／保存します。
 
 * **3：**&#x200B;アセットの更新が DAM で反映されます。ファイルをチェックインしてロックを解除します。
-* **** 4:アセットは実稼動に移されます。
+* **4:** アセットは実稼動に配置されます。
 
 このプロセスでアセットを管理する方法について、いくつか一般的な推奨事項があります。
 
@@ -268,22 +271,22 @@ And it will be updated for DA2.0 best practices after 6.5 repo is available for 
 * クリエイティブエージェンシーから提供されたアセットのアップロード
 * 大規模なアセットのセットから一部選択したアセットのアップロード（選択が DAM の外でおこなわれた場合）
 
-これは、デスクトップユーザーの通常のワークフローの一部として、  photoshootなど)を使用し、デスクトップユーザーのワークフローの通常の部分として使用できます。 大規模なアセット移行については、ここでは説明しません。
+これは、デスクトップユーザーの通常のワークフローの一部として、  photoshootなど)をデスクトップユーザのワークフローの通常の部分として使用できます。 大規模なアセット移行については、ここでは説明しません。
 
 以下の機能を活用すると、アセットを一括でアップロードすることができます。
 
-* To upload large/hierarchical folders, use AEM desktop app, which provides a [Folder Upload](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html#bulkupload) feature. フォルダーの階層構造もアップロードできます。アセットはバックグラウンドでアップロードされます。そのため、アセットは Web ブラウザーのセッションに拘束されません。
+* To upload large/hierarchical folders, use AEM desktop app, which provides a [Folder Upload](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html#bulkupload) feature. フォルダーの階層構造もアップロードできます。アセットはバックグラウンドでアップロードされます。そのため、アセットは Web ブラウザーのセッションに拘束されません。
 * 1 つのフォルダーから少数のファイルをアップロードする場合は、デスクトップから Web UI に直接ファイルをドラッグするか、AEM Assets Web UI の「作成」オプションを使用します。
 
 >[!NOTE]
 >
->ビジネス要件に応じて、カスタムアップローダーも使用できます。
+>ビジネス要件によっては、カスタムアップローダーを使用することもできます。
 
 #### Manage digital assets directly from desktop {#managing-digital-assets-directly-from-desktop}
 
 ネットワークファイル共有を使用してデジタルアセットを管理している場合、AEM デスクトップアプリケーションでマップされたネットワーク共有を使用するだけで、より便利になる可能性があります。ネットワークファイル共有から切り替える場合に忘れてならないのは、AEM Web UI では豊富なデジタルアセット管理（DAM）機能を使用できることです。ネットワーク共有で可能な機能（検索、収集、メタデータ、共同作業、プレビューなど）より多くの機能が用意されています。また、AEM デスクトップアプリケーションには、サーバー側の DAM リポジトリとデスクトップの作業を連携させることができる便利なリンクもあります。
 
-AEM Assetsのネットワーク共有でアセットを直接管理する場合は、AEMデスクトップアプリを使用しないでください。 例えば、AEMデスクトップアプリケーションを使用して複数のファイルを移動/コピーすることは避けてください。 この場合は、AEM Assets Web UI を使用して、Finder／エクスプローラーからフォルダーをネットワーク共有にドラッグします。または、AEM Assets のフォルダーアップロード機能を使用します。
+AEM デスクトップアプリケーションを使用して AEM Assets のネットワーク共有でアセットを直接管理することは避けてください。例えば、AEM デスクトップアプリケーションを使用して複数のファイルを移動またはコピーしないでください。この場合は、AEM Assets Web UI を使用して、Finder／エクスプローラーからフォルダーをネットワーク共有にドラッグします。または、AEM Assets のフォルダーアップロード機能を使用します。
 
 #### アセットの移行 {#asset-migration}
 
