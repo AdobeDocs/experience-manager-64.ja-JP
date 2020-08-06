@@ -20,7 +20,7 @@ ht-degree: 57%
 
 # OSGi 設定{#osgi-configuration-settings}
 
-[OSGi](https://www.osgi.org/) はAEMの技術スタックの基本要素です。 AEMの複合バンドルとその設定を制御するために使用されます。
+[OSGi](https://www.osgi.org/) はAEMのテクノロジスタックの基本要素です。 AEMの複合バンドルとその設定を制御するために使用されます。
 
 OSGi は標準化されたプリミティブを提供し、小さく再利用が可能で連携機能に優れたコンポーネントを組み合わせてアプリケーションを構築することを可能にします。これらのコンポーネントからアプリケーションを作成し、デプロイすることができます。**
 
@@ -38,19 +38,19 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 >[!NOTE]
 >
->OSGi設定の相違ツール( [AEM Tools](https://helpx.adobe.com/experience-manager/kb/tools/aem-tools.html)の一部)は、デフォルトのOSGi設定をリストするために使用できます。
+>AEMツールの一部であるOSGi設定相違ツールは、 [デフォルトのOSGi設定のリストに使用でき](https://helpx.adobe.com/experience-manager/kb/tools/aem-tools.html)ます。
 
 >[!NOTE]
 >
 >AEM 内の機能の特定の領域では、さらに多くのバンドルが必要な場合があります。この場合、設定の詳細は、該当する機能の関連ページで確認できます。
 
-**AEMレプリケーションイベントリスナー** 設定：
+**AEMレプリケーションイベントリスナー** 構成：
 
 * レプリケーション・イベントがリスナーに配布される **実行モード**。 たとえば、authorと定義した場合、これはレプリケーションを「開始」するシステムです。
 
 * プロジェクトコードが発行環境で複製イベント（逆複製）を処理する場合は、 **** 発行モードを実行する必要があります。 例えば、ディスパッチャーを使用して発行環境からフラッシュする場合や、他の発行インスタンスへの標準複製が発生する場合などです。
 
-**AEM Repository change listener** Configure:
+**AEMリポジトリ変更リスナー** ：設定：
 
 * **パス**。リポジトリイベントをリスンして配布できる状態になっている場所です。
 
@@ -97,7 +97,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 * テストを実施して、状況に応じた値を確立する必要があります。
 * これらの設定はインスタンスのパフォーマンスに影響を及ぼす可能性があるので、変更の際は十分な理由と検討が必要です。
 
-**Apache Sling GET Servlet** レンダリングの設定
+**Apache SlingGETサーブレット** ：レンダリングのいくつかの側面を設定します。
 
 * **Auto Index**：閲覧のためのディレクトリのレンダリングを有効または無効にします。
 * **Enable**（または Disable）：デフォルトのレンディション（**HTML**、**Plain Text**、**JSON**、**XML** など）を有効または無効にします。
@@ -271,7 +271,7 @@ When creating a new configuration, do not make changes to the factory configurat
 * **API キー**
 * **登録済みの URL**
 
-**Adobe Granite HTML Library Manager** ：クライアントライブラリ（cssまたはjs）の処理を制御するように設定します。 例えば、基になる構造体の見え方を含む。
+**AdobeGranite HTML Library Manager** ：クライアントライブラリ（cssまたはjs）の処理を制御するように設定します。 例えば、基になる構造体の見え方を含む。
 
 * 実稼動インスタンスの場合：
 
@@ -321,7 +321,7 @@ When creating a new configuration, do not make changes to the factory configurat
 
 **Day CQ Root Mapping** Configure:
 
-* **Targetパス** : 「 `/`」への要求がリダイレクトされる先を定義します。
+* **ターゲットパス** : 「 `/`」への要求がリダイレクトされる先を定義します。
 
 AEM では次の [2 つの UI](/help/sites-authoring/select-ui.md) を使用できます。
 
@@ -346,7 +346,7 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 >
 >標準インストールでは、タッチ操作向け UI がデフォルトの UI です。
 
-**Adobe Granite SSO認証ハンドラー** ：シングルサインオン(SSO)の詳細の設定 これらは、多くの場合、エンタープライズ作成者の設定で必要となり、LDAPと組み合わせて使用されます。
+**AdobeGranite SSO認証ハンドラー** ：シングルサインオン(SSO)の詳細の設定 これらは、多くの場合、エンタープライズ作成者の設定で必要となり、LDAPと組み合わせて使用されます。
 
 様々な設定プロパティがあります。
 
@@ -400,7 +400,7 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 
 * **パス**：システムが `jcr:Event` をトリガーする前にページの変更をリッスンする場所のリストです。
 
-**オーサーインスタンス用のAdobe Page Impressions Tracker** :
+**Adobeページインプレッション数トラッカー** （作成者インスタンス用）は、以下のように設定します。
 
 * **sling.auth.requirements**: このプロパティの値を `-/libs/wcm/stats/tracker`
 
@@ -472,11 +472,11 @@ CQ リライターの HTML パーサーを制御します。
 
 これはファクトリ設定なので、複数のインスタンスを設定できます。
 
-**Adobe CQ Media DPS Sessions Service** Manage DPS Sessions for use with Publications.
+**Adobe CQメディアDPSセッションサービス** ：パブリケーションで使用するDPSセッションを管理します。
 
 具体的には、`dps.session.service.url.name`、  を定義できます。デフォルトは [https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions](https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions) に設定されています。
 
-**AEMとCDN間のCDNリライタ** ー通信は、アセット/バイナリがエンドユーザーに安全な方法で配信されるように、確実に行う必要があります。 この方法では 2 つのタスクをおこないます。
+**CDN Rewriter** Communication between AEM and CDN（とCDN間の通信）は、アセット/バイナリがエンドユーザーに安全な方法で配信されるように保証する必要があります。 この方法では 2 つのタスクをおこないます。
 
 * 最初（またはキャッシュ内のリソースが期限切れになった後）に、CDN を介して AEM からリソースにアクセスします。
 * CDN にリソースがキャッシュされた後は、CDN にキャッシュされたリソースに安全にアクセスします。要求は AEM に送信されず、そのリソースにアクセスできるすべてのユーザーの処理は CDN でおこなわれます。
