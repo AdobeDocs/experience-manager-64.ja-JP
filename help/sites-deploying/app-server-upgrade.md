@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: c427c8b6-eb94-45fa-908f-c3d5a337427d
 translation-type: tm+mt
 source-git-commit: 510b6765e11a5b3238407322d847745f09183d63
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 95%
 
 ---
 
@@ -68,7 +71,7 @@ source-git-commit: 510b6765e11a5b3238407322d847745f09183d63
 1. 不要なファイルとフォルダーを削除します。具体的に削除する必要のある項目は次のとおりです。
 
    * **launchpad/startup フォルダー**：ターミナルで次のコマンドを実行して削除できます。`rm -rf crx-quickstart/launchpad/startup`
-   * The **base.jar file**: `find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
+   * **base.jarファイル**: `find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
    * The **BootstrapCommandFile_timestamp.txt file**: `rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
 
 1. 新しく移行された segmentstore を適切な場所にコピーします。
@@ -90,6 +93,7 @@ source-git-commit: 510b6765e11a5b3238407322d847745f09183d63
    * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg`
 
    * `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.cfg`
+
    この 2 つのファイルにより、AEM が TarMK ノードストアとファイルデータストアを使用するように設定されます。
 
 1. 設定ファイルを編集し、使用できる状態にします。具体的には、次のように編集します。
