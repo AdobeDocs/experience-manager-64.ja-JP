@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: efbe46a3-c37f-4b67-8b3a-188cfc75118b
 translation-type: tm+mt
 source-git-commit: 185bdd83b8b67671a31aa3f341b80614ed819b6c
+workflow-type: tm+mt
+source-wordcount: '708'
+ht-degree: 85%
 
 ---
 
@@ -47,6 +50,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >* nosamplecontent実行モードを使用した作成者インスタンスに対する
 >* パブリッシュインスタンス
+
 >
 >
 使用後は再度無効にする必要があります。
@@ -100,6 +104,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
    * コンポーネントのレンダリングに使用されるすべてのコンポーネントスクリプト。
    * この特定のコンポーネントのリポジトリコンテンツパス。
+
    ![chlimage_1-232](assets/chlimage_1-232.png)
 
 * **スクリプトを編集**：次のことをおこなうリンクです。
@@ -110,6 +115,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
    * 選択したコンポーネント内の階層。
    * 選択したコンポーネント単独でのレンダリング時間、そのコンポーネント内にネストされている個々のコンポーネントのレンダリング時間および両者の合計。
+
    ![chlimage_1-233](assets/chlimage_1-233.png)
 
 >[!CAUTION]
@@ -135,6 +141,6 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 >[!CAUTION]
 >
->AEM 6.2では、開発者モードのテスト機能は、スタンドアロンのツールアプリケーションとして再実装されました。
+>AEM 6.2では、開発者モードのテスト機能がスタンドアロンのツールアプリケーションとして再実装されました。
 >
 >For full details see [Testing Your UI](/help/sites-developing/hobbes.md).
