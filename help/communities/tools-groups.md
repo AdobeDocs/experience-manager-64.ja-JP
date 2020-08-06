@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: 9a862756-58e8-47c0-a4b4-5d4aaac021e4
 translation-type: tm+mt
 source-git-commit: 13d890d08a032fe4eef1dac793dcf2a3e682a52c
+workflow-type: tm+mt
+source-wordcount: '542'
+ht-degree: 59%
 
 ---
 
 
 # グループテンプレート {#group-templates}
 
-グループテンプレートコンソールは、[サイトテンプレート](sites.md)コンソールによく似ています。どちらも、コミュニティサイトを形成する、配線済みのページと機能のセットの設計図です。 異なる点は、サイトテンプレートはメインコミュニティ用で、グループテンプレートはコミュニティグループ用で、サブコミュニティはメインコミュニティ内にネストされています。
+グループテンプレートコンソールは、[サイトテンプレート](sites.md)コンソールによく似ています。どちらも、コミュニティサイトを形成する、事前に配線されたページと機能のセットの設計図です。 異なる点は、サイトテンプレートはメインコミュニティ用、グループテンプレートはコミュニティグループ用、つまりメインコミュニティ内にネストされたサブコミュニティ用です。
 
 A community group is incorporated into a site template by including the [Groups function](functions.md#groups-function) (which may not be the first nor only function in the template).
 
 Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降、グループテンプレート内にグループ機能を含めることにより、グループをネストできるようになりました。
 
-新しいコミュニティグループを作成するアクションが実行されるとすぐに、グループのテンプレート（構造）が選択されます。選択内容は、サイトまたはグループテンプレートに追加したときにグループ機能がどのように設定されたかによって異なります。
+新しいコミュニティグループを作成するアクションが実行されるとすぐに、グループのテンプレート（構造）が選択されます。選択項目は、サイトまたはグループテンプレートに追加したときにGroups機能がどのように設定されたかによって異なります。
 
 >[!NOTE]
 >
@@ -53,9 +56,9 @@ This console displays the templates from which a [community site](sites-console.
 
 * **[!UICONTROL New Group Template Name]**&#x200B;テンプレート名id
 
-* **[!UICONTROL 説明]**：テンプレートの説明
+* **[!UICONTROL 説明]**&#x200B;テンプレートの説明
 
-* **[!UICONTROL 無効/有効]**&#x200B;テンプレートを参照可能にするかどうかを制御する切り替えスイッチ
+* **[!UICONTROL 無効/有効]**&#x200B;テンプレートが参照可能かどうかを制御する切り替えスイッチ
 
 ### サムネール {#thumbnail}
 
@@ -73,7 +76,7 @@ This console displays the templates from which a [community site](sites-console.
 >
 >テンプレート内の 1 番目の機能または唯一の機能としてグループ機能を追加することはまだできません。
 
-![grptemplateeditor](assets/grptemplateeditor.png)
+![grtemplateeditor](assets/grptemplateeditor.png)
 
 コミュニティ機能を追加するには、右側から左側にドラッグします。サイトメニューのリンクは追加した順番で表示されます。スタイルは、サイトの作成時にテンプレートに適用されます。
 
