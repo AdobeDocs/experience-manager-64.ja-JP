@@ -1,12 +1,12 @@
 ---
 title: PDFラスタライザを使用
-description: Adobe PDF Rasterizerライブラリを使用して、高品質のサムネールとレンディションを生成します。
+description: Adobe PDFラスタライザライブラリを使用して、高品質のサムネールとレンディションを生成します。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: dea673f8999656a5c5364f74f45eba41dd17b947
 workflow-type: tm+mt
 source-wordcount: '745'
-ht-degree: 60%
+ht-degree: 63%
 
 ---
 
