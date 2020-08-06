@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 31d652ee04fe75e96f96c9ddc5a6f2c3c64bd630
 workflow-type: tm+mt
 source-wordcount: '1818'
-ht-degree: 72%
+ht-degree: 78%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 72%
 
 >[!WARNING]
 >
->この機能はAEM 6.4以降では非推奨となり、AEM 6.5では削除されます。それに応じて計画を立ててください。
+>この機能はAEM 6.4以降では廃止され、AEM 6.5では削除されます。それに応じて計画を立ててください。
 
 Adobe Experience Manager（AEM）Assets で大きなファイルを扱ったり、ワークフローを実行したりすると、CPU、メモリ、I/O リソースを大量に消費する場合があります。特に、アセットのサイズ、ワークフロー、ユーザー数、アセットの取り込み頻度が、システム全体のパフォーマンスに影響を与える可能性があります。最もリソースを消費する操作には、AEM アセットの取り込みやレプリケーションのワークフローがあります。単一の AEM オーサリングインスタンスでこれらのワークフローを頻繁に使用すると、オーサリングの効率に悪影響を与える可能性があります。
 
@@ -33,11 +33,11 @@ AEM Assets は、オフロードのためのネイティブなアセット固有
 
 ### DAM アセットの更新のオフロードワークフロー {#dam-update-asset-offloading-workflow}
 
-DAMのアセットの更新のオフロードワークフローは、ユーザーがアセットをアップロードするプライマリ（作成者）サーバーで実行されます。 このワークフローは、通常のワークフローランチャーによって実行されます。このオフロードワークフローは、アップロードされたアセットを処理する代わりに、トピック *com/adobe/granite/workflow/offloading* を使用して新しいジョブを作成します。オフロードワークフローは、ジョブのペイロードに、ターゲットワークフローの名前（この場合は DAM アセットの更新ワークフロー）およびアセットのパスを追加します。オフロードジョブを作成した後、プライマリインスタンスのオフロードワークフローは、オフロードジョブが実行されるまで待機します。
+DAMのアセットの更新のオフロードワークフローは、ユーザーがアセットをアップロードするプライマリ（作成者）サーバーで実行されます。 このワークフローは、通常のワークフローランチャーによって実行されます。このオフロードワークフローは、アップロードされたアセットを処理する代わりに、トピック *com/adobe/granite/workflow/offloading* を使用して新しいジョブを作成します。オフロードワークフローは、ジョブのペイロードに、ターゲットワークフローの名前（この場合は DAM アセットの更新ワークフロー）およびアセットのパスを追加します。オフロードジョブを作成した後、プライマリインスタンスのオフロードワークフローは、オフロードジョブの実行が完了するまで待機します。
 
 ### ジョブマネージャー {#job-manager}
 
-ジョブマネージャーは、新しいジョブをワーカーインスタンスに分配します。分配のメカニズムを設計する場合、トピックのイネーブルメントについて考慮することが重要です。ジョブは、ジョブのトピックが有効になっているインスタンスにのみ割り当てることができます。Disable the topic `com/adobe/granite/workflow/offloading` on the primary, and enable it on the worker to ensure that the job is assigned to the worker.
+ジョブマネージャーは、新しいジョブをワーカーインスタンスに分配します。分配のメカニズムを設計する場合、トピックのイネーブルメントについて考慮することが重要です。ジョブは、ジョブのトピックが有効になっているインスタンスにのみ割り当てることができます。プライマリでトピック `com/adobe/granite/workflow/offloading` を無効にし、ワーカーでこのトピックを有効にして、ジョブがワーカーに割り当てられるようにします。
 
 ### AEM のオフロード {#aem-offloading}
 
@@ -104,10 +104,10 @@ AEM および Oak を使用する場合、複数の導入シナリオが考え�
 
 ### フォワードレプリケーションの使用 {#using-forward-replication}
 
-デフォルトでは、オフロードトランスポートは逆複製を使用して、オフロードされたアセットをワーカーからプライマリに取り戻します。 リバースレプリケーションエージェントでは、バイナリレスレプリケーションをサポートしていません。オフロードを設定して、オフロードされたアセットをワーカーからプライマリにプッシュバックするには、転送レプリケーションを使用する必要があります。
+オフロードトランスポートでは、デフォルトで、リバースレプリケーションを使用して、オフロードされたアセットをワーカーからプライマリにプルします。リバースレプリケーションエージェントでは、バイナリレスレプリケーションをサポートしていません。オフロードされたアセットをフォワードレプリケーションを使用してワーカーからプライマリにプッシュするようにオフロードを設定する必要があります。
 
 1. If you are migrating from the default configuration using reverse replication, disable or delete all agents named &quot; `offloading_outbox`&quot; and &quot; `offloading_reverse_*`&quot; on primary and worker, where &amp;ast; represents the Sling id of the target instance.
-1. 各ワーカーで、プライマリを指す新しい転送レプリケーションエージェントを作成します。 この手順は、プライマリからワーカーへの転送エージェントを作成するのと同じです。 See [Creating Replication Agents For Offloading](../sites-deploying/offloading.md#creating-replication-agents-for-offloading) for instructions around setting up offloading replication agents.
+1. 各ワーカーで、プライマリを指す新しいフォワードレプリケーションエージェントを作成します。この手順は、プライマリからワーカーへの転送エージェントを作成するのと同じです。 See [Creating Replication Agents For Offloading](../sites-deploying/offloading.md#creating-replication-agents-for-offloading) for instructions around setting up offloading replication agents.
 1. ( `OffloadingDefaultTransporter` )の設定を開き`http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter`ます。
 1. Change value of the property `default.transport.agent-to-master.prefix` from `offloading_reverse` to `offloading`.
 
@@ -143,7 +143,7 @@ By default, the *DAM Update Asset Offloading* offloading workflow adds the workf
 
 ### ポーリング間隔の最適化 {#optimizing-the-polling-interval}
 
-ワークフローのオフロードは、プライマリの外部ワークフローを使用して実装されます。このワークフローは、ワーカーのオフロードされたワークフローの完了をポーリングします。 外部ワークフロープロセスのデフォルトのポーリング間隔は 5 秒です。アセットのオフロード処理のオーバーヘッドをプライマリのオフロードオーバーヘッドを減らすために、アセットのオフロード処理のポーリング間隔を少なくとも15秒に増やすことをお勧めします。
+ワークフローのオフロードは、プライマリの外部ワークフローを使用して実装されます。このワークフローは、ワーカーのオフロードされたワークフローの完了をポーリングします。 外部ワークフロープロセスのデフォルトのポーリング間隔は 5 秒です。プライマリでのオフロードのオーバーヘッドを軽減するために、Assets のオフロードステップのポーリング間隔は 15 秒以上に設定することをお勧めします。
 
 1. Open the workflow console from [http://localhost:4502/libs/cq/workflow/content/console.html](http://localhost:4502/libs/cq/workflow/content/console.html).
 
