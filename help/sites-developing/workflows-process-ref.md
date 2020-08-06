@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dbdf981f-791b-4ff7-8ca8-039d0bdc9c92
 translation-type: tm+mt
 source-git-commit: 58686148b74e63f28800b5752db0cceafc58ccdd
+workflow-type: tm+mt
+source-wordcount: '1141'
+ht-degree: 59%
 
 ---
 
@@ -36,13 +39,13 @@ AEM には、ワークフローモデルの作成に使用できるプロセス�
 
 例えば、ワークフローが AEM ページ「P **」に適用された場合は、ワークフローが進むたびに「P **」がステップからステップに引き渡され、各ステップで必要に応じて「P **」に対して何らかの処理がおこなわれます。
 
-最も多いのは、ペイロードがリポジトリ内の JCR ノード（例えば AEM ページまたはアセット）である場合です。JCRノードペイロードは、JCRパスまたはJCR識別子(UUID)の文字列として渡されます。 ペイロードがJCRプロパティ（JCRパスとして渡される）、URL、バイナリオブジェクト、または汎用Javaオブジェクトである場合があります。 ペイロードで動作する個々のプロセスステップは、通常、特定のタイプのペイロードを期待するか、ペイロードのタイプに応じて動作が異なります。 以下に説明する各プロセスに対して、必要なペイロードタイプ（存在する場合）が記述されます。
+最も多いのは、ペイロードがリポジトリ内の JCR ノード（例えば AEM ページまたはアセット）である場合です。JCRノードのペイロードは、JCRパスまたはJCR識別子(UUID)の文字列として渡されます。 ペイロードがJCRプロパティ（JCRパスとして渡される）、URL、バイナリオブジェクト、または汎用のJavaオブジェクトである場合があります。 ペイロードで動作する個々のプロセスステップは、通常、特定のタイプのペイロードを期待するか、ペイロードのタイプに応じて動作が異なります。 以下に説明する各プロセスに対して、予想されるペイロードタイプ（存在する場合）が説明されます。
 
 ### 引数 {#arguments}
 
 一部のワークフロープロセスは引数を受け取ります。引数は、ワークフローステップを設定するときに管理者が指定します。
 
-引数は、ワークフローエディターの&#x200B;**プロパティ**&#x200B;ウィンドウの「**プロセスの引数**」プロパティに単一文字列として入力します。以下に示す各プロセスに対して、引数文字列の形式は単純なEBNF文法で記述されます。 例えば、次の例は、引数文字列が1つ以上のカンマ区切りのペアで構成され、各ペアは名前（文字列）と値で構成され、コロンが2つ続きます。
+引数は、ワークフローエディターの&#x200B;**プロパティ**&#x200B;ウィンドウの「**プロセスの引数**」プロパティに単一文字列として入力します。以下に説明する各プロセスに対して、引数文字列の形式を単純なEBNF文法で記述します。 例えば、次のように、引数文字列が1つ以上のカンマ区切りのペアで構成されていることを示します。各ペアは名前（文字列）と値(重複コロンで区切られています)で構成されます。
 
 ```
     args := name '::' value [',' name '::' value]*
@@ -77,7 +80,7 @@ If that set of permissions is not sufficient for your `WorkflowProcess` implemen
 >
 >現在、権限は上述のように定義されています（[権限](#permissions)を参照）。実装を更新するために推奨される方法も同様です。
 >
->また、コードの変更が実行不可能な場合は、後方互換性を考慮して短期的な解決方法を使用することもできます。
+>コードの変更を実行できない場合は、短期的な解決方法も後方互換性の目的で利用できます。
 >
 >* Using the Web Console ( `/system/console/configMgr` locate the **Adobe Granite Workflow Configuration Service**
    >
@@ -89,7 +92,7 @@ If that set of permissions is not sufficient for your `WorkflowProcess` implemen
 
 ## ワークフロー制御プロセス {#workflow-control-processes}
 
-次のプロセスは、コンテンツに対して何のアクションも実行しません。 ワークフロー自体の動作を制御するために機能します。
+次のプロセスは、コンテンツに対して何も実行しません。 ワークフロー自体の動作を制御する役割を果たします。
 
 ### AbsoluteTimeAutoAdvancer (Absolute Time Auto Advancer) {#absolutetimeautoadvancer-absolute-time-auto-advancer}
 
@@ -135,9 +138,9 @@ If that set of permissions is not sufficient for your `WorkflowProcess` implemen
 次に例を示します。
 
 * アセットからメタデータを抽出します。
-* 指定した3つのサイズのサムネールを3つ作成します。
-* アセットが元々GIFでもPNGでもない場合（JPEGは作成されない場合）、アセットからJPEG画像を作成します。
-* アセットの最終変更日を設定します。
+* 指定した3つのサイズの3つのサムネールを作成します。
+* アセットが元々GIFでもPNGでもない（JPEGが作成されない場合）と仮定して、アセットからJPEG画像を作成します。
+* アセットの最終変更日を設定
 
 ```shell
 com.day.cq.dam.core.process.ExtractMetadataProcess,
@@ -152,7 +155,7 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 >[!CAUTION]
 >
->You ***must*** not change anything in the `/libs` path.
+>`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
 >
 >This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may be overwritten when you apply either a hotfix or feature pack).
 
@@ -160,49 +163,49 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 指定されたパスにある項目が削除されます。
 
-* **ECMAScript path**: `/libs/workflow/scripts/delete.ecma`
+* **ECMAScriptパス**: `/libs/workflow/scripts/delete.ecma`
 
-* **ペイロード**:JCRパス
-* **引数**:なし
-* **タイムアウト**:無視
+* **ペイロード**: JCRパス
+* **引数**: なし
+* **タイムアウト**: 無視
 
 ### noop {#noop}
 
 これはヌルプロセスです。処理は実行しませんが、デバッグメッセージをログに記録します。
 
-* **ECMAScript path**: `/libs/workflow/scripts/noop.ecma`
+* **ECMAScriptパス**: `/libs/workflow/scripts/noop.ecma`
 
-* **ペイロード**:なし
-* **引数**:なし
-* **タイムアウト**:無視
+* **ペイロード**: なし
+* **引数**: なし
+* **タイムアウト**: 無視
 
 ### rule-false {#rule-false}
 
 This is a null process that returns `false` on the `check()` method.
 
-* **ECMAScript path**: `/libs/workflow/scripts/rule-false.ecma`
+* **ECMAScriptパス**: `/libs/workflow/scripts/rule-false.ecma`
 
-* **ペイロード**:なし
-* **引数**:なし
-* **タイムアウト**:無視
+* **ペイロード**: なし
+* **引数**: なし
+* **タイムアウト**: 無視
 
 ### sample {#sample}
 
 これは、ECMAScript プロセスのサンプルです。
 
-* **ECMAScript path**: `/libs/workflow/scripts/sample.ecma`
+* **ECMAScriptパス**: `/libs/workflow/scripts/sample.ecma`
 
-* **ペイロード**:なし
-* **引数**:なし
-* **タイムアウト**:無視
+* **ペイロード**: なし
+* **引数**: なし
+* **タイムアウト**: 無視
 
 ### urlcaller {#urlcaller}
 
-これは、指定されたURLを呼び出す簡単なワークフロープロセスです。 通常、URLは、単純なタスクを実行するJSP（または他の同等のサーブレット）への参照です。 このプロセスは開発およびデモンストレーションのときにのみ使用し、実稼動環境では使用しないようにする必要があります。引数には、URL、ログイン、パスワードを指定します。
+これは、指定されたURLを呼び出す簡単なワークフロープロセスです。 通常、URLは、単純なタスクを実行するJSP（または他のサーブレットに相当する）への参照です。 このプロセスは開発およびデモンストレーションのときにのみ使用し、実稼動環境では使用しないようにする必要があります。引数は、URL、ログイン、パスワードを指定します。
 
-* **ECMAScript path**: `/libs/workflow/scripts/urlcaller.ecma`
+* **ECMAScriptパス**: `/libs/workflow/scripts/urlcaller.ecma`
 
-* **ペイロード**:なし
+* **ペイロード**: なし
 * **引数**：
 
 ```
@@ -212,17 +215,17 @@ This is a null process that returns `false` on the `check()` method.
         password := /* The password to access the URL */
 ```
 
-次に例を示します。`http://localhost:4502/my.jsp, mylogin, mypassword`
+例：`http://localhost:4502/my.jsp, mylogin, mypassword`
 
-* **タイムアウト**:無視
+* **タイムアウト**: 無視
 
 ### LockProcess {#lockprocess}
 
 ワークフローのペイロードをロックします。
 
-* **** Javaクラス： `com.day.cq.workflow.impl.process.LockProcess`
+* **Java クラス:** `com.day.cq.workflow.impl.process.LockProcess`
 
-* **** ペイロード：JCR_PATHおよびJCR_UUID
+* **ペイロード：** JCR_PATHおよびJCR_UUID
 * **引数：**&#x200B;なし
 * **タイムアウト：**&#x200B;無視されます。
 
@@ -235,9 +238,9 @@ This is a null process that returns `false` on the `check()` method.
 
 ワークフローのペイロードをロック解除します。
 
-* **** Javaクラス： `com.day.cq.workflow.impl.process.UnlockProcess`
+* **Java クラス:** `com.day.cq.workflow.impl.process.UnlockProcess`
 
-* **** ペイロード：JCR_PATHおよびJCR_UUID
+* **ペイロード：** JCR_PATHおよびJCR_UUID
 * **引数：**&#x200B;なし
 * **タイムアウト：**&#x200B;無視されます。
 
@@ -254,9 +257,9 @@ This is a null process that returns `false` on the `check()` method.
 
 ワークフローペイロード（AEM ページまたは DAM アセット）の新しいバージョンを作成します。
 
-* **Javaクラス**: `com.day.cq.wcm.workflow.process.CreateVersionProcess`
+* **Java クラス**: `com.day.cq.wcm.workflow.process.CreateVersionProcess`
 
-* **ペイロード**:ページまたはDAMアセットを参照するJCRパスまたはUUID
-* **引数**:なし
-* **タイムアウト**:尊重
+* **ペイロード**: ページまたはDAMアセットを参照するJCRパスまたはUUID
+* **引数**: なし
+* **タイムアウト**: 尊敬
 
