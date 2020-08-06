@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 5a96c306-790a-4721-a146-86fbceb376db
 translation-type: tm+mt
 source-git-commit: e2fbd2bb97264265ab45b436d6ac32fbf6fef2a7
+workflow-type: tm+mt
+source-wordcount: '4811'
+ht-degree: 97%
 
 ---
 
@@ -38,7 +41,7 @@ source-git-commit: e2fbd2bb97264265ab45b436d6ac32fbf6fef2a7
 
 >[!NOTE]
 >
->SPAエディターで編集可能なテンプレートを使用するには、AEM 6.4.5.0以降が [必要です](/help/sites-developing/spa-overview.md)。
+>編集可能なテンプレートを [SPAエディタで使用するには、AEM 6.4.5.0以降が必要](/help/sites-developing/spa-overview.md)です。
 
 >[!NOTE]
 >
@@ -69,7 +72,7 @@ source-git-commit: e2fbd2bb97264265ab45b436d6ac32fbf6fef2a7
    * `admin` 権限が必要なテンプレートのために新しいフォルダーを作成します。
    * こうしたタスクは、多くの場合開発者がおこなうことができます。
 
-* **開発者**:
+* **開発者**：
 
    * 技術的／内部的詳細に集中します。
    * 開発環境の経験が必要です。
@@ -77,7 +80,7 @@ source-git-commit: e2fbd2bb97264265ab45b436d6ac32fbf6fef2a7
 
 * **テンプレート作成者**：
 
-   * This is a specific author who is member of the group `template-authors`
+   * グループ `template-authors` のメンバーである特定の作成者です。
 
       * 必要な特権および権限を割り当てます。
    * コンポーネントおよび次のものを必要とするその他の高レベルの使用法を設定できます。
@@ -97,7 +100,7 @@ source-git-commit: e2fbd2bb97264265ab45b436d6ac32fbf6fef2a7
 
 AEM には、次の 2 つのタイプの基本テンプレートが用意されています。
 
-* 編集可能テンプレート
+* 編集可能なテンプレート
 
    * **テンプレート**&#x200B;コンソールおよびエディターを使用して、テンプレート作成者が[作成](#creating-a-new-template-template-author)および[編集](#editing-templates-template-authors)できます。**テンプレート**&#x200B;コンソールは、**ツール**&#x200B;コンソールの&#x200B;**一般**&#x200B;セクションでアクセスできます。
    * 新しいページが作成された後も、ページとテンプレートの間で動的な接続が維持されます。つまり、テンプレート構造やロックされたコンテンツに変更を加えると、そのテンプレートを使用して作成されたすべてのページに反映されます。ロックが解除された（初期）コンテンツに対する変更は反映されません。
@@ -123,17 +126,17 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 * **テンプレート**&#x200B;コンソールを使用します。これは、**ツール**&#x200B;コンソールの&#x200B;**一般**&#x200B;セクションにあります。
 
-   * または、直接アクセスします（例：[http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)）。
+   * または直接アクセスします：[http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
-* Can [create a folder for the templates](#creating-a-template-folder-admin) if necessary
+* 必要に応じて、[テンプレート用のフォルダーを作成](#creating-a-template-folder-admin)できます。
 * [新しいテンプレートを作成します](#creating-a-new-template-template-author)（最初は空の状態です）。
 
 * （必要に応じて）テンプレートの[追加プロパティを定義](#defining-template-properties-template-author)します。
 * [テンプレートを編集](#editing-templates-template-authors)して次の要素を定義します。
 
-   * [構造](#editing-a-template-structure-template-author) — テンプレートで作成されたページで変更できない定義済みコンテンツ。
-   * [初期コンテンツ](#editing-a-template-initial-content-author) — テンプレートで作成されたページで変更できる定義済みのコンテンツ。
-   * [レイアウト](#editing-a-template-layout-template-author) — 一連のデバイス用。
+   * [構造](#editing-a-template-structure-template-author) - テンプレートで作成されたページでは変更できない定義済みのコンテンツ。
+   * [初期コンテンツ](#editing-a-template-initial-content-author) - テンプレートで作成されたページで変更可能な定義済みのコンテンツ。
+   * [レイアウト](#editing-a-template-layout-template-author) - 広範なデバイスに対応させるために使用します。
    * [スタイル](/help/sites-authoring/style-system.md) - テンプレートおよびそのコンポーネントで使用されるスタイルを定義します。
 
 * ページ作成時に使用するために[テンプレートを有効化します](#enabling-a-template-template-author)。
@@ -175,7 +178,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
    * **テンプレート名**
    * **説明**
 
-1. 「**作成**」を選択します。確認メッセージが表示されます。**テンプレートの編集**&#x200B;を開始するには「[開く](#editing-templates-template-authors)」、テンプレートコンソールに戻るには「**完了**」を選択します。
+1. 「**作成**」を選択します。確認メッセージが表示されます。テンプレートの編集を開始するには「**開く**[](#editing-templates-template-authors)」、テンプレートコンソールに戻るには「**完了**」を選択します。
 
    >[!NOTE]
    >
@@ -187,7 +190,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 * 画像
 
-   * 画像は[テンプレートのサムネイル](/help/sites-authoring/templates.md#template-thumbnail-image)として「ページを作成」ウィザードなどで選択を容易にするために使用します。
+   * 画像は[テンプレートのサムネール](/help/sites-authoring/templates.md#template-thumbnail-image)として「ページを作成」ウィザードなどで選択を容易にするために使用します。
 
       * アップロード可能
       * テンプレートコンテンツに基づいて生成可能
@@ -202,7 +205,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 プロパティを表示または編集するには：
 
-1. In the **Templates Console**, select the template.
+1. **テンプレートコンソール**&#x200B;で、テンプレートを選択します。
 1. ツールバーまたはクイックオプションから「**プロパティを表示**」を選択してダイアログを開きます。
 1. これでテンプレートのプロパティを表示または編集できます。
 
@@ -210,19 +213,19 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 >
 >テンプレートのステータス（ドラフト、有効、無効）は、コンソールに示されます。
 
-#### テンプレートサムネイルの画像 {#template-thumbnail-image}
+#### テンプレートサムネールの画像 {#template-thumbnail-image}
 
-テンプレートサムネイルを定義するには：
+テンプレートサムネールを定義するには：
 
 1. テンプレートのプロパティを編集します。
-1. サムネイルをアップロードするか、テンプレートコンテンツから生成するかを選びます。
+1. サムネールをアップロードするか、テンプレートコンテンツから生成するかを選びます。
 
-   * サムネイルをアップロードする場合は、「**画像をアップロード**」をクリックまたはタップします。
-   * サムネイルを生成する場合は、「**プレビューを生成**」をタップまたはクリックします。
+   * サムネールをアップロードする場合は、「**画像をアップロード**」をクリックまたはタップします。
+   * サムネールを生成する場合は、「**プレビューを生成**」をタップまたはクリックします。
 
-1. どちらの方法でも、サムネイルのプレビューが表示されます。
+1. どちらの方法でも、サムネールのプレビューが表示されます。
 
-   このサムネイルで満足できない場合は、**クリア**&#x200B;をタップまたはクリックして、他の画像をアップロードするか、サムネイルを再生成します。
+   このサムネールで満足できない場合は、**クリア**&#x200B;をタップまたはクリックして、他の画像をアップロードするか、サムネールを再生成します。
 
 1. 満足できる場合は、「**保存して閉じる**」をクリックまたはタップします。
 
@@ -230,8 +233,8 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 ページを作成するときにテンプレートを使用するには、以下の作業が必要です。
 
-* [テンプレートを有効にし](#enabling-a-template-template-author) 、ページの作成時に使用できるようにします。
-* [テンプレートで](#allowing-a-template-author) 、テンプレートを使用できるコンテンツの分岐を指定できます。
+* [テンプレートの有効化](#enabling-a-template-template-author)で、ページを作成するときに使用できるようにします。
+* [テンプレートの許可](#allowing-a-template-author)でテンプレートを使用できるコンテンツブランチを指定します。
 
 #### テンプレートの有効化 - テンプレート作成者 {#enabling-a-template-template-author}
 
@@ -241,8 +244,8 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 >
 >テンプレートを有効化すると、テンプレート作成者がテンプレートをさらに更新しようとするときに警告が表示されます。これは、テンプレートが参照されている可能性があること、変更するとテンプレートを参照しているページに影響が及ぶ可能性があることをユーザーに通知するためのものです。
 
-1. In the **Templates Console**, select the template.
-1. Select **Enable** or **Disable** from the toolbar, and again in the confirmation dialog.
+1. **テンプレートコンソール**&#x200B;で、テンプレートを選択します。
+1. ツールバーから「**有効**」または「**無効**」を選択して、確認ダイアログで再び選択します。
 1. これで[新しいページを作成する](/help/sites-authoring/managing-pages.md#creating-a-new-page)ときにテンプレートを使用できます。ただし、ほとんどの場合は要件に従って[テンプレートを編集する](#editing-templates-template-authors)必要があります。
 
 >[!NOTE]
@@ -281,8 +284,8 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 ページが表示されるときにテンプレートが参照される場合、テンプレートをパブリッシュ環境で使用できるようにするには、（完全に設定された）テンプレートを公開する必要があります。
 
-1. In the **Templates Console**, select the template.
-1. Select **Publish** from the toolbar to open the wizard.
+1. **テンプレートコンソール**&#x200B;で、テンプレートを選択します。
+1. ツールバーから「**公開**」を選択してウィザードを開きます。
 1. 連携して公開される&#x200B;**コンテンツポリシー**&#x200B;を選択します。
 
 1. ツールバーから「**公開**」を選択してアクションを完了します。
@@ -313,7 +316,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 * [レイアウト](#editing-a-template-layout-template-author)
 
-   ここでは、必要なデバイスの形式に合わせたテンプレートのレイアウトを事前定義できます。**テンプレート** オーサリングのレイアウトモードは、ページオーサリングの **[レイアウトモード](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**]と同じ機能を持ちます。
+   ここでは、必要なデバイスの形式に合わせたテンプレートのレイアウトを事前定義できます。**テンプレートオーサリングのレイアウト** モードは、ページオーサリングの **[](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**レイアウトモードと同じ機能を持ちます。
 
 * [ページポリシー](#editing-a-template-structure-template-author)
 
@@ -333,7 +336,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 ![chlimage_1-363](assets/chlimage_1-363.png)
 
-**ページ情報**&#x200B;メニューの「**ページポリシー**」オプションを使用すると、[必要なページポリシーを選択](#editing-a-template-structure-template-author)できます。 
+**ページ情報**&#x200B;メニューの「**ページポリシー**」オプションを使用すると、[必要なページポリシーを選択](#editing-a-template-structure-template-author)できます。
 
 ![screen_shot_2018-03-23at120604](assets/screen_shot_2018-03-23at120604.png)
 
@@ -362,11 +365,13 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
    * サイドパネルの&#x200B;**コンポーネント**&#x200B;ブラウザーを使用します。
    * テンプレートに既に存在するコンポーネントのツールバーにある「**コンポーネントを挿入**」オプション（**+** アイコン）または&#x200B;**コンポーネントをここにドラッグ**&#x200B;ボックスを使用します。
    * （サイドパネルの&#x200B;**アセット**&#x200B;ブラウザーから）アセットをテンプレートに直接ドラッグしてサイトに適切なコンポーネントを生成します。
+
    追加すると、各コンポーネントは次の要素でマーキングされます。
 
    * 境界線
    * コンポーネントの種類を示すマーカー
    * コンポーネントのロックが解除されていることを示すマーカー
+
    >[!NOTE]
    >
    >テンプレートに（最初から用意されている）**タイトル**&#x200B;コンポーネントを追加すると、デフォルトのテキスト&#x200B;**構造**&#x200B;が含まれます。
@@ -411,29 +416,30 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
    設定ウィンドウは 2 つに分割されます。
 
-   * In the left side of the dialogue under **Policy**, you have the ability to select an existing policy or select an existing one.
-   * In the right side of the dialogue under **Properties**, you can set the properties specific to the component type.
+   * **ポリシー**&#x200B;の下のダイアログの左側では、既存のポリシーを選択したり、既存のものを選択したりすることができます。
+   * **プロパティ**&#x200B;の下のダイアログの右側では、コンポーネントタイプ固有のプロパティを設定できます。
+
    利用できるプロパティは選択されたコンポーネントに依存します。例えば、テキストコンポーネントのプロパティでは、コピー＆ペーストのオプション、フォーマットのオプション、パラグラフスタイルなどが定義されます。
 
    ***ポリシー***
 
    コンテンツ（またはデザイン）ポリシーにより、コンポーネントのデザインプロパティが定義されます。例えば、使用可能なコンポーネントまたは最小／最大寸法です。これらのポリシーは、テンプレートと、そのテンプレートを使用して作成されるページに適用されます。
 
-   Under **Policy** you can select an existing policy to apply to the component via the drop-down.
+   **ポリシー**&#x200B;の下で、既存のポリシーを選択して、ドロップダウンからコンポーネントに適用できます。
 
    ![chlimage_1-367](assets/chlimage_1-367.png)
 
-   新しいポリシーは、**ポリシーの選択**&#x200B;ドロップダウンの横にある追加ボタンを選択して追加できます。A new title should then be given in the **Policy Title** field.
+   新しいポリシーは、**ポリシーの選択**&#x200B;ドロップダウンの横にある追加ボタンを選択して追加できます。新しいタイトルを「**ポリシーのタイトル**」フィールドに入力します。
 
    ![chlimage_1-368](assets/chlimage_1-368.png)
 
-   **ポリシーの選択**&#x200B;ドロップダウンで選択された既存のポリシーは、ドロップダウンの横にあるコピーボタンを使用して、新規ポリシーにコピーできます。A new title should then be given in the **Policy Title** field. By default the copied policy will be titled **Copy of X**, where X is the title of the copied policy.
+   **ポリシーの選択**&#x200B;ドロップダウンで選択された既存のポリシーは、ドロップダウンの横にあるコピーボタンを使用して、新規ポリシーにコピーできます。新しいタイトルを「**ポリシーのタイトル**」フィールドに入力します。デフォルトで、コピーされたポリシーは「**X のコピー**」というタイトルになります。ここで X はコピーされたポリシーのタイトルです。
 
    ![chlimage_1-369](assets/chlimage_1-369.png)
 
    ポリシーの説明は、「**ポリシーの説明**」フィールドにオプションで入力できます。
 
-   In the **Other templates also using the selected policy** section, you can easily see which other templates use the policy selected in the **Select policy** dropdown.
+   「**他のテンプレートも選択したポリシーを使用しています**」セクションでは、「**ポリシーの選択**」ドロップダウンで選択したポリシーを、他のどのテンプレートが使用しているかを簡単に確認できます。
 
    ![chlimage_1-370](assets/chlimage_1-370.png)
 
@@ -447,6 +453,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
    * メイン
    * 機能
+
    *メイン*
 
    **メイン**&#x200B;タブでは、コンポーネントの最も重要な設定が定義されます。
@@ -463,7 +470,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
    ![chlimage_1-372](assets/chlimage_1-372.png)
 
-   *機能*
+   *特長*
 
    「**機能**」タブを使用すると、コンポーネントの追加の機能を有効または無効にできます。
 
@@ -473,11 +480,11 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
    >[!CAUTION]
    >
-   >Note that in AEM crop ratios are defined as **height/width**. これは、幅／高さの従来の定義と異なり、レガシー互換性の理由でおこなわれます。ページオーサリングユーザーは、**名前**&#x200B;を明確に定義していれば、これが UI に表示されるので、違いに気が付きません。
+   >AEM のトリミング比率は、**高さ/幅**&#x200B;で定義されます。これは、幅／高さの従来の定義と異なり、レガシー互換性の理由でおこなわれます。ページオーサリングユーザーは、**名前**&#x200B;を明確に定義していれば、これが UI に表示されるので、違いに気が付きません。
 
    >[!NOTE]
    >
-   >[リッチテキストエディターを実装するコンポーネントのコンテンツポリシー](/help/sites-administering/rich-text-editor.md)は、UI 設定を通じて RTE で提供されるオプションに対してのみ定義できます。
+   >[](/help/sites-administering/rich-text-editor.md)リッチテキストエディターを実装するコンポーネントのコンテンツポリシーは、UI 設定を通じて RTE で提供されるオプションに対してのみ定義できます。
 
 * **ポリシーおよびプロパティ（レイアウトコンテナ）**
 
@@ -493,7 +500,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
    コンテンツ（またはデザイン）ポリシーにより、コンポーネントのデザインプロパティが定義されます。例えば、使用可能なコンポーネントまたは最小／最大寸法です。これらのポリシーは、テンプレートと、そのテンプレートを使用して作成されるページに適用されます。
 
-   Under **Policy** you can select an existing policy to apply to the component via the drop-down. これは、ウィンドウの一般使用の場合と同じく機能します。
+   **ポリシー**&#x200B;の下で、既存のポリシーを選択して、ドロップダウンからコンポーネントに適用できます。これは、ウィンドウの一般使用の場合と同じく機能します。
 
    ***プロパティ***
 
@@ -502,6 +509,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
    * 許可されたコンポーネント
    * デフォルトのコンポーネント
    * レスポンシブ設定
+
    *許可されたコンポーネント*
 
    **許可されたコンポーネント**&#x200B;タブで、レイアウトコンテナのために使用できるコンポーネントを判断できます。
@@ -511,6 +519,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
    * マイナス記号はグループの中のすべてではなく少なくとも 1 つが選択されることを示します。
    * 名前でコンポーネントをフィルターするために、検索を使用できます。
    * コンポーネントグループ名の右側に示されるカウントは、フィルターに関係なく、そのグループで選択されているコンポーネントの総数を表します。
+
    ![chlimage_1-374](assets/chlimage_1-374.png)
 
    *デフォルトのコンポーネント*
@@ -537,8 +546,9 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
    * コンポーネントツールバーが適宜調整されます。
    * 既に入力されているコンテンツは、**構造**&#x200B;モードではもはや表示されなくなります。
 
-      * Already entered content is considered initial content and is only visible in **Initial Content** mode.
+      * 既に入力されているコンテンツは、初期コンテンツと見なされて、**初期コンテンツ**&#x200B;モードだけで表示されます。
    * ロックが解除されたコンポーネントの親コンポーネントは移動、切り取り、削除できません。
+
    ![chlimage_1-376](assets/chlimage_1-376.png)
 
    これには、ロック解除コンテナコンポーネントも含まれるので、**初期コンテンツ**&#x200B;モードまたは結果ページのいずれかに、さらにコンポーネントを追加できます。ロック解除前にコンテナにコンポーネント／コンテンツを既に追加している場合は、これらは今後&#x200B;**構造**&#x200B;モードでは表示されなくなりますが、**初期コンテンツ**&#x200B;モードでは表示されます。**構造**&#x200B;モードでは、コンテナコンポーネント自体だけがその&#x200B;**許容コンポーネント**&#x200B;のリストとともに表示されます。
@@ -608,6 +618,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
    * 左半分は、[ページポリシー](/help/sites-authoring/templates.md#page-policies)を定義します。
    * 右半分は、[ページプロパティ](/help/sites-authoring/templates.md#page-properties)を定義します。
+
    ![chlimage_1-385](assets/chlimage_1-385.png)
 
 #### ページポリシー {#page-policies}
@@ -620,11 +631,11 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
    ![chlimage_1-387](assets/chlimage_1-387.png)
 
-   新しいポリシーは、**ポリシーの選択**&#x200B;ドロップダウンの横にある追加ボタンを選択して追加できます。A new title should then be given in the **Policy Title** field.
+   新しいポリシーは、**ポリシーの選択**&#x200B;ドロップダウンの横にある追加ボタンを選択して追加できます。新しいタイトルを「**ポリシーのタイトル**」フィールドに入力します。
 
    ![chlimage_1-388](assets/chlimage_1-388.png)
 
-   **ポリシーの選択**&#x200B;ドロップダウンで選択された既存のポリシーは、ドロップダウンの横にあるコピーボタンを使用して、新規ポリシーにコピーできます。A new title should then be given in the **Policy Title** field. By default the copied policy will be titled **Copy of X**, where X is the title of the copied policy.
+   **ポリシーの選択**&#x200B;ドロップダウンで選択された既存のポリシーは、ドロップダウンの横にあるコピーボタンを使用して、新規ポリシーにコピーできます。新しいタイトルを「**ポリシーのタイトル**」フィールドに入力します。デフォルトで、コピーされたポリシーは「**X のコピー**」というタイトルになります。ここで X はコピーされたポリシーのタイトルです。
 
    ![chlimage_1-389](assets/chlimage_1-389.png)
 
@@ -633,13 +644,13 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
    ![chlimage_1-390](assets/chlimage_1-390.png)
 
 * ポリシーの説明は、「**ポリシーの説明**」フィールドにオプションで入力できます。
-* In the **Other templates also using the selected policy** section, you can easily see which other templates use the policy selected in the **Select policy** dropdown.
+* 「**他のテンプレートも選択したポリシーを使用しています**」セクションでは、「**ポリシーの選択**」ドロップダウンで選択したポリシーを、他のどのテンプレートが使用しているかを簡単に確認できます。
 
    ![chlimage_1-391](assets/chlimage_1-391.png)
 
-#### ページのプロパティ {#page-properties}
+#### ページプロパティ {#page-properties}
 
-Using page properties, you can define the required client-side libraries by using the **Page Design** dialog. これらのクライアント側ライブラリには、テンプレートおよびそのテンプレートで作成されたページとともにロードされるスタイルシートおよび JavaScript が含まれます。
+ページのプロパティを使用し、「**ページデザイン**」ダイアログを使用して、必要なクライアント側ライブラリを定義できます。これらのクライアント側ライブラリには、テンプレートおよびそのテンプレートで作成されたページとともにロードされるスタイルシートおよび JavaScript が含まれます。
 
 ![chlimage_1-392](assets/chlimage_1-392.png)
 
@@ -698,13 +709,15 @@ Using page properties, you can define the required client-side libraries by usin
 
       * 構造のみ - すぐに適用されます
       * 初期コンテンツが含まれる - 変更後に作成されたページに対してのみ
+
    以下の場合は特別に注意します。
 
    * 有効化されたテンプレートでのコンポーネントのロックまたはロック解除
-   * 既存のページが既にそれを使用している可能性があるため、これで副作用が起こる可能性があります。一般的に、以下のようになります。
+   * 既存のページが既にそれを使用している可能性があるので、これにより副作用が起こる可能性があります。一般的に、以下のようになります。
 
       * （ロックされていた）コンポーネントのロックを解除すると既存のページに表示されなくなります。
       * （編集可能だった）コンポーネントをロックするとそのコンテンツがページに表示されることを防ぎます。
+
    >[!NOTE]
    >
    >ドラフトでなくなったテンプレートのコンポーネントのロック状態を変更すると、AEM は明示的に警告します。
