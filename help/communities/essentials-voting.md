@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 1a947a06-6a5c-4be9-b2fa-e5fa809ff3b8
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 58%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
 
 Placing multiple instances of a voting component on the same page is allowed; each instance must be configured with an unique `tally name` property.
 
-匿名での投票投稿はサポートされていません。サイトの訪問者は、1回だけ投票に参加するために登録し、サインインする必要があります。サインインした訪問者（メンバー）は、いつでも投票を変更できます。
+匿名での投票投稿はサポートされていません。サイト訪問者が投票に参加するには、一度だけ登録してサインインする必要があります。サインインした訪問者（会員）は、いつでも投票を変更できます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
