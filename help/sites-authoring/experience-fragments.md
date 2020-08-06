@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 1fe58af0-3005-46fc-8717-5d32557947ed
 translation-type: tm+mt
 source-git-commit: 6f6952686446359485f180050219a12db9d3969a
+workflow-type: tm+mt
+source-wordcount: '1311'
+ht-degree: 90%
 
 ---
 
@@ -30,10 +33,12 @@ source-git-commit: 6f6952686446359485f180050219a12db9d3969a
 * 複数のバリエーションを持つことができ、コンテンツやコンポーネントを共有できます。
 * フラグメントの複数のバリエーションで使用できる構築ブロックに分類できます。
 
-エクスペリエンスフラグメントを使用できます。
+エクスペリエンスフラグメントを使用できるのは、次の場合です。
 
-* 作成者がページの一部（エクスペリエンスのフラグメント）を再利用する場合は、そのフラグメントをコピーして貼り付ける必要があります。これらのエクスペリエンスのコピー／貼り付けの作成と管理には時間がかかり、ユーザーエラーが発生しがちです。エクスペリエンスフラグメントは、コピー／貼り付けを不要にします。
-* ヘッドレスCMSユースケースをサポートする。 作成者は、オーサリングのみにAEMを使用し、顧客への配信には使用しない。 サードパーティシステム／タッチポイントは、そのエクスペリエンスを使用してエンドユーザーに配信します。
+* 作成者がページの一部（エクスペリエンスのフラグメント）を再利用する場合は、そのフラグメントをコピーして貼り付ける必要があります。これらのエクスペリエンスのコピー／貼り付けの作成と管理には時間がかかり、ユーザーエラーが発生しがちです。
+エクスペリエンスフラグメントは、コピー／貼り付けを不要にします。
+* ヘッドレス CMS の使用例をサポートする場合。
+作成者は AEM をオーサリングにのみ使用し、顧客への配信には使用しないようにします。サードパーティシステム／タッチポイントは、そのエクスペリエンスを使用してエンドユーザーに配信します。
 
 >[!NOTE]
 >
@@ -43,7 +48,7 @@ source-git-commit: 6f6952686446359485f180050219a12db9d3969a
 >
 >問題が発生している場合は、システム管理者にお問い合わせください。
 
-## エクスペリエンスフラグメントを使用するタイミング {#when-should-you-use-experience-fragments}
+## エクスペリエンスフラグメントを使用するタイミング   {#when-should-you-use-experience-fragments}
 
 エクスペリエンスフラグメントは次の場合に使用します。
 
@@ -68,75 +73,75 @@ source-git-commit: 6f6952686446359485f180050219a12db9d3969a
 
 ## エクスペリエンスフラグメントの整理 {#organizing-your-experience-fragments}
 
-次の操作を行うことをお勧めします。
-* フォルダーを使用してエクスペリエンスフラグメントを整理する、
+以下をお勧めします。
+* フォルダーを使用してエクスペリエンスフラグメントを整理する。
 
-* [これらのフォルダーで許可するテンプレートを設定します](#configure-allowed-templates-folder)。
+* [これらのフォルダーで使用可能なテンプレートを設定する](#configure-allowed-templates-folder)。
 
-フォルダを作成すると、次の操作を行うことができます。
+フォルダーを作成すると、次の操作をおこなうことができます。
 
-* エクスペリエンスフラグメントに対して意味のある構造を作成する。例えば、分類に従って
+* エクスペリエンスフラグメントにとって意味のある構造（例：分類に従った構造）を作成する。
 
    >[!NOTE]
    >
-   >エクスペリエンスフラグメントの構造をサイトのページ構造に揃える必要はありません。
+   >エクスペリエンスフラグメントの構造をサイトのページ構造に合わせる必要はありません。
 
-* [許可されたテンプレートをフォルダーレベルで割り当てる](#configure-allowed-templates-folder)
+* [許可されたテンプレートをフォルダーレベルで割り当てる](#configure-allowed-templates-folder)。
 
    >[!NOTE]
    >
    >[テンプレートエディター](/help/sites-authoring/templates.md)を使用すると、独自のテンプレートを作成できます。
 
-次の例は、に従って構造化されたエクスペリエンスフラグメントを示していま `Contributors`す。 また、マルチサイト管理（言語コピーを含む）などのその他の機能の使用方法も説明します。
+次の例は、に従って構造化されたエクスペリエンスフラグメントを示し `Contributors`ます。 また、使用される構造は、マルチサイト管理（言語コピーを含む）などの他の機能の使用方法の例も示します。
 
 >[!CAUTION]
 >
->次のスクリーンショットは、Adobe Experience Managerをクラウドサービスとして使用したWKNDサイトからのものです。
+>以下のスクリーンショットは、Adobe Experience ManagerをCloud Serviceとして使用したWKNDサイトから撮影されたものです。
 
 ![エクスペリエンスフラグメントのフォルダー](assets/xf-folders.png)
 
-## エクスペリエンスフラグメント用のフォルダーの作成と設定 {#creating-and-configuring-a-folder-for-your-experience-fragments}
+## エクスペリエンスフラグメントのフォルダーの作成と設定 {#creating-and-configuring-a-folder-for-your-experience-fragments}
 
-エクスペリエンスフラグメント用のフォルダーを作成および設定するには、次の操作を行うことをお勧めします。
+エクスペリエンスフラグメントのフォルダーを作成および設定するには、次の操作をお勧めします。
 
-1. [フォルダーの作成](/help/sites-authoring/managing-pages.md#creating-a-new-folder).
+1. [フォルダーを作成](/help/sites-authoring/managing-pages.md#creating-a-new-folder)します。
 
-1. [そのフォルダーに対して許可するエクスペリエンスフラグメントテンプレートを設定しま](#configure-allowed-templates-folder)す。
-
->[!NOTE]
->
->また、インスタンスに許可されているテンプ [レートを設定することもできますが](#configure-allowed-templates-instance)、アップグレード時に値が上書きさ **れる可能性があるので** 、この方法は推奨されません。
-
-### フォルダーに許可するテンプレートの設定 {#configure-allowed-templates-folder}
+1. [そのフォルダーに使用できるエクスペリエンスフラグメントテンプレートを設定](#configure-allowed-templates-folder)します。
 
 >[!NOTE]
 >
->アップグレード時に値が上書きされないので ****、「許可されているテンプレート」を指定する場合は、この方法をお勧めします。
+>It is also possible to configure the [Allowed Templates for your instance](#configure-allowed-templates-instance), but this method is **not** recommended as the values may be overwritten upon upgrade.
+
+### フォルダーに使用できるテンプレートの設定 {#configure-allowed-templates-folder}
+
+>[!NOTE]
+>
+>アップグレード時に値が上書きされないので、「**[!UICONTROL 許可されたテンプレート]**」を指定する場合は、この方法をお勧めします。
 
 1. 必要な&#x200B;**[!UICONTROL エクスペリエンスフラグメント]**&#x200B;フォルダーに移動します。
 
-1. フォルダを選択し、[プロパティ] **[!UICONTROL を選択しま]**&#x200B;す。
+1. フォルダーを選択してから、「**[!UICONTROL プロパティ]**」を選択します。
 
-1. 「許可されているテンプレート」フィールドで、必要なテンプレートを取得するた **[!UICONTROL めの正規表現を指定]** します。
+1. 必要なテンプレートを取得するための正規表現を「**[!UICONTROL 許可されたテンプレート]**」フィールドに指定します。
 
-   次に例を示します。
+   例：
    `/conf/(.*)/settings/wcm/templates/experience-fragment(.*)?`
 
-   ![エクスペリエンスフラグメントプロパティ — 許可されたテンプレート](assets/xf-folders-templates.png)
+   ![エクスペリエンスフラグメントのプロパティ - 許可されたテンプレート](assets/xf-folders-templates.png)
 
-1. Select **[!UICONTROL Save and Close]**.
+1. 「**[!UICONTROL 保存して閉じる]**」を選択します。
 
-### インスタンスに許可するテンプレートの設定 {#configure-allowed-templates-instance}
+### インスタンスに使用できるテンプレートの設定 {#configure-allowed-templates-instance}
 
 >[!CAUTION]
 >
->アップグレード時に指定したテンプレートが上書きさ **[!UICONTROL れる場合があるので]** 、この方法で許可されているテンプレートを変更することはお勧めしません。
+>It is not recommended to change the **[!UICONTROL Allowed Templates]** by this method, as the templates specified may be overwritten upon upgrade.
 >
 >このダイアログは、情報を提供する目的でのみ使用してください。
 
-1. Navigate to the required **[!UICONTROL Experience Fragments]** console.
+1. 必要な&#x200B;**[!UICONTROL エクスペリエンスフラグメント]**&#x200B;コンソールに移動します。
 
-1. 「**[!UICONTROL 設定オプション]**」をクリックします。
+1. 「**[!UICONTROL 設定オプション]**」を選択します。
 
    ![設定ボタン](assets/xf-folders-18.png)
 
@@ -144,26 +149,26 @@ source-git-commit: 6f6952686446359485f180050219a12db9d3969a
 
    ![エクスペリエンスフラグメントを設定](assets/xf-folders-19.png)
 
-1. 「**[!UICONTROL 保存]**」をクリックします。
+1. 「**[!UICONTROL 保存]**」を選択します。
 
 ## エクスペリエンスフラグメントの作成 {#creating-an-experience-fragment}
 
 エクスペリエンスフラグメントを作成するには、次の手順に従います。
 
-1. Select **[!UICONTROL Experience Fragments]** from the Global Navigation.
+1. グローバルナビゲーションから「**[!UICONTROL エクスペリエンスフラグメント]**」を選択します。
 
    ![screen_shot_2018-04-05at92221am1](assets/screen_shot_2018-04-05at92221am1.png)
 
-1. 目的のフォルダーに移動し、「作成」を選 **[!UICONTROL 択します]**。
+1. Navigate to the required folder and select **[!UICONTROL Create]**.
 
-1. 「エクスペリエ **[!UICONTROL ンスフラグメント]** 」を選択して **[!UICONTROL 、エクスペリエンスフラグメ]** ントを作成ウィザードを開きます。
+1. 「**[!UICONTROL エクスペリエンスフラグメント]**」を選択して、**[!UICONTROL エクスペリエンスフラグメントを作成]**&#x200B;ウィザードを開きます。
 
    適切な&#x200B;**[!UICONTROL テンプレート]**&#x200B;を選択して、「**[!UICONTROL 次へ]**」を選択します。
 
    ![xf-authoring-02](assets/xf-authoring-02.png)
 
 
-1. エクスペリエンスフラグメントの&#x200B;**[!UICONTROL プロパティ]**&#x200B;を入力します。
+1. **[!UICONTROL エクスペリエンスフラグメント]**&#x200B;のプロパティを入力します。
 
    **[!UICONTROL タイトル]**&#x200B;は必須です。**[!UICONTROL 名前]**&#x200B;が空欄のままの場合、**[!UICONTROL タイトル]**&#x200B;から派生されます。
 
@@ -203,7 +208,7 @@ source-git-commit: 6f6952686446359485f180050219a12db9d3969a
 1. 「**作成**」を使用すると、以下を作成できます。
 
    * **[!UICONTROL バリエーション]**
-   * **[!UICONTROL バリエーションをライブコピーとして]**.
+   * **[!UICONTROL バリエーションをライブコピーとして]**。
 
 1. 必要なプロパティを定義します。
 
@@ -212,7 +217,8 @@ source-git-commit: 6f6952686446359485f180050219a12db9d3969a
    * **[!UICONTROL 名前]**（空欄のままの場合、タイトルから派生される）
    * **[!UICONTROL 説明]**
    * **[!UICONTROL バリエーションのタグ]**
-   ![xf-authoring-06](assets/xf-authoring-07.png)
+
+   ![xf-authoring-07](assets/xf-authoring-07.png)
 
 1. **[!UICONTROL 完了]**（チェックマークアイコン）で確定すると、新しいバリエーションがパネルに表示されます。
 
@@ -234,6 +240,7 @@ source-git-commit: 6f6952686446359485f180050219a12db9d3969a
 
    * アセットブラウザーから必要なフラグメントをドラッグして、コンポーネントにドロップします。
    * コンポーネントツールバーから&#x200B;**[!UICONTROL 設定]**&#x200B;を選択して、使用するフラグメントを指定し、**完了**（チェックマーク）で確定します。
+
    ![xf-authoring-10](assets/xf-authoring-10.png)
 
    >[!NOTE]
@@ -272,7 +279,7 @@ source-git-commit: 6f6952686446359485f180050219a12db9d3969a
 
 構築ブロックは、「**[!UICONTROL 構築ブロック]**」タブに表示されます。各ブロックでは、次の操作をおこなえます。
 
-* マスターに移動：マスターバリエーションを新しいタブで開く
+* マスターに移動（マスターバリエーションを新しいタブで開く）
 * 名前を変更
 * 削除
 
@@ -284,15 +291,15 @@ source-git-commit: 6f6952686446359485f180050219a12db9d3969a
 
 ## プレーン HTML レンディション {#the-plain-html-rendition}
 
-Using the `.plain.` selector in the URL, you can access the plain HTML rendition.
+URL で `.plain.` セレクターを使用すると、プレーン HTML レンディションにアクセスできます。
 
 これはブラウザーから利用できますが、主な目的は、他のアプリケーション（例えば、サードパーティ Web アプリ、カスタムモバイル実装など）が、URL のみを使用して、エクスペリエンスフラグメントのコンテンツに直接アクセスできるようにすることです。
 
 プレーン HTML レンディションは、次のようなパスにプロトコル、ホストおよびコンテキストパスを追加します。
 
-* のタイプ： `src`、 `href`または `action`
+* タイプが `src`、`href`、`action` のいずれか
 
-* or end with: `-src`, or `-href`
+* または、`-src` か `-href` で終わる
 
 次に例を示します。
 
@@ -306,7 +313,7 @@ Using the `.plain.` selector in the URL, you can access the plain HTML rendition
 
 ## エクスペリエンスフラグメントの書き出し {#exporting-experience-fragments}
 
-デフォルトでは、エクスペリエンスフラグメントは HTML 形式で配信され、AEM とサードパーティチャネルのどちらでも同じ様に使用できます。
+デフォルトでは、エクスペリエンスフラグメントは HTML 形式で配信され、AEM とサードパーティチャネルのどちらでも同じように使用できます。
 
-Adobe targetへの書き出しには、HTMLが使用されます。 詳しくは、[Adobe Target とエクスペリエンスフラグメントの統合](/help/sites-administering/experience-fragments-target.md)を参照してください。
+Adobe Targetへの書き出しには、HTMLが使用されます。 詳しくは、[Adobe Target とエクスペリエンスフラグメントの統合](/help/sites-administering/experience-fragments-target.md)を参照してください。
 
