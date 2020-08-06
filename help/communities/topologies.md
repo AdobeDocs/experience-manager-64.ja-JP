@@ -11,13 +11,16 @@ topic-tags: deploying
 discoiquuid: 46f135de-a0bf-451d-bdcc-fb29188250aa
 translation-type: tm+mt
 source-git-commit: 3db2abacf2161f8de715a2972bafacdad43563ef
+workflow-type: tm+mt
+source-wordcount: '562'
+ht-degree: 45%
 
 ---
 
 
 # Communities 用の推奨トポロジ {#recommended-topologies-for-communities}
 
-AEM Communities 6.1では、サイト訪問者（メンバー）が発行環境から送信したユーザー生成コンテンツ(UGC)を処理するための独自のアプローチが採用されています。
+AEM Communities6.1以降、サイト訪問者（会員）が発行環境から提出したユーザ生成コンテンツ(UGC)の処理には、独自のアプローチが採用されています。
 
 この手法は、一般的にオーサー環境から管理されるサイトコンテンツを AEM プラットフォームで処理する方法とは根本的に異なります。
 
@@ -45,7 +48,7 @@ One other SRP option, [JSRP - JCR Storage Resource Provider](jsrp.md), does not 
 
 ## 実稼動について {#for-production}
 
-UGCの共通ストアを確立することは不可欠です。したがって、基盤となるデプロイメントは、共通ストアをサポートする能力に左右されます。
+UGCに共通のストアを確立することは不可欠です。したがって、基盤となるデプロイメントは、共通のストアをサポートする能力に左右されます。
 
 2 つの例を示します。
 
@@ -68,19 +71,19 @@ For more details on Oak microkernals, visit [Recommended Deployments](../../help
 
 ### 推奨：DSRP、MSRP または ASRP {#recommended-dsrp-msrp-or-asrp}
 
-| マイクロカーネル | サイトコンテンツリポジトリ | ユーザー生成CONTENTREPOSITORY | ストレージリソースプロバイダー | 共通店舗 |
+| マイクロカーネル | サイトコンテンツリポジトリ | ユーザー生成CONTENTREPOSITORY | ストレージリソースプロバイダー | 共通店 |
 |-------------|------------------------|----------------------------------|---------------------------|---------------|
-| 任意 | JCR | MySQL | DSRP | はい |
-| 任意 | JCR | MongoDB | MSRP | はい |
-| 任意 | JCR | アドビのオンデマンドストレージ | ASRP | Yes |
+| 任意 | JCR | MySQL | DSRP | 可 |
+| 任意 | JCR | MongoDB | MSRP | 可 |
+| 任意 | JCR | Adobeのオンデマンドストレージ | ASRP | Yes |
 
 ### JSRP {#jsrp}
 
 
-| デプロイメント | サイトコンテンツリポジトリ | ユーザー生成CONTENTREPOSITORY | ストレージリソースプロバイダー | 共通店舗 |
+| デプロイメント | サイトコンテンツリポジトリ | ユーザー生成CONTENTREPOSITORY | ストレージリソースプロバイダー | 共通店 |
 |----------------------|------------------------|----------------------------------|---------------------------|---------------------------------|
-| TarMK ファーム（デフォルト） | JCR | JCR | JSRP | いいえ |
-| Oak クラスター | JCR | JCR | JSRP | 発行環境専用 |
+| TarMK ファーム（デフォルト） | JCR | JCR | JSRP | 不可 |
+| Oak クラスター | JCR | JCR | JSRP | 公開環境のみ |
 
 ## 開発について {#for-development}
 
@@ -96,11 +99,11 @@ If choosing [ASRP](asrp.md), [DSRP](dsrp.md) or [MSRP](msrp.md) for production, 
 
 * [ユーザーとユーザーグループの管理](users.md)
 
-   作成者環境および発行環境におけるユーザーおよびユーザーグループの役割について説明します。
+   作成者および公開環境におけるユーザーとユーザーグループの役割について説明します。
 
-* UGC共 [通店](working-with-srp.md)
+* UGC [共通店](working-with-srp.md)
 
-   サイトコンテンツとは別のコミュニティコンテンツの保存について説明します。
+   サイトコンテンツとは別のコミュニティコンテンツのストレージについて説明します。
 
 * [ノードストアとデータストア](../../help/sites-deploying/data-store-config.md)
 
@@ -108,4 +111,4 @@ If choosing [ASRP](asrp.md), [DSRP](dsrp.md) or [MSRP](msrp.md) for production, 
 
 * [AEM 6.3 のストレージ要素](../../help/sites-deploying/storage-elements-in-aem-6.md)
 
-   2つのノードストレージの実装について説明します。TarおよびMongoDB。
+   2つのノードストレージの実装について説明します。 TarおよびMongoDB。
