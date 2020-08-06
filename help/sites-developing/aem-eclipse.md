@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a2ae76a8-50b0-4e43-b791-ad3be25b8582
 translation-type: tm+mt
 source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
+workflow-type: tm+mt
+source-wordcount: '810'
+ht-degree: 82%
 
 ---
 
@@ -27,15 +30,15 @@ AEM Developer Tools for Eclipse は、Apache License 2 に従ってリリース�
 
 * Eclipse Server Connector による AEM インスタンスとのシームレスな統合。
 * コンテンツと OSGI バンドルの同期。
-* コードのホットスワップ機能によるデバッグのサポート。
+* コードのホットスワップ機能によるデバッグサポート。
 * 固有の Project Creation Wizard からの AEM プロジェクトのシンプルなブートストラップ。
 * JCRプロパティの簡単な編集。
 
 ## 要件 {#requirements}
 
-AEM Developer toolsを使用する前に、次の操作を行う必要があります。
+AEM Developer Toolsを使用する前に、次の操作を行う必要があります。
 
-* [Eclipse IDE for Java EE Developers](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar) をダウンロードしてインストールします。AEM Developer toolsは現在、Eclipse Kepler以降をサポートしています
+* [Eclipse IDE for Java EE Developers](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar) をダウンロードしてインストールします。AEM Developer Toolsは、現在EclipseKepler以降をサポートしています
 
 * AEMバージョン5.6.1以降で使用可能
 * Configure your eclipse installation to ensure that you have at least 1 gigabyte of heap memory by editing your `eclipse.ini` configuration file as described in the [Eclipse FAQ](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F).
