@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: cb232931-60b7-4956-bc77-10636c19325e
 translation-type: tm+mt
 source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+workflow-type: tm+mt
+source-wordcount: '497'
+ht-degree: 78%
 
 ---
 
@@ -28,10 +31,10 @@ source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
 
 * 目的のデータソースから取得した XML データの URL（cmDataUrl パラメーターを使用）
 
-例えば、カスタムポータルでは、URLを\
-`https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`に含まれている場合は、ポータル上のリンクからのhrefを指定できます。\
+例えば、カスタムポータルでは、\
+`https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`は、ポータル上のリンクからのhrefになる場合があります。\
 ポータルに手元のレターテンプレート名がある場合、URLは\
-`https://[server]:[port]/content/cm/createcorrespondence.html?cmLetterName=[letter name]&cmDataUrl=[data URL]` です。
+`https://[server]:[port]/content/cm/createcorrespondence.html?cmLetterName=[letter name]&cmDataUrl=[data URL]`。
 
 >[!NOTE]
 >
@@ -51,22 +54,22 @@ Another (and a more secure) way to call the Create Correspondence application co
  <tbody>
   <tr>
    <td><strong>名前</strong></td> 
-   <td><strong>タイプ</strong></td> 
+   <td><strong>型</strong></td> 
    <td><strong>説明</strong></td> 
   </tr>
   <tr>
    <td>cmLetterInstanceId</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>レターインスタンスの識別子。</td> 
   </tr>
   <tr>
    <td>cmLetterName</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td><p>レターテンプレートの識別子。 </p> <p>サーバー上に同じ名前の CM 文字が複数存在する場合、URL の cmLetterName パラメーターによって「名前に複数の文字が使用されています」というエラーがスローされます。このような場合、URL には cmLetterName の代わりに cmLetterId パラメーターを使用します。</p> </td> 
   </tr>
   <tr>
    <td>cmLetterId</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>レターテンプレートの名前です。</td> 
   </tr>
  </tbody>
@@ -80,7 +83,7 @@ Another (and a more secure) way to call the Create Correspondence application co
  <tbody>
   <tr>
    <td><strong>名前</strong></td> 
-   <td><strong>タイプ</strong></td> 
+   <td><strong>型</strong></td> 
    <td><strong>説明</strong></td> 
   </tr>
   <tr>
@@ -90,7 +93,7 @@ Another (and a more secure) way to call the Create Correspondence application co
   </tr>
   <tr>
    <td>cmLetterInstanceId</td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td>レターインスタンスで使用可能な xml データを使用します。</td> 
   </tr>
   <tr>
@@ -109,7 +112,7 @@ Another (and a more secure) way to call the Create Correspondence application co
  <tbody>
   <tr>
    <td><strong>名前</strong></td> 
-   <td><strong>タイプ</strong></td> 
+   <td><strong>型</strong></td> 
    <td><strong>説明</strong></td> 
   </tr>
   <tr>
