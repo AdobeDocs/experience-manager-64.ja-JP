@@ -9,6 +9,9 @@ topic-tags: correspondence-management
 discoiquuid: 53595ac8-ca7e-4adc-9214-5d0b7cdf71a0
 translation-type: tm+mt
 source-git-commit: 48ea1c456e6f43fb5b348aa65f2380ee0b72a3f1
+workflow-type: tm+mt
+source-wordcount: '3866'
+ht-degree: 85%
 
 ---
 
@@ -30,9 +33,9 @@ Correspondence Management uses the back end, customer, `` ``or recipient-specifi
 ### データディクショナリワークフロー {#data-dictionary-workflow}
 
 1. 作成者が[データディクショナリを作成](#createdatadictionary)します。作成には、スキーマを読み込むか、または新規に作成します。
-1. 作成者は、データディクショナリに基づいてレターとインタラクティブコミュニケーションを作成し、レターとインタラクティブコミュニケーションのデータディクショナリ要素を必要な場所に関連付けます。
-1. 作成者はダウンロードデータの XML ファイルを書き出すことができます。これはデータディクショナリのスキーマに基づいたものです。作成者はサンプルデータのXMLファイルを変更でき、テストデータとしてデータディクショナリに関連付けることができます。 レターのプレビューでも同様の操作が可能です。
-1. [レターのプレビュー](/help/forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p)時に、作成者はレターをデータと共にプレビューすることができます（「カスタムプレビュー」）。レターが開き、作成者が指定したデータが事前入力されます。 通信を作成インターフェイスで開きます。このレターをプレビューしているエージェントは、このレターの内容、データ、および添付ファイルを変更し、最終的なレターを送信できます。 レターの作成に関する詳細は、「[通信の作成](/help/forms/using/create-letter.md)」を参照してください。
+1. 作成者はデータディクショナリに基づいてレターとインタラクティブコミュニケーションを作成し、レターとインタラクティブコミュニケーションのデータディクショナリ要素を必要な箇所に関連付けます。
+1. 作成者はダウンロードデータの XML ファイルを書き出すことができます。これはデータディクショナリのスキーマに基づいたものです。作成者はサンプルデータのXMLファイルを変更できます。このファイルはテストデータとしてデータディクショナリに関連付けることができます。 レターのプレビューでも同様の操作が可能です。
+1. [レターのプレビュー](/help/forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p)時に、作成者はレターをデータと共にプレビューすることができます（「カスタムプレビュー」）。レターが開き、作成者が提供したデータが事前入力されます。 通信を作成インターフェイスで開きます。このレターをプレビューしているエージェントは、このレターの内容、データ、および添付ファイルを変更し、最終的なレターを送信できます。 レターの作成に関する詳細は、「[通信の作成](/help/forms/using/create-letter.md)」を参照してください。
 
 ## 前提条件 {#prerequisite}
 
@@ -53,9 +56,10 @@ Install the [Compatibility Package](https://helpx.adobe.com/jp/in/experience-man
    * **タイトル：** （オプション）データディクショナリのタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。レターなどのドキュメントフラグメントは、タイトル（利用可能な場合）を用いて参照されます。タイトルは、サムネイルやアセットプロパティなどで使用されます。データディクショナリは、名前ではなく、タイトルで参照されます。
    * **名前**：データディクショナリの一意の名前。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力された特殊文字、スペース、および英数字以外の文字はハイフンに置き換えられます。「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
 
-   * **説明**:（オプション）データディクショナリの説明。
+   * **説明**: （オプション）データディクショナリの説明。
    * **タグ：** （オプション）カスタムタグを作成するには、テキストフィールドに値を入力し、Enterキーを押します。 タグのテキストフィールドの下にカスタムタグが表示されます。このテキストを保存すると、新しく追加したタグも作成されます。
-   * **拡張プロパティ**:（オプション）「フィー **追加ルド** 」をタップして、データディクショナリのメタデータ属性を指定します。 「プロパティ名」列に、固有のプロパティ名を入力します。「値」列に、プロパティに関連付ける値を入力します。
+   * **拡張プロパティ**: （オプション）「 **追加フィールド** 」をタップして、データディクショナリのメタデータ属性を指定します。 「プロパティ名」列に、固有のプロパティ名を入力します。「値」列に、プロパティに関連付ける値を入力します。
+
    ![ドイツ語で定義されたデータディクショナリのプロパティ](do-not-localize/1_ddproperties.png)
 
 1. (Optional) To upload an XSD schema definition for your data dictionary, under the Data Dictionary Structure pane, tap **Upload XML Schema**. Browse to XSD file, select it, and tap **Open**. データディクショナリは、アップロードされた XML スキーマに基づいて作成されます。データディクショナリで要素の表示名や説明を調整する必要があります。これを行うには、要素の名前をタップして選択し、右側のペインのフィールドで説明、表示名、およびその他の詳細を編集します。
@@ -78,22 +82,24 @@ Install the [Compatibility Package](https://helpx.adobe.com/jp/in/experience-man
    * 複合 DDE は他の DDE を含むものであり、そのタイプはプリミティブ、複合、コレクションのいずれでも構いません。例として、郵便番号、国、都道府県、市町村、番地で構成される住所が挙げられます。
    * プリミティブ DDE は、文字列、数値、日付などの要素のほか、都市名などの情報を保持する Boolean 値です。
    * コレクションは、同類の単純 DDE または複合 DDE のリストです。例として、複数の住所や、請求先と出荷先の住所が異なる顧客が挙げられます。
+
    次に、データディクショナリ作成の例を示します。
 
    * データディクショナリ内のトップレベル DDE として使用できるのは、複合タイプのみです。
-   * 名前、参照名および要素タイプは、データディクショナリおよびDDEの必須フィールドです。
+   * 名前、参照名および要素タイプは、データディクショナリおよびDDEに対して必須のフィールドです。
    * 参照名は一意にする必要があります。
    * 親 DDE（複合）には、同じ名前の 2 つの子を指定できません。
    * 列挙型には、プリミティブな String 型のみが含まれます。
+
    For more information on Composite, Collection, and Primitive elements and working with data dictionary elements, see [Mapping Data Dictionary Elements to XML Schema](#mappingddetoschema).
 
    For information on validations in Data Dictionary, see [Data Dictionary Editor validations](#ddvalidations).
 
-   ![2_adddpropertiesbasic](assets/2_addddpropertiesbasic.png)
+   ![2.addpropertiesbasic](assets/2_addddpropertiesbasic.png)
 
 1. （オプション）要素を選択後に、「詳細設定」タブでプロパティ（属性）を追加できます。You can also tap **Add Field** and extend the properties of a DD element.
 
-   ![3_adddpropertiesadvanced](assets/3_addddpropertiesadvanced.png)
+   ![3_addpropertiesadvanced](assets/3_addddpropertiesadvanced.png)
 
 1. (Optional) You can remove any element by tapping the three dots on the right side of an element and selecting **Delete**.
 
@@ -125,6 +131,7 @@ Install the [Compatibility Package](https://helpx.adobe.com/jp/in/experience-man
    * データディクショナリの上にカーソルを置き、「編集」をタップします。
    * データディクショナリを選択し、ヘッダーにある「編集」をタップします。
    * データディクショナリの上にカーソルを置き、「選択」をタップします。その後、ヘッダーにある「編集」をタップします。
+
    または、データディクショナリをタップして表示します。
 
 1. データディクショナリ内では、単純型要素をタップして選択します。複合要素とコレクション要素には参照元がありません。
@@ -188,13 +195,13 @@ Install the [Compatibility Package](https://helpx.adobe.com/jp/in/experience-man
 
    >[!NOTE]
    >
-   >この例では、XMLはコレクション要素の3つの値に対してスペースを作成しますが、値の数は要件に応じて増減できます。
+   >この例では、XMLはコレクション要素の3つの値にスペースを作成しますが、値の数は必要に応じて増減できます。
 
 1. データエントリの作成後は、テストデータを含むレターをプレビューする際に、この XML ファイルを使用することができます。
 
-   このテストデータはDDで追加できます（「DD」を選択し、「テストデータをアップロード」をタップして、このxmlファイルをアップロードします）。
+   このテストデータはDDで追加できます（「DD」を選択し、「テストデータのアップロード」をタップして、このxmlファイルをアップロードします）。
 
-   したがって、通常（カスタムではなく）プレビュー文字を使用した後は、このXMLデータがレターで使用されます。 「カスタム」をタップして、この XML をアップロードすることもできます。
+   そのため、通常（カスタムではなく）レターをプレビューした後は、このXMLデータがレターで使用されます。 「カスタム」をタップして、この XML をアップロードすることもできます。
 
 ## サンプル {#samples}
 
@@ -262,7 +269,7 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
  <tbody> 
   <tr> 
    <td><strong>属性</strong></td> 
-   <td><strong>タイプ</strong></td> 
+   <td><strong>型</strong></td> 
    <td><strong>説明</strong></td> 
   </tr> 
   <tr> 
@@ -397,7 +404,7 @@ XSD を書き出すには、固有のデータマッピングが必要になり�
   </tr> 
   <tr> 
    <td>列挙型と baseType の要素 - xs:string</td> 
-   <td>以下の DDE<br /> type - STRING<br /> subtype - ENUM<br /> valueSet - ENUMに許可される値<br /> </td> 
+   <td>以下の DDE<br /> type - STRING<br /> subtype - ENUM<br /> valueSet - ENUMに使用できる値<br /> </td> 
    <td>java.lang.String</td> 
   </tr> 
  </tbody> 
@@ -405,7 +412,7 @@ XSD を書き出すには、固有のデータマッピングが必要になり�
 
 ## データディクショナリからサンプルデータファイルの書き出しをダウンロードする {#download-a-sample-data-file-from-a-data-dictionary}
 
-作成したデータディクショナリは、XMLサンプルデータファイルとしてダウンロードし、テキストエントリを作成できます。
+データディクショナリの作成後は、XMLサンプルデータファイルをダウンロードして、テキストエントリを作成できます。
 
 1. In the Data Dictionaries page, tap **Select** and then tap a data dictionary to select it.
 1. Select **Download Sample XML Data**.
@@ -421,7 +428,7 @@ XSD を書き出すには、固有のデータマッピングが必要になり�
 
 1. On the Data Dictionaries page, tap **Select** and then tap a data dictionary to select it.
 1. Tap **Download Localization Data**.
-1. Tap **OK** in the alert. Correspondence Managementは、DataDictionary-&lt;DDname>.zipという名前のzipファイルをコンピューターにダウンロードします。
+1. Tap **OK** in the alert. Correspondence ManagementによってDataDictionary-&lt;DDname>.zipという名前のzipファイルがコンピューターにダウンロードされます。
 1. Zip ファイルには、.properties ファイルが含まれています。このファイルでは、ダウンロードされたデータディクショナリを定義します。プロパティファイルのコンテンツは次のようになります。
 
    ```
@@ -438,7 +445,7 @@ XSD を書き出すには、固有のデータマッピングが必要になり�
 
 1. 別のロケールの .properties ファイルを更新するには、ファイルの表示名と説明の値を更新します。ローカライズする各言語でさらにファイルのインスタンスを作成します。サポートされる言語はフランス語、ドイツ語、日本語、英語のみです。
 
-1. 次の名前を付けて、更新したプロパティファイルを保存します。
+1. 更新したプロパティファイルを、次の名前で保存します。
 
    _fr_FR.properties French
 
@@ -559,7 +566,7 @@ Data Dictionary の実装の詳細を示すサンプルモデルおよびコー�
    <td>/note/to</td> 
   </tr> 
   <tr> 
-   <td>追加の</td> 
+   <td> から</td> 
    <td>/note/from</td> 
   </tr> 
   <tr> 
