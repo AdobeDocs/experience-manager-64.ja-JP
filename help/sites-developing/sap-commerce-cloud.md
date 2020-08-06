@@ -1,8 +1,8 @@
 ---
 title: SAP Commerce Cloud を使用した開発
 seo-title: SAP Commerce Cloud を使用した開発
-description: SAP Commerce Cloud統合フレームワークには、APIとの統合レイヤーが含まれます
-seo-description: SAP Commerce Cloud統合フレームワークには、APIとの統合レイヤーが含まれます
+description: SAPCommerce Cloud統合フレームワークには、APIを備えた統合レイヤーが含まれます
+seo-description: SAPCommerce Cloud統合フレームワークには、APIを備えた統合レイヤーが含まれます
 uuid: a780dd17-027a-4a61-af8f-3e2f600524c7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -35,7 +35,7 @@ ht-degree: 83%
 >
 >[API に関するドキュメント](/help/sites-developing/ecommerce.md#api-documentation)もお読みください。
 
-統合レイヤーを使用するために、標準搭載のAEMコンポーネントが多数用意されています。 現時点では、以下のようなものがあります。
+統合レイヤーを使用するために、標準搭載の多数のAEMコンポーネントが提供されています。 現時点では、以下のようなものがあります。
 
 * 製品表示コンポーネント
 * 買い物かご
@@ -51,7 +51,7 @@ e コマースフレームワークは任意の e コマースソリューショ
 
    * エンジンは、`commerceProvider` サービスプロパティによって区別できます。
 
-* AEMは、および `Resource.adaptTo()` をサポート `CommerceService` します `Product`
+* AEM `Resource.adaptTo()` での `CommerceService` および `Product`
 
    * The `adaptTo` implementation looks for a `cq:commerceProvider` property in the resource&#39;s hierarchy:
 
@@ -172,6 +172,7 @@ hybris で管理されている製品データを AEM で使用できるよう�
 * hybris 拡張はポーリングインポーター（&quot;hybris&quot; scheme&quot;）を提供します。このインポーターは、変更を指定の時間間隔で AEM に読み込むように設定できます（例えば 24 時間おきにする場合は、秒単位で以下のように指定します）。
 
    * 
+
       ```
       http://localhost:4502/content/geometrixx-outdoors/en_US/jcr:content.json
        {
@@ -559,7 +560,7 @@ AEM は様々な e コマースシステムと統合できます。これを実�
 
 * ハイブリスのアカウント
 
-   AEMは買い物客ごとに、おろかさで対応する（下位の）アカウントを作成します。 このアカウントのユーザ名はAEMユーザ名と同じです。 暗号化されたランダムパスワードが自動生成され、暗号化された状態で AEM に保存されます。
+   AEMは、買い物客ごとにハイブリスで対応する（下位の）アカウントを作成します。 このアカウントのユーザ名はAEMのユーザ名と同じです。 暗号化されたランダムパスワードが自動生成され、暗号化された状態で AEM に保存されます。
 
 #### 既存ユーザー {#pre-existing-users}
 
