@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5150867a-02a9-45c9-b2fd-e536b60ffa8c
 translation-type: tm+mt
 source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
+workflow-type: tm+mt
+source-wordcount: '573'
+ht-degree: 94%
 
 ---
 
@@ -63,9 +66,10 @@ If the workflow model is stored within `/var/workflow/models` then you can assig
 1. **新しいエントリを追加**&#x200B;ダイアログで、次のプロパティを含む新しい ACE を追加します。
 
    * **プリンシパル**: `content-authors`
-   * **タイプ**: `Deny`
+   * **型**：`Deny`
    * **権限**: `jcr:read`
    * **rep:glob**： 特定のワークフローへの参照
+
    ![wf-108](assets/wf-108.png)
 
    **アクセス制御リスト**&#x200B;テーブルには、`content-authors` ワークフローモデルに対する `prototype-wfm-01` の制限が含まれるようになりました。
@@ -99,8 +103,9 @@ If the workflow model is stored within `/var/workflow/models` then you can assig
 1. **新しいエントリを追加**&#x200B;ダイアログで、次のプロパティを含む新しい ACE を追加します。
 
    * **プリンシパル**: `content-authors`
-   * **タイプ**: `Deny`
+   * **型**：`Deny`
    * **権限**: `jcr:read`
+
    >[!NOTE]
    >
    >[特定のワークフローモデル用の ACL の /var/workflow/models への適用](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models)の場合のように、rep:glob を含めて、特定のワークフローに対するアクセスを制限できます。
