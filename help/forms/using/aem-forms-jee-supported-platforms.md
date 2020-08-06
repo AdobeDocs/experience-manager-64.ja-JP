@@ -10,6 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 1b9f8d98-e7e8-4b9b-a0df-52ccba324da3
 translation-type: tm+mt
 source-git-commit: ef8b12b462b05b6117d61d2877b16cbedfee42fd
+workflow-type: tm+mt
+source-wordcount: '3276'
+ht-degree: 87%
 
 ---
 
@@ -28,6 +31,7 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 >
 >* サポートされているサーバープラットフォームへの例外エラーの完全リストについては、[サポートされているサーバープラットフォームへの例外エラー](#exceptions-to-supported-server-platforms)を参照してください。
 >* JEE 上の AEM Forms でサポートされるのは、英語、フランス語、ドイツ語および日本語版のサポート対象のオペレーティングシステムとアプリケーションのみです。
+
 >
 
 
@@ -92,6 +96,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
 >
 >* JEE 上の AEM Forms では、実稼動環境に対して 64 ビットの JVM のみがサポートされています。
 >* Java ベンダーが発表するセキュリティ情報を常に確認し、実稼働環境の安全性とセキュリティを確保すること、および最新の Java 更新プログラムをインストールすることを推奨します。
+
 >
 
 
@@ -254,7 +259,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
  <tbody> 
   <tr> 
    <th><p><strong> プラットフォーム</strong></p> </th> 
-   <th><p><strong>サポート レベル</strong></p> </th> 
+   <th><p><strong>サポートレベル</strong></p> </th> 
    <th><p><strong>サポートされているパッチ定義</strong></p> </th> 
   </tr> 
   <tr> 
@@ -306,7 +311,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
 
 #### 視覚化環境 {#virtualized-environment}
 
-JEE 上の AEM Forms は、物理マシンまたはバーチャル環境で実行できます。ただし、バーチャル環境での AEM Forms の使用に問題が発生した場合は、その問題の物理マシン上での再現を試みてください。物理マシン上で問題が解決しない場合は、アドビサポートにお問い合わせください。 物理マシン上では再現されない問題に関しては、バーチャル環境のベンダーにお問い合わせください。
+JEE 上の AEM Forms は、物理マシンまたはバーチャル環境で実行できます。ただし、バーチャル環境での AEM Forms の使用に問題が発生した場合は、その問題の物理マシン上での再現を試みてください。物理マシン上で問題が解決しない場合は、Adobeサポートに問い合わせて解決してください。 物理マシン上では再現されない問題に関しては、バーチャル環境のベンダーにお問い合わせください。
 
 #### 開発環境 {#development-environments}
 
@@ -329,6 +334,7 @@ JEE 上の AEM Forms は、物理マシンまたはバーチャル環境で実�
 >
 >* JEE 上の AEM Forms では、64 ビットのオペレーティングシステムのみがサポートされています。
 >* PDF Generator サービスは Windows 10 ではサポートされていません。
+
 >
 
 
@@ -344,7 +350,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
 1. JEE 上の AEM Forms は、JBoss® では Oracle Java™ SE 以外のいかなる JDK もサポートしていません。
 1. JEE 上の AEM Forms は、IBM® WebSphere® では IBM® JDK 以外のいかなる JDK もサポートしていません。
 1. JEE 上の AEM Forms では、JBoss® で IBM® DB2 をサポートしていません。
-1. CRX-repositoryは、TarMK、MongoDB、およびリレーショナルデータベース(RDBMK)の永続性タイプをサポートします。 アプリケーションサーバーとCRX-repositoryの間に2つの異なるデータベースシステムを置くことはできません。 ただし、JEE上のAEM Forms環境では、MongoMKをCRXリポジトリと共に使用し、サポートされているリレーショナルデータベースをアプリケーションサーバーと共に使用できます。
+1. CRX-repositoryは、TarMK、MongoDB、およびリレーショナルデータベース(RDBMK)タイプの永続性をサポートします。 アプリケーションサーバーとCRX-repositoryの間に2つの異なるデータベースシステムを持つことはできません。 ただし、JEE上のAEM Forms環境では、MongoMKをCRXリポジトリで使用し、サポートされているリレーショナルデータベースをアプリケーションサーバーで使用できます。
 1. JEE 上の AEM Forms は CentOS 上の WebSphere Application Server をサポートしていません。
 1. AIX オペレーティングシステムと Solaris オペレーティングシステムを使用できるのは、アップグレードを行う場合だけです。
 1. JEE 上の AEM Forms では、JBoss ロールベースのアクセス制御（RBAC）をサポートしていません。
@@ -438,7 +444,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
 
 ### Cordova のサポート {#support-for-cordova}
 
-AEM FormsアプリケーションでApache Cordovaがサポートされるようになりました。サポートされるCordovaのプラットフォーム固有のバージョンを次に示します。
+AEM FormsアプリでApache Cordovaがサポートされるようになりました。 サポートされるCordovaのプラットフォーム固有のバージョンは次のとおりです。
 
 * Apache Cordova 6.4.0
 * Cordova iOS 4.3.0
@@ -495,11 +501,11 @@ AEM FormsアプリケーションでApache Cordovaがサポートされるよう
   </tr> 
   <tr> 
    <td>OpenOffice 4.1.2</td> 
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式(BMP、GIF、JPEG、TIF、TIFF、TIFF、TIFF、TIFF、TIFF、TIFFJPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTFおよびTXT</td> 
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLSX、DOC、DOCX、PPT、PPTX、画像形式(BMP、JPEG、JPG、TIF、TIFF、TIFF)JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、およびTXT</td> 
   </tr> 
   <tr> 
    <td>OpenOffice 3.4</td> 
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式(BMP、GIF、JPEG、TIF、TIFF、TIFF、TIFF、TIFF、TIFF、TIFFJPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTFおよびTXT</td> 
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLSX、DOC、DOCX、PPT、PPTX、画像形式(BMP、JPEG、JPG、TIF、TIFF、TIFF)JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、およびTXT</td> 
   </tr> 
  </tbody> 
 </table>
@@ -517,6 +523,7 @@ AEM FormsアプリケーションでApache Cordovaがサポートされるよう
 >* HTML2PDF サービスは AIX で終了しています。
 >* OCR PDF、PDF を最適化および PDF を書き出しの機能は、Windows でのみサポートされます。
 >* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。For more information, refer to AEM Forms product description as per your deployment ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) or [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))”
+
 >
 
 
@@ -575,7 +582,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 
 上記以外の要件については、以下を参照してください。
 
-* [JEE上のシングルサーバーAEM Formsのデプロイメントに必要なシステム構成](https://www.adobe.com/go/learn_aemforms_sysreq_single_64)
+* [JEE上でのシングルサーバーのAEM Forms導入に必要なシステム構成](https://www.adobe.com/go/learn_aemforms_sysreq_single_64)
 * [JEE 上でのクラスター化された AEM Forms の導入に必要なシステム構成](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_64)
 
 ## JEE 上の AEM Forms でサポートされているクライアント {#supported-clients-for-aem-forms-on-jee}
@@ -632,7 +639,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
    * 1 GB の RAM（32-bit OS の場合）または 2 GB の RAM（64-bit OS の場合）
    * 16 GB のディスク空き容量（32-bit OS の場合）または 20 GB のディスク空き容量（64-bit OS の場合）
 
-* グラフィックメモリ — 128 MBのGPU（256 MBを推奨）
+* グラフィックメモリ — 128 MBのGPU （256 MBを推奨）
 * 2.35 GB のハードディスク空き容量
 * DVD-ROM ドライブ
 * Internet Explorer 10 または 11; Firefox 45.x
@@ -667,7 +674,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
  <tbody> 
   <tr> 
    <th><p><strong>ブラウザー（ベース）</strong></p> </th> 
-   <th><p><strong>サポート レベル</strong></p> </th> 
+   <th><p><strong>サポートレベル</strong></p> </th> 
    <th><p><strong>サポートされているパッチ定義</strong></p> </th> 
   </tr> 
   <tr> 
@@ -702,7 +709,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 >
 >以下にデスクトップに対する一部のブラウザー関連の例外事項を示します。
 >
->* 多くの最新のブラウザーは現在、NPAPI ベースのプラグインをサポートしていません。For information about how it impacts AEM Forms applications and workflows, see [Discontinuation of NPAPI browser plugins and its impact](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html).
+>* 多くの最新のブラウザーは現在、NPAPI ベースのプラグインをサポートしていません。For information about how it impacts AEM Forms applications and workflows, see [Discontinuation of NPAPI browser plugins and its impact](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html).
 >* Safari は Macintosh OS X でのみサポートされています。
 
 
@@ -740,6 +747,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 >[!NOTE]
 >
 >* Forms Portal は iPad の Safari でのみサポートされています。
+
 >
 
 
@@ -753,7 +761,7 @@ AEM Forms アプリケーションは次のプラットフォームで利用可�
 | **プラットフォーム** | **サポートされているデバイス** |
 |---|---|
 | Apple iOS 以上 | Apple iPhone、iPad、iPad Air、iPad mini [iOS 11以降] |
-| Google Android | Android 4.4 (Andoird Kit Kat) and above *[API Level 19 and above]*. AEM Formsアプリは、7インチと10インチのSamsung Galaxyタブレット、7インチのGoogle Nexusタブレット、人気スマートフォンで動作確認されています。 |
+| Google Android | Android 4.4 (Andoird Kit Kat) and above *[API Level 19 and above]*. AEM Formsアプリは、7インチと10インチのSamsung Galaxyタブレット、7インチのGoogle Nexusタブレット、人気スマートフォンで認定されています。 |
 | Microsoft Windows | Microsoft Windows 10オペレーティングシステムを実行するMicrosoft Surfaceデバイス、タブレット、ノートパソコン、およびデスクトップ。 |
 
 ### Adobe Flash Player {#adobe-flash-player}
@@ -793,7 +801,7 @@ JEE 上の AEM Forms のサードパーティリファレンスプラットフ�
 
 アドビシステムズ社では、サードパーティベンダーがリリース時に JEE 上の AEM Forms がサポートするバージョンとの後方互換性を保証していると仮定して、サードパーティベンダーの緊急および推奨パッチをサポートします。アドビシステムズ社は、JEE 上の AEM Forms ドキュメントに記載の最小パッチレベル後にリリースされたパッチのみをサポートします。
 
-場合によっては、アドビシステムズ社は、主要な機能を変更しそのために完全な後方互換性をサポートしなくなったサードパーティアップデートをサポートしません。For details on the supported updates, see [Supported patch definitions](https://helpx.adobe.com/aem-forms/aem-forms-third-party-software-patch.html) for specific vendor products and the patch types Adobe supports.
+場合によっては、アドビシステムズ社は、主要な機能を変更しそのために完全な後方互換性をサポートしなくなったサードパーティアップデートをサポートしません。For details on the supported updates, see [Supported patch definitions](https://helpx.adobe.com/jp/aem-forms/aem-forms-third-party-software-patch.html) for specific vendor products and the patch types Adobe supports.
 
 アドビシステムズ社の管理の及ばない状況においては、後方互換性を主張しているサードパーティ製パッチは、アドビ製品またはお客様の環境に悪い影響を及ぼす可能性があります。このような場合、アドビシステムズ社は、お客様がサードパーティからの緊急パッチを重要なシステムに適用する前にその影響を評価することを推奨します。アドビシステムズ社はサードパーティと共に妥当なビジネス努力を払って、通常のアドビサポートプログラムを通してあるいはサードパーティがパッチの問題を修正することによって、そのような問題を解決します。このことは、アドビによってサポートされる新たにリリースされたサードパーティ製パッチが、ベンダーによってマニュアルに記載されているようにまたは JEE 上の AEM Forms と機能することを保証するものではありません。
 
@@ -801,4 +809,4 @@ JEE 上の AEM Forms のサードパーティリファレンスプラットフ�
 
 サードパーティ製パッチのその他の情報については、Adobe Enterprise Support サイトで、ご使用の製品に関するナレッジベース記事を検索することによっても見つけられることがあります。
 
-[**サポートへのお問い合わせ&#x200B;**](https://www.adobe.com/account/sign-in.supportportal.html)
+[**サポートへのお問い合わせ&#x200B;**](https://www.adobe.com/jp/account/sign-in.supportportal.html)
