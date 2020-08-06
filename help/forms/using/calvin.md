@@ -10,6 +10,9 @@ topic-tags: develop
 discoiquuid: 2daf95b6-bf72-4191-bdb7-e17e76b166f3
 translation-type: tm+mt
 source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+workflow-type: tm+mt
+source-wordcount: '1282'
+ht-degree: 79%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
 
 ## 概要 {#overview}
 
-アダプティブフォームは、顧客とのやり取りを行う上で欠かすことができないものです。新しい修正パックの展開中やフォーム内のルールの変更中など、アダプティブフォームに加えたすべての変更をテストすることが重要です。 しかしながら、アダプティブフォームの機能テストおよびすべてのフィールドの機能テストは面倒な作業です。
+アダプティブフォームは、顧客とのやり取りを行う上で欠かすことができないものです。新しい修正パックの展開中やフォーム内のルールの変更中など、アダプティブフォームで行った変更をすべてテストすることが重要です。 しかしながら、アダプティブフォームの機能テストおよびすべてのフィールドの機能テストは面倒な作業です。
 
 Calvin を使用すれば Web ブラウザーでアダプティブフォームの自動テストを実行できます。Calvin utilizes [Hobbes](/help/sites-developing/hobbes.md)&#39;s user interface for running the tests and provides the following tools:
 
@@ -75,7 +78,7 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
    <td><p>UI インタラクション</p> </td> 
    <td> 
     <ul> 
-     <li><a href="https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html#toc2__anchor" target="_blank">アダプティブフォームオブジェクトでの UI インタラクションのテスト</a></li> 
+     <li><a href="https://helpx.adobe.com/jp/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html#toc2__anchor" target="_blank">アダプティブフォームオブジェクトでの UI インタラクションのテスト</a></li> 
     </ul> </td> 
   </tr> 
  </tbody> 
@@ -87,7 +90,7 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
 
 * Creating test suites and executing test cases using [Hobbes](https://docs.adobe.com/docs/en/aem/6-3/develop/components/hobbes.html)
 * [Hobbes JavaScript API](https://docs.adobe.com/docs/en/aem/6-2/develop/ref/test-api/index.html)
-* [Calvin JavaScript API](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
+* [Calvin JavaScript API](https://helpx.adobe.com/jp/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
 
 ## 例： Hobbes をテスト用フレームワークとして使用してアダプティブフォームのテストスイートを作成する {#example-create-a-test-suite-for-an-adaptive-form-using-hobbes-as-testing-framework}
 
@@ -104,7 +107,7 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
  <tbody> 
   <tr> 
    <td>プロパティ</td> 
-   <td>タイプ</td> 
+   <td>型</td> 
    <td>値</td> 
   </tr> 
   <tr> 
@@ -114,8 +117,8 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
   </tr> 
   <tr> 
    <td><p>dependencies</p> </td> 
-   <td><p>文字列[]</p> </td> 
-   <td><p>granite.testing.hobes.testrunner、granite.testing.calvin、apps.testframework.all</p> </td> 
+   <td><p>String[]</p> </td> 
+   <td><p>granite.testing.hobbes.testrunner、granite.testing.calvin、apps.testframework.all</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -154,16 +157,16 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
 
    上記のコードを使用すると、**Adaptive Form - Demo Test** という名前のテストスイートが作成されます。別の名前でテストスイートを作成するには、それに応じて名前を変更します。
 
-1. **[!UICONTROL 作成]**／**ノードを作成**&#x200B;をクリックし、テストを行う各フォームの clientlib フォルダーの下にノードを作成します。この例では、 **testFormという名前のノードを使用して、** testForm **** Formという名前のアダプティブフォームをテストします。次のプロパティを指定し、「 `.`OK **[!UICONTROL 」をクリックします]**。
+1. **[!UICONTROL 作成]**／**ノードを作成**&#x200B;をクリックし、テストを行う各フォームの clientlib フォルダーの下にノードを作成します。この例では、 **testForm** という名前のノードを使用して、testFormという名前のアダプティブフォームをテストします。次のプロパティを **指定し、** 「OK `.`****」をクリックします。
 
    * 名前：testForm（使用するフォーム名）
    * タイプ：cq:ClientLibraryFolder
 
-1. 次のプロパティを新しく作成したノード（ここではtestForm）に追加して、アダプティブフォームをテストします。
+1. 新たに追加作成されたノード（ここでは「testForm」）に対して、次のプロパティを追加し、アダプティブフォームをテストします。
 
-   | **プロパティ** | **種類** | **値** |
+   | **プロパティ** | **タイプ** | **値** |
    |---|---|---|
-   | categories | String[] | granite.testing.hobes.tests, granite.testing.hobes.tests.testForm |
+   | categories | String[] | granite.testing.hobbes.tests、granite.testing.hobbes.tests.testForm |
    | dependencies | String[] | granite.testing.calvin.tests |
 
    >[!NOTE]
@@ -174,7 +177,7 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
 
 1. テストフォーム用に作成したフォルダー（ここでは testForm）を右クリックし、**[!UICONTROL 作成／ファイルを作成]**&#x200B;を選択します。ファイルに scriptingTest.js と名前を付けて、次のコードをファイルに追加して「**[!UICONTROL すべて保存]**」をクリックします。
 
-   次のコードを使用して別のアダプティブフォームをテストするには、**navigateTo**（行 11、36、62）および個々のテストケースで、フォームのパスと名前を変更します。For more information on APIs for testing different aspects of forms and form objects, see [Calvin APIs](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html).
+   次のコードを使用して別のアダプティブフォームをテストするには、**navigateTo**（行 11、36、62）および個々のテストケースで、フォームのパスと名前を変更します。For more information on APIs for testing different aspects of forms and form objects, see [Calvin APIs](https://helpx.adobe.com/jp/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html).
 
    ```
    (function(window, hobs) {
@@ -268,7 +271,7 @@ Calvin を使用して、CRXDE でテストケースを作成して Web ブラ�
     }(window, window.hobs));
    ```
 
-   テストケースが作成されます。テストケースを実行して、Hobbes経由でアダプティブフォームをテストします。 For steps for running the test cases, see [Executing Tests in Testing Your UI Using Automated Tests](/help/sites-developing/hobbes.md).
+   テストケースが作成されます。Hobbes経由でアダプティブフォームをテストする場合は、テストケースの実行に進みます。 For steps for running the test cases, see [Executing Tests in Testing Your UI Using Automated Tests](/help/sites-developing/hobbes.md).
 
 また、添付ファイル SampleTestPackage.zip に含まれるパッケージをインストールすれば、「例： Hobbes をテスト用フレームワークとして使用してアダプティブフォームのテストスイートを作成する」で説明した手順の結果と同じ結果を得ることができます。
 
@@ -288,11 +291,11 @@ An &quot;X&quot; icon indicates a failed test: ![cross](assets/cross.png)
 
 1. テストパネルで、実行するテストケースの名前をクリックまたはタップして、アクションの詳細を展開します。
 
-   ![1_tapnameoftestcase](assets/1_tapnameoftestcase.png)
+   ![1.tapnameoftestcase](assets/1_tapnameoftestcase.png)
 
 1. 「テストを実行」ボタンをクリックまたはタップします。 ![runtestcase](assets/runtestcase.png)
 
-   ![2_clickrun](assets/2_clickrun.png)
+   ![2.clickrun](assets/2_clickrun.png)
 
 1. テストが実行されると、プレースホルダーはページコンテンツに置き換えられます。
 
