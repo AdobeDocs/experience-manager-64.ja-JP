@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 3acac082-efbe-4995-b374-851cb9aaf62d
 translation-type: tm+mt
 source-git-commit: a6d50dbcbfec85d21072d51a5fa48e3667835f06
+workflow-type: tm+mt
+source-wordcount: '463'
+ht-degree: 31%
 
 ---
 
@@ -31,7 +34,7 @@ The page that includes the `Search`component provides a place to launch a search
 
 ### 検索をページに追加 {#add-search-to-a-page}
 
-作成者モードでペ `Search` ージにコンポーネントを追加するには、コンポーネントブラウザを使用してコンポーネントを `Communities / Search` 検索し、ページ上の所定の位置にドラッグします。 の使用に `Search` は、 `Search Results.`
+作成者モードでページに `Search` コンポーネントを追加するには、コンポーネントブラウザを使用してコンポーネントを検索 `Communities / Search` し、ページ上の配置にドラッグします。 の使用 `Search` には、 `Search Results.`
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
@@ -49,11 +52,12 @@ Under the **[!UICONTROL Search Settings]** tab, specify how what paths are are s
 
 ![chlimage_1-375](assets/chlimage_1-375.png)
 
-* **[!UICONTROL 検索パス]**「項目を追加」ボタンを使用して検索パスを追加すると、コンテンツの検索が限定されます。例えば、検索を特定のフォーラムに限定するには、ページ内に配置するフォーラムコンポーネントを選択します。
+* **[!UICONTROL 検索パス]**「項目を追加」ボタンを使用して検索パスを追加すると、コンテンツの検索が限定されます。例えば、検索対象を特定のフォーラムに限定するには、ページ内に配置するフォーラムコンポーネントを選択します。
 
    * `/content/community-components/en/forum/jcr:content/content/forum`
 
-* **[!UICONTROL 結果ページ]**：結果は、ブラウザーを使用してコンポーネントを含むページを選択することで指定された別のページに表示さ `Search Results` れます。
+* **[!UICONTROL 結果ページ]**：結果は、ブラウザーを使用して 
+`Search Results` component.
 
 ## 検索結果 {#search-results}
 
@@ -63,7 +67,7 @@ To add a `Search Results` component to a page in author mode, use the component 
 
 * `Communities / Search Results`
 
-コンポーネントを探し、ページ上の位置にドラッグします。検索コンポーネントとは異なり、2番目のページは必要ありません。結果は同じページに表示されます。
+コンポーネントを探し、ページ上の位置にドラッグします。検索コンポーネントとは異なり、2番目のページは必要ありません。結果が同じページに表示されるためです。
 
 If using Search elsewhere within the website, this one page with `Search Results` may be configured to be the `Result Page` for any or all instances of `Search`.
 
