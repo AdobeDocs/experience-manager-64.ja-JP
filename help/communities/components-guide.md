@@ -11,13 +11,16 @@ content-type: reference
 discoiquuid: a777a3f1-b39f-4d90-b9b6-02d3e321a86f
 translation-type: tm+mt
 source-git-commit: 68953424eda50bf1734ac84473b442acdc9cdb24
+workflow-type: tm+mt
+source-wordcount: '1203'
+ht-degree: 62%
 
 ---
 
 
 # コミュニティコンポーネントガイド {#community-components-guide}
 
-コミュニティコンポーネントガイドは、[ソーシャルコンポーネントフレームワーク（SCF）](scf.md)のインタラクティブ開発ツールです。利用可能なAEM Communitiesのコンポーネントや、複数のコンポーネントで構築されたより複雑な機能のリストを提供します。
+コミュニティコンポーネントガイドは、[ソーシャルコンポーネントフレームワーク（SCF）](scf.md)のインタラクティブ開発ツールです。これは、使用可能なAEM Communitiesコンポーネントのリストや、複数のコンポーネントで構築されたより複雑な機能を提供します。
 
 このガイドを利用すると、各コンポーネントに関する基本情報を確認するとともに、SCF コンポーネント／機能の動作やその構成／カスタマイズ方法を試してみることができます。
 
@@ -35,7 +38,7 @@ source-git-commit: 68953424eda50bf1734ac84473b442acdc9cdb24
 
 * サーバー（作成者または発行）
 * サイト訪問者がサインインしているかどうか
-* ログインした場合、メンバーに割り当てられる権限
+* サインインした場合、メンバーに割り当てられる権限
 * Whether or not the default SRP, [JSRP](jsrp.md), is in use
 
 On author, to enter edit mode, insert either `editor.html` or `cf#` as the first path segment after the server name:
@@ -76,15 +79,15 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 
 ガイドの本文には次の情報が表示されます。
 
-1. タイトル：選択したコンポーネントの名前
-1. [クライアント側ライブラリ](#client-side-libraries):1つ以上の必須カテゴリのリスト
-1. [含める](scf.md#add-or-include-a-communities-component):コンポーネントを動的に含めることができる場合は、作成者編集モードで状態を切り替えることができます。
+1. タイトル： 選択したコンポーネントの名前
+1. [クライアント側ライブラリ](#client-side-libraries): 1つ以上の必須カテゴリのリスト
+1. [含める](scf.md#add-or-include-a-communities-component): コンポーネントを動的に含めることができる場合は、作成者編集モードで状態を切り替えることができます。
 
-   * 追加した場合、表示されるテキストは次のとおりです。「このコンポーネントは、その各ノードを介して含まれます。」
-   * 含まれる場合、表示されるテキストは次のとおりです。「このコンポーネントは動的に含まれます。」
+   * 追加した場合、表示されるテキストは次のとおりです。 「このコンポーネントは、その各ノードを介して含まれます。」
+   * 含める場合、表示されるテキストは次のとおりです。 「このコンポーネントは動的に含まれます。」
    * 含めることができない場合、テキストは表示されません
 
-1. サンプルコンポーネントまたは機能：コンポーネントまたは機能のアクティブインスタンスです。コンポーネントは、タブセクションで提供されるテンプレート、CSS、データに対する変更によって変更される場合があります。
+1. サンプルコンポーネントまたは機能：コンポーネントまたは機能のアクティブインスタンスです。コンポーネントの場合は、タブセクションに表示されるテンプレート、CSS、データに対する変更を行って変更できます。
 
 >[!NOTE]
 >
@@ -94,7 +97,7 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 
 オーサーインスタンスでガイドを使用する場合、コンポーネントの設定時にダイアログが開くことがあります。Information for developers is provided in the [Component and Feature Essentials](essentials.md) section of the documentation, while the dialog settings are described in [Communities Components](author-communities.md) section for authors.
 
-コミュニティコンポーネントガイドでは、一部のコンポーネントダイアログ設定が[インクルード可能](scf.md#add-or-include-a-communities-component)切り替え状態でオーバーレイされています。既存のリソースの使用と動的に含まれるリソースの使用を切り替えるには、編集モードでコンポーネントと含めるテキストの両方を選択し、ダブルクリックして編集ダイアログを開きます。
+コミュニティコンポーネントガイドでは、一部のコンポーネントダイアログ設定が[インクルード可能](scf.md#add-or-include-a-communities-component)切り替え状態でオーバーレイされています。既存のリソースと動的に含まれるリソースの使用を切り替えるには、編集モードで、コンポーネントと含めるテキストの両方を選択し、重複を押しながらクリックして編集ダイアログを開きます。
 
 ![chlimage_1-406](assets/chlimage_1-406.png)
 
@@ -104,12 +107,14 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 
 * **sling:include を使用して子コンポーネントを組み込む**
 
-   チェックを外すと、コンポーネントガイドはリポジトリ内の既存のリソース（各ノードの子であるjcrノード）を使用します。
+   チェックが解除されている場合、コンポーネントガイドはリポジトリ内の既存のリソース（各ノードの子であるjcrノード）を使用します。
 
-   * 表示されるテキスト：「このコンポーネントは、その各ノードを介して含まれます。」
+   * 表示されるテキスト： 「このコンポーネントは、その各ノードを介して含まれます。」
+
    チェックボックスをオンにした場合、sling を使用して、子ノードの resourceType のコンポーネント（存在しないリソース）が動的にインクルードされます。
 
-   * 表示されるテキスト：「このコンポーネントは動的に含まれます。」
+   * 表示されるテキスト： 「このコンポーネントは動的に含まれます。」
+
    初期設定はオフです。
 
 ### パブリッシュインタラクション {#publish-interactions}
@@ -122,7 +127,7 @@ On author, to enter edit mode, insert either `editor.html` or `cf#` as the first
 
 ## クライアント側ライブラリ {#client-side-libraries}
 
-コンポーネントごとに一覧表示されるクライアント側ライブラリ（clientlib）は、該当するコンポーネントをページに配置するときに参照する必要がある&#x200B;**&#x200B;ライブラリです。clientlibsは、ブラウザーでコンポーネントをレンダリングするために使用するJavaScriptとCSSのダウンロードを管理し、最適化する手段を提供します。
+コンポーネントごとに一覧表示されるクライアント側ライブラリ（clientlib）は、該当するコンポーネントをページに配置するときに参照する必要がある&#x200B;**&#x200B;ライブラリです。clientlibは、ブラウザーでコンポーネントをレンダリングする際に使用するJavaScriptとCSSのダウンロードを管理および最適化する手段を提供します。
 
 詳しくは、[コミュニティコンポーネントの clientlib](clientlibs.md) を参照してください。
 
@@ -146,18 +151,18 @@ To quickly experiment with customizations, the `scg:showIde`property must be add
 
 オーサーインスタンスまたはパブリッシュインスタンスのいずれかに管理者権限でサインインし、例としてコメントコンポーネントを使用します。
 
-1. Browse to [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
+1. [CRXDE Liteを参照](../../help/sites-developing/developing-with-crxde-lite.md)
 
    例：[http://localhost:4503/crx/de](http://localhost:4503/crx/de)
 
-1. コンポーネントのノードを選択し `jcr:content` ます
+1. コンポーネントの `jcr:content` ノードを選択
 
    例：`/content/community-components/en/comments/jcr:content`
 
 1. プロパティの追加
 
    * **名前** `scg:showIde`
-   * **タイプ** `String`
+   * **型** `String`
    * **値** `true`
 
 1. 「**[!UICONTROL すべて保存]**」を選択します。
@@ -165,7 +170,7 @@ To quickly experiment with customizations, the `scg:showIde`property must be add
 
    [http://localhost:4503/content/community-components/en/comments.html](http://localhost:4503/content/community-components/en/comments.html)
 
-1. テンプレート、CSS、データの3つのタブが用意されています。
+1. テンプレート、CSS、データの3つのタブが追加されました。
 
 ![chlimage_1-408](assets/chlimage_1-408.png) ![chlimage_1-409](assets/chlimage_1-409.png)
 
