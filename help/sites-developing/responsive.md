@@ -346,7 +346,7 @@ picturefill.jsコードで必要となるdiv要素を生成するコンポーネ
 
 ブラウザーがページを読み込むときに、src 属性の値を URL として使用して画像を要求します。Sling によりこの URL が次のように分解されます。
 
-* リソース: `/content/mywebsite/en/_jcr_content/par/image_0`
+* Resource: `/content/mywebsite/en/_jcr_content/par/image_0`
 * File name extension: `.jpg`
 * セレクター: `img`
 * Suffix: `1358372073597.jpg`
@@ -492,7 +492,7 @@ AEM サービスの設定方法について詳しくは、[OSGi の設定](/help
    <td>com.day.cq.wcm.foundation.impl. AdaptiveImageComponentServlet</td> 
   </tr> 
   <tr> 
-   <th>プロパティ</th> 
+   <th>Property</th> 
    <td><p>サポートされる幅</p> 
     <ul> 
      <li>サポートされる幅を追加するには、+ ボタンをクリックし、正の整数を入力します。</li> 
