@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '548'
+ht-degree: 97%
 
 ---
 
@@ -63,7 +66,7 @@ The **Live Copy Overview** can be opened from the **References** side panel of t
 
    >[!NOTE]
    >
-   >詳しくは、[ライブコピーのステータスのメッセージ - 最新／グリーン／同期中](https://helpx.adobe.com/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)に関するナレッジベースの記事も参照してください。
+   >詳しくは、[ライブコピーのステータスのメッセージ - 最新／グリーン／同期中](https://helpx.adobe.com/jp/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)に関するナレッジベースの記事も参照してください。
 
 1. 「**閉じる**」を使用して終了し、**サイト**&#x200B;コンソールに戻ります。
 
