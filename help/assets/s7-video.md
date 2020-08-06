@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
 source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+workflow-type: tm+mt
+source-wordcount: '1670'
+ht-degree: 54%
 
 ---
 
 
 # ビデオ {#video}
 
-アセットを使用すると、ビデオアセットを一元的に管理でき、ビデオを直接アセットにアップロードして、Dynamic Media Classic(Scene7)に自動エンコードしたり、アセットから直接Dynamic Media Classicビデオにアクセスしてページを作成したりできます。
+アセットを使用すると、ビデオアセット管理を一元化できます。この機能を使用して、ビデオをDynamic Media Classic(Scene7)に自動エンコードするためにアセットに直接アップロードし、アセットから直接Dynamic Media Classicビデオにアクセスしてページを作成できます。
 
 Dynamic Media Classicビデオの統合により、最適化されたビデオの提供先がすべての画面（自動デバイスおよび帯域幅検出）に拡張されます。
 
-* **[!UICONTROL Scene7 Video]** Componentは、デスクトップ、タブレット、モバイルで適切な形式と品質のビデオを再生するために、デバイスと帯域幅の検出を自動的に実行します。
+* The **[!UICONTROL Scene7 Video]** component automatically performs device and bandwidth detection to play the right format and right quality video across desktop, tablets and mobile.
 * Assets - You can include adaptive video sets rather than only single video assets. An adaptive video set is a container for all video renditions required to playback video seamlessly across multiple screens. An Adaptive Video Set groups versions of the same video that are encoded at different bit rates and formats such as 400 kbps, 800 kbps, and 1000 kbps. You use an Adaptive Video Set, along with S7 video component, for adaptive video streaming across multiple screens including desktop, iOS, Android, Blackberry, and Windows mobile devices. See [Scene7 documentation about adaptive video sets for more information](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html).
 
 ## FFMPEGとDynamic Media Classicについて {#about-ffmpeg-and-scene}
@@ -31,7 +34,7 @@ Dynamic Media Classicビデオの統合により、最適化されたビデオ�
 * FFMPEG のサムネール
 * FFMPEG エンコーディング
 
-Dynamic Media Classic統合を有効にして設定しても、これら2つのワークフロー手順は、あらかじめ用意されているDAM取り込みワークフローから自動的に削除または非アクティブ化されることはありません。 FFMPEG ベースのビデオエンコーディングを既に AEM で使用している場合は、オーサリング環境に FFMPEG がインストールされている可能性があります。この場合、DAMを使用して取り込まれた新しいビデオは2回エンコードされます。FFMPEGエンコーダーから1回、およびDynamic Media Classic統合から1回のみ。
+Dynamic Media Classic統合の有効化と設定を行っても、これら2つのワークフロー手順は、設定済みのDAMインジェストワークフローから自動的に削除または非アクティブ化されません。 FFMPEG ベースのビデオエンコーディングを既に AEM で使用している場合は、オーサリング環境に FFMPEG がインストールされている可能性があります。この場合、DAMを使用して取り込む新しいビデオは2回エンコードされます。 をFFMPEGエンコーダーから、またはDynamic Media Classic統合から1回呼び出します。
 
 AEM で FFMPEG ベースのビデオエンコーディングが設定済みで、FFMPEG がインストールされている場合は、2 つの FFMPEG ワークフローを DAM 収集ワークフローから削除することをお勧めします。
 
@@ -49,13 +52,13 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 * ビデオアセットのワークフローが必要かどうか
 * ビデオアセットのバージョン管理が必要かどうか
 
-これらの質問のいずれかまたは両方に対する回答が「はい」の場合は、ビデオを直接Adobe DAMにアップロードします。 両方の質問に対する回答が「いいえ」の場合は、ビデオを直接Dynamic Media Classicにアップロードします。 各シナリオのワークフローについて、次の節で説明します。
+これらの質問のいずれかまたは両方に対する回答が「はい」の場合は、ビデオをAdobeDAMに直接アップロードします。 両方の質問に対する答えが「いいえ」の場合は、ビデオを直接Dynamic Media Classicにアップロードします。 各シナリオのワークフローについて、次の節で説明します。
 
 ### ビデオを直接 Adobe DAM にアップロードする場合 {#if-you-are-uploading-your-video-directly-to-adobe-dam}
 
 アセットのワークフローまたはバージョン管理が必要な場合は、まず Adobe DAM にアップロードする必要があります。推奨されるワークフローは次のとおりです。
 
-1. ビデオアセットをAdobe DAMにアップロードし、自動的にエンコードしてDynamic Media Classicに公開します。
+1. ビデオアセットをAdobeDAMにアップロードし、自動的にエンコードしてDynamic Media Classicに公開します。
 1. AEM の WCM（コンテンツファインダーの「**[!UICONTROL ムービー]**」タブ）で、ビデオアセットにアクセスします。
 1. Author with **[!UICONTROL Scene7 Video]** or **[!UICONTROL Foundation Video]** component.
 
@@ -119,7 +122,7 @@ Scene7 ビデオコンポーネントは、Scene7 ビデオでのみ使用でき
 
 >[!NOTE]
 >
->既製の S7 ビデオコンポーネントはユニバーサルビデオプロファイルを使用します。ただし、Scene7で次のいずれかの操作を行うと、AEMで使用するHTML5ベースのビデオプレーヤーを取得できます。標準搭載のHTML5ビデオプレーヤーの埋め込みコードをコピーし、AEMページに配置します。
+>既製の S7 ビデオコンポーネントはユニバーサルビデオプロファイルを使用します。ただし、Scene7で次のいずれかを実行すると、AEMで使用するHTML5ベースのビデオプレーヤーを取得できます。 標準搭載のHTML5ビデオプレーヤーの埋め込みコードをコピーして、AEMページに配置します。
 
 ## AEM ビデオコンポーネント {#aem-video-component}
 
@@ -133,9 +136,9 @@ Scene7 のビデオを表示するには Scene7 のビデオコンポーネン�
 |---|---|---|
 | アプローチ | HTML5 における最優先のアプローチです。Flash は HTML5 以外のフォールバックでのみ使用されます。 | ほとんどのデスクトップでは Flash です。HTML5 はモバイルとタブレットで使用されます。 |
 | 配信 | プログレッシブ | アダプティブストリーミング |
-| 追跡 | 可 | 可 |
-| 拡張性 | はい | 対応（Scene7 ビューア SDK を使用） |
-| モバイルビデオ | 可 | Yes |
+| 追跡 | はい | はい |
+| 拡張性 | 可 | 対応（Scene7 ビューア SDK を使用） |
+| モバイルビデオ | はい | Yes |
 
 ### 設定 {#setting-up}
 
@@ -147,9 +150,9 @@ S7 クラウド設定で選択した S7 エンコーディングプリセット�
 >
 >新しいビデオプロファイルおよびビデオプロファイルに対する変更をアクティベートして公開する必要があります。
 
-1. AEMで、 **[!UICONTROLツール/設定コンソール**。
-1. In the **[!UICONTROL Configuration Console]** navigate to **[!UICONTROL Tools > DAM > Video Profiles]** in the navigation tree.
-1. **[!UICONTROL 新しいS7ビデオプロファイルの作成を参照してください。新し]**&#x200B;い…メニューで「ページを作 **[!UICONTROL 成」を選択し]** 、Scene7ビデオプロファイルテンプレートを選択します。新しいビデオプロファイルページに名前を付け、「作成」をクリ **[!UICONTROL ックしま]**&#x200B;す。
+1. AEMで、 **[!UICONTROLツール/設定コンソール**]をタップします。
+1. **[!UICONTROL 設定コンソールで、ナビゲーションツリーの]** ツール **[!UICONTROL /DAM/ビデオプロファイル]** に移動します。
+1. Create a new S7 Video Profile. In the **[!UICONTROL New...]** menu, select **[!UICONTROL Create Page]** and then select the Scene7 Video Profile template. Give the new video profile page a name and click **[!UICONTROL Create]**.
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
@@ -167,7 +170,7 @@ S7 クラウド設定で選択した S7 エンコーディングプリセット�
 
 #### Configuring design {#configuring-design}
 
-ビデオソ **[!UICONTROL ースリストを作成するには、Foundation Video]** Componentが使用するビデオプロファイルについて知っている必要があります。 ビデオコンポーネントデザインダイアログボックスを開き、新しいビデオプロファイルを使用するためのコンポーネントデザインを設定する必要があります。
+ビデオソース **[!UICONTROL リストを構築するために使用するビデオプロファイルについて、Foundation Video]** Componentが知っている必要があります。 ビデオコンポーネントデザインダイアログボックスを開き、新しいビデオプロファイルを使用するためのコンポーネントデザインを設定する必要があります。
 
 >[!NOTE]
 >
@@ -177,8 +180,8 @@ S7 クラウド設定で選択した S7 エンコーディングプリセット�
 >
 >デザインを変更するには、デザインのアクティベーションをおこなって、公開時に変更を有効にする必要があります。
 
-1. **[!UICONTROL Foundation Video]** Componentのデザインダイアログボックスを開き、「プロファイル」タブに変更 **[!UICONTROL します]** 。 その後、あらかじめ用意されているプロファイルを削除し、新しいS7ビデオプロファイルを追加します。 デザインダイアログボックス内のプロファイルリストの順序は、レンダリング時のビデオソース要素の順序を定義します。
-1. HTML5をサポートしていないブラウザの場合、ビデオコンポーネントを使用してFlashのフォールバックを設定できます。 Open the video components design dialog box and change to the **[!UICONTROL Flash]** tab. Flash Playerの設定を行い、Flash playerのフォールバックプロファイルを割り当てます。
+1. Open the **[!UICONTROL Foundation Video]** component&#39;s design dialog box and change to the **[!UICONTROL Profiles]** tab. 次に、そのまま使用できるプロファイルを削除し、新しいS7ビデオプロファイルを追加します。 デザインダイアログボックス内のプロファイルリストの順序によって、レンダリング時のビデオソース要素の順序が定義されます。
+1. HTML5をサポートしていないブラウザーの場合、ビデオコンポーネントを使用してFlashのフォールバックを設定できます。 Open the video components design dialog box and change to the **[!UICONTROL Flash]** tab. Flashプレイヤーの設定を行い、Flash Playerのフォールバックプロファイルを割り当てます。
 
 #### チェックリスト {#checklist}
 
