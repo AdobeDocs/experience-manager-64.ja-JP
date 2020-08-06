@@ -24,13 +24,13 @@ Workbenchで作成されたプロセスは、Remotingを使用して呼び出す
 
 >[!NOTE]
 >
->Remotingを使用する場合は、AEM Formsサービスとは異なり、Workbenchで作成されたプロセスを呼び出すことをお勧めします。 ただし、AEM Formsサービスを直接呼び出すことは可能です。 (AEM Formsデベロッパーセンターにある「Remotingを使用したPDFドキュメントの暗号化」を参照)。
+>Remotingを使用する場合は、AEM Formsのサービスとは異なり、Workbenchで作成されたプロセスを呼び出すことをお勧めします。 ただし、AEM Formsサービスを直接呼び出すことは可能です。 (AEM FormsデベロッパーセンターにあるRemotingを使用したPDFドキュメントの暗号化を参照)。
 
 >[!NOTE]
 >
 >匿名アクセスを許可するようにAEM Formsサービスが設定されていない場合、Flexクライアントからの要求はWebブラウザーのチャレンジになります。 ユーザーは、ユーザー名とパスワードの資格情報を入力する必要があります。
 
-次のAEM Formsの短時間のみ有効なプロセス `MyApplication/EncryptDocument`は、この名前で、Remotingを使用して呼び出すことができます。 (入力値や出力値など、このプロセスについて詳しくは、 [短時間のみ有効なプロセスの例を参照してください](/help/forms/developing/aem-forms-processes.md))。
+以下のAEM Formsの短時間のみ有効なプロセスは、この名前で、Remotingを使用して呼び出すこ `MyApplication/EncryptDocument`とができます。 (入力値や出力値など、このプロセスについて詳しくは、 [短時間のみ有効なプロセスの例を参照してください](/help/forms/developing/aem-forms-processes.md))。
 
 ![iu_iu_encryptdocumentprocess2](assets/iu_iu_encryptdocumentprocess2.png)
 
@@ -54,11 +54,11 @@ Workbenchで作成されたプロセスは、Remotingを使用して呼び出す
 
 **関連トピック**
 
-[AEM Forms Flexライブラリファイルのインクルード](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
+[AEM FormsFlex図書館ファイルを含める](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
 
-[AEM Forms Remotingでのドキュメントの処理（AEM Formsでは非推奨）](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
+[(AEM formsでは廃止)AEM Formsリモートでのドキュメントの処理](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
 
-[AEM Forms Remoting（AEM Formsでは廃止されています）を使用して安全でないドキュメントを渡すことによる短時間のみ有効なプロセスの呼び出し](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
+[(AEM formsでは廃止されています)AEM Formsリモートを使用して安全でないドキュメントを渡し、短時間のみ有効なプロセスを呼び出す](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
 [Flexで構築されたクライアントアプリケーションの認証](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
@@ -66,43 +66,43 @@ Workbenchで作成されたプロセスは、Remotingを使用して呼び出す
 
 [Remotingを使用したカスタムコンポーネントサービスの呼び出し](invoking-aem-forms-using-remoting.md#invoking-custom-component-services-using-remoting)
 
-[人間中心の長期間有効なプロセスを呼び出すFlexで構築されたクライアントアプリケーションの作成](/help/forms/developing/invoking-human-centric-long-lived.md#creating-a-client-application-built-with-flex-that-invokes-a-human-centric-long-lived-process)
+[人間中心の長期間有効なプロセスを呼び出す、Flexで構築されたクライアントアプリケーションの作成](/help/forms/developing/invoking-human-centric-long-lived.md#creating-a-client-application-built-with-flex-that-invokes-a-human-centric-long-lived-process)
 
 [HTTPトークンを使用したSSO認証を実行するFlash Builderアプリケーションの作成](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens)
 
-Flexグラフコントロールでプロセスデータを表示する方法について詳しくは、「FlexグラフでのAEM Formsプロセスデータの [表示](https://www.adobe.com/devnet/livecycle/articles/populating_flexcontrols.html)」を参照してください。
+Flexグラフコントロールにプロセスデータを表示する方法について詳しくは、「FlexグラフでのAEM Formsプロセスデータの [表示](https://www.adobe.com/devnet/livecycle/articles/populating_flexcontrols.html)」を参照してください。
 
 >[!NOTE]
 >
 >*crossdomain.xmlファイルを適切な場所に配置するようにしてください。 例えば、JBossにAEM Formsをデプロイした場合、このファイルを次の場所に配置します。 &lt;install_directory>\Adobe_Experience_Manager_forms\jboss\server\lc_turnkey\deploy\jboss-web.deployer\ROOT.war.*
 
-## AEM Forms Flexライブラリファイルのインクルード {#including-the-aem-forms-flex-library-file}
+## AEM FormsFlex図書館ファイルを含める {#including-the-aem-forms-flex-library-file}
 
 Remotingを使用してAEM Formsプロセスをプログラムで呼び出すには、adobe-remoting-provider.swcファイルをFlexプロジェクトのクラスパスに追加します。 このSWCファイルは、次の場所にあります。
 
 * *&lt;install_directory>\Adobe_Experience_Manager_forms\sdk\misc\DataServices\Client-Libraries*
 
-   ここで&lt;*install_directory*>は、AEM Formsがインストールされているディレクトリです。
+   &lt;*install_directory*>は、AEM Formsがインストールされているディレクトリです。
 
 **関連トピック**
 
-[AEM Forms Remoting（AEM Formsでは廃止されています）を使用してAEM Formsを呼び出す](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
+[AEM Formsリモートを使用したAEM Formsの呼び出し(AEM formsでは廃止)](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
 
-[AEM Forms Remotingでのドキュメントの処理（AEM Formsでは非推奨）](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
+[(AEM formsでは廃止)AEM Formsリモートでのドキュメントの処理](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
 
-[AEM Forms Remoting（AEM Formsでは廃止されています）を使用して安全でないドキュメントを渡すことによる短時間のみ有効なプロセスの呼び出し](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
+[(AEM formsでは廃止されています)AEM Formsリモートを使用して安全でないドキュメントを渡し、短時間のみ有効なプロセスを呼び出す](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
 [Flexで構築されたクライアントアプリケーションの認証](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
 ## リモート処理でのドキュメントの処理 {#handling-documents-with-remoting}
 
-AEM Formsで使用される、プリミティブでない最も重要なJava型の1つが、 `com.adobe.idp.Document` クラスです。 通常、ドキュメントはAEM Forms操作を呼び出すために必要です。 主にPDFドキュメントですが、SWF、HTML、XML、DOCファイルなどの他のドキュメントタイプを含めることもできます。 (See [Passing data to AEM Forms services using the Java API](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api).)
+AEM Formsで使用される、最も重要な非プリミティブJava型の1つは、 `com.adobe.idp.Document` クラスです。 通常、ドキュメントはAEM Forms操作を呼び出すために必要です。 主にPDFドキュメントですが、SWF、HTML、XML、DOCファイルなどの他のドキュメントタイプを含めることもできます。 (See [Passing data to AEM Forms services using the Java API](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api).)
 
 Flexで作成されたクライアントアプリケーションは、ドキュメントを直接要求できません。 例えば、Adobe Readerを起動してPDFファイルを生成するURLを要求することはできません。 PDFやMicrosoft Wordのドキュメントなど、ドキュメントタイプの要求は、URLの結果を返します。 URLの内容を表示するのは、クライアントの責任です。 ドキュメント管理サービスは、URLとコンテンツタイプの情報を生成するのに役立ちます。 XMLドキュメントの要求は、結果に完全なXMLドキュメントを返します。
 
 ### ドキュメントーを入力パラメーターとして渡す {#passing-a-document-as-an-input-parameter}
 
-Flexで構築されたクライアントアプリケーションは、ドキュメントをAEM Formsプロセスに直接渡すことはできません。 代わりに、クライアントアプリケーションは、ActionScriptクラスのインスタンスを使用して、 `mx.rpc.livecycle.DocumentReference` インスタンスを必要とする操作に入力パラメーターを渡し `com.adobe.idp.Document` ます。 Flexクライアントアプリケーションには、オブジェクトを設定するための複数のオプションがあり `DocumentReference` ます。
+Flexで構築されたクライアントアプリケーションは、ドキュメントを直接AEM Formsプロセスに渡すことはできません。 代わりに、クライアントアプリケーションは、 `mx.rpc.livecycle.DocumentReference` ActionScriptクラスのインスタンスを使用して、インスタンスを必要とする操作に入力パラメーターを渡し `com.adobe.idp.Document` ます。 Flexクライアントアプリケーションには、 `DocumentReference` オブジェクトを設定するための複数のオプションがあります。
 
 * ドキュメントがサーバー上にあり、そのファイルの場所がわかっている場合は、DocumentReferenceオブジェクトのreferenceTypeプロパティをREF_TYPE_FILEに設定します。 次の例に示すように、fileRefプロパティをファイルの場所に設定します。
 
@@ -128,13 +128,13 @@ docRef.referenceType = DocumentReference.REF_TYPE_INLINE; 
 docRef.text = "Text for my document";  // Optionally, you can override the server’s default character set  // if necessary:  // docRef.charsetName=CharacterSetName  ...
 ```
 
-* ドキュメントがサーバー上にない場合は、リモートアップロードサーブレットを使用してドキュメントをAEM Formsにアップロードします。 AEM Formsの新機能は、セキュリティで保護されたドキュメントをアップロードする機能です。 セキュアドキュメントをアップロードする場合、*ドキュメントアップロードアプリユーザ*ロールを持つユーザを使用する必要があります。 このロールがないと、セキュリティで保護されたドキュメントをアップロードできません。 セキュリティで保護されたドキュメントをアップロードするには、シングルサインオンを使用することをお勧めします。 (Remotingを使用してプロセスを呼び出すための安全なドキュメントーの [引き渡しを参照](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting))。
+* ドキュメントがサーバ上にない場合は、Remotingアップロードサーブレットを使用して、ドキュメントをAEM Formsにアップロードします。 AEM Formsでは、安全なドキュメントをアップロードする機能が新たに導入されました。 セキュアドキュメントをアップロードする場合、*ドキュメントアップロードアプリユーザ*ロールを持つユーザを使用する必要があります。 このロールがないと、セキュリティで保護されたドキュメントをアップロードできません。 セキュリティで保護されたドキュメントをアップロードするには、シングルサインオンを使用することをお勧めします。 (Remotingを使用してプロセスを呼び出すための安全なドキュメントーの [引き渡しを参照](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting))。
 
    >[!NOTE]
-   安全でないドキュメントのアップロードを許可するようにAEM Formsを設定している場合は、ドキュメントアップロードアプリケーションユーザーロールを持たないユーザーを使用してドキュメントをアップロードできます。 ユーザは、ドキュメントのアップロード権限を持つこともできます。 ただし、AEM Formsがセキュリティで保護されたドキュメントのみを許可するように設定されている場合は、そのユーザーにドキュメントアップロードアプリケーションのユーザーロールまたはドキュメントアップロードの権限があることを確認してください。 セキュリティで保護されたドキュメントとセキュリティで保護されていないを受け入れるためのAEM Formsの [設定](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)*を参照してください。
+   セキュリティで保護されていないドキュメントのアップロードをAEM Formsで許可するように設定されている場合は、ドキュメントのアップロードドキュメントロールを持たないユーザーを使用して、アプリをアップロードできます。 ユーザは、ドキュメントのアップロード権限を持つこともできます。 ただし、AEM Formsがセキュリティで保護されたドキュメントのみを許可するように設定されている場合は、ドキュメントアップロードアプリケーションユーザーロールまたはドキュメントアップロード権限を持っていることを確認してください。 セキュリティで保護されたドキュメントとセキュリティで保護されていないを受け入れるようにAEM Formsを [設定するを参照してください](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)*。
 
    指定したアップロードURLには、標準のFlashアップロード機能を使用します。 `https://SERVER:PORT/remoting/lcfileupload`. その後、タイプの入力パラメーターが必要な場合は常に `DocumentReference` オブジェクトを使用 `Document` できます
-   ` private function startUpload():void  {  fileRef.addEventListener(Event.SELECT, selectHandler);  fileRef.addEventListener("uploadCompleteData", completeHandler);  try  {   var success:Boolean = fileRef.browse();  }    catch (error:Error)  {   trace("Unable to browse for files.");  }  }      private function selectHandler(event:Event):void {  var request:URLRequest = new  URLRequest("https://SERVER:PORT/remoting/lcfileupload")  try   {   fileRef.upload(request);   }    catch (error:Error)   {   trace("Unable to upload file.");   }  }    private function completeHandler(event:DataEvent):void  {   var params:Object = new Object();   var docRef:DocumentReference = new DocumentReference();   docRef.url = event.data as String;   docRef.referenceType = DocumentReference.REF_TYPE_URL;  }`リモートクイック開始は、Remotingアップロードサーブレットを使用してPDFファイルを `MyApplication/EncryptDocument`プロセスに渡します。 (「AEM Forms Remoting（AEM Formsでは廃止されています）を使用して安全でないドキュメントを渡すことによる短時間のみ有効なプロセスの [呼び出し](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)」を参照)。
+   ` private function startUpload():void  {  fileRef.addEventListener(Event.SELECT, selectHandler);  fileRef.addEventListener("uploadCompleteData", completeHandler);  try  {   var success:Boolean = fileRef.browse();  }    catch (error:Error)  {   trace("Unable to browse for files.");  }  }      private function selectHandler(event:Event):void {  var request:URLRequest = new  URLRequest("https://SERVER:PORT/remoting/lcfileupload")  try   {   fileRef.upload(request);   }    catch (error:Error)   {   trace("Unable to upload file.");   }  }    private function completeHandler(event:DataEvent):void  {   var params:Object = new Object();   var docRef:DocumentReference = new DocumentReference();   docRef.url = event.data as String;   docRef.referenceType = DocumentReference.REF_TYPE_URL;  }`リモートクイック開始は、Remotingアップロードサーブレットを使用してPDFファイルを `MyApplication/EncryptDocument`プロセスに渡します。 (「 [安全でないドキュメントを渡して、AEM Remoting（非推奨）」を使用して短時間のみ有効なプロセスを呼び出すを参照](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting))。
 
 ```java
  
@@ -167,19 +167,19 @@ function completeHandler(event: DataEvent): void  { 
 }
 ```
 
-リモートクイック開始は、Remotingアップロードサーブレットを使用してPDFファイルを `MyApplication/EncryptDocument`プロセスに渡します。 (「AEM Forms Remoting（AEM Formsでは廃止されています）を使用して安全でないドキュメントを渡すことによる短時間のみ有効なプロセスの [呼び出し](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)」を参照)。
+リモートクイック開始は、Remotingアップロードサーブレットを使用してPDFファイルを `MyApplication/EncryptDocument`プロセスに渡します。 (「 [安全でないドキュメントを渡して、AEM Remoting（非推奨）」を使用して短時間のみ有効なプロセスを呼び出すを参照](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting))。
 
 ### ドキュメントをクライアントアプリケーションに渡す {#passing-a-document-back-to-a-client-application}
 
-クライアントアプリケーションは、インスタンスを出力パラメーター `mx.rpc.livecycle.DocumentReference` として返すサービス操作のタイプのオブジェクトを受け取り `com.adobe.idp.Document` ます。 クライアントアプリケーションはJavaではなくActionScriptオブジェクトを扱うので、JavaベースのドキュメントオブジェクトをFlexクライアントに渡して戻すことはできません。 代わりに、ドキュメントのURLが生成され、そのURLがクライアントに渡されます。 この `DocumentReference` オブジェクトのプ `referenceType` ロパティは、コンテンツがオブジェクト内にあるか、そのプ `DocumentReference``DocumentReference.url` ロパティ内のURLから取得する必要があるかを指定します。 The `DocumentReference.contentType` property specifies the type of document.
+クライアントアプリケーションは、インスタンスを出力パラメーター `mx.rpc.livecycle.DocumentReference` として返すサービス操作のタイプのオブジェクトを受け取り `com.adobe.idp.Document` ます。 クライアントアプリケーションはJavaではなくActionScriptオブジェクトを扱うので、JavaベースのドキュメントオブジェクトをFlexクライアントに渡すことはできません。 代わりに、ドキュメントのURLが生成され、そのURLがクライアントに渡されます。 この `DocumentReference` オブジェクトのプ `referenceType` ロパティは、コンテンツがオブジェクト内にあるか、そのプ `DocumentReference``DocumentReference.url` ロパティ内のURLから取得する必要があるかを指定します。 The `DocumentReference.contentType` property specifies the type of document.
 
 **関連トピック**
 
-[AEM Forms Remoting（AEM Formsでは廃止されています）を使用してAEM Formsを呼び出す](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
+[AEM Formsリモートを使用したAEM Formsの呼び出し(AEM formsでは廃止)](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
 
-[AEM Forms Flexライブラリファイルのインクルード](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
+[AEM FormsFlex図書館ファイルを含める](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
 
-[AEM Forms Remoting（AEM Formsでは廃止されています）を使用して安全でないドキュメントを渡すことによる短時間のみ有効なプロセスの呼び出し](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
+[(AEM formsでは廃止されています)AEM Formsリモートを使用して安全でないドキュメントを渡し、短時間のみ有効なプロセスを呼び出す](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
 [Flexで構築されたクライアントアプリケーションの認証](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
@@ -195,7 +195,7 @@ Flexで構築されたアプリケーションからAEM Formsプロセスを呼�
 1. 戻り値を処理します。
 
 >[!NOTE]
-この節では、AEM Formsが安全でないドキュメントをアップロードするように設定されている場合に、AEM Formsプロセスを呼び出し、ドキュメントをアップロードする方法について説明します。 AEM Formsプロセスを呼び出し、セキュリティで保護されたドキュメントをアップロードする方法、およびセキュリティで保護されたドキュメントとセキュリティで保護されていないドキュメントを受け入れるようにAEM Formsを設定する方法について詳しくは、「Remotingを使用してセキュリティで保護されたを呼び出す [](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)」を参照してください。
+この節では、AEM Formsが安全でないドキュメントをアップロードするように設定されている場合に、AEM Formsプロセスを呼び出し、ドキュメントをアップロードする方法について説明します。 AEM Formsプロセスの呼び出し、セキュリティで保護されたドキュメントのアップロード方法、およびセキュリティで保護されたドキュメントとセキュリティで保護されていないドキュメントを受け入れるようにAEM Formsを設定する方法について詳しくは、Remotingを使用してセキュリティで保護されたを [渡すを参照してください](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)。
 
 **mx:RemoteObjectインスタンスの作成**
 
@@ -203,7 +203,7 @@ Workbenchで作成したAEM Formsプロセスを呼び出すための `mx:Remote
 
 * **id:** 呼び出すプロセスを表す `mx:RemoteObject` インスタンスの名前。
 * **destination:** 呼び出すAEM Formsプロセスの名前。 例えば、 `MyApplication/EncryptDocument` プロセスを呼び出すには、を指定し `MyApplication/EncryptDocument`ます。
-* **結果：** 結果を処理するFlexメソッドの名前です。
+* **結果：** 結果を処理するFlexメソッドの名前。
 
 タグ内で、プロセスの呼び出しメソッドの名前を指定する `mx:RemoteObject``<mx:method>` タグを指定します。 通常、Forms呼び出しメソッドの名前はです `invoke`。
 
@@ -215,9 +215,9 @@ Workbenchで作成したAEM Formsプロセスを呼び出すための `mx:Remote
       </mx:RemoteObject>
 ```
 
-**AEM Formsへのチャネルの作成**
+**AEM Formsへのチャネルを作成する**
 
-クライアントアプリケーションは、次のActionScriptの例に示すように、MXMLまたはActionScriptでチャネルを指定することでAEM Formsを呼び出すことができます。 チャネルは、 `AMFChannel`、、、、またはのい `SecureAMFChannel`ずれかである必要があり `HTTPChannel``SecureHTTPChannel`ます。
+次のActionScriptの例に示すように、クライアントアプリケーションは、MXMLまたはActionScriptでチャネルを指定することで、AEM Formsを呼び出すことができます。 チャネルは、 `AMFChannel`、、、、またはのい `SecureAMFChannel`ずれかである必要があり `HTTPChannel``SecureHTTPChannel`ます。
 
 ```as3
      ... 
@@ -235,7 +235,7 @@ Workbenchで作成したAEM Formsプロセスを呼び出すための `mx:Remote
 
 **入力値を渡す**
 
-Workbenchで作成されたプロセスは、0個以上の入力パラメーターを取り、出力値を返すことができます。 クライアントアプリケーションは、AEM Formsプロセスに属するパラメーターに対応するフィールドを持つ入力パラメーターを `ActionScript` オブジェクト内に渡します。 この名前の短時間のみ有効なプロセスには、という名前の入力パラメーター `MyApplication/EncryptDocument`が1つ必要 `inDoc`です。 プロセスによって公開される操作の名前は `invoke` （短時間のみ有効なプロセスのデフォルト名）です。 (『AEM Forms Remotingを使用したAEM Formsの [呼び出し（AEM Formsでは廃止されています）](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)』を参照)。
+Workbenchで作成されたプロセスは、0個以上の入力パラメーターを取り、出力値を返すことができます。 クライアントアプリケーションは、AEM Formsプロセスに属するパラメーターに対応するフィールドを持つ `ActionScript` オブジェクト内に入力パラメーターを渡します。 この名前の短時間のみ有効なプロセスには、という名前の入力パラメーター `MyApplication/EncryptDocument`が1つ必要 `inDoc`です。 プロセスによって公開される操作の名前は `invoke` （短時間のみ有効なプロセスのデフォルト名）です。 (「AEM formsでは非推奨) [AEM Formsリモートを使用したAEM Formsの呼び出し」を参照](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting))。
 
 次のコードの例では、PDFドキュメントを `MyApplication/EncryptDocument` プロセスに渡します。
 
@@ -252,11 +252,11 @@ Workbenchで作成されたプロセスは、0個以上の入力パラメータ�
      ...
 ```
 
-このコードの例で、は保護され `pdfDocument` ていないPDFドキュメントを含む `DocumentReference` インスタンスです。 詳しくは、「AEM Forms Remotingでのドキュメントの `DocumentReference`処理（AEM Formsでは廃止されています） [](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)」を参照してください。
+このコードの例で、は保護され `pdfDocument` ていないPDFドキュメントを含む `DocumentReference` インスタンスです。 について詳し `DocumentReference`くは、「 [ドキュメントの処理(AEM formsでは廃止されています)AEM Formsリモート」を参照してください](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)。
 
 **サービスの特定のバージョンを呼び出す**
 
-呼び出しのパラメーターマップでパラメーターを使用すると、Formsサービスの特定のバージョンを呼び出すこ `_version` とができます。 例えば、サー `MyApplication/EncryptDocument` ビスのバージョン1.2を呼び出すには：
+呼び出しのパラメーターマップでパラメーターを使用すると、特定のバージョンのFormsサービスを呼び出すことがで `_version` きます。 例えば、サー `MyApplication/EncryptDocument` ビスのバージョン1.2を呼び出すには：
 
 ```as3
  var params:Object = new Object(); 
@@ -269,7 +269,7 @@ Workbenchで作成されたプロセスは、0個以上の入力パラメータ�
 
 **戻り値の処理**
 
-AEM Formsプロセスの出力パラメーターは、次の例に示すように、ActionScriptオブジェクトにデシリアライズされ、クライアントアプリケーションは、特定のパラメーターを名前で抽出します。 ( `MyApplication/EncryptDocument` プロセスの出力値には名前が付けられ `outDoc`ます)。
+AEM Formsプロセスの出力パラメーターは、ActionScriptオブジェクトにデシリアライズされます。ここから、クライアントアプリケーションが特定のパラメーターを名前で抽出します。次に例を示します。 ( `MyApplication/EncryptDocument` プロセスの出力値には名前が付けられ `outDoc`ます)。
 
 ```as3
      ... 
@@ -283,31 +283,31 @@ AEM Formsプロセスの出力パラメーターは、次の例に示すよう�
 次の手順を実行して、 `MyApplication/EncryptDocument` プロセスを呼び出すことができます。
 
 1. ActionScriptまたはMXMLを使用して `mx:RemoteObject` インスタンスを作成します。 mx:RemoteObjectインスタンスの作成を参照してください。
-1. AEM Formsと通信する `ChannelSet` インスタンスを設定し、そのインスタンスに関連付け `mx:RemoteObject` ます。 「AEM Formsへのチャネルの作成」を参照してください。
+1. AEM Formsと通信する `ChannelSet` インスタンスを設定し、そのインスタンスに関連付け `mx:RemoteObject` ます。 「AEM Formsへのチャネルを作成する」を参照してください。
 1. ChannelSetの `login``setCredentials` メソッドまたはサービスのメソッドを呼び出して、ユーザー識別子の値とパスワードを指定します。 (シングルサインオン [の使用を参照](invoking-aem-forms-using-remoting.md#using-single-sign-on))。
 1. プロセスに渡す、保護されていないPDFドキュメントを使用して `mx.rpc.livecycle.DocumentReference` インスタンスを設定し `MyApplication/EncryptDocument` ます ( [入力パラメーターとしてドキュメントを渡すを参照](invoking-aem-forms-using-remoting.md#passing-a-document-as-an-input-parameter))。
 1. インスタンスのメソッドを呼び出して、PDF `mx:RemoteObject` ドキュメントを暗号化し `invoke` ます。 入力ドキュメント `Object` ー（保護されていないPDFパラメーター）を含むを渡します。 詳しくは、入力値の引き渡しを参照してください。
 1. プロセスから返される、パスワードで暗号化されたPDFドキュメントを取得します。 戻り値の処理を参照してください。
 
-[クイック開始: AEM Forms Remoting（AEM Formsでは廃止されています）を使用して安全でないドキュメントを渡すことによる短時間のみ有効なプロセスの呼び出し](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting)
+[クイック開始: (AEM formsでは廃止されています)AEM Formsリモートを使用して安全でないドキュメントを渡し、短時間のみ有効なプロセスを呼び出す](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting)
 
 ## Flexで構築されたクライアントアプリケーションの認証 {#authenticating-client-applications-built-with-flex}
 
-AEM Forms User ManagerがFlexアプリケーションからリモート要求を認証する方法はいくつかあります。例えば、中央ログインサービスを介したAEM Formsのシングルサインオン、基本認証、カスタム認証などです。 シングルサインオンと匿名アクセスのいずれも有効になっていない場合、リモート処理の要求は、基本認証（デフォルト）とカスタム認証のどちらかになります。
+AEM forms User Managerが、中央ログインサービスを使用したAEM Formsのシングルサインオン、基本認証、カスタム認証など、Flexアプリケーションからリモート要求を認証するには、いくつかの方法があります。 シングルサインオンと匿名アクセスのいずれも有効になっていない場合、リモート処理の要求は、基本認証（デフォルト）とカスタム認証のどちらかになります。
 
-基本認証は、Webアプリケーションコンテナからの標準のJ2EE基本認証に依存します。 基本認証の場合、HTTP 401エラーはブラウザーのチャレンジを引き起こします。 つまり、RemoteObjectを使用してFormsアプリケーションに接続しようとしたが、Flexアプリケーションからまだログインしていない場合、ブラウザーからユーザー名とパスワードの入力が求められます。
+基本認証は、Webアプリケーションコンテナからの標準のJ2EE基本認証に依存します。 基本認証の場合、HTTP 401エラーはブラウザーのチャレンジを引き起こします。 つまり、RemoteObjectを使用してFormsアプリケーションに接続しようとしたが、まだFlexアプリケーションからログインしていない場合は、ユーザー名とパスワードの入力を求めるプロンプトが表示されます。
 
 カスタム認証の場合、サーバーは、認証が必要であることを示すエラーをクライアントに送信します。
 
 >[!NOTE]
-HTTPトークンを使用した認証の実行について詳しくは、HTTPトークンを使用したSSO認証を実行するFlash Builderアプリケーションの [作成を参照してください](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens)。
+HTTPトークンを使用した認証の実行について詳しくは、HTTPトークンを使用してSSO認証を実行するFlash Builderアプリケーションの [作成を参照してください](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens)。
 
 ### カスタム認証の使用 {#using-custom-authentication}
 
 リモートエンドポイントで認証方法を「基本」から「カスタム」に変更して、管理コンソールでカスタム認証を有効にします。 カスタム認証を使用する場合、クライアントアプリケーションは `ChannelSet.login` メソッドを呼び出してログインし、 `ChannelSet.logout` メソッドを呼び出してログアウトします。
 
 >[!NOTE]
-AEM Formsの前のリリースでは、 `RemoteObject.setCredentials` メソッドを呼び出して秘密鍵証明書を送信先に送信していました。 この `setCredentials` メソッドは、コンポーネントが最初にサーバーへの接続を試みるまで、実際には秘密鍵証明書をサーバーに渡しませんでした。 したがって、コンポーネントが障害イベントを発行した場合、認証エラーが原因で障害が発生したか、別の理由で障害が発生したかは不明です。 この `ChannelSet.login` メソッドは、呼び出し時にサーバーに接続し、認証の問題を直ちに処理できるようにします。 この `setCredentials` メソッドは引き続き使用できますが、使用することをお勧めし `ChannelSet.login` ます。
+以前のリリースのAEM Formsでは、 `RemoteObject.setCredentials` メソッドを呼び出して秘密鍵証明書を送信先に送信していました。 この `setCredentials` メソッドは、コンポーネントが最初にサーバーへの接続を試みるまで、実際には秘密鍵証明書をサーバーに渡しませんでした。 したがって、コンポーネントが障害イベントを発行した場合、認証エラーが原因で障害が発生したか、別の理由で障害が発生したかは不明です。 この `ChannelSet.login` メソッドは、呼び出し時にサーバーに接続し、認証の問題を直ちに処理できるようにします。 この `setCredentials` メソッドは引き続き使用できますが、使用することをお勧めし `ChannelSet.login` ます。
 
 複数の宛先で同じチャネルと対応するChannelSetオブジェクトを使用できるので、1つの宛先にログインすると、同じチャネルまたはチャネルを使用する他の宛先にログインします。 2つのコンポーネントが同じChannelSetオブジェクトに異なる秘密鍵証明書を適用する場合は、最後に適用した秘密鍵証明書が使用されます。 複数のコンポーネントが同じ認証済みChannelSetオブジェクトを使用している場合、 `logout` メソッドを呼び出すと、すべてのコンポーネントが宛先からログアウトされます。
 
@@ -443,24 +443,24 @@ AEM Formsの前のリリースでは、 `RemoteObject.setCredentials` メソッ�
 
 ### シングルサインオンの使用 {#using-single-sign-on}
 
-AEM Formsユーザーは、複数のAEM Forms Webアプリケーションに接続してタスクを実行できます。 ユーザーがWebアプリケーション間を移動する場合、各Webアプリケーションに個別にログインする必要はありません。 AEM Formsのシングルサインオンメカニズムを使用すると、ユーザーは一度ログインし、任意のAEM Forms Webアプリケーションにアクセスできます。 AEM Forms開発者はAEM Formsで使用するクライアントアプリケーションを作成できるので、シングルサインオンのメカニズムも活用できる必要があります。
+AEM formsユーザーは、複数のAEM FormsWebアプリケーションに接続してタスクを実行できます。 ユーザーがWebアプリケーション間を移動する場合、各Webアプリケーションに個別にログインする必要はありません。 AEM Formsのシングルサインオンメカニズムを使用すると、ユーザーは一度ログインし、任意のAEM FormsWebアプリケーションにアクセスできます。 AEM Formsの開発者はAEM Formsで使用するクライアントアプリケーションを作成できるので、シングルサインオンメカニズムも活用できる必要があります。
 
-各AEM Forms Webアプリケーションは、独自のWebアーカイブ(WAR)ファイルにパッケージ化され、その後、エンタープライズアーカイブ(EAR)ファイルの一部としてパッケージ化されます。 アプリケーションサーバーでは異なるWebアプリケーション間でのセッションデータの共有が許可されないので、AEM FormsではHTTP cookieを使用して認証情報を保存します。 認証cookieを使用すると、ユーザーはFormsアプリケーションにログインし、他のAEM Forms Webアプリケーションに接続できます。 この方法は、シングルサインオンと呼ばれます。
+各AEM FormsWebアプリケーションは、独自のWebアーカイブ(WAR)ファイルにパッケージ化され、その後、エンタープライズアーカイブ(EAR)ファイルの一部としてパッケージ化されます。 アプリケーションサーバーでは異なるWebアプリケーション間でのセッションデータの共有が許可されないので、AEM Formsでは認証情報を保存する際にHTTP cookieを使用します。 認証cookieを使用すると、ユーザーはFormsアプリケーションにログインし、他のAEM FormsWebアプリケーションに接続できます。 この方法は、シングルサインオンと呼ばれます。
 
-AEM Forms開発者は、フォームガイド（非推奨）の機能を拡張し、Workspaceをカスタマイズするためのクライアントアプリケーションを作成します。 例えば、Workspaceアプリケーションでプロセスを開始できます。 次に、クライアントアプリケーションはリモートエンドポイントを使用して、Formsサービスからデータを取得します。
+AEM Formsの開発者は、フォームガイド（非推奨）の機能を拡張し、Workspaceをカスタマイズするためのクライアントアプリケーションを作成します。 例えば、Workspaceアプリケーションでプロセスを開始できます。 次に、クライアントアプリケーションはリモートエンドポイントを使用して、Formsサービスからデータを取得します。
 
-AEM Forms Remoting（AEM Formsでは非推奨）を使用してAEM Formsサービスを呼び出すと、クライアントアプリケーションは、要求の一部として認証cookieを渡します。 ユーザーは既に認証されているので、クライアントアプリケーションからAEM Formsサービスに接続するために追加のログインは必要ありません。
+AEM Formsリモーティング(AEM formsでは廃止されています)を使用してAEM Formsサービスを呼び出すと、クライアントアプリケーションは、要求の一部として認証cookieを渡します。 ユーザーは既に認証されているので、クライアントアプリケーションからAEM Formsサービスに接続するために追加のログインは必要ありません。
 
 >[!NOTE]
 Cookieが無効な場合やcookieがない場合は、ログインページへの暗黙的なリダイレクトは行われません。 したがって、匿名サービスを呼び出すことはできます。
 
-AEM Formsのシングルサインオンメカニズムを回避するには、ログインしてログアウトするクライアントアプリケーションを独自に記述します。 シングルサインオンメカニズムを使用しない場合は、アプリケーションで基本認証またはカスタム認証を使用できます。
+AEM Formsのシングルサインオンメカニズムを省略するには、独自にログインしてログアウトするクライアントアプリケーションを記述します。 シングルサインオンメカニズムを使用しない場合は、アプリケーションで基本認証またはカスタム認証を使用できます。
 
-このメカニズムではAEM Formsのシングルサインオンメカニズムを使用しないので、認証cookieはクライアントに書き込まれません。 ログイン資格情報は、リモートチャネルの `ChannelSet` オブジェクトに格納されます。 したがって、同じ操作を行った `RemoteObject` 呼び出しは、それらの資格情報のコンテキスト `ChannelSet` で行われます。
+このメカニズムではAEM Formsのシングルサインオンメカニズムを使用しないので、クライアントに認証cookieが書き込まれません。 ログイン資格情報は、リモートチャネルの `ChannelSet` オブジェクトに格納されます。 したがって、同じ操作を行った `RemoteObject` 呼び出しは、それらの資格情報のコンテキスト `ChannelSet` で行われます。
 
 ### AEM Formsでのシングルサインオンの設定 {#setting-up-single-sign-on-in-aem-forms}
 
-AEM Formsでシングルサインオンを使用するには、中央のログインサービスを含むフォームワークフローコンポーネントをインストールします。 ユーザーが正常にログインした後、集中化されたログインサービスはユーザーに認証cookieを返します。 Forms Webアプリケーションに対する以降のリクエストにはすべて、cookieが含まれます。 Cookieが有効な場合、ユーザーは認証済みと見なされ、再度ログインする必要はありません。
+AEM Formsでシングルサインオンを使用するには、中央のログインサービスを含むformsワークフローコンポーネントをインストールします。 ユーザーが正常にログインした後、集中化されたログインサービスはユーザーに認証cookieを返します。 それ以降にFormsのWebアプリケーションにリクエストされるたびに、cookieが含まれます。 Cookieが有効な場合、ユーザーは認証済みと見なされ、再度ログインする必要はありません。
 
 ### シングルサインオンを使用するクライアントアプリケーションの作成 {#writing-a-client-application-that-uses-single-sign-on}
 
@@ -468,7 +468,7 @@ AEM Formsでシングルサインオンを使用するには、中央のログ�
 
 AEM Formsのシングルサインオンメカニズムを使用する場合は、基本ではなくカスタム認証を使用するようにリモートエンドポイントを設定します。 それ以外の場合は、基本認証を使用する場合、認証エラーによってブラウザーのチャレンジが行われ、ユーザーに表示されないようにします。 代わりに、アプリケーションで認証エラーが検出され、中央のログインサービスを使用してログインするようにユーザーに指示するメッセージが表示されます。
 
-クライアントアプリケーションは、次の例に示すように、コンポーネントを使用してリモートエンドポイントを経由してAEM Formsにアクセスし `RemoteObject` ます。
+クライアントアプリケーションは、次の例に示すように、 `RemoteObject` コンポーネントを使用してリモートエンドポイントを経由してAEM Formsにアクセスします。
 
 ```as3
  <?xml version="1.0"?> 
@@ -511,11 +511,11 @@ AEM Formsのシングルサインオンメカニズムを使用する場合は�
 
 **Flexアプリケーションの実行中に新しいユーザーとしてログインする**
 
-Flexで構築されたアプリケーションには、AEM Formsサービスに対するすべてのリクエストを含む認証Cookieが含まれます。 パフォーマンス上の理由から、AEM Formsではリクエストのたびにcookieが検証されません。 ただし、認証cookieが別の認証cookieに置き換えられた場合、AEM Formsは認証cookieを検出します。
+Flexで作成されたアプリケーションには、AEM Formsサービスへのすべてのリクエストを含む認証cookieが含まれます。 パフォーマンス上の理由から、AEM Formsではリクエストごとにcookieが検証されません。 ただし、AEM Formsでは、認証cookieが別の認証cookieに置き換えられた場合を検出します。
 
 例えば、クライアントアプリケーションを開始し、アプリケーションがアクティブな間は、一元化されたログインサービスを使用してログアウトします。 次に、別のユーザーとしてログインします。 別のユーザーとしてログインすると、既存の認証cookieが、新しいユーザーの認証cookieに置き換えられます。
 
-クライアントアプリケーションからの次のリクエスト時に、AEM FormsはCookieが変更されたことを検出し、ユーザーをログアウトします。 したがって、cookieの変更後の最初のリクエストは失敗します。 それ以降のリクエストはすべて、新しいcookieのコンテキストで作成され、成功します。
+クライアントアプリケーションからの次のリクエスト時に、AEM Formsはcookieが変更されたことを検出し、ユーザーをログアウトします。 したがって、cookieの変更後の最初のリクエストは失敗します。 それ以降のリクエストはすべて、新しいcookieのコンテキストで作成され、成功します。
 
 **ログアウト**
 
@@ -525,30 +525,30 @@ AEM Formsからログアウトしてセッションを無効にするには、�
 
 **Flexアプリケーションの実行中にログアウトする**
 
-Flexで構築されたクライアントアプリケーションを開始し、集中化されたログインサービスを使用してログアウトできます。 ログアウトプロセスの一環として、認証cookieが削除されます。 Cookieを持たない、または無効なCookieを持つリモートリクエストが行われた場合、ユーザーセッションは無効になります。 このアクションは実際にはログアウトです。 次回クライアントアプリケーションがAEM Formsサービスへの接続を試みると、ユーザーのログインが要求されます。
+Flexで構築されたクライアントアプリケーションを開始し、集中化されたログインサービスを使用してログアウトできます。 ログアウトプロセスの一環として、認証cookieが削除されます。 Cookieを持たない、または無効なCookieを持つリモートリクエストが行われた場合、ユーザーセッションは無効になります。 このアクションは実際にはログアウトです。 次回クライアントアプリケーションがAEM Formsサービスに接続しようとすると、ユーザーはログインするように要求されます。
 
 **関連トピック**
 
-[AEM Forms Remoting（AEM Formsでは廃止されています）を使用してAEM Formsを呼び出す](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
+[AEM Formsリモートを使用したAEM Formsの呼び出し(AEM formsでは廃止)](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
 
-[AEM Forms Remotingでのドキュメントの処理（AEM Formsでは非推奨）](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
+[(AEM formsでは廃止)AEM Formsリモートでのドキュメントの処理](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
 
-[AEM Forms Flexライブラリファイルのインクルード](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
+[AEM FormsFlex図書館ファイルを含める](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
 
-[AEM Forms Remoting（AEM Formsでは廃止されています）を使用して安全でないドキュメントを渡すことによる短時間のみ有効なプロセスの呼び出し](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
+[(AEM formsでは廃止されています)AEM Formsリモートを使用して安全でないドキュメントを渡し、短時間のみ有効なプロセスを呼び出す](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
 [Remotingを使用してプロセスを呼び出すための安全なドキュメントーの渡し](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)
 
 ## Remotingを使用してプロセスを呼び出すための安全なドキュメントーの渡し {#passing-secure-documents-to-invoke-processes-using-remoting}
 
-1つ以上のドキュメントを必要とするプロセスを呼び出すときに、セキュリティで保護されたドキュメントをAEM Formsに渡すことができます。 安全なドキュメントを渡すことで、ビジネス情報や機密ドキュメントを保護できます。 この場合、ドキュメントはPDFドキュメント、XMLドキュメント、Wordドキュメントなどを参照できます。 Flexで記述されたクライアントドキュメントからAEM Formsにセキュアドキュメントを渡すには、AEM Formsがセキュアアプリケーションを許可するように設定されている必要があります。 (セキュリティで保護されたドキュメントとセキュリティで保護されていないを受け入れるようにAEM Formsを [設定するを参照](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents))。
+1つ以上のドキュメントを必要とするプロセスを呼び出すときに、セキュリティで保護されたドキュメントをAEM Formsに渡すことができます。 安全なドキュメントを渡すことで、ビジネス情報や機密ドキュメントを保護できます。 この場合、ドキュメントはPDFドキュメント、XMLドキュメント、Wordドキュメントなどを参照できます。 AEM Formsがセキュリティで保護されたドキュメントを許可するように設定されている場合、Flexで記述されたクライアントアプリケーションからAEM Formsにセキュアドキュメントを渡す必要があります。 (セキュリティで保護されたドキュメントとセキュリティで保護されていないを受け入れるようにAEM Formsを [設定するを参照](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents))。
 
-セキュリティで保護されたドキュメントを渡す場合は、シングルサインオンを使用し、「*ドキュメントアップロードアプリケーションユーザー*」ロールを持つAEM formsユーザーを指定します。 このロールがないと、セキュリティで保護されたドキュメントをアップロードできません。 プログラムによって、ロールをユーザーに割り当てることができます。 (ロールと権限の [管理を参照](/help/forms/developing/users.md#managing-roles-and-permissions))。
+安全なドキュメントを渡す場合は、シングルサインオンを使用し、*ドキュメントアップロードアプリケーションユーザ*ロールを持つAEM formsユーザを指定します。 このロールがないと、セキュリティで保護されたドキュメントをアップロードできません。 プログラムによって、ロールをユーザーに割り当てることができます。 (ロールと権限の [管理を参照](/help/forms/developing/users.md#managing-roles-and-permissions))。
 
 >[!NOTE]
 新しいロールを作成し、そのロールのメンバーが安全なドキュメントをアップロードできるようにする場合は、ドキュメントのアップロード権限を必ず指定してください。
 
-AEM Formsは、アップロードサーブレットに渡され `getFileUploadToken` たトークンを返すという名前の操作をサポートしています。 この `DocumentReference.constructRequestForUpload` メソッドには、AEM FormsへのURLと、このメソッドによって返されるトークンが必要で `LC.FileUploadAuthenticator.getFileUploadToken` す。 このメソッドは、アップロードサーブレットへの呼び出しで使用される `URLRequest` オブジェクトを返します。 次のコードに、このアプリケーションロジックを示します。
+AEM Formsは、という名前の操作 `getFileUploadToken` をサポートしています。この操作は、アップロードサーブレットに渡されるトークンを返します。 この `DocumentReference.constructRequestForUpload` メソッドには、メソッドが返すトークンと共に、AEM FormsへのURLが必要で `LC.FileUploadAuthenticator.getFileUploadToken` す。 このメソッドは、アップロードサーブレットへの呼び出しで使用される `URLRequest` オブジェクトを返します。 次のコードに、このアプリケーションロジックを示します。
 
 ```as3
      ... 
@@ -603,18 +603,18 @@ AEM Formsは、アップロードサーブレットに渡され `getFileUploadTo
 
 ）
 
-### セキュリティで保護されたドキュメントとセキュリティで保護されていないを受け入れるようにAEM Formsを設定する {#configuring-aem-forms-to-accept-secure-and-unsecure-documents}
+### 安全で安全でないドキュメントを受け入れるようにAEM Formsを設定する {#configuring-aem-forms-to-accept-secure-and-unsecure-documents}
 
-管理コンソールを使用して、FlexクライアントアプリケーションからAEM Formsプロセスにドキュメントを渡す場合に、ドキュメントをセキュリティで保護するかどうかを指定できます。 デフォルトでは、AEM Formsはセキュリティで保護されたドキュメントを受け入れるように設定されています。 次の手順を実行して、セキュリティで保護されたドキュメントを受け入れるようにAEM Formsを設定できます。
+管理コンソールを使用して、FlexクライアントアプリケーションからAEM Formsプロセスにドキュメントを渡す場合に、ドキュメントがセキュリティで保護されているかどうかを指定できます。 デフォルトでは、AEM Formsはセキュリティで保護されたドキュメントを受け入れるように設定されています。 次の手順を実行して、セキュリティで保護されたドキュメントを受け入れるようにAEM Formsを設定できます。
 
 1. 管理コンソールにログインします。
 1. 「 **設定**」をクリックします。
 1. 「 **コアシステム設定**」をクリックします。
 1. 「 **設定**」をクリックします。
-1. 「Flex applicationsからの保護されていないドキュメントのアップロードを許可」オプションが選択されていないことを確認します。
+1. 「Flexアプリケーションからのセキュリティで保護されていないドキュメントのアップロードを許可」オプションが選択されていないことを確認します。
 
 >[!NOTE]
-セキュリティで保護されていないドキュメントを受け入れるようにAEM Formsを設定するには、「セキュリティで保護されていないドキュメントのアップロードをFlexアプリケーションから許可する」オプションを選択します。 その後、アプリケーションまたはサービスを再起動し、設定が有効になることを確認します。
+セキュリティで保護されていないドキュメントを受け入れるようにAEM Formsを設定するには、「Flexアプリケーションからのセキュリティで保護されていないドキュメントのアップロードを許可」オプションを選択します。 その後、アプリケーションまたはサービスを再起動し、設定が有効になることを確認します。
 
 ### クイック開始: Remotingを使用して安全なドキュメントを渡すことによる短時間のみ有効なプロセスの呼び出し {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
 
@@ -622,7 +622,7 @@ AEM Formsは、アップロードサーブレットに渡され `getFileUploadTo
 
 ![iu_iu_secureremotelogin](assets/iu_iu_secureremotelogin.png)
 
-セキュリティで保護されたドキュメントのみのアップロードを許可するようにAEM Formsが設定されており、かつユーザーが「*ドキュメントアップロードアプリケーションユーザー*」ロールを持っていない場合は、例外が発生します。 ユーザーがこのロールを持っている場合は、ファイルがアップロードされ、プロセスが呼び出されます。
+セキュリティで保護されたドキュメントのアップロードのみを許可するようにAEM Formsが設定されており、ユーザが「*ドキュメントアップロードアプリケーションユーザ*」ロールを持っていない場合は、例外が発生します。 ユーザーがこのロールを持っている場合は、ファイルがアップロードされ、プロセスが呼び出されます。
 
 ```as3
  <?xml version="1.0" encoding="utf-8"?> 
@@ -872,13 +872,13 @@ AEM Formsは、アップロードサーブレットに渡され `getFileUploadTo
 
 **関連トピック**
 
-[AEM Forms Remoting（AEM Formsでは廃止されています）を使用してAEM Formsを呼び出す](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
+[AEM Formsリモートを使用したAEM Formsの呼び出し(AEM formsでは廃止)](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
 
-[AEM Forms Remotingでのドキュメントの処理（AEM Formsでは非推奨）](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
+[(AEM formsでは廃止)AEM Formsリモートでのドキュメントの処理](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
 
-[AEM Forms Flexライブラリファイルのインクルード](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
+[AEM FormsFlex図書館ファイルを含める](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
 
-[AEM Forms Remoting（AEM Formsでは廃止されています）を使用して安全でないドキュメントを渡すことによる短時間のみ有効なプロセスの呼び出し](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
+[(AEM formsでは廃止されています)AEM Formsリモートを使用して安全でないドキュメントを渡し、短時間のみ有効なプロセスを呼び出す](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
 [Flexで構築されたクライアントアプリケーションの認証](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
@@ -886,7 +886,7 @@ AEM Formsは、アップロードサーブレットに渡され `getFileUploadTo
 
 Remotingを使用して、カスタムコンポーネント内のサービスを呼び出すことができます。 例えば、Customerサービスを含む銀行コンポーネントについて考えてみましょう。 Flexで記述されたクライアントアプリケーションを使用して、Customerサービスに属する操作を呼び出すことができます。 このセクションに関連付けられたクイック開始を実行する前に、Bankカスタムコンポーネントを作成する必要があります。
 
-Customerサービスは、という名前の操作を公開し `createCustomer`ます。 ここでは、Customerサービスを呼び出して顧客を作成するFlexクライアントアプリケーションを作成する方法について説明します。 この操作には、新しい顧客を表す型の複雑なオブジェクト `com.adobe.livecycle.sample.customer.Customer` が必要です。 次の図に、Customerサービスを呼び出し、新しい顧客を作成するクライアントアプリケーションを示します。 この `createCustomer` 操作は、顧客識別子の値を返します。 識別子の値は、「顧客識別子」テキストボックスに表示されます。
+Customerサービスは、という名前の操作を公開し `createCustomer`ます。 ここでは、Customerサービスを呼び出し、顧客を作成するFlexクライアントアプリケーションの作成方法を説明します。 この操作には、新しい顧客を表す型の複雑なオブジェクト `com.adobe.livecycle.sample.customer.Customer` が必要です。 次の図に、Customerサービスを呼び出し、新しい顧客を作成するクライアントアプリケーションを示します。 この `createCustomer` 操作は、顧客識別子の値を返します。 識別子の値は、「顧客識別子」テキストボックスに表示されます。
 
 ![iu_iu_flexnewcust](assets/iu_iu_flexnewcust.png)
 
@@ -939,11 +939,11 @@ Customerサービスは、という名前の操作を公開し `createCustomer`�
 
 一部のAEM Forms操作では、入力値として複雑なデータ型が必要です。 これらの複雑なデータ型は、操作で使用される実行時の値を定義します。 例えば、Customerサービスの `createCustomer``Customer` 操作には、サービスに必要な実行時の値を含むインスタンスが必要です。 複合型がない場合、Customerサービスは例外をスローし、操作を実行しません。
 
-AEM Formsサービスを呼び出す場合は、必要なAEM Forms複合型にマップするActionScriptオブジェクトを作成します。 操作に必要な複雑なデータ型ごとに、個別のActionScriptオブジェクトを作成します。
+AEM Formsサービスを呼び出す場合は、必要なAEM Forms複合型にマップするActionScriptオブジェクトを作成します。 操作に必要な複雑なデータ型ごとに、別々のActionScriptオブジェクトを作成します。
 
 ActionScriptクラスで、 `RemoteClass` metadataタグを使用してAEM Forms複合型にマップします。 例えば、Customerサービスの `createCustomer` 操作を呼び出す場合、データ型にマップするActionScriptクラスを作成し `com.adobe.livecycle.sample.customer.Customer` ます。
 
-次のActionScriptクラス(Customer)は、AEM Formsデータ型にマップする方法を示し `com.adobe.livecycle.sample.customer.Customer`ます。
+次のCustomerActionScriptクラスは、AEM Formsデータ型にマップする方法を示して `com.adobe.livecycle.sample.customer.Customer`います。
 
 ```as3
  package customer 
@@ -962,14 +962,14 @@ ActionScriptクラスで、 `RemoteClass` metadataタグを使用してAEM Forms
  }
 ```
 
-AEM Forms複合型の完全修飾データ型は、aliasタグに割り当てられます。
+AEM Forms複合型の完全修飾データ型は、エイリアスタグに割り当てられます。
 
-ActionScriptクラスのフィールドは、AEM Forms複合型に属するフィールドと一致します。 Customer ActionScriptクラス内の6つのフィールドは、に属するフィールドと一致し `com.adobe.livecycle.sample.customer.Customer`ます。
+ActionScriptクラスのフィールドは、AEM Forms複合型に属するフィールドと一致します。 CustomerActionScriptクラス内の6つのフィールドは、に属するフィールドと一致し `com.adobe.livecycle.sample.customer.Customer`ます。
 
 >[!NOTE]
-Forms複合型に属するフィールド名を判断する良い方法は、サービスのWSDLをWebブラウザーで表示することです。 WSDLは、サービスの複合型と対応するデータメンバを指定します。 Customerサービスでは、次のWSDLが使用されます。 *https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl。*
+Forms複合型に属するフィールド名を判断する良い方法は、WebブラウザーでサービスのWSDLを表示することです。 WSDLは、サービスの複合型と対応するデータメンバを指定します。 Customerサービスでは、次のWSDLが使用されます。 *https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl。*
 
-Customer ActionScriptクラスは、customerという名前のパッケージに属しています。 複雑なAEM Formsデータ型にマップするすべてのActionScriptクラスを、それぞれのパッケージに含めることをお勧めします。 次の図に示すように、Flexプロジェクトのsrcフォルダーにフォルダーを作成し、フォルダーにActionScriptファイルを配置します。
+顧客ActionScriptクラスは、customerという名前のパッケージに属します。 複雑なAEM Formsデータ型にマップするすべてのActionScriptクラスは、それぞれのパッケージに配置することをお勧めします。 次の図に示すように、Flexプロジェクトのsrcフォルダにフォルダを作成し、そのフォルダにActionScriptファイルを配置します。
 
 ![iu_iu_customeras](assets/iu_iu_customeras.png)
 
@@ -1257,13 +1257,13 @@ Customer ActionScriptクラスは、customerという名前のパッケージに
 
 **関連トピック**
 
-[AEM Forms Remoting（AEM Formsでは廃止されています）を使用してAEM Formsを呼び出す](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
+[AEM Formsリモートを使用したAEM Formsの呼び出し(AEM formsでは廃止)](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
 
-[AEM Forms Remotingでのドキュメントの処理（AEM Formsでは非推奨）](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
+[(AEM formsでは廃止)AEM Formsリモートでのドキュメントの処理](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
 
-[AEM Forms Flexライブラリファイルのインクルード](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
+[AEM FormsFlex図書館ファイルを含める](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
 
-[AEM Forms Remoting（AEM Formsでは廃止されています）を使用して安全でないドキュメントを渡すことによる短時間のみ有効なプロセスの呼び出し](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
+[(AEM formsでは廃止されています)AEM Formsリモートを使用して安全でないドキュメントを渡し、短時間のみ有効なプロセスを呼び出す](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
 [Flexで構築されたクライアントアプリケーションの認証](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
