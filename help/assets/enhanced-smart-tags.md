@@ -8,6 +8,9 @@ topic-tags: authoring
 discoiquuid: c1b52aac-1eaf-4cfa-801f-77aeca0d90ea
 translation-type: tm+mt
 source-git-commit: ce50cffa1a6a27c700b38d1d17c920f1bc31e3cc
+workflow-type: tm+mt
+source-wordcount: '1577'
+ht-degree: 83%
 
 ---
 
@@ -32,7 +35,7 @@ source-git-commit: ce50cffa1a6a27c700b38d1d17c920f1bc31e3cc
 
 要約すると、スマートコンテンツサービスを使用するための主な手順は次のとおりです。
 
-* オンボーディング
+* 使用開始
 * アセットおよびタグの検討（分類の定義）
 * スマートコンテンツサービスのトレーニング
 * 自動タグ付け
@@ -46,9 +49,9 @@ Adobe I/O で統合を作成してスマートコンテンツサービスを使�
 * 組織の管理者権限を持つ Adobe ID アカウントがあること。
 * 組織でスマートコンテンツサービスが有効化されていること。
 
-## オンボーディング {#onboarding}
+## 使用開始 {#onboarding}
 
-Smart Content Serviceは、AEMのアドオンとして購入できます。購入後、Adobe IOへのリンクを含む電子メールが組織の管理者に送信されます。
+Smart Content ServiceはAEMのアドオンとして購入できます。 購入後、AdobeI/Oへのリンクが記載された電子メールが組織の管理者に送信されます。
 
 管理者は、そのリンクにアクセスしてスマートコンテンツサービスを AEM と統合することができます。このサービスを AEM Assets と統合するには、](config-smart-tagging.md)スマートタグの設定[を参照してください。
 
@@ -56,7 +59,7 @@ Smart Content Serviceは、AEMのアドオンとして購入できます。購�
 
 >[!NOTE]
 >
->AEM 6.3以前のバージョンを使用し、アセットに自動タグ付けサービスが必要な場合は、「スマートタグ」を参照 [してください](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)。 スマートタグはAI機能を使用せず、拡張スマートタグ機能よりも正確性が低くなります。
+>AEM 6.3以前のバージョンを使用し、アセットに自動タグ付けサービスが必要な場合は、「 [スマートタグ](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)」を参照してください。 スマートタグはAI機能を使用せず、拡張スマートタグ機能に比べて正確性が低くなります。
 
 ## アセットおよびタグのレビュー {#reviewing-assets-and-tags}
 
@@ -71,6 +74,7 @@ Smart Content Serviceは、AEMのアドオンとして購入できます。購�
 >1. トレーニングは元に戻すことができないプロセスです。キュレーション後のアセットセット内のタグを十分に確認してから、スマートコンテンツサービスに対してそれらのタグのトレーニングを実施することをお勧めします。
 >1. Please do read [Smart Content Service training guidelines](smart-tags-training-guidelines.md) before starting training for any tag.
 >1. スマートコンテンツサービスのトレーニングを初めておこなうときには、少なくとも 2 つの異なるタグについてトレーニングすることをお勧めします。
+
 >
 
 
@@ -141,7 +145,7 @@ Smart Content Serviceは、AEMのアドオンとして購入できます。購�
 
 スマートコンテンツサービスを有効にして、フォルダー内のアセットを定期的にタグ付けすることができます。Open the properties page of your asset folder, select **[!UICONTROL Enable Smart Tags]** under the **[!UICONTROL Details]** tab, and save the changes.
 
-フォルダーに対してこのオプションを選択すると、Smart Content Serviceはフォルダー内のアセットに自動的にタグを付けます。 デフォルトでは、タグ付けワークフローは毎日午前12:00に実行されます。
+フォルダーに対してこのオプションを選択すると、Smart Content Serviceはフォルダー内のアセットに自動的にタグを付けます。 デフォルトでは、タグ付けワークフローは毎日午前12時に実行されます。
 
 ### オンデマンドのタグ付け {#on-demand-tagging}
 
@@ -161,7 +165,7 @@ Smart Content Serviceは、AEMのアドオンとして購入できます。購�
 
    ![dam_smart_tag_workflow](assets/dam_smart_tag_workflow.png)
 
-1. In the **[!UICONTROL Run Workflow]** dialog, browse to the payload folder containing assets on which you want to apply your tags automatically.
+1. **[!UICONTROL ワークフローを実行]**&#x200B;ダイアログで、タグを自動的に適用するアセットが格納されているペイロードフォルダーを参照します。
 1. ワークフローのタイトルとオプションのコメントを指定します。次に、「**[!UICONTROL 実行]**」をタップまたはクリックします。
 
    ![tagging_dialog](assets/tagging_dialog.png)
@@ -183,6 +187,6 @@ Smart Content Serviceは、AEMのアドオンとして購入できます。購�
 >
 >後続のタグ付けサイクルでは、変更されたアセットのみが、新しくトレーニングされたタグで再度タグ付けされます。
 >
->ただし、タグ付けワークフローの最後のタグ付けサイクルと現在のタグ付けサイクルの間のギャップが24時間を超える場合は、変更されていないアセットにもタグが付けられます。
+>ただし、タグ付けワークフローで最後のタグ付けサイクルと現在のタグ付けサイクルの間のギャップが24時間を超える場合は、変更されていないアセットにもタグが付けられます。
 >
 >定期的なタグ付けワークフローについては、間隔が 6 ヶ月を超えると、変更されていないアセットがタグ付けされます。
