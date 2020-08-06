@@ -58,6 +58,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    1. Specify **create_first_ic_print_template** as the Print template and tap **Select**. Ensure that the **Use Print as Master for Web Channel** checkbox is not selected.
    1. Specify **Create_First_IC_templates** folder > **Create_First_IC_Web_Template** as the Web template and tap **Select**.
    1. 「**作成**」をタップします。
+
    インタラクティブ通信が正常に作成されたことを通知する確認メッセージが表示されます。
 
 1. 「**編集**」をタップし、右側のペインでインタラクティブ通信を開きます。
@@ -118,6 +119,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    1. Specify **create_first_ic_print_template** as the Print template and tap **Select**. Ensure that the **Use Print as Master for Web Channel** checkbox is not selected.
    1. Specify **Create_First_IC_templates** folder > **Create_First_IC_Web_Template** as the Web template and tap **Select**.
    1. 「**作成**」をタップします。
+
    インタラクティブ通信が正常に作成されたことを通知する確認メッセージが表示されます。
 
 1. 「**編集**」をタップし、右側のペインでインタラクティブ通信を開きます。
@@ -170,6 +172,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    1. 「**境界線**」セクションで、**境界線の幅**&#x200B;を **1.5px** に指定します。**境界線のスタイル**&#x200B;として&#x200B;**実線**&#x200B;を選択し、**境界線の半径**&#x200B;を **46px** に指定します。
    1. 「**背景**」セクションから、ボタンの背景色に赤を選択します。
    1. 「**寸法と位置**」セクションの「**余白**」フィールドで、「**同時に編集**」アイコンをタップして、**右**&#x200B;の余白を **450px** に設定します。「上」、「下」、「左」の各フィールドは空白に設定されます。
+
    ![ic_web_hyperlink](assets/ic_web_hyperlink.png)
 
 1. Tap **Pay Now** target area, and tap **+** to add an **Image** component.
@@ -198,6 +201,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    1. Select the **Use Print as Master for Web Channel** checkbox.
    1. Specify **Create_First_IC_templates** folder > **Create_First_IC_Web_Template** as the Web template and tap **Select**.
    1. 「**作成**」をタップします。
+
    インタラクティブ通信が正常に作成されたことを通知する確認メッセージが表示されます。
 
 1. 「**編集**」をタップし、右側のペインでインタラクティブ通信を開きます。
@@ -221,6 +225,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    * 請求内容コンポーネントを請求内容パネルに
    * 請求概要コンポーネントを請求概要パネルに
    * レイアウトフラグメント（テーブル）を通話明細パネルに
+
    ![ic_web_content_tree](assets/ic_web_content_tree.png)
 
 1. 「[Web チャネル用インタラクティブ通信の作成](#create-interactive-communication-for-web-channel)」の手順 13～18 を繰り返し、「**Pay Now**」（今すぐ支払う）および「**登録**」ハイパーリンクをインタラクティブ通信の Web チャネルに挿入します。
