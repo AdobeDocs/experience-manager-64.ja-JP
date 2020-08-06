@@ -11,6 +11,9 @@ topic-tags: administering-on-demand-services-app
 discoiquuid: 393cf504-917e-4bf6-9a8b-b7a5bd862c65
 translation-type: tm+mt
 source-git-commit: 55b6a113bcb4d39b7eb100f21a05b9b44e3fe1c3
+workflow-type: tm+mt
+source-wordcount: '990'
+ht-degree: 72%
 
 ---
 
@@ -33,9 +36,9 @@ AEM を使用して AEM Mobile アプリ用のコンテンツを作成するに�
 
 AEM Mobile のセットアップを始めるには、以下の作業が必要です。
 
-* **APIキーのリクエスト**:On-Demand Services APIにアクセスするには、APIキーをリクエストする必要があります。 API キーをリクエストするには、[PDF フォーム](https://helpx.adobe.com/digital-publishing-solution/help/integrating-dps.html)に記入します。Send the completed form to Adobe Developer Support: [wwds@adobe.com](mailto:wwds@adobe.com)
+* **APIキーのリクエスト**: On-Demand Services APIにアクセスするには、APIキーをリクエストする必要があります。 API キーをリクエストするには、[PDF フォーム](https://helpx.adobe.com/jp/digital-publishing-solution/help/integrating-dps.html)に記入します。Send the completed form to Adobe Developer Support: [wwds@adobe.com](mailto:wwds@adobe.com)
 
-* **デバイスIDとデバイストークンの生成**:APIキーを受け取ったら、デバイスIDとデバイストークンを生成できます。 Go to [https://aex.aemmobile.adobe.com](https://aex.aemmobile.adobe.com/) and do the following:
+* **デバイスIDとデバイストークンの生成**: APIキーを受け取ったら、デバイスIDとデバイストークンを生成できます。 Go to [https://aex.aemmobile.adobe.com](https://aex.aemmobile.adobe.com/) and do the following:
 
    * API キーを提供します。
    * 以下の権限で AEM Mobile プロジェクトに追加した Adobe ID でログインします（プロジェクト作成手順については以下を参照してください）。
@@ -43,11 +46,11 @@ AEM Mobile のセットアップを始めるには、以下の作業が必要で
       * 管理：プロジェクトとユーザーを管理
       * コンテンツ：コンテンツを追加／編集、コンテンツを削除、コンテンツを表示、コンテンツを公開
 
-すべての条件が満たされた場合は、デバイスIDとデバイストークンが生成されます。
+すべての条件が満たされると、デバイスIDとデバイストークンが生成されます。
 
 >[!NOTE]
 >
->Adobe ID には、AEM Mobile プロジェクトへのアクセス権が与えられている必要があります。オンラインヘルプの [AEM Mobile のアカウント管理](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html)を参照してください。
+>Adobe ID には、AEM Mobile プロジェクトへのアクセス権が与えられている必要があります。オンラインヘルプの [AEM Mobile のアカウント管理](https://helpx.adobe.com/jp/digital-publishing-solution/help/account-admin-dps.html)を参照してください。
 
 ## AEM Mobile のプロジェクトの作成 {#creating-projects-for-aem-mobile}
 
@@ -57,11 +60,11 @@ AEM Mobile のセットアップを始めるには、以下の作業が必要で
 
 >[!NOTE]
 >
->To learn more about Creating Projects in AEM Mobile, click [here](https://helpx.adobe.com/digital-publishing-solution/help/creating-projects.html).
+>To learn more about Creating Projects in AEM Mobile, click [here](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-projects.html).
 
 ## AEM Mobile コネクタの設定 {#configuring-an-aem-mobile-connector}
 
-AEMの設定では、コネクタの設定に関して次の手順を実行します。 AEM Mobile コネクタの設定が完了すると、ユーザーはユーザーグループおよび権限を設定できます。
+AEMのセットアップでは、コネクタの設定に次の手順を実行します。 AEM Mobile コネクタの設定が完了すると、ユーザーはユーザーグループおよび権限を設定できます。
 
 AEM Mobile On-Demand コネクタは、AEM Mobile で管理するコンテンツを Adobe Experience Manager Mobile On-demand Services にバインドするために使用します。これにより、コンテンツ作成者は AEM のツールを使用してモバイルアプリケーション向けの素材を作成および管理しつつ、AEM Mobile On-demand Services を使用してモバイルコンテンツを容易に配布できます。
 
@@ -80,7 +83,7 @@ AEM Mobile 統合が正しく機能するには、設定手順を完了する必
 
 1. Edit ***Experience Manager Mobile On-demand Services Client***
 
-   1. **（必須）必須フィールド** :
+   1. **（必須）** ：必須フィールドを入力します。
 
       1. クライアント ID
       1. クライアントの秘密鍵
@@ -96,7 +99,7 @@ AEM Mobile 統合が正しく機能するには、設定手順を完了する必
 
 1. クラウドサービスに移動します。
 
-   1. AEM > Tools > Deployment> [CloudServices](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html). ***Adobe Experience Manager Mobile On-demand Servicesをスクロールまたは検索します。***
+   1. AEM > Tools > Deployment> [CloudServices](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html). Scroll or search for ***Adobe Experience Manager Mobile On-demand Services***
 
 1. Select ***Configure now*** or ***Show Configurations*** and select the add new configuration icon
 
@@ -118,7 +121,7 @@ AEM Mobile アプリの開発では、3 つの異なる役割が存在します�
 * デベロッパー
 * 作成者
 
-For more information on creating roles with different permissions such as for app building or for creating and publishing content, click [Creating User Roles and Granting Access](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) in AEM Mobile Help.
+For more information on creating roles with different permissions such as for app building or for creating and publishing content, click [Creating User Roles and Granting Access](https://helpx.adobe.com/jp/digital-publishing-solution/help/account-admin-dps.html) in AEM Mobile Help.
 
 >[!NOTE]
 >
