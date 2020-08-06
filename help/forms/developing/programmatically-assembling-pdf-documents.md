@@ -1,6 +1,6 @@
 ---
-title: プログラムによるPDFドキュメント
-seo-title: プログラムによるPDFドキュメント
+title: プログラムによるPDFドキュメントのアセンブリ
+seo-title: プログラムによるPDFドキュメントのアセンブリ
 description: 'null'
 seo-description: 'null'
 uuid: aa3f8f39-1fbc-48d0-82ff-6caaadf125fc
@@ -12,19 +12,22 @@ topic-tags: operations
 discoiquuid: ebe8136b-2a79-4035-b9d5-aa70a5bbd4af
 translation-type: tm+mt
 source-git-commit: 5a185a50dc9e413953be91444d5c8e76bdae0a69
+workflow-type: tm+mt
+source-wordcount: '2092'
+ht-degree: 2%
 
 ---
 
 
-# プログラムによるPDFドキュメント {#programmatically-assembling-pdf-documents}
+# プログラムによるPDFドキュメントのアセンブリ {#programmatically-assembling-pdf-documents}
 
-Assembler Service APIを使用して、複数のPDFドキュメントを1つのPDFドキュメントにアセンブルできます。 次の図に、3つのPDFドキュメントを単一のPDFドキュメントに結合する例を示します。
+Assembler Service APIを使用すると、複数のPDFドキュメントを1つのPDFドキュメントにアセンブリできます。 次の図は、3つのPDFドキュメントを1つのPDFドキュメントに結合する様子を示しています。
 
 ![pa_pa_ドキュメント_アセンブリ](assets/pa_pa_document_assembly.png)
 
-複数のPDFドキュメントを1つのPDFドキュメントにアセンブリするには、DDXドキュメントが必要です。 DDXドキュメントは、Assemblerサービスによって生成されるPDFドキュメントを記述します。 つまり、DDXドキュメントは、実行するアクションをAssemblerサービスに指示します。
+2つ以上のPDFドキュメントを1つのPDFドキュメントにアセンブリするには、DDXドキュメントが必要です。 DDXドキュメントは、Assemblerサービスが生成するPDFドキュメントを記述します。 つまり、DDXドキュメントは、実行するアクションをAssemblerサービスに指示します。
 
-この説明の目的で、次のDDXドキュメントを使用します。
+この説明の目的で、次のDDXドキュメントが使用されているとします。
 
 ```as3
  <?xml version="1.0" encoding="UTF-8"?> 
@@ -36,11 +39,11 @@ Assembler Service APIを使用して、複数のPDFドキュメントを1つのP
  </DDX>
 ```
 
-このDDXドキュメントは、 *map.pdfとdirections.pdfという2つのPDFドキュメントを*** 1つのPDFドキュメントにマージします。
+このDDXドキュメントは、 *map.pdf* および ** directions.pdfという2つのPDFドキュメントを1つのPDFドキュメントにマージします。
 
 >[!NOTE]
 >
->PDFドキュメントをディスアセンブリするDDXドキュメントを確認するには、「PDFアセンブリのプログラムによ [るディスアセンブリ」を参照してくださ](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)い。
+>PDFドキュメントをディスアセンブリするDDXドキュメントを確認するには、「PDFドキュメントの [プログラムによるディスアセンブリ](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)」を参照してください。
 
 >[!NOTE]
 >
@@ -48,15 +51,15 @@ Assembler Service APIを使用して、複数のPDFドキュメントを1つのP
 
 >[!NOTE]
 >
->DDXドキュメントについて詳しくは、 [Assembler Service and DDX Referenceを参照してください](https://www.adobe.com/go/learn_aemforms_ddx_63)。
+>DDXドキュメントについて詳しくは、『 [Assembler Service and DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63)』を参照してください。
 
 ## Webサービスを使用してAssemblerサービスを呼び出す場合の考慮事項 {#considerations-when-invoking-assembler-service-using-web-services}
 
-大きなドキュメントのアセンブリ中にヘッダーとフッターを追加すると、エラーが発生し、フ `OutOfMemory` ァイルがアセンブリされない場合があります。 この問題が発生する可能性を減らすには、次の例に示すよ `DDXProcessorSetting` うに、DDXドキュメントに要素を追加します。
+大きなドキュメントのアセンブリ中にヘッダーとフッターを追加すると、 `OutOfMemory` エラーが発生し、ファイルがアセンブルされない場合があります。 この問題が発生する可能性を低くするには、次の例に示すように、DDXドキュメントに `DDXProcessorSetting` 要素を追加します。
 
 `<DDXProcessorSetting name="checkpoint" value="2000" />`
 
-この要素は、要素の子または要素の子と `DDX` して追加することができ `PDF result` ます。 この設定のデフォルト値は0（ゼロ）で、チェックポイントがオフになり、DDXは要素が存在しない場合と同じよ `DDXProcessorSetting` うに動作します。 エラーが発生した場 `OutOfMemory` 合は、値を整数（通常は500 ～ 5000）に設定する必要があります。 チェックポイントの値が小さいと、チェックポイントの頻度が高くなります。
+この要素は、要素の子として、または `DDX` 要素の子として追加でき `PDF result` ます。 この設定のデフォルト値は0（ゼロ）で、チェックポイントがオフになり、DDXは `DDXProcessorSetting` 要素が存在しない場合と同じ動作をします。 エラーが発生した場合は、値を整数（通常は500 ～ 5000）に設定する必要があります。 `OutOfMemory` チェックポイントの値を小さくすると、チェックポイントの頻度が高くなります。
 
 ## 手順の概要 {#summary-of-steps}
 
@@ -64,57 +67,57 @@ Assembler Service APIを使用して、複数のPDFドキュメントを1つのP
 
 1. プロジェクトファイルを含めます。
 1. PDFアセンブラクライアントを作成します。
-1. 既存のDDXドキュメントの参照
-1. 参照入力PDFドキュメント。
+1. 既存のDDXドキュメントの参照。
+1. 入力PDFドキュメントを参照します。
 1. 実行時オプションを設定します。
-1. 入力PDFアセンブリをドキュメントします。
+1. 入力PDFドキュメントをアセンブリします。
 1. 結果を抽出します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、必ずプロキシファイルを含めてください。
+必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 次のJARファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar（AEM FormsがJBossにデプロイされている場合に必要）
-* jbossall-client.jar（AEM FormsがJBossにデプロイされている場合に必要）
+* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
+* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-aem FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
+AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
 
 **PDFアセンブラクライアントの作成**
 
 プログラムによってAssembler操作を実行する前に、Assemblerクライアントを作成する必要があります。
 
-**既存のDDXの参照ドキュメント**
+**既存のDDXドキュメントの参照**
 
-PDFドキュメントをアセンブリするには、DDXアセンブリを参照する必要があります。ドキュメント 例えば、この節で紹介したDDXドキュメントについて考えてみましょう。 このDDXドキュメントは、2つのPDFドキュメントを1つのPDFドキュメントに結合するようにAssemblerサービスに指示します。
+PDFドキュメントをアセンブリするには、DDXドキュメントを参照する必要があります。 例えば、この節で紹介したDDXドキュメントについて考えてみましょう。 このDDXドキュメントは、2つのPDFドキュメントを1つのPDFドキュメントに結合するようAssemblerサービスに指示します。
 
 **参照入力PDFドキュメント**
 
-Assemblerサービスに渡す入力PDFドキュメントを参照します。 例えば、MapとDirectionsという名前の2つの入力PDFドキュメントを渡す場合は、対応するPDFファイルを渡す必要があります。
+Assemblerサービスに渡す入力PDFドキュメントを参照します。 例えば、MapとDirectionsという名前の2つの入力PDFドキュメントーを渡す場合は、対応するPDFファイルを渡す必要があります。
 
-map.pdfファイルとdirections.pdfファイルは、両方ともコレクションオブジェクトに配置する必要があります。 キーの名前は、DDXドキュメントのPDF source属性の値と一致する必要があります。 DDXドキュメントのキーとsource属性が一致した場合、PDFファイルの名前は関係ありません。
+map.pdfファイルとdirections.pdfファイルは、両方ともコレクションオブジェクトに配置する必要があります。 キーの名前は、DDXドキュメントのPDF source属性の値と一致する必要があります。 DDXドキュメントのkey属性とsource属性が一致した場合、PDFファイルの名前は関係ありません。
 
 >[!NOTE]
 >
->操作を `*AssemblerResult*` 呼び出すと、コレクションオブジェクトを含むオブジェクトが返さ `*invokeDDX*` れます。 この操作は、複数の入力PDF操作をAssemblerサービスに渡す場合にドキュメントされます。 ただし、Assemblerサービスに入力PDFを1つだけ渡し、1つの戻りドキュメントのみが必要な場合は、操作を呼び出 `*invokeOneDocument*` します。 この操作を呼び出すと、1つのドキュメントが返されます。 この操作の使用について詳しくは、暗号化されたPDF [ドキュメントの集成](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents)。
+>操作を呼び出すと、コレクションオブジェクトを含む `*AssemblerResult*` オブジェクトが返され `*invokeDDX*` ます。 この操作は、2つ以上の入力PDFドキュメントをAssemblerサービスに渡す場合に使用します。 ただし、1つの入力PDFのみをAssemblerサービスに渡し、1つの戻りドキュメントのみが必要な場合は、 `*invokeOneDocument*` 操作を呼び出します。 この操作を呼び出すと、1つのドキュメントが返されます。 この操作の使用について詳しくは、暗号化されたPDFドキュメントの [アセンブリを参照してください](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents)。
 
 **実行時オプションの設定**
 
-ジョブの実行中にAssemblerサービスの動作を制御する実行時オプションを設定できます。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するオプションを設定できます。 設定できる実行時オプションについて詳しくは、『 `AssemblerOptionSpec` AEM Forms APIリファレンス』のクラス [参照を参照し](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)てください。
+ジョブの実行中にAssemblerサービスの動作を制御する実行時オプションを設定できます。 例えば、エラーが発生した場合にジョブの処理を続行するようAssemblerサービスに指示するオプションを設定できます。 設定できる実行時オプションについて詳しくは、 `AssemblerOptionSpec` AEM FormsAPIリファレンスの [クラス参照を参照してください](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
 
-**入力PDFのアセンブリドキュメント**
+**入力PDFドキュメントのアセンブリ**
 
-サービスクライアントを作成し、DDXファイルを参照し、入力PDFドキュメントを格納するコレクションオブジェクトを作成し、実行時オプションを設定したら、DDX操作を呼び出すことができます。 この節で指定するDDXドキュメントを使用する場合、map.pdfファイルとdirection.pdfファイルが1つのPDFドキュメントに結合されます。
+サービスクライアントを作成し、DDXファイルを参照し、入力PDFドキュメントを格納するコレクションオブジェクトを作成し、実行時オプションを設定した後で、DDX操作を呼び出すことができます。 この節で指定するDDXドキュメントを使用する場合、map.pdfファイルとdirection.pdfファイルが1つのPDFドキュメントにマージされます。
 
 **結果の抽出**
 
-Assemblerサービスは、オブジェ `java.util.Map` クトから取得でき、操作結果を含 `AssemblerResult` むオブジェクトを返します。 返されるオブジ `java.util.Map` ェクトには、結果のドキュメントと例外が含まれます。
+Assemblerサービスは、オブジェクトから取得でき、操作結果を含む `java.util.Map` オブジェクトを返 `AssemblerResult` します。 返される `java.util.Map` オブジェクトには、結果のドキュメントと例外が含まれます。
 
-次の表に、返されるオブジェクト内に配置できるキー値とオブジェクトタイプの一部を示し `java.util.Map` ます。
+次の表に、返されるオブジェクト内に配置できるキー値とオブジェクトの種類の一部を示し `java.util.Map` ます。
 
 <table> 
  <thead> 
@@ -128,12 +131,12 @@ Assemblerサービスは、オブジェ `java.util.Map` クトから取得でき
   <tr> 
    <td><p><code><i>documentName</i></code></p></td> 
    <td><p><code>com.adobe.idp.Document</code></p></td> 
-   <td><p>DDX結果ドキュメントで指定された結果要素が含まれます</p></td> 
+   <td><p>DDX結果ドキュメントに指定された結果要素を含みます</p></td> 
   </tr> 
   <tr> 
    <td><p><code><i>documentName</i></code></p></td> 
    <td><p><code>Exception</code></p></td> 
-   <td><p>例外を含みます。ドキュメント</p></td> 
+   <td><p>ドキュメントに対する例外が含まれます</p></td> 
   </tr> 
   <tr> 
    <td><p><code>OutputMapConstants.LOG_NAME</code></p></td> 
@@ -149,7 +152,7 @@ Assemblerサービスは、オブジェ `java.util.Map` クトから取得でき
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[プログラムによるPDFドキュメントの分解](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)
+[プログラムによるPDFドキュメントのディスアセンブリ](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)
 
 ## Java APIを使用したPDFドキュメントのアセンブリ {#assemble-pdf-documents-using-the-java-api}
 
@@ -164,49 +167,51 @@ Assembler Service API(Java)を使用してPDFドキュメントをアセンブ�
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
    * Create an `AssemblerServiceClient` object by using its constructor and passing the `ServiceClientFactory` object.
 
-1. 既存のDDXドキュメントの参照
+1. 既存のDDXドキュメントの参照。
 
-   * コンストラ `java.io.FileInputStream` クターを使用し、DDXファイルの場所を指定するstring値を渡して、DDXドキュメントを表すオブジェクトを作成します。
+   * コンストラクターを使用し、DDXファイルの場所を指定する文字列値を渡して、DDXドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
-1. 参照入力PDFドキュメント。
+1. 入力PDFドキュメントを参照します。
 
-   * コンストラク `java.util.Map` ターを使用して、入力PDFドキュメントの保存に使用するオブジェクトを作成 `HashMap` します。
-   * 各入力PDFドキュメントに対して、コンストラク `java.io.FileInputStream` ターを使用し、入力PDFドキュメントの場所を渡して、オブジェクトを作成します。
-   * 各入力PDFドキュメントに対して、オブジェクトを作成 `com.adobe.idp.Document` し、PDFドキュメントを含むオ `java.io.FileInputStream` ブジェクトを渡します。
-   * 各入力ドキュメントに対して、そのメソッドを呼び出し、 `java.util.Map` 次の引数を渡して、オ `put` ブジェクトにエントリを追加します。
+   * コンストラクターを使用して、入力PDFドキュメントの格納に使用する `java.util.Map` オブジェクトを作成し `HashMap` ます。
+   * 各入力PDFドキュメントに対して、コンストラクターを使用し、入力PDFドキュメントの場所を渡して、 `java.io.FileInputStream` オブジェクトを作成します。
+   * 各入力PDFドキュメントに対して、 `com.adobe.idp.Document` オブジェクトを作成し、PDFドキュメントを含む `java.io.FileInputStream` オブジェクトを渡します。
+   * 各入力ドキュメントーに対して、そのメソッドを呼び出し、次の引数を渡して、 `java.util.Map` オブジェクトにエントリを追加し `put` ます。
 
-      * キー名を表すstring値です。 この値は、DDX要素で指定されたPDFソース要素の値と一致する必要があります。ドキュメント
-      * ソースPDF `com.adobe.idp.Document` ドキュメントを含むオ `java.util.List` ブジェクト(または複数のドキュメントを指定するオブジェクト)です。
+      * キー名を表すstring値です。 この値は、DDXドキュメントで指定されたPDFソース要素の値と一致する必要があります。
+      * ソースPDFドキュメントを含む `com.adobe.idp.Document` オブジェクト(または複数のドキュメントを指定する `java.util.List` オブジェクト)です。
 
 1. 実行時オプションを設定します。
 
-   * コンストラクタ `AssemblerOptionSpec` ーを使用して、実行時のオプションを格納するオブジェクトを作成します。
-   * オブジェクトに属するメソッドを呼び出して、ビジネス要件に合わせて実行時のオプションを設定 `AssemblerOptionSpec` します。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、オブジェクトのメ `AssemblerOptionSpec` ソッドを呼び出し `setFailOnError` て渡してくださ `false`い。
+   * コンストラクターを使用して、実行時のオプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
+   * オブジェクトに属するメソッドを呼び出して、ビジネス要件に合うように実行時オプションを設定し `AssemblerOptionSpec` ます。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、 `AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドを呼び出して渡し `false`ます。
 
-1. 入力PDFアセンブリをドキュメントします。
+1. 入力PDFドキュメントをアセンブリします。
 
-   オブジェクト `AssemblerServiceClient` のメソッドを `invokeDDX` 呼び出し、次の必要な値を渡します。
+   オブジェクトの `AssemblerServiceClient``invokeDDX` メソッドを呼び出し、次の必須値を渡します。
 
-   * 使用 `com.adobe.idp.Document` するDDXドキュメントを表すオブジェクト
-   * アセンブリ `java.util.Map` 対象の入力PDFファイルを含むオブジェクトです。
-   * デフォ `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` ルトのフォントやジョブログレベルを含む、実行時のオプションを指定するオブジェクト。
-   このメ `invokeDDX` ソッドは、ジ `com.adobe.livecycle.assembler.client.AssemblerResult` ョブの結果と発生した例外を含むオブジェクトを返します。
+   * 使用されるDDXドキュメントを表す `com.adobe.idp.Document` オブジェクトです
+   * アセンブリ対象の入力PDFファイルを含む `java.util.Map` オブジェクト
+   * デフォルトのフォントとジョブログレベルなど、実行時のオプションを指定する `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` オブジェクトです
+
+   この `invokeDDX` メソッドは、ジョブの結果と発生した例外を含む `com.adobe.livecycle.assembler.client.AssemblerResult` オブジェクトを返します。
 
 1. 結果を抽出します。
 
-   新しく作成されたPDFアクションを取得するには、次のドキュメントを実行します。
+   新しく作成されたPDFドキュメントを取得するには、次の操作を実行します。
 
-   * オブジェクトの `AssemblerResult` メソッドを呼び出 `getDocuments` します。 オブジェクトを返 `java.util.Map` します。
-   * 結果のオブジェクト `java.util.Map` が見つかるまで、オブジェクトを繰り返 `com.adobe.idp.Document` します。 (DDX要素で指定されたPDF結果ドキュメントを使用して、要素を取得できます)。
-   * オブジェクト `com.adobe.idp.Document` のメソッドを呼 `copyToFile` び出して、PDFドキュメントを抽出します。
+   * オブジェクトの `AssemblerResult` メソッドを呼び出し `getDocuments` ます。 これは、 `java.util.Map` オブジェクトを返します。
+   * オブジェクトを繰り返し処理して、結果のオブジ `java.util.Map``com.adobe.idp.Document` ェクトを見つけます。 (DDXドキュメントで指定されたPDF結果ドキュメントを使用して、要素を取得できます)。
+   * オブジェクトの `com.adobe.idp.Document``copyToFile` メソッドを呼び出してPDFドキュメントを抽出します。
+
    >[!NOTE]
    >
-   >を設 `*LOG_LEVEL*` 定してログを生成した場合は、オブジェクトのメソッドを使用してロ `*AssemblerResult*` グを抽出でき `*getJobLog*` ます。
+   >ログを生成するよう `*LOG_LEVEL*` に設定した場合は、オブジェクトの `*AssemblerResult*``*getJobLog*` メソッドを使用してログを抽出できます。
 
 **関連トピック**
 
-[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントのアセンブリ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
+[クイック開始（SOAPモード）: Java APIを使用したPDFドキュメントのアセンブリ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -222,66 +227,68 @@ Assembler Service API（Webサービス）を使用してPDFドキュメント�
 
    >[!NOTE]
    >
-   >AEM Formsをホ `localhost` ストするサーバーのIPアドレスで置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. PDFアセンブラクライアントを作成します。
 
-   * デフォルトのコンス `AssemblerServiceClient` トラクターを使用して、オブジェクトを作成します。
-   * コンストラクタ `AssemblerServiceClient.Endpoint.Address` ーを使用してオブジェクトを作 `System.ServiceModel.EndpointAddress` 成します。 WSDLを指定するstring値をAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)に渡します。 属性を使用する必要はありま `lc_version` せん。 この属性は、サービス参照を作成する際に使用されます。
-   * フィールド `System.ServiceModel.BasicHttpBinding` の値を取得して、オブジェクトを作成 `AssemblerServiceClient.Endpoint.Binding` します。 戻り値を `BasicHttpBinding` にキャストします。
-   * オブジェクト `System.ServiceModel.BasicHttpBinding` のフィールドをに `MessageEncoding` 設定しま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
-   * 次のオプションを実行して、基本的なHTTP認証を有効にします。タスク
+   * デフォルトのコンストラクターを使用して `AssemblerServiceClient` オブジェクトを作成します。
+   * コンストラクターを使用して `AssemblerServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/AssemblerService?blob=mtom`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。
+   * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `AssemblerServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
+   * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
+   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * AEM formsのユーザー名をフィールドに割り当てま `AssemblerServiceClient.ClientCredentials.UserName.UserName`す。
-      * 対応するパスワード値をフィールドに割り当てま `AssemblerServiceClient.ClientCredentials.UserName.Password`す。
-      * 定数値をフィールドに `HttpClientCredentialType.Basic` 割り当てま `BasicHttpBindingSecurity.Transport.ClientCredentialType`す。
-      * 定数値をフィールドに `BasicHttpSecurityMode.TransportCredentialOnly` 割り当てま `BasicHttpBindingSecurity.Security.Mode`す。
+      * フィールドにAEM formsユーザー名を割り当て `AssemblerServiceClient.ClientCredentials.UserName.UserName`ます。
+      * 対応するパスワード値をフィールドに割り当て `AssemblerServiceClient.ClientCredentials.UserName.Password`ます。
+      * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
+      * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
 
-1. 既存のDDXドキュメントの参照
+1. 既存のDDXドキュメントの参照。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。このオブ `BLOB` ジェクトは、DDXドキュメントの保存。
-   * オブジェク `System.IO.FileStream` トを作成するには、コンストラクターを呼び出し、DDXドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
-   * オブジェクトの内容を格納するバイト配列を作成 `System.IO.FileStream` します。 バイト配列のサイズは、オブジェクトのプロパティを取得す `System.IO.FileStream` ることで指定で `Length` きます。
-   * オブジェクトのメソッドを呼び出し、読み取るバイ `System.IO.FileStream` ト配列、開始位 `Read` 置およびストリームの長さを渡すことで、バイト配列にストリームデータを入力します。
-   * オブジェクト `BLOB` にバイト配列の内容を割り `MTOM` 当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、DDXドキュメントの格納に使用されます。
+   * コンストラクターを呼び出し、DDXドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
+   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
+   * オブジェクトの `System.IO.FileStream``Read` メソッドを呼び出し、読み取るバイト配列、開始位置およびストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * オブジェクトのプロパティにバイト配列の内容を割り当てて、 `BLOB``MTOM` オブジェクトを入力します。
 
-1. 参照入力PDFドキュメント。
+1. 入力PDFドキュメントを参照します。
 
-   * 各入力PDFドキュメントに対して、コンストラクタ `BLOB` ーを使用してオブジェクトを作成します。 このオ `BLOB` ブジェクトは、入力PDFの保存に使用されるドキュメントです。
-   * オブジェクト `System.IO.FileStream` を作成するには、コンストラクターを呼び出し、入力PDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
-   * オブジェクトの内容を格納するバイト配列を作成 `System.IO.FileStream` します。 バイト配列のサイズは、オブジェクトのプロパティを取得す `System.IO.FileStream` ることで指定で `Length` きます。
-   * オブジェクトのメソッドを呼び出して、バイト配列にストリ `System.IO.FileStream` ームデータを入力 `Read` します。 読み取るバイト配列、開始位置およびストリーム長を渡します。
-   * バイト配列の `BLOB` 内容をフィールドに割り `MTOM` 当てて、オブジェクトを入力します。
-   * Create a `MyMapOf_xsd_string_To_xsd_anyType` object. このコレクションオブジェクトは、入力PDFコレクションの保存に使用されるドキュメントです。
-   * 各入力PDFドキュメントに対して、オブジェクトを作成 `MyMapOf_xsd_string_To_xsd_anyType_Item` します。 例えば、2つの入力PDFドキュメントを使用する場合は、2つのオブジェクトを作成 `MyMapOf_xsd_string_To_xsd_anyType_Item` します。
-   * キー名を表すstring値をオブジェクトのフィールド `MyMapOf_xsd_string_To_xsd_anyType_Item` に割り当て `key` ます。 この値は、DDX要素で指定されたPDFソース要素の値と一致する必要があります。ドキュメント (このタスクは、入力PDFのドキュメントごとに実行)
-   * PDFドキュメントを保 `BLOB` 存するオブジェクトをオブジェク `MyMapOf_xsd_string_To_xsd_anyType_Item` トのフィールドに割り当 `value` てます。 (このタスクは、入力PDFのドキュメントごとに実行)
-   * オ追加ブジェクト `MyMapOf_xsd_string_To_xsd_anyType_Item``MyMapOf_xsd_string_To_xsd_anyType` 。 Invoke the `MyMapOf_xsd_string_To_xsd_anyType` object&#39;s `Add` method and pass the `MyMapOf_xsd_string_To_xsd_anyType` object. (このタスクは、入力PDFのドキュメントごとに実行)
+   * 入力PDFドキュメントごとに、コンストラクターを使用して `BLOB` オブジェクトを作成します。 この `BLOB` オブジェクトは、入力PDFドキュメントの保存に使用されます。
+   * コンストラクターを呼び出し、入力PDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡して、 `System.IO.FileStream` オブジェクトを作成します。
+   * オブジェクトの内容を格納するバイト配列を作成し `System.IO.FileStream` ます。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトのプロパティを取得して決定でき `Length` ます。
+   * オブジェクトのメソッドを呼び出して、バイト配列にストリームデータ `System.IO.FileStream` を入力し `Read` ます。 読み取るバイト配列、開始位置、ストリーム長を渡します。
+   * オブジェクトにバイト配列の内容を割り当てて、 `BLOB` オブジェクト `MTOM` を入力します。
+   * Create a `MyMapOf_xsd_string_To_xsd_anyType` object. このコレクションオブジェクトは、入力PDFドキュメントの格納に使用されます。
+   * 入力PDFドキュメントごとに、 `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。 例えば、2つの入力PDFドキュメントを使用する場合は、2つの `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。
+   * キー名を表すstring値を `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `key` フィールドに割り当てます。 この値は、DDXドキュメントで指定されたPDFソース要素の値と一致する必要があります。 (このタスクは、入力PDFドキュメントごとに実行します)。
+   * PDFドキュメントを保存している `BLOB` オブジェクトをオブジェクトのフィ `MyMapOf_xsd_string_To_xsd_anyType_Item` ー `value` ルドに割り当てます。 (このタスクは、入力PDFドキュメントごとに実行します)。
+   * オ追加ブジェクトをオブジ `MyMapOf_xsd_string_To_xsd_anyType_Item``MyMapOf_xsd_string_To_xsd_anyType` ェクトに追加します。 Invoke the `MyMapOf_xsd_string_To_xsd_anyType` object&#39;s `Add` method and pass the `MyMapOf_xsd_string_To_xsd_anyType` object. (このタスクは、入力PDFドキュメントごとに実行します)。
 
 1. 実行時オプションを設定します。
 
-   * コンストラクタ `AssemblerOptionSpec` ーを使用して、実行時のオプションを格納するオブジェクトを作成します。
-   * オブジェクトに属するデータメンバーに値を割り当てて、ビジネス要件に合わせて実行時オプションを設定 `AssemblerOptionSpec` します。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、オブジェクトの `false` データメ `AssemblerOptionSpec` ンバーに割り当 `failOnError` てます。
+   * コンストラクターを使用して、実行時のオプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
+   * オブジェクトに属するデータメンバに値を割り当てることで、ビジネス要件に合った実行時オプションを設定し `AssemblerOptionSpec` ます。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、 `false` オブジェクトの `AssemblerOptionSpec``failOnError` データメンバーに割り当てます。
 
-1. 入力PDFアセンブリをドキュメントします。
+1. 入力PDFドキュメントをアセンブリします。
 
-   オブジェクト `AssemblerServiceClient` のメソッドを `invoke` 呼び出し、次の値を渡します。
+   オブジェクトの `AssemblerServiceClient``invoke` メソッドを呼び出し、次の値を渡します。
 
-   * DDX `BLOB` ドキュメント
-   * 入力PDF `mapItem` ドキュメントを含む配列。 そのキーはPDFソースファイルの名前と一致し、その値はそれらのファイルに対応するオブジ `BLOB` ェクトである必要があります。
-   * 実行時 `AssemblerOptionSpec` のオプションを指定するオブジェクトです。
-   このメ `invoke` ソッドは、ジ `AssemblerResult` ョブの結果と発生した可能性のある例外を含むオブジェクトを返します。
+   * DDXドキュメントを表す `BLOB` オブジェクトです。
+   * 入力PDFドキュメントを含む `mapItem` 配列です。 キーはPDFソースファイルの名前と一致する必要があり、値はそれらのファイルに対応する `BLOB` オブジェクトである必要があります。
+   * 実行時オプションを指定する `AssemblerOptionSpec` オブジェクトです。
+
+   この `invoke` メソッドは、ジョブの結果と発生した可能性のある例外を含む `AssemblerResult` オブジェクトを返します。
 
 1. 結果を抽出します。
 
-   新しく作成されたPDFアクションを取得するには、次のドキュメントを実行します。
+   新しく作成されたPDFドキュメントを取得するには、次の操作を実行します。
 
-   * 結果のPDF `AssemblerResult` ドキュメントを `documents` 含むオブジェクト `Map` のフィールドにアクセスします。
-   * 結果のオブジェ `Map` クトの名前と一致するキーが見つかるまで、オブジェクトを繰り返し処理します。ドキュメント 次に、その配列メンバーのをにキャ `value` ストしま `BLOB`す。
-   * オブジェクトのプロパティにアクセスして、PDFドキュメントを表すバイナリ `BLOB` データを抽出 `MTOM` します。 PDFファイルに書き出すことのできるバイトの配列を返します。
+   * オブジェクトのフ `AssemblerResult` ィールドにアクセスします。この `documents` フィールドは、結果のPDFドキュメントを含む `Map` オブジェクトです。
+   * 結果のドキュメントの名前と一致するキーが見つかるまで、 `Map` オブジェクトを繰り返し処理します。 次に、その配列メンバーのをにキャスト `value` し `BLOB`ます。
+   * PDFドキュメントを表すバイナリデータを抽出するには、その `BLOB` オブジェクトの `MTOM` プロパティにアクセスします。 PDFファイルに書き出すことができるバイトの配列を返します。
+
    >[!NOTE]
    >
-   >ログを `LOG_LEVEL` 生成するように設定した場合は、オブジェクトのデータメンバの値を取得してログ `AssemblerResult` を抽出で `jobLog` きます。
+   >ログを生成するよう `LOG_LEVEL` に設定した場合は、オブジェクトの `AssemblerResult``jobLog` データメンバの値を取得してログを抽出できます。
 
 **関連トピック**
 
