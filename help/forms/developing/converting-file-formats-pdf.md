@@ -24,7 +24,7 @@ ht-degree: 4%
 
 Generate PDF サービスは、ネイティブファイル形式を PDF に変換します。また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。
 
-Generate PDF サービスは、以下のファイル形式を PDF に変換する際にネイティブアプリケーションを使用します。特に説明がない限り、これらのアプリケーションはドイツ語版、フランス語版、英語版および日本語版のみサポートされています。*Windowsのみ* :Windows Server® 2003およびWindows Server 2008のみがサポートされています。
+Generate PDF サービスは、以下のファイル形式を PDF に変換する際にネイティブアプリケーションを使用します。特に説明がない限り、これらのアプリケーションはドイツ語版、フランス語版、英語版および日本語版のみサポートされています。*Windowsのみ* 、Windows Server® 2003およびWindows Server 2008のみがサポートされていることを示します。
 
 * Microsoft Office 2003および2007:DOC、DOCX、RTF、TXT、XLS、XLSX、PPT、PPTX、VSD、MPP、MPPX、XPS、PUBを変換（Windowsのみ）
 
@@ -40,13 +40,13 @@ Generate PDF サービスは、以下のファイル形式を PDF に変換す�
    >
    >Generate PDFサービスは、64ビット版のOpenOfficeをサポートしていません。
 
-* PSDを変換するAdobe Photoshop® CS2（Windowsのみ）
+* Adobe Photoshop® CS2からPSDへの変換（Windowsのみ）
 
    >[!NOTE]
    >
-   >Photoshop CS3およびCS4は、Windows Server 2003またはWindows Server 2008をサポートしていないので、サポートされていません。
+   >PhotoshopCS3とCS4は、Windows Server 2003またはWindows Server 2008をサポートしていないため、サポートされていません。
 
-* FMを変換するAdobe FrameMaker® 7.2および8（Windowsのみ）
+* Adobe FrameMaker® 7.2および8でFMを変換（Windowsのみ）
 * PMD、PM6、P65、PM の変換：Adobe PageMaker® 7.0（Windows のみ）
 * サードパーティのアプリケーションによってサポートされているネイティブ形式（アプリケーションに固有のセットアップファイルの開発が必要）（Windows のみ）
 
@@ -71,7 +71,7 @@ Generate PDF サービスでは、PDF を次のファイル形式に変換しま
 Generate PDF サービスを使用するには、以下の管理タスクを実行する必要があります。
 
 * 必要なネイティブアプリケーションを、AEM Forms をホストするコンピューター上にインストールする
-* AEM FormsをホストするコンピューターにAdobe Acrobat ProfessionalまたはAcrobat Pro Extended 9.2をインストールする
+* AEM Formsをホストするコンピューターに、Adobe AcrobatプロフェッショナルまたはAcrobat Proエクステンデッド9.2をインストールする
 * インストール後のセットアップタスクを実行する
 
 これらのタスクは、『AEM formsの自動インストールおよびデプロイ（JBoss版）』に説明されています。
@@ -205,17 +205,17 @@ Generate PDF API（Webサービス）を使用して、Microsoft Wordドキュ�
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Generate PDFクライアントを作成します。
 
    * Create a `GeneratePDFServiceClient` object by using its default constructor.
-   * Create a `GeneratePDFServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 ただし、を指定し `?blob=mtom`ます。
+   * Create a `GeneratePDFServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 ただし、を指定し `?blob=mtom`ます。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `GeneratePDFServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `GeneratePDFServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -362,17 +362,17 @@ Generate PDF API（Webサービス）を使用してHTMLコンテンツをPDFド
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Generate PDFクライアントを作成します。
 
    * Create a `GeneratePDFServiceClient` object by using its default constructor.
-   * Create a `GeneratePDFServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 ただし、を指定し `?blob=mtom`ます。
+   * Create a `GeneratePDFServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 ただし、を指定し `?blob=mtom`ます。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `GeneratePDFServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `GeneratePDFServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -513,17 +513,17 @@ Generate PDF API（Webサービス）を使用してPDFドキュメントをRTF�
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Generate PDFクライアントを作成します。
 
    * Create a `GeneratePDFServiceClient` object by using its default constructor.
-   * Create a `GeneratePDFServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 ただし、を指定し `?blob=mtom`ます。
+   * Create a `GeneratePDFServiceClient.Endpoint.Address` object by using the `System.ServiceModel.EndpointAddress` constructor. WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 ただし、を指定し `?blob=mtom`ます。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `GeneratePDFServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `GeneratePDFServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `GeneratePDFServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -617,7 +617,7 @@ WinIDがテキスト、サブウィンドウ、ウィンドウクラスIDなど�
   </tr> 
   <tr> 
    <td><p>スクリプト </p></td> 
-   <td><p>Generate PDFサービスとネイティブアプリケーションとの間のやり取りを指定します。 このような操作を行うと、通常、アプリケーションはAdobe PDFドライバーにファイルを印刷するように指示されます。 </p><p>このスクリプトには、ネイティブアプリケーションに特定のダイアログボックスを開かせ、それらのダイアログボックスのフィールドとボタンに対して特定の応答を提供する命令が含まれています。 </p></td> 
+   <td><p>Generate PDFサービスとネイティブアプリケーションとの間のやり取りを指定します。 このような操作を行うと、通常、アプリケーションはAdobe PDFドライバにファイルを印刷するよう指示します。 </p><p>このスクリプトには、ネイティブアプリケーションに特定のダイアログボックスを開かせ、それらのダイアログボックスのフィールドとボタンに対して特定の応答を提供する命令が含まれています。 </p></td> 
    <td><p>Generate PDFサービスには、サポートされるすべてのネイティブアプリケーション用のスクリプトファイルが含まれます。 これらのファイルは、XML編集アプリケーションを使用して変更できます。</p><p>新しいネイティブアプリケーションのサポートを追加するには、新しいスクリプトファイルを作成する必要があります。 (ネイティブアプリケーション用の追加のダイアログXMLファイルの <a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">作成または変更を参照</a>)。 </p></td> 
   </tr> 
   <tr> 
@@ -724,8 +724,8 @@ Generate PDFサービスで、前述のファイルのいずれにも記述さ�
 
 ダイアログファイルとスクリプトファイルは、appmondata.jarファイルに存在します。 これらのファイルのいずれかを変更したり、新しいスクリプトやダイアログファイルを追加したりする前に、このJARファイルを展開する必要があります。 例えば、EditPlusアプリケーションのサポートを追加するとします。 appmon.editplus.script.en_US.xmlという名前の2つのXMLファイルとappmon.editplus.script.addition.en_US.xmlを作成します。 これらのXMLスクリプトは、次に示すように、adobe-appmondata.jarファイルの2か所に追加する必要があります。
 
-* adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon。 adobe-livecycle-native-jboss-x86_win32.earファイルは、*[AEM forms install directory]\*configurationManagerのexportフォルダーにあります。 （AEM Formsを別のJ2EEアプリケーションサーバーにデプロイする場合は、adobe-livecycle-native-jboss-x86_win32.earファイルを、ご使用のJ2EEアプリケーションサーバーに対応するEARファイルに置き換えます）。
-* adobe-generatepdf-dsc.jar/adobe-appmondata.jar\com\adobe\appmon （adobe-appmondata.jarファイルはadobe-generatepdf-dsc.jarファイル内にあります）。 adobe-generatepdf-dsc.jarファイルは、 *[AEM formsのinstall directory]*\deployフォルダーにあります。
+* adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon。 adobe-livecycle-native-jboss-x86_win32.earファイルは、*[AEM forms install directory]\*configurationManagerのexportフォルダーにあります。 (AEM Formsを別のJ2EEアプリケーションサーバーにデプロイする場合は、adobe-livecycle-native-jboss-x86_win32.earファイルを、ご使用のJ2EEアプリケーションサーバーに対応するEARファイルに置き換えます)。
+* adobe-generatepdf-dsc.jar/adobe-appmondata.jar\com\adobe\appmon （adobe-appmondata.jarファイルはadobe-generatepdf-dsc.jarファイル内にあります）。 adobe-generatepdf-dsc.jarファイルは、 *[AEM forms install directory]*\deployフォルダーにあります。
 
 これらのXMLファイルをadobe-appmondata.jarファイルに追加した後、GeneratePDFコンポーネントを再デプロイする必要があります。 adobe-appmondata.jarファイルにダイアログおよびスクリプトXMLファイルを追加するには、次のタスクを実行します。
 
@@ -875,9 +875,9 @@ Microsoft Spy++を使用して、ネイティブアプリケーションのウ�
 
 **Generate PDFサービス設定ファイルの更新**
 
-1. **/** サービス/ **Adobe PDF Generator** /Configuration Files **、次にselectExport Configuration********** homeを選択します。
+1. 「 **Home** / **Services** / **Adobe PDFジェネレータ** / ********&#x200B;構成構成ファイル」、「次に「Export構成ファイル」、「Export構成ファイル」の順に選択します。
 1. 必要に応じて、native2pdfconfig.xmlファイルの `filetype-settings` 要素を変更します。
-1. **/** サービス **/Adobe PDF Generator** /Configuration Filesを選択します。次に、 ************ Configuration homeを選択します。 設定データがGenerate PDFサービスに読み込まれ、以前の設定は置き換えられます。
+1. 「 **Home** / **Services** / **Adobe PDFジェネレータ** /********&#x200B;構成ファイル」、「構成ファイル」、「構成インポート」の順に選択します。 設定データがGenerate PDFサービスに読み込まれ、以前の設定は置き換えられます。
 
 >[!NOTE]
 >
@@ -916,7 +916,7 @@ Microsoft Spy++を使用して、ネイティブアプリケーションのウ�
 
 **Windows XP環境でシステム変数を作成する**
 
-1. [ **コントロールパネル] > [システム**]を選択します。
+1. 「 **Campaign コントロールパネル/システム**」を選択します。
 1. [システムプロパティ]ダイアログボックスで、[ **詳細設定** ]タブをクリックし、[ **環境変数**]をクリックします。
 1. [環境変数]ダイアログボックスの[システム変数]で、[ **新規**]をクリックします。
 1. 「New System Variable」ダイアログ・ボックスの「 **Variable name** 」ボックスに、 *[applicationname]*_PATHの形式を使用する名前を入力します。
@@ -937,7 +937,7 @@ Microsoft Spy++を使用して、ネイティブアプリケーションのウ�
 
 #### XMLファイル {#xml-files}
 
-AEM FormsにはサンプルのXMLファイルが含まれており、Generate PDFサービスでメモ帳を使用して、ファイル名拡張子が.txtのファイルを処理するようになっています。 このコードは、この節に含まれています。 さらに、この節で説明するその他の変更を行う必要があります。
+AEM Formsには、Generate PDFサービスでメモ帳を使用してファイル名拡張子.txtのファイルを処理するためのサンプルXMLファイルが含まれています。 このコードは、この節に含まれています。 さらに、この節で説明するその他の変更を行う必要があります。
 
 #### 追加のダイアログXMLファイル {#additional-dialog-xml-file}
 
@@ -957,7 +957,7 @@ AEM FormsにはサンプルのXMLファイルが含まれており、Generate PD
 
 #### スクリプトXMLファイル {#script-xml-file}
 
-この例では、Generate PDFサービスがメモ帳とやり取りし、Adobe PDFプリンターを使用してファイルを印刷する方法を指定します。
+次の例では、Generate PDFサービスがメモ帳とやり取りし、Adobe PDFプリンターを使用してファイルを印刷する方法を指定します。
 
 **NotepadスクリプトXMLファイル(appmon.notepad.script.en_US.xml)**
 
