@@ -10,13 +10,16 @@ topic-tags: forms-workspace
 discoiquuid: ac0a281f-f589-4a70-9bc7-1a23e054b02f
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '121'
+ht-degree: 51%
 
 ---
 
 
 # タスクのタブのカスタマイズ {#customizing-tabs-for-a-task}
 
-Uber表示のコンポーネントと `Start Process` Uber表示のコンポ `Start Process` ーネントのタブ名を `Task Details` カスタマイズ `ToDo` できます。
+Uber表示でコンポーネントのタブ名をカスタマイズしたり、Uber表示で `Start Process` コンポーネントのタブ名をカスタマイ `Start Process``Task Details``ToDo` ズすることができます。
 
 1. 「[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」に従います。
 1. Change the value of `tabname`in the `translation.json` file.
