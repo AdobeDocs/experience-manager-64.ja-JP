@@ -274,11 +274,12 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 1. Under `/apps/<project-name>/config`, create a node for the new [Apache Sling Logging Logger Configuration](/help/sites-deploying/osgi-configuration-settings.md#osgi-configuration-settings):
 
    * 名前:
+
    `org.apache.sling.commons.log.LogManager.factory.config-<identifier>` （これはLoggerの場合）
 
    `<identifier>` の部分は、インスタンスを識別するフリーテキストに置き換えます（この情報は省略できません）。例：`org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
-   * タイプ：`sling:OsgiConfig`
+   * 型：`sling:OsgiConfig`
    >[!NOTE]
    >
    >技術的に必須ではありませんが、`<identifier>` は一意にすることをお勧めします。
@@ -293,7 +294,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    * 名前：`org.apache.sling.commons.log.names`
 
-      タイプ：`String[] (String + Multi)`
+      型：`String[] (String + Multi)`
 
       値： ロガーがメッセージをログに記録するOSGiサービスを指定する。 例えば、次のすべての例を示します。
 
@@ -310,7 +311,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
       * 名前：`org.apache.sling.commons.log.pattern`
 
-         タイプ：`String`
+         型：`String`
 
          値： 必要に応じて、ログメッセージのパターンを指定します。 例えば、
 
@@ -366,7 +367,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
       As with the Logger, `<identifier>` is replaced by free text that you (must) enter to identify the instance (you cannot omit this information). 例：`org.apache.sling.commons.log.LogManager.factory.writer-MINE`
 
-   * タイプ：`sling:OsgiConfig`
+   * 型：`sling:OsgiConfig`
    >[!NOTE]
    >
    >技術的に必須ではありませんが、`<identifier>` は一意にすることをお勧めします。
@@ -375,7 +376,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    * 名前：`org.apache.sling.commons.log.file`
 
-      タイプ：`String`
+      型：`String`
 
       値： ロガーで指定したファイルと一致するようにログファイルを指定します。
 
@@ -385,13 +386,13 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
       * 名前：`org.apache.sling.commons.log.file.number`
 
-         タイプ：`Long`
+         型：`Long`
 
          Value: specify the number of log files you want kept; for example, `5`
 
       * 名前：`org.apache.sling.commons.log.file.size`
 
-         タイプ：`String`
+         型：`String`
 
          Value: specify as required to control file rotation by size/date; for example, `'.'yyyy-MM-dd`
    >[!NOTE]
@@ -400,11 +401,13 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >
    >* 最大ファイルサイズ
    >* 時刻／日付のスケジュール
+
    >
    >これにより、新しいファイルを作成する（また、名前のパターンに従って既存のファイルを名前変更する）条件を示します。
    >
    >* サイズ制限は、数値で指定できます。 サイズインジケーターを指定しない場合は、バイト数と見なされるか、サイズインジケーターの1つ( `KB`、 `MB`または `GB` （大文字と小文字は区別されません）を追加できます。
    >* 日時スケジュールは、 `java.util.SimpleDateFormat` パターンとして指定できます。 これは、ファイルの回転後の期間を定義します。 また、回転したファイルの末尾に付く接尾辞（識別用）。
+
    >
    >  デフォルトは「。」です。yyyy-MM-dd（日別ログローテーションの場合）
    >
@@ -493,6 +496,7 @@ OSGi events also generate audit records which can be seen from the **Configurati
    * **ログを表示**&#x200B;して、レプリケーションエージェントによるアクションのログにアクセス。
    * ターゲットインスタンスへの&#x200B;**接続をテスト**。
    * 必要に応じて、任意のキュー項目で&#x200B;**強制的に再試行**。
+
    >[!CAUTION]
    >
    >パブリッシュインスタンスのリバースレプリケーションアウトボックスには、「接続をテスト」リンクは使用しないでください。
@@ -736,7 +740,7 @@ request.log は、実行される各要求を、応答と共に登録します�
 
 ### rlog.jar を使用した所要時間の長い要求の検索 {#using-rlog-jar-to-find-requests-with-long-duration-times}
 
-AEMには、次の場所にある様々なヘルパーツールが含まれています。\
+AEMには、次に示す様々なヘルパーツールが含まれています。\
 `<cq-installation-dir>/crx-quickstart/opt/helpers`
 
 その 1 つ、`rlog.jar` を使用すると、`request.log` を短時間で分類し、所要時間を基準として、最長から最短の順序で要求を表示できます。
@@ -953,7 +957,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 サーバーのインストール以降のページアクティベーションの合計数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
-* **Type** `XPath`
+* **型** `XPath`
 
 * **パス** `/`
 
@@ -965,7 +969,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 現在サーバー上にあるページの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
-* **Type** `XPath`
+* **型** `XPath`
 
 * **パス** `/`
 
@@ -975,7 +979,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 インストール以降のロールアウトの合計数を特定するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
-* **Type** `XPath`
+* **型** `XPath`
 
 * **パス** `/`
 
@@ -987,7 +991,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 インストール以降におこなわれたライブコピーの合計数を特定するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
-* **Type** `XPath`
+* **型** `XPath`
 
 * **パス** `/`
 
@@ -999,7 +1003,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 現在保守している DAM アセットの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
-* **Type** `XPath`
+* **型** `XPath`
 
 * **パス** `/`
 
@@ -1024,7 +1028,7 @@ To determine the total size of the `/var/dam` folder:
 
 現在サーバー上にあるテンプレートの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
-* **Type** `XPath`
+* **型** `XPath`
 
 * **パス** `/`
 
@@ -1034,7 +1038,7 @@ To determine the total size of the `/var/dam` folder:
 
 現在サーバー上にあるコンポーネントの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
-* **Type** `XPath`
+* **型** `XPath`
 
 * **パス** `/`
 
@@ -1076,6 +1080,7 @@ To determine the total size of the `/var/dam` folder:
 >* [メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
 >* [ビルトインプロファイラーによる分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeUsingBuiltInProfiler.html)
 >* [遅延しているプロセスおよびブロックされたプロセスの分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+
 >
 
 
