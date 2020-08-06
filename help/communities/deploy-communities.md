@@ -76,11 +76,12 @@ ht-degree: 40%
          * UGC のレプリケーションなし
          * UGC はそれが入力された AEM インスタンスまたはクラスターでのみ表示
       * デフォルトはJSRPです。
+
    イネーブルメント機能&#x200B;**[用](overview.md#enablement-community)**
 
    * [FFmpegのインストールと設定](ffmpeg.md)
    * [MySQL用JDBCドライバーのインストール](#jdbc-driver-for-mysql)
-   * [SCORM-EngineAEM Communitiesのインストール](#scorm-package)
+   * [AEM CommunitiesSCORM-Engineのインストール](#scorm-package)
    * [有効にするMySQLのインストールと設定](mysql.md)
 
 
@@ -145,7 +146,7 @@ Further information on installing bundles is found on the [Web Console](/help/si
 
 Shareable Content Object Reference Model（SCORM）は、e ラーニングの標準規格と仕様をまとめた参照モデルです。SCORM では、コンテンツを転送可能な ZIP ファイルにパッケージ化する方法も定義されています。
 
-AEM Communities SCORM エンジンは[イネーブルメント](overview.md#enablement-community)機能で必要になります。AEM Communities6.4でサポートされるSCORMパッケージは次のとおりです。
+AEM Communities SCORM エンジンは[イネーブルメント](overview.md#enablement-community)機能で必要になります。AEM Communities6.4バージョンでサポートされるSCORMパッケージは次のとおりです。
 
 * **[cq -social- scorm -package、バージョン1.2.11](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-pkg)**。 この SCORM パッケージは、AEM 6.4 Communities の全バージョンでサポートされています。
 
@@ -220,7 +221,7 @@ On the local AEM instance, use package manager (for example [http://localhost:45
 
 Alternatively, accessing the package using package share from the local AEM instance (for example, [http://localhost:4502/crx/packageshare/](http://localhost:4502/crx/packageshare/)), the `Download`button will download to the local AEM instance&#39;s package repository.
 
-ローカルAEMインスタンスのパッケージリポジトリに移動したら、パッケージマネージャーを使用してパッケージをインストールします。
+ローカルAEMインスタンスのパッケージリポジトリに入ったら、パッケージマネージャーを使用してパッケージをインストールします。
 
 For more information, visit [How to Work With Packages](../../help/sites-administering/package-manager.md#package-share).
 
@@ -328,7 +329,7 @@ When using the author environment to [create sites](sites-console.md), [modify s
 
 AEM Communities には、すべての AEM サーバーインスタンスで同じ暗号鍵を使用する必要がある機能が 2 つあります。These are [Analytics](analytics.md) and [ASRP](asrp.md).
 
-AEM 6.3以降、主要な資料はファイルシステムに保存され、リポジトリには保存されなくなります。
+AEM 6.3以降、主要な資料はファイルシステムに保存され、リポジトリには保存されません。
 
 オーサー環境から他のすべてのインスタンスに鍵の素材をコピーするには、以下の操作をおこなう必要があります。
 
@@ -349,7 +350,7 @@ AEM 6.3以降、主要な資料はファイルシステムに保存され、リ�
 
 
 
-* 各ターゲットのAEMインスタンス
+* 各ターゲットAEMインスタンスに対して
 
    * データフォルダーに移動します
 
@@ -366,7 +367,7 @@ AEM 6.3以降、主要な資料はファイルシステムに保存され、リ�
 
 #### リポジトリのレプリケーション {#repository-replication}
 
-AEM 6.2以前と同様、主要なマテリアルをリポジトリに保存する場合は、各AEMインスタンスの初回起動時に次のシステムプロパティを指定することで保存できます（これにより初期リポジトリが作成されます）。
+AEM 6.2以前と同様に、主要なマテリアルをリポジトリに保存する場合は、各AEMインスタンスの初回起動時に次のシステムプロパティを指定することで保存できます（初期リポジトリを作成します）。
 
 * `-Dcom.adobe.granite.crypto.file.disable=true`
 
