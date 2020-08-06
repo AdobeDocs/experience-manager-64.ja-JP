@@ -10,6 +10,9 @@ content-type: reference
 discoiquuid: f934eb02-1f84-44f2-9f14-3f17250c9a90
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '730'
+ht-degree: 71%
 
 ---
 
@@ -50,7 +53,7 @@ The console can be accessed from `../system/console`; for example:
 
    **OSGi >**
 
-* URL;例：
+* URL; 例：
 
    `http://localhost:4502/system/console/configMgr`
 
@@ -68,7 +71,7 @@ The console can be accessed from `../system/console`; for example:
    * 標準かつ AEM に不可欠な設定。これらの設定は必須であり、削除すると値がデフォルト設定に戻ります。
    * 「Factory Configurations」から作成されたインスタンス。これらのインスタンスはユーザーによって作成され、削除するとインスタンスが削除されます。
 
-* **出荷時設定**
+* **ファクトリ設定**
 
    
 必要な機能オブジェクトのインスタンスを作成できます。
@@ -97,11 +100,11 @@ The console can be accessed from `../system/console`; for example:
 
 * **バインド解除**
 
-   現在の設定をバンドルからバインド解除します。
+   現在の構成をバンドルからバインド解除します。
 
 * **キャンセル**
 
-   現在の変更をキャンセルします。
+   現在の変更をすべてキャンセルします。
 
 ## バンドル {#bundles}
 
@@ -111,7 +114,7 @@ The **Bundles** tab is the mechanism for installing the OSGi bundles required fo
 
    **OSGi >**
 
-* URL;例：
+* URL; 例：
 
    `http://localhost:4502/system/console/bundles`
 
@@ -131,13 +134,13 @@ The **Bundles** tab is the mechanism for installing the OSGi bundles required fo
 
 * **パッケージの更新**
 
-   これにより、すべてのパッケージの参照が確認され、必要に応じて更新されます。
+   これにより、すべてのパッケージの参照がチェックされ、必要に応じて更新されます。
 
    例えば、更新後に、以前の参照が原因で古いバージョンと新しいバージョンの両方が引き続き実行される場合などです。このオプションでは、新しいバージョンへの参照をすべて確認して移動します。これにより、古いバージョンを停止できます。
 
 * **Start**
 
-   指定された開始レベルに従ってバンドルを開始します。
+   指定した開始レベルに従ってバンドルを開始します。
 
 * **停止**
 
@@ -149,7 +152,7 @@ The **Bundles** tab is the mechanism for installing the OSGi bundles required fo
 
 * **状況を見る**
 
-   リストは、バンドルの現在のステータスを指定します。特定のバンドル名をクリックし、詳細情報を表示します。
+   リストはバンドルの現在のステータスを指定します。 特定のバンドル名をクリックすると、詳細情報が表示されます。
 
 >[!NOTE]
 >
@@ -163,7 +166,7 @@ The **Components** tab allows you to Enable and/or Disable the various component
 
    **メイン >**
 
-* URL;例：
+* URL; 例：
 
    `http://localhost:4502/system/console/components`
 
