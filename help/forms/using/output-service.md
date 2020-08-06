@@ -10,6 +10,9 @@ topic-tags: document_services
 discoiquuid: 8b96ba2d-007e-472a-875f-2caedd35ecf4
 translation-type: tm+mt
 source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+workflow-type: tm+mt
+source-wordcount: '524'
+ht-degree: 77%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
 
 ## 概要 {#overview}
 
-出力サービスは、AEM ドキュメントサービスの一部である OSGi サービスの一種です。Outputサービスは、AEM Forms Designerの様々な出力形式と出力デザイン機能をサポートしています。 出力サービスでは、XFA テンプレートと XML データを変換することにより、様々な形式の印刷ドキュメントを生成することができます。
+出力サービスは、AEM ドキュメントサービスの一部である OSGi サービスの一種です。Outputサービスは、AEM Formsデザイナーの様々な出力形式と出力設計機能をサポートしています。 出力サービスでは、XFA テンプレートと XML データを変換することにより、様々な形式の印刷ドキュメントを生成することができます。
 
 出力サービスにより、以下のような機能を備えたアプリケーションを作成することができます。
 
