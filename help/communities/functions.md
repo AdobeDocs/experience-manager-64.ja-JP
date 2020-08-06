@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: cc993b71-e2f2-48e7-ad4e-469cb5ce2dc1
 translation-type: tm+mt
 source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
+workflow-type: tm+mt
+source-wordcount: '2542'
+ht-degree: 48%
 
 ---
 
 
 # コミュニティ機能 {#community-functions}
 
-コミュニティに必要とされる機能の種類はだいたい決まっています。コミュニティ機能はコミュニティ機能として使用できます。 基本的には、コミュニティ機能を実装するために事前に配線された1つ以上のページです。この機能を使用するには、作成者モードでページにコンポーネントを追加するだけではありません。 They are the building blocks used to define the structure of a [community site template](sites.md) from which community sites are [created](sites-console.md).
+コミュニティに必要とされる機能の種類はだいたい決まっています。コミュニティ機能はコミュニティ機能として利用できます。 基本的に、これらは、コミュニティ機能を実装するために事前に配線された1つ以上のページです。コミュニティ機能を実装するには、作成者モードでページにコンポーネントを追加する以外にも必要です。 They are the building blocks used to define the structure of a [community site template](sites.md) from which community sites are [created](sites-console.md).
 
 Once a community site is created, content may be added to the resulting pages using the standard [AEM authoring mode](../../help/sites-authoring/editing-content.md).
 
-コミュニティ機能コンソールには数多くのコミュニティ機能が用意されており、すぐに使用できます。今後のリリースでは、より多くのコミュニティ関数が提供される予定で、カスタム関数も作成される可能性があります。
+コミュニティ機能コンソールには数多くのコミュニティ機能が用意されており、すぐに使用できます。今後のリリースでは、より多くのコミュニティ関数が提供される予定です。また、カスタム関数も作成される可能性があります。
 
 >[!NOTE]
 >
@@ -51,16 +54,18 @@ AEM Communities で提供される機能を以下で簡単に説明します。E
 
 ![chlimage_1-380](assets/chlimage_1-380.png)
 
-* **[!UICONTROL タイトル]**(必&#x200B;*須*)サイトの機能のメニューに表示されるテキスト
+* **[!UICONTROL タイトル]**
+(
+*required*)サイトの機能のメニューに表示されるテキスト
 
-* **[!UICONTROL URL]**(必&#x200B;*須*)URIの生成に使用する名前。 The name must conform to the [naming conventions](../../help/sites-developing/naming-conventions.md) imposed by AEM and JCR.
+* **[!UICONTROL URL]**(*必須*)URIの生成に使用する名前。 The name must conform to the [naming conventions](../../help/sites-developing/naming-conventions.md) imposed by AEM and JCR.
 
 例えば、[使用の手引き](getting-started.md)のチュートリアルに従って作成したサイトを使用し、
 
 * タイトル = Web ページ
 * URL = page
 
-次に、ページへのURLはhttp://local_host:4503/content/sites/engage/en/page.htmlで、そのページのメニューリンクは次のように表示されます。
+次に、ページのURLがhttp://local_host:4503/content/sites/engage/en/page.htmlになり、そのページのメニューリンクが次のように表示されます。
 
 ![chlimage_1-381](assets/chlimage_1-381.png)
 
@@ -75,17 +80,17 @@ AEM Communities で提供される機能を以下で簡単に説明します。E
 ![chlimage_1-382](assets/chlimage_1-382.png)
 
 * See [Title and URL Settings](#title-and-url-settings)
-* **[!UICONTROL [マイアクティビティ]ビューを表示]**：オンにすると、[アクティビティ]ページに、現在のメンバーによってコミュニティ内で生成されたアクティビティに基づいてアクティビティをフィルタするタブが表示されます。 初期設定はオンです。
+* **[!UICONTROL [マイアクティビティ]表示を表示する]**]オンにすると、アクティビティページに、現在のメンバーによってコミュニティ内で生成されたフィルターに基づいてアクティビティを行うタブが含まれます。 初期設定はオンです。
 
-* **[!UICONTROL [すべてのアクティビティ]ビューを表示]**]オンにすると、[アクティビティ]ページに、現在のメンバーがアクセスできるコミュニティ内で生成されたすべてのアクティビティを含むタブが表示されます。 初期設定はオンです。
+* **[!UICONTROL [すべてのアクティビティ]表示を表示する]**]オンにすると、アクティビティページにタブが含まれ、現在のメンバがアクセス権を持つコミュニティ内で生成されたすべてのアクティビティが含まれます。 初期設定はオンです。
 
-* **[!UICONTROL 「ニュースフィード」ビューを表示する]**：オンにすると、アクティビティページに、現在のメンバーがフォローしているアクティビティに基づいてアクティビティをフィルタリングするタブが含まれます。 初期設定はオンです。
+* **[!UICONTROL 「ニュースフィード」表示を表示]**：オンにすると、アクティビティページに、現在のメンバーに基づくフィルターアクティビティがフォローしているのタブが含まれます。 初期設定はオンです。
 
 ### 割り当て機能 {#assignments-function}
 
-The assignments function is the basic feature which defines a [community site for enablement](overview.md#enablement-community). これにより、コミュニティメンバーにイネーブルメントリソースを割り当てることができます。 See also [Assignments Essentials](essentials-assignments.md) for developers.
+The assignments function is the basic feature which defines a [community site for enablement](overview.md#enablement-community). コミュニティのメンバーに有効化リソースを割り当てることができます。 See also [Assignments Essentials](essentials-assignments.md) for developers.
 
-This function is available as a feature of the [enablement add-on](enablement.md). 実稼働環境で使用するには、追加のライセンスが必要です。
+This function is available as a feature of the [enablement add-on](enablement.md). 有効化アドオンは、実稼働環境で使用するために追加のライセンスが必要です。
 
 テンプレートへの追加時には、[タイトルと URL 設定](#title-and-url-settings)のみを設定します。
 
@@ -98,13 +103,13 @@ This function is available as a feature of the [enablement add-on](enablement.md
 ![chlimage_1-383](assets/chlimage_1-383.png)
 
 * See [Title and URL Settings](#title-and-url-settings)
-* **[!UICONTROL 「特権メンバーを許可]**」オンにすると、特権メンバーグループの選択を許可して、特権メンバーの記事の作成のみがブ [ログで許可されます](users.md#privileged-members-group)。 オフにすると、すべてのコミュニティメンバーが記事を作成できます。初期設定はオフです。
+* **[!UICONTROL Allow Privileged Members]**：このチェックボックスをオンにすると、特権を持つメンバーグループの選択を許可して、特権を持つメンバーの記事の作成のみがブログで許可され [ます](users.md#privileged-members-group)。 オフにすると、すべてのコミュニティメンバーが記事を作成できます。初期設定はオフです。
 
-* **[!UICONTROL ファイルのアップロード]**&#x200B;を許可するこのチェックボックスをオンにすると、メンバーがファイルをアップロードする機能がブログに含まれます。 初期設定はオンです。
+* **[!UICONTROL ファイルのアップロードを許可]**：オンにすると、メンバーがファイルをアップロードする機能がブログに含まれます。 初期設定はオンです。
 
-* **[!UICONTROL スレッド化された返信]**&#x200B;を許可するオンになっていない場合、ブログは記事への返信（コメント）を許可しますが、コメントへの返信は許可されません。 初期設定はオンです。
+* **[!UICONTROL スレッド化された返信を許可]**&#x200B;このチェックボックスをオンにしない場合、ブログでは記事への返信（コメント）は許可されますが、コメントへの返信は許可されません。 初期設定はオンです。
 
-* **[!UICONTROL 重点コンテンツ]**(Featured Content)を許可（オン）にすると、そのアイデアは特集コンテンツとして識別 [できます](featured.md)。 初期設定はオンです。
+* **[!UICONTROL 重点コンテンツ]**&#x200B;を許可することを選択すると、そのアイデアは [重点コンテンツとして識別できます](featured.md)。 初期設定はオンです。
 
 ### カレンダー機能 {#calendar-function}
 
@@ -115,15 +120,15 @@ This function is available as a feature of the [enablement add-on](enablement.md
 ![chlimage_1-384](assets/chlimage_1-384.png)
 
 * See [Title and URL Settings](#title-and-url-settings)
-* **[!UICONTROL ピン留めを許可]**&#x200B;することをオンにすると、トピックの返信をコメントの一覧の先頭にピン留めできます。 初期設定はオンです。
+* **[!UICONTROL ピン留めを許可]**&#x200B;するオンにすると、トピックの返信をコメントのリストの先頭にピン留めできます。 初期設定はオンです。
 
-* **[!UICONTROL 「特権メンバーを許可]**」オンにすると、特権メンバーグループの選択を許可して、特権メンバーの記事の作成のみがブ [ログで許可されます](users.md#privileged-members-group)。 オフにすると、すべてのコミュニティメンバーが記事を作成できます。初期設定はオフです。
+* **[!UICONTROL Allow Privileged Members]**：このチェックボックスをオンにすると、特権を持つメンバーグループの選択を許可して、特権を持つメンバーの記事の作成のみがブログで許可され [ます](users.md#privileged-members-group)。 オフにすると、すべてのコミュニティメンバーが記事を作成できます。初期設定はオフです。
 
-* **[!UICONTROL ファイルのアップロード]**&#x200B;を許可するこのチェックボックスをオンにすると、メンバーがファイルをアップロードする機能がブログに含まれます。 初期設定はオンです。
+* **[!UICONTROL ファイルのアップロードを許可]**：オンにすると、メンバーがファイルをアップロードする機能がブログに含まれます。 初期設定はオンです。
 
-* **[!UICONTROL スレッド化された返信]**&#x200B;を許可するオンになっていない場合、ブログは記事への返信（コメント）を許可しますが、コメントへの返信は許可されません。 初期設定はオンです。
+* **[!UICONTROL スレッド化された返信を許可]**&#x200B;このチェックボックスをオンにしない場合、ブログでは記事への返信（コメント）は許可されますが、コメントへの返信は許可されません。 初期設定はオンです。
 
-* **[!UICONTROL 重点コンテンツ]**(Featured Content)を許可（オン）にすると、そのアイデアは特集コンテンツとして識別 [できます](featured.md)。 初期設定はオンです。
+* **[!UICONTROL 重点コンテンツ]**&#x200B;を許可することを選択すると、そのアイデアは [重点コンテンツとして識別できます](featured.md)。 初期設定はオンです。
 
 ### カタログ機能 {#catalog-function}
 
@@ -138,7 +143,7 @@ All enablement resources and learning paths for the community site will show in 
 * See [Title and URL Settings](#title-and-url-settings)
 * **[!UICONTROL すべての名前空間を選択]**
 
-   * 選択したタグ名前空間は、カタログにリストされているイネーブルメントリソースのリストをフィルタリングする際に、訪問者が選択できるタグを定義します。
+   * 選択したタグ名前空間は、カタログにリストされているイネーブルメントリソースのリストをフィルタリングする訪問者が選択できるタグを定義します。
    * オンにすると、コミュニティサイトに対して許可されるタグ名前空間がすべて使用可能になります。
    * オフにすると、コミュニティサイトに許可される名前空間を 1 つ以上選択できます。
    * 初期設定はオンです。
@@ -168,15 +173,15 @@ All enablement resources and learning paths for the community site will show in 
 ![chlimage_1-385](assets/chlimage_1-385.png)
 
 * See [Title and URL Settings](#title-and-url-settings)
-* **[!UICONTROL ピン留めを許可]**&#x200B;することをオンにすると、トピックの返信をコメントの一覧の先頭にピン留めできます。 初期設定はオンです。
+* **[!UICONTROL ピン留めを許可]**&#x200B;するオンにすると、トピックの返信をコメントのリストの先頭にピン留めできます。 初期設定はオンです。
 
-* **[!UICONTROL 「特権メンバーを許可]**」を選択すると、フォーラムでは、権限を持つメンバーの選択を許可して、権限を持つメンバーのトピックの投稿 [のみが許可されます](users.md#privileged-members-group)。 オフにすると、すべてのコミュニティメンバーが投稿できるようになります。初期設定はオフです。
+* **[!UICONTROL 「Allow Privileged Members]**」を選択すると、特権を持つメンバーグループの選択を許可して、権限を持つメンバーの投稿のみがフォーラムで許可され [ます](users.md#privileged-members-group)。 オフにすると、すべてのコミュニティメンバーが投稿できるようになります。初期設定はオフです。
 
-* **[!UICONTROL ファイルのアップロード]**&#x200B;を許可するこのチェックボックスをオンにすると、メンバーがファイルをアップロードする機能がフォーラムに含まれます。 初期設定はオンです。
+* **[!UICONTROL ファイルのアップロードを許可]**：オンにすると、メンバーがファイルをアップロードする機能がフォーラムに含まれます。 初期設定はオンです。
 
-* **[!UICONTROL スレッド化された返信を許可]**&#x200B;することを選択しない場合、フォーラムはトピックに対するコメントを許可しますが、これらのコメントに対する返信は許可されません。 初期設定はオンです。
+* **[!UICONTROL スレッド化された返信を許可]**&#x200B;するこのチェックボックスをオンにしない場合、トピックに対するコメントは許可されますが、これらのコメントに対する返信は許可されません。 初期設定はオンです。
 
-* **[!UICONTROL 重点コンテンツ]**(Featured Content)を許可（オン）にすると、そのアイデアは特集コンテンツとして識別 [できます](featured.md)。 初期設定はオンです。
+* **[!UICONTROL 重点コンテンツ]**&#x200B;を許可することを選択すると、そのアイデアは [重点コンテンツとして識別できます](featured.md)。 初期設定はオンです。
 
 ### グループ機能 {#groups-function}
 
@@ -199,9 +204,9 @@ Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降�
 ![chlimage_1-386](assets/chlimage_1-386.png)
 
 * See [Title and URL Settings](#title-and-url-settings)
-* **[!UICONTROL 「グループテンプレ]**&#x200B;ート」プルダウンメニューを選択し、（公開環境で）新しいコミュニティグループの作成者が選択できる、1つ以上の有効なグループテンプレートを選択できます。
+* **[!UICONTROL Select Group Templates]**（グループテンプレートの選択）プルダウンメニューでは、(公開環境で)新しいコミュニティグループの将来の作成者が選択できる、1つ以上の有効なグループテンプレートを選択できます。
 
-* **[!UICONTROL 「特権メンバーを許可]**」を選択すると、フォーラムでは、権限を持つメンバーのセキュリティグループの選択を許可して、権限を持つメンバーの投稿 [のみが許可されます](users.md#privileged-members-group)。 オフにすると、すべてのコミュニティメンバーが投稿できるようになります。初期設定はオフです。
+* **[!UICONTROL Allow Privileged Members]**：このチェックボックスをオンにすると、特権を持つメンバーのセキュリティグループを選択して、特権を持つメンバーの投稿のみがフォーラムで許可され [](users.md#privileged-members-group)ます。 オフにすると、すべてのコミュニティメンバーが投稿できるようになります。初期設定はオフです。
 
 * **[!UICONTROL 公開作成を許可]**&#x200B;オンにすると、権限を持つコミュニティメンバーがパブリッシュ環境でグループを作成できるようになります。オフにすると、新しいグループ（サブコミュニティ）は、オーサー環境のコミュニティサイトのグループコンソールからのみ作成できます。
 
@@ -216,13 +221,13 @@ Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降�
 ![chlimage_1-387](assets/chlimage_1-387.png)
 
 * See [Title and URL Settings](#title-and-url-settings)
-* **[!UICONTROL 「特権メンバーを許可]**」を選択すると、フォーラムでは、権限を持つメンバーのセキュリティグループの選択を許可して、権限を持つメンバーの投稿 [のみが許可されます](users.md#privileged-members-group)。 オフにすると、すべてのコミュニティメンバーが投稿できるようになります。初期設定はオフです。
+* **[!UICONTROL Allow Privileged Members]**：このチェックボックスをオンにすると、特権を持つメンバーのセキュリティグループを選択して、特権を持つメンバーの投稿のみがフォーラムで許可され [](users.md#privileged-members-group)ます。 オフにすると、すべてのコミュニティメンバーが投稿できるようになります。初期設定はオフです。
 
-* **[!UICONTROL ファイルのアップロード]**&#x200B;を許可するこのチェックボックスをオンにすると、メンバーがファイルをアップロードする機能がアイデアに含まれます。 初期設定はオンです。
+* **[!UICONTROL ファイルのアップロードを許可]**&#x200B;このチェックボックスをオンにすると、メンバーがファイルをアップロードする機能がアイデアに含まれます。 初期設定はオンです。
 
-* **[!UICONTROL スレッド化された返信]**&#x200B;を許可するこのチェックボックスをオフにすると、トピックへの返信（コメント）は許可されますが、コメントへの返信は許可されません。 初期設定はオンです。
+* **[!UICONTROL スレッド化された返信を許可]**&#x200B;このチェックボックスをオンにしない場合、アイデアではトピックへの返信（コメント）は許可されますが、コメントへの返信は許可されません。 初期設定はオンです。
 
-* **[!UICONTROL 重点コンテンツ]**(Featured Content)を許可（オン）にすると、そのアイデアは特集コンテンツとして識別 [できます](featured.md)。 初期設定はオンです。
+* **[!UICONTROL 重点コンテンツ]**&#x200B;を許可することを選択すると、そのアイデアは [重点コンテンツとして識別できます](featured.md)。 初期設定はオンです。
 
 ### リーダーボード機能 {#leaderboard-function}
 
@@ -262,19 +267,19 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 ![chlimage_1-389](assets/chlimage_1-389.png)
 
 * See [Title and URL Settings](#title-and-url-settings)
-* **[!UICONTROL ピン留めを許可]**&#x200B;することをオンにすると、トピックの返信をコメントの一覧の先頭にピン留めできます。 初期設定はオンです。
+* **[!UICONTROL ピン留めを許可]**&#x200B;するオンにすると、トピックの返信をコメントのリストの先頭にピン留めできます。 初期設定はオンです。
 
-* **[!UICONTROL 「Allow Privileged Members]**」を選択すると、QnAフォーラムでは、特権を持つメンバーグループの選択を許可して、特権を持つメンバーの質問の投稿のみ [が許可されます](users.md#privileged-members-group)。 オフにすると、すべてのコミュニティメンバーが投稿できるようになります。初期設定はオフです。
+* **[!UICONTROL Allow Privileged Members]**：このチェックボックスをオンにすると、QnAフォーラムは、 [特権メンバーグループの選択を許可して、特権メンバーが質問を投稿することを許可します](users.md#privileged-members-group)。 オフにすると、すべてのコミュニティメンバーが投稿できるようになります。初期設定はオフです。
 
-* **[!UICONTROL ファイルのアップロード]**&#x200B;を許可することを選択すると、QnAフォーラムにファイルのアップロード機能が含まれます。 初期設定はオンです。
+* **[!UICONTROL ファイルのアップロードを許可]**：オンにすると、QnAフォーラムにメンバーがファイルをアップロードする機能が含まれます。 初期設定はオンです。
 
-* **[!UICONTROL スレッド化された返信]**&#x200B;を許可することを選択しない場合、QnAフォーラムは投稿された質問に対するコメント（回答）を許可しますが、回答に対する返信は許可されません。 初期設定はオンです。
+* **[!UICONTROL スレッド化された返信を許可]**&#x200B;することを選択しない場合、QnAフォーラムでは投稿された質問に対するコメント（回答）は許可されますが、回答に対する返信は許可されません。 初期設定はオンです。
 
-* **[!UICONTROL 重点コンテンツ]**(Featured Content)を許可（オン）にすると、そのアイデアは特集コンテンツとして識別 [できます](featured.md)。 初期設定はオンです。
+* **[!UICONTROL 重点コンテンツ]**&#x200B;を許可することを選択すると、そのアイデアは [重点コンテンツとして識別できます](featured.md)。 初期設定はオンです。
 
 ## コミュニティ機能を作成 {#create-community-function}
 
-The ability to create a community function is reached by selecting the `Create Community Function` icon located at the top of the Community Functions console. 同じAEM Blueprintに基づく複数の関数を作成し、作成者編集モードで開くことによって独自にカスタマイズできます。
+The ability to create a community function is reached by selecting the `Create Community Function` icon located at the top of the Community Functions console. 同じAEM Blueprintに基づく複数の機能を作成し、作成者編集モードで開いて独自にカスタマイズできます。
 
 ![chlimage_1-390](assets/chlimage_1-390.png)
 
@@ -284,11 +289,11 @@ The ability to create a community function is reached by selecting the `Create C
 
 コミュニティ機能名パネルでは、機能の名前および説明と、機能を有効にするか無効にするかを設定します。
 
-* **[!UICONTROL コミュニティ関数名]**：表示と保存に使用する関数名
+* **[!UICONTROL コミュニティ関数名]**&#x200B;表示とストレージに使用する関数名
 
-* **[!UICONTROL コミュニティ関数の説]**&#x200B;明表示する関数の説明
+* **[!UICONTROL コミュニティ関数の説明]**&#x200B;表示する関数の説明
 
-* **[!UICONTROL 無効/有効]**&#x200B;関数が参照可能かどうかを制御するトグルスイッチ
+* **[!UICONTROL 無効/有効]**&#x200B;関数が参照可能かを制御するトグルスイッチ
 
 ### AEM ブループリント {#aem-blueprint}
 
@@ -298,7 +303,7 @@ On the `AEM Blueprint` panel, it is possible to select the blueprint which is th
 
 コミュニティ機能は、1 つまたは複数のページで構成されるミニサイトです。ログイン、ユーザープロファイル、通知、メッセージング、サイトメニュー、検索、テーマ、ブランディングなどの機能が、コミュニティサイトに組み込める形であらかじめ構築されています。Once the function is created, it is possible to [open the function](#open-community-function) in author edit mode and customize the page and/or component settings.
 
-Since the community function is implemented as a [live copy](../../help/sites-administering/msm.md#live-copies) of a [blueprint](../../help/sites-administering/msm-livecopy.md#creatingablueprint), it is possible to rollout changes made to a function which affects all community site pages created from the [community site template](sites.md) or [community group template](tools-groups.md) that included the function. また、ページレベルの変更を行うために、親のBluePrintからページの関連付けを解除することもできます。
+Since the community function is implemented as a [live copy](../../help/sites-administering/msm.md#live-copies) of a [blueprint](../../help/sites-administering/msm-livecopy.md#creatingablueprint), it is possible to rollout changes made to a function which affects all community site pages created from the [community site template](sites.md) or [community group template](tools-groups.md) that included the function. また、ページレベルの変更を行うために、親の青写真からページの関連付けを解除することもできます。
 
 [マルチサイトマネージャー](../../help/sites-administering/msm.md)も参照してください。
 
@@ -320,7 +325,7 @@ Select the `Open Community Function` icon to enter author edit mode for authorin
 
 ページコンテンツのオーサリングだけでなく、コンポーネントの設定をすることもできます。
 
-作成したコミュニティサイトのページ上にあるコンポーネントを設定する場合、コンポーネントを設定するために、[継承](../../help/sites-administering/msm-livecopy.md#changing-live-copy-content)の解除が必要になることがあります。設定が完了したら、継承を再確立する必要があります。
+作成したコミュニティサイトのページ上にあるコンポーネントを設定する場合、コンポーネントを設定するために、[継承](../../help/sites-administering/msm-livecopy.md#changing-live-copy-content)の解除が必要になることがあります。構成が完了したら、継承を再確立する必要があります。
 
 設定について詳しくは、作成者向けの[コミュニティコンポーネント](author-communities.md)を参照してください。
 
