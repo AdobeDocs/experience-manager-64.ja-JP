@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 4dc54701-68b9-49dd-a212-b0b53330c1c0
 translation-type: tm+mt
 source-git-commit: 63001012f0d865c2548703ea387c780679128ee7
+workflow-type: tm+mt
+source-wordcount: '1144'
+ht-degree: 40%
 
 ---
 
@@ -34,11 +37,11 @@ source-git-commit: 63001012f0d865c2548703ea387c780679128ee7
 
 ## 匿名のサイト訪問者 {#anonymous-site-visitor}
 
-匿名サイト訪問者のUIには、次の情報が表示されます。
+匿名サイト訪問者のUIには、次の項目が表示されます。
 
-* サイトのタイトル。 はじめにチュートリアル
+* サイトのタイトル。 はじめにのチュートリアル
 * プロファイルリンクなし
-* メッセージなしリンク
+* メッセージのリンクなし
 * 通知リンクなし
 * サーチ場
 * ログインリンク
@@ -49,17 +52,17 @@ source-git-commit: 63001012f0d865c2548703ea387c780679128ee7
 
 ## JCRでの匿名アクセスの禁止 {#prevent-anonymous-access-on-jcr}
 
-既知の制限により、jcrコンテンツとjsonを通じてコミュニティサイトのコンテンツが匿名訪問者に公開されますが、 **サイトのコンテンツに対して** 「匿名アクセスを許可」は無効になっています。 ただし、この動作は「Slingの制限」を回避策として使用して制御できます。
+既知の制限により、jcrコンテンツとjsonを介してコミュニティサイトのコンテンツが匿名訪問者に公開されますが、匿名アクセス **を許可** (allow anonymous access)はサイトのコンテンツに対して無効になります。 ただし、この動作は、回避策として「Sling制限」を使用して制御できます。
 
-jcrコンテンツとjsonを介した匿名ユーザーによるコミュニティサイトのコンテンツへのアクセスを保護するには、次の手順に従います。
+jcrコンテンツとjsonを介した匿名ユーザーによるアクセスからコミュニティサイトのコンテンツを保護するには、次の手順に従います。
 
 1. AEM作成者インスタンスで、https://&lt;ホスト>:&lt;ポート>/editor.html/content/site/&lt;サイト名>.htmlに移動します。
 
    >[!NOTE]
    >
-   >ローカライズされたサイトには移動しないでください。
+   >ローカライズされたサイトに移動しないでください。
 
-1. 「ページプロパ **[!UICONTROL ティ」に移動]**。
+1. 「 **[!UICONTROL ページプロパティ]**」に移動。
 
    ![サイト認証](assets/site-authentication.png)
 
@@ -68,18 +71,18 @@ jcrコンテンツとjsonを介した匿名ユーザーによるコミュニテ�
    ![page-properties](assets/page-properties.png)
 
 1. Enable **[!UICONTROL Authentication Requirement]**.
-1. ログインページのパスを追加します。 For example, `/content/......./GetStarted`.
+1. ログ追加インページのパス。 例： `/content/......./GetStarted`
 1. ページを公開します。
 
 ## 信頼されているコミュニティメンバー {#trusted-community-member}
 
 This experience assumes [Aaron McDonald](tutorials.md#demo-users) was assigned the roles of [community manager and moderator](create-site.md#roles). If not, return to the author environment to [modify the site settings](sites-console.md#modifying-site-properties) and select Aaron McDonald as both community manager and moderator.
 
-In the upper right corner, select `Log in`, and sign with username &quot;aaron.mcdonald@mailinator.com&quot; and password &quot;password&quot;. TwitterまたはFacebookの資格情報を使用してサインインできます。
+In the upper right corner, select `Log in`, and sign with username &quot;aaron.mcdonald@mailinator.com&quot; and password &quot;password&quot;. TwitterまたはFacebookの資格情報を使用してサインインする機能に注目してください。
 
 ![chlimage_1-312](assets/chlimage_1-312.png)
 
-サインインすると、今までになかった「`Administration`」というメニューアイテムが表示されます。これは、サインインしたメンバーにモデレーターの役割が付与されているからです。様々なリンクを選択する方が、より興味深い結果が得られます。
+サインインすると、今までになかった「`Administration`」というメニューアイテムが表示されます。これは、サインインしたメンバーにモデレーターの役割が付与されているからです。さらに、様々なリンクを選択する方が興味深い結果が得られます。
 
 ![chlimage_1-313](assets/chlimage_1-313.png)
 
@@ -93,6 +96,7 @@ In the upper right corner, select `Log in`, and sign with username &quot;aaron.m
 >
 >* [コミュニティコンポーネント](author-communities.md)（作成者向け）
 >* [コンポーネントおよび機能の基本事項](essentials.md)（開発者向け）
+
 >
 
 
@@ -131,7 +135,7 @@ Aaron はグループ管理者なので、グループリンクを選択する�
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
 
-新しいグループが作成されたら、その中に（ネストされる）2 つのグループを作成するために&#x200B;**新しい Sports グループを選択**&#x200B;します。サイト構造はグループ機能では始まらないので、スポーツグループを開いた後で、「グループ」リンクを選択する必要があります。
+新しいグループが作成されたら、その中に（ネストされる）2 つのグループを作成するために&#x200B;**新しい Sports グループを選択**&#x200B;します。サイト構造はグループ機能では始まらないので、スポーツグループを開いた後、「グループ」リンクを選択する必要があります。
 
 ![chlimage_1-318](assets/chlimage_1-318.png)
 
@@ -143,16 +147,17 @@ As an example, add two n `ew groups.`
    * Leave it set as an `Open Group` (required membership)
    * 「テンプレート」タブで、 `Conversational Group`
 * One named `Gymnastics`
-   * 設定を(制限付きメンバ `Member Only Group` ーシップ)に変更
+   * 設定を `Member Only Group` （制限付きメンバーシップ）に変更します
    * 「テンプレート」タブで、 `Conversational Group`
 
 **注意**：
 
-* 両方のグループを表示する前に、ページの更新が必要な場合があります
-* このテンプレートにはグループ機能は含まれない*ので、グループをこれ以上ネストすることはできません
+* 両方のグループが表示される前に、ページの更新が必要になる場合があります
+* このテンプレートにはグループ機能が含まれていない**ので、グループをこれ以上ネストすることはできません。
 * On author, the [Groups console](groups.md) provides a third choice - a `Public Group` (optional membership)
 
-両方のグループが作成されたら、「野球」グループを選択し、開いているグループを選択し、そのリンクを確認します。グ `Discussions` ル `What's New``Members`ープのリンクはメインサイトのリンクの下に表示され、結果は次のように表示されます。
+両方のグループが作成されたら、野球グループと開いているグループを選択し、そのリンクを確認します。 `Discussions` `What's New` `Members`
+グループのリンクはメインサイトのリンクの下に表示され、結果は次のように表示されます。
 
 ![chlimage_1-319](assets/chlimage_1-319.png)
 
@@ -167,13 +172,13 @@ On author - with administrative privileges, navigate to the [Communities Groups 
 
 Baseball グループのみが表示されます。
 
-Weston McCall（weston.mccall@dodgit.com／password）としてログインし、同じ場所に移動します。Westonは、開いているグループとプライベ `Join` ートグル `Baseball` ープのどちらかに対 `enter or Leave` 応できることに `Gymnastics`注意。
+Weston McCall（weston.mccall@dodgit.com／password）としてログインし、同じ場所に移動します。Westonは、オープン・ `Join` グループとプライベート・ `Baseball` グループのどちらか `enter or Leave``Gymnastics`を実行できることに注意してください。
 
 ![chlimage_1-320](assets/chlimage_1-320.png)
 
 ## Web ページリンク {#web-page-link}
 
-Web ページリンクを選択すると、サイトに含まれる基本的な Web ページが表示されます。標準のAEMオーサリングツールを使用して、オーサリング環境でこのページにコンテンツを追加できます。
+Web ページリンクを選択すると、サイトに含まれる基本的な Web ページが表示されます。標準のAEMオーサリングツールを使用して、作成者環境のこのページにコンテンツを追加できます。
 
 For example, go to **author** instance, open the `engage` folder in the [Communities Sites console](sites-console.md), select the **Open Site** icon to enter author edit mode. Then select preview mode to select the `Web Page`link, then select edit mode to add Title and Text components. 最後に、ページのみまたはサイト全体を再公開します。
 
@@ -183,7 +188,7 @@ For example, go to **author** instance, open the `engage` folder in the [Communi
 
 When the community member has moderation privileges, then the Administration link will be visible and selecting it will display the community content posted and allow it to be [moderated](moderate-ugc.md) in a manner similar to the [moderation console](moderation.md) in the author environment.
 
-ブラウザーの戻るボタンを使用して、公開したサイトに戻ります。ほとんどのコンソールは、パブリッシュ環境のグローバルナビゲーションからはアクセスできません。
+ブラウザーの戻るボタンを使用して、公開したサイトに戻ります。ほとんどのコンソールは、公開環境のグローバルナビゲーションからはアクセスできません。
 
 ![chlimage_1-322](assets/chlimage_1-322.png)
 
@@ -196,7 +201,7 @@ When the community member has moderation privileges, then the Administration lin
 
 ![chlimage_1-323](assets/chlimage_1-323.png) ![chlimage_1-324](assets/chlimage_1-324.png)
 
-デフォルトでは、電子メールアドレスがログイン ID になります。選択しない場合、訪問者は独自のログインID（ユーザー名）を入力できます。 ユーザー名は、公開環境で一意である必要があります。
+デフォルトでは、電子メールアドレスがログイン ID になります。選択しない場合、訪問者は独自のログインID（ユーザー名）を入力できます。 ユーザー名は、発行環境で一意である必要があります。
 
 After specifying the user&#39;s name, email, and password, selecting `Sign Up`will create the user and enable them to sign.
 
