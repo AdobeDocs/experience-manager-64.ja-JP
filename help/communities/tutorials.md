@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a420b0b1-65f4-4103-a7c9-263657c7870f
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '268'
+ht-degree: 65%
 
 ---
 
@@ -43,9 +46,9 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
 
 ## How-to Instructions {#how-to-instructions}
 
-* [AEM Communities Todo MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
+* [AEM Communities藤堂MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
 
-   ToDo MVC Demositionsでは、SCF+SRPコンポーネントを最初から開発する方法を示します。
+   ToDo MVCで、SCF+SRPコンポーネントを最初から開発する方法をデモします
 
 * [AEM Communities 使用の手引き](getting-started.md)
 
@@ -63,7 +66,7 @@ Geometrixxサンプルパッケージには、デモユーザーが含まれて�
 
 [コミュニティサイトが作成されている](getting-started.md)場合、その[コミュニティユーザーグループ](users.md)にデモユーザーを割り当てることができます。
 
-***ユーザーID */パ*スワード：***
+***user id */*password:***
 
 * aaron.mcdonald@mailinator.com／password
 * emily.andrews@mailinator.comパスワード
