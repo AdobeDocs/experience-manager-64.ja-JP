@@ -22,7 +22,7 @@ ht-degree: 49%
 
 ## MSRP について {#about-msrp}
 
-MSRPを共通ストアとして使用するようにAEM Communitiesを設定した場合、ユーザー生成コンテンツ(UGC)は、すべての作成者インスタンスと発行インスタンスからアクセスでき、同期や複製は不要です。
+MSRPを共通ストアとして使用するようにAEM Communitiesが設定されている場合、ユーザー生成コンテンツ(UGC)は、すべてのオーサーインスタンスとパブリッシュインスタンスからアクセスでき、同期や複製は不要です。
 
 [SRP オプションの特性](working-with-srp.md#characteristics-of-srp-options)と[推奨されるトポロジ](topologies.md)も参照してください。
 
@@ -33,7 +33,7 @@ MSRPを共通ストアとして使用するようにAEM Communitiesを設定し�
    * バージョン2.6以降
    * Mongoや共有を設定する必要がない
    * Strongly recommend use of a [replica set](#mongoreplicaset)
-   * AEMと同じホストで実行することも、リモートで実行することも可能
+   * AEMと同じホスト上で実行するか、リモートで実行可能
 
 * [Apache Solr](https://lucene.apache.org/solr/)：
 
@@ -234,7 +234,7 @@ GitHubには、この目的で使用できるオープンソースツールが�
 
 * [AEM Communities UGC Migration Tool](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
-移行ツールは、以前のバージョンのAEM SocialコミュニティからUGCを書き出すようにカスタマイズして、AEM Communities6.1以降に読み込むことができます。
+移行ツールは、AEM Social Communitiesの以前のバージョンからUGCを書き出すようにカスタマイズして、AEM Communities6.1以降に読み込むことができます。
 
 ### エラー - undefined field provider_id {#error-undefined-field-provider-id}
 
