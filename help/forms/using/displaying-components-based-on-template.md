@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 940e45b4-dbf1-4207-bd4a-cf677d645fb4
 translation-type: tm+mt
 source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+workflow-type: tm+mt
+source-wordcount: '378'
+ht-degree: 65%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
 
 When you create a template, it is created under `/conf` in the content repository. Based on the folders you have created in the `/conf` directory, path to your template is: `/conf/<your-folder>/settings/wcm/templates/<your-template>`.
 
-テンプレートのコンテンツポリシーに基づいてサイドバーにコンポーネントを表示するには、次の手順を実行します。
+次の手順を実行して、テンプレートのコンテンツポリシーに基づいてサイドバーにコンポーネントを表示します。
 
 1. CRXDE Lite を開きます。
 
@@ -31,7 +34,7 @@ When you create a template, it is created under `/conf` in the content repositor
 
 1. CRXDE で、テンプレートを作成したフォルダーに移動します。
 
-   次に例を示します。`/conf/<your-folder>/`
+   例：`/conf/<your-folder>/`
 
 1. In CRXDE, navigate to: `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/`
 
@@ -39,7 +42,7 @@ When you create a template, it is created under `/conf` in the content repositor
 
    デフォルトコンテンツポリシーのパス： `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
 
-   `gridFluidLayout` フォルダーで、デフォルトのポリシーをコピーして貼り付け、名前を変更します。For example, `myPolicy`.
+   `gridFluidLayout` フォルダーで、デフォルトのポリシーをコピーして貼り付け、名前を変更します。例： `myPolicy`
 
    ![デフォルトのポリシーをコピー](assets/crx-default1.png)
 
@@ -53,7 +56,7 @@ When you create a template, it is created under `/conf` in the content repositor
 
 1. テンプレートで、コンテンツポリシーをデフォルトから、作成した新しいポリシーに変更します。( `myPolicy` in this example.)
 
-   ポリシーを変更するには、CRXDEでに移動します `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/guideContainer/rootPanel/items`。
+   ポリシーを変更するには、CRXDEでに移動し `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/guideContainer/rootPanel/items`ます。
 
    In the `cq:policy` property, change `default` to the new policy name ( `myPolicy`).
 
