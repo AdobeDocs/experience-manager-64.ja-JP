@@ -10,6 +10,9 @@ topic-tags: forms-manager
 discoiquuid: 6699e0e7-fd42-41ae-86a2-3b940d905111
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '340'
+ht-degree: 85%
 
 ---
 
@@ -34,7 +37,7 @@ Aside from these assets, you can download the `Resource` type of asset if it is 
 
 1. ダウンロードしたいアセットの場所に移動します。
 
-1. アセットを選択します。ツールバ **[!UICONTROL ーの]** aem6forms_download ![(aem6forms_download](assets/aem6forms_download.png) )アイコンをクリックします。
+1. アセットを選択します。ツールバーの **[!UICONTROL 「]** aem6forms_download ![](assets/aem6forms_download.png) 」アイコンをクリックします。
 
    >[!NOTE]
    >
