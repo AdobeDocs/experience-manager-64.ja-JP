@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media画像プリセットの管理
-description: Dynamic Mediaの画像プリセットについて理解し、画像プリセットの作成、変更および管理方法を学習します。
+title: ダイナミックメディア画像プリセットの管理
+description: ダイナミックメディア画像プリセットについて理解し、画像プリセットの作成、変更および管理方法を学習します。
 uuid: 087e6c32-82d5-4645-8dba-0a22c62f891f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -19,7 +19,7 @@ ht-degree: 78%
 
 # Managing Dynamic Media image presets {#managing-image-presets}
 
-画像プリセットを使用すると、異なるサイズや異なる形式の画像、あるいは動的に生成された他の画像プロパティを設定した画像を動的に配信できます。各画像プリセットは、画像表示用のサイズやフォーマットに関するコマンドの事前定義済みコレクションを表します。画像プリセットの作成時には、画像配信用のサイズを選択します。またフォーマットコマンドも選択し、表示対象画像の配信時に画像の見た目が最適化されるようにします。
+画像プリセットを使用すると、AEM Assets は異なるサイズや異なる形式の画像、あるいは動的に生成された他の画像プロパティを設定した画像を動的に配信できます。各画像プリセットは、画像表示用のサイズやフォーマットに関するコマンドの事前定義済みコレクションを表します。画像プリセットの作成時には、画像配信用のサイズを選択します。またフォーマットコマンドも選択し、表示対象画像の配信時に画像の見た目が最適化されるようにします。
 
 管理者は、アセットを書き出すためのプリセットを作成できます。ユーザーは画像を書き出すときにプリセットを選択できます。また、この操作によって、管理者が指定した仕様に合わせて画像が再フォーマットされます。
 
@@ -218,9 +218,9 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 
 作成した画像プリセットは、アセットをプレビューする際の動的レンディションとして使用できます。AEM で、**[!UICONTROL 詳細表示／レンディション]**&#x200B;からアセットを表示すると、様々な動的レンディションが表示されます。表示されるレンディション数の制限を増減させることができます。
 
-**表示されるDynamic Media画像プリセットの数を増減するには**:
+**表示されるダイナミックメディア画像プリセットの数を増減するには**:
 
-1. Navigate to **[!UICONTROL CRXDE Lite]** ([http://localhost:4502/crx/de](http://localhost:4502/crx/de)).
+1. **[!UICONTROL CRXDE Lite]** ([http://localhost:4502/crx/de](http://localhost:4502/crx/de))に移動します。
 1. 画像プリセットリストノード（`/libs/dam/gui/coral/content/commons/sidepanels/imagepresetsdetail/imgagepresetslist`）に移動します。
 
    ![increase_decreasethenumberofimagepresetsthatdisplay](assets/increase_decreasethenumberofimagepresetsthatdisplay.png)
@@ -235,7 +235,7 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 
 ### Creating Dynamic Media image presets {#creating-image-presets}
 
-Dynamic Mediaの画像プリセットを作成すると、プレビュー時や公開時にこれらの設定を任意の画像に適用できます。
+ダイナミックメディア画像プリセットを作成すると、プレビュー時や公開時に、これらの設定を任意の画像に適用できます。
 
 >[!NOTE]
 >
@@ -248,9 +248,9 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 >[!NOTE]
 >
->Dynamic Media画像プリセットを作成するには、AEM管理者またはAdmin Console管理者としての管理者権限が必要です。
+>ダイナミックメディア画像プリセットを作成するには、AEM管理者またはAdmin Console管理者としての管理者権限が必要です。
 
-**Dynamic Media画像プリセットを作成するには**:
+**ダイナミックメディア画像プリセットを作成するには**:
 
 1. AEM で、AEM ロゴをタップして、グローバルナビゲーションコンソールにアクセスします。
 1. **[!UICONTROL ツール]** アイコンをタップし、 **[!UICONTROL アセット/画像プリセットに移動します]**。
@@ -286,7 +286,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 ### 画像プリセットオプション {#image-preset-options}
 
-画像プリセットを作成または編集するときに、ここで説明するオプションを使用できます。さらに、開始には、次の3つの *ベストプラクティス* （ベストプラクティス）オプションを使用することをお勧めします。
+画像プリセットを作成または編集するときに、ここで説明するオプションを使用できます。さらに、Adobeでは、開始に対して次の3つの *ベストプラクティス* ・オプションを選択することを推奨します。
 
 * **[!UICONTROL 「形式]** (**[!UICONTROL 「基本]** 」タブ)」 - **[!UICONTROL JPEG]** 、または要件に合う別の形式を選択します。 すべてのWebブラウザーがJPEG画像形式をサポートしています。 小さいファイルサイズと画質のバランスがとれています。 ただし、JPEG形式の画像は非可逆圧縮方式を使用しているので、圧縮設定が低すぎると、不要な画像アーティファクトが発生する可能性があります。 このため、アドビは圧縮品質を 75 に設定することをお勧めします。この設定は、画質と小さなファイルサイズのバランスが取れた設定です。
 * **[!UICONTROL シンプルシャープを有効にする]** - 「シンプルシャープを有効にする」を **** 選択しないでください(このシャープフィルターオファーでは、アンシャープマスクの設定よりも制御が少なくなります)。
@@ -387,7 +387,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
      <li><strong>適用先</strong> - アンシャープを各カラーまたは明るさに適用するかを指定します。</li> 
     </ul> 
     <div>
-      シャープについては、<a href="https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/assets/s7_sharpening_images.pdf">画像のシャープニング</a>を参照してください。 
+      シャープニングについては、<a href="https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/assets/s7_sharpening_images.pdf">画像のシャープニング</a>を参照してください。 
     </div> </td> 
   </tr> 
   <tr> 
@@ -407,7 +407,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
   </tr> 
   <tr> 
    <td><strong>画像の修飾子</strong></td> 
-   <td><p>UI で使用できる共通の画像設定のほか、Dynamic Media では「<strong>画像の修飾子</strong>」フィールドで画像の詳細を多数指定できます。これらのパラメーターは、<a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server プロトコルのコマンドリファレンス（英語）</a>で定義されています。</p> <p>重要：API にリストされている次の関数はサポートされていません。</p> 
+   <td><p>UI で使用できる共通の画像設定のほか、Dynamic Media では「<strong>画像の修飾子</strong>」フィールドで画像の詳細を多数指定できます。これらのパラメーターは、<a href="https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.translate.html">Image Server プロトコルのコマンドリファレンス（英語）</a>で定義されています。</p> <p>重要：API にリストされている次の関数はサポートされていません。</p> 
     <ul> 
      <li>基本的なテンプレートコマンドおよびテキストレンダリングコマンド：<code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> および <code>textPs=</code></li> 
      <li>ローカライゼーションコマンド：<code>locale=</code> および <code>req=xlate</code></li> 
@@ -424,7 +424,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 ## Defining Image Preset options with image modifiers {#defining-image-preset-options-with-image-modifiers}
 
-Besides the options available in the **[!UICONTROL Basic]** and **[!UICONTROL Advanced]** tabs, you can define image modifiers to give you more options when you define image presets. 画像のレンダリングは、Dynamic Mediaの画像レンダリングAPIに依存しています。 APIは、『 [HTTPプロトコルリファレンス](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/c-http-protocol-reference.html)』で詳細に定義されています。
+Besides the options available in the **[!UICONTROL Basic]** and **[!UICONTROL Advanced]** tabs, you can define image modifiers to give you more options when you define image presets. 画像のレンダリングは、ダイナミックメディアイメージレンダリングAPIに依存しています。 APIは、『 [HTTPプロトコルリファレンス](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/c-http-protocol-reference.html)』で詳細に定義されています。
 
 画像の修飾子を使用して実行できることについて、以下に基本的な例を示します。
 
@@ -488,9 +488,9 @@ Besides the options available in the **[!UICONTROL Basic]** and **[!UICONTROL Ad
 
 Dynamic Media - ハイブリッドモードを実行している場合、画像プリセットを手動で公開する必要があります。
 
-Dynamic Media- Scene7モードを実行している場合、画像プリセットは自動的に公開されます。 これらの手順を実行する必要はありません。
+ダイナミックメディア —Scene7モードを実行している場合、画像プリセットは自動的に公開されます。 これらの手順を実行する必要はありません。
 
-**Dynamic Media — ハイブリッドモードで画像プリセットを公開するには**:
+**ダイナミックメディア — ハイブリッドモードで画像プリセットを公開するには**:
 
 1. AEM で、AEM ロゴをタップして、グローバルナビゲーションコンソールにアクセスします。
 1. **[!UICONTROL ツール]** アイコンをタップし、 **[!UICONTROL アセット/画像プリセットに移動します]**。
@@ -501,7 +501,7 @@ Dynamic Media- Scene7モードを実行している場合、画像プリセッ�
 
 ## Deleting Dynamic Media image presets {#deleting-image-presets}
 
-**Dynamic Mediaの画像プリセットを削除するには**:
+**ダイナミックメディア画像プリセットを削除するには**:
 
 1. AEM で、AEM ロゴをタップして、グローバルナビゲーションコンソールにアクセスします。
 1. **[!UICONTROL ツール]** アイコンをタップし、 **[!UICONTROL アセット/画像プリセットに移動します]**。
