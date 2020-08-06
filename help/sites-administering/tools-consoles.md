@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 2bf8496d-a485-4b39-a6c9-07222b66d0cd
 translation-type: tm+mt
 source-git-commit: e9c5fcd8f939d88317c5184b6352b227918088e5
+workflow-type: tm+mt
+source-wordcount: '883'
+ht-degree: 98%
 
 ---
 
@@ -42,7 +45,7 @@ source-git-commit: e9c5fcd8f939d88317c5184b6352b227918088e5
    <td><a href="/help/sites-developing/client-context.md">ClientContext</a> はユーザーデータを動的にまとめたコレクションを表します。デフォルトの Marketing Cloud 設定はここに保持されます。<br /> </td> 
   </tr> 
   <tr> 
-   <td>クラウドサービス設定<br /> </td> 
+   <td>クラウドサービスの設定<br /> </td> 
    <td> </td> 
    <td><a href="/help/sites-administering/marketing-cloud.md">Adobe Marketing Cloud との統合</a>に関連する設定を保持します。</td> 
   </tr> 
@@ -107,7 +110,7 @@ source-git-commit: e9c5fcd8f939d88317c5184b6352b227918088e5
    <td>AEM インスタンス内のコンテンツページをすべてスキャンして、外部リンクをチェックします。有効なリンクと無効なリンクのリストが表示されます。</td> 
   </tr> 
   <tr> 
-   <td><a href="/help/sites-authoring/mobile.md">Mobile</a></td> 
+   <td><a href="/help/sites-authoring/mobile.md">モバイル</a></td> 
    <td> </td> 
    <td>モバイルデバイス用にデザインされた Web サイトの作成を支援します。</td> 
   </tr> 
@@ -245,7 +248,7 @@ source-git-commit: e9c5fcd8f939d88317c5184b6352b227918088e5
   </tr> 
   <tr> 
    <td> </td> 
-   <td><a href="https://helpx.adobe.com/cloud-manager/using/using-cloud-manager.html">クラウドサービス</a></td> 
+   <td><a href="https://helpx.adobe.com/cloud-manager/using/using-cloud-manager.html">Cloud Services </a></td> 
    <td>Adobe Marketing Cloud に接続します。</td> 
   </tr> 
   <tr> 
