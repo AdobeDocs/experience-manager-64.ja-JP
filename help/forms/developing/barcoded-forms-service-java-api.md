@@ -1,6 +1,6 @@
 ---
-title: Barcoded FormsサービスJava APIQuick開始(SOAP)
-seo-title: Barcoded FormsサービスJava APIQuick開始(SOAP)
+title: Barcoded Service Java APIQuick開始(SOAP)
+seo-title: Barcoded Service Java APIQuick開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: a6739695-ee0b-4480-8cef-0f91a72deaad
@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# Barcoded FormsサービスJava APIクイック開始(SOAP) {#barcoded-forms-service-java-apiquick-start-soap}
+# Barcoded Service Java API Quick開始(SOAP) {#barcoded-forms-service-java-apiquick-start-soap}
 
-Java API Quick開始(SOAP)は、Barcoded Formsサービスで使用できます。
+Java API Quick開始(SOAP)は、BarcodedFormsサービスで使用できます。
 
 [クイック開始（SOAPモード）: Java APIを使用したバーコードフォームデータのデコード](barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
 
@@ -28,7 +28,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsでのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）: Java APIを使用したバーコードフォームデータのデコード {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
 
