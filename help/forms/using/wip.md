@@ -9,6 +9,9 @@ contentOwner: khsingh
 discoiquuid: 4292d632-0ce3-48be-898b-de358cc27019
 translation-type: tm+mt
 source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+workflow-type: tm+mt
+source-wordcount: '23'
+ht-degree: 8%
 
 ---
 
