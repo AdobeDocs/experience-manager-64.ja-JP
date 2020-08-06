@@ -12,13 +12,16 @@ discoiquuid: 977a3dda-4292-4bd2-bfa5-af4d789d9ef9
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 98%
 
 ---
 
 
 # ローンチの昇格{#promoting-launches}
 
-コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。ローンチページが昇格されると、ソースページの対応するページが、昇格済みのページのコンテンツに置き換わります。ページを昇格させるときには、次のオプションを使用できます。
+コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。ローンチページが昇格されると、ソースページの対応するページが、昇格済みのページのコンテンツに置き換わります。ローンチページを昇格させるときには、次のオプションを使用できます。
 
 * 現在のページのみを昇格させるか、ローンチ全体を昇格させるか。
 * 現在のページの子ページを昇格するかどうか。
@@ -30,7 +33,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 >[!CAUTION]
 >
->単一のローンチは同時に昇格させることができません。This means that two promote actions on the same launch at the same time can result in an error - `Launch could not be promoted` (together with conflict errors in the log).
+>単一のローンチは同時に昇格させることができません。つまり、同じローンチで 2 つの昇格アクションを同時に実行すると、「`Launch could not be promoted`」というエラー（と共にログに競合エラー）が発生することがあります。
 
 >[!CAUTION]
 >
@@ -44,6 +47,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 >
 >* 構造に複数のローンチがあるときは、[ネストされたローンチの昇格](#promoting-a-nested-launch)。
 >* 自動昇格および公開について詳しくは、[ローンチ - イベントの順序](/help/sites-authoring/launches.md#launches-the-order-of-events)。
+
 >
 
 
@@ -54,14 +58,14 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    * **サイト**&#x200B;コンソールの場合：
 
-      1. Open the [references rail](/help/sites-authoring/author-environment-tools.md#references) and select the required source page using [selection mode](/help/sites-authoring/basic-handling.md) (or select and open the references rail, the order is not important). すべての参照が表示されます。
+      1. [参照レール](/help/sites-authoring/author-environment-tools.md#references)を開き、[選択モード](/help/sites-authoring/basic-handling.md)を使用して必要なソースページを選択します（または参照レールを選択して開きます。順序はどちらでもかまいません）。すべての参照が表示されます。
 
       1. **ローンチ**（例：ローンチ（1））を選択して特定のローンチのリストを表示します。
       1. 特定のローンチを選択して使用可能なアクションを選択します。
       1. 「**ローンチを昇格**」を選択してウィザードを開きます。
    * **ローンチ**&#x200B;コンソールの場合：
 
-      1. 対象のローンチを選択（サムネイルをタップまたはクリック）します。
+      1. 対象のローンチを選択（サムネールをタップまたはクリック）します。
       1. 「**昇格**」を選択します。
 
 
@@ -71,6 +75,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
    * **変更したページを昇格**
    * **現在のページを昇格**
    * **現在のページとサブページを昇格**
+
    例えば、変更したページのみを昇格させるには、次のように選択します。
 
    ![chlimage_1](assets/chlimage_1.png)
@@ -117,6 +122,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
       * **変更したページを昇格**
       * **現在のページを昇格**
       * **現在のページとサブページを昇格**
+
    ![chlimage_1-4](assets/chlimage_1-4.png)
 
 1. 「**次へ**」を選択します。
@@ -132,7 +138,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    ![chlimage_1-6](assets/chlimage_1-6.png)
 
-## AEM ワークフローを使用した昇格済みページの処理{#processing-promoted-pages-using-aem-workflow}
+## AEM ワークフローを使用した昇格済みページの処理 {#processing-promoted-pages-using-aem-workflow}
 
 次のワークフローモデルを使用して、昇格済みのローンチページの一括処理をおこないます。
 
