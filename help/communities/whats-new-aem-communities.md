@@ -8,6 +8,9 @@ contentOwner: mgulati
 discoiquuid: 3e3c867f-afb0-4402-94f4-16e1a556ddee
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '1032'
+ht-degree: 82%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
 
 AEM Communities は、ビジネスパートナー、顧客および従業員が共同作業をおこなうビジネスフレームワークを提供します。Web サイト構造にソーシャル機能を提供し、業務関係者とナレッジを共有してブランド価値の向上に役立てることができます。
 
-AEM 6.4 Communitiesは、コミュニティユーザーの体験を高め、コミュニティ管理者、モデレーター、マネージャーの日常業務を容易にする機能を提供します。
+AEM 6.4 Communitiesは、コミュニティユーザーの体験を高め、コミュニティ管理者、モデレーター、管理者の今日のタスクを簡単にする機能を提供します。
 
 新機能および機能強化について詳しくは、概要を参照してください。また、AEM 6.4 Communities の[リリースノート](../release-notes/communities-release-notes.md)も参照してください。For AEM 6.4 Communities documentation, visit [AEM 6.4 Communities User Guide](home.md).
 
@@ -28,7 +31,7 @@ AEM Communities では、オーサー環境で事前定義されたテンプレ�
 
 コミュニティサイトの一部として、複数言語を使用するグループを 1 回の操作で作成できます。これを実行するには、コミュニティサイト内に[新しいコミュニティグループ](groups.md)を作成する際に表示される&#x200B;**[!UICONTROL コミュニティグループテンプレート]**&#x200B;ページの「**[!UICONTROL 追加の使用可能なコミュニティグループの言語]**」フィールドを使用します。
 
-![多言語グループ —1](assets/multilingualgroup-1.png)
+![multilingualgroup-1](assets/multilingualgroup-1.png)
 
 このようなグループを作成するには、まずサイトコンソールから目的のコミュニティサイトのグループコレクションに移動します。グループを作成し、**[!UICONTROL コミュニティグループテンプレート]**&#x200B;ページの「**[!UICONTROL 追加の使用可能なコミュニティグループの言語]**」フィールドに使用する言語を指定します。
 
@@ -50,9 +53,9 @@ AEM 6.4 Communities は、モデレートの機能強化を提供して、コミ
 
 ### 自動スパム検出  {#automatic-spam-detection}
 
-新しいスパム検出エンジンは、コミュニティサイトまたはグループにとって好ましくない迷惑なユーザー生成コンテンツを除去するために役立ちます。この機能を有効にすると、事前に定義された一連のスパム単語に基づいて、ユーザー生成コンテンツの一部をスパムまたは非スパムとしてマークできます。 モデレーターは、コンテンツに対してさらに操作を行って、そのコンテンツの発行インスタンスでの表示を拒否または許可できます。 これらのモデレートアクションは、インラインまたは一括モデレートコンソールを使用して実行できます。
+新しいスパム検出エンジンは、コミュニティサイトまたはグループにとって好ましくない迷惑なユーザー生成コンテンツを除去するために役立ちます。有効にすると、この機能は、ユーザーが生成したコンテンツの一部を、事前に定義された一連のスパムワードに基づいてスパムまたは非スパムとしてマークすることができます。 モデレーターは、コンテンツをさらに操作して、そのコンテンツが発行インスタンスで表示されるのを拒否または許可できます。 これらのモデレート操作は、インラインまたは一括モデレートコンソールを使用して実行できます。
 
-![スパム検出 —1](assets/spamdetection-1.png)
+![spamdetection-1](assets/spamdetection-1.png)
 
 [スパム検出プログラム](moderate-ugc.md#spam-detection)は、ユーザー生成コンテンツを 90％の精度で検出してフラグを設定します。ただし、この機能はデフォルトでは有効になっていません。 この機能を有効にするには、コミュニティ管理者が、system/console/configMgr に移動して、スパムプロセスを追加する必要があります。
 
@@ -99,5 +102,5 @@ AEM Communities では、ユーザーデータの保護をコミュニティエ�
 * AEM 6.4 Communities では、新しいコミュニティを作成する際に Captcha 検証を標準で使用できなくなりました。However, Communities site can be customized to include [Google component reCAPTCHA](https://helpx.adobe.com/experience-manager/using/aem_recaptcha.html) for better security.
 * カスタム CSS をアップロードするオプションが、コミュニティサイトとグループテーマから削除されました。
 * 「コンテンツのみ」および「検索」アイコンが、一括モデレート UI のフィルターレールに追加されました。
-* コンテンツパスフィルターが、一括モデレートUIのフィルターパネルに追加されました。
-* バルクモードに切り替え、バルクモデレートUIからバルクモードを終了する機能が削除されました。 To enter multi-select mode click the Select ( ![selecticon](assets/selecticon.png)) icon on a post, which appears on hovering over it with the mouse (desktop) or pressing and holding a finger on the post (mobile).
+* 一括モデレートUIのフィルターパネルに、コンテンツパスフィルターが追加されました。
+* 一括モデレートUIから、一括モードに切り替えて一括モードを終了する機能が削除されました。 To enter multi-select mode click the Select ( ![selecticon](assets/selecticon.png)) icon on a post, which appears on hovering over it with the mouse (desktop) or pressing and holding a finger on the post (mobile).
