@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 94b9eeee-aae3-4b28-9d6f-1be0e4acd982
 translation-type: tm+mt
 source-git-commit: 26b7692b839e8395d090137e4f85b008171bbfc0
+workflow-type: tm+mt
+source-wordcount: '561'
+ht-degree: 89%
 
 ---
 
@@ -27,7 +30,7 @@ Granite UI には、フォームで使用するようにデザインされた幅
 
 >[!NOTE]
 >
->フィールドについて詳しくは、[Granite UI に関するドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)を参照してください。
+>フィールドについて詳しくは、[Granite UI に関するドキュメント](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)を参照してください。
 
 Granite コンポーネントを開発または拡張するには、Granite UI の基盤フレームワークを使用します。このフレームワークには次の 2 つの要素があります。
 
