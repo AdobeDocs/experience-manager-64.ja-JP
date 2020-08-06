@@ -41,7 +41,7 @@ To enable Enhanced Smart Tags, in addition to the above, also install the latest
 
 A public certificate allows you to authenticate your profile on [!DNL Adobe Developer Console].
 
-1. ユーザーインターフェイスで、 [!DNL Experience Manager] ツール **[!UICONTROL /]** Cloud Service **[!UICONTROL /]** レガシCloud Serviceにアクセスします ****。
+1. ユーザーインターフェイスで、 [!DNL Experience Manager] ツール **[!UICONTROL /]** Cloud Services **[!UICONTROL /]** レガシCloud Servicesにアクセスします ****。
 
 1. In the Cloud Services page, click **[!UICONTROL Configure Now]** under **[!UICONTROL Assets Smart Tags]**.
 
