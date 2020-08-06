@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a6d9b08d-e669-4b9b-b591-c21cd72b6e22
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '1234'
+ht-degree: 80%
 
 ---
 
@@ -22,9 +25,9 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 * [AEM Communities](/help/communities/overview.md) サイト訪問者がコミュニティにコンテンツを投稿するにはログインする必要があります。
 * [閉じられたユーザーグループ](/help/sites-administering/cug.md)
 
-   場合によっては、Webサイト（またはWebサイトのセクション）へのアクセスを特定の訪問者に制限する必要があります。
+   Webサイト（またはWebサイトのセクション）へのアクセスを特定の訪問者に制限する必要がある場合があります。
 
-* [パーソナライゼーション](/help/sites-administering/personalization.md) 訪問者は、Webサイトへのアクセス方法に関する特定の側面を設定できます。
+* [パーソナライゼーション](/help/sites-administering/personalization.md) :訪問者がWebサイトにアクセスする方法の特定の側面を設定できます。
 
 ログイン（およびログアウト）機能は、[**プロファイル&#x200B;**](#profiles-and-user-accounts)付きのアカウントによって指定されます。プロファイルには、登録済みの訪問者（ユーザー）に関する追加情報が保持されます。実際の登録および承認のプロセスは状況によって異なります。
 
@@ -32,13 +35,13 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 
    A [Community Site](/help/communities/sites-console.md) may be configured to allow visitors to self-register or sign-in with their Facebook or Twitter accounts.
 
-* Webサイトからの登録請求
+* Webサイトからの登録の要求
 
-   閉じたユーザーグループの場合は、訪問者が登録をリクエストできるようにしますが、ワークフローを使用して承認を強制できます。
+   非公開ユーザーグループの場合は、訪問者が登録をリクエストすることを許可し、ワークフローによって承認を強制できます。
 
 * 作成者環境から各アカウントを登録する
 
-   少数のプロファイルがあり、それでも認証が必要な場合は、各プロファイルを直接登録することもできます。
+   プロファイルの数が少ない場合は、認証が必要になるので、個々のユーザーを直接登録することもできます。
 
 訪問者による登録を許可するには、一連のコンポーネントとフォームを使用して、必要な ID 情報、追加の（多くの場合、オプションです）プロファイル情報の順に収集できます。また、登録の完了後に、訪問者が送信した詳細の確認と更新をおこなえるようにする必要があります。
 
@@ -55,7 +58,7 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 
 フォームを使用すると、登録情報を収集して新しいアカウントとプロファイルを生成できます。
 
-例えば、ユーザーはGeometrixxページを使用して新しいプロファイルをリクエストできます。\
+例えば、Geometrixxページを使用して新しいプロファイルをリクエストできます\
 `http://localhost:4502/content/geometrixx-outdoors/en/user/register.html`
 
 ![registerform](assets/registerform.png)
@@ -84,7 +87,7 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 
 ## プロファイルの確認と更新 {#viewing-and-updating-a-profile}
 
-登録フォームによっては、訪問者の情報が自身のプロファイルに登録されます。訪問者が以降のステージでこの情報を確認および更新できるようにする必要があります。これは同様の形で行うことができる。例えば、Geometrixxでは次のようになります。
+登録フォームによっては、訪問者の情報が自身のプロファイルに登録されます。訪問者が以降のステージでこの情報を確認および更新できるようにする必要があります。これは、同じような形で行うことができます。 例えば、Geometrixx内：
 
 ```
 http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
@@ -95,7 +98,7 @@ To see the details of your profile click on **My Profile** in the top right corn
 
 オーサー環境の [ClientContext](/help/sites-administering/client-context.md) を使用すると、別のプロファイルを確認できます（十分な権限がある場合）。
 
-1. ページを開く、例えば、Geometrixxページ：
+1. ページを開く、 例えば、Geometrixxページ：
 
    `http://localhost:4502/cf#/content/geometrixx/en.html`
 
@@ -130,17 +133,18 @@ To see the details of your profile click on **My Profile** in the top right corn
    * **要素名** - `favoriteColor`
    * **タイトル** - `Favorite Color`
    * **項目** - 複数の色を項目として追加します。
+
    「**OK**」をクリックして保存します。
 
 1. ページを閉じて **Web サイト**&#x200B;コンソールに戻り、マイプロファイルページをアクティベートします。
 
    次回プロファイルを確認する際に、好きな色を選択できます。
 
-   ![aperkFavcolor](assets/aparkerfavcolour.png)
+   ![aperkfavcolor](assets/aparkerfavcolour.png)
 
    このフィールドは、関連するユーザーアカウントの **profile** セクションに保存されます。
 
-   ![アパルクルクスデライト](assets/aparkercrxdelite.png)
+   ![アパルケルクルドレ](assets/aparkercrxdelite.png)
 
 ## プロファイルの状態 {#profile-states}
 
@@ -156,7 +160,7 @@ To see the details of your profile click on **My Profile** in the top right corn
 
 * [State Providers](#state-providers)
 
-   特定のプロパティの2つの状態とその間の遷移を管理する。
+   特定のプロパティの2つの状態と2つのトランジションを管理する。
 
 * [ワークフロー](#workflows)
 
@@ -194,7 +198,7 @@ The profile can be found under `/home/users/geometrixx`:
 
 これらのアクセス権限は次のワイルドカード ACL によって定義されます。
 
-/home everyone allow jcr:read rep:glob = &amp;ast;/profile&amp;ast;
+/home everyone allow jcr:read rep:glob = &amp;ast;/プロファイル&amp;ast;
 
 これにより、次の処理が可能になります。
 
@@ -220,23 +224,23 @@ This can be done using the **[Access Control](/help/sites-administering/user-gro
 
 デフォルト設定を使用すると、コンポーネントは次のように表示されます。
 
-![dc_profiles_checkedpassword](assets/dc_profiles_checkedpassword.png)
+![dc_プロファイル_checkedpassword](assets/dc_profiles_checkedpassword.png)
 
 ### プロファイルのアバター写真 {#profile-avatar-photo}
 
 このコンポーネントを使用すると、ユーザーがアバター写真ファイルを選択およびアップロードできるようになります。
 
-![dc_profiles_avatarphoto](assets/dc_profiles_avatarphoto.png)
+![dc_プロファイル_avataphoto](assets/dc_profiles_avatarphoto.png)
 
 ### プロファイルの詳細名 {#profile-detailed-name}
 
 このコンポーネントを使用すると、ユーザーは詳細な名前を入力できます。
 
-![dc_profiles_detailedname](assets/dc_profiles_detailedname.png)
+![dc_プロファイル_詳細名](assets/dc_profiles_detailedname.png)
 
 ### プロファイルの性別 {#profile-gender}
 
 このコンポーネントを使用すると、性別を入力できます。
 
-![dc_profiles_gender](assets/dc_profiles_gender.png)
+![dc_プロファイル_性別](assets/dc_profiles_gender.png)
 
