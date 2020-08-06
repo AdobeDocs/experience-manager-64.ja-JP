@@ -9,6 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
 translation-type: tm+mt
 source-git-commit: 835618e8e0d01905ad7b476b0172dfecec41cf9d
+workflow-type: tm+mt
+source-wordcount: '1015'
+ht-degree: 86%
 
 ---
 
@@ -87,9 +90,11 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 1. 使用可能な情報に応じて、次のいずれかのクエリを実行します。
 
    * ワークフロー開始者が分かっている場合は、次のコマンドを実行します。
+
    `SELECT &ast; FROM [cq:Workflow] AS s WHERE ISDESCENDANTNODE([path-to-workflow-instances]) and s.[initiator]='*initiator-ID*'`
 
-   * 検索するデータを持つユーザーが現在のワークフローの担当者である場合は、次を実行します。
+   * 検索しようとしているデータを現在のワークフローの担当者にしている場合は、次を実行します。
+
    `SELECT &ast; FROM [cq:WorkItem] AS s WHERE ISDESCENDANTNODE([path-to-workflow-instances]) and s.[assignee]='*assignee-id*'`
 
    クエリを実行すると、指定されたワークフロー開始者また現在のワークフロー担当者のすべてのワークフローインスタンスの場所が返されます。
@@ -102,7 +107,7 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 
    ![status](assets/status.png)
 
-1. In the workflow instance node, navigate to `data/payload/`. `path` プロパティには、ワークフローインスタンスのペイロードへのパスが格納されます。ペイロードに保存されたデータにアクセスするパスに移動できます。
+1. In the workflow instance node, navigate to `data/payload/`. `path` プロパティには、ワークフローインスタンスのペイロードへのパスが格納されます。ペイロードに保存されたデータにアクセスするためのパスに移動できます。
 
    ![payload-path](assets/payload-path.png)
 
@@ -136,6 +141,7 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
    1. Go to `https://[server]:[port]/aem/start.html` and log in with administrator credentials.
    1. **[!UICONTROL ツール／ワークフロー／インスタンス]**&#x200B;の順に移動します。
    1. ユーザーの関連ワークフローインスタンスを選択し、「**[!UICONTROL 終了]**」をタップして実行中のインスタンスを終了します。
+
    For more information about working with workflow instances, see [Administering Workflow Instances](/help/sites-administering/workflows-administering.md).
 
 1. CRXDE Lite コンソールにアクセスし、ワークフローインスタンスのペイロードパスに移動して、`payload` ノードを削除します。
@@ -153,6 +159,6 @@ Forms 中心の AEM ワークフローおよび機能について詳しくは、
 また、API を使用してノードおよびプロパティにアクセスしてこれらを削除することができます。詳しくは、次の文書を参照してください。
 
 * [AEM JCR へのプログラムからのアクセス方法](/help/sites-developing/access-jcr.md)
-* [ノードおよびプロパティの削除](https://docs.adobe.com/docs/en/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
+* [ノードおよびプロパティの削除](https://docs.adobe.com/docs/jp/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
 * [API リファレンス](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)
 
