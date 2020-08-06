@@ -30,7 +30,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、Formsオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsとのプログラミング」にあるクイック開始は、Formsのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）: Java APIを使用したバックアップモードの開始 {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
 
@@ -150,7 +150,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 ## クイック開始（SOAPモード）: Java APIを使用したバックアップモードの終了 {#quick-start-soap-mode-leaving-backup-mode-using-the-java-api}
 
-次のJavaコードの例では、Formsサーバーが明示的にバックアップモードを終了し、グローバルドキュメントストレージからファイルの削除に戻ります。 (formsサーバーでのバックアップモードの [終了を参照](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server))。
+次のJavaコードの例では、明示的にFormsサーバーがバックアップモードを終了し、グローバルドキュメントストレージからファイルを削除する処理に戻ります。 (formsサーバーでのバックアップモードの [終了を参照](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server))。
 
 ```as3
  /* 
