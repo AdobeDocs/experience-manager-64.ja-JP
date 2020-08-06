@@ -259,14 +259,14 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 ### FulltextPredicate {#fulltextpredicate}
 
-| プロパティ | タイプ | 説明 |
+| プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルト に設定`fulltext` |
 | searchCallback | Function | Callback for triggering search on event `keyup`. デフォルト に設定`CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
-| プロパティ | タイプ | 説明 |
+| プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルト に設定`property` |
 | propertyName | String | JCR プロパティの名前。デフォルト に設定`jcr:title` |
@@ -274,7 +274,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 ### PathPredicate {#pathpredicate}
 
-| プロパティ | タイプ | 説明 |
+| プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルト に設定`path` |
 | rootPath | String | 述語のルートパス。デフォルト に設定`/content/dam` |
@@ -283,7 +283,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 ### DatePredicate {#datepredicate}
 
-| プロパティ | タイプ | 説明 |
+| プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルト に設定`daterange` |
 | propertyname | String | JCR プロパティの名前。デフォルト に設定`jcr:content/jcr:lastModified` |
@@ -291,7 +291,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 ### OptionsPredicate {#optionspredicate}
 
-| プロパティ | タイプ | 説明 |
+| プロパティ | 型 | 説明 |
 |---|---|---|
 | title | String | 最上部のタイトルを追加します |
 | predicateName | String | 述語の名前。デフォルト に設定`daterange` |
