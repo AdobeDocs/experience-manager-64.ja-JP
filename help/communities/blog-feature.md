@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: d5519211-8a04-4699-97bc-e162ec0f3781
 translation-type: tm+mt
 source-git-commit: 13d890d08a032fe4eef1dac793dcf2a3e682a52c
+workflow-type: tm+mt
+source-wordcount: '1604'
+ht-degree: 46%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 13d890d08a032fe4eef1dac793dcf2a3e682a52c
 
 AEM Communities のブログ機能は、オーサリングアクティビティから、パブリッシュ環境でおこなわれるコミュニティアクティビティへと変わりました。
 
-ブログ機能は、ジャーナル形式でのコミュニティ情報の提供をサポートします。ブログエントリは、公開環境で、許可されたメンバー（登録されたログインユーザー）によって作成されます。
+ブログ機能は、ジャーナル形式でのコミュニティ情報の提供をサポートします。ブログエントリは、許可されたメンバー（登録ユーザー、ログインユーザー）によって公開環境で作成されます。
 
 ブログ機能では以下のことが可能です。
 
@@ -41,13 +44,13 @@ AEM Communities のブログ機能は、オーサリングアクティビティ�
 
 >[!NOTE]
 >
->コンポーネン `Journal`トとタ `Journal Sidebar` イトルはと `Blog` になりま `Blog Sidebar`す。
+>コンポーネント `Journal`と `Journal Sidebar` には「および」という名前が付け `Blog` られ `Blog Sidebar`ます。
 >
->AEM 6.0 以前のリリースのブログ機能は、現在は削除されています。テンプレートに基づいており、作成者のみが作成者環境でコンテンツを作成できました。
+>AEM 6.0 以前のリリースのブログ機能は、現在は削除されています。テンプレートに基づいており、作成者だけが作成者環境でコンテンツを作成できます。
 
 ## ブログコンポーネントをページに追加 {#adding-blog-components-to-a-page}
 
-作成者モードでページにブログを追加する場合は、コンポーネントブラウザを使用して、
+作成者モードでページにブログを追加する場合は、コンポーネントブラウザを使用して
 
 * `Communities / Blog`
 * `Communities / Blog Sidebar`
@@ -56,7 +59,7 @@ AEM Communities のブログ機能は、オーサリングアクティビティ�
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](blog-developer-basics.md#essentials-for-client-side) are included, this is how the `Blog`component will appear:
+[必要なクライアント側ライブラリが含まれる場合](blog-developer-basics.md#essentials-for-client-side) 、次のように `Blog`コンポーネントが表示されます。
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -68,7 +71,7 @@ When the [required client-side libraries](blog-developer-basics.md#essentials-fo
 
 Select the placed `Blog` component to access and select the `Configure` icon which opens the edit dialog.
 
-![アイコンブログ](assets/chlimage_1-149.png)![の設定](assets/Blog-configure.png)
+![アイコン](assets/chlimage_1-149.png)![ブログ設定の指定](assets/Blog-configure.png)
 
 #### 「設定」タブ{#settings-tab}
 
@@ -78,19 +81,19 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **[!UICONTROL 添付サムネールの最大サイズ]** 添付サムネール画像の最大サイズ（ピクセル単位）です。デフォルト値は、800 x 800 です。
 
-* **[!UICONTROL サムネールの最小画像サイズ]**&#x200B;インライン画像のサムネールを生成するための画像の最小サイズ（バイト単位）。 デフォルト値は100000バイト(100 KB)です。
+* **[!UICONTROL サムネールの最小画像サイズ]**&#x200B;インライン画像のサムネールを生成するための画像の最小サイズ（バイト単位）です。 デフォルト値は100000バイト(100 KB)です。
 
-* **[!UICONTROL Max Thumbnail Sizeインラ]**&#x200B;イン画像のサムネール画像の最大サイズ（ピクセル単位）。 デフォルト値は、800 x 800 です。
+* **[!UICONTROL 最大サムネールサイズ]**&#x200B;インライン画像のサムネール画像の最大サイズ（ピクセル単位）。 デフォルト値は、800 x 800 です。
 
 * **[!UICONTROL 「Allow Privileged Members]**」を選択すると、「Privileged Members」のみがコンテンツの作成を許可されます。
 
 * **[!UICONTROL 許可された権限を持つメンバー]**&#x200B;コンテンツの作成を許可された、権限を持つメンバーを追加します。
 
-* **[!UICONTROL 作成者編集モードでのユーザー生成コンテンツのブロック]**&#x200B;有効な場合、作成者モードでの編集中にユーザー生成コンテンツがブロックされます。
+* **[!UICONTROL 作成者編集モードでユーザー生成コンテンツをブロックする]**&#x200B;有効な場合、作成者モードでの編集中にユーザー生成コンテンツがブロックされます。
 
 * **[!UICONTROL ジャーナルタイトル]**&#x200B;ページに表示されるブログのタイトルです。
    >注意：
-   >ジャーナルタイトルは、ブログ用の URL を自動的に作成するために使用されます。ここで指定するジャーナルタイトルから、ブログのURLを作成する際に使用する最大50文字（一意性を確保するために5文字を含む）。
+   >ジャーナルタイトルは、ブログ用の URL を自動的に作成するために使用されます。ブログのURLの作成には、ここで指定するジャーナルタイトルから最大50文字（一意性のために5文字以上）が使用されます。
 
 * **[!UICONTROL ジャーナルの説明]**&#x200B;ブログの説明です。
 
@@ -108,7 +111,7 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **[!UICONTROL リッチテキストエディター]**
 
-   オンにすると、ブログエントリとコメントがマークアップ付きで入力される場合があります。 初期設定はオンです。
+   オンにすると、ブログエントリとコメントがマークアップと共に入力される場合があります。 初期設定はオンです。
 
 * **[!UICONTROL タグ付けを許可]**
 
@@ -116,15 +119,15 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **[!UICONTROL ファイルのアップロードを許可]**
 
-   オンにした場合、添付ファイルをブログエントリまたはコメントに追加できます。 初期設定はオフです。
+   オンの場合、添付ファイルをブログエントリまたはコメントに追加できるようにします。 初期設定はオフです。
 
 * **[!UICONTROL 最大ファイルサイズ]**
 
-   がオンの場合にのみ `Allow File Uploads` 関連します。 このフィールドは、アップロードするファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+   チェックされている場合にのみ関連 `Allow File Uploads` します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
 * **[!UICONTROL 許可されるファイルタイプ]**
 
-   がオンの場合にのみ `Allow File Uploads` 関連します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルタイプを指定した場合、指定しなかったファイルはアップロードできません。 初期設定はnoneで、すべてのファイルタイプが許可されます。
+   チェックされている場合にのみ関連 `Allow File Uploads` します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
 * **[!UICONTROL 添付する画像ファイルの最大サイズ]**
 
@@ -136,7 +139,7 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **[!UICONTROL ユーザーによるコメントおよびトピックの削除を許可]**
 
-   オンにした場合、投稿したコメントやブログエントリの削除をメンバーに許可します。 初期設定はオフです。
+   オンの場合、メンバーが投稿したコメントやブログエントリを削除できるようにします。 初期設定はオフです。
 
 * **[!UICONTROL フォローを許可]**
 
@@ -164,31 +167,31 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **[!UICONTROL 投稿を拒否]**
 
-   選択すると、信頼されたメンバーのモデレーターは、投稿を拒否し、投稿が公開フォーラムに表示されるのを防ぐことができます。 初期設定はオフです。
+   オンにすると、信頼されたメンバーのモデレーターは、投稿を拒否し、投稿がパブリックフォーラムに表示されないように許可されます。 初期設定はオフです。
 
 * **[!UICONTROL トピックを閉じる / 再度開く]**
 
-   このオプションを選択すると、信頼されたメンバーのモデレーターがトピックを閉じて、さらに編集やコメントを行ったり、トピックを再度開いたりする場合があります。 初期設定はオフです。
+   オンにすると、信頼されたメンバーのモデレーターがトピックを閉じて、さらに編集やコメントを行ったり、トピックを再度開いたりすることができます。 初期設定はオフです。
 
 * **[!UICONTROL 投稿にフラグを設定]**
 
-   選択した場合、他のユーザーのトピックやコメントに不適切なフラグを付けることを許可します。 初期設定はオフです。
+   このオプションを選択すると、他のユーザーのトピックやコメントに不適切なフラグを付けることができます。 初期設定はオフです。
 
 * **[!UICONTROL フラグ設定理由リスト]**
 
-   このオプションを選択すると、トピックまたはコメントに不適切なフラグを付ける理由を、ドロップダウンリストからメンバーが選択できるようになります。 初期設定はオフです。
+   オンにした場合、メンバーは、トピックまたはコメントに不適切なフラグを付ける理由をドロップダウンリストから選択できます。 初期設定はオフです。
 
 * **[!UICONTROL カスタムフラグ設定理由]**
 
-   選択した場合、トピックやコメントに不適切としてフラグを付ける独自の理由をメンバーが入力できるようにします。 初期設定はオフです。
+   このオプションを選択すると、トピックやコメントに不適切なフラグを付ける理由をメンバーが自分で入力できます。 初期設定はオフです。
 
 * **[!UICONTROL モデレートのしきい値]**
 
-   モデレーターに通知する前に、メンバーがトピックまたはコメントにフラグを付ける必要がある回数を入力します。 初期設定は1（1回）です。
+   モデレーターに通知する前に、トピックまたはコメントにメンバーがフラグを付ける必要がある回数を入力します。 初期設定は1（1回）です。
 
 * **[!UICONTROL フラグ付けの制限]**
 
-   トピックまたはコメントが公開ビューに表示されなくなるまでにフラグを付ける必要がある回数を入力します。 -1に設定した場合、フラグ付けされたトピックまたはコメントは公開ビューで非表示になりません。 そうでない場合、この数値はモデレートのしきい値以上にする必要があります。 初期設定は 5 です。
+   トピックまたはコメントが公開表示に表示されなくなる前にフラグを付ける必要がある回数を入力します。 -1に設定した場合、フラグ付けされたトピックまたはコメントはパブリック表示に表示されません。 それ以外の場合は、この数値をモデレートしきい値以上にする必要があります。 初期設定は 5 です。
 
 #### 「タグフィールド」タブ{#tag-field-tab}
 
@@ -196,11 +199,11 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **[!UICONTROL 許可された名前空間]**
 
-   「設定」タブで `Allow Tagging` 選択されている場合に **[!UICONTROL 関連]** 。 適用できるタグは、チェックされた名前空間カテゴリ内のタグに制限されます。 名前空間のリストには、「Standard Tags」（デフォルトの名前空間）と「Include All Tags」が含まれます。 初期設定はnoneで、すべての名前空間が許可されます。
+   「 `Allow Tagging` 設定 **** 」タブでチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
 * **[!UICONTROL 推奨の制限]**
 
-   フォーラムへの投稿に対して提案として表示するタグの数を入力します。 -1 は無制限を意味します。初期設定は 0 です。
+   フォーラムに投稿するメンバーに対して提案として表示するタグの数を入力します。 -1 は無制限を意味します。初期設定は 0 です。
 
 ### ブログのサイドバーの設定 {#configuring-blog-sidebar}
 
@@ -219,6 +222,7 @@ When you double-click the `Blog Sidebar` component, an edit dialog opens up.
    * MMMMM：月の正式名（例：June）
    * MMM：月の短縮名（例：Jun）
    * MM：月の数字（例：06）
+
    初期設定は「yyyy MMMMM」です。これは「2015 June」のように表示されます。
 
 * **[!UICONTROL 表示タイプ]**
@@ -231,7 +235,7 @@ When you double-click the `Blog Sidebar` component, an edit dialog opens up.
 
 * **[!UICONTROL ジャーナルコンポーネントのパス]**
 
-   *(オプション* )ブログ記事のリスト元となるブログリソースの場所。 If left blank, will use the component of resourceType `social/journal/components/hbs/journal` that appears on the same page.
+   *（オプション）* ブログ記事のリスト元となるブログリソースの場所。 If left blank, will use the component of resourceType `social/journal/components/hbs/journal` that appears on the same page.
 
    * 例：`/content/sites/engage/en/blog/jcr:content/content/primary/blog`
 
@@ -241,7 +245,7 @@ When you double-click the `Blog Sidebar` component, an edit dialog opens up.
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
-パブリッシュ環境では、ブログ記事は作成の降順に表示されます（最新のブログ記事の後に、古いブログ記事が表示されます）。ブログのサイドバーを使用すると、サイトの訪問者はフィルタを適用して、表示されるブログ記事の選択を制限できます。
+パブリッシュ環境では、ブログ記事は作成の降順に表示されます（最新のブログ記事の後に、古いブログ記事が表示されます）。ブログのサイドバーを使用すると、サイト訪問者がフィルターを適用して、表示するブログ記事の選択を制限できます。
 
 ブログ記事の下には、コメントを投稿または表示するためのリンクが表示されます。
 
@@ -272,11 +276,11 @@ When the signed in user is a community member or [privileged member](users.md#pr
 具体的には、次のことが可能です。
 
 * 新しいブログ記事の作成
-* 別のメンバーに代わって新しいブログ記事を投稿する
+* 別のメンバーに代わって新しいブログ記事を投稿
 * ブログ記事へのコメントの投稿
 * 自分のブログ記事またはコメントの編集
 * 自分のブログ記事またはコメントを削除する
-* 他のユーザーのブログ記事またはコメントにフラグを付ける
+* 他の人のブログ記事またはコメントにフラグを付ける
 
 ![chlimage_1-153](assets/chlimage_1-153.png) ![chlimage_1-154](assets/chlimage_1-154.png)
 
