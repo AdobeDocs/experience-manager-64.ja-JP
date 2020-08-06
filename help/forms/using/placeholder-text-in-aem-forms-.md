@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: 2d7367fa-6cb8-40a1-8566-1fd0d46fdfde
 translation-type: tm+mt
 source-git-commit: a417e571d7c3b8da8f38f3d1ad814610636eabbc
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 92%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: a417e571d7c3b8da8f38f3d1ad814610636eabbc
 
 ![プレースホルダーテキストを伴う/伴わない日付コンポーネント](assets/dat-picker-place-holder-text.png)
 
-******A.プレースホルダーテキスト** Bを持つ日付コンポーネントプレースホルダーテキストのない日付コンポーネント
+**A.プレースホルダーテキストを含む** Dateコンポーネント **B.プレースホルダーテキストを含まない** Dateコンポーネント
 
 AEM Forms では、パスワードボックス、日付ピッカー、数値ボックス、テキストボックスフィールドでプレースホルダーテキストを使用できます。\
 プレースホルダーテキストはネイティブの HTML5 日付ウィジェットには対応していません。プレースホルダーテキストを指定するには：
