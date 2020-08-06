@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8e85ea7f-80ea-43b6-a67c-366852ef86ce
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1672'
+ht-degree: 89%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 ページに必要なプロパティを定義できます。これらはページの特性に応じて異なることがあります。例えば、ページによってはライブコピーに接続されていたり、接続されずにライブコピー情報が必要に応じて利用可能な場合があります。
 
-## ページのプロパティ {#page-properties}
+## ページプロパティ {#page-properties}
 
 プロパティは次のタブに分散しています。
 
@@ -42,6 +45,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
       * 新しいタグが表示され、その右側にタグが新規であることを示す小さな星が表示されます。
    * ドロップダウン機能を使用して、既存のタグを選択できます。
    * 選択ボックスのタグエントリの上にマウスポインターを合わせると、x が表示されます。これをクリックすると、対象のタグをこのページから削除できます。
+
    タグについて詳しくは、[タグの使用](/help/sites-authoring/tags.md)を参照してください。
 
 * **ナビゲーション内で非表示にする**
@@ -96,7 +100,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 ### アドバンス {#advanced}
 
-* **言葉遣い**
+* **言語**
 
    ページの言語です。
 
@@ -114,11 +118,11 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    >[!NOTE]
    >
-   > 「Alias」は、プロパ `sling:alias` ティーを設定して、リソースのエイリアス名を定義します（これはリソースにのみ影響し、パスには影響しません）。
+   > 「エイリアス」は、リソースのエイリアス名を定義する `sling:alias` プロパティを設定します（これはリソースにのみ影響を及ぼし、パスには影響しません）。
    >
-   >例：ノードノードのエイリアスを定義 `latin-lang` した場合、こ `/content/we-retail/spanish` のページは、 `/content/we-retail/latin-language`
+   >例えば、`/content/we-retail/spanish` ノードに `latin-lang` というエイリアスを定義した場合、このページは `/content/we-retail/latin-language` でアクセスできます。
    >
-   >詳しくは、「SEOとURL管理のベス [トプラクティス」の「ローカライズされたページ名」を参照してください。](/help/managing/seo-and-url-management.md#localized-page-names)
+   >For further details see [Localized page names under SEO and URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names)
 
 * **許可されたテンプレート**
 
@@ -145,19 +149,19 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    書き出し設定を指定します。
 
-### サムネイル {#thumbnail}
+### サムネール {#thumbnail}
 
 1. **ページサムネイル**
 
-   ページサムネイル画像が表示されます。以下の操作を実行できます。
+   ページサムネール画像が表示されます。以下の操作を実行できます。
 
    * **プレビューを生成**
 
-      サムネイルとして使用するページのプレビューを生成します。
+      サムネールとして使用するページのプレビューを生成します。
 
    * **画像をアップロード**
 
-      サムネイルとして使用する画像をアップロードします。
+      サムネールとして使用する画像をアップロードします。
 
 ### ソーシャルメディア {#social-media}
 
@@ -167,17 +171,18 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    * **Facebook に対してユーザー共有を有効にする**
    * **Pinterest に対してユーザー共有を有効にする**
-   * **優先 XF バリエーション**&#x200B;ページのメタデータの生成に使用されるエクスペリエンスフラグメントのバリエーションを定義します
+   * **優先 XF バリエーション**
+ページのメタデータの生成に使用されるエクスペリエンスフラグメントのバリエーションを定義します
 
-### クラウドサービス {#cloud-services}
+### Cloud Services {#cloud-services}
 
-* **クラウドサービス**
+* **Cloud Services**
 
    [クラウドサービス](/help/sites-developing/extending-cloud-config.md)用のプロパティを定義します。
 
 ### パーソナライゼーション {#personalization}
 
-* **パーソナライゼーション**
+* **パーソナライズ機能**
 
    [ブランドを選択してターゲット設定の範囲を指定](/help/sites-authoring/personalization.md)します。
 
@@ -190,6 +195,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
    * [権限を追加](/help/sites-administering/user-group-ac-admin.md)
    * [閉じられたユーザーグループを編集](/help/sites-administering/cug.md#applying-your-closed-user-group-to-content-pages)
    * [有効な権限](/help/sites-administering/user-group-ac-admin.md)を表示
+
    >[!CAUTION]
    >
    >The **Permissions** tab allows editing of CUG configurations based on the presence of the `granite:AuthenticationRequired` mixin. `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
@@ -209,7 +215,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 ### ライブコピー {#live-copy}
 
-* **Livecopy**
+* **ライブコピー**
 
    [マルチサイト管理](/help/sites-administering/msm.md)でのライブコピーページのプロパティを定義します。ブループリントからの変更が適用される条件を制御します。
 
@@ -224,14 +230,14 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 * **サイト**&#x200B;コンソールから：
 
    * [新しいページを作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)します（プロパティのサブセット）
-   * Clicking or tapping **Properties**
+   * 「**プロパティ**」をクリックまたはタップします
 
       * 単一のページ
       * 複数のページ（まとめて編集する場合は、プロパティのサブセットのみを使用できます）
 
 * ページエディターから、次の操作をおこないます。
 
-   * 「**ページ情報**」を使用します（その後、「**プロパティを開く**」をクリック）
+   * 「**ページ情報**」（その後、「**プロパティを開く**」）を使用します
 
 ### サイトコンソールから - 単一のページ {#from-the-sites-console-single-page}
 
@@ -239,10 +245,11 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 1. **サイト**&#x200B;コンソールを使用して、プロパティを表示および編集するページの場所に移動します。
 
-1. Select the **Properties** option for the required page using either:
+1. 次のいずれかを使用して、目的のページで「**プロパティ**」オプションを選択します。
 
    * [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)
    * [選択モード](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
+
    ページのプロパティが該当するタブに表示されます。
 
 1. 必要に応じてプロパティを表示または編集します。
@@ -314,6 +321,7 @@ After selecting the pages and then clicking or tapping the **Properties** option
 
       * 表示モードで表示されるのは、共通の値を持つプロパティのみです。
       * フィールドが複数値（タグなど）の場合は、すべての値が共通の場合に限り、値が表示されます。**&#x200B;一部の値のみが共通の場合は、それらの値は編集時にのみ表示されます。
+
    一般的な値を含むプロパティがない場合は、メッセージが表示されます。
 
 * **編集**
@@ -324,7 +332,7 @@ After selecting the pages and then clicking or tapping the **Properties** option
 
       * 新しい値は、「**完了**」を選択したときに、選択したすべてのページに適用されます。
       * フィールドが複数値（タグなど）の場合は、新しい値を追加するか、共通の値を削除できます。
-   * Fields that are common, but have different values across the various pages will be indicated with a special value such as the text `<Mixed Entries>`. そのようなフィールドを編集する際は、データが失われないように、慎重におこなう必要があります。
+   * 共通のフィールドに、ページによって異なる値が設定されている場合、それらのフィールドは特別な値（「`<Mixed Entries>`」というテキストなど）で示されます。そのようなフィールドを編集する際は、データが失われないように、慎重におこなう必要があります。
 
 
 >[!NOTE]
