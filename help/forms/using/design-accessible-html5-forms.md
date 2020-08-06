@@ -10,13 +10,16 @@ topic-tags: hTML5_forms
 discoiquuid: ccc59dd5-c0cf-415a-b71a-5bc0cf452ede
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '374'
+ht-degree: 89%
 
 ---
 
 
 # アクセス可能な HTML5 フォームの設計 {#designing-accessible-html-forms}
 
-HTML5 フォームは ARIA HTML5 アクセシビリティ標準を基に、アクセシビリティを備えた HTML フォームを生成します。これらのフォームは、タブナビゲーション（Mozilla FireFox を除く）をサポートし、一般的な画面読み上げアプリケーションと互換性があります。To generate an HTML5 form with good accessibility features, design the XFA form template based on some [basic designing guidelines](/help/forms/using/best-practices-for-html5-forms.md). デザインガイドラインには正しいタブ順序の設定、および各フォームコントロールのために読み上げテキストコンテンツの提供などが含まれます。AEM Forms Designerは、アクセシブルなPDFおよびHTML5フォームを生成するために、これらのフォームコントロール属性の設定をサポートしています。
+HTML5 フォームは ARIA HTML5 アクセシビリティ標準を基に、アクセシビリティを備えた HTML フォームを生成します。これらのフォームは、タブナビゲーション（Mozilla FireFox を除く）をサポートし、一般的な画面読み上げアプリケーションと互換性があります。To generate an HTML5 form with good accessibility features, design the XFA form template based on some [basic designing guidelines](/help/forms/using/best-practices-for-html5-forms.md). デザインガイドラインには正しいタブ順序の設定、および各フォームコントロールのために読み上げテキストコンテンツの提供などが含まれます。AEM Formsデザイナーでは、アクセシブルなPDFフォームとHTML5フォームを生成するために、これらのフォームコントロール属性の設定をサポートしています。
 
 *注意：タブナビゲーションは、値の合計を表示する計算フィールドなどの保護付きフィールドには適用されません。スクリーンリーダーが保護フィールドの値を読み取れるようにするには、空の読み取り専用フィールドを保護フィールドの上、または横のいずれかに配置します。保護フィールドの値を新しい読み取り専用フィールドに割り当てます。スクリーンリーダーやタブナビゲーションはこの読み取り専用フィールドを選択し、保護フィールドの値として読み上げることができます。*
 
