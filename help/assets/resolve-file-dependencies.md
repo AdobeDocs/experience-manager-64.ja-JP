@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 05b7410b-82a1-4267-ac07-2edbc29e9ee8
 translation-type: tm+mt
 source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+workflow-type: tm+mt
+source-wordcount: '348'
+ht-degree: 42%
 
 ---
 
@@ -42,6 +45,7 @@ source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
 
       1. 見つからなかったパスとファイル名を書き留めます。
       1. プロパティページの右上隅にある「**[!UICONTROL 閉じる]**」をタップします。
+
    After the files are uploaded return to **[!UICONTROL View Properties > Dependencies]** page. 新たにアップロードされたアセットが、参照されているファイルとして正しく一覧表示されるようになります。
 
    * **依存関係を無視する**。
