@@ -11,6 +11,9 @@ topic-tags: page-authoring
 discoiquuid: 7f5713fe-01e3-450e-b71a-dc567d9a192e
 translation-type: tm+mt
 source-git-commit: ee9b977515b6c1233ff87f011f7a8b4095450814
+workflow-type: tm+mt
+source-wordcount: '445'
+ht-degree: 93%
 
 ---
 
@@ -21,9 +24,9 @@ source-git-commit: ee9b977515b6c1233ff87f011f7a8b4095450814
 
 次の内容について説明します。
 
-* [はじめに](#getting-started):最初のページを作成して公開するために必要なイベントの基本的なシーケンスの詳細を説明します。
+* [はじめに](#getting-started): 最初のページを作成して公開する際に必要なイベントの基本的な順序の詳細を説明します。
 
-* [その他のアクション](#further-actions):オーサリング時に使用できるその他多数のアクションについて説明します。
+* [その他のアクション](#further-actions): オーサリング時に使用できる他の多数のアクションについて説明します。
 
 ## 概要 {#getting-started}
 
