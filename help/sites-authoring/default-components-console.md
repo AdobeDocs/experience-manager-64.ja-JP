@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8774c38a-abd2-4dc2-868e-d6760c96f3f6
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '262'
+ht-degree: 95%
 
 ---
 
@@ -25,7 +28,7 @@ It can be accessed from **Tools** -> **General** -> **Components**. コンソー
 
 >[!NOTE]
 >
->コンポーネントコンソールには、システムのすべてのコンポーネントが表示されます。The [Component Browser](/help/sites-authoring/author-environment-tools.md#components-browser) shows components that are available to authors and hides any component groups that begin with a period ( `.`).
+>コンポーネントコンソールには、システムのすべてのコンポーネントが表示されます。[コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)には、作成者が使用できるコンポーネントが表示され、ピリオド（`.`）で始まるすべてのコンポーネントグループは非表示になります。
 
 ## 検索 {#search-features}
 
@@ -52,7 +55,7 @@ It can be accessed from **Tools** -> **General** -> **Components**. コンソー
       * リソースのスーパータイプをクリックすると、そのコンポーネントが表示されます。
    >[!NOTE]
    >
-   >Because `/apps` is not editable at runtime, the Components Console is read-only.
+   >`/apps` は実行時には編集できないので、コンポーネントコンソールは読み取り専用です。
 
 * **ポリシー**
 
