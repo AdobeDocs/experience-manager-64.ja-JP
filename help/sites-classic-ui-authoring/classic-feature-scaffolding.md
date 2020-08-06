@@ -11,6 +11,9 @@ topic-tags: site-features
 discoiquuid: 884b3e75-78b5-421a-938e-97fe6d77c8c2
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1507'
+ht-degree: 75%
 
 ---
 
@@ -34,7 +37,7 @@ Scaffolds are stored in the **Tools** console of the site admin.
 * 「**geometrixx**」をクリックします。
 * 「**geometrixx**」で、「**ニュース**」という名前の基礎モードページ&#x200B;**&#x200B;を探し、ダブルクリックしてこのページを開きます。
 
-![howscaffored_work](assets/howscaffolds_work.png)
+![howscaffores_work](assets/howscaffolds_work.png)
 
 The scaffold consists of a form with a field for each piece of content that will make up the page to be created and four important parameters which are accessed through the **Page Properties** of the scaffold page.
 
@@ -52,12 +55,12 @@ The scaffold consists of a form with a field for each piece of content that will
 
 * **タイトル**：作成するページの名前です。このフィールドは、常にすべての基礎モードに表示されます。
 * **テキスト**：このフィールドは、生成されるページのテキストコンポーネントに対応します。
-* **画像**:このフィールドは、結果のページ上の画像コンポーネントに対応します。
+* **画像**: このフィールドは、結果のページの画像コンポーネントに対応します。
 * **画像 / 詳細**：**タイトル**：画像のタイトルです。
 
 * **画像 / 詳細**：**代替テキスト**：画像の代替テキストです。
 
-* **画像/詳細**: **説明**:画像の説明。
+* **Image/Advanced**: **説明**: 画像の説明。
 
 * **画像 / 詳細**：**サイズ**：画像のサイズです。
 
@@ -67,13 +70,13 @@ The scaffold consists of a form with a field for each piece of content that will
 
 To create a new scaffold go to the **Tools** console, then **Default Page Scaffolding** and create a new page. A single page template type will be available, the *Scaffolding Template.*
 
-*新しいページの[ページのプロパティ&#x200B;**]に移動し、[タイトル**]、[説明]、[テンプレート]*、[ターゲット&#x200B;*]、[ターゲット******]、[上記]を設定します。*
+*新しいページの「**ページプロパティ**」に移動し、*&#x200B;タイトルテキスト&#x200B;*、説明******、ターゲットテンプレート、ターゲットパスを設定します。前述のように、パスを設定します。*
 
-*次に、このスキャフォールドで作成するページの構造を定義する必要があります。 これを行うには、スキャフォールドページでデザインモードに入ります。 リンクが表示され、**ダイアログエディター**&#x200B;でスキャフォールドを編集できます。
+*次に、この足場で作成するページの構造を定義する必要があります。 これを行うには、スカフォールドページでデザインモードに切り替えます。 リンクが表示され、**ダイアログエディター**&#x200B;でスキャフォールドを編集できます。
 
 ![cq5_dialog_editor](assets/cq5_dialog_editor.png)
 
-ダイアログエディターを使用して、このスキャフォールドを使用して新しいページが作成されるたびに作成されるプロパティを指定します。
+ダイアログエディタを使用して、このスキャフォールドを使用して新しいページを作成するたびに作成されるプロパティを指定します。
 
 基礎モードのダイアログの定義は、コンポーネントのダイアログの定義と同じように機能します（[コンポーネント](/help/sites-developing/components.md)を参照）。ただし、以下のように、いくつかの重要な違いがあります。
 
@@ -89,7 +92,7 @@ Now, click on the dialog field **Dialog > Tab Panel > Text > Text**, like this:
 
 このフィールドのプロパティリストは、次のように、ダイアログエディターの右側に表示されます。
 
-![list_of_properties](assets/list_of_properties.png)
+![リスト_of_プロパティ](assets/list_of_properties.png)
 
 このフィールドの name プロパティを確認してください。以下の値が設定されています。
 
@@ -110,7 +113,7 @@ Now, click on the dialog field **Dialog > Tab Panel > Text > Text**, like this:
 
 この非表示フィールドのプロパティを以下に示します。
 
-![hidden_list_props](assets/hidden_list_props.png)
+![hidden_リスト_props](assets/hidden_list_props.png)
 
 この非表示フィールドの name プロパティには以下の値が指定されています。
 
@@ -130,7 +133,7 @@ This is a boolean property used to interpret the text string stored at `./jcr:co
 
 この非表示フィールドのプロパティを以下に示します。
 
-![hidden_list_props2](assets/hidden_list_props2.png)
+![hidden_リスト_props2](assets/hidden_list_props2.png)
 
 この非表示フィールドの name プロパティには以下の値が指定されています。
 
@@ -151,7 +154,7 @@ This is a boolean property used to interpret the text string stored at `./jcr:co
 * ロック記号（テキストやタイトルなどのほとんどのコンポーネントの場合）
 * テキスト「**クリックして継承をキャンセル**」と記載されたマスク（画像コンポーネントの場合）
 
-これは、継承がキャンセルされるまで、コンポーネントを編集できないことを示します。
+継承がキャンセルされるまで、コンポーネントは編集できないことを示します。
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
