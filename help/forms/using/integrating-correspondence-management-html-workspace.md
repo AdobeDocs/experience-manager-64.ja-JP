@@ -26,7 +26,7 @@ AEM Forms Workspace では、フォームおよびドキュメントでタスク
 
 ## Correspondence Management アセットの作成 {#create-correspondence-management-assets}
 
-AEM FormsワークスペースにレンダリングされるサンプルのCorrespondence Managementテンプレートを作成して開始します。 For more details, see [Create a letter template](/help/forms/using/create-letter.md).
+AEM FormsのワークスペースにレンダリングされるサンプルのCorrespondence Managementテンプレートを作成して開始します。 For more details, see [Create a letter template](/help/forms/using/create-letter.md).
 
 Correspondence ManagementテンプレートにそのURLでアクセスし、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは、 `https://[server]:[port]/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
 
