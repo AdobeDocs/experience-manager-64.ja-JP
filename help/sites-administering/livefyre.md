@@ -41,7 +41,7 @@ AEM 6.4 には、Livefyre 機能パッケージ 1.2.6 がプリインストー�
 
 1. Livefyreパッケージを [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)(SDK)からダウンロードします。
 
-1. パッケージマネージャーから、ダウンロードしたパッケージをインストールします。 AEMでソフトウェアの配布とパッケージを使用する手順については、「パッケージの [作業方法](/help/sites-administering/package-manager.md)」を参照してください。
+1. パッケージマネージャーから、ダウンロードしたパッケージをインストールします。 AEMでのソフトウェアの配布とパッケージの使用手順については、 [How to Work with Packages](/help/sites-administering/package-manager.md)（パッケージの使用方法）を参照してください。
 
    ![livefyre-aem4-6-4](assets/livefyre-aem4-6-4.png)
 
@@ -204,7 +204,7 @@ AEM Commerce ユーザーは、既存の製品カタログを Livefyre にシー
 
 製品カタログを読み込んだら、製品がリアルタイムに Livefyre インスタンスに表示されます。AEM Commerce 製品カタログの項目を編集または削除する場合、変更は Livefrye で自動的に更新されます。
 
-1. 最新のLivefyre for AEMパッケージがAEMインスタンスにインストールされていることを確認します。
+1. AEMインスタンスに最新のLivefyre for AEMパッケージがインストールされていることを確認します。
 1. From the AEM homepage, navigate to **AEM Commerce**.
 1. 新しいコレクションを作成するか、既存のコレクションを使用します。
 1. Hover over the collection and click **Collection Properties** (pencil icon).
@@ -222,7 +222,7 @@ AEM Commerce ユーザーは、既存の製品カタログを Livefyre にシー
 | コメント | X | X | X | X |
 | フィルムストリップ |  | X | X | X |
 | LiveBlog | X | X | X | X |
-| マップ | X | X | X | X |
+| Map | X | X | X | X |
 | Media Wall | X | X | X | X |
 | モザイク | X | X | X | X |
 | 投票 |  | X | X | X |
