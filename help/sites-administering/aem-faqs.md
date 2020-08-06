@@ -8,13 +8,16 @@ contentOwner: jsyal
 discoiquuid: c66b65af-443f-4fc2-b775-9f4e3c60285a
 translation-type: tm+mt
 source-git-commit: f5b45b2c8bfcf9d82ddc08b05b5fff22937fa9fd
+workflow-type: tm+mt
+source-wordcount: '1545'
+ht-degree: 49%
 
 ---
 
 
 # AEM FAQ{#aem-faqs}
 
-AEMのトラブルシューティングと設定に関する問題に対する回答を得るには、このページに従ってください。
+AEMのトラブルシューティングと設定に関する問題の回答を得るには、このページに従ってください。
 
 ## Sites {#sites}
 
@@ -46,7 +49,7 @@ If one requires the authors to manage projects as well, then the workaround is t
 翻訳プロジェクトを作成する前に、ルート内部に言語ルートおよび言語コピーを作成します。
 
 例：\
-Create a language root at `/content/geometrixx` with name as `fr_LU` (and title as French (Luxembourg)). 次に、参照パネルからページの言語コピーを作成し、のオプションに移 `Create structure only` 動しま `Create & Translate`す。 最後に、翻訳プロジェクトを作成し、言語コピーを翻訳ジョブに追加します。
+Create a language root at `/content/geometrixx` with name as `fr_LU` (and title as French (Luxembourg)). 次に、参照パネルからページの言語コピーを作成し、の `Create structure only` オプションに移動し `Create & Translate`ます。 最後に、翻訳プロジェクトを作成し、言語コピーを翻訳ジョブに追加します。
 
 詳しくは、次の追加リソースを参照してください。
 
@@ -66,15 +69,15 @@ Adobe Experience Manager（AEM）6.4 には SSL ウィザードが付属し、Je
 
 ### AEM のコンテンツサービスをモバイルアプリから使用する場合に推奨されるアーキテクチャは何ですか。理想的には React Native ですか。 {#what-is-the-recommended-architecture-when-using-aem-s-content-services-from-a-mobile-app-ideally-react-native}
 
-Content ServicesはSlingモデルに基づいており、AEM開発者は、書き出される各コンポーネントに対してSlingモデルポジションを提供する必要があります。
+Content ServicesはSlingモデルに基づいており、AEMの開発者は、エクスポートされる各コンポーネントに対してSlingモデルのポジションを提供する必要があります。
 
-AEM コンテンツサービスを React アプリケーションから使用する方法については、[AEM コンテンツサービスの使用準備](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html)のチュートリアルを参照してください。
+AEM コンテンツサービスを React アプリケーションから使用する方法については、[AEM コンテンツサービスの使用準備](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/content-services-tutorial-use.html)のチュートリアルを参照してください。
 
 Also, if the developers want to export a tree of components they can also implement the `ComponentExporter` and `ContainerExporter` interfaces as well as use the `ModelFactory` to iterate over the child components and return their model representation. 以下のリソースを参照してください。
 
-[1][Adobe-Marketing-Cloud/aem-core-wcm-components](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/bundles/core/src/main/java/com/adobe/cq/wcm/core/components/internal/models/v1/PageImpl.java#L245)
+[1] Adobe- [Marketing-Cloud/aem-core-wcm-components](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/bundles/core/src/main/java/com/adobe/cq/wcm/core/components/internal/models/v1/PageImpl.java#L245)
 
-[2][Apache Sling ::Slingモデル](https://sling.apache.org/documentation/bundles/models.html)
+[2] [Apache Sling :: Slingモデル](https://sling.apache.org/documentation/bundles/models.html)
 
 ### How to disable AEM 6.4 survey pop-up? {#how-to-disable-aem-survey-pop-up}
 
@@ -84,21 +87,21 @@ Also, if the developers want to export a tree of components they can also implem
 
 Refer to [Understanding Reasons to Upgrade AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/upgrade-aem-article-understand.html) that describes high-level breakdown of key features for customers considering upgrading to the latest version of Adobe Experience Manager.
 
-### PorterStemフィルターを使用するようにAEMインスタンスを設定する方法を教えてください。 {#how-to-configure-an-aem-instance-to-use-the-porterstem-filter}
+### PorterStemフィルタを使用するAEMインスタンスを設定する方法を教えてください。 {#how-to-configure-an-aem-instance-to-use-the-porterstem-filter}
 
-PorterStemフィルタは、英語用のPorter Stemming Algorithmを適用します。 結果は、Snowball Porter Stemmerを *language=&quot;English&quot;引数と共に使用するのと似ています* 。 しかし、このステマーはJavaで直接コード化され、Snowballに基づいていません。 保護された単語のリストは受け入れられず、英語のテキストにのみ適しています。
+PorterStemフィルターは、英語用のPorter Stemming Algorithmを適用します。 結果は、Snowball Porter Stemmerを *language=&quot;English&quot;引数と共に使用した場合と似ています* 。 ただし、このステマーはJavaで直接コード化され、Snowballに基づいているわけではありません。 保護された単語のリストは受け入れられず、英語のテキストにのみ適しています。
 
-Oakは、AEMで使用するLuceneが提供するアナライザ設定要素のセットを公開します。 フィルターの使用方法については、『 **Simple search implementation guide** 』の「 [Apache Oak Analysers」を参照してください](https://helpx.adobe.com/experience-manager/kt/sites/using/search-tutorial-develop.html)。
+Oakは、AEMで使用するLucene提供のアナライザ構成要素のセットを公開します。 フィルターの使用方法については、『 **シンプル検索導入ガイド** 』の「 [Apache Oak Analyzers](https://helpx.adobe.com/experience-manager/kt/sites/using/search-tutorial-develop.html)」を参照してください。
 
 ### 完全な再インデックスの実行方法 {#how-to-perform-a-full-re-indexing}
 
 再インデックスに着手する前には必ず、AEM の全体的なパフォーマンスに対する影響を適切に検討し、アクティビティが少ない期間やメンテナンスウィンドウ中に再インデックスを実行する必要があります。
 
-インデックスを再 [作成する理由については、『クエリとインデックスのベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md) 』を参照してください。
+再インデックスの理由については、 [クエリとインデックス作成のベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md) （英語）を参照してください。
 
-### デザインインポーターで縮小されたJSライブラリをサポートしていますか。 {#do-we-support-minified-js-libs-in-design-importer}
+### デザインインポーターで縮小JSライブラリをサポートしていますか？ {#do-we-support-minified-js-libs-in-design-importer}
 
-Adobe Granite HTML Library ManagerのJSプロセッサーのデフォルト設定プロパティを ***min:gccに変更する必要があります***。 デザインパッケージを正常に読み込むには、クライアント側ライブラリに、事前に縮小されたサードパーティライブラリを含めることをお勧めします。
+AdobeGranite HTML Library ManagerのJSプロセッサのデフォルトの設定プロパティを ***min:gccに変更する必要があります***。 デザインパッケージを正常に読み込むには、クライアント側ライブラリに縮小済みのサードパーティライブラリを含めることをお勧めします。
 
 ## Assets {#assets}
 
@@ -135,14 +138,14 @@ To setup and configure Asset Insights for Experience Manager deployed via Adobe 
 
 ### How to customize admin consoles? {#how-to-customize-admin-consoles}
 
-AEMは、オーサリングインスタンスのコンソールとページオーサリング機能をカスタマイズするための様々なメカニズムを提供します。
+AEMには様々なメカニズムが用意されており、オーサリングインスタンスのコンソールとページオーサリング機能をカスタマイズできます。
 To learn how to create a custom console and customize a default view for a console, refer to [Customizing the Consoles](/help/sites-developing/customizing-consoles-touch.md).
 
 ### What is the difference between CoralUI 2 and CoralUI 3-based components? {#what-is-the-difference-between-coralui-and-coralui-based-components}
 
-A new set of Sling components of Granite UI Foundation is created for Coral3 and is located under [/libs/granite/ui/components/coral/foundation.](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html)CoralUI 2 ベースのコンポーネント用と CoralUI 3 ベースのコンポーネント用のセットが1 つずつあります。新しいセットは、古いセットをただコピーして貼り付けたものではなく、（合理化、廃止予定の機能を削除するなど）クリーンアップしたものです。そのため、ページは CoralUI 3 ベースまたは CoralUI 2 ベースのいずれかのセットのみを使用することをお勧めします。
+A new set of Sling components of Granite UI Foundation is created for Coral3 and is located under [/libs/granite/ui/components/coral/foundation.](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html)CoralUI 2 ベースのコンポーネント用と CoralUI 3 ベースのコンポーネント用のセットが1 つずつあります。新しいセットは、古いセットをただコピーして貼り付けたものではなく、（合理化、廃止予定の機能を削除するなど）クリーンアップしたものです。そのため、ページは CoralUI 3 ベースまたは CoralUI 2 ベースのいずれかのセットのみを使用することをお勧めします。
 
-To learn more in detail, refer to [Migration Guide to CoralUI 3-based](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html).
+To learn more in detail, refer to [Migration Guide to CoralUI 3-based](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html).
 
 ### How to customize the search component in AEM Assets? {#how-to-customize-the-search-component-in-aem-assets}
 
@@ -150,19 +153,19 @@ To learn about search boost/ranking and further implementation information, refe
 
 簡易検索の実装は、2017 Summit lab AEM Search Demystified の資料です。
 
-### 顧客がAEMでサイトライセンスのみを購入した場合でも、ユーザーはアセットにアクセスできますか。 {#if-a-customer-buys-only-sites-license-in-aem-do-they-still-have-access-to-assets}
+### お客様がAEMでサイトライセンスのみを購入した場合、アセットにアクセスできますか。 {#if-a-customer-buys-only-sites-license-in-aem-do-they-still-have-access-to-assets}
 
-いいえ。顧客はアセット（またはサイト以外）にアクセスできません。 すべてのAdobe Experience Manager (AEM)オンプレミスがJARに含まれている場合でも、お客様は、契約でライセンスを受けているJAR内のコンポーネントに対してのみアクセスを許可されます。 他のコンポーネントを調査する場合は、AEM体験版プログラムを最大45日間使用するか、Assetsなどの名前付きコンポーネントの評価（実稼動に関する使用なし）を許可する$0の販売注文に署名できます。
+いいえ。お客様はアセット（またはサイト以外）にアクセスできません。 すべてのAdobe Experience Manager(AEM)オンプレミスがJARに含まれている場合でも、お客様は、契約でライセンスを受けるJAR内のコンポーネントに対してのみアクセスを許可されます。 他のコンポーネントを調査する場合は、AEMの体験版プログラムを最大45日間使用するか、$0の販売注文に署名して、Assetsなどの名前付きコンポーネントを評価（実稼働での使用なし）することを承認できます。
 
-AEMオンプレミスソフトウェアとAdobe Managed Servicesの詳細については、次のリソースを参照してください。
+AEMオンプレミスソフトウェアとAdobe Managed Servicesについて詳しくは、次のリソースを参照してください。
 
 * [Adobe Experience Managerオンプレミスソフトウェア](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)
 
-* [Adobe Experience Manager Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)
+* [Adobe Experience ManagerManaged Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)
 
-### 顧客は、ページやアセットのデフォルトのプロパティをどのように拡張できますか。 {#how-to-extend-default-properties-page-or-asset}
+### 顧客は、ページやアセットのデフォルトのプロパティをどのように拡張できるか。 {#how-to-extend-default-properties-page-or-asset}
 
-ページまたはアセットのデフォルトプロパティの拡張について詳しくは、以下のリソースを参照してください。
+ページまたはアセットのデフォルトプロパティの拡張については、次のリソースを参照してください。
 
 * [アセット内のメタデータスキーマ](/help/assets/metadata-schemas.md)
 * [ページプロパティのビューのカスタマイズ](/help/sites-developing/page-properties-views.md)
