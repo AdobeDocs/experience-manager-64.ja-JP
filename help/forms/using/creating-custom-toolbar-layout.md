@@ -10,6 +10,9 @@ topic-tags: customization
 discoiquuid: c69bb229-d680-4a55-9b2d-cd5ad0f83a9e
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '555'
+ht-degree: 80%
 
 ---
 
@@ -22,11 +25,11 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 
 ツールバーレイアウトは、複雑な JavaScript と CSS コードによるクライアントサイドのプロセッシングに大きく依存しています。このコードの提供を編成および最適化することが厄介な問題となることがあります。この問題への対処に役立つように、AEM では、クライアント側ライブラリフォルダーが提供されています。これにより、クライアント側コードをリポジトリに格納し、カテゴリ別に整理して、それぞれのコードカテゴリをクライアントに保存するタイミングと方法を定義することができます。その後、クライアント側ライブラリシステムにより、最終的な Web ページで、正しいコードを読み込むための正しいリンクが作成されます。詳細については、「[AEM におけるクライアントサイドライブラリの機能](/help/sites-developing/clientlibs.md)」を参照してください。
 
-![](assets/default_toolbar_layout.png) ツールバー図のサンプル&#x200B;****&#x200B;レイアウト：ツール *バーのサンプルレイアウト*
+![ツールバー](assets/default_toolbar_layout.png)**図のレイアウト例：** *ツールバーのサンプルレイアウト*
 
 アダプティブフォームには、購入してすぐに使える一連のレイアウトが含まれています。
 
-![](assets/toolbar1.png) 標準搭載のツールバーレイアウトを使用で ****&#x200B;きます。すぐ *に使用できるツールバーレイアウト*
+![標準搭載のツールバーレイアウトを使用できる ](assets/toolbar1.png)**図：** *標準搭載のツールバーレイアウトを使用可能*
 
 カスタムのツールバーレイアウトを作成することもできます。
 
@@ -36,13 +39,13 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 
 CustomToolbarLayoutDemo.zip
 
-[「Get File](assets/customtoolbarlayoutdemo.zip)Demo」カスタムツールバーレイアウト
+[Get File](assets/customtoolbarlayoutdemo.zip)Demoカスタムツールバーレイアウト
 
 ## カスタムツールバーレイアウトを作成するには {#layout-1}
 
 1. カスタムツールバーレイアウトを入れておくフォルダーを作成します。次に例を示します。
 
-   `/apps/customlayout/toolbar` です。
+   `/apps/customlayout/toolbar`。
 
    カスタムレイアウトを作成するには、次のフォルダーに用意されている既成のツールバーレイアウトの 1 つを使用（およびカスタマイズ）できます。
 
@@ -223,4 +226,4 @@ CustomToolbarLayoutDemo.zip
 >
 >前のステップで更新された説明は、レイアウトドロップダウンリストに表示されます。
 
-![](assets/toolbar_1.png) カスタムレイアウトツールバー図のデスクトップ&#x200B;****&#x200B;ビュー：カスタム *レイアウトツールバーのデスクトップビュー*
+![カスタムレイアウトツールバーのデスクトップ表示](assets/toolbar_1.png)**図：** *カスタムレイアウトツールバーのデスクトップ表示*
