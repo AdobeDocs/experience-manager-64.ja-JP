@@ -12,6 +12,9 @@ discoiquuid: 1293c01a-7308-494a-ab48-bd9938205b81
 pagetitle: Community Groups Console
 translation-type: tm+mt
 source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
+workflow-type: tm+mt
+source-wordcount: '1642'
+ht-degree: 50%
 
 ---
 
@@ -21,16 +24,16 @@ source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
 The Groups console provides access to creating community groups when a community site&#39;s [template structure](sites-console.md#step1) includes the [groups function](functions.md#groups-function).
 
 * グループは、他のグループ内にネストすることができます。This happens when the [structure of the new group](tools-groups.md) contains the groups function.
-* 作成者環境に限り、サイト作成ウィザードに似たグループ作成ウィザードがあります。
+* 作成者環境の場合のみ、サイト作成ウィザードに似たグループ作成ウィザードがあります。
 * メンバーがパブリッシュ環境からグループを作成できるかどうかは、コミュニティサイト構造またはコミュニティグループ構造へのグループ機能の追加時に設定できます。
 
 Of the three group templates included, only the `Reference Group` template includes a groups function in its structure.
 
 コミュニティグループには、次のような側面があります。
 
-* 作成：新しいグループは作成者に対して作成でき、オプションで公開時に作成できます
-* 制御：グループは、開いているか、秘密にしている
-* 入れ子：グループは、0個以上のグループを含むことができる
+* 作成： 作成者時に新しいグループを作成でき、オプションで公開時にも作成できます
+* コントロール： グループは、開いているか、秘密にしている
+* 入れ子： グループは、0個以上のグループを含むことができる
 
 >[!NOTE]
 >
@@ -46,10 +49,10 @@ Of the three group templates included, only the `Reference Group` template inclu
 
 グループコンソールにアクセスするには：
 
-* 作成者の場合、管理者権限でサインイン
+* 作成者は、管理者権限を持つログインを行います
 * From global navigation: **[!UICONTROL Communities > Sites]**
 * 既存のコミュニティサイトフォルダを選択して開きます
-* フォルダ内のコミュニティサイトのインスタンスを選択します
+* フォルダー内のコミュニティサイトのインスタンスを選択
 
    * コミュニティサイトの構造には、グループ機能が含まれている必要があります
    * These screen shots are from the Getting Started tutorial after [creating groups on publish](published-site.md)
@@ -70,26 +73,26 @@ Of the three group templates included, only the `Reference Group` template inclu
 
 ![多言語群](assets/multilingualgroup.png)
 
-* **[!UICONTROL コミュニティグループのタイトル]**:グループの表示タイトル。
+* **[!UICONTROL コミュニティグループのタイトル]**: グループの表示タイトル。
 
    タイトルは、グループのパブリッシュされたサイトに表示されます。
 
-* **[!UICONTROL コミュニティグループの説明]**:グループの説明。
-* **[!UICONTROL コミュニティグループルート]**:グループのルートパス。
+* **[!UICONTROL コミュニティグループの説明]**: グループの説明。
+* **[!UICONTROL コミュニティグループルート]**: グループのルートパスです。
 
    デフォルトのルートは親サイトですが、ルートは Web サイト内の任意の場所に移動できます。変更することはお勧めしません。
 
-* **[!UICONTROL 追加のコミュニティグループ言語]** メニュー：プルダウンメニューを使用して、利用可能なコミュニティグループ言語を選択します。 このメニューには、親コミュニティサイトを作成できる言語がすべて表示されます。この中から言語を選択することで、1 回の手順で複数のロケールにグループを作成できます。指定した複数の言語で、それぞれのコミュニティサイトのグループコンソールに同じグループが作成されます。
+* **[!UICONTROL 使用可能なその他のコミュニティグループ言語]** メニュー： プルダウンメニューを使用して、使用可能なコミュニティグループ言語を選択します。 このメニューには、親コミュニティサイトを作成できる言語がすべて表示されます。この中から言語を選択することで、1 回の手順で複数のロケールにグループを作成できます。指定した複数の言語で、それぞれのコミュニティサイトのグループコンソールに同じグループが作成されます。
 
-* **[!UICONTROL コミュニティグループ名]**:URLに表示されるグループのルートページの名前
+* **[!UICONTROL コミュニティグループ名]**: URLに表示されるグループのルートページの名前
 
-   * グループの作成後に簡単に変更できないので、名前を再確認します。
-   * ベースURLは、 `Community Group Name`
+   * グループの作成後に名前が容易に変更されないので、重複チェックを行います。
+   * ベースURLが `Community Group Name`
    * 有効なURLの場合は、「.html」を追加します。
 
       *例えば*、 `http://localhost:4502/content/sites/mysight/en/mygroup.html`
 
-* **[!UICONTROL コミュニティグループテンプレート]** メニュー：プルダウンメニューを使用して、利用可能なコミュニティグル [ープテンプレートを選択しま](tools.md)す。
+* **[!UICONTROL コミュニティグループテンプレート]** メニュー： プルダウンメニューを使用して、使用可能な [コミュニティグループテンプレートを選択し](tools.md)ます。
 
 ### 手順 2：デザイン {#step-design}
 
@@ -97,7 +100,7 @@ Of the three group templates included, only the `Reference Group` template inclu
 
 ![communitygrouptheme](assets/communitygrouptheme.png)
 
-このフレームワークでは、レスポンシブで柔軟なサイトデザインを実現できるよう、[Twitter Bootstrap](https://twitterbootstrap.org/) を使用しています。プリロードされた多数のブートストラップテーマの1つを選択して、選択したコミュニティグループテンプレートのスタイルを設定したり、ブートストラップテーマをアップロードしたりできます。
+このフレームワークでは、レスポンシブで柔軟なサイトデザインを実現できるよう、[Twitter Bootstrap](https://twitterbootstrap.org/) を使用しています。プリロードされた多数のBootstrapテーマの1つを選択して、選択したコミュニティグループテンプレートのスタイルを設定したり、Bootstrapテーマをアップロードしたりできます。
 
 選択すると、テーマの上に不透明な青色のチェックマークのオーバーレイが表示されます。
 
@@ -117,10 +120,10 @@ Of the three group templates included, only the `Reference Group` template inclu
 
 * 画像の高さは、画像の上端から120ピクセルに切り抜かれます。
 * 画像はブラウザーウィンドウの左端に固定されます
-* 画像の幅が…のようなサイズ変更は行われません。
+* 画像の幅が次のような場合、画像のサイズは変更されません。
 
-   * ブラウザーの幅より小さい場合、画像は水平方向に繰り返されます
-   * ブラウザーの幅よりも大きい場合、画像は切り抜かれたように見えます
+   * ブラウザーの幅より小さい場合は、画像が水平方向に繰り返されます。
+   * ブラウザーの幅より大きい場合、画像は切り抜かれたように見えます
 
 ### 手順 3：設定 {#step-settings}
 
@@ -132,7 +135,7 @@ Of the three group templates included, only the `Reference Group` template inclu
 
 グループに固有のモデレーターを追加できます。
 
-* （公開環境から）メンバーを検索し、モデレーターとして追加します
+* (投稿環境から)メンバーを検索して、モデレーターとして追加します
 
 #### メンバーシップ {#membership}
 
@@ -142,14 +145,14 @@ Of the three group templates included, only the `Reference Group` template inclu
 
 * オプションのメンバーシップ
 
-   選択した場合、コミュニティグループはパブリックグループです。 サイトメンバーは、明示的にグループに参加せずに、グループに参加して投稿することができます。 デフォルトで選択されています。
+   選択した場合、コミュニティグループはパブリックグループになります。 サイトメンバーは、明示的にグループに参加せずに、グループに参加して投稿することができます。 デフォルトで選択されています。
 * 必要なメンバーシップ
 
-   選択した場合、コミュニティグループは開かれたグループです。 コミュニティサイトのメンバーは、グループのコンテンツを表示できますが、コンテンツを投稿するには、グループに参加する必要があります。 Members join by selecting the `Join` button in the publish environment. 初期設定では選択されていません。
+   選択すると、コミュニティグループは開かれたグループになります。 コミュニティサイトのメンバーは、グループのコンテンツを表示できますが、コンテンツを投稿するには、グループに参加する必要があります。 Members join by selecting the `Join` button in the publish environment. 初期設定では選択されていません。
 
 * 制限されたメンバーシップ
 
-   選択した場合、コミュニティグループは秘密グループです。 コミュニティメンバーは明示的に招待する必要があります。 招待されたメンバーは検索ボックスに入力されます。 Members may be added later using the [Members and Groups consoles](members.md) the author environment. 初期設定では選択されていません。
+   選択した場合、コミュニティグループは秘密グループになります。 コミュニティのメンバーは明示的に招待する必要があります。 招待メンバーは検索ボックスに入力されます。 Members may be added later using the [Members and Groups consoles](members.md) the author environment. 初期設定では選択されていません。
 
 #### サムネイル {#thumbnail}
 
@@ -171,7 +174,7 @@ If any adjustments are needed, use the **Back** button to make them.
 
 Once **Create** is selected and started, the process of creating the group cannot be interrupted.
 
-処理が完了すると、新しいサブコミュニティサイト（グループ）のカードがCommunitiesのサイトグループコンソールに表示されます。ここから作成者がページコンテンツを追加したり、管理者がサイトのプロパティを変更したりできます。
+処理が完了すると、新しいサブコミュニティサイト（グループ）のカードがCommunitiesのサイトグループコンソールに表示されます。ここから、作成者がページコンテンツを追加したり、管理者がサイトのプロパティを変更したりできます。
 
 ![createcommunitygroup-1](assets/createcommunitygroup-1.png)
 
@@ -183,15 +186,15 @@ Once **Create** is selected and started, the process of creating the group canno
 
 ![chlimage_1-141](assets/chlimage_1-141.png)
 
-グループのページコンテンツは、他の AEM ページと同じツールでオーサリングできます。グループをオーサリング用に開くには、グループカードの上にカーソルを置くと表示される「サイトを開く」アイコンを選択します。
+グループのページコンテンツは、他の AEM ページと同じツールでオーサリングできます。オーサリング用にグループを開くには、グループカードの上にカーソルを置くと表示される「サイトを開く」アイコンを選択します。
 
 ## グループのプロパティの変更 {#modifying-group-properties}
 
-既存のサブコミュニティサイトのプロパティは、コミュニティグループの作成プロセスで指定し、グループカードの上にカーソルを置くと表示される「サイトを編集」アイコンを選択して変更できます。
+コミュニティグループの作成プロセスで指定された既存のサブコミュニティサイトのプロパティは、グループカードの上にカーソルを置くと表示される「サイトを編集」アイコンを選択して変更できます。
 
 ![chlimage_1-142](assets/chlimage_1-142.png)
 
-以下のプロパティの詳細は、[グループ作成](#group-creation)で説明した内容と同じです。ネストされたグループは、パブリッシュ環境でも作成者環境でも、変更できます。
+以下のプロパティの詳細は、[グループ作成](#group-creation)で説明した内容と同じです。パブリッシュ環境や作成者環境で作成したネストグループは、どれでも変更できます。
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
@@ -213,7 +216,7 @@ Once **Create** is selected and started, the process of creating the group canno
 構造パネルでは、オーサー環境またはパブリッシュ環境でサブコミュニティを作成するときに選択したコミュニティグループテンプレートから最初に作成した構造を変更できます。パネルから、
 
 * Drag-and-drop additional [community functions](functions.md) into the site structure
-* サイト構造内のコミュニティ関数のインスタンスで、次の操作を行います。
+* サイト構造内のコミュニティ関数のインスタンスに対して、次の操作を行います。
 
    * **`gear icon`**
 
@@ -225,11 +228,11 @@ Once **Create** is selected and started, the process of creating the group canno
 
    * **`grid icon`**
 
-      サイトのトップレベルナビゲーションバーに表示される関数の順序を変更する
+      サイトのトップレベルナビゲーションバーに表示される機能の順序を変更する
 
 >[!CAUTION]
 >
->表示タイトルは副作用なく変更できますが、コミュニティサイトに属するコミュニティ機能のURL名を編集することはお勧めしません。
+>表示タイトルは副作用なく変更できるが、コミュニティサイトに属するコミュニティ機能のURL名を編集することはお勧めしない。
 >
 >例えば、URL の名前を変更しても、既存の UGC は移動されません。そのため、UGC が「失われる」ことになります。
 
@@ -250,7 +253,7 @@ Once **Create** is selected and started, the process of creating the group canno
 * [コミュニティグループのテーマ](#community-group-theme)
 * [コミュニティグループブランディング](#community-group-branding)
 
-   * パネルの下部までスクロールして、ブランド画像を変更します
+   * パネルの下部にスクロールして、ブランド画像を変更します
 
 ### 設定の変更 {#modify-settings}
 
@@ -258,7 +261,7 @@ Once **Create** is selected and started, the process of creating the group canno
 
 ### メンバーシップの変更 {#modify-membership}
 
-[メンバーシップ](#membership)パネルは情報提供のみを目的としています。設定されたグループメンバーシップのタイプは、オプション、必須、制限のいずれであっても変更できません。
+[メンバーシップ](#membership)パネルは情報提供のみを目的としています。設定されたグループメンバーシップの種類は、オプション、必須、制限のいずれであるかに関係なく変更できません。
 
 ### サムネイルの変更 {#modify-thumbnail}
 
