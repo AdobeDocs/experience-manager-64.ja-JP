@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: a09e2c83-083d-427a-8336-0567e00c5712
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '351'
+ht-degree: 58%
 
 ---
 
@@ -39,11 +42,11 @@ To enable the watermark in preview PDF, select the **[!UICONTROL Apply Watermark
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **** パス：/libs/fd/cm/configFiles/previewwatermark
+      **パス：** /libs/fd/cm/configFiles/previewwatermark
 
-      **** オーバーレイの場所：/apps/
+      **オーバーレイの場所：** /apps/
 
-      **** ノードタイプの一致：チェック済み
+      **ノードタイプを一致：** チェック済み
 
       >[!NOTE]
       >
