@@ -50,16 +50,16 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
 
 1. AEM Forms アドオンパッケージのインストール. 手順は次のとおりです。
 
-   1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Adobe IDがソフトウェア配布物にログインする必要があります。
-   1. ヘッダーメニューで **[!UICONTROL Adobe Experience Manager]** をタップします。
+   1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Software Distributionにログインするには、Adobe IDが必要です。
+   1. ヘッダーメニューにある **[!UICONTROL Adobe Experience Manager]** をタップします。
    1. In the **[!UICONTROL Filters]** section:
-      1. 「 **[!UICONTROL ソリューション]** 」ドロップダウンリストから「 **[!UICONTROL フォーム]** 」を選択します。
+      1. [ **[!UICONTROL ソリューション]****ドロップダウンリストから[]** Forms]を選択します。
       1. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
    1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「EULA条項に **[!UICONTROL 同意します]**」を選択して、「 **[!UICONTROL ダウンロード]**」をタップします。
    1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
    1. Select the package and click **[!UICONTROL Install]**.
 
-      「 [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) 」記事に一覧表示されている直接リンクを使用して、パッケージをダウンロードすることもできます。
+      また、 [AEM Formsのリリース記事に記載されている直接リンクを使用してパッケージをダウンロードすることもできます](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) 。
 
       >[!NOTE]
       >
@@ -76,7 +76,7 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
 
    * **移行ユーティリティの実行**
 
-      移行ユーティリティにより、以前のバージョンのアダプティブフォームや対応する管理アセットが AEM 6.4 Forms で使用できるようになります。このユーティリティは、AEMソフトウェア配布からダウンロードできます。 移行ユーティリティの詳しい設定方法と使用方法については、[移行ユーティリティ](/help/forms/using/migration-utility.md)に関する説明を参照してください。
+      移行ユーティリティにより、以前のバージョンのアダプティブフォームや対応する管理アセットが AEM 6.4 Forms で使用できるようになります。このユーティリティは、AEM Software Distributionからダウンロードできます。 移行ユーティリティの詳しい設定方法と使用方法については、[移行ユーティリティ](/help/forms/using/migration-utility.md)に関する説明を参照してください。
 
       [ドラフト統合とコンポーネント送信のサンプル](integrate-draft-submission-database.md)をデータベースで使用して旧バージョンのアップグレードを行う場合は、アップグレードの実行後に、以下の SQL クエリを実行してください。
 
@@ -92,7 +92,7 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
       WHERE `key` = 'dataType'
       ```
 
-   * **（AEM 6.2 Formsまたは以前のバージョンからアップグレードした場合のみ）Adobe Signの再設定**
+   * **(AEM 6.2Formsまたは以前のバージョンからアップグレードした場合のみ)Adobe Signの再設定**
 
       Adobe Sign を以前のバージョンの AEM Forms で設定してある場合は、AEM Cloud サービスから Adobe Sign を再設定します。詳細については、「[Adobe Sign を AEM Forms に統合する](/help/forms/using/adobe-sign-integration-adaptive-forms.md)」を参照してください。
 
