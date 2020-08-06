@@ -22,7 +22,7 @@ ht-degree: 71%
 
 Microsoft SharePoint 2010 および Microsoft SharePoint 2013 用 Day JCR コネクター（バージョン 4.0）
 
-この記事には、Adobe JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013バージョン4.0に関する詳細が含まれています。
+この記事には、AdobeJCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013、バージョン4.0に関する詳細が含まれています。
 
 SharePoint コネクターでは次の基本機能がサポートされています。
 
@@ -203,10 +203,10 @@ SharePoint ではクラシック認証方式と要求ベースの認証方式を
 * 要求-基本
 * 要求-フォームベース
 
-AEM JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013バージョン4.0.は、次のモードで動作する要求ベースの認証（Microsoftによって推奨される）をサポートしています。
+AEM JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013バージョン4.0.は、次のモードで動作する要求ベースの認証（Microsoftが推奨）をサポートしています。
 
 * **基本／NTLM 認証**：コネクターでの最初の接続試行では、基本認証が使用されます。基本認証が使用できない場合は、NTLM ベースの認証に切り替えられます。
-* **フォームベースの認証**: Sharepointは、ログインフォーム（通常はWebページ）にユーザーが入力した資格情報に基づいてユーザーを検証します。 認証された要求にはシステムによってトークンが発行されます。このトークンには、後続要求で ID の再確立に使用されるキーが含まれています。
+* **Formsベースの認証**: Sharepointは、ログインフォーム（通常はWebページ）にユーザーが入力した資格情報に基づいてユーザーを検証します。 認証された要求にはシステムによってトークンが発行されます。このトークンには、後続要求で ID の再確立に使用されるキーが含まれています。
 
 **フォームベースの認証の設定**
 
