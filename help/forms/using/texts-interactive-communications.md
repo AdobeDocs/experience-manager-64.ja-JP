@@ -158,6 +158,7 @@ Interactive Communicationのテキストドキュメントフラグメントは�
 
    * 関連するフォームデータモデルのプロパティ
    * 作成済みの任意の変数
+
    評価するオプションを選択します。
 
    ![ruleeditor](assets/ruleeditor.png)
@@ -264,6 +265,7 @@ Optionally, you can also go to the Advanced tab to select the appropriate Hue, L
 
    * 複数の検索テキストが見つかった場合は、テキストドキュメントフラグメント内でそれらのテキストがハイライト表示されます。「**[!UICONTROL 置換]**」をもう一度タップすると、そのテキストが置換され、カーソルが次の検索テキストに移動します。
    * 検索テキストがそれ以上見つからない場合は、「モジュールの最後に達しました」というメッセージが検索と置換ダイアログに表示されます。
+
    「すべて置換」をタップして、見つかった検索テキストをすべてまとめて置換することもできます。
 
    「検索と置換」機能には、強力な正規表現検索機能が組み込まれています。To use regex in your search, select **[!UICONTROL Reg ex]** and then tap **[!UICONTROL Find]** or **[!UICONTROL Replace]**.
