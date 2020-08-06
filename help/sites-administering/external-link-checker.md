@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 49b195b2-78c4-49f9-b07a-a87b73624c2c
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 100%
 
 ---
 
@@ -40,6 +43,7 @@ AEM には、外部リンクチェッカーが用意されています。リン�
    * リンクが前回検証されてからの経過時間
    * リンクが前回使用可能になってからの経過時間
    * リンクが前回アクセスされてからの経過時間
+
    が表示されます。
 
 1. 個々のコンテンツページで、無効なリンクは壊れていると表示されます。
