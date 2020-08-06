@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media画像プロファイル
-seo-title: Dynamic Media画像プロファイル
+title: ダイナミックメディアイメージプロファイル
+seo-title: ダイナミックメディアイメージプロファイル
 description: アンシャープマスク、スマート切り抜き、スマートスウォッチ、またはその両方の設定を含む画像プロファイルを作成し、プロファイルを画像アセットのフォルダーに適用します。
 seo-description: アンシャープマスク、スマート切り抜き、スマートスウォッチ、またはその両方の設定を含む画像プロファイルを作成し、プロファイルを画像アセットのフォルダーに適用します。
 uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
 workflow-type: tm+mt
 source-wordcount: '2708'
-ht-degree: 87%
+ht-degree: 92%
 
 ---
 
@@ -28,17 +28,17 @@ ht-degree: 87%
 
 >[!IMPORTANT]
 >
->画像プロファイルはPDFファイルには適用されません。
+>イメージプロファイルは PDF ファイルには適用されません。
 
 ## 切り抜きツールオプション {#crop-options}
 
 <!-- CQDOC-16069 for paragraph directly below -->
 
-スマート切り抜きの座標は、縦横比に応じて異なります。 つまり、画像プロファイルの各種スマート切り抜き設定で、画像プロファイルに追加されたサイズの縦横比が同じ場合、同じ縦横比がダイナミックメディアに送信されます。 このため、同じ切り抜き領域を使用することをお勧めします。 これにより、画像プロファイルで使用される様々なサイズに影響を与えません。
+スマート切り抜きの座標は、縦横比に応じて異なります。つまり、イメージプロファイルの各種スマート切り抜き設定で、イメージプロファイルに追加されたサイズの縦横比が同じ場合、同じ縦横比が Dynamic Media に送信されます。このため、同じ切り抜き領域を使用することをお勧めします。それにより、イメージプロファイルで使用される様々なサイズに影響を与えません。
 
-作成する各スマート切り抜き生成には、追加の処理が必要になることに注意してください。 例えば、スマート切り抜きの縦横比を 6 つ以上追加すると、アセット取り込み速度が遅くなる可能性があります。また、システムの負荷が増大するおそれもあります。スマート切り抜きはフォルダーレベルで適用できるので、必要な場所で&#x200B;*のみ*&#x200B;フォルダーに使用することをお勧めします。
+スマート切り抜きの生成のたびに、追加の処理が必要になることに注意してください。例えば、スマート切り抜きの縦横比を 6 つ以上追加すると、アセット取り込み速度が遅くなる可能性があります。また、システムの負荷が増大するおそれもあります。スマート切り抜きはフォルダーレベルで適用できるので、必要な場所で&#x200B;*のみ*&#x200B;フォルダーに使用することをお勧めします。
 
-2つの画像切り抜きオプションから選択できます。 また、カラースウォッチと画像スウォッチの作成を自動化するオプションもあります。
+2 つの画像切り抜きオプションから選択できます。また、カラーおよび画像スウォッチの作成を自動化するオプションもあります。
 
 <table> 
  <tbody> 
@@ -57,7 +57,7 @@ ht-degree: 87%
      <li>切り抜きの開始点：「左」が X、「上」が Y です。</li> 
      <li>水平方向の計算：元の画像の水平方向のピクセルサイズから「左」と「右」を差し引きます。</li> 
      <li>垂直方向の計算：垂直方向の高さ（ピクセル）から「上」と「下」を差し引きます。</li> 
-    </ul> <p>例えば、4000 x 3000 ピクセルの画像があるとします。次の値を使用します。 [上] = 250、[下] = 500、[左] = 300、[右] = 700</p> <p>左上 (300,250) から、(4000-300-700, 3000-250-500) つまり (3000,2250) のフィルスペースを使って切り抜きます。</p> </td> 
+    </ul> <p>例えば、4000 x 3000 ピクセルの画像があるとします。値として「上」= 250、「下」= 500、「左」= 300、「右」= 700 を使用します。</p> <p>左上 (300,250) から、(4000-300-700, 3000-250-500) つまり (3000,2250) のフィルスペースを使って切り抜きます。</p> </td> 
   </tr> 
   <tr> 
    <td>スマート切り抜き</td> 
@@ -105,15 +105,15 @@ You use **Unsharp Mask** to fine-tune a sharpening filter effect on the final do
  </tbody> 
 </table>
 
-シャープについては、[画像のシャープニング](/help/assets/assets/s7_sharpening_images.pdf)を参照してください。
+シャープニングについては、[画像のシャープニング](/help/assets/assets/s7_sharpening_images.pdf)を参照してください。
 
 ## Creating Dynamic Media image profiles {#creating-image-profiles}
 
 他のアセットタイプへの高度な処理パラメーターの定義については、[アセット処理の設定](config-dms7.md#configuring-asset-processing)を参照してください。
 
-**Dynamic Media画像プロファイルを作成するには**:
+**ダイナミックメディアイメージプロファイルを作成するには**:
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール／アセット／イメージプロファイル]**&#x200B;に移動します。
+1. AEM のロゴをタップし、**[!UICONTROL ツール／Assets／イメージプロファイル]**&#x200B;に移動します。
 1. 「**[!UICONTROL 作成]**」をタップクリックして、新しいイメージプロファイルを追加します。
 1. プロファイル名を入力し、アンシャープマスクのほか、切り抜きとスウォッチのいずれかまたは両方の値を入力します。
 
@@ -127,7 +127,7 @@ You use **Unsharp Mask** to fine-tune a sharpening filter effect on the final do
 
 ## Editing or deleting Dynamic Media image profiles {#editing-or-deleting-image-profiles}
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール／アセット／イメージプロファイル]**&#x200B;に移動します。
+1. AEM のロゴをタップし、**[!UICONTROL ツール／Assets／イメージプロファイル]**&#x200B;に移動します。
 1. 編集または削除するイメージプロファイルを選択します。編集するには、「**[!UICONTROL 画像処理プロファイルを編集]**」を選択します。削除するには、「**[!UICONTROL 画像処理プロファイルを削除]**」を選択します。
 
    ![chlimage_1-254](assets/chlimage_1-254.png)
@@ -154,7 +154,7 @@ You use **Unsharp Mask** to fine-tune a sharpening filter effect on the final do
 
 #### プロファイルユーザーインターフェイスを使用したフォルダーへの Dynamic Media イメージプロファイルの適用 {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール／アセット／イメージプロファイル]**&#x200B;に移動します。
+1. AEM のロゴをタップし、**[!UICONTROL ツール／Assets／イメージプロファイル]**&#x200B;に移動します。
 1. 1 つ以上のフォルダーに適用するイメージプロファイルを選択します。
 
    ![chlimage_1-255](assets/chlimage_1-255.png)
@@ -171,7 +171,7 @@ You use **Unsharp Mask** to fine-tune a sharpening filter effect on the final do
 
 ### Dynamic Media イメージプロファイルのフォルダーへのグローバルな適用 {#applying-an-image-profile-globally}
 
-特定のフォルダーにプロファイルを適用できるだけでなく、グローバルにプロファイルを適用することもできます。これにより、AEM アセットにアップロードされている、すべてのフォルダー内にあるすべてのコンテンツに、選択したプロファイルを適用できます。
+特定のフォルダーにプロファイルを適用できるだけでなく、グローバルにプロファイルを適用することもできます。これにより、AEM Assets にアップロードされている、すべてのフォルダー内にあるすべてのコンテンツに、選択したプロファイルを適用できます。
 
 **Dynamic Media イメージプロファイルをグローバルに適用するには**：
 
@@ -207,7 +207,7 @@ You use **Unsharp Mask** to fine-tune a sharpening filter effect on the final do
 
 1. フォルダーをタップして、その内容を開きます。
 1. スマート切り抜きまたはスマートスウォッチを調整したい画像をタップます。
-1. In the toolbar, tap **[!UICONTROL Smart Crop]**.
+1. ツールバーで、「**[!UICONTROL スマート切り抜き]**」をタップします。
 
 1. 次のいずれかの操作をおこないます。
 
@@ -277,7 +277,7 @@ You use **Unsharp Mask** to fine-tune a sharpening filter effect on the final do
 
 ### プロファイルユーザーインターフェイスを使用したフォルダーからの Dynamic Media イメージプロファイルの削除 {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール／アセット／イメージプロファイル]**&#x200B;に移動します。
+1. AEM のロゴをタップし、**[!UICONTROL ツール／Assets／イメージプロファイル]**&#x200B;に移動します。
 1. 1 つ以上のフォルダーから削除するイメージプロファイルを選択します。
 1. 「**[!UICONTROL フォルダーから処理プロファイルを削除]**」をタップし、プロファイルを削除するフォルダーを 1 つ以上選択して、「**[!UICONTROL 削除]**」をタップします。
 
@@ -288,6 +288,6 @@ You use **Unsharp Mask** to fine-tune a sharpening filter effect on the final do
 1. AEM のロゴをタップして「**[!UICONTROL アセット]**」に移動した後、イメージプロファイルを削除するフォルダーに移動します。
 1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
 1. 「**[!UICONTROL イメージプロファイル]**」タブを選択します。
-1. From the **[!UICONTROL Profile Name]** drop-down list, select **[!UICONTROL None]**, then tap **[!UICONTROL Save &amp; Close]**.
+1. 「**[!UICONTROL プロファイル名]**」ドロップダウンリストから「**[!UICONTROL なし]**」を選択し、「**[!UICONTROL 保存して閉じる]**」をタップします。
 
    既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
