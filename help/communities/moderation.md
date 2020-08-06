@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 6c405543-e339-4916-aa0f-b61d0b798cf3
 translation-type: tm+mt
 source-git-commit: f78f83ef3b9373bcbee3e5179a9bbec4d9462255
+workflow-type: tm+mt
+source-wordcount: '1855'
+ht-degree: 57%
 
 ---
 
@@ -23,7 +26,7 @@ Administrators and community moderators may also perform [in-context moderation]
 
 A feature of all [community sites](sites-console.md) is an `Administration`menu item available to users who sign in with administrative privileges. The `Administration`link provides access to the Moderation console.
 
-モデレートコンソールでは、管理者とコミュニティモデレーターが、モデレート権限を持っているすべてのユーザー生成コンテンツ（UGC）にアクセスできます。複数のサイトのモデレートを許可されている場合は、すべてのサイトの投稿を表示したり、選択したコミュニティのサイトでフィルターしたりできます。
+モデレートコンソールでは、管理者とコミュニティモデレーターが、モデレート権限を持っているすべてのユーザー生成コンテンツ（UGC）にアクセスできます。複数のサイトのモデレートを許可すると、すべてのサイトにわたる投稿の表示や、選択したコミュニティのサイトによるフィルターが可能です。
 
 For more detailed information visit [Managing Users and User Groups](users.md).
 
@@ -39,7 +42,7 @@ Only when signed in as an administrator, or a member with ` [moderator permissio
 
 公開済みのコミュニティサイトからモデレートコンソールにアクセスするには、コミュニティモデレーターがサインインしたときに表示される管理リンクからアクセスします。
 
-![publishewretail](assets/publishweretail.png)
+![publishewertel](assets/publishweretail.png)
 
 管理リンクを選択すると、以下のモデレートコンソールが表示されます。
 
@@ -51,11 +54,11 @@ Only when signed in as an administrator, or a member with ` [moderator permissio
 
 * From global navigation: **[!UICONTROL Navigation > Communities > Moderation]**
 
-Only when signed in as an administrator, or as a member with ` [moderator permissions](in-context.md#identifyingtrustedmembers)`, may moderation tasks be performed. 表示されるコミュニティコンテンツは、サインインしたメンバーがモデレートを許可されるコンテンツのみです。
+Only when signed in as an administrator, or as a member with ` [moderator permissions](in-context.md#identifyingtrustedmembers)`, may moderation tasks be performed. 表示されるコミュニティコンテンツは、サインインしたメンバーがモデレートを許可されるものだけです。
 
 >[!NOTE]
 >
->パブリッシュ環境の UGC をオーサー環境で表示できるのは、選択した SRP で共通ストアが実装されている場合のみです。例えば、デフォルトではストレージはJSRPで、作成者および発行用の共通のストアではありません。 See [Community Content Storage](working-with-srp.md).
+>パブリッシュ環境の UGC をオーサー環境で表示できるのは、選択した SRP で共通ストアが実装されている場合のみです。例えば、デフォルトでは、ストレージはJSRPです。JSRPは、作成者および発行用の一般的なストアではありません。 See [Community Content Storage](working-with-srp.md).
 
 ![moderationconsoleauthor](assets/moderationconsoleauthor.png)
 
@@ -82,9 +85,9 @@ Only when signed in as an administrator, or as a member with ` [moderator permis
 ![toggleswitch](assets/toggleswitch.png)
 
 [フィルターレール](moderation.md#filter-rail)\
-「検索」を選択すると、パネルが開き、コンテンツをフィルタリングするプロパティを選択できます。
+「検索」を選択するとパネルが開き、コンテンツをフィルターするプロパティを選択できます。
 
-![ろ過器](assets/filterrail.png)
+![filterrail](assets/filterrail.png)
 
 ### コンテンツ領域 {#content-area}
 
@@ -96,8 +99,8 @@ Only when signed in as an administrator, or as a member with ` [moderator permis
 * 投稿の場所
 * 投稿日
 * 投稿への返信数
-* [投稿に関連付け](moderate-ugc.md#sentiment) られたセンチメント
-* 承認された場合は、チェックマークが表示されます
+* [投稿に関連付けられたセンチメント](moderate-ugc.md#sentiment)
+* 承認済みの場合は、チェックマークが表示されます
 * 添付ファイルがある場合は、クリップが表示されます
 
 >[!NOTE]
@@ -108,7 +111,7 @@ Only when signed in as an administrator, or as a member with ` [moderator permis
 
 ![chlimage_1-472](assets/chlimage_1-472.png)
 
-サイドパネルアイコンをクリックすると、フィルターレールが開きます。 コンテンツ領域の左側に表示されるフィルターレールは、異なるフィルターを提供し、それぞれがコンテンツ領域に表示される参照先のUGCに直接影響を与えます。
+サイドパネルアイコンにより、フィルターレールが開きます。 コンテンツ領域の左側に表示されるフィルターレールは、様々なフィルターを提供し、それぞれがコンテンツ領域に表示される参照先のUGCに直接影響します。
 
 The filters within each category are **OR** ed together, and the filters in different categories are **AND** ed together.
 
@@ -166,7 +169,7 @@ However if you check **Question** and **Pending**, you will only see content tha
 * **アイデア**
 * **アイディエーションのコメント**
 
-![コンテンツタイプ](assets/content-types.png)
+![content-types](assets/content-types.png)
 
 #### 追加のコンテンツタイプ {#additional-content-types}
 
@@ -178,12 +181,12 @@ However if you check **Question** and **Pending**, you will only see content tha
 * Locate `AEM Communities Moderation Dashboard Filters`
 * 編集モードで開く設定を選択します
 * フィルタするコンポーネントのResourceTypeを入力します
-   * 例えば、含まれる投票コンポーネントをフィルターするには、次のように入力します。\
+   * 例えば、含まれる投票コンポーネントをフィルタするには、次のように入力します。\
       `Voting=social/tally/components/hbs/voting`
 
 ![chlimage_1-475](assets/chlimage_1-475.png)
 
-* 「保存」を選択します。
+* 「保存」を選択します
 * コミュニティの更新 — モデレートコンソール
 
 The result is a new selectable filter for `Voting`under the `Content Type` filter group.
@@ -222,7 +225,7 @@ Once a piece of content is flagged, it remains flagged until you unflag that sin
 
 #### 好感度 {#sentiment}
 
-[好感度](moderate-ugc.md#sentiment) （センチメント）は、好感度値が正、負または中立の投稿に対して表示される参照UGCを制限します。
+[好感度](moderate-ugc.md#sentiment) （センチメント）は、参照先のUGCに表示される投稿を、好感度値が正、負、中立の投稿に制限します。
 
 ![chlimage_1-479](assets/chlimage_1-479.png)
 
@@ -250,13 +253,13 @@ Enter the bulk selection mode by clicking the `Select` icon on a post:
 
 これらのアクションを実行できるアイコンは、複数の投稿を選択したときにのみツールバーに表示されます。
 
-![軟弱な](assets/bulkmoderate.png)
+![牛モデレート](assets/bulkmoderate.png)
 
 ### 1 つの投稿のモデレート {#moderating-a-single-post}
 
 単一選択モードでは、
 
-* ユーザー名を選択してユーザーの詳細を表示します
+* 表示のユーザー名を選択して、ユーザーの詳細を表示します。
 * 投稿へのリンクを選択して、投稿をコンテキスト内で表示します
 * [返信](#reply)
 * [許可](#allow)
@@ -266,11 +269,11 @@ Enter the bulk selection mode by clicking the `Select` icon on a post:
 * View [Moderation History](#moderation-history)
 * [詳細を表示](#viewdetails)
 
-モデレートアクションアイコンの上のカード表示には、投稿のテキストが表示され、その下のデータは、
+モデレートアクションアイコンの上にあるカード表示には、投稿のテキストが表示され、その下には、
 
-* 返信がある場合は、返信数の前に返信数が付く。
-* フラグが付いている場合
-* が承認されている場合
+* 返信がある場合は、その返信数の前に返信数が表示されます。
+* フラグ付けされている場合
+* 承認済みの場合
 * UGCが投稿された日時
 
 ![singleselectmode](assets/singleselectmode.png)
@@ -279,13 +282,13 @@ Enter the bulk selection mode by clicking the `Select` icon on a post:
 
 ![chlimage_1-480](assets/chlimage_1-480.png)
 
-単一の投稿で作業する場合、UGCタイプが返信をサポートし、返信を許可するように設定されていると、返信アイコンが表示されます。
+単一の投稿で作業する場合、UGCタイプが返信をサポートし、返信を許可するように設定されている場合は、返信アイコンが表示されます。
 
 #### アクセス設定 {#allow}
 
 ![chlimage_1-481](assets/chlimage_1-481.png)
 
-1 つの投稿を操作するときに、その投稿がフラグ付きか、拒否されている場合は、許可アイコンが表示されます。フラグが設定されている場合、「許可」を選択すると、すべてのフラグがクリアされます。
+1 つの投稿を操作するときに、その投稿がフラグ付きか、拒否されている場合は、許可アイコンが表示されます。フラグ付けされた場合、「許可」を選択すると、すべてのフラグがクリアされます。
 
 #### 拒否 {#deny}
 
@@ -303,19 +306,19 @@ The **Deny** moderation action is only available for content that is moderated, 
 
 ![chlimage_1-483](assets/chlimage_1-483.png)
 
-単一選択モードまたは一括モードで、アイテムを選択して削除できます。削除のアクションを実行すると、確認ダイアログが表示されます。削除すると、それらの項目はコンテンツ領域からすぐに消えます。 **UGCを削除すると、リポジトリから完全に削除され、後で取得することはできません。**
+単一選択モードまたは一括モードで、アイテムを選択して削除できます。削除のアクションを実行すると、確認ダイアログが表示されます。削除すると、それらの項目はコンテンツ領域からすぐに消えます。 **UGCを削除すると、そのUGCはリポジトリから完全に削除され、後で取得することはできません。**
 
 #### 閉じる {#close}
 
 ![chlimage_1-484](assets/chlimage_1-484.png)
 
-単一の投稿で作業する場合、UGCタイプがそのリソースのそれ以上の投稿を防ぐ機能をサポートしていると、閉じるアイコンが表示されます。
+単一の投稿で作業する場合、UGCタイプでそのリソースのそれ以上の投稿を防ぐ機能がサポートされていると、閉じるアイコンが表示されます。
 
 #### Moderation History {#moderation-history}
 
 ![chlimage_1-485](assets/chlimage_1-485.png)
 
-1 つの投稿を操作するときに、投稿にカーソルを合わせると、モデレート履歴アイコンが表示されます。このアイコンを選択すると、UGC投稿に関して実行されたアクションの履歴を含むペインが表示されます。
+1 つの投稿を操作するときに、投稿にカーソルを合わせると、モデレート履歴アイコンが表示されます。アイコンを選択すると、UGC投稿に関して行われたアクションの履歴を含むペインが表示されます。
 
 複数の UGC 投稿のコンテンツ領域に戻るには、表示詳細ウィンドウの右上隅の X を選択します。
 
