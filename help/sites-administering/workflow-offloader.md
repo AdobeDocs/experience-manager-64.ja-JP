@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 91f0fd7d-4b49-4599-8f0e-fc367d51aeba
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '601'
+ht-degree: 29%
 
 ---
 
@@ -21,7 +24,7 @@ Assets ワークフローオフローダーを使用すると、Adobe Experience
 
 ## オフローダートポロジの設定 {#configure-offloader-topology}
 
-Configuration Managerを使用して、リーダーインスタンスのURLと、リーダーインスタンス上の接続要求に対するオフローダーインスタンスのホスト名を追加します。
+Configuration Managerを使用して、リーダーインスタンスのURLと、リーダーインスタンスの接続要求のオフローダーインスタンスのホスト名を追加します。
 
 1. Tap/click the AEM logo, and choose **Tools** > **Operations** > **Web Console** to open Configuration Manager.
 1. From the Web Console, select **Sling** >  **Topology Management**.
@@ -95,5 +98,5 @@ Disable the workflow launchers that run the **DAM Update Asset** workflow on the
 
    ![chlimage_1-57](assets/chlimage_1-57.png)
 
-1. タイプがimageのアセットをリーダーインスタンスにアップロードします。 オフロードされたインスタンスによって、アセットに対して生成および移植されたサムネールを確認します。
+1. リーダーインスタンスで画像タイプのアセットをアップロードします。 オフロードされたインスタンスによって、アセットに対して生成され、ポートバックされるサムネールを確認します。
 
