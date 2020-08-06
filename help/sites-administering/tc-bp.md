@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 1554010e-a1d1-4edf-b28f-9eead8f83b4a
 translation-type: tm+mt
 source-git-commit: c1cf6fa92c923cce18000c8dd82b2c17d6783ee5
+workflow-type: tm+mt
+source-wordcount: '859'
+ht-degree: 64%
 
 ---
 
@@ -21,14 +24,14 @@ source-git-commit: c1cf6fa92c923cce18000c8dd82b2c17d6783ee5
 
 グローバル Web プレゼンスの作成や拡張は複雑なプロセスになる可能性がありますが、事前に AEM について適切に考慮および計画しておけば、作業を簡略化してグローバルなビジネス目標をサポートできます。
 
-* **最初のサイトを実装する前に** 、グローバルな拡張を計画します。サイトが短期間で導入された場合に、既存のサイトをグローバルなサポート範囲に適合させるのは、通常、最初にグローバルな拡張を計画するよりも難しくなります。
+* **最初のサイトを実装する前に** 、グローバルな拡張を計画します。 サイトが短い通知で実装された場合に、既存のサイトをグローバルな範囲に適合させるのは、通常、最初にグローバルな拡張を計画するよりも難しくなります。
 
    * Assess the current state of your organization’s localization maturity. Determine whether you have the **tools**, **processes** and **resources** in place to support global expansion.
    * Be aware of **global regulations** and **regional language preferences**. Design flexible content structures and processes that can accommodate a changing global business environment.
 
 * Determine a **governance** model that supports your global business and use AEM mechanisms like MSM and user permissions to enforce your chosen model. For example, determine if content will be centrally authored and “pushed” or “pulled” to regions/countries. Determine what content can be unlocked and altered in the geographies. Determine who is responsible for initiating and managing translations.
 * リソースに余裕がある場合は、必要なツール、プロセスおよびベンダーとの関係の専門知識を養うことのできる中央のチームが翻訳アクティビティを管理することをお勧めします。
-* **グローバルな構造****とプロセス** を計画、プロトタイプ **** 、テストして、ビジネスをサポートし、各地の関係者から必要なサポートを受けられるようにします。
+* **グローバルな構造とプロセスを計画**、 **プロトタイプ** 、 **テストし** 、ビジネスをサポートし、各地の関係者から必要なサポートを受けられるようにします。
 
 ## サイト構造 {#site-structure}
 
@@ -55,8 +58,8 @@ source-git-commit: c1cf6fa92c923cce18000c8dd82b2c17d6783ee5
 
 * Choose a **translation method** that best suits the content.
 
-   * **人間翻訳は** 、メッセージングと品質に対する期待が高く、コンテンツがサイト上でしばらくの間生きるコンテンツ（マーケティングページなど）に最適です。
-   * **機械翻訳は** 、大量の翻訳を行う場合に、投稿時間が重要で、品質への期待が高まらない、または人による翻訳コストが非常に高いときに適しています。サポートナレッジベースとユーザ生成コンテンツは、通常、機械翻訳されます。
+   * **人による翻訳** は、メッセージングや品質の期待が高く、コンテンツがサイト上でしばらくの間生きる、マーケティングページなどのコンテンツに最適です。
+   * **機械翻訳は** 、公開に要する時間が非常に重要で、品質の期待が緩和される、または人による翻訳コストが非常に高い場合に、大量の翻訳に適した選択肢となります。 サポートのナレッジベースとユーザー生成コンテンツは、一般に機械翻訳です。
 
 * ローカリゼーションサービスプロバイダー、アドビのコンサルティング、システムインテグレーターの専門知識を活用して、多言語サイトの構造の計画、プロトタイプの作成およびテストを実施します。
 
