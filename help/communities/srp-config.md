@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
 translation-type: tm+mt
 source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 67%
 
 ---
 
@@ -49,7 +52,7 @@ source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
 
 選択しなかった場合は、AEM リポジトリである JCR がデフォルトで使用されることに注意してください。
 
-JCR is *not* a common store shared by the author and publish environments. コミュニティコンテンツは、作成された作成者または発行環境からのみ表示されます。
+JCR is *not* a common store shared by the author and publish environments. コミュニティコンテンツは、そのコンテンツが作成された作成者または発行環境からのみ表示されます。
 
 詳しくは、[JCR ストア](jsrp.md)を参照してください。
 
