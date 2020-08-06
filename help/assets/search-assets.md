@@ -4,6 +4,9 @@ description: AEM のフィルターパネルを使用した必要なアセット
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
+workflow-type: tm+mt
+source-wordcount: '552'
+ht-degree: 88%
 
 ---
 
@@ -29,14 +32,14 @@ AEM のフィルターパネルを使用した必要なアセットの検索方�
 
 <!-- TBD keystroke 65 article and port applicable changes here. This content goes. -->
 
-You can customize the Filters panel and add/remove search predicates using [search facets](search-facets.md). フィルターパネルを表示するには、次の手順を実行します。
+フィルターパネルをカスタマイズし、[検索ファセット](search-facets.md)を使用して検索述語を追加したり、削除したりすることができます。フィルターパネルを表示するには、次の手順を実行します。
 
 1. In the Assets user interface, tap/click ![search_icon](assets/search_icon.png) from the toolbar to display the Omnisearch box.
 1. 検索語句を入力して、Enter キーを押します。または、検索語句を入力しないで Enter キーを押します。スペースも入力しないでください。スペースを入力すると、検索は実行されません。
 
 1. グローバルナビゲーションアイコンをタップまたはクリックします。フィルターパネルが表示されます。
 
-   ![filters_panel-1](assets/filters_panel-1.png)
+   ![フィルター_パネル —1](assets/filters_panel-1.png)
 
    検索する項目のタイプによって異なりますが、一致した数が検索結果の上部に表示されます。
 
@@ -97,4 +100,4 @@ You can customize the Filters panel and add/remove search predicates using [sear
 * クリック
 * アセットが表示されるメディアチャネル
 
-![洞察](assets/insights.png)
+![insights](assets/insights.png)
