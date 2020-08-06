@@ -9,6 +9,9 @@ topic-tags: develop
 discoiquuid: aa3e50f1-8f5a-489d-a42e-a928e437ab79
 translation-type: tm+mt
 source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+workflow-type: tm+mt
+source-wordcount: '382'
+ht-degree: 60%
 
 ---
 
@@ -34,8 +37,8 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 | パラメーター | 説明 |
 |---|---|
 | `operationInfo` | フォームデータモデルの識別子、操作タイトル、操作名を指定する構造 |
-| `inputs` | サービス操作に値が入力されるフォームオブジェクトを指定する構造 |
-| `outputs` | サービス操作から返される値を使用して入力されるフォームオブジェクトを指定する構造 |
+| `inputs` | サービス操作に値が入力されるフォームオブジェクトを指定するための構造 |
+| `outputs` | サービス操作が返す値を使用して入力されるフォームオブジェクトを指定する構造 |
 
 The structure of the `guidelib.dataIntegrationUtils.executeOperation` API specifies details about the service operation. この構造の構文は以下のとおりです。
 
