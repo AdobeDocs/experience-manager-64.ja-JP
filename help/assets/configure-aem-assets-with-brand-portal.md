@@ -1,6 +1,6 @@
 ---
 title: AEM Assets と Brand Portal の連携の設定
-description: 'Brand Portalにアセットやコレクションを公開するためのAEM AssetsとBrand Portalの設定方法を説明します。 '
+description: 'Brand Portalにアセットやコレクションを公開するためのBrand Portalを使用したAEM Assetsの設定方法について説明します。 '
 contentOwner: VG
 translation-type: tm+mt
 source-git-commit: c407cecf4f4de9aa00ba987f96df3c75784e0171
@@ -30,12 +30,12 @@ Adobe Experience Manager（AEM）Assets と Brand Portal の連携が、Adobe I/
 
 
 このヘルプでは、次の2つの使用例について説明します。
-* [新しい設定](#configure-new-integration-64): 新しいBrand Portalユーザーで、AEM Assets作成者インスタンスをBrand Portalで設定する場合は、Adobe I/Oで新しい設定を作成できます。
-* [アップグレード設定](#upgrade-integration-64): 既存のBrand Portalユーザーで、レガシーOAuth GatewayのBrand Portalで設定したAEM Assets作成者インスタンスを持つ場合は、既存の設定を削除し、Adobe I/Oで新しい設定を作成することをお勧めします。
+* [新しい設定](#configure-new-integration-64): 新しいBrand Portalユーザーで、Brand PortalでAEM Assets作成者インスタンスを設定する場合は、AdobeI/Oで新しい設定を作成できます。
+* [アップグレード設定](#upgrade-integration-64): 既存のBrand Portalユーザーで、従来のOAuth GatewayのBrand Portalで設定したAEM Assets作成者インスタンスを使用している場合は、既存の設定を削除し、AdobeI/Oで新しい設定を作成することをお勧めします。
 
 具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
 
-* Adobe Experience ManagerとAEMパッケージのインストール、設定、管理
+* Adobe Experience ManagerおよびAEMパッケージのインストール、設定、管理
 
 * LinuxおよびMicrosoft Windowsオペレーティングシステムの使用
 
@@ -54,7 +54,7 @@ AEM Assets と Brand Portal の連携を設定するには以下が必要です�
 
 ### Download and install AEM 6.4 {#aemquickstart}
 
-AEM 6.4を使用してAEMオーサーインスタンスを設定することをお勧めします。 AEM が稼働していない場合は、以下の場所から AEM をダウンロードしてください。
+AEMオーサーインスタンスを設定するには、AEM 6.4を使用することをお勧めします。 AEM が稼働していない場合は、以下の場所から AEM をダウンロードしてください。
 
 * If you are an existing AEM customer, download AEM 6.4 from [Adobe Licensing website](http://licensing.adobe.com).
 
@@ -72,7 +72,7 @@ AEM をダウンロードしたら、「[デプロイメントと保守](https:/
 
 ## 設定の作成 {#configure-new-integration-64}
 
-AEM AssetsをBrand Portalと初めて設定する場合は、一覧に示された順序で次の手順を実行します。
+ブランドポータルを使用してAEM Assetsを初めて設定する場合は、一覧に示す順序で次の手順を実行します。
 1. [公開証明書の取得](#public-certificate)
 1. [Adobe I/O 統合環境の作成](#createnewintegration)
 1. [IMS アカウント設定の作成](#create-ims-account-configuration)
@@ -92,8 +92,8 @@ IMS 設定には、次の 2 つの手順が含まれます。
 
 公開証明書により、Adobe I/O でプロファイルを認証できます。
 
-1. AEM Assets作成者インスタンスにログインします。デフォルトのURL: http:// localhost:4502/aem/start.html
-1. **ツール**![ツール](assets/tools.png) パネルで、 **[!UICONTROL セキュリティ/]****** Adobe IMS設定のに移動します。
+1. AEM Assets作成者インスタンスにログインします。デフォルトURL: http:// localhost:4502/aem/start.html
+1. **ツール**![ツール](assets/tools.png) パネルで、 **[!UICONTROL セキュリティ/]****** AdobeIMS設定のに移動します。
 
    ![Adobe IMS アカウント設定 UI](assets/ims-config1.png)
 
@@ -208,8 +208,8 @@ Brand Portal クラウドサービス設定を作成するには、以下の手�
 
 1. AEM Assets作成者インスタンスにログインします
 
-   （デフォルト URL：http:// localhost:4502/aem/start.html）にログインします。
-1. **ツール**![](assets/tools.png) ツールパネルで、クラウドサービス/AEM Brand Portalに移動します ****。
+   デフォルト URL は http://localhost:4502/aem/start.html です。
+1. From **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Cloud Services >> AEM Brand Portal]**.
 
    Brand Portal 設定ページが開きます。
 
@@ -229,9 +229,9 @@ Brand Portal クラウドサービス設定を作成するには、以下の手�
 
 1. AEM Assets作成者インスタンスにログインします
 
-   （デフォルト URL：http:// localhost:4502/aem/start.html）にログインします。
+   デフォルト URL は http://localhost:4502/aem/start.html です。
 
-1. [ **ツール**![](assets/tools.png)**[!UICONTROL ツール]**]パネルで、[Deployment] > [Replication]に移動します。
+1. From **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment >> Replication]**.
 
    ![](assets/test-integration1.png)
 
@@ -277,12 +277,12 @@ Brand Portal クラウドサービス設定を作成するには、以下の手�
    >
    >どのレプリケーションエージェントも無効にしないでください。一部のアセットのレプリケーションが失敗する可能性があります。
 
-Brand PortalはAEM Assetsオーサーインスタンスで正しく設定されます。 次の操作が可能になりました。
+Brand Portalは、AEM Assets作成者インスタンスで正常に設定されます。 次の操作が可能になりました。
 
 * [AEM Assets から Brand Portal へのアセットの公開](../assets/brand-portal-publish-assets.md)
 * [AEM Assets から Brand Portal へのフォルダーの公開](../assets/brand-portal-publish-folder.md)
 * [AEM Assets から Brand Portal へのコレクションの公開](../assets/brand-portal-publish-collection.md)
-* [Asset Sourcingを設定し](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) 、Brand PortalユーザがAEM Assetsにアセットを寄稿して公開できるようにします。
+* [Asset Sourcingを設定し](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) 、Brand PortalユーザがアセットをAEM Assetsに寄稿および公開できるようにします。
 
 ## 設定のアップグレード {#upgrade-integration-64}
 
@@ -293,13 +293,13 @@ Brand PortalはAEM Assetsオーサーインスタンスで正しく設定され�
 
 ### 実行中のジョブの確認 {#verify-jobs}
 
-変更を行う前に、AEM Assetsオーサーインスタンスで公開ジョブが実行されていないことを確認してください。 その場合は、4つのレプリケーションエージェントをすべて検証し、キューが理想的/空であることを確認できます。
+変更を行う前に、AEM Assetsの作成者インスタンスで発行ジョブが実行されていないことを確認してください。 その場合は、4つのレプリケーションエージェントをすべて検証し、キューが理想的/空であることを確認できます。
 
 1. AEM Assets作成者インスタンスにログインします
 
-   （デフォルト URL：http:// localhost:4502/aem/start.html）にログインします。
+   デフォルト URL は http://localhost:4502/aem/start.html です。
 
-1. [ **ツール**![](assets/tools.png)**[!UICONTROL ツール]**]パネルで、[Deployment] > [Replication]に移動します。
+1. From **Tools** ![Tools](assets/tools.png) panel, navigate to **[!UICONTROL Deployment >> Replication]**.
 
 1. レプリケーションページが開きます。
 
@@ -322,7 +322,7 @@ Brand PortalはAEM Assetsオーサーインスタンスで正しく設定され�
 
 既存の設定を削除するには、次の手順を実行します。
 
-1. AEM Assetsオーサーインスタンスにログインし、管理者としてCRX Liteを開きます。
+1. AEM Assets作成者インスタンスにログインし、管理者としてCRX Liteを開きます。
 
    デフォルトURL: http:// localhost:4502/crx/de/index.jsp
 
@@ -330,7 +330,7 @@ Brand PortalはAEM Assetsオーサーインスタンスで正しく設定され�
 
    ![](assets/delete-replication-agent.png)
 
-1. ク `/etc/cloudservices/mediaportal` ラウドサービスの設定に移動 **して削除します**。
+1. `/etc/cloudservices/mediaportal` Cloud Service設定に移動し **て削除します**。
 
    ![](assets/delete-cloud-service.png)
 
@@ -339,7 +339,7 @@ Brand PortalはAEM Assetsオーサーインスタンスで正しく設定され�
    ![](assets/delete-mac-user.png)
 
 
-Adobe I/O上のAEM 6.4オーサーインスタンスに設定 [を](#configure-new-integration-64) 作成できるようになりました。
+AdobeI/O上のAEM 6.4オーサーインスタンスに設定 [を](#configure-new-integration-64) 作成できるようになりました。
 
 
 
