@@ -26,7 +26,7 @@ ht-degree: 82%
 
 統合フレームワークには、API を備えた統合レイヤーが含まれます。これにより、特定の e コマースエンジンに依存しない e コマース機能用の AEM コンポーネントを作成できます。さらに、内部 CRX データベースを使用したり、e コマースシステムを組み込んだりして、製品データを AEM に取り込むこともできます。
 
-統合レイヤーを使用するために、標準搭載のAEMコンポーネントが多数用意されています。 現時点では、以下のようなものがあります。
+統合レイヤーを使用するために、標準搭載の多数のAEMコンポーネントが提供されています。 現時点では、以下のようなものがあります。
 
 * 製品表示コンポーネント
 * 買い物かご
@@ -45,7 +45,7 @@ e コマースフレームワークは任意の e コマースソリューショ
 
    * エンジンは、`commerceProvider` サービスプロパティによって区別できます。
 
-* AEMは、および `Resource.adaptTo()` をサポート `CommerceService` します `Product`
+* AEM `Resource.adaptTo()` での `CommerceService` および `Product`
 
    * The `adaptTo` implementation looks for a `cq:commerceProvider` property in the resource&#39;s hierarchy:
 
@@ -132,6 +132,7 @@ Any product resource can be represented by a `Product API`. Most calls in the pr
 >
 >1. `size`
 >1. もう一度
+
 >
 >   
 This additional variant is selected via the `variationAxis` property of the product reference (usually `color` for Geometrixx Outdoors).
