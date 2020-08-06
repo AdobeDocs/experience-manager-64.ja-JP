@@ -23,21 +23,21 @@ AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、ア
 
 * **Convert PDFサービス：** PDFドキュメントをPostScriptまたは画像ファイル(JPEG、JPEG 2000、PNG、TIFF)に変換できます。 For more information, see [ConvertPDF Service](/help/forms/using/using-convertpdf-service.md).
 
-* **Barcoded Formsサービス：** バーコードの電子画像からデータを抽出できます。 このサービスでは、少なくとも 1 つのバーコードを含んだ TIFF ファイルおよび PDF ファイルを入力として受け取り、バーコードデータを抽出します。For more information, see [Barcoded Forms Service](/help/forms/using/using-barcoded-forms-service.md).
+* **バーコードFormsサービス：** バーコードの電子画像からデータを抽出できます。 このサービスでは、少なくとも 1 つのバーコードを含んだ TIFF ファイルおよび PDF ファイルを入力として受け取り、バーコードデータを抽出します。For more information, see [Barcoded Forms Service](/help/forms/using/using-barcoded-forms-service.md).
 
-* **DocAssuranceサービス：** ドキュメントの暗号化と復号化、追加の使用権限によるAdobe Readerの機能拡張、ドキュメントへの電子署名の追加を可能にします。 DocAssurance サービスには、3 つのサービス（Signature、Encryption および Reader Extention）があります。For more information, see [DocAssurance Service](/help/forms/using/overview-aem-document-services.md).
+* **DocAssuranceサービス：** ドキュメントの暗号化と復号化、追加の使用権限でのAdobe Readerの機能拡張、ドキュメントへの電子署名の追加を行うことができます。 DocAssurance サービスには、3 つのサービス（Signature、Encryption および Reader Extention）があります。For more information, see [DocAssurance Service](/help/forms/using/overview-aem-document-services.md).
 
 * **Encryptionサービス：** ドキュメントの暗号化と復号化を有効にします。 ドキュメントを暗号化すると、その内容は判読できなくなります。許可されたユーザーはドキュメントを解読して、コンテンツにアクセスできます。For more information, see [Encryption Service](/help/forms/using/overview-aem-document-services.md#encryption-service).
 
-* **Formsサービス：** 通常はForms Designerで作成されるフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャクライアントアプリケーションを作成できます。 Formsサービスは、PDFドキュメントに作成したフォームデザインをすべてレンダリングします。 For more information, see [Forms Service](/help/forms/using/forms-service.md).
+* **Formsサービス：** 通常はFormsデザイナーで作成されるフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャクライアントアプリケーションを作成できます。 Formsサービスは、PDFドキュメントで作成したフォームデザインをすべてレンダリングします。 For more information, see [Forms Service](/help/forms/using/forms-service.md).
 
 * **Outputサービス：** PDF、レーザープリンター形式、ラベルプリンター形式など、様々な形式のドキュメントを作成できます。 レーザープリンター形式には、PostScript と Printer Control Language（PCL）があります。For more information, see [Output Service](/help/forms/using/output-service.md).
 
 * **PDF Generatorサービス：** PDF Generatorサービスは、ネイティブファイル形式をPDFに変換するAPIを提供します。 また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。For more information, see [PDF Generator Service](aem-document-services-programmatically.md#pdfgeneratorservice).
 
-* **Reader Extensionサービス：** 追加の使用権限でAdobe Readerの機能を拡張して、組織でインタラクティブPDFドキュメントを簡単に共有できます。 このサービスにより、PDF ドキュメントを Adobe Reader で開いた場合には使用できない機能（ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など）がアクティブになります。For more information, see [Reader Extension Service](/help/forms/using/overview-aem-document-services.md#reader-extension-service).
+* **Reader拡張サービス：** 追加の使用権限でAdobe Readerの機能を拡張することで、組織でインタラクティブPDFドキュメントを簡単に共有できます。 このサービスにより、PDF ドキュメントを Adobe Reader で開いた場合には使用できない機能（ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など）がアクティブになります。For more information, see [Reader Extension Service](/help/forms/using/overview-aem-document-services.md#reader-extension-service).
 
-* **Signatureサービス：** AEMサーバーで電子署名やドキュメントを使用できます。 例えば、通常、Signature サービスは次のような状況で使用されます。
+* **Signatureサービス：** AEMサーバー上で電子署名とドキュメントを操作できます。 例えば、通常、Signature サービスは次のような状況で使用されます。
 
    * Acrobat または Adobe Reader でフォームを開くユーザーにフォームが送信される前に、AEM サーバーでフォームが認証される場合。
    * Acrobat または Adobe Reader を使用してフォームに追加された署名が、AEM サーバーで検証される場合。
@@ -45,7 +45,7 @@ AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、ア
 
    Signature サービスは、Trust Store に格納されている証明書および秘密鍵証明書にアクセスしますFor more information, see [Signature Service](/help/forms/using/aem-document-services-programmatically.md).
 
-AEM Formsは強力なエンタープライズクラスのプラットフォームで、ドキュメントサービスはAEM Formsの機能の1つにすぎません。 機能の完全な一覧については、「[AEM Forms の概要](/help/forms/using/introduction-aem-forms.md)」を参照してください。
+AEM Formsは強力な企業クラスのプラットフォームで、ドキュメントサービスはAEM Formsの機能の一つにすぎません。 機能の完全な一覧については、「[AEM Forms の概要](/help/forms/using/introduction-aem-forms.md)」を参照してください。
 
 ## デプロイメントトポロジ {#deployment-topology}
 
@@ -81,7 +81,7 @@ AEM Forms ドキュメントサービスのインストールおよび設定に�
 
 >[!NOTE]
 >
->* Microsoft Windowsでは、PDF Generatorは、HTMLファイルをPDFドキュメントに変換するためのWebKit、Acrobat WebCaptureおよびPhantomJS変換ルートをサポートしています。
+>* Microsoft Windowsでは、PDF Generatorは、HTMLファイルをPDFドキュメントに変換するためのWebKit、AcrobatWebCapture、およびPhantomJS変換ルートをサポートしています。
 >* UNIXベースのオペレーティングシステムでは、PDF Generatorは、HTMLファイルをPDFドキュメントに変換するためのWebKitおよびPhantomJS変換ルートをサポートします。
 
 >
@@ -197,7 +197,7 @@ Unix ベースのオペレーティングシステムを使用する場合は、
 
 ### Adobe Acrobat とサードパーティアプリケーションのインストール {#install-adobe-acrobat-and-third-party-applications}
 
-PDF Generatorサービスを使用して、Microsoft Word、Microsoft Excel、Microsoft PowerPoint、OpenOffice、WordPerfect X7、Adobe Acrobatなどのネイティブファイル形式をPDFドキュメントに変換する場合は、これらのアプリケーションがAEM Formsサーバーにインストールされていることを確認します。
+PDF Generatorサービスを使用して、Microsoft Word、Microsoft Excel、Microsoft PowerPoint、OpenOffice、WordPerfect X7、Adobe Acrobatなどのネイティブファイル形式をPDFドキュメントに変換する場合は、これらのアプリケーションがAEM Formsサーバーにインストールされていることを確認してください。
 
 >[!NOTE]
 >
@@ -253,7 +253,7 @@ Acrobat をインストールしてから、Microsoft Word を開きます。「
 >[!NOTE]
 >
 >* すべての環境変数とそれぞれのパスでは、大文字と小文字が区別されます。
->* JAVA_HOME、JAVA_HOME_32およびAcrobat_PATH（Windowsのみ）は必須の環境変数です。
+>* JAVA_HOME、JAVA_HOME_32、およびAcrobat_PATH（Windowsのみ）は必須の環境変数です。
 >* 環境変数 OpenOffice_PATH は、実行ファイルではなく、インストールフォルダーのパスに設定します。
 >* Word、PowerPoint、Excel、ProjectなどのMicrosoft Officeアプリケーション、またはAutoCADの環境変数を設定しないでください。 これらのアプリケーションがサーバーにインストールされている場合は、Generate PDF サービスが自動的にこれらのアプリケーションを起動します。
 >* UNIX ベースのプラットフォームでは、OpenOffice を /root としてインストールします。OpenOffice が root としてインストールされていないと、PDF Generator サービスは OpenOffice ドキュメントを PDF ドキュメントに変換できません。OpenOffice を非 root ユーザーとしてインストールして実行する必要がある場合は、非 root ユーザーに sudo 権限を与えます。
@@ -357,7 +357,7 @@ PDF Generatorサービスは、HTMLファイルをPDFドキュメントに変換
 
 >[!NOTE]
 >
->フォントフォルダーに新しいフォントをインストールする場合は、必ずAEM Formsインスタンスを再起動します。
+>fontsフォルダーに新しいフォントをインストールする場合は、必ずAEM Formsインスタンスを再起動します。
 
 ### （UNIXベースのプラットフォームのみ）HTMLからPDFへの変換の追加設定  {#extra-configurations-for-html-to-pdf-conversion}
 
@@ -382,7 +382,7 @@ Unicode フォントを、使用しているシステムに応じて、次のい
 >* /usr/lib/X11/fonts および /usr/share/fonts ディレクトリが存在することを確認してください。このディレクトリが存在しない場合は、ln コマンドを使用して /usr/share/X11/fonts から /usr/lib/X11/fonts へのシンボリックリンク、さらに /usr/share/fonts から /usr/share/X11/fonts への別のシンボリックリンクを作成します。また、courier フォントが使用可能であることを /usr/lib/X11/fonts で確認してください。。
 >* すべてのフォント（Unicode および非 Unicode）が /usr/share/fonts or /usr/share/X11/fonts ディレクトリで使用できることを確認してください。
 >* PDF Generator サービスを非 root ユーザーとして実行する場合は、すべてのフォントディレクトリへの読み取りおよび書き込みアクセス権を非 root ユーザーに与えます。
->* フォントフォルダーに新しいフォントをインストールする場合は、必ずAEM Formsインスタンスを再起動します。
+>* fontsフォルダーに新しいフォントをインストールする場合は、必ずAEM Formsインスタンスを再起動します。
 
 >
 
@@ -392,16 +392,16 @@ Unicode フォントを、使用しているシステムに応じて、次のい
 
 AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、AEM Forms ドキュメントサービスおよびその他の AEM Forms 機能が含まれています。次の手順を実行してパッケージをインストールします。
 
-1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Adobe IDがソフトウェア配布物にログインする必要があります。
-1. ヘッダーメニューで **[!UICONTROL Adobe Experience Manager]** をタップします。
+1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Software Distributionにログインするには、Adobe IDが必要です。
+1. ヘッダーメニューにある **[!UICONTROL Adobe Experience Manager]** をタップします。
 1. In the **[!UICONTROL Filters]** section:
-   1. 「 **[!UICONTROL ソリューション]** 」ドロップダウンリストから「 **[!UICONTROL フォーム]** 」を選択します。
+   1. [ **[!UICONTROL ソリューション]****ドロップダウンリストから[]** Forms]を選択します。
    2. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
 1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「EULA条項に **[!UICONTROL 同意します]**」を選択して、「 **[!UICONTROL ダウンロード]**」をタップします。
 1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
 1. Select the package and click **[!UICONTROL Install]**.
 
-   「 [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) 」記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
+   このパッケージは、 [AEM Formsのリリース記事に記載されている直接リンクからダウンロードすることもできます](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) 。
 
 1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**その際、すぐにサーバーを停止しないでください。** AEM Formsサーバーを停止する前に、ServiceEvent REGISTEREDメッセージとServiceEvent UNREGISTEREDメッセージが `[AEM-Installation-Directory]/crx-quickstart/logs/error`.logファイルに表示されなくなるまで待ち、ログは安定しています。
 
@@ -409,7 +409,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 ### RSA/BouncyCastle ライブラリ用のブート委任の設定  {#configure-boot-delegation-for-rsa-bouncycastle-libraries}
 
-1. AEM インスタンスを停止して [AEMインストールディレクトリ]\crx-quickstart\conf\ folderに移動します。 sling.propertiesファイルを開いて編集します。
+1. AEM インスタンスを停止して Navigate to the [AEM installation directory]\crx-quickstart\conf\ folder. Open the sling.properties file for editing.
 
    `[AEM installation directory]\crx-quickstart\bin\start.bat` を使用して AEM インスタンスを起動する場合は、`[AEM_root]\crx-quickstart\` フォルダー内の sling.properties ファイルを編集用として開きます。
 
@@ -431,7 +431,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 ### フォントマネージャーサービスの設定  {#configuring-the-font-manager-service}
 
 1. Log in to [AEM Configuration Manager](http://localhost:4502/system/console/configMgr) as an administrator.
-1. **[!UICONTROL CQ-DAM-Handler-Gibson Font Managers]** サービスを探して開きます。 システムフォント、Adobe Serverフォント、およびカスタマーフォントのディレクトリのパスを指定します。 「**[!UICONTROL 保存]**」をクリックします。
+1. **[!UICONTROL CQ-DAM-Handler-Gibson Font Managers]** サービスを探して開きます。 System Fonts、System Server Fonts、Customer Fontsの各ディレクトリのパスを指定します。 「**[!UICONTROL 保存]**」をクリックします。
 
    >[!NOTE]
    >
@@ -448,7 +448,7 @@ PDF Generator サービスを実行するには、ローカルユーザーのア
 
 ### タイムアウトの設定 {#configure-the-time-out-settings}
 
-1. [AEM Configuration Manager](http://localhost:4502/system/console/configMgr)で、 **[!UICONTROL Jacorb ORB Provider]** Serviceを探して開きます。
+1. In [AEM configuration manager](http://localhost:4502/system/console/configMgr), locate and open the **[!UICONTROL Jacorb ORB Provider]** service.
 
    次のプロパティを「**[!UICONTROL Custom Properties.name]**」フィールドに追加し、「**[!UICONTROL 保存]**」をクリックします。保留中の応答タイムアウト（CORBAクライアントタイムアウトとも呼ばれます）を600秒に設定します。
 
@@ -491,7 +491,7 @@ Microsoft Windows では、PDF Generator サービスは Adobe Acrobat を使用
 1. システム上のPDFドキュメントを重複クリックします。 Acrobat の初回起動時に、ログインのダイアログボックス、スタートアップスクリーンおよび EULA が表示されます。PDF Generator を使用できるすべてのユーザーに対して、このダイアログボックスを閉じます。
 1. PDF Generator ユーティリティバッチファイルを実行して、Adobe Acrobat を PDF Generator サービス用に設定します。
 
-   1. [AEM Package Managerを開き](http://localhost:4502/crx/packmgr/index.jsp) 、パッケージマネージャーから `adobe-aemfd-pdfg-common-pkg-[version].zip` ファイルをダウンロードします。
+   1. Open [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) and download the `adobe-aemfd-pdfg-common-pkg-[version].zip` file from the package manager.
    1. ダウンロードした.zip ファイルを解凍します。管理者権限でコマンドプロンプトを開きます。
    1. Navigate to the `[extracted-zip-file]\jcr_root\etc\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\scripts` directory. 次のバッチファイルを実行します。
 
@@ -513,7 +513,7 @@ Microsoft Windows では、PDF Generator サービスは Adobe Acrobat を使用
 
 ### （Windowsのみ）HTMLからPDFへの変換のプライマリルートの設定 {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
-PDF Generator サービスは、Webkit、Acrobat WebCapture（Windows のみ）および PhantomJS の、HTML ファイルを PDF ドキュメントに変換する複数のルートを提供します。PhantomJSルートの使用をお勧めします。これは、PhantomJSルートは、動的コンテンツを処理する機能があり、32ビットライブラリ、32ビットJDKに依存しないか、追加のフォントが必要ないからです。 また、PhantomJS ルートでは、変換を実行するために sudo または root アクセスは必要ありません。
+PDF Generator サービスは、Webkit、Acrobat WebCapture（Windows のみ）および PhantomJS の、HTML ファイルを PDF ドキュメントに変換する複数のルートを提供します。動的コンテンツを処理する機能があり、32ビットライブラリ、32ビットJDKに依存しないか、追加のフォントが必要ないので、AdobeではPhantomJSルートの使用をお勧めします。 また、PhantomJS ルートでは、変換を実行するために sudo または root アクセスは必要ありません。
 
 HTML から PDF への変換のデフォルトの主要ルートは WebKit です。変換ルートを変更するには：
 
@@ -555,7 +555,7 @@ DocAssurance サービスは PDF ドキュメントに使用権限を適用で�
 
    >[!NOTE]
    >
-   >* 実稼働環境では、評価用の資格情報を実稼働用の資格情報に置き換えます。期限切れの証明書または評価用の証明書を更新する前に、Reader Extensionsの古い証明書を削除してください。
+   >* 実稼働環境では、評価用の資格情報を実稼働用の資格情報に置き換えます。期限切れの資格情報または評価用の資格情報を更新する前に、古いReader拡張機能の資格情報を削除してください。
 
 
 1. 「 **[!UICONTROL ユーザー設定を]** 編集 **** 」ページで「保存して閉じる」をクリックします。
