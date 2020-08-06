@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: e938bdc7-f8f5-4da5-81f6-7f60c6b4b8e6
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1258'
+ht-degree: 65%
 
 ---
 
@@ -23,7 +26,7 @@ CRX2Oak は、異なるリポジトリ間でデータを移行するために設
 
 このツールを使用して、Apache Jackrabbit 2 をベースとする以前の CQ バージョンから Oak にデータを移行したり、Oak リポジトリ間でデータをコピーしたりできます。
 
-最新バージョンのcrx2oakは、次の場所にあるパブリックAdobeリポジトリからダウンロードできます。\
+次の場所にあるパブリックAdobeリポジトリから、最新バージョンのcrx2oakをダウンロードできます。\
 [https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/)
 
 最新バージョンの変更点と修正点の一覧は、[CRX2Oak のリリースノート](/help/release-notes/crx2oak.md)にあります。
@@ -46,7 +49,7 @@ CRX2Oak は、異なるリポジトリ間でデータを移行するために設
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
-## 機能 {#features}
+## 特長 {#features}
 
 CRX2Oak は AEM のアップグレード中に呼び出され、このとき、永続性モードの再設定を自動化する事前定義済みの移行プロファイルをユーザーが指定できます。これはクイックスタートモードと呼ばれます。
 
@@ -106,7 +109,7 @@ If data needs to be copied between two repositories and you have a content path 
 
 ただし、元のページが削除されても、これらのバージョンはパージされません。長時間使用されているリポジトリを扱う場合は、孤立したバージョンによって生じた多数の冗長なデータを移行で処理しなければならないことがあります。
 
-A useful feature for these types of situations is the addition of the `--copy-versions` parameter. リポジトリの移行またはコピー中にバージョンノードをスキップする場合に使用できます。
+A useful feature for these types of situations is the addition of the `--copy-versions` parameter. リポジトリの移行またはコピーの際にバージョンノードをスキップする場合に使用します。
 
 You can also choose whether to copy orphaned versions by adding `--copy-orphaned-versions=true`.
 
@@ -128,35 +131,35 @@ You can also choose whether to copy orphaned versions by adding `--copy-orphaned
 
 ### ノードストアオプション {#node-store-options}
 
-* `--cache`:キャッシュサイズ（MB単位）(デフォルト `256`)
+* `--cache`: キャッシュサイズ（MB単位）(デフォルト `256`)
 
-* `--mmap`:セグメントストアのメモリマップファイルアクセスを有効にする
+* `--mmap`: セグメントストアのメモリマップファイルアクセスの有効化
 * `--src-password:` ソースRDBデータベースのパスワード
 
 * `--src-user:` ソースRDBのユーザー
 
-* `--user`:ターゲットRDBのユーザー
+* `--user`: ターゲットRDBのユーザー
 
-* `--password`:ターゲットRDBのパスワード。
+* `--password`: ターゲットRDBのパスワード。
 
 ### 移行オプション {#migration-options}
 
-* `--early-shutdown`:ノードのコピー後、およびコミットフックの適用前に、ソースJCR2リポジトリをシャットダウンします
-* `--fail-on-error`:ノードをソース・リポジトリから読み取れない場合に、移行の失敗を強制します。
-* `--ldap`:LDAPユーザーをCQ 5.xインスタンスからOakベースのインスタンスに移行します。 この機能を有効にするには、Oak 設定内の ID プロバイダーを ldap という名前にする必要があります。詳しくは、[LDAP に関するドキュメント](/help/sites-administering/ldap-config.md)を参照してください。
+* `--early-shutdown`: ノードのコピー後、およびコミットフックの適用前に、ソースJCR2リポジトリをシャットダウンします。
+* `--fail-on-error`: ノードをソースリポジトリから読み取れない場合に、移行の失敗を強制します。
+* `--ldap`: LDAPユーザーをCQ 5.xインスタンスからOakベースのインスタンスに移行します。 この機能を有効にするには、Oak 設定内の ID プロバイダーを ldap という名前にする必要があります。詳しくは、[LDAP に関するドキュメント](/help/sites-administering/ldap-config.md)を参照してください。
 
-* `--ldap-config:` 認証に複数のLDAPサーバーを使用 `--ldap` したCQ 5.xリポジトリのパラメーターと組み合わせて使用します。 You can use it to point to the CQ 5.x `ldap_login.conf` or `jaas.conf` configuration files. 形式はです `--ldapconfig=path/to/ldap_login.conf`。
+* `--ldap-config:` これは、認証に複数のLDAPサーバーを使用したCQ 5.xリポジトリの `--ldap` パラメーターと組み合わせて使用します。 You can use it to point to the CQ 5.x `ldap_login.conf` or `jaas.conf` configuration files. 形式はで `--ldapconfig=path/to/ldap_login.conf`す。
 
 ### バージョンストアオプション {#version-store-options}
 
-* `--copy-orphaned-versions`:孤立したバージョンのコピーをスキップします。 Parameters supported are: `true`, `false` and `yyyy-mm-dd`. Defaults to `true`.
+* `--copy-orphaned-versions`: 孤立したバージョンをコピーするのをスキップします。 Parameters supported are: `true`, `false` and `yyyy-mm-dd`. Defaults to `true`.
 
-* `--copy-versions:` バージョンストレージをコピーします。 Parameters: `true`, `false`, `yyyy-mm-dd`. Defaults to `true`.
+* `--copy-versions:` バージョンストレージをコピーします。 パラメーター: `true`, `false`, `yyyy-mm-dd`. Defaults to `true`.
 
 #### パスオプション {#path-options}
 
 * `--include-paths:` コピー時に含めるパスのコンマ区切りリスト
-* `--merge-paths`:コピー中に結合するパスのコンマ区切りリスト
+* `--merge-paths`: コピー中に結合するパスのコンマ区切りリスト
 * `--exclude-paths:` コピー時に除外するパスのコンマ区切りリスト。
 
 ### コピー元 BLOB ストアオプション {#source-blob-store-options}
@@ -165,9 +168,9 @@ You can also choose whether to copy orphaned versions by adding `--copy-orphaned
 
 * `--src-fileblobstore`: ソースとして使用するデータストアディレクトリ `FileBlobStore`
 
-* `--src-s3datastore`:ソースに使用するデータストアディレクトリ `S3DataStore`
+* `--src-s3datastore`: ソースに使用するデータストアディレクトリ `S3DataStore`
 
-* `--src-s3config`:ソースの設定ファイル `S3DataStore`。
+* `--src-s3config`: ソースの設定ファイル `S3DataStore`。
 
 ### コピー先 BLOB ストアオプション {#destination-blobstore-options}
 
@@ -175,9 +178,9 @@ You can also choose whether to copy orphaned versions by adding `--copy-orphaned
 
 * `--fileblobstore:` ターゲットとして使用するデータストアディレクトリ `FileBlobStore`
 
-* `--s3datastore`:ターゲットに使用するデータストアディレクトリ `S3DataStore`
+* `--s3datastore`: ターゲットに使用するデータストアディレクトリ `S3DataStore`
 
-* `--s3config`:ターゲットの設定ファイル `S3DataStore`。
+* `--s3config`: ターゲットの設定ファイル `S3DataStore`。
 
 ### ヘルプオプション {#help-options}
 
