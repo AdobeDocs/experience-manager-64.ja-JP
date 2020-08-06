@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 6c019157-cc37-4826-8d3a-dbee59ec09e0
 translation-type: tm+mt
 source-git-commit: 8e6eaa5053bb94fa33e027594bdc2e30ad16d62e
+workflow-type: tm+mt
+source-wordcount: '1054'
+ht-degree: 69%
 
 ---
 
@@ -25,12 +28,12 @@ AEM で利用可能なデモキャンペーンは、これらすべてのベス�
 
 >[!NOTE]
 >
->すべてのキャンペーンコンテンツは、タイプのページの下 `master` に作成する必要がありま `cq/personalization/components/ambitpage`す。 例えば、キャンペーン構造を計画する場合は、次のようになります。
+>すべてのキャンペーンコンテンツは、タイプの `master` ページの下に作成する必要があり `cq/personalization/components/ambitpage`ます。 例えば、キャンペーン構造を計画する場合は、次のようになります。
 >
 >* `/content/campaigns/teasers/en/campaign-promotion-global`
 >
 >
-マスターページの下に配置されていることを確認します。
+マスターページの下にあることを確認する必要があります。
 >
 >* `/content/campaigns/teasers/master/en/campaign-promotion-global`
 
@@ -54,12 +57,12 @@ AEM で利用可能なデモキャンペーンは、これらすべてのベス�
    <td><p>Is configurable by design changing the <i>cq:doctype</i> property in<i>"/etc/designs/default/jcr:content/campaign_newsletterpage"</i></p> <p>デフォルトは、"XHTML" です。</p> <p>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</p> <p>"HTML_5" に変更できます。</p> <p>&lt;!DOCTYPE HTML&gt;</p> </td> 
   </tr> 
   <tr> 
-   <td><p>文字定義を指定して、特殊文字の正しいレンダリングを確実におこなうようにします。</p> <p>&lt;head&gt;にCHARSET宣言（例： iso-8859-15, UTF-8）を追加します。</p> </td> 
+   <td><p>文字定義を指定して、特殊文字の正しいレンダリングを確実におこなうようにします。</p> <p>追加CHARSET宣言（iso-8859-15、UTF-8など）を&lt;head&gt;に</p> </td> 
    <td><p>UTF-8 に設定します。</p> <p>&lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;</p> </td> 
   </tr> 
   <tr> 
    <td><p>&lt;table&gt;要素を使用して、すべての構造をコード化します。 より複雑なレイアウトの場合、テーブルをネストして複雑な構造を構築します。</p> <p>電子メールは、css がなくても見やすくする必要があります。</p> </td> 
-   <td><p>テーブルは、コンテンツ構築でテンプレート全体にわたって使用されます。現在のところ、最大で 4 つのネストされたテーブルを使用しています（1 つの基本テーブル + 最大 3 つのネストレベル）。</p> <p>&lt;div&gt;タグは、コンポーネントの正しい編集を確実に行うために作成者モードでのみ使用されます。</p> </td> 
+   <td><p>テーブルは、コンテンツ構築でテンプレート全体にわたって使用されます。現在のところ、最大で 4 つのネストされたテーブルを使用しています（1 つの基本テーブル + 最大 3 つのネストレベル）。</p> <p>&lt;div&gt;タグは、コンポーネントの編集を適切に行うために、作成者モードでのみ使用します。</p> </td> 
   </tr> 
   <tr> 
    <td>要素の属性（cellpadding、valign、width など）を使用してテーブルの寸法を設定します。これは、ボックスモデル構造を強制します。</td> 
@@ -106,7 +109,7 @@ AEM で利用可能なデモキャンペーンは、これらすべてのベス�
    <td><strong>実装</strong></td> 
   </tr> 
   <tr> 
-   <td>CSSのスタイルの代わりにhtml &lt;font&gt;を使用する(font-family)</td> 
+   <td>CSSではスタイルの代わりにhtml &lt;font&gt;を使用(font-family)</td> 
    <td>RichTextEditor（例：textimage コンポーネントに含まれるもの）は、選択したテキストへのフォントファミリーおよびフォントサイズの選択および適用をサポートするようになりました。これらは&lt;font&gt;タグとしてレンダリングされます。</td> 
   </tr> 
   <tr> 
@@ -121,7 +124,7 @@ AEM で利用可能なデモキャンペーンは、これらすべてのベス�
 | **ベストプラクティス** | **実装** |
 |---|---|
 | W3C バリデーターを使用して、HTML コードを修正します。すべての開始タグが適切に閉じられるようにします。 | コードは検証されました。For XHTML transitional Doctype only the missing xmlns attribute for the `<html>` element is missing. |
-| JavaScriptやFlashを使用して問題を解決する必要はありません。これらのテクノロジーは、電子メールクライアントではほとんどサポートされていません。 | JavaScript も Flash も、ニュースレターテンプレートでは使用していません。 |
+| JavaScriptやFlashを使用して問題を回避。これらのテクノロジーは、電子メールクライアントではほとんどサポートされていません。 | JavaScript も Flash も、ニュースレターテンプレートでは使用していません。 |
 | マルチパート送信では、プレーンテキストバージョンを追加します。 | 新しいウィジェットは、ページプロパティに組み込まれ、ページコンテンツからプレーンテキストを簡単に抽出できます。これは、最終的なプレーンテキストバージョンの開始点として使用できます。 |
 
 ## キャンペーンニュースレターのテンプレートと例 {#campaign-newsletter-templates-and-examples}
