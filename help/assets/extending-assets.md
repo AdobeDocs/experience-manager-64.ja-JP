@@ -4,6 +4,9 @@ description: アセット共有とアセットエディターをカスタマイ�
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '261'
+ht-degree: 94%
 
 ---
 
@@ -25,7 +28,7 @@ AEM 開発者は、アセットエディターを様々な方法でカスタマ�
 
 ## 外観と操作性のカスタマイズ {#customizing-the-look-and-feel}
 
-アセットエディターのルック&amp;フィールは、次のようにカスタマイズ可能です。
+アセットエディタのルック&amp;フィールの次の要素はカスタマイズ可能です。
 
 * ロゴ：組織の独自のロゴをインターフェイスに追加できます。
 * 色およびフォント：インターフェイスで使用される色およびフォントを変更できます。
