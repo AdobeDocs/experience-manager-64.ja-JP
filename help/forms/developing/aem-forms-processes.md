@@ -20,7 +20,7 @@ ht-degree: 3%
 
 # AEM Formsプロセスについて {#understanding-aem-forms-processes}
 
-一般的な使用例は、一連のAEM Formsサービスが単一のドキュメント上で動作する場合です。 Workbenchを使用してプロセスを作成すると、サービスコンテナにリクエストを送信できます。 プロセスとは、自動化するビジネスプロセスを表します。 プロセスの作成について詳しくは、「Workbenchの [使用](https://www.adobe.com/go/learn_aemforms_workbench_63)」を参照してください。
+一般的な使用例は、一連のAEM Formsサービスが1つのドキュメント上で動作する場合です。 Workbenchを使用してプロセスを作成すると、サービスコンテナにリクエストを送信できます。 プロセスとは、自動化するビジネスプロセスを表します。 プロセスの作成について詳しくは、「Workbenchの [使用](https://www.adobe.com/go/learn_aemforms_workbench_63)」を参照してください。
 
 プロセスがアクティブ化されると、そのプロセスはサービスになり、他のサービスと同様に呼び出すことができます。 Encryptionサービスなどの標準サービスとプロセスに由来するサービスの違いの1つは、標準サービスには多くのアクションを実行する1つの操作があるということです。 これに対し、標準のサービスには多くの操作があります。 通常、各操作は1つの操作(ポリシーのドキュメントへの適用、ドキュメントの暗号化など)を実行します。
 
@@ -32,11 +32,11 @@ ht-degree: 3%
 * プロセスは、組織の境界をまたぐことができます。
 * プロセスを終了するには、外部入力が必要です。 例えば、不在のマネージャーにフォームが送信される場合を考えてみます。 この場合、マネージャーがフォームを返して入力するまで、プロセスは完了しません。
 
-   この種のプロセスは、長期間有効なプロセスと呼ばれます。 長期間有効なプロセスは非同期に実行され、システムはリソースの許容範囲内でやり取りを行い、操作の追跡と監視を行うことができます。 長期間有効なプロセスが呼び出されると、AEM Formsは、長期間有効なプロセスのステータスを追跡するレコードの一部として呼び出し識別子値を作成します。 レコードはAEM Formsデータベースに保存されます。 長期間有効なプロセスレコードは、不要になったときに削除できます。
+   この種のプロセスは、長期間有効なプロセスと呼ばれます。 長期間有効なプロセスは非同期に実行され、システムはリソースの許容範囲内でやり取りを行い、操作の追跡と監視を行うことができます。 長期間有効なプロセスが呼び出されると、AEM Formsは、長期間有効なプロセスステータスを追跡するレコードの一部として呼び出し識別子値を作成します。 レコードはAEM Formsデータベースに格納されます。 長期間有効なプロセスレコードは、不要になったときに削除できます。
 
 >[!NOTE]
 >
->短時間のみ有効なプロセスが呼び出された場合、AEM Formsではレコードは作成されません。
+>短時間のみ有効なプロセスが呼び出された場合、AEM Formsはレコードを作成しません。
 
 呼び出し識別子の値を使用して、長期間有効なプロセスのステータスを追跡できます。 例えば、プロセス呼び出し識別子の値を使用して、実行中のプロセスインスタンスの終了など、Process Manager操作を実行できます。
 
@@ -60,9 +60,9 @@ ht-degree: 3%
    >
    >通常、短時間のみ有効なプロセスは、3つ以上のアクションで構成されます。 プロセスはWorkbenchを使用して作成します。 （[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照。）
 
-   *AEM* formsによるプログラミングでは、この短時間のみ有効なプロセスをプログラムで呼び出す次の方法について説明します。
+   *AEM* formsによるプログラミングでは、この短時間のみ有効なプロセスをプログラムで呼び出す次の方法について説明しています。
 
-   * [AEM Forms Remotingを使用して、安全でないドキュメントを渡すことによる短時間のみ有効なプロセスの呼び出し](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) （Flexアプリケーションを使用）
+   * [AEM Formsリモートを使用して安全でないドキュメントを渡すことによる短時間のみ有効なプロセスの呼び出し](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting) (Flexアプリケーションを使用)
    * [呼び出しAPI](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) (Java Invocation API)を使用した短時間のみ有効なプロセスの呼び出し
    * [Base64エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding) （Webサービスの例）
    * [MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom) （Webサービスの例）
