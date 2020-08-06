@@ -1,5 +1,5 @@
 ---
-title: コンテンツフラグメントモデルのカスタマイズは公開しないが削除しない
+title: コンテンツフラグメントモデルのカスタマイズはDELETEしないで公開してください。
 seo-title: コンテンツフラグメントモデルのカスタマイズ
 description: コンテンツフラグメントモデルは、カスタマイズおよび拡張が可能です。
 seo-description: コンテンツフラグメントモデルは、カスタマイズおよび拡張が可能です。
@@ -10,35 +10,39 @@ discoiquuid: 208225ee-9052-4a45-9cfd-f8d27d4d70ed
 noindex: true
 translation-type: tm+mt
 source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
+workflow-type: tm+mt
+source-wordcount: '598'
+ht-degree: 3%
 
 ---
 
 
-# コンテンツフラグメントモデルのカスタマイズは公開しないが削除しない{#do-not-publish-but-do-not-delete-customizing-content-fragment-models}
+# コンテンツフラグメントモデルのカスタマイズはDELETEしないで公開してください。{#do-not-publish-but-do-not-delete-customizing-content-fragment-models}
 
-コンテンツフラグメントモデルエディターは、次のファイルに基づくウィザ `Formbuilder`ードです。
+コンテンツフラグメントモデルエディターは、次のファイルに基づくウィザード `Formbuilder`です。
 
 `granite/ui/components/foundation/form/formbuilder`
 
-このコンポーネントには、モデルエディターのドラッグ&amp;ドロップインターフェイスをレンダリングするのに必要なツールが用意されており、それぞれのデータタイプとプロパティが完成しています。
+このコンポーネントには、モデルエディタのドラッグ&amp;ドロップインターフェイスをレンダリングするのに必要なツールが用意されており、それぞれのデータタイプとプロパティを完成させます。
 
 ## ロケーション {#locations}
 
-モデルは、「コンテンツフラグメントモデル」プ `/conf`ロパティが有効なフォルダーの下に [保存され、作成されます](/help/assets/content-fragments-models.md#enable-content-fragment-models) 。 この設定は、設定ブラウザーからアク **セスできる**「設定プロパティ」でも **確認できます**。
+モデルは、「 `/conf`コンテンツフラグメントモデル」プロパティが有効なフォルダーの下 [に保存され、作成されます](/help/assets/content-fragments-models.md#enable-content-fragment-models) 。 この設定は、 **設定ブラウザーからアクセスできる**&#x200B;設定プロパティ **でも確認できます**。
 
-1. ツール、一般、設定ブラウ **ザー**(例： **ツ**&#x200B;ール **)を使**&#x200B;用してブラウザーに移動します。 `http://localhost:4502/libs/granite/configurations/content/view.html/conf`
+1. 「 **ツール**」、「 **一般」、「**&#x200B;設定ブラウザー」な ****&#x200B;どを使用してブラウザーに移動します。 
+`http://localhost:4502/libs/granite/configurations/content/view.html/conf`
 
-1. ブラウザで適切な設定を選択し、ツールバーから **「Properties** 」を選択します。
+1. ブラウザーで適切な設定を選択し、ツールバーの「 **プロパティ** 」を選択します。
 
-   例えば、次のプロパティがありま `global`す。 `http://localhost:4502/libs/granite/configurations/content/edit.html/conf/global`
+   例えば、次のプロパティがあり `global`ます。 `http://localhost:4502/libs/granite/configurations/content/edit.html/conf/global`
 
-モデルコンソールに、 **Content Fragment Modelsプロパティを持つすべてのフォ** ルダーが表示されます。 ツール、アセ **ット**、コ **ンテン**&#x200B;ツフラグメントモデル ****、例えば、 `http://localhost:4502/libs/dam/cfm/models/console/content/models.html/conf`.
+モデルコンソールに、「 **コンテンツフラグメントモデル** 」プロパティを持つすべてのフォルダーが表示されます。 **ツール**、 **アセット**、 **コンテンツフラグメントモデルを使用した移動**、 例えば、 `http://localhost:4502/libs/dam/cfm/models/console/content/models.html/conf`。
 
-ユーザーは、モデル [を作成ウィザード](/help/assets/content-fragments-models.md#creating-a-content-fragment-model) (コンソールから「作 **成」を使用****** )を使用して、コンテンツフラグメントモデルを作成できます。
+ユーザーは、「モデルを [作成](/help/assets/content-fragments-models.md#creating-a-content-fragment-model) 」ウィザード(コンソールから「 **作成** 」を使用)を使用して、コンテンツフラグメントモデルを **** 作成できます。
 
 >[!CAUTION]
 >
->You ***must*** not change anything in the `/libs` path.
+>`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
 >
 >This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may be overwritten when you apply either a hotfix or feature pack).
 
@@ -50,41 +54,41 @@ source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
 
 * `../settings/dam/cfm/models`
 
-   すべてのモデルは、このフォルダのサブフォルダに保存されます。
+   すべてのモデルが、このフォルダーのサブフォルダーの下に保存されます。
 
 * `jcr:content`
 
-   すべてのモデルには、次のようなノード `jcr:content` が含まれています。
+   すべてのモデルには、次のような `jcr:content` ノードが含まれます。
 
-   * には、、などのモデルに関する情報プロパティが含ま `jcr:title`れま `lastModified`す。 `lastModifiedBy`
-   * 通常は `sling:ResourceType` ～ `dam/cfm/models/console/components/data/entity/default`の
+   * には、 `jcr:title`、などのモデルに関する情報プロパティが含まれ `lastModified`ます。 `lastModifiedBy`
+   * 通常は `sling:ResourceType``dam/cfm/models/console/components/data/entity/default`の
 
-      ～と共 `sling:ResourceSuperType` に `dam/cfm/models/console/components/data/entity`
+      ～と共に `sling:ResourceSuperType` `dam/cfm/models/console/components/data/entity`
 
 * `model`
 
-   ノード `model` には、モデルエディタ `dataTypesConfig`ーで使用するデータタイプを決定するために使用されるプロパティが含まれます。
+   ノードにはプロパティが含まれ `model``dataTypesConfig`ており、モデルエディタで使用するデータタイプを決定するために使用されます。
 
 * `items`
 
-   ノードの下 `items` に、モデルに追加されたすべてのデータ型が保存されます（モデルエディターでドラッグ&amp;ドロップした状態）。 各項目にはランダムなノード名が割り当てられますが、コンテンツフラグメントエディターがこのモデルで機能するには、各項目にプロパティが必要 `name` です。 さらに、このノードでは、特定のデータタイプの設定プロパティがすべて保存され、コンポーネントのレンダリングに必要なデフォルトのプロパティも含まれます。
+   ノードの下に、モデルに追加されたすべてのデータ型が保存されます（モデルエディターでドラッグ&amp;ドロップしたとき）。 `items` 各項目にはランダムなノード名が与えられますが、コンテンツフラグメントエディターがこのモデルで動作するようにするには、各項目に `name` プロパティが必要です。 また、このノードでは、コンポーネントのレンダリングに必要なデフォルトのプロパティを含む、特定のデータ型のすべての設定プロパティが保存されます。
 
 >[!CAUTION]
 >
->モデルエディターでドラッグ&amp;ドロップしたすべてのデータ型、およびインスタンス化されたデータ型の場合 **は** 、ユーザーがプ `name` ロパティを入力する必要があります。
+>モデルエディターでドラッグ&amp;ドロップしたすべてのデータ型と、そのインスタンス化のために **、ユーザーが**`name` プロパティ入力を持つ必要があります。
 >
->**これは、** Property Name &amp;ast；と表示されます。モデルエデ **ィタの** 「プロパティ」タブで、
+>これは、 **プロパティ名&amp;ast；と見なされます。** (モデルエディタの **プロパティ** タブ)。
 
 ## モデルエディタの構造 {#structure-of-the-model-editor}
 
-コンテンツ **フラグメントモデルエディターには** 、次の2つの部分があります。
+コン **テンツフラグメントモデルエディターには** 、次の2つの部分があります。
 
-* 左側のプレビュー（ビュー）パネル。項目をドロップできます。 このクライアントライブラリは:
+* 左側のプレビュー(表示)パネル。項目をドロップできます。 このスケーリングは：
 
-   * インスタンス化されるデータ **型のプレビュー** を表示します。
-   * モデルエディター内での順序付けを許可します。
+   * インスタンス化される **データ型** (Data Type)のプレビューを表示します。
+   * モデルエディタ内での順序付けを許可します。
 
-* 右側 **のパネルの「** Data Types **/** Properties」タブ。 このクライアントライブラリは:
+* 右側のパネルの「 **データタイプ**/**プロパティ** 」タブ このスケーリングは：
 
    * ドラッグしてインスタンス化できるデータ型のリストを表示します。
    * 標準搭載のモデルエディターの場合、リストは次の場所にあります。
@@ -95,11 +99,11 @@ source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
       This node contains all the data types currently supported in the model editor. For more information on how to configure the data types, see [Customizing Data Types for Content Fragment Models](/help/sites-developing/customizing-content-fragment-model-data-types.md).
       -->
 
-   * すべてのレンダリングされたデータ型には2つのスクリプトタグがあり、インスタンス化するとビュー（左側にレンダリングされたコンポーネント）が形成され、「 **Properties** 」タブが定義されます。このタブは、特定のコンポーネントに対してユーザーが定義できるプロパティを定義します。
+   * すべてのレンダリングされたデータ型には、インスタンス化の際に表示（左側にレンダリングされるコンポーネント）を形成する2つのscriptタグと、特定のコンポーネントに対してユーザーが定義できるプロパティを定義する「 **プロパティ** 」タブがあります。
 
 >[!CAUTION]
 >
->You ***must*** not change anything in the `/libs` path.
+>`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
 >
 >This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may be overwritten when you apply either a hotfix or feature pack).
 
@@ -107,9 +111,9 @@ source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
 The properties on the right side define a form that is submitted directly into JCR under `/conf`; see the path in the example [Structure of a Model](/help/sites-developing/customizing-content-fragment-models.md#structure-of-a-model).
 -->
 
-データ型をインスタンス化する場合、コンポーネントをコンテンツフラグメントにレンダリングする必要があるすべてのプロパティに対してHTML入力が作成されます。 例えば、次のように指定します。
+データタイプをインスタンス化する場合、コンポーネントをコンテンツフラグメント内にレンダリングする必要があるプロパティごとにHTML入力が作成されます。 例えば、次のように指定します。
 
-* **** プロパティ名(&amp;A);ast;( `name`) — コンポーネントの識別子として機能します。
+* **プロパティ名(&amp;amp);ast;** ( `name`) — コンポーネントの識別子として機能します。
 
 * **Render As** ( `metaType`) — レンダリングするコンポーネントを
 
