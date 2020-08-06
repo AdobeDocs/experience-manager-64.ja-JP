@@ -18,7 +18,7 @@ ht-degree: 64%
 
 # Document Security | ユーザーデータの処理 {#document-security-handling-user-data}
 
-AEM Formsドキュメントセキュリティを使用すると、定義済みのセキュリティ設定を作成、保存、ドキュメントに適用できます。 これにより、許可されたユーザーだけがドキュメントを使用できるように指定できます。ドキュメントを保護するには、ポリシーを使用します。ポリシーは、セキュリティ設定および許可されたユーザーの一覧を含む情報の集合です。1 つまたは複数のドキュメントにポリシーを適用して、AEM Forms JEE User Management に追加されるユーザーを許可します。
+AEM Formsドキュメントセキュリティでは、定義済みのセキュリティ設定を作成、保存、ドキュメントに適用できます。 これにより、許可されたユーザーだけがドキュメントを使用できるように指定できます。ドキュメントを保護するには、ポリシーを使用します。ポリシーは、セキュリティ設定および許可されたユーザーの一覧を含む情報の集合です。1 つまたは複数のドキュメントにポリシーを適用して、AEM Forms JEE User Management に追加されるユーザーを許可します。
 
 <!-- Fix broken link For more information about how document security works, see AEM Forms JEE administration help. -->
 
@@ -159,6 +159,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    1. Open the XML blob of each row in the `EdcPolicyXMLEntity` or `EdcPolicyArchiveEntity` table and extract the XML file. XMLファイルは、次に示すファイルに似ています。
    1. XML ファイルを編集して、目的のプリンシパル ID の Blob を削除します。
    1. その他のファイルで手順 1 と 2 を繰り返します。
+
    >[!NOTE]
    >
    >You must remove the complete blob within the `Principal` tag for a principal ID or the policy XML may get corrupt or unusable.
@@ -197,6 +198,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    1. As an administrator, log into the Forms JEE administration console at https://[*server*]:[*port*]/adminui.
    1. Navigate to **[!UICONTROL Services > Document Security > Policy Sets]**.
    1. ポリシーセットを開き、ポリシーからユーザーを削除します。
+
    **Document Security の Web ページの使用**
 
    個人用ポリシーを作成できる権限を持つ Document Security ユーザーは、そのポリシーからユーザーデータを削除できます。この作業を行うには：
@@ -204,6 +206,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    1. Users who have personal policies log into their document security web page at https://[*server*]:[*port*]/edc.
    1. Navigate to **[!UICONTROL Services > Document Security > My Policies]**.
    1. ポリシーを開き、ポリシーからユーザーを削除します。
+
    >[!NOTE]
    >
    >Administrators can search, access, and delete user data from personal policies of other users in **[!UICONTROL Services > Document Security > My Policies]** using administration console.
