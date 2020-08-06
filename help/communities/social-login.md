@@ -1,8 +1,8 @@
 ---
 title: Facebook と Twitter を使用したソーシャルログイン
 seo-title: Facebook と Twitter を使用したソーシャルログイン
-description: Socialログインを使用すると、サイトの訪問者はFacebookまたはTwitterアカウントでサインインできます。
-seo-description: Socialログインを使用すると、サイトの訪問者はFacebookまたはTwitterアカウントでサインインできます。
+description: Socialログインを使用すると、サイト訪問者はFacebookアカウントまたはTwitterアカウントでサインインできます。
+seo-description: Socialログインを使用すると、サイト訪問者はFacebookアカウントまたはTwitterアカウントでサインインできます。
 uuid: f70e346e-0d8c-41a0-a100-206a420088dc
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '2834'
+ht-degree: 36%
 
 ---
 
 
 # Facebook と Twitter を使用したソーシャルログイン {#social-login-with-facebook-and-twitter}
 
-Socialログインは、サイトの訪問者にFacebookまたはTwitterアカウントでサインインするオプションを提示する機能です。 したがって、許可されたFacebookまたはTwitterデータをAEMメンバープロファイルに含めます。
+ソーシャルログインは、サイト訪問者にFacebookやTwitterアカウントでサインインするオプションを提供する機能です。 したがって、許可されたFacebookデータやTwitterデータがAEMのメンバープロファイルに含まれます。
 
 ![socialloginretail](assets/socialloginweretail.png)
 
 ## ソーシャルログインの概要 {#social-login-overview}
 
-ソーシャルログインを含めるには、カスタムのFacebookアプリとTwitterアプリを作成する*必要があります。
+ソーシャルログインを含めるには、カスタムFacebookアプリとTwitterアプリを作成するために*必要です。
 
 While the we-retail sample provides sample Facebook and Twitter apps and cloud services, they are not available on a [production website](../../help/sites-administering/production-ready.md).
 
@@ -31,9 +34,9 @@ While the we-retail sample provides sample Facebook and Twitter apps and cloud s
 
 1. すべての AEM パブリッシュインスタンスで [OAuth 認証を有効](#adobe-granite-oauth-authentication-handler)にします。
 
-   OAuthが有効になっていない場合、ログインの試みは失敗します。
+   OAuthが有効になっていない場合、ログイン試行は失敗します。
 
-1. **ソーシャル** アプリとクラウドサービスを作成します。
+1. **ソーシャルアプリとクラウドサービスを作成します** 。
 
    * Facebookでのログインをサポートするには：
 
@@ -49,21 +52,21 @@ While the we-retail sample provides sample Facebook and Twitter apps and cloud s
 
 以下に示す 2 つの基本的な概念があります。
 
-1. **スコープ** （権限）は、アプリが要求できるデータを指定します。
+1. **範囲** （権限）は、アプリが要求できるデータを指定します。
 
    * The Facebook and Twitter [Adobe Granite OAuth Application and Provider](#adobe-granite-oauth-application-and-provider) instances, by default, include the basic app permissions within their scope.
 
-1. **フィールド** (params)は、URLパラメーターを使用してリクエストされた実際のデータを指定します。
+1. **Fields** (params)は、URLパラメーターを使用してリクエストされた実際のデータを指定します。
 
    * These fields are specified in [AEM Communities Facebook OAuth Provider](#aem-communities-facebook-oauth-provider) and [AEM Communities Twitter OAuth Provider](#aem-communities-twitter-oauth-provider).
-   * デフォルトのフィールドはほとんどの使用例に十分ですが、変更することができます。
+   * デフォルトのフィールドはほとんどの使用事例で十分ですが、変更することができます。
 
 ## 「Facebook ログイン」{#facebook-login}を選択します。
 
 ### Facebook API バージョン {#facebook-api-version}
 
 ソーシャルログインと we-retail の Facebook アプリのサンプルは、Facebook Graph API 1.0 バージョンで開発されたものです。\
-AEM 6.4 GAおよびAEM 6.3 SP1のソーシャルログインは、新しいバージョンのFacebook Graph API 2.5で動作するように更新されました。
+AEM 6.4 GA以降およびAEM 6.3 SP1ソーシャルログインが、新しいバージョンのFacebook Graph API 2.5で動作するように更新されました。
 
 >[!NOTE]
 >
@@ -75,11 +78,11 @@ For the Facebook Graph API version information, see the [Facebook API changelog]
 
 Facebookのソーシャルログインを有効にするには、適切に設定されたFacebookアプリが必要です。
 
-Facebookアプリを作成するには、Facebookの手順に従ってhttps://developers.facebook.com/apps/を参照してく [ださい](https://developers.facebook.com/apps/)。 手順の変更は、次の情報には反映されません。
+Facebookアプリを作成するには、Facebookの指示に従ってhttps://developers.facebook.com/apps/ [に進みます](https://developers.facebook.com/apps/)。 手順に対する変更は、次の情報には反映されません。
 
 一般的な手順（Facebook API v2.7 の時点）：
 
-* *新しいFacebookアプリの追加：*
+* *新追加しいFacebookアプリ：*
    * For *Platform*, choose Website
       * For *Site URL*, enter `  https://<server>:<port>.`
    * For *Display Name*, enter a title for use as the Title of the Facebook connect service.
@@ -95,13 +98,13 @@ Once the application has been created, locate the **[!UICONTROL App ID]** and **
 
 ### Facebook Connect クラウドサービス {#create-a-facebook-connect-cloud-service}
 
-クラウドサービス設定を作成することで、[Adobe Granite OAuth Application and Provider](https://chl-author.corp.adobe.com/content/help/en/experience-manager/6-4/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) インスタンスが作成されます。このインスタンスが、Facebook アプリケーションと新しいユーザーの追加先のメンバーグループを識別します。
+クラウドサービス設定を作成することで、[Adobe Granite OAuth Application and Provider](https://chl-author.corp.adobe.com/content/help/jp/experience-manager/6-4/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) インスタンスが作成されます。このインスタンスが、Facebook アプリケーションと新しいユーザーの追加先のメンバーグループを識別します。
 
 1. AEM オーサーインスタンスで、管理者権限でサインインします。
 1. From global navigation, select **[!UICONTROL Tools > Cloud Services > Facebook Social login configuration]**.
 1. **[!UICONTROL コンテキストパス]**&#x200B;設定を選択します。
 
-   **[!UICONTROL コンテキスト]** パスは、コミュニティサイトの作成/編集中に選択したクラウド設定パスと同じにする必要があります。
+   **[!UICONTROL コンテキストパス]** は、コミュニティサイトの作成/編集時に選択したクラウド設定パスと同じにする必要があります。
 
 1. コンテキストパスの下にクラウドサービスを作成できる設定になっているかを確認します。
 1. Go to **[!UICONTROL Tools > General > Configuration Browser]**. コンテキストを選択し、プロパティを編集します。 まだ有効になっていなければ、クラウド設定を有効にします。
@@ -112,13 +115,14 @@ Once the application has been created, locate the **[!UICONTROL App ID]** and **
 
    ![fbsocialloginconfigpng](assets/fbsocialloginconfigpng.png)
 
-   * **[!UICONTROL タイトル]** (必&#x200B;*須*)Facebookアプリを識別する表示タイトルを入力します。 It is recommended to use the same name entered as the *Display Name* for the Facebook app.
-   * **[!UICONTROL アプリID/APIキー]** (必&#x200B;*須*)Facebookアプリ ***のア*** プリIDを入力します。 This identifies the [Adobe Granite OAuth Application and Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) instance created from the dialog.
-   * **[!UICONTROL アプリのシークレッ]** ト&#x200B;*(必須*)Facebookアプリ ***のアプリのシークレット*** (App Secret)を入力します。
-   * **[!UICONTROL ユーザーを作成]**&#x200B;オンにすると、Facebook アカウントでログインしたときに AEM ユーザーエントリが作成され、選択されたユーザーグループのメンバーとして追加されます。デフォルトはオンです（強く推奨）。
-   * **[!UICONTROL Mask User IDs]**:選択を解除したままにします。
-   * **[!UICONTROL Scope Email]**:ユーザーの電子メールIDをFacebookから取得する必要があります。
-   * **[!UICONTROL 「ユーザーグループに追加]** 」を選択し、ユーザーを追加するコミュニティサイトの1つ [以上のメンバー](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html) ・グループを選択します。
+   * **[!UICONTROL タイトル]** (*必須*)Facebookアプリを識別する表示タイトルを入力します。 It is recommended to use the same name entered as the *Display Name* for the Facebook app.
+   * **[!UICONTROL アプリID/APIキー]** (*必須*)Facebookアプリの ***アプリID*** を入力します。 This identifies the [Adobe Granite OAuth Application and Provider](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) instance created from the dialog.
+   * **[!UICONTROL アプリの秘密]** (*必須*)Facebookアプリの ****** アプリの秘密を入力します。
+   * **[!UICONTROL ユーザーを作成]**&#x200B;オンにすると、Facebook アカウントでログインしたときに AEM ユーザーエントリが作成され、選択されたユーザーグループのメンバーとして追加されます。デフォルトはオンになっています（強く推奨）。
+   * **[!UICONTROL Mask User IDs]**: 選択を解除したままにします。
+   * **[!UICONTROL Scope Email]**: ユーザーの電子メールIDをFacebookから取得する必要があります。
+   * **[!UICONTROL 「ユ追加ーザーグループ」追加には、「ユーザーグループ」を選択し、ユーザーを追加するコミュニティサイトの1つまたは複数の]** メンバーグループ [](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/users.html) を選択します。
+
    >[!NOTE]
    >
    >グループはいつでも追加または削除できます。しかし、既存ユーザーのメンバーシップに影響はありません。自動メンバーシップは、このフィールド更新後に作成された新規ユーザーにのみ適用されます。匿名ユーザーが無効になっているサイトの場合は、そのクローズドコミュニティサイト専用の対応するコミュニティメンバーグループにユーザーを追加します。
@@ -128,7 +132,7 @@ Once the application has been created, locate the **[!UICONTROL App ID]** and **
 
 
 
-The result is an [Adobe Granite OAuth Application and Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider) instance which does not require further modification unless adding additional scope (permissions). デフォルトのスコープは、Facebookログインの標準権限です。 追加のスコープが必要な場合は、OSGI設定を直接編集する必要があります。 システムまたはコンソールから直接変更がおこなわれている場合は、上書きしないよう、タッチ UI からクラウドサービス設定を編集しないでください。
+The result is an [Adobe Granite OAuth Application and Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider) instance which does not require further modification unless adding additional scope (permissions). デフォルトの範囲は、Facebookログインの標準権限です。 追加の範囲が必要な場合は、OSGI設定を直接編集する必要があります。 システムまたはコンソールから直接変更がおこなわれている場合は、上書きしないよう、タッチ UI からクラウドサービス設定を編集しないでください。
 
 ### AEM Communities Facebook OAuth Provider {#aem-communities-facebook-oauth-provider}
 
@@ -152,9 +156,9 @@ The AEM Communities provider extends the [Adobe Granite OAuth Application and Pr
 
    * **[!UICONTROL OAuthプロバイダーID]**
 
-      (必&#x200B;*須*)デフォルト値 *はsoco -facebookです*。 編集しないでください。
+      (*必須*)デフォルト値は *soco -facebookです*。 編集しないでください。
 
-   * **[!UICONTROL クラウドサービス設定]**
+   * **[!UICONTROL Cloud Service設定]**
 
       Default value is */etc/  cloudservices /  facebookconnect*. 編集しないでください。
 
@@ -166,7 +170,7 @@ The AEM Communities provider extends the [Adobe Granite OAuth Application and Pr
 
       編集しない。
 
-   * **[!UICONTROL ユーザパス]**
+   * **[!UICONTROL User Path]**
 
       ユーザーデータが保存されるリポジトリ内の場所。 コミュニティサイトでは、メンバーがお互いのプロファイルを閲覧できる権限を確保するために、パスをデフォルトの */home/users/community* にする必要があります。
 
@@ -189,6 +193,7 @@ The AEM Communities provider extends the [Adobe Granite OAuth Application and Pr
       * updated_time
       * verified
       * email
+
    いずれかのフィールドを追加または変更した場合は、対応する Default Sync ハンドラー設定を更新してマッピングを修正してください。
 
    * **[!UICONTROL Update User]**&#x200B;オンにすると、ログインするたびにリポジトリ内のユーザーデータが更新され、プロファイルの変更やリクエストされた追加データが反映されます。デフォルト値はオフです。
@@ -199,7 +204,7 @@ The AEM Communities provider extends the [Adobe Granite OAuth Application and Pr
 続いて以下の手順をおこないますが、この手順は Facebook でも Twitter でも共通です。
 
 * [クラウドサービス設定の公開](#publishcloudservices)
-* [コミュニティサイトでの有効化](#enable-social-login)
+* [コミュニティサイトで有効にする](#enable-social-login)
 
 ## Twitter ログイン {#twitter-login}
 
@@ -228,16 +233,16 @@ Follow the latest instructions to create a new Twitter application at [https://a
 
 Twitter アプリケーション管理の権限のセクションで、次の設定をします。
 
-* **[!UICONTROL アクセス]**:を選択しま `Read only`す。
+* **[!UICONTROL アクセス]**: を選択し `Read only`ます。
 
    * その他のオプションはサポートされません。
 
-* **[!UICONTROL 追加の権限]**:必要に応じてを選択し `Request email addresses from users`ます。
+* **[!UICONTROL 追加の権限]**: 必要に応じて、を選択 `Request email addresses from users`します。
 
    * 選択しなかった場合は、ユーザーの AEM のプロファイルに電子メールアドレスが含まれなくなります。
    * Twitter の説明に、追加でおこなう手順が示されています。
 
-ソーシャルログインのために実行される REST リクエストは、*[GET account/verify credentials](https://dev.twitter.com/rest/reference/get/account/verify_credentials)*だけです。
+The only REST request made for social login is to *[GET account/verify credentials](https://dev.twitter.com/rest/reference/get/account/verify_credentials)*.
 
 ### Twitter Connect クラウドサービスの作成 {#create-a-twitter-connect-cloud-service}
 
@@ -258,20 +263,20 @@ Twitter アプリケーション管理の権限のセクションで、次の設
 
    ![twittersocialloginpng](assets/twittersocialloginpng.png)
 
-   * **[!UICONTROL タイトル]** (必&#x200B;*須*)Twitterアプリを識別する表示タイトルを入力します。 It is recommended to use the same name entered as the *Display Name* for the Twitter app.
+   * **[!UICONTROL タイトル]** (*必須*)Twitterアプリを識別する表示タイトルを入力します。 It is recommended to use the same name entered as the *Display Name* for the Twitter app.
 
-   * **[!UICONTROL コンシューマーキ]** ー&#x200B;*(必*&#x200B;須 **)Twitterアプリ** のコンシューマー(API)キーを入力します。 This identifies the [Adobe Granite OAuth Application and Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) instance created from the dialog.
+   * **[!UICONTROL Consumer key]** (*必須*)Twitterアプリの **** コンシューマー(API)キーを入力します。 This identifies the [Adobe Granite OAuth Application and Provider](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) instance created from the dialog.
 
-   * **[!UICONTROL コンシューマーシークレ]** ット&#x200B;*（必須）Twitterアプリ*&#x200B;のコンシューマー(API ****** )シークレットを入力します。
+   * **[!UICONTROL Consumer secret]** (*必須*)Twitterアプリの ****** コンシューマー(API)シークレットを入力します。
 
-   * **[!UICONTROL 「ユーザーを作成]** 」をオンにした場合、Twitterアカウントでログインすると、AEMユーザーエントリが作成され、選択したユーザーグループにメンバーとして追加されます。 デフォルトはオンです（強く推奨）。
+   * **[!UICONTROL ユーザーを作成]** ：オンにした場合、Twitterアカウントでログインすると、AEMユーザーエントリが作成され、選択したユーザーグループにメンバーとして追加されます。 デフォルトはオンになっています（強く推奨）。
 
-   * **[!UICONTROL 「Mask User IDs]** Leave」を選択解除したままにします。
+   * **[!UICONTROL Mask User IDs]** Leave User.
 
-   * **[!UICONTROL 「ユーザーグループに追加]** 」を選択し、ユーザーを追加するコミュニティサイトの1つ [以上のメンバー](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html) ・グループを選択します。
+   * **[!UICONTROL 「ユ追加ーザーグループ」追加には、「ユーザーグループ」を選択し、ユーザーを追加するコミュニティサイトの1つまたは複数の]** メンバーグループ [](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/users.html) を選択します。
    >[!NOTE]
    >
-   >グループはいつでも追加または削除できます。ただし、既存のユーザーのメンバーシップは影響を受けません。 自動メンバーシップは、このフィールド更新後に作成された新規ユーザーにのみ適用されます。匿名ユーザーが無効になっているサイトの場合は、その非公開コミュニティサイト用に、対応するコミュニティメンバーグループにユーザーを追加します。
+   >グループはいつでも追加または削除できます。ただし、既存のユーザーのメンバーシップは影響を受けません。 自動メンバーシップは、このフィールド更新後に作成された新規ユーザーにのみ適用されます。匿名ユーザーが無効になっているサイトの場合は、その非公開のコミュニティサイト用の、対応するコミュニティメンバーグループにユーザーを追加します。
 
 1. Select **[!UICONTROL SAVE]** and **[!UICONTROL Publish]**.
 
@@ -288,16 +293,16 @@ The AEM Communities configuration extends the [Adobe Granite OAuth Application a
 
    例：http://localhost:4503/system/console/configMgr
 
-1. AEM CommunitiesのTwitter OAuthプロバイダーを探します。
+1. AEM CommunitiesのTwitter OAuthプロバイダーを見つけます。
 1. 鉛筆アイコンを選択して編集用に開きます。
 
-   ![twitteroauth_png](assets/twitteroauth_png.png)
+   ![twitterauth_png](assets/twitteroauth_png.png)
 
-   * **[!UICONTROL OAuthプロバイダーID]** (必&#x200B;*須*)
+   * **[!UICONTROL OAuthプロバイダーID]** (*必須*)
 
-      デフォルト値 *はsoco -twitterです*。 編集しないでください。
+      デフォルト値は *soco -twitterです*。 編集しないでください。
 
-   * **[!UICONTROL クラウドサービス設定]**
+   * **[!UICONTROL Cloud Service設定]**
 
       The default value is *conf.*&#x200B;編集しないでください。
 
@@ -305,12 +310,12 @@ The AEM Communities configuration extends the [Adobe Granite OAuth Application a
 
       The default value is */apps/social/twitterprovider/config/*. 編集しないでください。
 
-   * **[!UICONTROL ユーザパス]**
+   * **[!UICONTROL User Path]**
 
       ユーザーデータが保存されるリポジトリ内の場所。 コミュニティサイトでは、メンバーがお互いのプロファイルを閲覧できる権限を確保するために、パスをデフォルトの */home/users/community* にする必要があります。
 
-   * **[!UICONTROL Enable Params]** do not edit
-   * **[!UICONTROL URLパラメータ]** — 編集しない
+   * **[!UICONTROL 「Enable Params]** do not edit」
+   * **[!UICONTROL URLパラメーター]** （編集不可）
    * **[!UICONTROL ユーザーの更新]**
 
       オンにすると、ログインするたびにリポジトリ内のユーザーデータが更新され、プロファイルの変更やリクエストされた追加データが反映されます。デフォルト値はオフです。
@@ -320,13 +325,13 @@ The AEM Communities configuration extends the [Adobe Granite OAuth Application a
 続いて以下の手順をおこないますが、この手順は Facebook でも Twitter でも共通です。
 
 * [クラウドサービス設定の公開](#publishcloudservices)
-* [コミュニティサイトでの有効化](#enable-social-login)
+* [コミュニティサイトで有効にする](#enable-social-login)
 
 ## ソーシャルログインの有効化 {#enable-social-login}
 
 ### AEM Communities サイトコンソール {#aem-communities-sites-console}
 
-Once a cloud service is configured, it may be enabled for the relevant Social Login setting for a community site using the [User Management](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#USERMANAGEMENT) Settings sub-panel during community site [creation](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#SiteCreation) or [management](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#ModifyingSiteProperties).
+Once a cloud service is configured, it may be enabled for the relevant Social Login setting for a community site using the [User Management](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/sites-console.html#USERMANAGEMENT) Settings sub-panel during community site [creation](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/sites-console.html#SiteCreation) or [management](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/sites-console.html#ModifyingSiteProperties).
 
 1. ソーシャルログイン設定を保存したサイト設定コンテキストを選択します。
 
@@ -342,14 +347,14 @@ Once a cloud service is configured, it may be enabled for the relevant Social Lo
 
 * Ensure [Adobe Granite OAuth Authentication Handler](#adobe-granite-oauth-authentication-handler) has been enabled on all publish instances
 * クラウドサービスが公開済みであることを確認します
-* コミュニティサイトが公開されていることを確認します。
+* コミュニティサイトが公開済みであることを確認する
 * ブラウザーで公開済みサイトを起動します。例：http://localhost:4503/content/sites/engage/en.html
 * Select **[!UICONTROL Login In]**
 * Select either **[!UICONTROL Sign in with Facebook]** or **[!UICONTROL Sign in with Twitter]**
 * FacebookまたはTwitterにまだログインしていない場合は、適切な資格情報を使用してログインします
-* FacebookまたはTwitterアプリで表示されるダイアログに応じて権限を付与する必要がある場合があります
-* ページ上部のツールバーが更新され、ログインが成功したことを反映しています。
-* Select **[!UICONTROL Profile]**: the Profile page displays the user&#39;s avatar image, first name, and last name. また、許可されたfields/paramsに従って、FacebookまたはTwitterプロファイルの情報も表示されます。
+* FacebookアプリまたはTwitterアプリで表示されるダイアログに応じて権限を付与する必要がある場合があります
+* ページ上部のツールバーが更新され、ログインが成功したことを反映しています
+* Select **[!UICONTROL Profile]**: the Profile page displays the user&#39;s avatar image, first name, and last name. また、許可されたfields/paramsに従って、FacebookまたはTwitterプロファイルーからの情報も表示されます。
 
 ## AEM プラットフォーム OAuth 設定 {#aem-platform-oauth-configurations}
 
@@ -359,7 +364,7 @@ The `Adobe Granite OAuth Authentication Handler` is not enabled by default and *
 
 パブリッシュインスタンスで認証ハンドラーを有効にするには、以下のように OSGi 設定を開いて保存するだけです。
 
-* 管理者権限でサインイン
+* 管理者権限でサインインする
 * Navigate to the [Web Console](../../help/sites-deploying/configuring-osgi.md)
 For example, http://localhost:4503/system/console/configMgr
 * Locate `Adobe Granite OAuth Authentication Handler`
@@ -385,16 +390,17 @@ Facebook または Twitter アプリ用に作成されたインスタンスを�
 
    例：http://localhost:4503/system/console/configMgr
 
-1. Adobe Granite OAuth Application and Providerを探します。
+1. AdobeGranite OAuth Application and Providerを探します。
 
    * **[!UICONTROL Client ID]** が **[!UICONTROL App ID]** と一致するインスタンスを見つけます。
+
    ![chlimage_1-491](assets/chlimage_1-491.png)
 
-   次のプロパティを除き、設定の他のプロパティは変更しないでください。
+   次のプロパティを除き、configの他のプロパティは変更しないでください。
 
-   * **[!UICONTROL 設定ID]**
+   * **[!UICONTROL Config ID]**
 
-      (*Required*) OAuth configuration IDs must be unique. クラウドサービスの作成時に自動生成されます。
+      (*Required*) OAuth configuration IDs must be unique. クラウドサービスの作成時に自動生成。
 
    * **[!UICONTROL クライアント ID]**
 
@@ -408,31 +414,31 @@ Facebook または Twitter アプリ用に作成されたインスタンスを�
 
       (*Optional*) Additional scope for what is permitted can be asked  from  the provider. デフォルトで、ソーシャル認証とプロファイルデータの提供に必要な権限が範囲に含まれています。
 
-   * **[!UICONTROL プロバイダID]**
+   * **[!UICONTROL プロバイダーID]**
 
       (*Required*) The provider ID for AEM Communities is set when the cloud service was created. 編集しないでください。For Facebook Connect, the value is *soco -facebook*. For Twitter Connect, the value is *soco -twitter*.
 
    * **[!UICONTROL グループ]**
 
-      (*Recommended*) One or more member groups to which created users are added. AEMコミュニティの場合は、コミュニティサイトのメンバーグループを一覧表示することをお勧めします。
+      (*Recommended*) One or more member groups to which created users are added. AEM Communitiesの場合は、コミュニティサイトのメンバーグループをリストすることをお勧めします。
 
    * **[!UICONTROL コールバック URL]**
 
       (*Optional*) URL configured with the OAuth providers to redirect the client back. 元のリクエストのホストを使用するには、相対 URL を使用します。最初にリクエストされた URL を代わりに使用するには、空のままにします。この  URL .
    >[!NOTE]
    >
-   >コールバックのドメインは、プロバイダー（FacebookまたはTwitter）に登録する必要があります。
+   >コールバック用のドメインは、プロバイダー（FacebookまたはTwitter）に登録する必要があります。
 
-各OAuth認証ハンドラーの設定には、インスタンスに2つの追加設定が作成されます。
+OAuth認証ハンドラーの設定ごとに、このインスタンスに2つの追加の設定が作成されます。
 
-* Apache Jackrabbit Oakデフォルト同期ハンドラー(org.apache.jackrabbit.oak.spi.security.authentication.external.impl.DefaultSyncHandler) — ここで編集を行う必要はありませんが、FacebookフィールドがCQユーザープロファイルノードにマップされる方法を確認できます。 また、「同期ハンドラー名」はOAuthプロバイダー設定の構成IDと一致します。
-* Apache Jackrabbit Oak外部ログインモジュール(org.apache.jackrabbit.oak.spi.security.authentication.external.impl.ExternalLoginModuleFactory) — 編集は必要ありませんが、「IDプロバイダー名」と「同期ハンドラー名」は、それぞれ対応するOAuthと同期ハンドラーの設定を指しています。
+* Apache Jackrabbit Oakデフォルト同期ハンドラ(org.apache.jackrabbit.oak.spi.security.authentication.external.impl.DefaultSyncHandler) — 編集は必要ありませんが、FacebookフィールドがCQユーザープロファイルノードにマッピングされる方法を確認できます。 また、&#39;Sync Handler Name&#39;は、OAuthプロバイダー設定のConfig Idと一致します。
+* Apache Jackrabbit Oak外部ログインモジュール(org.apache.jackrabbit.oak.spi.security.authentication.external.impl.ExternalLoginModuleFactory)：編集は必要ありませんが、「IDプロバイダー名」と「同期ハンドラー名」は、それぞれ対応するOAuthと同期ハンドラーの設定を指しています。
 
 For more information, see [Authentication with Apache Oak External Login Module](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html).
 
 ## OAuth ユーザーのトラバーサルパフォーマンス {#oauth-user-traversal-performance}
 
-数十万人ものユーザーがFacebookやTwitterのログインを使用して登録を行うコミュニティサイトでは、サイト訪問者がソーシャルログインを使用する際に実行されるクエリのトラバーサルパフォーマンスを、以下のOakインデックスを追加することで改善できます。
+数十万人ものユーザーがFacebookやTwitterのログインを使用して登録したコミュニティサイトでは、サイト訪問者がソーシャルログインを使用する際に行うクエリのトラバーサルパフォーマンスを、以下のOakインデックスを追加することで改善できます。
 
 ログにトラバーサル警告が記録されている場合は、このインデックスを追加することを推奨します。
 
@@ -446,12 +452,12 @@ For more information, see [Authentication with Apache Oak External Login Module]
    * Select **[!UICONTROL Copy]**
    *  `/oak:index`
    * Select **[!UICONTROL Paste]**
-   * ntBaseLuceneのコピーの名前をntBaseLucene-oauthに変更します。
+   * ntBaseLuceneのコピーをntBaseLucene-oauthに変更
 
-1. ノードntBaseLucene-oauthのプロパティを変更します。
+1. ノードntBaseLucene-oauthのプロパティの変更：
 
    * **[!UICONTROL indexPath]**：/oak:index/ntBaseLucene-oauth
-   * **[!UICONTROL name]**:oauthid-123xxxx
+   * **[!UICONTROL name]**: oauthid-123xxxx
    * **[!UICONTROL reindex]**：true
    * **[!UICONTROL reindexCount]**：1
 
@@ -461,11 +467,11 @@ For more information, see [Authentication with Apache Oak External Login Module]
    * cqTagsの名前をoauthid-123xxxxに変更します。
    * node oauthid-123xxxxのプロパティの変更
 
-      * **[!UICONTROL name]**:oauthid-123xxxx
+      * **[!UICONTROL name]**: oauthid-123xxxx
    * Select **[!UICONTROL Save All]**.
 
 
-**** &amp;ast;Facebook App **App ID** (*Consumer Key API)* Twitter Key API *Application Application Provider設定の値をFacebook App ID* (Consumer Key API) Key Key Key Applination Name  ADE APRINAME  APRINAME  APRINATH ***PROD*** APRINAPRIPRINAPRINAPRINAPRIN ***APRINAT*** APRIN **APRINAPRINA  APRIN APATION  APAPAPRIP**[](social-login.md#adobe-granite-oauth-application-and-provider)
+**&amp;ast;** oauthid **-123** という&#x200B;*名前は、FacebookアプリIDに置き換えるか、Twitter* AdobeAPIに置き換えるか、Twitter *API APIに置き換える。*****************[](social-login.md#adobe-granite-oauth-application-and-provider)ID IDクライアントの値は、の設定を表す。
 
 ![chlimage_1-492](assets/chlimage_1-492.png)
 
