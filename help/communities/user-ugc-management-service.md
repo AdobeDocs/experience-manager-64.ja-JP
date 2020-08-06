@@ -24,7 +24,7 @@ ht-degree: 48%
 >
 >以下の節ではGDPRを例に挙げていますが、詳細はデータ保護とプライバシーに関するすべての規制に適用されます。 GDPR、CCPAなど
 
-AEM CommunitiesはAPIをすぐに使用できる状態で公開し、ユーザープロファイルの管理や、ユーザー生成コンテンツ(UGC)の一括管理を行います。 Once enabled, the **UserUgcManagement** service allows the privileged users (community administrators and moderators) to disable user profiles, and bulk delete or bulk export UGC for specific users. また、これらのAPIを使用すると、顧客データのコントローラとプロセッサが、欧州和集合のGDPR(General Data Protection Regulations)や、他のGDPRに基づくプライバシー要件に準拠できます。
+AEM CommunitiesはAPIを標準搭載で公開しており、ユーザープロファイルを管理し、ユーザー生成コンテンツ(UGC)を一括管理できます。 Once enabled, the **UserUgcManagement** service allows the privileged users (community administrators and moderators) to disable user profiles, and bulk delete or bulk export UGC for specific users. また、これらのAPIを使用すると、顧客データのコントローラとプロセッサが、欧州和集合のGDPR(General Data Protection Regulations)や、他のGDPRに基づくプライバシー要件に準拠できます。
 
 詳しくは、[アドビプライバシーセンターの GDPR ページ](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html)を参照してください。
 
@@ -57,18 +57,18 @@ To put these APIs to use, you need to enable the `/services/social/ugcmanagement
 
 * **user**：ユーザーの許可可能 ID。
 
-例えば、http-POSTリクエストを使用して認証可能なID weston.mccall@dodgit.comを持つユーザーのUGCを削除するには、次のパラメーターを使用します。
+例えば、認証可能なID weston.mccall@dodgit.comを持つユーザーのUGCをhttpPOSTリクエストで削除するには、次のパラメーターを使用します。
 
 * user= weston.mccall@dodgit.com
 * operation= deleteUgc
 
-### アドビのAnalyticsからUGCを削除 {#delete-ugc-from-analytics}
+### Adobe AnalyticsからUGCを削除 {#delete-ugc-from-analytics}
 
-アドビのAnalyticsからユーザーデータを削除するには、GDPRAnalyticsのワークフローに従ってください。 を使用しても、AdobeAnalyticsからはユーザーデータが削除されません。
+ユーザーデータをAdobe Analyticsから削除するには、GDPR Analyticsのワークフローに従います。 を使用しない場合、APIはAdobe Analyticsからユーザーデータを削除しません。
 
-AEM Communitiesが使用するAdobeAnalytics変数マッピングについては、次の図を参照してください。
+AEM Communitiesが使用するAdobe Analytics変数マッピングについては、次の図を参照してください。
 
-![AEMコミュニティでのAdobeAnalyticsの変数マッピング](assets/Analytics-Communities-Mapping.png)
+![AEM communitiesのAdobe Analytics変数マッピング](assets/Analytics-Communities-Mapping.png)
 
 ## ユーザーアカウントの無効化 {#disable-a-user-account}
 
@@ -80,7 +80,7 @@ AEM Communitiesが使用するAdobeAnalytics変数マッピングについては
 >
 >あるユーザーを無効化すると、そのユーザーがサーバー上で所有しているユーザー生成コンテンツがすべて削除されます。
 
-例えば、http-POSTリクエストを使用して認証可能なID weston.mccall@dodgit.comを持つユーザーのプロファイルを削除するには、次のパラメーターを使用します。
+例えば、httpPOSTリクエストを使用して認証可能なID weston.mccall@dodgit.comを持つユーザーのプロファイルを削除するには、次のパラメーターを使用します。
 
 * user= weston.mccall@dodgit.com
 * operation= deleteUser
