@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dc185a75-84a0-4075-ae1e-8bb78d414aa8
 translation-type: tm+mt
 source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 81%
 
 ---
 
