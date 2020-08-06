@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: c51817aa-193a-4d4f-bd83-06518ddfb395
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '262'
+ht-degree: 72%
 
 ---
 
@@ -24,13 +27,13 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 1. 送信セクションの「ありがとうございました」ページで、リダイレクトページの URL を指定します。
 1. オプションとして、「送信アクション」で、「REST エンドポイントへの送信」の送信アクションについて、リダイレクトページに渡されるパラメーターを設定することができます。
 
-![](assets/thank-you-setting-1.png) リダイレクトページの設定&#x200B;****&#x200B;図：リダイレクト *ページの設定*
+![リダイレクトページ設定](assets/thank-you-setting-1.png)**図：** *リダイレクトページの設定*
 
 フォーム作成者は、「ありがとうございます」ページに渡される次のパラメーターを使用することができます。For all the available submit actions, `status` and `owner` parameters are passed. これら 2 つのパラメーターの他に、追加のパラメーターが次の送信アクションに渡されます。
 
-* **コンテンツ保存アクション** （非推奨）:送信 `contentPath`されたデータが保存されるリポジトリ内のノードのパス。
+* **コンテンツ保存アクション** （非推奨）: `contentPath`— 送信されたデータが保存されるリポジトリ内のノードのパス — が渡されます。
 
-* **PDFの保存アクション** （非推奨）:送信さ `contentPath`れたデータのパスと、リポジトリにPDFファイルを格納しているノードのパスが渡されます。
+* **PDFの保存アクション** （非推奨）: `contentPath`— 送信されたデータと、リポジトリにPDFファイルが格納されているノードのパス — が渡されます。
 
 * **フォームワークフローへの送信**：フォームワークフローから返される出力パラメーターが渡されます。
 
