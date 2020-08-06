@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 7c0a9120-2edb-431b-b460-68398832d5ec
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '1066'
+ht-degree: 63%
 
 ---
 
@@ -22,22 +25,22 @@ source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
 アイディエーション機能は、パブリッシュ環境にサインインしているサイト訪問者（コミュニティメンバー）が以下を実行できる領域を提供します。
 
 * コミュニティで共有するアイデアを作成する
-* アイデアの表示とコメント
+* アイデアに対する表示とコメント
 * アイデアに従う
 * アイデアに対する投票
 
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
-* AEMサイトへのID機能の追加
+* AEMサイトへの表示機能の追加
 * Ideationコンポーネントの設定
 
 ## ページへのアイディエーションの追加 {#adding-a-ideation-to-a-page}
 
-作成者モードで `Ideation` ページにコンポーネントを追加するには、コンポーネントブラウザーを使用してアイデアを表示するペ `Communities / Ideation` ージ上の位置にコンポーネントを配置し、ドラッグします。
+作成者モードでページに `Ideation` コンポーネントを追加するには、コンポーネントブラウザーを使用してアイデアを表示するページを探 `Communities / Ideation` し、その場所にドラッグします。
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](ideation.md#essentials-for-client-side) are included, this is how the `Ideation`component will appear:
+[必要なクライアント側ライブラリが含まれる場合](ideation.md#essentials-for-client-side) 、次のように `Ideation`コンポーネントが表示されます。
 
 ![chlimage_1-29](assets/chlimage_1-29.png)
 
@@ -45,13 +48,14 @@ When the [required client-side libraries](ideation.md#essentials-for-client-side
 
 Select the placed `Ideation` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-30](assets/chlimage_1-30.png)![chlimage_1-31](assets/chlimage_1-31.png)
+![chlimage_1-30](assets/chlimage_1-30.png) ![chlimage_1-31](assets/chlimage_1-31.png)
 
 ### 「設定」タブ{#settings-tab}
 
 「**[!UICONTROL 設定]**」タブでは、アイデアとコメントの基本機能を設定します。
 
-* **[!UICONTROL アイディエーションのタイトル]**&#x200B;アイデアの表示タイトルです。デフォルトは `Ideation` です。
+* **[!UICONTROL アイディエーションのタイトル]**&#x200B;アイデアの表示タイトルです。初期設定は です。 
+`Ideation`。
 
 * **[!UICONTROL アイディエーション説明]**&#x200B;アイデアのサブタイトルとして表示される説明です。初期設定では、説明はありません。
 
@@ -67,11 +71,13 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 
 * **[!UICONTROL ファイルのアップロードを許可]**&#x200B;オンにすると、アイデアまたはコメントに添付ファイルを付加できます。初期設定はオフです。
 
-* **[!UICONTROL 「Max File Size]** Relevant only if `Allow File Uploads` is」をオンにした場合。 このフィールドは、アップロードするファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+* **[!UICONTROL 最大ファイルサイズ]**&#x200B;関連( 
+`Allow File Uploads` がチェックされている。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
-* **[!UICONTROL 「Allowed File Types]** Relevant only if `Allow File Uploads` 」がオンの場合。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルタイプを指定した場合、指定しなかったファイルはアップロードできません。 初期設定はnoneで、すべてのファイルタイプが許可されます。
+* **[!UICONTROL 許可されているファイルタイプ]**&#x200B;は、 
+`Allow File Uploads` がチェックされている。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
-* **[!UICONTROL 「ファイルのアップロードを許可」がオン]**&#x200B;になっている場合にのみ、「添付画像ファイルの最大サイズ」が関連します。 アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
+* **[!UICONTROL 「ファイルのアップロードを許可」が選択されている場合のみ、「添付画像ファイルの最大サイズ]**」が関連します。 アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
 
 * **[!UICONTROL 応答を許可]**&#x200B;オンにすると、アイデアに投稿されたコメントに返信できます。初期設定はオフです。
 
@@ -103,25 +109,30 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted ideas and
 
 * **[!UICONTROL モデレートのしきい値]**&#x200B;メンバーがトピックまたはコメントに何回フラグを設定したらモデレーターに通知するかを指定します。初期設定は1（1回）です。
 
-* **[!UICONTROL フラグ付けの制限]**&#x200B;トピックまたはコメントに何回フラグが設定されたら、公開表示から非表示にするかを指定します。-1に設定した場合、フラグ付けされたトピックまたはコメントは公開ビューで非表示になりません。 そうでない場合、この数値はモデレートのしきい値以上にする必要があります。 初期設定は 5 です。
+* **[!UICONTROL フラグ付けの制限]**&#x200B;トピックまたはコメントに何回フラグが設定されたら、公開表示から非表示にするかを指定します。-1に設定した場合、フラグ付けされたトピックまたはコメントはパブリック表示に表示されません。 それ以外の場合は、この数値をモデレートしきい値以上にする必要があります。 初期設定は 5 です。
 
 ### 「タグフィールド」タブ{#tag-field-tab}
 
 「**[!UICONTROL タグフィールド]**」タブでは、「**[!UICONTROL 設定]**」タブでタグ付けが許可されている場合に、適用できるタグを名前空間に従って制限します。
 
-* **[!UICONTROL 「設定」タブで]**「Namespaces `Allow Tagging` Relevant」がオ **ンになっている場合は** 許可されます。 適用できるタグは、チェックされた名前空間カテゴリ内のタグに制限されます。 名前空間のリストには、「Standard Tags」（デフォルトの名前空間）と「Include All Tags」が含まれます。 初期設定はnoneで、すべての名前空間が許可されます。
+* **[!UICONTROL 許可されている名前空間]**&#x200B;関連( 
+`Allow Tagging` が「 **設定** 」タブでチェックされている。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
-* **[!UICONTROL 推奨の制限]**&#x200B;フォーラムに投稿するメンバーに表示する推奨タグの数を入力します。A value of **-** 1 means no limit. 初期設定は 0 です。
+* **[!UICONTROL 推奨の制限]**&#x200B;フォーラムに投稿するメンバーに表示する推奨タグの数を入力します。値 
+**-** 1は、制限がないことを意味します。 初期設定は 0 です。
 
 ### 「並べ替え設定」タブ{#sort-settings-tab}
 
 Under the **[!UICONTROL Sort Settings]** tab, specify how the posted comments are sorted when displayed.
 
-* **[!UICONTROL Sort By]** Check all allowed sort selections: `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. デフォルトは `Newest, Oldest, Last Updated` です。
+* **[!UICONTROL 並べ替えの基準]**：許可されている並べ替えの選択項目をすべて選択します。 
+`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`」を選択します。デフォルトは `Newest, Oldest, Last Updated` です。
 
-* **[!UICONTROL デフォルトとして設定]**&#x200B;プルダウンして、オンになっている並べ替えオプションのいずれかを選択し、デフォルトとして表示されるようにします。デフォルトは `Newest` です。
+* **[!UICONTROL デフォルトとして設定]**&#x200B;プルダウンして、オンになっている並べ替えオプションのいずれかを選択し、デフォルトとして表示されるようにします。初期設定は です。 
+`Newest`。
 
-* **[!UICONTROL 「Analyticsの並べ替えの時間オプション」のプ]**&#x200B;ルダウンを選択して、いずれかを選択しま `All, Last 24 Hours, Last 7 Days, Last 30 Days`す。 デフォルトは `All` です。
+* **[!UICONTROL Analytics Sortingのプルダウンの「Time Options」を選択し]**&#x200B;て、 
+`All, Last 24 Hours, Last 7 Days, Last 30 Days`」を選択します。デフォルトは `All` です。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -135,11 +146,11 @@ Communities のすべての機能と同様に、サインインしていない�
 
 アイデアを送信する前に、ドラフトとして保存できます。
 
-ボタンを選択す `Save as Draft` ると、ドラフトが保存されます。
+この `Save as Draft` ボタンを選択すると、ドラフトが保存されます。
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
-保存したドラフトをタブで表 `My Drafts` 示する場合は、編 `Read More` 集モードに戻す場合に選択します。
+保存したドラフトを `My Drafts` タブで表示する場合、編集モード `Read More` を再開する場合に選択します。
 
 ![chlimage_1-34](assets/chlimage_1-34.png)
 
