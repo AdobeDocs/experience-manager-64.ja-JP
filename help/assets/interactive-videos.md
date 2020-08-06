@@ -9,6 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 2f254541-6f9b-4f8a-9201-6c70f2d4f3b9
 translation-type: tm+mt
 source-git-commit: 4d1c3bcc4262781d7032273504ccf41e36f5c3a5
+workflow-type: tm+mt
+source-wordcount: '6010'
+ht-degree: 91%
 
 ---
 
@@ -23,24 +26,24 @@ source-git-commit: 4d1c3bcc4262781d7032273504ccf41e36f5c3a5
 
 ## インタラクティブビデオの使用例 {#interactive-video-in-action}
 
-To see an interactive, shoppable video in action, click [Live Demos](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html), scroll to the **[!UICONTROL Shoppable Media]** heading on the page, then click the shoppable video.
+To see an interactive, shoppable video in action, click [Live Demos](https://landing.adobe.com/jp/na/dynamic-media/ctir-2755/live-demos.html), scroll to the **[!UICONTROL Shoppable Media]** heading on the page, then click the shoppable video.
 
 * 再生中にビデオ内で製品が使用されると、同じ製品のサムネール画像が右側に表示されます。
 
-* サムネールをクリックするとビデオが一時停止され、その製品のクイックビューが開きます。例えば、ビデオ内でKitchenAidサムネール画像をクリックして、ミキサーの360度スピンビューを表示したり、ズームインしてミキサーの詳細を表示したりできます。
+* サムネールをクリックするとビデオが一時停止され、その製品のクイックビューが開きます。例えば、ビデオ内の KitchenAid のサムネール画像をクリックすると、このミキサーの 360 度のスピンビューを見たり、細部を拡大表示したりすることができます。
 
 <!-- There was a link here that showed the video frame of an interactive video and when the reader clicked the frame the video would play https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
 
-![インタラクティブで買い物が可能なビデオのフレーム](assets/chlimage_1-126.png)*インタラクティブな買い物が可能なビデオのビデオフレームキャプチャ。*
+![インタラクティブで買い物が可能なビデオのフレーム](assets/chlimage_1-126.png)*インタラクティブで買い物が可能なビデオのビデオフレームキャプチャ。*
 
 >[!NOTE]
 >
->ユーザーがサムネール画像をクリックすると Web ページを開くようにインタラクティブビデオを作成した場合、一部のデバイスでは、ポップアップ Web ページがブロックされて開きません。そのようなケースでは、デバイスのポップアップブロック機能の設定を変更する必要があります。For example, on an Apple iPhone 6, tap **[!UICONTROL Settings** > **Safari** > **Block Pop-ups**, then slide the control to **[!UICONTROL Off**. こうすると、インタラクティブビデオを再生してサムネールをクリックしたときに、ポップアップを開くかどうかを確認するメッセージが表示されます。同意すると Web ページが開きます。
+>ユーザーがサムネール画像をクリックすると Web ページが開かれるようにインタラクティブビデオを作成した場合、一部のデバイスでは、ポップアップ Web ページがブロックされて開きません。そのようなケースでは、デバイスのポップアップブロック機能の設定を変更する必要があります。For example, on an Apple iPhone 6, tap **[!UICONTROL Settings** > **Safari** > **Block Pop-ups**, then slide the control to **[!UICONTROL Off**. こうすると、インタラクティブビデオを再生してサムネールをクリックしたときに、ポップアップを開くかどうかを確認するメッセージが表示されます。同意すると Web ページが開きます。
 
 ## インタラクティブビデオの作成方法を見る {#watch-how-interactive-videos-are-created}
 
-[インタラクティブビデオの作成方法](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&emailurl=https://s7d5.scene7.com/s7/emailFriend&serverUrl=https://s7d5.scene7.com/is/image/&config=Scene7SharedAssets/Universal_HTML5_Video_social&contenturl=https://s7d5.scene7.com/skins/&asset=S7tutorials/InteractiveVideo)[](https://outv.omniture.com?v=s4NHQ2dzqd7hIqWjeG2sIdyNWsTWyupA)を示す 7 分 30 秒のガイドをご覧ください。\
-（このビデオガイドの対象は Assets on Demand ですが、原則や手順は AEM Assets のインタラクティブビデオにも対応しています。）
+[インタラクティブビデオの作成方法](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo)[](https://outv.omniture.com?v=s4NHQ2dzqd7hIqWjeG2sIdyNWsTWyupA)を示す 7 分 30 秒のガイドをご覧ください\
+（このビデオガイドの対象は Assets on Demand ですが、原則や手順は AEM Assets のインタラクティブビデオにも対応しています）。
 
 ## アドビカスタマーサクセスウェビナー {#adobe-customer-success-webinar}
 
@@ -55,56 +58,57 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 
 一部のクイックスタートタスク内には「**例**」という見出しがあります。これには、まだインタラクティビティが追加されて&#x200B;*いない*&#x200B;次の開始デモ Web ページに基づく、簡単なチュートリアルが含まれています。
 
-[https://marketing.adobe.com/resources/help/ja_JP/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
+[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
 
 「**例**」では、Web サイトにインタラクティブビデオを統合する手順が説明されています。
 
 最後の「例」節のチュートリアルを完了すると、完全に統合されたインタラクティブビデオを含む最終的なデモ Web ページは、次のようになります。
 
-[https://marketing.adobe.com/resources/help/ja_JP/dm/shoppable-video/john-lewis/landing-3.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html)
+[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html)
 
 **インタラクティブビデオワークフロー**:
 
 1. **（オプション）クイックビュー変数の特定** - まず、既存のクイックビュー実装で使用される動的変数を特定します。これらの変数を使用して、インタラクティブビデオを作成するときに、製品のサムネールを対応する製品のクイックビューにマッピングします。[（オプション）クイックビュー変数の特定](#optional-identifying-quickview-variables)を参照してください。
 
-   *この手順は、次のすべてが真の場合にのみ必要です*。
+   *この手順は、次のすべての条件を満たす場合にのみ必要です*。
 
    * クイックビューをトリガーして、ビデオにインタラクティブ機能を追加する。
-   * eCommerce ソリューション（IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が&#x200B;** eCommerce 統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
+   * eコマースソリューション（IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が&#x200B;** eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
 
-1. **（Optional）インタラクティブビデオのビューアプリセットの作成** - プレーヤーを構成する様々なコンポーネント（ビデオスクラバーやインタラクティブサムネールなど）の外観と動作をカスタマイズします。
+1. **（オプション）インタラクティブビデオのビューアプリセットの作成** - プレーヤーを構成する様々なコンポーネント（ビデオスクラバーやインタラクティブサムネールなど）の外観と動作をカスタマイズします。
 
-   Creating your own Interactive Video viewer preset is not required if you intend to use the out-of-the-box Interactive Video viewer presets `Shoppable_Video_Light` or `Shoppable_Video_Dark` instead.
- [新しいビューアプリセットの作成](managing-viewer-presets.md#creating-a-new-viewer-preset)（これはオプション）と[インタラクティブビューアプリセットの作成に関する注意事項](managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)を参照してください。 
+   独自のインタラクティブビデオビューアプリセットの作成は、標準提供のインタラクティブビデオビューアプリセット（`Shoppable_Video_Light` または `Shoppable_Video_Dark`）を使用する場合には必要ありません。[新しいビューアプリセットの作成](managing-viewer-presets.md#creating-a-new-viewer-preset)（これはオプション）と[インタラクティブビューアプリセットの作成に関する注意事項](managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)を参照してください。
 
 1. **ビデオおよび関連する画像アセットのアップロード** - インタラクティブにするビデオと関連する画像をアップロードします。
 
-    [ビデオおよび関連するサムネールアセットのアップロード](#uploading-a-video-and-its-associated-thumbnail-assets)を参照してください。
+   [ビデオおよび関連するサムネールアセットのアップロード](#uploading-a-video-and-its-associated-thumbnail-assets)を参照してください。
 
-1. **ビデオへのインタラクティビティの追加** - ビデオに 1 つ以上の時間セグメントを追加します。次に、それらの時間セグメント内で画像サムネールを関連付けます。各画像サムネールを、ハイパーリンク、クイックビュー、エクスペリエンスフラグメントなどのアクションに割り当てます。
+1. **ビデオへのインタラクティビティの追加** - ビデオに 1 つ以上の時間セグメントを追加します。次に、それらの時間セグメント内で画像サムネールを関連付けます。各画像サムネールを、ハイパーリンク、クイックビュー、エクスペリエンスフラグメントなどのアクションに割り当てます
 
    （インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません）。
+
 
    インタラクティブビデオアセットを公開して作業は完了です。公開すると、最終的にコピーして Web サイトのランディングページ適用する、埋め込みコードまたは URL が作成されます。[ビデオへのインタラクティビティの追加](#adding-interactivity-to-your-video)を参照してください。
 
    [アセットの公開](publishing-dynamicmedia-assets.md)を参照してください。
 
-1. **WebサイトまたはAEMのWebサイトへのインタラクティブビデオの追加**
+1. **インタラクティブビデオのWebサイトまたはAEMでのWebサイトへの追加**
 
-   AEMサイト、AEM eCommerceまたはその両方を使用する場合は、Interactive mediaコンポーネントをページにドラッグして、インタラクティブビデオをAEMのWebページに直接追加できます。 See [Adding Dynamic Media Assets to Pages.](adding-dynamic-media-assets-to-pages.md)
+   AEM Sites、AEM、eコマース、またはその両方を使用する場合は、インタラクティブビデオをAEMのWebページに直接追加できます。その場合は、インタラクティブメディアコンポーネントをページにドラッグします。 [ページへの Dynamic Media アセットの追加](adding-dynamic-media-assets-to-pages.md)を参照してください。
 
-   を参照してください。 埋め込みコードまたは URL を使用して、インタラクティブビデオを Web サイトエクスペリエンスに統合します。[インタラクティブビデオの Web サイトへの統合](#integrating-an-interactive-video-with-your-website)を参照してください。
+   を参照してください。
+埋め込みコードまたは URL を使用して、インタラクティブビデオを Web サイトエクスペリエンスに統合します。[インタラクティブビデオの Web サイトへの統合](#integrating-an-interactive-video-with-your-website)を参照してください。
 
-    サードパーティの WCM（Web Content Manager）を使用している場合は、新しいインタラクティブビデオを、Web サイトで使用されている既存のクイックビュー実装に統合する必要があります。[インタラクティブビデオの既存のクイックビューへの統合](#integrating-an-interactive-video-with-an-existing-quickview)を参照してください。 
+   サードパーティの WCM（Web Content Manager）を使用している場合は、新しいインタラクティブビデオを、Web サイトで使用されている既存のクイックビュー実装に統合する必要があります。[インタラクティブビデオの既存のクイックビューへの統合](#integrating-an-interactive-video-with-an-existing-quickview)を参照してください。
 
 ## （オプション）クイックビュー変数の特定{#optional-identifying-quickview-variables}
 
 >[!NOTE]
 このタスクが必要になるのは次に該当する場合のみです。
 * クイックビューをトリガーして、ビデオにインタラクティブ機能を追加する。
-* eCommerce ソリューション（IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が&#x200B;** eCommerce 統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
+* eコマースソリューション（IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が&#x200B;** eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
 
-AEM の実装が eCommerce を使用している場合は、このタスクをスキップして次のタスクに進みます。
+AEM の実装で AEM eCommerce を使用している場合は、このタスクをスキップして次のタスクに進みます。
 
 最初に、インタラクティブビデオの作成プロセス中に製品サムネールを対応する製品クイックビューにマッピングできるように、既存のクイックビューの実装で使用している動的変数を特定します。
 
@@ -133,13 +137,13 @@ AEM の実装が eCommerce を使用している場合は、このタスクを�
 
 ブラウザーでネットワーク監視をオンにして、ページ上でクイックビューをトリガーします。
 
-次に、ネットワークログ内でクイックビューの·Ajax·URL·を見つけ、記録された·URL·を今後の分析のためにコピーします。クイックビューをトリガーするとほとんどの場合、大量のリクエストがサーバーに送信されます。クイックビューの·Ajax·URL·は通常、そのリスト内の最初のほうにあります。It has either a complex query string portion or path, and its response MIME type is either `text/html`, `text/xml`, or `text/javascript`.
+次に、ネットワークログ内でクイックビューの·Ajax·URL·を見つけ、記録された·URL·を今後の分析のためにコピーします。クイックビューをトリガーするとほとんどの場合、大量のリクエストがサーバーに送信されます。クイックビューの·Ajax·URL·は通常、そのリスト内の最初のほうにあります。この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
 
-このプロセスの実行中は、様々な製品カテゴリーや製品タイプが含まれる Web サイトの様々な領域にアクセスすることが重要です。なぜなら、クイックビュー URL には、ある特定の Web サイトカテゴリーに共通するが、Web サイトの異なる領域にアクセスした場合にのみ変化する部分が存在する場合があるからです。
+このプロセスの実行中は、様々な製品カテゴリや製品タイプが含まれる Web サイトの様々な領域にアクセスすることが重要です。なぜなら、クイックビュー URL には、ある特定の Web サイトカテゴリに共通するが、Web サイトの異なる領域にアクセスした場合にのみ変化する部分が存在する場合があるからです。
 
 単純なケースでは、クイックビュー URL 内で変化する唯一の部分が製品 SKU となります。この場合、AEM でサムネールをインタラクティブビデオの時間セグメントに追加するのに必要なデータは製品の SKU 値のみです。
 
-一方、複雑なケースでは、クイックビュー URL に製品 SKU 以外の様々な要素が含まれます（カテゴリー ID、カラーコードなど）。その場合は、それぞれの要素が AEM のサムネールデータ定義で個別の変数になります。
+一方、複雑なケースでは、クイックビュー URL に製品 SKU 以外の様々な要素が含まれます（カテゴリ ID、カラーコードなど）。その場合は、それぞれの要素が AEM のサムネールデータ定義で個別の変数になります。
 
 次のクイックビュー URL の例と、その結果となるサムネールの変数について見てみましょう。
 
@@ -153,7 +157,7 @@ AEM の実装が eCommerce を使用している場合は、このタスクを�
          <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li> 
          <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li> 
          <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li> 
-        </ul> <p>The only variable part in the URL is the value of the <code>productId=</code> query string parameter, and it is clearly a SKU value. Therefore, our thumbnails only need SKU fields populated with values like <strong><code>866558</code></strong>, <strong><code>1196184</code></strong>, <strong><code>1081492</code></strong>, <strong><code>1898294</code></strong>.</p> </td> 
+        </ul> <p>この URL で変化する唯一の部分は <code>productId=</code> というクエリ文字列パラメーターの値であり、これが SKU 値であることは明白です。したがって、サムネールでは、<strong><code>866558</code></strong>、<strong><code>1196184</code></strong>、<strong><code>1081492</code></strong>、<strong><code>1898294</code></strong> などの値が設定された SKU フィールドのみが必要になります。</p> </td> 
       </tr> 
       <tr> 
        <td><p>単一の SKU（URL パス内）</p> </td> 
@@ -162,20 +166,20 @@ AEM の実装が eCommerce を使用している場合は、このタスクを�
          <li><p><code>https://server/product/6422350843</code></p> </li> 
          <li><p><code>https://server/product/1607745002</code></p> </li> 
          <li><p><code>https://server/product/0086724882</code></p> </li> 
-        </ul> <p>The variable part is in the last portion of the path, and it becomes the SKU value of AEM thumbnails: <strong><code>6422350843</code></strong>, <strong><code>1607745002</code></strong>, <strong><code>0086724882</code></strong>.</p> </td> 
+        </ul> <p>パスの最後の要素が変化する部分であり、これが AEM サムネールの SKU 値（<strong><code>6422350843</code></strong>、<strong><code>1607745002</code></strong>、<strong><code>0086724882</code></strong>）になります。</p> </td> 
       </tr> 
       <tr> 
-       <td><p>SKU とカテゴリー ID（クエリ文字列内）</p> </td> 
+       <td><p>SKU とカテゴリ ID（クエリ文字列内）</p> </td> 
        <td><p>記録されたクイックビューの URL：</p> 
         <ul> 
          <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li> 
          <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li> 
          <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li> 
-        </ul> <p>この場合、URLには2つの異なる部分があります。 The SKU is stored in the <code>prodId</code> parameter and the category ID is stored in the <code>category=</code> parameter.</p> <p>そのため、サムネール定義はペアになります。つまり、SKU 値と、<code>categoryId</code> という追加の変数です。結果のペアは次のようになります。</p> 
+        </ul> <p>この場合、URL には変化する部分が 2 つあります。SKU が <code>prodId</code> パラメーターに、カテゴリ ID が <code>category=</code> パラメーターに格納されています。</p> <p>そのため、サムネール定義はペアになります。つまり、SKU 値と、<code>categoryId</code> という追加の変数です。結果のペアは次のようになります。</p> 
         <ul> 
-         <li>SKU is <code>305466</code> and <code>categoryId</code> is <code>1100004</code></li> 
-         <li>SKU is <code>310181</code> and <code>categoryId</code> is <code>1100004</code></li> 
-         <li>SKU is <code>308706</code> and <code>categoryId</code> is <code>1740148</code></li> 
+         <li>SKU が <code>305466</code>、<code>categoryId</code> が  <code>1100004</code></li> 
+         <li>SKU が <code>310181</code>、<code>categoryId</code> が  <code>1100004</code></li> 
+         <li>SKU が <code>308706</code>、<code>categoryId</code> が  <code>1740148</code></li> 
         </ul> <p> </p> </td> 
       </tr> 
      </tbody> 
@@ -188,7 +192,7 @@ AEM の実装が eCommerce を使用している場合は、このタスクを�
 
 When the above approach is applied to our Example website, we have a web page with a number of product thumbnails, each having a **[!UICONTROL SEE MORE]** button:
 
-[https://marketing.adobe.com/resources/help/ja_JP/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
+[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
 
 そのページのすべての製品のクイックビューをアクティベートすると、バックエンドに対して次のリストのクイックビューリクエストが作成されます。
 
@@ -215,7 +219,7 @@ When the above approach is applied to our Example website, we have a web page wi
 
 これらのサーバーコールを見ると、製品固有の情報がリクエストパスのみに含まれることがわかります。また、クエリ文字列がまったく使用されていないこと、2 つの異なるタイプのデータが含まれることもわかります。
 
-* 最初のタイプは、candles、cushions、furniture、glassware です。これは「製品カテゴリー」と呼ばれます。
+* 最初のタイプは、candles、cushions、furniture、glassware です。これは「製品カテゴリ」と呼ばれます。
 * 2 つ目のタイプは製品コード（233916597 など）です。これは「製品 SKU」と考えることができます。
 
 この情報に基づいて、全体的なクイックビュー URL は次のようなパターンであることがわかります。
@@ -244,7 +248,7 @@ When a thumbnail is clicked in the authoring environment a preview of the **[!UI
 
 ## ビデオおよび関連するサムネールアセットのアップロード {#uploading-a-video-and-its-associated-thumbnail-assets}
 
-If you have already uploaded your video and thumbnail assets, proceed to [Adding interactivity to your video](#adding-interactivity-to-your-video).
+ビデオとサムネールアセットを既にアップロードしている場合は、[ビデオへのインタラクティブ機能の追加](#adding-interactivity-to-your-video)に進んでください。
 
 誤ったビデオや画像をアップロードした場合、または必要でなくなったアップロード済みビデオや画像を削除したい場合は、[アセットの削除](managing-assets-touch-ui.md#deleting-assets)を参照してください。
 
@@ -256,9 +260,9 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
 
    [FTP ジョブスケジューリングを使用したアセットのアップロード](managing-assets-touch-ui.md)を参照してください。
 
-   これで、ビデオにインタラクティビティを追加できます。
+   これで、ビデオにインタラクティブ機能を追加できます。
 
-## ビデオへのインタラクティビティの追加 {#adding-interactivity-to-your-video}
+## ビデオへのインタラクティブ機能の追加 {#adding-interactivity-to-your-video}
 
 「インタラクティブビデオを作成」ページで、インプレース Visual Editor を使用してビデオにタイムラインセグメントを追加します。
 
@@ -269,28 +273,28 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
 >[!NOTE]
 インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
 
-**[!UICONTROL 元に戻す]** / **[!UICONTROL やり直し]** (Redo)オプションは、ページの右上隅近くにあり、現在の作成/編集セッション中にサポートされます。
+**[!UICONTROL ページの右上隅にある「取り消し」および「やり直し」オプションは、現在の作成／編集セッションの間で有効です。]******
 
-インタラクティブビデオを保存すると、ビデオが直ちにプレビュー用に開かれます。ここから、インタラクティブビデオビューアのプリセットを選択し、ビデオを再生して、顧客に対してビデオがどのように表示されるかをおおよそ確認できます。
+インタラクティブビデオを保存すると、すぐにビデオがプレビューで開きます。そこから、インタラクティブビデオのビューアプリセットを選択し、ビデオを再生して、顧客にどのように表示されるかを確認できます。
 
 **ビデオにインタラクティブ機能を追加するには**:
 
-1. アセットビューで、インタラクティブにするアップロード済みのビデオに移動します。
+1. Assets ビューで、インタラクティブにするアップロード済みのビデオに移動します。
 1. 次のいずれかの操作をおこないます。
 
-   * Hover on the image, then tap **[!UICONTROL Select]** (checkmark icon). ツールバーの「**[!UICONTROL 編集]**」をタップします。
+   * 画像の上にマウスポインターを置き、**[!UICONTROL 選択]**（チェックマークアイコン）をタップします。ツールバーの「**[!UICONTROL 編集]**」をタップします。
    * 画像の上にマウスポインターを置き、**[!UICONTROL その他のアクション]**（3 つのドットのアイコン）／**[!UICONTROL 編集]**&#x200B;をタップします。
    * 画像をタップして、詳細ビューページで画像を開きます。ツールバーの「**[!UICONTROL 編集]**」をタップします。
 
 1. On the **[!UICONTROL Create Interactive Video]** page, do any one of the following:
 
-   * **[!UICONTROL 再生]**&#x200B;ボタンをタップしてビデオの再生を開始します。取り上げたい特定の製品、サービスまたは詳細が表示されたら、ツールバーの「**[!UICONTROL セグメントを追加]**」をタップします。ビデオの最後に達するまで繰り返します。
+   * 「**[!UICONTROL 再生]**」ボタンをタップしてビデオの再生を開始します。取り上げたい特定の製品、サービスまたは詳細が表示されたら、ツールバーの「**[!UICONTROL セグメントを追加]**」をタップします。ビデオの最後に達するまで繰り返します。
 
-       追加した各時間セグメントに 1 つ以上のサムネール画像を割り当て、それらのサムネールを、顧客が購入するためのクイックビュー製品ページや詳細情報のための Web ページにリンクできます。 
+       追加した各時間セグメントに 1 つ以上のサムネール画像を割り当て、それらのサムネールを、顧客が購入するためのクイックビュー製品ページや詳細情報のための Web ページにリンクできます。
 
-   * 「再生」ボタン **[!UICONTROL をタップし]** 、ビデオの再生を開始します。強調表示する特定の製品、サービスまたは詳細が表示されたら、「一時停止」をタップし **[!UICONTROL ます]**。「セグメント **[!UICONTROL を追加」をタップしま]**&#x200B;す。
+   * 「**[!UICONTROL 再生]**」ボタンをタップし、ビデオの再生を開始します。ハイライト表示する特定の製品、サービスまたは詳細が表示されたら、「**[!UICONTROL 一時停止]**」をタップします。「**[!UICONTROL セグメントを追加]**」をタップします。
 
-      ビデオの最後に到達するまで、セグメントを追加するタイムライン上のポイントで、ビデオの再生と一時停止を続けます。
+      ビデオの最後に到達するまで、セグメントを追加するタイムラインのポイントで、ビデオの再生と停止を続けます。
 
 1. （オプション）**[!UICONTROL タイムラインスケールスライダー]**&#x200B;のバーを左にドラッグしてズームインするか、右にドラッグしてズームアウトし、追加したセグメントの表示レベルを制御します。
 
@@ -309,15 +313,15 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
       <td>60 秒</td> 
       </tr> 
       <tr> 
-      <td>2 ～ 3 分</td> 
+      <td>2～3 分</td> 
       <td>30 秒</td> 
       </tr> 
       <tr> 
-      <td>1 ～ 2 分</td> 
+      <td>1～2 分</td> 
       <td>20 秒<br /> </td> 
       </tr> 
       <tr> 
-      <td>30 ~ 60 秒</td> 
+      <td>30～60 秒</td> 
       <td>10 秒</td> 
       </tr> 
       <tr> 
@@ -355,18 +359,19 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
 
         セグメントを選択し、先頭または末尾の青い楕円形をドラッグして、開始時刻または終了時刻をそれぞれ調整します。表示されるビデオフレームは、調整に応じて、ビデオ内の対応する時刻に移動します。タイムラインセグメントの移動は、タイムライン内の隣接するセグメントに基づいて制限されます。調整できる最小セグメント時間は 1 秒です。
 
-        次のナビゲーションショートカットを使用すると、ビデオのセグメントを簡単にチェックして微調整することができます。 
+        次のナビゲーションショートカットを使用すると、ビデオのセグメントを簡単にチェックして微調整することができます。
 
       * セグメントの先頭に直接移動するには、先頭の青い楕円をタップします。
       * セグメントの末尾に直接移動するには、末尾の青い楕円をタップします。
       * セグメントの先頭からビデオを再生するには、セグメント全体をタップします。
+
    ![chlimage_1-132](assets/chlimage_1-132.png)
 
    タイムラインセグメントの末尾の再配置
 
    * セグメントを削除するには
 
-      Select the last segment that is on the timeline, then on the toolbar, tap **[!UICONTROL Delete Segment]**. If two or more segments are selected, the **[!UICONTROL Delete Segment]** feature is disabled.
+      タイムライン上にある最後のセグメントを選択し、ツールバーの「**[!UICONTROL セグメントを削除]**」をタップします。If two or more segments are selected, the **[!UICONTROL Delete Segment]** feature is disabled.
 
       削除できるのは最後のセグメントのみです。例えば、タイムライン上のすべてのセグメントを削除したい場合、常に最後のセグメントを選択して「**[!UICONTROL セグメントを削除]**」をタップします。
 
@@ -376,6 +381,7 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
 1. Under the **[!UICONTROL Content]** tab, tap **[!UICONTROL Select Assets]**, then browse and select all the image assets that you want to use with your video. The selected assets are added to the **[!UICONTROL Asset Selector]** panel in the **[!UICONTROL Content]** tab.
 
 1. 「コンテンツ」タブの下にあるアセットセレクターで、次のいずれかの操作をおこないます。
+
    <table> 
     <tbody> 
       <tr> 
@@ -403,16 +409,16 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
     <tbody> 
       <tr> 
       <td>選択したサムネール画像をクイックビューに関連付けるには</td> 
-      <td><p>「アクションタイプ」の下で「<strong>クイックビュー</strong>」をタップします。</p> <p>AEM Sites または Ecommerce のユーザーである場合：</p> 
+      <td><p>「アクションタイプ」の下で「<strong>クイックビュー</strong>」をタップします。</p> <p>AEM Sites または AEM eCommerce のユーザーである場合：</p> 
        <ul> 
        <li>「SKU 値」テキストフィールドには、選択した製品の SKU（Stock Keeping Unit）が既に設定されています。SKU は、提供している製品またはサービスごとの一意の識別子です。これは、AEM Commerce で画像が製品に関連付けられると自動的に設定されます。</li> 
        <li>設定済みの SKU が正しくない場合は、製品ピッカーアイコン（虫眼鏡）をタップまたはクリックして製品を選択ページを開きます。使用する製品をタップまたはクリックしてから、ページの右上隅のチェックマークをタップして、インタラクティブビデオエディターに戻ります。</li> 
-       </ul> <p> If you are <em>not</em> an AEM Sites or Ecommerce customer</p> 
+       </ul> <p> <em></em>AEM Sites または AEM eCommerce のユーザーではない場合は次のようにします。</p> 
        <ul> 
        <li><a href="/help/assets/carousel-banners.md#identifying-hotspot-and-image-map-variables">ホットスポットの変数の識別</a>を参照してください。これらの変数を定義する必要があります。 </li> 
        <li>デフォルトでは、この SKU フィールドでは画像アセットのファイル名を拡張子を付けずに使用します。SKU に基づいたファイルの名前が標準命名規則に従っている場合、特に編集する必要はありません。 </li> 
-       <li>それ以外の場合は、デフォルト値を編集して、正しい SKU 値を入力します。「SKU値」テキストフィールドに、製品のSKU（在庫保管単位）を入力します。これは、提供する個々の製品またはサービスの一意の識別子です。 入力したSKU値によって、Quickviewテンプレートの可変部分が自動的に設定され、タップされた画像が特定のSKUのQuickviewに関連付けられます。</li> 
-       </ul> <p>(Optional) If there are other variables within the Quickview that you need to use to further identify a product, tap <strong>Add Generic Variable</strong>. テキストフィールドで、追加の変数を指定します。 例えば、追加の変数として <code>category=Womens</code> などと指定します。</p> <p> </p> </td> 
+       <li>それ以外の場合は、デフォルト値を編集して、正しい SKU 値を入力します。「SKU 値」テキストフィールドに、製品の SKU（Stock Keeping Unit）を入力します。SKU は、提供している製品またはサービスごとの一意の識別子です。入力した SKU 値によってクイックビューテンプレートの変数部分が自動的に入力され、タップされた画像が特定の SKU のクイックビューに関連付けられます。</li> 
+       </ul> <p>（オプション）クイックビュー内で製品をさらに識別するために必要になる他の変数がある場合は、「<strong>汎用変数を追加</strong>」をタップします。テキストフィールドに追加の変数を指定します。例えば、追加の変数として <code>category=Womens</code> などと指定します。</p> <p> </p> </td> 
       </tr> 
       <tr> 
       <td>選択したサムネール画像をハイパーリンクに関連付けるには</td> 
@@ -430,14 +436,14 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
       </ul> 
        <ul> 
        <li>エクスペリエンスフラグメントがビデオの上に表示されるときの幅と高さを指定します。</li>
-       </ul><strong>注意</strong>:インタラクティブビデオのソーシャルメディア共有ツールは、ビューアをエクスペリエンスフラグメントに埋め込む場合はサポートされないことに注意してください。 この問題を回避するには、ソーシャルメディア共有ツールを備えていないビューアプリセットを使用または作成します。 このようなビューアプリセットを使用すると、エクスペリエンスフラグメントに正常に埋め込むことができます。</p></tr>&lt; 
+       </ul><strong>注意</strong>：インタラクティブビデオのソーシャルメディア共有ツールは、エクスペリエンスフラグメントにビューアを埋め込む場合はサポートされないことに注意してください。この問題を回避するには、ソーシャルメディア共有ツールのないビューアプリセットを使用または作成します。このようなビューアプリセットを使用すると、ビューアをエクスペリエンスフラグメントに正常に埋め込むことができます。</p></tr>&lt; 
       <tr> 
-      <td>サムネール画像に既に割り当てられているアクションを編集するには</td> 
+      <td>既にサムネール画像に割り当てられているアクションを編集するには</td> 
       <td>タイムラインセグメント内で、テキストラベルの右側にチェーンリンクが表示されているサムネール画像をタップします。チェーンリンクは、アクションが割り当てられていることを示します。「<strong>アクション</strong>」タブをタップして、変更をおこないます。</td> 
       </tr> 
       <tr> 
       <td>サムネール画像のテキストラベルを変更するには</td> 
-      <td><p>初期設定では、テキストラベルはサムネール画像のメタデータフィールドを <code>Title</code> 使用します。 がな <code>Title</code> い場合は、サムネール画像のファイル名が代わりに使用されますが、拡張子は付きません。</p> <p>サムネール画像のテキストラベルを変更するには、「<strong>アクション</strong>」タブで、表示される画像アセットのすぐ下に目的のテキストを入力します。下の図を参照してください。</p> <p>新しいテキストラベルが、ビデオプレーヤー自体と、タイムラインセグメントに表示されているサムネールテキストでのみ使用されていることに注目してください。ラベルの変更は、サムネール画像のタイトルメタデータフィールドとファイル名には影響しません。</p> </td> 
+      <td><p>デフォルトでは、テキストラベルはサムネール画像の <code>Title</code> メタデータフィールドを使用します。<code>Title</code>がない場合は、代わりにサムネール画像のファイル名が使用されますが、拡張子は付きません。</p> <p>サムネール画像のテキストラベルを変更するには、「<strong>アクション</strong>」タブで、表示される画像アセットのすぐ下に目的のテキストを入力します。下の図を参照してください。</p> <p>新しいテキストラベルが、ビデオプレーヤー自体と、タイムラインセグメントに表示されているサムネールテキストでのみ使用されていることに注目してください。ラベルの変更は、サムネール画像のタイトルメタデータフィールドとファイル名には影響しません。</p> </td> 
       </tr> 
       <tr> 
       <td>加えた変更を元に戻すには</td> 
@@ -461,30 +467,30 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
 
       タイムライン上で、1 つのセグメントに統合する 2 つ以上の連続したセグメントをタップします。下の図では 2 つの選択したセグメントに青い楕円形のドラッグハンドルが表示されていなことに留意してください。
 
-      Tap **[!UICONTROL Merge Segment]** on the toolbar.
+      ツールバーの「**[!UICONTROL セグメントを統合]**」をタップします。
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
    選択した 5 秒のセグメント 2 つを 10 秒のセグメント 1 つに統合。
 
    * **[!UICONTROL セグメントを分割]** ‐ 1 つのセグメントを 2 つの均等な長さのセグメントに分割できます。セグメントに製品サムネールが割り当てられている場合、サムネールは左のセグメントに組み込まれます。
 
-      On the timeline, tap a segment you want to divide in half, then tap **[!UICONTROL Split Segment]** on the toolbar.
+      タイムラインで、半分に分割したいセグメントをタップし、ツールバーで「**[!UICONTROL セグメントを分割]**」をタップします。
 
-      Selecting two or more segments disables the **[!UICONTROL Split Segment]** feature.
+      2 つ以上のセグメントを選択すると、「**[!UICONTROL セグメントを分割]**」オプションは無効になります。
    ![chlimage_1-135](assets/chlimage_1-135.png)
 
    選択した 10 秒のセグメントを 5 秒ずつのセグメント 2 つに分割。
 
-1. Near the upper-right corner of the **[!UICONTROL Create Interactive Video]** page, the name of the currently selected viewer preset used with the video is displayed. その名前をタップして別のビューアプリセットを選択します。
+1. **[!UICONTROL インタラクティブビデオを作成]**&#x200B;ページの右上隅付近に、現在選択されてビデオで使用されているビューアプリセットの名前が表示されます。その名前をタップして別のビューアプリセットを選択します。
 
    例えば、`Shoppable_Video_light` ビューアプリセットでは、ビデオが再生されるときに横に白い表示領域が現れます。この表示領域には、クリック可能なサムネール画像が再生中に表示されます。`Shoppable_Video_dark` ビューアプリセットでは、ビデオが再生されるときに横に黒い表示領域が現れます。
 
-   独自のインタラクティブビデオビューアプリセットを作成した場合は、選択できるプリセットのリストにもそのプリセットが表示されます。
+   インタラクティブビデオの独自のビューアプリセットを作成した場合は、そのプリセットもリストに表示されて選択できます。
 
-   完了したら、「**[!UICONTROL 保存]**」をタップします。  
+   完了したら、「**[!UICONTROL 保存]**」をタップします。
 
    >[!NOTE]
-   インタラクティブビデオを保存すると、関連付けられた `.vtt` ファイルも自動的に保存されます。`.vtt` ファイルは、**[!UICONTROL Assets]** のルートにある `_VTT` フォルダーに保存されます。インタラクティブビデオを Web サイト上で正しく再生するには、ファイルとフォルダーが必要です。したがって、`_VTT` フォルダーやそのフォルダーのコンテンツを移動、編集、削除しないでください。
+   インタラクティブビデオを保存すると、関連付けられた `.vtt` ファイルも自動的に保存されます。`.vtt` ファイルは、**[!UICONTROL アセット]**&#x200B;のルートにある `_VTT` フォルダーに保存されます。インタラクティブビデオが Web サイト上で正しく再生されるには、それらのファイルとフォルダーが必要です。したがって、`_VTT` フォルダーやフォルダーのコンテンツを移動したり、編集したり削除しないでください。
 
 1. インタラクティブビデオを公開します。公開すると、最終的にコピーして Web サイトに貼り付ける埋め込みコードまたは URL が作成されます。
 
@@ -505,7 +511,7 @@ If you have already uploaded your video and thumbnail assets, proceed to [Adding
 
 ビデオをアップロードし、タイムラインセグメントを追加して、インタラクティブビデオを公開したら、既存の Web サイトにビデオを追加する準備は完了です。
 
-AEM Sites のユーザーである場合は、インタラクティブメディアコンポーネントをページにドラッグすることによりインタラクティブビデオを追加できます。See [Adding Dynamic Media Assets to Pages.](adding-dynamic-media-assets-to-pages.md)
+AEM Sites のユーザーである場合は、インタラクティブメディアコンポーネントをページにドラッグすることによりインタラクティブビデオを追加できます。[ページへの Dynamic Media アセットの追加](adding-dynamic-media-assets-to-pages.md)を参照してください。
 
 スタンドアロン AEM Assets のユーザーである場合は、この節で説明するようにインタラクティブビデオを手動で Web サイトに追加できます。
 
@@ -519,9 +525,9 @@ AEM Sites のユーザーである場合は、インタラクティブメディ�
 
 1. ターゲットの Web ページのコードで、静的なビデオの場所を特定します。
 
-1. 静的ビデオを削除し、コードをそのままAEM Assetsからコピーした埋め込みコードまたは埋め込みURLに置き換えます。
+1. 静的ビデオを削除し、コードをAEM Assetsからコピーした埋め込みコードまたはURLに置き換えます。
 
-   コピーされた埋め込みコードは、レスポンシブ環境用に設定され、以前静的ビデオが占めていた領域が自動的に収まるようになります。
+   コピーされた埋め込みコードはレスポンシブ環境用に設定されるので、以前静的ビデオが含まれていた領域が自動的に調整されます。
 
 >[!NOTE]
 そのため、ハイパーリンクされた Web ページのみを使用したインタラクティビティを追加した場合は、これで完了です。
@@ -649,7 +655,7 @@ AEM によって返される埋め込みコードには、すぐに使用可能�
 <table> 
      <tbody> 
       <tr> 
-       <td><p>単一の SKU（クエリー文字列内）</p> </td> 
+       <td><p>単一の SKU（クエリ文字列内）</p> </td> 
        <td><code class="code">s7interactivevideoviewer.setHandlers({
           "quickViewActivate": function(inData) {
           var quickViewUrl = "https://server/json?productId=" + inData.sku + "&amp;source=100";
@@ -665,7 +671,7 @@ AEM によって返される埋め込みコードには、すぐに使用可能�
           });</code></td> 
       </tr> 
       <tr> 
-       <td><p>SKU とカテゴリ ID（クエリー文字列内）</p> </td> 
+       <td><p>SKU とカテゴリ ID（クエリ文字列内）</p> </td> 
        <td><code class="code">s7interactivevideoviewer.setHandlers({
           "quickViewActivate": function(inData) {
           var quickViewUrl = "https://server/quickView/product/?category=" + inData.categoryId + "&amp;prodId=" + inData.sku;
@@ -695,7 +701,7 @@ var categoryId=inData.categoryId;
 var quickViewUrl = "datafeed/" + categoryId + "-" + sku + ".json";
 ```
 
-The demo website is triggering the Quickview dialog box using a simple `loadQuickView()` function call. この関数は、1 つの引数（クイックビューデータの URL）のみを受け取ります。したがって、インタラクティブビデオを統合するために必要な最後の手順は、`quickViewActivate` ハンドラーに次のコード行を追加することです。
+このデモ Web サイトは、単純な `loadQuickView()` 関数呼び出しを使用してクイックビューダイアログボックスを起動しています。この関数は、1 つの引数（クイックビューデータの URL）のみを受け取ります。したがって、インタラクティブビデオを統合するために必要な最後の手順は、`quickViewActivate` ハンドラーに次のコード行を追加することです。
 
 ```xml
 loadQuickView(quickViewUrl);
@@ -708,7 +714,7 @@ var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInner
 var inner_container = document.getElementById(sdkContainerId);
 ```
 
-Where `inner_container` is a reference to a `DIV` element managed by the viewer. ダイアログボックスをこの `DIV` の子にしようとしています。
+ここで、`inner_container` が、ビューアによって管理される `DIV` 要素への参照です。ダイアログボックスをこの `DIV` の子にしようとしています。
 
 実際にモーダルダイアログボックス要素を探して前述のコンテナにアタッチする手順は、ケースごとに異なります。ここでも、必要なクイックビュー実装に詳しいフロントエンド開発者の助けを借りることをお勧めします。
 
@@ -765,7 +771,7 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 インタラクティブビデオが完全に統合された最終的なデモ Web サイトは次のようになります。
 
-[https://marketing.adobe.com/resources/help/ja_JP/dm/shoppable-video/john-lewis/landing-3.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html)
+[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html)
 
 ## クイックビューを使用したカスタムポップアップの作成 {#using-quickviews-to-create-custom-pop-ups}
 
