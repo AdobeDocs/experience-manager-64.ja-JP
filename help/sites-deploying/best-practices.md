@@ -11,6 +11,9 @@ topic-tags: best-practices
 discoiquuid: 4b5c0677-c630-4fae-867e-4f4583ac8507
 translation-type: tm+mt
 source-git-commit: c9591211c80d453de5172c90501d2d2907eba4e6
+workflow-type: tm+mt
+source-wordcount: '438'
+ht-degree: 73%
 
 ---
 
@@ -70,11 +73,11 @@ source-git-commit: c9591211c80d453de5172c90501d2d2907eba4e6
 
 ## Communities {#communities}
 
-AEM Communitiesは、オンプレミスコミュニティの作成と管理を簡素化します。 AEM Communitiesのベストプラクティスは、次のとおりです。
+AEM Communitiesはオンプレミスコミュニティの作成と管理を簡素化します。 AEM Communitiesのベストプラクティスは以下のとおりです。
 
-[Community Content Store](/help/communities/working-with-srp.md) — ユーザ生成コンテンツ(UGC)の新しい共有ストレージ機能と、基盤となるトポロジーを選択する際の考慮点について説明 [します](/help/communities/topologies.md)。
+[コミュニティコンテンツストア](/help/communities/working-with-srp.md) — ユーザ生成コンテンツ(UGC)の新しい共有ストレージ機能と、基盤となる [トポロジを選択する際の考慮点について説明します](/help/communities/topologies.md)。
 
-[コミュニティへの推奨デプロイメント](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) — コミュニティで推奨されるデプロイメントについて説明します。 |
+[コミュニティの推奨デプロイメント](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) - Communitiesの推奨デプロイメントについて説明します。 |
 
 ## UI {#ui}
 
@@ -82,7 +85,7 @@ AEM Communitiesは、オンプレミスコミュニティの作成と管理を�
 
 [顧客向けのユーザーインターフェイスの推奨事項](/help/sites-deploying/ui-recommendations.md)
 
-AEMには現在2つのUIがあります。従来のUIとタッチ操作向けUIを同じリリースで使用できます。したがって、お客様は、プロジェクトの導入時にどの使用を行うかを決定する必要があります。このドキュメントは、適切な選択肢を見つけるのに役立つものです。
+AEMには現在2つのUIがあります。 従来のUIとタッチ操作向けUIが同じリリースに含まれています。 したがって、お客様は、プロジェクトの導入時にどの使用を行うかを決定する必要があります。 このドキュメントは、適切な選択肢を見つけるのに役立ちます。
 
 ## パフォーマンス {#performance}
 
