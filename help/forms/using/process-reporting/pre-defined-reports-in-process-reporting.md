@@ -1,8 +1,8 @@
 ---
 title: プロセスレポートの事前定義済みレポート
 seo-title: プロセスレポートの事前定義済みレポート
-description: JEE上のAEM Formsプロセスデータをクエリし、長時間実行しているプロセス、プロセス期間、ワークフローの量に関するレポートを作成する
-seo-description: JEE上のAEM Formsプロセスデータをクエリし、長時間実行しているプロセス、プロセス期間、ワークフローの量に関するレポートを作成する
+description: JEE上のAEM Formsのプロセスデータを使用して、長時間実行しているプロセス、プロセス期間、ワークフローの量に関するレポートを作成するクエリ
+seo-description: JEE上のAEM Formsのプロセスデータを使用して、長時間実行しているプロセス、プロセス期間、ワークフローの量に関するレポートを作成するクエリ
 uuid: ba3a1809-270e-4c94-ade4-d2f6af86d860
 content-type: reference
 topic-tags: process-reporting
@@ -19,17 +19,17 @@ ht-degree: 0%
 
 # プロセスレポートの事前定義済みレポート {#pre-defined-reports-in-process-reporting}
 
-AEM Forms Processレポートには、次の *既成のレポートが付属しています* 。
+AEM Formsプロセスレポートには、次 *の既成のレポートが付属しています* 。
 
 * **[Long Running Processes](/help/forms/using/process-reporting/pre-defined-reports-in-process-reporting.md#p-long-running-processes-p)**: 完了に指定時間以上かかったすべてのAEM Formsプロセスのレポート
 
-* **[プロセス期間グラフ](/help/forms/using/process-reporting/pre-defined-reports-in-process-reporting.md#p-process-duration-report-br-p)**: 期間別の指定されたAEM Formsプロセスのレポート
+* **[プロセス期間グラフ](/help/forms/using/process-reporting/pre-defined-reports-in-process-reporting.md#p-process-duration-report-br-p)**: 期間別の特定AEM Formsプロセスのレポート
 
 * **[ワークフローの量](/help/forms/using/process-reporting/pre-defined-reports-in-process-reporting.md#p-workflow-volume-report-p)**: 日付別に指定されたプロセスの実行中および完了インスタンスのレポート
 
 ## 長時間実行するプロセス {#long-running-processes}
 
-長時間実行中のプロセスレポートには、完了に指定した時間以上かかったAEM Formsプロセスが表示されます。
+長時間実行中のプロセスレポートには、完了に指定時間以上かかったAEM Formsのプロセスが表示されます。
 
 ### 「Long Running Process」レポートを実行するには {#to-execute-a-long-running-process-report-br}
 
@@ -44,7 +44,7 @@ AEM Forms Processレポートには、次の *既成のレポートが付属し�
 
    パラメーター:
 
-   * **期間**(*必須*): 期間と単位を指定します。 指定された期間を超える実行を行ったすべてのAEM Formsプロセスを表示します。
+   * **期間**(*必須*): 期間と単位を指定します。 指定した期間を超えて実行されたすべてのAEM Formsプロセスを表示します。
    * **開始後** (*オプション*): 日付を選択します。 レポートをフィルターして、指定した日付以降に開始したプロセスインスタンスを表示します。
    * **以前に開始** (*オプション*): 日付を選択します。 指定した日付より前に開始したプロセスインスタンスを表示するように、レポートをフィルターします。
 
@@ -93,7 +93,7 @@ AEM Forms Processレポートには、次の *既成のレポートが付属し�
 
 ## ワークフローボリュームレポート {#workflow-volume-report}
 
-ワークフローの量レポートには、AEM Formsプロセスの現在実行中のインスタンス数と完了したインスタンス数がカレンダーの日別に表示されます。
+ワークフローの量レポートには、現在実行中の、および完了したAEM Formsプロセスのインスタンス数がカレンダーの日別に表示されます。
 
 ### ワークフローボリュームレポートを実行するには {#to-execute-a-workflow-volume-report-br}
 
