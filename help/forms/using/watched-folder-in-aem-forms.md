@@ -27,7 +27,7 @@ ht-degree: 92%
 
 * 監視フォルダー設定ノードのプロパティを設定する際に、folderPathプロパティに親ディレクトリのフルパスを入力し、作成する監視フォルダーの名前を追加します。次に例を示します。 `C:/MyPDFs/MyWatchedFolder`
 
-   フォルダーが存在しま `MyWatchedFolder`せん。AEM Formsは、指定されたパスにフォルダーを作成しようとします。
+   フォル `MyWatchedFolder`ダーが存在しません。AEM Formsは指定されたパスにフォルダーを作成しようとします。
 
 * ファイルシステム上にフォルダーを作成してから監視フォルダーエンドポイントを設定し、folderPath プロパティにフルパスを入力します。folderPath プロパティについて詳しくは、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
 
@@ -53,6 +53,7 @@ ht-degree: 92%
    * `inputProcessorType`
    * `inputProcessorId`
    * `outputFilePattern`
+
    サポートされているプロパティの完全なリストについては、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
 
 1. 「**すべて保存**」をクリックします。ノードの作成後、プロパティが保存されます。The `input`, `result`, `failure`, `preserve`, and `stage`folders are created at the path specified in the `folderPath` property.
@@ -140,6 +141,7 @@ ht-degree: 92%
    * %l = ミリ秒
    * %R = 乱数（0～9）
    * %P = プロセス ID またはジョブ ID
+
    例えば、2009 年 7 月 17 日午後 8 時に C:/Test/WF0/failure/%Y/%M/%D/%H/ と指定した場合、結果フォルダーは C:/Test/WF0/failure/2009/07/17/20 となります。
 
    絶対パスではなく相対パスを指定すると、そのフォルダーは監視フォルダーの中に作成されます。デフォルト値は result/%Y/%M/%D/ であり、監視フォルダー内の結果フォルダーです。ファイルパターンについて詳しくは、「[ファイルパターンについて](/help/forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)」を参照してください。
@@ -534,6 +536,7 @@ log.info("Exiting workflow script!")
 
    * 監視フォルダーに対する includeFilePattern プロパティを、どの新しい入力ファイルにも一致しない値に変更します（例えば、NOMATCH と入力します）。
    * 新しい入力ファイルを作成しているプロセスを休止します。
+
    AEM Forms がすべてのファイルを回復して処理するまで待機します。ファイルの大多数は回復され、新しい入力ファイルは正しく処理されます。監視フォルダーがファイルを回復し、処理するまでの待機時間の長さは、呼び出す操作の長さおよび回復するファイルの数によって異なります。
 
 1. 処理できないファイルを特定します。適切な待機時間が経過し、前の手順を完了した上、ステージフォルダーに未処理のファイルが残っている場合は、次の手順に進みます。
