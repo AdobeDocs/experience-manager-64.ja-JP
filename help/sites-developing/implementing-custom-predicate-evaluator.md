@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 08bdade7-fdad-445d-80fe-8fc06596dace
 translation-type: tm+mt
 source-git-commit: 15bea340f3ba7d5a315d71932e521ad1f1a40073
+workflow-type: tm+mt
+source-wordcount: '795'
+ht-degree: 69%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 15bea340f3ba7d5a315d71932e521ad1f1a40073
 
 ## 概要 {#overview}
 
-[Query Builder](/help/sites-developing/querybuilder-api.md) を使用すると、コンテンツリポジトリへのクエリを簡単に実行できます。AEMには、データの処理に役立つ述語評価演算子のセットが付属しています。
+[Query Builder](/help/sites-developing/querybuilder-api.md) を使用すると、コンテンツリポジトリへのクエリを簡単に実行できます。AEMには、データ処理に役立つ述語評価演算子のセットが付属しています。
 
 しかし、カスタム述語エバリュエーターを実装することによって、複雑さを軽減し、セマンティックを向上させて、クエリを単純化することができます。
 
@@ -57,7 +60,7 @@ GitHub のコード
 
 ## レプリケーションメタデータ用のカスタム述語エバリュエーターの実装 {#implementing-a-custom-predicate-evaluator-for-replication-metadata}
 
-この節では、レプリケーション・メタデータに基づいてデータを支援するカスタム述語評価演算子の作成方法を説明します。
+例として、レプリケーション・メタデータに基づくデータを支援するカスタム述語評価基準を作成する方法を説明します。
 
 * `cq:lastReplicated`：最終レプリケーションアクションの日付を格納
 
@@ -83,7 +86,7 @@ daterange.lowerBound=2013-01-01T00:00:00.000+01:00
 daterange.lowerOperation=>=
 ```
 
-このクエリは有効ですが、解読しにくく、3 つのレプリケーションプロパティ間の関係が一目ではわかりません。カスタム述語評価子を実装すると、このクエリの複雑さが軽減され、セマンティックが向上します。
+このクエリは有効ですが、解読しにくく、3 つのレプリケーションプロパティ間の関係が一目ではわかりません。カスタム述語評価基準を実装すると、このクエリの複雑さが軽減され、セマンティックが向上します。
 
 ### 目的 {#objectives}
 
@@ -97,7 +100,7 @@ replic.since=2013-01-01T00:00:00.000+01:00
 replic.action=Activate
 ```
 
-レプリケーションメタデータ述部をカスタム述部評価子でグループ化すると、意味のあるクエリを作成できます。
+レプリケーションメタデータ述語をカスタム述語評価子でグループ化すると、意味のあるクエリを作成するのに役立ちます。
 
 ### Maven 依存関係の更新 {#updating-maven-dependencies}
 
@@ -113,7 +116,7 @@ replic.action=Activate
 
 pom.xml
 
-The following snippet shows the differences, in [unified diff format](https://en.wikipedia.org/wiki/Diff#Unified_format)
+The following snippet shows the differences, in [unified diff format](https://ja.wikipedia.org/wiki/Diff#.E3.83.A6.E3.83.8B.E3.83.95.E3.82.A1.E3.82.A4.E3.83.89.E5.BD.A2.E5.BC.8F_.28Unified_format.29)
 
 ```
 @@ -120,6 +120,12 @@
@@ -145,7 +148,7 @@ The `cq-search` project contains the `AbstractPredicateEvaluator` abstract class
 
    src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java
 
-   The following snippet shows the differences, in [unified diff format](https://en.wikipedia.org/wiki/Diff#Unified_format)
+   The following snippet shows the differences, in [unified diff format](https://ja.wikipedia.org/wiki/Diff#.E3.83.A6.E3.83.8B.E3.83.95.E3.82.A1.E3.82.A4.E3.83.89.E5.BD.A2.E5.BC.8F_.28Unified_format.29)
 
 
 ```
