@@ -11,15 +11,18 @@ content-type: reference
 discoiquuid: de8d0e6d-827b-45fe-a538-d3fe1dec8427
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 60%
 
 ---
 
 
 # ブログの基本事項 {#blog-essentials}
 
-AEM 6.1 Communitiesでは、ブログはコミュニティ活動です。 ブログ記事は公開環境から投稿されるようになりました。以前は、ブログ記事は作成者環境でのみ作成でき、公開されていました。
+AEM 6.1 Communitiesの時点で、ブログはコミュニティアクティビティです。 ブログ記事は公開環境から投稿されるようになりました。以前は、ブログ記事は作成者環境でのみ作成でき、公開されていました。
 
-特権を持つメンバーに制限されない限り、コミュニティのメンバーがブログ記事を作成できるようになりました。
+特権を持つメンバーに制限されない限り、どのコミュニティのメンバーでもブログ記事が作成できるようになりました。
 
 このページでは、ブログ機能の操作に関する基本情報をまとめています。
 
@@ -41,7 +44,7 @@ AEM 6.1 Communitiesでは、ブログはコミュニティ活動です。 ブロ
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td> 
@@ -66,11 +69,11 @@ AEM 6.1 Communitiesでは、ブログはコミュニティ活動です。 ブロ
 
 | **resourceType** | social/journal/components/hbs/sidebar |
 |---|---|
-| [**インクルード可能&#x200B;**](scf.md#add-or-include-a-communities-component) | いいえ |
+| [**インクルード可能&#x200B;**](scf.md#add-or-include-a-communities-component) | 不可 |
 | [**clientllibs **](clientlibs.md) | cq.social.hbs.journal_sidebar |
 | **テンプレート** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
-| **properties** | see [Blog Feature](blog-feature.md) |
+| **プロパティ** | see [Blog Feature](blog-feature.md) |
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
@@ -114,7 +117,7 @@ AEM プラットフォームでは、次に説明するように、XSS 攻撃を
 
 * [クロスサイトスクリプティング（XSS）に対する保護](../../help/sites-developing/security.md#protect-against-cross-site-scripting-xss)
 
-AEM 6.2以降、以前は手動で行う必要があった変更は、デフォルトのAntiSamy設定ファイルに含まれます。
+AEM 6.2以降、手動で行う必要があった変更は、デフォルトのAntiSamy設定ファイルに含まれます。
 
-ブログ記事にリッチメディアが埋め込まれるには、次のアイコンを選択 `Embed Media from External Sites` します。 ![chlimage_1-471](assets/chlimage_1-471.png)
+リッチメディアは、次の `Embed Media from External Sites` アイコンを選択してブログ記事に埋め込まれます。  ![chlimage_1-471](assets/chlimage_1-471.png)
 
