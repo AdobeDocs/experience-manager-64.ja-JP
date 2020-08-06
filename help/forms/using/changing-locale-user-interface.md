@@ -20,9 +20,9 @@ ht-degree: 57%
 
 # AEM Forms Workspace ユーザーインターフェイスのロケールの変更 {#changing-the-locale-of-aem-forms-workspace-user-interface}
 
-AEM Forms Workspaceでは、英語、フランス語、ドイツ語、日本語に対するサポートがすぐに利用できます。 また、AEM Forms Workspaceユーザーインターフェイスを他の言語にローカライズする機能も提供します。
+AEM Formsのワークスペースでは、英語、フランス語、ドイツ語、日本語に対するサポートがすぐに利用できます。 また、AEM Formsワークスペースユーザーインターフェイスを他の言語にローカライズする機能も提供します。
 
-AEM Forms Workspaceユーザーインターフェイスを任意の言語にローカライズするには：
+AEM Formsワークスペースユーザーインターフェイスを任意の言語にローカライズするには：
 
 * AEM Forms Workspace のテキストをローカライズします。
 * 折りたたまれているカテゴリ、キュー、およびプロセスをローカライズする。
@@ -52,7 +52,7 @@ Perform the following steps to add support for a language *New* and the browser 
 
 ## 折りたたまれているカテゴリ、キュー、およびプロセスのローカライズ {#localizing-collapsed-categories-queues-and-processes}
 
-AEM Forms Workspaceは、カテゴリ、キュー、およびプロセスのヘッダーを表示するために画像を使用します。 これらのヘッダをローカライズするには、開発パッケージが必要です。For detailed information about creating development package, see [Building AEM Forms workspace code.](introduction-customizing-html-workspace.md#building-html-workspace-code)
+AEM Formsワークスペースは、画像を使用してカテゴリ、キューおよびプロセスのヘッダーを表示します。 これらのヘッダをローカライズするには、開発パッケージが必要です。For detailed information about creating development package, see [Building AEM Forms workspace code.](introduction-customizing-html-workspace.md#building-html-workspace-code)
 
 次の手順では、新しくローカライズされた画像ファイルは&#x200B;*Categories_nw.png*、*Queue_nw.png*、および *Processes_nw.png* であると想定しています。画像の推奨される幅は19pxです。
 
@@ -126,6 +126,7 @@ AEM Forms Workspaceは、カテゴリ、キュー、およびプロセスのヘ�
 
    * `js/runtime/views/outofoffice.js`
    * `js/runtime/views/searchtemplatedetails.js`
+
    以下のサンプルコードは、jquery.ui.datepicker-nw.js のエントリを追加する方法を示します。
 
    ```
@@ -167,6 +168,7 @@ AEM Forms Workspaceは、カテゴリ、キュー、およびプロセスのヘ�
 
    * apps\ws\js\runtime\views\searchtemplatedetails.js
    * apps\ws\js\runtime\views\outofoffice.js
+
    次のコードを変更して新しいロケールを追加します。
 
    ```
