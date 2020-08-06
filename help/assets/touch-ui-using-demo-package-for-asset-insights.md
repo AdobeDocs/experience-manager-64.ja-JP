@@ -4,6 +4,9 @@ description: デモパッケージを使用して、アセットインサイト�
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '165'
+ht-degree: 93%
 
 ---
 
