@@ -11,6 +11,9 @@ topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 2de6bafb-47cf-4aca-84a3-0cace2858d5c
 translation-type: tm+mt
 source-git-commit: 95499f59b2ce7d5d864d948d596f3efaae0b0d27
+workflow-type: tm+mt
+source-wordcount: '114'
+ht-degree: 83%
 
 ---
 
@@ -25,4 +28,4 @@ source-git-commit: 95499f59b2ce7d5d864d948d596f3efaae0b0d27
 
 >[!CAUTION]
 >
->AEM Verifyアプリは廃止されました。 Apple appStoreおよびAndroid playStoreからアプリが削除されました。
+>AEM Verify Appは非推奨となりました。 Apple AppStoreおよびAndroid PlayStoreからアプリが削除されました。
