@@ -305,7 +305,7 @@ DoS の悪用を防ぐ方法は次のとおりです。
 
       **JSONの最大結果** ( `json.maximumresults`)
 
-      を [Apache Sling GET Servletの設定に含めます](/help/sites-deploying/osgi-configuration-settings.md)。 この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `200` です。
+      ( [Apache SlingGETサーブレットの設定](/help/sites-deploying/osgi-configuration-settings.md)) この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `200` です。
 
    * 予防策として、デフォルトの他のレンダラー（HTML、プレーンテキスト、XML）を無効にします。この場合も [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md) を設定します。
    >[!CAUTION]
