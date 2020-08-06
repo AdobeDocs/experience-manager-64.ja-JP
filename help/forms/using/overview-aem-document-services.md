@@ -10,13 +10,16 @@ topic-tags: document_services
 discoiquuid: 0685478b-d08e-4d69-8dd3-f75270772167
 translation-type: tm+mt
 source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+workflow-type: tm+mt
+source-wordcount: '1420'
+ht-degree: 96%
 
 ---
 
 
 # AEM ドキュメントサービスの概要 {#overview-of-aem-document-services}
 
-AEM ドキュメントサービスは、PDF ドキュメントを作成、アセンブリ、およびセキュリティ保護のための一連の OSGi サービスです。Document Servicesには、次のサービスが含まれています。
+AEM ドキュメントサービスは、PDF ドキュメントを作成、アセンブリ、およびセキュリティ保護のための一連の OSGi サービスです。ドキュメントサービスには、次のサービスが含まれます。
 
 ## Output サービス {#output-service}
 
@@ -41,7 +44,7 @@ Output サービスを使用して XML データをフォームデザインと�
 * **generatePrintedOutput**：フォームデザインをフォームデータとマージして、レーザーネットワークプリンターまたはラベルネットワークプリンターに送信するドキュメントを生成します。
 
 * **generatePDFOutputBatch**：複数のテンプレートと複数のデータレコードをマージして、1 回の実行で複数の PDF ファイルを生成します。すべての PDF ファイルをまとめて 1 つの PDF を生成するオプションもあります。
-* **generatePrintedOutputBatch**:複数のテンプレートと複数のデータレコードをマージして、1回の呼び出しで複数の印刷ドキュメント(PS、PCL、ZPL、DPL、IPL、TPCL)を生成します。 1 つの印刷ドキュメントを生成するオプションもあります。
+* **generatePrintedOutputBatch**: 複数のテンプレートと複数のデータレコードをマージして、1回の呼び出しで複数の印刷ドキュメント(PS、PCL、ZPL、DPL、IPL、TPCL)を生成します。 1 つの印刷ドキュメントを生成するオプションもあります。
 
 ## Assembler サービス {#assembler-service}
 
@@ -84,7 +87,7 @@ DDX を使用すると、ドキュメントのアセンブリまたはディス�
 
 単純な入力マップを使用して、ソースドキュメントと結果ドキュメントの場所を指定できます。次の外部データ URL タイプも使用できます。
 
-* ファイル
+* File
 * FTP
 * HTTP/HTTPS
 
@@ -129,4 +132,4 @@ PDF ドキュメントに適切な使用権限が追加されている場合、�
 
 ## プリンターに送信サービス {#send-to-printer-service}
 
-プリンターに送信サービスは、指定したプリンターにドキュメントを送信して印刷するためのAPIを提供します。
+「Send To Printer Service」は、指定したプリンターにドキュメントを送信して印刷するためのAPIを提供します。
