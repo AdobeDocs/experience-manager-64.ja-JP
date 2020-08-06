@@ -2,7 +2,7 @@
 title: レイアウトデザイン
 seo-title: レイアウトデザイン
 description: ここでは、レターやインタラクティブ通信で使用するレイアウトの作成方法について説明します。
-seo-description: レイアウトデザイン 詳しくは、レターやインタラクティブコミュニケーションに使用するレイアウトを作成する方法を説明します。
+seo-description: レイアウトデザイン レターやInteractive Communicationsで使用するレイアウトの作成方法について詳しく説明します。
 uuid: b21af474-07f5-4bfe-af7d-0c322e2452ae
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,6 +10,9 @@ topic-tags: interactive-communications
 discoiquuid: 046b1bf9-1ac7-4e2e-ab37-6fe5422dfa20
 translation-type: tm+mt
 source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+workflow-type: tm+mt
+source-wordcount: '1305'
+ht-degree: 93%
 
 ---
 
@@ -59,7 +62,7 @@ XDP は Adobe Forms Designer でデザインできます。この記事では、
 
 関連付け可能なフィールドには、次の要件があります。
 
-* XFA &lt;field>または&lt;exclGroup>である
+* がXFA &lt;field>または&lt;exclGroup>である
 * XFA 連結参照を持っている
 * &lt;exclGroup> の場合、少なくとも 1 つの子ラジオボタンフィールドが必要（それ以外の場合、値の型は決定できません）
 
