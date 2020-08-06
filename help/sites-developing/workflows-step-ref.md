@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 25f0e0f7-9570-4748-81cb-ccec6492c0b4
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '2833'
+ht-degree: 66%
 
 ---
 
@@ -27,6 +30,7 @@ source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
 >
 >* [AEM Forms ワークフローステップのリファレンス](/help/forms/using/aem-forms-workflow-step-reference.md)
 >* [メディアハンドラーとワークフローを使用したアセットの処理](/help/assets/media-handlers.md)
+
 >
 
 
@@ -41,7 +45,7 @@ Each step component has a **[!UICONTROL Step Properties]** dialog that lets you 
 
 * **[!UICONTROL タイトル]**
 
-   ステップのタイトル。
+   手順のタイトル。
 
 * **[!UICONTROL 説明]**
 
@@ -49,23 +53,23 @@ Each step component has a **[!UICONTROL Step Properties]** dialog that lets you 
 
 * **[!UICONTROL ワークフローステージ]**
 
-   ステップにステージを適用するためのドロ [ップダウン](/help/sites-developing/workflows.md#workflow-stages) ・セレクタ。
+   ステップにス [テージを適用するためのドロップダウンセレクタ](/help/sites-developing/workflows.md#workflow-stages) 。
 
 * **[!UICONTROL タイムアウト]**
 
-   ステップが「タイムアウト」になるまでの期間。
+   ステップが「タイムアウト」されるまでの期間。
 
    You can select between: **[!UICONTROL Off]**, **[!UICONTROL Immediate]**, **[!UICONTROL 1h]**, **[!UICONTROL 6h]**, **[!UICONTROL 12h]**, **[!UICONTROL 24h]**.
 
 * **[!UICONTROL タイムアウトハンドラー]**
 
-   ステップがタイムアウトしたときにワークフローを制御するハンドラ。例：
+   ステップがタイムアウトしたときにワークフローを制御するハンドラ。 例：
 
    `Auto Advancer`
 
 * **[!UICONTROL ハンドラー処理の設定]**
 
-   実行後にワークフローを次の手順に自動的に進めるには、このオプションを選択します。 選択しない場合、実装スクリプトでワークフローの進行を処理する必要があります。
+   実行後、ワークフローを自動的に次の手順に進める場合は、このオプションを選択します。 選択しない場合、実装スクリプトでワークフローの進行を処理する必要があります。
 
 #### ステップのプロパティ - 「ユーザー／グループ」タブ {#step-properties-user-group-tab}
 
@@ -93,7 +97,7 @@ The **[!UICONTROL AND Split]** creates a split in the workflow, after which both
 
 * Edit the **[!UICONTROL AND Split]** properties:
 
-   * **[!UICONTROL Split Name]**:説明のために名前を割り当てます。
+   * **[!UICONTROL 名前の分割]**: 説明のために名前を割り当てます。
    * 必要なブランチの数（2、3、4 または 5）を選択します。
 
 * 必要に応じて、各ブランチにワークフローステップを追加します。
@@ -134,9 +138,9 @@ This **[!UICONTROL Container]]**lets you reuse workflow models to implement comm
 * [**[!UICONTROL 共通]**](#step-properties-common-tab)
 * **[!UICONTROL プロセス]**
 
-   * **[!UICONTROL 進む手順]]**:実行するステップを選択します。
-   * **[!UICONTROL Script Path]**:Gotoステップを実行するかどうかを決定するECMAScriptへの **[!UICONTROL パス]**。
-   * **[!UICONTROL スクリプト]**:Gotoステップを実行するかどうかを決定する **[!UICONTROL ECMAScript]**。
+   * **[!UICONTROL 移動する手順]]**: 実行するステップを選択します。
+   * **[!UICONTROL Script Path]**: 手順 **[!UICONTROL Gotoを実行するかどうかを決定するECMAScriptへのパス]**。
+   * **[!UICONTROL スクリプト]**: 手順 **[!UICONTROL Gotoを実行するかどうかを決定するECMAScript]**。
 
 >[!CAUTION]
 >
@@ -181,7 +185,7 @@ function check(){
 
 >[!NOTE]
 >
->OR分割の作成について詳しくは、次を参照してください。https://helpx.adobe.com/experience-manager/using/aem64_workflow_servlet.html [](https://helpx.adobe.com/experience-manager/using/aem64_workflow_servlet.html)
+>OR分割の作成の詳細は、次を参照してください。 [https://helpx.adobe.com/experience-manager/using/aem64_workflow_servlet.html](https://helpx.adobe.com/experience-manager/using/aem64_workflow_servlet.html)
 
 ![wf-29](assets/wf-29.png)
 
@@ -197,6 +201,7 @@ function check(){
       * **[!UICONTROL スクリプトのパス]**：スクリプトが格納されたファイルへのパス。
       * **[!UICONTROL スクリプト]**：スクリプトをボックス内に追加します。
       * **[!UICONTROL デフォルトのルート]**：複数のブランチが true に評価される場合は、デフォルトのブランチが適用されます。デフォルトとして指定できるブランチは 1 つだけです。
+
    >[!NOTE]
    >
    >ブランチごとに別個のタブがあります。
@@ -221,7 +226,7 @@ function check(){
 
 ### Participant Step {#participant-step}
 
-**[!UICONTROL 参加者ステップ]**&#x200B;では、特定のアクションの所有者を割り当てることができます。ワークフローは、ユーザーが手動で手順を確認した場合にのみ続行します。 これは、ワークフローに関するアクションを誰かに実行させる場合に使用します。例えば、レビューステップなどです。
+**[!UICONTROL 参加者ステップ]**&#x200B;では、特定のアクションの所有者を割り当てることができます。ワークフローは、ユーザーが手動で手順を確認した場合にのみ続行されます。 これは、ワークフローに関するアクションを誰かに実行させる場合に使用します。 例えば、レビューステップです。
 
 余談になりますが、アクションを割り当てる際には、ユーザー認証を考慮する必要があります。ユーザーは、ワークフローのペイロードであるページにアクセスする必要があるからです。
 
@@ -236,8 +241,9 @@ function check(){
 >
 >次の場合、ワークフロー開始者には常に通知が送信されます。
 >
->* ワークフローが完了しました（完了）。
->* ワークフローが中止（終了）されました。
+>* ワークフローが完了しました（完了しました）。
+>* ワークフローが中止されました（終了されました）。
+
 >
 
 
@@ -262,14 +268,14 @@ function check(){
 * [**[!UICONTROL ユーザー / グループ]**](#step-properties-user-group-tab)
 * **[!UICONTROL ダイアログ]**
 
-   * **[!UICONTROLダイアログパス**:作成するダイアログのダイアログノ [ードへのパス](#dialog-participant-step-creating-a-dialog)。
+   * **[!UICONTROLダイアログパス**: 作成する [ダイアログのダイアログノードへのパス](#dialog-participant-step-creating-a-dialog)。
 
 #### Dialog Participant Step – Creating a dialog{#dialog-participant-step-creating-a-dialog}
 
 ダイアログを作成するには：
 
 * 収集されたデータを[ペイロード内に保存](#dialog-participant-step-storing-data-in-the-payload)する場所を決定します。
-* [ダイアログを定義します。データの収集（および保存）に使用するフィールドの定義も含まれます](#dialog-participant-step-dialog-definition)。
+* [ダイアログを定義します。 データの収集（および保存）に使用するフィールドの定義も含まれます](#dialog-participant-step-dialog-definition)。
 
 #### ダイアログ参加者ステップ - ペイロードにデータを保存 {#dialog-participant-step-storing-data-in-the-payload}
 
@@ -404,7 +410,7 @@ function check(){
 
    >[!CAUTION]
    >
-   >You *must* not change anything in the `/libs` path.
+   >`/libs` パス内の設定は&#x200B;*一切*&#x200B;変更しないでください。
    >
    >
    >This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may be overwritten when you apply either a hotfix or feature pack).
@@ -425,8 +431,9 @@ function check(){
 
    Services must implement the [com.day.cq.workflow.exec.ParticipantStepChooser](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html) interface. このインターフェイスは、次の構成要素を定義します。
 
-   * `SERVICE_PROPERTY_LABEL` フィールド：このフィールドを使用して、参加者選択の名前を指定します。 この名前が、**[!UICONTROL 動的参加者ステップ]**&#x200B;のプロパティで使用可能な参加者選択のリストに表示されます。
-   * `getParticipant` メソッド：動的に解決されるプリンシパルIDを値として返 `String` します。
+   * `SERVICE_PROPERTY_LABEL` フィールド： このフィールドを使用して、参加者選択の名前を指定します。 この名前が、**[!UICONTROL 動的参加者ステップ]**&#x200B;のプロパティで使用可能な参加者選択のリストに表示されます。
+   * `getParticipant` メソッド： 動的に解決されるプリンシパルIDを `String` 値として返します。
+
    >[!CAUTION]
    >
    >The `getParticipant` method returns the dynamically resolved Principal id. この ID は、グループ ID またはユーザー ID のいずれかになります。
@@ -444,7 +451,7 @@ function check(){
 
 次の Java クラスは、`ParticipantStepChooser` インターフェイスを実装します。このクラスは、ワークフローを開始した参加者の名前を返します。The code uses the same logic that the sample script ( `initator-participant-chooser.ecma`) uses.
 
-注釈 `@Property` はフィールドの値をに設 `SERVICE_PROPERTY_LABEL` 定します `Workflow Initiator Participant Chooser`。
+注 `@Property` 釈によって、 `SERVICE_PROPERTY_LABEL` フィールドの値がに設定され `Workflow Initiator Participant Chooser`ます。
 
 ```java
 package com.adobe.example;
@@ -485,7 +492,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 
 In the **[!UICONTROL Dynamic Participant Step]** properties dialog, the **[!UICONTROL Participant Chooser]** list includes the item `Workflow Initiator Participant Chooser (script)`, which represents this service.
 
-「ワークフローモデルが開始されると、ログは、ワークフローを開始し、作業項目を割り当てられたユーザーのIDを示します。 この例では、`admin` ユーザーがワークフローを開始しています。
+「ワークフローモデルが開始されると、ログには、ワークフローを開始したユーザーのIDと、作業項目が割り当てられているユーザーのIDが示されます。 この例では、`admin` ユーザーがワークフローを開始しています。
 
 `13.09.2015 15:48:53.037 *INFO* [10.176.129.223 [1347565733037] POST /etc/workflow/instances HTTP/1.1] com.adobe.example.InitiatorParticipantChooser Assigning Dynamic Participant Step work item to admin`
 
@@ -507,17 +514,17 @@ In the **[!UICONTROL Dynamic Participant Step]** properties dialog, the **[!UICO
 * [**[!UICONTROL ユーザー / グループ]**](#step-properties-user-group-tab)
 * **[!UICONTROL フォーム]**
 
-   * **[!UICONTROLフォームパス**:作成するフォ [ームのパス](#form-participant-step-creating-the-form)。
+   * **[!UICONTROLフォームのパス**: 作成する [フォームへのパス](#form-participant-step-creating-the-form)。
 
 #### フォーム参加者ステップ - フォームの作成 {#form-participant-step-creating-the-form}
 
 通常どおり、**[!UICONTROL フォーム参加者ステップ]**&#x200B;で使用するフォームを作成します。ただし、フォーム参加者ステップ用のフォームには、次の設定が必要です。
 
-* 「 **[!UICONTROL Start of Form]** 」コンポーネントの「 **[!UICONTROL Action Type]** 」プロパティーは、「 `Edit Workflow Controlled Resource(s)`」に設定されている必要があります。
+* Formコンポーネントの **[!UICONTROL 開始では]** 、「 **[!UICONTROL Action Type]** 」プロパティが「」に設定されている必要があり `Edit Workflow Controlled Resource(s)`ます。
 
 * The **[!UICONTROL Start of Form]** component must have a value for the `Form Identifier` property.
 
-* フォームコンポーネントでは、**エレメント名**&#x200B;プロパティを、フィールドデータを保存するノードのパスに設定する必要があります。パスは、ワークフローペイロードコンテンツ内でノードを見つける必要があります。 値には次の形式を使用します。
+* フォームコンポーネントでは、**エレメント名**&#x200B;プロパティを、フィールドデータを保存するノードのパスに設定する必要があります。パスは、ワークフローペイロードコンテンツ内のノードを見つける必要があります。 値には次の形式を使用します。
 
    `./jcr:content/path_to_node`
 
