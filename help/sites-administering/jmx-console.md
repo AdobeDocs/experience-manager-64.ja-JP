@@ -621,7 +621,7 @@ CRX リポジトリに関する情報
 `org.apache.jackrabbit.api.stats.RepositoryStatistics` で定義される、各統計タイプの TimeSeries フィールドの値。
 
 * ドメイン: `com.adobe.granite`
-* タイプ：`TimeSeries`
+* 型：`TimeSeries`
 * Name: One of the following values from the `org.apache.jackrabbit.api.stats.RepositoryStatistics.Type` Enum class:
 
    * BUNDLE_CACHE_ACCESS_COUNTER
@@ -828,7 +828,7 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
  <tbody> 
   <tr> 
    <th>ドメイン</th> 
-   <th>タイプ</th> 
+   <th>型</th> 
    <th>MBean クラス</th> 
   </tr> 
   <tr> 
