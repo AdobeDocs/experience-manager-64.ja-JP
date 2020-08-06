@@ -11,6 +11,9 @@ topic-tags: deploying
 discoiquuid: 56a984a5-4b7f-4a95-8a17-95d2d355bfed
 translation-type: tm+mt
 source-git-commit: 5513b24953438cc6c1b3f0027ff5535b4a1874d8
+workflow-type: tm+mt
+source-wordcount: '718'
+ht-degree: 68%
 
 ---
 
@@ -43,7 +46,7 @@ JDBC ドライバ用の OSGi バンドルの作成手順については、Apache
 
 >[!NOTE]
 >
->一部のSQLドライバーは、既にOSGiバンドルとしてパッケージ化されています。
+>一部のSQLドライバは、既にOSGiバンドルとしてパッケージ化されています。
 >
 >この場合は、jarファイルをinstall-path/crx-quickstart/install/9にコピーします。
 
@@ -67,12 +70,12 @@ JDBC ドライバ用の OSGi バンドルの作成手順については、Apache
 
    1. ZIPアーカイブをhttps://dev.mysql.com/downloads/connector/j/からダウンロードします。
       * バージョン 5.1.38 以降をダウンロードしてください。
-   1. アーカイブか `mysql-connector-java-version-bin.jar` ら（バンドル）を抽出します。
-   1. Webコンソールを使用して、バンドルをインストールして起動します。
+   1. アーカイブからの `mysql-connector-java-version-bin.jar` （バンドル）の抽出
+   1. Webコンソールを使用して、バンドルをインストールおよび開始します。
       * Go to *http://serveraddress:serverport/system/console/bundles*
       * Select **Install/Update**
       * ダウンロードしたZIPアーカイブから抽出したバンドルを参照して選択します
-      * Oracle CorporationのMySQLcom.mysql.jdbc **用JDBCドライバーがアクティブであることを確認し** 、起動します。
+      * Oracle CorporationのMySQLcom.mysql.jdbc **用JDBCドライバーがアクティブであることを確認し、開始します** 。
 
 1. Finally, start AEM with the `crx3` and `crx3rdb` runmodes:
 
@@ -88,19 +91,19 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 
 * `datasource.name:`データソース名。デフォルトは、`oak` です。
 
-* `url:` JDBCで使用する必要があるデータベースのURL文字列です。 データベースタイプごとに独自の URL 文字列の形式が設定されています。詳しくは、後述の [URL 文字列の形式](/help/sites-deploying/rdbms-support-in-aem.md#url-string-formats)を参照してください。
+* `url:` JDBCで使用する必要があるデータベースのURL文字列。 データベースタイプごとに独自の URL 文字列の形式が設定されています。詳しくは、後述の [URL 文字列の形式](/help/sites-deploying/rdbms-support-in-aem.md#url-string-formats)を参照してください。
 
-* `driverClassName:` JDBCドライバーのクラス名。 これは、使用するデータベースと、その後そのデータベースに接続するために必要なドライバによって異なります。 AEMでサポートされるすべてのデータベースのクラス名を次に示します。
+* `driverClassName:` JDBCドライバーのクラス名。 これは、使用するデータベースと、その後接続に必要なドライバによって異なります。 AEMがサポートするすべてのデータベースのクラス名を次に示します。
 
    * `org.postgresql.Driver` PostgreSQLの場合；
-   * `com.ibm.db2.jcc.DB2Driver` （DB2の場合）
-   * `oracle.jdbc.OracleDriver` （Oracleの場合）
+   * `com.ibm.db2.jcc.DB2Driver` for DB2;
+   * `oracle.jdbc.OracleDriver` Oracleの場合
    * `com.mysql.jdbc.Driver`（MySQL および MariaDB、試行用）
    * c `om.microsoft.sqlserver.jdbc.SQLServerDriver` for Microsoft SQL Server (experimental).
 
 * `username:` データベースが実行されるユーザー名。
 
-* `password:` データベースのパスワードです。
+* `password:` データベースのパスワード。
 
 ### URL 文字列の形式 {#url-string-formats}
 
@@ -108,8 +111,8 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 
 * `jdbc:postgresql:databasename` PostgreSQLの場合；
 
-* `jdbc:db2://localhost:port/databasename` （DB2の場合）
-* `jdbc:oracle:thin:localhost:port:SID` （Oracleの場合）
+* `jdbc:db2://localhost:port/databasename` for DB2;
+* `jdbc:oracle:thin:localhost:port:SID` Oracleの場合
 * `jdbc:mysql://localhost:3306/databasename`（MySQL および MariaDB、試行用）
 
 * `jdbc:sqlserver://localhost:1453;databaseName=name` (Microsoft SQL Server （試験的）用)
