@@ -4,13 +4,16 @@ description: アセットのメタデータプロファイルについて理解�
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: af1955ab1fdcf16dd9a9d3ad36336e6c1aac9312
+workflow-type: tm+mt
+source-wordcount: '1232'
+ht-degree: 64%
 
 ---
 
 
 # メタデータプロファイル {#metadata-profiles}
 
-メタデータプロファイルを使用すると、フォルダー内のアセットに初期設定のメタデータを適用できます。メタデータプロファイルを作成し、フォルダーに適用します。その後フォルダーにアップロードするアセットは、メタデータプロファイルで設定したデフォルトのメタデータを継承します。
+メタデータプロファイルを使用すると、フォルダー内のアセットに初期設定のメタデータを適用できます。 メタデータプロファイルを作成し、フォルダに適用します。 その後フォルダにアップロードするアセットは、メタデータプロファイルで設定した初期設定のメタデータを継承します。
 
 ## メタデータプロファイルの追加 {#adding-a-metadata-profile}
 
@@ -19,35 +22,37 @@ source-git-commit: af1955ab1fdcf16dd9a9d3ad36336e6c1aac9312
 
    ![chlimage_1-480](assets/chlimage_1-480.png)
 
-1. Click a component and configure its properties in the **[!UICONTROL Settings]** tab. For example, click the **[!UICONTROL Description]** component and edit its properties.
+1. コンポーネントをクリックし、「**[!UICONTROL 設定]**」タブでプロパティを設定します。例えば、**[!UICONTROL 説明]**&#x200B;コンポーネントをクリックして、そのプロパティを編集します。
 
    ![chlimage_1-481](assets/chlimage_1-481.png)
 
-   Edit the following properties for the **[!UICONTROL Description]** component:
+   **[!UICONTROL 説明]**&#x200B;コンポーネントについて、次のプロパティを編集します。
 
-   * **[!UICONTROL フィールドラベル]**:メタデータプロパティの表示名です。 ユーザーの参照用のみで使用します。
-   * **[!UICONTROL プロパティにマッピング]**：このプロパティの値には、リポジトリに保存される場所にあるアセットノードへの相対パスまたは名前を指定します。The value should always start with `./` because it indicates that the path is under the asset&#39;s node.
+   * **[!UICONTROL フィールドラベル]**: メタデータプロパティの表示名です。 ユーザーの参照用のみで使用します。
+   * **[!UICONTROL プロパティにマップ]**: このプロパティの値は、リポジトリに保存されるアセットノードの相対パス/名前を提供します。 この値は常にと開始する必要があります。これは、パスがアセットのノード下にあることを示している `./` からです。
+
    ![chlimage_1-482](assets/chlimage_1-482.png)
 
-   「**[!UICONTROL プロパティにマッピング]**」に指定した値は、アセットの metadata ノードの下のプロパティとして保存されます。例えば、次のように指定するとします。`/jcr:content/metadata/dc:desc` aem Assetsは、プロパテ **[!UICONTROL ィにマップの名前として]**、アセットのメタデ `dc:desc` ータノードに値を格納します。
+   「**[!UICONTROL プロパティにマッピング]**」に指定した値は、アセットのメタデータノード下のプロパティとして保存されます。例えば、「**[!UICONTROL プロパティにマッピング]**」の名前として `/jcr:content/metadata/dc:desc` を指定した場合、AEM Assets はアセットのメタデータノードに値 `dc:desc` を保存します。
 
-   * **[!UICONTROL デフォルト値]**：メタデータコンポーネントのデフォルト値を追加するには、このプロパティを使用します。For example, if you specify &quot;My description&quot; then this value is assigned to the property `dc:desc` at the asset&#39;s metadata node.
+   * **[!UICONTROL デフォルト値]**：メタデータコンポーネントのデフォルト値を追加するには、このプロパティを使用します。例えば、「My description」と指定すると、この値がアセットのメタデータノードの `dc:desc` プロパティに割り当てられます。
+
    ![chlimage_1-483](assets/chlimage_1-483.png)
 
    >[!NOTE]
    >
-   >新しいメタデータプロパティにデフォルト値を追加する（にまだ存在しない）。 `/jcr:content/metadata` ノード)は、デフォルトではアセットのプロパティページにプロパティとその値を表 **[!UICONTROL 示しま]** せん。 アセットの [!UICONTROL Propertiesページに新しいプロパティを表示するには] 、対応するスキーマフォームを変更します。
+   >新しいメタデータプロパティにデフォルト値を追加します（にまだ存在しない）。 `/jcr:content/metadata` ノード)は、デフォルトでは、アセットの **[!UICONTROL プロパティ]** ページにプロパティとその値を表示しません。 To view the new property on the [!UICONTROL Properties] page of the asset, modify the corresponding schema form.
 
 1. (Optional) Add more components to the **[!UICONTROL Edit Form]** from the **[!UICONTROL Build Form]** tab, and configure their properties in the **[!UICONTROL Settings]** tab. The following properties are available from the **[!UICONTROL Build Form]** tab:
 
 | コンポーネント | プロパティ |
 |---|---|
-| [!UICONTROL セクションヘッダー] | フィールドラベル、 <br> 説明 |
-| [!UICONTROL 1 行のテキスト] | フィールドラベル、 <br> プロパティにマップ、デ <br> フォルト値 |
-| [!UICONTROL 複数値テキスト] | フィールドラベル、 <br> プロパティにマップ、デ <br> フォルト値 |
-| [!UICONTROL 番号] | フィールドラベル、 <br> プロパティにマップ、デ <br> フォルト値 |
-| [!UICONTROL 日付] | フィールドラベル、 <br> プロパティにマップ、デ <br> フォルト値 |
-| [!UICONTROL 標準タグ] | フィールドラベル、 <br> プロパティにマップ、デ <br> フォルト値、説 <br> 明 |
+| [!UICONTROL セクションヘッダー] | Field Label, <br> Description |
+| [!UICONTROL 1 行のテキスト] | Field Label, <br> Map to property, <br> Default Value |
+| [!UICONTROL 複数値テキスト] | Field Label, <br> Map to property, <br> Default Value |
+| [!UICONTROL 番号] | Field Label, <br> Map to property, <br> Default Value |
+| [!UICONTROL 日付] | Field Label, <br> Map to property, <br> Default Value |
+| [!UICONTROL 標準タグ] | Field Label, <br> Map to property, <br> Default Value, <br> Description |
 
 ![chlimage_1-484](assets/chlimage_1-484.png)
 
@@ -76,7 +81,7 @@ source-git-commit: af1955ab1fdcf16dd9a9d3ad36336e6c1aac9312
 1. Click **[!UICONTROL Delete Metadata Profiles]** in the toolbar.
 1. In the dialog box, click **[!UICONTROL Delete]** to confirm the delete operation. メタデータプロファイルがリストから削除されます。
 
-## Apply a metadata profile to folders {#applying-a-metadata-profile-to-folders}
+## フォルダーへのメタデータプロファイルの適用 {#applying-a-metadata-profile-to-folders}
 
 フォルダーにメタデータプロファイルを割り当てると、サブフォルダーは自動的に親フォルダーのプロファイルを継承します。つまり、フォルダーに適用できるのは 1 つのメタデータプロファイルのみとなります。そのため、アセットをアップロード、保存、使用およびアーカイブする場所のフォルダー構造については入念に検討してください。
 
@@ -88,25 +93,25 @@ source-git-commit: af1955ab1fdcf16dd9a9d3ad36336e6c1aac9312
 
 特定のフォルダーまたはすべてのアセットにグローバルにメタデータプロファイルを適用できます。
 
-### Apply metadata profiles to specific folders {#applying-metadata-profiles-to-specific-folders}
+### 特定のフォルダーへのメタデータプロファイルの適用 {#applying-metadata-profiles-to-specific-folders}
 
-**[!UICONTROL ツール]**&#x200B;メニュー内から、またはフォルダー内にいる場合は「**[!UICONTROL プロパティ]**」から、メタデータプロファイルをフォルダーに適用できます。このセクションでは、メタデータプロファイルをフォルダーに適用する両方の方法について説明します。
+**[!UICONTROL ツール]**&#x200B;メニュー内から、またはフォルダー内にいる場合は「**[!UICONTROL プロパティ]**」から、メタデータプロファイルをフォルダーに適用できます。この節では、メタデータプロファイルをフォルダーに適用する両方の方法について説明します。
 
 既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
-#### Apply metadata profiles to folders from Profiles user interface {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
+#### プロファイルユーザーインターフェイスからのフォルダーへのメタデータプロファイルの適用 {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
 
-1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
+1. AEM のロゴをタップし、**[!UICONTROL ツール／アセット／メタデータプロファイル]**&#x200B;に移動します。
 1. 1 つまたは複数のフォルダーに適用するメタデータプロファイルを選択します。
 
    ![chlimage_1-490](assets/chlimage_1-490.png)
 
-1. Tap **[!UICONTROL Apply Metadata Profile to Folder(s)]** and select the folder or multiple folders you want use to receive the newly uploaded assets and tap **[!UICONTROL Done]**. 既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
+1. 「**[!UICONTROL メタデータプロファイルをフォルダーに適用]**」をタップし、新たにアップロードしたアセットを受け取る 1 つまたは複数のフォルダーを選択して、「**[!UICONTROL 完了]**」をタップします。既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
-#### Apply metadata profiles to folders from Properties {#applying-metadata-profiles-to-folders-from-properties}
+#### 「プロパティ」からのフォルダーへのメタデータプロファイルの適用 {#applying-metadata-profiles-to-folders-from-properties}
 
-1. In the left rail, tap **[!UICONTROL Assets]** then navigate to the folder that you want to apply a metadata profile to.
-1. On the folder, tap the check mark to select it, then tap  **[!UICONTROL Properties]**.
+1. 左側のレールで、「**[!UICONTROL アセット]**」をタップし、メタデータプロファイルを適用するフォルダーに移動します。
+1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
 
 1. 「**[!UICONTROL メタデータプロファイル]**」タブを選択し、ドロップダウンメニューからプロファイルを選択して、「**[!UICONTROL 保存]**」をクリックします。
 
@@ -114,9 +119,9 @@ source-git-commit: af1955ab1fdcf16dd9a9d3ad36336e6c1aac9312
 
    既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
-### Apply a metadata profile globally {#applying-a-metadata-profile-globally}
+### メタデータプロファイルのグローバルな適用 {#applying-a-metadata-profile-globally}
 
-特定のフォルダーにプロファイルを適用できるだけでなく、グローバルにプロファイルを適用することもできます。これにより、AEM アセットにアップロードされている、すべてのフォルダー内にあるすべてのコンテンツに、選択したプロファイルを適用できます。メタデータプロファイルをグローバルに適用するには、次の手順に従います。
+特定のフォルダーにプロファイルを適用できるだけでなく、グローバルにプロファイルを適用することもできます。これにより、AEM Assets にアップロードされている、すべてのフォルダー内にあるすべてのコンテンツに、選択したプロファイルを適用できます。メタデータプロファイルをグローバルに適用するには、次の手順に従います。
 
 1. 次のいずれかの操作をおこないます。
 
@@ -124,7 +129,7 @@ source-git-commit: af1955ab1fdcf16dd9a9d3ad36336e6c1aac9312
 
       ![chlimage_1-492](assets/chlimage_1-492.png)
 
-   * Navigate to CRXDE Lite to the following node: `/content/dam/jcr:content`. プロパティを追加し、「す `metadataProfile:/etc/dam/metadata/dynamicmedia/<name_of_metadata_profile>` べて保存」 **[!UICONTROL をタップしま]**&#x200B;す。
+   * CRXDE Lite で、`/content/dam/jcr:content` ノードに移動します。プロパティ `metadataProfile:/etc/dam/metadata/dynamicmedia/<name_of_metadata_profile>` を追加し、「**[!UICONTROL すべて保存]**」をタップします。
 
       ![chlimage_1-493](assets/chlimage_1-493.png)
 
@@ -132,13 +137,13 @@ source-git-commit: af1955ab1fdcf16dd9a9d3ad36336e6c1aac9312
 
 フォルダーからメタデータプロファイルを削除すると、サブフォルダーは自動的に親フォルダーのプロファイルの削除状態を継承します。ただし、フォルダー内で実行されたファイルの処理はそのまま維持されます。
 
-**[!UICONTROL ツール]**&#x200B;メニュー内から、またはフォルダー内にいる場合は「**[!UICONTROL プロパティ]**」から、メタデータプロファイルをフォルダーから削除できます。このセクションでは、メタデータプロファイルをフォルダーから削除する両方の方法について説明します。
+**[!UICONTROL ツール]**&#x200B;メニュー内で、またはフォルダー内にいる場合は「**[!UICONTROL プロパティ]**」で、メタデータプロファイルをフォルダーから削除できます。この節では、メタデータプロファイルをフォルダーから削除する両方の方法について説明します。
 
 ### Remove metadata profiles from folders via Profiles user interface {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
-プロファイルユーザーインターフェイスを使用してフォルダーからメタデータプロファイルを削除するには、次の手順に従います。
+プロファイルのユーザーインターフェイスを介して、フォルダからメタデータプロファイルを削除するには、次の手順に従います。
 
-1. Tap the AEM logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**.
+1. AEM のロゴをタップし、**[!UICONTROL ツール／アセット／メタデータプロファイル]**&#x200B;に移動します。
 1. 1 つまたは複数のフォルダーから削除するメタデータプロファイルを選択します。
 1. Tap **[!UICONTROL Remove Metadata Profile from Folder(s)]** and select the folder or multiple folders you want use to remove a profile from, then tap **[!UICONTROL Done]**.
 
@@ -146,8 +151,8 @@ source-git-commit: af1955ab1fdcf16dd9a9d3ad36336e6c1aac9312
 
 ### Remove metadata profiles from folders by way of Properties {#removing-metadata-profiles-from-folders-via-properties}
 
-1. Tap the AEM logo and navigate **[!UICONTROL Assets]** and then to the folder that you want to remove an metadata profile from.
-1. On the folder, tap the check mark to select it, then tap **[!UICONTROL Properties]**.
-1. 「メタデー **[!UICONTROL タプロファイル]** 」タブを選択し、ドロ **[!UICONTROL ップダウンメニューから「なし]** 」を選択します。 「**[!UICONTROL 保存]**」をタップします。
+1. AEM のロゴをタップして「**[!UICONTROL アセット]**」に移動した後、メタデータプロファイルを削除するフォルダーに移動します。
+1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
+1. 「 **[!UICONTROL メタデータプロファイル]** 」タブを選択し、ドロップダウンメニューから「 **[!UICONTROL なし]** 」を選択します。 「**[!UICONTROL 保存]**」をタップします。
 
 既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
