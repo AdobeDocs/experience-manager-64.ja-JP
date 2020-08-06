@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8c399a27-abdb-41fb-bd76-f30d22f1d68f
 translation-type: tm+mt
 source-git-commit: 0e1dc3ea47f03cd2e0cbeb2bf98eeec9ccc5d64f
+workflow-type: tm+mt
+source-wordcount: '655'
+ht-degree: 83%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: 0e1dc3ea47f03cd2e0cbeb2bf98eeec9ccc5d64f
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、 [AEM 6.4 Service Pack 2(6.4.2.0)が必要です](/help/release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2( [6.4.2.0)の適用が必要](/help/release-notes/sp-release-notes.md)です。
 
 >[!CAUTION]
 >
->[すべてのフラグメントを作成する場合](/help/assets/content-fragments-models.md) 、コンテンツフラグメントモデルが推奨されるようになりました。
+>[コンテンツフラグメントモデル](/help/assets/content-fragments-models.md)は、すべてのフラグメント作成で使用することが推奨されています。
 >
 >コンテンツフラグメントモデルは、We.Retail のすべてのサンプルでも使用されています。
 
@@ -37,28 +40,27 @@ source-git-commit: 0e1dc3ea47f03cd2e0cbeb2bf98eeec9ccc5d64f
 
 * `/apps/settings/dam/cfm/templates`
 
-   
-標準搭載のテンプレートをオーバーレイしたり、実行時に拡張/変更を行うことを意図していない、顧客固有のアプリケーション全体のテンプレートを提供したりする場所です。
+   標準搭載のテンプレートをオーバーレイする場所、または実行時に拡張/変更することを意図していない、顧客固有のアプリケーション全体のテンプレートを提供する場所です。
 
 * `/conf/global/settings/dam/cfm/templates`
 
-   
-実行時に変更する必要がある、インスタンス全体の顧客固有のテンプレートの場所。
+   実行時に変更する必要がある、インスタンス全体の顧客固有のテンプレートの場所。
 
 The order of precedence is (in descending order) `/conf`, `/apps`, `/libs`.
 
 >[!CAUTION]
 >
->You ***must*** not change anything in the `/libs` path.
+>`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
 >
->This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may well be overwritten when you apply either a hotfix or feature pack).
+>`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
 >1. Recreate the required item (i.e. as it exists in `/libs`) under `/apps`
    >
    >
-1. Make any changes within `/apps`
+1. `/apps` 内で変更作業をおこないます。
+
 >
 
 
@@ -144,7 +146,7 @@ conf
   <tr> 
    <td><code>version</code></td> 
    <td><p><code>Long</code></p> <p>必須</p> </td> 
-   <td><p>コンテンツ構造のバージョン。現在サポートされています。</p> <p><strong>注意</strong>:現在、このパラメーターはに設定する必要がありま <code>2</code>す。<br /> </p> </td> 
+   <td><p>コンテンツ構造のバージョン。現在サポートされています。</p> <p><strong>注意</strong>: 現在、このパラメーターはに設定する必要があり <code>2</code>ます。<br /> </p> </td> 
   </tr> 
  </tbody> 
 </table>
