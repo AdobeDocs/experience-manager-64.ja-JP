@@ -16,7 +16,7 @@ ht-degree: 89%
 # AEM 6.4 Authoring User Guide {#authoring}
 
 + [オーサリングユーザーガイドの概要](home.md)
-+ AEMオーサリングに不可欠なタスク、ツール、概念 {#essentials}
++ AEMオーサリングに不可欠なタスク、ツールおよび概念 {#essentials}
    + [作成者が行う最初の手順](first-steps.md)
    + [ページのオーサリングのクイックガイド](qg-page-authoring.md)
    + [オーサリングの概念](author.md)
