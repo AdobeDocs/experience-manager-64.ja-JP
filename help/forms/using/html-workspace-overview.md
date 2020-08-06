@@ -35,7 +35,7 @@ Forms アプリケーションを作成してビジネスプロセスを自動�
 
 AEM Forms Workspace では、以下のタスクを実行できます。
 
-**開始プロセス：** AEM Forms Workspaceでは、組織で設計および設定されたとおりにプロセスがカテゴリされます。 頻繁に使用するカテゴリをお気に入りに追加して、これらのカテゴリにすばやくアクセスできます。プロセスの開始時は通常、Forms ワークフローによってコントロールされるビジネスプロセスを開始するためのフォームに入力する必要があります。詳しくは、「[プロセスの開始](/help/forms/using/starting-processes.md)」を参照してください。
+**開始プロセス：** AEM Formsワークスペースは、組織が設計および設定したとおりにプロセスをカテゴリします。 頻繁に使用するカテゴリをお気に入りに追加して、これらのカテゴリにすばやくアクセスできます。プロセスの開始時は通常、Forms ワークフローによってコントロールされるビジネスプロセスを開始するためのフォームに入力する必要があります。詳しくは、「[プロセスの開始](/help/forms/using/starting-processes.md)」を参照してください。
 
 **表示とタスクに基づく行動：** TODOリストを表示すると、割り当てられているビジネスプロセスのタスク、または自分が所属するグループ、あるいは他のユーザーの共有タスクが表示されます。 必要に応じてタスクを開き、操作して完了することができます。タスクを完了するには通常、情報を入力し、フォームを承認するか拒否します。詳しくは、「[TODO リストの操作](/help/forms/using/todo-lists.md)」を参照してください。
 
@@ -140,7 +140,7 @@ AEM Forms Workspace の成果物には、CRX にデプロイされる CRX パッ
 
 新しいプロセスではデフォルトで、デスクトップ上では PDF 形式、タブレット上では HTML 形式で XDP フォームがレンダリングされます。XDP フォームはいつでも HTML 形式でレンダリングできます。詳しくは、「[新しいレンダリングと送信サービス](/help/forms/using/new-render-submit-service.md)」を参照してください。
 
-[Mobile Forms](https://helpx.adobe.com/livecycle/help/mobile-forms/introduction.html) ( [](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)プロファイルと連携)機能は、XDPフォームのHTMLレンダリングを有効にします。 「新規 HTML フォームのレンダリング」はデフォルトで `default.html` プロファイルを使用しますが、これは変更することができます。XDP フォームを HTML 形式でレンダリングする前に実行されたカスタム変更を追加することもできます。
+[モバイルForms](https://helpx.adobe.com/livecycle/help/mobile-forms/introduction.html) 機能は、 [](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)プロファイルと連携して、XDPフォームのHTMLレンダリングを有効にします。 「新規 HTML フォームのレンダリング」はデフォルトで `default.html` プロファイルを使用しますが、これは変更することができます。XDP フォームを HTML 形式でレンダリングする前に実行されたカスタム変更を追加することもできます。
 
 ## AEM Forms Workspace アプリケーション {#aem-forms-workspace-app}
 
