@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: fd96f30c-0616-445e-adb9-050d52862ffc
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '151'
+ht-degree: 87%
 
 ---
 
@@ -33,5 +36,5 @@ Adobe Campaign は、あらゆるオンラインチャネルとオフライン�
 
 >[!NOTE]
 >
->To review a related AEM Community article, see: [Integrating Adobe Experience Manager and Adobe Campaign Standard to create Newletters](https://helpx.adobe.com/experience-manager/using/aem_campaign.html).
+>To review a related AEM Community article, see: [Integrating Adobe Experience Manager and Adobe Campaign Standard to create Newletters](https://helpx.adobe.com/jp/experience-manager/using/aem_campaign.html).
 
