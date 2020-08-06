@@ -12,6 +12,9 @@ discoiquuid: 44dfa10f-497e-473f-95d4-8dccae7ebf8e
 pagetitle: Deploying eCommerce with SAP Commerce Cloud
 translation-type: tm+mt
 source-git-commit: 94dbed719c2f3360db6ba5b414230fd3f79f7955
+workflow-type: tm+mt
+source-wordcount: '731'
+ht-degree: 89%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: 94dbed719c2f3360db6ba5b414230fd3f79f7955
 >
 >このページには hybris Web サイトへのリンクが含まれています。ページによっては、ログインアカウントが必要となる場合があります。
 
-## SAP Commerce cloudでのeコマースのデプロイ {#deploying-ecommerce-with-sap-commerce-cloud}
+## SAPCommerce Cloudでのeコマースの導入 {#deploying-ecommerce-with-sap-commerce-cloud}
 
 >[!NOTE]
 >
@@ -50,6 +53,7 @@ The hybris extension of the eCommerce Integration Framework has been updated to 
 >* hybris 6.4（OCC バージョン 2 付属）までをサポートします。
 >* [hybris 5 サーバー](https://www.hybris.com/en/architecture-technology)を実行するには Java 7 が必要です。
 >* hybris のアドオンである [Telco Accelerator](https://www.hybris.com/en/products/telecommunication) は、AEM 拡張でサポートされません。
+
 >
 
 
@@ -58,7 +62,7 @@ The hybris extension of the eCommerce Integration Framework has been updated to 
 
 e コマース機能をインストールするには、以下が必要です。
 
-* お客様の傲慢なサーバ
+* お使いのHybrisサーバー
 * AEM e コマースフレームワーク：
 
    * AEM の標準インストールの一部です。
@@ -139,7 +143,7 @@ e コマース機能をインストールするには、以下が必要です。
    >
    >Press `Return` when required.
 
-1. 以下のファイルを、抽出した傲慢な配布のルートフォルダーにダウンロードします。
+1. 以下のファイルを、抽出した傲慢さの配布のルートフォルダにダウンロードします。
 
    ```
        <hybris-root-directory>
