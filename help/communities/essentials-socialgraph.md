@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f8d85d72-0215-4680-a334-e37a530fba58
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '278'
+ht-degree: 23%
 
 ---
 
@@ -21,7 +24,7 @@ The ability for a Community member to follow [activities](essentials-activities.
 
 The `follow`component must be associated with another resource, and this association is already established for existing Communities members and features in a [community site](overview.md#communitiessites).
 
-The `following`component lists the members that are either following the current member or are being followed by the current member. コミュニティサイト用に設定されたユーザプロファイルに、会員間の関係のソーシャルグラフを含める。
+The `following`component lists the members that are either following the current member or are being followed by the current member. 会員間の関係のこのソーシャルグラフは、コミュニティサイト用に設定されたユーザプロファイルに含まれる。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -35,7 +38,7 @@ The `following`component lists the members that are either following the current
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
-   <td>いいえ</td> 
+   <td>不可</td> 
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td> 
@@ -59,10 +62,10 @@ The `following`component lists the members that are either following the current
     <ul> 
      <li>名前: <strong><code>outgoing</code></strong></li> 
      <li>タイプ：Boolean</li> 
-     <li>値:<br /> 
+     <li>値：<br /> 
       <ul> 
-       <li><i>true </i>— コンポ <code>following</code> ーネントは、現在ログインしているメンバーを一覧表示します。 <code>follows</code></li> 
-       <li><i>false </i>— コンポ <code>following</code> ーネントは、現在サインインしてい <code>follow </code>るメンバーを表示します。</li> 
+       <li><i>true </i>- <code>following</code> コンポーネントは、現在サインインしているメンバをリストします。 <code>follows</code></li> 
+       <li><i>false </i>- <code>following</code> コンポーネントは、現在サインインしているメンバ <code>follow </code>をリストします。</li> 
       </ul> </li> 
     </ul> <p>Defaults to <i>true</i> if the property is missing. 現在、作成者モードで編集ダイアログを使用してこのプロパティを設定することはできません。 The property must be added to an instance of the <code>following </code>node using <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td> 
   </tr>
@@ -73,7 +76,7 @@ The `following`component lists the members that are either following the current
 
 | **resourceType** | social/socialgraph/components/hbs/following |
 |---|---|
-| [**インクルード可能&#x200B;**](scf.md#add-or-include-a-communities-component) | いいえ |
+| [**インクルード可能&#x200B;**](scf.md#add-or-include-a-communities-component) | 不可 |
 | **テンプレート** | /libs/social/socialgraph/components/hbs/following/following.hbs |
 | **css** | /libs/social/socialgraph/components/hbs/following/clientlibs/following.css |
 
