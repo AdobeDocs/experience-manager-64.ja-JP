@@ -10,6 +10,9 @@ topic-tags: correspondence-management
 discoiquuid: afeb9f4d-3feb-4a0e-8884-e3ec1309b33b
 translation-type: tm+mt
 source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+workflow-type: tm+mt
+source-wordcount: '496'
+ht-degree: 91%
 
 ---
 
@@ -71,7 +74,7 @@ AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES パッケージをインストールす
 
 バランスライトのテンプレートは、会社のロゴが右に配置され、受信者の住所をレターに入力するスペースが設けられています。バランスライトのテンプレートには、レターが複数ページにわたる場合にリフローできるフッターも含まれています。
 
-![balancedright](assets/balancedright.png)
+![balanceright](assets/balancedright.png)
 
 バランスライトのテンプレートを使用して作成されたレターの PDF プレビュー
 
