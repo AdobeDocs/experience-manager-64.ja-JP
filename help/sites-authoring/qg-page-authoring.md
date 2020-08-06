@@ -144,6 +144,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
       * サイドパネルを開く。
       * 「コンポーネント」タブを選択する（[コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)）。
       * 必要なコンポーネントをページにドラッグする。
+
       サイドパネルは、次のアイコンで開く（および閉じる）ことができます。
 
       ![](do-not-localize/screen_shot_2018-03-21at160738.png)
@@ -153,6 +154,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
       * タップまたはクリックしてコンポーネントツールバーを開きます。ダイアログを開くには、**編集**（鉛筆）アイコンを使用します。
       * タップ＆ホールドを使用するか、またはゆっくりダブルクリックして、コンポーネント用のインプレースエディターを開きます。使用可能なアクションが表示されます（一部のコンポーネントでは、このアクションが限定されます）。
       * 実行できるすべてのアクションを表示するには、次のアイコンを使用して全画面表示モードに切り替えます。
+
       ![](do-not-localize/screen_shot_2018-03-21at160706.png)
 
    * [既存のコンポーネントのプロパティを設定します。](/help/sites-authoring/editing-content.md#component-edit-dialog)
@@ -175,12 +177,14 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    * ページに[注釈を追加](/help/sites-authoring/annotations.md#annotations)します。
 
       * **注釈**&#x200B;モード（吹き出しアイコン）を選択します。**注釈を追加**（プラス）アイコンを使用して注釈を追加します。右上の X を使用して注釈モードを終了します。
+
       ![](do-not-localize/screen_shot_2018-03-21at160813.png)
 
    * [ページをプレビューします](/help/sites-authoring/editing-content.md#preview-mode)（パブリッシュ環境での表示方法を確認します）。
 
       * ツールバーから「**プレビュー**」を選択します。
    * 「**編集**」ドロップダウンセレクターを使用して、編集モードに戻ります（またはその他のモードを選択します）。
+
    >[!NOTE]
    >
    >コンテンツのリンクを使用して移動するには、[プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)を使用する必要があります。
@@ -196,6 +200,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
       * 該当するリソースの[クイックアクション（カード表示／デスクトップのみ）](#quick-actions-card-view-desktop-only)
       * ツールバー（[ページが選択されている](#selecting-your-page-for-further-action)場合）
+
    ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
 
 * ページのプロパティが表示されます。必要に応じて変更を加え、「保存」を使用してそれらを保持します。
@@ -218,12 +223,14 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
       * 該当するリソースの[クイックアクション（カード表示／デスクトップのみ）](#quick-actions-card-view-desktop-only)
       * （[ページが選択されている](#selecting-your-page-for-further-action)場合）ツールバー（「[後で公開する](/help/sites-authoring/publishing-pages.md#manage-publication)」にアクセスすることもできます）
+
    ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
 
 * [ページの編集](#editing-your-page-content)中に次の操作を実行します。
 
    1. **ページ情報**&#x200B;メニューを開きます。
    1. 「**ページを公開**」を選択します。
+
    ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
 * コンソールからページを非公開にする場合は、「**公開を管理**」オプションからのみおこなうことができます。このオプションは、ツールバーでのみ使用できます（クイックアクションからは使用できません）。
