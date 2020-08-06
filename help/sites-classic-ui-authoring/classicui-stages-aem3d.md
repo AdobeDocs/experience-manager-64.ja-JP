@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: cbcfbe88-e60c-446c-bbfe-2509831d6c22
 translation-type: tm+mt
 source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 78%
 
 ---
 
@@ -25,5 +28,5 @@ source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
 
 ステージのファイル形式によって、そのステージで使用できるレンダラーが決まります。For example, if Autodesk® Maya® is used for high-quality rendering, the stage must be in `.ma` or `.mb` format. デフォルトの Rapid Refine™ レンダラーのみを使用する場合は、サポートされているすべてのステージファイル形式を使用できます。
 
-AEMにアップロードする前に、出力画像のタイプとサイズを除くAEM 3Dのすべてのレンダリング設定を事前設定し、ステージファイルに保存する必要があります。
+AEM 3Dのすべてのレンダリング設定（出力画像のタイプとサイズを除く）は、AEMにアップロードする前に、事前に設定してステージファイルに保存する必要があります。
 
