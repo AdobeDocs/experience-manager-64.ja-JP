@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9d2dba11-0d2d-4aed-b941-c8ade9bb7bfa
 translation-type: tm+mt
 source-git-commit: 93d0bb274c87ecb272583aaf2cb04b0f5df9f4f7
+workflow-type: tm+mt
+source-wordcount: '2468'
+ht-degree: 72%
 
 ---
 
@@ -127,6 +130,7 @@ When you edit a model, the available steps appear in the various groups of the *
    * **[!UICONTROL フィルター]**&#x200B;を使用して特定のステップのみを表示する。
    * ドロップダウンセレクターを使用して、選択対象を特定のステップのグループに限定する。
    * Select the Show Description icon ![wf-stepinfo-icon](assets/wf-stepinfo-icon.png) to show more details about the appropriate step.
+
    ![wf-02](assets/wf-02.png)
 
 1. 対象のステップをドラッグしてモデル内の目的の場所に移動します。
@@ -157,6 +161,7 @@ You can **Configure** and customize the behavior of a workflow step using the **
 
    * Tap the step in the workflow model and select **[!UICONTROL Configure]** from the component toolbar.
    * ステップをダブルクリックします。
+
    >[!NOTE]
    >
    >AEM と共にインストールされる主なステップコンポーネントについては、[ワークフローステップのリファレンス](/help/sites-developing/workflows-step-ref.md)を参照してください。
@@ -190,25 +195,25 @@ You can **Configure** and customize the behavior of a workflow step using the **
 
 ### タッチ UI でワークフローモデルを使用可能にする {#make-workflow-models-available-in-touchui}
 
-If a workflow model is present in Classic UI, but missing in the selection popup menu in the **[!UICONTROL Timeline]** rail of Touch UI, then follow the configuration to make it available. 次の手順は、「Request for Activation」と呼ばれるワークフローモデルの使 **[!UICONTROL 用方法を示します]**。
+If a workflow model is present in Classic UI, but missing in the selection popup menu in the **[!UICONTROL Timeline]** rail of Touch UI, then follow the configuration to make it available. 次の手順は、アクティベーションの **[!UICONTROL 要求と呼ばれるワークフローモデルの使用を説明しています]**。
 
-1. 該当するモデルがタッチ対応 UI で使用できないことを確認します。Access an asset using `/assets.html/content/dam` path. アセットを選択します。左レールの「**[!UICONTROL タイムライン]**」を開きます。「ワー **[!UICONTROL クフローを開始]** 」をクリックし、 **[!UICONTROL Activation]** Request for Activationモデルがポップアップリストに表示されないことを確認します。
+1. 該当するモデルがタッチ対応 UI で使用できないことを確認します。Access an asset using `/assets.html/content/dam` path. アセットを選択します。左レールの「**[!UICONTROL タイムライン]**」を開きます。「 **[!UICONTROL 開始ワークフロー]** 」をクリックし、「アクティベーション **[!UICONTROL 要求]** 」モデルがポップアップリストに存在しないことを確認します。
 
-1. ツール/一 **[!UICONTROL 般/タグに移動します]**。 「**[!UICONTROL ワークフロー]**」を選択します。
+1. **[!UICONTROL ツール/一般/タグ付けに移動します]**。 「**[!UICONTROL ワークフロー]**」を選択します。
 
 1. Select **[!UICONTROL Create > Create Tag]**. Set **[!UICONTROL Title]** as `DAM` and **[!UICONTROL Name]** as `dam`. 「**[!UICONTROL 送信]**」を選択します。
    ![ワークフローモデルでタグを作成する](assets/workflow_create_tag.png)
 
-1. Navigate to **[!UICONTROL Tools > Workflow > Models]**. 「アクテ **[!UICONTROL ィベーションのリクエスト]**」を選択し、「編集」を **[!UICONTROL 選択します]**。
+1. Navigate to **[!UICONTROL Tools > Workflow > Models]**. 「 **[!UICONTROL アクティベーションの]**&#x200B;要求 **[!UICONTROL 」を選択し、「]**&#x200B;編集」を選択します。
 
-1. 「編集」 **[!UICONTROL を選択し]** 、「ワークフローモデル **[!UICONTROL のプロパティ」を開きます]**。 Go to the **[!UICONTROL Basic]** tab.
+1. 「 **[!UICONTROL 編集]** 」を選択し、「 **[!UICONTROL ワークフローモデルのプロパティ]**」を開きます。 Go to the **[!UICONTROL Basic]** tab.
 
-1. 「タグ」フ `Workflow : DAM` ィー **[!UICONTROL ルドに追加]** 。 チェックマークを付けて選択を確定します。
+1. 「タグ `Workflow : DAM` 」フィ追加ールドに追加します **** 。 選択を確認し、チェックマークを付けます。
 
-1. 「保存して閉じる」でタグの追加を **[!UICONTROL 確認します]**。
+1. 「 **[!UICONTROL 保存して閉じる]**」でタグの追加を確認します。
    ![モデルのページプロパティの編集](assets/workflow_model_edit_activation1.png)
 
-1. 同期を使用してプロセスを完 **[!UICONTROL 了します]**。 タッチ対応UIでワークフローを使用できるようになりました。
+1. 「 **[!UICONTROL 同期]**」を使用してプロセスを完了します。 タッチ対応UIでワークフローが利用できるようになりました。
 
 ### マルチリソースのサポートのためのワークフローの設定 {#configuring-a-workflow-for-multi-resource-support}
 
@@ -316,7 +321,7 @@ If a workflow model is present in Classic UI, but missing in the selection popup
 
 例えば、新しいワークフローを次のようにテストします。
 
-1. [コンソールからワークフロー](/help/sites-administering/workflows-starting.md) ・モデルを起動します。
+1. [コンソールからワークフローモデル](/help/sites-administering/workflows-starting.md) を開始します。
 1. **[!UICONTROL ペイロード]**&#x200B;を定義して確定します。
 
 1. ワークフローが進行するように、必要なアクションを実行します。
@@ -353,6 +358,7 @@ To illustrate some of the possibilities for creating a workflow, the following e
 
    * 「**[!UICONTROL 電子メールでユーザーに通知します]**」を有効にします。
    * Select `Administrator` ( `admin`) for the **[!UICONTROL User/Group]** field.
+
    >[!NOTE]
    >
    >電子メールを送信するには、[メールサービスとユーザーアカウントの詳細を設定する必要があります](/help/sites-administering/notification.md)。
@@ -363,9 +369,9 @@ To illustrate some of the possibilities for creating a workflow, the following e
 
 1. Drag an **[!UICONTROL Or Split]** onto the workflow and position it between `Validate Content` and **[!UICONTROL Flow End]**.
 1. **[!UICONTROL OR 分割]**&#x200B;を設定用に開きます。
-1. 次の設定をおこないます。
+1. 設定:
 
-   * **[!UICONTROL 共通]**:2つの **[!UICONTROL 分岐を選択]**
+   * **[!UICONTROL 共通]**: 分岐 **[!UICONTROL 2を選択]**
    * **[!UICONTROL ブランチ 1]**：「**[!UICONTROL デフォルトのルート]**」を選択します。
    * **[!UICONTROL ブランチ 2]**：「**[!UICONTROL デフォルトのルート]**」を選択しません。
 
@@ -374,12 +380,12 @@ To illustrate some of the possibilities for creating a workflow, the following e
 
    * **[!UICONTROL タイトル]**: `Reject Publish Request`
    * **[!UICONTROL ユーザー / グループ]**：`projects-administrators` など
-   * **[!UICONTROL 電子メールでユーザーに通知]**:ユーザーに電子メールで通知する場合は、をアクティブにします。
+   * **[!UICONTROL 電子メールでユーザーに通知]**: ユーザーに電子メールで通知する場合にアクティブ化します。
 
 1. **[!UICONTROL プロセスステップ]**&#x200B;を右側のブランチにドラッグし、プロパティを開き、次の値を指定してから変更内容を確定します。
 
    * **[!UICONTROL タイトル]**: `Publish Page as Requested`
-   * **[!UICONTROL プロセス]**:を選択しま `Activate Page`す。 このプロセスは、選択されているページをパブリッシュインスタンスに公開します。
+   * **[!UICONTROL プロセス]**: を選択 `Activate Page`します。 このプロセスは、選択されているページをパブリッシュインスタンスに公開します。
 
 1. 「**[!UICONTROL 同期]**」（エディターのツールバー）をクリックし、ランタイムモデルを生成します。
 
