@@ -10,25 +10,28 @@ topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '689'
+ht-degree: 61%
 
 ---
 
 
 # HTML5 フォームのカスタムプロファイルの作成 {#creating-a-custom-profile-for-html-forms}
 
-A profile is a resource node in [Apache Sling](https://sling.apache.org/). HTML5フォームレンダリングサービスのカスタムバージョンを表します。 HTML5フォームレンダリングサービスを使用して、HTML5フォームの外観、動作、および操作をカスタマイズできます。 A profile node exists in the `/content` folder in the JCR repository. You can place the node directly under the `/content` folder or any subfolder of the `/content` folder.
+A profile is a resource node in [Apache Sling](https://sling.apache.org/). HTML5フォームレンダリングサービスのカスタムバージョンを表します。 HTML5フォームレンダリングサービスを使用して、HTML5フォームの外観、動作、およびやりとりをカスタマイズできます。 A profile node exists in the `/content` folder in the JCR repository. You can place the node directly under the `/content` folder or any subfolder of the `/content` folder.
 
-Profile ノードには **xfaforms/profile** のデフォルト値を持つ **sling:resourceSuperType**&#x200B;プロパティがあります。ノードのレンダリングスクリプトは/libs/xfaforms/nodeにあります。プロファイル
+Profile ノードには **xfaforms/profile** のデフォルト値を持つ **sling:resourceSuperType**&#x200B;プロパティがあります。ノードのレンダリングスクリプトは/libs/xfaforms/プロファイルにあります。
 
-Sling スクリプトは JSP スクリプトです。JSP スクリプトは要求されたフォームと必要な JS / CSS アーティファクトの HTML を組み立てるためのコンテナとして機能します。これらの Sling スクリプトは&#x200B;**プロファイルレンダラースクリプトとも呼ばれます。** プロファイルレンダラーは、要求されたフォームをレンダリングするためにForms OSGiサービスを呼び出します。
+Sling スクリプトは JSP スクリプトです。JSP スクリプトは要求されたフォームと必要な JS / CSS アーティファクトの HTML を組み立てるためのコンテナとして機能します。これらの Sling スクリプトは&#x200B;**プロファイルレンダラースクリプトとも呼ばれます。** プロファイルレンダラーはFormsOSGiサービスを呼び出して要求されたフォームをレンダリングします。
 
-プロファイルスクリプトは、GETおよびPOST要求の場合、html.jspとhtml.POST.jspにあります。 これらのファイルをコピーして変更することで、上書きして独自のカスタマイズを追加できます。インプレースで変更を行わないでください。パッチの更新によって、このような変更が上書きされます。
+プロファイルスクリプトは、GETおよびPOSTリクエストの場合、html.jspとhtml.POST.jspにあります。 これらのファイルをコピーして変更することで、上書きして独自のカスタマイズを追加できます。インプレースで変更を行わないでください。パッチの更新によって、このような変更が上書きされます。
 
 プロファイルにはさまざまなモジュールが含まれています。これらのモジュールは、formRuntime.jsp、config.jsp、toolbar.jsp、formBody.jsp、nav_footer.jsp、および footer.jsp です。
 
 ## formRuntime.jsp {#formruntime-jsp-br}
 
-formRuntime.jspモジュールには、クライアントライブラリの参照が含まれています。 これは、リクエストからロケール情報を抽出したし、ローカライズしたメッセージをリクエストに含めるなどのための方法も示します。formRuntime.jspに独自のJavaScriptライブラリまたはスタイルを含めることができます。
+formRuntime.jspモジュールには、クライアントライブラリの参照が含まれています。 これは、リクエストからロケール情報を抽出したし、ローカライズしたメッセージをリクエストに含めるなどのための方法も示します。formRuntime.jspには、独自のカスタムjavascriptライブラリまたはスタイルを含めることができます。
 
 ## config.jsp {#config-jsp}
 
