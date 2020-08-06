@@ -66,9 +66,9 @@ ht-degree: 78%
    * [（オプション）インタラクティブ画像のプレビュー](#optional-previewing-interactive-images)を参照してください。必要に応じて、ショッパブルバナーの表示を確認して、インタラクティビティをテストすることができます。
    * インタラクティブ画像アセットの公開方法について詳しくは、[アセットの公開](publishing-dynamicmedia-assets.md)を参照してください。
 
-1. **WebサイトまたはAEMのWebサイトにインタラクティブ画像を追加する**
+1. **WebサイトまたはAEMでのWebサイトへのインタラクティブ画像の追加**
 
-   * AEM Sites、AEM eCommerce、またはその両方を使用する場合は、インタラクティブメディアコンポーネントをページにドラッグして、インタラクティブイメージをAEMのWebページに直接追加できます。 [ページへの Dynamic Media アセットの追加](adding-dynamic-media-assets-to-pages.md)を参照してください。
+   * AEM Sites、AEM、eコマース、またはその両方を使用する場合は、インタラクティブ画像をAEMのWebページに直接追加できます。その場合は、Interactive Mediaコンポーネントをページにドラッグします。 [ページへの Dynamic Media アセットの追加](adding-dynamic-media-assets-to-pages.md)を参照してください。
    * を参照してください。AEM Assets と Dynamic Media をスタンドアロンで使用している場合は、埋め込みコードを Web サイトにコピーしてから、既存のクイックビューに統合する必要があります。[インタラクティブ画像の Web サイトへの統合](#integrating-an-interactive-image-with-your-website)を参照してください。
    * サードパーティの WCM（Web Content Manager）を使用している場合は、新しいインタラクティブビデオを、Web サイトで使用されている既存のクイックビュー実装に統合する必要があります。[インタラクティブ画像の既存のクイックビューへの統合](#integrating-an-interactive-image-with-an-existing-quickview)を参照してください。
 
