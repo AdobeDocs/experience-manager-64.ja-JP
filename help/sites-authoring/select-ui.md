@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9cadec1b-f435-4fd8-b4bc-1a23a0cf11f3
 translation-type: tm+mt
 source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+workflow-type: tm+mt
+source-wordcount: '920'
+ht-degree: 70%
 
 ---
 
@@ -34,9 +37,11 @@ source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
    * タッチデバイスとデスクトップデバイスの両方で使用するように設計されており、ルックアンドフィールはすべてのデバイスで同じです。ただし、[リソースの表示および選択](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)はわずかに異なります（タップとクリック）。
 
       * デスクトップ：
+
    ![screen_shot_2018-03-23at115248](assets/screen_shot_2018-03-23at115248.png)
 
    * タブレットデバイス（または幅 1024 ピクセル未満のデスクトップ）。
+
    ![screen_shot_2018-03-23at115505](assets/screen_shot_2018-03-23at115505.png)
 
 1. クラシック UI
@@ -45,6 +50,7 @@ source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
    * 緑色を基調としています。
    * デスクトップデバイス向けに設計されています。
    * 以降のドキュメントでは、最新の UI について説明しています。クラシック UI でのオーサリングについて詳しくは、[クラシック UI でのオーサリングに関するドキュメント](/help/sites-classic-ui-authoring/classicui.md)を参照してください。
+
    ![chlimage_1-232](assets/chlimage_1-232.png)
 
 ## UIの切り替え
@@ -57,9 +63,9 @@ Although the touch-enabled UI is now the standard UI and [feature parity](../rel
 
 様々な場所で、使用する UI を定義できます。
 
-* [インスタンスのデフォルトUIの設定](#configuring-the-default-ui-for-your-instance) — ユーザーのログイン時にデフォルトのUIが表示されますが、ユーザーはこのUIを上書きして、自分のアカウントまたは現在のセッションに対して別のUIを選択できます。
+* [インスタンスのデフォルトUIの設定](#configuring-the-default-ui-for-your-instance) — ユーザーのログイン時にデフォルトのUIが表示されますが、ユーザーはこのUIを上書きして、自分のアカウントまたは現在のセッションで別のUIを選択できます。
 
-* [アカウントに対するクラシックUIオーサリングの設定](/help/sites-authoring/select-ui.md#setting-classic-ui-authoring-for-your-account) — ページの編集時にUIがデフォルトとして使用されるように設定されますが、ユーザーはこの設定を上書きして、自分のアカウントまたは現在のセッションで別のUIを選択できます。
+* [アカウントに対するクラシックUIオーサリングの設定](/help/sites-authoring/select-ui.md#setting-classic-ui-authoring-for-your-account) — ページの編集時にデフォルトとしてUIが設定されますが、ユーザーはこの設定を上書きして、自分のアカウントまたは現在のセッションに別のUIを選択できます。
 
 * [現在のセッションのクラシックUIに切り替え](#switching-to-classic-ui-for-the-current-session) — 現在のセッションのクラシックUIに切り替えます。
 
@@ -167,6 +173,7 @@ Although the touch-enabled UI is now the standard UI and [feature parity](../rel
 >
 >* URL の手動編集 - 非標準の URL を使用すると予期しない状況となり、機能しなくなる可能性があります。
 >* 両方のエディターを同時に開く - 例えば、別のウィンドウなど。
+
 >
 
 
