@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: af95c6c7-0475-4f55-88a8-ec5e39a9ddcd
 translation-type: tm+mt
 source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
+workflow-type: tm+mt
+source-wordcount: '2759'
+ht-degree: 82%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、 [AEM 6.4 Service Pack 2(6.4.2.0)が必要です](/help/release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2( [6.4.2.0)の適用が必要](/help/release-notes/sp-release-notes.md)です。
 
 コンテンツフラグメントは、標準アセットを拡張します。
 
@@ -39,17 +42,18 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
 
 >[!CAUTION]
 >
->[すべてのフラグメントを作成する場合](/help/assets/content-fragments-models.md) 、コンテンツフラグメントモデルが推奨されるようになりました。
+>[コンテンツフラグメントモデル](/help/assets/content-fragments-models.md)は、すべてのフラグメント作成で使用することが推奨されています。
 >
 >コンテンツフラグメントモデルは、We.Retail のすべてのサンプルでも使用されています。
 
-* コンテンツフラグメントモデル：
+* コンテンツフラグメントモデル:
 
    * 構造化コンテンツを含むコンテンツフラグメントの定義に使用します。
    * コンテンツフラグメントモデルでは、コンテンツフラグメントの作成時にその構造を定義します。
    * フラグメントはモデルを参照するので、モデルに対する変更は、そのモデルに関連付けられているフラグメントにも影響します。
    * モデルはデータタイプで構成されています。
    * 新しいバリエーションを追加するときなどは、それに合わせてフラグメントを更新する必要があります。
+
    >[!CAUTION]
    >
    >既存のコンテンツフラグメントモデルに変更を加えると、そのモデルに関連付けられているフラグメントに影響が生じる場合があり、対象のフラグメントで孤立プロパティが生まれることもあります。
@@ -60,7 +64,7 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
    * テンプレートでは、コンテンツフラグメントの作成時にその構造（基本的なテキストのみ）を定義します。
    * テンプレートは作成時にフラグメントにコピーされるので、それ以降にテンプレートに変更を加えても、既存のフラグメントには反映されません。
    * 新しいバリエーションを追加するときなどは、それに合わせてフラグメントを更新する必要があります。
-   * [コンテンツフラグメントテンプレートは](/help/sites-developing/content-fragment-templates.md) 、AEMエコシステム内の他のテンプレート化メカニズム（ページテンプレートなど）とは異なる方法で動作します。 そのため、分けて考える必要があります。
+   * [コンテンツフラグメントテンプレートの動作は](/help/sites-developing/content-fragment-templates.md) 、AEMエコシステム内の他のテンプレートメカニズム（ページテンプレートなど）とは異なる方法です。 そのため、分けて考える必要があります。
    * テンプレートを基にした場合、コンテンツの MIME タイプは実際のコンテンツに基づいて管理されます。つまり、要素およびバリエーションごとに MIME タイプが異なる場合もあります。
 
 ## AEM Assets との統合 {#integration-with-assets}
@@ -69,7 +73,7 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
 
 * コンテンツフラグメントはアセットである。
 * 既存の AEM Assets 機能を使用する。
-* AEM Assets に完全に統合されている（管理コンソールなど）。
+* AEM Assets に完全に統合されている（Admin Console など）。
 
 ### 構造化コンテンツフラグメントのアセットへのマッピング {#mapping-structured-content-fragments-to-assets}
 
@@ -77,9 +81,9 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
 
 コンテンツフラグメントモデルがベースの構造化コンテンツフラグメントは、単一のアセットにマッピングされます。
 
-* All content is stored under the `jcr:content/data` node of the asset:
+* すべてのコンテンツはアセットの `jcr:content/data` ノードに格納されます。
 
-   * 要素データは、マスターサブノードの下に保存されます。
+   * 要素データは次のマスターサブノードに格納されます。
 
       `jcr:content/data/master`
 
@@ -89,13 +93,13 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
 
    * 各要素のデータは、要素名を持つプロパティとして各サブノードに保存されます。
 
-      例えば、要素のコンテンツは、次の場合にプ `text` ロパティとして保存され `text` ます `jcr:content/data/master`
+      例えば、要素の内容 `text``text` は、 `jcr:content/data/master`
 
-* メタデータと関連するコンテンツは、 `jcr:content/metadata`
+* メタデータと関連するコンテンツは、次の場所に保存されます。 `jcr:content/metadata`
 
    タイトルと説明を除き、従来のメタデータとはみなされず、 `jcr:content`
 
-### シンプルなコンテンツフラグメントのアセットへのマッピング {#mapping-simple-content-fragments-to-assets}
+### シンプルコンテンツフラグメントのアセットへのマッピング {#mapping-simple-content-fragments-to-assets}
 
 ![chlimage_1-253](assets/chlimage_1-253.png)
 
@@ -108,7 +112,7 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
 
 * 追加要素（存在する場合）は、メインアセットのサブアセットにマッピングされます。
 
-   * これらの追加要素のメインコンテンツは、それぞれのサブアセットの元のレンディションにマップされます。
+   * これらの追加要素のメインコンテンツは、それぞれのサブアセットのオリジナルレンディションにマッピングされます。
    * すべての追加要素のその他のバリエーション（該当する場合）は、それぞれのサブアセットのその他のレンディションにマッピングされます。
 
 ### アセットの場所 {#asset-location}
@@ -119,13 +123,13 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
 
 ### アセットの権限 {#asset-permissions}
 
-詳しくは、コンテンツフラグメン [ト — 削除に関する考慮事項を参照してくださ](/help/assets/content-fragments-delete.md)い。
+詳しくは、[コンテンツフラグメント - 削除に関する考慮事項](/help/assets/content-fragments-delete.md)を参照してください。
 
 ### 機能の統合 {#feature-integration}
 
 * コンテンツフラグメント管理（CFM）機能は、Assets のコアを基盤として構築されていますが、できる限り独立させる必要があります。
-* CFMは、カードビュー、列ビュー、リストビューの項目に対して独自の実装を提供します。これらのプラグインは、既存のアセットコンテンツレンダリング実装に組み込まれます。
-* 複数のアセットコンポーネントが拡張され、コンテンツフラグメントを絞り込むことができます。
+* CFM は、カード／列／リスト表示の項目に独自の実装を提供します。つまり、それらの項目が、既存のアセットコンテンツのレンダリング実装に挿入されます。
+* コンテンツフラグメントに対応するために、いくつかのアセットコンポーネントが拡張されています。
 
 ## ページでのコンテンツフラグメントの使用 {#using-content-fragments-in-pages}
 
@@ -133,9 +137,9 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
 >
 >[コンテンツフラグメントコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)が推奨されます。詳しくは、[コアコンポーネントの開発](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)を参照してください。
 
-コンテンツフラグメントは、その他のアセットタイプと同様に、AEM ページから参照できます。AEM では、[**コンテンツフラグメント&#x200B;**コアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)を利用できます。これは、[コンテンツフラグメントをページ上に含めることができるコンポーネント](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)です。You can also extend, this** Content Fragment **core component.
+コンテンツフラグメントは、その他のアセットタイプと同様に、AEM ページから参照できます。AEM では、[****コンテンツフラグメントコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)を利用できます。これは、[コンテンツフラグメントをページ上に含めることができるコンポーネント](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)です。You can also extend, this** Content Fragment **core component.
 
-* このコンポーネントは、`fragmentPath` プロパティを使用して、実際のコンテンツフラグメントを参照します。The `fragmentPath` property is handled in the same manner as similar properties of other asset types; for example, when the content fragment is moved to another location.
+* このコンポーネントは、`fragmentPath` プロパティを使用して、実際のコンテンツフラグメントを参照します。`fragmentPath` プロパティは、その他のアセットタイプの類似プロパティと同じ方法で処理されます。例えば、コンテンツフラグメントが別の場所に移動された場合などです。
 
 * このコンポーネントを使用して、表示するバリエーションを選択できます。
 * さらに、一定範囲の段落を選択して、出力を制限できます。例えば、複数列の出力に利用できます。
@@ -144,7 +148,7 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
    * ここで、このコンポーネントを使用して、他のアセット（画像など）を参照されているフラグメントの段落の中間に配置できます。
       * 中間コンテンツの場合は、次のことを実行する必要があります。
 
-         * 不安定な言及の可能性を意識し、中間コンテンツ（ページの作成時に追加）は、その隣に配置される段落との固定的な関係を持たず、中間コンテンツの位置が相対的な位置を失う前に新しい段落（コンテンツフラグメントエディター内）を挿入します
+         * 参照が不安定になる可能性に注意します。中間コンテンツ（ページのオーサリング時に追加）とその横にある段落の関係は、固定されていません。（コンテンツフラグメントエディター内で）中間コンテンツの位置の前に新しい段落を挿入すると、相対的な位置が失われることがあります。
             * 検索結果における偽陽性を回避するために、パラメーター（類似バリエーションや段落フィルターなど）の追加を検討します。
 
 >[!NOTE]
@@ -192,7 +196,7 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
 
 * If the fragment is rendered for `displayMode` == `singleText` (implicitly or explicitly) the following additional properties come into play:
 
-   * `paragraphScope` すべての段落をレンダリングするか、段落の範囲のみをレンダリングするかを定義します(値：対 `all` 象 `range`)
+   * `paragraphScope` すべての段落をレンダリングするか、段落の範囲のみをレンダリングするかを定義します(値： `all` vs. `range`)
    * if `paragraphScope` == `range` then the property `paragraphRange` defines the range of paragraphs to be rendered
 
 ### その他のフレームワークとの統合 {#integration-with-other-frameworks}
@@ -209,30 +213,30 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
 
          `/content/dam/<path>/en/<to>/<fragment>`
 
-         対
+         上記に対して次のようになります。
 
          `/content/dam/<path>/de/<to>/<fragment>`
 
-      * しかし、言語ルートの下の相対パスは全く同じです。
+      * しかし、言語ルートの下では、まったく同じ相対パスを共有しています。
 
          `/content/dam/<path>/en/<to>/<fragment>`
 
-         対
+         上記に対して次のようになります。
 
          `/content/dam/<path>/de/<to>/<fragment>`
    * ルールベースのパスを除き、コンテンツフラグメントの様々な言語バージョンの間にそれ以上のつながりはありません。UI には言語バリアント間を移動する手段が用意されていますが、それらは 2 つの別々のフラグメントとして扱われます。
    >[!NOTE]
    >
-   >The AEM translation workflow works with `/content`:
+   >AEM 翻訳ワークフローでは、`/content` が使用されます。
    >
-   >  * As the content fragment models reside in `/conf`, these are not included in such translations. [UI 文字列を国際化](/help/sites-developing/i18n-dev.md)できます。
+   >  * コンテンツフラグメントモデルは `/conf` 内に配置されるので、これらの翻訳には含まれません。[UI 文字列を国際化](/help/sites-developing/i18n-dev.md)できます。
    >  * テンプレートをコピーしてフラグメントを作成するので、これは暗黙的になります。
 
 
-* **メタデータのスキーマ**
+* **メタデータスキーマ**
 
    * コンテンツフラグメントは、[メタデータのスキーマ](/help/assets/metadata-schemas.md)を（再）利用します。メタデータのスキーマは、標準アセットを使用して定義できます。
-* CFMは、独自の固有のスキーマを提供します。
+* CFM には、次のような独自の固有のスキーマがあります。
 
    `/libs/dam/content/schemaeditors/forms/contentfragment`
 
@@ -268,7 +272,8 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
    このインターフェイスは次を表します。
 
    * コンテンツフラグメントの作成元がコンテンツフラグメントモデルなのか、コンテンツフラグメントテンプレートなのか。
-   * そして（作成後）そのフラグメントの構造情報を
+   * そして（作成後）そのフラグメントの構造情報
+
    この情報の例は次のとおりです。
 
    * 基本データ（タイトル、説明）にアクセスする
@@ -283,6 +288,7 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
       * 特定のバリエーションの構造情報を取得する
       * バリエーションテンプレートにアクセスする（`VariationTemplate` を参照）
    * 初期関連コンテンツを取得する
+
    重要な情報を表すインターフェイスには、次のものがあります。
 
    * `ElementTemplate`
@@ -316,8 +322,8 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
 
       * 要素を一覧表示する
       * 要素を名前で取得する
-      * Create new elements (see [Caveats](#caveats))
-      * Access element data (see `ContentElement`)
+      * 新しい要素を作成する（[注意事項](#caveats)を参照）
+      * 要素データにアクセスする（`ContentElement` を参照）
    * そのフラグメントに対して定義されているバリエーションを一覧表示する
    * 新しいバリエーションをグローバルに作成する
    * 関連コンテンツを管理する
@@ -325,7 +331,8 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
       * コレクションを一覧表示する
       * コレクションを追加する
       * コレクションを削除する
-   * フラグメントのモデルまたはテンプレートにアクセスする
+   * フラグメントのモデルにアクセスする またはテンプレート
+
    フラグメントの主要要素を表すインターフェイスには、次のものがあります。
 
    * **コンテンツ要素**
@@ -339,8 +346,8 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
          * バリエーションを一覧表示する
          * バリエーションを名前で取得する
          * 新しいバリエーションを作成する（[注意事項](#caveats)を参照）
-         * Remove variations (see [Caveats](#caveats))
-         * Access variation data (see `ContentVariation`)
+         * バリエーションを削除する（[注意事項](#caveats)を参照）
+         * バリエーションデータにアクセスする（`ContentVariation` を参照）
       * バリエーションを解決するためのショートカット（要素に指定されたバリエーションを使用できない場合は実装固有の追加のフォールバックロジックを適用）
    * **コンテンツのバリエーション**
 
@@ -349,7 +356,8 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
       * 基本データ（名前、タイトル、説明）を取得する
       * コンテンツを取得／設定する
       * 最後に変更された情報に基づくシンプルな同期
-   All three interfaces ( `ContentFragment`, `ContentElement`, `ContentVariation`) extend the `Versionable` interface, which adds versioning capabilities, required for content fragments:
+
+   3 つのインターフェイス（`ContentVariation`、`ContentFragment`、`ContentElement`、）すべてによって `Versionable` インターフェイスを拡張し、コンテンツフラグメントに必要な次のバージョン管理機能を追加します。
 
    * 要素の新しいバージョンを作成する
    * 要素のバージョンを一覧表示する
@@ -361,26 +369,26 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
 
 
 
-### Adapting - Using adaptTo() {#adapting-using-adaptto}
+### 適応 - adaptTo() の使用{#adapting-using-adaptto}
 
 次のものを適応させることができます。
 
-* `ContentFragment` は、次のように適応できます。
+* `ContentFragment` は、次のものに適応させることができます。
 
-   * `Resource`  — 基礎となるスリング資源。基になるオブジェクトを直接更新す `Resource` る場合は、オブジェクトを再構築する必要があ `ContentFragment` ります。
-   * `Asset`  — コンテンツフ `Asset` ラグメントを表すDAM抽象化。直接更新する場合は、オブジ `Asset` ェクトを再構築する必要があ `ContentFragment` ります。
+   * `Resource`  — 基礎となるスリング資源。 基になるオブジェクトを `Resource` 直接更新する場合は、オブジェクトを再構築する必要があり `ContentFragment` ます。
+   * `Asset`  — コンテンツフラグメントを表すDAM `Asset` 抽象。 更新を `Asset` 直接行うには、オブジェクトを再構築する必要があり `ContentFragment` ます。
 
-* `ContentElement` は、次のように適応できます。
+* `ContentElement` は、次のものに適応させることができます。
 
    * `ElementTemplate` - 要素の構造に関する情報にアクセスするためのものです。
 
-* `FragmentTemplate` は、次のように適応できます。
+* `FragmentTemplate` は、次のものに適応させることができます。
 
    * `Resource` - `Resource` は、参照されているモデルまたはコピーされた元のテンプレートを決定します。
 
       * `Resource` を使用した変更は、`FragmentTemplate` に自動的に反映されません。
 
-* `Resource` は、次のように適応できます。
+* `Resource` は、次のものに適応させることができます。
 
    * `ContentFragment`
    * `FragmentTemplate`
@@ -409,17 +417,17 @@ source-git-commit: c93c1754a44a2f18c27caf4b50888bdd09d26f7c
 
 * `filter.xml`
 
-   The `filter.xml` for content fragment management is configured so that it does not overlap with the Assets core content package.
+   コンテンツフラグメント管理のための `filter.xml` は、アセットのコアコンテンツパッケージと重複しないように設定されています。
 
 ## 編集セッション {#edit-sessions}
 
-編集セッションは、ユーザーがエディターのいずれかのページでコンテンツフラグメントを開くと開始されます。The editing session is finished when the user leaves the editor by selecting either **Save** or **Cancel**.
+編集セッションは、ユーザーがエディターのいずれかのページでコンテンツフラグメントを開くと開始されます。ユーザーが「**保存**」または「**キャンセル**」を選択してエディターから移動すると、編集セッションは終了します。
 
 ### 要件 {#requirements}
 
 編集セッションの制御には、次の要件があります。
 
-* 複数のビュー（= HTMLページ）にまたがるコンテンツフラグメントの編集は、アトミックに行う必要があります。
+* 複数の表示（= HTMLページ）にまたがるコンテンツフラグメントの編集は、アトミックで行う必要があります。
 * さらに、編集はトランザクション単位&#x200B;**&#x200B;でおこなう必要があります。すなわち、編集セッションの終了時には、変更をコミット（保存）するか、ロールバック（キャンセル）します。
 * エッジケースを適切に処理する必要があります。例としては、ユーザーが手動で URL を入力したりグローバルナビゲーションを使用したりしてページから移動する場合などが考えられます。
 * データが失われないよう、定期的な自動保存（x 分ごと）をおこなう必要があります。
@@ -516,18 +524,18 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 
 自動保存間隔（秒単位）は、設定マネージャー（ConfMgr）を使用して定義できます。
 
-* Node: `<conf-root>/settings/dam/cfm/jcr:content`
-* プロパティ名: `autoSaveInterval`
-* タイプ: `Long`
+* ノード：`<conf-root>/settings/dam/cfm/jcr:content`
+* プロパティ名：`autoSaveInterval`
+* 型：`Long`
 
-* Default: `600` (10 minutes); this is defined on `/libs/settings/dam/cfm/jcr:content`
+* デフォルト：`600`（10 分）。`/libs/settings/dam/cfm/jcr:content` で定義されています
 
 自動保存間隔を 5 分に設定する場合は、次のようにノードにプロパティを定義する必要があります。
 
-* Node: `/conf/global/settings/dam/cfm/jcr:content`
-* プロパティ名: `autoSaveInterval`
+* ノード：`/conf/global/settings/dam/cfm/jcr:content`
+* プロパティ名：`autoSaveInterval`
 
-* タイプ: `Long`
+* 型：`Long`
 
 * 値：`300`（5 分は 300 秒です）
 
