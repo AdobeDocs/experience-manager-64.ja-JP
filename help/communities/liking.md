@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dcde4e03-78ab-4779-96a1-05ac41f14701
 translation-type: tm+mt
 source-git-commit: f78f83ef3b9373bcbee3e5179a9bbec4d9462255
+workflow-type: tm+mt
+source-wordcount: '234'
+ht-degree: 32%
 
 ---
 
@@ -29,7 +32,7 @@ To add a `Liking` component to a page in author mode, use the component browser 
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](essentials-liking.md#essentials-for-client-side) are included, this is how the `Liking` component will appear.
+[必要なクライアント側のライブラリが含まれる場合](essentials-liking.md#essentials-for-client-side) 、これがコンポー `Liking` ネントの表示方法です。
 
 ![chlimage_1-93](assets/chlimage_1-93.png)
 
@@ -43,11 +46,17 @@ Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used t
 
 ![chlimage_1-95](assets/chlimage_1-95.png)
 
-* **[!UICONTROL Positive Response Label]**(必須&#x200B;**)ポジティブな応答のプロパティ名。
+* **[!UICONTROL 肯定的な返信ラベル]**
+(
+*必須*)ポジティブな反応を表すプロパティ名です。
 
-* **[!UICONTROL Negative Response Label]**(必須&#x200B;**)：否定的な応答のプロパティ名です。
+* **[!UICONTROL 否定的な返信ラベル]**
+(
+*必須*)否定的な応答のプロパティ名です。
 
-* **[!UICONTROL 集計名]**(必&#x200B;*須*)投票コンポーネントのこのインスタンスの内部で識別可能なプロパティ名。
+* **[!UICONTROL 集計名]**
+(
+*必須*)投票コンポーネントのこのインスタンスの、内部で識別可能なプロパティ名。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -57,7 +66,7 @@ Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used t
 
 ### 匿名 {#anonymous}
 
-匿名での「いいね!」はサポートされていません。サイト訪問者が「いいね！」に参加するには、登録（会員になる）し、サインインする必要があります。
+匿名での「いいね!」はサポートされていません。サイト訪問者は、「いいね！」に参加するには、登録（会員になる）し、サインインする必要があります。
 
 ## 追加情報 {#additional-information}
 
