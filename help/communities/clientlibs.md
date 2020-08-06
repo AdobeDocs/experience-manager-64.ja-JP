@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 7d423dff-8710-4f43-ad55-8863169946e2
 translation-type: tm+mt
 source-git-commit: 59d40b5bddc42a4ac057ef600243f396aefc926b
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 62%
 
 ---
 
@@ -23,8 +26,8 @@ source-git-commit: 59d40b5bddc42a4ac057ef600243f396aefc926b
 
 基本情報については、以下を参照してください。
 
-* [使用状況の詳細とデバッグツールを提供する](../../help/sites-developing/clientlibs.md) 、クライアント側ライブラリの使用
-* [SCFコンポーネントのカスタマイズ時に役立つ情報を提供するSCF](client-customize.md#clientlibs) 用のClientlibs
+* [使用状況の詳細とデバッグツールを提供するクライアント側ライブラリ](../../help/sites-developing/clientlibs.md) (Using Client-Side Libraries)
+* [SCFコンポーネントのカスタマイズ時に役立つ情報を提供する、SCF](client-customize.md#clientlibs) 用のClientlibs
 * [ブログ：AEM Client Libraries explained by example](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
 
 ## clientlib が必要になる理由 {#why-clientlibs-are-required}
@@ -62,7 +65,7 @@ For example, at the very top of the [Reviews page](http://localhost:4502/content
 
 [CRXDE|Lite](#using-crxde-lite) を使用すると、コミュニティサイトページの既存の clientlibslist を変更できます。
 
-To add a clientlib for a community site using [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md):
+[CRXDE Liteを使用してコミュニティサイトのclientlibを追加するには](../../help/sites-developing/developing-with-crxde-lite.md):
 
 * Browse to [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
 * Locate the `clientlibslist` node for the page on which you wish to add the component
@@ -71,10 +74,10 @@ To add a clientlib for a community site using [CRXDE Lite](../../help/sites-deve
 
 * With `clientlibslist` node selected
 
-   * Stringプロパティを検索します[] 。 `scg:requiredClientLibs`
+   * String[] プロパティを検索する `scg:requiredClientLibs`
    * Select its `Value` to access the String array dialog
 
-      * 必要に応じて下にスクロール
+      * 必要に応じて下にスクロールします
       * Select `+` to enter a new client library
 
          * 繰り返してクライアントライブラリを追加
