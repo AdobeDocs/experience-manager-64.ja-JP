@@ -150,12 +150,12 @@ select * from [nt:base] where [alias] = '/admin'
 
 このクエリのための Lucene プロパティインデックスを定義するには、**oak:index** の下に新しいノードを作成して、次の定義を追加します。
 
-* **名前：**`LucenePropertyIndex`
-* **Type:** `oak:QueryIndexDefinition`
+* **名前:** `LucenePropertyIndex`
+* **型：**`oak:QueryIndexDefinition`
 
 ノードを作成したら、次のプロパティを追加します。
 
-* **type:**
+* **型：**
 
    ```
    lucene (of type String)
@@ -209,24 +209,24 @@ The analyzers can be configured via the `analyzers` node (of type `nt:unstructur
 
 1. default ノードに次のプロパティを追加します。
 
-   * **名前：**`class`
-   * **Type:** `String`
+   * **名前:** `class`
+   * **型：**`String`
    * **値:** `org.apache.lucene.analysis.standard.StandardAnalyzer`
 
    この値は、使用するアナライザークラスの名前です。
 
    また、特定の Lucene バージョンで使用するアナライザーを設定するには、オプションの `luceneMatchVersion` プロパティ（string）を使用することもできます。Lucene 4.7 で使用する場合の有効な構文は次のとおりです。
 
-   * **名前：**`luceneMatchVersion`
-   * **Type:** `String`
+   * **名前:** `luceneMatchVersion`
+   * **型：**`String`
    * **値:** `LUCENE_47`
 
    `luceneMatchVersion` が指定されない場合、Oak では出荷時の Lucene のバージョンが使用されます。
 
 1. アナライザー設定にストップワードファイルを追加する場合は、`default` ノードの下に新しいノードを作成し、次のプロパティを設定します。
 
-   * **名前：**`stopwords`
-   * **Type:** `nt:file`
+   * **名前:** `stopwords`
+   * **型：**`nt:file`
 
 #### 構成によるアナライザーの作成 {#creating-analyzers-via-composition}
 
@@ -234,37 +234,37 @@ Analyzers can also be composed based on `Tokenizers`, `TokenFilters` and `CharFi
 
 例えば、次のノード構造について考えてみます。
 
-* **名前：**`analyzers`
+* **名前:** `analyzers`
 
-   * **名前：**`default`
+   * **名前:** `default`
 
-      * **名前：**`charFilters`
-      * **Type:** `nt:unstructured`
+      * **名前:** `charFilters`
+      * **型：**`nt:unstructured`
 
-         * **名前：**`HTMLStrip`
-         * **名前：**`Mapping`
-      * **名前：**`tokenizer`
+         * **名前:** `HTMLStrip`
+         * **名前:** `Mapping`
+      * **名前:** `tokenizer`
 
          * **プロパティ名:** `name`
 
-            * **Type:** `String`
+            * **型：**`String`
             * **値:** `Standard`
-      * **名前：**`filters`
-      * **Type:** `nt:unstructured`
+      * **名前:** `filters`
+      * **型：**`nt:unstructured`
 
-         * **名前：**`LowerCase`
-         * **名前：**`Stop`
+         * **名前:** `LowerCase`
+         * **名前:** `Stop`
 
             * **プロパティ名:** `words`
 
-               * **Type:** `String`
+               * **型：**`String`
                * **値:** `stop1.txt, stop2.txt`
-            * **名前：**`stop1.txt`
+            * **名前:** `stop1.txt`
 
-               * **Type:** `nt:file`
-            * **名前：**`stop2.txt`
+               * **型：**`nt:file`
+            * **名前:** `stop2.txt`
 
-               * **Type:** `nt:file`
+               * **型：**`nt:file`
 
 
 
