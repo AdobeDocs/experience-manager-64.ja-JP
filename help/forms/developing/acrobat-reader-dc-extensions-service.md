@@ -1,6 +1,6 @@
 ---
-title: Acrobat Reader DCエクステンションサービスJava APIクイック開始(SOAP)
-seo-title: Acrobat Reader DCエクステンションサービスJava APIクイック開始(SOAP)
+title: Acrobat Reader DC拡張サービスJava APIクイック開始(SOAP)
+seo-title: Acrobat Reader DC拡張サービスJava APIクイック開始(SOAP)
 description: 'null'
 seo-description: 'null'
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
@@ -17,9 +17,9 @@ ht-degree: 0%
 ---
 
 
-# Acrobat Reader DCエクステンションサービスJava APIクイック開始(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
+# Acrobat Reader DC拡張サービスJava APIクイック開始(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
-Acrobat Reader DCエクステンションサービスでは、次のクイック開始を使用できます。
+Acrobat Reader DC拡張サービスでは、次のクイック開始を使用できます。
 
 [クイック開始（SOAPモード）:Java APIを使用した使用権限の適用](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
@@ -31,7 +31,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->「AEM Formsによるプログラミング」にあるクイック開始は、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Formsとのプログラミング」にあるクイック開始は、Formsサーバのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 See [Setting connection properties](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイック開始（SOAPモード）:Java APIを使用した使用権限の適用 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
