@@ -9,6 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 71bba66a-3cac-445b-9941-aa4bcf9b2160
 translation-type: tm+mt
 source-git-commit: 73d0dea62c294bea435364fb9c6892d80751d90d
+workflow-type: tm+mt
+source-wordcount: '706'
+ht-degree: 55%
 
 ---
 
@@ -19,13 +22,13 @@ source-git-commit: 73d0dea62c294bea435364fb9c6892d80751d90d
 
 インタラクティブ通信は、印刷チャネルと Web チャネルという 2 つのチャネルを使用して配信することができます。印刷チャネルは、PDF や紙ベースの通信手段（保険料の支払いを通知する印刷書類など）を作成する場合に使用され、Web チャネルは、オンライン情報（Web サイト上で表示されるクレジットカードの取引明細など）を配信する場合に使用されます。
 
-Interactive Communicationの作成者は、ドキュメントフラグメントや画像などのアセットを再利用して、Interactive Communicationの印刷版とWeb版の両方を作成できます。
+Interactive Communicationの作成者は、ドキュメントフラグメントや画像などのアセットを再利用して、印刷版とWeb版の両方のInteractive Communicationを作成できます。
 
-One of the prerequisites for [Creating an Interactive Communication](/help/forms/using/create-interactive-communication.md) is to have the templates for print and/or web channel available on the server. テンプレート作成者はAEM自体でWebチャネルテンプレートを作成しますが、印刷チャネルテンプレートXDPはAdobe Forms Designerで作成され、サーバーにアップロードされます。
+One of the prerequisites for [Creating an Interactive Communication](/help/forms/using/create-interactive-communication.md) is to have the templates for print and/or web channel available on the server. テンプレート作成者は、AEM自体でWebチャネルテンプレートを作成しますが、印刷チャネルテンプレートXDPはAdobeFormsデザイナーで作成され、サーバーにアップロードされます。
 
 ## 印刷チャネル {#printchannel}
 
-インタラクティブ通信の印刷チャネルは、XFAフォームテンプレートXDPを使用します。 XDP は Adobe Forms Designer でデザインできます。For more information on creating print channel templates, see [Layout Design](/help/forms/using/layout-design-details.md). Interactive Communicationで印刷チャネルテンプレートを使用するには、AEM Formsサーバーにテンプレートをアップロードする必要があります。
+Interactive Communicationの印刷チャネルは、XFAフォームテンプレートXDPを使用します。 XDP は Adobe Forms Designer でデザインできます。For more information on creating print channel templates, see [Layout Design](/help/forms/using/layout-design-details.md). Interactive Communicationで印刷チャネルテンプレートを使用するには、テンプレートをAEM Formsサーバにアップロードする必要があります。
 
 ### インタラクティブ通信の印刷チャネルテンプレートのアップロード {#upload-interactive-communication-print-channel-template}
 
@@ -33,7 +36,7 @@ One of the prerequisites for [Creating an Interactive Communication](/help/forms
 
 1. **[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;を選択します。
 
-1. **[!UICONTROL 作成]**／**[!UICONTROL ファイルのアップロード]**&#x200B;をタップします。
+1. **[!UICONTROL 作成]**／**[!UICONTROL ファイルのアップロード]**&#x200B;の順にタップします。
 
    Navigate and select the appropriate print channel template (XDP) and tap **[!UICONTROL Open]**.
 
@@ -43,17 +46,17 @@ One of the prerequisites for [Creating an Interactive Communication](/help/forms
 
 ### Web チャネルテンプレートの作成 {#authoring-web-channel-template}
 
-Web チャネルテンプレートを作成するには、最初にテンプレートフォルダーを作成する必要があります。テンプレートフォルダー内にWebテンプレートを作成したら、テンプレートを有効にして、フォームユーザーがテンプレートに基づいてInteractive CommunicationのWebチャネルを作成できるようにする必要があります。
+Web チャネルテンプレートを作成するには、最初にテンプレートフォルダーを作成する必要があります。テンプレートフォルダー内にWebテンプレートを作成したら、フォームユーザーがテンプレートに基づいてインタラクティブ通信のWebチャネルを作成できるように、テンプレートを有効にする必要があります。
 
-Webチャネルテンプレートを作成するには次の手順を実行します。
+Webチャネルテンプレートを作成するには、次の手順を実行します。
 
-1. Interactive Communication webテンプレートがない場合は、テンプレートフォルダーを作成してInteractive Communication webテンプレートを保持します。 For more information, see Template Folders in [Page Templates - Editable](/help/sites-developing/page-templates-editable.md).
+1. Interactive Communication Webテンプレートがまだない場合は、テンプレートフォルダを作成して保存します。 For more information, see Template Folders in [Page Templates - Editable](/help/sites-developing/page-templates-editable.md).
 
    1. Tap **[!UICONTROL Tools]** ![tools-1](assets/tools-1.png) > **[!UICONTROL Configuration Browser]**.
    1. In the Configuration Browser page, tap **[!UICONTROL Create]**.
    1. In the Create Configuration dialog, specify a title for the folder, check **[!UICONTROL Editable Templates]**, and tap **[!UICONTROL Create]**.
 
-      フォルダーが作成され、設定ブラウザーページに表示されます。
+      フォルダーが作成され、Configuration Browserページに表示されます。
 
 1. 目的のテンプレートフォルダーに移動して、Web チャネルテンプレートを作成します。
 
@@ -72,9 +75,9 @@ Webチャネルテンプレートを作成するには次の手順を実行し�
 
       テンプレートの作成者は、テンプレートの作成や編集を行う際に、様々な要素を定義することができます。テンプレートの作成と編集は、ページの作成に似ています。For more information, see Editing Templates - Template Authors in [Creating Page Templates](/help/sites-authoring/templates.md).
 
-1. このテンプレートをInteractive Communicationの作成に使用できるようにするには、テンプレートを有効にします。
+1. Interactive Communicationの作成時にこのテンプレートを使用できるようにするには、テンプレートを有効にします。
 
-   1. Tap **[!UICONTROL Tools]** ![tools-1](assets/tools-1.png) > **[!UICONTROL Templates]**.
+   1. **[!UICONTROL ツール]**![/](assets/tools-1.png) ツール **[!UICONTROL /テンプレートをタップします]**。
    1. Navigate to the appropriate template, select it, and tap **[!UICONTROL Enable]** and in the alert message, tap **[!UICONTROL Enable]**.
 
       これでテンプレートが有効になり、テンプレートのステータスとして「有効」が表示されます。新しく作成した Web チャネルテンプレートを使用して、インタラクティブ通信を作成することができます。
