@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 1bc19f9a-fa3f-43e3-813e-23ab0b708d43
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '555'
+ht-degree: 83%
 
 ---
 
@@ -76,7 +79,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 ### Sling Thread Dumper の使用 {#using-sling-thread-dumper}
 
-1. **AEM Web Consoleを開きます**。例えば、で `http://localhost:4502/system/console/`す。
+1. Open the **AEM Web Console**; for example at `http://localhost:4502/system/console/`.
 
 1. Select the **Threads** under **Status** tab.
 
@@ -107,7 +110,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 AEM WCM 用の機能を開発する場合は、JCR セッションが開かれる可能性があります（データベース接続を開く処理に相当します）。開かれたセッションが閉じられないと、システムで以下の症状が発生する可能性があります。
 
 * システムの速度が低下する。
-* 多くのCacheManagerが表示されます。resizeAllエントリ（ログファイル内）;次の数(size=&lt;x>)はキャッシュの数を示し、各セッションは複数のキャッシュを開きます。
+* 多くのCacheManagerが表示されます。 resizeAllエントリ（ログファイル内）; 次の数(size=&lt;x>)はキャッシュの数を示し、各セッションは複数のキャッシュを開きます。
 * システムのメモリが不足することがある（重大度に応じて数時間後、数日後、数週間後に発生）。
 
 閉じられていないセッションを分析して、セッションを閉じていないコードを特定するには、ナレッジベースの記事[閉じられていないセッションの分析](https://helpx.adobe.com/crx/kb/AnalyzeUnclosedSessions.html)を参照してください。
@@ -116,7 +119,7 @@ AEM WCM 用の機能を開発する場合は、JCR セッションが開かれ�
 
 発生する可能性のある問題の初期の兆候を OSGi バンドルのステータスで確認することもできます。
 
-1. **AEM Web Consoleを開きます**。例えば、で `http://localhost:4502/system/console/`す。
+1. Open the **AEM Web Console**; for example at `http://localhost:4502/system/console/`.
 
 1. Select **Bundles** under **OSGI** tab.
 
