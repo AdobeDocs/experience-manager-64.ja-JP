@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 8e7a8481-b8cd-4f2b-b9d2-7a8132f1d3f6
 translation-type: tm+mt
 source-git-commit: 75c765bf8d8cd5cd06f5eb882f5ca72a2ec8f484
+workflow-type: tm+mt
+source-wordcount: '1215'
+ht-degree: 90%
 
 ---
 
@@ -41,7 +44,7 @@ Document Security サーバーでは、ポリシーの作成、ポリシーで�
 
 AEM Forms Document Security には、セキュリティポリシーに適用できるさまざまなツールが用意されています。ニーズや仕様に応じて、ツールを選ぶことができます。
 
-![ドキュメントセキュリティ](assets/document-security-offerings.png)
+![ドキュメントセキュリティ機能](assets/document-security-offerings.png)
 
 Document Security SDK、Adobe Acrobat、Document Security Extension for Microsoft Office、またはポータブル保護ライブラリを使用して、セキュリティポリシーを適用、トラッキングすることができます。
 
@@ -59,9 +62,9 @@ Document Security SDK、Adobe Acrobat、Document Security Extension for Microsof
 
 * **ポータブル保護ライブラリ：**&#x200B;ポータブル保護ライブラリ（PLL）は、ドキュメントを AEM Forms サーバーに送ることなく、ローカルにドキュメントを保護します。ネットワークに送信されるのは、セキュリティの証明書とポリシーの詳細のみです。また、PPLでは、ポリシーの取得アクセスをログインしたユーザーのみに制限することもできます。 AEM にログインしているユーザーについて、ポリシーを取得することができます。
 
-   上記に加え、ポータブル保護ライブラリには、ドキュメントセキュリティSDKのすべての機能があります。 ドキュメントセキュリティ SDK を使用して Document Server の機能にアクセスしたり、ポリシーで保護されたドキュメントを開いたり、カスタム拡張機能やプラグイン、またはアプリケーションを開発したりすることができます。ポータブル保護ライブラリ（PPL）で、AEM Forms Document Security クライアント SDK（CSDK）を使用して保護されているドキュメントの保護を解除することはできません（その逆の動作もできません）。
+   上記に加えて、ポータブル保護ライブラリには、ドキュメントセキュリティSDKのすべての機能が含まれています。 ドキュメントセキュリティ SDK を使用して Document Server の機能にアクセスしたり、ポリシーで保護されたドキュメントを開いたり、カスタム拡張機能やプラグイン、またはアプリケーションを開発したりすることができます。ポータブル保護ライブラリ（PPL）で、AEM Forms Document Security クライアント SDK（CSDK）を使用して保護されているドキュメントの保護を解除することはできません（その逆の動作もできません）。
 
-   ポータブル保護ライブラリは、32 ビットおよび 64 ビットバージョンの Java、または C++ 言語で使用できます。また、OSGi上のAEM Forms用のOSGiバンドルとしても使用できます。 C++ PPLは、Microsoft Visual Studio 2013でコンパイルできます。 AEM Forms Document Security アドオンのライセンスを持っている場合は、[AEM Forms Document Security](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html) サポートチームに問い合わせて、ポータブル保護ライブラリを入手することができます。後から、ポータブル保護ライブラリヘルプ（ライブラリに付属）を参照することで、ポータブル保護ライブラリのセットアップ方法および使用方法を確認することができます。
+   ポータブル保護ライブラリは、32 ビットおよび 64 ビットバージョンの Java、または C++ 言語で使用できます。OSGi上のAEM FormsのOSGiバンドルとしても利用できます。 C++ PPLは、Microsoft Visual Studio 2013でコンパイルできます。 AEM Forms Document Security アドオンのライセンスを持っている場合は、[AEM Forms Document Security](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html) サポートチームに問い合わせて、ポータブル保護ライブラリを入手することができます。後から、ポータブル保護ライブラリヘルプ（ライブラリに付属）を参照することで、ポータブル保護ライブラリのセットアップ方法および使用方法を確認することができます。
 
 ### 保護されたドキュメントの表示および編集 {#view-or-edit-protected-documents}
 
@@ -75,5 +78,5 @@ Microsoft Windows の全文検索エンジン（SharePoint インデックスサ
 
 * **iFilter インデクサー：** iFilter インデクサーを使用することで、保護された PDF ドキュメントのインデックスを作成し、Microsoft Windows の全文検索エンジン（デスクトップインデックスサービスとSharePoint インデックスサーバー）を有効にします。これにより、保護された PDF ドキュメントを検索することができます。詳しくは、「[保護済みドキュメントに対する AEM SharePoint IFilter の使用](assets/sharepoint-ifilter-doc-security.pdf)」を参照してください。 
 
-* **AEM Forms ドキュメントセキュリティインデクサー：** AEM Forms ドキュメントセキュリティインデクサーを使用することで、保護された PDF ドキュメントのインデックスを作成し、Adobe Experience Manager での保護された PDF ドキュメントの検索を有効にします。インデクサーは、AEM Formsのドキュメントセキュリティ機能の一部です。 これらは、JEE 上の AEM Forms インストーラーに含まれています。
+* **AEM Forms ドキュメントセキュリティインデクサー：** AEM Forms ドキュメントセキュリティインデクサーを使用することで、保護された PDF ドキュメントのインデックスを作成し、Adobe Experience Manager での保護された PDF ドキュメントの検索を有効にします。このインデクサーは、AEM Formsドキュメントセキュリティーの一部です。 これらは、JEE 上の AEM Forms インストーラーに含まれています。
 
