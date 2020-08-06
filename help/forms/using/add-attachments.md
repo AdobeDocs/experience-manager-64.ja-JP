@@ -10,6 +10,9 @@ topic-tags: forms-app
 discoiquuid: 184b5c7f-a704-4b8c-b1ec-f4d6616a1afc
 translation-type: tm+mt
 source-git-commit: 0ce79686522da4fb3d017068b623c76f81c6b23a
+workflow-type: tm+mt
+source-wordcount: '578'
+ht-degree: 60%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 0ce79686522da4fb3d017068b623c76f81c6b23a
 
 ## Adding attachments in forms synced with AEM Forms Workflow server (AEM Forms on JEE) {#adding-annotations}
 
-AEM Forms アプリでは、AEM Forms JEE サーバーと同期されたフォームに対して、画像、手書きメモやテキストメモを添付することができます。フォームを AEM Forms Workflow サーバから読み込んだ場合は、添付ファイルがフォームに追加されます。You can tap the attachment button ![attachments-app](assets/attachments-app.png) to see all the attachments in a form together. 赤色の通知は、フォームの添付ファイルの数を表示します。フォームに添付ファイルがない場合は、赤い通知ボタンは表示されません。 If there are no attachments in the form, when you tap the attachments button ![attch](assets/attch.png), you get options to attach photos or scribbles.
+AEM Forms アプリでは、AEM Forms JEE サーバーと同期されたフォームに対して、画像、手書きメモやテキストメモを添付することができます。フォームを AEM Forms Workflow サーバから読み込んだ場合は、添付ファイルがフォームに追加されます。You can tap the attachment button ![attachments-app](assets/attachments-app.png) to see all the attachments in a form together. 赤色の通知は、フォームの添付ファイルの数を表示します。フォームに添付ファイルが存在しない場合、赤い通知ボタンは表示されません。 If there are no attachments in the form, when you tap the attachments button ![attch](assets/attch.png), you get options to attach photos or scribbles.
 
 次のオプションがあります。
 
@@ -30,7 +33,7 @@ AEM Forms アプリでは、AEM Forms JEE サーバーと同期されたフォ�
 
 >[!NOTE]
 >
->1人のユーザーが追加した添付ファイルは、他のAEM Formsアプリケーションのユーザーに表示されます。 他のユーザーは、ユーザーが追加した添付ファイルを削除することはできません。
+>1人のユーザーが追加した添付ファイルは、他のAEM Formsアプリのユーザーにも表示されます。 他のユーザーは、ユーザーが追加した添付ファイルを削除することはできません。
 
 
 ### 「添付ファイル」画面{#the-attachments-screen}
@@ -68,14 +71,15 @@ The **Notes** option lets you add freehand scribbles and text attachments in you
 1. 起動した「メモ」ユーザーインターフェイスで、フリーハンドの手書きメモをキャプチャします。
 
    ![「手書きメモ」インターフェイス](assets/scribble-ui.png)
-   **図：** 手書き *メモ*
+   **図：** *手書き*
 
    「手書きメモ」インターフェイスでは、以下のオプションを使用できます。
 
    * **[!UICONTROL クリア]**：スクリーンをクリアします。
-   * **[!UICONTROL 完了]**:現在の手書きメモを添付します。
-   * **[!UICONTROL キャンセル]**:現在の手書きメモを破棄し、手書きメモのユーザーインターフェイスを閉じます。
-   * ![キーボード](assets/keyboard.png):手書きメモをクリアし、テキストメモを追加できるようにします。
+   * **[!UICONTROL 完了]**: 現在の手書きメモを添付します。
+   * **[!UICONTROL キャンセル]**: 現在の手書きメモを破棄し、手書きメモユーザーインターフェイスを閉じます。
+   * ![キーボード](assets/keyboard.png): 手書きメモをクリアし、テキストメモを追加します。
+
    ![AEM Forms アプリの手書きメモ画面に表示されたキーボード](assets/keyboard-inapp.png)
 
 ## Attachments in forms synced with the AEM Forms servers without AEM Forms Workflow (AEM Forms on OSGi) {#attachments-in-forms-synced-with-the-aem-forms-servers-without-aem-forms-workflow-aem-forms-on-osgi}
