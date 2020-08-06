@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
 translation-type: tm+mt
 source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
+workflow-type: tm+mt
+source-wordcount: '463'
+ht-degree: 63%
 
 ---
 
@@ -45,11 +48,11 @@ To get started creating a new site template, select `Create`.
 
 基本情報パネルでは、名前、説明およびテンプレートを有効にするか無効にするかを設定します。
 
-* **[!UICONTROL コミュニティサイトテンプレート]**&#x200B;名テンプレート名id
+* **[!UICONTROL コミュニティサイトテンプレート名]**&#x200B;テンプレート名id
 
-* **[!UICONTROL コミュニティサイトテンプレートの説明]**&#x200B;テンプレートの説明
+* **[!UICONTROL コミュニティサイトテンプレート説明]**&#x200B;テンプレートの説明
 
-* **[!UICONTROL 無効/有効]**&#x200B;テンプレートを参照可能にするかどうかを制御する切り替えスイッチ
+* **[!UICONTROL 無効/有効]**&#x200B;テンプレートが参照可能かどうかを制御する切り替えスイッチ
 
 ### サムネール {#thumbnail}
 
