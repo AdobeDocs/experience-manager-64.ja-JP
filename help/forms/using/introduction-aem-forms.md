@@ -10,6 +10,9 @@ topic-tags: introduction
 discoiquuid: a976a854-4bf2-49f8-871e-28bc597ac496
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '943'
+ht-degree: 99%
 
 ---
 
@@ -113,5 +116,6 @@ AEM Forms を使用するビジネスユーザーは、ドキュメントテン�
 * コンテンツの完全性と署名者の身元を検証するデジタル署名をサポート
 * ドキュメントの AEM Forms 用セキュリティアドオンにより、暗号化、使用ポリシー、追跡、および監査などに対応
 
-![](do-not-localize/layout-02.png)****&#x200B;図：合理化されたパーソナ *ライズされたコミュニケーションワークフロー*
+![](do-not-localize/layout-02.png)
+**図：** *合理化されたパーソナライズされたコミュニケーションワークフロー*
 
