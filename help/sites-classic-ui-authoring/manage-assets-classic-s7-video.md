@@ -11,17 +11,20 @@ content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1737'
+ht-degree: 40%
 
 ---
 
 
 # ビデオ{#video}
 
-アセットを使用すると、ビデオアセット管理を一元化でき、ビデオをアセットに直接アップロードして、Dynamic Media Classicに自動エンコードしたり、アセットから直接Dynamic Media Classicビデオにアクセスしてページを作成したりできます。
+アセットを使用すると、ビデオアセット管理を一元化できます。この機能を使用して、ビデオをアセットに直接アップロードし、Dynamic Media Classicに自動エンコードしたり、アセットから直接Dynamic Media Classicビデオにアクセスしてページをオーサリングできます。
 
 Dynamic Media Classicビデオの統合により、最適化されたビデオの提供先がすべての画面（自動デバイスおよび帯域幅検出）に拡張されます。
 
-* Dynamic Media Classic(Scene7)ビデオコンポーネントは、デバイスと帯域幅の検出を自動的に実行し、デスクトップ、タブレット、モバイルで適切な形式と適切な画質のビデオを再生します。
+* Dynamic Media Classic(Scene7)ビデオコンポーネントは、デバイスと帯域幅の検出を自動的に実行し、デスクトップ、タブレット、モバイルで適切な形式と品質のビデオを再生します。
 * Assets - You can include adaptive video sets rather than only single video assets. An adaptive video set is a container for all video renditions required to playback video seamlessly across multiple screens. An Adaptive Video Set groups versions of the same video that are encoded at different bit rates and formats such as 400 kbps, 800 kbps, and 1000 kbps. You use an Adaptive Video Set, along with S7 video component, for adaptive video streaming across multiple screens including desktop, iOS, Android, Blackberry, and Windows mobile devices. See [Scene7 documentation about adaptive video sets for more information](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html).
 
 ## FFMPEGとDynamic Media Classicについて {#about-ffmpeg-and-scene}
@@ -31,7 +34,7 @@ Dynamic Media Classicビデオの統合により、最適化されたビデオ�
 * FFMPEG のサムネイル
 * FFMPEG エンコーディング
 
-Dynamic Media Classic統合を有効にして設定しても、これら2つのワークフロー手順は、あらかじめ用意されているDAM Update Assetインジェストワークフローから自動的に削除または非アクティブ化されません。 FFMPEG ベースのビデオエンコーディングを既に AEM で使用している場合は、オーサリング環境に FFMPEG がインストールされている可能性があります。この場合、Assetsを使用して取り込んだ新しいビデオは2回エンコードされます。FFMPEGエンコーダーから1回、およびDynamic Media Classic統合から1回のみ。
+Dynamic Media Classic統合の有効化と設定を行っても、これら2つのワークフロー手順は、デフォルトのDAM Update Assetインジェストワークフローから自動的に削除または非アクティブ化されません。 FFMPEG ベースのビデオエンコーディングを既に AEM で使用している場合は、オーサリング環境に FFMPEG がインストールされている可能性があります。この場合、Assetsを使用して取り込む新しいビデオは2回エンコードされます。 をFFMPEGエンコーダーから、またはDynamic Media Classic統合から1回呼び出します。
 
 AEM で FFMPEG ベースのビデオエンコーディングが設定済みで、FFMPEG がインストールされている場合は、2 つの FFMPEG ワークフローを DAM アセットの更新ワークフローから削除することをお勧めします。
 
@@ -49,34 +52,34 @@ AEM で FFMPEG ベースのビデオエンコーディングが設定済みで�
 * ビデオアセットのワークフローが必要かどうか
 * ビデオアセットのバージョン管理が必要かどうか
 
-これらの質問のいずれかまたは両方に対する回答が「はい」の場合は、ビデオを直接Adobe DAMにアップロードします。 両方の質問に対する回答が「いいえ」の場合は、ビデオを直接Dynamic Media Classicにアップロードします。 各シナリオのワークフローについて、次の節で説明します。
+これらの質問のいずれかまたは両方に対する回答が「はい」の場合は、ビデオをAdobeDAMに直接アップロードします。 両方の質問に対する答えが「いいえ」の場合は、ビデオを直接Dynamic Media Classicにアップロードします。 各シナリオのワークフローについて、次の節で説明します。
 
 #### ビデオを直接 Adobe Assets にアップロードする場合 {#if-you-are-uploading-your-video-directly-to-adobe-assets}
 
 アセットのワークフローまたはバージョン管理が必要な場合は、まず Adobe Assets にアップロードする必要があります。推奨されるワークフローは次のとおりです。
 
-1. ビデオアセットをAdobe Assetsにアップロードし、自動的にエンコードしてDynamic Media Classicに公開します。
+1. ビデオアセットをAdobeアセットにアップロードし、自動的にエンコードしてDynamic Media Classicに公開します。
 1. AEM の WCM（コンテンツファインダーの「**[!UICONTROL ムービー]**」タブ）で、ビデオアセットにアクセスします。
-1. Dynamic Media ClassicビデオまたはFoundationビデオコンポーネントを使用する作成者。
+1. Dynamic Media ClassicビデオまたはFoundationビデオコンポーネントを使用するオーサー。
 
 #### ビデオをダイナミックメディアクラシックにアップロードする場合 {#if-you-are-uploading-your-video-to-scene}
 
-アセットのワークフローやバージョン管理が必要ない場合は、アセットをDynamic Media Classicにアップロードする必要があります。 推奨されるワークフローは次のとおりです。
+アセットのワークフローまたはバージョン管理が必要ない場合は、アセットをDynamic Media Classicにアップロードする必要があります。 推奨されるワークフローは次のとおりです。
 
-1. Dynamic Media Classicで、Dynamic Media Classic(シス [テム自動化)へのFTPのスケジュール設定とエンコードを設定します](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html)。
+1. Dynamic Media Classicで、Dynamic Media Classic（システム自動）にスケジュール済みのFTPアップロードとエンコードを [設定します](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html)。
 1. In AEM, access video assets in WCM in the **[!UICONTROL Dynamic Media Classic]** tab of the Content Finder.
-1. Dynamic Media Classicビデオコンポーネントを使用して作成者を作成します。
+1. Dynamic Media Classicビデオコンポーネントを使用して作成する場合。
 
-### ダイナミックメディアクラシックビデオとの統合の設定 {#configuring-integration-with-scene-video}
+### Dynamic Media Classicビデオとの統合の設定 {#configuring-integration-with-scene-video}
 
 **ユニバーサルプリセットを設定するには**:
 
-1. In **[!UICONTROL Cloud Services]**, navigate to your **[!UICONTROL Dynamic Media Classic]** configuration and click **[!UICONTROL Edit]**.
+1. **[!UICONTROL Cloud Servicesで]**、 **[!UICONTROL Dynamic Media Classic]** 設定に移動し、「 **[!UICONTROL 編集]**」をクリックします。
 1. 「**[!UICONTROL ビデオ]**」タブを選択します。
 
    >[!NOTE]
    >
-   >クラウド設定がページにない場合は、「**[!UICONTROL ビデオ]**」タブが表示されません。WCM用ダ [イナミックメディアクラシックの有効化を参照してください](#enablingscene7forwcm)。
+   >クラウド設定がページにない場合は、「**[!UICONTROL ビデオ]**」タブが表示されません。WCM用Dynamic Media Classicの [有効化を参照してください](#enablingscene7forwcm)。
 
 1. アダプティブビデオエンコーディングプロファイル、組み込みの単一のビデオエンコーディングプロファイルまたはカスタムビデオエンコーディングプロファイルを選択します。
 
@@ -86,7 +89,7 @@ AEM で FFMPEG ベースのビデオエンコーディングが設定済みで�
    >
    >ユニバーサルプリセットを設定する際に両方のアダプティブビデオセットを選択するか、「**[!UICONTROL アダプティブビデオエンコーディング]**」オプションを選択することをお勧めします。
 
-1. 選択したエンコーディングプロファイルは、このDynamic Media Classicクラウド設定用に設定したCQ DAMターゲットフォルダーにアップロードされたすべてのビデオに自動的に適用されます。 必要に応じて異なるエンコーディングプロファイルを適用するために、異なるターゲットフォルダーを持つ複数のDynamic Media Classicクラウド設定を設定できます。
+1. 選択したエンコーディングプロファイルは、このDynamic Media Classicクラウド設定用に設定したCQ DAMターゲットフォルダーにアップロードされたすべてのビデオに自動的に適用されます。 必要に応じて異なるエンコーディングプロファイルを適用するために、異なるターゲットーを持つ複数のDynamic Media Classicクラウド設定を設定できます。
 
 ### ビューアとエンコーディングプリセットの更新 {#updating-viewer-and-encoding-presets}
 
@@ -96,9 +99,9 @@ If you need to update the viewer and encoding presets for video in AEM because t
 
 ### マスタービデオのアップロード {#uploading-your-master-video}
 
-Adobe DAMからDynamic Media Classicにマスタービデオをアップロードするには：
+AdobeDAMからDynamic Media Classicにマスタービデオをアップロードするには：
 
-1. Dynamic Media Classicエンコーディングプロファイルを使用してクラウド設定を行ったCQ DAMターゲットフォルダーに移動します。
+1. Dynamic Media Classicエンコーディングプロファイルを使用したクラウド設定を設定したCQ DAMターゲットフォルダーに移動します。
 1. 「**[!UICONTROL アップロード]**」をクリックして、マスタービデオをアップロードします。Video uploading and encoding is complete after the [!UICONTROL DAM Update Asset] workflow is complete and **[!UICONTROL Publish to Dynamic Media Classic]** has a checkmark.
 
    >[!NOTE]
@@ -107,11 +110,11 @@ Adobe DAMからDynamic Media Classicにマスタービデオをアップロー�
 
    Dragging the DAM master video on to the video component accesses *all* of the Dynamic Media Classic encoded proxy renditions for delivery.
 
-### Foundationビデオコンポーネントとダイナミックメディアクラシックビデオコンポーネント {#foundation-video-component-versus-scene-video-component}
+### FoundationビデオコンポーネントとDynamic Media Classicビデオコンポーネント {#foundation-video-component-versus-scene-video-component}
 
 AEMを使用する場合、サイトで使用できるビデオコンポーネントと、ダイナミックメディアクラシック(Scene7)ビデオコンポーネントの両方にアクセスできます。 これらのコンポーネントに互換性はありません。
 
-ダイナミックメディアクラシックビデオコンポーネントは、ダイナミックメディアクラシックビデオでのみ機能します。 Foundationコンポーネントは、AEM（ffmpegを使用）およびDynamic Media Classicビデオから保存されたビデオで機能します。
+ダイナミックメディアクラシックビデオコンポーネントは、ダイナミックメディアクラシックビデオに対してのみ機能します。 Foundationコンポーネントは、AEM（ffmpegを使用）およびDynamic Media Classicビデオから保存されたビデオで機能します。
 
 次の表は、どのコンポーネントをどのようなシナリオで使用すべきかを示しています。
 
@@ -119,37 +122,37 @@ AEMを使用する場合、サイトで使用できるビデオコンポーネ�
 
 >[!NOTE]
 >
->初期設定では、ダイナミックメディアクラシックビデオコンポーネントはユニバーサルビデオプロファイルを使用します。 ただし、AEMで使用するHTML5ベースのビデオプレーヤーを取得することはできます。 Dynamic Media Classicで、あらかじめ用意されているHTML5ビデオプレーヤーの埋め込みコードをコピーし、AEMページに配置します。
+>デフォルトでは、ダイナミックメディアクラシックビデオコンポーネントはユニバーサルビデオプロファイルを使用します。 ただし、AEMで使用するHTML5ベースのビデオプレーヤーを取得できます。 Dynamic Media Classicで、標準搭載のHTML5ビデオプレーヤーの埋め込みコードをコピーし、AEMページに配置します。
 
 
 ## AEM ビデオコンポーネント {#aem-video-component}
 
-Dynamic Media Classicビデオの表示には、Dynamic Media Classicビデオコンポーネントを使用することをお勧めしますが、完全性を確保するために、 [!UICONTROL AEMの] Foundation Video ComponentでDynamic Media Classicビデオを使用する方法については、この節で説明します。
+Dynamic Media Classicビデオの表示には、Dynamic Media Classicビデオコンポーネントの使用が推奨される場合でも、完全性を確保するために、AEMの [!UICONTROL Foundation Video Component] でDynamic Media Classicビデオを使用する方法について説明します。
 
 ### AEMビデオとダイナミックメディアクラシックビデオの比較 {#aem-video-and-scene-video-comparison}
 
 次の表は、AEM 基盤ビデオコンポーネントと Scene7 ビデオコンポーネントでサポートされている機能の簡単な比較です。
 
-|  | AEM 基盤ビデオ | ダイナミックメディアクラシックビデオ |
+|  | AEM 基盤ビデオ | ダイナミックMedia Classicビデオ |
 |---|---|---|
 | アプローチ | HTML5 における最優先のアプローチです。Flash は HTML5 以外のフォールバックでのみ使用されます。 | ほとんどのデスクトップでは Flash です。HTML5 はモバイルとタブレットで使用されます。 |
 | 配信 | プログレッシブ | アダプティブストリーミング |
-| 追跡 | 可 | 可 |
-| 拡張性 | はい | はい（Dynamic Media ClassicビューアSDKを使用） |
-| モバイルビデオ | 可 | Yes |
+| 追跡 | はい | はい |
+| 拡張性 | 可 | はい（Dynamic Media ClassicビューアSDKを使用） |
+| モバイルビデオ | はい | Yes |
 
 ### 設定 {#setting-up}
 
 #### ビデオプロファイルの作成 {#creating-video-profiles}
 
-様々なビデオエンコーディングは、Dynamic Media Classicクラウド設定で選択したDynamic Media Classicエンコーディングプリセットに従って作成されます。 Foundationビデオコンポーネントでビデオを使用するには、選択した各Dynamic Media Classicエンコーディングプリセットに対してビデオプロファイルを作成する必要があります。 これにより、対応する DAM レンディションをビデオコンポーネントで選択できます。
+様々なビデオエンコーディングが、Dynamic Media Classicクラウド設定で選択されたDynamic Media Classicエンコーディングプリセットに従って作成されます。 Foundationビデオコンポーネントがこれらを使用するには、選択した各Dynamic Media Classicエンコーディングプリセットに対してビデオプロファイルを作成する必要があります。 これにより、対応する DAM レンディションをビデオコンポーネントで選択できます。
 
 >[!NOTE]
 >
 >新しいビデオプロファイルおよびビデオプロファイルに対する変更をアクティベートして公開する必要があります。
 
 1. AEM で、**[!UICONTROL ツール]**&#x200B;に移動し、「**[!UICONTROL 設定コンソール]**」を選択します。In the Configuration Console navigate to **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]** in the navigation tree.
-1. 新しいダイナミックメディアクラシックビデオプロファイルの作成を参照してください。 **[!UICONTROL 新し]**&#x200B;い…メニューで「ページを作 **[!UICONTROL 成」を選択し]** 、「ダイナミックメディアクラシックビデオプロファイル」テンプレートを選択します。 新しいビデオプロファイルページに名前を付け、「作成」をクリ **[!UICONTROL ックしま]**&#x200B;す。
+1. 新しいダイナミックメディアクラシックビデオプロファイルを作成します。 「 **[!UICONTROL 新規…]** 」メニューで「ページを **[!UICONTROL 作成」を選択し、「ダイナミックメディアクラシックビデオプロファイル]** 」テンプレートを選択します。 新しいビデオプロファイルページに名前を付け、「 **[!UICONTROL 作成]**」をクリックします。
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
@@ -160,7 +163,7 @@ Dynamic Media Classicビデオの表示には、Dynamic Media Classicビデオ�
    | プロパティ | 説明 |
    |---|---|
    | Dynamic Media Classic(Scene7)クラウド設定 | エンコーディングプリセットで使用するクラウド設定です。 |
-   | ダイナミックメディアクラシック(Scene7)エンコーディングプリセット | このビデオプロファイルをマップするために使用するエンコーディングプリセットです。 |
+   | Dynamic Media Classic(Scene7)エンコーディングプリセット | このビデオプロファイルをマップするために使用するエンコーディングプリセットです。 |
    | HTML5 ビデオタイプ | このプロパティを使用すると、HTML5 ビデオのソース要素の type プロパティの値を設定できます。この情報は、Dynamic Media Classicのエンコーディングプリセットでは提供されませんが、HTML5ビデオ要素を使用してビデオを正しくレンダリングするために必要です。 共通の形式用のリストが提供されますが、他の形式用に上書きできます。 |
 
    ビデオコンポーネントで使用する、クラウド設定で選択したすべてのエンコーディングプリセットについて、この手順を繰り返します。
@@ -177,12 +180,12 @@ Dynamic Media Classicビデオの表示には、Dynamic Media Classicビデオ�
 >
 >デザインを変更するには、デザインのアクティベーションをおこなって、公開時に変更を有効にする必要があります。
 
-1. 基盤ビデオコンポーネントのデザインダイアログを開き、「**[!UICONTROL プロファイル]**」タブに変更します。その後、あらかじめ用意されているプロファイルを削除し、新しいDynamic Media Classicビデオプロファイルを追加します。 デザインダイアログ内のプロファイルリストの順序は、レンダリング時のビデオソース要素の順序も定義します。
+1. 基盤ビデオコンポーネントのデザインダイアログを開き、「**[!UICONTROL プロファイル]**」タブに変更します。次に、そのまま使用できるプロファイルを削除し、新しいDynamic Media Classicビデオプロファイルを追加します。 デザインダイアログ内のプロファイルリストの順序は、レンダリング時のビデオソース要素の順序も定義します。
 1. HTML5 をサポートしていないブラウザーの場合は、ビデオコンポーネントで Flash フォールバックを設定できます。ビデオコンポーネントのデザインダイアログを開き、「**[!UICONTROL Flash]**」タブに変更します。Flash Player 設定を指定して、Flash Player のフォールバックプロファイルを割り当てます。
 
 #### チェックリスト {#checklist}
 
-1. Dynamic Media Classic(Scene7)クラウド設定を作成します。 ビデオエンコーディングプリセットが設定され、インポーターが実行されていることを確認します。
+1. ダイナミックメディアクラシック(Scene7)クラウド設定を作成します。 ビデオエンコーディングプリセットが設定され、インポーターが実行されていることを確認します。
 1. クラウド設定で選択した各ビデオエンコーディングプリセットに対して、Dynamic Media Classicビデオプロファイルを作成します。
 1. ビデオプロファイルをアクティベートする必要があります。
 1. 目的のページで基盤ビデオコンポーネントの設計を設定します。
