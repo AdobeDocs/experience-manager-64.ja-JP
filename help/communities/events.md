@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 translation-type: tm+mt
 source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 72%
 
 ---
 
@@ -128,7 +131,7 @@ The custom event would override the method `getVerb()` so that an appropriate `v
 
 ### カスタムコンポーネントイベントの疑似コード {#pseudo-code-for-custom-component-event}
 
-[org.osgi.service.event.Event](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);\
+[org.osgi.service.イベント.イベント](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);\
 [com.adobe.cq.soscial.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);\
 [com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);\
 [com.adobe.granite.activitystreams.Verbs](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
