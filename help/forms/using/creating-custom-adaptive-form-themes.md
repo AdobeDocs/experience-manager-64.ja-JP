@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 437e6581-4eb1-4fbd-a6da-86b9c90cec89
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '825'
+ht-degree: 82%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 
 >[!CAUTION]
 >
->AEM formsは、アダプティブフ [ォームのテーマを作成](/help/forms/using/themes.md) 、変更するテーマエディター機能を提供 [します](/help/forms/using/themes.md)。 この記事に示す手順を実行するのは、テーマエディターのないバージョンからアップグレードした場合で、 [LESS](/help/forms/using/themes.md) /CSSファイルを使用して作成したテーマに対する既存の投資がある場合のみです（テーマエディターを使用する場合）。
+>AEM Formsは、アダプティブフォームの [テーマを作成および変更する](/help/forms/using/themes.md) テーマエディター機能を提供しています [](/help/forms/using/themes.md)。 この記事に示す手順を実行するのは、 [テーマエディターを持たないバージョンからアップグレードした場合に、LESS/CSSファイルを使用して作成したテーマに既に投資している場合に限ります](/help/forms/using/themes.md) （テーマエディターを使用する前の方法）。
 
 ## 前提条件 {#prerequisites}
 
@@ -42,7 +45,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 >
 >この手順にしたがって同じ名前を使用すると、結果として次のスナップショットと同じようなテンプレートが出来上がるはずです：
 
-![](assets/thumbnail.png) フォレストテーマのアダプティブフォームのスナッ&#x200B;****&#x200B;プショット図：フォレスト *テーマのサンプル*
+![フォレストのテーマを設定したアダプティブフォームのスナップショット](assets/thumbnail.png)**図：** *フォレストテーマのサンプル*
 
 1. Create a node of type `cq:ClientLibraryFolder` under the `/apps`node.
 
@@ -58,17 +61,19 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 
 1. Add two folders, `less` and `css`, and a file `css.txt` to the node created in step 1:
 
-   * `less` フォルダ：変数を定 `less` 義し、.cssスタイルの管理に使 `less` 用する変 `less mixins` 数ファイルが含まれます。
+   * `less` folder: 変数を定義する `less` 変数ファイルが含まれます。この変数は、.cssスタイルの管理 `less``less mixins` に使用されます。
 
       このフォルダーは、`less` 変数ファイル、`less` ミックスインファイル、ミックスインと変数を使用してスタイルを定義する `less` ファイルから構成されています。そして、これらすべての less ファイルは、styles.less にインポートされます。
 
    * `css` フォルダー：テーマで使用される静的スタイルを定義する CSS ファイルが含まれています。
+
    **LESS 変数ファイル**：これらは、CSS スタイルを定義するために使用される変数を定義または上書きするためのファイルです。
 
    アダプティブフォームは、次の LESS ファイルで定義されている OOTB 変数を提供します：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less`
    * `/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
+
    アダプティブフォームは、次のファイルで定義されているサードパーティ変数も提供しています：
 
    `/apps/clientlibs/fd/af/third-party/less/variables.less`
@@ -96,6 +101,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
       `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
 
    1. 次に、上書きされた変数を含む LESS ファイルをインポートします。
+
    新しい変数の定義の例：
 
    ```
@@ -108,9 +114,11 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
    アダプティブフォームは、次のファイルで定義されている OOTB ミックスインを提供します：
 
    * `/apps/clientlibs/fd/af/guidetheme/common/less/adaptiveforms-mixins.less`
+
    アダプティブフォームは、次のファイルで定義されているサードパーティミックスインも提供しています：
 
    * `/apps/clientlibs/fd/af/third-party/less/mixins.less`
+
    ミックスインの定義の例： 
 
    ```
