@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 1e96d388-8517-4a84-bb0a-d49567eb4bdf
 translation-type: tm+mt
 source-git-commit: 1bbd917ef20c4a618e93af66ffe8a6cfc8448e78
+workflow-type: tm+mt
+source-wordcount: '410'
+ht-degree: 72%
 
 ---
 
@@ -47,7 +50,7 @@ For necessary information, visit [Communities Components Basics](basics.md).
 
 Select the placed `Leaderboard` component to access and select the `Configure` icon which opens the edit dialog.
 
-![chlimage_1-9](assets/chlimage_1-9.png)![chlimage_1-10](assets/chlimage_1-10.png)
+![chlimage_1-9](assets/chlimage_1-9.png) ![chlimage_1-10](assets/chlimage_1-10.png)
 
 ### 「設定」タブ{#settings-tab}
 
