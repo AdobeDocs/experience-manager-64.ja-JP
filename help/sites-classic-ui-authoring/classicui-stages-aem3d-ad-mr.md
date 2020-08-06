@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f30c4039-3bbf-4d02-a9b5-bda6ccce16b9
 translation-type: tm+mt
 source-git-commit: e0ce860380a28a9dcaa6f8ce94ad278cdbe49fad
+workflow-type: tm+mt
+source-wordcount: '433'
+ht-degree: 81%
 
 ---
 
@@ -25,11 +28,12 @@ source-git-commit: e0ce860380a28a9dcaa6f8ce94ad278cdbe49fad
    * 指向性ライト
    * スポットライト
    * ポイントライト
-   他のタイプのライトは無視され、ステージが AEM 3D にアップロードされるときに、上記のサポートされているいずれかのタイプに変換されます。アセットを表示する場合、および組み込みの Rapid Refine レンダラーを使用する場合、変換されたタイプが使用されます。Mayaでレンダリングする場合は、オリジナルのライトタイプが使用されます。
+
+   他のタイプのライトは無視され、ステージが AEM 3D にアップロードされるときに、上記のサポートされているいずれかのタイプに変換されます。アセットを表示する場合、および組み込みの Rapid Refine レンダラーを使用する場合、変換されたタイプが使用されます。Mayaでレンダリングする際には、オリジナルのライトタイプが使用されます。
 
 1. 必要に応じて、グラウンドプレーンを作成し、適切な素材を適用します。
 
-   グラウンドプレーンは、片面として設定することをお勧めします。これにより、アセットを地表面に隠さずに、AEM 3Dの下からアセットを確実に表示できます。
+   グラウンドプレーンは、片面として設定することをお勧めします。これにより、アセットを地面に隠さずに、AEM 3Dの下からアセットを表示できます。
 
 1. （オプション）カメラを作成して設定します。
 
@@ -45,7 +49,7 @@ source-git-commit: e0ce860380a28a9dcaa6f8ce94ad278cdbe49fad
 
    * **[!UICONTROL 「画質」タブ]**
 
-      * **[!UICONTROL 全体的な品質]**`- 0.5` 以下
+      * **[!UICONTROL 全体的なクォリティ]**`- 0.5` 以下
       * **[!UICONTROL 間接拡散(GI)モード]** - `Final Gather`
       * **[!UICONTROL フィルタサイズ]** - `2.0`、 `2.0`
    * 使用する一般的な画像サイズでシーンをレンダリングします。If necessary, refine the lights, or [!UICONTROL Render settings], or do both to achieve the results you want.
