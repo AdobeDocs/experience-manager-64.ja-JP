@@ -11,6 +11,9 @@ topic-tags: forms-app
 discoiquuid: 133d93b0-512c-46db-b5f9-f981d77b565f
 translation-type: tm+mt
 source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+workflow-type: tm+mt
+source-wordcount: '316'
+ht-degree: 75%
 
 ---
 
@@ -39,6 +42,6 @@ AEM Forms アプリケーションで自動保存の機能を使用するには�
 
 1. アプリケーションを再起動して同じユーザーでログインすると、未保存のタスクの復元ダイアログで、タスクを復元するように求められます。Click **[!UICONTROL OK]** in the Recover Unsaved Task dialog to resume working with the saved task. 「**[!UICONTROL キャンセル]**」をクリックし、最後にトリガーされた自動保存の保存済みデータを削除して、新しいタスクで作業を始めることもできます。
 
-   「**[!UICONTROL OK]**」をクリックすると、アプリケーションがクラッシュする前に最後にトリガーされた自動保存に対応するデータが使用されてタスクが復元されます。フォームデータと、タスクに関連付けられているすべての添付ファイルが含まれます。
-   [![](assets/autosave-flow.png)](assets/using-autosave-freq-06.png)****タス**&#x200B;クの回復&#x200B;**A。進行中のフォーム** B。アプリが強制的に閉じ **られました。** C.未保存のタスクの復元ダイアログ **Dで再起動された。元のデータで復元されたフォーム
+   「**[!UICONTROL OK]**」をクリックすると、アプリケーションがクラッシュする前に最後にトリガーされた自動保存に対応するデータが使用されてタスクが復元されます。フォームデータと、そのタスクに関連付けられているすべての添付ファイルが含まれます。
+   [ ![タスクの](assets/autosave-flow.png)](assets/using-autosave-freq-06.png)**回復A。**作業中のフォーム** B.**Appが強制的に終了しました。** C.**Appは未保存のタスクの復元ダイアログで再起動されました。** D.**Formは元のデータで復元されました
 
