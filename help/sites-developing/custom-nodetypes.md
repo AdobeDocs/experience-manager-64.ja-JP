@@ -20,12 +20,12 @@ ht-degree: 45%
 
 # カスタムノードタイプ{#custom-node-types}
 
-AEMはSlingに基づいており、JCRリポジトリを使用するので、次の2つのノードタイプの両方から提供されるノードタイプを使用できます。
+AEMはSlingに基づいており、JCRリポジトリを使用するので、次の2つのノードタイプが提供されるノードタイプを使用できます。
 
 * [JCR ノードタイプ](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/3_Repository_Model.html#3.1.7%20Node%20Types)
 * [Sling ノードタイプ](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
-これらに加えて、AEMは、様々なカスタムノードタイプを提供します。
+これらに加えて、AEMには、様々なカスタムノードタイプが用意されています。
 
 ## 監査 {#audit}
 
@@ -472,7 +472,7 @@ DAM アセットを表すサムネール。
 
 The items in a `cq:Cq4ContentPage` are:
 
-* `@prop cq:csd`  — ページのContentBus CSD。
+* `@prop cq:csd`  — ページのContentBusCSD。
 * `@node cq:content`  — ページのコンテンツ。 この子ノードは、ページノードが「コンテンツなしで存在」または「削除済み」の状態の場合には存在しません。
 * `@node cq:attributes`  — ページ属性のリスト。以前はバージョンタグと呼ばれていました。 cq:contentPage タイプの場合、このノードは必須です。ページがノードのバージョン付けされる場合、属性ノードはバージョン付けされます。
 
