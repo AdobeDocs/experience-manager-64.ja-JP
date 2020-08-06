@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 translation-type: tm+mt
 source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
+workflow-type: tm+mt
+source-wordcount: '623'
+ht-degree: 64%
 
 ---
 
@@ -24,8 +27,8 @@ source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
 そうするには、次の手順を実行します。
 
 * カスタムテンプレートの作成
-* デフォルトのサイトテンプレートパスをオーバーレイする
-* オーバーレイパスへのカスタムテンプレートの追加
+* サイトテンプレートのデフォルトパスをオーバーレイ
+* オーバーレイ追加パスのカスタムテンプレート
 * Specify the custom template by adding a `page-template` property to the `configuration` node
 
 **デフォルトのテンプレート**：
@@ -36,15 +39,15 @@ source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
 
 /**apps**/social/console/components/hbs/sitepage/**&lt;*template-name*>**.hbs
 
-**プロパティ**:page-template\
+**プロパティ**: page-template\
 **種類**：string\
-**値**:&lt;*template-name*> （拡張子なし）
+**値**: &lt;*template-name*> （拡張子なし）
 
 **設定ノード**：
 
 /content/&lt;*community site path*>/&lt;*lang*>/configuration
 
-例：/content/sites/engage/jp/configuration
+次に例を示します。 /content/sites/engage/en/configuration
 
 >[!NOTE]
 >
@@ -58,7 +61,7 @@ source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
 
 As an example, `vertical-sitepage.hbs` is a site template that results in the placement of menu links vertically down the left side of the page, instead of horizontally below the banner.
 
-[[ファイルの取得](assets/vertical-sitepage.hbs)]カスタムサイトテンプレートをオーバーレイフォルダに配置します。
+[ファイルの取得](assets/vertical-sitepage.hbs)カスタムサイトテンプレートをオーバーレイフォルダーに配置します。
 
 /**apps**/social/console/components/hbs/sitepage/**vertical-sitepage**.hbs
 
@@ -84,7 +87,7 @@ To export UGC, use the [AEM Communities UGC Migration Tool](https://github.com/A
 
 ## コミュニティサイトの削除 {#deleting-a-community-site}
 
-AEM Communities 6.3 Service Pack 1 以降では、コミュニティ／サイトコンソール内でコミュニティサイトにマウスポインターを置くと、サイトを削除アイコンが表示されます。開発中にコミュニティサイトを削除して新規に開始する場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次のアイテムが削除されます。
+AEM Communities 6.3 Service Pack 1 以降では、コミュニティ／サイトコンソール内でコミュニティサイトにマウスポインターを置くと、サイトを削除アイコンが表示されます。開発中に、コミュニティサイトと開始を新規に削除したい場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次のアイテムが削除されます。
 
 * [UGC](#user-generated-content)
 * [ユーザーグループ](#community-user-groups)
@@ -100,7 +103,8 @@ CRXDE を使用して、コミュニティに関連付けられている一意�
 * Find the `allow<#>` node with a `rep:principalName` in this format `rep:principalName = *community-enable-nrh9h-members*`
 
 * The site ID is the 3rd component of `rep:principalName`
-For example, if `rep:principalName = community-enable-nrh9h-members`
+For example, if 
+`rep:principalName = community-enable-nrh9h-members`
 
    * **サイト名** = *enable*
    * **サイトID** = *nrh9h*
@@ -127,7 +131,7 @@ Github から communities-srp-tools プロジェクトを取得します。
 * 先頭に `community`
 * Followed by [unique site id](#community-unique-site-id)
 
-For example, `community-engage-x0e11-members`.
+例： `community-engage-x0e11-members`
 
 ### イネーブルメントアセット {#enablement-assets}
 
@@ -135,7 +139,7 @@ For example, `community-engage-x0e11-members`.
 
 * Select **[!UICONTROL Assets]**
 * Enter **[!UICONTROL Select]** mode
-* Select folder named with the [unique site Id](#community-unique-site-id)
+* [一意のサイトIDを使用して名前が付けられたフォルダを選択](#community-unique-site-id)
 * Select **[!UICONTROL Delete]** (may need to select from **[!UICONTROL More...]**)
 
 ### データベースレコード {#database-records}
