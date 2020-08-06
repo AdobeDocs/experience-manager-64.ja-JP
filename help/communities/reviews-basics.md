@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 62669a9d-2107-4644-a4bf-143d0ac148b3
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 59%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
 
 Reviews is a composite component based on a [comment system](essentials-comments.md) which contains one or more [rating](rating-basics.md) (tally) components.
 
-匿名でのレビュー投稿はサポートされていません。サイトの訪問者は、レビューを追加するには登録し、サインインする必要があります。 ログインした訪問者（メンバー）は、いつでもレビューを更新できます。
+匿名でのレビュー投稿はサポートされていません。サイト訪問者は、レビューを追加するには登録してサインインする必要があります。 サインインした訪問者（メンバ）は、いつでもレビューを更新できます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -64,7 +67,7 @@ Reviews is a composite component based on a [comment system](essentials-comments
 | [**clientllibs **](client-customize.md#clientlibs-for-scf) | cq.social.hbs.reviews |
 | **テンプレート** | /libs/social/reviews/components/hbs/summary/summary.hbs |
 | **css** | /libs/social/reviews/components/hbs/reviews/clientlibs/review.css |
-| **properties** | See [Using Reviews](reviews.md) |
+| **プロパティ** | See [Using Reviews](reviews.md) |
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
