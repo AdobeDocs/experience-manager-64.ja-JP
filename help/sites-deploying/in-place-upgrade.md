@@ -11,6 +11,9 @@ topic-tags: upgrading
 discoiquuid: b1bd40f4-21c6-48f5-a41e-42daeaad3687
 translation-type: tm+mt
 source-git-commit: d97828afee7a65e7a4036912c1cc8726404088c9
+workflow-type: tm+mt
+source-wordcount: '1238'
+ht-degree: 80%
 
 ---
 
@@ -54,6 +57,7 @@ The actual migration is performed using the standard AEM quickstart jar file, ex
 >CRX2Oak Quickstart 拡張を使用して TarMK リポジトリのコンテンツ移行を実行する場合は、移行コマンドラインに以下を追加することで **samplecontent** 実行モードを削除できます。
 >
 >* `--promote-runmode nosamplecontent`
+
 >
 
 
@@ -71,11 +75,11 @@ Where `<<YOUR_PROFILE>>` and `<<ADDITIONAL_FLAGS>>` are replaced with the profil
   <tr> 
    <td><strong>ソースリポジトリ</strong></td> 
    <td><strong>ターゲットリポジトリ</strong></td> 
-   <td><strong>Profile</strong></td> 
+   <td><strong>プロファイル</strong></td> 
    <td><strong>追加のフラグ</strong><br /> </td> 
   </tr> 
   <tr> 
-   <td>crx2またはTarMKを <code>FileDataStore</code></td> 
+   <td>crx2またはTarMKと <code>FileDataStore</code></td> 
    <td>TarMK</td> 
    <td>segment-fds</td> 
    <td>後述のトラブルシューティングに関する節を参照</td> 
@@ -185,7 +189,7 @@ Where `/path/to/datastore` represents the path to your File Datastore.
    /usr/bin/java -server -Xmx1024m -XX:MaxPermSize=256M -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar crx-quickstart/app/cq-quickstart-6.2.0-standalone-quickstart.jar start -c crx-quickstart -i launchpad -p 4502 -Dsling.properties=conf/sling.properties
    ```
 
-1. 既存の jar のパス（この場合は `crx-quickstart/app/aem-quickstart*.jar`）を `crx-quickstart` フォルダーと同じ階層にある新しい jar に置き換えて、コマンドを変更します。前のコマンドを例として使用すると、次のようになります。
+1. 既存の jar のパス（この場合は `crx-quickstart/app/aem-quickstart*.jar`）を `crx-quickstart` フォルダーと同じ階層にある新しい jar に置き換えて、コマンドを変更します。前のコマンドを例として使用すると、次のコマンドが実行されます。
 
    ```shell
    /usr/bin/java -server -Xmx1024m -XX:MaxPermSize=256M -Djava.awt.headless=true -Dsling.run.modes=author,crx3,crx3tar -jar cq-quickstart-6.4.0.jar -c crx-quickstart -p 4502 -Dsling.properties=conf/sling.properties
