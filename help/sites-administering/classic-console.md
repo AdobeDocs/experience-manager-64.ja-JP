@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: a7f31bc8-c583-439f-b2af-1dcc58f9c481
 translation-type: tm+mt
 source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
+workflow-type: tm+mt
+source-wordcount: '890'
+ht-degree: 64%
 
 ---
 
@@ -29,7 +32,7 @@ source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
 
    for example, [http://localhost:4502/tagging](http://localhost:4502/tagging)
 
-![managing_tags_usingtagasadministrationconsole-1](assets/managing_tags_usingthetagasministrationconsole-1.png)
+![managing_tags_usingthetagasadministrationconsole-1](assets/managing_tags_usingthetagasministrationconsole-1.png)
 
 ## タグおよび名前空間の作成 {#creating-tags-and-namespaces}
 
@@ -41,16 +44,19 @@ source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
 
    名前空間（例えば「**Demo**」）を選択すると、その名前空間内にタグを作成できます。
 
-   ![creating_tags_andnamespaces新しい名前空間](assets/creating_tags_andnamespacesinnewnamespace.png)
+   ![creating_tags_andnamespacesinnewnamespace](assets/creating_tags_andnamespacesinnewnamespace.png)
 
 1. どちらの場合も、次のように入力します。
 
-   * **Title**(必&#x200B;*須*)タグの表示タイトル。 どの文字も入力できますが、
+   * **タイトル**
+(
+*必須*)タグの表示タイトル。 どの文字も入力できますが、
 
       次の特殊文字は使用しないことをお勧めします。
 
-      * `colon (:)`  — 名前空間区切り
+      * `colon (:)` -名前空間区切り
       * `forward slash (/)`  — サブタグ区切り文字
+
       これらの文字は入力しても表示されません。
 
    * **名前**
@@ -88,7 +94,7 @@ source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
 
 「**リスト**」を選択すると、新しいウィンドウが開き、ハイライト表示されたタグを使用しているすべてのページのパスが表示されます。
 
-![list_showing_wheretagsarereferenced](assets/list_showing_wheretagsarereferenced.png)
+![リスト_showing_wheretagsarereferenced](assets/list_showing_wheretagsarereferenced.png)
 
 ## Moving Tags {#moving-tags}
 
