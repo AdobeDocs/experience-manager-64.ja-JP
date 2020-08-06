@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: ccaebb4c-cc1c-4ee7-b080-99667f348427
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '468'
+ht-degree: 37%
 
 ---
 
@@ -25,8 +28,8 @@ The activities of a signed in community member, such as posting to a forum or bl
 
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
-* AEMサイトへのActivity Streamsコンポーネントの追加
-* Activity Streamsコンポーネントの構成設定
+* AEMサイトへのアクティビティストリームコンポーネントの追加
+* アクティビティストリームコンポーネントの構成設定
 
 ## アクティビティストリームをページに追加 {#adding-activity-streams-to-a-page}
 
@@ -38,7 +41,7 @@ If it is desired to add an `Activity Streams` component to a page in author mode
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](essentials-activities.md#essentials-for-client-side) are included, this is how the `Activity Streams` component will appear:
+[必要なクライアント側ライブラリが含まれる場合](essentials-activities.md#essentials-for-client-side) 、次のようにコンポー `Activity Streams` ネントが表示されます。
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
@@ -52,11 +55,11 @@ Select the placed `Activity Streams` component to access and select the `Configu
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
-* **[!UICONTROL アクティビティの最大数]**&#x200B;表示するアクティビティの数
+* **[!UICONTROL 最大アクティビティ数]**&#x200B;表示するアクティビティ数
 * **[!UICONTROL ストリームリソースパス]**&#x200B;空白のままにすると、コミュニティサイトまたはコミュニティグループがデフォルトになります。ストリームリソースパスは、アクティビティのソースを識別します。 初期設定は空白です。
 * **[!UICONTROL ユーザーアクティビティビューを表示]**&#x200B;オンにすると、アクティビティページに、現在のメンバーがコミュニティ内で生成するアクティビティに基づいてアクティビティをフィルタリングできるタブが表示されます。初期設定はオンです。
-* **[!UICONTROL すべてのアクティビティビューを表示]**：オンにすると、アクティビティページに、現在のメンバーがアクセスできるコミュニティ内で生成されたすべてのアクティビティを含むタブが表示されます。 初期設定はオンです。
-* **[!UICONTROL [次のビューを表示]**]オンにすると、現在のメンバーがフォローしているアクティビティに基づいてアクティビティをフィルタリングするタブがアクティビティページに表示されます。 初期設定はオンです。
+* **[!UICONTROL [すべてのアクティビティを表示]表示]**&#x200B;オンにすると、アクティビティページにタブが含まれ、現在のメンバがアクセス権を持つコミュニティ内で生成されたすべてのアクティビティが含まれます。 初期設定はオンです。
+* **[!UICONTROL [次の表示を表示]**]オンにすると、アクティビティページに、現在のメンバに基づくフィルターアクティビティがフォローしているタブが含まれます。 初期設定はオンです。
 
 ## フォロービュー {#following-view}
 
@@ -72,10 +75,10 @@ The **Follow** button will appear:
 
 * 別のメンバーのプロファイルを表示する場合
 * フォーラム、QnA、ブログなどのメイン機能ページ
-   * その一般機能のすべてのアクティビティに従います
+   * その一般的な機能のすべてのアクティビティに従う
 
-* フォーラムトピック、QnA質問、ブログ記事などの特定のエントリ
-   * その特定のエントリのすべてのアクティビティに従う
+* フォーラムトピック、QnA質問、ブログ記事など、特定のエントリ
+   * 特定のエントリのすべてのアクティビティに従う
 
 ## 追加情報 {#additional-information}
 
