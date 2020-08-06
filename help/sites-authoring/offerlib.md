@@ -11,6 +11,9 @@ topic-tags: personalization
 discoiquuid: 889b5ffc-3652-47d8-b576-128f3cee513a
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '880'
+ht-degree: 100%
 
 ---
 
@@ -34,7 +37,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    ![chlimage_1-306](assets/chlimage_1-306.png)
 
-1. Click or tap **Create** and then **Create Brand**.
+1. 「**作成**」、「**ブランドを作成**」の順にクリックまたはタップします。
 1. ブランドテンプレートを選択して、「**次へ**」をクリックまたはタップします。
 1. オファーコンソールとアクティビティコンソールに表示するブランドのタイトルを入力します。オプションで、このブランドに関連付ける 1 つ以上のタグを入力または選択します。
 1. 「**作成**」をクリックまたはタップします。
@@ -48,7 +51,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    ![chlimage_1-307](assets/chlimage_1-307.png)
 
-1. Select **Folder** and click **Next**.
+1. 「**フォルダー**」を選択し、「**次へ**」をクリックします。
 1. オファーライブラリに表示するフォルダーのタイトルを入力し、タグを入力または選択します。
 
    ![chlimage_1-308](assets/chlimage_1-308.png)
@@ -68,7 +71,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 1. **オファーページ**&#x200B;テンプレートを選択して、「**次へ**」をクリックまたはタップします。
 1. オファーのタイトルを入力し、オプションでオファーに関連付ける 1 つ以上のタグを選択または入力して、「**作成**」をクリックまたはタップします。
-1. In the confirmation dialog box, to open the offer for editing click or tap **Open Page**.
+1. このオファーを編集用に開くには、確認ダイアログボックスで「**ページを開く**」をクリックまたはタップします。
 
 ## オファーの編集 {#editing-an-offer}
 
@@ -105,6 +108,6 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 オファーを検索するには：
 
-1. オファーコンソールの上部で、虫眼鏡アイコンをクリックまたはタップします。デフォルトでは、検索はオファーに制限されます。
+1. オファーコンソールの上部で、虫眼鏡アイコンをクリックまたはタップします。デフォルトでは、検索対象はオファーに限定されます。
 1. オファーを検索するためのキーワードを入力します。結果から選択します。
 
