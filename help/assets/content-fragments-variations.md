@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: dea673f8999656a5c5364f74f45eba41dd17b947
 workflow-type: tm+mt
 source-wordcount: '1762'
-ht-degree: 91%
+ht-degree: 92%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 91%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、 [AEM 6.4 Service Pack 2(6.4.2.0)以降が必要です](../release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2(6.4.2.0)以降が [必要です](../release-notes/sp-release-notes.md)。
 
 [バリエーション](content-fragments.md#constituent-parts-of-a-content-fragment)は、特定のチャネルやシナリオで使用するためにマスターコンテンツのコピーを作成して編集できる、コンテンツフラグメントの重要な機能です。
 
@@ -193,7 +193,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 >
 >英語版は標準で提供されています。
 >
->その他の言語は、ソフトウェア配布の言語モデルパッケージとして提供されています。
+>他の言語版は、ソフトウェア配布から言語モデルパッケージとして使用できます。
 >
 >* [フランス語(fr)（ソフトウェア配布版）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 >* [ソフトウェア配布のドイツ語(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
@@ -238,7 +238,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
 ### 注釈の表示、編集、削除 {#viewing-editing-deleting-annotations}
 
-注釈:
+注釈：
 
 * エディターの全画面表示モードと通常モードのどちらの場合も、注釈はテキストのハイライトとして示されます。注釈の完全な詳細を表示、編集および削除するには、ハイライト表示されたテキストをクリックします。するとダイアログが再度開きます。
 
