@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: b93060bd-c6e1-40d2-8acd-ccafb8ed56da
 translation-type: tm+mt
 source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 82%
 
 ---
 
@@ -33,8 +36,8 @@ AEM Forms モジュール（例えば、Forms、Rights Management、Output）が
 
 AEM Forms の完全な実装には、以下のアプリケーションサーバーおよびデータベースのサービスが含まれています。
 
-* *`[application server]`* （AEM forms用）
-* *`[database]`* （AEM forms用）
+* *`[application server]`* AEMフォーム
+* *`[database]`* AEMフォーム
 
 On Windows, these services are accessible through the **Administrative Tools** > **Services panel**. 例えば、自動オプションを使用して JBoss に AEM Forms をインストールした場合、システムでは以下のサービスを使用できます。
 
