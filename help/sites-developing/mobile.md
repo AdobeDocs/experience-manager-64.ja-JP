@@ -12,6 +12,9 @@ discoiquuid: e6b2de9e-dddc-4987-af2f-cf3477634ea9
 legacypath: /content/docs/en/aem/6-0/develop/mobile/mobile
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '3875'
+ht-degree: 62%
 
 ---
 
@@ -34,7 +37,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    * Set the `sling:resourceSuperType` property to `wcm/mobile/components/page`
 
-      このようにして、コンポーネントはモバイルページコンポーネントに依存します。
+      これにより、コンポーネントはモバイルページコンポーネントに依存します。
 
    * プロジェクトに特有のロジックを使用して `body.jsp` を作成します。
 
@@ -52,7 +55,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 1. サイトのルートページのページプロパティの「**モバイル**」タブで、デバイスグループを設定します。
 1. 新しいテンプレートを使用してサイトページを作成します。
 
-モバイルページコンポーネ `/libs/wcm/mobile/components/page`ント():
+モバイルページコンポーネント( `/libs/wcm/mobile/components/page`):
 
 * ページプロパティダイアログに「**モバイル**」タブを追加します。
 * Through its `head.jsp`, it retrieves the current mobile device group from the request and if a device group is found, uses the group&#39;s `drawHead()` method to include the device group&#39;s associated emulator init component (only in author mode) and the device group&#39;s rendering CSS.
@@ -69,15 +72,15 @@ Use Multi Site Manager (MSM) to create a mobile live copy from a standard site. 
 
 モバイルクラスを格納する Java パッケージを次に示します。
 
-* [com.day.cq.wcm.mobile.api](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/mobile/api/device/capability/package-summary.html) - mobileConstantsを定義します。
+* [com.day.cq.wcm.mobile.api](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/mobile/api/device/capability/package-summary.html) - MobileConstantsを定義します。
 
 * [com.day.cq.wcm.mobile.api.device](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/mobile/api/device/package-summary.html) - Device、DeviceGroupおよびDeviceGroupListを定義します。
 
-* [com.day.cq.wcm.mobile.api.device.capability](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/mobile/api/device/capability/package-summary.html) - deviceCapabilityを定義します。
+* [com.day.cq.wcm.mobile.api.device.capability](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/mobile/api/device/capability/package-summary.html) - DeviceCapabilityを定義します。
 
 * [com.day.cq.wcm.mobile.api.wurfl](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/workflow/api/package-summary.html) - WurflQueryEngineを定義します。
 
-* [com.day.cq.wcm.mobile.core](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/mobile/core/package-summary.html) - WCM mobileを中心に回転する様々なユーティリティメソッドを提供するMobileUtilを定義します。
+* [com.day.cq.wcm.mobile.core](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/mobile/core/package-summary.html) - WCM Mobileを中心に回転する様々なユーティリティメソッドを提供するMobileUtilを定義します。
 
 ### モバイルコンポーネント {#mobile-components}
 
@@ -116,7 +119,7 @@ The **We.Retail Mobile Demo Site** uses the following mobile components which ar
   <tr> 
    <td>mobilereference</td> 
    <td>モバイル</td> 
-   <td><p> — 参照基礎コンポーネントに類似</p> <p>- textimage コンポーネントを mobiletextimage コンポーネントにマップし、image コンポーネントを mobileimage コンポーネントにマップする</p> </td> 
+   <td><p> — 参照基礎コンポーネントと類似</p> <p>- textimage コンポーネントを mobiletextimage コンポーネントにマップし、image コンポーネントを mobileimage コンポーネントにマップする</p> </td> 
   </tr> 
   <tr> 
    <td>mobiletextimage</td> 
@@ -136,15 +139,15 @@ The **We.Retail Mobile Demo Site** uses the following mobile components which ar
 
 AEM モバイルフレームワークを使用すると、要求を発行するデバイスを感知するコンポーネントを開発できます。以降の節のコード例は、コンポーネントの jsp で AEM モバイル API を使用する方法を示しています。具体的には、次に示す処理の方法を示します。
 
-* 要求からデバイスを取得します。
+* リクエストからデバイスを取得する：
 
    `Device device = slingRequest.adaptTo(Device.class);`
 
-* デバイス・グループの取得：
+* デバイスグループの取得：
 
    `DeviceGroup deviceGroup = device.getDeviceGroup();`
 
-* デバイス・グループの機能を取得します。
+* デバイス・グループ機能の取得：
 
    `Collection<DeviceCapability> capabilities = deviceGroup.getCapabilities();`
 
@@ -174,7 +177,7 @@ AEM モバイルフレームワークを使用すると、要求を発行する�
 
 ### エミュレーター {#emulators}
 
-エミュレータベースのオーサリングでは、作成者はモバイルクライアント向けのコンテンツページを作成できます。モバイルコンテンツのオーサリングは、インプレースWYSIWYGの編集と同じ原則に従います。作成者がモバイルデバイス上でページの外観を認識できるように、モバイルコンテンツページはデバイスエミュレーターを使用して編集されます。
+エミュレータベースのオーサリングは、モバイルクライアント向けのコンテンツページを作成する手段を作成者に提供します。 モバイルコンテンツのオーサリングは、インプレースWYSIWYGの編集と同じ原則に従います。 作成者がモバイルデバイス上でページの外観を認識できるように、モバイルコンテンツページはデバイスエミュレーターを使用して編集されます。
 
 モバイルデバイスエミュレーターは汎用のエミュレーターフレームワークに基づいています。詳しくは、[エミュレーター](/help/sites-developing/emulators.md)を参照してください。
 
@@ -186,13 +189,13 @@ AEM モバイルフレームワークを使用すると、要求を発行する�
 
 **モバイルエミュレーターの主な特徴**
 
-* デバイス・グループは、次のエミュレータの1つで構成されます。デバイス・グループ構成ページ(例：/etc/mobile/groups/touch。ノードの下にプロパティ `emulators` が含まれ `jcr:content` ます。
+* デバイス・グループは、次のいずれかのエミュレータで構成されます。 デバイス・グループ構成ページ(例： /etc/mobile/groups/touch。ノードの下に `emulators` プロパティが含まれ `jcr:content` ます。
 
-   注意：同じエミュレータが複数のデバイスグループに属している可能性はありますが、あまり意味がありません。
+   注意： 同じエミュレータが複数のデバイスグループに属している可能性はありますが、あまり意味がありません。
 
-* Via the device group&#39;s configuration dialog, the `emulators` property is set with the path of the desired emulator(s). For example: `/libs/wcm/mobile/components/emulators/iPhone4`.
+* Via the device group&#39;s configuration dialog, the `emulators` property is set with the path of the desired emulator(s). 例：`/libs/wcm/mobile/components/emulators/iPhone4`
 
-* エミュレータコンポーネント(例： `/libs/wcm/mobile/components/emulators/iPhone4`)ベースモバイルエミュレータコンポーネント( `/libs/wcm/mobile/components/emulators/base`)を拡張します。
+* エミュレータコンポーネント(例： `/libs/wcm/mobile/components/emulators/iPhone4`)拡張モバイルエミュレータコンポーネント( `/libs/wcm/mobile/components/emulators/base`)。
 
 * 基本のモバイルエミュレーターを拡張する各コンポーネントは、デバイスグループの設定時に選択できます。これにより、カスタムエミュレーターを簡単に作成または拡張できます。
 * 編集モードでの要求時には、エミュレーターの実装を使用してページをレンダリングします。
@@ -205,7 +208,7 @@ AEM モバイルフレームワークを使用すると、要求を発行する�
 Device groups are defined as content pages below `/etc/mobile/devices` and use the **Mobile Device Group** template. デバイスグループテンプレートは、コンテンツページのフォームでデバイスグループ定義用の設定テンプレートとして機能します。このダイアログの主な特徴を次に示します。
 
 * 場所: `/libs/wcm/mobile/templates/devicegroup`
-* 許可されたパス： `/etc/mobile/groups/*`
+* 許可されているパス： `/etc/mobile/groups/*`
 * ページコンポーネント: `wcm/mobile/components/devicegroup`
 
 #### サイトへのデバイスグループの割り当て {#assigning-device-groups-to-your-site}
@@ -213,7 +216,7 @@ Device groups are defined as content pages below `/etc/mobile/devices` and use t
 モバイルサイトを作成する場合は、デバイスグループをサイトに割り当てる必要があります。AEM には、デバイスの HTML および JavaScript のレンダリング機能に対応した 3 つのデバイスグループが用意されています。
 
 * **フィーチャー**&#x200B;フォン：Sony Ericsson W800 などのフィーチャーデバイス用。基本的な HTML はサポートされますが、画像と JavaScript はサポートされません。
-* **スマート** フォン、基本HTMLと画像はサポートするが、JavaScriptはサポートしないBlackberryなどのデバイス用。
+* **スマートフォン** 。基本的なHTMLと画像はサポートするが、JavaScriptはサポートしない、Blackberryなどのデバイス用です。
 
 * **タッチ**&#x200B;フォン：iPad などのデバイス用。HTML、画像、JavaScript およびデバイスの回転が完全にサポートされます。
 
@@ -269,15 +272,17 @@ AEM がインストールするグループが要件を満たさない場合は�
 
    「**一般**」タブで、次の設定を行います。
 
-   * **タイトル**:モバイルデバイスグループの名前。
+   * **タイトル**: モバイルデバイスグループの名前。
    * **説明**：グループの説明
    * **ユーザーエージェント**：デバイスを照合するユーザーエージェント文字列。省略可能です。正規表現を使用できます。例: `BlackBerryZ10`
    * **機能**：グループで画像、CSS、JavaScript またはデバイスの回転を処理できるかどうかを定義します。
    * 「**画面の最小の幅**」と「**画面の最小の高さ**」
    * **エミュレーターを無効にする**：コンテンツの編集時にエミュレーターを有効または無効にします。
+
    「**エミュレーター**」タブで、次の設定をおこないます。
 
    * **エミュレーター**：デバイスグループに割り当てられたエミュレーターを選択します。
+
    「**フィルター**」タブで、次の設定をおこないます。
 
    * フィルターを追加するには、「項目を追加」をクリックして、ドロップダウンリストからフィルターを選択します。
@@ -327,14 +332,14 @@ WURFL™ データベースは進化しているので、データベースの�
 
 #### WURFL™ の機能へのユーザーエージェントのマッピングのテスト {#testing-the-mapping-of-a-user-agent-to-wurfl-capabilities}
 
-デバイスがモバイルサイトにアクセスすると、AEM はそのデバイスを検出し、機能に従ってデバイスグループにマップします。また、デバイスグループに対応するページのビューを送信します。一致するデバイスグループが必要なスタイル設定情報を提供します。マッピングは、モバイルユーザーエージェントテストページでテストできます。
+デバイスがモバイルサイトにアクセスすると、AEM はそのデバイスを検出し、機能に従ってデバイスグループにマップします。また、デバイスグループに対応するページのビューを送信します。一致するデバイスグループが必要なスタイル設定情報を提供します。マッピングは、モバイルユーザーエージェントのテストページでテストできます。
 
 `http://localhost:4502/etc/mobile/useragent-test.html`
 
 #### 別の WURFL™ データベースのインストール {#installing-a-different-wurfl-database}
 
 AEMと共にインストールされる切り捨てられたWURFL™データベースは、\
-2011年8月30日 WURFLのバージョンが2011年8月30日以降にリリースされた場合は、使用状況がライセンスに準拠していることを確認してください。
+2011年8月30日。 WURFLのバージョンが2011年8月30日以降にリリースされた場合は、使用状況がライセンスに準拠していることを確認してください。
 
 WURFL™ データベースをインストールするには：
 
@@ -350,23 +355,23 @@ AEM automatically parses the `wurfl.xml` file and updates the nodes below `/var/
 
 #### 正規表現に基づくユーザーエージェント照合の追加 {#adding-a-regexp-based-user-agent-matching}
 
-既存のWURFL™デバイスタイプを指すように、user-agentを正規表現として/apps/wcm/mobile/devices/wurfl/regexpの下に追加します。
+/apps/wcm/mobile/devicespecs/wurfl/regexpの下の追加正規式としてのuser-agentは、既存のWURFL™デバイスタイプを指すように指定します。
 
 1. **CRXDE Lite** で、/apps/wcm/mobile/devicespecs/regexp の下にノード（例：apple_ipad_ver1）を作成します。
 1. この  ノードに次のプロパティを追加します。
 
-   * **regexp**:ユーザーエージェントを定義する正規表現。例：.&amp;ast;Mozilla.&amp;ast;iPad.&amp;ast;AppleWebKit.&amp;ast;Safari.&amp;ast;
-   * **deviceId**:wurfl.xmlで定義されるデバイスID。例：apple_ipad_ver1
+   * **regexp**: ユーザーエージェントを定義する正規式。例： .&amp;ast;Mozilla.&amp;ast;iPad.&amp;ast;AppleWebKit.&amp;ast;Safari.&amp;ast;
+   * **deviceId**: wurfl.xmlで定義されるデバイスID(例： apple_ipad_ver1
 
-上記の設定により、User-Agentが指定された正規表現と一致するデバイスが、apple_ipad_ver1 WURFL™デバイスID（存在する場合）にマップされます。
+上記の設定では、User-Agentが指定された正規式と一致するデバイスが存在する場合、そのデバイスはapple_ipad_ver1 WURFL™デバイスIDにマップされます。
 
 ## クライアント側のデバイス検出 {#client-side-device-detection}
 
-この節では、ページレンダリングを最適化するため、または代替のWebサイトバージョンをクライアントに提供するために、AEMのデバイスクライアント側検出を使用する方法について説明します。
+この節では、ページレンダリングを最適化するため、またはクライアントに代替のWebサイトバージョンを提供するために、AEMのデバイスのクライアント側検出を使用する方法について説明します。
 
-AEMは、に基づくデバイスのクライアント側検出をサポートしま `BrowserMap`す。 `BrowserMap` は、AEMにクライアントライブラリとして、の下に出荷されま `/etc/clientlibs/browsermap`す。
+AEMは、に基づくデバイスのクライアント側検出をサポートし `BrowserMap`ます。 `BrowserMap` は、のクライアントライブラリとしてAEMに出荷され `/etc/clientlibs/browsermap`ます。
 
-`BrowserMap` には、代替Webサイトをクライアントに提供するために使用できる3つの方法が用意されています。これらの方法は、次の順序で使用されます。
+`BrowserMap` には、次の順序で使用される代替webサイトをクライアントに提供する3つの方法があります。
 
 1. [代替リンク](#providing-alternate-links)
 
@@ -379,11 +384,11 @@ AEMは、に基づくデバイスのクライアント側検出をサポート�
 
 ### 代替リンクの設定 {#providing-alternate-links}
 
-OSGiサー `PageVariantsProvider` ビスは、同じファミリーに属するサイトの代替リンクを生成できます。 サービスが考慮するサイトを設定するには、サイトのルートからノード `cq:siteVariant` をノードに追加す `jcr:content` る必要があります。
+OSGiサー `PageVariantsProvider` ビスは、同じファミリに属するサイトの代替リンクを生成できます。 サービスが考慮するサイトを設定するには、サイトのルートから `cq:siteVariant` ノードを `jcr:content` ノードに追加する必要があります。
 
 The `cq:siteVariant` node needs to have the following properties:
 
-* `cq:childNodesMapTo`  — 子ノードをマップするリンク要素の属性を決定します。ルートノードの子がグローバルWebサイトの言語バリアント(例： `/content/mysite/en`, `/content/mysite/de`)を使用します。この場合、の値 `cq:childNodesMapTo` は； `hreflang`
+* `cq:childNodesMapTo`  — 子ノードをマップするリンク要素の属性を決定します。 ルートノードの子がグローバルwebサイトの言語バリアント(例： `/content/mysite/en`, `/content/mysite/de`)の場合、の値は次のと `cq:childNodesMapTo` おりで `hreflang`す。
 
 * `cq:variantDomain` - ページバリアントの絶対 URL を生成するために使用する `Externalizer` ドメインを示します。この値が設定されていない場合は、相対リンクを使用してページバリアントが生成されます。
 
@@ -392,7 +397,7 @@ The `cq:siteVariant` node needs to have the following properties:
 
 #### PageVariantsProvider と Externalizer {#pagevariantsprovider-and-externalizer}
 
-ノードのプロパティの `cq:variantDomain` 値が空でな `cq:siteVariant` い場合、サービスは、この値をサ `PageVariantsProvider` ービスの設定済みドメインとして使用して絶対リンクを生成し `Externalizer` ます。 設定を反映するようにサービ `Externalizer` スを設定してください。
+ノードの `cq:variantDomain` プロパティの値が空でない場合、サー `cq:siteVariant` ビスは、この値をサービスの設定済みドメインとして使用する絶対リンクを生成し `PageVariantsProvider``Externalizer` ます。 設定を反映するように `Externalizer` サービスを設定してください。
 
 >[!NOTE]
 >
@@ -400,7 +405,7 @@ The `cq:siteVariant` node needs to have the following properties:
 
 ### デバイスグループ専用の URL の定義 {#defining-a-device-group-specific-url}
 
-代替リンクを使用しない場合は、各 `DeviceGroup` にグローバル URL を設定できます。クライアントライブラリを埋め込む独自のクライアントライブラリを作成し、デバ `browsermap.standard` イスグループを再定義することをお勧めします。
+代替リンクを使用しない場合は、各 `DeviceGroup` にグローバル URL を設定できます。クライアントライブラリを埋め込み、デバイスグループを再定義する独自の `browsermap.standard` クライアントライブラリを作成することをお勧めします。
 
  は、カスタマイズされたクライアントライブラリから同名の新しいデバイスグループを作成して `BrowserMap`BrowserMap オブジェクトに追加することで、デバイスグループ定義を上書きできるように設計されます。
 
@@ -424,7 +429,7 @@ In order to use the standard BrowserMap client library in a page, you have to in
 
 Besides adding the `BrowserMap` client library in your `JSP` files, you also have to add a `cq:deviceIdentificationMode` String property set to `client-side` to the `jcr:content` node below the root of your web site.
 
-### BrowserMapのデフォルトの動作の上書き {#overriding-browsermap-s-default-behavior}
+### BrowserMapのデフォルトの動作を上書きする {#overriding-browsermap-s-default-behavior}
 
 （`BrowserMap` を上書きするか、またはプローブを追加して）`DeviceGroups` をカスタマイズする場合は、`browsermap.standard` クライアント側ライブラリを埋め込む独自のクライアント側ライブラリを作成する必要があります。
 
@@ -557,12 +562,12 @@ This will make the `/libs/wcm/core/browsermap/browsermap.jsp` script to add a me
 AEM は、タッチデバイスグループに属するモバイルデバイスが発行した要求を次のように処理します。
 
 1. An iPad sends a request to the AEM publish instance, e.g. `http://localhost:4503/content/geometrixx_mobile/en/products.html`
-1. AEM determines whether the site of the requested page is a mobile site (by checking whether the first level page `/content/geometrixx_mobile` extends the mobile page component). 該当する場合：
-1. AEMは、リクエストヘッダー内のUser-Agentに基づいてデバイスの機能を調べます。
+1. AEM determines whether the site of the requested page is a mobile site (by checking whether the first level page `/content/geometrixx_mobile` extends the mobile page component). 「はい」の場合：
+1. AEMは、リクエストヘッダー内のUser-Agentに基づいてデバイス機能を検索します。
 1. AEM maps the device capabilities to the device group and sets `touch` as the device group selector.
 
-1. AEMはリクエストを `http://localhost:4503/content/geometrixx_mobile/en/products.touch.html.`
-1. AEMは応答をiPadに送信します。
+1. AEMは、 `http://localhost:4503/content/geometrixx_mobile/en/products.touch.html.`
+1. AEMが応答をiPadに送信します。
 
    * `products.touch.html` は通常の方法でレンダリングされます。このページはキャッシュ可能です。
    * レンダリングコンポーネントでは、セレクターを使用してプレゼンテーションを変更します。
@@ -570,7 +575,7 @@ AEM は、タッチデバイスグループに属するモバイルデバイス�
 
 ### 統計 {#statistics}
 
-モバイルデバイスによってAEMサーバーに対して行われた要求の数に関する統計をいくつか取得できます。リクエストの数は次のように分類できます。
+モバイルデバイスによってAEMサーバーに対して行われた要求の数に関する統計を取得できます。 リクエストの数は次のように分類できます。
 
 * デバイスグループ別およびデバイス別
 * 年別、月別、日別
@@ -592,7 +597,7 @@ AEM は、タッチデバイスグループに属するモバイルデバイス�
 
 統計内にエントリを生成する必要がある場合は、次の手順を実行できます。
 
-1. モバイルデバイスまたはエミュレーターを使用します(例：https://chrispederick.com/work/user-agent-switcher/ on Firefox)。
+1. モバイルデバイスまたはエミュレーター(例：https://chrispederick.com/work/user-agent-switcher/ on Firefox)を使用します。
 1. オーサリングモードを無効にして、オーサーインスタンスのモバイルページをリクエストします。例：
 
    `http://localhost:4502/content/geometrixx_mobile/en/products.html?wcmmode=disabled`
@@ -601,7 +606,7 @@ AEM は、タッチデバイスグループに属するモバイルデバイス�
 
 ### 「友人にリンクを送信」リンク用のページキャッシュのサポート{#supporting-page-caching-for-send-link-to-a-friend-links}
 
-モバイルページは通常、デバイスグループ用にレンダリングされるページは、例えばデバイスグループセレクターによってページURL内で識別されるので、ディスパッチャー上でキャッチ可能で `/content/mobilepage.touch.html`す。セレクターのないモバイルページへのリクエストはキャッシュされない。この場合、デバイス検出が動作し、最終的に一致するデバイスグループにリダイレクトされる（その場合は「一致」）。 デバイスグループセレクターを使用してレンダリングされるモバイルページは、リンクリライターで処理されます。リンクリライターは、デバイスグループセレクターも含めるようにページ内のすべてのリンクを書き換えて、既に要件を満たしているページをクリックするたびにデバイスの検出が再実行されないようにします。
+モバイルページは、通常、デバイスグループに対してレンダリングされるページは、デバイスグループセレクターなどによってページURL内で識別されるので、ディスパッチャーでキャッチ可能で `/content/mobilepage.touch.html`す。 セレクターのないモバイルページへのリクエストはキャッシュされないので、この場合のようにデバイス検出は動作し、最後に一致するデバイスグループ（その場合は「一致」）にリダイレクトされます。 デバイスグループセレクターを使用してレンダリングされるモバイルページは、リンクリライターで処理されます。リンクリライターは、デバイスグループセレクターも含めるようにページ内のすべてのリンクを書き換えて、既に要件を満たしているページをクリックするたびにデバイスの検出が再実行されないようにします。
 
 そのため、次のような状況が発生する可能性があります。
 
@@ -609,5 +614,5 @@ Alice というユーザーが `coolpage.feature.html` にリダイレクトさ�
 
 `coolpage.feature.html` がフロントエンドキャッシュから提供される場合、要求を分析して、モバイルセレクターが新しいユーザーエージェントに一致しないことを確認する機会が AEM にはありません。そのため、Bob は誤った表現を取得することになります。
 
-この問題を解決するために、単純な選択の UI をページにインクルードできます。このようなページでは、AEM で選択されたデバイスグループをエンドユーザーが上書きできます。上記の例では、ページ上のリンク（またはアイコン）を使用して、エンドユーザーがデバイスが十分に機能していると考える `coolpage.touch.html` 場合に切り替えることができます。
+この問題を解決するために、単純な選択の UI をページにインクルードできます。このようなページでは、AEM で選択されたデバイスグループをエンドユーザーが上書きできます。上記の例では、ページ上のリンク（またはアイコン）を使用して、エンドユーザーが自分のデバイスがそれに十分なものと考えている `coolpage.touch.html` かを確認できます。
 
