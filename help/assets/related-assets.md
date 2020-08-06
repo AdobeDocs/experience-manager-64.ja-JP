@@ -1,16 +1,19 @@
 ---
-title: 関連資産
+title: 関連アセット
 description: 特定の共通属性を共有するアセットを関連付ける方法について説明します。この機能を使用して、アセット間にソース／派生関係を作成することもできます。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '613'
+ht-degree: 100%
 
 ---
 
 
-# Related assets {#related-assets}
+# 関連アセット {#related-assets}
 
-Adobe Experience Manager（AEM）Assets では、関連アセット機能を使用して、組織のニーズに基づいて手動でアセットを関連付けることができます。例えば、ライセンスファイルを、類似のトピックのアセットまたは画像／ビデオに関連付けることができます。特定の共通属性を共有するアセットを関連付けることができます。この機能を使用して、アセット間にソース／派生関係を作成することもできます。例えば、INDD ファイルから生成した PDF ファイルがある場合、その PDF ファイルをソースの INDD ファイルに関連付けることができます。
+Adobe Experience Manager (AEM) Assets では、関連アセット機能を使用して、組織のニーズに基づいて手動でアセットを関連付けることができます。例えば、ライセンスファイルを、類似のトピックのアセットまたは画像／ビデオに関連付けることができます。特定の共通属性を共有するアセットを関連付けることができます。この機能を使用して、アセット間にソース／派生関係を作成することもできます。例えば、INDD ファイルから生成した PDF ファイルがある場合、その PDF ファイルをソースの INDD ファイルに関連付けることができます。
 
 このようにすることで、ベンダーやエージェンシーに低解像度のファイル（PDF や JPG など）を共有し、要求された場合にのみ柔軟に高解像度のファイル（INDD など）を提供することができます。
 
@@ -35,8 +38,9 @@ Adobe Experience Manager（AEM）Assets では、関連アセット機能を使�
 1. 次のいずれかの操作をおこないます。
 
    * アセットのソースファイルを関連付けるには、リストから「**[!UICONTROL ソース]**」を選択します。
-   * To relate a derived file, select **[!UICONTROL Derived]** from the list.
+   * 派生ファイルを関連付けるには、リストから「**[!UICONTROL 派生]**」を選択します。
    * アセット間に双方向の関係を作成するには、リストから「**[!UICONTROL その他]**」を選択します。
+
    ![chlimage_1-276](assets/chlimage_1-276.png)
 
 1. **[!UICONTROL アセットを選択]**&#x200B;画面から、関連付けをおこなうアセットの場所に移動して、選択します。
@@ -44,7 +48,7 @@ Adobe Experience Manager（AEM）Assets では、関連アセット機能を使�
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
 1. 「**[!UICONTROL 確認]**」アイコンをクリックまたはタップします。
-1. Click/tap **[!UICONTROL OK]** to close the dialog. 手順 3 で選択した関係に応じて、関連付けられたアセットが「**[!UICONTROL 関連]**」セクションの適切なカテゴリーに表示されます。例えば、関連付けたアセットが現在のアセットのソースファイルの場合は、「**[!UICONTROL ソース]**」に表示されます。
+1. 「**[!UICONTROL OK]**」をクリックまたはタップして、ダイアログを閉じます。手順 3 で選択した関係に応じて、関連付けられたアセットが「**[!UICONTROL 関連]**」セクションの適切なカテゴリに表示されます。例えば、関連付けたアセットが現在のアセットのソースファイルの場合は、「**[!UICONTROL ソース]**」に表示されます。
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
@@ -52,7 +56,7 @@ Adobe Experience Manager（AEM）Assets では、関連アセット機能を使�
 
    ![chlimage_1-279](assets/chlimage_1-279.png)
 
-1. Select the asset(s) you want to unrelate from the **[!UICONTROL Remove Relations]** dialog, and the click/tap **[!UICONTROL Unrelate]**.
+1. **[!UICONTROL 関係を削除]**&#x200B;ダイアログで、関連付けを解除するアセットを選択して、「**[!UICONTROL 関連付けを解除]**」をクリックまたはタップします。
 
    ![chlimage_1-280](assets/chlimage_1-280.png)
 
@@ -89,6 +93,6 @@ Adobe Experience Manager（AEM）Assets では、関連アセット機能を使�
 
    ![chlimage_1-287](assets/chlimage_1-287.png)
 
-1. Select the asset that is related to the source, and then click/tap **[!UICONTROL Reveal in Assets]**. 翻訳された関連アセットが表示されます。
+1. ソースに関連付けられているアセットを選択し、「**[!UICONTROL アセットで表示]**」をクリックまたはタップします。翻訳された関連アセットが表示されます。
 
    ![chlimage_1-288](assets/chlimage_1-288.png)
