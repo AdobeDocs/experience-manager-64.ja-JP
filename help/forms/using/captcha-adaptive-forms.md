@@ -57,6 +57,7 @@ AEM Forms で reCAPTCHAを実装するには：
    1. 「**[!UICONTROL reCAPTCHA]**」をタップします。設定ページが表示されます。上記の手順で作成した設定コンテナを選択し、「**[!UICONTROL 作成]**」をタップします。
    1. Specify Name, Site key, and Secret Key for reCAPTCHA service and tap **[!UICONTROL Create]** to create the cloud service configuration.
    1. コンポーネントを編集ダイアログで、サイトおよび手順 1 で取得した秘密鍵を指定します。Tap **[!UICONTROL Save Settings]** and then tap **[!UICONTROL OK]** to complete the configuration.
+
    reCAPTCHA サービスを設定すると、アダプティブフォームで使用できるようになります。詳しくは、「[アダプティブフォームの CAPTCHA の使用](#using-captcha)」を参照してください。
 
 ## アダプティブフォームで CAPTCHA を使用する {#using-captcha}
