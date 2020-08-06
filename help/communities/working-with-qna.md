@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: bbbe32bb-9d97-461e-822f-a7ddc6c9f9ef
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '1216'
+ht-degree: 61%
 
 ---
 
@@ -19,14 +22,14 @@ source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
 
 ## 概要 {#introduction}
 
-QnA(Q&amp;A)フォーラム機能を使用すると、コミュニティメンバーが質問をし、質問に答えることができます。
+QnA（質問と回答）フォーラム機能を使用すると、コミュニティメンバーが次のような質問や回答をすることができます。
 
 * 新しい質問の作成
 * インライン画像（ドラッグアンドドロップのサポートあり）
-* 質問の表示と回答
+* 表示と回答
 * 質問の検索
 * QnAコンテンツのモデレートの支援
-* 最適な回答の特定
+* 最適な回答を特定する
 * QnA質問をページ間で移動する
 
 ドキュメントのこのセクションでは、以下の内容について説明します。
@@ -36,11 +39,11 @@ QnA(Q&amp;A)フォーラム機能を使用すると、コミュニティメン�
 
 ## Q&amp;A フォーラムをページに追加 {#adding-a-q-a-forum-to-a-page}
 
-作成者モードでペ `QnA` ージにコンポーネントを追加するには、コンポーネントブラウザーを使用してQnAフォーラムが表示されるペ `Communities / QnA` ージ上の場所にコンポーネントを配置し、ドラッグします。
+作成者モードでページに `QnA` コンポーネントを追加するには、コンポーネントブラウザーを使用してQnAフォーラムが表示されるページを探し `Communities / QnA` 、その場所にドラッグします。
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](qna-essentials.md#essentials-for-client-side) are included, this is how the `QnA` component will appear:
+[必要なクライアント側ライブラリが含まれる場合](qna-essentials.md#essentials-for-client-side) 、次のようにコンポー `QnA` ネントが表示されます。
 
 ![chlimage_1-280](assets/chlimage_1-280.png)
 
@@ -66,11 +69,13 @@ Select the placed `QnA` component to access and select the `Configure` icon whic
 
 * **[!UICONTROL ファイルのアップロードを許可]**&#x200B;オンにすると、質問またはコメントに添付ファイルを付加できます。初期設定はオフです。
 
-* **[!UICONTROL 「Max File Size]** Relevant only if `Allow File Uploads` is」をオンにした場合。 このフィールドは、アップロードするファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+* **[!UICONTROL 最大ファイルサイズ]**&#x200B;関連( 
+`Allow File Uploads` がチェックされている。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
-* **[!UICONTROL 「Allowed File Types]** Relevant only if `Allow File Uploads` 」がオンの場合。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルタイプを指定した場合、指定しなかったファイルはアップロードできません。 初期設定はnoneで、すべてのファイルタイプが許可されます。
+* **[!UICONTROL 許可されているファイルタイプ]**&#x200B;は、 
+`Allow File Uploads` がチェックされている。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
-* **[!UICONTROL 「ファイルのアップロードを許可」がオン]**&#x200B;になっている場合にのみ、「添付画像ファイルの最大サイズ」が関連します。 アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
+* **[!UICONTROL 「ファイルのアップロードを許可」が選択されている場合のみ、「添付画像ファイルの最大サイズ]**」が関連します。 アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
 
 * **[!UICONTROL フォローを許可]**&#x200B;オンにすると、フォーラム投稿のフォロー機能が追加され、新しい投稿をメンバーに[通知](notifications.md)できます。初期設定はオフです。
 
@@ -108,25 +113,30 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted topics (q
 
 * **[!UICONTROL モデレートのしきい値]**&#x200B;メンバーが質問または回答に何回フラグを設定したらモデレーターに通知するかを指定します。初期設定は1（1回）です。
 
-* **[!UICONTROL フラグ付けの制限]**&#x200B;質問または回答に何回フラグが設定されたら、公開表示から非公開にするかを指定します。-1に設定した場合、フラグ付けされた質問または回答は公開ビューに表示されません。 そうでない場合、この数値はモデレートのしきい値以上にする必要があります。 初期設定は 5 です。
+* **[!UICONTROL フラグ付けの制限]**&#x200B;質問または回答に何回フラグが設定されたら、公開表示から非公開にするかを指定します。-1に設定した場合、フラグ付けされた質問または回答がパブリック表示に隠されることはありません。 それ以外の場合は、この数値をモデレートしきい値以上にする必要があります。 初期設定は 5 です。
 
 #### 「タグフィールド」タブ{#tag-field-tab}
 
 「**[!UICONTROL タグフィールド]**」タブでは、「**[!UICONTROL 設定]**」タブでタグ付けが許可されている場合に、適用できるタグを名前空間に従って制限します。
 
-* **[!UICONTROL 「設定」タブで]**「Namespaces `Allow Tagging` Relevant」がオ **ンになっている場合は** 許可されます。 適用できるタグは、チェックされた名前空間カテゴリ内のタグに制限されます。 名前空間のリストには、「Standard Tags」（デフォルトの名前空間）と「Include All Tags」が含まれます。 初期設定はnoneで、すべての名前空間が許可されます。
+* **[!UICONTROL 許可されている名前空間]**&#x200B;関連( 
+`Allow Tagging` が「 **設定** 」タブでチェックされている。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
-* **[!UICONTROL 推奨の制限]**&#x200B;フォーラムに投稿するメンバーに表示する推奨タグの数を入力します。A value of `-1` means no limits. 初期設定は 0 です。
+* **[!UICONTROL 推奨の制限]**&#x200B;フォーラムに投稿するメンバーに表示する推奨タグの数を入力します。値 
+`-1` は、制限がないことを意味します。 初期設定は 0 です。
 
 #### 「並べ替え設定」タブ{#sort-settings-tab}
 
 Under the **[!UICONTROL Sort Settings]** tab, specify how the posted comments are sorted when displayed.
 
-* **[!UICONTROL Sort By]** Check all allowed sort selections: `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. デフォルトは `Newest, Oldest, Last Updated` です。
+* **[!UICONTROL 並べ替えの基準]**：許可されている並べ替えの選択項目をすべて選択します。 
+`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`」を選択します。デフォルトは `Newest, Oldest, Last Updated` です。
 
-* **[!UICONTROL デフォルトとして設定]**&#x200B;プルダウンして、オンになっている並べ替えオプションのいずれかを選択し、デフォルトとして表示されるようにします。デフォルトは `Newest` です。
+* **[!UICONTROL デフォルトとして設定]**&#x200B;プルダウンして、オンになっている並べ替えオプションのいずれかを選択し、デフォルトとして表示されるようにします。初期設定は です。 
+`Newest`。
 
-* **[!UICONTROL 「Analyticsの並べ替えの時間オプション」のプ]**&#x200B;ルダウンを選択して、いずれかを選択しま `All, Last 24 Hours, Last 7 Days, Last 30 Days`す。 デフォルトは `All` です。
+* **[!UICONTROL Analytics Sortingのプルダウンの「Time Options」を選択し]**&#x200B;て、 
+`All, Last 24 Hours, Last 7 Days, Last 30 Days`」を選択します。デフォルトは `All` です。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -149,7 +159,7 @@ Once an answer is selected as the viable answer, an indication that the question
 サイト訪問者がサインインすると、設定に応じて次のことができます。
 
 * 新しい質問の投稿
-* 自分が作成した質問を編集または削除します
+* 自分が作成した質問を編集または削除する
 * 他のユーザーの質問や回答にフラグを付けることもできます。
 * 自分が作成した質問に対する回答を特定できる
 
