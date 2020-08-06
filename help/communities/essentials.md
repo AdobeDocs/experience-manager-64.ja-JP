@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
 translation-type: tm+mt
 source-git-commit: 1e867debcc1bfeed3abc4240796c9f2c2850167f
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 71%
 
 ---
 
@@ -32,7 +35,7 @@ A community site will support members creating community groups when the [commun
    * [「いいね!」の設定](essentials-liking.md)
    * [評価](rating-basics.md)
    * [投票](essentials-voting.md)
-   * *投票（利用できなくなりました）*
+   * *投票（使用できなくなりました）*
 
 ## 機能のあるコンポーネント {#components-with-functions}
 
@@ -50,7 +53,7 @@ A community site will support members creating community groups when the [commun
 * [リーダーボード](leaderboard.md)
 * [質問と回答](qna-essentials.md) `(QnA)`
 
-## 機能 {#features}
+## 特長 {#features}
 
 * [クライアントライブラリ](clientlibs.md)
 * [コミュニティサイト](sites-for-developers.md)
@@ -61,7 +64,7 @@ A community site will support members creating community groups when the [commun
 * [スコアとバッジ](configure-scoring.md)
 * [検索](search-implementation.md)
 * [ソーシャルグラフ](essentials-socialgraph.md)
-* [Storage Resource Provider](srp-and-ugc.md)`(SRP)`
+* [ストレージリソースプロバイダ](srp-and-ugc.md) `(SRP)`
 
 * [タグ付け](tag.md)
 
