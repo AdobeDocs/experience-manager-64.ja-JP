@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 09536869-3806-4b89-adfd-68f408298c55
 translation-type: tm+mt
 source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 94%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、 [AEM 6.4 Service Pack 2(6.4.2.0)以降が必要です](/help/release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2(6.4.2.0)以降が [必要です](/help/release-notes/sp-release-notes.md)。
 
 関連コンテンツによって関連性がわかり、フラグメントをページに追加するときに、（オプションで）アセットをフラグメントと一緒に使用できるようになります。これにより、[ページでコンテンツフラグメントを使用するときに利用できるアセットが広範になることで](/help/sites-authoring/content-fragments.md#using-associated-content)柔軟性が生まれると同時に、適切なアセットを検索するのに要する時間の削減にもつながります。
 
@@ -27,7 +30,7 @@ source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
 
 >[!NOTE]
 >
->[ビジュアルアセット（画像など）](content-fragments.md#fragments-with-visual-assets)をフラグメントやページに追加するための様々な方法があります。
+>[ビジュアルアセット（画像など）](content-fragments.md#fragments-with-visual-assets)をフラグメントやページに追加するには、様々な方法があります。
 
 関連付けを作成するには、最初に[メディアアセットをコレクションに追加](managing-collections-touch-ui.md#adding-assets-to-a-collection)する必要があります。その後で、次の手順を実行できます。
 
