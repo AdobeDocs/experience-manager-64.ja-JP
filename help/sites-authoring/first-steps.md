@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 9086b14c-cd75-4fc9-928e-81c8ad6b6292
 translation-type: tm+mt
 source-git-commit: b01e95110bffc1ee96e0814e782d716ed949c1b4
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 93%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: b01e95110bffc1ee96e0814e782d716ed949c1b4
 
 次の内容について説明します。
 
-* [はじめに](#getting-started) — 最初のページを作成して公開するために必要なイベントの基本的なシーケンスの詳細を説明します。
+* [はじめに](#getting-started) — 最初のページを作成して公開するのに必要なイベントの基本的な順序の詳細を説明します。
 
 * [その他のアクション](#further-actions) — オーサリング時に使用できる他の多数のアクションについて説明します。
 
