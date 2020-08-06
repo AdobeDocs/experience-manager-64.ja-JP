@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: f74d225e-0245-4d5a-bb93-0ee3f31557aa
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '616'
+ht-degree: 59%
 
 ---
 
@@ -40,9 +43,10 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
    * 説明: `An SCF Sandbox template for play pages`
    * リソースタイプ: `an-scf-sandbox/components/playpage`
    * ランキング：&lt;デフォルトのまま>
+
    「ラベル」は、ノード名に使用されます。
 
-   「リソースタイプ」は、`playpage` の jcr:content ノードにプロパティ `sling:resourceType` として表示されます。ブラウザーから要求された場合にコンテンツをレンダリングするコンポーネント（リソース）を識別します。
+   「リソースタイプ」は、`playpage` の jcr:content ノードにプロパティ `sling:resourceType` として表示されます。ブラウザーから要求されたときにコンテンツをレンダリングするコンポーネント（リソース）を識別します。
 
    In this case, all pages created using the `playpage`template are rendered by the `an-scf-sandbox/components/playpage` component. By convention, the path to the component is relative, allowing Sling to search for the resource first in the `/apps` folder and, if not found, in the `/libs` folder.
 
@@ -54,7 +58,7 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
 
 1. 「許可されているパス」は、**[!UICONTROL 新しいページ]**&#x200B;ダイアログにテンプレートが表示されるように、このテンプレートを使用するページのパスを参照します。
 
-   To add a path, click the plus button `+` and type `/content(/.&ast;)?` in the text box that appears. コピー&amp;ペーストを使用する場合は、先頭または末尾に空白がないことを確認します。
+   To add a path, click the plus button `+` and type `/content(/.&ast;)?` in the text box that appears. コピー&amp;ペーストを使用する場合は、先頭または末尾に空白文字がないことを確認します。
 
    Note: The value of the allowed path property is a *regular expression.*&#x200B;この表現と一致するパスを持つコンテンツページでテンプレートを使用できます。In this case, the regular expression matches the path of the **/content** folder and all its subpages.
 
@@ -68,7 +72,7 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
 
 1. 「**[!UICONTROL 次へ]**」をクリックします。
 
-   Click **[!UICONTROL Next]** in the **[!UICONTROL Allowed Parents]** panel.
+   **[!UICONTROL 許可されている親]** パネルで「次へ **** 」をクリックします。
 
    Click **[!UICONTROL Next]** in the **[!UICONTROL Allowed Children]** panels.
 
@@ -85,11 +89,11 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
 コンテンツを定義し、[playpage テンプレート](#createthepagetemplate)に基づいて作成されたページをレンダリングするコンポーネントを作成します。**
 
 1. In CRXDE Lite, right-click **`/apps/an-scf-sandbox/components`** and click **[!UICONTROL Create > Component]**.
-1. ノードの名前（ラベル）をplaypageに設定す *ると*、コンポーネントのパスは
+1. ノードの名前（ラベル）を *playpageに設定すると*、コンポーネントのパスは
 
    `/apps/an-scf-sandbox/components/playpage`
 
-   これは、再生ページテンプレートの「リソースタイプ」(オプションでパスの最初 **`/apps/`** の部分を除く)に対応します。
+   これは、再生ページテンプレートの「リソースタイプ」に対応します(オプションで、パスの最初の **`/apps/`** 部分を除いた値)。
 
    **[!UICONTROL コンポーネントを作成]**&#x200B;ダイアログで、以下のプロパティ値を入力します。
 
@@ -98,6 +102,7 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
    * 説明：**This is the component which renders content for An SCF Sandbox page.**
    * Super Type: *&lt;leave blank>*
    * グループ:
+
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
 1. Click **[!UICONTROL Next]** until the **[!UICONTROL Allowed Children]** panel of the dialog appears
@@ -109,6 +114,6 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
 
    >[!CAUTION]
    >
-   >Webサイトを正しく機能させるには、playpageコンポーネントへのパスとplaypageテンプレートのsling:resourceTypeプロパティとの対応が重要です。
+   >playpageコンポーネントへのパスとplaypageテンプレートのsling:resourceTypeプロパティとの対応は、Webサイトを正しく機能させるために重要です。
 
    ![chlimage_1-79](assets/chlimage_1-79.png)
