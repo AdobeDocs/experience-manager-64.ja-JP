@@ -89,7 +89,7 @@ ht-degree: 71%
 
 **戻り値の型**：クリック式は値を返しません。数式が値を返した場合、その値は無視されます。
 
-**例**: 値が **AEM Formsのボタンのクリックアクションでテキストボックス** textbox1 **を入力するには、ボタンのクリック式を**`textbox1.value="AEM Forms"` &quot;
+**例**: テキストボックス **textbox1** に値 **AEM Formsを入力する場合、ボタンのクリック式は**`textbox1.value="AEM Forms"` &quot;
 
 ### 初期化スクリプト {#initialization-script}
 
@@ -166,7 +166,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->フィールドの値がプログラムによって変更された場合、値コミットスクリプトを無効にすることができます。これを行うには、「 `https://[server]:[port]/system/console/configMgr and change` Adaptive Forms Version for Compatibility **to** AEM Forms 6.1 ****」を参照してください。 以降、値コミットスクリプトは、ユーザーがフィールドの値をUIから変更した場合にのみ実行されます。
+>フィールドの値がプログラムによって変更された場合、値コミットスクリプトを無効にすることができます。これを行うには、「 `https://[server]:[port]/system/console/configMgr and change` Adaptive Version for Compatibility **to** AEM Forms6.1 ****」を参照してください。 以降、値コミットスクリプトは、ユーザーがフィールドの値をUIから変更した場合にのみ実行されます。
 
 ### 表示式 {#visibility-expression}
 
@@ -255,7 +255,7 @@ window.addEventListener("bridgeInitializeStart", function(evnt) {
 
 >[!NOTE]
 >
->AEMでは、clientLibにコードを記述し、ページに含めることをお勧めします（ページのheader.jspまたはfooter.jsp）
+>AEMでは、clientLibにコードを記述し、ページに含めることをお勧めします（ページのheader.jspまたはfooter.jsp）。
 
 To use GuideBridge after the form is initialized (the `bridgeInitializeComplete` event is dispatched), get the GuideBridge instance using `window.guideBridge`.  APIを使って、`guideBride.isConnected`GuideBridge初期化ステータスを確認することができます。
 
@@ -283,7 +283,7 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 1. カスタムパターンを管理するためのフォルダーを作成します。アプリケーションディレクトリの下で、sling:folderタイプのノードを作成します。For example, create a node with the name `customPatterns`. Under this node, create another node of type `nt:unstructed` and name it `textboxpatterns`. このノードには、追加しておくとよい様々なカスタムパターンが含まれています。
 1. 作成したノードのプロパティタブを開きます。例えば、`textboxpatterns`のプロパティタブを開きます。このノードにプロパティ`guideComponentType`を追加して、その値を&#x200B;*fd/af/components/formatter/guideTextBox*&#x200B;に設定します。
 1. このプロパティの値は、パターンを設定するフィールドによって変わります。数値フィールドの`guideComponentType`*プロパティの値は、* fd/af/components/formatter/guideNumericBoxです。日付選択フィールドの値は、*fd/af/components/formatter/guideDatepicker*&#x200B;です。
-1. ノードにプロパティを割り当てることで`textboxpatterns`カスタムパターンを追加できます。Add a property with a name (for example `pattern1`), and set its value to the pattern you want to add. For example, add a property `pattern1` with value Fax=text{99-999-9999999}. このパターンは、アダプティブフォームで使用するすべてのテキストボックスで使用できます。
+1. ノードにプロパティを割り当てることで`textboxpatterns`カスタムパターンを追加できます。Add a property with a name (for example `pattern1`), and set its value to the pattern you want to add. For example, add a property `pattern1` with value Fax=text{99-999-9999999}. このパターンは、アダプティブFormsで使用するすべてのテキストボックスで使用できます。
 
    ![CrDeでフィールドのカスタムパターンの作成](assets/creating-custom-patterns.png)
    **図：** *カスタムパターンの作成*
