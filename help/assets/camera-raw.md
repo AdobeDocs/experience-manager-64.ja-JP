@@ -1,27 +1,27 @@
 ---
 title: Camera Raw サポート
-description: Adobe Experience ManagerアセットでCamera Rawサポートを有効にする方法を説明します。
+description: Adobe Experience Managerアセットのサポートを有効にするCamera Raw方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: dea673f8999656a5c5364f74f45eba41dd17b947
 workflow-type: tm+mt
 source-wordcount: '404'
-ht-degree: 34%
+ht-degree: 45%
 
 ---
 
 
-# Camera Rawを使用した画像の処理 {#camera-raw-support}
+# 画像Camera Rawの処理に使用 {#camera-raw-support}
 
-Camera Rawサポートを有効にして、CR2、NEF、RAFなどの生ファイル形式を処理し、画像をJPEG形式でレンダリングできます。 この機能は、Software Distribution [（ソフトウェア配布）で使用可能な](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) Camera Rawパッケージを使用して、Adobe Experience Managerアセットでサポートされます。
+CR2、NEF、RAFなどの生のファイル形式を処理し、Camera Raw画像をJPEG形式でレンダリングするためのサポートを有効にすることができます。 この機能は、Software Distribution [Camera Raw（ソフトウェア配布）で使用可能なパッケージを使用して、Adobe Experience Managerアセットでサポートされます](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) 。
 
 >[!NOTE]
 >
 >この機能は JPEG レンディションのみをサポートします。Windows 64ビット、Mac OS、およびRHEL 7.xでサポートされています。
 
-Adobe Experience ManagerアセットでCamera Rawサポートを有効にするには、次の手順に従います。
+Adobe Experience ManagerアセットのCamera Rawサポートを有効にするには、次の手順に従います。
 
-1. Software Distribution [](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) （ソフトウェア配布）からCamera Rawパッケージをダウンロードします。
+1. Download the [Camera Raw package](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) from the Software Distribution.
 
 1. `https://[aem_server]:[port]/workflow` にアクセスします。Open the **[!UICONTROL DAM Update Asset]** workflow.
 
@@ -40,7 +40,7 @@ Adobe Experience ManagerアセットでCamera Rawサポートを有効にする�
 
 1. From the side panel, add the **[!UICONTROL Camera Raw/DNG Handler]** step below the **[!UICONTROL Thumbnail creation]** step.
 
-1. In the **[!UICONTROL Camera Raw/DNG Handler]** step, add the following configuration in the **[!UICONTROL Arguments]** tab:
+1. **[!UICONTROL /Camera RawDNGハンドラーの手順で、「]** 引数 **** 」タブに次の設定を追加します。
 
    * **[!UICONTROL MIMEタイプ]**: `image/dng` と `image/x-raw-(.*)`
    * **[!UICONTROL コマンド]**:
