@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: dc149196-fa56-494e-975c-b11ca1ef193b
 translation-type: tm+mt
 source-git-commit: 1e867debcc1bfeed3abc4240796c9f2c2850167f
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 73%
 
 ---
 
@@ -76,7 +79,7 @@ See also the interactive [Community Components guide](components-guide.md).
 
 >[!NOTE]
 >
->調査コンポーネントは、Experience Manager Communitiesでは使用できなくなり、サポートされなくなりました。
+>調査コンポーネントは使用できなくなり、Experience Managerコミュニティでサポートされます。
 
 ## 関連するコミュニティドキュメント {#related-communities-documentation}
 
