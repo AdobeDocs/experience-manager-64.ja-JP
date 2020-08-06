@@ -13,6 +13,9 @@ legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/ed
 pagetitle: Foundation Components
 translation-type: tm+mt
 source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+workflow-type: tm+mt
+source-wordcount: '6592'
+ht-degree: 84%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
 
 >[!NOTE]
 >
->この節では、基盤コンポーネントについて説明します。基盤コンポーネントは、AEM の多くのバージョンで利用でき、AEM の標準インストール環境でそのまますぐに使用できます。ただし、AEM 6.4では、多くのFoundationコンポーネントが廃止されています。
+>この節では、基盤コンポーネントについて説明します。基盤コンポーネントは、AEM の多くのバージョンで利用でき、AEM の標準インストール環境でそのまますぐに使用できます。ただし、AEM 6.4では、多くの基盤コンポーネントが廃止されました。
 >
 >Adobe recommends leveraging the more modern and extensible [core components](https://helpx.adobe.com/experience-manager/core-components/using/authoring.html). These are part of the [We.Retail sample content](/help/sites-developing/we-retail.md) and can also be [installed separately and used for development](https://helpx.adobe.com/experience-manager/core-components/using/using.html) by your administrator.
 
@@ -29,7 +32,7 @@ source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
 
 Some are immediately available through component browser, various others are also available by using [design mode](/help/sites-authoring/default-components-designmode.md) (if the page is based on a static template) or by [editing the template](/help/sites-authoring/templates.md) (if the page is based on an editable template).
 
-基盤コンポーネントの使用はサポートされていますが、拡張性と柔軟性を高めるコアコンポーネントに置き換えられました。
+基盤コンポーネントの使用はサポートされていますが、これらのコンポーネントは、より拡張性と柔軟性をオファーするコアコンポーネントに置き換えられました。
 
 >[!NOTE]
 >
@@ -58,7 +61,7 @@ Some are immediately available through component browser, various others are als
 ### アカウント項目 {#account-item}
 
 >[!CAUTION]
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 タイトルと説明を含むリンクを定義できます。
 
@@ -67,7 +70,7 @@ Some are immediately available through component browser, various others are als
 ### アダプティブ画像 {#adaptive-image}
 
 >[!CAUTION]
->この基盤コンポーネントは廃止されました。Adobe recommends leveraging the [Core Components Image Component](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) instead.
+>この基盤コンポーネントは廃止されました。Adobe recommends leveraging the [Core Components Image Component](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html) instead.
 
 アダプティブ画像基盤コンポーネントは、Web ページを開いたウィンドウに合うようにサイズが調整される画像を生成します。このコンポーネントを使用するには、ファイルシステムと DAM のいずれかから画像リソースを指定します。Web ページが開くと、Web ブラウザーにより、現在のウィンドウに適したサイズに調整された画像のコピーがダウンロードされます。
 
@@ -89,7 +92,7 @@ Some are immediately available through component browser, various others are als
 
 >[!CAUTION]
 >
->&amp;ast;&amp;ast;アニメーション.gifファイルは、アダプティブレンディションのAEMではサポートされていません。
+>&amp;ast;&amp;ast; アニメーション.gifファイルは、アダプティブレンディションのAEMではサポートされていません。
 
 #### 画像のサイズと画質 {#images-sizes-and-quality}
 
@@ -170,7 +173,7 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 
 * **カルーセル**
 
-   カルーセルの動作を指定します。
+   カルーセルの動作を次に示します。
 
    * 再生速度
 
@@ -178,11 +181,11 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 
    * 遷移時間
 
-      2つのスライド間の移行にかかる時間（ミリ秒）です。
+      2つのスライド間のトランジションにかかる時間（ミリ秒）です。
 
    * コントロールのスタイル
 
-      プルダウンメニューからは、様々なオプションを使用できます。例えば、前へ/次へボタン、右上スイッチなど。
+      プルダウンメニューからは、様々なオプションを使用できます。 例えば、前へ/次へボタン、右上スイッチ。
 
 * **リスト**
 
@@ -192,7 +195,7 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 
       ページリストを作成する方法はいくつかあります。子ページ、固定リスト、検索、詳細検索（以下で説明）です。
 
-      どの方法を選択しても、リストに含める各ページには、そのページに関連付けられた画像が既に存在する場合は、その画像がカルーセルに表示されます。 ページのページプロパティの下に特定のページの画像がない場合は、開始する前に画像をページに関連付ける必要があります。画像がない場合は、空白の（ほとんど空白の）ページがカルーセルに表示されます。 See [Editing Page Properties](/help/sites-authoring/editing-page-properties.md).
+      どの方法を選択した場合でも、リストに含める各ページに、そのページに関連付けられた画像が既に存在する必要があります。この画像がカルーセルに表示されます。 ページの「ページプロパティ」の下に特定のページの画像がない場合は、開始する前に画像をページに関連付ける必要があります。画像がない場合は、カルーセルに空白（ほとんど空白）ページが表示されます。 See [Editing Page Properties](/help/sites-authoring/editing-page-properties.md).
 
       選択する項目によって、新しいパネルが表示されます。
 
@@ -202,7 +205,8 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 手動で、またはセレクターを使用して、パスを指定します。現在のページを親として使用するには、空のままにします。
       * **固定リストのオプション**
 
-         * **ページ**&#x200B;ページのリストを選択します。エントリ `+` を追加する場合に使用し、順序を調整する場合は上/下のボタンを使用します。
+         * **ページ**&#x200B;ページのリストを選択します。 使用する 
+`+` をクリックして、エントリや上/下ボタンを追加して順序を調整します。
       * **検索のオプション**
 
          * **開始**
@@ -221,11 +225,11 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
             クエリー式とその他の例の詳細は、[QueryBuilder API](/help/sites-developing/querybuilder-api.md) を参照してください。
    * **並べ替え順**
 
-      ドロップダウ `jcr:title`ンメニュ `jcr:created`ーから、、 `cq:lastModified`、、、ま `cq:template` たはのいずれかを選択します。
+      ドロップダウンメニュ `jcr:title`ー `jcr:created`から、、、、 `cq:lastModified``cq:template` またはを選択します。
 
    * **制限**
 
-      カルーセルで使用する項目の最大数です。これはオプションです。
+      カルーセルで使用する項目の最大数です。 これはオプションです。
 
 
 
@@ -265,7 +269,7 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 
 以下は、グラフデータの例と、結果の棒グラフを示しています。
 
-![chlimage_1-192](assets/chlimage_1-192.png)![dc_chart_use](assets/dc_chart_use.png)
+![chlimage_1-192](assets/chlimage_1-192.png) ![dc_chart_use](assets/dc_chart_use.png)
 
 >[!NOTE]
 >
@@ -315,7 +319,7 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 
       パラメーターをアプリケーションに渡す必要がある場合は、チェックボックスをオンにします。
 
-   * **幅と高さ**
+   * **「幅」と「高さ」**
 
       iframe のサイズを定義します。
 
@@ -330,7 +334,7 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 ### Flash {#flash}
 
 >[!CAUTION]
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 Flash コンポーネントを使用すると、Flash ムービーをロードできます。コンテンツファインダーからコンポーネントに Flash アセットをドラッグするか、ダイアログを使用できます。
 
@@ -406,7 +410,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 * **Map**
 
-   画像をマップするには、「マップ」を選択します。 画像マップの作成方法（長方形、多角形など）を指定し、領域が指す位置を指定します。
+   画像をマップする場合は、「マップ」を選択します。 画像マップの作成方法（長方形、多角形など）を指定し、領域が指す位置を指定します。
 
 * **切り抜き**
 
@@ -430,7 +434,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 * **リンク先**
 
-   Webサイト内のアセットや他のページへのリンクを作成します。
+   Webサイト内のアセットまたは他のページへのリンクを作成します。
 
 * **説明**
 
@@ -456,7 +460,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!NOTE]
 >
->このコンポーネントは [HTML テンプレート言語（HTL）](https://helpx.adobe.com/experience-manager/htl/user-guide.html)を使用して実装されています。
+>このコンポーネントは [HTML テンプレート言語（HTL）](https://helpx.adobe.com/jp/experience-manager/htl/user-guide.html)を使用して実装されています。
 
 ### リスト {#list}
 
@@ -472,9 +476,9 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
       * **子ページのオプション**
 
-         * **子** （親ページ）
+         * **の子** （親ページ）
 
-            手動またはセレクターを使用してパスを指定します。 現在のページを親として使用するには、空のままにします。
+            手動またはセレクターを使用して、パスを指定します。 現在のページを親として使用するには、空のままにします。
       * **固定リストのオプション**
 
          * **ページ**
@@ -498,7 +502,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
             クエリー式とその他の例の詳細は、[QueryBuilder API](/help/sites-developing/querybuilder-api.md) を参照してください。
       * **タグ**
 
-         Specify the **Parent page**, **Tags/Keywords** and your required match criteria.
+         **親ページ**、 **タグ** /キーワード、および必要な一致条件を指定します。
    * **表示方法**
 
       リンク、ティーザー、ニュースなどの項目のリストを表示する方法。
@@ -526,12 +530,12 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 次に、**リスト**&#x200B;コンポーネントで子ページのリストがどのように表示されるかの例を示します（子ページの設計は、サイト設計のカスタム CSS 定義で制御されています）。
 
-![dc_list_use](assets/dc_list_use.png)
+![dc_リスト_use](assets/dc_list_use.png)
 
 ### ログイン {#login}
 
 >[!CAUTION]
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 「ユーザー名」フィールドと「パスワード」フィールドを提供します。
 
@@ -547,7 +551,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
    * ユーザー名ラベル
 
-      ユーザー名フィールドにラベルを付けるテキスト。
+      ユーザー名フィールドのラベルを設定するテキスト。
 
    * パスワードラベル
 
@@ -559,13 +563,13 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
    * リダイレクト先
 
-      ユーザーがログインした後に開く必要があるWebサイト上のページを指定できます。
+      ユーザーのログイン後に開く必要のあるWebサイトのページを指定できます。
 
 * ログイン済み
 
    * 続行ボタンのラベル
 
-      ユーザーが既にログインしていることを示すテキスト。
+      ユーザーが既にログインしていることを示すテキストです。
 
 ### 注文ステータス {#order-status}
 
@@ -581,7 +585,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
    * **種類／サイズ**
 
-      表示された選択から選択します。
+      与えられた選択肢から選択します。
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
@@ -618,7 +622,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 ### 検索 {#search-features}
 
 >[!CAUTION]
->この基盤コンポーネントは廃止されました。代わりに、[クイック検索コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/quick-search.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[クイック検索コアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/quick-search.html)を利用することをお勧めします。
 
 検索コンポーネントで、ページに検索機能を追加します。
 
@@ -687,7 +691,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 ### サイトマップ {#sitemap}
 
 >[!CAUTION]
->この基盤コンポーネントは廃止されました。Adobe recommends leveraging the [Navigation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html), [Language Navigation](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/language-navigation.html), and [Breadcrumb Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/breadcrumb.html) instead.
+>この基盤コンポーネントは廃止されました。Adobe recommends leveraging the [Navigation](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/navigation.html), [Language Navigation](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/language-navigation.html), and [Breadcrumb Core Components](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/breadcrumb.html) instead.
 
 自動的なサイトマップのリスト表示。デフォルトの設定では、現在の Web サイトのすべてのページが（アクティブなリンクとして）すべて表示されます。例えば、次のように表示されます。
 
@@ -704,7 +708,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 ### スライドショー {#slideshow}
 
 >[!CAUTION]
->この基盤コンポーネントは廃止されました。代わりに、[カルーセルコアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/carousel.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[カルーセルコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/carousel.html)を利用することをお勧めします。
 
 このコンポーネントを使用すると、ページでスライドショーとして表示する一連の画像をロードできます。画像を追加または削除し、それぞれにタイトルを割り当てることができます。「詳細」では、表示領域のサイズも指定できます。
 
@@ -733,7 +737,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 ### テーブル {#table}
 
 >[!CAUTION]
->この基盤コンポーネントは廃止されました。代わりに、[テキストコアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/text.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[テキストコアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html)を利用することをお勧めします。
 
 >[!NOTE]
 >
@@ -815,11 +819,11 @@ When you open the **Configure** dialog, you can also set:
 
 次の項目を設定できます。
 
-* **コンポーネントスタ** イル&#x200B;****（スタイル）
+* **コンポーネントスタイル** (**スタイル**)
 
    ここで画像を左揃えまたは右揃えにすることができます。デフォルトは、画像を左に配置する「**左**」です。
 
-* **画像プロパティ** (詳&#x200B;**細な画像プロパティ**)
+* **画像プロパティ** (**詳細な画像プロパティ**)
 
    以下を指定できます。
 
@@ -884,6 +888,7 @@ See also [Configure the Video component](/help/sites-administering/config-video.
 * ビデオ
 
    * **ビデオアセット**
+
    ビデオアセットをアップロードまたはドロップします。
 
    * **サイズ**
@@ -897,7 +902,8 @@ See also [Configure the Video component](/help/sites-administering/config-video.
 >
 >* `.mp4`
 >* `Ogg`
->* `FLV` （Flashビデオ）
+>* `FLV` (Flashビデオ)
+
 >
 
 
@@ -1019,11 +1025,11 @@ See also [Configure the Video component](/help/sites-administering/config-video.
 
    * **必須**
 
-      これはフォームコンポーネントのタイプに依存しますが、このフィールドまたはこのフィールドの特定の部分が必須である/必須であることを示す1つ以上のクリックボックスが提供されます。
+      これはフォームコンポーネントのタイプに依存しますが、1つ以上のクリックボックスが用意されており、このフィールドの特定の部分が必須であることを示します。
 
    * **必須メッセージ**
 
-      このフィールドが必須であることをユーザーに知らせるメッセージ。必須フィールドにも、とアスタリスクが付きます。
+      このフィールドが必須であることをユーザーに通知するメッセージです。 必須フィールドにも、アスタリスクと共にフラグが付けられます。
 
    * **制約**
 
@@ -1037,7 +1043,7 @@ See also [Configure the Video component](/help/sites-administering/config-video.
 
    * **サイズ**
 
-      行と列。
+      行と列内。
 
    * **幅**
 
@@ -1055,7 +1061,7 @@ See also [Configure the Video component](/help/sites-administering/config-video.
 
 >[!NOTE]
 >
->基盤コンポーネントのフォームコンポーネントでは、他のフォームコンポーネント（ボタン、テキスト、非表示など）の使用のみサポートしています。[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)のフォームコンポーネントを基盤コンポーネントフォーム内で使用すること（およびその逆の使用）はサポートされていません。
+>基盤コンポーネントのフォームコンポーネントでは、他のフォームコンポーネント（ボタン、テキスト、非表示など）の使用のみサポートしています。[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)のフォームコンポーネントを基盤コンポーネントフォーム内で使用すること（およびその逆の使用）はサポートされていません。
 
 #### フォームの開始 {#start-of-form}
 
@@ -1072,9 +1078,10 @@ See also [Configure the Video component](/help/sites-administering/config-video.
 
 * **アドバンス**
 
-   * **アクションの種類**&#x200B;フォームにはアクションが必要です。アクションは、ユーザーが送信したデータ（HTMLのaction=と同様）を使用して実行するためにトリガーされる操作を定義します。 対応するアクション設定が必要 **な場合もありま**&#x200B;す。
+   * **アクションの種類**&#x200B;フォームにはアクションが必要です。 アクションは、ユーザーが送信したデータを使用して実行のためにトリガーされる操作を定義します（HTMLのaction=と同様）。 対応する 
+**アクションの設定**.
 
-      標準のAEMインストールには、次のアクションタイプが含まれています。
+      標準のAEMインストールには、次のアクションの種類が含まれます。
 
       * **アカウント要求**
       * **コンテンツを作成**
@@ -1105,7 +1112,7 @@ See also [Configure the Video component](/help/sites-administering/config-video.
 
    * **読み込み元パス**
 
-      定義済みの値をフォームフィールドに読み込むために使用するノードプロパティへのパスです。
+      定義済みの値をフォームフィールドに読み込むのに使用するノードプロパティへのパスです。
 
       これは、リポジトリ内のノードへのパスを指定するオプションのフィールドです。このノードに、フィールド名と一致するプロパティがある場合、フォーム上の適切なフィールドがそのプロパティの値が設定された状態でプリロードされます。一致が存在しない場合、フィールドにはデフォルト値が使用されます。
 
@@ -1143,7 +1150,7 @@ See also [Configure the Video component](/help/sites-administering/config-video.
 
             `/forms/feedback/`
 
-         * **タイプ**
+         * **型**
 
             必要なタイプを選択します。
 
@@ -1157,7 +1164,7 @@ See also [Configure the Video component](/help/sites-administering/config-video.
 
          * **リソースタイプ**
 
-            設定した場合、これは各コメントに `sling:resourceType`
+            設定した場合、これは `sling:resourceType`
 
          * **表示セレクター**
       * **リードを作成**
@@ -1218,10 +1225,10 @@ See also [Configure the Video component](/help/sites-administering/config-video.
 
          * **データを表示...**
 
-            このボタンをクリックして、バルクエディターのフォームの結果に関する情報にアクセスします。ここから、情報を.tsv（タブ区切り）ファイル（Excelスプレッドシートなど）にエクスポートできます。
+            このボタンをクリックして、バルクエディターのフォームの結果に関する情報にアクセスします。ここから、情報を.tsv（タブ区切り）ファイルにエクスポートできます（例えば、Excelスプレッドシートで使用）。
       * **コンテンツをアップロードデータと共に保存**
 
-         これは「コンテンツを保存」と同じオ **プションです**。
+         これは、「 **コンテンツを保存**」と同じオプションを持ちます。
 
       * **購読者の購読を解除**
 
@@ -1285,7 +1292,7 @@ See also [Configure the Video component](/help/sites-administering/config-video.
 ### Captcha {#captcha}
 
 >[!CAUTION]
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 キャプチャコンポーネントを画面に表示する場合、ユーザーは英数字を入力する必要があります。更新するごとに、文字列は変わります。
 
@@ -1310,7 +1317,7 @@ See also [Configure the Video component](/help/sites-administering/config-video.
 ### クレジットカードの詳細 {#credit-card-details}
 
 >[!CAUTION]
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 クレジットカードの詳細を入力するために必要なフィールドを提供できます。使用可能なカードの種類や、必要な情報（セキュリティコードなど）を指定するように設定できます。
 
