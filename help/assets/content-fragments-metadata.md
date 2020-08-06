@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 96cf7c92-af98-417f-ab60-b368e3846ef8
 translation-type: tm+mt
 source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 89%
 
 ---
 
@@ -19,17 +22,18 @@ source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、 [AEM 6.4 Service Pack 2(6.4.2.0)以降が必要です](/help/release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2(6.4.2.0)以降が [必要です](/help/release-notes/sp-release-notes.md)。
 
 ## プロパティ／メタデータの編集 {#editing-properties-meta-data}
 
 コンテンツフラグメントのメタデータ（プロパティ）を表示して編集できます。
 
-1. **[!UICONTROL Assets]** コンソールで、コンテンツフラグメントの場所に移動します。
+1. **[!UICONTROL アセット]**&#x200B;コンソールで、コンテンツフラグメントの場所に移動します。
 1. 以下のどちらかの操作をおこないます。
 
    * [「プロパティを表示」を選択してダイアログを開きます](managing-assets-touch-ui.md#editing-properties)。開いて表示されたら、編集することもできます。
-   * Open the [content fragment for Edit](content-fragments-managing.md#opening-the-fragment-editor), then select **[!UICONTROL Metadata]** from the side panel.
+   * [編集するコンテンツフラグメント](content-fragments-managing.md#opening-the-fragment-editor)を開き、サイドパネルから「**[!UICONTROL メタデータ]**」を選択します。
+
    ![cfm-6420-06](assets/cfm-6420-06.png)
 
 1. 「**[!UICONTROL 基本]**」タブに、表示または編集が可能なオプションが表示されます。
@@ -39,5 +43,6 @@ source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
    * **説明**
    * **タグ**
    * 作成済み（表示のみ）
+
    ![cfm-6420-07](assets/cfm-6420-07.png)
 
