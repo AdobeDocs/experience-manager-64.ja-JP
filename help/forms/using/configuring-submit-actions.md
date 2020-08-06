@@ -9,6 +9,9 @@ topic-tags: author
 discoiquuid: fea76f90-22d5-4836-9901-a35229401eb0
 translation-type: tm+mt
 source-git-commit: 35532245929f2e404a96425e4710e911e9ce5b40
+workflow-type: tm+mt
+source-wordcount: '1545'
+ht-degree: 74%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: 35532245929f2e404a96425e4710e911e9ce5b40
 
 送信アクションは、ユーザーがアダプティブフォームの「送信」ボタンをクリックしたときにトリガーされます。アダプティブフォームの送信アクションを設定することができます。アダプティブフォームには、追加設定なしで使用できる送信アクションがあります。デフォルトの送信アクションをコピーし、拡張することにより、独自の送信アクションを作成することができます。ただし、要件に基づき、送信されたフォームのデータを処理するための独自の送信アクションを書いて登録することができます。
 
-フォームが事前入力または送信されると、送信されたデータがAEM経由で送信され、中間形式へのデータマッサージが行われます。 アダプティブフォームがAdobe Sign、検証、フォームポータルのドラフトと送信、またはAEM Workflowsを使用する場合を除き、データはAEMインスタンスに保存されません
+フォームが事前入力または送信された場合、送信データはAEM経由で送信され、中間形式へのデータマッサージが行われます。 アダプティブフォームがAdobe Sign、検証、フォームポータルのドラフト、送信、またはAEMワークフローを使用する場合を除き、AEMインスタンスではデータは保存されません
 
 サイドバーにある「アダプティブフォームコンテナ」プロパティの「**[!UICONTROL 送信]**」セクションで、送信アクションを設定できます。
 
-![](assets/thank-you-setting.png) 送信アクション図&#x200B;****&#x200B;の設定：送信ア *クションの設定*
+![送信アクション](assets/thank-you-setting.png)**図の設定：** *送信アクションの設定*
 
 アダプティブフォームで使用可能なデフォルトの送信アクションは次のとおりです。
 
@@ -41,7 +44,7 @@ source-git-commit: 35532245929f2e404a96425e4710e911e9ce5b40
 
 >[!NOTE]
 >
->Ensure that the [AEM_Installation_Directory]\crx-quickstart\temp\datamanager\ASM folder exists. ディレクトリは、添付ファイルを一時的に保存するために必要になります。ディレクトリが存在しない場合は作成します。
+>[AEM_Installation_Directory]\crx-quickstart\temp\datamanager\ASM folder existsがあることを確認します。 ディレクトリは、添付ファイルを一時的に保存するために必要になります。ディレクトリが存在しない場合は作成します。
 
 >[!CAUTION]
 >
@@ -68,11 +71,11 @@ REST エンドポイントへの送信の設定
 
 ### リソースまたは外部の REST エンドポイントへの送信されたデータの POST{#post-submitted-data-to-a-resource-or-external-rest-end-point-nbsp}
 
-**[!UICONTROL REST エンドポイントへの送信]**&#x200B;アクションを利用して、送信されたデータを REST URL に POST することができます。URLは、内部（フォームがレンダリングされるサーバー）または外部サーバーのいずれかです。
+**[!UICONTROL REST エンドポイントへの送信]**&#x200B;アクションを利用して、送信されたデータを REST URL に POST することができます。URLには、内部（フォームがレンダリングされるサーバー）または外部サーバーを使用できます。
 
 内部サーバーにデータを POST 送信するには、リソースのパスを指定します。データは、リソースのパスに POST されます。例：/content/restEndPoint。このような POST リクエストには、送信リクエストの認証情報が使用されます。
 
-内部サーバーにデータを POST 送信するには、URL を指定します。URLの形式はhttps://です。 POST リクエストを匿名で処理するようにパスを設定してください。
+内部サーバーにデータを POST 送信するには、URL を指定します。URLの形式は、https:// host:port/path_to_rest_end_pointです。 POST リクエストを匿名で処理するようにパスを設定してください。
 
 ![「ありがとうございます」ページのパラメーターとして渡すフィールド値のマッピング](assets/post-enabled-actionconfig.png)
 
@@ -130,7 +133,7 @@ The **[!UICONTROL Forms Portal Submit Action]** option makes form data available
 
 ## アダプティブフォームにおけるサーバー側の再検証 {#server-side-revalidation-in-adaptive-form}
 
-通常、どのオンラインデータキャプチャシステムでも、開発者はいくつかのビジネスルールを実施するために、クライアント側にJavaScript検証を配置します。 しかし、最新のブラウザでは、エンドユーザーが Web Browser DevTools Console などのさまざまな手法を使ってこれらの検証を回避し、手動で送信を行える方法が存在します。このような方法は、アダプティブフォームにも有効です。 フォーム開発者は、多様な検証ロジックを作成することができますが、エンドユーザーは、これらの検証ロジックを回避し、無効なデータをサーバーに送信することができます。無効なデータは、フォーム製作者が適用したビジネスルールを破ることになります。
+通常、どのオンラインデータキャプチャシステムでも、開発者はいくつかのビジネスルールを適用するために、クライアント側にJavaScriptの検証をいくつか配置します。 しかし、最新のブラウザでは、エンドユーザーが Web Browser DevTools Console などのさまざまな手法を使ってこれらの検証を回避し、手動で送信を行える方法が存在します。このような方法は、アダプティブフォームにも有効です。 フォーム開発者は、多様な検証ロジックを作成することができますが、エンドユーザーは、これらの検証ロジックを回避し、無効なデータをサーバーに送信することができます。無効なデータは、フォーム製作者が適用したビジネスルールを破ることになります。
 
 サーバー側の再検証機能は、アダプティブフォームの製作者がアダプティブフォームのデザイン中に指定した検証を、サーバー上でも実行するための機能です。これは、フォームの検証で表されるデータ送信の漏洩やビジネスルール違反の可能性を阻止します。
 
@@ -146,7 +149,7 @@ The **[!UICONTROL Forms Portal Submit Action]** option makes form data available
 
 Use the **Revalidate on server** under Adaptive Form Container in the sidebar to enable or disable server-side validation for the current form.
 
-![](assets/revalidate-on-server.png) サーバー側検証図の有効&#x200B;****&#x200B;化：サー *バー側検証の有効化*
+![サーバー側検証](assets/revalidate-on-server.png)**図の有効化：** *サーバー側検証の有効化*
 
 エンドユーザーがこれらの検証を回避してフォームを送信した場合、サーバーが再度検証を行います。サーバー側での検証が失敗した場合、送信処理が中止されます。エンドユーザーには、元のフォームが再度表示されます。取得されたデータおよび送信されたデータは、エラーとしてユーザーに表示されます。
 
@@ -154,7 +157,7 @@ Use the **Revalidate on server** under Adaptive Form Container in the sidebar to
 
 **複雑な検証ルール**&#x200B;の場合、正確な検証スクリプトはカスタム関数の中に存在し、作成者はこれらのカスタム関数をフィールド検証式から呼び出すことがあります。To make this custom function library known and available while performing server-side validations, the form author can configure the name of AEM client library under the **[!UICONTROL Basic]** tab of Adaptive Form Container properties as shown below.
 
-![](assets/clientlib-cat.png) 検証式図でのサポートするカスタム&#x200B;****&#x200B;関数：検証 *式でのカスタム関数のサポート*
+![検証式](assets/clientlib-cat.png)**図のサポートカスタム関数：** *検証式でのカスタム関数のサポート*
 
 作成者は、アダプティブフォームごとにカスタム Javascript ライブラリを設定することができます。ライブラリには、jQuery および underscore.js に依存する再利用可能な関数のみを保存してください。
 
