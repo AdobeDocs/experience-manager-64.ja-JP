@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: e43fd002-2954-4ef1-ac2b-e8d45afa75be
 translation-type: tm+mt
 source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+workflow-type: tm+mt
+source-wordcount: '1383'
+ht-degree: 60%
 
 ---
 
@@ -71,7 +74,7 @@ In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access
   </tr> 
   <tr> 
    <td>/libs/settings/dam/v3D/settings/gPlaneZero</td> 
-   <td><p><strong>true</strong> （既定値）に設定すると、必要に応じてオブジェクトが垂直方向に移動し、オブジェクトのすべての部分が地表面(y=0)の上に配置されます。</p> <p><strong>false</strong> （デフォルト）に設定した場合、オブジェクトは再配置されず、ステージの地表プレーンによって部分的に隠される場合があります。 （Rapid Refine でのプレビューとレンダリングにのみ適用されます）。ただし、Maya でのレンダリングには影響しません。<strong>trueに設定すると</strong>、Mayaのオブジェクトの垂直方向の位置が、プレビュー時やRapid Refineを使用してレンダリングする場合と異なる場合があります。</p> </td> 
+   <td><p><strong>true</strong> （既定値）に設定すると、必要に応じてオブジェクトが垂直方向に移動し、オブジェクトのすべてのパーツが地表面の上に配置されます(y=0)。</p> <p>When set to <strong>false</strong> (default), objects are not repositioned and may be partially hidden by a stage's ground plane. （Rapid Refine でのプレビューとレンダリングにのみ適用されます）。ただし、Maya でのレンダリングには影響しません。When set to <strong>true</strong>, the vertical position of objects in Maya may be different than in preview or when rendering with Rapid Refine.</p> </td> 
   </tr> 
   <tr> 
    <td>/libs/settings/dam/v3D/Paths/magickPath</td> 
@@ -84,19 +87,19 @@ In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access
  </tbody> 
 </table>
 
-## クラウドサービスの設定 {#cloud-services-configuration-settings}
+## Cloud Services設定 {#cloud-services-configuration-settings}
 
-次の設定の値は、アドビのアカウントマネージャー、プロビジョニングエキスパートまたはサポート担当者が提供します。
+次の設定の値は、Adobeのアカウントマネージャー、プロビジョニングエキスパートまたはサポート担当者が提供します。
 
 | **パス** | **説明** |
 |---|---|
-| `/libs/settings/dam/v3D/services/aws/accountId` | Adobe AWSアカウントのアカウントID。 |
-| `/libs/settings/dam/v3D/services/aws/bucketName` | S3転送バケットの名前通常 `aem3d`は |
-| `/libs/settings/dam/v3D/services/aws/customerId` | アドビが組織に割り当てる一意のID。 AWS CognitoユーザーIDとして使用されます。 |
-| `/libs/settings/dam/v3D/services/aws/encryptedPassword` | このcustomerIdに関連付けられているパスワード。 AWS Cognitoのパスワードとして使用されます。 |
+| `/libs/settings/dam/v3D/services/aws/accountId` | AdobeAWSアカウントのアカウントID。 |
+| `/libs/settings/dam/v3D/services/aws/bucketName` | S3転送バケットの名前。 通常 `aem3d`。 |
+| `/libs/settings/dam/v3D/services/aws/customerId` | Adobeが組織に割り当てる一意のID。 AWS CognitoユーザーIDとして使用されます。 |
+| `/libs/settings/dam/v3D/services/aws/encryptedPassword` | このcustomerIdに関連付けられているパスワード。 AWS Cognitoパスワードとして使用されます。 |
 | `/libs/settings/dam/v3D/services/aws/region` | クラウドサービスがデプロイされるAWSリージョン。 |
 | `/libs/settings/dam/v3D/services/aws/userPoolId` | 適用可能なAWS CognitoユーザープールID。 |
-| `/libs/settings/dam/v3D/services/dncr/clientId` | dncrコンバージョンサービスのAWS CognitoクライアントID。 |
+| `/libs/settings/dam/v3D/services/dncr/clientId` | AWS CognitoクライアントID（dncrコンバージョンサービス用）。 |
 
 ## Common processing settings {#common-processing-settings}
 
@@ -105,7 +108,7 @@ In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access
 | **パス** | **説明** |
 |---|---|
 | `/libs/settings/dam/v3D/Paths/mayaWorkPath` | Maya の変換およびレンダリングの作業フォルダーの名前と場所です。フォルダーが存在しない場合は自動的に作成されます。 |
-| `/libs/settings/dam/v3D/Paths/maxWorkPath` | 3ds max変換の作業フォルダの名前と場所。 フォルダーが存在しない場合は自動的に作成されます。 |
+| `/libs/settings/dam/v3D/Paths/maxWorkPath` | 3ds Max変換の作業フォルダの名前と場所。 フォルダーが存在しない場合は自動的に作成されます。 |
 | `/libs/settings/dam/v3D/settings/debugNative` | **[!UICONTROL true]** に設定すると、Rapid Refine レンダラーでの形式変換およびレンダリング中にデバッグ情報を作成できます。 |
 
 ## レンダラーの設定 {#renderer-configuration}
@@ -130,7 +133,7 @@ In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access
 | `/libs/settings/dam/v3D/WebGLSites/autoSpinSpeed` | 自動スピンの速度（1 分あたりの回転数）と方向を指定します。右から左に回転する場合は負の値を、左から右に回転する場合は正の値を指定します。 |
 | `/libs/settings/dam/v3D/WebGL/continueRotate` | Set to **[!UICONTROL false]** to disable continuation with gradual fadeout of viewer responses to touch and mouse gestures. |
 | `/libs/settings/dam/v3D/WebGL/curtainColor` | 読み込みおよび初期化中に 3D アセットプレビューの表示域を任意で覆うことができる読み込みカーテンの色を指定します。R,G,B として値を指定します。それぞれの色成分の範囲は 0～255 です。 |
-| `/libs/settings/dam/v3D/WebGL/fadeCurtains` | **[!UICONTROL trueに設定すると]**、ビューアの初期化の後半で、ロードカーテンが徐々にフェードアウトします。 When set to **[!UICONTROL false]**, the curtain remains opaque until loading and initialization has completed. |
+| `/libs/settings/dam/v3D/WebGL/fadeCurtains` | **[!UICONTROL trueに設定した場合]**、ロードカーテンは、ビューアの初期化の後半で徐々にフェードアウトします。 When set to **[!UICONTROL false]**, the curtain remains opaque until loading and initialization has completed. |
 | `/libs/settings/dam/v3D/WebGL/showCurtains` | Set to **[!UICONTROL true]** or **[!UICONTROL false]** to enable or disable the load curtain for 3D asset preview. |
 | `/libs/settings/dam/v3D/WebGL/spinHeight` | 自動スピンが有効でアクティブな場合、カメラの垂直方向の位置は、3D オブジェクトの高さを基準にして自動的に調整されます。0.5 に設定すると、カメラの垂直方向の位置はオブジェクトの高さの 1/2 の位置になり、水平線は表示域の垂直方向の中心になります。大きい値を設定すると、カメラはオブジェクトを見下ろすようになり、レンダリングされる水平線の高さは高くなります。小さい値を設定すると、カメラはオブジェクトを見上げるようになり、水平線は低くなります。 |
 
@@ -143,7 +146,7 @@ In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access
 | `/libs/settings/dam/v3D/WebGLSites/autoSpinAfterReset` | Set to **[!UICONTROL true]** to reactivate auto-spin (automatic camera orbit) after home is pressed. 自動スピンが無効になっている場合は無視されます。 |
 | `/libs/settings/dam/v3D/WebGLSites/continueRotate` | Set to **[!UICONTROL false]** to disable continuation with gradual fadeout of viewer responses to touch and mouse gestures. |
 | `/libs/settings/dam/v3D/WebGLSites/curtainColor` | 読み込み中に 3D Sites コンポーネントの表示域をオプションで覆うことができる読み込みカーテンの色を指定します。R,G,B として値を指定します。それぞれの色成分の範囲は 0～255 です。 |
-| `/libs/settings/dam/v3D/WebGLSites/fadeCurtains` | **[!UICONTROL trueに設定すると]**、ロードと初期化の後半の段階でロードカーテンが徐々にフェードアウトします。 When set to **[!UICONTROL false]**, the curtain remains opaque until loading and initialization has completed. |
+| `/libs/settings/dam/v3D/WebGLSites/fadeCurtains` | **[!UICONTROL trueに設定すると]**、ロードカーテンは、ロードと初期化の後半で徐々にフェードアウトします。 When set to **[!UICONTROL false]**, the curtain remains opaque until loading and initialization has completed. |
 | `/libs/settings/dam/v3D/WebGLSites/showCurtains` | Set to **[!UICONTROL true]** or **[!UICONTROL false]** to enable or disable the load curtain for the 3D Sites component. |
 | `/libs/settings/dam/v3D/WebGLSites/spinHeight` | 自動スピンが有効でアクティブな場合、カメラの垂直方向の位置は、3D オブジェクトの高さを基準にして自動的に調整されます。0.5 に設定すると、カメラの垂直方向の位置はオブジェクトの高さの 1/2 の位置になり、水平線は表示域の垂直方向の中心になります。大きい値を設定すると、カメラはオブジェクトを見下ろすようになり、レンダリングされる水平線の高さは高くなります。小さい値を設定すると、カメラはオブジェクトを見上げるようになり、水平線は低くなります。 |
 
