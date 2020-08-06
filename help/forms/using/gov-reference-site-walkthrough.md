@@ -10,6 +10,9 @@ topic-tags: introduction
 discoiquuid: 25a6d702-9995-4c63-99d8-3e5d710bb0c4
 translation-type: tm+mt
 source-git-commit: 7e58d1d861f832d073fb178868804995ee8d855b
+workflow-type: tm+mt
+source-wordcount: '2737'
+ht-degree: 74%
 
 ---
 
@@ -26,9 +29,9 @@ We.Gov は、養子縁組をした場合に養親がチャイルドサポート�
 
 * 申込者（養親）の適格性
 * 申込者の個人情報と職業の詳細（申込者がチャイルドサポートに適格の場合）
-* 養子の個人的詳細
+* 養子の個人的な内容
 
-   申込者は、複数の子に対して詳細を提供できます
+   申込者は、複数の子の詳細を入力できます
 * チャイルドサポート手当を受け取るための申込者の銀行口座の詳細
 * 申込手数料の払い戻し
 * 申込の査定
@@ -54,9 +57,9 @@ We.Gov 機関は申込を受信します。機関側で申込の査定が行わ�
 
 ## Sarah が適格性の確認を開始 {#sarah-initiates-her-eligibility-check}
 
-申込者はチャイルドサポート手当を受ける適格性があるか確認できます。ユーザーは We.Gov サイトで設定された質問に答えることで、自分の申込に手当が適用されるか判断します。養親である Sarah は、見込申込者です。適格性フォームは、We.Govサイトのチャイルドサポート申込サービスの一部です。 To check her eligibility, Sarah clicks **[!UICONTROL Child Support]** on the We.Gov website. In the Child Support page, Sarah clicks **[!UICONTROL Check Your Eligibility]**.
+申込者はチャイルドサポート手当を受ける適格性があるか確認できます。ユーザーは We.Gov サイトで設定された質問に答えることで、自分の申込に手当が適用されるか判断します。養親である Sarah は、見込申込者です。適格性のフォームは、We.GovサイトのApplication for Child Supportサービスの一部です。 To check her eligibility, Sarah clicks **[!UICONTROL Child Support]** on the We.Gov website. In the Child Support page, Sarah clicks **[!UICONTROL Check Your Eligibility]**.
 
-上記の方法に加えて、Sarah はホームページで「**[!UICONTROL Get Started]**」（始める）をクリックすることができます。Sarah は「All Applications」（すべての申込）ページに移動し、「**[!UICONTROL Application for Child Support Services]**」（チャイルドサポートサービス申込）内の「Apply」（申し込む）をクリックできます。次に、Sarahは適格性の確認に進みます。
+上記の方法に加えて、Sarah はホームページで「**[!UICONTROL Get Started]**」（始める）をクリックすることができます。Sarah は「All Applications」（すべての申込）ページに移動し、「**[!UICONTROL Application for Child Support Services]**」（チャイルドサポートサービス申込）内の「Apply」（申し込む）をクリックできます。次に、Sarahは適格性の確認を受けます。
 
 「Check Eligibility For Child Support」（チャイルドサポートの適格性を確認）ページで、Sarah はチャイルドサポート手当の適格性の判断材料となる一連の質問への回答を求められます。一連の質問では、以下が尋ねられます。
 
@@ -99,7 +102,7 @@ In your browser, open `https://<hostname>:<PublishPort>/content/we-gov/en.html`.
 
 * **[!UICONTROL About Applicant]**（申込者について）：Sarah はこのセクションで、自分についての詳細を入力します。
 
-* **[!UICONTROL 子情報]**:サポートサービスの対象となる子の情報をSarahが提供できます。
+* **[!UICONTROL 子情報]**: 子の情報をSarahが入力できるようにします。子の情報はサポートサービスの対象となります。
 
 * **[!UICONTROL Payment]**（支払）：Sarah は、毎月の手当が We.Gov から振り込まれる自分の銀行口座の詳細を入力します。
 
@@ -131,7 +134,7 @@ Sarah は「Applicant Information」（申込情報）の以下のタブで、�
 
 * **[!UICONTROL 基本情報]**
 
-（基本情報） ここには身分証明情報と個人情報を入力します。Sarahの個人情報には、Sarahの名前、電子メールID、および社会保障番号が含まれます。
+（基本情報） ここには身分証明情報と個人情報を入力します。個人情報には、Sarahの名前、電子メールID、および社会保障番号が含まれます。
 
 * **[!UICONTROL 関係]**
 
@@ -145,7 +148,7 @@ Sarah は「Applicant Information」（申込情報）の以下のタブで、�
 
 自分の個人情報を入力した後、「**[!UICONTROL Next]**」（次へ）をクリックし、Sarah は「Child Information」（子供の情報）セクションに移動します。
 
-「子情報」セクションで、次の詳細を入力します。
+Child Informationセクションで、次の詳細を入力します。
 
 * チャイルドサポートサービスを要求する子の人数
 * 子の名前、社会保証番号、生年月日、出生地
@@ -176,7 +179,7 @@ Sarah の申込は We.Gov のサイトに送信されます。
 申込手数料を支払った後、Sarah は We.Gov サイトから送信確認の電子メールを受け取ります。\
  We.Gov は申込を処理し、申込が承認されると、毎月の手当を受け取れることが Sarah に通知されます。
 
-![サラ・アック・メール](assets/sarah-ack-email.png)
+![sarah-ack-email](assets/sarah-ack-email.png)
 
 ### 仕組み {#how-it-works-1}
 
@@ -194,11 +197,11 @@ Sarah の申込は We.Gov のサイトに送信されます。
 
 ### 実際の動作確認 {#see-it-yourself-1}
 
-In your browser, open `https://<hostname>:<PublishPort>/content/forms/af/we-gov/child-support/css.html` and fill the required information. 必要な情報を入力し、料金を支払い、文書に署名した後で申込書を送信すると、確認の電子メールが届きます。
+In your browser, open `https://<hostname>:<PublishPort>/content/forms/af/we-gov/child-support/css.html` and fill the required information. 必要な情報を入力し、料金を支払い、ドキュメントに署名した後、申込書を送信すると、送信確認の電子メールが届きます。
 
-We.Govの子テンプレートについては、こちらを参照してください。 `https://<hostname>:<AuthorPort>/editor.html/conf/we-gov/settings/wcm/templates/we-gov-child-template/structure.html`
+We.Gov子テンプレートはこちらを参照してください。 `https://<hostname>:<AuthorPort>/editor.html/conf/we-gov/settings/wcm/templates/we-gov-child-template/structure.html`
 
-テーマは次の場所で確認できます。 `https://<hostname>:<AuthorPort>/editor.html/content/dam/formsanddocuments-themes/we-gov/we-gov-theme-A/jcr:content`
+テーマはこちらを参照してください。 `https://<hostname>:<AuthorPort>/editor.html/content/dam/formsanddocuments-themes/we-gov/we-gov-theme-A/jcr:content`
 
 すべてのルールを確認するには、以下の手順を実行します。
 
@@ -218,7 +221,7 @@ Sarah がチャイルドサポート申込を入力して送信すると、申�
 
 ### 実際の動作確認 {#see-it-yourself-2}
 
-ページを開く `https://<hostname***>:<PublishPort>/content/we-gov/en.html`. ページで「 **[!UICONTROL Sign In]**」をタップし、「 **[!UICONTROL Login as representate]** 」チェックボックスを選択して、Gloria Riosのユーザー名/パスワードとしてgrios/passwordを使用してAEMインボックスにログインします。 チャイルドサポートアプリケーションが表示されます。 For information about using AEM Inbox for forms-centric workflow tasks, see [Manage Forms applications and tasks in AEM Inbox](/help/forms/using/manage-applications-inbox.md).
+ページを開く `https://<hostname***>:<PublishPort>/content/we-gov/en.html`. ページで「 **[!UICONTROL サインイン]**」をタップし、「代表者として **[!UICONTROL ログイン]** 」チェックボックスを選択して、Gloria Riosのユーザー名/パスワードとしてgrios/passwordを使用してAEMインボックスにログインします。 チャイルドサポート申込書が表示されます。 For information about using AEM Inbox for forms-centric workflow tasks, see [Manage Forms applications and tasks in AEM Inbox](/help/forms/using/manage-applications-inbox.md).
 
 ![We.Gov リファレンスサイトの Gloria のインボックス](assets/gloria-inbox.png)
 
@@ -239,7 +242,7 @@ Sarah の申込が AEM ワークフローの開始点です。チャイルドサ
 
 設定が問題なく完了している場合、フォームを送信した直後に AEM ワークフローが開始します。Gloria の資格情報を使用してインボックスにログインします。
 
-インボックス(https://&lt;***hostname***>:&lt;***PublishPort***>/content/we-gov/en.html)にアクセスします。 ページで、「サインイン」をタ **[!UICONTROL ップし、「Login as representative]**」チェックボ **** ックスを選択してGloriaのデフォルトの資格情報を使用します。
+インボックス(https://&lt;***hostname***>:&lt;***PublishPort***>/content/we-gov/en.html)にアクセスします。 ページで、「 **[!UICONTROL サインイン]**」をタップし、「代表者として **[!UICONTROL ログイン]** 」チェックボックスを選択して、Gloriaのデフォルトの資格情報を使用します。
 
 * ユーザー名：grios
 * パスワード：password
@@ -285,9 +288,9 @@ Conard が査定を送信した後、Gloria は自分のインボックスでレ
 
 ![gloriainbox-1](assets/gloriainbox-1.png)
 
-「Task Details」で、Gloriaは「Submit for Re-evaluation」(Conard)として取得された最後のアクションを確認します。 Conard Simms が申込の査定を行ったことを確認します。
+「タスクの詳細」の下で、Gloriaは「Submit for Re-evaluation」（Conard著）と呼ばれる最後のアクションを確認します。 Conard Simms が申込の査定を行ったことを確認します。
 
-![賛美歌](assets/gloriaapproves.png)
+![栄光の承認](assets/gloriaapproves.png)
 
 ### 仕組み {#how-it-works-5}
 
@@ -299,7 +302,7 @@ Gloria は申込を承認します。
 
 インボックスを開き、Gloria の資格情報を使用してログインします。レビューと呼ばれる新しいタスクがインボックスに表示されます。
 
-タスクを開いて、「最後に実行した操作」のステータスを確認します。査定に基づいて申込を承認します。
+タスクを開いて、「最後に実行した操作」のステータスを確認します。査定に基づいて、申込を承認します。
 
 ## Sarah が承認の電子メールを受信 {#sarah-receives-an-approval-email}
 
@@ -307,7 +310,7 @@ Gloria が申込を承認した後、Sarah は We.Gov サイトから申込の�
 
 The **[!UICONTROL View Document]** button in the email links to her enrollment details. Sarah clicks **[!UICONTROL View Document.]**
 
-![承認登録キット — 電子メール](assets/approval-enrolment-kit-email.png)
+![approval-enrolment-kit-email](assets/approval-enrolment-kit-email.png)
 
 登録ドキュメントには、参照 ID、サポート対象の子、開始日、銀行口座番号、支払間隔、支払金額などの詳細がリストされています。
 
@@ -321,7 +324,7 @@ The **[!UICONTROL View Document]** button in the email links to her enrollment d
 
 Gloria が申込を承認すると、Sarah は登録ドキュメントへのリンクが記載された自動電子メールを受信します。
 
-登録ドキュメントはインタラクティブな通信であり、任意のデバイスで表示できます。 ドキュメントにはチャイルドサポートサービスの詳細と Sarah が提供した情報が含まれます。
+登録ドキュメントは対話型の通信であり、任意のデバイスで表示できます。 ドキュメントにはチャイルドサポートサービスの詳細と Sarah が提供した情報が含まれます。
 
 ### 実際の動作確認 {#see-it-yourself-6}
 
@@ -329,26 +332,26 @@ Gloria が申込を承認すると、Sarah は登録ドキュメントへのリ�
 
 または、ブラウザーでドキュメントを表示するには、次を開きます。 `https://<hostname>:<PublishPort>/content/aemforms-refsite/doclink.html?document=/content/forms/af/we-gov/child-support/enrollment-document&referenceId=[reference-id]&channel=web`
 
-## We.Govはアプリケーションのパフォーマンスを分析 {#we-gov-analyzes-the-performance-of-the-application}
+## We.Govは、アプリケーションのパフォーマンスを分析 {#we-gov-analyzes-the-performance-of-the-application}
 
-We.Govは、チャイルドサポートサービスアプリケーションのパフォーマンスを時折レビューし、お客様が直面する可能性のある問題を確認します。 この分析を使用して、チャイルドサポートサービスの適用に必要な変更に関する十分な情報に基づく判断を行い、ユーザーエクスペリエンスを向上し、フォームの中断率を低減し、コンバージョンを向上させます。 同社は、分析のために AEM Forms を Adobe Analytics と統合しています。以下の画像では、同社の Analytics ダッシュボードを紹介しています。
+We.Govは、チャイルドサポートサービス申込のパフォーマンスを時折見直し、お客様が直面する可能性のある問題を確認します。 ユーザーはこの分析を使用して、チャイルドサポートサービスの申し込みに必要な変更に関する十分な情報に基づく判断を行い、ユーザーエクスペリエンスを向上し、フォームの中断率を低減し、コンバージョンを向上します。 同社は、分析のために AEM Forms を Adobe Analytics と統合しています。以下の画像では、同社の Analytics ダッシュボードを紹介しています。
 
-![child-support-analytics-dashboard](assets/child-support-analytics-dashboard.png)
+![child-support-analytics-ダッシュボード](assets/child-support-analytics-dashboard.png)
 
 ### 仕組み {#how-it-works-7}
 
-チャイルドサポートサービスの申し込みフォームのパフォーマンス指標は、Adobe Analyticsを使用して追跡されます。 Adobe Analytics の設定とレポートの表示について詳しくは、「[フォームおよびドキュメント用の Analytics の設定](/help/forms/using/configure-analytics-forms-documents.md)」を参照してください。
+チャイルドサポートサービス申込フォームのパフォーマンス指標は、Adobe Analyticsを使用して追跡されます。 Adobe Analytics の設定とレポートの表示について詳しくは、「[フォームおよびドキュメント用の Analytics の設定](/help/forms/using/configure-analytics-forms-documents.md)」を参照してください。
 
 ### 実際の動作確認 {#see-it-yourself-7}
 
-Analyticsレポートを表示および調査するために、リファレンスサイトでチャイルドサポートサービスアプリケーションのシードデータを提供しています。 シードデータを使用する前に、「[Analytics の設定](/help/forms/using/setup-reference-sites.md#configureanalytics)」を参照してください。シードデータを使用したレポートを閲覧するには、作成者インスタンスで以下の手順を実行します。
+Analyticsレポートの表示および調査を行うために、リファレンスサイトでチャイルドサポートサービスアプリケーションのシードデータを提供しています。 シードデータを使用する前に、「[Analytics の設定](/help/forms/using/setup-reference-sites.md#configureanalytics)」を参照してください。シードデータを使用したレポートを閲覧するには、作成者インスタンスで以下の手順を実行します。
 
 1. Go to **[!UICONTROL Forms &amp; Documents]** UI at https://&lt;*hostname*>:&lt;*AuthorPort*>/aem/forms.html/content/dam/formsanddocuments.
 
 1. Click to open the **We.Gov** Folder.
-1. 「Application for Child Support Services **[!UICONTROL 」アダプティブフォームを選択し、ツールバー]** の「Analyticsを有効にする **** 」をクリックします。
+1. 「 **[!UICONTROL Application for Child Support Services]** 」アダプティブフォームを選択し、ツールバーの「Analytics **[!UICONTROL を]** 有効にする」をクリックします。
 
-1. フォームを再度選択し、ツールバーの **[!UICONTROL 「Analyticsレポート]** 」をクリックして、レポートを生成します。 最初は空白のレポートが表示されます。
+1. フォームを再度選択し、ツールバーの **[!UICONTROL Analyticsレポート]** をクリックして、レポートを生成します。 最初は、空白のレポートが表示されます。
 
 シードデータを使用してAnalyticsレポートを生成するには：
 
@@ -358,5 +361,5 @@ Analyticsレポートを表示および調査するために、リファレン�
 1. テストデータファイル内のすべてのコンテンツをコピーします。
 1. In CRXDE, navigate to: **/content/dam/formsanddocuments/we-gov/child-support/css/jcr:content/analyticsdatanode/lastsevendays**
 1. 「Properties」（プロパティ）内の analyticsdata フィールドに、テストデータファイルのコピーした内容を貼り付けます。
-1. チャイルドサポートサービスの申し込みに関す **[!UICONTROL る分析レポートを再生成します]**。 生成されたレポートにシードデータが表示されます。
+1. チャイルドサポートサービスの **[!UICONTROL 申し込みの分析レポートを再生成]**。 生成されたレポートにシードデータが表示されます。
 
