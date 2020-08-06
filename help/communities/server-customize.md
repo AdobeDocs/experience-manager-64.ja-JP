@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: df5416ec-5c63-481b-99ed-9e5a91df2432
 translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+workflow-type: tm+mt
+source-wordcount: '898'
+ht-degree: 70%
 
 ---
 
@@ -29,7 +32,7 @@ source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
 
 ### SocialComponent インターフェイス {#socialcomponent-interface}
 
-SocialComponent は、AEM Communities 機能のリソースを表す POJO です。各SocialComponentは、クライアントにデータを提供するGETterを公開した特定のresourceTypeを表すので、リソースを正確に表すことが理想的です。 必要に応じて、すべてのビジネスロジックとビューロジックがSocialコンポーネントにカプセル化されます。この中には、サイト訪問者のセッション情報も含まれます。
+SocialComponent は、AEM Communities 機能のリソースを表す POJO です。各SocialComponentは、特定のresourceTypeを表し、GETterが公開されてリソースが正確に表示されるようにするのが理想的です。 必要に応じて、すべてのビジネスロジックと表示ロジックがSocialComponentにカプセル化されます。この中には、サイト訪問者のセッション情報も含まれます。
 
 このインターフェイスは、リソースを表すために必要な GETter の基本セットを定義します。重要なことは、インターフェイスは、Handlebars テンプレートをレンダリングしリソースの GET JSON エンドポイントを公開するために必要な、Map&lt;String, Object> getAsMap() および String toJSONString() メソッドを規定するということです。
 
@@ -39,11 +42,11 @@ All SocialComponent classes must implement the interface `com.adobe.cq.social.sc
 
 SocialCollectionComponent インターフェイスは、他のリソースのコレクションであるリソースをより適切に表すように SocialComponent インターフェイスを拡張します。
 
-すべてのSocialCollectionComponentクラスで、com.adobe.cq.soscial.scf.SocialCollectionComponentインターフェイスを実装する必要があります
+すべてのSocialCollectionComponentクラスで、インターフェイスcom.adobe.cq.soscf.SocialCollectionComponentを実装する必要があります
 
 ### SocialComponentFactory インターフェイス {#socialcomponentfactory-interface}
 
-SocialComponentFactory（ファクトリ）は、SocialComponent をフレームワークに登録します。ファクトリは、特定のresourceTypeに対して使用できるSocialComponentsが何か、およびその優先順位ranking&amp;ast；をフレームワークに知らせる手段を提供します。複数のSocialComponentsが識別される場合。
+SocialComponentFactory（ファクトリ）は、SocialComponent をフレームワークに登録します。ファクトリは、特定のresourceTypeで使用できるSocialComponentsが何であり、その優先度ranking&amp;ast；をフレームワークに知らせる手段を提供します。 複数のSocialComponentsが識別された場合。
 
 SocialComponentFactory は、選択された SocialComponent のインスタンスを作成し、SocialComponent に必要なすべての依存関係をファクトリから DI パッケージを使用して挿入できるようにします。
 
@@ -51,7 +54,7 @@ SocialComponentFactory は OSGi サービスであり、コンストラクター
 
 すべての SocialComponentFactory クラスは、インターフェイス `com.adobe.cq.social.scf.SocialComponentFactory` を実装する必要があります。
 
-SocialComponentFactory.getPriority()メソッドの実装は、getResourceType()が返すように、特定のresourceTypeにファクトリを使用するために最も高い値を返す必要があります。
+SocialComponentFactory.getPriority()メソッドの実装は、getResourceType()が返す、特定のresourceTypeに対してファクトリを使用するために、最も高い値を返す必要があります。
 
 ### SocialComponentFactoryManager インターフェイス {#socialcomponentfactorymanager-interface}
 
@@ -104,9 +107,9 @@ The social component framework recommends that the business logic responsible fo
 すべての `OperationService` クラスは `AbstractOperationService` を拡張し、実行される操作に関連付けることができる追加拡張を可能にします。サービス内の各操作は `SocialOperation` クラスによって表されます。`OperationExtensions` クラスは、操作の実行中に以下のメソッドを呼び出すことによって呼び出すことができます。
 
 * `performBeforeActions()`
-事前確認/前処理と検証を可能にする
+事前確認/前処理と検証を許可
 * `performAfterActions()`
-リソースをさらに変更したり、カスタムイベントやワークフローを呼び出したりできます。
+リソースのさらなる変更や、カスタムイベント、ワークフローなどの呼び出しを可能にします。
 
 #### OperationExtension クラス {#operationextension-class}
 
