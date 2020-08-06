@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 translation-type: tm+mt
 source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 19%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
 * Adding [groups](groups.md) nested within the site
 * Managing [community site templates](sites.md)
 * Managing [community members](members.md)
-* [ユーザー生](moderate-ugc.md) 成コンテンツのモデレート(UGC)
+* [モデレート](moderate-ugc.md) （ユーザー生成コンテンツ）
 * Create [custom badges](badges.md)
 * Configuring the [default storage for UGC](srp-config.md)
 
@@ -60,15 +63,15 @@ To access the various Communities consoles, from global navigation select **navi
 
 * [メンバー、グループ](members.md)
 
-   [メンバ]コンソールと[グループ]コンソールは、作成者環境から、パブリッシュ環境に存在するコミュニティメンバとメンバグループを管理するためのものです。
+   メンバーコンソールとグループコンソールは、作成者環境から発行環境に存在するコミュニティメンバーとメンバーグループを管理するためのものです。
 
 * [レポート](reports.md)
 
-   The Reports console is where reports on assignments, page views, and posted content (UGC) may be generated when a community site has [enabled Adobe Analytics](sites-console.md#analytics). コンソールは作成者環境でのみ使用できます。
+   The Reports console is where reports on assignments, page views, and posted content (UGC) may be generated when a community site has [enabled Adobe Analytics](sites-console.md#analytics). コンソールは、作成者環境でのみ使用できます。
 
 * [リソース](resources.md)
 
-   The Resources console is where [enablement managers](enablement.md#communitymanagers) create, manage and assign resources to members of an [enablement community site](overview.md#enablement-community). コンソールは作成者環境でのみ使用できます。
+   The Resources console is where [enablement managers](enablement.md#communitymanagers) create, manage and assign resources to members of an [enablement community site](overview.md#enablement-community). コンソールは、作成者環境でのみ使用できます。
 
 ## ツールコンソール {#tools-console}
 
