@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: cdcae09f-c3cb-471e-863f-b33130e9df0f
 translation-type: tm+mt
 source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+workflow-type: tm+mt
+source-wordcount: '676'
+ht-degree: 82%
 
 ---
 
@@ -36,7 +39,7 @@ To add a `File Library` component to a page in author mode, locate the component
 
 For necessary information, visit [Communities Components Basics](basics.md).
 
-When the [required client-side libraries](essentials-file-library.md#essentials-for-client-side) are included, this is how the `File Library` component will appear:
+[必要なクライアント側ライブラリが含まれる場合](essentials-file-library.md#essentials-for-client-side) 、次のようにコンポー `File Library` ネントが表示されます。
 
 ![chlimage_1-430](assets/chlimage_1-430.png)
 
@@ -52,13 +55,14 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 * **[!UICONTROL ファイルへのコメントを許可]**&#x200B;オンにすると、アップロードしたファイルに対するコメントを許可します。初期設定はオフです。
 
-* **[!UICONTROL 1 ページのコメント数]** 1 ページに表示されるコメント数と返信数を制限します。デフォルトは **10** です。
+* **[!UICONTROL 1 ページのコメント数]** 1 ページに表示されるコメント数と返信数を制限します。初期設定は です。 
+**10**.
 
 * **[!UICONTROL 最大ファイルサイズ]**&#x200B;この値によって、アップロードするファイルサイズが制限されます。デフォルトの制限は104857600(10 Mb)です。
 
 * **[!UICONTROL メッセージの最大長]**&#x200B;テキストボックスに入力できる最大文字数です。初期設定は 4096 文字です。
 
-* **[!UICONTROL 許可されるファイルタイプ]**&#x200B;ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルタイプを指定した場合、指定しなかったファイルは許可されません。 初期設定はnoneで、すべてのファイルタイプが許可されます。
+* **[!UICONTROL 許可されるファイルタイプ]**&#x200B;ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類を指定すると、指定されていないファイルは許可されません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
 * **[!UICONTROL リッチテキストエディター]**&#x200B;オンにすると、マークアップを使用してコメントを入力できます。初期設定はオフです。
 
@@ -94,9 +98,11 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 * **[!UICONTROL カスタムフラグ設定理由]**&#x200B;オンにすると、訪問者はコメントに「不適切」のフラグを設定した独自の理由を入力できます。初期設定はオフです。
 
-* **[!UICONTROL モデレートのしきい値]**&#x200B;訪問者がコメントに何回フラグを設定したらモデレーターに通知するかを指定します。Default is one time (**1**).
+* **[!UICONTROL モデレートのしきい値]**&#x200B;訪問者がコメントに何回フラグを設定したらモデレーターに通知するかを指定します。初期設定は1回(
+**1**).
 
-* **[!UICONTROL フラグ付けの制限]**&#x200B;コメントに何回フラグが設定されたら、公開表示から非公開にするかを指定します。This number must be greater than or equal to the **Moderation Threshold**. 初期設定は 5 です。
+* **[!UICONTROL フラグ付けの制限]**&#x200B;コメントに何回フラグが設定されたら、公開表示から非公開にするかを指定します。この数値は、 
+**モデレートのしきい値**. 初期設定は 5 です。
 
 ## 追加情報 {#additional-information}
 
