@@ -10,6 +10,9 @@ topic-tags: Configuration
 discoiquuid: 2c8cea3c-8d8b-41d4-8ef9-a0ada8f86be6
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '306'
+ht-degree: 79%
 
 ---
 
@@ -34,17 +37,17 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 
 「**リポジトリからアセットを同期**」オプションを使用すると、アセットを手動で同期できます。次の手順を実行して、アセットを手動で同期します。
 
-1. AEM Forms にログインします。The default URL is `https://[Server]:[Port]/lc/aem/forms/`.
+1. AEM Forms にログインします。デフォルトの URL は `https://[Server]:[Port]/lc/aem/forms/` です。
 
    ![AEM Forms ユーザーインターフェイス](assets/aem_forms_ui.png)
 
-   **** 図： *AEM formsユーザーインターフェイス*
+   **図：** *AEM Formsユーザーインターフェイス*
 
-1. ツールバ ![ーのaem6forms_sync](assets/aem6forms_sync.png) アイコンをクリックします。 最後に設定したパスにアセットが存在しない場合は、下の図に示すダイアログボックスが表示されます。「**開始**」をクリックして同期を開始します。
+1. ツールバーの ![aem6forms_sync](assets/aem6forms_sync.png) アイコンをクリックします。 最後に設定したパスにアセットが存在しない場合は、下の図に示すダイアログボックスが表示されます。「**開始**」をクリックして同期を開始します。
 
    ![同期ダイアログボックス](assets/migrate-and-syncronize.png)
 
-   **** 図：同期ダイ *アログボックス*
+   **図：** *同期ダイアログボックス*
 
 ## 同期エラーのトラブルシューティング {#troubleshooting-synchronization-error}
 
@@ -56,5 +59,5 @@ If the newly created application and a folder at /content/dam/formsanddocuments 
 
 ![アセット同期の競合ダイアログボックス](assets/sync-conflict.png)
 
-**** 図：アセット *同期の競合ダイアログボックス*
+**図：** *アセット同期の競合ダイアログボックス*
 
