@@ -10,6 +10,9 @@ topic-tags: Configuration
 discoiquuid: dd18f7b5-882d-4e81-ab3d-85f1e5d74992
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '311'
+ht-degree: 77%
 
 ---
 
@@ -28,7 +31,7 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
 
 ## キャッシュの設定 {#configure-the-cache}
 
-次の手順を実行して、アダプティブフォームのキャッシュを設定します。
+次の手順を実行してアダプティブフォームのキャッシュを設定します。
 
 1. Go to AEM web console configuration manager at `https://[server]:[port]/system/console/configMgr`.
 1. 「**アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定**」をクリックして、設定値を編集します。
@@ -36,7 +39,7 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
 
    >[!NOTE]
    >
-   >キャッシュを無効にするには、「アダプティブフォームの数」フィールドの値を **0** に設定します。キャッシュの設定を無効にするか変更すると、キャッシュがリセットされ、すべてのフォームとドキュメントがキャッシュから削除されます。
+   >キャッシュを無効にするには、「アダプティブフォームの数」フィールドの値を **0** に設定します。キャッシュの設定を無効または変更すると、キャッシュがリセットされ、フォームとドキュメントがすべてキャッシュから削除されます。
 
    ![アダプティブフォームの HTML キャッシュの設定ダイアログ](assets/cache-configuration-edit.png)
 
