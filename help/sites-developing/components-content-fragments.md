@@ -12,6 +12,9 @@ discoiquuid: 76b63c7c-f7ea-46be-8d10-6c1a30af2e2b
 pagetitle: Components for Content Fragments
 translation-type: tm+mt
 source-git-commit: ce717994831eb3ef90baaffa7413de50f671b07c
+workflow-type: tm+mt
+source-wordcount: '946'
+ht-degree: 82%
 
 ---
 
@@ -20,13 +23,13 @@ source-git-commit: ce717994831eb3ef90baaffa7413de50f671b07c
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、 [AEM 6.4 Service Pack 2(6.4.2.0)が必要です](/help/release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2( [6.4.2.0)の適用が必要](/help/release-notes/sp-release-notes.md)です。
 
 ## フラグメントオーサリング用コンポーネント {#components-for-fragment-authoring}
 
 >[!CAUTION]
 >
->フラグメントエディターで使用される実際のコンポーネントは変更の対象となるので、拡張または変更しないことをお勧めします。
+>フラグメントエディターで使用する実際のコンポーネントは、変更される可能性があるので、拡張または変更しないことをお勧めします。
 
 See the [Content Fragment Management API - Client-Side](/help/sites-developing/customizing-content-fragments.md#the-content-fragment-management-api-client-side).
 
@@ -38,7 +41,7 @@ See the [Content Fragment Management API - Client-Side](/help/sites-developing/c
 >
 >この節では、コンテンツフラグメント用に提供されるオリジナル コンテンツについて説明します（**一般**&#x200B;グループの&#x200B;**コンテンツフラグメント**）。
 
-Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments.md)として作成および管理されます。コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。[その後、コンテンツページを作成する際に、これらのフラグメントとそのバリエーションを使用できます](/help/sites-authoring/content-fragments.md)。また、既存のコンテンツフラグメントアセットをアセットブラウザーからページにドラッ [グして](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) （基礎コンポーネントの画像など、他のアセットベースのコンポーネントの場合など）、使用することもできます。 既製のコンテンツフラグメントコンポーネントには、参照されているコンテンツフラグメントの[要素](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment)が 1 つだけ表示されます。Using the component dialog you can define the [element, variation and range of fragment paragraphs](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) that you want to display on the page.
+Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments.md)として作成および管理されます。コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。[その後、コンテンツページを作成する際に、これらのフラグメントとそのバリエーションを使用できます](/help/sites-authoring/content-fragments.md)。 また、既存のコンテンツフラグメントアセットを使用するには、アセットブラウザーからページに [ドラッグします](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) （基礎コンポーネントの画像など、他のアセットベースのコンポーネントに対しても使用できます）。 既製のコンテンツフラグメントコンポーネントには、参照されているコンテンツフラグメントの[要素](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment)が 1 つだけ表示されます。Using the component dialog you can define the [element, variation and range of fragment paragraphs](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) that you want to display on the page.
 
 >[!NOTE]
 >
@@ -114,7 +117,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
 既成の設定は、次の変換サービスを使用します。
 
-* `transformer-cfm-payloadfilter`  — フラグメントのHTML `body` の一部( `<body>...</body>`)のみを取得する場合。
+* `transformer-cfm-payloadfilter`  — フラグメントのHTMLの `body` 一部( `<body>...</body>`)のみを取得する場合
 
 * `transformer-cfm-parfilter` - 段落範囲が指定されている場合に、不要な段落を除外します（コンテンツフラグメントコンポーネントで実行可能）
 * `transformer-cfm-assetprocessor` - フラグメントに埋め込まれたアセットのリストを取得するために内部で使用されます
