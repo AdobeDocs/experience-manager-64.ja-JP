@@ -22,7 +22,7 @@ ht-degree: 47%
 
 ## ASRP について {#about-asrp}
 
-ASRPを共通ストアとして使用するようにAEM Communitiesを設定した場合、ユーザー生成コンテンツ(UGC)は、すべてのオーサーインスタンスとパブリッシュインスタンスからアクセスでき、同期や複製は不要です。
+AEM Communitiesが共通ストアとしてASRPを使用するように設定されている場合、ユーザー生成コンテンツ(UGC)は、すべてのオーサーインスタンスとパブリッシュインスタンスからアクセスでき、同期や複製は不要です。
 
 [SRP オプションの特性](working-with-srp.md#characteristics-of-srp-options)と[推奨されるトポロジ](topologies.md)も参照してください。
 
@@ -30,7 +30,7 @@ ASRPを共通ストアとして使用するようにAEM Communitiesを設定し�
 
 ASRP の使用には追加ライセンスが必要です。
 
-UGC用のASRPを使用するようにAEM Communitiesサイトを設定するには、次の点についてアカウント担当者にお問い合わせください。
+UGCにASRPを使用するようにAEM Communitiesサイトを設定するには、次の点についてアカウント担当者にお問い合わせください。
 
 * データセンター URL（ASRP エンドポイントのアドレス）
 * 消費者キー
