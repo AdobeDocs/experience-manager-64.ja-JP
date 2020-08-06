@@ -10,6 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6bd58e37-085e-4057-8200-1404d54f41cc
 translation-type: tm+mt
 source-git-commit: 73d0dea62c294bea435364fb9c6892d80751d90d
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 58%
 
 ---
 
@@ -29,7 +32,7 @@ AEM Forms では、各ユーザーの役割や職務に応じて、ルールエ�
 
    ![1](assets/1.png)
 
-1. In Web Console Window, locate and click **Adaptive Form Configuration Service**. **Adaptive Form Configuration Serviceダイアログが表示されます** 。 値を変更せずに、「**保存**」をクリックします。
+1. In Web Console Window, locate and click **Adaptive Form Configuration Service**. **Adaptive Form Configuration Service** ダイアログが表示されます。 値を変更せずに、「**保存**」をクリックします。
 
    これにより、CRX リポジトリに /apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config ファイルが作成されます。
 
@@ -38,7 +41,7 @@ AEM Forms では、各ユーザーの役割や職務に応じて、ルールエ�
 
    `af.ruleeditor.custom.groups=["RuleEditorsUserGroup"]`
 
-   複数のグループに対するアクセスを有効にするには、コンマ区切り値のリストを指定します。
+   複数のグループに対するアクセスを有効にするには、カンマ区切り値のリストを指定します。
 
    `af.ruleeditor.custom.groups=["RuleEditorsUserGroup", "PermittedUserGroup"]`
 
@@ -50,7 +53,7 @@ AEM Forms では、各ユーザーの役割や職務に応じて、ルールエ�
 
    ルールエディターのアクセス権を持つユーザーに表示されるコンポーネントツールバー
 
-   ![componentstorelbarwithouter](assets/componentstoolbarwithoutre.png)
+   ![componentstoolbarwithouter](assets/componentstoolbarwithoutre.png)
 
    ルールエディターのアクセス権を持たないユーザーに表示されるコンポーネントツールバー
 
