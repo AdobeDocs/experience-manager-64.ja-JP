@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 73e57f20-4022-46ab-aa5c-ec866298b645
 translation-type: tm+mt
 source-git-commit: 4e6442ec089b7d07cc68debb5a630fb474716f4d
+workflow-type: tm+mt
+source-wordcount: '798'
+ht-degree: 72%
 
 ---
 
@@ -33,6 +36,7 @@ source-git-commit: 4e6442ec089b7d07cc68debb5a630fb474716f4d
 >
 >* デジタルアセットコンソール
 >* コミュニティコンソール
+
 >
 
 
@@ -48,7 +52,7 @@ source-git-commit: 4e6442ec089b7d07cc68debb5a630fb474716f4d
 
 * `request`：関連付けられた Sling HTTP リクエストオブジェクト
 * `info`：更新する JSON オブジェクト。グローバルリストまたは現在のリスト項目に 1 つずつ
-* `resource`、Slingリソースです。
+* `resource`、Slingリソース。
 
 次の実装例では、
 
@@ -109,6 +113,7 @@ public class StarredListInfoProvider implements ListInfoProvider {
 >* 指定されたリクエストやリソースに基づいて、情報を JSON オブジェクトに追加すべきかどうかを実装が判断する必要があります。
 >* `ListInfoProvider` の実装が、応答オブジェクト内に既に存在するプロパティを定義している場合、そのプロパティの値は、指定した値で上書きされます。\
    >  [サービスランキング](https://www.osgi.org/javadoc/r2/org/osgi/framework/Constants.html#SERVICE_RANKING)を使用して、複数の `ListInfoProvider` 実装の実行順序を管理できます。
+
 >
 
 
@@ -117,13 +122,13 @@ public class StarredListInfoProvider implements ListInfoProvider {
 
 Web サイト管理コンソールを開いてサイトを閲覧すると、ブラウザーがコンソールの構築に使用されている JSON オブジェクトを取得するための ajax 呼び出しを発行します。For example, when you browse to the `/content/geometrixx` folder, the following request is sent to the AEM server to build the console:
 
-[http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](http://localhost:4502/content/geometrixx.pages.json?start=0&limit=30&predicate=siteadmin)
+[http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
 新しいサービスを含むバンドルのデプロイ後に、そのサービスが実行されていることを確認するには、以下をおこないます。
 
 1. ブラウザーで次のURLを指定します。
 
-   [http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](http://localhost:4502/content/geometrixx.pages.json?start=0&limit=30&predicate=siteadmin)
+   [http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
 1. 応答によって、新しいプロパティが次のように表示されます。
 
@@ -135,9 +140,9 @@ The last step consists in adapting the nodes structure of the Websites Administr
 
 1. In CRXDE Lite, create the nodes structure `/apps/wcm/core/content` with nodes of type `sling:Folder` to reflect the structure `/libs/wcm/core/content`.
 
-1. ノードをコピーし、 `/libs/wcm/core/content/siteadmin` 下に貼り付けま `/apps/wcm/core/content`す。
+1. ノードをコピー `/libs/wcm/core/content/siteadmin` し、下に貼り付け `/apps/wcm/core/content`ます。
 
-1. ノードをにコピーし、 `/apps/wcm/core/content/siteadmin/grid/assets` そのプ `/apps/wcm/core/content/siteadmin/grid/geometrixx` ロパティを変更します。
+1. ノードをにコピー `/apps/wcm/core/content/siteadmin/grid/assets` し、そのプロパティ `/apps/wcm/core/content/siteadmin/grid/geometrixx` を変更します。
 
    * **pageText** を削除
    * Set **pathRegex** to `/content/geometrixx(/.*)?`
@@ -154,13 +159,13 @@ The last step consists in adapting the nodes structure of the Websites Administr
 
 1. Add a `starred` node (of type **nt:unstructured**) below `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns` with the following properties:
 
-   * **dataIndex**:文 `starred` 字列型
-   * **header**:文 `Starred` 字列型
-   * **xtype**:文 `gridcolumn` 字列型
+   * **dataIndex**: `starred` 文字列型
+   * **header**: `Starred` 文字列型
+   * **xtype**: `gridcolumn` 文字列型
 
 1. (optional) Drop the columns you do not want to display at `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`
 
-1. `/siteadmin` は、デフォルトではが指すバニティパスです `/libs/wcm/core/content/siteadmin`。
+1. `/siteadmin` は、デフォルトでは、を指すバニティパスで `/libs/wcm/core/content/siteadmin`す。
 
    To redirect this to your version of siteadmin on `/apps/wcm/core/content/siteadmin` define the property `sling:vanityOrder` to have a value higher than that defined on `/libs/wcm/core/content/siteadmin`. デフォルト値は 300 なので、それより大きい値が適しています。
 
