@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 71f16254-336f-41bf-bf75-f69ba1051d59
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '611'
+ht-degree: 95%
 
 ---
 
@@ -42,6 +45,7 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 
    * [通知の購読](#subscribing-to-notifications)
    * [通知の処理](#processing-your-notifications)
+
    ![chlimage_1-8](assets/chlimage_1-8.jpeg)
 
 ## 通知の購読 {#subscribing-to-notifications}
@@ -66,6 +70,7 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 
    * **インボックス**：通知が AEM インボックスに表示されます。
    * **電子メール**：通知が、ユーザープロファイルで定義された電子メールアドレスに送信されます。
+
    >[!NOTE]
    >
    >電子メールで通知するには、いくつかの設定項目を設定する必要があります。また、電子メールテンプレートをカスタマイズしたり、新しい言語の電子メールテンプレートを追加したりすることもできます。AEM で電子メール通知を設定するには、[電子メール通知の設定](/help/sites-administering/notification.md#configuringemailnotification)を参照してください。
@@ -92,6 +97,7 @@ AEM の様々な領域から通知を受け取ることができます。例え�
       パスで定義されているページに対するアクションのみについて通知するには、「**厳密?**」を「**はい**」に設定します。
 
    * ルールを許可するには、「**ルール**」を「**許可**」に設定します。「**拒否**」に設定されていると、ルールは拒否されますが削除はされません。後で許可することができます。
+
    定義を削除するには、テーブルのセルをクリックして行を選択し、「**削除**」をクリックします。
 
 1. 「**OK**」をクリックして設定を保存します。
