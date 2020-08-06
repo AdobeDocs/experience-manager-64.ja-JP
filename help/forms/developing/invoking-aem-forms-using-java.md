@@ -69,7 +69,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 
 >[!NOTE]
 >
->（自動オプションのみ）AEM Formsサーバーに開始し、EJB用のサーバーIPを指定す `standalone.bat -b <Server IP> -c lc_turnkey.xml` るコマンドを指定します。
+>（自動オプションのみ）EJBのサーバーIPを指定するコマンド `standalone.bat -b <Server IP> -c lc_turnkey.xml` を使用して、AEM Formsサーバーに開始します。
 
 * AEM Forms のデプロイ先 J2EE アプリケーションサーバー。
 
@@ -80,7 +80,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 <table>
  <thead>
   <tr>
-   <th><p>ファイル</p></th>
+   <th><p>File</p></th>
    <th><p>説明</p></th>
    <th><p>場所</p></th>
   </tr>
@@ -231,7 +231,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 <table>
  <thead>
   <tr>
-   <th><p>ファイル</p> </th>
+   <th><p>File</p> </th>
    <th><p>説明</p> </th>
    <th><p>場所</p> </th>
   </tr>
