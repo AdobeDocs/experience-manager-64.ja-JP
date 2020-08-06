@@ -10,6 +10,9 @@ topic-tags: integrations
 discoiquuid: 6301e0ef-3faa-4e6f-932d-37b049577cec
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '1542'
+ht-degree: 79%
 
 ---
 
@@ -26,7 +29,7 @@ AEM Forms は、Adobe Analytics と統合されているため、発行済みの
 
 ## 概要 {#overview}
 
-Adobe Analytics を使用して、アダプティブフォーム、HTML5 フォーム、インタラクティブ通信でユーザーが実行する操作のパターンを検出することができます。また、これらのフォームをユーザーが使用する場合の問題についても、特定することができます。Adobe Analyticsは、初期設定で、次のパラメーターに関する情報を追跡して保存します。
+Adobe Analytics を使用して、アダプティブフォーム、HTML5 フォーム、インタラクティブ通信でユーザーが実行する操作のパターンを検出することができます。また、これらのフォームをユーザーが使用する場合の問題についても、特定することができます。Adobe分析は、初期設定で、次のパラメーターに関する情報を追跡して保存します。
 
 * **平均記入時間**：フォームの記入にかかった平均時間。
 * **レンディション**：フォームが開かれた回数。
@@ -38,7 +41,7 @@ Adobe Analytics をカスタマイズして、追加のパラメーターを追�
 
 * **時間**：パネルおよびパネルのフィールドで費やした時間。
 * **エラー**：パネルおよびパネルのフィールドで発生したエラーの回数。
-* **ヘルプ**:ユーザーがパネルとパネルのフィールドのヘルプを開いた回数。
+* **ヘルプ**: ユーザーがパネルおよびパネルのフィールドのヘルプを開いた回数。
 
 ## レポートスイートの作成 {#creating-report-suite}
 
@@ -62,7 +65,7 @@ Adobe Analytics をカスタマイズして、追加のパラメーターを追�
 
 1. ドロップダウンから「**タイムゾーン**」を選択します。このレポートスイートに含められるすべてのデータは、定義済みのタイムゾーンに基づいて記録されます。
 
-1. **ベース URL** フィールドと&#x200B;**デフォルトページ**&#x200B;フィールドは空にしておきます。これらの2つの値は、Adobe Marketing cloudインターフェイスからのみ使用され、Webサイトにリンクされます。
+1. **ベース URL** フィールドと&#x200B;**デフォルトページ**&#x200B;フィールドは空にしておきます。これらの2つの値は、Adobe Marketing Cloudインターフェイスからのみ使用してWebサイトにリンクします。
 1. **Go Live 日**&#x200B;は today にしておきます。この Go Live 日で、レポートスイートがアクティベートされる日が決定されます。
 
 1. **日別予想ページビュー数**&#x200B;フィールドに、100 を入力します。このフィールドを使用して、Web サイトの予想される日別のページビュー数を見積もります。この概算から Adobe は、収集していくデータを処理するために必要な適切な量のハードウェアを整備することができます。
@@ -74,7 +77,7 @@ Adobe Analytics をカスタマイズして、追加のパラメーターを追�
 1. 新規作成されたレポートスイートを選択します。**設定を編集**／**一般**／**一般的なアカウント設定**&#x200B;の順に移動します。
 
    ![一般的なアカウント設定](assets/geographic_settings.png)
-   **** 図：一般的な *アカウント設定*
+   **図：** *一般的なアカウント設定*
 
 1. In General Account Settings screen, enable **Geography Reporting**, and click **Save**.
 1. **設定を編集**／**トラフィック**／**トラフィック変数**&#x200B;の順に移動します。
@@ -83,22 +86,22 @@ Adobe Analytics をカスタマイズして、追加のパラメーターを追�
 
    * **formName**：アダプティブフォームの識別子。
    * **formInstance**：アダプティブフォームインスタンスの識別子。この変数のパスレポートを有効にします。
-   * **fieldName**:アダプティブフォームフィールドの識別子。 この変数のパスレポートを有効にします。
-   * **panelName**:アダプティブフォームパネルの識別子。 この変数のパスレポートを有効にします。
+   * **fieldName**: アダプティブフォームフィールドの識別子。 この変数のパスレポートを有効にします。
+   * **panelName**: アダプティブフォームパネルの識別子。 この変数のパスレポートを有効にします。
    * **formTitle**：フォームのタイトル。
    * **fieldTitle**：フォームフィールドのタイトル。
    * **panelTitle**：フォームパネルのタイトル。
    * **analyticsVersion**：フォーム分析のバージョン。
 
-1. Navigate to **Edit Settings** > **Conversion** >  **Sucess Events**. 次の成功イベントを定義して有効にします。
+1. Navigate to **Edit Settings** > **Conversion** >  **Sucess Events**. 次の成功イベントを定義し、有効にします。
 
-   | 成功イベント | タイプ |
+   | 成功イベント | 型 |
    |---|---|
    | abandon | カウンター |
    | render | カウンター |
    | panelVisit | カウンター |
    | fieldVisit | カウンター |
-   | save | カウンター |
+   | 保存 | カウンター |
    | エラー | カウンター |
    | help | カウンター |
    | submit | カウンター |
@@ -114,7 +117,7 @@ Adobe Analytics をカスタマイズして、追加のパラメーターを追�
 
 クラウドサービス設定は、Adobe Analytics アカウントに関する情報です。この設定で Adobe Experience Manager（AEM）を有効化し、Adobe Analytics に接続します。使用する各 Analytics アカウントに対してそれぞれ個別の設定を作成します。
 
-1. AEM オーサーインスタンスに管理者としてログインします。
+1.  管理者として、AEM のオーサーインスタンスにログインします。
 1. In the top-left corner, click **Adobe Experience Manager** > **Tools** ![tools](assets/tools.png)> **Deployment** > **Cloud Services**.
 1. 「**Adobe Analytics**」アイコンを見つけます。Click **Show Configurations** and then proceed to click **[+]** to add new configuration.
 
@@ -128,9 +131,9 @@ Adobe Analytics をカスタマイズして、追加のパラメーターを追�
 
    * **ユーザー名**：Adobe Analytics のログインに使用する名前。
 
-   * **パスワード**:上記のアカウントのAdobe Analyticsパスワード。
+   * **パスワード**: 上記のアカウントのAdobe Analyticsパスワード。
 
-   * **データセンター**:Adobe Analyticsアカウントのデータセンター。
+   * **データセンター**: Adobe Analyticsアカウントのデータセンター。
 
 1. 「**Analytics に接続**」をクリックします。正常に接続されたことを通知するメッセージと共にダイアログが表示されます。「**OK**」をクリックします。
 
@@ -143,7 +146,7 @@ Adobe Analytics フレームワークは、Adobe Analytics 変数と AEM 変数�
 1. Click the **[+]** link next to next to your Analytics configuration.
 
    ![Adobe Analytics 設定](assets/adobe-analytics-cloud-services.png)
-   **** 図： *Adobe Analyticsの設定*
+   **図：** *Adobe Analytics形状*
 
 1. フレームワークの&#x200B;**タイトル**&#x200B;と&#x200B;**名前**&#x200B;を入力し、**Adobe Analytics** フレームワークを選択して「**作成**」をクリックします。フレームワークが編集用に開きます。
 
@@ -163,10 +166,10 @@ Adobe Analytics フレームワークは、Adobe Analytics 変数と AEM 変数�
 ## AEM Forms Analytics Configuration サービスの設定 {#configuring-aem-forms-analytics-configuration-service}
 
 1. On author instance, open AEM Web Console Configuration manager at https://&lt;*server*>:&lt;*port*>/system/console/configMgr.
-1. AEM Forms Analytics Configurationを検索して開きます
+1. AEM Forms分析設定を検索して開きます
 
    ![AEM Forms Analytics Configuration サービス](assets/analytics_configuration.png)
-   **** 図： *AEM Forms Analytics Configurationサービス*
+   **図：** *AEM Forms解析設定サービス*
 
 1. Specify appropriate values for the following fields and click **Save**.
 
@@ -174,9 +177,10 @@ Adobe Analytics フレームワークは、Adobe Analytics 変数と AEM 変数�
    * **フィールド時間追跡ベースライン**：フィールド訪問を追跡する必要のある時間を秒単位で指定します。デフォルト値は 0 です。0（ゼロ）よりも大きな値を指定すると、2 つの独立した追跡イベントが Adobe Analytics サーバーに送信されます。最初のイベントは、完了フィールドの追跡を停止するように Analytics サーバーに指示を出します。指定された時間が経過すると、2 番目のイベントが送信されます。2 番目のイベントは、訪問フィールドの追跡を開始するように Analytics サーバーに指示を出します。このように 2 つの独立したイベントを使用することにより、特定のフィールドの処理にかかった時間を正確に測定することができます。値として 0（ゼロ）を指定すると、1 つの追跡イベントが Adobe Analytics サーバーに送信されます。
    * **分析レポート同期 cron 形式**：Adobe Analytics からレポートを取得するための cron 形式を指定します。デフォルト値は 0 0 2 ?.
    * **レポート取得タイムアウト：** Analytics レポートの応答でサーバーを待機する時間を秒単位で指定します。デフォルト値は 120 秒です。
+
    >[!NOTE]
    >
-   >レポートの取得操作がタイムアウトになるまでに、指定した秒数までに最大10秒かかる場合があります。
+   >レポートの取得操作をタイムアウトにするまでに最大10秒かかる場合があります。その後、指定した秒数が経過します。
 
 1. パブリッシュインスタンスで手順 1 から 3 を繰り返し、Analytics を設定します。
 
@@ -188,9 +192,9 @@ Adobe Analytics フレームワークは、Adobe Analytics 変数と AEM 変数�
 1. **フォーム／フォームとドキュメント**&#x200B;をクリックしてフォームまたはドキュメントを選択し、「**Analytics を有効にする**」をクリックします。Analytics が有効になります。
 
    ![フォームまたはドキュメント用に Analytics を有効化する](assets/enable-analytics-1.png)
-   **** 図：フォ *ームの解析の有効化*
+   **図：** *フォームに対するAnalyticsの有効化*
 
-   ******A.「解析」ボタン** Bを有効にします。選択されたフォーム
+   **A.** Enable Analyticsボタン **B.** Selected form
 
    For detailed information on viewing forms analytics reports, see [Viewing and understanding AEM Forms analytics reports](/help/forms/using/view-understand-aem-forms-analytics-reports.md)
 
