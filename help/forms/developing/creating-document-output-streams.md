@@ -31,7 +31,7 @@ Outputサービスでは、ドキュメントをPDF(PDF/Aドキュメントを�
 
 Outputサービスを使用すると、XMLフォームデータをフォームデザインとマージし、ドキュメントをネットワークプリンターまたはファイルに出力できます。
 
-フォームデザイン（XDPファイル）をOutputサービスに渡す方法は2つあります。 フォームデザインを含む `com.adobe.idp.Document` インスタンスをOutputサービスに渡すこともできます。 または、フォームデザインの場所を指定するURI値を渡すことができます。 これらの方法は、「AEM Formsによるプ *ログラミング」で説明されています*。
+フォームデザイン（XDPファイル）をOutputサービスに渡す方法は2つあります。 フォームデザインを含む `com.adobe.idp.Document` インスタンスをOutputサービスに渡すこともできます。 または、フォームデザインの場所を指定するURI値を渡すことができます。 これらの方法は、「AEM formsによる *プログラミング*」で説明されています。
 
 >[!NOTE]
 >
@@ -47,7 +47,7 @@ Outputサービスを使用すると、XMLフォームデータをフォーム�
 * [Content Services（非推奨）にあるドキュメントーをOutputサービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [フラグメントを使用したPDFドキュメントの作成](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
-使用する方法を決定する際には、別のAEM Formsサービスからフォームデザインを取得し、それを `com.adobe.idp.Document` インスタンス内で渡す場合に考慮する必要があります。 「Outputサービスに *渡す」ドキュメントと「Creating PDFドキュメントusing Fragments*** 」セクションの両方で、別のAEM Formsサービスからフォームデザインを取得する方法を示します。 最初の節では、Content Services（非推奨）からフォームデザインを取得します。 2つ目の節では、Assemblerサービスからフォームデザインを取得します。
+使用する方法を決定する際に考慮する必要があるのは、別のAEM Formsサービスからフォームデザインを取得し、それを `com.adobe.idp.Document` インスタンス内で渡す場合です。 「Output Service *に* 渡す」ドキュメントと「Creating PDFドキュメントusing Fragments ** 」セクションの両方で、別のAEM Formsサービスからフォームデザインを取得する方法を示します。 最初の節では、Content Services（非推奨）からフォームデザインを取得します。 2つ目の節では、Assemblerサービスからフォームデザインを取得します。
 
 ファイルシステムなどの固定された場所からフォームデザインを取得する場合は、どちらの方法でも使用できます。 つまり、URI値をXDPファイルに指定するか、インスタンスを使用することができ `com.adobe.idp.Document` ます。
 
@@ -77,7 +77,7 @@ Outputサービスを使用して、指定したフォームデザインとXML�
 
 長期ストレージを目的としたPDFドキュメントを作成する場合は、PDF/Aドキュメントを作成することをお勧めします。 (PDF/Aドキュメントの [作成を参照](creating-document-output-streams.md#creating-pdf-a-documents))。
 
-ユーザーがデータを入力できるインタラクティブPDFフォームを作成するには、Formsサービスを使用します。 (インタラクティブPDFフォームの [レンダリングを参照](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms))。
+ユーザーがデータを入力できるインタラクティブPDFフォームを作成するには、Formsサービスを使用します。 (インタラクティブPDF formsの [レンダリングを参照](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms))。
 
 >[!NOTE]
 >
@@ -104,8 +104,8 @@ PDFドキュメントを作成するには、次の手順を実行します。
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar（JBossにAEM Formsがデプロイされている場合に必須）
-* jbossall-client.jar（AEM FormsがJBossにデプロイされている場合に必須）
+* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必須)
+* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必須)
 
 AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
 
@@ -170,7 +170,7 @@ PDFドキュメントを作成する場合は、ファイルのURIオプショ�
 
 >[!NOTE]
 >
->レンダリングの実行時オプションを指定しない場合は、デフォルト値が使用されます。 実行時オプションのレンダリングについて詳しくは、クラス参照を参照してください。 `RenderOptionsSpec` (『 [AEM Forms APIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』を参照)。
+>レンダリングの実行時オプションを指定しない場合は、デフォルト値が使用されます。 実行時オプションのレンダリングについて詳しくは、クラス参照を参照してください。 `RenderOptionsSpec` (『 [AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』を参照)。
 
 **PDFドキュメントの生成**
 
@@ -182,15 +182,15 @@ PDFドキュメントを生成する場合は、OutputサービスでPDFドキ�
 
 前の図に示すLoan.xdpファイルにアクセスするには、3番目 `repository:///Applications/FormsApplication/1.0/FormsFolder/` のパラメーターとして `OutputClient` オブジェクトの `generatePDFOutput` メソッドに渡すパラメーターを指定します。 オブジェクトのメ&#x200B;*ソッドに渡す2番目のパラメーターとして、フォーム名(* Loan.xdp `OutputClient``generatePDFOutput` )を指定します。
 
-XDPファイルに画像（またはフラグメントなどの他のリソース）が含まれている場合は、XDPファイルと同じアプリケーションフォルダーにリソースを配置します。 AEM Formsは、画像への参照を解決するために、コンテンツルートURIをベースパスとして使用します。 例えば、Loan.xdpファイルに画像が含まれている場合は、必ずにその画像を配置してくだ `Applications/FormsApplication/1.0/FormsFolder/`さい。
+XDPファイルに画像（またはフラグメントなどの他のリソース）が含まれている場合は、XDPファイルと同じアプリケーションフォルダーにリソースを配置します。 AEM Formsは、コンテンツルートURIをベースパスとして使用し、画像への参照を解決します。 例えば、Loan.xdpファイルに画像が含まれている場合は、必ずにその画像を配置してくだ `Applications/FormsApplication/1.0/FormsFolder/`さい。
 
 >[!NOTE]
 >
->FormsアプリケーションのURIは、 `OutputClient` オブジェクトまたはメソッドを呼び出すときに参照でき `generatePDFOutput` ま `generatePrintedOutput` す。
+>オブジェクトまたは `OutputClient` メソッドを呼び出すときは、FormsアプリケーションURIを参照でき `generatePDFOutput` ま `generatePrintedOutput` す。
 
 >[!NOTE]
 >
->Formsドキュメント内のXDPを参照してPDF開始を作成する完全なクイック開始については、「 [クイックモード（EJBモード）」を参照してください。 Java APIを使用したアプリケーションXDPファイルに基づくPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api)。
+>Formsドキュメント内のXDPを参照してPDF開始を作成する完全なクイック開始を確認するには、「 [クイックモード（EJBモード）」を参照してください。 Java APIを使用したアプリケーションXDPファイルに基づくPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api)。
 
 **操作の結果を取得します**
 
@@ -229,7 +229,7 @@ Output API(Java)を使用してPDFドキュメントを作成します。
 1. PDFランタイムオプションを設定します。
 
    * コンストラクタを使用して `PDFOutputOptionsSpec` オブジェクトを作成します。
-   * オブジェクトの `PDFOutputOptionsSpec``setFileURI` メソッドを呼び出して、「ファイルURI」オプションを設定します。 Outputサービスが生成するPDFファイルの場所を指定するstring値を渡します。 「ファイルのURI」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対する相対パスであり、クライアントコンピューターに対する相対パスではありません。
+   * オブジェクトの `PDFOutputOptionsSpec``setFileURI` メソッドを呼び出して、「ファイルURI」オプションを設定します。 Outputサービスが生成するPDFファイルの場所を指定するstring値を渡します。 「ファイルのURI」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対するもので、クライアントコンピューターに対するものではありません。
 
 1. レンダリングの実行時オプションを設定します。
 
@@ -238,7 +238,7 @@ Output API(Java)を使用してPDFドキュメントを作成します。
 
    >[!NOTE]
    >
-   >入力ドキュメントがAcrobatフォーム（Acrobatで作成されたフォーム）または署名または認証されたXFAドキュメントの場合、 `RenderOptionsSpec` オブジェクトの `setPdfVersion` ドキュメントを使用してPDFバージョンを設定することはできません。 出力PDFドキュメントは、元のPDFバージョンを保持します。 同様に、入力ドキュメントがAcrobatフォームまたは署名済みXFAドキュメントまたは認証済みXFAオプションである場合、 `RenderOptionsSpec` オブジェクトの `setTaggedPDF`*メソッドを呼び出してタグ付きAdobe PDFオプションを設定することはできません。 *
+   >入力ドキュメントがAcrobatフォーム(Acrobatで作成されたフォーム)または署名または認証されたXFAドキュメントである場合、 `RenderOptionsSpec` オブジェクトの `setPdfVersion` メソッドを使用してPDFドキュメントのバージョンを設定することはできません。 出力PDFドキュメントは、元のPDFバージョンを保持します。 同様に、入力ドキュメントーがAcrobatフォームまたは署名済みまたは認証済みのXFAドキュメントの場合、 `RenderOptionsSpec` オブジェクトの `setTaggedPDF`*メソッドを呼び出してタグ付きAdobe PDFオプションを設定することはできません。 *
 
    >[!NOTE]
    >
@@ -304,12 +304,12 @@ Output API（Webサービス）を使用してPDFドキュメントを作成し�
 1. Output Clientオブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して `OutputServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
+   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `OutputServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `OutputServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -334,7 +334,7 @@ Output API（Webサービス）を使用してPDFドキュメントを作成し�
 
    >[!NOTE]
    >
-   >入力ドキュメントがAcrobatフォーム（Acrobatで作成されたフォーム）または署名または認証されたXFAドキュメントの場合、 `RenderOptionsSpec` オブジェクトの `setPdfVersion` ドキュメントを使用してPDFバージョンを設定することはできません。 出力PDFドキュメントは、元のPDFバージョンを保持します。 同様に、入力ドキュメントがAcrobatフォームまたは署名済みまたは認証済みのXFAドキュメントである場合、 `RenderOptionsSpec` オブジェクトの `setTaggedPDF`*メソッドを呼び出してタグ付きAdobe PDFオプションを設定することはできません。*
+   >入力ドキュメントがAcrobatフォーム(Acrobatで作成されたフォーム)または署名または認証されたXFAドキュメントである場合、 `RenderOptionsSpec` オブジェクトの `setPdfVersion` メソッドを使用してPDFドキュメントのバージョンを設定することはできません。 出力PDFドキュメントは、元のPDFバージョンを保持します。 同様に、入力ドキュメントーがAcrobatフォームまたは署名済みまたは認証済みのXFAドキュメントの場合、 `RenderOptionsSpec` オブジェクトの `setTaggedPDF`*メソッドを呼び出してタグ付きAdobe PDFオプションを設定することはできません。*
 
    >[!NOTE]
    >
@@ -393,7 +393,7 @@ PDF/AはPDFドキュメントのアーカイブの標準ですが、標準のPDF
 
 PDF/Aドキュメントは、フォームデザインで指定されたフォントを使用する必要があり、フォントを置き換えることはできません。 その結果、PDFドキュメント内にあるフォントがホストのオペレーティングシステム(OS)で使用できない場合は、例外が発生します。
 
-PDF/AドキュメントをAcrobatで開くと、次の図に示すように、ドキュメントがPDF/Aドキュメントであることを確認するメッセージが表示されます。
+AcrobatでPDF/Aドキュメントを開くと、次の図に示すように、ドキュメントがPDF/Aドキュメントであることを確認するメッセージが表示されます。
 
 ![cp_cp_pdfamessage](assets/cp_cp_pdfamessage.png)
 
@@ -426,8 +426,8 @@ PDF/Aドキュメントを作成するには、次の手順を実行します。
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar（JBossにAEM Formsがデプロイされている場合に必須）
-* jbossall-client.jar（AEM FormsがJBossにデプロイされている場合に必須）
+* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必須)
+* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必須)
 
 AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
 
@@ -451,7 +451,7 @@ PDF/Aドキュメントの作成時に、「ファイルURI」オプションを
 
 >[!NOTE]
 >
->PDF/A 1Aドキュメントの作成時に、タグ付きAdobe PDFオプションをに設定するこ `false` とはできません。 PDF/A 1Aは、常にタグ付きPDFドキュメントになります。 また、PDF/A 1Bドキュメントを作成する `true` 場合は、タグ付きAdobe PDFオプションをに設定することはできません。 PDF/A 1Bは、常にタグなしPDFドキュメントになります。
+>PDF/A 1Aドキュメントを作成する `false` 場合は、タグ付きAdobe PDFオプションをに設定できません。 PDF/A 1Aは、常にタグ付きPDFドキュメントになります。 また、PDF/A 1Bドキュメントを作成する `true` 場合は、タグ付きAdobe PDFオプションをに設定することはできません。 PDF/A 1Bは、常にタグなしPDFドキュメントになります。
 
 **PDF/Aドキュメントの生成**
 
@@ -494,7 +494,7 @@ Output API(Java)を使用してPDF/Aドキュメントを作成します。
 1. PDF/Aランタイムオプションを設定します。
 
    * コンストラクタを使用して `PDFOutputOptionsSpec` オブジェクトを作成します。
-   * オブジェクトの `PDFOutputOptionsSpec``setFileURI` メソッドを呼び出して、「ファイルURI」オプションを設定します。 Outputサービスが生成するPDFファイルの場所を指定するstring値を渡します。 「ファイルのURI」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対する相対パスであり、クライアントコンピューターに対する相対パスではありません。
+   * オブジェクトの `PDFOutputOptionsSpec``setFileURI` メソッドを呼び出して、「ファイルURI」オプションを設定します。 Outputサービスが生成するPDFファイルの場所を指定するstring値を渡します。 「ファイルのURI」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対するもので、クライアントコンピューターに対するものではありません。
 
 1. レンダリングの実行時オプションを設定します。
 
@@ -562,12 +562,12 @@ Output API（Webサービス）を使用してPDF/Aドキュメントを作成�
 1. Output Clientオブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して `OutputServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
+   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `OutputServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `OutputServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -632,7 +632,7 @@ Output API（Webサービス）を使用してPDF/Aドキュメントを作成�
 
 Outputサービスは、通常、XDPファイルとして保存され、Designerで作成されるフォームデザインに基づく非インタラクティブPDFフォームをレンダリングします。 フォームデザインを含む `com.adobe.idp.Document` オブジェクトをOutputサービスに渡すことができます。 次に、Outputサービスは、オブジェクト内のフォームデザインをレンダリングし `com.adobe.idp.Document` ます。
 
-Outputサービスに `com.adobe.idp.Document``com.adobe.idp.Document` オブジェクトを渡す利点の1つは、他のAEM Formsサービス操作がインスタンスを返すことです。 つまり、別のサービス操作から `com.adobe.idp.Document` インスタンスを取得してレンダリングできます。 例えば、次の図に示すように、XDPファイルがという名前のContent Services（非推奨）ノードに格納されている `/Company Home/Form Designs`とします。
+オブジェクトをOutputサービスに渡す利点の1つは、他の `com.adobe.idp.Document` AEM Formsサービス操作がインスタンスを返すことで `com.adobe.idp.Document` す。 つまり、別のサービス操作から `com.adobe.idp.Document` インスタンスを取得してレンダリングできます。 例えば、次の図に示すように、XDPファイルがという名前のContent Services（非推奨）ノードに格納されている `/Company Home/Form Designs`とします。
 
 プログラムを使用してContent Services（非推奨）からLoan.xdpを取得し、そのXDPファイルを `com.adobe.idp.Document` オブジェクト内のOutputサービスに渡すことができます。
 
@@ -672,7 +672,7 @@ JavaまたはWebサービスAPIを使用して、Content Services（非推奨）
 
 **フォームデータストリームを使用したアクションの実行**
 
-非インタラクティブフォームをPDFファイルとして保存できます。 フォームは、Adobe ReaderまたはAcrobatで表示できます。
+非インタラクティブフォームをPDFファイルとして保存できます。 このフォームは、Adobe ReaderまたはAcrobatで閲覧できます。
 
 **関連トピック**
 
@@ -762,12 +762,12 @@ OutputサービスとContent Services（非推奨）API（Webサービス）を�
 1. Outputとドキュメント管理クライアントAPIオブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して `OutputServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをFormsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
+   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをFormsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`)に指定するstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する場合に使用されます)。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `OutputServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `OutputServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
    * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -820,21 +820,21 @@ OutputサービスとContent Services（非推奨）API（Webサービス）を�
 
 Outputサービスは、通常、XDPファイルとして保存され、Designerで作成されるフォームデザインに基づく非インタラクティブPDFフォームをレンダリングします。 フォームデザインを含む `com.adobe.idp.Document` オブジェクトをOutputサービスに渡すことができます。 次に、Outputサービスは、オブジェクト内のフォームデザインをレンダリングし `com.adobe.idp.Document` ます。
 
-Outputサービスに `com.adobe.idp.Document``com.adobe.idp.Document` オブジェクトを渡す利点の1つは、他のAEM Formsサービス操作がインスタンスを返すことです。 つまり、別のサービス操作から `com.adobe.idp.Document` インスタンスを取得してレンダリングできます。 例えば、次の図に示すように、XDPファイルがAEM Formsリポジトリに格納されているとします。
+オブジェクトをOutputサービスに渡す利点の1つは、他の `com.adobe.idp.Document` AEM Formsサービス操作がインスタンスを返すことで `com.adobe.idp.Document` す。 つまり、別のサービス操作から `com.adobe.idp.Document` インスタンスを取得してレンダリングできます。 例えば、次の図に示すように、XDPファイルがAEM Formsリポジトリに保存されているとします。
 
 ![pd_pd_formrepository](assets/pd_pd_formrepository.png)
 
-FormsFolder ** フォルダーは、AEM Formsリポジトリ内のユーザー定義の場所です（この場所は例であり、デフォルトでは存在しません）。 この例では、Loan.xdpという名前のフォームデザインがこのフォルダー内にあります。 フォームデザインに加えて、画像などの他のフォームコラテラルもこの場所に保存できます。 AEM Formsリポジトリ内のリソースへのパスは次のとおりです。
+FormsFolder ** フォルダーは、AEM Formsリポジトリ内のユーザー定義の場所です（この場所は例で、デフォルトでは存在しません）。 この例では、Loan.xdpという名前のフォームデザインがこのフォルダー内にあります。 フォームデザインに加えて、画像などの他のフォームコラテラルもこの場所に保存できます。 AEM Formsリポジトリ内のリソースへのパスは次のとおりです。
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
-プログラムを使用してAEM FormsリポジトリからLoan.xdpを取得し、オブジェクト内のOutputサービスに渡すことができ `com.adobe.idp.Document` ます。
+プログラムを使用して、AEM FormsリポジトリからLoan.xdpを取得し、オブジェクト内のOutputサービスに渡すことができ `com.adobe.idp.Document` ます。
 
 リポジトリ内にあるXDPファイルに基づいてPDFを作成するには、次の2つの方法があります。 XDPの場所は、参照によって渡すことも、プログラムでリポジトリからXDPを取得して、XDPファイル内のOutputサービスに渡すこともできます。
 
 [クイック開始（EJBモード）: Java APIを使用したアプリケーションXDPファイルに基づくPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api) （参照によるXDPファイルの場所の渡し方法を示します）。
 
-[クイック開始（EJBモード）: Java APIを使用してAEM Forms Repository内のドキュメントーをOutputサービスに渡す(AEM Forms RepositoryからXDPファイルをプログラム的に取得し、インスタンス内でOutputサービスに渡す方法を示し](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)`com.adobe.idp.Document` ます)。 (このタスクの実行方法について説明します)。
+[クイック開始（EJBモード）: Java APIを使用してAEM Formsリポジトリ内のドキュメントをOutputサービスに渡す(プログラムでAEM FormsリポジトリからXDPファイルを取得し、インスタンス内でOutputサービスに渡す方法を示し](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)`com.adobe.idp.Document` ます)。 (このタスクの実行方法について説明します)。
 
 >[!NOTE]
 >
@@ -866,7 +866,7 @@ XDPファイルは、インスタンス(Webサービスを使用している場�
 
 **非インタラクティブPDFフォームのレンダリング**
 
-非インタラクティブフォームをレンダリングするには、AEM Forms Repository APIを使用して返された `com.adobe.idp.Document` インスタンスを渡します。
+非インタラクティブフォームをレンダリングするには、AEM FormsリポジトリAPIを使用して返された `com.adobe.idp.Document` インスタンスを渡します。
 
 >[!NOTE]
 >
@@ -874,7 +874,7 @@ XDPファイルは、インスタンス(Webサービスを使用している場�
 
 **フォームデータストリームを使用したアクションの実行**
 
-非インタラクティブフォームをPDFファイルとして保存できます。 フォームは、Adobe ReaderまたはAcrobatで表示できます。
+非インタラクティブフォームをPDFファイルとして保存できます。 このフォームは、Adobe ReaderまたはAcrobatで閲覧できます。
 
 **関連トピック**
 
@@ -929,7 +929,7 @@ OutputサービスとRepository API(Java)を使用して、リポジトリから
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[クイック開始（EJBモード）: Java APIを使用してAEM Formsリポジトリ内のドキュメントーをOutputサービスに渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
+[クイック開始（EJBモード）: Java APIを使用して、AEM Formsリポジトリ内のドキュメントをOutputサービスに渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -947,7 +947,7 @@ OutputサービスとAssemblerサービスを使用して、フラグメント�
 
 >[!NOTE]
 >
->また、Assemblerサービスによってアセンブリされたフォームデザインを、Outputサービスの代わりにFormsサービスに渡すこともできます。 OutputサービスとFormsサービスの主な違いは、FormsサービスでインタラクティブPDFドキュメントが生成され、Outputサービスで非インタラクティブPDFドキュメントが生成される点です。 また、Formsサービスでは、ZPLのようなプリンターベースの出力ストリームを生成できません。
+>また、Assemblerサービスによってアセンブリされたフォームデザインを、Outputサービスの代わりにFormsサービスに渡すこともできます。 OutputサービスとFormsサービスの主な違いは、FormsサービスでインタラクティブPDFドキュメントが生成され、Outputサービスで非インタラクティブPDFドキュメントが生成される点です。 また、Formsサービスは、ZPLなどのプリンターベースの出力ストリームを生成できません。
 
 >[!NOTE]
 >
@@ -1086,12 +1086,12 @@ Output Service APIとAssembler Service API（Webサービス）を使用して�
 1. OutputおよびAssembler Clientオブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して `OutputServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
+   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `OutputServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * AEM formsのユーザー名を `OutputServiceClient.ClientCredentials.UserName.UserName`フィールドに割り当てます。
+      * AEM formsユーザー名を `OutputServiceClient.ClientCredentials.UserName.UserName`フィールドに割り当てます。
       * 対応するパスワード値を `OutputServiceClient.ClientCredentials.UserName.Password`フィールドに割り当てます。
       * 定数値を `HttpClientCredentialType.Basic``BasicHttpBindingSecurity.Transport.ClientCredentialType`フィールドに割り当てます。
    * 定数値をフィー `BasicHttpSecurityMode.TransportCredentialOnly``BasicHttpBindingSecurity.Security.Mode`ルドに割り当てます。
@@ -1181,8 +1181,8 @@ Outputサービスを使用すると、XMLデータをフォームデザイン�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar（JBossにAEM Formsがデプロイされている場合に必要）
-* jbossall-client.jar（AEM FormsがJBossにデプロイされている場合に必要）
+* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
+* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
 AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。 （[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照。）
 
@@ -1200,7 +1200,7 @@ AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサ�
 
 >[!NOTE]
 >
->オプションで定義できる実行時オプションがあります。 設定可能なすべてのオプションについて詳しくは、『 `PrintedOutputOptionsSpec` AEM Forms APIリファレンス』の「 [クラス参照](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)」を参照してください。
+>オプションで定義できる実行時オプションがあります。 設定できるすべてのオプションについて詳しくは、 `PrintedOutputOptionsSpec` AEM FormsAPIリファレンスの [クラス参照を参照してください](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。
 
 **印刷ストリームをファイルに印刷する**
 
@@ -1294,12 +1294,12 @@ Output API（Webサービス）を使用してファイルに出力します。
 1. Output Clientオブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して `OutputServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
+   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `OutputServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `OutputServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -1386,8 +1386,8 @@ Outputサービスを使用すると、XMLデータをフォームデザイン�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar（JBossにAEM Formsがデプロイされている場合に必須）
-* jbossall-client.jar（AEM FormsがJBossにデプロイされている場合に必須）
+* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必須)
+* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必須)
 
 AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
 
@@ -1416,7 +1416,7 @@ AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサ�
 
 プリンターに送信する印刷ストリームを取得します。 例えば、PostScriptファイルを取得してプリンターに送信できます。
 
-プリンターでPDFがサポートされている場合は、PDFファイルを送信するように選択できます。 ただし、プリンターにPDFドキュメントを送信する際の問題は、プリンターの製造元ごとにPDFインタープリターの実装が異なることです。 つまり、一部の印刷メーカーはAdobe PDFの解釈を使用していますが、プリンターによって異なります。 その他のプリンターには、独自のPDFインタープリターがあります。 その結果、印刷結果が異なる場合があります。
+プリンターでPDFがサポートされている場合は、PDFファイルを送信するように選択できます。 ただし、プリンターにPDFドキュメントを送信する際の問題は、プリンターの製造元ごとにPDFインタープリターの実装が異なることです。 つまり、印刷メーカーの中にはAdobe PDFの解釈を使うものもあるが、印刷業者によっては違う。 その他のプリンターには、独自のPDFインタープリターがあります。 その結果、印刷結果が異なる場合があります。
 
 PDFドキュメントをプリンターに送信する際のもう1つの制限は、単に印刷されるだけです。 両面印刷、用紙トレイの選択、ホチキス止めは、プリンタの設定を通じてのみ使用できます。
 
@@ -1564,7 +1564,7 @@ Output API(Java)を使用して、印刷ストリームをネットワークプ�
 
    >[!NOTE]
    >
-   >この `sendToPrinter` メソッドは、バージョン8.2.1でAEM Forms APIに追加されました。
+   >この `sendToPrinter` メソッドは、バージョン8.2.1でAEM FormsAPIに追加されました。
 
 ### WebサービスAPIを使用したプリンターへの印刷ストリームの送信 {#send-a-print-stream-to-a-printer-using-the-web-service-api}
 
@@ -1581,12 +1581,12 @@ Output API（Webサービス）を使用して、印刷ストリームをネッ�
 1. Output Clientオブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して `OutputServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
+   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `OutputServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `OutputServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -1635,7 +1635,7 @@ Output API（Webサービス）を使用して、印刷ストリームをネッ�
 
    >[!NOTE]
    >
-   >この `sendToPrinter` メソッドは、バージョン8.2.1でAEM Forms APIに追加されました。
+   >この `sendToPrinter` メソッドは、バージョン8.2.1でAEM FormsAPIに追加されました。
 
 ## 複数の出力ファイルの作成 {#creating-multiple-output-files}
 
@@ -1727,8 +1727,8 @@ XMLデータソースに基づいて複数のPDFファイルを作成するに�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar（JBossにAEM Formsがデプロイされている場合に必要）
-* jbossall-client.jar（AEM FormsがJBossにデプロイされている場合に必要）
+* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
+* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
 AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
 
@@ -1825,7 +1825,7 @@ Output API(Java)を使用して複数のPDFファイルを作成します。
 
    * コンストラクタを使用して `PDFOutputOptionsSpec` オブジェクトを作成します。
    * オブジェクトの `PDFOutputOptionsSpec``setGenerateManyFiles` メソッドを呼び出して、「多数のファイル」オプションを設定します。 例えば、値を渡して、XMLデータソース `true` の各レコードに対して個別のPDFファイルを作成するようOutputサービスに指示します。 (を渡すと、Outputサービス `false`によって、すべてのレコードを含む単一のPDFドキュメントが生成されます)。
-   * オブジェクトの `PDFOutputOptionsSpec``setFileUri` メソッドを呼び出し、Outputサービスが生成するファイルの場所を指定する文字列値を渡して、「File URI」オプションを設定します。 「ファイルのURI」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対する相対パスであり、クライアントコンピューターに対する相対パスではありません。
+   * オブジェクトの `PDFOutputOptionsSpec``setFileUri` メソッドを呼び出し、Outputサービスが生成するファイルの場所を指定する文字列値を渡して、「File URI」オプションを設定します。 「ファイルのURI」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対するもので、クライアントコンピューターに対するものではありません。
    * オブジェクトの `OutputOptionsSpec``setRecordName` メソッドを呼び出し、データレコードを区切るデータソース内のXML要素名を指定する文字列値を渡して、「レコード名」オプションを設定します。 (例えば、この節で前述したXMLデータソースについて考えてみましょう。 データレコードを区切るXML要素の名前は、LoanRecordです)。
 
 1. レンダリングの実行時オプションの設定
@@ -1871,17 +1871,17 @@ Output API（Webサービス）を使用して複数のPDFファイルを作成�
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Output Clientオブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して `OutputServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
+   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `OutputServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `OutputServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -1970,10 +1970,10 @@ Output API（Webサービス）を使用して複数のPDFファイルを作成�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar（JBossにAEM Formsがデプロイされている場合に必須）
-* jbossall-client.jar（AEM FormsがJBossにデプロイされている場合に必須）
+* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必須)
+* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必須)
 
-AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルで、adobe-utilities.jarおよびjbossall-client.jarを置き換える必要があります。
+AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarおよびjbossall-client.jarを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
 
 **Output Clientオブジェクトの作成**
 
@@ -2054,7 +2054,7 @@ Output API(Java)を使用して検索ルールを作成します。
 1. PDFランタイムオプションを設定します。
 
    * コンストラクタを使用して `PDFOutputOptionsSpec` オブジェクトを作成します。
-   * Outputサービスが生成するPDFファイルの名前と場所を指定します。この場合、 `PDFOutputOptionsSpec` オブジェクトの `setFileURI` メソッドを呼び出します。 PDFファイルの場所を指定するstring値を渡します。 「ファイルのURI」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対する相対パスであり、クライアントコンピューターに対する相対パスではありません。
+   * Outputサービスが生成するPDFファイルの名前と場所を指定します。この場合、 `PDFOutputOptionsSpec` オブジェクトの `setFileURI` メソッドを呼び出します。 PDFファイルの場所を指定するstring値を渡します。 「ファイルのURI」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対するもので、クライアントコンピューターに対するものではありません。
    * オブジェクトのメソッドを呼び出して、定義した `PDFOutputOptionsSpec` ルールを設定し `setRules` ます。 オブジェクトを含む `java.util.List` オブジェクトを渡し `Rule` ます。
    * オブジェクトのメソッドを呼び出して、定義済みのテキストパターンをスキャンするバイト数を設定し `PDFOutputOptionsSpec` ま `setLookAhead` す。 バイト数を表す整数値を渡します。
 
@@ -2104,17 +2104,17 @@ Output API（Webサービス）を使用して検索ルールを作成します�
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Output Clientオブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して `OutputServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
+   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `OutputServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `OutputServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
@@ -2202,7 +2202,7 @@ Outputサービスを使用して、インタラクティブPDFドキュメン�
 次の種類のPDFドキュメントを統合できます。
 
 * インタラクティブXFA PDFドキュメント
-* Acrobat Forms
+* AcrobatForms
 
 非インタラクティブPDFドキュメントであるPDFをフラット化しようとすると、例外が発生します。
 
@@ -2229,8 +2229,8 @@ Outputサービスを使用して、インタラクティブPDFドキュメン�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar（JBossにAEM Formsがデプロイされている場合に必要）
-* jbossall-client.jar（AEM FormsがJBossにデプロイされている場合に必要）
+* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
+* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
 AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。 For information about the location of all AEM Forms JAR files, see [Including AEM Forms Java library files](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
@@ -2319,17 +2319,17 @@ Output API（Webサービス）を使用して、インタラクティブPDFド�
 
    >[!NOTE]
    >
-   >AEM FormsをホストするサーバーのIPアドレス `localhost` に置き換えます。
+   >AEM Forms `localhost` をホストするサーバーのIPアドレスに置き換えます。
 
 1. Output Clientオブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して `OutputServiceClient` オブジェクトを作成します。
-   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`.)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
+   * コンストラクターを使用して `OutputServiceClient.Endpoint.Address` オブジェクトを作成し `System.ServiceModel.EndpointAddress` ます。 WSDLをAEM Formsサービス(例えば、 `http://localhost:8080/soap/services/OutputService?blob=mtom`)に渡すstring値を渡します。 属性を使用する必要はありません `lc_version` 。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用す `?blob=mtom` るように指定します。
    * フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `OutputServiceClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
    * オブジェクトの `System.ServiceModel.BasicHttpBinding` フィールドをに設定し `MessageEncoding` ま `WSMessageEncoding.Mtom`す。 この値により、MTOMが使用されます。
    * 次のタスクを実行して、基本的なHTTP認証を有効にします。
 
-      * フィールドにAEM formsのユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
+      * フィールドにAEM formsユーザー名を割り当て `OutputServiceClient.ClientCredentials.UserName.UserName`ます。
       * 対応するパスワード値をフィールドに割り当て `OutputServiceClient.ClientCredentials.UserName.Password`ます。
       * 定数値をフィールド `HttpClientCredentialType.Basic` に割り当て `BasicHttpBindingSecurity.Transport.ClientCredentialType`ます。
       * 定数値をフィールド `BasicHttpSecurityMode.TransportCredentialOnly` に割り当て `BasicHttpBindingSecurity.Security.Mode`ます。
