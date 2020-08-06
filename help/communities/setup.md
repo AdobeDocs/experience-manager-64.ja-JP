@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 0d462ad1-5619-4bb6-9609-bc8987c40a0c
 translation-type: tm+mt
 source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+workflow-type: tm+mt
+source-wordcount: '703'
+ht-degree: 45%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
 
 ## オーサーインスタンスおよびパブリッシュインスタンスの開始 {#start-author-and-publish-instances}
 
-開発およびデモの目的で、1つの作成者と1つの発行インスタンスを実行する必要があります。
+開発およびデモの目的では、1つの作成者と1つの発行インスタンスを実行する必要があります。
 
 To do so, follow the basic AEM [Getting Started](../../help/sites-deploying/deploy.md#getting-started) instructions, which will result in
 
@@ -30,13 +33,13 @@ AEM Communities では、各環境を次の目的で使用します。
 
 * 作成者環境は
 
-   * サイト、テンプレート、およびコンポーネントの開発
+   * サイト、テンプレート、コンポーネントの開発
    * 管理および設定のタスク
 
 * 公開環境は
 
-   * コンテンツの投稿とモデレートに関するコミュニティの経験
-   * コミュニティグループ、メンバーおよびメンバーグループの作成
+   * コンテンツの投稿およびモデレートに関するコミュニティの経験
+   * コミュニティグループ、メンバー、およびメンバーグループの作成
 
 >[!NOTE]
 >
@@ -56,7 +59,7 @@ This tutorial creates an [engagement community site](overview.md#engagement-comm
 
 [コミュニティサイトで Adobe Analytics が設定されている](analytics.md)場合、コミュニティアクティビティに関する情報が利用できます。これにより、コミュニティメンバーのエクスペリエンスが向上するほか、サイトの管理者はフィードバックを得られます。
 
-Adobe Analyticsとの統合はオプションです。
+Adobe Analyticsとの統合は任意です。
 
 ## 電子メール通知の設定 {#configure-email-for-notifications}
 
@@ -86,25 +89,25 @@ Create a user on *author*, who is assigned the role of Community Administrator:
 
    * For example, [http://localhost:4502/](http://localhost:4503/)
 
-* 管理者権限でサインイン
+* 管理者権限でサインインする
 
    * 例：ユーザー名「admin」/パスワード「admin」
 
 * From the main console, navigate to **[!UICONTROL Tools > Operations > Security > Users]**
 * From the **[!UICONTROL Edit]** menu, select **[!UICONTROL Add User]**
 
-* ダイアログで、次のよ `Create New User` うに入力します。
+* ダイアログ `Create New User` で、
 
-   * **[!UICONTROL IDアンプ(&amp;A);ast;]**:シリウス
+   * **[!UICONTROL IDアンプ(&amp;A);ast;]**: シリウス
    * **[!UICONTROL 電子メールアドレス]**：sirius.nilson@mailinator.com
-   * **[!UICONTROL パスワード(&amp;A)；末尾；]**:password
-   * **[!UICONTROL パスワードの確認(&amp;A);ast;]**:password
+   * **[!UICONTROL パスワード(&amp;A);ast;]**: password
+   * **[!UICONTROL パスワードの確認(&amp;A);ast;]**: password
    * **[!UICONTROL 名]**：Sirius
-   * **[!UICONTROL 姓(&amp;A)；姓]**:ニルソン
+   * **[!UICONTROL 姓(&amp;A)；姓(&amp;A);]**: ニルソン
 
 ### コミュニティ管理者グループに対する Sirius の割り当て {#assign-sirius-to-community-administrators-group}
 
-下にスクロールし `Add User to Groups`ます。
+下にスクロール `Add User to Groups`:
 
 * &#39;C&#39;を入力して検索してください
 
@@ -120,7 +123,7 @@ Create a user on *author*, who is assigned the role of Community Administrator:
 Facebook および Twitter でデモバージョンのソーシャルログインを使用するには、先に以下をおこなう必要があります。
 
 1. Install a fix pack or [latest feature pack](deploy-communities.md#latestfeaturepack) (for March 2017 Facebook API changes)
-1. [発行環境でのOAuthプロバイダ](social-login.md#adobe-granite-oauth-authentication-handler) ーの有効化
+1. [発行環境でOAuthプロバイダーを有効にする](social-login.md#adobe-granite-oauth-authentication-handler)
 
 実稼動サーバーでは、ソーシャルログインの提供に必要なクラウドサービスを作成する必要があります。
 
@@ -152,8 +155,8 @@ AEM Communities 入門チュートリアル用に作成したタグのサンプ�
 
 ## UGC 共通ストア用の MongoDB {#mongodb-for-ugc-common-store}
 
-[MSRP](msrp.md)[](working-with-srp.md) (MongoDB)を共通ストアとして設定することは、発行環境または作成者環境からすべてのUGCを柔軟にモデレートできるようにすることを推奨します（ただし、オプションです）。
+It is recommended, but optional, to set [MSRP](msrp.md) (MongoDB) as the [common store](working-with-srp.md) to experience the flexibility of moderating all UGC from either publish and/or author environments.
 
 For instructions visit [How to Setup MongoDB for Demo](demo-mongo.md).
 
-デフォルトでは、AEM のオーサーインスタンスおよびパブリッシュインスタンスをインストールすると、ユーザー生成コンテンツ（UGC）は、[JSRP](jsrp.md)を使用してアクセスする [JCR Tar ストレージ](../../help/sites-deploying/platform.md)に格納されます。JSRPは共通ストアではありません。つまり、UGCは、UGCが入力されたインスタンスでのみ表示されます。 通常、UGCは発行インスタンスに対して入力され、オーサー環境に表示されないので、発行インスタンスを使用する必要のあるすべてのモデレートタスクが発生します。
+デフォルトでは、AEM のオーサーインスタンスおよびパブリッシュインスタンスをインストールすると、ユーザー生成コンテンツ（UGC）は、[JSRP](jsrp.md)を使用してアクセスする [JCR Tar ストレージ](../../help/sites-deploying/platform.md)に格納されます。JSRPは共通ストアではありません。つまり、UGCは、JSRPが入力されたインスタンスでのみ表示されます。 通常、UGCは発行インスタンスに対して入力され、作成者環境には表示されないので、すべてのモデレートタスクで発行インスタンスを使用する必要があります。
