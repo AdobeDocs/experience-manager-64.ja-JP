@@ -9,13 +9,16 @@ topic-tags: author
 discoiquuid: 91a41bc1-3fa3-4467-b3f8-5570ba7757c0
 translation-type: tm+mt
 source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+workflow-type: tm+mt
+source-wordcount: '557'
+ht-degree: 87%
 
 ---
 
 
 # アダプティブフォームコンポーネントのインラインスタイリング {#inline-styling-of-adaptive-form-components}
 
-アダプティブフォームの全体的な外観とスタイルは、[テーマエディター](/help/forms/using/themes.md)でスタイルを指定することによって定義できます。また、アダプティブフォームの個々のコンポーネントにインライン CSS スタイルを適用し、即座に変更をプレビューすることもできます。インラインスタイルは、テーマで提供されているスタイル設定よりも優先されます。
+アダプティブフォームの全体的な外観とスタイルは、[テーマエディター](/help/forms/using/themes.md)でスタイルを指定することによって定義できます。また、アダプティブフォームの個々のコンポーネントにインライン CSS スタイルを適用し、即座に変更をプレビューすることもできます。インラインスタイルは、テーマで指定されたスタイルよりも優先されます。
 
 ## インライン CSS プロパティを適用する {#apply-inline-css-properties}
 
@@ -42,7 +45,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
 1. 同様に、コンポーネントの他の部分（ウィジェット、キャプション、ヘルプなど）のスタイルを適用できます。
 1. Tap **Done** to confirm the changes or **Cancel** to discard the changes.
 
-## 例：フィールドコンポーネントのインラインスタイル {#example-inline-styles-for-a-field-component}
+## 例： フィールドコンポーネントのインラインスタイル {#example-inline-styles-for-a-field-component}
 
 以下の図は、インラインスタイルが適用される前後のテキストフ&#x200B;&#x200B;ィールドを示しています。
 
@@ -93,7 +96,7 @@ source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
  </tbody> 
 </table>
 
-![](assets/applied-style.png) インラインスタイル適用後のテキストボックススタイ&#x200B;****&#x200B;ル図：インラインス *タイルプロパティの適用後のテキストボックスコンポーネント*
+![インラインスタイルが適用された後のテキストボックススタイル](assets/applied-style.png)**図：** *インラインスタイルプロパティを適用した後のテキストボックスコンポーネント*
 
 上述の手順に従って、他のコンポーネント（パネル、送信ボタン、ラジオボタンなど）を選択し、そのスタイルを設定できます。
 
