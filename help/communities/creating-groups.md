@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: 868a3d5d-d505-4ce5-8776-5bbe68a30ccb
 translation-type: tm+mt
 source-git-commit: 8c66f2b0053882bd1c998d8e01dbb0573881bc87
+workflow-type: tm+mt
+source-wordcount: '531'
+ht-degree: 46%
 
 ---
 
 
 # コミュニティグループ {#community-groups}
 
-コミュニティグループ機能は、サブコミュニティが発行環境および作成者環境から許可されたユーザー（コミュニティメンバーおよび作成者）によってコミュニティサイト内に動的に作成される機能です。
+コミュニティグループ機能は、サブコミュニティを発行ユーザーと発言者環境から許可されたユーザー（コミュニティのメンバーと発言者）がコミュニティサイト内で動的に作成する機能です。
 
 This ability is present when the [groups function](functions.md#groups-function) is present in the [community site](sites-console.md) structure.
 
 A [community group template](tools-groups.md) provides the design of the community group page when a community group is dynamically created.
 
-グループ機能をコミュニティサイトの構造またはコミュニティサイトテンプレートに追加すると、1 つ以上のテンプレートがグループ機能用に選択されます。このグループテンプレートのリストは、コミュニティサイトから動的に新しいグループを作成するメンバーまたは作成者に表示されます。
+グループ機能をコミュニティサイトの構造またはコミュニティサイトテンプレートに追加すると、1 つ以上のテンプレートがグループ機能用に選択されます。このリストのグループテンプレートは、コミュニティサイト内から動的に新しいグループを作成するメンバーまたは作成者に表示されます。
 
 ## 新しいグループの作成 {#creating-a-new-group}
 
@@ -49,9 +52,11 @@ This is the page that loads on publish when the **[!UICONTROL Groups]** menu ite
 
 * **[!UICONTROL グループ URL 名]** URL の一部になるグループページの名前です。
 
-* **[!UICONTROL 「グループの]**&#x200B;選択」 `Open Group` は、匿名サイトの訪問者がコンテンツを表示できることを示し、選択を解除しま `Member Only Group`す。
+* **[!UICONTROL グループ]**&#x200B;選択を開く 
+`Open Group` は、匿名サイト訪問者がコンテンツに表示を与える可能性があることを示し、選択が解除され `Member Only Group`ます。
 
-* **[!UICONTROL メンバーのみのグ]**&#x200B;ループ `Member Only Group` の選択は、グループのメンバーのみがコンテンツを表示できることを示し、選択が解除されま `Open Group`す。
+* **[!UICONTROL メンバーのみのグループ]**&#x200B;の選択 
+`Member Only Group` グループのメンバーのみがコンテンツを表示でき、選択を解除 `Open Group`します。
 
 Under the **[!UICONTROL Template]** tab is the ability to select from the list of community group templates that were specified when the groups function was included in the community site&#39;s structure or in a community site template.
 
@@ -73,7 +78,7 @@ Selecting the `Focus Group` link will open the Focus Group page in the browser, 
 
 ## コミュニティグループメンバーのリストコンポーネント {#community-group-member-list-component}
 
-このコン `Community Group Member List` ポーネントは、グループテンプレートの開発者が使用することを目的としています。
+この `Community Group Member List` コンポーネントは、グループテンプレートの開発者が使用することを目的としています。
 
 ## 追加情報 {#additional-information}
 
