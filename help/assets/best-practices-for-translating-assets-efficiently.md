@@ -4,6 +4,9 @@ description: 翻訳された各バージョンを同期し、翻訳ワークフ�
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+workflow-type: tm+mt
+source-wordcount: '501'
+ht-degree: 98%
 
 ---
 
