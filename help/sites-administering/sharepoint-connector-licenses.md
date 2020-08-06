@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 487fc170-3750-49a7-af59-f1cc20d5f528
 translation-type: tm+mt
 source-git-commit: b98e1ec0f4f5bf44e0d91e4eb9b9317523a23938
+workflow-type: tm+mt
+source-wordcount: '378'
+ht-degree: 75%
 
 ---
 
@@ -26,9 +29,9 @@ source-git-commit: b98e1ec0f4f5bf44e0d91e4eb9b9317523a23938
 | ライブラリ | ライセンスタイプ |
 |---|---|
 | 注釈 | [Apache](#apache) |
-| 公理API | [Apache](#apache) |
+| axiom-api | [Apache](#apache) |
 | 公理界 | [Apache](#apache) |
-| 公理公理 | [Apache](#apache) |
+| 公理インプル | [Apache](#apache) |
 | axis2-adb | [Apache](#apache) |
 | axis2-kernel | [Apache](#apache) |
 | Backport-util-concurrent | パブリックドメイン |
@@ -38,18 +41,18 @@ source-git-commit: b98e1ec0f4f5bf44e0d91e4eb9b9317523a23938
 | commons-httpclient | [Apache](#apache) |
 | commons-io | [Apache](#apache) |
 | commons-lang | [Apache](#apache) |
-| 同時 | [同時](#concurrent) （パブリックドメイン） |
-| ジェロニモアクティベーション_1.1_spec | [Apache](#apache) |
+| 同時の | [同時](#concurrent) （パブリックドメイン） |
+| ジェロニモ —アクティベーション_1.1_spec | [Apache](#apache) |
 | ジェロニモ —stax-api_1.0_spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
 | jackrabbit-jcr2spi | [Apache](#apache) |
-| 大成功 | [Apache](#apache) |
-| ジャックラビット・コモンズ | [Apache](#apache) |
-| 大成功 | [Apache](#apache) |
+| ジャックラビット・ジクル・コモンズ | [Apache](#apache) |
+| ジャックラビット・スピ・コモンズ | [Apache](#apache) |
+| ジャックラビット・スピ | [Apache](#apache) |
 | jaxen | BSD |
 | log4j | [Apache](#apache) |
-| ルセン核 | [Apache](#apache) |
-| ニーティ | [Apache](#apache) |
+| ルセンコア | [Apache](#apache) |
+| 新しい | [Apache](#apache) |
 | slf4j-api | [SLF4J.ORG](#slf-j-org) |
 | slf4j-jdk14 | [SLF4J.ORG](#slf-j-org) |
 | stax-api | [Apache](#apache) |
