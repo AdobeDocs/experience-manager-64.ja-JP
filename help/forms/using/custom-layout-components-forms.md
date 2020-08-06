@@ -10,6 +10,9 @@ topic-tags: customization
 discoiquuid: 102718cb-592a-4a5c-89a6-ad4d56f3d547
 translation-type: tm+mt
 source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+workflow-type: tm+mt
+source-wordcount: '285'
+ht-degree: 59%
 
 ---
 
@@ -140,7 +143,7 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
    </div>
    ```
 
-   ファ `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp` イル：
+   ファイル `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp` :
 
    ```
    <%-- jsp governing the navigation part --%>
@@ -169,7 +172,7 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
    </ul>
    ```
 
-   更新 `/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`:
+   更新された内容 `/apps/af-custom-layout/customPanelLayout/panelContainer.jsp`:
 
    ```
    <%-- jsp governing the panel content --%>
@@ -198,7 +201,7 @@ source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
 
 1. オーサリングモードでアダプティブフォームを開きます。定義したパネルレイアウトがパネルレイアウト設定用のリストに追加されます。
 
-   ![カスタムパネルレイアウトを使用したアダプティブフォームのパネルレイアウトリスト](assets/auth-layt.png)![Screen shotに表示するカスタムパネルレイアウトの切り替え機能を示すスクリ](assets/s1.png)![ーンショットスクリーンショット](assets/s2.png)
+   ![カスタムパネルレイアウトが、アダプティブフォームのパネルレイアウトリスト](assets/auth-layt.png)![のスクリーンショットに表示される。カスタムパネルレイアウトの切り替え機能を示すスクリ](assets/s1.png)![ーンショットを使用](assets/s2.png)
 
 カスタムパネルレイアウトとカスタムパネルレイアウトを使用したアダプティブフォームのサンプル ZIP ファイル。
 
