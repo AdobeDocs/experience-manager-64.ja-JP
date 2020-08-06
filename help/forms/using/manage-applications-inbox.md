@@ -33,7 +33,7 @@ Forms 中心のワークフローを起動またはトリガする多くの方�
 
 ## アプリケーションの作成 {#create-application}
 
-1. 次の場所にあるAEMインボックスに移動し `https://[server]:[port]/aem/inbox`ます。
+1. AEM受信トレイ( `https://[server]:[port]/aem/inbox`)に移動
 1. In the Inbox UI, tap **[!UICONTROL Create > Application]**. [アプリの選択]ページが表示されます。
 1. Select an application and click **[!UICONTROL Create]**. アプリケーションに関連するアダプティブフォームが開きます。Fill up the forms and tap **[!UICONTROL Submit]**. 関連するワークフローが起動し、担当者のインボックスにタスクが作成されます。
 
