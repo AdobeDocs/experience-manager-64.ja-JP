@@ -58,7 +58,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 
 >[!NOTE]
 >
->AEM Formsのリリースでは、Flex Workspaceは非推奨です。
+>AEM formsのリリースでは、FlexWorkspaceは非推奨です。
 
 デフォルトでは、AEM forms によって送信される電子メールは Flex Workspace（JEE 上の AEM forms では廃止されています）へのリンクを含みます。AEM forms によって送信される電子メールが AEM Forms Workspace へのリンクを含むように設定できます。Flex Workspace（JEE 上の AEM forms では廃止されています）を上回る AEM Forms Workspace のメリットについて詳しくは、こちらの[記事](/help/forms/using/features-html-workspace-available-flex.md)を参照してください。
 
