@@ -21,7 +21,7 @@ ht-degree: 10%
 
 トランザクションとして計上されるすべてのAPIのリスト
 
-AEM Formsは、フォームの送信、プロセスドキュメント、およびレンダリングドキュメントのためのいくつかのAPIを提供します。 一部のAPIはトランザクションとして計上され、その他のAPIは無料で使用できます。 このドキュメントは、トランザクションレポートでトランザクションとして計上されるすべてのAPIのリストを提供します。 課金対象のAPIが使用される一般的なシナリオを以下に示します。
+AEM Formsは、フォームの送信、プロセスドキュメント、レンダリングドキュメントのためのいくつかのAPIを提供しています。 一部のAPIはトランザクションとして計上され、その他のAPIは無料で使用できます。 このドキュメントは、トランザクションレポートでトランザクションとして計上されるすべてのAPIのリストを提供します。 課金対象のAPIが使用される一般的なシナリオを以下に示します。
 
 * アダプティブフォーム、HTML5フォーム、フォームセットの送信
 * インタラクティブな通信の印刷版またはWeb版のレンダリング
@@ -32,14 +32,14 @@ AEM Formsは、フォームの送信、プロセスドキュメント、およ�
 * AEMワークフローのタスクの割り当て手順とドキュメントサービス手順の使用
 * アダプティブフォーム内でのアダプティブフォームの使用
 
-課金APIは、ページ数、ドキュメントやフォームの長さ、レンダリングされたドキュメントの最終的な形式を考慮しません。 トランザクションレポートでは、トランザクションが次の3つのカテゴリに分割されます。 ドキュメントの処理、ドキュメントのレンダリング、フォームの送信。
+課金APIは、ページ数、ドキュメントやフォームの長さ、レンダリングされたドキュメントの最終的な形式を考慮しません。 トランザクションレポートでは、トランザクションが次の3つのカテゴリに分割されます。 ドキュメントの処理、ドキュメントのレンダリング、Formsの送信。
 
-* **送信済みのフォーム：** AEM Formsで作成された任意の種類のフォームからデータが送信され、そのデータがデータストレージリポジトリまたはデータベースに送信される場合、フォームの送信と見なされます。 例えば、アダプティブフォーム、HTML5フォーム、PDFフォーム、フォームセットの送信は、送信されたフォームと見なされます。 フォームセット内の各フォームは送信と見なされます。 例えば、フォームセットに5つのフォームが含まれる場合、フォームセットが送信されると、トランザクションレポートサービスはフォームセットを5件の送信としてカウントします。
+* **Forms提出：** AEM Formsで作成された任意の種類のフォームからデータが送信され、そのデータが任意のデータストレージリポジトリまたはデータベースに送信される場合、フォーム送信と見なされます。 例えば、アダプティブフォーム、HTML5フォーム、PDF forms、フォームセットの送信は、フォーム送信と見なされます。 フォームセット内の各フォームは送信と見なされます。 例えば、フォームセットに5つのフォームが含まれる場合、フォームセットが送信されると、トランザクションレポートサービスはフォームセットを5件の送信としてカウントします。
 * **レンダリングされたドキュメント:** テンプレートとデータを組み合わせてドキュメントを生成し、ドキュメントに電子署名または認証し、ドキュメントサービスの請求可能なドキュメントサービスAPIを使用したり、ある形式から別の形式にドキュメントを変換したりして、をドキュメントとしてカウントします。
 
 >[!NOTE]
 >
->トランザクションレポートUIに3つのカテゴリが表示されます。 送信されたフォーム、レンダリングされたドキュメント、および処理されたドキュメント。 「レンダリング済み」と「処理済みのドキュメント」の両方が、「レンダリング済みのドキュメント」として計上されます。
+>トランザクションレポートUIに3つのカテゴリが表示されます。 Formsが送信、ドキュメントがレンダリングされ、ドキュメントが処理されました。 「レンダリング済み」と「処理済みのドキュメント」の両方が、「レンダリング済みのドキュメント」として計上されます。
 
 ## 請求対象ドキュメントサービスAPI {#billable-document-services-apis}
 
@@ -209,7 +209,7 @@ AEM Formsは、フォームの送信、プロセスドキュメント、およ�
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/forms/api/FormsService.html#renderPDFForm-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.forms.api.PDFFormRenderOptions-" target="_blank">｢renderPDFForm｣操作</a></td> 
-   <td>XDPテンプレートからPDFフォームをレンダリングします。 XPテンプレートはForms Designerで作成されます。</td> 
+   <td>XDPテンプレートからPDFフォームをレンダリングします。 XPテンプレートは、Formsデザイナで作成されます。</td> 
    <td>処理済みドキュメント</td> 
    <td> </td> 
   </tr>
@@ -290,7 +290,7 @@ AEM Formsは、フォームの送信、プロセスドキュメント、およ�
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-" target="_blank">呼び出し</a></td> 
    <td>指定したDDXドキュメントを実行し、結果のドキュメントを含む <a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html"> AssemblerResult</a> オブジェクトを返します。 </td> 
    <td>処理済みドキュメント</td> 
-   <td>PDF Generator、Forms、Outputの各サービスでサポートされるすべての入力ファイル形式です。Assemblerサービスでは、出力ファイル形式として、これらのすべての形式がサポートされます。 </td> 
+   <td>PDF Generator、Forms、Outputの各サービスでサポートされるすべての入力ファイル形式で、Assemblerサービスは、出力ファイル形式としてこれらのすべての形式をサポートします。 </td> 
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#toPDFA-com.adobe.aemfd.docmanager.Document-com.adobe.fd.assembler.client.PDFAConversionOptionSpec-" target="_blank">toPDFA</a></td> 
@@ -350,7 +350,7 @@ AEM Formsは、フォームの送信、プロセスドキュメント、およ�
 
 ## 請求対象データ取得API {#billable-data-capture-apis}
 
-アダプティブフォーム、HTML5フォーム、フォームセットの送信イベントはすべてトランザクションと見なされます。 デフォルトでは、PDFフォームの送信はトランザクションとして考慮されません。 提供されている [トランザクションレポートAPI](https://www.bdnsw.gov.bn/PublishingImages/page-under-construction.jpg) 。トランザクションとしてPDFフォーム送信を記録します。
+アダプティブフォーム、HTML5Forms、フォームセットの送信イベントはすべて、トランザクションと見なされます。 デフォルトでは、PDFフォームの送信はトランザクションとして考慮されません。 提供された [トランザクションレポートAPI](https://www.bdnsw.gov.bn/PublishingImages/page-under-construction.jpg) 。トランザクションとしてのPDF forms送信を記録します。
 
 ### アダプティブフォーム {#adaptive-forms}
 
@@ -411,7 +411,7 @@ AEM Formsは、フォームの送信、プロセスドキュメント、およ�
    <td>
     <ul> 
      <li>アダプティブフォーム（アダプティブフォームフォームセット）内でアダプティブフォームを使用すると、単一のトランザクションのみが考慮されます。 アダプティブフォーム内には、任意の数のアダプティブフォームを含めることができます。</li> 
-     <li>HTML5フォームフォームセット内のすべてのフォームは、別々のトランザクションとしてアカウントされます。 </li> 
+     <li>HTML5Formsフォームセット内のすべてのフォームは、個別のトランザクションとしてアカウントされます。 </li> 
     </ul> </td> 
   </tr>
  </tbody>
@@ -419,7 +419,7 @@ AEM Formsは、フォームの送信、プロセスドキュメント、およ�
 
 ## OSGi APIに関する請求対象となるインタラクティブコミュニケーションおよびフォーム中心のAEMワークフロー {#billable-interactive-communication-and-form-centric-aem-workflows-on-osgi-apis}
 
-OSGi上のフォーム中心のAEMワークフローのタスクおよびドキュメントサービスの手順を割り当て、インタラクティブ通信のすべてのレンディションを割り当て、トランザクションと見なします。 オーサーインスタンスでインタラクティブな通信をプレビューし、エージェントUIを使用してパブリッシュインスタンスでプレビューする場合、トランザクションとして考慮されません。 ワークフローステップでトランザクションが計算され、ワークフローの完了に失敗した場合、トランザクション数は取り消されません。
+OSGi上でフォーム中心のAEMワークフローのタスクおよびドキュメントサービスの手順を割り当て、インタラクティブ通信のすべてのレンディションを割り当て、トランザクションと見なします。 オーサーインスタンスでインタラクティブな通信をプレビューし、エージェントUIを使用してパブリッシュインスタンスでプレビューする場合、トランザクションとして考慮されません。 ワークフローステップでトランザクションが計算され、ワークフローの完了に失敗した場合、トランザクション数は取り消されません。
 
 ### インタラクティブ通信 - Web チャネル {#interactive-communication-web-channel}
 
@@ -494,7 +494,7 @@ OSGi上のフォーム中心のAEMワークフローのタスクおよびドキ�
 
 ## 請求可能なAPIをカスタムコードのトランザクションとして記録する {#recording-billable-apis-as-transactions-for-custom-code}
 
-PDFフォームの送信、エージェントUIを使用した対話型通信のプレビュー、非標準フォームの送信、カスタム実装などのアクションは、トランザクションとして考慮されません。 AEM Formsは、トランザクションなどのアクションを記録するAPIを提供します。 カスタム実装からAPIを呼び出して、トランザクションを [記録できます](https://www.bdnsw.gov.bn/PublishingImages/page-under-construction.jpg)。
+PDFフォームの送信、エージェントUIを使用した対話型通信のプレビュー、非標準フォームの送信、カスタム実装などのアクションは、トランザクションとして考慮されません。 AEM Formsは、トランザクションなどのアクションを記録するAPIを提供しています。 カスタム実装からAPIを呼び出して、トランザクションを [記録できます](https://www.bdnsw.gov.bn/PublishingImages/page-under-construction.jpg)。
 
 ## 関連記事 {#related-articles}
 
