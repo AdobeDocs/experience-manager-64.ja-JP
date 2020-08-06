@@ -75,7 +75,7 @@ AEM をインストールしたら、ようこそページで CRXDE Lite のリ�
 
 CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーション構造を作成します。
 
-1. CRXDE Liteの左側のツリーで、フォルダーを右クリックし、 **`/apps`****[!UICONTROL 作成/フォルダーを作成をクリックします]**。 [ **フォルダの** 作成 `mywebsite` ]ダイアログで、フォルダ名 **として入力し、[!UICONTROL OK**]をクリックします。
+1. フォルダーの左側のツリーで、CRXDE Liteーを右クリックし、 **`/apps`****[!UICONTROL 作成/フォルダーを作成をクリックします]**。 [ **フォルダの** 作成 `mywebsite` ]ダイアログで、フォルダ名 **として入力し、[!UICONTROL OK**]をクリックします。
 1. Right-click the `/apps/mywebsite` folder and click **[!UICONTROL Create > Create Folder]**. フォルダの **[!UICONTROL 作成]** ダイアログで、フォルダ名 `components` としてと入力し、「 **[!UICONTROL OK]**」をクリックします。
 1. Right-click the `/apps/mywebsite` folder and click **[!UICONTROL Create > Create Folder]**. フォルダの **[!UICONTROL 作成]** ダイアログで、フォルダ名 `templates` としてと入力し、「 **[!UICONTROL OK]**」をクリックします。
 
@@ -177,7 +177,7 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
 contentpage.jsp スクリプトにコードを追加してページコンテンツを定義します。
 
-1. CRXDE Liteで、ファイルをで開き `contentpage.jsp` ま `/apps/mywebsite/components/contentpage`す。 ファイルにはデフォルトで次のコードが含まれています。
+1. CRXDE Liteで、ファイルを開 `contentpage.jsp` き `/apps/mywebsite/components/contentpage`ます。 ファイルにはデフォルトで次のコードが含まれています。
 
    ```java
    <%--
@@ -260,7 +260,7 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
 
    ![chlimage_1-111](assets/chlimage_1-111.png)
 
-1. ページをMyWebサイトデザインにリンクするには、CRXDE Liteでノードを選択し `/content/mywebsite/en/jcr:content` ます。 「 **[!UICONTROL プロパティ]** 」タブで、新しいプロパティに次の値を入力し、クリックし追加ます。
+1. ページをmywebサイトデザインにリンクするには、CRXDE Liteで `/content/mywebsite/en/jcr:content` ノードを選択します。 「 **[!UICONTROL プロパティ]** 」タブで、新しいプロパティに次の値を入力し、クリックし追加ます。
 
    * **[!UICONTROL 名前]**: cq:designPath
    * **[!UICONTROL 種類]**：string
@@ -282,7 +282,7 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
 
 #### 基盤ページスクリプトの使用 {#using-the-foundation-page-scripts}
 
-この練習では、pagecontentコンポーネントを設定して、そのスーパータイプがAEM Pageコンポーネントになるようにします。 コンポーネントはスーパータイプの機能を継承するので、ページコンテンツはページコンポーネントのスクリプトとプロパティを継承します。
+この練習では、pagecontentコンポーネントを設定して、スーパータイプがAEM Pageコンポーネントになるようにします。 コンポーネントはスーパータイプの機能を継承するので、ページコンテンツはページコンポーネントのスクリプトとプロパティを継承します。
 
 例えば、自分のコンポーネントの JSP コード内で、スーパータイプコンポーネントによって提供されているスクリプトを、自分のコンポーネントに含まれているかのように参照できます。
 
@@ -1002,7 +1002,7 @@ public class img_GET extends AbstractImageServlet {
 
 #### contentpage コンポーネントへのロゴコンポーネントの追加 {#adding-the-logo-component-to-the-contentpage-component}
 
-1. CRXDE Liteで、下のを開き、次のコード行 `left.jsp` を探 `/apps/mywebsite/components/contentpage file` します。
+1. CRXDE Liteで、の下のを開き、次のコ `left.jsp` ード行 `/apps/mywebsite/components/contentpage file` を探します。
 
    ```xml
    <div>logo</div>
@@ -1235,7 +1235,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
    <cq:include path="toolbar" resourceType="foundation/components/toolbar"/>
    ```
 
-1. AEM Webサイトページのフォルダーツリーでを選択し、 `Websites/My Website/English`新規/新規ページをクリックします ****。 次のプロパティ値を指定し、「作成」をクリックします。
+1. AEM Webサイトページのフォルダーツリーで、を選択し `Websites/My Website/English`、 **[!UICONTROL 新規/新規ページをクリックします]**。 次のプロパティ値を指定し、「作成」をクリックします。
 
    * **[!UICONTROL タイトル]**: ツールバー
    * Select **[!UICONTROL My Website Content Page Template]**
