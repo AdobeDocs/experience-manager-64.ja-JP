@@ -10,6 +10,9 @@ topic-tags: forms-manager
 discoiquuid: 28549db2-e2f2-4a25-b0b1-785237d9d941
 translation-type: tm+mt
 source-git-commit: 835618e8e0d01905ad7b476b0172dfecec41cf9d
+workflow-type: tm+mt
+source-wordcount: '1995'
+ht-degree: 87%
 
 ---
 
@@ -61,7 +64,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
    <td>フォームの説明。 ユーザーはこの値を指定できます。<br /> </td> 
   </tr> 
   <tr> 
-   <td>タイプ</td> 
+   <td>型</td> 
    <td>すべての </td> 
    <td><p>アセットのタイプを指定する読み取り専用の値です。次のいずれかの値になります。</p> 
     <ul> 
@@ -69,7 +72,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
      <li>PDF フォーム、PDF フォーム（Acroform）、または PDF フォーム（署名済み）</li> 
      <li>ドキュメント、ドキュメント（署名付き）</li> 
      <li>アダプティブフォーム</li> 
-     <li>リソース</li> 
+     <li>Resource</li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -87,14 +90,14 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
    <td>リソース以外のすべて</td> 
    <td><p>フォームタイプに基づいて自動で算出される読み取り専用の値です。</p> 
     <ul> 
-     <li>PDF/フォームテンプレート/ドキュメント — アップロードされたバイナリファイルから取得されました。</li> 
+     <li>PDF/フォームテンプレート/ドキュメント — アップロードされたバイナリファイルから取得しました。</li> 
      <li>アダプティブフォーム — フォーム作成時にログインしたユーザー。</li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td>ステータス</td> 
    <td>リソース以外のすべて</td> 
-   <td><p> フォームの次のいずれかの状態を定義する読み取り専用の値です。</p> 
+   <td><p> 次のフォームの状態のいずれかを定義する読み取り専用の値です。</p> 
     <ul> 
      <li>値なし：フォームが一度も発行されていない場合。</li> 
      <li>発行済み：フォームが発行されたとき。</li> 
@@ -147,7 +150,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
   </tr> 
   <tr> 
    <td>参照</td> 
-   <td><p>アダプティブフォーム</p> <p>フォームテンプレート</p> <p>リソース</p> </td> 
+   <td><p>アダプティブフォーム</p> <p>フォームテンプレート</p> <p>Resource</p> </td> 
    <td><p>このフォームが関連付けられているアセット（その他のフォームまたはリソース）のリストです。これらのアセットは、次の 2 つに分類されます。</p> 
     <ul> 
      <li>参照先：現在のフォームが参照しているアセット。</li> 
@@ -178,7 +181,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
 
 1. 次のいずれかの方法を使用してプロパティページを開きます。
 
-   1. クイックアクショ ![ンの「プロパティを表示」(View Properties)](assets/e_reviewmode_properties_n.png) e_reviewmode_properties_n(e_reviewmode_properties_n)アイコンをクリックします。
+   1. クイックアクションの表示プロパティ ![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png) アイコンをクリックします。
 
       >[!NOTE]
       >
@@ -191,12 +194,13 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
 
    プロパティページには、2 つのアクションアイコンが表示されるツールバーがあります。
 
-   * 編集：aem6forms ![_edit](assets/aem6forms_edit.png) メタデータプロパティの値の編集
+   * 編集： ![aem6forms_edit](assets/aem6forms_edit.png) メタデータプロパティの値の編集
    * View: ![aem6forms_eye_viewon](assets/aem6forms_eye_viewon.png) Navigate to the form details page, which opens the form in the preview mode.
+
    コンテンツ部分は 2 つのパートに分かれています。
 
    * 左のパネルにはフォームのサムネールが含まれます
-   * 右パネルには、様々なタブに配布される、読み取り専用モードのメタデータプロパティが含まれます。
+   * 右のパネルには、様々なタブに配布される、読み取り専用モードのメタデータプロパティが含まれます。
 
 
 ## Add/update form metadata values {#add-update-form-metadata-values-nbsp}
@@ -219,6 +223,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
 
    * Cancel: ![aem6forms_close](assets/aem6forms_close.svg_w24.png) Cancel any changes made to metadata property values so far
    * Done: ![aem6forms_check](assets/aem6forms_check.png) Save all the changes made to metadata property values so far
+
    どちらのアクションでも、更新済みの値を含むプロパティページを読み取り専用モードに戻すようユーザーは指示されます。
 
 ### フォームサムネイルの更新 {#update-the-form-thumbnail-nbsp}
@@ -233,6 +238,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
 >
 >* サムネイルには四角形の画像を使用します。四角形以外の画像を使用し、サムネイルを一覧表示で表示すると、サムネイルはクリップされて表示されます。
 >* 新しい画像がアップロードまたは生成されると、サムネイルはこの画像に置き換えられ、以前の画像にリセットすることはできません。
+
 >
 
 
