@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: eb72f934-4b0f-4a71-b2a2-3ddf78db8c3c
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '1771'
+ht-degree: 94%
 
 ---
 
@@ -19,8 +22,8 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 >[!NOTE]
 >
->アドビでは、AEM SMTPサービスから送信されるオープン/バウンス電子メールの機能強化を今後進める予定はありません。\
->推奨事項は、Adobe CampaignとAEM [の統合を活用することです](/help/sites-administering/campaign.md)。
+>Adobeは、AEM SMTPサービスから送信される、開いている電子メールやバウンスしている電子メールをさらに拡張する予定はありません。\
+>Adobe CampaignとAEM統合の [活用を推奨](/help/sites-administering/campaign.md)。
 
 電子メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成できるだけでなく、ニュースレターに固有の新しいコンテンツを追加できます。
 
@@ -87,7 +90,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    * **説明**
 
-      ニュースレターの説明。
+      ニュースレターの説明です。
 
    * **オンタイム**
 
@@ -193,6 +196,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
    1. 必要に応じて電子メールの「**件名**」を変更します。
    1. ドロップダウンリストから「**デフォルトの受信者リスト**」を選択します。
    1. 「**OK**」をクリックします。
+
    ニュースレターのテストまたは送信をおこなうと、受信者は、指定された電子メールアドレスと件名が使用された電子メールを受信します。
 
 ## ニュースレターのフライトテスト {#flight-testing-newsletters}
