@@ -1,6 +1,6 @@
 ---
-title: 起動の概要
-seo-title: 起動の概要
+title: 起動回数の概要
+seo-title: 起動回数の概要
 description: ローンチを使用すると、今後のリリース用にコンテンツを効率的に開発できます。現在のページを維持しながら、今後のパブリケーションに合わせて変更を加えることができます。
 seo-description: ローンチを使用すると、今後のリリース用にコンテンツを効率的に開発できます。現在のページを維持しながら、今後のパブリケーションに合わせて変更を加えることができます。
 uuid: ff6a2898-7a77-4315-bb1f-efa9caa5f3b2
@@ -11,11 +11,14 @@ topic-tags: site-features
 discoiquuid: a7ec190d-056e-4fc9-8f2d-f4164273674d
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '840'
+ht-degree: 99%
 
 ---
 
 
-# 起動の概要{#launches}
+# 起動回数の概要{#launches}
 
 ローンチを使用すると、今後のリリース用にコンテンツを効率的に開発できます。
 
@@ -60,7 +63,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 * ローンチの設定を編集できます。
 
    * ローンチに対してページやブランチを追加または削除できます。
-   * 「**タイトル**」、「**ローンチ日**」、「**実稼働準備完了**」フラグなどのローンチプロパティを編集します。
+   * 「**タイトル**」、「**ローンチ日**」、「**実稼動準備完了**」フラグなどのローンチプロパティを編集します。
 
 * コンテンツは手動または自動で昇格して公開できます。
 
@@ -82,12 +85,14 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
    * ソースページに対する変更は、ローンチコピーに自動的に反映されます（ライブコピーなど、継承するように設定されている場合）。
    * ローンチコピーに対する変更は、ソースコピーの自動更新を中断することなくおこなうことができます。
+
    ![chlimage_1-234](assets/chlimage_1-234.png)
 
 * [ネストされたローンチ（ローンチ内にローンチ）を作成](/help/sites-authoring/launches-creating.md#creating-a-nested-launch)できます。
 
    * ソースは既存のローンチです。
    * 任意のターゲットに[ネストされたローンチを昇格](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch)させることができます。親ローンチやトップレベルのソースページ（実稼動）も指定できます。
+
    ![chlimage_1-235](assets/chlimage_1-235.png)
 
    >[!CAUTION]
@@ -96,7 +101,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 >[!NOTE]
 >
->Creating and editing launches requires access rights to `/content/launches` - as with the default group `content-authors`.
+>ローンチを作成および編集するには、デフォルトグループ `content-authors` と同様に、`/content/launches` へのアクセス権限が必要です。
 >
 >問題が発生している場合は、システム管理者にお問い合わせください。
 
@@ -106,7 +111,7 @@ source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 
 * **ツール**&#x200B;コンソールで、**ツール**／**サイト**／**ローンチ**&#x200B;と選択します。
 
-* または、[http://localhost:4502/libs/launches/content/launches.html](http://localhost:4502/libs/launches/content/launches.html) に直接アクセスします。
+* または、[ に直接アクセスします。http://localhost:4502/libs/launches/content/launches.html](http://localhost:4502/libs/launches/content/launches.html)
 
 ## 「参照」のローンチ（サイトコンソール）{#launches-in-references-sites-console}
 
