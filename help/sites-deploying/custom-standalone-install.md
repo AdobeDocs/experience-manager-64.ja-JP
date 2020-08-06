@@ -11,6 +11,9 @@ topic-tags: deploying
 discoiquuid: c9e51008-6009-49a2-9c74-1c610cef2e7f
 translation-type: tm+mt
 source-git-commit: b7e5c42009acb5044d1112e66b8e65b528355736
+workflow-type: tm+mt
+source-wordcount: '1523'
+ht-degree: 69%
 
 ---
 
@@ -39,6 +42,7 @@ You can also set the port number by renaming the quickstart jar file, so that th
 >* ダッシュの後にこれらの数字を指定する
 >* if there are any other digits in the filename, then the port number must be prefixed with `-p`
 >* ファイル名の先頭のプレフィックス「cq5」は無視される
+
 >
 
 
@@ -58,7 +62,7 @@ You can also set the port number by renaming the quickstart jar file, so that th
 By default the folder `crx-quickstart/install` is watched for files.\
 このフォルダーは存在しませんが、実行時に作成できます。
 
-バンドル、設定、またはコンテンツパッケージがこのディレクトリに配置されると、自動的に取得され、インストールされます。削除すると、アンインストールされます。\
+バンドル、設定、またはコンテンツパッケージがこのディレクトリに配置されると、自動的に取得されてインストールされます。 削除すると、アンインストールされます。\
 これは、バンドル、コンテンツパッケージまたは設定をリポジトリに追加するためのもう 1 つの方法です。
 
 この方法は次に示すいくつかの事例で特に有効です。
@@ -82,11 +86,12 @@ By default the folder `crx-quickstart/install` is watched for files.\
 AEM を Windows サービスとしてインストールして起動するには：
 
 1. crx-quickstart\opt\helpers\instsrv.bat ファイルをテキストエディターで開きます。
-1. 64ビットWindowsサーバーを設定する場合は、オペレーティングシステムに応じて、prunsrvのすべてのインスタンスを次のいずれかのコマンドに置き換えます。
+1. 64ビットWindowsサーバーを設定する場合は、prunsrvのすべてのインスタンスを、オペレーティングシステムに応じて、次のいずれかのコマンドに置き換えます。
 
    * prunsrv_amd64
    * prunsrv_ia64
-   このコマンドは、Windowsサービスデーモンを32ビットJavaではなく64ビットJavaで起動する適切なスクリプトを呼び出します。
+
+   このコマンドは、32ビットJavaではなく64ビットJavaのWindowsサービスデーモンを開始する適切なスクリプトを呼び出します。
 
 1. プロセスが複数のプロセスに分岐しないようにするには、最大ヒープサイズと PermGen JVM パラメーターの値を増やします。Locate the `set jvm_options` command and set the value as follows:
 
@@ -96,17 +101,19 @@ AEM を Windows サービスとしてインストールして起動するには�
 
    `instsrv.bat cq5`
 
-   サービスが作成されたことを確認するには、[管理ツール]コントロールパネルの[サービス]を開くか、コマンドプロンプト `start services.msc` にと入力します。 cq5サービスがリストに表示されます。
+   サービスが作成されたことを確認するには、[管理ツール]コントロールパネルで[サービス]を開くか、コマンドプロンプト `start services.msc` でと入力します。 cq5サービスがリストに表示されます。
 
 1. 次のいずれかの方法でサービスを起動します。
 
    * コントロールパネルの「サービス」で、「cq5」をクリックして、「開始」をクリックします。
+
    ![chlimage_1-71](assets/chlimage_1-71.png)
 
    * コマンドラインで、&quot;net start cq5&quot; と入力します。
+
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
-1. Windowsは、サービスが実行中であることを示します。AEMが起動し、Prunsrv実行可能ファイルがTask Managerに表示されます。 Webブラウザーで、例えばAEMの使用を開始する場合は、AEM `http://localhost:4502` に移動します。
+1. Windowsは、サービスが実行中であることを示します。 AEM開始とprunsrv実行可能ファイルがタスクマネージャーに表示されます。 Webブラウザーで、AEM(AEMを使用している開始など)に移動 `http://localhost:4502` します。
 
    ![chlimage_1-73](assets/chlimage_1-73.png)
 
@@ -135,7 +142,7 @@ If you want to change the location of the temporary folder (for example, if you 
 
 ## クイックスタートファイルから使用可能なその他のオプション {#further-options-available-from-the-quickstart-file}
 
-その他のオプションや名前の変更規則については、-helpオプションから利用できるQuickstartヘルプファイルで説明しています。ヘルプにアクセスするには、次のように入力します。
+その他のオプションや名前の変更規則については、クイックスタートヘルプファイルを参照してください。このファイルは —helpオプションから利用できます。 ヘルプにアクセスするには、次のように入力します。
 
 * `java -jar cq5-<version>.jar -help`
 
@@ -276,13 +283,11 @@ EC2 環境にパブリッシュインスタンスをインストールする前�
 
 * `http://localhost:8080/crx/de`
 
-   
-CRXDE Liteコンソール。
+   CRXDE Liteコンソール。
 
 * `http://localhost:8080/system/console`
 
-   
-Webコンソール
+   Webコンソール
 
 ## インストール後のアクション {#actions-after-installation}
 
@@ -313,7 +318,7 @@ To open CRXDE Lite you can select **CRXDE Lite** from the welcome screen or use 
 
 ### Accessing the Web Console {#accessing-the-web-console}
 
-Adobe CQ webコンソールにアクセスするには、スタートアップスクリ **ーンから「** OSGi Console」を選択するか、ブラウザーを使用して
+Adobe CQのWebコンソールにアクセスするには、ようこそ画面から **OSGiコンソール** を選択するか、ブラウザを使用して
 
 ```
  https://<<i>host</i>>:<<i>port</i>>/system/console
@@ -321,7 +326,7 @@ Adobe CQ webコンソールにアクセスするには、スタートアップ�
 
 次に例を示します。\
 `http://localhost:4502/system/console`\
-またはバンドルページの\
+またはBundlesページ用\
 `http://localhost:4502/system/console/bundles`
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
