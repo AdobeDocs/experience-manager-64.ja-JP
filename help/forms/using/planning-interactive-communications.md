@@ -135,7 +135,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
      <li>日付</li> 
      <li>時刻</li> 
      <li>数値</li> 
-     <li>デュレーション (ms)</li> 
+     <li>デュレーション</li> 
      <li>料金</li> 
     </ul> </td> 
    <td><p>すべての値</p> <p>テーブル - 通話</p> </td> 
