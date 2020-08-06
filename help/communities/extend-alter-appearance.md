@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 70be208d-185b-4b27-8e01-74e62f656344
 translation-type: tm+mt
 source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 78%
 
 ---
 
@@ -31,7 +34,7 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
 
 * Open [/apps/custom/components/comments/comment/comment.hbs](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
-   * コメント投稿用のアバターを含むタグをコメントアウトします（～行21）。
+   * コメント投稿のアバターを含むタグをコメントアウトします（～行21）。
 
       ```
       <!--
@@ -61,9 +64,9 @@ source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
 
    * Select **[!UICONTROL Tools > Operations > Replication]**
    *  `Activate Tree`
-   * 設定 `Start Path`:to `/apps/custom`
+   * 設定 `Start Path`: to `/apps/custom`
    * Uncheck `Only Modified`
-   * 選択ボ `Activate` タン
+   * 選択 `Activate` ボタン
 
 ## 公開済みサンプルページでの変更されたコメントの表示 {#view-modified-comment-on-published-sample-page}
 
