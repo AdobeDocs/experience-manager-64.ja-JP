@@ -2,7 +2,7 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: admin-user
-user-guide-title: AEM 6.4管理ユーザーガイド
+user-guide-title: AEM 6.4 Administering User Guide
 user-guide-description: Learn about administering AEM.
 translation-type: tm+mt
 source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
