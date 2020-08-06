@@ -11,6 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: fad65765-d56d-4a9f-82d5-bcceb1758953
 translation-type: tm+mt
 source-git-commit: 39e579a6a295324af35a2c811ec3acc9c621160b
+workflow-type: tm+mt
+source-wordcount: '1886'
+ht-degree: 95%
 
 ---
 
@@ -105,7 +108,7 @@ AEM Forms に送信して処理するドキュメントのサイズがデフォ�
 
    >[!NOTE]
    >
-   >JEE上のAEM Forms環境とOSGi上のAEM FormsにJEE上のAEM Formsバンドルに含まれているAEM Forms環境では、ドキュメントの最大インラインサイズプロパティの値が同じである必要があります。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
+   >JEE環境上のAEM FormsとJEE環境上のAEM Formsバンドル上のOSGiのAEM Formsでは、ドキュメントの最大インラインサイズプロパティの値を同じにする必要があります。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
 
 1. 次のシステムプロパティでアプリケーションサーバーを再起動します。
 
