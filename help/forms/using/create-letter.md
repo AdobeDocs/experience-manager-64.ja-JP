@@ -370,10 +370,10 @@ Correspondence Management でレターテンプレートを作成したら、エ
   <tr> 
    <td> </td> 
    <td><strong>リテラル</strong></td> 
-   <td><strong>アセットの</strong></td> 
+   <td><strong>Asset</strong></td> 
    <td><strong>データディクショナリ</strong></td> 
    <td><strong>大文字と小文字を</strong></td> 
-   <td><strong>ユーザー</strong></td> 
+   <td><strong>User</strong></td> 
    <td><strong>フィールド</strong></td> 
    <td><strong>変数</strong></td> 
   </tr> 
