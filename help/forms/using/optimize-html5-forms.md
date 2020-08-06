@@ -10,6 +10,9 @@ topic-tags: hTML5_forms
 discoiquuid: bdb9edc2-6a37-4d3f-97d5-0fc5664316be
 translation-type: tm+mt
 source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 89%
 
 ---
 
@@ -20,7 +23,7 @@ HTML5 フォームは、フォームを HTML5 形式でレンダリングしま�
 
 この記事は JBoss で、Apache Web Server 2.0 32 ビットの圧縮を有効にするために必要な手順を説明します。
 
-*注意：次の手順は、Apache Web Server 2.0 32ビット以外のサーバーには適用されません。*
+*注意： 次の手順は、Apache Web Server 2.0 32ビット以外のサーバーには適用されません。*
 
 オペレーティングシステムに適した Apache Web サーバーソフトウェアを入手します。
 
