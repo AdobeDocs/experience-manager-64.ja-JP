@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 7185fb13-46a2-4fa3-aa21-a51e63cdb9be
 translation-type: tm+mt
 source-git-commit: 44c56ec5de6e9a832aaa52ab4a6c4978af7a9865
+workflow-type: tm+mt
+source-wordcount: '395'
+ht-degree: 70%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 44c56ec5de6e9a832aaa52ab4a6c4978af7a9865
 
 デフォルトのコメントのスタイルと機能に必要なクライアントライブラリは、拡張されたコメントにも必要です。
 
-The [Community Components Guide](components-guide.md) identifies the required client libraries. コンポーネントガイドを参照し、次に示すようにコメントコンポーネントを表示します。
+The [Community Components Guide](components-guide.md) identifies the required client libraries. コンポーネントガイドを参照し、コメントコンポーネントの表示を表示します。例：
 
 [http://localhost:4502/content/community-components/en/comments.html](http://localhost:4502/content/community-components/en/comments.html)
 
