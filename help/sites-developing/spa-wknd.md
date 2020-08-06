@@ -24,9 +24,9 @@ SPAの開発に没頭し、プロジェクトの設定、コンポーネント�
 
 ## チュートリアル {#tutorials}
 
-AEMでのプロジェクトの設定からアプリケーションルーティングを介した編集が可能な、独自のシングルページアプリの作成のエンドツーエンドの例については、「WKND SPAチュートリアル」を参照してください。
+AEMで編集可能な、アプリケーションルーティングを介したプロジェクト設定から開始する独自のシングルページアプリケーションの構築のエンドツーエンドの例については、WKND SPATutorialsを参照してください。
 
-* [AEM SPA EditorとAngularの使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+* [AEM SPAエディタとAngularの使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
 * [AEM SPA EditorとReactの使い始めに](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
 
-ただし、AEM用の独自のSPAプロジェクトを開始する前に、必ずAEM [ドキュメント用のSPAの](/help/sites-developing/spa-architecture.md) 開発に関する情報も確認してください。
+ただし、AEM向けの独自のSPAプロジェクトを開始する前に、AEM [ドキュメント用のSPAの](/help/sites-developing/spa-architecture.md) 開発も必ず確認してください。
