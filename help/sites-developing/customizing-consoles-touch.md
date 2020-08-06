@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 221ed05b-855d-4dc2-9df6-12fdeabb157a
 translation-type: tm+mt
 source-git-commit: 1dc15f323dc30d5730e2af6c0e762d623523870d
+workflow-type: tm+mt
+source-wordcount: '702'
+ht-degree: 77%
 
 ---
 
@@ -25,7 +28,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 * Clientlibs
 
-   clientlibsを使用すると、デフォルトの実装を拡張して、標準の関数、オブジェクトおよびメソッドを再利用しながら、新しい機能を実現できます。 When customizing, you can create your own clientlib under `/apps.` For example it can hold the code required for your custom component.
+   clientlibを使用すると、デフォルトの実装を拡張して、標準の関数、オブジェクト、メソッドを再利用しながら新しい機能を実現できます。 When customizing, you can create your own clientlib under `/apps.` For example it can hold the code required for your custom component.
 
 * オーバーレイ
 
@@ -39,23 +42,25 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >
 >* [クライアントライブラリ](/help/sites-developing/clientlibs.md)の使用と作成
 >* [オーバーレイ](/help/sites-developing/overlays.md)の使用と作成
->* [Granite](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)
+>* [Granite](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)
+
 >
 >
 このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html) でも説明しています。
 
 >[!CAUTION]
 >
->You ***must*** not change anything in the `/libs` path.
+>`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
 >
->This is because the content of `/libs` is overwritten the next time you upgrade your instance (and may well be overwritten when you apply either a hotfix or feature pack).
+>`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
 >1. Recreate the required item (i.e. as it exists in `/libs`) under `/apps`
    >
    >
-1. Make any changes within `/apps`
+1. `/apps` 内で変更作業をおこないます。
+
 >
 
 
@@ -93,7 +98,7 @@ For example, the following locations within the `/libs` structure can be overlai
 -->
 >[!NOTE]
 >
->ヒントおよびツールについて詳しくは、ナレッジベースの記事「[Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)」を参照してください。
+>ヒントおよびツールについて詳しくは、ナレッジベースの記事「[Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/jp/experience-manager/kb/troubleshooting-aem-touchui-issues.html)」を参照してください。
 
 <!-- Needs a review by Engineering -->
 <!--
@@ -192,7 +197,7 @@ You can find the code of this page on GitHub
 
    先頭のエントリがデフォルトになります。
 
-   使用可能なノードは、使用可能な表示オプションに関連しています。
+   使用できるノードは、使用できる表示オプションに関連しています。
 
    * `column`
    * `card`
@@ -204,8 +209,8 @@ You can find the code of this page on GitHub
 
    次のプロパティを定義します。
 
-   * **名前**: `sling:orderBefore`
-   * **タイプ**: `String`
+   * **名前**：`sling:orderBefore`
+   * **型**：`String`
    * **値**: `column`
 
 <!-- Needs a review by Engineering -->
