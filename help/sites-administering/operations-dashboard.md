@@ -108,12 +108,13 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
    * **名前:** `sling:resourceType`
 
-      * **型:** `String`
+      * **型：**`String`
       * **値:** `granite/operations/components/mbean`
    * **名前:** `resource`
 
-      * **型:** `String`
+      * **型：**`String`
       * **値:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
+
    >[!NOTE]
    >
    >The resource path above is created as follows: if the mbean name of your Health Check is &quot;test&quot;, add &quot;test&quot; to the end of the path `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck`
@@ -153,6 +154,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    * **Tags（hc.tags）：**&#x200B;このヘルスチェックのタグ。この複合ヘルスチェックを別の複合ヘルスチェックの一部とする場合（ヘルスチェックの階層内など）は、この複合が関連付けられているタグを追加します。
    * **MBean Name（hc.mbean.name）：**&#x200B;この複合ヘルスチェックの JMX MBean に付けられる Mbean の名前。
    * **Filter Tags（filter.tags）：**&#x200B;これは複合ヘルスチェック専用のプロパティです。複合が集約するタグを指定します。複合ヘルスチェックは、そのグループの下に、この複合のいずれかのフィルタータグに一致するタグを持つすべてのヘルスチェックを集約します。例えば、**test** および **check** というフィルタータグを持つ複合ヘルスチェックは、タグプロパティ（**）に** test **タグと** check`hc.tags` タグのいずれかが含まれているすべての個別および複合ヘルスチェックを集約します。
+
    >[!NOTE]
    >
    >Apache Sling 複合ヘルスチェックの新しい設定ごとに、新しい JMX Mbean が 1 つずつ作成されます。**
@@ -163,17 +165,19 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
    * **名前:** `Composite Health Check`
 
-      * **型:** `nt:unstructured`
+      * **型：**`nt:unstructured`
+
    次のようにプロパティを定義します。
 
    * **名前:** `sling:resourceType`
 
-      * **型:** `String`
+      * **型：**`String`
       * **値:** `granite/operations/components/mbean`
    * **名前:** `resource`
 
-      * **型:** `String`
+      * **型：**`String`
       * **値:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
+
    >[!NOTE]
    >
    >既にデフォルトでダッシュボードに存在する複合チェックに論理的に属する個別ヘルスチェックを作成する場合、ヘルスチェックは自動的にキャプチャされ、各複合チェックの下にグループ化されます。このため、これらのチェック用に新しい設定ノードを作成する必要はありません。
@@ -339,6 +343,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    1. 左側のウィンドウで、「**Advanced Configuration**」の下の「**Core Config Manager**」をクリックします。
    1. Press the **Hosts** link under the **Monitoring** section.
    1. ホスト定義を追加します。
+
    ![chlimage_1-416](assets/chlimage_1-416.png)
 
    以下は、Nagios Core を使用している場合のホスト設定ファイルの例です。
@@ -434,7 +439,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 >[!NOTE]
 >
->**AEM 6.4**&#x200B;では、メンテナンスタスクは、INFOレベルでより詳細な情報を豊富な形式で初期設定の状態でログアウトされます。 これにより、メンテナンスタスクの状態がよりわかりやすくなっています。
+>**AEM 6.4**&#x200B;では、メンテナンスタスクはINFOレベルでより詳細な情報を豊富な形式で初期状態でログアウトされます。 これにより、メンテナンスタスクの状態がよりわかりやすくなっています。
 >
 >メンテナンスタスクのアクティビティを監視し、対処するためにサードパーティツール（Splunk など）を使用している場合、次のログステートメントを使用できます。
 
@@ -573,7 +578,7 @@ Lucene バイナリクリーンアップタスクを使用することで、Luce
 メンテナンスタスクは Lucene に関連したリビジョンガベージを減らすために開発されましたが、このタスクを実行すると、次のように全般的に効率が向上します。
 
 * データストアのガベージコレクションタスクの毎週の実行は、より迅速に完了します。
-* また、AEM全体のパフォーマンスがわずかに向上する可能性があります
+* また、AEM全体のパフォーマンスがわずかに向上する場合もあります
 
 You can access the Lucene Binaries Cleanup task from: **AEM > Tools > Operations > Maintenance > Daily Maintenance Window > Lucene Binaries Cleanup**.
 
@@ -695,7 +700,7 @@ This will add a corresponding resource at /apps/granite/operations/config/mainte
 
 ## システム概要 {#system-overview}
 
-**システム概要ダッシュボード** には、AEMインスタンスの設定、ハードウェア、正常性の概要が表示されます。 つまり、システムヘルスのステータスが明白になり、すべての情報が 1 つのダッシュボードに集約されます。
+The **System Overview Dashboard** displays a high-level overview of the configuration, hardware and health of the AEM instance. つまり、システムヘルスのステータスが明白になり、すべての情報が 1 つのダッシュボードに集約されます。
 
 >[!NOTE]
 >
