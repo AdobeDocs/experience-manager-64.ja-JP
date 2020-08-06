@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 translation-type: tm+mt
 source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
+workflow-type: tm+mt
+source-wordcount: '926'
+ht-degree: 55%
 
 ---
 
@@ -19,15 +22,15 @@ source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
 
 ## 概要 {#overview}
 
-AEM Brackets Extension は、AEM コンポーネントとクライアントライブラリを編集するためのスムーズなワークフローを提供し、[Brackets](https://brackets.io/) コードエディターのパワーを活用して、コードエディター内から Photoshop ファイルおよびレイヤーにアクセスできるようにします。この拡張機能によって（Maven や File Vault は不要です）同期が容易になるので、開発者の効率性が向上すると共に、AEM に関する知識が限られているフロントエンド開発者もプロジェクトに参加できます。This extension also provides some support for the [HTML Template Language (HTL)](https://helpx.adobe.com/experience-manager/htl/user-guide.html), which takes away the complexity of JSP to make component development easier and more secure.
+AEM Brackets Extension は、AEM コンポーネントとクライアントライブラリを編集するためのスムーズなワークフローを提供し、[Brackets](https://brackets.io/) コードエディターのパワーを活用して、コードエディター内から Photoshop ファイルおよびレイヤーにアクセスできるようにします。この拡張機能によって（Maven や File Vault は不要です）同期が容易になるので、開発者の効率性が向上すると共に、AEM に関する知識が限られているフロントエンド開発者もプロジェクトに参加できます。This extension also provides some support for the [HTML Template Language (HTL)](https://helpx.adobe.com/jp/experience-manager/htl/user-guide.html), which takes away the complexity of JSP to make component development easier and more secure.
 
 ![chlimage_1-53](assets/chlimage_1-53.png)
 
-### 機能 {#features}
+### 特長 {#features}
 
 AEM Brackets Extension の主な機能には次のものがあります。
 
-* AEM開発インスタンスへの変更されたファイルの自動同期。
+* 変更されたファイルをAEM開発インスタンスに自動で同期します。
 * ファイルとフォルダーの手動の双方向同期。
 * プロジェクトの完全なコンテンツパッケージの同期。
 * HTL code completion for expressions and `data-sly-*` block statements.
@@ -67,7 +70,7 @@ Download the latest Brackets version from [brackets.io](https://brackets.io/).
 
 プロジェクトには、少なくとも次のものが必要です。
 
-1. フ `jcr_root` ォルダ(例： `myproject/jcr_root`)
+1. フォ `jcr_root` ルダー( `myproject/jcr_root`)
 
 1. a `filter.xml` file (e.g. `myproject/META-INF/vault/filter.xml`); for more details about the structure of the `filter.xml` file please see the [Workspace Filter definition](https://jackrabbit.apache.org/filevault/filter.html).
 
@@ -88,7 +91,7 @@ Brackets の **File** メニューで「**Open Folder**」を選択し、`jcr_ro
 プロジェクト設定を使用して、次のものを定義できます。
 
 1. The server URL (e.g. `http://localhost:4502`)
-1. 有効なHTTPS証明書を持たないサーバーを許可するかどうか（必要な場合を除き、チェックを外しておく）
+1. 有効なHTTPS証明書を持たないサーバーを許容するかどうか（必要な場合を除き、チェックを外しておく）
 1. コンテンツの同期に使用するユーザー名（例：`admin`）
 1. The user&#39;s password (e.g. `admin`)
 
