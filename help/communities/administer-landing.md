@@ -11,6 +11,9 @@ content-type: reference
 discoiquuid: 8799386a-c3b8-43cf-9f71-580ff2a81abc
 translation-type: tm+mt
 source-git-commit: e600df0bf1c4796b5446969b93a00f9edf280f5a
+workflow-type: tm+mt
+source-wordcount: '478'
+ht-degree: 44%
 
 ---
 
@@ -56,29 +59,29 @@ source-git-commit: e600df0bf1c4796b5446969b93a00f9edf280f5a
 
 AEM Communities の主な機能の 1 つは、サインインしたサイト訪問者（メンバー）によるユーザー生成コンテンツ（UGC）の生成です。UGC の使用について詳しくは、以下を参照してください。
 
-* [共通UGCストア](working-with-srp.md):UGCの共有ストレージ用のSRPの選択
-* [UGCのモデレート](moderate-ugc.md):信頼できる会員は、UGCを一括または文脈内でモデレートする可能性がある
-* [UGCタグ付け](tag-ugc.md):メンバーがコンテンツにタグを付けられるように機能を設定できます。
-* [UGCの翻訳](translate-ugc.md):機能は、すべてのUGCを翻訳するように設定したり、メンバーが選択した投稿を翻訳できるように設定したりできます
-* [Analytics設定](analytics.md):会員活動に関する様々な指標に関するレポートをAdobe Analyticsで有効にする
+* [共通UGCストア](working-with-srp.md): UGCの共有ストレージ用のSRPの選択
+* [UGCのモデレート](moderate-ugc.md): 信頼できるメンバーが一括またはコンテキスト内でUGCをモデレートする可能性がある
+* [タグ付けUGC](tag-ugc.md): メンバーがコンテンツにタグを付けられるように機能を設定できます。
+* [Translating UGC](translate-ugc.md): 機能を設定して、すべてのUGCを翻訳したり、メンバーが選択した投稿を翻訳できるようにしたりできます。
+* [Analytics設定](analytics.md): Adobe Analyticsが会員アクティビティに関する様々な指標に関するレポートを有効にする
 
 ### コミュニティメンバー {#community-members}
 
-* [ユーザーとユーザーグループの管理](users.md):特権を持つメンバーを含む、コミュニティメンバーおよびメンバーグループの詳細
+* [ユーザーとユーザーグループの管理](users.md): 特権メンバーを含む、コミュニティメンバーおよびメンバーグループの詳細
 * [貢献度の制限](limits.md)：新しいメンバーによる投稿を制約する機能
-* [トンネルサービス](deploy-communities.md#tunnel-service-on-author):パブリッシュ側のメンバーとメンバーグループをオーサー環境からアクセスできるようにします。
-* [メンバーとグループコンソール](members.md):発行側のメンバーとメンバーグループを作成者環境から作成および管理できます。
-* [ユーザー同期](sync.md):複数の発行インスタンスでメンバーとメンバーグループを同期する場合
-* [FacebookおよびTwitterでのソーシャルログイン](social-login.md):サイト訪問者がFacebookやTwitterの資格情報を使用してコミュニティのメンバーになれる機能
-* [スコアとバッジ](implementing-scoring.md):会員の役割を識別するために割り当てられるバッジと、その会員がコミュニティに参加してバッジを得るための能力
-* [通知](notifications.md):会員が従う活動を通知する能力
+* [トンネルサービス](deploy-communities.md#tunnel-service-on-author): 発行側のメンバーとメンバーグループに対して、作成者環境からのアクセスを許可します
+* [メンバーとグループコンソール](members.md): 発行側のメンバーとメンバーグループを作成者環境から作成および管理できます。
+* [ユーザー同期](sync.md): 複数の発行インスタンス間でメンバーおよびメンバーグループを同期する
+* [FacebookおよびTwitterを使用したソーシャルログイン](social-login.md): サイト訪問者がFacebookやTwitterの資格情報を使用してコミュニティのメンバーになれる能力
+* [スコアリングとバッジ](implementing-scoring.md): 会員の役割を特定するために割り当てられるバッジと、その会員がコミュニティに参加してバッジを得る能力
+* [通知](notifications.md): 会員が後に続くアクティビティを通知する能力
 * [購読](subscriptions.md)：メンバーが外部の電子メールを使用してコミュニティと対話する機能
-* [メッセージ](messaging.md):会員が内部メッセージを使ってコミュニティと対話する能力
+* [メッセージ](messaging.md): 社内メッセージを使って社会と交流する能力
 
 ### イネーブルメント機能 {#enablement-features}
 
 * [イネーブルメント設定](enablement.md)：イネーブルメント機能を正しくセットアップするために必要な情報
-* [Analytics設定](analytics.md):adobe Analytics for Communities機能を有効にするために必要な情報
+* [Analytics設定](analytics.md): コミュニティ機能に対してAdobe Analyticsを有効にするために必要な情報
 * [イネーブルメントリソースのタグ付け](tag-resources.md)：イネーブルメントカタログの作成に必要
 
 ### デプロイメント {#deployment}
