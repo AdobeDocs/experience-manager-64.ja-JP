@@ -10,6 +10,9 @@ topic-tags: introduction
 discoiquuid: 436aa424-d05e-4f3d-90ac-5ff3b05ddba8
 translation-type: tm+mt
 source-git-commit: 715cff841252d79504d702817f91db92df919bfc
+workflow-type: tm+mt
+source-wordcount: '2017'
+ht-degree: 80%
 
 ---
 
@@ -24,13 +27,13 @@ AEM Forms に、いくつかの新機能と機能強化が導入されました�
 
 ## インタラクティブコミュニケーション {#interactive-communications}
 
-![通信管理](assets/correspondence-management.png)
+![correspondence-management](assets/correspondence-management.png)
 
-Interactive Communicationsは、ビジネスの通信、レター、ドキュメント、明細、給付通知、資産管理の目論見書、マーケティング・メール、請求書、ウェルカムキットなど、パーソナライズされた安全なインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。
+Interactive Communicationsは、ビジネスの通信、レター、ドキュメント、明細書、福利厚生通知、資産管理の目論見書、マーケティング・メール、請求書、ウェルカムキットなど、安全でパーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。
 
 インタラクティブ通信では、アダプティブフォームと同じ基本的な技術、プロセス、コンポーネントを使用して、レスポンシブなマルチチャネル通信が作成されます。これは、レスポンシブなアダプティブフォームと非常によく似ています。
 
-インタラクティブ通信は、次のような大きな利点を提供します。
+対話型通信オファーには、次の大きな利点があります。
 
 * そのままの状態でフォームデータモデルに統合できるため、バックエンドデータベースと、MS Dynamics などの CRM システムに簡単にアクセスすることができます。
 * 印刷チャネルと Web チャネル用の統合オーサリングインターフェイスが用意されています。
@@ -48,7 +51,7 @@ For more information, see [Interactive Communications Overview](/help/forms/usin
 
 ドラッグアンドドロップ操作をベースとする WYSIWYG ドキュメントエディターは、作業しやすいエディターです。直感的なインターフェイス、ドラッグアンドドロップ機能、標準コンポーネント、データモデル、アセットの統合リポジトリにより、インタラクティブ通信を素早く簡単に作成することができます。
 
-インタラクティブな通信を作成したり、既存の通信を編集したりするには、ビジネスユーザーは次の構築ブロックを使用できます。チャネル、コンテンツ、プロパティ、アセット、コンポーネントおよびデータソースを参照してください。
+インタラクティブな通信を作成したり、既存の通信を編集したりするには、ビジネスユーザーは次の構築ブロックを使用できます。 チャネル、コンテンツ、プロパティ、アセット、コンポーネントおよびデータソース。
 
 ![ドラッグ&amp;ドロップ —lf](assets/drag-n-drop-lf.png)
 
@@ -56,7 +59,7 @@ For more information, see [Introduction to authoring Interactive Communication](
 
 ### インタラクティブ通信で、印刷コンテンツの Web 版を自動的に生成する {#auto-generate-web-version-from-print-content-in-interactive-communication}
 
-作成者は、印刷ドキュメントからWebドキュメントのコンテンツを自動生成し、同じエディターで印刷ドキュメントとWebドキュメントの両方を作成、プレビューおよび編集できます。 インタラクティブコミュニケーション作成者は、一度作成すれば、すべてのチャネルに投稿できます。 インタラクティブなコミュニケーション作成者は、印刷チャネルとWebチャネルで同じドキュメントフラグメントを使用して、作業の重複を防ぐことができます。
+作成者は、印刷ドキュメントから作成者、プレビュー、印刷ドキュメントまでWebドキュメントのコンテンツを自動生成できます。また、同じエディターで印刷エディターとWebの両方を編集できます。 インタラクティブコミュニケーション作成者は、1回だけ作成して、すべてのチャネルに公開できます。 インタラクティブコミュニケーション作成者は、印刷とWebチャネルーで同じドキュメントフラグメントを使用して、作業の重複を防ぐことができます。
 
 For more information, see [Print channel and web channel](/help/forms/using/web-channel-print-channel.md).
 
@@ -64,13 +67,13 @@ For more information, see [Print channel and web channel](/help/forms/using/web-
 
 インタラクティブ通信では、テーマがサポートされています。テーマを作成してインタラクティブ通信に適用することができます。テーマには、コンポーネントやパネルのスタイル設定の詳細が含まれています。異なるインタラクティブ通信で同じテーマを再利用することにより、インタラクティブ通信の外観とブランド表示を統一することができます。
 
-AEM Formsには、Interactive Communications用の初期設定のテーマが含まれています。 テーマを使用して、デバイス上で表示されるインタラクティブ通信の外観をカスタマイズすることもできます。
+AEM Formsには、Interactive Communications用の追加設定なしのテーマが含まれています。 テーマを使用して、デバイス上で表示されるインタラクティブ通信の外観をカスタマイズすることもできます。
 
 詳しくは、「[AEM Forms のテーマ](/help/forms/using/themes.md)」を参照してください。
 
 ### エージェントインターフェイスの機能強化 {#enhanced-agent-interface}
 
-エージェントユーザーインターフェイスで、インタラクティブ通信の印刷チャネルと Web チャネルをプレビュー表示できるようになりました。同じエージェント・ユーザー・インターフェースから、マルチチャネル・インタラクティブ通信のプリント・チャネルの編集とWebチャネルのプレビューを選択できます。 印刷チャネルのフィールド、変数、FDM 要素、ドキュメントフラグメントを、エージェントユーザーインターフェイスによって変更するように設定することができます。フォームデータモデルでは、事前に設定されたサンプルデータを使用して、プレビューを生成することができます。
+エージェントユーザーインターフェイスで、インタラクティブ通信の印刷チャネルと Web チャネルをプレビュー表示できるようになりました。同じエージェントユーザーインターフェイスから、マルチチャネルのインタラクティブ通信の印刷チャネルとプレビューWebチャネルを編集できます。 印刷チャネルのフィールド、変数、FDM 要素、ドキュメントフラグメントを、エージェントユーザーインターフェイスによって変更するように設定することができます。フォームデータモデルでは、事前に設定されたサンプルデータを使用して、プレビューを生成することができます。
 
 For more information, see [Prepare and send Interactive Communication using the Agent UI](/help/forms/using/prepare-send-interactive-communication.md).
 
@@ -78,7 +81,7 @@ For more information, see [Prepare and send Interactive Communication using the 
 
 インタラクティブ通信の Web チャネルと印刷チャネルでグラフを使用すると、分かりやすい通信を作成することができます。円グラフ、ドーナツグラフ、棒グラフ、列グラフなどを使用して大量の情報を視覚的に表現することにより、内容を簡単に把握して情報を分析できるようになります。
 
-![グラフ —2](assets/chart-2.png)![表](assets/chart.png)
+![グラフ2](assets/chart-2.png)![グラフ](assets/chart.png)
 
 For more information, see [Using charts in Interactive Communications](/help/forms/using/chart-component-interactive-communications.md).
 
@@ -97,7 +100,7 @@ For more information, see [Using charts in Interactive Communications](/help/for
 * フォームデータモデル要素のサポート
 * ルールを使用して、アセットフラグメントやテキストフラグメントの表示と非表示を切り替えることができます。
 * 要素や変数の値を検証することができます。
-* 関数を実行して数式の値を計算する
+* 関数を実行して数学式の値を計算する
 
 詳しくは、次を参照してください。
 
@@ -150,7 +153,7 @@ For details, see [Use form data model](/help/forms/using/using-form-data-model.m
 
 ## アダプティブフォーム {#adaptive-forms}
 
-![simplification-of-authoring-forms-and-documents_hero-image_2](assets/simplification-of-authoring-forms-and-documents_hero-image_2.png)
+![simplification-of-authoring-forms-and-and-ドキュメントs_hero-image_2](assets/simplification-of-authoring-forms-and-documents_hero-image_2.png)
 
 ### 遅延読み込み機能を強化してアダプティブフォームのパフォーマンスを改善 {#improve-performance-of-adaptive-forms-with-enhanced-lazy-loading}
 
@@ -168,7 +171,7 @@ For details, see [Use form data model](/help/forms/using/using-form-data-model.m
 
 フォームベース AEM ワークフロー機能により、様々なタスクのワークフローを短時間で作成して OSGi スタック上にデプロイすることができます。Process Management 機能を JEE スタックにインストールする必要はないため、デプロイメントが簡素化され、アプリケーションサーバーとインフラストラクチャに関するコストも削減されます。詳しくは、「[OSGi でのフォームベースワークフロー](/help/forms/using/aem-forms-workflow.md)」を参照してください。
 
-フォーム中心のAEMワークフローの機能強化を次に示します。・
+以下は、Forms中心のAEMワークフローの機能強化です。・
 
 * タッチユーザーインターフェイスでワークフローモデルエディターを使用できるようになりました。これにより、フォームベースの AEM ワークフローを短時間で作成できるようになります。
 * 電子メールを送信するワークフローステップが改善されました。例えば、電子メールステップを使用して、ワークフローの完了時にレコードのドキュメントを送信することができます。
@@ -187,9 +190,9 @@ AEM Forms アプリケーションの改善点を以下に示します。
 
 ## Document Security {#document-security}
 
-![aem-forms-document-security-](assets/aem-forms-document-security-.png)
+![aem-forms-ドキュメント — セキュリティ —](assets/aem-forms-document-security-.png)
 
-Document Security を使用すると、サポートされる形式で保存した情報を安全に配布できます。Document Security を使用して、許可されたユーザーだけがドキュメントを使用するように指定できます。Document Securityの主な変更点は次のとおりです。
+Document Security を使用すると、サポートされる形式で保存した情報を安全に配布できます。Document Security を使用して、許可されたユーザーだけがドキュメントを使用するように指定できます。ドキュメントセキュリティの主な変更点は次のとおりです。
 
 * Document Security に、ドキュメントをローカルで保護するための[ポータブル保護ライブラリ（PPL）](/help/forms/using/document-security-offerings.md)が導入されました。ドキュメントが AEM Forms サーバーに送信されることはありません。ネットワーク経由で AEM Forms サーバーに送信されるのは、セキュリティ証明書とポリシーの詳細データだけです。AEM 6.4 Forms には、OSGi バンドル形式でポータブル保護ライブラリ（PPL）が導入されています。これにより、PPL を AEM Forms サーバーに直接インストールし、AEM の機能と PPL の機能を相互に組み合わせて使用することができます。
 * Document Security の C++ SDK と C++ PPL ライブラリは、Microsoft Visual Studio 2013 を使用してコンパイルすることができます。以前はMicrosoft Visual Studio 2010がサポートされていました。
