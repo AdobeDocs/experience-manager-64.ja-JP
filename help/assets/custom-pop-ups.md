@@ -10,10 +10,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: 5964edfadf597652f754ca3c64343b0b90e40796
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 98%
+source-wordcount: '1063'
+ht-degree: 99%
 
 ---
 
@@ -110,7 +110,7 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
    * Interactive Image viewer: [setHandlers](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.translate.html)
    * Interactive Video viewer: [setHandlers](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.translate.html)
 
-1. 次に、quickViewActivate &quot;ハンドラを設定する必要があります。
+1. 次に、`quickViewActivate` ハンドラーを設定する必要があります。
 
    quickViewActivate ハンドラーはビューアのクイックビューを制御します。このハンドラーには、クイックビューで使用する変数のリストと関数呼び出しが含まれています。埋め込みコードは、クイックビューの SKU 変数セット用のマッピングと loadQuickView 関数呼び出しのサンプルを提供します。
 
