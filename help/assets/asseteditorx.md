@@ -3,10 +3,10 @@ title: アセットエディタの拡張
 description: カスタムコンポーネントを使用したアセットエディターの機能の拡張方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+source-git-commit: 5964edfadf597652f754ca3c64343b0b90e40796
 workflow-type: tm+mt
 source-wordcount: '701'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -47,7 +47,7 @@ AEM Assets コンポーネントでは、WCM 編集クライアントライブ�
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-このサンプルでは、この JavaScript ソースを `head.jsp`（`/apps/geometrixx/components/asseteditor/head.jsp`）で読み込んでいます。
+The sample loads this JavaScript source in `head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`).
 
 ### 追加のスタイルシート {#additional-style-sheets}
 
