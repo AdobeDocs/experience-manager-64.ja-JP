@@ -12,6 +12,9 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: 39d1cb2e-18f5-4d08-b983-a06b1f470c51
 translation-type: tm+mt
 source-git-commit: 507559ee6cc6b201a11bbf84da515b675534f675
+workflow-type: tm+mt
+source-wordcount: '274'
+ht-degree: 79%
 
 ---
 
@@ -24,11 +27,11 @@ AEM は、いくつかのアプリケーション開発用 API を提供しま�
 
 * [API の違い](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/diff-previous/changes.html)
 
-* [Granite UI（タッチ操作対応）API ドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)
+* [Granite UI（タッチ操作対応）API ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)
 
-* [Coral UI ガイド](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
+* [Coral UI ガイド](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
 
-* [ウィジェット API（クラシック UI）ドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html)
+* [ウィジェット API（クラシック UI）ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html)
 
 * [UI テストフレームワーク JavaScript API リファレンス](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html)
 
@@ -47,7 +50,7 @@ AEM 配信およびコンテンツ管理 API
 
    * [JSON エクスポーター](/help/sites-developing/json-exporter.md)
    * [コンポーネントの JSON 書き出しの有効化](/help/sites-developing/json-exporter-components.md)
-   * 詳しくは、[開発ユーザーガイド』の「コンポーネント」セクション](https://helpx.adobe.com/experience-manager/6-4/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js)を参照してください。
+   * 詳しくは、[開発ユーザーガイド』の「コンポーネント」セクション](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js)を参照してください。
 
 * [AEM Assets HTTP API](/help/assets/mac-api-assets.md)
 
