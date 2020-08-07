@@ -10,7 +10,7 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 4b680d17-383b-4173-a444-0b7bdb24e6c8
 translation-type: tm+mt
-source-git-commit: 4dbb6af1c0a76aabc003749d7fa76f8c6e41e726
+source-git-commit: ffa45c8fa98e1ebadd656ea58e4657b669ddd830
 workflow-type: tm+mt
 source-wordcount: '1908'
 ht-degree: 42%
@@ -233,14 +233,20 @@ AEM に含まれるノードタイプの基本的な定義は、次のように�
 
    A special value for the `cq:movedTo` property is `nirvana`: it is applied when the tag is deleted but cannot be removed from the repository because there are subtags with a `cq:movedTo` that must be kept.
 
-   >[!NOTE]次のいずれかの条件を満たす場合にのみ、 `cq:movedTo` プロパティは移動されたタグまたは結合されたタグに追加されます。
+   >[!NOTE]
+   >
+   >次のいずれかの条件を満たす場合にのみ、 `cq:movedTo` プロパティは移動されたタグまたは結合されたタグに追加されます。
+   >
    >1. タグがコンテンツで使用されている（参照が含まれている）場合、OR
    >1. タグには、既に移動された子が含まれています。
 
 
 * `cq:backlinks` は、他のリスト（タグBとの間で移動または結合されたすべてのタグのを保持する）。これは、タグBの移動/結合/削除時やタグBのアクティブ化時に、 `cq:movedTo`プロパティを最新の状態に維持する必要が大きい場合です。
 
->[!NOTE]次のいずれかの条件を満たす場合にのみ、 `cq:backlinks` プロパティは移動されたタグまたは結合されたタグに追加されます。
+>[!NOTE]
+>
+>次のいずれかの条件を満たす場合にのみ、 `cq:backlinks` プロパティは移動されたタグまたは結合されたタグに追加されます。
+>
 >1. タグがコンテンツで使用されている（参照が含まれている）場合、OR
 >1. タグには、既に移動された子が含まれています。
 
