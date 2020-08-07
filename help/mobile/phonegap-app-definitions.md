@@ -11,6 +11,9 @@ topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 860dde0b-7cb4-4668-9fac-6f954f1ec0a7
 translation-type: tm+mt
 source-git-commit: c58437f791daa11669198d916f0756ff4830677c
+workflow-type: tm+mt
+source-wordcount: '267'
+ht-degree: 91%
 
 ---
 
