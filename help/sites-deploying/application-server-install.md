@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6fdce35d-2709-41cc-87fb-27a4b867e960
 translation-type: tm+mt
-source-git-commit: 9bfd332b419f0d4e180a7db2545e8434f37c683b
+source-git-commit: ffa45c8fa98e1ebadd656ea58e4657b669ddd830
 workflow-type: tm+mt
 source-wordcount: '1175'
 ht-degree: 64%
@@ -198,22 +198,22 @@ if you use the deployment-scanner for to install the AEM web application it migh
    * Tomcatでは、インストール時に管理者とマネージャの両方のアクセスが有効になっていません。 したがって、次のアカウントへのアクセスを許可す `tomcat-users.xml` るには、手動で編集する必要があります。
 
       * `tomcat-users.xml` を編集して、admin および manager のアクセスを含めます。設定は次の例のようになります。
-      * 
 
-         ```
-         <?xml version='1.0' encoding='utf-8'?>
-          <tomcat-users>
-          <role rolename="manager"/>
-          <role rolename="tomcat"/>
-          <role rolename="admin"/>
-          <role rolename="role1"/>
-          <role rolename="manager-gui"/>
-          <user username="both" password="tomcat" roles="tomcat,role1"/>
-          <user username="tomcat" password="tomcat" roles="tomcat"/>
-          <user username="admin" password="admin" roles="admin,manager-gui"/>
-          <user username="role1" password="tomcat" roles="role1"/>
-          </tomcat-users>
-         ```
+      ```xml
+        <?xml version='1.0' encoding='utf-8'?>
+         <tomcat-users>
+         <role rolename="manager"/>
+         <role rolename="tomcat"/>
+         <role rolename="admin"/>
+         <role rolename="role1"/>
+         <role rolename="manager-gui"/>
+         <user username="both" password="tomcat" roles="tomcat,role1"/>
+         <user username="tomcat" password="tomcat" roles="tomcat"/>
+         <user username="admin" password="admin" roles="admin,manager-gui"/>
+         <user username="role1" password="tomcat" roles="role1"/>
+         </tomcat-users>
+      ```
+
    * コンテキストルート「/」を使用して AEM をデプロイする場合は、既存の ROOT Web アプリケーションのコンテキストルートを変更する必要があります。
 
       * ROOT Web アプリケーションを停止してデプロイ解除します。
@@ -226,12 +226,12 @@ if you use the deployment-scanner for to install the AEM web application it migh
       max-file-size と max-request-size を 500 MB 以上に増やします。そのような `multipart-config` ファイルの例として、以下の `web.xml` の例を参照してください。
 
       ```
-        <multipart-config>
-         <!-- 500MB max -->
-         <max-file-size>524288000</max-file-size>
-         <max-request-size>524288000</max-request-size>
-         <file-size-threshold>0</file-size-threshold>
-         </multipart-config>
+      <multipart-config>
+       <!-- 500MB max -->
+       <max-file-size>524288000</max-file-size>
+       <max-request-size>524288000</max-request-size>
+       <file-size-threshold>0</file-size-threshold>
+       </multipart-config>
       ```
 
 
