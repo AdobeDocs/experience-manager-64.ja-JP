@@ -11,6 +11,9 @@ topic-tags: authoring-on-demand-services-app
 discoiquuid: 42a38399-f5a7-4d2f-aa6a-d409a7ec60f7
 translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+workflow-type: tm+mt
+source-wordcount: '625'
+ht-degree: 85%
 
 ---
 
@@ -71,7 +74,7 @@ The **Manage App** Tile displays available application information:
 * **記事**
 * **コレクション**
 
-右下隅にある省略記号（...）をクリックすると、各タイルを展開して、より詳細なリストを表示できます。これらのリスト表示は、削除、アップロード、プロパティの編集など、一般的なMobile On Demandアクションにアクセスする代替手段です。
+右下隅にある省略記号（...）をクリックすると、各タイルを展開して、より詳細なリストを表示できます。これらのリスト表示を使用すると、削除、アップロード、プロパティの編集など、一般的なMobile On Demandアクションにアクセスする代替方法を使用できます。
 
 ### バナーを管理タイル {#the-manage-banners-tile}
 
