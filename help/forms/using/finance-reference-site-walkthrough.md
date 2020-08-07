@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 0c1b6ad7-9d25-41dc-b1fe-a4cb9366c259
 translation-type: tm+mt
-source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+source-git-commit: ffa45c8fa98e1ebadd656ea58e4657b669ddd830
 workflow-type: tm+mt
 source-wordcount: '9242'
 ht-degree: 63%
@@ -305,7 +305,10 @@ To configure Target in AEM Forms server, see [Set up and integrate Target in AEM
 1. 次のURLを使用して、Chromeブラウザーでフォームを数回開きます。
 
    `https://[hostname]:[port]/content/dam/formsanddocuments/we-finance/cc-app/jcr:content?wcmmode=disabled`
-   >[!NOTE]次回以降、フォームを開く前に **mbox** という名前を持つ Cookie を、ブラウザーの Cookie パーシステンスから削除してください。そうすると、フォームのエクスペリエンス A および B をランダムに確認することになります。
+
+   >[!NOTE]
+   >
+   >次回以降、フォームを開く前に **mbox** という名前を持つ Cookie を、ブラウザーの Cookie パーシステンスから削除してください。そうすると、フォームのエクスペリエンス A および B をランダムに確認することになります。
 
 1. フォームを選択し、「**その他**」をクリックし、「**A/B テストを開始**」をクリックします。テスト開始直後には、レポートに多くのデータが表示されることはありません。シードデータを使用して、A/B テストレポートがどのように表示されるか確認しましょう。
 
@@ -552,13 +555,19 @@ To configure Target in AEM Forms server, see [Set up and integrate Target in AEM
 1. 次のURLを使用して、Chromeブラウザーでフォームを数回開きます。
 
    `https://[hostname]:[port]/content/dam/formsanddocuments/we-finance/hm-app/jcr:content?wcmmode=disabled`
-   >[!NOTE]次回以降、フォームを開く前に **mbox** という名前を持つ Cookie を、ブラウザーの Cookie パーシステンスから削除してください。そうすると、フォームのエクスペリエンス A および B をランダムに確認することになります。
+
+   >[!NOTE]
+   >
+   >次回以降、フォームを開く前に **mbox** という名前を持つ Cookie を、ブラウザーの Cookie パーシステンスから削除してください。そうすると、フォームのエクスペリエンス A および B をランダムに確認することになります。
 
 1. フォームを選択し、「**その他**」をクリックし、「**A/B テストを開始**」をクリックします。テスト開始直後には、レポートに多くのデータが表示されることはありません。シードデータを使用して、A/B テストレポートがどのように表示されるか確認しましょう。
 
 1. CRXDE Lite を開き、次のファイルのバックアップを作成します。 /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
 1. 上記のファイル内の `onReportLoadSuccess` 関数の定義を、次のファイル内の関数定義に置き換えます。 /apps/we-finance/demo-artifacts/targetreport.js
-   >[!NOTE]これらの変更はデモのためだけに行われます。この手順を完了した後、必ずファイルの中身を元に戻してください。
+
+   >[!NOTE]
+   >
+   >これらの変更はデモのためだけに行われます。この手順を完了した後、必ずファイルの中身を元に戻してください。
 
 1. 生成したレポートを更新すると、以下のような画面が表示されます。レポートダッシュボードを確認します。
 
@@ -819,7 +828,7 @@ Sarahは週末に田舎に旅行中です。 彼女は、ブルーチップス�
 
 #### 仕組み {#how-it-works-19}
 
-ブルーチップ・グループ・ファンドの目論見書は対話型のコミュニケーションです WebおよびPDFのチャネルが含まれます。 インタラクティブな通信はAEMワークフローと統合され、PDFバージョンを電子メールで送信します。 ワークフローモデルは、https://[authorHost]:[ authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html.
+ブルーチップ・グループ・ファンドの目論見書は対話型のコミュニケーションです WebおよびPDFのチャネルが含まれます。 インタラクティブな通信はAEMワークフローと統合され、PDFバージョンを電子メールで送信します。 ワークフローモデルはhttps://[authorHost]：で確認できます。[ authorPort]/editor.html/conf/global/settings/workflow/models/wealthmanagement.html.
 
 ![資産管理](assets/wealth-management.png)
 
