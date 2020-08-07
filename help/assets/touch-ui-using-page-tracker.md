@@ -3,7 +3,7 @@ title: Web ページでのページトラッカーと埋め込みコードの使
 description: ページトラッカーコードと埋め込み JavaScript コードを Web サイトコードに組み込んで、Adobe Analytics でアセットの使用状況データを収集できるようにする方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+source-git-commit: 5964edfadf597652f754ca3c64343b0b90e40796
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 100%
@@ -33,9 +33,9 @@ ht-degree: 100%
                 assetAnalytics.charsLimitForGET = 2000; // bytes
                 assetAnalytics.dispatcher.init("assetstesting","xxxx","xxx","list1","eVar3","event8","event7");
             </script>
-                    
+
     </head>
-                
+
     <body>
 
                                 <img
@@ -46,7 +46,7 @@ ht-degree: 100%
 
         <a
             href="https://www.adobe.com"
-        
+
             onclick="assetAnalytics.core.assetClicked(this);return false">
                 <img
                     src="http://localhost/xxxx/content/dam/test/xyz.jpg"
@@ -75,7 +75,6 @@ ht-degree: 100%
                 assetAnalytics.charsLimitForGET = 2000; // bytes
                 assetAnalytics.dispatcher.init("assetstesting","abc.net","bee","list1","eVar3","event8","event7");
             </script>
-                                                
  </head>
 ```
 
@@ -94,7 +93,7 @@ ht-degree: 100%
 
         <a
             href="https://www.adobe.com"
-        
+
             onclick="assetAnalytics.core.assetClicked(this);return false">
            <img
                     src="http://localhost:4502/xxxx/content/dam/test/xyz.jpg"
