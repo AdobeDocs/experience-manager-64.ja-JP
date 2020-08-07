@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: ffa45c8fa98e1ebadd656ea58e4657b669ddd830
 workflow-type: tm+mt
-source-wordcount: '2267'
-ht-degree: 68%
+source-wordcount: '2293'
+ht-degree: 69%
 
 ---
 
@@ -82,13 +82,11 @@ cq:tags インデックスルールを追加する前
 
 * **Query Builder クエリ**
 
-   * 
-
-      ```
-      type=cq:Page
-       property=jcr:content/cq:tags
-       property.value=my:tag
-      ```
+   ```
+   type=cq:Page
+    property=jcr:content/cq:tags
+    property.value=my:tag
+   ```
 
 * **クエリプラン**
 
@@ -100,24 +98,20 @@ cq:tags インデックスルールを追加した後
 
 * **cq:tags インデックスルール**
 
-   * 
-
-      ```
-      /oak:index/cqPageLucene/indexRules/cq:Page/properties/cqTags
-       @name=jcr:content/cq:tags
-       @propertyIndex=true
-      ```
-
+       ```
+       /oak:index/cqPageLucene/indexRules/cq:Page/properties/cqTags
+     @name=jcr:content/cq:tags
+     @propertyIndex=true
+       ```
+   
 * **Query Builder クエリ**
 
-   * 
-
-      ```
-      type=cq:Page
-       property=jcr:content/cq:tags
-       property.value=myTagNamespace:myTag
-      ```
-
+       ```
+       type=cq:Page
+     property=jcr:content/cq:tags
+     property.value=myTagNamespace:myTag
+       ```
+   
 * **クエリプラン**
 
    * `[cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) jcr:content/cq:tags:my:tag where [a].[jcr:content/cq:tags] = 'my:tag' */`
@@ -193,21 +187,18 @@ AEM では、以下のクエリ言語がサポートされています。
 
    * **最適化されていないクエリ**
 
-      * 
+      ```
+       property=jcr:content/contentType
+       property.value=article-page
+      ```
 
-         ```
-          property=jcr:content/contentType
-          property.value=article-page
-         ```
    * **最適化されたクエリ**
 
-      * 
-
-         ```
-          type=cq:Page 
-          property=jcr:content/contentType 
-          property.value=article-page
-         ```
+      ```
+       type=cq:Page 
+       property=jcr:content/contentType 
+       property.value=article-page
+      ```
    ノードタイプの制限がないクエリにより、AEM では `nt:base` ノードタイプが想定されます。これは、AEM のすべてのノードのサブタイプなので、実質上ノードタイプの制限は存在しません。
 
    Setting `type=cq:Page` restricts this query to only `cq:Page` nodes, and resolves the query to AEM&#39;s cqPageLucene, limiting the results to a subset of nodes (only `cq:Page` nodes) in AEM.
@@ -216,22 +207,19 @@ AEM では、以下のクエリ言語がサポートされています。
 
    * **最適化されていないクエリ**
 
-      * 
+      ```
+      type=nt:hierarchyNode
+      property=jcr:content/contentType
+      property.value=article-page
+      ```
 
-         ```
-         type=nt:hierarchyNode
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
    * **最適化されたクエリ**
 
-      * 
-
-         ```
-         type=cq:Page
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
+      ```
+      type=cq:Page
+      property=jcr:content/contentType
+      property.value=article-page
+      ```
    `nt:hierarchyNode` はの親ノードタイプ `cq:Page`で、カスタムアプリケーションを介してノードにのみ適用さ `jcr:content/contentType=article-page` れると仮定して、このクエリは、の `cq:Page` ノードのみを返 `cq:Page``jcr:content/contentType=article-page`します。 ただしこれは、以下の理由から、次善策としての制限となります。
 
    * Other node inherit from `nt:hierarchyNode` (eg. `dam:Asset`)を追加する際に、不必要に結果のセットに追加する必要があります。
@@ -243,20 +231,17 @@ AEM では、以下のクエリ言語がサポートされています。
 
    * **最適化されていないクエリ**
 
-      * 
+      ```
+        property=jcr:content/contentType
+        property.value=article-page
+      ```
 
-         ```
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
    * **最適化されたクエリ**
 
-      * 
-
-         ```
-         property=jcr:content/sling:resourceType
-         property.value=my-site/components/structure/article-page
-         ```
+      ```
+      property=jcr:content/sling:resourceType
+      property.value=my-site/components/structure/article-page
+      ```
    Changing the property restriction from `jcr:content/contentType` (a custom value) to the well known property `sling:resourceType` lets the query to resolve to the property index `slingResourceType` which indexes all content by `sling:resourceType`.
 
    （Lucene プロパティインデックスではなく）プロパティインデックスの使用が最も適しているのは、クエリがノードタイプを認識せず、単一のプロパティ制限によって結果セットが決まる場合です。
@@ -265,24 +250,21 @@ AEM では、以下のクエリ言語がサポートされています。
 
    * **最適化されていないクエリ**
 
-      * 
+      ```
+      type=cq:Page
+      path=/content
+      property=jcr:content/contentType
+      property.value=article-page
+      ```
 
-         ```
-         type=cq:Page
-         path=/content
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
    * **最適化されたクエリ**
 
-      * 
-
-         ```
-         type=cq:Page
-         path=/content/my-site/us/en
-         property=jcr:content/contentType
-         property.value=article-page
-         ```
+      ```
+      type=cq:Page
+      path=/content/my-site/us/en
+      property=jcr:content/contentType
+      property.value=article-page
+      ```
    Scoping the path restriction from `path=/content`to `path=/content/my-site/us/en` allows the indexes to reduce the number of index entries that need to be inspected. When the query can restrict the path very well, beyond just `/content` or `/content/dam`, ensure the index has `evaluatePathRestrictions=true`.
 
    Note using `evaluatePathRestrictions` increases the index size.
@@ -291,23 +273,20 @@ AEM では、以下のクエリ言語がサポートされています。
 
    * **最適化されていないクエリ**
 
-      * 
+      ```
+      type=cq:Page
+      property=jcr:content/contentType
+      property.operation=like
+      property.value=%article%
+      ```
 
-         ```
-         type=cq:Page
-         property=jcr:content/contentType
-         property.operation=like
-         property.value=%article%
-         ```
    * **最適化されたクエリ**
 
-      * 
-
-         ```
-         type=cq:Page
-         fulltext=article
-         fulltext.relPath=jcr:content/contentType
-         ```
+      ```
+      type=cq:Page
+      fulltext=article
+      fulltext.relPath=jcr:content/contentType
+      ```
    ワイルドカード(「%...」)を含むテキスト開始の場合は、インデックスを使用できないので、LIKE条件の評価は低速です。 jcr:contains 条件は、フルテキストのインデックスの使用を可能にするので、推奨されています。This requires the resolved Lucene Property Index to have indexRule for `jcr:content/contentType` with `analayzed=true`.
 
    Using query functions like `fn:lowercase(..)` may be harder to optimize as there are not faster equivalents (outside more complex and obtrusive index analyzer configurations). 他の範囲制限を指定し、クエリ全体のパフォーマンスを向上させることをお勧めします。これには、関数の操作対象となる結果候補のセットをできるだけ小さくする必要があります。
@@ -318,21 +297,18 @@ AEM では、以下のクエリ言語がサポートされています。
 
    * **最適化されていないクエリ**
 
-      * 
+      ```
+      type=cq:Page
+      path=/content
+      ```
 
-         ```
-         type=cq:Page
-         path=/content
-         ```
    * **最適化されたクエリ**
 
-      * 
-
-         ```
-         type=cq:Page
-         path=/content
-         p.guessTotal=100
-         ```
+      ```
+      type=cq:Page
+      path=/content
+      p.guessTotal=100
+      ```
    For cases where query execution is fast but the number of results are large, p. `guessTotal` is a critical optimization for Query Builder queries.
 
    `p.guessTotal=100` を指定すると、Query Builder は最初の 100 件の結果だけを収集し、さらに 1 つ以上の結果が存在するかどうかを示すブール値フラグを設定します（ただしカウントすると処理に時間がかかるので、残りの数は示されません）。この最適化は、ページネーションまたは無限ロードの使用例よりも優れており、結果のサブセットだけが増分的に表示されます。
@@ -345,24 +321,20 @@ AEM では、以下のクエリ言語がサポートされています。
 
    * **Query Builder クエリ**
 
-      * 
+      ```
+      query type=cq:Page
+      path=/content/my-site/us/en
+      property=jcr:content/contentType
+      property.value=article-page
+      orderby=@jcr:content/publishDate
+      orderby.sort=desc
+      ```
 
-         ```
-         query type=cq:Page
-         path=/content/my-site/us/en
-         property=jcr:content/contentType
-         property.value=article-page
-         orderby=@jcr:content/publishDate
-         orderby.sort=desc
-         ```
    * **Query Builder クエリから生成された XPath**
 
-      * 
-
-         ```
-         /jcr:root/content/my-site/us/en//element(*, cq:Page)[jcr:content/@contentType = 'article-page'] order by jcr:content/@publishDate descending
-         ```
-
+      ```
+      /jcr:root/content/my-site/us/en//element(*, cq:Page)[jcr:content/@contentType = 'article-page'] order by jcr:content/@publishDate descending
+      ```
 
 1. この XPath（または JCR-SQL2）を [Oak Index Definition Generator](https://oakutils.appspot.com/generate/index) に提供して、最適化された Lucene プロパティインデックス定義を生成します。
 
@@ -398,21 +370,17 @@ AEM では、以下のクエリ言語がサポートされています。
 
    * **Query Builder クエリ**
 
-      * 
+      ```
+      type=myApp:Author
+      property=firstName
+      property.value=ira
+      ```
 
-         ```
-         type=myApp:Author
-         property=firstName
-         property.value=ira
-         ```
    * **Query Builder クエリから生成された XPath**
 
-      * 
-
-         ```
-         //element(*, myApp:Page)[@firstName = 'ira']
-         ```
-
+      ```
+      //element(*, myApp:Page)[@firstName = 'ira']
+      ```
 
 1. この XPath（または JCR-SQL2）を [Oak Index Definition Generator](https://oakutils.appspot.com/generate/index) に提供して、最適化された Lucene プロパティインデックス定義を生成します。
 
