@@ -10,7 +10,7 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 translation-type: tm+mt
-source-git-commit: f234d368163f4260563d69230a2cbda37b6d315a
+source-git-commit: ffa45c8fa98e1ebadd656ea58e4657b669ddd830
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 75%
@@ -125,7 +125,9 @@ LiveCycle ES3 から JEE 上の AEM 6.4 Forms へのアップグレードは、�
 
       データベースの新しいインスタンスを作成する場合、手順 3 でバックアップしたデータをデータベースに読み込みます。データをデータベースに読み込む方法については、該当するデータベースベンダーのドキュメントを参照してください。
 
-      >[!NOTE]RDBMK 永続性フォーマットを使用している場合、JEE 上の AEM Forms で実行されているリポジトリ永続化とドキュメントサービスの両方に単一のデータベースを使用します。
+      >[!NOTE]
+      >
+      >RDBMK 永続性フォーマットを使用している場合、JEE 上の AEM Forms で実行されているリポジトリ永続化とドキュメントサービスの両方に単一のデータベースを使用します。
 
 
 1. 以下の手順でアップグレードを実行します。
@@ -133,17 +135,23 @@ LiveCycle ES3 から JEE 上の AEM 6.4 Forms へのアップグレードは、�
    1. インストーラーを実行して、JEE 上の AEM 6.4 Forms を新しいサーバーにインストールします。インストーラーを実行すると、必要なすべてのファイルが、使用するコンピューター上の 1 つのインストールディレクトリ構造内に配置されます。
    1. インストールが完了したら、**Configuration Manager** を実行して、各種の AEM Forms モジュールを適切に設定します。設定の指定に加えて、グローバルデータストレージ(GDS)とcrx-repositoryのパスを指定できます。
 
-      >[!NOTE] [アップグレードタスクの選択]画面で、[Adobe Experience Manager Forms6.2.0から **[!UICONTROL のアップグレード]** ]オプションを選択します。 The **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** option allows the configuration manager to upgrade from LiveCycle ES3 to AEM 6.4 Forms.
+      >[!NOTE]
+      >
+      >On the Upgrade Task Selection screen, select the **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** option. The **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** option allows the configuration manager to upgrade from LiveCycle ES3 to AEM 6.4 Forms.
 
    1. CRX リポジトリをアップグレードして AEM 6.4 Forms サーバーに読み込みます（AEM Forms ドキュメントセキュリティモジュールの場合は、この操作を実行する必要はありません）。
 
-      >[!NOTE]CRX リポジトリのアップグレードとリポジトリ内のコンテンツの移行が完了したら、管理者アカウントのパスワードを変更します。詳しい手順については、「[既存ユーザーのパスワードの変更](/help/sites-administering/granite-user-group-admin.md)」を参照してください。
+      >[!NOTE]
+      >
+      >CRX リポジトリのアップグレードとリポジトリ内のコンテンツの移行が完了したら、管理者アカウントのパスワードを変更します。詳しい手順については、「[既存ユーザーのパスワードの変更](/help/sites-administering/granite-user-group-admin.md)」を参照してください。
 1. デプロイメント後のタスクを実行して、ログイン資格情報の検証、ドキュメントサービスの設定、通信の管理、ドキュメントセキュリティの設定などを行います（使用するユースケースに応じて、必要な作業を行ってください）。
 1. サーバーが正常にアップグレードされているかどうかの確認:
 
    いくつかの一般的な操作をアップグレード後の AEM Forms サーバーで実行し、サーバーが正しくアップグレードされていることを確認します。例えば、移行後のいくつかのフォームで入力を行ったり、ドキュメントの保護を行うことにより、正しくアップグレードされているかどうかを確認することができます。
 
-   >[!NOTE]AEM 6.4 Forms では crx-repository の構造が変更されています。AEM 6.4 Forms にアップグレードしたあと、新規作成するカスタマイズについては、変更後のパスを使用してください。変更後のパスの一覧については、「[AEM 6.4 Forms におけるリポジトリの再構築](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md)」を参照してください。
+   >[!NOTE]
+   >
+   >AEM 6.4 Forms では crx-repository の構造が変更されています。AEM 6.4 Forms にアップグレードしたあと、新規作成するカスタマイズについては、変更後のパスを使用してください。変更後のパスの一覧については、「[AEM 6.4 Forms におけるリポジトリの再構築](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md)」を参照してください。
 
 **現在の環境とアプリケーションサーバーに応じて、以下に示すいずれかのドキュメントに記載されている手順を実行します。**
 
