@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: AEM 6.4 Forms ユーザーガイド
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+source-git-commit: 35a52f72b30731879679ace06d6ffa4fd0342c1c
 workflow-type: tm+mt
-source-wordcount: '3702'
+source-wordcount: '3715'
 ht-degree: 73%
 
 ---
@@ -26,11 +26,11 @@ ht-degree: 73%
    + [対話型通信の概要](using/interactive-communications-overview.md)
    + [フォーム管理の概要](using/introduction-managing-forms.md)
    + Tutorial: Create your First Adaptive Form {#create-first-adaptive-form}
-      + [チュートリアル： 最初のアダプティブフォームの作成](using/create-your-first-adaptive-form.md)
+      + [チュートリアル：最初のアダプティブフォームの作成](using/create-your-first-adaptive-form.md)
       + [チュートリアル：アダプティブフォームの作成](using/create-adaptive-form.md)
       + [チュートリアル：フォームデータモデルの作成](using/create-form-data-model.md)
-      + [チュートリアル： アダプティブフォームのフィールドへのルールの適用](using/apply-rules-to-adaptive-form-fields.md)
-      + [チュートリアル： アダプティブフォームのスタイル設定](using/style-your-adaptive-form.md)
+      + [チュートリアル：アダプティブフォームのフィールドへのルールの適用](using/apply-rules-to-adaptive-form-fields.md)
+      + [チュートリアル：アダプティブフォームのスタイル設定](using/style-your-adaptive-form.md)
    + Tutorial: Create your First Interactive Communication {#create-first-interactive-communication}
       + [チュートリアル：最初のインタラクティブ通信を作成する](using/create-your-first-interactive-communication.md)
       + [チュートリアル：インタラクティブ通信の計画](using/planning-interactive-communications.md)
@@ -81,7 +81,7 @@ ht-degree: 73%
       + [Connector for Microsoft SharePoint の設定](http://help.adobe.com/ja_JP/AEMForms/6.1/SharePointConfig/index.html)
       + [AEM Forms と Adobe LiveCycle の接続](using/aem-livecycle-connector.md)
       + [AEM Forms がフォームデータを JEE 上の AEM Forms プロセスに送信するための設定](using/submit-form-data-livecycle-process.md)
-      + [AEM Forms用AEMデスクトップアプリケーション](/help/forms/using/aem-desktop-app-for-aem-forms.md)
+      + [AEM FORMS用AEMデスクトップアプリケーション](/help/forms/using/aem-desktop-app-for-aem-forms.md)
 + AEM Formsのアップグレード {#upgrade-aem-forms}
    + [有効なアップグレードパス](using/upgrade.md)
    + OSGiでのAEM Formsのアップグレード {#aem-forms-osgi-upgrade}
@@ -577,6 +577,7 @@ ht-degree: 73%
    + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-4/forms/javadocs/index.html)
    + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/experience-manager/6-4/forms/ProgramLC/javadoc/index.html)
    + [HTML5 フォームの Form Bridge API](using/form-bridge-apis.md)
+   + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-4/forms/javascript-api/index.html)
    + [Assembler サービスおよび DDX リファレンス](http://www.adobe.com/go/learn_aemforms_ddxRef_64_jp)
    + [Workbench ヘルプ](http://www.adobe.com/go/learn_aemforms_workbench_64_jp)
    + JEEでのAEM Formsとのプログラミング {#programming-aem-forms-jee}
