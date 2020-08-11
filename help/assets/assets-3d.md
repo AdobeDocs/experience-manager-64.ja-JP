@@ -1,5 +1,5 @@
 ---
-title: 3D アセットの使用
+title: AEM 3Dアセットの操作
 seo-title: 3D アセットの使用
 description: AEM 3D での 3D アセットの使用方法を説明します
 seo-description: AEM 3D での 3D アセットの使用方法を説明します
@@ -10,15 +10,19 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 32143da1-09c8-45ce-b50d-32adf6efe383
 translation-type: tm+mt
-source-git-commit: 7c850ed0d20dd2ba2626242c67ba190e371f049f
+source-git-commit: 11b65cf2d180f04168d4c5d0929957c95a372e3c
 workflow-type: tm+mt
-source-wordcount: '1143'
-ht-degree: 82%
+source-wordcount: '1192'
+ht-degree: 78%
 
 ---
 
 
-# 3D アセットの使用 {#working-with-d-assets}
+# Working with AEM 3D assets {#working-with-d-assets}
+
+>[!IMPORTANT]
+>
+>AEM 6.4でのAEM 3Dのサポートは終了しました。 Adobeでは、 [AEMの3Dアセット機能をCloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html)[またはAEM 6.5.3以降として使用することをお勧めします。](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html)
 
 Adobe Experience Manager 3D（AEM 3D）を使用して、3D コンテンツをアップロード、管理、表示およびレンダリングできます。表示とレンダリングのサポートは、個々のオブジェクトに最適化されます。
 
@@ -57,7 +61,7 @@ AEM 3D で使用する 3D モデルを作成する場合は、以下の点に注
 
 * Autodesk FBX (Filmbox)ファイル形式(`.fbx`)
 
-   Autodesk 3Dファイル交換形式 バイナリ形式とASCII形式の両方。
+   Autodesk 3Dファイル交換形式バイナリ形式とASCII形式の両方。
 
    サードパーティアプリケーションで FBX ファイルを作成する場合は、以下の設定を推奨します（下の表を参照）。これらの設定を利用すると、AEM で使用する 3D ファイルに最適な結果が得られます。The option names are taken from the **[!UICONTROL Autodesk Maya FBX Export Options]** dialog box.
 
