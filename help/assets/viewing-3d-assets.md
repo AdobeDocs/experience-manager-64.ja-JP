@@ -10,15 +10,19 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 65040923-a8a8-4e27-82c0-67a04348e238
 translation-type: tm+mt
-source-git-commit: 5acb16b1734331767554261bbcf9640947f2e23f
+source-git-commit: 11b65cf2d180f04168d4c5d0929957c95a372e3c
 workflow-type: tm+mt
-source-wordcount: '1755'
-ht-degree: 72%
+source-wordcount: '1806'
+ht-degree: 70%
 
 ---
 
 
 # 3D アセットの表示 {#viewing-d-assets}
+
+>[!IMPORTANT]
+>
+>AEM 6.4でのAEM 3Dのサポートは終了しました。 Adobeでは、 [AEMの3Dアセット機能をCloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html)[またはAEM 6.5.3以降として使用することをお勧めします。](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html) を表示3Dアセットに追加します。
 
 このドキュメントでは、3D アセットをアセットの詳細で表示する方法と 3D コンポーネント内のアセットをサイトで表示する方法の両方について説明します。
 
