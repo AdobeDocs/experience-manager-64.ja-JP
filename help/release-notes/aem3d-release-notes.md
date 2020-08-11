@@ -10,19 +10,23 @@ content-type: reference
 topic-tags: 3D
 discoiquuid: 9789d031-fb7e-415a-a9c3-8b8fde978238
 translation-type: tm+mt
-source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+source-git-commit: 11b65cf2d180f04168d4c5d0929957c95a372e3c
 workflow-type: tm+mt
-source-wordcount: '1933'
-ht-degree: 46%
+source-wordcount: '1983'
+ht-degree: 44%
 
 ---
 
 
 # AEM 3D リリースノート {#aem-d-release-notes}
 
+>[!IMPORTANT]
+>
+>AEM 6.4のAEM 3D機能パックは、サポートされなくなりました。 Adobeでは、 [AEMの3Dアセット機能をCloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html)[またはAEM 6.5.3以降として使用することをお勧めします。](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html)
+
 AEM-6.4-DynamicMedia-3Dバージョン3.1.0（2018年10月11日）
 
-AEM 3D機能パックを使用すると、AEM Assets内の3Dコンテンツをサポートできます。 3D Assets のアップロード、管理、プレビューおよびレンダリングの機能を提供します。表示とレンダリングのサポートは、複数のオブジェクトを持つ複雑なシーンではなく、個々のオブジェクトに対して最適化されています。
+AEM 3D機能パックは、AEM Assetsの3Dコンテンツをサポートします。 3D Assets のアップロード、管理、プレビューおよびレンダリングの機能を提供します。表示とレンダリングのサポートは、複数のオブジェクトを持つ複雑なシーンではなく、個々のオブジェクトに対して最適化されています。
 
 AEM 3Dは、Adobe Dimension(Dn)およびglTFのアセットタイプをサポートします。 これらのアセットタイプの実装は、このドキュメントで説明する従来の3Dタイプの実装とは大きく異なります。 詳しくは、Adobe Dimensionアセットの [操作を参照してください](/help/assets/working-dimension-assets.md)。
 
@@ -106,7 +110,7 @@ AEM 3Dは、Adobe Dimension(Dn)およびglTFのアセットタイプをサポー
 
 * このバージョンのAEM3Dでは、Adobe Dimensionで作成された.dnファイルのサポートは限られています。
 * アップロード処理AEMでは、クラウドベースのAdobeホスト変換サービスを利用して、ネイティブの.dnファイルからglTFレンディションを作成します。 変換サービスへのアクセスと、AmazonのAWSエンドポイントの選択が必要です。
-* 新しいglTFビューアが提供され、AEM Assetsーおよびサイト/画面でのDNアセットの表示がサポートされます。 Viewerでのステージのサポートはまだ行われていません。
+* 新しいglTFビューアが提供され、AEM Assetsおよびサイト/画面でのDNアセットの表示がサポートされます。 Viewerでのステージのサポートはまだ行われていません。
 * DNモデルは、IBLのライトと背景（存在する場合）を埋め込むことができます。 または、ビューアは初期設定の照明、初期設定の背景色、またはその両方を適用します。
 * DNアセットの高品質レンダリングはまだ使用できません。
 * テクスチャマップなどの依存関係は、DNアセットに埋め込まれ、AEMで明示的に管理することはできません。
@@ -114,7 +118,7 @@ AEM 3Dは、Adobe Dimension(Dn)およびglTFのアセットタイプをサポー
 ### 互換性 {#compatibility}
 
 * **Windows サービスとしての実行がサポートされていない（Windows のみ）** - 機能する可能性はありますが、テストされていません。
-* **Dynamic Media** ( `dynamicmedia-scene7` モード) - AEM3DとAEM 6.4でリリースされた新しいDynamic Mediaソリューションとの互換性は、まだ完全に検証されていません。 Dynamic MediaとAEM3Dを一緒にデプロイする場合は、3Dアセットとその依存関係を、Dynamic Mediaに割り当てられていないAEM Assetsリポジトリの領域にのみ配置することをお勧めします。 この推奨は、3Dステージに必要ながDynamic Mediaでサポートされていない32ビットTIFFファイルに対して特に重要です。
+* **ダイナミックメディア** ( `dynamicmedia-scene7` モード) - AEM3DとAEM 6.4でリリースされた新しいダイナミックメディアソリューションとの互換性は、まだ完全には検証されていません。 ダイナミックメディアとAEM3Dを一緒にデプロイする場合は、3Dアセットとその依存関係を、ダイナミックメディアに割り当てられていないAEM Assetsリポジトリの領域にのみ配置することをお勧めします。 この推奨は、3Dステージに必要ながダイナミックメディアではサポートされていない32ビットTIFFファイルに対して特に重要です。
 
 ### 一般 {#general}
 
@@ -151,7 +155,7 @@ AEM 3Dは、Adobe Dimension(Dn)およびglTFのアセットタイプをサポー
 * **IBL ステージの背景画像** - IBL シーンによっては、明るすぎたり不鮮明すぎたりするなど、背景画像の品質が低いことがあります。IBL ステージの画像背景の視覚的な品質を最大限に高めるには、個別の高解像度 8 ビット JPEG 画像を作成し、**背景環境画像**&#x200B;として IBL ステージに付加することをお勧めします。
 
 * **Maya で IBL ステージを使用してレンダリングすると黒い画像になる** - この問題は、ステージが参照する元の IBL 画像が別の名前を持つ画像で置き換えられたため、IBL 画像の依存関係が Maya で見つからないことにより引き起こされる可能性があります。この問題を回避するには、Maya IBLステージで参照される3つの依存関係のうち少なくとも1つが、Mayaファイル内の元のIBLファイルリファレンスと同じ名前を持っていることを確認します。
-* **IBL ステージの背景画像が反転する** - Autodesk Maya に付属の NVIDIA mental ray レンダラーの動作と一致させるために、IBL ステージの画像が意図的に水平に反転されます。回避策： PhotoshopのIBLステージに使用する画像をアップロードする前に反転します。
+* **IBL ステージの背景画像が反転する** - Autodesk Maya に付属の NVIDIA mental ray レンダラーの動作と一致させるために、IBL ステージの画像が意図的に水平に反転されます。回避策：PhotoshopのIBLステージに使用する画像をアップロードする前に反転します。
 * **IBL ステージの明るさ** - IBL 画像を自動解析した結果、シーンが暗くなりすぎたり明るくなりすぎたりすることがあります。To adjust the lighting brightness of IBL stages, navigate to **Basic Properties** and adjust the **bright** value of **Environment Lighting** as needed.
 
 ### AEM Sites の 3D コンポーネント {#aem-sites-d-component}
@@ -165,4 +169,4 @@ AEM 3Dは、Adobe Dimension(Dn)およびglTFのアセットタイプをサポー
 
 * **3Dコンポーネント設定** — すべてのアクティブなパブリッシュノードに3D機能パックをインストールする必要があります。各ノードには、の同じ設定オプションに **CRXDE Lite** を設定する必要があり `/libs/settings/dam/v3D/WebGLSites`ます。
 
-* **公開後にテクスチャ、背景、照明が見つからない** - **AEM Sitesの** 公開メカニズムは、3Dモデルや3Dコンポーネントが参照する3Dステージなど、ページの主な依存関係を自動的に公開します。 しかし、3D ステージと 3D モデルは、通常、AEM Sites の公開メカニズムでは自動的に公開されない IBL 画像とテクスチャマップのセカンダリアセットに依存しています。回避策： サイトからWebページを公開する前に、アセットからすべての3Dアセットを公開します。 これにより、3Dアセットのすべての依存関係がパブリッシュノードで使用できるようになります。
+* **公開後にテクスチャ、背景、照明が見つからない** - **AEM Sitesの** 公開メカニズムは、3Dモデルや3Dコンポーネントが参照する3Dステージなど、ページの主な依存関係を自動的に公開します。 しかし、3D ステージと 3D モデルは、通常、AEM Sites の公開メカニズムでは自動的に公開されない IBL 画像とテクスチャマップのセカンダリアセットに依存しています。回避策：サイトからWebページを公開する前に、アセットからすべての3Dアセットを公開します。 これにより、3Dアセットのすべての依存関係がパブリッシュノードで使用できるようになります。
