@@ -10,15 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 discoiquuid: 4a601c2a-4ea1-4308-8ae8-704155f63c21
 translation-type: tm+mt
-source-git-commit: 5acb16b1734331767554261bbcf9640947f2e23f
+source-git-commit: 11b65cf2d180f04168d4c5d0929957c95a372e3c
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '511'
 ht-degree: 1%
 
 ---
 
 
 # Adobe Dimensionアセットの操作 {#working-with-adobe-dimension-assets}
+
+>[!IMPORTANT]
+>
+>AEM 6.4のAEM 3D機能パックは、サポートされなくなりました。 Adobeでは、 [AEMの3Dアセット機能をCloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html)[またはAEM 6.5.3以降として使用することをお勧めします。](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html) adobe dimensionアセットを使用する場合
 
 AEM 3D機能パックは、AEM Assets、AEM Sites、AEM ScreensのAdobe Dimensionアセット(`.dn` ファイル)をサポートしています。
 
@@ -33,7 +37,7 @@ DimensionアセットがAEMにアップロードされると、ファイルの�
 * AEM Assets、AEM Sites、AEM Screensの表示Dimensionアセットに対してAdobeglTFビューアを使用する場合、視覚的な画質を最大限に高めるために、Adobe固有の拡張機能を含めます。 これにより、レンディションはほとんどのサードパーティアプリケーションと互換性がなくなります。 `.glb`
 * Adobe固有の拡張子を除外して、レンディションとサードパーティのアプリケーションとの互換性を維持します。 `.glb` これにより、AEM Assets、AEM Sites、AEM Screensでの表示時の画質が制限され（例えば、IBL照明がない場合）、一般的なサードパーティアプリケーションの画質をシミュレートできます。
 
-Dimension/glTFファイルのAmazonAWSとの間またはAWSとの間での転送、およびAWSでのそれらの一時的なストレージは完全に保護されます。 これらのファイルは、AmazonAWSでは最小限の時間で保持されます。 通常、通常の操作中は数分以内です。
+Dimension/glTFファイルのAmazonAWSとの間またはAWSとの間での転送、およびAWSでのそれらの一時的なストレージは完全に保護されます。 これらのファイルは、AmazonAWSでは最小限の時間で保持されます。通常、通常の操作中は数分以内です。
 
 Dimensionアセットのサポートを有効にするには、Adobeから変換サービスにアクセスするための資格情報を取得する必要があります。 [AEM 3D のインストールと設定](install-config-3d.md)を参照してください。
 
