@@ -6,7 +6,7 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: f341fae1-dda3-4917-b6db-ad02fec63702
 translation-type: tm+mt
-source-git-commit: 9ced187ddc9bb2d12922fcc734b20ef9767d8fbf
+source-git-commit: 38d3a204e3ef038ef4f848e12b9fc73f127ec488
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 51%
@@ -85,13 +85,13 @@ AEM Assetsの設定に加えて、次の設定を変更して大きなアセッ�
 1. Tap the **[!UICONTROL Preview]** icon to play the video.
 1. To annotate the video, tap the **[!UICONTROL Annotate]** button. 注釈がビデオ内の特定の時点（フレーム）に追加されます。
 
-   注釈を付けているときは、キャンバスに描画して、図面にコメントを含めることができます。 コメントは自動的にAdobe Experience Managerアセットに保存されます。
+   注釈を付けているときは、キャンバスに描画して、図面にコメントを含めることができます。コメントは自動的にAdobe Experience Managerアセットに保存されます。
 
    ![chlimage_1-204](assets/chlimage_1-204.png)
 
    To exit the annotation wizard, tap **[!UICONTROL Close]**.
 
-1. To jump to a specific point in the video, specify the time in seconds in the text field and click **[!UICONTROL Jump]**. 例えば、ビデオの最初の 秒をスキップするには、`20`テキストフィールドに 10 と入力します。
+1. To jump to a specific point in the video, specify the time in seconds in the text field and click **[!UICONTROL Jump]**. 例えば、ビデオの最初の 秒をスキップするには、`20`テキストフィールドに 20 と入力します。
 
    ![chlimage_1-205](assets/chlimage_1-205.png)
 
