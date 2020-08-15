@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 translation-type: tm+mt
-source-git-commit: ffa45c8fa98e1ebadd656ea58e4657b669ddd830
+source-git-commit: c4e18cad7bc08638af9dce6ab396554052043e16
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2267'
 ht-degree: 69%
 
 ---
@@ -98,20 +98,20 @@ cq:tags インデックスルールを追加した後
 
 * **cq:tags インデックスルール**
 
-       ```
-       /oak:index/cqPageLucene/indexRules/cq:Page/properties/cqTags
-     @name=jcr:content/cq:tags
-     @propertyIndex=true
-       ```
-   
+   ```
+   /oak:index/cqPageLucene/indexRules/cq:Page/properties/cqTags
+    @name=jcr:content/cq:tags
+    @propertyIndex=true
+   ```
+
 * **Query Builder クエリ**
 
-       ```
-       type=cq:Page
-     property=jcr:content/cq:tags
-     property.value=myTagNamespace:myTag
-       ```
-   
+   ```
+   type=cq:Page
+    property=jcr:content/cq:tags
+    property.value=myTagNamespace:myTag
+   ```
+
 * **クエリプラン**
 
    * `[cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) jcr:content/cq:tags:my:tag where [a].[jcr:content/cq:tags] = 'my:tag' */`
@@ -146,7 +146,7 @@ oak.queryLimitInMemory とoak.queryLimitReads のしきい値を低く設定し�
 
 #### デプロイメント後 {#post-deployment-2}
 
-* クエリが大きなノードトラバーサルまたは大きなヒープメモリの消費をトリガーしているかどうかログを監視します。 &quot;
+* 大量のノードのトラバーサルまたは大量のヒープメモリの消費を引き起こすクエリについてログを監視します。
 
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read or traversed more than 100000 nodes. To avoid affecting other tasks, processing was stopped.`
    * クエリを最適化して、走査するノードの数を減らします。
