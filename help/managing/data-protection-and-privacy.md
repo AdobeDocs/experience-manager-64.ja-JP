@@ -1,8 +1,8 @@
 ---
 title: データ保護とデータプライバシーに関する規制 —Adobe Experience Manager準備
-seo-title: Adobe Experience Manager保護対応およびデータプライバシー規制 GDPR、CCPAなど
-description: '様々なData Protection and Data Privacy Regulationsに対するAdobe Experience Managerのサポートについて説明します。 EU General Data Protection Regulation(GDPR)、California Consumer Privacy Act（カリフォルニア消費者プライバシー法）、および新しいAEMプロジェクトを導入する際の準拠方法を含む。 '
-seo-description: '様々なData Protection and Data Privacy Regulationsに対するAdobe Experience Managerのサポートについて説明します。 EU General Data Protection Regulation(GDPR)、California Consumer Privacy Act（カリフォルニア消費者プライバシー法）、および新しいAEMプロジェクトを導入する際の準拠方法を含む。 '
+seo-title: Adobe Experience Manager保護対応およびデータプライバシー規制GDPR、CCPAなど
+description: '様々なData Protection and Data Privacy Regulationsに対するAdobe Experience Managerのサポートについて説明します。EU General Data Protection Regulation(GDPR)、California Consumer Privacy Act（カリフォルニア消費者プライバシー法）、および新しいAEMプロジェクトを導入する際の準拠方法を含む。 '
+seo-description: '様々なData Protection and Data Privacy Regulationsに対するAdobe Experience Managerのサポートについて説明します。EU General Data Protection Regulation(GDPR)、California Consumer Privacy Act（カリフォルニア消費者プライバシー法）、および新しいAEMプロジェクトを導入する際の準拠方法を含む。 '
 uuid: c443aa47-0766-4280-b0f2-b5b06534ffba
 contentOwner: aheimoz
 content-type: reference
@@ -54,7 +54,7 @@ Adobe Experience Managerの例と、それに対して実行されるアプリ�
 
 この規則の主な規定は次の通りである。
 
-1. 個人データの定義が拡張され、一意のIDがすべて含まれるようになりました。 を直接または間接的に識別可能なデータとして扱う場合と同様です。
+1. 個人データの定義が拡張され、一意のIDがすべて含まれるようになりました。を直接または間接的に識別可能なデータとして扱う場合と同様です。
 
 2. 同意要件を強化しました。
 
@@ -68,9 +68,9 @@ Adobe Experience Managerの場合：
 
    * つまり、ビジネス・エンティティやサービスプロバイダー、データ・コントローラ、データ・プロセッサなど、規制上の役割をお客様が管理するということです。
 
-   * 次の図に示すように、Adobe Experience Platformプライバシーサービスは、AEMのワークフローには含まれません。
+   * 下の図に示すように、Adobe Experience Platform Privacy ServiceはAEMのワークフローに含まれません。
 
-* AEMには、お客様のプライバシー管理者およびAEM管理者がプライバシー規制の要請を実行するためのドキュメントと手順が含まれます。 手動で、またはAPI経由で（使用可能な場合）。
+* AEMには、お客様のプライバシー管理者およびAEM管理者がプライバシー規制の要請を実行するためのドキュメントと手順が含まれます。手動で、またはAPI経由で（使用可能な場合）。
 
 * 新しいサービスまたはUIが追加されていません。
 
