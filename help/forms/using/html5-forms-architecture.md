@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 599f1925-a17e-4bae-93d9-b54edcee92b0
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 6f0016b6b59d27da89c41089aa4d73096846a7fb
 workflow-type: tm+mt
-source-wordcount: '2053'
-ht-degree: 77%
+source-wordcount: '2038'
+ht-degree: 78%
 
 ---
 
@@ -24,10 +24,7 @@ ht-degree: 77%
 
 HTML5 forms functionality is deployed as a package within the embedded AEM instance and is exposesd as a REST end point over HTTP/S using RESTful [Apache Sling Architecture](https://sling.apache.org/).
 
-    [ ![01-aem-forms-architecture](assets/01-aem-forms-architecture.jpg)
-*表示フルサイズ*](javascript:void(0).md)
-
-    [ ![02-aem-forms-architecture_large](assets/02-aem-forms-architecture_large.jpg)](javascript:void(0).md)
+![02-aem-forms-architecture_large](assets/02-aem-forms-architecture_large.jpg)
 
 ### Sling フレームワークの使用 {#using-sling-framework}
 
@@ -45,14 +42,14 @@ HTML5 フォームは、最初のリクエスト時にフォームを処理（�
 
 Mobile Forms は、PreRender キャッシュと Render キャッシュの 2 つの異なるレベルのキャッシュを持っています。preRender キャッシュは解決されたテンプレートのすべてのフラグメントと画像含み、Render キャッシュはレンダリングされたコンテンツ（例えば HTML）を含みます。
 
-![HTML5フォームのワークフロー](assets/cacheworkflow.png)**図：** *HTML5フォームのワークフロー*
+![HTML5フォームのワークフロー](assets/cacheworkflow.png)**図：***HTML5フォームのワークフロー*
 
 HTML5 フォームは、フラグメントと画像の参照がないテンプレートはキャッシュしません。HTML5 フォームの処理にかかる時間が通常より長くなる場合は、サーバーログをチェックして、不足している参照や警告を調べてください。また、オブジェクトの最大サイズに達していないことも確認してください。
 
 Forms OSGi サービスは次の 2 つの手順でリクエストを処理します。
 
 * **レイアウトと初期フォーム状態の生成**：Forms OSGi レンダリングサービスは、フォームキャッシュコンポーネントを呼び出して、このフォームがすでにキャッシュされていて無効化されていないかを調べます。 フォームがキャッシュされ有効になっている場合は、キャッシュから生成 HTML を提供します。フォームが無効化されている場合、Forms OSGi レンダリングサービスは、初期フォームレイアウトとフォーム状態を XML 形式で生成します。この XML は Forms OSGi サービスによって HTML レイアウトと初期 JSON フォーム状態に変換されてから、後続の要求のためにキャッシュされます。
-* **事前入力されたForms**: レンダリング中に、ユーザーが事前入力されたデータを含むフォームを要求した場合、FormsOSGiレンダリングサービスはFormsサービスコンテナを呼び出し、マージされたデータを含む新しいフォーム状態を生成します。 ただし、上記の手順でレイアウトはすでに生成されているので、この呼び出しのほうが最初の呼び出しよりも高速です。この呼び出しはデータの結合とデータへのスクリプトの実行のみを実施します。
+* **事前入力されたForms**:レンダリング中に、ユーザーが事前入力されたデータを含むフォームを要求した場合、FormsOSGiレンダリングサービスはFormsサービスコンテナを呼び出し、マージされたデータを含む新しいフォーム状態を生成します。 ただし、上記の手順でレイアウトはすでに生成されているので、この呼び出しのほうが最初の呼び出しよりも高速です。この呼び出しはデータの結合とデータへのスクリプトの実行のみを実施します。
 
 フォームまたはフォーム内で使用されるアセットに更新がある場合、フォームキャッシュコンポーネントはその更新を検出し、その特定のフォームのキャッシュは無効になります。 Forms OSGi サービスが処理を完了したら、プロファイルレンダラー JSP はこのフォームに JavaScript ライブラリの参照とスタイル設定を追加し、応答をクライアントに返します。[Apache](https://httpd.apache.org/) のような一般的な Web サーバーは HTML 圧縮オンでここで使用できます。Webサーバーは、応答サイズ、ネットワークトラフィック、およびサーバーとクライアントマシンの間でのデータのストリーミングに要する時間を削減します。
 
