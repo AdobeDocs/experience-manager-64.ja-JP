@@ -7,10 +7,10 @@ uuid: e4bf343c-59cd-48ac-bee4-85db109e4c65
 contentOwner: mgulati
 discoiquuid: 3e3c867f-afb0-4402-94f4-16e1a556ddee
 translation-type: tm+mt
-source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+source-git-commit: 4a1be7a5a233557dff0e7cd3796380532f23d5eb
 workflow-type: tm+mt
 source-wordcount: '1032'
-ht-degree: 82%
+ht-degree: 81%
 
 ---
 
@@ -95,7 +95,7 @@ AEM 6.4 Communities では、コミュニティサイトコンソール内で、
 
 ## UGC とユーザープロファイルの管理 {#managing-ugc-and-user-profiles}
 
-AEM Communities では、ユーザーデータの保護をコミュニティエクスペリエンスの重要事項としながら、[そのまますぐに使用できる API](user-ugc-management-service.md) と[サンプルサーブレット](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet)を公開します。これらの API を使用すると、ユーザー生成コンテンツの一括管理（一括削除と一括書き出し）と、EU GDPR のコンプライアンス要件への対応を容易におこなうことができます。
+AEM Communities では、ユーザーデータの保護をコミュニティエクスペリエンスの重要事項としながら、[そのまますぐに使用できる API](user-ugc-management-service.md) と[サンプルサーブレット](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet)を公開します。これらの API を使用すると、ユーザー生成コンテンツの一括管理（一括削除と一括書き出し）と、EU GDPR のコンプライアンス要件への対応を容易におこなうことができます。
 
 ## 変更点 {#what-s-changed}
 
