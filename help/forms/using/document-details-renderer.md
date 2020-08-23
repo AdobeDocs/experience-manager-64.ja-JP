@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: b6e88080-6ffc-4796-98c7-d7462bca454e
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 65%
@@ -92,7 +92,7 @@ AEM Forms workspace listens on `window.global.postMessage([Message],[Payload])`
 
 **AEM Formsワークスペースからサードパーティアプリケーションへの通信**
 
-AEM Formsワークスペースの直接アクションボタンが表示されている場合は、このボタンが呼び出し `window.[External-App-Name].getMessage([Action])`ます。ここで、[ `Action]` はから読み取られ `routeActionMap`ます。 The third-party application must listen on this interface, and then notify AEM Forms workspace via the `postMessage ()` API.
+AEM Formsワークスペースの直接アクションボタンが表示されている場合は、を呼び出し `window.[External-App-Name].getMessage([Action])`ます。ここで、は、から読み取 `[Action]` られ `routeActionMap`ます。 The third-party application must listen on this interface, and then notify AEM Forms workspace via the `postMessage ()` API.
 
 For example, a Flex application can define `ExternalInterface.addCallback('getMessage', listener)` to support this communication. If the third-party application wants to handle form submission via its own buttons, then you should specify `hideDirectActions = true() in the runtimeMap` and you may skip this listener. 従って、この構築はオプションです。
 
