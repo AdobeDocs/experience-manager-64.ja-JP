@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: 3D
 discoiquuid: 0d7fefc0-6923-4ac3-9e90-335c08fa56f0
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '537'
 ht-degree: 8%
 
 ---
@@ -42,7 +42,7 @@ AEM 3DとAutoDesk Mayaの [統合も参照してください](integrate-maya-wit
 
 1. 3ds Maxで、 **[!UICONTROL カスタマイズ/プラグインマネージャをクリックし]**&#x200B;ます。
 
-   ステー `FBXMAX.DLU` タス **[!UICONTROL が]** [!UICONTROL loaded ****]であることを確認します。
+   ステー `FBXMAX.DLU` タス **[!UICONTROL が]** 読み込まれていることを確認します ****。
 
    [ **[!UICONTROL プラグインマネージャ]** ]ダイアログボックスを閉じ、3ds Maxを閉じます。
 
@@ -62,7 +62,7 @@ AEM 3DとAutoDesk Mayaの [統合も参照してください](integrate-maya-wit
 
 1. 作業フォルダを削除します（.MAXファイルを取り込もうとした場合にのみ必要）。
 
-   1. CRXDE Lite で、`/libs/settings/dam/v3D/Paths/maxWorkPath` に移動します。デフォルトでは、この設定の値はAEM installのルートフォルダーに対する相対値 `./MaxWork`です。
+   1. CRXDE Lite で、`/libs/settings/dam/v3D/Paths/maxWorkPath` に移動します。デフォルトでは、この設定の値は、AEM installのルートフォルダーに対する相対 `./MaxWork`値です。
    1. サーバー自体にログオンし、エクスプローラーを使用してAEM installのルートフォルダーに移動します。
    1. MaxWork **** フォルダ（内容全体を含む）が存在する場合は削除します。
 
