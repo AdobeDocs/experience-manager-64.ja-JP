@@ -4,9 +4,9 @@ description: タッチ操作に対応したAEM Assetsのユーザーインター
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '9812'
+source-wordcount: '9811'
 ht-degree: 67%
 
 ---
@@ -70,7 +70,7 @@ AEM Assets のタッチ対応 UI で実行できる様々なアセット管理�
 
    サイズが大きいと見なされるアセットのサイズは変更できます。例えば、（500 MB でなく）1000 MB を超えるサイズのアセットをサイズが大きいと見なすようにシステムを設定できます。この場合、1000 MB を超えるサイズのアセットをアップロードすると、プログレスバーに&#x200B;**[!UICONTROL 一時停止]**&#x200B;ボタンが表示されます。
 
-   The **[!UICONTROL Pause]]**button does not show if a file greater than 1000 MB is uploaded with a file less than 1000 MB. ただし、1000 MB 未満のファイルのアップロードをキャンセルすると、**[!UICONTROL 一時停止&#x200B;]**ボタンが表示されます。
+   The **[!UICONTROL Pause]** button does not show if a file greater than 1000 MB is uploaded with a file less than 1000 MB. ただし、1000 MB 未満のファイルのアップロードをキャンセルすると、**[!UICONTROL 一時停止]**&#x200B;ボタンが表示されます。
 
    To modify the size limit, configure the `chunkUploadMinFileSize` property of the `fileupload`node in the CRX repository.
 
@@ -206,7 +206,7 @@ When uploading image files, including AI, EPS, and PSD files, you can take the f
 | アンシャープマスク |  | 最後のダウンサンプル済み画像でシャープニングフィルター効果を調整し、効果の強さと半径（ピクセル単位）および無視されるコントラストのしきい値を制御することができます。<br>この効果では、Photoshop のアンシャープマスクフィルターと同じオプションが使用されます。名前から連想される機能と違い、アンシャープマスクとはシャープニングフィルターのことです。「アンシャープマスク」の下で、必要なオプションを設定します。以下の説明に従ってオプションを設定します。 |
 |  | 量 | 端のピクセルに適用するコントラストを制御します。<br>この量は、効果の強さと考えることができます。Dynamic Media と Adobe Photoshop での「アンシャープマスク」の値の主な違いは、Photoshop では範囲が 1%～500% である点です。一方、Dynamic Media では、値範囲は 0.0～5.0 です。5.0 という値は Photoshop の 500% にほぼ相当し、0.9 という値は 90% に相当するようになっています。 |
 |  | 半径 | 効果の半径を制御します。値の範囲は 0～250 です。<br>効果は画像内の全ピクセルに切れ目なく続き、すべてのピクセルから全方向に放射されます。半径はピクセル単位です。例えば、2000 x 2000 ピクセルの画像と 500 x 500 ピクセルの画像で同じシャープニング効果を得たい場合、2000 x 2000 ピクセルの画像では半径を 2 ピクセルに設定し、500 x 500 ピクセルの画像では 1 ピクセルに設定します。ピクセル数の多い画像には大きい値を使用します。 |
-|  | しきい値 | しきい値とは、アンシャープマスクフィルターの適用時に無視されるコントラストの範囲です。このフィルターの使用中に画像に「ノイズ」が加わるのを防ぐために重要です。値範囲は 0～255 で、グレースケール画像の明るさのステップ数です。0=黒、128=50% グレー、255=白です。<br> 例えば、しきい値を12に設定すると、ノイズの追加を避けるため、肌のトーンの明るさの微妙な変化は無視されますが、まつげと皮膚が接触する場所などのコントラストの強い領域には、エッジのコントラストが追加されます。<br> 例えば、ある人物の顔写真にアンシャープマスクを適用すると、まつげと皮膚が接触して明確なコントラストを作り出す場所など、画像の中でコントラストの強い部分に影響し、滑らかな肌自体も影響を受けます。 非常に滑らかな肌でも、明るさの値はわずかに変化しています。しきい値を使用しないと、このフィルターはこのような肌部分のピクセルのわずかな変化を強調します。同様に、まつげのコントラストを強めてシャープさを強調し、ノイズのある望ましくない効果を生み出してしまいます。<br>しきい値は、この問題を解決するために導入されたもので、フィルターに対し、滑らかな肌のようにコントラストが大きく変化しないピクセルは無視するよう指示します。<br>先ほど示したファスナーのグラフィックで、ファスナーの横の生地に注目してください。しきい値が低すぎてノイズを抑制できなかったので、画像ノイズが発生しています。 |
+|  | しきい値 | しきい値とは、アンシャープマスクフィルターの適用時に無視されるコントラストの範囲です。このフィルターの使用中に画像に「ノイズ」が加わるのを防ぐために重要です。値範囲は 0～255 で、グレースケール画像の明るさのステップ数です。0=黒、128=50% グレー、255=白です。<br> 例えば、しきい値を12に設定すると、ノイズの追加を避けるため、肌のトーンの明るさの微妙な変化は無視されますが、まつげと皮膚が接触する場所などのコントラストの強い領域には、エッジのコントラストが追加されます。<br> 例えば、ある人物の顔写真にアンシャープマスクを適用すると、まつげと皮膚が接触して明確なコントラストが生まれる場所など、画像の中でコントラストの強い部分に加えて、滑らかな肌自体も影響を受けます。 非常に滑らかな肌でも、明るさの値はわずかに変化しています。しきい値を使用しないと、このフィルターはこのような肌部分のピクセルのわずかな変化を強調します。同様に、まつげのコントラストを強めてシャープさを強調し、ノイズのある望ましくない効果を生み出してしまいます。<br>しきい値は、この問題を解決するために導入されたもので、フィルターに対し、滑らかな肌のようにコントラストが大きく変化しないピクセルは無視するよう指示します。<br>先ほど示したファスナーのグラフィックで、ファスナーの横の生地に注目してください。しきい値が低すぎてノイズを抑制できなかったので、画像ノイズが発生しています。 |
 |  | モノクロ | 選択すると、画像の明るさ（強さ）にアンシャープマスクが適用されます。<br>選択を解除すると、それぞれの色成分に別々にアンシャープマスクが適用されます。 |
 | ノックアウトの背景 |  | アップロード時に画像の背景を自動的に削除します。この技術は、特定の対象に注目を集め、賑やかな背景から際立たせるのに便利です。選択すると、ノックアウトの背景機能および以下のサブオプションが「オン」になります。 |
 |  | 隅 | 必須.<br>ノックアウトする背景色の定義に使用される画像の隅。<br>「**左上**」、「**左下**」、「**右上**」、「**右下**」から選択できます。 |
@@ -289,7 +289,7 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
 #### Set Batch Set Presets at upload {#setting-batch-set-presets-at-upload}
 
-If you want to automatically create an Image Set or Spin Set from uploaded images, click the **[!UICONTROL Active** column for the preset you want to use. 複数のプリセットを選択できます。
+If you want to automatically create an Image Set or Spin Set from uploaded images, click the **[!UICONTROL Active]** column for the preset you want to use. 複数のプリセットを選択できます。
 
 バッチセットプリセットの作成について詳しくは、[画像セットとスピンセットの自動生成用のバッチセットプリセットの設定](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を参照してください。
 
@@ -514,7 +514,7 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
    >
    >ビデオの注釈は、HTML5 互換のビデオ形式に対応したブラウザーでのみサポートされます。また、ブラウザーによってサポートされるビデオ形式が異なります。
 
-サブアセットについて詳しくは、サブアセットの [管理を参照してください](managing-linked-subassets.md)。
+サブアセットについて詳しくは、「サブアセットの [管理](managing-linked-subassets.md)」を参照してください。
 
 ## アセットの削除 {#deleting-assets}
 
@@ -535,7 +535,7 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
 1. 確認ダイアログボックスで、次をタップします。
 
    * **[!UICONTROL キャンセル]**：アクションを停止します。
-   * **[!UICONTROL 「削除]** 」では、次の条件に基づいてアクションを確認します。
+   * **[!UICONTROL 「削除]** 」で、次の条件に基づいてアクションを確定します。
 
       * アセットに参照がない場合は、アセットが削除されます。
       * If the asset has references, an error-message informs you that **[!UICONTROL One or more assets are referenced]**. You can select **[!UICONTROL Force Delete]** or **[!UICONTROL Cancel]**.
@@ -710,12 +710,12 @@ The **[!UICONTROL Timeline]** lets you view various events for a selected item, 
 
 [コレクションコンソール](managing-collections-touch-ui.md#navigating-the-collections-console)の&#x200B;**[!UICONTROL すべて表示]**&#x200B;リストには、コメントとワークフローだけを表示するオプションがあります。さらに、タイムラインはコンソールにリストされているトップレベルのコレクションについてのみ表示されます。これらのコレクション内を移動する場合、タイムラインは表示されません。
 
-**[!UICONTROL タイムライン]** には、コンテンツフラグメントに固有の [オプションがいくつか含まれています](content-fragments-managing.md#timeline-for-content-fragments)。 この機能には、AEM 6.4 [Service Pack 2(6.4.2.0)](/help/release-notes/sp-release-notes.md) 以降が必要です。
+**[!UICONTROL タイムライン]** には、コンテンツフラグメントに固有の [オプションがいくつか含まれています](content-fragments-managing.md#timeline-for-content-fragments)。この機能には、AEM 6.4 [Service Pack 2(6.4.2.0)](/help/release-notes/sp-release-notes.md) 以降が必要です。
 
 **タイムラインを使用するには**:
 
 1. アセットのアセットページを開くか、Assets UI でアセットページを開きます。
-1. グロー **[!UICONTROL バルナビゲーション]** アイコンをタップし、リストから「 **** タイムライン」を選択します。
+1. グロー **[!UICONTROL バルナビゲーション]** アイコンをタップし、リストから「 **[タイムライン]** 」を選択します。
 
    ![タイムライン](assets/timeline.png)
 
@@ -844,8 +844,7 @@ To print the annotations and review status, tap the **[!UICONTROL Print]** icon 
 
    レンダリングされた PDF ファイルに戻り、更新します。更新された PDF に、変更が反映されています。
 
-**外国語で注釈を印刷するには**:
-アセットに外国語（特にラテン語以外の言語）の注釈が含まれる場合は、まずAEMサーバーでCQ-DAM-Handler-Gibson Font Manager Serviceを設定し、これらの注釈を印刷できるようにする必要があります。 CQ-DAM-Handler-Gibson Font Manager サービスの設定では、必要な言語のフォントがある場所を指定します。
+**外国語で注釈を印刷するには**:アセットに外国語（特にラテン語以外の言語）の注釈が含まれる場合は、まずAEMサーバーでCQ-DAM-Handler-Gibson Font Manager Serviceを設定し、これらの注釈を印刷できるようにする必要があります。 CQ-DAM-Handler-Gibson Font Manager サービスの設定では、必要な言語のフォントがある場所を指定します。
 
 1. Open the **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Service]** configuration page from the URL [https://&lt;server>:&lt;port>/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl](http://localhost:4502/system/console/configMgr/com.day.cq.dam.handler.gibson.fontmanager.impl.FontManagerServiceImpl).
 1. **[!UICONTROL CQ-DAM-Handler-Gibson Font Manager Serviceを設定するには、次のいずれかを実行します]**。
