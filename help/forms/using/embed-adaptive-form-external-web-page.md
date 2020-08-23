@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: author
 discoiquuid: b99c7b93-ba05-42ee-9ca8-0079e15d8602
 translation-type: tm+mt
-source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 47%
+source-wordcount: '1054'
+ht-degree: 57%
 
 ---
 
@@ -38,71 +38,68 @@ WebページにJavaScriptの数行を挿入することで、アダプティブ�
 
 1. 次のコードをWebサイト上のWebページに埋め込みます。
 
-   ```
-   
-   
-<!doctype html>
-<html>
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>これはWebページのタイトルです！</title>
+   ```html
+   <!doctype html>
+   <html>
+   <head>
+    <title>This is the title of the webpage!</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  </head>
-  <body>
-  <div class="customafsection"/>
-    <p>この節は、アダプティブフォームに置き換えられます。</p>
-
-
-    &lt;script>
-    var options = {path:&quot;/content/forms/af/locbasic.html&quot;, dataRef:&quot;&quot;, themepath:&quot;&quot;, CSS_Selector:&quot;.customafsection&quot;};
+   </head>
+   <body>
+   <div class="customafsection"/>
+   <p>This section is replaced with the adaptive form.</p>
+   
+    <script>
+    var options = {path:"/content/forms/af/locbasic.html", dataRef:"", themepath:"", CSS_Selector:".customafsection"};
     alert(options.path);
     var loadAdaptiveForm = function(options){
-    ///alert(options.path);if(options.path)が発行url of the adaptive form
-    
-    
-    // For Example: http:myserver:4503/content/forms/af/ABC，ここでABCはアダプティブフォーム
-    //注意： AEMサーバーがコンテキストパスで実行されている場合、アダプティブフォームURLには、コンテキスト
-    パスvar path = options.path;
-    path += &quot;/jcr:content/guideContainer.html&quot;;
-    $.ajax({
-    url: path ,
-    type : &quot;GET&quot;,
-    data : {
-    // wcmmodeをdisabledwcmmodeに設定し
-    ます。 &quot;disabled&quot;
-    // Set the data reference, if any
-    // &quot;dataRef&quot;: options.dataRef
-    // Specify a different theme for the form object
-    // &quot;themeOverride&quot; : options.themepath
-    },
-    async: false,
-    success: 関数(data) {
-    // jqueryがロードされている場合は、コンテナの内部htmlを設定し
-    // jqueryがロードされていない場合は、ドキュメントが提供するAPIを使用して内部HTMLを設定しますが、これらのAPIは、HTML5 spec
-    //に従ってHTMLのスクリプトタグを評価しません。 ドキュメント.getElementById().
-    innerHTMLif(window.$ &amp;&amp; options.CSS_Selector){
-    // jqueryのHTML APIは、タグを抽出し、DOMを更新し、スクリプトタグに埋め込まれたコードを評価します。
-    $(options.CSS_Selector).html(data);
-    }
-    },
-    error: function (data) {
-    // any error handler
-    }
-    });
+    //alert(options.path);
+    if(options.path) {
+        // options.path refers to the publish URL of the adaptive form
+        // For Example: http:myserver:4503/content/forms/af/ABC, where ABC is the adaptive form
+        // Note: If AEM server is running on a context path, the adaptive form URL must contain the context path 
+        var path = options.path;
+        path += "/jcr:content/guideContainer.html";
+        $.ajax({
+            url  : path ,
+            type : "GET",
+            data : {
+                // Set the wcmmode to be disabled
+                wcmmode : "disabled"
+                // Set the data reference, if any
+               // "dataRef": options.dataRef
+                // Specify a different theme for the form object
+              //  "themeOverride" : options.themepath
+            },
+            async: false,
+            success: function (data) {
+                // If jquery is loaded, set the inner html of the container
+                // If jquery is not loaded, use APIs provided by document to set the inner HTML but these APIs would not evaluate the script tag in HTML as per the HTML5 spec
+                // For example: document.getElementById().innerHTML
+                if(window.$ && options.CSS_Selector){
+                    // HTML API of jquery extracts the tags, updates the DOM, and evaluates the code embedded in the script tag.
+                    $(options.CSS_Selector).html(data);
+                }
+            },
+            error: function (data) {
+                // any error handler
+            }
+        });
     } else {
-    if (typeof(console) !== &quot;undefined&quot;) {
-    console.log(&quot;Path of Adaptive Form not specified to loadAdaptiveForm&quot;);
+        if (typeof(console) !== "undefined") {
+            console.log("Path of Adaptive Form not specified to loadAdaptiveForm");
+        }
     }
-    }
-    (options);
-    
-    &lt;/script>
-</body>
-</html>
+    }(options);
+   
+    </script>
+   </body>
+   </html>
    ```
 
 1. 埋め込まれたコードで：
 
-   * Change value of the `options.path` variable with the path of the publish URL of the adaptive form. AEM サーバーがコンテキストパス上で実行されている場合は、その URL にコンテキストパスが含まれるようにします。例えば、上記のコードとアダプティブフォームは同じaem formsサーバー上に存在するので、例ではアダプティブフォーム/content/forms/af/locbasic.htmlのコンテキストパスを使用します。
+   * Change value of the `options.path` variable with the path of the publish URL of the adaptive form. AEM サーバーがコンテキストパス上で実行されている場合は、その URL にコンテキストパスが含まれるようにします。例えば、上記のコードとアダプティブフォームは同じaem formsサーバー上に存在するので、例ではアダプティブフォーム/content/forms/af/locbasic.htmlのコンテキストパスを使用しています。
    * `options.dataRef` を URL を渡す属性と置き換えます。You can use the dataref variable to [prefill an adaptive form](/help/forms/using/prepopulate-adaptive-form-fields.md).
    * `options.themePath` をアダプティブフォームで設定されたテーマ以外のテーマへのパスと置き換えます。また、リクエストの属性を使用してテーマのパスを指定することができます。
    * `CSS_Selector` は、アダプティブフォームが埋め込まれているフォームコンテナの CSS セレクターです。例えば、.customafsection cssクラスは、上記の例のCSSセレクターです。
@@ -136,7 +133,7 @@ WebページにJavaScriptの数行を挿入することで、アダプティブ�
     ProxyPassReverse /forms https://[AEM_Instance]/forms
    ```
 
-   Replace `[AEM_Instance`] with the AEM server publish URL in the rules.
+   Replace `[AEM_Instance]` with the AEM server publish URL in the rules.
 
 コンテキストパスにAEMサーバーをマウントしない場合、Apacheレイヤーのプロキシルールは次のようになります。
 
