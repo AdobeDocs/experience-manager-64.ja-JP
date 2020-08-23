@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5d860f05-3257-4cf7-93dd-77d226d59b39
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '668'
 ht-degree: 63%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 63%
 
 Mobile Forms でカスタムウィジェットをプラグインできます。外観フレームワークを使用することで、既存の jQuery ウィジェットの拡張や、独自のカスタムウィジェットの開発を行うことができます。XFA engine uses various widgets, see [Appearance framework for adaptive and HTML5 forms](/help/forms/using/introduction-widgets.md) for detailed information.
 
-![デフォルトとカスタムのwidget](assets/custom-widgets.jpg)**図の例：** *デフォルトおよびカスタムウィジェットの例*
+![デフォルトとカスタムのwidget](assets/custom-widgets.jpg)**図の例：***デフォルトおよびカスタムウィジェットの例*
 
 ## HTML5 Forms でのカスタムウィジェットの統合 {#integrating-custom-widgets-with-html-forms}
 
@@ -46,7 +46,7 @@ HTML5フォームは、新しいウィジェットを作成するために拡張
   </tr> 
   <tr> 
    <td>getEventMap</td> 
-   <td>HTML イベントを XFA イベントに変換するマップを返します。<br /> {<br /> blur: XFA_EXIT_イベント,<br /> }<br /> この例は、blurがHTMLイベントであり、XFA_EXIT_イベントが対応するXFAイベントであることを示しています。 </td> 
+   <td>HTML イベントを XFA イベントに変換するマップを返します。<br /> {<br /> blur:XFA_EXIT_イベント,<br /> }<br /> この例は、blurがHTMLイベントであり、XFA_EXIT_イベントが対応するXFAイベントであることを示しています。 </td> 
   </tr> 
   <tr> 
    <td>getOptionsMap</td> 
@@ -89,12 +89,14 @@ window.formBridge.registerConfig("widgetConfig",
 
 ウィジェット設定は JSON オブジェクトとして提供（キーと値のペアのコレクション）されます。キーはフィールドを識別し、値はそれらのフィールドとともに使用するフィールドを示します。サンプル設定には次のようなものがあります。
 
+```
 *{*
 
-*“識別子1” : “カスタムウィジェット名”,\
-“識別子2” : “カスタムウィジェット名2”,\
-..\
+*“identifier1” : “customwidgetname”,  
+“identifier2” : “customwidgetname2”,  
+..  
 }*
+```
 
 「identifier」は、特定のフィールド、特定のタイプの一連のフィールド、またはすべてのフィールドを表すjQuery CSSセレクターです。 次のリストは、様々なケースでの識別子の値です。
 
@@ -102,4 +104,4 @@ window.formBridge.registerConfig("widgetConfig",
 |---|---|---|
 | fieldname の名前を持つ特定のフィールド | 識別子:&quot;div.fieldname&quot; | 「fieldname」の名前を持つすべてのフィールドはウィジェットの使用によりレンダリングされます。 |
 | 「type」タイプのすべてのフィールド（typeはNumericField、DateFieldなど）： | 識別子:&quot;div.type&quot; | TimefieldとDateTimeFieldの場合、これらのフィールドはサポートされないので、タイプはtextfieldです。 |
-| すべてのフィールド | 識別子： &quot;div.field&quot; |  |
+| すべてのフィールド | 識別子：&quot;div.field&quot; |  |
