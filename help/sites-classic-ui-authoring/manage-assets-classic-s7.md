@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 9ba95dce-a801-4a36-8798-45d295371b1b
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '3429'
+source-wordcount: '3428'
 ht-degree: 30%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 30%
 
 # ダイナミックMedia Classic機能のページへの追加{#adding-scene-features-to-your-page}
 
-[Adobeダイナミックメディアクラシック](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) は、リッチメディアアセットを管理、強化、公開、配信するためのホストソリューションで、Web、モバイル、電子メールおよびインターネットに接続されたディスプレイや印刷機能に対応しています。
+[Adobeダイナミックメディアクラシック](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) は、リッチメディアアセットを管理、強化、公開、およびWeb、モバイル、電子メール、インターネットに接続されたディスプレイや印刷に配信するためのホストソリューションです。
 
 Dynamic Media Classicで公開したAEMアセットは、様々なビューアに表示できます。
 
@@ -109,7 +109,7 @@ Adobeでは、Dynamic Media Classicターゲットー内のアセットからの
 
 1. In the sidekick, click the **[!UICONTROL Page]** icon, then click **[!UICONTROL Page Properties]**.
 
-1. [!UICONTROLCloud Services/追加サービス/Dynamic Media Classic (Scene7)をクリックします ****。
+1. **[!UICONTROL Cloud Services]/[!UICONTROL サービス]/[!UICONTROL Dynamic Media Classic(Scene7)をクリックします]**。
 1. 「Adobeダイナミックメディアクラシック」ドロップダウンリストで、必要な設定を選択し、「 **[!UICONTROL OK]**」をクリックします。
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
@@ -173,7 +173,7 @@ Dynamic Media Classicコンポーネントをページに追加する操作は�
 
 アセットのレスポンシブデザインとは、アセットが表示される場所に適応することを意味します。レスポンシブデザインでは、同じアセットが複数のデバイスに効果的に表示されます。
 
-**インタラクティブな表示エクスペリエンスをレスポンシブサイトにクラシックUIで追加するには**:
+**インタラクティブな表示エクスペリエンスをレスポンシブサイトのクラシックUIに追加するには**:
 
 1. Log in to AEM, and ensure that you have [configured Adobe Dynamic Media Classic Cloud Services](/help/sites-administering/scene7.md#configuring-scene-integration) and that Dynamic Media Classic components are available.
 
@@ -240,7 +240,7 @@ HTML5 フライアウトコンポーネントでは、アセットが分割画�
 
 **[!UICONTROL 出力形式]** — 画像の出力形式（jpegなど）を選択します。 選択する出力形式によっては、追加の設定オプションが表示される場合があります。[画像プリセットの管理](/help/assets/managing-image-presets.md)を参照してください。
 
-**[!UICONTROL シャープ]** — 画像にシャープを適用する方法を選択します。 シャープの適用について詳しくは、 [*Adobeダイナミックメディアクラシックの画質とシャープのベストプラクティス&#x200B;*](/help/assets/assets/s7_sharpening_images.pdf)。
+**[!UICONTROL シャープ]** — 画像にシャープを適用する方法を選択します。 シャープの適用について詳しくは、 [*Adobeダイナミックメディアクラシックの画質とシャープのベストプラクティス*](/help/assets/assets/s7_sharpening_images.pdf)。
 
 **[!UICONTROL URL修飾子]** - Dynamic Media Classicの画像コマンドを追加入力して、画像効果を変更できます。 These are described in [Managing Image Presets](/help/assets/managing-image-presets.md) and the [Command reference](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.translate.html).
 
@@ -394,7 +394,7 @@ Dynamic Media Classicで「 **[!UICONTROL S7]** 」タブをクリックして�
 
 ![chlimage_1-96](assets/chlimage_1-96.png)
 
-**[!UICONTROL アセットタイプ]** ：ダイナミックメディアクラシックブラウザでは、結果をフィルタリングして次のいずれかを含めることができます。 画像、テンプレート、ビデオおよびアダプティブビデオセットを参照してください。 アセットタイプを選択しない場合、AEM ではデフォルトですべてのアセットタイプが検索されます。
+**[!UICONTROL アセットタイプ]** ：ダイナミックメディアクラシックブラウザでは、結果をフィルタリングして次のいずれかを含めることができます。画像、テンプレート、ビデオおよびアダプティブビデオセットを参照してください。 アセットタイプを選択しない場合、AEM ではデフォルトですべてのアセットタイプが検索されます。
 
 ![chlimage_1-97](assets/chlimage_1-97.png)
 
