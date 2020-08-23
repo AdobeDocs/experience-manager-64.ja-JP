@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 7f813b59-d904-49b6-994c-be3badf74464
 translation-type: tm+mt
-source-git-commit: 39b6af8ee815e8f6fa6e0b4a0a6dc80f29165243
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '490'
 ht-degree: 84%
 
 ---
@@ -118,7 +118,7 @@ The contexthub.geolocation store candidate extends [`ContextHub.Store.PersistedJ
 
 デバイス、ウィンドウ、ブラウザー、日付時刻など、現在のクライアント環境に関する情報を格納します。
 
-### ソースの場所{#source-location-surferinfo
+### ソースの場所 {#source-location-surferinfo}
 
 `/libs/settings/cloudsettings/legacy/contexthub/surferinfo`
 
