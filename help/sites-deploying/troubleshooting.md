@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
 source-wordcount: '1126'
-ht-degree: 84%
+ht-degree: 86%
 
 ---
 
@@ -40,7 +40,7 @@ AEM では詳細ログが記録されます。これらのログは、インス�
 
 ## Verbose オプションの使用 {#using-the-verbose-option}
 
-AEM WCMを開始する場合、次のようにコマンドラインに —v（冗長）オプションを追加できます。 java -jar cq-wcm-quickstart-&lt;version>.jar -v。
+AEM WCMを開始する場合、次のようにコマンドラインに —v（冗長）オプションを追加できます。java -jar cq-wcm-quickstart-&lt;version>.jar -v。
 
 verbose オプションによってコンソールに Quickstart ログの出力が表示されるので、その情報をトラブルシューティングに使用できます。
 
@@ -48,9 +48,9 @@ verbose オプションによってコンソールに Quickstart ログの出力
 
 ここでは、インストールの問題とその解決策について説明します。
 
-### **Quickstart jarを重複がクリックしても何の影響も与えず、別のプログラム（archive managerなど）でjarファイルを開く{#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}**
+### Quickstart jar をダブルクリックしても何も起きないか、jar ファイルが別のプログラム（アーカイブマネージャーなど）で開かれる {#double-clicking-the-quickstart-jar-does-not-have-any-effect-or-opens-the-jar-file-with-another-program-for-example-archive-manager}
 
-通常、これは、拡張子.jarを持つファイルを開くようにオペレーティングシステムのデスクトップ環境が設定されている方法に問題があることを示しています。 また、Javaがインストールされていないか、サポートされていないバージョンのJavaを使用している可能性もあります。
+通常、これは、拡張子.jarを持つファイルを開くようにオペレーティングシステムのデスクトップ環境が設定されている方法に問題があることを示しています。また、Javaがインストールされていないか、サポートされていないバージョンのJavaを使用している可能性もあります。
 
 jar ファイルは汎用の ZIP 形式を使用しているので、一部のアーカイブプログラムによって、jar ファイルをアーカイブファイルとして開くように自動的にデスクトップが設定されることがあります。
 
@@ -65,7 +65,7 @@ jar ファイルは汎用の ZIP 形式を使用しているので、一部の�
 * サポートされている Java バージョンを再インストールすることで、適切な関連付けが復元される場合があります。
 * 前述のとおり、常にコマンドラインまたは起動／停止スクリプトを使用して CRX を実行することもできます。
 
-### **CRX で動作しているアプリケーションでメモリ不足のエラーが発生する{#my-application-running-on-crx-throws-out-of-memory-errors}**
+### CRX で動作しているアプリケーションでメモリ不足のエラーが発生する {#my-application-running-on-crx-throws-out-of-memory-errors}
 
 >[!NOTE]
 >
@@ -100,7 +100,7 @@ AEM WCM Quickstart ウィンドウに「AEM WCM が http://localhost:port/ で�
 
 ## アプリケーションサーバーによるインストールのトラブルシューティング {#troubleshooting-installations-with-an-application-server}
 
-### **geometrixx-outdoor ページを要求すると「Page Not Found」が返される{#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}**
+### geometrixx-outdoor ページを要求すると「Page Not Found」が返される {#page-not-found-returned-when-requesting-a-geometrixx-outdoor-page}
 
 **WebLogic 10.3.5 および JBoss 5.1 に適用**
 
@@ -108,7 +108,7 @@ geometrixx-outdoors/en ページを要求すると 404（Page Not Found）が返
 
 **&#x200B;詳しくは、「AEM Web アプリケーションのデプロイ」の手順を参照してください。
 
-### **応答のヘッダーサイズが 4 Kb を超える場合がある{#response-header-size-can-be-greater-than-kb}**
+### 応答のヘッダーサイズが 4 Kb を超える場合がある {#response-header-size-can-be-greater-than-kb}
 
 Web サーバーが AEM HTTP 応答ヘッダーのサイズを処理できないときに 502 エラーが返されることがあります。AEM は、4 Kb を超えるサイズの Cookie を含む HTTP 応答ヘッダーを生成します。最大応答ヘッダーサイズが 4 kb を超えられるようにサーブレットコンテナを設定してください。
 
@@ -126,7 +126,7 @@ AEM は単一のディレクトリにインストールされるので、アン�
 
 例えば、データベースサーバーなど、AEM のインストールが外部ストレージを使用している場合、フォルダーを削除してもデータは自動的には削除されませんが、ストレージ設定が削除されるので、JCR コンテンツの復元は困難になります。
 
-### **JSP ファイルが JBoss でコンパイルされない{#jsp-files-are-not-compiled-on-jboss}**
+### JSP ファイルが JBoss でコンパイルされない {#jsp-files-are-not-compiled-on-jboss}
 
-JBossにJSPファイルをExperience Managerにインストールまたは更新し、対応するサーブレットがコンパイルされていない場合は、JBoss JSPコンパイラーが正しく設定されていることを確認します。 詳しくは、\
+JBossにJSPファイルをExperience Managerにインストールまたは更新し、対応するサーブレットがコンパイルされていない場合は、JBoss JSPコンパイラーが正しく設定されていることを確認します。詳しくは、\
 [JBoss](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) 記事のJSPコンパイルの問題を参照してください。
