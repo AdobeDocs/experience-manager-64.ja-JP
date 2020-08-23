@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 5a96c306-790a-4721-a146-86fbceb376db
 translation-type: tm+mt
-source-git-commit: e2fbd2bb97264265ab45b436d6ac32fbf6fef2a7
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
 source-wordcount: '4811'
 ht-degree: 97%
@@ -316,7 +316,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 * [レイアウト](#editing-a-template-layout-template-author)
 
-   ここでは、必要なデバイスの形式に合わせたテンプレートのレイアウトを事前定義できます。**テンプレートオーサリングのレイアウト** モードは、ページオーサリングの **[](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**レイアウトモードと同じ機能を持ちます。
+   ここでは、必要なデバイスの形式に合わせたテンプレートのレイアウトを事前定義できます。テンプレートオーサリングの&#x200B;**レイアウト**&#x200B;モードにはページオーサリングの&#x200B;**[レイアウト](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**&#x200B;モードと同じ機能があります。
 
 * [ページポリシー](#editing-a-template-structure-template-author)
 
@@ -445,7 +445,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
    >[!NOTE]
    >
-   >同じタイプの複数のコンポーネントが初期コンテンツとして追加される場合は、同じポリシーがすべてのコンポーネントに適用されます。これは、静的テンプレートの&#x200B;**[デザインモード](/help/sites-authoring/default-components-designmode.md)**の同じ制限を反映します。
+   >同じタイプの複数のコンポーネントが初期コンテンツとして追加される場合は、同じポリシーがすべてのコンポーネントに適用されます。これは、静的テンプレートの&#x200B;**[デザインモード](/help/sites-authoring/default-components-designmode.md)**&#x200B;の同じ制限を反映します。
 
    ***プロパティ***
 
@@ -575,7 +575,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 >[!NOTE]
 >
->**初期コンテンツ**&#x200B;モードは、そのテンプレートで作成されたページの編集モードと考えることができます。このため、ポリシーは、**初期コンテンツ**&#x200B;モードで定義されず、**[構造](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)**モードで定義されます。
+>**初期コンテンツ**&#x200B;モードは、そのテンプレートで作成されたページの編集モードと考えることができます。このため、ポリシーは、**初期コンテンツ**&#x200B;モードで定義されず、**[構造](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)**&#x200B;モードで定義されます。
 
 * 編集可能なロックが解除されたコンポーネントはマーキングされています。選択すると、青い境界線が表示されます。
 
