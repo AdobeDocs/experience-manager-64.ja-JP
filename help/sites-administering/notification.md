@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 translation-type: tm+mt
-source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
 source-wordcount: '1145'
 ht-degree: 65%
@@ -68,7 +68,7 @@ AEM で電子メールを送信できるようにするために、**Day CQ Mail
 
    `com.day.cq.wcm.notification.email.impl.EmailChannel` タイプ `sling:OsgiConfig`
 
-1. とい追加う名前のnodeのプロパティ `String``email.from`です。 値には、使用する電子メールアドレスを指定します。
+1. とい追加う名前のノードのプロパティ `String``email.from`。 値には、使用する電子メールアドレスを指定します。
 
 1. 「**Save All**」をクリックします。
 
@@ -285,7 +285,7 @@ The method `${payload.path.open}` reveals the path to the payload of the workite
 
 * `${payload.type}`、ペイロードタイプ
 * `${payload.path}`、ペイロードのパス
-* `${host.prefix}`、ホストのプレフィックス、例： http://localhost:4502
+* `${host.prefix}`、ホストのプレフィックス、例：http://localhost:4502
 
 ### 新しい言語用の電子メールテンプレートの追加 {#adding-an-email-template-for-a-new-language}
 
@@ -293,9 +293,9 @@ The method `${payload.path.open}` reveals the path to the payload of the workite
 
 1. In CRXDE, add a file `<language-code>.txt` below:
 
-   * `/etc/notification/email/default/com.day.cq.wcm.core.page` : ページ通知
-   * `/etc/notification/email/default/com.day.cq.collab.forum` : フォーラム通知
-   * `/etc/workflow/notification/email/default` : ワークフロー通知
+   * `/etc/notification/email/default/com.day.cq.wcm.core.page` :ページ通知
+   * `/etc/notification/email/default/com.day.cq.collab.forum` :フォーラム通知
+   * `/etc/workflow/notification/email/default` :ワークフロー通知
 
 1. 言語に合わせてファイルを調整します。
 1. 変更内容を保存します。
