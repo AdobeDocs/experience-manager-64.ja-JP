@@ -10,9 +10,9 @@ topic-tags: publish
 content-strategy: max-2018
 discoiquuid: 7dd08e81-5df6-4522-9f8c-48b4bba8927b
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1435'
 ht-degree: 75%
 
 ---
@@ -62,7 +62,7 @@ AEM Formsは、次の種類のアセットをサポートしています。
 
 * **非公開**：一度も発行されていないアセット（未公開状態は、フォームアセットのみに適用されます。Correspondence Managementアセットには、非公開の状態がありません。)
 * **発行済み**：発行済みアセット。パブリッシュインスタンスで使用できます。
-* **変更済み**: 発行後に変更されるアセット
+* **変更済み**:発行後に変更されるアセット
 
 ## アセットの発行 {#publish-an-asset}
 
@@ -145,7 +145,7 @@ AEM Forms では、フォームとドキュメントでアセットの発行と�
    1. Move the pointer over an asset and tap **[!UICONTROL Unpublish]** ![unpublish](assets/unpublish.png).
    1. 次のいずれかを行い、「非公開」をタップします。
 
-      * If you are in the card view, tap **[!UICONTROL Enter Selection** ![aem6forms_check-circle](assets/aem6forms_check-circle.png), and tap the asset. アセットが選択されます。
+      * If you are in the card view, tap **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png), and tap the asset. アセットが選択されます。
       * If you are in the list view, hover over an asset and tap ![selectassetcheckmark](assets/selectassetcheckmark.png) . アセットが選択されます。
       * 詳細を表示するアセットを表示します。
       * Display an asset&#39;s properties by tapping View Properties ![viewproperties](assets/viewproperties.png).
