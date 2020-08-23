@@ -10,10 +10,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 599c316e-b6a7-4a28-bc4b-75d48409bde0
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '1477'
-ht-degree: 76%
+source-wordcount: '1476'
+ht-degree: 77%
 
 ---
 
@@ -153,7 +153,7 @@ ht-degree: 76%
    >* You can edit the assets in a Mixed Media Set by navigating to the set, tapping **[!UICONTROL Set Members]** in the left rail, and then tapping the **[!UICONTROL Pencil]** icon on an individual asset to open the editing window.
 
 
-1. Tap **[!UICONTROL Save** when you are done editing.
+1. 編集が完了したら、「**[!UICONTROL 保存]**」をタップします。
 
    >[!NOTE]
    >
