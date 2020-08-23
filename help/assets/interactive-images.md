@@ -10,17 +10,17 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d630499d-740d-4979-8a34-9e3fcc3b5a23
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '4303'
-ht-degree: 78%
+source-wordcount: '4300'
+ht-degree: 79%
 
 ---
 
 
 # インタラクティブ画像 {#interactive-images}
 
-「買い物客」のホットスポットを画像にドラッグ&amp;ドロップすることで、静的な画像をリッチで魅力的なエクスペリエンスに簡単にできます。 買い物可能なホットスポットは、製品やサービスに関する追加情報と、直接販売時点に関する「買い物かごに追加」機能や「購入」機能を組み合わせています。 顧客はこれらのホットスポットをタップして、製品やサービスに直接リンクしたり、買い物かごに追加したり、Webページにリンクしたりできます。 顧客エンゲージメントやWebサイト上のコンバージョンを増やすなど、直接的なエクスペリエンス。
+「買い物客」のホットスポットを画像にドラッグ&amp;ドロップすることで、静的な画像をリッチで魅力的なエクスペリエンスに簡単にできます。買い物可能なホットスポットは、製品やサービスに関する追加情報と、直接販売時点に関する「買い物かごに追加」機能や「購入」機能を組み合わせています。 顧客はこれらのホットスポットをタップして、製品やサービスに直接リンクしたり、買い物かごに追加したり、Webページにリンクしたりできます。 顧客エンゲージメントやWebサイト上のコンバージョンを増やすなど、直接的なエクスペリエンス。
 
 次に、クイックビューポップアップを含むショッパブルバナーを示します。モデルの上の円（「ホットスポット」）をタップすると、クイックビューがアクティブになります。
 
@@ -260,15 +260,14 @@ When you finish creating your interactive image, you can use **[!UICONTROL Previ
 1. Assets ビューで、インタラクティブにする画像バナーに移動します。
 1. 次のいずれかの操作をおこないます。
 
-   * Hover on the image, then tap **[!UICONTROL Select** (checkmark icon). On the toolbar, tap **[!UICONTROL Edit**.
+   * 画像の上にマウスポインターを置き、**[!UICONTROL 選択]**（チェックマークアイコン）をタップします。ツールバーの「**[!UICONTROL 編集]**」をタップします。
    * 画像の上にマウスポインターを置き、**[!UICONTROL その他のアクション]**（3 つのドットのアイコン）／**[!UICONTROL 編集]**&#x200B;をタップします。
-   * Tap the image to open it in the **[!UICONTROL Detail View]** page. On the toolbar, tap **[!UICONTROL Edit**.
+   * Tap the image to open it in the **[!UICONTROL Detail View]** page. ツールバーの「**[!UICONTROL 編集]**」をタップします。
 
 1. Near the upper-left corner of the page, tap **[!UICONTROL Add Hotspot]** (finger tap icon) to open the **[!UICONTROL Hotspot Management]** page.
 1. ページの左上隅にある「**[!UICONTROL ホットスポット]**」をタップします。
 1. a. Near the upper-left corner of the **Hotspot Management** page, tap **[!UICONTROL Hotspot]**.
-b. 画像上で、ホットスポットを表示する位置をタップします。 必要に応じて、ホットスポットをドラッグして場所を調整します。c.必要に応じて、手順aと手順bを繰り返して、追加追加のホットスポットを作成します。
-d. （オプション）ホットスポットを削除するには、画像上でホットスポットを選択し、「ホットスポット **[!UICONTROL 」見出しの下にある「]** 削除 **** （ごみ箱アイコン）」をタップします。
+b.画像上で、ホットスポットを表示する位置をタップします。 必要に応じて、ホットスポットをドラッグして場所を調整します。c.必要に応じて、手順aと手順bを繰り返して、追加追加のホットスポットを作成します。d.（オプション）ホットスポットを削除するには、画像上でホットスポットを選択し、「ホットスポット **[!UICONTROL 」見出しの下にある「]** 削除 **** （ごみ箱アイコン）」をタップします。
 
 1. In the **[!UICONTROL Name]** text field, type the name of the hotspot. This name also appears in the **[!UICONTROL Selected Hotspot]** drop-down list.
 1. 次のいずれかの操作をおこないます。
