@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 translation-type: tm+mt
-source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
 source-wordcount: '1605'
 ht-degree: 60%
@@ -83,8 +83,7 @@ sh./scripts/cloud-scripts/zkcli.sh \\
 #### 2. コレクションを作成 {#create-a-collection}
 
 リファレンス:\
-[https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create\
-](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
+[https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
 
 使用方法:\
 。/bin/solr create \\
@@ -126,7 +125,7 @@ AEM Communities の MLS は、標準の MLS と高度な MLS のどちらかを�
 * ドイツ語：デコンパウンダーを追加
 * フランス語：エリジオン処理を追加
 * 中国語（簡体）：よりスマートなトークナイザーを追加
-* 各言語： ステマー、停止語のリスト、および正規化機能が追加されました。
+* 各言語：ステマー、停止語のリスト、および正規化機能が追加されました。
 
 高度な MLS では、合計で以下の 33 の言語がサポートされます。
 
@@ -145,7 +144,7 @@ AEM Communities の MLS は、標準の MLS と高度な MLS のどちらかを�
 
 #### AEM 6.1 Solr 検索、標準の MLS、高度な MLS の比較 {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}
 
-**注意**: AEM 6.1は、AEM 6.1 Communities FP3以前を指します。
+**注意**:AEM 6.1は、AEM 6.1 Communities FP3以前を指します。
 
 ![chlimage_1-283](assets/chlimage_1-283.png)
 
@@ -164,7 +163,7 @@ Solr 5用の標準MLSファイル(スキーマ.xml、solrconfig.xml)
 
 **注意**：Solr ファイルは msrp/ フォルダーに格納されていますが、DSRP にも対応します（変更不要）。
 
-**ダウンロード手順**: 適切な `solrX` または `solr4` で置き換え `solr5` る
+**ダウンロード手順**:適切な `solrX` または `solr4` で置き換え `solr5` る
 
 1. CRXDE|Liteを使用して、
 
@@ -260,8 +259,8 @@ SolrCloud モードまたはスタンドアロンモードのどちらかのイ�
 1. [新しい設定をZooKeeperにアップロード](#upload-a-configuration-to-zookeeper)
 1. 以下のとおり、新しい **profiles/** フォルダーをコピーします。
 
-   * Solr4の場合： 各ノードのresources/フォルダーにコピーします
-   * Solr5の場合： 各Solrインストールのserver/resources/フォルダーにをコピーします。 すべてのノードが同じSolrインストールディレクトリにある場合、この手順は1回だけ実行されます。
+   * Solr4の場合：各ノードのresources/フォルダーにコピーします
+   * Solr5の場合：各Solrインストールのserver/resources/フォルダーにをコピーします。 すべてのノードが同じSolrインストールディレクトリにある場合、この手順は1回だけ実行されます。
 
 1. Create a **lib/** folder in the solr-home directory (contains solr.xml) of each node in SolrCloud. 次の場所から各ノードの新しいlib/フォルダーにjarsをコピーします。
 
