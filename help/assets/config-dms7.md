@@ -10,10 +10,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: cd3adbac-9868-4838-9d8a-37dde8973df4
 translation-type: tm+mt
-source-git-commit: 92017a4c2c9ab9f139440e40f368958bcc3bb2ef
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '5552'
-ht-degree: 75%
+source-wordcount: '5549'
+ht-degree: 74%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 75%
 
 [Dynamic Media はデフォルトで無効になっています。](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)Dynamic Media の機能を活用するには、Dynamic Media を有効にする必要があります。
 
->[注意]
+>[!NOTE]
 >
 >ダイナミックメディア —Scene7モードは、AEMオーサーインスタンス専用です。 したがって、AEM発行インスタンス `runmode=dynamicmedia_scene7`ではなく、AEM作成者インスタンスで設定する必要があります。
 
@@ -52,7 +52,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 If you are upgrading AEM Dynamic Media from 6.3 to 6.4 (which now includes the ability for zero downtime deployments), you are required to run the following curl command to migrate all your presets and configurations from `/etc` to `/conf` in CRXDE Lite.
 
->[注意]
+>[!NOTE]
 >
 >互換モードでAEMインスタンスを実行する場合（つまり、互換性パッケージがインストールされている場合）は、これらのコマンドを実行する必要はありません。
 
@@ -220,7 +220,7 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 * Adobe Photoshop ドキュメント（.PSD）をパーソナライズ用のバナーテンプレートアセットに変換する。
 * Adobe Illustrator ファイル（.AI）または Adobe Photoshop Encapsulated Postscript ファイル（.EPS）をラスタライズする。
 
->[注意]
+>[!NOTE]
 >
 >ビデオプロファイルとイメージングプロファイルは、それぞれビデオとイメージの処理を定義するのに使用できます。
 
