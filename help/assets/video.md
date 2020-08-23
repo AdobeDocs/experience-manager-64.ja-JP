@@ -10,9 +10,9 @@ topic-tags: Dynamic-Media
 content-type: reference
 discoiquuid: b721dc7c-b056-47f5-9489-9f4db45b68a0
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '10507'
+source-wordcount: '10502'
 ht-degree: 78%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 78%
 
 1. 次の手順を実行して、**Dynamic Media ビデオをアップロード**&#x200B;します。
 
-   * 独自のビデオエンコーディングプロファイルを作成します。 または、ダイナミックメディアに付属の定義済みの「アダプティブビデオエンコーディング」プロファイルを使用するだけでもかまいません。
+   * 独自のビデオエンコーディングプロファイルを作成します。または、ダイナミックメディアに付属の定義済みの「アダプティブビデオエンコーディング」プロファイルを使用するだけでもかまいません。
 
       * [ビデオエンコーディングプロファイルの作成](video-profiles.md)
       * [ビデオエンコーディングのベストプラクティス](#best-practices-for-encoding-videos)に関する詳細
@@ -464,7 +464,7 @@ YouTubeに公開すると、AEMの処理プロファイルシステムと、ビ�
 
 ### Google Cloud 設定 {#configuring-google-cloud-settings}
 
-YouTubeに投稿するには、Googleアカウントが必要です。 GMAILアカウントをお持ちの場合は、既にGoogleアカウントをお持ちです。 Googleアカウントを持っていない場合は、簡単に作成できます。 YouTubeにビデオアセットを公開するには、資格情報が必要なので、アカウントが必要です。 If you have an account already created, then skip this task and proceed to [Creating a YouTube channel](#creating-a-youtube-channel).
+YouTubeに投稿するには、Googleアカウントが必要です。GMAILアカウントをお持ちの場合は、既にGoogleアカウントをお持ちです。Googleアカウントを持っていない場合は、簡単に作成できます。YouTubeにビデオアセットを公開するには、資格情報が必要なので、アカウントが必要です。 If you have an account already created, then skip this task and proceed to [Creating a YouTube channel](#creating-a-youtube-channel).
 
 >[!NOTE]
 >
@@ -489,7 +489,7 @@ YouTubeに投稿するには、Googleアカウントが必要です。 GMAILア�
 1. On your project’s **[!UICONTROL Dashboard]**, in the **[!UICONTROL Getting Started]** card, tap **[!UICONTROL Enable APIs and get credentials like keys]**.
 1. **[!UICONTROL ダッシュボード]** ページの上部近くにある「APIを **[!UICONTROL 有効にする]**」をタップします。
 1. On the **[!UICONTROL Library]** page, under YouTube APIs, tap **[!UICONTROL YouTube Data API]**.
-1. Near the top of the **YouTube Data API v3]** page, tap **[!UICONTROL Enable]** to turn it on.
+1. Near the top of the **[!UICONTROL YouTube Data API v3]** page, tap **[!UICONTROL Enable]** to turn it on.
 1. この API を使用するために資格情報が必要となる場合があります。If necessary, tap **[!UICONTROL Create Credentials]**.
 1. 「**[!UICONTROL API を呼び出す場所]**」ドロップダウンリストから、「**[!UICONTROL ウェブサーバー（node.js、Tomcat など）]**」を選択します。。
 1. 「**[!UICONTROL アクセスするデータの種類]**」で、「**[!UICONTROL ユーザーデータ]**」を選択します。
@@ -570,7 +570,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
 
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Deployment > Cloud Services]**.
 1. Under the **[!UICONTROL Third Party Services]** heading, under YouTube, tap **[!UICONTROL Configure now]**.
-1. In the **Create Configuration]** dialog box, enter a title (mandatory) and name (optional) in the respective fields.
+1. In the **[!UICONTROL Create Configuration]** dialog box, enter a title (mandatory) and name (optional) in the respective fields.
 1. 「**[!UICONTROL 作成]**」をタップします。
 1. In the **[!UICONTROL YouTube Account Settings]** dialog box, in the **[!UICONTROL Application Name]** field, enter the Google Project ID.
 
@@ -586,7 +586,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
    次は、AEM で YouTube チャンネルをセットアップします。
 
 1. 「**[!UICONTROL 利用可能なチャネル]**」の右にある「**[!UICONTROL +]**」（プラス記号のアイコン）をタップします。
-1. In the **[!UICONTROL YouTube Channel Settings]** dialog box, in the **[!UICONTROL Title]** field, enter the name of the channel that you created in the task **C[!UICONTROL reating a YouTube channel ]**earlier.
+1. In the **[!UICONTROL YouTube Channel Settings]** dialog box, in the **[!UICONTROL Title]** field, enter the name of the channel that you created in the task **C[!UICONTROL reating a YouTube channel]** earlier.
 
    オプションで、必要に応じて説明を追加できます。
 
@@ -597,7 +597,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
    * アカウントに存在するチャネルの数によっては、2 つ以上の項目が表示されます。チャネルを選択してください。電子メールアドレスを選択しないでください。
    * 次のページで、「**[!UICONTROL 確定]**」をタップして、このチャネルへのアクセスを許可します。
 
-1. [ **[!UICONTROL許可**]をタップします。
+1. 「**[!UICONTROL 許可]**」をタップします。
 
    次は、公開用タグを設定します。
 
@@ -656,7 +656,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
 1. Near the upper-right corner of the **[!UICONTROL Metadata Schema Editor]** page, tap **[!UICONTROL Cancel]**.
 1. In the upper-left corner of AEM, tap the AEM logo, then in the left rail, tap **[!UICONTROL Tools > Assets > Metadata Profiles]**.
 
-1. On the **[!UICONTROL Metadata Profiles** page, near the upper-right corner of the page, tap **[!UICONTROL Create**. In the **[!UICONTROL Add Metadata Profile** dialog box, in the **[!UICONTROL Profile title]** text field, enter the name `YouTube Video`.
+1. On the **[!UICONTROL Metadata Profiles]** page, near the upper-right corner of the page, tap **[!UICONTROL Create]**. In the **[!UICONTROL Add Metadata Profile]** dialog box, in the **[!UICONTROL Profile title]** text field, enter the name `YouTube Video`.
 1. On the **[!UICONTROL Metadata Profile Editor]** page, tap the **[!UICONTROL Advance]** tab.
 1. 次の手順を実行して、コピーした「YouTube への公開」の値を、プロファイルに追加します。
 
@@ -676,7 +676,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
    * On the right side of the page, under the Settings tab, in the Field Label text field, enter `YouTube Privacy`.
    * Tap the **[!UICONTROL Build Form]** tab, then drag the component labeled **[!UICONTROL Single Line Text]** and drop it below the **[!UICONTROL YouTube Privacy]** heading you just created.
    * Tap **[!UICONTROL Field Label]** to select the component.
-   * On the right side of the page, under the **[!UICONTROL Settings]** tab, paste the **[!UICONTROL YouTube Publishing]** values (**[!UICONTROL Field Label]** value and **[!UICONTROL Map to property]** value) that you copied earlier, into their respective fields on the form. Paste the **[!UICONTROL Choices** value into the **[!UICONTROL Default Value]** field.
+   * On the right side of the page, under the **[!UICONTROL Settings]** tab, paste the **[!UICONTROL YouTube Publishing]** values (**[!UICONTROL Field Label]** value and **[!UICONTROL Map to property]** value) that you copied earlier, into their respective fields on the form. Paste the **[!UICONTROL Choices]** value into the **[!UICONTROL Default Value]** field.
 
 1. ページの右上隅にある「**[!UICONTROL 保存]**」をタップします。
 1. YouTube への公開メタデータプロファイルを、ビデオのアップロード先フォルダーに適用します。メタデータプロファイルとビデオプロファイルを設定する必要があります。
@@ -841,7 +841,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 1. In AEM, select **[!UICONTROL Tools > Workflow > Models]**.
 1. 「YouTubeに **[!UICONTROL 投稿]** 」ワークフローを選択し、「 **[!UICONTROL 編集」をタップします]**。
 1. YouTubeのアップロード **[!UICONTROL ワークフローステップを右クリックし、「]** 編集 ****」をタップします。
-1. 「 **引数&#x200B;**」タブをタップします。
+1. 「 **引数** 」タブをタップします。
 1. 次のチェックボックスをオンまたはオフにできます。
 
    * **[!UICONTROL 公開開始]**
@@ -856,7 +856,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 
 ## ビデオレポートの表示 {#viewing-video-reports}
 
-ビデオレポートは、ダイナミックメディア — ハイブリッドモードを実行する場合に使用できます。 ダイナミックメディア —Scene7モードを実行すると、レポートを使用できなくなります。
+ビデオレポートは、ダイナミックメディア — ハイブリッドモードを実行する場合に使用できます。ダイナミックメディア —Scene7モードを実行すると、レポートを使用できなくなります。
 
 ビデオレポートには、指定した期間における様々な集計指標が表示されます。ユーザーはビデオレポートを使用して、公開済みの個々のビデオやビデオの集合が期待どおりに動作しているかを監視できます。次のトップの指標データは、Web サイト全体のすべての公開済みビデオについて集計されるものです。
 
