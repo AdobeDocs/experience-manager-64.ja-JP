@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 155aaf96-1e9c-4e73-8e43-d96878d69b16
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '1993'
-ht-degree: 80%
+source-wordcount: '1983'
+ht-degree: 82%
 
 ---
 
@@ -52,8 +52,8 @@ ht-degree: 80%
 * **ページのツールバー** 次のオプションが含まれています。
 
    * **サイドパネルを切り替え**：サイドバーの表示と非表示を切り替えます。
-   * **ページ情報**: 公開/非公開の時間、サムネール、クライアント側ライブラリ、ページポリシー、ページデザインのクライアント側ライブラリなどの情報を指定できます。
-   * **エミュレータ**: 様々なデバイスの外観をシミュレートしてカスタマイズできます。
+   * **ページ情報**:公開/非公開の時間、サムネール、クライアント側ライブラリ、ページポリシー、ページデザインのクライアント側ライブラリなどの情報を指定できます。
+   * **エミュレータ**:様々なデバイスの外観をシミュレートしてカスタマイズできます。
    * **レイヤーセレクター：** レイヤーを変更できます。
 
        **構造**&#x200B;レイヤーまたは&#x200B;**初期コンテンツ**&#x200B;レイヤーを選択できます。構造レイヤーを使用すると、ヘッダーとフッターを追加およびカスタマイズできます。 初期コンテンツレイヤーを使用すると、フォームのコンテンツをカスタマイズできます。
@@ -62,7 +62,7 @@ ht-degree: 80%
 
 * **サイドバー：** コンテンツブラウザー、プロパティブラウザー、アセットブラウザーおよびコンポーネントブラウザーを提供します。
 * **コンポーネントツールバー：** コンポーネントを選択すると、コンポーネントをカスタマイズできるツールバーが表示されます。
-* **ページ**: コンテンツを追加してテンプレートを作成する領域。
+* **ページ**:コンテンツを追加してテンプレートを作成する領域。
 
 See [Introduction to authoring adaptive forms](/help/forms/using/introduction-forms-authoring.md) to understand the Touch UI editor.
 
@@ -81,7 +81,7 @@ See [Introduction to authoring adaptive forms](/help/forms/using/introduction-fo
 
 ![構造レイヤー内のレイアウトコンテナ](assets/header-layer-selector.png)
 
-**図：** *構造レイヤー内のレイアウトコンテナ*
+**図：***構造レイヤー内のレイアウトコンテナ*
 
 **A.ヘッダーコンポーネントのレイアウトコンテナ****** B.フッターコンポーネントのレイアウトコンテナ
 
@@ -91,7 +91,7 @@ See [Introduction to authoring adaptive forms](/help/forms/using/introduction-fo
 
 ![構造レイヤーに追加されたヘッダーとフッター](assets/header-and-footer.png)
 
-**図：** *構造レイヤーに追加されたヘッダーとフッター*
+**図：***構造レイヤーに追加されたヘッダーとフッター*
 
 #### 構造レイヤー内のコンポーネントのロック／ロック解除 {#locking-unlocking-components-in-the-structure-layer}
 
@@ -109,11 +109,11 @@ See [Introduction to authoring adaptive forms](/help/forms/using/introduction-fo
 
 フォーム作成者はこれをベースにしてフォームを作成します。コンテンツのフロー構造は、テンプレートの初期コンテンツレイヤーで指定されます。To switch to editing initial content of the form template, before Preview in the page toolbar, tap ![canvas-drop-down](assets/canvas-drop-down.png)**[!UICONTROL > Initial Content ]**.
 
-    [ ![Initial Content layer in Template Editor](assets/initial-content-layer.png)
+![テンプレートエディター内の初期コンテンツレイヤー](assets/initial-content-layer.png)
 
 プロパティを指定するために選択されたアダプティブフォームコンテナを表示しているテンプレートエディター内の初期コンテンツレイヤー。
 
-](assets/initial-content-layer-1.png)「初期コンテンツ」レイヤーで、作成者がベースとして使用するアダプティブフォームテンプレートを作成します。 テンプレートの作成はフォームの作成と同様です。サイドバーにあるオプションを使用します。サイドバーはコンテンツブラウザー、プロパティブラウザー、アセットブラウザー、コンポーネントブラウザーを提供します。
+初期コンテンツレイヤー内で、作成者がベースとして使用するアダプティブフォームテンプレートを作成します。テンプレートの作成はフォームの作成と同様です。サイドバーにあるオプションを使用します。サイドバーはコンテンツブラウザー、プロパティブラウザー、アセットブラウザー、コンポーネントブラウザーを提供します。
 
 See [Sidebar](/help/forms/using/introduction-forms-authoring.md#sidebar).
 
@@ -141,11 +141,11 @@ See [Sidebar](/help/forms/using/introduction-forms-authoring.md#sidebar).
 
 #### タブへのコンテンツの追加 {#adding-content-in-tabs}
 
-    [ ![Adding fields in the adaptive form template](assets/template-edit-initial-content.png)
+![アダプティブフォームテンプレートへのフィールドの追加](assets/template-edit-initial-content.png)
 
 テンプレートへのフィールドの追加
 
-](assets/template-edit-initial-content-1.png)パネルを追加し、タブとして構造化した後、タブ内にフィールドを追加できます。 エディターでタブを選択すると、**[!UICONTROL 「コンポーネントをここにドラッグ」]**&#x200B;オプションが表示されます。テキストボックス、リスト項目、ボタンなどのコンポーネントをドラッグアンドドロップできます。コンポーネントはコンポーネントブラウザーからサイドバーにドラッグアンドドロップできます。
+パネルを追加してタブとして構造化した後、タブ内にフィールドを追加できます。エディターでタブを選択すると、**[!UICONTROL 「コンポーネントをここにドラッグ」]**&#x200B;オプションが表示されます。テキストボックス、リスト項目、ボタンなどのコンポーネントをドラッグアンドドロップできます。コンポーネントはコンポーネントブラウザーからサイドバーにドラッグアンドドロップできます。
 
 各コンポーネントにはデータの取得と操作を強化するプロパティが存在します。例えば、コンポーネントの&#x200B;**[!UICONTROL 「必須フィールド」]**&#x200B;プロパティを有効化することができます。作成者は、顧客が必須フィールドをスキップした場合に表示するメッセージを指定できます。Specify the message in **[!UICONTROL Required Field Message]** property.
 
