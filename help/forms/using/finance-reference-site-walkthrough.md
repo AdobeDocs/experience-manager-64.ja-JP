@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 0c1b6ad7-9d25-41dc-b1fe-a4cb9366c259
 translation-type: tm+mt
-source-git-commit: ffa45c8fa98e1ebadd656ea58e4657b669ddd830
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '9242'
+source-wordcount: '9231'
 ht-degree: 63%
 
 ---
@@ -313,7 +313,7 @@ To configure Target in AEM Forms server, see [Set up and integrate Target in AEM
 1. フォームを選択し、「**その他**」をクリックし、「**A/B テストを開始**」をクリックします。テスト開始直後には、レポートに多くのデータが表示されることはありません。シードデータを使用して、A/B テストレポートがどのように表示されるか確認しましょう。
 
 1. CRXDE Lite を開き、次のファイルのバックアップを作成します。 /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
-1. 上記のファイル `onReportLoadSuccess` 内の関数の定義を、次のファイル内の関数の定義に置き換えます。 /apps/we-finance/demo-artifacts/targetreport.js
+1. 上記のファイル `onReportLoadSuccess` 内の関数の定義を、次のファイル内の関数の定義に置き換えます。/apps/we-finance/demo-artifacts/targetreport.js
 
    **注意：** これらの変更は、デモの目的でのみ行われます。 この手順を完了した後、必ずファイルの中身を元に戻してください。
 
@@ -343,9 +343,9 @@ We.Finance 社の住宅ローンのシナリオでは、以下の人物が登場
 
 Sarah Rose は家を購入する計画を立て、住宅ローンのプランを探しています。Sarah は We.Finance 社の顧客なので、We.Finance 社のポータルサイトにアクセスして住宅ローンのプランを探しています。住宅ローンのセクションに移動すると、ポータルサイトでローンの計算ができることが分かりました。Sarah が詳細を入力して「Calculate my mortgage」をクリックすると、住宅ローンのプランが表示されます。
 
-![loans1](assets/loans1.png) ![loans2](assets/loans2.png)**図：** *住宅ローン計算ツール*
+![loans1](assets/loans1.png) ![loans2](assets/loans2.png)**図：***住宅ローン計算ツール*
 
-![loans3](assets/loans3.png)**図：** *住宅ローン計算結果*
+![loans3](assets/loans3.png)**図：***住宅ローン計算結果*
 
 #### 仕組み {#how-it-works-6}
 
@@ -563,7 +563,7 @@ To configure Target in AEM Forms server, see [Set up and integrate Target in AEM
 1. フォームを選択し、「**その他**」をクリックし、「**A/B テストを開始**」をクリックします。テスト開始直後には、レポートに多くのデータが表示されることはありません。シードデータを使用して、A/B テストレポートがどのように表示されるか確認しましょう。
 
 1. CRXDE Lite を開き、次のファイルのバックアップを作成します。 /libs/fd/fmaddon/gui/components/admin/targetreport/clientlibs/targetreport/js/targetreport.js
-1. 上記のファイル内の `onReportLoadSuccess` 関数の定義を、次のファイル内の関数定義に置き換えます。 /apps/we-finance/demo-artifacts/targetreport.js
+1. 上記のファイル内の `onReportLoadSuccess` 関数の定義を、次のファイル内の関数定義に置き換えます。/apps/we-finance/demo-artifacts/targetreport.js
 
    >[!NOTE]
    >
@@ -590,9 +590,9 @@ Microsoft Dynamicsを使用したホーム住宅ローン申し込みのチュ�
 
 Sarah Rose は家を購入する計画を立て、住宅ローンのプランを探しています。Sarah は We.Finance 社の顧客なので、We.Finance 社のポータルサイトにアクセスして住宅ローンのプランを探しています。住宅ローンのセクションに移動すると、ポータルサイトでローンの計算ができることが分かりました。Sarah が詳細を入力して「Calculate my mortgage」をクリックすると、住宅ローンのプランが表示されます。
 
-![loans1](assets/loans1.png) ![loans2](assets/loans2.png)**図：** *住宅ローン計算ツール*
+![loans1](assets/loans1.png) ![loans2](assets/loans2.png)**図：***住宅ローン計算ツール*
 
-![loans3](assets/loans3.png)**図：** *住宅ローン計算結果*
+![loans3](assets/loans3.png)**図：***住宅ローン計算結果*
 
 #### 仕組み {#how-it-works-12}
 
@@ -814,7 +814,7 @@ Sarahは、目論見書の概要、価格とパフォーマンス、Portfolio管
 
 Blue Chip Growth Fundの対話型コミュニケーションは、親パネルと子パネルを使って、関連情報を別々のセクションに分ける。 親パネルは、すべての子パネルをタブにまとめています。
 
-親タブのレイアウトは「上部のタブ」に設定され、すべての子パネルがタブに変換されます。 https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html.
+親タブのレイアウトは「上部のタブ」に設定され、すべての子パネルがタブに変換されます。 インタラクティブな通信のパネルは、https://[authorHost]:[ authorPort]/editor.html/content/forms/af/we-finance/wealth-management/wealth-management/channels/web.html.
 
 #### 実際の動作確認  {#see-it-yourself-16}
 
@@ -840,14 +840,14 @@ PDFを電子メールで送信するには、Blue Chip Growth Fundのインタ�
 
 ## 自動保険申し込みのチュートリアル {#auto-insurance-application-walkthrough}
 
-We.Finance自動保険申込シナリオでは、次の人物が含まれます。
+We.Finance自動保険申込シナリオでは、次の人物が対象となります。
 
 * Sarah Rose（We.Finance 社の顧客）
 * We.Finance社、保険代理店、Conrad Simms氏
 
 Sarah Rose は We.Finance 社の既存の顧客で、自動保険契約を購入しています。今が保険を更新する時だ Conrad Simms（保険代理店）、We.Finance社は、Sarahにポリシーの更新に関するリマインダーを送信します。 リマインダーの電子メールには、ポリシー更新の詳細を含むPDFと、インタラクティブ通信のWebバージョンへのリンクが含まれています。 インタラクティブな通信は、モバイルに優しくレスポンシブなデザインを備えています。 Gloriaはどのデバイスでも対話型の通信を開くことができ、対話型の通信は基になるデバイスの画面サイズに合わせて折り返します。 PDF版のインタラクティブな通信は、電子メールに添付されており、オフラインでの読み取りに役立ちます。
 
-Sarahは電子メールに記載されている指示に従い、プロセスを正常に更新します。 次の画像は、自動保険申込ウォークスルーのワークフローを示しています。  ![自動保険申し込みチュートリアル](assets/auto-insurance-application-walkthrough.png)
+Sarahは電子メールに記載されている指示に従い、プロセスを正常に更新します。 次の画像は、自動保険申込ウォークスルーのワークフローを示しています。 ![自動保険申し込みチュートリアル](assets/auto-insurance-application-walkthrough.png)
 
 ### Conrad sends an insurance policy renewal communication from We.Finance {#conrad-sends-an-insurance-policy-renewal-communication-from-we-finance}
 
@@ -871,7 +871,7 @@ We.Finance Auto Insurance **ダッシュボードにConrad Simms** (csimms/passw
 * 標準ポリシーのコストは、プレミアムポリシーより低くなります。
 * プレミアムポリシーは盗難防止の報酬を持ち、標準ポリシーはスマートな乗り物報酬を持つ
 
-両方のポリシーが同じインタラクティブ通信を使用します。 ポリシー内のセクションは、ポリシータイプの条件に基づいて変更または非表示にされます。 You can access and review the auto insurance renewal interactive communication directly from https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal
+両方のポリシーが同じインタラクティブ通信を使用します。 ポリシー内のセクションは、ポリシータイプの条件に基づいて変更または非表示にされます。 You can access and review the auto insurance renewal interactive communication directly from `https://[authorHost]: [authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal`
 
 **Microsoft Dynamicsをデータソースとして使用する**
 
@@ -930,4 +930,4 @@ SarahがWeb版のインタラクティブコミュニケーションの「 **今
 
 https://[authorServer]:[authorPort]/content/document.html?documentId=/content/forms/af/we-finance/credit-card/ccbillpayment.html&amp;schema=fdm&amp;customerId=900001
 
-「お支払い」ボタンをクリックすると、「ありがとうございます」というメッセージが表示されます。
+「支払いを行う」ボタンをクリックすると、「ありがとうございます」というメッセージが表示されます。
