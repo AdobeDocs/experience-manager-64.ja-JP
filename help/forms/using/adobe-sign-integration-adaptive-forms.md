@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 7d494c2e-d457-4d52-89be-a77ffa07eb88
 translation-type: tm+mt
-source-git-commit: 35a52f72b30731879679ace06d6ffa4fd0342c1c
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
 source-wordcount: '906'
-ht-degree: 68%
+ht-degree: 70%
 
 ---
 
@@ -40,10 +40,10 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 
 上記の前提条件の準備が完了したら、以下の手順により、オーサーインスタンス上の AEM Forms を使用して Adobe Sign を設定します。
 
-1. On AEM Forms author instance, navigate to **[!UICONTROL Tools **![hammer](assets/hammer.png)>**General **>**Configuration Browser]**.
+1. On AEM Forms author instance, navigate to **[!UICONTROL Tools** ![hammer](assets/hammer.png) > **General** > **Configuration Browser]**.
 1. On the **[!UICONTROL Configuration Browser]** page, tap **[!UICONTROL Create]**.
 1. In the **[!UICONTROL Create Configuration]** dialog, specify a **[!UICONTROL Title]** for the configuration, enable **[!UICONTROL Cloud Configurations]**, and tap **[!UICONTROL Create]**. これにより、クラウドサービス用の設定コンテナが作成されます。
-1. Navigate to **[!UICONTROL Tools **![hammer](assets/hammer.png)>**Cloud Services **>**Adobe Sign]**and select the configuration container you created in the above step.
+1. Navigate to **[!UICONTROL Tools** ![hammer](assets/hammer.png) > **Cloud Services** > **Adobe Sign]** and select the configuration container you created in the above step.
 
    >[!NOTE]
    >
@@ -70,7 +70,7 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 
    ![OAuth 設定](assets/oauth_config.png)
 
-1. 「**[!UICONTROL Adobe Sign 設定を作成]**」ページに戻ります。In the **[!UICONTROL Settings]** tab, the **!UICONTROL OAuth URL]**field mentions the following default URL:
+1. 「**[!UICONTROL Adobe Sign 設定を作成]**」ページに戻ります。「**[!UICONTROL 設定]**」タブで、「**[!UICONTROL OAuth URL]**」フィールドに以下のデフォルトの URL が表示されます。
 
    `https://secure.na1.echosign.com/public/oauth`
 
