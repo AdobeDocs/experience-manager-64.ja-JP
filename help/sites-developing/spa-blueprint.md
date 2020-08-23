@@ -9,9 +9,9 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 6d4188f4-ad98-49df-9bb4-7936b7bea9c8
 translation-type: tm+mt
-source-git-commit: 940faa5a783eacf5505f001cf3696200babc6231
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '2128'
+source-wordcount: '2124'
 ht-degree: 13%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 13%
 >
 >AEMのSPA機能はフレームワークに依存しませんが、現在、ReactフレームワークとAngularフレームワークのみがサポートされています。
 
-作成者がAEMページエディターを使用して、単一ページアプリケーションのフレームワークで公開されるデータを編集できるようにするには、AEMリポジトリ内のアプリケーション用に保存されたデータのセマンティックを表すモデルの構造を解釈できる必要があります。 この目標を達成するために、フレームワークに依存しない2つのライブラリが用意されています。 と `PageModelManager` があり `ComponentMapping`ます。
+作成者がAEMページエディターを使用して、単一ページアプリケーションのフレームワークで公開されるデータを編集できるようにするには、AEMリポジトリ内のアプリケーション用に保存されたデータのセマンティックを表すモデルの構造を解釈できる必要があります。 この目標を達成するために、フレームワークに依存しない2つのライブラリが用意されています。と `PageModelManager` があり `ComponentMapping`ます。
 
 ### PageModelManager {#pagemodelmanager}
 
@@ -51,7 +51,7 @@ SPA に代わり、実際のコンテンツ構造を表す JSON 構造の取得�
 
 NPMパッケージ「 [@adobe/cq-spa-page-model-manager」を参照してください。](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
 
-ライブラリを初期化する `PageModelManager`とき、ライブラリは、最初に、指定されたAppのルートモデルを読み込みます（パラメーター、メタプロパティまたは現在のURLを使用）。 ライブラリが、現在のページのモデルが取得するルートモデルの一部でないことを識別し、それを子ページのモデルとして含める場合。
+ライブラリを初期化する `PageModelManager`とき、ライブラリは、最初に、指定されたアプリケーションのルートモデルを読み込みます（パラメーター、メタプロパティまたは現在のURLを使用）。 ライブラリが、現在のページのモデルが取得するルートモデルの一部でないことを識別し、それを子ページのモデルとして含める場合。
 
 ![page_model_consolidation](assets/page_model_consolidation.png)
 
@@ -83,19 +83,19 @@ SPAコンポーネントは、ページモデルと同期していて、それ�
 
 The page model leverages the JSON Model Exporter, which is itself based on the [Sling Model](https://sling.apache.org/documentation/bundles/models.html) API. エクスポート可能なSlingモデルは、基になるライブラリがデータモデルを解釈できるようにするために、次のフィールドのリストを公開します。
 
-* `:type`: AEMリソースのタイプ（デフォルト=リソースタイプ）
-* `:children`: 現在のリソースの階層の子。 子は現在のリソースの内部コンテンツに含まれていません（ページを表す項目に含まれています）
-* `:hierarchyType`: リソースの階層タイプ。 は、 `PageModelManager` 現在、ページタイプをサポートしています
+* `:type`:AEMリソースのタイプ（デフォルト=リソースタイプ）
+* `:children`:現在のリソースの階層の子。 子は現在のリソースの内部コンテンツに含まれていません（ページを表す項目に含まれています）
+* `:hierarchyType`:リソースの階層タイプ。 は、 `PageModelManager` 現在、ページタイプをサポートしています
 
-* `:items`: 現在のリソースの子コンテンツリソース(ネストされた構造、コンテナにのみ存在)
-* `:itemsOrder`: 子供のリストを命じた。 JSONマップオブジェクトは、フィールドの順序を保証しません。 マップと現在の配列の両方を持つことで、APIのコンシューマは、両方の構造体の利点を持ちます。
-* `:path`: 項目のコンテンツパス（ページを表す項目に存在）
+* `:items`:現在のリソースの子コンテンツリソース(ネストされた構造、コンテナにのみ存在)
+* `:itemsOrder`:子供のリストを命じた。 JSONマップオブジェクトは、フィールドの順序を保証しません。 マップと現在の配列の両方を持つことで、APIのコンシューマは、両方の構造体の利点を持ちます。
+* `:path`:項目のコンテンツパス（ページを表す項目に存在）
 
 [AEM コンテンツサービスの利用](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/content-services-tutorial-use.html)も参照してください。
 
 ### フレームワーク固有のモジュール {#framework-specific-module}
 
-懸念を分けることで、プロジェクトの実装を容易にすることができます。 したがって、npm固有のパッケージを提供する必要があります。 このパッケージは、基本モジュール、サービス、コンポーネントの集積と公開を担当します。 これらのコンポーネントは、データモデルの管理ロジックをカプセル化し、プロジェクトのコンポーネントが予期するデータへのアクセスを提供する必要があります。 モジュールは、基盤となるライブラリの有用なエントリポイントを推移的に公開する役割も果たします。
+懸念を分けることで、プロジェクトの実装を容易にすることができます。 したがって、npm固有のパッケージを提供する必要があります。 このパッケージは、基本モジュール、サービス、コンポーネントの集積と公開を担当します。 これらのコンポーネントは、データモデルの管理ロジックをカプセル化し、プロジェクトのコンポーネントが予期するデータへのアクセスを提供する必要があります。 このモジュールは、基になるライブラリの有用なエントリポイントを推移的に公開する役割も果たします。
 
 ライブラリの相互運用性を容易にするため、Adobeはフレームワーク固有のモジュールに対し、以下のライブラリをバンドルするよう勧告する。 必要に応じて、レイヤーは基になるAPIをカプセル化し、調整してから、プロジェクトに公開できます。
 
@@ -110,7 +110,7 @@ npmモジュール： [@adobe/cq-react-editable-components](https://www.npmjs.co
 
 #### 角 {#angular}
 
-npmモジュール： 近々
+npmモジュール：近々
 
 ## メインサービスとコンポーネント {#main-services-and-components}
 
@@ -128,16 +128,16 @@ npmモジュール： 近々
 
 #### コンポーネントの宣言 {#component-declaration}
 
-次のメタデータは、プロジェクトのコンポーネントによって生成される外側のHTML要素に追加する必要があります。 ページエディターで対応する編集設定を取得できるようになります。
+プロジェクトのコンポーネントによって生成される外側のHTML要素に、次のメタデータを追加する必要があります。 ページエディターで対応する編集設定を取得できるようになります。
 
-* `data-cq-data-path`: リソースへのパス。 `jcr:content`
+* `data-cq-data-path`:リソースへのパス。 `jcr:content`
 
 #### 機能の宣言とプレースホルダの編集 {#editing-capability-declaration-and-placeholder}
 
 次のメタデータとクラス名は、プロジェクトのコンポーネントによって生成される外側のHTML要素に追加する必要があります。 ページエディターでオファー関連の機能を有効にします。
 
-* `cq-placeholder`: 空のコンポーネントのプレースホルダーを識別するクラス名
-* `data-emptytext`: コンポーネントインスタンスが空の場合にオーバーレイによって表示されるラベル
+* `cq-placeholder`:空のコンポーネントのプレースホルダーを識別するクラス名
+* `data-emptytext`:コンポーネントインスタンスが空の場合にオーバーレイによって表示されるラベル
 
 **空のコンポーネントのプレースホルダー**
 
@@ -186,7 +186,7 @@ SPAコンポーネントはレスポンシブグリッドなどのグラフィ�
 >この例で使用されているクラス名は、現時点ではページエディターで必須です。
 >
 >* `"new section"`：現在の要素がコンテナのプレースホルダーであることを示します。
->* `"aem-Grid-newComponent"`: レイアウトオーサリング用のコンポーネントを標準化します
+>* `"aem-Grid-newComponent"`:レイアウトオーサリング用のコンポーネントを標準化します
 
 >
 
@@ -243,7 +243,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 プロジェクトコンポーネントは、少なくとも次のデータ属性を生成して、エディタが操作できるようにする必要があります。
 
-* `data-cq-data-path`: で指定されるコンポーネントの相対パス `PageModel` (例： `"root/responsivegrid/image"`)。 この属性はページに追加しないでください。
+* `data-cq-data-path`:によって提供されるコンポーネントの相対パス `PageModel` (例： `"root/responsivegrid/image"`)。 この属性はページに追加しないでください。
 
 要約すると、編集可能としてページエディターで解釈されるために、プロジェクトコンポーネントは次の契約を守る必要があります。
 
@@ -278,7 +278,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 アプリがルーティングを所有している。 フロントエンド開発者は、まず、ナビゲーションコンポーネント(AEMナビゲーションコンポーネントにマッピング)を実装する必要があります。 このコンポーネントは、コンテンツのフラグメントを表示または非表示にする一連のルートと組み合わせて使用するURLリンクをレンダリングします。
 
-基になる [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) ライブラリとその `[`ModelRouter`](/help/sites-developing/spa-routing.md)モジュール（デフォルトで有効）は、特定のリソースパスに関連付けられたモデルに対して、プリフェッチを行い、アクセスを提供します。
+基になる [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) ライブラリとその [`ModelRouter`](/help/sites-developing/spa-routing.md) モジュール（デフォルトで有効）は、特定のリソースパスに関連付けられたモデルに対し、プリフェッチおよびアクセスを行います。
 
 2つのエンティティはルーティングの概念に関連していますが、は、 [`ModelRouter`](/help/sites-developing/spa-routing.md) `PageModelManager [](/help/sites-developing/spa-blueprint.md#pagemodelmanager) を読み込む際に、現在のアプリケーションの状態と同期する構造を持つデータモデルを使用するだけです。
 
