@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: bf155d8c-c012-4cb4-89a6-ceead715630e
 translation-type: tm+mt
-source-git-commit: 284339ee1ce0ffae97f732b569f73c732f063273
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 71%
+source-wordcount: '705'
+ht-degree: 74%
 
 ---
 
@@ -50,8 +50,8 @@ AEM で操作して保存した 3D アセットをレンダリングして、Web
 
    [3D アセットの表示](/help/sites-classic-ui-authoring/classicui-view-3d-assets.md)を参照してください。
 
-1. **Adobe Experience Managerから、**&#x200B;ナビゲーション **[!UICONTROL ページで]** [!UICONTROL Assets ****]をタップします。
-1. Near the upper-right corner of the page, from the **[!UICONTROL View** drop-down list, tap **[!UICONTROL Card View]**.
+1. **Adobe Experience Manager** の&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;ページで「**[!UICONTROL アセット]**」をタップします。
+1. ページの右上隅付近にある「**[!UICONTROL 表示]**」ドロップダウンリストで「**[!UICONTROL カード表示]**」をタップします。
 1. レンダリングする 3D オブジェクトに移動します。
 
 1. 3D オブジェクトのカードをタップして、アセットの詳細ページで開きます。
