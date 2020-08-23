@@ -3,10 +3,10 @@ title: リッチテキストエディタープラグインの設定
 description: AEM リッチテキストエディタープラグインを設定して、個々の機能を有効にする方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c86d1ac76d97fa716cf70bdebe91d2b6dec46b0b
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '4220'
-ht-degree: 93%
+source-wordcount: '4206'
+ht-degree: 94%
 
 ---
 
@@ -118,7 +118,7 @@ RTE では、次の 3 つのいずれかのモードで、コンテンツを貼�
 
 必須アイコンを表示するように RTE を設定するには、以下の手順に従います。
 
-1. コンポーネントに移動します。 例：
+1. コンポーネントに移動します。例：
 
    `/apps/<myProject>/components/text`
 
@@ -303,11 +303,10 @@ Microsoft Word として貼り付け（`paste-wordhtml`）モードをさらに�
 >[!NOTE]
 RTE をダイアログ（クラシック UI）で使用する場合は、リッチテキスト編集用に最適化されたスタイルシートを指定できます。技術上の制限により、CSS コンテキストはエディターから失われるので、CSS コンテキストをエミュレートして WYSIWYG 環境を改善できます。
 リッチテキストエディターでは、`CQrte` という ID を持つコンテナ DOM 要素を使用します。これを使用して、表示や編集用に様々なスタイルを提供できます。
-# CQ td {
-// defines style for viewing }
-# CQrte td {
-// defines style for editing }
-
+`#CQ td {`
+` // defines the style for viewing }`
+`#CQrte td {`
+` // defines the style for editing }`
 
 ### ポップアップリストで使用可能なスタイルの指定 {#stylesindropdown}
 
