@@ -8,10 +8,10 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7677327a-cc56-413b-b2e3-7b10d0d0319d
 translation-type: tm+mt
-source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '2255'
-ht-degree: 63%
+source-wordcount: '2249'
+ht-degree: 64%
 
 ---
 
@@ -26,10 +26,10 @@ ht-degree: 63%
 
 Interactive Communicationのテキストドキュメントフラグメントは、次の種類の動的データをサポートします。
 
-* **データモデルオブジェクト**: dataプロパティはバックエンドデータソースを使用します。
+* **データモデルオブジェクト**:dataプロパティはバックエンドデータソースを使用します。
 * **ルールベースのコンテンツ**：ルールに基づいて表示と非表示が切り替わる、テキスト内の特定のコンテンツ。また、フォームデータモデルのプロパティと変数に基づくルールを作成することもできます。
 * **変数**：テキストドキュメントフラグメントでは、バックエンドのデータソースに変数が連結されることはありません。エージェントは、後処理への送信用にインタラクティブ通信を準備する際に、変数の値を入力または選択するか、変数をデータソースに連結します。
-* **繰り返し**: クレジット・カード明細のトランザクションなど、インタラクティブ・コミュニケーションに動的な情報を持つことがあります。このトランザクションの発生回数は、生成された各インタラクティブ・コミュニケーションと共に変化を続ける可能性があります。 繰り返し構造を使用すると、このような動的な情報の書式設定と構造化を行うことができます。For more information, see [Inline condition and repeat](cm-inline-condition.md).
+* **繰り返し**:クレジット・カード明細の取引など、インタラクティブ通信に動的な情報を持つ場合があります。このトランザクションの発生回数は、生成された各インタラクティブ通信と共に変化し続ける可能性があります。 繰り返し構造を使用すると、このような動的な情報の書式設定と構造化を行うことができます。For more information, see [Inline condition and repeat](cm-inline-condition.md).
 
 ## テキストの作成 {#createtext}
 
@@ -37,8 +37,8 @@ Interactive Communicationのテキストドキュメントフラグメントは�
 1. 「 **`[!UICONTROL Create]`** / **[!UICONTROL テキスト]**」を選択します。
 1. 次の情報を指定します。
 
-   * **[!UICONTROL タイトル]**: （オプション）テキストドキュメントフラグメントのタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。テキストは、そのタイトル（利用可能な場合）によって、サムネールやプロパティとして参照されます。
-   * **[!UICONTROL 名前]**: フォルダー内のテキストの一意の名前。 どのような状態であっても、1 つのフォルダー内に、同じ名前を持つ 2 つのドキュメントフラグメント（テキスト、条件、リスト）を保管することはできません。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力した特殊文字、スペース、数字および英数字以外の文字は、ハイフンに置き換えられます。 「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
+   * **[!UICONTROL タイトル]**:（オプション）テキストドキュメントフラグメントのタイトルを入力します。 タイトルは一意である必要はなく、特殊文字や英語以外の文字を含めることもできます。テキストは、そのタイトル（利用可能な場合）によって、サムネールやプロパティとして参照されます。
+   * **[!UICONTROL 名前]**:フォルダー内のテキストの一意の名前。 どのような状態であっても、1 つのフォルダー内に、同じ名前を持つ 2 つのドキュメントフラグメント（テキスト、条件、リスト）を保管することはできません。「名前」フィールドでは、英数字およびハイフンのみ使用できます。「名前」フィールドは、タイトルフィールドに基づいて自動的に入力されます。「タイトル」フィールドに入力した特殊文字、スペース、数字および英数字以外の文字は、ハイフンに置き換えられます。 「タイトル」フィールドの値は「名前」フィールドに自動的にコピーされますが、値を編集することもできます。
    * **[!UICONTROL 説明]**：テキストの説明を入力します。
    * **[!UICONTROL フォームデータモデル]**：（任意）フォームデータモデルに基づいてテキストを作成する場合は、「フォームデータモデル」ラジオボタンを選択します。「フォームデータモデル」ラジオボタンを選択すると、「**[!UICONTROL フォームデータモデル]**」*フィールドが表示されます。フォームデータモデルを参照して選択します。インタラクティブ通信用のテキストを作成する場合は、そのインタラクティブ通信で使用するものと同じデータモデルを使用する必要があります。For more information on Form Data Model, see [Data Integration](/help/forms/using/data-integration.md).
    * **[!UICONTROL タグ]**：（オプション）テキストフィールドにカスタムタグの値を入力し、Enter キーを押します。このテキストを保存すると、新しく追加されたタグが作成されます。
@@ -119,8 +119,8 @@ Interactive Communicationのテキストドキュメントフラグメントは�
 1. Enter the following information and tap **[!UICONTROL Create]**:
 
    * **[!UICONTROL 名前*]**：変数の名前を入力します。
-   * **[!UICONTROL 説明]**: 必要に応じて、変数の説明を入力します。
-   * **[!UICONTROL タイプ*]**: 変数のタイプを選択します。 文字列、数値、ブール値または日付。
+   * **[!UICONTROL 説明]**:必要に応じて、変数の説明を入力します。
+   * **[!UICONTROL タイプ*]**:変数のタイプを選択します。文字列、数値、ブール値または日付。
    * **[!UICONTROL 特定の値のみ許可]**：文字列タイプまたは数値タイプの変数の場合、このオプションを選択すると、エージェント UI のプレースホルダーの特定の値セットから、エージェントによって値が選択されます。To specify the set of values, select this option and then specify comma-separated values that are allowed in the **[!UICONTROL Values]** field.
 
 1. 「**[!UICONTROL 作成]**」をタップします。
@@ -193,12 +193,11 @@ Interactive Communicationのテキストドキュメントフラグメントは�
 
 ## テキストの書式設定 {#formatting}
 
-While creating or editing text, the toolbar changes depending on the type of edits you choose to make: Paragraph, Alignment, or Listing:
-[ ![Select type of toolbar](do-not-localize/toolbarselection.png)
+テキストの作成や編集を行う場合、選択する編集のタイプ（「段落」、「整列」、「リスト」）に応じて、表示されるツールバーが異なります。
 
 ツールバーのタイプの選択：段落、整列、またはリスト
 
-](assets/toolbarselection.png) ![フォント編集ツールバー](do-not-localize/paragraphtoolbar-1.png)
+![フォント編集ツールバー](do-not-localize/paragraphtoolbar-1.png)
 
 フォント編集ツールバー
 
