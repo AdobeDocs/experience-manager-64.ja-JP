@@ -10,9 +10,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 658ff671-16b9-41bd-ba24-b77a32b3346b
 translation-type: tm+mt
-source-git-commit: 5964edfadf597652f754ca3c64343b0b90e40796
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '848'
 ht-degree: 54%
 
 ---
@@ -31,7 +31,7 @@ AEM 3D では、組み込みの Adobe Rapid Refine™ レンダラーおよび�
 * **[!UICONTROL ビット深度]** - 32ビット（浮動小数点）
 * **[!UICONTROL Pixel Order]** - Interleaved(RGBRGB)
 * **[!UICONTROL 画像圧縮]** - LZW
-* **[!UICONTROLバイト順序** - IBM PC
+* **[!UICONTROL バイト順序]** - IBM PC
 
 IBL ステージでは、多くの場合 1 枚の HDR 画像で十分ですが、AEM 3D は最大 3 つの異なる画像を使用した追加の IBL エフェクトの制御を提供しています。
 
