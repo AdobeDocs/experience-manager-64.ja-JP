@@ -10,9 +10,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 3d063268-17d7-4db6-8028-682537645377
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '874'
 ht-degree: 37%
 
 ---
@@ -51,7 +51,7 @@ AEM 3DとAutoDesk 3ds Max [との統合も参照してください](integrating-
 
 1. Maya の実行可能ファイルのフォルダーへのパスを、Windows の PATH 環境変数に追加します。
 
-   For example, on Windows Server 2012, tap **[!UICONTROL Start > Control Panel > System and Security > System > Advanced System Settings > Environment Variables**. Append the full path to the `Maya2016\bin` folder to the `Path`system variable.
+   For example, on Windows Server 2012, tap **[!UICONTROL Start]>[!UICONTROL Control Panel]>[!UICONTROL System and Security]>[!UICONTROL System]>[!UICONTROL Advanced System Settings]>[!UICONTROL Environment Variables]**. Append the full path to the `Maya2016\bin` folder to the `Path`system variable.
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
 
@@ -79,7 +79,7 @@ AEM 3DとAutoDesk 3ds Max [との統合も参照してください](integrating-
 
    `sample-3D-content.zip` は、基本の 3D 機能を検証するため、以前にダウンロード済みです。 
 
-1. Return to the **[!UICONTROL Card** view and observe the message banners shown on the uploaded assets.
+1. Return to the **[!UICONTROL Card]** view and observe the message banners shown on the uploaded assets.
 
    The Converting Format banner is displayed while Maya is converting the native `.MA` format to `.FBX`.
 
