@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: afacb3ad-e4ad-4d06-a898-f3f2da8bbb64
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: 7cb0f63f0cd83e6e40ed51b2fd300f010278aa56
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1838'
 ht-degree: 68%
 
 ---
@@ -73,7 +73,7 @@ ht-degree: 68%
 
 1. [URL を Web アプリケーションにリンクする](linking-urls-to-yourwebapplication.md)か、[ビデオビューアまたは画像ビューアを埋め込みます](embed-code.md)。
 
-   スピンセットを公開すると、AEM AssetsはスピンセットのURL呼び出しを作成し、アクティブにします。 これらのURLは、アセットをプレビューするときにコピーできます。 または、それらをWebサイトに埋め込むこともできます。
+   スピンセットを公開すると、AEM AssetsはスピンセットのURL呼び出しを作成し、アクティブにします。これらのURLは、アセットをプレビューするときにコピーできます。または、それらをWebサイトに埋め込むこともできます。
 
    スピンセットを選択し、左側のレールのドロップダウンメニューで「**[!UICONTROL ビューア]**」を選択します。
 
@@ -109,7 +109,7 @@ If you need to, you can [edit Spin Sets](#editing-spin-sets). In addition, you c
 
 **スピンセットを作成するには:**
 
-1. In Assets, navigate to where you want to create a spin set, tap **[!UICONTROL Create]**, and select **[!UICONTROL Spin Set**. アセットを格納しているフォルダー内からセットを作成することもできます。
+1. In Assets, navigate to where you want to create a spin set, tap **[!UICONTROL Create]**, and select **[!UICONTROL Spin Set]**. アセットを格納しているフォルダー内からセットを作成することもできます。
 
    ![chlimage_1-381](assets/chlimage_1-381.png)
 
