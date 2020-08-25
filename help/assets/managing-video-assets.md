@@ -6,10 +6,10 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: f341fae1-dda3-4917-b6db-ad02fec63702
 translation-type: tm+mt
-source-git-commit: 38d3a204e3ef038ef4f848e12b9fc73f127ec488
+source-git-commit: 2a24d7b9232f39d47d79d995251a14beb0c0f666
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 51%
+source-wordcount: '795'
+ht-degree: 49%
 
 ---
 
@@ -58,10 +58,8 @@ AEM Assetsの設定に加えて、次の設定を変更して大きなアセッ�
 
    ![chlimage_1-203](assets/chlimage_1-203.png)
 
-1. ブラウザーを更新します。オーバーレイノード `/jcr_root/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` が選択されます。
-1. サイズ上限を必要なサイズに増やすには、「**[!UICONTROL プロパティ]**」タブで適切な値をバイト単位で入力します。例えば、サイズ上限を 30 GB に増やすには、以下の値を入力します。
-
-   `{sizeLimit : "32212254720"}`
+1. ブラウザーを更新します。オーバーレイノード `/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` が選択されます。
+1. サイズ上限を必要なサイズに増やすには、「**[!UICONTROL プロパティ]**」タブで適切な値をバイト単位で入力します。For example, enter `32212254720` value to increase the size limit to 30 GB.
 
 1. From the toolbar, tap **[!UICONTROL Save All]**.
 1. AEM で、**[!UICONTROL ツール／操作／Web コンソール]**&#x200B;をタップします。
