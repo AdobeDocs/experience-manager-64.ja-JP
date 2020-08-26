@@ -26,7 +26,7 @@ Scripting Object Model（SOM）を使用し、特定の Document Object Model（
 
 ![DOM ツリー](assets/hierarchy-1.png)
 
-アダプティブフォーム内のすべての要素の SOM 式には、`guide[0].guide1[0]` ] というプレフィックスが付けられます。ノード構造階層のコンポーネントの場所は SOM 式の派生に使用されます。
+アダプティブフォーム内のすべての要素の SOM 式には、`guide[0].guide1[0]` というプレフィックスが付けられます。ノード構造階層のコンポーネントの場所は SOM 式の派生に使用されます。
 
 ![2 つのラジオボタンを持つ DOM ツリー](assets/hierarchy_radio_button.png)
 
