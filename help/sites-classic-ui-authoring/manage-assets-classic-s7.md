@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 9ba95dce-a801-4a36-8798-45d295371b1b
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 191c365e924fd3974308c075369a3f9d8810e6b7
 workflow-type: tm+mt
 source-wordcount: '3428'
 ht-degree: 30%
@@ -59,7 +59,7 @@ AEM でのビデオコンポーネントの使用について詳しくは、以�
 
 1. In the AEM classic UI, click **[!UICONTROL Digital Assets]** to access the digital asset manager.
 
-1. Select the asset (or assets) or folder from within the target folder you want to publish to Dynamic Media Classic and right-click and select **[!UICONTROL Publish to Dynamic Media Classic]**. または、** **[!UICONTROL ツール]** メニューから「Dynamic Media Classicに 公開」を選択できます。
+1. Select the asset (or assets) or folder from within the target folder you want to publish to Dynamic Media Classic and right-click and select **[!UICONTROL Publish to Dynamic Media Classic]**. Alternatively, you can select **[!UICONTROL Publish to Dynamic Media Classic]** from the **[!UICONTROL Tools]** menu.
 
    ![chlimage_1-76](assets/chlimage_1-76.png)
 
