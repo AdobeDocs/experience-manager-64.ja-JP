@@ -46,7 +46,7 @@ Java コンテンツリポジトリ（JCR）の規格である [JSR 283](https:/
 
 仕様を主導しているのは、Adobe Research（スイス）AG です。
 
-JCR [API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) パッケージ、javax.jcr。&amp;ast; は、リポジトリのコンテンツへの直接アクセスと操作に使用されます。
+JCR [API 2.0](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) パッケージ、javax.jcr。&amp;ast;は、リポジトリのコンテンツへの直接アクセスと操作に使用されます。
 
 ## Experience Server（CRX）と Jackrabbit {#experience-server-crx-and-jackrabbit}
 
@@ -111,11 +111,11 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 **host** :Webサイトの名前。
 
-**コンテンツパス** ：レンダリングするコンテンツを指定するパス。 拡張子と組み合わせて使用される。 この例では、tools/spy.htmlに変換します。
+**コンテンツパス** ：レンダリングするコンテンツを指定するパス。 拡張子と組み合わせて使用される。この例では、tools/spy.htmlに変換します。
 
-**selector(s)** ：コンテンツをレンダリングする別の方法で使用されます。 次の例では、A4形式のプリンターに適したバージョンです。
+**selector(s)** ：コンテンツをレンダリングする別の方法で使用されます。次の例では、A4形式のプリンターに適したバージョンです。
 
-**extension** Content形式； レンダリングに使用するスクリプトも指定します。
+**extension** Content形式；レンダリングに使用するスクリプトも指定します。
 
 **[サフィックス** ]追加情報を指定する場合に使用できます。
 
@@ -162,10 +162,10 @@ All Sling scripts are stored in subfolders of either `/apps` or `/libs`, which w
 * メソッド（GET、POST）が必要なときは、HTTP の仕様に従って大文字で指定します（例：jobs.POST.esp。以下を参照）。
 * 以下のような様々なスクリプトエンジンがサポートされています。
 
-   * `.esp, .ecma`: ECMAScript (JavaScript)ページ（サーバー側の実行）
-   * `.jsp`: Javaサーバーページ（サーバー側の実行）
-   * `.java`: Javaサーブレットコンパイラ（サーバ側の実行）
-   * `.jst`: JavaScriptテンプレート（クライアント側の実行）
+   * `.esp, .ecma`:ECMAScript (JavaScript)ページ（サーバー側の実行）
+   * `.jsp`:Javaサーバーページ（サーバー側の実行）
+   * `.java`:Javaサーブレットコンパイラ（サーバ側の実行）
+   * `.jst`:JavaScriptテンプレート（クライアント側の実行）
 
 The list of script engines supported by the given instance of AEM are listed on the Felix Management Console ( `http://<host>:<port>/system/console/slingscripting`).
 
@@ -175,7 +175,7 @@ Using the above example, if the `sling:resourceType` is `hr/jobs` then for:
 
 * GET/HEADリクエスト、.htmlで終わるURL（デフォルトのリクエストタイプ、デフォルトの形式）
 
-   スクリプトは/apps/hr/jobs/jobs.espになります。 sling:resourceTypeの最後のセクションがファイル名を形成します。
+   スクリプトは/apps/hr/jobs/jobs.espになります。sling:resourceTypeの最後のセクションがファイル名を形成します。
 
 * POST要求(GET/HEADを除くすべての要求タイプ。メソッド名は大文字にする必要があります)
 
@@ -187,15 +187,15 @@ Using the above example, if the `sling:resourceType` is `hr/jobs` then for:
 
    例：`../content/corporate/jobs/developer.pdf`
 
-   スクリプトは次のとおりで `/apps/hr/jobs/jobs.pdf.esp`す。 スクリプト名にサフィックスが追加されます。
+   スクリプトは次のとおりで `/apps/hr/jobs/jobs.pdf.esp`す。スクリプト名にサフィックスが追加されます。
 
 * セレクターを含むURL
 
    セレクターを使用して、同じコンテンツを別の形式で表示できます。 例えば、プリンターに適したバージョン、rssフィード、サマリなどです。
 
-   プリンターに適したバージョンを見てみると、セレクターが *印刷できます*。 ～と同様に `../content/corporate/jobs/developer.print.html`
+   プリンターに適したバージョンを見てみると、セレクターが *印刷できます*。～と同様に `../content/corporate/jobs/developer.print.html`
 
-   スクリプトは次のとおりで `/apps/hr/jobs/jobs.print.esp`す。 セレクターがスクリプト名に追加されます。
+   スクリプトは次のとおりで `/apps/hr/jobs/jobs.print.esp`す。セレクターがスクリプト名に追加されます。
 
 * sling:resourceType が定義されていない場合は、次のようになります。
 
@@ -294,7 +294,7 @@ Sling 内では、スクリプトを直接呼び出しできません。REST サ
 
 More complex scripts (aggregating scripts) might need to access multiple resources (for example navigation, sidebar, footer, elements of a list) and do so by including the *resource*.
 
-これを行うには、sling:include（&quot;/&lt;パス>/&lt;リソース>&quot;）コマンドを使用します。 これは、イメージをレンダリングするための既存の定義を参照する次の文のように、参照先のリソースの定義を効果的に含めます。
+これを行うには、sling:include（&quot;/&lt;パス>/&lt;リソース>&quot;）コマンドを使用します。これは、イメージをレンダリングするための既存の定義を参照する次の文のように、参照先のリソースの定義を効果的に含めます。
 
 ```xml
 %><sling:include resourceType="geometrixx/components/image/img"/><% 
@@ -418,7 +418,7 @@ With pageManager being the page manager object and myResource a resource object.
 
 * `/apps`
 
-   出願に関する事項 には、webサイトに固有のコンポーネント定義が含まれます。 開発するコンポーネントは、で使用可能な既製のコンポーネントに基づくことができ `/libs/foundation/components`ます。
+   出願に関する事項には、webサイトに固有のコンポーネント定義が含まれます。 開発するコンポーネントは、で使用可能な既製のコンポーネントに基づくことができ `/libs/foundation/components`ます。
 
 * `/content`
 
@@ -440,7 +440,7 @@ With pageManager being the page manager object and myResource a resource object.
 
 * `/var`
 
-   システムによって変更および更新されるファイル 監査ログ、統計、イベント処理など。 サブフォルダーには、コンポーネントスクリプトから生成されたソースフォームおよびコンパイル済みのフォームのJavaサーブレットが含まれます。 `/var/classes`
+   システムによって変更および更新されるファイル監査ログ、統計、イベント処理など。 サブフォルダーには、コンポーネントスクリプトから生成されたソースフォームおよびコンパイル済みのフォームのJavaサーブレットが含まれます。 `/var/classes`
 
 ## 環境 {#environments}
 
