@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 translation-type: tm+mt
-source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+source-git-commit: babfbd7e864eb15c0b06b114fea4cef6db2a6a07
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 53%
+source-wordcount: '611'
+ht-degree: 54%
 
 ---
 
@@ -33,9 +33,10 @@ The first step is to add a resource super type property to the `/apps/an-scf-san
 CRXDE Lite を使用して、次の手順を実行します。
 
 <!--Resolve steps below-->
-    *名前： `sling:resourceSuperType`
-    *種類： `文字列`
-    *値： &#39;foundation/components/page&#39;
+
+* 名前：`sling:resourceSuperType`
+* 型：`String`
+* 値：`foundation/components/page`
 
 1. Click the green **[!UICONTROL [+]Add]**
 1. Click **[!UICONTROL Save All]**
