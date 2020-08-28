@@ -10,7 +10,7 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: da8f968b-91cc-45a8-ae4b-757b4f840b8e
 translation-type: tm+mt
-source-git-commit: 2411f1aa2853a161603d15917102d5cf1a8139b6
+source-git-commit: 5ba23738118d7944026f405110e25b6a7f90866b
 workflow-type: tm+mt
 source-wordcount: '1509'
 ht-degree: 98%
@@ -228,7 +228,7 @@ ht-degree: 98%
 
 ## フラグメントのメタデータ（プロパティ）の表示と編集 {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 
-「[!UICONTROL メタデータ](content-fragments-metadata.md)」タブを使用し、フラグメントのプロパティを表示して編集できます。
+「[[!UICONTROL メタデータ]](content-fragments-metadata.md)」タブを使用し、フラグメントのプロパティを表示して編集できます。
 
 ## コンテンツフラグメントのタイムライン {#timeline-for-content-fragments}
 
@@ -237,8 +237,8 @@ ht-degree: 98%
 * バージョン、コメントおよび注釈に関する情報の表示
 * バージョンに関するアクション
 
-   * **[!UICONTROL このバージョンに戻す](#reverting-to-a-version)**（既存のフラグメントを選択してから特定のバージョンを選択）
-   * **[!UICONTROL 現在のバージョンと比較](#comparing-fragment-versions)**（既存のフラグメントを選択してから特定のバージョンを選択）
+   * **[[!UICONTROL このバージョンに戻す]](#reverting-to-a-version)**（既存のフラグメントを選択してから特定のバージョンを選択）
+   * **[[!UICONTROL 現在のバージョンと比較]](#comparing-fragment-versions)**（既存のフラグメントを選択してから特定のバージョンを選択）
    * **[!UICONTROL ラベル]**&#x200B;や&#x200B;**[!UICONTROL コメント]**&#x200B;の追加（既存のフラグメントを選択してから特定のバージョンを選択）
    * **[!UICONTROL バージョンとして保存]**（既存のフラグメントを選択してからタイムライン下部の上矢印を選択）
 
@@ -268,7 +268,7 @@ ht-degree: 98%
 
 ## フラグメントのバージョンの比較 {#comparing-fragment-versions}
 
-特定のバージョンを選択したら、「[!UICONTROL タイムライン](https://helpx.adobe.com/experience-manager/6-3/assets/using/content-fragments-managing.html#timeline-for-content-fragments)」から「**[!UICONTROL 現在のバージョンと比較]**」アクションを利用できるようになります。
+特定のバージョンを選択したら、「[[!UICONTROL タイムライン]」から「**[!UICONTROL 現在のバージョンと比較]**」アクションを利用できるようになります。](https://helpx.adobe.com/experience-manager/6-3/assets/using/content-fragments-managing.html#timeline-for-content-fragments)
 
 これにより、次の情報が表示されます。
 
@@ -298,7 +298,7 @@ ht-degree: 98%
 
 次の方法で特定のバージョンのフラグメントに戻すことができます。
 
-* 直接[!UICONTROL タイムライン](content-fragments-managing.md#timeline-for-content-fragments)から。
+* 直接[[!UICONTROL タイムライン]](content-fragments-managing.md#timeline-for-content-fragments)から。
 
    必要なバージョンを選択した後、「**[!UICONTROL このバージョンに戻す]**」アクションを選択します。
 
