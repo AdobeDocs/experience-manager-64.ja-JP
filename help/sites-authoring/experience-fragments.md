@@ -10,7 +10,7 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 1fe58af0-3005-46fc-8717-5d32557947ed
 translation-type: tm+mt
-source-git-commit: 6f6952686446359485f180050219a12db9d3969a
+source-git-commit: 5ba23738118d7944026f405110e25b6a7f90866b
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 90%
@@ -191,7 +191,7 @@ ht-degree: 90%
 
    ![xf-authoring-04](assets/xf-authoring-04.png)
 
-1. コンポーネントツールバーから&#x200B;**[!UICONTROL 設定](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)**を選択します。
+1. コンポーネントツールバーから&#x200B;**[[!UICONTROL 設定]](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)**&#x200B;を選択します。
 1. 必要に応じて&#x200B;**[!UICONTROL アセット]**&#x200B;を追加して&#x200B;**[!UICONTROL プロパティ]**&#x200B;を定義します。
 1. **[!UICONTROL 完了]**（チェックマークアイコン）をクリックして定義を確定します。
 1. 必要に応じてその他のコンポーネントを追加します。
