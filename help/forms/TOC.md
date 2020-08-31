@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: AEM 6.4 Forms ユーザーガイド
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: 35a52f72b30731879679ace06d6ffa4fd0342c1c
+source-git-commit: 747847b725d1b07109ff0f834976c2905c1edbe9
 workflow-type: tm+mt
-source-wordcount: '3715'
+source-wordcount: '3711'
 ht-degree: 73%
 
 ---
@@ -504,7 +504,6 @@ ht-degree: 73%
       + [フォントを使用可能にする](/help/forms/using/admin-help/make-fonts-available.md)
       + [埋め込むフォントの指定](/help/forms/using/admin-help/specify-fonts-embed.md)
       + [セキュリティ設定の指定](/help/forms/using/admin-help/specify-security-settings.md)
-      + [文字セットの変更](/help/forms/using/admin-help/change-character-set.md)
    + Forms ワークフローの設定{#configure-forms-workflow}
       + [管理およびプロセスの用語について](/help/forms/using/admin-help/administration-process-terminology.md)
       + [プロセスの管理](/help/forms/using/admin-help/processes.md)
