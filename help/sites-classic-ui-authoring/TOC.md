@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: AEM 6.4 Classic UIオーサリングユーザーガイド
 user-guide-description: This guide covers the concepts of authoring in AEM in the classic user interface.
 translation-type: tm+mt
-source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+source-git-commit: 747847b725d1b07109ff0f834976c2905c1edbe9
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 91%
+source-wordcount: '298'
+ht-degree: 90%
 
 ---
 
@@ -67,10 +67,8 @@ ht-degree: 91%
    + [Marketing Campaign Manager の使用](classic-personalization-campaigns-mktg-manager.md)
    + [電子メールマーケティング](classic-personalization-campaigns-email.md)
    + [バウンス（配信不能）電子メールの追跡](classic-personalization-campaigns-email-tracking-bounces.md)
-   + [ティーザーと戦略](classic-personalization-campaigns-teasers-strategy.md)
    + [キャンペーンの設定](classic-personalization-campaigns-setting-up-your.md)
    + [電子メールサービスプロバイダーへの電子メールの公開](classic-personalization-campaigns-email-newsletters.md)
-   + [Marketing Campaign Manager の使用](classic-personalization-campaigns-mktg-manager.md)
    + [効果的なニュースレターのランディングページの作成](classic-personalization-campaigns-email-landingpage.md)
    + [購読の管理](classic-personalization-campaigns-email-subscriptions.md)
 + Adobe Campaign {#campaign}
