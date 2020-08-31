@@ -5,9 +5,9 @@ audience: admin-user
 user-guide-title: AEM 6.4 Administering User Guide
 user-guide-description: Learn about administering AEM.
 translation-type: tm+mt
-source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+source-git-commit: 747847b725d1b07109ff0f834976c2905c1edbe9
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '614'
 ht-degree: 97%
 
 ---
@@ -150,7 +150,6 @@ ht-degree: 97%
    + [Adobe Search&amp;Promote との統合](search-and-promote.md)
    + [ソリューション統合](integration.md)
    + [エクスペリエンスフラグメントとのTarget 統合](experience-fragments-target.md)
-   + [電子メールテンプレートのベストプラクティス](best-practices-for-email-templates.md)
 + ベストプラクティス {#bestpractices}
    + [ベストプラクティス](administer-best-practices.md)
    + [翻訳のベストプラクティス](tc-bp.md)
