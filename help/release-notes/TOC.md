@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: AEM 6.4 リリースノート
 user-guide-description: Learn about the latest new features in AEM 6.4 in the release notes.
 translation-type: tm+mt
-source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+source-git-commit: 610e9a54adad3abdfecb8b2c4da67d677f75175e
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 64%
+source-wordcount: '73'
+ht-degree: 60%
 
 ---
 
@@ -22,11 +22,12 @@ ht-degree: 64%
 + [AEM Sites リリースノート](sites.md)
 + [AEM Assets リリースノート](assets.md)
 + [AEM Forms リリースノート](forms.md)
++ [AEM FormsJEEパッチインストーラー](jee-patch-installer-64.md)
 + [AEM Communities リリースノート](communities-release-notes.md)
 + [AEM 3D リリースノート](aem3d-release-notes.md)
 + [廃止される機能および削除された機能](deprecated-removed-features.md)
 + [既知の問題](known-issues.md)
-+ [AEM Foundationとリポジトリ](wcm-platform.md)
++ [AEM FoundationとRepository](wcm-platform.md)
 + [タッチ操作対応 UI 機能のステータス](touch-ui-features-status.md)
 + [CRX2OAK 移行ツール](crx2oak.md)
 + [Smart Content Serviceリリースノート](smart-content-service-release-notes.md)
