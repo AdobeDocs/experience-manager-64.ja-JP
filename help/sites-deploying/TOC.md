@@ -5,10 +5,10 @@ audience: end-user
 user-guide-title: AEM 6.4デプロイガイド
 user-guide-description: Learn more about installing, deploying, and the architecture of Adobe Experience Manager 6.4, including our Adobe Managed Services cloud deployment.
 translation-type: tm+mt
-source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+source-git-commit: b9a270eb29e92e98a54b596ba745ef71f73a7b55
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 95%
+source-wordcount: '332'
+ht-degree: 93%
 
 ---
 
@@ -68,6 +68,7 @@ ht-degree: 95%
    + [パターン検出を使用したアップグレードの複雑性の評価](pattern-detector.md)
    + [AEM 6.4 における後方互換性](backward-compatibility.md)
    + [アップグレード手順](upgrade-procedure.md)
+   + [オフライン再インデックスを使用したアップグレード中のダウンタイムの短縮](upgrade-offline-reindexing.md)
    + [インプレースアップグレードの実行](in-place-upgrade.md)
    + [遅延コンテンツ移行](lazy-content-migration.md)
    + [CRX2Oak 移行ツールの使用](using-crx2oak.md)
