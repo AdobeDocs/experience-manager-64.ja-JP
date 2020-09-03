@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.4累積Fix Pack固有のリリースノ�
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f1a5f720ade66e5e8f909264563fa7ad1149b15f
+source-git-commit: 5fefc81e68e64bcaa8df1d9648c4266367a92129
 workflow-type: tm+mt
-source-wordcount: '3315'
+source-wordcount: '3331'
 ht-degree: 16%
 
 ---
@@ -158,6 +158,8 @@ Adobe Experience Manager6.4.8.2には、次の問題の修正が含まれてい�
 **アップグレード**
 
 * 環境でドキュメントセキュリティ [!DNL JBoss] を使用する場合は、バージョン7.0.9にアップグレードすると [!DNL Experience Manager Forms][!DNL Linux] 、エラーが発生します(CQ-4300546)。
+
+セキュリティ更新について詳しくは、「 [Experience Managerセキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html)」を参照してください。
 
 ## 以前の累積修正パックに含まれていたホットフィックスと機能パック {#hotfixes-and-feature-packs-included-in-previous-cumulative-fix-packs}
 
