@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: c84040b0-7850-4960-b676-ffa0a74c8cb2
 translation-type: tm+mt
-source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+source-git-commit: 805e4411930749ff4b6b05ea4a8b87b4f96d72fd
 workflow-type: tm+mt
 source-wordcount: '704'
-ht-degree: 59%
+ht-degree: 58%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 59%
 * Click **[!UICONTROL Add]**
 * Click **[!UICONTROL Save All]**
 
-注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要： プ追加レースホルダー `js.txt` と `css.txt` ファイル （正式には、cq:ClientLibraryFolderが存在しない場合は除きます）。
+注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要：プ追加レースホルダー `js.txt` と `css.txt` ファイル （正式には、cq:ClientLibraryFolderが存在しない場合は除きます）。
 
 
 1. 右クリックして **`/etc/designs/an-scf-sandbox/clientlibs`**
@@ -124,7 +124,7 @@ apps.an-scf-sandbox clientlibs を含めると、SCF コメントコンポーネ
 
 ![chlimage_1-225](assets/chlimage_1-225.png)
 
-includeステートメントは、 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> セクション <html> script. The default **`foundation head.jsp`** includes a script that can be overlaid: **`headlibs.jsp`**.
+The include statement belongs in the `<head>` section of the `<html>` script. The default **`foundation head.jsp`** includes a script that can be overlaid: **`headlibs.jsp`**.
 
 **headlibs.jsp をコピーし、clientlibs を含めます。**
 
