@@ -4,10 +4,10 @@ description: Adobe Experience Manager6.4累積Fix Pack固有のリリースノ�
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 5fefc81e68e64bcaa8df1d9648c4266367a92129
+source-git-commit: d3721590e3c2dfd2b048f1b5964915a343f95f6d
 workflow-type: tm+mt
-source-wordcount: '3331'
-ht-degree: 16%
+source-wordcount: '3364'
+ht-degree: 15%
 
 ---
 
@@ -171,6 +171,7 @@ AEMの累積Fix Pack 6.4.8.1は、AEM 6.4 Service Pack 8に依存します。 �
 
 AEM 6.4.8.1の主な特徴は次のとおりです。
 
+* CRXDE Liteへの匿名アクセスは、セキュリティを強化するために許可されていません。 代わりに、ユーザーはログイン画面に誘導されます。 See [developing with CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 * パッケージ共有のAdobe Experience Managerとの統合を削除しました。
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.8.21 に更新しました。
 
@@ -180,6 +181,7 @@ Adobe Experience Manager6.4.8.1では、次の問題が修正されました。
 
 #### Sites {#sites-6481}
 
+* 匿名ユーザーはCRX DE Lite機能(NPR-33522)にアクセスできます。
 * LiveCopyのローカルコンポーネントの名前が、設計図のコンポーネントの名前と同じで、そのコンポーネントが設計図からロールアウトされる場合、ローカルコンポーネントの名前に_msm_movedという用語は追加されません(NPR-33207)。
 * 元の要求に追加されたパラメーターは、リダイレクトURL(NPR-33174)には含まれません。
 * Coral.SelectオプションでemptyOption=trueが設定されるか、値= &quot;&quot;のデフォルト項目が含まれている場合、dropdownshowide.jsファイルで次のエラーが発生します。Uncaught TypeError:component.getValueが関数ではありません(NPR-33163)。
