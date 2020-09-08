@@ -3,10 +3,10 @@ title: カスケードメタデータ
 description: この記事では、アセットのカスケードメタデータを定義する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
+source-git-commit: 452c90bc72c8d71af4b6c4ca2243024b459f53d9
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 95%
+source-wordcount: '980'
+ht-degree: 94%
 
 ---
 
@@ -14,6 +14,10 @@ ht-degree: 95%
 # カスケードメタデータ {#cascading-metadata}
 
 この記事では、アセットのカスケードメタデータを定義する方法について説明します。
+
+>[!CAUTION]
+>
+>コンテンツフラグメントでは、カスケードメタデータはサポートされていません。
 
 アセットのメタデータ情報を取得するときに、ユーザーは様々なフィールドに情報を指定します。他のフィールドで選択されているオプションに応じて特定のメタデータフィールドやフィールド値を表示できます。こうした条件に応じたメタデータの表示は、カスケードメタデータと呼ばれます。つまり、特定のメタデータフィールドや値と、1 つ以上のフィールドまたはその値（あるいはその両方）との依存関係を作成できます。
 
