@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 619de2e4-d7bd-4ca6-9763-1efa8b2dec05
 translation-type: tm+mt
-source-git-commit: 50d57997496e6809361277f7025f3858857e14af
+source-git-commit: 8e82c691affe3b2c4108beec394cc0ba2d607b61
 workflow-type: tm+mt
 source-wordcount: '2889'
 ht-degree: 46%
@@ -54,12 +54,12 @@ By default, `cq:ClientLibraryFolder` nodes can be placed anywhere within the `/a
 
 各ファイル `cq:ClientLibraryFolder` には、JSファイルやCSSファイルのセットと、いくつかのサポートファイルが入力されます（以下を参照）。 のプロパティ `cq:ClientLibraryFolder` は次のように設定します。
 
-* `categories`: この秋に含まれるJSファイルやCSSファイルのセットのカテゴリを特定 `cq:ClientLibraryFolder` します。 この `categories` プロパティは複数の値を取るため、ライブラリフォルダーを複数のカテゴリーの一部にすることができます（このプロパティの役立ちについては以下を参照）。
+* `categories`:この秋に含まれるJSファイルやCSSファイルのセットのカテゴリを特定 `cq:ClientLibraryFolder` します。 この `categories` プロパティは複数の値を取るため、ライブラリフォルダーを複数のカテゴリーの一部にすることができます（このプロパティの役立ちについては以下を参照）。
 
-* `dependencies`: これは、このライブラリカテゴリが依存する他のクライアントライブラリフォルダーのリストです。 例えば、2つの `cq:ClientLibraryFolder` ノードを指定し、のファイルが正しく機能するために別のファイルを `F` 必要とする場合、のファイルの中の少なくとも1つは、の `G`ノードの中の少なくとも1つでなければなりません `F``G``categories``G``dependencies``F`。
+* `dependencies`:これは、このライブラリカテゴリが依存する他のクライアントライブラリフォルダーのリストです。 例えば、2つの `cq:ClientLibraryFolder` ノードを指定し、のファイルが正しく機能するために別のファイルを `F` 必要とする場合、のファイルの中の少なくとも1つは、の `G`ノードの中の少なくとも1つでなければなりません `F``G``categories``G``dependencies``F`。
 
-* `embed`: 他のライブラリからコードを埋め込むために使用します。 ノードFがノードGとHを埋め込むと、結果のHTMLはノードGとHからのコンテンツの集合になります。
-* `allowProxy`: クライアントライブラリがの下にある場合、 `/apps`このプロパティを使用すると、プロキシサーブレット経由でアクセスできます。 See [Locating a Client Library Folder and Using the Proxy Client Libraries Servlet](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) below.
+* `embed`:他のライブラリからコードを埋め込むために使用します。 ノードFがノードGとHを埋め込むと、結果のHTMLはノードGとHからのコンテンツの集合になります。
+* `allowProxy`:クライアントライブラリがの下にある場合、 `/apps`このプロパティを使用すると、プロキシサーブレット経由でアクセスできます。 See [Locating a Client Library Folder and Using the Proxy Client Libraries Servlet](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) below.
 
 ## クライアント側ライブラリの参照 {#referencing-client-side-libraries}
 
@@ -134,7 +134,7 @@ In previous versions, client library folders were located below `/etc/clientlibs
 
 >[!NOTE]
 >
->クライアントライブラリフォルダーの下の静的リソースは、 *resourcesと呼ばれるフォルダーに存在する必要があります*。 フォルダー *リソースの下に画像などの静的リソースがない場合、その静的リソースは発行インスタンスで参照できません*。 次に例を示します。 http://localhost:4503/etc.clientlibs/geometrixx/components/clientlibs/resources/example.gif
+>クライアントライブラリフォルダーの下の静的リソースは、 *resourcesと呼ばれるフォルダーに存在する必要があります*。 フォルダー *リソースの下に画像などの静的リソースがない場合、その静的リソースは発行インスタンスで参照できません*。 次に例を示します。http://localhost:4503/etc.clientlibs/geometrixx/components/clientlibs/resources/example.gif
 
 >[!NOTE]
 >
@@ -181,8 +181,8 @@ Then you set the `allowProxy` property on `foo` to true.
 1. クライアントライブラリフォルダーを選択して、**作成／ファイルを作成**&#x200B;をクリックします。
 1. ファイル名ボックスに、次のいずれかのファイル名を入力して、「OK」をクリックします。
 
-   * **`js.txt`：**JavaScript ファイルを生成する場合はこのファイル名を使用します。
-   * **`css.txt`：**カスケーディングスタイルシート（CSS）を生成する場合はこのファイル名を使用します。
+   * **`js.txt`：** JavaScript ファイルを生成する場合はこのファイル名を使用します。
+   * **`css.txt`：** カスケーディングスタイルシート（CSS）を生成する場合はこのファイル名を使用します。
 
 1. ファイルを開き、ソースファイルのパスのルートを識別する次のテキストを入力します。
 
@@ -218,7 +218,7 @@ Then you set the `allowProxy` property on `foo` to true.
 
 ### 他のライブラリからのコードの埋め込み {#embedding-code-from-other-libraries}
 
-クライアントライブラリから別のクライアントライブラリにコードを埋め込むことができます。 実行時、埋め込みライブラリの生成されたJSファイルとCSSファイルには、埋め込みライブラリのコードが含まれます。
+クライアントライブラリから別のクライアントライブラリにコードを埋め込むことができます。実行時、埋め込みライブラリの生成されたJSファイルとCSSファイルには、埋め込みライブラリのコードが含まれます。
 
 コードの埋め込みは、リポジトリのセキュリティ保護された領域に格納されているライブラリへのアクセスを提供する際に便利です。
 
@@ -242,7 +242,6 @@ In some cases you may find that the final HTML generated for typical page by you
 <script type="text/javascript" src="/etc/clientlibs/granite/jquery/granite.js"></script>
 <script type="text/javascript" src="/etc/clientlibs/foundation/jquery.js"></script>
 <script type="text/javascript" src="/etc/clientlibs/foundation/shared.js"></script>
-<script type="text/javascript" src="/etc/clientlibs/granite/underscore.js"></script>
 <script type="text/javascript" src="/etc/clientlibs/foundation/personalization/kernel.js"></script>
 ```
 
@@ -305,7 +304,7 @@ To associate a client library folder with a device group, add a property to your
 
 * **名前：** チャネル
 * **タイプ：** String`[]`
-* **値：** モバイルグループの名前。 ライブラリフォルダーをグループから除外するには、名前の前に感嘆符(&quot;!&quot;)を付けます。
+* **値：** モバイルグループの名前。ライブラリフォルダーをグループから除外するには、名前の前に感嘆符(&quot;!&quot;)を付けます。
 
 例えば、次の表は、`channels` カテゴリの各クライアントライブラリフォルダーの `cq.widgets` プロパティの値を示しています。
 
@@ -315,7 +314,7 @@ To associate a client library folder with a device group, add a property to your
 | `/libs/cq/analytics/widgets/themes/default` | `!touch` |
 | `/libs/cq/cloudserviceconfigs/widgets` | `!touch` |
 | `/libs/cq/searchpromote/widgets` | `!touch` |
-| `/libs/cq/searchpromote/widgets/themes/default` | `[`*値なし&#x200B;*`]` |
+| `/libs/cq/searchpromote/widgets/themes/default` | `[`*値なし*`]` |
 | `/libs/cq/touch/widgets` | `touch` |
 | `/libs/cq/touch/widgets/themes/default` | `touch` |
 | `/libs/cq/ui/widgets` | `!touch` |
