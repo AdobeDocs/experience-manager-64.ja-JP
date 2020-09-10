@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.4累積Fix Pack固有のリリースノ�
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d3721590e3c2dfd2b048f1b5964915a343f95f6d
+source-git-commit: 5989421ee1207880462fd1eaefc1a9714061307e
 workflow-type: tm+mt
-source-wordcount: '3364'
+source-wordcount: '3362'
 ht-degree: 15%
 
 ---
@@ -361,7 +361,7 @@ AEM Forms JEE の累積インストーラーのインストールとデプロイ
 
 ### Uber Jar {#uber-jar}
 
-The Uber Jar for AEM 6.4.8.2 is available in the [Adobe Public Maven repository](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.4.8.2/uber-jar-6.4.8.2.jar).
+The Uber Jar for AEM 6.4.8.2 is available in the [Adobe Public Maven repository](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.4.8.2-1.0/).
 
 To use Uber Jar in a Maven project, refer to the article, [How to use Uber jar](../sites-developing/ht-projects-maven.md) and include the following dependency in your project POM:
 
@@ -369,7 +369,7 @@ To use Uber Jar in a Maven project, refer to the article, [How to use Uber jar](
 <dependency>
       <groupId>com.adobe.aem</groupId>
       <artifactId>uber-jar</artifactId>
-      <version>6.4.8.2</version>  
+      <version>6.4.8.2-1.0</version>  
       <scope>provided</scope>
 </dependency>
 ```
