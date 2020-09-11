@@ -3,9 +3,10 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.4 Classic UIオーサリングユーザーガイド
+breadcrumb-title: Classic UI Authoring Guide
 user-guide-description: This guide covers the concepts of authoring in AEM in the classic user interface.
 translation-type: tm+mt
-source-git-commit: 747847b725d1b07109ff0f834976c2905c1edbe9
+source-git-commit: a83c39939afe85586aa32460f141fa18bfc80a3f
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 90%
