@@ -9,10 +9,10 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 6d4188f4-ad98-49df-9bb4-7936b7bea9c8
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
 workflow-type: tm+mt
 source-wordcount: '2124'
-ht-degree: 13%
+ht-degree: 12%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 13%
 
 SPA に代わり、実際のコンテンツ構造を表す JSON 構造の取得および管理を抽象化します。また、SPAと同期して、コンポーネントを再レンダリングする必要が生じた時点を通知する必要もあります。
 
-NPMパッケージ「 [@adobe/cq-spa-page-model-manager」を参照してください。](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
+NPMパッケージ「 [@adobe/aem-spa-page-model-manager」を参照してください。](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
 
 ライブラリを初期化する `PageModelManager`とき、ライブラリは、最初に、指定されたアプリケーションのルートモデルを読み込みます（パラメーター、メタプロパティまたは現在のURLを使用）。 ライブラリが、現在のページのモデルが取得するルートモデルの一部でないことを識別し、それを子ページのモデルとして含める場合。
 
@@ -99,14 +99,14 @@ The page model leverages the JSON Model Exporter, which is itself based on the [
 
 ライブラリの相互運用性を容易にするため、Adobeはフレームワーク固有のモジュールに対し、以下のライブラリをバンドルするよう勧告する。 必要に応じて、レイヤーは基になるAPIをカプセル化し、調整してから、プロジェクトに公開できます。
 
-* [@adobe/cq-spa-page-model-manager](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
-* [@adobe/cq-spa-component-mapping](https://www.npmjs.com/package/@adobe/cq-spa-component-mapping)
+* [@adobe/aem-spa-page-model-manager](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
+* [@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 
 #### 実装 {#implementations}
 
 #### React {#react}
 
-npmモジュール： [@adobe/cq-react-editable-components](https://www.npmjs.com/package/@adobe/cq-react-editable-components)
+npmモジュール： [@adobe/aem-react-editable-components](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 
 #### 角 {#angular}
 
@@ -169,7 +169,7 @@ npmモジュール：近々
 * `gridClassNames:` レスポンシブグリッドに指定されたクラス名
 * `columnClassNames:` レスポンシブ列に指定されたクラス名
 
-npmリソース [@adobe/cq-react-editable-components#srccomponentsresponsevegridjsxも参照してください。](https://www.npmjs.com/package/@adobe/cq-react-editable-components#srccomponentsresponsivegridjsx)
+npmリソース [@adobe/aem-react-editable-components#srccomponentsresponsevegridjsxも参照してください。](https://www.npmjs.com/package/@adobe/aem-react-editable-components#srccomponentsresponsivegridjsx)
 
 #### レポンシブグリッドのプレースホルダ {#placeholder-of-the-reponsive-grid}
 
