@@ -3,9 +3,10 @@ cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.4 Assetsユーザーガイド
+breadcrumb-title: Assets Guide
 user-guide-description: Create, manage, deliver, and optimize digital assets.
 translation-type: tm+mt
-source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+source-git-commit: a83c39939afe85586aa32460f141fa18bfc80a3f
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 76%
