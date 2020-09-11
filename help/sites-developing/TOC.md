@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: AEM 6.4開発ユーザーガイド
 user-guide-description: This guide covers how to build out your AEM instance.
 translation-type: tm+mt
-source-git-commit: 27db148008709e28bab42f25e79f530fe37affb4
+source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '803'
 ht-degree: 80%
 
 ---
@@ -114,7 +114,7 @@ ht-degree: 80%
       + [SPAモデルルーティング](spa-routing.md)
       + [SPAとAdobe Experience Platform Launchの統合](spa-launch.md)
       + [SPAとサーバー側のレンダリング](spa-ssr.md)
-      + [SPA JavaScript API リファレンス](spa-reference-materials.md)
+      + [SPAリファレンス資料](spa-reference-materials.md)
    + [HTTP API](/help/assets/mac-api-assets.md)
    + [コンテンツフラグメント](/help/assets/content-fragments.md)
    + [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)
