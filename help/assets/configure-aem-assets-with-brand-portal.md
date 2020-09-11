@@ -3,7 +3,7 @@ title: AEM Assets と Brand Portal の連携の設定
 description: 'Brand Portalにアセットやコレクションを公開するためのBrand Portalを使用したAEM Assetsの設定方法について説明します。 '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: 1510b3a1b40e2e08579fc833f563fa77d6cc65cd
+source-git-commit: f9993c7a1a7be95cf4f2652f32e71f370ff3c727
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 59%
@@ -269,6 +269,7 @@ Brand Portal クラウドサービス設定を作成するには、以下の手�
    >[!NOTE]
    >
    >どのレプリケーションエージェントも無効にしないでください。一部のアセットのレプリケーションが失敗する可能性があります。
+   >
    >タイムアウトエラーを回避するために、4つのレプリケーションエージェントがすべて構成されていることを確認します。 See [troubleshoot issues in parallel publishing to Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
 
 Brand Portalは、AEM Assets作成者インスタンスで正常に設定されます。 次の操作が可能になりました。
