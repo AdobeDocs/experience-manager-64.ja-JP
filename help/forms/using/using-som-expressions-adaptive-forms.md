@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 7dff7ef2-80d1-434a-b9b0-ac6654736602
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: f824b449b85ad7900aaf73fd79614f5e6140f873
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 89%
@@ -26,7 +26,7 @@ Scripting Object Model（SOM）を使用し、特定の Document Object Model（
 
 ![DOM ツリー](assets/hierarchy-1.png)
 
-アダプティブフォーム内のすべての要素の SOM 式には、`guide[0].guide1[0]` というプレフィックスが付けられます。ノード構造階層のコンポーネントの場所は SOM 式の派生に使用されます。
+アダプティブフォーム内のすべての要素の SOM 式には、`guide[0].guide1[0]` ] というプレフィックスが付けられます。ノード構造階層のコンポーネントの場所は SOM 式の派生に使用されます。
 
 ![2 つのラジオボタンを持つ DOM ツリー](assets/hierarchy_radio_button.png)
 
