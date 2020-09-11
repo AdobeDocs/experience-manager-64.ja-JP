@@ -10,7 +10,7 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 86a981fe-25f3-451a-b262-8c497619e0ac
 translation-type: tm+mt
-source-git-commit: 0e7f4a78f63808bea2aa7a5abbb31e7e5b9d21b3
+source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 10%
@@ -72,14 +72,14 @@ SPAエディタでSPAのコンテンツをオーサリングする場合、気�
 
 We.Retailジャーナルアプリケーションで、カスタマイズした天気コンポーネント( `Weather.js`)のコードを確認します。
 
-* **16行目**: React Open Weatherウィジェットが必要に応じて読み込まれます。
-* **46行目**: この `MapTo` 機能は、このReactコンポーネントを対応するAEMコンポーネントに関連付け、SPAエディタで編集できるようにします。
+* **16行目**:React Open Weatherウィジェットが必要に応じて読み込まれます。
+* **46行目**:この `MapTo` 機能は、このReactコンポーネントを対応するAEMコンポーネントに関連付け、SPAエディタで編集できるようにします。
 
-* **22～29行**: が定義さ `EditConfig` れ、市区町村が設定されているかどうかをチェックし、空の場合に値を定義します。
+* **22～29行**:が定義さ `EditConfig` れ、市区町村が設定されているかどうかをチェックし、空の場合に値を定義します。
 
-* **31 ～ 44行**: Weatherコンポーネントは、 `Component` クラスを拡張し、React Open WeatherコンポーネントのNPM使用ドキュメントで定義されている必要なデータを提供し、コンポーネントをレンダリングします。
+* **31 ～ 44行**:Weatherコンポーネントは、 `Component` クラスを拡張し、React Open WeatherコンポーネントのNPM使用ドキュメントで定義されている必要なデータを提供し、コンポーネントをレンダリングします。
 
-```
+```javascript
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  ~ Copyright 2018 Adobe Systems Incorporated
  ~
@@ -97,7 +97,7 @@ We.Retailジャーナルアプリケーションで、カスタマイズした�
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 import React, {Component} from 'react';
 import ReactWeather from 'react-open-weather';
-import {MapTo} from '@adobe/cq-react-editable-components';
+import {MapTo} from '@adobe/aem-react-editable-components';
 
 require('./Weather.css');
 
@@ -128,7 +128,7 @@ class Weather extends Component {
 MapTo('we-retail-journal/global/components/weather')(Weather, WeatherEditConfig);
 ```
 
-バックエンドコンポーネントは既に存在する必要がありますが、フロントエンド開発者は、Web.RetailジャーナルSPAのReact Open Weatherコンポーネントをほとんどコード化せずに利用できます。
+バックエンドコンポーネントは既に存在する必要がありますが、フロントエンド開発者は、Web.RetailジャーナルSPAのReact Open Weatherコンポーネントをほとんどコーディングせずに利用できます。
 
 ## 次のステップ {#next-step}
 
