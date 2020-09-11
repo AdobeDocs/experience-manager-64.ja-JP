@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 translation-type: tm+mt
-source-git-commit: d731d290738403f41e601da8e9bdb9bd3b94bcd4
+source-git-commit: f824b449b85ad7900aaf73fd79614f5e6140f873
 workflow-type: tm+mt
 source-wordcount: '9984'
 ht-degree: 6%
@@ -22,8 +22,8 @@ ht-degree: 6%
 
 サービスコンテナ内のほとんどのAEM Formsサービスは、Webサービスを公開するように設定されており、Web Service Definition Language(WSDL)の生成を完全にサポートしています。 つまり、AEM FormsサービスのネイティブSOAPスタックを使用するプロキシオブジェクトを作成できます。 その結果、AEM Formsサービスは次のSOAPメッセージを交換して処理できます。
 
-* **SOAP要求**: アクションを要求するクライアントアプリケーションによってFormsサービスに送信されます。
-* **SOAP応答**: SOAP要求の処理後、Formsサービスによってクライアントアプリケーションに送信されます。
+* **SOAP要求**:アクションを要求するクライアントアプリケーションによってFormsサービスに送信されます。
+* **SOAP応答**:SOAP要求の処理後、Formsサービスによってクライアントアプリケーションに送信されます。
 
 Webサービスを使用する場合は、Java APIを使用する場合と同じAEM Formsサービス操作を実行できます。 Webサービスを使用してAEM Formsサービスを呼び出す利点の1つは、SOAPをサポートする開発環境でクライアントアプリケーションを作成できることです。 クライアントアプリケーションが特定の開発環境またはプログラミング言語に結び付けられるわけではありません。 例えば、Microsoft Visual Studio .NETおよびC#をプログラミング言語として使用するクライアントアプリケーションを作成できます。
 
@@ -31,11 +31,11 @@ AEM FormsサービスはSOAPプロトコル経由で公開され、WSI Basicプ�
 
 AEM Formsは、次のウェブサービス標準をサポートしています。
 
-* **エンコーディング**: ドキュメントおよびリテラルエンコーディングのみサポートします(WSI基本プロファイルに従った推奨エンコーディング)。 (Base64エンコーディングを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-base64-encoding))。
-* **MTOM**: SOAP要求で添付ファイルをエンコードする方法を表します。 (MTOMを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-mtom))。
-* **SwaRef**: SOAP要求で添付ファイルをエンコードする別の方法を表します。 (SwaRefを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-swaref))。
-* **添付ファイル付きSOAP**: MIMEとDIME(Direct Internet Message Encapsulation)の両方をサポートします。 これらのプロトコルは、標準的なSOAP経由で添付ファイルを送信する方法です。 Microsoft Visual Studio .NETアプリケーションはDIMEを使用します。 (Base64エンコーディングを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-base64-encoding))。
-* **WS-Security**: ユーザー名パスワードトークンプロファイルがサポートされます。これは、WSセキュリティSOAPヘッダーの一部として、ユーザー名とパスワードを送信する標準的な方法です。 AEM Formsは、HTTP基本認証もサポートしています。 (WS-Securityヘッダーを使用して秘密鍵証明書を [渡すを参照](https://www.adobe.com/devnet/livecycle/articles/passing_credentials.html))。
+* **エンコーディング**:ドキュメントおよびリテラルエンコーディングのみサポートします(WSI基本プロファイルに従った推奨エンコーディング)。 (Base64エンコーディングを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-base64-encoding))。
+* **MTOM**:SOAP要求で添付ファイルをエンコードする方法を表します。 (MTOMを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-mtom))。
+* **SwaRef**:SOAP要求で添付ファイルをエンコードする別の方法を表します。 (SwaRefを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-swaref))。
+* **添付ファイル付きSOAP**:MIMEとDIME(Direct Internet Message Encapsulation)の両方をサポートします。 これらのプロトコルは、標準的なSOAP経由で添付ファイルを送信する方法です。 Microsoft Visual Studio .NETアプリケーションはDIMEを使用します。 (Base64エンコーディングを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-base64-encoding))。
+* **WS-Security**:ユーザー名パスワードトークンプロファイルがサポートされます。これは、WSセキュリティSOAPヘッダーの一部として、ユーザー名とパスワードを送信する標準的な方法です。 AEM Formsは、HTTP基本認証もサポートしています。 (WS-Securityヘッダーを使用して秘密鍵証明書を [渡すを参照](https://www.adobe.com/devnet/livecycle/articles/passing_credentials.html))。
 
 Webサービスを使用してAEM Formsサービスを呼び出すには、通常、サービスWSDLを使用するプロキシライブラリを作成します。 「Web Servicesを使用した *AEM Formsの呼び出し* 」セクションでは、JAX-WSを使用して、サービスを呼び出すJavaプロキシクラスを作成します。 (「JAX-WSを使用したJavaプロキシクラスの [作成](#creating-java-proxy-classes-using-jax-ws)」を参照)。
 
@@ -214,17 +214,17 @@ AEM Formsサービスの操作で、入力値として `BLOB` 型が必要な場
 
 次の手順に従って、インスタンスに属するフィールドに値を割り当て `BLOB` ます。
 
-* **Base64**: Base64形式でエンコードされたテキストとしてデータを渡すには、フィールドにデータを設定し、 `BLOB.binaryData` フィールドにデータ型をMIME形式(例えば、 `application/pdf`)で設定し `BLOB.contentType` ます。 (Base64エンコーディングを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-base64-encoding))。
-* **MTOM**: MTOM添付ファイルにバイナリデータを渡すには、フィールドにデータを設定し `BLOB.MTOM` ます。 この設定は、Java JAX-WSフレームワークまたはSOAPフレームワークのネイティブAPIを使用して、データをSOAP要求に添付します。 (MTOMを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-mtom))。
-* **SwaRef**: WS-I SwaRef添付ファイルにバイナリデータを渡すには、フィールドにデータを設定し `BLOB.swaRef` ます。 この設定は、Java JAX-WSフレームワークを使用して、SOAP要求にデータを添付します。 (SwaRefを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-swaref))。
-* **MIMEまたはDIME添付ファイル**: MIME添付ファイルまたはDIME添付ファイルにデータを渡すには、SOAPフレームワークのネイティブAPIを使用して、SOAP要求にデータを添付します。 フィールドに添付ファイル識別子を設定し `BLOB.attachmentID` ます。 (Base64エンコーディングを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-base64-encoding))。
-* **リモートURL**: データがWebサーバーでホストされ、HTTP URL経由でアクセスできる場合は、フィールドにHTTP URLを設定し `BLOB.remoteURL` ます。 (HTTP経由のBLOBデータを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-blob-data-over-http))。
+* **Base64**:Base64形式でエンコードされたテキストとしてデータを渡すには、フィールドにデータを設定し、 `BLOB.binaryData` フィールドにデータ型をMIME形式(例えば、 `application/pdf`)で設定し `BLOB.contentType` ます。 (Base64エンコーディングを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-base64-encoding))。
+* **MTOM**:MTOM添付ファイルにバイナリデータを渡すには、フィールドにデータを設定し `BLOB.MTOM` ます。 この設定は、Java JAX-WSフレームワークまたはSOAPフレームワークのネイティブAPIを使用して、データをSOAP要求に添付します。 (MTOMを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-mtom))。
+* **SwaRef**:WS-I SwaRef添付ファイルにバイナリデータを渡すには、フィールドにデータを設定し `BLOB.swaRef` ます。 この設定は、Java JAX-WSフレームワークを使用して、SOAP要求にデータを添付します。 (SwaRefを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-swaref))。
+* **MIMEまたはDIME添付ファイル**:MIME添付ファイルまたはDIME添付ファイルにデータを渡すには、SOAPフレームワークのネイティブAPIを使用して、SOAP要求にデータを添付します。 フィールドに添付ファイル識別子を設定し `BLOB.attachmentID` ます。 (Base64エンコーディングを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-base64-encoding))。
+* **リモートURL**:データがWebサーバーでホストされ、HTTP URL経由でアクセスできる場合は、フィールドにHTTP URLを設定し `BLOB.remoteURL` ます。 (HTTP経由のBLOBデータを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-blob-data-over-http))。
 
 **サービスから返されたBLOBオブジェクトのデータへのアクセス**
 
 返される `BLOB` オブジェクトの送信プロトコルは、複数の要因に依存します。これらの要因は次の順序で考慮され、メイン条件が満たされると停止します。
 
-1. **ターゲットURLは送信プロトコルを指定します**。 SOAP呼び出しで指定されたターゲットURLにパラメータ `blob="`*BLOB_TYPE *&quot;が含まれている場合、* BLOB_TYPE *が送信プロトコルを決定します。* BLOB_TYPE *は、base64、dime、mime、http、mtomまたはswarefのプレースホルダです。
+1. **ターゲットURLは送信プロトコルを指定します**。 SOAP呼び出しで指定されたターゲットURLにパラメータ `blob="`*BLOB_TYPE*&quot;が含まれている場合、 *BLOB_TYPE* が送信プロトコルを決定します。 *BLOB_TYPE* は、base64、dime、mime、http、mtomまたはswarefのプレースホルダです。
 1. **サービスSOAPエンドポイントがスマート**。 次の条件が真の場合、出力ドキュメントは入力ドキュメントと同じ送信プロトコルを使用して返されます。
 
    * サービスのSOAPエンドポイントパラメーター「Default Protocol For Output Blob Objects」が「Smart」に設定されている。
@@ -245,10 +245,10 @@ AEM Formsサービスの操作で、入力値として `BLOB` 型が必要な場
 
 送信タイプとデータの取得元のフィールドとの相関関係を次に示します。
 
-* **Base64形式**: フィ `blob` ールドにデータを返す `base64` には、サフィックスをに設定し `BLOB.binaryData` ます。
-* **MIMEまたはDIME添付ファイル**: サフィックスをに設定する `blob` か、フ `DIME``MIME``BLOB.attachmentID` ィールドに添付ファイル識別子が返されたデータを、対応する添付ファイルの種類として返します。 SOAPフレームワーク固有のAPIを使用して、添付ファイルからデータを読み取ります。
-* **リモートURL**: サフィックスを「」に設定 `blob` して、データをアプリケーションサーバーに保持し、 `http``BLOB.remoteURL` フィールド内のデータを示すURLを返します。
-* **MTOMまたはSwaRef**: サフィックスをに設定する `blob` か、または `mtom` フィールドに返される添付ファイル識別子を持つデータを対応する添付ファイルタイプとして返し `swaref``BLOB.MTOM``BLOB.swaRef` ます。 SOAPフレームワークのネイティブAPIを使用して、添付ファイルからデータを読み取ります。
+* **Base64形式**:フィ `blob` ールドにデータを返す `base64` には、サフィックスをに設定し `BLOB.binaryData` ます。
+* **MIMEまたはDIME添付ファイル**:サフィックスをに設定する `blob` か、フ `DIME``MIME``BLOB.attachmentID` ィールドに添付ファイル識別子が返されたデータを、対応する添付ファイルの種類として返します。 SOAPフレームワーク固有のAPIを使用して、添付ファイルからデータを読み取ります。
+* **リモートURL**:サフィックスを「」に設定 `blob` して、データをアプリケーションサーバーに保持し、 `http``BLOB.remoteURL` フィールド内のデータを示すURLを返します。
+* **MTOMまたはSwaRef**:サフィックスをに設定する `blob` か、または `mtom` フィールドに返される添付ファイル識別子を持つデータを対応する添付ファイルタイプとして返し `swaref``BLOB.MTOM``BLOB.swaRef` ます。 SOAPフレームワークのネイティブAPIを使用して、添付ファイルからデータを読み取ります。
 
 >[!NOTE]
 >
@@ -370,7 +370,7 @@ JAX-WSを使用して、FormsサービスのWSDLをJavaプロキシクラスに�
 
 1. JDK 1.6以降をインストールします。
 
-   * JDK binデ追加ィレクトリをクラスパスに追加します。
+   * JDK 追加 binディレクトリをクラスパスに追加します。
    * JRE binデ追加ィレクトリをクラスパスに格納します。 このbinは、 [*JDK_INSTALL_LOCATION*]/jreディレクトリにあります。
    * 環境変数に、JDKをインストールしたディレクトリを設定します。 `JAVA_HOME`
 
@@ -458,7 +458,7 @@ JAX-WSを使用して、FormsサービスのWSDLをJavaプロキシクラスに�
 
    >[!NOTE]
    >
-   >「AEM formsによるプログラミング」にあるすべてのJava Webサービスクイック開始(Formsサービスを除く)は、JAX-WSを使用してJavaプロキシファイルを作成します。 また、すべてのJava Webサービスのクイック開始には、SwaRefを使用します。 (SwaRefを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-swaref))。
+   >「AEM formsによるプログラミング」にあるすべてのJava Webサービスクイック開始(Formsサービスを除く)は、JAX-WSを使用してJavaプロキシファイルを作成します。 また、すべてのJava Webサービスクイック開始では、SwaRefを使用します。 (SwaRefを使用した [AEM Formsの呼び出しを参照](#invoking-aem-forms-using-swaref))。
 
 **関連トピック**
 
@@ -680,7 +680,7 @@ JavaプロキシクラスとBase64を使用して、AEM Formsサービスを呼�
 
    >[!NOTE]
    >
-   >「 `hiro-xp`*」は、AEM FormsをホストするJ2EEアプリケーションサーバーのIPアドレスに置き換えます。 *
+   >「 `hiro-xp`*」は、AEM FormsをホストするJ2EEアプリケーションサーバーのIPアドレスに置き換えます。*
 
 1. JAX-WSを使用して作成したJavaプロキシクラスをJARファイルにパッケージ化します。
 1. 次のパスにあるJavaプロキシJARファイルとJARファイルを含めます。
@@ -722,7 +722,7 @@ JavaプロキシクラスとBase64を使用して、AEM Formsサービスを呼�
 
 **関連トピック**
 
-[クイック開始: JavaプロキシファイルとBase64エンコーディングを使用したサービスの呼び出し](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-service-using-java-proxy-files-and-base64-encoding)
+[クイック開始:JavaプロキシファイルとBase64エンコーディングを使用したサービスの呼び出し](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-service-using-java-proxy-files-and-base64-encoding)
 
 [Base64エンコーディングを使用する.NETクライアントアセンブリの作成](#creating-a-net-client-assembly-that-uses-base64-encoding)
 
@@ -794,7 +794,7 @@ AEM Forms `localhost` をホストするJ2EEアプリケーションサーバー
 
    >[!NOTE]
    >
-   >「 `hiro-xp`*」は、AEM FormsをホストするJ2EEアプリケーションサーバーのIPアドレスに置き換えます。 *
+   >「 `hiro-xp`*」は、AEM FormsをホストするJ2EEアプリケーションサーバーのIPアドレスに置き換えます。*
 
 1. データメンバの値を取得して、 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成し `EncryptDocumentClient.Endpoint.Binding` ます。 戻り値を `BasicHttpBinding` にキャストします。
 1. オブジェクトの `System.ServiceModel.BasicHttpBinding` デー `MessageEncoding` タメンバをに設定し `WSMessageEncoding.Mtom`ます。 この値により、MTOMが使用されます。
@@ -835,7 +835,7 @@ AEM Forms `localhost` をホストするJ2EEアプリケーションサーバー
 
 **関連トピック**
 
-[クイック開始: .NETプロジェクトでMTOMを使用してサービスを呼び出す](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-service-using-mtom-in-a-net-project)
+[クイック開始:.NETプロジェクトでMTOMを使用してサービスを呼び出す](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-service-using-mtom-in-a-net-project)
 
 [Webサービスを使用した複数のサービスへのアクセス](#accessing-multiple-services-using-web-services)
 
@@ -876,7 +876,7 @@ JAX-WSとSwaRefを使用して作成されたJavaプロキシファイルを使�
 
    >[!NOTE]
    >
-   >「 `hiro-xp`*」は、AEM FormsをホストするJ2EEアプリケーションサーバーのIPアドレスに置き換えます。 *
+   >「 `hiro-xp`*」は、AEM FormsをホストするJ2EEアプリケーションサーバーのIPアドレスに置き換えます。*
 
 1. JAX-WSを使用して作成したJavaプロキシクラスをJARファイルにパッケージ化します。
 1. 次のパスにあるJavaプロキシJARファイルとJARファイルを含めます。
@@ -912,7 +912,7 @@ JAX-WSとSwaRefを使用して作成されたJavaプロキシファイルを使�
 1. Create a `javax.activation.DataSource` object by using the `FileDataSource` constructor. Pass the `java.io.File` object.
 1. コンストラクタを使用して `javax.activation.DataHandler` オブジェクトを渡すことによって、`javax.activation.DataSource` オブジェクトを作成します。
 1. コンストラクタを使用して `BLOB` オブジェクトを作成します。
-1. メソッドを呼び出し、オブジェクトを渡すことで、 `BLOB` オブジェクトを入力し `setSwaRef` ま `javax.activation.DataHandler` す。
+1. メソッドを呼び出し、オブジェクトを渡して、 `BLOB` オブジェクト `setSwaRef` を入力し `javax.activation.DataHandler` ます。
 1. オブジェクトの `MyApplication/EncryptDocument` メソッドを呼び出し、PDFドキュメントを含む `MyApplicationEncryptDocument``invoke``BLOB` オブジェクトを渡して、プロセスを呼び出します。 呼び出しメソッドは、暗号化されたPDFドキュメントを含む `BLOB` オブジェクトを返します。
 1. オブジェクトの `javax.activation.DataHandler` メソッドを呼び出して、 `BLOB` オブジェクトを入力し `getSwaRef` ます。
 1. オブジェクトの `javax.activation.DataHandler` メソッドを呼び出して、 `java.io.InputSteam` オブジェクトを `javax.activation.DataHandler``getInputStream` インスタンスに変換します。
@@ -924,7 +924,7 @@ JAX-WSとSwaRefを使用して作成されたJavaプロキシファイルを使�
 
 **関連トピック**
 
-[クイック開始: JavaプロジェクトでのSwaRefを使用したサービスの呼び出し](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-service-using-swaref-in-a-java-project)
+[クイック開始:JavaプロジェクトでのSwaRefを使用したサービスの呼び出し](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-service-using-swaref-in-a-java-project)
 
 ## HTTP経由のBLOBデータを使用したAEM Formsの呼び出し {#invoking-aem-forms-using-blob-data-over-http}
 
@@ -943,7 +943,7 @@ Webサービスを使用してAEM Formsサービスを呼び出し、HTTP経由�
 
 >[!NOTE]
 >
->SOAPを使用したAEM Formsの呼び出しについて詳しく理解しておくことをお勧めします。 (See [Invoking AEM Forms using Web Services](#invoking-aem-forms-using-web-services).)
+>SOAPを使用したAEM Formsの呼び出しについて詳しく理解することをお勧めします。 (See [Invoking AEM Forms using Web Services](#invoking-aem-forms-using-web-services).)
 
 ### HTTP経由のデータを使用する.NETクライアントアセンブリの作成 {#creating-a-net-client-assembly-that-uses-data-over-http}
 
@@ -999,7 +999,7 @@ JavaプロキシクラスとBLOBデータをHTTP経由で使用して、AEM Form
 
    >[!NOTE]
    >
-   >「 `hiro-xp`*」は、AEM FormsをホストするJ2EEアプリケーションサーバーのIPアドレスに置き換えます。 *
+   >「 `hiro-xp`*」は、AEM FormsをホストするJ2EEアプリケーションサーバーのIPアドレスに置き換えます。*
 
 1. JAX-WSを使用して作成したJavaプロキシクラスをJARファイルにパッケージ化します。
 1. 次のパスにあるJavaプロキシJARファイルとJARファイルを含めます。
@@ -1069,7 +1069,7 @@ Web Services Enhancements 2.0を開発用コンピューターにインストー
 
 >[!NOTE]
 >
->Web Services Enhancements 2.0はDIMEをサポートします。 Web Services Enhancements 2.0を使用する場合、サポートされるMicrosoft Visual Studioのバージョンは2003です。Web Services Enhancements 3.0はDIMEをサポートしません。 しかし、MTOMをサポートしています。
+>Web Services Enhancements 2.0はDIMEをサポートします。 Web Services Enhancements 2.0を使用する場合、サポートされるMicrosoft Visual Studioのバージョンは2003です。Web Services Enhancements 3.0はDIMEをサポートしません。しかし、MTOMをサポートしています。
 
 **AEM FormsサービスへのWeb参照の作成**
 
@@ -1171,7 +1171,7 @@ Axisで生成されたライブラリファイルとDIMEを使用して（Workbe
 
 **関連トピック**
 
-[クイック開始: JavaプロジェクトでのDIMEを使用したサービスの呼び出し](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-service-using-dime-in-a-java-project)
+[クイック開始:JavaプロジェクトでのDIMEを使用したサービスの呼び出し](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-service-using-dime-in-a-java-project)
 
 ## SAMLベースの認証の使用 {#using-saml-based-authentication}
 
@@ -1239,10 +1239,10 @@ AEM formsユーザーのIDは、秘密キーを使用して署名されたSAML�
 
 クライアントアプリケーションは、 `AuthResult` オブジェクトを返す任意のAEM FormsAuthenticationManager APIからアサーションを取得できます。 次の2つの方法のいずれかを実行して、 `AuthResult` インスタンスを取得できます。
 
-* AuthenticationManager APIによって公開されている任意の認証方法を使用したユーザーの認証。 通常、ユーザー名とパスワードを使用します。 ただし、証明書認証を使用することもできます。
+* AuthenticationManager APIによって公開されている任意の認証方法を使用したユーザーの認証。 通常、ユーザー名とパスワードを使用します。ただし、証明書認証を使用することもできます。
 * メソッドを使用し `AuthenticationManager.getAuthResultOnBehalfOfUser` ます。 このメソッドを使用すると、クライアントアプリケーションは任意のAEM formsユーザーの `AuthResult` オブジェクトを取得できます。
 
-AEM formsユーザーは、取得したSAMLトークンを使用して認証できます。 このSAMLアサーション（xmlフラグメント）は、WS-Securityヘッダーの一部として、ユーザー認証用のWebサービス呼び出しと共に送信できます。 通常、クライアントアプリケーションはユーザーを認証していますが、ユーザー資格情報を保存していません。 （または、ユーザーがユーザー名とパスワード以外のメカニズムを使用してそのクライアントにログオンした。） この場合、クライアントアプリケーションは、AEM Formsの呼び出しを許可されている特定のユーザーとして、AEM Formsを呼び出し、偽装する必要があります。
+aem formsユーザーは、取得したSAMLトークンを使用して認証できます。 このSAMLアサーション（xmlフラグメント）は、WS-Securityヘッダーの一部として、ユーザー認証用のWebサービス呼び出しと共に送信できます。 通常、クライアントアプリケーションはユーザーを認証していますが、ユーザー資格情報を保存していません。 （または、ユーザーがユーザー名とパスワード以外のメカニズムを使用してそのクライアントにログオンした。） この場合、クライアントアプリケーションは、AEM Formsの呼び出しを許可されている特定のユーザーとして、AEM Formsを呼び出し、偽装する必要があります。
 
 特定のユーザーを装うには、Webサービスを使用して `AuthenticationManager.getAuthResultOnBehalfOfUser` メソッドを呼び出します。 このメソッドは、そのユーザーのSAMLアサーションを含む `AuthResult` インスタンスを返します。
 
