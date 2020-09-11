@@ -1,8 +1,8 @@
 ---
-title: SPA JavaScript API リファレンス
-seo-title: SPA JavaScript API リファレンス
-description: 単一ページのアプリAPIリファレンスの概要
-seo-description: 単一ページのアプリAPIリファレンスの概要
+title: SPAリファレンス資料
+seo-title: SPAリファレンス資料
+description: 単一ページのアプリケーションAPIリファレンスとソースコードリポジトリの概要
+seo-description: 単一ページのアプリケーションAPIリファレンスとソースコードリポジトリの概要
 uuid: 503a1bec-da8b-4f5e-adcc-fe65c3c96034
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,15 +10,17 @@ topic-tags: spa
 content-type: reference
 discoiquuid: c3a81baa-98b0-40b4-bd34-f39e8491acca
 translation-type: tm+mt
-source-git-commit: 2abf448e0231eb6fcd9295f498a24e81e1ead11a
+source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 38%
+source-wordcount: '177'
+ht-degree: 14%
 
 ---
 
 
-# SPA JavaScript API リファレンス{#spa-javascript-api-references}
+# SPAリファレンス資料 {#spa-reference-materials}
+
+## SPA JavaScript API リファレンス{#spa-javascript-api-references}
 
 AEM SPA Editor SDKフレームワーク用のNPMモジュールに関して使用可能なJavaScript APIリファレンスを次に示します。
 
@@ -27,7 +29,17 @@ AEM SPA Editor SDKフレームワーク用のNPMモジュールに関して使�
 >
 >SPAエディターは、SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトに推奨されるソリューションです。
 
-* [コンポーネントのマッピング](https://www.npmjs.com/package/@adobe/cq-spa-component-mapping)
-* [ページモデルマネージャー](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
-* [React 編集可能コンポーネント](https://www.npmjs.com/package/@adobe/cq-react-editable-components)
-* [編集可能なAngularコンポーネント](https://www.npmjs.com/package/@adobe/cq-angular-editable-components)
+* [コンポーネントのマッピング](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
+* [ページモデルマネージャー](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
+* [React 編集可能コンポーネント](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
+* [編集可能なAngularコンポーネント](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
+
+## オープンソースGitHubリポジトリ {#github-repositories}
+
+SPAライブラリ用のGitHub上のオープンソースリポジトリは次のとおりです。
+
+* [コンポーネントのマッピング](https://github.com/adobe/aem-spa-component-mapping)
+* [ページモデルマネージャー](https://github.com/adobe/aem-spa-page-model-manager)
+* [React 編集可能コンポーネント](https://github.com/adobe/aem-react-editable-components)
+* [編集可能なAngularコンポーネント](https://github.com/adobe/aem-angular-editable-components)
+* [SPAプロジェクトコア](https://github.com/adobe/aem-spa-project-core)
