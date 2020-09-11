@@ -11,10 +11,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: 39d1cb2e-18f5-4d08-b983-a06b1f470c51
 translation-type: tm+mt
-source-git-commit: 507559ee6cc6b201a11bbf84da515b675534f675
+source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 79%
+ht-degree: 72%
 
 ---
 
@@ -39,10 +39,10 @@ AEM は、いくつかのアプリケーション開発用 API を提供しま�
 
 AEM シングルページアプリケーション（SPA）エディター SDK フレームワーク JavaScript API リファレンス：
 
-* [コンポーネントのマッピング](https://www.npmjs.com/package/@adobe/cq-spa-component-mapping)
-* [ページモデルマネージャー](https://www.npmjs.com/package/@adobe/cq-spa-page-model-manager)
-* [React 編集可能コンポーネント](https://www.npmjs.com/package/@adobe/cq-react-editable-components)
-* [編集可能なAngularコンポーネント](https://www.npmjs.com/package/@adobe/cq-angular-editable-components)
+* [コンポーネントのマッピング](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
+* [ページモデルマネージャー](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
+* [React 編集可能コンポーネント](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
+* [編集可能なAngularコンポーネント](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
 AEM 配信およびコンテンツ管理 API
 
