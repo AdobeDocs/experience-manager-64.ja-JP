@@ -3,9 +3,9 @@ title: リッチテキストエディタープラグインの設定
 description: AEM リッチテキストエディタープラグインを設定して、個々の機能を有効にする方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 2236d029dc463930e6bbdc1e1aed89e761f0cd89
 workflow-type: tm+mt
-source-wordcount: '4206'
+source-wordcount: '4204'
 ht-degree: 94%
 
 ---
@@ -706,7 +706,7 @@ AEM にリンクを追加する場合、次の定義が可能です。
       * **名前** `cssExternal`
       * **型** `String`
       * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。例、`.cssClass` ではなく `cssClass`）
-   * 有効な&#x200B;**プロトコル**&#x200B;の配列（http://、https://、file://、mailto: などを含む）
+   * 有効な **プロトコルの配列**。 サポートされているプロトコルは、、、、 `http://`、および `https://``file://``mailto:`です。
 
       * **名前** `protocols`
       * **型** `String[]`
