@@ -3,10 +3,10 @@ title: AEM Assets と Brand Portal の連携の設定
 description: 'Brand Portalにアセットやコレクションを公開するためのBrand Portalを使用したAEM Assetsの設定方法について説明します。 '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: f9993c7a1a7be95cf4f2652f32e71f370ff3c727
+source-git-commit: 656a06ae70293a3f1ec6768fc9eea15f1329c42c
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 59%
+source-wordcount: '1692'
+ht-degree: 58%
 
 ---
 
@@ -78,6 +78,11 @@ AEM をダウンロードしたら、「[デプロイメントと保守](https:/
 1. [IMS アカウント設定の作成](#create-ims-account-configuration)
 1. [Cloud Service の設定](#configure-the-cloud-service)
 1. [設定のテスト](#test-integration)
+
+>[!NOTE]
+>
+>AEM Assetsの作成者インスタンスは、1つのBrand Portalテナントでのみ構成できます。
+
 
 ### IMS 設定の作成 {#create-ims-configuration}
 
