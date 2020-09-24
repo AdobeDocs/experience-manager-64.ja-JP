@@ -6,11 +6,11 @@ seo-description: Adobe Experience Manager Assets の 3D コンテンツ固有の
 uuid: 6675951f-86f0-4ec5-97e4-d247f6faf913
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4
+topic-tags: release-notes, 3D
 content-type: reference
-topic-tags: 3D
 discoiquuid: 9789d031-fb7e-415a-a9c3-8b8fde978238
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 9710c9931b4f17073c712f5869a1843c1d99ee8e
 workflow-type: tm+mt
 source-wordcount: '1983'
 ht-degree: 44%
