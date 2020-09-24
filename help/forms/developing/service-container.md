@@ -7,10 +7,10 @@ uuid: 89f2fd3d-63d7-4b70-b335-47314441f3ec
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
-topic-tags: development-tools
+topic-tags: development-tools, coding
 discoiquuid: dd9c0ec4-a195-4b78-8992-81d0efcc0a7e
 translation-type: tm+mt
-source-git-commit: 11ce2d736f261daa789b94d23e2a5ca64192cefe
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '909'
 ht-degree: 2%
@@ -59,7 +59,7 @@ ht-degree: 2%
 
 サービスコンテナには次の機能があります。
 
-* 様々なメソッドを使用してAEM Formsサービスを呼び出すことを許可します。 エンドポイントを設定してサービスを設定し、すべてのメソッドを使用して呼び出せるようにします。 リモート処理、Java API、WebサービスおよびREST。 (See [Programmatically Managing Endpoints](/help/forms/developing/programmatically-endpoints.md#programmatically-managing-endpoints).)
+* 様々なメソッドを使用してAEM Formsサービスを呼び出すことを許可します。 エンドポイントを設定してサービスを設定し、すべてのメソッドを使用して呼び出せるようにします。リモート処理、Java API、WebサービスおよびREST。 (See [Programmatically Managing Endpoints](/help/forms/developing/programmatically-endpoints.md#programmatically-managing-endpoints).)
 * 呼び出し要求と呼ばれる正規化された形式にメッセージを変換します。 呼び出し要求がクライアントアプリケーション（または他のサービス）からサービスコンテナ内のサービスに送信されます。 呼び出し要求には、呼び出すサービスの名前や、操作の実行に必要なデータ値などの情報が含まれます。 多くのサービスでは、操作の実行にドキュメントが必要です。 したがって、呼び出し要求には通常、PDFデータ、XDPデータ、XMLデータなどのドキュメントが含まれます。
 * 呼び出し要求を適切なサービスにルーティングします（呼び出すサービスの名前は、呼び出し要求の一部です）。
 * 呼び出し元が、指定されたサービス操作を呼び出す権限を持っているかどうかを判断するなどのタスクを実行します。 呼び出し要求には、有効なAEM formsユーザー名とパスワードを含める必要があります。
