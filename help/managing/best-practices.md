@@ -6,11 +6,11 @@ seo-description: 'Adobe Experience Manager（AEM）実装プロジェクトの�
 uuid: 61b45b1b-af0b-4b1b-9a52-6767611fc1ab
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/MANAGING
+topic-tags: managing-checklist, introduction
 content-type: reference
-topic-tags: introduction
 discoiquuid: b891009b-d3b1-402a-920a-014366f342f0
 translation-type: tm+mt
-source-git-commit: f5c0d5032073b91c0b3199bb42709b8e679fa6a0
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '3313'
 ht-degree: 92%
@@ -57,7 +57,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
 ## 役割別のスタータス {#status-by-role}
 
-「**役割別のステータス**」ワークシートには、**[ヘルス、品質および完了状況](#project-heartbeat-dashboard)**の詳細な分類が、**[&#x200B;フェーズ](#phases-and-milestones)**および&#x200B;**[ペルソナ](#persona)**別に表示されます。
+「**役割別のステータス**」ワークシートには、**[ヘルス、品質および完了状況](#project-heartbeat-dashboard)**&#x200B;の詳細な分類が、**[フェーズ](#phases-and-milestones)**&#x200B;および&#x200B;**[ペルソナ](#persona)**&#x200B;別に表示されます。
 
 ## フェーズおよびマイルストーン {#phases-and-milestones}
 
@@ -213,7 +213,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
    システムの統合には、以下の計画（および実装）が必要です。
 
    * すべてのサブシステムおよび[ソリューションの統合](/help/sites-administering/integration.md)をどのようにして 1 つのまとまったシステムとして動作させるか
-   * サードパーティ製システムの統合方法 サードパーティ製システムがダウンした場合のオフライン/オンライン、クライアント側/ブラウザ側/フォールバー処理など、特別な考慮事項と共に使用できます。
+   * サードパーティ製システムの統合方法サードパーティ製システムがダウンした場合のオフライン/オンライン、クライアント側/ブラウザ側/フォールバー処理など、特別な考慮事項と共に使用できます。
 
 * **テスト概念**
 
@@ -291,7 +291,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
          * 問題追跡システム（Jira など）
          * IDE（Eclipse など）
          * ビルド管理ツール（Maven など）
-         * 継続的統合のためのツール 例えばジェンキンス
+         * 継続的統合のためのツール例えばジェンキンス
          * バージョン管理のためのツール（GIT や SVN など）
          * ビルドアーティファクトのリポジトリマネージャー（Archiva や Nexus など）
    * サードパーティソフトウェアの統合と依存関係
