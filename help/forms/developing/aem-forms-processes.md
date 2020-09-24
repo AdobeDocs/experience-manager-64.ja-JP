@@ -7,10 +7,10 @@ uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
-topic-tags: development-tools
+topic-tags: development-tools, coding
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '791'
 ht-degree: 3%
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 一般的な使用例は、一連のAEM Formsサービスが1つのドキュメント上で動作する場合です。 Workbenchを使用してプロセスを作成すると、サービスコンテナにリクエストを送信できます。 プロセスとは、自動化するビジネスプロセスを表します。 プロセスの作成について詳しくは、「Workbenchの [使用](https://www.adobe.com/go/learn_aemforms_workbench_63)」を参照してください。
 
-プロセスがアクティブ化されると、そのプロセスはサービスになり、他のサービスと同様に呼び出すことができます。 Encryptionサービスなどの標準サービスとプロセスに由来するサービスの違いの1つは、標準サービスには多くのアクションを実行する1つの操作があるということです。 これに対し、標準のサービスには多くの操作があります。 通常、各操作は1つの操作(ポリシーのドキュメントへの適用、ドキュメントの暗号化など)を実行します。
+プロセスがアクティブ化されると、そのプロセスはサービスになり、他のサービスと同様に呼び出すことができます。 Encryptionサービスなどの標準サービスとプロセスに由来するサービスの違いの1つは、標準サービスには多くのアクションを実行する1つの操作があるということです。 一方、標準のサービスには多くの操作があります。 通常、各操作は1つの操作(ポリシーのドキュメントへの適用、ドキュメントの暗号化など)を実行します。
 
 プロセスには、短時間のみ有効なプロセスと長期間有効なプロセスがあります。 短時間のみ有効なプロセスとは、呼び出し元の同じ実行スレッドで同期的に実行される操作です。 短時間のみ有効な操作は、クライアントアプリケーションがメソッドを呼び出して戻り値を待つ、ほとんどのプログラミング言語での標準的な動作と同じです。
 
