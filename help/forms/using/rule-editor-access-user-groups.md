@@ -5,11 +5,11 @@ description: 選択したユーザーグループにルールエディターへ�
 seo-description: 選択したユーザーグループにルールエディターへの制限付きアクセスを許可します。
 uuid: 3d982858-b2b5-4370-a9d7-5a95842a7897
 content-type: reference
-topic-tags: develop
+topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6bd58e37-085e-4057-8200-1404d54f41cc
 translation-type: tm+mt
-source-git-commit: 73d0dea62c294bea435364fb9c6892d80751d90d
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 58%
