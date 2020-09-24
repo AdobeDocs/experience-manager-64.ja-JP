@@ -6,11 +6,11 @@ seo-description: AEM を使用して、アクセスしやすい Web サイトお
 uuid: b68281af-3e8a-4842-b762-1c59f9132795
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/MANAGING
+topic-tags: managing-accessibility, introduction
 content-type: reference
-topic-tags: introduction
 discoiquuid: 13c7e0bd-54af-49f3-9743-075ce6f3314d
 translation-type: tm+mt
-source-git-commit: 40c4631e29093e5425cf0b7bd4bcd543a969bd1e
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 85%
