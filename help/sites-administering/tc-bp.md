@@ -6,11 +6,11 @@ seo-description: アドビのエンジニアリングおよびコンサルティ
 uuid: 3bac1d73-9696-4c9b-8bdd-6f00fac40cf7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
+topic-tags: site-features, best-practices
 content-type: reference
-topic-tags: best-practices
 discoiquuid: 1554010e-a1d1-4edf-b28f-9eead8f83b4a
 translation-type: tm+mt
-source-git-commit: c1cf6fa92c923cce18000c8dd82b2c17d6783ee5
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '859'
 ht-degree: 64%
@@ -24,7 +24,7 @@ ht-degree: 64%
 
 グローバル Web プレゼンスの作成や拡張は複雑なプロセスになる可能性がありますが、事前に AEM について適切に考慮および計画しておけば、作業を簡略化してグローバルなビジネス目標をサポートできます。
 
-* **最初のサイトを実装する前に** 、グローバルな拡張を計画します。 サイトが短い通知で実装された場合に、既存のサイトをグローバルな範囲に適合させるのは、通常、最初にグローバルな拡張を計画するよりも難しくなります。
+* **最初のサイトを実装する前に** 、グローバルな拡張を計画します。サイトが短い通知で実装された場合に、既存のサイトをグローバルな範囲に適合させるのは、通常、最初にグローバルな拡張を計画するよりも難しくなります。
 
    * Assess the current state of your organization’s localization maturity. Determine whether you have the **tools**, **processes** and **resources** in place to support global expansion.
    * Be aware of **global regulations** and **regional language preferences**. Design flexible content structures and processes that can accommodate a changing global business environment.
@@ -59,7 +59,7 @@ ht-degree: 64%
 * Choose a **translation method** that best suits the content.
 
    * **人による翻訳** は、メッセージングや品質の期待が高く、コンテンツがサイト上でしばらくの間生きる、マーケティングページなどのコンテンツに最適です。
-   * **機械翻訳は** 、公開に要する時間が非常に重要で、品質の期待が緩和される、または人による翻訳コストが非常に高い場合に、大量の翻訳に適した選択肢となります。 サポートのナレッジベースとユーザー生成コンテンツは、一般に機械翻訳です。
+   * **機械翻訳は** 、公開に要する時間が非常に重要で、品質の期待が緩和される、または人による翻訳コストが非常に高い場合に、大量の翻訳に適した選択肢となります。サポートのナレッジベースとユーザー生成コンテンツは、一般に機械翻訳です。
 
 * ローカリゼーションサービスプロバイダー、アドビのコンサルティング、システムインテグレーターの専門知識を活用して、多言語サイトの構造の計画、プロトタイプの作成およびテストを実施します。
 
