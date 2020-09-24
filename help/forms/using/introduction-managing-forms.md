@@ -6,10 +6,10 @@ seo-description: AEM Forms は、アダプティブフォームおよび関連�
 uuid: 8a9fe83a-e9dc-410e-9bae-eca936c6eb8a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
-topic-tags: introduction
+topic-tags: forms-manager, introduction
 discoiquuid: 6f9cb26a-ac7f-4218-827f-9d4d55b859b4
 translation-type: tm+mt
-source-git-commit: 1a671421c208d8b1b446765b9302877506dbddc2
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '1605'
 ht-degree: 77%
@@ -47,7 +47,7 @@ AEM には、フォーム、ドキュメントおよび関連アセットを作�
 
 作成ボタンは、AEM Forms アセットを作成またはアップロードする処理の開始点になります。次のオプションを使用して、作成できます。
 
-* **対話型通信**: インタラクティブコミュニケーションは、HTMLベースのデジタル通信、ステートメント、ドキュメントに対応した、パーソナライズされたインタラクティブなデバイス向けの通信です。 インタラクティブ通信はレスポンシブな特性を持っているため、使用するデバイスや設定に応じて、レイアウトとデザインが自動的に変わります。詳しくは、「[インタラクティブ通信の概要](/help/forms/using/interactive-communications-overview.md)」を参照してください。
+* **対話型通信**:インタラクティブコミュニケーションは、HTMLベースのデジタル通信、ステートメント、ドキュメントに対応した、パーソナライズされたインタラクティブなデバイス向けの通信です。 インタラクティブ通信はレスポンシブな特性を持っているため、使用するデバイスや設定に応じて、レイアウトとデザインが自動的に変わります。詳しくは、「[インタラクティブ通信の概要](/help/forms/using/interactive-communications-overview.md)」を参照してください。
 
 * **アダプティブフォーム：**&#x200B;アダプティブフォームは、魅力的でレスポンシブなフォームです。アダプティブフォームを作成し、ユーザーの応答、デバイス、または作業環境に基づいてフォームのセクションを追加または削除することで、ユーザーの入力に動的に対応することができます。 アダプティブフォームについて詳しくは、「[アダプティブフォームの作成について](/help/forms/using/introduction-forms-authoring.md)」を参照してください。
 
