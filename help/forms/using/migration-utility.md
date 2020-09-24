@@ -5,13 +5,13 @@ description: 移行ユーティリティにより、AEM Forms のアセットと
 seo-description: 移行ユーティリティにより、AEM Forms のアセットとドキュメントを AEM 6.3 Forms またはそれ以前のバージョンから AEM 6.4 forms に移行できます。
 uuid: 593fc421-b70e-4dbe-87bc-ea49ff025368
 content-type: reference
-topic-tags: installing
+topic-tags: correspondence-management, installing
 geptopics: SG_AEMFORMS/categories/jee
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 content-strategy: max-2018
 discoiquuid: a8b1f7df-e36f-4d02-883a-72120fea7046
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '1872'
 ht-degree: 68%
@@ -46,7 +46,7 @@ Then you need to update the assets and documents by [running the Migration utili
 
 If it is an out of place (fresh) installation, before you can use the assets and documents, you will need to install [AEMFD Compatibility package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT) (includes the Correspondence Management Compatibility package).
 
-Then you need to import your asset package (zip or cmp) on the new setup and then update the assets and documents by [running the Migration utility](#runningmigrationutility). [後方互換性に関する要件](/help/sites-deploying/backward-compatibility.md)が変更されたことに伴い、CRX リポジトリ内のいくつかのフォルダーの場所が変更されています。以前の設定から新規環境に対して、依存関係（カスタムライブラリおよびアセット）を手動で書き出しおよび読み込みます。
+Then you need to import your asset package (zip or cmp) on the new setup and then update the assets and documents by [running the Migration utility](#runningmigrationutility). [後方互換性に関する要件](/help/sites-deploying/backward-compatibility.md)が変更されたことに伴い、CRX リポジトリ内のいくつかのフォルダーの場所が変更されています。以前の設定から新規環境に対して、依存関係（カスタムライブラリおよびアセット）を手動で書き出し、読み込みます。
 
 ## Read before you proceed with the migration {#prerequisites}
 
@@ -133,7 +133,7 @@ When you run the Migration Utility for the first time, a log is created with the
    * フォームデータモデルのクラウドサービス
 
       * ソースパス：/etc/cloudservices/fdm
-      * ターゲットパス： /conf/global/settings/cloudconfigs/fdm
+      * ターゲットパス：/conf/global/settings/cloudconfigs/fdm
    * Recaptcha
 
       * ソースパス：/etc/cloudservices/recaptcha
