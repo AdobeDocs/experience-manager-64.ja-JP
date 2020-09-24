@@ -7,10 +7,10 @@ uuid: 2d618aab-3c67-4edb-a28f-a20904689e6f
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
-products: SG_EXPERIENCEMANAGER/6.4/FORMS
+products: SG_EXPERIENCEMANAGER/6.4/FORMS, SG_AEMFORMS
 discoiquuid: 70559a94-42ea-411a-a32f-5f38bc17ff96
 translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 100%
