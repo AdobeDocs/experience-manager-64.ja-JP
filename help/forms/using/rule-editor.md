@@ -5,11 +5,11 @@ description: アダプティブフォームのルールエディタを使用す�
 seo-description: アダプティブフォームのルールエディタを使用すると、コーディングやスクリプトを使用することなく、フォーム上で動的な処理を追加し複雑なロジックを構築することができます。
 uuid: 15c9bb41-ddae-4d3e-b130-5eb1b7572e6e
 content-type: reference
-topic-tags: develop
+topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 66a3528a-489b-4fd0-be6c-b8c4b9b1f908
 translation-type: tm+mt
-source-git-commit: 87680094e87b2ef58c7de2f1e42caa2ad966c28f
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '6348'
 ht-degree: 79%
@@ -523,7 +523,7 @@ For more information, see [usejsdoc.org](https://usejsdoc.org/).
 
    構文: `@param {type} name <Parameter Description>`
 
-   または、次を使用できます。 `@argument` `{type} name <Parameter Description>` **または**`@arg``{type}``name <Parameter Description>`。
+   または、次を使用できます。 `@argument` `{type} name <Parameter Description>` **または**`@arg``{type}``name <Parameter Description>`
 
    関数で使用されるパラメータを表示します。関数には、複数のパラメータタグを設けることができます。各パラメーターは、実行順序に応じて 1 個のタグを設けることができます。
 
@@ -664,7 +664,7 @@ Any existing rules on a form object are listed when you tap the object and tap !
 
 * **編集**：ルールを編集するには、ルールタイトルの横にあるチェックボックスを選択します。ルールを編集・削除するための追加オプションが表示されます。Tap **Edit** to open the selected rule in the rule editor in visual or code editor mode depending the mode used to create the rule.
 
-* **削除**: ルールを削除するには、ルールを選択し、「 **削除**」をタップします。
+* **削除**:ルールを削除するには、ルールを選択し、「 **削除**」をタップします。
 
 * **有効 / 無効**：ルールの使用を一時的に中止しなければならないことがあります。その際、1 つ以上のルールを選択し、アクションツールバーで「無効」をタップすると、それらのルールが無効になります。ルールが無効になっている場合、実行時には実行されません。 無効化されたルールを有効化するには、そのルールを選択し、アクションツールバーで「有効」をタップします。ルールの「ステータス」列には、そのルールが有効になっているのか無効になっているのかが表示されます。
 
