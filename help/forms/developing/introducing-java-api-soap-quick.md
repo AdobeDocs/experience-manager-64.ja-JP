@@ -7,10 +7,10 @@ uuid: 480e1809-f789-4ad8-b5d5-2d97aba8411a
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
-topic-tags: development-tools
+topic-tags: development-tools, develop
 discoiquuid: 38fd51ec-347e-4ae3-86d4-9d2429f79bdd
 translation-type: tm+mt
-source-git-commit: e3fcf1a117b13392b7e530a09198982c6160cb7b
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 1%
@@ -67,19 +67,19 @@ JARファイルのリストは、クイック開始の先頭にあるコメン�
 
 「*Programming withAEM Forms」にあるほとんどのクイック開始は、操作を実行するために特定のサービスを呼び出します。 ただし、一部のクイック開始は、特定のワークフローを実行するために複数のAEM Formsサービスを呼び出します。 次のリストは、複数のAEM Formsサービスを呼び出すJavaクイック開始を提供します。
 
-[クイック開始（SOAPモード）: Java APIを使用して、AEM Formsリポジトリ内のドキュメントをOutputサービスに渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) （RepositoryとOutputサービスを呼び出す）
+[クイック開始（SOAPモード）:Java APIを使用して、AEM Formsリポジトリ内のドキュメントをOutputサービスに渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) （RepositoryとOutputサービスを呼び出す）
 
-[クイック開始（SOAPモード）: Java APIを使用したフラグメントに基づくPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api) （AssemblerとOutputサービスを呼び出す）
+[クイック開始（SOAPモード）:Java APIを使用したフラグメントに基づくPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api) （AssemblerとOutputサービスを呼び出す）
 
-[クイック開始（SOAPモード）: Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api) (Forms、Output、ドキュメント管理サービスを呼び出す)を使用して、送信済みのXMLデータを使用してPDFドキュメントを作成する
+[クイック開始（SOAPモード）:Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api) (Forms、Output、ドキュメント管理サービスを呼び出す)を使用して、送信済みのXMLデータを使用してPDFドキュメントを作成する
 
-[クイック開始（SOAPモード）: Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api) (Formsおよびドキュメント管理サービスを呼び出す)を使用してFormsサービスにドキュメントを渡す
+[クイック開始（SOAPモード）:Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api) (Formsおよびドキュメント管理サービスを呼び出す)を使用してFormsサービスにドキュメントを渡す
 
-[クイック開始（SOAPモード）: Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api) (FormsおよびSignatureサービスを呼び出す)を使用したXFAベースのフォームのデジタル署名
+[クイック開始（SOAPモード）:Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api) (FormsおよびSignatureサービスを呼び出す)を使用したXFAベースのフォームのデジタル署名
 
-[クイック開始（SOAPモード）: Java APIを使用したロールと権限の管理](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api) （DirectoryManagerおよびAuthorizationManagerサービスを呼び出す）
+[クイック開始（SOAPモード）:Java APIを使用したロールと権限の管理](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api) （DirectoryManagerおよびAuthorizationManagerサービスを呼び出す）
 
-[クイック開始（SOAPモード）: Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api) (Outputおよびドキュメント管理サービスを呼び出す)を使用してOutputサービスにドキュメントを渡す
+[クイック開始（SOAPモード）:Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api) (Outputおよびドキュメント管理サービスを呼び出す)を使用してOutputサービスにドキュメントを渡す
 
 >[!NOTE]
 >
