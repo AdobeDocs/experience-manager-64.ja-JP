@@ -5,11 +5,11 @@ description: アダプティブフォームではフォームモデルとして 
 seo-description: アダプティブフォームではフォームモデルとして XML スキーマを使用できるため、アダプティブフォームの作成に既存の XSD テンプレートを活用できます。スキーマ要素を XSD からアダプティブフォームにドラッグアンドドロップできます。
 uuid: a5f5d423-9b83-47e8-b0fa-88210d0d18d9
 content-type: reference
-topic-tags: develop
+topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a1070d9e-fb7c-4134-b6d5-ffa2d3e9718d
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 89%
@@ -274,7 +274,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
    <td><p>コンポーネントで許可される小数の位を指定します。fractionDigits は 0 以上である必要があります。</p> </td> 
    <td> 
     <ul> 
-     <li> 浮動小数点数または小数点数値型の数値ボックス</li> 
+     <li> 浮動小数点数または小数のデータタイプを持つ数値ボックス</li> 
     </ul> </td> 
   </tr> 
   <tr> 
