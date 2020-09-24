@@ -6,11 +6,11 @@ seo-description: ここでは、Adobe Experience Manager（AEM）でコンテン
 uuid: 1343acf9-b104-40f3-a3f2-df42060cb4fd
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
+topic-tags: introduction, page-authoring
 content-type: reference
-topic-tags: page-authoring
 discoiquuid: 7f5713fe-01e3-450e-b71a-dc567d9a192e
 translation-type: tm+mt
-source-git-commit: ee9b977515b6c1233ff87f011f7a8b4095450814
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 93%
@@ -24,9 +24,9 @@ ht-degree: 93%
 
 次の内容について説明します。
 
-* [はじめに](#getting-started): 最初のページを作成して公開する際に必要なイベントの基本的な順序の詳細を説明します。
+* [はじめに](#getting-started):最初のページを作成して公開する際に必要なイベントの基本的な順序の詳細を説明します。
 
-* [その他のアクション](#further-actions): オーサリング時に使用できる他の多数のアクションについて説明します。
+* [その他のアクション](#further-actions):オーサリング時に使用できる他の多数のアクションについて説明します。
 
 ## 概要 {#getting-started}
 
