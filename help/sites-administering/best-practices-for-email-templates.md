@@ -7,10 +7,10 @@ uuid: 714090bd-a742-4004-a968-aebd8fd03e04
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
-topic-tags: best-practices
+topic-tags: best-practices, integration
 discoiquuid: 6c019157-cc37-4826-8d3a-dbee59ec09e0
 translation-type: tm+mt
-source-git-commit: 8e6eaa5053bb94fa33e027594bdc2e30ad16d62e
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 69%
