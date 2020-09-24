@@ -7,10 +7,10 @@ uuid: b8dcb28e-4604-4da5-b8dd-4e1e2cbdda18
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
-topic-tags: Security
+topic-tags: Security, configuring
 discoiquuid: 86e8dc12-608d-4aff-ba7a-5524f6b4eb0d
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 74%
@@ -45,20 +45,20 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 
    例えば、NTLM の場合は以下のように設定します。
 
-   * **パス：** 必要に応じて 例えば、 `/`
+   * **パス：** 必要に応じて例えば、 `/`
    * **ヘッダー名**: `LOGON_USER`
    * **IDの形式**: `^<DOMAIN>\\(.+)$`
 
       Where `<*DOMAIN*>` is replaced by your own domain name.
    CoSign の場合：
 
-   * **パス：** 必要に応じて 例えば、 `/`
+   * **パス：** 必要に応じて例えば、 `/`
    * **ヘッダー名**：remote_user
    * **IDの形式：** 現状
 
    SiteMinder の場合：
 
-   * **パス：** 必要に応じて 例えば、 `/`
+   * **パス：** 必要に応じて例えば、 `/`
    * **ヘッダー名**：SM_USER
    * **ID 形式**：AsIs
 
