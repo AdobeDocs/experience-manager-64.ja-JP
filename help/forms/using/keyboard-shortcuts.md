@@ -6,10 +6,10 @@ seo-description: この記事では、アダプティブフォームエディタ
 uuid: 1a16c2e6-c0f1-42e0-9ab4-692f3e58eeaf
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
-topic-tags: correspondence-management
+topic-tags: author, correspondence-management
 discoiquuid: 010e3639-b1a9-40fb-8615-7d18c4784b73
 translation-type: tm+mt
-source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
 workflow-type: tm+mt
 source-wordcount: '1172'
 ht-degree: 79%
