@@ -3,19 +3,21 @@ title: DTM でのアセットインサイトの有効化
 description: Adobe Dynamic Tag Management（DTM）を使用してアセットインサイトを有効にする方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+source-git-commit: 994dd56ce13b2d1f959e392e181d752e994bf198
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 57%
+source-wordcount: '680'
+ht-degree: 50%
 
 ---
 
 
 # DTM でのアセットインサイトの有効化 {#enabling-asset-insights-through-dtm}
 
-Adobe Dynamic Tag Management は、デジタルマーケティングツールをアクティベートするツールです。これは Adobe Analytics のユーザーに無償で提供されます。
+Adobe Dynamic Tag Management は、デジタルマーケティングツールをアクティベートするツールです。これは Adobe Analytics のユーザーに無償で提供されます。トラッキングコードをカスタマイズしてサードパーティのCMSソリューションでアセットインサイトを使用できるようにするか、DTMを使用してアセットインサイトタグを挿入できます。 インサイトのサポートおよび提供がおこなわれるのは、画像に対してのみです。
 
-サードパーティ CMS ソリューションがアセットインサイトを使用できるようにトラッキングコードをカスタマイズできますが、DTM を使用してアセットインサイトのタグを挿入することをお勧めします。
+>[!CAUTION]
+>
+>AdobeDTMはAdobe Experience Platform Launchの支援のために廃止され、間もなく [提供終了となります](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobeでは、アセットのインサイトに「起動」を [使用することを推奨します](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
 
 DTM を使用してアセットインサイトを有効にするには、次の手順を実行します。
 
@@ -49,7 +51,6 @@ DTM を使用してアセットインサイトを有効にするには、次の�
    >* The call to `assetAnalytics.dispatcher.init()` is removed. この関数は、DTM の Adobe Analytics ツールの読み込みが完了すると呼び出されるはずです。
    >* アセットインサイトページトラッカーがホストされる場所（例えば、AEM や CDN など）によっては、スクリプトソースのオリジナルを変更する必要があります。
    >* AEMがホストするページトラッカーの場合、ソースは、ディスパッチャーインスタンスのホスト名を使用して、発行インスタンスを指し示す必要があります。
-
 
 
 1. [https://dtm.adobe.com](https://dtm.adobe.com) を開きます。Web プロパティの「概要」をクリックし、「ツールを追加」をクリックするか既存の Adobe Analytics ツールを開きます。ツールの作成時に、「設定方法」を「自動」に設定できます。
