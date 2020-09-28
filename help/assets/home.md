@@ -1,16 +1,17 @@
 ---
-title: AEM 6.4 Assetsユーザーガイド
+title: アセットガイド
 description: このガイドは、デジタルアセットの作成、管理、配信、最適化など、すべてのAEM Assetsタスクについて説明します。
+user-guide-title: アセットガイド
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: 405733b2084621773c2992121be8d540eeba39a9
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '336'
 ht-degree: 31%
 
 ---
 
 
-# AEM 6.4 Assetsユーザーガイド
+# アセットガイド
 
 このガイドは、デジタルアセットの作成、管理、配信、最適化など、すべてのAEM Assetsタスクについて説明します。
 
