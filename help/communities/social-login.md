@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+source-git-commit: 5542ec45e64595a8e7159d925fdcbfff468ae7ec
 workflow-type: tm+mt
-source-wordcount: '2834'
+source-wordcount: '2824'
 ht-degree: 36%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 36%
 
 # Facebook と Twitter を使用したソーシャルログイン {#social-login-with-facebook-and-twitter}
 
-ソーシャルログインは、サイト訪問者にFacebookやTwitterアカウントでサインインするオプションを提供する機能です。 したがって、許可されたFacebookデータやTwitterデータがAEMのメンバープロファイルに含まれます。
+ソーシャルログインは、サイト訪問者にFacebookやTwitterアカウントでサインインするオプションを提供する機能です。 したがって、許可されたFacebookデータやTwitterデータがAEMの会員プロファイルに含まれます。
 
 ![socialloginretail](assets/socialloginweretail.png)
 
@@ -48,7 +48,7 @@ While the we-retail sample provides sample Facebook and Twitter apps and cloud s
       * [Twitter Connectクラウドサービスを作成して公開します](#create-a-twitter-connect-cloud-service)。
 
 
-1. コミュニティサイトに対して[**ソーシャルログインを有効&#x200B;**](#enable-social-login)にします。
+1. コミュニティサイトに対して&#x200B;[**ソーシャルログインを有効**](#enable-social-login)にします。
 
 以下に示す 2 つの基本的な概念があります。
 
@@ -98,7 +98,7 @@ Once the application has been created, locate the **[!UICONTROL App ID]** and **
 
 ### Facebook Connect クラウドサービス {#create-a-facebook-connect-cloud-service}
 
-クラウドサービス設定を作成することで、[Adobe Granite OAuth Application and Provider](https://chl-author.corp.adobe.com/content/help/jp/experience-manager/6-4/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) インスタンスが作成されます。このインスタンスが、Facebook アプリケーションと新しいユーザーの追加先のメンバーグループを識別します。
+クラウドサービス設定を作成することで、[Adobe Granite OAuth Application and Provider](#adobe-granite-oauth-application-and-provider) インスタンスが作成されます。このインスタンスが、Facebook アプリケーションと新しいユーザーの追加先のメンバーグループを識別します。
 
 1. AEM オーサーインスタンスで、管理者権限でサインインします。
 1. From global navigation, select **[!UICONTROL Tools > Cloud Services > Facebook Social login configuration]**.
@@ -119,8 +119,8 @@ Once the application has been created, locate the **[!UICONTROL App ID]** and **
    * **[!UICONTROL アプリID/APIキー]** (*必須*)Facebookアプリの ***アプリID*** を入力します。 This identifies the [Adobe Granite OAuth Application and Provider](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) instance created from the dialog.
    * **[!UICONTROL アプリの秘密]** (*必須*)Facebookアプリの ****** アプリの秘密を入力します。
    * **[!UICONTROL ユーザーを作成]**&#x200B;オンにすると、Facebook アカウントでログインしたときに AEM ユーザーエントリが作成され、選択されたユーザーグループのメンバーとして追加されます。デフォルトはオンになっています（強く推奨）。
-   * **[!UICONTROL Mask User IDs]**: 選択を解除したままにします。
-   * **[!UICONTROL Scope Email]**: ユーザーの電子メールIDをFacebookから取得する必要があります。
+   * **[!UICONTROL Mask User IDs]**:選択を解除したままにします。
+   * **[!UICONTROL Scope Email]**:ユーザーの電子メールIDをFacebookから取得する必要があります。
    * **[!UICONTROL 「ユ追加ーザーグループ」追加には、「ユーザーグループ」を選択し、ユーザーを追加するコミュニティサイトの1つまたは複数の]** メンバーグループ [](https://helpx.adobe.com/jp/experience-manager/6-3/communities/using/users.html) を選択します。
 
    >[!NOTE]
@@ -233,11 +233,11 @@ Follow the latest instructions to create a new Twitter application at [https://a
 
 Twitter アプリケーション管理の権限のセクションで、次の設定をします。
 
-* **[!UICONTROL アクセス]**: を選択し `Read only`ます。
+* **[!UICONTROL アクセス]**:を選択し `Read only`ます。
 
    * その他のオプションはサポートされません。
 
-* **[!UICONTROL 追加の権限]**: 必要に応じて、を選択 `Request email addresses from users`します。
+* **[!UICONTROL 追加の権限]**:必要に応じて、を選択 `Request email addresses from users`します。
 
    * 選択しなかった場合は、ユーザーの AEM のプロファイルに電子メールアドレスが含まれなくなります。
    * Twitter の説明に、追加でおこなう手順が示されています。
@@ -457,7 +457,7 @@ For more information, see [Authentication with Apache Oak External Login Module]
 1. ノードntBaseLucene-oauthのプロパティの変更：
 
    * **[!UICONTROL indexPath]**：/oak:index/ntBaseLucene-oauth
-   * **[!UICONTROL name]**: oauthid-123xxxx
+   * **[!UICONTROL name]**:oauthid-123xxxx
    * **[!UICONTROL reindex]**：true
    * **[!UICONTROL reindexCount]**：1
 
@@ -467,11 +467,11 @@ For more information, see [Authentication with Apache Oak External Login Module]
    * cqTagsの名前をoauthid-123xxxxに変更します。
    * node oauthid-123xxxxのプロパティの変更
 
-      * **[!UICONTROL name]**: oauthid-123xxxx
+      * **[!UICONTROL name]**:oauthid-123xxxx
    * Select **[!UICONTROL Save All]**.
 
 
-**&amp;ast;** oauthid **-123** という&#x200B;*名前は、FacebookアプリIDに置き換えるか、Twitter* AdobeAPIに置き換えるか、Twitter *API APIに置き換える。*****************[](social-login.md#adobe-granite-oauth-application-and-provider)ID IDクライアントの値は、の設定を表す。
+**&amp;ast;** oauthid **-123** という&#x200B;*名前は、FacebookアプリIDに置き換えるか、Twitter* APIに置き換えるか、 ******************[](social-login.md#adobe-granite-oauth-application-and-provider)AdobeIDの設定をIDのIDクライアントのIDに置き換える。
 
 ![chlimage_1-492](assets/chlimage_1-492.png)
 
