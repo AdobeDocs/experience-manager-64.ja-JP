@@ -10,10 +10,10 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aee5f5a7-8462-4d42-8d96-8a7eb317770e
 translation-type: tm+mt
-source-git-commit: b46164c81890a41e3811a65534c264884e8562fc
+source-git-commit: 821cbc7fc1f92f1ac2a4044798c7e008c6248b92
 workflow-type: tm+mt
-source-wordcount: '2247'
-ht-degree: 68%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -60,6 +60,10 @@ If you are using Apache Maven as a build system (which is the case for most AEM 
 
 Sonatype Nexus、Apache Archiva または JFrog Artifactory などの Maven Repository Manager を既に使用している場合は、このリポジトリマネージャーを参照するための適切な設定をプロジェクトに追加し、使用しているリポジトリマネージャーにアドビの Maven リポジトリ（[https://repo.adobe.com/nexus/content/groups/public/](https://repo.adobe.com/nexus/content/groups/public/)）を追加します。
 
+>[!NOTE]
+>
+>AEM 6.4.8.2以降では、UberJarおよびその他の関連アーティファクトは、AdobeのパブリックMavenリポジトリ [(repo.adobe.com)ではなく、](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/) Maven Centralリポジトリで使用できます。 メインのUberJarファイルの名前がに変更され `uber-jar-<version>.jar`ます。 その結果、 `classifier`タグに値 `apis``dependency` はありません。
+
 If you are not using a repository manager, then you will need to add a *repository* element to your *pom.xml* file:
 
 ```xml
@@ -67,7 +71,7 @@ If you are not using a repository manager, then you will need to add a *reposito
     <repository>
         <id>adobe-public-releases</id>
         <name>Adobe Public Repository</name>
-        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <layout>default</layout>
     </repository>
 </repositories>
@@ -75,7 +79,7 @@ If you are not using a repository manager, then you will need to add a *reposito
     <pluginRepository>
         <id>adobe-public-releases</id>
         <name>Adobe Public Repository</name>
-        <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+        <url>https://repo.maven.apache.org/maven2/</url>
         <layout>default</layout>
     </pluginRepository>
 </pluginRepositories>
