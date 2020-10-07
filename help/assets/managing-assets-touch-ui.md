@@ -4,10 +4,10 @@ description: タッチ操作に対応したAEM Assetsのユーザーインター
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: dc3015732e2fe6b69117f736b31d89c5388d2be8
 workflow-type: tm+mt
-source-wordcount: '9811'
-ht-degree: 67%
+source-wordcount: '10015'
+ht-degree: 65%
 
 ---
 
@@ -424,6 +424,12 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
 
 ### アセットの移動または名前変更 {#moving-or-renaming-assets}
 
+アセット（またはフォルダー）を別の場所に移動した場合、アセットのコピー時とは異なり、アセット（またはフォルダー）は複製されません。 アセット（またはフォルダー）はターゲットーの場所に配置され、ソースの場所から削除されます。 アセットを新しい場所に移動する際に、アセットの名前を変更することもできます。 公開済みのアセットを別の場所に移動する場合は、アセットを再公開するオプションがあります。 デフォルトでは、公開済みアセットに対する移動操作は、自動的に非公開にします。 アセットの移動時に作成者が「再公開  」オプションを選択した場合、移動されたアセットは再公開されます。
+
+![既に公開済みのアセットを移動するときに、そのアセットを再公開できます](assets/republish-on-move.png)
+
+アセットまたはフォルダを移動するには：
+
 1. 移動するアセットの場所に移動します。
 
 1. Select the asset, and tap the **[!UICONTROL Move]** icon from the toolbar.
@@ -461,6 +467,14 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
    * Tap **[!UICONTROL Cancel]** to stop the move operation.
 
    参照を更新しなければ、引き続きアセットの以前のパスが示されます。参照を調整すると、更新され、アセットの新しいパスが反映されます。
+
+### ドラッグ操作を使用したアセットの移動 {#move-using-drag}
+
+アセット（またはフォルダ）は、ユーザインターフェイスの「 [!UICONTROL 移動] 」オプションを使用する代わりに、兄弟ターゲットにドラッグして移動できます。 ただし、この操作はリスト表示でのみ可能です。
+
+アセットをドラッグして移動しても、アセット [!UICONTROL の移動] ウィザードは開かないので、移動中にアセットの名前を変更するオプションはありません。 また、既に公開済みのアセットは、ドラッグ操作によって再公開されます。ユーザーの再公開の承認を求めることはありません。
+
+![アセットをドラッグして、兄弟フォルダーにアセットを移動](assets/move-by-drag.gif)
 
 ## レンディションの管理 {#managing-renditions}
 
