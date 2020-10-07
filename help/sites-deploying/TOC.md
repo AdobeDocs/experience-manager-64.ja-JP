@@ -6,10 +6,10 @@ user-guide-title: AEM 6.4デプロイガイド
 breadcrumb-title: Deploying Guide
 user-guide-description: Learn more about installing, deploying, and the architecture of Adobe Experience Manager 6.4, including our Adobe Managed Services cloud deployment.
 translation-type: tm+mt
-source-git-commit: a83c39939afe85586aa32460f141fa18bfc80a3f
+source-git-commit: e7da0bb7906c3ad3d04531db0abfbc658646f6e4
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 93%
+source-wordcount: '328'
+ht-degree: 94%
 
 ---
 
@@ -37,7 +37,6 @@ ht-degree: 93%
    + [oak-run.jar でのインデックス作成の使用例](oak-run-indexing-usecases.md)
    + [Oak インデックスのトラブルシューティング](troubleshooting-oak-indexes.md)
    + [集計した使用状況の統計の収集をオプトインする方法](opt-in-aggregated-usage-statistics.md)
-   + [リリース車両定義の更新](update-release-vehicle-definitions.md)
    + [トラブルシューティング](troubleshooting.md)
 + AEM の設定 {#configuring}
    + [設定の基本概念](configuring.md)
