@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.4累積Fix Pack固有のリリースノ�
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 3b96c351b3deb72e1381e101433f4246fd26af1b
+source-git-commit: e7da0bb7906c3ad3d04531db0abfbc658646f6e4
 workflow-type: tm+mt
-source-wordcount: '3402'
+source-wordcount: '3420'
 ht-degree: 15%
 
 ---
@@ -32,7 +32,7 @@ AEM 6.4.8.2は、AEM 6.4 Service Pack 8に依存するCumulative Fix Pack(CFP)�
 
 AEM 6.4.8.2では、組み込みのリポジトリ(Apache Jackrabbit Oak)がバージョン1.8.22に更新されました。
 
-For information on CFP and other types of releases, see [AEM Update Release Vehicle Definitions](../sites-deploying/update-release-vehicle-definitions.md)
+For information on CFP and other types of releases, see [AEM Update Release Vehicle Definitions](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
 
 Adobe Experience Manager6.4.8.2には、次の問題の修正が含まれています。
 
@@ -175,7 +175,7 @@ AEM 6.4.8.1の主な特徴は次のとおりです。
 * パッケージ共有のAdobe Experience Managerとの統合を削除しました。
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.8.21 に更新しました。
 
-For information on CFP and other types of releases, see [AEM Update Release Vehicle Definitions](../sites-deploying/update-release-vehicle-definitions.md)
+For information on CFP and other types of releases, see [AEM Update Release Vehicle Definitions](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
 
 Adobe Experience Manager6.4.8.1では、次の問題が修正されました。
 
