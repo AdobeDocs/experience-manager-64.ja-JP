@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6696c325-d188-41c8-a39f-c8ae7f339fe8
 translation-type: tm+mt
-source-git-commit: b7be355f788f07eea2d1333abb4220dd645ef53f
+source-git-commit: e7da0bb7906c3ad3d04531db0abfbc658646f6e4
 workflow-type: tm+mt
-source-wordcount: '1843'
-ht-degree: 74%
+source-wordcount: '1835'
+ht-degree: 75%
 
 ---
 
@@ -58,7 +58,6 @@ ht-degree: 74%
 * [AEM プラットフォームの概要](/help/sites-deploying/platform.md)
 * [パフォーマンスガイドライン](/help/sites-deploying/performance-guidelines.md)
 * [AEM Mobile 使用の手引き](/help/mobile/getting-started-aem-mobile.md)
-* [リリース車両定義の更新](/help/sites-deploying/update-release-vehicle-definitions.md)
 * [AEM Screens とは](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## 基本概念 {#basic-concepts}
@@ -69,7 +68,7 @@ Adobe Experience Manager は、商業 Web サイトおよび関連サービス�
 
 インフラストラクチャレベルでは、AEM は以下の機能を提供します。
 
-* **Web アプリケーションサーバ**: AEMは、スタンドアロンモード（統合Jetty Webサーバーを含む）で、またはサードパーティのアプリケーションサーバー（WebLogic、WebSphereなど）内のWebアプリケーションとしてデプロイできます。
+* **Web アプリケーションサーバ**:AEMは、スタンドアロンモード（統合Jetty Webサーバーを含む）で、またはサードパーティのアプリケーションサーバー（WebLogic、WebSphereなど）内のWebアプリケーションとしてデプロイできます。
 * **Web アプリケーションフレームワーク**：AEM には Sling Web アプリケーションフレームワークが組み込まれており、RESTful な、コンテンツ指向の Web アプリケーションを簡単に作成できます。
 * **コンテンツリポジトリ**：AEM には、非構造化データおよび半構造化データ専用に設計された階層型データベースの一種である Java コンテンツリポジトリ（JCR）が含まれています。このリポジトリには、ユーザーに表示されるコンテンツだけでなく、アプリケーションで使用されるすべてのコード、テンプレートおよび内部データが格納されます。
 
@@ -98,7 +97,7 @@ AEM の用語では、「インスタンス」は、サーバー上で実行さ�
 
 * **ディスパッチャー**：AEM ディスパッチャーモジュールで補強された静的 Web サーバー（Apache httpd、Microsoft IIS など）。パブリッシュインスタンスで生成された Web ページをキャッシュしてパフォーマンスを向上します。
 
-この設定には、多くの高度なオプションと詳細情報がありますが、作成者、発行、ディスパッチャーの基本パターンは、ほとんどのデプロイメントの中核にあります。 まず、比較的単純な設定に焦点を当てます。 アドバンス展開オプションについては、以下で説明します。
+この設定には、多くの高度なオプションと詳細情報がありますが、作成者、発行、ディスパッチャーの基本パターンは、ほとんどのデプロイメントの中核にあります。まず、比較的単純な設定に焦点を当てます。アドバンス展開オプションについては、以下で説明します。
 
 以下のセクションでは、両方のシナリオについて説明します。
 
@@ -128,13 +127,13 @@ AEM Managed Services を使用すれば、次のようなメリットを享受�
 
 **クラウドマネージャー**：Adobe Experience Manager Services 製品の一部である Cloud Manager は、組織がクラウド内で Adobe Experience Manager を自己管理することをさらに可能にするセルフサービスポータルです。これには、IT チームと実装パートナーがパフォーマンスやセキュリティを犠牲にすることなくカスタマイズやアップデートの提供を迅速化できるようにする、最先端の継続的インテグレーションと継続的配信（CI／CD）パイプラインが含まれます。Cloud Manager は、Adobe Managed Service のお客様のみご利用いただけます。
 
-To learn more about Cloud Manager and its resources, please refer to [**Cloud Manager User Guide **](https://helpx.adobe.com/experience-manager/cloud-manager/user-guide.html).
+To learn more about Cloud Manager and its resources, please refer to [**Cloud Manager User Guide**](https://helpx.adobe.com/experience-manager/cloud-manager/user-guide.html).
 
 ## 概要 {#getting-started}
 
 ### 前提条件 {#prerequisites}
 
-While production instances are usually run on dedicated machines running an officially supported OS (see [Technical Requirements](/help/sites-deploying/technical-requirements.md)), the Experience Manager server will actually run on any system that supports [**Java Standard Edition 8 **](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+While production instances are usually run on dedicated machines running an officially supported OS (see [Technical Requirements](/help/sites-deploying/technical-requirements.md)), the Experience Manager server will actually run on any system that supports [**Java Standard Edition 8**](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 AEM に習熟したい場合や、AEM で開発する場合は、Apple OS X またはデスクトップ版の Microsoft Windows または Linux を実行しているローカルマシンにインストールされたインスタンスを使用するのが一般的です。
 
@@ -142,7 +141,7 @@ On the client-side, AEM works with all modern browsers (**Microsoft Edge**, **In
 
 ### ソフトウェアの入手 {#getting-the-software}
 
-Customers with a valid maintenance and support contract should have received a mail notification with a code and be able to download AEM from the [**Adobe Licensing Website **](https://licensing.adobe.com/). Business partners can request download access from[**spphelp@adobe.com **](mailto:spphelp@adobe.com).
+Customers with a valid maintenance and support contract should have received a mail notification with a code and be able to download AEM from the [**Adobe Licensing Website**](https://licensing.adobe.com/). Business partners can request download access from [**spphelp@adobe.com**](mailto:spphelp@adobe.com).
 
 AEM ソフトウェアパッケージには、次の 2 つの形式があります。
 
@@ -320,6 +319,5 @@ AEM が起動し、Web ブラウザーが適切なページに自動的にリダ
 * [AEM プラットフォームの概要](/help/sites-deploying/platform.md)
 * [パフォーマンスガイドライン](/help/sites-deploying/performance-guidelines.md)
 * [AEM Mobile 使用の手引き](/help/mobile/getting-started-aem-mobile.md)
-* [リリース車両定義の更新](/help/sites-deploying/update-release-vehicle-definitions.md)
 * [AEM Screens とは](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
