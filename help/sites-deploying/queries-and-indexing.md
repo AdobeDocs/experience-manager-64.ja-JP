@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 translation-type: tm+mt
-source-git-commit: 4e4dfb105e12b6855ec32a72246d6b921d6d7829
+source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
 workflow-type: tm+mt
-source-wordcount: '2882'
+source-wordcount: '2885'
 ht-degree: 88%
 
 ---
@@ -85,8 +85,8 @@ The **Traversal Index** is used if no other indexer is available. つまり、�
 1. このノードに **PropertyIndex** という名前を付け、ノードタイプを **oak:QueryIndexDefinition** に設定します。
 1. 新しいノードに対して次のプロパティを設定します。
 
-   * **type:**  `property` （文字列型）
-   * **propertyNames:**  `jcr:uuid` （名前のタイプ）
+   * **type:** `property` （文字列型）
+   * **propertyNames:** `jcr:uuid` （名前タイプ）
 
    この例では、`jcr:uuid` プロパティに対してインデックスを作成します。このプロパティの役割は、関連付けられたノードの Universally Unique Identifier（UUID）を公開することです。
 
@@ -123,8 +123,8 @@ AEM 6 では、Apache Lucene ベースのフルテキストインデクサーを
 1. このノードに **LuceneIndex** という名前を付け、ノードタイプを **oak:QueryIndexDefinition** に設定します。
 1. この  ノードに次のプロパティを追加します。
 
-   * **type:**  `lucene` （文字列型）
-   * **async:**  `async` （文字列型）
+   * **type:** `lucene` （文字列型）
+   * **async:** `async` （文字列型）
 
 1. 変更内容を保存します。
 
@@ -173,7 +173,7 @@ select * from [nt:base] where [alias] = '/admin'
    false (of type Boolean)
    ```
 
-* **includePropertyNames:** `["alias"] (of type String)`
+* **includePropertyNames:**`[alias]` （文字列型）
 
 >[!NOTE]
 >
@@ -313,9 +313,9 @@ AEM は、Web コンソール経由で設定可能な組み込み Solr サーバ
 1. CRXDE を開き、Admin でログインします。
 1. **solrlndex** というノード（タイプ **oak:QueryIndexDefinition**）を **oak:index** の下に追加し、次のプロパティを設定します。
 
-   * **type:** `solr`（文字列型）
-   * **async:** `async`（文字列型）
-   * **reindex:** `true`（ブール型）
+   * **type:**`solr`（文字列型）
+   * **async:**`async`（文字列型）
+   * **reindex:**`true`（ブール型）
 
 1. 変更内容を保存します。
 
