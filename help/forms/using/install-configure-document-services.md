@@ -7,10 +7,10 @@ uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 translation-type: tm+mt
-source-git-commit: 5aff983a0e8ef2f3ca790a997b37276567f543fe
+source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
 workflow-type: tm+mt
 source-wordcount: '4295'
-ht-degree: 66%
+ht-degree: 67%
 
 ---
 
@@ -77,7 +77,7 @@ AEM Forms ドキュメントサービスのインストールおよび設定に�
 * PDF GeneratorがMicrosoft WindowsとLinuxで変換を実行するために必要なクライアントソフトウェアがインストールされています。
 
    * **Microsoft Windows**: [Microsoft](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)Officeまたは [Apache OpenOfficeのインストール](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)
-   * **Linux**: Apache [OpenOfficeのインストール](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)
+   * **Linux**:Apache [OpenOfficeのインストール](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)
 
 >[!NOTE]
 >
@@ -392,16 +392,16 @@ Unicode フォントを、使用しているシステムに応じて、次のい
 
 AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、AEM Forms ドキュメントサービスおよびその他の AEM Forms 機能が含まれています。次の手順を実行してパッケージをインストールします。
 
-1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Software Distributionにログインするには、Adobe IDが必要です。
-1. ヘッダーメニューにある **[!UICONTROL Adobe Experience Manager]** をタップします。
-1. In the **[!UICONTROL Filters]** section:
-   1. [ **[!UICONTROL ソリューション]****ドロップダウンリストから[]** Forms]を選択します。
-   2. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
-1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「EULA条項に **[!UICONTROL 同意します]**」を選択して、「 **[!UICONTROL ダウンロード]**」をタップします。
-1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
+1. Open [Software Distribution](https://experience.adobe.com/downloads). ソフトウェアディストリビューションにログインするには、Adobe ID が必要です。
+1. Tap **[!UICONTROL Adobe Experience Manager]** available in the header menu.
+1. 「**[!UICONTROL フィルター]**」セクションで、
+   1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
+   2. パッケージのバージョンとタイプを選択します。 You can also use the **[!UICONTROL Search Downloads]** option to filter the results.
+1. Tap the package name applicable to your operating system, select **[!UICONTROL Accept EULA Terms]**, and tap **[!UICONTROL Download]**.
+1. Open [Package Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)  and click **[!UICONTROL Upload Package]** to upload the package.
 1. Select the package and click **[!UICONTROL Install]**.
 
-   このパッケージは、 [AEM Formsのリリース記事に記載されている直接リンクからダウンロードすることもできます](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) 。
+   You can also download the package via the direct link listed in the [AEM Forms releases](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) article.
 
 1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**その際、すぐにサーバーを停止しないでください。** AEM Formsサーバーを停止する前に、ServiceEvent REGISTEREDメッセージとServiceEvent UNREGISTEREDメッセージが `[AEM-Installation-Directory]/crx-quickstart/logs/error`.logファイルに表示されなくなるまで待ち、ログは安定しています。
 
@@ -499,7 +499,7 @@ Microsoft Windows では、PDF Generator サービスは Adobe Acrobat を使用
 
       Acrobat が PDF Generator サービスを実行するように設定されます。
 
-1. System Readiness Tool（SRT）を実行して、Acrobat インストールを検証します。このツールは、PDF Generatorの変換を実行するコンピューターが適切に設定されているかどうかを確認し、指定されたパスでレポートを生成します。
+1. System Readiness Tool（SRT）を実行して、Acrobat インストールを検証します。PDF Generatorの変換を実行するコンピューターが適切に設定されているかどうかを確認し、指定されたパスでレポートを生成します。
 
    1. コマンドプロンプトを開きます。`[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\etc\fd\ pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\srt` フォルダーに移動し、コマンドプロンプトから次のコマンドを実行します。
 
@@ -555,8 +555,7 @@ DocAssurance サービスは PDF ドキュメントに使用権限を適用で�
 
    >[!NOTE]
    >
-   >* 実稼働環境では、評価用の資格情報を実稼働用の資格情報に置き換えます。期限切れの資格情報または評価用の資格情報を更新する前に、古いReader拡張機能の資格情報を削除してください。
-
+   >実稼働環境では、評価用の資格情報を実稼働用の資格情報に置き換えます。期限切れの資格情報または評価用の資格情報を更新する前に、古いReader拡張機能の資格情報を削除してください。
 
 1. 「 **[!UICONTROL ユーザー設定を]** 編集 **** 」ページで「保存して閉じる」をクリックします。
 
