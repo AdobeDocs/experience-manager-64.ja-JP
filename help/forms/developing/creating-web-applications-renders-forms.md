@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: f29b089e-8902-4744-81c5-15ee41ba8069
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
 workflow-type: tm+mt
 source-wordcount: '1842'
 ht-degree: 1%
@@ -29,7 +29,7 @@ Javaサーブレットを使用してFormsサービスを呼び出し、フォ�
 >
 >この節では、Formsサービスを呼び出し、フラグメントに基づいてフォームをレンダリングするJavaサーブレットを使用するWebベースのアプリケーションを作成する方法について説明します。 (See [Rendering Forms Based on Fragments](/help/forms/developing/rendering-forms-based-fragments.md).)
 
-Javaサーブレットを使用してフォームをクライアントWebブラウザーに書き込み、顧客が表示してフォームにデータを入力できるようにすることができます。 データをフォームに入力した後、Webユーザーはフォーム上の送信ボタンをクリックして情報をJavaサーブレットに送信し、Javaサーブレットでデータの取得と処理を行うことができます。 例えば、データを別のプロセスに送信できます。
+Javaサーブレットを使用してフォームをクライアントWebブラウザーに書き込み、顧客が表示してフォームにデータを入力できるようにします。 データをフォームに入力した後、Webユーザーはフォーム上の送信ボタンをクリックして情報をJavaサーブレットに送信し、Javaサーブレットでデータの取得と処理を行うことができます。 例えば、データを別のプロセスに送信できます。
 
 次の図に示すように、米国ベースのフォームデータまたはカナダベースのフォームデータを選択できるWebベースのアプリケーションの作成方法について説明します。
 
@@ -119,7 +119,7 @@ For the location of these JAR files, see [Including AEM Forms Java library files
 
 >[!NOTE]
 >
->Javaサーブレットを呼び出すHTMLページの作成について詳しくは、 `RenderFormFragment` Webページの[作成を参照してください](/help/forms/developing/rendering-forms.md#creating-the-web-page)。
+>Javaサーブレットを呼び出すHTMLページの作成について詳しくは、 `RenderFormFragment` Webページの [作成を参照してください](/help/forms/developing/rendering-forms.md#creating-the-web-page)。
 
 ### サーブレット用のJavaアプリケーションロジックの作成 {#creating-java-application-logic-for-the-servlet}
 
@@ -379,7 +379,7 @@ Formsサービスを呼び出すJavaサーブレットをデプロイするに�
 
 1. 「 **プロジェクトエクスプローラ** 」(Project Explorer)ウィンドウで、 `FragmentsWebApplication` プロジェクトを右クリックし、「 **エクスポート** 」(Export) **/「** WARファイル」(WAR file)を選択します。
 1. 「 **Webモジュール** 」テキストボックスに、Javaプロジェクト `FragmentsWebApplication` の名前を入力します。
-1. 「 **Destination** 」テキストボックス `FragmentsWebApplication.war`**に、ファイル名&#x200B;**を入力し、WARファイルの場所を指定して、「Finish」をクリックします。
+1. 「 **Destination** 」テキストボックス `FragmentsWebApplication.war`**に、ファイル名**&#x200B;を入力し、WARファイルの場所を指定して、「Finish」をクリックします。
 
 ### J2EEアプリケーションサーバーへのWARファイルのデプロイ {#deploying-the-war-file-to-the-j2ee-application-server}
 
