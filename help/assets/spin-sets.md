@@ -10,7 +10,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: afacb3ad-e4ad-4d06-a898-f3f2da8bbb64
 translation-type: tm+mt
-source-git-commit: 7cb0f63f0cd83e6e40ed51b2fd300f010278aa56
+source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
 workflow-type: tm+mt
 source-wordcount: '1838'
 ht-degree: 68%
@@ -49,7 +49,8 @@ ht-degree: 68%
    >[!NOTE]
    >
    >You can also create Spin Sets automatically through [batch set presets](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
-   *バッチセットは、アセット取り込みの一環としてIPS(Image Production System)によって作成され、ダイナミックメディア —Scene7モードでのみ使用できます*。
+   >
+   >*バッチセットは、アセット取り込みの一環としてIPS(Image Production System)によって作成され、ダイナミックメディア —Scene7モードでのみ使用できます*。
 
 1. 必要に応じて[スピンセットビューアプリセット](managing-viewer-presets.md)を設定します。
 
@@ -103,7 +104,9 @@ If you need to, you can [edit Spin Sets](#editing-spin-sets). In addition, you c
 
 >[!NOTE]
 >
->[バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用してスピンセットを自動的に作成することもできます。バッチセットは、アセット取り込みの一環としてIPS(Image Production System)によって作成され、ダイナミックメディア —Scene7モードでのみ使用できます。
+>[バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用してスピンセットを自動的に作成することもできます。
+>
+>バッチセットは、アセット取り込みの一環としてIPS(Image Production System)によって作成され、ダイナミックメディア —Scene7モードでのみ使用できます。
 >
 >[Dynamic Media - Scene7 モードの設定](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)の「画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成」を参照してください。
 
