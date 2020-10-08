@@ -3,7 +3,7 @@ title: AEM Assets と Brand Portal の連携の設定
 description: 'Brand Portalにアセットやコレクションを公開するためのBrand Portalを使用したAEM Assetsの設定方法について説明します。 '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: 656a06ae70293a3f1ec6768fc9eea15f1329c42c
+source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
 workflow-type: tm+mt
 source-wordcount: '1692'
 ht-degree: 58%
@@ -21,15 +21,14 @@ Adobe Experience Manager（AEM）Assets と Brand Portal の連携が、Adobe I/
 >
 >これまで、Brand Portal は、旧来の OAuth ゲートウェイを通じてクラシック UI で設定されていました。このゲートウェイは、JWT トークン交換を使用して認証用の IMS アクセストークンを取得します。
 
-
 >[!TIP]
 >
 >***既存のお客様のみ***
 >
 >既存のレガシー OAuth Gateway 設定を引き続き使用することをお勧めします。レガシー OAuth Gateway 設定に問題が発生した場合は、既存の設定を削除し、Adobe I/O から新しい設定を作成します。
 
-
 このヘルプでは、次の2つの使用例について説明します。
+
 * [新しい設定](#configure-new-integration-64):新しいBrand Portalユーザーで、Brand PortalでAEM Assets作成者インスタンスを設定する場合は、AdobeI/Oで新しい設定を作成できます。
 * [アップグレード設定](#upgrade-integration-64):既存のBrand Portalユーザーで、従来のOAuth GatewayのBrand Portalで設定したAEM Assets作成者インスタンスを使用している場合は、既存の設定を削除し、AdobeI/Oで新しい設定を作成することをお勧めします。
 
@@ -46,7 +45,6 @@ AEM Assets と Brand Portal の連携を設定するには以下が必要です�
 * 最新のサービスパックを適用した実行中の AEM Assets オーサーインスタンス
 * Brand Portal テナント URL
 * Brand Portal テナントの IMS 組織に対するシステム管理者権限を持つユーザー
-
 
 [AEM 6.4のダウンロードとインストール](#aemquickstart)
 
@@ -73,6 +71,7 @@ AEM をダウンロードしたら、「[デプロイメントと保守](https:/
 ## 設定の作成 {#configure-new-integration-64}
 
 ブランドポータルを使用してAEM Assetsを初めて設定する場合は、一覧に示す順序で次の手順を実行します。
+
 1. [公開証明書の取得](#public-certificate)
 1. [Adobe I/O 統合環境の作成](#createnewintegration)
 1. [IMS アカウント設定の作成](#create-ims-account-configuration)
@@ -82,7 +81,6 @@ AEM をダウンロードしたら、「[デプロイメントと保守](https:/
 >[!NOTE]
 >
 >AEM Assetsの作成者インスタンスは、1つのBrand Portalテナントでのみ構成できます。
-
 
 ### IMS 設定の作成 {#create-ims-configuration}
 
@@ -205,8 +203,6 @@ Adobe I/O 統合環境により、API キー、クライアント秘密鍵、お
 >
 >IMS 設定がヘルスチェックに合格していることを確認します。設定がヘルスチェックに合格しない場合は無効です。削除して、新しい有効な設定を作成する必要があります。
 
-
-
 ### Cloud Service の設定{#configure-the-cloud-service}
 
 Brand Portal クラウドサービス設定を作成するには、以下の手順を実行します。
@@ -258,7 +254,6 @@ Brand Portal クラウドサービス設定を作成するには、以下の手�
    >[!NOTE]
    >
    >レプリケーションエージェントは並行して動作し、ジョブの分散を均等に共有するので、パブリッシング速度を元の速度の4倍に増やします。 クラウドサービスの設定後、複数のアセットの並列発行を有効にするために、デフォルトでアクティブ化される複製エージェントを有効にするために、追加の設定は必要ありません。
-
 
 1. To verify the connection between AEM Assets author and Brand Portal, click **[!UICONTROL Test Connection]**.
 
@@ -360,4 +355,3 @@ AdobeI/O上のAEM 6.4オーサーインスタンスに設定 [を](#configure-ne
 * [Brand Portal へのアセットの公開](brand-portal-publish-assets.md)
 * [アセットおよびフォルダーの Brand Portal への公開](brand-portal-publish-folder.md)
 * [Brand Portal へのコレクションの公開](brand-portal-publish-collection.md)
-
