@@ -10,7 +10,7 @@ topic-tags: managing
 content-type: reference
 discoiquuid: 150b43e3-9fb3-4c1c-b1cd-ccfd162974ad
 translation-type: tm+mt
-source-git-commit: 5ea8fac7eb0d474aa27a0203ab324d6931ce5571
+source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
 workflow-type: tm+mt
 source-wordcount: '3117'
 ht-degree: 98%
@@ -254,7 +254,7 @@ AEM で受信要求のマッピングまたはページ上の URL の書き換�
 
 1. Dispatcher が `/my-page.html` に応答をキャッシュし、応答をユーザーに返します。
 1. コンテンツの作成者がこのページを変更し、アクティベートします。
-1. Dispatcher フラッシュエージェントが `/content/my-brand/my-page`** の無効化要求を送信します。**Dispatcher はこのパスにページをキャッシュしていないので、古いコンテンツがキャッシュされたままになり、更新されません。
+1. Dispatcher フラッシュエージェントが `/content/my-brand/my-page`**の無効化要求を送信します。** Dispatcher はこのパスにページをキャッシュしていないので、古いコンテンツがキャッシュされたままになり、更新されません。
 
 キャッシュの無効化を目的として、短い URL を長い URL にマッピングするカスタムのディスパッチフラッシュルールを設定する方法があります。
 
