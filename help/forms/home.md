@@ -1,18 +1,18 @@
 ---
-title: AEM 6.4 Forms ユーザーガイド
+title: Adobe Experience Manager6.4Formsガイド
 seo-title: AEM 6.4 Forms ユーザーガイド
 description: このガイドでは、デジタルフォームの作成、管理、発行、更新を含む、すべてのAEM Formsタスクについて説明します。
 seo-description: デジタルフォームの作成、管理、発行、更新の方法を含む、AEM Formsのすべてのタスクについて説明します。
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: 2872b6ebbd5763e486857359b3bdee965f6c9d48
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 32%
+source-wordcount: '370'
+ht-degree: 30%
 
 ---
 
 
-# AEM 6.4 Forms ユーザーガイド
+# Adobe Experience Manager6.4Formsガイド
 
 このガイドでは、デジタルフォームの作成、管理、発行、更新を含む、すべてのAEM Formsタスクについて説明します。
 
