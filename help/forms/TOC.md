@@ -3,18 +3,18 @@ cloud: experience-cloud
 product: adobe experience manager
 sub-product: 'フォーム[ふぉーむ] '
 audience: end-user
-user-guide-title: AEM 6.4 Forms ユーザーガイド
+user-guide-title: Adobe Experience Manager6.4Formsガイド
 breadcrumb-title: Forms Guide
 user-guide-description: Create, manage, publish, and update digital forms.
 translation-type: tm+mt
-source-git-commit: a83c39939afe85586aa32460f141fa18bfc80a3f
+source-git-commit: 2872b6ebbd5763e486857359b3bdee965f6c9d48
 workflow-type: tm+mt
-source-wordcount: '3711'
+source-wordcount: '3713'
 ht-degree: 73%
 
 ---
 
-# AEM 6.4 - Forms User Guide {#forms}
+# Adobe Experience Manager6.4Formsガイド {#forms}
 
 + [AEM 6.4 Forms ユーザーガイド](home.md)
 + リリースノート {#release-notes-new-features}
