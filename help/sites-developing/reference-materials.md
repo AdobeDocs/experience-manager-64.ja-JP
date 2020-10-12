@@ -11,10 +11,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: 39d1cb2e-18f5-4d08-b983-a06b1f470c51
 translation-type: tm+mt
-source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
+source-git-commit: de04a6c205e4379c7f8a9ab5574985259d6541c3
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 72%
+source-wordcount: '270'
+ht-degree: 73%
 
 ---
 
@@ -60,7 +60,3 @@ AEM 配信およびコンテンツ管理 API
 * [Jackrabbit Oak API](https://jackrabbit.apache.org/oak/docs/oak_api/overview.html)
 * [Java Content Repository API](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)
 * [Apache Jackrabbit API](https://jackrabbit.apache.org/api)
-
->[!VIDEO](https://vimeo.com/)
-
->[!VIDEO](https://vimeo.com/)
