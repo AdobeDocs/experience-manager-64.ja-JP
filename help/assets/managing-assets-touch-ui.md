@@ -4,9 +4,9 @@ description: タッチ操作に対応したAEM Assetsのユーザーインター
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
+source-git-commit: c86c84efeb25673490373273a9f4720381e46454
 workflow-type: tm+mt
-source-wordcount: '10015'
+source-wordcount: '10031'
 ht-degree: 65%
 
 ---
@@ -424,7 +424,7 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
    >
    >ツールバーの&#x200B;**[!UICONTROL 貼り付け]**&#x200B;アイコンが使用できるのは、貼り付け操作が完了するまでです。
 
-### アセットの移動または名前変更 {#moving-or-renaming-assets}
+## Move and rename assets {#moving-or-renaming-assets}
 
 アセット（またはフォルダー）を別の場所に移動した場合、アセットのコピー時と異なり、アセット（またはフォルダー）は複製されません。 アセット（またはフォルダー）はターゲットーの場所に配置され、ソースの場所から削除されます。 アセットを新しい場所に移動する際に、アセットの名前を変更することもできます。 公開済みのアセットを別の場所に移動する場合は、アセットを再公開するオプションがあります。 デフォルトでは、公開済みアセットに対する移動操作は、自動的に非公開にします。 アセットの移動時に作成者が「再公開  」オプションを選択した場合、移動されたアセットは再公開されます。
 
@@ -434,39 +434,42 @@ To create tags, you require write permission for `/content/cq:tags/default` in t
 
 1. 移動するアセットの場所に移動します。
 
-1. Select the asset, and tap the **[!UICONTROL Move]** icon from the toolbar.
+![既に公開済みのアセットを移動するときに、そのアセットを再公開できます](assets/republish-on-move.png)
 
-   ![move_icon](assets/move_icon.png)
+アセットまたはフォルダを移動するには：
 
-1. In the **[!UICONTROL Move Assets]** wizard, do one of the following:
+1. 移動するアセットの場所に移動します。
 
-   * 移動後のアセットの名前を指定します。Then tap **[!UICONTROL Next]** to proceed.
-   * Tap **[!UICONTROL Cancel]** to stop the process.
+1. Select the asset, and click **[!UICONTROL Move]** option from the toolbar.
+   ![アセットツールバーの移動オプション](assets/do-not-localize/move_icon.png)
 
+1. In the [!UICONTROL Move Assets] wizard, do one of the following:
+
+   * 移動後のアセットの名前を指定します。Then click **[!UICONTROL Next]** to proceed.
+
+   * Click **[!UICONTROL Cancel]** to stop the process.
    >[!NOTE]
    >
-   >新しい場所に同じ名前のアセットがない場合は、同じ名前を指定できます。ただし、アセットの移動先に同じ名前のアセットが既に存在する場合は、別の名前を使用する必要があります。同じ名前を使用すると、その名前のバリエーションが自動的に生成されます。例えば、「Square」という名前のアセットの場合、自動的にそのコピーの名前が「Square1」として生成されます。
-
-   >[!NOTE]
-   >
-   >以下の文字（スペース区切りリスト）はサポートされません。
-   >* アセットファイル名に含めてはいけない文字：`* / : [ \ \ ] | # % { } ? &`
-   >* アセットフォルダー名に含めてはいけない文字：`* / : [ \ \ ] | # % { } ? \" . ^ ; + & \t`
+   >* 新しい場所に同じ名前のアセットがない場合は、同じ名前を指定できます。ただし、アセットの移動先に同じ名前のアセットが既に存在する場合は、別の名前を使用する必要があります。同じ名前を使用すると、その名前のバリエーションが自動的に生成されます。例えば、「Square」という名前のアセットの場合、自動的にそのコピーの名前が「Square1」として生成されます。
+   >* 名前の変更時に、ファイル名に空白は使用できません。
 
 
-1. On the **[!UICONTROL Select Destination]** page, do one of the following:
+1. **[!UICONTROL 宛先を選択]**&#x200B;ダイアログで、次のいずれかの操作をおこないます。
 
-   * Navigate to the new location for the assets, and then tap **[!UICONTROL Next]** to proceed.
-   * Tap **[!UICONTROL Back]** to return to the **[!UICONTROL Rename]** page.
+   * Navigate to the new location for the assets, and then click **[!UICONTROL Next]** to proceed.
+
+   * Click **[!UICONTROL Back]** to return to the **[!UICONTROL Rename]** screen.
 
 1. 移動されるアセットに参照ページ、アセット、コレクションがある場合は、「**[!UICONTROL 宛先を選択]**」タブの横に「**[!UICONTROL 参照を調整]**」タブが表示されます。
 
-   Do one of the following on the **[!UICONTROL Adjust References]** page:
+   **[!UICONTROL 参照を調整]**&#x200B;画面で次のいずれかの操作を実行します。
 
-   * Specify the references to be adjusted based on the new details, and then tap **[!UICONTROL Move]** to proceed.
-   * From the **[!UICONTROL Adjust]** column, select or deselect references to the assets.
-   * Tap **[!UICONTROL Back]** to return to the **[!UICONTROL Select Destination]** page.
-   * Tap **[!UICONTROL Cancel]** to stop the move operation.
+   * Specify the references to be adjusted based on the new details, and then click **[!UICONTROL Move]** to proceed.
+
+   * 「**[!UICONTROL 調整]**」列で、アセットへの参照を選択／選択解除します。
+   * Click **[!UICONTROL Back]** to return to the **[!UICONTROL Select Destination]** screen.
+
+   * Click **[!UICONTROL Cancel]** to stop the move operation.
 
    参照を更新しなければ、引き続きアセットの以前のパスが示されます。参照を調整すると、更新され、アセットの新しいパスが反映されます。
 
