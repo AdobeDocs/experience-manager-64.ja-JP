@@ -2,19 +2,19 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: end-user
-user-guide-title: AEM 6.4開発ユーザーガイド
-breadcrumb-title: Developing Guide
-user-guide-description: This guide covers how to build out your AEM instance.
+user-guide-title: AEM 6.4 開発ユーザーガイド
+breadcrumb-title: 開発ガイド
+user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 translation-type: tm+mt
 source-git-commit: a83c39939afe85586aa32460f141fa18bfc80a3f
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 80%
+source-wordcount: '815'
+ht-degree: 81%
 
 ---
 
 
-# AEM 6.4 Developing User Guide {#developing}
+# AEM 6.4 開発ユーザーガイド {#developing}
 
 + [開発ユーザガイドの概要](home.md)
 + 開発者向けの概要{#introduction}
@@ -103,10 +103,10 @@ ht-degree: 80%
    + 単一ページアプリケーション{#spas}
       + [SPAの概要とチュートリアル](spa-walkthrough.md)
       + [SPA WKNDチュートリアル](spa-wknd.md)
-      + [AEMでのSPAの使用の手引き — React](spa-getting-started-react.md)
-      + [AEMでのSPAの使用の手引き — Angular](spa-getting-started-angular.md)
+      + [AEMのSPAを使い始める — React](spa-getting-started-react.md)
+      + [AEMのSPA使用の手引き — Angular](spa-getting-started-angular.md)
       + [SPA用のReactコンポーネントの実装](spa-implementing-react-component.md)
-      + [スパディープディブス](spa-deep-dives.md)
+      + [SPAディープディブ](spa-deep-dives.md)
       + [SPA エディターの概要](spa-overview.md)
       + [AEM向けSPAの開発](spa-architecture.md)
       + [SPA ブループリント](spa-blueprint.md)
@@ -114,7 +114,7 @@ ht-degree: 80%
       + [SPAの動的モデルとコンポーネントのマッピング](spa-dynamic-model-to-component-mapping.md)
       + [SPAモデルルーティング](spa-routing.md)
       + [SPAとAdobe Experience Platform Launchの統合](spa-launch.md)
-      + [SPAとサーバー側のレンダリング](spa-ssr.md)
+      + [SPAおよびサーバー側のレンダリング](spa-ssr.md)
       + [SPAリファレンス資料](spa-reference-materials.md)
    + [HTTP API](/help/assets/mac-api-assets.md)
    + [コンテンツフラグメント](/help/assets/content-fragments.md)
