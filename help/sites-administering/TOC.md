@@ -2,19 +2,19 @@
 cloud: experience-cloud
 product: adobe experience manager
 audience: admin-user
-user-guide-title: AEM 6.4 Administering User Guide
-breadcrumb-title: Administering Guide
-user-guide-description: Learn about administering AEM.
+user-guide-title: AEM 6.4 管理ユーザーガイド
+breadcrumb-title: 管理ガイド
+user-guide-description: AEM の管理について説明します。
 translation-type: tm+mt
 source-git-commit: a83c39939afe85586aa32460f141fa18bfc80a3f
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 97%
+source-wordcount: '620'
+ht-degree: 98%
 
 ---
 
 
-# AEM 6.4 Administering User Guide {#administering}
+# AEM 6.4 管理ユーザーガイド {#administering}
 
 + [管理ユーザガイドの概要](home.md)
 + Sites の機能 {#introduction}
