@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: afbe9f80-c2a3-4a46-b9d6-4c9406667d7f
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: 31ddda9f74541dcf58fe70971535ee4180f70d6e
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 100%
+source-wordcount: '761'
+ht-degree: 94%
 
 ---
 
@@ -57,9 +57,8 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 
 ## Dynamic Media Classic アカウントに対して HTTP/2 を有効にする方法 {#what-is-the-process-for-enabling-http-for-my-scene-account}
 
-HTTP/2 に切り替えるためのアドビテクニカルサポート（`s7support@adobe.com`）リクエストを開始する必要があります。自動的にはおこなわれません。
-
-1. サポートリクエストには、以下の情報を記入してください。
+1. Admin Consoleを [使用してサポートケースを作成し](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) 、HTTP/2に切り替えるようにリクエストする必要があります。自動的には実行されません。
+1. サポートケースに次の情報を入力します。
 
    * 主要連絡先名、電子メールおよび電話番号。
    * HTTP/2 への切り替えが必要なすべてのドメイン。つまり、`images.company.com` または `mycompany.scene7.com`。
