@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: d94244ac-a5f6-4c95-ab8c-26b41d25863f
 translation-type: tm+mt
-source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
+source-git-commit: 31ddda9f74541dcf58fe70971535ee4180f70d6e
 workflow-type: tm+mt
-source-wordcount: '1652'
-ht-degree: 100%
+source-wordcount: '1665'
+ht-degree: 98%
 
 ---
 
@@ -131,4 +131,4 @@ DHTML ベースのビューアを実稼動環境で引き続き利用してい�
 
 **詳細についての問い合わせ先を教えてください。**
 
-この FAQ で解決しなかった疑問がある場合は、サポート（[s7support@adobe.com](mailto:s7support@adobe.com)）またはアドビのアカウントマネージャーまでお問い合わせください。
+このFAQですべての質問に回答しなかった場合は、Admin Consoleを [使用してサポート事例を作成するか](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) 、Adobeのアカウントマネージャーにお問い合わせください。
