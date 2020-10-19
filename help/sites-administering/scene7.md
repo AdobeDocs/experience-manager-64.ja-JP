@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: f55e68c3-3309-4400-bef9-fd3afa6e2b5f
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: 31ddda9f74541dcf58fe70971535ee4180f70d6e
 workflow-type: tm+mt
-source-wordcount: '5477'
+source-wordcount: '5491'
 ht-degree: 25%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 25%
 
 # Dynamic Media Classic（Scene7）との統合{#integrating-with-dynamic-media-classic-scene}
 
-[Adobeダイナミックメディアクラシック](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) は、リッチメディアアセットを管理、強化、公開、配信するためのホストソリューションで、Web、モバイル、電子メールおよびインターネットに接続されたディスプレイや印刷機能に対応しています。
+[Adobeダイナミックメディアクラシック](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) は、リッチメディアアセットを管理、強化、公開、およびWeb、モバイル、電子メール、インターネットに接続されたディスプレイや印刷に配信するためのホストソリューションです。
 
 Dynamic Media Classicを使用するには、Dynamic Media ClassicとAEM Assetsが相互にやり取りできるように、クラウド設定を設定する必要があります。 このドキュメントでは、AEMおよびDynamic Media Classicの設定方法を説明します。
 
@@ -29,7 +29,7 @@ Dynamic Media Classicを使用するには、Dynamic Media ClassicとAEM Assets�
 >[!NOTE]
 >
 >* Dynamic Media ClassicのDHTMLビューアプラットフォームは、2014年1月31日に正式に提供終了となりました。 詳しくは、[DHTML ビューアのサポート終了 FAQ](../sites-administering/dhtml-viewer-endoflifefaqs.md) を参照してください。
->* AEMで動作するようにDynamic Media Classicを設定する前に、Dynamic Media ClassicとAEMの統合に関する [ベストプラクティス](#best-practices-for-integrating-scene-with-aem) を参照してください。
+>* AEMで動作するようにDynamic Media Classicを設定する前に、Dynamic Media ClassicとAEMを統合するための [ベストプラクティス](#best-practices-for-integrating-scene-with-aem) を参照してください。
 >* Dynamic Media Classicをカスタムプロキシ設定と共に使用する場合は、AEMの一部の機能で3.x APIを使用している場合と4.x APIを使用している場合で、両方のHTTPクライアントプロキシ設定を設定する必要があります。 3.x is configured with [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) and 4.x is configured with [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator).
 
 >
@@ -38,7 +38,7 @@ Dynamic Media Classicを使用するには、Dynamic Media ClassicとAEM Assets�
 
 ## AEM/Dynamic Media Classicの統合とダイナミックメディアの統合 {#aem-scene-integration-versus-dynamic-media}
 
-AEMユーザーは、ダイナミックメディアを操作する2つのソリューションから選択できます。 AEMのインスタンスとDynamic Media Classicの統合、またはAEMに統合されたDynamic Mediaソリューションの使用のいずれかです。
+AEMユーザーは、ダイナミックメディアを操作する2つのソリューションから選択できます。AEMのインスタンスとDynamic Media Classicの統合、またはAEMに統合されたダイナミックメディアソリューションの使用のいずれかです。
 
 次の条件を使用して、どちらのソリューションを選択するかを決定します。
 
@@ -161,7 +161,7 @@ AEMダイナミックメディアは、AEMプラットフォーム内で直接Dy
     </table>
 
 1. (Optional; see use case table) - Set up the [Dynamic Media cloud configuration](/help/assets/config-dynamic.md) and [enable the Dynamic Media server](/help/assets/config-dynamic.md).
-1. (オプション、 （使用事例の表を参照） — 「アセットからDynamic Media Classicへの自動アップロード」を有効にする場合は、次を追加する必要があります。
+1. (オプション、（使用事例の表を参照） — 「アセットからDynamic Media Classicへの自動アップロード」を有効にする場合は、次を追加する必要があります。
 
    1. Dynamic Media Classicへの自動アップロードを設定します。
    1. ********** Dam更新アセットワークフロー( `https://<server>:<host>/cf#/etc/workflow/models/dam/update_asset.html)`
@@ -217,7 +217,7 @@ Adobeでは、ルート会社ーがフォルダー全体ではなく、サブフ
 AEMとの統合用にDynamic Media Classicを設定するには、次の手順を実行する必要があります。
 
 1. [クラウド設定の定義](#creating-a-cloud-configuration-for-scene) - Dynamic Media ClassicフォルダーとAssetsフォルダーの対応付けを定義します。 一方向(AEM Assetsからダイナミックメディアクラシック)の同期だけを行う場合でも、この手順を完了する必要があります。
-1. [OSGi **コンソールで&#x200B;**](#enabling-the-adobe-cq-scene-dam-listener)Adobe CQs7dam Dam Listener- Doneを有効にします。
+1. [OSGi **コンソールで**](#enabling-the-adobe-cq-scene-dam-listener) Adobe CQs7dam Dam Listener  - Doneを有効にします。
 1. AEMアセットをDynamic Media Classicに自動的にアップロードする場合は、このオプションをオンにして、DAM更新アセットワークフローにDynamic Media Classicを追加する必要があります。 また、手動でアセットをアップロードできます。
 1. サイドキックへのDynamic Media Classicコンポーネントの追加 これにより、ユーザーはAEMページでDynamic Media Classicコンポーネントを使用できます。
 1. [AEM](#enabling-scene-for-wcm) — この手順は、Dynamic Media Classicで作成したビデオプリセットを表示する場合に必要です。 また、CQターゲットフォルダー外からDynamic Media Classicにアセットを公開する必要がある場合にも必要です。
@@ -303,7 +303,7 @@ If you navigate to `/etc/cloudservices/scene7/endpoints.html`, you see the serve
 
 >[!NOTE]
 >
->複数の設定を指定できます。 クラウド設定の1つは、Dynamic Media Classic会社の1人のユーザーを表します。 その他のダイナミックMedia Classic会社またはユーザーにアクセスする場合は、複数の設定を作成する必要があります。
+>複数の設定を指定できます。クラウド設定の1つは、Dynamic Media Classic会社の1人のユーザーを表します。 その他のダイナミックMedia Classic会社またはユーザーにアクセスする場合は、複数の設定を作成する必要があります。
 
 Dynamic Media Classicにアセットを公開できるようにAEMを設定するには：
 
@@ -323,7 +323,7 @@ Dynamic Media Classicにアセットを公開できるようにAEMを設定す�
 
 1. Dynamic Media Classicアカウントの電子メールアドレス、パスワードおよび地域を入力し、「Dynamic Media Classicに **[!UICONTROL 接続]**」をタップします。 Dynamic Media Classicサーバーに接続している場合は、ダイアログが拡張され、その他のオプションが表示されます。
 
-1. **[!UICONTROL 会社]** 名と **** ルートパスを入力します(これは、指定するパスと共に公開されたサーバ名です。 公開済みのサーバー名がわからない場合は、Dynamic Media Classicで、 **[!UICONTROL 設定/アプリケーション設定に移動します]**)。
+1. **[!UICONTROL 会社]** 名と **** ルートパスを入力します(これは、指定するパスと共に公開されたサーバ名です。公開済みのサーバー名がわからない場合は、Dynamic Media Classicで、 **[!UICONTROL 設定/アプリケーション設定に移動します]**)。
 
    >[!NOTE]
    >
@@ -425,7 +425,7 @@ AEM Assets からの自動アップロードを設定するには：
 
 アセットを公開せずにDynamic Media Classicにプッシュするには、次の設定を行う必要があります。
 
-1. Dynamic Media Classicアカウントのセキュアプレビューを有効にするには、Dynamic Media Classicカスタマーケア(s7support@adobe.com)にお問い合わせください。
+1. [Admin Consoleを使用して、サポートケースを作成します。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) サポートケースで、Dynamic Media Classicアカウントに対してセキュリティで保護されたプレビューを有効にするように要求します。
 1. Follow directions to [setup secure preview for your Dynamic Media Classic account.](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)
 
 以下は、Dynamic Media Classicでセキュリティで保護されたテストの設定を作成する場合と同じ手順です。
@@ -524,7 +524,7 @@ WCMに対してDynamic Media Classicを有効にする場合、他の設定と�
 
 ### アドホックフォルダーの設定 {#configuring-the-ad-hoc-folder}
 
-アセットがCQターゲットーにない場合に、Dynamic Media Classicでアセットをアップロードするフォルダーを設定できます。 CQターゲットフォルダー外からのアセットの公開を参照してください。
+アセットがCQターゲットーにない場合に、Dynamic Media Classicでアセットをアップロードするフォルダーを設定できます。 CQターゲットーフォルダー外からのアセットの公開を参照してください。
 
 アドホックフォルダーを設定するには：
 
