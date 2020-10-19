@@ -10,10 +10,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 83f8fc7773941a429bdf47425add64d2363e7851
+source-git-commit: 31ddda9f74541dcf58fe70971535ee4180f70d6e
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 99%
+source-wordcount: '1758'
+ht-degree: 98%
 
 ---
 
@@ -120,8 +120,8 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 スマートイメージングを使用するためのリクエストを開始する必要があります。自動的には有効になりません。
 
-1. テクニカルサポートリクエストを開始します（電子メール：s7support@adobe.com）。
-1. サポートリクエストには、以下の情報を記入してください。
+1. [Admin Consoleを使用して、サポートケースを作成します。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
+1. サポートケースに次の情報を入力します。
 
    1. 主要連絡先の氏名、電子メールアドレス、電話番号。
    1. スマートイメージングを有効にする全ドメイン（images.company.com や mycompany.scene7.com）。
