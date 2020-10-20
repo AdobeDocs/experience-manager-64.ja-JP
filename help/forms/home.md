@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Manager6.4Formsガイド
-seo-title: AEM 6.4 Forms ユーザーガイド
+title: Adobe Experience Manager 6.4 Forms ガイド
+seo-title: AEM 6.4Formsガイド
 description: このガイドでは、デジタルフォームの作成、管理、発行、更新を含む、すべてのAEM Formsタスクについて説明します。
 seo-description: デジタルフォームの作成、管理、発行、更新の方法を含む、AEM Formsのすべてのタスクについて説明します。
 translation-type: tm+mt
-source-git-commit: 2872b6ebbd5763e486857359b3bdee965f6c9d48
+source-git-commit: f2b0d37a0666f2a0be9e7034da12dddf0c56fb25
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 30%
+source-wordcount: '369'
+ht-degree: 37%
 
 ---
 
 
-# Adobe Experience Manager6.4Formsガイド
+# Adobe Experience Manager 6.4 Forms ガイド
 
 このガイドでは、デジタルフォームの作成、管理、発行、更新を含む、すべてのAEM Formsタスクについて説明します。
 
@@ -30,7 +30,7 @@ ht-degree: 30%
 | [リリースノート](/help/release-notes/home.md) | AEMの最新リリースに関する重要な情報を紹介します。新機能、サポートされているプラットフォーム、非推奨機能、削除された機能、および既知の問題が含まれます |
 | [Assets ユーザーガイド](/help/assets/home.md) | デジタルアセットを作成、管理、配信および最適化する方法について説明します。 |
 | [Formsユーザガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、発行、更新の方法について説明します。 |
-| [Communitiesユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成できます。 |
+| [Communitiesユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |
 | [管理ガイド](/help/sites-administering/home.md) | AEM の管理方法を理解します |
 | [オーサリングガイド](/help/sites-authoring/home.md) | このガイドでは、AEMでのオーサリングの概念について説明します。 |
 | [クラシックUIオーサリングガイド](/help/sites-classic-ui-authoring/home.md) | このガイドでは、従来のユーザーインターフェイスでAEMでのオーサリングの概念を説明します。 |
