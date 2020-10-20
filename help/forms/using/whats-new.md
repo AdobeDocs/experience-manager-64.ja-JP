@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 436aa424-d05e-4f3d-90ac-5ff3b05ddba8
 translation-type: tm+mt
-source-git-commit: 715cff841252d79504d702817f91db92df919bfc
+source-git-commit: f2b0d37a0666f2a0be9e7034da12dddf0c56fb25
 workflow-type: tm+mt
-source-wordcount: '2017'
+source-wordcount: '2016'
 ht-degree: 80%
 
 ---
@@ -23,7 +23,7 @@ AEM 6.4 Forms の新機能と機能強化の概要
 
 AEM Forms に、いくつかの新機能と機能強化が導入されました。これにより、アダプティブフォームとインタラクティブ通信の作成と管理がさらに簡素化され、ユーザーエクスペリエンスが向上します。
 
-ここでは、これらの新機能と機能強化について簡単に説明します。詳しくは、各リソースのドキュメントを参照してください。また、AEM 6.4 Forms の[リリースノート](/help/release-notes/forms.md)も参照してください。For complete AEM 6.4 Forms documentation, visit [AEM 6.4 Forms User Guide](/help/forms/home.md).
+ここでは、これらの新機能と機能強化について簡単に説明します。詳しくは、各リソースのドキュメントを参照してください。また、AEM 6.4 Forms の[リリースノート](/help/release-notes/forms.md)も参照してください。For complete AEM 6.4 Forms documentation, visit [AEM 6.4 Forms Guide](/help/forms/home.md).
 
 ## インタラクティブコミュニケーション {#interactive-communications}
 
@@ -51,7 +51,7 @@ For more information, see [Interactive Communications Overview](/help/forms/usin
 
 ドラッグアンドドロップ操作をベースとする WYSIWYG ドキュメントエディターは、作業しやすいエディターです。直感的なインターフェイス、ドラッグアンドドロップ機能、標準コンポーネント、データモデル、アセットの統合リポジトリにより、インタラクティブ通信を素早く簡単に作成することができます。
 
-インタラクティブな通信を作成したり、既存の通信を編集したりするには、ビジネスユーザーは次の構築ブロックを使用できます。 チャネル、コンテンツ、プロパティ、アセット、コンポーネントおよびデータソース。
+インタラクティブな通信を作成したり、既存の通信を編集したりするには、ビジネスユーザーは次の構築ブロックを使用できます。チャネル、コンテンツ、プロパティ、アセット、コンポーネントおよびデータソース。
 
 ![ドラッグ&amp;ドロップ —lf](assets/drag-n-drop-lf.png)
 
