@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 4d3c4650-3e2a-43b1-ad2d-8d0ae2254ca9
 translation-type: tm+mt
-source-git-commit: 65346b3de98ec53e97c66fdac3be43b9c71e292a
+source-git-commit: d09956e5e7fb42e9c4b145e027778f209876239a
 workflow-type: tm+mt
-source-wordcount: '3144'
+source-wordcount: '3143'
 ht-degree: 84%
 
 ---
@@ -203,7 +203,7 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
   <tr> 
    <td>Microsoft SQL Server 2017</td> 
    <td>Forms データベース</td> 
-   <td>Z: 非対応(4)</td> 
+   <td>Z:非対応(4)</td> 
   </tr> 
   <tr> 
    <td>Microsoft SQL Server 2016</td> 
@@ -319,7 +319,7 @@ Adobe Experience Manager は次のサーバープラットフォームで動作�
  </tbody> 
 </table>
 
-1. Linux Kernel 2.6、3.x、4.xには、Red Hat Enterprise Linux、CentOS、Oracle Linux、およびAmazonLinuxを含む、Red Hatディストリビューションの派生物が含まれています。 AEMフォームのアドオン機能は、CentOS 7およびRed Hat Enterprise Linux 6.5および7でのみサポートされます。
+1. Linux Kernel 2.6、3.xおよび4.xには、Red Hat Enterprise Linux、CentOS、Oracle Linux、およびAmazonLinuxを含む、Red Hatディストリビューションの派生物が含まれています。 AEM Formsのアドオン機能は、CentOS 7およびRed Hat Enterprise Linux 7でのみサポートされています。
 1. AEM Assets：[XMP メタデータの書き戻しのサポート](#requirements-for-aem-assets-xmp-metadata-write-back)の節を参照してください。
 1. AEM Assets：Dynamic Media 画像はサポートされていません。Dynamic Media ビデオはサポートされています。
 1. AEM Forms は Ubuntu 16.04 LTS でのみサポートされています。
