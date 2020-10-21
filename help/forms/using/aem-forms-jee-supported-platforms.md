@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 1b9f8d98-e7e8-4b9b-a0df-52ccba324da3
 translation-type: tm+mt
-source-git-commit: ef8b12b462b05b6117d61d2877b16cbedfee42fd
+source-git-commit: 503910dbea671cf441307f4fa4bdc24e54fd338e
 workflow-type: tm+mt
-source-wordcount: '3276'
-ht-degree: 87%
+source-wordcount: '3305'
+ht-degree: 86%
 
 ---
 
@@ -278,7 +278,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td><p>アップデートとパッチ</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Red Hat Enterprise Linux 7 （Kernel 3.x）</p> </td> 
+   <td><p>Red Hat Enterprise Linux 7 (Kernel 3.x)</br><b>注：</b> Red Hat Enterprise Linux 6がメンテナンスフェーズの終了と、2020年11月30日に延長ライフフェーズへのトランジションに達しました。 Adobeでは、アップグレードおよび新規インストールにRed Hat Enterprise Linux 7を推奨しています。</p> </td> 
    <td><p>A：サポート対象</p> </td> 
    <td><p>マイナーリリース、累積アップデート、および緊急アップデート</p> </td> 
   </tr> 
@@ -444,7 +444,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
 
 ### Cordova のサポート {#support-for-cordova}
 
-AEM FormsアプリでApache Cordovaがサポートされるようになりました。 サポートされるCordovaのプラットフォーム固有のバージョンは次のとおりです。
+AEM FormsアプリでApache Cordovaがサポートされるようになりました。サポートされるCordovaのプラットフォーム固有のバージョンは次のとおりです。
 
 * Apache Cordova 6.4.0
 * Cordova iOS 4.3.0
@@ -809,4 +809,4 @@ JEE 上の AEM Forms のサードパーティリファレンスプラットフ�
 
 サードパーティ製パッチのその他の情報については、Adobe Enterprise Support サイトで、ご使用の製品に関するナレッジベース記事を検索することによっても見つけられることがあります。
 
-[**サポートへのお問い合わせ&#x200B;**](https://www.adobe.com/jp/account/sign-in.supportportal.html)
+[**サポートへのお問い合わせ**](https://www.adobe.com/jp/account/sign-in.supportportal.html)
