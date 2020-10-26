@@ -9,10 +9,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: 6a7e5472-cb57-4c78-b183-7c6dcac11a4e
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 81%
+source-wordcount: '303'
+ht-degree: 78%
 
 ---
 
@@ -43,7 +43,9 @@ AEM MobileContent Servicesは、AEMで管理されるコンテンツをリクエ
 >
 >コンテンツサービスの使用を始める前に、コンテンツサービスのフラグを有効にしてください。アプリ内でモデルの作成および管理を有効にするには、設定ブラウザーでデータモデルを有効にする必要があります。
 >
->詳しくは、**[コンテンツサービスの管理](/help/mobile/developing-content-services.md)**を参照してください。
+>詳しくは、**[コンテンツサービスの管理](/help/mobile/developing-content-services.md)**&#x200B;を参照してください。
+>
+>See the [Configuration Browser documentation](/help/sites-administering/configurations.md) for more information.
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
