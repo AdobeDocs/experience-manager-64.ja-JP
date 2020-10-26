@@ -10,9 +10,9 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 translation-type: tm+mt
-source-git-commit: 1b6254e98b65b64071ab4634706bd1ad3d2fd8df
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1668'
 ht-degree: 66%
 
 ---
@@ -52,6 +52,7 @@ AEM 6.4 には、Livefyre 機能パッケージ 1.2.6 がプリインストー�
 ### Configure AEM to use Livefyre: Create a Configuration Folder {#configure-aem-to-use-livefyre-create-a-configuration-folder}
 
 1. From the AEM homepage, click the **Tools** icon in the left rail, then navigate to **General > Configuration Browser**.
+   * See the [Configuration Browser documentation](/help/sites-administering/configurations.md) for more information.
 1. 「**作成**」をクリックして、設定を作成ダイアログを開きます。
 1. Name your configuration and check the **Cloud Configurations** checkbox.
 
@@ -73,6 +74,8 @@ AEM 6.4 には、Livefyre 機能パッケージ 1.2.6 がプリインストー�
    >Livefyreの設定をフォルダーに追加する前に、フォルダーのプロパティでクラウド設定を有効にする必要があります。 設定フォルダーが作成され、設定ブラウザーで管理されます。
    >
    >設定の名前は作成できません。フォルダーのパスによって参照されます。設定はフォルダーごとに 1 つのみです。
+   >
+   >See the [Configuration Browser documentation](/help/sites-administering/configurations.md) for more information.
 
 1. 新しく作成した Livefyre 設定カードを選択して、「**プロパティ**」をクリックします。
 
@@ -156,7 +159,7 @@ UGC を AEM Assets に読み込むには：
    * Twitter および Instagram からコンテンツを見つけるには、「Twitter」または「Instagram」タブをクリックします。検索またはフィルターを使用してコンテンツを見つけます。
 
 1. 読み込むアセットを選択します。The assets you select are automatically counted and saved under the **Selected** tab.
-1. **オプション**: 「 **選択済み** 」タブをクリックし、読み込むUGCコンテンツを確認します。
+1. **オプション**:「 **選択済み** 」タブをクリックし、読み込むUGCコンテンツを確認します。
 1. 「**次へ**」をクリックします。
 
    ![livefyre-aem-import-ugc2](assets/livefyre-aem-import-ugc2.png)
