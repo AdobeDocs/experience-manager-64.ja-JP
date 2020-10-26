@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integration
 discoiquuid: 1dafd400-16c0-416d-9e81-7bf53b761f98
 translation-type: tm+mt
-source-git-commit: 4dbb6af1c0a76aabc003749d7fa76f8c6e41e726
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1418'
 ht-degree: 64%
 
 ---
@@ -96,6 +96,7 @@ All cloud service configurations in AEM are consolidated in the `/conf` folder i
 クラウドサービス設定用のフォルダーを構成するには、以下の手順を実行します。
 
 1. Go to **[!UICONTROL Tools > General > Configuration Browser]**.
+   * See the [Configuration Browser documentation](/help/sites-administering/configurations.md) for more information.
 1. 以下の手順を実行して、global フォルダーをクラウド設定用に有効にします。クラウドサービス設定用に別のフォルダーを作成する場合は、この手順をスキップしてください。
 
    1. **[!UICONTROL 設定ブラウザー]**&#x200B;で、「`global`」フォルダーを選択して「**[!UICONTROL プロパティ]**」をタップします。
