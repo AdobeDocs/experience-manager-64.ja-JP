@@ -9,7 +9,7 @@ contentOwner: aheimoz
 discoiquuid: 208225ee-9052-4a45-9cfd-f8d27d4d70ed
 noindex: true
 translation-type: tm+mt
-source-git-commit: 3bdff366a0d455b405c1f9de371ced98d25ae2e2
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 3%
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 ## ロケーション {#locations}
 
-モデルは、「 `/conf`コンテンツフラグメントモデル」プロパティが有効なフォルダーの下 [に保存され、作成されます](/help/assets/content-fragments-models.md#enable-content-fragment-models) 。 この設定は、 **設定ブラウザーからアクセスできる**&#x200B;設定プロパティ **でも確認できます**。
+モデルは、「 `/conf`コンテンツフラグメントモデル」プロパティが有効なフォルダーの下 [に保存され、作成されます](/help/assets/content-fragments-models.md#enable-content-fragment-models) 。 この設定は、 **設定ブラウザーからアクセスできる**&#x200B;設定プロパティ **[でも確認できます](/help/sites-administering/configurations.md)**。
 
 1. 「 **ツール**」、「 **一般」、「**&#x200B;設定ブラウザー」な ****&#x200B;どを使用してブラウザーに移動します。 
 `http://localhost:4502/libs/granite/configurations/content/view.html/conf`
@@ -36,7 +36,7 @@ ht-degree: 3%
 
    例えば、次のプロパティがあり `global`ます。 `http://localhost:4502/libs/granite/configurations/content/edit.html/conf/global`
 
-モデルコンソールに、「 **コンテンツフラグメントモデル** 」プロパティを持つすべてのフォルダーが表示されます。 **ツール**、 **アセット**、 **コンテンツフラグメントモデルを使用した移動**、 例えば、 `http://localhost:4502/libs/dam/cfm/models/console/content/models.html/conf`。
+モデルコンソールに、「 **コンテンツフラグメントモデル** 」プロパティを持つすべてのフォルダーが表示されます。 **ツール**、 **アセット**、 **コンテンツフラグメントモデルを使用した移動**、例えば、 `http://localhost:4502/libs/dam/cfm/models/console/content/models.html/conf`。
 
 ユーザーは、「モデルを [作成](/help/assets/content-fragments-models.md#creating-a-content-fragment-model) 」ウィザード(コンソールから「 **作成** 」を使用)を使用して、コンテンツフラグメントモデルを **** 作成できます。
 
