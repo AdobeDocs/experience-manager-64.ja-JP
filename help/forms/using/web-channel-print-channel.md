@@ -8,10 +8,10 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 71bba66a-3cac-445b-9941-aa4bcf9b2160
 translation-type: tm+mt
-source-git-commit: 73d0dea62c294bea435364fb9c6892d80751d90d
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '706'
-ht-degree: 55%
+source-wordcount: '714'
+ht-degree: 54%
 
 ---
 
@@ -53,6 +53,7 @@ Webチャネルテンプレートを作成するには、次の手順を実行�
 1. Interactive Communication Webテンプレートがまだない場合は、テンプレートフォルダを作成して保存します。 For more information, see Template Folders in [Page Templates - Editable](/help/sites-developing/page-templates-editable.md).
 
    1. Tap **[!UICONTROL Tools]** ![tools-1](assets/tools-1.png) > **[!UICONTROL Configuration Browser]**.
+      * See the [Configuration Browser documentation](/help/sites-administering/configurations.md) for more information.
    1. In the Configuration Browser page, tap **[!UICONTROL Create]**.
    1. In the Create Configuration dialog, specify a title for the folder, check **[!UICONTROL Editable Templates]**, and tap **[!UICONTROL Create]**.
 
