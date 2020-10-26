@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: cf181663-8a4a-4efc-9f02-be1cf71c9299
 translation-type: tm+mt
-source-git-commit: 4c0c4ee86840cec0aa368b48e7f512cb86abeb02
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '3223'
+source-wordcount: '3231'
 ht-degree: 70%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->編集可能なテンプレートを [SPAエディタで使用するには、AEM 6.4.5.0以降が必要](/help/sites-developing/spa-overview.md)です。
+>SPAエディタで編集可能なテンプレートを使用するには、AEM 6.4.5.0以降が必要 [です](/help/sites-developing/spa-overview.md)。
 
 >[!NOTE]
 >
@@ -230,6 +230,8 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 >[!NOTE]
 >
 >グローバルフォルダーにテンプレートを作成する場合は、設定ブラウザーでグローバルフォルダーを編集し、「**編集可能なテンプレート**」オプションをオンにします。ただし、これは推奨されるベストプラクティスではありません。
+>
+>See the [Configuration Browser documentation](/help/sites-administering/configurations.md) for more information.
 
 ### ACL とグループ {#acls-and-groups}
 
@@ -585,7 +587,7 @@ When [editing a template you can define the layout](/help/sites-authoring/templa
 
 1. **許可されたテンプレート**
 
-   * 適切なページまたはサブブランチのルートページの[**ページプロパティ&#x200B;**](/help/sites-authoring/templates.md#allowing-a-template-author)に対して許可されたテンプレートのパスを定義します。
+   * 適切なページまたはサブブランチのルートページの[**ページプロパティ**](/help/sites-authoring/templates.md#allowing-a-template-author)&#x200B;に対して許可されたテンプレートのパスを定義します。
    * プロパティの設定：
 
       `cq:allowedTemplates`
