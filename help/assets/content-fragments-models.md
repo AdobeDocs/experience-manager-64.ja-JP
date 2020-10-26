@@ -9,10 +9,10 @@ topic-tags: content-fragments
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 45e67357-4524-4d25-b5f1-21182b8e803c
 translation-type: tm+mt
-source-git-commit: 8b83be510a67fadaa666f2ba96fbb3fc82b9cb3d
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 91%
+source-wordcount: '704'
+ht-degree: 90%
 
 ---
 
@@ -41,6 +41,7 @@ ht-degree: 91%
 [新しいコンテンツフラグメントモデルを作成する](#creating-a-content-fragment-model)には、最初に設定マネージャーを使用してコンテンツフラグメントモデルを有効にする&#x200B;**必要があります**。
 
 1. **[!UICONTROL ツール]**／**[!UICONTROL 一般]**&#x200B;に移動し、**[!UICONTROL 設定ブラウザー]**&#x200B;を開きます。
+   * See the [Configuration Browser documentation](/help/sites-administering/configurations.md) for more information.
 1. Web サイトに適した場所を選択します。
 1. 「**[!UICONTROL 作成]**」を使用してダイアログを開き、次の操作をおこないます。
 
