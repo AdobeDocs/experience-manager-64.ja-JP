@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
 translation-type: tm+mt
-source-git-commit: 5542ec45e64595a8e7159d925fdcbfff468ae7ec
+source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
 workflow-type: tm+mt
-source-wordcount: '2824'
+source-wordcount: '2840'
 ht-degree: 36%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 36%
 
 # Facebook と Twitter を使用したソーシャルログイン {#social-login-with-facebook-and-twitter}
 
-ソーシャルログインは、サイト訪問者にFacebookやTwitterアカウントでサインインするオプションを提供する機能です。 したがって、許可されたFacebookデータやTwitterデータがAEMの会員プロファイルに含まれます。
+ソーシャルログインは、サイト訪問者にFacebookやTwitterアカウントでサインインするオプションを提供する機能です。 したがって、許可されたFacebookデータやTwitterデータがAEMのメンバープロファイルに含まれます。
 
 ![socialloginretail](assets/socialloginweretail.png)
 
@@ -110,6 +110,7 @@ Once the application has been created, locate the **[!UICONTROL App ID]** and **
 1. Go to **[!UICONTROL Tools > General > Configuration Browser]**. コンテキストを選択し、プロパティを編集します。 まだ有効になっていなければ、クラウド設定を有効にします。
 
    ![config-propertiesping](assets/config-propertiespng.png)
+   * See the [Configuration Browser documentation](/help/sites-administering/configurations.md) for more information.
 
 1. Facebook クラウドサービス設定を作成または編集します。
 
@@ -258,6 +259,7 @@ The only REST request made for social login is to *[GET account/verify credentia
 1. Go to **[!UICONTROL Tools > General > Configuration Browser]**. コンテキストを選択し、プロパティを編集します。 まだ有効になっていなければ、クラウド設定を有効にします。
 
    ![twitterconfigpropng](assets/twitterconfigproppng.png)
+   * See the [Configuration Browser documentation](/help/sites-administering/configurations.md) for more information.
 
 1. Twitter クラウドサービス設定を作成または編集します。
 
@@ -444,7 +446,7 @@ For more information, see [Authentication with Apache Oak External Login Module]
 
 オーサーインスタンスで、管理者権限でサインインします。
 
-1. From global navigation: select **Tools,[CRX/DE Lite](../../help/sites-developing/developing-with-crxde-lite.md).**
+1. From global navigation: select **Tools, [CRX/DE Lite](../../help/sites-developing/developing-with-crxde-lite.md).**
 1. ntBaseLuceneのコピーからntBaseLucene-oauthという名前のインデックスを作成します。
 
    * node /oak:indexの下
