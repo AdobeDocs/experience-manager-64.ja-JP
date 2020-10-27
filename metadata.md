@@ -10,9 +10,10 @@ tutorials-url: https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-4-vi
 mini-toc-levels: 2
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-64.ja-JP
 solution: Experience Manager
+type: Documentation
 index: y
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: b0457d967a8d366caef45e2917ae73e7550ba69e
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 70%
