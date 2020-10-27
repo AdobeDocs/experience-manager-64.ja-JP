@@ -1,13 +1,14 @@
 ---
 cloud: experience-cloud
 product: adobe experience manager
-sub-product: 'フォーム[ふぉーむ] '
+sub-product: フォーム[ふぉーむ]
+solution: Experience Manager, Experience Manager Forms
 audience: end-user
 user-guide-title: Adobe Experience Manager 6.4 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 translation-type: tm+mt
-source-git-commit: f2b0d37a0666f2a0be9e7034da12dddf0c56fb25
+source-git-commit: b0457d967a8d366caef45e2917ae73e7550ba69e
 workflow-type: tm+mt
 source-wordcount: '3721'
 ht-degree: 74%
