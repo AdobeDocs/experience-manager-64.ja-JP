@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 4d3c4650-3e2a-43b1-ad2d-8d0ae2254ca9
 translation-type: tm+mt
-source-git-commit: d09956e5e7fb42e9c4b145e027778f209876239a
+source-git-commit: 155a0425229c79b06eced72b689972e4fdd09265
 workflow-type: tm+mt
-source-wordcount: '3143'
+source-wordcount: '3144'
 ht-degree: 84%
 
 ---
@@ -178,7 +178,7 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
   <tr> 
    <td>MongoDB Enterprise 3.4 [2、3]</td> 
    <td>リポジトリ</td> 
-   <td>A：サポート対象</td> 
+   <td>A:非対応</td> 
   </tr> 
   <tr> 
    <td>MySQL 5.7</td> 
