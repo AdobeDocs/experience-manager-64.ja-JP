@@ -10,10 +10,10 @@ topic-tags: develop
 discoiquuid: 29fc297e-0a95-4d2a-bfe6-5676d53624db
 noindex: true
 translation-type: tm+mt
-source-git-commit: f6b6d8559bb0b899a78afd6410eb316626ecaa18
+source-git-commit: 7ea83f879d5c3f5699d2a783686c53c5292fcf8a
 workflow-type: tm+mt
-source-wordcount: '3473'
-ht-degree: 66%
+source-wordcount: '3569'
+ht-degree: 65%
 
 ---
 
@@ -77,6 +77,10 @@ Adobe Sign と AEM Forms を統合することにより、次の機能がサポ�
 
    1. アダプティブフォームの **名前** と **タイトルを指定します** 。
    1. Adobe SignとAEM Formsの設定時に作成した [設定コンテナ](/help/forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) を選択します。
+
+      >[!NOTE]
+      >
+      >[ **[!UICONTROL Adobe SignCloud Service]** ]ドロップダウンリストには、このフィールドで選択した設定コンテナで設定されたクラウドサービスが表示されます。 「 **[!UICONTROL Adobe SignCloud Service]** 」ドロップダウンリストは、「Adobe Signを **[!UICONTROL 有効にする]** 」オプションを選択した場合に、アダプティブフォームプロパティの「電子署名 **** 」セクションで利用できます。
 
 1. 「 **[!UICONTROL フォームモデル]** 」タブで、次のいずれかのオプションを選択します。
 
@@ -154,6 +158,8 @@ AEM Forms の 1 つのインスタンスに対して、複数の Adobe Sign サ�
 
    If the **Adobe Sign Cloud Service** list is empty, follow the [Configure Adobe Sign with AEM Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md) artilce to configure the service.
 
+   ツール/ `global` Cloud Services **[!UICONTROL /]** Adobe Signのフォルダーに存在するクラウドサービスのドロップダウンリスト ****。 さらに、このドロップダウンには、アダプティブフォームの作成時に「 **[!UICONTROL 設定コンテナ]** 」フィールドで選択したフォルダーに存在するクラウドサービスもリストされます。
+
 1. 「**署名者は署名できます**」ダイアログボックスで、署名順序を選択します。Adobe Sign の署名者は、アダプティブフォームを&#x200B;**連続**&#x200B;して（署名者順に）署名することも、**「同時」**&#x200B;に（順不同で）署名することもできます。
 
    順に署名する場合は、1 人の署名者が、署名用のフォームを一度に 1 つずつ受け取ります。最初の署名者によるフォームの署名が完了すると、フォームが次の署名者に送信され、最後の署名者になるまでこの手順が繰り返されます。
@@ -229,8 +235,8 @@ Adobe Sign フィールドをアダプティブフォームに追加したら、
 
    次を使用して、アダプティブフォームに電子署名を適用します。
 
-   * Cloud signatures: 信頼サービスプロバイダーが [ホストするデジタルIDを使用して署名します](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 。
-   * Adobe AcrobatまたはReader: Adobe AcrobatまたはReaderでドキュメントをダウンロードして開き、スマートカード、USBトークン、またはファイルベースのデジタルIDを使用して署名します。
+   * Cloud signatures:信頼サービスプロバイダーが [ホストするデジタルIDを使用して署名します](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) 。
+   * Adobe AcrobatまたはReader:Adobe AcrobatまたはReaderでドキュメントをダウンロードして開き、スマートカード、USBトークン、またはファイルベースのデジタルIDを使用して署名します。
 
    クラウド署名フィールドをアダプティブフォームに追加した後、次の手順を実行して設定プロセスを完了します。
 
@@ -285,9 +291,9 @@ Adobe Sign フィールドをアダプティブフォームに追加したら、
 
 **Q: 特定のアダプティブフォームを別のアダプティブフォームに埋め込むことができますが、埋め込まれたアダプティブフォームで Adobe Sign を有効にすることはできますか？**
 
-**Ans:** いいえ。AEM Formsは、Adobe Sign対応のアダプティブフォームを埋め込んだアダプティブフォームの署名に対する使用をサポートしていません。
+**Ans:** いいえ。AEM Formsは、Adobe Sign対応のアダプティブフォームを埋め込んだアダプティブフォームの署名用の使用をサポートしていません。
 
-**Q: 高度なテンプレートを使用してアダプティブフォームを作成し、それを開いて編集すると、「電子署名または署名者が正しく設定されていません。」というエラーメッセージが表示されます。 表示されます。このエラーメッセージを解決するにはどうすればよいですか？**
+**Q:高度なテンプレートを使用してアダプティブフォームを作成し、それを開いて編集すると、「電子署名または署名者が正しく設定されていません。」というエラーメッセージが表示されます。 表示されます。このエラーメッセージを解決するにはどうすればよいですか？**
 
 **A:**&#x200B;拡張テンプレートを使用して作成されたアダプティブフォームは、Adobe Sign を使用するように設定されています。このエラーを修正するには、Adobe Sign のクラウド設定を作成して選択し、アダプティブフォーム用の Adobe Sign 署名者を設定してください。
 
