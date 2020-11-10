@@ -3,10 +3,10 @@ title: デジタルアセットのダウンロード元 [!DNL Adobe Experience M
 description: Learn how to download assets from [!DNL Adobe Experience Manager] and enable or disable the download functionality.
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 05ecc940180ead13676cc5bb8e2e230b1d55162b
+source-git-commit: ddfcb74451f41cea911700a64abceaaf47e7af49
 workflow-type: tm+mt
 source-wordcount: '809'
-ht-degree: 72%
+ht-degree: 71%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 72%
 
    ![Experience Manager Assets からアセットをダウンロードする際に使用できるオプション](/help/assets/assets/asset_download_dialog.png)
 
-   *図： ダウンロードダイアログボックスのオプション*
+   *図：ダウンロードダイアログボックスのオプション*
 
 1. ダウンロードダイアログボックスで、目的のダウンロードオプションを選択します。
 
@@ -66,7 +66,7 @@ The default servlet in [!DNL Experience Manager] allows authenticated users to i
 
  パブリッシュインスタンスの `Asset Download Servlet` を無効にするには、アセットダウンロード要求をすべてブロックするように Dispatcher 設定を更新します。[!DNL Experience Manager]サーブレットは、OSGi コンソールから手動で直接無効にすることもできます。
 
-1. To block asset download requests via a dispatcher configuration, edit the `dispatcher.any` configuration and add a rule to the [filter section](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter). `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
+1. To block asset download requests via a dispatcher configuration, edit the `dispatcher.any` configuration and add a rule to the [filter section](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-access-to-content-filter). `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
 1. 発行インスタンスでOSGiコンポーネントを無効にするには、でOSGiコンソールにアクセスし `http://[aem_server]:[port]/system/console/components`ます。 `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` を探して、「**[!UICONTROL 無効にする]**」をクリックします。
 
