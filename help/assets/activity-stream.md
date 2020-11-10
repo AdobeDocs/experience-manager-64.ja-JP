@@ -3,10 +3,10 @@ title: タイムラインのアクティビティストリーム
 description: 'この記事では、アセットのアクティビティログをタイムラインに表示する方法について説明します。 '
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: ddfcb74451f41cea911700a64abceaaf47e7af49
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 99%
+source-wordcount: '214'
+ht-degree: 96%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 99%
 
 タイムラインに表示されるアクティビティログは、ログファイルが格納されている CRX の `/var/audit/com.day.cq.dam/content/dam` から取得されます。
 
-また、[Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html)[ または AEM デスクトップアプリケーション](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/introduction.html)により、新しいアセットがアップロードされたり、既存のアセットが変更されて AEM にチェックインされたりすると、タイムラインアクティビティがログに記録されます。
+また、[Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html)[ または AEM デスクトップアプリケーション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html)により、新しいアセットがアップロードされたり、既存のアセットが変更されて AEM にチェックインされたりすると、タイムラインアクティビティがログに記録されます。
 
 >[!NOTE]
 >
