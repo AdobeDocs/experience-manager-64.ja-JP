@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 7599fa42-3a47-49c9-8a7f-e0b6be302ff0
 translation-type: tm+mt
-source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+source-git-commit: d72f86b167e3e9003ad2cd2e7628f95502cf9a33
 workflow-type: tm+mt
-source-wordcount: '6231'
+source-wordcount: '6200'
 ht-degree: 76%
 
 ---
@@ -297,7 +297,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
   </tr> 
   <tr> 
    <td>セキュリティチェック</td> 
-   <td><p>セキュリティチェックは、複数のセキュリティ関連チェックを集計する複合チェックです。These individual health checks address different concerns from the security checklist available at the <a href="/help/sites-administering/security-checklist.md">Security Checklist documentation page.</a> このチェックは、インスタンスの起動時のセキュリティ煙テストとして役立ちます。 </p> <p>The MBean for this health check is <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=securitych</a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank"></a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank"></a><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">ecks,type=HealthCheck</a></p> </td> 
+   <td><p>セキュリティチェックは、複数のセキュリティ関連チェックを集計する複合チェックです。These individual health checks address different concerns from the security checklist available at the <a href="/help/sites-administering/security-checklist.md">Security Checklist documentation page.</a> このチェックは、インスタンスの起動時のセキュリティ煙テストとして役立ちます。 </p> <p>The MBean for this health check is <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=securitychecks,type=HealthCheck</a></p> </td> 
   </tr> 
   <tr> 
    <td>アクティブなバンドル</td> 
@@ -412,7 +412,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 ログメッセージユーザーインターフェイスには、デフォルトですべてのエラーメッセージが表示されます。表示されるログメッセージを増やす場合は、該当するログレベルでロガーを設定する必要があります。
 
-ログメッセージはメモリ内ログアペンダーを使用するので、ログファイルとは関係しません。 もう1つの結果として、このUIでログレベルを変更しても、従来のログファイルに記録される情報は変更されません。 このUIでロガーを追加および削除すると、メモリ内ロガーにのみ影響します。 また、ロガー設定の変更はメモリ内ロガーの将来に反映されます。既にログに記録され、関連しなくなったエントリは削除されませんが、今後同様のエントリはログに記録されません。
+ログメッセージはメモリ内ログアペンダーを使用するので、ログファイルとは関係しません。もう1つの結果として、このUIでログレベルを変更しても、従来のログファイルに記録される情報は変更されません。このUIでロガーを追加および削除すると、メモリ内ロガーにのみ影響します。また、ロガー設定の変更はメモリ内ロガーの将来に反映されます。既にログに記録され、関連しなくなったエントリは削除されませんが、今後同様のエントリはログに記録されません。
 
 ログに記録する内容を設定するには、UI の左上にあるギアボタンから、ロガーを設定します。そこで、ロガーの設定を追加、削除または更新できます。ロガーの設定は、**ログレベル**（警告／情報／デバッグ）と&#x200B;**フィルター名**&#x200B;で構成されます。**フィルター名**&#x200B;には、記録されるログメッセージのソースをフィルター処理する役割があります。また、指定したレベルのすべてのログメッセージをロガーで取り込む必要がある場合は、フィルター名を「**root**」とします。ロガーのレベルを設定すると、指定したレベル以上のすべてのメッセージの取り込みがトリガーされます。
 
@@ -468,7 +468,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 ### クエリパフォーマンス {#query-performance}
 
-[クエリのパフォーマンス]ページでは、システムが実行する最も遅いクエリを分析できます。 この情報は、JMX Mbeanのリポジトリによって提供されます。 Jackrabbitでは、 `com.adobe.granite.QueryStat` JMX Mbeanがこの情報を提供し、Oakリポジトリでは、 `org.apache.jackrabbit.oak.QueryStats.`
+[クエリのパフォーマンス]ページでは、システムが実行する最も遅いクエリを分析できます。この情報は、JMX Mbeanのリポジトリによって提供されます。 Jackrabbitでは、 `com.adobe.granite.QueryStat` JMX Mbeanがこの情報を提供し、Oakリポジトリでは、 `org.apache.jackrabbit.oak.QueryStats.`
 
 このページには以下の項目が表示されます。
 
@@ -521,7 +521,7 @@ It can also be accessed directly at this URL: `https://serveraddress:port/libs/g
 
 ### ステータス ZIP をダウンロード {#download-status-zip}
 
-これは、システムステータスおよび設定に関する有益な情報を含む zip のダウンロードをトリガーします。アーカイブには、インスタンス設定、バンドルのリスト、OSGI、Sling指標および統計情報が含まれており、これにより大きなファイルが作成される場合があります。 **ダウンロードステータスZIP **ウィンドウを使用すると、大きなステータスファイルの影響を軽減できます。 The window can be accessed from: **AEM > Tools > Operations > Diagnosis > Download Status ZIP.**
+これは、システムステータスおよび設定に関する有益な情報を含む zip のダウンロードをトリガーします。アーカイブには、インスタンス設定、バンドルのリスト、OSGI、Sling指標および統計が含まれており、これにより大きなファイルが作成される場合があります。 **ダウンロードステータスZIP **ウィンドウを使用すると、大きなステータスファイルの影響を軽減できます。 The window can be accessed from: **AEM > Tools > Operations > Diagnosis > Download Status ZIP.**
 
 このウィンドウでは、エクスポートするもの（ログファイルやスレッドダンプ）および現在の日付を基準にしてダウンロードに含めるログの日数を選択できます。
 
