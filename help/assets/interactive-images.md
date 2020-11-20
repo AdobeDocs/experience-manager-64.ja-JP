@@ -10,7 +10,7 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d630499d-740d-4979-8a34-9e3fcc3b5a23
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: f4cdd3d5020b917676fe8715d4e21e98f3a096b4
 workflow-type: tm+mt
 source-wordcount: '4300'
 ht-degree: 79%
@@ -246,7 +246,7 @@ When you finish creating your interactive image, you can use **[!UICONTROL Previ
 >[!NOTE]
 >
 >インタラクティブ画像またはカルーセルバナーの画像にホットスポットを追加すると、インタラクティブ画像かカルーセルバナーかにかかわらず、ホットスポット情報が同じメタデータの場所（画像に対して相対的な場所）に格納されます。つまり、どちらのビューアでも、同じ画像を定義済みのホットスポットデータと一緒に簡単に再利用できます。
-
+>
 >  ただし、カルーセルバナーでは、画像上の画像マップ（ホットスポットを含むことができる）がサポートされることに注意してください。インタラクティブ画像ではサポートされません。同じ画像を使用するインタラクティブ画像またはカルーセルバナーを作成する場合には、このことに注意してください。同じ画像の別のコピーを使用してインタラクティブ画像とカルーセルバナーを作成することをお勧めします。
 >
 >[カルーセルバナー](carousel-banners.md)も参照してください。
