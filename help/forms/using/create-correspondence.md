@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 2c1be479-9f44-4348-b074-a08af8df51fa
 translation-type: tm+mt
-source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+source-git-commit: f4cdd3d5020b917676fe8715d4e21e98f3a096b4
 workflow-type: tm+mt
 source-wordcount: '3726'
 ht-degree: 63%
@@ -57,7 +57,7 @@ After a [letter template is created in Correspondence Management](/help/forms/us
    3 つのタブ（データ、コンテンツ、および添付ファイル）があります。データ要素（プレースホルダー変数およびレイアウトフィールド）がない場合、表示される「コンテンツ」タブで直接レターは開きます。「添付ファイル」タブは、添付ファイルが存在するか、ライブラリアクセスが有効な場合にのみ使用できます。
 
    >[!NOTE]
-
+   >
    >For more information on switching between HTML or PDF rendition mode of letter preview, see [Change rendition mode of letter](#changerenditionmode). For more information on PDF support in Correspondence Management and AEM, see [Discontinuation of NPAPI browser plug-ins and its impact](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html) and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/jp/aem-forms/kb/pdf-forms-to-html5-forms.html).
 
 ### データを入力 {#enterdata}
@@ -193,7 +193,7 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 * 選択（目のアイコン）： レターにモジュールを含めたり除外したりします。
 * 箇条書きをスキップ（リストモジュールとその子モジュールに適用可能）： 特定のモジュール内の箇条書きをスキップします。
 * 直前に改ページ（ターゲット領域の子モジュールに適用可能）： モジュールの前に改ページを挿入します。
-* 直後に改ページ(ターゲット領域の子モジュールに適用): モジュールの前に改ページを挿入します。
+* 直後に改ページ(ターゲット領域の子モジュールに適用):モジュールの前に改ページを挿入します。
 * 未入力値（情報）： ターゲット領域の未入力変数の個数を示します。
 * 編集（テキストモジュールのみ）： テキストモジュールを編集するためにリッチテキストエディターを開きます。
 * データパネル（テキストと条件モジュール）： モジュールのすべての変数を開きます。
@@ -283,7 +283,7 @@ After a [letter template is created in Correspondence Management](/help/forms/us
 
 これらのインスタンスは、レターが発行インスタンスで表示されているときにのみ保存できます。デフォルトでは、インスタンスでの保存は無効になっています。レターインスタンスの保存を有効にするには、次の手順を実行します。
 
-1. AEMで、次のURLを使用して、ご使用のサーバのAdobe Experience ManagerWebコンソール設定を開きます。 https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/console/configMgr
+1. AEMで、次のURLを使用して、ご使用のサーバのAdobe Experience ManagerWebコンソール設定を開きます。https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/console/configMgr
 1. Locate **[!UICONTROL Correspondence Management Configurations]** and click it.
 1. Check **[!UICONTROL Manage Letter Instances on Publish]** configuration and then click **[!UICONTROL Save]**.
 
@@ -339,7 +339,7 @@ HTML および PDF プレビューの利点と使用できる機能は以下の�
 
 **PDF プレビューの利点**
 
-* **改ページ**: PDFプレビューでは、レター内の改ページが出力に与える影響を正確に表示できます。
+* **改ページ**:PDFプレビューでは、レター内の改ページが出力に与える影響を正確に表示できます。
 * **最終プレビュー**： PDF プレビューでは、レターが出力に表示されるため、レターの書式や表示をそのまま確認できます。
 
 For information on scripting support in PDF forms, see [Scripting Support](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html).
