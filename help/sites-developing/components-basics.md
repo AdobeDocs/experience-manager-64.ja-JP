@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: f4cdd3d5020b917676fe8715d4e21e98f3a096b4
 workflow-type: tm+mt
 source-wordcount: '4725'
 ht-degree: 73%
@@ -819,7 +819,7 @@ Each child node of type `cq:DropTargetConfig` defines a drop target in the compo
 
 は、Javaプロパティ `<*drag and drop prefix*>` で定義します。
 
-`com.day.cq.wcm.api.components.DropTarget.CSS_CLASS_PREFIX`。
+`com.day.cq.wcm.api.components.DropTarget.CSS_CLASS_PREFIX`.
 
 例えば、ダウンロードコンポーネントのJSPでは、クラス名は次のように定義されます\
 ( `/libs/foundation/components/download/download.jsp`)。ここで、 `file` は、ダウンロードコンポーネントの編集設定内のドロップターゲットのノード名です。
@@ -1030,10 +1030,12 @@ The `cq:listeners` node (node type `cq:EditListenersConfig`) defines what happen
 >[!NOTE]
 >
 >コンポーネントがネストされている場合は、`cq:listeners` ノードでプロパティとして定義されるアクションに一定の制限があります。
-
->* For nested components, the values of the following properties *must* be `REFRESH_PAGE`: >
->* `aftermove`
-* `aftercopy`
+>
+>* コンポーネントがネストされている場合、次のプロパティの値を *にする必要があります。*`REFRESH_PAGE`
+   >
+   >  
+* `aftermove`
+>  * `aftercopy`
 
 
 イベントハンドラーを実装するときは、カスタム実装を組み込むことができます。次に例を示します（`project.customerAction` は静的メソッドです）。
@@ -1045,7 +1047,8 @@ The following example is equivalent to the `REFRESH_INSERTED` configuration:
 `afterinsert="function(path, definition) { this.refreshCreated(path, definition); }"`
 
 >[!NOTE]
-For the classic UI, to see which parameters can be used in the handlers, refer to the `before<action>` and `after<action>` events section of the [ `CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) and [ `CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) widget documentation.
+>
+>For the classic UI, to see which parameters can be used in the handlers, refer to the `before<action>` and `after<action>` events section of the [ `CQ.wcm.EditBar`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) and [ `CQ.wcm.EditRollover`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) widget documentation.
 
 次の設定では、コンポーネントを削除、編集、挿入または移動した後にページが更新されます。
 
