@@ -10,7 +10,7 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 5ac2fcef-05b8-46f7-9a15-997cdd79a3db
 translation-type: tm+mt
-source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
+source-git-commit: f4cdd3d5020b917676fe8715d4e21e98f3a096b4
 workflow-type: tm+mt
 source-wordcount: '3241'
 ht-degree: 46%
@@ -60,7 +60,7 @@ Before creating a community site, it is *required* to:
 
 新しいコミュニティサイトを作成するには、**作成**&#x200B;アイコンを選択します。
 
-既存のコミュニティサイトにアクセスするには、ネストされたグループのオーサリング、変更、発行、書き出しまたは追加を目的として、サイトのフォルダーアイコンを選択します。
+既存のコミュニティサイトにアクセスするには、ネストされたグループのオーサリング、変更、発行、書き出し、追加を目的として、サイトのフォルダーアイコンを選択します。
 
 For example, the following image shows the main Communities Sites console displaying the folders for two community sites: [enable](getting-started-enablement.md) and [engage](getting-started.md):
 
@@ -82,21 +82,21 @@ The process is launched by selecting the `Create` button located at the top of t
 
 サイトテンプレートパネルでは、タイトル、説明、サイトのルート、ベース言語、名前およびサイトテンプレートを指定します。
 
-* **[!UICONTROL コミュニティサイトのタイトル]**: サイトの表示タイトル。
+* **[!UICONTROL コミュニティサイトのタイトル]**:サイトの表示タイトル。
 
    タイトルは、公開済みサイトとサイト管理UIに表示されます。
 
-* **[!UICONTROL コミュニティサイトの説明]**: サイトの説明。
+* **[!UICONTROL コミュニティサイトの説明]**:サイトの説明。
 
    説明は、公開済みのサイトには表示されません。
 
-* **[!UICONTROL コミュニティサイトルート]**: サイトのルートパス。
+* **[!UICONTROL コミュニティサイトルート]**:サイトのルートパス。
 
    The default root is `/content/sites`, but the root may be moved to any location within the web site.
 
-* **[!UICONTROL コミュニティサイトの基本言語]**: （単一言語の場合は手を付けないでください）。 英語)プルダウンメニューを使用して *、ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）の各言語から* 1つまたは複数のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](../../help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
+* **[!UICONTROL コミュニティサイトの基本言語]**:（単一言語の場合は手を付けないでください）。英語)プルダウンメニューを使用して *、ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）の各言語から* 1つまたは複数のベース言語を選択します。 One community site will be created for each language added, and will exist within the same site folder following the best practice described in [Translating Content for Multilingual Sites](../../help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
 
-* **[!UICONTROL コミュニティサイト名]**: URLに表示されるサイトのルートページの名前
+* **[!UICONTROL コミュニティサイト名]**:URLに表示されるサイトのルートページの名前
 
    * サイトの作成後に名前が容易に変更されないので、重複チェックを行います。
    * ベースURL( `https://*server:port/site root/site name*)` `Community Site Name`
@@ -104,7 +104,7 @@ The process is launched by selecting the `Create` button located at the top of t
 
       *例えば*、 `http://localhost:4502/content/sites/mysight/en.html`
 
-* **[!UICONTROL コミュニティサイトテンプレート]** メニュー： プルダウンメニューを使用して、使用可能な [コミュニティサイトテンプレートを選択し](tools.md)ます。
+* **[!UICONTROL コミュニティサイトテンプレート]** メニュー：プルダウンメニューを使用して、使用可能な [コミュニティサイトテンプレートを選択し](tools.md)ます。
 
 「**[!UICONTROL 次へ]**」を選択します。
 
@@ -216,10 +216,11 @@ The process is launched by selecting the `Create` button located at the top of t
    非公開のコミュニティサイトの場合はオフのままにします。**&#x200B;初期設定はオフです。
 
 >[!NOTE]
-
-**[!UICONTROL ソーシャルログインの許可]**
->Facebook と Twitter のサンプル設定が存在し、選択可能な場合がありますが、[実稼動環境](../../help/sites-administering/production-ready.md)では、カスタム Facebook アプリケーションとカスタム Twitter アプリケーションを作成する必要があります。[Facebook と Twitter を使用したソーシャルログイン](social-login.md)を参照してください。
 >
+>**[!UICONTROL ソーシャルログインの許可]**
+>
+>Facebook と Twitter のサンプル設定が存在し、選択可能な場合がありますが、[実稼動環境](../../help/sites-administering/production-ready.md)では、カスタム Facebook アプリケーションとカスタム Twitter アプリケーションを作成する必要があります。[Facebook と Twitter を使用したソーシャルログイン](social-login.md)を参照してください。
+
 #### タグ付け {#tagging}
 
 ![chlimage_1-450](assets/chlimage_1-450.png)
@@ -228,7 +229,7 @@ The process is launched by selecting the `Create` button located at the top of t
 
 また、コミュニティサイトに対してタグ名前空間を選択すると、カタログとリソースを定義するときに表示される選択肢が制限されます。See [Tagging Enablement Resources](tag-resources.md) for important information.
 
-* テキスト検索ボックス： サイトで使用できるタグを識別するための開始入力
+* テキスト検索ボックス：サイトで使用できるタグを識別するための開始入力
 
 #### 役割 {#roles}
 
@@ -392,7 +393,8 @@ When hovering over a site with a mouse, or touching a site card, icons appear wh
 ![chlimage_1-461](assets/chlimage_1-461.png)
 
 >[!NOTE]
-AEM に馴染みがない場合は、[基本操作](../../help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](../../help/sites-authoring/qg-page-authoring.md)を参照してください。
+>
+>AEM に馴染みがない場合は、[基本操作](../../help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](../../help/sites-authoring/qg-page-authoring.md)を参照してください。
 
 ## サイトプロパティの変更 {#modifying-site-properties}
 
@@ -439,15 +441,20 @@ The properties of an exisitng site, specified during the site creation process, 
       サイトのトップレベルナビゲーションバーに表示される機能の順序を変更する
 
 >[!NOTE]
-トップにある機能を除き、サイト構造のすべての機能の順序を変更できます。したがって、コミュニティサイトのホームページは変更できません。
+>
+>トップにある機能を除き、サイト構造のすべての機能の順序を変更できます。したがって、コミュニティサイトのホームページは変更できません。
 
 >[!CAUTION]
-表示タイトルは副作用なく変更できるが、コミュニティサイトに属するコミュニティ機能のURL名を編集することはお勧めしない。
-例えば、URL の名前を変更しても、既存の UGC は移動されません。そのため、UGC が「失われる」ことになります。
+>
+>表示タイトルは副作用なく変更できるが、コミュニティサイトに属するコミュニティ機能のURL名を編集することはお勧めしない。
+>
+>例えば、URL の名前を変更しても、既存の UGC は移動されません。そのため、UGC が「失われる」ことになります。
 
 >[!CAUTION]
-The groups function must *not* be the *first nor the only* function in the site structure.
-他の機能（[ページ機能](functions.md#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
+>
+>The groups function must *not* be the *first nor the only* function in the site structure.
+>
+>他の機能（[ページ機能](functions.md#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
 
 #### 例：コミュニティのサイト構造へのカタログ機能の追加 {#example-adding-a-catalog-function-to-a-community-site-structure}
 
@@ -517,7 +524,7 @@ The name created for the member groups includes the *site-name* given the site i
 
 例えば、「Getting Started Tutorial」というタイトルを持つサイトのサイト名が「engage」の場合、モデレーターのユーザーグループは次のようになります。
 
-* タイトル： コミュニティのソーシャル管理者
+* タイトル：コミュニティのソーシャル管理者
 * Name: community-*engage-uid*-moderators
 
 サイト作成中にモデレーターまたはグループ管理者の役割を割り当てられたメンバーは、適切なグループとメンバーグループに割り当てられます。これらのグループおよびメンバーの割り当ては、新しいサイトが公開される際に、公開時に作成されます。
@@ -525,8 +532,10 @@ The name created for the member groups includes the *site-name* given the site i
 For details, see [Managing Users and User Groups](users.md).
 
 >[!NOTE]
-[ソーシャルログインを許可：Facebook](#user-management) が有効な場合は、以下に示すユーザーグループが作成された後に、
-* community-*&lt;site-name>*-*&lt;uid>*-members
+>
+>[ソーシャルログインを許可：Facebook](#user-management) が有効な場合は、以下に示すユーザーグループが作成された後に、
+>
+>* community-*&lt;site-name>*-*&lt;uid>*-members
 
 is created, the applied [Facebook cloud service](social-login.md#createafacebookcloudservice) should be configured to add users to this group.
 
