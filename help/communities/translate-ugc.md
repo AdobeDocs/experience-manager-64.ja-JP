@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
 translation-type: tm+mt
-source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+source-git-commit: 1375282df15b1a1a1ab5ed760190af8d6288970e
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1117'
 ht-degree: 64%
 
 ---
@@ -42,7 +42,7 @@ UGC を翻訳することにより、言語の障壁が取り除かれ、サイ�
 
 ## デフォルトの翻訳サービス {#the-default-translation-service}
 
-AEM Communities ships with a [trial license](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) for a [default translation service](../../help/sites-administering/tc-msconf.md) enabled for several languages.
+AEM Communities includes a [trial license](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) for a [default translation service](../../help/sites-administering/tc-msconf.md) enabled for several languages.
 
 When [creating a community site](sites-console.md), the default translation service is enabled when `Allow Machine Translation` is checked from the [TRANSLATION](sites-console.md#translation) sub-panel.
 
@@ -95,7 +95,7 @@ Web サイトに[複数の言語コピー](../../help/sites-administering/tc-pre
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
 * **[!UICONTROL 親の設定]**（必須）通常はデフォルトのままにします。 初期設定は です。 
-`/etc/cloudservices/translation`。
+`/etc/cloudservices/translation`.
 
 * **[!UICONTROL タイトル]**（必須）選択した表示タイトルを入力します。 デフォルト値はありません。
 
