@@ -4,7 +4,7 @@ description: Adobe Experience Manager6.4累積Fix Pack固有のリリースノ�
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: e29f203fc6754056d613bd47bdb8decff9e6b5c3
+source-git-commit: c9d5556f2358489ae011add1243785f52c0c4135
 workflow-type: tm+mt
 source-wordcount: '4039'
 ht-degree: 13%
@@ -451,7 +451,8 @@ To use Uber Jar in a Maven project, refer to the article, [How to use Uber jar](
 <dependency>
       <groupId>com.adobe.aem</groupId>
       <artifactId>uber-jar</artifactId>
-      <version>6.4.8.3</version>  
+      <version>6.4.8.3</version>
+      <scope>provided</scope>  
 </dependency>
 ```
 
