@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: d0249609-2a9c-4d3b-92ee-dbc5fbdeaac6
 translation-type: tm+mt
-source-git-commit: 09f8adac1d5fc4edeca03d6955faddf5ea045405
+source-git-commit: 1375282df15b1a1a1ab5ed760190af8d6288970e
 workflow-type: tm+mt
-source-wordcount: '2139'
+source-wordcount: '2138'
 ht-degree: 40%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 40%
 
 ## インストールチェックリスト {#installation-checklist}
 
-**[AEM プラットフォーム](../../help/sites-deploying/deploy.md#what-is-aem)**用
+**[AEM プラットフォーム](../../help/sites-deploying/deploy.md#what-is-aem)**&#x200B;用
 
 * Install latest [AEM 6.4 Updates](#aem-updates)
 
@@ -44,7 +44,7 @@ ht-degree: 40%
 
    （開発用にサンプルを設定）
 
-**[Communities 機能](overview.md)**用
+**[Communities 機能](overview.md)**&#x200B;用
 
 * [発行ファームを展開する場合](../../help/sites-deploying/recommended-deploys.md#tarmk-farm)、主な発行者を [特定する](#primary-publisher)
 
@@ -91,7 +91,7 @@ ht-degree: 40%
 
 ## 最新リリース {#latest-releases}
 
-AEM 6.4 Communities GA は、Communities パッケージと共に出荷されます。AEM 6.4 [Communities](/help/release-notes/release-notes.md#experience-manager-communities) のアップデートについて詳しくは、[AEM 6.4 リリースノート](/help/release-notes/release-notes.md#release-information)を参照してください。
+AEM 6.4 Communities GAにはCommunitiesパッケージが含まれます。 AEM 6.4 [Communities](/help/release-notes/release-notes.md#experience-manager-communities) のアップデートについて詳しくは、[AEM 6.4 リリースノート](/help/release-notes/release-notes.md#release-information)を参照してください。
 
 ### AEM 6.4 のアップデート {#aem-updates}
 
@@ -150,7 +150,7 @@ AEM Communities SCORM エンジンは[イネーブルメント](overview.md#enab
 
 * **[cq -social- scorm -package、バージョン1.2.11](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-pkg)**。 この SCORM パッケージは、AEM 6.4 Communities の全バージョンでサポートされています。
 
-* **[cq -social- scorm -package、バージョン2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)**には[SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)エンジンが含まれています。 このSCORMパッケージは、AEM 6.4.2.x Communities以降でサポートされます。
+* **[cq -social- scorm -package、バージョン2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)** には [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) エンジンが含まれています。 このSCORMパッケージは、AEM 6.4.2.x Communities以降でサポートされます。
 
 For a new installation of SCORM engine, the package containing [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) (which is [  cq -social-  scorm -package, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)) should be used. それによって、SCORM 2017 でサポートされているラーニングリソースを再生できます。
 
@@ -162,7 +162,7 @@ For a new installation of SCORM engine, the package containing [SCORM 2017.1](ht
 1. Download **`/libs/social/config/scorm/database_scormengine_data.sql`** from cq instance and execute it in mysql server to create an upgraded scormEngineDB schema.
 1. Add `/content/communities/scorm/RecordResults` in Excluded Paths property in CSRF filter from `https://<hostname>;:<port>/system/console/configMgr` on publishers.
 
-Existing SCORM installations can be upgraded to [**cq-social-scorm-package, version 2.2.2 **](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)(which uses[SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)), if the authored course content requires SCORM 2017.1.
+Existing SCORM installations can be upgraded to [**cq-social-scorm-package, version 2.2.2**](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg) (which uses [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)), if the authored course content requires SCORM 2017.1.
 
 >[!NOTE]
 >
