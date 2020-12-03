@@ -10,17 +10,17 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 32da99f0-f058-40ae-95a8-2522622438ce
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 87729e62bf9c1e9e943b6b6cf97cb40d3b0ed774
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 86%
+source-wordcount: '398'
+ht-degree: 80%
 
 ---
 
 
 # 実稼動準備モードでの AEM の実行{#running-aem-in-production-ready-mode}
 
-With AEM 6.1, Adobe introduces the new `"nosamplecontent"` runmode aimed at automating the steps required to prepare an AEM instance for deployment in a production environment.
+AEM 6.1では、Adobeは、実稼働環境でのデプロイメント用にAEMインスタンスを準備するために必要な手順の自動化を目的とした、新しい`"nosamplecontent"`ランモードを導入します。
 
 この新しい実行モードは、セキュリティチェックリストに記載されているセキュリティのベストプラクティスに従うようにインスタンスを自動的に設定するだけでなく、サンプルの Geometrixx アプリケーションと設定をプロセスですべて削除します。
 
@@ -32,7 +32,7 @@ With AEM 6.1, Adobe introduces the new `"nosamplecontent"` runmode aimed at auto
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
 
-In order to run AEM in production ready mode all you need to do is add the `nosamplecontent` via the `-r` runmode switch to your existing startup arguments:
+AEMを実稼働用のレディモードで実行するには、`-r` runmodeスイッチを介して`nosamplecontent`を既存の起動引数に追加するだけです。
 
 ```shell
 java -jar aem-quickstart.jar -r nosamplecontent
@@ -53,13 +53,13 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 1. **Apache Sling Simple WebDAV Access To Repositories**（`org.apache.sling.jcr.webdav`）バンドルはオーサーインスタンスでのみ使用できます。****
 
 1. 新しく作成されたユーザーは、初回ログイン時にパスワードを変更する必要があります。これは admin ユーザーには適用されません。
-1. **Apache Java Script Handler** では、「**Generate Debug Info**」が無効になります。
+1. **「デバッグ** 情報の生成」は **Apache Sling Java Scriptハンドラーでは無効です**。
 
 1. **Apache Sling JSP Script Handler** では、「**Mapped Content**」と「**Generate Debug Info**」が無効になります。
 
 1. **Day CQ WCM Filter** は、`edit`オーサー&#x200B;**インスタンスでは**   に設定され、`disabled`パブリッシュ&#x200B;**インスタンスでは** に設定されます。
 
-1. **Adobe Granite HTML ライブラリマネージャー**&#x200B;は次のように設定されます。
+1. **AdobeGranite HTML Library Manager**&#x200B;は、次の設定で構成されます。
 
    1. **縮小：** `enabled`
    1. **デバッグ:** `disabled`
@@ -68,7 +68,7 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 
 1. **Apache Sling GET Servlet** は、次に示すセキュアな設定をサポートするようにデフォルトで設定されます。
 
-| **設定** | **オーサー** | **パブリッシュ** |
+| **設定** | **オーサー** | **公開** |
 |---|---|---|
 | TXT rendition | disabled | disabled |
 | HTML rendition | disabled | disabled |
