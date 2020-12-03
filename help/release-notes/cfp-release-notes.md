@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.4累積Fix Pack固有のリリースノ�
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f74e20c5264dc38dcbe20c8fc6b9beaaee7cc6da
+source-git-commit: e10d53a3912fb21962f1015550bd3a4a118d8834
 workflow-type: tm+mt
-source-wordcount: '4112'
+source-wordcount: '4156'
 ht-degree: 13%
 
 ---
@@ -99,6 +99,10 @@ Adobe Experience Manager6.4.8.3には、次の問題の修正が含まれてい�
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms] 予定されている [!DNL Experience Manager] 累積Fix Packのリリース日から1週間後に、アドオンパッケージをリリースします。
+
+>[!NOTE]
+>
+>[!DNL Experience Manager] 累積Fix Packにはの修正が含まれていません [!DNL Experience Manager Forms]。これらは、別の[!DNL Forms]アドオンパッケージを使用して配信されます。 さらに、JEE上の[!DNL Experience Manager Forms]の修正を含む累積インストーラーがリリースされました。 詳しくは、「[AEM Formsアドオンパッケージのインストール](#install-aem-forms-add-on-package)」および「[AEM FormsJEEインストーラーのインストール](#install-aem-forms-jee-installer)」を参照してください。
 
 **アダプティブフォーム**
 
