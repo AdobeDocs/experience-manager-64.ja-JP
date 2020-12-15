@@ -21,7 +21,7 @@ AEM Assetsの元のアセットまたはフォルダーに後で変更を加え�
 
 ## Brand Portal へのフォルダーの公開 {#publish-folders-to-brand-portal-1}
 
-1. From the AEM Assets interface, hover over the desired folder and select **[!UICONTROL Publish]** option from the quick actions.
+1. AEM Assetsのインターフェイスで、目的のフォルダーの上にマウスポインターを置き、クイックアクションから「**[!UICONTROL 発行]**」オプションを選択します。
 
    あるいは、目的のフォルダーを選択して後述の手順に従います。
 
@@ -31,11 +31,11 @@ AEM Assetsの元のアセットまたはフォルダーに後で変更を加え�
 
    選択したフォルダーを Brand Portal に公開するには、次のいずれかを実行します。
 
-   * ツールバーで「**[!UICONTROL クイック公開]**」を選択します。Then from the menu, select **[!UICONTROL Publish to Brand Portal]**.
+   * ツールバーで「**[!UICONTROL クイック公開]**」を選択します。次に、メニューから「**[!UICONTROL ブランドポータルに公開]**」を選択します。
    * ツールバーで「**[!UICONTROL 公開を管理]**」を選択します。
 
-3. Then from the **[!UICONTROL Action]** select **[!UICONTROL Publish to Brand Portal]**, and from **[!UICONTROL Scheduling]** select **[!UICONTROL Now]**. 「**[!UICONTROL 次へ]」をタップします。**
-4. Within **[!UICONTROL Scope]**, confirm your selection and tap **[!UICONTROL Publish to Brand Portal]**.
+3. 次に、**[!UICONTROL アクション]**&#x200B;で「**[!UICONTROL ブランドポータルに公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;で「**[!UICONTROL 今すぐ]**」を選択します。 「**[!UICONTROL 次へ]」をタップします。**
+4. **[!UICONTROL スコープ]**&#x200B;内で、選択を確認し、「**[!UICONTROL ブランドポータルに発行]**」をタップします。
 
    フォルダーが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。Brand Portal のインターフェイスにログインして、公開されたフォルダーを確認します。
 
@@ -43,14 +43,14 @@ AEM Assetsの元のアセットまたはフォルダーに後で変更を加え�
 
    アセットフォルダーのBrand Portalへの投稿ワークフローを後の日時にスケジュールするには：
 
-   1. Once you have selected assets/folders to publish, select **[!UICONTROL Manage Publication]** from the tool bar at the top.
-   2. On **[!UICONTROL Manage Publication]** page, select **[!UICONTROL Publish to Brand Portal]** from **[!UICONTROL Action]** and select **[!UICONTROL Later]** from **[!UICONTROL Scheduling]**.
+   1. 発行するアセット/フォルダを選択したら、上部のツールバーから「**[!UICONTROL パブリケーションを管理]**」を選択します。
+   2. **[!UICONTROL パブリケーションの管理]**&#x200B;ページで、**[!UICONTROL アクション]**&#x200B;から「**[!UICONTROL ブランドポータルに公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;から「**[!UICONTROL 後で]**」を選択します。
 
       ![publishlaterbp](assets/publishlaterbp.png)
 
    3. 「**[!UICONTROL アクティベート日]**」を選択して時刻を指定します。「**[!UICONTROL 次へ]**」をタップします。
    4. 「**[!UICONTROL 範囲]**」で選択内容を確認します。「**[!UICONTROL 次へ]**」をタップします。
-   5. 「**[!UICONTROL ワークフロー]**」でワークフロータイトルを指定します。Tap **[!UICONTROL Publish Later]**.
+   5. 「**[!UICONTROL ワークフロー]**」でワークフロータイトルを指定します。「**[!UICONTROL 後で公開]**」をタップします。
 
       ![manageschedulepub](assets/manageschedulepub.png)
 
@@ -70,9 +70,9 @@ Brand Portal へのフォルダーの公開をすぐに取り消すことも、�
 
    Brand Portal へのフォルダーの公開をすぐに取り消すには、次のようにします。
 
-   1. On **[!UICONTROL Manage Publication]** page, from **[!UICONTROL Action]** select **[!UICONTROL Unpublish from Brand Portal]** and from **[!UICONTROL Scheduling]** select **[!UICONTROL Now]**.
-   2. Tap/ click **[!UICONTROL Next].**
-   3. Within **[!UICONTROL Scope]**, confirm your selection and tap **[!UICONTROL Unpublish from Brand Portal]**.
+   1. **[!UICONTROL パブリケーションの管理]**&#x200B;ページの&#x200B;**[!UICONTROL アクション]**&#x200B;から「**[!UICONTROL ブランドポータルから公開を取り消す]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;から「**[!UICONTROL 今すぐ]**」を選択します。
+   2. 「**[!UICONTROL 次へ]」をタップまたはクリックします。**
+   3. **[!UICONTROL スコープ]**&#x200B;内で、選択を確認し、「**[!UICONTROL ブランドポータルから非公開]**」をタップします。
 
    ![confirm-unpublish](assets/confirm-unpublish.png)
 
@@ -80,10 +80,10 @@ Brand Portal へのフォルダーの公開をすぐに取り消すことも、�
 
    Brand Portal へのフォルダーの公開を停止するスケジュールを未来の日時で設定するには、次のようにします。
 
-   1. On **[!UICONTROL Manage Publication]** page, from **[!UICONTROL Action]** select **[!UICONTROL Unpublish from Brand Portal]** and from **[!UICONTROL Scheduling]** select **[!UICONTROL Later].**
+   1. **[!UICONTROL パブリケーションの管理]**&#x200B;ページの&#x200B;**[!UICONTROL アクション]**&#x200B;から「**[!UICONTROL ブランドポータルから非公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;から「**[!UICONTROL 後で]」を選択します。**
    2. 「**[!UICONTROL アクティベート日]**」を選択して時刻を指定します。「**[!UICONTROL 次へ]**」をタップします。
-   3. Within **[!UICONTROL Scope]**, confirm your selection and tap **[!UICONTROL Next]**.
-   4. Specify a **[!UICONTROL Workflow title]** under **[!UICONTROL Workflows]**. Tap **[!UICONTROL Unpublish Later].**
+   3. **[!UICONTROL スコープ]**&#x200B;内で、選択を確認し、**[!UICONTROL 次へ]**&#x200B;をタップします。
+   4. **[!UICONTROL ワークフロー]**&#x200B;の下に&#x200B;**[!UICONTROL ワークフロータイトル]**&#x200B;を指定します。 **[!UICONTROL 後で非公開]をタップします。**
 
       ![unpublishworkflows](assets/unpublishworkflows.png)
 
