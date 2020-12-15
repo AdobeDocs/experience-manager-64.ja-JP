@@ -22,7 +22,7 @@ ht-degree: 78%
 + [DAMについて](assets.md)
 + [ユーザーエクスペリエンスの改善](ux-improvements.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
-+ AEM Assetsを使用 {#using}
++ AEM Assets{#using}を使用
    + [AEM Assetsホームページ体験](assets-home-page.md)
    + [AEM でのアセットの検索](search-assets.md)
    + [GQL 全文検索](gql-search.md)
@@ -73,7 +73,7 @@ ht-degree: 78%
    + [CDN にキャッシュされたコンテンツの無効化](invalidate-cdn-cached-content.md)
    + [一括アセット移行のための機能パック18912のインストール](bulk-ingest-migrate.md)
    + [セレクターの操作](working-with-selectors.md)
-+ アセットの拡張 {#extending}
++ アセットの拡張{#extending}
    + [アセットのカスタマイズと拡張](extending-assets.md)
    + [メディアハンドラーとワークフローを使用したアセットの処理](media-handlers.md)
    + [Assets の検索機能の拡張](searchx.md)
@@ -82,7 +82,7 @@ ht-degree: 78%
    + [アセットエディターの拡張](asseteditorx.md)
    + [Assets HTTP API](mac-api-assets.md)
    + [Assets のプロキシ開発](proxy.md)
-+ アセットの管理 {#administer}
++ アセットの管理{#administer}
    + [Assets でサポートされるファイル形式](assets-formats.md)
    + [検索ファセット](search-facets.md)
    + [アセットのメタデータの管理](metadata.md)
@@ -139,7 +139,7 @@ ht-degree: 78%
    + [コンテンツフラグメント - 削除に関する考慮事項](content-fragments-delete.md)
    + [コンテンツフラグメント - Markdown](content-fragments-markdown.md)
    + [コンテンツフラグメント用の翻訳プロジェクトの作成](creating-translation-projects-for-content-fragments.md)
-+ Manage Assets {#managing}
++ アセットの管理{#managing}
    + [タッチ対応 UI を使用したアセットの管理](managing-assets-touch-ui.md)
    + [複数のアセットとコレクションの管理](managing-multiple-assets.md)
    + [アセットセレクター](asset-selector.md)
