@@ -43,7 +43,7 @@ AEM Assets 管理パネルで追加の「検索」タブを設定することで
 
    >[!NOTE]
    >
-   >When you create a second siteadminsearchpanel, be sure to set an `id` property in order to prevent form conflicts.
+   >2つ目のサイト管理検索パネルを作成する場合は、フォームの競合を防ぐために、`id`プロパティを必ず設定してください。
 
 ## カスタムの述語の作成 {#creating-custom-predicates}
 
@@ -53,13 +53,13 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 カスタム述語を作成するには、[ウィジェットフレームワーク](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html)に関する基本的な知識が必要です。
 
-ベストプラクティスは、既存の述語をコピー後に変更することです。Sample predicates are located in `/libs/cq/search/components/predicates`.
+ベストプラクティスは、既存の述語をコピー後に変更することです。サンプル述部は`/libs/cq/search/components/predicates`にあります。
 
 ### 例：シンプルなプロパティ述語の作成 {#example-build-a-simple-property-predicate}
 
 プロパティ述語の作成手順
 
-1. Create a component folder in your projects directory, for example `/apps/geometrixx/components/titlepredicate`.
+1. プロジェクトディレクトリに`/apps/geometrixx/components/titlepredicate`のように、コンポーネントフォルダを作成します。
 1. ページの URL の末尾に `content.xml`:
 
    ```xml
@@ -142,7 +142,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
    </script>
    ```
 
-1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。To make a component editable, in CRXDE, add a node `cq:editConfig` of primary type `cq:EditConfig`. 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として **DELETE** のみを設定します。
+1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDEで、プライマリタイプ`cq:EditConfig`のノード`cq:editConfig`を追加します。 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として **DELETE** のみを設定します。
 1. ブラウザーを開き、サンプルページ（`press.html` など）でデザインモードに切り替えて、述語段落システムの新しいコンポーネント（「**左揃え**」など）を有効にします。
 
 1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。「**Predicates**」列にコンポーネントを挿入し、「**Diamond**」などの検索語句を入力して、虫眼鏡アイコンをクリックして検索を開始します。
@@ -151,11 +151,11 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
    >
    >検索時は、大文字と小文字の違いを含めて、語句を正確に入力してください。
 
-### 例：シンプルなグループ述語の作成 {#example-build-a-simple-group-predicate}
+### 例：シンプルなグループ述語の作成  {#example-build-a-simple-group-predicate}
 
 グループ述語の作成手順
 
-1. Create a component folder in your projects directory, for example `/apps/geometrixx/components/picspredicate`.
+1. プロジェクトディレクトリに`/apps/geometrixx/components/picspredicate`のように、コンポーネントフォルダを作成します。
 1. ページの URL の末尾に `content.xml`:
 
    ```xml
@@ -249,7 +249,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
        });
    ```
 
-1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。To make a component editable, in CRXDE, add a node `cq:editConfig` of primary type `cq:EditConfig`. 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として `DELETE` のみを設定します。
+1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDEで、プライマリタイプ`cq:EditConfig`のノード`cq:editConfig`を追加します。 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として `DELETE` のみを設定します。
 1. ブラウザーを開き、サンプルページ（`press.html` など）でデザインモードに切り替えて、述語段落システムの新しいコンポーネント（「**左揃え**」など）を有効にします。
 1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。「**Predicates**」列にコンポーネントを挿入します。
 
@@ -257,51 +257,51 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 事前設定済みの ExtJS ウィジェットでは次の述語が使用可能です。
 
-### FulltextPredicate {#fulltextpredicate}
+### FulltextPredicate  {#fulltextpredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルト に設定`fulltext` |
-| searchCallback | Function | Callback for triggering search on event `keyup`. デフォルト に設定`CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback | Function | イベント`keyup`上の検索をトリガーするコールバック。 デフォルト に設定`CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | String | 述語の名前。デフォルト に設定`property` |
-| propertyName | String | JCR プロパティの名前。デフォルト に設定`jcr:title` |
-| defaultValue | String | 事前設定されるデフォルト値 |
+| predicateName | 文字列 | 述語の名前。デフォルト に設定`property` |
+| propertyName | 文字列 | JCR プロパティの名前。デフォルト に設定`jcr:title` |
+| defaultValue | 文字列 | 事前設定されるデフォルト値 |
 
 ### PathPredicate {#pathpredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | String | 述語の名前。デフォルト に設定`path` |
-| rootPath | String | 述語のルートパス。デフォルト に設定`/content/dam` |
-| pathFieldPredicateName | String | デフォルト に設定`folder` |
-| showFlatOption | Boolean | チェックボックスを表示するフラグ `search in subfolders`。 デフォルトは true です |
+| predicateName | 文字列 | 述語の名前。デフォルト に設定`path` |
+| rootPath | 文字列 | 述語のルートパス。デフォルト に設定`/content/dam` |
+| pathFieldPredicateName | 文字列 | デフォルト に設定`folder` |
+| showFlatOption | Boolean | チェックボックス`search in subfolders`を表示するフラグ。 デフォルトは true です |
 
-### DatePredicate {#datepredicate}
-
-| プロパティ | 型 | 説明 |
-|---|---|---|
-| predicateName | String | 述語の名前。デフォルト に設定`daterange` |
-| propertyname | String | JCR プロパティの名前。デフォルト に設定`jcr:content/jcr:lastModified` |
-| defaultValue | String | 事前設定されるデフォルト値 |
-
-### OptionsPredicate {#optionspredicate}
+### DatePredicate  {#datepredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| title | String | 最上部のタイトルを追加します |
-| predicateName | String | 述語の名前。デフォルト に設定`daterange` |
-| propertyname | String | JCR プロパティの名前。デフォルト に設定`jcr:content/metadata/cq:tags` |
-| collapse | String | 折りたたみのレベル。デフォルト に設定`level1` |
-| triggerSearch | Boolean | チェック時の検索を呼び出すためのフラグ。デフォルトは false です |
-| searchCallback | Function | 検索を呼び出すためのコールバック。デフォルト に設定`CQ.wcm.SiteAdmin.doSearch` |
+| predicateName | 文字列 | 述語の名前。デフォルト に設定`daterange` |
+| propertyname | 文字列 | JCR プロパティの名前。デフォルト に設定`jcr:content/jcr:lastModified` |
+| defaultValue | 文字列 | 事前設定されるデフォルト値 |
+
+### OptionsPredicate  {#optionspredicate}
+
+| プロパティ | 型 | 説明 |
+|---|---|---|
+| title | 文字列 | 最上部のタイトルを追加します |
+| predicateName | 文字列 | 述語の名前。デフォルト に設定`daterange` |
+| propertyname | 文字列 | JCR プロパティの名前。デフォルト に設定`jcr:content/metadata/cq:tags` |
+| collapse | 文字列 | 折りたたみのレベル。デフォルト に設定`level1` |
+| triggerSearch | ブール値 | チェック時の検索を呼び出すためのフラグ。デフォルトは false です |
+| searchCallback | 関数 | 検索を呼び出すためのコールバック。デフォルト に設定`CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | Number | タイムアウト。この時間を過ぎると searchCallback が呼び出されます。デフォルトは 800ms です |
 
-## 検索結果のカスタマイズ {#customizing-search-results}
+## 検索結果のカスタマイズ  {#customizing-search-results}
 
 アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。AEM Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みのレンズのセットが付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
