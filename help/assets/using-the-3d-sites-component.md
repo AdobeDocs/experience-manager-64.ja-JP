@@ -18,15 +18,15 @@ ht-degree: 34%
 ---
 
 
-# Working with the 3D Sites component {#working-with-the-d-sites-component}
+# 3Dサイトコンポーネントの操作{#working-with-the-d-sites-component}
 
 AEM 3Dには、3Dモデルのインタラクティブな表示をWebページに実装するためのAEM Sitesコンポーネントが含まれています。
 
-After you have added your 3D component, you can [view the 3D asset in that component.](viewing-3d-assets.md)
+3Dコンポーネントを追加した後、そのコンポーネント内の3Dアセットを[表示できます。](viewing-3d-assets.md)
 
 ## ページテンプレートへの 3D コンポーネントの追加 {#adding-the-d-component-to-the-page-template}
 
-ページ上に配置する前に、ページ内で3Dコンポーネントを有効にする必要があります。 See [Editing templates](/help/sites-authoring/templates.md#editing-a-template-layout-template-author) for detailed information on enabling components in templates.
+ページ上に配置する前に、ページ内で3Dコンポーネントを有効にする必要があります。 テンプレートでのコンポーネントの有効化について詳しくは、[テンプレートの編集](/help/sites-authoring/templates.md#editing-a-template-layout-template-author)を参照してください。
 
 **ページテンプレートへの 3D コンポーネントの追加**:
 
@@ -39,10 +39,10 @@ After you have added your 3D component, you can [view the 3D asset in that compo
 
    ![image2017-11-14_15-33-57](assets/image2017-11-14_15-33-57.png)
 
-1. Tap in the **[!UICONTROL Layout Container]** region to select it.
+1. **[!UICONTROL レイアウトコンテナ]**&#x200B;の領域をタップして選択します。
 
-1. Tap the **[!UICONTROL Policy]** button to open the **[!UICONTROL Policy Editor]**.
-1. In the **[!UICONTROL Properties]** section, select the **[!UICONTROL 3D]** checkmark, and then tap **[!UICONTROL Done]** to save the changes and close the **[!UICONTROL Policy Editor]**.
+1. 「**[!UICONTROL ポリシー]**」ボタンをタップして、**[!UICONTROL ポリシーエディター]**&#x200B;を開きます。
+1. 「**[!UICONTROL プロパティ]**」セクションで、**[!UICONTROL 3D]**&#x200B;チェックマークを選択し、「**[!UICONTROL 完了]**」をタップして変更を保存し、**[!UICONTROL ポリシーエディター]**&#x200B;を閉じます。
 
    これで、このテンプレートを使用するすべてのページに3Dサイトコンポーネントを配置できます。
 
@@ -56,19 +56,19 @@ After you have added your 3D component, you can [view the 3D asset in that compo
 
 1. AEM Sitesを開き、3Dコンポーネントを追加するWebページを選択します。
 
-1. **[!UICONTROL 編集]**（鉛筆）アイコンをタップして、ページをページエディターで開きます。Make sure **[!UICONTROL Edit]** mode near the top right of page is selected.
+1. **[!UICONTROL 編集]**（鉛筆）アイコンをタップして、ページをページエディターで開きます。ページ右上付近の「**[!UICONTROL 編集]**」モードが選択されていることを確認します。
 
    ![image2017-11-14_15-44-40](assets/image2017-11-14_15-44-40.png)
 
 1. パネルセレクターをタップして、サイドパネルを開きます。
 
-1. Tap the plus sign icon to open the **[!UICONTROL Components]** list.
+1. プラス記号アイコンをタップして、**[!UICONTROL コンポーネント]**&#x200B;リストを開きます。
 
-1. **[!UICONTROL 3D Viewer]** コンポーネントをコンポーネント **** リストから、3Dビューアを表示するページ上の場所にドラッグします。
+1. **[!UICONTROL 3Dビューア]**&#x200B;コンポーネントを&#x200B;**[!UICONTROL コンポーネント]**&#x200B;リストから3Dビューアを表示するページ上の場所にドラッグします。
 
 ## 3D コンポーネントの設定 {#configuring-the-d-component}
 
-1. In the AEM Sites page editor, select the **[!UICONTROL 3D Viewer]** component that you previously added to the page.
+1. AEM Sitesページエディタで、前にページに追加した&#x200B;**[!UICONTROL 3Dビューア]**&#x200B;コンポーネントを選択します。
 
 1. **[!UICONTROL 設定]**&#x200B;アイコン（レンチ）をタップして、コンポーネント設定ダイアログボックスを開きます。
 
@@ -88,7 +88,7 @@ After you have added your 3D component, you can [view the 3D asset in that compo
     </tr> 
     <tr> 
     <td>Stage Name</td> 
-    <td><p>使用可能なステージのリストから 3D ステージを選択します。ステージは背景とライティングを提供します。</p> <p>See <a href="/help/assets/about-the-use-of-stages-in-aem-3d.md" target="_blank">About the use of stages in AEM 3D Sites</a>.</p> </td> 
+    <td><p>使用可能なステージのリストから 3D ステージを選択します。ステージは背景とライティングを提供します。</p> <p><a href="/help/assets/about-the-use-of-stages-in-aem-3d.md" target="_blank">AEM 3Dサイトでのステージの使用について</a>を参照してください。</p> </td> 
     <td>Adobe Dimensionアセットでは無視されます。</td> 
     </tr> 
     <tr> 
@@ -98,7 +98,7 @@ After you have added your 3D component, you can [view the 3D asset in that compo
         <li>正の値を設定して右へスピン</li> 
         <li>負の値を左スピンに設定します</li> 
         <li>0を設定すると、自動スピンが無効になります。</li> 
-        </ul> <p>デフォルトは3 RPMで、完全な回転あたり20秒に相当します。<br /> <br /> <strong>注意：</strong> スピン速度は、60/秒のフレームレートを前提とします。 この速度は、通常、より強力なグラフィックスハードウェア上の小さいモデルから適度なサイズのモデルで達成されます。 大きいモデルや低速のデバイスは、低い速度で自動スピンします。</p> </td> 
+        </ul> <p>デフォルトは3 RPMで、完全な回転あたり20秒に相当します。<br /> <br /> <strong>注意：スピン</strong> の速度は、60/秒のフレームレートを前提とします。この速度は、通常、より強力なグラフィックスハードウェア上の小さいモデルから適度なサイズのモデルで達成されます。 大きいモデルや低速のデバイスは、低い速度で自動スピンします。</p> </td> 
     <td>Adobe Dimensionアセットでは無視されます。</td> 
     </tr> 
     <tr> 
@@ -134,33 +134,33 @@ After you have added your 3D component, you can [view the 3D asset in that compo
    コンポーネント設定ダイアログで使用できる設定に加えて、多くのグローバル設定を使用でき、CRXDE Liteを使用して変更できます。
 これらのグローバル設定について詳しくは、[詳細設定](advanced-config-3d.md)を参照してください。
 
-## コンポーネントへの 3D モデルの割り当て {#assigning-a-d-model-to-the-component}
+## コンポーネントへの 3D モデルの割り当て  {#assigning-a-d-model-to-the-component}
 
-1. In the AEM Sites page editor, click the **[!UICONTROL Assets]** icon to open the Assets list in the side panel.
+1. AEM Sitesのページエディターで、**[!UICONTROL アセット]**&#x200B;アイコンをクリックし、サイドパネルのアセットリストを開きます。
 
-1. Select the **[!UICONTROL 3D Models]** filter to hide unwanted asset types.
+1. 不要なアセットタイプを非表示にするには、**[!UICONTROL 3Dモデル]**&#x200B;フィルタを選択します。
 
    ![screen_shot_2017-12-11at124258](assets/screen_shot_2017-12-11at124258.png)
 
 1. 編集中のページに表示する 3D アセットを検索するか、スクロールして見つけます。
 
-1. Drag the 3D asset from the **[!UICONTROL Assets]** list to the **[!UICONTROL 3D Viewer]** component previously placed on the page.
+1. 3Dアセットを&#x200B;**[!UICONTROL アセット]**&#x200B;リストから、前にページに配置した&#x200B;**[!UICONTROL 3Dビューア]**&#x200B;コンポーネントにドラッグします。
 
    Adobe Dimensionアセットは、glTFオープン標準に基づく新しいビューア技術を使用してレンダリングされますが、他のすべての3Dアセットタイプは、従来のAEM 3D webGLビューアに依存します。 3Dモデルのタイプに基づいて、適切なビューアが自動的に選択されます。
 
-## 3Dコンポーネントを含むWebページのプレビュー {#previewing-a-web-page-that-has-a-d-component}
+## 3Dコンポーネント{#previewing-a-web-page-that-has-a-d-component}を含むWebページのプレビュー
 
-While the web page is in **[!UICONTROL Edit]** mode, the 3D component displays the 3D model but no interaction with the model is possible.
+Webページが&#x200B;**[!UICONTROL 編集]**&#x200B;モードの間、3Dコンポーネントは3Dモデルを表示しますが、モデルとのやり取りは不可能です。
 
 3Dコンポーネントの機能に完全にアクセスして、ページエディターでWebページをプレビューできます。
 
-See also [Viewing 3D assets in the Sites 3D component](viewing-3d-assets.md#viewing-d-assets-in-the-sites-d-component).
+「[サイト3Dコンポーネントでの3Dアセットの表示](viewing-3d-assets.md#viewing-d-assets-in-the-sites-d-component)」も参照してください。
 
 **3Dコンポーネントを含むWebページをプレビューするには**:
 
 1. 次のいずれかの操作をおこないます。
 
-   * Near the upper-right of the page, click **[!UICONTROL Preview]** to enter preview mode.
+   * ページ右上付近にある「**[!UICONTROL プレビュー]**」をクリックしてプレビューモードに入ります。
    * ブラウザーのページ URL から `/edit.html` を削除します。
 
 ## ページとアセットの公開 {#publishing-the-page-and-assets}
@@ -169,7 +169,7 @@ See also [Viewing 3D assets in the Sites 3D component](viewing-3d-assets.md#view
 
 >[!NOTE]
 >
->Using the **[!UICONTROL Publish Page]** menu item on the **[!UICONTROL Page Information]** menu will publish the page and all primary page dependencies. この方法でページを公開した場合、3D モデルや 3D ステージで参照される可能性のあるセカンダリの依存関係（テクスチャマップや IBL 画像など）は公開されません。
+>**[!UICONTROL ページ情報]**&#x200B;メニューの&#x200B;**[!UICONTROL 発行ページ]**&#x200B;メニュー項目を使用すると、ページとすべてのプライマリページの依存関係が発行されます。 この方法でページを公開した場合、3D モデルや 3D ステージで参照される可能性のあるセカンダリの依存関係（テクスチャマップや IBL 画像など）は公開されません。
 >
 >Adobeでは、3Dアセットを参照するWebページを公開する前に、すべての3Dアセットとその依存関係をAEM Assetsから直接公開することをお勧めします。
 
