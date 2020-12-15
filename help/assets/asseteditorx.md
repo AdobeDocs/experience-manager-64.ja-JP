@@ -11,7 +11,7 @@ ht-degree: 98%
 ---
 
 
-# Extend Asset Editor {#extending-asset-editor}
+# アセットエディタの拡張{#extending-asset-editor}
 
 アセットエディターは、アセット共有を使用して見つけたアセットをクリックすると開くページです。アセットエディターでは、メタデータ、サムネール、タイトルおよびタグなどのアセットの特性を編集できます。
 
@@ -19,7 +19,7 @@ ht-degree: 98%
 
 Adobe Enterprise Manager（AEM）開発者は、既存のエディターコンポーネントを使用するだけでなく、独自のコンポーネントを作成することもできます。
 
-## アセットエディターテンプレートの作成 {#creating-an-asset-editor-template}
+## アセットエディターテンプレートの作成  {#creating-an-asset-editor-template}
 
 geometrixx には次のサンプルページが含まれています。
 
@@ -47,7 +47,7 @@ AEM Assets コンポーネントでは、WCM 編集クライアントライブ�
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-The sample loads this JavaScript source in `head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`).
+サンプルでは、このJavaScriptソースを`head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`)に読み込みます。
 
 ### 追加のスタイルシート {#additional-style-sheets}
 
@@ -57,7 +57,7 @@ The sample loads this JavaScript source in `head.jsp`(`/apps/geometrixx/componen
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
 ```
 
-### Geometrixx スタイルシート {#geometrixx-style-sheet}
+### Geometrixx スタイルシート  {#geometrixx-style-sheet}
 
 サンプルページコンポーネントでは、すべてのセレクターが `static.css`（`/etc/designs/geometrixx/static.css`）の `.asseteditor` で始まっている必要があります。ベストプラクティス：すべての `.asseteditor` セレクターをスタイルシートにコピーし、ルールを必要に応じて調整します。
 
@@ -120,7 +120,7 @@ HTML 部分で、先頭のタイトルセット（アセットまたはページ
 <title><%= title %></title>
 ```
 
-## シンプルなフォームフィールドコンポーネントの作成 {#creating-a-simple-form-field-component}
+## シンプルなフォームフィールドコンポーネントの作成  {#creating-a-simple-form-field-component}
 
 この例では、読み込んだアセットのメタデータを表示するコンポーネントを作成する方法を説明します。
 
@@ -201,7 +201,7 @@ HTML 部分で、先頭のタイトルセット（アセットまたはページ
 
 1. **編集**&#x200B;モードで、新しいコンポーネント（**Sample Metadata** など）がサイドキック（**アセットエディター**&#x200B;グループ内）で使用できます。コンポーネントを挿入します。メタデータを格納できるようにするには、メタデータフォームに追加する必要があります。
 
-## メタデータオプションの変更 {#modifying-metadata-options}
+## メタデータオプションの変更  {#modifying-metadata-options}
 
 [メタデータフォーム](assets-finder-editor.md#metadata-form-and-text-field-configuring-the-view-metadata-component)で利用可能な名前空間を変更できます。
 
