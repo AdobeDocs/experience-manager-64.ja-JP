@@ -11,7 +11,7 @@ ht-degree: 79%
 ---
 
 
-# Create and configure Asset Editor pages {#creating-and-configuring-asset-editor-pages}
+# アセットエディタページの作成と設定{#creating-and-configuring-asset-editor-pages}
 
 このドキュメントは次の内容について説明します。
 
@@ -23,7 +23,7 @@ ht-degree: 79%
 >
 >アセット共有は、オープンソースの参照実装として使用できます。[Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) を参照してください。アセット共有は正式にはサポートされていません。
 
-## アセットエディターページを作成および設定する理由 {#why-create-and-configure-asset-editor-pages}
+## アセットエディターページを作成および設定する理由  {#why-create-and-configure-asset-editor-pages}
 
 デジタルアセット管理は、ますます広く使用されるようになっています。専門的な教育を受けたユーザー（写真家や分類学者など）による小規模なユーザーグループ向けの小規模なソリューションから、大規模で多様なユーザーグループ（ビジネスユーザー、WCM 作成者、ジャーナリストなど）に移行する場合、専門的なユーザー向けの Adobe Experience Manager（AEM）Assets の強力なユーザーインターフェイスでは、利用できる情報が多すぎて不便が生じることがあります。この場合、関係者にとって必要なデジタルアセットにアクセスするための目的に特化したユーザーインターフェイスやアプリケーションが求められるようになります。
 
@@ -33,7 +33,7 @@ ht-degree: 79%
 
 AEM のアセット中心型アプリケーションは、特定アセットの詳細を表示するのに利用できるアセットエディターページで構成されます。アセットエディターページでは、アセットにアクセスするユーザーが必要な権限を持っていれば、メタデータの編集も可能です。
 
-## アセット共有ページの作成と設定 {#creating-and-configuring-an-asset-share-page}
+## アセット共有ページの作成と設定{#creating-and-configuring-an-asset-share-page}
 
 DAM Finder 機能をカスタマイズし、必要なすべての機能を持つページを作成します。これらのページがアセット共有ページと呼ばれます。新しいアセット共有ページを作成するには、Geometrixx アセット共有テンプレートを使用してページを追加し、次にそのページに対してユーザーが実行できるアクションをカスタマイズします。さらに、アセットの表示方法と、ユーザーによるクエリの作成方法を決定します。
 
@@ -44,7 +44,7 @@ DAM Finder 機能をカスタマイズし、必要なすべての機能を持つ
 * Web サイトユーザー向けの画像データベース
 * メタデータエディター向けのメディアタグ作成インターフェイス
 
-### アセット共有ページの作成 {#creating-an-asset-share-page}
+### アセット共有ページの作成{#creating-an-asset-share-page}
 
 新しいアセット共有ページを作成する方法として、Web サイトでの作業中に作成するか、Digital Asset Manager から作成することができます。
 
@@ -56,7 +56,7 @@ DAM Finder 機能をカスタマイズし、必要なすべての機能を持つ
 
 1. 「**[!UICONTROL Web サイト]**」タブで、アセット共有ページを作成する場所に移動し、「**[!UICONTROL 新規]**」をクリックします。
 
-1. Select the **[!UICONTROL Asset Share]** page and click **[!UICONTROL Create]**. The new page is created and the asset share page is listed in the **[!UICONTROL Websites]** tab.
+1. **[!UICONTROL アセット共有]**&#x200B;ページを選択し、**[!UICONTROL 作成]**&#x200B;をクリックします。新しいページが作成され、アセット共有ページが「**[!UICONTROL Webサイト]**」タブに一覧表示されます。
 
 ![dam8](assets/dam8.png)
 
@@ -64,7 +64,7 @@ Geometrixx DAM アセット共有テンプレートを使用して作成した�
 
 ![screen_shot_2012-04-18at115456am](assets/screen_shot_2012-04-18at115456am.png)
 
-To customize your Asset Share page, you use elements from the sidekick and you also edit query builder properties. The page **[!UICONTROL Geometrixx Press Center]** is a customized version of a page based on this template:
+アセット共有ページをカスタマイズするには、サイドキックのクエリを使用し、要素ビルダーのプロパティを編集します。**[!UICONTROL Geometrixxプレスセンター]**&#x200B;ページは、次のテンプレートに基づくページのカスタマイズ版です。
 
 ![screen_shot_2012-04-19at123048pm](assets/screen_shot_2012-04-19at123048pm.png)
 
@@ -81,7 +81,7 @@ Digital Asset Manager を使用して新しいアセット共有ページを作�
 
    デフォルトでは、「**[!UICONTROL 新規]**」からアセット共有ページを作成すると、アセットビューアおよびアセットエディターが自動的に作成されます。
 
-#### アクションのカスタマイズ {#customizing-actions}
+#### アクションのカスタマイズ{#customizing-actions}
 
 定義済みの一部のアクションから、選択したデジタルアセットに対してユーザーが実行できるアクションを決定できます。
 
@@ -101,11 +101,11 @@ Digital Asset Manager を使用して新しいアセット共有ページを作�
 | [!UICONTROL タグアクション] | ユーザーが選択したアセットにタグを追加できるようにします。 |
 | [!UICONTROL アセットアクションを表示] | ユーザーが変更できるように、アセットをアセットエディターで開きます。 |
 
-1. Drag the appropriate action to the **Actions** area on the page. これによって、そのアクションを実行するボタンが作成されます。
+1. 適切なアクションをページの&#x200B;**アクション**&#x200B;領域にドラッグします。 これによって、そのアクションを実行するボタンが作成されます。
 
    ![chlimage_1-387](assets/chlimage_1-387.png)
 
-#### Determine how search results are presented {#determining-how-search-results-are-presented}
+#### 検索結果の表示方法を決定する{#determining-how-search-results-are-presented}
 
 事前定義済みのレンズリストで、結果の表示方法を指定します。
 
@@ -132,7 +132,7 @@ Digital Asset Manager を使用して新しいアセット共有ページを作�
 
 ![chlimage_1-389](assets/chlimage_1-389.png)
 
-#### Customize the Query Builder {#customizing-the-query-builder}
+#### クエリビルダのカスタマイズ{#customizing-the-query-builder}
 
 クエリビルダーでは、検索語句を入力し、アセット共有ページのコンテンツを作成できます。クエリビルダーの編集時に、1 ページに表示する検索結果数、アセットのダブルクリック時に開くアセットエディターおよびクエリ検索パスを指定し、ノード型をカスタマイズします。
 
@@ -144,21 +144,21 @@ Digital Asset Manager を使用して新しいアセット共有ページを作�
 
    ![screen_shot_2012-04-23at15055pm](assets/screen_shot_2012-04-23at15055pm.png)
 
-1. Click the **[!UICONTROL Paths]** tab. 検索対象とする 1 つまたは複数のパスを入力します。ユーザーがパスの述語を使用すると、これらのパスは上書きされます。
+1. 「**[!UICONTROL パス]**」タブをクリックします。 検索対象とする 1 つまたは複数のパスを入力します。ユーザーがパスの述語を使用すると、これらのパスは上書きされます。
 
    ![screen_shot_2012-04-23at15150pm](assets/screen_shot_2012-04-23at15150pm.png)
 
 1. 必要に応じて、別のノードタイプを入力します。
 
-1. In the **[!UICONTROL Query Builder URL]** field, you can override or wrap the query builder and enter the new servlet URLs with the existing query builder component. 「**[!UICONTROL フィード URL]**」フィールドで、フィード URL を上書きすることもできます。
+1. 「**[!UICONTROL クエリビルダーのURL]**」フィールドで、クエリビルダーを上書きまたはラップし、既存のクエリビルダーコンポーネントを使用して新しいサーブレットURLを入力できます。 「**[!UICONTROL フィード URL]**」フィールドで、フィード URL を上書きすることもできます。
 
    ![screen_shot_2012-04-23at15313pm](assets/screen_shot_2012-04-23at15313pm.png)
 
-1. In the **[!UICONTROL Text]** field, enter the text you want to appear for results and page numbers of results. 変更作業が完了したら、「**[!UICONTROL OK]**」をクリックします。
+1. 「**[!UICONTROL テキスト]**」フィールドに、結果と結果のページ番号に表示するテキストを入力します。 変更作業が完了したら、「**[!UICONTROL OK]**」をクリックします。
 
    ![screen_shot_2012-04-23at15300pm](assets/screen_shot_2012-04-23at15300pm.png)
 
-#### 追加述部 {#adding-predicates}
+#### 追加予測{#adding-predicates}
 
 AEM Assets には、アセット共有ページに追加できる多数の述語が用意されています。述語を使用すると、ユーザーが検索をさらに絞り込むことができます。一部のケースでは、指定した述語がクエリビルダーのパラメーター（「パス」パラメーターなど）よりも優先されます。
 
@@ -187,15 +187,15 @@ AEM Assets には、アセット共有ページに追加できる多数の述語
 
    ![screen_shot_2012-04-23at15640pm](assets/screen_shot_2012-04-23at15640pm.png)
 
-## アセットエディタページの作成と設定 {#creating-and-configuring-an-asset-editor-page}
+## アセットエディタページの作成と設定{#creating-and-configuring-an-asset-editor-page}
 
 アセットエディターをカスタマイズして、ユーザーによるデジタルアセットの表示および編集方法を指定します。これをおこなうには、新規のアセットエディターページを作成してから、ユーザーがページに対して実行できる表示とアクションをカスタマイズします。
 
 >[!NOTE]
 >
->If you want to add custom fields to the DAM asset editor, add new cq:Widget nodes to `/apps/dam/content/asseteditors.`
+>DAMアセットエディターにカスタムフィールドを追加する場合は、新しいcq:Widgetノードを`/apps/dam/content/asseteditors.`に追加します。
 
-### アセットエディタページの作成 {#creating-the-asset-editor-page}
+### アセットエディタページの作成{#creating-the-asset-editor-page}
 
 アセットエディターページを作成する場合に、アセット共有ページのすぐ下にページを作成することをお勧めします。
 
@@ -211,11 +211,11 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 ![assetshare5](assets/assetshare5.bmp)
 
-To customize your Asset Editor page, use elements from the sidekick. The Asset Editor page that is accessed from the **[!UICONTROL Geometrixx Press Center]** is a customized version of a page based on this template:
+アセットエディタページをカスタマイズするには、サイドキックの要素を使用します。**[!UICONTROL Geometrixxプレスセンター]**&#x200B;からアクセスされるアセットエディタページは、次のテンプレートに基づくページのカスタマイズ版です。
 
 ![assetshare6](assets/assetshare6.bmp)
 
-#### Set which Asset Editor opens from an Asset Share page {#setting-which-asset-editor-opens-from-an-asset-share-page}
+#### アセット共有ページ{#setting-which-asset-editor-opens-from-an-asset-share-page}から開くアセットエディタの設定
 
 カスタムのアセットエディターページを作成したら、アセット（作成したカスタムのアセット共有）をダブルクリックすると、カスタマイムのエディターページでアセットが開くことを確認する必要があります。
 
@@ -225,13 +225,13 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
    ![screen_shot_2012-04-23at20123pm](assets/screen_shot_2012-04-23at20123pm.png)
 
-1. Click the **[!UICONTROL General]** tab if it is not already selected.
+1. 「**[!UICONTROL 一般]**」タブが選択されていない場合はクリックします。
 
-1. In the **[!UICONTROL Path of Asset Editor]** field, enter the path to the asset editor you want the Asset Share page to open assets in and click **[!UICONTROL OK]**.
+1. 「**[!UICONTROL アセットエディターのパス]**」フィールドに、アセットを開くアセットエディターのパスを入力し、「**[!UICONTROL OK]**」をクリックします。
 
    ![screen_shot_2012-04-23at21653pm](assets/screen_shot_2012-04-23at21653pm.png)
 
-#### Add Asset Editor components {#adding-asset-editor-components}
+#### 追加アセットエディタコンポーネント{#adding-asset-editor-components}
 
 アセットエディターに含める機能を指定するには、ページにコンポーネントを追加します。
 
@@ -251,7 +251,7 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
    | コンポーネント | 説明 |
    |---|---|
-   | **[!UICONTROL メタデータフォーム]と[!UICONTROL メタデータテキストフィールド]** | アセットにメタデータを追加し、そのアセットに対して送信などのアクションを実行できるようにします。 |
+   | **[!UICONTROL メタデータ] フォームと [!UICONTROL メタデータテキストフィールド]** | アセットにメタデータを追加し、そのアセットに対して送信などのアクションを実行できるようにします。 |
    | **[!UICONTROL サブアセット]** | サブアセットをカスタマイズできるようにします。 |
    | **タグ** | ユーザーがタグを選択してアセットに追加できるようにします。 |
    | **[!UICONTROL サムネール]** | アセットのサムネールとファイル名を表示し、代替テキストを追加できるようにします。ここでは、アセットエディターのアクションを追加することもできます。 |
@@ -263,28 +263,28 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
 メタデータフォームは、開始アクションと終了アクションを含むフォームです。その間には、**[!UICONTROL テキスト]**&#x200B;フィールドを入力します。フォームの操作について詳しくは、[フォーム](../sites-authoring/default-components.md)を参照してください。
 
-1. Create a start action by clicking **[!UICONTROL Edit]** in the Start area of the form. 必要に応じて、「ボックスタイトル」にボックスタイトルを入力できます。デフォルトでは、ボックスタイトルは「**[!UICONTROL メタデータ]**」です。生成された Java スクリプトクライアントコードを検証する場合は、「クライアントの検証」チェックボックスをオンにします。
+1. フォームの開始領域で「**[!UICONTROL 編集]**」をクリックして、開始アクションを作成します。 必要に応じて、「ボックスタイトル」にボックスタイトルを入力できます。デフォルトでは、ボックスタイトルは「**[!UICONTROL メタデータ]**」です。生成された Java スクリプトクライアントコードを検証する場合は、「クライアントの検証」チェックボックスをオンにします。
 
    ![screen_shot_2012-04-23at22911pm](assets/screen_shot_2012-04-23at22911pm.png)
 
-1. Create an End action by clicking **[!UICONTROL Edit]** in the End area of the form. 例えば、ユーザーがメタデータの変更内容を送信できる「**[!UICONTROL 送信]**」ボタンを作成できます。また、オプションとして、メタデータを元の状態にリセットする「**[!UICONTROL リセット]**」ボタンを追加できます。
+1. フォームの「End」領域で「**[!UICONTROL Edit]**」をクリックして、Endアクションを作成します。 例えば、ユーザーがメタデータの変更内容を送信できる「**[!UICONTROL 送信]**」ボタンを作成できます。また、オプションとして、メタデータを元の状態にリセットする「**[!UICONTROL リセット]**」ボタンを追加できます。
 
    ![screen_shot_2012-04-23at23138pm](assets/screen_shot_2012-04-23at23138pm.png)
 
-1. In between the **[!UICONTROL Form Start]** and the **Form End**, drag Metadata Text Fields to the form. ユーザーはこれらのテキストフィールドにメタデータを入力し、このメタデータを送信するか、他のアクションを実行することができます。
+1. **[!UICONTROL フォーム開始]**&#x200B;と&#x200B;**フォームの終わり**&#x200B;の間で、メタデータテキストフィールドをフォームにドラッグします。 ユーザーはこれらのテキストフィールドにメタデータを入力し、このメタデータを送信するか、他のアクションを実行することができます。
 
-1. Double-click the field name, for example, **Title** to open the metadata field and make changes. **[!UICONTROL コンポーネントを編集]**&#x200B;ウィンドウの「[!UICONTROL 一般]」タブで、名前空間、フィールドラベル、型（`dc:title` など）を定義します。
+1. フィールド名（例：**タイトル**）を重複がクリックすると、メタデータフィールドが開き、変更が行われます。 **[!UICONTROL コンポーネントを編集]**&#x200B;ウィンドウの「[!UICONTROL 一般]」タブで、名前空間、フィールドラベル、型（`dc:title` など）を定義します。
 
 
    ![screen_shot_2012-04-23at23305pm](assets/screen_shot_2012-04-23at23305pm.png)
 
-   See [Customizing and Extending AEM Assets](extending-assets.md) for information on modifying the namespaces available in the metadata form.
+   メタデータフォームで使用可能な名前空間の変更については、[AEM Assetsのカスタマイズと拡張](extending-assets.md)を参照してください。
 
-1. Click the **[!UICONTROL Constraints]** tab. ここで、フィールドを必須にするかどうかを選択し、必要に応じて制約を追加できます。
+1. 「**[!UICONTROL 制約]**」タブをクリックします。 ここで、フィールドを必須にするかどうかを選択し、必要に応じて制約を追加できます。
 
    ![screen_shot_2012-04-23at23435pm](assets/screen_shot_2012-04-23at23435pm.png)
 
-1. Click the **[!UICONTROL Display]** tab. ここで、メタデータフィールドの列の新しい幅と列数を入力できます。「**フィールドは読み取り専用です**」チェックボックスをオフにすると、ユーザーがメタデータを編集できるようになります。
+1. 「**[!UICONTROL 表示]**」タブをクリックします。 ここで、メタデータフィールドの列の新しい幅と列数を入力できます。「**フィールドは読み取り専用です**」チェックボックスをオフにすると、ユーザーがメタデータを編集できるようになります。
 
    ![screen_shot_2012-04-23at23446pm](assets/screen_shot_2012-04-23at23446pm.png)
 
@@ -294,7 +294,7 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
 アセットエディターページでは、ユーザーはこの後メタデータフィールドに値を入力し（フィールドが編集可能な場合）、終了アクション（変更内容の送信など）を実行することができます。
 
-#### サブアセット {#sub-assets}
+#### サブアセット  {#sub-assets}
 
 サブアセットコンポーネントでは、サブアセットの表示と選択をおこなうことができます。[メインアセット](assets.md#what-are-digital-assets)とサブアセットの下に表示される名前を指定できます。
 
@@ -330,7 +330,7 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
 ![screen_shot_2012-04-23at25244pm](assets/screen_shot_2012-04-23at25244pm.png)
 
-#### サムネール {#thumbnail}
+#### サムネール  {#thumbnail}
 
 サムネールコンポーネントでは、選択したサムネールがアセットで表示されます（多くの形式でサムネールは自動的に抽出されます）。さらに、コンポーネントではファイル名と、[変更可能なアクション](assets-finder-editor.md#adding-asset-editor-actions)が表示されます。
 
@@ -364,13 +364,13 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
 
 ![chlimage_1-392](assets/chlimage_1-392.png)
 
-#### ア追加セットエディタのアクション {#adding-asset-editor-actions}
+#### ア追加セットエディタのアクション{#adding-asset-editor-actions}
 
 定義済みの一部のアクションから、選択したデジタルアセットに対してユーザーが実行できるアクションを決定できます。
 
 アセットエディターページにアクションを追加するには：
 
-1. In the Asset Editor page that you want to customize, click **[!UICONTROL Asset Editor]** in the sidekick.<br>
+1. カスタマイズするアセットエディタページで、サイドキックの&#x200B;**[!UICONTROL アセットエディタ]**&#x200B;をクリックします。<br>
 
    ![sidekickでアセットエディタを選択](assets/screen_shot_2012-04-23at35515pm.png)
 
@@ -385,11 +385,11 @@ To customize your Asset Editor page, use elements from the sidekick. The Asset E
    | [!UICONTROL 参照] | クリックすると、アセットで現在使用されているページが表示されます。 |
    | [!UICONTROL バージョン管理] | アセットのバージョンの作成と復元が可能です。 |
 
-1. Drag the appropriate action to the **Actions** area on the page. これによって、そのアクションを実行するボタンが作成されます。
+1. 適切なアクションをページの&#x200B;**アクション**&#x200B;領域にドラッグします。 これによって、そのアクションを実行するボタンが作成されます。
 
 ![chlimage_1-393](assets/chlimage_1-393.png)
 
-## Edit multiple assets with the Asset Editor page {#multi-editing-assets-with-the-asset-editor-page}
+## アセットエディタページ{#multi-editing-assets-with-the-asset-editor-page}で複数のアセットを編集
 
 AEM Assets では複数のアセットを同時に変更できます。アセットを選択した後、それらのアセットの次の情報を同時に変更できます。
 
@@ -398,13 +398,13 @@ AEM Assets では複数のアセットを同時に変更できます。アセッ
 
 アセットエディターページを使用してアセットをマルチ編集するには：
 
-1. Open the Geometrixx **[!UICONTROL Press Center]** page at `http://localhost:4502/content/geometrixx/en/company/press.html`.
+1. `http://localhost:4502/content/geometrixx/en/company/press.html`にあるGeometrixx **[!UICONTROL センター]**&#x200B;を押してください。
 1. アセットを選択します。
 
-   * Windowsの場合： `Ctrl + click` 各アセット。
-   * Macの場合： `Cmd + click` 各アセット。
+   * Windowsの場合：`Ctrl + click`個々のアセット。
+   * Macの場合：`Cmd + click`個々のアセット。
 
-   To select a range of assets: click the first asset then `Shift + click` the last asset.
+   アセットの範囲を選択するには：最初のアセットをクリックし、最後のアセットを`Shift + click`クリックします。
 
 1. 「**Actions**」フィールド（ページの左側）の「**[!UICONTROL Edit Metadata]**」をクリックします。
 
@@ -414,7 +414,7 @@ AEM Assets では複数のアセットを同時に変更できます。アセッ
    * すべてのアセットに適用されるタグは、通常のフォントで表示されます。
    * タグ以外のメタデータ：フィールドの値は、選択されたすべてのアセットで同じ場合にのみ表示されます。
 
-1. Click **[!UICONTROL Download]** to download a ZIP file containing the assets original renditions.
+1. 「**[!UICONTROL ダウンロード]**」をクリックして、元のレンディションを含むZIPファイルをダウンロードします。
 1. 「**[!UICONTROL Tags]**」フィールドの横にある鉛筆アイコンをクリックして、タグを編集します。
 
    * すべてのアセットではなく一部のアセットにのみ適用されるタグは、グレーの背景になります。
@@ -423,12 +423,12 @@ AEM Assets では複数のアセットを同時に変更できます。アセッ
    以下の操作を実行できます。
 
    * 「`x`」アイコンをクリックして、すべてのアセットのタグを削除します。
-   * Click the `+` icon to add the tag to all the assets.
-   * Click the `arrow` and select a tag to add a new tag to all the assets.
+   * `+`アイコンをクリックして、タグをすべてのアセットに追加します。
+   * `arrow`をクリックし、タグを選択して、すべてのアセットに新しいタグを追加します。
 
    「**[!UICONTROL OK]**」をクリックして、変更内容をフォームに書き込みます。「**Tags**」フィールドの横にあるチェックボックスが自動的にオンになります。
 
-1. 「説明」フィールドを編集します。 例えば、次の値に設定します。 `This is a common description`. フィールドを編集すると、フォームが送信されると、その値によって選択したアセットの既存の値が上書きされます。 フィールドの編集時に、フィールドの横にあるボックスが自動的にチェックされます。
+1. 「説明」フィールドを編集します。例えば、次の値に設定します。`This is a common description`.フィールドを編集すると、フォームが送信されると、その値によって選択したアセットの既存の値が上書きされます。 フィールドの編集時に、フィールドの横にあるボックスが自動的にチェックされます。
 
    `This is a common description`
 
@@ -436,4 +436,4 @@ AEM Assets では複数のアセットを同時に変更できます。アセッ
 
    注意：フィールドを編集すると、フィールドの横にあるチェックボックスが自動的にオンになります。
 
-1. Click **[!UICONTROL Update Metadata]** to submit the form and save the changes for all the assets. Only the checked metadata are modified.
+1. 「**[!UICONTROL メタデータを更新]**」をクリックしてフォームを送信し、すべてのアセットの変更を保存します。チェック済みのメタデータのみが変更されます。
