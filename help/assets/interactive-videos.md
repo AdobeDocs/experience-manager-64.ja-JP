@@ -24,9 +24,9 @@ ht-degree: 92%
 
 [インタラクティブ画像](interactive-images.md)も参照してください。
 
-## インタラクティブビデオの使用例 {#interactive-video-in-action}
+## インタラクティブビデオの使用例  {#interactive-video-in-action}
 
-To see an interactive, shoppable video in action, click [Live Demos](https://landing.adobe.com/jp/na/dynamic-media/ctir-2755/live-demos.html), scroll to the **[!UICONTROL Shoppable Media]** heading on the page, then click the shoppable video.
+インタラクティブで買い物かごが可能なビデオを実際に閲覧するには、[ライブデモ](https://landing.adobe.com/jp/na/dynamic-media/ctir-2755/live-demos.html)をクリックし、ページ上の&#x200B;**[!UICONTROL 買い物かごが可能なメディア]**&#x200B;の見出しまでスクロールして、買い物かごのビデオをクリックします。
 
 * 再生中にビデオ内で製品が使用されると、同じ製品のサムネール画像が右側に表示されます。
 
@@ -34,13 +34,13 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 
 <!-- There was a link here that showed the video frame of an interactive video and when the reader clicked the frame the video would play https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
 
-![インタラクティブで買い物が可能なビデオのフレーム](assets/chlimage_1-126.png)*インタラクティブで買い物が可能なビデオのビデオフレームキャプチャ。*
+![インタラクティブで買い物が可能なビデオのフレーム](assets/chlimage_1-126.png) *インタラクティブで買い物が可能なビデオのビデオフレームキャプチャ。*
 
 >[!NOTE]
 >
 >ユーザーがサムネール画像をクリックすると Web ページが開かれるようにインタラクティブビデオを作成した場合、一部のデバイスでは、ポップアップ Web ページがブロックされて開きません。そのようなケースでは、デバイスのポップアップブロック機能の設定を変更する必要があります。例えば、Apple iPhone 6 では **[!UICONTROL 設定]**／**Safari**／**ポップアップブロック**&#x200B;をタップして、コントロールを&#x200B;**[!UICONTROL オフ]**&#x200B;にスライドします。こうすると、インタラクティブビデオを再生してサムネールをクリックしたときに、ポップアップを開くかどうかを確認するメッセージが表示されます。同意すると Web ページが開きます。
 
-## インタラクティブビデオの作成方法を見る {#watch-how-interactive-videos-are-created}
+## インタラクティブビデオの作成方法を見る  {#watch-how-interactive-videos-are-created}
 
 [インタラクティブビデオの作成方法](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo)[](https://outv.omniture.com?v=s4NHQ2dzqd7hIqWjeG2sIdyNWsTWyupA)を示す 7 分 30 秒のガイドをご覧ください\
 （このビデオガイドの対象は Assets on Demand ですが、原則や手順は AEM Assets のインタラクティブビデオにも対応しています）。
@@ -96,7 +96,7 @@ To see an interactive, shoppable video in action, click [Live Demos](https://lan
 
    AEM Sites、AEM、eコマース、またはその両方を使用する場合は、インタラクティブビデオをAEMのWebページに直接追加できます。その場合は、インタラクティブメディアコンポーネントをページにドラッグします。 [ページへの Dynamic Media アセットの追加](adding-dynamic-media-assets-to-pages.md)を参照してください。
 
-   を参照してください。
+   
 埋め込みコードまたは URL を使用して、インタラクティブビデオを Web サイトエクスペリエンスに統合します。[インタラクティブビデオの Web サイトへの統合](#integrating-an-interactive-video-with-your-website)を参照してください。
 
    サードパーティの WCM（Web Content Manager）を使用している場合は、新しいインタラクティブビデオを、Web サイトで使用されている既存のクイックビュー実装に統合する必要があります。[インタラクティブビデオの既存のクイックビューへの統合](#integrating-an-interactive-video-with-an-existing-quickview)を参照してください。
@@ -120,7 +120,7 @@ AEM の実装で AEM eCommerce を使用している場合は、このタスク�
 
 クイックビュー実装の大部分では、次の枠組みが使用されています。
 
-* ユーザーは Web サイト上の特定のユーザーインターフェイス要素をアクティベートします。For example, clicking a **[!UICONTROL Quickview]** button.
+* ユーザーは Web サイト上の特定のユーザーインターフェイス要素をアクティベートします。例えば、**[!UICONTROL クイックビュー]**&#x200B;ボタンをクリックします。
 * Web サイトでは、必要に応じて、クイックビューのデータまたはコンテンツを読み込むための Ajax リクエストをバックエンドに送信します。
 * クイックビューのデータは、Web ページでのレンダリングに備えて、コンテンツに変換されます。
 * 最後に、フロントエンドコードによってそのコンテンツが画面上に視覚的にレンダリングされます。
@@ -129,9 +129,9 @@ AEM の実装で AEM eCommerce を使用している場合は、このタスク�
 
 通常、専門のデバッグツールを使用する必要はありません。最新の Web ブラウザーには、十分なタスクを実行できる Web インスペクターが備わっています。Web インスペクターが搭載されている Web ブラウザーの例を次に示します。
 
-* To see all outgoing HTTP requests in Google Chrome, use keyboard shortcut `F12` (Windows) or `Command + Options + I` (Mac) to open the **[!UICONTROL Developer Tools]** panel, and then click the **[!UICONTROL Network]** tab.
+* Google Chromeで送信されたすべてのHTTP要求を表示するには、キーボードショートカット`F12`(Windows)または`Command + Options + I`(Mac)を使用して&#x200B;**[!UICONTROL Developer Tools]**&#x200B;パネルを開き、**[!UICONTROL 「ネットワーク]**」タブをクリックします。
 
-* In Mozilla Firefox, you can either activate the Firebug plug-in by using keyboard shortcut `F12` (Windows) or `Command + Options + I` (Mac) and use its **[!UICONTROL Net]** tab, or you can use the built-in Inspector tool and its Network tab.
+* Mozilla Firefoxでは、キーボードショートカット`F12` (Windows)または`Command + Options + I` (Mac)を使用してFirebugプラグインをアクティブにし、**[!UICONTROL Net]**&#x200B;タブを使用するか、組み込みのインスペクタツールと「ネットワーク」タブを使用できます。
 
 * Internet Explorer では、`F12` キーを押してデバッガーツールをアクティベートします。
 
@@ -190,7 +190,7 @@ AEM の実装で AEM eCommerce を使用している場合は、このタスク�
 
 **例**
 
-When the above approach is applied to our Example website, we have a web page with a number of product thumbnails, each having a **[!UICONTROL SEE MORE]** button:
+上記の方法をExampleのWebサイトに適用した場合、多数の製品サムネールを持つWebページがあり、それぞれに&#x200B;**[!UICONTROL SEE MORE]**&#x200B;ボタンがあります。
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
 
@@ -230,17 +230,17 @@ When the above approach is applied to our Example website, we have a web page wi
 
 これで、ビデオおよび関連するサムネールアセットをアップロードできます。
 
-## （オプション）インタラクティブビデオのビューアプリセットの作成 {#optional-creating-an-interactive-video-viewer-preset}
+## （オプション）インタラクティブビデオのビューアプリセットの作成  {#optional-creating-an-interactive-video-viewer-preset}
 
 デフォルトの標準提供インタラクティブビデオビューアプリセットタイプ（`Shoppable_Video_dark` または `Shoppable_Video_light`）を使用する予定がある場合は、このタスクをスキップして次に進むことができます。
 
-When a thumbnail is clicked in the authoring environment a preview of the **[!UICONTROL Quickview]** dialog box appears.
+オーサリング環境でサムネールをクリックすると、**[!UICONTROL クイックビュー]**&#x200B;ダイアログボックスのプレビューが表示されます。
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
 オプションで、インタラクティブビデオの独自のカスタムビューアプリセットを作成することもできます。特に、ビデオプレーヤーのスタイル設定、インタラクティブサムネールおよびビデオの最後に表示されるサムネールのグリッドビューを決定できます。
 
-インタラクティブビデオのビューアプリセットにより、ビデオとユーザーが追加したすべてのセグメントが正しくレンダリングされます。It also uses an example default Quickview when you click a product thumbnail in **[!UICONTROL Preview]** mode so you can test its interactivity before publishing.
+インタラクティブビデオのビューアプリセットにより、ビデオとユーザーが追加したすべてのセグメントが正しくレンダリングされます。また、**[!UICONTROL プレビュー]**&#x200B;モードで製品のサムネールをクリックしたときのデフォルトのクイックビューの例を使用して、公開前にインタラクティブ機能をテストできます。
 
 ビューアプリセットを保存すると、ビューアプリセットページでそのプリセットのステータスが自動的に&#x200B;**[!UICONTROL オン]**&#x200B;に設定されます。このステータスは、そのプリセットが Dynamic Media コンポーネントに表示され、ビデオのプレビュー時に必ず使用されることを意味します。****&#x200B;また、新しいビューアプリセットも忘れずに手動で公開してください。
 
@@ -286,7 +286,7 @@ When a thumbnail is clicked in the authoring environment a preview of the **[!UI
    * 画像の上にマウスポインターを置き、**[!UICONTROL その他のアクション]**（3 つのドットのアイコン）／**[!UICONTROL 編集]**&#x200B;をタップします。
    * 画像をタップして、詳細ビューページで画像を開きます。ツールバーの「**[!UICONTROL 編集]**」をタップします。
 
-1. On the **[!UICONTROL Create Interactive Video]** page, do any one of the following:
+1. **[!UICONTROL インタラクティブビデオを作成]**&#x200B;ページで、次のいずれかの操作を行います。
 
    * 「**[!UICONTROL 再生]**」ボタンをタップしてビデオの再生を開始します。取り上げたい特定の製品、サービスまたは詳細が表示されたら、ツールバーの「**[!UICONTROL セグメントを追加]**」をタップします。ビデオの最後に達するまで繰り返します。
 
@@ -300,7 +300,7 @@ When a thumbnail is clicked in the authoring environment a preview of the **[!UI
 
    ![chlimage_1-128](assets/chlimage_1-128.png)
 
-   Depending on the length of your video, the **[!UICONTROL Segment Duration]** defaults to the following values:
+   ビデオの長さに応じて、**[!UICONTROL セグメントの長さ]**&#x200B;のデフォルト値は次の値になります。
 
    <table> 
     <tbody> 
@@ -333,25 +333,25 @@ When a thumbnail is clicked in the authoring environment a preview of the **[!UI
 
    ビデオのタイムラインは、使用できる最大限の画面領域を使用します。つまり、ブラウザーのサイズを変更しても、追加したセグメントは適切な幅を維持します。
 
-   説明するために、次の 3 つのスクリーンショットでは同じビデオを使用しています。Notice that the width of each segment changes depending on the **[!UICONTROL Timeline Scale]** setting.
+   説明するために、次の 3 つのスクリーンショットでは同じビデオを使用しています。各セグメントの幅は、**[!UICONTROL タイムラインスケール]**&#x200B;の設定に応じて変わります。
 
    ![chlimage_1-129](assets/chlimage_1-129.png)
 
    スクリーンショット A
 
-   上のスクリーンショット A は 29 秒の製品ビデオのデフォルト表示です。The **[!UICONTROL Timeline Scale]** is set at the default of 5 seconds.
+   上のスクリーンショット A は 29 秒の製品ビデオのデフォルト表示です。**[!UICONTROL タイムラインスケール]**&#x200B;は、デフォルトの5秒に設定されます。
 
    ![chlimage_1-130](assets/chlimage_1-130.png)
 
    スクリーンショット B
 
-   In Screenshot B above, the **[!UICONTROL Timeline Scale]** slider was dragged from the default of 5 seconds to 3 seconds. Notice that the individual **[!UICONTROL Timeline Scale]** time stamps are now all set at 3 second intervals.
+   上のスクリーンショットBで、**[!UICONTROL タイムラインスケール]**&#x200B;スライダーをデフォルトの5秒から3秒にドラッグしました。 個々の&#x200B;**[!UICONTROL タイムラインスケール]**&#x200B;タイムスタンプが、すべて3秒間隔で設定されていることに注意してください。
 
    ![chlimage_1-131](assets/chlimage_1-131.png)
 
    スクリーンショット C
 
-   In Screenshot C above, the **[!UICONTROL Timeline Scale]** setting was moved to 8 seconds. 製品サムネールを含むセグメントの表示が縮小されていることに注意してください。このような縮小表示が役立つのは、ビデオが長く、通常はページの幅に収まらないセグメントの概要を確認する場合です。
+   上記のCスクリーンショットでは、**[!UICONTROL タイムラインスケール]**&#x200B;の設定が8秒に移動しました。 製品サムネールを含むセグメントの表示が縮小されていることに注意してください。このような縮小表示が役立つのは、ビデオが長く、通常はページの幅に収まらないセグメントの概要を確認する場合です。
 
 1. （オプション）次のいずれかの操作をおこないます。
 
@@ -371,14 +371,14 @@ When a thumbnail is clicked in the authoring environment a preview of the **[!UI
 
    * セグメントを削除するには
 
-      タイムライン上にある最後のセグメントを選択し、ツールバーの「**[!UICONTROL セグメントを削除]**」をタップします。If two or more segments are selected, the **[!UICONTROL Delete Segment]** feature is disabled.
+      タイムライン上にある最後のセグメントを選択し、ツールバーの「**[!UICONTROL セグメントを削除]**」をタップします。2つ以上のセグメントを選択した場合、**[!UICONTROL セグメントを削除]**&#x200B;機能が無効になります。
 
       削除できるのは最後のセグメントのみです。例えば、タイムライン上のすべてのセグメントを削除したい場合、常に最後のセグメントを選択して「**[!UICONTROL セグメントを削除]**」をタップします。
 
 
 1. 1 つまたは複数のサムネール画像を関連付ける時間セグメントを選択します。
 1. ビデオの右側にある「**[!UICONTROL コンテンツ]**」タブをタップします。
-1. Under the **[!UICONTROL Content]** tab, tap **[!UICONTROL Select Assets]**, then browse and select all the image assets that you want to use with your video. The selected assets are added to the **[!UICONTROL Asset Selector]** panel in the **[!UICONTROL Content]** tab.
+1. 「**[!UICONTROL コンテンツ]**」タブで、「**[!UICONTROL アセットを選択]**」をタップし、ビデオで使用するすべての画像アセットを参照して選択します。 選択したアセットが、「**[!UICONTROL コンテンツ]**」タブの&#x200B;**[!UICONTROL アセットセレクター]**&#x200B;パネルに追加されます。
 
 1. 「コンテンツ」タブの下にあるアセットセレクターで、次のいずれかの操作をおこないます。
 
@@ -570,7 +570,7 @@ AEM Sites のユーザーである場合は、インタラクティブメディ�
 
 [https://marketing.adobe.com/resources/help/ja_JP/dm/shoppable-video/john-lewis/landing-1.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html)
 
-## インタラクティブビデオの既存のクイックビューへの統合 {#integrating-an-interactive-video-with-an-existing-quickview}
+## インタラクティブビデオの既存のクイックビューへの統合  {#integrating-an-interactive-video-with-an-existing-quickview}
 
 >[!NOTE]
 このタスクはスタンドアロン AEM Assets のユーザーのみに適用されます。
@@ -707,7 +707,7 @@ var quickViewUrl = "datafeed/" + categoryId + "-" + sku + ".json";
 loadQuickView(quickViewUrl);
 ```
 
-Finally, make sure that your **[!UICONTROL Quickview]** dialog box is attached to the viewer&#39;s container element. デフォルトの埋め込みコードにはこの機能を実現するためのサンプルステップが含まれています。ビューアのコンテナ要素への参照を取得するには、次のコード行を使用できます。
+最後に、**[!UICONTROL クイックビュー]**&#x200B;ダイアログボックスがビューアのコンテナ要素に接続されていることを確認します。 デフォルトの埋め込みコードにはこの機能を実現するためのサンプルステップが含まれています。ビューアのコンテナ要素への参照を取得するには、次のコード行を使用できます。
 
 ```xml
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component
