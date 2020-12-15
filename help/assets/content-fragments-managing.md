@@ -22,7 +22,7 @@ ht-degree: 98%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2(6.4.2.0)以降が [必要です](/help/release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、[AEM 6.4 Service Pack 2 (6.4.2.0)以降](/help/release-notes/sp-release-notes.md)のアプリケーションが必要です。
 
 コンテンツフラグメントは **[!UICONTROL Assets]** として保存されるので、主に **[!UICONTROL Assets]** コンソールから管理します。
 
@@ -30,7 +30,7 @@ ht-degree: 98%
 >
 >コンテンツフラグメントは、ページのオーサリングで使用します。[コンテンツフラグメントを使用したページのオーサリング](/help/sites-authoring/content-fragments.md)を参照してください。
 
-## コンテンツフラグメントの作成 {#creating-content-fragments}
+## コンテンツフラグメントの作成  {#creating-content-fragments}
 
 ### コンテンツモデルの作成 {#creating-a-content-model}
 
@@ -163,7 +163,7 @@ ht-degree: 98%
    >
    >「**[!UICONTROL 保存]**」または「**[!UICONTROL キャンセル]**」のどちらをクリックした場合も、エディターが終了します。これらの両方のオプションがコンテンツフラグメントにどのように動作するかについて詳しくは、[保存、キャンセルおよびバージョン](#save-cancel-and-versions)を参照してください。
 
-## 保存、キャンセルおよびバージョン {#save-cancel-and-versions}
+## 保存、キャンセルおよびバージョン  {#save-cancel-and-versions}
 
 >[!NOTE]
 >
@@ -218,19 +218,19 @@ ht-degree: 98%
 
 フラグメントを開いたら、「[バリエーション](content-fragments-variations.md)」タブを使用してコンテンツをオーサリングできます。
 
-## フラグメント内のバリエーションの作成と管理 {#creating-and-managing-variations-within-your-fragment}
+## フラグメント内のバリエーションの作成と管理  {#creating-and-managing-variations-within-your-fragment}
 
 マスターコンテンツを作成したら、そのコンテンツの[バリエーション](content-fragments-variations.md)を作成して管理できます。
 
-## コンテンツをフラグメントと関連付ける {#associating-content-with-your-fragment}
+## コンテンツをフラグメントと関連付ける  {#associating-content-with-your-fragment}
 
 フラグメントに[コンテンツを関連付ける](content-fragments-assoc-content.md)こともできます。これにより関連性を付加して、フラグメントをコンテンツページに追加するときに、アセット（画像など）を（オプションで）フラグメントと一緒に使用できるようになります。
 
-## フラグメントのメタデータ（プロパティ）の表示と編集 {#viewing-and-editing-the-metadata-properties-of-your-fragment}
+## フラグメントのメタデータ（プロパティ）の表示と編集  {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 
 「[[!UICONTROL メタデータ]](content-fragments-metadata.md)」タブを使用し、フラグメントのプロパティを表示して編集できます。
 
-## コンテンツフラグメントのタイムライン {#timeline-for-content-fragments}
+## コンテンツフラグメントのタイムライン  {#timeline-for-content-fragments}
 
 [タイムライン](managing-assets-touch-ui.md#timeline)では標準のオプションに加え、コンテンツフラグメントに固有の情報とアクションの両方が提供されます。
 
