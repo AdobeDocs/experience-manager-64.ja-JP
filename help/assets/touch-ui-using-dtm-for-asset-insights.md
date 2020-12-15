@@ -17,38 +17,38 @@ Adobe Dynamic Tag Management は、デジタルマーケティングツールを
 
 >[!CAUTION]
 >
->AdobeDTMはAdobe Experience Platform Launchの支援のために廃止され、間もなく [提供終了となります](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)。 Adobeでは、アセットのインサイトに「起動」を [使用することを推奨します](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)。
+>AdobeDTMはAdobe Experience Platform Launchの支援のために廃止され、間もなく[提供終了](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)に達する予定です。 Adobeでは、「アセットのインサイト](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)に対して起動」を[使用することを推奨します。
 
 DTM を使用してアセットインサイトを有効にするには、次の手順を実行します。
 
 1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール／アセット／インサイト設定]**&#x200B;に移動します。
 1. [DTM クラウドサービスを使用して AEM インスタンスを設定します](../sites-administering/dtm.md)。
 
-   The API token should be available once you log on to [https://dtm.adobe.com](https://dtm.adobe.com/) and visit **[!UICONTROL Account Settings]** from the Profile icon. この手順はアセットインサイトの観点からは必要ありません。AEM Sites とアセットインサイトの統合は現在準備中であるからです。
+   APIトークンは、[https://dtm.adobe.com](https://dtm.adobe.com/)にログオンし、プロファイルアイコンから&#x200B;**[!UICONTROL アカウント設定]**&#x200B;にアクセスしたら、使用できるはずです。 この手順はアセットインサイトの観点からは必要ありません。AEM Sites とアセットインサイトの統合は現在準備中であるからです。
 
 1. [https://dtm.adobe.com](https://dtm.adobe.com/) にログオンし、必要に応じて会社を選択します。
 1. Web プロパティを作成するか既存の Web プロパティを開きます。
 
-   * Select the **[!UICONTROL Web Properties]** tab, and then tap/click **[!UICONTROL Add Property]**.
-   * Update the fields as appropriate, and tap/click **[!UICONTROL Create Property]** (see [documentation](https://helpx.adobe.com/jp/experience-manager/using/dtm.html)).
+   * 「**[!UICONTROL Webプロパティ]**」タブを選択し、「**[!UICONTROL 追加プロパティ]**」をタップまたはクリックします。
+   * 必要に応じてフィールドを更新し、「**[!UICONTROL プロパティを作成]**」をタップまたはクリックします（[ドキュメント](https://helpx.adobe.com/jp/experience-manager/using/dtm.html)を参照）。
 
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
-1. In the **[!UICONTROL Rules]** tab, select **[!UICONTROL Page Load Rules]** from the navigation pane and tap/click **[!UICONTROL Create New Rule]**.
+1. 「**[!UICONTROL ルール]**」タブで、ナビゲーションウィンドウから「**[!UICONTROL ページ型ルール]**」を選択し、「**[!UICONTROL 新しいルールを作成]**」をタップまたはクリックします。
 
    ![chlimage_1-194](assets/chlimage_1-194.png)
 
-1. Expand **[!UICONTROL Javascript /Third Party Tags]**. Then tap/click **[!UICONTROL Add New Script]** in the **[!UICONTROL Sequential HTML]** tab to open the Script dialog.
+1. **[!UICONTROL Javascript /サードパーティタグ]**&#x200B;を展開します。 次に、「**[!UICONTROL 順次HTML]**」タブの「追加新しいスクリプト&#x200B;**[!UICONTROL 」をタップまたはクリックして、スクリプトダイアログを開きます。]**
 
    ![chlimage_1-195](assets/chlimage_1-195.png)
 
-1. Tap/click the AEM logo, and go to **[!UICONTROL Tools > Assets]**.
-1. Tap/click **[!UICONTROL Insights Page Tracker]**, copy the tracker code, and then paste it in the Script dialog you opened in step 6. 変更内容を保存します。
+1. AEMロゴをタップまたはクリックし、**[!UICONTROL ツール/アセット]**&#x200B;に移動します。
+1. 「**[!UICONTROL インサイトページトラッカー]**」をタップまたはクリックし、トラッカーコードをコピーして、手順6で開いたスクリプトダイアログに貼り付けます。 変更内容を保存します。
 
    >[!NOTE]
    >
-   >* `AppMeasurement.js` は削除されました。 これは、DTM の Adobe Analytics ツールで使用できるはずです。
-   >* The call to `assetAnalytics.dispatcher.init()` is removed. この関数は、DTM の Adobe Analytics ツールの読み込みが完了すると呼び出されるはずです。
+   >* `AppMeasurement.js` は削除されました。これは、DTM の Adobe Analytics ツールで使用できるはずです。
+   >* `assetAnalytics.dispatcher.init()`への呼び出しは削除されます。 この関数は、DTM の Adobe Analytics ツールの読み込みが完了すると呼び出されるはずです。
    >* アセットインサイトページトラッカーがホストされる場所（例えば、AEM や CDN など）によっては、スクリプトソースのオリジナルを変更する必要があります。
    >* AEMがホストするページトラッカーの場合、ソースは、ディスパッチャーインスタンスのホスト名を使用して、発行インスタンスを指し示す必要があります。
 
@@ -59,11 +59,11 @@ DTM を使用してアセットインサイトを有効にするには、次の�
 
    必要に応じてステージング／実稼動版レポートスイートを選択します。
 
-1. Expand **[!UICONTROL Library Management]**, and ensure that **[!UICONTROL Load Library at]** is set to **[!UICONTROL Page Top]**.
+1. **[!UICONTROL ライブラリ管理]**&#x200B;を展開し、****&#x200B;のライブラリを読み込みが&#x200B;**[!UICONTROL ページのトップ]**&#x200B;に設定されていることを確認します。
 
    ![chlimage_1-197](assets/chlimage_1-197.png)
 
-1. Expand **[!UICONTROL Customize Page Code]**, and click or tap **[!UICONTROL Open Editor]**.
+1. 「**[!UICONTROL ページコードをカスタマイズ]**」を展開し、「**[!UICONTROL エディターを開く]**」をクリックまたはタップします。
 
    ![chlimage_1-198](assets/chlimage_1-198.png)
 
@@ -106,12 +106,12 @@ DTM を使用してアセットインサイトを有効にするには、次の�
    ```
 
    * DTMのページ型ルールには、pagetracker.jsコードのみが含まれます。 `assetAnalytics` のフィールドはすべて、デフォルト値の上書きと見なされます。これらは、デフォルトでは必要ありません。
-   * The code calls `assetAnalytics.dispatcher.init()` after making sure that `_satellite.getToolsByType('sc')[0].getS()` is initialized and `assetAnalytics,dispatcher.init` is available. このため、手順 11 ではこのコードの追加をスキップできます。
-   * As indicated in comments within the Insights Page Tracker code (**[!UICONTROL Tools > Assets > Insights Page Tracker]**), when Page Tracker does not create an `AppMeasurement` object, the first three arguments (RSID, Tracking Server, and Visitor Namespace) are irrelevant. これを示すため代わりに空の文字列が渡されます。
+   * コードは、`_satellite.getToolsByType('sc')[0].getS()`が初期化され、`assetAnalytics,dispatcher.init`が使用可能であることを確認した後、`assetAnalytics.dispatcher.init()`を呼び出します。 このため、手順 11 ではこのコードの追加をスキップできます。
+   * インサイトページトラッカーコード（**[!UICONTROL ツール/アセット/インサイトページトラッカー]**）内のコメントに示されているように、ページトラッカーが`AppMeasurement`オブジェクトを作成しない場合、最初の3つの引数(RSID、トラッキングサーバー、訪問者名前空間)は無関係です。 これを示すため代わりに空の文字列が渡されます。
 
        その他の引数は、インサイト設定ページ（**[!UICONTROL ツール／アセット／インサイト設定]**）で設定された内容に対応しています。
 
    * AppMeasurement オブジェクトは、すべての使用可能な SiteCatalyst エンジンで `satelliteLib` に対するクエリを実行して取得されます。複数のタグが設定されている場合は、配列セレクターのインデックスをそれに応じて変更します。配列のエントリは、DTM インターフェイスで使用可能な SiteCatalyst ツールの順に並んでいます。
 
 1. コードエディターウィンドウを保存して閉じ、変更をツール設定に保存します。
-1. In the **[!UICONTROL Approvals]** tab, approve both the pending approvals. DTM タグを Web ページに挿入する準備ができました。DTM タグを Web ページに挿入する方法について詳しくは、[カスタムページテンプレートへの DTM の統合（英語）](https://blogs.adobe.com/experiencedelivers/experience-management/integrating-dtm-custom-aem6-page-template/)を参照してください。
+1. 「**[!UICONTROL 承認]**」タブで、承認待ちの両方を承認します。 DTM タグを Web ページに挿入する準備ができました。DTM タグを Web ページに挿入する方法について詳しくは、[カスタムページテンプレートへの DTM の統合（英語）](https://blogs.adobe.com/experiencedelivers/experience-management/integrating-dtm-custom-aem6-page-template/)を参照してください。
