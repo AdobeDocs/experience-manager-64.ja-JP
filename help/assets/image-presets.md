@@ -1,6 +1,6 @@
 ---
-title: ダイナミックメディア画像プリセットの適用
-seo-title: ダイナミックメディア画像プリセットの適用
+title: Dynamic Media画像プリセットの適用
+seo-title: Dynamic Media画像プリセットの適用
 description: Dynamic Media での画像プリセットの適用方法を説明します。
 seo-description: Dynamic Media での画像プリセットの適用方法を説明します。
 uuid: 8bafcbd0-6df0-4d5b-b2f7-116ddb4ec060
@@ -18,7 +18,7 @@ ht-degree: 90%
 ---
 
 
-# Applying Dynamic Media image presets {#applying-image-presets}
+# Dynamic Media画像プリセットの適用{#applying-image-presets}
 
 画像プリセットを使用すると、異なるサイズや異なる形式の画像、または動的に生成された他の画像プロパティを設定した画像を動的に配信できます。画像を書き出すときにプリセットを選択できます。また、この操作によって、管理者が指定した仕様に合わせて画像が再フォーマットされます。
 
@@ -32,7 +32,7 @@ ht-degree: 90%
 
 作成者は画像をプレビューするときに、いつでも画像プリセットを適用できます。
 
-**ダイナミックメディア画像プリセットを適用するには**:
+**Dynamic Media画像プリセットを適用するには**:
 
 1. アセットを開き、左側のレールでドロップダウンメニューをタップして、「**[!UICONTROL レンディション]**」をタップします。
 
