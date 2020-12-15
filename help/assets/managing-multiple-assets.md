@@ -11,7 +11,7 @@ ht-degree: 77%
 ---
 
 
-# Manage multiple assets and collections {#managing-multiple-assets-and-collections}
+# 複数のアセットとコレクションを管理{#managing-multiple-assets-and-collections}
 
 複数のアセットおよびコレクションのメタデータを同時に編集して、共通のメタデータの変更をすばやくプロパゲートする方法を学習します。
 
@@ -28,7 +28,7 @@ Adobe Enterprise Manager（AEM）Assets を使用すると、複数のアセッ�
 >
 >一括編集メソッドは、フォルダーまたはコレクションで使用可能なアセットに対して機能します。複数のフォルダーで使用できるアセットや共通の条件に一致するアセットについては、アセット検索結果からメタデータを一括して更新できます。
 
-## Edit metadata properties of multiple assets {#editing-metadata-properties-of-multiple-assets}
+## 複数のアセットのメタデータプロパティの編集{#editing-metadata-properties-of-multiple-assets}
 
 1. Assets ユーザーインターフェイスで、編集するアセットの場所に移動します。
 1. 共通のプロパティを編集するアセットを選択します。
@@ -61,7 +61,7 @@ DOS などの状況を防ぐため、AEM では Sling 要求でサポートさ�
 
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 
-To change the limit, access **[!UICONTROL Tools > Operations > Web Console]** and change the value of [!UICONTROL Maximum POST Parameters] in [!UICONTROL Apache Sling Request Parameter Handling] OSGi configuration.
+この制限を変更するには、**[!UICONTROL ツール/操作/Webコンソール]**&#x200B;にアクセスし、[!UICONTROL Apache Sling Request Parameter Handling] OSGi設定の[!UICONTROL 最大POSTパラメーター]の値を変更します。
 
 >[!MORELIKETHIS]
 >
