@@ -24,7 +24,7 @@ ht-degree: 98%
 
 AEM には、画像をチューニングおよび最適化して結果をレンダリングするための、100 を超えるダイナミックメディア画像配信コマンドがあります。次のガイドラインは、一部の基本コマンドとベストプラクティスを使用してこのプロセスを効率化し、すぐに良好な結果を得るために活用できます。
 
-## Best practices for image format (&amp;fmt=) {#best-practices-for-image-format-fmt}
+## 画像形式(&amp;fmt=) {#best-practices-for-image-format-fmt}のベストプラクティス
 
 * JPG または PNG は、管理しやすいサイズと重さで良い画質の画像を配信するための最適な選択肢です。
 * URL に format コマンドが含まれていない場合、Dynamic Media 画像配信のデフォルトは JPG の配信になります。
@@ -50,7 +50,7 @@ AEM には、画像をチューニングおよび最適化して結果をレン�
 
 ベストプラクティスに関するホワイトペーパー『[Adobe Scene7 Publishing System および Image Server での画像のシャープニング](/help/assets/assets/s7_sharpening_images.pdf)』の内容は AEM にも適用されます。
 
-アンシャープマスクを使用した画像への [シャープの適用も参照してください](https://helpx.adobe.com/jp/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html)。
+詳しくは、[アンシャープマスクを使用した画像へのシャープの適用](https://helpx.adobe.com/jp/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html)も参照してください。
 
 AEM を使用すれば、取り込み時、配信時またはその両方で画像をシャープにすることができます。ただし、ほとんどの場合は、両方ではなくどちらか一方の方法のみを使用して画像をシャープにしてください。一般に、配信時に URL 上で画像をシャープにすることで、最適な結果が得られます。
 
@@ -89,7 +89,7 @@ amount を 1.75 から 4 まで少しずつ増やします。シャープニン�
 
 monochrome パラメーター設定は 0 のままにします。
 
-### JPEF 圧縮のベストプラクティス（&amp;qlt=） {#best-practices-for-jpef-compression-qlt}
+### JPEF 圧縮のベストプラクティス（&amp;qlt=）  {#best-practices-for-jpef-compression-qlt}
 
 * このパラメーターでは、JPG エンコーディング品質を制御します。値が大きいほど高画質になりますがファイルサイズも大きくなります。逆に、値が小さいほど低画質になりますがファイルサイズは小さくなります。このパラメーターの範囲は 0～100 です。
 * 画質を最適化するには、このパラメーターの値を 100 に設定しないでください。90 や 95 の設定と 100 の設定では、画質の差はほとんど感じられませんが、100 に設定することで画像ファイルのサイズが不必要に増加します。したがって、画質を最適化しながら画像ファイルが大きくなりすぎないようにするために、`qlt=<value>` を 90 または 95 に設定します。
@@ -102,7 +102,7 @@ monochrome パラメーター設定は 0 のままにします。
 
 JPG 圧縮のベストプラクティスとしては、`&qlt=85,0` を使用します。
 
-## Best practices for JPEG sizing (&amp;jpegSize=) {#best-practices-for-jpeg-sizing-jpegsize}
+## JPEGサイズ(&amp;jpegSize=) {#best-practices-for-jpeg-sizing-jpegsize}のベストプラクティス
 
 jpegSize は、メモリ容量が限られているデバイスに配信される画像が特定のサイズを超えないようにしたい場合に便利なパラメーターです。
 
