@@ -18,11 +18,11 @@ ht-degree: 78%
 ---
 
 
-# Working with AEM 3D assets {#working-with-d-assets}
+# AEM 3Dアセットの操作{#working-with-d-assets}
 
 >[!IMPORTANT]
 >
->AEM 6.4でのAEM 3Dのサポートは終了しました。 Adobeでは、 [AEMの3Dアセット機能をCloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html)[またはAEM 6.5.3以降として使用することをお勧めします。](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html)
+>AEM 6.4でのAEM 3Dのサポートは終了しました。 Adobeでは、[AEMの3Dアセット機能をCloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html)または[AEM 6.5.3以上として使用することをお勧めします。](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html)
 
 Adobe Experience Manager 3D（AEM 3D）を使用して、3D コンテンツをアップロード、管理、表示およびレンダリングできます。表示とレンダリングのサポートは、個々のオブジェクトに最適化されます。
 
@@ -30,7 +30,7 @@ Adobe Experience Manager 3D（AEM 3D）を使用して、3D コンテンツを�
 
 [AEM 3D のインストールと設定](install-config-3d.md)も参照してください。
 
-## AEM 3D のモデルとステージ {#about-models-and-stages-in-aem-d}
+## AEM 3D のモデルとステージ  {#about-models-and-stages-in-aem-d}
 
 AEM 3D を使用すると、ステージと呼ばれる事前定義済みの環境で、高品質で静的なスタンドアロンの 3D モデルを表示およびレンダリングできます。基本的に、ステージは、3D シーンの「ライティング」および Autodesk® Maya® や Autodesk 3ds Max® などのネイティブアプリケーションのレンダリング設定を提供します。さらに、オプションで、事前定義済みのカメラ、背景、グラウンドプレーンのジオメトリを含めることができます。
 
@@ -49,7 +49,7 @@ AEM 3D で使用する 3D モデルを作成する場合は、以下の点に注
 
 ## AEM 3D でサポートされているファイル {#supported-files-in-aem-d}
 
-典型的な 3D アセットには、1 つのプライマリモデルファイルと、1 つ以上の参照されているファイルがあります。Referenced files include such things as texture maps or **IBL (Image-Based Lighting)** images.
+典型的な 3D アセットには、1 つのプライマリモデルファイルと、1 つ以上の参照されているファイルがあります。参照ファイルには、テクスチャマップや&#x200B;**IBL(Image-Based Lighting)**&#x200B;イメージなどが含まれます。
 
 ### プライマリ 3D モデルファイル {#about-the-primary-d-model-file}
 
@@ -63,7 +63,7 @@ AEM 3D で使用する 3D モデルを作成する場合は、以下の点に注
 
    Autodesk 3Dファイル交換形式バイナリ形式とASCII形式の両方。
 
-   サードパーティアプリケーションで FBX ファイルを作成する場合は、以下の設定を推奨します（下の表を参照）。これらの設定を利用すると、AEM で使用する 3D ファイルに最適な結果が得られます。The option names are taken from the **[!UICONTROL Autodesk Maya FBX Export Options]** dialog box.
+   サードパーティアプリケーションで FBX ファイルを作成する場合は、以下の設定を推奨します（下の表を参照）。これらの設定を利用すると、AEM で使用する 3D ファイルに最適な結果が得られます。オプション名は、**[!UICONTROL Autodesk Maya FBXエクスポートオプション]**&#x200B;ダイアログボックスから取得されます。
 
 <table> 
  <tbody> 
@@ -89,11 +89,11 @@ AEM 3D で使用する 3D モデルを作成する場合は、以下の点に注
   </tr> 
   <tr> 
    <td>Cameras</td> 
-   <td><p>Select for <strong>3D stages</strong>.</p> <p>3Dモデルの場合は選択を解除します。</p> </td> 
+   <td><p><strong>3Dステージ</strong>に対して選択します。</p> <p>3Dモデルの場合は選択を解除します。</p> </td> 
   </tr> 
   <tr> 
    <td>Lights</td> 
-   <td><p>Select for <strong>3D stages</strong>.</p> <p><strong>3Dモデルの場合は選択を解除</strong>。</p> </td> 
+   <td><p><strong>3Dステージ</strong>に対して選択します。</p> <p><strong>3Dモデル</strong>の選択を解除します。</p> </td> 
   </tr> 
   <tr> 
    <td>Units - Automatic</td> 
@@ -105,7 +105,7 @@ AEM 3D で使用する 3D モデルを作成する場合は、以下の点に注
   </tr> 
   <tr> 
    <td>メディアを埋め込む</td> 
-   <td>両方のオプションがサポートされています。 If embedded is selected, AEM 3D extracts the embedded media to an adjacent folder that has the same name as the model file with <code>.fbm</code> appended to it.</td> 
+   <td>両方のオプションがサポートされています。 「埋め込み」を選択した場合、AEM 3Dは、モデルファイルと同じ名前を持つ隣接するフォルダに埋め込みメディアを抽出します。フォルダ名は<code>.fbm</code>が付きます。</td> 
   </tr> 
   <tr> 
    <td>FBX File Format - Type</td> 
@@ -122,9 +122,9 @@ AEM 3D で使用する 3D モデルを作成する場合は、以下の点に注
 
 * Autodesk Maya
 
-   ASCII形式 `.ma` とバイナリ `.mb` 形式の両方。
+   ASCII `.ma`形式とバイナリ`.mb`形式の両方です。
 
-* `Jupiter Tesselation (ISO 14306-1).jt`。
+* `Jupiter Tesselation (ISO 14306-1).jt`.
 
     業界標準の CAD データ交換、コラボレーションおよび製品ビジュアライゼーション形式。
 
@@ -142,11 +142,11 @@ AEM 3D で使用する 3D モデルを作成する場合は、以下の点に注
 
 プライマリ3Dモデルファイル内のマテリアルは、AEM 3Dで無視される他のタイプのマップを参照できます。
 
-### IBL (Image-Based Lighting) images {#ibl-image-based-lighting-images}
+### IBL （イメージベースの照明）イメージ{#ibl-image-based-lighting-images}
 
 ステージを定義する 3D モデルファイルは、単一の IBL 環境画像を参照できます。現在、AEM 3D は、拡散 IBL および反射用には緯度／経度形式の 32 ビット TIFF 画像のみをサポートします。球面のシーンの背景では、8 ビット RGB 画像もサポートされます。
 
-See [About working with IBL stages](working-with-ibl-stages.md).
+[IBLステージの操作について](working-with-ibl-stages.md)を参照してください。
 
 >[!NOTE]
 >
