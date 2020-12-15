@@ -23,7 +23,7 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
 
 レビュー担当者がレビューを終了（アセットを承認または拒否）すると、ユーザーはレビューが完了したという通知を受け取ります。
 
-## Create a review task for folders {#creating-a-review-task-for-folders}
+## フォルダーのレビュータスクの作成{#creating-a-review-task-for-folders}
 
 1. Assets ユーザーインターフェイスで、レビュータスクを作成するフォルダーを選択します。
 1. ツールバーで「**[!UICONTROL レビュータスクを作成]**」アイコンをタップまたはクリックして、**[!UICONTROL レビュータスク]**&#x200B;ページを開きます。ツールバーにこのアイコンが表示されていない場合は、「**[!UICONTROL その他]**」をタップまたはクリックしてアイコンを選択します。
@@ -71,7 +71,7 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
 
    ![review_status_listview](assets/review_status_listview.png)
 
-## Create a review task for collections {#creating-a-review-task-for-collections}
+## コレクションのレビュータスクの作成{#creating-a-review-task-for-collections}
 
 1. コレクションページで、レビュータスクを作成するコレクションを選択します。
 1. ツールバーで「**[!UICONTROL レビュータスクを作成]**」アイコンをタップまたはクリックして、**[!UICONTROL レビュータスク]**&#x200B;ページを開きます。ツールバーにこのアイコンが表示されていない場合は、「**[!UICONTROL その他]**」をタップまたはクリックしてアイコンを選択します。
