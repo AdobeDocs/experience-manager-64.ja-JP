@@ -17,18 +17,18 @@ AEM Assets の GQL 全文検索機能について詳しく確認します。GQL 
 
 GQL 全文検索機能を使用すると、タイトル、説明、作成者などの特定のメタデータに基づいてアセットを検索できます。
 
-メタデータ（titleなど）に基づいてアセットを検索するには、メタデータキーワードを指定し、その後に値を検索パネルで指定します。 GQLの全文検索機能では、メタデータが入力した対応する値と完全に一致するアセットのみが取得されます。
+メタデータ（titleなど）に基づいてアセットを検索するには、メタデータキーワードを指定し、その後に値を検索パネルで指定します。GQLの全文検索機能では、メタデータが入力した対応する値と完全に一致するアセットのみが取得されます。
 
 例えば、「Target」というタイトルのアセットを検索するには、次の手順を実行します。
 
-## アセットの検索 {#searching-assets}
+## アセットの検索  {#searching-assets}
 
-1. From the toolbar of the Assets user interface, click or tap the **[!UICONTROL Search]** icon to display the Omnisearch box.
+1. アセットユーザーインターフェイスのツールバーで、**[!UICONTROL 検索]**&#x200B;アイコンをクリックまたはタップして、「Omnisearch」ボックスを表示します。
 
    ![](assets/do-not-localize/chlimage_1.png)
 
 1. オムニサーチボックスにカーソルを合わせて、Enter キーを押します。
-1. Click or tap the GlobalNav icon to display the **[!UICONTROL Filters]** panel.
+1. GlobalNavアイコンをクリックまたはタップして、**[!UICONTROL フィルター]**&#x200B;パネルを表示します。
 1. オムニサーチボックスで、「Target」という値を指定します。検索範囲を特定のフォルダーに制限するには、フィルターパネルの参照アイコンをクリックまたはタップし、フォルダーを選択します。この場合は、そのフォルダーとその下のサブフォルダー内のみで、一致するものを検索します。
 
    >[!NOTE]
@@ -37,7 +37,7 @@ GQL 全文検索機能を使用すると、タイトル、説明、作成者な�
 
    ![gql_search](assets/gql_search.png)
 
-1. Press **[!UICONTROL Enter]**. The AEM Assets user interface displays only those assets whose title exactly matches &quot;Target.&quot;
+1. **[!UICONTROL Enter]**&#x200B;キーを押します。AEM Assetsのユーザインターフェイスには、タイトルが「ターゲット」と完全に一致するアセットのみが表示されます。
 
 GQLの全文検索機能では、次の項目に基づいてアセットを検索できます。
 
@@ -45,7 +45,7 @@ GQLの全文検索機能では、次の項目に基づいてアセットを検�
 * 1 つのメタデータフィールドの複数値
 * 文字列の部分一致
 
-GQLの全文検索機能では、次のメタデータプロパティに基づいてアセットを検索できます。 プロパティの名前（作成者、タイトルなど）と値は大文字と小文字が区別されます。
+GQLの全文検索機能では、次のメタデータプロパティに基づいてアセットを検索できます。プロパティの名前（作成者、タイトルなど）と値は大文字と小文字が区別されます。
 
 >[!NOTE]
 >
@@ -60,27 +60,27 @@ GQLの全文検索機能では、次のメタデータプロパティに基づ�
 | [!UICONTROL 説明] | description:&quot;Sample Image&quot; |
 | [!UICONTROL 作成ツール] | creatortool:&quot;Adobe Photoshop 7.0&quot; |
 | [!UICONTROL 著作権の所有者] | copyrightowner:&quot;Adobe Systems&quot; |
-| [!UICONTROL 投稿者] | contributor:John |
+| [!UICONTROL 投稿者] | 寄稿者：John |
 | [!UICONTROL 使用条件] | usageterms:&quot;CopyRights Reserved&quot; |
 | [!UICONTROL 作成日] | created:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
 | [!UICONTROL 有効期限] | expires:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
 | [!UICONTROL オンタイム] | ontime:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
 | [!UICONTROL オフタイム] | offtime:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL 期間] （有効期限が切れるdateontime、offtime） | facet field : lowerbound..upperbound |
+| [!UICONTROL 期間] (expires dateontime,offtime) | facet field : lowerbound..upperbound |
 | [!UICONTROL パス] | /content/dam/&lt;folder name> |
 | [!UICONTROL PDF タイトル] | pdftitle:&quot;Adobe Document&quot; |
 | [!UICONTROL 件名] | subject:&quot;Training&quot; |
 | [!UICONTROL タグ] | tags:&quot;Location And Travel&quot; |
 | [!UICONTROL 型] | type:&quot;image\png&quot; |
-| [!UICONTROL 画像の幅] | width:lowerbound..upperbound |
-| [!UICONTROL 画像の高さ] | height:lowerbound..upperbound |
+| [!UICONTROL 画像の幅] | width:lowerbound..上の |
+| [!UICONTROL 画像の高さ] | height:lowerbound..上の |
 | [!UICONTROL 人] | person:John |
 
 複雑なクエリの検索形式の例：
 
 * 複数のファセットフィールドを持つアセットをすべて表示する（例：title=John Doe および creatortool=Adobe Photoshop）：
 
-tiltle:&quot;John Doe&quot; creatortool : Adobe(&amp;A);ast;
+tiltle:&quot;John Doe&quot; creatortool :Adobe(&amp;A);ast;
 
 * ファセット値が 1 語でなく文になっているアセットをすべて表示する（例：タイトル = Scott Reynolds）
 
@@ -104,7 +104,7 @@ title:&quot;会議&quot;;
 
 * 特定の文字列が含まれ、特定のプロパティ値を持つアセットを表示する（例：タイトル = John Doe のアセットで文字列「Adobe」を検索する）
 
-&amp;ast;Adobe&amp;ast; title:&quot;John Doe &quot;OR title:&quot;John Doe&quot; &amp;ast;Adobe&amp;ast;
+&amp;ast;Adobe&amp;ast;title:&quot;John Doe &quot;OR title:&quot;John Doe&quot; &amp;ast;Adobe&amp;ast;
 
 >[!NOTE]
 >
