@@ -22,7 +22,7 @@ ht-degree: 94%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2(6.4.2.0)以降が [必要です](/help/release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、[AEM 6.4 Service Pack 2 (6.4.2.0)以降](/help/release-notes/sp-release-notes.md)のアプリケーションが必要です。
 
 関連コンテンツによって関連性がわかり、フラグメントをページに追加するときに、（オプションで）アセットをフラグメントと一緒に使用できるようになります。これにより、[ページでコンテンツフラグメントを使用するときに利用できるアセットが広範になることで](/help/sites-authoring/content-fragments.md#using-associated-content)柔軟性が生まれると同時に、適切なアセットを検索するのに要する時間の削減にもつながります。
 
