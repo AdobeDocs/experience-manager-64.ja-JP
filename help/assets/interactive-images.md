@@ -56,11 +56,11 @@ ht-degree: 79%
 
    [（オプション）インタラクティブ画像ビューアプリセットの作成](managing-viewer-presets.md#creating-a-new-viewer-preset)を参照してください。
 
-1. **画像バナーのアップロード** — インタラクティブにする画像バナーをアップロードします。
+1. **画像バナーのアップロード**  — インタラクティブにする画像バナーをアップロードします。
 
-   See [Uploading an image banner](#uploading-an-image-banner).
+   詳しくは、[画像バナーのアップロード](#uploading-an-image-banner)を参照してください。
 
-1. **イメージバナーへのホットスポットの追加** - 1つ以上の追加ホットスポットをイメージバナーに追加し、各ホットスポットをハイパーリンク、クイックビュー、エクスペリエンスフラグメントなどのアクションに関連付けます。 ホットスポットを追加した後は、インタラクティブ画像を公開するとタスクが終了します。
+1. **イメージバナーへのホットスポットの追加** - 1つ以上の追加ホットスポットをイメージバナーに追加し、各ホットスポットをハイパーリンク、クイックビュー、エクスペリエンスフラグメントなどのアクションに関連付けます。ホットスポットを追加した後は、インタラクティブ画像を公開するとタスクが終了します。
 
    * [画像バナーへのホットスポットの追加](#adding-hotspots-to-an-image-banner)を参照してください。
    * [（オプション）インタラクティブ画像のプレビュー](#optional-previewing-interactive-images)を参照してください。必要に応じて、ショッパブルバナーの表示を確認して、インタラクティビティをテストすることができます。
@@ -97,7 +97,7 @@ AEM Assets 内でバナー画像にホットスポットを追加する場合は
 
 クイックビュー実装の大部分では、次の枠組みが使用されています。
 
-* ユーザーは Web サイト上の特定のユーザーインターフェイス要素をアクティベートします。For example, clicking a **[!UICONTROL Quickview]** button.
+* ユーザーは Web サイト上の特定のユーザーインターフェイス要素をアクティベートします。例えば、**[!UICONTROL クイックビュー]**&#x200B;ボタンをクリックします。
 * Web サイトでは、必要に応じて、クイックビューのデータまたはコンテンツを読み込むための Ajax リクエストをバックエンドに送信します。
 * クイックビューのデータは、Web ページでのレンダリングに備えて、コンテンツに変換されます。
 * 最後に、フロントエンドコードによってそのコンテンツが画面上に視覚的にレンダリングされます。
@@ -106,13 +106,13 @@ AEM Assets 内でバナー画像にホットスポットを追加する場合は
 
 通常、専門のデバッグツールを使用する必要はありません。最新の Web ブラウザーには、十分なタスクを実行できる Web インスペクターが備わっています。Web インスペクターが搭載されている Web ブラウザーの例を次に示します。
 
-* To see all outgoing HTTP requests in Google Chrome, press F12 to open the **[!UICONTROL Developer Tools]** panel, and then click the **[!UICONTROL Network]** tab.
+* Google Chromeで送信されたすべてのHTTP要求を表示するには、F12キーを押して&#x200B;**[!UICONTROL Developer Tools]**&#x200B;パネルを開き、**[!UICONTROL 「ネットワーク]**」タブをクリックします。
 
-   On a Mac, press **[!UICONTROL Command+Option+I]** to open the **[!UICONTROL Developer Tools]** panel, then click the Network tab.
+   Mac OSの場合は、**[!UICONTROL Command+Option+I]**&#x200B;キーを押して&#x200B;**[!UICONTROL Developer Tools]**&#x200B;パネルを開き、「ネットワーク」タブをクリックします。
 
-* In Firefox, you can either activate the Firebug plug-in by pressing F12 and use its Net tab, or you can use the built-in **[!UICONTROL Inspector]** tool and its **[!UICONTROL Network]** tab.
+* Firefoxでは、F12キーを押してFirebugプラグインをアクティブにし、「Net」タブを使用します。または、組み込みの&#x200B;**[!UICONTROL Inspector]**&#x200B;ツールと&#x200B;**[!UICONTROL Network]**&#x200B;タブを使用できます。
 
-   On a Mac, press **[!UICONTROL Command+Option+I]** to open the **[!UICONTROL Developer Tools]** panel, then click the **[!UICONTROL Inspector]** tab.
+   Mac OSの場合は、**[!UICONTROL Command+Option+I]**&#x200B;を押して&#x200B;**[!UICONTROL 開発ツール]**&#x200B;パネルを開き、**[!UICONTROL 「インスペクタ]**」タブをクリックします。
 
 ブラウザーでネットワーク監視をオンにして、ページ上でクイックビューをトリガーします。
 
@@ -154,7 +154,7 @@ AEM Assets 内でバナー画像にホットスポットを追加する場合は
          <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li> 
          <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li> 
          <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li> 
-        </ul> <p>この場合、URL には変化する部分が 2 つあります。SKUは、 <code>prodId</code> パラメーターとカテゴリIDに保存されます</p><p><code>categoryId</code></p><ul><li><p><code>305466</code><code>categoryId</code><code>1100004</code></p></li><li><p><code>310181</code><code>categoryId</code><code>1100004</code></p></li><li><p><code>308706</code><code>categoryId</code><code>1740148</code></p></li></ul><p></p></td></tr></tbody></table></td></tr><tr></tr></table>
+        </ul> <p>この場合、URL には変化する部分が 2 つあります。SKUは<code>prodId</code>パラメーターとカテゴリIDに保存されます</p><p><code>categoryId</code></p><ul><li><p><code>305466</code><code>categoryId</code><code>1100004</code></p></li><li><p><code>310181</code><code>categoryId</code><code>1100004</code></p></li><li><p><code>308706</code><code>categoryId</code><code>1740148</code></p></li></ul><p></p></td></tr></tbody></table></td></tr><tr></tr></table>
 
 **例**
 
@@ -162,7 +162,7 @@ AEM Assets 内でバナー画像にホットスポットを追加する場合は
 
 [https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html)
 
-The demo web page has several product thumbnails, each having a Quickview button labeled **[!UICONTROL See More]**. Web ブラウザーのデバッグツールをアクティブにしたまま各ボタンをクリックし、記録されたクイックビュー URL に注目してください。そのページの 4 つの製品クイックビューのすべてをアクティベートすると、バックエンドに対して次のリストのクイックビューリクエストが作成されます。
+デモWebページには複数の製品サムネールがあり、それぞれ&#x200B;**[!UICONTROL 詳細]**&#x200B;のラベルが付いたクイックビューボタンがあります。 Web ブラウザーのデバッグツールをアクティブにしたまま各ボタンをクリックし、記録されたクイックビュー URL に注目してください。そのページの 4 つの製品クイックビューのすべてをアクティベートすると、バックエンドに対して次のリストのクイックビューリクエストが作成されます。
 
 * `/datafeed/Men-Windbreaker.json`
 * `/datafeed/Men-SimpleHenley.json`
@@ -182,28 +182,28 @@ The demo web page has several product thumbnails, each having a Quickview button
 
 これで、画像バナーをアップロードし、AEM Assets のショッパブルインタラクティブ画像機能を使用して画像バナーにホットスポットを追加する準備ができました。
 
-## （オプション）インタラクティブ画像ビューアプリセットの作成 {#optional-creating-an-interactive-image-viewer-preset}
+## （オプション）インタラクティブ画像ビューアプリセットの作成  {#optional-creating-an-interactive-image-viewer-preset}
 
-You can choose to use the default, out-of-the-box Interactive Image viewer preset called **[!UICONTROL Shoppable_Banner]** that comes with AEM Assets. または、インタラクティブ画像で使用するために独自のカスタムビューアプリセットを作成できます。
+AEM Assetsに付属の&#x200B;**[!UICONTROL Shoppable_Banner]**&#x200B;という初期設定の、標準搭載のインタラクティブ画像ビューアプリセットを使用するように選択できます。 または、インタラクティブ画像で使用するために独自のカスタムビューアプリセットを作成できます。
 
 カスタムインタラクティブ画像ビューアプリセットを作成する場合は、画像バナーのホットスポットの外観を決定できます。ビューアプリセットの作成中に、事前定義済みの画像ギャラリーからホットスポットのグラフィックを選択して使用できます。
 
-After you save the viewer preset, it is automatically activated (turned on) on the **[!UICONTROL Viewer Preset]** list page in AEM Assets. つまり、そのビューアプリセットは、インタラクティブメディアコンポーネントで、アセットを表示するときに常に表示されます。However, to *deliver* an interactive banner with this viewer preset, you must *publish* your viewer preset as well (this is true for custom or out-of-box viewer presets).
+ビューアプリセットを保存すると、AEM Assetsの&#x200B;**[!UICONTROL ビューアプリセット]**&#x200B;リストページで、ビューアプリセットが自動的にアクティブ化（オンに）されます。 つまり、そのビューアプリセットは、インタラクティブメディアコンポーネントで、アセットを表示するときに常に表示されます。ただし、このビューアプリセットを使用したインタラクティブバナーを&#x200B;*配信*&#x200B;するには、ビューアプリセットも&#x200B;*公開*&#x200B;する必要があります（カスタムまたは初期設定のビューアプリセットに当てはまります）。
 
 **インタラクティブ画像ビューアプリセットを作成するには：**:
 
 1. 左側のパネルで、**[!UICONTROL ツール／アセット／ビューアプリセット]**&#x200B;をタップします。
 1. ページの右上隅にある「**[!UICONTROL 作成]**」をタップします。
-1. In the **[!UICONTROL New Viewer Preset]** dialog box, type a name to describe the interactive banner viewer preset.
+1. **[!UICONTROL 新しいビューアプリセット]**&#x200B;ダイアログボックスに、インタラクティブバナービューアのプリセットを説明する名前を入力します。
 
-   This is the title that will appear in the **[!UICONTROL Viewer Preset]** list page after you save.
-1. In the **[!UICONTROL Rich Media Type]** pull-down menu, select **[!UICONTROL Interactive Image]**.
+   これは、保存後に&#x200B;**[!UICONTROL ビューアプリセット]**&#x200B;のリストページに表示されるタイトルです。
+1. **[!UICONTROL リッチメディアタイプ]**&#x200B;プルダウンメニューで、**[!UICONTROL インタラクティブ画像]**&#x200B;を選択します。
 1. 「**作成**」をタップします。
-1. On the **[!UICONTROL Edit Viewer Preset]** page, tap the **[!UICONTROL Appearance]** tab.
+1. **[!UICONTROL ビューアプリセットを編集]**&#x200B;ページで、「**[!UICONTROL 外観]**」タブをタップします。
 1. 次のいずれかの操作をおこないます。
 
-   * To upload your own hotspot image that you want to use on images, tap the **[!UICONTROL Asset Picker]** icon. In the **[!UICONTROL Select Content]** page, navigate to the hotspot image you want to use, select it, and then tap the **[!UICONTROL Check Mark]** icon in the upper-right corner.
-   * To select a predefined hotspot image, tap the **[!UICONTROL Hotspot Gallery]** icon. On the hotspot gallery pallette, tap the hotspot image you want to use.
+   * 画像で使用する独自のホットスポット画像をアップロードするには、**[!UICONTROL アセットピッカー]**&#x200B;アイコンをタップします。**[!UICONTROL コンテンツを選択]**&#x200B;ページで、使用するホットスポット画像に移動し、選択して、右上隅の&#x200B;**[!UICONTROL チェックマーク]**&#x200B;アイコンをタップします。
+   * 定義済みのホットスポット画像を選択するには、**[!UICONTROL ホットスポットギャラリー]**&#x200B;アイコンをタップします。ホットスポットギャラリーパレットで、使用するホットスポット画像をタップします。
 
 1. ページの右上隅にある「**[!UICONTROL 保存]**」をタップします。
 
@@ -213,7 +213,7 @@ After you save the viewer preset, it is automatically activated (turned on) on t
 
    これで、画像バナーをアップロードできるようになりました。
 
-## 画像バナーのアップロード {#uploading-an-image-banner}
+## 画像バナーのアップロード  {#uploading-an-image-banner}
 
 使用する画像を既にアップロードしている場合は、次の手順（[画像バナーへのホットスポットの追加](#adding-hotspots-to-an-image-banner)）に進んでください。
 
@@ -225,9 +225,9 @@ After you save the viewer preset, it is automatically activated (turned on) on t
 
    これで、画像バナーにホットスポットを追加する準備が整いました。この後のタスクを参照してください。
 
-## 画像バナーへのホットスポットの追加 {#adding-hotspots-to-an-image-banner}
+## 画像バナーへのホットスポットの追加  {#adding-hotspots-to-an-image-banner}
 
-You can add hotspots to an image banner using the editor on the **[!UICONTROL Hotspot Management]** page.
+**[!UICONTROL ホットスポット管理]**&#x200B;ページのエディターを使用して、イメージバナーにホットスポットを追加できます。
 
 ホットスポットを追加する際に、クイックビューポップアップ表示、ハイパーリンクまたはエクスペリエンスフラグメントとして定義することができます。
 
@@ -239,7 +239,7 @@ You can add hotspots to an image banner using the editor on the **[!UICONTROL Ho
 
 **[!UICONTROL ページの右上隅にある「取り消し」および「やり直し」オプションは、現在の作成／編集セッションの間で有効です。]******
 
-When you finish creating your interactive image, you can use **[!UICONTROL Preview]** to see a representation of how your interactive image will appear to customers.
+インタラクティブ画像の作成が完了したら、**[!UICONTROL プレビュー]**&#x200B;を使用して、インタラクティブ画像がユーザーにどのように表示されるかを確認できます。
 
 [（オプション）インタラクティブ画像のプレビュー](#optional-previewing-interactive-images)を参照してください。
 
@@ -247,7 +247,7 @@ When you finish creating your interactive image, you can use **[!UICONTROL Previ
 >
 >インタラクティブ画像またはカルーセルバナーの画像にホットスポットを追加すると、インタラクティブ画像かカルーセルバナーかにかかわらず、ホットスポット情報が同じメタデータの場所（画像に対して相対的な場所）に格納されます。つまり、どちらのビューアでも、同じ画像を定義済みのホットスポットデータと一緒に簡単に再利用できます。
 >
->  ただし、カルーセルバナーでは、画像上の画像マップ（ホットスポットを含むことができる）がサポートされることに注意してください。インタラクティブ画像ではサポートされません。同じ画像を使用するインタラクティブ画像またはカルーセルバナーを作成する場合には、このことに注意してください。同じ画像の別のコピーを使用してインタラクティブ画像とカルーセルバナーを作成することをお勧めします。
+>ただし、カルーセルバナーでは、画像上の画像マップ（ホットスポットを含むことができる）がサポートされることに注意してください。インタラクティブ画像ではサポートされません。同じ画像を使用するインタラクティブ画像またはカルーセルバナーを作成する場合には、このことに注意してください。同じ画像の別のコピーを使用してインタラクティブ画像とカルーセルバナーを作成することをお勧めします。
 >
 >[カルーセルバナー](carousel-banners.md)も参照してください。
 
@@ -262,28 +262,29 @@ When you finish creating your interactive image, you can use **[!UICONTROL Previ
 
    * 画像の上にマウスポインターを置き、**[!UICONTROL 選択]**（チェックマークアイコン）をタップします。ツールバーの「**[!UICONTROL 編集]**」をタップします。
    * 画像の上にマウスポインターを置き、**[!UICONTROL その他のアクション]**（3 つのドットのアイコン）／**[!UICONTROL 編集]**&#x200B;をタップします。
-   * Tap the image to open it in the **[!UICONTROL Detail View]** page. ツールバーの「**[!UICONTROL 編集]**」をタップします。
+   * 画像をタップして、**[!UICONTROL 詳細表示]**&#x200B;ページで開きます。 ツールバーの「**[!UICONTROL 編集]**」をタップします。
 
-1. Near the upper-left corner of the page, tap **[!UICONTROL Add Hotspot]** (finger tap icon) to open the **[!UICONTROL Hotspot Management]** page.
+1. ページの左上隅近くにある「**[!UICONTROL 追加ホットスポット]**」（指をタップしたアイコン）をタップして、**[!UICONTROL ホットスポット管理]**&#x200B;ページを開きます。
 1. ページの左上隅にある「**[!UICONTROL ホットスポット]**」をタップします。
-1. a. Near the upper-left corner of the **Hotspot Management** page, tap **[!UICONTROL Hotspot]**.
-b.画像上で、ホットスポットを表示する位置をタップします。 必要に応じて、ホットスポットをドラッグして場所を調整します。c.必要に応じて、手順aと手順bを繰り返して、追加追加のホットスポットを作成します。d.（オプション）ホットスポットを削除するには、画像上でホットスポットを選択し、「ホットスポット **[!UICONTROL 」見出しの下にある「]** 削除 **** （ごみ箱アイコン）」をタップします。
+1. a.**ホットスポット管理**&#x200B;ページの左上隅近くにある「**[!UICONTROL ホットスポット]**」をタップします。
+b.画像上で、ホットスポットを表示する位置をタップします。 必要に応じて、ホットスポットをドラッグして場所を調整します。c.必要に応じて、手順aと手順bを繰り返して、追加追加のホットスポットを作成します。
+d.（オプション）ホットスポットを削除するには、画像上でそのホットスポットを選択し、「**[!UICONTROL ホットスポット]**」見出しの下にある「**[!UICONTROL 削除]**（ガベージカンのアイコン）」をタップします。
 
-1. In the **[!UICONTROL Name]** text field, type the name of the hotspot. This name also appears in the **[!UICONTROL Selected Hotspot]** drop-down list.
+1. 「**[!UICONTROL 名前]**」テキストフィールドに、ホットスポットの名前を入力します。 この名前は、「**[!UICONTROL 選択されたホットスポット]**」ドロップダウンリストにも表示されます。
 1. 次のいずれかの操作をおこないます。
 
    * 「**[!UICONTROL クイックビュー]**」をタップします。
 
-      * If you are an AEM Sites or eCommerce customer, tap the **[!UICONTROL Product Picker]** icon (magnifying glass) to open the **[!UICONTROL Select Product]** page. Tap the product you want to use, then tap **[!UICONTROL Select]** in the upper-right corner of the page to return to the **[!UICONTROL Hotspot Management]** page.
+      * AEM Sitesまたはeコマースのお客様の場合は、**[!UICONTROL 製品選択]**&#x200B;アイコン（虫めがね）をタップして、**[!UICONTROL 製品を選択]**&#x200B;ページを開きます。 使用する製品をタップし、ページの右上隅にある「**[!UICONTROL 選択]**」をタップして、**[!UICONTROL ホットスポット管理]**&#x200B;ページに戻ります。
       * ** AEM Sites または AEM eCommerce のユーザーではない場合は次のようにします。
 
          * [ホットスポットの変数の識別](#optional-identifying-hotspot-variables)を参照してください。これらの変数を定義する必要があります。
-         * 次に、SKU 値を手動で入力します。In the **[!UICONTROL SKU Value]** text field, type the product&#39;s SKU (Stock Keeping Unit), which is a unique identifier for each distinct product or service that you offer. 入力した SKU 値によってクイックビューテンプレートの変数部分が自動的に入力され、タップされたホットスポットが特定の SKU のクイックビューに関連付けられます。
+         * 次に、SKU 値を手動で入力します。「**[!UICONTROL SKU値]**」テキストフィールドに、製品のSKU（在庫保持単位）を入力します。これは、オファーする個別の製品またはサービスごとに固有の識別子です。 入力した SKU 値によってクイックビューテンプレートの変数部分が自動的に入力され、タップされたホットスポットが特定の SKU のクイックビューに関連付けられます。
          * （オプション）クイックビュー内で製品をさらに識別するために必要になる他の変数がある場合は、「**[!UICONTROL 汎用変数を追加]**」をタップします。テキストフィールドに追加の変数を指定します。例えば、追加の変数として `category=Mens` などと指定します。
    * 「**ハイパーリンク**」をタップします。
 
-      * If you are an AEM Sites customer, tap the **[!UICONTROL Site Selector]** icon (folder) to navigate to a URL. インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
-      * If you are a standalone customer, in the **[!UICONTROL HREF]** text field, specify the full URL path to a linked web page.
+      * AEM Sitesのお客様の場合は、**[!UICONTROL サイトセレクター]**&#x200B;アイコン（フォルダー）をタップして、URLに移動します。 インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
+      * スタンドアロンのお客様の場合は、「**[!UICONTROL HREF]**」テキストフィールドに、リンクされたWebページの完全なURLパスを指定します。
 
       このリンクを新しいブラウザータブで開く（推奨のデフォルト）か同じタブで開くかを指定してください。
 
@@ -291,7 +292,7 @@ b.画像上で、ホットスポットを表示する位置をタップします
 
    * 「**エクスペリエンスフラグメント**」をタップします。
 
-      * If you are an AEM Sites customer, tap the **[!UICONTROL Search]** icon (magnifying glass) to open the **[!UICONTROL Experience Fragment]** page. Tap the Experience Fragment you want to use, then tap **[!UICONTROL Select]** in the upper-right corner of the page to return to the Hotspot management page.
+      * AEM Sitesのお客様の場合は、**[!UICONTROL 検索]**&#x200B;アイコン（虫めがね）をタップして、**[!UICONTROL エクスペリエンスフラグメント]**&#x200B;ページを開きます。 使用するエクスペリエンスフラグメントをタップし、ページの右上隅にある「**[!UICONTROL 選択]**」をタップして、ホットスポット管理ページに戻ります。
 
          [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)を参照してください。
          >[!NOTE]
@@ -314,7 +315,7 @@ b.画像上で、ホットスポットを表示する位置をタップします
    >
    >ホットスポットを含むインタラクティブ画像を編集しているときに、画像を切り取ると、ホットスポットは削除されます。
 
-### （オプション）インタラクティブ画像のプレビュー {#optional-previewing-interactive-images}
+### （オプション）インタラクティブ画像のプレビュー  {#optional-previewing-interactive-images}
 
 プレビューを使用して、顧客に対して示されるインタラクティブ画像の表示方法を確認し、画像のホットスポットをテストして動作が期待どおりであるかを確認することができます。
 
@@ -326,8 +327,8 @@ b.画像上で、ホットスポットを表示する位置をタップします
 **インタラクティブ画像をプレビューするには：**:
 
 1. Assets ビューで、作成した既存のインタラクティブ画像の場所に移動し、タップしてプレビューで表示します。
-1. Near the upper-left corner of the Preview page, in the **[!UICONTROL Content]** drop-down list, tap **[!UICONTROL Viewers]**.
-1. In the **[!UICONTROL Viewers]** list, tap **[!UICONTROL Shoppable_Banner]** or the name of the interactive image viewer preset you have created.
+1. プレビューページの左上隅近くにある「**[!UICONTROL コンテンツ]**」ドロップダウンリストで、「**[!UICONTROL ビューア]**」をタップします。
+1. **[!UICONTROL ビューア]**&#x200B;リストで、**[!UICONTROL Shoppable_Banner]**&#x200B;または作成したインタラクティブ画像ビューアプリセットの名前をタップします。
 1. 画像上のホットスポットをタップし、関連付けられたアクションをテストします。
 
 ## インタラクティブ画像アセットの公開 {#publishing-interactive-image-assets}
@@ -370,15 +371,15 @@ AEM Sites のユーザーである場合は、インタラクティブメディ�
 >
 >この時点では、デモ Web サイトのショッパブルインタラクティブ画像上のホットスポットは表示用のみで、まだ既存のクイックビューと統合されていません。
 
-To apply a crop to a shoppable interactive image for a responsive environment, you can include the Interactive Image configuration attribute `ZoomView.iscommand` to the path—where `ZoomView` is the component to call and `iscommand` is the crop image serving command that you apply.
+レスポンシブ環境用のショップ可能なインタラクティブ画像に切り抜きを適用するには、パスにインタラクティブ画像設定属性`ZoomView.iscommand`を含めます。`ZoomView`は呼び出すコンポーネントで、`iscommand`は適用する切り抜き画像サービングコマンドです。
 
-[ZoomView.iscommand](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) 設定属性を参照してください。
+[ZoomView.iscommand](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) 設定属性を参照してください。
 
-[crop](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) 画像サービングコマンドを参照してください。
+[crop](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) 画像サービングコマンドを参照してください。
 
 これで、インタラクティブ画像を Web サイト上の既存のクイックビューに統合できるようになりました。
 
-## インタラクティブ画像の既存のクイックビューへの統合 {#integrating-an-interactive-image-with-an-existing-quickview}
+## インタラクティブ画像の既存のクイックビューへの統合  {#integrating-an-interactive-image-with-an-existing-quickview}
 
 >[!NOTE]
 >
