@@ -18,11 +18,11 @@ ht-degree: 98%
 ---
 
 
-# Dynamic Media アセットの公開 {#publishing-dynamic-media-assets}
+# Dynamic Media アセットの公開  {#publishing-dynamic-media-assets}
 
 アセットを選択して「**[!UICONTROL 公開]**」をタップすることで、Dynamic Media アセットを公開できます。Dynamic Media アセットを公開した後は、URL または埋め込みによってそのアセットを Web ページに追加できるようになります。
 
-また、ユーザーの介入なしに、アップロードしたアセットを即座に公開することもできます。See [Configuring Dynamic Media - Scene7 mode](config-dms7.md).
+また、ユーザーの介入なしに、アップロードしたアセットを即座に公開することもできます。[Dynamic Mediaの設定 —Scene7モード](config-dms7.md)を参照してください。
 
 **[!UICONTROL カード表示]**&#x200B;では、小さい地球のアイコンがアセット名のすぐ下に表示され、アセットが公開されていることを示します。**[!UICONTROL リスト表示]**&#x200B;では、公開されたアセットと公開されていないアセットが「**[!UICONTROL 公開]**」列でわかります。
 
@@ -47,7 +47,7 @@ ht-degree: 98%
 
 一連のアセットを公開する方法について詳しくは、[アセットの公開](managing-assets-touch-ui.md)を参照してください。
 
-## Dynamic Media アセットの HTTP/2 配信 {#http-delivery-of-dynamic-media-assets}
+## Dynamic Media アセットの HTTP/2 配信  {#http-delivery-of-dynamic-media-assets}
 
 AEM は現在、HTTP/2 上でのすべての Dynamic Media コンテンツ（画像とビデオ）の配信をサポートしています。つまり、画像やビデオの公開済み URL や埋め込みコードは、ホストされるアセットを受け取るアプリケーションとの統合に使用できます。その公開済みアセットは、その後、HTTP/2 プロトコルで配信されます。この配信方法により、ブラウザーとサーバーの通信が向上し、すべての Dynamic Media アセットの応答時間と読み込み時間が短くなります。
 
