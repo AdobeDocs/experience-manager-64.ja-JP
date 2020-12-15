@@ -1,6 +1,6 @@
 ---
-title: Digital Rights Management in [!DNL Adobe Experience Manager Assets].
-description: Learn how to manage asset expiration states and information for licensed assets in [!DNL Experience Manager].
+title: ' [!DNL Adobe Experience Manager Assets]のDigital Rights Management。'
+description: ' [!DNL Experience Manager]内のライセンス済みアセットのアセットの有効期限の状態と情報を管理する方法を説明します。'
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: fe99869df5616f8f483ab8a9517e850e45c7a117
@@ -19,17 +19,17 @@ ht-degree: 88%
 
 アセットの有効期限は、アセットのライセンス要件を徹底する有効な方法です。公開済みアセットの有効期限が切れたらアセットを非公開にすることで、ライセンス違反が発生する可能性を回避します。管理者権限のないユーザーは、有効期限切れのアセットを編集、コピー、移動、公開、ダウンロードできません。
 
-You can view the expiration status of an asset in the [!DNL Assets] console in both the card and list views.
+カードとリストの両方の表示の[!DNL Assets]コンソールで、アセットの有効期限ステータスを表示できます。
 
 ![expired_flag_card](assets/expired_flag_card.png)
 
-*図： カードの表示では、カードのフラグは期限切れのアセットを示します。*
+*図：カードの表示では、カードのフラグは期限切れのアセットを示します。*
 
 ![expired_flag_リスト](assets/expired_flag_list.png)
 
-*図： リスト表示の「[!UICONTROL ステータス]」列には、期限切れのバナーが表示されます。*
+*図：リスト表示の「  Status」列には、  Expiredbannerが表示されます。*
 
-You can view the expiration status of an asset in the [!UICONTROL Timeline] in left rail.
+左側のパネルの[!UICONTROL タイムライン]で、アセットの有効期限ステータスを表示できます。
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
@@ -37,7 +37,7 @@ You can view the expiration status of an asset in the [!UICONTROL Timeline] in l
 >
 >アセットの有効期限の表示はタイムゾーンごとに異なります。
 
-You can also view the expiration status of assets in the **[!UICONTROL References]** rail. ここではアセットの有効期限切れのステータスと、複合アセットと参照元のサブアセット、コレクションおよびプロジェクトの間の関係を管理します。
+また、**[!UICONTROL 参照]**&#x200B;レールのアセットの有効期限ステータスを表示することもできます。 ここではアセットの有効期限切れのステータスと、複合アセットと参照元のサブアセット、コレクションおよびプロジェクトの間の関係を管理します。
 
 1. 参照先の Web ページと複合アセットを表示するアセットに移動します。
 1. アセットを選択し、[!DNL Experience Manager] ロゴをクリックします。
@@ -68,15 +68,15 @@ You can also view the expiration status of assets in the **[!UICONTROL Reference
 
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
-1. 「 [!DNL Experience Manager] logo」をクリックして検索パネルを表示します。
+1. [!DNL Experience Manager]ロゴをクリックして検索パネルを表示します。
 
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
-1. Click the **[!UICONTROL Expiry Status]** option to expand it.
+1. **[!UICONTROL 有効期限ステータス]**&#x200B;オプションをクリックして展開します。
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
-1. 「 **[!UICONTROL 期限切れ]**」を選択します。 有効期限切れのアセットが検索結果に表示されます。
+1. 「**[!UICONTROL 期限切れ]**」を選択します。 有効期限切れのアセットが検索結果に表示されます。
 
    ![chlimage_1-153](assets/chlimage_1-153.png)
 
@@ -98,7 +98,7 @@ You can also view the expiration status of assets in the **[!UICONTROL Reference
 
    >[!NOTE]
    >
-   >Only the asset creator (the person who uploads a particular asset to [!DNL Assets]) receives an email when the asset expires. See [how to configure email notification](/help/sites-administering/notification.md) for additional details around configuring email notifications at the overall [!DNL Experience Manager] level.
+   >アセットの作成者（特定のアセットを[!DNL Assets]にアップロードする人）のみが、アセットの有効期限が切れたときに電子メールを受信します。 [!DNL Experience Manager]全体的な電子メール通知の設定に関する詳細は、[電子メール通知の設定方法](/help/sites-administering/notification.md)を参照してください。
 
 1. 「**[!UICONTROL Prior notification in seconds]**」フィールドで、アセットの有効期限が切れる何秒前に有効期限切れに関する通知を受け取るかを指定します。管理者かアセットの作成者の場合、アセットの有効期限が切れる前に、指定の時間が経過した後にアセットの有効期限が切れることを知らせるメッセージを受け取ります。
 
@@ -131,7 +131,7 @@ You can also view the expiration status of assets in the **[!UICONTROL Reference
 
    ![[有効期限]フィールドにアセットの有効期限の日時を設定します。](assets/chlimage_1-159.png)
 
-   *図：[!UICONTROL アセットの有効期限を設定するための]「アセットの[!UICONTROL プロパティ]」ページの「詳細」タブ。*
+   *図： [!UICONTROL アセットの]   プロパティページの「詳細」タブを使用して、アセットの有効期限を設定します。*
 
 1. 「**[!UICONTROL 保存]**」をクリックし、次に「**[!UICONTROL 閉じる]**」をクリックしてアセットコンソールを表示します。
 1. アセットの公開ステータスは、カード表示のアセットのサムネールの下部に、有効期限切れのステータスを示します。リスト表示では、アセットのステータスが「**[!UICONTROL 期限切れ]**」と表示されます。
@@ -175,7 +175,7 @@ You can also view the expiration status of assets in the **[!UICONTROL Reference
 
 アセットは、次のいずれかの条件が満たされた場合に保護されていると見なされます。
 
-* アセットのメタデータプロパティ `xmpRights:WebStatement` が、そのアセットの使用許諾契約書を含む ページのパスを指している。
+* アセットのメタデータプロパティ `xmpRights:WebStatement` が、そのアセットの使用許諾契約書を含むページのパスを指している。
 * アセットのメタデータプロパティ `adobe_dam:restrictions` の値が、使用許諾契約書を指定する生の HTML である。
 
 >[!NOTE]
