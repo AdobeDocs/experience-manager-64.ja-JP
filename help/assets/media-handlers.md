@@ -11,7 +11,7 @@ ht-degree: 78%
 ---
 
 
-# Process assets Using media handlers and workflows {#processing-assets-using-media-handlers-and-workflows}
+# メディアハンドラーとワークフローを使用したアセットの処理{#processing-assets-using-media-handlers-and-workflows}
 
 Adobe Experience Managerアセットには、アセットを処理するための初期設定のワークフローとメディアハンドラーのセットが用意されています。 ワークフローは、一般的なアセット管理と処理タスクを定義し、特定のタスク(サムネールの生成やメタデータの抽出など)をメディアハンドラに委任します。
 
@@ -23,7 +23,7 @@ Adobe Experience Managerアセットには、アセットを処理するため�
 >
 >AEM Assets でサポートされるすべての形式と、各形式でサポートされる機能の説明については、[Assets でサポートされる形式](assets-formats.md)を参照してください。
 
-## Default media handlers {#default-media-handlers}
+## デフォルトのメディアハンドラー{#default-media-handlers}
 
 AEM Assets 内では以下のメディアハンドラーを使用できます。また、これらのメディアハンドラーはよく使用される MIME タイプを処理できます。
 
@@ -55,7 +55,7 @@ AEM Assets 内では以下のメディアハンドラーを使用できます。
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
-## Use media handlers in workflows to perform tasks on Assets {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
+## ワークフロー内でメディアハンドラーを使用してアセット{#using-media-handlers-in-workflows-to-perform-tasks-on-assets}に対してタスクを実行する
 
 通常、メディアハンドラーはワークフローと組み合わせて使用されるサービスです。
 
@@ -80,7 +80,7 @@ AEM には、アセットを処理するデフォルトのワークフローが�
 
 新しいメディアタイプをサポートしたり、アセットで特定のタスクを実行したりするには、新しいメディアハンドラーを作成する必要があります。ここでは、その進め方について説明します。
 
-#### 重要なクラスおよびインターフェイス {#important-classes-and-interfaces}
+#### 重要なクラスおよびインターフェイス  {#important-classes-and-interfaces}
 
 実装を開始するための最適な方法は、最も多くの点について対応し、適切なデフォルト動作を提供している付属の抽象実装から継承することです。それが `com.day.cq.dam.core.AbstractAssetHandler` クラスです。
 
@@ -102,7 +102,7 @@ AEM には、アセットを処理するデフォルトのワークフローが�
 * `com.day.cq.dam.core.AbstractAssetHandler` クラス：その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` クラス：
    * その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。さらに、サブアセットの抽出についてよく使用される機能も提供します。
-   * 実装を開始する最善の方法は、ほとんどの処理を行い、適切なデフォルト動作を提供する、提供された抽象実装から継承することです。 com.day.cq.dam.core.AbstractAssetHandlerクラス
+   * 実装を開始する最善の方法は、ほとんどの処理を行い、適切なデフォルト動作を提供する、提供された抽象実装から継承することです。com.day.cq.dam.core.AbstractAssetHandlerクラス
    * このクラスには、抽象的なサービス記述子が用意されています。そのため、このクラスから継承し、maven-sling-plugin を使用する場合、inherit フラグを true に設定する必要があります。
 
 以下のメソッドを実装する必要があります。
@@ -127,15 +127,15 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 
 以下の手順を実行します。
 
-Mavenプラグインを使用してEclipseをインストールおよび設定し、Mavenプロジェクトに必要な依存関係を設定する方法については、 [開発ツール](../sites-developing/dev-tools.md) （英語）を参照してください。
+Avenプラグインを使用してEclipseをインストールおよび設定し、Mavenプロジェクトに必要な依存関係を設定する方法については、[開発ツール](../sites-developing/dev-tools.md)を参照してください。
 
 以下の手順を実行した後、txt ファイルを AEM にアップロードすると、ファイルのメタデータが抽出され、透かしありの 2 つのサムネールが生成されます。
 
-1. Eclipseで、Mavenプロジェクトを作成し `myBundle` ます。
+1. Eclipseで、`myBundle` Mavenプロジェクトを作成します。
 
-   1. In the Menu bar, click **[!UICONTROL File > New > Other]**.
-   1. In the dialog, expand the Maven folder, select Maven Project and click **[!UICONTROL Next]**.
-   1. Check the Create a simple project box and the Use default Workspace locations box, then click **[!UICONTROL Next]**.
+   1. メニューバーで、**[!UICONTROL ファイル/新規/その他]**&#x200B;をクリックします。
+   1. ダイアログで、Mavenフォルダーを展開し、「Mavenプロジェクト」を選択して「**[!UICONTROL 次へ]**」をクリックします。
+   1. 「単純なプロジェクトを作成」ボックスと「デフォルトのワークスペースの場所を使用」ボックスをオンにし、「**[!UICONTROL 次へ]**」をクリックします。
    1. Maven プロジェクトを定義します。
 
       * Group Id：com.day.cq5.myhandler
@@ -147,7 +147,7 @@ Mavenプラグインを使用してEclipseをインストールおよび設定�
 
 1. Java コンパイラーをバージョン 1.5 に設定します。
 
-   1. Right-click the `myBundle` project, select Properties.
+   1. `myBundle`プロジェクトを右クリックし、「プロパティ」を選択します。
    1. 「Java Compiler」を選択して、次のプロパティを 1.5 に設定します。
 
       * Compiler compliance level
@@ -273,16 +273,16 @@ Mavenプラグインを使用してEclipseをインストールおよび設定�
     </dependencies>
    ```
 
-1. 次の場所で、Javaクラス `com.day.cq5.myhandler` を含むパッケージを作成し `myBundle/src/main/java`ます。
+1. `myBundle/src/main/java`の下にJavaクラスを含むパッケージ`com.day.cq5.myhandler`を作成します。
 
-   1. Under myBundle, right-click `src/main/java`, select New, then Package.
-   1. Name it `com.day.cq5.myhandler` and click Finish.
+   1. 「myBundle」で`src/main/java`を右クリックし、「新規」、「パッケージ」の順に選択します。
+   1. `com.day.cq5.myhandler`という名前を付け、「完了」をクリックします。
 
-1. Create the Java class `MyHandler`:
+1. Javaクラスを作成`MyHandler`:
 
-   1. Eclipseの下で、 `myBundle/src/main/java``com.day.cq5.myhandler` パッケージを右クリックし、「New」、「Class」の順に選択します。
+   1. Eclipseの`myBundle/src/main/java`で、`com.day.cq5.myhandler`パッケージを右クリックし、「新規」、「クラス」の順に選択します。
    1. ダイアログウィンドウで、この Java クラスに MyHandler という名前を付け、「Finish」をクリックします。MyHandler.java ファイルが作成され、このファイルが開きます。
-   1. In `MyHandler.java` replace the existing code with the following and then save the changes:
+   1. `MyHandler.java`で既存のコードを次のコードに置き換え、変更を保存します。
 
    ```java
    package com.day.cq5.myhandler; 
@@ -426,12 +426,12 @@ Mavenプラグインを使用してEclipseをインストールおよび設定�
 
 1. Java クラスをコンパイルして、バンドルを作成します。
 
-   1. Right-click the myBundle project, select **[!UICONTROL Run As]**, then **[!UICONTROL Maven Install]**.
-   1. The bundle `myBundle-0.0.1-SNAPSHOT.jar` (containing the compiled class) is created under `myBundle/target`.
+   1. myBundleプロジェクトを右クリックし、「**[!UICONTROL 実行]**」を選択して、「**[!UICONTROL Mavenインストール]**」を選択します。
+   1. バンドル`myBundle-0.0.1-SNAPSHOT.jar` （コンパイルされたクラスを含む）が`myBundle/target`の下に作成されます。
 
-1. In CRX Explorer, create a new node under `/apps/myApp`. Name = `install`, Type = `nt:folder`.
-1. Copy the bundle `myBundle-0.0.1-SNAPSHOT.jar` and store it under `/apps/myApp/install` (for example with WebDAV). 新しいテキストハンドラーが AEM でアクティブになります。
-1. ブラウザーで、Apache Felix Web Management Console を開きます。Select the Components tab and disable the default text handler `com.day.cq.dam.core.impl.handler.TextHandler`.
+1. CRXエクスプローラーで、`/apps/myApp`の下に新しいノードを作成します。 名前= `install`、種類= `nt:folder`。
+1. バンドル`myBundle-0.0.1-SNAPSHOT.jar`をコピーし、`/apps/myApp/install`の下に格納します（WebDAVなど）。 新しいテキストハンドラーが AEM でアクティブになります。
+1. ブラウザーで、Apache Felix Web Management Console を開きます。「コンポーネント」タブを選択し、デフォルトのテキストハンドラー`com.day.cq.dam.core.impl.handler.TextHandler`を無効にします。
 
 ## コマンドラインベースのメディアハンドラー {#command-line-based-media-handler}
 
@@ -458,13 +458,13 @@ AEM を使用すると、ワークフロー内で任意のコマンドライン�
 * 一時ディレクトリを削除します。
 * 指定した場合は、それらのレンディションに基づいてサムネールを作成します。サムネールの数とサイズは、ステップの引数で定義されます。
 
-### An example using ImageMagick {#an-example-using-imagemagick}
+### ImageMagick {#an-example-using-imagemagick}の使用例
 
 以下の例は、MIME タイプが gif または tiff のアセットが AEM サーバーの /content/dam に追加されるたびに、元の画像の反転画像と 3 つの追加サムネール（140 x 100、48 x 48 および 10 x 250）が作成されるように、コマンドラインプロセスのステップを設定する方法を示します。
 
 これを行うには、ImageMagickを使用します。 AEMサーバーをホストするディスクにImageMagickをインストールします。
 
-1. ImageMagick のインストール. 詳しくは、ImageMagickのドキュメ [ント](https://www.imagemagick.org/script/download.php) を参照してください。
+1. ImageMagick のインストール. 詳しくは、[ImageMagickドキュメント](https://www.imagemagick.org/script/download.php)を参照してください。
 1. コマンドラインで convert を実行できるようにツールを設定します。
 1. ツールが適切にインストールされているかどうかを確認するには、コマンド `convert -h` をコマンドラインで実行します。
 
@@ -474,7 +474,7 @@ AEM を使用すると、ワークフロー内で任意のコマンドライン�
    >
    >Windows のバージョン（Windows SE など）によっては、convert コマンドを実行できない場合があります。このコマンドは、Windows インストールの一部であるネイティブな変換ユーティリティと競合するからです。このような場合は、画像ファイルをサムネールに変換するために使用する ImageMagick ユーティリティの完全パスを指定します。例： `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
 
-1. To see if the tool runs properly, add a JPG image to the working directory and run the command `convert <image-name>.jpg -flip <image-name>-flipped.jpg` on the command line.
+1. ツールが正しく実行されるかどうかを確認するには、作業ディレクトリにJPG画像を追加し、コマンドラインでコマンド`convert <image-name>.jpg -flip <image-name>-flipped.jpg`を実行します。
 
    反転画像がディレクトリに追加されます。
 
@@ -494,15 +494,15 @@ AEM を使用すると、ワークフロー内で任意のコマンドライン�
 1. **[!UICONTROL CQ5 DAM]** コンソール（例：`http://localhost:4502/libs/wcm/core/content/damadmin.html`）を開きます。
 1. アセット `myImage.tiff` を開き、反転画像と 3 つのサムネールが作成されたことを確認します。
 
-#### Configure the CommandLineProcess process step {#configuring-the-commandlineprocess-process-step}
+#### CommandLineProcessプロセスステップ{#configuring-the-commandlineprocess-process-step}を設定
 
-ここでは、**[!UICONTROL の]**&#x200B;プロセス引数`CommandLineProcess`を設定する方法について説明します。Process Argumentsの値はコンマで区切ります  。値を空白で開始しないでください。
+ここでは、**[!UICONTROL の]**&#x200B;プロセス引数`CommandLineProcess`を設定する方法について説明します。[!UICONTROL プロセスの引数]の値はコンマで区切り、値を空白で開始しないでください。
 
 | 引数のフォーマット | 説明 |
 |---|---|
 | mime:&lt;mime-type> | オプション引数。アセットの MIME タイプが引数の MIME タイプと同じ場合にプロセスが適用されます。<br>複数の MIME タイプを定義できます。 |
 | tn:&lt;width>:&lt;height> | オプション引数。プロセスにより、引数で定義されたサイズのサムネールが作成されます。<br>複数のサムネールを定義できます。 |
-| cmd: &lt;command> | 実行されるコマンドを定義します。この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>次の変数を使用して、コマンドを作成できます。<br>`${filename}`入力ファイルの名前（original.jpgなど） <br> `${file}`: 入力ファイルのフルパス名(例：/tmp/cqdam0816.tmp/original.jpg) <br> `${directory}`: 入力ファイルのディレクトリ。例：/tmp/cqdam0816.tmp <br>`${basename}`: 入力ファイルの名前（拡張子なし）。例： original <br>`${extension}`: 入力ファイルの拡張子（jpgなど） |
+| cmd: &lt;command> | 実行されるコマンドを定義します。この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>次の変数を使用して、コマンドを作成できます。<br>`${filename}`入力ファイルの名前（original.jpgなど）  <br> `${file}`:入力ファイルのフルパス名(例：/tmp/cqdam0816.tmp/original.jpg)  <br> `${directory}`:入力ファイルのディレクトリ。例：/tmp/cqdam0816.tmp  <br>`${basename}`:入力ファイルの名前（拡張子なし）。例： original  <br>`${extension}`:入力ファイルの拡張子（jpgなど） |
 
 例えば、AEM サーバーをホストするディスクに ImageMagick がインストールされており、**CommandLineProcess** を実装として使用し、以下の値を&#x200B;**プロセス引数**&#x200B;として使用してプロセスのステップを作成するとします。
 
@@ -520,4 +520,4 @@ ImageMagick を使用して Web 対応レンディションを作成するには
 
 >[!NOTE]
 >
->The `CommandLineProcess` step only applies to Assets (nodes of type `dam:Asset`) or descendants of an asset.
+>`CommandLineProcess`手順は、アセット（タイプ`dam:Asset`のノード）またはアセットの子孫にのみ適用されます。
