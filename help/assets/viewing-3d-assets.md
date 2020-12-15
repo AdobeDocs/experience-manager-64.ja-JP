@@ -18,15 +18,15 @@ ht-degree: 70%
 ---
 
 
-# 3D アセットの表示 {#viewing-d-assets}
+# 3D アセットの表示  {#viewing-d-assets}
 
 >[!IMPORTANT]
 >
->AEM 6.4でのAEM 3Dのサポートは終了しました。 Adobeでは、 [AEMの3Dアセット機能をCloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html)[またはAEM 6.5.3以降として使用することをお勧めします。](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html) を表示3Dアセットに追加します。
+>AEM 6.4でのAEM 3Dのサポートは終了しました。 Adobeでは、[AEMの3Dアセット機能をCloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html)または[AEM 6.5.3以降として使用することをお勧めします。](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html) を表示3Dアセットに追加します。
 
 このドキュメントでは、3D アセットをアセットの詳細で表示する方法と 3D コンポーネント内のアセットをサイトで表示する方法の両方について説明します。
 
-## アセットの詳細ページでの 3D アセットの表示 {#viewing-d-assets-in-the-asset-details-page}
+## アセットの詳細ページでの 3D アセットの表示  {#viewing-d-assets-in-the-asset-details-page}
 
 AEM のアセットの詳細ページから、インタラクティブ 3D ビューアを使用できます。このビューアには、3D アセットをオービット、ズームおよびパンできるインタラクティブなカメラコントロールのコレクションが含まれます。
 
@@ -57,7 +57,7 @@ AEM 3D のデフォルトのステージを使用する他に、サードパー�
 
    [AEM での 3D アセットのアップロードと処理](upload-processing-3d-assets.md)を参照してください。
 
-1. From AEM, on the **[!UICONTROL Navigation]** page, tap **[!UICONTROL Assets]**.
+1. AEMの&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;ページで、**[!UICONTROL アセット]**&#x200B;をタップします。
 1. ページの右上隅付近にある「**[!UICONTROL 表示]**」ドロップダウンリストで「**[!UICONTROL カード表示]**」をタップします。
 1. 表示する 3D アセットに移動します。
 1. 3D アセットのカードをタップして、アセットの詳細ページで開きます。
@@ -67,7 +67,7 @@ AEM 3D のデフォルトのステージを使用する他に、サードパー�
 
       従来の Apple のシングルボタンマウスなど、スクロールホイールのない非接触型入力デバイスを使用している場合は、ズームモードまたはパースペクティブモードでも 3D アセットのズームまたはパースペクティブを変更できます。このアクションは、`SHIFT` キーを押しながらマウスボタンを押して上または下方向にドラッグすることによって、実行します。
 
-      一般的なノートコンピューターのタッチパッドを使用していると、多くの場合、2 本指を使用したジェスチャでズーム動作またはパースペクティブ動作をコントロールすることは困難です。そのような場合は、`SHIFT` キーを押しながらアクションを実行します。そうすると、ピンチジェスチャの速度が低下し、必要とする正確なズームレベルまたはパースペクティブを実現しやすくなります。Alternately, you can use a one finger drag up or down while the `SHIFT`key is pressed to affect zoom or perspective behaviors.
+      一般的なノートコンピューターのタッチパッドを使用していると、多くの場合、2 本指を使用したジェスチャでズーム動作またはパースペクティブ動作をコントロールすることは困難です。そのような場合は、`SHIFT` キーを押しながらアクションを実行します。そうすると、ピンチジェスチャの速度が低下し、必要とする正確なズームレベルまたはパースペクティブを実現しやすくなります。または、`SHIFT`キーを押しながら1本の指で上下にドラッグして、ズームや遠近法の動作に影響を与えることもできます。
    <table> 
     <tbody> 
       <tr> 
@@ -78,16 +78,16 @@ AEM 3D のデフォルトのステージを使用する他に、サードパー�
       <td><p>ズーム</p> <p>または</p> <p>パースペクティブ</p> </td> 
       <td><p>タップまたはクリックしてズームモードとパースペクティブモードを切り替えます。</p> <p>または、<code>ALT/OPTION</code> キーを押しながらアクションを実行して、一時的にパースペクティブモードに切り替えます。<br />キーを放すとズームモードに戻ります。</p> 
       <ul> 
-      <li><strong>ズーム</strong>— ドリーインとドリーアウトの動作で、カメラを表示しているアセットに近づくか遠ざけます<br /> 。 ズームは、マウスのスクロールホイール（利用可能な場合）、モバイルデバイスでの 2 本の指によるピンチ操作、あるいは Shift キーを押したまま左マウスボタンを使用して上または下にドラッグしたときのデフォルトの動作です。</li> 
-      <li><strong>パースペクティブ</strong>-表示内のアセットの相対サイズを維持しながら、表示の焦点距離（の場とも呼ばれます）を変更します。 パースペクティブは、スクロールホイール（利用可能な場合）、モバイルデバイスでの 2 本の指によるピンチ操作、あるいは Shift キーを押したまま左マウスボタンを使用して上または下にドラッグする動作の代替の動作です。</li> 
+      <li><strong>ズーム</strong> — ドリーインおよびドリーアウトの動作で、カメラを表示しているアセットに近づくか遠ざけ<br /> ます。ズームは、マウスのスクロールホイール（利用可能な場合）、モバイルデバイスでの 2 本の指によるピンチ操作、あるいは Shift キーを押したまま左マウスボタンを使用して上または下にドラッグしたときのデフォルトの動作です。</li> 
+      <li><strong>パースペクティブ</strong>-表示内のアセットの相対サイズを維持しながら、表示の焦点距離（の場とも呼ばれます）を変更します。パースペクティブは、スクロールホイール（利用可能な場合）、モバイルデバイスでの 2 本の指によるピンチ操作、あるいは Shift キーを押したまま左マウスボタンを使用して上または下にドラッグする動作の代替の動作です。</li> 
       </ul> </td> 
       </tr> 
       <tr> 
       <td><p>オービット</p> <p>または</p> <p>パン</p> </td> 
       <td><p>タップまたはクリックしてオービットモードとパンモードを切り替えます。</p> <p>または、<code>ALT/OPTION</code> キーを押しながらアクションを実行して、一時的にパンモードに切り替えます。キーを放すとオービットモードに戻ります。</p> 
       <ul> 
-      <li><strong>[軌道</strong>]:3Dアセットの中心付近にあるターゲット点を中心とする球上のビューカメラを既定値に移動します。 オービットは、モバイルデバイスでの左ボタンドラッグまたはシングルタッチドラッグのデフォルトの動作です。</li> 
-      <li><strong>[パン</strong>]：ビュー平面内のカメラを移動します。 ターゲットポイントはカメラ対応して移動するので、以降のオービットアクションでは、カメラは新しいターゲットポイントを中心として移動します。パンは、左ボタンドラッグおよびシングルタッチドラッグの代替動作です。</li> 
+      <li><strong>[軌道</strong>]:3Dアセットの中心付近にあるターゲット点を中心とする球上のビューカメラを既定値に移動します。オービットは、モバイルデバイスでの左ボタンドラッグまたはシングルタッチドラッグのデフォルトの動作です。</li> 
+      <li><strong>[パン</strong>]：ビュー平面内のカメラを移動します。ターゲットポイントはカメラ対応して移動するので、以降のオービットアクションでは、カメラは新しいターゲットポイントを中心として移動します。パンは、左ボタンドラッグおよびシングルタッチドラッグの代替動作です。</li> 
       </ul> </td> 
       </tr> 
       <tr> 
@@ -105,7 +105,7 @@ AEM 3D のデフォルトのステージを使用する他に、サードパー�
     </tbody> 
     </table>
 
-   * Near the upper-right corner of the asset details page, tap the **[!UICONTROL Stage Selector]** icon. 3D アセットに適用する背景とライティングを含むステージ名を選択します。
+   * アセットの詳細ページの右上隅近くにある&#x200B;**[!UICONTROL ステージセレクター]**&#x200B;アイコンをタップします。 3D アセットに適用する背景とライティングを含むステージ名を選択します。
 
    ![chlimage_1-140](assets/chlimage_1-140.png)
 
@@ -113,7 +113,7 @@ AEM 3D のデフォルトのステージを使用する他に、サードパー�
 
    [AEM 3D でのステージの使用](about-the-use-of-stages-in-aem-3d.md)を参照してください。
 
-   * Near the upper-right corner of the asset details page, tap the **[!UICONTROL Camera Selector]** icon, then select a camera view that you want to apply to the 3D asset.
+   * アセットの詳細ページの右上隅近くにある「**[!UICONTROL カメラセレクター]**」アイコンをタップし、3Dアセットに適用するカメラ表示を選択します。
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
@@ -144,7 +144,7 @@ AEM 3D のデフォルトのステージを使用する他に、サードパー�
 * [タッチパッドデバイス](#touchpad-devices)
 * [マウスおよびトラックボールデバイス](#mouse-and-trackball-devices)
 
-詳しくは、3Dコンポーネントを含むWebページの [プレビューも参照してください](using-the-3d-sites-component.md#previewing-a-web-page-that-has-a-d-component)。
+[3Dコンポーネントを含むWebページのプレビュー](using-the-3d-sites-component.md#previewing-a-web-page-that-has-a-d-component)も参照してください。
 
 ![screen_shot_2017-12-11at145654](assets/screen_shot_2017-12-11at145654.png)
 
@@ -156,7 +156,7 @@ AEM 3D のデフォルトのステージを使用する他に、サードパー�
 
 1. 2 本の指でピンチして、カメラをオブジェクトに近づけたり、オブジェクトから遠ざけたりします。このアクションはズームインまたはズームアウトと同様です。このアクションを使用して、オブジェクトを詳しく調べることができます。また、「+」ボタンを押したままにしてカメラをオブジェクトに近づけたり、「-」ボタンを押したままにしてカメラをオブジェクトから遠ざけたりすることもできます。
 
-1. 2 本の指でドラッグして、カメラをパンします。このアクションではカメラを横方向に移動して、ズームインしたままオブジェクトの様々な部分を見ることができます。Alternatively, tap the **[!UICONTROL Orbit/Pan Toggle]** button to toggle to Pan mode, then use a one-finger drag to pan the camera. Tap the **[!UICONTROL Orbit/Pan Toggle]** button to revert to **[!UICONTROL Orbit]** mode.
+1. 2 本の指でドラッグして、カメラをパンします。このアクションではカメラを横方向に移動して、ズームインしたままオブジェクトの様々な部分を見ることができます。または、「**[!UICONTROL オービット/パンの切り替え]**」ボタンをタップしてパンモードに切り替え、1本指のドラッグでカメラをパンします。 「**[!UICONTROL オービット/パンの切り替え]**」ボタンをタップして、**[!UICONTROL オービット]**&#x200B;モードに戻ります。
 
 1. **[!UICONTROL ビューアをリセット]**&#x200B;をタップして、カメラをリセットします。このアクションにより、オブジェクト全体の表示に戻り、自動スピンが有効になっている場合は自動スピンが再開されます。
 
@@ -168,13 +168,13 @@ AEM 3D のデフォルトのステージを使用する他に、サードパー�
 
 1. （左）タッチパッドボタンを押しながら 1 本の指でドラッグして、オブジェクトの周囲で視点（「カメラ」）を移動（「オービット」）します。あらゆる方向からオブジェクトを表示できます。
 
-1. タッチパッドボタンを押し込まずに 2 本の指で下方向または上方向にドラッグして、カメラをオブジェクトに近づけたり、オブジェクトから遠ざけたりします。このアクションはズームインまたはズームアウトと同様です。このアクションを使用して、オブジェクトを詳しく調べることができます。Alternatively, click and hold the **[!UICONTROL Zoom In]** or **[!UICONTROL Zoom Out]** buttons to move the camera closer or farther away from the object.
+1. タッチパッドボタンを押し込まずに 2 本の指で下方向または上方向にドラッグして、カメラをオブジェクトに近づけたり、オブジェクトから遠ざけたりします。このアクションはズームインまたはズームアウトと同様です。このアクションを使用して、オブジェクトを詳しく調べることができます。または、**[!UICONTROL ズームイン]**&#x200B;ボタンまたは&#x200B;**[!UICONTROL ズームアウト]**&#x200B;ボタンを押したままにして、カメラをオブジェクトの近くまたは遠くに移動します。
 
-1. Use a one-finger drag while holding the **ALT/option** key and the (left) touchpad button to pan the camera. このアクションではカメラを横方向に移動して、ズームインしたままオブジェクトの様々な部分を見ることができます。Alternatively, click the **[!UICONTROL Orbit/Pan Toggle]** button to toggle to **[!UICONTROL Pan]** mode, then use a one-finger drag while holding the (left) button to pan the camera. Click the **[!UICONTROL Orbit/Pan Toggle]** button again to revert to **[!UICONTROL Orbit]** mode.
+1. **Alt/option**&#x200B;キーと（左）タッチパッドボタンを押しながら1本指でドラッグし、カメラをパンします。 このアクションではカメラを横方向に移動して、ズームインしたままオブジェクトの様々な部分を見ることができます。または、[**[!UICONTROL オービット/パンの切り替え]**]ボタンをクリックして[**[!UICONTROL パン]**]モードに切り替え、（左）ボタンを押しながら1本指でドラッグしてカメラをパンします。 [**[!UICONTROL オービット/パンの切り替え]**]ボタンをもう一度クリックして、[**[!UICONTROL オービット]**]モードに戻ります。
 
-1. Click **[!UICONTROL Reset Viewer]** to reset the camera. このアクションにより、オブジェクト全体の表示に戻り、自動スピンが有効になっている場合は自動スピンが再開されます。
+1. 「**[!UICONTROL ビューアをリセット]**」をクリックして、カメラをリセットします。 このアクションにより、オブジェクト全体の表示に戻り、自動スピンが有効になっている場合は自動スピンが再開されます。
 
-1. Click **[!UICONTROL Full Screen]** to enter full-screen mode. Use the **Escape** key on your keyboard or click **[!UICONTROL Full Screen]** again to restore the 3D viewer to page-embedded mode.
+1. 「**[!UICONTROL フルスクリーン]**」をクリックしてフルスクリーンモードに切り替えます。 キーボードの&#x200B;**Escape**&#x200B;キーを使用するか、「**[!UICONTROL フルスクリーン]**」を再度クリックして、3Dビューアをページ埋め込みモードに戻します。
 
 ### マウスおよびトラックボールデバイス {#mouse-and-trackball-devices}
 
@@ -182,9 +182,9 @@ AEM 3D のデフォルトのステージを使用する他に、サードパー�
 
 1. 左マウスボタンを押しながらドラッグして、オブジェクトの周囲で視点（「カメラ」）を移動（「オービット」）します。あらゆる方向からオブジェクトを表示できます。
 
-1. スクロールホイールを使用して、カメラをオブジェクトに近づけたり、オブジェクトから遠ざけたりします。このアクションはズームインまたはズームアウトと同様です。このアクションを使用して、オブジェクトを詳しく調べることができます。Alternatively, click and hold the **[!UICONTROL Zoom In]** or **[!UICONTROL Zoom Out]** buttons to move the camera closer or farther away from the object.
+1. スクロールホイールを使用して、カメラをオブジェクトに近づけたり、オブジェクトから遠ざけたりします。このアクションはズームインまたはズームアウトと同様です。このアクションを使用して、オブジェクトを詳しく調べることができます。または、**[!UICONTROL ズームイン]**&#x200B;ボタンまたは&#x200B;**[!UICONTROL ズームアウト]**&#x200B;ボタンを押したままにして、カメラをオブジェクトの近くまたは遠くに移動します。
 
-1. Drag while holding the **ALT/option** key and the left mouse button to pan the camera. このアクションではカメラを横方向に移動して、ズームインしたままオブジェクトの様々な部分を見ることができます。Alternatively, click the **[!UICONTROL Orbit/Pan Toggle]** button to toggle to **[!UICONTROL Pan]** mode, then drag while holding the left mouse button to pan the camera. Click the **[!UICONTROL Orbit/Pan Toggle]** again to revert to **[!UICONTROL Orbit]** mode.
-1. Click **[!UICONTROL Reset Viewer]** to reset the camera. このアクションにより、オブジェクト全体の表示に戻り、自動スピンが有効になっている場合は自動スピンが再開されます。
-1. Click **[!UICONTROL Full Screen]** to enter full-screen mode. Use the **[!UICONTROL Escape]** key on your keyboard or click **[!UICONTROL Full Screen]** again to restore the 3D viewer to page-embedded mode.
+1. **Alt/option**&#x200B;キーを押しながらドラッグし、マウスの左ボタンを押して、カメラをパンします。 このアクションではカメラを横方向に移動して、ズームインしたままオブジェクトの様々な部分を見ることができます。または、[**[!UICONTROL オービット/パンの切り替え]**]ボタンをクリックして[**[!UICONTROL パン]**]モードに切り替え、マウスの左ボタンを押しながらドラッグしてカメラをパンします。 [**[!UICONTROL オービット/パンの切り替え]**]を再度クリックして、[**[!UICONTROL オービット]**]モードに戻ります。
+1. 「**[!UICONTROL ビューアをリセット]**」をクリックして、カメラをリセットします。 このアクションにより、オブジェクト全体の表示に戻り、自動スピンが有効になっている場合は自動スピンが再開されます。
+1. 「**[!UICONTROL フルスクリーン]**」をクリックしてフルスクリーンモードに切り替えます。 キーボードの&#x200B;**[!UICONTROL Escape]**&#x200B;キーを使用するか、「**[!UICONTROL フルスクリーン]**」を再度クリックして、3Dビューアをページ埋め込みモードに戻します。
 
