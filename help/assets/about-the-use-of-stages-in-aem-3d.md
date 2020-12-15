@@ -24,8 +24,8 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->The **[!UICONTROL OBJ 3D]** format does not support lights. したがって、この形式を使用して AEM 3D にステージを提供することはできません。
+>**[!UICONTROL OBJ 3D]**&#x200B;形式はライトをサポートしていません。 したがって、この形式を使用して AEM 3D にステージを提供することはできません。
 
-ステージのファイル形式によって、そのステージで使用できるレンダラーが決まります。For example, if Autodesk® Maya® is used for high-quality rendering, the stage must be in `.ma` or `.mb` format. デフォルトの Rapid Refine™ レンダラーのみを使用する場合は、サポートされているすべてのステージファイル形式を使用できます。
+ステージのファイル形式によって、そのステージで使用できるレンダラーが決まります。たとえば、高品質レンダリングにAutodesk® Maya®を使用する場合、ステージは`.ma`または`.mb`の形式にする必要があります。 デフォルトの Rapid Refine™ レンダラーのみを使用する場合は、サポートされているすべてのステージファイル形式を使用できます。
 
 AEMにアップロードする前に、出力画像のタイプとサイズを除くAEM 3Dのすべてのレンダリング設定を事前に設定し、ステージファイルに保存する必要があります。
