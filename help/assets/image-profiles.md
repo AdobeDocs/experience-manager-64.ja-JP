@@ -1,6 +1,6 @@
 ---
-title: ダイナミックメディアイメージプロファイル
-seo-title: ダイナミックメディアイメージプロファイル
+title: Dynamic Media画像プロファイル
+seo-title: Dynamic Media画像プロファイル
 description: アンシャープマスク、スマート切り抜き、スマートスウォッチ、またはその両方の設定を含む画像プロファイルを作成し、プロファイルを画像アセットのフォルダーに適用します。
 seo-description: アンシャープマスク、スマート切り抜き、スマートスウォッチ、またはその両方の設定を含む画像プロファイルを作成し、プロファイルを画像アセットのフォルダーに適用します。
 uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
@@ -13,12 +13,12 @@ translation-type: tm+mt
 source-git-commit: 9aae7ddac586a43f57dd34fc20df686ed2f8faca
 workflow-type: tm+mt
 source-wordcount: '2714'
-ht-degree: 91%
+ht-degree: 92%
 
 ---
 
 
-# Dynamic Media image profiles {#image-profiles}
+# Dynamic Media画像プロファイル{#image-profiles}
 
 画像をアップロードするときに、フォルダーにイメージプロファイルを適用することで、アップロード時に自動的に画像を切り抜くことができます。
 
@@ -28,7 +28,7 @@ ht-degree: 91%
 
 >[!IMPORTANT]
 >
->画像プロファイルは、PDF、アニメーションGIF、INDD(Adobe InDesign)ファイルには適用されません。
+>イメージプロファイルは、PDF ファイル、アニメーション GIF ファイル、INDD（Adobe InDesign）ファイルには適用されません。
 
 ## 切り抜きツールオプション {#crop-options}
 
@@ -76,7 +76,7 @@ ht-degree: 91%
 
 ## アンシャープマスク {#unsharp-mask}
 
-You use **Unsharp Mask** to fine-tune a sharpening filter effect on the final downsampled image. You can control intensity of effect, radius of the effect (measured in pixels), and a threshold of contrast that will be ignored. This effect uses the same options as Adobe Photoshop’s “Unsharp Mask” filter.
+「**アンシャープマスク**」を使用して、最終的なダウンサンプル画像に対するシャープフィルタの効果を微調整します。効果の適用度、効果の半径（ピクセル単位）および無視されるコントラストのしきい値を制御できます。この効果は、Adobe Photoshopの「アンシャープマスク」フィルターと同じオプションを使用します。
 
 >[!NOTE]
 >
@@ -107,11 +107,11 @@ You use **Unsharp Mask** to fine-tune a sharpening filter effect on the final do
 
 シャープニングについては、[画像のシャープニング](/help/assets/assets/s7_sharpening_images.pdf)を参照してください。
 
-## Creating Dynamic Media image profiles {#creating-image-profiles}
+## Dynamic Mediaイメージプロファイルの作成{#creating-image-profiles}
 
 他のアセットタイプへの高度な処理パラメーターの定義については、[アセット処理の設定](config-dms7.md#configuring-asset-processing)を参照してください。
 
-**ダイナミックメディアイメージプロファイルを作成するには**:
+**Dynamic Media画像プロファイルを作成するには**:
 
 1. AEM のロゴをタップし、**[!UICONTROL ツール／Assets／イメージプロファイル]**&#x200B;に移動します。
 1. 「**[!UICONTROL 作成]**」をタップクリックして、新しいイメージプロファイルを追加します。
@@ -125,7 +125,7 @@ You use **Unsharp Mask** to fine-tune a sharpening filter effect on the final do
 
 1. 「**[!UICONTROL 保存]**」をタップします。新しく作成されたプロファイルが、使用可能なプロファイルのリストに表示されます。
 
-## Editing or deleting Dynamic Media image profiles {#editing-or-deleting-image-profiles}
+## Dynamic Media画像プロファイルの編集または削除{#editing-or-deleting-image-profiles}
 
 1. AEM のロゴをタップし、**[!UICONTROL ツール／Assets／イメージプロファイル]**&#x200B;に移動します。
 1. 編集または削除するイメージプロファイルを選択します。編集するには、「**[!UICONTROL 画像処理プロファイルを編集]**」を選択します。削除するには、「**[!UICONTROL 画像処理プロファイルを削除]**」を選択します。
@@ -177,7 +177,7 @@ You use **Unsharp Mask** to fine-tune a sharpening filter effect on the final do
 
 1. 次のいずれかの操作をおこないます。
 
-   * Navigate to **https://&lt;AEM server>/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam** and apply the appropriate profile and tap **Save**.
+   * **https://&lt;AEM server>/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam**&#x200B;に移動し、適切なプロファイルを適用して、「**保存**」をタップします。
 
       ![chlimage_1-257](assets/chlimage_1-257.png)
 
