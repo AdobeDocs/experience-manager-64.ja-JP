@@ -18,13 +18,13 @@ ht-degree: 60%
 ---
 
 
-# 高度な設定 {#advanced-configuration-settings}
+# 高度な設定  {#advanced-configuration-settings}
 
 一般的な使用例ではデフォルトの設定が適していますが、変更が必要になる場合もあります。
 
 Maya および Maya 以外のソフトウェアと AEM 3D の統合に適用する高度な設定は、以下のとおりです。
 
-All settings are accessed using **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**).
+AEMの&#x200B;**CRXDE Lite**&#x200B;を使用して、すべての設定にアクセスします(**[!UICONTROL ツール/一般/CRXDE Lite]**)。
 
 >[!NOTE]
 >
@@ -34,21 +34,21 @@ All settings are accessed using **CRXDE Lite** in AEM (**[!UICONTROL Tools > Gen
 >
 >以下の表に記載されていない設定を編集すると、予期しないまたは望ましくないプログラムの動作が生じる可能性があります。
 
-## アセットタイプの設定 {#asset-types-configuration}
+## アセットタイプの設定  {#asset-types-configuration}
 
-In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access the following configurations:
+AEMの&#x200B;**CRXDE Lite**(**[!UICONTROL ツール/一般/CRXDE Lite]**)で、次の設定にアクセスします。
 
 | パス | 説明 |
 |---|---|
 | `/libs/settings/dam/v3D/assetTypes/*/Conversion` | 取り込み中に作成される中間 3D 形式のファイルタイプを指定します。「fbx」および「obj」ファイル形式の場合は空にし、Maya によって有効になる形式の場合は「fbx」を指定する必要があります。 |
-| `/libs/settings/dam/v3D/assetTypes/*/Enabled` | Set to true or false to enable or disable this entry in the **[!UICONTROL assetTypes]** list. |
+| `/libs/settings/dam/v3D/assetTypes/*/Enabled` | **[!UICONTROL assetTypes]**&#x200B;リストーでこのエントリを有効または無効にするには、trueまたはfalseに設定します。 |
 | `/libs/settings/dam/v3D/assetTypes/*/Extension` | このアセットタイプと関連付ける 1 つ以上のファイルサフィックスまたはファイル拡張子をコンマで区切って指定します。 |
-| `/libs/settings/dam/v3D/assetTypes/*/IngestRegime` | Must be `native` for FBX and OBJ file formats and  `maya` for formats enabled by Maya. |
-| `/libs/settings/dam/v3D/assetTypes/*/MimeType` | このアセットタイプの MIME タイプを指定します。For formats enabled by Maya it is recommended to use `application/x-ext`, where `ext` is the string specified as the `Extension` value. |
+| `/libs/settings/dam/v3D/assetTypes/*/IngestRegime` | FBXおよびOBJファイルフォーマットは`native`に、Mayaで有効なフォーマットは`maya`にする必要があります。 |
+| `/libs/settings/dam/v3D/assetTypes/*/MimeType` | このアセットタイプの MIME タイプを指定します。Mayaで有効なフォーマットの場合は、`application/x-ext`を使用することをお勧めします。`ext`は`Extension`値として指定された文字列です。 |
 
 ## 取り込みの設定 {#ingestion-configuration}
 
-In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access the following configurations:
+AEMの&#x200B;**CRXDE Lite**(**[!UICONTROL ツール/一般/CRXDE Lite]**)で、次の設定にアクセスします。
 
 <table> 
  <tbody> 
@@ -74,7 +74,7 @@ In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access
   </tr> 
   <tr> 
    <td>/libs/settings/dam/v3D/settings/gPlaneZero</td> 
-   <td><p><strong>true</strong> （既定値）に設定すると、必要に応じてオブジェクトが垂直方向に移動し、オブジェクトのすべてのパーツが地表面の上に配置されます(y=0)。</p> <p>When set to <strong>false</strong> (default), objects are not repositioned and may be partially hidden by a stage's ground plane. （Rapid Refine でのプレビューとレンダリングにのみ適用されます）。ただし、Maya でのレンダリングには影響しません。When set to <strong>true</strong>, the vertical position of objects in Maya may be different than in preview or when rendering with Rapid Refine.</p> </td> 
+   <td><p><strong>true</strong>（デフォルト）に設定した場合、必要に応じて、オブジェクトのすべてのパーツが地表面の上(y=0)に来るように、オブジェクトは垂直方向に移動します。</p> <p><strong>false</strong>（デフォルト）に設定した場合、オブジェクトは再配置されず、ステージのグラウンド平面によって部分的に隠れる場合があります。 （Rapid Refine でのプレビューとレンダリングにのみ適用されます）。ただし、Maya でのレンダリングには影響しません。<strong>true</strong>に設定した場合、Mayaのオブジェクトの垂直位置は、プレビューの場合と、高速リファイン(Rapid Refine)を使用してレンダリングする場合とで異なる場合があります。</p> </td> 
   </tr> 
   <tr> 
    <td>/libs/settings/dam/v3D/Paths/magickPath</td> 
@@ -87,23 +87,23 @@ In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access
  </tbody> 
 </table>
 
-## Cloud Services設定 {#cloud-services-configuration-settings}
+## Cloud Services構成設定{#cloud-services-configuration-settings}
 
 次の設定の値は、Adobeのアカウントマネージャー、プロビジョニングエキスパートまたはサポート担当者が提供します。
 
 | **パス** | **説明** |
 |---|---|
 | `/libs/settings/dam/v3D/services/aws/accountId` | AdobeAWSアカウントのアカウントID。 |
-| `/libs/settings/dam/v3D/services/aws/bucketName` | S3転送バケットの名前。 通常 `aem3d`。 |
+| `/libs/settings/dam/v3D/services/aws/bucketName` | S3転送バケットの名前。通常は`aem3d`です。 |
 | `/libs/settings/dam/v3D/services/aws/customerId` | Adobeが組織に割り当てる一意のID。 AWS CognitoユーザーIDとして使用されます。 |
 | `/libs/settings/dam/v3D/services/aws/encryptedPassword` | このcustomerIdに関連付けられているパスワード。 AWS Cognitoパスワードとして使用されます。 |
 | `/libs/settings/dam/v3D/services/aws/region` | クラウドサービスがデプロイされるAWSリージョン。 |
 | `/libs/settings/dam/v3D/services/aws/userPoolId` | 適用可能なAWS CognitoユーザープールID。 |
 | `/libs/settings/dam/v3D/services/dncr/clientId` | AWS CognitoクライアントID（dncrコンバージョンサービス用）。 |
 
-## Common processing settings {#common-processing-settings}
+## 共通の処理設定{#common-processing-settings}
 
-In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access the following configurations:
+AEMの&#x200B;**CRXDE Lite**(**[!UICONTROL ツール/一般/CRXDE Lite]**)で、次の設定にアクセスします。
 
 | **パス** | **説明** |
 |---|---|
@@ -113,40 +113,40 @@ In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access
 
 ## レンダラーの設定 {#renderer-configuration}
 
-In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access the following configurations:
+AEMの&#x200B;**CRXDE Lite**(**[!UICONTROL ツール/一般/CRXDE Lite]**)で、次の設定にアクセスします。
 
 | **パス** | **説明** |
 |---|---|
-| `/libs/settings/dam/v3D/settings/dynamicIBL` | **[!UICONTROL true]** に設定し、あらかじめ生成されたライトマップが利用できない場合（つまり、invokeLightMapsOnIngest=false の場合）、Rapid Refine レンダラーは、レンダリング中にライトマップを作成して、レンダリング画質を向上させます。この設定を有効にすると、レンダリング時間が大幅に長くなる場合があります。Setting to **[!UICONTROL false]** minimizes CPU usage in such situations but may result in a lower render quality. |
+| `/libs/settings/dam/v3D/settings/dynamicIBL` | **[!UICONTROL true]** に設定し、あらかじめ生成されたライトマップが利用できない場合（つまり、invokeLightMapsOnIngest=false の場合）、Rapid Refine レンダラーは、レンダリング中にライトマップを作成して、レンダリング画質を向上させます。この設定を有効にすると、レンダリング時間が大幅に長くなる場合があります。**[!UICONTROL false]**&#x200B;に設定すると、このような状況でのCPU使用量は最小限に抑えられますが、レンダリング品質は低下する場合があります。 |
 | `/libs/settings/dam/v3D/renderers/*/Enabled` | **[!UICONTROL true]** に設定するとレンダラーが有効になり、**[!UICONTROL false]** に設定すると無効になります。 |
 | `/libs/settings/dam/v3D/renderers/*/Display` | レンダリングパネルのレンダラーセレクターで表示される有効なレンダラーの文字列を変更できます。 |
 | `/libs/settings/dam/v3D/renderers/*/MaxCpuPercentage` | 3D シーンのレンダリングに最大でどの程度の CPU を使用するかを指定します。大きい値を設定すると、レンダリング速度が上がりますが、AEM の反応が全体的に遅くなる場合があります。この設定は概算でかまいません。使用できる CPU コアの数が増えれば、精度も向上します。 |
 
-## 3D Asset preview settings {#d-asset-preview-settings}
+## 3Dアセットプレビュー設定{#d-asset-preview-settings}
 
-In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access the following configurations:
+AEMの&#x200B;**CRXDE Lite**(**[!UICONTROL ツール/一般/CRXDE Lite]**)で、次の設定にアクセスします。
 
 | パス | 説明 |
 |---|---|
-| `/libs/settings/dam/v3D/WebGLSites/autoSpin` | Set to **[!UICONTROL true]** or **[!UICONTROL false]** to enable or disable auto-spin (automatic camera orbit) on page load. |
-| `/libs/settings/dam/v3D/WebGLSites/autoSpinAfterReset` | Set to **[!UICONTROL true]** to restart auto-spin after **[!UICONTROL Reset]** is pressed. 自動スピンが無効になっている場合は無視されます。 |
+| `/libs/settings/dam/v3D/WebGLSites/autoSpin` | **[!UICONTROL true]**&#x200B;または&#x200B;**[!UICONTROL false]**&#x200B;に設定すると、ページ読み込み時の自動スピン（自動カメラオービット）を有効または無効にできます。 |
+| `/libs/settings/dam/v3D/WebGLSites/autoSpinAfterReset` | **[!UICONTROL true]**&#x200B;に設定すると、**[!UICONTROL リセット]**&#x200B;が押された後に自動スピンが再開されます。 自動スピンが無効になっている場合は無視されます。 |
 | `/libs/settings/dam/v3D/WebGLSites/autoSpinSpeed` | 自動スピンの速度（1 分あたりの回転数）と方向を指定します。右から左に回転する場合は負の値を、左から右に回転する場合は正の値を指定します。 |
-| `/libs/settings/dam/v3D/WebGL/continueRotate` | Set to **[!UICONTROL false]** to disable continuation with gradual fadeout of viewer responses to touch and mouse gestures. |
+| `/libs/settings/dam/v3D/WebGL/continueRotate` | タッチ操作とマウス操作に対するビューアの応答の段階的なフェードアウトで続行を無効にするには、**[!UICONTROL false]**&#x200B;に設定します。 |
 | `/libs/settings/dam/v3D/WebGL/curtainColor` | 読み込みおよび初期化中に 3D アセットプレビューの表示域を任意で覆うことができる読み込みカーテンの色を指定します。R,G,B として値を指定します。それぞれの色成分の範囲は 0～255 です。 |
-| `/libs/settings/dam/v3D/WebGL/fadeCurtains` | **[!UICONTROL trueに設定した場合]**、ロードカーテンは、ビューアの初期化の後半で徐々にフェードアウトします。 When set to **[!UICONTROL false]**, the curtain remains opaque until loading and initialization has completed. |
-| `/libs/settings/dam/v3D/WebGL/showCurtains` | Set to **[!UICONTROL true]** or **[!UICONTROL false]** to enable or disable the load curtain for 3D asset preview. |
+| `/libs/settings/dam/v3D/WebGL/fadeCurtains` | **[!UICONTROL true]**&#x200B;に設定した場合、ビューアの初期化の後半で、ロードカーテンが徐々にフェードアウトします。 **[!UICONTROL false]**&#x200B;に設定した場合、読み込みと初期化が完了するまで、カーテンは不透明のままです。 |
+| `/libs/settings/dam/v3D/WebGL/showCurtains` | **[!UICONTROL true]**&#x200B;または&#x200B;**[!UICONTROL false]**&#x200B;に設定すると、3Dアセットプレビューのロードカーテンの有効/無効が切り替わります。 |
 | `/libs/settings/dam/v3D/WebGL/spinHeight` | 自動スピンが有効でアクティブな場合、カメラの垂直方向の位置は、3D オブジェクトの高さを基準にして自動的に調整されます。0.5 に設定すると、カメラの垂直方向の位置はオブジェクトの高さの 1/2 の位置になり、水平線は表示域の垂直方向の中心になります。大きい値を設定すると、カメラはオブジェクトを見下ろすようになり、レンダリングされる水平線の高さは高くなります。小さい値を設定すると、カメラはオブジェクトを見上げるようになり、水平線は低くなります。 |
 
-## 3D Sites component settings {#d-sites-component-settings}
+## 3Dサイトコンポーネントの設定{#d-sites-component-settings}
 
-In **CRXDE Lite** in AEM (**[!UICONTROL Tools > General > CRXDE Lite]**), access the following configurations:
+AEMの&#x200B;**CRXDE Lite**(**[!UICONTROL ツール/一般/CRXDE Lite]**)で、次の設定にアクセスします。
 
 | パス | 説明 |
 |---|---|
-| `/libs/settings/dam/v3D/WebGLSites/autoSpinAfterReset` | Set to **[!UICONTROL true]** to reactivate auto-spin (automatic camera orbit) after home is pressed. 自動スピンが無効になっている場合は無視されます。 |
-| `/libs/settings/dam/v3D/WebGLSites/continueRotate` | Set to **[!UICONTROL false]** to disable continuation with gradual fadeout of viewer responses to touch and mouse gestures. |
+| `/libs/settings/dam/v3D/WebGLSites/autoSpinAfterReset` | ホームを押した後に自動スピン（自動カメラオービット）を再開するには、**[!UICONTROL true]**&#x200B;に設定します。 自動スピンが無効になっている場合は無視されます。 |
+| `/libs/settings/dam/v3D/WebGLSites/continueRotate` | タッチ操作とマウス操作に対するビューアの応答の段階的なフェードアウトで続行を無効にするには、**[!UICONTROL false]**&#x200B;に設定します。 |
 | `/libs/settings/dam/v3D/WebGLSites/curtainColor` | 読み込み中に 3D Sites コンポーネントの表示域をオプションで覆うことができる読み込みカーテンの色を指定します。R,G,B として値を指定します。それぞれの色成分の範囲は 0～255 です。 |
-| `/libs/settings/dam/v3D/WebGLSites/fadeCurtains` | **[!UICONTROL trueに設定すると]**、ロードカーテンは、ロードと初期化の後半で徐々にフェードアウトします。 When set to **[!UICONTROL false]**, the curtain remains opaque until loading and initialization has completed. |
-| `/libs/settings/dam/v3D/WebGLSites/showCurtains` | Set to **[!UICONTROL true]** or **[!UICONTROL false]** to enable or disable the load curtain for the 3D Sites component. |
+| `/libs/settings/dam/v3D/WebGLSites/fadeCurtains` | **[!UICONTROL true]**&#x200B;に設定すると、ロードカーテンは、ロードと初期化の後半の部分で徐々にフェードアウトします。 **[!UICONTROL false]**&#x200B;に設定した場合、読み込みと初期化が完了するまで、カーテンは不透明のままです。 |
+| `/libs/settings/dam/v3D/WebGLSites/showCurtains` | **[!UICONTROL true]**&#x200B;または&#x200B;**[!UICONTROL false]**&#x200B;に設定すると、3Dサイトコンポーネントのロードカーテンが有効または無効になります。 |
 | `/libs/settings/dam/v3D/WebGLSites/spinHeight` | 自動スピンが有効でアクティブな場合、カメラの垂直方向の位置は、3D オブジェクトの高さを基準にして自動的に調整されます。0.5 に設定すると、カメラの垂直方向の位置はオブジェクトの高さの 1/2 の位置になり、水平線は表示域の垂直方向の中心になります。大きい値を設定すると、カメラはオブジェクトを見下ろすようになり、レンダリングされる水平線の高さは高くなります。小さい値を設定すると、カメラはオブジェクトを見上げるようになり、水平線は低くなります。 |
 
