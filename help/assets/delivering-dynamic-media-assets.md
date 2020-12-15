@@ -18,7 +18,7 @@ ht-degree: 91%
 ---
 
 
-# Dynamic Media アセットの配信 {#delivering-dynamic-media-assets}
+# Dynamic Media アセットの配信  {#delivering-dynamic-media-assets}
 
 ビデオでも画像でも、Dynamic Media アセットの配信方法は、Web サイトの実装方法によって異なります。
 
@@ -37,10 +37,10 @@ Dynamic Media を使用する場合、次の複数のオプションがありま
 
 詳しくは、次のトピックを参照してください。
 
-* [Webページへのダイナミックメディアアセットの追加](adding-dynamic-media-assets-to-pages.md)
+* [WebページへのDynamic Mediaアセットの追加](adding-dynamic-media-assets-to-pages.md)
 * [ビデオビューアまたは画像ビューアのWebページへの埋め込み](embed-code.md)
 * [Dynamic Media でのホットリンク保護の有効化](https://helpx.adobe.com/jp/experience-manager/6-4/assets/using/hotlink-protection.html)
-* デジタル非表示透かし(Digimarc)とダイナミックメディアの統合（近日公開）
+* デジタル非表示透かし(Digimarc)とDynamic Mediaの統合（近日公開）
 * [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)
 * [レスポンシブサイト用に最適化された画像の配信](responsive-site.md)
 * [コンテンツの HTTP/2 配信](http2.md)
