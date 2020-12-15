@@ -11,13 +11,13 @@ ht-degree: 92%
 ---
 
 
-# Assets のファイル形式に関するベストプラクティス {#assets-file-format-best-practices}
+# Assets のファイル形式に関するベストプラクティス  {#assets-file-format-best-practices}
 
 AEM Assets はユーザーの様々なファイルサポート要件に対応するために、アドビ製およびサードパーティ製の数多くのファイル形式ライブラリをサポートしています。サポート対象のアドビのライブラリには、Adobe Camera Raw、Gibson、Adobe PDF Rasterizer、Adobe InDesign Server などがあります。さらに、AEM Assets は ImageMagick や TwelveMonkeys などのサードパーティのライブラリをサポートします。
 
 サポートされるファイル形式については、[アセットでサポートされるファイル形式](assets-formats.md)を参照してください。
 
-## Adobe Camera Raw ライブラリ {#adobe-camera-raw-library}
+## Adobe Camera Raw ライブラリ  {#adobe-camera-raw-library}
 
 最適なパフォーマンスを得るために、以下については Adobe Camera Raw ライブラリを使用することをお勧めします。
 
@@ -38,9 +38,9 @@ Adobe Camera Raw ライブラリは、入力として CMYK カラープロファ
 
 PDF Rasterizer を使用して生成されたサムネールやプレビューの画質は、既製のラスター出力と比較して優れています。Adobe PDF Rasterizer ライブラリはカラースペース変換をサポートしません。ソース PDF ファイルのカラースペースに関わらず、Adobe PDF Rasterizer は RGB 出力のみを生成します。
 
-## Adobe InDesign Server {#adobe-indesign-cc-server}
+## Adobe InDesign Server  {#adobe-indesign-cc-server}
 
-IDML や HTML など Adobe InDesign 固有のレンディションを抽出するには、Adobe InDesign Server の使用をお勧めします。For more information, see [Adding AEM assets as references in Adobe InDesign](managing-linked-subassets.md#add-aem-assets-as-references-in-adobe-indesign).
+IDML や HTML など Adobe InDesign 固有のレンディションを抽出するには、Adobe InDesign Server の使用をお勧めします。詳しくは、「[Adobe InDesign](managing-linked-subassets.md#add-aem-assets-as-references-in-adobe-indesign)でAEMアセットを参照として追加する」を参照してください。
 
 ## Dynamic Media  {#dynamic-media}
 
@@ -57,9 +57,9 @@ Dynamic Media は、パフォーマンスが最適化されスケーラビリテ
 * 透明性を保持するとき
 * PSD および PSB ファイルを処理するとき
 
-To know how to set up the ImageMagic library in AEM, see [Using ImageMagick](media-handlers.md#an-example-using-imagemagick). 最適な使用方法については、[ImageMagick の設定のベストプラクティス](best-practices-for-imagemagick.md)を参照してください。
+AEMでのImageMagicライブラリの設定方法について詳しくは、[Using ImageMagick](media-handlers.md#an-example-using-imagemagick)を参照してください。 最適な使用方法については、[ImageMagick の設定のベストプラクティス](best-practices-for-imagemagick.md)を参照してください。
 
-## 画像トランスコーディングライブラリ {#image-transcoding-library}
+## 画像トランスコーディングライブラリ  {#image-transcoding-library}
 
 アドビの画像トランスコーディングライブラリは、画像のエンコーディング、トランスコーディング、リサンプリング、サイズ変更などの中心的な画像処理機能を実行する画像処理ソリューションです。
 
@@ -73,4 +73,4 @@ To know how to set up the ImageMagic library in AEM, see [Using ImageMagick](med
 * ICO
 * ICN
 
-For details, see [Imaging Transcoding Library](imaging-transcoding-library.md).
+詳しくは、[イメージングトランスコードライブラリ](imaging-transcoding-library.md)を参照してください。
