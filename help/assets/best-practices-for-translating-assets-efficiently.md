@@ -11,7 +11,7 @@ ht-degree: 98%
 ---
 
 
-# アセットを効率的に翻訳するためのベストプラクティス {#best-practices-for-translating-assets-efficiently}
+# アセットを効率的に変換するためのベストプラクティス{#best-practices-for-translating-assets-efficiently}
 
 Adobe Experience Manager（AEM）Assets は、デジタルアセットのバイナリ、メタデータおよびタグを複数のロケール用に翻訳し、翻訳されたアセットを多言語ワークフローで管理します。詳しくは、[多言語のアセット](multilingual-assets.md)を参照してください。
 
