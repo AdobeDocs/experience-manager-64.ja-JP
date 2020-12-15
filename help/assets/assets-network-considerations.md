@@ -40,13 +40,13 @@ ht-degree: 98%
 
 右に表示されているコンピューターは VPN を介して企業ネットワークに接続されており、アップストリームの上限は 1 Mbps です。1 Mbps 接続と 1 Gbps 接続では、ユーザーエクスペリエンスは大幅に異なります。アセットのサイズによっては、そのタスクに対して VPN アップリンクが不十分になる可能性があります。
 
-## 企業ネットワークのトポロジ {#topology-of-the-corporate-network}
+## 企業ネットワークのトポロジ  {#topology-of-the-corporate-network}
 
 ![chlimage_1-354](assets/chlimage_1-354.png)
 
 図では、企業ネットワーク内で使用されているアップリンクの速度が、通常使用されるものよりも高速になっています。これらのパイプは共有リソースです。共有スイッチが処理するクライアント数が 50 と想定されている場合、ここが渋滞地点となる可能性があります。最初の図では、2 台のコンピューターのみがその特定の接続を共有しています。
 
-## 企業ネットワークと AEM 環境からのインターネットへのアップリンク {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
+## 企業ネットワークと AEM 環境からのインターネットへのアップリンク  {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
@@ -62,7 +62,7 @@ ht-degree: 98%
 
 このサンプル図より、6 台のデバイスが 10 Mbps の概念的なチャネルを共有していると結論付けることができます。使用しているアセットのサイズによっては、これではユーザーの期待に応えるには不十分である可能性があります。
 
-## AEM 環境のトポロジ {#topology-of-the-aem-environment}
+## AEM 環境のトポロジ  {#topology-of-the-aem-environment}
 
 ![chlimage_1-356](assets/chlimage_1-356.png)
 
@@ -74,7 +74,7 @@ Dispatcher では、100 Mbps の接続が 2 つのエンティティ（外部と
 
 AEM インスタンスでは、1 Gbps の接続が複数のサービスで共有されています。ネットワークトポロジの観点では、これは単一のチャネルを異なるサービスで共有することと同じです。
 
-クライアントデバイスから AEM インスタンスへのネットワークを確認すると、最も混雑の激しい渋滞地点は 10 メガビットの企業ファイアウォールのスロットルのように見えます。You can use these values in the sizing calculator in the [Assets Sizing Guide](assets-sizing-guide.md) to determine the user experience.
+クライアントデバイスから AEM インスタンスへのネットワークを確認すると、最も混雑の激しい渋滞地点は 10 メガビットの企業ファイアウォールのスロットルのように見えます。これらの値は、[アセットサイズ変更ガイド](assets-sizing-guide.md)のサイズ計算ツールで使用して、ユーザーエクスペリエンスを決定できます。
 
 ## AEM ワークフローの定義済みのワークフロー {#defined-workflows-of-the-aem-instance}
 
