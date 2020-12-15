@@ -43,15 +43,15 @@ ht-degree: 83%
 
    以下の推奨設定を使用してレンダラー設定をおこないます。
 
-   * **[!UICONTROL 共通]** タブ
+   * **** 共通タブ
 
-      Deselect the **[!UICONTROL Alpha channel (mask)]** check box for all Renderable Cameras.
+      すべてのレンダリング可能なカメラの&#x200B;**[!UICONTROL アルファチャネル（マスク）]**&#x200B;チェックボックスをオフにします。
 
    * **[!UICONTROL 「画質」タブ]**
 
-      * **[!UICONTROL 全体的なクォリティ]**`- 0.5` 以下
-      * **[!UICONTROL 間接拡散(GI)モード]** - `Final Gather`
-      * **[!UICONTROL フィルタサイズ]** - `2.0`、 `2.0`
+      * **[!UICONTROL 全体的な]** `- 0.5` 品質を低く
+      * **[!UICONTROL 間接拡散(GI)モード]** -  `Final Gather`
+      * **[!UICONTROL フィルタサイズ]** -  `2.0`、  `2.0`
    * 使用する一般的な画像サイズでシーンをレンダリングします。必要に応じて、ライトを絞り込むか、レンダリング設定をおこなうか、またはその両方をおこないます。
 
       Mental Ray でレンダリングする場合、Image-Based Lighting を使用すると、処理が非常に遅くなり、CPU 使用率が高くなることに注意してください。必要なレンダリング品質を保てる最低の画質設定を使用することをお勧めします。
@@ -66,6 +66,6 @@ ht-degree: 83%
 
    Autodesk® Maya® が AEM サーバー上で設定されていない場合は、Maya から FBX を書き出して、AEM にアップロードします。
 
-1. AEM でアセットのプロパティを開きます。Set **[!UICONTROL Title]** to a suitable string that will appear in the **[!UICONTROL Stage Selector]** drop-down list. 「**[!UICONTROL クラス]**」が「**[!UICONTROL 3D ステージ]**」に設定されていることを確認します。保存して終了します。
+1. AEM でアセットのプロパティを開きます。**[!UICONTROL タイトル]**&#x200B;を、**[!UICONTROL ステージセレクター]**&#x200B;ドロップダウンリストに表示される適切な文字列に設定します。 「**[!UICONTROL クラス]**」が「**[!UICONTROL 3D ステージ]**」に設定されていることを確認します。保存して終了します。
 1. 3D アセットを開き、新しいステージを選択して、予期したとおりにプレビューされ、レンダリングされることを確認します。
 
