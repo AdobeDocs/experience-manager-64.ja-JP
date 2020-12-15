@@ -22,7 +22,7 @@ ht-degree: 98%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2(6.4.2.0)以降が [必要です](/help/release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、[AEM 6.4 Service Pack 2 (6.4.2.0)以降](/help/release-notes/sp-release-notes.md)のアプリケーションが必要です。
 
 Adobe Experience Manager（AEM）コンテンツフラグメントを使用すると、ページに依存しないコンテンツの設計、作成、キュレーション、[公開](/help/sites-authoring/content-fragments.md)が可能になります。複数の場所、複数のチャネル上で使用可能なコンテンツを用意できるようになります。
 
@@ -66,7 +66,7 @@ Adobe Experience Manager（AEM）コンテンツフラグメントを使用す�
 
 さらにこうしたコンテンツフラグメントを集めて組み立てることで、多様なチャネルにエクスペリエンスを提供できます。
 
-## コンテンツフラグメントとコンテンツサービス {#content-fragments-and-content-services}
+## コンテンツフラグメントとコンテンツサービス  {#content-fragments-and-content-services}
 
 AEM コンテンツサービスは、Web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。
 
@@ -84,7 +84,7 @@ AEM コアコンポーネントの JSON 書き出し機能と共にこの構造�
 
 >[!NOTE]
 >
->**コンテンツフラグメント**&#x200B;と&#x200B;**[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)**は、AEM 内の異なる機能です。
+>**コンテンツフラグメント**&#x200B;と&#x200B;**[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)**&#x200B;は、AEM 内の異なる機能です。
 >
 >* **コンテンツフラグメント**&#x200B;は、主にテキストや関連画像などの編集コンテンツです。これは、デザインやレイアウトを含まない純粋なコンテンツです。
 >* **エクスペリエンスフラグメント**&#x200B;は完全にレイアウトされたコンテンツであり、Web ページのフラグメントです。
@@ -103,7 +103,7 @@ AEM コアコンポーネントの JSON 書き出し機能と共にこの構造�
 
 >[!NOTE]
 >
->AEM はフラグメントコンテンツの翻訳もサポートしています。See [Creating Translation Projects for Content Fragments](creating-translation-projects-for-content-fragments.md) for further information.
+>AEM はフラグメントコンテンツの翻訳もサポートしています。詳しくは、[コンテンツフラグメント用の翻訳プロジェクトの作成](creating-translation-projects-for-content-fragments.md)を参照してください。
 
 ## コンテンツフラグメントのタイプ {#types-of-content-fragment}
 
