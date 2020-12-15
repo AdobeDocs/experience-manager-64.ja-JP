@@ -26,7 +26,7 @@ API の応答は、一部の MIME タイプに対する JSON ファイル、お�
 
 >[!CAUTION]
 >
->[HTTP APIは、](#update-asset-metadata)`jcr` 名前空間内のメタデータプロパティを更新します。 ただし、Experience Managerユーザーインターフェイスは、 `dc` 名前空間内のメタデータプロパティを更新します。
+>[HTTP APIは、](#update-asset-metadata) 名前空間内のメタデータ `jcr` プロパティを更新します。ただし、Experience Managerユーザーインターフェイスは、`dc`名前空間のメタデータプロパティを更新します。
 
 ## データモデル {#data-model}
 
@@ -88,8 +88,8 @@ Assets HTTP API には、以下の機能が含まれます。
 **前提条件**
 
 * `https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
-* Navigate to **[!UICONTROL Adobe Granite CSRF Filter]**.
-* プロパティ **[!UICONTROL Filterメソッドに]** 、次の項目が含まれていることを確認します。 `POST`、 `PUT`、 `DELETE`.
+* **[!UICONTROL AdobeGranite CSRF Filter]**&#x200B;に移動します。
+* **[!UICONTROL フィルターメソッド]**&#x200B;のプロパティに次の内容が含まれていることを確認します。`POST`、`PUT`、`DELETE`。
 
 ## フォルダーのリストの取得 {#retrieve-a-folder-listing}
 
@@ -127,9 +127,9 @@ Assets HTTP API には、以下の機能が含まれます。
 
 ## アセットの作成 {#create-an-asset}
 
-指定されたファイルを指定されたパスに配置し、DAMリポジトリ内にアセットを作成します。 If a `*` is provided instead of a node name, the servlet uses the parameter name or the file name as node name.
+指定されたファイルを指定されたパスに配置し、DAMリポジトリ内にアセットを作成します。 ノード名の代わりに`*`を指定した場合、サーブレットはパラメータ名またはファイル名をノード名として使用します。
 
-**パラメータ**:パラメーターは、アセット名 `name` とファイル参照 `file` 用のものです。
+**パラメータ**:パラメーターは、アセ `name` ット名とファイル参照 `file` 用のものです。
 
 **リクエスト**
 
@@ -158,7 +158,7 @@ Assets HTTP API には、以下の機能が含まれます。
 
 ## アセットメタデータの更新 {#update-asset-metadata}
 
-アセットメタデータのプロパティを更新します。`dc:` 名前空間内のプロパティを更新すると、APIは `jcr` 名前空間内の同じプロパティを更新します。API は 2 つの名前空間内のプロパティを同期させません。
+アセットメタデータのプロパティを更新します。`dc:` 名前空間内のプロパティを更新すると、API は `jcr` 名前空間内の同じプロパティをアップデートします。API は 2 つの名前空間内のプロパティを同期させません。
 
 **リクエスト**：`PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"jcr:title":"My Asset"}}'`
 
@@ -169,9 +169,9 @@ Assets HTTP API には、以下の機能が含まれます。
 * 412 - PRECONDITION FAILED（ルートコレクションが見つからないかアクセスできない場合）
 * 500 - INTERNAL SERVER ERROR（他に問題がある場合）
 
-### 名前空間間でのメタデータの更新 `dc``jcr` の同期 {#sync-metadata-between-namespaces}
+### `dc`と`jcr`名前空間{#sync-metadata-between-namespaces}の間でメタデータを同期
 
-APIメソッドは、 `jcr` 名前空間内のメタデータプロパティを更新します。 タッチ操作対応UIを使用して行った更新により、 `dc` 名前空間のメタデータプロパティが変更されます。 メタデータ値をとの間で同期するに `dc``jcr` は、ワークフローを作成し、アセット編集時にワークフローを実行するようにExperience Managerを設定します。 ECMAスクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトでは、との間でタイトル文字列 `dc:title` を同期し `jcr:title`ます。
+APIメソッドは、`jcr`名前空間のメタデータプロパティを更新します。 タッチ操作対応UIを使用して行った更新により、`dc`名前空間のメタデータプロパティが変更されます。 メタデータ値を`dc`と`jcr`名前空間の間で同期するには、ワークフローを作成し、アセット編集時にワークフローを実行するようにExperience Managerを設定します。 ECMAスクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトでは、`dc:title`と`jcr:title`の間でタイトル文字列を同期します。
 
 ```javascript
 var workflowData = workItem.getWorkflowData();
