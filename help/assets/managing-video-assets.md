@@ -14,7 +14,7 @@ ht-degree: 49%
 ---
 
 
-# ビデオアセットの管理 {#managing-video-assets}
+# ビデオアセットの管理  {#managing-video-assets}
 
 Adobe Experience Manager（AEM）Assets でビデオアセットを管理および編集する方法について説明します。また、Dynamic Media のライセンスをお持ちの場合は、[Dynamic Media のビデオに関するドキュメント](video.md)を参照してください。
 
@@ -28,9 +28,9 @@ AEM Assetsは、拡張子がMP4のビデオアセットに関するプレビュ�
 
    ![chlimage_1-201](assets/chlimage_1-201.png)
 
-   You can pause or play video in the **[!UICONTROL Card]** view only. The Play/Pause button is not available in the **[!UICONTROL List]** view.
+   ビデオは&#x200B;**[!UICONTROL カード]**&#x200B;表示でのみ一時停止または再生できます。 再生/一時停止ボタンは、**[!UICONTROL リスト]**&#x200B;表示では使用できません。
 
-1. カードの **[!UICONTROL 編集]** アイコンをタップして、ビデオを **[!UICONTROL 詳細]** 表示にプレビューします。
+1. カードの&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップして、**[!UICONTROL 詳細]**&#x200B;表示ーのビデオをプレビューします。
 
    ビデオは、ブラウザーのネイティブなビデオプレーヤーで再生されます。再生、一時停止、音量の調節およびビデオの全画面表示をおこなうことができます。
 
@@ -42,7 +42,7 @@ AEM Assetsは、拡張子がMP4のビデオアセットに関するプレビュ�
 
 AEM Assetsの設定に加えて、次の設定を変更して大きなアセットをアップロードします。
 
-* トークンの有効期間を増やします。Webコンソールの「 [!UICONTROL AdobeGranite CSRF Servlet] 」()を参照し `https://[aem_server]:[port]/system/console/configMgr`てください。 詳しくは、「 [CSRF保護](/help/sites-developing/csrf-protection.md)」を参照してください。
+* トークンの有効期間を増やします。Webコンソール(`https://[aem_server]:[port]/system/console/configMgr`)の「[!UICONTROL AdobeGranite CSRFサーブレット]」を参照してください。 詳しくは、[CSRF保護](/help/sites-developing/csrf-protection.md)を参照してください。
 * Dispatcher の設定で `receiveTimeout` を増やします。詳しくは、[Adobe Experience Manager Dispatcher の設定](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)を参照してください。
 
 >[!NOTE]
@@ -52,47 +52,47 @@ AEM Assetsの設定に加えて、次の設定を変更して大きなアセッ�
 ファイルサイズの制限を高めに設定するには、`/apps` ディレクトリで次の手順を実行します。
 
 1. AEM で、**[!UICONTROL ツール／一般／CRXDE Lite]** をタップします。
-1. **[!UICONTROL CRXDE Lite]** ページの左側のディレクトリウィンドウで、に移動し `/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`ます。 To see the directory window, touch `>>` icon.
-1. From the toolbar, tap **[!UICONTROL Overlay Node]**. または、コンテキストメニューの「**[!UICONTROL ノードをオーバーレイ]**」を選択します。
+1. **[!UICONTROL CRXDE Lite]**&#x200B;ページの左側のディレクトリウィンドウで、`/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`に移動します。 ディレクトリウィンドウを表示するには、`>>`アイコンをタッチします。
+1. ツールバーで、**[!UICONTROL ノードをオーバーレイ]**&#x200B;をタップします。 または、コンテキストメニューの「**[!UICONTROL ノードをオーバーレイ]**」を選択します。
 1. **[!UICONTROL ノードをオーバーレイ]**&#x200B;ダイアログで「**[!UICONTROL OK]**」をタップします。
 
    ![chlimage_1-203](assets/chlimage_1-203.png)
 
 1. ブラウザーを更新します。オーバーレイノード `/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` が選択されます。
-1. サイズ上限を必要なサイズに増やすには、「**[!UICONTROL プロパティ]**」タブで適切な値をバイト単位で入力します。For example, enter `32212254720` value to increase the size limit to 30 GB.
+1. サイズ上限を必要なサイズに増やすには、「**[!UICONTROL プロパティ]**」タブで適切な値をバイト単位で入力します。例えば、`32212254720`の値を入力して、サイズ制限を30 GBに増やします。
 
-1. From the toolbar, tap **[!UICONTROL Save All]**.
+1. ツールバーで、**[!UICONTROL 「すべて保存]**」をタップします。
 1. AEM で、**[!UICONTROL ツール／操作／Web コンソール]**&#x200B;をタップします。
-1. On the **[!UICONTROL Adobe Experience Manager Web Console Bundles]** page, under the **[!UICONTROL Name]** column of the table, locate and tap **[!UICONTROL Adobe Granite Workflow External Process Job Handler]**.
-1. In the **[!UICONTROL Adobe Granite Workflow External Process Job Handler]** page, set the seconds for both **[!UICONTROL Default Timeout]** and **[!UICONTROL Max Timeout]** fields to `18000` (five hours).
+1. **[!UICONTROL Adobe Experience ManagerWeb Console Bundles]**&#x200B;ページの表の&#x200B;**[!UICONTROL 名前]**&#x200B;列の下で、**[!UICONTROL AdobeGranite Workflow External Process Job Handler]**&#x200B;を探してタップします。
+1. **[!UICONTROL AdobeGranite Workflow External Process Job Handler]**&#x200B;ページで、**[!UICONTROL Default Timeout]**&#x200B;と&#x200B;**[!UICONTROL Max Timeout]**&#x200B;の両方のフィールドの秒を`18000` （5時間）に設定します。
 1. 「**[!UICONTROL 保存]**」をタップします。
 1. AEM で、**[!UICONTROL ツール／ワークフロー／モデル]**&#x200B;をタップします。
-1. On the **[!UICONTROL Workflow Models]** page, select **[!UICONTROL Dynamic Media Encode Video]**, then tap **[!UICONTROL Edit]**.
-1. **[!UICONTROL ワークフロー]** ページで、 **** ダイナミックメディアビデオサービスプロセスコンポーネントを重複タップします。
+1. **[!UICONTROL ワークフローモデル]**&#x200B;ページで、「**[!UICONTROL Dynamic Mediaエンコードビデオ]**」を選択し、「**[!UICONTROL 編集]**」をタップします。
+1. **[!UICONTROL ワークフロー]**&#x200B;ページで、**[!UICONTROL Dynamic Mediaビデオサービスプロセス]**&#x200B;コンポーネントを重複タップします。
 1. **[!UICONTROL ステップのプロパティ]**&#x200B;ダイアログボックスの「**[!UICONTROL 共通]**」タブにある「**[!UICONTROL 詳細設定]**」を展開します。
 1. 「**[!UICONTROL タイムアウト]**」フィールドの値を `18000` に指定し、「**[!UICONTROL OK]**」をタップして **[!UICONTROL Dynamic Media エンコーディングビデオ]**&#x200B;ワークフローページに戻ります。
-1. Near the top of the page, below the **[!UICONTROL Dynamic Media Encode Video]** page title, tap **[!UICONTROL Save]**.
+1. ページの上部近く、「**[!UICONTROL Dynamic Mediaエンコードビデオ]**」ページタイトルの下にある「**[!UICONTROL 保存]**」をタップします。
 
 ## ビデオアセットを公開する {#publishing-video-assets}
 
-ビデオアセットを公開すると、URL として Web ページに含めることや、Web ページに埋め込むことができます。詳しくは、アセット [の公開を参照してください](publishing-dynamicmedia-assets.md)。
+ビデオアセットを公開すると、URL として Web ページに含めることや、Web ページに埋め込むことができます。詳しくは、[アセットの発行](publishing-dynamicmedia-assets.md)を参照してください。
 
 ## ビデオアセットに注釈を付ける {#annotating-video-assets}
 
-1. From the Assets console, tap the **[!UICONTROL Edit]** icon on the asset card to display the asset details page.
-1. Tap the **[!UICONTROL Preview]** icon to play the video.
-1. To annotate the video, tap the **[!UICONTROL Annotate]** button. 注釈がビデオ内の特定の時点（フレーム）に追加されます。
+1. アセットコンソールから、アセットカードの&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップして、アセットの詳細ページを表示します。
+1. **[!UICONTROL プレビュー]**&#x200B;アイコンをタップして、ビデオを再生します。
+1. ビデオに注釈を付けるには、「**[!UICONTROL 注釈]**」ボタンをタップします。 注釈がビデオ内の特定の時点（フレーム）に追加されます。
 
    注釈を付けているときは、キャンバスに描画して、図面にコメントを含めることができます。コメントは自動的にAdobe Experience Managerアセットに保存されます。
 
    ![chlimage_1-204](assets/chlimage_1-204.png)
 
-   To exit the annotation wizard, tap **[!UICONTROL Close]**.
+   注釈ウィザードを終了するには、**[!UICONTROL 「]**&#x200B;を閉じる」をタップします。
 
-1. To jump to a specific point in the video, specify the time in seconds in the text field and click **[!UICONTROL Jump]**. 例えば、ビデオの最初の 秒をスキップするには、`20`テキストフィールドに 20 と入力します。
+1. ビデオ内の特定のポイントにジャンプするには、テキストフィールドで時間を秒単位で指定し、**[!UICONTROL ジャンプ]**&#x200B;をクリックします。 例えば、ビデオの最初の 秒をスキップするには、`20`テキストフィールドに 20 と入力します。
 
    ![chlimage_1-205](assets/chlimage_1-205.png)
 
-1. 注釈をクリックして、タイムラインに表示します。 Tap **[!UICONTROL Delete]** to remove the annotation from the timeline.
+1. 注釈をクリックして、タイムラインに表示します。 「**[!UICONTROL 削除]**」をタップして、タイムラインから注釈を削除します。
 
    ![chlimage_1-206](assets/chlimage_1-206.png)
