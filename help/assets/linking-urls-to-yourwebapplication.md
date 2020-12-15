@@ -139,7 +139,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
    例えば、登録 ID が `87654321|MyCompany` の場合、顧客名は `MyCompany` です。
 
-1. Near the upper-left corner of the page, tap **[!UICONTROL Cloud Service]s**, then tap the AEM icon and navigate to **[!UICONTROL General > CRXDE Lite]**.
+1. ページの左上隅近くにある「**[!UICONTROL Cloud Service]s**」をタップし、AEMアイコンをタップして&#x200B;**[!UICONTROL 一般/CRXDE Lite]**&#x200B;に移動します。
 1. JCR（Java コンテンツリポジトリ）のビデオレンディションパス全体をコピーします。
 
    例えば、ビデオのレンディションパスは、次のように表示されることがあります。
@@ -158,7 +158,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
    これは、公開されたビデオレンディションの完全なビデオ URL です。
 
-## アダプティブストリーミング（HLS）用のビデオ URL の取得 {#obtaining-a-video-url-for-adaptive-streaming-hls}
+## アダプティブストリーミング（HLS）用のビデオ URL の取得  {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. AEM で、**[!UICONTROL ツール／デプロイメント／クラウド／Cloud Services]** に移動します。
 1. **[!UICONTROL Cloud Services]** ページで、「**[!UICONTROL Dynamic Media Cloud Services]**」見出しまでスクロールダウンして、「**[!UICONTROL 設定を表示]**」をタップします。
@@ -180,7 +180,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
    | 使用しているビデオ配信プロトコル | 使用するプロトコルセレクター |
    |---|---|
-   | HTTP <br> If you are using HTTP (non-secure video delivery), be sure you change https to http in the Video Service URL value you copied earlier. | `public/` |
+   | HTTP  <br> HTTP(非セキュアビデオ配信)を使用している場合は、前の手順でコピーしたビデオサービスのURL値でhttpsをhttpに変更してください。 | `public/` |
    | HTTPS | `public-ssl/` |
 
 1. Dynamic Media で処理される AEM のビデオアセットのフルパスをコピーします。コピーしたビデオアセットのパスは後の手順で必要になります。
