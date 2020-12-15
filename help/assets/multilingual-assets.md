@@ -29,6 +29,6 @@ Adobe Experience Manager (AEM) Assets を使用して、アセット（バイナ
 1. [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
 1. [翻訳プロジェクトの作成](translation-projects.md)
 
-If your translation service provider does not provide a connector to integrate with AEM, use an [alternative process](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
+翻訳サービスプロバイダーがAEMと統合するコネクタを提供していない場合は、[代替プロセス](/help/sites-administering/tc-manage.md#exporting-a-translation-job)を使用します。
 
-Also see, [Creating translation projects for content fragments](creating-translation-projects-for-content-fragments.md).
+[コンテンツフラグメント用の翻訳プロジェクトの作成](creating-translation-projects-for-content-fragments.md)も参照してください。
