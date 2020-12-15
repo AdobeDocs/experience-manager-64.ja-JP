@@ -11,7 +11,7 @@ ht-degree: 87%
 ---
 
 
-# Assets monitoring best practices {#assets-monitoring-best-practices}
+# アセット監視のベストプラクティス{#assets-monitoring-best-practices}
 
 Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の際には、以下のプロセスおよびテクノロジについての観察および報告をおこなう必要があります。
 
@@ -28,20 +28,20 @@ Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の�
 
 通常、AEM Assets の監視には、ライブ監視と長期的監視の 2 種類があります。
 
-## Live monitoring {#live-monitoring}
+## ライブモニタリング{#live-monitoring}
 
 開発のパフォーマンステストの段階、または高負荷な状態になったときに、環境のパフォーマンス特性を把握するためにライブ監視を実行する必要があります。通常、ライブ監視はいくつかのツールを使用して実行します。以下にお勧めのツールを示します。
 
-* [ビジュアルVM](https://visualvm.github.io/): Visual VMを使用すると、CPU使用率、Javaメモリ使用量など、Java VMの詳細な情報を表示できます。 また、インスタンス上で実行されるコードをサンプリングおよび評価できます。
+* [ビジュアルVM](https://visualvm.github.io/):Visual VMを使用すると、CPU使用率、Javaメモリ使用量など、Java VMの詳細な情報を表示できます。また、インスタンス上で実行されるコードをサンプリングおよび評価できます。
 * [Top](http://man7.org/linux/man-pages/man1/top.1.html)：Top は、CPU、メモリ、IO 使用量などの使用量統計を表示するダッシュボードを開く Linux コマンドです。インスタンスの状況の概要を示します。
-* [Htop](https://hisham.hm/htop/)：Htop は、インタラクティブなプロセスビューアです。Top が提供する情報に加えて、詳細な CPU およびメモリ使用状況が表示されます。Htop can be installed on most Linux systems using `yum install htop` or `apt-get install htop`.
+* [Htop](https://hisham.hm/htop/)：Htop は、インタラクティブなプロセスビューアです。Top が提供する情報に加えて、詳細な CPU およびメモリ使用状況が表示されます。Htopは、`yum install htop`または`apt-get install htop`を使用して、ほとんどのLinuxシステムにインストールできます。
 
-* [Iotop](http://guichaz.free.fr/iotop/)：Iotop は、ディスク IO 使用量の詳細なダッシュボードです。ディスク IO を使用するプロセス、およびそのプロセスによる使用量を示すバーやメーターが表示されます。Iotop can be installed on most Linux systems using `yum install iotop` or `apt-get install iotop`.
+* [Iotop](http://guichaz.free.fr/iotop/)：Iotop は、ディスク IO 使用量の詳細なダッシュボードです。ディスク IO を使用するプロセス、およびそのプロセスによる使用量を示すバーやメーターが表示されます。iotopは、`yum install iotop`または`apt-get install iotop`を使って、ほとんどのLinuxシステムにインストールできます。
 
-* [Iftop](http://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。Iftop can be installed on most Linux systems using `yum install iftop` or `apt-get install iftop`.
+* [Iftop](http://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。iftopは、`yum install iftop`や`apt-get install iftop`を使って、ほとんどのLinuxシステムにインストールできます。
 
-* Java Flight Recorder（JFR）：非実稼動環境で自由に使用できる、Oracle の市販ツールです。For more details, see [How to Use Java Flight Recorder to Diagnose CQ Runtime Problems](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq).
-* AEM の error.log ファイル：システムでログに記録されたエラーの詳細を AEM の error.log ファイルで調査できます。Use the command `tail -F quickstart/logs/error.log` to identify errors that you should investigate.
+* Java Flight Recorder（JFR）：非実稼動環境で自由に使用できる、Oracle の市販ツールです。詳しくは、[Java Flight Recorderを使用してCQランタイムの問題を診断する方法](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)を参照してください。
+* AEM の error.log ファイル：システムでログに記録されたエラーの詳細を AEM の error.log ファイルで調査できます。`tail -F quickstart/logs/error.log`コマンドを使用して、調査する必要のあるエラーを識別します。
 * [ワークフローコンソール](../sites-administering/workflows.md)：ワークフローコンソールを使用して、遅れているワークフローや、停止しているワークフローを監視できます。
 
 通常は、これらのツールを組み合わせて使用し、AEM インスタンスのパフォーマンスについて包括的に把握します。
@@ -56,7 +56,7 @@ Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の�
 
 AEM インスタンスの長期的監視では、ライブで監視されるのと同じ部分の長期にわたる監視をおこないます。また、環境に固有のアラートも定義します。
 
-### ログの集約とレポート {#log-aggregation-and-reporting}
+### ログの集約とレポート  {#log-aggregation-and-reporting}
 
 Splunk（TM）や Elastic Search/Logstash/Kabana（ELK）など、いくつかのログ集約ツールがあります。AEM インスタンスの稼動時間を評価するには、システムに固有のログイベントを理解し、それに基づきアラートを作成することが重要です。開発と運用に関する慣習を十分に理解しておくと、重要なアラートを生成するログ集計プロセスを調整する方法をより深く理解できます。
 
@@ -73,11 +73,11 @@ Splunk（TM）や Elastic Search/Logstash/Kabana（ELK）など、いくつか�
 
 それぞれの項目を監視するには、NewRelic（TM）や AppDynamics（TM）などの外部ツールが必要です。これらのツールを使用して、システム固有のアラート（システム利用率が高い、ワークフローのバックアップ、ヘルスチェック失敗、Web サイトへの不正なアクセスなど）を定義できます。アドビでは、特定のツールを推奨することはありません。ご自身に合ったツールを見つけ、説明した項目の監視に利用してください。
 
-#### 内部アプリケーション監視 {#internal-application-monitoring}
+#### 内部アプリケーション監視  {#internal-application-monitoring}
 
 内部アプリケーション監視には、JVM などの AEM スタックを構成するアプリケーションコンポーネントの監視、コンテンツリポジトリの監視、およびプラットフォーム上に構築されたカスタムアプリケーションコードによる監視が含まれます。通常、SolarWinds（TM）、HP OpenView（TM）、Hyperic（TM）、Zabbix（TM）などの一般的な多くの監視ソリューションで直接監視できる JMX MBean を通して監視を実行します。JMX への直接接続をサポートしないシステムでは、JMX データを抽出して、それらのシステムがネイティブで理解できる形式で公開するシェルスクリプトを記述できます。
 
-JMX MBean へのリモートアクセスは、デフォルトで無効になっています。For more information on monitoring through JMX, see [Monitoring and Management Using JMX Technology](https://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html).
+JMX MBean へのリモートアクセスは、デフォルトで無効になっています。JMXによる監視の詳細については、[Monitoring and Management Using JMX Technology](https://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html)を参照してください。
 
 多くの場合、統計情報を効果的に監視するにはベースラインが必要です。ベースラインを作成するには、通常の動作条件の下で一定期間システムを監視し、通常の指標を特定します。
 
@@ -99,7 +99,7 @@ JVMの基準パラメーターの一部を以下に示します。
 
 スレッド
 
-* MBean: `java.lang:type=Threading`
+* MBean:`java.lang:type=Threading`
 * URL：*/system/console/jmx/java.lang:type=Threading*
 * インスタンス：すべてのサーバー
 * アラームしきい値：スレッド数がベースラインの 150％を超えた場合。
@@ -113,18 +113,18 @@ AEM で監視できるベースラインパラメーターをいくつか示し�
 
 レプリケーションエージェント
 
-* MBean: `com.adobe.granite.replication:type=agent,id=”<AGENT_NAME>”`
+* MBean:`com.adobe.granite.replication:type=agent,id=”<AGENT_NAME>”`
 * URL：*/system/console/jmx/com.adobe.granite.replication:type=agent,id=”&lt;AGENT_NAME>”*
 * インスタンス：1 つのオーサーインスタンスおよびすべてのパブリッシュインスタンス（フラッシュエージェント）
 * アラームしきい値：`QueueBlocked` の値が true、または `QueueNumEntries` の値がベースラインの 150％を超えた場合。
 
 * アラーム定義：システムにブロックされたキューが存在しており、レプリケーションターゲットがダウンしているか、または到達不能であることを示しています。多くの場合、ネットワークまたはインフラストラクチャの問題により過剰なエントリがキューに登録されています。それによってシステムのパフォーマンスに悪影響が生じる可能性があります。
 
-**注意**: MBeanおよびURLパラメーターの場合は、を、監視 `<AGENT_NAME>` する複製エージェントの名前に置き換えます。
+**注意**:MBeanおよびURLパラメーターの場合は、を、監視 `<AGENT_NAME>` する複製エージェントの名前に置き換えます。
 
 セッションカウンター
 
-* MBean: `org.apache.jackrabbit.oak:id=7,name="OakRepository Statistics",type="RepositoryStats"`
+* MBean:`org.apache.jackrabbit.oak:id=7,name="OakRepository Statistics",type="RepositoryStats"`
 * URL：*/system/console/jmx/org.apache.jackrabbit.oak:id=7,name=&quot;OakRepository Statistics&quot;,type*=&quot;RepositoryStats&quot;
 * インスタンス：すべてのサーバー
 * アラームしきい値：開いているセッションの数がベースラインよりも 50％以上多い場合。
@@ -138,7 +138,7 @@ AEM で監視できるベースラインパラメーターをいくつか示し�
 
 * システムチェック
 
-   * MBean: `org.apache.sling.healthcheck:name=systemchecks,type=HealthChec`k 
+   * MBean:`org.apache.sling.healthcheck:name=systemchecks,type=HealthChec`k 
    * URL：*/system/console/jmx/org.apache.sling.healthcheck:name=systemchecks,type=HealthCheck*
    * インスタンス：1 つのオーサーサーバー、およびすべてのパブリッシュサーバー
    * アラームしきい値：ステータスが OK ではない場合。
@@ -146,7 +146,7 @@ AEM で監視できるベースラインパラメーターをいくつか示し�
 
 * レプリケーションキュー
 
-   * MBean: `org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck `
+   * MBean:`org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck `
    * URL：*/system/console/jmx/org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck*
    * インスタンス：1 つのオーサーサーバー、およびすべてのパブリッシュサーバー
    * アラームしきい値：ステータスが OK ではない場合。
@@ -154,7 +154,7 @@ AEM で監視できるベースラインパラメーターをいくつか示し�
 
 * 応答パフォーマンス
 
-   * MBean: `org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck `
+   * MBean:`org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck `
    * URL：*/system/console/jmx/org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck*
    * インスタンス：すべてのサーバー
    * アラーム期間：ステータスが OK ではない場合。
@@ -162,7 +162,7 @@ AEM で監視できるベースラインパラメーターをいくつか示し�
 
 * クエリパフォーマンス
 
-   * MBean: `org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck `
+   * MBean:`org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck `
    * URL：*/system/console/jmx/org.apache.sling.healthcheck:name= queriesStatus,type=HealthCheck*
    * インスタンス：1 つのオーサーサーバー、およびすべてのパブリッシュサーバー
    * アラームしきい値：ステータスが OK ではない場合。
@@ -178,19 +178,19 @@ AEM で監視できるベースラインパラメーターをいくつか示し�
 
 * ログエラー
 
-   * MBean: `org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck `
+   * MBean:`org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck `
    * URL：*/system/console/jmx/org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck*
    * インスタンス：すべてのサーバー
    * アラームしきい値：ステータスが OK ではない場合。
    * アラーム定義：ログファイルにエラーがあります。問題の原因について詳しくは、ログ属性を確認してください。
 
-## よくある問題と解決策  {#common-issues-and-resolutions}
+## よくある問題と解決策   {#common-issues-and-resolutions}
 
 監視中に問題が発生した場合は、以下のトラブルシューティングを実行して、AEM インスタンスでよくある問題を解決できます。
 
-* TarMK を使用している場合は、Tar 圧縮を頻繁に実行します。For more details, see [Maintaining the Repository](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
-* ログを確認 `OutOfMemoryError` します。 詳しくは、[メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)を参照してください。
-* ログを確認し、インデックス化されていないクエリ、ツリートラバーサル、インデックストラバーサルへの参照がないかを確認します。これらは、インデックス化されていないクエリ、または不適切にインデックス化されたクエリを示しています。For For best practices on optimizing query and indexing performance, see [Best Practices for Queries and Indexing](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
+* TarMK を使用している場合は、Tar 圧縮を頻繁に実行します。詳しくは、[リポジトリの管理](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)を参照してください。
+* `OutOfMemoryError`ログを確認します。 詳しくは、[メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)を参照してください。
+* ログを確認し、インデックス化されていないクエリ、ツリートラバーサル、インデックストラバーサルへの参照がないかを確認します。これらは、インデックス化されていないクエリ、または不適切にインデックス化されたクエリを示しています。クエリとインデックス作成のパフォーマンスを最適化するベストプラクティスについては、[クエリのベストプラクティスとインデックス作成](/help/sites-deploying/best-practices-for-queries-and-indexing.md)を参照してください。
 * ワークフローが予期したとおりに動作していることを確認するには、ワークフローコンソールを使用します。可能な場合は、複数のワークフローを単一のワークフローにまとめます。
 * ライブ監視を再確認し、他にボトルネックがないか、または特定のリソースを大量に使用している箇所がないかを確認します。
 * ディスパッチャーを含むクライアントネットワークからの出口ポイントおよび AEM インスタンスへの入り口ポイントを調査します。多くの場合、これらがボトルネックが発生する領域となります。詳しくは、[Assets のネットワークにおける考慮事項](assets-network-considerations.md)を参照してください。
