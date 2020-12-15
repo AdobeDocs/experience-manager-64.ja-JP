@@ -11,15 +11,16 @@ ht-degree: 33%
 ---
 
 
-# Multi-tenancy for collections, snippets, and snippet templates {#multi-tenancy-for-collections-snippets-and-snippet-templates}
+# コレクション、スニペット、スニペットテンプレートのマルチテナンシー{#multi-tenancy-for-collections-snippets-and-snippet-templates}
 
 マルチテナント機能を使用すると、組織プレフィックスと組織 ID に基づいて CRX のコンテンツを隔離し、他の組織のユーザーによるコンテンツへの不正アクセスを防止できます。
 
-Adobe Experience Manager（AEM）Assets では、組織のデータは、組織ごとに異なるパスに保存されます。各組織固有のパスは、組織のプレフィックスと組織IDで識別されます。これは、異なるタイプのアセットがCRXに保存される従来の場所に含まれています。
+Adobe Experience Manager（AEM）Assets では、組織のデータは、組織ごとに異なるパスに保存されます。組織固有の各パスは、組織のプレフィックスと組織IDで識別されます。
+の値は、様々なタイプのアセットがCRXに保存される従来の場所に含まれています。
 
-For example, if you create a folder named `Demo`, AEM assets by default stores the folder at `../content/dam/Demo` location in CRX. マルチテナンシー機能を有効にすると、にデータを格納でき `../content/dam/<organization prefix>/<organization id>Demo`ます。
+例えば、`Demo`という名前のフォルダーを作成した場合、AEMアセットは、デフォルトで、CRXの`../content/dam/Demo`の場所にフォルダーを保存します。 マルチテナンシー機能を有効にすると、`../content/dam/<organization prefix>/<organization id>Demo`にデータを保存できます。
 
-For example, for Adobe Marketing Cloud users of AEM Assets (on-demand) that are assigned to `aodpremium` organization, you can use the multi-tenancy feature to configure the following path to `../content/dam/mac/aodpremiumDemo`, segregate the content. この例では、 `mac` が組織のプレフィックスで、 `aodpremium` が組織IDです。
+例えば、`aodpremium`組織に割り当てられているAEM AssetsのAdobe Marketing Cloudユーザー（オンデマンド）の場合、マルチテナンシー機能を使用して次のパスを`../content/dam/mac/aodpremiumDemo`に設定し、コンテンツを分離できます。 この例では、`mac`が組織のプレフィックス、`aodpremium`が組織IDです。
 
 ユーザーの組織と ID に基づくこの修飾パスは、AEM Assets インターフェイスと各種ウィザード（例えば、強制隔離するための移動およびスニペット作成ウィザードなど）に表示されます。
 
