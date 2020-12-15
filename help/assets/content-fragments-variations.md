@@ -18,11 +18,11 @@ ht-degree: 92%
 ---
 
 
-# バリエーション - フラグメントコンテンツのオーサリング {#variations-authoring-fragment-content}
+# バリエーション - フラグメントコンテンツのオーサリング  {#variations-authoring-fragment-content}
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2(6.4.2.0)以降が [必要です](../release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、[AEM 6.4 Service Pack 2 (6.4.2.0)以降](../release-notes/sp-release-notes.md)のアプリケーションが必要です。
 
 [バリエーション](content-fragments.md#constituent-parts-of-a-content-fragment)は、特定のチャネルやシナリオで使用するためにマスターコンテンツのコピーを作成して編集できる、コンテンツフラグメントの重要な機能です。
 
@@ -83,11 +83,11 @@ ht-degree: 92%
 * 様々な[アクション](#actions)へのアクセス
 * [形式](#formats)に応じた、その他の書式設定オプション（[リッチテキスト](#rich-text)）
 
-### アクション {#actions}
+### アクション  {#actions}
 
 全画面表示エディター（複数行テキスト）を開いている場合は、次のアクションも（すべての[形式](#formats)で）使用できます。
 
-* [形式](#formats) ([リッチテキスト](#rich-text)、 [プレーンテキスト](#plain-text)、Markdown [](#markdown)light)を選択します。
+* [形式](#formats) （[リッチテキスト](#rich-text)、[プレーンテキスト](#plain-text)、[マークダウン](#markdown)）を選択します
 * [テキスト統計の表示](#viewing-key-statistics)
 * [コンテンツのアップロード](#uploading-content)
 * [マスターとの同期](#synchronizing-with-master)（バリエーションの編集時）
@@ -292,7 +292,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
    >* **Markdown**：アセットは表示されなくなりますが、**リッチテキスト**&#x200B;に戻すとアセットがまた表示されます。
 
 
-## バリエーションの管理 {#managing-variations}
+## バリエーションの管理  {#managing-variations}
 
 ### バリエーションの作成 {#creating-a-variation}
 
@@ -310,7 +310,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
    >
    >新しいバリエーションを作成すると、常に&#x200B;**マスター**&#x200B;がコピーされます（現在開いているバリエーションではありません）。
 
-### バリエーションの編集 {#editing-a-variation}
+### バリエーションの編集  {#editing-a-variation}
 
 以下のいずれかを実行した後に、バリエーションコンテンツを変更できます。
 
@@ -363,7 +363,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 >
 >同期は、**複数行テキスト**&#x200B;データタイプに対してのみ機能します。
 >
->*バリエーションから&#x200B;**マスター&#x200B;***へ変更内容を転送することはできません。
+>*バリエーションから&#x200B;**マスター***へ変更内容を転送することはできません。
 
 1. フラグメントエディターでコンテンツフラグメントを開きます。**マスター**&#x200B;が編集されていることを確認します。
 2. 特定のバリエーションを選択し、次のいずれかから適切な同期アクションを選択します。
