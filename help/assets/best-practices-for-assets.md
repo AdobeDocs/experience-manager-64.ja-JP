@@ -11,7 +11,7 @@ ht-degree: 43%
 ---
 
 
-# Best practices for AEM Assets {#best-practices-for-assets}
+# AEM Assets{#best-practices-for-assets}のベストプラクティス
 
 Adobe Experience Manager (AEM) Assets は、コンテンツベロシティを通じてビジネス目標の達成に貢献する、高品質のデジタルマーケティングエクスペリエンスを実現するうえできわめて重要な役割を果たします。AEM Assets でビデオや Dynamic Media などの多数のアセットを操作する、または定期的に大量のアセットをアップロードする場合、システムの効率化を実現するうえでデジタルアセット管理エクスペリエンスの最適化は重要な位置を占めます。
 
@@ -19,14 +19,21 @@ Adobe Experience Manager (AEM) Assets は、コンテンツベロシティを通
 
 以下のガイドを確認した後、ニーズに合ったエンタープライズアセット管理システムを構築、管理するための知識とツールを習得できます。
 
-* [アセットパフォーマンス調整ガイド](performance-tuning-guidelines.md)：導入の任意の時点で実行できるベストプラクティスのセットが含まれており、システムを最大限に活用できます。
-* [アセットサイズ設定ガイド](assets-sizing-guide.md)アセットの導入に関する予測を作成する際は、アセットのストレージ、CPU、メモリ、I/O、ネットワークのスループットの観点から、十分なリソースを確保することが重要です。 これらのアイテムのサイジングには、システムに読み込まれたアセットの数を理解しておく必要があります。このガイドには、AEM Assets のデプロイに必要なインフラストラクチャやリソースの予測に効果的な指標の判断に役立つベストプラクティスとサイジングツールが用意されています。
-* [アセット移行ガイド](assets-migration-guide.md)既存のシステムからAEM Assetsにアセットを移行する場合は、移行プロセスを合理化するためのいくつかの手順を検討してください。 この移行ガイドには、アセットを AEM に移行するタスクの、進行の各段階におけるベストプラクティスが記載されています。これには、メタデータの適用、レンディションの生成、アセットのアクティブ化を含み、公開デプロイメントが行われます。
-* [アセットネットワークの考慮事項](assets-network-considerations.md)AEMデプロイメントを処理する場合、ネットワークのパフォーマンスを理解し、チェックポイントを特定し、期待されるユーザーエクスペリエンスを説明するために、ネットワークトポロジを理解することが重要です。 Assets のネットワークに関する考慮事項のドキュメントでは、AEM Assets のデプロイメントを設計する際のネットワークの考慮事項について説明します。
-* [アセット監視ガイド](assets-monitoring-best-practices.md)AEMのデプロイ後は、システムの整合性と運用の効率性を確保するため、特定のタスクおよびシステム全般を監視する必要があります。 この監視ガイドには、システムの様々な側面を監視するためのベストプラクティスが記載されています。
-* (Deprecated) [Assets offloading guide](assets-offloading-best-practices.md)
-Handling large files and running workflows in AEM Assets can consume considerable CPU, memory, and I/O resources. これらのタスクの負荷を軽減すると、CPU、メモリ、IOのオーバーヘッドが減少する可能性があります。 Assets オフロードガイドには、Assets オフロードの推奨される使用例およびベストプラクティスが記載されています。
-* [AEMデスクトップアプリのベストプラクティス](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app-best-practices.html)AEMデスクトップアプリは、デジタルアセット管理(DAM)ソリューションをデスクトップにリンクするので、AEM web UIで使用可能なファイルをデスクトップ上で直接開くことができます。 AEM デスクトップアプリケーションの使いやすいワークフローは、デスクトップのオペレーティングシステムによって提供されるネットワーク共有テクノロジにより有効化されます。このガイドには、AEM デスクトップアプリケーションの主要な機能と推奨される使用例が記載されています。
-* [AEMとCreative Cloudの統合のベストプラクティス](aem-cc-integration-best-practices.md)AEMの導入を複数の方法でCreative Cloudと統合できます。 ベストプラクティスに従って統合ワークフローおよびアセット転送ワークフローを効率化すると、効率を最大化することができます。このガイドには、AEM Assets と Adobe CC の統合に関するベストプラクティスが記載されています。
-* (Deprecated) [AEM to Creative Cloud folder sharing best practices](aem-cc-folder-sharing-best-practices.md)
-You can configure AEM to allow users in DAM to share folders with Creative Cloud (CC) users, so they are available as shared folders in the Creative Cloud Assets service. この機能を使用すると、クリエイティブチームと DAM ユーザーの間でファイルを交換することができます。このガイドでは、AEMとCreative Cloud間のフォルダー共有機能を利用するためのベストプラクティスについて説明します。
+* [アセットパフォーマンス調整](performance-tuning-guidelines.md)
+ガイド導入の任意の時点で実行できるベストプラクティスのセットが含まれ、システムを最大限に活用できます。
+* [アセットサイズ](assets-sizing-guide.md)
+ガイドアセットの導入に関する予測を作成する場合は、アセットのストレージ、CPU、メモリ、IO、およびネットワークのスループットに関して、十分なリソースを確保することが重要です。これらのアイテムのサイジングには、システムに読み込まれたアセットの数を理解しておく必要があります。このガイドには、AEM Assets のデプロイに必要なインフラストラクチャやリソースの予測に効果的な指標の判断に役立つベストプラクティスとサイジングツールが用意されています。
+* [アセットの移行](assets-migration-guide.md)
+ガイド既存のシステムからAEM Assetsにアセットを移行する場合、移行プロセスを合理化するための手順がいくつかあります。この移行ガイドには、アセットを AEM に移行するタスクの、進行の各段階におけるベストプラクティスが記載されています。これには、メタデータの適用、レンディションの生成、アセットのアクティブ化を含み、公開デプロイメントが行われます。
+* [アセットネットワークの](assets-network-considerations.md)
+考慮事項AEMデプロイメントを処理する場合、ネットワークのパフォーマンスを理解し、チェックポイントを特定し、期待されるユーザーエクスペリエンスを記述するために、ネットワークトポロジを理解することが重要です。Assets のネットワークに関する考慮事項のドキュメントでは、AEM Assets のデプロイメントを設計する際のネットワークの考慮事項について説明します。
+* [アセット監視](assets-monitoring-best-practices.md)
+ガイドAEMのデプロイ後は、システムの整合性と運用の効率性を確保するため、特定のタスクおよびシステム全般を監視する必要があります。この監視ガイドには、システムの様々な側面を監視するためのベストプラクティスが記載されています。
+* （非推奨）[アセットのオフロードガイド](assets-offloading-best-practices.md)
+AEM Assetsで大きなファイルや実行中のワークフローを処理すると、CPU、メモリ、I/Oのリソースを大量に消費する可能性があります。 これらのタスクの負荷を軽減すると、CPU、メモリ、IOのオーバーヘッドが減少する可能性があります。 Assets オフロードガイドには、Assets オフロードの推奨される使用例およびベストプラクティスが記載されています。
+* [AEMデスクトップアプリのベスト](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app-best-practices.html)
+プラクティスAEMデスクトップアプリは、デジタルアセット管理(DAM)ソリューションをデスクトップにリンクするので、AEM web UIで使用できるファイルをデスクトップ上で直接開くことができます。AEM デスクトップアプリケーションの使いやすいワークフローは、デスクトップのオペレーティングシステムによって提供されるネットワーク共有テクノロジにより有効化されます。このガイドには、AEM デスクトップアプリケーションの主要な機能と推奨される使用例が記載されています。
+* [AEMとCreative Cloudの統合のベスト](aem-cc-integration-best-practices.md)
+プラクティスAEMの導入を複数の方法でCreative Cloudと統合できます。ベストプラクティスに従って統合ワークフローおよびアセット転送ワークフローを効率化すると、効率を最大化することができます。このガイドには、AEM Assets と Adobe CC の統合に関するベストプラクティスが記載されています。
+* （非推奨）[AEMからCreative Cloudフォルダーへのベストプラクティスの共有](aem-cc-folder-sharing-best-practices.md)
+AEMを設定して、DAMのユーザーがCreative Cloud(CC)のユーザーとフォルダーを共有できるようにします。これにより、Creative Cloudは、フォルダーアセットサービスで共有フォルダーとして使用できます。 この機能を使用すると、クリエイティブチームと DAM ユーザーの間でファイルを交換することができます。このガイドでは、AEMとCreative Cloud間のフォルダー共有機能を利用するためのベストプラクティスについて説明します。
