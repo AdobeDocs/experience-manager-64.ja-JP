@@ -39,9 +39,9 @@ Adobe Experience Manager(AEM)アセットのユーザは、アセットの作成
 * サブアセットの更新（SUBASSET_UPDATED）
 * サブアセットの削除（SUBASSET_REMOVED）
 
-## AEM Assets のイベント記録機能の設定 {#configuring-aem-assets-events-recording}
+## AEM Assets のイベント記録機能の設定  {#configuring-aem-assets-events-recording}
 
-[Webコンソールを使用して](/help/sites-deploying/configuring-osgi.md) 、AEM Assetsイベントレコーダーのチューニングを行うことができます。 AEM Assetsイベントレコーダーを設定するには、次の手順に従います。
+[Webコンソール](/help/sites-deploying/configuring-osgi.md)は、AEM Assetsイベントレコーダーのチューニングにアクセスします。 AEM Assetsイベントレコーダーを設定するには、次の手順に従います。
 
 1. **[!UICONTROL Web コンソール]**&#x200B;に移動します。
 
@@ -55,6 +55,6 @@ Adobe Experience Manager(AEM)アセットのユーザは、アセットの作成
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
-## 記録されたイベントの読み取り {#reading-recorded-events}
+## 記録されたイベントの読み取り  {#reading-recorded-events}
 
 記録されたイベントはアクティビティとして保存されます。[ActivityManager API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ActivityManager.html) を使用して、プログラムで読み取ることができます。
