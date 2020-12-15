@@ -25,23 +25,23 @@ ht-degree: 74%
 1. 表現モデルへの（一時的な）参照を作成します。これにより、ライティングの評価、カメラの設定、レンダラーの設定が容易になります。
 1. Image-Based Lighting を設定します。
 
-   1. In **[!UICONTROL Render Settings]**, select **[!UICONTROL Render Render Using: mental ray]**, and open the Scene tab.
-   1. Open the **[!UICONTROL Render Environment]** accordion and click **[!UICONTROL Render Create Image Based Lighting]**.
-   1. Click the box icon that has a right arrow on the left side of the box to select the IBL node `mentalRayIblShape1`, then exit **[!UICONTROL Render Settings]**.
-   1. In the **[!UICONTROL Attribute Editor]**, select the transform node `mentalRayIbl1`, then rename the transform node to `AdobeIbl`.
+   1. **[!UICONTROL Render Settings]**&#x200B;で、「**[!UICONTROL Render Render Using:mental ray]**&#x200B;を開き、[シーン]タブを開きます。
+   1. **[!UICONTROL レンダリング環境]**&#x200B;アコーディオンを開き、**[!UICONTROL [レンダリング] [イメージベースの照明を作成]]**&#x200B;をクリックします。
+   1. ボックスの左側に右向き矢印の付いたボックスアイコンをクリックしてIBLノード`mentalRayIblShape1`を選択し、**[!UICONTROL レンダリング設定]**&#x200B;を終了します。
+   1. **[!UICONTROL アトリビュートエディタ]**&#x200B;で、トランスフォームノード`mentalRayIbl1`を選択し、トランスフォームノードの名前を`AdobeIbl`に変更します。
    1. 環境球体がこのステージで表示する最大の 3D オブジェクトよりも十分に大きくなるように、ノードのスケールを設定します（`10000,10000,10000` など）。
    1. `AdobeIblShape` ノードを選択して、以下のように設定します。
 
       * **[!UICONTROL マッピング]** - 球体
       * **[!UICONTROL タイプ]** - 画像ファイル
       * **[!UICONTROL 光の放射]** - true
-   1. Attach the desired 32-bit TIFF image to the `AdobeIbl` node.
+   1. 必要な32ビットTIFF画像を`AdobeIbl`ノードに添付します。
 
 
 1. グラウンドプレーンを設定します。
 
    * グラウンドプレーンとして使用する適切なプレーンを作成し、IBL 球体内に収まるサイズに設定して、座標原点を通るように配置します。
-   * Attach a **[!UICONTROL Use Background]** material to the ground plane and name it `AdobeUseBackground` and attach it to the ground plane object.
+   * **[!UICONTROL 背景]**&#x200B;マテリアルを地表面にアタッチし、`AdobeUseBackground`と名前を付けて地表面オブジェクトにアタッチします。
 
 1. （オプション）カメラを作成して設定します。
 
@@ -49,17 +49,17 @@ ht-degree: 74%
 
 1. Mental Ray でレンダリングを設定します。
 
-   Configure the **[!UICONTROL Render Settings]** with the following suggestions.
+   **[!UICONTROL レンダリング設定]**&#x200B;を次の推奨値で構成します。
 
-   * **[!UICONTROL 共通]** タブ
+   * **** 共通タブ
 
-      Deselect the **[!UICONTROL Alpha channel (mask)]** check box for all **[!UICONTROL Renderable Cameras]**.
+      **[!UICONTROL すべての**[!UICONTROL &#x200B;レンダリング可能なカメラ&#x200B;]**の「アルファチャネル（マスク）]**」チェックボックスをオフにします。
 
    * **[!UICONTROL 「画質」タブ]**
 
       * **全般の画質** - `0.5` 以下
-      * **間接拡散(GI)モード** - `Final Gather`
-      * **フィルタサイズ** - `2.0`、 `2.0`
+      * **間接拡散(GI)モード** -  `Final Gather`
+      * **フィルタサイズ** -  `2.0`、  `2.0`
    * 使用する一般的な画像サイズでシーンをレンダリングします。必要に応じて、ライトを絞り込むか、レンダリング設定をおこなうか、またはその両方をおこないます。
 
       Mental Ray でレンダリングする場合、Image-Based Lighting を使用すると、処理が非常に遅くなり、CPU 使用率が高くなることに注意してください。必要なレンダリング品質を保てる最低の画質設定を使用することをお勧めします。
@@ -79,7 +79,7 @@ ht-degree: 74%
 
    AEM 3D は、ステージに設定されている IBL 画像を検出できない場合があります。そのような場合は、不足している依存関係を手動で解決する必要があります。不足しているそれぞれの依存関係に、既にアップロードしているのと同じ IBL PTIFF 画像を割り当てることができます。または、別の画像を割り当てて、さらに IBL エフェクトを制御することもできます。依存関係を解決したら、「**[!UICONTROL 保存]**」をタップして、再処理を開始します。
 
-1. AEM でアセットのプロパティを開きます。Set **[!UICONTROL Title]** to a suitable string that will appear in the **[!UICONTROL Stage Selector]** drop-down list. 「**[!UICONTROL クラス]**」が「**[!UICONTROL 3D ステージ]**」に設定されていることを確認します。保存して終了します。
+1. AEM でアセットのプロパティを開きます。**[!UICONTROL タイトル]**&#x200B;を、**[!UICONTROL ステージセレクター]**&#x200B;ドロップダウンリストに表示される適切な文字列に設定します。 「**[!UICONTROL クラス]**」が「**[!UICONTROL 3D ステージ]**」に設定されていることを確認します。保存して終了します。
 
 1. 3D アセットを開き、新しいステージを選択して、予期したとおりにプレビューされ、レンダリングされることを確認します。
 
