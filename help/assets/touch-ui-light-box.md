@@ -19,7 +19,7 @@ Lightbox は、アセットに容易にアクセスするための特別なタ�
 
 Adobe Experience Manager（AEM）Assets のユーザーである場合、Lightbox は、アプリケーションに最初にログインしたときに自動的に作成されます。この Lightbox は自分専用です。他のユーザーはこの Lightbox にアクセスできません。
 
-## Lightbox へのアセットの追加 {#adding-assets-to-lightbox}
+## Lightbox へのアセットの追加  {#adding-assets-to-lightbox}
 
 1. Assets のユーザーインターフェイスで、Lightbox に追加するアセットを選択します。
 1. アセットを **[!UICONTROL Lightbox にドロップ]**&#x200B;ゾーンにドラッグします。ドロップゾーンがアクティブになり、ラベルが「**[!UICONTROL ドロップして追加]**」に変わったらアセットを放します。
