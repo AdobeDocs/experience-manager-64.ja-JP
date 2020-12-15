@@ -82,7 +82,7 @@ Web サイトではカルーセルバナーは次のように表示されます�
 
 1. [カルーセルバナーを公開します。](#publishing-carousel-banners)
 
-   他のアセットと同じようにカルーセルセットを公開します。In Assets, navigate to the Carousel Set and select it and tap or tap **[!UICONTROL Publish]**. カルーセルセットを公開すると、URL と埋め込み文字列がアクティベートされます。
+   他のアセットと同じようにカルーセルセットを公開します。アセットでカルーセルセットに移動し、選択して「**[!UICONTROL 発行]**」をタップまたはタップします。 カルーセルセットを公開すると、URL と埋め込み文字列がアクティベートされます。
 
 1. 次のいずれかの操作をおこないます。
 
@@ -92,7 +92,7 @@ Web サイトではカルーセルバナーは次のように表示されます�
    * [AEM で Web サイトへのカルーセルバナーの追加](adding-dynamic-media-assets-to-pages.md)AEM Sites のお客様は、インタラクティブメディアコンポーネントを使用して、カルーセルセットを AEM 内のページに直接追加できます。
 
 
-If you need to edit Carousel Sets, see [editing Carousel Sets](#editing-carousel-sets). を参照してください。また、[カルーセルセットのプロパティ](/help/assets/managing-assets-touch-ui.md#editing-properties)を表示および編集することができます。
+カルーセルセットを編集する必要がある場合は、[カルーセルセットの編集](#editing-carousel-sets)を参照してください。 を参照してください。また、[カルーセルセットのプロパティ](/help/assets/managing-assets-touch-ui.md#editing-properties)を表示および編集することができます。
 
 ## ホットスポットと画像マップの変数の識別 {#identifying-hotspot-and-image-map-variables}
 
@@ -114,7 +114,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 
 クイックビュー実装の大部分では、次の枠組みが使用されています。
 
-* ユーザーは Web サイト上の特定のユーザーインターフェイス要素をアクティベートします。For example, clicking a **[!UICONTROL Quick View]** button.
+* ユーザーは Web サイト上の特定のユーザーインターフェイス要素をアクティベートします。例えば、**[!UICONTROL クイック表示]**&#x200B;ボタンをクリックします。
 * Web サイトでは、必要に応じて、クイックビューのデータまたはコンテンツを読み込むための Ajax リクエストをバックエンドに送信します。
 * クイックビューのデータは、Web ページでのレンダリングに備えて、コンテンツに変換されます。
 * 最後に、フロントエンドコードによってそのコンテンツが画面上に視覚的にレンダリングされます。
@@ -123,7 +123,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 
 通常、専門のデバッグツールを使用する必要はありません。最新の Web ブラウザーには、十分なタスクを実行できる Web インスペクターが備わっています。Web インスペクターが搭載されている Web ブラウザーの例を次に示します。
 
-* To see all outgoing HTTP requests in Google Chrome, press F12 (Windows) or Command-Option-I (Mac) to open the Developer Tools panel, and then tap the **[!UICONTROL Network]** tab.
+* Google Chromeで送信されたすべてのHTTP要求を表示するには、F12(Windows)またはCommand-Option-I(Mac)を押してDeveloper Toolsパネルを開き、**[!UICONTROL Network]**&#x200B;タブをタップします。
 * Firefox では、F12 キー（Windows）または Command + Option + I キー（Mac）を押して Firebug プラグインを有効にして「Net」タブを使用するか、組み込みの Inspector ツールとその「Network」タブを使用します。
 
 ブラウザーでネットワーク監視をオンにして、ページ上でクイックビューを起動します。
@@ -182,7 +182,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 
 画像バナーをアップロードするには、[アセットのアップロード](managing-assets-touch-ui.md)を参照してください。
 
-## カルーセルセットの作成 {#creating-carousel-sets}
+## カルーセルセットの作成  {#creating-carousel-sets}
 
 >[!NOTE]
 >
@@ -191,16 +191,16 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 **カルーセルセットを作成するには**:
 
 1. Assets で、カルーセルセットを作成するフォルダーに移動し、**[!UICONTROL 作成／カルーセルセット]**&#x200B;をタップします。
-1. On the **[!UICONTROL Carousel Banner Editor]** page, tap **[!UICONTROL Tap to open Asset Selector]** to select the image for your first slide.
+1. **[!UICONTROL カルーセルバナーエディター]**&#x200B;ページで、**[!UICONTROL 「タップしてアセットセレクター]**」をタップし、最初のスライドの画像を選択します。
 
-   On the **[!UICONTROL Carousel Banner Editor]** page, do either one of the following:
+   **[!UICONTROL カルーセルバナーエディター]**&#x200B;ページで、次のいずれかの操作を行います。
 
    * ページの左上隅付近にある「**[!UICONTROL スライドを追加]**」をタップします。
    * ページの中央付近にある「**[!UICONTROL タップしてアセットセレクターを開く]**」をタップします。
 
    カルーセルセットに含めるアセットをタップして選択します。選択済みのアセットにはチェックマークアイコンが付いています。作業が完了したら、ページの右上隅付近にある「**[!UICONTROL 選択]**」をタップします。
 
-   アセットセレクターでは、キーワードを入力して **[!UICONTROL Enter]** キーをタップすることで、アセットを検索することができます。フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。フィルターを選択してから、ツールバーの&#x200B;**[!UICONTROL フィルター]**&#x200B;アイコンをタップします。Change the view by tapping the **[!UICONTROL View]** icon and selecting **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, or **[!UICONTROL List View]**.
+   アセットセレクターでは、キーワードを入力して **[!UICONTROL Enter]** キーをタップすることで、アセットを検索することができます。フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。フィルターを選択してから、ツールバーの&#x200B;**[!UICONTROL フィルター]**&#x200B;アイコンをタップします。**[!UICONTROL 表示]**&#x200B;アイコンをタップし、**[!UICONTROL 列表示]**、**[!UICONTROL カード表示]**&#x200B;または&#x200B;**[!UICONTROL リスト表示]**&#x200B;を選択して、表示を変更します。
 
    詳しくは、[セレクターの操作](working-with-selectors.md)を参照してください。
 
@@ -211,7 +211,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
    * 画像を削除するには、画像を選択し、「**[!UICONTROL スライドを削除]**」をタップします。
    * プリセットを適用するには、ページの右上隅付近にあるプリセットドロップダウンリストをタップし、セットに一度に適用するプリセットを選択します。
 
-   To delete a slide, tap the slide, and tap **[!UICONTROL Delete Slide]** in the toolbar. スライドを移動するには、並べ替えアイコンをタップして、希望の場所まで移動します。
+   スライドを削除するには、スライドをタップし、ツールバーの&#x200B;**[!UICONTROL スライドを削除]**&#x200B;をタップします。 スライドを移動するには、並べ替えアイコンをタップして、希望の場所まで移動します。
 
 1. スライドに画像を追加した後で、ホットスポットまたは画像マップ（または両方）を画像に追加できます。[ホットスポットまたは画像マップの追加](#adding-hotspots-or-image-maps-to-an-image-banner)を参照してください。
 1. カルーセルセットの視覚的デザインと動作を変更するには、「動作」タブと「外観」タブをタップまたはクリックし、カルーセルバナーの外観や特定のコンポーネントの動作を調整します。ビューアエディターの使用方法について詳しくは、[ビューアプリセットの管理](viewer-presets.md)を参照してください。
@@ -222,7 +222,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
    >* 1 つの画像が表示される時間。デフォルトでは、各画像は 9 秒間表示されます。
    >* アニメーション.デフォルトでは、各スライドのトランジションはフェードです。これをスライドのトランジションに変更できます。
    >* ボタンのスタイル。ユーザーは点または番号をタップしてバナーの画像を切り替えることができます。セットインジケーターボタンの表示位置（とスタイルが番号か点か）と大きさを変更できます。
-   >* 画像マップまたはホットスポットに使用されるアイコンのハイライトスタイルを変更します.
+   >* 画像マップまたはホットスポットに使用されるアイコンのハイライトスタイルを変更します。
    >* ビューアプリセットを編集する前に、そのプリセットのベースとして使用するスタイルを選択してください。そうしないと、ビューアプリセットの編集を開始した後、別のプリセットに切り替えることにした場合に、変更内容をすべて失うことになります。。
 
 
@@ -230,7 +230,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 
 1. 終了したら「**[!UICONTROL 保存]**」をタップします。
 
-## Adding hotspots or image maps to an Image Banner {#adding-hotspots-or-image-maps-to-an-image-banner}
+## 画像バナーへのホットスポットまたは画像マップの追加{#adding-hotspots-or-image-maps-to-an-image-banner}
 
 カルーセルセットエディターを使用して、ホットスポットまたは画像マップをバナーに追加できます。
 
@@ -245,7 +245,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 
 画像にホットスポットまたは画像マップを追加したら、忘れずに作業内容を保存してください。**[!UICONTROL ページの右上隅にある「取り消し」および「やり直し」オプションは、現在の作成／編集セッションの間で有効です。]******
 
-When you finish creating your carousel banner, you can optionally use **[!UICONTROL Preview]** to see a representation of how your carousel banner will appear to customers.
+カルーセルバナーの作成が完了したら、必要に応じて&#x200B;**[!UICONTROL プレビュー]**&#x200B;を使用して、カルーセルバナーがユーザーにどのように表示されるかを確認できます。
 
 [（オプション）カルーセルバナーのプレビュー](#optional-previewing-carousel-banners)を参照してください。
 
@@ -253,7 +253,7 @@ When you finish creating your carousel banner, you can optionally use **[!UICONT
 >
 >[インタラクティブ画像](interactive-images.md)またはカルーセルバナーの画像にホットスポットを追加すると、インタラクティブ画像かカルーセルバナーかに関わらず、ホットスポット情報が同じメタデータの場所（画像に対して相対的な場所）に格納されます。つまり、どちらのビューアでも、同じ画像を定義済みのホットスポットデータと一緒に簡単に再利用できます。
 >
->  ただし、カルーセルバナーでは、画像上の画像マップ（ホットスポットを含むことができる）がサポートされることに注意してください。インタラクティブ画像ではサポートされません。同じ画像を使用するインタラクティブ画像またはカルーセルバナーを作成する場合には、このことに注意してください。同じ画像の別のコピーを使用してインタラクティブ画像とカルーセルバナーを作成することをお勧めします。
+>ただし、カルーセルバナーでは、画像上の画像マップ（ホットスポットを含むことができる）がサポートされることに注意してください。インタラクティブ画像ではサポートされません。同じ画像を使用するインタラクティブ画像またはカルーセルバナーを作成する場合には、このことに注意してください。同じ画像の別のコピーを使用してインタラクティブ画像とカルーセルバナーを作成することをお勧めします。
 
 >[!NOTE]
 >
@@ -279,32 +279,32 @@ When you finish creating your carousel banner, you can optionally use **[!UICONT
 
    * 「**[!UICONTROL クイックビュー]**」をタップします。
 
-      * If you are an AEM Sites and Ecommerce customer, tap the **[!UICONTROL Product Picker]** icon (magnifying glass) to open the **[!UICONTROL Select Product]** page. Tap the product you want to use, then tap the check mark in the upper-right corner of the page to return to the **[!UICONTROL Carousel Banner Editor]**.
+      * AEM Sitesおよびeコマースのお客様の場合は、**[!UICONTROL 製品選択]**&#x200B;アイコン（虫めがね）をタップして、**[!UICONTROL 製品を選択]**&#x200B;ページを開きます。 使用する製品をタップし、ページの右上隅のチェックマークをタップして、**[!UICONTROL カルーセルバナーエディター]**&#x200B;に戻ります。
       * AEM Sites または AEM eCommerce のユーザーではない場合は次のようにします。
 
          * これらの変数を定義するときは、[ホットスポットの変数の識別](#identifying-hotspot-and-image-map-variables)を参照してください。
-         * 次に、SKU 値を手動で入力します。In the **[!UICONTROL SKU Value]** text field, type the product&#39;s SKU (Stock Keeping Unit), which is a unique identifier for each distinct product or service that you offer. 入力した SKU 値によってクイックビューテンプレートの変数部分が自動的に入力され、タップされたホットスポットが特定の SKU のクイックビューに関連付けられます。
+         * 次に、SKU 値を手動で入力します。「**[!UICONTROL SKU値]**」テキストフィールドに、製品のSKU（在庫保持単位）を入力します。これは、オファーする個別の製品またはサービスごとに固有の識別子です。 入力した SKU 値によってクイックビューテンプレートの変数部分が自動的に入力され、タップされたホットスポットが特定の SKU のクイックビューに関連付けられます。
          * （オプション）クイックビュー内で製品をさらに識別するために必要になる他の変数がある場合は、「**[!UICONTROL 汎用変数を追加]**」をタップします。テキストフィールドに追加の変数を指定します。例えば、追加の変数として `category=Mens` などと指定します。
          * 詳しくは、[セレクターの操作](working-with-selectors.md)を参照してください。
    * 「**[!UICONTROL ハイパーリンク]**」をタップします。
 
-      * If you are an AEM Sites customer, tap the **[!UICONTROL Site Selector]** icon (folder) to navigate to a URL.
+      * AEM Sitesのお客様の場合は、**[!UICONTROL サイトセレクター]**&#x200B;アイコン（フォルダー）をタップして、URLに移動します。
 
          >[!NOTE]
          >インタラクティブコンテンツに相対 URL のリンク（特に AEM Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
 
-      * If you are a standalone customer, in the **[!UICONTROL HREF]** text field, specify the full URL path to a linked web page.
+      * スタンドアロンのお客様の場合は、「**[!UICONTROL HREF]**」テキストフィールドに、リンクされたWebページの完全なURLパスを指定します。
 
          このリンクを新しいブラウザータブで開く（推奨のデフォルト）か同じタブで開くかを指定してください。
 
          詳しくは、[セレクターの操作](working-with-selectors.md)を参照してください。
    * 「**[!UICONTROL エクスペリエンスフラグメント]**」をタップします。
 
-      * If you are an AEM Sites customer, tap the **[!UICONTROL Search]** icon (magnifying glass) to open the Experience Fragment page. Tap the Experience Fragment you want to use, then tap **[!UICONTROL Select]** in the upper-right corner of the page to return to the Hotspot management page.
+      * AEM Sitesのお客様の場合は、**[!UICONTROL 検索]**&#x200B;アイコン（虫めがね）をタップして、エクスペリエンスフラグメントページを開きます。 使用するエクスペリエンスフラグメントをタップし、ページの右上隅にある「**[!UICONTROL 選択]**」をタップして、ホットスポット管理ページに戻ります。
 
          [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)を参照してください。
 
-         **注意**:カルーセルバナーのソーシャルメディア共有ツールは、エクスペリエンスフラグメントにビューアを埋め込む場合はサポートされないことに注意してください。 この問題を回避するには、ソーシャルメディア共有ツールのないビューアプリセットを使用または作成します。このようなビューアプリセットを使用すると、ビューアをエクスペリエンスフラグメントに正常に埋め込むことができます。
+         **注意**:カルーセルバナーのソーシャルメディア共有ツールは、エクスペリエンスフラグメントにビューアを埋め込む場合はサポートされないことに注意してください。この問題を回避するには、ソーシャルメディア共有ツールのないビューアプリセットを使用または作成します。このようなビューアプリセットを使用すると、ビューアをエクスペリエンスフラグメントに正常に埋め込むことができます。
 
       * エクスペリエンスフラグメントがバナーに表示されるときの幅と高さを指定します。
 
@@ -319,7 +319,7 @@ When you finish creating your carousel banner, you can optionally use **[!UICONT
 
    [Web サイトランディングページへのカルーセルセットの追加](#adding-a-carousel-banner-to-your-website-page)を参照してください。
 
-## カルーセルセットの編集 {#editing-carousel-sets}
+## カルーセルセットの編集  {#editing-carousel-sets}
 
 >[!NOTE]
 >
@@ -346,9 +346,9 @@ When you finish creating your carousel banner, you can optionally use **[!UICONT
 
 1. カルーセルセットを編集するには、次のいずれかの操作をおこないます。
 
-   * To add a slide, tap the **[!UICONTROL Add Slide]** icon then navigate to the asset you want to add to that slide and tap the checkmark.
+   * スライドを追加するには、**[!UICONTROL スライド]**&#x200B;追加アイコンをタップし、そのスライドに追加するアセットに移動して、チェックマークをタップします。
    * スライドを並べ替えるには、スライドを新しい位置までドラッグします（並べ替えアイコンを選択して項目を移動します）。
-   * To add a hotspot or image map, tap the hotspot or image map icons and see [adding hotspots and image maps](#adding-hotspots-or-image-maps-to-an-image-banner).
+   * ホットスポットまたは画像マップを追加するには、ホットスポットまたは画像マップのアイコンをタップし、「ホットスポットと画像マップの追加[」を参照してください。](#adding-hotspots-or-image-maps-to-an-image-banner)
    * カルーセルセットの外観や動作を編集するには、「**[!UICONTROL 外観]**」タブまたは「**[!UICONTROL 動作]**」タブをタップし、必要なオプションを設定します。
    * ホットスポットまたは画像マップを編集するには、対応するスライドの「**[!UICONTROL アクション]**」タブの下で、ホットスポットまたは画像マップを選択し、必要に応じて変更を加えます。
    * スライドを削除するには、スライドを選択し、ツールバーの「**[!UICONTROL スライドを削除]**」をタップします。
@@ -357,7 +357,7 @@ When you finish creating your carousel banner, you can optionally use **[!UICONT
 
 ## （オプション）カルーセルバナーのプレビュー{#optional-previewing-carousel-banners}
 
-You can use **[!UICONTROL Preview]** to see what your carousel banner will look like to customers and to test the carousel banners hotspots and image maps to ensure they are behaving as expected.
+**[!UICONTROL プレビュー]**&#x200B;を使用すると、カルーセルバナーが顧客にどのように表示されるかを確認したり、カルーセルバナーのホットスポットや画像マップをテストして、期待どおりに動作するかを確認したりできます。
 
 カルーセルバナーの設定が完了したら、このカルーセルバナーを公開できます。
 
@@ -375,13 +375,13 @@ You can use **[!UICONTROL Preview]** to see what your carousel banner will look 
 
    ![experience_fragment-carouselbanner-viewerdropdown](assets/experience_fragment-carouselbanner-viewerdropdown.png)
 
-1. **[!UICONTROL プレビュー]**&#x200B;をタップします。
+1. 「**[!UICONTROL プレビュー]**」をタップします。
 1. 画像上のホットスポットまたは画像マップをタップし、関連付けられたアクションをテストします。
 
 **ビューアリストでカルーセルバナーをプレビューするには**：
 
 1. **[!UICONTROL Assets]** で、作成したカルーセルバナーの場所に移動し、タップして開きます。
-1. **[!UICONTROL プレビュー]** ページの左上隅近くにある「 **[!UICONTROL コンテンツ]** 」アイコンをタップします。
+1. **[!UICONTROL プレビュー]**&#x200B;ページの左上隅近くにある&#x200B;**[!UICONTROL コンテンツ]**&#x200B;アイコンをタップします。
 1. ページの左側のパネルにある「**[!UICONTROL ビューア]**」リストで、使用するカルーセルバナービューアプリセットの名前をタップします。
 1. 画像上のホットスポットまたは画像マップをタップし、関連付けられたアクションをテストします。
 
@@ -393,9 +393,9 @@ You can use **[!UICONTROL Preview]** to see what your carousel banner will look 
 
 また、カルーセルバナーで使用している公開済みインタラクティブ画像を変更する場合は、そのインタラクティブ画像を公開する必要があります。その後、変更がカルーセルバナーに反映されます。
 
-カルーセルバナーの公開方法に関する情報については、[Dynamic Media アセットの公開](publishing-dynamicmedia-assets.md)を参照してください。
+カルーセルバナーの公開方法に関する情報については、「[Dynamic Media アセットの公開](publishing-dynamicmedia-assets.md)」を参照してください。
 
-## Web サイトページへのカルーセルバナーの追加 {#adding-a-carousel-banner-to-your-website-page}
+## Web サイトページへのカルーセルバナーの追加  {#adding-a-carousel-banner-to-your-website-page}
 
 バナー画像をアップロードしてカルーセルを作成し、ホットスポットまたは画像マップ（あるいは両方）を画像に追加し、カルーセルセットを公開したら、次は既存の Web サイトページにカルーセルを追加できます。
 
@@ -411,7 +411,7 @@ AEM Sites のユーザーである場合は、インタラクティブメディ�
 
    コピーされた埋め込みコードはレスポンシブです。つまり、ページの埋め込み領域に自動的に適応します。
 
-## Integrating the Carousel Banner with an existing Quickview {#integrating-the-carousel-banner-with-an-existing-quickview}
+## カルーセルバナーと既存のQuickviewの統合{#integrating-the-carousel-banner-with-an-existing-quickview}
 
 このタスクは、スタンドアロンのAEM Assetsのお客様の場合にのみ適用されます。
 
