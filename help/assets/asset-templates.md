@@ -46,7 +46,7 @@ Web インターフェイスから InDesign テンプレートを編集する機
 
 また、これらの形式でローカルシステムに出力をダウンロードできます。
 
-## 資料の作成 {#creating-a-collateral}
+## コラテラルの作成{#creating-a-collateral}
 
 今後のキャンペーンのために、パンフレット、チラシおよび広告など、デジタルの印刷可能な販促物を作成し、世界中のアウトレットストアで共有するシナリオについて考えてみます。テンプレートに基づいた販促物の作成は、チャネルをまたいで統合されたカスタマーエクスペリエンスを実現するのに役立ちます。デザイナーは、InDesign などのクリエイティブソリューションを使用してキャンペーンテンプレート（単一ページまたは複数ページ）を作成し、テンプレートを AEM Assets にアップロードできます。コラテラルを作成する前に、1つ以上のINDDテンプレートをにアップロードし、あらかじめExperience Managerで使用できるようにします。
 
@@ -55,7 +55,7 @@ Web インターフェイスから InDesign テンプレートを編集する機
 
    ![chlimage_1-306](assets/chlimage_1-306.png)
 
-1. 「**[!UICONTROL 作成]**」をクリックまたはタップし、メニューから作成する販促物を選択します。For example, choose **[!UICONTROL Brochure]**.
+1. 「**[!UICONTROL 作成]**」をクリックまたはタップし、メニューから作成する販促物を選択します。例えば、**[!UICONTROL パンフレット]**&#x200B;を選択します。
 
    ![chlimage_1-307](assets/chlimage_1-307.png)
 
@@ -79,7 +79,7 @@ Web インターフェイスから InDesign テンプレートを編集する機
 
    ![chlimage_1-312](assets/chlimage_1-312.png)
 
-## コラテラルの編集 {#editing-a-collateral}
+## コラテラルの編集{#editing-a-collateral}
 
 販促物を作成したら、すぐに編集できます。または、テンプレートページやアセットページから開きます。
 
@@ -106,7 +106,7 @@ Web インターフェイスから InDesign テンプレートを編集する機
 
    >[!NOTE]
    >
-   >AEM Assets で InDesign テンプレートからデータを抽出して編集できるようにするために、AEM インスタンスが InDesign サーバーと統合されていることを確認します。For details, see [Integrating AEM Assets with InDesign Server](indesign.md).
+   >AEM Assets で InDesign テンプレートからデータを抽出して編集できるようにするために、AEM インスタンスが InDesign サーバーと統合されていることを確認します。詳しくは、[AEM AssetsとInDesign Serverの統合](indesign.md)を参照してください。
 
 1. 編集可能なフィールドのテキストを変更するには、編集可能なフィールドのリストからテキストフィールドをクリックまたはタップして、フィールドのテキストを編集します。
 
@@ -118,7 +118,7 @@ Web インターフェイスから InDesign テンプレートを編集する機
 
    ![chlimage_1-317](assets/chlimage_1-317.png)
 
-1. To swap an image, click/tap the **[!UICONTROL Asset Finder]** icon.
+1. 画像を入れ替えるには、**[!UICONTROL アセットファインダー]**&#x200B;アイコンをクリックまたはタップします。
 
    ![chlimage_1-318](assets/chlimage_1-318.png)
 
@@ -130,7 +130,7 @@ Web インターフェイスから InDesign テンプレートを編集する機
 
    ![chlimage_1-320](assets/chlimage_1-320.png)
 
-1. Click/tap the **[!UICONTROL Preview]** icon to preview the image.
+1. **[!UICONTROL プレビュー]**&#x200B;アイコンをクリックまたはタップして、画像をプレビューします。
 
    ![chlimage_1-321](assets/chlimage_1-321.png)
 
@@ -138,7 +138,7 @@ Web インターフェイスから InDesign テンプレートを編集する機
 
    ![chlimage_1-322](assets/chlimage_1-322.png)
 
-1. ツールバーの「**[!UICONTROL プレビュー]**」アイコンをクリックまたはタップして、すべての変更をプレビューします。Click/tap **[!UICONTROL Done]** to save the editing changes to the collateral.
+1. ツールバーの「**[!UICONTROL プレビュー]**」アイコンをクリックまたはタップして、すべての変更をプレビューします。「**[!UICONTROL 完了]**」をクリックまたはタップして、コラテラルの編集の変更を保存します。
 
    >[!NOTE]
    >
@@ -154,7 +154,7 @@ Web インターフェイスから InDesign テンプレートを編集する機
    >* ローカルファイルシステムに AEM をマウントして、見つからないアイコンを既存の AEM アセットにマッピングする。
 
    >
-   >For more information around working with InDesign documents, see [Best Practices for Working with InDesign Documents in AEM](https://helpx.adobe.com/jp/experience-manager/kb/best-practices-idd-docs-aem.html).
+   >InDesignドキュメントの使用に関する詳細は、「[AEM](https://helpx.adobe.com/jp/experience-manager/kb/best-practices-idd-docs-aem.html)のInDesignドキュメントを使用するためのベストプラクティス」を参照してください。
 
 1. パンフレットの PDF レンディションを生成するには、ダイアログで Acrobat オプションを選択し、「**[!UICONTROL 続行]**」をクリックします。
 1. 開始したフォルダーに販促物が作成されます。レンディションを表示するには、販促物を開いて、グローバルナビゲーションリストから「**[!UICONTROL レンディション]**」を選択します。
@@ -168,9 +168,9 @@ Web インターフェイスから InDesign テンプレートを編集する機
 ## 販促物の統合 {#merge-collateral}
 
 
-1. ツール/アセット **[!UICONTROL をクリックまたはタップします]**。
+1. **[!UICONTROL ツール/アセット]**&#x200B;をクリックまたはタップします。
 1. オプションから、「**[!UICONTROL テンプレート]**」を選択します。
-1. Click/tap **[!UICONTROL Create]** and the choose **[!UICONTROL Merge]** from the menu.
+1. 「**[!UICONTROL 作成]**」をクリックまたはタップし、メニューから「**[!UICONTROL 結合]**」を選択します。
 
    ![chlimage_1-325](assets/chlimage_1-325.png)
 
@@ -195,7 +195,7 @@ Web インターフェイスから InDesign テンプレートを編集する機
    ![chlimage_1-330](assets/chlimage_1-330.png)
 
 1. ツールバーから「**[!UICONTROL 次へ]**」をクリックまたはタップします。
-1. In the **[!UICONTROL Preview &amp; Reorder]** screen, rearrange the templates if required and preview the selection of templates to merge. 次に、ツールバーから「]**次へ**[!UICONTROL 」をクリックまたはタップします。
+1. **[!UICONTROL プレビューと並べ替え]**&#x200B;画面で、必要に応じてテンプレートを並べ替え、結合するテンプレートのプレビューを行います。 次に、ツールバーから「]**次へ**[!UICONTROL 」をクリックまたはタップします。
 
    ![chlimage_1-331](assets/chlimage_1-331.png)
 
