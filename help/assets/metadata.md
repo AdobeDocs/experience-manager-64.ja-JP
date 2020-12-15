@@ -97,7 +97,7 @@ Exchangeable image file format（Exif）は、デジタル写真で最も一般�
 
 Exif の主な制限は、BMP、GIF、PNG などの一般的な画像ファイル形式ではサポートされないことです。
 
-Exif で定義されるメタデータフィールドは、通常、テクニカルなもので、記述メタデータ管理では使用が制限されています。For this reason, [!DNL Experience Manager Assets] offers mapping of Exif properties into [common metadata schemata](metadata-schemas.md) and into [XMP](xmp-writeback.md).
+Exif で定義されるメタデータフィールドは、通常、テクニカルなもので、記述メタデータ管理では使用が制限されています。このため、[!DNL Experience Manager Assets]オファーはExifプロパティを[共通のメタデータスキーマ](metadata-schemas.md)に、および[XMP](xmp-writeback.md)にマッピングします。
 
 ### その他のメタデータ {#other-metadata}
 
