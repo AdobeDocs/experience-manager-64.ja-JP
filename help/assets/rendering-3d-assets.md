@@ -58,7 +58,7 @@ AEM で操作して保存した 3D アセットをレンダリングして、Web
 
    ![chlimage_1-369](assets/chlimage_1-369.png)
 
-1. Near the upper-right corner of the asset details page, tap the **[!UICONTROL Stage Selector]** icon (spotlight), then select a stage name with the background and lighting that you want to apply to the 3D object.
+1. アセットの詳細ページの右上隅近くにある「**[!UICONTROL ステージセレクター]**」アイコン（スポットライト）をタップし、3Dオブジェクトに適用する背景と明るさを持つステージ名を選択します。
 
    [AEM 3D でのステージの使用](about-the-use-of-stages-in-aem-3d.md)を参照してください。
 
@@ -66,7 +66,7 @@ AEM で操作して保存した 3D アセットをレンダリングして、Web
 
    **[!UICONTROL ステージセレクターアイコン]**
 
-1. On the **[!UICONTROL Render]** drop-down list on the left side of the asset details page, select a renderer.
+1. アセットの詳細ページの左側の&#x200B;**[!UICONTROL レンダリング]**&#x200B;ドロップダウンリストで、レンダラーを選択します。
 
    デフォルトの **Rapid Refine** レンダラーは常に表示されます。選択したステージがネイティブ形式の場合は、対応するサードパーティ製レンダラーもリストに表示され、選択できるようになります。
 
@@ -74,12 +74,12 @@ AEM で操作して保存した 3D アセットをレンダリングして、Web
 
 1. 以下の操作を実行してください。
 
-   * In the **[!UICONTROL Width]** and **[!UICONTROL Height]** fields, enter the pixel width and height that you want your image rendered.
-   * In the **[!UICONTROL Image Name]** field, enter the name of the rendered image.
-   * In the **[!UICONTROL Export Path]** field, enter the path where you want the rendered image stored. Or, tap the **[!UICONTROL Browse]** icon and navigate to a location.
-   * (Optional) Select or deselect the **[!UICONTROL Overwrite existing imag]e **check box.
+   * 「**[!UICONTROL 幅]**」および「**[!UICONTROL 高さ]**」フィールドに、イメージをレンダリングするピクセル単位の幅と高さを入力します。
+   * 「**[!UICONTROL イメージ名]**」フィールドに、レンダリングされたイメージの名前を入力します。
+   * [**[!UICONTROL 書き出しパス]**]フィールドに、レンダリングしたイメージを保存するパスを入力します。 または、**[!UICONTROL 参照]**&#x200B;アイコンをタップし、場所を指定します。
+   * （オプション）「**[!UICONTROL 既存の画像を上書き]e**」チェックボックスをオンまたはオフにします。
 
-1. Near the upper-right corner of the asset details page, tap the **[!UICONTROL Camera Selector]** icon. レンダリングした画像に適用するカメラ視野を選択します。
+1. アセットの詳細ページの右上隅近くにある「**[!UICONTROL カメラセレクター]**」アイコンをタップします。 レンダリングした画像に適用するカメラ視野を選択します。
 
    左右または上下のバーは、レンダリングされる視野の部分を示す視覚的なインジケーターです。選択したステージにカメラが含まれる場合は、事前定義されたカメラを選択できます。
 
