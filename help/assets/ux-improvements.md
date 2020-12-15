@@ -11,7 +11,7 @@ ht-degree: 70%
 ---
 
 
-# Assets のユーザーエクスペリエンスの強化 {#user-experience-enhancements-in-assets}
+# Assets のユーザーエクスペリエンスの強化  {#user-experience-enhancements-in-assets}
 
 AEM 6.4 Assetsには、シームレスなユーザーエクスペリエンスを提供し、生産性を向上させるいくつかの操作性の改善が含まれています。 市場開拓コンテンツの作成および管理速度の向上は、ビジネスのコンテンツ速度を改善します。
 
@@ -19,7 +19,7 @@ AEM 6.4 Assetsには、シームレスなユーザーエクスペリエンスを
 
 カード、リスト、列などの様々な表示をパーソナライズできます。例えば、カード表示に表示するサムネールのサイズを設定できます。 リスト表示では、リスト内のアセットに対して表示する詳細レベルを設定できます。AEM 6.4 Assets には新しいツリー表示が含まれています。これを使用すると、簡単にアセットリポジトリ内を移動してアセットを見つけることができます。
 
-## 遅延読み込み {#lazy-loading}
+## 遅延読み込み  {#lazy-loading}
 
 AEM 6.4 Assets でアセットを参照または検索すると、一度に最大 200 個のアセットが表示されます。結果はより高速にスクロールでき、長いリストの結果を閲覧する場合に特に便利です。 大量のアセットが一度に読み込まれるので、スムーズに参照することができます。
 
@@ -31,11 +31,11 @@ AEM 6.4 Assets でアセットを参照または検索すると、一度に最�
 
 カード表示のサムネールのサイズを変更するには、次の手順を実行します。
 
-1. Tap/click the Layout icon from the toolbar, and then choose the **[!UICONTROL View Settings]** option.
+1. ツールバーのレイアウトアイコンをタップまたはクリックし、「**[!UICONTROL 表示設定]**」オプションを選択します。
 
    ![表示設定](assets/view_settings.png)
 
-1. **[!UICONTROL 表示設定]** ダイアログで、目的のサムネールサイズを選択し、「 **[!UICONTROL 更新]**」をタップまたはクリックします。
+1. **[!UICONTROL 表示設定]**&#x200B;ダイアログで、目的のサムネールサイズを選択し、「**[!UICONTROL 更新]**」をタップまたはクリックします。
 
    ![表示設定ダイアログ](assets/view_settings_dialog.png)
 
@@ -67,7 +67,7 @@ AEM 6.4 Assets でアセットを参照または検索すると、一度に最�
 
 AEM 6.4 Assets にはツリー表示があります。これを使用すると、簡単にアセット階層を参照して、目的のアセットやフォルダーに移動できます。
 
-To open the Tree view, tap/click the GlobalNav icon in the `Assets UI`, and choose **[!UICONTROL Content tree]** from the menu.
+ツリー表示を開くには、`Assets UI`のGlobalNavアイコンをタップまたはクリックし、メニューから「**[!UICONTROL コンテンツツリー]**」を選択します。
 
 ![content_tree](assets/content_tree.png)
 
@@ -87,7 +87,7 @@ To open the Tree view, tap/click the GlobalNav icon in the `Assets UI`, and choo
 |---|---|
 | [!UICONTROL カード表示] | アセットタイルをタップまたはクリックします。 |
 | [!UICONTROL リスト表示] | リスト内のアセットの行エントリをタップまたはクリックします。 |
-| [!UICONTROL 列表示] | Tap/click the **[!UICONTROL More Details]** button from the asset snapshot. |
+| [!UICONTROL 列表示] | アセットのスナップショットから「**[!UICONTROL 詳細]**」ボタンをタップまたはクリックします。 |
 
 「前へ」ボタンと「次へ」ボタンを使用して、アセット間を移動します。
 
