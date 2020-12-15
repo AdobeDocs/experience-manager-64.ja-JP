@@ -11,7 +11,7 @@ ht-degree: 73%
 ---
 
 
-# Assets のプロキシ開発 {#assets-proxy-development}
+# Assets のプロキシ開発  {#assets-proxy-development}
 
 Adobe Experience Manager（AEM）Assets では、プロキシを使用して、特定のタスクの処理を分散させます。
 
@@ -19,15 +19,15 @@ Adobe Experience Manager（AEM）Assets では、プロキシを使用して、�
 
 プロキシが個別の AEM インスタンスである場合は、AEM オーサリングインスタンスの負荷の軽減に役立ちます。デフォルトでは、AEM Assetsは（プロキシを介して外部化された）同じJVMでアセット処理タスクを実行し、AEMオーサリングインスタンスの負荷を軽減します。
 
-## Proxy (HTTP Access) {#proxy-http-access}
+## プロキシ（HTTPアクセス） {#proxy-http-access}
 
-A proxy is available via the HTTP Servlet when it is configured to accept processing jobs at: `/libs/dam/cloud/proxy`. このサーブレットは、POST されたパラメーターから Sling ジョブを作成します。作成されたジョブはプロキシのジョブキューに追加され、適切なプロキシワーカーに接続されます。
+プロキシは、次の場所で処理ジョブを受け入れるように設定されている場合、HTTPサーブレットを介して使用できます。`/libs/dam/cloud/proxy`. このサーブレットは、POST されたパラメーターから Sling ジョブを作成します。作成されたジョブはプロキシのジョブキューに追加され、適切なプロキシワーカーに接続されます。
 
 ### サポートされている操作 {#supported-operations}
 
 * `job`
 
-   **要件**：パラメーター `jobevent` をシリアル化されたバリューマップとして設定する必要があります。This is used to create an `Event` for a job processor.
+   **要件**：パラメーター `jobevent` をシリアル化されたバリューマップとして設定する必要があります。これは、ジョブプロセッサ用の`Event`を作成するために使用されます。
 
    **結果**：新しいジョブが追加されます。成功した場合、一意のジョブ ID が返されます。
 
@@ -38,7 +38,7 @@ curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
 
 * `result`
 
-   **要件**: パラメーター `jobid` を設定する必要があります。
+   **要件**:パラメーターを設定 `jobid` する必要があります。
 
    **結果**：ジョブプロセッサーによって作成されたノードの JSON 表現が返されます。
 
@@ -77,7 +77,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 >
 >ワーカーがプロキシワーカーとして認識されるには、[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) を実装する必要があります。
 
-### クライアント API {#client-api}
+### クライアント API  {#client-api}
 
 [`JobService`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html) は、ジョブを作成および削除し、ジョブの結果を取得するためのメソッドを提供する OSGi サービスとして使用できます。このサービスのデフォルトの実装（`JobServiceImpl`）は、HTTP クライアントを使用して、リモートプロキシサーブレットと通信します。
 
@@ -109,7 +109,7 @@ API の使用例を以下に示します。
 >
 >プロキシ API の参考ドキュメントは、[`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html) にあります。
 
-Both proxy and proxy worker configurations are available via cloud services configurations as accessible from the AEM Assets **Tools** console or under `/etc/cloudservices/proxy`. 各プロキシワーカーは、ワーカー固有の構成の詳細(例えば、 `/etc/cloudservices/proxy` ) `/etc/cloudservices/proxy/workername`の下にノードを追加する必要があります。
+プロキシとプロキシの両方のワーカー設定は、AEM Assets **ツール**&#x200B;コンソールまたは`/etc/cloudservices/proxy`からアクセスできるクラウドサービス設定を介して利用できます。 各プロキシワーカーは、`/etc/cloudservices/proxy`の下にノードを追加して、ワーカー固有の構成の詳細（例：`/etc/cloudservices/proxy/workername`）を確認する必要があります。
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ API の使用例を以下に示します。
 
 ### カスタマイズしたプロキシワーカーの開発 {#developing-a-customized-proxy-worker}
 
-[](indesign.md) IDSプロキシワーカーは、Indesignアセットの処理をアウトソースするために既に用意されている、AEM Assetsのプロキシワーカーの例です。
+[IDSプロキシワーカー](indesign.md)は、Indesignアセットの処理をアウトソースするために、既に用意されている、AEM Assetsのプロキシワーカーの例です。
 
 また、独自のAEM Assetsプロキシワーカーを開発および設定して、AEM Assets処理タスクを派遣およびアウトソーシングする専門的なワーカーを作成することもできます。
 
