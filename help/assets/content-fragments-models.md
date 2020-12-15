@@ -21,27 +21,27 @@ ht-degree: 90%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2(6.4.2.0)以降が [必要です](../release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、[AEM 6.4 Service Pack 2 (6.4.2.0)以降](../release-notes/sp-release-notes.md)のアプリケーションが必要です。
 
 コンテンツフラグメントモデルは、[コンテンツフラグメント](content-fragments.md)のコンテンツの構造を定義します。
 
-## コンテンツフラグメントモデルの有効化 {#enable-content-fragment-models}
+## コンテンツフラグメントモデルの有効化  {#enable-content-fragment-models}
 
 >[!CAUTION]
 >
->If you do not enable **[!UICONTROL Content Fragment Models]**, the **[!UICONTROL Create]** option will not be available for creating new models.
+>**[!UICONTROL コンテンツフラグメントモデル]**&#x200B;を有効にしない場合、**[!UICONTROL 「作成]**」オプションは、新しいモデルの作成には使用できません。
 
 コンテンツフラグメントモデルを有効にするには、次の操作を実行する必要があります。
 
 * Configuration Manager でのコンテンツフラグメントモデル使用の有効化
 * アセットフォルダーへの設定の適用
 
-### Configuration Manager でのコンテンツフラグメントモデルの有効化 {#enable-content-fragment-models-in-configuration-manager}
+### Configuration Manager でのコンテンツフラグメントモデルの有効化  {#enable-content-fragment-models-in-configuration-manager}
 
 [新しいコンテンツフラグメントモデルを作成する](#creating-a-content-fragment-model)には、最初に設定マネージャーを使用してコンテンツフラグメントモデルを有効にする&#x200B;**必要があります**。
 
 1. **[!UICONTROL ツール]**／**[!UICONTROL 一般]**&#x200B;に移動し、**[!UICONTROL 設定ブラウザー]**&#x200B;を開きます。
-   * See the [Configuration Browser documentation](/help/sites-administering/configurations.md) for more information.
+   * 詳しくは、[設定ブラウザーのドキュメント](/help/sites-administering/configurations.md)を参照してください。
 1. Web サイトに適した場所を選択します。
 1. 「**[!UICONTROL 作成]**」を使用してダイアログを開き、次の操作をおこないます。
 
@@ -74,7 +74,7 @@ ht-degree: 90%
 
 1. 「**[!UICONTROL 作成]**」を使用して空のモデルを保存します。操作の成功を示すメッセージが表示されます。「**[!UICONTROL 開く]**」を選択してモデルをすぐに編集するか、「**[!UICONTROL 完了]**」を選択してコンソールに戻ることができます。
 
-## コンテンツフラグメントモデルの定義 {#defining-your-content-fragment-model}
+## コンテンツフラグメントモデルの定義  {#defining-your-content-fragment-model}
 
 コンテンツフラグメントモデルは、生成されるコンテンツフラグメントの構造を効果的に定義します。モデルエディターを使用して、必要なフィールドを追加および設定できます。
 
@@ -94,7 +94,7 @@ ht-degree: 90%
 
    >[!NOTE]
    >
-   >When a field is **Required**, the **Label** indicated in the left pane will be marked with an asterix (**&amp;ast;**).
+   >フィールドが&#x200B;**必須**&#x200B;の場合、左側のウィンドウに示される&#x200B;**ラベル**&#x200B;は、アスタリスク(**&amp;ast;**)でマークされます。
 
    ![cfm-6420-12](assets/cfm-6420-12.png)
 
@@ -135,7 +135,7 @@ ht-degree: 90%
    >
    >モデルが参照されている場合は、警告が表示されます。適切に対処します。
 
-## コンテンツフラグメントモデルの公開 {#publishing-a-content-fragment-model}
+## コンテンツフラグメントモデルの公開  {#publishing-a-content-fragment-model}
 
 コンテンツフラグメントモデルは、依存するコンテンツフラグメントの公開時または公開前に公開する必要があります。
 
