@@ -18,7 +18,7 @@ ht-degree: 86%
 
 Adobe Experience Manager（AEM）Assets 実装の予想図を描く際には、アセットのディスク、CPU、メモリ、IO、ネットワークスループットなどのリソースに十分な空きがあることを確認することが重要です。これらのリソースのサイジングには、システムに読み込まれたアセットの数を理解しておく必要があります。わかりやすい指標がない場合は、ライブラリの有効期間から既存のライブラリのサイズを分割し、アセットが作成されたときの割合を見つけることができます。
 
-## ディスク {#disk}
+## ディスク  {#disk}
 
 ### データストア {#datastore}
 
@@ -64,31 +64,31 @@ Assets の実装に必要なディスク領域をサイジングするときに�
 
 データストアはプライマリとスタンバイのオーサーインスタンス間で共有し、プライマリインスタンスで加えられた変更をスタンバイインスタンスで更新するのにかかる時間を最小化できます。ワークフローのオフロードでオーバーヘッドを減らすように、プライマリのオーサーインスタンスとオフロードのオーサーインスタンス間でデータストアを共有することをお勧めします。また、オーサーインスタンスとパブリッシュインスタンス間でデータストアを共有し、レプリケーション中のトラフィックを最小化することもできます。
 
-#### ドローバック {#drawbacks}
+#### ドローバック  {#drawbacks}
 
 データストアの共有が常に推奨されるとは限りません。いくつかの落とし穴が存在します。
 
-#### 単一障害点 {#single-point-of-failure}
+#### 単一障害点  {#single-point-of-failure}
 
 共有データストアは、インフラストラクチャに単一障害点をもたらすことがあります。次のシナリオを検討してみましょう。システムにオーサーインスタンスが 1 つ、パブリッシュインスタンスが 2 つあり、それぞれ独自のデータストアがあるとします。いずれか 1 つがクラッシュしても、残りの 2 つは引き続き稼動します。ただし、データストアが共有されている場合、1 つのディスクに障害が発生すると、インフラストラクチャ全体がダウンします。このため、データストアを簡単に復元できる場所に共有データストアのバックアップが必要です。
 
 共有データストアには AWS S3 サービスをデプロイすることをお勧めします。これにより、通常のディスクアーキテクチャと比較して、障害が発生する確率を大幅に減らします。
 
-#### 複雑さの増加 {#increased-complexity}
+#### 複雑さの増加  {#increased-complexity}
 
 共有データストアは、ガベージコレクションなどの操作を複雑にします。通常、スタンドアロンのデータストアのガベージコレクションは、1 つのクリックで開始できます。しかし、共有データストアの場合は、単一のノードで実際のコレクションを実行することに加えて、そのデータストアを使用する各メンバーでマークスイープ操作が必要になります。
 
 AWS の操作では、EBS ボリュームの RAID アレイを構築するのではなく、（S3 を介して）1 つの中央ロケーションを実装することで、複雑さやシステム上の操作リスクが大幅に軽減されます。
 
-#### パフォーマンス上の懸念 {#performance-concerns}
+#### パフォーマンス上の懸念  {#performance-concerns}
 
 共有データストアでは、すべてのインスタンス間で共有されるネットワークにマウントされたドライブにバイナリを保存する必要があります。これらのバイナリはネットワーク経由でアクセスされるので、システムのパフォーマンスに悪影響が出ます。 ネットワーク接続やディスクアレイを高速化することで、その影響を一部軽減できます。しかし、これにはコストがかかります。AWSの操作の場合、すべてのディスクはリモートで、ネットワーク接続が必要です。 エフェメラルボリュームでは、インスタンスが開始または停止するときにデータが失われます。
 
-#### 待ち時間 {#latency}
+#### 待ち時間  {#latency}
 
 S3 の実装では、バックグラウンドの書き込みスレッドにより待ち時間が発生します。バックアップ手順では、この待ち時間やオフロード手順を考慮する必要があります。S3 のアセットは、オフロードジョブが開始するときに S3 に存在していない場合があります。また、バックアップを作成するときに Lucene のインデックスが未完成のままになることがあります。これには、S3 データストアに書き込まれ、別のインスタンスからアクセスされる、時間に左右されるすべてのファイルが該当します。
 
-### ノードストア／ドキュメントストア {#node-store-document-store}
+### ノードストア／ドキュメントストア  {#node-store-document-store}
 
 次の要素によってリソースが消費されるので、ノードストアやドキュメントストアの正確なサイジングを特定するのは困難です。
 
@@ -105,7 +105,7 @@ S3 の実装では、バックグラウンドの書き込みスレッドによ�
 
 ## ネットワーク {#network}
 
-AEM Assets には、他の多くの AEM プロジェクトよりネットワークのパフォーマンスが重要になる使用例がいくつかあります。お客様は高速なサーバーを使用できますが、ネットワーク接続の大きさが、システムからアセットをアップロードおよびダウンロードするユーザの負荷をサポートするのに十分でない場合、動作は遅くなります。 There is a good methodology for determining the choke point in a user&#39;s network connection to AEM at [AEM Asset considerations for user experience, instance sizing, workflow evaluation, and network topology](assets-network-considerations.md).
+AEM Assets には、他の多くの AEM プロジェクトよりネットワークのパフォーマンスが重要になる使用例がいくつかあります。お客様は高速なサーバーを使用できますが、ネットワーク接続の大きさが、システムからアセットをアップロードおよびダウンロードするユーザの負荷をサポートするのに十分でない場合、動作は遅くなります。 [AEM Asset considerations for user experience, instance sizing, workflow evaluation, and network topology](assets-network-considerations.md)で、ユーザのAEMへのネットワーク接続のチョークポイントを決定するための適切な方法があります。
 
 ## WebDAV {#webdav}
 
@@ -121,7 +121,7 @@ AEM デスクトップアプリケーションをミックスに追加した場�
 
 WebDAV を介したファイルの平均保存時間を分析したところ、帯域幅が 5～10 Mbps のレベルにまで上昇するに連れて、パフォーマンスが劇的に上昇することがわかりました。このため、システムに同時にアクセスする各ユーザーのアップロード速度は 10 Mbps 以上、帯域幅は 5～10 Mbps 以上にすることをお勧めします。
 
-For more information, see [Troubleshooting AEM desktop app](https://helpx.adobe.com/jp/experience-manager/kb/troubleshooting-companion-app.html).
+詳しくは、[AEMデスクトップアプリのトラブルシューティング](https://helpx.adobe.com/jp/experience-manager/kb/troubleshooting-companion-app.html)を参照してください。
 
 ## 制限事項 {#limitations}
 
@@ -129,7 +129,7 @@ For more information, see [Troubleshooting AEM desktop app](https://helpx.adobe.
 
 メモリ不足（OOM）の問題を起こす要因はファイルのサイズだけではありません。画像のサイズにも依存します。AEM を開始する際にヒープサイズを高く指定することで、OOM の問題を回避できます。
 
-In addition, you can edit the threshold size property of the `com.day.cq.dam.commons.handler.StandardImageHandler` component in Configuration Manager to use intermediate temporary file greater than zero.
+また、Configuration Managerで`com.day.cq.dam.commons.handler.StandardImageHandler`コンポーネントのしきい値サイズプロパティを編集して、ゼロより大きい中間の一時ファイルを使用できます。
 
 ## アセットの最大数 {#maximum-number-of-assets}
 
@@ -139,11 +139,11 @@ While the limit for the number of nodes in a repository has not been determined,
 
 データストア内のファイル数は、ファイルシステムの制限により 21 億に制限されています。おそらくリポジトリについては、データストアの制限に到達するかなり前に、ノードが多すぎることによる問題に直面します。
 
-レンディションが誤って生成される場合は、Camera Raw ライブラリを使用します。ただしこの場合、画像の長いほうのサイズが 65000 ピクセルを超えてはいけません。さらに、画像に512 MP(512 &amp;ast;)以下を含める必要があります。 1024 &amp;ast; 1024 pixels)&#39;. *アセットのサイズは重要ではありません*。
+レンディションが誤って生成される場合は、Camera Raw ライブラリを使用します。ただしこの場合、画像の長いほうのサイズが 65000 ピクセルを超えてはいけません。さらに、画像に512 MP(512 &amp;ast;)以下を含める必要があります。1024 &amp;ast;1024 pixels)&#39;. *アセットのサイズは重要ではありません*。
 
 AEM では、ピクセルサイズなど他の要因が処理に影響を与えるので、デフォルト（OOTB）で特定のヒープでサポートできる TIFF ファイルのサイズを正確に予想することは困難です。AEM がデフォルトで 255 MB のサイズのファイルを処理できても、そのファイルに比べて非常にピクセル数が多ければ 18 MB のファイルでも処理できないことがあります。
 
 
-## アセットのサイズ {#size-of-assets}
+## アセットのサイズ  {#size-of-assets}
 
-初期設定では、AEMでは、最大2 GBのファイルサイズのアセットをアップロードできます。 AEMで非常に大きなアセットをアップロードするには、非常に大きなアセットをアップロードする [設定を参照してください](managing-video-assets.md#configuration-to-upload-video-assets-that-are-larger-than-gb)。
+初期設定では、AEMでは、最大2 GBのファイルサイズのアセットをアップロードできます。 AEMで非常に大きなアセットをアップロードするには、[非常に大きなアセットをアップロードするための設定](managing-video-assets.md#configuration-to-upload-video-assets-that-are-larger-than-gb)を参照してください。
