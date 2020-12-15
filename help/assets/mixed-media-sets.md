@@ -40,7 +40,7 @@ ht-degree: 77%
 
 1. [混在メディアセットを作成します。](#creating-mixed-media-sets)
 
-   混在メディアセットを作成するには、ア **[!UICONTROL セット]** ページで **[!UICONTROL 作成/混在メディアセットをタップし]**、セットに名前を付けます。 アセットを選択し、画像の表示順序を選択します。
+   混在メディアセットを作成するには、**[!UICONTROL アセット]**&#x200B;ページから&#x200B;**[!UICONTROL 作成/混在メディアセット]**&#x200B;をタップし、セットに名前を付けます。 アセットを選択し、画像の表示順序を選択します。
 
    [セレクターの操作](working-with-selectors.md)を参照してください。
 
@@ -72,7 +72,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->If you have issues creating sets, see [Troubleshooting Dynamic Media - Scene7 mode](troubleshoot-dms7.md).
+>セットの作成で問題が発生した場合は、[Dynamic Mediaのトラブルシューティング —Scene7モード](troubleshoot-dms7.md)を参照してください。
 
 ## アセットのアップロード {#uploading-assets}
 
@@ -80,7 +80,7 @@ ht-degree: 77%
 
 また、混在メディアセットにスピンセットまたは画像セットを追加する場合は、それらのセットも作成します。
 
-## 混在メディアセットの作成 {#creating-mixed-media-sets}
+## 混在メディアセットの作成  {#creating-mixed-media-sets}
 
 混在メディアセットには画像、画像セット、スピンセットおよびビデオを追加できます。ファイル、画像セットおよびスピンセットを公開できる状態にしてから、混在メディアセットに追加するようにしてください。
 
@@ -92,7 +92,7 @@ ht-degree: 77%
 
    ![chlimage_1-349](assets/chlimage_1-349.png)
 
-1. In the **[!UICONTROL Mixed Media Set Editor]** page, in **[!UICONTROL Title]**, enter a name for the Mixed Media Set. この名前は、混在メディアセット全般のバナーに表示されます。オプションで、説明を入力します。
+1. **[!UICONTROL 混在メディアセットエディター]**&#x200B;ページの&#x200B;**[!UICONTROL タイトル]**&#x200B;に、混在メディアセットの名前を入力します。 この名前は、混在メディアセット全般のバナーに表示されます。オプションで、説明を入力します。
 
    ![chlimage_1-350](assets/chlimage_1-350.png)
 
@@ -100,9 +100,9 @@ ht-degree: 77%
    >
    >混在メディアセットを作成するときに、混在メディアセットのサムネールを変更したり、AEM で混在メディアセット内のアセットに基づいてサムネールを自動的に選択したりすることができます。サムネールを選択するには、「**[!UICONTROL サムネールを変更]**」をクリックし、画像を選択します（他のフォルダーに移動して画像を探すこともできます）。サムネールを選択した状態で、混在メディアセットからサムネールを自動的に生成することにした場合は、「**[!UICONTROL 自動サムネールに切り替え]**」を選択します。
 
-1. Tap the **[!UICONTROL Asset Selector]** to select assets that you want to include in your Mixed Media Set. Select them and tap **[!UICONTROL Select]**.
+1. **[!UICONTROL アセットセレクター]**&#x200B;をタップし、混在メディアセットに含めるアセットを選択します。 それらを選択し、「**[!UICONTROL 選択]**」をタップします。
 
-   With the **[!UICONTROL Asset Selector]**, you can search for assets by typing in a keyword and tapping **[!UICONTROL Return]**. フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。フィルターを選択してから、ツールバーの&#x200B;**[!UICONTROL フィルター]**&#x200B;アイコンをタップします。Change the view by selecting the View icon and selecting **[!UICONTROL List]**, **[!UICONTROL Column]**, or **[!UICONTROL Card]** view.
+   **[!UICONTROL アセットセレクター]**&#x200B;を使用すると、キーワードを入力し、**[!UICONTROL 戻る]**&#x200B;をタップして、アセットを検索できます。 フィルターを適用して、検索結果を絞り込むこともできます。パス、コレクション、ファイルタイプおよびタグでフィルタリングできます。フィルターを選択してから、ツールバーの&#x200B;**[!UICONTROL フィルター]**&#x200B;アイコンをタップします。表示アイコンを選択し、**[!UICONTROL リスト]**、**[!UICONTROL 列]**、または&#x200B;**[!UICONTROL カード]**&#x200B;表示を選択して、表示を変更します。
 
    [セレクターの操作](working-with-selectors.md)を参照してください。
 
@@ -112,7 +112,7 @@ ht-degree: 77%
 
    ![chlimage_1-352](assets/chlimage_1-352.png)
 
-   If you want to add thumbnails, click the **[!UICONTROL +]** icon next to the image and navigate to the thumbnail you want. すべてのサムネール画像の選択が完了したら、「 **[!UICONTROL 保存]**」をタップします。
+   サムネールを追加する場合は、画像の横の&#x200B;**[!UICONTROL +]**&#x200B;アイコンをクリックし、目的のサムネールに移動します。 すべてのサムネール画像の選択が完了したら、「**[!UICONTROL 保存]**」をタップします。
 
    >[!NOTE]
    >
@@ -122,7 +122,7 @@ ht-degree: 77%
 1. プリセットを適用するには、右上隅にある「**[!UICONTROL プリセット]**」をタップし、アセットに適用するプリセットを選択します。
 1. 「**[!UICONTROL 保存]**」をクリックします。新しく作成した混在メディアセットが、作成先のフォルダーに表示されます。
 
-## 混在メディアセットの編集 {#editing-mixed-media-sets}
+## 混在メディアセットの編集  {#editing-mixed-media-sets}
 
 [アセットの編集と同じように](managing-assets-touch-ui.md)、ユーザーインターフェイスで直接、混在メディアセット内のアセットに対して様々な編集タスクを実行できます。また、混在メディアセットでは次のアクションも実行できます。
 
@@ -149,23 +149,23 @@ ht-degree: 77%
 
    >[!NOTE]
    >
-   >* To delete an entire Mixed Media Set, from any viewing mode (such as **[!UICONTROL Card]** view or **[!UICONTROL Column]** view) navigate to the Mixed Media Set. アセットの上にマウスポインターを置き、チェックマークアイコンをタップして選択します。Press **[!UICONTROL Backspace]** on the keyboard, or tap **[!UICONTROL More]** (three dots) on the toolbar, then tap **[!UICONTROL Delete]**.
-   >* You can edit the assets in a Mixed Media Set by navigating to the set, tapping **[!UICONTROL Set Members]** in the left rail, and then tapping the **[!UICONTROL Pencil]** icon on an individual asset to open the editing window.
+   >* 混在メディアセット全体を削除するには、任意の表示モード(**[!UICONTROL カード]**&#x200B;表示や&#x200B;**[!UICONTROL 列]**&#x200B;表示など)から混在メディアセットに移動します。 アセットの上にマウスポインターを置き、チェックマークアイコンをタップして選択します。キーボードの「**[!UICONTROL バックスペース]**」を押すか、ツールバーの「**[!UICONTROL 詳細]**」（3つのドット）をタップし、「**[!UICONTROL 削除]**」をタップします。
+   >* 混在メディアセット内のアセットを編集するには、セットに移動し、左のレールで&#x200B;**[!UICONTROL メンバーを設定]**&#x200B;をタップし、個々のアセット上で&#x200B;**[!UICONTROL 鉛筆]**&#x200B;アイコンをタップして編集ウィンドウを開きます。
 
 
 1. 編集が完了したら、「**[!UICONTROL 保存]**」をタップします。
 
    >[!NOTE]
    >
-   >* 混在メディアセット内のアセットを編集するには - 混在メディアセットに移動します。Tap (do not select) the set to open it in the AEM **[!UICONTROL Set Preview]** page. In the left rail, tap the down caret to open the drop-down list, then tap **[!UICONTROL Set Members]**. In the **[!UICONTROL Set Members]** page, hover on an asset, then tap **[!UICONTROL Edit]** (pencil icon) to open the editing page.
-   >* To delete an entire Mixed Media Set - From any viewing mode (such as **[!UICONTROL Card]** view or **[!UICONTROL Column]** view), navigate to the Mixed Media Set. セットの上にマウスポインターを置き、「**[!UICONTROL 選択]**」（チェックマークアイコン）をタップします。キーボードの **[!UICONTROL Backspace]** キーを押すか、「**[!UICONTROL 詳細]**」（連続する 3 つのドット）をタップしてから「**[!UICONTROL 削除]**」をタップします。
+   >* 混在メディアセット内のアセットを編集するには - 混在メディアセットに移動します。セットをタップ（選択しない）して、AEM **[!UICONTROL プレビューを設定]**&#x200B;ページで開きます。 左側のレールで、下向きのキャレットをタップしてドロップダウンリストを開き、**[!UICONTROL 「メンバーを設定]**」をタップします。 **[!UICONTROL メンバーを設定]**&#x200B;ページで、アセットにマウスポインターを置き、**[!UICONTROL 編集]**（鉛筆アイコン）をタップして、編集ページを開きます。
+   >* 混在メディアセット全体を削除するには、任意の表示モード(**[!UICONTROL カード]**&#x200B;表示、**[!UICONTROL 列]**&#x200B;表示など)で、混在メディアセットに移動します。 セットの上にマウスポインターを置き、「**[!UICONTROL 選択]**」（チェックマークアイコン）をタップします。キーボードの **[!UICONTROL Backspace]** キーを押すか、「**[!UICONTROL 詳細]**」（連続する 3 つのドット）をタップしてから「**[!UICONTROL 削除]**」をタップします。
 
 
 ## 混在メディアセットのプレビュー {#previewing-mixed-media-sets}
 
 混在メディアセットのプレビュー方法について詳しくは、[アセットのプレビュー](previewing-assets.md)を参照してください。
 
-## 混在メディアセットの公開 {#publishing-mixed-media-sets}
+## 混在メディアセットの公開  {#publishing-mixed-media-sets}
 
 混在メディアセットの公開方法について詳しくは、[アセットの公開](publishing-dynamicmedia-assets.md)を参照してください。
 
