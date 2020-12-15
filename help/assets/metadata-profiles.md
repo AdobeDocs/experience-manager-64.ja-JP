@@ -13,12 +13,12 @@ ht-degree: 64%
 
 # メタデータプロファイル {#metadata-profiles}
 
-メタデータプロファイルを使用すると、フォルダー内のアセットに初期設定のメタデータを適用できます。 メタデータプロファイルを作成し、フォルダに適用します。 その後フォルダにアップロードするアセットは、メタデータプロファイルで設定した初期設定のメタデータを継承します。
+メタデータプロファイルを使用すると、フォルダー内のアセットに初期設定のメタデータを適用できます。メタデータプロファイルを作成し、フォルダに適用します。その後フォルダにアップロードするアセットは、メタデータプロファイルで設定した初期設定のメタデータを継承します。
 
 ## メタデータプロファイルの追加 {#adding-a-metadata-profile}
 
-1. Tap or click the AEM logo and navigate to **[!UICONTROL Tools > Assets > Metadata Profiles]**, and then tap **[!UICONTROL Create]**.
-1. メタデータプロファイルのタイトル（「サンプルメタデータ」など）を入力し、「**[!UICONTROL 送信]**」をクリックします。The **[!UICONTROL Edit Form]** for the Metadata Profile is displayed.
+1. AEMロゴをタップまたはクリックし、**[!UICONTROL ツール/アセット/メタデータプロファイル]**&#x200B;に移動し、**[!UICONTROL 作成]**&#x200B;をタップします。
+1. メタデータプロファイルのタイトル（「サンプルメタデータ」など）を入力し、「**[!UICONTROL 送信]**」をクリックします。メタデータプロファイルの&#x200B;**[!UICONTROL フォーム]**&#x200B;を編集が表示されます。
 
    ![chlimage_1-480](assets/chlimage_1-480.png)
 
@@ -28,8 +28,8 @@ ht-degree: 64%
 
    **[!UICONTROL 説明]**&#x200B;コンポーネントについて、次のプロパティを編集します。
 
-   * **[!UICONTROL フィールドラベル]**: メタデータプロパティの表示名です。 ユーザーの参照用のみで使用します。
-   * **[!UICONTROL プロパティにマップ]**: このプロパティの値は、リポジトリに保存されるアセットノードの相対パス/名前を提供します。 この値は常にと開始する必要があります。これは、パスがアセットのノード下にあることを示している `./` からです。
+   * **[!UICONTROL フィールドラベル]**:メタデータプロパティの表示名です。ユーザーの参照用のみで使用します。
+   * **[!UICONTROL プロパティにマップ]**:このプロパティの値は、リポジトリに保存されるアセットノードの相対パス/名前を提供します。この値は常にと開始する必要があります。これは、パスがアセットのノード下にあることを示している `./` からです。
 
    ![chlimage_1-482](assets/chlimage_1-482.png)
 
@@ -41,34 +41,34 @@ ht-degree: 64%
 
    >[!NOTE]
    >
-   >新しいメタデータプロパティにデフォルト値を追加します（にまだ存在しない）。 `/jcr:content/metadata` ノード)は、デフォルトでは、アセットの **[!UICONTROL プロパティ]** ページにプロパティとその値を表示しません。 To view the new property on the [!UICONTROL Properties] page of the asset, modify the corresponding schema form.
+   >新しいメタデータプロパティにデフォルト値を追加します（にまだ存在しない）。 `/jcr:content/metadata` ノード)は、デフォルトでは、アセットのプロパティページにプロパティとその値を表示しま **** せん。アセットの[!UICONTROL プロパティ]ページで新しいプロパティを表示するには、対応するスキーマフォームを変更します。
 
-1. (Optional) Add more components to the **[!UICONTROL Edit Form]** from the **[!UICONTROL Build Form]** tab, and configure their properties in the **[!UICONTROL Settings]** tab. The following properties are available from the **[!UICONTROL Build Form]** tab:
+1. （オプション）「**[!UICONTROL フォームを作成]**」タブから「**[!UICONTROL フォームを編集]**」に追加追加のコンポーネントを追加し、「**[!UICONTROL 設定]**」タブでプロパティを設定します。次のプロパティは、「**[!UICONTROL フォームを作成]**」タブから使用できます。
 
 | コンポーネント | プロパティ |
 |---|---|
-| [!UICONTROL セクションヘッダー] | Field Label, <br> Description |
-| [!UICONTROL 1 行のテキスト] | Field Label, <br> Map to property, <br> Default Value |
-| [!UICONTROL 複数値テキスト] | Field Label, <br> Map to property, <br> Default Value |
-| [!UICONTROL 番号] | Field Label, <br> Map to property, <br> Default Value |
-| [!UICONTROL 日付] | Field Label, <br> Map to property, <br> Default Value |
-| [!UICONTROL 標準タグ] | Field Label, <br> Map to property, <br> Default Value, <br> Description |
+| [!UICONTROL セクションヘッダー] | フィールドラベル、<br>説明 |
+| [!UICONTROL 1 行のテキスト] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
+| [!UICONTROL 複数値テキスト] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
+| [!UICONTROL 番号] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
+| [!UICONTROL 日付] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
+| [!UICONTROL 標準タグ] | フィールドラベル， <br>プロパティにマップ， <br>既定値， <br>説明 |
 
 ![chlimage_1-484](assets/chlimage_1-484.png)
 
-1. Click **[!UICONTROL Done]**. The metadata profile is added to the list of profiles in the **[!UICONTROL Metadata Profiles]** page.
+1. 「**[!UICONTROL 完了]**」をクリックします。メタデータプロファイルは、**[!UICONTROL メタデータプロファイル]**&#x200B;ページのプロファイルのリストに追加されます。
 
    ![chlimage_1-485](assets/chlimage_1-485.png)
 
 ## メタデータプロファイルのコピー {#copying-a-metadata-profile}
 
-1. From the **[!UICONTROL Metadata Profiles]** page, select a profile to make a copy of it.
+1. **[!UICONTROL メタデータプロファイル]**&#x200B;ページから、プロファイルを選択してコピーします。
 
    ![chlimage_1-486](assets/chlimage_1-486.png)
 
-1. Click **[!UICONTROL Copy]** from the toolbar.
-1. In the **[!UICONTROL Copy Metadata Profile]** dialog, enter a title for the new copy of the profile.
-1. 「**[!UICONTROL コピー]**」をクリックします。A copy of the profile appears in the list of profiles in the **[!UICONTROL Metadata Profiles]** page.
+1. ツールバーの&#x200B;**[!UICONTROL コピー]**&#x200B;をクリックします。
+1. 「**[!UICONTROL メタデータプロファイルをコピー]**」ダイアログで、プロファイルの新しいコピーのタイトルを入力します。
+1. 「**[!UICONTROL コピー]**」をクリックします。プロファイルのコピーが、**[!UICONTROL メタデータプロファイル]**&#x200B;ページのプロファイルのリストに表示されます。
 
    ![chlimage_1-487](assets/chlimage_1-487.png)
 
@@ -78,8 +78,8 @@ ht-degree: 64%
 
    ![chlimage_1-488](assets/chlimage_1-488.png)
 
-1. Click **[!UICONTROL Delete Metadata Profiles]** in the toolbar.
-1. In the dialog box, click **[!UICONTROL Delete]** to confirm the delete operation. メタデータプロファイルがリストから削除されます。
+1. ツールバーの&#x200B;**[!UICONTROL メタデータプロファイル]**&#x200B;を削除をクリックします。
+1. ダイアログボックスで、「**[!UICONTROL 削除]**」をクリックして削除操作を確定します。 メタデータプロファイルがリストから削除されます。
 
 ## フォルダーへのメタデータプロファイルの適用 {#applying-a-metadata-profile-to-folders}
 
@@ -125,7 +125,7 @@ ht-degree: 64%
 
 1. 次のいずれかの操作をおこないます。
 
-   * Navigate to `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` and apply the appropriate profile and tap or click **[!UICONTROL Save]**.
+   * `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam`に移動し、適切なプロファイルを適用して、「**[!UICONTROL 保存]**」をタップまたはクリックします。
 
       ![chlimage_1-492](assets/chlimage_1-492.png)
 
@@ -133,26 +133,26 @@ ht-degree: 64%
 
       ![chlimage_1-493](assets/chlimage_1-493.png)
 
-## Remove a metadata profile from folders {#removing-a-metadata-profile-from-folders}
+## フォルダ{#removing-a-metadata-profile-from-folders}からのメタデータプロファイルの削除
 
 フォルダーからメタデータプロファイルを削除すると、サブフォルダーは自動的に親フォルダーのプロファイルの削除状態を継承します。ただし、フォルダー内で実行されたファイルの処理はそのまま維持されます。
 
 **[!UICONTROL ツール]**&#x200B;メニュー内で、またはフォルダー内にいる場合は「**[!UICONTROL プロパティ]**」で、メタデータプロファイルをフォルダーから削除できます。この節では、メタデータプロファイルをフォルダーから削除する両方の方法について説明します。
 
-### Remove metadata profiles from folders via Profiles user interface {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
+### プロファイルユーザーインターフェイス{#removing-metadata-profiles-from-folders-via-profiles-user-interface}を使用して、フォルダーからメタデータプロファイルーを削除
 
 プロファイルのユーザーインターフェイスを介して、フォルダからメタデータプロファイルを削除するには、次の手順に従います。
 
 1. AEM のロゴをタップし、**[!UICONTROL ツール／アセット／メタデータプロファイル]**&#x200B;に移動します。
 1. 1 つまたは複数のフォルダーから削除するメタデータプロファイルを選択します。
-1. Tap **[!UICONTROL Remove Metadata Profile from Folder(s)]** and select the folder or multiple folders you want use to remove a profile from, then tap **[!UICONTROL Done]**.
+1. 「**[!UICONTROL フォルダーからメタデータプロファイルーを削除]**」をタップし、プロファイルーの削除に使用するフォルダーまたは複数のフォルダーを選択して、「**[!UICONTROL 完了]**」をタップします。
 
    名前がフォルダー名の下に表示されなくなっていることで、メタデータプロファイルがフォルダーに適用されていないことを確認できます。
 
-### Remove metadata profiles from folders by way of Properties {#removing-metadata-profiles-from-folders-via-properties}
+### プロパティ{#removing-metadata-profiles-from-folders-via-properties}を使用して、フォルダーからメタデータプロファイルを削除します
 
 1. AEM のロゴをタップして「**[!UICONTROL アセット]**」に移動した後、メタデータプロファイルを削除するフォルダーに移動します。
 1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
-1. 「 **[!UICONTROL メタデータプロファイル]** 」タブを選択し、ドロップダウンメニューから「 **[!UICONTROL なし]** 」を選択します。 「**[!UICONTROL 保存]**」をタップします。
+1. 「**[!UICONTROL メタデータプロファイル]**」タブを選択し、ドロップダウンメニューから「**[!UICONTROL なし]**」を選択します。 「**[!UICONTROL 保存]**」をタップします。
 
 既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
