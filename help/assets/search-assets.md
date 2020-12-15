@@ -11,7 +11,7 @@ ht-degree: 88%
 ---
 
 
-# AEM でのアセットの検索 {#search-assets-in-aem}
+# AEM でのアセットの検索  {#search-assets-in-aem}
 
 AEM のフィルターパネルを使用した必要なアセットの検索方法と検索で表示されたアセットの使用方法を説明します。
 
@@ -34,7 +34,7 @@ AEM のフィルターパネルを使用した必要なアセットの検索方�
 
 フィルターパネルをカスタマイズし、[検索ファセット](search-facets.md)を使用して検索述語を追加したり、削除したりすることができます。フィルターパネルを表示するには、次の手順を実行します。
 
-1. In the Assets user interface, tap/click ![search_icon](assets/search_icon.png) from the toolbar to display the Omnisearch box.
+1. アセットユーザーインターフェイスで、ツールバーの![search_icon](assets/search_icon.png)をタップまたはクリックして、「Omnisearch」ボックスを表示します。
 1. 検索語句を入力して、Enter キーを押します。または、検索語句を入力しないで Enter キーを押します。スペースも入力しないでください。スペースを入力すると、検索は実行されません。
 
 1. グローバルナビゲーションアイコンをタップまたはクリックします。フィルターパネルが表示されます。
