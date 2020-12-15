@@ -32,7 +32,7 @@ ht-degree: 94%
 * 別のフィールドに指定された値に基づいて、特定のフィールドに表示されるオプションを変更します。
 * 別のフィールドに指定された値に基づいて、特定のフィールドにデフォルトのメタデータ値を設定します。
 
-## AEM でのカスケードメタデータの設定 {#configure-cascading-metadata-in-aem}
+## AEM でのカスケードメタデータの設定  {#configure-cascading-metadata-in-aem}
 
 選択されたアセットタイプに基づいて、カスケードメタデータを表示するシナリオを検討します。いくつかの例を示します。
 
@@ -48,7 +48,7 @@ ht-degree: 94%
 
 1. （オプション）メタデータスキーマエディターで、条件化する新しいフィールドを作成します。「**[!UICONTROL 設定]**」タブで、名前およびプロパティのパスを指定します。
 
-   To create a new tab, tap/click **[!UICONTROL +]** to add a tab and then add a metadata field.
+   新しいタブを作成するには、**[!UICONTROL +]**&#x200B;をタップまたはクリックしてタブを追加し、メタデータフィールドを追加します。
 
    ![add_tab](assets/add_tab.png)
 
