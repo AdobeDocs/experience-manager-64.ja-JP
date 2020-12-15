@@ -20,11 +20,11 @@ ht-degree: 90%
 
 # Dynamic Media アセットのプレビュー {#previewing-assets}
 
-You can use **[!UICONTROL Preview]** to see how a Dynamic Media digital asset looks when it is viewed by a customer in their own web browser. The default embedded, cross-device viewer that is assigned to the asset is used for the **[!UICONTROL Preview]**.
+**[!UICONTROL プレビュー]**&#x200B;を使用すると、Dynamic Mediaのデジタルアセットが自分のWebブラウザーで顧客に表示されたときにどのように見えるかを確認できます。 アセットに割り当てられている、デバイス間のデフォルトの埋め込みビューアが&#x200B;**[!UICONTROL プレビュー]**&#x200B;に使用されます。
 
 ビューアは、コンピューター画面やモバイルデバイスでのリッチメディアアセットの表示方法を決定する、様々な設定（「プリセット」と呼ばれます）のコレクションです。この設定には、ビューアのディスプレイサイズ、ズーム時の動作、配色、境界線、フォントなどが含まれます。
 
-ビデオ、スピンセットおよび画像セット専用のプレビュー機能を使用する他に、作成したビューアプリセットを使用してアセットをプレビューすることもできます。 または、画像プリセットを使用して、プレビューのレンディションを作成します。
+ビデオ、スピンセットおよび画像セット専用のプレビュー機能を使用する他に、作成したビューアプリセットを使用してアセットをプレビューすることもできます。または、画像プリセットを使用して、プレビューのレンディションを作成します。
 
 * [画像プリセットの適用](image-presets.md)
 * [ビューアプリセットの適用](viewer-presets.md)
@@ -35,7 +35,7 @@ You can use **[!UICONTROL Preview]** to see how a Dynamic Media digital asset lo
 
 **アセットをプレビューするには**:
 
-1. **Adobe Experience Managerから、**&#x200B;ナビゲーション **[!UICONTROL ページで「アセット]** 」をタップし、次に「 **ファイル&#x200B;******」をタップしてアセットにアクセスします。
+1. **Adobe Experience Manager**&#x200B;から、**[!UICONTROL ナビゲーション]**&#x200B;ページで&#x200B;**[!UICONTROL アセット]s**&#x200B;をタップし、**[!UICONTROL ファイル]**&#x200B;をタップしてアセットにアクセスします。
 1. ページの右上隅付近にある「**[!UICONTROL 表示]**」ドロップダウンリストで「**[!UICONTROL リスト表示]**」をタップします。
 1. （オプション）「**[!UICONTROL 種類]**」列を使用して、プレビューする種類でアセットを並べ替えます。
 1. 「**[!UICONTROL タイトル]**」列で、プレビューするアセットの（サムネール画像ではなく）タイトル名をクリックします。
@@ -50,8 +50,8 @@ You can use **[!UICONTROL Preview]** to see how a Dynamic Media digital asset lo
   </tr>
   <tr>
    <td><p>画像</p> </td> 
-   <td>はい</td> 
-   <td>はい</td> 
+   <td>可</td> 
+   <td>可</td> 
    <td><p><strong>特定のレンディションでアセットをプレビューするには：</strong></p> 
     <ul> 
      <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>レンディション</strong>」をクリックし、プレビューする特定のレンディションを選択します。</li> 
@@ -62,8 +62,8 @@ You can use **[!UICONTROL Preview]** to see how a Dynamic Media digital asset lo
   </tr>
   <tr>
    <td>マルチメディア</td> 
-   <td>はい</td> 
-   <td>はい</td> 
+   <td>可</td> 
+   <td>可</td> 
    <td><p><strong>特定のレンディションでアセットをプレビューするには：</strong></p> 
     <ul> 
      <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>レンディション</strong>」をクリックし、プレビューする特定のレンディションを選択します。</li> 
