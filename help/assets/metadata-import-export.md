@@ -11,11 +11,11 @@ ht-degree: 75%
 ---
 
 
-# Bulk metadata import and export {#bulk-metadata-import-and-export}
+# メタデータの一括インポートとエクスポート{#bulk-metadata-import-and-export}
 
 AEM Assets では、CSV ファイルを使用して、アセットのメタデータを一括で読み込むことができます。CSV ファイルを読み込むことで、最近アップロードされたアセットや既存のアセットの一括更新をおこなうことができます。また、サードパーティシステムから CSV 形式でアセットメタデータを一括で取り込むこともできます。
 
-## メタデータの読み込み {#import-metadata}
+## メタデータの読み込み  {#import-metadata}
 
 メタデータの読み込みは非同期であり、システムのパフォーマンスに影響はありません。ワークフロー実行フラグがチェックされている場合、XMP 書き戻しアクティビティが発生するので、複数のアセットのメタデータを同時に更新すると、リソースが集中的に使用されるおそれがあります。他のユーザーのパフォーマンスへの影響を防ぐために、リーンサーバーの使用時にインポートを計画します。
 
@@ -27,15 +27,15 @@ AEM Assets では、CSV ファイルを使用して、アセットのメタデ�
 
 1. Assets ユーザーインターフェイスに移動して、ツールバーの「**[!UICONTROL 作成]**」をタップまたはクリックします。
 1. メニューから「**[!UICONTROL メタデータ]**」を選択します。
-1. On the **[!UICONTROL Metadata Import]** page, tap/click the **[!UICONTROL Select File]**.  メタデータが入った CSV ファイルを選択します。
+1. **[!UICONTROL メタデータの読み込み]**&#x200B;ページで、**[!UICONTROL ファイルを選択]**&#x200B;をタップまたはクリックします。  メタデータが入った CSV ファイルを選択します。
 1. CSVファイルに次のパラメーターが含まれていることを確認します。
 
    | メタデータ読み込みパラメーター | 説明 |
    |:---|:---|
    | [!UICONTROL バッチサイズ] | メタデータを読み込むバッチ内のアセット数。デフォルト値は 50 です。最大値は 100 です。 |
-   | [!UICONTROL フィールドセパレーター] | Default value is `,` – a comma. 他の文字も指定できます。 |
-   | [!UICONTROL 複数の値の区切り文字] | メタデータ値のセパレーター。Default value is `|` – a pipe. |
-   | [!UICONTROL ワークフローを開始] | デフォルトでは false です。When set to true and default Launcher settings are in effect for the `DAM Metadata WriteBack Workflow` (that writes metadata to the binary XMP data). 起動ワークフローを有効にすると、システムのパフォーマンスに影響を与えます。 |
+   | [!UICONTROL フィールドセパレーター] | デフォルト値は`,` — カンマです。 他の文字も指定できます。 |
+   | [!UICONTROL 複数の値の区切り文字] | メタデータ値のセパレーター。デフォルト値は`|` — パイプです。 |
+   | [!UICONTROL ワークフローを開始] | デフォルトでは false です。trueに設定した場合に、`DAM Metadata WriteBack Workflow`に対してデフォルトのランチャー設定が有効になります(メタデータをバイナリのXMPデータに書き込みます)。 起動ワークフローを有効にすると、システムのパフォーマンスに影響を与えます。 |
    | [!UICONTROL アセットパス列名] | アセットが含まれている、CSV ファイルの列名を定義します。 |
 
 1. ツールバーの「**[!UICONTROL 読み込み]**」をタップまたはクリックします。メタデータが読み込まれると、通知が通知インボックスに送信されます。アセットのプロパティページに移動し、メタデータ値がアセットに正常に読み込まれたかどうかを確認します。
@@ -61,12 +61,12 @@ CSV形式で複数のアセットのメタデータを書き出すことがで�
 
 1. メタデータを書き出すアセットを含んだアセットフォルダーを選択します。ツールバーの「**[!UICONTROL メタデータを書き出し]**」を選択します。
 
-1. In the [!UICONTROL Metadata Export] dialog, specify a name for the CSV file. サブフォルダーのアセットのメタデータを書き出すには、「**[!UICONTROL サブフォルダーのアセットを含める]**」を選択します。
+1. [!UICONTROL メタデータの書き出し]ダイアログで、CSVファイルの名前を指定します。 サブフォルダーのアセットのメタデータを書き出すには、「**[!UICONTROL サブフォルダーのアセットを含める]**」を選択します。
 
    ![export_metadata_page](assets/export_metadata_page.png)
 
 1. 目的のオプションを選択します。ファイル名を指定し、必要に応じて日付を指定します。
-1. In the **[!UICONTROL Properties to be exported]**, specify whether you want to export all or specific properties. If you choose **[!UICONTROL Selective]** properties to be exported, add the desired properties.
+1. **[!UICONTROL 書き出すプロパティ]**&#x200B;で、すべてのプロパティを書き出すか、特定のプロパティを書き出すかを指定します。 書き出す&#x200B;**[!UICONTROL 選択した]**&#x200B;プロパティを選択する場合は、必要なプロパティを追加します。
 
 1. ツールバーの「**[!UICONTROL 書き出し]**」をタップまたはクリックします。メタデータが書き出されることを確認するメッセージが表示されます。メッセージを閉じます。
 
