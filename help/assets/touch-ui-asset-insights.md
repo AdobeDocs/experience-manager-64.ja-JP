@@ -21,13 +21,13 @@ ht-degree: 84%
 
 アセットインサイトがアセットの使用状況統計を Web サイトから取得するためには、アセットの埋め込みコードを Web サイトのコードに組み込む必要があります。
 
-To let Asset Insights display usage statistics for assets, first configure the feature to fetch reporting data from [!DNL Adobe Analytics]. 詳しくは、[アセットインサイトの設定](touch-ui-configuring-asset-insights.md)を参照してください。
+アセットインサイトにアセットの使用状況の統計を表示するには、まず[!DNL Adobe Analytics]からレポートデータを取得するように機能を設定します。 詳しくは、[アセットインサイトの設定](touch-ui-configuring-asset-insights.md)を参照してください。
 
 >[!NOTE]
 >
 >インサイトは画像に対してのみサポートされ、提供されます。
 
-## View statistics for an asset {#viewing-statistics-for-an-asset}
+## アセット{#viewing-statistics-for-an-asset}の表示統計
 
 メタデータページでアセットインサイトのスコアを確認できます。
 
@@ -60,11 +60,11 @@ To let Asset Insights display usage statistics for assets, first configure the f
    >
    >「ソリューション」セクションのデータとは異なり、「パフォーマンス統計」セクションには最新データが表示されます。
 
-1. パフォーマンスデータを得るために Web サイトに組み込んだアセットの埋め込みコードを取得するには、アセットのサムネールの下の「**[!UICONTROL 埋め込みコードの取得]**」をタップまたはクリックします。For more information on how to include your Embed code in third-party web pages, see [Using Page Tracker and Embed code in web pages](touch-ui-using-page-tracker.md).
+1. パフォーマンスデータを得るために Web サイトに組み込んだアセットの埋め込みコードを取得するには、アセットのサムネールの下の「**[!UICONTROL 埋め込みコードの取得]**」をタップまたはクリックします。サードパーティWebページに埋め込みコードを含める方法について詳しくは、[Using Page Tracker and Embed code in web pages](touch-ui-using-page-tracker.md)を参照してください。
 
    ![chlimage_1-303](assets/chlimage_1-303.png)
 
-## View aggregate statistics for assets {#viewing-aggregate-statistics-for-assets}
+## アセットの表示集計統計{#viewing-aggregate-statistics-for-assets}
 
 **[!UICONTROL インサイト表示]**&#x200B;を使用すると、フォルダー内のすべてのアセットのスコアを同時に表示できます。
 
