@@ -41,7 +41,7 @@ DCMES 以外にも、Dublin Core Metadata Initiative によって作成された
 | title | アセットの名前。 |
 | type | アセットの性質またはジャンル。 |
 
-## IPTC {#iptc}
+## IPTC  {#iptc}
 
 IPTC（International Press Telecommunications Council）は各国の通信社による協会で、技術的な規格の開発および管理を目的とします。IPTC によって定義された、画像向けの一連のフォトメタデータ標準は、フォトグラファーの間で一般的に広く受け入れられています。これらメタデータ標準は、IPTC Information Interchange Model（IIM）として知られる、1990 年代に制定されたより広範な標準の一部です。
 
