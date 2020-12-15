@@ -64,7 +64,7 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
    ![drop_in_collection](assets/drop_in_collection.png)
 
-   Release the mouse button when the Dropzone becomes active, and its label changes to **[!UICONTROL Drop to Add]**.
+   ドロップゾーンがアクティブになったらマウスボタンを離し、ラベルが&#x200B;**[!UICONTROL 追加]**&#x200B;にドロップします。
 
    ![drop_to_add](assets/drop_to_add.png)
 
@@ -100,7 +100,7 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
    >[!NOTE]
    >
-   >If you select **[!UICONTROL Public]**, the smart collection becomes available to everyone with the owner role after you create it. 「**[!UICONTROL 公開]**」オプションを選択解除すると、DAM ユーザーグループとスマートコレクションの関連付けが解除されます。
+   >「**[!UICONTROL パブリック]**」を選択すると、スマートコレクションを作成した後、所有者の役割を持つすべてのユーザーがスマートコレクションを利用できるようになります。 「**[!UICONTROL 公開]**」オプションを選択解除すると、DAM ユーザーグループとスマートコレクションの関連付けが解除されます。
 
 1. 「**[!UICONTROL 保存]**」をタップまたはクリックしてスマートコレクションを作成し、メッセージボックスを閉じてプロセスを完了します。
 
@@ -116,11 +116,11 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
 参照元のアセットまたはフォルダーのリストを含むコレクションにアセットを追加できます。スマートコレクションでは、検索クエリを使用してアセットを設定します。そのため、アセットおよびフォルダーへの静的な参照はスマートコレクションに適用できません。
 
-1. In the Assets user interface, select the asset and tap/click the **[!UICONTROL To Collection]** icon from the toolbar.
+1. アセットユーザーインターフェイスで、アセットを選択し、ツールバーの&#x200B;**[!UICONTROL コレクションへ]**&#x200B;アイコンをタップまたはクリックします。
 
    ![chlimage_1-113](assets/chlimage_1-113.png)
 
-   または、インターフェイスの「コレクションに **[!UICONTROL ドロップ]** 」領域にアセットをドラッグすることもできます。 領域追加のラベルが「ドロップ」に変わった場合のアセット追加。 ****
+   または、アセットをインターフェイス上の「コレクション&#x200B;**[!UICONTROL にドロップ」領域にドラッグできます。]**&#x200B;領域追加のラベルが&#x200B;**[!UICONTROL Drop to 追加]**&#x200B;に変わった場合のアセット。
 
 1. **[!UICONTROL コレクションに追加]**&#x200B;ページで、アセットを追加するコレクションを選択します。
 
@@ -164,12 +164,12 @@ Assets UI からコレクションに、アセットをドラッグできます�
 1. **[!UICONTROL コレクションメタデータ]**&#x200B;ページの「**[!UICONTROL 基本]**」タブと「**[!UICONTROL 詳細]**」タブでコレクションメタデータを表示します。
 1. 必要に応じてメタデータを変更し、ツールバーの「**[!UICONTROL 保存して閉じる]**」をタップまたはクリックして変更を保存します。
 
-### 複数のコレクションのメタデータを一括で編集 {#editing-collection-metadata-in-bulk}
+### 複数のコレクションのメタデータを一括で編集{#editing-collection-metadata-in-bulk}
 
 複数のコレクションのメタデータを同時に編集できます。この機能により、複数のコレクションで共通のメタデータをすばやくレプリケートできます。
 
 1. コレクションコンソールで、メタデータを編集する 2 つ以上のコレクションを選択します。
-1. ツールバーで、「 **[!UICONTROL プロパティ]**」をタップまたはクリックします。
+1. ツールバーで、**[!UICONTROL 「プロパティ]**」をタップまたはクリックします。
 1. 必要に応じて、**[!UICONTROL コレクションメタデータ]**&#x200B;ページの「**[!UICONTROL 基本]**」タブと「**[!UICONTROL 詳細]**」タブでメタデータを編集します。
 1. 特定のコレクションのメタデータのプロパティを表示するには、コレクションリストの残りのコレクションの選択を解除します。メタデータエディターのフィールドには、その特定のコレクションのメタデータが入力されています。
 
@@ -180,11 +180,11 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
 
 1. ツールバーの「**[!UICONTROL 保存して閉じる]**」をタップまたはクリックし、確認ダイアログを閉じてプロセスを完了します。
-1. To append the new metadata with the existing metadata, select **[!UICONTROL Append mode]**. このオプションを選択しないと、フィールド内の既存のメタデータが新しいメタデータに置換されます。「**[!UICONTROL 送信]**」をタップまたはクリックします。
+1. 新しいメタデータを既存のメタデータと共に追加するには、「**[!UICONTROL 追加モード]**」を選択します。 このオプションを選択しないと、フィールド内の既存のメタデータが新しいメタデータに置換されます。「**[!UICONTROL 送信]**」をタップまたはクリックします。
 
    >[!NOTE]
    >
-   >選択したコレクションに追加したメタデータは、これらのコレクションの以前のメタデータを上書きします。 [!UICONTROL 追加モードを使用して] 、複数の値を含むことができるフィールド内の既存のメタデータに新しい値を追加します。 単一値フィールドは常に上書きされます。 「[!UICONTROL タグ]」フィールドに追加する新しいタグはすべて、メタデータのタグの既存のリストに追加されます。
+   >選択したコレクションに追加したメタデータは、これらのコレクションの以前のメタデータを上書きします。 [!UICONTROL 追加モード]を使用して、複数の値を含めることができるフィールドの既存のメタデータに新しい値を追加します。 単一値フィールドは常に上書きされます。 「[!UICONTROL タグ]」フィールドに追加する新しいタグはすべて、メタデータのタグの既存のリストに追加されます。
 
 メタデータの[!UICONTROL プロパティ]ページをカスタマイズ（メタデータのプロパティの追加、編集、削除など）するには、スキーマエディターを使用します。
 
@@ -198,7 +198,7 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
 トップレベルからコレクションを検索する場合は、個々のコレクションのみ検索結果に返されます。コレクション内のアセットやフォルダーは除外されます。他のすべての場合（例：個々のコレクション内またはフォルダー階層内）では、関連するすべてのアセット、フォルダー、コレクションが返されます。
 
-## Search within collections {#searching-within-collections}
+## コレクション内の検索{#searching-within-collections}
 
 コレクションコンソールで、コレクションをタップまたはクリックして開きます。
 
@@ -209,9 +209,9 @@ Assets UI からコレクションに、アセットをドラッグできます�
 コレクション設定（タイトルや説明など）を編集したり、コレクションにメンバーを追加したりできます。
 
 1. コレクションを選択し、ツールバーの「**[!UICONTROL 設定]**」アイコンをタップまたはクリックします。または、コレクションのサムネールの&#x200B;**[!UICONTROL 設定]**&#x200B;クイックアクションを使用します。
-1. Modify the collection settings in the **[!UICONTROL Collection Settings]** page. For example, modify the collection title, descriptions, members, and permissions as discussed in [Adding Collections](#creating-a-collection).
+1. **[!UICONTROL コレクション設定]**&#x200B;ページでコレクション設定を変更します。例えば、[コレクションの追加](#creating-a-collection)の説明に従って、コレクションのタイトル、説明、メンバーおよび権限を変更します。
 
-1. 変更を保存するには、「 **[!UICONTROL 保存]**」をタップまたはクリックします。
+1. 変更を保存するには、「**[!UICONTROL 保存]**」をタップまたはクリックします。
 
 ## コレクションの削除 {#deleting-a-collection}
 
@@ -221,7 +221,7 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
    >[!NOTE]
    >
-   >You can also delete smart collections by [deleting saved searches](#deleting-saved-searches).
+   >また、[保存済みの検索結果](#deleting-saved-searches)を削除することで、スマートコレクションを削除することもできます。
 
 ## コレクションのダウンロード {#downloading-a-collection}
 
@@ -259,19 +259,19 @@ Assets ユーザーインターフェイスでは、特定のルール、検索�
 
 ![saved_searches_リスト](assets/saved_searches_list.png)
 
-### 保存済みの検索結果の作成 {#creating-saved-searches}
+### 保存済みの検索結果を作成{#creating-saved-searches}
 
-スマートコレクションの作成時には、保存済みの検索結果が作成されます。スマートコレクションは、「**[!UICONTROL 保存済みの検索結果]**」リストに自動的に追加されます。The Saved Searches query for the collection is saved in the `dam:query` property in crxde at the relative location `/content/dam/collections/`. 保存できる検索と、リストに表示される保存済みの検索に制限はありません。
+スマートコレクションの作成時には、保存済みの検索結果が作成されます。スマートコレクションは、「**[!UICONTROL 保存済みの検索結果]**」リストに自動的に追加されます。コレクションの保存済み検索クエリは、crxdeの`dam:query`プロパティ（相対位置`/content/dam/collections/`）に保存されます。 保存できる検索と、リストに表示される保存済みの検索に制限はありません。
 
 >[!NOTE]
 >
 >静的なコレクションを共有する場合と同じ方法でスマートコレクションを共有できます。
 
-### 保存済みの検索結果の編集 {#editing-saved-searches}
+### 保存済みの検索結果の編集{#editing-saved-searches}
 
 保存済みの検索結果を編集することは、スマートコレクションを編集することと同じです。詳しくは、[スマートコレクションの編集](/help/assets/managing-collections-touch-ui.md#editing-a-smart-collection)を参照してください。
 
-### 保存済みの検索結果の削除 {#deleting-saved-searches}
+### 保存済みの検索結果を削除{#deleting-saved-searches}
 
 1. Assets ユーザーインターフェイスで、ツールバーの検索アイコンをタップまたはクリックします。
 
@@ -281,7 +281,7 @@ Assets ユーザーインターフェイスでは、特定のルール、検索�
 
 1. グローバルナビゲーションアイコンをクリックまたはタップして、フィルターパネルを表示します。
 
-1. From the **[!UICONTROL Saved Searches]** list, tap/click the delete icon next to the smart collection that you want to delete.
+1. **[!UICONTROL 保存済みの検索結果]**&#x200B;リストから、削除するスマートコレクションの横にある削除アイコンをタップまたはクリックします。
 
    ![select_smart_collection-1](assets/select_smart_collection-1.png)
 
