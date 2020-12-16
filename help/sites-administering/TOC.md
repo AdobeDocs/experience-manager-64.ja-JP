@@ -7,15 +7,15 @@ user-guide-title: AEM 6.4 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 translation-type: tm+mt
-source-git-commit: b0457d967a8d366caef45e2917ae73e7550ba69e
+source-git-commit: 47c0e92e7f68641209e5d2e5aefeb9dfcce64854
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 98%
+source-wordcount: '624'
+ht-degree: 97%
 
 ---
 
 
-# AEM 6.4 管理ユーザーガイド {#administering}
+# AEM 6.4 管理ユーザーガイド  {#administering}
 
 + [管理ユーザガイドの概要](home.md)
 + Sites の機能 {#introduction}
@@ -50,7 +50,7 @@ ht-degree: 98%
    + [Bulk Editor](bulk-editor.md)
    + [電子メール通知の設定](notification.md)
    + [アクセス可能なサイトを生成するための RTE の設定](rte-accessible-content.md)
-   + [外部リンクチェック](external-link-checker.md)
+   + [リンクチェッカー](external-link-checker.md)
    + [AEM のトラブルシューティング](troubleshoot.md)
    + [AEM 6 での監査ログのメンテナンス](operations-audit-log.md)
    + [編集者](enable-classic-ui-editor.md)
@@ -95,7 +95,7 @@ ht-degree: 98%
    + [AEM の基盤での GDPR 要求の処理](handling-gdpr-requests-for-aem-platform.md)
    + [Content Disposition フィルター](content-disposition-filter.md)
 + パーソナライゼーション {#personalization}
-   + [パーソナライズ機能](personalization.md)
+   + [パーソナライゼーション](personalization.md)
    + [ContextHub の設定](contexthub-config.md)
    + [ClientContext](client-context.md)
    + [キャンペーン](campaigns.md)
