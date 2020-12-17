@@ -10,23 +10,23 @@ content-type: reference
 topic-tags: components, testing
 discoiquuid: bc0130c3-826e-47dd-b18b-85e1a7bb9936
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 088961dd5457f2136a5eea6f6811455105a8dd1f
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 77%
+source-wordcount: '717'
+ht-degree: 76%
 
 ---
 
 
 # UI のテスト{#testing-your-ui}
 
-AEM には、AEM UI のテストを自動化するためのフレームワークが用意されています。このフレームワークを使用して、Web ブラウザーで直接 UI テストを記述して実行します。このフレームワークには、テストを作成するための JavaScript API が用意されています。
+AEM には、AEM UI のテストを自動化するためのフレームワークが用意されています。このフレームワークを使用して、Web ブラウザーで直接 UI テストを記述して実行します。フレームワークは、テストを作成するためのJavaScript APIを提供します。
 
 AEMのテストフレームワークは、JavaScriptで記述されたテストライブラリであるHobbes.jsを使用します。 Hobbes.js フレームワークは、開発プロセスの一環として AEM のテスト用に開発されたものです。このフレームワークは現在、独自の AEM アプリケーションのテスト用に一般に利用できます。
 
 >[!NOTE]
 >
->Refer to the Hobbes.js [documentation](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html) for full details of the API.
+>APIの詳細については、Hobbes.js [ドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html)を参照してください。
 
 ## テストの構造 {#structure-of-tests}
 
@@ -34,9 +34,9 @@ AEMのテストフレームワークは、JavaScriptで記述されたテスト�
 
 |  |  |
 |---|---|
-| アクション | 「 **アクション** 」は、リンクやボタンのクリックなど、Webページ上の特定のアクティビティです。 |
-| テストケース | 「 **テストケース** 」は **、1つ以上の**&#x200B;アクションで構成できる特定の状況です。 |
-| テストスイート | 「 **テストスイート** 」は、関連する複数の **** テストケースのグループで、特定の使用事例をまとめてテストします。 |
+| アクション | **アクション**&#x200B;は、リンクやボタンのクリックなど、Webページ上の特定のアクティビティです。 |
+| テストケース | **テストケース**&#x200B;は、1つ以上の&#x200B;**アクション**&#x200B;で構成できる特定の状況です。 |
+| テストスイート | **テストスイート**&#x200B;は、関連する&#x200B;**テストケース**&#x200B;のグループで、これらを組み合わせて特定の使用例をテストします。 |
 
 ## テストの実行 {#executing-tests}
 
@@ -92,19 +92,19 @@ AEMのテストフレームワークは、JavaScriptで記述されたテスト�
 
    ![](do-not-localize/chlimage_1-8.png)
 
-1. 各テストケースの結果を表示するには、そのテストケースのタイトルをタップまたはクリックします。Tapping or clicking the name of your test in the **Result** panel shows all details.
+1. 各テストケースの結果を表示するには、そのテストケースのタイトルをタップまたはクリックします。**結果**&#x200B;パネルでテスト名をタップまたはクリックすると、すべての詳細が表示されます。
 
    ![chlimage_1-32](assets/chlimage_1-32.png)
 
 ## シンプルなテストスイートの作成と使用 {#creating-and-using-a-simple-test-suite}
 
-The following procedure steps you through the creation and execution of a Test Suite using [We.Retail content](/help/sites-developing/we-retail.md), but you can easily modify the test to use a different web page.
+次の手順では、[Web.Retailコンテンツ](/help/sites-developing/we-retail.md)を使用してTest Suiteを作成および実行する手順を示しますが、テストを簡単に変更して別のWebページを使用することができます。
 
 独自のテストスイートの作成について詳しくは、[Hobbes.js API のドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html)を参照してください。
 
 1. CRXDE Lite を開きます。([http://localhost:4502/crx/de](http://localhost:4502/crx/de))
-1. Right-click the `/etc/clientlibs` folder and click **Create > Create Folder**. 名前に`myTests`と入力して、「**OK**」をクリックします。
-1. Right-click the `/etc/clientlibs/myTests` folder and click **Create > Create Node**. 以下のプロパティ値を使用して「**OK**」をクリックします。
+1. `/etc/clientlibs`フォルダーを右クリックし、**作成/フォルダーを作成**&#x200B;をクリックします。 名前に`myTests`と入力して、「**OK**」をクリックします。
+1. `/etc/clientlibs/myTests`フォルダーを右クリックし、**作成/ノードを作成**&#x200B;をクリックします。 以下のプロパティ値を使用して「**OK**」をクリックします。
 
    * 名前：`myFirstTest`
    * 型：`cq:ClientLibraryFolder`
@@ -122,9 +122,9 @@ The following procedure steps you through the creation and execution of a Test S
    >
    >アダプティブフォームをテストするには、categories と dependencies に次の値を追加してください。次に例を示します。
    >
-   >**カテゴリ**: `granite.testing.hobbes.tests, granite.testing.hobbes.af.commons`
+   >**カテゴリ**:  `granite.testing.hobbes.tests, granite.testing.hobbes.af.commons`
    >
-   >**依存関係**: `granite.testing.hobbes.testrunner, granite.testing.hobbes.af`
+   >**依存関係**:  `granite.testing.hobbes.testrunner, granite.testing.hobbes.af`
 
 1. 「**すべて保存**」をクリックします。
 1. `myFirstTest` ノードを右クリックして、**作成／ファイルを作成**&#x200B;をクリックします。ファイル名に`js.txt`と入力して、「**OK**」をクリックします。
