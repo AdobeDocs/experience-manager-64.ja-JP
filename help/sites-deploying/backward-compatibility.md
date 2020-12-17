@@ -10,10 +10,10 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: 5e76fe09-4d37-4c8c-8baf-97e75689bd26
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 6fc1a2502187be0fbbfbea516788e705f1a2697c
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 94%
+source-wordcount: '501'
+ht-degree: 77%
 
 ---
 
@@ -24,13 +24,13 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->互換パッケージの範囲に含まれないコンテンツおよび設定の変更のリストについては、[AEM 6.4 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md)を参照してください。
+>互換性パッケージの範囲外のコンテンツおよび設定の変更のリストについては、[AEM 6.4](/help/sites-deploying/repository-restructuring.md)の「リポジトリの再構築」を参照してください。
 
-AEM 6.4 では、すべての機能が後方互換性を念頭に置いて開発されています。
+AEM 6.4では、すべての機能が下位互換性を考慮して開発されています。
 
-ほとんどの場合、AEM 6.3 を実行しているお客様は、アップグレードの際にコードやカスタマイズの修正をおこなう必要はありません。AEM 6.1 および 6.2 のお客様の場合、6.3 にアップグレードする際よりも大きい変更はありません。
+ほとんどの場合、AEM 6.3 を実行しているお客様は、アップグレードの際にコードやカスタマイズの修正をおこなう必要はありません。AEM 6.1および6.2のお客様は、6.3へのアップグレード時に直面する以上の中断点の変更はありません。
 
-例外的に機能の後方互換性を維持できない場合は、6.3 の互換パッケージをインストールすることで、バンドルおよびコンテンツの後方互換性を確保できます（ダウンロード場所について詳しくは、以下の「設定方法」を参照してください）。この互換パッケージは、AEM 6.3に準拠したアプリケーションの互換性を復元します。
+例外的に機能の後方互換性を維持できない場合は、6.3 の互換パッケージをインストールすることで、バンドルおよびコンテンツの後方互換性を確保できます（ダウンロード場所について詳しくは、以下の「設定方法」を参照してください）。この互換性パッケージは、AEM 6.3に準拠したアプリケーションの互換性を復元します。
 
 互換パッケージを使用すると、AEM を互換モードで実行でき、新しい AEM 機能に対するカスタム開発を先送りできます。
 
@@ -62,7 +62,7 @@ AEM 6.4 では、すべての機能が後方互換性を念頭に置いて開発
 
 ## 設定方法 {#how-to-set-up}
 
-The AEM 6.3 Compatibility Package will be installable as a package using the Package Manager at this [link](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63).
+AEM 6.3互換パッケージは、Package Managerを使用してパッケージとしてインストールできます。 [AEM 6.3 Compatibility Packageは、Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63)サイトからダウンロードできます。
 
 互換パッケージがインストールされると、次に示すように、OSGI 設定のスイッチを使用して、ルーティングを有効または無効にできます。
 
