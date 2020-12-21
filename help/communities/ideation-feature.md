@@ -18,7 +18,7 @@ ht-degree: 63%
 ---
 
 
-# アイディエーション機能 {#ideation-feature}
+# アイディエーション機能  {#ideation-feature}
 
 ## 概要 {#introduction}
 
@@ -36,17 +36,17 @@ ht-degree: 63%
 
 ## ページへのアイディエーションの追加 {#adding-a-ideation-to-a-page}
 
-作成者モードでページに `Ideation` コンポーネントを追加するには、コンポーネントブラウザーを使用してアイデアを表示するページを探 `Communities / Ideation` し、その場所にドラッグします。
+作成者モードで`Ideation`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して`Communities / Ideation`を探し、アイデアが表示されるページ上にドラッグします。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](ideation.md#essentials-for-client-side) 、次のように `Ideation`コンポーネントが表示されます。
+[必要なクライアント側ライブラリ](ideation.md#essentials-for-client-side)が含まれる場合、`Ideation`コンポーネントは次のように表示されます。
 
 ![chlimage_1-29](assets/chlimage_1-29.png)
 
 ## アイディエーションの設定 {#configuring-an-ideation}
 
-Select the placed `Ideation` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Ideation`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![chlimage_1-30](assets/chlimage_1-30.png) ![chlimage_1-31](assets/chlimage_1-31.png)
 
@@ -55,7 +55,7 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 「**[!UICONTROL 設定]**」タブでは、アイデアとコメントの基本機能を設定します。
 
 * **[!UICONTROL アイディエーションのタイトル]**&#x200B;アイデアの表示タイトルです。初期設定は です。 
-`Ideation`。
+`Ideation`.
 
 * **[!UICONTROL アイディエーション説明]**&#x200B;アイデアのサブタイトルとして表示される説明です。初期設定では、説明はありません。
 
@@ -71,13 +71,16 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 
 * **[!UICONTROL ファイルのアップロードを許可]**&#x200B;オンにすると、アイデアまたはコメントに添付ファイルを付加できます。初期設定はオフです。
 
-* **[!UICONTROL 最大ファイルサイズ]**&#x200B;関連( 
-`Allow File Uploads` がチェックされている。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+* **[!UICONTROL 最大ファイル]**
+サイズ関連( 
+`Allow File Uploads` がチェックされている。このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
-* **[!UICONTROL 許可されているファイルタイプ]**&#x200B;は、 
-`Allow File Uploads` がチェックされている。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
+* **[!UICONTROL 許可されているファイル]**
+タイプ関連 
+`Allow File Uploads` がチェックされている。ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
-* **[!UICONTROL 「ファイルのアップロードを許可」が選択されている場合のみ、「添付画像ファイルの最大サイズ]**」が関連します。 アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
+* **[!UICONTROL 「ファイルのアップロードを許可」がオンの場合のみ、最大添付画像ファイル]**
+サイズ関連。アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
 
 * **[!UICONTROL 応答を許可]**&#x200B;オンにすると、アイデアに投稿されたコメントに返信できます。初期設定はオフです。
 
@@ -85,7 +88,7 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 
 * **[!UICONTROL フォローを許可]**&#x200B;オンにすると、アイデアの投稿のフォロー機能が含まれます。これにより、メンバーは新しい投稿の[通知を受け取る](notifications.md)ことができます。初期設定はオフです。
 
-* **[!UICONTROL 電子メール購読を許可]**&#x200B;オンにすると、新しい投稿があった場合にメンバーに電子メールで通知できるようになります（[購読](subscriptions.md)）。Requires `Allow Following` to be checked and [email configured](email.md). 初期設定はオフです。
+* **[!UICONTROL 電子メール購読を許可]**&#x200B;オンにすると、新しい投稿があった場合にメンバーに電子メールで通知できるようになります（[購読](subscriptions.md)）。`Allow Following`を確認し、[電子メールを設定](email.md)する必要があります。 初期設定はオフです。
 
 * **[!UICONTROL 投票を許可]**&#x200B;オンにすると、アイデアのコメントに投票できます。初期設定はオフです。
 
@@ -93,9 +96,9 @@ Select the placed `Ideation` component to access and select the `Configure` icon
 
 * **[!UICONTROL おすすめコンテンツを許可]**&#x200B;オンにすると、アイデアを[おすすめコンテンツ](featured.md)として指定できます。初期設定はオフです。
 
-### 「ユーザーモデレート」タブ {#user-moderation-tab}
+### 「ユーザーモデレート」タブ  {#user-moderation-tab}
 
-Under the **[!UICONTROL User Moderation]** tab, specify how the posted ideas and comments (user generated content) are managed. For more information, see [Moderating User Generated Content](moderate-ugc.md).
+「**[!UICONTROL ユーザーモデレート]**」タブで、投稿されたアイデアとコメント（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
 * **[!UICONTROL 投稿を拒否]**&#x200B;オンにすると、信頼されているメンバーモデレーターが投稿を拒否して、公開フォーラムへの表示を止めることができます。初期設定はオフです。
 
@@ -115,23 +118,26 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted ideas and
 
 「**[!UICONTROL タグフィールド]**」タブでは、「**[!UICONTROL 設定]**」タブでタグ付けが許可されている場合に、適用できるタグを名前空間に従って制限します。
 
-* **[!UICONTROL 許可されている名前空間]**&#x200B;関連( 
-`Allow Tagging` が「 **設定** 」タブでチェックされている。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
+* **[!UICONTROL 許可されている]**
+NamespacesRelevant( 
+`Allow Tagging` が「 **** 設定」タブでチェックされます。適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
 * **[!UICONTROL 推奨の制限]**&#x200B;フォーラムに投稿するメンバーに表示する推奨タグの数を入力します。値 
-**-** 1は、制限がないことを意味します。 初期設定は 0 です。
+**-** 1は、制限がないことを意味します。初期設定は 0 です。
 
 ### 「並べ替え設定」タブ{#sort-settings-tab}
 
-Under the **[!UICONTROL Sort Settings]** tab, specify how the posted comments are sorted when displayed.
+「**[!UICONTROL 並べ替え設定]**」タブで、投稿されたコメントの表示順を指定します。
 
-* **[!UICONTROL 並べ替えの基準]**：許可されている並べ替えの選択項目をすべて選択します。 
+* **[!UICONTROL Sort]**
+ByCheckで許可されているすべての並べ替え選択項目： 
 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`」を選択します。デフォルトは `Newest, Oldest, Last Updated` です。
 
 * **[!UICONTROL デフォルトとして設定]**&#x200B;プルダウンして、オンになっている並べ替えオプションのいずれかを選択し、デフォルトとして表示されるようにします。初期設定は です。 
-`Newest`。
+`Newest`.
 
-* **[!UICONTROL Analytics Sortingのプルダウンの「Time Options」を選択し]**&#x200B;て、 
+* **[!UICONTROL Analytics Sortingの時間オプションのプ]**
+ルダウンを選択し、次のいずれかを選択します。 
 `All, Last 24 Hours, Last 7 Days, Last 30 Days`」を選択します。デフォルトは `All` です。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
@@ -146,17 +152,17 @@ Communities のすべての機能と同様に、サインインしていない�
 
 アイデアを送信する前に、ドラフトとして保存できます。
 
-この `Save as Draft` ボタンを選択すると、ドラフトが保存されます。
+`Save as Draft`ボタンを選択すると、ドラフトが保存されます。
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
-保存したドラフトを `My Drafts` タブで表示する場合、編集モード `Read More` を再開する場合に選択します。
+保存したドラフトを「`My Drafts`」タブで表示する場合は、「`Read More`」を選択して編集モードに戻ります。
 
 ![chlimage_1-34](assets/chlimage_1-34.png)
 
 #### フィードバックの提供 {#providing-feedback}
 
-Once the idea is published, other members can sign in, open the idea ( `Read More`) and like the idea, thus adding to the vote count, and make comments.
+アイデアが投稿されると、他のメンバーはサインインし、アイデア(`Read More`)を開き、アイデアと同様にして、投票数に追加し、コメントを行うことができます。
 
 ![chlimage_1-35](assets/chlimage_1-35.png)
 
