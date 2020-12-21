@@ -22,27 +22,27 @@ ht-degree: 62%
 
 ## SRP について {#about-srp}
 
-All AEM Communities components and features are built on the [social component framework (SCF)](scf.md), which invokes the SocialResourceProvider API to access all user generated content (UGC).
+すべてのAEM Communitiesのコンポーネントと機能は、[ソーシャルコンポーネントフレームワーク(SCF)](scf.md)上に構築されています。これにより、SocialResourceProvider APIが呼び出され、すべてのユーザー生成コンテンツ(UGC)にアクセスします。
 
-Before a community site is created, the [storage resource provider (SRP)](working-with-srp.md) must be configured to select an implementation consistent with the underlying [topology](topologies.md). SRPの実装は、次の3つのストレージオプションに基づいています。
+コミュニティサイトを作成する前に、[ストレージリソースプロバイダー(SRP)](working-with-srp.md)を構成し、基になる[トポロジ](topologies.md)と一致する実装を選択する必要があります。 SRPの実装は、次の3つのストレージオプションに基づいています。
 
 1. [ASRP](asrp.md) - Adobe オンデマンドストレージ
 2. [MSRP](msrp.md) - MongoDB
 3. [JSRP](jsrp.md) - JCR
 
-## UGC のストレージについて {#about-ugc-storage}
+## UGC のストレージについて  {#about-ugc-storage}
 
-What is important to know about storage of UGC is, when a site is configured to use ASRP or MSRP, the actual UGC is not be stored in AEM&#39;s [node store](../../help/sites-deploying/data-store-config.md) (JCR).
+UGCのストレージに関して知っておくべき重要な点は、サイトがASRPまたはMSRPを使用するように設定されている場合、実際のUGCはAEM [node store](../../help/sites-deploying/data-store-config.md)(JCR)に格納されないことです。
 
 UGC をコピーして有用なメタデータを提供するノードが JCR 内に存在する場合がありますが、実際の UGC とこれらのノードを混同しないでください。
 
 [ストレージリソースプロバイダーの概要](srp.md)を参照してください。
 
-## ベストプラクティス {#best-practice}
+## ベストプラクティス  {#best-practice}
 
 カスタムコンポーネントを開発する際、開発者は、現在どのトポロジを選択しているかに関係なく、将来新しいトポロジに移行する柔軟性を保ちながら、慎重にコーディングする必要があります。
 
-### JCR を使用できないことを想定する {#assume-jcr-not-available}
+### JCR を使用できないことを想定する  {#assume-jcr-not-available}
 
 JCR に固有のメソッドの使用は避ける必要があります。
 
@@ -54,7 +54,7 @@ JCR に固有のメソッドの使用は避ける必要があります。
 * OSGi イベント
    * JCRイベントがあると想定しない
 
-* [ソーシャルリソースユーティリティ](socialutils.md#socialresourceutilities-package)
+* [Social Resource Utilities](socialutils.md#socialresourceutilities-package)
 * [SCFユーティリティ](socialutils.md#scfutilities-package)
 
 使用を避けるメソッドは次のとおりです。
@@ -73,6 +73,6 @@ SRP ごとにネイティブなクエリー言語が異なる場合がありま�
 
 * [コミュニティコンテンツストレージ](working-with-srp.md) - UGC 共通ストアに使用できる SRP の選択肢
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例
 * [検索の基本事項](search-implementation.md) - UGC の検索に関する基本情報
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
