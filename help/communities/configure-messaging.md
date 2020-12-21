@@ -36,32 +36,32 @@ AEM Communitiesのメッセージ機能は、フォーラムやコメントで�
 
 メッセージング機能を有効化して変更するには、以下を参照してください。
 
-* [管理者へのメッセージの設定](messaging.md)
-* [Messaging Essentials](essentials-messaging.md) for developers
+* [管理者向け](messaging.md) メッセージの設定
+* [開発者へのメッセージ](essentials-messaging.md) の基本
 
 >[!NOTE]
 >
->作成者編集モードでのページへの `Compose Message, Message, or Message List` コンポー `Communities`ネントの追加（コンポーネントグループに含まれる）はサポートされていません。
+>`Compose Message, Message, or Message List`コンポーネント（`Communities`コンポーネントグループにあります）をページに追加する場合は、作成者編集モードではサポートされません。
 
 ## メッセージングコンポーネントの設定 {#configuring-messaging-components}
 
 コミュニティサイトでメッセージングを有効にしている場合、メッセージングは完全に設定されており、追加の設定は不要です。この情報は、デフォルトの設定を変更する必要がある場合に表示されます。
 
-### Configuring Message List (messagebox) {#configuring-message-list-messagebox}
+### メッセージリストの設定（メッセージボックス） {#configuring-message-list-messagebox}
 
-In order to modify the configuration of the list of messages for **Inbox**, **Sent Items**, and **Trash** pages of the messaging feature, open the site in [author edit mode](sites-console.md#authoring-site-content).
+メッセージング機能の&#x200B;**インボックス**、**送信済みアイテム**、**ごみ箱**&#x200B;ページのメッセージリストの設定を変更するには、[作成者編集モード](sites-console.md#authoring-site-content)でサイトを開きます。
 
-In `Preview` mode, select the **[!UICONTROL Messages]** link to open the main messaging page. Then select either **[!UICONTROL Inbox, Sent Items, or Trash]** in order to configure the component for that message list.
+`Preview`モードで、**[!UICONTROL メッセージ]**&#x200B;リンクを選択して、メインメッセージングページを開きます。 次に、**[!UICONTROL 「インボックス」、「送信済みアイテム」、または「ごみ箱]**」を選択して、そのメッセージリストのコンポーネントを設定します。
 
-In `Edit` mode, select the component on the page.
+`Edit`モードで、ページ上のコンポーネントを選択します。
 
-In order to access the configuraiton dialog, it is necessary to cancel inheritance by selecting the `link`icon.
+設定ダイアログにアクセスするには、`link`アイコンを選択して継承をキャンセルする必要があります。
 
-Once the configuration is complete, it is necessary to restore inheritance by selecting the `broken link` icon.
+設定が完了したら、`broken link`アイコンを選択して継承を復元する必要があります。
 
 ![chlimage_1-396](assets/chlimage_1-396.png)
 
-Once inheritance is canceled, it will be possible to select the `configure` icon to open the configuration dialog.
+継承がキャンセルされると、`configure`アイコンを選択して設定ダイアログを開くことができます。
 
 ![chlimage_1-397](assets/chlimage_1-397.png)
 
@@ -69,9 +69,11 @@ Once inheritance is canceled, it will be possible to select the `configure` icon
 
 ![chlimage_1-398](assets/chlimage_1-398.png)
 
-* **[!UICONTROL サービスセレクタ]**(*必須*)これは、 `serviceSelector.name` AEM Communities・メッセージング・オペレーション・サービス [](messaging.md#messaging-operations-service)のプロパティの値に設定します。
+* **[!UICONTROL サービスセレクタ]**
+(*必須*)これは、 `serviceSelector.name` AEM Communities・メッセージング・オペレーション・サービス [のプロパティの値に設定します](messaging.md#messaging-operations-service)。
 
-* **[!UICONTROL 構成ページ]**(*必須*)：メンバーが `Reply` ボタンをクリックしたときに開くページ。 ターゲットページには、**[!UICONTROL メッセージを作成]**&#x200B;フォームを含める必要があります。
+* **[!UICONTROL 構成ページ]**
+(*必須*)：メンバーが `Reply` ボタンをクリックしたときに開くページ。ターゲットページには、**[!UICONTROL メッセージを作成]**&#x200B;フォームを含める必要があります。
 
 * **[!UICONTROL リソースとして返信／表示]**&#x200B;オンにすると、返信 URL と表示 URL がリソースを参照します。オフにすると、データは URL 内でクエリパラメーターとして渡されます。
 
@@ -79,46 +81,52 @@ Once inheritance is canceled, it will be possible to select the `configure` icon
 
 * **[!UICONTROL ごみ箱フォルダー]**&#x200B;オンにすると、このメッセージリストコンポーネントには、「削除済み」（ごみ箱）のフラグが設定されているメッセージのみが表示されます。
 
-* **[!UICONTROL フォルダーパス]**(*必須*): `inbox.path.name` AEM Communities・メッセージング・オペレーション・サービス `sentitems.path.name` (TM)のと [](messaging.md#messaging-operations-service)の値セットを参照します。 When configuring for an `Inbox`, add one entry using the value of `inbox.path.name`. When configuring for an `Outbox`, add one entry using the value of `sentitems.path.name`. When configuring for `Trash`, add two entries with both values.
+* **[!UICONTROL Folder Paths]**
+(*必須*): `inbox.path.name` AEM Communities・メッセージング・オペレーション・サービス `sentitems.path.name` と [の値セットを参照します](messaging.md#messaging-operations-service)。`Inbox`の設定時に、`inbox.path.name`の値を使用して1つのエントリを追加します。 `Outbox`の設定時に、`sentitems.path.name`の値を使用して1つのエントリを追加します。 `Trash`の設定時に、両方の値を持つ2つのエントリを追加します。
 
 #### 「表示」タブ{#display-tab}
 
 ![chlimage_1-399](assets/chlimage_1-399.png)
 
-* **[!UICONTROL 既読ボタン]**（オンの場合） 
+* **[!UICONTROL 既読の]**
+ボタンをマークオンにすると、 
 `Read`ボタンをクリックし、メッセージを既読としてマークできます。
 
-* **[!UICONTROL 未読をマークボタン]**（オンの場合） 
+* **[!UICONTROL 未読をマーク]**
+ボタンオンの場合、 
 `Mark Unread` ボタンをクリックし、メッセージを既読としてマークできます。
 
-* **[!UICONTROL 削除ボタン]**：オンの場合、 
-`Delete`ボタンをクリックし、メッセージを既読としてマークできます。 Will duplicate the delete functionality if **`Message Options`** is also checked.
+* **[!UICONTROL 削除]**
+ボタンオンにすると、 
+`Delete`ボタンをクリックし、メッセージを既読としてマークできます。**`Message Options`**&#x200B;もチェックされている場合は、削除機能を重複します。
 
-* **[!UICONTROL メッセージオプション]**：オンの場合、 
-**`Reply`**、 **`Reply All`**、 **`Forward`** および **`Delete`** メッセージを再送または削除するボタン。 Will duplicate the delete functionality if **`Delete Button`** is also checked.
+* **[!UICONTROL メッセージ]**
+オプションオンの場合、 
+**`Reply`**、 **`Reply All`**、 **`Forward`** および **`Delete`** メッセージを再送または削除するボタン。**`Delete Button`**&#x200B;もチェックされている場合は、削除機能を重複します。
 
 * **[!UICONTROL 1 ページのメッセージ数]**&#x200B;指定した数字がページネーションスキームで 1 ページに表示されるメッセージの最大数になります。数字を指定しない（空白のまま）場合、すべてのメッセージが表示され、ページネーションはありません。
 
 * **[!UICONTROL タイムスタンプのパターン]** 1 つ以上の言語に対してタイムスタンプのパターンを指定します。初期設定は en、de、fr、it、es、ja、zh_CN、ko_KR です。
 
-* **[!UICONTROL 表示ユーザー]**&#x200B;選択 
-**`Sender`** または[送信者]と[受信者]のどちら **`Recipients`** を表示するかを決定する場合に使用します。
+* **[!UICONTROL 表示]**
+ユーザー選択 
+**`Sender`** または送信者と受信者 **`Recipients`** のどちらを表示するかを決定する場合に使用します。
 
 ### 「メッセージを作成」の設定{#configuring-compose-message}
 
-In order to modify the configuration of the compose message page, open the site in [author edit mode](sites-console.md#authoring-site-content).
+構成メッセージページの設定を変更するには、[作成者編集モード](sites-console.md#authoring-site-content)でサイトを開きます。
 
-In `Preview`mode, select the **[!UICONTROL Messages]** link to open the main messaging page. Then select the New Message button to open the `Compose Message` page..
+`Preview`モードで、「**[!UICONTROL メッセージ]**」リンクを選択して、メインメッセージングページを開きます。 次に、「新しいメッセージ」ボタンを選択して`Compose Message`ページを開きます。
 
-In `Edit` mode, select the main component on the page containing the Message body.
+`Edit`モードで、メッセージの本文を含むページのメインコンポーネントを選択します。
 
-In order to access the configuraiton dialog, it is necessary to cancel inheritance by selecting the `link`icon.
+設定ダイアログにアクセスするには、`link`アイコンを選択して継承をキャンセルする必要があります。
 
-Once the configuration is complete, it is necessary to restore inheritance by selecting the `broken link` icon.
+設定が完了したら、`broken link`アイコンを選択して継承を復元する必要があります。
 
 ![chlimage_1-400](assets/chlimage_1-400.png)
 
-Once inheritance is canceled, it will be possible to select the `configure` icon to open the configuration dialog.
+継承がキャンセルされると、`configure`アイコンを選択して設定ダイアログを開くことができます。
 
 ![chlimage_1-401](assets/chlimage_1-401.png)
 
@@ -127,38 +135,45 @@ Once inheritance is canceled, it will be possible to select the `configure` icon
 ![chlimage_1-402](assets/chlimage_1-402.png)
 
 * **[!UICONTROL リダイレクト URL]**&#x200B;メッセージの送信後に表示されるページの URL を入力します。例： 
-`../messaging.html`。
+`../messaging.html`
 
 * **[!UICONTROL キャンセル URL]**&#x200B;送信者がメッセージをキャンセルした場合に表示されるページの URL を入力します。例： 
-`../messaging.html`。
+`../messaging.html`.
 
 * **[!UICONTROL メッセージ件名の最大の長さ]**「件名」フィールドに許可される最大文字数です。例えば、500のように指定します。 初期設定はno limitです。
 
 * **[!UICONTROL メッセージ本文の最大の長さ]**「コンテンツ」フィールドに許可される最大文字数です。例えば、10000のように指定します。 初期設定はno limitです。
 
-* **[!UICONTROL サービスセレクタ]**(*必須*)これは、 **`serviceSelector.name`** AEM Communities・メッセージング・オペレーション・サービス [](messaging.md#messaging-operations-service)のプロパティの値に設定します。
+* **[!UICONTROL サービスセレクタ]**
+(*必須*)これは、 **`serviceSelector.name`** AEM Communities・メッセージング・オペレーション・サービス [のプロパティの値に設定します](messaging.md#messaging-operations-service)。
 
 #### 「表示」タブ{#display-tab-1}
 
 ![chlimage_1-403](assets/chlimage_1-403.png)
 
-* **[!UICONTROL Show Subject Field]**：オンの場合、 
-`Subject` フィールドにサブジェクトを追加し、メッセージにサブタイトルを追加できます。 デフォルトはチェックされていません。
+* **[!UICONTROL Show Subject]**
+Fieldオンの場合、 
+`Subject` フィールドにサブジェクトを追加し、メッセージにサブタイトルを追加できます。デフォルトはチェックされていません。
 
-* **[!UICONTROL 件名ラベル]**: 
+* **[!UICONTROL 件名]**
+ラベル 
 `Subject` field. デフォルトは `Subject` です。
 
-* **[!UICONTROL Show Attach File Field]**&#x200B;オンの場合、 
-`Attachment` フィールドに値を入力し、メッセージに添付ファイルを追加できるようにします。 デフォルトはチェックされていません。
+* **[!UICONTROL Show Attach File]**
+Fieldオンの場合、 
+`Attachment` フィールドに値を入力し、メッセージに添付ファイルを追加できるようにします。デフォルトはチェックされていません。
 
-* **[!UICONTROL [ファイルラベルを添付]**] 
-`Attachment` field. デフォルトは **`Attach File`** です。
+* **[!UICONTROL ファイルの]**
+ラベルを添付横に表示するテキストを入力します。 
+`Attachment` フィールド。デフォルトは **`Attach File`** です。
 
-* **[!UICONTROL コンテンツフィールドを表示]**：オンの場合、 
-`Content` フィールドに値を入力し、メッセージ本文の追加を有効にします。 デフォルトはチェックされていません。
+* **[!UICONTROL コンテンツ]**
+フィールドを表示オンにすると、 
+`Content` フィールドに値を入力し、メッセージ本文の追加を有効にします。デフォルトはチェックされていません。
 
-* **[!UICONTROL コンテンツラベル]**: 
-`Content` field. デフォルトは **`Body`** です。
+* **[!UICONTROL コンテンツ]**
+ラベル 
+`Content` フィールド。デフォルトは **`Body`** です。
 
 * **[!UICONTROL リッチテキストエディターを使用]**&#x200B;オンにすると、独自のリッチテキストエディターを使用するカスタムのコンテンツテキストボックスを使用することを意味します。デフォルトはチェックされていません。
 
