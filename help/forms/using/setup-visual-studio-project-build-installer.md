@@ -12,35 +12,35 @@ translation-type: tm+mt
 source-git-commit: 6a8fa45ec61014acebe09048066972ecb1284641
 workflow-type: tm+mt
 source-wordcount: '940'
-ht-degree: 63%
+ht-degree: 67%
 
 ---
 
 
 # Visual Studio プロジェクトの設定と Windows アプリケーションの構築 {#set-up-the-visual-studio-project-and-build-the-windows-app}
 
-AEM Forms では、AEM Forms アプリケーションの完全なソースコードを提供しています。このソースには、カスタムワークスペースアプリケーションを構築するためのすべてのコンポーネントが含まれています。ソースコードアーカイブ `adobe-lc-mobileworkspace-src-<version>.zip`は、ソフトウェア配布 `adobe-aemfd-forms-app-src-pkg-<version>.zip` パッケージの一部です。
+AEM Forms では、AEM Forms アプリケーションの完全なソースコードを提供しています。このソースには、カスタムワークスペースアプリケーションを構築するためのすべてのコンポーネントが含まれています。ソースコードアーカイブ`adobe-lc-mobileworkspace-src-<version>.zip`は、ソフトウェア配布の`adobe-aemfd-forms-app-src-pkg-<version>.zip`パッケージの一部です。
 
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行します。
 
-1. Open [Software Distribution](https://experience.adobe.com/downloads)（ソフトウェア配布）。 Software Distributionにログインするには、Adobe IDが必要です。
-1. ヘッダーメニューにある **[!UICONTROL Adobe Experience Manager]** をタップします。
-1. In the **[!UICONTROL Filters]** section:
-   1. [ **[!UICONTROL ソリューション]****ドロップダウンリストから[]** Forms]を選択します。
-   2. パッケージのバージョンと種類を選択します。 また、「 **[!UICONTROL 検索のダウンロード数]** 」オプションを使用して結果をフィルターすることもできます。
-1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「EULA条項に **[!UICONTROL 同意します]**」を選択して、「 **[!UICONTROL ダウンロード]**」をタップします。
-1. パッ [ケージマネージャーを開き](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html) 、「パッケージを **[!UICONTROL アップロード]** 」をクリックしてパッケージをアップロードします。
-1. Select the package and click **[!UICONTROL Install]**.
+1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。 ソフトウェアディストリビューションにログインするには、Adobe ID が必要です。
+1. ヘッダーメニューにある&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;をタップします。
+1. 「**[!UICONTROL フィルター]**」セクションで、
+   1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
+   2. パッケージのバージョンとタイプを選択します。 また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して、結果をフィルターすることもできます。
+1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「**[!UICONTROL EULA条項に同意]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
+1. [Package Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)を開き、「**[!UICONTROL パッケージをアップロード]**」をクリックして、パッケージをアップロードします。
+1. パッケージを選択し、「**[!UICONTROL インストール]**」をクリックします。
 
-1. ソースコードアーカイブをダウンロードするには、ブラウザ `https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip` ーで開きます。
+1. ソースコードアーカイブをダウンロードするには、ブラウザで`https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip`を開きます。
 
    ソースパッケージがデバイスにダウンロードされます。
 
-The following image displays the extracted contents of the `adobe-lc-mobileworkspace-src-<version>.zip`.
+次の画像は、`adobe-lc-mobileworkspace-src-<version>.zip`の抽出された内容を示しています。
 
 ![mws-content-2](assets/mws-content-2.png)
 
-The following image displays the directory structure of the `windows` folder in the `src` folder.
+次の図は、`src`フォルダー内の`windows`フォルダーのディレクトリ構造を示しています。
 
 ![win-dir](assets/win-dir.png)
 
@@ -52,14 +52,14 @@ Windows デバイスの場合、以下の環境が必要です。
 * Microsoft Visual Studio 2015
 * Apache Cordova 向け Microsoft Visual Studio Tools
 
-## AEM Forms アプリケーション向けの Visual Studio プロジェクトの設定 {#setting-up-visual-studio-project-for-aem-forms-app}
+## AEM Forms アプリケーション向けの Visual Studio プロジェクトの設定  {#setting-up-visual-studio-project-for-aem-forms-app}
 
 Visual Studio で AEM Forms アプリケーションのプロジェクトを設定するには、以下の手順を実行します。
 
-1. Copy the `adobe-lc-mobileworkspace-src-<version>.zip` archive to `%HOMEPATH%\Projects` folder in the Windows 8.1 or Windows 10 device with Visual Studio 2015 installed and configured.
-1. Extract the archive in the `%HOMEPATH%\Projects\MobileWorkspace` directory.
-1. Navigate to the `%HOMEPATH%\Projects\MobileWorkspace\adobe-lc-mobileworkspace-src-[versionsrc]\windows` directory.
-1. Open the `CordovaApp.sln` file using Visual Studio 2015 and proceed to building the AEM Forms app.
+1. Visual Studio 2015がインストールおよび構成されているWindows 8.1またはWindows 10デバイスの`adobe-lc-mobileworkspace-src-<version>.zip`フォルダーに`%HOMEPATH%\Projects`アーカイブをコピーします。
+1. アーカイブを`%HOMEPATH%\Projects\MobileWorkspace`ディレクトリに展開します。
+1. `%HOMEPATH%\Projects\MobileWorkspace\adobe-lc-mobileworkspace-src-[versionsrc]\windows`ディレクトリに移動します。
+1. Visual Studio 2015を使用して`CordovaApp.sln`ファイルを開き、AEM Formsアプリの作成に進みます。
 
 ## AEM Forms アプリケーションの構築 {#build-aem-forms-app}
 
@@ -69,10 +69,10 @@ AEM Forms アプリケーションを構築しデプロイするには、次の�
 >
 >AEM Forms アプリケーション向けに Windows ファイルシステムに保存されるデータは、暗号化されていません。Windows BitLocker Drive Encryptionなどのサードパーティ製ツールを使用して、ディスクデータを暗号化することをお勧めします。
 
-1. In the Visual Studio Standard Toolbar, select **Release** from the drop-down for build mode.
+1. Visual Studioの標準ツールバーで、ビルドモードのドロップダウンから「**リリース**」を選択します。
 
 1. 使用しているプラットフォームに応じて Windows-AnyCPU、Windows-x64、または Windows-x86 を選択します。Windows-AnyCPU を選択することをお勧めします。
-1. In the Visual Studio Solution Explorer, right-click the project **CordovaApp.Windows** and select **Store > Create AppPackages**.
+1. Visual Studio Solution Explorerで、プロジェクト&#x200B;**CordovaApp.Windows**&#x200B;を右クリックし、**ストア/AppPackagesを作成**&#x200B;を選択します。
 
    ![createapppackages](assets/createapppackages.png)
 
@@ -80,7 +80,7 @@ AEM Forms アプリケーションを構築しデプロイするには、次の�
 
    CordovaApp.Windows_3.0.2.0_anycpu.appx インストーラーファイルが platforms\windows\AppPackages\CordovaApp.Windows_3.0.2.0_anycpu_Test ディレクトリに作成されます。
 
-   If you encounter the error `Retarget to windows 8.1 required`, right-click the error and in the pop-up menu, select **Retarget To Windows 8.1**.
+   エラー`Retarget to windows 8.1 required`が発生した場合は、エラーを右クリックし、ポップアップメニューで[**Windows 8.1にリターゲットする**]を選択します。
 
    ![リターゲット解](assets/retarget-solution.png)
 
@@ -97,7 +97,7 @@ AEM Forms アプリケーションを構築しデプロイするには、次の�
    * Windows PowerShell
    * Visual Studio
 
-   The `.appx` package requires the following items to install successfully:
+   `.appx`パッケージを正常にインストールするには、次のアイテムが必要です。
 
    1. WinJS ライブラリ
    1. WinJS のパッケージに、自己署名証明書または VeriSign などの信頼できる機関によって署名された公開証明書が付帯していることを確認してください。
@@ -112,13 +112,13 @@ AEM Forms アプリケーションを構築しデプロイするには、次の�
 
 
 
-## Windows PowerShell によるアプリのデプロイ {#deploying-an-app-using-windows-powershell}
+## Windows PowerShell によるアプリのデプロイ  {#deploying-an-app-using-windows-powershell}
 
 Windows デバイスにアプリケーションをインストールするには、以下の 2 つの方法があります。
 
 ### 開発者用のライセンスを取得する方法 {#by-acquiring-the-developer-license}
 
-1. Right-click on the PowerShell file ( `Add-AppDevPackage.ps1)`, and choose **Run with PowerShell**.
+1. PowerShellファイル(`Add-AppDevPackage.ps1)`)を右クリックし、「**PowerShellで実行**」を選択します。
 
 1. 開発者用のライセンスを取得するように求めるセットアップ画面が表示されます。Microsoft アカウントの資格情報を使用して、開発者用のライセンスを取得します。
 
@@ -126,7 +126,7 @@ Windows デバイスにアプリケーションをインストールするには
 
 1. 開発者用のライセンスを取得すると、セットアップでシステムに自己署名証明書がインストールされ、アプリケーションが正常にインストールされます。
 
-### 企業の所有するデバイスを使用する方法 {#by-using-enterprise-owned-devices}
+### 企業の所有するデバイスを使用する方法  {#by-using-enterprise-owned-devices}
 
 企業のエンタープライズドメインに加入している企業の所有するデバイスの場合は、開発者用のライセンスを取得する必要はありません。
 
@@ -141,7 +141,7 @@ Microsoft では VeriSign などの信頼できる機関が発行した公開証
 
 **グループポリシー設定を有効にするには：**
 
-1. In your device, run `gpedit.msc`.
+1. デバイスで、`gpedit.msc`を実行します。
 1. **コンピューターの構成／管理用テンプレート／Windows コンポーネント／アプリケーションパッケージの展開**&#x200B;に移動します。
 1. 「**信頼できるすべてのアプリケーションのインストールを許可する**」を右クリックします。
 1. 「**編集**」をクリックし、「**有効**」を選択します。
@@ -150,7 +150,7 @@ Microsoft では VeriSign などの信頼できる機関が発行した公開証
 
 次の手順で Visual Studio によって生成された PowerShell スクリプトを編集し、開発者用のライセンスを取得しないように設定します。
 
-In the PowerShell script, set the variable: `$NeedDeveloperLicense = $false`.
+PowerShellスクリプトで、次の変数を設定します。`$NeedDeveloperLicense = $false`.
 
 ドメインに加入していないデバイスの場合は、製品のアクティベーションキーのサイドローディングが必要です。アクティベーションキーは Windows 販売店で購入することができます。
 
@@ -158,13 +158,13 @@ In the PowerShell script, set the variable: `$NeedDeveloperLicense = $false`.
 
 詳しくは、[こちら](https://blogs.msdn.com/b/mvpawardprogram/archive/2014/03/24/side-loading-deployment-of-windows-store-apps-in-enterprises-step-by-step.aspx)をクリックしてください。
 
-## Visual Studio によるアプリのデプロイ {#deploying-an-app-using-visual-studio}
+## Visual Studio によるアプリのデプロイ  {#deploying-an-app-using-visual-studio}
 
 Visual Studio を使用して Windows にアプリをインストールするには：
 
 1. リモートデバッガーを使用してデバイスに接続します。
 
-   For more information, see [Run Windows Store apps on a remote machine](https://docs.microsoft.com/en-us/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine).
+   詳しくは、「[リモートマシンでWindowsストアアプリケーションを実行する](https://docs.microsoft.com/en-us/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine)」を参照してください。
 
 1. Visual Studio でアプリケーションを開き、ソリューションプラットフォームリストで Windows-x64、Windows-x86、または Windows-AnyCPU を選択して「**リモートマシン**」を選択します。
 1. リモートマシンにアプリケーションがデプロイされます。
