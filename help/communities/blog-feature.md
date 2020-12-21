@@ -44,7 +44,7 @@ AEM Communities のブログ機能は、オーサリングアクティビティ�
 
 >[!NOTE]
 >
->コンポーネント `Journal`と `Journal Sidebar` には「および」という名前が付け `Blog` られ `Blog Sidebar`ます。
+>`Journal`と`Journal Sidebar`は、`Blog`と`Blog Sidebar`という名前が付けられています。
 >
 >AEM 6.0 以前のリリースのブログ機能は、現在は削除されています。テンプレートに基づいており、作成者だけが作成者環境でコンテンツを作成できます。
 
@@ -57,21 +57,21 @@ AEM Communities のブログ機能は、オーサリングアクティビティ�
 
 ブログが表示されるページにドラッグします。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](blog-developer-basics.md#essentials-for-client-side) 、次のように `Blog`コンポーネントが表示されます。
+[必要なクライアント側ライブラリ](blog-developer-basics.md#essentials-for-client-side)が含まれる場合、`Blog`コンポーネントは次のように表示されます。
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
-そして、次のよう `Blog Sidebar` に表示されます。
+`Blog Sidebar`は、次のように表示されます。
 
 ![chlimage_1-148](assets/chlimage_1-148.png)
 
 ### ブログの設定 {#configuring-blog}
 
-Select the placed `Blog` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Blog`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
-![アイコン](assets/chlimage_1-149.png)![ブログ設定の指定](assets/Blog-configure.png)
+![iconBlog設定](assets/chlimage_1-149.png) ![の指定](assets/Blog-configure.png)
 
 #### 「設定」タブ{#settings-tab}
 
@@ -81,15 +81,19 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **[!UICONTROL 添付サムネールの最大サイズ]** 添付サムネール画像の最大サイズ（ピクセル単位）です。デフォルト値は、800 x 800 です。
 
-* **[!UICONTROL サムネールの最小画像サイズ]**&#x200B;インライン画像のサムネールを生成するための画像の最小サイズ（バイト単位）です。 デフォルト値は100000バイト(100 KB)です。
+* **[!UICONTROL ThumbnailThumbnailMinimum画像の最小画像サイズ（バイト単位）です。インライン画像のサムネールを生成するための画像の最小]**
+画像サイズです。デフォルト値は100000バイト(100 KB)です。
 
-* **[!UICONTROL 最大サムネールサイズ]**&#x200B;インライン画像のサムネール画像の最大サイズ（ピクセル単位）。 デフォルト値は、800 x 800 です。
+* **[!UICONTROL 最大サムネール]**
+サイズインライン画像のサムネール画像の最大サイズ（ピクセル単位）デフォルト値は、800 x 800 です。
 
-* **[!UICONTROL 「Allow Privileged Members]**」を選択すると、「Privileged Members」のみがコンテンツの作成を許可されます。
+* **[!UICONTROL Allow Privileged]**
+Membersオンの場合、Privileged Membersのみがコンテンツの作成を許可されます。
 
 * **[!UICONTROL 許可された権限を持つメンバー]**&#x200B;コンテンツの作成を許可された、権限を持つメンバーを追加します。
 
-* **[!UICONTROL 作成者編集モードでユーザー生成コンテンツをブロックする]**&#x200B;有効な場合、作成者モードでの編集中にユーザー生成コンテンツがブロックされます。
+* **[!UICONTROL 作成者編集]**
+モードでユーザー生成コンテンツをブロックする有効な場合、作成者モードでの編集中にユーザー生成コンテンツをブロックします。
 
 * **[!UICONTROL ジャーナルタイトル]**&#x200B;ページに表示されるブログのタイトルです。
    >注意：
@@ -115,7 +119,7 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **[!UICONTROL タグ付けを許可]**
 
-   If checked, allow members to add tag labels to their post (see **[!UICONTROL Tag field]** tab). 初期設定はオフです。
+   オンにした場合、メンバーは自分の投稿にタグラベルを追加できます（「**[!UICONTROL タグフィールド]**」タブを参照）。 初期設定はオフです。
 
 * **[!UICONTROL ファイルのアップロードを許可]**
 
@@ -123,11 +127,11 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **[!UICONTROL 最大ファイルサイズ]**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
 * **[!UICONTROL 許可されるファイルタイプ]**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
 * **[!UICONTROL 添付する画像ファイルの最大サイズ]**
 
@@ -143,11 +147,11 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **[!UICONTROL フォローを許可]**
 
-   If checked, include the following feature for blog articles, which allows members to be [notified](notifications.md) of new posts. 初期設定はオフです。
+   オンにした場合、ブログ記事に次の機能を含めます。これにより、メンバーに新しい投稿の[通知](notifications.md)を送信できます。 初期設定はオフです。
 
 * **[!UICONTROL 電子メール購読を許可]**
 
-   If checked, allow members to be notified of new posts by email ([subscription](subscriptions.md)). Requires `Allow Following` to be checked and [email configured](email.md). 初期設定はオフです。
+   オンにした場合、メンバーに電子メールで新しい投稿の通知を許可します([購読](subscriptions.md))。 `Allow Following`を確認し、[電子メールを設定](email.md)する必要があります。 初期設定はオフです。
 
 * **[!UICONTROL 投票を許可]**
 
@@ -155,13 +159,13 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **[!UICONTROL バッジを表示]**
 
-   If checked, display earned and assigned [badges](implementing-scoring.md) with a member&#39;s blog entry. 初期設定はオフです。
+   オンの場合、獲得したバッジを表示し、会員のブログエントリに[バッジ](implementing-scoring.md)を割り当てます。 初期設定はオフです。
 
 * **[!UICONTROL おすすめコンテンツを許可]**
 
-   if checked, the idea is able to be identified as [featured content](featured.md). 初期設定はオフです。
+   チェックすると、アイデアは[特集コンテンツ](featured.md)として識別できます。 初期設定はオフです。
 
-#### 「ユーザーモデレート」タブ {#user-moderation-tab}
+#### 「ユーザーモデレート」タブ  {#user-moderation-tab}
 
 「**[!UICONTROL ユーザーモデレート]**」タブでは、以下のモデレート設定を指定します。
 
@@ -199,15 +203,15 @@ Select the placed `Blog` component to access and select the `Configure` icon whi
 
 * **[!UICONTROL 許可された名前空間]**
 
-   「 `Allow Tagging` 設定 **** 」タブでチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
+   「**[!UICONTROL 設定]**」タブで`Allow Tagging`がチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
 * **[!UICONTROL 推奨の制限]**
 
    フォーラムに投稿するメンバーに対して提案として表示するタグの数を入力します。 -1 は無制限を意味します。初期設定は 0 です。
 
-### ブログのサイドバーの設定 {#configuring-blog-sidebar}
+### ブログのサイドバーの設定  {#configuring-blog-sidebar}
 
-When you double-click the `Blog Sidebar` component, an edit dialog opens up.
+`Blog Sidebar`コンポーネントを重複クリックすると、編集ダイアログが開きます。
 
 「**[!UICONTROL ジャーナルサイドバー設定]**」タブでは、アーカイブの日付の形式と、サイドバーに表示するエントリのタイプを指定します。
 
@@ -235,7 +239,7 @@ When you double-click the `Blog Sidebar` component, an edit dialog opens up.
 
 * **[!UICONTROL ジャーナルコンポーネントのパス]**
 
-   *（オプション）* ブログ記事のリスト元となるブログリソースの場所。 If left blank, will use the component of resourceType `social/journal/components/hbs/journal` that appears on the same page.
+   *（オプション）* ブログ記事のリスト元となるブログリソースの場所。空白の場合、同じページに表示されるresourceType `social/journal/components/hbs/journal`のコンポーネントが使用されます。
 
    * 例：`/content/sites/engage/en/blog/jcr:content/content/primary/blog`
 
@@ -253,7 +257,7 @@ When you double-click the `Blog Sidebar` component, an edit dialog opens up.
 
 その他の機能は、サイト訪問者がモデレーターか、管理者か、コミュニティメンバーか、権限を持つメンバーか、匿名かによって異なります。
 
-### 記事の操作 {#working-with-articles}
+### 記事の操作  {#working-with-articles}
 
 新しいブログ記事を作成するときには、公開方法を以下の中から選択できます。
 
@@ -263,7 +267,7 @@ When you double-click the `Blog Sidebar` component, an edit dialog opens up.
 
 ブログ記事は、それぞれ適切なタブ（公開済み、ドラフト、スケジュール済み）で、パブリッシュ環境でオーサリングできるメンバー向けに表示されます。
 
-#### モデレーターおよび管理者 {#moderators-and-administrators}
+#### モデレーターおよび管理者  {#moderators-and-administrators}
 
 サインインしているユーザーがモデレーター権限または管理者権限を持っている場合、そのユーザーは、すべてのブログ記事およびブログに投稿されたコメントに対して[モデレートタスク](moderate-ugc.md)を実行できます（実行可能な操作はコンポーネントの設定に従います）。
 
@@ -271,7 +275,7 @@ When you double-click the `Blog Sidebar` component, an edit dialog opens up.
 
 ### メンバー {#members}
 
-When the signed in user is a community member or [privileged member](users.md#privileged-members-group) (depending on configuration), they are able to select `New Article` to create and post a new blog article.
+サインインしたユーザーがコミュニティのメンバーまたは[特権メンバー](users.md#privileged-members-group)（設定によって異なります）の場合、`New Article`を選択して新しいブログ記事を作成し、投稿することができます。
 
 具体的には、次のことが可能です。
 
