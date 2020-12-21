@@ -27,25 +27,25 @@ ht-degree: 82%
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
 * AEMサイトへのファイルライブラリ機能の追加
-* Configuration settings for the `File Library` component
+* `File Library`コンポーネントの構成設定
 
 ## ファイルライブラリをページに追加 {#adding-a-file-library-to-a-page}
 
-To add a `File Library` component to a page in author mode, locate the component
+作成者モードで`File Library`コンポーネントをページに追加するには、コンポーネントを見つけます
 
 * `Communities / File Library`
 
 コンポーネントを探し、ページ上の位置にドラッグします。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](essentials-file-library.md#essentials-for-client-side) 、次のようにコンポー `File Library` ネントが表示されます。
+[必要なクライアント側ライブラリ](essentials-file-library.md#essentials-for-client-side)が含まれる場合、`File Library`コンポーネントは次のように表示されます。
 
 ![chlimage_1-430](assets/chlimage_1-430.png)
 
 ## ファイルライブラリの設定 {#configuring-file-library}
 
-Select the placed `File Library` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`File Library`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![chlimage_1-431](assets/chlimage_1-431.png) ![chlimage_1-432](assets/chlimage_1-432.png)
 
@@ -80,7 +80,7 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 * **[!UICONTROL スレッド化された返信を許可]**&#x200B;オンにすると、投稿されたコメントに返信できるようになります。初期設定はオフです。
 
-### 「ユーザーモデレート」タブ {#user-moderation-tab}
+### 「ユーザーモデレート」タブ  {#user-moderation-tab}
 
 「**[!UICONTROL ユーザーモデレート]**」タブでは、コメントが許可されている場合に、コメントのモデレートを設定します。
 
@@ -106,7 +106,7 @@ Select the placed `File Library` component to access and select the `Configure` 
 
 ## 追加情報 {#additional-information}
 
-More information may be found on the [File Library Essentials](essentials-file-library.md) page for developers.
+詳しくは、[File Library Essentials](essentials-file-library.md)ページを参照してください。
 
 投稿されたトピックとコメントのモデレートについては、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
