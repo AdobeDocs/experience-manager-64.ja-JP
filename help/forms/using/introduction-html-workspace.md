@@ -18,7 +18,7 @@ ht-degree: 88%
 ---
 
 
-# AEM Forms Workspace の概要 {#introduction-to-aem-forms-workspace}
+# AEM Forms Workspace の概要  {#introduction-to-aem-forms-workspace}
 
 Forms ワークフローは自動化を実現し、重要なドキュメントやフォーム関連のビジネスプロセスを可視化することにより、組織の効率化を促進します。Process Management モジュールを使用すると、人員、システム、コンテンツ、ビジネス規則を含め、合理化されたエンドツーエンドのワークフローを構築できます。ワークフローにはオンラインおよびオフラインでアクセスできます。Forms ワークフローには AEM Forms ワークスペースが含まれます。AEM Forms Workspace にはワークスペースを拡張、統合するための新しい機能が追加されており、より使いやすくなっています。
 
