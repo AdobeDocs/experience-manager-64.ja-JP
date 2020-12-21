@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# プロセスレポートの概要 {#introduction-to-process-reporting}
+# プロセスレポートの概要{#introduction-to-process-reporting}
 
 ![プロセスレポート](assets/process-reporting.png)
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 追加のプロセスレポートは、アドホッククエリを実行し、カスタムレポート表示をプロセスレポートユーザーインターフェイスに統合するためのインターフェイスを提供します。
 
-サポートされるブラウザーのリストについては、「 [AEM Formsでサポートされるプラットフォーム](/help/forms/using/aem-forms-jee-supported-platforms.md)」を参照してください。
+サポートされるブラウザーのリストについては、「[AEM Formsでサポートされるプラットフォーム](/help/forms/using/aem-forms-jee-supported-platforms.md)」を参照してください。
 
 プロセスレポートは、次の機能を持つモジュールに基づいて構築されています。
 
@@ -35,9 +35,9 @@ ht-degree: 0%
 * 埋め込みプロセスレポートリポジトリへのプロセスデータの発行
 * 表示レポートにブラウザベースのユーザインターフェイスを提供します。
 
-## Key Capabilities {#key-capabilities}
+## 主な機能{#key-capabilities}
 
-### 常にオンのレポート {#always-on-reporting}
+### 常時オンレポート{#always-on-reporting}
 
 ![サイト管理](assets/site-management.png)
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 プロセスレポートには、レポートおよびクエリデータをCSV形式で書き出すオプションも用意されています。
 
-### アドホックレポート {#adhoc-reports}
+### アドホックレポート{#adhoc-reports}
 
 ![print-&amp;-color](assets/print-&-colour.png)
 
@@ -57,7 +57,7 @@ ID、期間、開始日、終了日、プロセス開始者などで、プロセ
 
 その後、後で実行するレポートフィルターを保存できます。
 
-### プロセス/タスクの履歴 {#process-task-history}
+### プロセス/タスク履歴{#process-task-history}
 
 ![ファイル管理](assets/file-management.png)
 
