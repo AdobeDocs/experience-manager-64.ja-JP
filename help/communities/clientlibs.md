@@ -26,15 +26,15 @@ ht-degree: 62%
 
 基本情報については、以下を参照してください。
 
-* [使用状況の詳細とデバッグツールを提供するクライアント側ライブラリ](../../help/sites-developing/clientlibs.md) (Using Client-Side Libraries)
-* [SCFコンポーネントのカスタマイズ時に役立つ情報を提供する、SCF](client-customize.md#clientlibs) 用のClientlibs
+* [使用の詳細とデバッグツールを提供するクライアント側](../../help/sites-developing/clientlibs.md) ライブラリの使用
+* [SCFコンポーネントのカスタマイズ時に役立つ情報を提供する、](client-customize.md#clientlibs) SCF用のClientlibs
 * [ブログ：AEM Client Libraries explained by example](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
 
 ## clientlib が必要になる理由 {#why-clientlibs-are-required}
 
 コンポーネントを正しく機能させ（JavaScript）、スタイル設定する（CSS）には、clientlib が必要です。
 
-When there exists a [community function](functions.md) for a feature, all necessary components and configurations, including the required clientlibs, will be present in the community site. 作成者が追加のコンポーネントを使用できる場合にのみ、追加のclientlibを追加する必要があります。
+機能に[コミュニティ関数](functions.md)が存在する場合は、必要なclientlibを含む必要なコンポーネントや設定がすべてコミュニティサイトに表示されます。 作成者が追加のコンポーネントを使用できる場合にのみ、追加のclientlibを追加する必要があります。
 
 必須の clientlib が欠落していると、[ページにコミュニティコンポーネントを追加](author-communities.md)したときに、JavaScript エラーが発生したり、予期しない外観が生じたりする可能性があります。
 
@@ -52,7 +52,7 @@ When there exists a [community function](functions.md) for a feature, all necess
 
 また、AEM インスタンスから[コミュニティコンポーネントガイド](components-guide.md)を参照すると、コンポーネントに必須の clientlib カテゴリのリストにアクセスできます。
 
-For example, at the very top of the [Reviews page](http://localhost:4502/content/community-components/en/reviews.html) the required clientlibs listed are
+例えば、[レビューページ](http://localhost:4502/content/community-components/en/reviews.html)の最上部に、必要なclientlibが表示されます。
 
 * cq.ckeditor
 * cq.social.hbs.reviews
@@ -65,20 +65,20 @@ For example, at the very top of the [Reviews page](http://localhost:4502/content
 
 [CRXDE|Lite](#using-crxde-lite) を使用すると、コミュニティサイトページの既存の clientlibslist を変更できます。
 
-[CRXDE Liteを使用してコミュニティサイトのclientlibを追加するには](../../help/sites-developing/developing-with-crxde-lite.md):
+[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)を使用してコミュニティサイトのclientlibを追加するには：
 
-* Browse to [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
-* Locate the `clientlibslist` node for the page on which you wish to add the component
+* [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)を参照します。
+* コンポーネントを追加するページの`clientlibslist`ノードを見つけます
 
    * `/content/sites/sample/en/page/jcr:content/clientlibslist`
 
-* With `clientlibslist` node selected
+* `clientlibslist`ノードを選択した状態
 
-   * String[] プロパティを検索する `scg:requiredClientLibs`
-   * Select its `Value` to access the String array dialog
+   * 文字列[]プロパティ`scg:requiredClientLibs`を探します
+   * `Value`を選択して[文字列配列]ダイアログにアクセスします
 
       * 必要に応じて下にスクロールします
-      * Select `+` to enter a new client library
+      * `+`を選択して新しいクライアントライブラリを入力します
 
          * 繰り返してクライアントライブラリを追加
       * 「**[!UICONTROL OK]**」を選択します。
