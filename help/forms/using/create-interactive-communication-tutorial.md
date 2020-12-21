@@ -22,7 +22,7 @@ ht-degree: 58%
 
 ![対話形式のコミュニケーションのスタイルを設定する](assets/styleaf.png)
 
-This tutorial is a step in the [Create your first Interactive Communication](/help/forms/using/create-your-first-interactive-communication.md) series. チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
+このチュートリアルは、[最初の対話型通信を作成する](/help/forms/using/create-your-first-interactive-communication.md)シリーズのステップです。 チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
 
 フォームデータモデル、ドキュメントフラグメント、テンプレート、Web 版用のテーマなどのすべての構築ブロックの作成が終わったら、インタラクティブ通信の作成を開始できます。
 
@@ -34,7 +34,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 * Web チャネル用のインタラクティブ通信の作成
 * 印刷をマスターとする印刷版および Web 版インタラクティブ通信の作成
 
-## 同期なしでの印刷版および Web 版のインタラクティブ通信の作成 {#create-interactive-communications-for-print-and-web-with-no-synchronization}
+## 同期なしでの印刷版および Web 版のインタラクティブ通信の作成  {#create-interactive-communications-for-print-and-web-with-no-synchronization}
 
 ### 印刷チャネル用のインタラクティブ通信の作成 {#create-interactive-communication-for-print-channel}
 
@@ -42,7 +42,7 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 **印刷テンプレート：** [create_first_ic_print_template](/help/forms/using/create-templates-print-web.md)
 
-**Form Data Model:** [FDM_Create_First_IC](create-form-data-model-tutorial.md)
+**フォームデータモデル：** [FDM_Create_First_IC](create-form-data-model-tutorial.md)
 
 **ドキュメントフラグメント：** [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](/help/forms/using/create-document-fragments.md)
 
@@ -51,18 +51,18 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 **画像：** PayNow および ValueAddedServices
 
 1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
-1. Tap **Create** and select **Interactive Communication**. The **Create Interactive Communication** wizard is displayed.
-1. 「**タイトル**」と「**名前**」フィールドに **create_first_ic** と入力します。Select **FDM_Create_First_IC** as the Form Data Model and tap **Next**.
-1. In the **Channels** wizard:
+1. 「**作成**」をタップし、「**対話型通信**」を選択します。 **対話型通信の作成**&#x200B;ウィザードが表示されます。
+1. 「**タイトル**」と「**名前**」フィールドに **create_first_ic** と入力します。フォームデータモデルとして&#x200B;**FDM_Create_First_IC**&#x200B;を選択し、**「次へ**」をタップします。
+1. **チャネル**&#x200B;ウィザード：
 
-   1. Specify **create_first_ic_print_template** as the Print template and tap **Select**. Ensure that the **Use Print as Master for Web Channel** checkbox is not selected.
-   1. Specify **Create_First_IC_templates** folder > **Create_First_IC_Web_Template** as the Web template and tap **Select**.
+   1. 印刷テンプレートとして&#x200B;**create_first_ic_print_template**&#x200B;を指定し、「**選択**」をタップします。 「**Webチャネル**&#x200B;のマスターとして印刷」チェックボックスが選択されていないことを確認します。
+   1. **Create_First_IC_templates**&#x200B;フォルダー/**Create_First_IC_Web_Template**&#x200B;をWebテンプレートとして指定し、**「Select**」をタップします。
    1. 「**作成**」をタップします。
 
    インタラクティブ通信が正常に作成されたことを通知する確認メッセージが表示されます。
 
 1. 「**編集**」をタップし、右側のペインでインタラクティブ通信を開きます。
-1. Go to the **Assets** tab and apply the filter to display only the document fragments in the left pane.
+1. 「**アセット**」タブに移動し、フィルターを適用して左側のペインにドキュメントフラグメントのみを表示します。
 1. 以下のドキュメントフラグメントをインタラクティブ通信のターゲット領域にドラッグアンドドロップします。
 
    | ドキュメントフラグメント | ターゲット領域 |
@@ -74,30 +74,30 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
    ![create_first_ic_doc_fragments](assets/create_first_ic_doc_fragments.png)
 
-1. Tap **Charts** target area, and tap **+** to add a **Chart** component.
-1. Tap the Chart component and select ![configure_icon](assets/configure_icon.png) (Configure). グラフのプロパティが左側のペインに表示されます：
+1. **グラフ**&#x200B;のターゲット領域をタップし、**+**&#x200B;をタップして&#x200B;**グラフ**&#x200B;コンポーネントを追加します。
+1. グラフコンポーネントをタップし、![configure_icon](assets/configure_icon.png)（設定）を選択します。 グラフのプロパティが左側のペインに表示されます：
 
    1. グラフ名を指定します。
    1. 「**グラフのタイプ**」ドロップダウンリストから「**円グラフ**」を選択します。
-   1. **X 軸**&#x200B;セクションの&#x200B;**通話**&#x200B;データモデルオブジェクトタイプから **Calltype** プロパティを選択します。「 ![done_icon](assets/done_icon.png)」をタップします。
+   1. **X 軸**&#x200B;セクションの&#x200B;**通話**&#x200B;データモデルオブジェクトタイプから **Calltype** プロパティを選択します。![done_icon](assets/done_icon.png)をタップします。
    1. 「**関数**」ドロップダウンリストから&#x200B;**頻度**&#x200B;を選択します。
-   1. Select the **calltype** property from the **calls** data model object type in the **Y-axis** section. 「 ![done_icon](assets/done_icon.png)」をタップします。
-   1. Tap ![done_icon](assets/done_icon.png) to save the chart properties.
+   1. **Y軸**&#x200B;セクションの&#x200B;**calls**&#x200B;データモデルオブジェクトタイプから&#x200B;**calltype**&#x200B;プロパティを選択します。 ![done_icon](assets/done_icon.png)をタップします。
+   1. ![done_icon](assets/done_icon.png)をタップして、グラフのプロパティを保存します。
 
-1. Go to the **Assets** tab and apply the filter to display only the layout fragments in the left pane. **table_lf** レイアウトフラグメントを&#x200B;**通話明細**&#x200B;のターゲット領域にドラッグアンドドロップします。
-1. Select the Text Field in the **Date** column and tap ![configure_icon](assets/configure_icon.png) (Configure).
-1. 「**連結タイプ**」ドロップダウンリストから「**データモデルオブジェクト**」を選択し、**calls**／**calldate** の順に選択します。Tap ![done_icon](assets/done_icon.png) twice to save the properties.
+1. 「**アセット**」タブに移動し、フィルターを適用して左側のペインにレイアウトフラグメントのみを表示します。 **table_lf** レイアウトフラグメントを&#x200B;**通話明細**&#x200B;のターゲット領域にドラッグアンドドロップします。
+1. **日付**&#x200B;列のテキストフィールドを選択し、![設定_icon](assets/configure_icon.png)（設定）をタップします。
+1. 「**連結タイプ**」ドロップダウンリストから「**データモデルオブジェクト**」を選択し、**calls**／**calldate** の順に選択します。![done_icon](assets/done_icon.png)を2回タップしてプロパティを保存します。
 
    同様に、**時刻**、**番号**、**時間**、および&#x200B;**料金**&#x200B;のテキストフィールドについて、それぞれ&#x200B;**calltime**、**callnumber**、**callduration**、および **callcharges** との連結を作成します。
 
-1. Tap **PayNow** target area, and tap **+** to add an **Image** component.
-1. Tap the Image component and select ![configure_icon](assets/configure_icon.png) (Configure). 画像のプロパティが左側のペインに表示されます：
+1. **PayNow**&#x200B;ターゲット領域をタップし、**+**&#x200B;をタップして&#x200B;**画像**&#x200B;コンポーネントを追加します。
+1. 画像コンポーネントをタップし、![configure_icon](assets/configure_icon.png)（設定）を選択します。 画像のプロパティが左側のペインに表示されます：
 
    1. 「**名前**」フィールドで、**PayNow** を画像の名前として指定します。
    1. 「**アップロード**」をタップし、ローカルのファイルシステムに保存された画像を選択して「**開く**」をタップします。
-   1. Tap ![done_icon](assets/done_icon.png) to save the image properties.
+   1. ![done_icon](assets/done_icon.png)をタップして、画像のプロパティを保存します。
 
-1. Repeat steps 13 and 14 to add **ValueAddedServices** image to the **ValueAddedServices** target area.
+1. 手順13と14を繰り返して、**ValueAddedServices**&#x200B;ターゲットを&#x200B;**ValueAddedServices**&#x200B;イメージ領域に追加します。
 
 ### Web チャネル用インタラクティブ通信の作成 {#create-interactive-communication-for-web-channel}
 
@@ -105,26 +105,26 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 **Webテンプレート：** [Create_First_IC_Web_Template](/help/forms/using/create-templates-print-web.md)
 
-**Form Data Model:** [FDM_Create_First_IC](create-form-data-model-tutorial.md)
+**フォームデータモデル：** [FDM_Create_First_IC](create-form-data-model-tutorial.md)
 
 **ドキュメントフラグメント：** [bill_details_first_ic、customer_details_first_ic、bill_summary_first_ic、summary_charges_first_ic](/help/forms/using/create-document-fragments.md)
 
 **画像：** PayNowWebおよびValueAddedServicesWeb
 
 1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
-1. Tap **Create** and select **Interactive Communication**. The **Create Interactive Communication** wizard is displayed.
-1. 「**タイトル**」と「**名前**」フィールドに **create_first_ic** と入力します。Select **FDM_Create_First_IC** as the Form Data Model and tap **Next**.
-1. In the **Channels** wizard:
+1. 「**作成**」をタップし、「**対話型通信**」を選択します。 **対話型通信の作成**&#x200B;ウィザードが表示されます。
+1. 「**タイトル**」と「**名前**」フィールドに **create_first_ic** と入力します。フォームデータモデルとして&#x200B;**FDM_Create_First_IC**&#x200B;を選択し、**「次へ**」をタップします。
+1. **チャネル**&#x200B;ウィザード：
 
-   1. Specify **create_first_ic_print_template** as the Print template and tap **Select**. Ensure that the **Use Print as Master for Web Channel** checkbox is not selected.
-   1. Specify **Create_First_IC_templates** folder > **Create_First_IC_Web_Template** as the Web template and tap **Select**.
+   1. 印刷テンプレートとして&#x200B;**create_first_ic_print_template**&#x200B;を指定し、「**選択**」をタップします。 「**Webチャネル**&#x200B;のマスターとして印刷」チェックボックスが選択されていないことを確認します。
+   1. **Create_First_IC_templates**&#x200B;フォルダー/**Create_First_IC_Web_Template**&#x200B;をWebテンプレートとして指定し、**「Select**」をタップします。
    1. 「**作成**」をタップします。
 
    インタラクティブ通信が正常に作成されたことを通知する確認メッセージが表示されます。
 
 1. 「**編集**」をタップし、右側のペインでインタラクティブ通信を開きます。
-1. Tap the **Channels** tab from the left pane and tap **Web**.
-1. Go to the **Assets** tab and apply the filter to display only the document fragments in the left pane.
+1. 左側のパネルの「**チャネル**」タブをタップし、「**Web**」をタップします。
+1. 「**アセット**」タブに移動し、フィルターを適用して左側のペインにドキュメントフラグメントのみを表示します。
 1. 以下のドキュメントフラグメントをインタラクティブ通信のターゲット領域にドラッグアンドドロップします。
 
    | ドキュメントフラグメント | ターゲット領域 |
@@ -134,33 +134,33 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
    | bill_summary_first_ic | BillSummary |
    | summary_charges_first_interactive_communication | 料金 |
 
-1. Tap **Summary of Charges** target area, and tap **+** to add a **Chart** component.
-1. Tap the Chart component and select ![configure_icon](assets/configure_icon.png) (Configure). グラフのプロパティが左側のペインに表示されます：
+1. 「**Summary of Charges**」ターゲット領域をタップし、**+**&#x200B;をタップして&#x200B;**グラフ**&#x200B;コンポーネントを追加します。
+1. グラフコンポーネントをタップし、![configure_icon](assets/configure_icon.png)（設定）を選択します。 グラフのプロパティが左側のペインに表示されます：
 
    1. グラフ名を指定します。
    1. 「**グラフのタイプ**」ドロップダウンリストから「**円グラフ**」を選択します。
-   1. **X 軸**&#x200B;セクションの&#x200B;**通話**&#x200B;データモデルオブジェクトタイプから **Calltype** プロパティを選択します。「 ![done_icon](assets/done_icon.png)」をタップします。
+   1. **X 軸**&#x200B;セクションの&#x200B;**通話**&#x200B;データモデルオブジェクトタイプから **Calltype** プロパティを選択します。![done_icon](assets/done_icon.png)をタップします。
    1. 「**関数**」ドロップダウンリストから&#x200B;**頻度**&#x200B;を選択します。
-   1. Select the **calltype** property from the **calls** data model object type in the **Y-axis** section. 「 ![done_icon](assets/done_icon.png)」をタップします。
-   1. Tap ![done_icon](assets/done_icon.png) to save the chart properties.
+   1. **Y軸**&#x200B;セクションの&#x200B;**calls**&#x200B;データモデルオブジェクトタイプから&#x200B;**calltype**&#x200B;プロパティを選択します。 ![done_icon](assets/done_icon.png)をタップします。
+   1. ![done_icon](assets/done_icon.png)をタップして、グラフのプロパティを保存します。
 
-1. 左側のペインから「**データソース**」タブを選択し、**通話** データモデルオブジェクトを&#x200B;**通話明細**&#x200B;のターゲット領域にドラッグアンドドロップします。**calls** データモデルオブジェクトのすべてのプロパティは、右側のペインの「 **Itemized Calls** （項目別）」ターゲット領域に、テーブル列として表示されます。
+1. 左側のペインから「**データソース**」タブを選択し、**通話** データモデルオブジェクトを&#x200B;**通話明細**&#x200B;のターゲット領域にドラッグアンドドロップします。**calls**&#x200B;データモデルオブジェクトのすべてのプロパティは、右側のウィンドウの&#x200B;**項目別の呼び出し**&#x200B;ターゲット領域に、テーブル列として表示されます。
 
    ユースケースに基づいて、テーブルには、通話日、通話時刻、通話番号、通話時間、そして通話料金の列が必要です。
 
    ![table_ic_web](assets/table_ic_web.png)
 
-1. Select **Mobilenum** table column heading and select **More options** > **Delete column**. 同様に、**Calltype** の列を削除します。
-1. Select the **Calldate** table column heading and tap ![edit](assets/edit.png) (Edit) to rename the text to **Call Date**. 同様に、テーブル内の他の列見出しの名前を変更します。
+1. **Mobilenum**&#x200B;テーブルの列見出しを選択し、**その他のオプション**/**列**&#x200B;を削除を選択します。 同様に、**Calltype** の列を削除します。
+1. **Calldate**&#x200B;テーブルの列見出しを選択し、![edit](assets/edit.png) (Edit)をタップして、テキストの名前を&#x200B;**Call Date**&#x200B;に変更します。 同様に、テーブル内の他の列見出しの名前を変更します。
 1. ユースケースに基づき、「**Pay Now**」（今すぐ支払う）ボタンをインタラクティブ通信に挿入し、ユーザーがボタンをクリックして支払いを行えるようにします。ボタンを挿入するには、次の手順を実行します。
 
-   1. Tap **Pay Now** target area, and tap **+** to add a **Text** component.
-   1. Tap the text component and tap ![edit](assets/edit.png) (Edit).
+   1. 「**今すぐ支払う**」ターゲット領域をタップし、**+**&#x200B;をタップして&#x200B;**テキスト**&#x200B;コンポーネントを追加します。
+   1. テキストコンポーネントをタップし、![編集](assets/edit.png)（編集）をタップします。
    1. テキストの名前を **Pay Now** に変更します。
    1. テキストを選択し、ハイパーリンクアイコンをタップします。
    1. **パス**&#x200B;フィールドで支払い URL を指定します。
    1. 「**ターゲット**」ドロップダウンリストから「**新規タブ**」を選択します。
-   1. Tap ![done_icon](assets/done_icon.png) to save the hyperlink properties.
+   1. ![done_icon](assets/done_icon.png)をタップして、ハイパーリンクのプロパティを保存します。
 
 1. 「**プレビュー**」オプションの隣にあるドロップダウンリストから「**スタイル**」を選択します。
 
@@ -168,23 +168,23 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 
 1. ハイパーリンクテキストのスタイルを設定し、インタラクティブ通信でボタンとして表示するには次の手順を実行します。
 
-   1. Tap the text component and select ![edit](assets/edit.png) (Edit).
+   1. テキストコンポーネントをタップし、「![編集](assets/edit.png)」（編集）を選択します。
    1. 「**境界線**」セクションで、**境界線の幅**&#x200B;を **1.5px** に指定します。**境界線のスタイル**&#x200B;として&#x200B;**実線**&#x200B;を選択し、**境界線の半径**&#x200B;を **46px** に指定します。
    1. 「**背景**」セクションから、ボタンの背景色に赤を選択します。
    1. 「**寸法と位置**」セクションの「**余白**」フィールドで、「**同時に編集**」アイコンをタップして、**右**&#x200B;の余白を **450px** に設定します。「上」、「下」、「左」の各フィールドは空白に設定されます。
 
    ![ic_web_hyperlink](assets/ic_web_hyperlink.png)
 
-1. Tap **Pay Now** target area, and tap **+** to add an **Image** component.
-1. Tap the Image component and select ![configure_icon](assets/configure_icon.png) (Configure). 画像のプロパティが左側のペインに表示されます：
+1. 「**今すぐ支払う**&#x200B;ターゲット」領域をタップし、**+**&#x200B;をタップして&#x200B;**画像**&#x200B;コンポーネントを追加します。
+1. 画像コンポーネントをタップし、![configure_icon](assets/configure_icon.png)（設定）を選択します。 画像のプロパティが左側のペインに表示されます：
 
    1. 「**名前**」フィールドで、**PayNow** を画像の名前として指定します。
-   1. Tap **Upload**, select the **PayNowWeb** image saved on the local file system, and tap **Open**.
-   1. Tap ![done_icon](assets/done_icon.png) to save the image properties.
+   1. 「**アップロード**」をタップし、ローカルファイルシステムに保存されている&#x200B;**PayNowWeb**&#x200B;画像を選択して、「**開く**」をタップします。
+   1. ![done_icon](assets/done_icon.png)をタップして、画像のプロパティを保存します。
 
-1. Based on the use case, insert a **Subscribe** button in the Interactive Communication that provides the user an option to subscribe to the value added services by clicking the button.
+1. 使用例に基づいて、対話型通信に&#x200B;**購読**&#x200B;ボタンを挿入します。このボタンをクリックすると、付加された値サービスを購読するオプションが表示されます。
 
-   Repeat steps 13 - 17 to add a **Subscribe** button to the **Value Added Services** target area and add the **ValueAddedServicesWeb** image.
+   手順13 ～ 17を繰り返して、**Value Added Services**&#x200B;ターゲット領域に&#x200B;**Subscribe**&#x200B;ボタンを追加し、**ValueAddedServicesWeb**&#x200B;イメージを追加します。
 
 ## 自動同期での印刷版および Web 版のインタラクティブ通信の作成 {#create-interactive-communications-for-print-and-web-with-auto-synchronization}
 
@@ -193,29 +193,29 @@ This tutorial is a step in the [Create your first Interactive Communication](/he
 印刷チャネルを使って Web チャネルのコンテンツを派生するには、次の手順を実行します。
 
 1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;に移動します。
-1. Tap **Create** and select **Interactive Communication**. The **Create Interactive Communication** wizard is displayed.
-1. 「**タイトル**」と「**名前**」フィールドに **create_first_ic** と入力します。Select **FDM_Create_First_IC** as the Form Data Model and tap **Next**.
-1. In the **Channels** wizard:
+1. 「**作成**」をタップし、「**対話型通信**」を選択します。 **対話型通信の作成**&#x200B;ウィザードが表示されます。
+1. 「**タイトル**」と「**名前**」フィールドに **create_first_ic** と入力します。フォームデータモデルとして&#x200B;**FDM_Create_First_IC**&#x200B;を選択し、**「次へ**」をタップします。
+1. **チャネル**&#x200B;ウィザード：
 
-   1. Specify **create_first_ic_print_template** as the Print template and tap **Select**.
-   1. Select the **Use Print as Master for Web Channel** checkbox.
-   1. Specify **Create_First_IC_templates** folder > **Create_First_IC_Web_Template** as the Web template and tap **Select**.
+   1. 印刷テンプレートとして&#x200B;**create_first_ic_print_template**&#x200B;を指定し、「**選択**」をタップします。
+   1. 「**Webチャネル用に印刷マスターを使用**」チェックボックスを選択します。
+   1. **Create_First_IC_templates**&#x200B;フォルダー/**Create_First_IC_Web_Template**&#x200B;をWebテンプレートとして指定し、**「Select**」をタップします。
    1. 「**作成**」をタップします。
 
    インタラクティブ通信が正常に作成されたことを通知する確認メッセージが表示されます。
 
 1. 「**編集**」をタップし、右側のペインでインタラクティブ通信を開きます。
-1. Execute steps 6 - 15 of [Create Interactive Communication for Print channel](#create-interactive-communication-for-print-channel) section.
-1. Tap the **Channels** tab from the left pane and tap **Web** to auto-generate content for the Web channel from the Print channel.
-1. As the **Use Print as Master for Web Channel** checkbox is selected in step 4, the content and bindings are auto-generated for Web channel from the Print channel.
+1. [印刷チャネル用の対話型通信を作成する](#create-interactive-communication-for-print-channel)セクションの手順6 ～ 15を実行します。
+1. 左側のパネルの「**チャネル**」タブをタップし、「**Web**」をタップして、印刷チャネルからWebチャネルのコンテンツを自動生成します。
+1. 手順4で「Webチャネル用にマスターとして印刷を使用&#x200B;**」チェックボックスが選択されているので、印刷チャネルからWebチャネル用のコンテンツと連結が自動生成されます。**
 
    印刷チャネルのコンテンツは Web チャネルのテンプレートコンテンツの下に挿入されます。印刷チャネルから自動生成された Web チャネルのコンテンツを変更するには、どのターゲット領域の継承もキャンセルできます。
 
-   Hover over the relevant target area in the web channel and select ![cancelinheritance](assets/cancelinheritance.png) (Cancel Inheritance) and then in the **Cancel Inheritance** dialog, tap **Yes**.
+   Webチャネルーの関連するターゲット領域の上にカーソルを置き、「![キャンセルの継承](assets/cancelinheritance.png)」（継承をキャンセル）を選択して、**継承をキャンセル**&#x200B;ダイアログで、「**はい**」をタップします。
 
    ![cancel_inheritance_web_チャネル](assets/cancel_inheritance_web_channel.png)
 
-   コンポーネントの継承をキャンセルした場合は、その継承を再度有効にすることができます。To re-enable inheritance, hover over the boundary of the relevant target area, which includes the component, and tap ![reenableinheritance](assets/reenableinheritance.png).
+   コンポーネントの継承をキャンセルした場合は、その継承を再度有効にすることができます。継承を再有効にするには、コンポーネントを含む、関連するターゲット領域の境界の上にマウスポインターを置き、![再有効化継承](assets/reenableinheritance.png)をタップします。
 
 1. 左側のペインで、「**コンテンツ**」タブを選択します。
 1. 自動生成された Web チャネルコンテンツを、コンテンツツリーを使用して Web テンプレートの既存のパネルにドラッグアンドドロップします。以下は配置を調節する必要があるコンポーネントの一覧です。
