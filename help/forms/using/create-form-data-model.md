@@ -23,7 +23,7 @@ ht-degree: 73%
 
 これは、「[最初のアダプティブフォームを作成する](/help/forms/using/create-your-first-adaptive-form.md)」シリーズを構成するチュートリアルです。チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
 
-## このチュートリアルについて {#about-the-tutorial}
+## このチュートリアルについて  {#about-the-tutorial}
 
 AEM Formsデータ統合モジュールを使用すると、AEMユーザープロファイル、RESTful Webサービス、SOAPベースのWebサービス、ODataサービス、およびリレーショナルデータベースなど、異なるバックエンドデータソースからフォームデータモデルを作成できます。 フォームデータモデル内でデータモデルオブジェクトとサービスを設定し、そのフォームデータモデルをアダプティブフォームに関連付けることができます。アダプティブフォームのフィールドは、データモデルオブジェクトのプロパティに連結されます。フォームデータモデル内のサービスを使用して、アダプティブフォームに事前にデータを取り込み、送信されたフォームデータをデータモデルオブジェクトに書き込むことができます。
 
@@ -40,15 +40,15 @@ AEM Formsデータ統合モジュールを使用すると、AEMユーザープ�
 
 ![form-data-model_l](assets/form-data-model_l.png)
 
-**A.** Configured data sources **B.** Data source services **C.** Available services **D.****** Data model objects E. Configured services
+**A.** 設定済みデータソース **B.** データソーススキーマC. **利用可能なサービス** Available Services. **Data modelオブジェクトE**  **** Configuredサービス
 
 ## 前提条件 {#prerequisites}
 
 作業を開始する前に、以下の条件が満たされているかどうかを確認してください。
 
 * 「[最初のアダプティブフォームを作成する](/help/forms/using/create-your-first-adaptive-form.md)」の「前提条件」セクションの記載に従って、MySQL データベースにサンプルデータが取り込まれていること
-* OSGi bundle for MySQL JDBC driver as explained in [Bundling the JDBC Database Driver](/help/sites-developing/jdbc.md#bundling-the-jdbc-database-driver)
-* Adaptive form as explained in the first tutorial [Create an adaptive form](/help/forms/using/create-adaptive-form.md)
+* [JDBCデータベースドライバーのバンドル](/help/sites-developing/jdbc.md#bundling-the-jdbc-database-driver)で説明されている、MySQL JDBCドライバー用のOSGiバンドル
+* 最初のチュートリアル[アダプティブフォームの作成](/help/forms/using/create-adaptive-form.md)で説明されているアダプティブフォーム
 
 ## 手順 1：MySQL データベースをデータソースとして設定する {#config-database}
 
@@ -60,9 +60,9 @@ MySQL データベースを設定するには、以下の手順を実行しま�
 
    1. AEM Forms のオーサーインスタンスに管理者としてログインし、AEM Web コンソールバンドルに移動します。デフォルトの URL は、[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles) です。
 
-   1. Tap **Install/Update**. 「**Upload / Install Bundles**」ダイアログが表示されます。
+   1. 「**インストール/更新**」をタップします。 「**Upload / Install Bundles**」ダイアログが表示されます。
 
-   1. 「**Choose File**」をタップし、MySQL JDBC ドライバーの OSGi バンドルを探して選択します。Select **Start Bundle** and **Refresh Packages**, and tap **Install or Update**. Oracle が提供する MySQL の JDBC ドライバーがアクティブになっていることを確認します。このドライバーは、既にインストールされています。
+   1. 「**Choose File**」をタップし、MySQL JDBC ドライバーの OSGi バンドルを探して選択します。「**開始バンドル**」と「**パッケージを更新**」を選択し、「**インストールまたは更新**」をタップします。 Oracle が提供する MySQL の JDBC ドライバーがアクティブになっていることを確認します。このドライバーは、既にインストールされています。
 
 1. 以下の手順により、MySQL データベースをデータソースとして設定します。
 
@@ -70,36 +70,36 @@ MySQL データベースを設定するには、以下の手順を実行しま�
    1. 「**Apache Sling Connection Pooled DataSource**」という設定を探し、その設定をタップして編集モードで開きます。
    1. 設定ダイアログで、以下の詳細情報を指定します。
 
-      * **Datasource name**：任意のデータソース名を指定します。For example, specify **WeRetailMySQL**.
+      * **Datasource name**：任意のデータソース名を指定します。例えば、**WeRetailMySQL**&#x200B;を指定します。
       * **DataSource service property name**：データソース名を保管するサービスプロパティの名前を指定します。この名前は、データソースインスタンスを OSGi サービスとして登録する際に指定されます。例えば、「**datasource.name**」などを指定します。
-      * **JDBC driver class**：JDBC ドライバーの Java クラス名を指定します。For MySQL database, specify **com.mysql.jdbc.Driver**.
-      * **JDBC connection URI**：データベースの接続 URL を指定します。For MySQL database running on port 3306 and schema weretail, the URL is: `jdbc:mysql://[server]:3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
+      * **JDBC driver class**：JDBC ドライバーの Java クラス名を指定します。MySQLデータベースの場合は、**com.mysql.jdbc.Driver**&#x200B;を指定します。
+      * **JDBC connection URI**：データベースの接続 URL を指定します。ポート3306およびスキーマWertailで実行されるMySQLデータベースの場合、URLは次のとおりです。`jdbc:mysql://[server]:3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8`
       * **Username**：データベースのユーザー名を指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
       * **Password**：データベースのパスワードを指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
-      * **借用時のテスト：** [借用時に **テスト** ]オプションを有効にします。
-      * **リターン時のテスト：** 「リターン時に **テスト** 」オプションを有効にします。
-      * **Validation Query**：プールからの接続状態を確認するための SQL SELECT クエリを指定します。このクエリでは、1 行以上の行が返される必要があります。例えば、&amp;ast；を **選択します。 (customerdetails**)。
+      * **借入時にテスト：借入時に** テストを **有効に** します。
+      * **リターン時のテスト：リターン時の** テストの **** オプションを有効にします。
+      * **Validation Query**：プールからの接続状態を確認するための SQL SELECT クエリを指定します。このクエリでは、1 行以上の行が返される必要があります。例えば、**select &amp;ast;customerdetails**&#x200B;から
       * **Transaction Isolation**：このオプションの値を「**READ_COMMITTED**」に設定します。
 
-      Leave other properties with default [values](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html) and tap **Save**.
+      その他のプロパティはデフォルトの[値](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html)のままにし、「**保存**」をタップします。
    以下のような設定が作成されます。
 
    ![relational-database-data-source-configuration](assets/relational-database-data-source-configuration.png)
 
 ## 手順 2：フォームデータモデルを作成する {#create-fdm}
 
-AEM Forms provides an intuitive user interface to [create a form data model](data-integration.md) from configured data sources. 1 つのフォームデータモデル内で複数のデータソースを使用することができます。このユースケースでは、既に設定されている MySQL データソースを使用します。
+AEM Formsは、設定済みのデータソースからフォームデータモデル](data-integration.md)を作成するための直観的なユーザーインターフェイスを提供します。 [1 つのフォームデータモデル内で複数のデータソースを使用することができます。このユースケースでは、既に設定されている MySQL データソースを使用します。
 
 フォームデータモデルを作成するには、以下の手順を実行します。
 
-1. In AEM author instance, navigate to **Forms** >  **Data Integration** s.
+1. AEMオーサーインスタンスで、**Forms** > **データ統合**&#x200B;に移動します。
 1. **作成**／**フォームデータモデル**&#x200B;の順にタップします。
 1. フォームデータモデル作成ダイアログで、フォームデータモデルの&#x200B;**名前**&#x200B;を指定します。例えば、「**customer-shipping-billing-details**」などを指定します。「**次へ**」をタップします。
-1. データソース選択画面に、すべての設定済みデータソースが一覧表示されます。Select **WeRetailMySQL** data source and tap **Create**.
+1. データソース選択画面に、すべての設定済みデータソースが一覧表示されます。**WeRetailMySQL**&#x200B;データソースを選択し、**「作成**」をタップします。
 
    ![data-source-selection](assets/data-source-selection.png)
 
-The **customer-shipping-billing-details** form data model is created.
+**customer-shipping-billing-details**&#x200B;フォームデータモデルが作成されます。
 
 ## 手順 3：フォームデータモデルを設定する {#config-fdm}
 
@@ -111,13 +111,13 @@ The **customer-shipping-billing-details** form data model is created.
 フォームデータモデルを設定するには、以下の手順を実行します。
 
 1. AEM オーサーインスタンスで、**フォーム／データ統合**&#x200B;に移動します。デフォルトの URL は、[http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) です。
-1. The **customer-shipping-billing-details** form data model you created earlier is listed here. このフォームデータモデルを編集モードで開きます。
+1. 先ほど作成した&#x200B;**customer-shipping-billing-details**&#x200B;フォームデータモデルをここに示します。 このフォームデータモデルを編集モードで開きます。
 
    前の手順で選択した **WeRetailMySQL** というデータソースが、フォームデータモデル内に設定されています。
 
    ![デフォルトFDM](assets/default-fdm.png)
 
-1. データソースツリーで WeRailMySQL データソースを展開します。Select the following data model objects and services from **weretail** >  **customerdetails** schema to form data model:
+1. データソースツリーで WeRailMySQL データソースを展開します。**weretail** > **customerdetails**&#x200B;スキーマから次のデータモデルオブジェクトおよびサービスを選択して、データモデルを作成します。
 
    * **データモデルオブジェクト**:
 
@@ -143,7 +143,7 @@ The **customer-shipping-billing-details** form data model is created.
 1. 以下の手順により、データモデルオブジェクトの読み取りサービスと書き込みサービスを設定します。
 
    1. 「**customerdetails**」データモデルオブジェクトを選択して「**プロパティの編集**」をタップします。
-   1. 「読み取りサービス」ドロップダウンで「**get**」を選択します。The **id** argument, which is the primary key in the customerdetails data model object is added automatically. 「 ![aem_6_3_edit](assets/aem_6_3_edit.png) 」をタップし、次のように引数を設定します。
+   1. 「読み取りサービス」ドロップダウンで「**get**」を選択します。**id**&#x200B;引数は、customerdetailsデータモデルオブジェクトの主キーです。この引数は自動的に追加されます。 ![aem_6_3_edit](assets/aem_6_3_edit.png)をタップし、次のように引数を設定します。
 
       ![読み取りデフォルト](assets/read-default.png)
 
@@ -155,7 +155,7 @@ The **customer-shipping-billing-details** form data model is created.
 
       ![id-arg](assets/id-arg.png)
 
-   1. 「**完了**」をタップして、データモデルオブジェクトのプロパティを保存します。Then, tap **Save** to save the form data model.
+   1. 「**完了**」をタップして、データモデルオブジェクトのプロパティを保存します。次に、「**保存**」をタップして、フォームデータモデルを保存します。
 
       **get** サービスと **update** サービスが、データモデルオブジェクトのデフォルトのサービスとして追加されます。
 
@@ -163,7 +163,7 @@ The **customer-shipping-billing-details** form data model is created.
 
 1. 「**サービス**」タブに移動し、**get** サービスと **update** サービスを設定します。
 
-   1. Select the **get** service and tap **Edit Properties**. プロパティダイアログが開きます。
+   1. **get**&#x200B;サービスを選択し、「**プロパティを編集**」をタップします。 プロパティダイアログが開きます。
    1. プロパティを編集ダイアログで、以下のプロパティを指定します。
 
       * **タイトル**：サービスのタイトルを指定します。例えば、「Retrieve Shipping Address」などを指定します。
@@ -181,7 +181,7 @@ The **customer-shipping-billing-details** form data model is created.
 
       ![Shiping-Address-Retrieval](assets/shiiping-address-retrieval.png)
 
-   1. **update** サービスを選択し、「プロパティの **編集**」をタップします。 プロパティダイアログが開きます。
+   1. **update**&#x200B;サービスを選択し、「**プロパティを編集**」をタップします。 プロパティダイアログが開きます。
 
    1. プロパティを編集ダイアログで、以下のプロパティを指定します。
 
@@ -206,7 +206,7 @@ The **customer-shipping-billing-details** form data model is created.
 
 これで、フォームデータモデル内のデータモデルオブジェクトとサービスが設定されました。次に、フォームデータモデルのテストを実行します。
 
-## 手順 4：フォームデータモデルのテストを実行する {#test-fdm}
+## 手順 4：フォームデータモデルのテストを実行する  {#test-fdm}
 
 データモデルのオブジェクトおよびサービスをテストして、フォームデータモデルが正しく設定されていることを確認できます。
 
