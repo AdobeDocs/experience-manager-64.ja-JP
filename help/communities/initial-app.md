@@ -18,7 +18,7 @@ ht-degree: 59%
 ---
 
 
-# 初期サンドボックスアプリケーション {#initial-sandbox-application}
+# 初期サンドボックスアプリケーション  {#initial-sandbox-application}
 
 ここでは、次のものを作成します。
 
@@ -33,7 +33,7 @@ ht-degree: 59%
 
 1. CRXDE Lite のエクスプローラーペインで、次の手順を実行します。
 
-   * select `/apps/an-scf-sandbox/templates`
+   * `/apps/an-scf-sandbox/templates`を選択
    * **[!UICONTROL 作成/テンプレートを作成]**
 
 1. テンプレートを作成ダイアログで、次の値を入力し、「**[!UICONTROL 次へ]**」をクリックします。
@@ -48,7 +48,7 @@ ht-degree: 59%
 
    「リソースタイプ」は、`playpage` の jcr:content ノードにプロパティ `sling:resourceType` として表示されます。ブラウザーから要求されたときにコンテンツをレンダリングするコンポーネント（リソース）を識別します。
 
-   In this case, all pages created using the `playpage`template are rendered by the `an-scf-sandbox/components/playpage` component. By convention, the path to the component is relative, allowing Sling to search for the resource first in the `/apps` folder and, if not found, in the `/libs` folder.
+   この場合、`playpage`テンプレートを使用して作成されたすべてのページは、`an-scf-sandbox/components/playpage`コンポーネントによってレンダリングされます。 通常、コンポーネントへのパスは相対パスです。Slingは、`/apps`フォルダー内の最初のリソースを検索し、見つからない場合は`/libs`フォルダー内のリソースを検索します。
 
    ![chlimage_1-75](assets/chlimage_1-75.png)
 
@@ -58,11 +58,11 @@ ht-degree: 59%
 
 1. 「許可されているパス」は、**[!UICONTROL 新しいページ]**&#x200B;ダイアログにテンプレートが表示されるように、このテンプレートを使用するページのパスを参照します。
 
-   To add a path, click the plus button `+` and type `/content(/.&ast;)?` in the text box that appears. コピー&amp;ペーストを使用する場合は、先頭または末尾に空白文字がないことを確認します。
+   パスを追加するには、プラスボタン`+`をクリックし、表示されるテキストボックスに「`/content(/.&ast;)?`」と入力します。 コピー&amp;ペーストを使用する場合は、先頭または末尾に空白文字がないことを確認します。
 
-   Note: The value of the allowed path property is a *regular expression.*&#x200B;この表現と一致するパスを持つコンテンツページでテンプレートを使用できます。In this case, the regular expression matches the path of the **/content** folder and all its subpages.
+   注意：許可されるパスプロパティの値は、*正規式です。*&#x200B;この表現と一致するパスを持つコンテンツページでテンプレートを使用できます。この場合、正規式は&#x200B;**/content**&#x200B;フォルダーとそのすべてのサブページのパスに一致します。
 
-   When an author creates a page below `/content`, the `playpage`template titled &quot;An SCF Sandbox Page Template&quot; appears in a list of available templates to use.
+   作成者が`/content`の下にページを作成すると、使用できるテンプレートのリストに「SCF Sandboxページテンプレート」という`playpage`テンプレートが表示されます。
 
    ルートページをテンプレートから作成した後、プロパティを変更して正規表現にルートパスを含めると、テンプレートへのアクセスをその Web サイトに制限できます。次に例を示します。
 
@@ -72,15 +72,15 @@ ht-degree: 59%
 
 1. 「**[!UICONTROL 次へ]**」をクリックします。
 
-   **[!UICONTROL 許可されている親]** パネルで「次へ **** 」をクリックします。
+   **[!UICONTROL 許可されている親]**&#x200B;パネルで「**[!UICONTROL 次へ]**」をクリックします。
 
-   Click **[!UICONTROL Next]** in the **[!UICONTROL Allowed Children]** panels.
+   **[!UICONTROL 許可されている子]**&#x200B;パネルの&#x200B;**[!UICONTROL 次へ]**&#x200B;をクリックします。
 
    「**[!UICONTROL OK]**」をクリックします。
 
 1. 「OK」をクリックし、テンプレートの作成を終了すると、新しい `playpage` テンプレートについて、「プロパティ」タブの値の隅に赤い三角形が表示されていることがわかります。これらの赤い三角形は、編集内容が保存されていないことを示します。
 
-   Click **[!UICONTROL Save All]** to save the new template to the repository.
+   「**[!UICONTROL すべて保存]**」をクリックして、新しいテンプレートをリポジトリに保存します。
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
 
@@ -88,27 +88,27 @@ ht-degree: 59%
 
 コンテンツを定義し、[playpage テンプレート](#createthepagetemplate)に基づいて作成されたページをレンダリングするコンポーネントを作成します。**
 
-1. In CRXDE Lite, right-click **`/apps/an-scf-sandbox/components`** and click **[!UICONTROL Create > Component]**.
-1. ノードの名前（ラベル）を *playpageに設定すると*、コンポーネントのパスは
+1. CRXDE Liteで、**`/apps/an-scf-sandbox/components`**&#x200B;を右クリックし、**[!UICONTROL 作成/コンポーネント]**&#x200B;をクリックします。
+1. ノードの名前（ラベル）を&#x200B;*playpage*&#x200B;に設定すると、コンポーネントのパスは次のようになります。
 
    `/apps/an-scf-sandbox/components/playpage`
 
-   これは、再生ページテンプレートの「リソースタイプ」に対応します(オプションで、パスの最初の **`/apps/`** 部分を除いた値)。
+   これは、再生ページテンプレートのリソースタイプに対応します（オプションで、パスの最初の&#x200B;**`/apps/`**&#x200B;部分を差し引きます）。
 
    **[!UICONTROL コンポーネントを作成]**&#x200B;ダイアログで、以下のプロパティ値を入力します。
 
    * ラベル：**playpage**
    * タイトル：**An SCF Sandbox Play Component**
    * 説明：**This is the component which renders content for An SCF Sandbox page.**
-   * Super Type: *&lt;leave blank>*
+   * スーパータイプ：*&lt;空白を残す>*
    * グループ:
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. Click **[!UICONTROL Next]** until the **[!UICONTROL Allowed Children]** panel of the dialog appears
+1. **[!UICONTROL 次へ]**&#x200B;をクリックして、ダイアログの&#x200B;**[!UICONTROL 許可されている子]**&#x200B;パネルが表示されます
 
    * 「**[!UICONTROL OK]**」をクリックします。
-   * Click **[!UICONTROL Save All]**
+   * 「**[!UICONTROL すべて保存]**」をクリックします
 
 1. コンポーネントのパスとテンプレートの resourceType が一致していることを確認します。
 
