@@ -23,7 +23,7 @@ AEM 6.4 Forms の新機能と機能強化の概要
 
 AEM Forms に、いくつかの新機能と機能強化が導入されました。これにより、アダプティブフォームとインタラクティブ通信の作成と管理がさらに簡素化され、ユーザーエクスペリエンスが向上します。
 
-ここでは、これらの新機能と機能強化について簡単に説明します。詳しくは、各リソースのドキュメントを参照してください。また、AEM 6.4 Forms の[リリースノート](/help/release-notes/forms.md)も参照してください。For complete AEM 6.4 Forms documentation, visit [AEM 6.4 Forms Guide](/help/forms/home.md).
+ここでは、これらの新機能と機能強化について簡単に説明します。詳しくは、各リソースのドキュメントを参照してください。また、AEM 6.4 Forms の[リリースノート](/help/release-notes/forms.md)も参照してください。AEM 6.4Formsの完全なドキュメントについては、[AEM 6.4Formsガイド](/help/forms/home.md)を参照してください。
 
 ## インタラクティブコミュニケーション {#interactive-communications}
 
@@ -41,11 +41,11 @@ Interactive Communicationsは、ビジネスの通信、レター、ドキュメ
 
 インタラクティブ通信は、顧客通信を作成するためのデフォルトの方法です。顧客通信を作成する場合は、インタラクティブ通信を使用することをお勧めします。AEM 6.3 Forms と AEM 6.2 Forms のレターを引き続き使用する場合は、互換性のあるパッケージをインストールする必要があります。
 
-### マルチチャネルのインタラクティブ通信の作成 {#multi-channel-interactive-communication-authoring}
+### マルチチャネルのインタラクティブ通信の作成  {#multi-channel-interactive-communication-authoring}
 
 インタラクティブ通信では、1 つのドキュメントエディターだけを使用して、印刷ドキュメントと Web ドキュメントの両方について、作成と編集を行うことができます。同じドキュメントフラグメントを使用して両方のチャネルのレンディションを作成することにより、同じ作業を繰り返し行う必要がなくなります。![printweb_2](assets/printweb_2.png)
 
-For more information, see [Interactive Communications Overview](/help/forms/using/interactive-communications-overview.md).
+詳しくは、[対話型通信の概要](/help/forms/using/interactive-communications-overview.md)を参照してください。
 
 ### WYSIWYG ドキュメントエディター {#wysiwyg-document-editor}
 
@@ -55,13 +55,13 @@ For more information, see [Interactive Communications Overview](/help/forms/usin
 
 ![ドラッグ&amp;ドロップ —lf](assets/drag-n-drop-lf.png)
 
-For more information, see [Introduction to authoring Interactive Communication](/help/forms/using/introduction-interactive-communication-authoring.md).
+詳しくは、[対話型通信の作成の概要](/help/forms/using/introduction-interactive-communication-authoring.md)を参照してください。
 
 ### インタラクティブ通信で、印刷コンテンツの Web 版を自動的に生成する {#auto-generate-web-version-from-print-content-in-interactive-communication}
 
 作成者は、印刷ドキュメントから作成者、プレビュー、印刷ドキュメントまでWebドキュメントのコンテンツを自動生成できます。また、同じエディターで印刷エディターとWebの両方を編集できます。 インタラクティブコミュニケーション作成者は、1回だけ作成して、すべてのチャネルに公開できます。 インタラクティブコミュニケーション作成者は、印刷とWebチャネルーで同じドキュメントフラグメントを使用して、作業の重複を防ぐことができます。
 
-For more information, see [Print channel and web channel](/help/forms/using/web-channel-print-channel.md).
+詳しくは、[チャネルとWebチャネルの印刷](/help/forms/using/web-channel-print-channel.md)を参照してください。
 
 ### テーマを使用して、インタラクティブ通信の Web チャネルのスタイルを設定する {#use-themes-to-style-web-channel-of-interactive-communication}
 
@@ -75,15 +75,15 @@ AEM Formsには、Interactive Communications用の追加設定なしのテーマ
 
 エージェントユーザーインターフェイスで、インタラクティブ通信の印刷チャネルと Web チャネルをプレビュー表示できるようになりました。同じエージェントユーザーインターフェイスから、マルチチャネルのインタラクティブ通信の印刷チャネルとプレビューWebチャネルを編集できます。 印刷チャネルのフィールド、変数、FDM 要素、ドキュメントフラグメントを、エージェントユーザーインターフェイスによって変更するように設定することができます。フォームデータモデルでは、事前に設定されたサンプルデータを使用して、プレビューを生成することができます。
 
-For more information, see [Prepare and send Interactive Communication using the Agent UI](/help/forms/using/prepare-send-interactive-communication.md).
+詳しくは、[エージェントUIを使用した対話型通信の準備と送信](/help/forms/using/prepare-send-interactive-communication.md)を参照してください。
 
 ### グラフを使用して情報を表示する {#present-information-in-charts}
 
 インタラクティブ通信の Web チャネルと印刷チャネルでグラフを使用すると、分かりやすい通信を作成することができます。円グラフ、ドーナツグラフ、棒グラフ、列グラフなどを使用して大量の情報を視覚的に表現することにより、内容を簡単に把握して情報を分析できるようになります。
 
-![グラフ2](assets/chart-2.png)![グラフ](assets/chart.png)
+![グラフ2](assets/chart-2.png) ![グラフ](assets/chart.png)
 
-For more information, see [Using charts in Interactive Communications](/help/forms/using/chart-component-interactive-communications.md).
+詳しくは、[対話型通信でのグラフの使用](/help/forms/using/chart-component-interactive-communications.md)を参照してください。
 
 ### 付属のデータコネクタを使用してドキュメントにデータを取り込む {#out-of-the-box-data-connectors-to-prefill-documents}
 
@@ -107,11 +107,11 @@ For more information, see [Using charts in Interactive Communications](/help/for
 * [インタラクティブ通信内のテキスト](/help/forms/using/texts-interactive-communications.md)
 * [インタラクティブ通信内の条件](/help/forms/using/conditions-interactive-communications.md)
 
-### 既存アセットの互換性パッケージ {#compatibility-package-for-existing-assets}
+### 既存アセットの互換性パッケージ  {#compatibility-package-for-existing-assets}
 
 デフォルトでは、旧バージョンの AEM Forms のレターアセットは、このリリースではサポートされていません。AEM 6.3 Forms と AEM 6.2 Forms のレターを引き続き使用する場合は、互換性パッケージをインストールする必要があります。
 
-## データ統合 {#data-integration}
+## データ統合  {#data-integration}
 
 ![](do-not-localize/data-integeration-1.png)
 
@@ -125,7 +125,7 @@ For more information, see [Using charts in Interactive Communications](/help/for
 
 同様に、既存のフォームデータモデル内でエンティティと子プロパティを作成し、そのエンティティとプロパティを、データソース内の対応するエンティティとプロパティに後から連結することができます。
 
-For more information, see [Create form data model](/help/forms/using/create-form-data-models.md).
+詳しくは、「[フォームデータモデルの作成](/help/forms/using/create-form-data-models.md)」を参照してください。
 
 ### 計算済みプロパティの作成 {#create-computed-properties}
 
@@ -133,7 +133,7 @@ For more information, see [Create form data model](/help/forms/using/create-form
 
 計算済みプロパティはフォームデータモデル内に格納され、データソース内には存在しません。計算済みプロパティは、アダプティブフォームとインタラクティブ通信で使用することができます。
 
-For more information, see [Work with form data model](/help/forms/using/work-with-form-data-model.md).
+詳しくは、「[フォームデータモデルの使用](/help/forms/using/work-with-form-data-model.md)」を参照してください。
 
 ### サンプルデータを使用してフォームとドキュメントのプレビューを表示する {#preview-forms-and-documents-with-sample-data}
 
@@ -141,15 +141,15 @@ For more information, see [Work with form data model](/help/forms/using/work-wit
 
 サンプルデータは、一連のランダムな値から構成されています。サンプルデータを生成するたびに、これらの値が変化します。ただし、サンプルデータを編集して保存してからサンプルデータを再生成しても、元のサンプルデータは保存されたままになります。例えば、「姓」プロパティと「名」プロパティのサンプルデータを編集して保存し、後で別のプロパティをフォームデータモデル内で追加してからサンプルデータを再生成すると、後から追加したプロパティには新しい値が表示されますが、その前に保存した「姓」プロパティと「名」プロパティには、保存したときの値が表示されます。
 
-For details, see [Use form data model](/help/forms/using/using-form-data-model.md).
+詳しくは、「[フォームデータモデルの使用](/help/forms/using/using-form-data-model.md)」を参照してください。
 
 ### データソース定義の更新 {#refresh-data-source-definitions}
 
-データソースのエンティティやプロパティを更新しても、関連するフォームデータモデル内でその更新内容が自動的に反映されることはありません。Form data model editor now features ![refresh_forms_di](assets/refresh_forms_di.png) (Refresh Data Source Definitions) that invalidates the server cache and fetches updated schema from the data source to immediately reflect in the form data model.
+データソースのエンティティやプロパティを更新しても、関連するフォームデータモデル内でその更新内容が自動的に反映されることはありません。フォームデータモデルエディターに、![refresh_forms_di](assets/refresh_forms_di.png) （データソース定義の更新）機能が追加されました。この機能は、サーバーキャッシュを無効にし、データソースから更新されたスキーマを取得して、フォームデータモデルに即座に反映します。
 
 ### タッチユーザーインターフェイスを使用したデータソースの設定 {#configure-data-sources-using-touch-user-interface}
 
-このリリースでは、タッチユーザーインターフェイスを使用して、データソース用にクラウドサービスを設定できるようになりました。Also, the location to configure cloud services has changed to **[!UICONTROL Tools > Cloud Services > Data Sources]**. See [Configure data sources](/help/forms/using/configure-data-sources.md).
+このリリースでは、タッチユーザーインターフェイスを使用して、データソース用にクラウドサービスを設定できるようになりました。また、クラウドサービスを設定する場所は、**[!UICONTROL ツール/Cloud Services/データソース]**&#x200B;に変更されました。 [データソースの設定](/help/forms/using/configure-data-sources.md)を参照してください。
 
 ## アダプティブフォーム {#adaptive-forms}
 
@@ -165,7 +165,7 @@ For details, see [Use form data model](/help/forms/using/using-form-data-model.m
 * 繰り返し可能パネルで、遅延読み込み機能が有効になっているアダプティブフォームフラグメントを使用できるようになりました。
 * AEM Forms アプリケーションで、遅延読み込み機能が有効になっているアダプティブフォームを使用できるようになりました。
 
-## フォームベースの AEM ワークフロー {#forms-centric-aem-workflows}
+## フォームベースの AEM ワークフロー  {#forms-centric-aem-workflows}
 
 ![aem-forms-workflow-on-osgi-](assets/aem-forms-workflow-on-osgi-.png)
 
@@ -181,7 +181,7 @@ For details, see [Use form data model](/help/forms/using/using-form-data-model.m
 
 ![aem-forms-app](assets/aem-forms-app.png)
 
-AEM Forms アプリを使用すると、フィールドワーカーはモバイルデバイスを AEM Forms サーバーと同期し、タスクを実行できます。オンフライン状態のデバイスにデータを保存し、デバイスをオンライン状態に戻してサーバー上のデータと同期する場合でも、このアプリケーションはシームレスに機能します。For more information, see [AEM Forms app](/help/forms/using/aem-forms-app.md).
+AEM Forms アプリを使用すると、フィールドワーカーはモバイルデバイスを AEM Forms サーバーと同期し、タスクを実行できます。オンフライン状態のデバイスにデータを保存し、デバイスをオンライン状態に戻してサーバー上のデータと同期する場合でも、このアプリケーションはシームレスに機能します。詳しくは、[AEM Formsアプリ](/help/forms/using/aem-forms-app.md)を参照してください。
 
 AEM Forms アプリケーションの改善点を以下に示します。
 
