@@ -18,7 +18,7 @@ ht-degree: 62%
 ---
 
 
-# コミュニティのための FFmpeg {#ffmpeg-for-communities}
+# コミュニティのための FFmpeg  {#ffmpeg-for-communities}
 
 ## 概要 {#overview}
 
@@ -26,11 +26,11 @@ FFmpeg は、オーディオとビデオの変換およびストリーミング�
 
 FFmpeg は、オーサー環境で、アップロードしたイネーブルメントリソースのメタデータを取得したり、イネーブルメントリソースの一覧に表示するサムネイルを生成するときに使用します。
 
-## FFmpeg のインストール {#installing-ffmpeg}
+## FFmpeg のインストール  {#installing-ffmpeg}
 
 FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしているサーバーにインストールする必要があります。
 
-1. Go to [https://www.ffmpeg.org](https://www.ffmpeg.org/)
+1. [https://www.ffmpeg.org](https://www.ffmpeg.org/)に移動します。
 1. 特定の環境用（Macintosh、Windows または Linux）の FFmpeg の最新バージョンをダウンロードします。
 
    * 古いバージョンにはセキュリティ脆弱性があるので、FFmpeg を最新の状態に保つことが重要です。
@@ -41,7 +41,7 @@ FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしている�
 
    システム内の任意のディレクトリからFFmpegを実行できるはずです。
 
-   * for example, `ffmpeg -version`
+   * 例：`ffmpeg -version`
 
 ## FFmpeg トランスコーディングサービスの設定 {#configure-ffmpeg-transcoding-service}
 
@@ -52,22 +52,22 @@ FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしている�
 DAM アセットの更新のワークフローを変更するには（この例ではトランスコーディングをオフにするには）、次のようにします。
 
 * 管理者権限を持つ作成者インスタンスにサインインします
-* From global navigation: **[!UICONTROL Tools > Workflow > Models]**
-* Locate **[!UICONTROL DAM Update Asset]**
+* グローバルナビゲーションから：**[!UICONTROL ツール/ワークフロー/モデル]**
+* **[!UICONTROL DAM更新アセット]**&#x200B;を検索
 * 重複を押しながらクリックすると、編集用のワークフローがクラシックUIで開きます
 
-   Resulting location: [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
+   結果の場所：[http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
-* Double-click the **[!UICONTROL FFmpeg transcoding]** step to access the Step Properties dialog
-* Under the **[!UICONTROL Process]** tab:
+* **[!UICONTROL Fmpegトランスコード]**&#x200B;の手順を重複クリックして、手順のプロパティダイアログにアクセスします
+* 「**[!UICONTROL プロセス]**」タブの下：
 
-   * **[!UICONTROL 軍備]**: すべてのエントリを消去してトランスコードのデフォルト値を無効にします。 `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
+   * **[!UICONTROL 軍備]**:すべてのエントリを消去してトランスコードのデフォルト値を無効にします。  `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
 
 ![chlimage_1-372](assets/chlimage_1-372.png)
 
-* Select **[!UICONTROL OK]** to close the `Step Properties` dialog
+* 「**[!UICONTROL OK]**」を選択して`Step Properties`ダイアログを閉じます
 
-* Select **[!UICONTROL Save]** to save the `DAM Update Asset` workflow
+* 「**[!UICONTROL 保存]**」を選択して`DAM Update Asset`ワークフローを保存します
 
    （左上隅）
 
