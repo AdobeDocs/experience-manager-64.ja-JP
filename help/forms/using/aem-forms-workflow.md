@@ -31,7 +31,7 @@ AEM ワークフローを使用することで、アダプティブフォーム�
 
 OSGi 上の Forms 中心のワークフローにより、OSGi スタック上の様々なタスクに対するワークフローをすばやく作成してデプロイすることができます。完全な Process Management 機能を JEE スタックにインストールする必要はありません。ワークフローの開発と管理では、従来の AEM ワークフロー機能と AEM インボックス機能が使用されます。ワークフローにより、複数のソフトウェアシステム、ネットワーク、部門、組織にわたる実際のビジネスプロセスを自動化するための基礎が構築されます。
 
-これらのワークフローは一度設定すると、手動でトリガーして定義済みプロセスを完了することも、ユーザーによるフォームまたは [Correspondence Management](/help/forms/using/cm-overview.md) レターの送信時にワークフローをプログラムで実行することもできます。この拡張 AEM ワークフロー機能により、2 つの類似した機能を AEM Forms で使用することができます。デプロイメントを計画する際に、どちらの機能を使用するかを決める必要があります。See a [comparison](/help/forms/using/capabilities-osgi-jee-workflows.md) of the Forms-centric AEM Workflows on OSGi and Process Management on JEE. Moreover, for the deployment topology see, [Architecture and deployment topologies for AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
+これらのワークフローは一度設定すると、手動でトリガーして定義済みプロセスを完了することも、ユーザーによるフォームまたは [Correspondence Management](/help/forms/using/cm-overview.md) レターの送信時にワークフローをプログラムで実行することもできます。この拡張 AEM ワークフロー機能により、2 つの類似した機能を AEM Forms で使用することができます。デプロイメントを計画する際に、どちらの機能を使用するかを決める必要があります。OSGiのForms中心のAEMワークフローとJEEのProcess Managementの比較[](/help/forms/using/capabilities-osgi-jee-workflows.md)を参照してください。 また、デプロイメントトポロジについては、[AEM Formsのアーキテクチャとデプロイメントトポロジ](/help/forms/using/aem-forms-architecture-deployment.md)を参照してください。
 
 OSGi 上の Forms 中心のワークフローは、[AEM インボックス](/help/sites-authoring/inbox.md)を拡張し、AEM ワークフローエディターに追加のコンポーネント（ステップ）を提供することで、AEM Forms 中心のワークフローをサポートします。拡張 AEM インボックスは、[AEM Forms ワークスペース](/help/forms/using/introduction-html-workspace.md)と同様の機能を持ちます。人間中心のワークフロー（承認やレビューなど）とともに AEM ワークフローを使用して、[ドキュメントサービス](/help/sites-developing/workflows-step-ref.md)に関する操作（PDF の生成など）と、Adobe Sign による電子署名処理を自動化することができます。
 
@@ -56,7 +56,7 @@ AEM には、提供されているワークフローステップを使用して�
 >
 >ワークフローモデルを作成または編集するには、workflow-editor グループのメンバーである必要があります。
 
-### 承認およびレビューワークフローのモデルの作成 {#create-a-model-for-an-approval-and-review-workflow}
+### 承認およびレビューワークフローのモデルの作成  {#create-a-model-for-an-approval-and-review-workflow}
 
 承認およびレビューワークフローは、判断に人間の介入を必要とするタスクに使用されます。次の例では、金融機関本部で記入される住宅ローン申し込み用のワークフローモデルを作成します。アプリケーションが記入されると、承認に送信されます。その後、Adobe Signを使用して電子署名の申請者に承認申請を送る。
 
@@ -76,19 +76,19 @@ AEM には、提供されているワークフローステップを使用して�
 
 1. 電子メール通知を有効にします。OSGiでForms中心のワークフローを設定して、ユーザーまたは担当者に電子メール通知を送信できます。 電子メール通知を有効にするには、以下の設定を実行します。
 
-   1. Go to AEM configuration manager at `https://[server]:[port]/system/console/configMgr`.
+   1. `https://[server]:[port]/system/console/configMgr`のAEM configuration managerに移動します。
    1. **[!UICONTROL Day CQ 電子メールサービス]**&#x200B;の設定を開きます。「**[!UICONTROL SMTP サーバーのホスト名]**」、「**[!UICONTROL SMTP サーバーポート]**」、「**[!UICONTROL 送信元アドレス]**」フィールドの値を指定します。「**[!UICONTROL 保存]**」をクリックします。
    1. 「**[!UICONTROL Day CQ Link Externalizer]**」の設定を開きます。「**[!UICONTROL ドメイン]**」フィールドで、ローカルインスタンス、オーサーインスタンス、発行インスタンスの実際のホスト名 / IP アドレスとポート番号を指定します。「**[!UICONTROL 保存]**」をクリックします。
 
 1. ワークフローステージを作成します。ワークフローには複数のステージが含まれることがあります。これらのステージは、AEM インボックスに表示され、ワークフローの進捗をレポートします。
 
-   To define a stage, tap the ![info-circle](assets/info-circle.png) icon to open workflow model properties, open the **[!UICONTROL Stages]** tab, add stages for the workflow model, and tap **[!UICONTROL Save &amp; Close]**. 住宅ローン申し込みのサンプルでは、ローン申請、ローン申請ステータス、署名予定ドキュメント、署名済みローンドキュメントのステージを作成します。
+   ステージを定義するには、![情報 — 円](assets/info-circle.png)アイコンをタップしてワークフローモデルのプロパティを開き、「**[!UICONTROL ステージ]**」タブを開き、ワークフローモデルのステージを追加して、「**[!UICONTROL 保存して閉じる]**」をタップします。 住宅ローン申し込みのサンプルでは、ローン申請、ローン申請ステータス、署名予定ドキュメント、署名済みローンドキュメントのステージを作成します。
 
-1. Drag-and-drop the **[!UICONTROL Assign Task]** steps browser to the workflow model. これをモデルの最初のステップにします。
+1. **[!UICONTROL タスク]**&#x200B;の割り当て手順ブラウザーをワークフローモデルにドラッグ&amp;ドロップします。 これをモデルの最初のステップにします。
 
    タスクの割り当てコンポーネントは、ワークフローの作成したタスクをユーザーまたはグループに割り当てます。このコンポーネントにより、タスクの割り当てだけでなく、タスクで使用するアダプティブフォームや非インタラクティブ PDF を指定することもできます。アダプティブフォームは、ユーザーからの入力を受け取るために必要です。また、非インタラクティブ PDF または読み取り専用のアダプティブフォームは、レビュー専用のワークフローに使用されます。
 
-   また、タスクの動作を制御するためにステップを使用することもできます。例えば、レコードの自動ドキュメントの作成、特定のユーザーまたはグループへのタスクの割り当て、送信されたデータのパス、事前に入力されるデータのパス、デフォルトのアクションを制御できます。For detailed information about the options of the assign task step, see [Forms-centric workflow on OSGi - Step Reference](/help/forms/using/aem-forms-workflow.md) document.
+   また、タスクの動作を制御するためにステップを使用することもできます。例えば、レコードの自動ドキュメントの作成、特定のユーザーまたはグループへのタスクの割り当て、送信されたデータのパス、事前に入力されるデータのパス、デフォルトのアクションを制御できます。タスクの割り当て手順の詳細については、「[OSGiでのForms中心のワークフロー — 手順リファレンス](/help/forms/using/aem-forms-workflow.md)ドキュメント」を参照してください。
 
    ![ワークフローエディター](assets/workflow-editor.png)
 
@@ -102,7 +102,7 @@ AEM には、提供されているワークフローステップを使用して�
 
    **ブランチ 1 のコードスニペット**
 
-   When a user taps **[!UICONTROL Approve]** in AEM Inbox, Branch 1 is activated.
+   ユーザーがAEM受信トレイで「**[!UICONTROL 承認]**」をタップすると、Branch 1がアクティブになります。
 
    ```
    function check(){
@@ -114,7 +114,7 @@ AEM には、提供されているワークフローステップを使用して�
 
    **ブランチ 2 のコードスニペット**
 
-   When a user taps **[!UICONTROL Reject]** in AEM Inbox, Branch 2 is activated.
+   ユーザーがAEMインボックスで「**[!UICONTROL 拒否]**」をタップすると、Branch 2がアクティブになります。
 
    ```
    function check(){
@@ -142,8 +142,8 @@ AEM には、提供されているワークフローステップを使用して�
 >
 >ワークフローアプリケーションを作成して管理するには、fd-administrator グループのメンバーである必要があります。
 
-1. On your AEM author instance, go to ![tools](assets/tools.png) > **[!UICONTROL Forms]** > **[!UICONTROL Manage Workflow Application]** and taps **[!UICONTROL Create]**.
-1. In the Create Workflow Application window, provide inputs for the following fields, and tap **[!UICONTROL Create]**. 新しいアプリケーションが作成され、ワークフローアプリケーション画面にリストされます。
+1. AEMオーサーインスタンスで、![ツール](assets/tools.png) > **[!UICONTROL Forms]** > **[!UICONTROL ワークフローアプリの管理]**&#x200B;に移動し、**[!UICONTROL 作成]**&#x200B;をタップします。
+1. ワークフローアプリの作成ウィンドウで、次のフィールドに入力を入力し、「**[!UICONTROL 作成]**」をタップします。 新しいアプリケーションが作成され、ワークフローアプリケーション画面にリストされます。
 
 <table> 
  <tbody> 
@@ -206,13 +206,13 @@ Forms 中心のワークフローは、次のように起動またはトリガ�
 
 * [インタラクティブ通信またはレターの送信](#letter)
 
-### AEM インボックスからのアプリケーションの送信 {#inbox}
+### AEM インボックスからのアプリケーションの送信  {#inbox}
 
-作成したワークフローアプリケーションは、インボックスでアプリケーションとして使用できます。workflow-users グループのメンバーであるユーザーは、関連するワークフローをトリガーするアプリケーションを入力して送信できます。For information about using AEM Inbox to submit applications and manage tasks, see [Manage Forms applications and tasks in AEM Inbox](/help/forms/using/manage-applications-inbox.md).
+作成したワークフローアプリケーションは、インボックスでアプリケーションとして使用できます。workflow-users グループのメンバーであるユーザーは、関連するワークフローをトリガーするアプリケーションを入力して送信できます。AEM Inboxを使用したアプリケーションの送信とタスクの管理について詳しくは、「AEM Inbox](/help/forms/using/manage-applications-inbox.md)でのFormsアプリケーションとタスクの管理」を参照してください。[
 
 ### AEM Forms アプリケーションからのアプリケーションの送信 {#afa}
 
-AEM Forms アプリケーションは、AEM Forms サーバーと同期されます。アカウントで AEM Forms アプリケーションを使用して、フォームデータ、タスク、ワークフローアプリケーション、保存済み情報（ドラフト、テンプレート）を変更することができます。For more information, see [AEM Forms app](/help/forms/using/aem-forms-app.md) and related articles.
+AEM Forms アプリケーションは、AEM Forms サーバーと同期されます。アカウントで AEM Forms アプリケーションを使用して、フォームデータ、タスク、ワークフローアプリケーション、保存済み情報（ドラフト、テンプレート）を変更することができます。詳しくは、[AEM Formsアプリ](/help/forms/using/aem-forms-app.md)と関連記事を参照してください。
 
 ### アダプティブフォームの送信 {#af}
 
@@ -224,7 +224,7 @@ AEM Forms アプリケーションは、AEM Forms サーバーと同期されま
 
 管理者（fd-administrator グループのメンバー）はネットワークフォルダーを設定することにより、ユーザーがそのフォルダーにファイル（PDF ファイルなど）を配置すると、設定済みワークフローが実行されるようにすることができます。ワークフローが完了したら、結果のファイルを指定した出力フォルダーに保存できます。このようなフォルダーを[監視フォルダー](/help/forms/using/watched-folder-in-aem-forms.md)と呼びます。監視フォルダーがワークフローを起動するよう設定するには、以下の手順を実行します。
 
-1. On your AEM author instance, go to ![tools](assets/tools.png) **[!UICONTROL Forms > Configure Watched Folder]**.  既に設定されている監視フォルダーのリストが表示されます。
+1. AEMオーサーインスタンスで、![tools](assets/tools.png) **[!UICONTROL Forms/監視フォルダーを設定]**&#x200B;に移動します。  既に設定されている監視フォルダーのリストが表示されます。
 1. 「**[!UICONTROL 新規]**」をタップします。フィールドのリストが表示されます。次のフィールドの値を指定して、ワークフローに監視フォルダーを設定します。
 
 <table> 
@@ -243,7 +243,7 @@ AEM Forms アプリケーションは、AEM Forms サーバーと同期されま
   </tr> 
   <tr> 
    <td><span class="uicontrol">次を使用してファイルを処理</span></td> 
-   <td>Select the <span class="uicontrol">Workflow </span>option. </td> 
+   <td>「<span class="uicontrol">ワークフロー</span>」オプションを選択します。 </td> 
   </tr> 
   <tr> 
    <td><span class="uicontrol">ワークフローモデル</span></td> 
@@ -256,7 +256,7 @@ AEM Forms アプリケーションは、AEM Forms サーバーと同期されま
  </tbody> 
 </table>
 
-1. 「**[!UICONTROL 詳細設定]**」をタップします。Specify a value for the following field and tap **[!UICONTROL Create]**. ワークフローを起動するように監視フォルダーを設定することができます。現在は、ファイルが監視フォルダーの入力ディレクトリに配置されるたびに、指定されたワークフローがトリガーされます。
+1. 「**[!UICONTROL 詳細設定]**」をタップします。次のフィールドの値を指定し、「**[!UICONTROL 作成]**」をタップします。 ワークフローを起動するように監視フォルダーを設定することができます。現在は、ファイルが監視フォルダーの入力ディレクトリに配置されるたびに、指定されたワークフローがトリガーされます。
 
    | フィールド | 説明 |
    |---|---|
@@ -264,20 +264,20 @@ AEM Forms アプリケーションは、AEM Forms サーバーと同期されま
 
    「詳細設定」タブには多数のフィールドが含まれています。これらのほとんどのフィールドにはデフォルトの値が指定されています。すべてのフィールドについて詳しくは、「[監視フォルダーの作成または設定](/help/forms/using/creating-configure-watched-folder.md)」の記事を参照してください。
 
-### インタラクティブ通信またはレターの送信 {#letter}
+### インタラクティブ通信またはレターの送信  {#letter}
 
 インタラクティブな通信またはレターの送信時に、OSGi上でForms中心のワークフローを関連付けて実行できます。 correspondence managementワークフローは、インタラクティブな通信とレターの後処理に使用します。 例えば、最終的なレターの送信、印刷、Fax、アーカイブでワークフローが使用されます。詳しい手順については、「[インタラクティブ通信とレターの後処理](/help/forms/using/submit-letter-topostprocess.md)」を参照してください。
 
-## 追加設定 {#additional-configurations}
+## 追加設定  {#additional-configurations}
 
 ### 電子メールサービスの設定 {#configure-email-service}
 
 AEM ワークフローの「タスクを割り当て」ステップと「電子メールを送信」ステップを使用して、電子メールを送信することができます。電子メールを送信するために必要な電子メールサーバーと各種の設定を指定するには、以下の手順を実行します。
 
-1. Go to AEM configuration manager at `https://[server]:[port]/system/console/configMgr`.
+1. `https://[server]:[port]/system/console/configMgr`のAEM configuration managerに移動します。
 1. **[!UICONTROL Day CQ 電子メールサービス]**&#x200B;の設定を開きます。「**[!UICONTROL SMTP サーバーのホスト名]**」、「**[!UICONTROL SMTP サーバーポート]**」、「**[!UICONTROL 送信元アドレス]**」フィールドの値を指定します。「**[!UICONTROL 保存]**」をクリックします。
 1. 「**[!UICONTROL Day CQ Link Externalizer]**」の設定を開きます。「**[!UICONTROL ドメイン]**」フィールドで、ローカルインスタンス、オーサーインスタンス、発行インスタンスの実際のホスト名 / IP アドレスとポート番号を指定します。「**[!UICONTROL 保存]**」をクリックします。
 
-### ワークフローインスタンスの削除 {#purge-workflow-instances}
+### ワークフローインスタンスの削除  {#purge-workflow-instances}
 
-ワークフローインスタンスの数を最小限に抑えるとワークフローエンジンのパフォーマンスが向上します。このため、完了したまたは実行中のワークフローインスタンスをリポジトリから定期的に削除できます。詳しくは、「[ワークフローインスタンスの定期的な削除](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)」を参照してください。
+ワークフローインスタンスの数を最小限に抑えるとワークフローエンジンのパフォーマンスが向上します。このため、完了したまたは実行中のワークフローインスタンスをリポジトリーから定期的に削除できます。詳しくは、「[ワークフローインスタンスの定期的な削除](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)」を参照してください。
