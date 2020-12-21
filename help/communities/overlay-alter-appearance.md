@@ -18,7 +18,7 @@ ht-degree: 50%
 ---
 
 
-# 外観の変更 {#alter-the-appearance}
+# 外観の変更  {#alter-the-appearance}
 
 ## スクリプトの変更 {#modify-the-script}
 
@@ -26,13 +26,13 @@ comment.hbsスクリプトは、各コメントの全体的なHTMLを作成し�
 
 投稿された各コメントの横のアバターを表示しないようにするには：
 
-1. コピー `comment.hbs`元 `libs`: `apps`
+1. `comment.hbs`を`libs`から`apps`にコピー
    1.  `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
-   1. Select **[!UICONTROL Copy]**
+   1. **[!UICONTROL コピー]**&#x200B;を選択
    1.  `/apps/social/commons/components/hbs/comments/comment`
-   1. Select **[!UICONTROL Paste]**
-1. Open the overlaid `comment.hbs`
-   * ノードを重複クリック `comment.hbs`する `/apps/social/commons/components/hbs/comments/comment folder`
+   1. **[!UICONTROL 貼り付け]**&#x200B;を選択
+1. オーバーレイされた`comment.hbs`を開きます
+   * `/apps/social/commons/components/hbs/comments/comment folder`のノード`comment.hbs`を重複クリック
 1. 次の行を探し、削除するかコメントアウトします。
 
    ```xml
@@ -56,9 +56,9 @@ comment.hbsスクリプトは、各コメントの全体的なHTMLを作成し�
 >
 >より強固なレプリケーション形式は、パッケージマネージャーでパッケージを作成し、それを[アクティベート](../../help/sites-administering/package-manager.md#replicating-packages)することです。パッケージは、書き出しおよびアーカイブできます。
 
-From the global navigation, select **[!UICONTROL Tools > Deployment > Replication]** and then **[!UICONTROL Activate Tree]**.
+グローバルナビゲーションで、**[!UICONTROL ツール/導入/レプリケーション]**&#x200B;を選択し、**[!UICONTROL ツリーをアクティブ化]**&#x200B;を選択します。
 
-For the Start Path enter `/apps/social/commons` and select **[!UICONTROL Activate]**.
+[開始パス]に`/apps/social/commons`と入力し、[**[!UICONTROL アクティブ化]**]を選択します。
 
 ![chlimage_1-42](assets/chlimage_1-42.png)
 
