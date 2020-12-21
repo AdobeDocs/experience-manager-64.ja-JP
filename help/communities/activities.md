@@ -22,7 +22,7 @@ ht-degree: 37%
 
 ## 概要 {#introduction}
 
-The activities of a signed in community member, such as posting to a forum or blog, are collected into a stream which may be filtered and displayed in various ways through configuration of the `Activity Streams` component.
+フォーラムやブログへの投稿など、ログインしたコミュニティメンバーのアクティビティは、`Activity Streams`コンポーネントの設定を通じて、様々な方法でフィルタリングおよび表示できるストリームに収集されます。
 
 コミュニティメンバーが関心のある投稿をフォローしたり、他のコミュニティメンバーのアクティビティをフォローしているときは、フォロー機能によって、アクティビティを別の見方で捉えることができます。
 
@@ -33,21 +33,21 @@ The activities of a signed in community member, such as posting to a forum or bl
 
 ## アクティビティストリームをページに追加 {#adding-activity-streams-to-a-page}
 
-If it is desired to add an `Activity Streams` component to a page in author mode, use the component browser to locate
+作成者モードで`Activity Streams`コンポーネントをページに追加する場合は、コンポーネントブラウザーを使用して
 
 * `Communities / Activity Streams`
 
 コンポーネントを探し、ページ上のアクティビティストリームを表示したい位置にドラッグします。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](essentials-activities.md#essentials-for-client-side) 、次のようにコンポー `Activity Streams` ネントが表示されます。
+[必要なクライアント側ライブラリ](essentials-activities.md#essentials-for-client-side)が含まれる場合、`Activity Streams`コンポーネントは次のように表示されます。
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
 ## アクティビティストリームの設定 {#configuring-activity-streams}
 
-Select the placed `Activity Streams` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Activity Streams`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
@@ -55,23 +55,26 @@ Select the placed `Activity Streams` component to access and select the `Configu
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
-* **[!UICONTROL 最大アクティビティ数]**&#x200B;表示するアクティビティ数
+* **[!UICONTROL 最大ア]**
+クティビティ数表示するアクティビティ数
 * **[!UICONTROL ストリームリソースパス]**&#x200B;空白のままにすると、コミュニティサイトまたはコミュニティグループがデフォルトになります。ストリームリソースパスは、アクティビティのソースを識別します。 初期設定は空白です。
 * **[!UICONTROL ユーザーアクティビティビューを表示]**&#x200B;オンにすると、アクティビティページに、現在のメンバーがコミュニティ内で生成するアクティビティに基づいてアクティビティをフィルタリングできるタブが表示されます。初期設定はオンです。
-* **[!UICONTROL [すべてのアクティビティを表示]表示]**&#x200B;オンにすると、アクティビティページにタブが含まれ、現在のメンバがアクセス権を持つコミュニティ内で生成されたすべてのアクティビティが含まれます。 初期設定はオンです。
-* **[!UICONTROL [次の表示を表示]**]オンにすると、アクティビティページに、現在のメンバに基づくフィルターアクティビティがフォローしているタブが含まれます。 初期設定はオンです。
+* **[!UICONTROL [すべてのアクティビティ]**
+ビューを表示]オンにすると、アクティビティページにタブが含まれ、現在のメンバがアクセス権を持つコミュニティ内で生成されたすべてのアクティビティが含まれます。初期設定はオンです。
+* **[!UICONTROL 次の]**
+ビューを表示：オンにすると、アクティビティページに、現在のフィルターに基づくアクティビティがフォローしているタブが含まれます。初期設定はオンです。
 
 ## フォロービュー {#following-view}
 
-フォローを有効にするようにコンポーネントを設定する必要があります。Features that allow following are [blog](blog-feature.md), [forum](forum.md), [QnA](working-with-qna.md), [calendar](calendar.md), [filelibrary](file-library.md), and [comments](comments.md).
+フォローを有効にするようにコンポーネントを設定する必要があります。次の機能を使用できるのは、[blog](blog-feature.md)、[フォーラム](forum.md)、[QnA](working-with-qna.md)、[カレンダー](calendar.md)、[ファイルライブラリ](file-library.md)、[コメント](comments.md)です。
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
-The **Follow** button provides a means to follow entries as activities, [notifications](notifications.md), and/or [subscriptions](subscriptions.md). Each time the **Follow** button is selected, it is possible to toggle on or off a selection. The `Email Subscriptions` selection is only present when configured.
+「**後**」ボタンは、アクティビティ、[通知](notifications.md)、[購読](subscriptions.md)のエントリを後に続ける手段を提供します。 「**フォロー**」ボタンを選択するたびに、選択のオン/オフを切り替えることができます。 `Email Subscriptions`選択は、設定時にのみ存在します。
 
-フォロー方法が選択されると、ボタンのテキストが「**フォロー中**」に変わります。 For convenience, it is possible to select `Unfollow All` to toggle off all methods.
+フォロー方法が選択されると、ボタンのテキストが「**フォロー中**」に変わります。 便宜上、`Unfollow All`を選択して、すべてのメソッドをオフにすることができます。
 
-The **Follow** button will appear:
+「**フォロー**」ボタンが表示されます。
 
 * 別のメンバーのプロファイルを表示する場合
 * フォーラム、QnA、ブログなどのメイン機能ページ
