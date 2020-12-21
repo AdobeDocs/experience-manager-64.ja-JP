@@ -16,7 +16,7 @@ ht-degree: 83%
 ---
 
 
-# Designer での Page Zero コンテンツの変更 {#changing-page-zero-content-in-designer}
+# Designer での Page Zero コンテンツの変更  {#changing-page-zero-content-in-designer}
 
 ChromeまたはFirefoxのデフォルトPDFビューアなど、Adobe PDF以外のビューアでPDF/XFAフォームのコンテンツを読み取れない場合、Page Zeroコンテンツはデフォルトで表示されます。 デフォルトの Page Zero メッセージは、次のとおりです。
 
@@ -30,7 +30,7 @@ AEM Forms Feature Pack 1 バージョンの Designer を使用すると、Page Z
 
 1. **ファイル／フォームのプロパティ**&#x200B;をクリックします。
 
-1. In the Form Properties dialog, click ![plus](assets/plus.png) (Plus icon) to add a custom property.
+1. フォームのプロパティダイアログで、![プラス](assets/plus.png)（プラスアイコン）をクリックして、カスタムプロパティを追加します。
 
 1. プロパティの名前として **_pagezerocontent** を指定します。
 1. 新しい Page Zero メッセージを、リッチテキスト形式で値として追加します。次に例を示します。
