@@ -34,32 +34,32 @@ AEM Communitiesは、ブログ、Q&amp;A、イベントカレンダーを通じ�
 
 Communities の機能は、GitHub.com で公開されている [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki)で試すことができます。また、新しい We.Retail のリファレンス実装内でも試すことができます。
 
-## コミュニティサイト {#community-sites}
+## コミュニティサイト  {#community-sites}
 
 コミュニティサイトは、シンプルなウィザードで作成できる AEM サイトです。作成される Web サイトには、数多くの一般的な機能があらかじめ組み込まれています。
 
-The [site creation wizard](sites-console.md):
+[サイト作成ウィザード](sites-console.md):
 
-* Assembles features of the site, based on the selected [community site template](sites.md) which is
-   * Built from [community functions](#community-functions)
-   * Optional [community groups](#communitygroups) feature
+* 選択された[コミュニティサイトテンプレート](sites.md)に基づいて、サイトの機能をアセンブリします。
+   * [コミュニティ関数](#community-functions)から構築
+   * オプションの[コミュニティグループ](#communitygroups)機能
 * 次の設定を行います。
    * モデレート
    * ログイン
    * 翻訳
 * 重要な機能を提供します。
-   * Responsive design: Uses [Twitter Bootstrap themes](https://getbootstrap.com)
-   * Login: Self-registration, [social login](social-login.md), user profiles
+   * レスポンシブデザイン：[TwitterBootstrapテーマ](https://getbootstrap.com)を使用
+   * ログイン：自己登録、[ソーシャルログイン](social-login.md)、ユーザープロファイル
    * 通知：会員は、会員に関連のあるイベントを見る
    * メッセージ：コミュニティサイト内のメンバーは、メッセージを送信または受信できます。
    * 検索：コミュニティサイト内の検索機能
-   * Language switching: Ability to select a language for a [multillingual site](../../help/sites-administering/translation.md)
+   * 言語の切り替え：[多言語サイト](../../help/sites-administering/translation.md)の言語を選択可能
    * 管理：コミュニティサイト内のユーザーのモデレートと管理を許可されたメンバーが行うアクセス
 * ページレベルのオーサリング手順を多数排除します。
    * ブランディング：コミュニティサイトのすべてのページに表示するバナー画像のアップロード（オプション）
    * ナビゲーションメニュー：コミュニティサイトテンプレートに含まれる機能に対しては、ナビゲーションリンクが提供されます。
 
-To experience the ease of quickly creating a new community site, visit [Getting Started with AEM Communities](getting-started.md).
+新しいコミュニティサイトをすばやく作成できることを体験するには、[AEM Communitiesの使い始めに](getting-started.md)を参照してください。
 
 ## コミュニティコンテンツの永続性 {#community-content-persistence}
 
@@ -75,7 +75,7 @@ AEM Communities でコミュニティコンテンツのパフォーマンスと�
 
 ## コミュニティコンソール {#communities-consoles}
 
-In the author environment, the global navigation console provides access to the [Communities console](consoles.md), which contains:
+作成者環境では、グローバルナビゲーションコンソールから[Communitiesコンソール](consoles.md)にアクセスできます。このコンソールには次のものが含まれます。
 
 * [サイト](sites-console.md)コンソール
 
@@ -120,11 +120,11 @@ In the author environment, the global navigation console provides access to the 
 
 * [ストレージ設定](tools.md#storageconfiguratonconsole)コンソール
 
-   * Select and configure the [common store](working-with-srp.md) for the site
+   * サイトの[共通ストア](working-with-srp.md)を選択して構成します
 
 * [コンポーネントガイド](components-guide.md)
 
-   * A sample site, [Community Components](http://localhost:4502/editor.html/content/community-components/en.html), that provides a sample of all Communities components with their default configuration and the ability to experiment with them
+   * すべてのCommunitiesコンポーネントのサンプルと、それらを試す機能を提供するサンプルサイト[コミュニティコンポーネント](http://localhost:4502/editor.html/content/community-components/en.html)です
 
 ## コミュニティサイトテンプレート {#community-site-templates}
 
@@ -134,7 +134,7 @@ In the author environment, the global navigation console provides access to the 
 
 [サイトテンプレートコンソール](sites.md)を参照してください。
 
-## コミュニティ機能 {#community-functions}
+## コミュニティ機能  {#community-functions}
 
 コミュニティに必要とされる機能はだいたい決まっています。AEM Communities では、こうした機能が基本要素として用意されており、「コミュニティ機能」と呼ばれています。
 
@@ -142,19 +142,19 @@ In the author environment, the global navigation console provides access to the 
 
 [コミュニティ機能コンソール](functions.md)を参照してください。
 
-## コミュニティグループとグループテンプレート {#community-groups-and-group-templates}
+## コミュニティグループとグループテンプレート  {#community-groups-and-group-templates}
 
 コミュニティグループ機能は、サブコミュニティを作成者と発行環境の両方から許可されたユーザーおよびコミュニティメンバーがコミュニティサイト内で動的に作成する機能です。
 
-From the author environment, community groups (sub-communities) may be created within an existing community site or nested within an existing group, when the structure of the template contains the [Groups function](functions.md#groups-function).
+作成者環境から、コミュニティグループ（サブコミュニティ）を既存のコミュニティサイト内に作成したり、テンプレートの構造に[Groups関数](functions.md#groups-function)が含まれる場合に既存のグループ内にネストしたりできます。
 
 コミュニティグループを作成するには、コミュニティグループページのデザインを提供するコミュニティグループテンプレートを選択する必要があります。 テンプレート構造にGroups機能を追加すると、1つのグループテンプレートを指定するか、新しいコミュニティグループを作成する際に選択したテンプレートを指定するように設定されます。
 
 関連トピック：
 
-* [サイトグループコンソール](groups.md) — 作成者環境でのサブコミュニティの作成
-* [グループテンプレートコンソール](tools-groups.md) — グループのサイト構造の作成
-* [はじめに —AEM Communities](getting-started.md) — ネストグループを含むコミュニティサイトをすばやく作成するためのチュートリアル
+* [サイトグループコンソール](groups.md)  — 作成者環境でのサブコミュニティの作成
+* [グループテンプレートコンソール](tools-groups.md)  — グループのサイト構造の作成
+* [はじめに —AEM Communities](getting-started.md)  — ネストグループを含むコミュニティサイトをすばやく作成するためのチュートリアル
 
 ## コミュニティコンポーネント {#community-components}
 
@@ -162,7 +162,7 @@ From the author environment, community groups (sub-communities) may be created w
 
 [コミュニティコンポーネントガイド](components-guide.md)では、これらのコンポーネントをインタラクティブに検討できます。
 
-## コミュニティのタイプ {#types-of-communities}
+## コミュニティのタイプ  {#types-of-communities}
 
 ### Engagement Community {#engagement-community}
 
@@ -186,7 +186,7 @@ From the author environment, community groups (sub-communities) may be created w
 * スコアリングとバッジ
 * 解析レポート
 
-To experience the ease of quickly creating a new engagement community, visit [Getting Started with AEM Communities](getting-started.md).
+新しいエンゲージメントコミュニティをすばやく作成できることを体験するには、[AEM Communitiesの使い始めに](getting-started.md)を参照してください。
 
 ### イネーブルメントコミュニティ {#enablement-community}
 
@@ -194,26 +194,27 @@ To experience the ease of quickly creating a new engagement community, visit [Ge
 
 有効化コミュニティの機能には、次のものがあります。
 
-* All the features of an [engagement community](#engagement-community)
+* [エンゲージメントコミュニティ](#engagement-community)のすべての機能
 * メンバーおよびメンバーグループにコンテンツおよび学習リソースを割り当てる機能
 * クイズやテストなど、SCORMコンテンツをサポート
 * 割り当て完了の追跡
 * レポートと解析へのアクセス
 * フォーラム、メッセージ、コメントおよび評価を通じて、学習リソースに関する会話を行う機能
 
-An enablement community may be created when the [Enablement add-on is configured](enablement.md), which requires additional licensing for use in a production environment. An enablement community site will include the [assignments function](#community-functions).
+[有効化アドオンが](enablement.md)設定されている場合は、有効化コミュニティが作成される可能性があります。この場合、実稼働環境で使用する追加のライセンスが必要になります。 有効化コミュニティサイトには、[割り当て関数](#community-functions)が含まれます。
 
-To experience the ease of creating a new enablement community, visit [Getting Started with AEM Communities for Enablement](getting-started-enablement.md).
+新しい有効化コミュニティを簡単に作成するには、[AEM Communitiesでの利用の手引き](getting-started-enablement.md)を参照してください。
 
 ## AEM Demo Machine {#aem-demo-machine}
 
-[AEM Demo Machineは、AEM](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine) Sites [, Assets](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Sites), Communities [, Communities, Communities Apps, Communities Apps, Apps Apps, Apps Appsは、QuickStartインスタンスを起動するよりもセットアップが必要な場合が多い、Forms Sites](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Assets)Assets, Cosets, Com, Com, Comm, Cos, Com, Dens, Demos, Demos, Demos, Des, Des, Des, Des, Dens, Des, Den, Des, Des, Dens, Demos, Demos, Dens, Dens, [](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Communities)[](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Apps)[](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Forms), Demos, Demos, Des, Des, Des The AEM Demo Machine will setup additional [infrastructure](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Infrastructure) such as MongoDB, Solr, MySQL, FFmpeg and email servers.
+[AEMデモマシン](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine)は、AEM [サイト](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Sites)、[アセット](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Assets)、[コミュニティ](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Communities)、[アプリ](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Apps)、[Forms](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Forms)のデモを管理し、実行します。QuickStartインスタンスの起動のみを行います。 AEM Demo Machineは、MongoDB、Solr、MySQL、FFmpeg、電子メールサーバーなど、追加の[インフラストラクチャ](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Infrastructure)をセットアップします。
 
 AEM Demo Machine は次の要素から構成されています。
 
-* A [graphical user interface](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/User%20Interface)
-* Apache ANT scripts with configurable [properties](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Properties) and [targets](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Command%20Line)
-* インストールするパッケージAEM Demo Machineは、Windows、MacOS、およびLinuxでCQ 5.5、CQ 5.6.1、AEM 6.0、AEM 6.1、AEM 6.2、AEM 6.3で正常にテストされました。
+* [グラフィカルユーザーインターフェイス](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/User%20Interface)
+* 設定可能な[プロパティ](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Properties)と[ターゲット](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Command%20Line)を持つApache ANTスクリプト
+* インストールするパッケージ
+AEM Demo Machineは、Windows、MacOS、およびLinuxでCQ 5.5、CQ 5.6.1、AEM 6.0、AEM 6.1、AEM 6.2、AEM 6.3を使用して正常にテストされました。
 
 AEM Demo Machineには有効なAEMライセンスが必要です。
 
@@ -221,13 +222,13 @@ AEM Demo Machineには有効なAEMライセンスが必要です。
 >
 >AEM Demo Machine の[紹介ビデオ](https://www.youtube.com/watch?v=zEE_zkR9fVQ&amp;feature=youtu.be)を参照してください（13:26）。
 
-## AEM Communities ドキュメント {#aem-communities-documentation}
+## AEM Communities ドキュメント  {#aem-communities-documentation}
 
-* Visit [Deploying Communities](deploy-communities.md) to learn about recommended deployments.
+* 推奨される展開については、[Communitiesの展開](deploy-communities.md)を参照してください。
 
 * コミュニティサイトの作成、コミュニティグループの追加、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理、タグ付け、通知、スコアおよびバッジについては、[コミュニティサイトの管理](administer-landing.md)を参照してください。
 
-* Visit [Developing Communities](communities.md) to learn about the social component framework (SCF) and customizing Communities components and features.
+* Social Component Framework(SCF)とCommunitiesのコンポーネントと機能のカスタマイズについては、[Developing Communities](communities.md)を参照してください。
 
-* Visit [Authoring Communities Components](author-communities.md) to learn how to author with and configure Communities components.
+* Communitiesコンポーネントの作成方法と設定方法については、[Authoring Communities Components](author-communities.md)を参照してください。
 
