@@ -28,11 +28,11 @@ ht-degree: 78%
 >
 >拡張を使用するには、影響を受ける Web サイト内のコメントシステムのインスタンス（/content）によって、その resourceType がカスタムコメントシステムであるように設定される必要があります。
 
-## HBS スクリプトの変更 {#modify-the-hbs-scripts}
+## HBS スクリプトの変更  {#modify-the-hbs-scripts}
 
 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) を使用して、次の手順を実行します。
 
-* Open [/apps/custom/components/comments/comment/comment.hbs](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
+* [/apps/custom/components/comments/comment/comment.hbs](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)を開きます。
 
    * コメント投稿のアバターを含むタグをコメントアウトします（～行21）。
 
@@ -42,7 +42,7 @@ ht-degree: 78%
        -->
       ```
 
-* Open [/apps/custom/components/comments/comments.hbs](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
+* [/apps/custom/components/comments/comments.hbs](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)を開きます。
 
    * 次のコメントエントリ用のアバターを含むタグをコメントアウトします（～行44）。
 
@@ -62,11 +62,11 @@ ht-degree: 78%
 
 * メインメニューから
 
-   * Select **[!UICONTROL Tools > Operations > Replication]**
+   * **[!UICONTROL ツール/操作/レプリケーション]**&#x200B;を選択します。
    *  `Activate Tree`
-   * 設定 `Start Path`: to `/apps/custom`
-   * Uncheck `Only Modified`
-   * 選択 `Activate` ボタン
+   * `Start Path`を設定：を`/apps/custom`に変更します。
+   * `Only Modified`のチェックを外す
+   * `Activate`ボタンを選択
 
 ## 公開済みサンプルページでの変更されたコメントの表示 {#view-modified-comment-on-published-sample-page}
 
