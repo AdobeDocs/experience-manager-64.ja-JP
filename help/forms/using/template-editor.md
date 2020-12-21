@@ -27,9 +27,9 @@ ht-degree: 82%
 * フォームの初期コンテンツを提供できます。
 * テーマや送信アクションを指定できます。
 
-## テンプレートの操作 {#working-with-templates}
+## テンプレートの操作  {#working-with-templates}
 
-ツールメニューからテンプレートエディターにアクセスするには、**[!UICONTROL Adobe Experience Manager／ツール／テンプレート]**&#x200B;に移動します。編集可能テンプレート用のフォルダーごとにテンプレートが表示されます。AEM には、テンプレートを整理するためのグローバルフォルダーが用意されています。ただし、このフォルダーはデフォルトで編集不可の状態になっています。グローバルフォルダーを編集可能にするように管理者に依頼することも、テンプレート用の新しいフォルダーを作成することもできます。For more information on how to create folders, see [Template Folders](/help/sites-developing/page-templates-editable.md).
+ツールメニューからテンプレートエディターにアクセスするには、**[!UICONTROL Adobe Experience Manager／ツール／テンプレート]**&#x200B;に移動します。編集可能テンプレート用のフォルダーごとにテンプレートが表示されます。AEM には、テンプレートを整理するためのグローバルフォルダーが用意されています。ただし、このフォルダーはデフォルトで編集不可の状態になっています。グローバルフォルダーを編集可能にするように管理者に依頼することも、テンプレート用の新しいフォルダーを作成することもできます。フォルダーの作成方法について詳しくは、[テンプレートフォルダー](/help/sites-developing/page-templates-editable.md)を参照してください。
 
 フォルダーをタップして開くと、「作成」ボタンが表示され、アダプティブフォーム用の新しいテンプレートを作成できます。
 
@@ -54,17 +54,17 @@ ht-degree: 82%
    * **サイドパネルを切り替え**：サイドバーの表示と非表示を切り替えます。
    * **ページ情報**:公開/非公開の時間、サムネール、クライアント側ライブラリ、ページポリシー、ページデザインのクライアント側ライブラリなどの情報を指定できます。
    * **エミュレータ**:様々なデバイスの外観をシミュレートしてカスタマイズできます。
-   * **レイヤーセレクター：** レイヤーを変更できます。
+   * **レイヤーセレクター：レイヤー** を変更できます。
 
        **構造**&#x200B;レイヤーまたは&#x200B;**初期コンテンツ**&#x200B;レイヤーを選択できます。構造レイヤーを使用すると、ヘッダーとフッターを追加およびカスタマイズできます。 初期コンテンツレイヤーを使用すると、フォームのコンテンツをカスタマイズできます。
 
-   * **プレビュー:** テンプレートを公開したときの外観をプレビューできます。 レイヤーセレクターとプレビューを使用して、編集モードとプレビューモードを切り替えることができます。
+   * **プレビュー：テンプレート** の公開時の外観をプレビューできます。レイヤーセレクターとプレビューを使用して、編集モードとプレビューモードを切り替えることができます。
 
-* **サイドバー：** コンテンツブラウザー、プロパティブラウザー、アセットブラウザーおよびコンポーネントブラウザーを提供します。
-* **コンポーネントツールバー：** コンポーネントを選択すると、コンポーネントをカスタマイズできるツールバーが表示されます。
+* **サイドバー：コンテンツブラウザー、プロパティブラウザー、アセットブラウザーおよびコンポーネントブラウザーを** 提供します。
+* **コンポーネントツールバー：コンポーネント** を選択すると、コンポーネントをカスタマイズできるツールバーが表示されます。
 * **ページ**:コンテンツを追加してテンプレートを作成する領域。
 
-See [Introduction to authoring adaptive forms](/help/forms/using/introduction-forms-authoring.md) to understand the Touch UI editor.
+タッチUIエディターについて詳しくは、[アダプティブフォームのオーサリングの概要](/help/forms/using/introduction-forms-authoring.md)を参照してください。
 
 ### テンプレートの編集 {#editing-a-template}
 
@@ -81,9 +81,9 @@ See [Introduction to authoring adaptive forms](/help/forms/using/introduction-fo
 
 ![構造レイヤー内のレイアウトコンテナ](assets/header-layer-selector.png)
 
-**図：***構造レイヤー内のレイアウトコンテナ*
+**図：構造レイヤーの** *レイアウトコンテナ*
 
-**A.ヘッダーコンポーネントのレイアウトコンテナ****** B.フッターコンポーネントのレイアウトコンテナ
+**A.ヘッダーコンポーネントの** レイアウトコンテナ **B.フッターコンポーネントの** レイアウトコンテナ
 
 アダプティブフォームコンテナの上にあるレイアウトコンテナにアダプティブフォームのヘッダーコンポーネントをドラッグアンドドロップします。コンポーネントを追加した後にプロパティを指定し、ロゴを追加してそのタイトルを指定できます。
 
@@ -91,7 +91,7 @@ See [Introduction to authoring adaptive forms](/help/forms/using/introduction-fo
 
 ![構造レイヤーに追加されたヘッダーとフッター](assets/header-and-footer.png)
 
-**図：***構造レイヤーに追加されたヘッダーとフッター*
+**図：構造レイヤーに追加された** *ヘッダーとフッター*
 
 #### 構造レイヤー内のコンポーネントのロック／ロック解除 {#locking-unlocking-components-in-the-structure-layer}
 
@@ -107,7 +107,7 @@ See [Introduction to authoring adaptive forms](/help/forms/using/introduction-fo
 
 「初期コンテンツ」オプションを選択すると、テンプレートのアダプティブフォームコンテナがアダプティブフォームと同様に開いて編集可能になります。アダプティブフォームを作成する場合と同様、テーマや送信アクションの選択などの初期設定を指定できます。
 
-フォーム作成者はこれをベースにしてフォームを作成します。コンテンツのフロー構造は、テンプレートの初期コンテンツレイヤーで指定されます。To switch to editing initial content of the form template, before Preview in the page toolbar, tap ![canvas-drop-down](assets/canvas-drop-down.png)**[!UICONTROL > Initial Content ]**.
+フォーム作成者はこれをベースにしてフォームを作成します。コンテンツのフロー構造は、テンプレートの初期コンテンツレイヤーで指定されます。フォームテンプレートの初期コンテンツの編集に切り替えるには、ページツールバーにプレビューする前に、![canvas-drop-down](assets/canvas-drop-down.png)**[!UICONTROL >「初期コンテンツ&#x200B;]**」をタップします。
 
 ![テンプレートエディター内の初期コンテンツレイヤー](assets/initial-content-layer.png)
 
@@ -115,13 +115,13 @@ See [Introduction to authoring adaptive forms](/help/forms/using/introduction-fo
 
 初期コンテンツレイヤー内で、作成者がベースとして使用するアダプティブフォームテンプレートを作成します。テンプレートの作成はフォームの作成と同様です。サイドバーにあるオプションを使用します。サイドバーはコンテンツブラウザー、プロパティブラウザー、アセットブラウザー、コンポーネントブラウザーを提供します。
 
-See [Sidebar](/help/forms/using/introduction-forms-authoring.md#sidebar).
+[サイドバー](/help/forms/using/introduction-forms-authoring.md#sidebar)を参照してください。
 
 >[!NOTE]
 >
 >送信アクションとして「コンテンツを保存」または「PDFを保存」を選択すると、ストレージパスを指定するオプションが表示されます。 テンプレートでパスを指定した場合、このテンプレートから作成されたすべてのフォームには同じパスが指定されます。正しいストレージパスを指定するか、またはフォーム作成者がストレージパスを更新してすべてのフォームのデータが同じ場所に保存されないようにします。
 
-#### タブとパネルを使用したアダプティブフォームテンプレートの作成 {#creating-an-adaptive-form-template-with-tabs-and-panels-nbsp}
+#### タブとパネルを使用したアダプティブフォームテンプレートの作成  {#creating-an-adaptive-form-template-with-tabs-and-panels-nbsp}
 
 例えば、次のタブを使用してテンプレートを作成するとします。
 
@@ -132,12 +132,12 @@ See [Sidebar](/help/forms/using/introduction-forms-authoring.md#sidebar).
 
 レイヤーを構造から初期コンテンツに変更し、コンテンツをフォームに追加します。タブ付きの構造を作成するには、アダプティブフォームコンテナの guideRootPanel に子パネルを追加します。パネルを追加するには：
 
-* You can add a panel by tapping the **+** button when you select the **Drag components here** option.
+* 「**コンポーネントをここにドラッグ**」オプションを選択したときに、**+**&#x200B;ボタンをタップしてパネルを追加できます。
 
 * パネルコンポーネントはコンポーネントブラウザーからサイドバーにドラッグアンドドロップできます。
-* You can add child panel of the `guideRootPanel` from the component toolbar.
+* コンポーネントツールバーから`guideRootPanel`の子パネルを追加できます。
 
-「一般情報」および「職業情報」タブを作成するには、2 つのパネルを `guideRootPanel` の子パネルに追加します。Select the panels and tap ![cmppr](assets/cmppr.png) to open the properties in the sidebar. 要素名を `general-info` および `professional-info` に変更し、タイトルを「一般情報」および「職業情報」にそれぞれ変更します。サイドバーでコンテンツをタップし、コンテンツブラウザーを開きます。「フォームオブジェクト」タブで、`guideRootPanel`「」を選択します。エディターで guideRootPanel が選択されます。Tap ![cmppr](assets/cmppr.png) in the component toolbar to open its properties. パネルレイアウトフィールドで、**「上部のタブ」**&#x200B;を選択し、**「完了」**&#x200B;をタップします。タブ付きのテンプレート構造が適用されます。
+「一般情報」および「職業情報」タブを作成するには、2 つのパネルを `guideRootPanel` の子パネルに追加します。パネルを選択し、![cmppr](assets/cmppr.png)をタップして、サイドバーでプロパティを開きます。 要素名を `general-info` および `professional-info` に変更し、タイトルを「一般情報」および「職業情報」にそれぞれ変更します。サイドバーでコンテンツをタップし、コンテンツブラウザーを開きます。「フォームオブジェクト」タブで、`guideRootPanel`「」を選択します。エディターで guideRootPanel が選択されます。コンポーネントツールバーの![cmppr](assets/cmppr.png)をタップして、プロパティを開きます。 パネルレイアウトフィールドで、**「上部のタブ」**&#x200B;を選択し、**「完了」**&#x200B;をタップします。タブ付きのテンプレート構造が適用されます。
 
 #### タブへのコンテンツの追加 {#adding-content-in-tabs}
 
@@ -147,13 +147,13 @@ See [Sidebar](/help/forms/using/introduction-forms-authoring.md#sidebar).
 
 パネルを追加してタブとして構造化した後、タブ内にフィールドを追加できます。エディターでタブを選択すると、**[!UICONTROL 「コンポーネントをここにドラッグ」]**&#x200B;オプションが表示されます。テキストボックス、リスト項目、ボタンなどのコンポーネントをドラッグアンドドロップできます。コンポーネントはコンポーネントブラウザーからサイドバーにドラッグアンドドロップできます。
 
-各コンポーネントにはデータの取得と操作を強化するプロパティが存在します。例えば、コンポーネントの&#x200B;**[!UICONTROL 「必須フィールド」]**&#x200B;プロパティを有効化することができます。作成者は、顧客が必須フィールドをスキップした場合に表示するメッセージを指定できます。Specify the message in **[!UICONTROL Required Field Message]** property.
+各コンポーネントにはデータの取得と操作を強化するプロパティが存在します。例えば、コンポーネントの&#x200B;**[!UICONTROL 「必須フィールド」]**&#x200B;プロパティを有効化することができます。作成者は、顧客が必須フィールドをスキップした場合に表示するメッセージを指定できます。**[!UICONTROL Required Field Message]**&#x200B;プロパティでメッセージを指定します。
 
 名前、電話番号、生年月日フィールドが例のテンプレートの「一般情報」タブに追加されます。現在の職業、雇用タイプ、学歴フィールドが「職業情報」タブに追加されます。
 
 フィールドを追加した後、「送信」、「リセット」などのボタンを追加できます。
 
-### テンプレートの有効化 {#enabling-the-template}
+### テンプレートの有効化  {#enabling-the-template}
 
 テンプレートは作成するとドラフトとして追加されます。テンプレートを有効化して、アダプティブフォームの作成に使用できるようにします。テンプレートを有効化するには：
 
@@ -166,13 +166,13 @@ See [Sidebar](/help/forms/using/introduction-forms-authoring.md#sidebar).
 
 ## テンプレートの読み込みまたは書き出し {#importing-or-exporting-a-template}
 
-フォームはテンプレートと連携しています。カスタマイズしたテンプレートを使用して作成したアダプティブフォームをダウンロードする場合、テンプレートはダウンロードされません。別の AEM Forms インスタンス上のフォームを読み込む場合は、テンプレートなしで読み込まれます。フォームが読み込まれてもテンプレートを使用できない場合、フォームはレンダリングされません。You can package the custom template from `/conf` node in `https://<server>:<port>/crx/packmgr`, and port it in the AEM Forms instance where you want to upload the form.
+フォームはテンプレートと連携しています。カスタマイズしたテンプレートを使用して作成したアダプティブフォームをダウンロードする場合、テンプレートはダウンロードされません。別の AEM Forms インスタンス上のフォームを読み込む場合は、テンプレートなしで読み込まれます。フォームが読み込まれてもテンプレートを使用できない場合、フォームはレンダリングされません。`https://<server>:<port>/crx/packmgr`の`/conf`ノードからカスタムテンプレートをパッケージ化し、フォームのアップロード先のAEM Formsインスタンスに移植することができます。
 
 ## テンプレートを使用したアダプティブフォームの作成 {#creating-an-adaptive-form-using-the-template}
 
 テンプレートを作成して有効にすると、Forms Manager でアダプティブフォームを作成するときにそのテンプレートを使用できます。テンプレートを使用したアダプティブフォームの作成方法について詳しくは、「[アダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md)」を参照してください。
 
-## 初期設定済みテンプレートの表示オプションの変更  {#change-display-option-of-out-of-the-box-templates}
+## 初期設定済みテンプレートの表示オプションの変更   {#change-display-option-of-out-of-the-box-templates}
 
 アダプティブフォームのカスタムテンプレートを作成して、基本構造と初期コンテンツを定義できます。AEM Forms には、アダプティブフォーム用の一連の初期設定済みテンプレートも用意されています。テンプレートの表示／非表示を選択できます。
 
@@ -182,7 +182,7 @@ See [Sidebar](/help/forms/using/introduction-forms-authoring.md#sidebar).
 
    >[!NOTE]
    >
-   >The URL of AEM web console is `https://[server]:[port]/system/console/configMgr`
+   >AEM WebコンソールのURLは`https://[server]:[port]/system/console/configMgr`です
 
 1. **[!UICONTROL FormsManager 設定]**&#x200B;を探して開きます。
 
@@ -196,5 +196,5 @@ See [Sidebar](/help/forms/using/introduction-forms-authoring.md#sidebar).
 * テンプレートエディターでフォームのプロパティを変更する際は、BindReference プロパティを使用しないようにしてください。
 * ブレークポイントを追加する場合は、アダプティブフォームテンプレートの作成時にブレークポイントを作成します。
 
-   For more information on breakpoints, see [Responsive Layout](/help/sites-authoring/responsive-layout.md).
+   ブレークポイントについて詳しくは、[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)を参照してください。
 
