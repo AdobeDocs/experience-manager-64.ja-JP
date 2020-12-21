@@ -67,12 +67,12 @@ AEM Forms には電子メール通知用の初期設定済みテンプレート�
 
 タスクの割り当て手順では、初期状態でデフォルトテンプレート htmlEmailTemplate.txt を使用するように設定されています。カスタムのテンプレートを使用するように選択できます。テンプレートの場所を変更するには：
 
-1. Open the **[!UICONTROL Assign Task]** step.
+1. **[!UICONTROL タスクの割り当て]**&#x200B;の手順を開きます。
 
-1. Navigate to **[!UICONTROL Assignee > HTML Email Template]**.
+1. **[!UICONTROL 担当者/HTML電子メールテンプレート]**&#x200B;に移動します。
 
 1. 新規作成された HTML 電子メールテンプレートを選択します。
 
 1. 「**[!UICONTROL OK]**」をクリックします。テンプレートが変更されました。
 
-電子メール通知では、[メタデータ](/help/forms/using/use-metadata-in-email-notifications.md)も使用します。例えば、期限、優先度、ワークフロー名などです。You can also configure the template to use [custom metadata](/help/forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).
+電子メール通知では、[メタデータ](/help/forms/using/use-metadata-in-email-notifications.md)も使用します。例えば、期限、優先度、ワークフロー名などです。また、[カスタムメタデータ](/help/forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification)を使用するようにテンプレートを設定することもできます。
