@@ -18,7 +18,7 @@ ht-degree: 75%
 
 # リファレンステーマ {#reference-themes}
 
-[テーマ](/help/forms/using/themes.md)を使用すると、CSS に関する深い知識がなくてもフォームのスタイルを設定できます。In addition to the default theme, you can get the following themes by installing the [AEM-FORMS-6.3-REFERENCE-THEMES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES) package:
+[テーマ](/help/forms/using/themes.md)を使用すると、CSS に関する深い知識がなくてもフォームのスタイルを設定できます。デフォルトのテーマに加えて、[AEM-FORMS-6.3-REFERENCE-テーマ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES)パッケージをインストールすると、次のテーマが得られます。
 
 * Beryl
 * Exec
@@ -35,12 +35,13 @@ ht-degree: 75%
 
 このパッケージに含まれるテーマはレスポンシブで、これらのテーマ内のスタイルはモバイルおよびデスクトップ表示用として定義されています。様々なデバイス上のほとんどの最新のブラウザーは、これらのテーマのいずれかが適用されたフォームを問題なくレンダリングできます。
 
-For more information on installing the package, see [How to Work With Packages](/help/sites-administering/package-manager.md).
+パッケージのインストールについて詳しくは、[パッケージの使い方](/help/sites-administering/package-manager.md)を参照してください。
 
 ## Beryl {#beryl}
 
 Beryl テーマは、[We.Gov アダプティブフォーム](/help/forms/using/gov-reference-site-walkthrough.md)で使用され、背景画像、透明度および大きくてフラットなアイコンの使用を強調します。下のスクリーンショットでは、ベリルテーマの見え方と、フォームのスタイル設定を強化する方法を確認できます。
-![ベリルテーマ](assets/beryl.png)[クリックして拡大](assets/beryl-1.png)
+![ベリル](assets/beryl.png)
+[テーマクリックして拡大](assets/beryl-1.png)
 
 ## Exec {#exec}
 
@@ -72,7 +73,7 @@ Ultramarine テーマは、濃い青色のシェーディングを使用して�
 
 ## Urbane {#urbane}
 
-あか抜けテーマは、フォームのミニマリスト的で機能的な外観を強調します。 Urbaneテーマをフォームに適用すると、コンポーネントがフラットであることがわかります。 パネルには細いアウトラインが付けられ、モダンな外観を作成します。![Urbane テーマ](assets/urbane.png)
+あか抜けテーマは、フォームのミニマリズム的で機能的な外観を強調します。 Urbaneテーマをフォームに適用すると、コンポーネントがフラットであることがわかります。 パネルには細いアウトラインが付けられ、モダンな外観を作成します。![Urbane テーマ](assets/urbane.png)
 
 [クリックして拡大](assets/urbane-1.png)
 
