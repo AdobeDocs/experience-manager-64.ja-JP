@@ -18,11 +18,11 @@ ht-degree: 78%
 ---
 
 
-# リーダーボードの基本事項 {#leaderboard-essentials}
+# リーダーボードの基本事項  {#leaderboard-essentials}
 
 このページでは、リーダーボード機能の操作に関する基本情報をまとめています。
 
-リーダーボードコンポーネントをページに追加する前に、[コミュニティのスコアとバッジ](implementing-scoring.md)を設定する必要があります。See also [Scoring and Badges Essentials](configure-scoring.md).
+リーダーボードコンポーネントをページに追加する前に、[コミュニティのスコアとバッジ](implementing-scoring.md)を設定する必要があります。[スコアリングとバッジの初期設定](configure-scoring.md)も参照してください。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -50,13 +50,13 @@ ht-degree: 78%
   </tr>
   <tr>
    <td><strong> properties</strong></td> 
-   <td>See <a href="enabling-leaderboard.md">Leaderboard Feature</a></td> 
+   <td><a href="enabling-leaderboard.md">リーダーボード機能</a>を参照</td> 
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-### ファイルライブラリ機能 {#file-library-function}
+### ファイルライブラリ機能  {#file-library-function}
 
-A community site structure that includes the [Leaderboard function](functions.md#leaderboard-function), includes a configured `leaderboard` component.
+[リーダーボード機能](functions.md#leaderboard-function)を含むコミュニティサイト構造は、構成された`leaderboard`コンポーネントを含む。
