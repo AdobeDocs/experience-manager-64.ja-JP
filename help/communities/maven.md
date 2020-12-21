@@ -47,7 +47,7 @@ AEM Communities API jar の GAV の例を次に示します。
 指定したバージョンが、AEM Communities用にインストールされたCommunitiesパッケージのバージョンに対応していることを確認します。 インストールされているバージョン番号を確認するには：
 
 1. 管理者権限でログインします。
-2. Browse to [Package Manager](../../help/sites-administering/package-manager.md). For example, [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
+2. [Package Manager](../../help/sites-administering/package-manager.md)を参照します。例：[http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
 
 3. パッケージ *cq-socialcommunities-pkg-1.x.xxx* を探します。
 4. パッケージ名からバージョンを抽出します。
@@ -60,7 +60,7 @@ AEM Communities API jar の GAV の例を次に示します。
 >
 >最新バージョンを確認するには、[最新リリース](deploy-communities.md#latest-releases)の節を参照してください。
 
-## Maven 依存関係の例 {#maven-dependency-example}
+## Maven 依存関係の例  {#maven-dependency-example}
 
 Uber API jar より前に Communities API jar を指定する必要があります。
 
