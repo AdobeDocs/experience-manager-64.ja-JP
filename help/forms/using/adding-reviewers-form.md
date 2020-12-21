@@ -16,7 +16,7 @@ ht-degree: 67%
 ---
 
 
-# フォームへの送信レビュー担当者の関連付け  {#associating-submission-reviewers-with-a-form}
+# フォームへの送信レビュー担当者の関連付け   {#associating-submission-reviewers-with-a-form}
 
 フォーム作成時に、フォームポータル経由で送信されたフォームのレビューおよびフィードバックを行うユーザーを指定することができます。組織はフィードバックを収集し、送信済みフォームに対して再作業を行うことができます。
 
@@ -33,7 +33,7 @@ AEM Forms では、レビュー担当者グループをフォームへ関連付�
 メタデータスキーマを編集するには、次の手順に従います。
 
 1. 作成者モードを使用して、Experience Manager の「**[!UICONTROL ツール／アセット／メタデータスキーマ]**」をクリックします。
-1. In the Schema Forms page, navigate to **[!UICONTROL Forms > Forms Authored in AEM]**.
+1. スキーマFormsページで、**[!UICONTROL Forms/AEM]**&#x200B;で作成されたFormsに移動します。
 
    ページのURL:
 
@@ -43,12 +43,12 @@ AEM Forms では、レビュー担当者グループをフォームへ関連付�
     aem-authored
    ```
 
-1. Select **[!UICONTROL Adaptive Form]** and click **[!UICONTROL Edit]**.
+1. 「**[!UICONTROL アダプティブフォーム]**」を選択し、「**[!UICONTROL 編集]**」をクリックします。
 1. 「フォームの編集」ページで、「**[!UICONTROL 詳細]**」をクリックします。
-1. In the Advanced tab, drag-and-drop the **[!UICONTROL Single Line Text]** component available under Build Form.
+1. 「詳細設定」タブで、「フォームを作成」の下にある「**[!UICONTROL 1行テキスト]**」コンポーネントをドラッグ&amp;ドロップします。
 1. 追加されたテキストコンポーネントを選択し、その設定を確認します。
 
-   「設定」の下の「プロパティ `./jcr:content/metadata/form-submission-reviewer-group` にマップ」フィールドにと入力します。
+   「設定」の下の「プロパティにマップ」フィールドに`./jcr:content/metadata/form-submission-reviewer-group`と入力します。
 
    アダプティブフォームの詳細属性の送信レビュー担当者グループフィールドが、フィールドラベルで指定した名前で有効化されます。
 
@@ -59,16 +59,16 @@ AEM Forms では、レビュー担当者グループをフォームへ関連付�
 
 以下の手順を行う前に、「[必要条件](/help/forms/using/adding-reviewers-form.md#prerequisite)」を参照してください。
 
-To create a group and add members to it, navigate to **[!UICONTROL Tools > Operations > Security > Groups]**.\
-For more information, see [User Administration and Services](/help/sites-administering/security.md).\
-Ensure that you add the group you create as a member of the out-of-the-box user group: **forms-submission-reviewers**. このユーザーグループはAEM Formsに出荷され、送信レビュー担当者として追加されていることを確認します。
+グループを作成し、そのグループにメンバーを追加するには、**[!UICONTROL ツール/操作/セキュリティ/グループ]**&#x200B;に移動します。\
+詳しくは、[ユーザー管理およびサービス](/help/sites-administering/security.md)を参照してください。\
+作成したグループをあらかじめ用意されたユーザーグループのメンバーとして追加しておく必要があります。**forms-submission-reviewers**: このユーザーグループはAEM Formsに出荷され、送信レビュー担当者として追加されていることを確認します。
 
 アダプティブフォームにユーザーグループを関連付けるには、次の手順に従います。
 
 1. 作成者モードで、「**[!UICONTROL フォーム／フォームとドキュメント]**」に移動します。
-1. Use the **[!UICONTROL Select]** option to select an adaptive form, and click **[!UICONTROL View Properties]**.
-1. In the Properties window of the form, click **[!UICONTROL Edit]**, and then click **[!UICONTROL ADVANCED]**.
-1. Enter the group in the submission reviewer group field, and click **[!UICONTROL Done]**.
+1. 「**[!UICONTROL 選択]**」オプションを使用してアダプティブフォームを選択し、「**[!UICONTROL 表示のプロパティ]**」をクリックします。
+1. フォームの「プロパティー」ウィンドウで、「**[!UICONTROL 編集]**」をクリックし、「**[!UICONTROL 詳細設定]**」をクリックします。
+1. 送信レビュー担当者グループのフィールドにグループを入力し、**[!UICONTROL 完了]**&#x200B;をクリックします。
 
    送信レビュー担当者グループのフィールドには、アダプティブフォームのメタデータスキーマの編集で指定した名前が表示されます。
 
