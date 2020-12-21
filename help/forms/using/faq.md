@@ -94,7 +94,7 @@ ht-degree: 81%
 
 1. 不足しているコンテンツまたは重なり合っているコンテンツに関連するレイアウト問題が見られます。理由は？
 
-   回答： Draw Text要素またはDraw Image要素が、同じ位置に他の重なり合う要素（例：Rectangle）と共に存在する場合、Draw Textの内容が(AEM Forms Designerの階層表示で)ドキュメント順序の後に来ると、表示されません。 PDF は透明レイヤーをサポートしていますが、HTML／ブラウザーは透明レイヤーをサポートしていません。
+   回答：Draw Text要素またはDraw Image要素が、同じ位置に他の重なり合う要素（例：Rectangle）と共に存在する場合、Draw Textの内容が(AEM Forms Designerの階層表示で)ドキュメント順序の後に来ると、表示されません。 PDF は透明レイヤーをサポートしていますが、HTML／ブラウザーは透明レイヤーをサポートしていません。
 
 1. HTML フォームで表示されるフォントの一部がフォームをデザインする間に使用されるものと違う理由は？
 
@@ -110,7 +110,7 @@ ht-degree: 81%
 
 1. HTML5 フォームは数値フィールドに対して何らかの制限がありますか？
 
-   回答： はい、HTML5フォームにはいくつかの制限があります。 桁数が、picture 句で指定されたカウントよりも多い場合は、数字はローカライズされずに英語ロケールで表示されます。
+   回答：はい、HTML5フォームにはいくつかの制限があります。 桁数が、picture 句で指定されたカウントよりも多い場合は、数字はローカライズされずに英語ロケールで表示されます。
 
 1. HTML フォームのサイズが PDF フォームのサイズより大きいのはなぜですか？
 
@@ -124,14 +124,14 @@ ht-degree: 81%
 
 1. xdp でのテーブルの使用に関して制限事項はありますか？
 
-   回答： 複雑なテーブルは、レンダリングで問題を引き起こします。
+   回答：複雑なテーブルは、レンダリングで問題を引き起こします。
 
    * テーブル内のセクション (SubformSet) はサポートされていません。
    * 一部のテーブルのヘッダーやフッター列は繰り返しのためにマークされています。そのようなテーブルを複数ページにわたって分割すると、いくつかの問題が発生する可能性があります。
 
 1. アクセス可能なテーブルには制限事項がありますか？
 
-   回答： はい。アクセス可能なテーブルには次の制限があります。
+   回答：はい。アクセス可能なテーブルには次の制限があります。
 
    * 階層化テーブルとテーブル内のサブフォームはサポートされません。
    * ヘッダーがサポートされているのは、テーブルの一番上の行または左の列に対してのみです。ヘッダーは中間テーブル要素に対してサポートされていません。複数行にヘッダーを適用することができます。そのような行および列がすべてテーブルの一番上の行または一番左の列に連動している場合、列ヘッダーがサポートされます。
@@ -168,17 +168,17 @@ ht-degree: 81%
 
    回答:
 
-   * xfa.connectionSet スクリプトではサポートが制限されています。connectionSetの場合、Webサービスのサーバー側呼び出しのみがサポートされます。 For detailed information, see [Scripting Support](/help/forms/using/scripting-support.md).
+   * xfa.connectionSet スクリプトではサポートが制限されています。connectionSetの場合、Webサービスのサーバー側呼び出しのみがサポートされます。 詳しくは、「[スクリプティングのサポート](/help/forms/using/scripting-support.md)」を参照してください。
    * クライアント側スクリプトでは $record および $data のサポートはありません。 ただし、スクリプトがformReady、layoutReadyブロックで記述されている場合は、これらのイベントがサーバー側で実行されるので、スクリプトは引き続き動作します。
    * Draw Text（またはフィールドでは Caption テキスト）の変更などの Xfa Draw 要素固有のスクリプトはサポートされていません。
 
 1. formCalc の使用に関して制限事項はありますか？
 
-   回答：formCalc スクリプトのサブセットのみが現在実装されています。For detailed information, see [Scripting Support](/help/forms/using/scripting-support.md).
+   回答：formCalc スクリプトのサブセットのみが現在実装されています。詳しくは、「[スクリプティングのサポート](/help/forms/using/scripting-support.md)」を参照してください。
 
 1. 推奨される命名規則はありますか？また、避けるべき予約済みのキーワードはありますか？
 
-   * In AEM Forms Designer, it is recommended not to begin the name of an object (such as a subform or a text field) with an underscore (_). To use underscore at the beginning of the name, add a prefix after the underscore, *_&lt;prefix>&lt;objectname>. *
+   * AEM Formsデザイナーでは、オブジェクト（サブフォームやテキストフィールドなど）の名前の先頭にアンダースコア(_)を付けないことをお勧めします。 名前の先頭にアンダースコアを使用するには、アンダースコアの後に接頭辞を追加します(*_&lt;prefix>&lt;objectname>)。*
    * すべての HTML5 フォーム API は予約済みのキーワードです。カスタムの API/機能については、[HTML5 フォーム API](/help/forms/using/scripting-support.md) と異なる名前を使用します。
 
 1. HTML5 フォームはフローティングフィールドをサポートしていますか？
@@ -189,8 +189,8 @@ ht-degree: 81%
    >
    >デフォルトでは、フィールドのフローティングは有効になっていません。Forms Designer を使用して、フィールドのフローティングプロパティを設定できます。
 
-   1. Open CRXde lite and navigate to the `/content/xfaforms/profiles/default` node.
-   1. Add a property `mfDataDependentFloatingField` of type String and set the value of the property to `true`**.**
+   1. CRXde liteを開き、`/content/xfaforms/profiles/default`ノードに移動します。
+   1. 型追加が文字列のプロパティ`mfDataDependentFloatingField`で、プロパティの値を&#x200B;`true`**に設定します。**
    1. 「**すべて保存**」をクリックします。これで、更新されたレンダリングプロファイルを使用して、HTMLFormsに対してフローティングフィールドが有効になりました。
 
       >[!NOTE]
