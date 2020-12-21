@@ -18,7 +18,7 @@ ht-degree: 99%
 ---
 
 
-# OSGi 上の AEM Forms のグループと権限 {#aem-forms-on-osgi-groups-and-privileges}
+# OSGi 上の AEM Forms のグループと権限  {#aem-forms-on-osgi-groups-and-privileges}
 
 ユーザーをグループに割り当てることによる OSGi 上の AEM Forms の管理
 
