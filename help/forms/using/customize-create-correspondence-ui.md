@@ -25,17 +25,18 @@ Correspondence Management を使用すると、ソリューションテンプレ
 
 通信作成用 UI に表示されるロゴは、組織のロゴと入れ替えることもできます。
 
-![通信を作成用UI](assets/0_1_introscreenshot.png)**図のカスタムアイコン：** *通信を作成用UIのカスタムアイコン*
+![通信を作成](assets/0_1_introscreenshot.png)
+**UIFigureのカスタムアイコン：通信を作成UI** *のカスタムアイコン*
 
 ### 通信作成用 UI に表示されるカスタムアイコンを変更する {#changing-the-logo-in-the-create-correspondence-ui}
 
 カスタムロゴ画像を使用するには、次の手順を実行します。
 
-1. Create the appropriate [folder structure in CRX](#creatingfolderstructure).
-1. [CRXで作成したフォルダーに](#uploadlogo) 、新しいロゴファイルをアップロードします。
+1. CRX](#creatingfolderstructure)に適切な[フォルダー構造を作成します。
+1. [CRXで作成したフォルダーに新しいロゴ](#uploadlogo) ファイルをアップロードします。
 
-1. [CRX上にCSS](#createcss) （WebSphere版）を設定し、新しいロゴを参照します。
-1. Clear the browser history and [refresh the Create Correspondence UI](#refreshccrui).
+1. [CRX上の](#createcss) CSSを設定し、新しいロゴを参照します。
+1. ブラウザ履歴を消去し、通信を作成UIを[更新します。](#refreshccrui)
 
 ## 必要なフォルダ構造を作成する {#creatingfolderstructure}
 
@@ -51,12 +52,12 @@ Correspondence Management を使用すると、ソリューションテンプレ
 
 次の手順を実行して、必要なフォルダ構造を /apps ブランチに作成します。
 
-1. Go to `https://[server]:[port]/[ContextPath]/crx/de` and login as Administrator.
+1. `https://[server]:[port]/[ContextPath]/crx/de`に移動し、管理者としてログインします。
 1. apps フォルダーにある defaultApp フォルダーを開き、名前「`css`」のフォルダを作成します。ここでのパスや構造は、ccrui フォルダ内の css フォルダーと類似しています。
 
    cssフォルダーの作成手順：
 
-   1. Right-click the **css** folder at the following path and select **Overlay Node**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
+   1. 次のパスにある&#x200B;**css**&#x200B;フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。`/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
 
       ![ノードをオーバーレイ](assets/1_overlaynode_css.png)
 
@@ -66,7 +67,7 @@ Correspondence Management を使用すると、ソリューションテンプレ
 
       **オーバーレイの場所：** /apps/
 
-      **ノードタイプを一致：** チェック済み
+      **ノードタイプを一致：** オン
 
       ![オーバーレイノードのパス](assets/0_1_5ioverlaynodedialog.png)
 
@@ -81,16 +82,16 @@ Correspondence Management を使用すると、ソリューションテンプレ
 
    1. 「**OK**」をクリックします。指定されたパスに、css フォルダが作成されます。
 
-1. In the apps folder, create a folder named `imgs` with path/structure similar to the imgs folder (located in ccrui folder).
+1. appsフォルダーに、名前`imgs`のフォルダーを作成します。ここでのパスや構造は、ccruiフォルダー内のimgsフォルダーと類似しています。
 
-   1. Right-click the **imgs** folder at the following path and select **Overlay Node**: `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
+   1. 次のパスにある&#x200B;**imgs**&#x200B;フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。`/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
       **パス：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
 
       **オーバーレイの場所：** /apps/
 
-      **ノードタイプを一致：** チェック済み
+      **ノードタイプを一致：** オン
 
    1. 「**OK**」をクリックします。
 
@@ -104,7 +105,7 @@ Correspondence Management を使用すると、ソリューションテンプレ
 
 CRX にカスタムロゴファイルをアップロードします。ロゴの描画には、標準的なHTML規則が適用されます。サポートされる画像ファイル形式は、AEM Formsへのアクセスに使用しているブラウザに応じて異なります。 ただし、JPEG、GIF、および PNG は、すべてのブラウザでサポートされています。ブラウザでサポートされている画像形式の詳細は、ブラウザ固有のドキュメントを参照してください。
 
-* ロゴ画像のデフォルトのサイズは48ピクセル(&amp;amp);ast；です。 48 px. 画像がこのサイズと同じか、48ピクセル(&amp;amp);ast；より大きいことを確認します。 48 px.
+* ロゴ画像のデフォルトのサイズは48ピクセル(&amp;amp);ast；です。48 px. 画像がこのサイズと同じか、48ピクセル(&amp;amp);ast；より大きいことを確認します。48 px.
 * ロゴ画像の高さよりが 50 ピクセルを超えている場合、「通信作成用」のユーザーインターフェイスでは、ヘッダの高さである 50 ピクセルに合わせて画像を縮小表示します。画像を縮小表示する際も、「通信作成用」のユーザーインターフェイスでは画像の縦横比が維持されます。
 * 画像が小さい場合、通信作成用ユーザーインターフェイスでは拡大表示されません。そのため、ロゴ画像をきれいに表示するには、高さが少なくとも 48 ピクセルあり、幅も十分にあるファイルを使用することが大切です。
 
@@ -131,7 +132,7 @@ CRX にカスタムロゴファイルをアップロードします。ロゴの�
 
    ![jcrcontentproperties](assets/jcrcontentproperties.png)
 
-1. Double-click the **jcr:data** property.
+1. **jcr:data**&#x200B;プロパティを重複クリックします。
 
    「Edit jcr:data」のダイアログが表示されます。
 
@@ -142,11 +143,11 @@ CRX にカスタムロゴファイルをアップロードします。ロゴの�
    サポートされる画像ファイル形式は、AEM Formsへのアクセスに使用しているブラウザに応じて異なります。 ただし、JPEG、GIF、および PNG は、すべてのブラウザでサポートされています。ブラウザでサポートされている画像形式の詳細は、ブラウザ固有のドキュメントを参照してください。
 
    ![カスタムロゴファイルのサンプル](assets/geometrixx-outdoors.png)
-   **図：** *例 — カスタムロゴとして使用するCustomLogo.png*
+   **図：** *例 — CustomLogo.pngをカスタムロゴとして使用する*
 
 1. 「**すべて保存**」をクリックします。
 
-## CSS を作成し、UI にロゴを統合する {#createcss}
+## CSS を作成し、UI にロゴを統合する  {#createcss}
 
 カスタムロゴ画像では、コンテンツコンテキストで追加のスタイルシートを読み込む必要があります。
 
@@ -160,7 +161,7 @@ CRX にカスタムロゴファイルをアップロードします。ロゴの�
    customcss.css ファイルの作成手順：
 
    1. 「**css**」フォルダーを右クリックし、「**作成」／「フォルダの作成**」を選択します。
-   1. In the New File dialog, specify the name of the CSS as `customcss.css`(you cannot use a different filename), and click **OK**.
+   1. 「新規ファイル」ダイアログで、CSSの名前を`customcss.css`（別のファイル名は使用できません）と指定し、「**OK**」をクリックします。
    1. 次のコードを、新しく作成した css ファイルに追加します。コード内の content:url にて、CRXDE の imgs フォルダにアップロードした画像の名前を指定します。
 
       ```css
@@ -171,9 +172,10 @@ CRX にカスタムロゴファイルをアップロードします。ロゴの�
 
    1. 「**すべて保存**」をクリックします。
 
-## 通信作成用 UI を更新し、にカスタムロゴを表示する {#refreshccrui}
+## 通信作成用 UI を更新し、にカスタムロゴを表示する  {#refreshccrui}
 
 ブラウザのキャッシュをクリアし、続けてブラウザから通信作成用 UI インスタンスを開きます。カスタムロゴが表示されます。
 
-![カスタムロゴ](assets/0_1_introscreenshot-1.png)**図を使用して通信を作成するユーザーインターフェイス：** *通信を作成用UIのカスタムアイコン*
+![カスタムの](assets/0_1_introscreenshot-1.png)
+**logoFigureを使用して通信を作成ユーザーインターフェイス：通信** *を作成用UIのカスタムアイコン*
 
