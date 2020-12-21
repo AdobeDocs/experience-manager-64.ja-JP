@@ -18,13 +18,13 @@ ht-degree: 65%
 ---
 
 
-# バッジコンソール {#badges-console}
+# バッジコンソール  {#badges-console}
 
 ## バッジについて {#about-badges}
 
 Communities のバッジコンソールでは、バッジを獲得（授与された）したとき、またはコミュニティで特定の役割についた（割り当てられた）ときにメンバーに表示できるカスタムバッジを追加できます
 
-### バッジの表示 {#badge-visibility}
+### バッジの表示  {#badge-visibility}
 
 現在、コミュニティメンバーが獲得するバッジ、またはコミュニティメンバーに割り当てられるバッジは、次の場所にメンバーの名前とアバターとともに表示されます。
 
@@ -36,7 +36,7 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 オーサー環境でバッジコンソールに接続するには
 
-* From global navigation: **[!UICONTROL Tools > Communities > Badges]**
+* グローバルナビゲーションから：**[!UICONTROL ツール/コミュニティ/バッジ]**
 
 このコンソールでは、現在利用可能なバッジが表示され、新しいバッジを追加できます。
 
@@ -44,7 +44,7 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 ## バッジを作成 {#create-badge}
 
-バッジを作成するには、適度に小さい画像（高さが 26 から 32 ピクセルの 72 dpi）をアップロードし、名前を入力します。The badge image is stored in the repository at `/etc/community/badging/images` and is automatically replicated to the publish environment.
+バッジを作成するには、適度に小さい画像（高さが 26 から 32 ピクセルの 72 dpi）をアップロードし、名前を入力します。バッジ画像は`/etc/community/badging/images`のリポジトリに保存され、自動的に公開環境に複製されます。
 
 パブリッシュ環境がパブリッシャーのファームである場合、[ユーザーの同期](sync.md)を設定する必要があります。
 
@@ -52,22 +52,22 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 * **[!UICONTROL 画像をアップロード]**
 
-   (*Required*) A badge image with a recommended size of 32 x 32 pixels at 72dpi in either the JPEG or PNG format.
+   （*必須*）JPEGまたはPNG形式で、推奨サイズが32 x 32ピクセル、72 dpiのバッジ画像。
 
 * **[!UICONTROL 名前]**
 
-   (*Required*) The badge name. It is the default `Display Name` as well as the repository node name. If the `Name` is not a valid repository node name, it will be modified.
+   （*必須*）バッジ名。 これはデフォルトの`Display Name`とリポジトリノード名です。 `Name`が有効なリポジトリノード名でない場合は、変更されます。
 
 * **[!UICONTROL 表示名]**
 
-   (*Optional*) The name to display for the badge in the UI. Default is the unaltered text entered for the `Name`.
+   （*オプション*） UIにバッジとして表示する名前。 デフォルトは、`Name`に対して入力された変更なしのテキストです。
 
 * **[!UICONTROL 説明]**
 
-   (*Optional*) A description for the badge.
+   （*オプション*）バッジの説明。
 
 ## 追加情報 {#additional-information}
 
-For details on setting up scoring and badging rules, see [Scoring and Badges](implementing-scoring.md).
+スコアリングルールとバッジルールの設定について詳しくは、[スコアリングとバッジ](implementing-scoring.md)を参照してください。
 
 メンバーのバッジの管理については、[メンバーコンソール](members.md)を参照してください。
