@@ -1,18 +1,18 @@
 ---
-title: AEM 6.4 Communitiesユーザーガイド
-seo-title: AEM 6.4 Communitiesユーザーガイド
+title: AEM 6.4 Communities ユーザーガイド
+seo-title: AEM 6.4 Communities ユーザーガイド
 description: このガイドは、フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能など、すべてのAEM Communitiesタスクを対象としています。
 seo-description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能など、すべてのAEM Communitiesタスクを対象としています。
 translation-type: tm+mt
 source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
 workflow-type: tm+mt
 source-wordcount: '386'
-ht-degree: 28%
+ht-degree: 36%
 
 ---
 
 
-# AEM 6.4 Communitiesユーザーガイド
+# AEM 6.4 Communities ユーザーガイド
 
 このガイドは、フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能など、すべてのAEM Communitiesタスクを対象としています。
 
@@ -30,7 +30,7 @@ ht-degree: 28%
 | [リリースノート](/help/release-notes/home.md) | AEMの最新リリースに関する重要な情報を紹介します。新機能、サポートされているプラットフォーム、非推奨機能、削除された機能、および既知の問題が含まれます |
 | [Assets ユーザーガイド](/help/assets/home.md) | デジタルアセットを作成、管理、配信および最適化する方法について説明します。 |
 | [Formsユーザガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、発行、更新の方法について説明します。 |
-| [Communitiesユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成できます。 |
+| [Communitiesユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |
 | [管理ガイド](/help/sites-administering/home.md) | AEM の管理方法を理解します |
 | [オーサリングガイド](/help/sites-authoring/home.md) | このガイドでは、AEMでのオーサリングの概念について説明します。 |
 | [クラシックUIオーサリングガイド](/help/sites-classic-ui-authoring/home.md) | このガイドでは、従来のユーザーインターフェイスでAEMでのオーサリングの概念を説明します。 |
