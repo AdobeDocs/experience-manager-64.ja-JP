@@ -17,7 +17,7 @@ ht-degree: 91%
 ---
 
 
-# Assembler サービスの使用 {#using-assembler-service}
+# Assembler サービスの使用  {#using-assembler-service}
 
 Assembler サービスでは、PDF ドキュメントや XDP ドキュメントの結合、並べ替えおよび拡張と、PDF ドキュメントに関する情報の取得ができます。Assembler サービスに送信される各ジョブには、Document Description XML（DDX）ドキュメント、ソースドキュメントおよび外部リソース（文字列とグラフィック）が含まれます。Assembler サービスについて詳しくは、「[Assembler サービスの概要](/help/forms/using/overview-aem-document-services.md#p-assembler-service-p)」を参照してください。
 
@@ -27,11 +27,12 @@ Assembler サービスでは、PDF ドキュメントや XDP ドキュメント�
 
 Assembler サービスを使用すると、複数の PDF ドキュメントを 1 つの PDF ドキュメントまたは PDF ポートフォリオにアセンブリできます。また、ナビゲーション支援機能やセキュリティ強化機能を PDF ドキュメントに適用することもできます。PDF ドキュメントをアセンブリする方法には、次のようなものがあります。
 
-### 単一 PDF ドキュメントのアセンブリ {#assemble-a-simple-pdf-document}
+### 単一 PDF ドキュメントのアセンブリ  {#assemble-a-simple-pdf-document}
 
 次の図は、3 つのソースドキュメントを 1 つの結果ドキュメントに統合する場合の様子を示しています。
 
-![複数のPDFドキュメント](assets/as_document_assembly.png)**図からの単純なPDFドキュメントのアセンブリ：** *複数のPDFドキュメントからの単純なPDFドキュメントのアセンブリ*
+![複数のPDF](assets/as_document_assembly.png)
+**ドキュメントからの単純なPDFドキュメントのアセンブリ図：複数のPDF** *ドキュメントからの単一のPDFドキュメントのアセンブリ*
 
 以下に、このドキュメントのアセンブリに使用される簡単な DDX ドキュメントの例を示します。この例では、結果ドキュメントの名前と共に、結果ドキュメントの生成に使用するソースドキュメントの名前も指定しています。
 
@@ -51,7 +52,7 @@ Assembler サービスを使用すると、複数の PDF ドキュメントを 1
 * メタデータ、ページラベル、ページサイズなどのベースドキュメント（Doc1）から採用したその他の特性
 * オプションで、結果ドキュメントに結果内のしおりから構築される目次を含めることができます。
 
-### PDF ポートフォリオの作成 {#create-a-pdf-portfolio}
+### PDF ポートフォリオの作成  {#create-a-pdf-portfolio}
 
 Assembler サービスでは、複数のドキュメントおよび独立したユーザーインターフェイスを含む PDF ポートフォリオを作成できます。このインターフェイスは、PDF ポートフォリオレイアウトまたは PDF ポートフォリオナビゲーター（ナビゲーター）と呼ばれています。PDF ポートフォリオは、ナビゲーター、フォルダー、ようこそページを追加することによって、PDF パッケージの機能を拡張します。このインターフェイスでは、ローカライズされたテキスト文字列、カスタムカラースキーム、およびグラフィックリソースを利用して、ユーザーエクスペリエンスを向上させることができます。また、PDF ポートフォリオには、ポートフォリオ内のファイルを整理するためのフォルダーも含まれています。
 
@@ -72,7 +73,7 @@ Assembler サービスによって以下の DDX ドキュメントが解釈さ�
 </DDX>
 ```
 
-### 暗号化ドキュメントのアセンブリ {#assemble-encrypted-documents}
+### 暗号化ドキュメントのアセンブリ  {#assemble-encrypted-documents}
 
 ドキュメントをアセンブリするとき、パスワードを使用して PDF ドキュメントを暗号化することもできます。PDF ドキュメントがパスワードを使用して暗号化されている場合、Adobe Reader または Acrobat で PDF ドキュメントを表示するには、パスワードを指定する必要があります。パスワードを使用して PDF ドキュメントを暗号化するには、PDF ドキュメントの暗号化に必要な暗号化要素の値を DDX ドキュメントに含める必要があります。
 
@@ -80,13 +81,14 @@ PDF ドキュメントをパスワードを使用して暗号化するために�
 
 1 つ以上の入力ドキュメントが暗号化されている場合、ドキュメントを開くためのパスワードを DDX の一部として指定する必要があります。
 
-### ベイツナンバリングを使用したドキュメントのアセンブリ {#assemble-documents-using-bates-numbering}
+### ベイツナンバリングを使用したドキュメントのアセンブリ  {#assemble-documents-using-bates-numbering}
 
 ドキュメントをアセンブリする場合、ベイツナンバリングを使用して各ページに一意のページ識別子を適用することができます。ベイツナンバリングを使用すると、ドキュメント（またはドキュメントセット）内の各ページに、ページを一意に識別する数字が割り当てられます。例えば、原材料情報を含む、1 つの組立部品の製造に関する生産ドキュメントに、1 つの識別子が割り当てられます。ベイツナンバリングの数値は連続した増分値で、オプションでプレフィックスやサフィックスが付きます。プレフィックス + 数値 + サフィックスの形式は、ベイツパターンと呼ばれます。
 
 次の例は、ドキュメントのヘッダに一意の識別子を含む PDF ドキュメントを示しています。
 
-![ドキュメントのヘッダー](do-not-localize/as_batesnumber.png)**図に一意の識別子を含むPDFドキュメント。** *ドキュメントのヘッダーに一意のIDが含まれるPDFドキュメント*
+![ドキュメントの](do-not-localize/as_batesnumber.png)
+**headerFigure内に一意の識別子を含むPDFドキュメント:ドキュメント** *のヘッダー内に一意の識別子を含むPDFドキュメント*
 
 ### ドキュメントの統合およびアセンブリ {#flatten-and-assemble-documents}
 
@@ -98,17 +100,18 @@ Assembler サービスを使用して、インタラクティブ PDF ドキュ�
 >
 >Assembler サービスは、Output サービスを使用して動的 XFA フォームを統合します。XFA 動的フォームの統合を要求する DDX を Assembler サービスが処理する場合に Output サービスを使用できないと、例外が発生します。Acrobat フォームまたは静的 XFA フォームの統合については、Assembler サービスでは、Output サービスを使用せずに実行できます。
 
-## XDP ドキュメントのアセンブリ {#assemble-xdp-documents}
+## XDP ドキュメントのアセンブリ  {#assemble-xdp-documents}
 
 Assembler サービスを使用すると、複数の XDP ドキュメントを 1 つの XDP または PDF ドキュメントにアセンブリできます。ソース XDP ファイルに挿入ポイントがある場合は、フラグメントを挿入する位置を指定できます。
 
 XDP ドキュメントをアセンブリする方法には、次のようなものがあります。
 
-### 単一の XDP ドキュメントのアセンブリ {#assemble-a-simple-xdp-document}
+### 単一の XDP ドキュメントのアセンブリ  {#assemble-a-simple-xdp-document}
 
 次の図は、3 つの XDP ソースドキュメントを 1 つの結果 XDP ドキュメントにアセンブリする場合の様子を示しています。結果 XDP ドキュメントには、3 つのソース XDP ドキュメントと関連データが含まれます。結果ドキュメントには、ベースドキュメント（最初のソース XDP ドキュメント）から基本属性が受け継がれます。
 
-![複数のXDPドキュメント](assets/as_assembler_xdpassembly.png)**図からの単純なXDPドキュメントのアセンブリ：** *複数のXDPドキュメントからの単純なXDPドキュメントのアセンブリ*
+![複数のXDP](assets/as_assembler_xdpassembly.png)
+**ドキュメントからの単純なXDPドキュメントのアセンブリ図：複数のXDPドキュメントからの単一のXDPドキュメントの** *アセンブリ*
 
 上記の結果ドキュメントを生成する DDX ドキュメントを次に示します。
 
@@ -122,7 +125,7 @@ XDP ドキュメントをアセンブリする方法には、次のようなも�
 </DDX>
 ```
 
-### アセンブリ時における参照の解決 {#resolving-references-during-assembly}
+### アセンブリ時における参照の解決  {#resolving-references-during-assembly}
 
 通常、XDP ドキュメントには、絶対参照または相対参照によって参照した画像を含めることができます。Assembler サービスは、デフォルトで結果の XDP ドキュメント内の画像参照を保持します。
 
@@ -155,7 +158,7 @@ XDP ドキュメントをアセンブリする方法には、次のようなも�
 
 resolveAssets 属性の値は、XDP ソースタグまたは親の XDP 結果タグで指定できます。XDP 結果タグで指定した場合、属性は、その XDP 結果タグの子であるすべての XDP ソース要素に継承されます。ただし、ソース要素の属性を明示的に指定すると、そのソースドキュメントのみの結果要素の設定が上書きされます。
 
-#### XDP ドキュメント内のすべてのソース参照を解決する {#resolve-all-source-references-in-an-xdp-document}
+#### XDP ドキュメント内のすべてのソース参照を解決する  {#resolve-all-source-references-in-an-xdp-document}
 
 ソースXDPドキュメント内のすべての参照を解決するには、\
 次の例のように、結果のドキュメントをすべてに渡します。
@@ -199,7 +202,7 @@ fragment="myFragment"/>
 </DDX>
 ```
 
-#### 絶対参照または相対参照を選択して解決する {#selectively-resolve-absolute-or-relative-references}
+#### 絶対参照または相対参照を選択して解決する  {#selectively-resolve-absolute-or-relative-references}
 
 次の例に示すように、ソースドキュメントの全部または一部で特定の絶対参照または相対参照を解決できます。
 
@@ -222,7 +225,8 @@ Assembler サービスを使用して、フラグメントが挿入される別�
 
 次の図に、2 つの XML フォーム（XFA テンプレート）を示します。左側のフォームには、myInsertionPoint という挿入ポイントがあります。右側のフォームには、myFragment というフラグメントがあります。
 
-![XFAフォーム](assets/as_assembler_fragment_assy_assembled.png)**図へのフォームフラグメントの挿入：** *フォームフラグメントのXFAフォームへの挿入*
+![フォームフラグメントのXFA](assets/as_assembler_fragment_assy_assembled.png)
+**フォームへの挿入図：フォームフラグメントのXFA** *フォームへの挿入*
 
 Assembler サービスによって以下の DDX ドキュメントが解釈されると、別の XML フォームを含む XML フォームが作成されます。myFragmentSource ドキュメントの myFragment サブフォームが、myFormSource ドキュメント内の myInsertionPoint の位置に挿入されます。
 
@@ -237,7 +241,7 @@ source="myFragmentSource"/>
 </DDX
 ```
 
-### XDP ドキュメントの PDF へのパッケージ化 {#package-an-xdp-document-as-pdf}
+### XDP ドキュメントの PDF へのパッケージ化  {#package-an-xdp-document-as-pdf}
 
 以下の DDX ドキュメントのように、Assembler サービスを使用して、XDP ドキュメントを PDF ドキュメントとしてパッケージ化できます。
 
@@ -252,15 +256,16 @@ source="myFragmentSource"/>
 </DDX>
 ```
 
-## PDF ドキュメントのディスアセンブリ {#disassemble-pdf-documents}
+## PDF ドキュメントのディスアセンブリ  {#disassemble-pdf-documents}
 
 Assembler サービスを使用して PDF ドキュメントをディスアセンブリできます。また、ソースドキュメントからページを抽出したり、しおりの位置を境にソースドキュメントを分割することもできます。このタスクは、一般的に、PDF ドキュメントが最初に多数の個別ドキュメント（明細書一式など）から作成された場合に役立ちます。
 
-### ソースドキュメントからのページの抽出 {#extract-pages-from-a-source-document}
+### ソースドキュメントからのページの抽出  {#extract-pages-from-a-source-document}
 
 次の図で、ページ 1 ～ 3 は、ソースドキュメントから抽出されて、新しい結果ドキュメントに配置されています。
 
-![ソースドキュメント](assets/as_intro_page_extraction.png)**図から特定のページを抽出する：** *ソースドキュメントからの特定のページの抽出*
+![ソース](assets/as_intro_page_extraction.png)
+**ドキュメントから特定のページを抽出する図：ソースドキュメントから特定のページを** *抽出する*
 
 次に、このドキュメントのディスアセンブリに使用される DDX ドキュメントの例を示します。
 
@@ -270,11 +275,12 @@ Assembler サービスを使用して PDF ドキュメントをディスアセ�
 </PDF>
 ```
 
-### しおりに基づいたソースドキュメントの分割 {#divide-a-source-document-based-on-bookmarks}
+### しおりに基づいたソースドキュメントの分割  {#divide-a-source-document-based-on-bookmarks}
 
 次の図は、DocA を複数の結果ドキュメントに分割する例です。ページで最初に表示されるレベル 1 のしおりが、新しい結果ドキュメントの開始位置を示します。
 
-![ブックマークに基づくソースドキュメントを複数のドキュメント](assets/as_intro_pdfsfrombookmarks.png)**図に分割する：** *ブックマークに基づくソースドキュメントの複数のドキュメントへの分割*
+![しおりに基づくソースドキュメントを複数の](assets/as_intro_pdfsfrombookmarks.png)
+**ドキュメントに分割図：しおりに基づくソースドキュメントを複数のドキュメントに** *分割する*
 
 次に、しおりを使用してソースドキュメントをディスアセンブリする DDX ドキュメントの例を示します。
 
@@ -284,11 +290,11 @@ Assembler サービスを使用して PDF ドキュメントをディスアセ�
 </PDFsFromBookmarks>
 ```
 
-## ドキュメントが PDF/A に準拠しているかどうかの検証 {#determine-whether-documents-are-pdf-a-compliant}
+## ドキュメントが PDF/A に準拠しているかどうかの検証  {#determine-whether-documents-are-pdf-a-compliant}
 
 Assembler サービスを使用すると、PDF ドキュメントが PDF/A に準拠しているかどうかを検証することができます。PDF/A は、ドキュメントのコンテンツを長期間保存するためのアーカイブ形式です。フォントはドキュメント内に埋め込まれ、ファイルは圧縮されません。その結果、通常、PDF/A ドキュメントは標準の PDF ドキュメントよりも大きくなります。また、PDF/A ドキュメントには、オーディオおよびビデオコンテンツは含まれません。
 
-## PDF ドキュメントに関する情報の取得 {#obtain-information-about-a-pdf-document}
+## PDF ドキュメントに関する情報の取得  {#obtain-information-about-a-pdf-document}
 
 Assembler サービスを使用して、次の PDF 情報を取得できます。
 
@@ -304,11 +310,11 @@ Assembler サービスを使用して、次の PDF 情報を取得できます�
 
 * パッケージファイル情報（ファイル情報、フォルダー、パッケージ、スキーマ、フィールドデータなど）。任意の PDF ドキュメントからこのデータを書き出し、別の PDF ドキュメントに読み込むことができます。
 
-## DDX ドキュメントの検証 {#validate-ddx-documents}
+## DDX ドキュメントの検証  {#validate-ddx-documents}
 
 Assembler サービスを使用すると、DDX ドキュメントが有効かどうかを検証できます。例えば、LiveCycle を以前のバージョンからアップグレードした後に検証を実行すると、DDX ドキュメントが有効であることを確認できます。
 
-## 他のサービスの呼び出し {#call-other-services}
+## 他のサービスの呼び出し  {#call-other-services}
 
 DDX ドキュメントを使用して、Assembler サービスで次の LiveCycle サービスを呼び出すことができます。Assembler サービスが呼び出せるのは、LiveCycle と一緒にインストールされる次のサービスだけです。
 
