@@ -22,11 +22,11 @@ ht-degree: 94%
 
 ## SocialUtils パッケージの廃止 {#socialutils-package-deprecated}
 
-The package **com.adobe.cq.social.ugcbase.SocialUtils** was deprecated in AEM 6.1.
+AEM 6.1では、パッケージ&#x200B;**com.adobe.cq.sosical.ugcbase.SocialUtils**&#x200B;が非推奨となりました。
 
 以下の各表は、SocialUtils のメソッドの代わりに使用するメソッドのリストです。
 
-## SocialResourceUtilities パッケージ  {#socialresourceutilities-package}
+## SocialResourceUtilities パッケージ   {#socialresourceutilities-package}
 
 | com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities のメソッド |
 |---|
@@ -44,13 +44,13 @@ The package **com.adobe.cq.social.ugcbase.SocialUtils** was deprecated in AEM 6.
 | String UGCToResourcePath(String ugcPath) | メソッドの署名を変更 |
 | String UGCToResourcePath(String ugcPath, ResourceResolver resolver) | 新規 |
 
-| utilities. `com.adobe.cq.social.`resource.api.SocialResourceUtilitiesのメソッド |
+| `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilitiesのメソッド |
 |---|
 | SocialResourceProvider getSocialResourceProvider(Resource resource) | replacesSocialResourceProvider getConfiguredProvider(Resource resource) |
 
 ## SCFUtilities パッケージ {#scfutilities-package}
 
-| utilities.scf.api.SCFUtilites内の `com.adobe.cq.social.`メソッド |
+| `com.adobe.cq.social.`utilities.scf.api.SCFUtilitesのメソッド |
 |---|
 | String getAvatar(UserProperties userProperties) |
 | String getAvatar(UserProperties userProperties, int size) |
@@ -60,7 +60,7 @@ The package **com.adobe.cq.social.ugcbase.SocialUtils** was deprecated in AEM 6.
 | String getSocialProfileURL(String username, ResourceResolver resolver, Page page) |
 | UserProperties getUserProperties(ResourceResolver resolver, String userId) |
 
-## 内部でのみ使用 {#for-internal-use-only}
+## 内部でのみ使用  {#for-internal-use-only}
 
 | boolean canAddNode(Session session, String path) |
 |---|
@@ -79,7 +79,7 @@ The package **com.adobe.cq.social.ugcbase.SocialUtils** was deprecated in AEM 6.
 | boolean mayPost(ResourceResolver resolver, Resource resource) |
 | String prepareUserGeneratedContent(ResourceResolver resolver, String path) |
 
-## 使用できなくなったメソッド {#methods-no-longer-available}
+## 使用できなくなったメソッド  {#methods-no-longer-available}
 
 | Node createNode(ResourceResolver resolver, String path, String nodeType) |
 |---|
