@@ -18,23 +18,23 @@ ht-degree: 51%
 ---
 
 
-# 高度なスコアとバッジ {#advanced-scoring-and-badges}
+# 高度なスコアとバッジ  {#advanced-scoring-and-badges}
 
 ## 概要 {#overview}
 
-高度なスコアを使用すると、メンバーをエキスパートとして識別するバッジを授与できます。Advanced scoring assigns points based on the quantity *and* quality of content created by a member, whereas basic scoring assigns points simply based on the quantity of content created.
+高度なスコアを使用すると、メンバーをエキスパートとして識別するバッジを授与できます。高度スコアリングは、メンバーが作成したコンテンツの数量&#x200B;*と*&#x200B;に基づいてポイントを割り当てますが、基本スコアリングは、作成したコンテンツの数量に基づいてポイントを割り当てます。
 
 この違いは、スコアの計算に使用されるスコアエンジンによるものです。基本スコアリングエンジンは、単純な計算を適用します。 高度なスコアリングエンジンは、トピックの自然言語処理(NLP)を通じて導き出された、価値の高い関連コンテンツに貢献するアクティブメンバーに報酬を与えるアダプティブアルゴリズムです。
 
 このスコアアルゴリズムでは、コンテンツの関連度に加え、投票や回答の割合など、メンバーのアクティビティが考慮されます。基本的なスコアリングには定量的なものが含まれますが、高度なスコアリングではアルゴリズム的に使用します。
 
-したがって、高度なスコアエンジンの分析を意味あるものにするには、十分なデータが必要です。エキスパートになるための達成のしきい値は、作成されたコンテンツの量と品質にアルゴリズムが継続的に調整されるので、常に再評価されます。 There is also a concept of *decay* of a member&#39;s older posts. If an expert member stops participating in the subject matter where they gained expert status, at some pre-determined point (see [scoring engine configuration](#configurable-scoring-engine)) they could lose their status as an expert.
+したがって、高度なスコアエンジンの分析を意味あるものにするには、十分なデータが必要です。エキスパートになるための達成のしきい値は、作成されたコンテンツの量と品質にアルゴリズムが継続的に調整されるので、常に再評価されます。 メンバーの古い投稿の&#x200B;*decay*&#x200B;という概念もあります。 エキスパートメンバーが、エキスパートのステータスを得たサブジェクトの参加を停止した場合、事前に決められた時点で（[スコアリングエンジン設定](#configurable-scoring-engine)を参照）、エキスパートとしてのステータスを失う可能性があります。
 
 高度なスコアの設定方法は、基本スコアとほとんど同じです。
 
-* Basic and advanced scoring and badging rules are [applied to content](implementing-scoring.md#apply-rules-to-content) in the same manner
+* 基本的なスコアおよび高度なスコアおよびバッジルールは、同様にコンテンツ](implementing-scoring.md#apply-rules-to-content)に[適用されます
    * 基本的なスコアおよび高度なスコアおよびバッジルールを同じコンテンツに適用できます
-* [コンポーネントのバッジを有効にする](implementing-scoring.md#enable-badges-for-component) ：汎用
+* [コンポー](implementing-scoring.md#enable-badges-for-component) ネントのバッジを有効にする（汎用）
 
 スコアルールおよびバッジルールの設定では、以下の点が異なります。
 
@@ -46,11 +46,11 @@ ht-degree: 51%
 * 高度なバッジルール：
    * `badgingType` 「 **[!UICONTROL 詳細」に設定]**
    * `badgingLevels` を授与するエキスパートレベルの数に設定
-   * Requires `badgingPaths` array of badges instead of thresholds array mapping points to badges
+   * しきい値配列のバッジへのマッピングポイントの代わりに`badgingPaths`配列のバッジが必要です
 
 >[!NOTE]
 >
->高度なスコアリング機能とバッジング機能を使用するには、 [エキスパートIDパッケージをインストールします](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg)。
+>高度なスコアリング機能とバッジング機能を使用するには、[エキスパートIDパッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/cq-social-expert-identification-pkg)をインストールします。
 
 ## 設定可能なスコアエンジン {#configurable-scoring-engine}
 
@@ -58,9 +58,10 @@ ht-degree: 51%
 
 ![chlimage_1-260](assets/chlimage_1-260.png)
 
-* **[!UICONTROL スコア重み付け]**&#x200B;トピックの場合、スコアを計算する際に最も優先度が高い動詞を指定します。 One or more topics may be entered, but limited to **one verb per topic**. See [Topics and Verbs](implementing-scoring.md#topics-and-verbs).
+* **[!UICONTROL スコアの]**
+重みトピックの場合、スコアの計算時に最も優先度が高い動詞を指定します。1つ以上のトピックを入力できますが、トピック**ごとに**&#x200B;動詞が1つに限られます。 [トピックと動詞](implementing-scoring.md#topics-and-verbs)を参照してください。
 
-   コンマはエスケープさ `topic,verb` れたとおりに入力します。 次に例を示します。
+   コンマをエスケープして`topic,verb`と入力します。 次に例を示します。
 
    `/social/forum/hbs/social/forum\,ADD`
 
@@ -105,7 +106,7 @@ ht-degree: 51%
 
 ![chlimage_1-261](assets/chlimage_1-261.png)
 
-### Stopwords {#stopwords}
+### ストップワード{#stopwords}
 
 高度なスコアパッケージでは、ストップワードファイルを含む設定フォルダーがインストールされます。
 
@@ -117,7 +118,7 @@ ht-degree: 51%
 
 ストップワードファイルが存在しない場合は、スコアエンジンによりエラーがスローされます。
 
-## 高度なバッジルール {#advanced-badging-rules}
+## 高度なバッジルール  {#advanced-badging-rules}
 
 高度なバッジルールのプロパティは、[基本バッジルールのプロパティ](implementing-scoring.md#badging-rules)とは異なります。
 
@@ -130,7 +131,7 @@ ht-degree: 51%
 | badgingPath | String[] | （必須）バッジ画像の複数値の文字列（badgingLevelsの数まで）。 バッジ画像のパスを指定するときは、最も高いレベルのエキスパートに授与するものを最初に指定する必要があります。badgingLevels で指定された値よりもバッジの数が少ない場合、足りない部分には配列内の最終要素のバッジが使用されます。例のエントリ：/etc/community/badging/images/expert-badge/jcr:content/expert.png |
 | badgingLevels | Long | （オプション）与える専門知識のレベルを指定します。 例えば、あるエキスパートとほとんどエキスパート（バッジが2つ）の場合、値は2に設定します。 badgingLevelは、badgingPathプロパティに対してリストされているエキスパート関連のバッジ画像の数に対応する必要があります。 初期設定は 1 です。 |
 | badgingType | String | （必須）スコアリングエンジンが「基本」または「詳細」であることを示します。 &quot;advanced&quot;に設定されている場合、デフォルトは&quot;basic&quot;です。 |
-| scoringRules | String[] | （オプション）リストされたスコアリングルールで識別されるスコアリングイベントにバッジングルールを制限する複数値の文字列です。例：/etc/community/scoring/rules/adv-comments-scoringデフォルトは制限はありません。 |
+| scoringRules | 文字列[] | （オプション）リストされたスコアリングルールで識別されるスコアリングイベントにバッジングルールを制限する複数値の文字列です。例：/etc/community/scoring/rules/adv-comments-scoringデフォルトは制限はありません。 |
 
 ## このリリースに含まれるルールとバッジ {#included-rules-and-badge}
 
@@ -156,7 +157,7 @@ ht-degree: 51%
 
 ### このリリースに含まれているスコアルールとサブルール {#included-scoring-rules-and-sub-rules}
 
-Included in the beta release are two advanced scoring rules for the [forum function](functions.md#forum-function) (one each for the forum and comments components of the forum feature):
+ベータ版リリースには、[フォーラム関数](functions.md#forum-function)の2つの高度なスコアリングルールが含まれています（各フォーラム関数用のルールと、フォーラム機能のコメントコンポーネント用のルール）。
 
 1. /etc/community/scoring/rules/adv-comments-scoring
 
@@ -180,21 +181,21 @@ Included in the beta release are two advanced scoring rules for the [forum funct
 
 **備考:**
 
-* Both `rules`and `sub-rules` nodes are of type `cq:Page`
-* `subRules` は、ルールの[]`jcr:content` ノード上のString型の属性です
+* `rules`ノードと`sub-rules`ノードの両方が`cq:Page`型です
+* `subRules` は、ルールの[] ノードの `jcr:content` String型の属性です
 * `sub-rules` は、複数のスコアルール間で共有できます。
 * `rules` は、リポジトリ内の誰でも読み取れる場所に配置する必要があります。
    * ルール名は場所にかかわらず一意である必要があります。
 
-### このリリースに含まれるバッジルール {#included-badging-rules}
+### このリリースに含まれるバッジルール  {#included-badging-rules}
 
-Included in the release are two advanced badging rules that correspond to the [advanced forums and comments scoring rules](#included-scoring-rules-and-sub-rules).
+このリリースには、[アドバンスフォーラムとコメントスコアルール](#included-scoring-rules-and-sub-rules)に対応する2つのアドバンスバッジルールが含まれています。
 
 * /etc/community/badging/rules/adv-comments-badging
 * /etc/community/badging/rules/adv-forums-badging
 
 **備考:**
 
-* `rules` ノードのタイプ `cq:Page`
+* `rules` ノードのタイプ  `cq:Page`
 * `rules` は、リポジトリ内の誰でも読み取れる場所に配置する必要があります。
    * ルール名は場所にかかわらず一意である必要があります。
