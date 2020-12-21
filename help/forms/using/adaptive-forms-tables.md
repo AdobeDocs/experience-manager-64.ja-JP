@@ -32,7 +32,7 @@ AEM Forms を使用すると、サイドバーにあるコンポーネントブ�
 * XSD 複合タイプ要素を使用した行またはセルの追加のサポート
 * XML ファイルからのデータの統合
 
-## 表の作成 {#create-a-table}
+## 表の作成  {#create-a-table}
 
 表を作成するには、表コンポーネントをサイドキックにあるコンポーネントブラウザーからアダプティブフォームへとドラッグ＆ドロップします。表には、デフォルトで 2 つの列と ヘッダー行を含む 3 つの行が含まれています。
 
@@ -50,7 +50,7 @@ AEM Forms を使用すると、サイドバーにあるコンポーネントブ�
 
 結合したいセルを選択し、右クリックして「**結合**」を選択することにより、複数のセルを結合することができます。また、結合されたセルを右クリックして「**セルの分割**」を選択することにより、セルを分割することができます。
 
-### 行および列の追加、削除、移動 {#add-delete-move-rows-and-columns}
+### 行および列の追加、削除、移動  {#add-delete-move-rows-and-columns}
 
 行または列の追加/削除を行ったり、表の中で行を上下に移動させることができます。
 
@@ -68,11 +68,11 @@ AEM Forms を使用すると、サイドバーにあるコンポーネントブ�
 >
 >表には、任意の数の行を追加することができますが、追加できる列の数は最大 6 つまでに制限されています。また、表からヘッダー行を削除することはできません。
 
-### 表の説明の追加 {#add-table-description}
+### 表の説明の追加  {#add-table-description}
 
 情報がどのように整理されているか、スクリーンリーダーが解釈し、読み出すことのできる説明を、表に追加することができます。説明を追加するには：
 
-1. Select the table and tap ![cmppr](assets/cmppr.png) to see its properties in the sidebar.
+1. テーブルを選択し、![cmppr](assets/cmppr.png)をタップして、サイドバーにプロパティを表示します。
 1. 「アクセシビリティ」タブで概要を指定します。
 1. 「**完了**」をクリックします。
 
@@ -80,9 +80,9 @@ AEM Forms を使用すると、サイドバーにあるコンポーネントブ�
 
 ページのツールバーでスタイルモードを使用することにより、表のスタイルを定義できます。次の手順を実行してスタイルモードに切り替え、表のスタイルを編集します。
 
-1. In the page toolbar, before Preview, tap ![canvas-drop-down](assets/canvas-drop-down.png) > **Style**.
+1. ページツールバーで、プレビュー前に![canvas-drop-down](assets/canvas-drop-down.png) > **スタイル**&#x200B;をタップします。
 
-1. In the sidebar select table and tap the edit button ![edit-button](assets/edit-button.png).
+1. サイドバーでテーブルを選択し、編集ボタン![編集ボタン](assets/edit-button.png)をタップします。
 
    サイドバーにスタイル設定プロパティが表示されます。
 
@@ -96,11 +96,11 @@ AEM Forms を使用すると、サイドバーにあるコンポーネントブ�
 
 表には、実行時の動的な行の追加および削除のサポートがあらかじめ含まれています。
 
-1. Select a table row and tap ![cmppr](assets/cmppr.png).
+1. テーブル行を選択し、![cmppr](assets/cmppr.png)をタップします。
 1. 「繰り返しの設定」タブで、表の行の数を制限する最大値と最小値を指定します。
 1. 「**完了**」をクリックします。
 
-At runtime, you will see **`+`** and *`-`* buttons to add or delete a row.
+実行時に、行を追加または削除する&#x200B;**`+`**&#x200B;ボタンと&#x200B;*`-`*&#x200B;ボタンが表示されます。
 
 ![add-delete-rows-dynamically](assets/add-delete-rows-dynamically.png)
 
@@ -108,14 +108,14 @@ At runtime, you will see **`+`** and *`-`* buttons to add or delete a row.
 >
 >行の動的な追加/削除は、表の「左側にヘッダー」のモバイルレイアウトではサポートされていません。
 
-## 表における数式 {#expressions-in-a-table}
+## 表における数式  {#expressions-in-a-table}
 
 アダプティブフォームの表では、表または行を表示/非表示にする、すべての数値を加算して合計をセルに表示する、セルを有効または無効にする、ユーザー入力を検証するなどの動作を誘導する数式を JavaScript で作成することができます。これらの数式は、アダプティブフォームのスクリプトモデル API を使用しています。
 
 表と行では、数式によって返される値を基にその視認性をコントロールする視認性の数式のみがサポートされていますが、セルでは、次の数式がサポートされています。
 
 * **初期化スクリプト：**&#x200B;フィールドの初期化で操作を実行します。
-* **値コミットスクリプト：** フィールドの値を変更した後にフォームのコンポーネントを変更する場合。
+* **値コミットスクリプト：フィ** ールドの値が変更された後にフォームのコンポーネントを変更します。
 
 >[!NOTE]
 >
@@ -136,13 +136,15 @@ At runtime, you will see **`+`** and *`-`* buttons to add or delete a row.
 
 表のモバイルレイアウトは、表の編集コンポーネントダイアログの「スタイル設定」タブから設定することができます。
 
-### 左側にヘッダー {#headers-on-left}
+### 左側にヘッダー  {#headers-on-left}
 
 左側にヘッダーのレイアウトでは、表のヘッダーが左側に転置され、ヘッダーに寄せてセルがひとつだけ表示されている形になっています。このレイアウトでの各行は、個別のセクションとして表示されます。次の画像では、デスクトップ上での表とモバイルデバイス上での表を比較しています。
 
-![desktopview](assets/desktopview.png)**図：** *左側にヘッダーレイアウトを使用した表のデスクトップ表示*
+![](assets/desktopview.png)
+**** *desktopviewFigure：テーブルのデスクトップ表示で、左側にヘッダーレイアウトが付いています*
 
-![headersonthelft](assets/headersontheleft.png)**図：** *左側にヘッダーレイアウトを使用した表のモバイル表示*
+![headersonthelftFigure:](assets/headersontheleft.png)
+**** *表のモバイル表示で、左側にヘッダーレイアウトがある*
 
 ### 折りたたみ可能な列のレイアウト {#collapsible-columns-layout}
 
@@ -154,9 +156,11 @@ At runtime, you will see **`+`** and *`-`* buttons to add or delete a row.
 
 次の画像では、列が折りたたまれた状態と展開された状態で、表がどのように表示されるかを比較しています。
 
-![collapsed-column](assets/collapsed-column.png)**図：** *モバイルデバイス上で列が2つだけ表示されている表の折りたたまれた列*
+![collapsed-](assets/collapsed-column.png)
+**columnFigure：モバイルデバイス上で2つの列のみが表示されている表の** *折りたたまれた列*
 
-![collapsible_column](assets/collapsible_column.png)**図：** *モバイルデバイス上で展開された表の列*
+![collassible_](assets/collapsible_column.png)
+**columnFigure：モバイルデバイス上で** *展開された表の列*
 
 ## 表におけるデータの統合 {#merge-data-in-a-table}
 
@@ -232,7 +236,7 @@ XML ファイルのデータを使って入力する、次の銀行取引概略�
 </afData>
 ```
 
-In the sample XML, the data for a row is defined by the `<Row1>` tags, which is the element name for the row in the table. Within the `<Row1>` tag, the data for each cell is defined within the tag for its element name, such as `<tableItem1>`, `<tableItem2>`, `<tableItem3>`, and `<type>`.
+サンプルXMLでは、行のデータは`<Row1>`タグで定義されています。これは、テーブルの行の要素名です。 `<Row1>`タグ内では、`<tableItem1>`、`<tableItem2>`、`<tableItem3>`、`<type>`など、各セルのデータが要素名のタグ内で定義されます。
 
 このデータを実行時に表と統合するには、wcmmode を無効にした状態で、XML の絶対位置を表を含むアダプティブフォームに示す必要があります。例えば、アダプティブフォームが *http://localhost:4502/myForms/bankTransaction.html* にあり、データ XML ファイルが *C:/myTransactions/bankSummary.xml* に保存されている場合、データを持ったテーブルは次の URL で確認することができます。
 
