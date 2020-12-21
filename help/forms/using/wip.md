@@ -16,5 +16,5 @@ ht-degree: 8%
 ---
 
 
-# WIPを発行しない — 進行中の作業 {#do-not-publish-wip-work-in-progress}
+# WIPを発行しない — 進行中の作業{#do-not-publish-wip-work-in-progress}
 
