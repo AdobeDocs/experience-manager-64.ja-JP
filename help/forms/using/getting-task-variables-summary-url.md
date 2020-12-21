@@ -17,7 +17,7 @@ ht-degree: 87%
 ---
 
 
-# サマリー URL でのタスク変数の取得 {#getting-task-variables-in-summary-url}
+# サマリー URL でのタスク変数の取得  {#getting-task-variables-in-summary-url}
 
 要約ページには、タスクに関連する情報が表示されます。この記事では、要約ページでタスクに関連する情報を再利用する方法について説明します。
 
@@ -66,7 +66,7 @@ ht-degree: 87%
 
       サマリURLの設定時に使用する出力変数**ptoNodePath **を定義します。
 
-   1. In the **create PTO summary** process, use the **set value** component to set the input details in a **nodeProperty **(**nodeProps**) map.
+   1. **create PTO summary**&#x200B;プロセスで、**set value**&#x200B;コンポーネントを使用して、**nodeProperty **(**nodeProps**)マップに入力の詳細を設定します。
 
       このマップのキーは、前の手順の HTML レンダラーで定義したキーと同じである必要があります。
 
@@ -78,7 +78,7 @@ ht-degree: 87%
 
       * **フォルダパス**：新しい CRX ノードが作成されるパスです。パスを **/content** に設定します。
       * **ノード名**：入力変数 nodeName をこのフィールドに割り当てます。これは一意のノード名文字列です。
-      * **ノードタイプ**: タイプを **nt:unstructured**. このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
+      * **ノードタイプ**:タイプを **nt:unstructured**.このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
    1. 送信されたフォームデータ（**employeeName**、**employeeID**、**ptoReason**、および **totalDays**）を新しいプロセス **create PTO summary** への入力として渡します。**ptoSummaryNodePath** として出力を取得します。
 
 
