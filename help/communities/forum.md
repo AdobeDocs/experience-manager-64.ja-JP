@@ -34,25 +34,25 @@ ht-degree: 66%
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
 * AEMサイトへのフォーラム機能の追加
-* Configuration settings for the `Forum`component
+* `Forum`コンポーネントの構成設定
 
 ## フォーラムをページに追加 {#adding-a-forum-to-a-page}
 
-To add a `Forum` component to a page in author mode, use the component browser to locate
+作成者モードで`Forum`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して
 
 * `Communities / Forum`
 
 フォーラムが表示されるページにドラッグします。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](essentials-forum.md#essentials-for-client-side) 、次のように `Forum`コンポーネントが表示されます。
+[必要なクライアント側ライブラリ](essentials-forum.md#essentials-for-client-side)が含まれる場合、`Forum`コンポーネントは次のように表示されます。
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
 ## フォーラムの設定 {#configuring-a-forum}
 
-Select the placed `Forum` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Forum`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![chlimage_1-61](assets/chlimage_1-61.png) ![chlimage_1-62](assets/chlimage_1-62.png)
 
@@ -78,15 +78,18 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 * **[!UICONTROL おすすめコンテンツを許可]**&#x200B;オンにすると、アイデアを[おすすめコンテンツ](featured.md)として指定できます。初期設定はオフです。
 
-* **[!UICONTROL 電子メール購読を許可]**&#x200B;オンにすると、新しい投稿があった場合にメンバーに電子メールで通知できるようになります（[購読](subscriptions.md)）。Requires `Allow Following` to be checked and [email configured](email.md). 初期設定はオフです。
+* **[!UICONTROL 電子メール購読を許可]**&#x200B;オンにすると、新しい投稿があった場合にメンバーに電子メールで通知できるようになります（[購読](subscriptions.md)）。`Allow Following`を確認し、[電子メールを設定](email.md)する必要があります。 初期設定はオフです。
 
-* **[!UICONTROL 最大ファイルサイズ]**&#x200B;関連( 
-`Allow File Uploads` がチェックされている。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+* **[!UICONTROL 最大ファイル]**
+サイズ関連( 
+`Allow File Uploads` がチェックされている。このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
-* **[!UICONTROL 許可されているファイルタイプ]**&#x200B;は、 
-`Allow File Uploads` がチェックされている。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
+* **[!UICONTROL 許可されているファイル]**
+タイプ関連 
+`Allow File Uploads` がチェックされている。ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
-* **[!UICONTROL 「ファイルのアップロードを許可」が選択されている場合のみ、「添付画像ファイルの最大サイズ]**」が関連します。 アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
+* **[!UICONTROL 「ファイルのアップロードを許可」がオンの場合のみ、最大添付画像ファイル]**
+サイズ関連。アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
 
 * **[!UICONTROL スレッド化された返信を許可]**&#x200B;オンにすると、トピックに投稿されたコメントへの返信を許可します。初期設定はオフです。
 
@@ -100,11 +103,11 @@ Select the placed `Forum` component to access and select the `Configure` icon wh
 
 >[!NOTE]
 >
->トピックに対するコメントを有効にする場合は、お `AllowThreaded Replies` よび両方 `Allow users to Delete Comments and Topics` を確認する必要があります。
+>トピックに対するコメントを有効にするには、`AllowThreaded Replies`と`Allow users to Delete Comments and Topics`の両方を確認する必要がある場合があります。
 
 ### 「ユーザーモデレート」タブ{#user-moderation-tab}
 
-Under the **[!UICONTROL User Moderation]** tab, specify how the posted topics and replies (user generated content) are managed. For more information, see [Moderating User Generated Content](moderate-ugc.md).
+「**[!UICONTROL ユーザーモデレート]**」タブで、投稿されたトピックと返信（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
 * **[!UICONTROL 投稿を拒否]**&#x200B;オンにすると、信頼されているメンバーモデレーターが投稿を拒否して、公開フォーラムへの表示を止めることができます。初期設定はオフです。
 
@@ -126,7 +129,8 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted topics an
 
 「**[!UICONTROL タグフィールド]**」タブでは、「**[!UICONTROL 設定]**」タブでタグ付けが許可されている場合に、適用できるタグを名前空間に従って制限します。
 
-* **[!UICONTROL 「]**&#x200B;設定 `Allow Tagging` 」タブで「関連」が選択さ **[!UICONTROL れている場合は、「許可された名前空間]** 」。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
+* **[!UICONTROL Settingsタブで]**
+NamespacesRelevant `Allow Tagging` がオンになっ **** ている場合は、許可されている名前空間です。適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
 * **[!UICONTROL 推奨の制限]**&#x200B;フォーラムに投稿するメンバーに表示する推奨タグの数を入力します。初期設定は です。 
 **-** 1（制限なし）。
@@ -139,15 +143,17 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted topics an
 
 ### 「並べ替え設定」タブ{#sort-settings-tab}
 
-Under the **[!UICONTROL Sort Settings]** tab, specify how the posted comments are sorted when displayed.
+「**[!UICONTROL 並べ替え設定]**」タブで、投稿されたコメントの表示順を指定します。
 
-* **[!UICONTROL 並べ替えの基準]**：許可されている並べ替えの選択項目をすべて選択します。 
+* **[!UICONTROL Sort]**
+ByCheckで許可されているすべての並べ替え選択項目： 
 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`」を選択します。デフォルトは `Newest, Oldest, Last Updated` です。
 
 * **[!UICONTROL デフォルトとして設定]**&#x200B;プルダウンして、オンになっている並べ替えオプションのいずれかを選択し、デフォルトとして表示されるようにします。初期設定は です。 
-`Newest`。
+`Newest`
 
-* **[!UICONTROL Analytics Sortingのプルダウンの「Time Options」を選択し]**&#x200B;て、 
+* **[!UICONTROL Analytics Sortingの時間オプションのプ]**
+ルダウンを選択し、次のいずれかを選択します。 
 `All, Last 24 Hours, Last 7 Days, Last 30 Days`」を選択します。デフォルトは `All` です。
 
 ## 追加情報 {#additional-information}
