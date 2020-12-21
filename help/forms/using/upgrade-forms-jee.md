@@ -18,7 +18,7 @@ ht-degree: 75%
 ---
 
 
-# JEE上のAEM 6.4Formsへのアップグレード {#upgrade-to-aem-forms-jee}
+# JEE上のAEM 6.4Forms{#upgrade-to-aem-forms-jee}にアップグレード
 
 ご使用の環境に合わせて、次のアップグレードパスのいずれかを使用します。
 
@@ -27,8 +27,8 @@ ht-degree: 75%
 JEE 上の AEM 6.2 Forms または JEE 上の AEM 6.3 Forms を JEE 上の AEM 6.4 Forms にアップグレードするには、以下の手順を実行します。
 
 1. JEE 上の AEM 6.4 Forms のインストーラーを、[アドビライセンス Web サイト（LWS）](https://licensing.adobe.com/)からダウンロードします。インストーラーをダウンロードするには、有効なメンテナンス＆サポートの契約が必要です。
-1. See [Upgrade checklist and planning](https://www.adobe.com/go/learn_aemfroms_upgrade_checklist_63) to learn about the checks to perform to ensure a successful upgrade.
-1. See [Prepare to upgrade to AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareupgrade_63) to learn and perform the tasks that ensure the upgrade runs correctly with minimal server downtime.
+1. アップグレードが正常に完了したことを確認するために実行するチェックについては、[アップグレードのチェックリストと計画](https://www.adobe.com/go/learn_aemfroms_upgrade_checklist_63)を参照してください。
+1. [AEM Formsへのアップグレードの準備](https://www.adobe.com/go/learn_aemforms_prepareupgrade_63)を参照して、サーバのダウンタイムを最小限に抑えながらアップグレードを正しく実行するタスクを確認し、実行してください。
 1. 現在の環境とアプリケーションサーバーに応じて、以下に示すいずれかのドキュメントに記載されている手順を実行します。
 
    * [AEM 6.2 Forms または AEM 6.3 Forms から AEM 6.4 Forms へのアップグレード（JBoss 版）](assets/upgrade-jboss.pdf)
@@ -36,11 +36,11 @@ JEE 上の AEM 6.2 Forms または JEE 上の AEM 6.3 Forms を JEE 上の AEM 6
    * [AEM 6.2 Forms または AEM 6.3 Forms から AEM 6.4 Forms へのアップグレード（WebSphere 版）](assets/upgrade-websphere.pdf)
    * [AEM 6.2 Forms または AEM 6.3 Forms から AEM 6.4 Forms へのアップグレード（JBoss Turnkey 版）](assets/upgrade-turnkey.pdf)
 
-## JEE 上の AEM 6.0 Forms から JEE 上の AEM 6.3 Forms へのアップグレード {#aem-forms-jee-60-to-63}
+## JEE 上の AEM 6.0 Forms から JEE 上の AEM 6.3 Forms へのアップグレード  {#aem-forms-jee-60-to-63}
 
 LiveCycleES2、LiveCycleES3、AEM 6.0Forms、AEM 6.1FormsからAEM 6.4Formsへの直接アップグレードはできません。 LiveCycle または AEM Forms のバージョンを 1 つ以上中間アップグレードした後に、AEM 6.4 Forms からアップグレードすることができます。中間バージョンのリストと対応するアップグレード手順について詳しくは、「[アップグレードパスを選択する](upgrade.md)」を参照してください。
 
-## LiveCycle ES4 SP1 から JEE 上の AEM 6.4 Forms へのアップグレード {#livecycle-es4sp1-forms-jee}
+## LiveCycle ES4 SP1 から JEE 上の AEM 6.4 Forms へのアップグレード  {#livecycle-es4sp1-forms-jee}
 
 LiveCycle ES4 SP1 から JEE 上の AEM 6.4 Forms へのアップグレードは、アウトオブプレースアップグレードです。このアップグレードでは、旧バージョンのアセットとデータが、サポートされているアプリケーションサーバー、オペレーティングシステム、データベースの新しいインスタンス（新しいバージョン）に移行されます。
 
@@ -55,7 +55,7 @@ LiveCycle ES4 SP1 から JEE 上の AEM 6.4 Forms へのアップグレードは
       * AEM Forms では、Adaptive Forms、Correspondence Management、HTML5 Forms（LiveCycle ES4 SP1 での名称は Mobile Forms）、Forms Portal、HTML Workspace、Process Reporting、OSGi 上の Forms 中心ワークフローの各機能で、コンテンツリポジトリが使用されます。これらの機能にAEM Formsを使用する場合は、コンテンツリポジトリが必要です。
       * AEM Formsドキュメントセキュリティ用のContent Repositoryは必要ありません。
 
-      また、LiveCycle と AEM Forms では、リポジトリタイプが異なります。For available repository types and related information, see [Choosing a persistence type for an AEM Forms installation](/help/forms/using/choosing-persistence-type-for-aem-forms.md).
+      また、LiveCycle と AEM Forms では、リポジトリタイプが異なります。使用可能なリポジトリのタイプと関連情報については、[AEM Formsのインストールに永続性タイプを選択する](/help/forms/using/choosing-persistence-type-for-aem-forms.md)を参照してください。
 
    1. LiveCycle ES4 SP1 のコンテンツとデータのバックアップを作成します。
 
@@ -77,7 +77,7 @@ LiveCycle ES4 SP1 から JEE 上の AEM 6.4 Forms へのアップグレードは
 
       >[!NOTE]
       >
-      >On the Upgrade Task Selection screen, select the **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** option. The **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** option allows the configuration manager to upgrade from LiveCycle ES4 SP1 to AEM 6.4 Forms.
+      >アップグレードタスクの選択画面で、「**[!UICONTROL Adobe Experience Manager Forms6.2.0]**&#x200B;からのアップグレード」オプションを選択します。 **[!UICONTROL Upgrade from the design 6.2.0]**&#x200B;オプションを使用すると、Configuration ManagerでLiveCycleES4 SP1からAEM 6.4Formsにアップグレードできます。
 
    1. コンテンツリポジトリ（CRX リポジトリ）の内容を AEM 6.4 Forms サーバーに読み込みます（AEM Forms ドキュメントセキュリティモジュールの場合は、この操作を実行する必要はありません）。
 
@@ -118,7 +118,7 @@ LiveCycle ES3 から JEE 上の AEM 6.4 Forms へのアップグレードは、�
       * AEM Forms では、Adaptive Forms、Correspondence Management、HTML5 Forms、Forms Portal、HTML Workspace、Process Reporting、OSGi 上の Forms 中心ワークフローの各機能で、コンテンツリポジトリが使用されます。これらの機能にAEM Formsを使用する場合は、コンテンツリポジトリが必要です。
       * AEM Formsドキュメントセキュリティ用のContent Repositoryは必要ありません。
 
-      また、LiveCycle と AEM Forms では、リポジトリタイプが異なります。For available repository types and related information, see [Choosing a persistence type for an AEM Forms installation](/help/forms/using/choosing-persistence-type-for-aem-forms.md).
+      また、LiveCycle と AEM Forms では、リポジトリタイプが異なります。使用可能なリポジトリのタイプと関連情報については、[AEM Formsのインストールに永続性タイプを選択する](/help/forms/using/choosing-persistence-type-for-aem-forms.md)を参照してください。
 
    1. LiveCycleES3データベース、グローバルデータストレージ(GDS)およびContent Repositoryのバックアップを作成します(ドキュメントセキュリティには不要です)。 MongoMK パーシスタンスまたは RDBMK パーシスタンスにアップグレードする場合は、LiveCycle ES3 の通信管理アセットをアーカイブとして書き出します。
    1. アプリケーションサーバー、データベース、オペレーティングシステム、Adobe Acrobat、サードパーティアプリケーション、ハードウェアから構成される既存のプラットフォームが、JEE 上の AEM 6.4 Forms でサポートされているかどうかを確認します。サポート対象のハードウェアおよびソフトウェアについては、「[サポートされているプラットフォームの組み合わせ](/help/forms/using/aem-forms-jee-supported-platforms.md)」ドキュメントを参照してください。
@@ -137,7 +137,7 @@ LiveCycle ES3 から JEE 上の AEM 6.4 Forms へのアップグレードは、�
 
       >[!NOTE]
       >
-      >On the Upgrade Task Selection screen, select the **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** option. The **[!UICONTROL Upgrade from Adobe Experience Manager Forms 6.2.0]** option allows the configuration manager to upgrade from LiveCycle ES3 to AEM 6.4 Forms.
+      >アップグレードタスクの選択画面で、「**[!UICONTROL Adobe Experience Manager Forms6.2.0]**&#x200B;からのアップグレード」オプションを選択します。 **[!UICONTROL Upgrade from the &lt;a0/>Upgrade from the ver 6.2.0]**&#x200B;オプションを使用すると、Configuration ManagerでLiveCycleES3からAEM 6.4Formsにアップグレードできます。
 
    1. CRX リポジトリをアップグレードして AEM 6.4 Forms サーバーに読み込みます（AEM Forms ドキュメントセキュリティモジュールの場合は、この操作を実行する必要はありません）。
 
