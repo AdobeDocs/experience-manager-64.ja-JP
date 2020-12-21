@@ -21,13 +21,13 @@ ht-degree: 92%
 
 管理者は、ネットワークフォルダーを監視フォルダーとして設定することにより、ユーザーが任意のファイル（例えば PDF ファイル）を監視フォルダーに追加した時点から、事前に設定されたワークフロー、サービス、またはスクリプティング操作を開始し、追加されたファイルを処理することができます。指定された操作をサービスが実行した後、指定された出力フォルダーに出力ファイルが保存されます。ワークフロー、サービス、スクリプトについて詳しくは、「[さまざまなファイル処理方法](#variousmethodsforprocessingfiles)」を参照してください。
 
-## 監視フォルダーの作成 {#create-a-watched-folder}
+## 監視フォルダーの作成  {#create-a-watched-folder}
 
 以下の方法のいずれか 1 つを使用して、監視フォルダーをファイルシステムに作成できます。
 
-* 監視フォルダー設定ノードのプロパティを設定する際に、folderPathプロパティに親ディレクトリのフルパスを入力し、作成する監視フォルダーの名前を追加します。次に例を示します。 `C:/MyPDFs/MyWatchedFolder`
+* 監視フォルダー設定ノードのプロパティを設定する際に、folderPathプロパティに親ディレクトリのフルパスを入力し、作成する監視フォルダーの名前を追加します。次に例を示します。`C:/MyPDFs/MyWatchedFolder`
 
-   フォル `MyWatchedFolder`ダーが存在しません。AEM Formsは指定されたパスにフォルダーを作成しようとします。
+   `MyWatchedFolder`フォルダーが存在しません。AEM Formsは指定されたパスにフォルダーを作成しようとします。
 
 * ファイルシステム上にフォルダーを作成してから監視フォルダーエンドポイントを設定し、folderPath プロパティにフルパスを入力します。folderPath プロパティについて詳しくは、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
 
@@ -35,7 +35,7 @@ ht-degree: 92%
 >
 >クラスター環境では、監視フォルダーとして使用されるフォルダーは、ファイルシステムまたはネットワーク上でアクセス、書き込み、共有が有効になっている必要があります。クラスターの各アプリケーションサーバーインスタンスは同じ共有フォルダーにアクセスできる必要があります。Windows の場合は、すべてのサーバー上にマッピングされたネットワークドライブを作成し、マッピングされたネットワークドライブのパスを folderPath プロパティで指定します。
 
-## 監視フォルダー設定ノードの作成 {#create-watched-folder-configuration-node}
+## 監視フォルダー設定ノードの作成  {#create-watched-folder-configuration-node}
 
 監視フォルダーを設定するには、監視フォルダー設定ノードを作成します。次の手順を実行して設定ノードを作成します。
 
@@ -56,7 +56,7 @@ ht-degree: 92%
 
    サポートされているプロパティの完全なリストについては、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
 
-1. 「**すべて保存**」をクリックします。ノードの作成後、プロパティが保存されます。The `input`, `result`, `failure`, `preserve`, and `stage`folders are created at the path specified in the `folderPath` property.
+1. 「**すべて保存**」をクリックします。ノードの作成後、プロパティが保存されます。`input`、`result`、`failure`、`preserve`、`stage`の各フォルダーが、`folderPath`プロパティで指定されたパスに作成されます。
 
    定義した時間間隔でスキャンジョブが監視フォルダのスキャンを開始します。
 
@@ -95,12 +95,12 @@ ht-degree: 92%
 * **deleteExpiredStageFileOnlyWhenThrottled（ブール型、デフォルト値は true）**：監視フォルダーに制限がある場合にのみタイムアウト機能を有効にするかどうか指定します。この機能は制限のある監視フォルダーにはより重要です。制限が有効になっている場合、（ジョブまたはワークフローの断続的失敗により）未処理状態で待機している少数のファイルが、バッチ全体の処理を停止させるおそれがあるためです。このプロパティの値に true（デフォルト値）を指定すると、制限のない監視フォルダーに対して時間制限が有効になりません。このプロパティの値に false を指定すると、stageFileExpirationDuration プロパティの値が正の数になっている限り、この機能が常に有効になります。
 
 * **pollInterval（長整数型）**：入力用の監視フォルダーをスキャンする間隔（秒）。「ジョブ数を制限」設定が無効になっている場合、平均的なジョブの処理にかかる時間よりも長い時間を pollInterval に指定する必要があります。そうしないと、システムが過負荷になるおそれがあります。デフォルト値は 5 です。詳しくは、batchSize の説明を参照してください。pollInterval には 1 以上の値を指定する必要があります。
-* **excludeFilePattern（文字列）**: セミコロン **;** スキャンおよび取得の対象とするファイルとフォルダーを決定するために監視フォルダーで使用されるパターンの区切り形式のリストです。 このパターンに当てはまるファイルまたはフォルダーは、スキャンの対象外となります。この設定は、複数のファイルが存在するフォルダーが入力に使用される場合に便利です。フォルダーの内容を任意の名前のフォルダーにコピーし、監視フォルダーの取得対象に含めることができます。これにより、フォルダーが入力フォルダーに完全にコピーされる前に監視フォルダーがフォルダーを取得することを回避できます。デフォルト値は null です。
+* **excludeFilePattern（文字列）**:スキャンおよび取得の対象とするファイルとフォルダーを決めるために監視フォルダーで使用されるパターンのセミコロン **;** 区切りのリスト。このパターンに当てはまるファイルまたはフォルダーは、スキャンの対象外となります。この設定は、複数のファイルが存在するフォルダーが入力に使用される場合に便利です。フォルダーの内容を任意の名前のフォルダーにコピーし、監視フォルダーの取得対象に含めることができます。これにより、フォルダーが入力フォルダーに完全にコピーされる前に監視フォルダーがフォルダーを取得することを回避できます。デフォルト値は null です。
 
-   You can use [file patterns](/help/forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p) to exclude:
+   [ファイルパターン](/help/forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)を使用して、以下を除外できます。
 
-   * 特定のファイル拡張子を持つファイル； 例えば、&amp;ast;.dat, &amp;ast;.xml, .pdf, &amp;ast；とします。&amp;ast;
-   * 特定の名前のファイル 例えば、data&amp;ast; data1、data2などの名前を持つファイルやフォルダーが除外されます。
+   * 特定のファイル拡張子を持つファイル；例えば、&amp;ast;.dat, &amp;ast;.xml, .pdf, &amp;ast；とします。&amp;ast;
+   * 特定の名前のファイル例えば、data&amp;ast;data1、data2などの名前を持つファイルやフォルダーが除外されます。
    * 次のような名前および拡張子が混在する式に一致するファイル。
 
       * Data[0-9][0-9][0-9].[dD][aA][tT]
@@ -109,10 +109,10 @@ ht-degree: 92%
 
 ファイルパターンについて詳しくは、「[ファイルパターンについて](/help/forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)」を参照してください。
 
-* **includeFilePattern （文字列型）**: セミコロン **;** スキャンおよび取得の対象とするフォルダーとファイルを決定するために監視フォルダーで使用されるパターンの区切り形式のリストです。 例えば、IncludeFilePatternがinput&amp;ast；の場合、input&amp;ast；と一致するすべてのファイルとフォルダー 拾い上げられます。 input1、input2 などの名前を持つファイルおよびフォルダーが含まれます。デフォルト値は&amp;ast；です。 とは、すべてのファイルとフォルダを示します。 次のように、含めるファイルパターンを指定できます。
+* **includeFilePattern （文字列型）**:スキャンおよび取得の対象とするフォルダーとファイルを決めるために監視フォルダーで使用されるパターンのセミコロン **;** 区切りのリスト。例えば、IncludeFilePatternがinput&amp;ast；の場合、input&amp;ast；と一致するすべてのファイルとフォルダー拾い上げられます。 input1、input2 などの名前を持つファイルおよびフォルダーが含まれます。デフォルト値は&amp;ast；です。とは、すべてのファイルとフォルダを示します。 次のように、含めるファイルパターンを指定できます。
 
-   * 特定のファイル拡張子を持つファイル； 例えば、&amp;ast;.dat, &amp;ast;.xml, .pdf, &amp;ast；とします。&amp;ast;
-   * data.&amp;ast; data1、data2などの名前を持つファイルやフォルダーが含まれる場合があります。
+   * 特定のファイル拡張子を持つファイル；例えば、&amp;ast;.dat, &amp;ast;.xml, .pdf, &amp;ast；とします。&amp;ast;
+   * data.&amp;ast;data1、data2などの名前を持つファイルやフォルダーが含まれる場合があります。
 
 * 次のような名前および拡張子が混在する式に一致するファイル。
 
@@ -172,9 +172,9 @@ ht-degree: 92%
 >設計仕様により、ワークフローは非同期型です。たとえ値に false を指定したとしても、ワークフローは非同期モードで開始されます。
 
 * **enabled（ブール型）**：監視フォルダーのスキャンを有効化または無効化します。監視フォルダーのスキャンを開始するには、enabled に true を指定します。デフォルト値は true です。
-* **payloadMapperFilter**: フォルダーが監視フォルダーとして設定されると、監視フォルダー内にフォルダー構造が作成されます。 このフォルダー構造には、入力データを提供するフォルダー、出力（処理の実行結果）を受信するフォルダー、障害データを保存するフォルダー、長期間にわたって実行される処理のデータを保存するフォルダー、各種ステージのデータを保存するフォルダーが格納されます。監視フォルダーのフォルダー構造は、Forms 中心のワークフローのペイロードとして使用することができます。ペイロードマッパーにより、入力、出力、処理で監視フォルダーを使用するペイロードの構造を定義することができます。For example, if you use the default mapper, it maps content of Watched Folder with [payload]\input and [payload]\output folder. すぐに使用できる 2 つのペイロードマッパー実装が用意されています。[カスタムのマッパー実装](/help/forms/using/watched-folder-in-aem-forms.md#creating-a-custom-payload-mapper-filter)がない場合は、用意されている 2 つのマッパー実装のいずれかを使用してください。
+* **payloadMapperFilter**:フォルダーが監視フォルダーとして設定されると、監視フォルダー内にフォルダー構造が作成されます。このフォルダー構造には、入力データを提供するフォルダー、出力（処理の実行結果）を受信するフォルダー、障害データを保存するフォルダー、長期間にわたって実行される処理のデータを保存するフォルダー、各種ステージのデータを保存するフォルダーが格納されます。監視フォルダーのフォルダー構造は、Forms 中心のワークフローのペイロードとして使用することができます。ペイロードマッパーにより、入力、出力、処理で監視フォルダーを使用するペイロードの構造を定義することができます。例えば、デフォルトのマッパーを使用する場合、監視フォルダーのコンテンツを[payload]\inputと[payload]\outputフォルダーにマッピングします。 すぐに使用できる 2 つのペイロードマッパー実装が用意されています。[カスタムのマッパー実装](/help/forms/using/watched-folder-in-aem-forms.md#creating-a-custom-payload-mapper-filter)がない場合は、用意されている 2 つのマッパー実装のいずれかを使用してください。
 
-   * **デフォルトのマッパー：**&#x200B;デフォルトのペイロードマッパーを使用して、監視フォルダーの入力と出力の内容をペイロード内の別々の入出力フォルダーに保存します。Also, in payload path of a workflow, use [payload]/input/ and [payload]/output paths to retrive and save content.
+   * **デフォルトのマッパー：**&#x200B;デフォルトのペイロードマッパーを使用して、監視フォルダーの入力と出力の内容をペイロード内の別々の入出力フォルダーに保存します。また、ワークフローのペイロードパスで、[ペイロード]/input/および[ペイロード]/出力パスを使用して、コンテンツを取得し、保存します。
    * **単純なファイルベースのペイロードマッパー：**&#x200B;入力と出力の内容をペイロードフォルダーに直接保存するには、単純なファイルベースのペイロードマッパーを使用してください。デフォルトのマッパーのような追加の階層は作成されません。
 
 ### カスタム設定パラメーター {#custom-configuration-parameters}
@@ -184,7 +184,7 @@ ht-degree: 92%
 1. CRXDE-Lite にログインし、監視フォルダー設定ノードへ移動します。
 1. プロパティパラメーター&lt;property_name> を監視フォルダー設定ノードに 1 つ追加します。追加できるプロパティのタイプは、ブール型、日付型、10 進数型、倍精度浮動小数点数型、長整数型、文字列型のみです。単一の値をとるプロパティおよび複数の値をとるプロパティを指定できます。
 
-**注意：** *プロパティのデータ型が「重複」の場合は、そのプロパティの値に小数点を指定します。 データ型が重複で、値に小数点が指定されていないすべてのプロパティの場合、型は長整数型に変換されます。 *
+**注意：** *プロパティのデータ型が重複の場合は、そのプロパティの値に小数点を指定します。データ型が重複で、値に小数点が指定されていないすべてのプロパティの場合、型は長整数型に変換されます。*
 
 以上のプロパティは、Map&lt;String, Object> 型の不変マップとして、処理コードに渡されます。処理コードには、ECMAScript、ワークフロー、サービスのいずれかを使用できます。プロパティに指定した値は、マップ内では、キーと値のペアの形式で扱うことができます。キーはプロパティ名であり、値はプロパティの値です。カスタム設定パラメーターについて詳しくは、以下の画像を参照してください。
 
@@ -192,7 +192,7 @@ ht-degree: 92%
 
 必須プロパテイの他、いくつかのオプションのパラメータと設定パラメーターが存在する監視フォルダ設定ノードのサンプル
 
-#### ワークフロー向けの可変変数 {#mutable-variables-for-workflows}
+#### ワークフロー向けの可変変数  {#mutable-variables-for-workflows}
 
 ワークフローベースのファイル処理方法を実行するため、可変変数を作成できます。これらの変数は、ワークフローのステップに基づくデータフローのコンテナの役割を果たします。そのような変数を作成するには：
 
@@ -216,11 +216,11 @@ ht-degree: 92%
 
 ワークフロー、サービス、またはスクリプトを開始して、監視フォルダーに置かれたドキュメントを処理できます。
 
-### サービスを使用した監視フォルダーのファイルの処理 {#using-a-service-to-process-files-of-a-watched-folder-nbsp}
+### サービスを使用した監視フォルダーのファイルの処理  {#using-a-service-to-process-files-of-a-watched-folder-nbsp}
 
 サービスは `com.adobe.aemfd.watchfolder.service.api.ContentProcessor` インターフェイスのカスタム実装です。いくつかのカスタムプロパティと一緒に OSGi に登録されています。カスタムプロパティにより一意の実装を作成できるため、実装を特定するのに役立ちます。
 
-#### ContentProcessor インターフェイスのカスタム実装 {#custom-implementation-of-the-contentprocessor-interface}
+#### ContentProcessor インターフェイスのカスタム実装  {#custom-implementation-of-the-contentprocessor-interface}
 
 カスタム実装は、処理のコンテキスト（タイプ com.adobe.aemfd.watchfolder.service.api.ProcessorContext のオブジェクト）を受け取り、入力ドキュメントと設定パラメーターをコンテキストから読み取って入力を処理し、出力をコンテキストに追加します。ProcessorContext には、以下の API が用意されています。
 
@@ -258,7 +258,7 @@ public class TestContentProcessor1 implements ContentProcessor {
 }
 ```
 
-### スクリプトを使用した監視フォルダーのファイルの処理 {#using-scripts-to-process-files-of-a-watched-folder}
+### スクリプトを使用した監視フォルダーのファイルの処理  {#using-scripts-to-process-files-of-a-watched-folder}
 
 監視フォルダーに置かれたドキュメントの処理に使用されるスクリプトは、ECMAScript 準拠カスタムコードです。スクリプトは JCR ノードとして表されます。標準的な ECMAScript 変数（log、sling など）に加えて、スクリプトでは processorContext 変数を使用できます。この変数のデータ型は ProcessorContext です。ProcessorContext には、以下の API が用意されています。
 
@@ -288,14 +288,14 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 
 カスタムの場所にスクリプトを配置する予定がある場合、デフォルトのサービスユーザーには、カスタムの場所に対する読み取り権限がない可能性があります。 その場合、次の手順を実行して必要な権限をカスタムの場所に入力します。
 
-1. Create a system user programmatically or via the console `https://[server]:[port]/crx/explorer`. 既存のシステムユーザーを使用することもできます。ここでは、通常のユーザーではなく、システムユーザーを使用することが重要です。
+1. プログラムで、またはコンソール`https://[server]:[port]/crx/explorer`を介して、システムユーザーを作成します。 既存のシステムユーザーを使用することもできます。ここでは、通常のユーザーではなく、システムユーザーを使用することが重要です。
 1. カスタムの場所（ここにスクリプトが保存されます）にある新規作成したシステムユーザーまたは既存のシステムユーザーに読み取り権限を与えます。カスタムの場所は複数持つことができます。すべてのカスタムの場所に少なくとも読み取り権限を付与します。
 1. Felix Configuration Console（/system/console/configMgr）で、監視フォルダーのサービスユーザーマッピングを検索します。このマッピングは「Mapping: adobe-aemds-core-watch-folder=...」のようになります。
 1. このマッピングをクリックします。エントリ「adobe-aemds-core-watch-folder:scripts=fd-service」で、fd-serviceをカスタムシステムユーザーのIDに変更します。 「保存」をクリックします。
 
 これで、構成済みのカスタムの場所を使用してスクリプトを保存することができるようになります。
 
-### ワークフローを使用した監視フォルダーのファイルの処理 {#using-a-workflow-to-process-files-of-a-watched-folder}
+### ワークフローを使用した監視フォルダーのファイルの処理  {#using-a-workflow-to-process-files-of-a-watched-folder}
 
 ワークフローにより、Experience Manager のアクティビティを自動化できます。ワークフローは、特定の順序で実行される一連のステップで構成されます。各ステップで、ページのアクティベートや電子メールメッセージの送信など、個別のアクティビティが実行されます。ワークフローでは、リポジトリ内のアセット、ユーザーアカウントおよび Experience Manager サービスとやり取りができます。したがって、ワークフローでは複雑な連携を行わせることができます。
 
@@ -389,13 +389,13 @@ wfSvc.execute(impl, graniteWorkItem, graniteWorkflowSession, metaData);
 log.info("Exiting workflow script!")
 ```
 
-### 監視フォルダーの構造をワークフローのペイロードにマッピングするために、ペイロードマッパーフィルターを作成します。 {#create-payload-mapper-filter-to-map-structure-of-a-watched-folder-to-the-payload-of-a-workflow}
+### 監視フォルダーの構造をワークフローのペイロードにマッピングするために、ペイロードマッパーフィルターを作成します。  {#create-payload-mapper-filter-to-map-structure-of-a-watched-folder-to-the-payload-of-a-workflow}
 
 監視フォルダーを作成すると、監視対象のフォルダーの中にフォルダー構造を作成します。フォルダー構造には stage、result、preserve、input、failure フォルダーが含まれます。このフォルダー構造はワークフローへの入力ペイロードとして使用され、ワークフローからの出力を受け取ります。また、失敗ポイントのリストも作成します（存在する場合）。
 
 ペイロードの構造が監視フォルダーの構造と異なる場合、監視フォルダーの構造をペイロードにマッピングするために、カスタムのスクリプトを作成することができます。このようなスクリプトは、ペイロードマッパーフィルターと呼ばれます。デフォルトでは、AEM Forms には監視フォルダーの構造をペイロードにマッピングするためペイロードマッパーフィルターが用意されています。
 
-#### カスタムペイロードマッパーフィルターの作成 {#creating-a-custom-payload-mapper-filter}
+#### カスタムペイロードマッパーフィルターの作成  {#creating-a-custom-payload-mapper-filter}
 
 1. [Adobe Client SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk/6.3.0/aemfd-client-sdk-6.3.0.jar) をダウンロードします。
 1. maven ベースのプロジェクトのビルドパスに Client SDK をセットアップします。はじめに、選択した IDE で次の maven ベースのプロジェクトをダウンロードして開きます。
@@ -493,7 +493,7 @@ log.info("Exiting workflow script!")
 >
 >アプリケーションサーバーによって監視フォルダー内のファイルへのアクセスが削除されたことを確認してください。AEM Forms がスキャン済みファイルを入力フォルダーから削除できない場合、関連付けられたプロセスが無制限に開始されます。
 
-## 監視フォルダーに関する追加情報 {#additional-information-about-the-watched-folders}
+## 監視フォルダーに関する追加情報  {#additional-information-about-the-watched-folders}
 
 ### ジョブ数の制限について {#about-throttling}
 
@@ -503,7 +503,7 @@ log.info("Exiting workflow script!")
 >
 >ジョブ数の制限がクラスターに合わせて調整されることはありません。ジョブ数の制限が有効である場合、クラスター全体で同時に処理するジョブの数がバッチサイズに指定されている数を超えることはありません。この制限はクラスター全体に及ぶものであり、クラスターの各ノードに固有のものではありません。例えば、バッチサイズが 2 の場合、単一のノードがジョブを 2 つ処理するとジョブ数の制限に達するため、どちらかのジョブが完了するまで他のノードは入力ディレクトリをポーリングしません。
 
-#### ジョブ数制限の仕組み {#how-throttling-works}
+#### ジョブ数制限の仕組み  {#how-throttling-works}
 
 監視フォルダーは、pollInterval が呼び出されるたびに入力フォルダーをスキャンし、batchSize で指定された数のファイルを取得し、これらのファイルごとにターゲットサービスを呼び出します。例えば、各スキャンで batchSize に 4 が指定されている場合、監視フォルダーは 4 つのファイルを取得し、4 つの呼び出し要求を作成して、ターゲットサービスを呼び出します。これらの要求が完了する前に監視フォルダーが呼び出された場合、前回の 4 つのジョブが完了しているかどうかに関係なく、監視フォルダーは 4 つのジョブの処理を再び開始します。
 
@@ -513,7 +513,7 @@ log.info("Exiting workflow script!")
 * 監視フォルダーがジョブを呼び出す前に AEM Forms サーバーがダウンした場合は、管理者がステージフォルダーからファイルを移動できます。詳しくは、「[失敗ポイントおよび回復](/help/forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p)」を参照してください。
 * サービスが正しい順序で開始されず、Job Manager サービスのコールバックが発生したとき、AEM Forms サーバーが動作している一方で監視フォルダーが動作していない場合は、管理者がステージフォルダーからファイルを移動できます。詳しくは、「[失敗ポイントおよび回復](/help/forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p)」を参照してください。
 
-### 失敗ポイントおよび回復 {#failure-points-and-recoveryfailure-points-and-recovery}
+### 失敗ポイントおよび回復  {#failure-points-and-recoveryfailure-points-and-recovery}
 
 ポーリングイベントごとに、監視フォルダーは入力フォルダーをロックし、「ファイルパターンを含める」に一致するファイルをステージフォルダーに移動してから、入力フォルダーのロックを解除します。ロックは、2 つのスレッドが同じファイルを取得して同時に処理することを防ぐために必要となります。pollInterval により小さな値を指定し、batchSize により大きな値を指定すると、このような状況は発生しやすくなります。ファイルがステージフォルダーに移動されると、入力フォルダーのロックが解除され、他のスレッドが入力フォルダーをスキャンできるようになります。この手順により、あるスレッドがファイルを処理している間に他のスレッドがスキャンを実行できるため、高いスループットを実現できます。
 
@@ -526,7 +526,7 @@ log.info("Exiting workflow script!")
    * **同期**：監視フォルダーがサービスを同期的に呼び出すように設定されている場合、ステージフォルダー内のファイルはすべて未処理のままステージフォルダーに残ります。
    * **非同期**：この場合、監視フォルダーは Job Manager サービスに依存します。Job Manager サービスが監視フォルダーをコールバックした場合、ステージフォルダー内のファイルは呼び出しの結果に基づいて保存フォルダーまたは失敗フォルダーに移動されます。Job Manager サービスが監視フォルダーをコールバックしない場合、ファイルは未処理のままステージフォルダーに残ります。この状況が発生するのは、Job Manager がコールバックしようとしたときに監視フォルダーが動作していない場合です。
 
-#### ステージフォルダーに未処理のまま残っているソースファイルの回復 {#recover-unprocessed-source-files-in-the-stage-folder}
+#### ステージフォルダーに未処理のまま残っているソースファイルの回復  {#recover-unprocessed-source-files-in-the-stage-folder}
 
 監視フォルダーでステージフォルダー内のソースファイルを処理できない場合、未処理のファイルを回復できます。
 
@@ -559,7 +559,7 @@ log.info("Exiting workflow script!")
 
 管理者は、サービスを呼び出すことができるファイルのタイプを指定できます。監視フォルダーごとに複数のファイルパターンを作成できます。ファイルパターンは、次のファイルプロパティのいずれかになります。
 
-* 特定のファイル名拡張子を持つファイル； 例えば、&amp;ast;.dat, &amp;ast;.xml, .pdf, &amp;ast；とします。&amp;ast;
+* 特定のファイル名拡張子を持つファイル；例えば、&amp;ast;.dat, &amp;ast;.xml, .pdf, &amp;ast；とします。&amp;ast;
 * data.&amp;ast;
 * 次のような名前および拡張子が混在する式に一致するファイル。
 
@@ -598,11 +598,11 @@ PDF Generator と連携するように監視フォルダーを設定するには
 1. [ワークフローの作成](/help/forms/using/watched-folder-in-aem-forms.md#p-create-a-workflow-p)
 1. [監視フォルダーの設定](/help/forms/using/watched-folder-in-aem-forms.md#p-configure-the-watched-folder-p)
 
-### ECMAScript の作成 {#create-an-ecmascript}
+### ECMAScript の作成  {#create-an-ecmascript}
 
 ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word ドキュメント（.docx）を PDF ドキュメントに変換します。そのようなスクリプトを作成するには、以下の手順を実行します。
 
-1. ブラウザーウィンドウで CRXDE lite を開きます。The URL is `https://[server]:[port]/crx/de`.
+1. ブラウザーウィンドウで CRXDE lite を開きます。URLは`https://[server]:[port]/crx/de`です。
 
 1. /etc/workflow/scripts に移動し、PDFG という名前のフォルダーを作成します。
 
@@ -651,7 +651,7 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
 
 1. 「プロセスステップ」を右クリックし、「**編集**」を選択します。ステップのプロパテイウィンドウが表示されます。
 
-1. 「プロセス」タブで ECMAScript を選択します。For example, the pdfg-openOffice-sample.ecma script created in [Create an ECMAScript](#p-create-an-ecmascript-p). 「**ハンドラー処理の設定**」オプションを有効にして「**OK**」をクリックします。
+1. 「プロセス」タブで ECMAScript を選択します。例えば、[ECMAScriptの作成](#p-create-an-ecmascript-p)で作成したpdfg-openOffice-sample.ecmaスクリプトがあります。 「**ハンドラー処理の設定**」オプションを有効にして「**OK**」をクリックします。
 
    ![create-a-workflow3-pdf](assets/create-a-workflow3-pdf.png)
 
@@ -684,11 +684,11 @@ PDF Generator と連携するように監視フォルダーを設定するには
 1. [ワークフローの作成](/help/forms/using/watched-folder-in-aem-forms.md#p-create-a-workflow-p)
 1. [監視フォルダーの設定](/help/forms/using/watched-folder-in-aem-forms.md#p-configure-the-watched-folder-p)
 
-### ECMAScript の作成 {#create-an-ecmascript-1}
+### ECMAScript の作成  {#create-an-ecmascript-1}
 
 ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word ドキュメント（.docx）を PDF ドキュメントに変換します。そのようなスクリプトを作成するには、以下の手順を実行します。
 
-1. ブラウザーウィンドウで CRXDE lite を開きます。The URL is `https://[server]:[port]/crx/de`.
+1. ブラウザーウィンドウで CRXDE lite を開きます。URLは`https://[server]:[port]/crx/de`です。
 
 1. /etc/workflow/scripts に移動し、**CMB** という名前のフォルダーを作成します。
 
@@ -724,7 +724,7 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
    >
    >ワークフローの作成時、title プロパティは ECMAScript の位置指定に使用されます。
 
-### ワークフローの作成 {#create-a-workflow-1}
+### ワークフローの作成  {#create-a-workflow-1}
 
 1. ブラウザーウィンドウで「AEM ワークフロー」UI を開きます。`https://[server]:[port]/workflow`
 
@@ -741,7 +741,7 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
 
 1. ブラウザーウィンドウで CRXDE lite を開きます。`https://[server]:[port]/crx/de/`
 
-1. Navigate to the /etc/fd/watchfolder/config/ folder and create a node named CMBWatchedFolder of type `nt:unstructured`.
+1. /etc/fd/watchfolder/config/フォルダーに移動し、`nt:unstructured`型のCMBWatchedFolderという名前のノードを作成します。
 
 1. この  ノードに次のプロパティを追加します。
 
