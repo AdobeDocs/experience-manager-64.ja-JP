@@ -14,26 +14,26 @@ translation-type: tm+mt
 source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
 workflow-type: tm+mt
 source-wordcount: '1642'
-ht-degree: 50%
+ht-degree: 51%
 
 ---
 
 
-# コミュニティグループコンソール {#community-groups-console}
+# コミュニティグループコンソール  {#community-groups-console}
 
-The Groups console provides access to creating community groups when a community site&#39;s [template structure](sites-console.md#step1) includes the [groups function](functions.md#groups-function).
+コミュニティサイトの[テンプレート構造](sites-console.md#step1)に[グループ関数](functions.md#groups-function)が含まれている場合、グループコンソールからコミュニティグループを作成するためのアクセスを提供します。
 
-* グループは、他のグループ内にネストすることができます。This happens when the [structure of the new group](tools-groups.md) contains the groups function.
+* グループは、他のグループ内にネストすることができます。これは、新しいグループ](tools-groups.md)の[構造にgroups関数が含まれている場合に発生します。
 * 作成者環境の場合のみ、サイト作成ウィザードに似たグループ作成ウィザードがあります。
 * メンバーがパブリッシュ環境からグループを作成できるかどうかは、コミュニティサイト構造またはコミュニティグループ構造へのグループ機能の追加時に設定できます。
 
-Of the three group templates included, only the `Reference Group` template includes a groups function in its structure.
+3つのグループテンプレートのうち、`Reference Group`テンプレートのみが、その構造にグループ関数を含みます。
 
 コミュニティグループには、次のような側面があります。
 
-* 作成： 作成者時に新しいグループを作成でき、オプションで公開時にも作成できます
-* コントロール： グループは、開いているか、秘密にしている
-* 入れ子： グループは、0個以上のグループを含むことができる
+* 作成：作成者時に新しいグループを作成でき、オプションで公開時にも作成できます
+* コントロール：グループは、開いているか、秘密にしている
+* 入れ子：グループは、0個以上のグループを含むことができる
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ Of the three group templates included, only the `Reference Group` template inclu
 
 >[!NOTE]
 >
->This Groups console, only accessible from the Communities Sites console, is not to be confused with the member [Groups console](members.md) for managing member groups.
+>このグループコンソールは、Communitiesのサイトコンソールからのみアクセス可能で、メンバーグループの管理に関するメンバー[グループコンソール](members.md)と混同しないでください。
 >
 >メンバーグループは、パブリッシュ環境に登録されたユーザーグループであり、[トンネルサービス](deploy-communities.md#tunnel-service-on-author)を使用してオーサー環境からアクセスします。
 
@@ -50,12 +50,12 @@ Of the three group templates included, only the `Reference Group` template inclu
 グループコンソールにアクセスするには：
 
 * 作成者は、管理者権限を持つログインを行います
-* From global navigation: **[!UICONTROL Communities > Sites]**
+* グローバルナビゲーションから：**[!UICONTROL コミュニティ>サイト]**
 * 既存のコミュニティサイトフォルダを選択して開きます
 * フォルダー内のコミュニティサイトのインスタンスを選択
 
    * コミュニティサイトの構造には、グループ機能が含まれている必要があります
-   * These screen shots are from the Getting Started tutorial after [creating groups on publish](published-site.md)
+   * これらのスクリーンショットは、[publish](published-site.md)でグループを作成した後の「はじめに」チュートリアルに記載されています。
 
 ![chlimage_1-133](assets/chlimage_1-133.png)
 
@@ -67,32 +67,32 @@ Of the three group templates included, only the `Reference Group` template inclu
 
 ![chlimage_1-134](assets/chlimage_1-134.png)
 
-* Select **[!UICONTROL Create Group]** button
+* 「**[!UICONTROL グループを作成]**」ボタンを選択します
 
 ### 手順 1：コミュニティグループテンプレート {#step-community-group-template}
 
 ![多言語群](assets/multilingualgroup.png)
 
-* **[!UICONTROL コミュニティグループのタイトル]**: グループの表示タイトル。
+* **[!UICONTROL コミュニティグループのタイトル]**:グループの表示タイトル。
 
    タイトルは、グループのパブリッシュされたサイトに表示されます。
 
-* **[!UICONTROL コミュニティグループの説明]**: グループの説明。
-* **[!UICONTROL コミュニティグループルート]**: グループのルートパスです。
+* **[!UICONTROL コミュニティグループの説明]**:グループの説明。
+* **[!UICONTROL コミュニティグループルート]**:グループのルートパスです。
 
    デフォルトのルートは親サイトですが、ルートは Web サイト内の任意の場所に移動できます。変更することはお勧めしません。
 
-* **[!UICONTROL 使用可能なその他のコミュニティグループ言語]** メニュー： プルダウンメニューを使用して、使用可能なコミュニティグループ言語を選択します。 このメニューには、親コミュニティサイトを作成できる言語がすべて表示されます。この中から言語を選択することで、1 回の手順で複数のロケールにグループを作成できます。指定した複数の言語で、それぞれのコミュニティサイトのグループコンソールに同じグループが作成されます。
+* **[!UICONTROL 使用可能なその他のコミュニティグループ言語]** メニュー：プルダウンメニューを使用して、使用可能なコミュニティグループ言語を選択します。このメニューには、親コミュニティサイトを作成できる言語がすべて表示されます。この中から言語を選択することで、1 回の手順で複数のロケールにグループを作成できます。指定した複数の言語で、それぞれのコミュニティサイトのグループコンソールに同じグループが作成されます。
 
-* **[!UICONTROL コミュニティグループ名]**: URLに表示されるグループのルートページの名前
+* **[!UICONTROL コミュニティグループ名]**:URLに表示されるグループのルートページの名前
 
    * グループの作成後に名前が容易に変更されないので、重複チェックを行います。
-   * ベースURLが `Community Group Name`
+   * ベースURLは`Community Group Name`の下に表示されます
    * 有効なURLの場合は、「.html」を追加します。
 
-      *例えば*、 `http://localhost:4502/content/sites/mysight/en/mygroup.html`
+      *例：*, `http://localhost:4502/content/sites/mysight/en/mygroup.html`
 
-* **[!UICONTROL コミュニティグループテンプレート]** メニュー： プルダウンメニューを使用して、使用可能な [コミュニティグループテンプレートを選択し](tools.md)ます。
+* **[!UICONTROL コミュニティグループテン]** プレートメニュー：プルダウンメニューを使用して、使用可能な [コミュニティグループテンプレートを選択し](tools.md)ます。
 
 ### 手順 2：デザイン {#step-design}
 
@@ -108,7 +108,7 @@ Of the three group templates included, only the `Reference Group` template inclu
 
 コミュニティサイトがパブリッシュされた後、[プロパティを編集](#modifying-group-properties)して、別のテーマを選択できます。
 
-#### コミュニティグループブランディング {#community-group-branding}
+#### コミュニティグループブランディング  {#community-group-branding}
 
 ![chlimage_1-135](assets/chlimage_1-135.png)
 
@@ -148,11 +148,11 @@ Of the three group templates included, only the `Reference Group` template inclu
    選択した場合、コミュニティグループはパブリックグループになります。 サイトメンバーは、明示的にグループに参加せずに、グループに参加して投稿することができます。 デフォルトで選択されています。
 * 必要なメンバーシップ
 
-   選択すると、コミュニティグループは開かれたグループになります。 コミュニティサイトのメンバーは、グループのコンテンツを表示できますが、コンテンツを投稿するには、グループに参加する必要があります。 Members join by selecting the `Join` button in the publish environment. 初期設定では選択されていません。
+   選択すると、コミュニティグループは開かれたグループになります。 コミュニティサイトのメンバーは、グループのコンテンツを表示できますが、コンテンツを投稿するには、グループに参加する必要があります。 メンバーは、公開環境の`Join`ボタンを選択して参加します。 初期設定では選択されていません。
 
 * 制限されたメンバーシップ
 
-   選択した場合、コミュニティグループは秘密グループになります。 コミュニティのメンバーは明示的に招待する必要があります。 招待メンバーは検索ボックスに入力されます。 Members may be added later using the [Members and Groups consoles](members.md) the author environment. 初期設定では選択されていません。
+   選択した場合、コミュニティグループは秘密グループになります。 コミュニティのメンバーは明示的に招待する必要があります。 招待メンバーは検索ボックスに入力されます。 メンバーは、後で[メンバーとグループコンソール](members.md)を使用して作成者環境に追加できます。 初期設定では選択されていません。
 
 #### サムネイル {#thumbnail}
 
@@ -170,9 +170,9 @@ Of the three group templates included, only the `Reference Group` template inclu
 
 ![chlimage_1-140](assets/chlimage_1-140.png)
 
-If any adjustments are needed, use the **Back** button to make them.
+調整が必要な場合は、「**戻る**」ボタンを使用して調整を行います。
 
-Once **Create** is selected and started, the process of creating the group cannot be interrupted.
+**「Create**」を選択して開始すると、グループの作成プロセスを中断できません。
 
 処理が完了すると、新しいサブコミュニティサイト（グループ）のカードがCommunitiesのサイトグループコンソールに表示されます。ここから、作成者がページコンテンツを追加したり、管理者がサイトのプロパティを変更したりできます。
 
@@ -211,16 +211,16 @@ Once **Create** is selected and started, the process of creating the group canno
 
 その一方で、サブコミュニティの[構造](#modify-structure)は変更できます。
 
-### 構造の変更 {#modify-structure}
+### 構造の変更  {#modify-structure}
 
 構造パネルでは、オーサー環境またはパブリッシュ環境でサブコミュニティを作成するときに選択したコミュニティグループテンプレートから最初に作成した構造を変更できます。パネルから、
 
-* Drag-and-drop additional [community functions](functions.md) into the site structure
+* 追加の[コミュニティ関数](functions.md)をサイト構造にドラッグ&amp;ドロップ
 * サイト構造内のコミュニティ関数のインスタンスに対して、次の操作を行います。
 
    * **`gear icon`**
 
-      Edit settings, including the display title and URL name as well as [privileged members groups](users.md#privilegedmembersgroups)
+      表示タイトルとURL名、[特権メンバーグループ](users.md#privilegedmembersgroups)などの設定を編集します。
 
    * **`trashcan icon`**
 
@@ -238,11 +238,11 @@ Once **Create** is selected and started, the process of creating the group canno
 
 >[!CAUTION]
 >
->The groups function must *not* be the *first nor the only* function in the site structure.
+>グループ関数は、**&#x200B;を&#x200B;*最初の関数ではなく、サイト構造内の唯一の*&#x200B;関数でなければなりません。
 >
 >他の機能（[ページ機能](functions.md#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
 
-#### 例：サブコミュニティ（グループ）構造へのカレンダー機能の追加 {#example-adding-a-calendar-function-to-a-sub-community-group-structure}
+#### 例：サブコミュニティ（グループ）構造へのカレンダー機能の追加  {#example-adding-a-calendar-function-to-a-sub-community-group-structure}
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
@@ -259,7 +259,7 @@ Once **Create** is selected and started, the process of creating the group canno
 
 設定パネルでは、コミュニティの[モデレーター](#moderation)を追加できます。
 
-### メンバーシップの変更 {#modify-membership}
+### メンバーシップの変更  {#modify-membership}
 
 [メンバーシップ](#membership)パネルは情報提供のみを目的としています。設定されたグループメンバーシップの種類は、オプション、必須、制限のいずれであるかに関係なく変更できません。
 
@@ -271,7 +271,7 @@ Once **Create** is selected and started, the process of creating the group canno
 
 ![chlimage_1-145](assets/chlimage_1-145.png)
 
-After a community group has been newly created or modified, it is possible to publish (activate) the group by selecting the `Publish Site` icon.
+コミュニティグループを新規作成または変更した後は、`Publish Site`アイコンを選択して、グループを公開（アクティブ化）できます。
 
 グループが正常に公開されると、メッセージが表示されます。
 
