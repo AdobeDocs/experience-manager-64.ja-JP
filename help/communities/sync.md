@@ -22,49 +22,49 @@ ht-degree: 22%
 
 ## 概要 {#introduction}
 
-In AEM Communities, from the publish environment (depending on permissions configured), *site visitors* may become *members*, create *user groups*, and edit their *member profile*.
+AEM Communitiesでは、公開環境から（設定された権限に応じて）、*サイトの訪問者*&#x200B;が&#x200B;*メンバー*&#x200B;になり、*ユーザーグループ*&#x200B;を作成し、*メンバープロファイル*&#x200B;を編集できます。
 
-*User data* (ユーザーデータ *)は、*&#x200B;ユーザー *、* ユーザープロファイル *、*&#x200B;ユーザーグループを指す用語です。
+*ユーザー* データとは、 *ユーザー*、 *ユーザー* プロファイル、 *ユーザーグループを指す用語*&#x200B;です。
 
 メンバーという用語は、オーサー環境で登録されたユーザーではなく、パブリッシュ環境で登録されたユーザーを指します。****
 
 ユーザーデータについて詳しくは、[ユーザーとユーザーグループの管理](users.md)を参照してください。
 
-## パブリッシュファーム間のユーザーの同期 {#synchronizing-users-across-a-publish-farm}
+## パブリッシュファーム間のユーザーの同期  {#synchronizing-users-across-a-publish-farm}
 
 仕様上、パブリッシュ環境で作成されたデータは、オーサー環境では表示されません。
 
 オーサー環境で作成されたほとんどのユーザーデータは、オーサー環境に残されたままとなり、パブリッシュインスタンスには同期もレプリケートもされません。
 
-When the [topology](topologies.md) is a [publish farm](../../help/sites-deploying/recommended-deploys.md#tarmk-farm), registration  and  modifications made on one publish instance need to be synchronized with other publish instances. メンバーは、ログインして任意の発行ノードでデータを確認できる必要があります。
+[トポロジ](topologies.md)が[パブリッシュファーム](../../help/sites-deploying/recommended-deploys.md#tarmk-farm)である場合、1つのパブリッシュインスタンスに対する登録と変更を、他のパブリッシュインスタンスと同期する必要があります。 メンバーは、ログインして任意の発行ノードでデータを確認できる必要があります。
 
 ユーザーの同期を有効にすると、ファーム内のパブリッシュインスタンス間でユーザーデータが自動的に同期されます。
 
-### ユーザーの同期のセットアップ手順 {#user-sync-setup-instructions}
+### ユーザーの同期のセットアップ手順  {#user-sync-setup-instructions}
 
 詳細なステップバイステップの手順については、以下を参照してください。
 
 * [ユーザーの同期](../../help/sites-administering/sync.md)
 
-## バックグラウンドでのユーザー同期  {#user-sync-in-the-background}
+## バックグラウンドでのユーザー同期{#user-sync-in-the-background}
 
 ![sling-dist-workflow](assets/sling-dist-workflow.png)
 
-* **VLTパッケージ**: は、発行者に対して行われたすべての変更のzipファイルです。発行者に配布する必要があります。 パブリッシャの変更は、変更イベントリスナーによって選択されたイベントを生成します。 これにより、すべての変更を含むvltパッケージが作成されます。
+* **VLTパッケージ**:は、発行者に対して行われたすべての変更のzipファイルです。発行者に配布する必要があります。パブリッシャの変更は、変更イベントリスナーによって選択されたイベントを生成します。 これにより、すべての変更を含むvltパッケージが作成されます。
 
-* **配布パッケージ**: Slingの配布情報が含まれます。 これは、コンテンツの配布が必要な場所、および最後に配布された日時に関する情報です。
+* **配布パッケージ**:Slingの配布情報が含まれます。これは、コンテンツの配布が必要な場所、および最後に配布された日時に関する情報です。
 
-## What Happens When ... {#what-happens-when}
+## ... {#what-happens-when}
 
 ### コミュニティのサイトコンソールでのサイトの公開 {#publish-site-from-communities-sites-console}
 
 オーサー環境で、コミュニティサイトを[コミュニティサイトコンソール](sites-console.md)から公開すると、関連するページが[レプリケート](../../help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents)されます。また、Sling によって、動的に作成されたコミュニティユーザーグループ（メンバーシップを含む）が配信されます。
 
-### パブリッシュ環境でのユーザーの作成またはプロファイルの編集 {#user-is-created-or-edits-profile-on-publish}
+### パブリッシュ環境でのユーザーの作成またはプロファイルの編集  {#user-is-created-or-edits-profile-on-publish}
 
 仕様上、パブリッシュ環境で（自己登録、ソーシャルログイン、LDAP 認証などで）作成されたユーザーやプロファイルはオーサー環境では表示されません。
 
-When the topology is a [publish farm](topologies.md) and user sync has been correctly configured, the *user* and *user profile* is synchronized across the publish farm using Sling distribution.
+トポロジが[発行ファーム](topologies.md)で、ユーザー同期が正しく構成されている場合、*user*&#x200B;と&#x200B;*userプロファイル*&#x200B;は、Sling配布を使用して、発行ファーム全体で同期されます。
 
 ### パブリッシュ環境での新しいコミュニティグループの作成 {#new-community-group-is-created-on-publish}
 
@@ -90,7 +90,7 @@ When the topology is a [publish farm](topologies.md) and user sync has been corr
 
 **前提条件**
 
-1. If users and user groups have already been created on one publisher, it is recommended to [manually sync](../../help/sites-administering/sync.md#manually-syncing-users-and-user-groups) the user data to all publishers prior to configuring and enabling user sync.
+1. ユーザーとユーザーグループが既に1つのパブリッシャー上に作成されている場合は、ユーザーの同期を設定および有効にする前に、[ユーザーデータをすべてのパブリッシャーに手動で](../../help/sites-administering/sync.md#manually-syncing-users-and-user-groups)同期することをお勧めします。
 
    ユーザー同期を有効にすると、新規に作成されたユーザーおよびグループのみが同期されるようになります。
 
@@ -109,7 +109,7 @@ AEM Communitiesでユーザー同期を有効にするには、次の設定が�
 
 **コンテンツはどのように同期されますか。**
 
-発行者インスタンスが発行者のエクスポーターエンドポイントにpingを送信します。 特定の発行者(n)に対してユーザーが作成または更新されると(n)、作成者はエクスポーターエンドポイントからコンテンツを取得し、そのコンテンツ [を他の発行者](sync.md#main-pars-image-1413756164) （n-1、つまりコンテンツの取得元とは別の発行者）にプッシュします。
+発行者インスタンスが発行者のエクスポーターエンドポイントにpingを送信します。 特定の発行者(n)に対してユーザーが作成または更新されるたびに、作成者はエクスポーターのエンドポイントからコンテンツを取得し、[プッシュしてコンテンツ](sync.md#main-pars-image-1413756164)を他の発行者（n-1、つまりコンテンツの取得元とは別の発行者）に送信します。
 
 <!--This section used to be an accordion until converted to straight Markdown. When accordions are enabled, revert-->
 
@@ -118,16 +118,16 @@ AEM Communitiesでユーザー同期を有効にするには、次の設定が�
 AEMオーサーインスタンス：
 
 1. 管理者権限でサインインします。
-1. Access the [Web Console](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/configuring-osgi.html).
+1. [Webコンソール](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/configuring-osgi.html)にアクセスします。
 
-   For example, [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr).
-1. Locate **[!UICONTROL Apache Sling Distribution Agent - Sync Agents Factory]**.
+   例：[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)。
+1. **[!UICONTROL Apache Sling Distribution Agent - Sync Agents Factory]**&#x200B;を探します。
 
    * 編集用に開く既存の設定を選択します（鉛筆アイコン）。
-   * 検証名： **`socialpubsync`.**
-   * Select the **[!UICONTROL Enabled]** checkbox.
-   * 「 **[!UICONTROL Use Multiple queues]**」を選択します。
-   * 「 **[!UICONTROL エクスポーターエンドポイント]** 」と「 **[!UICONTROL インポーターエンドポイント」を指定します]** （エクスポーターエンドポイントとインポーターエンドポイントをさらに追加できます）。
+   * 検証名：**`socialpubsync`.**
+   * 「**[!UICONTROL 有効]**」チェックボックスを選択します。
+   * 「**[!UICONTROL 複数のキューを使用]**」を選択します。
+   * **[!UICONTROL エクスポーターエンドポイント]**&#x200B;と&#x200B;**[!UICONTROL インポーターエンドポイント]**&#x200B;を指定します（エクスポーターエンドポイントとインポーターエンドポイントをさらに追加できます）。
 
       これらのエンドポイントは、コンテンツの取得元と、コンテンツのプッシュ先を定義します。 作成者は、指定されたエクスポーターエンドポイントからコンテンツを取得し、コンテンツを（コンテンツの取得元の発行者以外の）発行者にプッシュします。
    ![sync-agent-fact](assets/sync-agent-fact.png)
@@ -136,7 +136,7 @@ AEMオーサーインスタンス：
 
 これにより、作成者は、許可されたユーザーを、作成者から発行するユーザーデータを同期する権限を持つユーザーとして識別できます。
 
-すべての発行インスタンスで [作成された認証済みユーザーは](../../help/sites-administering/sync.md#createauthuser) 、発行者が作成者と接続し、発行者のSling配布を設定するのに役立ちます。 この権限を持つユーザーには、必要なすべての [ACLがあり](../../help/sites-administering/sync.md#howtoaddacl)ます。
+[許可されたユーザーがすべての発行インスタンスで](../../help/sites-administering/sync.md#createauthuser)を作成すると、発行者は作成者と接続し、発行者のSling配布を設定できます。 この権限を持つユーザーには、必要なすべての[ACL](../../help/sites-administering/sync.md#howtoaddacl)があります。
 
 発行者にデータをインストールする場合、または発行者からデータを取得する場合は、この設定で設定された資格情報（ユーザー名とパスワード）を使用して作成者と接続します。
 
@@ -147,22 +147,22 @@ AEMオーサーインスタンス：
 AEMオーサーインスタンス：
 
 1. 管理者権限でサインインします。
-1. Access the [Web Console](../../help/sites-deploying/configuring-osgi.md).
+1. [Webコンソール](../../help/sites-deploying/configuring-osgi.md)にアクセスします。
 
-   For example, [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr).
-1. Locate **[!UICONTROL Adobe Granite Distribution - Encrypted Password Transport Secret Provider]**.
+   例：[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)。
+1. **[!UICONTROL AdobeGranite Distribution - Encrypted Password Transport Secret Provider]**&#x200B;を探します。
 1. 編集用に開く既存の設定を選択します（鉛筆アイコン）。
 
-   プロパティ `name:` \ — を検証し **`socialpubsync`ま`publishUser`す。**
-1. ユーザー名とパスワードを [許可されたユーザーに設定します](../../help/sites-administering/sync.md#createauthorizeduser)。
+   プロパティ`name:` **`socialpubsync`を検証\- `publishUser` .**
+1. ユーザー名とパスワードを[許可されたユーザー](../../help/sites-administering/sync.md#createauthorizeduser)に設定します。
 
-   例えば、 **`usersync`\-admin **
+   例：**`usersync`\-admin**
 
    ![花崗岩 — パスワード —trans](assets/granite-paswrd-trans.png)
 
 ### Apache Sling Distribution Agent - Queue Agents Factory {#apache-sling-distribution-agent-queue-agents-factory}
 
-この設定は、発行者間で同期するデータを設定する場合に使用します。 「 **[!UICONTROL 許可されたルート」で指定されたパスでデータが作成/更新されると]**、「var/community/distribution/diff」がアクティブ化され、作成されたレプリケーターはパブリッシャーからデータを取得し、他のパブリッシャーにインストールします。
+この設定は、発行者間で同期するデータを設定する場合に使用します。 **[!UICONTROL 許可されているルート]**&#x200B;で指定されたパスでデータが作成/更新されると、「var/community/distribution/diff」がアクティブ化され、作成されたレプリケーターはパブリッシャーからデータを取得し、他のパブリッシャーにインストールします。
 
 <!--This section used to be an accordion until converted to straight Markdown. When accordions are enabled, revert-->
 
@@ -171,23 +171,23 @@ AEMオーサーインスタンス：
 AEM発行インスタンス：
 
 1. 管理者権限でサインインします。
-1. Access the [Web Console](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/configuring-osgi.html).
+1. [Webコンソール](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/configuring-osgi.html)にアクセスします。
 
-   For example, [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr).
-1. Locate **[!UICONTROL Apache Sling Distribution Agent - Queue Agents Factory]**.
+   例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)。
+1. **[!UICONTROL Apache Sling Distribution Agent - Queue Agents Factory]**&#x200B;を探します。
 1. 編集用に開く既存の設定を選択します（鉛筆アイコン）。
 
-   検証名： `socialpubsync` \-reverse.
-1. 「 **[!UICONTROL 有効]** 」チェックボックスを選択して保存します。
-1. 「 **[!UICONTROL 許可されたルート」で複製するノードパスを指定します]**。
-1. Repeat  for each `publish` instance.
+   検証名：`socialpubsync` \-reverse.
+1. 「**[!UICONTROL 有効にする]**」チェックボックスを選択して保存します。
+1. **[!UICONTROL 許可されているルート]**&#x200B;にレプリケートするノードパスを指定します。
+1. 各`publish`インスタンスに対して同じ手順を繰り返します。
 
    ![queue-agents-fact](assets/queue-agents-fact.png)
 
 ### Adobe Granite Distribution - Diff Observer Factory {#adobe-granite-distribution-diff-observer-factory}
 
 この設定は、パブリッシャー間でグループメンバーシップを同期します。\
-ある発行者のグループのメンバーシップを変更しても、他の発行者のメンバーシップが更新されない場合は、 **ref:members** が **参照されたプロパティ名に追加されていることを確認します**。
+あるパブリッシャーでグループのメンバーシップを変更しても、他のパブリッシャーのメンバーシップが更新されない場合は、**ref:members**&#x200B;が&#x200B;**looked properties names**&#x200B;に追加されていることを確認します。
 
 <!--This section used to be an accordion until converted to straight Markdown. When accordions are enabled, revert-->
 
@@ -196,15 +196,15 @@ AEM発行インスタンス：
 各AEM発行インスタンスで、次の操作を行います。
 
 1. 管理者権限でサインインします。
-1. Access the [Web Console](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/configuring-osgi.html).
+1. [Webコンソール](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/configuring-osgi.html)にアクセスします。
 
-   For example, [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr).
-1. Locate **[!UICONTROL Adobe Granite Distribution - Diff Observer Factory]**.
+   例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)。
+1. **[!UICONTROL AdobeGranite Distribution - Diff Observer Factory]**&#x200B;を探します。
 1. 編集用に開く既存の設定を選択します（鉛筆アイコン）。
 
-   検証 **[!UICONTROL エージェント名]**: `socialpubsync` \-reverse&amp;ast;&amp;ast;.
-1. Select the **[!UICONTROL Enabled]** checkbox.
-1. 検索されたプロパティ名 **のpropertyNameに対して`:members`**rep`description`****と指定し、[保存]を選択します。
+   **[!UICONTROL エージェント名]**&#x200B;を確認します。`socialpubsync` \-reverse&amp;ast;&amp;ast;
+1. 「**[!UICONTROL 有効]**」チェックボックスを選択します。
+1. **[!UICONTROL looked properties names]**&#x200B;のpropertyNameに対して&#x200B;**rep`:members`**&#x200B;を`description`と指定し、「保存」をクリックします。
 
    ![diff-obs](assets/diff-obs.png)
 
@@ -212,7 +212,7 @@ AEM発行インスタンス：
 
 この設定では、（発行者がpingを送信し、変更を作成者が取得した後の）ポーリング間隔を設定して、発行者間で変更を同期できます。
 
-作成者は、30秒（デフォルト）ごとに投稿者をポーリングします。 任意のパッケージがフォルダー */var/sling/distribution/packages/ socialpubsync - vlt /shared*&#x200B;に存在する場合、それらのパッケージが取得され、他の発行者にインストールされます。
+作成者は、30秒（デフォルト）ごとに投稿者をポーリングします。 任意のパッケージが&#x200B;*/var/sling/distribution/packages/ socialpubsync - vlt /shared*&#x200B;フォルダーに存在する場合、それらのパッケージが取得され、他の発行者にインストールされます。
 
 <!--This section used to be an accordion until converted to straight Markdown. When accordions are enabled, revert-->
 
@@ -221,18 +221,18 @@ AEM発行インスタンス：
 AEMオーサーインスタンス：
 
 1. 管理者権限でサインインします。
-1. Access the [Web Console](../../help/sites-deploying/configuring-osgi.md), for example, [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
-1. Locate **[!UICONTROL Apache Sling Distribution Trigger - Scheduled Triggers Factory]**
+1. [Webコンソール](../../help/sites-deploying/configuring-osgi.md)にアクセスします(例：[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr))
+1. **[!UICONTROL Apache Sling Distribution Trigger - Scheduled Triggers Factory]**&#x200B;を探します。
 
    * 編集用に開く既存の設定を選択します（鉛筆アイコン）
-   * \ `Name:` -scheduled-trigger **`socialpubsync`の検証&#x200B;**
+   * `Name:` **`socialpubsync`\-scheduled-trigger**&#x200B;を確認
    * 間隔（秒）を目的の間隔に設定し、保存します。
 
    ![scheduled-trigger](assets/scheduled-trigger.png)
 
 ### AEM Communities User Sync Listener {#aem-communities-user-sync-listener}
 
-Sling配布で、購読に不一致があり、それに続く問題については、 **[!UICONTROL AEM Communitiesユーザー同期リスナー]** の設定で次のプロパティが設定されているかどうかを確認してください。
+Sling配布で、購読に不一致があり、それに続く問題については、**[!UICONTROL AEM Communitiesユーザー同期リスナー]**&#x200B;の設定に次のプロパティが設定されているかどうかを確認してください。
 
 * NodeTypes
 * IgnorableProperties
@@ -246,12 +246,12 @@ Sling配布で、購読に不一致があり、それに続く問題について
 各AEM発行インスタンスで、次の操作を行います。
 
 1. 管理者権限でサインインします。
-1. Access the [Web Console](../../help/sites-deploying/configuring-osgi.md). For example, [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr).
-1. Locate **[!UICONTROL AEM Communities User Sync Listener]**.
+1. [Webコンソール](../../help/sites-deploying/configuring-osgi.md)にアクセスします。 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)。
+1. **[!UICONTROL AEM Communitiesユーザー同期リスナー]**&#x200B;を探します。
 1. 編集用に開く既存の設定を選択します（鉛筆アイコン）。
 
-   検証名： **`socialpubsync`\-scheduled-trigger **
-1. 次を設定しま **`NodeTypes`** す。
+   検証名：**`socialpubsync`\-scheduled-trigger**
+1. 次の&#x200B;**`NodeTypes`**&#x200B;を設定します。
 
    rep:User
 
@@ -266,7 +266,7 @@ Sling配布で、購読に不一致があり、それに続く問題について
    sling:OrderedFolder
 
    このプロパティで指定されたノードタイプが同期され、通知情報（ブログと使用された設定）が異なる発行者間で同期されます。
-1. DistributedFolders追加内で同期するすべてのフォルダ ****。 例：
+1. &lt;a0/追加>DistributedFolders **[!UICONTROL 内の同期するすべてのフォルダー。]**&#x200B;例：
 
    segments/scoring
 
@@ -274,13 +274,13 @@ Sling配布で、購読に不一致があり、それに続く問題について
 
    activities
 
-1. Set the **`ignorablenodes`** to:
+1. **`ignorablenodes`**&#x200B;を次の値に設定：
 
    .tokens
 
    system
 
-   rep `:cache` （スティッキーセッションを使用するので、このノードを別の発行者と同期する必要はありません）
+   rep `:cache` （スティッキーセッションを使用しているので、このノードを別の発行者に同期する必要はありません）
 
    ![user-sync-listner](assets/user-sync-listner.png)
 
@@ -296,15 +296,15 @@ AEM作成者インスタンスは、Sling IDを使用して、データの送信
 
 各パブリッシュインスタンスで以下をおこないます。
 
-1. Browse to [https://_host:port_/system/console/status-slingsettings](http://localhost:4503/system/console/status-slingsettings).
-1. Check the value of **[!UICONTROL Sling ID]**.
+1. [https://_host:port_/system/console/status-slingsettings](http://localhost:4503/system/console/status-slingsettings)を参照します。
+1. **[!UICONTROL Sling ID]**&#x200B;の値を確認します。
 
    ![slingid](assets/slingid.png)
 
    あるパブリッシュインスタンスの Sling ID が他のパブリッシュインスタンスの Sling ID と一致する場合は、次のようにします。
 
 1. 一致するSling IDを持つ発行インスタンスの1つを停止します。
-1. ディレクトリで、_sling.id.fileという名前のファイルを検索して削除します。 `crx-quickstart/launchpad/felix`
+1. `crx-quickstart/launchpad/felix`ディレクトリで、_sling.id.fileという名前のファイルを探して削除します。
 
    *例えば、Linuxシステムでは：*
 
@@ -315,16 +315,16 @@ AEM作成者インスタンスは、Sling IDを使用して、データの送信
    `use windows explorer and search for _sling.id.file_`
 
 1. 発行インスタンスを起動します。起動時に、新しいSling IDが割り当てられます。
-1. Validate that the **[!UICONTROL Sling ID]** is now unique.
+1. **[!UICONTROL Sling ID]**&#x200B;が一意になったことを検証します。
 
 すべてのパブリッシュインスタンスの Sling ID が一意になるまでこの手順を繰り返します。
 
-### Vault Package Builder Factory {#vault-package-builder-factory}
+### Vault Package Builder Factory  {#vault-package-builder-factory}
 
 アップデートを正しく同期するには、ユーザ同期用にVaultパッケージビルダを変更する必要があります。\
-で `/home/users`は、 `/rep:cache` ノードが作成されます。 これは、ノードのプリンシパル名にクエリした場合に、そのキャッシュを直接使用できることを確認するために使用されるキャッシュです。
+`/home/users`に`/rep:cache`ノードが作成されます。 これは、ノードのプリンシパル名にクエリした場合に、そのキャッシュを直接使用できることを確認するために使用されるキャッシュです。
 
-ノードが発行者間で同期されている場合、ユーザーの同期は停止する場合があり `rep:cache `ます。
+`rep:cache `ノードがパブリッシャー間で同期されている場合、ユーザーの同期は停止する可能性があります。
 
 <!--This section used to be an accordion until converted to straight Markdown. When accordions are enabled, revert-->
 
@@ -332,41 +332,41 @@ AEM作成者インスタンスは、Sling IDを使用して、データの送信
 
 各AEM発行インスタンスで、次の操作を行います。
 
-1. Access the [Web Console](../../help/sites-deploying/configuring-osgi.md), for example, [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr).
-1. Locate the **[!UICONTROL Apache Sling Distribution Packaging - Vault Package Builder Factory Builder name]**: socialpubsync-vlt.
+1. [Webコンソール](../../help/sites-deploying/configuring-osgi.md)にアクセスします(例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr))。
+1. **[!UICONTROL Apache Sling Distribution Packaging - Vault Package Builder Factory Builder name]**&#x200B;を探します。socialpubsync-vlt
 1. 編集アイコンを選択します。
 1. 2つの追加パッケージフィルター:
 
    * `/home/users|-.\*/.tokens`
    * `/home/users|**+**.\*/rep:cache`
 1. ポリシー処理
-   * To overwrite existing rep `:policy` nodes with new ones, add a third Package Filter:
+   * 既存のrep `:policy`ノードを新しいノードで上書きするには、3つ目のパッケージフィルタを追加します。
 
       `/home/users|**+**.\*/rep:policy`
    * ポリシーの配布を防ぐには、
 
-      Acl処理： IGNORE
+      Acl処理：IGNORE
 
 ![vault-package-builder-factory](assets/vault-package-builder-factory.png)
 
-## AEM CommunitiesでのSlingの配布のトラブルシューティング {#troubleshoot-sling-distribution-in-aem-communities}
+## AEM CommunitiesでのSlingの配布のトラブルシューティング{#troubleshoot-sling-distribution-in-aem-communities}
 
 Slingの配布に失敗した場合は、次のデバッグ手順を試してください。
 
-1. **不[適切に追加された設定を確認します](../../help/sites-administering/sync.md#improperconfig)。** 複数の設定を追加または編集しないでください。既存のデフォルト設定は、編集する必要があります。
-1. **設定を確認**。 ベストプラクティスに従って、AEM Authorインスタンスですべての [設定](sync.md#bestpractices) が適切に設定されていることを確認し [ます](sync.md#main-pars-header-863110628)。
-1. **認証済みユーザー権限を確認します**。 パッケージが正しくインストールされていない場合は、最初の発行インスタンスで [作成された認証済みユーザー](../../help/sites-administering/sync.md#createauthuser) に、正しいACLが割り当てられていることを確認します。
+1. **不 [適切に追加された設定を確認します](../../help/sites-administering/sync.md#improperconfig)。** 複数の設定を追加または編集しないでください。既存のデフォルト設定は、編集する必要があります。
+1. **設定を確認**。[ベストプラクティス](sync.md#main-pars-header-863110628)で説明されているように、AEM Authorインスタンスにすべての[設定](sync.md#bestpractices)が適切に設定されていることを確認します。
+1. **認証済みユーザー権限を確認します**。パッケージが正しくインストールされていない場合は、最初の発行インスタンスで作成された[許可されたユーザー](../../help/sites-administering/sync.md#createauthuser)に正しいACLが含まれていることを確認します。
 
-   これを検証するには、 [作成した認証済みユーザーの代わりに](../../help/sites-administering/sync.md#createauthuser) 、作成者インスタンスの [AdobeGranite配布 — 暗号化パスワードトランスポートシークレットプロバイダー](../../help/sites-administering/sync.md#adobegraniteencpasswrd) の設定を、管理者ユーザーの資格情報を使用するように変更します。 次に、パッケージのインストールを再試行します。 ユーザー同期が管理者の資格情報で正常に機能する場合は、作成した発行ユーザーに適切なACLがないことを意味します。
+   これを検証するには、[作成した認証済みユーザー](../../help/sites-administering/sync.md#createauthuser)の代わりに、作成者インスタンスの[AdobeGranite配布 — 暗号化パスワードトランスポートシークレットプロバイダー](../../help/sites-administering/sync.md#adobegraniteencpasswrd)の設定を変更し、管理者ユーザー資格情報を使用します。 次に、パッケージのインストールを再試行します。 ユーザー同期が管理者の資格情報で正常に機能する場合は、作成した発行ユーザーに適切なACLがないことを意味します。
 
-1. **相違オブザーバーファクトリの構成を確認します**。 特定のノードのみがパブリッシュファーム全体で同期されない場合（例えば、グループメンバーは同期されない）、 [AdobeGranite Distribution - Diff Observer Factory](../../help/sites-administering/sync.md#diffobserver) 構成が有効で、 **rep:members** が **検索されたプロパティ名に設定されていることを確認します**。
+1. **相違オブザーバーファクトリの構成を確認します**。特定のノードのみがパブリッシュファーム全体で同期されない場合（例：グループメンバーは同期されない）、[AdobeGranite配布 — Diff Observer Factory](../../help/sites-administering/sync.md#diffobserver)構成が有効になっていること、**looked properties names**&#x200B;に&#x200B;**rep:members**&#x200B;が設定されていること。
 1. **AEM Communitiesユーザー同期リスナーの設定を確認します。** 作成したユーザーが同期されているが、購読と次のユーザーが機能していない場合は、AEM Communitiesユーザー同期リスナーの構成に次の値が含まれていることを確認します。
 
-   * ノードタイプ — **rep:User, nt:unstructured**, **nt:resource**, nt:ACL **, sling:Folder Sling,********OrderedFolderに設定**
-   * 無視可能なノード： **.tokens**、 **system**、 **rep:cacheに設定**
+   * ノードタイプ — **rep:User, nt:unstructured**, **nt:resource**, **rep:ACL**, **sling:Folder**&#x200B;および&#x200B;**sling:OrderedFolder**&#x200B;に設定
+   * 無視可能なノード — **.tokens**、**system**、**rep:cache**&#x200B;に設定
    * 分散フォルダ：分散するフォルダに設定
 
-1. **発行インスタンスでのユーザー作成時に生成されたログを確認します**。 上記の設定が適切に設定されているにもかかわらずユーザー同期が機能していない場合は、ユーザーの作成時に生成されたログを確認します。
+1. **発行インスタンスでのユーザー作成時に生成されたログを確認します**。上記の設定が適切に設定されているにもかかわらずユーザー同期が機能していない場合は、ユーザーの作成時に生成されたログを確認します。
 
    次のように、ログの順序が同じかどうかを確認します。
 
@@ -387,19 +387,19 @@ Slingの配布に失敗した場合は、次のデバッグ手順を試してく
    1. ユーザー同期を無効にします。
    1. AEMオーサーインスタンスで、管理者権限でサインインします。
 
-      1. Access the [Web Console](../../help/sites-deploying/configuring-osgi.md). For example, [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr).
-      1. Locate the configuration **[!UICONTROL Apache Sling Distribution Agent - Sync Agents Factory]**.
+      1. [Webコンソール](../../help/sites-deploying/configuring-osgi.md)にアクセスします。 例：[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)。
+      1. 設定&#x200B;**[!UICONTROL Apache Sling Distribution Agent - Sync Agents Factory]**&#x200B;を探します。
 
-      1. Deselect the **[!UICONTROL Enabled]** checkbox.
-      作成者インスタンスでユーザー同期を無効にすると、（エクスポーターとインポーター）エンドポイントが無効になり、作成者インスタンスは静的になります。 **[!UICONTROL vlt]** パッケージは、作成者によってpingまたは取得されません。
+      1. 「**[!UICONTROL 有効]**」チェックボックスの選択を解除します。
+      作成者インスタンスでユーザー同期を無効にすると、（エクスポーターとインポーター）エンドポイントが無効になり、作成者インスタンスは静的になります。 **[!UICONTROL vlt]**&#x200B;パッケージは作成者によってpingまたは取得されません。
 
-      現在は、ユーザーが発行インスタンスで作成された場合、 **[!UICONTROL vlt]** パッケージは */var/sling/distribution/packages/ socialpubsync - vlt /data* nodeに作成されます。 また、これらのパッケージが作成者によって別のサービスにプッシュされた場合も、 このデータをダウンロードして抽出し、すべてのプロパティが他のサービスにプッシュされたものかどうかを確認できます。
+      現在は、ユーザーが発行インスタンスで作成された場合、**[!UICONTROL vlt]**&#x200B;パッケージが&#x200B;*/var/sling/distribution/packages/ sociallpubsync - vlt /data*&#x200B;ノードに作成されます。 また、これらのパッケージが作成者によって別のサービスにプッシュされた場合も、 このデータをダウンロードして抽出し、すべてのプロパティが他のサービスにプッシュされたものかどうかを確認できます。
 
    1. 投稿者に移動し、投稿でユーザーを作成します。 その結果、イベントが作成されます。
-   1. ユーザーの作成時に作成されたログ [、ログの](sync.md#troubleshoot-sling-distribution-in-aem-communities)順序を確認します。
-   1. に **[!UICONTROL vlt]** パッケージが作成されているかどうかを確認 `/var/sling/distribution/packages/socialpubsync-vlt/data`します。
+   1. ユーザーの作成時に作成されたログ](sync.md#troubleshoot-sling-distribution-in-aem-communities)の[順序を確認します。
+   1. **[!UICONTROL vlt]**&#x200B;パッケージが`/var/sling/distribution/packages/socialpubsync-vlt/data`に作成されているかどうかを確認します。
    1. 次に、AEMオーサーインスタンスでユーザー同期を有効にします。
-   1. 発行者で、 **[!UICONTROL Apache Sling Distribution Agent - Sync Agents Factoryのエクスポーターまたはインポーターエンドポイントを変更します]**。
+   1. パブリッシャーで、**[!UICONTROL Apache Sling Distribution Agent - Sync Agents Factory]**&#x200B;のエクスポーターまたはインポーターエンドポイントを変更します。
 
       パッケージデータをダウンロードして抽出し、すべてのプロパティが他の発行者にプッシュされ、どのデータが失われるかを確認できます。
 
