@@ -26,8 +26,8 @@ ht-degree: 37%
 
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
-* ページ `Comments`への追加
-* Configuration settings for the `Comments`component
+* `Comments`をページに追加
+* `Comments`コンポーネントの構成設定
 
 >[!NOTE]
 >
@@ -35,27 +35,27 @@ ht-degree: 37%
 
 ## コメントをページに追加 {#adding-comments-to-a-page}
 
-To add a `Comments`component to a page in author mode, use the component browser to locate
+作成者モードで`Comments`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して
 
 * `Communities / Comments`
 
 コンポーネントを探し、ページ上の適切な位置（ユーザーにコメントしてもらう機能の近くなど）や、単にページの下部にドラッグします。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側のライブラリが含まれる場合](essentials-comments.md#essentials-for-client-side) 、これがコンポー `Comments`ネントの表示方法です。
+[必要なクライアント側ライブラリ](essentials-comments.md#essentials-for-client-side)が含まれる場合、`Comments`コンポーネントは次のように表示されます。
 
 ![chlimage_1-428](assets/chlimage_1-428.png)
 
 >[!NOTE]
 >
->Only one `Comments`component may exist on a page. コミュニティの機能の中には、既にブログ、カレンダー、フォーラム、QnA、レビューなどのコメントが含まれているものもあります。
+>1つのページに存在できる`Comments`コンポーネントは1つだけです。 コミュニティの機能の中には、既にブログ、カレンダー、フォーラム、QnA、レビューなどのコメントが含まれているものもあります。
 
 ## コメントの設定 {#configuring-comments}
 
-Select the placed `Comments` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Comments`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
-![configure](assets/configure.png) ![commentsettings](assets/commentssettings.png)
+![configurerecommendssettings](assets/configure.png) ![](assets/commentssettings.png)
 
 ### 「コメント」タブ{#comments-tab}
 
@@ -67,7 +67,7 @@ Select the placed `Comments` component to access and select the `Configure` icon
 
 * **[!UICONTROL 1 ページのコメント数]**
 
-   1ページに表示するコメントの数と表示する返信の数を制限します。 初期設定は 10 です。
+   1ページに表示するコメントの数と、表示する返信の数が制限されます。 初期設定は 10 です。
 
 * **[!UICONTROL ファイルのアップロードを許可]**
 
@@ -101,9 +101,9 @@ Select the placed `Comments` component to access and select the `Configure` icon
 
    オンの場合、獲得および落札済みのバッジの表示を許可します。 初期設定はオフです。
 
-### 「ユーザーモデレート」タブ {#user-moderation-tab}
+### 「ユーザーモデレート」タブ  {#user-moderation-tab}
 
-Under the **[!UICONTROL User Moderation]** tab, specify how the posted comments are managed. For more information, see [Moderating User Generated Content](moderate-ugc.md).
+「**[!UICONTROL ユーザーモデレート]**」タブで、投稿されたコメントの管理方法を指定します。 詳しくは、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
 * **[!UICONTROL 事前モデレート]**
 
@@ -139,45 +139,45 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted comments 
 
 * **[!UICONTROL フラグ付けの制限]**
 
-   コメントが公開表示に表示されなくなるまでにフラグを付ける必要がある回数を入力します。 This number must be greater than or equal to the **[!UICONTROL Moderation Threshold]**. 初期設定は 5 です。
+   コメントが公開表示に表示されなくなるまでにフラグを付ける必要がある回数を入力します。 この数値は、**[!UICONTROL モデレートしきい値]**&#x200B;以上にする必要があります。 初期設定は 5 です。
 
 ### 「並べ替え設定」タブ{#sort-settings-tab}
 
-Under the **[!UICONTROL Sort Settings]** tab, specify how the posted comments are sorted when displayed.
+「**[!UICONTROL 並べ替え設定]**」タブで、投稿されたコメントの表示順を指定します。
 
 * **[!UICONTROL 並べ替えフィールド]**
 
-   プルダウンして、またはのいずれかを選択 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`しま `Most Liked`す。
+   プルダウンして`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`または`Most Liked`のいずれかを選択します。
 
 * **[!UICONTROL 並べ替え順序]**
 
-   プルダウンして、またはのいずれかを選択 `Ascending` しま `Descending`す。
+   プルダウンして`Ascending`または`Descending`のいずれかを選択します。
 
 ### カスタムコメントタイプへの変更 {#changing-to-a-custom-comment-type}
 
 コメントリソースタイプを変更すると、デフォルトを使用するコメントのインスタンスではなく、開発者によってカスタマイズ（拡張）されたコメントのインスタンスが生成されるようになります。
 
-Once the custom resource types is known, enter [Design Mode](../../help/sites-authoring/default-components-designmode.md) and double click on the placed `Comments` component to open a dialog with an additional tab.
+カスタムリソースタイプがわかったら、[デザインモード](../../help/sites-authoring/default-components-designmode.md)に入り、重複が配置した`Comments`コンポーネントをクリックして、追加のタブを含むダイアログを開きます。
 
-Under the **[!UICONTROL Resource Types]** tab, specify the custom resourceType for new instances of the `Comments or Voting`components:
+「**[!UICONTROL リソースタイプ]**」タブで、`Comments or Voting`コンポーネントの新しいインスタンスのカスタムresourceTypeを指定します。
 
 ![chlimage_1-429](assets/chlimage_1-429.png)
 
 * **[!UICONTROL コメントリソースタイプ]**
 
-   /apps内の拡張 `comment`コンポーネント（1つのコメント）のresourceTypeに移動します。 例：`/apps/social/commons/components/hbs/comments/comment`
+   /apps内の拡張`comment`コンポーネント（1つのコメント）のresourceTypeに移動します。 例：`/apps/social/commons/components/hbs/comments/comment`
 
    このリソースは、訪問者がコメントを投稿したときに作成されたUGCのresourceTypeを識別します。
 
 * **[!UICONTROL 投票リソースタイプ]**
 
-   /apps内の拡張 `voting`コンポーネントのresourceTypeに移動します。 例：`/apps/social/components/hbs/voting`
+   /apps内の拡張`voting`コンポーネントのresourceTypeに移動します。 例：`/apps/social/components/hbs/voting`
 
    このリソースは、訪問者が投票を行ったときに作成されたUGCのリソースタイプを識別します。
 
 * **[!UICONTROL コメントシステムリソースタイプ]**
 
-   /apps内の拡張 `comments`コンポーネント（コメントシステム）のresourceTypeに移動します。 Leave blank unless the page template [dynamically includes](scf.md#add-or-include-a-communities-component) the Comment System in the underlying script instead of being added to the page as a resource (comments node). Learn more by reading about the [{{include}} helper](handlebars-helpers.md#include).
+   /apps内の拡張`comments`コンポーネント（コメントシステム）のresourceTypeに移動します。 ページテンプレート[で、コメントシステムが基になるスクリプトに](scf.md#add-or-include-a-communities-component)動的に含まれている場合を除き、ページにリソース（コメントノード）として追加されるのではなく、空白のままにします。 詳しくは、[{{include}}ヘルパー](handlebars-helpers.md#include)を参照してください。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -185,7 +185,7 @@ Under the **[!UICONTROL Resource Types]** tab, specify the custom resourceType f
 
 サインインしているユーザーがモデレーター権限または管理者権限を持っている場合は、誰がコメントを作成したかにかかわらず、コンポーネントの設定によって許可されているモデレートタスクを実行できます。
 
-### メンバー {#members}
+### メンバー  {#members}
 
 サイト訪問者がサインインすると、設定に応じて次のことができます。
 
@@ -200,8 +200,8 @@ Under the **[!UICONTROL Resource Types]** tab, specify the custom resourceType f
 
 ## 追加情報 {#additional-information}
 
-More information may be found on the [Comments Essentials](essentials-comments.md) page for developers.
+詳しくは、開発者向けの[コメントの基本](essentials-comments.md)ページを参照してください。
 
-For moderation of posted comments, see [Moderating User Generated Content](moderate-ugc.md).
+投稿されたコメントのモデレートについては、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
 投稿されたコメントの翻訳については、[ユーザー生成コンテンツの翻訳](translate-ugc.md)を参照してください。
