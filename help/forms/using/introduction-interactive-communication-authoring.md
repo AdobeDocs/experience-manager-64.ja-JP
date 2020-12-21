@@ -21,7 +21,7 @@ ht-degree: 47%
 
 インタラクティブ通信を作成するための各種ユーザーインターフェイス要素の概要
 
-The user interface for authoring [Interactive Communication](/help/forms/using/interactive-communications-overview.md) is intuitive and provides the following for authoring print and web channel of the Interactive Communication:
+[対話型通信](/help/forms/using/interactive-communications-overview.md)をオーサリングするユーザーインターフェイスは直観的で、対話型通信の印刷およびWebチャネルをオーサリングするために次の機能を提供します。
 
 * WYSIWYG ドラッグアンドドロップドキュメントエディター
 * アセットの統合リポジトリ — サーバーにアップロードされ、サーバー上で作成されたアセットは、Interactive Communicationオーサリングインターフェイスのアセットブラウザーで使用できます。
@@ -31,12 +31,12 @@ The user interface for authoring [Interactive Communication](/help/forms/using/i
 * [サイドバー](#sidebar)
 * [ページツールバー](#page-toolbar)
 
-* [コンポーネントのツールバー](#component-toolbar)
+* [コンポーネントツールバー](#component-toolbar)
 * コンテンツ領域
 
 ![インタラクティブ通信オーサリングユーザーインターフェイス](assets/form-editor.png)
 
-**A.** Sidebar **B.** Page toolbar **C.** C. Content領域
+**A.** サイドバー **B.** ページツールバー **C.** コンテンツ領域
 
 ## サイドバー {#sidebar}
 
@@ -44,7 +44,7 @@ The user interface for authoring [Interactive Communication](/help/forms/using/i
 
 [クリックして拡大](assets/sidebar-comps-1.png)
 
-**A.** チャネルブラウザ **B.** コンテンツブラウザC. **コンテンツブラウザ** C.プロパティD.アセットブラウザD.アセットブラウザE.コンポーネントF **************** ブラウザDataData Data Sources G.ブラウザG.コンテンツブラウザG.マスター
+**A.** チャネルブラウザ **B.** コンテンツブラウザC. **コンテンツブラウザC.プロパティブ** ラウザD. **アセットブラウザAsset Asset Asset Components Browser Components Data Sources Data SourcesブラウザData Sourcesブラウザ**  ****  ****  **** マスター
 
 サイドバーには、以下のブラウザーが用意されています。
 
@@ -60,7 +60,7 @@ The user interface for authoring [Interactive Communication](/help/forms/using/i
 
    コンポーネントのプロパティを編集できます。 表示されるプロパティは、コンポーネントによって異なります。例えば、ドキュメントコンテナのプロパティを表示するには：
 
-   コンポーネントを選択し、 ![フィールドレベル](assets/field-level.png) / **ドキュメントコンテナ**&#x200B;をタップし、 ![](assets/cmppr.png)cmpprをタップします。
+   コンポーネントを選択し、![フィールドレベル](assets/field-level.png)/**ドキュメントコンテナ**&#x200B;をタップし、![cmppr](assets/cmppr.png)をタップします。
 
 * **アセットブラウザー**
 
@@ -72,17 +72,17 @@ The user interface for authoring [Interactive Communication](/help/forms/using/i
 
 | **コンポーネント** | **印刷チャネル** | **Web チャネル** | **機能** |
 |---|---|---|---|
-| グラフ | ✓ | ✓ | インタラクティブ通信で使用できるグラフを追加して、フォームデータモデルのコレクションアイテムから取得された 2 次元のデータを視覚的に表現します。 |
-| ドキュメントフラグメント | ✓ | ✓ | 再利用可能なコンポーネント、テキスト、リスト、または条件をインタラクティブコミュニケーションに追加できます。 インタラクティブ通信に追加する再利用可能なコンポーネントは、フォームデータモデルベースのコンポーネントでも、フォームデータモデルなしのコンポーネントでもかまいません。 |
-| 画像 | ✓ | ✓ | 画像を挿入できるようにします。。 |
-| パネル | - | ✓ | パネルコンポーネントは、他のコンポーネントをグループ化するためのプレースホルダーです。パネルコンポーネントにより、インタラクティブ通信内でのコンポーネントグループの配置方法が制御されます。パネルコンポーネントを使用して、エンドユーザーが繰り返し使用できるコンポーネントグループ（学歴を入力するための複数のエントリなど）を作成することもできます。また、複数のタブを持つ対話型通信のタブにそれぞれパネルを使用することをお勧めします。 |
-| テーブル | &amp;ast; | ✓ | 行と列のデータを整理するためのテーブルを追加することができます。 |
-| ターゲット領域 | &amp;ast;&amp;ast; | ✓ | Web チャネル固有のコンポーネントを整理するためのターゲット領域を、その Web チャネルに挿入します。 |
-| テキスト | - | ✓ | インタラクティブ通信の Web チャネルにテキストを追加します。追加されたテキストでフォームデータオブジェクトを使用すると、動的なコンテンツを作成することができます。 |
+| グラフ | ✓ | kid | インタラクティブ通信で使用できるグラフを追加して、フォームデータモデルのコレクションアイテムから取得された 2 次元のデータを視覚的に表現します。 |
+| ドキュメントフラグメント | kid | kid | 再利用可能なコンポーネント、テキスト、リスト、または条件をインタラクティブコミュニケーションに追加できます。 インタラクティブ通信に追加する再利用可能なコンポーネントは、フォームデータモデルベースのコンポーネントでも、フォームデータモデルなしのコンポーネントでもかまいません。 |
+| 画像 | kid | kid | 画像を挿入できるようにします。。 |
+| パネル | - | kid | パネルコンポーネントは、他のコンポーネントをグループ化するためのプレースホルダーです。パネルコンポーネントにより、インタラクティブ通信内でのコンポーネントグループの配置方法が制御されます。パネルコンポーネントを使用して、エンドユーザーが繰り返し使用できるコンポーネントグループ（学歴を入力するための複数のエントリなど）を作成することもできます。また、複数のタブを持つ対話型通信のタブにそれぞれパネルを使用することをお勧めします。 |
+| テーブル | &amp;ast; | kid | 行と列のデータを整理するためのテーブルを追加することができます。 |
+| ターゲット領域 | &amp;ast;&amp;ast; | kid | Web チャネル固有のコンポーネントを整理するためのターゲット領域を、その Web チャネルに挿入します。 |
+| テキスト | - | kid | インタラクティブ通信の Web チャネルにテキストを追加します。追加されたテキストでフォームデータオブジェクトを使用すると、動的なコンテンツを作成することができます。 |
 
-&amp;ast; 表を追加するには、印刷チャネルのレイアウトフラグメントを使用します。
+&amp;ast;表を追加するには、印刷チャネルのレイアウトフラグメントを使用します。
 
-&amp;ast;&amp;ast; 印刷チャネルでは、ターゲット領域はXDP/印刷テンプレートにあらかじめ定義されています。 インタラクティブ通信オーサリング UI を使用して新しいターゲット領域を追加することはできません。
+&amp;ast;&amp;ast;印刷チャネルでは、ターゲット領域はXDP/印刷テンプレートにあらかじめ定義されています。 インタラクティブ通信オーサリング UI を使用して新しいターゲット領域を追加することはできません。
 
 * **データソースブラウザー**
 
@@ -92,15 +92,15 @@ The user interface for authoring [Interactive Communication](/help/forms/using/i
 
 インタラクティブ通信のコンポーネントを操作する場合のキーポイントを以下に示します。
 
-* 各コンポーネントには、そのコンポーネントの外観と機能をコントロールするプロパティが関連付けられています。To configure the properties of a component, tap the component and tap ![cmppr](assets/cmppr.png) to open the component properties in the Properties browser.
-* コンポーネントは要素名で識別されます。When you tap ![cmppr](assets/cmppr.png), you can change the name of the component by changing the Element Name field value in the properties browser. 要素名フィールドに使用できるのは、英字、数字、ハイフン（-）、およびアンダースコア（_）のみです。その他の特殊文字は使用できません。また、要素名は英字で始まる必要があります。
+* 各コンポーネントには、そのコンポーネントの外観と機能をコントロールするプロパティが関連付けられています。コンポーネントのプロパティを設定するには、コンポーネントをタップし、![cmppr](assets/cmppr.png)をタップして、プロパティブラウザーでコンポーネントのプロパティを開きます。
+* コンポーネントは要素名で識別されます。![cmppr](assets/cmppr.png)をタップすると、プロパティブラウザーの「要素名」フィールドの値を変更して、コンポーネントの名前を変更できます。 要素名フィールドに使用できるのは、英字、数字、ハイフン（-）、およびアンダースコア（_）のみです。その他の特殊文字は使用できません。また、要素名は英字で始まる必要があります。
 * インタラクティブ通信にタイトルが表示されている限り、プロパティブラウザーを開かずに、エディター内でインラインのインタラクティブ通信コンポーネントのTitleプロパティを変更できます。 この作業を行うには：
 
    1. 「タイトル」プロパティが設定されていて、「タイトルを非表示」プロパティが無効になっているコンポーネントをタップして選択します。
-   1. タイトルを編集可能にするには、 ![aem_6_3_edit](assets/aem_6_3_edit.png) をタップします。
+   1. ![aem_6_3_edit](assets/aem_6_3_edit.png)をタップして、タイトルを編集可能にします。
    1. タイトルを変更し、Return キーをタップするかコンポーネント以外の場所をタップして、変更内容を保存します。変更を破棄するには、Escキーをタップします。
 
-## コンポーネントのツールバー {#component-toolbar}
+## コンポーネントツールバー {#component-toolbar}
 
 ![](do-not-localize/toolbar.png)
 
@@ -108,23 +108,23 @@ The user interface for authoring [Interactive Communication](/help/forms/using/i
 
 A. **設定**：「**設定**」をタップすると、サイドバーにコンポーネントの各種プロパティが表示されます。
 
-B. **Edit Rules**: When you tap Edit Rules, Rule Editor appears in which you can edit and create rules for the selected component. ルールエディタでは、他のフォームオブジェクト（コンポーネント）を選択したり、これらのフォームオブジェクトのルールを編集/作成したりすることもできます。
+B.**ルールを編集**:「ルールを編集」をタップすると、ルールエディターが表示され、選択したコンポーネントのルールを編集および作成できます。 ルールエディタでは、他のフォームオブジェクト（コンポーネント）を選択したり、これらのフォームオブジェクトのルールを編集/作成したりすることもできます。
 
-C. **Copy**: You can use the copy option to copy a component and paste it in other places in the Interactive Communication.
+C.**コピー**:コピーオプションを使用すると、コンポーネントをコピーして、インタラクティブ通信の他の場所に貼り付けることができます。
 
-D. **Cut**: You can use the cut option to move a component from one place to another in the Interactive Communication.
+D.**切り取り**:[切り取り]オプションを使用すると、インタラクティブ通信内でコンポーネントを別の場所に移動できます。
 
-E. **Delete**: Lets you delete the component from the Interactive Communication.
+E.**削除**:インタラクティブ通信からコンポーネントを削除できます。
 
-F. **Insert Component**: Lets you insert a component above the selected component.
+F.**コンポーネントを挿入**:選択したコンポーネントの上にコンポーネントを挿入できます。
 
-G. **Paste**: Lets you paste the component you cut or copied using the options described above.
+G.**貼り付け**:上記のオプションを使用して、切り取りまたはコピーしたコンポーネントを貼り付けます。
 
-H. **Group**: Lets you select multiple components if you want to cut, copy, or paste more than one component together.
+H.**グループ**:複数のコンポーネントを同時に切り取り、コピー、または貼り付ける場合に、複数のコンポーネントを選択できます。
 
 I. **親**：コンポーネントの親を選択します。
 
-J. **More**: Provides more options to work with the selected component.
+J.**詳細**:選択したコンポーネントを操作するための追加のオプションを提供します。
 
 * SOM 式を表示（パネルのみ）
 * パネル内のオブジェクトをグループ化（パネルのみ）
@@ -138,19 +138,19 @@ J. **More**: Provides more options to work with the selected component.
 
 上部のページツールバーには、対話型通信をプレビューし、そのプロパティを変更するためのオプションが用意されています。 インタラクティブコミュニケーションの作成時にプレビューを設定し、それに応じて変更を加えることができます。 ページのツールバーには、以下の項目が表示されます。
 
-* Toggle Side Panel ![toggle-side-panel](assets/toggle-side-panel.png): Lets you show or hide Sidebar.
-* Page information ![pageinformationad](assets/pageinformationad.png): Lets you view page properties.
-* Emulator ![ruler](assets/ruler.png): Lets you emulate the look of your Interactive Communication for different display sizes such as tablets and phones.
-* 編集： 次のような他のモードを選択できます。 編集、スタイル、開発者、デザインを参照してください。
+* サイドパネルを切り替え![トグルサイドパネル](assets/toggle-side-panel.png):サイドバーの表示/非表示を切り替えることができます。
+* ページ情報![pageinformationad](assets/pageinformationad.png):ページのプロパティを表示できます。
+* エミュレータ![ruler](assets/ruler.png):タブレットやスマートフォンなど、様々な画面サイズでのインタラクティブコミュニケーションの外観をエミュレートします。
+* 編集：次のような他のモードを選択できます。編集、スタイル、開発者、デザインを参照してください。
 
-   * 編集： 対話型通信とそのコンポーネントのプロパティを編集できます。 例えば、コンポーネントの追加、画像の削除、必須フィールドの指定などを行うことができます。
+   * 編集：対話型通信とそのコンポーネントのプロパティを編集できます。 例えば、コンポーネントの追加、画像の削除、必須フィールドの指定などを行うことができます。
    * スタイル：このモードでは、インタラクティブ通信のコンポーネントの外観を調整することができます。例えば、スタイルモードでパネルを選択して、パネルの背景色を指定することができます。
-   * 開発者： 開発者は次のことができます。
+   * 開発者：開発者は次のことができます。
 
       * 対話型通信の構成要素を見つけ出します。
       * エラーが発生したタイミングと場所を特定し、問題を修正する。
-   * ターゲット: サイドバーに表示されていないカスタムコンポーネントまたはあらかじめ用意されているコンポーネントを有効または無効にできます。
+   * ターゲット:サイドバーに表示されていないカスタムコンポーネントまたはあらかじめ用意されているコンポーネントを有効または無効にできます。
 
 
-* プレビュー: Interactive Communicationを公開したときの外観をプレビューできます。
+* プレビュー:Interactive Communicationを公開したときの外観をプレビューできます。
 
