@@ -20,25 +20,25 @@ ht-degree: 25%
 
 # 投票の使用 {#using-voting}
 
-The `Voting` component is a useful tool that allows community members to rate a particular piece of content, such as an answer within a QnA component. With the `Voting` component, members select up or down arrows to indicate their opinion.
+`Voting`コンポーネントは、コミュニティのメンバーがQnAコンポーネント内の回答など、特定のコンテンツの部分を評価するのに役立つツールです。 `Voting`コンポーネントを使用して、メンバーは上向きまたは下向きの矢印を選択し、その意見を示します。
 
 ## 投票をページに追加 {#adding-voting-to-a-page}
 
-作成者モードでページに `Voting` コンポーネントを追加するには、コンポーネントブラウザを使用してコンポーネントを検索 `Communities / Voting` し、ページ上の位置（ユーザーが投票する機能に対する相対位置など）にドラッグします。
+作成者モードで`Voting`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して`Communities / Voting`を検索し、ページ上にドラッグして配置します。例えば、ユーザーが投票できる機能に対する相対位置です。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側のライブラリが含まれる場合](essentials-voting.md#essentials-for-client-side) 、これがコンポー `Voting` ネントの表示方法です。
+[必要なクライアント側ライブラリ](essentials-voting.md#essentials-for-client-side)が含まれる場合、`Voting`コンポーネントは次のように表示されます。
 
 ![chlimage_1-307](assets/chlimage_1-307.png)
 
 ## 投票の設定 {#configuring-voting}
 
-Select the placed `Voting` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Voting`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![chlimage_1-308](assets/chlimage_1-308.png)
 
-Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used to record votes.
+「**[!UICONTROL テキストとラベル]**」タブで、投票の記録に使用するプロパティを指定します。
 
 ![chlimage_1-309](assets/chlimage_1-309.png)
 
@@ -60,10 +60,10 @@ Under the **[!UICONTROL Texts &amp; Labels]** tab, specify the properties used t
 
 メンバーが投票できるのは 1 回だけですが、いつでも投票を変更できます。
 
-### 匿名 {#anonymous}
+### 匿名  {#anonymous}
 
 匿名での投票はサポートされていません。サイト訪問者は、一度投票に参加するには、登録（会員になる）し、サインインする必要があります。
 
 ## 追加情報 {#additional-information}
 
-More information may be found on the [Voting Essentials](essentials-voting.md) page for developers.
+詳しい情報は、開発者向けの[投票の必須事項](essentials-voting.md)ページにあります。
