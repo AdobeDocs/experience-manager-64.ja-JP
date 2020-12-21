@@ -16,7 +16,7 @@ ht-degree: 50%
 ---
 
 
-# エージェント UI を使用してインタラクティブ通信の準備と送信を行う {#prepare-and-send-interactive-communication-using-the-agent-ui}
+# エージェント UI を使用してインタラクティブ通信の準備と送信を行う  {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
 エージェント UI を使用してインタラクティブ通信の準備を行い、後処理用として送信することができます。エージェントは、許可設定に基づいて必要な変更を行い、電子メールの送信や印刷出力などの後処理用としてインタラクティブ通信を送信します。
 
@@ -27,13 +27,13 @@ ht-degree: 50%
 エージェントUIを使用して対話型通信を準備する際、エージェントは、後処理に送信する前に、エージェントUIで対話型通信の次の側面を管理します。
 
 * **データ**：エージェント UI の「データ」タブには、インタラクティブ通信内の変数とロックが解除されたフォームデータモデルプロパティが表示されます（エージェントを使用して編集できる変数とフォームデータモデルプロパティ）。これらの変数とプロパティは、インタラクティブ通信内のドキュメントフラグメントの編集時または作成時に生成されます。「データ」タブには、XDP テンプレートまたは印刷チャネルテンプレートに組み込まれているフィールドも表示されます。「Data」タブは、エージェントが編集可能なインタラクティブ通信の変数、フォームデータモデルのプロパティまたはフィールドがある場合にのみ表示されます。
-* **コンテンツ**：エージェントにより、「コンテンツ」タブに表示される各種コンテンツ（インタラクティブ通信内のドキュメントフラグメントやコンテンツ変数など）が管理されます。エージェントは、ドキュメントフラグメントのプロパティで対話型通信を作成する際に、ドキュメントフラグメントに許可された変更を加えることができます。 また、ドキュメントフラグメントの並べ替え、追加/削除、改ページの追加も可能です（可能な場合）。
-* **添付ファイル**: 「添付ファイル」タブは、対話型通信に添付ファイルがある場合、またはエージェントがライブラリにアクセスできる場合にのみ、エージェントUIに表示されます。 エージェントは添付ファイルの変更や編集を許可される場合とできない場合があります。
+* **コンテンツ**：エージェントにより、「コンテンツ」タブに表示される各種コンテンツ（インタラクティブ通信内のドキュメントフラグメントやコンテンツ変数など）が管理されます。エージェントは、ドキュメントフラグメントのプロパティで対話型通信を作成する際に、ドキュメントフラグメントに許可された変更を加えることができます。 また、ドキュメントフラグメントの並べ替え、追加/削除、改ページの追加（可能な場合）を行うこともできます。
+* **添付ファイル**:「添付ファイル」タブは、対話型通信に添付ファイルがある場合、またはエージェントがライブラリにアクセスできる場合にのみ、エージェントUIに表示されます。エージェントは添付ファイルの変更や編集を許可される場合とできない場合があります。
 
-## Prepare Interactive Communication using the Agent UI {#prepare-interactive-communication-using-the-agent-ui}
+## エージェントUIを使用して対話型通信を準備{#prepare-interactive-communication-using-the-agent-ui}
 
 1. **[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;を選択します。
-1. Select the appropriate Interactive Communication and tap **[!UICONTROL Open Agent UI]**.
+1. 適切な対話型通信を選択し、**[!UICONTROL エージェントUIを開く]**&#x200B;をタップします。
 
    >[!NOTE]
    >
@@ -49,7 +49,7 @@ ht-degree: 50%
 
 ### データの入力 {#enter-data}
 
-1. 「データ」タブで、変数のデータ、フォームデータモデルのプロパティ、印刷テンプレート（XDP）のフィールドを、必要に応じて入力します。Fill up all the mandatory fields marked with an asterisk (&amp;ast;) to enable the **Submit** button.
+1. 「データ」タブで、変数のデータ、フォームデータモデルのプロパティ、印刷テンプレート（XDP）のフィールドを、必要に応じて入力します。アスタリスク(&amp;ast;)が付いている必須フィールドをすべて入力し、「**送信**」ボタンを有効にします。
 
    対話型通信プレビューのデータフィールドの値をタップすると、「データ」タブで対応するデータフィールドが強調表示されます。逆の場合も同様です。
 
@@ -67,9 +67,9 @@ ht-degree: 50%
 
    ![contentmodulefocus](assets/contentmodulefocus.png)
 
-   In the Content or Data tab, by tapping Highlight Selected Modules In Content ( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png)) on upper left of the preview, you can disable or enable functionality to go to the document fragment when the relevant text, paragraph, or data field is tapped/selected in the preview.
+   「コンテンツ」タブまたは「データ」タブで、プレビューの左上にある「選択したプレビューをコンテンツ内でハイライト」(![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))をタップすると、関連するテキスト、段落またはデータフィールドをタップまたはで選択したときに、ドキュメントフラグメントに移動する機能を無効または有効にできます。
 
-   The fragments that are allowed to be edited by the agent while creating the Interactive Communication have the Edit Selected Content ( ![iconeditselectedcontent](assets/iconeditselectedcontent.png)) icon. このアイコンをタップすると、フラグメントが編集モードで表示され、フラグメントを編集できるようになります。テキストの書式設定と管理を行うには、以下のオプションを使用します。
+   対話型通信の作成時にエージェントが編集できるフラグメントには、選択されたコンテンツを編集(![iconeditselectedcontent](assets/iconeditselectedcontent.png))アイコンが付きます。 このアイコンをタップすると、フラグメントが編集モードで表示され、フラグメントを編集できるようになります。テキストの書式設定と管理を行うには、以下のオプションを使用します。
 
    * [書式設定オプション](#formattingtext)
 
@@ -78,9 +78,9 @@ ht-degree: 50%
    * [特殊文字](#specialcharacters)
    * [ショートカットキー](/help/forms/using/keyboard-shortcuts.md)
 
-   For more information on the actions available for various document fragments in the Agent user interface, see [Actions and info available in the Agent user interface](#actionsagentui).
+   エージェント・ユーザー・インタフェース内の様々なドキュメント・フラグメントで使用できるアクションの詳細については、「[エージェント・ユーザー・インタフェースで使用できるアクションと情報](#actionsagentui)」を参照してください。
 
-1. To add a page break to the print output of the Interactive Communication, place the cursor where you want to insert a page break and select Page Break Before or Page Break After ( ![pagebreakbeforeafter](assets/pagebreakbeforeafter.png)).
+1. インタラクティブ通信の印刷出力に改ページを追加するには、改ページを挿入する位置にカーソルを置き、前の改ページまたは後の改ページ(![pagebreakbeforeafter](assets/pagebreakbeforeafter.png))を選択します。
 
    インタラクティブ通信に、改ページのプレースホルダーが明示的に挿入されます。この明示的な改ページによってインタラクティブ通信の外観がどのように変わるのかを確認するには、印刷出力をプレビュー表示します。
 
@@ -88,15 +88,15 @@ ht-degree: 50%
 
    次に、インタラクティブ通信の添付ファイルの管理を行います。
 
-### 添付ファイルの管理 {#manage-attachments}
+### 添付ファイルの管理  {#manage-attachments}
 
-1. Select **[!UICONTROL Attachment]**. エージェントUIは、対話型通信の作成時に設定したとおりに、使用可能な添付ファイルを表示します。
+1. 「**[!UICONTROL 添付ファイル]**」を選択します。 エージェントUIは、対話型通信の作成時に設定したとおりに、使用可能な添付ファイルを表示します。
 
    表示アイコンをタップして、Interactive Communicationと共に添付ファイルを送信しないように選択できます。また、添付ファイルの×印をタップすると、添付ファイルを削除（エージェントが添付ファイルを削除または非表示にできる場合）をInteractive Communicationから削除できます。 インタラクティブ通信の作成時に必須ファイルとして指定された添付ファイルの場合、ビューアイコンと削除アイコンは無効になります。
 
    ![attachmentsagentui](assets/attachmentsagentui.png)
 
-1. Tap the Library Access ( ![libraryaccess](assets/libraryaccess.png)) icon to access Content Library to insert DAM assets as attachments.
+1. ライブラリアクセス（![ライブラリアクセス](assets/libraryaccess.png)）アイコンをタップしてコンテンツライブラリにアクセスし、添付ファイルとしてDAMアセットを挿入します。
 
    >[!NOTE]
    >
@@ -105,13 +105,13 @@ ht-degree: 50%
 1. インタラクティブ通信の作成時に、添付ファイルの順序をロックしなかった場合は、添付ファイルを選択して上下の矢印をタップすると、添付ファイルの順序を変更することができます。
 1. Web プレビューと印刷プレビューを使用して、2 つの出力が正しく作成されているかどうかを確認します。
 
-   If you find the previews to be satisfactory, tap **[!UICONTROL Submit]** to submit/send the Interactive Communication to a post process. または、変更を行うには、プレビューを終了して変更に戻ります。
+   十分な結果が得られるプレビューが見つかった場合は、「**[!UICONTROL 送信]**」をタップして、インタラクティブ通信を後処理に送信または送信します。 または、変更を行うには、プレビューを終了して変更に戻ります。
 
 ## テキストの書式設定 {#formattingtext}
 
 エージェント UI でテキストフラグメントを編集する場合、編集のタイプ（フォント、段落、リスト）に応じて、表示されるツールバーが異なります。
 
-![typeofformattingtoolbar](assets/typeofformattingtoolbar.png) ![Fontツールバー](do-not-localize/fonttoolbar.png)
+![typeofformattingtoolbarフォ](assets/typeofformattingtoolbar.png) ![ントツールバー](do-not-localize/fonttoolbar.png)
 
 フォントツールバー
 
@@ -123,7 +123,7 @@ ht-degree: 50%
 
 リストツールバー
 
-### テキストの一部をハイライト表示または強調表示する {#highlightemphasize}
+### テキストの一部をハイライト表示または強調表示する  {#highlightemphasize}
 
 編集可能なフラグメント内のテキストの一部をハイライト表示または強調表示するには、目的のテキストを選択して「ハイライト表示の色」をタップします。
 
@@ -135,7 +135,7 @@ ht-degree: 50%
 
 ### テキスト内に特殊文字を挿入する {#specialcharacters}
 
-エージェント UI では、210 個の特殊文字がサポートされています。The admin can [add support for more/custom special characters by customization](/help/forms/using/custom-special-characters.md).
+エージェント UI では、210 個の特殊文字がサポートされています。管理者は、カスタマイズ](/help/forms/using/custom-special-characters.md)によって、追加/カスタムの特殊文字のサポートを追加できます。[
 
 #### 添付ファイルの配信 {#attachmentdelivery}
 
@@ -143,17 +143,17 @@ ht-degree: 50%
 * インタラクティブ通信に関連付けられた後処理がエージェントUIを使用して送信の一部として読み込まれると、添付ファイルはリスト&lt;com.adobe.idp.ドキュメント> inAttachmentDocsパラメーターとして渡されます。
 * 配信メカニズムワークフロー（電子メールや印刷出力など）により、PDF 版のインタラクティブ通信と共に添付ファイルも配信されます。
 
-## エージェント UI で使用できる操作と情報 {#actionsagentui}
+## エージェント UI で使用できる操作と情報  {#actionsagentui}
 
 ### ドキュメントフラグメント {#document-fragments}
 
 ![](do-not-localize/contentoptionsdocfragments.png)
 
 * **上矢印と下矢印**：上矢印と下矢印を使用して、インタラクティブ通信内のドキュメントフラグメントを上下に移動することができます。
-* **削除**: 可能な場合は、ドキュメントフラグメントをインタラクティブ通信から削除します。
+* **削除**:可能な場合は、ドキュメントフラグメントをインタラクティブ通信から削除します。
 * **直前に改ページ**：（ターゲット領域の子フラグメントで使用可能）ドキュメントフラグメントの直前に改ページが挿入されます。
-* **インデント**: ドキュメントフラグメントのインデントを増減します。
-* **直後に改ページ** (ターゲット領域の子フラグメントに適用): ドキュメントフラグメントの後に改ページを挿入します。
+* **インデント**:ドキュメントフラグメントのインデントを増減します。
+* **直後に改ページ** (ターゲット領域の子フラグメントに適用):ドキュメントフラグメントの後に改ページを挿入します。
 
 ![docfragoptions](assets/docfragoptions.png)
 
@@ -162,7 +162,7 @@ ht-degree: 50%
 * 選択（目のアイコン）：インタラクティブ通信にドキュメントフラグメントを含めたり、インタラクティブ通信からドキュメントフラグメントを除外したりすることができます。
 * 未入力値：ターゲット領域の未入力変数の数が表示されます。これは、表示専用情報です。
 
-### リストドキュメントフラグメント {#list-document-fragments}
+### リストドキュメントフラグメント  {#list-document-fragments}
 
 ![listoptions](assets/listoptions.png)
 
