@@ -57,13 +57,13 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 詳しくは、[com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API を参照してください。
 
-## 一般的な問題 {#common-concerns}
+## 一般的な問題  {#common-concerns}
 
 ### ログ内の警告：Handlebars の廃止 {#warning-in-logs-handlebars-deprecated}
 
 起動時（初回ではなく、2 回目以降のすべての起動時）に、次の警告がログに表示されることがあります。
 
-* 11.04.2014 08:38:07.223 **WARN** [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper &#39;i18n&#39; has been replaced by &#39;com.adobe.cq.social.handlebars.I18nHelper@15bac645&#39;
+* 11.04.2014 08:38:07.223 **WARN** [FelixStartLevel]com.github.jcotc.handlebars.Handlebars Helper &#39;i18n&#39;は&#39;com.adobe.cq.social.handlebars.I18nHelper@15bac645&#39;に置き換えられました。
 
 [SCF](scf.md#handlebarsjavascripttemplatinglanguage) で使用される jknack.handlebars.Handlebars には独自の i18n ヘルパーユーティリティが用意されているので、この警告は無視しても問題ありません。起動時に、AEM 固有の [i18n ヘルパー](handlebars-helpers.md#i-n)に置き換えられます。この警告は、既存のヘルパーのオーバーライドを確認するためにサードパーティのライブラリによって生成されます。
 
