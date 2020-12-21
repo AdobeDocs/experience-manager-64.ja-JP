@@ -19,16 +19,16 @@ ht-degree: 55%
 
 
 
-# SCF サンドボックスの作成 {#create-an-scf-sandbox}
+# SCF サンドボックスの作成  {#create-an-scf-sandbox}
 
 
-AEM 6.1 Communities 以降では、サンドボックスをすばやく作成するのに最も簡単な方法は、コミュニティサイトを作成することです。See [Getting Started with AEM Communities](getting-started.md).
+AEM 6.1 Communities 以降では、サンドボックスをすばやく作成するのに最も簡単な方法は、コミュニティサイトを作成することです。[AEM Communitiesの使い始めに](getting-started.md)を参照してください。
 
-Another useful tool for developers is the [Community Components guide](components-guide.md), which allows for exploration and quick prototyping of Communities components and features.
+開発者にとっても役に立つツールは、[コミュニティコンポーネントガイド](components-guide.md)です。コミュニティのコンポーネントや機能の調査と迅速なプロトタイプを可能にします。
 
-The exercise of creating a website can be useful for understanding the structure of an AEM website which may include Communities features, while also providing simple pages on which to explore working with the [social component framework (SCF)](scf.md).
+Webサイトの作成の演習は、Communitiesの機能を含むAEM Webサイトの構造を理解するのに役立ちます。また、[ソーシャルコンポーネントフレームワーク(SCF)](scf.md)の操作を調査する簡単なページも提供します。
 
-このチュートリアルは、AEM の知識がなく、SCF コンポーネントの使用に興味を持っている開発者を主な対象としています。手順に従いながら SCF サンドボックスサイトの作成を進めることができますは、ナビゲーション、ロゴ、検索、ツールバー、子ページのリスト表示などのサイト構造に重点を置いた、 [全機能を果たしたインターネットWebサイト](../../help/sites-developing/website.md) （英語）のチュートリアルに似ています。
+このチュートリアルは、AEM の知識がなく、SCF コンポーネントの使用に興味を持っている開発者を主な対象としています。手順に従いながら SCF サンドボックスサイトの作成を進めることができます[How to Create a Fully Featured Internet Webサイト](../../help/sites-developing/website.md) （ナビゲーション、ロゴ、検索、ツールバー、子ページのリスト表示など、サイト構造に重点を置いた方法）のチュートリアルに似ています。
 
 オーサーインスタンスで開発を行い、パブリッシュインスタンスでサイトを試してみるのがベストです。
 
@@ -43,7 +43,7 @@ The exercise of creating a website can be useful for understanding the structure
 
 >[!CAUTION]
 >
->このチュートリアルでは、[コミュニティサイトコンソール](sites-console.md)を使用して作成するような機能を持つコミュニティサイトは作成しません。For example, this tutorial does not describe how to setup login, self-registration, [social login](social-login.md), messaging, profiles, and so on.
+>このチュートリアルでは、[コミュニティサイトコンソール](sites-console.md)を使用して作成するような機能を持つコミュニティサイトは作成しません。例えば、このチュートリアルでは、ログイン、自己登録、[ソーシャルログイン](social-login.md)、メッセージ、プロファイルなどの設定方法については説明しません。
 >
 >単純なコミュニティサイトが必要な場合は、[サンプルページの作成](create-sample-page.md)のチュートリアルに従ってください。
 
@@ -53,10 +53,10 @@ The exercise of creating a website can be useful for understanding the structure
 
 次に、AEM プラットフォームを初めて使用する開発者にとって役立つリンクをいくつか紹介します。
 
-* [はじめに](../../help/sites-deploying/deploy.md#getting-started) - AEMインスタンスのデプロイ用
+* [はじめに](../../help/sites-deploying/deploy.md#getting-started) - AEMインスタンスのデプロイ
 
    * [基本](../../help/sites-developing/the-basics.md) - Webサイトおよび機能の開発者向け
-   * [作成者の最初の手順](../../help/sites-authoring/first-steps.md) — ページコンテンツのオーサリング
+   * [作成者の最初の手順](../../help/sites-authoring/first-steps.md)  — ページコンテンツのオーサリング
 
 ## CRXDE Lite 開発環境の使用 {#using-crxde-lite-development-environment}
 
@@ -64,17 +64,17 @@ AEM 開発者は、オーサーインスタンス上の [CRXDE Lite](../../help/
 
 管理者権限でサインインした後、さまざまな方法で CRXDE Lite にアクセスできます。
 
-1. From global navigation, select navigation **[!UICONTROL Tools > CRXDE Lite]**.
+1. グローバルナビゲーションから、ナビゲーション&#x200B;**[!UICONTROL ツール/CRXDE Lite]**&#x200B;を選択します。
 
    ![chlimage_1-350](assets/chlimage_1-350.png)
 
-2. From the [classic UI welcome page](http://localhost:4502/welcome.html), scroll down and click **[!UICONTROL CRXDE Lite]** in the right panel.
+2. [従来のUIのようこそページ](http://localhost:4502/welcome.html)から下にスクロールし、右側のパネルの&#x200B;**[!UICONTROL CRXDE Lite]**&#x200B;をクリックします。
 
    ![chlimage_1-351](assets/chlimage_1-351.png)
 
-3. 直接参照 `CRXDE Lite`: `<server>:<port>/crx/de`
+3. 直接`CRXDE Lite`を参照：`<server>:<port>/crx/de`
 
-   For example, on a local author instance: ` [http://localhost:4502/crx/de](http://localhost:4502/crx/de)`
+   例えば、ローカル作成者インスタンスでは、次の操作を行います。` [http://localhost:4502/crx/de](http://localhost:4502/crx/de)`
 
 CRXDE Lite を使用するには、開発者または管理者権限でサインインする必要があります。デフォルトのlocalhostインスタンスの場合、
 
@@ -82,7 +82,7 @@ CRXDE Lite を使用するには、開発者または管理者権限でサイン
 * `password: admin`
 
 
-**このログインはタイムアウトになり** 、CRXDe Liteツールバーの右端にあるプルダウンを使用して定期的に再ログインする必要があります。
+**このログインがタイムアウトにな** り、CRXDe Liteツールバーの右端にあるプルダウンを使用して定期的に再ログインする必要があることに注意してください。
 
 ログインしていない状態では、JCR リポジトリをナビゲートしたり、編集／保存操作を実行したりすることはできません。
 
