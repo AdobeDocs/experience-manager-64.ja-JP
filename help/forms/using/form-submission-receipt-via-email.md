@@ -17,19 +17,19 @@ ht-degree: 89%
 ---
 
 
-# 電子メールによるフォーム送信確認の送信 {#sending-a-form-submission-acknowledgement-via-email}
+# 電子メールによるフォーム送信確認の送信  {#sending-a-form-submission-acknowledgement-via-email}
 
 ## アクティビティフォームデータ送信 {#adaptive-form-data-submission}
 
 アクティビティフォームでは、あらかじめ用意されたいくつかの[送信アクション](/help/forms/using/configuring-submit-actions.md)が使用でき、フォームデータを複数のエンドポイントに送信できます。
 
-For example, the **Email action** submit action sends an email on successful submission of an adaptive form. これは、フォームデータと PDF を電子メールで送信するように設定することもできます。
+例えば、**電子メールアクション**&#x200B;の送信アクションでは、アダプティブフォームの送信が成功した場合に電子メールが送信されます。 これは、フォームデータと PDF を電子メールで送信するように設定することもできます。
 
 この記事では、アダプティブフォームで電子メールアクションを有効にする手順や、さまざまな設定について詳しく説明します。
 
 >[!NOTE]
 >
->You can also use the **Email PDF action** to send the completed form by email as a PDF attachment. このアクションで使用できる設定オプションは、電子メールアクションで使用できるオプションと同じです。PDF のメール送信アクションは、XFA ベースのアダプティブフォームに対してのみ使用できます。
+>**PDFのメール送信アクション**&#x200B;を使用して、完成したフォームをPDF添付ファイルとして電子メールで送信することもできます。 このアクションで使用できる設定オプションは、電子メールアクションで使用できるオプションと同じです。PDF のメール送信アクションは、XFA ベースのアダプティブフォームに対してのみ使用できます。
 
 ## メール送信アクション {#email-action}
 
@@ -39,7 +39,7 @@ For example, the **Email action** submit action sends an email on successful sub
 >
 >電子メールアクションを使用するには、[電子メールサービスの設定](/help/sites-administering/notification.md#configuring-the-mail-service)で説明されているように AEM メールサービスを設定する必要があります。
 
-### アダプティブフォームでの電子メールアクションの有効化 {#enabling-email-action-on-an-adaptive-form}
+### アダプティブフォームでの電子メールアクションの有効化  {#enabling-email-action-on-an-adaptive-form}
 
 1. アダプティブフォームを編集モードで開きます。
 
@@ -49,7 +49,7 @@ For example, the **Email action** submit action sends an email on successful sub
 
    ![アダプティブフォームのコンポーネントの編集ダイアログ](assets/start_of_adp_form.png)
 
-1. Select the **Submit actions** tab and choose **Email action** from the Submit action drop-down list.
+1. 「**送信アクション**」タブを選択し、送信アクションドロップダウンリストから「**電子メールアクション**」を選択します。
 
    このタブには、現在のフォームに対して電子メールアクションを設定するためのオプションが表示されます。
 
@@ -75,7 +75,7 @@ For example, the **Email action** submit action sends an email on successful sub
 
 電子メールアクションタブでは、アクションが実行されたときに処理されるプレースホルダーを使用できます。すなわち、電子メールのヘッダー（例えば宛先、CC、BCC、件名）を、ユーザーがフォームを送信したときに生成するようにできることを意味します。
 
-To define a placeholder, specify `${<field name>}` in a field in the Submit actions tab.
+プレースホルダーを定義するには、「送信アクション」タブのフィールドに`${<field name>}`を指定します。
 
 例えば、フォームが **** という`email_addr`電子メールアドレスフィールドを持っている場合、ユーザーの電子メール ID を取得するために、宛先、CC、または BCC フィールドに次のプレースホルダーを指定できます。
 
