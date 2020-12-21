@@ -18,17 +18,17 @@ ht-degree: 57%
 ---
 
 
-# モデレートコンソール {#moderation-console}
+# モデレートコンソール  {#moderation-console}
 
-In AEM Communities, bulk [moderation of community content](moderate-ugc.md) is possible from both the author and publish environments by administrators and community moderators (trusted community members assigned as moderators).
+AEM Communitiesでは、コミュニティコンテンツ[の一括モデレートは、管理者とコミュニティモデレーター（モデレーターとして割り当てられた信頼できるコミュニティメンバー）による作成者と投稿の両方の環境から実行できます。](moderate-ugc.md)
 
-Administrators and community moderators may also perform [in-context moderation](in-context.md) in the publish environment.
+管理者およびコミュニティのモデレーターは、公開環境で[コンテキスト内モデレート](in-context.md)を実行することもできます。
 
-A feature of all [community sites](sites-console.md) is an `Administration`menu item available to users who sign in with administrative privileges. The `Administration`link provides access to the Moderation console.
+すべての[コミュニティサイト](sites-console.md)の機能は、管理者権限を持つユーザーが使用できる`Administration`メニュー項目です。 `Administration`リンクをクリックすると、モデレートコンソールにアクセスできます。
 
 モデレートコンソールでは、管理者とコミュニティモデレーターが、モデレート権限を持っているすべてのユーザー生成コンテンツ（UGC）にアクセスできます。複数のサイトのモデレートを許可すると、すべてのサイトにわたる投稿の表示や、選択したコミュニティのサイトによるフィルターが可能です。
 
-For more detailed information visit [Managing Users and User Groups](users.md).
+詳細については、[ユーザーとユーザーグループの管理](users.md)を参照してください。
 
 モデレートコンソールでは以下の操作を実行できます。
 * モデレートタスクの一括実行
@@ -36,7 +36,7 @@ For more detailed information visit [Managing Users and User Groups](users.md).
 * UGC詳細の表示
 * UGC作成者の詳細の表示
 
-Only when signed in as an administrator, or a member with ` [moderator permissions](in-context.md#identifyingtrustedmembers)`, may moderation tasks be performed.
+管理者としてログインした場合、または` [moderator permissions](in-context.md#identifyingtrustedmembers)`を持つメンバーの場合にのみ、モデレートタスクを実行できます。
 
 ## パブリッシュ環境からのアクセス {#publish-environment-access}
 
@@ -52,13 +52,13 @@ Only when signed in as an administrator, or a member with ` [moderator permissio
 
 オーサー環境でモデレートコンソールに移動するには、
 
-* From global navigation: **[!UICONTROL Navigation > Communities > Moderation]**
+* グローバルナビゲーションから：**[!UICONTROL ナビゲーション/コミュニティ/モデレート]**
 
-Only when signed in as an administrator, or as a member with ` [moderator permissions](in-context.md#identifyingtrustedmembers)`, may moderation tasks be performed. 表示されるコミュニティコンテンツは、サインインしたメンバーがモデレートを許可されるものだけです。
+管理者として、または` [moderator permissions](in-context.md#identifyingtrustedmembers)`のメンバーとしてサインインした場合にのみ、モデレートタスクを実行できます。 表示されるコミュニティコンテンツは、サインインしたメンバーがモデレートを許可されるものだけです。
 
 >[!NOTE]
 >
->パブリッシュ環境の UGC をオーサー環境で表示できるのは、選択した SRP で共通ストアが実装されている場合のみです。例えば、デフォルトでは、ストレージはJSRPです。JSRPは、作成者および発行用の一般的なストアではありません。 See [Community Content Storage](working-with-srp.md).
+>パブリッシュ環境の UGC をオーサー環境で表示できるのは、選択した SRP で共通ストアが実装されている場合のみです。例えば、デフォルトでは、ストレージはJSRPです。JSRPは、作成者および発行用の一般的なストアではありません。 [コミュニティコンテンツのストレージ](working-with-srp.md)を参照してください。
 
 ![moderationconsoleauthor](assets/moderationconsoleauthor.png)
 
@@ -72,7 +72,7 @@ Only when signed in as an administrator, or as a member with ` [moderator permis
 
 ### 上部ナビゲーションバー {#top-navigation-bar}
 
-上部ナビゲーションバーはすべてのコンソールで共通です。For more information, see [Basic Handling](../../help/sites-authoring/basic-handling.md).
+上部ナビゲーションバーはすべてのコンソールで共通です。詳しくは、[基本操作](../../help/sites-authoring/basic-handling.md)を参照してください。
 
 ### ツールバー {#toolbar}
 
@@ -99,25 +99,25 @@ Only when signed in as an administrator, or as a member with ` [moderator permis
 * 投稿の場所
 * 投稿日
 * 投稿への返信数
-* [投稿に関連付けられたセンチメント](moderate-ugc.md#sentiment)
+* [投稿に関連付けら](moderate-ugc.md#sentiment) れたセンチメント
 * 承認済みの場合は、チェックマークが表示されます
 * 添付ファイルがある場合は、クリップが表示されます
 
 >[!NOTE]
 >
->The content area features an *infinite scroll*, which means that it will allow you to continue scrolling until you have reached the end of the content. ツールバーは、スクロール時もコンテンツ領域の上の位置に固定されて表示されます。
+>コンテンツ領域には&#x200B;*無限スクロール*&#x200B;があります。つまり、コンテンツの最後に到達するまでスクロールを続行できます。 ツールバーは、スクロール時もコンテンツ領域の上の位置に固定されて表示されます。
 
-### フィルターレール {#filter-rail}
+### フィルターレール  {#filter-rail}
 
 ![chlimage_1-472](assets/chlimage_1-472.png)
 
 サイドパネルアイコンにより、フィルターレールが開きます。 コンテンツ領域の左側に表示されるフィルターレールは、様々なフィルターを提供し、それぞれがコンテンツ領域に表示される参照先のUGCに直接影響します。
 
-The filters within each category are **OR** ed together, and the filters in different categories are **AND** ed together.
+各カテゴリ内のフィルターは&#x200B;**OR**&#x200B;一緒に結合され、異なるカテゴリ内のフィルターは&#x200B;**AND**&#x200B;一緒に結合されます。
 
-For example, if you check both **Question** and **Answer**, you will see content that is either a **Question** *or* an **Answer**.
+例えば、**質問**&#x200B;と&#x200B;**回答**&#x200B;の両方を確認すると、**質問** *または*&#x200B;回答&#x200B;**のコンテンツが表示されます。**
 
-However if you check **Question** and **Pending**, you will only see content that is a **Question** and is **Pending**.
+ただし、**質問**&#x200B;と&#x200B;**保留中**&#x200B;を確認すると、**質問**&#x200B;で、**保留中**&#x200B;の内容だけが表示されます。
 
 >[!NOTE]
 >
@@ -177,8 +177,8 @@ However if you check **Question** and **Pending**, you will only see content tha
 
 * 作成者インスタンス
 * 管理者としてサインイン
-* Open [Web Console](http://localhost:4502/system/console/configMgr)
-* Locate `AEM Communities Moderation Dashboard Filters`
+* [Webコンソール](http://localhost:4502/system/console/configMgr)を開きます
+* `AEM Communities Moderation Dashboard Filters`を検索
 * 編集モードで開く設定を選択します
 * フィルタするコンポーネントのResourceTypeを入力します
    * 例えば、含まれる投票コンポーネントをフィルタするには、次のように入力します。\
@@ -189,7 +189,7 @@ However if you check **Question** and **Pending**, you will only see content tha
 * 「保存」を選択します
 * コミュニティの更新 — モデレートコンソール
 
-The result is a new selectable filter for `Voting`under the `Content Type` filter group.
+結果は、`Content Type`フィルターグループの下の`Voting`に対して選択可能な新しいフィルターになります。
 
 このフィルターを選択すると、ダッシュボードのコンテンツに、入力した ResourceType に一致する UGC が表示されます。
 
@@ -207,7 +207,7 @@ The result is a new selectable filter for `Voting`under the `Content Type` filte
 
 フラグ設定は、表示される UGC 参照を、フラグが付いている投稿または非表示の投稿のみに限定します。
 
-Once a piece of content is flagged, it remains flagged until you unflag that single piece of content by selecting the **[!UICONTROL Flag]** button once again. フラグには重要やフォローアップなどのレベルがないことに注意してください。
+一度フラグが付けられると、「**[!UICONTROL フラグ]**」ボタンをもう一度選択して、その1つのコンテンツのフラグを解除するまで、フラグ付けされたままになります。 フラグには重要やフォローアップなどのレベルがないことに注意してください。
 
 ![chlimage_1-476](assets/chlimage_1-476.png)
 
@@ -225,7 +225,7 @@ Once a piece of content is flagged, it remains flagged until you unflag that sin
 
 #### 好感度 {#sentiment}
 
-[好感度](moderate-ugc.md#sentiment) （センチメント）は、参照先のUGCに表示される投稿を、好感度値が正、負、中立の投稿に制限します。
+[センチメン](moderate-ugc.md#sentiment) トでは、参照先のUGCの表示が、センチメント値がポジティブ、ネガティブ、中立の投稿に限定されます。
 
 ![chlimage_1-479](assets/chlimage_1-479.png)
 
@@ -233,13 +233,13 @@ Once a piece of content is flagged, it remains flagged until you unflag that sin
 
 [モデレートアクション](moderate-ugc.md#moderation-actions)は、コンテンツ領域で選択された 1 つ以上のコンテンツに対して実行したり、コンテンツの詳細表示時に実行したりできます。
 
-To bulk-moderate the posts, in the content area click the Select ( ![selecticon](assets/selecticon.png)) icon on a post, which appears on hovering over it with the mouse (desktop) or pressing and holding a finger on the post (mobile). この操作をおこなうと、複数選択モードに入ります。複数選択モードでは、一括でモデレートする投稿をクリックするだけで選択できます。ツールバーに表示されるボタンを使用して、選択した投稿に対してモデレートアクションを実行します。どのアクションをおこなうときも、必ず確認メッセージが表示されます。
+投稿を一括モデレートするには、コンテンツ領域で、投稿の選択(![selecticon](assets/selecticon.png))アイコンをクリックします。このアイコンの上にマウスを置くと（デスクトップ）、投稿の指を押して押し続けると（モバイル）、 この操作をおこなうと、複数選択モードに入ります。複数選択モードでは、一括でモデレートする投稿をクリックするだけで選択できます。ツールバーに表示されるボタンを使用して、選択した投稿に対してモデレートアクションを実行します。どのアクションをおこなうときも、必ず確認メッセージが表示されます。
 
 コンテンツ領域内の 1 つの投稿のみをモデレートする場合は、その投稿の上にマウスポインターを置く（デスクトップの場合）か、その投稿を指で長押しして（モバイルの場合）ボタンを表示します。1 つのコンテンツを操作するときは、削除アクションの場合に限り確認メッセージが表示されます。
 
-### 複数の投稿のモデレート {#moderating-multiple-posts}
+### 複数の投稿のモデレート  {#moderating-multiple-posts}
 
-Enter the bulk selection mode by clicking the `Select` icon on a post:
+投稿の`Select`アイコンをクリックして、一括選択モードに入ります。
 
 ![select-icon](assets/select-icon.png)
 
@@ -266,7 +266,7 @@ Enter the bulk selection mode by clicking the `Select` icon on a post:
 * [拒否](#deny)
 * [削除](#delete)
 * [閉じる](#close)
-* View [Moderation History](#moderation-history)
+* 表示[モデレート履歴](#moderation-history)
 * [詳細を表示](#viewdetails)
 
 モデレートアクションアイコンの上にあるカード表示には、投稿のテキストが表示され、その下には、
@@ -294,7 +294,7 @@ Enter the bulk selection mode by clicking the `Select` icon on a post:
 
 ![chlimage_1-482](assets/chlimage_1-482.png)
 
-The **Deny** moderation action is only available for content that is moderated, and does not appear on unmoderated content except in multi-selection mode.
+**モデレートを拒否**&#x200B;アクションは、モデレートされたコンテンツに対してのみ使用でき、複数選択モードを除き、モデレートされていないコンテンツには表示されません。
 
 モデレート対象でないコンテンツは、必ず承認された状態になります。
 
@@ -332,7 +332,7 @@ The **Deny** moderation action is only available for content that is moderated, 
 
 1 つの投稿を操作するときに、その UGC を詳細モードで開くと、より詳しい情報を表示できます。
 
-To do so, hover over the post to display the `View Detail` icon and select it to display a panel containing more details of the post.
+その場合は、投稿の上にマウスポインターを置いて`View Detail`アイコンを表示し、選択すると、投稿の詳細を含むパネルが表示されます。
 
 複数の UGC 投稿のコンテンツ領域に戻るには、表示詳細ウィンドウの右上隅の X を選択します。
 
