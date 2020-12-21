@@ -17,7 +17,7 @@ ht-degree: 100%
 ---
 
 
-# タスクを開く {#opening-a-task}
+# タスクを開く  {#opening-a-task}
 
 AEM Forms アプリケーションが AEM Forms サーバーと同期されている場合は、自分に割り当てられているタスクを操作することができます。タスクとは、ワークベンチまたは AEM ワークフローエディターで定義されるワークフロー内の手順のことです。例については、[Geometrixx Gov リファレンスサイトの「Conard が査定タスクを受け取る」](/help/forms/using/gov-reference-site-walkthrough.md#conard-assessment-task)を参照してください。現在自分に割り当てられているすべてのタスクに変更を加えることができます。すべてのタスクは「タスク」タブで利用できます。下書きとして保存したタスクは「タスク」タブに残ります。
 
