@@ -24,20 +24,20 @@ ht-degree: 49%
 
 AEM Communitiesでは、公開環境で、プロファイルを自己登録して編集できます。 適切な権限を与えられると、
 
-* Create sub-communities within the community site (see [community groups](creating-groups.md))
-* [ユーザー生成コンテンツ](moderation.md) (UGC)のモデレート
-* Be [enablement resource](resources.md) contacts
-* Be [privileged](#privileged-members-group) to create entries for blogs, calendars, QnA, and forums
+* コミュニティサイト内にサブコミュニティを作成する（[コミュニティグループ](creating-groups.md)を参照）
+* [モデレ](moderation.md) ートユーザー生成コンテンツ(UGC)
+* [有効化リソース](resources.md)の連絡先
+* ブログ、カレンダー、QnA、フォーラムのエントリを作成するには、[権限](#privileged-members-group)が必要
 
-Users registered in the publish environment are generally referred to as *community members (members)* to distinguish them from *users *in the author environment.
+発行環境に登録したユーザは、一般に&#x200B;*コミュニティメンバ（メンバ）*&#x200B;と呼ばれ、作成者環境内の*ユーザと区別します。
 
-メンバーに権限を付与するには、そのメンバーを、オーサー環境でコミュニティサイトを[作成](sites-console.md)または[変更](sites-console.md#modifying-site-properties)したときに動的に作成される[メンバー（ユーザー）グループ](#publish-group-roles)に割り当てます。When working from the author environment, members are visible from the publish environment by means of the [tunnel service](#tunnel-service).
+メンバーに権限を付与するには、そのメンバーを、オーサー環境でコミュニティサイトを[作成](sites-console.md)または[変更](sites-console.md#modifying-site-properties)したときに動的に作成される[メンバー（ユーザー）グループ](#publish-group-roles)に割り当てます。作成者環境から作業している場合、メンバーは[トンネルサービス](#tunnel-service)を使用して発行環境から表示されます。
 
 設計上、発行環境で作成されたメンバーとメンバーグループは、作成者環境に表示されません。 作成者環境で作成されたユーザーとユーザーグループは、同様に、作成者環境に残ります。
 
 オーサー環境のユーザーとパブリッシュ環境のメンバーが同じユーザーのリストを基にしている場合も（同じ LDAP ディレクトリから同期される場合など）、それらのユーザーは、オーサー環境とパブリッシュ環境の両方で同じ権限とグループメンバーシップを持つ同一のユーザーとは見なされません。必要に応じて、メンバーとユーザーの役割は、発行時と作成者時に別々に確立する必要があります。
 
-[発行ファームの場合](topologies.md)、1つの発行インスタンスに対して行われた登録と変更は、他の発行インスタンスと同期して、同じユーザーデータにアクセスできるようにする必要があります。 For details see [User Synchronization](sync.md), which includes a section describing [What Happens When...](sync.md#what-happens-when).
+[発行ファーム](topologies.md)の場合、ある発行インスタンスに対する登録と変更は、他の発行インスタンスと同期して、同じユーザーデータにアクセスできるようにする必要があります。 詳しくは、[ユーザー同期](sync.md)を参照してください。[次の場合に起こることを説明する節が含まれています。](sync.md#what-happens-when)。
 
 ### 貢献度の制限 {#contribution-limits}
 
@@ -45,7 +45,7 @@ Users registered in the publish environment are generally referred to as *commun
 
 詳しくは、[メンバーの貢献度の制限](limits.md)を参照してください。
 
-### 動的に作成されるユーザーグループ {#dynamically-created-user-groups}
+### 動的に作成されるユーザーグループ  {#dynamically-created-user-groups}
 
 コミュニティサイトを作成すると、オーサー環境（[オーサーグループの役割](#author-group-roles)を参照）かパブリッシュ環境（[パブリッシュグループの役割](#publish-group-roles)を参照）のどちらかで、コミュニティサイトを管理するために必要な各種管理機能の適切な権限と一意の ID（uid）を持った新しいユーザーグループが動的に作成されます。
 
@@ -53,19 +53,19 @@ Users registered in the publish environment are generally referred to as *commun
 
 例えば、「We.Retail Engage」というタイトルのサイトに「*engage*」というサイト名を付けた場合、作成されるユーザーグループのうち 1 つは次のようになります。
 
-* Community *Engage* Members
+* コミュニティ&#x200B;*メンバーの関与*
 
 ## オーサー環境 {#author-environment}
 
 ### トンネルサービス {#tunnel-service}
 
-When using the author environment to [create sites](sites-console.md), [modify site properties](sites-console.md#modifying-site-properties) and [manage community members and member groups](members.md), it is necessary to access users and user groups registered in the publish environment.
+作成者環境を使用してサイト](sites-console.md)を作成、[サイトのプロパティを変更](sites-console.md#modifying-site-properties)、[コミュニティメンバーとメンバーグループを管理](members.md)する場合は、公開環境に登録されたユーザーとユーザーグループにアクセスする必要があります。[
 
 トンネルサービスは、作成者の複製エージェントを使用してこのアクセスを提供します。
 
-* For details, see [configuration instructions](deploy-communities.md#tunnel-service-on-author) on the deployment page
+* 詳しくは、デプロイメントページの[設定手順](deploy-communities.md#tunnel-service-on-author)を参照してください
 
-The [Communities Members and Groups consoles](members.md) are for the sole purpose of managing users (members) and user groups (member groups) registered only in the publish environment.
+[Communitiesのメンバーとグループコンソール](members.md)は、公開環境にのみ登録されたユーザー（メンバー）とユーザーグループ（メンバーグループ）を管理する唯一の目的です。
 
 オーサー環境で登録されたユーザーとユーザーグループを管理するには、[セキュリティコンソール](../../help/sites-administering/security.md)を使用します。
 
@@ -75,16 +75,16 @@ The [Communities Members and Groups consoles](members.md) are for the sole purpo
 |---|---|
 | 管理者 | 管理者グループは、コミュニティ管理者のすべての権限を持つシステム管理者と、コミュニティ管理者グループを管理する権限で構成されます。 |
 | コミュニティ管理者 | コミュニティ管理者グループは、自動的にすべてのコミュニティサイトと、そのサイトで作成されたすべてのコミュニティグループのメンバーになります。コミュニティ管理者グループの初期メンバーは、管理者グループです。オーサー環境で、コミュニティ管理者はコミュニティサイトの作成、サイトの管理、メンバーの管理（メンバーのコミュニティの使用を禁止することが可能）およびコンテンツのモデレートを実行できます。 |
-| Community &lt;*site name*> Sitecontentmanager | コミュニティサイトコンテンツマネージャーは、従来の AEM オーサリング、コンテンツ作成およびコミュニティサイトのページの変更を実行できます。 |
+| コミュニティ&lt;*サイト名*> Sitecontentmanager | コミュニティサイトコンテンツマネージャーは、従来の AEM オーサリング、コンテンツ作成およびコミュニティサイトのページの変更を実行できます。 |
 | コミュニティイネーブルメントマネージャー | コミュニティイネーブルメントマネージャーグループは、コミュニティサイトのイネーブルメントマネージャーグループの管理者の割り当てに使用できるユーザーで構成されます。 |
-| Community &lt;*site name* > Siteenablementmanagers | The Community Site Enablement Managers group consists of users who have been assigned to manage a community site&#39;s enablement [resources](resources.md). |
+| コミュニティ&lt;*サイト名* > Siteenablementmanagers | コミュニティサイト有効化マネージャーグループは、コミュニティサイトの有効化[リソース](resources.md)の管理に割り当てられたユーザーで構成されます。 |
 | なし | 匿名のサイト訪問者はオーサー環境にアクセスできません。 |
 
-### システム管理者 {#system-administrators}
+### システム管理者  {#system-administrators}
 
 管理者グループのメンバーは、オーサー環境とパブリッシュ環境の両方で AEM のインストールの初期設定を実行できるシステム管理者です。
 
-For demonstration and development purposes, the administrators group has a member whose userid is *admin* and password is *admin*.
+デモおよび開発の目的で、管理者グループには、ユーザーIDが&#x200B;*admin*、パスワードが&#x200B;*admin*&#x200B;のメンバーが存在します。
 
 実稼動環境では、デフォルトの管理者グループを修正する必要があります。
 
@@ -94,7 +94,7 @@ For demonstration and development purposes, the administrators group has a membe
 
 ### メンバーになる {#becoming-a-member}
 
-In the publish environment, depending on the [settings](sites-console.md#user-management) of the community site, a site visitor may become a community member
+公開環境では、コミュニティサイトの[設定](sites-console.md#user-management)に応じて、サイト訪問者がコミュニティのメンバーになる場合があります
 
 * コミュニティサイトがプライベート（非公開）の場合：
    * 招待で
@@ -108,24 +108,24 @@ In the publish environment, depending on the [settings](sites-console.md#user-ma
 >
 >サイト訪問者が 1 つのオープンコミュニティサイトに登録すると、その訪問者は自動的に、同じパブリッシュ環境上の他のオープンコミュニティサイトのメンバーになります。
 
-### パブリッシュグループの役割 {#publish-group-roles}
+### パブリッシュグループの役割  {#publish-group-roles}
 
 | メンバーが所属するグループ | 主な役割 |
 |---|---|
-| Community &lt;*site name*> Members | コミュニティサイトメンバーは、登録済みのユーザーです。ログイン、プロファイルの変更、オープンコミュニティグループへの参加、コミュニティへのコンテンツの投稿、他のメンバーへのメッセージの送信、サイトのアクティビティに従うことができます。 |
-| Community &lt;*site name*> Moderators | コミュニティサイトモデレーターは、モデレートコンソールを使用した UGC の一括モデレートや、コンテンツが投稿されたページでのコンテキスト内モデレートを実行できる、信頼されているコミュニティメンバーです。 |
-| Community &lt;*site name*> &lt;*group name*> Members | コミュニティグループメンバーは、オープンコミュニティグループに参加したコミュニティメンバーか、クローズドコミュニティグループに招待されたコミュニティメンバーのどちらかです。このメンバーは、サイト内のそのコミュニティグループのメンバーの能力を持ちます。 |
-| Community &lt;*site name*> Groupadministrators | コミュニティサイトグループ管理者は、コミュニティサイト内のサブコミュニティ（グループ）を作成および管理する権限を持った、信頼されているコミュニティメンバーです。コンテキスト内モデレートを提供する機能が含まれます。 |
+| コミュニティ&lt;*サイト名*>のメンバー | コミュニティサイトメンバーは、登録済みのユーザーです。ログイン、プロファイルの変更、オープンコミュニティグループへの参加、コミュニティへのコンテンツの投稿、他のメンバーへのメッセージの送信、サイトのアクティビティに従うことができます。 |
+| コミュニティ&lt;*サイト名*>モデレーター | コミュニティサイトモデレーターは、モデレートコンソールを使用した UGC の一括モデレートや、コンテンツが投稿されたページでのコンテキスト内モデレートを実行できる、信頼されているコミュニティメンバーです。 |
+| コミュニティ&lt;*サイト名*> &lt;*グループ名*>メンバー | コミュニティグループメンバーは、オープンコミュニティグループに参加したコミュニティメンバーか、クローズドコミュニティグループに招待されたコミュニティメンバーのどちらかです。このメンバーは、サイト内のそのコミュニティグループのメンバーの能力を持ちます。 |
+| コミュニティ&lt;*サイト名*>グループ管理者 | コミュニティサイトグループ管理者は、コミュニティサイト内のサブコミュニティ（グループ）を作成および管理する権限を持った、信頼されているコミュニティメンバーです。コンテキスト内モデレートを提供する機能が含まれます。 |
 | 権限を持つメンバーのセキュリティグループ&#x200B;** | コンテンツ作成を制限するために、手動で作成および保守されるユーザーグループです。[権限を持つメンバーグループ](#privileged-members-group)を参照してください。 |
 | なし | サイトを発見した匿名のサイト訪問者は、匿名アクセスが許可されているコミュニティサイトを表示および検索できます。コンテンツに参加して投稿するには、ユーザーが自己登録（許可されている場合）を行い、コミュニティのメンバーになる必要があります。 |
 
 ### パブリッシュグループの役割へのメンバーの割り当て {#assigning-members-to-publish-group-roles}
 
-When [creating a community site](sites-console.md) in the author environment, or when [modifying site properties,](sites-console.md#modifying-site-properties) members may be assigned various roles performed in the publish environment, such as moderators, group administrators, resource contacts, or privileged members.
+作成者環境でコミュニティサイト](sites-console.md)を作成する場合、または[サイトのプロパティを変更する場合、](sites-console.md#modifying-site-properties)メンバーには、発行環境で実行される様々な役割（モデレーター、グループ管理者、リソース連絡先、特権メンバーなど）が割り当てられます。[
 
-[トンネルサービスを有効にすると](sync.md#accessingpublishusersfromauthor) 、割り当ての選択肢が、作成者のユーザーではなく、発行時にメンバーから表示されます。
+[トンネル](sync.md#accessingpublishusersfromauthor) サービスを有効にすると、割り当ての選択肢が、作成者のユーザーではなく、発行時にメンバーから表示されます。
 
-The selected members will be automatically assigned to the [appropriate group](#publish-group-roles) and their memberships will be included when the community site is (re)published.
+選択したメンバーは自動的に[適切なグループ](#publish-group-roles)に割り当てられ、コミュニティサイトが（再）公開されると、そのメンバーシップが含まれます。
 
 ### Privileged Members Group {#privileged-members-group}
 
@@ -137,9 +137,9 @@ The selected members will be automatically assigned to the [appropriate group](#
 
 以下のコミュニティ機能では、権限を持つメンバーグループを 1 つ以上指定できます。
 
-* [ブログ機能](functions.md#blog-function) — 新しい記事の作成を制限
-* [カレンダー機能](functions.md#calendar-function) — 新規イベントの作成を制限
-* [フォーラム機能](functions.md#forum-function) — 新規トピックの作成を制限
+* [ブログ機能](functions.md#blog-function)  — 新しい記事の作成を制限
+* [カレンダー機能](functions.md#calendar-function)  — 新規イベントの作成を制限
+* [フォーラム機能](functions.md#forum-function)  — 新規トピックの作成を制限
 * [Q&amp;A 機能](functions.md#qna-function) - 新しい質問の作成を制限
 
 コミュニティ機能にセキュリティ制限がない（権限を持つメンバーグループが割り当てられていない）場合は、すべてのコミュニティサイトメンバーが、その機能のコンテンツ（記事、イベント、トピック、質問）を作成できます。
@@ -148,21 +148,21 @@ The selected members will be automatically assigned to the [appropriate group](#
 >
 >あるコミュニティサイトで、権限を持つメンバーグループにユーザーを追加しても、そのユーザーが同じコミュニティサイトのメンバーでもある場合は、そのユーザーに対して作成権限が与えられるだけです。
 
-## コミュニティメンバーの作成 {#creating-community-members}
+## コミュニティメンバーの作成  {#creating-community-members}
 
 ### リポジトリの場所 {#repository-location}
 
 特定の機能を正しく動作させるためには、適切な権限を持つユーザーとユーザーグループを作成する必要があります。
 
-When members are created in `/home/users/community`, they inherit the proper ACLs that give read privileges to members&#39; profiles.
+`/home/users/community`にメンバを作成すると、メンバのプロファイルに読み取り権限を与える適切なACLを継承します。
 
-Similarly, custom community user groups (such as privileged members groups) should be created in `/home/groups/community`.
+同様に、カスタムコミュニティユーザーグループ（特権メンバーグループなど）は、`/home/groups/community`に作成する必要があります。
 
 [コミュニティメンバーコンソールとグループコンソール](members.md)を使用すると、ユーザーとグループがそれぞれのパスに作成されます。
 
-To specify a custom path requires use of the classic security UI, which is accessible at [https://&lt;server>:&lt;port>/useradmin](http://localhost:4503/useradmin).
+カスタムパスを指定するには、[https://&lt;server>:&lt;port>/useradmin](http://localhost:4503/useradmin)でアクセス可能な、従来のセキュリティUIを使用する必要があります。
 
-To give read privileges for custom member paths, on all publish instances set ACLs similar to `/home/users/community`:
+カスタムメンバーパスの読み取り権限を与えるには、すべての発行インスタンスで、`/home/users/community`と同様のACLを設定します。
 
 ```xml
 <allow
@@ -175,7 +175,7 @@ To give read privileges for custom member paths, on all publish instances set AC
 </allow>
 ```
 
-To give the proper privileges for custom member group paths, such as /home/groups/mycompany, on all publish instances set ACLs similar to `/home/groups/community`:
+すべての発行インスタンスで、カスタムメンバーグループのパス（/home/groups/mycompanyなど）に適切な権限を与えるには、`/home/groups/community`と類似したACLを設定します。
 
 ```xml
 <allow
@@ -195,20 +195,20 @@ To give the proper privileges for custom member group paths, such as /home/group
 
 ### コミュニティイネーブルメントマネージャーの役割 {#community-enablement-manager-role}
 
-[イネーブルメントコミュニティ](overview.md#enablement-community)では、メンバーごとに関連するコストが発生することから、通常は、サイト訪問者による自己登録機能は許可されません。Enablement learners and resources are managed by a user assigned the [role](#author-group-roles) of `enablement manager` [during site creation](sites-console.md#enablement) on author (added as member of group `Community <site-name> Siteenablementmanagers`). The `enablement manager` is also responsible for [assigning learning resources](resources.md) to community members on author.
+[イネーブルメントコミュニティ](overview.md#enablement-community)では、メンバーごとに関連するコストが発生することから、通常は、サイト訪問者による自己登録機能は許可されません。有効化学者とリソースは、作成者のサイト作成](sites-console.md#enablement)中に`enablement manager` [の[役割](#author-group-roles)を割り当てられたユーザーによって管理されます（グループ`Community <site-name> Siteenablementmanagers`のメンバーとして追加されます）。 `enablement manager`は、[学習リソース](resources.md)を作成者のコミュニティメンバーに割り当てる役割も果たします。
 
-Only users who are members of the global `Community Enablement Managers` group may be selected as an `enablement manager` for a specific community site.
+特定のコミュニティサイトの`enablement manager`として選択できるのは、グローバル`Community Enablement Managers`グループのメンバーであるユーザーだけです。
 
-To create a user who may be assigned the role of `Community Site Enablement Manager`, use the classic UI security console in order to specify the path:
+`Community Site Enablement Manager`のロールを割り当てられる可能性のあるユーザーを作成するには、従来のUIセキュリティコンソールを使用してパスを指定します。
 
 オーサーインスタンスの場合：
 
 1. 管理者権限でログインし、従来のUIセキュリティコンソールを参照します。
-For example, [http://localhost:4502/useradmin](http://localhost:4502/useradmin)
+例：[http://localhost:4502/useradmin](http://localhost:4502/useradmin)
 
-2. From the Edit menu, select **[!UICONTROL Create User]**.
-3. ダイアログに入力し `Create User` ます。
-   * Path must be `/home/users/community`
+2. 「Edit」メニューから、「**[!UICONTROL Create User]**」を選択します。
+3. `Create User`ダイアログに入力します。
+   * パスは`/home/users/community`でなければなりません
 4. 「**[!UICONTROL 作成]**」を選択します。
 
 ![chlimage_1-130](assets/chlimage_1-130.png)
@@ -219,8 +219,8 @@ For example, [http://localhost:4502/useradmin](http://localhost:4502/useradmin)
 
 左側のウィンドウで、
 
-1. Clear the search box and select **[!UICONTROL Hide Users]**
-2. Locate and drag `community-enablementmanagers` to the **[!UICONTROL Groups]** tab of the new user displayed in the right pane
+1. 検索ボックスをオフにし、「**[!UICONTROL ユーザーを非表示]**」を選択します。
+2. 右側のウィンドウに表示される新しいユーザーの`community-enablementmanagers`「グループ&#x200B;]**」タブを探してドラッグします**[!UICONTROL 
 
 ![chlimage_1-132](assets/chlimage_1-132.png)
 
@@ -228,11 +228,11 @@ For example, [http://localhost:4502/useradmin](http://localhost:4502/useradmin)
 
 [オーサーグループの役割](#author-group-roles)の表に示したとおり、コミュニティ管理者グループのメンバーは、コミュニティサイトの作成、サイトの管理、メンバーの管理（メンバーのコミュニティの使用を禁止できる）、コンテンツのモデレートをおこなうことができます。
 
-Follow the same steps as creating and assigning a user to the role of [enablement manager](#communitysiteenablementmanagerrole), but add c `ommunity-administrators` group under the user&#39;s Groups tab.
+[イネーブルメントマネージャ](#communitysiteenablementmanagerrole)の役割にユーザーを作成して割り当てるのと同じ手順に従いますが、ユーザーの「グループ」タブにc `ommunity-administrators`グループを追加します。
 
 ### LDAP の統合 {#ldap-integration}
 
-AEM は、ユーザーの認証およびユーザーアカウントの作成で LDAP の使用をサポートします。This is detailed in [Configuring LDAP with AEM 6](../../help/sites-administering/ldap-config.md).
+AEM は、ユーザーの認証およびユーザーアカウントの作成で LDAP の使用をサポートします。これについて詳しくは、[AEM 6](../../help/sites-administering/ldap-config.md)でのLDAPの設定を参照してください。
 
 コミュニティメンバーおよびメンバーグループ固有の設定の詳細の一部を次に示します。
 
@@ -247,15 +247,15 @@ AEM は、ユーザーの認証およびユーザーアカウントの作成で 
 
       * **[!UICONTROL User auto membership]**: `community-<site name>-<uid>-members`
       * **[!UICONTROL User Path Prefix]**: `/community`
-      * **[!UICONTROL Group Path Prefix]**: `/community`
+      * **[!UICONTROL Group Path Prefix]**:  `/community`
 
 4. [外部ログインモジュール](../../help/sites-administering/ldap-config.md#the-external-login-module)
 
    * 特別な指示はありません。
 
-This results in users automatically being assigned to the community site&#39;s members group and the repository location being `/home/users/community` and `/home/groups/community`, so that they inherit the appropriate permissions to see one another&#39;s profile.
+この結果、ユーザはコミュニティサイトのメンバーグループに自動的に割り当てられ、リポジトリの場所は`/home/users/community`と`/home/groups/community`になり、互いのプロファイルを見るための適切な権限を継承します。
 
-* The `User auto membership` value should be the `rep:authorizableId` property, not the `givenName` (display name) from the profile.
+* `User auto membership`値は、プロファイルの`givenName`（表示名）ではなく、`rep:authorizableId`プロパティにする必要があります。
 
 ## AEM インスタンス間のユーザーの同期 {#synchronizing-users-among-aem-instances}
 
@@ -269,6 +269,8 @@ This results in users automatically being assigned to the community site&#39;s m
 
 グループに関しては、以下の 2 種類のトピックがあります。
 
-* **[コミュニティグループ](overview.md#communitygroups)**コミュニティグループは、コミュニティグループの作成をサポートするコミュニティサイト用に発行環境で作成できるサブコミュニティです。 コミュニティグループを作成すると、Webサイトに追加されるページ数が増え、親コミュニティサイトと同様の方法で管理されます。 For more information visit[Community Group Essentials](essentials-groups.md)for developers and[Community Group](creating-groups.md)for authors.
+* **[コミュニティ](overview.md#communitygroups)**
+グループコミュニティグループは、コミュニティグループの作成をサポートするコミュニティサイト用に発行環境で作成できるサブコミュニティです。コミュニティグループを作成すると、Webサイトに追加されるページ数が増え、親コミュニティサイトと同様の方法で管理されます。 詳しくは、開発者向けの[コミュニティグループエッセンシャル](essentials-groups.md)および作成者向けの[コミュニティグループ](creating-groups.md)を参照してください。
 
-* **[メンバーグループ](../../help/sites-administering/security.md)**メンバーグループは、メンバーが属することのできるグループで、グループコンソールを通じて管理されます。 このページに関するディスカッションの多くは、メンバーグループに費やされています。 The member groups automatically created for a community site, which are prefixed with *`Community`*, may be referred to as a community group, therefore the context of the discussion must be considered.
+* **[メンバー](../../help/sites-administering/security.md)**
+グループメンバーグループは、メンバーが属することのできるグループで、グループコンソールを通じて管理されます。このページに関するディスカッションの多くは、メンバーグループに費やされています。 コミュニティサイト用に自動的に作成されるメンバーグループは、*`Community`*&#x200B;のプレフィックスが付いている場合、コミュニティグループと呼ばれることがあるので、ディスカッションのコンテキストを考慮する必要があります。
