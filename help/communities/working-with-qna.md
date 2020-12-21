@@ -35,21 +35,21 @@ QnA（質問と回答）フォーラム機能を使用すると、コミュニ�
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
 * AEMサイトへのQnAフォーラム機能の追加
-* Configuration settings for the `QnA`component
+* `QnA`コンポーネントの構成設定
 
 ## Q&amp;A フォーラムをページに追加 {#adding-a-q-a-forum-to-a-page}
 
-作成者モードでページに `QnA` コンポーネントを追加するには、コンポーネントブラウザーを使用してQnAフォーラムが表示されるページを探し `Communities / QnA` 、その場所にドラッグします。
+作成者モードで`QnA`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して`Communities / QnA`を探し、QnAフォーラムが表示されるページ上にドラッグします。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側ライブラリが含まれる場合](qna-essentials.md#essentials-for-client-side) 、次のようにコンポー `QnA` ネントが表示されます。
+[必要なクライアント側ライブラリ](qna-essentials.md#essentials-for-client-side)が含まれる場合、`QnA`コンポーネントは次のように表示されます。
 
 ![chlimage_1-280](assets/chlimage_1-280.png)
 
 ### Q&amp;A の設定 {#configuring-qna}
 
-Select the placed `QnA` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`QnA`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![chlimage_1-281](assets/chlimage_1-281.png) ![chlimage_1-282](assets/chlimage_1-282.png)
 
@@ -69,19 +69,22 @@ Select the placed `QnA` component to access and select the `Configure` icon whic
 
 * **[!UICONTROL ファイルのアップロードを許可]**&#x200B;オンにすると、質問またはコメントに添付ファイルを付加できます。初期設定はオフです。
 
-* **[!UICONTROL 最大ファイルサイズ]**&#x200B;関連( 
-`Allow File Uploads` がチェックされている。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+* **[!UICONTROL 最大ファイル]**
+サイズ関連( 
+`Allow File Uploads` がチェックされている。このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
-* **[!UICONTROL 許可されているファイルタイプ]**&#x200B;は、 
-`Allow File Uploads` がチェックされている。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
+* **[!UICONTROL 許可されているファイル]**
+タイプ関連 
+`Allow File Uploads` がチェックされている。ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
-* **[!UICONTROL 「ファイルのアップロードを許可」が選択されている場合のみ、「添付画像ファイルの最大サイズ]**」が関連します。 アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
+* **[!UICONTROL 「ファイルのアップロードを許可」がオンの場合のみ、最大添付画像ファイル]**
+サイズ関連。アップロードされた画像ファイルの最大バイト数。 初期設定は2097152(2 Mb)です。
 
 * **[!UICONTROL フォローを許可]**&#x200B;オンにすると、フォーラム投稿のフォロー機能が追加され、新しい投稿をメンバーに[通知](notifications.md)できます。初期設定はオフです。
 
 * **[!UICONTROL ピン留めを許可]**&#x200B;オンにすると、フォーラムトピックをトピックリストの上部にピン留めできます。初期設定はオフです。
 
-* **[!UICONTROL 電子メール購読を許可]**&#x200B;オンにすると、新しい投稿があった場合にメンバーに電子メールで通知できるようになります（[購読](subscriptions.md)）。Requires `Allow Following` to be checked and [email configured](email.md). 初期設定はオフです。
+* **[!UICONTROL 電子メール購読を許可]**&#x200B;オンにすると、新しい投稿があった場合にメンバーに電子メールで通知できるようになります（[購読](subscriptions.md)）。`Allow Following`を確認し、[電子メールを設定](email.md)する必要があります。 初期設定はオフです。
 
 * **[!UICONTROL 応答を許可]**&#x200B;オンにすると、質問に投稿されたコメントへの返信を許可します。初期設定はオフです。
 
@@ -95,9 +98,9 @@ Select the placed `QnA` component to access and select the `Configure` icon whic
 
 * **[!UICONTROL おすすめコンテンツを許可]**&#x200B;オンにすると、アイデアを[おすすめコンテンツ](featured.md)として指定できます。初期設定はオフです。
 
-#### 「ユーザーモデレート」タブ {#user-moderation-tab}
+#### 「ユーザーモデレート」タブ  {#user-moderation-tab}
 
-Under the **[!UICONTROL User Moderation]** tab, specify how the posted topics (quetions) and answers (user generated content) are managed. For more information, see [Moderating User Generated Content](moderate-ugc.md).
+「**[!UICONTROL ユーザーモデレート]**」タブで、投稿されたトピック（質問）と回答（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
 * **[!UICONTROL 回答を拒否]**&#x200B;オンにすると、信頼されているメンバーモデレーターが投稿された回答を拒否して、公開 Q&amp;A フォーラムへの表示を止めることができます。初期設定はオフです。
 
@@ -119,34 +122,37 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted topics (q
 
 「**[!UICONTROL タグフィールド]**」タブでは、「**[!UICONTROL 設定]**」タブでタグ付けが許可されている場合に、適用できるタグを名前空間に従って制限します。
 
-* **[!UICONTROL 許可されている名前空間]**&#x200B;関連( 
-`Allow Tagging` が「 **設定** 」タブでチェックされている。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
+* **[!UICONTROL 許可されている]**
+NamespacesRelevant( 
+`Allow Tagging` が「 **** 設定」タブでチェックされます。適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
 * **[!UICONTROL 推奨の制限]**&#x200B;フォーラムに投稿するメンバーに表示する推奨タグの数を入力します。値 
-`-1` は、制限がないことを意味します。 初期設定は 0 です。
+`-1` は、制限がないことを意味します。初期設定は 0 です。
 
 #### 「並べ替え設定」タブ{#sort-settings-tab}
 
-Under the **[!UICONTROL Sort Settings]** tab, specify how the posted comments are sorted when displayed.
+「**[!UICONTROL 並べ替え設定]**」タブで、投稿されたコメントの表示順を指定します。
 
-* **[!UICONTROL 並べ替えの基準]**：許可されている並べ替えの選択項目をすべて選択します。 
+* **[!UICONTROL Sort]**
+ByCheckで許可されているすべての並べ替え選択項目： 
 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`」を選択します。デフォルトは `Newest, Oldest, Last Updated` です。
 
 * **[!UICONTROL デフォルトとして設定]**&#x200B;プルダウンして、オンになっている並べ替えオプションのいずれかを選択し、デフォルトとして表示されるようにします。初期設定は です。 
-`Newest`。
+`Newest`.
 
-* **[!UICONTROL Analytics Sortingのプルダウンの「Time Options」を選択し]**&#x200B;て、 
+* **[!UICONTROL Analytics Sortingの時間オプションのプ]**
+ルダウンを選択し、次のいずれかを選択します。 
 `All, Last 24 Hours, Last 7 Days, Last 30 Days`」を選択します。デフォルトは `All` です。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
 ### 回答の指定 {#identifying-answers}
 
-One answer can be marked as a correct or useful answer using the `Select Answer` button. Once a Question is marked as Answered, another answer cannot be selected until the first one has been unselected using the `Unmark Chosen Answer`button.
+1つの回答は、`Select Answer`ボタンを使用して、正しい回答または有用な回答としてマークできます。 質問が回答済みとマークされると、`Unmark Chosen Answer`ボタンを使用して最初の回答が選択されない限り、別の回答を選択できません。
 
-Once selected as a viable answer, it may be unselected using the `Unmark Chosen Answer` button.
+実行可能な回答として選択されたら、`Unmark Chosen Answer`ボタンを使用して選択を解除できます。
 
-Once an answer is selected as the viable answer, an indication that the question has been `Answered`is displayed next to the question topic on the main QnA page.
+実行可能な回答として回答が選択されると、その質問が`Answered`されたことを示すメッセージが、メインのQnAページの質問トピックの横に表示されます。
 
 ### モデレーターおよび管理者 {#moderators-and-administrators}
 
@@ -154,7 +160,7 @@ Once an answer is selected as the viable answer, an indication that the question
 
 回答を指定することもできます。
 
-### メンバー {#members}
+### メンバー  {#members}
 
 サイト訪問者がサインインすると、設定に応じて次のことができます。
 
