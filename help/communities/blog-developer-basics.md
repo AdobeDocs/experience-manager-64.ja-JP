@@ -30,11 +30,11 @@ AEM 6.1 Communitiesの時点で、ブログはコミュニティアクティビ�
 >
 >ブログ機能の基礎となるインフラストラクチャはジャーナル機能です。
 
-## クライアント側の基本事項 {#essentials-for-client-side}
+## クライアント側の基本事項  {#essentials-for-client-side}
 
 ブログ機能は 2 つの主要コンポーネントで構成されます。これらのコンポーネントは、[ブログ機能](functions.md#blog-function)を追加するか、オーサーインスタンスの編集モードでページに追加することによって使用可能になります。
 
-### ブログ {#blog}
+### ブログ  {#blog}
 
 <table> 
  <tbody>
@@ -60,7 +60,7 @@ AEM 6.1 Communitiesの時点で、ブログはコミュニティアクティビ�
   </tr>
   <tr>
    <td><strong> properties</strong></td> 
-   <td>see <a href="blog-feature.md">Blog Feature</a></td> 
+   <td><a href="blog-feature.md">ブログ機能</a>を参照</td> 
   </tr>
  </tbody>
 </table>
@@ -69,15 +69,15 @@ AEM 6.1 Communitiesの時点で、ブログはコミュニティアクティビ�
 
 | **resourceType** | social/journal/components/hbs/sidebar |
 |---|---|
-| [**インクルード可能&#x200B;**](scf.md#add-or-include-a-communities-component) | 不可 |
-| [**clientllibs **](clientlibs.md) | cq.social.hbs.journal_sidebar |
+| [**インクルード可能**](scf.md#add-or-include-a-communities-component) | 不可 |
+| [**clientlibs**](clientlibs.md) | cq.social.hbs.journal_sidebar |
 | **テンプレート** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
-| **プロパティ** | see [Blog Feature](blog-feature.md) |
+| **プロパティ** | [ブログ機能](blog-feature.md)を参照 |
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [ブログ API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/journal/client/api/package-summary.html)
 
@@ -85,11 +85,11 @@ AEM 6.1 Communitiesの時点で、ブログはコミュニティアクティビ�
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### ブログ機能 {#blog-function}
+### ブログ機能  {#blog-function}
 
-A community site structure that includes the [Bog function](functions.md#blog-function) will have configured `Blog` and `Blog Sidebar` components. The Blog function supports identifying a [privileged member user group](users.md#privileged-members-group).
+[Bog関数](functions.md#blog-function)を含むコミュニティサイト構造は、`Blog`と`Blog Sidebar`のコンポーネントを構成します。 Blog関数は、[特権を持つメンバーのユーザーグループ](users.md#privileged-members-group)の識別をサポートします。
 
-### Accessing Blog Entries (UGC) {#accessing-blog-entries-ugc}
+### ブログエントリ(UGC)へのアクセス{#accessing-blog-entries-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。\
 [ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
@@ -101,17 +101,17 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例
+* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
 
-## プライマリパブリッシャー {#primary-publisher}
+## プライマリパブリッシャー  {#primary-publisher}
 
 デプロイメントがパブリッシュファームである場合、公開予定の記事をポーリングするプライマリパブリッシャーを識別する必要があります。
 
 詳しくは、[プライマリパブリッシャー](deploy-communities.md#primary-publisher)を参照してください。
 
-## リッチメディアの許可 {#allowing-rich-media}
+## リッチメディアの許可  {#allowing-rich-media}
 
 AEM プラットフォームでは、次に説明するように、XSS 攻撃を防止する目的でその他の Web サイトからのリンクがブロックされます。
 
@@ -119,5 +119,5 @@ AEM プラットフォームでは、次に説明するように、XSS 攻撃を
 
 AEM 6.2以降、手動で行う必要があった変更は、デフォルトのAntiSamy設定ファイルに含まれます。
 
-リッチメディアは、次の `Embed Media from External Sites` アイコンを選択してブログ記事に埋め込まれます。  ![chlimage_1-471](assets/chlimage_1-471.png)
+`Embed Media from External Sites`アイコンを選択すると、ブログ記事にリッチメディアが埋め込まれます。 ![chlimage_1-471](assets/chlimage_1-471.png)
 
