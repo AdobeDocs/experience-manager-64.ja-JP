@@ -17,7 +17,7 @@ ht-degree: 79%
 ---
 
 
-# 同期スケジューラの設定 {#configuring-the-synchronization-scheduler}
+# 同期スケジューラの設定  {#configuring-the-synchronization-scheduler}
 
 デフォルトでは、同期スケジューラーは 3 分毎に実行して、LiveCycle Workbench 11 を経由してリポジトリ内で変更および更新されたすべてのアセットを同期します。同期プロセスが完了すると、フォームおよびリソースを含むアプリケーションを AEM Forms ユーザーインターフェイスで表示することができます。
 
@@ -25,7 +25,7 @@ ht-degree: 79%
 
 次の手順を実行して、同期スケジューラーの間隔を変更します。
 
-1. AEM Configuration Manager にログインします。Configuration ManagerのURLは `https://[Server]:[Port]/lc/system/console/configMgr`
+1. AEM Configuration Manager にログインします。Configuration ManagerのURLは`https://[Server]:[Port]/lc/system/console/configMgr`です
 
 1. **FormsManagerConfiguration** バンドルを探して開きます。 
 
@@ -33,7 +33,7 @@ ht-degree: 79%
 
    頻度の単位は分です。例えば、スケジューラーを 60 分毎に実行するように設定するには、60 と指定します。
 
-## アセットの同期 {#synchronizing-assets}
+## アセットの同期  {#synchronizing-assets}
 
 「**リポジトリからアセットを同期**」オプションを使用すると、アセットを手動で同期できます。次の手順を実行して、アセットを手動で同期します。
 
@@ -41,9 +41,9 @@ ht-degree: 79%
 
    ![AEM Forms ユーザーインターフェイス](assets/aem_forms_ui.png)
 
-   **図：** *AEM Formsユーザーインターフェイス*
+   **図：** *AEM Formsユーザインターフェイス*
 
-1. ツールバーの ![aem6forms_sync](assets/aem6forms_sync.png) アイコンをクリックします。 最後に設定したパスにアセットが存在しない場合は、下の図に示すダイアログボックスが表示されます。「**開始**」をクリックして同期を開始します。
+1. ツールバーの![aem6forms_sync](assets/aem6forms_sync.png)アイコンをクリックします。 最後に設定したパスにアセットが存在しない場合は、下の図に示すダイアログボックスが表示されます。「**開始**」をクリックして同期を開始します。
 
    ![同期ダイアログボックス](assets/migrate-and-syncronize.png)
 
@@ -53,11 +53,11 @@ ht-degree: 79%
 
 ワークフローデザイナー（LiveCycle Workbench）で新しいアプリケーションを作成できます。
 
-If the newly created application and a folder at /content/dam/formsanddocuments has identical name, an error &quot;*An asset with the same name as this application already exists at root level.*」がログに記録されます。
+新しく作成したアプリケーションと/content/dam/formsanddocumentsのフォルダーが同じ名前を持つ場合、エラー「*このアプリケーションと同じ名前のアセットが既にルートレベルに存在します。*」がログに記録されます。
 
 競合を解決するには、アプリケーションの名前を変更し、アセットを手動で同期します。
 
 ![アセット同期の競合ダイアログボックス](assets/sync-conflict.png)
 
-**図：** *アセット同期の競合ダイアログボックス*
+**図：アセット同期の** *競合ダイアログボックス*
 
