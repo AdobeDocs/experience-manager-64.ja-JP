@@ -18,7 +18,7 @@ ht-degree: 35%
 ---
 
 
-# SRP - コミュニティコンテンツストレージ {#srp-community-content-storage}
+# SRP - コミュニティコンテンツストレージ  {#srp-community-content-storage}
 
 ## 概要 {#introduction}
 
@@ -26,17 +26,17 @@ AEM Communities6.1以降、ユーザ生成コンテンツ(UGC)は、ストレー
 
 以前のリリースとは異なり、AEM インスタンス間の UGC のリバース／フォワードレプリケーションはありません。代わりに、JSRPを除き、UGCは作成、読み取り、更新、削除(CRUD)操作の作成、削除(JSRP)操作に直接アクセスできます。
 
-Following are the [characteristics of each SRP option](#characteristics-of-srp-options), which is crucial information for the decision process when choosing the appropriate SRP and [underlying deployment](topologies.md).
+各SRPオプション](#characteristics-of-srp-options)の[特性を以下に示します。これは、適切なSRPと[基盤となるデプロイメント](topologies.md)を選択する際の決定プロセスにとって重要な情報です。
 
-For details regarding the use of SRP for UGC, see [Storage Resource Provider Overview](srp.md).
+UGCでのSRPの使用に関する詳細は、[ストレージリソースプロバイダーの概要](srp.md)を参照してください。
 
 >[!NOTE]
 >
->SRP はコミュニティコンテンツにのみ適用されます。It does not affect where site content is stored ([node store](../../help/sites-deploying/data-store-config.md)), and does not affect the secure handling of user registration, user profiles and user groups between AEM instances (see also [Managing User Data](#managing-user-data)).
+>SRP はコミュニティコンテンツにのみ適用されます。サイトコンテンツの格納場所([node store](../../help/sites-deploying/data-store-config.md))には影響せず、AEMインスタンス間のユーザー登録、ユーザープロファイル、ユーザーグループの安全な処理には影響しません（「[ユーザーデータの管理](#managing-user-data)」も参照）。
 
 >[!CAUTION]
 >
->As of AEM 6.1, [UGC is never replicated](#ugc-never-replicated).
+>AEM 6.1以降、[UGCは](#ugc-never-replicated)複製されません。
 >
 >デプロイメントに共通ストアが含まれていない場合（デフォルトの [JSRP](topologies.md#jsrp) トポロジなど）、UGC は、それが入力された AEM パブリッシュインスタンスまたはオーサーインスタンスでのみ表示可能になります。トポロジにパブリッシュクラスタが含まれる場合にのみ、UGCは任意のパブリッシュインスタンスで表示されます。
 
@@ -109,11 +109,11 @@ AEM Communities 6.1 以降では、前述のように、UGC 用の共有スト�
 
 サイトコンテンツはレプリケートされますが、UGC はレプリケートされません。
 
-### ユーザーデータの管理 {#managing-user-data}
+### ユーザーデータの管理  {#managing-user-data}
 
-Also of interest to Communites are [*users *,* user groups *, and* user profiles *](users.md). This user-related data, when created and updated in the publish environment, needs to be made available to other publish instances when the topology is a[publish farm](../../help/sites-deploying/recommended-deploys.md#tarmk-farm).
+また、コミュニティに関心を持つのは、[*ユーザー*、*ユーザーグループ*、*ユーザープロファイル*](users.md)&#x200B;です。 このユーザ関連のデータは、パブリッシュ環境で作成および更新された場合、トポロジが[パブリッシュファーム](../../help/sites-deploying/recommended-deploys.md#tarmk-farm)の場合、他のパブリッシュインスタンスで使用可能にする必要があります。
 
-AEM Communities 6.1 以降、ユーザー関連データは、レプリケーションではなく Sling ディストリビューションを使用して同期されます。For more information visit [User Synchronization](sync.md).
+AEM Communities 6.1 以降、ユーザー関連データは、レプリケーションではなく Sling ディストリビューションを使用して同期されます。詳しくは、[ユーザー同期](sync.md)を参照してください。
 
 ### AEM Communities 6.2 へのアップグレード {#upgrading-to-aem-communities}
 
