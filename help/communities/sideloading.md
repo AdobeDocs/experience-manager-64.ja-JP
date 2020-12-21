@@ -34,7 +34,7 @@ SCF コンポーネントを動的に追加する手順は、次のとおりで�
 
 1. [DOM追加のコンポーネント](#dynamically-add-component-to-dom)
 
-1. [次の2つの方法のいずれかを使用して](#sideload-by-invoking-scf) 、コンポーネントをサイドロードします。
+1. [次の2つの方法のいずれかを使用して、](#sideload-by-invoking-scf) コンポーネントをサイドロードします。
 
 * [動的な組み込み](#dynamic-inclusion)
    * 動的に追加されたすべてのコンポーネントをブーストラップ
@@ -45,7 +45,7 @@ SCF コンポーネントを動的に追加する手順は、次のとおりで�
 >
 >[存在しないリソース](scf.md#add-or-include-a-communities-component)のサイドローディングはサポートされていません。
 
-## DOM に対するコンポーネントの動的な追加 {#dynamically-add-component-to-dom}
+## DOM に対するコンポーネントの動的な追加  {#dynamically-add-component-to-dom}
 
 動的なインクルードの場合も動的なロードの場合も、最初にコンポーネントを DOM に追加する必要があります。
 
@@ -53,9 +53,11 @@ SCF コンポーネントを追加する際に最もよく使用されるタグ�
 
 どのタグを使用する場合も、最低限、要素が通常の SCF ルート要素パターンに準拠している必要があります。そのためには、次の 2 つの属性を含めます。
 
-* **data-component-id**&#x200B;追加したコンポーネントへの有効パス
+* **data-component-**
+id追加したコンポーネントへの有効パス
 
-* **data-scf-component**&#x200B;コンポーネントのresourceType
+* **data-scf-**
+componentコンポーネントのresourceType
 
 以下に示すのは、追加されるコメントコンポーネントの例です。
 
@@ -78,7 +80,7 @@ SCF コンポーネントを追加する際に最もよく使用されるタグ�
 
 $(document).trigger(SCF.events.BOOTSTRAP_REQUEST);
 
-### 動的なロード {#dynamic-loading}
+### 動的なロード  {#dynamic-loading}
 
 動的なロードでは、ロードする SCF コンポーネントを制御できます。
 
