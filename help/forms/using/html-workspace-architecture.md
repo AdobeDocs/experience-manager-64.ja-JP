@@ -36,4 +36,4 @@ AEM Formsのワークスペースは、モジュラー式のJavaScript™コン�
 AEM Forms Workspace のために配信されるパッケージを以下に示しています。
 
 * `adobe-lc-workspace-pkg-<version>.zip`：これは CRX パッケージです。すなわち、Package Manager を使用して CRX 内にデプロイできます。
-* `adobe-lc-workspace-<version>-src.zip`: これは、デプロイパッケージ（Ship、Debug、およびDevパッケージ）を作成するためのAEM Formsのワークスペースとスクリプトの完全なコードを含むアーカイブです。
+* `adobe-lc-workspace-<version>-src.zip`:これは、デプロイパッケージ（Ship、Debug、およびDevパッケージ）を作成するためのAEM Formsのワークスペースとスクリプトの完全なコードを含むアーカイブです。
