@@ -36,7 +36,7 @@ ht-degree: 74%
 
 [ソーシャルグラフ](essentials-socialgraph.md)とは、メンバー間のフォロー関係を表したものです。
 
-## クライアント側の基本事項 {#essentials-for-client-side}
+## クライアント側の基本事項  {#essentials-for-client-side}
 
 <table> 
  <tbody>
@@ -62,14 +62,14 @@ ht-degree: 74%
   </tr>
   <tr>
    <td><strong> properties</strong></td> 
-   <td>See <a href="activities.md">Activity Streams Feature</a></td> 
+   <td><a href="activities.md">アクティビティストリーム機能</a>を参照</td> 
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [アクティビティストリーム API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
 
@@ -77,6 +77,6 @@ ht-degree: 74%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### アクティビティストリーム機能 {#activity-stream-function}
+### アクティビティストリーム機能  {#activity-stream-function}
 
-A community site structure that includes the [Activity Stream function](functions.md#activity-stream-function), includes a configured `activity streams` component.
+[アクティビティストリーム関数](functions.md#activity-stream-function)を含むコミュニティサイト構造は、構成された`activity streams`コンポーネントを含みます。
