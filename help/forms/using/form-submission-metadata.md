@@ -16,7 +16,7 @@ ht-degree: 88%
 ---
 
 
-# ユーザーデータからフォーム送信メタデータへの情報の追加 {#adding-information-from-user-data-to-form-submission-metadata}
+# ユーザーデータからフォーム送信メタデータへの情報の追加  {#adding-information-from-user-data-to-form-submission-metadata}
 
 フォームの要素に入力された値を使用して、ドラフトまたはフォーム送信のメタデータフィールドを計算できます。メタデータを使用すると、ユーザーデータに基づいてコンテンツをフィルターできます。例えば、ユーザーがフォームの名前フィールドに John Doe と入力するとします。この情報を使用してメタデータを計算することにより、この送信をイニシャル JD 下に分類できます。
 
@@ -26,7 +26,7 @@ ht-degree: 88%
 
 電子メール ID と電話番号を取得するフォームの例を考えてみましょう。作成者は、ユーザーがフォームに匿名でアクセスしてからフォームを破棄した場合、電子メール ID と電話番号が自動保存されるようにフォームを設定できます。このフォームは自動保存され、電話番号と電子メール ID は、ドラフトのメタデータノードに保存されます。この設定のユースケースとしては、リード管理ダッシュボードが挙げられます。
 
-## メタデータへのフォーム要素の追加 {#adding-form-elements-to-metadata}
+## メタデータへのフォーム要素の追加  {#adding-form-elements-to-metadata}
 
 次の手順を実行して、メタデータに要素を追加します。
 
@@ -34,23 +34,23 @@ ht-degree: 88%
 
    フォームを編集モードで開くには、フォームマネージャーでフォームを選択して、「**開く**」をタップします。
 
-1. In the edit mode, select a component, tap ![field-level](assets/field-level.png) > **Adaptive Form Container**, and then tap ![cmppr](assets/cmppr.png).
+1. 編集モードで、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)/**アダプティブフォームコンテナ**&#x200B;をタップし、![cmppr](assets/cmppr.png)をタップします。
 1. サイドバーで、「**メタデータ**」をクリックします。
 1. 「メタデータ」セクションで、「**追加**」をクリックします。
 1. 「メタデータ」タブの「値」フィールドを使用して、スクリプトを追加します。追加したスクリプトは、フォームの要素からデータを収集し、メタデータに追加された値を計算します。
 
-   For example, **true** is logged in the metadata if age entered is greater than 21, and **false** is logged if it is less than 21. 「メタデータ」タブで次のスクリプトを入力します。
+   例えば、入力された年齢が21才以上の場合は&#x200B;**true**&#x200B;はメタデータに記録され、21才未満の場合は&#x200B;**false**&#x200B;はログに記録されます。 「メタデータ」タブで次のスクリプトを入力します。
 
    `(agebox.value >= 21) ? true : false`
 
    ![メタデータスクリプト](assets/add-element-metadata.png)
-   **図：** *「メタデータ」タブで入力されたスクリプト*
+   **図：「メタデータ」タブで入力された** *スクリプト*
 
 1. 「**OK**」をクリックします。
 
 メタデータフィールドとして選択された要素にユーザーがデータを入力した後、計算された情報はメタデータに記録されます。メタデータは、メタデータを保存するように設定したリポジトリで表示できます。
 
-## Seeing updated form submission metadata: {#seeing-updated-form-nbsp-submission-metadata}
+## 更新されたフォーム送信メタデータの表示：{#seeing-updated-form-nbsp-submission-metadata}
 
 上記の例では、メタデータは CRX リポジトリに保存されます。メタデータは次のように表示されます。
 
