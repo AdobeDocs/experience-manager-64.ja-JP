@@ -30,15 +30,15 @@ Tallyは抽象クラスで、メンバーが特定の製品やサービスをど
 
 [評価](rating-basics.md)は、肯定的な意見から否定的な意見まで幅広い意見を星制度で表す集計実装です。
 
-As of AEM 6.1, the *poll* component is no longer available.
+AEM 6.1以降、*poll*&#x200B;コンポーネントは使用できなくなりました。
 
-[レビュー](reviews-basics.md) は、 [コメントと](essentials-comments.md) 評価を組み合わせたSCFコンポーネントです [](rating-basics.md)。
+[コメン](reviews-basics.md) トと [](essentials-comments.md) 評価のハイブリッドなSCFコンポーネントの [レビュー](rating-basics.md)。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項 {#essentials-for-server-side}
+## サーバー側の基本事項  {#essentials-for-server-side}
 
 * [集計 API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
@@ -46,7 +46,7 @@ As of AEM 6.1, the *poll* component is no longer available.
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿された集計（UGC）へのアクセス {#accessing-posted-tallies-ugc}
+### 投稿された集計（UGC）へのアクセス  {#accessing-posted-tallies-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。\
 [ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
@@ -58,7 +58,7 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](srp-and-ugc.md) - SRPユーティリティのメソッドと例
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) — コーディングガイドライン
+* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例
+* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
 
