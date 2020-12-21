@@ -17,11 +17,11 @@ ht-degree: 67%
 ---
 
 
-# HTML5 フォーム用のフォームテンプレートのデザイン {#designing-form-templates-for-html-forms}
+# HTML5 フォーム用のフォームテンプレートのデザイン  {#designing-form-templates-for-html-forms}
 
 AEM の HTML5 フォームコンポーネントは、HTML5 形式への XFA フォームテンプレートのレンダリングを提供します。フォームデザイナーは [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) を使用してフォームテンプレートをデザインし、HTML5 レンダリングの機能を使用することができます。これらのフォームテンプレートはアセットとともに、AEM リポジトリやファイルシステムに配置するか、http で公開することができます。ただし、Formsマネージャーを使用してフォームを管理する場合は、テンプレートとアセットをAEMリポジトリに置く必要があります。
 
-HTML5 フォームの動作は、その大部分が PDF フォームの動作に一致していますが、両方の形式には他方の形式で適用されない機能がいくつかあります。例えば、Adobe ReaderのPDFフォームにバーコードが適用される方法は、Mobileフォームとは異なります。また、フォームの電子署名の方法も、形式によって異なります。 For more information on such variations, see [Feature differentiation between HTML5 forms and PDF Forms](/help/forms/using/feature-differentiation-html5-forms-pdf-forms.md).
+HTML5 フォームの動作は、その大部分が PDF フォームの動作に一致していますが、両方の形式には他方の形式で適用されない機能がいくつかあります。例えば、Adobe ReaderのPDFフォームにバーコードが適用される方法は、Mobileフォームとは異なります。また、フォームの電子署名の方法も、形式によって異なります。 そのような違いについて詳しくは、[HTML5フォームとPDF formsの機能の違い](/help/forms/using/feature-differentiation-html5-forms-pdf-forms.md)を参照してください。
 
 一般的な XFA 機能の場合、両方の形式で機能するフォームをデザインするために、次のベストプラクティスとガイドラインを参照してください。
 
@@ -33,6 +33,6 @@ HTML5 フォームの動作は、その大部分が PDF フォームの動作に
 
 ### 手書きの署名 {#scribble-signature}
 
-HTML5 フォームの主な対象はタッチデバイスです。そのため、AEM Forms Designer に新しい手書き署名コントロールが追加されました。手書き署名コントロールをクリックまたはドラッグ&amp;ドロップして、フォームテンプレートに設定できます。 HTML5レンダリングでは手書きフィールドとしてレンダリングされ、タッチデバイスで手書き署名を行うのに使用できます。 デスクトップマシンでは、それはマウスコントロールの使用により手書きフィールドとして使用できます。For more information on how to use this feature, see [XFA Scribble Field](/help/forms/using/scribble-signature.md).
+HTML5 フォームの主な対象はタッチデバイスです。そのため、AEM Forms Designer に新しい手書き署名コントロールが追加されました。手書き署名コントロールをクリックまたはドラッグ&amp;ドロップして、フォームテンプレートに設定できます。 HTML5レンダリングでは手書きフィールドとしてレンダリングされ、タッチデバイスで手書き署名を行うのに使用できます。 デスクトップマシンでは、それはマウスコントロールの使用により手書きフィールドとして使用できます。この機能の使用方法について詳しくは、[XFA手書きフィールド](/help/forms/using/scribble-signature.md)を参照してください。
 
 ![4](assets/4.png)
