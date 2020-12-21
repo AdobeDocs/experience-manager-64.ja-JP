@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.4累積Fix Pack固有のリリースノ�
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: e10d53a3912fb21962f1015550bd3a4a118d8834
+source-git-commit: 1d3476c3fdc8cf817e4784f36b4e0858fdc3b1ee
 workflow-type: tm+mt
-source-wordcount: '4156'
+source-wordcount: '4217'
 ht-degree: 13%
 
 ---
@@ -158,6 +158,9 @@ Adobe Experience Manager6.4.8.2には、次の問題の修正が含まれてい�
 * ページの[!DNL Live Copy]を中断すると、エディタモードのように継承が中断されます。 ただし、Pageプロパティでは、継承を表すアイコンは誤って継承が存在し、壊れていないことを示します(NPR-34096)。
 * テンプレートを編集ページでの許可されたコンポーネントの表示に関する問題が発生します。(CQ-4297295)
 * ChromeおよびFirefoxをアップグレードした後、ポップアップメニューが期待どおりに機能しない。 ページのプロパティを読み込むと、パネルにデータが含まれている場合はパネルが表示されません(CQ-4292995)。
+* [!DNL Experience Manager Sites]コンポーネントの複数のクロスサイトスクリプティングインスタンス(NPR-33926)。
+* ユーザ入力は、情報をクライアントに送信する際に、様々なコンポーネントに対して適切にエンコードされません(NPR-33696)。
+* `childrenlist.html`で終わるURLは、404応答ではなくHTMLページを表示します。 このようなURLは、クロスサイトスクリプティング(NPR-33441)に対して脆弱です。
 
 #### Assets {#assets-6482}
 
@@ -234,6 +237,8 @@ Adobe Experience Manager6.4.8.2には、次の問題の修正が含まれてい�
 * **[!UICONTROL RESTエンドポイントへの送信]**&#x200B;送信アクションは、アダプティブフォーム(NPR-34513)では動作しません。
 
 * アクセシビリティ：必須フィールドの添付ファイルをアップロードせずにアダプティブフォームを送信しようとすると、フォーカスが自動的に添付フィールドに移動することはありません(NPR-34511)。
+
+* ユーザー入力は、クライアントに情報を送信する際に、[!DNL Forms]コンポーネントに対して適切にエンコードされません(NPR-33611)。
 
 **ワークフロー**
 
@@ -431,9 +436,9 @@ B. Package Managerの[HTTP APIを使用します。](https://docs.adobe.com/cont
 >[!NOTE]
 >パッケージが正常にインストールされると、**&quot;Content Package AEM-6.4-Service-Pack-8が正常にインストールされたなど、コンテンツパッケージが正常にインストールされたことを示す情報メッセージが表示されます。&quot;**
 
-### ダイナミックメディアビューア(5.10.1)の更新{#update-dynamic-media-viewers}
+### Dynamic Mediaビューアの更新(5.10.1) {#update-dynamic-media-viewers}
 
-AEM 6.4.8.3には、画像プリセットページの重複名のチェックを有効にする、新しいバージョンのダイナミックメディアビューア(5.10.1)が含まれています。 ダイナミックメディアのお客様には、次のコマンドを実行して、初期設定のビューアプリセットを最新の状態にすることをお勧めします。
+AEM 6.4.8.3には、新しいバージョンのDynamic Mediaビューア(5.10.1)が含まれています。このビューアを使用すると、画像プリセットページで重複名を確認できます。 Dynamic Mediaのお客様には、次のコマンドを実行して、初期設定のビューアプリセットを最新の状態にするようお勧めします。
 
 `curl -u admin:admin http://localhost:4502/libs/settings/dam/dm/presets/viewer.pushviewerpresets`
 
