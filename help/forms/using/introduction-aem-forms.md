@@ -17,11 +17,11 @@ ht-degree: 99%
 ---
 
 
-# AEM Forms の概要 {#introduction-to-aem-forms}
+# AEM Forms の概要  {#introduction-to-aem-forms}
 
 AEM Forms における新機能や改良点に関しては、「[AEM Forms における新機能](/help/forms/using/whats-new.md)」を参照してください。
 
-## AEM Forms について {#about-aem-forms}
+## AEM Forms について  {#about-aem-forms}
 
 Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作成、管理、公開、および更新に特化した、使いやすいソリューションです。また、バックエンドプロセス、ビジネスルール、およびデータとの統合も実現されています。
 
@@ -47,7 +47,7 @@ AEM Forms は、アダプティブフォームだけでなく、XFA フォーム
 * Adobe Document Cloud eSign サービスや Scribble との統合により、機密情報を含むドキュメントへの電子署名に対応
 * 自動化されたフォーム公開機能と、パーソナライズされたコミュニケーションを複数のチャネルを通じてタイムリーに届ける能力
 
-## AEM フォームの種類 {#aem-form-types}
+## AEM フォームの種類  {#aem-form-types}
 
 AEM Forms では、新規および既存のフォームを拡張することで、
 
