@@ -22,25 +22,25 @@ ht-degree: 39%
 
 ## 概要 {#introduction}
 
-The `Community Activity List` component provides the ability to add trending information regarding posts and views by members as well as posts and views of content.
+`Community Activity List`コンポーネントは、メンバー別の投稿および表示に関するトレンド情報と、コンテンツの投稿および表示を追加する機能を提供します。
 
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
-* Adding the `Community Activity List` component to a [community site](overview.md#community-sites)
+* `Community Activity List`コンポーネントを[コミュニティサイト](overview.md#community-sites)に追加する
 
-* Configuration settings for the `Community Activity List` component
+* `Community Activity List`コンポーネントの構成設定
 
 ## 要件 {#requirement}
 
-Data for the `Community Activity List` is only available when Adobe Analytics is licensed and configured for the community site.
+`Community Activity List`のデータは、Adobe Analyticsがコミュニティサイトに対してライセンスを取得し、設定されている場合にのみ利用できます。
 
 [コミュニティ機能のための Analytics の設定](analytics.md)を参照してください。
 
-## コミュニティのアクティビティリストをページに追加 {#adding-a-community-activity-list-to-a-page}
+## コミュニティのアクティビティリストをページに追加  {#adding-a-community-activity-list-to-a-page}
 
-作成者モードでページに `Community Activity List` コンポーネントを追加するには、コンポーネントを見つけ `Communities / Community Activity List` てページ上の位置にドラッグします。
+作成者モードで`Community Activity List`コンポーネントをページに追加するには、コンポーネント`Communities / Community Activity List`を見つけてページ上の位置にドラッグします。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
 コミュニティサイトのページに初めて配置されたとき、コンポーネントは次のように表示されます。
 
@@ -48,7 +48,7 @@ For necessary information, visit [Communities Components Basics](basics.md).
 
 ## コミュニティのアクティビティリストの設定  {#configuring-community-activity-list}
 
-Select the placed `Community Activity List` component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Community Activity List`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![chlimage_1-228](assets/chlimage_1-228.png)
 
@@ -68,7 +68,7 @@ Select the placed `Community Activity List` component to access and select the `
 
 * **[!UICONTROL 表示タイトル]**
 
-   データの上に表示する説明的なタイトル（例：） `Trending Content`。
+   データの上に表示する説明的なタイトル（`Trending Content`など）。
 
    初期設定では、タイトルはありません。
 
@@ -108,7 +108,7 @@ Select the placed `Community Activity List` component to access and select the `
 
 * **[!UICONTROL メンバー数の集計]**
 
-   オフにする（オフにする）と、最上位レベルの投稿のみがカウントされます。 For example, if the context is the root page (the default), then an `Activity Type`of `Posts`will never show any activity as there is no ability to post content to the root page. オンにすると、すべての下位のページがカウントに含まれます。
+   オフにする（オフにする）と、最上位レベルの投稿のみがカウントされます。 例えば、コンテキストがルートページ（デフォルト）の場合、`Activity Type`/`Posts`は、ルートページにコンテンツを投稿できないので、アクティビティを表示しません。 オンにすると、すべての下位のページがカウントに含まれます。
 
    初期設定はオンです。
 
@@ -116,10 +116,10 @@ Select the placed `Community Activity List` component to access and select the `
 
 **上位の訪問者**&#x200B;の設定：タイプ = メンバー、アクティビティタイプ = ビュー
 
-**上位の寄稿者** : タイプ=メンバー、アクティビティタイプ=投稿
+**Top** Contributorsconfig:タイプ=メンバー、アクティビティタイプ=投稿
 
-**最上位のコンテンツ** : Type = Content、アクティビティタイプ=表示、
+**Top** Contentconfig:Type = Content、アクティビティタイプ=表示、
 
-**トレンドコンテンツ** の設定： タイプ=コンテンツ、アクティビティタイプ=投稿
+**トレンド** の内容：タイプ=コンテンツ、アクティビティタイプ=投稿
 
 ![chlimage_1-230](assets/chlimage_1-230.png)
