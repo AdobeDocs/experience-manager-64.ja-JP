@@ -17,7 +17,7 @@ ht-degree: 68%
 ---
 
 
-# フォームポータルコンポーネントのテンプレートをカスタマイズする {#customizing-templates-for-forms-portal-components}
+# フォームポータルコンポーネントのテンプレートをカスタマイズする  {#customizing-templates-for-forms-portal-components}
 
 ## 前提条件 {#prerequisites}
 
@@ -33,7 +33,7 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
 次のステップを実行して、様々なフォームポータルコンポーネントのカスタムテンプレートを作成します。
 
-## カスタムテンプレートの作成 {#creating-a-nbsp-custom-template}
+## カスタムテンプレートの作成  {#creating-a-nbsp-custom-template}
 
 1. */apps *の下にsling:Folderノードを作成
 
@@ -48,13 +48,13 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
    レイアウトテンプレートを選択する際に表示したいタイトルを追加します。
 
-   *注意： タイトルは、作成したsling:Folderのノード名とは異なる場合があります。 *
+   *注意：タイトルは、作成したsling:Folderのノード名とは異なる場合があります。 *
    *次の画像は、Search &amp; Listerコンポーネントの構成を示します。* ![sling:Folderの作成](assets/1-3.png)
 
 1. このフォルダー内に template.html ファイルを作成して、カスタムテンプレートとして使用します。
 1. 以下のようにカスタムテンプレートを作成して、カスタムメタデータを使用します。
 
-## 作業の例 {#working-example}
+## 作業の例  {#working-example}
 
 以下は、フォームポータルが、Search &amp; Lister コンポーネントの Geometrixx Gov カードのレイアウトを取得したカスタムテンプレートの実装例です。
 
@@ -76,19 +76,19 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 </div>
 ```
 
-## カスタムテンプレートの技術仕様 {#technical-specifications-for-custom-templates}
+## カスタムテンプレートの技術仕様  {#technical-specifications-for-custom-templates}
 
 すべてのFormsポータルコンポーネントのカスタムテンプレートには、繰り返し可能なエントリと繰り返し不可能なエントリが含まれています。 繰り返し可能なエントリは、リスト表示の基本エンティティです。Search &amp; Lister、ドラフト&amp;提出および Link コンポーネントなどが繰り返し可能なエントリの例です。
 
 フォームポータルは、プレースホルダに構文を提供してカスタム /OOTB メタデータを表示します。プレースホルダは、フォーム、ドラフトまたは提出の結果を表示した後に追加されます。
 
-To include a repeatable entry, configure the value of the attribute **data-repeatable** to **true**.
+繰り返し可能なエントリを含めるには、**data-repeatable**&#x200B;属性の値を&#x200B;**true**&#x200B;に設定します。
 
-*説明した例では、2つのDiv要素がカスタムテンプレートの一番上に存在します。 最初に、&quot;__FP_boxes-container&quot; CSSクラスで、リストされているフォームのコンテナエレメントとして機能します。2番目に、&quot;__FP_boxes&quot; CSSクラスで基本エンティティのテンプレート、この場合フォームになります。The **data-repeatable** attribute present in the Div element has the value **true**.
+*説明した例では、2つのDiv要素がカスタムテンプレートの一番上に存在します。 最初に、&quot;__FP_boxes-container&quot; CSSクラスで、リストされているフォームのコンテナエレメントとして機能します。2番目に、&quot;__FP_boxes&quot; CSSクラスで基本エンティティのテンプレート、この場合フォームになります。Div要素に存在する&#x200B;**data-repeatable**&#x200B;属性の値は&#x200B;**true**&#x200B;です。
 
-それぞれのプレースホルダーには 1 つずつ OOTB メタデータセットがあります.To display custom metadata at a particular place on the form, add the **$metadata_prop property** at the place.
+それぞれのプレースホルダーには 1 つずつ OOTB メタデータセットがあります.フォーム上の特定の場所にカスタムメタデータを表示するには、その場所に&#x200B;**$metadata_propプロパティ**&#x200B;を追加します。
 
-*この例では、メタデータプロパティは複数のインスタンスで使用されています。For example, it is used in **description**,**name**,**formUrl**,**htmlStyle**,**pdfUrl**,**pdfStyle**, and **path**in the prescribed manner.*
+*この例では、メタデータプロパティは複数のインスタンスで使用されています。例えば、**説明**、**名前**、**formUrl**、**htmlStyle**、**pdfUrl**、**pdfStyle**、などで使用されます。a12/>所定の経路&#x200B;*****
 
 ## デフォルトのボックスメタデータ {#out-of-the-box-metadata}
 
@@ -99,18 +99,18 @@ To include a repeatable entry, configure the value of the attribute **data-repea
 * **タイトル：**&#x200B;フォームのタイトル
 * **名前**：フォーム名（多くの場合、タイトルと同じです）
 * **説明**：フォームの説明
-* **formUrl**: フォームをHTMLとしてレンダリングするURL
-* **pdfUrl**: フォームをPDFとしてレンダリングするURL
-* **アセットタイプ**：アセットの種類Valid values include **Form**, **PDF Form**, **Print Form**, and **Adaptive Form**
-* **htmlStyle**&amp; **pdfStyle**：HTML の表示スタイルと PDF アイコンはそれぞれレンダリングに使用されています。有効な値は、「**__FP_display_none**」または **空白です。**
+* **formUrl**:フォームをHTMLとしてレンダリングするURL
+* **pdfUrl**:フォームをPDFとしてレンダリングするURL
+* **アセットタイプ**：アセットの種類有効な値は、**フォーム**、**PDFフォーム**、**印刷フォーム**、**アダプティブフォーム**&#x200B;です
+* **htmlStyle**&amp; **pdfStyle**：HTML の表示スタイルと PDF アイコンはそれぞれレンダリングに使用されています。有効な値は、&quot;**__FP_display_none**&quot;または&#x200B;**blank**&#x200B;です
 
-   *注意： カスタムスタイルシートで__FP_display_noneクラスを忘れずに使用してください*
+   *注意：カスタムスタイルシートで__FP_display_noneクラスを忘れずに使用してください*
 
-* **downloadUrl**: アセットをダウンロードするURL。
+* **downloadUrl**:アセットをダウンロードするURL。
 
 ローカリゼーション、ソート、ユーザーインターフェイス上での設定プロパティ使用のサポート（Search &amp; Lister のみ）:
 
-1. **ローカライゼーションサポート**: スタティックテキストをローカライズするには、属性 **${localize-***YOUR_TEXT***}を使用し** 、ローカライズされた値が存在しない場合は、値を使用可能にします。
+1. **ローカライゼーションサポート**:スタティックテキストをローカライズするには、属性 **${localize-***YOUR_TEXT***}** を使用し、ローカライズされた値が存在しない場合は、値を使用可能にします。
 
    *説明した例では、属性 ${localize-Apply} と ${localize-Download} は、「適用」と「ダウンロード」のテキストをローカライズするのに使用します。*
 
@@ -118,12 +118,12 @@ To include a repeatable entry, configure the value of the attribute **data-repea
 
    例えば、グリッド表示の「タイトル」ヘッダーでは、「data-sortKey」ヘッダーの値が「タイトル」 です。見出しをクリックして、特定の列の値を並べ替えます。
 
-1. **設定プロパティの使用**：Search &amp; Listerコンポーネントには、ユーザーインターフェイスに使える設定がいくつかあります。For example, to display HTML ToolTip text saved through the edit dialog, use the **${config-htmlLinkText} attribute.**&#x200B;同様に、PDFツールヒントテキストにも、**${config-pdfLinkText}属性を使用します** 。
+1. **設定プロパティの使用**：Search &amp; Listerコンポーネントには、ユーザーインターフェイスに使える設定がいくつかあります。例えば、編集ダイアログを通して保存されたHTMLツールヒントテキストを表示するには、**${config-htmlLinkText}属性を使用します。**&#x200B;同様に、PDFのツールヒントテキストにも、**${config-pdfLinkText}** 属性を使用します。
 
 ### リンクコンポーネント {#link-component}
 
 * **タイトル：**&#x200B;フォームのタイトル
-* **formUrl**: フォームをHTMLとしてレンダリングするURL
+* **formUrl**:フォームをHTMLとしてレンダリングするURL
 * **ターゲット**：リンクのターゲット属性有効な値は、“_blank” および “_self”。
 * **linkText**：リンクキャプション
 
@@ -145,30 +145,30 @@ To include a repeatable entry, configure the value of the attribute **data-repea
 
 *注意：*
 
-1. ドラフト&amp;送信コンポーネントの下のドラフトセクションにある削除のオプションについては、CCS クラスを &quot;__FP_deleteDraft&quot; と名付けます。In addition, include the attribute &quot;draftID&quot; with the value **${draftID}**, which is the draft id of corresponding draft.
+1. ドラフト&amp;送信コンポーネントの下のドラフトセクションにある削除のオプションについては、CCS クラスを &quot;__FP_deleteDraft&quot; と名付けます。さらに、「draftID」という属性を値&#x200B;**${draftID}**&#x200B;と共に含めます。これは、対応するドラフトのドラフトIDです。
 
-1. While creating links to open drafts and submissions, you can specify **$path.html** as the value of the **href** attribute for the anchor tag.
+1. ドラフトと送信を開くためのリンクを作成する際に、アンカータグの&#x200B;**href**&#x200B;属性の値として&#x200B;**$path.html**&#x200B;を指定できます。
 
 ![ドラフトと送信ノード](assets/raw-image-with-index.png)
 
 **A**. コンテナ素子
 
-**B.** 固定階層を持つ「パス」メタデータ。各フォームに保存されたサムネールを取得します。
+**B.**  「パス」メタデータ（固定階層）を使用して、各フォームに保存されたサムネールを取得します。
 
 **C.** Data-repeatable属性を各フォームのテンプレートセクションに使用
 
-**D.** &quot;Apply&quot;文字列をローカライズするには
+**D. &quot;Apply&quot;文字列** をローカライズするには
 
-**E.** pdfLinkText設定プロパティの使用
+**E. pdfLinkText設定プロパティ** の使用
 
-**F.** &quot;pdfUrl&quot;メタデータの使用
+**F. 「pdfUrl」メタデータ** の使用
 
 ## ヒント、テクニックおよび既知の問題 {#tips-tricks-and-known-issues}
 
 1. カスタムテンプレートでは一重引用符（‘）を使用しないでください。
-1. For custom metadata, store this property on the **jcr:content/metadata** node only. 他の場所に保存すると、Formsポータルはメタデータを表示できません。
+1. カスタムメタデータの場合、このプロパティは&#x200B;**jcr:content/metadata**&#x200B;ノードにのみ保存します。 他の場所に保存すると、Formsポータルはメタデータを表示できません。
 1. すべてのカスタムメタデータまたは既存のメタデータの名前にコロン（:）が含まれていないことを確認してください。含まれている場合、ユーザーインターフェイスに表示することができません。
-1. **data-repeatable** は、 **Link** コンポーネントに対して何の意味も持ちません。 アドビシステムズ社は、お客様がこのプロパティのリンクコンポーネントのテンプレートにおける使用を避けることを推奨します。
+1. **data-** repeatableは、 **** Linkコンポーネントには何の意味も持ちません。アドビシステムズ社は、お客様がこのプロパティのリンクコンポーネントのテンプレートにおける使用を避けることを推奨します。
 
 ## 関連記事
 
