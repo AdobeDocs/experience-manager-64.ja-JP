@@ -43,7 +43,7 @@ ht-degree: 83%
 
 * AEM オーサーインスタンスをセットアップします。
 * [AEM Forms アドオン](/help/forms/using/installing-configuring-aem-forms-osgi.md)をオーサーインスタンスにインストールします。
-* JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。Examples in the tutorial are based on MySQL database and use Oracle&#39;s [MySQL JDBC database driver](https://dev.mysql.com/downloads/connector/j/5.1.html).
+* JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。チュートリアルの例はMySQLデータベースに基づいており、Oracleの[MySQL JDBCデータベースドライバー](https://dev.mysql.com/downloads/connector/j/5.1.html)を使用しています。
 
 * 以下に示すフィールドを使用して、顧客データを保存するデータベースをセットアップします。アダプティブフォームを作成する場合、データベースは必須ではありません。このチュートリアルではデータベースを使用して、AEM Forms のフォームデータモデルと永続性機能を表示します。
 
@@ -95,7 +95,7 @@ ht-degree: 83%
 
 ![09-Style-your-adaptive-form_small](assets/09-Style-your-adaptive-form_small.png)
 
-Adaptive forms provide themes and an [editor](/help/forms/using/themes.md) to create themes for the adaptive forms. テーマには、コンポーネントとパネルの詳細なスタイル設定が含まれています。様々なフォームでテーマを再利用することができます。スタイルには、背景色、状態を表す色、透明度、配置、サイズなどのプロパティが含まれています。テーマをフォームに適用すると、指定したスタイルがフォームの対応コンポーネントに反映されます。アダプティブフォームは、フォーム専用スタイルのインラインスタイル設定をサポートしています。
+アダプティブフォームには、テーマと、アダプティブフォーム用のテーマを作成する[エディター](/help/forms/using/themes.md)が用意されています。 テーマには、コンポーネントとパネルの詳細なスタイル設定が含まれています。様々なフォームでテーマを再利用することができます。スタイルには、背景色、状態を表す色、透明度、配置、サイズなどのプロパティが含まれています。テーマをフォームに適用すると、指定したスタイルがフォームの対応コンポーネントに反映されます。アダプティブフォームは、フォーム専用スタイルのインラインスタイル設定をサポートしています。
 
 ゴール:
 
@@ -116,7 +116,7 @@ Adaptive forms provide themes and an [editor](/help/forms/using/themes.md) to cr
 * Calvin SDK をインストールする
 * アドレスフォームを変更するためのテストスイートとテストケースを作成する
 
-To learn about SDK, see [Using Automated Tests with AEM Adaptive Form](/help/forms/using/calvin.md).
+SDKについて詳しくは、「[AEMアダプティブフォームでの自動テストの使用](/help/forms/using/calvin.md)」を参照してください。
 
 ## 手順 6：アダプティブフォームをパブリッシュする {#step-publish-your-adaptive-form}
 
