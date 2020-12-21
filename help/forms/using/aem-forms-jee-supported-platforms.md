@@ -17,7 +17,7 @@ ht-degree: 86%
 ---
 
 
-# JEE 上の AEM Forms でサポートされているプラットフォーム {#supported-platforms-for-aem-forms-on-jee}
+# JEE 上の AEM Forms でサポートされているプラットフォーム  {#supported-platforms-for-aem-forms-on-jee}
 
 ## サポートされているプラットフォーム {#supported-platforms}
 
@@ -128,7 +128,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>サポート対象</td> 
   </tr> 
   <tr> 
-   <td><p>Oracle Database 12cリリース1</p> </td> 
+   <td><p>Oracleデータベース12cリリース1</p> </td> 
    <td><p>リポジトリ Microkernel</p> </td> 
    <td><p>サポート対象</p> </td> 
   </tr> 
@@ -168,7 +168,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>サポート対象</td> 
   </tr> 
   <tr> 
-   <td><p>Oracle Database 12cリリース1</p> </td> 
+   <td><p>Oracleデータベース12cリリース1</p> </td> 
    <td><p>リポジトリ Microkernel</p> </td> 
    <td><p>サポート対象</p> </td> 
    <td><p>サポート対象</p> </td> 
@@ -273,12 +273,12 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td><p>サービスパックと重要なアップデート</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Oracle Solaris™ 11 - V5.11<sup> [3] [10]</sup></p> </td> 
+   <td><p>OracleSolaris™ 11 - V5.11<sup> [3] [10]</sup></p> </td> 
    <td><p>L：限定的サポート</p> </td> 
    <td><p>アップデートとパッチ</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Red Hat Enterprise Linux 7 (Kernel 3.x)</br><b>注：</b><a href="https://access.redhat.com/articles/4665701">Red Hat Enterprise Linux 6</a> は、メンテナンス終了フェーズに達し、2020年11月30日に延長ライフサイクルサポートフェーズにトランジションします。 Adobeでは、アップグレードと新規インストールにRed Hat Enterprise Linux 7を推奨します。 既存のインストールでは、拡張ライフサイクルサポート段階でRed Hat Enterprise Linux 6を使用できます。</p> </td> 
+   <td><p>Red Hat Enterprise Linux 7 (Kernel 3.x)</br><b>注意：</b> <a href="https://access.redhat.com/articles/4665701">Red Hat Enterprise Linux 6</a>はメンテナンス終了段階に達し、2020年11月30日に延長ライフサイクルサポート段階にトランジションします。 Adobeでは、アップグレードと新規インストールにRed Hat Enterprise Linux 7を推奨します。 既存のインストールでは、拡張ライフサイクルサポート段階でRed Hat Enterprise Linux 6を使用できます。</p> </td> 
    <td><p>A：サポート対象</p> </td> 
    <td><p>マイナーリリース、累積アップデート、および緊急アップデート</p> </td> 
   </tr> 
@@ -309,7 +309,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
 >
 >JEE 上の AEM Forms では、64 ビットのオペレーティングシステムのみがサポートされています。
 
-#### 視覚化環境 {#virtualized-environment}
+#### 視覚化環境  {#virtualized-environment}
 
 JEE 上の AEM Forms は、物理マシンまたはバーチャル環境で実行できます。ただし、バーチャル環境での AEM Forms の使用に問題が発生した場合は、その問題の物理マシン上での再現を試みてください。物理マシン上で問題が解決しない場合は、Adobeサポートに問い合わせて解決してください。 物理マシン上では再現されない問題に関しては、バーチャル環境のベンダーにお問い合わせください。
 
@@ -425,7 +425,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
   </tr> 
   <tr> 
    <td>IBM Content Manager クライアント</td> 
-   <td><p>Version 8.5<strong> </strong>is supported</p> </td> 
+   <td><p>バージョン8.5<strong> </strong>はサポートされています</p> </td> 
   </tr> 
   <tr> 
    <td>EMC Documentum</td> 
@@ -442,7 +442,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
  </tbody> 
 </table>
 
-### Cordova のサポート {#support-for-cordova}
+### Cordova のサポート  {#support-for-cordova}
 
 AEM FormsアプリでApache Cordovaがサポートされるようになりました。サポートされるCordovaのプラットフォーム固有のバージョンは次のとおりです。
 
@@ -516,13 +516,13 @@ AEM FormsアプリでApache Cordovaがサポートされるようになりまし
 >
 >さらに、次の点に注意してください。
 >
->* PDF Generator requires 32-bit version of [Acrobat 2017 classic track version 17.011.30078 or later](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) to perform the conversion.
+>* PDF Generatorで変換を実行するには、32ビット版の[Acrobat2017クラシックトラックバージョン17.011.30078以降](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)が必要です。
 >* PDF Generator では、32 ビットリテール版の Microsoft Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
 >* PDF Generator では Microsoft Office 365 をサポートしていません。
 >* OpenOffice 用 PDF Generator 変換は、Windows、Linux および Solaris でのみサポートされます。
 >* HTML2PDF サービスは AIX で終了しています。
 >* OCR PDF、PDF を最適化および PDF を書き出しの機能は、Windows でのみサポートされます。
->* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。For more information, refer to AEM Forms product description as per your deployment ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) or [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))”
+>* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳細については、ご使用の導入環境に応じて、AEM Forms製品の説明([オンプレミス](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)または[Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))を参照してください。&quot;
 
 >
 
@@ -629,7 +629,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 >
 >Workbench を Windows にインストールするには、管理者権限が必要です。管理者以外のアカウントを使用してインストールする場合は、適切なアカウントの資格情報が求められます。
 
-### Designer {#designer}
+### デザイナー {#designer}
 
 **注：** Windows に Designer をインストールするには、インストーラーを管理者権限のある状態で実行してください。
 
@@ -664,7 +664,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 
 >[!NOTE]
 >
->Acrobat DC Product Family では、基本的に別々の製品である Acrobat と Reader のそれぞれに、「クラシック」と「継続」の 2 種類のトラックが用意されています。For details and a comparison of the two tracks, see [https://www.adobe.com/go/acrobatdctracks.](https://www.adobe.com/go/acrobatdctracks)
+>Acrobat DC Product Family では、基本的に別々の製品である Acrobat と Reader のそれぞれに、「クラシック」と「継続」の 2 種類のトラックが用意されています。2つのトラックの詳細と比較については、[https://www.adobe.com/go/acrobatdctracksを参照してください。](https://www.adobe.com/go/acrobatdctracks)
 
 ### ブラウザー {#browsers}
 
@@ -709,7 +709,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 >
 >以下にデスクトップに対する一部のブラウザー関連の例外事項を示します。
 >
->* 多くの最新のブラウザーは現在、NPAPI ベースのプラグインをサポートしていません。For information about how it impacts AEM Forms applications and workflows, see [Discontinuation of NPAPI browser plugins and its impact](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html).
+>* 多くの最新のブラウザーは現在、NPAPI ベースのプラグインをサポートしていません。このプラグインがAEM Formsのアプリケーションやワークフローに与える影響について詳しくは、[NPAPIブラウザープラグインのサポート終了とその影響](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html)を参照してください。
 >* Safari は Macintosh OS X でのみサポートされています。
 
 
@@ -761,7 +761,7 @@ AEM Forms アプリケーションは次のプラットフォームで利用可�
 | **プラットフォーム** | **サポートされているデバイス** |
 |---|---|
 | Apple iOS 以上 | Apple iPhone、iPad、iPad Air、iPad mini [iOS 11以降] |
-| Google Android | Android 4.4 (Andoird Kit Kat) and above *[API Level 19 and above]*. AEM Formsアプリは、7インチと10インチのSamsung Galaxyタブレット、7インチのGoogle Nexusタブレット、人気スマートフォンで認定されています。 |
+| Google Android | Android 4.4 (Android Kit Kat)以降、*[APIレベル19以降]*。 AEM Formsアプリは、7インチと10インチのSamsung Galaxyタブレット、7インチのGoogle Nexusタブレット、人気スマートフォンで認定されています。 |
 | Microsoft Windows | Microsoft Windows 10オペレーティングシステムを実行するMicrosoft Surfaceデバイス、タブレット、ノートパソコン、およびデスクトップ。 |
 
 ### Adobe Flash Player {#adobe-flash-player}
@@ -781,7 +781,7 @@ AEM Forms アプリケーションは次のプラットフォームで利用可�
 
 >[!NOTE]
 >
->Adobe will [stop updating and distributing the Flash Player at the end of 2020](https://theblog.adobe.com/adobe-flash-update/).
+>Adobeは、2020](https://theblog.adobe.com/adobe-flash-update/)の終わりにFlash Playerの更新と配布を[停止します。
 
 ### Adobe Document Security Extension for Microsoft Office {#adobe-rights-management-extension-for-microsoft-office}
 
@@ -793,15 +793,15 @@ Microsoft® Windows® 2012 は、Reader および Acrobat 以外は、指定さ�
 
 また、JEE 上の AEM Forms では、指定されたメジャーおよびマイナーバージョンのサポートソフトウェアに対して、アップデート、パッチ、および修正パックもサポートしています。ただし、次のメジャーまたはマイナーバージョンに対するアップデートは、とくに記載がない限りサポートされていません。
 
-## サードパーティパッチサポートポリシー {#third-party-patch-support-policy}
+## サードパーティパッチサポートポリシー  {#third-party-patch-support-policy}
 
-JEE 上の AEM Forms のサードパーティソフトウェアの必要システム構成は、それぞれの製品ドキュメントの「必要システム構成」セクションに記述されています。All documentation can be accessed from [https://adobe.com/go/learn_aemforms_documentation_64](https://adobe.com/go/learn_aemforms_documentation_64) .
+JEE 上の AEM Forms のサードパーティソフトウェアの必要システム構成は、それぞれの製品ドキュメントの「必要システム構成」セクションに記述されています。すべてのドキュメントは、[https://adobe.com/go/learn_aemforms_documentation_64](https://adobe.com/go/learn_aemforms_documentation_64)からアクセスできます。
 
 JEE 上の AEM Forms のサードパーティリファレンスプラットフォームは、JEE 上の AEM Forms の開発とリリースの時点におけるサードパーティインフラストラクチャの特定のパッチレベルを記述してあり、そのバージョンの JEE 上の AEM Forms によってサポートされているインフラストラクチャの最小パッチ/サービスパックレベルを形成しています。
 
 アドビシステムズ社では、サードパーティベンダーがリリース時に JEE 上の AEM Forms がサポートするバージョンとの後方互換性を保証していると仮定して、サードパーティベンダーの緊急および推奨パッチをサポートします。アドビシステムズ社は、JEE 上の AEM Forms ドキュメントに記載の最小パッチレベル後にリリースされたパッチのみをサポートします。
 
-場合によっては、アドビシステムズ社は、主要な機能を変更しそのために完全な後方互換性をサポートしなくなったサードパーティアップデートをサポートしません。For details on the supported updates, see [Supported patch definitions](https://helpx.adobe.com/jp/aem-forms/aem-forms-third-party-software-patch.html) for specific vendor products and the patch types Adobe supports.
+場合によっては、アドビシステムズ社は、主要な機能を変更しそのために完全な後方互換性をサポートしなくなったサードパーティアップデートをサポートしません。サポートされているアップデートの詳細については、「[サポートされているパッチ定義](https://helpx.adobe.com/jp/aem-forms/aem-forms-third-party-software-patch.html)」で、特定のベンダー製品とパッチタイプAdobeがサポートしているパッチを参照してください。
 
 アドビシステムズ社の管理の及ばない状況においては、後方互換性を主張しているサードパーティ製パッチは、アドビ製品またはお客様の環境に悪い影響を及ぼす可能性があります。このような場合、アドビシステムズ社は、お客様がサードパーティからの緊急パッチを重要なシステムに適用する前にその影響を評価することを推奨します。アドビシステムズ社はサードパーティと共に妥当なビジネス努力を払って、通常のアドビサポートプログラムを通してあるいはサードパーティがパッチの問題を修正することによって、そのような問題を解決します。このことは、アドビによってサポートされる新たにリリースされたサードパーティ製パッチが、ベンダーによってマニュアルに記載されているようにまたは JEE 上の AEM Forms と機能することを保証するものではありません。
 
