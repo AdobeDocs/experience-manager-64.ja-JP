@@ -16,7 +16,7 @@ ht-degree: 74%
 ---
 
 
-# 送信アクションの設定 {#configuring-the-submit-action}
+# 送信アクションの設定  {#configuring-the-submit-action}
 
 ## 送信アクションの概要 {#introduction-to-submit-actions}
 
@@ -26,7 +26,8 @@ ht-degree: 74%
 
 サイドバーにある「アダプティブフォームコンテナ」プロパティの「**[!UICONTROL 送信]**」セクションで、送信アクションを設定できます。
 
-![送信アクション](assets/thank-you-setting.png)**図の設定：** *送信アクションの設定*
+![送信アクションの設定：](assets/thank-you-setting.png)
+**送信アクションの** *設定*
 
 アダプティブフォームで使用可能なデフォルトの送信アクションは次のとおりです。
 
@@ -48,9 +49,9 @@ ht-degree: 74%
 
 >[!CAUTION]
 >
->If you [prefill](/help/forms/using/prepopulate-adaptive-form-fields.md) a form template, form data model, or schema based adaptive form with XML or JSON data complaint to a schema (XML schema, JSON schema, form template, or form data model) that is data does not contain &lt;afData>, &lt;afBoundData>, and &lt;/afUnboundData> tags, then the data of unbounded fields (Unbounded fields are adaptive form fields without [bindref](/help/forms/using/prepopulate-adaptive-form-fields.md) property) of the adaptive form is lost.
+>[](/help/forms/using/prepopulate-adaptive-form-fields.md)データに&lt;afData>、&lt;afBoundData>、&lt;/afBoundData>タグを含まないスキーマ(XMLスキーマ、JSONスキーマ、フォームテンプレート、またはフォームデータモデル)に、XMLまたはJSONデータが準拠するフォームテンプレート、フォームデータモデル、またはスキーマベースのアダプティブフォームを事前入力する場合その場合、アダプティブフォームの境界なしフィールド（境界なしフィールドはアダプティブフォームフィールドで、[bindref](/help/forms/using/prepopulate-adaptive-form-fields.md)プロパティがないアダプティブフォームフィールドです）のデータは失われます。
 
-アダプティブフォームがユースケースを実現するように、カスタム送信アクションを作成できます。For more information, see [Writing custom Submit action for adaptive forms](/help/forms/using/custom-submit-action-form.md).
+アダプティブフォームがユースケースを実現するように、カスタム送信アクションを作成できます。詳しくは、「[アダプティブフォームのカスタム送信アクションの作成](/help/forms/using/custom-submit-action-form.md)」を参照してください。
 
 ## REST エンドポイントへの送信 {#submit-to-rest-endpoint}
 
@@ -79,11 +80,11 @@ REST エンドポイントへの送信の設定
 
 ![「ありがとうございます」ページのパラメーターとして渡すフィールド値のマッピング](assets/post-enabled-actionconfig.png)
 
-上の例で、ユーザーが `textbox` に入力した情報は、パラメーター `param1` を使用して取得します。Syntax to post data captured using `param1` is:
+上の例で、ユーザーが `textbox` に入力した情報は、パラメーター `param1` を使用して取得します。`param1`を使用して取得したデータをPOSTする構文は次のとおりです。
 
 `String data=request.getParameter("param1");`
 
-Similarly, paramenters that you use for posting XML data and attachments are `dataXml` and `attachments`.
+同様に、XMLデータと添付ファイルのポストに使用するパラメーターは、`dataXml`と`attachments`です。
 
 例えば、この 2 つのパラメーターをスクリプト中で使用して、REST エンドポイントに送信されたデータを解析できます。データを保存および解析するための構文は、次のとおりです。
 
@@ -94,42 +95,42 @@ Similarly, paramenters that you use for posting XML data and attachments are `da
 
 ## 電子メールを送信 {#send-email}
 
-The **[!UICONTROL Send Email]** submit action sends an email to one or more recipients on successful submission of the form. 生成される電子メールには、事前に定義された形式のフォームデータを含めることができます。
+**[!UICONTROL 電子メール]**&#x200B;送信アクションは、フォームの送信が成功したときに、1つ以上の受信者に電子メールを送信します。 生成される電子メールには、事前に定義された形式のフォームデータを含めることができます。
 
 >[!NOTE]
 フォームデータを電子メールに含めるには、異なるパネルに配置されているフォームフィールドを含め、すべてのフォームフィールドが異なる要素名を持っている必要があります。
 
-## 電子メールで PDF を送信 {#send-pdf-via-email}
+## 電子メールで PDF を送信  {#send-pdf-via-email}
 
 「**[!UICONTROL 電子メールで PDF を送信]**」送信アクションでは、フォームの送信が完了すると同時に、1 人または複数の受信者にフォームデータを含む PDF が添付された電子メールが送信されます。
 
 **注意：***この送信アクションは、レコードのドキュメントテンプレートを持つ XFA ベースのアダプティブフォームおよび XSD ベースのアダプティブフォームに使用することができます。*
 
-## Forms ワークフローを起動 {#invoke-a-forms-workflow}
+## Forms ワークフローを起動  {#invoke-a-forms-workflow}
 
 「**[!UICONTROL フォームワークフローへの送信]**」送信オプションでは、データ XML および添付ファイル（存在する場合に）が既存の Adobe LiveCycle プロセスまたは JEE での AEM Forms プロセスに送信されます。
 
 送信アクション「フォームワークフローへの送信」の設定方法について詳しくは、「[フォームワークフローを利用したフォームデータの送信および処理](/help/forms/using/submit-form-data-livecycle-process.md)」参照してください。
 
-## フォームデータモデルを使用して送信 {#submit-using-form-data-model}
+## フォームデータモデルを使用して送信  {#submit-using-form-data-model}
 
-The **[!UICONTROL Submit using Form Data Model]** submit action writes submitted adaptive form data for the specified data model object in a form data model to its data source. 送信アクションの設定時に、データソースに書き戻す送信済みデータを持つデータモデルオブジェクトを選択できます。
+**[!UICONTROL フォームデータモデルを使用した送信]**&#x200B;送信アクションは、フォームデータモデル内の指定したデータモデルオブジェクト用に送信されたアダプティブフォームデータを、そのデータソースに書き込みます。 送信アクションの設定時に、データソースに書き戻す送信済みデータを持つデータモデルオブジェクトを選択できます。
 
 さらに、添付されたフォームをフォームデータモデルやレコードのドキュメント（DOR）を使用してデータソースに送信できます。
 
 フォームデータモデルについて詳しくは、「[AEM Forms のデータ統合機能](/help/forms/using/data-integration.md)」を参照してください。
 
-## フォームポータル送信アクション {#forms-portal-submit-action}
+## フォームポータル送信アクション  {#forms-portal-submit-action}
 
-The **[!UICONTROL Forms Portal Submit Action]** option makes form data available through an AEM Forms portal.
+**[!UICONTROL Formsポータル送信アクション]**&#x200B;オプションは、フォームデータをAEM Formsポータル経由で使用できるようにします。
 
 フォームポータルと送信アクションについて詳しくは、「[ドラフトと送信コンポーネント](/help/forms/using/draft-submission-component.md)」を参照してください。
 
-## AEM ワークフローを起動 {#invoke-an-aem-workflow}
+## AEM ワークフローを起動  {#invoke-an-aem-workflow}
 
 「**[!UICONTROL AEM ワークフローを起動]**」送信アクションは、アダプティブフォームと AEM ワークフローを関連付けます。フォームが送信されると、関連するワークフローは処理ノードで自動的に起動します。さらに、ワークフローのペイロードの場所に、データファイル、添付ファイル、レコードのドキュメントを配置します（該当の場合）。
 
-「**[!UICONTROL AEM ワークフローを起動]**」送信アクションを使用する前に、[AEM DS の設定を行います](/help/forms/using/configuring-the-processing-server-url-.md)。For information about creating an AEM Workflow, see [Form-centric workflows on OSGi](/help/forms/using/aem-forms-workflow.md).
+「**[!UICONTROL AEM ワークフローを起動]**」送信アクションを使用する前に、[AEM DS の設定を行います](/help/forms/using/configuring-the-processing-server-url-.md)。AEMワークフローの作成について詳しくは、[OSGiでのフォーム中心のワークフロー](/help/forms/using/aem-forms-workflow.md)を参照してください。
 
 ## アダプティブフォームにおけるサーバー側の再検証 {#server-side-revalidation-in-adaptive-form}
 
@@ -147,17 +148,19 @@ The **[!UICONTROL Forms Portal Submit Action]** option makes form data available
 
 ### サーバー側検証の有効化 {#enabling-server-side-validation-br}
 
-Use the **Revalidate on server** under Adaptive Form Container in the sidebar to enable or disable server-side validation for the current form.
+サイドバーのアダプティブフォームコンテナの下にある&#x200B;**サーバー**&#x200B;で再検証を使用して、現在のフォームのサーバー側検証を有効または無効にします。
 
-![サーバー側検証](assets/revalidate-on-server.png)**図の有効化：** *サーバー側検証の有効化*
+![サーバー側](assets/revalidate-on-server.png)
+**検証の有効化図：サーバー側検証の** *有効化*
 
 エンドユーザーがこれらの検証を回避してフォームを送信した場合、サーバーが再度検証を行います。サーバー側での検証が失敗した場合、送信処理が中止されます。エンドユーザーには、元のフォームが再度表示されます。取得されたデータおよび送信されたデータは、エラーとしてユーザーに表示されます。
 
 ### 検証式でのカスタム関数のサポート {#supporting-custom-functions-in-validation-expressions-br}
 
-**複雑な検証ルール**&#x200B;の場合、正確な検証スクリプトはカスタム関数の中に存在し、作成者はこれらのカスタム関数をフィールド検証式から呼び出すことがあります。To make this custom function library known and available while performing server-side validations, the form author can configure the name of AEM client library under the **[!UICONTROL Basic]** tab of Adaptive Form Container properties as shown below.
+**複雑な検証ルール**&#x200B;の場合、正確な検証スクリプトはカスタム関数の中に存在し、作成者はこれらのカスタム関数をフィールド検証式から呼び出すことがあります。サーバー側の検証の実行中に、このカスタム機能ライブラリを既知で使用可能にするために、フォーム作成者は、以下に示すように、アダプティブフォームコンテナのプロパティの&#x200B;**[!UICONTROL 基本]**&#x200B;タブでAEMクライアントライブラリの名前を設定できます。
 
-![検証式](assets/clientlib-cat.png)**図のサポートカスタム関数：** *検証式でのカスタム関数のサポート*
+![検証](assets/clientlib-cat.png)
+**式でのサポートカスタム関数図：検証式での** *サポートカスタム関数*
 
 作成者は、アダプティブフォームごとにカスタム Javascript ライブラリを設定することができます。ライブラリには、jQuery および underscore.js に依存する再利用可能な関数のみを保存してください。
 
@@ -165,4 +168,4 @@ Use the **Revalidate on server** under Adaptive Form Container in the sidebar to
 
 AEM セキュリティおよび堅牢化ガイドラインの一部として、404.jsp や 500.jsp などのカスタムエラーページを設定してください。これらのハンドラーは、フォーム送信時に 404 または 500 エラーが表示されるときに呼び出されます。また、これらのハンドラーは、発行ノードでこれらのエラーコードがトリガーされるときにも呼び出されます。
 
-For more information, see [Customizing Pages shown by the Error Handler](/help/sites-developing/customizing-errorhandler-pages.md).
+詳しくは、[エラーハンドラーによって表示されるページのカスタマイズ](/help/sites-developing/customizing-errorhandler-pages.md)を参照してください。
