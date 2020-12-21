@@ -14,7 +14,7 @@ ht-degree: 98%
 ---
 
 
-# AEM 6.4 Communities ユーザーガイド {#communities}
+# AEM 6.4 Communities ユーザーガイド  {#communities}
 
 + [AEM Communitiesの概要](home.md)
 + AEM Communities の概要 {#introduction}
