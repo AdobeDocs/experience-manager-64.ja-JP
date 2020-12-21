@@ -15,18 +15,18 @@ ht-degree: 15%
 ---
 
 
-# 公開しない最初のアダプティブドキュメントを作成 {#do-not-publish-create-your-first-adaptive-document}
+# 公開しない最初のアダプティブドキュメントを作成{#do-not-publish-create-your-first-adaptive-document}
 
 ## ユースケース {#use-case}
 
 We Finance社は、金融サービス業界のリーディングな組織で、多様な顧客プロファイルの要件に合わせてパーソナライズされた包括的なソリューションをオファーしています。
 
-顧客の自動保険の1つが期限切れになる前に、リマインダーを送信します。リマインダーはインタラクティブで、PDFが含まれ、更新時の見積もりが含まれています。 このコミュニケーションには、ロイヤルティ報酬や割引のオファーなど、他の情報も含まれます。
+顧客の自動保険の1つが期限切れになる前に、リマインダーを送信します。リマインダーはインタラクティブで、PDFが含まれ、更新見積もりが含まれています。 このコミュニケーションには、ロイヤルティ報酬や割引のオファーなど、他の情報も含まれます。
 
 ポータルはAdobeAEM上で動作します。 Webおよび印刷のウェルカムチャネルの出力は、アダプティブドキュメントの複数チャネル機能を使用して作成されます。
 
 チュートリアルの最後に、次のようなアダプティブドキュメントが表示されます。
-[ ![ad-1](assets/ad-1.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Mobile.pdf) [ ad-2 ![最初のアダプティブドキュメントのチュートリアルの](assets/ad-2.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Desktop.pdf)作成は、手順に分類されます。 各手順は、それ自体が完全な記事です。
+[ ![ad-1](assets/ad-1.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Mobile.pdf)    [ ![ad-2](assets/ad-2.png)](https://blogs.adobe.com/contentcorner/files/2017/07/PAF_Desktop.pdf)最初のアダプティブドキュメントの作成チュートリアルは、手順別に分類されます。 各手順は、それ自体が完全な記事です。
 
 <table> 
  <tbody>
@@ -37,7 +37,7 @@ We Finance社は、金融サービス業界のリーディングな組織で、�
      <li>アダプティブドキュメントとフォームデータモデルの作成</li> 
      <li>アダプティブドキュメント用のテンプレートとテーマの作成</li> 
      <li>ルールエディターを使用したビジネスルールの作成。<br /> </li> 
-     <li>Publishing an adaptive document. <br /> </li> 
+     <li>アダプティブドキュメントの公開を参照してください。<br /> </li> 
     </ul> </th> 
   </tr>
   <tr>
@@ -45,11 +45,11 @@ We Finance社は、金融サービス業界のリーディングな組織で、�
    <td>
     <ul> 
      <li>AEM作成者インスタンスを設定します。 </li> 
-     <li>AEM Forms アドオンのインストール. 詳しくは、「AEM Formsの <a href="/help/forms/using/installing-configuring-aem-forms-osgi.md" target="_blank">インストールと設定</a>」を参照してください。</li> 
-     <li>JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。このチュートリアルの例は、MySQLデータベースに基づいており、OracleのMySQL JDBCデータベースドライバーを使用しています。 </li> 
+     <li>AEM Forms アドオンのインストール. 詳しくは、<a href="/help/forms/using/installing-configuring-aem-forms-osgi.md" target="_blank">AEM Forms</a>のインストールと設定を参照してください。</li> 
+     <li>JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。チュートリアルの例は、MySQLデータベースに基づいており、OracleのMySQL JDBCデータベースドライバーを使用しています。 </li> 
      <li>顧客データを含むデータベースを設定します。 アダプティブドキュメントを作成するには、データベースが必要です。 このチュートリアルではデータベースを使用して、AEM Forms のフォームデータモデルと永続性機能を表示します。 </li> 
-     <li>印刷およびWebチャネル用の <a href="/help/forms/using/web-channel-print-channel.md">テンプレートを作成/読み込み、有効にします</a>。</li> 
-     <li>FDMに基づく <a href="/help/forms/using/document-fragments.md">ドキュメントフラグメントがあることを確認します</a>。</li> 
+     <li>作成/読み込み、<a href="/help/forms/using/web-channel-print-channel.md">印刷およびWebチャネル用のテンプレート</a>を有効にします。</li> 
+     <li>FDM</a>に基づく<a href="/help/forms/using/document-fragments.md">ドキュメント・フラグメントがあることを確認します。</a></li> 
     </ul> </td> 
   </tr>
  </tbody>
@@ -57,7 +57,7 @@ We Finance社は、金融サービス業界のリーディングな組織で、�
 
 ## 手順 1：フォームデータモデルを作成する {#step-create-form-data-model}
 
-フォームデータモデルを使用すると、アダプティブドキュメントを異なるデータソースに接続できます。 例えば、AEM ユーザープロファイル、RESTful Web サービス、SOAP ベースの Web サービス、OData サービス、関連データベースなどに接続することができます。フォームデータモデルは、接続されたデータソースで使用可能なビジネスエンティティとサービスの統一されたデータ表現スキーマです。アダプティブドキュメントでフォームデータモデルを使用すると、接続されたデータソースからデータを取得できます。 For more information about form data model, see [AEM Forms Data Integration](/help/forms/using/data-integration.md).
+フォームデータモデルを使用すると、アダプティブドキュメントを異なるデータソースに接続できます。 例えば、AEM ユーザープロファイル、RESTful Web サービス、SOAP ベースの Web サービス、OData サービス、関連データベースなどに接続することができます。フォームデータモデルは、接続されたデータソースで使用可能なビジネスエンティティとサービスの統一されたデータ表現スキーマです。アダプティブドキュメントでフォームデータモデルを使用すると、接続されたデータソースからデータを取得できます。 フォームデータモデルについて詳しくは、「[AEM Formsデータ統合](/help/forms/using/data-integration.md)」を参照してください。
 
 ゴール:
 
@@ -67,7 +67,7 @@ We Finance社は、金融サービス業界のリーディングな組織で、�
 * フォームデータモデルの読み取りサービスと書き込みサービスを設定する
 * テストデータを使用して、フォームデータモデルと設定済みサービスをテストする
 
-## Step 2: Create an adaptive document {#step-create-an-adaptive-document}
+## 手順2:アダプティブドキュメントの作成{#step-create-an-adaptive-document}
 
 Customer Communicationsは、ビジネスの通信、レター、ドキュメント、明細書、特典通知、資産管理の目論見書、マーケティング・メール、請求書、ウェルカムキットなど、安全でパーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。
 
@@ -83,16 +83,16 @@ Customer Communicationsは、ビジネスの通信、レター、ドキュメン
 
 <!--![see-the-guide-sm](assets/see-the-guide-sm.png)-->
 
-## 手順3: アダプティブドキュメントフィールドへのルールの適用(Webチャネルのみ) {#step-apply-rules-to-adaptive-document-fields-web-channel-only}
+## 手順3:アダプティブドキュメントフィールドへのルールの適用(Webチャネルのみ) {#step-apply-rules-to-adaptive-document-fields-web-channel-only}
 
-アダプティブドキュメントには、アダプティブドキュメントオブジェクトにルールを記述するためのエディターが用意されています。 これらのルールは、ドキュメント上の事前設定された条件とドキュメントアクションに基づいて、ユーザーオブジェクト上でトリガーされるアクションを定義します。 これにより、アダプティブドキュメントのWebバージョンの正確性を確保し、ユーザーエクスペリエンスを高速化できます。 アダプティブドキュメントルールとルールエディターの詳細については、「 [ルールエディター](/help/forms/using/rule-editor.md)」を参照してください。
+アダプティブドキュメントには、アダプティブドキュメントオブジェクトにルールを記述するためのエディターが用意されています。 これらのルールは、ドキュメント上の事前設定された条件とドキュメントアクションに基づいて、ユーザーオブジェクト上でトリガーされるアクションを定義します。 これにより、アダプティブドキュメントのWebバージョンの正確性を確保し、ユーザーエクスペリエンスを高速化できます。 アダプティブドキュメントルールとルールエディターについて詳しくは、[ルールエディター](/help/forms/using/rule-editor.md)を参照してください。
 
 ゴール:
 
 * アダプティブドキュメントのWebチャネルフィールドの作成と適用
 * ルールを使用して、Webチャネルーでドキュメントデータモデルサービスをトリガーする
 
-## 手順4: アダプティブドキュメントのスタイル設定(Webチャネルのみ) {#step-style-the-adaptive-document-web-channel-only}
+## 手順4:アダプティブドキュメントのスタイル設定(Webチャネルのみ) {#step-style-the-adaptive-document-web-channel-only}
 
 アダプティブドキュメントには、アダプティブドキュメントのテーマを作成するためのエディターとインラインスタイルが用意されています。 テーマには、コンポーネントとパネルのスタイル設定の詳細が含まれ、異なるドキュメントのWebチャネルーでテーマを再利用できます。 スタイルには、背景色、状態色、透明度、配置、およびサイズなどのプロパティが含まれます。テーマをドキュメントに適用すると、指定したスタイルはドキュメントの対応するコンポーネントに反映されます。 詳しくは、「[テーマ](/help/forms/using/themes.md)」を参照してください。
 
@@ -102,7 +102,7 @@ Customer Communicationsは、ビジネスの通信、レター、ドキュメン
 * アダプティブドキュメントWebチャネルへのテーマの適用
 * モバイルデバイスおよびデスクトップでのアダプティブドキュメントWebチャネルの表示の検証
 
-## 手順5: アダプティブドキュメントの公開 {#step-publish-the-adaptive-document}
+## 手順5:アダプティブドキュメントを公開{#step-publish-the-adaptive-document}
 
 アダプティブドキュメントの作成が完了したら、そのアダプティブドキュメントをパブリッシュインスタンスで使用できるように、パブリッシュを行う必要があります。
 
