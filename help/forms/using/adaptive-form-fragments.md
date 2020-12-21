@@ -26,9 +26,9 @@ ht-degree: 94%
 
 アダプティブフォームフラグメントは、最初から作成することも、パネルを既存のアダプティブフォーム内にフラグメントとして保存することもできます。
 
-### フラグメントを最初から作成 {#create-fragment-from-scratch}
+### フラグメントを最初から作成  {#create-fragment-from-scratch}
 
-1. Log into AEM Forms author instance at https://[*hostname*]:[*port*]/aem/forms.html.
+1. https://[*hostname*]:[*port*]/aem/forms.htmlにあるAEM Forms作成者インスタンスにログインします。
 1. **[!UICONTROL 作成／アダプティブフォームフラグメント]**&#x200B;をクリックします。
 1. フラグメントのタイトル、名前、説明、タグを指定します。
 
@@ -63,7 +63,7 @@ ht-degree: 94%
 
 さらに、フラグメントのフォームモデルとして、XML スキーマまたは XDP フォームテンプレートを選択していた場合は、フォームモデル階層を示す新しいタブがコンテンツファインダーに表示されます。これにより、フォームモデルエレメントをフラグメントにドラッグアンドドロップできます。追加されたフォームモデルエレメントはフォームコンポーネントに変換されますが、関連の XDP または XSD からの元のプロパティは保持されます。
 
-### パネルをフラグメントとして保存 {#save-panel-as-a-fragment}
+### パネルをフラグメントとして保存  {#save-panel-as-a-fragment}
 
 1. アダプティブフォームフラグメントとして保存するパネルが含まれているアダプティブフォームを開きます。
 1. パネルツールバーで、「**[!UICONTROL フラグメントとして保存]**」をクリックします。フラグメントとして保存ダイアログが開きます。
@@ -93,7 +93,7 @@ ht-degree: 94%
    * **[!UICONTROL XDP 参照]**：XSD ベースのアダプティブフォームにのみ表示されます。XDP フォームテンプレートの場所を表示します。
 
    ![save-fragment](assets/save-fragment.png)
-   **図：** *フラグメントとして保存ダイアログ*
+   **図：フラグメントとして** *保存ダイアログ*
 
 1. 「**[!UICONTROL OK]**」をクリックします。
 
@@ -111,16 +111,16 @@ ht-degree: 94%
 
 次の手順を実行して、フォームのフラグメントをすべて表示します。
 
-1. Go to AEM web console configuration page at https:[*host*]:[*port*]/system/console/configMgr.
+1. https:[*host*]:[*port*]/system/console/configMgrのAEM Webコンソール設定ページに移動します。
 1. 「**[!UICONTROL Adaptive Form 設定サービス]**」を検索してクリックし、編集モードで開きます。
 1. 「**[!UICONTROL フラグメントの代わりにプレースホルダーを有効にする]**」チェックボックスを無効にして、プレースホルダーの画像の代わりにすべてのフラグメントを表示します。
 
-### アダプティブフォームへのフラグメントの挿入 {#insert-a-fragment-in-an-adaptive-form}
+### アダプティブフォームへのフラグメントの挿入  {#insert-a-fragment-in-an-adaptive-form}
 
 作成したアダプティブフォームフラグメントは、AEM コンテンツファインダーの「アダプティブフォームフラグメント」タブに表示されます。アダプティブフォームフラグメントをアダプティブフォーム内に挿入するには、次の手順を実行します。
 
 1. アダプティブフォームフラグメントを挿入するアダプティブフォームを編集モードで開きます。
-1. Click **[!UICONTROL Assets]** ![assets-browser](assets/assets-browser.png) in the sidebar. In the assets browser, select **[!UICONTROL Adaptive Form Fragments]** from the drop-down.
+1. サイドバーの「**[!UICONTROL アセット]** ![アセットブラウザー](assets/assets-browser.png)」をクリックします。 アセットブラウザーで、ドロップダウンから「**[!UICONTROL アダプティブフォームフラグメント]**」を選択します。
 
    すべてのアダプティブフォームフラグメントを表示することも、あるいはフォームモデル（フォームテンプレート、XML スキーマ、またはベーシック）に基づいてフィルタリングすることもできます。
 
@@ -132,9 +132,9 @@ ht-degree: 94%
 
 アダプティブフォームフラグメントは、アダプティブフォーム内の参照により挿入され、スタンドアロンのアダプティブフォームフラグメントと同期されます。このことは、アダプティブフォームフラグメントが更新されるとその変更がフラグメントが使用されているすべてのアダプティブフォーム内に反映されることを意味します。
 
-### フラグメントのアダプティブフォーム内への埋め込み {#embed-a-fragment-in-adaptive-form}
+### フラグメントのアダプティブフォーム内への埋め込み  {#embed-a-fragment-in-adaptive-form}
 
-You can choose to embed an adaptive form fragment in an adaptive form by clicking **[!UICONTROL Embed Asset:*fragmentName *]**button on the panel toolbar of the added fragment, as shown in the following example image.
+アダプティブフォームフラグメントをアダプティブフォームに埋め込むには、「アセットを埋め込む」**[!UICONTROL をクリックします。次の例の画像に示すように、追加したフラグメントのパネルツールバーの&#x200B;*fragmentName *]**ボタン。
 
 ![フォームフラグメントのアダプティブフォーム内への埋め込み](assets/embed-fragment.png)
 
@@ -142,7 +142,7 @@ You can choose to embed an adaptive form fragment in an adaptive form by clickin
 >
 >埋め込まれたフラグメントはスタンドアロンのフラグメントとリンクされなくなります。埋め込まれたフラグメント内のコンポーネントは、アダプティブフォーム内から編集できます。
 
-### フラグメント内でのフラグメントの使用 {#using-fragments-within-fragments}
+### フラグメント内でのフラグメントの使用  {#using-fragments-within-fragments}
 
 入れ子のアダプティブフォームフラグメントを作成できます。このことはフラグメント内に別のフラグメントをドラッグアンドドロップし、入れ子のフラグメント構造を構築できることを意味します。
 
@@ -150,7 +150,7 @@ You can choose to embed an adaptive form fragment in an adaptive form by clickin
 
 アダプティブフォームフラグメントパネルのコンポーネントの編集ダイアログ内で&#x200B;**[!UICONTROL フラグメントアセットを選択]**&#x200B;プロパティを使用することで、アダプティブフォームフラグメントを別のフラグメントで置き換えたり変更したりできます。
 
-## データバインディングのためのフラグメントの自動マッピング {#auto-mapping-of-fragments-for-data-binding}
+## データバインディングのためのフラグメントの自動マッピング  {#auto-mapping-of-fragments-for-data-binding}
 
 FXA フォームテンプレートまたは XSD 複合タイプを使用してアダプティブフォームフラグメントを作成しフラグメントをアダプティブフォームにドラッグアンドドロップすると、XFA フラグメントまたは XSD 複合タイプは、フラグメントモデルルートが XFA フラグメントまたは XSD 複合タイプにマッピングされている対応アダプティブフォームフラグメントによって自動的に置換されます。
 
@@ -160,7 +160,7 @@ FXA フォームテンプレートまたは XSD 複合タイプを使用して�
 >
 >また、AEM コンテンツファインダーのアダプティブフォームフラグメントライブラリからバインドされたアダプティブフォームフラグメントをドラッグアンドドロップし、アダプティブフォームフラグメントパネルのコンポーネントの編集ダイアログから正しいバインド参照を与えることもできます。
 
-## フラグメントの管理 {#manage-fragments}
+## フラグメントの管理  {#manage-fragments}
 
 AEM Forms UI を使用して、アダプティブフォームフラグメントに対して複数の操作を実行できます。
 
@@ -213,7 +213,7 @@ AEM Forms UI を使用して、アダプティブフォームフラグメント�
  </tbody> 
 </table>
 
-## フラグメントを含むアダプティブフォームのローカライズ {#localizing-adaptive-form-containing-fragments}
+## フラグメントを含むアダプティブフォームのローカライズ  {#localizing-adaptive-form-containing-fragments}
 
 アダプティブフォームフラグメントを含むアダプティブフォームをローカライズするには、フラグメントとフォームを別々にローカライズする必要があります。考え方としては、フラグメントを一度ローカライズし、それを複数のアダプティブフォーム内で再利用します。
 
@@ -221,7 +221,7 @@ AEM Forms UI を使用して、アダプティブフォームフラグメント�
 >
 >フラグメント内のローカリゼーションキーは、アダプティブフォームの XLIFF ファイル内には表示されません。
 
-## フラグメントで作業するときの考慮事項 {#key-points-to-remember-when-working-with-fragments}
+## フラグメントで作業するときの考慮事項  {#key-points-to-remember-when-working-with-fragments}
 
 * フラグメント名が一意であることを確認します。同じ名前の既存のフラグメントが存在する場合、フラグメントの作成は失敗します。
 * XDP ベースのアダプティブフォームでは、別の XDP フラグメントを含むフラグメントとしてパネルを保存すると、生成されるフラグメントは子 XDP フラグメントに自動的にバインドされます。XSD ベースのアダプティブフォームでは、生成されるフラグメントはスキーマルートにバインドされます。
@@ -233,11 +233,11 @@ AEM Forms UI を使用して、アダプティブフォームフラグメント�
 * アダプティブフォームを発行する場合は、参照によってアダプティブフォームに挿入されたスタンドアロンのアダプティブフォームフラグメントを発行する必要があります。
 * 更新されたアダプティブフォームフラグメントを再発行すると、フラグメントが使用されているアダプティブフォームの発行済みインスタンスに変更が反映されます。
 * 検証コンポーネントが含まれているアダプティブフォームの場合、匿名ユーザーはサポートされません。また、アダプティブフォームフラグメントで検証コンポーネントを使用することはお勧めしません。
-* (**Macのみ**)フォームフラグメント機能がすべてのシナリオで正しく動作することを確認するには、/private/etc/hostsファイルに次のエントリを追加します。
+* （**Macのみ**）フォームフラグメント機能がすべてのシナリオで正しく動作するようにするには、/private/etc/hostsファイルに次のエントリを追加します。
 
    `127.0.0.1 <Host machine>`
 
-   **ホストマシン**: AEM FormsがデプロイされているApple Macマシン。
+   **ホストマシン**:AEM FormsがデプロイされているApple Macマシン。
 
 ## リファレンスフラグメント {#reference-fragments}
 
