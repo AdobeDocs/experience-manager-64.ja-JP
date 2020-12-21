@@ -40,7 +40,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
 
 1. 「**[!UICONTROL Adobe Experience Manager]**」、「**[!UICONTROL フォーム]**」、「**[!UICONTROL テーマ]**」の順にクリックします。
 
-1. In the Themes page, click **[!UICONTROL Create > Theme]**.
+1. テーマページで、**[!UICONTROL 作成/テーマ]**&#x200B;をクリックします。
 
    テーマを作成するウィザードが起動します。
 
@@ -51,7 +51,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
    * **[!UICONTROL Clientlibの場所]**:テーマのclientlibを格納するリポジトリ内の場所。
    * **[!UICONTROL Clientlibカテゴリ]**:テーマのclientlibカテゴリ名を入力するためのテキストフィールドを指定します。
 
-1. Click **[!UICONTROL Create]** and then click **[!UICONTROL Edit]** to open the theme in Theme Editor, or click **[!UICONTROL Done]** to return to the themes page.
+1. 「**[!UICONTROL 作成]**」をクリックし、「**[!UICONTROL 編集]**」をクリックしてテーマエディターでテーマを開くか、「**[!UICONTROL 完了]**」をクリックしてテーマページに戻ります。
 
 ### テーマのダウンロード {#downloading-a-theme}
 
@@ -59,7 +59,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
 
 1. 「**[!UICONTROL Adobe Experience Manager]**」、「**[!UICONTROL フォーム]**」、「**[!UICONTROL テーマ]**」の順にクリックします。
 
-1. In the Themes page, select a theme, and click **[!UICONTROL Download]**. テーマの詳細を示すダイアログボックスが表示されます。
+1. テーマページで、テーマを選択し、「**[!UICONTROL ダウンロード]**」をクリックします。 テーマの詳細を示すダイアログボックスが表示されます。
 
 1. 「**[!UICONTROL ダウンロード]**」をクリックします。テーマが zip ファイルとしてダウンロードされます。
 
@@ -175,7 +175,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
      <li>このテーマに対応する clientlib が保存される、「/etc」内のユーザー定義のリポジトリのパスです。</li> 
      <li>デフォルト値 - 「/etc/clientlibs/fd/themes」 + テーマのアセットの相対パス。</li> 
      <li>場所が存在しない場合、フォルダー階層は自動生成されます。</li> 
-     <li>この値が変更されると、clientlib ノード構造は、入力された新しい場所に移動します。<br /> <em><strong>注意：</strong> デフォルトのclientlibの場所を変更した場合、CRXDEリポジトリ内の新しい場所 <code>crx:replicate, rep:write, rep:glob:*, rep:itemNames:: js.txt, jcr:read </code>におよ <code>forms-users</code> び <code>crx:replicate</code>に割り当 <code>jcr:read </code>て <code>fd-service</code> ます。 Also attach another ACL by adding <span class="kbd">deny jcr:addChildNodes</span> for <code>forms-user</code></em></li> 
+     <li>この値が変更されると、clientlib ノード構造は、入力された新しい場所に移動します。<br /> <em><strong>注意：デフォルトのclientlibの場所を変更</strong> した場合、CRXDEリポジトリ内で、 <code>crx:replicate, rep:write, rep:glob:*, rep:itemNames:: js.txt, jcr:read </code>およびに割り当て <code>forms-users</code> るclientlibの場所 <code>crx:replicate</code>を新しい場所 <code>jcr:read </code> <code>fd-service</code> に変更します。また、<code>forms-user</code></em>に<span class="kbd">deny jcr:addChildNodes</span>を追加して、別のACLもアタッチします</li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -193,7 +193,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
  </tbody> 
 </table>
 
-## テーマエディタについて {#about-the-theme-editor}
+## テーマエディタについて  {#about-the-theme-editor}
 
 AEM Forms にはテーマエディターが付属します。これは、ビジネスユーザーやWebデザイナー/開発者に使いやすいインターフェイスで、様々なアダプティブフォームやインタラクティブなコミュニケーション要素のスタイル設定に必要な機能を簡単に提供します。 テーマを作成すると、フォーム、インタラクティブ通信、レター、ドキュメントフラグメント、データディクショナリなど、個別のエンティティとして保存されます。
 
@@ -201,7 +201,7 @@ AEM Forms にはテーマエディターが付属します。これは、ビジ�
 
 テーマエディターは、2つのパネルに分かれています。
 
-* **キャンバス** — 右側に表示されます。 キャンバスには、サンプルのアダプティブフォームまたはインタラクティブ通信が表示されます。スタイルを変更すると、その変更内容がキャンバス上で即時に反映されます。また、キャンバスから直接オブジェクトを選択して、関連するスタイルを検索し、そのスタイルを編集することができます。上部にあるデバイスの解像度のルーラーにより、キャンバスが制御されます。解像度のブレークポイントをルーラーで選択すると、各解像度について、サンプルのフォームまたはインタラクティブ通信のプレビューが表示されます。キャンバスについては、[下記](/help/forms/using/themes.md#using-canvas)で説明されています。
+* **キャンバス**  — 右側に表示されます。キャンバスには、サンプルのアダプティブフォームまたはインタラクティブ通信が表示されます。スタイルを変更すると、その変更内容がキャンバス上で即時に反映されます。また、キャンバスから直接オブジェクトを選択して、関連するスタイルを検索し、そのスタイルを編集することができます。上部にあるデバイスの解像度のルーラーにより、キャンバスが制御されます。解像度のブレークポイントをルーラーで選択すると、各解像度について、サンプルのフォームまたはインタラクティブ通信のプレビューが表示されます。キャンバスについては、[下記](/help/forms/using/themes.md#using-canvas)で説明されています。
 
 * **サイドバー** - 左側に表示されます。以下のアイテムがあります。
 
@@ -221,16 +221,16 @@ AEM Forms にはテーマエディターが付属します。これは、ビジ�
 
       すべてのフィールドコンポーネントを特定の背景色でカスタマイズする場合、年齢、名前、住所などのすべてのフィールドは背景色を継承します。 年齢などの数値ボックスを選択し、幅を短くすると、年齢や家族の人数など、すべての数値ボックスの幅が短くなります。テキストボックスの幅は変更されません。
 
-   * **状態：** 特定の状態のオブジェクトのスタイルをカスタマイズできます。 例えば、デフォルト、フォーカス、無効、ホバー、エラーの状態におけるオブジェクトの見え方を指定することができます。
+   * **状態：特定の状態のオブジェクトのスタイルをカスタマイズ** できます。例えば、デフォルト、フォーカス、無効、ホバー、エラーの状態におけるオブジェクトの見え方を指定することができます。
    * **プロパティカテゴリ**：スタイル設定プロパティには、様々なカテゴリがあります。例えば、「Dimensionと位置」、「テキスト」、「背景」、「境界線」、「効果」などです。 各カテゴリで、スタイル設定情報を指定します。 例えば、「背景」で、背景色と画像とグラデーションを指定できます。
-   * **詳細：** カスタムCSSをオブジェクトに追加できます。このCSSは、重なりがある場合に視覚コントロールの定義で指定されたプロパティを上書きします。
+   * **詳細：カスタムCSSをオブジェクトに追加** できます。オブジェクトは、重なりがある場合に視覚コントロールの定義に対するプロパティを上書きします。
    * **CSS を表示**：選択したコンポーネントの CSS が表示されます。
 
    また、サイドバーの下部に矢印が表示されます。矢印をクリックすると、「**成功をシミュレート**」と「**エラーをシミュレート」という 2 つのオプションがさらに表示されます。**&#x200B;これらのオプションは、上記のオプションとあわせて、詳細が[下記](/help/forms/using/themes.md#using-rail)で説明されています。
 
-   [![レールとキャンバスがハイライトされたテーマエディター](assets/themes.png)](assets/themes-1.png) **A.** Sidebar **B.** Canvas
+   [![レールとキャンバスがハイライトされたテーマエディター](assets/themes.png)](assets/themes-1.png) **A.** サイドバー **B.** キャンバス
 
-### コンポーネントのスタイル設定 {#styling-components}
+### コンポーネントのスタイル設定{#styling-components}
 
 複数のアダプティブフォームとインタラクティブ通信で、同じテーマを使用することができます。その場合、そのテーマ内で指定したコンポーネントの書式設定がアダプティブフォームとインタラクティブ通信にインポートされます。タイトル、説明、パネル、フィールド、アイコン、テキストボックスなど、様々なコンポーネントのスタイルを設定できます。 テーマ内でウィジェットを使用して、コンポーネントのプロパティを設定することができます。CSS オーバーライドセクションでは、CSS コードを記述することができ、各種のカスタムセレクターも用意されているため、CSS や LESS に関する知識は必須ではありませんが、こうした知識があった方が望ましいです。CSS オーバーライドセクションは、サイドバーでコンポーネントを選択すると表示されます。
 
@@ -301,8 +301,8 @@ AEM Forms のテーマでは、フォームと非インタラクティブ通信�
 
 スタイルにカスタム名を付けると、スタイルはテーマに関連付けられて、他のテーマには使用できなくなります。保存したスタイルを削除するには、次の手順を実行します。
 
-1. On the CANVAS toolbar, click **[!UICONTROL Theme Options]** ![theme-options](assets/theme-options.png) > **[!UICONTROL Manage Styles]**.
-1. In the Manage Styles dialog, select a saved style, click **[!UICONTROL Delete]**.
+1. [キャンバス]ツールバーで、[テーマのオプション]**[!UICONTROL [![テーマのオプション]](assets/theme-options.png) [**[!UICONTROL &#x200B;スタイルの管理&#x200B;]**]をクリックします。]**
+1. [スタイルを管理]ダイアログで、保存されているスタイルを選択し、[**[!UICONTROL 削除]**]をクリックします。
 
    ![保存したスタイルの削除](assets/manage-styles.png)
 
@@ -314,15 +314,15 @@ AEM Forms のテーマでは、フォームと非インタラクティブ通信�
 >
 >フィールドに無効な文字が入力されると、フィールドの境界線の色が赤に変わり、画面の左上隅にエラーメッセージが表示されます。例えば、数字が有効なテキストボックスにアルファベットを入力すると、入力ボックスの境界線の色が赤に変わります。このようなテーマは、上部に表示されるエラーを解決しないと保存できません。
 
-### Theme with another adaptive form or interactive communication {#theme-with-another-adaptive-form-or-interactive-communication}
+### テーマと別のアダプティブフォームまたはインタラクティブ通信{#theme-with-another-adaptive-form-or-interactive-communication}
 
 テーマを作成する場合、テーマエディターに付属するフォームが同時に作成されます。このフォームのコンポーネントにスタイルを設定します。テーマエディターに付属のフォームの代わりに、フォームまたはインタラクティブな通信を選択して、スタイルを設定し、結果をプレビューすることができます。
 
 テーマエディターのキャンバス上で現在のフォームまたはインタラクティブ通信を置き換えるには、以下の手順を実行します。
 
-1. In the THEME EDITOR panel, click **[!UICONTROL Theme Options]** ![theme-options](assets/theme-options.png) **[!UICONTROL > Configure]**.
+1. THEME EDITORパネルで、「**[!UICONTROL Theme Options]** ![theme-options](assets/theme-options.png) **[!UICONTROL >設定]**」をクリックします。
 
-1. In the General tab, browse and select a form or interactive communication for the **[!UICONTROL Adaptive Form/Document]** field.
+1. 「一般」タブで、**[!UICONTROL アダプティブフォーム/ドキュメント]**&#x200B;フィールドのフォームまたはインタラクティブな通信を参照して選択します。
 
 ### 取り消し／やり直し {#redo-undo}
 
@@ -330,7 +330,7 @@ AEM Forms のテーマでは、フォームと非インタラクティブ通信�
 
 ![やり直し](assets/redo-undo.png)
 
-**図：***キャンバスの「取り消し/やり直し」ボタン*
+**図：キャンバスの** *取り消し/やり直しボタン*
 
 「取り消し／やり直し」ボタンは、テーマエディターでコンポーネントのスタイルを設定すると表示されます。
 
@@ -348,31 +348,31 @@ AEM Forms のテーマでは、フォームと非インタラクティブ通信�
 
 キャンバスツールバーには、以下が表示されます。
 
-* **[!UICONTROL サイドパネル]**![を切り替え](assets/toggle-side-panel.png)：サイドパネル：サイドバーの表示/非表示を切り替えることができます。
+* **[!UICONTROL Toggle Side]** ![Paneltoggle-side-panel](assets/toggle-side-panel.png):サイドバーの表示/非表示を切り替えることができます。
 
-* **[!UICONTROL Theme Options]**![theme-options](assets/theme-options.png):3つのオプションを提供
+* **[!UICONTROL Theme]** ![Optionstheme-options](assets/theme-options.png):3つのオプションを提供
 
    * 設定：プレビューフォームまたは対話型通信、基本clientlib、およびtypekitの設定を選択するオプションを提供します。
    * テーマ CSS を表示：選択したテーマの CSS が生成されます。
    * スタイルを管理：テキストと画像のスタイルを管理するためのオプションが用意されています。
    * ヘルプ：テーマエディターの画像によるガイドツアーを実行します。
 
-* **[!UICONTROL エミュレータ]**![ルーラ](assets/ruler.png):テーマの外観を様々な画面サイズでエミュレートします。 表示サイズはエミュレーターでブレークポイントとして処理されます。ブレークポイントを選択してスタイル設定することができます。例えば、デスクトップとタブレットは 2 つのブレークポイントです。ブレークポイントごとに異なるスタイルを指定できます。
+* **[!UICONTROL エ]** ![ミュレータルーラ](assets/ruler.png):テーマの外観を様々な画面サイズでエミュレートします。表示サイズはエミュレーターでブレークポイントとして処理されます。ブレークポイントを選択してスタイル設定することができます。例えば、デスクトップとタブレットは 2 つのブレークポイントです。ブレークポイントごとに異なるスタイルを指定できます。
 
 コンポーネントをキャンバスで選択すると、その上部にコンポーネントツールバーが表示されます。コンポーネントツールバーにより、コンポーネントの選択や汎用コンポーネントへの切り替えを行うことができます。例えば、パネルの数値テキストボックスを選択するとします。コンポーネントツールバーに以下のオプションが表示されます。
 
 * **[!UICONTROL 数値ボックスウィジェット]**：サイドバーで外観をカスタマイズするコンポーネントを選択できます。
 * **[!UICONTROL フィールドウィジェット]**：スタイル設定の一般的なコンポーネントを選択できます。この例では、スタイル設定のために、すべてのテキスト入力コンポーネント（テキストボックス/数値ボックス/数値ステッパー/日付入力）が選択されています。
 
-* ![field-level](assets/field-level.png):スタイル設定の汎用コンポーネントに切り替えることができます。 数値ボックスを選択してこのアイコンをタップすると、フィールドコンポーネントが選択されます。フィールドコンポーネントを選択してこのアイコンをタップすると、パネルが選択されます。このアイコンをタップし続けて選択すると、最終的にスタイル設定用のレイアウトが選択されます。
+* ![field-level](assets/field-level.png):スタイル設定の汎用コンポーネントに切り替えることができます。数値ボックスを選択してこのアイコンをタップすると、フィールドコンポーネントが選択されます。フィールドコンポーネントを選択してこのアイコンをタップすると、パネルが選択されます。このアイコンをタップし続けて選択すると、最終的にスタイル設定用のレイアウトが選択されます。
 
 >[!NOTE]
 >
 >コンポーネントのツールバーで使用できるオプションは、選択したコンポーネントにより異なります。
 
-![コンポーネントのツールバー](assets/overlay.png)
+![コンポーネントツールバー](assets/overlay.png)
 
-**図：***キャンバスの数値ボックス上のコンポーネントツールバー*
+**図：キャンバスの数値ボックスの** *コンポーネントツールバー*
 
 ### サイドバーの使用 {#using-rail}
 
@@ -423,7 +423,7 @@ AEM Forms のテーマでは、フォームと非インタラクティブ通信�
    <td><p>アドバンス</p> </td> 
    <td><p>以下を追加できます。</p> 
     <ul> 
-     <li>Properties for <code>::before</code> and <code>::after</code> pseudo elements to add content after or before default content in the selector, and style it.<br /> <a href="https://www.w3schools.com/css/css_pseudo_elements.asp" target="_blank">CSS 疑似要素</a>を参照してください。</li> 
+     <li>セレクター内のデフォルトコンテンツの後または前にコンテンツを追加する<code>::before</code>および<code>::after</code>擬似要素のプロパティ。スタイルを設定します。<br /> <a href="https://www.w3schools.com/css/css_pseudo_elements.asp" target="_blank">CSS 疑似要素</a>を参照してください。</li> 
      <li>コンポーネントにインラインで追加されており、カスタムのセレクターを書き込むカスタムの CSS コード </li> 
     </ul> <p>カスタムの CSS コードを追加すると、サイドバーのオプションを使用して追加したカスタマイズがオーバーライドされます。 </p> </td> 
   </tr> 
@@ -444,7 +444,7 @@ AEM Forms のテーマでは、フォームと非インタラクティブ通信�
 
    エラー状態のスタイル設定を指定した場合のコンポーネントの見え方を確認できます。たとえば、フォームで顧客がパスワードを設定します。ユーザーは、指定されたガイドラインに従いパスワードを設定します。指定されたガイドラインに従わずにユーザーがパスワードを入力した場合、テキストボックスは赤色に変わります。テキストボックスが赤色に変わると、エラー状態になります。エラー状態のコンポーネントのスタイルを設定し、その外観を「エラーをシミュレート」オプションでシミュレートすることができます。
 
-### コンポーネントのスタイル設定 {#styling-a-component}
+### コンポーネントのスタイル設定  {#styling-a-component}
 
 たとえば、フォームに 2 つのタイプのテキストボックスがあるとします。一方は数値のみ、もう一方は英数字の値を入力できます。数値のみを入力できるテキストボックスのスタイル設定をカスタマイズできます（数値ボックス）。
 
@@ -458,12 +458,12 @@ AEM Forms のテーマでは、フォームと非インタラクティブ通信�
 
    * ![フィールドレベル](assets/field-level.png)
 
-1. Select **[!UICONTROL Numeric Box Widget]**.
+1. **[!UICONTROL 数値ボックスウィジェット]**&#x200B;を選択します。
 1. サイドバーのタイトルが「数値ボックスウィジェット」に変わり、外観をカスタマイズするオプションが表示されます。
 
-   Use **[!UICONTROL Dimension &amp; Position]** option in the sidebar to customize size of the component. Ensure that the State is **[!UICONTROL Default]**.
+   サイドバーの&#x200B;**[!UICONTROL Dimensionと位置]**&#x200B;オプションを使用して、コンポーネントのサイズをカスタマイズします。 状態が&#x200B;**[!UICONTROL デフォルト]**&#x200B;であることを確認します。
 
-Instead of selecting **[!UICONTROL Numeric Box Widget]**, select **[!UICONTROL Field Widget]** in the component toolbar, and perform the steps above. When you select dimensions for **[!UICONTROL Field Widget]** option, all the text boxes except the numeric box have the same size.
+「**[!UICONTROL 数値ボックスウィジェット]**」を選択する代わりに、コンポーネントツールバーで「**[!UICONTROL フィールドウィジェット]**」を選択し、上記の手順を実行します。 「**[!UICONTROL フィールドウィジェット]**」オプションのサイズを選択すると、数値ボックスを除くすべてのテキストボックスは同じサイズになります。
 
 ### 特定の状態のフィールドのスタイル設定 {#styling-fields-given-state}
 
@@ -476,16 +476,16 @@ Instead of selecting **[!UICONTROL Numeric Box Widget]**, select **[!UICONTROL F
    サイドバーに、コンポーネントのスタイル設定をカスタマイズするためのオプションが表示されます。
 
 1. サイドバーで、状態を選択します。例えば、エラー状態です。
-1. Use options such as **[!UICONTROL Border, Background]** in the sidebar to customize how the component looks.
-1. Use the **[!UICONTROL Simulate Error]** option at the bottom of the sidebar to see how the styling looks in editing.
+1. サイドバーの「境界線」、「背景」]**などのオプションを使用して、コンポーネントの外観をカスタマイズします。**[!UICONTROL 
+1. サイドバーの下部にある「エラーをシミュレート」**[!UICONTROL オプションを使用して、編集時のスタイル設定の見え方を確認します。]**
 
 状態を指定した後にコンポーネントのスタイル設定をカスタマイズする場合、カスタマイズは特定のコンポーネントにのみ現れます。たとえば、ホバー状態が選択されているときにコンポーネントのスタイル設定をカスタマイズするとします。この場合、テーマの適用先となるレンダリング後のフォームやインタラクティブ通信にポインターを置くと、コンポーネントのカスタマイズ内容が表示されます。
 
-エラーと成功以外の状態の動作をシミュレートするには、プレビューモードを使用します。To use Preview mode, click **[!UICONTROL Preview]** in the page toolbar.
+エラーと成功以外の状態の動作をシミュレートするには、プレビューモードを使用します。プレビューモードを使用するには、ページツールバーの&#x200B;**[!UICONTROL プレビュー]**&#x200B;をクリックします。
 
 ### 小型画面向けレイアウトのスタイル設定 {#styling-layouts-for-smaller-displays}
 
-キャンバスのルーラーを使用して、画面が小さいデバイスのブレークポイントを選択します。Click emulator ![ruler](assets/ruler.png) in Canvas to view ruler and breakpoints. ブレークポイントを使用すると、フォームやインタラクティブな通信を、スマートフォンやタブレットなどの異なるデバイスに関する画面サイズにプレビューできます。 テーマエディターでは、複数の表示サイズがサポートされています。
+キャンバスのルーラーを使用して、画面が小さいデバイスのブレークポイントを選択します。キャンバスのエミュレーター![ruler](assets/ruler.png)をクリックして、表示ルーラーとブレークポイントを指定します。 ブレークポイントを使用すると、フォームやインタラクティブな通信を、スマートフォンやタブレットなどの異なるデバイスに関する画面サイズにプレビューできます。 テーマエディターでは、複数の表示サイズがサポートされています。
 
 異なるブレークポイントにスタイルを設定するには、次の手順を実行します。
 
@@ -500,12 +500,12 @@ Instead of selecting **[!UICONTROL Numeric Box Widget]**, select **[!UICONTROL F
 
 ### テーマ内で Web フォントを使用する {#using-web-fonts-in-a-theme}
 
-これまでに行った手順により、Web サービスで使用できるフォントを、アダプティブフォームとインタラクティブ通信でも使用できるようになりました。Adobe の Web フォントサービスである [Typekit](https://typekit.com/) は、設定サービスとしてすぐに使用することができます。To use Typekit, create a kit, and fonts in it, and obtain the Kit ID from [Typekit website](https://typekit.com/).
+これまでに行った手順により、Web サービスで使用できるフォントを、アダプティブフォームとインタラクティブ通信でも使用できるようになりました。Adobe の Web フォントサービスである [Typekit](https://typekit.com/) は、設定サービスとしてすぐに使用することができます。Typekitを使用するには、キットとフォントを作成し、[TypekitのWebサイト](https://typekit.com/)からキットIDを取得します。
 
 次の手順を実行して、AEM で Typekit を設定します。
 
-1. In the author instance, click ![adobeexperiencemanager](assets/adobeexperiencemanager.png)**[!UICONTROL Adobe Experience Manager > Tools ]**![hammer](assets/hammer.png)**[!UICONTROL > Deployment > Cloud Services ]**.
-1. **[!UICONTROL Cloud Services]** ページで、サードパーティのサービス **[!UICONTROL /Typekitに移動し、「Typekit」の下にある「今すぐ設定]** 」をクリック ******** します。 If a configuration is already available, click the **+** button to create a new instance.
+1. オーサーインスタンスで、![adobeexperiencemanager](assets/adobeexperiencemanager.png)**[!UICONTROL Adobe Experience Manager/ツール&#x200B;]**![hammer](assets/hammer.png)**[!UICONTROL &#x200B;展開/Cloud Services ]**をクリックします。
+1. **[!UICONTROL Cloud Services]**&#x200B;ページで、**[!UICONTROL サードパーティサービス]**/**[!UICONTROL Typekit]**&#x200B;に移動し、Typekitの下の&#x200B;**[!UICONTROL 今すぐ設定]**&#x200B;をクリックします。 設定が既に使用可能な場合は、「**+**」ボタンをクリックして新しいインスタンスを作成します。
 1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログで、新しい設定のタイトルと名前を指定し、「**[!UICONTROL 作成]**」をクリックします。
 
    設定ページにリダイレクトされます、
@@ -515,23 +515,23 @@ Instead of selecting **[!UICONTROL Numeric Box Widget]**, select **[!UICONTROL F
 TypeKit 設定を使用するようにテーマを設定するには、次の手順を実行します。
 
 1. オーサーインスタンスで、テーマエディターにあるテーマを開きます。
-1. In the theme editor, navigate to **[!UICONTROL Theme Options]** ![theme-options](assets/theme-options.png) > **[!UICONTROL Configure]**.
+1. テーマエディターで、**[!UICONTROL テーマのオプション]** ![テーマのオプション](assets/theme-options.png) > **[!UICONTROL 設定]**&#x200B;に移動します。
 1. 「**[!UICONTROL Typekit 設定]**」フィールドで、キットを選択して「**[!UICONTROL 保存]**」をクリックします。
 
    これで、テーマのフォントファミリーのプロパティにフォントが追加されたことが分かります。
 
-### テーマエディターでのフォントの一覧表示と選択 {#listing-and-selecting-fonts-in-theme-editor}
+### テーマエディターでのフォントの一覧表示と選択  {#listing-and-selecting-fonts-in-theme-editor}
 
 テーマ設定サービスを使用して、テーマエディターにフォントを追加できます。次の手順を実行して、フォントを追加します。
 
-1. 管理者権限を使用して AEM Web コンソールにログインします。URL for the AEM Web Console is `https://[server]:[port]/system/console/configMgr`.
-1. Open **[!UICONTROL Adaptive Form Theme Configuration Service]**.
+1. 管理者権限を使用して AEM Web コンソールにログインします。AEM WebコンソールのURLは`https://[server]:[port]/system/console/configMgr`です。
+1. **[!UICONTROL アダプティブフォームテーマ設定サービス]**&#x200B;を開きます。
 
    ![theme-config](assets/theme-config.png)
 
 1. 「+」をクリックし、フォントの名前を指定して「**保存**」をクリックします。フォントが追加され、テーマエディターで使用可能になります。
 
-#### テーマエディターでのフォントの選択 {#selecting-fonts-in-theme-editor}
+#### テーマエディターでのフォントの選択  {#selecting-fonts-in-theme-editor}
 
 「+」ボタンを使用して、フォントを追加できます。フォントを追加すると、サイドバーに一覧表示されます。
 
@@ -549,9 +549,9 @@ TypeKit 設定を使用するようにテーマを設定するには、次の手
 
 「フォントファミリー」フィールドは複数のフォントをサポートしています。フォントを入力したら、ブラウザーでこれを見つけ、選択したコンポーネントに適用します。ブラウザーでフォントが見つからない場合、フォントファミリーで隣にあるフォントを探します。探している特定のフォントを入力して開始できます。使用するフォントが見つからない場合は、フォントファミリーに一般的なフォントを入力して使用することができます。
 
-#### テーマエディター内で適用されているスタイルをマスクする {#mask-styles-applied-in-theme-editor}
+#### テーマエディター内で適用されているスタイルをマスクする  {#mask-styles-applied-in-theme-editor}
 
-テーマ内で適用されているスタイルをマスクできるようになりました。In the theme editor sidebar, you can use the ![toggle_eye](assets/toggle_eye.png)icon to disable an applied style. 例えば、フォームまたはインタラクティブ通信内のコンポーネントのサイズを変更した場合、プロパティの左側に表示されているマスクボタンを使用して、そのプロパティを無効にすることができます。テーマを保存すると、選択した「マスク」オプションが保持されます。
+テーマ内で適用されているスタイルをマスクできるようになりました。テーマエディターのサイドバーで、![toggle_eye](assets/toggle_eye.png)アイコンを使用して、適用したスタイルを無効にできます。 例えば、フォームまたはインタラクティブ通信内のコンポーネントのサイズを変更した場合、プロパティの左側に表示されているマスクボタンを使用して、そのプロパティを無効にすることができます。テーマを保存すると、選択した「マスク」オプションが保持されます。
 
 ![テーマエディターのサイドバーで「マスク」オプションが使用可能になる](assets/mask-styles.png)
 
@@ -559,26 +559,26 @@ TypeKit 設定を使用するようにテーマを設定するには、次の手
 
 ![マスクされたスタイル設定とマスクされていないスタイル設定](assets/mask2.png)
 
-## Applying a theme to a form or interactive communication {#applying-a-theme-to-a-form-or-interactive-communication-br}
+## テーマをフォームまたはインタラクティブ通信に適用する{#applying-a-theme-to-a-form-or-interactive-communication-br}
 
 テーマをアダプティブフォームに適用するには、次の手順を実行します。
 
 1. フォームを編集モードで開きます。フォームを編集モードで開くには、目的のフォームを選択して「**[!UICONTROL 開く]**」をクリックします。
-1. In the edit mode, select a component, then click ![field-level](assets/field-level.png) > **[!UICONTROL Adaptive Form Container]**, and then click ![cmppr](assets/cmppr.png).
+1. 編集モードで、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)/**[!UICONTROL アダプティブフォームコンテナ]**&#x200B;をクリックし、![cmpr](assets/cmppr.png)をクリックします。
 
    サイドバーのフォームのプロパティを編集することができます。
 
 1. サイドバーで、「**[!UICONTROL スタイル設定]**」をクリックします。
-1. Select your theme from the **[!UICONTROL Adaptive Form Theme]** drop-down and click **[!UICONTROL Done]** ![check-button](assets/check-button.png).
+1. テーマを&#x200B;**[!UICONTROL アダプティブフォームのテーマ]**&#x200B;ドロップダウンから選択し、**[!UICONTROL 完了]** ![チェックボタン](assets/check-button.png)をクリックします。
 
 インタラクティブな通信にテーマを適用するには：
 
 1. インタラクティブ通信を編集モードで開きます。インタラクティブ通信を編集モードで開くには、目的のインタラクティブ通信を選択して「**[!UICONTROL 開く]**」をクリックします。
-1. In the edit mode, select a component, then click ![field-level](assets/field-level.png) >**[!UICONTROL Document Container]**, and then click ![cmppr](assets/cmppr.png).
+1. 編集モードで、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)/**[!UICONTROL ドキュメントコンテナ]**&#x200B;をクリックし、![cmppr](assets/cmppr.png)をクリックします。
 
    サイドバーのフォームのプロパティを編集することができます。
 
-1. In the sidebar, under **[!UICONTROL Basic]**, select your theme from the **[!UICONTROL Theme]** drop-down and click **[!UICONTROL Done]** ![check-button](assets/check-button.png).
+1. サイドバーの「**[!UICONTROL 基本]**」で、「**[!UICONTROL テーマ]**」ドロップダウンからテーマを選択し、「**[!UICONTROL 完了]**![チェックボタン](assets/check-button.png)」をクリックします。
 
 ### 実行時にフォームのテーマを変更する {#change-theme-of-a-form-at-runtime}
 
@@ -592,13 +592,13 @@ themeOverride パラメーターを使用して、実行時にテーマを適用
 
 「`themeOverride`」オプションを使用して、テーマにパスを提供できます。フォームのテーマを変更し、更新されたスタイルでフォームを更新します。
 
-## Getting specific appearance using Themes {#specific-af-appearance}
+## テーマ{#specific-af-appearance}を使用した特定の外観の取得
 
 AEM Forms には、すぐに使用できるデフォルトのキャンバステーマのほかに、様々なテーマが用意されています。別のテーマを使用してフォームやインタラクティブ通信を設計し、その設計内容を変更する場合は、テーマライブラリフォルダーからテーマをコピーします。コピーしたテーマを Theme Library フォルダーの外部に貼り付け、コピーしたテーマを必要な変更に応じて編集します。
 
 テーマをコピーするには、以下の手順を実行します。
 
-1. In authoring instance, navigate to **[!UICONTROL Adobe Experience Manager > Forms > Themes]**.
+1. オーサリングインスタンスで、**[!UICONTROL Adobe Experience Manager/Forms/テーマ]**&#x200B;に移動します。
 1. Theme Library フォルダーを開きます。
 1. Theme Library フォルダーで、対応するすぐに使用可能なテーマにポインターを置いて、「**[!UICONTROL コピー]**」をタップします。
 1. コピーしたテーマを Theme Library フォルダーの外部に貼り付けます。
@@ -612,11 +612,11 @@ AEM Forms には、すぐに使用できるデフォルトのキャンバステ�
 
 ## 他のアダプティブフォームの使用例への影響 {#impact-on-other-adaptive-form-use-cases}
 
-* **フォームの発行/非公開：** フォームの発行時に、適用するテーマも発行されます（まだ発行されていない場合）
-* **フォームの読み込み/書き出し：** フォームの読み込みまたは書き出し時に、関連するテーマも自動的に読み込まれるか、書き出されます。
-* **フォームの参照：** フォーム参照の「参照」セクションには、テーマの追加のエントリが含まれています。
-* **フォームの最終変更時刻：** 関連するテーマが変更されると更新されます。
-* **A/Bテスト：** A/Bテストでは、2つのバージョンのフォームに異なるテーマを適用できます。 2つのテーマの情報は、2つのガイドコンテナに個別に格納される。
+* **フォームの発行/非公開：フォーム** の発行時に、適用するテーマも発行します（まだ発行されていない場合）
+* **フォームの読み込み/書き出し：フォーム** の読み込みまたは書き出し時に、関連するテーマも自動的に読み込まれるか書き出されます。
+* **フォームの参照：フォーム参照** の「参照」セクションには、テーマの追加のエントリが含まれています。
+* **フォームの最終変更時刻：関連するテーマが変更されると** 更新されます。
+* **A/Bテスト：A/Bテスト** では、2つのバージョンのフォームに異なるテーマを適用できます。2つのテーマの情報は、2つのガイドコンテナに個別に格納される。
 
 ## CSS 生成シーケンス {#css-generation-sequence}
 
@@ -634,15 +634,15 @@ AEM Forms には、すぐに使用できるデフォルトのキャンバステ�
 
 生成された CSS は次のオプションを使用して表示できます。
 
-* サイドバーの「**CSS を表示**」オプション：テーマでコンポーネントを選択すると、サイドバーに「CSS を表示」オプションが表示されます。It shows the generated CSS, including CSS for `::before` and `::after` pseudo elements.
+* サイドバーの「**CSS を表示**」オプション：テーマでコンポーネントを選択すると、サイドバーに「CSS を表示」オプションが表示されます。これは、`::before`および`::after`擬似要素のCSSを含む、生成されたCSSを表示します。
 
-* **キャンバスツールバーの「表示テーマCSS** 」オプション：キャンバスツールバーで、 ![テーマオプション](assets/theme-options.png) / **表示テーマCSSをクリックします**。 テーマエディターで定義したプロパティから生成されたテーマCSS全体を表示できます。
+* **キャンバスツールバーの「表示テーマ** CSS」オプション：キャンバスツールバーで、 ![theme-options](assets/theme-options.png) / **表示テーマCSSをクリックします**。テーマエディターで定義したプロパティから生成されたテーマCSS全体を表示できます。
 
 ## トラブルシューティング、推奨事項、ベストプラクティス {#troubleshooting-recommendations-and-best-practices}
 
 * **別のテーマのアセットの回避**
 
-   テーマを編集する場合、他のテーマからアセット（画像など）を参照して追加できます。 例えば、ページの背景を編集しているとします。For example, when you select **[!UICONTROL Page]** ![edit-button](assets/edit-button.png)> **[!UICONTROL Background > Add > Image]**, you see a dialog that lets you browse and add images in other theme.
+   テーマを編集する場合、他のテーマからアセット（画像など）を参照して追加できます。 例えば、ページの背景を編集しているとします。例えば、**[!UICONTROL ページ]** ![編集ボタン](assets/edit-button.png) **[!UICONTROL 背景/画像]**&#x200B;を選択すると、他のテーマの画像を参照して追加できる追加ダイアログが表示されます。
 
 * アセットを別のテーマから追加し、そのテーマが移動または削除されると、現在のテーマに問題が生じる場合があります。他のテーマからアセットを参照して追加しないようにすることをお勧めします。
 
@@ -652,7 +652,7 @@ AEM Forms には、すぐに使用できるデフォルトのキャンバステ�
 
       基本のクライアントライブラリにはスタイル情報が含まれています。 テーマ内のクライアント側ライブラリでスタイル設定情報を使用するには、次の手順を実行します。
 
-      1. Navigate to **[!UICONTROL Experience Manager > Forms > Themes]**.
+      1. **[!UICONTROL Experience Manager/Forms/テーマ]**&#x200B;に移動します。
       1. テーマページで、テーマを選択し、「**[!UICONTROL プロパティの表示]**」をクリックします。
       1. プロパティページが開くので、「**[!UICONTROL 詳細]**」をクリックします。
       1. 「詳細」タブの「Clientlib の場所」フィールドで、使用するクライアントライブラリを参照して選択します。
@@ -674,7 +674,7 @@ AEM Forms には、すぐに使用できるデフォルトのキャンバステ�
 
 * **クライアント側ライブラリの使用**
 
-   If you want to create client libraries to import styling information, see [Using Client Side Libraries](/help/sites-developing/clientlibs.md). クライアントライブラリを作成した後、上記の手順を使用して、テーマに読み込むことができます。
+   スタイル情報を読み込むためのクライアントライブラリを作成する場合は、[クライアント側ライブラリの使用](/help/sites-developing/clientlibs.md)を参照してください。 クライアントライブラリを作成した後、上記の手順を使用して、テーマに読み込むことができます。
 
 * **コンテナパネルのレイアウト幅の変更**
 
