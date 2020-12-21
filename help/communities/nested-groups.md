@@ -18,17 +18,17 @@ ht-degree: 53%
 ---
 
 
-# ネストされたグループの作成 {#authoring-nested-groups}
+# ネストされたグループの作成  {#authoring-nested-groups}
 
 ## オーサー環境でのグループの作成 {#creating-groups-on-author}
 
 オーサー環境で、グローバルナビゲーションから、
 
-* Select **[!UICONTROL Communities > Sites]**
-* Select **[!UICONTROL engage folder]** to open it
-* Select the card for the **[!UICONTROL Getting Started Tutorial]**  English site
+* **[!UICONTROL コミュニティ/サイト]**&#x200B;を選択します
+* **[!UICONTROL エンゲージメントフォルダー]**&#x200B;を選択して開きます
+* **[!UICONTROL はじめに/チュートリアル]**&#x200B;英語サイトのカードを選択します
    * カードの画像を選択
-   * Do *not* select an icon
+   * アイコンを&#x200B;*選択しない*
 
 そうすると、[グループコンソール](groups.md)に移動します。
 
@@ -40,18 +40,18 @@ ht-degree: 53%
 
 ## メインの Arts グループの作成 {#create-main-arts-group}
 
-このグループを作成できるのは、engage のサイト構造にグループ機能が含まれているからです。The configuration of the function in the site&#39;s `Reference Template` defaults to allowing the selection of any enabled group template. Thus, the template chosen for this new group will be the `Reference Group`.
+このグループを作成できるのは、engage のサイト構造にグループ機能が含まれているからです。サイトの`Reference Template`内の関数の設定は、デフォルトで有効なグループテンプレートの選択を許可します。 したがって、この新しいグループに対して選択されるテンプレートは`Reference Group`になります。
 
 これらのコンソールは、コミュニティサイトコンソールによく似ています。
 
-* Select **[!UICONTROL Create Group]**
+* 「**[!UICONTROL グループを作成]**」を選択します
 *  `1 Community Group Template` の下）で、次の手順をおこないます。
    * コミュニティグループのタイトル：Arts
    * コミュニティグループの説明：A parent group for various arts groups.
    * コミュニティグループのルート：デフォルトのまま&#x200B;**
    * 追加の使用可能なコミュニティグループの言語：プルダウンメニューを使用して、使用可能なコミュニケーショングループの言語を選択します。このメニューには、親コミュニティサイトを作成できる言語がすべて表示されます。この中から言語を選択することで、1 回の手順で複数のロケールにグループを作成できます。指定した複数の言語で、それぞれのコミュニティサイトのグループコンソールに同じグループが作成されます。
    * コミュニティグループ名：arts
-   * テンプレート： 下に降りて～を選ぶ `Reference Group`
+   * テンプレート：プルダウンして`Reference Group`を選択します。
    *  `Next`
 
       ![parenttonestedgroup](assets/parenttonestedgroup.png)
@@ -65,7 +65,7 @@ ht-degree: 53%
    * **モデレート**
       * 空のままにする（親サイトから継承）
    * **メンバーシップ**
-      * use default `Optional Membership`
+      * デフォルト`Optional Membership`を使用
    * **サムネール**
       * `optional`
    *  `Next`
@@ -73,7 +73,7 @@ ht-degree: 53%
 
 ### Arts グループ内でのグループのネスト {#nesting-groups-within-arts-group}
 
-The `groups` folder should now contain two groups (it may be necessary to refresh the page).
+これで、`groups`フォルダーに2つのグループが含まれるはずです（ページの更新が必要な場合があります）。
 
 ![createcommunitygroup](assets/createcommunitygroup.png)
 
@@ -87,38 +87,39 @@ The `groups` folder should now contain two groups (it may be necessary to refres
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
-The `arts` group should also contain a `groups` folder, but one that is empty and in which new groups can be created. アートグループフォルダーに移動し、3つのネストされたグループを作成します。それぞれ異なるメンバーシップ設定になります。
+`arts`グループには`groups`フォルダーも含める必要がありますが、空で新しいグループを作成できるフォルダーも含まれます。 アートグループフォルダーに移動し、3つのネストされたグループを作成します。それぞれ異なるメンバーシップ設定になります。
 
 1. Visiual
    * タイトル: `Visual Arts`
    * 名前：`visual`
    * テンプレート: `Reference Group`
-   * Membership: select `Optional Membership`
-A public group, open to all members
+   * メンバーシップ：`Optional Membership`を選択
+すべての会員が参加できるパブリック・グループ
 1. Auditory
    * タイトル: `Auditory Arts`
    * 名前：`auditory`
    * テンプレート: `Reference Group`
-   * Membership: select `Required Membership`
-An open group, available for members to join
+   * メンバーシップ：`Required Membership`を選択
+メンバーが参加できる、開かれたグループ
 
 1. History
 
    * タイトル: `Art History`
    * 名前：`history`
    * テンプレート: `Reference Group`
-   * メンバーシップ： 「 `Restricted Membership`秘密グループ」を選択します。例えば、招待されたメンバーにのみ表示され、招待を行います。 
+   * メンバーシップ：`Restricted Membership`を選択
+例えば、招待メンバーにのみ表示されるシークレットグループ、invite 
 [デモユーザー](tutorials.md#demo-users) `emily.andrews@mailinator.com`
 
 ページを更新して、ネストされた 3 つのグループ（サブコミュニティ）すべてを表示します。
 
 必要に応じて、コミュニティサイトコンソールからネストされたグループに移動するには、次の手順を実行します。
 
-* Select **[!UICONTROL engage folder]**
-* Select **[!UICONTROL Getting Started Tutorial]** card
-* Select **[!UICONTROL Groups folder]**
-* Select **[!UICONTROL arts card]**
-* Select **[!UICONTROL Groups folder]**
+* **[!UICONTROL エンゲージメントフォルダー]**&#x200B;を選択
+* **[!UICONTROL はじめに]**&#x200B;カードを選択
+* **[!UICONTROL Groups folder]**&#x200B;を選択
+* **[!UICONTROL アートカード]**&#x200B;を選択
+* **[!UICONTROL Groups folder]**&#x200B;を選択
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
@@ -137,7 +138,7 @@ An open group, available for members to join
 
 ## パブリッシュ環境でのエクスペリエンス {#experience-on-publish}
 
-It is possible to experience the different groups when signed in, for example with the [demo users](tutorials.md#demo-users) used for
+サインイン時に、様々なグループを体験できます。例えば、](tutorials.md#demo-users)[
 
 * Art/History グループメンバー：emily.andrews@mailinator.com／password
    * 制限付き（秘密）グループ、アート/履歴が表示されます
