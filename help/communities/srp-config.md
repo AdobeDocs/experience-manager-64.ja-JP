@@ -29,34 +29,34 @@ ht-degree: 67%
 * [コミュニティコンテンツストア](working-with-srp.md)
 * [推奨されるトポロジ](topologies.md)
 
-## ストレージ設定コンソール {#storage-configuration-console}
+## ストレージ設定コンソール  {#storage-configuration-console}
 
 ![chlimage_1-188](assets/chlimage_1-188.png)
 
 オーサー環境でストレージ設定コンソールに移動するには、
 
-* From global navigation: **[!UICONTROL Tools > Communities > Storage Configuration]**
+* グローバルナビゲーションから：**[!UICONTROL ツール/コミュニティ/ストレージ設定]**
 
 デフォルトの JCR 以外のストレージオプションを選択するには、
 
 * オプションを選択します。
 * 適切な設定
 
-   * See details for [selecting MSRP](msrp.md#select-msrp)
-   * See details for [selecting DSRP](dsrp.md#select-dsrp)
-   * See details for [selecting ASRP](asrp.md#select-asrp)
+   * [MSRP](msrp.md#select-msrp)の選択の詳細を参照
+   * [DSRP](dsrp.md#select-dsrp)の選択の詳細を参照
+   * [ASRP](asrp.md#select-asrp)の選択の詳細を参照
 
-* Select **[!UICONTROL Submit]**
+* **[!UICONTROL 送信]**&#x200B;を選択
 
 ### JCR ストレージについて {#about-jcr-storage}
 
 選択しなかった場合は、AEM リポジトリである JCR がデフォルトで使用されることに注意してください。
 
-JCR is *not* a common store shared by the author and publish environments. コミュニティコンテンツは、そのコンテンツが作成された作成者または発行環境からのみ表示されます。
+JCRは、作成者と発行環境が共有する共通のストアではありません。*a1/>*&#x200B;コミュニティコンテンツは、そのコンテンツが作成された作成者または発行環境からのみ表示されます。
 
 詳しくは、[JCR ストア](jsrp.md)を参照してください。
 
 >[!NOTE]
 >
->The absence of the node `srpc`under `/etc/socialconfig` indicates the default [JCR store](jsrp.md).
+>`/etc/socialconfig`の下にノード`srpc`がない場合は、デフォルトの[JCRストア](jsrp.md)を示します。
 
