@@ -29,13 +29,13 @@ ht-degree: 77%
 >
 >カスタムコンポーネントの開発時には、開発に使用されるサーバー上でアダプティブフォームのキャッシュを無効にしておく必要があります。
 
-## キャッシュの設定 {#configure-the-cache}
+## キャッシュの設定  {#configure-the-cache}
 
 次の手順を実行してアダプティブフォームのキャッシュを設定します。
 
-1. Go to AEM web console configuration manager at `https://[server]:[port]/system/console/configMgr`.
+1. `https://[server]:[port]/system/console/configMgr`のAEM Web Console Configuration Managerに移動します。
 1. 「**アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定**」をクリックして、設定値を編集します。
-1. In the edit configuration values dialog, specify the maximum number of forms or documents an instance of the AEM Forms server can cache in the **Number of Adaptive Forms** field. デフォルト値は 100 です。
+1. 設定値を編集ダイアログで、AEM Formsサーバーのインスタンスがキャッシュできるフォームまたはドキュメントの最大数を「**アダプティブFormsの数**」フィールドに指定します。 デフォルト値は 100 です。
 
    >[!NOTE]
    >
