@@ -18,7 +18,7 @@ ht-degree: 62%
 ---
 
 
-# AEM 6.4 Communities へのアップグレード {#upgrading-to-aem-communities}
+# AEM 6.4 Communities へのアップグレード  {#upgrading-to-aem-communities}
 
 各サイトのトポロジや機能に応じて、AEM Communities 6.4 へのアップグレード時または最新の機能パックのインストール時に次のアクションが必要になる場合があります。
 
@@ -30,11 +30,11 @@ ht-degree: 62%
 
 MSRPで設定された配置に新しいCommunities機能パックをインストールする場合、次の操作が必要になります。
 
-1. Install the [latest feature pack](deploy-communities.md#latestfeaturepack)
-2. Install the [latest Solr config files](msrp.md#upgrading)
+1. [最新の機能パック](deploy-communities.md#latestfeaturepack)をインストールします
+2. [最新のSolr構成ファイル](msrp.md#upgrading)をインストールします。
 3. MSRPの再インデックス
 
-   「 [MSRP再インデックスツール」を参照](msrp.md#msrp-reindex-tool)
+   [MSRP再インデックスツール](msrp.md#msrp-reindex-tool)を参照
 
 ### Enablement 2.0 {#enablement}
 
@@ -42,26 +42,27 @@ AEM 6.3 以降、イネーブルメント機能では、MySQL の中にレポー
 
 Enablement 1.0 からのコンテンツの移行のサポートについては、[カスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)にお問い合わせください。
 
-## AEM 6.0 からのアップグレード {#upgrading-from-aem}
+## AEM 6.0 からのアップグレード  {#upgrading-from-aem}
 
-If pre-existing UGC needs to be retained, then the means to do so depends on whether the deployment stored UGC [on-premise](#on-premise-storage) or in the [Adobe cloud](#adobe-cloud-storage).
+既存のUGCを保持する必要がある場合、その方法は、デプロイメントに格納されたUGC [オンプレミス](#on-premise-storage)と[Adobeクラウド](#adobe-cloud-storage)のどちらに保存されたかによって異なります。
 
 ### アドビクラウドストレージ {#adobe-cloud-storage}
 
 アップグレードされたサイトがアドビクラウドストレージを使用するように設定された場合、SRP のメソッドは古い場所にある既存の UGC を見つけることができなくなるので、すべての UGC が失われたかのように（誤って）表示される可能性があります。
 
-Thus, there is the ability to instruct ASRP to use `AEM 6.0 compatability-mode` to access UGC.
+したがって、ASRPに`AEM 6.0 compatability-mode`を使ってUGCにアクセスするよう指示する機能があります。
 
 AEM 6.3 のすべてのオーサーインスタンスとパブリッシュインスタンスでは、
 
 1. 管理者権限でサインインする
-2. Configure [ASRP](asrp.md)
+2. [ASRP](asrp.md)を設定
 3. 既存のUGCを表示するには、次の手順に従います。
-i. 例えば、Webコンソールを参照します。
-   [https://&lt;host>:&lt;port>/system/console/configMgr](http://localhost:4502/system/console/configMgr)ii. Locate **[!UICONTROL AEM Communities Utilities]** configuration
+i.例えば、Webコンソールを参照します。
+   [https://&lt;host>:&lt;port>/system/console/](http://localhost:4502/system/console/configMgr)
+configMgrii.**[!UICONTROL AEM Communitiesユーティリティ]**構成を探します
 iii. 選択して設定パネルを展開します
    * *オフ* **`Cloud Storage`**
-   * Select **[!UICONTROL Save]**
+   * **[!UICONTROL 保存]**&#x200B;を選択
 
 ![chlimage_1-126](assets/chlimage_1-126.png)
 
@@ -69,7 +70,7 @@ iii. 選択して設定パネルを展開します
 
 アップグレードされたサイトでクラウドストレージを使用しなかった場合、既存の UGC は、共通ストアをサポートするために AEM 6.1 Communities で導入された新しい構造に合わせて変換する必要があります。
 
-この目的で、GitHubでオープンソース移行ツールを使用できます。\
+この目的では、GitHubでオープンソース移行ツールを使用できます。\
 [AEM Communities UGC Migration Tool](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)
 
 ### Java API {#java-apis}
@@ -80,9 +81,9 @@ AEM 6.0 Social Communities から AEM 6.3 Communities にアップグレード�
 
 また、[コミュニティでの Maven の使用](maven.md)も参照してください。
 
-### JSP コンポーネントテンプレートの廃止 {#no-jsp-component-templates}
+### JSP コンポーネントテンプレートの廃止  {#no-jsp-component-templates}
 
-[ソーシャルコンポーネントフレームワーク](scf.md) (SCF)は、AEM 6.0より前のバージョンで使用されていたJava Server Pages(JSP)の代わりに、 [HandlebarsJS](https://www.handlebarsjs.com/) (HBS)テンプレート言語を使用します。
+[ソーシャルコンポーネントフレームワーク](scf.md) (SCF)は、AEM 6.0より前のバージョンで使用されたJava Server Pages(JSP)の代わりに、[HandlebarsJS](https://www.handlebarsjs.com/) (HBS)テンプレート言語を使用します。
 
 AEM 6.0 では、JSP コンポーネントは新しい HBS フレームワークコンポーネントと同じ場所に残っています（HBS コンポーネントは通常、「hbs」という名前のサブフォルダーに存在します）。
 
@@ -94,12 +95,12 @@ AEM 6.1 以降では JSP コンポーネントは完全に削除されていま�
 
 以前のバージョンから UGC を移行するだけでなく、MSRP から DSRP のように [SRP](working-with-srp.md) 間で UGC を移行する際にもこのツールを使用できます。
 
-## AEM 5.6.1 以前のバージョンからのアップグレード {#upgrading-from-aem-or-earlier}
+## AEM 5.6.1 以前のバージョンからのアップグレード  {#upgrading-from-aem-or-earlier}
 
 概念的に、コミュニティコンポーネントには 3 つの世代があります。
 
 **第 1 世代**：おおよそ CQ 5.4 から AEM 5.6.0 まで - これらは、プラットフォーム間で UGC を同期する手段としてレプリケーションを使用して UGC をローカルリポジトリに保存した **collab** コンポーネントです。その他の違いとしては、Java Server Pages(JSP)を使用した実装と、作成者環境でのみ作成されるブログ機能があります。
 
-**第 2 世代**：AEM 5.6.1 から AEM 6.1 まで - **collab** コンポーネントと **social** コンポーネントが混在しています。AEM 6.0 introduced the new [social component framework](scf.md) (SCF) and AEM 6.2 introduced a [common UGC store](working-with-srp.md) where UGC is accessed using a [storage resource provider](srp.md) (SRP).
+**第 2 世代**：AEM 5.6.1 から AEM 6.1 まで - **collab** コンポーネントと **social** コンポーネントが混在しています。AEM 6.0では、新しい[ソーシャルコンポーネントフレームワーク](scf.md) (SCF)が導入され、AEM 6.2では、[ストレージリソースプロバイダー](srp.md) (SRP)を使用してUGCにアクセスする[共通のUGCストア](working-with-srp.md)が導入されました。
 
-**第3世代**: AEM 6.2以降では、SCFにHandlebars(HBS)コンポーネントとして実装される **social** コンポーネントのみが存在し、UGC用のSRPを選択する必要があります。
+**第3世代**:aem 6.2以降では、SCFにHandlebars(HBS)コンポーネントとして実装される **** socialcomponentsのみが存在し、UGC用のSRPを選択する必要があります。
