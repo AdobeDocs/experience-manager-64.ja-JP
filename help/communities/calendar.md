@@ -27,31 +27,31 @@ ht-degree: 40%
 ドキュメントのこのセクションでは、以下の内容について説明します。：
 
 * AEMサイトへのカレンダー機能の追加
-* Configuration settings for `Calendar`components
+* `Calendar`コンポーネントの構成設定
 
 ## カレンダーをページに追加 {#adding-a-calendar-to-a-page}
 
-To add a `Calendar` component to a page in author mode, use the component browser to locate
+作成者モードで`Calendar`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して
 
 * `Communities / Calendar`
 
 コンポーネントを探し、ページ上の適切な位置（ユーザーにレビューしてもらう機能の近くなど）にドラッグします。
 
-For necessary information, visit [Communities Components Basics](basics.md).
+必要な情報については、[Communities Components Basics](basics.md)を参照してください。
 
-[必要なクライアント側のライブラリが含まれる場合](calendar-basics-for-developers.md#essentials-for-client-side) 、これがコンポー `Calendar` ネントの表示方法です。
+[必要なクライアント側ライブラリ](calendar-basics-for-developers.md#essentials-for-client-side)が含まれる場合、`Calendar`コンポーネントは次のように表示されます。
 
 ![chlimage_1-112](assets/chlimage_1-112.png)
 
 ### カレンダーの設定 {#configuring-calendar}
 
-Select the placed `Calendar`component to access and select the `Configure` icon which opens the edit dialog.
+アクセスする配置済みの`Calendar`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
 
 ![chlimage_1-113](assets/chlimage_1-113.png) ![chlimage_1-114](assets/chlimage_1-114.png)
 
 #### 「設定」タブ{#settings-tab}
 
-Under the **[!UICONTROL Settings]** tab, specify whether or not to allow tags to be applied to calendar entries.
+「**[!UICONTROL 設定]**」タブで、カレンダーエントリにタグを適用するかどうかを指定します。
 
 * **[!UICONTROL 1 ページのイベント数]**
 
@@ -71,7 +71,7 @@ Under the **[!UICONTROL Settings]** tab, specify whether or not to allow tags to
 
 * **[!UICONTROL タグ付けを許可]**
 
-   If checked, allow members to add tag labels to the events they post (see **Tag field** tab). 初期設定はオンです。
+   選択した場合、メンバーが投稿するイベントにタグラベルを追加できます（「**タグフィールド**」タブを参照）。 初期設定はオンです。
 
 * **[!UICONTROL ファイルのアップロードを許可]**
 
@@ -83,11 +83,11 @@ Under the **[!UICONTROL Settings]** tab, specify whether or not to allow tags to
 
 * **[!UICONTROL 最大ファイルサイズ]**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 このフィールドは、アップロードされるファイルのサイズ（バイト単位）を制限します。 初期設定は104857600(10 Mb)です。
 
 * **[!UICONTROL 許可されるファイルタイプ]**
 
-   チェックされている場合にのみ関連 `Allow File Uploads` します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
+   `Allow File Uploads`がチェックされている場合にのみ関連します。 ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類が指定されている場合、指定されていないファイルはアップロードできません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
 
 * **[!UICONTROL 添付する画像ファイルの最大サイズ]**
 
@@ -119,9 +119,9 @@ Under the **[!UICONTROL Settings]** tab, specify whether or not to allow tags to
 
 * **[!UICONTROL おすすめコンテンツを許可]**
 
-   If checked, the idea is able to be identified as [featured content](featured.md). 初期設定はオフです。
+   チェックすると、アイデアは[特集コンテンツ](featured.md)として識別できます。 初期設定はオフです。
 
-Under the **[!UICONTROL User Moderation]** tab, specify how the posted topics and replies (user generated content) are managed. For more information, see [Moderating User Generated Content](moderate-ugc.md).
+「**[!UICONTROL ユーザーモデレート]**」タブで、投稿されたトピックと返信（ユーザー生成コンテンツ）の管理方法を指定します。 詳しくは、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
 #### 「ユーザーモデレート」タブ{#user-moderation-tab}
 
@@ -159,17 +159,17 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted topics an
 
 * **[!UICONTROL 許可された名前空間]**
 
-   「 `Allow Tagging` 設定 **** 」タブでチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
+   「**[!UICONTROL 設定]**」タブで`Allow Tagging`がチェックされている場合に関連します。 適用できるタグは、チェック対象の名前空間カテゴリ内のタグに限定されます。 名前空間のリストには、「標準タグ」(デフォルトの名前空間)と「すべてのタグを含む」があります。 初期設定はオフで、すべての名前空間が許可されます。
 
 * **[!UICONTROL 推奨の制限]**
 
-   フォーラムに投稿するメンバーに対して提案として表示するタグの数を入力します。 Default is `-1` (no limits).
+   フォーラムに投稿するメンバーに対して提案として表示するタグの数を入力します。 初期設定は`-1`です（制限はありません）。
 
 >[!NOTE]
 >
 >新しいタグ名前空間（分類）の追加方法については、「[タグの管理](../../help/sites-administering/tags.md)」を参照してください。
 
-#### 「翻訳」タブ {#translation-tab}
+#### 「翻訳」タブ  {#translation-tab}
 
 「**[!UICONTROL 翻訳]**」タブでは、コミュニティサイトの翻訳が有効になっている場合に、特定の投稿だけでなくスレッド全体（イベントとコメント）を翻訳するかどうかを設定できます。
 
@@ -185,7 +185,7 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted topics an
 
 その他の機能は、サイト訪問者がモデレーターか、管理者か、コミュニティメンバーか、権限を持つメンバーか、匿名かによって異なります。
 
-### モデレーターおよび管理者 {#moderators-and-administrators}
+### モデレーターおよび管理者  {#moderators-and-administrators}
 
 サインインしているユーザーがモデレーター権限または管理者権限を持っている場合は、すべてのカレンダーイベントと、イベントに投稿されたコメントに対して、（コンポーネントの設定で許可されている）[モデレートタスク](moderate-ugc.md)を実行できます。
 
@@ -193,7 +193,7 @@ Under the **[!UICONTROL User Moderation]** tab, specify how the posted topics an
 
 ### メンバー {#members}
 
-When the signed in user is a community member or [privileged member](users.md#privileged-members-group) (depending on configuration), they are able to select `New Event` to create and post a new calendar event.
+サインインしたユーザーがコミュニティのメンバーまたは[特権メンバー](users.md#privileged-members-group)の場合（設定によって異なります）、`New Event`を選択して新しいカレンダーイベントを作成し、投稿することができます。
 
 具体的には、次のことが可能です。
 
@@ -213,10 +213,10 @@ When the signed in user is a community member or [privileged member](users.md#pr
 
 ## 追加情報 {#additional-information}
 
-More information may be found on the [Calendar Essentials](calendar-basics-for-developers.md) page for developers.
+詳しくは、開発者向けの[Calendar Essentials](calendar-basics-for-developers.md)ページを参照してください。
 
 カレンダーイベントとコメントのモデレートについては、「[ユーザー生成コンテンツのモデレート](moderate-ugc.md)」を参照してください。
 
-For tagging calendar events and comments, see [Tagging User Generated Content](tag-ugc.md).
+カレンダーのイベントとコメントのタグ付けについては、[ユーザー生成コンテンツのタグ付け](tag-ugc.md)を参照してください。
 
-For translation of calendar events and comments, see [Translating User Generated Content](translate-ugc.md).
+カレンダーイベントとコメントの翻訳については、[Translating User Generated Content](translate-ugc.md)を参照してください。
