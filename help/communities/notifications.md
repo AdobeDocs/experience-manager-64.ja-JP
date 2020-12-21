@@ -33,15 +33,15 @@ AEM Communities には、サインインしているコミュニティメンバ�
 通知は以下の点でアクティビティや購読と異なります。
 
 * 通知セクションへのリンクは、コミュニティサイトのヘッダーに常に存在します
-   * Activities require the [activity stream function](functions.md#activity-stream-function) to be included in the community site&#39;s structure
-   * Subscriptions require [configuration of email](email.md)
+   * アクティビティは、[アクティビティストリーム関数](functions.md#activity-stream-function)をコミュニティサイトの構造に含める必要があります
+   * 購読には電子メール](email.md)の設定が必要[
 * 通知の実装は、拡張性とプラグ可能なチャネルを通じて行われます。
    * アクティビティはWeb上でのみ使用できます
    * 購読は電子メールでのみ使用できます
 
 Communities [FP1](deploy-communities.md#latestfeaturepack) 以降、使用可能な通知チャネルは以下のとおりです。
 
-* The web channel, accessed using the `Notifications` link
+* `Notifications`リンクを使用してアクセスしたWebチャネル
 * 電子メールチャネル。電子メールが正しく設定されている場合に使用できます
 
 今後のチャネルとしてモバイルおよびデスクトップがあります。
@@ -56,11 +56,11 @@ Communities [FP1](deploy-communities.md#latestfeaturepack) 以降、使用可能
 
 **フォローの有効化**
 
-フォローを有効にするようにコンポーネントを設定する必要があります。Features that allow following are [blog](blog-feature.md), [forum](forum.md), [QnA](working-with-qna.md), [calendar](calendar.md), [filelibrary](file-library.md), and [comments](comments.md).
+フォローを有効にするようにコンポーネントを設定する必要があります。次の機能を使用できるのは、[blog](blog-feature.md)、[フォーラム](forum.md)、[QnA](working-with-qna.md)、[カレンダー](calendar.md)、[ファイルライブラリ](file-library.md)、[コメント](comments.md)です。
 
 以下の点に注意してください。
 
-* Components used within community [site templates](sites.md) and [group templates](tools-groups.md) may already be configured to allow following
+* コミュニティ[サイトテンプレート](sites.md)および[グループテンプレート](tools-groups.md)内で使用されるコンポーネントは、既に次の機能を許可するように構成されている可能性があります
 
 * メンバプロファイルは、他のメンバが従うように既に構成されています
 
@@ -68,11 +68,11 @@ Communities [FP1](deploy-communities.md#latestfeaturepack) 以降、使用可能
 
 ![chlimage_1-254](assets/chlimage_1-254.png)
 
-「**フォロー**」ボタンを使用すると、エントリをアクティビティや購読、通知としてフォローできます。Each time the **Follow** button is selected, it is possible to toggle on or off a selection. The `Email Subscriptions` selection is only present when configured.
+「**フォロー**」ボタンを使用すると、エントリをアクティビティや購読、通知としてフォローできます。「**フォロー**」ボタンを選択するたびに、選択のオン/オフを切り替えることができます。 `Email Subscriptions`選択は、設定時にのみ存在します。
 
-フォロー方法が選択されると、ボタンのテキストが「**フォロー中**」に変わります。 For convenience, it is possible to select `Unfollow All` to toggle off all methods.
+フォロー方法が選択されると、ボタンのテキストが「**フォロー中**」に変わります。 便宜上、`Unfollow All`を選択して、すべてのメソッドをオフにすることができます。
 
-The **Follow** button will appear
+「**フォロー**」ボタンが表示されます
 
 * 別のメンバーのプロファイルを表示する場合
 * フォーラム、QnA、ブログなどのメイン機能ページ
@@ -102,9 +102,9 @@ Web チャネルは常に有効になっています。
 
 ### Web 通知 {#web-notifications}
 
-A [wizard created community site](sites-console.md) now includes a link to the `Notifications` feature in the site&#39;s header bar above the banner. メッセージとは異なり、通知はすべてのコミュニティサイトに対して作成されますが、メッセージはサイト作成プロセス中に有効にする必要があります。
+[ウィザードで作成されたコミュニティサイト](sites-console.md)に、バナーの上にあるサイトのヘッダーバーに`Notifications`機能へのリンクが含まれるようになりました。 メッセージとは異なり、通知はすべてのコミュニティサイトに対して作成されますが、メッセージはサイト作成プロセス中に有効にする必要があります。
 
-When visiting the published site, selecting the `Notifications` link will display all notifications for the member.
+公開済みサイトにアクセスする場合、`Notifications`リンクを選択すると、そのメンバーに関するすべての通知が表示されます。
 
 ![chlimage_1-258](assets/chlimage_1-258.png)
 
