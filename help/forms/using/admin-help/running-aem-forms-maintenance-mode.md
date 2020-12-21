@@ -31,7 +31,7 @@ ht-degree: 95%
 
 1. Web ブラウザーに次のように入力します。
 
-   `https://`*[hostname ]*`:`*[port]* administrator username `/dsc/servlet/DSCStartupServlet?maintenanceMode=pause&user=`*[]*`&password=`*[password]*
+   `https://`*[]*`:`*[]* `/dsc/servlet/DSCStartupServlet?maintenanceMode=pause&user=`*[hostnameportadministrator ]*`&password=`*[usernamepassword]*
 
    ブラウザーウィンドウに「一時停止中」のメッセージが表示されます。
 
@@ -43,7 +43,7 @@ ht-degree: 95%
 
 1. Web ブラウザーに次のように入力します。
 
-   `https://`*[hostname]:[port ]*administrator username`/dsc/servlet/DSCStartupServlet?maintenanceMode=isPaused&user=`*[]*`&password=`*[password ]*
+   `https://`*[hostname]:[]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=isPaused&user=`*[portadministrator]* `&password=`*[usernamepassword ]*
 
    ブラウザーウィンドウにステータスが表示されます。「true」のステータスはサーバーがメンテナンスモードで動作中であることを示し、「false」はサーバーがメンテナンスモードではないことを示します。
 
@@ -51,7 +51,7 @@ ht-degree: 95%
 
 1. Web ブラウザーに次のように入力します。
 
-   `https://`*[hostname]:[port ]*administrator username`/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=`*[]*`&password=`*[password ]*
+   `https://`*[hostname]:[]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=`*[portadministrator]* `&password=`*[usernamepassword ]*
 
    ブラウザーウィンドウに「実行中」のメッセージが表示されます。
 
