@@ -16,11 +16,11 @@ ht-degree: 83%
 ---
 
 
-# アダプティブフォームと XFA フォームテンプレートとの同期 {#synchronizing-adaptive-forms-with-xfa-form-templates}
+# アダプティブフォームと XFA フォームテンプレートとの同期  {#synchronizing-adaptive-forms-with-xfa-form-templates}
 
 ## 概要 {#introduction}
 
-You can create an adaptive form based on an XFA form template ( `*.XDP` file). この再利用により、既存の XFA フォームに費やした投資を保持することができます。For information on how to use an XFA form template for creating an adaptive form, [Create an Adaptive Form based on a template](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p).
+XFAフォームテンプレート（`*.XDP`ファイル）を基にアダプティブフォームを作成できます。 この再利用により、既存の XFA フォームに費やした投資を保持することができます。XFAフォームテンプレートを使用したアダプティブフォームの作成方法については、「[テンプレートに基づくアダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p)」を参照してください。
 
 XDP ファイルのフィールドをアダプティブフォームで再利用することができます。これらのフィールドは、バインドされたフィールドと呼ばれます。バインドされたフィールドのプロパティ（スクリプト、ラベル、表示形式など）は、XDP ファイルからコピーされます。これらのプロパティには、値をオーバーライドできるものもあります。
 
@@ -38,7 +38,7 @@ AEM Forms のオーサリング環境では、XFA フォーム（左）からア
 
 * XFA（XML Forms Architecture）
 
-To use the assets provides for the example in the article, download the sample package as explained in the next section, [Sample package](/help/forms/using/synchronizing-adaptive-forms-xfa.md#p-sample-package-p).
+記事の例に示されているアセットを使用するには、次のセクション[サンプルパッケージ](/help/forms/using/synchronizing-adaptive-forms-xfa.md#p-sample-package-p)で説明されているように、サンプルパッケージをダウンロードします。
 
 ## サンプルパッケージ {#sample-package}
 
@@ -46,7 +46,7 @@ To use the assets provides for the example in the article, download the sample p
 
 パッケージをアップロードすると、これらのアセットが AEM Forms UI に表示されます。
 
-Install the package using the package manager: `https://<server>:<port>/crx/packmgr/index.jsp`
+パッケージマネージャーを使用してパッケージをインストールします。`https://<server>:<port>/crx/packmgr/index.jsp`
 
 パッケージには次のアセットが含まれています。
 
@@ -59,7 +59,7 @@ Install the package using the package manager: `https://<server>:<port>/crx/pack
 1. https://&lt;server>:&lt;port>/aem/forms.htmlに移動します。 要求された場合は、資格情報を入力します。
 1. 作成者モードで sample-af-xfa を開き、編集します。
 1. サイドバーにあるコンテンツブラウザーで、「データモデルオブジェクト」タブを選択します。NumericField1 と TextField1 をアダプティブフォームにドラッグします。
-1. Change the Title of the NumericField1 from **Numeric Field** to **AF Numeric Field.**
+1. NumericField1のタイトルを&#x200B;**数値フィールド**&#x200B;から&#x200B;**AF数値フィールドに変更します。**
 
 >[!NOTE]
 >
@@ -73,9 +73,9 @@ XDP ファイルを更新した後、変更がフラグ付けされるように�
 
 例として、次の手順を使って `sample-form.xdp` ファイルを更新します。
 
-1. 指示に従って、「資格情報を `https://<server>:<port>/projects.html.` 入力」に移動します。
+1. `https://<server>:<port>/projects.html.`に移動します。指示に従って、資格情報を入力します。
 1. 左側にある「フォーム」タブをクリックします。
-1. ローカルマシンに `sample-form.xdp` ファイルをダウンロードします。The XDP file is downloaded as a `.zip` file, which can be extracted using any file decompression utility.
+1. ローカルマシンに `sample-form.xdp` ファイルをダウンロードします。XDPファイルは`.zip`ファイルとしてダウンロードされ、任意のファイル解凍ユーティリティを使用して抽出できます。
 
 1. `sample-form.xdp` ファイルを開き、TextField1 のタイトルを **Text Field** から **My Text Field** に変更します。
 
@@ -87,7 +87,7 @@ XDP ファイルが更新されると、XDP ファイルに基づいてアダプ
 
 ## アダプティブフォームと最新の XDP ファイルとの同期 {#synchronizing-adaptive-forms-with-the-latest-xdp-file}
 
-XDP ファイルと同期されていないアダプティブフォームが次回作成用に開かれたときに、次のメッセージが表示されます：**このアダプティブフォームのスキーマ / フォームテンプレートは更新されました。`Click Here`を新しいバージョンにリベースします。**
+XDP ファイルと同期されていないアダプティブフォームが次回作成用に開かれたときに、次のメッセージが表示されます：**このアダプティブフォームのスキーマ / フォームテンプレートは更新されました。`Click Here` を新しいバージョンにリベースします。**
 
 メッセージをクリックすると、アダプティブフォーム内のフィールドが XDP ファイル内の対応するフィールドと同期されます。
 
@@ -99,13 +99,13 @@ XDP ファイルと同期されていないアダプティブフォームが次�
 
 XDP ファイルからアダプティブフォームにコピーされたプロパティは、作成者によってアダプティブフォーム内で（コンポーネントダイアログから）明示的に上書きされたプロパティを除き、すべて更新されます。更新されたプロパティのリストは、サーバーログで見ることができます。
 
-To update the properties in the example adaptive form, click the link (labeled `"Click Here"`) in the message. TextField1 のタイトルが、**Text Field** から **My Text Field** に変更されます。
+例のアダプティブフォーム内のプロパティを更新するには、メッセージ内の`"Click Here"`というラベルの付いたリンクをクリックします。 TextField1 のタイトルが、**Text Field** から **My Text Field** に変更されます。
 
 ![update-property](assets/update-property.png)
 
 >[!NOTE]
 >
->The label AF Numeric Field did not get changed because you had overridden this property from the component properties dialog, as described in [Add content to adaptive forms](#p-add-content-to-adaptive-form-br-p).
+>AF Numeric Fieldのラベルが変更されなかったのは、[コンテンツをアダプティブフォーム](#p-add-content-to-adaptive-form-br-p)に記述するとおり、コンポーネントのプロパティダイアログでこのプロパティを上書きしたからです。
 
 ### XDP ファイルからアダプティブフォームへの新しいフィールドの追加{#adding-new-fields-from-xdp-file-to-adaptive-form-nbsp}
 
@@ -121,9 +121,9 @@ To update the properties in the example adaptive form, click the link (labeled `
 
 1. `sample-form.xdp` ファイルを更新し、NumericField1 を削除します。
 1. AEM Forms UI に `sample-form.xdp` ファイルをアップロードします。
-1. `sample-xfa-af` アダプティブフォームを作成のために開きます。次のエラーメッセージが表示されます。 アダプティブフォームのスキーマ/フォームテンプレートが更新されました。 `Click Here` を新しいバージョンにリベースします。
+1. `sample-xfa-af` アダプティブフォームを作成のために開きます。次のエラーメッセージが表示されます。アダプティブフォームのスキーマ/フォームテンプレートが更新されました。 `Click Here` を新しいバージョンにリベースします。
 
-1. Click the link (labeled &quot; `Click Here`&quot;) in the message. XDP ファイルにフィールドが存在しないというエラーメッセージが表示されます。
+1. メッセージ内の「`Click Here`」というラベルの付いたリンクをクリックします。 XDP ファイルにフィールドが存在しないというエラーメッセージが表示されます。
 
 ![XDP ファイルで要素を削除すると表示されるエラー](assets/no-element-xdp.png)
 
