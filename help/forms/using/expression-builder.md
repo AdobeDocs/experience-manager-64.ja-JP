@@ -35,13 +35,13 @@ ht-degree: 78%
 
 通信管理ソリューションで使用できる、一般的な JSP EL の例は以下のとおりです。
 
-* 2つの数値を追加するには： ${number1 + number2}
-* 2つの文字列を連結するには： ${str1} ${str2}
-* 2つの数値を比較するには： ${age &lt; 18}
+* 2つの数値を追加するには：${number1 + number2}
+* 2つの文字列を連結するには：${str1} ${str2}
+* 2つの数値を比較するには：${age &lt; 18}
 
 詳細な情報は、「[JSP EL 仕様](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)」で確認できます。クライアント側の式マネージャーは、JSP EL仕様の特定の変数と関数をサポートしません。具体的には、次のようになります。
 
-* Collection indexes and map keys (using the [] notation) are not supported in variable names for expressions evaluated on the client-side.
+* クライアント側で評価される式の変数名では、コレクションのインデックスとマップのキー（[]表記を使用）はサポートされません。
 * 式に使用する関数のパラメーターの型や戻り値の型を以下に示しています。
 
    * java.lang.String
@@ -77,7 +77,7 @@ ht-degree: 78%
 式の中で使用する独自のリモート関数は、カスタムバンドルを作成してエクスポートすることができます。独自のリモート関数をエクスポートするカスタムバンドルを作成するには、次のタスクを実行します。このデモでは、入力文字列を大文字に変換するカスタム関数を作成する例を示します。
 
 1. Expression Manager 用にエクスポートするメソッドを含んだ OSGi サービスのインターフェイスを定義します。
-1. インターフェイスAでメソッドを宣言し、@ServiceMethod注釈を付けます(com.adobe.exm.expeval.ServiceMethod)。 Expression Manager では、注釈が付いていないメソッドはすべて無視されます。ServiceMethod注釈には、次のオプション属性があります。これらの属性も指定できます。
+1. インターフェイスAでメソッドを宣言し、@ServiceMethod注釈を付けます(com.adobe.exm.expeval.ServiceMethod)。 Expression Manager では、注釈が付いていないメソッドはすべて無視されます。ServiceMethod注釈には、次のオプションの属性があります。これらの属性は指定することもできます。
 
    1. **Enabled**： このメソッドを有効化するかどうかを決定します。Expression Manager では、無効なメソッドは無視されます。
    1. **familyId**：メソッドのファミリー（グループ）を指定します。空の場合、Expression Manager では、メソッドがデフォルトのファミリーに属するものと見なします。関数が選択されたファミリーのレジストリはありません（デフォルトのファミリーを除く）。Expression Manager では、様々なバンドルによって書き出されたすべての関数で指定されているすべてのファミリー ID を取得することで、レジストリが動的に作成されます。ここで指定された ID は式オーサリングユーザーインターフェイスにも表示されるので、適切に判読できることを確認します。
@@ -101,7 +101,7 @@ ht-degree: 78%
    * java.lang.Character
    * Char
    * java.lang.Boolean
-   * Boolean
+   * ブール値
    * java.lang.Integer
    * Int
    * java.lang.Short
@@ -111,7 +111,7 @@ ht-degree: 78%
    * java.lang.Double
    * 倍精度浮動小数点
    * java.lang.Long
-   * Long
+   * ロング
    * java.lang.Float
    * 浮動小数点数
    * java.util.Calendar
@@ -156,8 +156,8 @@ public class RemoteFuntionImpl implements RemoteFunction {
 
 使用するサンプルアーカイブを以下に示します。
 
-* **GoodFunctions.jar.zip** は、サンプルのリモート関数定義を含むバンドルを含むjarファイルです。 GoodFunctions.jar.zip ファイルをダウンロードし、それを展開して jar ファイルを取得します。
-* **GoodFunctions.zip** は、カスタムのリモート関数を定義し、そのためのバンドルを作成するためのソースコードのパッケージです。
+* **GoodFunctions.jar.** zipは、サンプルのリモート関数定義を含むバンドルを含むjarファイルです。GoodFunctions.jar.zip ファイルをダウンロードし、それを展開して jar ファイルを取得します。
+* **GoodFunctions.** zipは、カスタムのリモート関数を定義し、そのためのバンドルを作成するためのソースコードのパッケージです。
 
 GoodFunctions.jar.zip
 
