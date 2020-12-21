@@ -34,11 +34,11 @@ AEM Forms のデータ統合機能を初めて使用する場合や、これま�
 
 >[!NOTE]
 >
->You must be a member of both **fdm-author** and **forms-user** groups to be able to create and work with form data model. これらのグループのメンバーになるには、AEM の管理者に依頼してください。
+>フォームデータモデルを作成して操作するには、**fdm-author**&#x200B;および&#x200B;**forms-user**&#x200B;グループのメンバーである必要があります。 これらのグループのメンバーになるには、AEM の管理者に依頼してください。
 
-## データモデルオブジェクトとサービスの追加 {#add-data-model-objects-and-services}
+## データモデルオブジェクトとサービスの追加  {#add-data-model-objects-and-services}
 
-データソースを使用してフォームデータモデルを作成した場合、フォームデータモデルエディターを使用してデータモデルのオブジェクトとサービスの追加、プロパティの設定、データモデルオブジェクト間の関連付けの構築、フォームデータモデルとサービスのテストを行うことができます。
+データソースを使用してフォームデータモデルを作成した場合、フォームデータモデルエディターを使用してデータモデルのオブジェクトとサービスを追加し、そのプロパティを設定し、データモデルオブジェクト間の関連付けを構築し、フォームデータモデルとサービスをテストできます。
 
 フォームデータモデル内の有効なデータソースを使用して、データモデルオブジェクトとサービスを追加することができます。追加したデータモデルオブジェクトは「モデル」タブに表示され、追加したサービスは「サービス」タブに表示されます。
 
@@ -72,7 +72,7 @@ AEM Forms のデータ統合機能を初めて使用する場合や、これま�
    >
    >アダプティブフォームのルールを使用して、フォームデータモデルの「サービス」タブで設定したサービスを呼び出すことができます。設定したサービスは、ルールエディターの「サービスを起動」アクションで使用することができます。設定したサービスをアダプティブフォームルールで使用する方法については、「[ルールエディター](/help/forms/using/rule-editor.md)」で、「サービスを起動」ルールと「指定値」ルールに関する説明を参照してください。
 
-## データモデルオブジェクトと子プロパティの作成 {#create-data-model-objects-and-child-properties}
+## データモデルオブジェクトと子プロパティの作成  {#create-data-model-objects-and-child-properties}
 
 ### データモデルオブジェクトの作成 {#create-data-model-objects}
 
@@ -88,13 +88,13 @@ AEM Forms のデータ統合機能を初めて使用する場合や、これま�
 
 次に、データソースに連結されていないデータモデルオブジェクトで、子プロパティを追加します。
 
-### 子プロパティの追加 {#child-properties}
+### 子プロパティの追加  {#child-properties}
 
 フォームデータモデルエディターを使用して、データモデルオブジェクト内で子プロパティを作成することができます。作成した時点では、子プロパティはデータソース内のどのプロパティにも連結されません。作成した子プロパティは、データモデルオブジェクト内の別のプロパティに後で連結することができます。
 
 子プロパティを作成するには、以下の手順を実行します。
 
-1. In a form data model, select a data model object and tap **[!UICONTROL Create Child Property]**.
+1. フォームデータモデル内で、データモデルオブジェクトを選択し、「**[!UICONTROL 子プロパティを作成]**」をタップします。
 1. **[!UICONTROL 子プロパティを作成]**&#x200B;ダイアログの「**[!UICONTROL 名前]**」フィールドと「**[!UICONTROL タイプ]**」フィールドで、子プロパティの名前とタイプを指定します。必要に応じて、子プロパティのタイトルと説明を指定することもできます。
 1. 作成するプロパティが計算済みプロパティの場合は、「計算済み」を有効にします。計算済みプロパティの値は、ルールまたは式に基づいて評価されます。詳しくは、「[プロパティの編集](#edit-properties)」を参照してください。
 1. データモデルオブジェクトをデータソースに連結すると、追加した子プロジェクトが親データモデルオブジェクトのプロパティに自動的に連結されます。その際、子プロパティの名前とデータタイプは変わりません。
@@ -103,11 +103,11 @@ AEM Forms のデータ統合機能を初めて使用する場合や、これま�
 
 1. 「**[!UICONTROL 完了]**」をタップして子プロパティを保存し、「**[!UICONTROL 保存]**」タップしてフォームデータモデルを保存します。これで、子プロパティがデータモデルオブジェクトに追加されました。
 
-データモデルオブジェクトとプロパティを作成したら、フォームデータモデルに基づいて、アダプティブフォームとインタラクティブ通信を作成することができます。データソースの設定が完了した時点で、フォームデータモデルをデータソースに連結することができます。連結の設定は、関連するアダプティブフォームとインタラクティブ通信内で自動的に更新されます。For more information about creating adaptive forms and interactive communications using form data model, see [Use form data model](/help/forms/using/using-form-data-model.md).
+データモデルオブジェクトとプロパティを作成したら、フォームデータモデルに基づいて、アダプティブフォームとインタラクティブ通信を作成することができます。データソースの設定が完了した時点で、フォームデータモデルをデータソースに連結することができます。連結の設定は、関連するアダプティブフォームとインタラクティブ通信内で自動的に更新されます。フォームデータモデルを使用したアダプティブフォームとインタラクティブな通信の作成について詳しくは、「[フォームデータモデルの使用](/help/forms/using/using-form-data-model.md)」を参照してください。
 
 ### データモデルオブジェクトとプロパティの連結 {#bind-data-model-objects-and-properties}
 
-When the data sources you want to integrate with the form data model are available, you can add them to the form data model as described in [Update data sources](/help/forms/using/create-form-data-models.md#update). その後、以下の手順を実行して、データソースに連結されていないデータモデルオブジェクトとプロパティを連結します。
+フォームデータモデルと統合するデータソースが使用可能な場合は、[データソースの更新](/help/forms/using/create-form-data-models.md#update)の説明に従って、データソースをフォームデータモデルに追加できます。 その後、以下の手順を実行して、データソースに連結されていないデータモデルオブジェクトとプロパティを連結します。
 
 1. フォームデータモデルで、データソースに連結するデータソースを選択します。
 1. 「**[!UICONTROL プロパティを編集]**」をタップします。
@@ -152,9 +152,9 @@ When the data sources you want to integrate with the form data model are availab
 
    従業員データソースに対して設定されている読み取りサービスと書き込みサービス
 
-1. Tap ![aem_6_3_edit](assets/aem_6_3_edit.png) for the read service argument to bind the argument to a User Profile Attribute, Request Attribute, or Literal value and specify the binding value. これにより、指定したバインド属性またはリテラル値にサービスの引数がバインドされ、それが引数としてサービスに渡され、指定した値に関連付けられている詳細情報がデータソースから取得されます。
+1. 読み取りサービスの引数で![aem_6_3_edit](assets/aem_6_3_edit.png)をタップし、引数をユーザープロファイル属性、要求属性またはリテラル値に連結し、連結値を指定します。 これにより、指定したバインド属性またはリテラル値にサービスの引数がバインドされ、それが引数としてサービスに渡され、指定した値に関連付けられている詳細情報がデータソースから取得されます。
 
-   上記の例では、`id` 引数を使用してユーザープロファイルの `empid` 属性の値を取得し、それを引数として読み取りサービスに渡しています。読み取りサービスは、指定された `employee` について、`empid` データモデルオブジェクトから関連プロパティの値を読み取り、その値をシステムに返します。So, if you specify 00250 in the `empid` field in the form, the read service will read details of the employee with 00250 employee id.
+   上記の例では、`id` 引数を使用してユーザープロファイルの `empid` 属性の値を取得し、それを引数として読み取りサービスに渡しています。読み取りサービスは、指定された `employee` について、`empid` データモデルオブジェクトから関連プロパティの値を読み取り、その値をシステムに返します。したがって、フォームの`empid`フィールドに00250を指定した場合、読み取りサービスは従業員IDが00250の従業員の詳細を読み取ります。
 
    また、引数の入力を任意にすることも必須にすることもできます。
 
@@ -203,7 +203,7 @@ When the data sources you want to integrate with the form data model are availab
 
    「扶養家族」読み取りサービスのデフォルト引数が dependentid になっている
 
-   ただし、この引数は、関連付けるデータモデルオブジェクト間の共通プロパティ（この例の場合は `Employeeid`）でなければなりません。Therefore, the `Employeeid` argument must be bound to the `id` property of the Employee data model object to fetch the associated dependents details from the Dependents data model object.
+   ただし、この引数は、関連付けるデータモデルオブジェクト間の共通プロパティ（この例の場合は `Employeeid`）でなければなりません。したがって、`Employeeid`引数は、Employeeデータモデルオブジェクトの`id`プロパティにバインドして、関連付けられた依存の詳細をDependentsデータモデルオブジェクトから取得する必要があります。
 
    ![add-association-example-2](assets/add-association-example-2.png)
 
@@ -218,7 +218,7 @@ When the data sources you want to integrate with the form data model are availab
 >
 >追加した関連付けは、入力したタイトルと、関連データモデルオブジェクトを接続する線とともに、データモデルオブジェクトのボックス内に表示されます。
 >
->You can edit an association by selecting the checkbox against it and tap **[!UICONTROL Edit Association]**.
+>関連付けを編集するには、対象のチェックボックスを選択し、**[!UICONTROL 関連付けを編集]**&#x200B;をタップします。
 
 ![付加結合](assets/added-association.png)
 
@@ -241,13 +241,13 @@ When the data sources you want to integrate with the form data model are availab
 
 1. 「**[!UICONTROL 完了]**」をタップしてプロパティを保存し、次に「**[!UICONTROL 保存]**」をタップしてフォームデータモデルを保存します。
 
-### 計算済みプロパティの作成 {#computed}
+### 計算済みプロパティの作成  {#computed}
 
 計算済みプロパティとは、ルールまたは式に基づいて値が計算されるプロパティのことです。ルールを使用して、計算済みプロパティの値を、リテラル文字列、数値、数式の計算結果、フォームデータモデル内の別のプロパティの値に設定することができます。
 
 例えば、**FirstName** プロパティと **LastName** プロパティの値を組み合わせた値を持つ **FullName** プロパティを作成することができます。この作業を行うには：
 
-1. Create a new property with the name `FullName` whose data type is String.
+1. データタイプがStringである`FullName`という名前で新しいプロパティを作成します。
 1. 「**[!UICONTROL 計算済み]**」を有効にし、「**[!UICONTROL 完了]**」をタップしてプロパティを作成します。
 
    ![計算済み](assets/computed.png)
@@ -263,15 +263,15 @@ When the data sources you want to integrate with the form data model are availab
 
 1. 数式の最初のオブジェクトとして「**[!UICONTROL FirstName]**」を選択し、2 番目のオブジェクトとして「**[!UICONTROL LastName]**」を選択します。演算子として「**[!UICONTROL プラス]**」を選択します。
 
-   Tap **[!UICONTROL Done]** and then tap **[!UICONTROL Close]** to close the rule editor window. ルールは以下のようになります。
+   「**[!UICONTROL 完了]**」をタップし、「**[!UICONTROL 閉じる]**」をタップして、ルールエディターウィンドウを閉じます。 ルールは以下のようになります。
 
    ![rule](assets/rule.png)
 
 1. フォームデータモデルで、「**[!UICONTROL 保存]**」をタップします。これで、計算済みプロパティが設定されました。
 
-## OData サービスのナビゲーションプロパティの操作 {#work-with-navigation-properties-of-odata-services}
+## OData サービスのナビゲーションプロパティの操作  {#work-with-navigation-properties-of-odata-services}
 
-OData サービスでは、ナビゲーションプロパティを使用して、2 つのデータモデルオブジェクト間の関連付けが定義されます。これらのプロパティは、エンティティタイプまたは複合タイプに対して定義されます。For example, in the following extract from the metadata file of the sample [TripPin](https://www.odata.org/blog/trippin-new-odata-v4-sample-service/) OData sample services, the person entity contains three navigation properties - Friends, BestFriend, and Trips.
+OData サービスでは、ナビゲーションプロパティを使用して、2 つのデータモデルオブジェクト間の関連付けが定義されます。これらのプロパティは、エンティティタイプまたは複合タイプに対して定義されます。例えば、サンプル[TripPin](https://www.odata.org/blog/trippin-new-odata-v4-sample-service/) ODataサンプルサービスのメタデータファイルから抽出した次の例では、人物のエンティティに3つのナビゲーションプロパティ(Friends、BestFriend、Trips)が含まれています。
 
 ナビゲーションプロパティについて詳しくは、[OData のドキュメント](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part3-csdl/odata-v4.0-errata03-os-part3-csdl-complete.html#_Toc453752536)を参照してください。
 
@@ -301,21 +301,21 @@ OData サービスでは、ナビゲーションプロパティを使用して�
 </EntityType>
 ```
 
-フォームデータモデル内で OData サービスを設定すると、そのフォームデータモデル内のサービスを経由して、エンティティコンテナ内のすべてのナビゲーションプロパティを使用できるようになります。In this example of TripPin OData service, the three navigation properties in the `Person` entity container can be read using one `GET LINK` service in the Form Data Model.
+フォームデータモデル内で OData サービスを設定すると、そのフォームデータモデル内のサービスを経由して、エンティティコンテナ内のすべてのナビゲーションプロパティを使用できるようになります。このTripPin ODataサービスの例では、`Person`エンティティコンテナの3つのナビゲーションプロパティは、フォームデータモデルの1つの`GET LINK`サービスを使用して読み取ることができます。
 
-The following highlights the `GET LINK of Person /People` service in the Form Data Model, which is a combined service for the three navigation properties in the `Person` entity of the TripPin OData service.
+次の例は、Form Data Modelの`GET LINK of Person /People`サービスに焦点を当てています。これは、TripPin ODataサービスの`Person`エンティティの3つのナビゲーションプロパティを組み合わせたサービスです。
 
 ![nav-prop-service](assets/nav-prop-service.png)
 
-フォームデータモデルの「サービス」タブに `GET LINK` サービスを追加すると、サービス内で使用する出力モデルオブジェクトとナビゲーションプロパティを選択するための各種プロパティを編集できるようになります。For example, the following `GET LINK of Person /People` service in the following example uses Trip as the output model object and the navigation property as Trips.
+フォームデータモデルの「サービス」タブに `GET LINK` サービスを追加すると、サービス内で使用する出力モデルオブジェクトとナビゲーションプロパティを選択するための各種プロパティを編集できるようになります。例えば、次の例の`GET LINK of Person /People`サービスでは、Tripを出力モデルオブジェクトとして使用し、navigationプロパティをTripsとして使用しています。
 
 ![edit-prop-nav-prop](assets/edit-prop-nav-prop.png)
 
 >[!NOTE]
 >
->The values available in the **[!UICONTROL Default Value]** field of the **NavigationPropertyName** argument depend on the state of the **[!UICONTROL Return array?]**」トグルボタンの状態によって異なります。このボタンが有効になっている場合は、コレクションタイプのナビゲーションプロパティが表示されます。
+>**NavigationPropertyName**&#x200B;引数の&#x200B;**[!UICONTROL Default Value]**&#x200B;フィールドに指定できる値は、**[!UICONTROL Return配列の状態によって異なります。]**」トグルボタンの状態によって異なります。このボタンが有効になっている場合は、コレクションタイプのナビゲーションプロパティが表示されます。
 
-In this example, you can also choose the output model object as Person and navigation property argument as Friends or BestFriend (depending on whether **[!UICONTROL Return array?]**」ボタンが有効になっているか無効になっているかによって異なります）。
+この例では、出力モデルオブジェクトをPersonに、ナビゲーションプロパティ引数をFriendsまたはBestFriend （**[!UICONTROL Return配列かどうかによって異なります）に選択することもできます。]**」ボタンが有効になっているか無効になっているかによって異なります）。
 
 ![edit-prop-nav-prop2](assets/edit-prop-nav-prop2.png)
 
