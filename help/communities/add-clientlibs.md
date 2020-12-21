@@ -18,17 +18,17 @@ ht-degree: 58%
 ---
 
 
-# clientlib の追加 {#add-clientlibs}
+# clientlib の追加  {#add-clientlibs}
 
-## Add a ClientLibraryFolder (clientlibs) {#add-a-clientlibraryfolder-clientlibs}
+## 追加ClientLibraryFolder (clientlibs) {#add-a-clientlibraryfolder-clientlibs}
 
 `clientlibs` という名前の ClientLibraryFolder を作成し、ここに、サイトのページをレンダリングするために使用される JS および CSS を格納します。
 
 このクライアントライブラリに指定する `categories` プロパティの値は、clientlib をコンテンツページから直接含めたり、その他の clientlib に埋め込んだりする場合に使用される識別子です。
 
-1. **[!UICONTROL CRXDE Liteを使用する場合]**、展開します `/etc/designs`
+1. **[!UICONTROL CRXDE Lite]**&#x200B;を使用して`/etc/designs`を展開します
 
-1. を右クリックし、「 `an-scf-sandbox` `Create Node`
+1. `an-scf-sandbox`を右クリックし、`Create Node`を選択します
 
    * 名前：`clientlibs`
    * 型：`cq:ClientLibraryFolder`
@@ -42,20 +42,20 @@ ht-degree: 58%
 * 名前：**[!UICONTROL categories]**
 * タイプ：**[!UICONTROL String]**
 * 値：**[!UICONTROL apps.an-scf-sandbox]**
-* Click **[!UICONTROL Add]**
-* Click **[!UICONTROL Save All]**
+* **[!UICONTROL 追加]**&#x200B;をクリックします
+* 「**[!UICONTROL すべて保存]**」をクリックします
 
-注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要：プ追加レースホルダー `js.txt` と `css.txt` ファイル （正式には、cq:ClientLibraryFolderが存在しない場合は除きます）。
+注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要：プ追加レースホルダー`js.txt`と`css.txt`ファイル （正式には、cq:ClientLibraryFolderが存在しない場合は除きます）。
 
 
-1. 右クリックして **`/etc/designs/an-scf-sandbox/clientlibs`**
-1. Select **[!UICONTROL Create File...]**
-1. Enter **[!UICONTROL Name]**: `css.txt`
+1. **`/etc/designs/an-scf-sandbox/clientlibs`**&#x200B;を右クリック
+1. **[!UICONTROL ファイルを作成を選択…]**
+1. **[!UICONTROL 名前]**&#x200B;を入力：`css.txt`
 
-1. Select **[!UICONTROL Create File...]**
-1. Enter **[!UICONTROL Name]**: `js.txt`
+1. **[!UICONTROL ファイルを作成を選択…]**
+1. **[!UICONTROL 名前]**&#x200B;を入力：`js.txt`
 
-1. Click **[!UICONTROL Save All]**
+1. 「**[!UICONTROL すべて保存]**」をクリックします
 
 ![chlimage_1-221](assets/chlimage_1-221.png)
 
@@ -78,7 +78,7 @@ css.txt の内容を次のように設定します。：
 
 ## SCF clientlib の埋め込み {#embed-scf-clientlibs}
 
-**[!UICONTROL ノードの「]**&#x200B;プロパティ`clientlibs`」タブで、複数値の String プロパティ **[!UICONTROL embed]** を入力します。This will embed the necessary [client-side libraries (clientlibs) for SCF components](client-customize.md#clientlibs-for-scf). このチュートリアルでは、Communitiesコンポーネントに必要なclientlibの多くを追加します。
+**[!UICONTROL ノードの「]**&#x200B;プロパティ`clientlibs`」タブで、複数値の String プロパティ **[!UICONTROL embed]** を入力します。これにより、SCFコンポーネント](client-customize.md#clientlibs-for-scf)に必要な[クライアント側ライブラリ(clientlibs)が埋め込まれます。 このチュートリアルでは、Communitiesコンポーネントに必要なclientlibの多くを追加します。
 
 ページごとにダウンロードされる clientlib の利点とサイズ／スピードに関する考慮事項があるので、このアプローチが実稼動サイトでの使用に適している場合もあれば、そうでない場合もある点に&#x200B;**注意してください**。
 
@@ -92,7 +92,7 @@ css.txt の内容を次のように設定します。：
 * クリック **`Multi`**
 * 値：**`cq.social.scf`**
 
-   *&lt;enter>を指定すると、ダイアログが表示されます*
+   *&lt;enter> ダイアログが表示されます。*
 
    *各エントリの&#x200B;**[後に+]**をクリックして、次のclientlibカテゴリを追加します。*
 
@@ -104,17 +104,17 @@ css.txt の内容を次のように設定します。：
    * **`cq.social.author.hbs.voting`**
    * 「**[!UICONTROL OK]**」をクリックします。
 
-* Click **[!UICONTROL Save All]**
+* 「**[!UICONTROL すべて保存]**」をクリックします
 
 ![chlimage_1-222](assets/chlimage_1-222.png)
 
-This is how `/etc/designs/an-scf-sandbox/clientlibs` should now appear in the repository:
+次のように`/etc/designs/an-scf-sandbox/clientlibs`がリポジトリに表示されます。
 
 ![chlimage_1-223](assets/chlimage_1-223.png)
 
 ## playpage テンプレートに clientlibs を含める {#include-clientlibs-in-playpage-template}
 
-Without including the `apps.an-scf-sandbox` ClientLibraryFolder category on the page, the SCF components will not be functional nor styled as the necessary Javascript(s) and style(s) will not be available.
+`apps.an-scf-sandbox` ClientLibraryFolderカテゴリをページに含めないと、SCFコンポーネントは機能しなくなり、必要なJavaScriptとスタイルが使用できなくなります。
 
 例えば、clientlibs を挿入しなかった場合、SCF コメントコンポーネントは、スタイルが設定されていない状態で表示されます。
 
@@ -124,20 +124,20 @@ apps.an-scf-sandbox clientlibs を含めると、SCF コメントコンポーネ
 
 ![chlimage_1-225](assets/chlimage_1-225.png)
 
-The include statement belongs in the `<head>` section of the `<html>` script. The default **`foundation head.jsp`** includes a script that can be overlaid: **`headlibs.jsp`**.
+includeステートメントは、`<html>`スクリプトの`<head>`セクションに属します。 デフォルトの&#x200B;**`foundation head.jsp`**&#x200B;には、オーバーレイ可能なスクリプトが含まれています。**`headlibs.jsp`**.
 
 **headlibs.jsp をコピーし、clientlibs を含めます。**
 
-1. Using **[!UICONTROL CRXDE Lite]**, select **`/libs/foundation/components/page/headlibs.jsp`**
-1. Right click and select **[!UICONTROL Copy]** (or select Copy from the tool bar)
+1. **[!UICONTROL CRXDE Lite]**&#x200B;を使用して、**`/libs/foundation/components/page/headlibs.jsp`**&#x200B;を選択します
+1. 右クリックし、「**[!UICONTROL コピー]**」を選択します（または、ツールバーから「コピー」を選択します）。
 1.  **`/apps/an-scf-sandbox/components/playpage`**
-1. Right click and select **[!UICONTROL Paste]** (or select Paste from the tool bar)
-1. Double click on **`headlibs.jsp`** to open it
+1. 右クリックし、「**[!UICONTROL 貼り付け]**」を選択します（または、ツールバーから「貼り付け」を選択します）。
+1. 重複が&#x200B;**`headlibs.jsp`**&#x200B;をクリックして開きます
 1. ファイルの末尾に次の行を追加します。
 
    **`<ui:includeClientLib categories="apps.an-scf-sandbox"/>`**
 
-1. Click **[!UICONTROL Save All]**
+1. 「**[!UICONTROL すべて保存]**」をクリックします
 
 
 ```xml
@@ -165,8 +165,8 @@ Web サイトをブラウザーに読み込み、背景が青の網掛けでな�
 パッケージを作成するには：
 
 
-* **[!UICONTROL CRXDE Liteから]**、 [パッケージアイコンをクリックします](http://localhost:4502/crx/packmgr/)
-* Click **[!UICONTROL Create Package]**
+* **[!UICONTROL CRXDE Lite]**&#x200B;から、[パッケージアイコン](http://localhost:4502/crx/packmgr/)をクリックします
+* 「**[!UICONTROL パッケージを作成]**」をクリックします
 
    * パッケージ名: `an-scf-sandbox-minimal-pkg`
    * バージョン: `0.1`
@@ -175,20 +175,20 @@ Web サイトをブラウザーに読み込み、背景が青の網掛けでな�
 
 * 「**[!UICONTROL 編集]**」をクリックします。
 
-   * Select **[!UICONTROL Filters]** tab
+   * 「**[!UICONTROL フィルター]**」タブを選択
 
-      * Click **[!UICONTROL Add filter]**
-      * Root Path: &lt;browse to `/apps/an-scf-sandbox`>
-      * Click **[!UICONTROL Done]**
-      * Click **[!UICONTROL Add filter]**
-      * Root Path: &lt;browse to `/etc/designs/an-scf-sandbox`>
-      * Click **[!UICONTROL Done]**
-      * Click **[!UICONTROL Add filter]**
-      * Root Path: &lt;browse to `/content/an-scf-sandbox`>
-      * Click **[!UICONTROL Done]**
+      * **[!UICONTROL 追加フィルター]**&#x200B;をクリック
+      * ルートパス：&lt;`/apps/an-scf-sandbox`を参照>
+      * 「**[!UICONTROL 完了]**」をクリックします
+      * **[!UICONTROL 追加フィルター]**&#x200B;をクリック
+      * ルートパス：&lt;`/etc/designs/an-scf-sandbox`を参照>
+      * 「**[!UICONTROL 完了]**」をクリックします
+      * **[!UICONTROL 追加フィルター]**&#x200B;をクリック
+      * ルートパス：&lt;`/content/an-scf-sandbox`を参照>
+      * 「**[!UICONTROL 完了]**」をクリックします
    * 「**[!UICONTROL 保存]**」をクリックします。
 
 
-* Click **[!UICONTROL Build]**
+* 「**[!UICONTROL ビルド]**」をクリックします
 
-Now you can select **[!UICONTROL Download]** to save it to disk and **[!UICONTROL Upload Package]** elsewhere, as well as select **[!UICONTROL More > Replicate]** in order to push the sandbox to a localhost publish instance to expand the realm of your sandbox.
+これで、「**[!UICONTROL ダウンロード]**」を選択してディスクに保存し、**[!UICONTROL パッケージをアップロード]**&#x200B;他に保存することができます。また、**[!UICONTROL 詳細>複製]**&#x200B;を選択して、サンドボックスの領域を拡張できます。
