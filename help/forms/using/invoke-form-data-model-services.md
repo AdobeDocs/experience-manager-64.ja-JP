@@ -20,9 +20,9 @@ ht-degree: 60%
 
 ## 概要 {#overview}
 
-AEM Forms を使用すると、アダプティブフォームフィールド内からフォームデータモデルで構成されたサービスを呼び出すことで、フォーム作成者はフォームへの記入作業を簡略化および強化することができます。To invoke a data model service, you can either create a rule in the visual editor or specify a JavaScript using the `guidelib.dataIntegrationUtils.executeOperation` API in the code editor of the [rule editor](/help/forms/using/rule-editor.md).
+AEM Forms を使用すると、アダプティブフォームフィールド内からフォームデータモデルで構成されたサービスを呼び出すことで、フォーム作成者はフォームへの記入作業を簡略化および強化することができます。データモデルサービスを呼び出すには、ビジュアルエディターでルールを作成するか、[ルールエディター](/help/forms/using/rule-editor.md)のコードエディターで`guidelib.dataIntegrationUtils.executeOperation` APIを使用してJavaScriptを指定します。
 
-This document focuses on writing a JavaScript using the `guidelib.dataIntegrationUtils.executeOperation` API to invoke a service.
+このドキュメントでは、`guidelib.dataIntegrationUtils.executeOperation` APIを使用してサービスを呼び出すJavaScriptの作成に重点を置いています。
 
 ## API の使用 {#using-the-api}
 
@@ -40,7 +40,7 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 | `inputs` | サービス操作に値が入力されるフォームオブジェクトを指定するための構造 |
 | `outputs` | サービス操作が返す値を使用して入力されるフォームオブジェクトを指定する構造 |
 
-The structure of the `guidelib.dataIntegrationUtils.executeOperation` API specifies details about the service operation. この構造の構文は以下のとおりです。
+`guidelib.dataIntegrationUtils.executeOperation` APIの構造はサービス操作の詳細を指定します。 この構造の構文は以下のとおりです。
 
 ```
 var operationInfo = {
@@ -85,11 +85,11 @@ API 構造は、サービス操作の以下の詳細を指定します。
  </tbody> 
 </table>
 
-## サービスを呼び出すスクリプトのサンプル {#sample-script-to-invoke-a-service}
+## サービスを呼び出すスクリプトのサンプル  {#sample-script-to-invoke-a-service}
 
-The following sample script uses the `guidelib.dataIntegrationUtils.executeOperation` API to invoke the `getAccountById` service operation configured in the `employeeAccount` form data model.
+次のサンプルスクリプトでは、`guidelib.dataIntegrationUtils.executeOperation` APIを使用して、`employeeAccount`フォームデータモデルで設定された`getAccountById`サービス操作を呼び出します。
 
-The `getAccountById` operation takes the value in the `employeeID` form field as input for the `empId` argument and returns employee name, account number, and account balance for the corresponding employee. この出力値は指定されたフォームフィールドに入力されます。For example, the value in `name` argument is populated in the `fullName` form element and value for `accountNumber` argument in `account` form element.
+`getAccountById`演算は、`empId`引数の入力として`employeeID`フォームフィールドの値を受け取り、対応する従業員の従業員名、口座番号、口座残高を返します。 この出力値は指定されたフォームフィールドに入力されます。例えば、`name`引数の値が`fullName`フォーム要素に入力され、`account`フォーム要素の`accountNumber`引数の値が入力されます。
 
 ```
 var operationInfo = {
