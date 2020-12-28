@@ -24,15 +24,15 @@ ht-degree: 93%
 
 次の内容について説明します。
 
-* [はじめに](#getting-started) — 最初のページを作成して公開するのに必要なイベントの基本的な順序の詳細を説明します。
+* [はじめに](#getting-started)  — 最初のページを作成して公開するのに必要なイベントの基本的なシーケンスの詳細を説明します。
 
-* [その他のアクション](#further-actions) — オーサリング時に使用できる他の多数のアクションについて説明します。
+* [その他のアクション](#further-actions)  — オーサリング時に使用できる他の多数のアクションについて説明します。
 
 ## 概要 {#overview}
 
 このスライドショー（クリックスルー）では、AEM を使用した最初のページのオーサリングについて、視覚的にすばやく概要を説明します。個別の手順に関する詳細へのリンクが、[はじめに](#getting-started)の後にあります。
 
-## 概要 {#getting-started}
+## はじめに {#getting-started}
 
 最初のページを作成して公開するために必要になる基本的な一連のイベントについて、詳しく説明します。
 
@@ -44,11 +44,11 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 
 編集前に、[新しいページを作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)する必要があります。
 
-### ページを開く {#opening-a-page}
+### ページを開く  {#opening-a-page}
 
 編集などの多くのアクションで、[ページを開く](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)必要があります。
 
-### ページの編集 {#editing-a-page}
+### ページの編集  {#editing-a-page}
 
 インスタンスに既存のページがあるか、新しいページを自分で作成した直後の場合は、次の方法で[ページを編集](/help/sites-authoring/editing-content.md)できます。
 
@@ -61,11 +61,11 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 * [プレビューモードの使用](/help/sites-authoring/editing-content.md#preview-mode)（公開時にどのように表示されるかを確認するため）
 * [ページのロック](/help/sites-authoring/editing-content.md#locking-a-page)
 
-### ページの公開 {#publishing-a-page}
+### ページの公開  {#publishing-a-page}
 
 ページの編集が完了したら、Web サイトへの訪問者がコンテンツを閲覧できるように、[ページを公開（またはアクティベート）](/help/sites-authoring/publishing-pages.md)します。
 
-## その他のアクション {#further-actions}
+## その他のアクション  {#further-actions}
 
 基本的な手順を実行した後も、他の多くのアクションをオーサリング時に使用できます。
 
@@ -77,7 +77,7 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 
 [ページの移動と名前変更](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)は、基本的に同じアクションにより実行されます。
 
-### ページの非公開 {#unpublishing-a-page}
+### ページの非公開  {#unpublishing-a-page}
 
 以前公開（またはアクティベート）したコンテンツを公開 Web サイトで使用できないようにするには、[ページを非公開（またはアクティベート解除）](/help/sites-authoring/publishing-pages.md)にします。
 
@@ -85,14 +85,14 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 
 ページが不要になった場合は、[ページを削除](/help/sites-authoring/managing-pages.md#deleting-a-page)できます。
 
-### ページプロパティの設定 {#setting-the-page-properties}
+### ページプロパティの設定  {#setting-the-page-properties}
 
 すべての[ページにプロパティがあり](/help/sites-authoring/editing-page-properties.md)、これらのプロパティを定義することで、ページ操作の様々な側面を指定できます。ページプロパティはいずれの UI でも更新できます。
 
-### ページのバージョンの作成 {#creating-a-version-of-a-page}
+### ページのバージョンの作成  {#creating-a-version-of-a-page}
 
 ページの[バージョンを作成](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version)して、必要に応じて[そのバージョンに戻す](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version)ことができます。
 
-## 詳細情報 {#more-information}
+## 詳細情報  {#more-information}
 
 オーサリングに関する詳細情報については、[ページのオーサリング](/help/sites-authoring/author-environment-tools.md)および[オーサー環境の操作](/help/sites-authoring/home.md)で説明しています。
