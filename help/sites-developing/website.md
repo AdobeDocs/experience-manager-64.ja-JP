@@ -61,7 +61,7 @@ Web サイトコンテンツパッケージ
 
 ## Adobe Experience Manager のインストール {#installing-adobe-experience-manager}
 
-To install an AEM instance for developing your website, follow the instructions for setting up a [deployment environment with author and publish instances](/help/sites-deploying/deploy.md#author-and-publish-installs), or perform a [generic installation](/help/sites-deploying/deploy.md#default-local-install). The generic installation involves downloading the AEM Quickstart JAR file, placing the license.properties file in the same directory as the JAR file, and double-clicking the JAR file.
+Webサイト開発用のAEMインスタンスをインストールするには、[デプロイメント環境と作成者および発行インスタンス](/help/sites-deploying/deploy.md#author-and-publish-installs)を設定する手順に従うか、[一般的なインストール](/help/sites-deploying/deploy.md#default-local-install)を実行します。汎用インストールでは、AEM Quickstart JARファイルのダウンロード、JARファイルと同じディレクトリにlicense.propertiesファイルを配置、JARファイルを重複クリックします。
 
 AEM をインストールしたら、ようこそページで CRXDE Lite のリンクをクリックして CRXDE Lite 開発環境にアクセスします。
 
@@ -69,15 +69,15 @@ AEM をインストールしたら、ようこそページで CRXDE Lite のリ�
 
 >[!NOTE]
 >
->The URL of CRXDE Lite for an AEM authoring instance that is installed locally using the default port is [http://localhost:4502/crx/de/](http://localhost:4502/crx/de/).
+>デフォルトのポートを使用してローカルにインストールされたAEMオーサリングインスタンスのCRXDE LiteのURLは[http://localhost:4502/crx/de/](http://localhost:4502/crx/de/)です。
 
 ## CRXDE Lite でのプロジェクト構造の設定 {#setting-up-the-project-structure-in-crxde-lite}
 
 CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーション構造を作成します。
 
-1. フォルダーの左側のツリーで、CRXDE Liteーを右クリックし、 **`/apps`****[!UICONTROL 作成/フォルダーを作成をクリックします]**。 フォルダの **作成** ダイアログで、フォルダ名 `mywebsite` としてと入力し、「 **OK**」をクリックします。
-1. Right-click the `/apps/mywebsite` folder and click **[!UICONTROL Create > Create Folder]**. フォルダの **[!UICONTROL 作成]** ダイアログで、フォルダ名 `components` としてと入力し、「 **[!UICONTROL OK]**」をクリックします。
-1. Right-click the `/apps/mywebsite` folder and click **[!UICONTROL Create > Create Folder]**. フォルダの **[!UICONTROL 作成]** ダイアログで、フォルダ名 `templates` としてと入力し、「 **[!UICONTROL OK]**」をクリックします。
+1. CRXDE Liteーの左側のツリーで、**`/apps`**&#x200B;フォルダーを右クリックし、**[!UICONTROL 作成/フォルダーを作成]**&#x200B;をクリックします。 **フォルダーを作成**&#x200B;ダイアログで、フォルダー名として`mywebsite`と入力し、「**OK**」をクリックします。
+1. `/apps/mywebsite`フォルダーを右クリックし、**[!UICONTROL 作成/フォルダーを作成]**&#x200B;をクリックします。 **[!UICONTROL フォルダーを作成]**&#x200B;ダイアログで、フォルダー名として`components`と入力し、「**[!UICONTROL OK]**」をクリックします。
+1. `/apps/mywebsite`フォルダーを右クリックし、**[!UICONTROL 作成/フォルダーを作成]**&#x200B;をクリックします。 **[!UICONTROL フォルダーを作成]**&#x200B;ダイアログで、フォルダー名として`templates`と入力し、「**[!UICONTROL OK]**」をクリックします。
 
    ツリー内の構造は次のようになります。
 
@@ -91,7 +91,7 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
 >[!NOTE]
 >
->Click the following link to download ``mywebsite.zip``. The archive contains the static.css and image files for your design.
+>``mywebsite.zip``をダウンロードするには、次のリンクをクリックしてください。アーカイブには、デザイン用のstatic.cssファイルと画像ファイルが含まれます。
 
 サンプルの static.css ファイルおよび画像
 
@@ -101,15 +101,15 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
-1. In the folder tree, select the **[!UICONTROL Designs]** folder and then click **[!UICONTROL New > New Page]**. タイトル `mywebsite` を入力し、「 **[!UICONTROL 作成]**」をクリックします。
+1. フォルダーツリーで、**[!UICONTROL Designs]**&#x200B;フォルダーを選択し、**[!UICONTROL 新規/新規ページ]**&#x200B;をクリックします。 タイトルに「`mywebsite`」と入力し、「**[!UICONTROL 作成]**」をクリックします。
 
 1. mywebsite という項目がテーブルに表示されない場合は、ツリーまたはテーブルを更新します。
 
-1. [http://localhost:4502にあるURLへのWebDAV](/help/sites-administering/webdav-access.md) アクセスを使用して、ダウンロードしたmywebsite.zipファイルからサンプル `static.css` ファイルと `images` フォルダーを `/etc/designs/mywebsite` フォルダーにコピーします。
+1. [http://localhost:4502にあるURLへの](/help/sites-administering/webdav-access.md) WebDAVアクセスを使用して、ダウンロードしたmywebsite.zipファイルからサンプルの `static.css` ファイルと `images` フォルダーを `/etc/designs/mywebsite` フォルダーにコピーします。
 
    ![chlimage_1-103](assets/chlimage_1-103.png)
 
-## Creating the Contentpage Template, Component, and Script {#creating-the-contentpage-template-component-and-script}
+## Contentpageテンプレート、コンポーネント、スクリプトの作成{#creating-the-contentpage-template-component-and-script}
 
 ここでは、以下を作成します。
 
@@ -117,13 +117,13 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 * コンテンツのページをレンダリングする際に使用する contentpage コンポーネント
 * contentpage スクリプト
 
-### contentpage テンプレートの作成 {#creating-the-contentpage-template}
+### contentpage テンプレートの作成  {#creating-the-contentpage-template}
 
 サイトの Web ページの基礎として使用するテンプレートを作成します。
 
 テンプレートは、新しいページのデフォルトのコンテンツを定義するものです。複雑な Web サイトでは、複数のテンプレートを使用して、サイト内の様々なタイプのページを作成する場合があります。この演習では、すべてのページを 1 つの単純なテンプレートに基づいて作成します。
 
-1. In the folder tree of CRXDE Lite, right-click `/apps/mywebsite/templates` and click **[!UICONTROL Create > Create Template]**.
+1. CRXDE Liteーのフォルダーツリーで、`/apps/mywebsite/templates`を右クリックし、**[!UICONTROL 作成/テンプレートを作成]**&#x200B;をクリックします。
 
 1. テンプレートを作成ダイアログで、次の値を入力し、「**[!UICONTROL 次へ]**」をクリックします。
 
@@ -136,15 +136,15 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
-   リソースタイプは、ページをレンダリングするコンポーネントを識別します。 In this case, all pages created using the contentpage template are rendered by the `mywebsite/components/contentpage` component.
+   リソースタイプは、ページをレンダリングするコンポーネントを識別します。 この場合、contentpageテンプレートを使用して作成されたすべてのページは、`mywebsite/components/contentpage`コンポーネントによってレンダリングされます。
 
-1. To specify the paths of the pages that can use this template, click the plus button and type `/content(/.*)?` in the text box that appears. 次に、「**[!UICONTROL 次へ]**」をクリックします。
+1. このテンプレートを使用できるページのパスを指定するには、プラスボタンをクリックし、表示されるテキストボックスに「`/content(/.*)?`」と入力します。 次に、「**[!UICONTROL 次へ]**」をクリックします。
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
-   許可されるパスプロパティの値は *正規式です。* 式と一致するパスを持つページでは、そのテンプレートを使用できます。 In this is case the regular expression matches the path of the `/content` folder and all subpages.
+   許可されるパスプロパティの値は、*正規式です。*&#x200B;式と一致するパスを持つページでは、テンプレートを使用できます。 この場合、正規式は`/content`フォルダーとすべてのサブページのパスに一致します。
 
-   When an author creates a page below `/content`, the **[!UICONTROL contentpage]** template appears in a list of available templates to use.
+   作成者が`/content`の下にページを作成すると、**[!UICONTROL contentpage]**&#x200B;テンプレートが、使用可能なテンプレートのリストに表示されます。
 
 1. **[!UICONTROL 許可された親]**&#x200B;パネルおよび&#x200B;**[!UICONTROL 許可されている子]**&#x200B;パネルで「**[!UICONTROL 次へ]**」をクリックして、「**[!UICONTROL OK]**」をクリックします。CRXDE Lite で、「**[!UICONTROL すべて保存]**」をクリックします。
 
@@ -154,7 +154,7 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
 コンテンツを定義し、contentpage テンプレートを使用するコンポーネントを作成します。**&#x200B;コンポーネントの場所は、contentpage テンプレートの「リソースタイプ」プロパティの値と一致する必要があります。
 
-1. In CRXDE Lite, right-click `/apps/mywebsite/components` and click **[!UICONTROL Create > Component]**.
+1. CRXDE Liteで、`/apps/mywebsite/components`を右クリックし、**[!UICONTROL 作成/コンポーネント]**&#x200B;をクリックします。
 1. **[!UICONTROL コンポーネントを作成]**&#x200B;ダイアログで、以下のプロパティ値を入力します。
 
    * **[!UICONTROL ラベル]**：contentpage
@@ -163,11 +163,11 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
    ![chlimage_1-107](assets/chlimage_1-107.png)
 
-   新しいコンポーネントの場所はです `/apps/mywebsite/components/contentpage`。 このパスは、contentpageテンプレート(パスの最初の `/apps/` 部分を除く)のリソースタイプに対応します。
+   新しいコンポーネントの場所は`/apps/mywebsite/components/contentpage`です。 このパスは、contentpageテンプレート（パスの最初の`/apps/`部分を除く）のリソースタイプに対応します。
 
    この一致は、テンプレートをコンポーネントと結び付けるものなので、Web サイトを正常に機能させるために重要です。
 
-1. Click **[!UICONTROL Next]** until the **[!UICONTROL Allowed Children]** panel of the dialog appears, and then click **[!UICONTROL OK]**. In CRXDE Lite, click **[!UICONTROL Save All]**.
+1. **[!UICONTROL 次へ]**&#x200B;をクリックして、ダイアログの&#x200B;**[!UICONTROL 許可されている子]**&#x200B;パネルが表示されたら、**[!UICONTROL OK]**&#x200B;をクリックします。CRXDE Liteで、「**[!UICONTROL すべて保存]**」をクリックします。
 
    この時点で構造は次のようになります。
 
@@ -177,7 +177,7 @@ CRXDE Lite を使用して、リポジトリ内に mywebsite アプリケーシ�
 
 contentpage.jsp スクリプトにコードを追加してページコンテンツを定義します。
 
-1. CRXDE Liteで、ファイルを開 `contentpage.jsp` き `/apps/mywebsite/components/contentpage`ます。 ファイルにはデフォルトで次のコードが含まれています。
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage`の`contentpage.jsp`ファイルを開きます。 ファイルにはデフォルトで次のコードが含まれています。
 
    ```java
    <%--
@@ -222,7 +222,7 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
 
    ![chlimage_1-109](assets/chlimage_1-109.png)
 
-1. In the folder tree, select the **[!UICONTROL Websites]** folder and then click **[!UICONTROL New > New Page]**.
+1. フォルダーツリーで、**[!UICONTROL Webサイト]**&#x200B;フォルダーを選択し、**[!UICONTROL 新規/新規ページ]**&#x200B;をクリックします。
 1. **[!UICONTROL ページを作成]**&#x200B;ウィンドウで、以下を入力します。
 
    * **[!UICONTROL タイトル]**: `My Website`
@@ -231,26 +231,26 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
 
    ![chlimage_1-110](assets/chlimage_1-110.png)
 
-1. 「**[!UICONTROL 作成]**」をクリックします。In the folder tree, select the `/Websites/My Website` page and click **[!UICONTROL New > New Page]**.
+1. 「**[!UICONTROL 作成]**」をクリックします。フォルダーツリーで、`/Websites/My Website`ページを選択し、**[!UICONTROL 新規/新規ページ]**&#x200B;をクリックします。
 1. **[!UICONTROL ページを作成]**&#x200B;ダイアログで、以下のプロパティ値を入力して「作成」をクリックします。
 
    * **[!UICONTROL タイトル]**:英語
    * **[!UICONTROL 名前]**:en
    * 「**[!UICONTROL My Website Content Page Template]**」を選択します。
 
-1. In the folder tree, select the `/Websites/My Website/English` page and click **[!UICONTROL New > New Page]**.
+1. フォルダーツリーで、`/Websites/My Website/English`ページを選択し、**[!UICONTROL 新規/新規ページ]**&#x200B;をクリックします。
 1. **[!UICONTROL ページを作成]**&#x200B;ダイアログで、以下のプロパティ値を入力して「**[!UICONTROL 作成]**」をクリックします。
 
    * **[!UICONTROL タイトル]**:製品
    * 「**[!UICONTROL My Website Content Page Template]**」を選択します。
 
-1. In the folder tree, select the `/Websites/My Website/English` page and click **[!UICONTROL New > New Page]**.
+1. フォルダーツリーで、`/Websites/My Website/English`ページを選択し、**[!UICONTROL 新規/新規ページ]**&#x200B;をクリックします。
 1. **[!UICONTROL ページを作成]**&#x200B;ダイアログで、以下のプロパティ値を入力して「**[!UICONTROL 作成]**」をクリックします。
 
    * **タイトル**:サービス
    * 「**[!UICONTROL My Website Content Page Template]**」を選択します。
 
-1. In the folder tree, select the `/Websites/My Website/English` page and click **[!UICONTROL New > New Page]**.
+1. フォルダーツリーで、`/Websites/My Website/English`ページを選択し、**[!UICONTROL 新規/新規ページ]**&#x200B;をクリックします。
 1. **[!UICONTROL ページを作成]**&#x200B;ダイアログで、以下のプロパティ値を入力して「**[!UICONTROL 作成]**」をクリックします。
 
    * **タイトル**:お客様
@@ -260,7 +260,7 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
 
    ![chlimage_1-111](assets/chlimage_1-111.png)
 
-1. ページをmywebサイトデザインにリンクするには、CRXDE Liteで `/content/mywebsite/en/jcr:content` ノードを選択します。 「 **[!UICONTROL プロパティ]** 」タブで、新しいプロパティに次の値を入力し、クリックし追加ます。
+1. ページをmywebサイトデザインにリンクするには、CRXDE Liteで`/content/mywebsite/en/jcr:content`ノードを選択します。 「**[!UICONTROL プロパティ]**」タブで、新しいプロパティに次の値を入力し、追加「&lt;a0/>プロパティ&lt;a1/>」をクリックします。
 
    * **[!UICONTROL 名前]**:cq:designPath
    * **[!UICONTROL 種類]**：string
@@ -268,7 +268,7 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
 
    ![chlimage_1-112](assets/chlimage_1-112.png)
 
-1. In a new web browser tab or window, open [http://localhost:4502/content/mywebsite/en/products.html](http://localhost:4502/content/mywebsite/en/products.html) to see the Products page:
+1. 新しいWebブラウザーのタブまたはウィンドウで、[http://localhost:4502/content/mywebsite/en/products.html](http://localhost:4502/content/mywebsite/en/products.html)を開いて製品ページを表示します。
 
    ![chlimage_1-113](assets/chlimage_1-113.png)
 
@@ -286,9 +286,9 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
 
 例えば、自分のコンポーネントの JSP コード内で、スーパータイプコンポーネントによって提供されているスクリプトを、自分のコンポーネントに含まれているかのように参照できます。
 
-1. In CRXDE Lite, add a property to the `/apps/mywebsite/components/contentpage` node.
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage`ノードにプロパティを追加します。
 
-   1. Select the `/apps/mywebsite/components/contentpage` node.
+   1. `/apps/mywebsite/components/contentpage`ノードを選択します。
    1. 「プロパティ」タブの下部で、次のプロパティ値を入力し、クリックし追加ます。
 
       * **[!UICONTROL 名前]**:sling:resourceSuperType
@@ -297,7 +297,7 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
    1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
 
-1. Open the `contentpage.jsp` file under `/apps/mywebsite/components/contentpage` and replace the existing code with the following code:
+1. `/apps/mywebsite/components/contentpage`の下の`contentpage.jsp`ファイルを開き、既存のコードを次のコードに置き換えます。
 
    ```xml
    <%@include file="/libs/foundation/global.jsp"%><%
@@ -310,7 +310,7 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
    ```
 
 1. 変更を保存します。
-1. In your browser, reload the **[!UICONTROL Products]** page. It looks as follows:
+1. ブラウザーで、**[!UICONTROL 製品]**&#x200B;ページを再読み込みします。次のようになります。
 
    ![chlimage_1-5](assets/chlimage_1-5.jpeg)
 
@@ -323,16 +323,16 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
                 }); 
    ```
 
-#### 独自のスクリプトの使用 {#using-your-own-scripts}
+#### 独自のスクリプトの使用  {#using-your-own-scripts}
 
 ここでは、それぞれページ本体の一部を生成する複数のスクリプトを作成します。次に、pagecontent コンポーネントで body.jsp ファイルを作成して、AEM のページコンポーネントの body.jsp を上書きします。作成する body.jsp ファイルには、ページ本体の様々な部分を生成するスクリプトを含めます。
 
 **ヒント：**&#x200B;コンポーネントのスーパータイプ内のファイルと同じ名前で相対的な場所も同じファイルがコンポーネントに含まれている場合、これをオーバーレイと呼びます。**
 
-1. In CRXDE Lite, create the file `left.jsp` under `/apps/mywebsite/components/contentpage`:
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage`の下にファイル`left.jsp`を作成します。
 
-   1. Right-click the node `/apps/mywebsite/components/contentpage`, then select **[!UICONTROL Create]** then **[!UICONTROL Create File]**.
-   1. In the window, type `left.jsp` as the** Name** and click **[!UICONTROL OK]**.
+   1. ノード`/apps/mywebsite/components/contentpage`を右クリックし、「**[!UICONTROL 作成]**」、「**[!UICONTROL ファイルを作成]**」の順に選択します。
+   1. ウィンドウで、「**名前**」に「`left.jsp`」と入力し、「**[!UICONTROL OK]**」をクリックします。
 
 1. `left.jsp` ファイルを編集して、既存のコンテンツを削除し、以下のコードに置き換えます。
 
@@ -346,12 +346,12 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
    ```
 
 1. 変更内容を保存します。
-1. In CRXDE Lite, create the file `center.jsp` under `/apps/mywebsite/components/contentpage`:
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage`の下にファイル`center.jsp`を作成します。
 
-   1. Right-click the node `/apps/mywebsite/components/contentpage`, select **[!UICONTROL Create]**, then **[!UICONTROL Create File]**.
-   1. In the dialog, type `center.jsp` as **[!UICONTROL Name]** and click **[!UICONTROL OK]**.
+   1. ノード`/apps/mywebsite/components/contentpage`を右クリックし、「**[!UICONTROL 作成]**」、「**[!UICONTROL ファイルを作成]**」の順に選択します。
+   1. ダイアログで、`center.jsp`を&#x200B;**[!UICONTROL 名前]**&#x200B;と入力し、**[!UICONTROL OK]**&#x200B;をクリックします。
 
-1. Edit the file `center.jsp` to remove the existing content and replace it with the following code:
+1. ファイル`center.jsp`を編集して既存のコンテンツを削除し、次のコードに置き換えます。
 
    ```java
    <%@include file="/libs/foundation/global.jsp"%><%
@@ -363,9 +363,9 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
    ```
 
 1. 変更内容を保存します。
-1. In CRXDE Lite, create the file `right.jsp` under `/apps/mywebsite/components/contentpage`:
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage`の下にファイル`right.jsp`を作成します。
 
-   1. Right-click the node `/apps/mywebsite/components/contentpage`, select **[!UICONTROL Create]**, then **[!UICONTROL Create File]**.
+   1. ノード`/apps/mywebsite/components/contentpage`を右クリックし、「**[!UICONTROL 作成]**」、「**[!UICONTROL ファイルを作成]**」の順に選択します。
    1. ダイアログボックスで、「`right.jsp`名前&#x200B;**[!UICONTROL 」に]** と入力して、「**[!UICONTROL OK]**」をクリックします。
 
 1. `right.jsp` ファイルを編集して、既存のコンテンツを削除し、以下のコードに置き換えます。
@@ -378,7 +378,7 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
    ```
 
 1. 変更内容を保存します。
-1. In CRXDE Lite, create the file `body.jsp` under `/apps/mywebsite/components/contentpage`:
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage`の下にファイル`body.jsp`を作成します。
 1. `body.jsp` ファイルを編集して、既存のコンテンツを削除し、以下のコードに置き換えます。
 
    ```java
@@ -399,7 +399,7 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
    ```
 
 1. 変更内容を保存します。
-1. In your browser, reload the **[!UICONTROL Products]** page. It looks as follows:
+1. ブラウザーで、**[!UICONTROL 製品]**&#x200B;ページを再読み込みします。次のようになります。
 
    ![chlimage_1-6](assets/chlimage_1-6.jpeg)
 
@@ -415,20 +415,20 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
 
 #### 上部ナビゲーションコンポーネントの作成 {#creating-the-top-navigation-component-1}
 
-1. In CRXDE Lite, right-click `/apps/mywebsite/components`, select **[!UICONTROL Create]**, then **[!UICONTROL Create Component]**.
+1. CRXDE Liteで、`/apps/mywebsite/components`を右クリックし、「**[!UICONTROL 作成]**」を選択してから、「**[!UICONTROL コンポーネントを作成]**」を選択します。
 1. **[!UICONTROL コンポーネントを作成]**&#x200B;ウィンドウで、以下を入力します。
 
-   * **[!UICONTROL ラベル]**: `topnav`
+   * **[!UICONTROL ラベル]**:  `topnav`
    * **[!UICONTROL タイトル]**: `My Top Navigation Component`
    * **[!UICONTROL 説明]**: `This is My Top Navigation Component`
 
 1. 「**[!UICONTROL 次へ]**」を数回クリックして最後のウィンドウに移動し、「**[!UICONTROL OK]**」をクリックします。変更内容を保存します。
 
-#### テキストリンクを含む上部ナビゲーションスクリプトの作成 {#creating-the-top-navigation-script-with-textual-links}
+#### テキストリンクを含む上部ナビゲーションスクリプトの作成  {#creating-the-top-navigation-script-with-textual-links}
 
 topnav にレンダリングスクリプトを追加して、子ページへのテキストリンクを生成します。
 
-1. In CRXDE Lite, open the file `topnav.jsp` under `/apps/mywebsite/components/topnav`.
+1. CRXDE Liteで、`/apps/mywebsite/components/topnav`の下の`topnav.jsp`ファイルを開きます。
 1. 以下のコードをコピー＆ペーストして、ファイル内のコードを置き換えます。
 
    ```xml
@@ -451,11 +451,11 @@ topnav にレンダリングスクリプトを追加して、子ページへの�
    %> 
    ```
 
-#### contentpage コンポーネントに上部ナビゲーションを含める {#including-top-navigation-in-the-contentpage-component}
+#### contentpage コンポーネントに上部ナビゲーションを含める  {#including-top-navigation-in-the-contentpage-component}
 
 contentpage コンポーネントに topnav を含めるには：
 
-1. In CRXDE Lite, open the `body.jsp` under `/apps/mywebsite/components/contentpage`and replace:
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage`の下の`body.jsp`を開き、次を置き換えます。
 
    ```xml
    <div class="topnav">topnav</div>
@@ -468,23 +468,23 @@ contentpage コンポーネントに topnav を含めるには：
    ```
 
 1. 変更内容を保存します。
-1. In your browser, reload the **[!UICONTROL Products]** Page. トップナビゲーションは次のように表示されます。
+1. ブラウザーで、**[!UICONTROL 製品]**&#x200B;ページを再読み込みします。 トップナビゲーションは次のように表示されます。
 
    ![chlimage_1-115](assets/chlimage_1-115.png)
 
 #### サブタイトルを含めたページの強化 {#enhancing-pages-with-subtitles}
 
-**[!UICONTROL ページ]** コンポーネントは、ページのサブタイトルを提供するプロパティを定義します。ページのコンテンツに関する情報を追加提供するサブタイトル。
+**[!UICONTROL ページ]**&#x200B;コンポーネントは、ページのサブタイトルを提供するプロパティを定義します。ページのコンテンツに関する情報を追加提供するサブタイトル。
 
-1. In your browser, open the **[!UICONTROL Products]** page.
-1. On the Sidekick **[!UICONTROL Page]** tab, click **[!UICONTROL Page Properties]**.
-1. On the **[!UICONTROL Basic]** tab of the dialog, expand **[!UICONTROL More Titles and Description]** and for the **[!UICONTROL Subtitle]** property, type `what we do`. Click **[!UICONTROL OK]**.
-1. Repeat the previous steps to add the subtitle **about our services** to the **[!UICONTROL Services]** page.
-1. Repeat the previous steps to add the subtitle **the trust we earn** to the **[!UICONTROL Customers]** page.
+1. ブラウザーで、**[!UICONTROL 製品]**&#x200B;ページを開きます。
+1. 「サイドキック&#x200B;**[!UICONTROL ページ]**」タブで、「**[!UICONTROL ページのプロパティ]**」をクリックします。
+1. ダイアログの「**[!UICONTROL 基本]**」タブで、「**[!UICONTROL 詳細なタイトルと説明]**」を展開し、**[!UICONTROL 字幕]**&#x200B;プロパティに「`what we do`」と入力します。「**[!UICONTROL OK]**」をクリックします。
+1. 前の手順を繰り返して、アドビのサービス&#x200B;**に関するサブタイトル**&#x200B;を&#x200B;**[!UICONTROL サービス]**&#x200B;ページに追加します。
+1. 前述の手順を繰り返して、**得た信頼を**[!UICONTROL &#x200B;顧客&#x200B;]**ページに追加します。**
 
    **ヒント：** CRXDE Lite で、/content/mywebsite/en/products/jcr:content ノードを選択して、サブタイトルプロパティが追加されていることを確認します。
 
-#### 画像リンクを使用した上部ナビゲーションの強化 {#enhance-top-navigation-by-using-image-links}
+#### 画像リンクを使用した上部ナビゲーションの強化  {#enhance-top-navigation-by-using-image-links}
 
 ハイパーテキストの代わりに画像リンクを使用してナビゲーションを制御するように、topnav コンポーネントのレンダリングスクリプトを強化します。画像には、リンクターゲットのタイトルとサブタイトルが含まれます。
 
@@ -492,15 +492,15 @@ contentpage コンポーネントに topnav を含めるには：
 
 例えば、Products ページへの画像リンクのソースは、http://localhost:4502/content/mywebsite/en/products.navimage.png などになります。Sling では、この URL を解析して、リソースタイプおよびリソースのレンダリングに使用するスクリプトを特定します。
 
-1. Sling determines the path of the resource to be `/content/mwebysite/en/products.png.`
-1. Sling matches this path with the `/content/mywebsite/en/products` node.
-1. Sling determines the `sling:resourceType` of this node to be `mywebsite/components/contentpage`.
+1. Slingは、`/content/mwebysite/en/products.png.`とするリソースのパスを決定します
+1. Slingは、このパスと`/content/mywebsite/en/products`ノードを一致させます。
+1. Slingは、このノードの`sling:resourceType`を`mywebsite/components/contentpage`と判断します。
 
 1. Sling が、このコンポーネント内で、URL セレクター（`navimage`）およびファイル名拡張子（`png`）に最も一致するスクリプトを見つけます。
 
 この演習では、Sling はこれらの URL を、ユーザーが作成する /apps/mywebsite/components/contentpage/navimage.png.java スクリプトと照合します。
 
-1. In CRXDE Lite, open the `topnav.jsp` under `/apps/mywebsite/components/topnav.`Locate the content of the anchor element (line 14):
+1. CRXDE Liteで、`/apps/mywebsite/components/topnav.`アンカー要素の内容（14行目）の下の`topnav.jsp`を開きます。
 
    ```xml
    <%=child.getTitle() %>
@@ -514,11 +514,11 @@ contentpage コンポーネントに topnav を含めるには：
 
 1. 変更内容を保存します。
 1. `/apps/mywebsite/components/contentpage` ノードを右クリックして、**[!UICONTROL 作成／ファイルを作成]**&#x200B;をクリックします。
-1. In the **[!UICONTROL Create File]** window, as **[!UICONTROL Name]**, type `navimage.png.java`.
+1. **[!UICONTROL ファイルを作成]**&#x200B;ウィンドウで、**[!UICONTROL 名前]**&#x200B;として`navimage.png.java`と入力します。
 
    .javaファイル名の拡張子は、Slingに対して、Apache SlingスクリプティングJavaサポートを使用してスクリプトをコンパイルし、サーブレットを作成する必要があることを示します。
 
-1. Copy the following code into `navimage.png.java.`The code extends the AbstractImageServlet class:
+1. 次のコードを`navimage.png.java.`AbstractImageServletクラスにコピーします。
 
    * [AbstractImageServlet](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) は、現在のリソースのプロパティを格納する ImageContext オブジェクトを作成します。
    * リソースの親ページは、ImageContext オブジェクトから抽出されます。その後、ページのタイトルとサブタイトルが取得されます。
@@ -640,7 +640,7 @@ contentpage コンポーネントに topnav を含めるには：
    ```
 
 1. 変更内容を保存します。
-1. In your browser, reload the **[!UICONTROL Products]** page. The top navigation now appears as follows:
+1. ブラウザーで、**[!UICONTROL 製品]**&#x200B;ページを再読み込みします。トップナビゲーションは、次のように表示されます。
 
    ![screen_shot_2012-03-07at10047pm](assets/screen_shot_2012-03-07at10047pm.png)
 
@@ -652,24 +652,24 @@ contentpage コンポーネントに topnav を含めるには：
 
 #### 製品ページの作成 {#creating-product-pages}
 
-Create two pages located below the **[!UICONTROL Products]** page. For each page, which describe two specific products, you set a title, a description, and a date.
+**[!UICONTROL 製品]**&#x200B;ページの下に2つのページを作成します。各ページ（2つの特定の製品を説明）ごとに、タイトル、説明、日付を設定します。
 
-1. **[!UICONTROL Webサイト]** ページのフォルダーツリーで、「 **[!UICONTROL Webサイト/マイWebサイト/英語/製品]** 」項目を選択し、 ****&#x200B;新規/新規ページをクリックします。
-1. In the dialog enter the following property values and then click **[!UICONTROL Create]**:
+1. **[!UICONTROL Webサイト]**&#x200B;ページのフォルダーツリーで、**[!UICONTROL Webサイト/My Webサイト/English/Products]**&#x200B;を選択し、**[!UICONTROL 新規/新規ページ]**&#x200B;をクリックします。
+1. ダイアログで、次のプロパティ値を入力し、「**[!UICONTROL 作成]**」をクリックします。
 
    * **[!UICONTROL タイトル]**:製品1.
    * **[!UICONTROL 名前]**:product1.
-   * Select **[!UICONTROL My Website Content Page Template]**
+   * 「**[!UICONTROL My Webサイトコンテンツページのテンプレート]**」を選択します。
 
 1. 以下のプロパティ値を使用して、Products の下にもう 1 つのページを作成します。
 
    * **[!UICONTROL タイトル]**:製品2
    * **[!UICONTROL 名前]**:product2
-   * Select **[!UICONTROL My Website Content Page Template]**
+   * 「**[!UICONTROL My Webサイトコンテンツページのテンプレート]**」を選択します。
 
 1. CRXDE Lite で、Product 1 ページの説明と日付を設定します。
 
-   1. Select the `/content/mywebsite/en/products/product1/jcr:content` node.
+   1. `/content/mywebsite/en/products/product1/jcr:content`ノードを選択します。
    1. 「**[!UICONTROL プロパティ]**」タブで、以下の値を入力します。
 
       * **[!UICONTROL 名前]**：`jcr:description`
@@ -688,7 +688,7 @@ Create two pages located below the **[!UICONTROL Products]** page. For each page
 
 1. CRXDE Lite で、Product 2 ページの説明と日付を設定します。
 
-   1. Select the `/content/mywebsite/en/products/product2/jcr:content` node.
+   1. `/content/mywebsite/en/products/product2/jcr:content`ノードを選択します。
    1. 「**[!UICONTROL プロパティ]**」タブで、以下の値を入力します。
 
       * **[!UICONTROL 名前]**:jcr:description
@@ -709,20 +709,20 @@ Create two pages located below the **[!UICONTROL Products]** page. For each page
 
 listchildren コンポーネントを作成するには：
 
-1. In CRXDE Lite, right-click `/apps/mywebsite/components`, select **[!UICONTROL Create]**, then **[!UICONTROL Create Component]**.
-1. In the dialog enter the following property values and then click **[!UICONTROL Next]**:
+1. CRXDE Liteで、`/apps/mywebsite/components`を右クリックし、「**[!UICONTROL 作成]**」を選択してから、「**[!UICONTROL コンポーネントを作成]**」を選択します。
+1. ダイアログで、次のプロパティ値を入力し、「**[!UICONTROL 次へ]**」をクリックします。
 
    * **[!UICONTROL ラベル]**:listchildren.
    * **[!UICONTROL タイトル]**:My Listchildrenコンポーネント。
    * **[!UICONTROL 説明]**:これはMy Listchildrenコンポーネントです。
 
-1. Continue clicking **[!UICONTROL Next]** until the **[!UICONTROL Allowed Children]** panel appears, and then click **[!UICONTROL OK]**.
+1. 引き続き「**[!UICONTROL 次へ]**」をクリックして、**[!UICONTROL 許可されている子]**&#x200B;パネルが表示されたら、「**[!UICONTROL OK]**」をクリックします。
 
 #### リストの子スクリプトの作成 {#creating-the-list-children-script}
 
 listchildren コンポーネントのスクリプトを開発します。
 
-1. In CRXDE Lite, open the file `listchildren.jsp` under `/apps/mywebsite/components/listchildren`.
+1. CRXDE Liteで、`/apps/mywebsite/components/listchildren`の下の`listchildren.jsp`ファイルを開きます。
 1. デフォルトのコードを以下のコードに置き換えます。
 
    ```xml
@@ -751,16 +751,16 @@ listchildren コンポーネントのスクリプトを開発します。
 
 1. 変更内容を保存します。
 
-#### リストの子ダイアログの作成 {#creating-the-list-children-dialog}
+#### リストの子ダイアログの作成  {#creating-the-list-children-dialog}
 
 listchildren コンポーネントのプロパティを設定する際に使用するダイアログを作成します。
 
 1. listchildren コンポーネントの下に dialog ノードを作成します。
 
-   1. In CRXDE Lite, right-click the `/apps/mywebsite/components/listchildren`node and click **[!UICONTROL Create > Create Dialog]**.
+   1. CRXDE Liteで、`/apps/mywebsite/components/listchildren`ノードを右クリックし、**[!UICONTROL 作成/ダイアログを作成]**&#x200B;をクリックします。
    1. ダイアログで、以下のプロパティ値を入力して「OK」をクリックします。
 
-      * **[!UICONTROL ラベル]**: `dialog`
+      * **[!UICONTROL ラベル]**:  `dialog`
       * **[!UICONTROL タイトル]**: `Edit Component` 「 **[!UICONTROL OK]**」をクリックします。
 
    ![screen_shot_2012-03-07at45818pm](assets/screen_shot_2012-03-07at45818pm.png)
@@ -769,12 +769,12 @@ listchildren コンポーネントのプロパティを設定する際に使用�
 
    ![screen_shot_2012-03-07at50415pm](assets/screen_shot_2012-03-07at50415pm.png)
 
-1. Select the `/apps/mywebsite/components/listchildren/dialog/items/items/tab1` node.
-1. In the **[!UICONTROL Properties]** tab, change the value of the **[!UICONTROL title]** property to `List Children`
+1. `/apps/mywebsite/components/listchildren/dialog/items/items/tab1`ノードを選択します。
+1. 「**[!UICONTROL プロパティ]**」タブで、**[!UICONTROL title]**&#x200B;プロパティの値を`List Children`に変更します
 
    ![chlimage_1-117](assets/chlimage_1-117.png)
 
-1. **tab1** ノードを選択し、 **[!UICONTROL 作成/ノードを作成をクリックし、次のプロパティ値を入力して、「]** OK ****」をクリックします。
+1. **tab1**&#x200B;ノードを選択し、**[!UICONTROL 作成/ノードを作成]**&#x200B;をクリックし、次のプロパティ値を入力して、「**[!UICONTROL OK]**」をクリックします。
 
    * **[!UICONTROL 名前]**：items
    * **[!UICONTROL タイプ]**：cq:WidgetCollection
@@ -788,13 +788,13 @@ listchildren コンポーネントのプロパティを設定する際に使用�
 
    ![screen_shot_2012-03-07at51031pm](assets/screen_shot_2012-03-07at51031pm.png)
 
-1. Add properties for the listroot node to configure it as a text field. Each row in the following table represents a property. When finished, click **[!UICONTROL Save All]**.
+1. リストア追加ウトノードをテキストフィールドとして設定するためのプロパティ。次の表に示す各行は、プロパティを表しています。終了したら、「**[!UICONTROL すべて保存]**」をクリックします。
 
    | 名前 | タイプ | 値 |
    |---|---|---|
    | fieldLabel | String | リストルートのパス |
-   | name | String | 。/listroot |
-   | xtype | String | textfield |
+   | name | 文字列 | 。/listroot |
+   | xtype | 文字列 | textfield |
 
    ![screen_shot_2012-03-07at51433pm](assets/screen_shot_2012-03-07at51433pm.png)
 
@@ -802,7 +802,7 @@ listchildren コンポーネントのプロパティを設定する際に使用�
 
 contentpage コンポーネントに listchildren コンポーネントを含めるには、次の手順を実行します。
 
-1. In CRXDE Lite, open the file `left.jsp` under `/apps/mywebsite/components/contentpage` and locate the following code (line 4):
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage`の下の`left.jsp`ファイルを開き、次のコード（4行目）を探します。
 
    ```xml
    <div>newslist</div>
@@ -816,20 +816,20 @@ contentpage コンポーネントに listchildren コンポーネントを含め
 
 1. 変更内容を保存します。
 
-#### ページでのリストの子の表示 {#viewing-list-children-in-a-page}
+#### ページでのリストの子の表示  {#viewing-list-children-in-a-page}
 
 このコンポーネントの完全な動作は、Products ページを表示して確認できます。
 
 * 親ページ（「リストルートのパス」）が定義されていないとき。
 * 親ページ（「リストルートのパス」）が定義されているとき。
 
-1. In your browser, reload the **[!UICONTROL Products]** page. The listchildren component appears as follows:
+1. ブラウザーで、**[!UICONTROL 製品]**&#x200B;ページを再読み込みします。listchildrenコンポーネントは次のように表示されます。
 
    ![chlimage_1-118](assets/chlimage_1-118.png)
 
 1. ![chlimage_1-119](assets/chlimage_1-119.png)
 
-1. リストルートのパスとして、次のように入力します。 `/content/mywebsite/en`.「 **[!UICONTROL OK]**」をクリックします。 ページ上のlistchildrenコンポーネントは次のようになります。
+1. リストルートのパスとして、次のように入力します。`/content/mywebsite/en`.「**[!UICONTROL OK]**」をクリックします。 ページ上のlistchildrenコンポーネントは次のようになります。
 
    ![chlimage_1-120](assets/chlimage_1-120.png)
 
@@ -848,7 +848,7 @@ contentpage コンポーネントに listchildren コンポーネントを含め
 
 >[!NOTE]
 >
->Adobe Experience Manager provides a more full-featured logo component ( `/libs/foundation/components/logo`).
+>Adobe Experience Managerは、よりフル機能のロゴコンポーネント(`/libs/foundation/components/logo`)を提供しています。
 
 #### ロゴコンポーネントノードの作成 {#creating-the-logo-component-node}
 
@@ -863,11 +863,11 @@ contentpage コンポーネントに listchildren コンポーネントを含め
 
 1. 「次へ」を数回クリックしてダイアログの最後のパネルを表示し、「**[!UICONTROL OK]**」をクリックします。
 
-#### ロゴスクリプトの作成 {#creating-the-logo-script}
+#### ロゴスクリプトの作成  {#creating-the-logo-script}
 
 ここでは、ホームページへのリンクを含むロゴイメージを表示するスクリプトの作成方法について説明します。
 
-1. In CRXDE Lite, open the file `logo.jsp` under `/apps/mywebsite/components/logo`.
+1. CRXDE Liteで、`/apps/mywebsite/components/logo`の下の`logo.jsp`ファイルを開きます。
 1. 以下のコードでは、サイトのホームページへのリンクが作成され、ロゴイメージへの参照が追加されます。このコードを `logo.jsp` にコピーします。
 
    ```xml
@@ -902,28 +902,28 @@ contentpage コンポーネントに listchildren コンポーネントを含め
 
 1. 変更内容を保存します。
 
-#### ロゴデザインダイアログの作成 {#creating-the-logo-design-dialog}
+#### ロゴデザインダイアログの作成  {#creating-the-logo-design-dialog}
 
 デザインモードでロゴコンポーネントを設定するためのダイアログを作成します。デザインモードのダイアログには、`design_dialog` という名前を付ける必要があります。
 
 1. logo コンポーネントの下に dialog ノードを作成します。
 
-   1. Right-click the `/apps/mywebsite/components/logo` node and click **[!UICONTROL Create > Create Dialog]**.
-   1. Type the following property values and then click **[!UICONTROL OK]**:
+   1. `/apps/mywebsite/components/logo`ノードを右クリックし、**[!UICONTROL 作成/ダイアログを作成]**&#x200B;をクリックします。
+   1. 次のプロパティ値を入力し、「**[!UICONTROL OK]**」をクリックします。
 
       * **[!UICONTROL ラベル]** `design_dialog`
       * **[!UICONTROL タイトル]** `Logo (Design)`
 
-1. Right-click the tab1 node in the design_dialog branch and click Delete. Click **[!UICONTROL Save All]**.
-1. Under the `design_dialog/items/items`node, create a new node named `img` of type `cq:Widget`. Add the following properties and then click **[!UICONTROL Save All]**:
+1. design_dialogブランチのtab1ノードを右クリックし、「削除」をクリックします。「**[!UICONTROL すべて保存]**」をクリックします。
+1. `design_dialog/items/items`ノードの下に、`cq:Widget`型の`img`という名前の新しいノードを作成します。 追加次のプロパティを設定し、「**[!UICONTROL すべて保存]**」をクリックします。
 
    | 名前 | タイプ | 値 |
    |---|---|---|
-   | fileNameParameter | String | 。/imageName |
-   | fileReferenceParameter | String | 。/imageReference |
-   | name | String | 。/画像 |
-   | title | String | 画像 |
-   | xtype | String | html5smartimage |
+   | fileNameParameter | 文字列 | 。/imageName |
+   | fileReferenceParameter | 文字列 | 。/imageReference |
+   | name | 文字列 | 。/画像 |
+   | title | 文字列 | 画像 |
+   | xtype | 文字列 | html5smartimage |
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
 
@@ -931,8 +931,8 @@ contentpage コンポーネントに listchildren コンポーネントを含め
 
 ロゴイメージを取得してページに書き込むスクリプトを作成します。
 
-1. Right-click the logo component node and click **[!UICONTROL Create > Create File]** to create the script file named img.GET.java.
-1. Open the file, copy the following code into the file, and then click **[!UICONTROL Save All]**:
+1. logoコンポーネントノードを右クリックし、**[!UICONTROL 作成/ファイルを作成]**&#x200B;をクリックして、img.GET.javaという名前のスクリプトファイルを作成します。
+1. ファイルを開き、次のコードをファイルにコピーし、「**[!UICONTROL すべて保存]**」をクリックします。
 
 ```java
 package apps.mywebsite.components.logo;
@@ -1002,7 +1002,7 @@ public class img_GET extends AbstractImageServlet {
 
 #### contentpage コンポーネントへのロゴコンポーネントの追加 {#adding-the-logo-component-to-the-contentpage-component}
 
-1. CRXDE Liteで、の下のを開き、次のコ `left.jsp` ード行 `/apps/mywebsite/components/contentpage file` を探します。
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage file`の下の`left.jsp`を開き、次のコード行を探します。
 
    ```xml
    <div>logo</div>
@@ -1015,7 +1015,7 @@ public class img_GET extends AbstractImageServlet {
    ```
 
 1. 変更内容を保存します。
-1. In your browser, reload the **[!UICONTROL Products]** page. The logo looks as follows, though currently it only shows the underlying link:
+1. ブラウザーで、**[!UICONTROL 製品]**&#x200B;ページを再読み込みします。ロゴは次のようになりますが、現在のところ、基になるリンクのみを表示します。
 
    ![chlimage_1-123](assets/chlimage_1-123.png)
 
@@ -1023,16 +1023,16 @@ public class img_GET extends AbstractImageServlet {
 
 ここでは、デザインモードのダイアログを使用して画像をロゴとして設定する方法について説明します。
 
-1. With the **[!UICONTROL Products]** page open in your browser, click the **[!UICONTROL Design]** button at the bottom of Sidekick to enter **[!UICONTROL Design]** mode.
+1. ブラウザーで&#x200B;**[!UICONTROL 製品]**&#x200B;ページを開き、サイドキックの下部にある&#x200B;**[!UICONTROL デザイン]**&#x200B;ボタンをクリックして、**[!UICONTROL デザイン]**&#x200B;モードに入ります。
 
    ![](do-not-localize/chlimage_1-10.png)
 
-1. In the Design of logo bar, click **[!UICONTROL Edit]** to use the dialog to edit the settings for the logo component.
-1. In the dialog, click in the panel of the **[!UICONTROL Image]** tab, browse for the `logo.png` image that you extracted from the `mywebsite.zip` file, and click **[!UICONTROL OK]**.
+1. ロゴバーのデザインで、**[!UICONTROL 編集]**&#x200B;をクリックし、ダイアログを使用してロゴコンポーネントの設定を編集します。
+1. ダイアログで、「**[!UICONTROL 画像]**」タブのパネル内をクリックし、`mywebsite.zip`ファイルから抽出した`logo.png`画像を参照して、「**[!UICONTROL OK]**」をクリックします。
 
    ![chlimage_1-124](assets/chlimage_1-124.png)
 
-1. Click the triangle on the Sidekick title bar to return to **[!UICONTROL Edit]** mode.
+1. サイドキックのタイトルバーの三角形をクリックして、**[!UICONTROL 編集]**&#x200B;モードに戻ります。
 
    ![chlimage_1-7](assets/chlimage_1-7.jpeg)
 
@@ -1044,7 +1044,7 @@ public class img_GET extends AbstractImageServlet {
 
 ここでは、基盤コンポーネントの 1 つであるパンくず（trail）コンポーネントを含めます。
 
-1. In CRXDE Lite, browse to `/apps/mywebsite/components/contentpage`, open the file `center.jsp` and replace:
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage`を参照し、`center.jsp`ファイルを開いて次を置き換えます。
 
    ```java
    <div>trail</div>
@@ -1065,7 +1065,7 @@ public class img_GET extends AbstractImageServlet {
 
 ここでは、基盤コンポーネントの 1 つであるタイトルコンポーネントを含めます。
 
-1. In CRXDE Lite, browse to `/apps/mywebsite/components/contentpage`, open the file `center.jsp` and replace:
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage`を参照し、`center.jsp`ファイルを開いて次を置き換えます。
 
    ```xml
    <div>title</div>
@@ -1078,12 +1078,12 @@ public class img_GET extends AbstractImageServlet {
    ```
 
 1. 変更内容を保存します。
-1. In your browser, reload the **[!UICONTROL Products]** page. The title component looks as follows:
+1. ブラウザーで、**[!UICONTROL 製品]**&#x200B;ページを再読み込みします。titleコンポーネントは次のようになります。
 
    ![chlimage_1-126](assets/chlimage_1-126.png)
 
 >[!NOTE]
->You can set a different Title and the Type/Size in **[!UICONTROL Edit]** mode.
+>**[!UICONTROL 編集]**&#x200B;モードで、別のタイトルとタイプ/サイズを設定できます。
 
 ### 段落システムコンポーネントを含める {#including-the-paragraph-system-component}
 
@@ -1091,7 +1091,7 @@ public class img_GET extends AbstractImageServlet {
 
 parsys コンポーネント（基盤コンポーネントの 1 つ）を、contentpage コンポーネントに追加します。
 
-1. In CRXDE Lite, browse to `/apps/mywebsite/components/contentpage`, open the file `center.jsp` and locate the following line of code:
+1. CRXDE Liteで`/apps/mywebsite/components/contentpage`を参照し、ファイル`center.jsp`を開き、次のコード行を探します。
 
    ```xml
    <div>parsys</div>
@@ -1103,7 +1103,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
    <cq:include path="par" resourceType="foundation/components/parsys" />
    ```
 
-1. In your browser, refresh the **[!UICONTROL Products]** page. It now has the parsys component, which is seen as follows:
+1. ブラウザーで、**[!UICONTROL 製品]**&#x200B;ページを更新します。現在は、次のようなparsysコンポーネントが含まれています。
 
    ![chlimage_1-127](assets/chlimage_1-127.png)
 
@@ -1113,13 +1113,13 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 
 >[!NOTE]
 >
->Adobe Experience Manager provides a more full-featured image component ( `/libs/foundation/components/image`).
+>Adobe Experience Managerは、よりフル機能の画像コンポーネント(`/libs/foundation/components/image`)を提供しています。
 
 #### 画像コンポーネントの作成 {#creating-the-image-component-1}
 
-1. Right click the `/apps/mywebsite/components/logo` node and click **[!UICONTROL Copy]**.
-1. Right-click the `/apps/mywebsite/components` node and click **[!UICONTROL Paste]**.
-1. Right-click the `Copy of logo` node, click **[!UICONTROL Rename]**, delete the existing text and type `image`.
+1. `/apps/mywebsite/components/logo`ノードを右クリックし、「**[!UICONTROL コピー]**」をクリックします。
+1. `/apps/mywebsite/components`ノードを右クリックし、「**[!UICONTROL 貼り付け]**」をクリックします。
+1. `Copy of logo`ノードを右クリックし、「**[!UICONTROL 名前を変更]**」をクリックします。既存のテキストを削除して、「`image`」と入力します。
 
 1. `image` コンポーネントノードを選択して、以下のプロパティ値を変更します。
 
@@ -1132,9 +1132,9 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
    * **[!UICONTROL 種類]**：string
    * **[!UICONTROL 値]**:MyWebサイト
 
-1. Below the `image` node, rename the `design_dialog` node to `dialog`.
+1. `image`ノードの下で、`design_dialog`ノードの名前を`dialog`に変更します。
 
-1. Rename `logo.jsp` to `image.jsp.`
+1. `logo.jsp`を`image.jsp.`に変更します
 
 1. img.GET.java を開いて、パッケージを `apps.mywebsite.components.image` に変更します。
 
@@ -1166,7 +1166,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 
 1. 変更内容を保存します。
 
-#### 画像の cq:editConfig ノードの作成 {#creating-the-image-cq-editconfig-node}
+#### 画像の cq:editConfig ノードの作成  {#creating-the-image-cq-editconfig-node}
 
 `cq:editConfig` ノードタイプを使用すると、プロパティを編集するときに、コンポーネントの一定の動作を設定できます。
 
@@ -1191,9 +1191,9 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 
 | 名前 | タイプ | 値 |
 |---|---|---|
-| 同意 | String | image/(gif | jpeg | png) |
-| グループ | String | media |
-| propertyName | String | 。/imageReference |
+| 同意 | 文字列 | image/(gif | jpeg | png) |
+| グループ | 文字列 | media |
+| propertyName | 文字列 | 。/imageReference |
 
 ![chlimage_1-129](assets/chlimage_1-129.png)
 
@@ -1201,18 +1201,18 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 
 ここでは、画像コンポーネントをサイドキックに表示したときに横に表示されるアイコンを追加します。
 
-1. In CRXDE Lite, right-click the file `/libs/foundation/components/image/icon.png` and select **[!UICONTROL Copy]**.
-1. Right-click the node `/apps/mywebsite/components/image` and click **[!UICONTROL Paste]**, then click **[!UICONTROL Save All]**.
+1. CRXDE Liteで、ファイル`/libs/foundation/components/image/icon.png`を右クリックし、「**[!UICONTROL コピー]**」を選択します。
+1. ノード`/apps/mywebsite/components/image`を右クリックし、「**[!UICONTROL 貼り付け]**」をクリックします。次に、「**[!UICONTROL すべて保存]**」をクリックします。
 
 #### 画像コンポーネントの使用 {#using-the-image-component}
 
 ここでは、**[!UICONTROL Products]** ページを表示して、段落システムに画像コンポーネントを追加します。
 
-1. In your browser, reload the **[!UICONTROL Products]** page.
-1. In the Sidekick, click the **[!UICONTROL Design mode]** icon.
-1. Click the **[!UICONTROL Edit]** button to edit the design dialog of par.
-1. In the dialog, a list of **[!UICONTROL Allowed Components]** is shown; navigate to **[!UICONTROL MyWebsite]**, select the **[!UICONTROL My Image Component]** and click **[!UICONTROL OK]**.
-1. **[!UICONTROL 編集モードに戻る]**。
+1. ブラウザーで、**[!UICONTROL 製品]**&#x200B;ページを再読み込みします。
+1. サイドキックで、**[!UICONTROL デザインモード]**&#x200B;アイコンをクリックします。
+1. 「**[!UICONTROL 編集]**」ボタンをクリックして、parのデザインダイアログを編集します。
+1. このダイアログには、**[!UICONTROL 許可されているコンポーネント]**&#x200B;のリストが表示されます。**[!UICONTROL MyWebサイト]**&#x200B;に移動し、**[!UICONTROL マイ画像コンポーネント]**&#x200B;を選択して、**[!UICONTROL OK]**&#x200B;をクリックします。
+1. **[!UICONTROL 編集モード]**&#x200B;に戻ります。
 1. parsys フレーム（**[!UICONTROL コンポーネントまたはアセットをここにドラッグします]**）をダブルクリックします。**[!UICONTROL 新規コンポーネントを挿入]**&#x200B;および&#x200B;**[!UICONTROL サイドキック]**&#x200B;のセレクターは以下のように表示されます。
 
    ![chlimage_1-8](assets/chlimage_1-8.jpeg)
@@ -1223,7 +1223,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 
 編集モードとデザインモードで、複数のオプションがあります。
 
-1. In CRXDE Lite, navigate to `/apps/mywebsite/components/contentpage`, open the `body.jsp` file and locate the following code:
+1. CRXDE Liteで`/apps/mywebsite/components/contentpage`に移動し、`body.jsp`ファイルを開いて次のコードを探します。
 
    ```java
    <div class="toolbar">toolbar</div>
@@ -1235,23 +1235,23 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
    <cq:include path="toolbar" resourceType="foundation/components/toolbar"/>
    ```
 
-1. AEM Webサイトページのフォルダーツリーで、を選択し `Websites/My Website/English`、 **[!UICONTROL 新規/新規ページをクリックします]**。 次のプロパティ値を指定し、「作成」をクリックします。
+1. AEM Webサイトページのフォルダーツリーで、`Websites/My Website/English`を選択し、**[!UICONTROL 新規/新規ページ]**&#x200B;をクリックします。 次のプロパティ値を指定し、「作成」をクリックします。
 
    * **[!UICONTROL タイトル]**:ツールバー
-   * Select **[!UICONTROL My Website Content Page Template]**
+   * 「**[!UICONTROL My Webサイトコンテンツページのテンプレート]**」を選択します。
 
-1. In the list of pages, right-click the **[!UICONTROL Toolbar]** page and click **[!UICONTROL Properties]**. Select **[!UICONTROL Hide In Navigation]**, and click **[!UICONTROL OK]**.
+1. ページのリストで、**[!UICONTROL ツールバー]**&#x200B;ページを右クリックし、**[!UICONTROL プロパティ]**&#x200B;をクリックします。「**[!UICONTROL ナビゲーションで隠す]**」を選択し、「**[!UICONTROL OK]**」をクリックします。
 
-   The **[!UICONTROL Hide in Navigation]** option prevents the page from appearing in navigation components, such as topnav and listchildren.
+   「**[!UICONTROL ナビゲーションで非表示]**」オプションを使用すると、topnavやlistchildrenなどのナビゲーションコンポーネントにページが表示されなくなります。
 
-1. Under **[!UICONTROL Toolbar]**, create following pages:
+1. **[!UICONTROL ツールバー]**&#x200B;の下で、次のページを作成します。
 
    * Contacts
    * Feedback
    * Login
    * 検索
 
-1. In your browser, reload the **[!UICONTROL Products]** page. It looks as follows:
+1. ブラウザーで、**[!UICONTROL 製品]**&#x200B;ページを再読み込みします。次のようになります。
 
    ![chlimage_1-130](assets/chlimage_1-130.png)
 
@@ -1265,7 +1265,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 
 #### 検索コンポーネントの作成 {#creating-the-search-component-1}
 
-1. In CRXDE Lite, right-click `/apps/mywebsite/components`, select **[!UICONTROL Create]**, then **[!UICONTROL Create Component]**.
+1. CRXDE Liteで、`/apps/mywebsite/components`を右クリックし、「**[!UICONTROL 作成]**」を選択してから、「**[!UICONTROL コンポーネントを作成]**」を選択します。
 1. ダイアログを使用してコンポーネントを設定します。
 
    1. 最初のパネルで、以下のプロパティ値を指定します。
@@ -1274,16 +1274,16 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
       * **[!UICONTROL タイトル]**:検索コンポーネント
       * **[!UICONTROL 説明]**:これは検索コンポーネントです
       * **[!UICONTROL グループ]**:MyWebサイト
-   1. Click **[!UICONTROL Next]**, then click **[!UICONTROL Next]** again.
-   1. On the **[!UICONTROL Allowed Parents]** panel, click the **[!UICONTROL +]** button and type `*/parsys`.
-   1. Click **[!UICONTROL Next]** and then click **[!UICONTROL OK]**.
+   1. 「**[!UICONTROL 次へ]**」をクリックし、「**[!UICONTROL 次へ]**」を再度クリックします。
+   1. **[!UICONTROL 許可されている親]**&#x200B;パネルで、**[!UICONTROL +]**&#x200B;ボタンをクリックし、`*/parsys`と入力します。
+   1. 「**[!UICONTROL 次へ]**」をクリックし、「**[!UICONTROL OK]**」をクリックします。
 
 
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
-1. Copy the following nodes and paste them to the `apps/mywebsite/components/search` node:
+1. 次のノードをコピーして`apps/mywebsite/components/search`ノードに貼り付けます。
 
    * `/libs/foundation/components/search/dialog`
-   * `` `/libs/foundation/components/search/i18n`
+   * &quot;`/libs/foundation/components/search/i18n`
    * `/libs/foundation/components/search/icon.png`
 
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
@@ -1292,7 +1292,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 
 ここでは、検索スクリプトを作成する方法について説明します。
 
-1. Open the `/apps/mywebsite/components/search/search.jsp` file.
+1. `/apps/mywebsite/components/search/search.jsp`ファイルを開きます。
 1. 以下のコードを `search.jsp` にコピーします。
 
    ```java
@@ -1446,11 +1446,11 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 
 1. 変更内容を保存します。
 
-#### contentpage コンポーネントに検索ボックスを含める {#including-a-search-box-in-the-contentpage-component}
+#### contentpage コンポーネントに検索ボックスを含める  {#including-a-search-box-in-the-contentpage-component}
 
 contentpage の左側のセクションに検索入力ボックスを含めるには、以下の手順を実行します。
 
-1. In CRXDE Lite, open the file `left.jsp` under `/apps/mywebsite/components/contentpage` and locate the following code (line 2):
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage`の下の`left.jsp`ファイルを開き、次のコード（2行目）を探します。
 
    ```xml
    %><div class="left">
@@ -1483,7 +1483,7 @@ contentpage の左側のセクションに検索入力ボックスを含める�
    </div>
    ```
 
-1. In your browser, reload the **[!UICONTROL Products]** page. The search component looks as follows:
+1. ブラウザーで、**[!UICONTROL 製品]**&#x200B;ページを再読み込みします。検索コンポーネントは次のようになります。
 
    ![chlimage_1-132](assets/chlimage_1-132.png)
 
@@ -1491,16 +1491,16 @@ contentpage の左側のセクションに検索入力ボックスを含める�
 
 ここでは、検索コンポーネントを段落システムに含めます。
 
-1. In your browser, open the **Search** page.
-1. In the Sidekick, click the **[!UICONTROL Design]** mode icon.
-1. In the Design of par block (below the Search title), click **[!UICONTROL Edit]**.
-1. In the dialog, scroll down to the **[!UICONTROL My Websites]** group, select **[!UICONTROL My Search Component]** and click **[!UICONTROL OK]**.
-1. On Sidekick, click the triangle to return to **[!UICONTROL Edit]** mode.
-1. Drag the **[!UICONTROL My Search]** component from the Sidekick into the parsys frame. It looks as follows:
+1. ブラウザーで、**検索**&#x200B;ページを開きます。
+1. サイドキックで、**[!UICONTROL デザイン]**&#x200B;モードアイコンをクリックします。
+1. [各ブロックのデザイン]（検索タイトルの下）で、[**[!UICONTROL 編集]**]をクリックします。
+1. ダイアログで、「**[!UICONTROL My Webサイト]**」グループまで下にスクロールし、「**[!UICONTROL My Search Component]**」を選択して「**[!UICONTROL OK]**」をクリックします。
+1. サイドキックで三角形をクリックして&#x200B;**[!UICONTROL 編集]**&#x200B;モードに戻ります。
+1. サイドキックから&#x200B;**[!UICONTROL My Search]**&#x200B;コンポーネントをparsysフレームにドラッグします。次のようになります。
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
-1. Navigate to your **[!UICONTROL Products]** page. Search for customers in the input box and press **[!UICONTROL Enter]**. You are redirected to the **[!UICONTROL Search]** page. Switch to **[!UICONTROL Preview]** mode: the output is in a similar format as the following:
+1. **[!UICONTROL 製品]**&#x200B;ページに移動します。入力ボックスで顧客を検索し、**[!UICONTROL Enter]**&#x200B;キーを押します。**[!UICONTROL 検索]**&#x200B;ページにリダイレクトされます。**[!UICONTROL プレビュー]**&#x200B;モードに切り替え：出力は、次のような形式になります。
 
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
@@ -1510,7 +1510,7 @@ contentpage の左側のセクションに検索入力ボックスを含める�
 
 このコンポーネントでは、編集モードとデザインモードの両方で複数のパラメーターを設定できます。
 
-1. In CRXDE Lite, navigate to `/apps/mywebsite/components/contentpage`, open the file `right.jsp` and replace:
+1. CRXDE Liteで、`/apps/mywebsite/components/contentpage`に移動し、`right.jsp`ファイルを開いて次を置き換えます。
 
    ```java
    <div>iparsys</div>
@@ -1523,7 +1523,7 @@ contentpage の左側のセクションに検索入力ボックスを含める�
    ```
 
 1. 変更内容を保存します。
-1. In your browser, reload the **[!UICONTROL Products]** page. The whole page looks as follows:
+1. ブラウザーで、**[!UICONTROL 製品]**&#x200B;ページを再読み込みします。ページ全体は次のようになります。
 
    ![chlimage_1-9](assets/chlimage_1-9.jpeg)
 
