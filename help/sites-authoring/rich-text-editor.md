@@ -18,7 +18,7 @@ ht-degree: 33%
 ---
 
 
-# Using the Rich Text Editor to author content {#using-the-rich-text-editor-to-author-content}
+# リッチテキストエディタを使用したコンテンツの作成{#using-the-rich-text-editor-to-author-content}
 
 リッチテキストエディタ(RTE)は、AEMページでテキストをオーサリングするための基本的な構成要素です。 テキスト、テキストと画像、表などの多くのコンポーネントは、RTEに基づいています。
 
@@ -28,7 +28,7 @@ ht-degree: 33%
 
 ## インプレース編集 {#in-place-editing}
 
-1回タップまたはクリックするだけでテキストベースのコンポーネントを選択すると、 [コンポーネントのツールバーが表示されます](../sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)。
+1回タップまたはクリックするだけでテキストベースのコンポーネントを選択すると、[コンポーネントツールバー](../sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)が表示されます。
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
@@ -38,9 +38,9 @@ ht-degree: 33%
 
 このツールバーには、次のオプションがあります。
 
-* **形式**: 太字、斜体、下線の書式を設定します。
+* **形式**:太字、斜体、下線の書式を設定します。
 
-* **リスト**: 箇条書き文字または番号付きリストを作成するか、インデントを設定します。
+* **リスト**:箇条書き文字または番号付きリストを作成するか、インデントを設定します。
 
 * **ハイパーリンク**
 
@@ -52,13 +52,13 @@ ht-degree: 33%
 
 * **保存**
 
-## フルスクリーン編集 {#full-screen-editing}
+## フルスクリーン編集{#full-screen-editing}
 
 テキストベースのコンポーネントの場合は、ツールバーからフルスクリーンモードを選択すると、リッチテキストエディターが開き、ページの残りのコンテンツが非表示になります。
 
 ![](do-not-localize/screen_shot_2018-03-21at163236.png)
 
-フルスクリーンモードでは、管理者が設定したリッチテキストエディタのすべてのオプションが表示されます。 これらは、管理者またはAEM開発者が提供する設定 [に応じて、AEMインスタンス間で異なる場合があります](../sites-administering/rich-text-editor.md) 。 オプションが見つからない場合は、管理者にオプションを使用可能にするように依頼してください。
+フルスクリーンモードでは、管理者が設定したリッチテキストエディタのすべてのオプションが表示されます。 これらは、管理者やAEM開発者が提供する設定](../sites-administering/rich-text-editor.md)に応じて、AEMインスタンス[によって異なります。 オプションが見つからない場合は、管理者にオプションを使用可能にするように依頼してください。
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
