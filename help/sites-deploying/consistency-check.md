@@ -33,7 +33,7 @@ javax.jcr.RepositoryException: Error indexing workspace: Error indexing workspac
 
 ## 整合性チェックの実行 {#perform-a-consistency-check}
 
-整合性チェックを実行するには、JMX Mbean** com.adobe.granite (Repository)**の管理ページに移動します。 AEMのメイン画面から、次のページに移動します。
+整合性チェックを実行するには、JMX Mbean** com.adobe.granite (Repository)**の管理ページに移動します。AEMのメイン画面から、次のページに移動します。
 
 **「Tools」>「Web Console」>「Main」（メニューバー）>「JMX」>「com.adobe.granite」(Repository)**
 
