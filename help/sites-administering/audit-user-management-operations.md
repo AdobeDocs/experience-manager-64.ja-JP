@@ -32,11 +32,11 @@ ht-degree: 97%
 
 デフォルトでは、ログエントリは `error.log` ファイルに書き込まれます。ログエントリを別のログファイルにリダイレクトすると、監視が容易になります。このリダイレクト方法について詳しくは、次の説明を参照してください。
 
-## 別のログファイルへの出力のリダイレクト {#redirecting-the-output-to-a-separate-log-file}
+## 別のログファイルへの出力のリダイレクト  {#redirecting-the-output-to-a-separate-log-file}
 
 別のログファイルにログ出力をリダイレクトするには、新しい **Apache Sling Logging Logger** 設定を作成する必要があります。次の例では、別のファイルの名前として、`useraudit.log` を使用します。
 
-1. Go to the Web Console by browsing to `https://<serveraddress>:<serverport>/system/console/configMgr`
+1. `https://<serveraddress>:<serverport>/system/console/configMgr`を参照してWebコンソールに移動
 1. **Apache Sling Logging Logger Configuration** を検索します。次に、エントリの右側にある「+」を押して、新しいファクトリ設定を作成します。
 1. 次の設定を作成します。
 
