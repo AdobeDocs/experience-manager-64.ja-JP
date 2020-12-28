@@ -45,7 +45,7 @@ AEM MobileContent Servicesは、AEMで管理されるコンテンツをリクエ
 >
 >詳しくは、**[コンテンツサービスの管理](/help/mobile/developing-content-services.md)**&#x200B;を参照してください。
 >
->See the [Configuration Browser documentation](/help/sites-administering/configurations.md) for more information.
+>詳しくは、[設定ブラウザーのドキュメント](/help/sites-administering/configurations.md)を参照してください。
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
