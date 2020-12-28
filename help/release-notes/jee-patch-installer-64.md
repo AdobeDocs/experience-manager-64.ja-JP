@@ -13,34 +13,35 @@ ht-degree: 46%
 ---
 
 
-# AEM FormsJEEパッチインストーラー {#aem-forms-jee-patch-installer}
+# AEM FormsJEEパッチインストーラー{#aem-forms-jee-patch-installer}
 
 >[!NOTE]
 >
->[詳細やパッチの入手方法については、サポート](https://www.adobe.com/jp/account/sign-in.supportportal.html) にお問い合わせください。
+>[詳細やパッチの入手方法については、](https://www.adobe.com/jp/account/sign-in.supportportal.html) サポートにお問い合わせください。
 
-## パッチインストーラについて {#about-the-patch-installer}
+## パッチインストーラについて{#about-the-patch-installer}
 
-AEM 6.4FormsJEEパッチインストーラーには、このパッチのリリースまで使用可能なAEM 6.4FormsJEEのすべてのコンポーネントに関するすべての修正済みの問題が含まれています。 修正された問題の完全なリストについては、 [累積Fix Packの最新リリースノート](cfp-release-notes.md) を参照してください。
+AEM 6.4FormsJEEパッチインストーラーには、このパッチのリリースまで使用可能なAEM 6.4FormsJEEのすべてのコンポーネントに関するすべての修正済みの問題が含まれています。 修正された問題の完全なリストについては、最新の[累積Fix Packリリースノート](cfp-release-notes.md)を参照してください。
 
-## パッチのインストールに必要な前提条件 {#prerequisites-to-installing-the-patch}
+## パッチ{#prerequisites-to-installing-the-patch}をインストールするための前提条件
 
 * AEM 6.4 Forms
 
-## パッチのインストールと設定 {#installing-and-configuring-the-patch}
+## パッチのインストールと設定{#installing-and-configuring-the-patch}
 
 1. &lt;*AEM_forms_root*>/deploy フォルダーのバックアップを作成します。Quick Fix をアンインストールする場合は必須です。
 1. アプリケーションサーバーを停止します。
 1. パッチインストーラーのアーカイブファイルをハードドライブに展開します。
 1. 使用しているオペレーティングシステムに従って名前が付けられたディレクトリで、次の操作を実行します。
 
-   * **Windows**&#x200B;インストールメディアまたはハードディスク上のインストーラーのコピー先フォルダーにある適切なディレクトリに移動し、重複クリックして、 
+   * ****
+Windowsインストールメディアまたはハードディスク上のインストーラーのコピー先フォルダーにある適切なディレクトリに移動し、重複をクリックします 
 `aemforms64_cfp_install.exe` file.
 
-      * (Windows 32-bit) `Windows\Disk1\InstData\VM`
-      * (Windows 64-bit) `Windows_64Bit`\ `Disk1\InstData\VM`
+      * （Windows 32ビット） `Windows\Disk1\InstData\VM`
+      * （Windows 64ビット） `Windows_64Bit`\ `Disk1\InstData\VM`
    * **Linux、Solaris、AIX** 適切なディレクトリに移動して、コマンドプロンプトで 
-`./aem64_cfp_install.bin`。
+`./aem64_cfp_install.bin`
 
       * (Linux) `Linux/Disk1/InstData/NoVM`
       * (Solaris) `Solaris/Disk1/InstData/NoVM`
@@ -56,18 +57,18 @@ AEM 6.4FormsJEEパッチインストーラーには、このパッチのリリ�
 
 1. Quick Fix パッチの概要の情報を読み、「**[!UICONTROL 次へ]**」をクリックします。
 1. プリインストールの概要情報を読み、「**[!UICONTROL インストール]**」をクリックします。
-1. When the installation is complete, click **[!UICONTROL Next]**to apply the quick fix updates to your installed files.
-1. [Windowsのみ] ：次のいずれかの手順を実行します。
+1. インストールが完了したら、「**[!UICONTROL 次へ]**」をクリックして、インストール済みのファイルにQuick Fixの更新を適用します。
+1. [Windows] のみ次のいずれかの手順を実行します。
 
-   * 「完了」をクリックする前に、「Configuration Manager を起動」オプションの選択を解除します。後で、にある `ConfigurationManager.bat` ファイルを使用してConfiguration Managerを実行し `[aem-forms root]\configurationManager\bin`ます。 を使用す `ConfigurationManager.bat` ると、.laxファイル内のaxis.jar名を手動で更新しないようにできます。
-   * 「完了」をクリックする前に、「Configuration Manager を起動」オプションの選択を解除します。ConfigurationManager.exe **またはConfigurationManager_IPv6.exeを使用してConfiguration Manager** を実行する前に **、**&lt;AEMForms_Install_Dir \configurationManager\bin ********** directoryに移動し、&lt;AEMForms_Install_Dir>dirディレクトリに移動し、.1.jarを更新してください。
+   * 「完了」をクリックする前に、「Configuration Manager を起動」オプションの選択を解除します。`[aem-forms root]\configurationManager\bin`にある`ConfigurationManager.bat`ファイルを使用して、Configuration Managerを後で実行します。 `ConfigurationManager.bat`を使用すると、.laxファイル内のaxis.jar名を手動で更新しないようにできます
+   * 「完了」をクリックする前に、「Configuration Manager を起動」オプションの選択を解除します。**ConfigurationManager.exe**&#x200B;または&#x200B;**ConfigurationManager_IPv6.exe**&#x200B;を使用してConfiguration Managerを実行する前に、*&lt;AEMForms_Install_Dir>\configurationManager\bin*&#x200B;ディレクトリに移動し、**axis.jar**&#x200B;を&#x200B;**に更新します次のファイルの —1.4.1.1.jar**:
 
       * ConfigurationManager.lax
       * ConfigurationManager_IPv6.lax
 
 1. （UNIXベースのみ）デフォルトでは、「開始のConfiguration Manager」チェックボックスが選択されています。 「**[!UICONTROL 完了]**」をクリックして Configuration Manager を実行します。
 
-   Configuration Manager を後で実行するには、「完了」をクリックする前に、「Configuration Manager を起動」オプションの選択を解除します。You can start Configuration Manager later using the appropriate script in the `[AEM_forms_root]/configurationManager/bin` directory.
+   Configuration Manager を後で実行するには、「完了」をクリックする前に、「Configuration Manager を起動」オプションの選択を解除します。後で`[AEM_forms_root]/configurationManager/bin`ディレクトリの適切なスクリプトを使用して、Configuration Managerを開始できます。
 
 1. アプリケーションサーバーに応じて、以下のいずれかのドキュメントを選択し、「*AEM Forms の設定とデプロイ*」節の指示に従ってください。
 
@@ -77,9 +78,9 @@ AEM 6.4FormsJEEパッチインストーラーには、このパッチのリリ�
 
 1. （JBossのみ）パッチをインストールしてサーバーを設定した後、JBoss Application Serverのtmpおよびworkディレクトリを削除します。
 
-## Post-deployment configurations {#post-deployment-configurations}
+## デプロイメント完了後の構成{#post-deployment-configurations}
 
-### SAML設定 {#saml-configurations}
+### SAML設定{#saml-configurations}
 
 SAML認証を設定済みで、大きいIDPメタデータに関する問題が発生する場合は、パッチのインストール後に次の手順を実行します。
 
@@ -89,11 +90,11 @@ SAML認証を設定済みで、大きいIDPメタデータに関する問題が�
 1. サーバーを再起動します。
 1. SAML設定の説明に従って、既存のSAML認証プロバイダーを削除し、既存のドメインに対して再度追加します。
 
-## 影響を受けたモジュール {#impacted-modules}
+## 影響を受けたモジュール{#impacted-modules}
 
 * ドキュメントサービス
 * ドキュメントのセキュリティ
 * Foundation JEE
 * PDFG サービス
 
-[サポートへのお問い合わせ](https://www.adobe.com/jp/account/sign-in.supportportal.html)
+[サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
