@@ -84,7 +84,7 @@ ht-degree: 89%
 
    このページのバニティ URL を入力でき、短くより表現力のある URL にすることができます。
 
-   For example, if the Vanity URL is set to w `elcome`to the page identified by the path / `v1.0/startpage`for the website h `ttp://example.com,` then h `ttp://example.com/welcome`would be the vanity URL of h `ttp://example.com/content/v1.0/startpage`
+   例えば、バニティURLがWebサイトh `ttp://example.com,`のパス/ `v1.0/startpage`で識別されるページに対してw `elcome`に設定されている場合、h `ttp://example.com/welcome`はh `ttp://example.com/content/v1.0/startpage`のバニティURLになります
 
    >[!CAUTION]
    >
@@ -122,7 +122,7 @@ ht-degree: 89%
    >
    >例えば、`/content/we-retail/spanish` ノードに `latin-lang` というエイリアスを定義した場合、このページは `/content/we-retail/latin-language` でアクセスできます。
    >
-   >For further details see [Localized page names under SEO and URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names)
+   >詳しくは、「SEO」の「ページ名のローカライズ」と「URL管理のベストプラクティス」を参照してください。[](/help/managing/seo-and-url-management.md#localized-page-names)
 
 * **許可されたテンプレート**
 
@@ -136,7 +136,7 @@ ht-degree: 89%
 
    >[!CAUTION]
    >
-   >The **[Permissions](/help/sites-authoring/editing-page-properties.md#permissions)**tab allows editing of CUG configurations based on the presence of the`granite:AuthenticationRequired`mixin. If page permissions are configured using deprecated CUG configurations, based on the presence of cq:cugEnabled property, a warning message will be shown under **Authentication Requirement**and the option will not be editable, nor will the[Permissions](/help/sites-authoring/editing-page-properties.md#permissions)be editable.
+   >「**[権限](/help/sites-authoring/editing-page-properties.md#permissions)**」タブでは、`granite:AuthenticationRequired`ミックスインの存在に基づいてCUG設定を編集できます。 非推奨のCUG設定を使用してページ権限を設定した場合、cq:cugEnabledプロパティの存在に基づいて、**Authentication Requirement**&#x200B;に警告メッセージが表示され、このオプションは編集できず、[Permissions](/help/sites-authoring/editing-page-properties.md#permissions)も編集できません。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
@@ -149,7 +149,7 @@ ht-degree: 89%
 
    書き出し設定を指定します。
 
-### サムネール {#thumbnail}
+### サムネール  {#thumbnail}
 
 1. **ページサムネイル**
 
@@ -182,7 +182,7 @@ ht-degree: 89%
 
 ### パーソナライゼーション {#personalization}
 
-* **パーソナライズ機能**
+* **パーソナライゼーション**
 
    [ブランドを選択してターゲット設定の範囲を指定](/help/sites-authoring/personalization.md)します。
 
@@ -198,14 +198,14 @@ ht-degree: 89%
 
    >[!CAUTION]
    >
-   >The **Permissions** tab allows editing of CUG configurations based on the presence of the `granite:AuthenticationRequired` mixin. `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
+   >「**権限**」タブでは、`granite:AuthenticationRequired`ミックスインの存在に基づいてCUG設定を編集できます。 `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
 
    >[!NOTE]
    >
-   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。See the document [User, Group and Access Rights Administration](/help/sites-administering/user-group-ac-admin.md) for more information.
+   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。詳しくは、ドキュメント[User, Group and Access Rights Administration](/help/sites-administering/user-group-ac-admin.md)を参照してください。
 
 ### ブループリント {#blueprint}
 
@@ -213,13 +213,13 @@ ht-degree: 89%
 
    [マルチサイト管理](/help/sites-administering/msm.md)でのブループリントページのプロパティを定義します。変更がライブコピーに適用される条件を制御します。
 
-### ライブコピー {#live-copy}
+### ライブコピー  {#live-copy}
 
 * **ライブコピー**
 
    [マルチサイト管理](/help/sites-administering/msm.md)でのライブコピーページのプロパティを定義します。ブループリントからの変更が適用される条件を制御します。
 
-### サイト構造 {#site-structure}
+### サイト構造  {#site-structure}
 
 * **サインアップページ**、**オフラインページ**&#x200B;など、サイト全体にわたる機能を提供するページへのリンクを指定します。
 
@@ -266,7 +266,7 @@ ht-degree: 89%
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. Select **Open Properties** and a dailog will open allowing you to edit the properties, sorted by the appropriate tab. ツールバーの右側にある次のボタンも使用できます。
+1. 「**プロパティを開く**」を選択すると、ダイアログが開き、適切なタブで並べ替えたプロパティを編集できます。 ツールバーの右側にある次のボタンも使用できます。
 
    * **キャンセル**
    * **保存して閉じる**
@@ -290,7 +290,7 @@ ht-degree: 89%
 
 ![screen_shot_2018-03-22at100039](assets/screen_shot_2018-03-22at100039.png)
 
-After selecting the pages and then clicking or tapping the **Properties** option, the bulk properties will be shown:
+ページを選択し、**プロパティ**&#x200B;オプションをクリックまたはタップすると、バルクプロパティが表示されます。
 
 ![screen_shot_2018-03-22at100114](assets/screen_shot_2018-03-22at100114.png)
 
