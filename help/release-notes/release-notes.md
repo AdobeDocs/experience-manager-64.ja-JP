@@ -27,7 +27,7 @@ ht-degree: 78%
 | バージョン | 6.4 |
 | 種類 | メジャーリリース |
 | 正式版の日付 | 2018 年 4 月 4 日 |
-| 推奨される更新 | See [AEM releases and updates](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html) |
+| 推奨される更新 | [AEMリリースとアップデート](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)を参照 |
 
 ### 参考情報 {#trivia}
 
@@ -37,7 +37,7 @@ Adobe Experience Manager 6.4 は、2018 年 4 月 4 日より正式版として�
 
 >[!NOTE]
 >
->Adobeでは、新しい機能パックはすべて [Service Packを介してのみ提供されるので、最新のService Packをインストールすることをお勧めします](https://helpx.adobe.com/jp/experience-manager/maintenance-releases-roadmap.html)。
+>新しい機能パックはすべて[サービスパック](https://helpx.adobe.com/jp/experience-manager/maintenance-releases-roadmap.html)からのみ提供されるので、Adobeは最新のサービスパックをインストールすることをお勧めします。
 
 ## 新機能 {#what-s-new}
 
@@ -61,7 +61,7 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 * 大きいフォルダーのカード表示とリスト表示でスクロールの操作性が向上しました。
 * [検索結果の操作性が向上しました](/help/sites-authoring/search.md) - 「戻る」ボタンをクリックすると、前の検索結果に戻ります。
 * 最もよく使用されるアクション（特定のレールを開く、項目を編集、移動、削除する、プロパティを開くなど）の[キーボードショートカットが追加](/help/sites-authoring/keyboard-shortcuts.md)定義されました。
-* [キーボードショートカットを無効にする(環境設定で有効](/help/sites-authoring/user-properties.md) /無効にする)機能。
+* [キーボードショートカットを無効にする](/help/sites-authoring/user-properties.md) （環境設定で有効/無効にする）機能。
 * [すべての UI で 7 日後にタイムスタンプが非表示になります](/help/sites-authoring/user-properties.md)（環境設定でデフォルトを設定します）。
 
 これらの機能について詳しくは、[オーサリングのドキュメント](/help/sites-authoring/home.md)を参照してください。 
@@ -92,10 +92,10 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 #### 監視 {#monitoring}
 
-* A new [System Overview](/help/sites-administering/operations-dashboard.md#system-overview) provides a snapshot view on all performance-related system status and activities.
+* 新しい[System Overview](/help/sites-administering/operations-dashboard.md#system-overview)は、パフォーマンス関連のシステムのステータスとアクティビティに関するスナップショット表示を提供します。
 * インデックス作成、クエリー、メンテナンスに関する一連の[ヘルスチェック](/help/sites-administering/operations-dashboard.md#health-checks)が新しく用意されています。 
 
-#### プロジェクトとワークフロー {#projects-and-workflows}
+#### プロジェクトとワークフロー  {#projects-and-workflows}
 
 * [ワークフローモデルを作成および編集するためのワークフローエディター](/help/sites-developing/workflows-models.md)がまったく新しくなりました。
 
@@ -105,12 +105,12 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 * [下位互換性](/help/sites-deploying/backward-compatibility.md)：AEM 6.4の機能には下位互換性があるので、カスタムコードはほとんどの場合そのまま動作し、アップグレードの労力を削減できます。
 * [アップグレードの複雑さの評価](/help/sites-deploying/pattern-detector.md)：新しいパターン検出ツールにより、アップグレードの複雑さを実行前に評価することができます。
-* [リポジトリの再構築](/help/sites-deploying/repository-restructuring.md): アップグレードを容易にし、導入のベストプラクティスを促進するための重要な再構築（主に/etc）
+* [リポジトリの再構築](/help/sites-deploying/repository-restructuring.md):アップグレードを容易にし、導入のベストプラクティスを促進するための重要な再構築（主に/etc）
 * アップグレードについて詳しくは、[このページ](/help/sites-deploying/upgrade.md)を参照してください。
 
-### Experience Manager Sites {#experience-manager-sites}
+### Experience Manager Sites  {#experience-manager-sites}
 
-すべての変更点リストは[AEM サイトとアドオン](sites.md)を参照してください。
+変更点の完全なリストは[AEM Sites とアドオン](sites.md)を参照してください。
 
 #### Fluid Experience {#fluid-experiences}
 
@@ -128,23 +128,23 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 Slingモデルエクスポーターとコアコンポーネントの様々な機能強化が加えられ、シングルページアプリで作成されるモバイルアプリやエクスペリエンスにコンテンツを埋め込むための堅牢なJSON出力が提供されます。
 
-#### サイトをより迅速に構築 {#gettings-sites-built-quicker}
+#### サイトの構築をより迅速に{#gettings-sites-built-quicker}
 
 AEM 6.4 で次世代のコンポーネントモデルへの転換が完了します。AEM 6.3 で導入されたコアコンポーネントの概念にスタイルシステムが加わって、新規サイトの作成や既存サイトの拡張を効率的におこなえるようになりました。
 
 新しいコンポーネントモデルの最善の活用方法については、[AEM Sites の開発の手引き - WKND チュートリアル](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)を参照されることをお勧めします。
 
-#### Screens アドオン {#screens-add-on}
+#### Screens アドオン  {#screens-add-on}
 
-Digital Signageやキオスクのネットワークを含むすべてのマーケティングチャネルに一貫したメッセージを提供することが、AEM Screensの意味です。 AEM 6.4 では、Microsoft Windows および Google Chrome OS ハードウェアでサイネージプレーヤーを実行できるようになりました。さらに、リモートデバイス管理およびスケジュール（チャネルグループ）の機能強化もおこなわれています。
+Digital Signageやキオスクのネットワークを含むすべてのマーケティングチャネルに一貫したメッセージを届けることが、AEM Screensの意味です。 AEM 6.4 では、Microsoft Windows および Google Chrome OS ハードウェアでサイネージプレーヤーを実行できるようになりました。さらに、リモートデバイス管理およびスケジュール（チャネルグループ）の機能強化もおこなわれています。
 
-For more information on the Screens updates, see [AEM Screens User Guide](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html).
+画面の更新について詳しくは、[AEM Screensユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html)を参照してください。
 
 ### Experience Manager Communities {#experience-manager-communities}
 
 AEM 6.4 では、Communities に多くの新機能や機能強化が加えられています。変更点の完全なリストについては、[AEM Communities](communities-release-notes.md) を参照してください。主なものを以下に示します。
 
-#### モデレートの機能強化 {#enhancements-to-moderation}
+#### モデレートの機能強化  {#enhancements-to-moderation}
 
 **自動スパム検出**
 
@@ -158,13 +158,13 @@ AEM 6.4 では、Communities に多くの新機能や機能強化が加えられ
 
 **ブックマークモデレートフィルター**
 
-事前定義済みのモデレートフィルターをモデレートコンソールでブックマークできるようになりました。これらのフィルターは URL 文字列の末尾に追加されるので、後で共有、再利用、再検討することができます。Know how to bookmark filters in [bulk moderation console](/help/communities/moderation.md#main-pars-note-429176623).
+事前定義済みのモデレートフィルターをモデレートコンソールでブックマークできるようになりました。これらのフィルターは URL 文字列の末尾に追加されるので、後で共有、再利用、再検討することができます。[一括モデレートコンソール](/help/communities/moderation.md#main-pars-note-429176623)でフィルターにブックマークを付ける方法を知っている。
 
 #### UGC とユーザープロファイルの削除 {#delete-ugc-and-user-profiles}
 
 AEM 6.4 Communities では、エンドユーザーが自分のデータを管理できるように、[すぐに使用できる API](/help/communities/user-ugc-management-service.md) とサンプル[サーブレット](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet)を公開しています。また、これらの API を使用すると、データ処理やデータ管理をおこなう組織で EU の GDPR に準拠することができます。
 
-#### サイトおよびグループ管理の機能強化 {#enhancements-to-site-and-group-management}
+#### サイトおよびグループ管理の機能強化  {#enhancements-to-site-and-group-management}
 
 **1つの手順で複数ロケールのグループを作成する**
 
@@ -176,9 +176,9 @@ AEM 6.4 Communities では、エンドユーザーが自分のデータを管理
 
 グローバルナビゲーションから操作している際に、それぞれのサイトおよびグループの削除アイコンを使用できるようになりました。このアイコンを使用すると、サイトまたはグループに関連付けられているすべての項目やコンテンツが削除され、ユーザーとの関連付けもすべて削除されます。この機能について詳しくは、[コミュニティサイトの管理](/help/communities/create-site.md#main-pars-text-fe17)および[コミュニティグループの管理](/help/communities/groups.md#main-pars-text-5e8c)を参照してください。
 
-#### イネーブルメントの機能強化 {#enhancements-to-enablement}
+#### イネーブルメントの機能強化  {#enhancements-to-enablement}
 
-グループ内で割り当て機能とカタログ機能を使用できるようになりました。これにより、ターゲットとなる特定のコミュニティメンバー向けの学習コンテンツを作成、管理、公開することができます。To know more about enabling community groups, refer [managing enablement resources](/help/communities/resource.md).
+グループ内で割り当て機能とカタログ機能を使用できるようになりました。これにより、ターゲットとなる特定のコミュニティメンバー向けの学習コンテンツを作成、管理、公開することができます。コミュニティグループの有効化の詳細については、[有効化リソースの管理](/help/communities/resource.md)を参照してください。
 
 ![assignmentcatalog](assets/assignmentcatalog.png)
 
@@ -196,7 +196,7 @@ Creative Cloud エンタープライズ版の Adobe Asset Link を使用する�
 
 **AEM デスクトップアプリケーション**
 
-AEM desktop app has been updated to Version 1.8, which is compatible with AEM 6.4. The full list of changes for AEM desktop app is provided in a dedicated [AEM desktop app release notes](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html) document.
+AEMデスクトップアプリは、AEM 6.4と互換性があるバージョン1.8に更新されました。AEMデスクトップアプリの変更点の完全なリストは、専用の[AEMデスクトップアプリリリースノート](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)ドキュメントに記載されています。
 
 AEM 6.3 リリース以降に導入された機能改善としては、フォルダー階層をバックグラウンドでアップロードできる機能、アセットのバックグラウンド操作を監視するための新しい UI、キャッシュ、ネットワーク、ログインの機能強化、全般的な安定性向上などがあります。ドキュメントには[ベストプラクティスガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)も含まれています。
 
@@ -216,15 +216,15 @@ AEM 6.3 リリース以降に導入された機能改善としては、フォル
 
 **ユーザーエクスペリエンス**
 
-スクロール操作、検索の戻るボタン、検索フィルターの改善など、Assets ユーザーによる閲覧、検索、管理を改善するための機能強化が多数おこなわれています。 [AEM Assetsで使用可能な完全なリスト](assets.md)。
+スクロール操作、検索の戻るボタン、検索フィルターの改善など、Assets ユーザーによる閲覧、検索、管理を改善するための機能強化が多数おこなわれています。 [AEM Assets](assets.md)で使用できる完全なリスト。
 
 **Brand Portal**
 
-メタデータ、レポート、デジタル著作権、ログイン操作、およびアセット配布での公開のパフォーマンスに関して様々な機能強化がおこなわれています。To know about the new enhancements and features, see [What&#39;s new in AEM Assets Brand Portal](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/introduction/whats-new.html).
+メタデータ、レポート、デジタル著作権、ログイン操作、およびアセット配布での公開のパフォーマンスに関して様々な機能強化がおこなわれています。新しい機能強化と機能について詳しくは、[AEM Assetsブランドポータルの新機能](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/introduction/whats-new.html)を参照してください。
 
 #### Dynamic Media アドオン {#dynamic-media-add-on}
 
-AEM 6.4 では、Dynamic Media に多くの新機能や機能強化が加えられています。The full list is available in [AEM Assets](assets.md). 主なハイライトは次のとおりです。
+AEM 6.4 では、Dynamic Media に多くの新機能や機能強化が加えられています。完全なリストは[AEM Assets](assets.md)で入手できます。 主なハイライトは次のとおりです。
 
 **スマート切り抜き**
 
@@ -250,7 +250,7 @@ Dynamic Media コンポーネントでのスマート切り抜きの操作につ
 
 **3D アセット**
 
-New integration with [Adobe Dimension CC](https://www.adobe.com/jp/products/dimension.html), a Creative Cloud application for authoring 3D experiences.
+3DエクスペリエンスをオーサリングするためのCreative Cloudアプリケーション、[Adobe Dimension CC](https://www.adobe.com/jp/products/dimension.html)との新しい統合。
 
 詳しくは、[3D アセットの使用](/help/assets/assets-3d.md)を参照してください。
 
@@ -266,7 +266,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 * フラグメントの遅延読み込み
 * LiveCycle から Experience Manager Forms 6.4 への直接アップグレード
 
-詳細については、リリースノートの [AEM Forms](forms.md) ページを参照してください。Also, see the [Summary of new features and enhancements in AEM 6.4 Forms](/help/forms/using/whats-new.md) for information about new and improved features and documentation resources.
+詳細については、リリースノートの [AEM Forms](forms.md) ページを参照してください。また、新機能および強化された機能とドキュメントのリソースについては、[AEM 6.4Forms](/help/forms/using/whats-new.md)の新機能および拡張機能の概要を参照してください。
 
 ### Experience Manager Livefyre {#experience-manager-livefyre}
 
@@ -278,7 +278,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 アドビは、お客様が開発のすべての段階、つまり仕様、開発、テストに関与できる顧客中心開発モデルを使用しています。このプロセスにご協力いただいているお客様とパートナーの皆様に感謝いたします。
 
-アドビでは、お客様中心のバグ修正と機能強化リクエストの開発に関する情報収集、優先順位付け、追跡の手順およびプロセスを整備しています。The [Adobe Marketing Cloud Support Portal](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) is integrated with the Adobe Enhancement &amp; Defect Tracking System. お客様からの問い合わせは、可能な場合はカスタマーケアで特定および解決されます。研究開発部門にエスカレートされた場合は、すべての顧客情報が収集され、優先順位付けとレポートに使用されます。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
+アドビでは、お客様中心のバグ修正と機能強化リクエストの開発に関する情報収集、優先順位付け、追跡の手順およびプロセスを整備しています。[Adobe Marketing Cloudサポートポータル](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)は、Adobe機能強化と欠陥追跡システムと統合されています。 お客様からの問い合わせは、可能な場合はカスタマーケアで特定および解決されます。研究開発部門にエスカレートされた場合は、すべての顧客情報が収集され、優先順位付けとレポートに使用されます。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
 
 この優先順位付けのプロセスにより、AEM 6.4 では 500 件を超えるお客様中心の変更がおこなわれました。
 
@@ -287,12 +287,12 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 **Foundation**
 
 * スタンドアロンのクイックスタート：cq-quickstart-6.4.0.jar
-* Application Server Quickstart: cq-quickstart-6.4.0.war
-* 様々なWebサーバーおよびプラットフォーム用のDispatcher4.3.1以降。 「 [ダウンロードリンク](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/release-notes.html)」を参照してください。
-* Plug-in for Eclipse IDE. [Read more and download](/help/sites-developing/aem-eclipse.md).
+* Application Server Quickstart:cq-quickstart-6.4.0.war
+* 様々なWebサーバーおよびプラットフォーム向けのDispatcher 4.3.1以降。 [ダウンロードリンク](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/release-notes.html)を参照してください。
+* Eclipse IDE用のプラグインです。[詳細を読んで](/help/sites-developing/aem-eclipse.md)をダウンロードしてください。
 
-* Extension for Brackets Code Editor. [Read more and download](/help/sites-developing/aem-brackets.md).
-* Maven/Gradelの依存関係。 「 [ダウンロードリンク](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/aem/uber-jar/6.1.0/)」を参照してください。
+* Bracketsコードエディタの拡張機能。[詳細を読んで](/help/sites-developing/aem-brackets.md)をダウンロードします。
+* Maven/Gradleの依存関係。 [ダウンロードリンク](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/aem/uber-jar/6.1.0/)を参照してください。
 
 **Sites**
 
@@ -311,7 +311,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 **Assets**
 
-* Adobe Experience Manager desktop app ([read more](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html) and [download](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html))
+* Adobe Experience Managerデスクトップアプリ（[詳細を読む](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html)と[ダウンロード](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)）
 
 * 強化された PDF Rasterizer を追加するためのパッケージ（[詳細](/help/assets/aem-pdf-rasterizer.md)および[ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)）
 
@@ -356,7 +356,7 @@ Experience Manager 6.4 は、中国語エンコーディング規格の使用に
 
 >[!NOTE]
 >
->Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9 and 10 are non-LTS releases by Oracle (see [Oracle Java SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html)). アドビでは、AEM を実稼働環境で実行するための Java については、LTS リリース版のみサポートします。そのため、AEM 6.4 で使用するバージョンとしては、Java 8 をお勧めします。
+>Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9および10は、Oracle社のLTS以外のリリースです([OracleJava SEサポート・ロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照)。 アドビでは、AEM を実稼働環境で実行するための Java については、LTS リリース版のみサポートします。そのため、AEM 6.4 で使用するバージョンとしては、Java 8 をお勧めします。
 
 ## 廃止される機能および削除された機能 {#deprecated-and-removed-features}
 
@@ -364,7 +364,7 @@ Experience Manager 6.4 は、中国語エンコーディング規格の使用に
 
 Adobe Experience Manager 6.4 についての情報は、[廃止および削除された機能](deprecated-removed-features.md)を参照してください。このページには、2019 年におこなわれる変更の予告と、前のリリースからアップデートするお客様向けの重要な注意事項も含まれています。
 
-## 変更点の詳細なリスト {#detailed-changes-lists}
+## 変更点の詳細なリスト  {#detailed-changes-lists}
 
 [AEM Sites](sites.md)
 
@@ -380,10 +380,10 @@ Adobe Experience Manager 6.4 についての情報は、[廃止および削除�
 
 [既知の問題のリスト](known-issues.md)
 
-### Product Download and Support (Restricted Sites) {#product-download-and-support-restricted-sites}
+### 製品のダウンロードとサポート（制限付きサイト） {#product-download-and-support-restricted-sites}
 
 以下のサイトは既存ユーザーのみが参照できます。アクセス権が必要な既存ユーザーの方は、アドビのアカウントマネージャーまでお問い合わせください。
 
 * [licensing.adobe.com での製品のダウンロード](https://licensing.adobe.com/).
-* ソフトウェア配布に関する追加機能については、製品の更新、パッチ、およびパッケージ [を参照してください](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。
-* [Admin Consoleを介したカスタマーサポート](https://adminconsole.adobe.com/)。 詳しくは、「 [新しいAdobeカスタマーサポート体験](https://docs.adobe.com/content/help/en/customer-one/using/home.html)」を参照してください。
+* [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)の追加機能に対する製品アップデート、パッチ、パッケージ。
+* [Admin Consoleを介したカスタマーサポート](https://adminconsole.adobe.com/)。詳しくは、[新しいAdobeカスタマーサポート体験](https://docs.adobe.com/content/help/en/customer-one/using/home.html)を参照してください。
