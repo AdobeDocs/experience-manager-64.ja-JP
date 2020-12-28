@@ -34,7 +34,7 @@ ht-degree: 72%
 >
 >パブリッシュインスタンスが複数ある場合は、[ユーザーの同期](/help/sites-administering/sync.md)が有効化されたときにユーザーデータが Sling 分配されます。
 
-## オーサーからパブリッシュへのレプリケーション {#replicating-from-author-to-publish}
+## オーサーからパブリッシュへのレプリケーション  {#replicating-from-author-to-publish}
 
 パブリッシュインスタンスまたは Dispatcher へのレプリケーションは、いくつかの段階を踏んで実行されます。
 
@@ -59,13 +59,13 @@ ht-degree: 72%
 
 その他の場合、例えばフォーラム、ブログ、コメント、レビューなどのコミュニティ機能では、パブリッシュ環境に入力されるユーザー生成コンテンツ（UGC）の量が多いので、AEM インスタンス間の効率的な同期をレプリケーションで実現することは難しくなります。
 
-AEM [Communities](/help/communities/overview.md) never uses replication for UGC. Instead, the deployment for Communities requires a common store for UGC (see [Community Content Storage](/help/communities/working-with-srp.md)).
+AEM [コミュニティ](/help/communities/overview.md)は、UGCのレプリケーションを使用しません。 代わりに、Communities向けのデプロイメントにはUGC用の共通ストアが必要です([コミュニティコンテンツストレージ](/help/communities/working-with-srp.md)を参照)。
 
 ## レプリケーション（デフォルト） {#replication-out-of-the-box}
 
 AEM の標準インストールに含まれている Geometrixx Web サイトを使用して、レプリケーションの仕組みを見ていきましょう。
 
-To follow this example and use the default replication agents you need to [Install AEM](/help/sites-deploying/deploy.md) with:
+この例に従ってデフォルトのレプリケーションエージェントを使用するには、[AEM](/help/sites-deploying/deploy.md)を次のコマンドでインストールする必要があります。
 
 * オーサー環境（ポート `4502`）
 * パブリッシュ環境（ポート `4503`）
@@ -79,8 +79,8 @@ To follow this example and use the default replication agents you need to [Insta
 >
 事実上、以下はデフォルトで無効になっています（AEM 6.1 以降）。
 >
->* 作成者のエージェント： 逆複製エージェント(publish_reverse)
->* パブリッシュのエージェント： 逆複製(outbox)
+>* 作成者のエージェント：逆複製エージェント(publish_reverse)
+>* パブリッシュのエージェント：逆複製(outbox)
 
 >
 >
@@ -103,29 +103,30 @@ To follow this example and use the default replication agents you need to [Insta
 
 このレプリケーションは、次のエージェントによってオーサー環境から実行されます。
 
-* **デフォルトエージェント（発行）**&#x200B;このエージェントは、デフォルトの発行インスタンスにコンテンツを複製します。
+* **デフォルトエージェント（発行）**
+このエージェントは、デフォルトの発行インスタンスにコンテンツを複製します。
 
-   この詳細（設定とログ）は、作成者環境のツールコンソールからアクセスできます。 または
+   この詳細（設定とログ）は、作成者環境のツールコンソールからアクセスできます。または
 
-   `http://localhost:4502/etc/replication/agents.author/publish.html`。
+   `http://localhost:4502/etc/replication/agents.author/publish.html`.
 
 ### レプリケーションエージェント（デフォルト） {#replication-agents-out-of-the-box}
 
 次に示すエージェントは標準の AEM インストールで使用できます。
 
-* [デフォルトのエージェント](#replication-author-to-publish) — 作成者から発行への複製に使用されます。
+* [デフォルトのエージェント](#replication-author-to-publish)  — 作成者から発行への複製に使用されます。
 
-* Dispatcher Flush - This is used for managing the Dispatcher cache. See [Invalidating Dispatcher Cache from the Authoring Environment](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment) and [Invalidating Dispatcher Cache from a Publishing Instance](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance) for more information.
+* ディスパッチャーフラッシュ — ディスパッチャーキャッシュの管理に使用します。詳しくは、[オーサリング環境からのディスパッチャーキャッシュの無効化](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment)および[発行インスタンスからのディスパッチャーキャッシュの無効化](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)を参照してください。
 
-* [逆複製](#replicating-from-publish-to-author) — 発行から作成者への複製に使用します。 フォーラム、ブログ、コメントなどのコミュニティ機能では、逆複製は使用されません。 Outboxが有効になっていないので、有効にすると無効になります。 逆複製を使用する場合は、カスタム構成が必要です。
+* [逆複製](#replicating-from-publish-to-author)  — 発行から作成者への複製に使用します。フォーラム、ブログ、コメントなどのコミュニティ機能では、逆複製は使用されません。 Outboxが有効になっていないので、有効にすると無効になります。 逆複製を使用する場合は、カスタム構成が必要です。
 
-* 静的エージェント — 「ノードの静的表現をファイル・システムに保存するエージェント」。 For example with the default settings, content pages and dam assets are stored under `/tmp`, either as HTML or the appropriate asset format. See the `Settings` and `Rules` tabs for the configuration. これは、ページがアプリケーションサーバーから直接要求される場合に、コンテンツを確認できるようにするためのエージェントです。これは特殊なエージェントであり、（おそらく）ほとんどのインスタンスでは必要ありません。
+* 静的エージェント — 「ノードの静的表現をファイル・システムに保存するエージェント」。 例えば、デフォルト設定では、コンテンツページとdamアセットは、HTMLまたは適切なアセット形式で`/tmp`に保存されます。 設定については、`Settings`タブと`Rules`タブを参照してください。 これは、ページがアプリケーションサーバーから直接要求される場合に、コンテンツを確認できるようにするためのエージェントです。これは特殊なエージェントであり、（おそらく）ほとんどのインスタンスでは必要ありません。
 
 ## Replication Agents - Configuration Parameters {#replication-agents-configuration-parameters}
 
 ツールコンソールからレプリケーションエージェントを設定する場合は、ダイアログ内の 4 つのタブを使用できます。
 
-### 設定 {#settings}
+### 設定  {#settings}
 
 * **名前**
 
@@ -183,9 +184,9 @@ To follow this example and use the default replication agents you need to [Insta
 
    ログメッセージに使用する詳細レベルを指定します。
 
-   * `Error`: エラーのみがログに記録されます
-   * `Info`: エラー、警告、およびその他の情報メッセージがログに記録されます
-   * `Debug`: メッセージでは、主にデバッグ目的で詳細の高いレベルが使用されます
+   * `Error`:エラーのみがログに記録されます
+   * `Info`:エラー、警告、およびその他の情報メッセージがログに記録されます
+   * `Debug`:メッセージでは、主にデバッグ目的で詳細の高いレベルが使用されます
 
    デフォルト: `Info`
 
@@ -195,7 +196,7 @@ To follow this example and use the default replication agents you need to [Insta
 
 * **エイリアスの更新**
 
-   このオプションを選択すると、Dispatcher へのエイリアスまたはバニティーパスの無効化要求が有効になります。Also, see [Configuring a Dispatcher Flush Agent](/help/sites-deploying/replication.md#configuring-a-dispatcher-flush-agent).
+   このオプションを選択すると、Dispatcher へのエイリアスまたはバニティーパスの無効化要求が有効になります。また、「[ディスパッチャーフラッシュエージェントの設定](/help/sites-deploying/replication.md#configuring-a-dispatcher-flush-agent)」も参照してください。
 
 ### トランスポート {#transport}
 
@@ -205,8 +206,8 @@ To follow this example and use the default replication agents you need to [Insta
 
    次に例を示します。
 
-   * A Default Agent may replicate to `http://localhost:4503/bin/receive`
-   * A Dispatcher Flush agent may replicate to `http://localhost:8000/dispatcher/invalidate.cache`
+   * デフォルト・エージェントは`http://localhost:4503/bin/receive`に複製できます
+   * ディスパッチャーフラッシュエージェントは`http://localhost:8000/dispatcher/invalidate.cache`に複製できます
 
    ここで指定するプロトコル（HTTP または HTTPS）によってトランスポート方法が決まります。
 
@@ -236,7 +237,7 @@ To follow this example and use the default replication agents you need to [Insta
 
    期限切れ SSL 証明書を受け取る場合に有効にします。
 
-### プロキシ {#proxy}
+### プロキシ  {#proxy}
 
 以下の設定は、プロキシが必要な場合にのみおこないます。
 
@@ -264,7 +265,7 @@ To follow this example and use the default replication agents you need to [Insta
 
    プロキシの NTLM ドメインです。
 
-### 拡張 {#extended}
+### 拡張  {#extended}
 
 * **インターフェイス**
 
@@ -349,11 +350,11 @@ To follow this example and use the default replication agents you need to [Insta
 
    オンにすると、エージェントはアクティベートされたページのバージョン管理を強制しません。
 
-## レプリケーションエージェントの設定 {#configuring-your-replication-agents}
+## レプリケーションエージェントの設定  {#configuring-your-replication-agents}
 
 MSSL を使用してレプリケーションエージェントをパブリッシュインスタンスに接続する方法については、[相互 SSL を使用したレプリケーション](/help/sites-deploying/mssl-replication.md)を参照してください。
 
-### オーサー環境からのレプリケーションエージェントの設定 {#configuring-your-replication-agents-from-the-author-environment}
+### オーサー環境からのレプリケーションエージェントの設定  {#configuring-your-replication-agents-from-the-author-environment}
 
 オーサー環境の「ツール」タブから、オーサー環境（**作成者のエージェント**）またはパブリッシュ環境（**発行のエージェント**）にあるレプリケーションエージェントを設定できます。次の手順は、オーサー環境用のエージェントの設定方法を示していますが、どちらの環境にも使用できます。
 
@@ -370,7 +371,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
    ![chlimage_1-145](assets/chlimage_1-145.png)
 
-1. The values provided should be sufficient for a default installation. If you make changes then click **OK** to save them (see [Replication Agents - Configuration Parameters](#replication-agents-configuration-parameters) for more details of the individual parameters).
+1. デフォルトのインストールには、値を十分に指定する必要があります。変更を行った場合は、**OK**&#x200B;をクリックして保存します（個々のパラメーターの詳細については、[レプリケーションエージェント — 構成パラメーター](#replication-agents-configuration-parameters)を参照）。
 
 >[!NOTE]
 >
@@ -378,7 +379,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 >
 >このユーザーを、必要なパスをレプリケーションする権限を持つ、サイト固有のレプリケーションのユーザーアカウントに変更する必要があります。
 
-### リバースレプリケーションの設定 {#configuring-reverse-replication}
+### リバースレプリケーションの設定  {#configuring-reverse-replication}
 
 リバースレプリケーションは、パブリッシュインスタンスで生成されたユーザーコンテンツをオーサーインスタンスに戻すために使用されます。この機能は、通常はアンケート調査や登録フォームなどで使用されます。
 
@@ -391,17 +392,17 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
 >[!NOTE]
 >
->For AEM [Communities](/help/communities/overview.md), replication is not used for user generated content on a publish instance. See [Community Content Storage](/help/communities/working-with-srp.md).
+>AEM [コミュニティ](/help/communities/overview.md)の場合、レプリケーションは、発行インスタンス上のユーザー生成コンテンツには使用されません。 [コミュニティコンテンツのストレージ](/help/communities/working-with-srp.md)を参照してください。
 
 そのためには、次のものが必要です。
 
-**作成者環境内の逆複製エージェント** 。これは、公開環境内の送信トレイから情報を収集するためのアクティブなコンポーネントとして機能します。
+**作成者** 環境の逆複製エージェント。これは、公開環境のoutboxから情報を収集するためのアクティブなコンポーネントとして機能します。
 
 リバースレプリケーションを使用する場合は、このエージェントをアクティベートします。
 
 ![chlimage_1-146](assets/chlimage_1-146.png)
 
-**発行環境の逆複製エージェント(outbox)** 。これは、「outbox」として機能するパッシブな要素です。 作成者環境内のエージェントによって収集された、ユーザー入力はここに配置されます。
+**発行環境の逆複製エージェント(outbox)** これは、「outbox」として機能するパッシブな要素です。作成者環境内のエージェントによって収集された、ユーザー入力はここに配置されます。
 
 ![chlimage_1-9](assets/chlimage_1-9.jpeg)
 
@@ -411,7 +412,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 >
 >コンテンツのみがレプリケートされます。ユーザーデータ（ユーザー、ユーザーグループ、ユーザープロファイル）はレプリケートされません。
 >
->To synchronize user data across multiple publish instances, enable [User Synchronization](/help/sites-administering/sync.md).
+>複数の発行インスタンス間でユーザーデータを同期するには、[ユーザー同期](/help/sites-administering/sync.md)を有効にします。
 
 インストール時には、localhost のポート 4503 で実行されているパブリッシュインスタンスにコンテンツをレプリケートするデフォルトエージェントが既に設定されています。
 
@@ -430,12 +431,12 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
       * 「**有効**」をアクティブにします。
       * 「**説明**」を入力します。
       * 「**再試行遅延**」を `60000` に設定します。
-      * Leave the **Serialization Type** as `Default`.
+      * **シリアル化タイプ**&#x200B;は`Default`のままにします。
    * 「**トランスポート**」タブで、次のように設定します。
 
-      * 新しい発行インスタンスの必要なURIを入力します。 例えば、
+      * 新しい発行インスタンスの必要なURIを入力します。例えば、
 
-         `http://localhost:4504/bin/receive`。
+         `http://localhost:4504/bin/receive`.
 
       * レプリケーションに使用する、サイト固有のユーザーアカウントを入力します。
       * 必要に応じて、その他のパラメーターを設定できます。
@@ -447,7 +448,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
 更新された内容は、前述の手順で設定したすべてのパブリッシュインスタンスに表示されます。
 
-問題が発生した場合は、作成者インスタンスのログを確認できます。 必要な詳細レベルに応じて、上記のような[ **Agent Settings** ]ダイアログを `Debug` 使用して、[Log Level **** ]を設定することもできます。
+問題が発生した場合は、作成者インスタンスのログを確認できます。 必要な詳細レベルに応じて、**Agent Settings**&#x200B;ダイアログを使用して、&lt;a0/>Log Level **を`Debug`に設定することもできます。**
 
 >[!NOTE]
 >
@@ -461,13 +462,13 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
 
 
-### Dispatcher フラッシュエージェントの設定 {#configuring-a-dispatcher-flush-agent}
+### Dispatcher フラッシュエージェントの設定  {#configuring-a-dispatcher-flush-agent}
 
 デフォルトエージェントはインストールに付属しています。ただし、一部の設定については調整が必要です。新しいエージェントを定義する場合も同様です。
 
 1. AEM の「**ツール**」タブを開きます。
 1. 「**導入**」をクリックします。
-1. Select **Replication** and then **Agents on publish**.
+1. 「**レプリケーション**」を選択し、次に「**発行**&#x200B;のエージェント」を選択します。
 1. **Dispatcher フラッシュ**&#x200B;項目をダブルクリックして、概要を開きます。
 1. 「**編集**」をクリックします。**エージェントの設定**&#x200B;ダイアログが開きます。
 
@@ -475,13 +476,13 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
       * 「**有効**」をアクティブにします。
       * 「**説明**」を入力します。
-      * Leave the **Serialization Type** as `Dispatcher Flush`, or set it as such if creating a new agent.
-      * (optional) Select **Alias update** to enable alias or vanity path invalidation requests to Dispatcher.
+      * **シリアル化タイプ**&#x200B;は`Dispatcher Flush`のままにしておくか、新しいエージェントを作成する場合は&lt;a0/>シリアル化タイプ&lt;a1/>を&lt;a2/>のままにするか、新しいエージェントとして設定します。
+      * （オプション）「**エイリアスの更新**」を選択して、エイリアスまたはバニティパスの無効化要求をディスパッチャーに対して有効にします。
    * 「**トランスポート**」タブで、次のように設定します。
 
-      * 新しい発行インスタンスの必要なURIを入力します。 例えば、
+      * 新しい発行インスタンスの必要なURIを入力します。例えば、
 
-         `http://localhost:80/dispatcher/invalidate.cache`。
+         `http://localhost:80/dispatcher/invalidate.cache`.
 
       * レプリケーションに使用する、サイト固有のユーザーアカウントを入力します。
       * 必要に応じて、その他のパラメーターを設定できます。
@@ -509,17 +510,17 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
 >[注意!]
 >
->レプリケーションエージェントの作成は、リポジトリの `/etc/replication` 場所でのみサポートされます。 これは、関連するACLを正しく処理するために必要です。 ツリーの別の場所にレプリケーションエージェントを作成すると、不正アクセスが発生する可能性があります。
+>レプリケーションエージェントの作成は、`/etc/replication`リポジトリの場所でのみサポートされます。 これは、関連するACLを正しく処理するために必要です。 ツリーの別の場所にレプリケーションエージェントを作成すると、不正アクセスが発生する可能性があります。
 
 CRXDE Lite を使用して、レプリケーションエージェントの様々なパラメーターを設定できます。
 
-If you navigate to `/etc/replication` you can see the following three nodes:
+`/etc/replication`に移動すると、次の3つのノードが表示されます。
 
 * `agents.author`
 * `agents.publish`
 * `treeactivation`
 
-この2つは、適切な環境に関する設定情報を `agents` 保持し、環境が実行されている場合にのみアクティブになります。 例えば、公開環境 `agents.publish` でのみ使用されます。 次のスクリーンショットは、AEM WCMに含まれる、作成者環境の発行エージェントを示しています。
+2つの`agents`は、適切な環境に関する設定情報を保持し、その環境が実行中の場合にのみアクティブになります。 例えば、`agents.publish`はパブリッシュ環境でのみ使用されます。 次のスクリーンショットは、AEM WCMに含まれる、作成者環境の発行エージェントを示しています。
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -558,7 +559,7 @@ If you navigate to `/etc/replication` you can see the following three nodes:
    >
    >`/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
 
-## バッチレプリケーション {#batch-replication}
+## バッチレプリケーション{#batch-replication}
 
 バッチレプリケーションは、個々のページまたはアセットを複製しませんが、時間やサイズに基づく2つの最初のしきい値がトリガーされるのを待ちます。
 
@@ -566,22 +567,22 @@ If you navigate to `/etc/replication` you can see the following three nodes:
 
 発行者はすべての項目を解凍し、保存して発言者に報告します。
 
-### バッチレプリケーションの設定 {#configuring-batch-replication}
+### バッチレプリケーションの構成{#configuring-batch-replication}
 
 1. `http://serveraddress:serverport/siteadmin` に移動します。
-1. 画面の上側にある **[!UICONTROL ツール]** ・アイコンを押します。
-1. 左側のナビゲーションパネルで、「 **[!UICONTROL Replication - Agents on Author]** 」に移動し、「 **[!UICONTROL Default Agent]**」を重複クリックします。
-   * また、 `http://serveraddress:serverport/etc/replication/agents.author/publish.html`
-1. 複製キューの上にある **[!UICONTROL 「編集]** 」ボタンを押します。
-1. In the following window, go to the **[!UICONTROL Batch]** tab:
+1. 画面の上側にある&#x200B;**[!UICONTROL ツール]**&#x200B;アイコンを押します
+1. 左側のナビゲーションレールから、**[!UICONTROL 複製 — 作成者のエージェント]**&#x200B;に移動し、重複が「**[!UICONTROL デフォルトのエージェント]**」をクリックします。
+   * また、`http://serveraddress:serverport/etc/replication/agents.author/publish.html`に直接移動して、デフォルトの発行レプリケーションエージェントに到達することもできます
+1. レプリケーションキューの上にある&#x200B;**[!UICONTROL Edit]**&#x200B;ボタンを押します。
+1. 次のウィンドウで、「**[!UICONTROL バッチ]**」タブに移動します。
    ![バッチ複製](assets/batchreplication.png)
 1. エージェントを設定します。
 
 ### パラメーター {#parameters}
 
 * `[!UICONTROL Enable Batch Mode]`  — バッチレプリケーションモードを有効または無効にします
-* `[!UICONTROL Max Wait Time]`  — バッチ要求が開始されるまでの最大待機時間（秒）。 デフォルト値は 2 秒です。
-* `[!UICONTROL Trigger Size]`  — このサイズ制限に達した場合のバッチレプリケーション（MB単位）を開始します。 デフォルト値は 5 MB です。
+* `[!UICONTROL Max Wait Time]`  — バッチ要求が開始されるまでの最大待機時間（秒）。デフォルト値は 2 秒です。
+* `[!UICONTROL Trigger Size]`  — このサイズ制限に達した場合のバッチレプリケーション（MB単位）を開始します。デフォルト値は 5 MB です。
 
 ## その他のリソース {#additional-resources}
 
