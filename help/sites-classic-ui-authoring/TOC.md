@@ -15,10 +15,10 @@ ht-degree: 85%
 ---
 
 
-# AEM 6.4 Classic UI Authoring User Guide {#classic-ui}
+# AEM 6.4 Classic UIオーサリングユーザーガイド{#classic-ui}
 
 + [クラシックUIオーサリングガイドの概要](home.md)
-+ クラシックUIオーサリングの概要 {#introduction}
++ クラシックUIオーサリングの概要{#introduction}
    + [作成者が行う最初の手順](classic-page-author-first-steps.md)
    + [クラシック UI でのオーサリング](classicui.md)
    + [オーサー環境の操作](author-env.md)
@@ -78,7 +78,7 @@ ht-degree: 85%
    + [Adobe Campaign の使用](classic-personalization-ac.md)
    + [Adobe Campaign コンポーネント](classic-personalization-ac-components.md)
    + [Adobe Campaign のターゲット設定](classic-personalization-ac-target.md)
-+ クラシックUIでのアセットのオーサリング {#assets}
++ クラシックUIでのアセットのオーサリング{#assets}
    + [アセットの操作](classicui-assets.md)
    + [IBL ステージの使用について](classicui-stages-aem3d-ibl.md)
    + [3D アセットのレンダリング](classicui-rendering-3d.md)
