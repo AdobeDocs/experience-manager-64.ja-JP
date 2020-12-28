@@ -16,19 +16,19 @@ ht-degree: 17%
 ---
 
 
-# Smart Content Serviceリリースノート {#smart-content-service-release-notes}
+# Smart Content Serviceリリースノート{#smart-content-service-release-notes}
 
 Smart Content Serviceの概要と、サービスに関する既知の問題です。
 
 組織は、従業員、パートナー、および顧客がデジタルアセットを参照および検索する際に使用する分類に基づいて、デジタルアセットにタグ付けする必要があります。 一般的なタグと比較して、ビジネスタクソノミに基づいてタグ付けされたアセットは、タグベースの検索によって、より簡単に識別および取得できます。
 
-Smart Content Serviceは、ビジネス分類のAEM Assetsを使用してデジタルアセットに自動的にタグを付け、最も関連性の高いアセットを検索に表示します。
+Smart Content Serviceは、ビジネス分類であるAEM Assetsを使用してデジタルアセットに自動的にタグ付けを行い、最も関連性の高いアセットを検索に表示します。
 
 ビジネス分類を認識するために、AEMアセットとタグの厳選されたセットに対してSmart Content Serviceをトレーニングする必要があります。 トレーニングが終わると、サービスはこれらのタグを類似のアセットに適用できます。
 
 Smart Content Serviceは、Adobe Sensei・プラットフォームを基盤としており、このプラットフォームを使用して、ビジネス分類に基づいて画像認識アルゴリズムをトレーニングできます。 このコンテンツインテリジェンスを利用して、類似のアセットに関連性の高いタグが付加されます。
 
-## 主な改善点 {#key-improvements}
+## キーの改善{#key-improvements}
 
 Smart Content Serviceには、次の主な機能強化が含まれています。
 
@@ -94,5 +94,5 @@ Smart Content Serviceは、次のロケールで使用できます。
 
 * [製品へのアクセス](https://login.marketing.adobe.com)
 * [licensing.adobe.com での製品のダウンロード](https://licensing.adobe.com/).
-* ソフトウェア配布に関する追加機能については、製品の更新、パッチ、およびパッケージ [を参照してください](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)。
-* [Admin Consoleを介したカスタマーサポート](https://adminconsole.adobe.com/)。 詳しくは、「 [新しいAdobeカスタマーサポート体験](https://docs.adobe.com/content/help/en/customer-one/using/home.html)」を参照してください。
+* [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)の追加機能に対する製品アップデート、パッチ、パッケージ。
+* [Admin Consoleを介したカスタマーサポート](https://adminconsole.adobe.com/)。詳しくは、[新しいAdobeカスタマーサポート体験](https://docs.adobe.com/content/help/en/customer-one/using/home.html)を参照してください。
