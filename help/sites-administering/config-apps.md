@@ -20,19 +20,19 @@ ht-degree: 29%
 
 # AEM アプリケーション用の設定{#configuring-for-aem-apps}
 
-Adobe Experience Managerアプリでは、OTA（米国のみ）を使用してアプリのコンテンツを更新できます。 更新されたコンテンツは、発行インスタンスに保存されます。 デバイス上のアプリが発行インスタンスに接続し、更新を確認するには、発行インスタンスが空の転送者ヘッダーを許可するように設定されている必要があります。
+Adobe Experience Managerアプリでは、OTA（米国のみ）を使用してアプリのコンテンツを更新できます。 更新されたコンテンツは、発行インスタンスに保存されます。デバイス上のアプリが発行インスタンスに接続し、更新を確認するには、発行インスタンスが空の転送者ヘッダーを許可するように設定されている必要があります。
 
 ## 空のリファラーヘッダーの設定 {#configuring-empty-referrer-header}
 
 リファラーフィルターサービスを設定するには：
 
-* 次の場所にあるApache Felixコンソール(**設定**)を開きます。
+* 次の場所にあるApache Felixコンソール（**設定**）を開きます。
 * https://&lt;サーバー>:&lt;ポート番号>/system/console/configMgr
 * admin としてログインします。
-* In the **Configurations** menu, select: *Apache Sling Referrer Filter*
+* **設定**&#x200B;メニューで、次を選択します。*Apache Sling転送者フィルタ*
 * 「空白を許可」フィールドをチェックして、転送者ヘッダーを空にする/見つからないようにします。
 * 「**保存**」をクリックして変更を保存します。
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
-See the [OSGI Configuration Settings](/help/sites-deploying/osgi-configuration-settings.md) and [Security Checklist - Issues with Cross-Site Request Forgery](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery) for further details.
+詳細は、[OSGI構成設定](/help/sites-deploying/osgi-configuration-settings.md)と[セキュリティチェックリスト — クロスサイト要求偽造に関する問題](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery)を参照してください。
