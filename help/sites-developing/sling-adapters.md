@@ -38,7 +38,7 @@ Node node = resource.adaptTo(Node.class);
 
 * 内部的なコンテキストオブジェクトを渡す必要があるオブジェクトのショートカット作成。
 
-   例えば、JCR ベースの [`ResourceResolver`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ResourceResolver.html) では、要求の [`JCR Session`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Session.html) への参照を保持しています。この JCR セッションは、その要求セッションに基づいて動作する多くのオブジェクト（[`PageManager`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html) や [`UserManager`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/security/UserManager.html) など）を取得するために必要になります。
+   例えば、JCR ベースの [`ResourceResolver`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ResourceResolver.html) では、要求の [`JCR Session`](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Session.html) への参照を保持しています。この JCR セッションは、その要求セッションに基づいて動作する多くのオブジェクト（[`PageManager`](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html) や [`UserManager`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/security/UserManager.html) など）を取得するために必要になります。
 
 * サービスへのショートカット。
 
@@ -70,7 +70,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
 `Adaptable.adaptTo()` の実装には、様々な方法があります。
 
 * オブジェクト自体による実装（このメソッド自体を実装して特定のオブジェクトにマッピングします）。
-* By an [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)`, which can map arbitrary objects.
+* [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)`によって生成されます。この`は、任意のオブジェクトをマッピングできます。
 
    オブジェクトは、引き続き `Adaptable` インターフェイスを実装し、[`SlingAdaptable`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/adapter/SlingAdaptable.html) を拡張する必要があります（これは、Central Adapter Manager の `adaptTo` 呼び出しを渡します）。
 
@@ -204,7 +204,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
  </tbody> 
 </table>
 
-#### WCM {#wcm}
+#### WCM  {#wcm}
 
 [**Page**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) は次の項目に適応します。
 
@@ -219,7 +219,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
    <td>ラベル付きリソース（== this）。</td> 
   </tr> 
   <tr> 
-   <td><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">Node</a></td> 
+   <td><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">ノード</a></td> 
    <td>ページのノード。</td> 
   </tr> 
   <tr> 
@@ -231,7 +231,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
 
 [**Component**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/Component.html) は次の項目に適応します。
 
-| [Resource](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | コンポーネントのリソース。 |
+| [リソース](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | コンポーネントのリソース。 |
 |---|---|
 | [LabeledResource](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/LabeledResource.html) | ラベル付きリソース（== this）。 |
 | [Node](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | コンポーネントのノード。 |
@@ -250,7 +250,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
    <td>ラベル付きリソース（== this）。</td> 
   </tr> 
   <tr> 
-   <td><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">Node</a></td> 
+   <td><a href="https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">ノード</a></td> 
    <td>このテンプレートのノード。</td> 
   </tr> 
   <tr> 
@@ -264,28 +264,28 @@ null のケースを問題なく処理することが重要です。JSP レン�
 
 [**Authorizable**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/security/Authorizable.html)、[**User**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/security/User.html) および [**Group**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/security/Group.html) は次の項目に適応します。
 
-| [Node](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | ユーザーまたはグループのホームノードを返します。 |
+| [ノード](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | ユーザーまたはグループのホームノードを返します。 |
 |---|---|
 | [ReplicationStatus](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/ReplicationStatus.html) | ユーザーまたはホームノードのレプリケーションステータスを返します。 |
 
-#### DAM {#dam}
+#### DAM  {#dam}
 
 [**Asset**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/Asset.html) は次の項目に適応します。
 
-| [Resource](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | アセットのリソース。 |
+| [リソース](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | アセットのリソース。 |
 |---|---|
-| [Node](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | アセットのノード。 |
+| [ノード](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | アセットのノード。 |
 | ... | アセットのリソースが適応可能なすべての項目。 |
 
 #### タグ付け {#tagging}
 
 [**Tag**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/Tag.html) は次の項目に適応します。
 
-| [Resource](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | タグのリソース。 |
+| [リソース](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | タグのリソース。 |
 |---|---|
-| [Node](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | タグのノード。 |
+| [ノード](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | タグのノード。 |
 | ... | タグのリソースが適応可能なすべての項目。 |
 
-#### その他 {#other}
+#### その他  {#other}
 
 さらに、Sling、JCR、OCM では、カスタム OCM（` [AdapterFactory](https://sling.apache.org/site/adapters.html#Adapters-AdapterFactory)`Object Content Mapping）オブジェクト用の [](https://jackrabbit.apache.org/object-content-mapping.html) も提供しています。
