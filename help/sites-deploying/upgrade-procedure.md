@@ -27,7 +27,7 @@ ht-degree: 93%
 
 AEM 環境をアップグレードする場合は、作成者とエンドユーザーのダウンタイムを最小化するために、オーサー環境とパブリッシュ環境のアップグレードのアプローチの違いを考慮する必要があります。このページでは、AEM 6.x のバージョンで現在実行されている AEM トポロジをアップグレードする手順の概要を説明します。オーサー層とパブリッシュ層および Mongo ベースと TarMK ベースのデプロイメントではプロセスが異なるので、各層およびマイクロカーネルは個別の節に記載されています。デプロイメントを実行するときは、最初にオーサー環境をアップグレードし、成功を確認してから、パブリッシュ環境をアップグレードすることをお勧めします。
 
-## TarMK のオーサー層 {#tarmk-author-tier}
+## TarMK のオーサー層  {#tarmk-author-tier}
 
 ### トポロジの開始 {#starting-topology}
 
@@ -44,7 +44,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. オーサーのレプリケーションエージェントを無効にします。
 1. [アップグレード前のメンテナンスタスク](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)を実行します。
 
-### アップグレードの実行 {#upgrade-execution-1}
+### アップグレードの実行  {#upgrade-execution-1}
 
 ![execute_upgrade](assets/execute_upgrade.jpg)
 
@@ -61,7 +61,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. オーサーインスタンスを起動します。
 1. スタンバイインスタンスを起動します。
 
-### If Unsuccessful (Rollback) {#if-unsuccessful-rollback}
+### 失敗した場合（ロールバック） {#if-unsuccessful-rollback}
 
 ![ロールバック](assets/rollback.jpg)
 
@@ -84,7 +84,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. バックアップ用のデータストアのクローンを作成します。
 1. 1 つの AEM オーサーインスタンス（プライマリオーサー）以外をすべて停止します。
 1. 1つを除くすべてのMongoDBノードをレプリカセットから削除します。プライマリMongoインスタンスです
-1. Update the `DocumentNodeStoreService.cfg` file on the primary Author to reflect your single member replica set
+1. プライマリ作成者の`DocumentNodeStoreService.cfg`ファイルを更新し、単一のメンバレプリカセットを反映する
 1. プライマリオーサーを再起動して、正常に再起動することを確認します。
 1. プライマリオーサーのレプリケーションエージェントを無効にします。
 1. プライマリオーサーインスタンスで[アップグレード前のメンテナンスタスク](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)を実行します。
@@ -108,7 +108,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. オーサーインスタンスを 1 つずつ再起動します。
 1. クローン作成されたデータストアを削除します。
 
-### If Unsuccessful (Rollback)  {#if-unsuccessful}
+### 失敗した場合（ロールバック） {#if-unsuccessful}
 
 ![1回のロールバック](assets/mongo-rollback.jpg)
 
@@ -120,7 +120,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. セカンダリオーサーインスタンスを起動します。
 1. アップグレードされたオーサーインスタンス、Mongo ノードおよびデータストアをクリーンアップします。
 
-## TarMK パブリッシュファーム {#tarmk-publish-farm}
+## TarMK パブリッシュファーム  {#tarmk-publish-farm}
 
 ### TarMK パブリッシュファーム {#publish-farm}
 
@@ -155,7 +155,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. Publish 1 を起動します。
 1. QA が、ファイアウォールの後ろにある Dispatcher を介して Publish 1 を検証します。
 
-### If Unsuccessful (Rollback) {#rollback}
+### 失敗した場合（ロールバック） {#rollback}
 
 ![pub_rollback](assets/pub_rollback.jpg)
 
