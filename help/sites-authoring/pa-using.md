@@ -22,7 +22,7 @@ ht-degree: 91%
 
 ページ分析データを使用すると、ページコンテンツの効果を測定できます。
 
-## コンソールに表示できる分析結果 {#analytics-visible-from-the-console}
+## コンソールに表示できる分析結果  {#analytics-visible-from-the-console}
 
 ![aa-10](assets/aa-10.png)
 
@@ -76,17 +76,17 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 
 ### サイトからコンテンツインサイトを開く {#opening-content-insights-from-sites}
 
-Open [Content Insight](/help/sites-authoring/content-insights.md) from the Sites console to further investigate page effectiveness.
+ページの効果をさらに調べるには、サイトコンソールから「[Content Insight](/help/sites-authoring/content-insights.md)」を開きます。
 
 1. サイトコンソールで、コンテンツインサイトを表示するページを選択します。
 1. ツールバーで、分析と推奨表示アイコンをクリックします。
 
    ![](do-not-localize/chlimage_1-16.png)
 
-## ページエディターに表示できる分析結果（Activity Map） {#analytics-visible-from-the-page-editor-activity-map}
+## ページエディターに表示できる分析結果（Activity Map）  {#analytics-visible-from-the-page-editor-activity-map}
 
 >[!CAUTION]
 >
 >Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。
 >
->The [ActivityMap plugin provided by Adobe Analytics](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html) should now be used.
+>現在は、Adobe Analytics](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html)が提供する[ActivityMapプラグインを使用する必要があります。
