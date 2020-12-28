@@ -32,7 +32,7 @@ ht-degree: 93%
 >[!NOTE]
 >
 >Adobeは、この機能をさらに強化する予定はありません(リードとリストの管理)。\
->推奨事項は、 [Adobe CampaignとAEM統合の活用](/help/sites-administering/campaign.md)。
+>推奨事項は、[Adobe CampaignとAEM統合](/help/sites-administering/campaign.md)を活用することです。
 
 ## ニュースレター用リストの作成 {#creating-a-list-for-the-newsletter}
 
@@ -88,7 +88,7 @@ Teaser を追加して効果的なニュースレターのランディングペ�
 
 1. 2 つの Teaser があるキャンペーンを作成します。1 つには business タグを付け、もう 1 つにはタグを付けません。
 
-## 購読者へのコンテンツのプッシュ {#pushing-content-to-subscribers}
+## 購読者へのコンテンツのプッシュ  {#pushing-content-to-subscribers}
 
 MCM のニュースレター機能を使用して、すべての変更をページにプッシュします。次に、更新したコンテンツを購読者にプッシュします。
 
