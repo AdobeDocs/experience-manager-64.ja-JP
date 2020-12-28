@@ -22,11 +22,11 @@ ht-degree: 37%
 
 AEM では、画像、.js ファイルおよび .css ファイルを含む完全な Web ページとしてページを書き出すことができます。
 
-書き出しが設定されたら、URL内のをに置き換えてブラウザーでページを要求し、html形式でレンダリングされたページと参照アセットを含むzipファイルダウンロードを取得します。 `html``export.zip` ページ内のすべてのパス（画像へのパスなど）が、zipファイルに含まれるファイルまたはサーバー上のリソースを指すように書き換えられます。
+書き出しが設定されたら、ブラウザーでページを要求します。その際には、URLの`html`を`export.zip`に置き換え、html形式でレンダリングされたページと参照アセットを含むzipファイルのダウンロードを取得します。 ページ内のすべてのパス（画像へのパスなど）が、zipファイルに含まれるファイルまたはサーバー上のリソースを指すように書き換えられます。
 
 ## ページの書き出し {#exporting-a-page}
 
-The following steps describe how to export a page, and assume that an export configuration template exists for your site. A configuration template defines the way a page is exported and is specific to your site. To create a configuration template refer to the [Creating a Page Exporter Configuration for your Site](#creating-a-page-exporter-configuration-for-your-site) section.
+次の手順では、ページを書き出す方法、およびサイトに書き出し設定テンプレートが存在すると仮定します。設定テンプレートは、ページの書き出し方法を定義し、サイトに固有のものです。設定テンプレートを作成する方法については、「[サイト](#creating-a-page-exporter-configuration-for-your-site)のページエクスポーター設定の作成」を参照してください。
 
 ページを書き出すには：
 
@@ -37,84 +37,84 @@ The following steps describe how to export a page, and assume that an export con
 1. 虫眼鏡のアイコンをクリックして設定テンプレートを選択します。Geometrixx サイトのデフォルトである **geometrixx** テンプレートを選択します。「**OK**」をクリックします。
 
 1. 「**OK**」をクリックしてページのプロパティダイアログを閉じます。
-1. Request the page by replacing `html` with `export.zip` in the URL.
+1. URLの`html`を`export.zip`に置き換えて、ページをリクエストします。
 
-1. Download the `<page-name>.export.zip` file to your file system.
+1. `<page-name>.export.zip`ファイルをファイルシステムにダウンロードします。
 
 1. ファイルシステムで、ファイルを解凍します。
 
-   * the page html file ( `<page-name>.html`) is available below `<unzip-dir>/<page-path>`
-   * 書き出しテンプレートの設定に従って、その他のリソース（.jsファイル、.cssファイル、画像など）が配置されます。 この例では、以下のリソース `<unzip-dir>/etc`と、以下のリソースがあり `<unzip-dir>/<page-path>`ます。
+   * ページhtmlファイル(`<page-name>.html`)は`<unzip-dir>/<page-path>`の下にあります
+   * 書き出しテンプレートの設定に従って、その他のリソース（.jsファイル、.cssファイル、画像など）が配置されます。 この例では、リソースの一部が`<unzip-dir>/etc`より下、一部が`<unzip-dir>/<page-path>`より下にあります。
 
-1. Open the page html file ( `<unzip-dir>/<page-path>.html`) in your browser to check the rendering.
+1. ブラウザーでページhtmlファイル(`<unzip-dir>/<page-path>.html`)を開き、レンダリングを確認します。
 
 ## サイト用のページエクスポーター設定の作成 {#creating-a-page-exporter-configuration-for-your-site}
 
-ページエクスポーターは、コンテンツ同期フレームワークに基づいています。 ページプロパティダイアログで使用できる設定は、設定テンプレートです。 ページに必要なすべての依存関係を定義します。 ページの書き出しがトリガーされると、設定テンプレートが使用され、ページパスとデザインパスの両方が設定に動的に適用されます。 その後、標準のコンテンツ同期機能を使用してzipファイルを作成します。
+ページエクスポーターは、コンテンツ同期フレームワークに基づいています。ページプロパティダイアログで使用できる設定は、設定テンプレートです。ページに必要なすべての依存関係を定義します。ページの書き出しがトリガーされると、設定テンプレートが使用され、ページパスとデザインパスの両方が設定に動的に適用されます。その後、標準のコンテンツ同期機能を使用してzipファイルを作成します。
 
 AEM では、以下を含むいくつかのテンプレートが埋め込まれます。
 
-* A default one at `/etc/contentsync/templates/default`. This template:
+* `/etc/contentsync/templates/default`のデフォルト値です。このテンプレート：
 
    * リポジトリ内に設定テンプレートが見つからない場合のフォールバックテンプレートです。
    * 新しい設定テンプレートのベースとして機能します。
 
-* One that is dedicated to the **Geometrixx** site, at `/etc/contentsync/templates/geometrixx`. This template can be used as an example to create a new one.
+* **Geometrixx**&#x200B;サイト専用のデータ(`/etc/contentsync/templates/geometrixx`)。このテンプレートは、新しいテンプレートを作成する例として使用できます。
 
 ページエクスポーター設定テンプレートを作成するには：
 
-1. In **CRXDE Lite**, create a node below `/etc/contentsync/templates`:
+1. **CRXDE Lite**&#x200B;に、`/etc/contentsync/templates`の下にノードを作成します。
 
-   * Name: e.g. `mysite`. The name appears in the page properties dialog when choosing the page exporter template.
+   * 名前：例えば`mysite`.ページエクスポーターテンプレートを選択すると、ページプロパティダイアログに名前が表示されます。
    * 型：`nt:unstructured`
 
 1. テンプレートノード（ここでは `mysite`）の下に、以下で説明する設定ノードを使用してノード構造を作成します。
 
 ### ページエクスポーター設定ノード {#page-exporter-configuration-nodes}
 
-設定テンプレートは、ノード構造で構成されます。 各ノードには、zipファイルの作成プロセスでの特定のアクションを定義する `type` プロパティがあります。 typeプロパティの詳細については、コンテンツ同期フレームワークページの「設定タイプの概要」の節を参照してください。
+設定テンプレートは、ノード構造で構成されます。 各ノードには`type`プロパティがあり、zipファイルの作成プロセスでの特定のアクションを定義します。 typeプロパティの詳細については、コンテンツ同期フレームワークページの「設定タイプの概要」の節を参照してください。
 
 書き出し設定テンプレートを作成するには、以下のノードを使用できます。
 
-**ページノード** ：ページノードは、ページhtmlをzipファイルにコピーするために使用されます。 次の特性を持ちます。
+**page** nodeページノードは、ページhtmlをzipファイルにコピーするために使用されます。次の特性を持ちます。
 
 * 必須ノードである。
-* は下にあり `/etc/contentsync/templates/<sitename>`ます。
-* Its name is `page`.
-* Its node type is `nt:unstructured`
+* `/etc/contentsync/templates/<sitename>`の下に配置されています。
+* 名前は`page`です。
+* ノードタイプは`nt:unstructured`です
 
 `page` ノードには以下のプロパティがあります。
 
-* A `type` property set with the value `pages`.
+* 値`pages`で設定された`type`プロパティ。
 
 * `path` プロパティはありません。現在のページパスが設定に動的にコピーされます。
 
 * その他のプロパティは、コンテンツ同期フレームワークの「設定の種類の概要」セクションに説明されています。
 
-**rewrite node** :rewriteノードは、書き出されたページでリンクを書き換える方法を定義します。 書き換え後のリンクは、zip ファイルに含まれるファイルまたはサーバー上のリソースを指すことができます。
+**rewrite** ノードrewriteノードは、書き出されたページでリンクが書き換えられる方法を定義します。書き換え後のリンクは、zip ファイルに含まれるファイルまたはサーバー上のリソースを指すことができます。
 
 `rewrite` ノードについて詳しくは、コンテンツ同期ページを参照してください。
 
-**デザインノード** ：デザインノードは、書き出したページで使用されるデザインのコピーに使用されます。 次の特性を持ちます。
+**デザイン** ノードデザインノードは、書き出したページで使用されるデザインのコピーに使用されます。次の特性を持ちます。
 
 * オプションである。
-* は下にあり `/etc/contentsync/templates/<sitename>`ます。
-* Its name is `design`.
-* Its node type is `nt:unstructured`.
+* `/etc/contentsync/templates/<sitename>`の下に配置されています。
+* 名前は`design`です。
+* ノードタイプは`nt:unstructured`です。
 
 `design` ノードには以下のプロパティがあります。
 
-* A `type` property set to the value `copy`.
+* 値`copy`に設定された`type`プロパティ。
 
 * `path` プロパティはありません。現在のページパスが設定に動的にコピーされます。
 
-**汎用ノード** :clientlibs .jsや.cssファイルなどのリソースをzipファイルにコピーする際に使用される汎用ノードです。 次の特性を持ちます。
+**汎用** ノードclientlibs .jsや.cssファイルなどのリソースをzipファイルにコピーする場合に使用する汎用ノードです。次の特性を持ちます。
 
 * オプションである。
-* は下にあり `/etc/contentsync/templates/<sitename>`ます。
+* `/etc/contentsync/templates/<sitename>`の下に配置されています。
 * 特定の名前を持たない。
-* Its node type is `nt:unstructured`.
-* Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.
+* ノードタイプは`nt:unstructured`です。
+* コンテンツ同期フレームワークの「設定の種類の概要」で定義されている`type`プロパティと`type`関連するプロパティがあります。
 
 例えば、以下の設定ノードでは、geometrixx クライアントライブラリの .js ファイルを zip ファイルにコピーします。
 
@@ -133,7 +133,7 @@ AEM では、以下を含むいくつかのテンプレートが埋め込まれ�
 
 **カスタム設定の実装**
 
-ノード構造に気付いたかもしれませんが、 **Geometrixx**`logo` ページ書き出し設定テンプレートには、 `type` プロパティがに設定された `image`ノードがあります。 これは、画像のロゴをzipファイルにコピーするために作成された特別な設定タイプです。 特定の要件を満たすには、カスタム `type` プロパティの実装が必要になる場合があります。 これを行うには、コンテンツの同期ページの「カスタム更新ハンドラーの実装」の節を参照してください。
+ノード構造に気付いたかもしれませんが、**Geometrixx**&#x200B;ページエクスポート設定テンプレートには`logo`ノードがあり、`type`プロパティが`image`に設定されています。 これは、画像のロゴをzipファイルにコピーするために作成された特別な設定タイプです。 特定の要件を満たすには、カスタム`type`プロパティを実装する必要がある場合があります。これを行うには、コンテンツの同期ページの「カスタム更新ハンドラーの実装」の節を参照してください。
 
 ## プログラムによるページの書き出し {#programmatically-exporting-a-page}
 
@@ -146,5 +146,5 @@ AEM では、以下を含むいくつかのテンプレートが埋め込まれ�
 
 ## トラブルシューティング {#troubleshooting}
 
-If you experience a problem with the download of the zip file, you may delete the `/var/contentsync` node in the repository and send the export request again.
+zipファイルのダウンロードに問題が発生した場合は、リポジトリの`/var/contentsync`ノードを削除して、再度エクスポートリクエストを送信できます。
 
