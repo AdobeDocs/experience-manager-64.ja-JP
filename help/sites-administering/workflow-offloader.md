@@ -22,79 +22,79 @@ ht-degree: 29%
 
 Assets ワークフローオフローダーを使用すると、Adobe Experience Manager（AEM）Assets の複数のインスタンスを有効にして、プライマリ（リーダー）インスタンスでの処理の負荷を軽減できます。処理の負荷は、リーダーインスタンスとそれに追加する各種オフローダー（ワーカー）インスタンスの間で分散されます。アセットの処理の負荷を分散すると、AEM Assets でのアセット処理の効率と速度が上がります。さらに、特定の MIME タイプのアセットの処理に専用リソースを割り当てやすくなります。例えば、トポロジの特定のノードを InDesign アセットの処理専用として割り当てることができます。
 
-## オフローダートポロジの設定 {#configure-offloader-topology}
+## オフローダートポロジの設定  {#configure-offloader-topology}
 
 Configuration Managerを使用して、リーダーインスタンスのURLと、リーダーインスタンスの接続要求のオフローダーインスタンスのホスト名を追加します。
 
-1. Tap/click the AEM logo, and choose **Tools** > **Operations** > **Web Console** to open Configuration Manager.
-1. From the Web Console, select **Sling** >  **Topology Management**.
+1. AEMのロゴをタップ/クリックし、**ツール**/**操作**/**Webコンソール**&#x200B;を選択して、Configuration Managerを開きます。
+1. Webコンソールから、**Sling**/**Topology Management**&#x200B;を選択します。
 
    ![chlimage_1-44](assets/chlimage_1-44.png)
 
-1. In the Topology Management page, tap/click the **Configure Discovery.Oak Service** link.
+1. [トポロジの管理]ページで、[**Discovery.Oakサービスを構成**]リンクをタップまたはクリックします。
 
    ![chlimage_1-45](assets/chlimage_1-45.png)
 
-1. In the Discovery Service Configuration page, specify the connector URL for the leader instance in the **Topology Connector URLs** field.
+1. Discovery Service Configurationページの&#x200B;**Topology Connector URLs**&#x200B;フィールドで、リーダーインスタンスのコネクタURLを指定します。
 
    ![chlimage_1-46](assets/chlimage_1-46.png)
 
-1. In the **Topology Connector Whitelist** field, specify IP address or host names of offloader instances that are allowed to connect with the leader instance. 「**Save**」をタップまたはクリックします。
+1. **Topology Connector Whitelist**&#x200B;フィールドに、リーダーインスタンスとの接続を許可するオフローダーインスタンスのIPアドレスまたはホスト名を指定します。 「**Save**」をタップまたはクリックします。
 
    ![chlimage_1-47](assets/chlimage_1-47.png)
 
 1. リーダーインスタンスに接続されているオフローダーインスタンスを確認するには、**ツール**／**導入**／**トポロジ**&#x200B;で、クラスタービューをタップまたはクリックします。
 
-## オフロードの無効化 {#disable-offloading}
+## オフロードの無効化  {#disable-offloading}
 
-1. Tap/click the AEM logo, and choose **Tools** > **Deployment** > **Offloading**. The **Offloading Browser** page displays topics and the server instances that can consume the topics.
+1. AEMロゴをタップ/クリックし、**ツール**/**デプロイメント**/**オフロード**&#x200B;を選択します。 **ブラウザー**&#x200B;のオフロードページには、トピックと、そのトピックを使用できるサーバーインスタンスが表示されます。
 
    ![chlimage_1-48](assets/chlimage_1-48.png)
 
-1. Disable the *com/adobe/granite/workflow/offloading* topic on the leader instances with which users interact to upload or change AEM assets.
+1. ユーザーがAEMアセットのアップロードまたは変更を操作するリーダーインスタンスで、*com/adobe/granite/workflow/offloading*&#x200B;トピックを無効にします。
 
    ![chlimage_1-49](assets/chlimage_1-49.png)
 
 ## リーダーインスタンスでのワークフローランチャーの設定 {#configure-workflow-launchers-on-the-leader-instance}
 
-Configure workflow launchers to use the **DAM Update Asset Offloading** workflow on the leader instance instead of the **Dam Update Asset** workflow.
+**Dam Update Asset**&#x200B;ワークフローの代わりに、リーダーインスタンスで&#x200B;**DAM Update Asset Offloading**&#x200B;ワークフローを使用するように、ワークフローランチャーを設定します。
 
-1. Tap/click the AEM logo, and choose, **Tools** > **Workflow** > **Launchers** to open the **Workflow Launchers** console.
+1. AEMのロゴをタップ/クリックし、**ツール**/**ワークフロー**/**ランチャー**&#x200B;を選択して、**ワークフローランチャー**&#x200B;コンソールを開きます。
 
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
-1. Locate the two Launcher configurations with event type **Node Created** and **Node Modified** respectively, which run the **DAM Update Asset** workflow.
-1. For each configuration, select the checkbox before it and tap/click the **View Properties** icon from the toolbar to display the **Launcher Properties** dialog.
+1. **DAM Update Asset**&#x200B;ワークフローを実行する、それぞれ&#x200B;**作成されたイベントタイプ**&#x200B;と&#x200B;**変更されたノード**&#x200B;を持つ2つのランチャー設定を探します。
+1. 各設定について、チェックボックスを選択する前に、ツールバーの「**表示のプロパティ**」アイコンをタップまたはクリックして、**ランチャーのプロパティ**&#x200B;ダイアログを表示します。
 
    ![chlimage_1-51](assets/chlimage_1-51.png)
 
-1. From the **Workflow** list, choose **DAM Update Asset Offloading** and tap/click **Save**.
+1. **ワークフロー**&#x200B;リストから、**「DAM Update Asset Offloading**」を選択し、**「保存**」をタップまたはクリックします。
 
    ![chlimage_1-52](assets/chlimage_1-52.png)
 
-1. Tap/click the AEM logo, and choose, **Tools** > **Workflow** > **Models** to open the **Workflow Models** page.
-1. Select the **DAM Update Asset Offloading** workflow, and tap/click **Edit** from the toolbar to display its details.
+1. AEMのロゴをタップ/クリックし、**ツール**/**ワークフロー**/**モデル**&#x200B;を選択して、**ワークフローモデル**&#x200B;ページを開きます。
+1. **DAM Update Asset Offloading**&#x200B;ワークフローを選択し、ツールバーの「**編集**」をタップまたはクリックして、詳細を表示します。
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
 
-1. Display the context menu for the **DAM Workflow Offloading** step, and choose **Edit**. 設定ダイアログの「**汎用引数**」タブで「**ジョブトピック**」フィールドのエントリを確認します。
+1. **DAMワークフローのオフロード**&#x200B;ステップのコンテキストメニューを表示し、**編集**&#x200B;を選択します。 設定ダイアログの「**汎用引数**」タブで「**ジョブトピック**」フィールドのエントリを確認します。
 
    ![chlimage_1-54](assets/chlimage_1-54.png)
 
-## オフローダーインスタンスでのワークフローランチャーの無効化 {#disable-the-workflow-launchers-on-the-offloader-instances}
+## オフローダーインスタンスでのワークフローランチャーの無効化{#disable-the-workflow-launchers-on-the-offloader-instances}
 
-Disable the workflow launchers that run the **DAM Update Asset** workflow on the leader instance.
+リーダーインスタンスで&#x200B;**DAM Update Asset**&#x200B;ワークフローを実行するワークフローランチャーを無効にします。
 
-1. Tap/click the AEM logo, and choose, **Tools** > **Workflow** > **Launchers** to open the **Workflow Launchers** console.
+1. AEMのロゴをタップ/クリックし、**ツール**/**ワークフロー**/**ランチャー**&#x200B;を選択して、**ワークフローランチャー**&#x200B;コンソールを開きます。
 
    ![chlimage_1-55](assets/chlimage_1-55.png)
 
-1. Locate the two Launcher configurations with event type **Node Created** and **Node Modified** respectively, which run the **DAM Update Asset** workflow.
-1. For each configuration, select the checkbox before it and tap/click the **View Properties** icon from the toolbar to display the **Launcher Properties** dialog.
+1. **DAM Update Asset**&#x200B;ワークフローを実行する、それぞれ&#x200B;**作成されたイベントタイプ**&#x200B;と&#x200B;**変更されたノード**&#x200B;を持つ2つのランチャー設定を探します。
+1. 各設定について、チェックボックスを選択する前に、ツールバーの「**表示のプロパティ**」アイコンをタップまたはクリックして、**ランチャーのプロパティ**&#x200B;ダイアログを表示します。
 
    ![chlimage_1-56](assets/chlimage_1-56.png)
 
-1. In the **Activate **section, drag the slider to disable the workflow launcher and tap/click **Save** to disable it.
+1. 「**アクティブ化**」セクションで、スライダーをドラッグしてワークフローランチャーを無効にし、「**保存**」をタップまたはクリックして無効にします。
 
    ![chlimage_1-57](assets/chlimage_1-57.png)
 
