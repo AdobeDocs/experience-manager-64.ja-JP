@@ -34,7 +34,7 @@ ht-degree: 96%
 1. サイドキックの「**ページ**」タブで、「**ローンチを昇格**」をクリックします。
 1. 昇格するページを指定します。
 
-   * (Default) To promote only the current page, select **Promote Page Changes To Production Version**.
+   * （デフォルト）現在のページのみをプロモートするには、「**Promote Page Changes To Production Version**」を選択します。
    * 現在のページの子ページも昇格させるには、「**サブページを含める**」を選択します。
    * ローンチ内のすべてのページを昇格させるには、「**完全なローンチを実稼動版に昇格**」を選択します。
 
