@@ -20,7 +20,7 @@ ht-degree: 77%
 
 # AEM Communities リリースノート {#aem-communities-release-notes}
 
-この節では、AEM Communities の 6.3 リリース以降の改善点について説明します。To learn about the new features in greater detail, see [What&#39;s New in AEM 6.4 Communities](/help/communities/whats-new-aem-communities.md).
+この節では、AEM Communities の 6.3 リリース以降の改善点について説明します。新機能の詳細については、[AEM 6.4 Communitiesの新機能](/help/communities/whats-new-aem-communities.md)を参照してください。
 
 最新リリースを入手するには、このドキュメントの [Communities のデプロイ](/help/communities/deploy-communities.md#latest-releases)の節を参照してください。
 
@@ -61,7 +61,7 @@ ht-degree: 77%
 
 AEM 6.4 における基盤の変更と完全に互換性があります。
 
-Note: all these features are also available for AEM 6.3. Please check the AEM Communities release notes for [6.3](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html).
+注意：これらの機能はすべてAEM 6.3でも利用できます。[6.3](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html)のAEM Communitiesのリリースノートを確認してください。
 
 ## 既知の問題 {#known-issues}
 
