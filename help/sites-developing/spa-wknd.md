@@ -1,8 +1,8 @@
 ---
-title: SPA WKNDチュートリアル
-seo-title: SPA WKNDチュートリアル
-description: SPAの開発に没頭し、プロジェクトの設定、コンポーネントのマッピング、フロントエンド開発ツール、およびアプリケーションのルーティングを通じて独自のSPAを実装できるマルチパートチュートリアルをご利用ください。
-seo-description: SPAの開発に没頭し、プロジェクトの設定、コンポーネントのマッピング、フロントエンド開発ツール、およびアプリケーションのルーティングを通じて独自のSPAを実装できるマルチパートチュートリアルをご利用ください。
+title: SPA WKND チュートリアル
+seo-title: SPA WKND チュートリアル
+description: 複数のパートで構成されているこのチュートリアルを実行すると、プロジェクトの設定、コンポーネントのマッピング、フロントエンド開発ツール、アプリケーションのルーティングなどを理解して、独自の SPA を実装できるようになります。このチュートリアルを活用して SPA 開発に習熟しください。
+seo-description: 複数のパートで構成されているこのチュートリアルを実行すると、プロジェクトの設定、コンポーネントのマッピング、フロントエンド開発ツール、アプリケーションのルーティングなどを理解して、独自の SPA を実装できるようになります。このチュートリアルを活用して SPA 開発に習熟しください。
 uuid: f57be84b-a037-4c76-856e-afb0275c1a0f
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,20 +13,20 @@ translation-type: tm+mt
 source-git-commit: bb200d5361b8927c37683ec1cc0534d1d99176c7
 workflow-type: tm+mt
 source-wordcount: '173'
-ht-degree: 0%
+ht-degree: 72%
 
 ---
 
 
-# SPA WKNDチュートリアル{#spa-wknd-tutorial}
+# SPA WKND チュートリアル{#spa-wknd-tutorial}
 
-SPAの開発に没頭し、プロジェクトの設定、コンポーネントのマッピング、フロントエンド開発ツール、およびアプリケーションのルーティングを通じて独自のSPAを実装できるマルチパートチュートリアルをご利用ください。
+複数のパートで構成されているこのチュートリアルを実行すると、プロジェクトの設定、コンポーネントのマッピング、フロントエンド開発ツール、アプリケーションのルーティングなどを理解して、独自の SPA を実装できるようになります。このチュートリアルを活用して SPA 開発に習熟しください。
 
 ## チュートリアル {#tutorials}
 
-AEMで編集可能な、アプリケーションルーティングを介したプロジェクト設定から開始する独自のシングルページアプリケーションの構築のエンドツーエンドの例については、WKND SPATutorialsを参照してください。
+AEMで編集可能な、アプリケーションルーティングを介したプロジェクト設定から始まる独自のシングルページアプリケーションの構築のエンドツーエンドの例については、WKND SPAのTutorialsを参照してください。
 
-* [AEM SPAエディタとAngularの使用の手引き](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
-* [AEM SPA EditorとReactの使い始めに](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+* [AEM SPA エディターと Angular の使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-angular-tutorial/overview.html)
+* [AEM SPA Editor と React の使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-react-tutorial/overview.html)
 
-ただし、AEM向けの独自のSPAプロジェクトを開始する前に、AEM [ドキュメント用のSPAの](/help/sites-developing/spa-architecture.md) 開発も必ず確認してください。
+ただし、AEM向けの独自のSPAプロジェクトを開始する前に、必ず[AEM](/help/sites-developing/spa-architecture.md)向けSPAの開発ドキュメントも確認してください。
