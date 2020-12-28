@@ -32,11 +32,11 @@ ht-degree: 64%
 
 AEM には、リポジトリの管理に役立つ様々なメカニズムが備わっています。
 
-* バー [ジョンマネージャ](#version-manager)
+* [バージョンマネージャ](#version-manager)
 
    新しいバージョンを作成する際に古いバージョンを削除するように設定できます。
 
-* [ [バージョンの削除](/help/sites-deploying/monitoring-and-maintaining.md#version-purging) ]ツール
+* [Purge Versions](/help/sites-deploying/monitoring-and-maintaining.md#version-purging)ツール
 
    これは、リポジトリの監視と管理の一部として使用されます。
 
@@ -50,7 +50,7 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
       バージョンの期間がこの値を超えると、リポジトリからパージされます。
 
-* the [Version Purge maintenance task](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks). バージョンのパージメンテナンスタスクをスケジュールして、古いバージョンを自動的に削除できます。その結果、バージョンの削除ツールを手動で使用する必要が最小限に抑えられます。
+* [バージョンの削除メンテナンスタスク](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks)。 バージョンのパージメンテナンスタスクをスケジュールして、古いバージョンを自動的に削除できます。その結果、バージョンの削除ツールを手動で使用する必要が最小限に抑えられます。
 
 >[!CAUTION]
 >
@@ -66,7 +66,7 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
 以下のオプションが利用できます。
 
-* `versionmanager.createVersionOnActivation` (ブール値、デフォルト： true)
+* `versionmanager.createVersionOnActivation` (ブール値、デフォルト：true)
 
    ページがアクティブ化されたときにバージョンを作成するかどうか。
 
@@ -74,19 +74,19 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
    バージョンは、versionmanager.ivPathsに含まれるパスでアクティベーションが発生した場合にのみ作成されます（以下を参照）。
 
-* `versionmanager.ivPaths` (文字列[]、デフォルト： {&quot;/&quot;})
+* `versionmanager.ivPaths` (文字列[]、デフォルト：{&quot;/&quot;})
 
    versionmanager.createVersionOnActivationがtrueの場合に、アクティベーションでバージョンが暗黙的に作成されるパスです。
 
-* `versionmanager.purgingEnabled` (ブール値、デフォルト： false)
+* `versionmanager.purgingEnabled` (ブール値、デフォルト：false)
 
    新しいバージョンの作成時に削除を有効にするかどうか
 
-* `versionmanager.purgePaths` (文字列[]、デフォルト： {&quot;/content&quot;})
+* `versionmanager.purgePaths` (文字列[]、デフォルト：{&quot;/content&quot;})
 
    新しいバージョンが作成されたときにバージョンを削除するパス。
 
-* `versionmanager.maxAgeDays` (int、デフォルト： 30)
+* `versionmanager.maxAgeDays` (int、デフォルト：30)
 
    削除すると、この値より古いバージョンはすべて削除されます。 この値が1より小さい場合、バージョンの古さに基づいて削除は実行されません
 
@@ -104,7 +104,7 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
 ### 保持オプションの組み合わせ {#combining-retention-options}
 
-The options defining how which versions should be retained ( `maxAgeDays`, `maxNumberVersions`, `minNumberVersions`), can be combined depending on your requirements.
+どのバージョンを保持するかを定義するオプション(`maxAgeDays`、`maxNumberVersions`、`minNumberVersions`)は、要件に応じて組み合わせることができます。
 
 保持するバージョン数の最大数と、保持する最も古いバージョンを組み合わせて定義する場合の例：
 
