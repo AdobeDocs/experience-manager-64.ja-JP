@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 workflow-type: tm+mt
 source-wordcount: '1535'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 99%
 * [ワークフロー項目を開いて、詳細を表示（またはアクションを実行）](#opening-a-workflow-item-to-view-details-and-take-actions)
 * [ワークロードペイロード（複数のリソース）を表示](#viewing-the-workflow-payload-multiple-resources)
 
-## 使用可能なワークフローアクションの通知 {#notifications-of-available-workflow-actions}
+## 使用可能なワークフローアクションの通知  {#notifications-of-available-workflow-actions}
 
 作業項目（**コンテンツを承認**&#x200B;など）が割り当てられると、様々なアラートや通知が表示されます。
 
@@ -83,7 +83,7 @@ ht-degree: 99%
 
 以下の手順を使用して作業項目を完了します。
 
-1. **[AEM インボックス](/help/sites-authoring/inbox.md)**を開きます。
+1. **[AEM インボックス](/help/sites-authoring/inbox.md)**&#x200B;を開きます。
 1. アクションを実行するワークフロー項目を選択します（サムネールをタップまたはクリック）。
 1. ツールバーの「**完了**」を選択します。
 1. 「**作業項目を完了**」ダイアログボックスが開きます。ドロップダウンセレクターで「**次のステップ**」を選択し、必要に応じて&#x200B;**コメント**&#x200B;を追加します。
@@ -142,7 +142,7 @@ ht-degree: 99%
 
 以下の手順を使用して作業項目を委任します。
 
-1. **[AEM インボックス](/help/sites-authoring/inbox.md)**を開きます。
+1. **[AEM インボックス](/help/sites-authoring/inbox.md)**&#x200B;を開きます。
 1. アクションを実行するワークフロー項目を選択します（サムネールをタップまたはクリック）。
 1. ツールバーの「**委任**」を選択します。
 1. ダイアログが開きます。ドロップダウンセレクターから「**ユーザー**」（グループも可）を指定し、必要に応じて&#x200B;**コメント**&#x200B;を追加します。
@@ -192,7 +192,7 @@ ht-degree: 99%
 
 以下の手順を使用して、前のステップを実行します。
 
-1. **[AEM インボックス](/help/sites-authoring/inbox.md)**を開きます。
+1. **[AEM インボックス](/help/sites-authoring/inbox.md)**&#x200B;を開きます。
 1. アクションを実行するワークフロー項目を選択します（サムネールをタップまたはクリック）。
 1. 「**ステップバック**」を選択して、ダイアログを開きます。
 
@@ -254,7 +254,7 @@ ht-degree: 99%
 
 ワークフロー項目を開き、詳細を表示するには
 
-1. **[AEM インボックス](/help/sites-authoring/inbox.md)**を開きます。
+1. **[AEM インボックス](/help/sites-authoring/inbox.md)**&#x200B;を開きます。
 1. アクションを実行するワークフロー項目を選択します（サムネールをタップまたはクリック）。
 1. 「**開く**」を選択して、「情報」タブを開きます。
 
@@ -277,7 +277,7 @@ ht-degree: 99%
 
 ワークフローインスタンスのペイロードおよびリソースを表示するには
 
-1. **[AEM インボックス](/help/sites-authoring/inbox.md)**を開きます。
+1. **[AEM インボックス](/help/sites-authoring/inbox.md)**&#x200B;を開きます。
 1. アクションを実行するワークフロー項目を選択します（サムネールをタップまたはクリック）。
 1. ツールバーの「**ペイロードを表示**」を選択して、ダイアログを開きます。
 
