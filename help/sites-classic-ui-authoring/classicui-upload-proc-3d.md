@@ -53,11 +53,11 @@ Adobeでは、すべての参照ファイルをアップロードする前また
 
 一般的に、3D ファイルの変換と処理には、CPU とサーバー上のメモリリソースが著しく消費されます。時間も相当かかります。多くの場合、処理時間はモデルのサイズとサーバーの能力によって大きく異なります。例えば、面の数が 10 万未満の典型的な小規模モデルは、通常は 1 分未満で表示され、2～3 分で完全に処理されます。一方、面の数が 100 万を超える大規模モデルの場合は、完全に処理するのに何十分もかかることがあります。
 
-サーバーが低速になりすぎないよう、変換、処理およびレンダリングジョブが必要に応じてキューに登録されます。The message &quot;Waiting for processing...&quot; is sometimes shown in the **[!UICONTROL Card View]** at the time you uploaded assets. このステータスは、他の処理またはレンダリングジョブを完了させなければ現在のアセットを処理できないことを意味します。
+サーバーが低速になりすぎないよう、変換、処理およびレンダリングジョブが必要に応じてキューに登録されます。「処理を待機中…」というメッセージ は、アセットをアップロードした時点で、**[!UICONTROL カードの表示]**&#x200B;に表示されることがあります。 このステータスは、他の処理またはレンダリングジョブを完了させなければ現在のアセットを処理できないことを意味します。
 
 ## アップロードされた 3D ファイルの処理ステータスの監視 {#monitoring-the-processing-status-of-your-uploaded-d-files}
 
-In **[!UICONTROL Card View]** only, the processing status and progression is displayed as a progress banner on the asset&#39;s card. アップロードされた各3Dモデルは、通常、次の4 ～ 6個の順番の処理ステージに従います。
+**[!UICONTROL カード表示]**&#x200B;のみで、処理ステータスと進行状況は、アセットのカードに進行状況バナーとして表示されます。 アップロードされた各3Dモデルは、通常、次の4 ～ 6個の順番の処理ステージに従います。
 
 <table> 
  <tbody> 
@@ -68,7 +68,7 @@ In **[!UICONTROL Card View]** only, the processing status and progression is dis
   </tr> 
   <tr> 
    <td>1</td> 
-   <td>処理中</td> 
+   <td>処理</td> 
    <td>基本的な初期処理とメタデータの抽出。</td> 
   </tr> 
   <tr> 
@@ -101,5 +101,5 @@ In **[!UICONTROL Card View]** only, the processing status and progression is dis
 
 >[!NOTE]
 >
->You can view a 3D asset in **[!UICONTROL Detail View]** or render it after the Creating preview stage is complete. すべての処理ステージが完了するのを待つ必要はありません。
+>3Dアセットは、**[!UICONTROL 詳細表示]**&#x200B;に表示するか、作成プレビューステージの完了後にレンダリングできます。 すべての処理ステージが完了するのを待つ必要はありません。
 
