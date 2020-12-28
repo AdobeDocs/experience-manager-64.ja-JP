@@ -11,19 +11,22 @@ content-type: reference
 discoiquuid: e5dd9d0d-6d67-4430-aeb3-2be91356f624
 translation-type: tm+mt
 source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
+workflow-type: tm+mt
+source-wordcount: '733'
+ht-degree: 80%
 
 ---
 
 
-# AEM の基盤とリポジトリ {#aem-foundation-repository}
+# AEM の基盤とリポジトリ  {#aem-foundation-repository}
 
-## 変更点の一覧 {#list-of-changes}
+## 変更について  {#list-of-changes}
 
 ### リポジトリ {#repository}
 
 * Oak セグメント Tar マイクロカーネル
 
-   * オンラインリビジョンクリーンアップ用の高速圧縮モード（テール圧縮）
+   * オンラインリビジョンクリーンアップの高速圧縮モード（末尾の圧縮）
    * 書き込み速度の向上
    * セグメント操作の統計情報が JMXBean を通じて公開
    * オフラインリビジョンクリーンアップの所要時間の見積もり
@@ -33,11 +36,12 @@ source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
    * スケジュールに従ったクリーンアップメンテナンスの代わりに、MongoMK の継続的なリビジョンクリーンアップが実行されるようになりました。
 
 * ドキュメントノードストアに対するリビジョンクリーンアップの効率が向上しました。
-* Please see [Apache Jackrabbit Oak Jira v. 1.8.0](https://archive.apache.org/dist/jackrabbit/oak/1.8.0/RELEASE-NOTES.txt), [Apache Jackrabbit Oak Jira v. 1.8.1](https://archive.apache.org/dist/jackrabbit/oak/1.8.1/RELEASE-NOTES.txt) and [Apache Jackrabbit Oak Jira v. 1.8.2](https://archive.apache.org/dist/jackrabbit/oak/1.8.2/RELEASE-NOTES.txt) for a full overview of fixed issues.
+* 修正された問題の全体の概要については、[Apache Jackrabbit Oak Jira v. 1.8.0](https://archive.apache.org/dist/jackrabbit/oak/1.8.0/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1.8.2](https://archive.apache.org/dist/jackrabbit/oak/1.8.2/RELEASE-NOTES.txt)を参照してください。[](https://archive.apache.org/dist/jackrabbit/oak/1.8.1/RELEASE-NOTES.txt)
 
 >[!CAUTION]
 >
 >* AEM 6.3 以降の新しいバージョンの Oak セグメント Tar では、リポジトリを移行する必要があります。この手順は、古いバージョンの TarMK からアップグレードする場合、または別のタイプの格納機能から新しい Segment Tar に切り替える場合に必須です。新しい Segment Tar のメリットについて詳しくは、[Oak Segment Tar への移行に関する FAQ](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar) を参照してください。
+
 >
 
 
@@ -68,7 +72,8 @@ source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
 
 >[!CAUTION]
 >
->* クラシック UI の機能がさらに強化される予定はありません。AEM 6.4 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。Note that Classic UI remains fully supported while being deprecated [Read more](/help/sites-deploying/ui-recommendations.md).
+>* クラシック UI の機能がさらに強化される予定はありません。AEM 6.4 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。非推奨の[詳細情報](/help/sites-deploying/ui-recommendations.md)を読む間も、従来のUIは引き続き完全にサポートされます。
+
 >
 
 
@@ -81,7 +86,7 @@ source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
 
 ### 監視 {#monitoring}
 
-* 新しいシステム概要では、パフォーマンスに関連するすべてのシステム・ステータスとアクティビティに関するスナップショット・ビューが提供されます。
+* 新しい「System Overview」では、パフォーマンスに関連するすべてのシステム・ステータスとアクティビティに関するスナップショット・表示が提供されます。
 * 以下の新しいヘルスチェックが用意されています。
 
    * 大きい Lucene インデックスの検出
@@ -103,18 +108,18 @@ source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
 * バージョンのパージ設定により、保持するバージョンの数を最小限に抑えることができます。
 * バージョンのパージはメンテナンスウィンドウの終了時に停止します。手動で開始および停止することもでき、次回開始したときには、増分的に続行されます。
 
-### アップグレード {#upgrade}
+### アップグレード  {#upgrade}
 
 * 下位互換性：AEM 6.4の機能には下位互換性があるので、カスタムコードはほとんどの場合そのまま動作し、アップグレードの労力を削減できます。
 * アップグレードの複雑さの評価：新しいパターン検出ツールにより、アップグレードの複雑さを評価することができます。
 * 持続可能なアップグレード：API サーフェスとコンテンツ分類が導入され、開発サイクル全体を通して次のバージョンに効率的かつシームレスにアップグレードするためのベストプラクティスに容易に従えるようになりました。
-* リポジトリの再構築：アップグレードを容易にし、実装のベストプラクティスを促進するための、大幅な再構築（主に/etc）。 （[詳細情報](/help/sites-deploying/repository-restructuring.md)）。
-* Please see the [Upgrade documentation](/help/sites-deploying/upgrade.md) for more details on these features.
+* リポジトリの再構築：アップグレードを容易にし、導入のベスト・プラクティスを促進するための大幅な再構築（主に/etc） （[詳細情報](/help/sites-deploying/repository-restructuring.md)）。
+* これらの機能の詳細については、[アップグレードドキュメント](/help/sites-deploying/upgrade.md)を参照してください。
 
-### クラウドサービス {#cloud-services}
+### Cloud Services {#cloud-services}
 
-* 多くのクラウドサービスは、タッチ操作対応UIを使用して設定できるようになりました。残りは、レガシークラウドサービスカードの下で設定できます。
-* サイトフォルダーとアセットフォルダーは、コンテキストに応じて読み込まれるクラウドサービスで設定できます。
+* 多くのCloud Servicesは、タッチUIで設定できるようになりました。残りは、レガシーCloud Servicesカードの下で設定できます。
+* サイトフォルダーとアセットフォルダーは、コンテキストに応じた方法で読み込まれるCloud Servicesーを使用して設定できます。
 
 ### セキュリティ {#security}
 
