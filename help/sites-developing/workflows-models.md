@@ -28,27 +28,27 @@ ht-degree: 72%
 
 ユーザーがワークフローを開始すると、インスタンスが開始されます。これは対応するランタイムモデルです。変更内容を[同期](#sync-your-workflow-generate-a-runtime-model)すると作成されます。
 
-## 新しいワークフローの作成 {#creating-a-new-workflow}
+## 新しいワークフローの作成  {#creating-a-new-workflow}
 
 初めて作成する新しいワークフローモデルには、次のものが含まれています。
 
-* The steps, **[!UICONTROL Flow Start]** and **[!UICONTROL Flow End]**.
+* ステップ&#x200B;**[!UICONTROL フロー開始]**&#x200B;と&#x200B;**[!UICONTROL フロー終了]**。
 
    これらのステップは、ワークフローの始まりと終わりを表します。これらのステップは必須で、編集または削除できません。
 
-* An example **Participant** step named **Step 1**.
+* **参加者**&#x200B;ステップ&#x200B;**ステップ1**&#x200B;の例です。
 
    このステップは、作業項目をワークフロー開始者に割り当てるように設定されています。このステップを編集または削除し、必要に応じてステップを追加します。
 
 エディターを使用して新しいワークフローを作成するには：
 
-1. Open the **[!UICONTROL Workflow Models]** console; by way of **[!UICONTROL Tools]**, **[!UICONTROL Workflow]**, **[!UICONTROL Models]** or, for example:
+1. **[!UICONTROL ワークフローモデル]**&#x200B;コンソールを開きます。**[!UICONTROL ツール]**、**[!UICONTROL ワークフロー]**、**[!UICONTROL モデル]**、例えば次のようにして
 
    [http://localhost:4502/aem/workflow](http://localhost:4502/aem/workflow)
 
 1. 「**[!UICONTROL 作成]**」を選択してから、「**[!UICONTROL モデルを作成]**」を選択します。
-1. The **[!UICONTROL Add Workflow Model]** dialog box appears. 「**[!UICONTROL タイトル]**」と「**[!UICONTROL 名前]**」（オプション）を入力してから、「**[!UICONTROL 完了]**」を選択します。
-1. The new model is listed in the **[!UICONTROL Workflow Models]** console.
+1. **[!UICONTROL 追加ワークフローモデル]**&#x200B;ダイアログボックスが表示されます。 「**[!UICONTROL タイトル]**」と「**[!UICONTROL 名前]**」（オプション）を入力してから、「**[!UICONTROL 完了]**」を選択します。
+1. 新しいモデルが&#x200B;**[!UICONTROL ワークフローモデル]**&#x200B;コンソールに表示されます。
 1. 新しいワークフローを選択し、[**[!UICONTROL 「編集&#x200B;]**」をクリックすると、ワークフローが設定のために開かれます](#editing-a-workflow)。
 
    ![wf-01](assets/wf-01.png)
@@ -63,7 +63,7 @@ ht-degree: 72%
 >
 >このフォルダーは、[そのフォルダー内のモデルへのアクセス権を管理](/help/sites-administering/workflows-managing.md#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that)するために利用できます。
 
-## ワークフローの編集 {#editing-a-workflow}
+## ワークフローの編集  {#editing-a-workflow}
 
 既存のワークフローモデルを編集して、次のことができます。
 
@@ -71,11 +71,11 @@ ht-degree: 72%
 
 * [ステージ](#configuring-workflow-stages-that-show-workflow-progress)、[ワークフローを一時的にする](#creating-a-transient-workflow)か、[複数のリソースを使用する](#configuring-a-workflow-for-multi-resource-support)かなど、ワークフロープロパティを設定する
 
-Editing a [**Default or Legacy **(out-of-the-box) workflow](#editing-a-default-or-legacy-workflow-for-the-first-time)has an additional step, to ensure that a[safe copy](/help/sites-developing/workflows-best-practices.md#locations-workflow-models)is taken prior to your changes being made.
+[**デフォルトまたはレガシー**（標準搭載）ワークフロー](#editing-a-default-or-legacy-workflow-for-the-first-time)の編集には、変更前に[セーフコピー](/help/sites-developing/workflows-best-practices.md#locations-workflow-models)が作成されるようにするための追加の手順があります。
 
 ワークフローの変更を完了するには、「**[!UICONTROL 同期]**」を使用して、**[!UICONTROL ランタイムモデルを生成]**&#x200B;する必要があります。詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-### ワークフローの同期 - ランタイムモデルの生成 {#sync-your-workflow-generate-a-runtime-model}
+### ワークフローの同期 - ランタイムモデルの生成  {#sync-your-workflow-generate-a-runtime-model}
 
 「**同期**」（エディターのツールバーの右側）をクリックすると、[ランタイムモデル](/help/sites-developing/workflows.md#runtime-model)が生成されます。ランタイムモデルは、ユーザーがワークフローを開始したときに実際に使用されるモデルです。変更内容を&#x200B;**[!UICONTROL 同期]**&#x200B;しない場合は、その変更内容は実行時には反映されません。
 
@@ -91,17 +91,17 @@ Editing a [**Default or Legacy **(out-of-the-box) workflow](#editing-a-default-o
 
 [デフォルトまたはレガシーのモデル](/help/sites-developing/workflows.md#workflow-types)を開いて編集する際は、次の点に注意してください。
 
-* The **[!UICONTROL Steps]** browser is not available (left side).
+* **[!UICONTROL ステップ]**&#x200B;ブラウザを使用できません（左側）。
 * ツールバーで「**[!UICONTROL 編集]**」操作を利用できます（右側）。
 * 次の理由から、最初はモデルとそのプロパティが読み取り専用モードで開かれます。
 
-   * Default workflows are located in `/libs`
-   * Legacy workflows are located in `/etc`
+   * デフォルトのワークフローは`/libs`にあります
+   * 従来のワークフローは`/etc`にあります
 
 「**[!UICONTROL 編集]**」をクリックすると、次のようになります。
 
-* take a copy of the workflow into `/conf`
-* make the **[!UICONTROL Steps]** browser available
+* ワークフローのコピーを`/conf`に取り込む
+* **[!UICONTROL ステップ]**&#x200B;ブラウザを使用可能にする
 * 変更を加えられるようになります。
 
 >[!NOTE]
@@ -114,7 +114,7 @@ Editing a [**Default or Legacy **(out-of-the-box) workflow](#editing-a-default-o
 
 実行するアクティビティを表すために、ステップをモデルに追加する必要があります。各ステップは固有のアクティビティを実行します。標準の AEM インスタンスには、いくつかのステップコンポーネントが用意されています。
 
-When you edit a model, the available steps appear in the various groups of the **[!UICONTROL Steps]** browser. 次に例を示します。
+モデルを編集すると、**[!UICONTROL ステップ]**&#x200B;ブラウザの様々なグループに使用可能なステップが表示されます。 次に例を示します。
 
 ![wf-10](assets/wf-10.png)
 
@@ -124,12 +124,12 @@ When you edit a model, the available steps appear in the various groups of the *
 
 **モデルにステップを追加するには**:
 
-1. 編集する既存のワークフローモデルを開きます。From the **[!UICONTROL Workflows Model]** console, select the required model, then **[!UICONTROL Edit]**.
-1. Open the **[!UICONTROL Steps]** browser; using **[!UICONTROL Toggle Side Panel]**, at the far left of the top toolbar. ここでは、以下のことができます。
+1. 編集する既存のワークフローモデルを開きます。**[!UICONTROL ワークフローモデル]**&#x200B;コンソールから、必要なモデルを選択し、**[!UICONTROL 編集]**&#x200B;を行います。
+1. **[!UICONTROL ステップ]**&#x200B;ブラウザを開きます。上部のツールバーの左端にある&#x200B;**[!UICONTROL サイドパネルを切り替え]**&#x200B;を使用します。 ここでは、以下のことができます。
 
    * **[!UICONTROL フィルター]**&#x200B;を使用して特定のステップのみを表示する。
    * ドロップダウンセレクターを使用して、選択対象を特定のステップのグループに限定する。
-   * Select the Show Description icon ![wf-stepinfo-icon](assets/wf-stepinfo-icon.png) to show more details about the appropriate step.
+   * 説明を表示アイコン![wf-stepinfo-icon](assets/wf-stepinfo-icon.png)を選択し、該当する手順の詳細を表示します。
 
    ![wf-02](assets/wf-02.png)
 
@@ -137,7 +137,7 @@ When you edit a model, the available steps appear in the various groups of the *
 
    **[!UICONTROL 参加者ステップ]**&#x200B;などです。
 
-   After it is added to the flow you can [configure the step](#configuring-a-workflow-step).
+   フローに追加したら、[手順](#configuring-a-workflow-step)を設定できます。
 
    ![wf-03](assets/wf-03.png)
 
@@ -147,26 +147,26 @@ When you edit a model, the available steps appear in the various groups of the *
 
    [ページエディター](/help/sites-authoring/editing-content.md)と同様に、ステップのコピー、切り取り、貼り付け、グループ分け、削除をおこなうこともできます。
 
-   Split steps can also be collapsed/expanded using the toolbar option: ![wf-collapseexpand-toolbar-icon](assets/wf-collapseexpand-toolbar-icon.png)
+   分割ステップは、ツールバーオプションを使用して、折りたたんだり展開したりすることもできます。![wf-collapseexpand-toolbar-icon](assets/wf-collapseexpand-toolbar-icon.png)
 
 1. 「**[!UICONTROL 同期]**」（エディターツールバー）をクリックして変更内容を確定し、ランタイムモデルを生成します。
 
    詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-### ワークフローステップの設定 {#configuring-a-workflow-step}
+### ワークフローステップの設定  {#configuring-a-workflow-step}
 
-You can **Configure** and customize the behavior of a workflow step using the **[!UICONTROL Step Properties]** dialog boxes.
+**設定**&#x200B;を行い、**[!UICONTROL 手順のプロパティ]**&#x200B;ダイアログボックスを使用して、ワークフロー手順の動作をカスタマイズできます。
 
-1. To open the **[!UICONTROL Step Properties]** dialog box for a step either:
+1. **[!UICONTROL ステップのプロパティ]**&#x200B;ダイアログボックスを開くには、次のいずれかの手順を実行します。
 
-   * Tap the step in the workflow model and select **[!UICONTROL Configure]** from the component toolbar.
+   * ワークフローモデルの手順をタップし、コンポーネントツールバーから「**[!UICONTROL 設定]**」を選択します。
    * ステップをダブルクリックします。
 
    >[!NOTE]
    >
    >AEM と共にインストールされる主なステップコンポーネントについては、[ワークフローステップのリファレンス](/help/sites-developing/workflows-step-ref.md)を参照してください。
 
-1. 必要に応じて&#x200B;**[!UICONTROL ステップのプロパティ]**&#x200B;を設定します。利用できるプロパティはステップのタイプによって異なります。複数のタブが表示されることもあります。For example, the default **[!UICONTROL Participant Step]**, present in a new workflow as `Step 1`:
+1. 必要に応じて&#x200B;**[!UICONTROL ステップのプロパティ]**&#x200B;を設定します。利用できるプロパティはステップのタイプによって異なります。複数のタブが表示されることもあります。例えば、デフォルトの&#x200B;**[!UICONTROL 参加者ステップ]**&#x200B;は、新しいワークフローに`Step 1`として存在します。
 
    ![wf-11](assets/wf-11.png)
 
@@ -181,7 +181,7 @@ You can **Configure** and customize the behavior of a workflow step using the **
 
 1. [編集](#editing-a-workflow)するワークフローモデルを開きます。
 1. ツールバーから「**[!UICONTROL ワークフローモデルのプロパティ]**」を選択します。
-1. In the dialog box, activate **[!UICONTROL Transient Workflow]** (or deactivate if required):
+1. ダイアログボックスで、**[!UICONTROL 一時的なワークフロー]**&#x200B;をアクティブにします（または必要に応じて非アクティブにします）。
 
    ![wf-07](assets/wf-07.png)
 
@@ -195,25 +195,25 @@ You can **Configure** and customize the behavior of a workflow step using the **
 
 ### タッチ UI でワークフローモデルを使用可能にする {#make-workflow-models-available-in-touchui}
 
-If a workflow model is present in Classic UI, but missing in the selection popup menu in the **[!UICONTROL Timeline]** rail of Touch UI, then follow the configuration to make it available. 次の手順は、アクティベーションの **[!UICONTROL 要求と呼ばれるワークフローモデルの使用を説明しています]**。
+ワークフローモデルがクラシックUIに存在し、タッチUIの&#x200B;**[!UICONTROL タイムライン]**&#x200B;レールの選択ポップアップメニューに表示されない場合は、設定に従ってモデルを使用可能にします。 次の手順は、**[!UICONTROL アクティベーションの要求]**&#x200B;と呼ばれるワークフローモデルの使用を示しています。
 
-1. 該当するモデルがタッチ対応 UI で使用できないことを確認します。Access an asset using `/assets.html/content/dam` path. アセットを選択します。左レールの「**[!UICONTROL タイムライン]**」を開きます。「 **[!UICONTROL 開始ワークフロー]** 」をクリックし、「アクティベーション **[!UICONTROL 要求]** 」モデルがポップアップリストに存在しないことを確認します。
+1. 該当するモデルがタッチ対応 UI で使用できないことを確認します。`/assets.html/content/dam`パスを使用してアセットにアクセスします。 アセットを選択します。左レールの「**[!UICONTROL タイムライン]**」を開きます。「**[!UICONTROL 開始ワークフロー]**」をクリックし、**[!UICONTROL アクティベーションの要求]**&#x200B;モデルがポップアップリストに存在しないことを確認します。
 
-1. **[!UICONTROL ツール/一般/タグ付けに移動します]**。 「**[!UICONTROL ワークフロー]**」を選択します。
+1. **[!UICONTROL ツール/一般/タグ]**&#x200B;の順に移動します。 「**[!UICONTROL ワークフロー]**」を選択します。
 
-1. Select **[!UICONTROL Create > Create Tag]**. Set **[!UICONTROL Title]** as `DAM` and **[!UICONTROL Name]** as `dam`. 「**[!UICONTROL 送信]**」を選択します。
+1. **[!UICONTROL 作成/タグを作成]**&#x200B;を選択します。 **[!UICONTROL タイトル]**&#x200B;を`DAM`に、**[!UICONTROL 名前]**&#x200B;を`dam`に設定します。 「**[!UICONTROL 送信]**」を選択します。
    ![ワークフローモデルでタグを作成する](assets/workflow_create_tag.png)
 
-1. Navigate to **[!UICONTROL Tools > Workflow > Models]**. 「 **[!UICONTROL アクティベーションの]**&#x200B;要求 **[!UICONTROL 」を選択し、「]**&#x200B;編集」を選択します。
+1. **[!UICONTROL ツール/ワークフロー/モデル]**&#x200B;に移動します。 「**[!UICONTROL アクティベーションのリクエスト]**」を選択し、「**[!UICONTROL 編集]**」を選択します。
 
-1. 「 **[!UICONTROL 編集]** 」を選択し、「 **[!UICONTROL ワークフローモデルのプロパティ]**」を開きます。 Go to the **[!UICONTROL Basic]** tab.
+1. 「**[!UICONTROL 編集]**」を選択し、**[!UICONTROL ワークフローモデルのプロパティ]**&#x200B;を開きます。 「**[!UICONTROL 基本]**」タブに移動します。
 
-1. 「タグ `Workflow : DAM` 」フィ追加ールドに追加します **** 。 選択を確認し、チェックマークを付けます。
+1. 追加`Workflow : DAM` ～ **[!UICONTROL タグ]**&#x200B;フィールド 選択を確認し、チェックマークを付けます。
 
-1. 「 **[!UICONTROL 保存して閉じる]**」でタグの追加を確認します。
+1. **[!UICONTROL 保存して閉じる]**でタグの追加を確認します。
    ![モデルのページプロパティの編集](assets/workflow_model_edit_activation1.png)
 
-1. 「 **[!UICONTROL 同期]**」を使用してプロセスを完了します。 タッチ対応UIでワークフローが利用できるようになりました。
+1. **[!UICONTROL 同期]**&#x200B;を使用してプロセスを完了します。 タッチ対応UIでワークフローが利用できるようになりました。
 
 ### マルチリソースのサポートのためのワークフローの設定 {#configuring-a-workflow-for-multi-resource-support}
 
@@ -222,7 +222,7 @@ If a workflow model is present in Classic UI, but missing in the selection popup
 1. [編集](#editing-a-workflow)するワークフローモデルを開きます。
 1. ツールバーから「**[!UICONTROL ワークフローモデルのプロパティ]**」を選択します。
 
-1. In the dialog box, activate **[!UICONTROL Multi Resource Support]** (or deactivate if required):
+1. ダイアログボックスで、**[!UICONTROL Multi Resource Support]**&#x200B;をアクティブにします（または必要に応じて非アクティブにします）。
 
    ![wf-08](assets/wf-08.png)
 
@@ -230,7 +230,7 @@ If a workflow model is present in Classic UI, but missing in the selection popup
 
    詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-### Configuring Workflow Stages (that show Workflow Progress) {#configuring-workflow-stages-that-show-workflow-progress}
+### ワークフローステージの設定（ワークフローの進行状況を表示） {#configuring-workflow-stages-that-show-workflow-progress}
 
 [ワークフローステージ](/help/sites-developing/workflows.md#workflow-stages)は、タスクを処理するときにワークフローの進行状況を確認するのに役立ちます。
 
@@ -270,11 +270,11 @@ If a workflow model is present in Classic UI, but missing in the selection popup
 
    詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-## パッケージのワークフローモデルのエクスポート {#exporting-a-workflow-model-in-a-package}
+## パッケージのワークフローモデルのエクスポート  {#exporting-a-workflow-model-in-a-package}
 
 1. [パッケージマネージャー](/help/sites-administering/package-manager.md#package-manager)を使用して新しいパッケージを作成します。
 
-   1. Navigate to the Package Manager by way of **[!UICONTROL Tools]**, **[!UICONTROL Deployment]**, **[!UICONTROL Packages]**.
+   1. **[!UICONTROL ツール]**、**[!UICONTROL 展開]**、**[!UICONTROL パッケージ]**&#x200B;を通じて、パッケージマネージャーに移動します。
    1. 「**[!UICONTROL パッケージを作成]**」をクリックします。
    1. **[!UICONTROL パッケージ名]**&#x200B;と、その他の必要な情報を指定します。
    1. 「**[!UICONTROL OK]**」をクリックします。
@@ -309,7 +309,7 @@ If a workflow model is present in Classic UI, but missing in the selection popup
 1. 新しいページを作成して、編集用に開きます。
 1. **[!UICONTROL フォーム]**&#x200B;コンポーネントをページに追加します。
 1. ページに表示された&#x200B;**[!UICONTROL フォーム開始]**&#x200B;コンポーネントを設定します。
-1. Use **[!UICONTROL Start Workflow]** to select the desired workflow from those available:
+1. **[!UICONTROL 開始ワークフロー]**&#x200B;を使用して、使用可能なワークフローから目的のワークフローを選択します。
 
    ![wf-12](assets/wf-12.png)
 
@@ -321,19 +321,19 @@ If a workflow model is present in Classic UI, but missing in the selection popup
 
 例えば、新しいワークフローを次のようにテストします。
 
-1. [コンソールからワークフローモデル](/help/sites-administering/workflows-starting.md) を開始します。
+1. [コンソールからワークフロー](/help/sites-administering/workflows-starting.md) モデルを開始します。
 1. **[!UICONTROL ペイロード]**&#x200B;を定義して確定します。
 
 1. ワークフローが進行するように、必要なアクションを実行します。
 1. ワークフローの動作中にログファイルを監視します。
 
-ログファイルに&#x200B;**[!UICONTROL デバッグ]**&#x200B;メッセージを記録するように AEM を設定することもできます。See [Logging](/help/sites-deploying/configure-logging.md) for further information and when the development is finished, set the **[!UICONTROL Log Level]** back to **[!UICONTROL Info]**.
+ログファイルに&#x200B;**[!UICONTROL デバッグ]**&#x200B;メッセージを記録するように AEM を設定することもできます。詳細については[ログ](/help/sites-deploying/configure-logging.md)を参照してください。開発が終了したら、**[!UICONTROL ログレベル]**&#x200B;を&#x200B;**[!UICONTROL 情報]**&#x200B;に戻します。
 
 ## 例 {#examples}
 
 ### 例：公開のリクエストを承認／拒否する（単純な）ワークフローの作成 {#example-creating-a-simple-workflow-to-accept-or-reject-a-request-for-publication}
 
-To illustrate some of the possibilities for creating a workflow, the following example creates a variation of the `Publish Example` workflow.
+次の例では、ワークフローを作成する可能性を示すために、`Publish Example`ワークフローのバリエーションを作成します。
 
 1. [新しいワークフローモデルを作成](#creating-a-new-workflow)します。
 
@@ -345,19 +345,19 @@ To illustrate some of the possibilities for creating a workflow, the following e
 
 1. `Step 1` を削除します（この例には不適切なステップタイプです）。
 
-   * Click on the step and select **[!UICONTROL Delete]** from the component toolbar. アクションを確定します。
+   * 手順をクリックし、コンポーネントツールバーから「**[!UICONTROL 削除]**」を選択します。 アクションを確定します。
 
-1. From the **[!UICONTROL Workflow]** selection of the steps browser, drag a **[!UICONTROL Participant Step]** onto the workflow and position it between **[!UICONTROL Flow Start]** and **[!UICONTROL Flow End*]*.
+1. ステップブラウザーの&#x200B;**[!UICONTROL ワークフロー]**&#x200B;選択から、**[!UICONTROL 参加者ステップ]**&#x200B;をワークフローにドラッグし、**[!UICONTROL フロー開始]**&#x200B;と**[!UICONTROL フロー終了*]*の間に配置します。
 1. プロパティダイアログボックスを開くには、次のいずれかを行います。
 
-   * Click on the participant step and select **[!UICONTROL Configure]** from the component toolbar.
+   * 参加者の手順をクリックし、コンポーネントツールバーから「**[!UICONTROL 設定]**」を選択します。
    * 参加者ステップをダブルクリックします。
 
 1. 「**[!UICONTROL 共通]**」タブで、「`Validate Content`タイトル&#x200B;**[!UICONTROL 」と「]**&#x200B;説明&#x200B;**[!UICONTROL 」の両方に]** と入力します。
 1. 「**[!UICONTROL ユーザー / グループ]**」タブを開きます。
 
    * 「**[!UICONTROL 電子メールでユーザーに通知します]**」を有効にします。
-   * Select `Administrator` ( `admin`) for the **[!UICONTROL User/Group]** field.
+   * **[!UICONTROL ユーザー/グループ]**&#x200B;フィールドに`Administrator` (`admin`)を選択します。
 
    >[!NOTE]
    >
@@ -365,13 +365,13 @@ To illustrate some of the possibilities for creating a workflow, the following e
 
 1. チェックマークをクリックして、変更内容を確認します。
 
-   You will be returned to the overview of the workflow model, here the participant step will have been renamed to `Validate Content`.
+   ワークフローモデルの概要に戻ります。ここで、参加者の手順は`Validate Content`に変更されます。
 
-1. Drag an **[!UICONTROL Or Split]** onto the workflow and position it between `Validate Content` and **[!UICONTROL Flow End]**.
+1. **[!UICONTROL または分割]**&#x200B;をワークフローにドラッグし、`Validate Content`と&#x200B;**[!UICONTROL フロー終了]**&#x200B;の間に配置します。
 1. **[!UICONTROL OR 分割]**&#x200B;を設定用に開きます。
-1. 設定:
+1. 設定：
 
-   * **[!UICONTROL 共通]**: 分岐 **[!UICONTROL 2を選択]**
+   * **[!UICONTROL 共通]**:分岐 **[!UICONTROL 2を選択]**
    * **[!UICONTROL ブランチ 1]**：「**[!UICONTROL デフォルトのルート]**」を選択します。
    * **[!UICONTROL ブランチ 2]**：「**[!UICONTROL デフォルトのルート]**」を選択しません。
 
@@ -380,12 +380,12 @@ To illustrate some of the possibilities for creating a workflow, the following e
 
    * **[!UICONTROL タイトル]**: `Reject Publish Request`
    * **[!UICONTROL ユーザー / グループ]**：`projects-administrators` など
-   * **[!UICONTROL 電子メールでユーザーに通知]**: ユーザーに電子メールで通知する場合にアクティブ化します。
+   * **[!UICONTROL 電子メールでユーザーに通知]**:ユーザーに電子メールで通知する場合にアクティブ化します。
 
 1. **[!UICONTROL プロセスステップ]**&#x200B;を右側のブランチにドラッグし、プロパティを開き、次の値を指定してから変更内容を確定します。
 
    * **[!UICONTROL タイトル]**: `Publish Page as Requested`
-   * **[!UICONTROL プロセス]**: を選択 `Activate Page`します。 このプロセスは、選択されているページをパブリッシュインスタンスに公開します。
+   * **[!UICONTROL プロセス]**:を選択 `Activate Page`します。このプロセスは、選択されているページをパブリッシュインスタンスに公開します。
 
 1. 「**[!UICONTROL 同期]**」（エディターのツールバー）をクリックし、ランタイムモデルを生成します。
 
@@ -411,13 +411,13 @@ ORルールを定義するには：
 
    >[!NOTE]
    >
-   >The scripts must have a [function `check()`](#function-check) that returns a boolean.
+   >スクリプトには、ブール値を返す[関数`check()`](#function-check)が必要です。
 
 1. ワークフローを編集し、**[!UICONTROL OR 分割]**&#x200B;をモデルに追加します。
 1. **[!UICONTROL OR 分割]**&#x200B;の&#x200B;**[!UICONTROL ブランチ 1]** のプロパティを編集します。
 
-   * Define this as the **[!UICONTROL Default Route]** by setting the **[!UICONTROL Value]** to `true`.
-   * As **[!UICONTROL Rule]**, set the path to the script. 次に例を示します。
+   * **[!UICONTROL Value]**&#x200B;を`true`に設定して、これを&#x200B;**[!UICONTROL Default Route]**&#x200B;として定義します。
+   * **[!UICONTROL Rule]**&#x200B;のように、パスをスクリプトに設定します。 次に例を示します。
 
       `/apps/myapp/workflow/scripts/myscript1.ecma`
    >[!NOTE]
@@ -426,22 +426,22 @@ ORルールを定義するには：
 
 1. **[!UICONTROL OR 分割]**&#x200B;の&#x200B;**[!UICONTROL ブランチ 2]** のプロパティを編集します。
 
-   * As **[!UICONTROL Rule]**, set the path to the other script. 次に例を示します。
+   * **[!UICONTROL Rule]**&#x200B;のように、パスを他のスクリプトに設定します。 次に例を示します。
 
       `/apps/myapp/workflow/scripts/myscript2.ecma`
 
-1. 各ブランチ内の個々のステップのプロパティを設定します。Make sure the **[!UICONTROL User/Group]** is set.
+1. 各ブランチ内の個々のステップのプロパティを設定します。**[!UICONTROL User/Group]**&#x200B;が設定されていることを確認します。
 1. 「**同期**」（エディターのツールバー）をクリックして、ランタイムモデルに対する変更を保持します。
 
    詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-#### 関数 Check() {#function-check}
+#### 関数 Check()  {#function-check}
 
 >[!NOTE]
 >
 >[ECMAScript の使用](/help/sites-developing/workflows-customizing-extending.md#using-ecmascript)を参照してください。
 
-The following sample script returns `true` if the node is a `JCR_PATH` located under `/content/we-retail/us/en`:
+次のサンプルスクリプトは、ノードが`/content/we-retail/us/en`の下にある`JCR_PATH`の場合、`true`を返します。
 
 ```
 function check() {
@@ -464,4 +464,4 @@ function check() {
 
 標準提供のワークフローは、いずれもカスタマイズすることができます。動作をカスタマイズするには、適切なワークフローの詳細をオーバーレイします。
 
-例えば、**[!UICONTROL アクティベーションをリクエスト]**&#x200B;をカスタマイズするとします。このワークフローは、**[!UICONTROL サイト]**&#x200B;内でページを公開するために使用され、コンテンツ作成者が適切なレプリケーション権限を持っていない場合に自動的に実行されます。See [Customizing Page Authoring - Customizing the Request for Activation Workflow](/help/sites-developing/customizing-page-authoring-touch.md#customizing-the-request-for-activation-workflow) for further details.
+例えば、**[!UICONTROL アクティベーションをリクエスト]**&#x200B;をカスタマイズするとします。このワークフローは、**[!UICONTROL サイト]**&#x200B;内でページを公開するために使用され、コンテンツ作成者が適切なレプリケーション権限を持っていない場合に自動的に実行されます。詳しくは、[ページオーサリングのカスタマイズ —アクティベーション要求のカスタマイズ](/help/sites-developing/customizing-page-authoring-touch.md#customizing-the-request-for-activation-workflow)を参照してください。
