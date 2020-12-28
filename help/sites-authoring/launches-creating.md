@@ -85,7 +85,7 @@ ht-degree: 98%
    * **ローンチタイトル**：ローンチの名前。作成者にとって意味のある名前にしてください。
    * **既存のコンテンツを使用**：元のコンテンツを使用してローンチを作成します。
    * **新しいテンプレートを使用してページを置き換える**：詳しくは、[新しいテンプレートでのローンチの作成](#create-launch-with-new-template)を参照してください。
-   * **ソースページのライブデータを継承**：ソースページに変更があったときにローンチページのコンテンツを自動的に更新する場合は、このオプションを選択します。This option achieves this by making the launch a [live copy](/help/sites-administering/msm.md).
+   * **ソースページのライブデータを継承**：ソースページに変更があったときにローンチページのコンテンツを自動的に更新する場合は、このオプションを選択します。このオプションは、起動を[ライブコピー](/help/sites-administering/msm.md)にすることでこれを実現します。
 
       デフォルトでは、このオプションが選択されています。
 
@@ -97,8 +97,8 @@ ht-degree: 98%
 
    （「**完了**」を使用して）コンソールを戻す場合、次のいずれかからローンチを確認（およびアクセス）できます。
 
-   * [**ローンチ&#x200B;**コンソール](/help/sites-authoring/launches.md#the-launches-console)
-   * [**サイト&#x200B;**コンソールの「**&#x200B;参照&#x200B;**」](/help/sites-authoring/launches.md#launches-in-references-sites-console)
+   * [**ローンチ**&#x200B;コンソール](/help/sites-authoring/launches.md#the-launches-console)
+   * [**サイト**&#x200B;コンソールの「**参照**」](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 
 ### 新しいテンプレートでのローンチの作成 {#create-launch-with-new-template}
 
@@ -125,7 +125,7 @@ ht-degree: 98%
 >
 >このメカニズムを使用して、[既存のページ](/help/sites-authoring/managing-pages.md#creating-a-new-page)のテンプレートを変更できます。ただし、コンテンツが失われることは考慮する必要があります。
 
-### ネストされたローンチの作成 {#creating-a-nested-launch}
+### ネストされたローンチの作成  {#creating-a-nested-launch}
 
 ネストされたローンチを作成（ローンチをローンチ内に作成）して、既存のローンチからローンチを作成できます。これにより、作成者は各ローンチで同じ変更を複数回加えることなく、既に加えられた変更を活用できます。
 
