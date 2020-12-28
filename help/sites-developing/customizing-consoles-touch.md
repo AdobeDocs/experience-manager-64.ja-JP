@@ -28,11 +28,11 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 * Clientlibs
 
-   clientlibを使用すると、デフォルトの実装を拡張して、標準の関数、オブジェクト、メソッドを再利用しながら新しい機能を実現できます。 When customizing, you can create your own clientlib under `/apps.` For example it can hold the code required for your custom component.
+   clientlibを使用すると、デフォルトの実装を拡張して、標準の関数、オブジェクト、メソッドを再利用しながら新しい機能を実現できます。 をカスタマイズする際、`/apps.`の下に独自のclientlibを作成できます。たとえば、カスタムコンポーネントに必要なコードを保持できます。
 
 * オーバーレイ
 
-   Overlays are based on node definitions and allow you to overlay the standard functionality (in `/libs`) with your own customized functionality (in `/apps`). Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
+   オーバーレイはノード定義に基づいており、（`/libs`内の）標準機能をカスタマイズした独自の機能（`/apps`内の）でオーバーレイできます。 Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
 
 これらをさまざまな方法で使用して、AEM コンソールを拡張できます。一部については、以降で（大まかに）説明します。
 
@@ -56,7 +56,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. Recreate the required item (i.e. as it exists in `/libs`) under `/apps`
+>1. `/apps`の下に必要な項目（例：`/libs`に存在する項目）を再作成します
    >
    >
 1. `/apps` 内で変更作業をおこないます。
@@ -65,7 +65,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 
 
-For example, the following locations within the `/libs` structure can be overlaid:
+例えば、`/libs`構造内の次の場所はオーバーレイできます。
 
 * コンソール（Granite UI ページに基づくすべてのコンソール）。次に例を示します。
 
@@ -295,7 +295,7 @@ You can find the code of this page on GitHub
 
    `jcr:content/body/content/header/items/default/items/create/items/createsite/rendercondition`
 
-   Using properties on this node you can define the `groups` allowed to perform the specific action; for example, `administrators`
+   このノードでプロパティを使用して、特定のアクションの実行を許可する`groups`を定義できます。例：`administrators`
 
 <!-- Needs a review by Engineering -->
 <!--
@@ -368,7 +368,7 @@ You can restrict access to a navigation option using ACLs:
 
 >[!NOTE]
 >
->This feature is optimized for columns of text fields; for other data types it is possible to overlay `cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer` in `/apps`.
+>この機能は、テキストフィールドの列に対して最適化されています。他のデータ型の場合は、`cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer`を`/apps`にオーバーレイできます。
 
 <!-- Needs a review by Engineering -->
 <!--
@@ -393,14 +393,14 @@ You can find the code of this page on GitHub
 
 1. 省略可能：
 
-   * If you want to plug additional data, you need to write a ` [PageInforProvider](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)` with a
+   * 追加のデータをプラグインする場合は、` [PageInforProvider](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)`
 
       `pageInfoProviderType` プロパティの以前の場所への参照を更新します。
    例として、（GitHub から）以下に添付するクラス／バンドルを参照してください。
 
 1. これで、リスト表示の列コンフィギュレーターで列を選択できるようになります。
 
-## リソースのフィルタリング {#filtering-resources}
+## リソースのフィルタリング  {#filtering-resources}
 
 コンソールを使用する際の一般的な使用例は、ユーザーがリソース（ページ、コンポーネント、アセットなど）から選択する必要がある場合です。これは、例えば、作成者が項目を選択する必要があるリストの形式で表示されます。
 
