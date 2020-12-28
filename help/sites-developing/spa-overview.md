@@ -1,8 +1,8 @@
 ---
 title: SPA エディターの概要
 seo-title: SPA エディターの概要
-description: この記事では、SPAエディタの包括的な概要と、SPAエディタの動作方法に関する詳細ワークフローをAEM内で説明します。
-seo-description: この記事では、SPAエディタの包括的な概要と、SPAエディタの動作方法に関する詳細ワークフローをAEM内で説明します。
+description: この記事では、SPA エディターの包括的な概要と動作の仕組み（AEM 内での SPA エディターの詳細なインタラクションワークフローなど）を説明します。
+seo-description: この記事では、SPA エディターの包括的な概要と動作の仕組み（AEM 内での SPA エディターの詳細なインタラクションワークフローなど）を説明します。
 uuid: 600f1100-5cfa-4b75-a58c-f773395b5e05
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
 workflow-type: tm+mt
 source-wordcount: '1703'
-ht-degree: 54%
+ht-degree: 88%
 
 ---
 
@@ -26,9 +26,9 @@ SPA エディターには、AEM 内で SPA をサポートするための包括�
 
 >[!NOTE]
 >
->シングルページアプリケーション(SPA)エディタ機能を使用するには、AEM 6.4 Service Pack 2 [](/help/release-notes/sp-release-notes.md) 以降が必要です。
+>シングルページアプリケーション(SPA)エディタ機能には、[AEM 6.4サービスパック2](/help/release-notes/sp-release-notes.md)以降が必要です。
 >
->SPAエディターは、SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトに推奨されるソリューションです。
+>SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
 
 ## 概要 {#introduction}
 
@@ -45,34 +45,34 @@ AEM の SPA について詳しくは、次のドキュメントを参照して�
 
 ## デザイン {#design}
 
-SPA のページコンポーネントは、JSP ファイルまたは HTL ファイルを介して子コンポーネントの HTML 要素を提供しません。この処理は SPA フレームワークに委任されます。子コンポーネントまたはモデルの表現がJCRからJSONデータ構造としてフェッチされます。 次に、その構造に従って、SPA コンポーネントがページに追加されます。この動作により、ページコンポーネントのボディの初期構成が、SPA 以外のコンポーネントの場合とは違う構成になります。
+SPA のページコンポーネントは、JSP ファイルまたは HTL ファイルを介して子コンポーネントの HTML 要素を提供しません。この処理は SPA フレームワークに委任されます。子コンポーネントまたはモデルの表現は、JCR から JSON データ構造として取得されます。次に、その構造に従って、SPA コンポーネントがページに追加されます。この動作により、ページコンポーネントのボディの初期構成が、SPA 以外のコンポーネントの場合とは違う構成になります。
 
 ### ページモデルの管理 {#page-model-management}
 
-ページモデルの解決と管理は、指定の `PageModel` ライブラリに委任されます。SPAは、SPAエディタで初期化して作成するために、ページモデルライブラリを使用する必要があります。 このページモデルライブラリは、`aem-react-editable-components` npm によって AEM のページコンポーネントに間接的に提供されます。ページモデルは、AEM と SPA 間のインタープリターであるので、常に存在している必要があります。ページを作成したら、ページエディターとの通信を可能にするために、`cq.authoring.pagemodel.messaging` ライブラリを追加する必要があります。
+ページモデルの解決と管理は、指定の `PageModel` ライブラリに委任されます。SPA エディターで初期化とオーサリングをおこなうには、SPA でこのページモデルライブラリを使用する必要があります。このページモデルライブラリは、`aem-react-editable-components` npm によって AEM のページコンポーネントに間接的に提供されます。ページモデルは、AEM と SPA 間のインタープリターであるので、常に存在している必要があります。ページを作成したら、ページエディターとの通信を可能にするために、`cq.authoring.pagemodel.messaging` ライブラリを追加する必要があります。
 
 SPA ページのコンポーネントがページのコアコンポーネントから継承される場合、`cq.authoring.pagemodel.messaging` クライアントライブラリのカテゴリを使用可能にするオプションが 2 つあります。
 
 * テンプレートが編集可能な場合、テンプレートをページポリシーに追加する。
 * `customfooterlibs.html` を使用して、カテゴリを追加する。
 
-SPAは、エクスポートされたモデルの各リソースに対して、\
-レンダリング。 JSONとして表されたモデルは、コンテナ内のコンポーネントマッピングを使用してレンダリングされます。\
+書き出されたモデルの各リソースに対して、SPAは実際のコンポーネントをマッピングし、このコンポーネントは\
+レンダリング。 JSON 形式で表現されたモデルは、コンテナ内のコンポーネントマッピングを使用してレンダリングされます。\
 ![screen_shot_2018-08-20at144152](assets/screen_shot_2018-08-20at144152.png)
 
 >[!CAUTION]
 >
->The inclusion of the `cq.authoring.pagemodel.messaging` category should be limited to the context of the SPA Editor.
+>`cq.authoring.pagemodel.messaging` カテゴリの追加は、SPA エディターのコンテキストに限定する必要があります。
 
 ### 通信データタイプ {#communication-data-type}
 
-When the `cq.authoring.pagemodel.messaging` category is added to the page, it will send a message to the Page Editor to establish the JSON communication data type. 通信データタイプが JSON に設定されると、GET リクエストにより、コンポーネントの Sling Model エンドポイントとの通信がおこなわれます。ページエディターで更新が実行されると、更新されたコンポーネントの JSON 表記がページモデルのライブラリに送信されます。次に、ページモデルのライブラリから、SPA に更新が通知されます。
+`cq.authoring.pagemodel.messaging` カテゴリがページに追加されると、ページエディターにメッセージが送信され、JSON 通信データタイプが確立されます。通信データタイプが JSON に設定されると、GET リクエストにより、コンポーネントの Sling Model エンドポイントとの通信がおこなわれます。ページエディターで更新が実行されると、更新されたコンポーネントの JSON 表現がページモデルのライブラリに送信されます。次に、ページモデルのライブラリから、SPA に更新が通知されます。
 
 ![screen_shot_2018-08-20at143628](assets/screen_shot_2018-08-20at143628.png)
 
 ## ワークフロー {#workflow}
 
-SPAエディタは、SPAとAEMの間のメディエータと考えると、SPAとの間の相互作用の流れを理解できます。
+SPA と AEM 間のインタラクションのフローは、SPA エディターが両者の仲介役になっていると考えると理解することができます。
 
 * ページエディターと SPA 間の通信は、HTML ではなく JSON を使用しておこなわれます。
 * ページエディターは、iframe とメッセージング API を使用して、SPA にページモデルの最新バージョンを提供します。
@@ -81,29 +81,29 @@ SPAエディタは、SPAとAEMの間のメディエータと考えると、SPA�
 
 ![screen_shot_2018-08-20at144324](assets/screen_shot_2018-08-20at144324.png)
 
-### 基本SPAエディタのワークフロー {#basic-spa-editor-workflow}
+### SPA エディターの基本的なワークフロー {#basic-spa-editor-workflow}
 
-SPAエディタの主要要素を考慮すると、AEM内でのSPAの編集の高度なワークフローは、次のように作成者に表示されます。
+SPA エディターの主な要素に留意すると、AEM 内での SPA 編集ワークフローの概要は、作成者の観点では次のようになります。
 
-![untitled1](assets/untitled1.gif)
+![名称未設定1](assets/untitled1.gif)
 
-1. SPAエディタが読み込まれます。
+1. SPA エディターが読み込まれます。
 
-1. SPAは、別のフレームに読み込まれます。
-1. SPAはJSONコンテンツを要求し、コンポーネントをクライアント側でレンダリングします。
-1. SPAエディタは、レンダリングされたコンポーネントを検出し、オーバーレイを生成します。
-1. 作成者がオーバーレイをクリックし、コンポーネントの編集ツールバーが表示されます。
-1. SPAエディタは、POST要求に対して編集を保持します。
-1. SPA Editorは、SPAエディターに更新されたJSONを要求し、DOMイベントと共にSPAに送信します。
-1. SPAは、関連するコンポーネントを再レンダリングし、DOMを更新します。
+1. SPA が別個のフレームに読み込まれます。
+1. SPA が JSON コンテンツを要求し、コンポーネントをクライアント側でレンダリングします。
+1. SPA エディターが、レンダリングされたコンポーネントを検出し、オーバーレイを生成します。
+1. 作成者がオーバーレイをクリックし、コンポーネントの編集ツールバーを表示します。
+1. SPA エディターが、サーバーへの POST リクエストを使用して編集内容を保存します。
+1. SPA エディターが、更新された JSON を要求します。これは DOM イベントで SPA に送信されます。
+1. SPA が、関係するコンポーネントを再レンダリングし、DOM を更新します。
 
 >[!NOTE]
 >
->注意：
+>次の点に注意してください。
 >
->* SPAは常にその表示を担当します。
->* SPAエディタはSPA自体から切り離されています。
->* 実稼動（公開）では、SPAエディタは読み込まれません。
+>* SPA は常にその表示を担当している
+>* SPA エディターは SPA 自体から切り離されている
+>* 実稼働環境（パブリッシュ）では SPA エディターは読み込まれない
 
 >
 
@@ -111,7 +111,7 @@ SPAエディタの主要要素を考慮すると、AEM内でのSPAの編集の�
 
 ### クライアントサーバー型のページ編集ワークフロー {#client-server-page-editing-workflow}
 
-これは、SPAを編集する際のクライアント/サーバー間のやり取りの概要をより詳細に説明します。
+下図は、SPA を編集する際のクライアントとサーバーのインタラクションの概要をより詳しく説明したものです。
 
 ![page_editor_spa_authoringmediator-2](assets/page_editor_spa_authoringmediator-2.png)
 
@@ -161,7 +161,7 @@ SPAエディタの主要要素を考慮すると、AEM内でのSPAの編集の�
 
 ### オーサリングワークフロー {#authoring-workflow}
 
-これは、オーサリングの経験に重点を置いた、より詳細な概要です。
+下図は、オーサリングエクスペリエンスに重点を置いた、より詳細な概要です。
 
 ![spa_content_authoringmodel](assets/spa_content_authoringmodel.png)
 
@@ -187,49 +187,49 @@ SPAエディタの主要要素を考慮すると、AEM内でのSPAの編集の�
 
 1. SPA がページコンテンツの更新を完了すると、ページエディターがオーサリング環境を読み込みます。
 
-## 要件と制限 {#requirements-limitations}
+## 要件と制限事項 {#requirements-limitations}
 
-作成者がページエディターを使用してSPAのコンテンツを編集できるようにするには、AEM SPA Editor SDKとの対話を行うためにSPAアプリケーションを実装する必要があります。 お使いの環境を稼働させるために必要な最小限の知識については、AEM [](/help/sites-developing/spa-getting-started-react.md) ドキュメントの「SPAs使用の手引き」を参照してください。
+作成者がページエディターを使用して SPA のコンテンツを編集できるようにするには、AEM SPA Editor SDK とやり取りする SPA アプリケーションを実装する必要があります。最低限必要な場合は、AEM](/help/sites-developing/spa-getting-started-react.md)の[SPA使用の手引きドキュメントを参照してください。
 
-### サポートされるフレームワーク {#supported-frameworks}
+### サポートされているフレームワーク {#supported-frameworks}
 
-SPAエディターSDKは、以下の最小バージョンをサポートしています。
+SPA Editor SDK では、最低限、次のバージョンをサポートしています。
 
-* 16.x以降に対応
-* Angular 6.x以上
+* React 16.x 以上
+* Angular 6.x 以上
 
-これらのフレームワークの以前のバージョンは、AEM SPAエディターSDKで動作する可能性がありますが、サポートされていません。
+これらのフレームワークの旧バージョンは、AEM SPA Editor SDK で動作する可能性はありますが、サポートされていません。
 
 ### その他のフレームワーク {#additional-frameworks}
 
-AEM SPAエディターSDKで動作する追加のSPAフレームワークを実装できます。 AEM SPA Editorで動作するモジュール、コンポーネント、サービスで構成されるフレームワーク固有のレイヤーを作成するためにフレームワークが満たす必要がある要件については、 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) ドキュメントを参照してください。
+AEM SPA Editor SDK で動作する他の SPA フレームワークを追加で実装することができます。AEM SPA エディターで動作するモジュール、コンポーネント、サービスで構成されるフレームワーク固有のレイヤーを作成するためにフレームワークが満たすべき要件については、[SPA ブループリント](/help/sites-developing/spa-blueprint.md)ドキュメントを参照してください。
 
 ### 複数のセレクターの使用 {#multiple-selectors}
 
-追加のカスタムセレクターを定義し、AEM SPA SDK用に開発されたSPAの一部として使用できます。 ただし、このサポートには、 `model` セレクターを最初のセレクターにし、拡張子をJSONエクスポーター `.json` の [必要に応じて指定する必要があります。](json-exporter-components.md#multiple-selectors)
+追加のカスタムセレクターを定義し、AEM SPA SDK 用に開発された SPA の一部として使用することができます。ただし、このサポートには、`model`セレクターを最初のセレクターに、拡張子を`.json`を[必須にするJSONエクスポーター](json-exporter-components.md#multiple-selectors)が必要です。
 
-### テキストエディタの要件 {#text-editor-requirements}
+### テキストエディターの要件 {#text-editor-requirements}
 
-SPAで作成されたテキストコンポーネントのインプレイスエディタを使用する場合は、追加の設定が必要です。
+SPA で作成したテキストコンポーネントのインプレースエディタを使用する場合は、追加の設定が必要です。
 
-1. テキストHTMLを含むコンテナラッパー要素に属性（任意）を設定します。 WKNDジャーナルのサンプルコンテンツの場合、その要素は `<div>` 要素であり、使用されているセレクターはで `data-rte-editelement`す。
-1. 対応するAEMテキストコンポーネント `editElementQuery` の、そのセレクターを指す設定 `cq:InplaceEditingConfig` を設定します。例： `data-rte-editelement`. これにより、HTMLテキストを折り返すHTML要素がエディターに表示されます。
+1. テキスト HTML を含んだコンテナラッパー要素に（任意の）属性を設定します。WKNDジャーナルのサンプルコンテンツの場合、この要素は`<div>`要素で、使用されているセレクターは`data-rte-editelement`です。
+1. 対応する AEM テキストコンポーネントの `cq:InplaceEditingConfig` で、そのセレクター（例：`data-rte-editelement` など）を指す設定 `editElementQuery` を指定します。これにより、HTML テキストを折り返す HTML 要素をエディターが把握できます。
 
-この方法の例については、 [WKNDジャーナルのサンプルコンテンツを参照してください。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
+これを行う方法の例については、[WKNDジャーナルのサンプルコンテンツを参照してください。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
 
-リッチテキストエディターの `editElementQuery` プロパティと設定について詳しくは、「リッチテキストエディターの [設定」を参照してください。](/help/sites-administering/rich-text-editor.md)
+リッチテキストエディターの `editElementQuery` プロパティと設定について詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)を参照してください。
 
 ### 制限事項 {#limitations}
 
-AEM SPA Editor SDKは、AEM 6.4 Service Pack 2で導入されました。 この機能はAdobeで完全にサポートされ、新機能として引き続き拡張および拡張されます。 次のAEMの機能は、SPAエディタではまだ対象となっていません。
+AEM SPAエディタSDKは、AEM 6.4 Service Pack 2で導入されました。 この機能はAdobeで完全にサポートされ、新機能として引き続き拡張および拡張されます。 次のAEM機能は、SPAエディタではまだ対象となっていません。
 
 * ターゲットモード
 * ContextHub
-* インライン画像の編集
-* 設定の編集( listeners)
+* インライン画像編集
+* 設定の編集（例：リスナー）
 * スタイルシステム
 * 取り消し／やり直し
-* ページの相違とタイムワープ
-* リンクチェッカー、CDNリライターサービス、URL短縮など、サーバー側でHTMLの書き換えを実行する機能。
+* ページの差分とタイムワープ
+* リンクチェッカー、CDN 書き直しサービス、URL 短縮など、サーバー側で HTML の書き換えを実行する機能
 * 開発者モード
-* AEM起動回数
+* AEM ローンチ
