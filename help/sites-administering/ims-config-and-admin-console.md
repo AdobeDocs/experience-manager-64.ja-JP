@@ -26,7 +26,7 @@ ht-degree: 81%
 
 ## 概要 {#introduction}
 
-AEM 6.4.3.0 introduces Admin Console support for AEM instances and Adobe IMS(Identity Management System) based authentication for **AEM Managed Services** customers.
+AEM 6.4.3.0では、AEMインスタンスとAdobeIMS(Identity Managementシステム)ベースの認証を&#x200B;**AEMManaged Services**&#x200B;のお客様にサポートするAdmin Consoleが導入されています。
 
 AEM がアドミンコンソールをオンボーディングしたことにより、AEM Managed Servicesのお客様は 1 つのコンソールですべての Experience Cloud ユーザーを管理できます。ユーザーとグループをAEMインスタンスに関連付けられた製品プロファイルに割り当て、特定のインスタンスにログインできます。
 
@@ -76,7 +76,7 @@ AEMManaged Servicesのお客様は、既に組織がプロビジョニングさ�
 >
 >Enterprise Administration と Admin Console の詳細については、[このページ](https://helpx.adobe.com/jp/enterprise/managing/user-guide.html)の記事を参照してください。
 
-### アドミンコンソールへのユーザーのオンボード {#onboarding-users-to-the-admin-console}
+### アドミンコンソールへのユーザーのオンボード  {#onboarding-users-to-the-admin-console}
 
 お客様の規模と好みに応じて、ユーザーをオンボードする方法は 3 つあります。
 
@@ -114,7 +114,7 @@ Analytics、Target、Creative Cloud などの他の Adobe 製品を管理する�
 
 [https://github.com/adobe-apiplatform/user-sync.py/releases/latest](https://github.com/adobe-apiplatform/user-sync.py/releases/latest)
 
-Note that a pre-release version 2.4RC1 is available with dynamic group creation support and can be found here: [https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1)
+プレリリース版のバージョン2.4RC1は、動的グループ作成のサポートで利用でき、次の場所にあります。[https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1)
 
 このリリースの主な機能は、Admin Console でユーザーのメンバーシップに合わせて新しい LDAP グループを動的にマッピングする機能と、動的なユーザーグループ作成です。
 
@@ -132,7 +132,7 @@ Note that a pre-release version 2.4RC1 is available with dynamic group creation 
 >Adobe I/O コンソールのドキュメントは[ここ](https://www.adobe.io/apis/cloudplatform/console.html)を参照してください。
 >
 >
->The User Management API that is used by the User Sync Tool is covered at this [location](https://www.adobe.io/apis/cloudplatform/umapi-new.html).
+>ユーザー同期ツールで使用されるUser Management APIは、この[場所](https://www.adobe.io/apis/cloudplatform/umapi-new.html)で扱います。
 
 >[!NOTE]
 >
@@ -198,13 +198,13 @@ AEMリポジトリ内の既存のユーザー（ローカルソース、LDAPま�
 
 このユーティリティは、IMS プロビジョニングの一部として AMS チームによって実行されます。
 
-### AEM での権限と ACL の管理 {#managing-permissions-and-acls-in-aem}
+### AEM での権限と ACL の管理  {#managing-permissions-and-acls-in-aem}
 
 アクセス制御と権限は、AEMで引き続き管理されます。これは、IMSからのユーザーグループ(下の例ではAEM-GRP-008)と、権限とアクセス制御が定義されたローカルグループを分離することで実現できます。 IMS から同期されたユーザーグループは、ローカルグループに割り当てられ、権限を継承することができます。
 
 以下の例では、同期グループをローカル *Dam_Users* グループに追加しています。
 
-ここでは、ユーザーはアドミンコンソールのいくつかのグループにも割り当てられています。( Please note that the users and groups can be synced from LDAP using the user sync tool or created locally, please see the section **Onboarding Users to the Admin Console** above).
+ここでは、ユーザーはアドミンコンソールのいくつかのグループにも割り当てられています。(ユーザーとグループは、ユーザー同期ツールを使用してLDAPから同期できるか、ローカルに作成できます。上記の&#x200B;**Admin Console**&#x200B;に対するユーザーのオンボーディングの節を参照してください)。
 
 &amp;ast；ユーザーグループは、ユーザーがインスタンスにログインした場合にのみ同期されます。大量のユーザーとグループを持つお客様の場合は、グループ同期ユーティリティをAMSで実行して、上述のアクセス制御および権限管理用のグループを事前取得できます。
 
