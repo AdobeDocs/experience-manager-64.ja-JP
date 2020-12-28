@@ -17,9 +17,9 @@ ht-degree: 68%
 ---
 
 
-# Dynamic Media repository restructuring in AEM 6.4{#dynamic-media-repository-restructuring-in-aem}
+# AEM 6.4{#dynamic-media-repository-restructuring-in-aem}でのDynamic Mediaリポジトリの再構築
 
-As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-deploying/repository-restructuring.md) page, customers upgrading to AEM 6.4 should use this page to assess the work effort associated with repository changes impacting the Dynamic Media Solution. 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
+AEM 6.4](/help/sites-deploying/repository-restructuring.md)の親ページ[リポジトリの再構築に関する説明に従って、AEM 6.4にアップグレードしたお客様は、このページを使用して、Dynamic Media・ソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
 
 **6.5 へのアップグレードまでにおこなう変更**
 
@@ -29,9 +29,9 @@ As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-dep
 * [Dynamic Media - YouTube クラウドサービスの設定](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#youtubecloudserviceconfiguration)
 * [その他](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md#misc)
 
-## 6.5 へのアップグレードまでにおこなう変更 {#prior-to-upgrade}
+## 6.5 へのアップグレードまでにおこなう変更  {#prior-to-upgrade}
 
-### Custom Adaptive Video encoding configurations  {#custom-adaptive-video-encoding-configurations}
+### カスタムのアダプティブビデオエンコーディング設定{#custom-adaptive-video-encoding-configurations}
 
 <table> 
  <tbody>
@@ -54,7 +54,7 @@ As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-dep
  </tbody>
 </table>
 
-### Dynamic Media (DMS7) Cloud configuration {#dynamic-media-dms-cloud-configuration}
+### Dynamic Media(DMS7)クラウド設定{#dynamic-media-dms-cloud-configuration}
 
 <table> 
  <tbody>
@@ -81,7 +81,7 @@ As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-dep
  </tbody>
 </table>
 
-### Dynamic Media (DM Hybrid) Cloud Service configuration {#cloudserviceconfiguration}
+### Dynamic Media（DMハイブリッド）Cloud Service構成{#cloudserviceconfiguration}
 
 <table> 
  <tbody>
@@ -104,7 +104,7 @@ As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-dep
  </tbody>
 </table>
 
-### Dynamic Media - YouTube Cloud Service configuration  {#youtubecloudserviceconfiguration}
+### Dynamic Media- YouTubeCloud Serviceの設定{#youtubecloudserviceconfiguration}
 
 <table> 
  <tbody>
@@ -118,7 +118,7 @@ As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-dep
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>1. YouTube からすべての動画を非公開にする<br /> 2.Create the YouTube Configuration using the new TouchUI (from <code>/conf</code>) including copying all the Channels from the old location<br /> 3. すべての動画を YouTube に公開しなおします。</p> <p>このワークフローにより、新しいYouTube URLが生成されます。 新規のタッチ UI YouTube 設定を作成する前に非公開にしないと、再作成されたチャンネルは機会があれば再度公開されるため、プロパティの下に複数の YouTube URL が表示されます。つまり、プロパティの下に不要なURLが表示されていることになります。</p> </td> 
+   <td><p>1. YouTube からすべての動画を非公開にする<br /> 2.新しいTouchUI（<code>/conf</code>から）を使用してYouTube設定を作成します。古い場所<br /> 3からのすべてのチャネルのコピーも含まれます。 すべての動画を YouTube に公開しなおします。</p> <p>このワークフローにより、新しいYouTube URLが生成されます。 新規のタッチ UI YouTube 設定を作成する前に非公開にしないと、再作成されたチャンネルは機会があれば再度公開されるため、プロパティの下に複数の YouTube URL が表示されます。つまり、プロパティの下に不要なURLが表示されていることになります。</p> </td> 
   </tr>
   <tr>
    <td><strong>備考</strong></td> 
@@ -127,7 +127,7 @@ As described on the parent [Repository Restructuring in AEM 6.4](/help/sites-dep
  </tbody>
 </table>
 
-### その他 {#misc}
+### その他  {#misc}
 
 <table> 
  <tbody>
