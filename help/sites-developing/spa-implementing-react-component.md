@@ -1,8 +1,8 @@
 ---
 title: SPA用のReactコンポーネントの実装
 seo-title: SPA用のReactコンポーネントの実装
-description: この記事では、シンプルで既存のReactコンポーネントをAEM SPA Editorと連携させる方法の例を紹介します。
-seo-description: この記事では、シンプルで既存のReactコンポーネントをAEM SPA Editorと連携させる方法の例を紹介します。
+description: この記事では、AEM SPAエディタでシンプルで既存のReactコンポーネントを適用する方法の例を紹介します。
+seo-description: この記事では、AEM SPAエディタでシンプルで既存のReactコンポーネントを適用する方法の例を紹介します。
 uuid: aebca2ea-a020-45e1-8043-f8c21154c660
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
 workflow-type: tm+mt
 source-wordcount: '587'
-ht-degree: 10%
+ht-degree: 16%
 
 ---
 
@@ -22,35 +22,35 @@ ht-degree: 10%
 
 単一ページアプリケーション（SPA）により、Web サイトのユーザーに魅力的なエクスペリエンスを提供することができます。開発者は SPA フレームワークを使用してサイトを構築したいと考え、作成者はそうして構築されたサイトのコンテンツを AEM 内でシームレスに編集したいと考えています。
 
-SPA オーサリング機能には、AEM 内で SPA をサポートするための包括的なソリューションが用意されています。この記事では、シンプルで既存のReactコンポーネントをAEM SPA Editorと連携させる方法の例を紹介します。
+SPA オーサリング機能には、AEM 内で SPA をサポートするための包括的なソリューションが用意されています。この記事では、AEM SPAエディタでシンプルで既存のReactコンポーネントを適用する方法の例を紹介します。
 
 >[!NOTE]
->シングルページアプリケーション(SPA)エディタ機能を使用するには、AEM 6.4 Service Pack 2以降が必要です。
+>シングルページアプリケーション(SPA)エディタ機能には、AEM 6.4 service pack 2以降が必要です。
 >
->SPAエディターは、SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトに推奨されるソリューションです。
+>SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
 
 ## 概要 {#introduction}
 
-AEMがSPAとSPAエディターの間で確立し、SPAとの間で構築するシンプルで軽量な契約のおかげで、既存のJavaScriptアプリケーションを取得し、AEMのSPAでの使用に適合させることは簡単なことです。
+AEMが必要とし、SPAとSPAエディタの間で確立するシンプルで軽量な契約のおかげで、AEMのSPAでの使用に合わせて既存のJavaScriptアプリケーションを使用し、適応させるのは簡単です。
 
-この記事では、We.RetailジャーナルサンプルSPAの天気コンポーネントの例を説明します。
+この記事では、Web.RetailジャーナルのサンプルSPAの天気コンポーネントの例を説明します。
 
-この記事を読む前に、AEM用のSPAアプリケーションの [構造を理解しておく必要があります](/help/sites-developing/spa-getting-started-react.md) 。
+この記事を読む前に、AEM](/help/sites-developing/spa-getting-started-react.md)のSPAアプリケーションの[構造を理解しておく必要があります。
 
 >[!CAUTION]
->このドキュメントでは、 [We.Retailジャーナルアプリがデモ目的でのみ使用されます](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) 。 どのプロジェクト作業にも使用しないでください。
+>このドキュメントでは、[We.Retailジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)は、デモ目的でのみ使用します。 どのプロジェクト作業にも使用しないでください。
 >
->AEMプロジェクトでは、 [AEM Project Archetype](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)（ReactまたはAngularを使用するSPAプロジェクトをサポートし、SPA SDKを利用する）を活用する必要があります。
+>AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
 
-## 気象コンポーネント {#the-weather-component}
+## 気象コンポーネント{#the-weather-component}
 
 気象コンポーネントは、We.Retailジャーナルアプリの左上にあります。 定義した場所の現在の天気が表示され、気象データが動的に引き出されます。
 
-### Widgetの使用 {#using-the-weather-widget}
+### Weatherウィジェットの使用{#using-the-weather-widget}
 
 ![screen_shot_2018-06-08at143224](assets/screen_shot_2018-06-08at143224.png)
 
-SPAエディタでSPAのコンテンツをオーサリングする場合、気象コンポーネントは他のAEMコンポーネントと同様に表示され、ツールバーと共に完成し、編集可能です。
+SPA EditorでSPAのコンテンツをオーサリングする場合、気象コンポーネントは他のAEMコンポーネントと同様に表示され、ツールバーと共に完成し、編集可能です。
 
 ![screen_shot_2018-06-08at143304](assets/screen_shot_2018-06-08at143304.png)
 
@@ -62,20 +62,20 @@ SPAエディタでSPAのコンテンツをオーサリングする場合、気�
 
 ![screen_shot_2018-06-08at143524](assets/screen_shot_2018-06-08at143524.png)
 
-### 気象コンポーネントの実装 {#weather-component-implementation}
+### 気象コンポーネントの実装{#weather-component-implementation}
 
-天気コンポーネントは、We.RetailジャーナルサンプルSPAアプリケーション内のコンポーネントとして機能するように適合した、 [React Open Weather](https://www.npmjs.com/package/react-open-weather)（オープンウェザーを反応させる）と呼ばれる、公開されたReactコンポーネントに基づいています。
+天気コンポーネントは、実際には、We.RetailジャーナルサンプルSPAアプリケーション内のコンポーネントとして機能するように設計された、[React Open Weather](https://www.npmjs.com/package/react-open-weather)と呼ばれる、一般に利用可能なReactコンポーネントに基づいています。
 
 以下は、React Open Weatherコンポーネントの使用に関するNPMドキュメントのスニペットです。
 
-![screen_shot_2018-06-08at144723](assets/screen_shot_2018-06-08at144723.png)![screen_shot_2018-06-08at144215](assets/screen_shot_2018-06-08at144215.png)
+![screen_shot_2018-06-08at144723](assets/screen_shot_2018-06-08at144723.png) ![screen_shot_2018-06-08at144215](assets/screen_shot_2018-06-08at144215.png)
 
-We.Retailジャーナルアプリケーションで、カスタマイズした天気コンポーネント( `Weather.js`)のコードを確認します。
+We.Retailジャーナルアプリケーションで、カスタマイズした天気コンポーネント(`Weather.js`)のコードを確認します。
 
 * **16行目**:React Open Weatherウィジェットが必要に応じて読み込まれます。
-* **46行目**:この `MapTo` 機能は、このReactコンポーネントを対応するAEMコンポーネントに関連付け、SPAエディタで編集できるようにします。
+* **46行目**:この `MapTo` 関数は、このReactコンポーネントを対応するAEMコンポーネントに関連付け、SPAエディタで編集できるようにします。
 
-* **22～29行**:が定義さ `EditConfig` れ、市区町村が設定されているかどうかをチェックし、空の場合に値を定義します。
+* **22～29行**:が定義 `EditConfig` され、市区町村が設定されているかどうかをチェックし、空の場合は値を定義します。
 
 * **31 ～ 44行**:Weatherコンポーネントは、 `Component` クラスを拡張し、React Open WeatherコンポーネントのNPM使用ドキュメントで定義されている必要なデータを提供し、コンポーネントをレンダリングします。
 
@@ -128,8 +128,8 @@ class Weather extends Component {
 MapTo('we-retail-journal/global/components/weather')(Weather, WeatherEditConfig);
 ```
 
-バックエンドコンポーネントは既に存在する必要がありますが、フロントエンド開発者は、Web.RetailジャーナルSPAのReact Open Weatherコンポーネントをほとんどコーディングせずに利用できます。
+バックエンドコンポーネントは既に存在する必要がありますが、フロントエンド開発者は、Web.RetailジャーナルSPAのReact Open Weatherコンポーネントをコード化することなく利用できます。
 
 ## 次のステップ {#next-step}
 
-AEM向けSPAの開発について詳しくは、AEM用SPAの [開発を参照してください](/help/sites-developing/spa-architecture.md)。
+AEM用SPAの開発について詳しくは、「[AEM用SPAの開発](/help/sites-developing/spa-architecture.md)」を参照してください。
