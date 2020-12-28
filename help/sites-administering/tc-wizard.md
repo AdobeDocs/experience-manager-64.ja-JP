@@ -40,7 +40,7 @@ ht-degree: 81%
 
    ![chlimage_1-50](assets/chlimage_1-50.jpeg)
 
-1. The **Next** button brings you to the **Configure** step of the wizard. ここでは、言語を追加または削除し、翻訳方法を選択できます。
+1. 「**次へ**」ボタンをクリックすると、ウィザードの&#x200B;**設定**&#x200B;の手順に進みます。 ここでは、言語を追加または削除し、翻訳方法を選択できます。
 
    ![chlimage_1-51](assets/chlimage_1-51.jpeg)
 
@@ -48,7 +48,7 @@ ht-degree: 81%
    >
    >デフォルトでは、翻訳設定は 1 つのみです。他の設定を選択するには、最初にクラウド設定を設定する必要があります。[翻訳統合フレームワークの設定](/help/sites-administering/tc-tic.md)を参照してください。
 
-1. The **Next** button brings you to the **Translate** step of the wizard. ここでは、構造のみを作成するか、新しい翻訳プロジェクトを作成するか、既存の翻訳プロジェクトに追加するかを選択できます。
+1. 「**次へ**」ボタンをクリックすると、ウィザードの&#x200B;**翻訳**&#x200B;手順に進みます。 ここでは、構造のみを作成するか、新しい翻訳プロジェクトを作成するか、既存の翻訳プロジェクトに追加するかを選択できます。
 
    >[!NOTE]
    >
