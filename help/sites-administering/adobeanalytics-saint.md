@@ -17,5 +17,5 @@ ht-degree: 18%
 ---
 
 
-# リダイレクト(SAINTエクスポータ){#redirect-saint-exporter}
+# redirect (SAINTエクスポータ){#redirect-saint-exporter}
 
