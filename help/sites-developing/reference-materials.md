@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: de04a6c205e4379c7f8a9ab5574985259d6541c3
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 73%
+ht-degree: 84%
 
 ---
 
@@ -35,14 +35,14 @@ AEM は、いくつかのアプリケーション開発用 API を提供しま�
 
 * [UI テストフレームワーク JavaScript API リファレンス](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html)
 
-* [Editor Core JavaScript API リファレンス](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)
+* [Editor Core JavaScript API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)
 
 AEM シングルページアプリケーション（SPA）エディター SDK フレームワーク JavaScript API リファレンス：
 
 * [コンポーネントのマッピング](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [ページモデルマネージャー](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
 * [React 編集可能コンポーネント](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
-* [編集可能なAngularコンポーネント](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
+* [編集可能な Angular コンポーネント](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
 AEM 配信およびコンテンツ管理 API
 
