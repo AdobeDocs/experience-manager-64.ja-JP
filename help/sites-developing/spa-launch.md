@@ -1,8 +1,8 @@
 ---
-title: SPAとAdobe Experience Platform Launchの統合
-seo-title: SPAとAdobe Experience Platform Launchの統合
-description: Adobe Experience Platform Launchは、SPA内にAnalytics、ターゲットおよびAudience Managerを実装するための推奨される方法です。
-seo-description: Adobe Experience Platform Launchは、SPA内にAnalytics、ターゲットおよびAudience Managerを実装するための推奨される方法です。
+title: SPA と Adobe Experience Platform Launch の統合
+seo-title: SPA と Adobe Experience Platform Launch の統合
+description: Adobe Experience Platform Launch は、SPA 内に Analytics、ターゲットおよび Audience Manager を実装する方法として推奨されます。
+seo-description: Adobe Experience Platform Launch は、SPA 内に Analytics、ターゲットおよび Audience Manager を実装する方法として推奨されます。
 uuid: 8535a911-2863-4e3b-a3fb-414a0e7e9a4e
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,27 +13,27 @@ translation-type: tm+mt
 source-git-commit: a427f9e9020fba4d68f18d16e7373471429d894f
 workflow-type: tm+mt
 source-wordcount: '224'
-ht-degree: 0%
+ht-degree: 83%
 
 ---
 
 
-# SPAと統合の開始{#spa-and-launch-integration}
+# SPAと統合の起動{#spa-and-launch-integration}
 
-Adobe Experience Platform Launchは、単一ページアプリ(SPA)内にAnalytics、ターゲットおよびAudience Managerを実装する方法として推奨されます。
+Adobe Experience Platform Launch は、Analytics、ターゲットおよび Audience Manager を単一ページアプリケーション（SPA）内に実装する方法として推奨されます。
 
 >[!NOTE]
 >
->シングルページアプリケーション(SPA)エディタ機能を使用するには、AEM 6.4 Service Pack 2以降が必要です。
+>シングルページアプリケーション(SPA)エディタ機能には、AEM 6.4 service pack 2以降が必要です。
 >
->SPAエディターは、SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトに推奨されるソリューションです。
+>SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
 
 ## チュートリアル {#tutorial}
 
-SPAとAdobe Experience Platform Launchの統合方法を理解するには、 [このナレッジベースの記事とチュートリアル](https://helpx.adobe.com/experience-manager/kt/integration/using/launch-reference-architecture-SPA-tutorial-implement.html)を参照してください。この記事では、AngularまたはReactで構築したExperience Cloudを導入するだけでなく、起動の設定手順も説明しています。
+SPA と Adobe Experience Platform Launch の統合方法を理解するには、[このナレッジベースの記事とチュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/integration/using/launch-reference-architecture-SPA-tutorial-implement.html)を参照してください。この記事では、Angular または React で構築した Experience Cloud を実装するだけでなく、Launch の設定手順も説明しています。
 
 >[!NOTE]
 >
->参照KBは、AEM SPAエディタを使用しないSPAとのAdobe Experience Platform Launch統合を可能にするために作成されました。 また、これらの方法を使用すると、SPAエディターを使用するように構築されたSPAと、Adobe Experience Platform Launchの統合が共存できます。
+>AEM SPA エディターを利用しない SPA と Adobe Experience Platform Launch の統合を有効にするために、参照用 KB が作成されました。また、これらの方法を使用すると、Adobe Experience Platform Launch の統合が、SPA エディターを使用するように構築された SPA と共存できます。
 >
->JavaScript SPAライブラリと共にReduxを使用する方法については、まだ完全には確認されていません。 Reduxのサポートは、SPA Editorの今後のリリースで予定されています。
+>JavaScript SPA ライブラリと共に Redux を使用する方法については、まだ完全には確認されていません。Redux のサポートは、SPA エディターの今後のリリースで提供される予定です。
