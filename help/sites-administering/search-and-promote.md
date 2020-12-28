@@ -24,7 +24,7 @@ Web サイトから Adobe Search&amp;Promote サービスを呼び出すには�
 
 1. クラウドの URL を指定します。
 1. Search&amp;Promote サービスへの接続を設定します。
-1. Add Search&amp;Promote components to [!UICONTROL Sidekick].
+1. &lt;a0追加/>サイドキック]へのSearch&amp;Promoteコンポーネント。[!UICONTROL 
 1. コンポーネントを使用して、コンテンツを作成します（[Web ページへの Search&amp;Promote 機能の追加](/help/sites-authoring/search-and-promote.md)を参照）。
 1. バナーをページに追加します。バナー画像は、Search&amp;Promote データの影響を受けます。
 1. Search&amp;Promote サービスが使用するサイトマップを生成します。
@@ -42,14 +42,14 @@ Web サイトから Adobe Search&amp;Promote サービスを呼び出すには�
 
 ## Search&amp;Promote サービス URL の変更 {#changing-the-search-promote-service-url}
 
-The default URL that is configured for the Search&amp;Promote service is `https://searchandpromote.omniture.com/px/`. 別のサービスを使用するには、OSGi コンソールを使用して別の URL を指定します。
+Search&amp;Promoteサービスに設定されるデフォルトのURLは`https://searchandpromote.omniture.com/px/`です。 別のサービスを使用するには、OSGi コンソールを使用して別の URL を指定します。
 
 **Search&amp;PromoteサービスのURLを変更するには**:
 
-1. Open the [!UICONTROL OSGi] console and tap the **[!UICONTROL Configuration]** tab. （[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）。
+1. [!UICONTROL OSGi]コンソールを開き、**[!UICONTROL 「Configuration]**」タブをタップします。 （[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）。
 
-1. Click the **[!UICONTROL Day CQ Search&amp;Promote Configuration]** item.
-1. 「 **[!UICONTROL リモートサーバーURI]** 」テキストフィールドにURLを入力し、「 **[!UICONTROL 保存]**」をタップします。
+1. 「**[!UICONTROL Day CQSearch&amp;Promote設定]**」項目をクリックします。
+1. 「**[!UICONTROL リモートサーバーURI]**」テキストフィールドにURLを入力し、「**[!UICONTROL 保存]**」をタップします。
 
 ## Search&amp;Promote への接続の設定 {#configuring-the-connection-to-search-promote}
 
@@ -57,27 +57,27 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
 
 **Search&amp;Promoteへの接続を設定するには**:
 
-1. **[!UICONTROL ツール]** アイコン **[!UICONTROL /]**&#x200B;導入 **[!UICONTROL から、]** Cloud Servicesを選択します。
+1. **[!UICONTROL ツール]**&#x200B;アイコン/**[!UICONTROL デプロイメント]**&#x200B;から、**[!UICONTROL Cloud Services]**&#x200B;を選択します。
 
    これにより、クラウドサービスダッシュボードが表示されます。ローカルマシンの場合、ダッシュボードの URI は、次のようになります。
 
    [http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)
 
-1. [!UICONTROL Cloud Services] ページで、 **[!UICONTROL AdobeSearch&amp;Promote]** リンクまたは **[!UICONTROL Search&amp;Promote]** アイコンをタップします。
+1. [!UICONTROL Cloud Services]ページで、**[!UICONTROL AdobeSearch&amp;Promote]**&#x200B;リンクまたは&#x200B;**[!UICONTROL Search&amp;Promote]**&#x200B;アイコンをタップします。
 
-1. If this is the first time you are configuring Adobe Search&amp;Promote, tap **[!UICONTROL Configure Now]** to open the [!UICONTROL Create Configuration] panel.
+1. 初めてAdobeSearch&amp;Promoteを設定する場合は、「**[!UICONTROL 今すぐ設定]**」をタップして[!UICONTROL 設定を作成]パネルを開きます。
 
-   If you would like to learn more about Search&amp;Promote click **[!UICONTROL Learn more]** instead.
+   Search&amp;Promoteの詳細を表示するには、[**[!UICONTROL 詳細情報]**]をクリックしてください。
 
    ![chlimage_1-409](assets/chlimage_1-409.png)
 
-1. Enter a **[!UICONTROL Title]** that is recognizable to page authors, and enter a unique **[!UICONTROL Name]**, then tap **[!UICONTROL Create]**.
+1. ページ作成者が認識できる&#x200B;**[!UICONTROL タイトル]**&#x200B;を入力し、一意の&#x200B;**[!UICONTROL 名前]**&#x200B;を入力してから、**[!UICONTROL 作成]**&#x200B;をタップします。
 
    また、新しく作成した設定が、**[!UICONTROL クラウドサービスダッシュボード]**&#x200B;の Adobe Search&amp;Promote リスト項目の「**[!UICONTROL 利用可能な設定]**」の下に表示されます。
 
    ![chlimage_1-410](assets/chlimage_1-410.png)
 
-1. 「コンポーネントを [!UICONTROL 編集] 」ダイアログボックスで、フィールドに次を追加します。
+1. [!UICONTROL コンポーネントを編集]ダイアログボックスで、以下をフィールドに追加します。
 
    * **[!UICONTROL メンバー ID]**
    * **[!UICONTROL アカウント番号]**
@@ -96,11 +96,11 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
    >
    >[https://searchandpromote.omniture.com/px/home/?sp_id=XXXXXXXX-spYYYYYYYY](https://searchandpromote.omniture.com/px/home/?sp_id=XXXXXXXX-spYYYYYYYY)
    >
-   >ここで、 **XXXXXXXXX****[!UICONTROL は]** メンバIDに対応し、 **[!UICONTROL spYYYYYYYYYY]** はアカウント番号に対応します。
+   >ここで&#x200B;**XXXXXXXX**&#x200B;は&#x200B;**[!UICONTROL メンバーid]**&#x200B;に対応し、**[!UICONTROL spYYYYYYY]**&#x200B;はアカウント番号に対応します。
 
-1. Tap **[!UICONTROL Connect To Search&amp;Promote]**.
+1. 「**[!UICONTROL Search&amp;Promoteに接続]**」をタップします。
 
-   When the connection success message appears, tap **[!UICONTROL OK]**.
+   接続の成功メッセージが表示されたら、「**[!UICONTROL OK]**」をタップします。
 
    （接続後、ボタンのテキストが「**[!UICONTROL Search&amp;Promote に再接続]**」に変更されます。）
 
@@ -112,23 +112,23 @@ Search&amp;Promoteアカウントがアジアまたはヨーロッパにある�
 
 **データセンターを設定するには**:
 
-1. Navigate to the Web console at `http://localhost:4502/system/console/configMgr/com.day.cq.searchpromote.impl.SearchPromoteServiceImpl`
+1. `http://localhost:4502/system/console/configMgr/com.day.cq.searchpromote.impl.SearchPromoteServiceImpl`のWebコンソールに移動します。
 
    ![chlimage_1-411](assets/chlimage_1-411.png)
 
 1. サーバーの場所に応じて、URI を次のいずれかに変更します。
 
-   * North America: [https://center.atomz.com/px/](https://center.atomz.com/px/)
-   * EMEA: [https://center.lon5.atomz.com/px/](https://center.lon5.atomz.com/px/)
-   * APAC: [https://center.sin2.atomz.com/px/](https://center.sin2.atomz.com/px/)
+   * 北米：[https://center.atomz.com/px/](https://center.atomz.com/px/)
+   * EMEA:[https://center.lon5.atomz.com/px/](https://center.lon5.atomz.com/px/)
+   * APAC:[https://center.sin2.atomz.com/px/](https://center.sin2.atomz.com/px/)
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 
 ## Search&amp;Promote コンポーネントのサイドキックへの追加 {#adding-search-promote-components-to-sidekick}
 
-[!UICONTROL デザインモードで、] 各コンポーネントを編集し **[!UICONTROL 、]** サイドキックのSearch&amp;Promoteコンポーネントを許可します 。 （詳しくは、[コンポーネント](/help/sites-developing/components.md)のドキュメントを参照）。
+[!UICONTROL デザイン]モードで、**[!UICONTROL par]**&#x200B;コンポーネントを編集し、[!UICONTROL サイドキック]のSearch&amp;Promoteコンポーネントを許可します。 （詳しくは、[コンポーネント](/help/sites-developing/components.md)のドキュメントを参照）。
 
-For information about using the components, see [Adding Search&amp;Promote features to a Web Page](/help/sites-authoring/search-and-promote.md).
+コンポーネントの使用について詳しくは、[WebページへのSearch&amp;Promote機能の追加](/help/sites-authoring/search-and-promote.md)を参照してください。
 
 ## ページで使用する Search&amp;Promote サービスの指定 {#specifying-the-search-promote-service-that-your-pages-use}
 
@@ -138,7 +138,7 @@ For information about using the components, see [Adding Search&amp;Promote featu
 
 >[!NOTE]
 >
->サービス接続は、既に設定されている必要がありますSee [Configure the connection to Search&amp;Promote](#configuring-the-connection-to-search-promote).
+>サービス接続は、既に設定されている必要があります[Search&amp;Promoteへの接続の設定](#configuring-the-connection-to-search-promote)を参照してください。
 
 1. **[!UICONTROL ページプロパティ]**&#x200B;ダイアログボックスを開きます。例えば、**[!UICONTROL Web サイト]**&#x200B;ページで、ページを右クリックし、「**[!UICONTROL プロパティ]**」をクリックします。
 
@@ -148,17 +148,17 @@ For information about using the components, see [Adding Search&amp;Promote featu
 
    ![sandinheritpadlock](assets/sandpinheritpadlock.png)
 
-1. Click **[!UICONTROL Add Service]**, select **[!UICONTROL Adobe Search&amp;Promote]**, then click **[!UICONTROL OK]**.
+1. 「**[!UICONTROL 追加サービス]**」をクリックし、「**[!UICONTROL AdobeSearch&amp;Promote]**」を選択して、「**[!UICONTROL OK]**」をクリックします。
 
-1. Select the connection configuration for your Search&amp;Promote account, then click **[!UICONTROL OK]**.
+1. Search&amp;Promoteアカウントの接続設定を選択し、「**[!UICONTROL OK]**」をクリックします。
 
 ## 製品フィード {#product-feed}
 
 Search&amp;Promote統合により、次のことが可能になります。
 
-* Use the [!UICONTROL eCommerce] API, independently of the underlying repository structure and commerce platform.
-* Leverage the [!UICONTROL Index Connector] feature of Search&amp;Promote to provide a product feed in XML format.
-* Leverage the [!UICONTROL Remote Control] feature of Search&amp;Promote to perform on-demand or scheduled requests of the product feed.
+* [!UICONTROL eCommerce] APIを使用します。基盤となるリポジトリ構造とコマースプラットフォームとは別に使用します。
+* Search&amp;Promoteの[!UICONTROL インデックスコネクタ]機能を利用して、XML形式の製品フィードを提供します。
+* Search&amp;Promoteの[!UICONTROL リモートコントロール]機能を利用して、製品フィードに対するオンデマンドまたはスケジュール済みの要求を実行します。
 * 様々なSearch&amp;Promoteアカウントに対するフィードの生成（クラウドサービスの設定として設定）
 
-For more information, see [Product Feed](/help/sites-administering/product-feed.md).
+詳しくは、[製品フィード](/help/sites-administering/product-feed.md)を参照してください。
