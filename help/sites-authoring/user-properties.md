@@ -22,13 +22,13 @@ ht-degree: 95%
 
 AEM では、アカウントおよびオーサー環境の特定項目を設定できます。
 
-[ヘッダーの](/help/sites-authoring/user-properties.md#user-settings) User [(](/help/sites-authoring/basic-handling.md#the-header) ユーザー [)オプションと、関連する](#my-preferences) My Preferences（マイプリファレンス）ダイアログを使用して、ユーザーオプションを変更できます。
+[ヘッダー](/help/sites-authoring/basic-handling.md#the-header)の[ユーザー](/help/sites-authoring/user-properties.md#user-settings)オプションと、関連する[環境設定](#my-preferences)ダイアログを使用して、ユーザーオプションを変更できます。
 
 ## ユーザー設定 {#user-settings}
 
 **ユーザー**&#x200B;設定ダイアログでは、次の機能にアクセスできます。
 
-* 次のユーザーとして動作
+* 次のユーザーとして操作
 
    * [次のユーザーとして動作](/help/sites-administering/security.md#impersonating-another-user)機能では、ユーザーは別のユーザーに成り代わって作業をおこなうことができます。
 
