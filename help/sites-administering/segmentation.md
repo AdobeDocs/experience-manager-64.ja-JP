@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 workflow-type: tm+mt
 source-wordcount: '1459'
-ht-degree: 74%
+ht-degree: 96%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 74%
 
 サイト訪問者についてこれまでに収集した情報と、達成する目標に応じて、ターゲットコンテンツに必要なセグメントと戦略を定義する必要があります。
 
-このようなセグメントを使用して、訪問者に特定のターゲットコンテンツを提供します。This content is maintained in the [Personalization](/help/sites-authoring/personalization.md) section of the website. ここで定義された[アクティビティ](/help/sites-authoring/activitylib.md)は、任意のページに追加できます。また、専用のコンテンツを適用できる訪問者セグメントを定義できます。
+このようなセグメントを使用して、訪問者に特定のターゲットコンテンツを提供します。このコンテンツは、Webサイトの[パーソナライゼーション](/help/sites-authoring/personalization.md)セクションに保持されます。 ここで定義された[アクティビティ](/help/sites-authoring/activitylib.md)は、任意のページに追加できます。また、専用のコンテンツを適用できる訪問者セグメントを定義できます。
 
 AEM では、ユーザーエクスペリエンスを簡単にパーソナライズできます。また、セグメント定義の結果を検証することもできます。
 
@@ -43,13 +43,13 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
 
 ## セグメントエディター {#segment-editor}
 
-The **Segment Editor** allows you to easily modify a segment. セグメントを編集するには、[セグメントリスト](/help/sites-administering/segmentation.md#accessing-segments)からセグメントを選択し、「**編集**」ボタンをクリックします。
+**セグメントエディター**&#x200B;を使用すると、セグメントを簡単に変更できます。セグメントを編集するには、[セグメントリスト](/help/sites-administering/segmentation.md#accessing-segments)からセグメントを選択し、「**編集**」ボタンをクリックします。
 
 ![segmenter](assets/segmenteditor.png)
 
-Using the components browser you can add **AND** and **OR** containers to define the segment logic, then add additional components to compare properties and values or reference scripts and other segments to define the selection criteria (see [Creating a New Segment](#creating-a-new-segment)) to define the exact scenario for selecting the segment.
+コンポーネントブラウザーを使用すると、**AND** および **OR** コンテナを追加してセグメントロジックを定義してから、別のコンポーネントを追加してプロパティや値を比較できます。また、スクリプトやその他のセグメントを参照して選択条件を定義する（[新しいセグメントの作成](#creating-a-new-segment)を参照）ことによって、セグメントの選択シナリオを正確に定義できます。
 
-ステートメント全体が true と評価されると、セグメントは解決されます。In the event of multiple segments being applicable, then the **Boost** factor is also used. [ブースト率の詳細については、「新しいセグメントの](#creating-a-new-segment) 作成 [」を参照してください。](/help/sites-administering/campaign-segmentation.md#boost-factor)
+ステートメント全体が true と評価されると、セグメントは解決されます。複数のセグメントを適用可能な場合、**ブースト**&#x200B;係数も使用されます。[ブースト係数の詳細については、[新しいセグメントの作成](#creating-a-new-segment)を参照してください。](/help/sites-administering/campaign-segmentation.md#boost-factor)
 
 >[!CAUTION]
 >
@@ -57,17 +57,17 @@ Using the components browser you can add **AND** and **OR** containers to define
 
 ### コンテナ {#containers}
 
-次のコンテナは標準で用意されており、比較や参照をグループ化してブール評価をおこなうために使用できます。これらはコンポーネントブラウザーからエディターにドラッグできます。See the following section [Using AND and OR Containers](/help/sites-administering/segmentation.md#using-and-and-or-containers) for more information.
+次のコンテナは標準で用意されており、比較や参照をグループ化してブール評価をおこなうために使用できます。これらはコンポーネントブラウザーからエディターにドラッグできます。詳しくは、「[AND コンテナと OR コンテナの使用](/help/sites-administering/segmentation.md#using-and-and-or-containers)」の節を参照してください。
 
 <table> 
  <tbody> 
   <tr> 
    <td>コンテナ AND<br /> </td> 
-   <td>The boolean AND operator<br /> </td> 
+   <td>AND ブール演算値<br /> </td> 
   </tr> 
   <tr> 
    <td>コンテナ OR<br /> </td> 
-   <td>ブールOR演算子</td> 
+   <td>OR ブール演算値</td> 
   </tr> 
  </tbody> 
 </table>
@@ -79,37 +79,37 @@ Using the components browser you can add **AND** and **OR** containers to define
 <table> 
  <tbody> 
   <tr> 
-   <td>プロパティ — 値<br /> </td> 
+   <td>プロパティ - 値<br /> </td> 
    <td>ストアのプロパティと定義済みの値を比較<br /> </td> 
   </tr> 
   <tr> 
-   <td>プロパティ — プロパティ</td> 
-   <td>ストアの1つのプロパティと別のプロパティを比較<br /> </td> 
+   <td>プロパティ - プロパティ</td> 
+   <td>ストアの 1 つのプロパティと別のプロパティを比較<br /> </td> 
   </tr> 
   <tr> 
-   <td>プロパティセグメントの参照</td> 
-   <td>店舗のプロパティを、参照されている別のセグメントと比較します<br /> </td> 
+   <td>プロパティ - セグメントの参照</td> 
+   <td>ストアのプロパティを参照先の別のセグメントと比較<br /> </td> 
   </tr> 
   <tr> 
-   <td>プロパティスクリプトの参照</td> 
+   <td>プロパティ - スクリプトの参照</td> 
    <td>ストアのプロパティとスクリプトの結果を比較<br /> </td> 
   </tr> 
   <tr> 
-   <td>セグメントリファレンススクリプトリファレンス</td> 
-   <td>参照セグメントとスクリプトの結果を比較<br /> </td> 
+   <td>セグメントリファレンス - スクリプトリファレンス</td> 
+   <td>参照先セグメントとスクリプトの結果を比較<br /> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->値を比較する際に、比較のデータタイプが設定されていない場合（つまり自動検出に設定されている場合）、ContextHubのセグメント化エンジンは、値をJavaScriptと同様に比較します。 値が想定されたタイプにキャストされないので、誤解を招く結果となることがあります。次に例を示します。
+>値の比較時に比較のデータタイプが設定されていない場合（つまり、自動検出に設定されている場合）、ContextHub のセグメント化エンジンでは、javascript と同じように値が比較されます。値が想定されたタイプにキャストされないので、誤解を招く結果となることがあります。次に例を示します。
 >
 >`null < 30 // will return true`
 >
->Therefore when [creating a segment](/help/sites-administering/segmentation.md#creating-a-new-segment), you should select a **data type** whenever the types of compared values are known. 次に例を示します。
+>したがって、[セグメントの作成](/help/sites-administering/segmentation.md#creating-a-new-segment)時に比較対象の値のタイプがわかる場合は、常に&#x200B;**データタイプ**&#x200B;を選択してください。次に例を示します。
 >
->When comparing the property `profile/age`, you already know that the compared type will be **number**, so even if `profile/age` is not set, a comparison `profile/age` less-than 30 will return **false**, as you would expect.
+>`profile/age` プロパティを比較する場合は、比較対象のタイプが&#x200B;**数値**&#x200B;であることが既にわかっているので、`profile/age` が設定されていなくても、`profile/age` が 30 より小さいという比較では、想定どおりに **false** が返されます。
 
 ### 参照 {#references}
 
@@ -123,14 +123,14 @@ Using the components browser you can add **AND** and **OR** containers to define
   </tr> 
   <tr> 
    <td>スクリプト参照</td> 
-   <td>参照先のスクリプトを評価します。 詳しくは、次の「スクリプト参照の <a href="/help/sites-administering/segmentation.md#using-script-references">使用</a> 」の節を参照してください。</td> 
+   <td>参照先セグメントをします。詳しくは、次の「<a href="/help/sites-administering/segmentation.md#using-script-references">スクリプト参照の使用</a>」の節を参照してください。</td> 
   </tr> 
  </tbody> 
 </table>
 
 ## 新しいセグメントの作成 {#creating-a-new-segment}
 
-新しいセグメントを定義するには：
+新しいセグメントを定義するには、次の手順に従います。
 
 1. [セグメントへのアクセス](/help/sites-administering/segmentation.md#accessing-segments)後、「作成」ボタンをクリックまたはタップし、「**ContextHub セグメントを作成**」を選択します。
 
@@ -140,7 +140,7 @@ Using the components browser you can add **AND** and **OR** containers to define
 
    ![chlimage_1-312](assets/chlimage_1-312.png)
 
-   各セグメントには、重み付け係数として使用されるブーストパラメータがあります。 複数のセグメントが有効である場合、数値が小さいセグメントよりも、数値が大きいセグメントのほうが優先して選択されます。
+   各セグメントには、重み付け係数として使用されるブーストパラメーターがあります。複数のセグメントが有効である場合、数値が小さいセグメントよりも、数値が大きいセグメントのほうが優先して選択されます。
 
    * 最小値：`0`
    * 最大値：`1000000`
@@ -155,7 +155,7 @@ Using the components browser you can add **AND** and **OR** containers to define
 1. 「**OK**」をクリックして定義を保存します。
 1. 必要に応じてその他のコンポーネントを追加します。AND 比較および OR 比較のコンテナコンポーネントを使用して、ブール式を作成できます（後述の [AND コンテナと OR コンテナの使用](/help/sites-administering/segmentation.md#using-and-and-or-containers)を参照）。セグメントエディターでは、不要になったコンポーネントを削除したり、コンポーネントをステートメント内の別の場所へドラッグしたりすることができます。
 
-### AND コンテナと OR コンテナの使用 {#using-and-and-or-containers}
+### AND コンテナと OR コンテナの使用  {#using-and-and-or-containers}
 
 AND および OR コンテナコンポーネントを使用すると、AEM で複雑なセグメントを作成できます。この際、次の基本事項に留意してください。
 
@@ -178,9 +178,9 @@ AND および OR コンテナコンポーネントを使用すると、AEM で�
 
 スクリプト参照コンポーネントを使用すると、セグメントプロパティの評価を外部スクリプトに委任できます。適切に設定したスクリプトは、セグメント条件の他のコンポーネントと同じように使用できます。
 
-#### 参照するスクリプトの定義 {#defining-a-script-to-reference}
+#### 参照するスクリプトの定義  {#defining-a-script-to-reference}
 
-1. Add file to `contexthub.segment-engine.scripts` clientlib.
+1. `contexthub.segment-engine.scripts` クライアントライブラリにファイルを追加します。
 1. 値を返す関数を実装します。次に例を示します。
 
    ```
@@ -212,9 +212,9 @@ AND および OR コンテナコンポーネントを使用すると、AEM で�
    })();
    ```
 
-1. Register the script with `ContextHub.SegmentEngine.ScriptManager.register`.
+1. スクリプトを `ContextHub.SegmentEngine.ScriptManager.register` に登録します。
 
-その他のプロパティに依存するスクリプトでは、`this.dependOn()` () を呼び出す必要があります。For example if the script depends on `profile/age`:
+その他のプロパティに依存するスクリプトでは、`this.dependOn()` を呼び出す必要があります。例えば、スクリプトが `profile/age` に依存する場合は次のようになります。
 
 ```
 this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
@@ -226,16 +226,16 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 1. **スクリプト参照**&#x200B;コンポーネントをセグメントの目的の場所に追加します。
 1. **スクリプト参照**&#x200B;コンポーネントの編集ダイアログを開きます。スクリプトが[適切に設定](/help/sites-administering/segmentation.md#defining-a-script-to-reference)されていれば、「**スクリプト名**」ドロップダウンに表示されます。
 
-## セグメントの適用のテスト {#testing-the-application-of-a-segment}
+## セグメントの適用のテスト  {#testing-the-application-of-a-segment}
 
-セグメントを定義したら、**[ContextHub](/help/sites-authoring/ch-previewing.md)**を使用して、考えられる結果についてテストすることができます。
+セグメントを定義したら、**[ContextHub](/help/sites-authoring/ch-previewing.md)** を使用して、考えられる結果についてテストすることができます。
 
 1. ページのプレビュー
 1. ContextHub アイコンをクリックして ContextHub ツールバーを表示します。
 1. 作成したセグメントと一致するペルソナを選択します。
 1. ContextHub によって、選択したペルソナに適用できるセグメントが解決されます。
 
-例えば、この例のプライムエイジグループに属するユーザーを識別するための単純なセグメント定義は、ユーザーの年齢と性別に基づいています。これらの条件に一致する特定の人物を読み込むと、セグメントが正常に解決されたかどうかが表示されます。
+例えば、この例のプライムエイジグループに属するユーザーを識別するための単純なセグメント定義は、ユーザーの年齢と性別に基づいています。これらの条件に一致する特定のペルソナを読み込むと、次のようにセグメントが正常に解決されたかどうかがわかります。
 
 ![screen_shot_2012-02-02at105926am](assets/screen_shot_2012-02-02at105926am.png)
 
@@ -265,4 +265,4 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 ## セグメントの使用 {#using-your-segment}
 
-これらのセグメントを使用して、特定のターゲットオーディエンスに向けられた実際のコンテンツを制御することができます。See [Managing Audiences](/help/sites-authoring/managing-audiences.md) for more information about audiences and segments and [Authoring Targeted Content](/help/sites-authoring/content-targeting-touch.md) about using audiences and segments to target content.
+これらのセグメントを使用して、特定のターゲットオーディエンスに向けられた実際のコンテンツを制御することができます。オーディエンスおよびセグメントについて詳しくは、[オーディエンスの管理](/help/sites-authoring/managing-audiences.md)を参照してください。オーディエンスおよびセグメントを使用したコンテンツのターゲティングについては、[ターゲットコンテンツのオーサリング](/help/sites-authoring/content-targeting-touch.md)を参照してください。
