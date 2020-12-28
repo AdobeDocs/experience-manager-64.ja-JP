@@ -24,7 +24,7 @@ ht-degree: 72%
 
 ![screen_shot_2018-03-23at11956](assets/screen_shot_2018-03-23at111956.png)
 
-Every console that has a Classic UI version in `/libs/cq/core/content/nav` can be re-enabled individually so that the **Classic UI** option once again pops up over the console icon when it is moused over.
+`/libs/cq/core/content/nav`にクラシックUIバージョンがある各コンソールを個別に有効にし直すと、コンソールアイコンにマウスを移動したときに、**クラシックUI**&#x200B;オプションが再びポップアップされます。
 
 以下の例では、サイトコンソールのクラシック UI を再有効化しています。
 
@@ -40,7 +40,7 @@ Every console that has a Classic UI version in `/libs/cq/core/content/nav` can b
 
    `/libs/cq/core/content/nav/sites`
 
-1. Create an overlay using the **Overlay Node** option; for example:
+1. **ノードをオーバーレイ**&#x200B;オプションを使用してオーバーレイを作成します。例：
 
    * **パス**: `/apps/cq/core/content/nav/sites`
    * **オーバーレイの場所**: `/apps/`
