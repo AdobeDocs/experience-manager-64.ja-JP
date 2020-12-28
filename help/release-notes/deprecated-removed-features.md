@@ -37,7 +37,7 @@ ht-degree: 45%
 | ポータルDirector | ポータル・Directorは、サード・パーティ・サーバのポートレットを介してAEMコンテンツをホストする機能のセットです。 Adobeは、以下に示す場所で、ポータルDirector機能をさらに強化する予定はありません。 AEM 6.4にはポータルDirectorが含まれており、お客様は以前のリリースからアップグレードした場合もそのまま使用できます。 Portal Directは、非推奨の間も完全にサポートされます。 <ul><li>/libs/portal/director</li></ul> | Adobeは、交換を行う予定はありません。 |
 | ポートレットコンポーネント | /foundation/components/portletのポートレットコンポーネントを使用すると、AEMでJSR Portletsをコンポーネントとしてホストできます。 Adobeは、Portlet Component機能をさらに拡張する予定はありません。 AEM 6.4にはPortlet Componentが含まれており、お客様は以前のリリースからアップグレードした場合でも、これをそのまま使用できます。 Portlet Componentは、非推奨の間も完全にサポートされます。 | Adobeは、交換を行う予定はありません。 |
 | フォーム | Adobe Central 製品がサポートされなくなったので、Adobe Central Migration Bridge サービスのサポートは廃止されました。 | 代替機能はありません |
-| フォーム | クエリおよびOperationOptionsでのJSONObjectの使用を廃止しました。 以下のAPIは廃止されました。 <ul><li>`setArguments(JSONObject arguments)`</li><li> `JSONObject getArguments()`</li><li>`OperationOptions(String operationId, JSONObject arguments)`</li><li>`JSONObject getArguments()`</li><li> `void setArguments(JSONObject arguments)`</li></ul> | APIの使用 `IValueMap` |
+| フォーム | クエリおよびOperationOptionsでのJSONObjectの使用を廃止しました。 以下のAPIは廃止されました。 <ul><li>`setArguments(JSONObject arguments)`</li><li> `JSONObject getArguments()`</li><li>`OperationOptions(String operationId, JSONObject arguments)`</li><li>`JSONObject getArguments()`</li><li> `void setArguments(JSONObject arguments)`</li></ul> | `IValueMap` APIを使用する |
 | フォーム | Central Migration Bridgeサービスが廃止されました。 | 置き換えは提供されません。 |
 | Assets | アセットのオフロードは、AEM 6.4以降で非推奨となりました。 |  |
 | 開発者向け | Lodash/underscoreクライアントライブラリ。 Adobeは、配布版(Quickstart)の一部として出荷されるLodash/underscoreクライアントライブラリの保守と更新を今後行う予定はありません | Adobeでは、コードにLodash/underscoreを必要とする場合でも、プロジェクトのコードベースに追加することをお勧めします。 |
@@ -147,11 +147,12 @@ ht-degree: 45%
 
 ## 削除された機能 {#removed-features}
 
-次の表に、AEM 6.4から削除されたリスト機能と機能を示します。以前のリリースでは、これらの機能は非推奨としてマークされていました。
+次の表に、AEM 6.4から削除されたリスト機能と機能を示します。以前のリリースでは、これらの機能が
+非推奨です。
 
 | 領域 | 機能 | 代替手段 |
 |---|---|---|
-| Analytics の Activity Map | AEM に組み込まれている Activity Map のバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。The [ActivityMap plug-in provided by Adobe Analytics](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html) should now be used. |
+| Analytics の Activity Map | AEM に組み込まれている Activity Map のバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。現在は、Adobe Analytics](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html)が提供する[ActivityMapプラグインを使用する必要があります。 |
 | コンポーネント —Forms | フォームキャプチャ（foundation/components/form/captcha） | Google の ReCaptcha コンポーネントを代わりに使用します。 |
 | コンポーネント | Slideshow（foundation/components/slideshow） | 代替機能はありません。 |
 | コンポーネント | Flash（foundation/components/flash） | 代替機能はありません。 |
@@ -178,4 +179,4 @@ ht-degree: 45%
 | 領域 | 機能 | お知らせ |
 |---|---|---|
 | ブラウザーのサポート | Microsoft Internet Explorer | AEM 6.4 は、Microsoft Internet Explorer 11 をサポートする最後のリリースです。 |
-| Foundation | UI フレームワーク | Adobeでは、2019年にCoral UI 2コンポーネントが非推奨となります。 AEM 6.4は、完全にCoral UI 3に基づいています(AEM 6.2で導入)。 Adobeでは、Coral 2を使用してカスタムUIを構築した顧客およびパートナーに、Coral 3にリファクタリングすることを推奨しています。 Adobe offers a tool to convert Coral 2 dialogs to Coral 3 - [Read more](/help/sites-developing/dialog-conversion.md). |
+| Foundation | UI フレームワーク | Adobeでは、2019年にCoral UI 2コンポーネントが非推奨となります。 AEM 6.4は、完全にCoral UI 3に基づいています(AEM 6.2で導入)。 Adobeでは、Coral 2を使用してカスタムUIを構築した顧客およびパートナーに、Coral 3にリファクタリングすることを推奨しています。 Adobeオファーは、Coral 2のダイアログをCoral 3に変換するツールです — [詳細を読む](/help/sites-developing/dialog-conversion.md)。 |
