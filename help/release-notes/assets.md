@@ -24,20 +24,20 @@ AEM 6.4 Assetsで行われた主な機能、主な特長および機能強化は
 
 ## Adobe Asset Link {#adobe-asset-link}
 
-Creative Cloud エンタープライズ版の Adobe Asset Link を使用すると、コンテンツ作成プロセスでのクリエイターとマーケティング担当者の共同作業を効率化できます。これは、Creative Cloudの新しい独自の機能で、Adobe Photoshop、Adobe Illustrator、Adobe InDesignから直接AEM Assetsに接続でき、ツールを使い捨てることはありません。
+Creative Cloud エンタープライズ版の Adobe Asset Link を使用すると、コンテンツ作成プロセスでのクリエイターとマーケティング担当者の共同作業を効率化できます。これはCreative Cloudの新しい独自の能力で、Adobe Photoshop、Adobe Illustrator、Adobe InDesignから直接AEM Assetsに接続できるのです。
 
-To learn more about the capability, prerequisites, and how to access it, see the [Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) page.
+機能、前提条件、およびそのアクセス方法について詳しくは、[Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)ページを参照してください。
 
-## Enhanced Smart Tags (powered by Adobe Sensei) {#enhanced-smart-tags-powered-by-adobe-sensei}
+## 強化されたスマートタグ(Adobe Sensei電源) {#enhanced-smart-tags-powered-by-adobe-sensei}
 
 AEM 6.4では、AEM 6.3で起動されたスマートタグに加え、人工知能ベースの拡張スマートタグ機能が導入されています。
 
 * Smart Content Serviceは、顧客のビジネス分類を学習し、それを使用して、汎用タグに加えて顧客に関連するタグをデジタルアセットに自動的にタグ付けします。 これにより、アセットの検索効率が大幅に向上し、市場投入までの時間が短縮されます。
 * Adobe SenseiはSmart Content Serviceを強化し、ビジネス分類に対する画像認識アルゴリズムのトレーニングを可能にします。 このコンテンツインテリジェンスを利用して、類似のアセットに関連性の高いタグが付加されます。
 
-AEM Assets拡張スマートタグを使用するには、AEM 6.4の [最新のサービスパックをインストールし](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)ます。
+AEM Assets拡張スマートタグを使用するには、AEM 6.4](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)の[最新のサービスパックをインストールします。
 
-## Smart Translation Search (powered by Adobe Sensei) {#smart-translation-search-powered-by-adobe-sensei}
+## スマート翻訳検索(Adobe Senseiで動作) {#smart-translation-search-powered-by-adobe-sensei}
 
 AEM 6.4では、多言語検索シナリオをサポートするスマート翻訳検索機能が導入されています。 お客様のチームが世界中に分散していて複数のロケールが使用されている場合に、コストと時間のかかる翻訳ワークフローを経なくても、様々な言語で検索できるようになりました。
 
@@ -75,7 +75,7 @@ AEM 6.4では、参照、検索、複数ページのアセットおよび管理�
 
 カタログ
 
-* ユーザーエクスペリエンスが改善され、テンプレートユーザーインターフェイスとの整合性が向上しました。 For more information, see [Catalog Producer](../sites-administering/catalog-producer.md).
+* ユーザーエクスペリエンスが改善され、テンプレートユーザーインターフェイスとの整合性が向上しました。 詳しくは、[カタログプロデューサー](../sites-administering/catalog-producer.md)を参照してください。
 
 ## メタデータ {#metadata}
 
@@ -99,21 +99,21 @@ AEM 6.4では、アセットレポートが大幅に強化されました。
 * **並列公開**： AEM Assets と Brand Portal の間で発生する可能性のあるレプリケーションの数（以前は 1）まで対応しており、公開のパフォーマンスが大幅に向上しています。
 * **スキーマおよび検索ファセットの公開**：メタデータスキーマとカスタム検索ファセットを Brand Portal に公開できるので、作業の重複をなくすことができます。
 * **タグの一括公開**：（階層と共に）分類を Brand Portal に公開できるので、作業の重複をなくすことができます。
-* **セルフサインアップまたはリクエストアクセス**: ブランドポータルへの未登録ユーザーのワークフロー。
+* **セルフサインアップまたはリクエストアクセス**:ブランドポータルへの未登録ユーザーのワークフロー。
 * **アプリ内（画面上）のメンテナンス通知**：事前に通知が表示されるので、ビジネスの混乱を避けることができます。
 * **レポート機能の向上**：ダウンロード、公開、リンク共有の 3 つの OOTB レポートが使用可能です。
 * **DRM ベースの制限事項**：ライセンスされたアセットの有効期限が切れると、Brand Portal からダウンロードできなくなります。
 
 ## AEM デスクトップアプリケーション {#aem-desktop-app}
 
-AEM desktop app is updated to version 1.8, which is compatible with AEM 6.4. The full list of changes for AEM desktop app is provided in a dedicated [AEM desktop app release notes](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html) document.\
+AEMデスクトップアプリは、AEM 6.4と互換性があるバージョン1.8に更新されました。AEMデスクトップアプリの変更点の完全なリストは、専用の[AEMデスクトップアプリリリースノート](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)ドキュメントに記載されています。\
 AEM 6.3のリリース以降のAEMデスクトップアプリのハイライトリストを示します。
 
 * フォルダー階層をバックグラウンドでアップロードする機能。
 * アセットのアップロードをバックグラウンドで監視するための UI。
 * キャッシュ機能の向上（キャッシュのパラメーターを管理するための UI など）。
 * AEM 認証設定（SAML／SSO）とネットワークプロキシに幅広く対応。
-* サポート性： ユーザーインターフェイスからログに簡単にアクセスできます。
+* サポート性：ユーザーインターフェイスからログに簡単にアクセスできます。
 * 安定性の向上とお客様から報告された問題の修正。
 
 ドキュメントとベストプラクティスについては、次のドキュメントを参照してください。
@@ -132,18 +132,18 @@ AEM 6.4 には、様々な階層ストレージ環境設定をサポートしラ
 
 ## 閉じられたユーザーグループ {#closed-user-group}
 
-* AEM 6.4では、「Closed User Group」または「CUG」は、発行インスタンスでのフォルダーアクセスを制限する手段を提供します。タッチUIオプションでは、フォルダーレベルでフォルダープロパティページを介してプリンシパルを追加し、内部のすべてのフォルダーとサブフォルダー/アセットに適用します。
+* AEM 6.4では、「Closed User Group」または「CUG」を使用すると、発行インスタンスでのフォルダーアクセスを制限できます。タッチUIオプションでは、フォルダーレベルでフォルダープロパティページを介してプリンシパルを追加し、内部のすべてのフォルダーとサブフォルダー/アセットに適用します。
 * 発行モードでは、CUGが設定され、フォルダーで認証が有効になっている場合、ユーザーがフォルダーにアクセスしようとすると、ログインページにリダイレクトされます。 したがって、ログインに成功した後でのみ、権限を持つユーザーがフォルダーとその中のアセットにアクセスできます。このように、CUG は、選ばれたプリンシパルを除くすべてのユーザーに対して、コンテンツリポジトリ内の特定のツリーのみ読み取りを制限します。
 
-## Dynamic Media add-on {#dynamic-media-add-on}
+## Dynamic Mediaアドオン{#dynamic-media-add-on}
 
 AEM 6.4 の Dynamic Media では、マスターアセットのアップロードと管理を AEM Assets Web UI でおこなえる新しいモードをサポートしており、動的レンディションなどのダイナミックメディア機能は、Dynamic Media クラウド配信サービスによりバックグラウンドで処理されます。
 
-In this mode (introduced first with the release of [AEM 6.3 Feature Packs 14410 and 18912](https://helpx.adobe.com/experience-manager/6-3/release-notes/dynamic-media-featurepack-14410.html)), users benefit from end-to-end asset management and dynamic media features using the modern AEM Assets web UI, and still leverage the delivery services that are backwards compatible with Dynamic Media Classic (Scene7)—including delivery URLs, which are unchanged.
+このモード([AEM 6.3 Feature Pack 14410および18912](https://helpx.adobe.com/experience-manager/6-3/release-notes/dynamic-media-featurepack-14410.html)のリリースで初めて導入)では、最新のAEM AssetsWeb UIを使用したエンドツーエンドのアセット管理機能と動的メディア機能が役立ち、配信URLを含むDynamic Mediaクラシック(Scene7)と下位互換の配信サービスを利用できます変更されない。
 
 この他にも、AEM 6.4 で導入されているものとしては、Adobe Sensei を利用した新しい機能、VR や 3D などの新しいメディアに対応する機能強化、ダイナミックメディアビューア、インタラクティブ画像やカルーセルバナーでのエクスペリエンスフラグメントのサポートなどがあります。
 
-### Smart Crop (powered by Adobe Sensei) {#smart-crop-powered-by-adobe-sensei}
+### スマートクロップ(Adobe Sensei電源) {#smart-crop-powered-by-adobe-sensei}
 
 * スマート切り抜きでは、画像の非破壊的な切り抜きを自動的におこない、重要な部分だけを残します。これにより、レスポンシブデザインに対応します。切り抜かれる部分をプレビューし、必要に応じて、切り抜く範囲を手動で調整することができます。
 * この機能により、製品画像のスウォッチを自動的に生成することもできます。自動スウォッチ生成は、カラースウォッチやパターンスウォッチまたはその両方を製品画像に自動的に追加するのに役立ちます。
@@ -160,7 +160,7 @@ In this mode (introduced first with the release of [AEM 6.3 Feature Packs 14410 
 
 詳しくは、[スマートイメージング](../assets/imaging-faq.md)のドキュメントを参照してください。
 
-### Emerging Media and Viewer Enhancements {#emerging-media-amp-viewer-enhancements}
+### 新しいメディアおよびビューアの機能強化{#emerging-media-amp-viewer-enhancements}
 
 * 新しいビューアがサポートされ、臨場感のあるより良いエクスペリエンスをユーザーに提供できます。
 * パノラマビューアを使用すると、ユーザーは快適な環境で作業でき、ルームシーン、プロパティ、場所、風景をより快適に体験できます。 詳しくは、[パノラマ画像](../assets/panoramic-images.md)のドキュメントを参照してください。
@@ -169,6 +169,6 @@ In this mode (introduced first with the release of [AEM 6.3 Feature Packs 14410 
 * 製品画像に最適化された垂直画像ビューアが用意されています。
 * キーボードのアクセシビリティが向上しました。
 
-### 3D and integration with Dimension CC {#d-and-integration-with-dimension-cc}
+### 3DとDimensionCCとの統合{#d-and-integration-with-dimension-cc}
 
-Integration with [Adobe Dimension CC](https://www.adobe.com/jp/products/dimension.html) for more seamless 3D workflow has been introduced. 詳しくは、「3Dアセット [の操作](../assets/assets-3d.md) 」ドキュメントを参照してください。
+[Adobe Dimension CC](https://www.adobe.com/jp/products/dimension.html)との統合により、3Dワークフローがよりシームレスに導入されました。 詳しくは、[3Dアセットの操作](../assets/assets-3d.md)のドキュメントを参照してください。
