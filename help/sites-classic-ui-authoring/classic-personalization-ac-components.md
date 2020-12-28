@@ -22,7 +22,7 @@ ht-degree: 78%
 
 Adobe Campaign と統合しているときは、ニュースレター用とフォーム用のコンポーネントを使用できます。このドキュメントでは、両方のコンポーネントについて説明します。
 
-## Adobe Campaign ニュースレターコンポーネント {#adobe-campaign-newsletter-components}
+## Adobe Campaign ニュースレターコンポーネント  {#adobe-campaign-newsletter-components}
 
 すべての Adobe Campaign コンポーネントは、[電子メールテンプレートのベストプラクティス](/help/sites-administering/best-practices-for-email-templates.md)で概説されているベストプラクティスに従います。また、Adobe マークアップ言語 [HTL](https://helpx.adobe.com/jp/experience-manager/htl/using/overview.html) をベースとしています。
 
@@ -121,7 +121,7 @@ Adobe Campaign と連携するように設定されているニュースレタ�
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
-### Link (Campaign) {#link-campaign}
+### リンク(キャンペーン) {#link-campaign}
 
 リンク（Campaign）コンポーネントを使用して、ニュースレターにリンクを追加できます。このコンポーネントはクラシック UI にのみ表示されますが、タッチ操作向け UI でこのコンポーネントを追加して、互換モードで開くことができます。
 
@@ -133,14 +133,15 @@ Adobe Campaign と連携するように設定されているニュースレタ�
 
 * **リンクツールチップ**&#x200B;リンクの使用方法に関する追加情報を付加します。
 
-* **LinkType**&#x200B;ドロップダウンリストで、 
-**カスタムURL** 、 **アダプティブドキュメント**。 このフィールドは必須です。「カスタム URL」を選択した場合は、リンクの URL を指定できます。「アダプティブドキュメント」を選択した場合は、ドキュメントのパスを指定できます。
+* ****
+LinkTypeドロップダウンリストで、 
+**カスタム** URLと **アダプティブドキュメント**。このフィールドは必須です。「カスタム URL」を選択した場合は、リンクの URL を指定できます。「アダプティブドキュメント」を選択した場合は、ドキュメントのパスを指定できます。
 
 * **追加の URL パラメーター**&#x200B;追加の URL パラメーターがあれば追加します。「項目を追加」をクリックして、複数の項目を追加します。
 
 >[!NOTE]
 >
->You must enter information in the **Link Type** field in the **URL Info** tab, or the component cannot save and you see the following error message:
+>「**URL Info**」タブの「**Link Type**」フィールドに情報を入力する必要があります。入力しないと、コンポーネントは保存できず、次のエラーメッセージが表示されます。
 >
 >`Validation failed. Verify the values of the marked fields.`
 
@@ -157,7 +158,7 @@ Adobe Campaign と連携するように設定されているニュースレタ�
 
 ドロップダウンメニューをクリックして、参照する段落に移動します。終了したら、「**OK**」をクリックします。
 
-### テキストと画像（Campaign） {#text-image-campaign}
+### テキストと画像（Campaign）  {#text-image-campaign}
 
 テキストと画像（Campaign）コンポーネントでは、テキストブロックと画像を追加します。
 
@@ -208,7 +209,7 @@ Adobe Campaign と連携するように設定されているニュースレタ�
 
 ### テキストおよびパーソナライゼーション (Campaign) {#text-personalization-campaign}
 
-The Text &amp; Personalization (Campaign) component lets you enter a text block using a WYSIWYG editor, with functionality provided by the [Rich Text editor](/help/sites-authoring/rich-text-editor.md). さらに、このコンポーネントでは、Adobe Campaign のコンテキストフィールドとパーソナライゼーションブロックを使用できます。[パーソナライゼーションの挿入](/help/sites-classic-ui-authoring/classic-personalization-ac-campaign.md#inserting-personalization)も参照してください。
+テキストとパーソナライゼーション(キャンペーン)コンポーネントを使用すると、WYSIWYGエディターを使用してテキストブロックを入力できます。この機能は、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)で提供されます。 さらに、このコンポーネントでは、Adobe Campaign のコンテキストフィールドとパーソナライゼーションブロックを使用できます。[パーソナライゼーションの挿入](/help/sites-classic-ui-authoring/classic-personalization-ac-campaign.md#inserting-personalization)も参照してください。
 
 フォントの文字、配置、リンク、リスト、インデントなど、多様なアイコンでテキストの書式を設定できます。
 
@@ -228,7 +229,7 @@ Adobe Campaign コンポーネントを使用して、ニュースレターの�
 
 各コンポーネントフィールドを Adobe Campaign データベースフィールドにリンクできます。[コンポーネントとデータタイプ](#components-and-data-type)セクションで説明しているように、利用可能なフィールドは、格納するデータのタイプによって異なります。受信者スキーマを Adobe Campaign で拡張した場合は、データタイプが一致するコンポーネントで新しいフィールドが利用可能になります。
 
-When you open a form that is configured to integrate with Adobe Campaign, you see the following components in the **Adobe Campaign** section:
+Adobe Campaignと統合するように設定されたフォームを開くと、**Adobe Campaign**&#x200B;セクションに次のコンポーネントが表示されます。
 
 * チェックボックス（Campaign）
 * 日付フィールド（Campaign）と日付フィールド／HTML5（Campaign）
@@ -242,7 +243,7 @@ When you open a form that is configured to integrate with Adobe Campaign, you se
 
 このセクションでは、各コンポーネントについて詳しく説明します。
 
-### コンポーネントとデータタイプ {#components-and-data-type}
+### コンポーネントとデータタイプ  {#components-and-data-type}
 
 以下の表に、Adobe Campaign プロファイルデータの表示および変更に利用できるコンポーネントを示します。各コンポーネントを Adobe Campaign プロファイルフィールドにマップすることで、フィールドの値をフォームに表示したり、フォームが送信されたときにフィールドを更新したりできます。各種コンポーネントは、適切なデータタイプのフィールドにのみマップできます。
 
@@ -281,13 +282,13 @@ When you open a form that is configured to integrate with Adobe Campaign, you se
  </tbody> 
 </table>
 
-### 大部分のコンポーネントに共通の設定 {#settings-common-to-most-components}
+### 大部分のコンポーネントに共通の設定  {#settings-common-to-most-components}
 
 Adobe Campaign コンポーネントには、ほとんどのコンポーネント（暗号化されたプライマリキーコンポーネントと非表示の調整キーコンポーネントを除く）に共通の設定があります。
 
 大部分のコンポーネントでは、次の項目を設定できます。
 
-#### タイトルとテキスト {#title-and-text}
+#### タイトルとテキスト  {#title-and-text}
 
 * **タイトル**
 
@@ -321,7 +322,7 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 * **必須**
 
-   このコンポーネントを必須にするには、このチェックボックスを選択します。 つまり、ユーザーは値を入力する必要があります。
+   このコンポーネントを必須にするには、このチェックボックスを選択します。つまり、ユーザーは値を入力する必要があります。
 
 * **必須メッセージ**
 
@@ -343,23 +344,23 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 ![chlimage_1-122](assets/chlimage_1-122.png)
 
-### Date Field (Campaign) and Date Field/HTML 5 (Campaign) {#date-field-campaign-and-date-field-html-campaign}
+### 日付フィールド(キャンペーン)と日付フィールド/HTML 5 (キャンペーン) {#date-field-campaign-and-date-field-html-campaign}
 
 日付フィールドを使用して、受信者に日付を指定させることができます。例えば、受信者に誕生日を指定させることができます。日付の形式は、Adobe Campaign インスタンスで使用されている形式と一致します。
 
 [大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)に加え、次の項目を設定できます。
 
-* **[拘束 — 拘束** ]ドロップダウン
+* **拘束 —** 拘束ドロップダウン
 
-   You can select - **None** or **Date** - to add the constraint of a date or no constraint. 日付を選択した場合は、回答ユーザーがフィールドに入力する日付形式を使用する必要があります。
+   「 — **なし**」または「**日付**」を選択して、日付の制約を追加するか、制約を追加しないかを指定できます。 日付を選択した場合は、回答ユーザーがフィールドに入力する日付形式を使用する必要があります。
 
 * **制約メッセージ**
 
-   さらに、制約メッセージを追加して、回答の適切な書式設定方法をユーザーに知らせることもできます。
+   さらに、制約メッセージを追加して、回答の適切な書式設定方法をユーザーが理解できるようにすることもできます。
 
 * **スタイル設定 — 幅**
 
-   Adjust the width of the field by clicking or tapping the **+** and **-** icons or entering a number.
+   **+**&#x200B;アイコンと&#x200B;**-**&#x200B;アイコンをクリックまたはタップするか、数値を入力して、フィールドの幅を調整します。
 
 幅が調整された日付フィールド（Campaign）コンポーネントの表示例を以下に示します。
 
@@ -414,14 +415,15 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 [大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)に加え、次の項目を設定できます。
 
-* **[拘束 — 拘束** ]ドロップダウン
+* **拘束 —** 拘束ドロップダウン
 
-   You can select - **None** or **Numeric** - to add the constraint of either a number or no constraint. 数値を選択した場合、ユーザーがフィールドに入力する答えは数値である必要があります。
+   「 — **なし**」または「**数値**」を選択して、数値の制約を追加するか、制約を追加しないかを指定できます。 数値を選択した場合、ユーザーがフィールドに入力する答えは数値である必要があります。
 
 * **制約メッセージ**
 
-   さらに、制約メッセージを追加して、回答の適切な書式設定方法をユーザーに知らせることもできます。
-* **スタイル設定 — 幅**&#x200B;フィールドの幅を調整するには、「 
+   さらに、制約メッセージを追加して、回答の適切な書式設定方法をユーザーが理解できるようにすることもできます。
+* **スタイル設定 —**
+幅フィールドの幅を調整するには、「 
 **+** と **-** アイコンを押すか、数値を入力します。
 
 幅が設定された数値フィールド（Campaign）コンポーネントの表示例を以下に示します。
@@ -442,7 +444,7 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 **購読チェックリスト（Campaign）**&#x200B;コンポーネントを使用して、Adobe Campaign プロファイルに関連付けられた購読を変更できます。
 
-このコンポーネントをフォームに追加すると、利用可能なすべての購読がチェックボックスとして表示されるので、ユーザーに目的の購読を選択させることができます。When users submit the form, this component subscribes the user to or unsubscribes the user from the selected services depending on the form action type (**Adobe Campaign: Subscribe to Services** or **Adobe Campaign: Unsubscribe from Services**).
+このコンポーネントをフォームに追加すると、利用可能なすべての購読がチェックボックスとして表示されるので、ユーザーに目的の購読を選択させることができます。ユーザーがフォームを送信するとき、このコンポーネントは、フォームのアクションの種類(**Adobe Campaign)に応じて、選択したサービスに対してユーザーを購読または登録解除します。サービス**&#x200B;または&#x200B;**Adobe Campaignを購読：Services**&#x200B;の登録を解除)。
 
 >[!NOTE]
 >
@@ -460,17 +462,17 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 [大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)に加え、次の項目を設定できます。
 
-* **[拘束 — 拘束** ]ドロップダウン
+* **拘束 —** 拘束ドロップダウン
 
-   You can select - **None, Email,** or **Name (no umlauts)** - to add the constraint of either an email address, name, or no constraint. 「電子メール」を選択した場合は、このフィールドに電子メールアドレスを入力する必要があります。nameを選択する場合は、名前にする必要があります（ウムラウトは使用できません）。
+   「 — **なし、電子メール、**、**名前（ウムラウトなし）**」を選択して、電子メールアドレス、名前、または制約なしの制約を追加できます。 「電子メール」を選択した場合は、このフィールドに電子メールアドレスを入力する必要があります。nameを選択する場合は、名前にする必要があります（ウムラウトは使用できません）。
 
 * **制約メッセージ**
 
-   さらに、制約メッセージを追加して、回答の適切な書式設定方法をユーザーに知らせることもできます。
+   さらに、制約メッセージを追加して、回答の適切な書式設定方法をユーザーが理解できるようにすることもできます。
 
 * **スタイル設定 — 幅**
 
-   Adjust the width of the field by clicking or tapping the **+** and **-** icons or entering a number.
+   **+**&#x200B;アイコンと&#x200B;**-**&#x200B;アイコンをクリックまたはタップするか、数値を入力して、フィールドの幅を調整します。
 
 テキストフィールド（Campaign）コンポーネントの表示例を以下に示します。
 
