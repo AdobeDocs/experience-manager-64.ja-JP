@@ -29,7 +29,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->The respective rtePlugins node is referred to as &lt;*rtePlugins-node*> to avoid duplication in this article.
+>この記事で重複を避けるため、それぞれのrtePluginsノードを&#x200B;*rtePlugins-node*&#x200B;と呼びます。
 
 1. CRXDE Lite を使用して、プロジェクトのテキストコンポーネントを見つけます。
 1. RTE プラグインを設定する前に、`<rtePlugins-node>` の親ノードを作成します（親ノードがない場合）。
@@ -70,14 +70,14 @@ ht-degree: 94%
   <tr> 
    <td><strong>名前</strong></td> 
    <td>features</td> 
-   <td>features</td> 
-   <td>features</td> 
+   <td>機能</td> 
+   <td>機能</td> 
   </tr> 
   <tr> 
    <td><strong>型</strong></td> 
    <td>String</td> 
    <td>String[]（複数文字列。CRXDE Lite で型を String に設定し、「複数」をクリック）</td> 
-   <td>String</td> 
+   <td>文字列</td> 
   </tr> 
   <tr> 
    <td><strong>値</strong></td> 
@@ -203,7 +203,7 @@ Microsoft Word として貼り付け（`paste-wordhtml`）モードをさらに�
   </tr> 
   <tr> 
    <td>fallbackBlockTag</td> 
-   <td>String</td> 
+   <td>文字列</td> 
    <td><p>allowBlockTags に含まれていないブロックタグを含むブロックに使用されるブロックタグを定義します。</p> <p> ほとんどの場合は p で十分です。</p> </td> 
   </tr> 
   <tr> 
@@ -293,7 +293,7 @@ Microsoft Word として貼り付け（`paste-wordhtml`）モードをさらに�
 
    * **名前** `externalStyleSheets`
    * **型** `String[]`（複数文字列。CRXDE で「**複数**」をクリック）
-   * **値** 使用する各スタイルシートのパスとファイル名。リポジトリパスを使用します。
+   * **値** 使用する各スタイルシートのパスとファイル名。リポジトリーパスを使用します。
 
    >[!NOTE]
    参照先のスタイルシートは後から追加できます。
@@ -325,7 +325,7 @@ RTE をダイアログ（クラシック UI）で使用する場合は、リッ�
 
    * **名前** `cssName`
    * **型** `String`
-   * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。例、`.cssClass` ではなく `cssClass`）
+   * **値** CSS クラスの名前（先頭に「.」を付けない。例、`.cssClass` ではなく `cssClass`）
 
 1. `text` プロパティを同じノードに追加します。これは、選択ボックスに表示されるテキストを定義します。
 
@@ -488,11 +488,11 @@ CRXDE で、単一の文字を追加して RTE ツールバーで使用できる
 
    ![CRXDE で、RTE で使用可能な文字の範囲を定義します。](assets/chlimage_1-413.png)
 
-         *In CRXDE, define a range of characters to be made available in RTE*
+         *CRXDEで、RTE*&#x200B;で使用可能にする文字の範囲を定義します
 
    ![RTE で使用可能な特殊文字がポップアップウィンドウに表示されます。](assets/rtepencil.png)
 
-         *Special characters available in RTE are displayed to authors in a pop-up window*
+         *RTEで使用できる特殊文字は、ポップアップウィンドウ*&#x200B;で作成者に表示されます。
 
 ## テーブルスタイルの設定 {#tablestyles}
 
@@ -556,7 +556,7 @@ RTE コンポーネント内または RTE コンポーネントからのテー�
 
 必要な各スタイルについて上記の手順を繰り返します。
 
-### アクセシビリティ向上のためにテーブル内に非表示のヘッダーを設定 {#hiddenheader}
+### アクセシビリティ向上のためにテーブル内に非表示のヘッダーを設定  {#hiddenheader}
 
 列ヘッダーの目的が他の列との関係性によって暗示される場合に、目に見えるテキストを列ヘッダーに含まないデータテーブルを作成することがあります。その場合は、ヘッダーセル内に非表示の内部テキストを指定し、様々な補助を必要とするユーザーがスクリーンリーダーやその他補助テクノロジーを利用して列の目的を理解できるようにする必要があります。
 
@@ -574,12 +574,12 @@ RTE コンポーネント内または RTE コンポーネントからのテー�
 
 コードに CSS とスタイル文字列の両方を指定すると、CSS がスタイル文字列に優先され、スタイル文字列によって加えられたすべての設定の変更が上書きされることがあります。
 
-## スペルチェッカー用の辞書の追加 {#adddict}
+## スペルチェッカー用の辞書の追加  {#adddict}
 
 スペルチェックプラグインがアクティベートされると、RTE ではそれぞれ該当する言語の辞書を使用します。その後、サブツリーの言語プロパティを取得するか、URL から言語を抽出することによって、Web サイトの言語に従って辞書が選択されます。例えば、`/en/` ブランチは英語としてチェックされ、`/de/` ブランチはドイツ語としてチェックされます。
 
 >[!NOTE]
-The message `Spell checking failed` is seen if a check is tried for a language that is not installed. 標準辞書は、readme ファイルと一緒に `/libs/cq/spellchecker/dictionaries` にあります。これらのファイルを修正しないでください。
+インストールされていない言語に対してチェックを行うと、メッセージ`Spell checking failed`が表示されます。 標準辞書は、readme ファイルと一緒に `/libs/cq/spellchecker/dictionaries` にあります。これらのファイルを修正しないでください。
 
 標準的なAEMのインストールには、米国英語(`en_us`)と英語(`en_gb`)の辞書が含まれます。 辞書を追加するには、次の手順に従います。
 
@@ -588,7 +588,7 @@ The message `Spell checking failed` is seen if a check is tried for a language t
 1. 次のいずれかの操作を行って、選択した言語の辞書を検索します。
 
    * 選択した言語の辞書を検索します。 辞書ページで、元のソースまたは発言者のWebページへのリンクを探します。 該当するページ上のv2.xの辞書ファイルを見つけます。
-   * v2.xディクショナリファイルは、https://wiki.openoffice.org/wiki/User:Khirano/Dictionariesで検索して [ください](https://wiki.openoffice.org/wiki/User:Khirano/Dictionaries)。
+   * [https://wiki.openoffice.org/wiki/User:Khirano/Dictionaries](https://wiki.openoffice.org/wiki/User:Khirano/Dictionaries)でv2.xディクショナリファイルを検索してください。
 
 1. スペルの定義を含むアーカイブをダウンロードします。 アーカイブの内容をファイルシステム上に抽出します。
 
@@ -596,10 +596,10 @@ The message `Spell checking failed` is seen if a check is tried for a language t
    OpenOffice.org v2.0.1 以前の `MySpell` 形式の辞書のみがサポートされています。辞書は現在アーカイブファイルなので、ダウンロード後にアーカイブを確認することをお勧めします。
 
 1. .aff ファイルと .dic ファイルを見つけます。ファイル名は小文字のままにします。例えば、`de_de.aff` と `de_de.dic` です。
-1. `/apps/cq/spellchecker/dictionaries` のリポジトリ内に .aff ファイルと .dic ファイルを読み込みます。
+1. `/apps/cq/spellchecker/dictionaries` のリポジトリー内に .aff ファイルと .dic ファイルを読み込みます。
 
 >[!NOTE]
-RTE スペルチェッカーは、オンデマンドで使用できます。テキストの入力を開始しても自動的に実行されません。To run the spell checker, click [!UICONTROL Spellchecker] from the toolbar. RTEは単語のスペルをチェックし、スペルの間違った単語をハイライトします。
+RTE スペルチェッカーは、オンデマンドで使用できます。テキストの入力を開始しても自動的に実行されません。スペルチェッカーを実行するには、ツールバーの[!UICONTROL スペルチェッカー]をクリックします。 RTEは単語のスペルをチェックし、スペルの間違った単語をハイライトします。
 スペルチェッカーで提案される変更を組み込むと、テキストの状態が変更され、スペルミスのある単語はハイライト表示されなくなります。 スペルチェッカーを実行するには、「スペルチェッカー」ボタンをもう一度タップまたはクリックします。
 
 ## 取り消しおよびやり直し操作の履歴サイズの設定 {#undohistory}
@@ -618,7 +618,7 @@ RTE では、以前の編集を取り消す、またはやり直すことがで�
 
 1. 変更内容を保存します。
 
-## タブサイズの設定 {#tabsize}
+## タブサイズの設定  {#tabsize}
 
 任意のテキスト内でタブ文字を押すと、事前に定義済みの数のスペースが挿入されます。デフォルトでは、これはノーブレークスペース 3 個とスペース 1 個です。タブサイズを定義するには、次のようにします。
 
@@ -631,7 +631,7 @@ RTE では、以前の編集を取り消す、またはやり直すことがで�
 
 1. 変更内容を保存します。
 
-## インデントの余白の設定 {#indentmargin}
+## インデントの余白の設定  {#indentmargin}
 
 インデントが有効なとき（デフォルト）は、インデントのサイズを定義できます。
 
@@ -700,13 +700,13 @@ AEM にリンクを追加する場合、次の定義が可能です。
 
       * **名前** `cssInternal`
       * **型** `String`
-      * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。例、`.cssClass` ではなく `cssClass`）
+      * **値** CSS クラスの名前（先頭に「.」を付けない。例、`.cssClass` ではなく `cssClass`）
    * 外部リンクの CSS スタイル：
 
       * **名前** `cssExternal`
       * **型** `String`
-      * **値** CSS クラスの名前（先頭に &quot;.&quot; を付けない。例、`.cssClass` ではなく `cssClass`）
-   * 有効な **プロトコルの配列**。 サポートされているプロトコルは、、、、 `http://`、および `https://``file://``mailto:`です。
+      * **値** CSS クラスの名前（先頭に「.」を付けない。例、`.cssClass` ではなく `cssClass`）
+   * 有効な&#x200B;**プロトコル**&#x200B;の配列。 サポートされているプロトコルは`http://`、`https://`、`file://`、`mailto:`です。
 
       * **名前** `protocols`
       * **型** `String[]`
@@ -726,7 +726,7 @@ AEM にリンクを追加する場合、次の定義が可能です。
       * ターゲットモードを指定：
 
          * **名前** `mode`
-         * **Type** `String`)
+         * **型** `String`
          * **値**：
 
             * `auto`：自動ターゲットが選択されたことを意味する
