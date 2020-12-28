@@ -22,7 +22,7 @@ ht-degree: 93%
 
 AEM では、**レイアウトコンテナ**&#x200B;コンポーネントを使用して、ページのレスポンシブレイアウトを作成できます。
 
-レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズおよび形式に従ってレイアウトを再編成できます。このコンポーネントを、[**レイアウト&#x200B;**モード](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)と連動して使用すると、デバイスに依存するレスポンシブレイアウトを作成および編集できます。
+レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズおよび形式に従ってレイアウトを再編成できます。このコンポーネントを、[**レイアウト**&#x200B;モード](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)と連動して使用すると、デバイスに依存するレスポンシブレイアウトを作成および編集できます。
 
 レイアウトコンテナには、次の特徴があります。
 
@@ -41,15 +41,15 @@ AEM では、**レイアウトコンテナ**&#x200B;コンポーネントを使�
 
 AEM は、次のメカニズムを組み合わせて使用することにより、ページのレスポンシブレイアウトを実現します。
 
-* [**レイアウトコンテナ&#x200B;**](#adding-a-layout-container-and-its-content-edit-mode)コンポーネント
+* [**レイアウトコンテナ**](#adding-a-layout-container-and-its-content-edit-mode)&#x200B;コンポーネント
 
    このコンポーネントは、[コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)で使用でき、レスポンシブグリッド内にコンポーネントを追加および配置できるグリッド段落システムを提供します。ページ上のデフォルトの段落システムとしても設定できます。
 
-* [**レイアウトモード&#x200B;**](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)
+* [**レイアウトモード**](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)
 
    レイアウトコンテナをページに配置したら、**レイアウト**&#x200B;モードを使用して、レスポンシブグリッド内にコンテンツを配置できます。
 
-* [**エミュレーター&#x200B;**](#selecting-a-device-to-emulate)：
+* [**エミュレーター**](#selecting-a-device-to-emulate)：
 コンポーネントをインタラクティブにサイズ変更することによってデバイスやウィンドウのサイズに従ってレイアウトを再編成する、レスポンシブ Web サイトを作成および編集できます。その後、エミュレーターを使用して、コンテンツのレンダリング方法を確認できます。
 
 これらのレスポンシブグリッドメカニズムを使用すると、次のことが可能になります。
@@ -68,7 +68,7 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 
 >[!NOTE]
 >
->前述のメカニズムの使用は、テンプレートでの設定によって有効になります。See [Configuring Responsive Layout](/help/sites-administering/configuring-responsive-layout.md) for further information.
+>前述のメカニズムの使用は、テンプレートでの設定によって有効になります。詳しくは、[レスポンシブレイアウトの設定](/help/sites-administering/configuring-responsive-layout.md)を参照してください。
 
 ## レイアウトの定義、デバイスのエミュレーションおよびブレークポイント {#layout-definitions-device-emulation-and-breakpoints}
 
@@ -154,7 +154,7 @@ AEM では、デバイスの幅に依存するレイアウトを定義できま�
 
 >[!NOTE]
 >
->まだ使用可能になっていない場合は、**レイアウトコンテナ**&#x200B;を明示的に[段落システムまたはページ用にアクティベート](/help/sites-administering/configuring-responsive-layout.md)する必要があります（[**デザイン&#x200B;**モードを使用するなどの方法があります）。](/help/sites-authoring/default-components-designmode.md)
+>まだ使用可能になっていない場合は、**レイアウトコンテナ**&#x200B;を明示的に[段落システムまたはページ用にアクティベート](/help/sites-administering/configuring-responsive-layout.md)する必要があります（[**デザイン**&#x200B;モードを使用するなどの方法があります）。](/help/sites-authoring/default-components-designmode.md)
 
 1. **レイアウトコンテナ**&#x200B;は、[コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)で標準コンポーネントとして使用できます。ここから、ページ上の必要な場所へドラッグできます。そうすると、「**コンポーネントをここにドラッグ**」プレースホルダーが表示されます。
 1. その後、コンポーネントをレイアウトコンテナに追加できます。これらのコンポーネントには実際のコンテンツが含まれます。
@@ -264,8 +264,9 @@ AEM では、デバイスの幅に依存するレイアウトを定義できま�
    >
    >上記の例では、フロートと非表示のアクションが使用可能になっています。これは、このレイアウトコンテナが親レイアウトコンテナ内にネストされているからです。
 
-   * **Unhide components**&#x200B;親コンポーネントを選択し、 
-**「非表示のコンポーネントを表示** 」オプション この例では、2 つのコンポーネントが非表示にされています。
+   * **Unhide**
+components親コンポーネントを選択し、 
+**「非表示の** コンポーネントを表示」オプションこの例では、2 つのコンポーネントが非表示にされています。
    ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
 
    「**非表示のコンポーネントを表示**」オプションを選択すると、現在非表示のコンポーネントが元の場所で青色で表示されます。
