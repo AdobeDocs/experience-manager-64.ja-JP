@@ -20,23 +20,23 @@ ht-degree: 79%
 
 # We.Retail のコンテンツフラグメントの使用{#trying-out-content-fragments-in-we-retail}
 
-コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。**We.Retail** (AEMの標準搭載インスタンスで利用可能)は、フラグメント **Arctic Surfing in Lofotenを基本的なサンプルとして提供しています** 。 このフラグメントは、次のことを示しています。
+コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。**We.Retail** (AEMの標準搭載インスタンスで利用可能)は、 **Lofotenasの** Arctic Surfingフラグメントを基本的なサンプルとして提供しています。このフラグメントは、次のことを示しています。
 
 * Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments.md)として作成および管理されます。コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。
 
-   * See [Where to Find Content Fragment assets in We.Retail](#where-to-find-content-fragments-in-we-retail)
+   * [Web.Retailのコンテンツフラグメントアセットを検索する場所](#where-to-find-content-fragments-in-we-retail)を参照してください。
 
 * その後、コンテンツページを[オーサリングする際に、これらのフラグメントとそれらのバリエーションを使用](/help/sites-authoring/content-fragments.md)できます。
 
-   * See [Where Content Fragments are Used in We.Retail](#where-content-fragments-are-used-in-we-retail)
+   * [Web.Retailでコンテンツフラグメントが使用される場所](#where-content-fragments-are-used-in-we-retail)を参照してください。
 
 コンテンツフラグメントの作成、管理、使用および開発に関する完全なドキュメントについて：
 
-* See [Further Information](#further-information)
+* [詳細情報](#further-information)を参照
 
 >[!NOTE]
 >
->**コンテンツフラグメント**&#x200B;と&#x200B;**[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)**は、AEM 内の異なる機能です。
+>**コンテンツフラグメント**&#x200B;と&#x200B;**[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)**&#x200B;は、AEM 内の異なる機能です。
 >
 >* **コンテンツフラグメント**&#x200B;は、主にテキストや関連画像などの編集コンテンツです。これは、デザインやレイアウトを含まない純粋なコンテンツです。
 >* **エクスペリエンスフラグメント**&#x200B;は完全にレイアウトされたコンテンツであり、Web ページのフラグメントです。
@@ -47,11 +47,11 @@ ht-degree: 79%
 
 ## We.Retail でのコンテンツフラグメントの場所 {#where-to-find-content-fragments-in-we-retail}
 
-There are several sample content fragments in We.Retail; navigate via **Assets**, **Files**, **We.Retail**, **English**, **Experiences**.
+Web.Retailにはいくつかのサンプルコンテンツフラグメントがあります。**アセット**、**ファイル**、**We.Retail**、**英語**、**エクスペリエンス**&#x200B;を経由して移動します。
 
 これには、関連するビジュアルアセットと組み合わせられたフラグメントである **Arctic Surfing in Lofoten** などがあります。
 
-* Navigate via **Assets**, **Files**, **We.Retail**, **English**, **Experiences**, **Artic Surfing in Lofoten**:
+* **アセット**、**ファイル**、**We.Retail**、**英語**、**エクスペリエンス**、**Ratic Surfing in Lofoten**&#x200B;を通じて移動します。
 
    * [http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten)
 
@@ -65,7 +65,7 @@ There are several sample content fragments in We.Retail; navigate via **Assets**
 
 ![](do-not-localize/cf-45-aa.png) ![](do-not-localize/cf-45-a.png)
 
-* **[マークダウン](/help/assets/content-fragments-variations.md)**を含む[バリエーション](/help/assets/content-fragments-markdown.md)
+* **[マークダウン](/help/assets/content-fragments-variations.md)**&#x200B;を含む[バリエーション](/help/assets/content-fragments-markdown.md)
 
 * **[関連コンテンツ](/help/assets/content-fragments-assoc-content.md)**
 * **[メタデータ](/help/assets/content-fragments-metadata.md)**
@@ -78,9 +78,9 @@ There are several sample content fragments in We.Retail; navigate via **Assets**
 
 * [http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience](http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience)
 
-For example, the **Arctic Surfing in Lofoten** content fragment is referenced in the Sites page:
+例えば、**Arctic Surfing in Lofoten**&#x200B;コンテンツフラグメントは、サイトページで参照されます。
 
-* Navigate via **Sites**, **We.Retail**, **Language Masters**, **English**, **Experience**. その後、**Arctic Surfing in Lofoten** を開いて編集をおこないます。
+* **サイト**、**We.Retail**、**言語マスター**、**英語**、**エクスペリエンス**&#x200B;を通じて移動します。 その後、**Arctic Surfing in Lofoten** を開いて編集をおこないます。
 
    * [http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html](http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html)
 
