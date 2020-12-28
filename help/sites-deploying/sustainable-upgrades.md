@@ -22,21 +22,21 @@ ht-degree: 85%
 
 ## カスタマイズフレームワーク {#customization-framework}
 
-### Architecture (Functional / Infrastructure / Content / Application)  {#architecture-functional-infrastructure-content-application}
+### アーキテクチャ（機能/インフラストラクチャ/コンテンツ/アプリケーション） {#architecture-functional-infrastructure-content-application}
 
 カスタマイズフレームワーク機能は、アップグレードしづらいコード（APIS など）またはコンテンツ（オーバーレイなど）などの拡張できない領域での違反が減少するように設計されています。
 
 カスタマイズフレームワークには、**API サーフェス**&#x200B;と&#x200B;**コンテンツ分類**&#x200B;の 2 つのコンポーネントがあります。
 
-#### API サーフェス {#api-surface}
+#### API サーフェス  {#api-surface}
 
 AEM の以前のリリースでは、多くの API が Uber Jar を介して公開されていました。これらの API の一部は、お客様による使用を意図して公開されたものではなく、複数のバンドルにまたがって AEM 機能をサポートするために公開されたものです。今後は、アップグレードの観点からどの API が安全に使用できるかをお客様に示すために、Java API は、公開または非公開としてマークされます。その他の詳細を次に示します。
 
-* Java APIs marked as `Public` can be used and referenced by custom implementation bundles.
+* `Public`とマークされたJava APIは、カスタム実装バンドルで使用および参照できます。
 
 * 公開 API は、互換パッケージのインストールによる後方互換性があります。
 * 互換パッケージには、後方互換性を確保するために互換 Uber JAR が含まれます。
-* Java APIs marked as `Private` are intended to only be used by AEM internal bundles and should not be used by custom bundles.
+* `Private`とマークされたJava APIはAEM内部バンドルでのみ使用されることを目的としており、カスタムバンドルでは使用できません。
 
 >[!NOTE]
 >
@@ -52,9 +52,9 @@ AEM では、以前からオーバーレイの原理と Sling Resource Merger �
 
 * **公開（granite:PublicArea）** - オーバーレイ、継承（`sling:resourceSuperType`）または直接使用（`sling:resourceType`）できるように、ノードを公開として定義します。公開としてマークされた /libs の下のノードは、互換パッケージを追加することで、アップグレードしても安全になります。通常、顧客は公開としてマークされたノードのみを利用する必要があります。
 
-* **抽象（granite:AbstractArea）** - ノードを抽象として定義します。Nodes can be overlaid or inherited ( `sling:resourceSupertype`) but must not be used directly ( `sling:resourceType`).
+* **抽象（granite:AbstractArea）** - ノードを抽象として定義します。ノードはオーバーレイまたは継承できます(`sling:resourceSupertype`)が、直接使用しないでください(`sling:resourceType`)。
 
-* **最終（granite:FinalArea）** - ノードを最終として定義します。最終として分類されたノードは、オーバーレイも継承もできません。Final nodes can be used directly via `sling:resourceType`. 最終ノードの下のサブノードは、デフォルトで内部と見なされます。
+* **最終（granite:FinalArea）** - ノードを最終として定義します。最終として分類されたノードは、オーバーレイも継承もできません。最終ノードは`sling:resourceType`を介して直接使用できます。 最終ノードの下のサブノードは、デフォルトで内部と見なされます。
 
 * **内部（granite:InternalArea）** - ノードを内部として定義します。内部として分類されたノードは、オーバーレイ、継承、直接使用のいずれもできません。これらのノードは、AEM の内部機能でのみ使用されます。
 
@@ -62,11 +62,11 @@ AEM では、以前からオーバーレイの原理と Sling Resource Merger �
 
 >[!NOTE]
 >
->これらのポリシーは、Sling 検索パスに基づくメカニズムに対してのみ適用されます。Other areas of **/libs** like a client-side library may be marked as `Internal`, but could still be used with standard clientlib inclusion. このような場合は、お客様が引き続き内部分類に従うことが重要です。
+>これらのポリシーは、Sling 検索パスに基づくメカニズムに対してのみ適用されます。クライアント側ライブラリのような&#x200B;**/libs**&#x200B;の他の領域は、`Internal`としてマークされる場合がありますが、標準のclientlibインクルージョンでは引き続き使用できます。 このような場合は、お客様が引き続き内部分類に従うことが重要です。
 
-#### CRXDE Lite コンテンツタイプインジケーター {#crxde-lite-content-type-indicators}
+#### CRXDE Lite コンテンツタイプインジケーター  {#crxde-lite-content-type-indicators}
 
-Mixins applied in CRXDE Lite will show content nodes and trees that are marked as `INTERNAL` as being greyed out. For `FINAL` only the icon is greyed out. これらのノードの子もグレー表示されます。どちらの場合も、オーバーレイノード機能は無効になります。
+CRXDE Liteで適用したミックスインは、`INTERNAL`としてマークされているコンテンツノードとツリーを灰色表示にします。 `FINAL`の場合は、アイコンのみが灰色表示になります。 これらのノードの子もグレー表示されます。どちらの場合も、オーバーレイノード機能は無効になります。
 
 **公開**
 
