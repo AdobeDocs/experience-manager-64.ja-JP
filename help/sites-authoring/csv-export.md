@@ -56,14 +56,14 @@ CSV の書き出しファイルを作成ウィザードでは、次の要素を�
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
-The create **CSV Export** option is available when browsing the **Sites** console (in List view): it is an option of the **Create** drop down menu:
+「**CSVエクスポートを作成**」オプションは、(リスト表示で)**サイト**&#x200B;コンソールを参照する際に使用できます。これは、**作成**&#x200B;ドロップダウンメニューのオプションです。
 
 ![screen_shot_2018-03-21at154719](assets/screen_shot_2018-03-21at154719.png)
 
 CSV の書き出しファイルを作成するには、次の手順を実行します。
 
 1. **サイト**&#x200B;コンソールを開き、必要に応じて必要な場所まで移動します。
-1. From the toolbar, select **Create** then **CSV Export** to open the wizard:
+1. ツールバーから、「**作成**」を選択し、「**CSVエクスポート**」を選択して、ウィザードを開きます。
 
    ![screen_shot_2018-03-21at154758](assets/screen_shot_2018-03-21at154758.png)
 
