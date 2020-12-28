@@ -24,13 +24,13 @@ Content Disposition フィルターは、SVG ファイルへの XSS 攻撃に対
 
 インストールが完了すると、フィルターはすべてのアセットへのアクセスをブロックします。例えば、オンラインで pfd を表示することはできません。このセクションでは、必要に応じてフィルターを設定する方法について説明します。
 
-## Content Disposition フィルターの設定 {#configure-content-disposition-filter}
+## Content Disposition フィルターの設定  {#configure-content-disposition-filter}
 
-You can view the [Apache Sling Content Disposition Filter in GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java).
+GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java)の[Apache Sling Content Disposition Filterを表示できます。
 
 コンテンツ廃棄フィルターのオプションには、次の機能があります。
 
-* コンテンツ廃棄パス： フィルターが適用されるパスのリスト。そのパスで除外するMIME型のリストが続きます。このパスは絶対パスである必要があり、末尾にワイルドカード(&#39;&amp;ast;&#39;)を含めることができます。 次に例を示します。 /content/&amp;ast;:image/jpeg,image/svg+xml &quot;は、/content内のjpgおよびsvg画像を除くすべてのノードにフィルターを適用します
+* コンテンツ廃棄パス：フィルターが適用されるパスのリスト。そのパスで除外するMIME型のリストが続きます。このパスは絶対パスである必要があり、末尾にワイルドカード(&#39;&amp;ast;&#39;)を含めることができます。 次に例を示します。/content/&amp;ast;:image/jpeg,image/svg+xml &quot;は、/content内のjpgおよびsvg画像を除くすべてのノードにフィルターを適用します
 
 * 除外されたリソースパス：除外されたリソースのリストです。各リソースパスは絶対パスおよび完全修飾パスとして指定する必要があります。プレフィックスマッチング／ワイルドカードはサポートされていません。
 
