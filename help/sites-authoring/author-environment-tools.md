@@ -48,7 +48,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 ページの編集中、**ヘルプ**&#x200B;には次の場所からアクセスできます。
 
-* [**ページ情報&#x200B;**](/help/sites-authoring/editing-page-properties.md#page-properties)セレクター。これにより、（エディターに初めてアクセスしたときに表示される）紹介用のスライドが表示されます。
+* [**ページ情報**](/help/sites-authoring/editing-page-properties.md#page-properties)&#x200B;セレクター。これにより、（エディターに初めてアクセスしたときに表示される）紹介用のスライドが表示されます。
 * 特定のコンポーネントの[設定](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)ダイアログ（ダイアログツールバーの？アイコンを使用）。これにより、コンテキスト依存のヘルプが表示されます。
 
 その他の[ヘルプ関連リソースは、コンソールから表示できます](/help/sites-authoring/basic-handling.md#accessing-help)。
@@ -269,9 +269,9 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 例えば、該当する場合、**ページ情報**&#x200B;には次のオプションもあります。
 
 * [ローンチを昇格](/help/sites-authoring/launches-promoting.md)（ページがローンチの場合）
-* [ページが](/help/sites-authoring/templates.md)[編集可能なテンプレートに基づいている場合は、「テンプレートを編集」をクリックします。](/help/sites-authoring/templates.md#editable-and-static-templates)
+* [ページが](/help/sites-authoring/templates.md)  [編集可能なテンプレートに基づいている場合は、「テンプレートを編集」](/help/sites-authoring/templates.md#editable-and-static-templates)
 
-* [このオプションが管理者によって](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page)[有効にされている場合は、クラシックUIで開く](/help/sites-administering/enable-classic-ui-editor.md)
+* [このオプションが管理者によって](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page)  [有効にされている場合は、クラシックUIで開く](/help/sites-administering/enable-classic-ui-editor.md)
 
 該当する場合、**ページ情報**&#x200B;から分析や推奨を確認することもできます。
 
