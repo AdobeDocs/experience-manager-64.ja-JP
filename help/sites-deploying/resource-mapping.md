@@ -24,8 +24,8 @@ ht-degree: 62%
 
 例えば、これらのマッピングを使用すると次のことが可能です。
 
-* Prefix all requests with `/content` so that the internal structure is hidden from the visitors to your website.
-* Define a redirect so that all requests to the `/content/en/gateway` page of your website are redirected to `https://gbiv.com/`.
+* 内部構造がWebサイトの訪問者ーに表示されないように、すべてのリクエストの先頭に`/content`を付けます。
+* Webサイトの`/content/en/gateway`ページへのすべてのリクエストが`https://gbiv.com/`にリダイレクトされるように、リダイレクトを定義します。
 
 HTTP マッピングの一例として、[localhost:4503 に対するすべての要求に /content](#configuring-an-internal-redirect-to-content) というプレフィックスを指定します。このようなマッピングを使用すると、Web サイトの訪問者に対して内部構造を非表示にすることができます。例えば、次のページにアクセスできます。
 
@@ -35,7 +35,7 @@ HTTP マッピングの一例として、[localhost:4503 に対するすべて�
 
 `localhost:4503/geometrixx/en/products.html`
 
-as the mapping will automatically add the prefix `/content` to `/geometrixx/en/products.html`.
+を使用すると、マッピングは自動的にプレフィックス`/content`を`/geometrixx/en/products.html`に追加します。
 
 >[!CAUTION]
 >
@@ -49,11 +49,11 @@ as the mapping will automatically add the prefix `/content` to `/geometrixx/en/p
 
 マッピングでは 2 つのリストが作成されます。JCR Resource Resolver は、これらのリストを（トップダウン）評価して一致項目を探します。
 
-These lists can be viewed (together with configuration information) under the **JCR ResourceResolver** option of the Felix console; for example, `https://<host>:<port>/system/console/jcrresolver`:
+これらのリストは、Felixコンソールの&#x200B;**JCR ResourceResolver**&#x200B;オプションの下で（設定情報と共に）表示できます。例：`https://<host>:<port>/system/console/jcrresolver`:
 
 * 設定
 
-   Shows the current configuration (as defined for the [Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md).
+   現在の設定を示します（[Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md)の定義に従います）。
 
 * 設定テスト
 
@@ -90,7 +90,7 @@ URL をリソースにマップするために ResourceResolver.resolve メソ�
 
 >[!NOTE]
 >
->There are many resources available that help explain how to define regular expressions; for example [https://www.regular-expressions.info/](https://www.regular-expressions.info/).
+>正規式の定義方法を説明するリソースが多数あります。例：[https://www.regular-expressions.info/](https://www.regular-expressions.info/)
 
 ## AEM でのマッピング定義の作成 {#creating-mapping-definitions-in-aem}
 
@@ -98,13 +98,13 @@ AEM の標準インストールには、次のフォルダーがあります。
 
 `/etc/map/http`
 
-これは、HTTP プロトコル用のマッピングを定義する場合に使用する構造です。Other folders ( `sling:Folder`) can be created under `/etc/map` for any other protocols that you want to map.
+これは、HTTP プロトコル用のマッピングを定義する場合に使用する構造です。`/etc/map`の下に、マッピングする他のプロトコル用の他のフォルダー(`sling:Folder`)を作成できます。
 
 ### /content への内部リダイレクトの設定{#configuring-an-internal-redirect-to-content}
 
-To create the mapping that prefixes any request to http://localhost:4503/ with `/content`:
+リクエストをhttp://localhost:4503/に接頭するマッピングを作成するには、次のように`/content`を付けます。
 
-1. Using CRXDE navigate to `/etc/map/http`.
+1. CRXDEを使用して`/etc/map/http`に移動します。
 
 1. 新しいノードを作成します。
 
@@ -141,5 +141,5 @@ To create the mapping that prefixes any request to http://localhost:4503/ with `
 
 >[!NOTE]
 >
->を使用して、発行環境 `/etc/map.publish` の設定を保持できます。 次に、これらを複製し、パブリッシュ環境の `/etc/map.publish`Apache Sling Resource Resolver **の** Mapping Location [](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) ()に対して設定する必要があります。
+>`/etc/map.publish`を使用して、発行環境の設定を保持できます。 次に、これらを複製し、パブリッシュ環境の[Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver)の&#x200B;**Mapping Location**&#x200B;に対して設定した新しい場所(`/etc/map.publish`)を作成する必要があります。
 
