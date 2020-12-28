@@ -20,18 +20,18 @@ ht-degree: 72%
 
 # エラーハンドラーによって表示されるページのカスタマイズ{#customizing-pages-shown-by-the-error-handler}
 
-AEMには、HTTPエラーを処理するための標準的なエラーハンドラが付属しています。 例えば、次のように表示します。
+AEMには、HTTPエラーを処理するための標準的なエラーハンドラが付属しています。例えば、次のように表示します。
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
-System provided scripts exist (under `/libs/sling/servlet/errorhandler`) to respond to error codes, by default the following are available with a standard CQ instance:
+エラーコードに応答するためにシステムが提供するスクリプト（`/libs/sling/servlet/errorhandler`の下）が存在します。デフォルトでは、次のスクリプトが標準のCQインスタンスで使用できます。
 
 * 403.jsp
 * 404.jsp
 
 >[!NOTE]
 >
->AEM is based on Apache Sling, so see [https://sling.apache.org/site/errorhandling.html](https://sling.apache.org/site/errorhandling.html) for detailed information about Sling Error Handling.
+>AEMはApache Slingを基にしているので、Slingエラー処理の詳細については、[https://sling.apache.org/site/errorhandling.html](https://sling.apache.org/site/errorhandling.html)を参照してください。
 
 >[!NOTE]
 >
@@ -39,9 +39,9 @@ System provided scripts exist (under `/libs/sling/servlet/errorhandler`) to resp
 >
 >パブリッシュインスタンスでは、CQ WCM Debug Filter は、有効として設定されている場合も含めて常に無効になります。**
 
-## エラーハンドラーによって表示されるページのカスタマイズ方法 {#how-to-customize-pages-shown-by-the-error-handler}
+## エラーハンドラーによって表示されるページのカスタマイズ方法  {#how-to-customize-pages-shown-by-the-error-handler}
 
-エラーが発生した場合にエラーハンドラーによって表示されるページをカスタマイズする独自のスクリプトを作成できます。 カスタマイズしたページは、デフォルトのページ(下 `/apps` のページ)の下に作成され、オーバーレイ `/libs`されます。
+エラーが発生した場合にエラーハンドラーによって表示されるページをカスタマイズする独自のスクリプトを作成できます。 カスタマイズしたページが`/apps`の下に作成され、（`/libs`の下の）デフォルトのページにオーバーレイされます。
 
 >[!NOTE]
 >
@@ -67,11 +67,12 @@ System provided scripts exist (under `/libs/sling/servlet/errorhandler`) to resp
 >
 >そのため、これらの 2 つのハンドラーを置き換える際には十分に気をつけて作業してください。
 
-### HTTP 500 エラーへの応答のカスタマイズ {#customizing-the-response-to-http-errors}
+### HTTP 500 エラーへの応答のカスタマイズ  {#customizing-the-response-to-http-errors}
 
 HTTP 500 エラーはサーバー側の例外によって発生します。
 
-* **[500 内部サーバーエラー](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)**サーバーで予期しない状況が発生したので、要求を処理できません。
+* **[500 内部サーバーエラー](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)**
+サーバーで予期しない状況が発生したので、要求を処理できません。
 
 要求処理の結果例外が発生した場合、Apache Slingフレームワーク(AEMが構築されているフレームワーク):
 
@@ -83,11 +84,11 @@ HTTP 500 エラーはサーバー側の例外によって発生します。
 
    これらは応答の本文内で返されます。
 
-[エラーハンドラーによって表示されるページをカスタマイズする](#how-to-customize-pages-shown-by-the-error-handler)ことで、`500.jsp` スクリプトを作成できます。However, it is only used if `HttpServletResponse.sendError(500)` is executed explicitly; i.e. from an exception catcher.
+[エラーハンドラーによって表示されるページをカスタマイズする](#how-to-customize-pages-shown-by-the-error-handler)ことで、`500.jsp` スクリプトを作成できます。ただし、`HttpServletResponse.sendError(500)`が明示的に実行された場合にのみ使用されます。例えば、例外キャッチャーから。
 
 それ以外の場合は、応答コードは に設定されますが、`500.jsp`500.  スクリプトは実行されません。
 
-500 エラーを処理するには、エラーハンドラースクリプトの名前を例外クラス（またはスーパークラス）と同じにする必要があります。このような例外をすべて処理するには、スクリプト `/apps/sling/servlet/errorhandler/Throwable.js`pまたはを作成し `/apps/sling/servlet/errorhandler/Exception.jsp`ます。
+500 エラーを処理するには、エラーハンドラースクリプトの名前を例外クラス（またはスーパークラス）と同じにする必要があります。このような例外をすべて処理するには、スクリプト`/apps/sling/servlet/errorhandler/Throwable.js`pまたは`/apps/sling/servlet/errorhandler/Exception.jsp`を作成します。
 
 >[!CAUTION]
 >
