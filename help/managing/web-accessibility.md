@@ -63,11 +63,11 @@ Adobe Experience Manager を使用すると、コンテンツ作成者や Web �
 
 [WCAG 2.0 クイックガイド](/help/managing/qg-wcag.md)で WCAG 2.0 の特定の側面を取り上げています。
 
-### WCAG 2.0 アクセシビリティ適合レベル {#wcag-accessibility-conformance-levels}
+### WCAG 2.0 アクセシビリティ適合レベル  {#wcag-accessibility-conformance-levels}
 
 WCAG 2.0 には、[該当するアクセシビリティレベルをカバーするガイドライン（および関連する達成基準）](https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html)が規定されています。
 
-These, as they relate to AEM, are covered under [Level A and AA Conformance](/help/sites-authoring/creating-accessible-content.md). サイトを作成する際は、サイトの全体的なレベルを特定する必要があります。
+これらはAEMに関連するもので、[レベルAとAA準拠](/help/sites-authoring/creating-accessible-content.md)の下にカバーされます。 サイトを作成する際は、サイトの全体的なレベルを特定する必要があります。
 
 >[!NOTE]
 >
