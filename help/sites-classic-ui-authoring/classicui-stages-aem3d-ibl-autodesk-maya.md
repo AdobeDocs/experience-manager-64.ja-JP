@@ -26,23 +26,23 @@ ht-degree: 75%
 1. Image-Based Lighting を設定します。
 
    1. レンダラー設定で、「**[!UICONTROL 次を使用してレンダリング：Mental Ray]**」を選択し、「シーン」タブを開きます。****
-   1. **[!UICONTROL 環境アコーディオンを開き]** 、「画像ベースの照明を **[!UICONTROL 作成]**」をクリックします。
-   1. Click the box icon that has a right arrow on the left side of the box to select the IBL node `mentalRayIblShape1`, then exit the [!UICONTROL Render Settings].
-   1. In the **[!UICONTROL Attribute Editor]**, select the transform node `mentalRayIbl1`, then rename the transform node to `AdobeIbl`.
+   1. **[!UICONTROL 環境]**&#x200B;アコーディオンを開き、**[!UICONTROL イメージベースの照明を作成]**&#x200B;をクリックします。
+   1. ボックスの左側に右向き矢印の付いたボックスアイコンをクリックしてIBLノード`mentalRayIblShape1`を選択し、[!UICONTROL レンダリング設定]を終了します。
+   1. **[!UICONTROL アトリビュートエディタ]**&#x200B;で、トランスフォームノード`mentalRayIbl1`を選択し、トランスフォームノードの名前を`AdobeIbl`に変更します。
 
-   1. Set the [!UICONTROL Scale] of the node to make the environment sphere significantly larger than the largest 3D object to be shown with this stage (for example, `10000,10000,10000`).
+   1. ノードの[!UICONTROL スケール]を設定して、環境球をこのステージで表示する最大の3Dオブジェクト（例：`10000,10000,10000`）より大きくします。
    1. `AdobeIblShape` ノードを選択して、以下のように設定します。
 
       * **[!UICONTROL マッピング]** - 球体
       * **[!UICONTROL タイプ]** - 画像ファイル
       * **[!UICONTROL 光の放射]** - true
-   1. Attach the desired 32-bit TIFF image to the `AdobeIbl` node.
+   1. 必要な32ビットTIFF画像を`AdobeIbl`ノードに添付します。
 
 
 1. グラウンドプレーンを設定します。
 
    * グラウンドプレーンとして使用する適切なプレーンを作成し、IBL 球体内に収まるサイズに設定して、座標原点を通るように配置します。
-   * Attach a **[!UICONTROL Use Background]** material to the ground plane and name it `AdobeUseBackground` and attach it to the ground plane object.
+   * **[!UICONTROL 背景]**&#x200B;マテリアルを地表面にアタッチし、`AdobeUseBackground`と名前を付けて地表面オブジェクトにアタッチします。
 
 1. （オプション）カメラを作成して設定します。
 
@@ -50,17 +50,17 @@ ht-degree: 75%
 
 1. Mental Ray でレンダリングを設定します。
 
-   Configure the [!UICONTROL Render Settings] with the following suggestions.
+   [!UICONTROL レンダリング設定]を次の推奨値で構成します。
 
-   * **[!UICONTROL 共通]** タブ
+   * **** 共通タブ
 
-      Deselect the **[!UICONTROL Alpha channel (mask)]** check box for all Renderable Cameras.
+      すべてのレンダリング可能なカメラの&#x200B;**[!UICONTROL アルファチャネル（マスク）]**&#x200B;チェックボックスをオフにします。
 
    * **[!UICONTROL 「画質」タブ]**
 
       * **[!UICONTROL 全般の画質]** - `0.5` 以下
-      * **[!UICONTROL 間接拡散(GI)モード]** - `Final Gather`
-      * **[!UICONTROL フィルタサイズ]** - `2.0`、 `2.0`
+      * **[!UICONTROL 間接拡散(GI)モード]** -  `Final Gather`
+      * **[!UICONTROL フィルタサイズ]** -  `2.0`、  `2.0`
    * 使用する一般的な画像サイズでシーンをレンダリングします。必要に応じて、ライトを絞り込むか、レンダリング設定をおこなうか、またはその両方をおこないます。
 
       Mental Ray でレンダリングする場合、Image-Based Lighting を使用すると、処理が非常に遅くなり、CPU 使用率が高くなることに注意してください。必要なレンダリング品質を保てる最低の画質設定を使用することをお勧めします。
