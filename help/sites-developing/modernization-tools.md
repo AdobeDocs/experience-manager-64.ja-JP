@@ -1,7 +1,7 @@
 ---
 title: AEM Modernization Tools
-seo-title: AEM Modernization Tools
-description: AEM Modernization Tools レガシーAEM機能を最新のテクノロジーに変換する
+seo-title: AEM最新化ツール
+description: AEM最新化ツールは、既存のAEM機能を最新のテクノロジに変換するのに役立ちます。
 seo-description: AEM最新化ツールを使用すると、レガシーのAEM機能を最新のテクノロジに簡単に変換できます。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 55bd3036bd793a5e3b468b8b6ad595a857311865
 workflow-type: tm+mt
 source-wordcount: '107'
-ht-degree: 75%
+ht-degree: 72%
 
 ---
 
