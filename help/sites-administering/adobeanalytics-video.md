@@ -26,7 +26,7 @@ ht-degree: 52%
 >
 >次に進む前に、AEM に&#x200B;**再生可能なビデオ**&#x200B;がアップロードされていることを確認してください。
 >
->ページ上でビデオを再生できるようにするには、AEM でビデオファイルをトランスコードする方法について、**[こちらのチュートリアル](/help/sites-authoring/default-components-foundation.md#video)**を参照してください。
+>ページ上でビデオを再生できるようにするには、AEM でビデオファイルをトランスコードする方法について、**[こちらのチュートリアル](/help/sites-authoring/default-components-foundation.md#video)**&#x200B;を参照してください。
 
 各方式を使用してビデオトラッキングのフレームワークを設定するには、以下の手順を実行します。
 
@@ -40,7 +40,7 @@ ht-degree: 52%
 
 1. [Adobe Analyticsの設定とフレームワークを作成します](/help/sites-administering/adobeanalytics.md)。
 
-   * The examples in the sections that follow use the name **my-sc-configuration** for the configuration and **videofw** for the framework.
+   * 以降の節の例では、設定には&#x200B;**my-sc-configuration**&#x200B;という名前を、フレームワークには&#x200B;**videofw**&#x200B;を使用します。
 
 1. フレームワークページで、RSIDを選択し、使用方法を「all」に設定します。 （[http://localhost:4502/cf#/etc/cloudservices/sitecatalyst/videoconf/videofw.html](http://localhost:4502/cf#/etc/cloudservices/sitecatalyst/videoconf/videofw.html)）。
 1. サイドキックの「一般」コンポーネントカテゴリから、ビデオコンポーネントをフレームワークにドラッグします。
@@ -81,7 +81,7 @@ XX というサフィックスは、マイルストーンを定義する追跡�
   </tr> 
   <tr> 
    <td>eventdata.videoName </td> 
-   <td>Variables mapped to this will contain the <strong>user-friendly</strong> name (<strong>Title</strong>) of the video if set in the DAM; if this is not set, the video's <strong>file name</strong> will be sent instead. ビデオの再生開始時に一度だけ送信されます。</td> 
+   <td>これにマッピングされる変数は、DAMに設定されている場合、ビデオの<strong>ユーザーにわかりやすい</strong>名前（<strong>タイトル</strong>）を含みます。これが設定されていない場合は、ビデオの<strong>ファイル名</strong>が代わりに送信されます。 ビデオの再生開始時に一度だけ送信されます。</td> 
   </tr> 
   <tr> 
    <td>eventdata.videoFileName </td> 
@@ -97,7 +97,7 @@ XX というサフィックスは、マイルストーンを定義する追跡�
   </tr> 
   <tr> 
    <td>eventdata.events.a.media.timePlayed</td> 
-   <td>Sent every time a milestone is triggered, the number of seconds the user spent watching the given segment is also sent along with this event. e.g. eventX=21<br /> </td> 
+   <td>マイルストーンがトリガーされるたびに送信され、特定のセグメントの視聴に費やした秒数も、このイベントと共に送信されます。例： eventX=21<br /> </td> 
   </tr> 
   <tr> 
    <td>eventdata.events.a.media.view </td> 
@@ -105,15 +105,15 @@ XX というサフィックスは、マイルストーンを定義する追跡�
   </tr> 
   <tr> 
    <td>eventdata.events.a.media.complete </td> 
-   <td>Sent when video finished playing<br /> </td> 
+   <td>ビデオの再生が終了すると送信<br /> </td> 
   </tr> 
   <tr> 
    <td>eventdata.events.milestoneX </td> 
-   <td>Sent when the given milestone is passed, X stands for the second the milestone gets triggered at<br /> </td> 
+   <td>特定のマイルストーンが渡されると送信され、Xは、<br />でマイルストーンがトリガされる2番目の値を表します </td> 
   </tr> 
   <tr> 
    <td>eventdata.a.contentType </td> 
-   <td>Sent on every milestone; shows up as pev3 in the Adobe Analytics call, usually sent as "video"<br /> </td> 
+   <td>すべてのマイルストーンで送信され、は、Adobe Analytics呼び出しでpev3として表示され、通常は「video」<br />として送信されます。 </td> 
   </tr> 
   <tr> 
    <td>eventdata.a.media.name </td> 
@@ -128,7 +128,7 @@ XX というサフィックスは、マイルストーンを定義する追跡�
 
 >[!NOTE]
 >
->You can set a video&#39;s **user friendly **name by opening the video for editing in the DAM, and setting the **Title** metadata field to the desired name.
+>DAMで編集するビデオを開き、**タイトル**&#x200B;メタデータフィールドを目的の名前に設定することで、ビデオの**ユーザーにわかりやすい**nameを設定できます。
 
 1. 「オフセットを追跡」ボックスで、トラッキング方式としてマイルストーンを選択してから、秒単位の追跡オフセットのコンマ区切りリストを入力します。例えば、次の値はビデオの開始から 4、8、16、20 および 28 秒後にマイルストーンを定義します。
 
@@ -140,10 +140,10 @@ XX というサフィックスは、マイルストーンを定義する追跡�
 
 1. CQ変数をAdobe Analyticsプロパティにマップするには、ContentFinderからコンポーネント上のCQ変数の横にあるAdobe Analyticsプロパティをドラッグします。
 
-   For information about optimizing the mappings, see the [Measuring Video in Adobe Analytics](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/setup/setup-overview.html) guide.
+   マッピングの最適化について詳しくは、『[Adobe Analyticsでのビデオの測定](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/setup/setup-overview.html)ガイド』を参照してください。
 
-1. [ページ追加のフレームワーク](/help/sites-administering/adobeanalytics.md) 。
-1. To test the setup in **Preview mode**, play the video to get Adobe Analytics calls to trigger.
+1. [追加](/help/sites-administering/adobeanalytics.md) frameworktoページ。
+1. **プレビューモード**&#x200B;で設定をテストするには、ビデオを再生してAdobe Analyticsの呼び出しをトリガーします。
 
 以下のAdobe Analyticsトラッキングデータの例は、4,8,16,20, 24のトラックオフセットと、CQ変数に対する次のマッピングを使用したマイルストーントラッキングに適用されます。
 
@@ -228,7 +228,7 @@ DigitalPulse Debuggerで表示する場合、前述の例を使用したAdobe An
 
 ![chlimage_1-156](assets/chlimage_1-156.png)
 
-*これは、以下の値を含むAdobe Analyticsに対する&#x200B;**最初の呼び出し**です。*
+*これは、次の値を含む、**Adobe Analyticsに対する**最初の呼び出しです。*
 
 * *eventdata.a.media.name に対する prop1 と eVar1*
 * *prop2～4、および contentType（video）と segment（1:O:1-4）を格納している eVar2 と eVar3*
@@ -249,7 +249,7 @@ DigitalPulse Debuggerで表示する場合、前述の例を使用したAdobe An
 非レガシーマイルストーン方式は、マイルストーン方式によく似ていますが、マイルストーンを計測の長さの割合に基づいて定義する点が異なります。次の点は共通です。
 
 * ビデオ再生がマイルストーンを渡すと、ページはAdobe Analyticsを呼び出してイベントを追跡します。
-* The [static set of CQ variables](#milestones) that are defined for mapping with Adobe Analytics properties.
+* Adobe Analyticsプロパティとのマッピング用に定義されたCQ変数](#milestones)の[静的セットです。
 * 定義したマイルストーンごとに、Adobe AnalyticsプロパティにマップできるCQ変数がコンポーネントによって作成されます。
 
 これらの CQ 変数の名前には、次の形式を使用します。
@@ -275,10 +275,10 @@ eventdata.events.milestoneXX
 
 1. CQ変数をAdobe Analyticsプロパティにマップするには、ContentFinderからコンポーネント上のCQ変数の横にあるAdobe Analyticsプロパティをドラッグします。
 
-   For information about optimizing the mappings, see the [Measuring Video in Adobe Analytics](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/setup/setup-overview.html) guide.
+   マッピングの最適化について詳しくは、『[Adobe Analyticsでのビデオの測定](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/setup/setup-overview.html)ガイド』を参照してください。
 
-1. [ページ追加のフレームワーク](/help/sites-administering/adobeanalytics.md) 。
-1. To test the setup in **Preview mode**, play the video to get Adobe Analytics calls to trigger.
+1. [追加](/help/sites-administering/adobeanalytics.md) frameworktoページ。
+1. **プレビューモード**&#x200B;で設定をテストするには、ビデオを再生してAdobe Analyticsの呼び出しをトリガーします。
 
 ## レガシーマイルストーン {#legacy-milestones}
 
@@ -292,13 +292,13 @@ eventdata.events.milestoneXX
 
    * 例：10,50,75,100
 
-   また、Adobe Analyticsに送信される情報はカスタマイズが容易で、 マッピングに使用できる変数は3つのみです。
+   また、Adobe Analyticsに送信される情報はカスタマイズが容易で、マッピングに使用できる変数は3つのみです。
 
 <table> 
  <tbody> 
   <tr> 
    <td>eventdata.videoName <br /> </td> 
-   <td>Variables mapped to this will contain the <strong>user-friendly</strong> name (<strong>Title</strong>) of the video if set in the DAM; if the Title is not set, the video's <strong>file name</strong> will be sent instead. ビデオの再生開始時に一度だけ送信されます。<br /> </td> 
+   <td>これにマッピングされる変数は、DAMに設定されている場合、ビデオの<strong>ユーザーにわかりやすい</strong>名前（<strong>タイトル</strong>）を含みます。タイトルが設定されていない場合は、ビデオの<strong>ファイル名</strong>が代わりに送信されます。 ビデオの再生開始時に一度だけ送信されます。<br /> </td> 
   </tr> 
   <tr> 
    <td>eventdata.videoFileName </td> 
@@ -319,18 +319,18 @@ eventdata.events.milestoneXX
 
    呼び出しの中の&#x200B;**その他の関連情報**&#x200B;は、**pev3** という&#x200B;**ひとつ**&#x200B;の変数に連結されて送信されます。
 
-   **DigitalPulse Debuggerで表示する場合** 、前述の例を使用したAdobe Analyticsへの呼び出しの例を次に示します。
+   **前述の例を使用したAdobe Analyticsへの** 呼び出しの例は、DigitalPulse Debuggerで表示した場合、次のようになります。
 
    ![lmilestones1](assets/lmilestones1.png)
 
    *この呼び出しで送信される&#x200B;**pev3**変数には、以下の情報が格納されます。*
 
-   * *名前* — ビデオファイルの名前(*film.avi*)
-   * *長さ* — ビデオファイルの長さ(秒単位、*100*)
-   * *プレーヤー名* — ビデオファイルの再生に使用するビデオプレーヤー(*HTML5ビデオ*)
-   * *再生秒数合計* — ビデオが再生された秒数の合計(*25*)
-   * *開始のタイムスタンプ* — ビデオ再生がいつ開始したかを識別するタイムスタンプ(*1331035567*)
-   * *再生セッション* — 再生セッションの詳細。 このフィールドは、ユーザーによるビデオの操作を示します。This might include data such as where they started playing the video, whether they used the video slider to advance the video, and where they stopped playing the video (*L10E24S58L58 - video was stopped at sec. 25 of section L10, then skipped to sec. 48*)
+   * *名前*  — ビデオファイル(*film.avi*)の名前。
+   * *長さ*  — ビデオファイルの長さ（秒単位）(*100*)
+   * *プレーヤー名*  — ビデオファイルの再生に使用するビデオプレーヤー(*HTML5ビデオ*)
+   * *再生秒数合計*  — ビデオが再生された秒数の合計(*25*)
+   * *開始のタイムスタンプ*  — ビデオ再生がいつ開始したかを識別するタイムスタンプ(*1331035567*)
+   * *再生セッション*  — 再生セッションの詳細。このフィールドは、ユーザーによるビデオの操作を示します。例えば、ビデオの再生開始場所、ビデオの前進にビデオスライダーを使用したかどうか、ビデオの再生を停止した場所（*L10E24S58L58 — ビデオが1秒で停止された場合）などのデータが含まれます。セクションL10の25、次に秒にスキップ48*)
 
 ## レガシー秒 {#legacy-seconds}
 
@@ -349,7 +349,7 @@ eventdata.events.milestoneXX
  <tbody> 
   <tr> 
    <td>eventdata.videoName <br /> </td> 
-   <td>Variables mapped to this will contain the <strong>user-friendly</strong> name (<strong>Title</strong>) of the video if set in the DAM; if the Title is not set, the video's <strong>file name</strong> will be sent instead. ビデオの再生開始時に一度だけ送信されます。<br /> </td> 
+   <td>これにマッピングされる変数は、DAMに設定されている場合、ビデオの<strong>ユーザーにわかりやすい</strong>名前（<strong>タイトル</strong>）を含みます。タイトルが設定されていない場合は、ビデオの<strong>ファイル名</strong>が代わりに送信されます。 ビデオの再生開始時に一度だけ送信されます。<br /> </td> 
   </tr> 
   <tr> 
    <td>eventdata.videoFileName </td> 
@@ -364,7 +364,7 @@ eventdata.events.milestoneXX
 
 >[!NOTE]
 >
->You can set a video&#39;s **user friendly **name by opening the video for editing in the DAM, and setting the **Title** metadata field to the desired name. また、終了したら、変更内容を保存する必要があります。
+>DAMで編集するビデオを開き、**タイトル**&#x200B;メタデータフィールドを目的の名前に設定することで、ビデオの**ユーザーにわかりやすい**nameを設定できます。 また、終了したら、変更内容を保存する必要があります。
 
 1. これらの変数を prop1、prop2 および prop3 にマッピングします。
 
