@@ -11,23 +11,26 @@ content-type: reference
 discoiquuid: 482b5eb0-1b15-4f10-a9d8-3b72dd74acf8
 translation-type: tm+mt
 source-git-commit: db26dd05f6c0997eeda462f27971cbcfa6737527
+workflow-type: tm+mt
+source-wordcount: '1073'
+ht-degree: 64%
 
 ---
 
 
-# タッチ操作対応 UI 機能のステータス {#touch-ui-feature-status}
+# タッチ操作対応 UI 機能のステータス  {#touch-ui-feature-status}
 
 >[!CAUTION]
 >
->AEMのバージョン6.4では、 [Classic UIは非推奨です](/help/release-notes/deprecated-removed-features.md)。 アドビでは、クラシックUIの機能強化を今後行う予定はありません。タッチ対応UIの強力な新機能を利用することをお勧めします。
+>AEMのバージョン6.4では、[クラシックUIは非推奨です](/help/release-notes/deprecated-removed-features.md)。 Adobeは、クラシックUIをさらに拡張する予定はありません。タッチ対応UIの強力な新機能を活用することをお勧めします。
 
 バージョン 6.0 から、AEM では、Adobe Marketing Cloud および全体的なアドビユーザーインターフェイスガイドラインと合致する「タッチ操作対応 UI」と呼ばれる（「タッチ UI」とも呼ばれます）新型ユーザーインターフェイスを採用しています。タッチ操作対応 UI は、従来のデスクトップ指向のインターフェイス（「クラシック UI」と呼ばれます）とほぼ同等の機能を備え、AEM の標準 UI となりました。
 
 ほとんどの機能はタッチ操作対応 UI に搭載されていますが、まだ完成せず、今後のリリースで追加される機能もあります。
 
-AEM 6.4で実装された機能の現在のステータスを次に示します。
+次のリストは、AEM 6.4で実装された機能の現在のステータスを示しています。
 
-For recommendations for customers that upgrade to AEM 6.4, please see [User Interface Recommendations for Customers](/help/sites-deploying/ui-recommendations.md) for details.
+AEM 6.4にアップグレードするお客様の推奨事項については、[ユーザーインターフェイスRecommendationsのお客様](/help/sites-deploying/ui-recommendations.md)を参照してください。
 
 >[!NOTE]
 >
@@ -39,17 +42,17 @@ For recommendations for customers that upgrade to AEM 6.4, please see [User Inte
 >
 >このリストは、完全を期していますが、あらゆる機能を網羅しているわけではありません。
 
-## 凡例 {#legend}
+## 凡例  {#legend}
 
 * **完全**：この機能はタッチ操作対応 UI で完全に利用できます。
-* **主に**:この機能は、タッチ操作対応UIでほとんど使用できます。
+* **主に**:この機能は、ほとんどの場合タッチ対応UIで利用できます。
 * **消失**：この機能はタッチ操作対応 UI に存在せず、この操作をおこなうにはクラシック UI を使用する必要があります。
 * **置換**：この機能は動作が異なる新しい実装で置換されています。
 * **削除**：この機能は、現在タッチ操作対応 UI に存在せず、置換もされません。
 
 ## 機能ステータス：サイト管理 {#feature-status-sites-admin}
 
-This is a list of capabilities the classic UI Site Admin ( `/siteadmin`) has and the status in the touch-enabled UI ( `/sites.html`).
+これは、従来のUIサイト管理者(`/siteadmin`)が持つ機能とタッチ対応UI(`/sites.html`)のステータスのリストです。
 
 <table> 
  <tbody>
@@ -61,7 +64,7 @@ This is a list of capabilities the classic UI Site Admin ( `/siteadmin`) has and
   <tr>
    <td>サイト階層を移動</td> 
    <td>完全<br /> </td> 
-   <td>AEM 6.4では、コンテンツツリービ <a href="/help/sites-authoring/basic-handling.md#content-tree">ューが導入されました</a>。</td> 
+   <td>AEM 6.4では、<a href="/help/sites-authoring/basic-handling.md#content-tree">コンテンツツリー表示</a>が導入されました。</td> 
   </tr>
   <tr>
    <td>ワークフローを開始</td> 
@@ -84,7 +87,7 @@ This is a list of capabilities the classic UI Site Admin ( `/siteadmin`) has and
    <td> </td> 
   </tr>
   <tr>
-   <td>Create new livecopy <br /> </td> 
+   <td>新しいlivecopy <br />を作成 </td> 
    <td>完全<br /> </td> 
    <td> </td> 
   </tr>
@@ -211,14 +214,14 @@ This is a list of capabilities the classic UI Site Admin ( `/siteadmin`) has and
   <tr>
    <td>参照</td> 
    <td>ほぼ完全</td> 
-   <td>着信ページリンクの表示は、2019リリースのAEMで追加されます。</td> 
+   <td>着信ページリンクの表示は、2019年リリースのAEMで追加されます。</td> 
   </tr>
  </tbody>
 </table>
 
 ## 機能ステータス：ページエディター {#feature-status-page-editor}
 
-This is a list of capabilities the classic UI Page Editor ( `/cf#`) has and the status in the touch-enabled ( `/editor.html`).
+これは、クラシックUIページエディター(`/cf#`)が持つ機能とタッチ対応(`/editor.html`)のステータスのリストです。
 
 <table> 
  <tbody>
@@ -273,7 +276,7 @@ This is a list of capabilities the classic UI Page Editor ( `/cf#`) has and the 
    <td> </td> 
   </tr>
   <tr>
-   <td>Responsive Preview<br /> </td> 
+   <td>レスポンシブプレビュー<br /> </td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
@@ -298,7 +301,7 @@ This is a list of capabilities the classic UI Page Editor ( `/cf#`) has and the 
    <td> </td> 
   </tr>
   <tr>
-   <td>プロパティを編集<br /> </td> 
+   <td>プロパティの編集<br /> </td> 
    <td>完全</td> 
    <td> </td> 
   </tr>
@@ -315,7 +318,7 @@ This is a list of capabilities the classic UI Page Editor ( `/cf#`) has and the 
   <tr>
    <td>ワークフローパッケージ処理</td> 
    <td>ほぼ完全</td> 
-   <td>タッチ操作対応UIから完全にアクセス可能。 従来のUIに複数のワークフローペイロードが表示されていました。<br /> </td> 
+   <td>タッチ操作対応UIから完全にアクセス可能 クラシックUIに複数のワークフローペイロードが表示されています。<br /> </td> 
   </tr>
   <tr>
    <td>ページをロック／ロック解除</td> 
@@ -432,7 +435,7 @@ This is a list of capabilities the classic UI Page Editor ( `/cf#`) has and the 
 
 ## 機能ステータス：テキスト、テーブルおよび画像エディター {#feature-status-text-table-and-image-editors}
 
-これは、従来のUIテキスト、テーブル、および画像エディターの機能と、タッチ対応UIのステータスのリストです。
+これは、クラシックUIテキスト、テーブル、および画像エディターの機能と、タッチ対応UIのステータスのリストです。
 
 <table> 
  <tbody>
@@ -449,7 +452,7 @@ This is a list of capabilities the classic UI Page Editor ( `/cf#`) has and the 
   <tr>
    <td>RTEプラグインの有効化/無効化</td> 
    <td>完全<br /> </td> 
-   <td>テンプレートエディターを使 <a href="/help/sites-authoring/templates.md">用して実行できま</a>す。</td> 
+   <td><a href="/help/sites-authoring/templates.md">テンプレートエディター</a>を使用して実行できます。</td> 
   </tr>
   <tr>
    <td>プレーンテキストにRTEを使用</td> 
@@ -472,7 +475,7 @@ This is a list of capabilities the classic UI Page Editor ( `/cf#`) has and the 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：Microsoft wordから貼り付け<br /> </td> 
+   <td>RTEプラグイン：Microsoft Wordから貼り付け<br /> </td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
@@ -492,12 +495,12 @@ This is a list of capabilities the classic UI Page Editor ( `/cf#`) has and the 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：両端揃え</td> 
+   <td>RTEプラグイン：均等配置</td> 
    <td>完全<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：リスト（箇条書き/番号）</td> 
+   <td>RTEプラグイン：リスト（箇条書き/数字）</td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
@@ -522,7 +525,7 @@ This is a list of capabilities the classic UI Page Editor ( `/cf#`) has and the 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：テーブル（埋め込みテーブルエディター）</td> 
+   <td>RTEプラグイン：テーブル（埋め込みテーブルエディタ）</td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
@@ -537,24 +540,24 @@ This is a list of capabilities the classic UI Page Editor ( `/cf#`) has and the 
    <td> </td> 
   </tr>
   <tr>
-   <td>テーブルエディター</td> 
+   <td>テーブルエディタ</td> 
    <td>完了</td> 
-   <td>インプレイス、ダイアログ、フルスクリーンで使用できます。<br /> </td> 
+   <td>インプレース、ダイアログ、フルスクリーンで使用できます。<br /> </td> 
   </tr>
   <tr>
-   <td>表のセルに画像をドラッグ&amp;ドロップ<br /> </td> 
+   <td>画像をテーブルのセル<br />にドラッグ&amp;ドロップ </td> 
    <td>完了</td> 
    <td>使用可能なインライン</td> 
   </tr>
   <tr>
    <td>画像エディター<br /> </td> 
    <td>完了</td> 
-   <td>インプレイス、ダイアログ、フルスクリーンで使用できます。<br /> </td> 
+   <td>インプレース、ダイアログ、フルスクリーンで使用できます。<br /> </td> 
   </tr>
   <tr>
    <td>IPEプラグインの有効化/無効化</td> 
    <td>完了</td> 
-   <td>テンプレートエディターにUIが表示さ <a href="/help/sites-authoring/templates.md">れました</a>。</td> 
+   <td>これで、<a href="/help/sites-authoring/templates.md">テンプレートエディター</a>にUIが追加されました。</td> 
   </tr>
   <tr>
    <td>IPEプラグイン：切り抜き</td> 
@@ -603,7 +606,7 @@ This is a list of capabilities the classic UI Page Editor ( `/cf#`) has and the 
   <tr>
    <td>タスク管理</td> 
    <td>置換</td> 
-   <td>6.0では、 <a href="/help/sites-authoring/projects.md">Projects &amp; Tasksが導入されました</a>。<br /> </td> 
+   <td>6.0は<a href="/help/sites-authoring/projects.md">プロジェクトとタスク</a>を導入しました。<br /> </td> 
   </tr>
   <tr>
    <td>ワークフロー受信トレイ<br /> </td> 
@@ -611,7 +614,7 @@ This is a list of capabilities the classic UI Page Editor ( `/cf#`) has and the 
    <td> </td> 
   </tr>
   <tr>
-   <td>ページテンプレート設定へのワークフロー(<code>/etc/workflow/wcm/templates.html</code>)</td> 
+   <td>ページテンプレートの構成(<code>/etc/workflow/wcm/templates.html</code>)へのワークフロー</td> 
    <td>消失<br /> </td> 
    <td>クラシック UI を使用します。</td> 
   </tr>
@@ -638,10 +641,10 @@ This is a list of capabilities the classic UI Page Editor ( `/cf#`) has and the 
   <tr>
    <td>ユーザー、グループ、権限UI<br /> </td> 
    <td>ほとんど完了<br /> </td> 
-   <td>高度な権限編集を行うには、クラシックUIを使用します。<br /> </td> 
+   <td>高度な権限の編集には、クラシックUIを使用します。<br /> </td> 
   </tr>
   <tr>
-   <td>バージョンの削除(<code>/etc/versioning/purge.html</code>)</td> 
+   <td>パージバージョン(<code>/etc/versioning/purge.html</code>)</td> 
    <td>消失</td> 
    <td>クラシック UI を使用します。</td> 
   </tr>
