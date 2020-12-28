@@ -7,30 +7,33 @@ contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 translation-type: tm+mt
 source-git-commit: 4c1b1210503dc535585ae8912a7b94b88d1604cf
+workflow-type: tm+mt
+source-wordcount: '330'
+ht-degree: 33%
 
 ---
 
 
 # AEM コミュニティ {#the-aem-community}
 
-## What is the AEM Community? {#what-is}
+## AEMコミュニティとは{#what-is}
 
-AEMコミュニティには、世界中に何千もの会員がいます。 メンバーは、Experience Manager を初めて利用する人から熟練したエキスパート開発者や管理者まで、多岐にわたります。AEMの機能に関する質問から、開発に関する質問まで、お客様を支援します。 内外のエキスパートユーザーとともに定期的なエキスパートセッションを開催して、サンプル、記事、チュートリアルの作成を支援しています。
+AEMコミュニティには世界中に何千もの会員がいる。 メンバーは、Experience Manager を初めて利用する人から熟練したエキスパート開発者や管理者まで、多岐にわたります。AEMの機能に関する質問から、開発の質問まで、お客様を支援します。 内外のエキスパートユーザーとともに定期的なエキスパートセッションを開催して、サンプル、記事、チュートリアルの作成を支援しています。
 
-[今すぐコミュニティに参加して、優れたコンテンツ、人々および知識にアクセスしてください。](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager) 誰にでも開いてる。AEMに興味がある場合は、どうぞ。 今日よ！
+[今すぐコミュニティに参加して、優れたコンテンツ、人々および知識にアクセスしてください。](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager) 誰もが開いている。AEMに興味を持っていれば、どういたします。今日立ち寄れ！
 
-## AEMコミュニティのメンバーにはどのようなイベントがありますか。 {#events}
+## AEMコミュニティのメンバーには、どのようなイベントがありますか。{#events}
 
-会員にはイベントが山ほどある！ 毎月、AEMの特定のトピックに関する専門家の質問を受け入れるセッションを開催します。 We also will let you know about major events, such as [Immerse](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__fb7p-the_immerseagendai.html) or the [Adobe Summit](http://summit.adobe.com/na/?promoid=6JMR7JQY&mv=other), or even user group events in your area.
+会員のイベントが山ほどある！ 毎月、特定のAEMトピックについて専門家に聞くことができるセッションを開催します。 また、[Immerse](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__fb7p-the_immerseagendai.html)や[Adobeサミット](http://summit.adobe.com/na/?promoid=6JMR7JQY&amp;mv=other)などの主要なイベントや、お客様の地域のユーザーグループイベントについてもお知らせします。
 
-The best thing to do is [visit the AEM Community today and see what&#39;s going on.](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
+最善の方法は、[AEMコミュニティに今すぐアクセスして、何が起きているのか調べることです。](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
 
-## Can I get code samples to help me? {#code-samples}
+## コードサンプルを入手してください。{#code-samples}
 
-AEMコミュニティチームは、Experience Managerの開発者やユーザーがソリューションを理解できるように、「使い方」ガイドやコードサンプルを継続的に作成しています。 [以下に、実用的な記事とコードサンプルの完全なリストを示します。](https://helpx.adobe.com/experience-manager/topics/how-to.html)
+AEMコミュニティチームは、Experience Manager開発者やユーザーがソリューションを理解できるように、ガイドやコードサンプルを「使い方」し続けています。 [ここでは、実用的な記事とコードサンプルの完全なリストを示します。](https://helpx.adobe.com/jp/experience-manager/topics/how-to.html)
 
-## コミュニティエキスパートセッションとGEMSに質問する {#gems}
+## コミュニティエキスパートセッションとGEMS {#gems}に問い合わせる
 
-AEMコミュニティでは、技術とベストプラクティスに関するメンバーの教育を支援する定期的なイベントを開催しています。 これらのライブ Web キャストに参加したり、時間のあるときに再生したりできます。エキスパートイベントや概要、新しい録画情報もあります。
+AEMコミュニティは、技術とベストプラクティスをメンバーに教えるのに役立つ定期的なイベントを行っています。 これらのライブ Web キャストに参加したり、時間のあるときに再生したりできます。エキスパートイベントがいて、概要と新しい録画情報も掲載しています。
 
-[過去のExperience Manager Expertセッションの完全なリストはこちらです。](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/atace-index.html)
+[過去のExperience Managerエキスパートセッションの完全なリストをご紹介します。](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/atace-index.html)
