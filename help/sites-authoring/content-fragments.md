@@ -22,7 +22,7 @@ ht-degree: 98%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、AEM 6.4 Service Pack 2(6.4.2.0)以降が [必要です](/help/release-notes/sp-release-notes.md)。
+>一部のコンテンツフラグメント機能では、[AEM 6.4 Service Pack 2 (6.4.2.0)以降](/help/release-notes/sp-release-notes.md)のアプリケーションが必要です。
 
 Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments.md)として作成および管理されます。
 
@@ -32,7 +32,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
 >[!NOTE]
 >
->**コンテンツフラグメント**&#x200B;と&#x200B;**[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)**は、AEM 内の異なる機能です。
+>**コンテンツフラグメント**&#x200B;と&#x200B;**[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)**&#x200B;は、AEM 内の異なる機能です。
 >
 >* **コンテンツフラグメント**&#x200B;は、主にテキストや関連画像などの編集コンテンツです。これは、デザインやレイアウトを含まない純粋なコンテンツです。
 >* **エクスペリエンスフラグメント**&#x200B;は完全にレイアウトされたコンテンツであり、Web ページのフラグメントです。
@@ -71,7 +71,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
    * 適切にキュレーションされた関連メディアコンテンツと連携できます。
    * アドホックコンテンツのバリエーションをフラグメント内で集中管理したまま、それらのバリエーションをその場で作成できます。
 
-## ページへのコンテンツフラグメントの追加 {#adding-a-content-fragment-to-your-page}
+## ページへのコンテンツフラグメントの追加  {#adding-a-content-fragment-to-your-page}
 
 1. 編集するページを開きます。
 
@@ -144,7 +144,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 >
 >フラグメントソースの編集は、そのコンテンツフラグメントを参照するすべてのページに影響します。
 
-## 中間コンテンツの追加 {#adding-in-between-content}
+## 中間コンテンツの追加  {#adding-in-between-content}
 
 特定のコンテンツフラグメントをページに追加すると、フラグメントの各 HTML 段落間（および上部／下部）に&#x200B;**[!UICONTROL コンポーネントをここにドラッグ]**&#x200B;プレースホルダーが表示されます。
 
@@ -182,7 +182,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
 
 
-## 関連コンテンツの使用 {#using-associated-content}
+## 関連コンテンツの使用  {#using-associated-content}
 
 [コンテンツフラグメント](/help/assets/content-fragments.md)に[コンテンツを関連付けた](/help/assets/content-fragments-assoc-content.md)場合、これらのアセットは（フラグメントをコンテンツページに配置した後に）サイドパネルから使用できます。関連コンテンツは、事実上、[中間コンテンツ](#adding-in-between-content)用のコンテンツの特別なソースです。
 
