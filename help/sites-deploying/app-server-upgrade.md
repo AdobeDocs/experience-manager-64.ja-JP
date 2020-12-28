@@ -56,7 +56,7 @@ ht-degree: 95%
 
 1. 次の操作をおこなって、sling.properties ファイル内の必要なプロパティを削除します。
 
-   1. Open the file located at `crx-quickstart/launchpad/sling.properties`
+   1. `crx-quickstart/launchpad/sling.properties`にあるファイルを開きます
    1. 次のプロパティを削除してファイルを保存します。
 
       1. `sling.installer.dir`
@@ -71,8 +71,8 @@ ht-degree: 95%
 1. 不要なファイルとフォルダーを削除します。具体的に削除する必要のある項目は次のとおりです。
 
    * **launchpad/startup フォルダー**：ターミナルで次のコマンドを実行して削除できます。`rm -rf crx-quickstart/launchpad/startup`
-   * **base.jarファイル**: `find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
-   * The **BootstrapCommandFile_timestamp.txt file**: `rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
+   * **base.jarファイル**:`find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
+   * **BootstrapCommandFile_timestamp.txtファイル**:`rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
 
 1. 新しく移行された segmentstore を適切な場所にコピーします。
 
@@ -98,11 +98,11 @@ ht-degree: 95%
 
 1. 設定ファイルを編集し、使用できる状態にします。具体的には、次のように編集します。
 
-   * Add the following line to **org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**:
+   * &lt;a0/追加>org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config **への次の行：**
 
       `customBlobStore=true`
 
-   * Then add the following lines to **org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config**:
+   * 次に、**org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config**&#x200B;に次の行を追加します。
 
       ```
       path=./crx-quickstart/repository/datastore
