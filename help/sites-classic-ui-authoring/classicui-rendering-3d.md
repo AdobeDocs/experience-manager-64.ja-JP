@@ -38,7 +38,7 @@ AEM で操作して保存した 3D アセットをレンダリングして、Web
 
 一般的に、Rapid Refine レンダラーで大きな画像をレンダリングするには数分かかります。しかし、サードパーティ製レンダラーを最高品質に設定すると、数十分、場合によっては数時間かかることがよくあります。
 
-サーバーの過負荷を防ぐために、必要に応じて変換、処理およびレンダリングジョブがサーバーのキューに登録されます。The message &quot;Waiting for rendering...&quot; is shown on recently uploaded assets in the [!UICONTROL Card View]. このステータスは、現在のレンダリングジョブが開始できるように、他の処理ジョブまたはレンダリングジョブが終了する必要があることを示します。
+サーバーの過負荷を防ぐために、必要に応じて変換、処理およびレンダリングジョブがサーバーのキューに登録されます。「Waiting for rendering...」というメッセージ は、[!UICONTROL カード表示]内の最近アップロードされたアセットに表示されます。 このステータスは、現在のレンダリングジョブが開始できるように、他の処理ジョブまたはレンダリングジョブが終了する必要があることを示します。
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ AEM で操作して保存した 3D アセットをレンダリングして、Web
 
    ![chlimage_1-13](assets/chlimage_1-13.png)
 
-1. Near the upper-right corner of the asset details page, tap the **[!UICONTROL Stage Selector]** icon (spotlight), then select a stage name with the background and lighting that you want to apply to the 3D object.
+1. アセットの詳細ページの右上隅近くにある「**[!UICONTROL ステージセレクター]**」アイコン（スポットライト）をタップし、3Dオブジェクトに適用する背景と明るさを持つステージ名を選択します。
 
    [AEM 3D でのステージの使用](/help/sites-classic-ui-authoring/classicui-stages-aem3d.md)を参照してください。
 
@@ -67,7 +67,7 @@ AEM で操作して保存した 3D アセットをレンダリングして、Web
 
    [!UICONTROL ステージセレクターアイコン]
 
-1. On the **[!UICONTROL Render]** drop-down list on the left side of the asset details page, select a renderer.
+1. アセットの詳細ページの左側の&#x200B;**[!UICONTROL レンダリング]**&#x200B;ドロップダウンリストで、レンダラーを選択します。
 
    デフォルトの **[!UICONTROL Rapid Refine]** レンダラーは常に表示されます。選択したステージがネイティブ形式の場合は、対応するサードパーティ製レンダラーもリストに表示され、選択できるようになります。
 
@@ -75,12 +75,12 @@ AEM で操作して保存した 3D アセットをレンダリングして、Web
 
 1. 以下の操作を実行してください。
 
-   * In the **[!UICONTROL Width and Height]** fields, enter the pixel width and height that you want your image rendered.
-   * In the **[!UICONTROL Image Name]** field, enter the name of the rendered image.
-   * In the **[!UICONTROL Export Path]** field, enter the path where you want the rendered image stored. Or, tap the **[!UICONTROL Browse]** icon and navigate to a location.
+   * **[!UICONTROL 幅と高さ]**&#x200B;フィールドに、イメージをレンダリングするピクセル単位の幅と高さを入力します。
+   * 「**[!UICONTROL イメージ名]**」フィールドに、レンダリングされたイメージの名前を入力します。
+   * [**[!UICONTROL 書き出しパス]**]フィールドに、レンダリングしたイメージを保存するパスを入力します。 または、**[!UICONTROL 参照]**&#x200B;アイコンをタップし、場所を指定します。
    * （オプション）「**[!UICONTROL 既存の画像を上書き]**」チェックボックスを選択または選択解除します。
 
-1. Near the upper-right corner of the asset details page, tap the **[!UICONTROL Camera Selector]** icon. レンダリングした画像に適用するカメラ視野を選択します。
+1. アセットの詳細ページの右上隅近くにある「**[!UICONTROL カメラセレクター]**」アイコンをタップします。 レンダリングした画像に適用するカメラ視野を選択します。
 
    左右または上下のバーは、レンダリングされる視野の部分を示す視覚的なインジケーターです。選択したステージにカメラが含まれる場合は、事前定義されたカメラを選択できます。
 
@@ -90,5 +90,5 @@ AEM で操作して保存した 3D アセットをレンダリングして、Web
 
 1. 「**[!UICONTROL レンダリングを開始]**」をタップして、レンダリングプロセスを開始します。
 
-   レンダリングが開始されたことを示すメッセージが一時的に表示されます。For convenience, this message also includes a link to the selected [!UICONTROL Output Folder] so you can navigate to it directly.
+   レンダリングが開始されたことを示すメッセージが一時的に表示されます。便宜上、このメッセージには、選択した[!UICONTROL 出力フォルダー]へのリンクも含まれているので、このフォルダーに直接移動できます。
 
