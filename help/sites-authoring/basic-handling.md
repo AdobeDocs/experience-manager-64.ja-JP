@@ -32,7 +32,7 @@ ht-degree: 93%
 
 
 
-## 概要 {#getting-started}
+## はじめに {#getting-started}
 
 ### タッチ対応 UI {#a-touch-enabled-ui}
 
@@ -54,7 +54,7 @@ AEM のユーザーインターフェイスは、タッチ操作に対応して�
 
 ![chlimage_1-357](assets/chlimage_1-357.png)
 
-Click or tap **Got it!**」をクリックまたはタップして、概要の次のページに進みます。Click or tap **Close** or click or tap outside of the overview dialogue to close.
+**Got！をクリックまたはタップ**」をクリックまたはタップして、概要の次のページに進みます。「**閉じる**」をクリックまたはタップするか、概要ダイアログの外側をクリックまたはタップして閉じます。
 
 概要は、「**次回から表示しない**」オプションをオンにしない限り、次回コンソールにアクセスすると再び開始します。
 
@@ -98,7 +98,7 @@ Click or tap **Got it!**」をクリックまたはタップして、概要の�
    <td>このコンソールを使用すると、<a href="/help/communities/overview.md#engagement-community">エンゲージメント</a>と<a href="/help/communities/overview.md#enablement-community">イネーブルメント</a>のために<a href="/help/communities/sites-console.md">コミュニティサイト</a>を作成および管理できます。</td> 
   </tr>
   <tr>
-   <td>コマース</td> 
+   <td>Commerce</td> 
    <td><a href="/help/sites-administering/ecommerce.md">コマース</a>サイトに関連する製品、製品カタログおよび注文を管理できます。</td> 
   </tr>
   <tr>
@@ -107,7 +107,7 @@ Click or tap **Got it!**」をクリックまたはタップして、概要の�
   </tr>
   <tr>
    <td>フォーム</td> 
-   <td>This console allows you to create, manage, and process your <a href="/help/forms/using/introduction-aem-forms.md">forms and documents</a>&gt;.</td> 
+   <td>このコンソールでは、<a href="/help/forms/using/introduction-aem-forms.md">フォームとドキュメント</a>を作成、管理、および処理できます。</td> 
   </tr>
   <tr>
    <td>パーソナライズ機能</td> 
@@ -190,7 +190,7 @@ Click or tap **Got it!**」をクリックまたはタップして、概要の�
 
    ![screen_shot_2018-03-23at104126](assets/screen_shot_2018-03-23at104126.png)
 
-   これは、リスト表示でのみ使用できます。See [list view](#list-view) for more information.
+   これは、リスト表示でのみ使用できます。詳しくは、[リスト表示](#list-view)を参照してください。
 
 * 「**作成**」ボタン
 
@@ -228,7 +228,7 @@ Click or tap **Got it!**」をクリックまたはタップして、概要の�
 
    コンソールに最初にアクセスしたときの[製品ナビゲーションの概要](/help/sites-authoring/basic-handling.md#product-navigation)と同様に、この概要をナビゲートします。
 
-   このスライドをもう一度表示するには、[**ページ情報&#x200B;**メニューの「**&#x200B;ヘルプ&#x200B;**](/help/sites-authoring/author-environment-tools.md#accessing-help)」を選択します。
+   このスライドをもう一度表示するには、[**ページ情報**&#x200B;メニューの「**ヘルプ**](/help/sites-authoring/author-environment-tools.md#accessing-help)」を選択します。
 
 * **ツールコンソール**
 
@@ -267,7 +267,7 @@ Click or tap **Got it!**」をクリックまたはタップして、概要の�
 >
 >利用可能な個々のアイコンについては、それぞれのコンソール、機能、シナリオに関連するページで説明しています。
 
-## クイックアクション {#quick-actions}
+## クイックアクション  {#quick-actions}
 
 [カード表示](#quick-actions)では、特定のアクションがクイックアクションアイコンとして使用できます。クイックアクションアイコンはツールバーにも表示されます。クイックアクションのアイコンは、一度に 1 つの項目に対してのみ利用できます。このアイコンを使用すると、事前に選択する必要がありません。
 
@@ -290,7 +290,7 @@ Click or tap **Got it!**」をクリックまたはタップして、概要の�
 >
 >デフォルトでは、AEM Assets は、UI のどの表示でもアセットの元のレンディションをサムネールとして表示しません。管理者の場合、オーバーレイを使用して AEM Assets で元のレンディションをサムネールとして表示するように設定できます。
 
-### リソースの選択 {#selecting-resources}
+### リソースの選択  {#selecting-resources}
 
 特定のリソースの選択方法は、表示とデバイスの組み合わせによって異なります。
 
@@ -318,13 +318,13 @@ Click or tap **Got it!**」をクリックまたはタップして、概要の�
    <td>カード表示<br /> </td> 
    <td>
     <ul> 
-     <li>Desktop:<br /> Mouseover, then use the checkmark quick action</li> 
+     <li>デスクトップ：<br />マウスオーバーし、チェックマーククイックアクションを使用</li> 
      <li>モバイルデバイス：<br />カードをタップ＆ホールドする</li> 
     </ul> </td> 
    <td>
     <ul> 
-     <li>Desktop:<br /> Click the card</li> 
-     <li>Mobile device:<br /> Tap the card</li> 
+     <li>デスクトップ：<br />カードをクリック</li> 
+     <li>モバイルデバイス：<br />カードをタップします</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -361,7 +361,7 @@ Click or tap **Got it!**」をクリックまたはタップして、概要の�
 
 1. リソースを選択すると、上部のヘッダーの上に[アクションツールバー](#actions-toolbar)が重なって表示され、選択したリソースで現在適用可能なアクションにアクセスできます。
 
-   To exit selection mode select the **X** to the top-right.
+   選択モードを終了するには、右上の&#x200B;**X**&#x200B;を選択します。
 
 ### 列表示 {#column-view}
 
