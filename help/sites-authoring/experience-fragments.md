@@ -48,7 +48,7 @@ ht-degree: 90%
 >
 >問題が発生している場合は、システム管理者にお問い合わせください。
 
-## エクスペリエンスフラグメントを使用するタイミング   {#when-should-you-use-experience-fragments}
+## エクスペリエンスフラグメントを使用するタイミング    {#when-should-you-use-experience-fragments}
 
 エクスペリエンスフラグメントは次の場合に使用します。
 
@@ -92,7 +92,7 @@ ht-degree: 90%
    >
    >[テンプレートエディター](/help/sites-authoring/templates.md)を使用すると、独自のテンプレートを作成できます。
 
-次の例は、に従って構造化されたエクスペリエンスフラグメントを示し `Contributors`ます。 また、使用される構造は、マルチサイト管理（言語コピーを含む）などの他の機能の使用方法の例も示します。
+次の例は、`Contributors`に従って構造化されたエクスペリエンスフラグメントを示しています。 また、使用される構造は、マルチサイト管理（言語コピーを含む）などの他の機能の使用方法の例も示します。
 
 >[!CAUTION]
 >
@@ -110,7 +110,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->It is also possible to configure the [Allowed Templates for your instance](#configure-allowed-templates-instance), but this method is **not** recommended as the values may be overwritten upon upgrade.
+>また、インスタンス](#configure-allowed-templates-instance)に対して[許可されているテンプレートを設定することもできますが、アップグレード時に値が上書きされる可能性があるので、****&#x200B;推奨されません。
 
 ### フォルダーに使用できるテンプレートの設定 {#configure-allowed-templates-folder}
 
@@ -135,7 +135,7 @@ ht-degree: 90%
 
 >[!CAUTION]
 >
->It is not recommended to change the **[!UICONTROL Allowed Templates]** by this method, as the templates specified may be overwritten upon upgrade.
+>この方法では、**[!UICONTROL 許可されているテンプレート]**&#x200B;を変更しないことをお勧めします。アップグレード時に指定したテンプレートが上書きされる可能性があります。
 >
 >このダイアログは、情報を提供する目的でのみ使用してください。
 
@@ -159,7 +159,7 @@ ht-degree: 90%
 
    ![screen_shot_2018-04-05at92221am1](assets/screen_shot_2018-04-05at92221am1.png)
 
-1. Navigate to the required folder and select **[!UICONTROL Create]**.
+1. 必要なフォルダーに移動し、「**[!UICONTROL 作成]**」を選択します。
 
 1. 「**[!UICONTROL エクスペリエンスフラグメント]**」を選択して、**[!UICONTROL エクスペリエンスフラグメントを作成]**&#x200B;ウィザードを開きます。
 
@@ -183,7 +183,7 @@ ht-degree: 90%
 
 ## エクスペリエンスフラグメントの編集 {#editing-your-experience-fragment}
 
-エクスペリエンスフラグメントエディターには、通常のページエディターと似た機能があります。See [Editing Page Content](/help/sites-authoring/editing-content.md) for more information on how to use it.
+エクスペリエンスフラグメントエディターには、通常のページエディターと似た機能があります。使用方法の詳細については、[ページコンテンツの編集](/help/sites-authoring/editing-content.md)を参照してください。
 
 次の手順の例では、商品のティーザーを作成する方法を示します。
 
