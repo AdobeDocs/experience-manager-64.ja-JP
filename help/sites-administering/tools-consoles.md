@@ -25,7 +25,7 @@ ht-degree: 98%
 * [ツール - クラシック UI](#tools-classic-ui)
 * [ツール - タッチ操作向け UI](#tools-touch-optimized-ui)
 
-## ツール - クラシック UI {#tools-classic-ui}
+## ツール - クラシック UI  {#tools-classic-ui}
 
 <table> 
  <tbody> 
@@ -50,7 +50,7 @@ ht-degree: 98%
    <td><a href="/help/sites-administering/marketing-cloud.md">Adobe Marketing Cloud との統合</a>に関連する設定を保持します。</td> 
   </tr> 
   <tr> 
-   <td><a href="/help/sites-administering/ecommerce.md">コマース</a></td> 
+   <td><a href="/help/sites-administering/ecommerce.md">Commerce</a></td> 
    <td> </td> 
    <td>インポーターと様々な製品データにアクセスできます。</td> 
   </tr> 
@@ -62,7 +62,7 @@ ht-degree: 98%
   <tr> 
    <td>DAM - ヘルスチェック<br /> </td> 
    <td> </td> 
-   <td>Compares <code>/var/dam</code> and <code>/content/dam</code> and checks for<br /> any inconsistencies. その後で、リスト内のファイルとフォルダーを同期または削除できます。フォルダー比較用のノードタイプを Web コンソールで設定できます。</td> 
+   <td><code>/var/dam</code>と<code>/content/dam</code>を比較し、<br />に矛盾がないかチェックします。 その後で、リスト内のファイルとフォルダーを同期または削除できます。フォルダー比較用のノードタイプを Web コンソールで設定できます。</td> 
   </tr> 
   <tr> 
    <td>DAM - Adobe Indesign<br /> </td> 
@@ -197,7 +197,7 @@ ht-degree: 98%
  </tbody> 
 </table>
 
-## ツール - タッチ操作向け UI {#tools-touch-optimized-ui}
+## ツール - タッチ操作向け UI  {#tools-touch-optimized-ui}
 
 <table> 
  <tbody> 
