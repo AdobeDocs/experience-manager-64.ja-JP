@@ -33,13 +33,13 @@ AEM は以下の両方をサポートします。
 
 コンテンツ作成者は、RTE の機能を使用して、アクセシビリティ情報を提供し、同時にコンテンツをページに追加できます。これには、見出しや段落の要素を使用した構造情報の追加が含まれる場合があります。
 
-コンポーネントのRTEプラグインを設定することで [、これらの機能を](#configuring-the-plugin-features) 設定およびカスタマイズできます。 For example, the `paraformat` plugin allows you to add additional block level semantic elements, including extending the number of heading levels supported beyond the basic `H1`, `H2` and `H3` provided by default.
+コンポーネントのRTEプラグイン](#configuring-the-plugin-features)を設定すると、これらの機能を[設定およびカスタマイズできます。 例えば、`paraformat`プラグインを使用すると、デフォルトで提供される基本的な`H1`、`H2`および`H3`を超えてサポートされる見出しレベルの数を拡張するなど、ブロックレベルのセマンティック要素を追加できます。
 
-RTEは、タッチ対応UIとクラシックUIの両方から、様々なコンポーネントで使用できます。 ただし、RTEを使用する主なコンポーネントは **Text** コンポーネントです。
+RTEは、タッチ対応UIとクラシックUIの両方から、様々なコンポーネントで使用できます。 ただし、RTEを使用する主なコンポーネントは、**Text**&#x200B;コンポーネントです。
 
-AEMの **テキスト** コンポーネントは、タッチ対応UIとクラシックUIの両方で使用できます。 次の画像は、以下を含む様々なプラグインが有効になっているリッチテキストエディターを示していま `paraformat`す。
+AEMの&#x200B;**テキスト**&#x200B;コンポーネントは、タッチ対応UIとクラシックUIの両方で使用できます。 次の画像は、`paraformat`を含む、様々なプラグインが有効なリッチテキストエディターを示しています。
 
-* The **Text** component in the touch-enabled UI:
+* タッチ対応UIの&#x200B;**テキスト**&#x200B;コンポーネント：
 
    ![タッチ対応UIのフルスクリーンモードのテキストコンポーネント(RTE)。](assets/chlimage_1-206.png)
 
@@ -80,7 +80,7 @@ CRXDE Lite の該当する `rtePlugins` サブブランチ内でプラグイン�
 1. [段落選択フィールドで使用可能にする書式を指定](/help/sites-administering/rich-text-editor.md)します。
 1. これにより、コンテンツ作成者は、指定した段落書式を RTE の選択フィールドから選択できます。アクセス方法は次のとおりです。
 
-   * Using the paragraph ([pilcrow](https://en.wikipedia.org/wiki/Pilcrow)) icon in the touch-enabled UI:
+   * タッチ対応UIで段落([pilcrow](https://en.wikipedia.org/wiki/Pilcrow))アイコンを使用：
 
    ![段落（段落記号）アイコン。](do-not-localize/chlimage_1-7.png)
 
@@ -91,7 +91,7 @@ CRXDE Lite の該当する `rtePlugins` サブブランチ内でプラグイン�
 
 ## ソース編集機能の使用 {#use-of-the-source-edit-feature}
 
-コンテンツ作成者が、RTE を使用して作成された HTML ソースコードを調査および調整することが必要になる場合があります。例えば、WCAG 2.0 を確実に準拠するため、RTE 内で作成されたコンテンツの一部で追加のマークアップが必要となることがあります。これをおこなうには、RTE の[ソースの編集](/help/sites-administering/rich-text-editor.md#aboutplugins)オプションを使用します。You can specify the [ `sourceedit` feature on the `misctools` plugin](/help/sites-administering/rich-text-editor.md#aboutplugins).
+コンテンツ作成者が、RTE を使用して作成された HTML ソースコードを調査および調整することが必要になる場合があります。例えば、WCAG 2.0 を確実に準拠するため、RTE 内で作成されたコンテンツの一部で追加のマークアップが必要となることがあります。これをおこなうには、RTE の[ソースの編集](/help/sites-administering/rich-text-editor.md#aboutplugins)オプションを使用します。[ `sourceedit`機能は、`misctools`プラグイン](/help/sites-administering/rich-text-editor.md#aboutplugins)で指定できます。
 
 >[!CAUTION]
 >
@@ -101,21 +101,21 @@ CRXDE Lite の該当する `rtePlugins` サブブランチ内でプラグイン�
 
 AEM のアクセシビリティ機能をさらに拡張するには、RTE に基づく既存のコンポーネント（**テキスト**&#x200B;コンポーネントや&#x200B;**テーブル**&#x200B;コンポーネント）を、要素や属性を追加して拡張することができます。
 
-The following procedure illustrates how to extend the **Table** component with a **Caption** element that provides information about a data table to assistive technology users:
+次の手順は、支援テクノロジーユーザーに対してデータテーブルに関する情報を提供する&#x200B;**テーブル**&#x200B;コンポーネントを&#x200B;**キャプション**&#x200B;要素で拡張する方法を示しています。
 
 ### 例 - テーブルのプロパティダイアログへのキャプションの追加 {#example-adding-the-caption-to-the-table-properties-dialog}
 
-のコンストラクターで、キャプションの編集に使用するテキスト入力フィールドを追加 `TablePropertiesDialog`します。 コンテンツ `itemId` を自動的に処理するには、 `caption` （DOM属性の名前など）に設定する必要があります。
+`TablePropertiesDialog`のコンストラクターに、キャプションの編集に使用するテキスト入力フィールドを追加します。 `itemId`は、コンテンツを自動的に処理するために`caption`（DOM属性の名前）に設定する必要があります。
 
-表 **で** 、DOM要素に対する属性を明示的に設定または削除する必要があります。 値は、 `config` オブジェクトのダイアログによって渡されます。 DOM属性は、ブラウザー実装での一般的な問題を回避するために、対応する `CQ.form.rte.Common` メソッド( `com` のショートカット `CQ.form.rte.Common`)を使用して設定または削除する必要があります。
+**テーブル**&#x200B;で、DOM要素に対する属性を明示的に設定または削除する必要があります。 この値は、`config`オブジェクトのダイアログによって渡されます。 DOM属性は、対応する`CQ.form.rte.Common`メソッド（`com`は`CQ.form.rte.Common`のショートカット）を使用して設定または削除する必要があります。これにより、ブラウザー実装での一般的な問題を回避できます。
 
 >[!NOTE]
 >
 >この手順は、クラシック UI のみに適しています。
 
-### 手順説明 {#step-by-step-instructions}
+### 手順説明  {#step-by-step-instructions}
 
-1. 開始CRXDE Lite。 For example: [http://localhost:4502/crx/de/](http://localhost:4502/crx/de/)
+1. 開始CRXDE Lite。 次に例を示します。[http://localhost:4502/crx/de/](http://localhost:4502/crx/de/)
 1. コピー：
 
    `/libs/cq/ui/widgets/source/widgets/form/rte/commands/Table.js`
@@ -134,7 +134,7 @@ The following procedure illustrates how to extend the **Table** component with a
 
    リダイレクト先は次のとおりです。
 
-   `/apps/cq/ui/widgets/source/widgets/form/rte/plugins/TablePropertiesDialog.js`。
+   `/apps/cq/ui/widgets/source/widgets/form/rte/plugins/TablePropertiesDialog.js`.
 
 1. 次のファイルを編集用に開きます（ダブルクリックで開く）。
 
@@ -160,9 +160,9 @@ The following procedure illustrates how to extend the **Table** component with a
 
 1. 次のファイルを開きます。
 
-   `/apps/cq/ui/widgets/source/widgets/form/rte/commands/Table.js`。
+   `/apps/cq/ui/widgets/source/widgets/form/rte/commands/Table.js`.
 
-1. Add the following code at the end of the `transferConfigToTable` method:
+1. 追加`transferConfigToTable`メソッドの末尾の次のコード：
 
    ```
    /**
@@ -197,14 +197,14 @@ The following procedure illustrates how to extend the **Table** component with a
    }
    ```
 
-1. Save your changes using **Save All**
+1. **すべて保存**&#x200B;を使用して変更を保存
 
 >[!NOTE]
 >
->プレーンテキストフィールドは、キャプション要素の値に対して許可される入力の種類ではありません。 キャプションの値をその `getValue()` メソッドを通して提供するExtJSウィジェットを使用できます。
+>プレーンテキストフィールドは、キャプション要素の値に対して許可される入力の種類ではありません。 キャプションの値を`getValue()`メソッドを通じて提供するExtJSウィジェットを使用できます。
 >
 >追加の要素および属性用に編集機能を追加するには、以下の両方を確認します。
 >
->* The `itemId` property for each corresponding field is set to the name of the appropriate DOM attribute (`TablePropertiesDialog`).
+>* 対応する各フィールドの`itemId`プロパティは、適切なDOM属性の名前(`TablePropertiesDialog`)に設定されます。
 >* DOM 要素で属性が設定／削除されていること（`Table`）。
 
