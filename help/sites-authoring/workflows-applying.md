@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
 workflow-type: tm+mt
 source-wordcount: '673'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 99%
 
 ワークフローは以下のものから開始できます。
 
-* **[サイト](#starting-a-workflow-from-the-sites-console)**コンソール。
+* **[サイト](#starting-a-workflow-from-the-sites-console)**&#x200B;コンソール。
 * ページの編集中に「**[ページ情報](#starting-a-workflow-from-the-page-editor)**」から。
 
 >[!NOTE]
@@ -56,7 +56,7 @@ ht-degree: 99%
 ワークフローは以下のいずれかから開始できます。
 
 * サイトツールバーの「**[作成](#starting-a-workflow-from-the-sites-toolbar)**」オプション。
-* サイトコンソールの&#x200B;**[タイムライン](#starting-a-workflow-from-the-timeline)**レール。
+* サイトコンソールの&#x200B;**[タイムライン](#starting-a-workflow-from-the-timeline)**&#x200B;レール。
 
 両方の場合で、以下の作業が必要です。
 
@@ -74,7 +74,7 @@ ht-degree: 99%
 
 1. **ワークフローの作成**&#x200B;ウィザードは、[ワークフローの詳細を指定](#specifying-workflow-details-in-the-create-workflow-wizard)するために役立ちます。
 
-### タイムラインからのワークフローの開始 {#starting-a-workflow-from-the-timeline}
+### タイムラインからのワークフローの開始  {#starting-a-workflow-from-the-timeline}
 
 **タイムライン**&#x200B;から、選択したリソースに適用されるワークフローを開始できます。
 
@@ -85,14 +85,14 @@ ht-degree: 99%
 
 1. **ワークフローの作成**&#x200B;ウィザードは、[ワークフローの詳細を指定](#specifying-workflow-details-in-the-create-workflow-wizard)するために役立ちます。
 
-### ワークフローの作成ウィザードでのワークフローの詳細の指定 {#specifying-workflow-details-in-the-create-workflow-wizard}
+### ワークフローの作成ウィザードでのワークフローの詳細の指定  {#specifying-workflow-details-in-the-create-workflow-wizard}
 
 **ワークフローの作成**&#x200B;ウィザードは、ワークフローを選択し、必要な詳細を指定するために役立ちます。
 
 **ワークフローの作成**&#x200B;ウィザードを以下のいずれかから開いた後
 
 * サイトツールバーの「**[作成](#starting-a-workflow-from-the-sites-toolbar)**」オプション。
-* サイトコンソールの&#x200B;**[タイムライン](#starting-a-workflow-from-the-timeline)**レール。
+* サイトコンソールの&#x200B;**[タイムライン](#starting-a-workflow-from-the-timeline)**&#x200B;レール。
 
 以下のように詳細を指定できます。
 
