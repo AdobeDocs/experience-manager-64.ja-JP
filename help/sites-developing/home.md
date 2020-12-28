@@ -1,20 +1,20 @@
 ---
-title: AEM 6.4開発ユーザーガイド
-seo-title: AEM 6.4開発ユーザーガイド
-description: このガイドでは、AEMインスタンスの構築方法を説明します。
+title: AEM 6.4 開発ユーザーガイド
+seo-title: AEM 6.4 開発ユーザーガイド
+description: このガイドでは、AEM インスタンスの構築方法について説明します。
 seo-description: AEMインスタンスの構築方法をカバーします。
 translation-type: tm+mt
 source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
 workflow-type: tm+mt
 source-wordcount: '347'
-ht-degree: 31%
+ht-degree: 45%
 
 ---
 
 
-# AEM 6.4開発ユーザーガイド
+# AEM 6.4 開発ユーザーガイド
 
-このガイドでは、AEMインスタンスの構築方法を説明します。
+このガイドでは、AEM インスタンスの構築方法について説明します。
 
 ## 主要なAEM記事
 
@@ -30,7 +30,7 @@ ht-degree: 31%
 | [リリースノート](/help/release-notes/home.md) | AEMの最新リリースに関する重要な情報を紹介します。新機能、サポートされているプラットフォーム、非推奨機能、削除された機能、および既知の問題が含まれます。 |
 | [Assets ユーザーガイド](/help/assets/home.md) | デジタルアセットを作成、管理、配信および最適化する方法について説明します。 |
 | [Formsユーザガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、発行、更新の方法について説明します。 |
-| [Communitiesユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成できます。 |
+| [Communitiesユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |
 | [管理ガイド](/help/sites-administering/home.md) | AEM の管理方法を理解します |
 | [オーサリングガイド](/help/sites-authoring/home.md) | このガイドでは、AEMでのオーサリングの概念について説明します。 |
 | [クラシックUIオーサリングガイド](/help/sites-classic-ui-authoring/home.md) | このガイドでは、従来のユーザーインターフェイスでAEMでのオーサリングの概念を説明します。 |
