@@ -48,7 +48,7 @@ ht-degree: 93%
 
 * **Felix Inventory コンソールを使用：** 
 
-1. Go to the AEM Web Console by browsing to: https://<i></i>serveraddress:serverport/system/console/configMgr
+1. AEM Webコンソールにアクセスするには、次の場所を参照します。https://<i></i>serveraddress:serverport/system/console/configMgr
 1. 次の図に示すように、**ステータス - パターン検出**&#x200B;を選択します。
 
    ![screenshot-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
@@ -68,7 +68,7 @@ ht-degree: 93%
 1. プレーンテキストインターフェイス
 1. JSON インターフェイス
 
-## プレーンテキストインターフェイスの処理 {#handling-the-plain-text-interface}
+## プレーンテキストインターフェイスの処理  {#handling-the-plain-text-interface}
 
 出力の情報は、一連のイベントエントリとして書式設定されます。違反を公開するためのチャネルと、現在の進行状況を公開するためのチャネルがあります。
 
@@ -98,7 +98,7 @@ curl -Nsu 'admin:admin' http://localhost:4502/system/console/status-pattern-dete
 2018-02-13T14:19:35.685+01:00 [PROGRESS] Finished in period=PT13.782
 ```
 
-## JSON インターフェイスの処理 {#handling-the-json-interface}
+## JSON インターフェイスの処理  {#handling-the-json-interface}
 
 同様に、[jq ツール](https://stedolan.github.io/jq/)を使用すると、公開された JSON をすぐに処理できます。
 
