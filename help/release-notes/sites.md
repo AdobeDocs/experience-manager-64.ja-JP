@@ -24,7 +24,7 @@ ht-degree: 79%
 
 AEM Sites 6.4 の機能強化について詳しくは、以下を参照してください。
 
-### サイト管理 {#site-administration}
+### サイト管理  {#site-administration}
 
 * 新しいコンテンツツリーレールでサイト階層内をすばやく移動できます。これをリスト表示と組み合わせれば、クラシック UI インタラクションモデルに戻してサイト内を閲覧することができます。
 * 大きいフォルダーのカード表示とリスト表示でスクロール操作が向上しました。
@@ -60,7 +60,7 @@ AEM Sites 6.4 の機能強化について詳しくは、以下を参照してく
 >
 >AEMには、既存のカスタムコードとの互換性を最大限に高めるため、jQueryライブラリのバージョン1.12.4が含まれています。 セキュリティに関する既知の問題に対処するため、アドビによる修正がおこなわれました。
 
-### コンテンツフラグメントとエディター {#content-fragments-amp-editor}
+### コンテンツフラグメントとエディター  {#content-fragments-amp-editor}
 
 * コンテンツフラグメントの基盤として、構造化コンテンツモデルが導入されました。
 
@@ -89,7 +89,7 @@ AEM Sites 6.4 の機能強化について詳しくは、以下を参照してく
 * エクスペリエンスフラグメントを Pinterest や Facebook に書き出す際に、ソーシャルメディアへのシングルログインが可能になりました。
 * AEM エクスペリエンスフラグメントが Adobe Target と統合されました。エクスペリエンスフラグメントを Adobe Target に同期させると、Target の Visual Experience Composer で使用できるオファーが Target に作成され、それを任意の Target 対応エクスペリエンスに埋め込むことができるようになります。
 
-### 翻訳 {#translation}
+### 翻訳  {#translation}
 
 * AEM 翻訳プロジェクトのユーザビリティが強化されました。
 
@@ -104,7 +104,7 @@ AEM Sites 6.4 の機能強化について詳しくは、以下を参照してく
 * スマート翻訳の更新で、言語マスターブランチに追加された新しいページを認識できるようになりました
 * サイト管理リスト表示での翻訳ステータスレポートが導入されました。
 
-### マルチサイト管理（MSM） {#multi-site-management-msm}
+### マルチサイト管理（MSM）  {#multi-site-management-msm}
 
 * インメモリインデックス（LiveCopyIndex）ではなく Oak ベースのインデックスを使用することで、MSM の拡張性が向上しました。
 
@@ -116,25 +116,25 @@ AEM Sites 6.4 の機能強化について詳しくは、以下を参照してく
 
 ### コンテンツのターゲット設定とシミュレーション {#content-targeting-simulation}
 
-* サイト/コンテキストに基づいてセグメントを整理するためのフォルダーのサポート(CQ-94620)
+* サイト/コンテキストに基づいてセグメントを整理するためのサポートフォルダー(CQ-94620)
 * サイト／コンテキスト固有のセグメントリストに対応できるように、セグメントのデフォルトの保存場所が /conf に移動しました。
 
-### AEM と Adobe Target  {#aem-amp-adobe-target-nbsp}
+### AEM と Adobe Target   {#aem-amp-adobe-target-nbsp}
 
 * AEM エクスペリエンスフラグメントが Adobe Target と統合されました。エクスペリエンスフラグメントを Adobe Target に同期させると、Target の Visual Experience Composer で使用できるオファーが Target に作成され、それを任意の Target 対応エクスペリエンスに埋め込むことができるようになります。
 * Adobe Targetmbox.jsバージョン63が追加されました。 Adobeでは、実装をat.jsに切り替えることをお勧めします。
-* at.js バージョン 1.2.2 が含まれるようになりました。Adobe recommends to use either Dynamic Tag Management (DTM) or [Adobe Experience Platform Launch](https://www.adobe.com/jp/enterprise/cloud-platform/launch.html) to provision at.js into the site.
+* at.js バージョン 1.2.2 が含まれるようになりました。Adobeでは、at.jsをサイトにプロビジョニングする際に、Dynamic Tag Management(DTM)または[Adobe Experience Platform Launch](https://www.adobe.com/jp/enterprise/cloud-platform/launch.html)を使用することをお勧めします。
 
 ### AEM と Adobe Analytics {#aem-amp-adobe-analytics}
 
 * s_code.js H.27.5が追加されました。 Adobeでは、実装をAppMeasurement.jsに切り替えることをお勧めします
-* AppMeasurement.js 1.8.0が追加されました。 Adobe recommends to use either Dynamic Tag Management (DTM) or [Adobe Experience Platform Launch](https://www.adobe.com/jp/enterprise/cloud-platform/launch.html) to provision AppMeasurement.js into the site.
+* AppMeasurement.js 1.8.0が追加されました。 Adobeでは、AppMeasurement.jsをサイトにプロビジョニングする際に、Dynamic Tag Management(DTM)または[Adobe Experience Platform Launch](https://www.adobe.com/enterprise/cloud-platform/launch.html)を使用することをお勧めします。
 
 ## Communities アドオン {#communities-add-on}
 
 [Communities のリリースノートページ](/help/release-notes/communities-release-notes.md)を参照してください。
 
-## Screens アドオン {#screens-add-on}
+## Screens アドオン  {#screens-add-on}
 
 * （AEM オーサーに直接接続するのではなく）AEM パブリッシュサーバーに接続して操作や制御、およびチャネルのダウンロードを実行するために、Screens Player をサポートするようになりました。
 * スケジュール内のチャネル割り当てをグループ化できるようになりました。
@@ -142,4 +142,4 @@ AEM Sites 6.4 の機能強化について詳しくは、以下を参照してく
 * デバイスダッシュボードにプレーヤーシェルとファームウェアのバージョンが表示されるようになりました。
 * デバイスダッシュボードリストにプレーヤーの接続ステータスが表示されます。
 * Google Chrome OSでのAEM Screensプレイヤーのサポートの追加
-* Microsoft Windows 10のAEM Screensプレイヤーへの追加
+* Microsoft Windows 10 for Service Playerの追加
