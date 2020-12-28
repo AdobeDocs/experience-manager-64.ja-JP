@@ -78,7 +78,7 @@ ht-degree: 93%
 * 組み込みのテスト
 * ボトムアップ設計（これらの原則がすべての要素およびコンポーネントに確実に適用されます）
 
-タッチ対応UI構造の詳細については、「AEMタッチ対応UIの [構造](/help/sites-developing/touch-ui-structure.md)」を参照してください。
+タッチ操作対応UI構造の詳細については、「[AEM Touch-Enabled UI](/help/sites-developing/touch-ui-structure.md)の構造」を参照してください。
 
 ## AEM テクノロジースタック {#aem-technology-stack}
 
@@ -208,7 +208,7 @@ sling コンポーネントのコレクションによって形成され、作�
  </tbody> 
 </table>
 
-### Granite UI 基盤コンポーネント {#granite-ui-foundation-components}
+### Granite UI 基盤コンポーネント  {#granite-ui-foundation-components}
 
 [Granite UI 基盤コンポーネント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)は、UI を構築するために必要な基本の構築ブロックを提供します。次に例を示します。
 
@@ -283,7 +283,7 @@ Granite UI を使用するように ExtJS コードをアップグレードす�
 * 基盤コンポーネントを使用した事前定義済みコンポーネント
 * コンポーネントのカスタマイズが可能
 
-## Coral UI {#coral-ui}
+## Coral UI  {#coral-ui}
 
 Coral UI（CUI）は、アドビのタッチ操作対応 UI 用のビジュアルスタイル実装です。タッチ操作対応 UI は、複数の製品間で一貫性のあるユーザーエクスペリエンスを提供するように設計されています。Coral UI は、オーサー環境で使用されるビジュアルスタイルを採用するために必要となるすべてのものを備えています。
 
@@ -376,19 +376,19 @@ HTML 要素の多くは、ポップアップメニューの表示／非表示な
 プラグインは次のいずれかです。
 
 * 特定の DOM 要素に作用するように設計されています。例えば、ダイアログプラグインは、`DIV class=dialog` を検索することを想定しています。
-* 自然の中で一般的です For example, a layout manager provides layout for any list of `DIV` or `LI` elements
+* 自然の中で一般的です 例えば、レイアウトマネージャーは`DIV`要素または`LI`要素の任意のリストのレイアウトを提供します
 
 プラグインの動作は、次のいずれかの方法でパラメーターを使用してカスタマイズできます。
 
 * Javascript 呼び出しによってパラメーターを渡します。
-* Using dedicated `data-*` attributes tied to the HTML markup
+* HTMLマークアップに関連付けられた専用の`data-*`属性を使用する
 
 どのプラグインについても開発者がベストアプローチを選択できますが、経験則として以下を使用します。
 
-* `data-*` 属性を使用します。 例えば、列数を指定するには
+* `data-*` 属性を使用します。例えば、列数を指定するには
 * API オプション／クラス - データに関連する機能の場合（表示する項目のリストを作成する場合など）
 
-フォーム検証を実装する場合も同じ概念を使用します。For an element that you want validated, you must specify the required input form as a custom `data-*` attribute. この属性を検証プラグインのオプションとして使用します。
+フォーム検証を実装する場合も同じ概念を使用します。検証する要素の場合は、必要な入力フォームをカスタム`data-*`属性として指定する必要があります。 この属性を検証プラグインのオプションとして使用します。
 
 >[!NOTE]
 >
@@ -404,9 +404,9 @@ HTML 要素の多くは、ポップアップメニューの表示／非表示な
 実装:
 
 * 特定の DOM 要素に関連付けた jQuery プラグイン
-* Using `data-*` attributes to customize behavior
+* `data-*`属性を使用した動作のカスタマイズ
 
-サンプルマークアップの抽出（data-amp;ast；として指定されたオプションに注意） 属性):
+サンプルマークアップの抽出（data-amp;ast；として指定されたオプションに注意）属性):
 
 ```xml
 <ul data-column-width="220" data-layout="card" class="cards">
