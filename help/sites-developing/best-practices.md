@@ -63,7 +63,7 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
    <td>タッチ操作対応 UI の概念および構造の概要を説明しています。</td> 
   </tr>
   <tr>
-   <td>タッチ対応UI: コンソールのカスタマイズ </td> 
+   <td>タッチ対応UI:コンソールのカスタマイズ </td> 
    <td><a href="/help/sites-developing/customizing-consoles-touch.md">タッチ操作対応 UI のコンソールのカスタマイズ</a></td> 
    <td>タッチ操作対応 UI のコンソールを拡張するための最適な方法を説明しています。</td> 
   </tr>
@@ -82,13 +82,13 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
 
 ## Communities {#communities}
 
-[AEM Communities](/help/communities/overview.md) は、オンプレミスコミュニティの作成と管理を簡素化します。
+[AEM ](/help/communities/overview.md) Communitiesを使用すると、オンプレミスのコミュニティの作成と管理が簡単になります。
 
 Communities のベストプラクティスは、こちらで説明しています。
 
 |  |  |  |
 |---|---|---|
-| ユーザー生成コンテンツ(UGC)を使用する場合のベストプラクティス | [コーディングのガイドライン](/help/communities/code-guide.md) | ソーシャルコンポーネントフレームワーク [](/help/communities/scf.md) (SCF)用の柔軟でポータブルなコードの開発に関するガイドラインです。 |
+| ユーザー生成コンテンツ(UGC)を使用する場合のベストプラクティス | [コーディングのガイドライン](/help/communities/code-guide.md) | [ソーシャルコンポーネントフレームワーク](/help/communities/scf.md) (SCF)用の柔軟でポータブルなコードの開発に関するガイドライン。 |
 | Communitiesコンポーネントの使用例 | [コミュニティコンポーネントガイド](/help/communities/components-guide.md) | 対話型の開発ツールです。 |
 
 ## ツール／HTL {#tooling-htl}
