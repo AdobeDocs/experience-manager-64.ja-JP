@@ -42,9 +42,9 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->AEM 6.4は、アップグレードの信頼性を向上させる努力の一環として、包括的なリポジトリの再構築を行っています。 For more information on how to align with the new structure, see [Repository Restructuring in AEM 6.4](/help/sites-deploying/repository-restructuring.md)
+>AEM 6.4は、アップグレードの信頼性を向上させる努力の一環として、包括的なリポジトリの再構築を行っています。 新しい構造体との整合性の取り組みの詳細については、「[AEM 6.4でのリポジトリ再構築](/help/sites-deploying/repository-restructuring.md)」を参照してください。
 
-## What Has Changed? {#what-has-changed}
+## 変更点{#what-has-changed}
 
 以下に、AEM の最近のいくつかのリリースでの注目すべき主な変更点を示します。
 
@@ -52,7 +52,7 @@ AEM 6.0 で、新しい Jackrabbit Oak リポジトリが導入されました�
 
 アセットインサイトを使用し、AEM 6.2 より前のバージョンからアップグレードする場合は、アセットを移行し、JMX Bean で ID を生成する必要があります。アドビの内部テストでは TarMK 環境の 12.5 万個のアセットが 1 時間で移行されましたが、ユーザーの結果は異なる場合があります。
 
-AEM 6.3 introduced a new format for the `SegmentNodeStore`, which is the basis of the TarMK implementation. AEM 6.3より古いバージョンからアップグレードする場合は、システムのダウンタイムを伴う、アップグレードの一環としてリポジトリの移行が必要になります。
+AEM 6.3では、TarMK実装の基盤となる`SegmentNodeStore`の新しい形式が導入されました。 AEM 6.3より古いバージョンからアップグレードする場合は、システムのダウンタイムを伴う、アップグレードの一環としてリポジトリの移行が必要になります。
 
 アドビのエンジニアリング部は、この移行には約 20 分かかると予測しています。インデックスの再作成は必要ないことに注意してください。また、新しいリポジトリ形式で機能するように crx2oak ツールの新しいバージョンがリリースされました。
 
@@ -82,11 +82,11 @@ AEM のアップグレードには複数の段階があり、場合によって�
 
 ## 6.4 でのアップグレードの機能強化を含むアップグレードフロー {#upgrade-overview-1}
 
-以下の図は、アップグレードの方法を示す、全体的なアップグレード推奨フローです。導入された新機能も示されています。The upgrade should start with the Pattern Detector(see [Assessing the Upgrade Complexity with Pattern Detector](/help/sites-deploying/pattern-detector.md)) which should let you decide the path you want to take for compatibility with AEM 6.4 based on the patterns in the generated report.
+以下の図は、アップグレードの方法を示す、全体的なアップグレード推奨フローです。導入された新機能も示されています。アップグレードは、パターンディテクターと開始する必要があります（[パターンディテクターによるアップグレードの複雑さの評価](/help/sites-deploying/pattern-detector.md)を参照）。これにより、生成されたレポート内のパターンに基づいて、AEM 6.4との互換性を確保するパスを決定できます。
 
-There was a big focus in 6.4 to keep all the new features backward compatible, but in cases where you still see some backward compatibility issues, the compatibility mode allows you to temporarily defer development to keep your custom code compliant with 6.4. This approach helps you avoid development effort immediately after the upgrade(see [Backward Compatibility in AEM 6.4](/help/sites-deploying/backward-compatibility.md)).
+6.4では、すべての新機能の下位互換性を維持するために大きな焦点が当てられましたが、下位互換性の問題が引き続き発生する場合は、カスタムコードを6.4に準拠させる開発を一時的に延期できます。[](/help/sites-deploying/backward-compatibility.md)
 
-Finally, in your 6.4 development cycle, features introduced under Sustainable Upgrades(see [Sustainable Upgrades](/help/sites-deploying/sustainable-upgrades.md)) help you follow best practices to make future upgrades even more efficient and seamless.
+最後に、6.4開発サイクルで、「持続可能なアップグレード」（「[持続可能なアップグレード](/help/sites-deploying/sustainable-upgrades.md)」を参照）に導入された機能を使用すると、今後のアップグレードをより効率的かつシームレスに行うためのベストプラクティスに従うことができます。
 
 ![6_4_upgrade_overviewflowchart-newpage3](assets/6_4_upgrade_overviewflowchart-newpage3.png)
 
