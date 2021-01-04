@@ -1,8 +1,8 @@
 ---
 title: APIを使用したサービス操作の実行
 seo-title: APIを使用したサービス操作の実行
-description: 'null'
-seo-description: 'null'
+description: AEM FormsAPIを使用してクライアントアプリケーションを開発する。
+seo-description: AEM FormsAPIを使用してクライアントアプリケーションを開発する。
 uuid: a5697c91-d643-4265-973c-18467ca0437a
 contentOwner: admin
 content-type: reference
@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 8fa1426f-f453-45c5-89b9-67038f56c70e
 translation-type: tm+mt
-source-git-commit: e3fcf1a117b13392b7e530a09198982c6160cb7b
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 1%
+source-wordcount: '189'
+ht-degree: 0%
 
 ---
 
