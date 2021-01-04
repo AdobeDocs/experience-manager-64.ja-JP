@@ -1,8 +1,8 @@
 ---
 title: SignatureサービスJava API QuickStart(SOAP)
 seo-title: SignatureサービスJava API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: Signatureサービスを使用して、PDFドキュメントへの署名フィールドの追加、署名フィールド名の取得、署名フィールドの変更、PDFドキュメントの電子署名、XFAベースのフォームの電子署名、PDFドキュメントの認証、電子署名の検証、複数の電子署名の検証および電子署名の削除を行います。
+seo-description: Signatureサービスを使用して、PDFドキュメントへの署名フィールドの追加、署名フィールド名の取得、署名フィールドの変更、PDFドキュメントの電子署名、XFAベースのフォームの電子署名、PDFドキュメントの認証、電子署名の検証、複数の電子署名の検証および電子署名の削除を行います。
 uuid: ae6adf23-b119-45f6-bd57-73d8d9ca8ecb
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 07fffbd5-5430-4abc-b532-0840ecc7b1b0
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
