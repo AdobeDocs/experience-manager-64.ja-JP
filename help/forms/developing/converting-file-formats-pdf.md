@@ -1,8 +1,8 @@
 ---
 title: ファイル形式とPDF間の変換
 seo-title: ファイル形式とPDF間の変換
-description: 'null'
-seo-description: 'null'
+description: Generate PDFサービスを使用して、ネイティブファイル形式をPDFに変換します。 Generate PDFサービスは、PDFを他のファイル形式に変換し、PDFドキュメントのサイズを最適化します。
+seo-description: Generate PDFサービスを使用して、ネイティブファイル形式をPDFに変換します。 Generate PDFサービスは、PDFを他のファイル形式に変換し、PDFドキュメントのサイズを最適化します。
 uuid: f72ad603-c996-4d48-9bfc-bed7bf776af6
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '7876'
+source-wordcount: '7932'
 ht-degree: 4%
 
 ---
