@@ -1,8 +1,8 @@
 ---
 title: Generate PDF Service Java API QuickStart(SOAP)
 seo-title: Generate PDF Service Java API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: Generate PDFサービスを使用して、Microsoft WordドキュメントをPDFドキュメントに変換したり、HTMLコンテンツをPDFドキュメントに変換したり、PDFドキュメントをJava APIを使用してRTFファイルに変換したりします。
+seo-description: Generate PDFサービスを使用して、Microsoft WordドキュメントをPDFドキュメントに変換したり、HTMLコンテンツをPDFドキュメントに変換したり、PDFドキュメントをJava APIを使用してRTFファイルに変換したりします。
 uuid: f8c4a476-de5e-440a-b419-0bd1d7fde5ca
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: a7c0c4cf-7476-41e7-8d4e-564e6a21458d
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
