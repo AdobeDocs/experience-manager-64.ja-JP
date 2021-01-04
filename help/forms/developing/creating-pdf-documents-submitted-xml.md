@@ -1,8 +1,8 @@
 ---
 title: 送信されたXMLデータを使用したPDFドキュメントの作成
 seo-title: 送信されたXMLデータを使用したPDFドキュメントの作成
-description: 'null'
-seo-description: 'null'
+description: ユーザーがインタラクティブフォームに入力したフォームデータを取得するには、Formsサービスを使用します。 フォームデータを別のAEM Formsサービス操作に渡し、そのデータを使用してPDFドキュメントを作成します。
+seo-description: ユーザーがインタラクティブフォームに入力したフォームデータを取得するには、Formsサービスを使用します。 フォームデータを別のAEM Formsサービス操作に渡し、そのデータを使用してPDFドキュメントを作成します。
 uuid: 2676c614-8988-451b-ac7c-bd07731a3f5f
 contentOwner: admin
 content-type: reference
@@ -11,10 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 62490230-a24e-419d-95bb-c0bb04a03f96
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '1279'
-ht-degree: 5%
+source-wordcount: '1347'
+ht-degree: 4%
 
 ---
 
