@@ -1,8 +1,8 @@
 ---
 title: WebサービスAPIを使用したPDFドキュメントのディスアセンブリ
 seo-title: WebサービスAPIを使用したPDFドキュメントのディスアセンブリ
-description: 'null'
-seo-description: 'null'
+description: Assembler Service APIを使用したPDFドキュメントのディスアセンブリ
+seo-description: Assembler Service APIを使用したPDFドキュメントのディスアセンブリ
 uuid: d6283dc5-e333-49d0-abde-1d390662f4fe
 contentOwner: admin
 content-type: reference
@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/programmatically_disassembling_pdf_documents
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 49584fb4-8c3a-4d73-acd6-0879a67f6093
 translation-type: tm+mt
-source-git-commit: 529b8c6556a7179a9169ff8250af6b5dc1251ef3
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '705'
-ht-degree: 3%
+source-wordcount: '721'
+ht-degree: 2%
 
 ---
 
