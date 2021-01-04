@@ -1,8 +1,8 @@
 ---
 title: XMP UtilitiesサービスJava APIQuick開始(SOAP)
 seo-title: XMP UtilitiesサービスJava APIQuick開始(SOAP)
-description: 'null'
-seo-description: 'null'
+description: XMP Utilitiesサービスを使用して、XMPメタデータを書き出しおよび読み込みます。
+seo-description: XMP Utilitiesサービスを使用して、XMPメタデータを書き出しおよび読み込みます。
 uuid: 5db4c623-75db-4a34-9ad2-3c917619e296
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 1b229ddf-9350-40b6-8056-dcbe0c5afd5b
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
