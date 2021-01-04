@@ -1,8 +1,8 @@
 ---
 title: 非インタラクティブPDFドキュメントのアセンブリ
 seo-title: 非インタラクティブPDFドキュメントのアセンブリ
-description: 'null'
-seo-description: 'null'
+description: Java APIとWeb Service APIを使用して非インタラクティブPDFドキュメントをアセンブリするには、非インタラクティブPDFフォームを入力として使用します。
+seo-description: Java APIとWeb Service APIを使用して非インタラクティブPDFドキュメントをアセンブリするには、非インタラクティブPDFフォームを入力として使用します。
 uuid: 0c7adeb4-9a3a-4ec5-ba33-c3642928d4ea
 contentOwner: admin
 content-type: reference
@@ -11,10 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 8a75c201-bd88-4809-be08-69de94656489
 translation-type: tm+mt
-source-git-commit: 529b8c6556a7179a9169ff8250af6b5dc1251ef3
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '1760'
-ht-degree: 3%
+source-wordcount: '1800'
+ht-degree: 2%
 
 ---
 
