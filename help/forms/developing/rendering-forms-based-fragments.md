@@ -1,8 +1,8 @@
 ---
 title: 断片に基づくFormsのレンダリング
 seo-title: 断片に基づくFormsのレンダリング
-description: 'null'
-seo-description: 'null'
+description: Formsサービスを使用して、Designerで作成されたフラグメントに基づくフォームをレンダリングします。
+seo-description: Formsサービスを使用して、Designerで作成されたフラグメントに基づくフォームをレンダリングします。
 uuid: 9c9a730d-f970-41f8-afed-4e6b6d3d393d
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: a65c5303-0ebd-43a9-a777-401042d8fcad
 translation-type: tm+mt
-source-git-commit: ba04fe705a91717f1d9658d436056ebddda6be3a
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2215'
 ht-degree: 9%
 
 ---
