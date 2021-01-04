@@ -1,8 +1,8 @@
 ---
 title: FormsServiceにドキュメントを渡す
 seo-title: FormsServiceにドキュメントを渡す
-description: 'null'
-seo-description: 'null'
+description: フォームデザインを含むcom.adobe.idp.ドキュメントオブジェクトをFormsサービスに渡します。 Formsサービスは、com.adobe.idp.ドキュメントオブジェクト内のフォームデザインをレンダリングします。
+seo-description: フォームデザインを含むcom.adobe.idp.ドキュメントオブジェクトをFormsサービスに渡します。 Formsサービスは、com.adobe.idp.ドキュメントオブジェクト内のフォームデザインをレンダリングします。
 uuid: 841e97f3-ebb8-4340-81a9-b6db11f0ec82
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: e23de3c3-f8a0-459f-801e-a0942fb1c6aa
 translation-type: tm+mt
-source-git-commit: 4602c684ccea9a7f45c4d7eda2f2be25707ca1b3
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1700'
 ht-degree: 3%
 
 ---
