@@ -1,8 +1,8 @@
 ---
 title: FormsサービスAPIクイック開始
 seo-title: FormsサービスAPIクイック開始
-description: 'null'
-seo-description: 'null'
+description: FormsサービスAPIのクイック開始を使用します。
+seo-description: FormsサービスAPIのクイック開始を使用します。
 uuid: dfce259a-e392-4929-ad7e-6d902faceaeb
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
