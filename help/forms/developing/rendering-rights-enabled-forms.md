@@ -1,8 +1,8 @@
 ---
 title: 使用権限を付与されたFormsのレンダリング
 seo-title: 使用権限を付与されたFormsのレンダリング
-description: 'null'
-seo-description: 'null'
+description: 使用権限が適用されたフォームをレンダリングするには、Formsサービスを使用します。 Java APIとWeb Service APIを使用して、使用権限を付与されたフォームをレンダリングできます。
+seo-description: 使用権限が適用されたフォームをレンダリングするには、Formsサービスを使用します。 Java APIとWeb Service APIを使用して、使用権限を付与されたフォームをレンダリングできます。
 uuid: ce5e4be6-d9b0-4989-a0e1-a8c3b98aed77
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: d4c2b2f0-613a-409d-b39b-8e37fdb96eea
 translation-type: tm+mt
-source-git-commit: ba04fe705a91717f1d9658d436056ebddda6be3a
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1493'
 ht-degree: 5%
 
 ---
