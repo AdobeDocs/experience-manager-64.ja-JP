@@ -1,8 +1,8 @@
 ---
 title: 暗号化されたPDFドキュメントのアセンブリ
 seo-title: 暗号化されたPDFドキュメントのアセンブリ
-description: 'null'
-seo-description: 'null'
+description: Java APIとWeb Service APIを使用して、暗号化されたPDFドキュメントをアセンブリします。
+seo-description: Java APIとWeb Service APIを使用して、暗号化されたPDFドキュメントをアセンブリします。
 uuid: d0948ec9-ab67-4fe4-9062-1c4938460b43
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 6d75c7b1-9c0e-47f3-bdb1-61acf16b97f9
 translation-type: tm+mt
-source-git-commit: 529b8c6556a7179a9169ff8250af6b5dc1251ef3
+source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1661'
 ht-degree: 6%
 
 ---
