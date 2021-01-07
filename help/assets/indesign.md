@@ -3,10 +3,10 @@ title: AEM AssetsとAdobe InDesign Serverを統合
 description: AEM Assets と InDesign Server を統合する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 31d652ee04fe75e96f96c9ddc5a6f2c3c64bd630
+source-git-commit: 13d33d0474d2a29226747aa77bf0bc0a51142209
 workflow-type: tm+mt
-source-wordcount: '1685'
-ht-degree: 67%
+source-wordcount: '1702'
+ht-degree: 60%
 
 ---
 
@@ -135,13 +135,13 @@ AEM Assetsには、InDesign専用のいくつかのプロセス手順を持つ�
 
 * **拡張スクリプト**:ここでは、異なるスクリプトの組み合わせを指定できます。InDesign サーバーで独自のスクリプトを実行する場合は、`/apps/settings/dam/indesign/scripts` にスクリプトを保存します。
 
-   Indesign のスクリプトについて詳しくは、[https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) を参照してください。
+   InDesignスクリプトについて詳しくは、[https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)を参照してください。
 
 >[!CAUTION]
 >
 >ExtendScript ライブラリは変更しないでください。ライブラリは、Slingとの通信に必要なHTTP機能を提供します。 この設定は、Adobe InDesign Serverに送信してそこで使用するライブラリを指定します。
 
-メディア抽出ワークフローステップで実行される `ThumbnailExport.jsx` スクリプトにより、サムネールのレンディションを .jpg 形式で生成します。このレンディションはサムネールを処理ワークフローステップによって使用され、AEM で要求される静的レンディションを生成します。
+メディア抽出のワークフロー手順で実行される`ThumbnailExport.jsx`スクリプトは、JPG形式のサムネールレンディションを生成します。 このレンディションはサムネールを処理ワークフローステップによって使用され、AEM で要求される静的レンディションを生成します。
 
 サムネールを処理ワークフローステップは、異なるサイズの静的レンディションを生成するように設定できます。デフォルトの設定は AEM Assets UI によって要求されるので、削除しないでください。最後に、画像プレビューレンディションを削除ワークフローステップで不要になった .jpg 形式のサムネールレンディションが削除されます。
 
@@ -185,15 +185,15 @@ AEM Assetsには、InDesign専用のいくつかのプロセス手順を持つ�
 
 ### Day CQ Link Externalizer の設定 {#configuring-day-cq-link-externalizer}
 
-InDesign Server と AEM が別のホストで実行されている、またはどちらかまた両方のアプリケーションがデフォルトのポートで実行されていない場合は、**Day CQ Link Externalizer** で InDesign Server のホスト名、ポートおよびコンテンツを設定します。
+InDesign ServerとAEMが異なるホスト上にあるか、これらのアプリケーションの1つまたは両方がデフォルトポートで動作しない場合は、**Day CQ Link Externalizer**&#x200B;を設定して、InDesign Serverのホスト名、ポート、コンテンツパスを設定します。
 
 1. `https://[AEM_server]:[port]/system/console/configMgr` の URL で Configuration Manager にアクセスします。
-1. **[!UICONTROL Day CQ Link Externalizer]** 設定を探し、**[!UICONTROL 編集]**&#x200B;アイコンをクリックして開きます。
-1. InDesign Server のホスト名とコンテンツパスを指定し、「**[!UICONTROL Save]**」をクリックします。
+1. 設定&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;を探します。 「**[!UICONTROL 編集]**」をクリックして開きます。
+1. Link Externalizerの設定は、[!DNL Experience Manager]展開と[!DNL InDesign Server]の絶対的なURLを作成するのに役立ちます。 **[!UICONTROL ドメイン]**&#x200B;フィールドを使用して、[!DNL Adobe InDesign Server]のホスト名とコンテキストパスを指定します。 画面に表示される手順に従ってください。「**[!UICONTROL 保存]**」をクリックします。
 
-   ![chlimage_1-290](assets/chlimage_1-290.png)
+   ![Link externalizerの設定](assets/link-externalizer-config.png)
 
-### InDesign Server の並列ジョブ処理の有効化 {#enabling-parallel-job-processing-for-indesign-server-s}
+### InDesign Serverの並列ジョブ処理を有効にする{#enabling-parallel-job-processing-for-indesign-server}
 
 IDS の並列ジョブ処理を有効にすることができます。
 
