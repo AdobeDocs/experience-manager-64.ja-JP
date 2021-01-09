@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: e7d53127-3a0f-4c74-a656-25d9cf969f98
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: 6c5b0abd9f19ceddd84e8615f0aedf48b1ef5868
 workflow-type: tm+mt
-source-wordcount: '2044'
-ht-degree: 88%
+source-wordcount: '2170'
+ht-degree: 83%
 
 ---
 
@@ -68,7 +68,15 @@ AEM Forms を使用すると、サイドバーにあるコンポーネントブ�
 >
 >表には、任意の数の行を追加することができますが、追加できる列の数は最大 6 つまでに制限されています。また、表からヘッダー行を削除することはできません。
 
-### 表の説明の追加  {#add-table-description}
+### テーブルの列幅を設定{#set-column-width}
+
+次の手順を実行して、テーブルの列幅を設定します。
+
+1. 「**[!UICONTROL コンテンツ]**」タブで、**[!UICONTROL テーブル]**&#x200B;コンポーネントをタップし、設定（![設定](assets/configure-icon.svg)）アイコンをタップします。
+
+1. 「**[!UICONTROL 列の幅]**」フィールドに値のコンマ区切りリストを入力し、テーブルの各列の幅を指定します。 例えば、3つの列を含むテーブルの場合、**[!UICONTROL 列の幅]**&#x200B;フィールドの値として2,4,6を指定すると、列の幅を1列目に2/12、2列目に4/12、3列目に6/12と設定します。 2/12は、最初の列の幅が、テーブルの幅の1/6を表します。 同様に、4/12では2番目の列幅を表の幅の1/3に設定し、6/12では3番目の列幅を表の幅の半分に設定します。
+
+### 表の説明の追加 {#add-table-description}
 
 情報がどのように整理されているか、スクリーンリーダーが解釈し、読み出すことのできる説明を、表に追加することができます。説明を追加するには：
 
