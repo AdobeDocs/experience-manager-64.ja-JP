@@ -12,10 +12,10 @@ discoiquuid: 3619ded2-a67c-4b96-b634-4c0d68f5284a
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 translation-type: tm+mt
-source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+source-git-commit: 201ddb888e6f1797bf2b84c5719625ebf87ddc82
 workflow-type: tm+mt
-source-wordcount: '6592'
-ht-degree: 84%
+source-wordcount: '6670'
+ht-degree: 83%
 
 ---
 
@@ -337,6 +337,10 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 >[!CAUTION]
 >この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
+>[!CAUTION]
+>
+>このコンポーネントは、プロジェクトレベルのカスタマイズが必要な場合に、すぐに使用できる機能とは限りません。
+
 Flash コンポーネントを使用すると、Flash ムービーをロードできます。コンテンツファインダーからコンポーネントに Flash アセットをドラッグするか、ダイアログを使用できます。
 
 * **Flash**
@@ -538,6 +542,10 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 >[!CAUTION]
 >この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
+>[!CAUTION]
+>
+>このコンポーネントは、プロジェクトレベルのカスタマイズが必要な場合に、すぐに使用できる機能とは限りません。
+
 「ユーザー名」フィールドと「パスワード」フィールドを提供します。
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
@@ -573,6 +581,10 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
       ユーザーが既にログインしていることを示すテキストです。
 
 ### 注文ステータス {#order-status}
+
+>[!CAUTION]
+>
+>このコンポーネントは、プロジェクトレベルのカスタマイズが必要な場合に、すぐに使用できる機能とは限りません。
 
 * **タイトル**
 
@@ -710,6 +722,10 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!CAUTION]
 >この基盤コンポーネントは廃止されました。代わりに、[カルーセルコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/carousel.html)を利用することをお勧めします。
+
+>[!CAUTION]
+>
+>このコンポーネントは、プロジェクトレベルのカスタマイズが必要な場合に、すぐに使用できる機能とは限りません。
 
 このコンポーネントを使用すると、ページでスライドショーとして表示する一連の画像をロードできます。画像を追加または削除し、それぞれにタイトルを割り当てることができます。「詳細」では、表示領域のサイズも指定できます。
 
@@ -879,6 +895,10 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 ![dc_title_use](assets/dc_title_use.png)
 
 ### ビデオ {#video}
+
+>[!CAUTION]
+>
+>このコンポーネントは、プロジェクトレベルのカスタマイズが必要な場合に、すぐに使用できる機能とは限りません。
 
 **ビデオ**&#x200B;コンポーネントを使用すると、定義済みですぐに使用できるビデオ要素をページに配置できます。
 
@@ -1296,6 +1316,10 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 >[!CAUTION]
 >この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
+>[!CAUTION]
+>
+>このコンポーネントは、プロジェクトレベルのカスタマイズが必要な場合に、すぐに使用できる機能とは限りません。
+
 キャプチャコンポーネントを画面に表示する場合、ユーザーは英数字を入力する必要があります。更新するごとに、文字列は変わります。
 
 ![dc_form_captcha](assets/dc_form_captcha.png)
@@ -1361,7 +1385,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 >
 >詳しくは、[フォームコンポーネントの表示と非表示](/help/sites-developing/developing-forms.md#showing-and-hiding-form-components)を参照してください。
 
-### 画像ボタン {#image-button}
+### 画像ボタン  {#image-button}
 
 画像ボタンを使用すると、独自の画像やテキストのボタンを作成できます。
 
