@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: d2b4e6599a7b1c01dc220a03b2be9aa55e5d7458
+source-git-commit: 201ddb888e6f1797bf2b84c5719625ebf87ddc82
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 36%
+source-wordcount: '435'
+ht-degree: 35%
 
 ---
 
@@ -24,7 +24,11 @@ ht-degree: 36%
 
 トランスコードを適切に行うには、管理者がFmpegを[インストールし、AEM](#install-ffmpeg)を個別に設定する必要があります。 HTML5 要素と共に使用するために[ビデオプロファイルを設定](#configure-video-profiles)することもできます。
 
-## ビデオプロファイルの設定  {#configure-video-profiles}
+>[!CAUTION]
+>
+>このコンポーネントは、プロジェクトレベルのカスタマイズが必要な場合に、すぐに使用できる機能とは限りません。
+
+## ビデオプロファイルの設定 {#configure-video-profiles}
 
 HTML5 要素に使用するビデオプロファイルの定義が必要になる場合があります。ここで選択したものは順番に使用されます。アクセスするには、[デザインモード](/help/sites-authoring/default-components-designmode.md)（クラシック UI のみ）を使用して「**[!UICONTROL プロファイル]**」タブを選択します。
 
