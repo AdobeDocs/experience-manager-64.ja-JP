@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: f4cdd3d5020b917676fe8715d4e21e98f3a096b4
+source-git-commit: 0959d86c28ee6de7347922af706338f83fe400ef
 workflow-type: tm+mt
-source-wordcount: '4725'
-ht-degree: 74%
+source-wordcount: '4981'
+ht-degree: 70%
 
 ---
 
@@ -640,6 +640,39 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
 * `cq:editConfig`の子ノードを探す場合、例えば`cq:DropTargetConfig`型の`cq:dropTargets`を探すことができます。クエリツール(**CRXDE Lite**内)を使用して、次のXPathクエリ文字列で検索できます。
 
    `//element(cq:dropTargets, cq:DropTargetConfig)`
+
+### コンポーネントプレースホルダ{#component-placeholders}
+
+コンポーネントにコンテンツがない場合でも、コンポーネントは常に、作成者に表示される一部のHTMLをレンダリングする必要があります。 そうしないと、視覚的にエディターのインターフェイスから見えなくなり、技術的には表示されますが、ページやエディターには表示されなくなります。 この場合、作成者は空のコンポーネントを選択して操作することができません。
+
+このため、ページがページエディターでレンダリングされる（WCMモードが`edit`または`preview`の場合）際に、コンポーネントは表示された出力をレンダリングしない限り、プレースホルダーをレンダリングする必要があります。
+プレースホルダーの一般的なHTMLマークアップは次のとおりです。
+
+```HTML
+<div class="cq-placeholder" data-emptytext="Component Name"></div>
+```
+
+上記のプレースホルダーHTMLをレンダリングする一般的なHTLスクリプトは次のとおりです。
+
+```HTML
+<div class="cq-placeholder" data-emptytext="${component.properties.jcr:title}"
+     data-sly-test="${(wcmmode.edit || wcmmode.preview) && isEmpty}"></div>
+```
+
+前の例では、`isEmpty`は変数で、コンポーネントにコンテンツがなく、作成者には見えない場合にのみtrueになります。
+
+繰り返しを避けるために、Adobeでは、コンポーネントの実装者に対して、コアコンポーネントが提供するプレースホルダーのように[HTLテンプレートをこれらのプレースホルダーに使用するように推奨します。](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html)
+
+その後、前のリンクでのテンプレートの使用は、次のHTL行で行います。
+
+```HTML
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${template.placeholder @ isEmpty=!model.text}"></sly>
+```
+
+前の例では、`model.text`は変数で、コンテンツが含まれ、表示されている場合にのみtrueになります。
+
+このテンプレートの使用例は、コアコンポーネント[（タイトルコンポーネントなど）で確認できます。](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27)
 
 ### cq:EditConfig プロパティを使用した設定 {#configuring-with-cq-editconfig-properties}
 
