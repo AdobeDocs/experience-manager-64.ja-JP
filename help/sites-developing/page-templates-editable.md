@@ -10,10 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: cf181663-8a4a-4efc-9f02-be1cf71c9299
 translation-type: tm+mt
-source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
+source-git-commit: 4f820cd0bf3a18b18c95e75c0f291452871175a4
 workflow-type: tm+mt
-source-wordcount: '3231'
-ht-degree: 89%
+source-wordcount: '3298'
+ht-degree: 86%
 
 ---
 
@@ -122,7 +122,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
    テンプレート作成者がテンプレートを有効にする方法について詳しくは、[ページテンプレートの作成](/help/sites-authoring/templates.md#enabling-and-allowing-a-template-template-author)を参照してください。
 
-   テンプレートの有効化の技術的な詳細については、このドキュメントの[使用するテンプレートの有効化と許可](/help/sites-developing/page-templates-editable.md#enabling-and-allowing-a-template-for-use)を参照してください。
+   テンプレートの有効化に関する技術的な詳細については、このドキュメントの「[Enabling and Allowing a Template for Us](/help/sites-developing/page-templates-editable.md#enabling-and-allowing-a-template-for-use)e」を参照してください。
 
 1. テンプレートを使用してコンテンツページを作成します。
 
@@ -133,6 +133,16 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
    編集可能テンプレートを使用したページ作成の技術的な詳細については、このドキュメントの[作成されるコンテンツページ](/help/sites-developing/page-templates-editable.md#resultant-content-pages)を参照してください。
 
+>[!TIP]
+>
+>国際化する必要がある情報は、テンプレートに含めないでください。内部化の目的では、コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)の[ローカライゼーション機能を推奨します。
+
+>[!NOTE]
+>
+>テンプレートは、ページ作成ワークフローを合理化する強力なツールです。 ただし、テンプレートが多すぎると作成者を圧倒し、ページ作成を混乱させる可能性があります。 テンプレートの数を100未満に抑えるのが一般的です。
+>
+>Adobeでは、パフォーマンスに影響が及ぶ可能性があるので、1000を超えるテンプレートを使用することはお勧めしません。
+
 >[!NOTE]
 >
 >エディタークライアントライブラリは、コンテンツページに `cq.shared` 名前空間が存在することを前提としています。名前空間が存在しない場合は、JavaScript エラー「`Uncaught TypeError: Cannot read property 'shared' of undefined`」が発生します。
@@ -140,10 +150,6 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 >すべてのサンプルコンテンツページには `cq.shared` が含まれているので、それらをベースとするコンテンツには自動的に `cq.shared` が含められます。ただし、サンプルコンテンツをベースとせず、ゼロから独自のコンテンツページを作成する場合は、`cq.shared` 名前空間を含める必要があります。
 >
 >詳しくは、[クライアントサイドライブラリの使用](/help/sites-developing/clientlibs.md)を参照してください。
-
->[!CAUTION]
->
->テンプレートには[国際化](/help/sites-developing/i18n.md)が必要な情報は絶対に入れないようにしてください。
 
 ## テンプレートフォルダー {#template-folders}
 
@@ -217,7 +223,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
 1. **グローバルナビゲーション**／**ツール**／**設定ブラウザー**&#x200B;に移動します。
 
-   **グローバル**&#x200B;フォルダーなどの既存のフォルダーは左側に一覧表示されます。
+   既存のフォルダーが左側に表示され、**グローバル**&#x200B;フォルダーも含まれます。
 
 1. 「**作成**」をクリックします。
 1. **設定を作成**&#x200B;ダイアログで、以下のフィールドを設定する必要があります。
