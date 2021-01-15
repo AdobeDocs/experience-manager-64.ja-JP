@@ -3,21 +3,21 @@ title: AEM Assets と Brand Portal の連携の設定
 description: 'Brand Portalにアセットやコレクションを公開するためのBrand Portalを使用したAEM Assetsの設定方法について説明します。 '
 contentOwner: VG
 translation-type: tm+mt
-source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
+source-git-commit: b9dffdda37992f3a9f34953b8dd391d6f6361ceb
 workflow-type: tm+mt
-source-wordcount: '1692'
-ht-degree: 58%
+source-wordcount: '1647'
+ht-degree: 51%
 
 ---
 
 
 # AEM Assets と Brand Portal の連携の設定 {#configure-integration-64}
 
-Adobe Experience Manager（AEM）Assets と Brand Portal の連携が、Adobe I/O を通じて設定されます。Adobe I/O は Brand Portal テナントの認証用の IMS トークンを取得します。
+Adobe Experience Manager(AEM)アセットは、[!DNL Adobe I/O]を通じてBrand Portalで設定され、Brand Portalテナントの認証用にIMSトークンを調達します。
 
 >[!NOTE]
 >
->Adobe I/O を使用した AEM Assets と Brand Portal の連携の設定は、AEM 6.4.8.0 以降でサポートされています。
+>[!DNL Adobe I/O]経由でBrand Portalを使用したAEM Assetsの設定は、AEM 6.4.8.0以降でサポートされています。
 >
 >これまで、Brand Portal は、旧来の OAuth ゲートウェイを通じてクラシック UI で設定されていました。このゲートウェイは、JWT トークン交換を使用して認証用の IMS アクセストークンを取得します。
 
@@ -25,12 +25,12 @@ Adobe Experience Manager（AEM）Assets と Brand Portal の連携が、Adobe I/
 >
 >***既存のお客様のみ***
 >
->既存のレガシー OAuth Gateway 設定を引き続き使用することをお勧めします。レガシー OAuth Gateway 設定に問題が発生した場合は、既存の設定を削除し、Adobe I/O から新しい設定を作成します。
+>既存のレガシー OAuth Gateway 設定を引き続き使用することをお勧めします。レガシーOAuth Gatewayの構成に問題が発生した場合は、既存の構成を削除し、[!DNL Adobe I/O]を介して新しい構成を作成します。
 
 このヘルプでは、次の2つの使用例について説明します。
 
-* [新しい設定](#configure-new-integration-64):新しいBrand Portalユーザーで、AEM Assets作成者インスタンスをBrand Portalで設定する場合は、Adobe I/Oで新しい設定を作成できます。
-* [アップグレード設定](#upgrade-integration-64):既存のBrand Portalユーザーで、従来のOAuth GatewayのBrand Portalで設定したAEM Assets作成者インスタンスを使用している場合は、既存の設定を削除し、Adobe I/Oで新しい設定を作成することをお勧めします。
+* [新しい設定](#configure-new-integration-64):新しいBrand Portalユーザーで、Brand PortalでAEM Assets作成者インスタンスを設定する場合は、で新しい設定を作成でき [!DNL Adobe I/O]ます。
+* [アップグレード設定](#upgrade-integration-64):既存のBrand Portalユーザーで、従来のOAuth GatewayのBrand Portalで設定したAEM Assets作成者インスタンスを使用している場合は、既存の設定を削除し、新しい設定をに作成することをお勧めし [!DNL Adobe I/O]ます。
 
 具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
 
@@ -73,7 +73,7 @@ AEM をダウンロードしたら、「[デプロイメントと保守](https:/
 ブランドポータルを使用してAEM Assetsを初めて設定する場合は、一覧に示す順序で次の手順を実行します。
 
 1. [公開証明書の取得](#public-certificate)
-1. [Adobe I/O 統合環境の作成](#createnewintegration)
+1. [ [!DNL Adobe I/O] Createintegration](#createnewintegration)
 1. [IMS アカウント設定の作成](#create-ims-account-configuration)
 1. [Cloud Service の設定](#configure-the-cloud-service)
 1. [設定のテスト](#test-integration)
@@ -93,7 +93,7 @@ IMS 設定には、次の 2 つの手順が含まれます。
 
 ### 公開証明書の取得 {#public-certificate}
 
-公開証明書により、Adobe I/O でプロファイルを認証できます。
+公開証明書を使用すると、[!DNL Adobe I/O]でプロファイルを認証できます。
 
 1. AEM Assets作成者インスタンスにログインします
 デフォルトURL:http:// localhost:4502/aem/start.html
@@ -117,7 +117,7 @@ IMS 設定には、次の 2 つの手順が含まれます。
 
    ![証明書を作成](assets/ims-config2.png)
 
-1. 「**[!UICONTROL 公開鍵をダウンロード]**」をクリックし、*AEM-Adobe-IMS.crt* 証明書ファイルをローカルマシンに保存します。この証明書ファイルは、[Adobe I/O 統合環境の作成](#createnewintegration)に使用されます。
+1. 「**[!UICONTROL 公開鍵をダウンロード]**」をクリックし、*AEM-Adobe-IMS.crt* 証明書ファイルをローカルマシンに保存します。証明書ファイルは、[create [!DNL Adobe I/O] integration](#createnewintegration)に使用されます。
 
    ![証明書をダウンロード](assets/ims-config3.png)
 
@@ -125,13 +125,13 @@ IMS 設定には、次の 2 つの手順が含まれます。
 
    「**アカウント**」タブで、Adobe IMS アカウントを作成するには、統合環境の詳細が必要です。このページは開いたままにしておきます。
 
-   新しいタブを開き、[Adobe I/O統合を作成](#createnewintegration)を開いて、IMSアカウント設定の統合の詳細を取得します。
+   新しいタブを開き、[統合 [!DNL Adobe I/O] 統合](#createnewintegration)を作成して、IMSアカウント設定の統合の詳細を取得します。
 
-### Adobe I/O 統合環境の作成{#createnewintegration}
+### [!DNL Adobe I/O]統合{#createnewintegration}を作成
 
-Adobe I/O 統合環境により、API キー、クライアント秘密鍵、および IMS アカウント設定の設定で必要なペイロード（JWT）が生成されます。
+[!DNL Adobe I/O] 統合環境により、API キー、クライアント秘密鍵、および IMS アカウント設定の設定で必要なペイロード（JWT）が生成されます。
 
-1. Brand Portal テナントの IMS 組織のシステム管理者権限で Adobe I/O コンソールにログインします。
+1. Brand PortalテナントのIMS組織のシステム管理者権限で[!DNL Adobe I/O]コンソールにログインします。
 
    デフォルト URL：[https://console.adobe.io/](https://console.adobe.io/)
 
@@ -174,7 +174,7 @@ Adobe I/O 統合環境により、API キー、クライアント秘密鍵、お
 次の手順を実行したことを確認します。
 
 * [公開証明書の取得](#public-certificate)
-* [Adobe I/O 統合環境の作成](#createnewintegration)
+* [ [!DNL Adobe I/O] Createintegration](#createnewintegration)
 
 **IMS アカウント設定の作成手順：**
 
@@ -184,7 +184,7 @@ Adobe I/O 統合環境により、API キー、クライアント秘密鍵、お
 
    「**[!UICONTROL 認証サーバー]**」に次の URL を入力します。[https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/)
 
-   [Adobe I/O 統合環境の作成](#createnewintegration)の最後にコピーした API キー、クライアント秘密鍵、JWT ペイロードを貼り付けます。
+   [Create [!DNL Adobe I/O] integration](#createnewintegration)の最後にコピーしたAPIキー、Client Secret、JWTペイロードを貼り付けます。
 
    「**[!UICONTROL 作成]**」をクリックします。
 
@@ -335,7 +335,7 @@ Brand Portalは、AEM Assets作成者インスタンスで正常に設定され�
    ![](assets/delete-mac-user.png)
 
 
-これで、Adobe I/OのAEM 6.4作成者インスタンスで[設定](#configure-new-integration-64)を作成できます。
+これで、[!DNL Adobe I/O]上のAEM 6.4オーサーインスタンスに[設定](#configure-new-integration-64)を作成できます。
 
 
 
