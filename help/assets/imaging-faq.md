@@ -10,10 +10,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 31ddda9f74541dcf58fe70971535ee4180f70d6e
+source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
 workflow-type: tm+mt
-source-wordcount: '1758'
-ht-degree: 98%
+source-wordcount: '1756'
+ht-degree: 95%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 98%
 
 ## スマートイメージングにはライセンス費用がかかりますか？ {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
-いいえ。スマートイメージングは、Dynamic Media Classic（Scene7）または AEM Dynamic Media（オンプレミス、AMS、AEM as a Cloud Service）の既存のライセンスに含まれています。
+いいえ。スマートイメージングは、AEMのDynamic MediaクラシックまたはCloud ServiceDynamic Media(On Prem、AMS、およびAEM)の既存のライセンスに含まれています。
 
 >[!NOTE]
 >
@@ -165,7 +165,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 ## スマートイメージングが想定どおりに機能しているかどうかを確認するには、どうすればいいですか？ {#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
-1. アカウントにスマートイメージングが設定されたら、ブラウザーで、Dynamic Media Classic（Scene7）／Dynamic Media の画像の URL を読み込みます。
+1. スマートイメージングを使用してアカウントを設定したら、ブラウザーにDynamic Mediaクラシック/Dynamic Media画像のURLを読み込みます。
 1. Chrome ブラウザーで&#x200B;**[!UICONTROL 表示／デベロッパー／デベロッパーツール]**&#x200B;をクリックしてデベロッパーパネルを開きます。または、別のブラウザーのデベロッパーツールを使用します。
 
 1. デベロッパーツールを開いたときにキャッシュが無効化されるようにします。
