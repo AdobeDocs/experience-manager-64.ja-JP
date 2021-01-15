@@ -6,22 +6,22 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: c2f190af-656e-4435-9f44-2698d41c4ad1
 translation-type: tm+mt
-source-git-commit: fb2567cdf5a0ae210270366899b49db256374f25
+source-git-commit: b9dffdda37992f3a9f34953b8dd391d6f6361ceb
 workflow-type: tm+mt
-source-wordcount: '1367'
-ht-degree: 72%
+source-wordcount: '1361'
+ht-degree: 69%
 
 ---
 
 
 # Experience Cloud および Creative Cloud との AEM Assets 統合の設定 {#configure-aem-assets-integration-with-experience-cloud-and-creative-cloud}
 
-Adobe Experience Cloud のお客様は、Adobe Experience Manager（AEM）Assets 内のアセットを Adobe Creative Cloud と同期できます。また、その逆も可能です。また、アセットを Experience Cloud に（またはその逆に）同期することもできます。Adobe I/O 経由でこの同期をセットアップできます。
+Adobe Experience Cloud のお客様は、Adobe Experience Manager（AEM）Assets 内のアセットを Adobe Creative Cloud と同期できます。また、その逆も可能です。また、アセットを Experience Cloud に（またはその逆に）同期することもできます。この同期は[!DNL Adobe I/O]を通じて設定できます。
 
 この統合をセットアップするためのワークフローを以下に示します。
 
-1. Adobe I/O で公開ゲートウェイを使用して認証を作成し、アプリケーション ID を取得します。
-1. AEM Assets インスタンス上でアプリケーション ID を使用してプロファイルを作成します。
+1. パブリックゲートウェイを使用して[!DNL Adobe I/O]で認証を作成し、アプリケーション IDを取得します。
+1. アプリケーション IDを使用して、AEM Assetsインスタンスにプロファイルを作成します。
 1. この設定を使用して、AEM Assets 内のアセットを Creative Cloud と同期します。
 
 バックエンドでは、AEM サーバーがゲートウェイを使用してプロファイルを認証し、AEM Assets と Experience Cloud 間でデータを同期します。
