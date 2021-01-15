@@ -10,7 +10,7 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 9ba95dce-a801-4a36-8798-45d295371b1b
 translation-type: tm+mt
-source-git-commit: 191c365e924fd3974308c075369a3f9d8810e6b7
+source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
 workflow-type: tm+mt
 source-wordcount: '3428'
 ht-degree: 30%
@@ -97,7 +97,7 @@ AEM でのビデオコンポーネントの使用について詳しくは、以�
 
 Adobeでは、Dynamic Mediaクラシックターゲットフォルダ内のアセットからのみ、Dynamic Mediaクラシックにアセットを公開することをお勧めします。 ただし、ターゲットフォルダー外のフォルダーからアセットをアップロードする必要がある場合は、Dynamic Mediaクラシックの&#x200B;*アドホック*&#x200B;フォルダーにアップロードしてアップロードできます。
 
-これを行うには、アセットを表示するページのクラウド設定を指定します。 次に、ページにDynamic Mediaクラシックコンポーネントを追加し、そのコンポーネントにアセットをドラッグ&amp;ドロップします。 そのページのページプロパティが設定されると、「**[!UICONTROL Dynamic Mediaクラシックに公開]**」リンクが表示され、選択するとDynamic Mediaクラシックへのアップロードがトリガーされます。
+これを行うには、アセットを表示するページのクラウド設定を指定します。 次に、ページにDynamic Mediaクラシックコンポーネントを追加し、そのコンポーネントにアセットをドラッグ&amp;ドロップします。 そのページのページプロパティが設定されると、**[!UICONTROL 「Dynamic Mediaクラシックに公開」]**&#x200B;リンクが表示され、選択したトリガーがDynamic Mediaクラシックにアップロードするときに表示されます。
 
 >[!NOTE]
 >
@@ -240,7 +240,7 @@ Dynamic Mediaクラシック画像コンポーネントを使用すると、Dyna
 
 **[!UICONTROL 出力形式]**  — 画像の出力形式（jpegなど）を選択します。選択する出力形式によっては、追加の設定オプションが表示される場合があります。[画像プリセットの管理](/help/assets/managing-image-presets.md)を参照してください。
 
-**[!UICONTROL シャープ]**  — 画像にシャープを適用する方法を選択します。シャープの適用について詳しくは、「[*AdobeDynamic Mediaクラシック画質とシャープのベストプラクティス*](/help/assets/assets/s7_sharpening_images.pdf)」を参照してください。
+**[!UICONTROL シャープ]**  — 画像にシャープを適用する方法を選択します。シャープの適用について詳しくは、「[*AdobeDynamic Mediaクラシック画質とシャープのベストプラクティス*](/help/assets/assets/sharpening_images.pdf)」を参照してください。
 
 **[!UICONTROL URL修飾子]**  — 追加のDynamic Mediaクラシック画像コマンドを指定して、画像効果を変更できます。これらについては、[画像プリセットの管理](/help/assets/managing-image-presets.md)および[コマンドリファレンス](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)で説明します。
 
