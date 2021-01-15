@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: authoring
 discoiquuid: c1b52aac-1eaf-4cfa-801f-77aeca0d90ea
 translation-type: tm+mt
-source-git-commit: ce50cffa1a6a27c700b38d1d17c920f1bc31e3cc
+source-git-commit: b9dffdda37992f3a9f34953b8dd391d6f6361ceb
 workflow-type: tm+mt
-source-wordcount: '1577'
-ht-degree: 83%
+source-wordcount: '1567'
+ht-degree: 80%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 83%
 
 背景には、スマートコンテンツサービスは、Adobe SenseiのAIフレームワークを使用して、タグ構造とビジネス分類に対する画像認識アルゴリズムのトレーニングを行っています。 その後、このコンテンツインテリジェンスを使用して、アセットの個々のセットに関連性の高いタグが適用されます。
 
-スマートコンテンツサービスは、Adobe I/O 上にホストされるクラウドサービスです。このサービスを Adobe Experience Manager（AEM）で使用するには、システム管理者が AEM インスタンスを Adobe I/O と統合する必要があります。
+スマートコンテンツサービスは、[!DNL Adobe I/O]上でホストされるクラウドサービスです。これをAdobe Experience Manager(AEM)で使用するには、システム管理者がAEMインスタンスを[!DNL Adobe I/O]と統合する必要があります。
 
 要約すると、スマートコンテンツサービスを使用するための主な手順は次のとおりです。
 
@@ -44,14 +44,14 @@ ht-degree: 83%
 
 ## 前提条件 {#prerequisites}
 
-Adobe I/O で統合を作成してスマートコンテンツサービスを使用する前に、以下の事項を確認します。
+Smart Content Serviceを使用する前に、次の手順を実行して[!DNL Adobe I/O]上に統合を作成します。
 
 * 組織の管理者権限を持つ Adobe ID アカウントがあること。
 * 組織でスマートコンテンツサービスが有効化されていること。
 
 ## オンボーディング {#onboarding}
 
-Smart Content ServiceはAEMのアドオンとして購入できます。購入後、AdobeI/Oへのリンクが記載された電子メールが組織の管理者に送信されます。
+Smart Content ServiceはAEMのアドオンとして購入できます。購入後、[!DNL Adobe I/O]へのリンクを含む電子メールが組織の管理者に送信されます。
 
 管理者は、そのリンクにアクセスしてスマートコンテンツサービスを AEM と統合することができます。このサービスを AEM Assets と統合するには、](config-smart-tagging.md)スマートタグの設定[を参照してください。
 
