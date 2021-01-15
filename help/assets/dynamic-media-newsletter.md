@@ -6,7 +6,7 @@ seo-title: 'AdobeDynamic Mediaニュースレター '
 solution: Dynamic Media Classic
 title: Dynamic Media ニュースレター
 translation-type: tm+mt
-source-git-commit: 6caef5222b9f2163bfe7f7ded0e989fbc402bfef
+source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 96%
@@ -52,9 +52,9 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * 無料の Dynamic Media Classic 監査の詳細
    * John Monroe 氏（カスタマーサクセスサービス担当シニアプログラムマネージャー）へのインタビュー
 
-   >[!IMPORTANT]
-   >
-   >Dynamic Media ニュースレターを希望する方のみに送信するようにしています。本号の後も引き続きニュースレターを受信するには、[こちら](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&amp;data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&amp;sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&amp;reserved=0)から新規登録してください。
+      >[!IMPORTANT]
+      >
+      >Dynamic Media ニュースレターを希望する方のみに送信するようにしています。本号の後も引き続きニュースレターを受信するには、[こちら](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&amp;data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&amp;sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&amp;reserved=0)から新規登録してください。
 
 * **[2020 年 2 月、第 2 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
@@ -109,7 +109,6 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * Bridget Roman 氏（Adobe Experience Manager Assets 担当シニアプロダクトマーケティングマネージャー）へのインタビュー
    * Experience League での Dynamic Media および Dynamic Media Classic のすばやい習得
 
-
 * **[2019 年 8 月、第 08 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_08_2019_Aug.html)**
 
    この号の主な内容：
@@ -119,7 +118,6 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * Dynamic Media で価値を実現する取り組みの出発点としての Experience League
    * 訪問者がリッチメディアとどのようにやり取りしているかを分析できる強力な統合機能（今年 9 月にリリース予定）のプレビュー
    * PieterJan Pieper 氏（Dynamic Media テクニカルサポートエキスパート）へのインタビュー
-
 
 * **[2019 年 7 月、第 07 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_07_2019_July.html)**
 
@@ -158,6 +156,7 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    Dynamic Media ニュースレターの創刊号にようこそ。これは、Adobe Experience Manager Assets 内 Dynamic Media および Adobe Dynamic Media Classic のユーザーを対象としたニュース、イベント、リソースの情報を満載した新しい月刊ニュースレターです。
 
    この号の主な内容：
+
    * Dynamic Media Classic の隠された機能に関する Web セミナーへの登録について
    * リッチメディア戦略の策定に役立つオンデマンド Web セミナーシリーズの紹介
    * 主要なリッチメディア使用例とそれに対応するアドビのソリューションについて
