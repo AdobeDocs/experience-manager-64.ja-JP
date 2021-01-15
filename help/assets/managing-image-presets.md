@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: e401816d-eba5-4833-a3bd-e2e45bc3b19e
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
 workflow-type: tm+mt
-source-wordcount: '3851'
+source-wordcount: '3850'
 ht-degree: 78%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 78%
 
 画像プリセットは、ソフトウェアマクロと同様に、定義済みのサイズおよび形式に関するコマンドの集まりで、特定の名前を付けて保存されます。 画像プリセットの仕組みを理解するために、Web サイトで各商品画像を、デスクトップ配信用とモバイル配信用に異なるサイズ、異なる形式および圧縮率で表示する必要があるとします。
 
-次の2つの画像プリセットを作成できます。デスクトップバージョンは500 x 500ピクセル、モバイルバージョンは150 x 150ピクセルです。2つの画像プリセットを作成します。1つは&#x200B;*Enlarge*&#x200B;と呼ばれ、500 x 500 pixelで画像を表示する場合はEnlarge&lt;a1/>、もう1つは&#x200B;*Thumbnail*&#x200B;と呼ばれ、150 x 150 pixelで画像を表示する場合です。画像を拡大サイズとサムネールサイズで配信する場合、AEMは「Enlarge Image」プリセットと「Thumbnail Image」プリセットの定義を参照します。次に、AEMは各画像プリセットのサイズと形式の仕様で画像を動的に生成します。
+次の2つの画像プリセットを作成できます。デスクトップバージョンは500 x 500ピクセル、モバイルバージョンは150 x 150ピクセルです。2つの画像プリセットを作成します。1つは&#x200B;*Enlarge*&#x200B;と呼ばれ、500 x 500 pixelで画像を表示する場合はEnlarge、もう1つは&#x200B;*Thumbnail*&#x200B;と呼ばれ、150 x 150 pixelで画像を表示する場合です。画像を拡大サイズとサムネールサイズで配信する場合、AEMは「Enlarge Image」プリセットと「Thumbnail Image」プリセットの定義を参照します。次に、AEMは各画像プリセットのサイズと形式の仕様で画像を動的に生成します。
 
 この場合、動的に配信されるときに画像のサイズを削減すると、シャープさと細部の表現が失われる可能性があります。この理由で、各画像プリセットには、画像を特定のサイズで配信するときに最適化するためのフォーマット用のコントロールが含まれています。これらのコントロールによって、Web サイトまたはアプリケーションに画像が配信されるときに、画像がシャープでクリアに表示されるようになります。
 
@@ -387,7 +387,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
      <li><strong>適用先</strong> - アンシャープを各カラーまたは明るさに適用するかを指定します。</li> 
     </ul> 
     <div>
-      シャープニングについては、<a href="https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/assets/s7_sharpening_images.pdf">画像のシャープニング</a>を参照してください。 
+      シャープニングについては、<a href="https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/assets/sharpening_images.pdf">画像のシャープニング</a>を参照してください。 
     </div> </td> 
   </tr> 
   <tr> 
