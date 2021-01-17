@@ -1,8 +1,8 @@
 ---
 title: Credential Service Java API QuickStart(SOAP)
 seo-title: Credential Service Java API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: 秘密鍵証明書サービスJava APIを使用して、秘密鍵証明書の読み込みと削除を行います。
+seo-description: 秘密鍵証明書サービスJava APIを使用して、秘密鍵証明書の読み込みと削除を行います。
 uuid: a00eabfa-3a52-41dd-bcba-c60d00394384
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: b624e255-ae71-4d9c-8554-d48f3e77b799
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: e077347bc202b6a411006032c68aa4a3152be7c5
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
