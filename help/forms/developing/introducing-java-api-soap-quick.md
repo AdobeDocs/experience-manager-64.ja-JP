@@ -1,8 +1,8 @@
 ---
 title: Java API QuickStartの概要
 seo-title: Java API QuickStartの概要
-description: 'null'
-seo-description: 'null'
+description: Java APIクイック開始プログラムを使用すると、AEM Formsサービスとやり取りするプログラムの開発を迅速に進めることができます。 プロジェクトのJava APIクイック開始プログラムを基に、カスタマイズを行うことができます。
+seo-description: Java APIクイック開始プログラムを使用すると、AEM Formsサービスとやり取りするプログラムの開発を迅速に進めることができます。 プロジェクトのJava APIクイック開始プログラムを基に、カスタマイズを行うことができます。
 uuid: 480e1809-f789-4ad8-b5d5-2d97aba8411a
 contentOwner: admin
 content-type: reference
@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: development-tools, develop
 discoiquuid: 38fd51ec-347e-4ae3-86d4-9d2429f79bdd
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: e077347bc202b6a411006032c68aa4a3152be7c5
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 1%
+source-wordcount: '579'
+ht-degree: 0%
 
 ---
 
@@ -65,7 +65,7 @@ JARファイルのリストは、クイック開始の先頭にあるコメン�
 
 ## 複数のサービスクイック開始{#multiple-services-quick-start}
 
-「*Programming withAEM Forms」にあるほとんどのクイック開始は、操作を実行するために特定のサービスを呼び出します。 ただし、一部のクイック開始は、特定のワークフローを実行するために複数のAEM Formsサービスを呼び出します。 次のリストは、複数のAEM Formsサービスを呼び出すJavaクイック開始を提供します。
+*AEM Forms*&#x200B;によるプログラミングにあるほとんどのクイック開始は、操作を実行するために特定のサービスを呼び出します。 ただし、一部のクイック開始は、特定のワークフローを実行するために複数のAEM Formsサービスを呼び出します。 次のリストは、複数のAEM Formsサービスを呼び出すJavaクイック開始を提供します。
 
 [クイック開始（SOAPモード）:Java APIを使用してAEM Formsリポジトリ内のドキュメントをOutputサービスに渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) （RepositoryとOutputサービスを呼び出す）
 
