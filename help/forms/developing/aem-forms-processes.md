@@ -1,8 +1,8 @@
 ---
 title: AEM Formsプロセスについて
 seo-title: AEM Formsプロセスについて
-description: 'null'
-seo-description: 'null'
+description: AEM Formsのビジネスプロセスを使用して業務を自動化する方法を学びます。 他のサービスと同様に呼び出せるように、プロセスをアクティブ化して、サービスを作成します。 プロセスには、短時間のみ有効なプロセスと長期間有効なプロセスがあります。
+seo-description: AEM Formsのビジネスプロセスを使用して業務を自動化する方法を学びます。 他のサービスと同様に呼び出せるように、プロセスをアクティブ化して、サービスを作成します。 プロセスには、短時間のみ有効なプロセスと長期間有効なプロセスがあります。
 uuid: 7cbebe7d-f222-42fa-8eb6-d2443458a791
 contentOwner: admin
 content-type: reference
@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: development-tools, coding
 discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: e077347bc202b6a411006032c68aa4a3152be7c5
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 3%
+source-wordcount: '855'
+ht-degree: 2%
 
 ---
 
