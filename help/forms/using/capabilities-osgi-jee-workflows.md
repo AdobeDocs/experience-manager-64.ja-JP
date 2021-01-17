@@ -1,17 +1,17 @@
 ---
 title: 'OSGi 上のフォームベース AEM ワークフローおよび AEM Forms JEE ワークフローのアクションと機能 '
 seo-title: 'OSGi 上のフォームベース AEM ワークフローおよび AEM Forms JEE ワークフローのアクションと機能 '
-description: 'null'
-seo-description: 'null'
+description: AEM InboxとHTML Workspaceでサポートされるアクションの違い、OSGiとAEM FormsJEEワークフローのフォーム中心のAEMワークフローでサポートされる機能の違い、AEM InboxとAEM Formsアプリの機能の違いについて詳しく説明します。
+seo-description: AEM InboxとHTML Workspaceでサポートされるアクションの違い、OSGiとAEM FormsJEEワークフローのフォーム中心のAEMワークフローでサポートされる機能の違い、AEM InboxとAEM Formsアプリの機能の違いについて詳しく説明します。
 uuid: ce2a05fe-ba45-42ed-880e-fb1d6efc1d26
 contentOwner: khsingh
 topic-tags: publish
 discoiquuid: 4c7ba430-25b2-4ba2-a5eb-4edaed0d599a
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: e077347bc202b6a411006032c68aa4a3152be7c5
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 76%
+source-wordcount: '931'
+ht-degree: 69%
 
 ---
 
