@@ -1,8 +1,8 @@
 ---
 title: エンドポイントレジストリJava API QuickStart(SOAP)
 seo-title: エンドポイントレジストリJava API QuickStart(SOAP)
-description: 'null'
-seo-description: 'null'
+description: Endpoint Registry Java APIを使用して、EJBエンドポイントの追加、SOAPエンドポイントの追加、監視フォルダーエンドポイントの追加、電子メールエンドポイントの追加、リモートエンドポイントの追加、TaskManagerエンドポイントの変更、エンドポイントの削除、エンドポイントコネクタ情報の取得を行います。
+seo-description: Endpoint Registry Java APIを使用して、EJBエンドポイントの追加、SOAPエンドポイントの追加、監視フォルダーエンドポイントの追加、電子メールエンドポイントの追加、リモートエンドポイントの追加、TaskManagerエンドポイントの変更、エンドポイントの削除、エンドポイントコネクタ情報の取得を行います。
 uuid: 986c55d0-e199-46f8-a3cc-a6baf5cce316
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: e5989859-e58d-4049-9e0d-c4c848d597af
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: e077347bc202b6a411006032c68aa4a3152be7c5
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '629'
 ht-degree: 0%
 
 ---
