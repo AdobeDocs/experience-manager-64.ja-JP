@@ -7,10 +7,10 @@ topic-tags: dynamic-media
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: 35dea5c6f64f13ca4b64834f98037ef8bcde393e
+source-git-commit: 9e6a7f0ec6ed921df419e626a155d0895dbaefde
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3849'
+ht-degree: 78%
 
 ---
 
@@ -385,7 +385,8 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
      <li><strong>適用先</strong> - アンシャープを各カラーまたは明るさに適用するかを指定します。</li>
     </ul>
     <div>
-      シャープの適用については、「*AdobeDynamic Mediaクラシック画質とシャープのベストプラクティス</a>」で説明しています。
+      シャープの適用については、  
+     <a href="https://experienceleague.adobe.com/doc/experience-manager-64/assets/assets/sharpening_images.pdf">AdobeDynamic Mediaクラシックの画質とシャープのベストプラクティス</a>
     </div> </td>
   </tr>
   <tr>
