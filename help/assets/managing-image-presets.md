@@ -1,18 +1,16 @@
 ---
 title: Dynamic Media画像プリセットの管理
 description: Dynamic Mediaの画像プリセットについて理解し、画像プリセットの作成、変更および管理方法を学習します。
-uuid: 087e6c32-82d5-4645-8dba-0a22c62f891f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: e401816d-eba5-4833-a3bd-e2e45bc3b19e
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
+source-git-commit: 35dea5c6f64f13ca4b64834f98037ef8bcde393e
 workflow-type: tm+mt
-source-wordcount: '3850'
-ht-degree: 78%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -106,31 +104,31 @@ Adobe Illustrator のファイル形式は PDF のバリアントです。AEM As
 <table> 
  <tbody> 
   <tr> 
-   <td><strong>プロセス引数</strong></td> 
-   <td><strong>デフォルト設定</strong></td> 
-   <td><strong>説明</strong></td> 
+   <td><strong>プロセス引数</strong></td>
+   <td><strong>デフォルト設定</strong></td>
+   <td><strong>説明</strong></td>
   </tr> 
   <tr> 
-   <td>MIME タイプ</td> 
-   <td><p>application/pdf</p> <p>application/postscript</p> <p>application/illustrator<br /> </p> </td> 
-   <td>PDF または Illustrator のドキュメントと見なされるドキュメントの MIME タイプのリスト。<br /> </td> 
+   <td>MIME タイプ</td>
+   <td><p>application/pdf</p> <p>application/postscript</p> <p>application/illustrator<br/> </p> </td>
+   <td>PDF または Illustrator のドキュメントと見なされるドキュメントの MIME タイプのリスト。<br/> </td>
   </tr> 
   <tr> 
-   <td>最大の幅</td> 
-   <td>2048</td> 
-   <td>生成されたプレビューレンディションの最大の幅（ピクセル単位）。<br /> </td> 
+   <td>最大の幅</td>
+   <td>2048</td>
+   <td>生成されたプレビューレンディションの最大の幅（ピクセル単位）。<br/> </td>
   </tr> 
   <tr> 
-   <td>最大の高さ</td> 
-   <td>2048</td> 
-   <td>生成されたプレビューレンディションの最大の高さ（ピクセル単位）。<br /> </td> 
+   <td>最大の高さ</td>
+   <td>2048</td>
+   <td>生成されたプレビューレンディションの最大の高さ（ピクセル単位）。<br/> </td>
   </tr> 
   <tr> 
-   <td>解像度</td> 
-   <td>72</td> 
-   <td>最初のページをラスタライズする解像度（ppi（インチあたりピクセル数）単位）</td> 
-  </tr> 
- </tbody> 
+   <td>解像度</td>
+   <td>72</td>
+   <td>最初のページをラスタライズする解像度（ppi（インチあたりピクセル数）単位）</td>
+  </tr>
+ </tbody>
 </table>
 
 デフォルトのプロセス引数を使用して、PDF/AI ドキュメントの最初のページが 72 ppi でラスタライズされ、生成されたプレビュー画像のサイズは 2048 x 2048 ピクセルになります。通常のデプロイメントでは、解像度を 150 ppi 以上に増やす必要が生じる場合があります。例えば、300 ppi の US Letter サイズのドキュメントの幅と高さにはそれぞれ最大で 2550 x 3300 ピクセルが必要です。
@@ -158,24 +156,24 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 <table> 
  <tbody> 
   <tr> 
-   <td><strong>拡張スクリプト名</strong></td> 
-   <td><strong>デフォルト</strong></td> 
-   <td><strong>説明</strong></td> 
+   <td><strong>拡張スクリプト名</strong></td>
+   <td><strong>デフォルト</strong></td>
+   <td><strong>説明</strong></td>
   </tr> 
   <tr> 
-   <td>ThumbnailExport.jsx</td> 
-   <td>はい</td> 
-   <td><code>Dynamic Media Process Image Assets</code> プロセスコンポーネントによって最適化され PTIFF レンディションに変換される 300 ppi の <code>thumbnail.jpg</code> レンディションを生成します。<br /> </td> 
+   <td>ThumbnailExport.jsx</td>
+   <td>はい</td>
+   <td><code>Dynamic Media Process Image Assets</code> プロセスコンポーネントによって最適化され PTIFF レンディションに変換される 300 ppi の <code>thumbnail.jpg</code> レンディションを生成します。<br/> </td>
   </tr> 
   <tr> 
    <td>JPEGPagesExport.jsx</td> 
    <td>はい</td> 
-   <td>各ページに 300 ppi の JPEG サブアセットを生成します。JPEG サブアセットは実在のアセットで、InDesign アセットの下に保存されます。また、<code>DAM Update Asset</code> ワークフローで最適化され PTIFF に変換されます。<br /> </td> 
+   <td>各ページに 300 ppi の JPEG サブアセットを生成します。JPEG サブアセットは実在のアセットで、InDesign アセットの下に保存されます。また、<code>DAM Update Asset</code> ワークフローで最適化され PTIFF に変換されます。<br/> </td>
   </tr> 
   <tr> 
-   <td>PDFPagesExport.jsx</td> 
-   <td>いいえ</td> 
-   <td>各ページに PDF サブアセットを生成します。PDF サブアセットは前述のように処理されます。PDF には 1 つのページのみ含まれているので、サブアセットは生成されません。<br /> </td> 
+   <td>PDFPagesExport.jsx</td>
+   <td>いいえ</td>
+   <td>各ページに PDF サブアセットを生成します。PDF サブアセットは前述のように処理されます。PDF には 1 つのページのみ含まれているので、サブアセットは生成されません。<br/> </td>
   </tr> 
  </tbody> 
 </table>
@@ -297,129 +295,129 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 <table> 
  <tbody> 
   <tr> 
-   <td><strong>フィールド</strong></td> 
-   <td><strong>説明</strong></td> 
+   <td><strong>フィールド</strong></td>
+   <td><strong>説明</strong></td>
   </tr> 
   <tr> 
-   <td><strong>名前</strong></td> 
-   <td>わかりやすい名前を空白なしで入力します。名前に画像サイズの仕様を含めることで、ユーザーがこの画像プリセットを識別しやすくなります。</td> 
+   <td><strong>名前</strong></td>
+   <td>わかりやすい名前を空白なしで入力します。名前に画像サイズの仕様を含めることで、ユーザーがこの画像プリセットを識別しやすくなります。</td>
+  </tr>
+  <tr> 
+   <td><strong>「幅」と「高さ」</strong></td>
+   <td>画像が配信されるサイズをピクセル単位で入力します。「幅」と「高さ」は 0 ピクセルより大きい値にする必要があります。いずれかの値が 0 の場合、プリセットは作成されません。両方の値が空の場合、レスポンシブな画像プリセットが作成されます。</td>
   </tr> 
   <tr> 
-   <td><strong>「幅」と「高さ」</strong></td> 
-   <td>画像が配信されるサイズをピクセル単位で入力します。「幅」と「高さ」は 0 ピクセルより大きい値にする必要があります。いずれかの値が 0 の場合、プリセットは作成されません。両方の値が空の場合、レスポンシブな画像プリセットが作成されます。</td> 
-  </tr> 
-  <tr> 
-   <td><strong>形式</strong></td> 
-   <td><p>メニューから形式を選択します。</p> <p>「<strong>JPEG</strong>」を選択すると、次の追加オプションを入力できます。</p> 
+   <td><strong>形式</strong></td>
+   <td><p>メニューから形式を選択します。</p> <p>「<strong>JPEG</strong>」を選択すると、次の追加オプションを入力できます。</p>
     <ul> 
      <li><strong>画質</strong> - JPEG 圧縮レベルを制御します。この設定は、ファイルサイズと画質の両方に影響します。JPEG 画質の尺度は 1～100 です。スライダーをドラッグすると、この尺度が表示されます。</li> 
-     <li><strong>JPG クロミナンスダウンサンプリングを有効にする</strong> - 目は高周波の色情報よりも高周波の輝度に対して敏感であるので、JPEG 画像は画像情報を輝度成分と色の成分に分けています。JPEG 画像が圧縮されると、輝度成分はフル解像度のまま、色成分がピクセルのグループでまとめて平均化されることでダウンサンプリングされます。ダウンサンプリングによって、知覚される画質にはほぼ影響を与えることなく、データ量を半分から 3 分の 1 程度削減できます。ダウンサンプリングは、グレースケールの画像には適用されません。この技術によって圧縮量が削減されます。これは、高コントラストの画像（オーバーレイされたテキストを含む画像など）で役立ちます。</li> 
+     <li><strong>JPG クロミナンスダウンサンプリングを有効にする</strong> - 目は高周波の色情報よりも高周波の輝度に対して敏感であるので、JPEG 画像は画像情報を輝度成分と色の成分に分けています。JPEG 画像が圧縮されると、輝度成分はフル解像度のまま、色成分がピクセルのグループでまとめて平均化されることでダウンサンプリングされます。ダウンサンプリングによって、知覚される画質にはほぼ影響を与えることなく、データ量を半分から 3 分の 1 程度削減できます。ダウンサンプリングは、グレースケールの画像には適用されません。この技術によって圧縮量が削減されます。これは、高コントラストの画像（オーバーレイされたテキストを含む画像など）で役立ちます。</li>
+    </ul>
+    <div>
+      「<strong>GIF</strong>」または「<strong>アルファ付き GIF</strong>」を選択すると、以下の追加の「<strong>GIF カラー量子化</strong>」オプションを入力できます。
+    </div>
+    <ul> 
+     <li><strong>タイプ</strong> - 「<strong>アダプティブ</strong>」（デフォルト）、「<strong>Web</strong>」、「<strong>Macintosh</strong>」のいずれかを選択します。「<strong>アルファ付き GIF</strong>」を選択した場合は、「Macintosh」オプションは選択できません。</li>
+     <li><strong>ディザ</strong> - 「<strong>拡散</strong>」または「<strong>オフ</strong>」を選択します。</li>
+     <li><strong>色数</strong> - 2 ～ 256 の値を入力します。</li>
+     <li><strong>カラーリスト</strong> - コンマ区切りのリストを入力します。例えば、白、グレーおよび黒の場合は、"000000,888888,ffffff" と入力します。</li>
     </ul> 
     <div>
-      「<strong>GIF</strong>」または「<strong>アルファ付き GIF</strong>」を選択すると、以下の追加の「<strong>GIF カラー量子化</strong>」オプションを入力できます。 
-    </div> 
-    <ul> 
-     <li><strong>タイプ</strong> - 「<strong>アダプティブ</strong>」（デフォルト）、「<strong>Web</strong>」、「<strong>Macintosh</strong>」のいずれかを選択します。「<strong>アルファ付き GIF</strong>」を選択した場合は、「Macintosh」オプションは選択できません。</li> 
-     <li><strong>ディザ</strong> - 「<strong>拡散</strong>」または「<strong>オフ</strong>」を選択します。</li> 
-     <li><strong>色数</strong> - 2 ～ 256 の値を入力します。</li> 
-     <li><strong>カラーリスト</strong> - コンマ区切りのリストを入力します。例えば、白、グレーおよび黒の場合は、"000000,888888,ffffff" と入力します。</li> 
-    </ul> 
-    <div>
-      「<strong>PDF</strong>」、「<strong>TIFF</strong>」または「<strong>アルファ付き TIFF</strong>」を選択すると、以下の追加オプションを入力できます。 
-    </div> 
-    <ul> 
-     <li><strong>圧縮</strong> - 圧縮アルゴリズムを選択します。PDF 用のアルゴリズムオプションは、「<strong>なし</strong>」、「<strong>Zip</strong>」および「<strong>JPEG</strong>」です。TIFF の場合は、「<strong>なし</strong>」、「<strong>LZW</strong>」、「<strong>JPEG</strong>」および「<strong>Zip</strong>」です。アルファ付き TIFF の場合は、「<strong>なし</strong>」、「<strong>LZW</strong>」および「<strong>Zip</strong>」です。</li> 
-    </ul> <p>「<strong>PNG</strong>」、「<strong>アルファ付き PNG</strong>」または「<strong>EPS</strong>」を選択した場合は、追加オプションはありません。</p> </td> 
-  </tr> 
-  <tr> 
-   <td><strong>シャープ</strong></td> 
-   <td>「<strong>シンプルシャープを有効にする</strong>」オプションを選択すると、すべての拡大縮小の実行後、画像に対して基本的なシャープフィルターが適用されます。シャープにより、画像を異なるサイズで表示した場合に発生するぼかしを補うことができます。 </td> 
-  </tr> 
- </tbody> 
+      「<strong>PDF</strong>」、「<strong>TIFF</strong>」または「<strong>アルファ付き TIFF</strong>」を選択すると、以下の追加オプションを入力できます。
+    </div>
+    <ul>
+     <li><strong>圧縮</strong> - 圧縮アルゴリズムを選択します。PDF 用のアルゴリズムオプションは、「<strong>なし</strong>」、「<strong>Zip</strong>」および「<strong>JPEG</strong>」です。TIFF の場合は、「<strong>なし</strong>」、「<strong>LZW</strong>」、「<strong>JPEG</strong>」および「<strong>Zip</strong>」です。アルファ付き TIFF の場合は、「<strong>なし</strong>」、「<strong>LZW</strong>」および「<strong>Zip</strong>」です。</li>
+    </ul> <p>「<strong>PNG</strong>」、「<strong>アルファ付き PNG</strong>」または「<strong>EPS</strong>」を選択した場合は、追加オプションはありません。</p> </td>
+  </tr>
+  <tr>
+   <td><strong>シャープ</strong></td>
+   <td>「<strong>シンプルシャープを有効にする</strong>」オプションを選択すると、すべての拡大縮小の実行後、画像に対して基本的なシャープフィルターが適用されます。シャープにより、画像を異なるサイズで表示した場合に発生するぼかしを補うことができます。 </td>
+  </tr>
+ </tbody>
 </table>
 
 #### 「詳細」タブオプション{#advanced-tab-options}
 
-<table> 
- <tbody> 
-  <tr> 
-   <td><strong>フィールド</strong></td> 
-   <td><strong>説明</strong></td> 
-  </tr> 
-  <tr> 
-   <td><strong>カラースペース</strong></td> 
-   <td>カラースペースとして、「<strong>RGB」、「CMYK</strong>」または「<strong>グレースケール</strong>」を選択します。</td> 
-  </tr> 
-  <tr> 
-   <td><strong>カラープロファイル</strong></td> 
-   <td>作業プロファイルと異なる場合にアセットの変換対象となる出力カラースペースプロファイルを選択します。</td> 
-  </tr> 
-  <tr> 
-   <td><strong>レンダリングインテント</strong></td> 
-   <td>デフォルトのレンダリングインテントを上書きできます。レンダリングインテントは、対象のカラープロファイルでは再現できない（色域外の）色をどうするかを定義します。レンダリングインテントは、ICC プロファイルと互換性がない場合は無視されます。 
+<table>
+ <tbody>
+  <tr>
+   <td><strong>フィールド</strong></td>
+   <td><strong>説明</strong></td>
+  </tr>
+  <tr>
+   <td><strong>カラースペース</strong></td>
+   <td>カラースペースとして、「<strong>RGB」、「CMYK</strong>」または「<strong>グレースケール</strong>」を選択します。</td>
+  </tr>
+  <tr>
+   <td><strong>カラープロファイル</strong></td>
+   <td>作業プロファイルと異なる場合にアセットの変換対象となる出力カラースペースプロファイルを選択します。</td>
+  </tr>
+  <tr>
+   <td><strong>レンダリングインテント</strong></td>
+   <td>デフォルトのレンダリングインテントを上書きできます。レンダリングインテントは、対象のカラープロファイルでは再現できない（色域外の）色をどうするかを定義します。レンダリングインテントは、ICC プロファイルと互換性がない場合は無視されます。
     <ul> 
-     <li>「<strong>知覚的</strong>」は、元の画像の 1 つ以上の色が対象のカラースペースの色域外であるときに、一方のカラースペースの全色域をもう一方のカラースペースの色域に圧縮する場合に選択します。</li> 
-     <li>「<strong>相対的な色域を維持</strong>」は、現在のカラースペースの 1 色が対象のカラースペースの色域外であるときに、他の色に影響を与えることなく、その色を対象のカラースペースの色域内のできる限り近い色にマップしたい場合に選択します。 </li> 
-     <li>「<strong>彩度</strong>」は、対象のカラースペースに変換するときに元の画像の色の彩度を再現する場合に選択します。 </li> 
-     <li>「<strong>絶対的な色域を維持</strong>」は、画像の明るさを変える白点と黒点の調整なしで色を完全に一致させる場合に選択します。</li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td><strong>黒点補正</strong></td> 
-   <td>出力プロファイルでこの機能がサポートされている場合、このオプションを選択します。指定した ICC プロファイルと互換性がない場合、黒点補正は無視されます。</td> 
-  </tr> 
-  <tr> 
-   <td><strong>ディザリング</strong></td> 
-   <td>このオプションを選択すると、カラーバンディングアーティファクトを回避または軽減できる可能性があります。 </td> 
-  </tr> 
-  <tr> 
-   <td><strong>シャープタイプ</strong></td> 
-   <td><p>「<strong>なし</strong>」、「<strong>シャープ</strong>」または「<strong>アンシャープマスク</strong>」を選択します。 </p> 
+     <li>「<strong>知覚的</strong>」は、元の画像の 1 つ以上の色が対象のカラースペースの色域外であるときに、一方のカラースペースの全色域をもう一方のカラースペースの色域に圧縮する場合に選択します。</li>
+     <li>「<strong>相対的な色域を維持</strong>」は、現在のカラースペースの 1 色が対象のカラースペースの色域外であるときに、他の色に影響を与えることなく、その色を対象のカラースペースの色域内のできる限り近い色にマップしたい場合に選択します。 </li>
+     <li>「<strong>彩度</strong>」は、対象のカラースペースに変換するときに元の画像の色の彩度を再現する場合に選択します。 </li>
+     <li>「<strong>絶対的な色域を維持</strong>」は、画像の明るさを変える白点と黒点の調整なしで色を完全に一致させる場合に選択します。</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td><strong>黒点補正</strong></td>
+   <td>出力プロファイルでこの機能がサポートされている場合、このオプションを選択します。指定した ICC プロファイルと互換性がない場合、黒点補正は無視されます。</td>
+  </tr>
+  <tr>
+   <td><strong>ディザリング</strong></td>
+   <td>このオプションを選択すると、カラーバンディングアーティファクトを回避または軽減できる可能性があります。 </td>
+  </tr>
+  <tr>
+   <td><strong>シャープタイプ</strong></td>
+   <td><p>「<strong>なし</strong>」、「<strong>シャープ</strong>」または「<strong>アンシャープマスク</strong>」を選択します。 </p>
+    <ul>
+     <li>「<strong>なし</strong>」を選択すると、シャープが無効になります。</li>
+     <li>「<strong>シャープ</strong>」を選択すると、すべての拡大縮小の実行後、画像に対して基本的なシャープフィルターが適用されます。シャープにより、画像を異なるサイズで表示した場合に発生するぼかしを補うことができます。 </li>
+     <li>「<strong>アンシャープマスク</strong>」を選択すると、ダウンサンプリングされた最終的な画像に対するシャープフィルター効果を細かく調整できます。効果の強さ、効果の半径（ピクセル単位）、無視されるコントラストのしきい値を調整できます。この効果では、Photoshop の「アンシャープマスク」フィルターと同じオプションが使用されます。</li>
+    </ul> <p>「<strong>アンシャープマスク</strong>」には次のオプションがあります。</p>
     <ul> 
-     <li>「<strong>なし</strong>」を選択すると、シャープが無効になります。</li> 
-     <li>「<strong>シャープ</strong>」を選択すると、すべての拡大縮小の実行後、画像に対して基本的なシャープフィルターが適用されます。シャープにより、画像を異なるサイズで表示した場合に発生するぼかしを補うことができます。 </li> 
-     <li>「<strong>アンシャープマスク</strong>」を選択すると、ダウンサンプリングされた最終的な画像に対するシャープフィルター効果を細かく調整できます。効果の強さ、効果の半径（ピクセル単位）、無視されるコントラストのしきい値を調整できます。この効果では、Photoshop の「アンシャープマスク」フィルターと同じオプションが使用されます。</li> 
-    </ul> <p>「<strong>アンシャープマスク</strong>」には次のオプションがあります。</p> 
-    <ul> 
-     <li><strong>量</strong> - 端のピクセルに適用されるコントラストを制御します。デフォルトの実数値は 1.0 です。高解像度の画像に対しては、この値を 5.0 まで増やすことができます。「量」は、フィルター強度の尺度だと考えてください。</li> 
-     <li><strong>半径</strong> - シャープに影響するエッジピクセルの周囲のピクセル数を決定します。解像度の高い画像では、1～2 の実数を入力します。値が小さい場合、エッジのピクセルのみがシャープニングされます。値が大きい場合、より広い範囲のピクセルがシャープニングされます。画像のサイズによって適切な値が変わります。</li> 
-     <li><strong>しきい値</strong> - アンシャープマスクフィルターが適用される場合のコントラストの範囲を指定します。つまり、このオプションは、シャープニングされるピクセルが周囲の領域とどの程度違えば、そのピクセルをエッジのピクセルと見なしてシャープニングするかを決定するものです。ノイズが入らないように、2～20 の範囲で様々な整数値を試してください。 </li> 
-     <li><strong>適用先</strong> - アンシャープを各カラーまたは明るさに適用するかを指定します。</li> 
-    </ul> 
+     <li><strong>量</strong> - 端のピクセルに適用されるコントラストを制御します。デフォルトの実数値は 1.0 です。高解像度の画像に対しては、この値を 5.0 まで増やすことができます。「量」は、フィルター強度の尺度だと考えてください。</li>
+     <li><strong>半径</strong> - シャープに影響するエッジピクセルの周囲のピクセル数を決定します。解像度の高い画像では、1～2 の実数を入力します。値が小さい場合、エッジのピクセルのみがシャープニングされます。値が大きい場合、より広い範囲のピクセルがシャープニングされます。画像のサイズによって適切な値が変わります。</li>
+     <li><strong>しきい値</strong> - アンシャープマスクフィルターが適用される場合のコントラストの範囲を指定します。つまり、このオプションは、シャープニングされるピクセルが周囲の領域とどの程度違えば、そのピクセルをエッジのピクセルと見なしてシャープニングするかを決定するものです。ノイズが入らないように、2～20 の範囲で様々な整数値を試してください。 </li>
+     <li><strong>適用先</strong> - アンシャープを各カラーまたは明るさに適用するかを指定します。</li>
+    </ul>
     <div>
-      シャープニングについては、<a href="https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/assets/sharpening_images.pdf">画像のシャープニング</a>を参照してください。 
-    </div> </td> 
-  </tr> 
-  <tr> 
-   <td><strong>再サンプリングモード</strong></td> 
-   <td>「<strong>再サンプリングモード</strong>」オプションを選択します。画像がダウンサンプリングされる場合に、以下のオプションによって画像がシャープニングされます。 
-    <ul> 
-     <li><strong>バイリニア法</strong> - 最速の再サンプリング方法。目に見えるエイリアスアーティファクトが一部発生します。</li> 
-     <li><strong>バイキュービック法</strong> - CPU 使用率は上昇しますが、目に見えるエイリアスアーティファクトが減少した、よりシャープな画像が生成されます。</li> 
-     <li><strong>シャープ 2</strong> - バイキュービック法よりも少しシャープな画像を生成できますが、CPU コストはさらに大きくなります。</li> 
-     <li><strong>バイシャープ</strong> - 画像サイズを縮小するための Photoshop のデフォルトの再サンプリング方法を選択します。Adobe Photoshop では「<strong>バイキュービックシャーパー</strong>」と呼ばれています。</li> 
-     <li><strong>各カラー</strong>、<strong>明るさ</strong> - 色または明るさに基づいた手法です。デフォルトでは、「<strong>各カラー</strong>」が選択されます。</li> 
-    </ul> </td> 
-  </tr> 
-  <tr> 
-   <td><strong>プリント解像度</strong></td> 
-   <td>この画像のプリント用解像度を選択します。デフォルトは 72 ピクセルです。</td> 
-  </tr> 
-  <tr> 
-   <td><strong>画像の修飾子</strong></td> 
-   <td><p>UI で使用できる共通の画像設定のほか、Dynamic Media では「<strong>画像の修飾子</strong>」フィールドで画像の詳細を多数指定できます。これらのパラメーターは、<a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server プロトコルのコマンドリファレンス（英語）</a>で定義されています。</p> <p>重要：API にリストされている次の関数はサポートされていません。</p> 
-    <ul> 
-     <li>基本的なテンプレートコマンドおよびテキストレンダリングコマンド：<code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> および <code>textPs=</code></li> 
-     <li>ローカライゼーションコマンド：<code>locale=</code> および <code>req=xlate</code></li> 
-     <li><code>req=set</code> は汎用的には使用できません。</li> 
-     <li><code>req=mbrset</code></li> 
-     <li><code>req=saveToFile</code></li> 
-     <li><code>req=targets</code></li> 
-     <li><code>template=</code></li> 
-     <li>Dynamic Media のノンコアサービス：SVG、画像レンダリングおよび Web-to-Print</li> 
-    </ul> </td> 
-  </tr> 
- </tbody> 
+      シャープの適用については、「*AdobeDynamic Mediaクラシック画質とシャープのベストプラクティス</a>」で説明しています。
+    </div> </td>
+  </tr>
+  <tr>
+   <td><strong>再サンプリングモード</strong></td>
+   <td>「<strong>再サンプリングモード</strong>」オプションを選択します。画像がダウンサンプリングされる場合に、以下のオプションによって画像がシャープニングされます。
+    <ul>
+     <li><strong>バイリニア法</strong> - 最速の再サンプリング方法。目に見えるエイリアスアーティファクトが一部発生します。</li>
+     <li><strong>バイキュービック法</strong> - CPU 使用率は上昇しますが、目に見えるエイリアスアーティファクトが減少した、よりシャープな画像が生成されます。</li>
+     <li><strong>シャープ 2</strong> - バイキュービック法よりも少しシャープな画像を生成できますが、CPU コストはさらに大きくなります。</li>
+     <li><strong>バイシャープ</strong> - 画像サイズを縮小するための Photoshop のデフォルトの再サンプリング方法を選択します。Adobe Photoshop では「<strong>バイキュービックシャーパー</strong>」と呼ばれています。</li>
+     <li><strong>各カラー</strong>、<strong>明るさ</strong> - 色または明るさに基づいた手法です。デフォルトでは、「<strong>各カラー</strong>」が選択されます。</li>
+    </ul> </td>
+  </tr>
+  <tr>
+   <td><strong>プリント解像度</strong></td>
+   <td>この画像のプリント用解像度を選択します。デフォルトは 72 ピクセルです。</td>
+  </tr>
+  <tr>
+   <td><strong>画像の修飾子</strong></td>
+   <td><p>UI で使用できる共通の画像設定のほか、Dynamic Media では「<strong>画像の修飾子</strong>」フィールドで画像の詳細を多数指定できます。これらのパラメーターは、<a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server プロトコルのコマンドリファレンス（英語）</a>で定義されています。</p> <p>重要：API にリストされている次の関数はサポートされていません。</p>
+    <ul>
+     <li>基本的なテンプレートコマンドおよびテキストレンダリングコマンド：<code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> および <code>textPs=</code></li>
+     <li>ローカライゼーションコマンド：<code>locale=</code> および <code>req=xlate</code></li>
+     <li><code>req=set</code> は汎用的には使用できません。</li>
+     <li><code>req=mbrset</code></li>
+     <li><code>req=saveToFile</code></li>
+     <li><code>req=targets</code></li>
+     <li><code>template=</code></li>
+     <li>Dynamic Media のノンコアサービス：SVG、画像レンダリングおよび Web-to-Print</li>
+    </ul> </td>
+  </tr>
+ </tbody>
 </table>
 
 ## 画像修飾子を使用した画像プリセットオプションの定義{#defining-image-preset-options-with-image-modifiers}
@@ -501,9 +499,6 @@ Dynamic Media-Scene7モードを実行している場合、画像プリセット
 
 ## Dynamic Media画像プリセットの削除{#deleting-image-presets}
 
-**Dynamic Media画像プリセットを削除するには**:
-
 1. AEM で、AEM ロゴをタップして、グローバルナビゲーションコンソールにアクセスします。
 1. **[!UICONTROL ツール]**&#x200B;アイコンをタップし、**[!UICONTROL アセット/画像プリセット]**&#x200B;に移動します。
 1. プリセットを選択し、「**[!UICONTROL 削除]**」をタップします。 プリセットを削除してよいか確認するメッセージが表示されます。「**[!UICONTROL 削除]**」をタップします。
-
