@@ -10,10 +10,10 @@ topic-tags: Dynamic-Media
 content-type: reference
 discoiquuid: b721dc7c-b056-47f5-9489-9f4db45b68a0
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 43a6e866a99814e93290e00f3f15c0e456821c89
 workflow-type: tm+mt
-source-wordcount: '10502'
-ht-degree: 78%
+source-wordcount: '10456'
+ht-degree: 77%
 
 ---
 
@@ -425,7 +425,7 @@ Dynamic Media を有効にし、ビデオクラウドサービスを設定済み
    <td><p>エンコード</p> </td> 
    <td><p>640 x 360</p> </td> 
    <td><p>3</p> </td> 
-   <td><p>1</p> </td> 
+   <td><p>3</p> </td> 
   </tr> 
   <tr> 
    <td><p>エンコード</p> </td> 
@@ -899,19 +899,13 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 
 1. 上位の公開済みビデオを示した表で、ビデオ名をタップしてビデオを再生し、そのビデオのオーディエンス保持（ドロップオフ）レポートを表示します。
 
-### Scene7 HTML5 ビューア SDK を使用して作成したビデオビューアに基づくビデオレポートの表示  {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
+### HTML5ビューアSDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}を使用して作成したビデオビューアに基づくビデオレポートの表示
 
-Dynamic Media で標準提供されているビデオビューアを使用している場合、または標準提供のビデオビューアからカスタムのビューアプリセットを作成した場合は、ビデオレポートを表示するための追加手順は必要ありません。これに対して、Scene7 HTML5 ビューア SDK から独自のビデオビューアを作成した場合は、次の手順を実行して、ビデオビューアが Dynamic Media のビデオレポートにトラッキングイベントを送信するように設定する必要があります。
+Dynamic Mediaの提供する標準搭載のビデオビューアを使用している場合、または標準搭載のビデオビューアに基づいてカスタムビューアプリセットを作成した場合は、ビデオレポートを表示するために追加の手順は必要ありません。 ただし、HTML5ビューアSDK APIに基づいて独自のビデオビューアを作成した場合は、次の手順を使用して、ビデオビューアからDynamic Mediaビデオレポートにトラッキングイベントが送信されていることを確認してください。
 
-独自のビデオビューアを作成するには、Scene7 ビューアリファレンスと Scene7 HTML5 ビューア SDK を使用します。
+独自のビデオビューアを作成するには、『[AdobeDynamic Mediaビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)』および『[HTML5ビューアSDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)』を使用します。
 
-詳しくは、[Scene7 ビューアリファレンスガイド](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/home.html)を参照してください。
-
-Scene7 HTML ビューア SDK は、Adobe Developer Connection からダウンロードできます。
-
-詳しくは、[Adobe Developer Connection](https://help.adobe.com/ja_JP/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html) を参照してください。
-
-Scene7 HTML5 ビューア SDK を使用して作成したビデオビューアに基づいてビデオレポートを表示するには：
+HTML5ビューアSDK APIを使用して作成したビデオビューアに基づいてビデオレポートを表示するには：
 
 1. 公開済みビデオアセットの場所に移動します。
 1. アセットのページの左上隅付近にある、ドロップダウンリストで「**[!UICONTROL ビューア]**」を選択します。
@@ -939,7 +933,7 @@ Scene7 HTML5 ビューア SDK を使用して作成したビデオビューア�
 
 1. 次の操作をおこなって、TrackingManager コンポーネントを作成します。
 
-   * `s7sdk.Utils.init();` をコールした後に、次の行を追加して、TrackingManager インスタンスを作成し、イベントを追跡します。
+   * `s7sdk.Util.init();` をコールした後に、次の行を追加して、TrackingManager インスタンスを作成し、イベントを追跡します。
 
       `var trackingManager = new s7sdk.TrackingManager();`
 
@@ -967,7 +961,7 @@ Scene7 HTML5 ビューア SDK を使用して作成したビデオビューア�
       ```
    appMeasurementBridge オブジェクトには組み込みのトラッキング関数があります。ただし、複数のトラッキングシステムやその他の機能をサポートするために、独自のトラッキング関数を作成することもできます。
 
-   詳しくは、『*Scene7 HTML5 Viewer SDK User Guide*』の「*Using the TrackingManager Component*」を参照してください。このガイドは、[Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html) からダウンロードできます。
+   詳しくは、『*Scene7 HTML5 Viewer SDK User Guide*』の「*Using the TrackingManager Component*」を参照してください。このガイドは、[Adobe Developer Connection](https://help.adobe.com/ja_JP/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html) からダウンロードできます。
 
 ## ビデオへのキャプションの追加 {#adding-captions-to-video}
 
@@ -1036,7 +1030,7 @@ URL で JSON 機能を使用する方法について詳しくは、*Scene7 画�
 >
 >ビデオプレーヤーが、チャプターマーカーの使用をサポートしている必要があります。Dynamic Media ビデオプレーヤーは、チャプターマーカーをサポートしていますが、サードパーティのビデオプレーヤーは、チャプターマーカーを必ずしもサポートしているとは限りません。
 
-必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーション機能を備えた独自の HTML5 ビューアの作成方法について詳しくは、『Adobe Scene7 Viewer SDK for HTML5』の「Customizing Behavior Using Modifiers」で `s7sdk.video.VideoPlayer` クラスと `s7sdk.video.VideoScrubber`7 クラスの説明を参照してください。Adobe Scene7 Viewer SDK は、[Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html) からダウンロードして入手できます。
+必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーションを使用して独自のHTML5ビューアを作成する手順については、AdobeHTML5ビューアSDK APIのクラス`s7sdk.video.VideoPlayer`と`s7sdk.video.VideoScrubber`の下の見出し「修飾子を使用した動作のカスタマイズ」を参照してください。 [HTML5ビューアSDK API]((https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html))のドキュメントを参照してください。
 
  ビデオのチャプターリストを作成する方法は、キャプションを作成する方法とほとんど同じです。つまり、WebVTT ファイルを作成します。ただし、この WebVTT ファイルは、WebVTT キャプションファイルと分けておく必要があります（キャプションファイルを使用する場合）。キャプションとチャプターを 1 つの WebVTT ファイルにまとめることはできません。
 
