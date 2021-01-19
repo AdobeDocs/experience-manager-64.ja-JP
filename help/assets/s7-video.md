@@ -10,17 +10,17 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 43a6e866a99814e93290e00f3f15c0e456821c89
 workflow-type: tm+mt
-source-wordcount: '1669'
-ht-degree: 53%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # ビデオ {#video}
 
-アセットを使用すると、ビデオアセット管理を一元化できます。この機能を使用して、ビデオをAssetsに直接アップロードし、Assetsから直接Dynamic Mediaクラシック(Scene7)にアクセスして、ページオーサリングを行うことができます。
+アセットを使用すると、ビデオアセット管理を一元化できます。この機能を使用して、ビデオをAssetsに直接アップロードし、Assetsから直接Dynamic Mediaクラシック(Scene7)にアクセスして、ページをオーサリングできます。
 
 Dynamic Mediaクラシックビデオ統合により、最適化されたビデオの提供先がすべての画面（自動デバイスおよび帯域幅検出）に拡張されます。
 
@@ -137,7 +137,7 @@ Scene7 のビデオを表示するには Scene7 のビデオコンポーネン�
 | アプローチ | HTML5 における最優先のアプローチです。Flash は HTML5 以外のフォールバックでのみ使用されます。 | ほとんどのデスクトップでは Flash です。HTML5 はモバイルとタブレットで使用されます。 |
 | 配信 | プログレッシブ | アダプティブストリーミング |
 | 追跡 | 可 | 可 |
-| 拡張性 | 可 | 可 (Scene7ビューアSDKを使用) |
+| 拡張性 | 可 | 可 （[HTML5ビューアSDK APIドキュメント](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)を含む） |
 | モバイルビデオ | 可 | はい |
 
 ### 設定  {#setting-up}
