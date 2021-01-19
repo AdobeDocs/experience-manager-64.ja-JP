@@ -1,19 +1,15 @@
 ---
 title: 画質最適化のベストプラクティス
-seo-title: 画質最適化のベストプラクティス
 description: Dynamic Media の画質を最適化するベストプラクティスを学びます。
-seo-description: Dynamic Media の画質を最適化するベストプラクティスを学びます。
-uuid: b73f0918-c723-4a0d-a63f-4242223c2d47
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 translation-type: tm+mt
-source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
+source-git-commit: 73e67103e6bd9784bcc671ed04dcd508fa5597a0
 workflow-type: tm+mt
-source-wordcount: '1493'
-ht-degree: 97%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -46,9 +42,7 @@ AEM には、画像をチューニングおよび最適化して結果をレン�
 
 ## 画像のシャープニングに関するベストプラクティス {#best-practices-for-image-sharpening}
 
-画像のシャープニングは、Web サイト上の画像を管理するうえで最も難しい操作であり、多くの誤りが発生するところです。次の補助的なリソースを参照して、AEM でのシャープニングおよびアンシャープニングマスクの仕組みについて詳しく確認してください。
-
-ベストプラクティスに関するホワイトペーパー『[Adobe Scene7 Publishing System および Image Server での画像のシャープニング](/help/assets/assets/sharpening_images.pdf)』の内容は AEM にも適用されます。
+画像へのシャープの適用は、Webサイト上の画像を制御する上で最も複雑な側面で、ミスが多く発生する箇所です。 AEMにも適用される[AdobeDynamic Mediaクラシック画質とシャープのベストプラクティス](/help/assets/assets/sharpening_images.pdf)ガイドを参照し、AEMでのシャープとアンシャープのマスクの動作について詳しく学びます。
 
 詳しくは、[アンシャープマスクを使用した画像へのシャープの適用](https://helpx.adobe.com/jp/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html)も参照してください。
 
@@ -65,17 +59,14 @@ AEM を使用すれば、取り込み時、配信時またはその両方で画�
       * **[!UICONTROL radius]**（0～250、シャープニングにされるオブジェクトの周囲に描かれる「シャープニングされた線」の幅、ピクセル単位）
 
              radius パラメーターと amount パラメーターは互いに反対に作用することに注意してください。radius 値の減少は、amount 値の増加によって補うことができます。radius によって、より細やかな制御が可能になります。値が小さいとエッジ部のピクセルのみがシャープニングされ、値が大きいとより幅広いピクセルがシャープニングされます。
-         * **[!UICONTROL threshold]**（0～255、効果の感度）
+         
+      * **[!UICONTROL threshold]**（0～255、効果の感度）
 
              このパラメーターは、シャープにされるピクセルが周囲の領域とどの程度違えば、そのピクセルをエッジのピクセルと見なしてフィルターによりシャープにするかを決定するものです。「**[!UICONTROL しきい値]**」パラメーターを使用することで、肌のトーンなど、同じような色の領域が過剰にシャープニングされるのを防ぎます。例えば、しきい値を 12 にした場合、肌のトーンの明るさにわずかな差があっても無視して「ノイズ」が加わるのを防ぎながら、まつげと肌が隣り合う場所など、コントラストの高い領域に対してエッジコントラストを追加することができます。
          
-         フィルターを使用したベストプラクティスを含む、これら 3 つのパラメーターの設定方法について詳しくは、次のリソースを参照してください。
+         フィルターで使用するベストプラクティスを含む、これら3つのAdobeーの設定方法について詳しくは、『[Dynamic Mediaクラシック画質とシャープのベストプラクティス](/help/assets/assets/sharpening_images.pdf)』ガイド(AEMのDynamic Mediaにも当てはまります)を参照してください。
+   * AEM では第 4 パラメーターの monochrome（0,1）も制御できます。このパラメーターでは、アンシャープマスクをそれぞれの色成分に個別に適用するか（値が 0 の場合）、または画像の明るさ／明度に対して適用するか（値が 1 の場合）を指定します。
 
-         画像のシャープニングに関する AEM ヘルプトピック。
-
-         ベストプラクティスに関するホワイトペーパー『[Adobe Scene7 Publishing System および Image Server での画像のシャープニング](/help/assets/assets/sharpening_images.pdf)』。
-
-      * AEM では第 4 パラメーターの monochrome（0,1）も制御できます。このパラメーターでは、アンシャープマスクをそれぞれの色成分に個別に適用するか（値が 0 の場合）、または画像の明るさ／明度に対して適用するか（値が 1 の場合）を指定します。
 
 ベストプラクティスとして、まずはアンシャープマスクの radius パラメーターを使用します。手始めに使用できる radius 設定は次のとおりです。
 
