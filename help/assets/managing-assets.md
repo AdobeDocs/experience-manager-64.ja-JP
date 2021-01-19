@@ -1,18 +1,14 @@
 ---
 title: Dynamic Media アセットの管理について
-seo-title: Dynamic Media アセットの管理について
 description: Dynamic Media アセットの操作方法について説明します。
-seo-description: Dynamic Media アセットの操作方法について説明します。
-uuid: 9c7f9d4e-caab-434f-a1ae-eca16c883461
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
 translation-type: tm+mt
-source-git-commit: 0a29460e7212539b6805f0bcc04c94d7d57e9b98
+source-git-commit: 43a6e866a99814e93290e00f3f15c0e456821c89
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '118'
 ht-degree: 100%
 
 ---
