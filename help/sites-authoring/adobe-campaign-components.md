@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: f328cd1e-30a3-42d2-88b7-64455ee9eb1f
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '2778'
+source-wordcount: '2779'
 ht-degree: 74%
 
 ---
@@ -31,7 +31,7 @@ Adobe Campaign と連携するように設定されているニュースレタ�
 * 見出し（Campaign）
 * 画像（Campaign）
 * リンク（Campaign）
-* Scene7 画像テンプレート（Campaign）
+* Dynamic Media画像テンプレート(キャンペーン)
 * ターゲット参照（Campaign）
 * テキストと画像（Campaign）
 * テキストおよびパーソナライゼーション（Campaign）
