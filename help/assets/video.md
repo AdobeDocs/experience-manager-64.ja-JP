@@ -1,19 +1,15 @@
 ---
 title: ビデオ
-seo-title: ビデオ
-description: Dynamic Media でビデオを使用する方法について説明します。
-seo-description: Dynamic Media でビデオを使用する方法について説明します。
-uuid: 15e89f88-2787-472d-bbb6-d370bbab9228
+description: Dynamic Media でビデオを使用する方法について説明します。。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: Dynamic-Media
 content-type: reference
-discoiquuid: b721dc7c-b056-47f5-9489-9f4db45b68a0
 translation-type: tm+mt
-source-git-commit: 43a6e866a99814e93290e00f3f15c0e456821c89
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '10456'
-ht-degree: 77%
+source-wordcount: '10396'
+ht-degree: 76%
 
 ---
 
@@ -162,9 +158,9 @@ Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサ�
 * 自社ブランドのニーズに合わせてビデオプレーヤーを設定します。
 * 単純な URL か埋め込みコードを使用して、ビデオを Web サイト、モバイルサイトまたはモバイルアプリケーションに統合します。
 
-詳しくは、[動的なビデオ再生](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480)を参照してください。
+<!-- See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480). -->
 
-『Adobe Scene7 ビューアリファレンスガイド』の [HTML5 ビューアについて](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.translate.html)も参照してください。
+『AdobeDynamic Mediaビューアリファレンスガイド』の「[HTML5ビューアについて](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html?lang=en#viewers-for-aem-assets-only)」も参照してください。
 
 ## ベストプラクティス：HTML5 ビデオビューアの使用 {#best-practice-using-the-html-video-viewer}
 
@@ -176,7 +172,7 @@ Dynamic Media の HTML5 ビデオビューアプリセットは堅牢なビデ�
 
 HTML5 と CSS を使用して再生コンポーネントをデザインできる機能、埋め込み再生の機能、ブラウザーの機能に応じてアダプティブストリーミングまたはプログレッシブストリーミングを使用できる機能を 1 つのプレーヤーにまとめることで、リッチメディアコンテンツを配信する範囲をデスクトップユーザーとモバイルユーザーの両方に拡大して、ビデオエクスペリエンスを効率化することができます。
 
-『Adobe ビューアリファレンスガイド』の [HTML5 ビューアについて](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html)も参照してください。
+『Adobe ビューアリファレンスガイド』の [HTML5 ビューアについて](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.translate.html)も参照してください。
 
 ### HTML5 ビデオビューアを使用した、デスクトップコンピューターおよびモバイルデバイス上でのビデオ再生 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
 
@@ -193,76 +189,76 @@ HLS（HTTP ライブストリーミング）は、アダプティブビデオス
 
 プログレッシブビデオは、ユーザーのデスクトップ画面やモバイルデバイスにダウンロードしてローカルに保存することで配信されます。
 
-次の表に、デバイス、ブラウザー、およびデスクトップコンピューターやモバイルデバイスでの Scene7 ビデオビューアによるビデオの再生方法を示します。
+次の表に、Dynamic Mediaビデオビューアを使用するデスクトップコンピューターおよび携帯端末でのビデオのデバイス、ブラウザー、再生方法を示します。
 
 <table> 
  <tbody> 
   <tr> 
-   <td><strong>デバイス</strong></td> 
-   <td><strong>ブラウザー</strong></td> 
-   <td><strong>ビデオ再生モード</strong></td> 
-  </tr> 
+   <td><strong>デバイス</strong></td>
+   <td><strong>ブラウザー</strong></td>
+   <td><strong>ビデオ再生モード</strong></td>
+  </tr>
   <tr> 
-   <td>デスクトップ</td> 
-   <td>Internate Explorer 9および10</td> 
-   <td>プログレッシブダウンロード。</td> 
-  </tr> 
+   <td>デスクトップ</td>
+   <td>Internate Explorer 9および10</td>
+   <td>プログレッシブダウンロード。</td>
+  </tr>
   <tr> 
-   <td>デスクトップ</td> 
-   <td>Internate Explorer 11+</td> 
-   <td>Windows 8 および Windows 10 では、HLS が要求されるたびに HTTPS を強制的に使用します。既知の制約事項：このブラウザー／オペレーティングシステムの組み合わせでは、HLS での HTTP は機能しません。<br /><br />Windows 7 - プログレッシブダウンロード。HTTP プロトコルと HTTPS プロトコルの選択には標準的なロジックが使用されます。</td> 
-  </tr> 
+   <td>デスクトップ</td>
+   <td>Internate Explorer 11+</td>
+   <td>Windows 8 および Windows 10 では、HLS が要求されるたびに HTTPS を強制的に使用します。既知の制約事項：このブラウザー／オペレーティングシステムの組み合わせでは、HLS での HTTP は機能しません。<br /><br />Windows 7 - プログレッシブダウンロード。HTTP プロトコルと HTTPS プロトコルの選択には標準的なロジックが使用されます。</td>
+  </tr>
   <tr> 
-   <td>デスクトップ</td> 
-   <td>Firefox 23～44</td> 
-   <td>プログレッシブダウンロード。</td> 
-  </tr> 
+   <td>デスクトップ</td>
+   <td>Firefox 23～44</td>
+   <td>プログレッシブダウンロード。</td>
+  </tr>
   <tr> 
-   <td>デスクトップ</td> 
-   <td>Firefox 45 以降</td> 
-   <td>HLS ビデオストリーミング。</td> 
-  </tr> 
+   <td>デスクトップ</td>
+   <td>Firefox 45 以降</td>
+   <td>HLS ビデオストリーミング。</td>
+  </tr>
   <tr> 
-   <td>デスクトップ</td> 
-   <td>Chrome</td> 
-   <td>HLS ビデオストリーミング。</td> 
-  </tr> 
+   <td>デスクトップ</td>
+   <td>Chrome</td>
+   <td>HLS ビデオストリーミング。</td>
+  </tr>
   <tr> 
-   <td>デスクトップ</td> 
-   <td>Safari（Mac）</td> 
-   <td>HLS ビデオストリーミング。</td> 
-  </tr> 
+   <td>デスクトップ</td>
+   <td>Safari（Mac）</td>
+   <td>HLS ビデオストリーミング。</td>
+  </tr>
   <tr> 
-   <td>モバイル</td> 
-   <td>Chrome（Android 6 以前）</td> 
-   <td>プログレッシブダウンロード。</td> 
-  </tr> 
+   <td>モバイル</td>
+   <td>Chrome（Android 6 以前）</td>
+   <td>プログレッシブダウンロード。</td>
+  </tr>
   <tr> 
-   <td>モバイル</td> 
-   <td>Chrome（Android 7 以降）</td> 
-   <td>HLS ビデオストリーミング。</td> 
-  </tr> 
+   <td>モバイル</td>
+   <td>Chrome（Android 7 以降）</td>
+   <td>HLS ビデオストリーミング。</td>
+  </tr>
   <tr> 
-   <td>モバイル</td> 
-   <td>Android（デフォルトブラウザー）</td> 
-   <td>プログレッシブダウンロード。</td> 
-  </tr> 
+   <td>モバイル</td>
+   <td>Android（デフォルトブラウザー）</td>
+   <td>プログレッシブダウンロード。</td>
+  </tr>
   <tr> 
-   <td>モバイル</td> 
-   <td>Safari（iOS）</td> 
-   <td>HLS ビデオストリーミング。</td> 
-  </tr> 
+   <td>モバイル</td>
+   <td>Safari（iOS）</td>
+   <td>HLS ビデオストリーミング。</td>
+  </tr>
   <tr> 
-   <td>モバイル</td> 
-   <td>Chrome（iOS）</td> 
-   <td>HLS ビデオストリーミング。</td> 
-  </tr> 
+   <td>モバイル</td>
+   <td>Chrome（iOS）</td>
+   <td>HLS ビデオストリーミング。</td>
+  </tr>
   <tr> 
-   <td>モバイル</td> 
-   <td>Blackberry</td> 
-   <td>HLS ビデオストリーミング。</td> 
-  </tr> 
- </tbody> 
+   <td>モバイル</td>
+   <td>Blackberry</td>
+   <td>HLS ビデオストリーミング。</td>
+  </tr>
+ </tbody>
 </table>
 
 ## Dynamic Media ビデオソリューションのアーキテクチャ {#architecture-of-dynamic-media-video-solution}
@@ -425,7 +421,7 @@ Dynamic Media を有効にし、ビデオクラウドサービスを設定済み
    <td><p>エンコード</p> </td> 
    <td><p>640 x 360</p> </td> 
    <td><p>3</p> </td> 
-   <td><p>3</p> </td> 
+   <td><p>1</p> </td> 
   </tr> 
   <tr> 
    <td><p>エンコード</p> </td> 
@@ -899,7 +895,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 
 1. 上位の公開済みビデオを示した表で、ビデオ名をタップしてビデオを再生し、そのビデオのオーディエンス保持（ドロップオフ）レポートを表示します。
 
-### HTML5ビューアSDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}を使用して作成したビデオビューアに基づくビデオレポートの表示
+### Dynamic MediaHTML5ビューアSDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}を使用して作成したビデオビューアに基づくビデオレポートの表示
 
 Dynamic Mediaの提供する標準搭載のビデオビューアを使用している場合、または標準搭載のビデオビューアに基づいてカスタムビューアプリセットを作成した場合は、ビデオレポートを表示するために追加の手順は必要ありません。 ただし、HTML5ビューアSDK APIに基づいて独自のビデオビューアを作成した場合は、次の手順を使用して、ビデオビューアからDynamic Mediaビデオレポートにトラッキングイベントが送信されていることを確認してください。
 
@@ -961,7 +957,7 @@ HTML5ビューアSDK APIを使用して作成したビデオビューアに基�
       ```
    appMeasurementBridge オブジェクトには組み込みのトラッキング関数があります。ただし、複数のトラッキングシステムやその他の機能をサポートするために、独自のトラッキング関数を作成することもできます。
 
-   詳しくは、『*Scene7 HTML5 Viewer SDK User Guide*』の「*Using the TrackingManager Component*」を参照してください。このガイドは、[Adobe Developer Connection](https://help.adobe.com/ja_JP/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html) からダウンロードできます。
+<!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 ## ビデオへのキャプションの追加 {#adding-captions-to-video}
 
@@ -975,7 +971,7 @@ HTML5ビューアSDK APIを使用して作成したビデオビューアに基�
 
 Dynamic Media には、キャプションファイルを JSON（JavaScript Object Notation）形式に変換する機能があります。このように変換できるので、JSON テキストを、ビデオの完全なトランスクリプトとして表示せずに Web ページに埋め込むことができます。この後、検索エンジンがコンテンツをクロールしてインデックスを作成できます。これにより、ビデオを検索しやすくなり、ビデオコンテンツの詳細がユーザーに提供されます。
 
-URL で JSON 機能を使用する方法について詳しくは、*Scene7 画像サービング API ヘルプ*&#x200B;の[静的コンテンツ（画像以外）の提供（英語）](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.translate.html)を参照してください。
+URLでのJSON関数の使用について詳しくは、*Dynamic Media画像サービングとレンダリングAPIのヘルプ*&#x200B;の[静的な（画像以外の）コンテンツの提供](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api)を参照してください。
 
 **ビデオにキャプションまたはサブタイトルを追加するには**:
 
@@ -1178,4 +1174,3 @@ Dynamic Media によって自動的に生成される 10 個のサムネール�
 1. 画像が正常にアップロードされたら、**[!UICONTROL サムネールを変更]**&#x200B;ページで、**[!UICONTROL 変更を保存]**&#x200B;をタップします。
 
    カスタムサムネールがビデオに追加されます。
-
