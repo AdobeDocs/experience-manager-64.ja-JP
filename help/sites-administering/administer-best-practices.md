@@ -1,19 +1,15 @@
 ---
 title: ベストプラクティス
-seo-title: ベストプラクティス
-description: アドビのエンジニアリングチームとコンサルティングチームが管理者のために作成したベストプラクティスです。
-seo-description: アドビのエンジニアリングチームとコンサルティングチームが管理者のために作成したベストプラクティスです。
-uuid: 862d4fcf-ca61-4228-9344-b95a49b59b32
+description: 管理者が運用を開始できるように、AdobeエンジニアリングチームやコンサルティングチームがコンパイルしたAdobe Experience Managerのベストプラクティスについて説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
 translation-type: tm+mt
-source-git-commit: 24ad9e522eeaf2653e80166946636b9fc78bc401
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 91%
+source-wordcount: '537'
+ht-degree: 81%
 
 ---
 
@@ -52,8 +48,8 @@ Dynamic Media機能とDynamic Mediaクラシック統合を含む、アセット
    <td>ビデオ、メタデータ、画像処理が常にフォルダーに適用されるので、処理プロファイルの多くはフォルダーに基づいています。このベストプラクティスドキュメントでは、フォルダー階層の定義およびセットアップ方法について説明します。フォルダー階層は、コンテンツの処理方法に大きく影響します。 </td> 
   </tr>
   <tr>
-   <td>Scene7 と AEM の統合</td> 
-   <td><a href="/help/sites-administering/scene7.md#best-practices-for-integrating-scene-with-aem">Scene7 と AEM の統合に関するベストプラクティス</a></td> 
+   <td>Dynamic MediaクラシックとAEMの統合</td> 
+   <td><a href="/help/sites-administering/scene7.md#best-practices-for-integrating-scene-with-aem">Dynamic MediaクラシックとAEMの統合のベストプラクティス</a></td> 
    <td><p>ポーリングインポーターを有効にすべき状況、統合を試す方法およびコンテンツブラウザーを使用すべき状況とアセットに直接アップロードすべき状況について説明します。</p> </td> 
   </tr>
   <tr>
@@ -62,8 +58,8 @@ Dynamic Media機能とDynamic Mediaクラシック統合を含む、アセット
    <td><a href="/help/assets/managing-image-presets.md">画像プリセットの管理</a>に関するドキュメントの一部として、これらのトピックでは画像プリセットの概要と、画像プリセットのオプションの選択に関するベストプラクティスについて説明します。</td> 
   </tr>
   <tr>
-   <td>ダイナミックメディアと、Scene7 の直接統合との比較</td> 
-   <td><a href="/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media">Scene7/AEM 統合と Dynamic Media の比較</a></td> 
+   <td>Dynamic Media対Dynamic Mediaクラシック</td> 
+   <td><a href="/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media">Dynamic Mediaクラシック/AEM統合とDynamic Mediaの統合</a></td> 
    <td>ダイナミックメディアソリューションの使用が適している状況、Scene7 と AEM を統合すべき状況またはその両方を使用すべき状況について説明します。</td> 
   </tr>
  </tbody>
