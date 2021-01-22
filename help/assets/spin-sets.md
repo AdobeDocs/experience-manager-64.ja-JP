@@ -1,19 +1,15 @@
 ---
 title: スピンセット
-seo-title: スピンセット
-description: Dynamic Media でのスピンセットの操作方法を学習します。
-seo-description: Dynamic Media でのスピンセットの操作方法を学習します。
-uuid: a80a0491-6500-463a-83c4-ff4b90a88182
+description: Dynamic Mediaのスピンセットの操作方法を説明します。 スピンセットは、オブジェクトを回転させて任意の角度から調べるという現実的な動作をシミュレートします。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: afacb3ad-e4ad-4d06-a898-f3f2da8bbb64
 translation-type: tm+mt
-source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '1838'
-ht-degree: 68%
+source-wordcount: '1843'
+ht-degree: 67%
 
 ---
 
@@ -164,7 +160,7 @@ ht-degree: 68%
 
 1. 検索で&#x200B;**[!UICONTROL フィルター]**&#x200B;を選択し、**[!UICONTROL Dynamic Media]**&#x200B;を展開して、**[!UICONTROL セット]**&#x200B;を選択します。
 
-   ユーザインターフェイスで手動で作成したか、バッチセットプリセットを使用して自動的に作成した一致セットが返されます。 自動セットの場合、検索クエリは、**[!UICONTROL 「]**&#x200B;を含む&lt;a3/>」検索条件を使用したAEM検索とは異なる&#x200B;**[!UICONTROL 検索条件を持つ]**&#x200B;開始を使用して実行されます。 フィルターを「**[!UICONTROL セット]**」に設定するのが、自動セットを検索する唯一の方法です。
+   ユーザインターフェイスで手動で作成したか、バッチセットプリセットを使用して自動的に作成した一致セットが返されます。 自動セットの場合、検索クエリは、**[!UICONTROL 「]**&#x200B;を含む」検索条件を使用したAEM検索とは異なる&#x200B;**[!UICONTROL 検索条件を持つ]**&#x200B;開始を使用して実行されます。 フィルターを「**[!UICONTROL セット]**」に設定するのが、自動セットを検索する唯一の方法です。
 
    ![chlimage_1-386](assets/chlimage_1-386.png)
 
