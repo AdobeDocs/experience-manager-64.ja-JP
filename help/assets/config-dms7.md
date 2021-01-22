@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: cd3adbac-9868-4838-9d8a-37dde8973df4
 translation-type: tm+mt
-source-git-commit: df92346ca23161b8eaff293a6b9f2c8b7c72e2ec
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '5571'
+source-wordcount: '5577'
 ht-degree: 74%
 
 ---
@@ -72,7 +72,7 @@ AEMDynamic Mediaを6.3から6.4にアップグレードする場合（ダウン�
 
 ## Dynamic Media クラウドサービスの設定 {#configuring-dynamic-media-cloud-services}
 
-パスワードを変更してから、Dynamic MediaCloud Servicesを設定します。 プロビジョニング用の電子メールとDynamic Mediaの資格情報を受け取ったら、[](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)Dynamic Mediaクラシックにログインしてパスワードを変更する必要があります。 プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
+パスワードを変更してから、Dynamic MediaCloud Servicesを設定します。 プロビジョニング用の電子メールを受信したら、[](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)をDynamic Mediaクラシックデスクトップアプリケーションにサインインして、パスワードを変更する必要があります。 プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
 >[!NOTE]
 >
@@ -88,7 +88,7 @@ Dynamic MediaCloud Servicesを設定するには：
 
    >[!NOTE]
    >
-   >Dynamic Media の資格情報を含むプロビジョニング電子メールを受信したら、Dynamic Media Classic に[ログイン](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)して、パスワードを変更してください。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
+   >Dynamic Media の資格情報を含むプロビジョニング電子メールを受信したら、Dynamic Media Classic に[ログイン](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)して、パスワードを変更してください。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
 1. 接続に成功すると、次も設定できます。
 
