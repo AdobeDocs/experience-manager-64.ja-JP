@@ -1,19 +1,15 @@
 ---
 title: 電子メールテンプレートのベストプラクティス
-seo-title: 電子メールテンプレートのベストプラクティス
-description: AEM での電子メールテンプレートの作成に関するベストプラクティスについて学習します。
-seo-description: AEM での電子メールテンプレートの作成に関するベストプラクティスについて学習します。
-uuid: 714090bd-a742-4004-a968-aebd8fd03e04
+description: Adobe Experience Managerでの電子メールのキャンペーンテンプレートを高める電子メールデザインに関するベストプラクティスを検索します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices, integration
-discoiquuid: 6c019157-cc37-4826-8d3a-dbee59ec09e0
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 69%
+source-wordcount: '1053'
+ht-degree: 67%
 
 ---
 
@@ -150,7 +146,7 @@ AEM には、キャンペーンニュースレターを作成するためのい�
 | テキストおよびパーソナライゼーション | /libs/mcm/campaign/components/personalization |
 | Textimage | /libs/mcm/campaign/components/textimage |
 | リンク | /libs/mcm/campaign/components/reference |
-| Scene7 画像テンプレート | /libs/mcm/campaign/s7image |
+| Dynamic Mediaクラシック(旧Scene7)画像テンプレート | /libs/mcm/campaign/s7image |
 | ターゲット参照 | /libs/mcm/キャンペーン/components/reference |
 
 >[!NOTE]
