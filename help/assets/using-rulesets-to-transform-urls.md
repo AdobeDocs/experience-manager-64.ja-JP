@@ -1,19 +1,15 @@
 ---
 title: ルールセットを使用した URL の変換
-seo-title: ルールセットを使用した URL の変換
 description: 'Dynamic Media でルールセットをデプロイして、URL を変換できます。ルールセットはスクリプティング言語（JavaScript など）で記述された命令セットで、XML データを評価して、そのデータが特定の条件を満たす場合に特定のアクションを実行します。 '
-seo-description: 'Dynamic Media でルールセットをデプロイして、URL を変換できます。ルールセットはスクリプティング言語（JavaScript など）で記述された命令セットで、XML データを評価して、そのデータが特定の条件を満たす場合に特定のアクションを実行します。 '
-uuid: 9fed0c83-67b7-4483-a9b4-322e6a483449
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: abcff903-204b-4ab6-87d8-6f0ce63d7b41
 translation-type: tm+mt
-source-git-commit: a3a160a0281c1ea2ca050c2c747d6a5ec1d952b3
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 100%
+source-wordcount: '764'
+ht-degree: 91%
 
 ---
 
@@ -25,11 +21,11 @@ Dynamic Media でルールセットをデプロイして、URL を変換でき�
 * MIME タイプのサフィックスの付加。多くのサービスや Web サイトでは、`.jpg` を URL に付加するなど、画像のサフィックスが必要です。
 * SEO（検索エンジン最適化）のための URL へのフォルダーパスの作成。
 
-   [Adobe Scene7 Publishing System による SEO のサポート](/help/assets/assets/s7_seo.pdf)を参照してください。
+   「[AdobeDynamic MediaクラシックがSEOをサポートする方法](/help/assets/assets/s7_seo.pdf)」を参照してください。
 
 * SEO（検索エンジン最適化）のための URL へのメタデータの付加。
 
-   [Adobe Scene7 Publishing System による SEO のサポート](/help/assets/assets/s7_seo.pdf)を参照してください。
+   「[AdobeDynamic MediaクラシックがSEOをサポートする方法](/help/assets/assets/s7_seo.pdf)」を参照してください。
 
 * ダウンロードを開始するためのコンテンツ処理方法の設定。
 * パーソナライゼーションのための画像サービングテンプレーティング URL の簡略化。例えば、`rgb{XX,YY,ZZ}` を RTF 対応の `\redXX\greenYY\blueZZ` に変換します。
@@ -53,19 +49,19 @@ Dynamic Media のコンテキストで、XML ベースのシステムを使用�
 また、最初は実稼動環境に影響を与えないステージング環境でルールセットをテストしてください。\
 通常、実稼動環境とステージング環境では異なるログイン情報が必要となります。
 
-* **NA ステージング環境**&#x200B;のログインページ：[https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
-* **EMEA ステージング環境**&#x200B;のログインページ：[https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
-* **JAPAC ステージング環境**&#x200B;のログインページ：[https://s7sps5-staging.scene7.com/IpsWeb/](https://s7sps5-staging.scene7.com/IpsWeb/)
+ログイン情報については、[AdobeDynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)を参照してください。
+
+<!-- * **NA staging environment** login page: [https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
+* **EMEA staging environment** login page: [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
+* **JAPAC staging environment** login page: [https://s7sps5-staging.scene7.com/IpsWeb/](https://s7sps5-staging.scene7.com/IpsWeb/) -->
 
 [ルールセットでの &#39;is&#39; イメージに代わる &#39;asset&#39; の使用](https://helpx.adobe.com/jp/experience-manager/scene7/kb/base/scene7-rulesets/ruleset-asset-instead-image.html)も参照してください。
 
 **XML ルールセットをデプロイするには：**
 
-1. 次のページから Dynamic Media Classic アカウントにログオンします。
+1. [Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)にサインインします。
 
-   [https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)
-
-   資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
+   資格情報とサインイン情報は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
 1. 次の手順を実行して、ルールセットファイルをアップロードします。
 
