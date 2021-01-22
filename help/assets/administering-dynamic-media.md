@@ -8,10 +8,10 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
 translation-type: tm+mt
-source-git-commit: 9b6c1efe1f6281892648c7b41820856d2e3fcac1
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 73%
+source-wordcount: '274'
+ht-degree: 74%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->このドキュメントは、AEM に直接統合された Dynamic Media の機能について説明します。AEMに統合されたDynamic Mediaクラシック(旧Scene7)を使用している場合は、[Dynamic Mediaクラシック統合ドキュメント](/help/sites-administering/scene7.md)を参照してください。
+>このドキュメントは、AEM に直接統合された Dynamic Media の機能について説明します。AEMに統合されたDynamic Mediaクラシックを使用している場合は、[Dynamic Mediaクラシック統合ドキュメント](/help/sites-administering/scene7.md)を参照してください。
 >
 >Dynamic Mediaと共にDynamic Mediaクラシックと統合されたAEMを使用したい場合は、[デュアル使用シナリオ](/help/sites-administering/scene7.md#dual-use-scenario)を参照してください。
 
