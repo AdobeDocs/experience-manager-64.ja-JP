@@ -10,10 +10,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
 translation-type: tm+mt
-source-git-commit: ef7e013fc36bc06025b0cdedf9038c33206e4a1a
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 82%
+source-wordcount: '310'
+ht-degree: 72%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 82%
   <tr>
    <td>ダイナミックイメージング</td> 
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">ダイナミックイメージングのベストプラクティス</a></td> 
-   <td><p>ダイナミックメディア機能を使用している場合、または Scene7 と統合している場合に、最良の結果を得るために画像をシャープにする方法と画質を最適化する最善の方法について説明しています。 </p> </td> 
+   <td><p>Dynamic Mediaの機能を使用している場合、またはDynamic Mediaと統合している場合に、最良の結果を得るために画像にシャープを適用する方法と、画質を最適化する最適な方法について説明します。 </p> </td> 
   </tr>
   <tr>
    <td>多言語のアセット</td> 
