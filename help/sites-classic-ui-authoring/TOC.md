@@ -7,10 +7,10 @@ user-guide-title: AEM 6.4 Classic UIオーサリングユーザーガイド
 breadcrumb-title: クラシックUIオーサリングガイド
 user-guide-description: このガイドでは、従来のユーザーインターフェイスでAEMでのオーサリングの概念について説明します。
 translation-type: tm+mt
-source-git-commit: b0457d967a8d366caef45e2917ae73e7550ba69e
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 85%
+source-wordcount: '319'
+ht-degree: 83%
 
 ---
 
@@ -86,7 +86,7 @@ ht-degree: 85%
    + [Dynamic Media アセットの配信](dynamic-media-assets-delivering.md)
    + [Autodesk Maya および Mental Ray での標準ステージの設定](classicui-stages-aem3d-ad-mr.md)
    + [ページへのダイナミックメディアアセットの追加](dynamic-media-assets-adding-to-page.md)
-   + [ページへの Scene7 機能の追加](manage-assets-classic-s7.md)
+   + [ページへのDynamic Mediaクラシック(Scene7)機能の追加](manage-assets-classic-s7.md)
    + [Dynamic Media の操作](dynamic-media-assets.md)
    + [3D アセットの使用](classicui-3dassets.md)
    + [ビデオ](manage-assets-classic-s7-video.md)
