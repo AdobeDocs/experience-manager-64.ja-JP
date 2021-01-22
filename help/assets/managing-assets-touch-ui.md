@@ -4,9 +4,9 @@ description: タッチ操作に対応したAEM Assetsのユーザーインター
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 59fed31d276510c3346a46ac38f2a79c6f91d848
 workflow-type: tm+mt
-source-wordcount: '10030'
+source-wordcount: '10039'
 ht-degree: 65%
 
 ---
@@ -151,8 +151,8 @@ Dynamic Mediaは、FTPサーバーを使用したアセットのバッチアッ�
 **FTP によりアセットをアップロードするには**
 
 1. 任意の FTP クライアントを使用して、プロビジョニングメールで受け取った FTP ユーザー名とパスワードで FTP サーバーにログインします。FTP クライアントで、ファイルやフォルダーを FTP サーバーにアップロードします。
-1. プロビジョニングメールで受け取った資格情報で [Dynamic Media Classic にログイン](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)します。グローバルナビゲーションバーの「**[!UICONTROL アップロード]**」をタップします。
-
+1. [Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、プロビジョニング用の電子メールから受け取った資格情報を使用してアカウントにサインインします。
+1. グローバルナビゲーションバーの「**[!UICONTROL アップロード]**」をタップします。
 1. **[!UICONTROL アップロード]**&#x200B;ページの左上隅近くにある「**[!UICONTROL FTP経由]**」タブをタップします。
 1. ページの左側でファイルのアップロード元の FTP フォルダーを選択し、ページの右側でアップロード先のフォルダーを選択します。
 1. ページ右下隅近くにある「**[!UICONTROL ジョブオプション]**」をタップし、選択したフォルダー内のアセットに基づいて希望のオプションを設定します。
