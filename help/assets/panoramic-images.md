@@ -1,19 +1,15 @@
 ---
 title: パノラマ画像
-seo-title: パノラマ画像
-description: Dynamic Media でのパノラマ画像の使用方法を学習します。
-seo-description: Dynamic Media でのパノラマ画像の使用方法を学習します。
-uuid: dfd7a55c-7bcc-4d62-8c3a-a73726881103
+Description: Learn how to work with panoramic images in Dynamic Media.
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
-discoiquuid: fc285b25-2bce-493c-87bc-5f1a8a26eb42
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 47%
+source-wordcount: '573'
+ht-degree: 41%
 
 ---
 
@@ -46,7 +42,7 @@ ht-degree: 47%
 
 パノラマ画像ビューアをAEM内で正しく動作させるには、パノラマ画像ビューアプリセットをDynamic MediaクラシックおよびDynamic Mediaクラシック固有のメタデータと同期して、JCRでビューアプリセットを更新する必要があります。 これを行うには、次の方法でDynamic Mediaクラシックを設定します。
 
-1. [各会社アカウントのDynamic Media](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html) クラスのインスタンスにログインします。
+1. [各会社アカウントのDynamic Mediaクラシックデスクトップ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app) アプリケーションにサインインします。
 
 1. ページの右上隅付近で、**[!UICONTROL 設定／アプリケーション設定／公開設定／Image Server]** をクリックします。
 1. **[!UICONTROL Image Server公開]**&#x200B;ページの上部近くにある&#x200B;**[!UICONTROL 公開コンテキスト]**&#x200B;ドロップダウンメニューで、「**[!UICONTROL 画像サービング]**」を選択します。
@@ -75,7 +71,7 @@ ht-degree: 47%
 
 WCMの&#x200B;**[!UICONTROL パノラマメディア]**&#x200B;コンポーネントに画像をドロップし、コンポーネントプレースホルダーが折りたたまれた場合は、次のトラブルシューティングを行うことができます。
 
-* 403 Forbidden エラーが発生する場合は、要求された画像のサイズが大きすぎることが原因となっている可能性があります。[Dynamic Media Classic（Scene7）の設定](#configuring-dynamic-media-classic-scene)でおこなった「*返信画像のサイズ制限*」の設定を確認します。
+* 403 Forbidden エラーが発生する場合は、要求された画像のサイズが大きすぎることが原因となっている可能性があります。[Dynamic Mediaクラシックの設定](#configuring-dynamic-media-classic-scene)の「*返信画像のサイズ制限*」の設定を確認します。
 
 * アセットの&#x200B;*無効なロック*&#x200B;またはページに表示される&#x200B;*解析エラー*&#x200B;の場合は、**[!UICONTROL 不明化モードを要求]**&#x200B;と&#x200B;**[!UICONTROL 要求ロックモード]**&#x200B;をオンにして無効にします。
 * 汚染されたキャンバスエラーの場合は、画像アセットに対する以前の要求に対して&#x200B;**[!UICONTROL ルールセット定義ファイルパスを設定し、CTN]**&#x200B;を無効にします。
