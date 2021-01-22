@@ -1,19 +1,15 @@
 ---
 title: Dynamic Mediaビデオプロファイル
-seo-title: Dynamic Mediaビデオプロファイル
-description: 'Dynamic Media には、事前定義済みのアダプティブビデオエンコーディングプロファイルが最初から付属しています。この標準提供プロファイルの設定は、ユーザーができる限り最高の閲覧エクスペリエンスを得られるように最適化されています。 '
-seo-description: 'Dynamic Media には、事前定義済みのアダプティブビデオエンコーディングプロファイルが最初から付属しています。この標準提供プロファイルの設定は、ユーザーができる限り最高の閲覧エクスペリエンスを得られるように最適化されています。 '
-uuid: cfb498f8-44a0-4d94-99b0-fed7c27f575b
+description: 'Dynamic Mediaには、定義済みのアダプティブビデオエンコーディングプロファイルが付属しています。 この標準搭載されたプロファイルの設定は、顧客に可能な限り最高のビデオ表示エクスペリエンスを提供するように最適化されています。 '
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: administering
 content-type: reference
-discoiquuid: b893f366-279a-4872-9413-77626d3387ea
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '3100'
-ht-degree: 74%
+source-wordcount: '3068'
+ht-degree: 73%
 
 ---
 
