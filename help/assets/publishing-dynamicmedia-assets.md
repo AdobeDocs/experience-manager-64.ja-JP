@@ -1,24 +1,20 @@
 ---
-title: ダイナミックメディアアセットの公開
-seo-title: Dynamic Media アセットの公開
-description: Dynamic Media アセットの公開方法
-seo-description: Dynamic Media アセットの公開方法
-uuid: b1bee905-86cf-4284-8d4e-067e11557899
+title: Dynamic Media アセットの公開
+description: HTTP/2配信を含むDynamic Mediaアセットの公開方法。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 translation-type: tm+mt
-source-git-commit: 8c6fdcea0def7720062edfc564c536f8d47e8402
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 98%
+source-wordcount: '409'
+ht-degree: 95%
 
 ---
 
 
-# Dynamic Media アセットの公開  {#publishing-dynamic-media-assets}
+# Dynamic Media アセットの公開 {#publishing-dynamic-media-assets}
 
 アセットを選択して「**[!UICONTROL 公開]**」をタップすることで、Dynamic Media アセットを公開できます。Dynamic Media アセットを公開した後は、URL または埋め込みによってそのアセットを Web ページに追加できるようになります。
 
