@@ -7,10 +7,10 @@ user-guide-title: AEM 6.4 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 translation-type: tm+mt
-source-git-commit: 47c0e92e7f68641209e5d2e5aefeb9dfcce64854
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 97%
+source-wordcount: '623'
+ht-degree: 96%
 
 ---
 
@@ -135,7 +135,7 @@ ht-degree: 97%
    + [Adobe Dynamic Tag Management との統合](dtm.md)
    + [Adobe Analytics および Adobe Target との統合のオプトイン](opt-in.md)
    + [AEM ポータルとポートレット](aem-as-portal.md)
-   + [Dynamic Media Classic（Scene7）との統合](scene7.md)
+   + [Dynamic MediaClassicとの統合](scene7.md)
    + [AEM Livefyre のレシピ](aem-livefyre-recipes.md)
    + [統合に関する問題のトラブルシューティング](troubleshooting-integration-issues.md)
    + [BrightEdge Content Optimizer との結合](brightedge.md)
