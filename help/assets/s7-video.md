@@ -1,31 +1,27 @@
 ---
 title: ビデオ
-seo-title: ビデオ
-description: 自動エンコード用のビデオをDynamic Mediaクラシックにアップロードし、Dynamic MediaクラシックビデオにAEM Assetsから直接アクセスできる、中央のビデオアセット管理AEM Assetsについて説明します。 Dynamic Mediaクラシックビデオ統合は、最適化されたビデオの提供先をすべての画面に拡張します。
-seo-description: 自動エンコード用のビデオをDynamic Mediaクラシックにアップロードし、Dynamic MediaクラシックビデオにAEM Assetsから直接アクセスできる、中央のビデオアセット管理AEM Assetsについて説明します。 Dynamic Mediaクラシックビデオ統合は、最適化されたビデオの提供先をすべての画面に拡張します。
-uuid: 8b3423f1-d96b-44d9-bdb7-e3b77875b25d
+description: 自動エンコード用のビデオをDynamic Mediaクラシックにアップロードし、Dynamic MediaクラシックビデオにAEM Assetsから直接アクセスできる、中央のビデオアセット管理AEM Assetsについて説明します。 Dynamic Mediaクラシックビデオ統合により、最適化されたビデオの提供先が、自動デバイスおよび自動帯域幅検出を備えたすべての画面に拡張されます。
 contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: managing-assets
 content-type: reference
-discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 translation-type: tm+mt
-source-git-commit: 43a6e866a99814e93290e00f3f15c0e456821c89
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1617'
+ht-degree: 55%
 
 ---
 
 
 # ビデオ {#video}
 
-アセットを使用すると、ビデオアセット管理を一元化できます。この機能を使用して、ビデオをAssetsに直接アップロードし、Assetsから直接Dynamic Mediaクラシック(Scene7)にアクセスして、ページをオーサリングできます。
+アセットを使用すると、ビデオアセット管理を一元化できます。この機能を使用して、ビデオをAssetsに直接アップロードし、Assetsから直接Dynamic Mediaクラシックビデオにアクセスして、ページをオーサリングできます。
 
 Dynamic Mediaクラシックビデオ統合により、最適化されたビデオの提供先がすべての画面（自動デバイスおよび帯域幅検出）に拡張されます。
 
 * **[!UICONTROL Scene7ビデオ]**&#x200B;コンポーネントは、デバイスと帯域幅の検出を自動的に実行し、デスクトップ、タブレット、モバイルで適切な形式と品質のビデオを再生します。
-* アセット — 単一のビデオアセットだけでなく、アダプティブビデオセットも含めることができます。アダプティブビデオセットは、複数の画面にわたってビデオをシームレスに再生するために必要なすべてのビデオレンディションを対象としたコンテナです。アダプティブビデオセットは、同じビデオを異なるビットレート（400 kbps、800 kbps、1000 kbpsなど）やフォーマットでエンコードしたバージョンをグループ化します。デスクトップ、iOS、Android、Blackberry、Windows携帯端末を含む複数の画面でアダプティブビデオストリーミングを行う場合は、S7ビデオコンポーネントと共にアダプティブビデオセットを使用します。詳しくは、[Scene7のアダプティブビデオセットに関するドキュメントを参照してください。](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html)
+* アセット — 単一のビデオアセットだけでなく、アダプティブビデオセットも含めることができます。アダプティブビデオセットは、複数の画面にわたってビデオをシームレスに再生するために必要なすべてのビデオレンディションを対象としたコンテナです。アダプティブビデオセットは、同じビデオを異なるビットレート（400 kbps、800 kbps、1000 kbpsなど）やフォーマットでエンコードしたバージョンをグループ化します。デスクトップ、iOS、Android、Blackberry、Windows携帯端末を含む複数の画面でアダプティブビデオストリーミングを行う場合は、S7ビデオコンポーネントと共にアダプティブビデオセットを使用します。<!-- See [Scene7 documentation about adaptive video sets for more information](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html). -->
 
 ## FFMPEGとDynamic Mediaクラシックについて{#about-ffmpeg-and-scene}
 
