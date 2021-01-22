@@ -1,26 +1,22 @@
 ---
-title: Dynamic Media Classic（Scene7）との統合
-seo-title: Dynamic Media Classic（Scene7）との統合
+title: Dynamic MediaClassicとの統合
 description: AEMとDynamic Mediaクラシックの統合方法を説明します。
-seo-description: AEMとDynamic Mediaクラシックの統合方法を説明します。
-uuid: b014d643-1cc1-47f3-a79c-7f6f9e45637a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: f55e68c3-3309-4400-bef9-fd3afa6e2b5f
 translation-type: tm+mt
-source-git-commit: 31ddda9f74541dcf58fe70971535ee4180f70d6e
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '5491'
+source-wordcount: '5456'
 ht-degree: 25%
 
 ---
 
 
-# Dynamic Media Classic（Scene7）との統合{#integrating-with-dynamic-media-classic-scene}
+# Dynamic MediaClassicとの統合{#integrating-with-dynamic-media-classic-scene}
 
-[AdobeDynamic Media](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) クラシックは、リッチメディアアセットを管理、強化、公開、およびWeb、モバイル、電子メール、インターネットに接続されたディスプレイや印刷に配信するためのホストソリューションです。
+AdobeDynamic Mediaクラシックは、リッチメディアアセットを管理、強化、公開、およびWeb、モバイル、電子メール、インターネットに接続されたディスプレイや印刷に配信するためのホストソリューションです。
 
 Dynamic Mediaクラシックを使用するには、Dynamic MediaクラシックとAEM Assetsが相互にやり取りできるようにクラウド設定を設定する必要があります。 このドキュメントでは、AEMとDynamic Mediaクラシックの設定方法を説明します。
 
@@ -174,7 +170,7 @@ Dynamic MediaとDynamic Mediaクラシックを同時に使用するには：
 Dynamic MediaクラシックとDynamic Mediaの両方を有効にしている場合、次の制限があります。
 
 * アセットを選択し、AEMページのDynamic Mediaクラシックコンポーネントにドラッグして手動でDynamic Mediaクラシックにアップロードすると、機能しません。
-* AEM-Dynamic Media Classicの同期アセットは、アセットでアセットを編集すると自動的にDynamic Mediaクラシックに更新されますが、ロールバック操作では新しいアップロードがトリガーされないので、Dynamic Mediaクラシックはロールバックの直後に最新バージョンを取得しません。 ロールバック完了後に再度編集する必要があります。
+* AEM-Dynamic Media Classicの同期アセットは、アセットでアセットを編集すると自動的にDynamic Mediaクラシックに更新されますが、ロールバック操作では新しいアップロードがトリガーされないので、Dynamic Mediaクラシックはロールバック後すぐに最新バージョンを取得しません。 ロールバック完了後に再度編集する必要があります。
 * ある使用例にDynamic Mediaを、別の使用例にDynamic Mediaクラシックを統合して、Dynamic MediaアセットがDynamic Mediaクラシックとのやり取りをしないようにする必要がある場合は、Dynamic Mediaクラシック設定をDynamic Mediaフォルダに、Dynamic Media設定(処理プロファイル)をDynamic MediaClassicフォルダに適用しないでください。
 
 ## Dynamic MediaクラシックとAEM {#best-practices-for-integrating-scene-with-aem}の統合のベストプラクティス
@@ -363,7 +359,7 @@ Adobe CQDynamic MediaクラシックDamリスナーを有効にする必要が�
 
 ### 設定可能なタイムアウトをDynamic Mediaクラシックアップロードワークフローに追加{#adding-configurable-timeout-to-scene-upload-workflow}
 
-Dynamic Media Classic（Scene7）を使用してビデオエンコーディングを処理するように AEM インスタンスが設定されている場合、アップロードジョブのタイムアウトはデフォルトで 35 分になります。ビデオエンコーディングジョブの実行時間がこれよりも長くなる可能性を考慮して、この設定を変更できます。
+AEMインスタンスがDynamic Mediaクラシックを使用してビデオエンコーディングを処理するように設定されている場合、デフォルトでは、アップロードジョブで35分のタイムアウトが発生します。 ビデオエンコーディングジョブの実行時間がこれよりも長くなる可能性を考慮して、この設定を変更できます。
 
 1. **http://localhost:4502/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl**&#x200B;に移動します。
 
@@ -426,7 +422,7 @@ Dynamic Mediaクラシックのアセットは、セキュアプレビューを�
 アセットを公開せずにDynamic Mediaクラシックにプッシュするには、次の設定を行う必要があります。
 
 1. [Admin Consoleを使用して、サポートケースを作成します。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) サポートケースで、Dynamic Mediaクラシックアカウントでセキュアプレビューを有効にするように要求します。
-1. [Dynamic Mediaクラシックアカウントのセキュアプレビューを設定するには、&lt;a0/>に従ってください。](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)
+1. [Dynamic Mediaクラシックアカウントのセキュアプレビューを設定するには、に従ってください。](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)
 
 以下は、Dynamic Mediaクラシックで安全なテスト設定を作成する場合と同じ手順です。
 
