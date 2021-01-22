@@ -1,19 +1,15 @@
 ---
 title: ページへのDynamic Mediaクラシック機能の追加
-seo-title: ページへのDynamic Mediaクラシック機能の追加
-description: AEMページにDynamic Mediaクラシックの機能とコンポーネントを追加する方法を説明します。
-seo-description: AEMページにDynamic Mediaクラシックの機能とコンポーネントを追加する方法を説明します。
-uuid: aa5a4735-bfec-43b8-aec0-a0c32bff134f
+description: Dynamic Mediaクラシックのコンポーネントと、AEMページに追加する方法について説明します。
 contentOwner: Alva Ware-Bevacqui
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 topic-tags: managing-assets
-discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 translation-type: tm+mt
-source-git-commit: 28e552f065d38225226d757c0af00d86d9ed8e07
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2873'
+ht-degree: 32%
 
 ---
 
