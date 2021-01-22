@@ -4,9 +4,9 @@ description: タッチ操作に対応したAEM Assetsのユーザーインター
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: c86c84efeb25673490373273a9f4720381e46454
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '10031'
+source-wordcount: '10030'
 ht-degree: 65%
 
 ---
@@ -161,7 +161,7 @@ Dynamic Mediaは、FTPサーバーを使用したアセットのバッチアッ�
 
    >[!NOTE]
    >
-   >FTP経由でアセットをアップロードする場合、Dynamic Mediaクラシック(Scene7)で設定したアップロードジョブオプションは、AEMで設定したアセット処理パラメータよりも優先されます。
+   >FTPを使用してアセットをアップロードする場合、AEMで設定されているアセット処理パラメータよりも、Dynamic Mediaクラシックで設定したアップロードジョブオプションの方が優先されます。
 
 1. **[!UICONTROL アップロードオプションを設定]**&#x200B;ダイアログボックスの右下隅にある&#x200B;**[!UICONTROL 「保存]**」をタップします。
 1. **[!UICONTROL アップロード]**&#x200B;ページの右下隅にある&#x200B;**[!UICONTROL アップロードを送信]**&#x200B;をタップします。
@@ -703,7 +703,7 @@ TXTファイルを編集するには、Configuration Managerで&#x200B;**[!UICON
    ![chlimage_1-23](assets/chlimage_1-23.png)
 
 1. 切り抜く領域を選択し、画像上でサイズ変更または位置変更を行います。
-1. 右上隅の「**[!UICONTROL 完了]**」オプションを使用して、画像を切り抜きます。 「**[!UICONTROL 完了]**」をタップすると、レンディションの再生成も行われます。
+1. 右上隅の「**[!UICONTROL 完了]**」オプションを使用して、画像を切り抜きます。 「**[!UICONTROL 完了]**」をタップすると、レンディションの再生成もトリガーされます。
 
    ![chlimage_1-24](assets/chlimage_1-24.png)
 
