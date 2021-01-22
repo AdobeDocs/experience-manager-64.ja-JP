@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.4累積Fix Pack固有のリリースノ�
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 1d3476c3fdc8cf817e4784f36b4e0858fdc3b1ee
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '4217'
+source-wordcount: '4219'
 ht-degree: 13%
 
 ---
@@ -65,7 +65,7 @@ Adobe Experience Manager6.4.8.3には、次の問題の修正が含まれてい�
 
 * 画像プリセット設定で、[!DNL Experience Manager]で「[!UICONTROL JPGクロミナンスダウンサンプリングを有効にする]」オプションの選択が解除されている場合、変更は[!DNL Dynamic Media](NPR-34284)と同期されません。
 * [!UICONTROL ビューアプリセットエディター]で、[!UICONTROL PanoramicImage/PanoramicImage_VR]プリセットを編集する場合、`PanoramicView`コンポーネントで`PANORAMICVIEW_AUTOROTATE`修飾子のラベルを使用できません(CQ-4302043)。
-* [!DNL Experience Manager]からビデオを非公開にしても、設定済みのScene7にあるアダプティブビデオセットの公開は取り消されません。 (CQ-4304405).
+* [!DNL Experience Manager]からビデオを非公開にしても、設定済みのDynamic Mediaクラシックにあるアダプティブビデオセットの公開は取り消されません。 (CQ-4304405).
 
 ### プラットフォーム {#platform-6483}
 
@@ -187,7 +187,7 @@ Adobe Experience Manager6.4.8.2には、次の問題の修正が含まれてい�
 
 * 画像プロファイルが複数（例えば11）の縦横比を持つフォルダー(NPR-34083)に追加されると、スマート切り抜き機能がエラーで失敗します。
 
-* [!UICONTROL Adobe Experience Manager]の画像プリセットに対する変更が、Scene7パブリッシングシステム(NPR-34284、CQ-4299713)と同期されません。
+* [!UICONTROL Adobe Experience Manager]の画像プリセットに対する変更がDynamic Mediaクラシック(NPR-34284、CQ-4299713)と同期されません。
 
 * [!UICONTROL PANORAMICVIEW_AUTOROTATE]修飾子のラベルが[!UICONTROL ビューアプリセットエディター]ページ(CQ-4302043)の[!UICONTROL 「動作]」タブにありません。
 
