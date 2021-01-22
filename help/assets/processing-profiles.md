@@ -1,19 +1,15 @@
 ---
 title: メタデータ、画像およびビデオを処理するためのプロファイル
-seo-title: メタデータ、画像およびビデオを処理するためのプロファイル
 description: プロファイルは、フォルダーにアップロードされたアセットに適用されるオプションに関する一連のルールです。アップロードするビデオアセットに適用するメタデータプロファイルおよびビデオエンコーディングプロファイルを指定します。画像アセットの場合は、適切に切り抜くために画像アセットに適用するイメージプロファイルを指定することもできます。
-seo-description: プロファイルは、フォルダーにアップロードされたアセットに適用されるオプションに関する一連のルールです。アップロードするビデオアセットに適用するメタデータプロファイルおよびビデオエンコーディングプロファイルを指定します。画像アセットの場合は、適切に切り抜くために画像アセットに適用するイメージプロファイルを指定することもできます。
-uuid: d95978b9-ffa4-4895-854f-3f7bd396e019
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: administering
 content-type: reference
-discoiquuid: 347a90ae-a0c5-44f5-8e80-edc3edc1386f
 translation-type: tm+mt
-source-git-commit: 978c6e5cffb557f0d42f961bdde597fabf278ddd
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '1439'
-ht-degree: 96%
+source-wordcount: '1378'
+ht-degree: 95%
 
 ---
 
@@ -107,7 +103,7 @@ ht-degree: 96%
 
    ![Scene7 バッチアップロードコンポーネント](/help/assets/assets-dm/reprocess-assets8.png)
 
-1. **[!UICONTROL Scene7 へのバッチアップロード - ステップのプロパティ]**&#x200B;ダイアログボックスで、以下の設定をおこないます。
+1. **[!UICONTROL Scene7ステップのプロパティ]**&#x200B;へのバッチアップロードダイアログボックスで、次の設定を行います。
    * 「**[!UICONTROL タイトル]**」および「**[!UICONTROL 説明]**」テキストフィールドに、必要に応じて、ジョブの新しいタイトルと説明を入力します。
    * ハンドラーが次のステップに進む場合は、「**[!UICONTROL ハンドラー処理の設定]**」を選択します。
    * 「**[!UICONTROL タイムアウト]**」フィールドに、外部プロセスのタイムアウト（秒）を入力します。
