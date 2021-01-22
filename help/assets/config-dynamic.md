@@ -8,9 +8,9 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 821eb27e-67c9-4589-9196-30dacb84fa59
 translation-type: tm+mt
-source-git-commit: 5964edfadf597652f754ca3c64343b0b90e40796
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '7833'
+source-wordcount: '7831'
 ht-degree: 53%
 
 ---
@@ -140,7 +140,7 @@ Dynamic Media を画像専用、ビデオ専用、またはその両方の用途
 
 Dynamic Mediaを有効にすると、ダイナミックメディア機能がUIで使用可能になり、アップロードされた各画像アセットに、動的な画像レンディションの高速配信に使用される`cqdam.pyramid.tiff`レンディションが付与されます。 これらのPTIFFには、(1)1つのマスター画像のみを管理し、追加のストレージなしで無制限のレンディションをその場で生成する機能、(2)ズーム、パン、スピンなどのインタラクティブなビジュアライゼーションを使用する機能など、大きな利点があります。
 
-Dynamic Mediaクラシック(Scene7)をAEMで使用する場合は、[特定のシナリオ](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)を使用しない限り、Dynamic Mediaを有効にしないでください。 Dynamic Media は、実行モードを使用して有効にしない限り、無効化されたままです。
+AEMでDynamic Mediaクラシックを使用する場合は、[特定のシナリオ](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)を使用しない限り、Dynamic Mediaを有効にしないでください。 Dynamic Mediaは、runmodeを介してDynamic Mediaを有効にしない限り無効です。
 
 Dynamic Media を有効にするには、コマンドラインまたはクイックスタートのファイル名から Dynamic Media の実行モードを有効にする必要があります。
 
@@ -676,7 +676,7 @@ Dynamic Mediaを本番用&#x200B;_または_ 2)のイメージングとビデオ
     </ul> </td> 
   </tr> 
   <tr> 
-   <td>Dynamic Mediaクラシック(Scene7)統合</td> 
+   <td>Dynamic Mediaクラシック統合</td> 
    <td><p>filter-images</p> <p>filter-sets</p> <p>filter-video</p> </td> 
    <td><p><strong>image/</strong> で始まる</p> <p><strong>application/</strong> を含み、<strong>set</strong> で終わる</p> <p><strong>video/</strong> で始まる</p> </td> 
    <td><p>「トランスポート URI」を、アドビのダイナミックメディアクラウドレプリケーションサービス URL の代わりに AEM パブリッシュサーバーを参照するように設定します。このフィルターを設定すると、AEM パブリッシュインスタンスではなく、Dynamic Media Classic でアセットを配信できます。</p> <p>標準搭載の「filter-images」、「filter-sets」、「filter-video」は次のようになります。</p> 
