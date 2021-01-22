@@ -1,19 +1,15 @@
 ---
 title: Flash ビューアのサポート終了に関する通知
-seo-title: Flash ビューアのサポート終了に関する通知
-description: Adobe Scene7 は、Flash ビューアプラットフォームのサポートを 2017 年 1 月 31 日に正式に終了します。
-seo-description: Adobe Scene7 は、Flash ビューアプラットフォームのサポートを 2017 年 1 月 31 日に正式に終了します。
-uuid: db4e349a-4773-4c08-8a3a-e8d399902a45
+description: 2017年1月31日、AdobeDynamic MediaクラシックはFlashビューアプラットフォームのサポートを正式に終了しました。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: fe392c24-d01e-4d5b-9af9-9ec500adc61a
 translation-type: tm+mt
-source-git-commit: 8b4bacfb493fa83951672618682ca81a9a0425df
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 100%
+source-wordcount: '37'
+ht-degree: 62%
 
 ---
 
@@ -22,6 +18,6 @@ ht-degree: 100%
 
 *2017 年 1 月 31 日付けで、Adobe Dynamic Media Classic（Scene7）は Flash ビューアプラットフォームのサポートを正式に終了しました。*
 
-*この重要な変更について詳しくは、次の FAQ Web サイトを参照してください。*
+<!-- *For more information about this important change, see the following FAQ website:*
 
-[https://docs.adobe.com/content/docs/jp/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html](https://docs.adobe.com/content/docs/jp/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html).
+[https://docs.adobe.com/content/docs/en/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html](https://docs.adobe.com/content/docs/en/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html). -->
