@@ -1,18 +1,14 @@
 ---
 title: 検索フォームの設定
-seo-title: 検索フォームの設定
 description: 検索フォームの設定方法について説明します。
-seo-description: 検索フォームの設定方法について説明します。
-uuid: 0d30921c-0d4d-4ab6-b796-7833cd321e5d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: abc27987-960e-48da-9580-1008a2bdc94c
 translation-type: tm+mt
-source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '2065'
+source-wordcount: '2062'
 ht-degree: 85%
 
 ---
@@ -64,9 +60,9 @@ ht-degree: 85%
 
    この設定は、（ページの編集時に）アセットブラウザー内の製品を検索する場合に使用できるオプションを定義します。
 
-* **ページエディター（Scene7 検索）：**
+* **ページエディター(Dynamic Mediaクラシック [(旧称Scene7] 検索)**:
 
-   次の設定は、（ページの編集時に）アセットブラウザーでScene7リソースを検索する場合に使用できるオプションを定義します。
+   次の設定では、（ページの編集時に）アセットブラウザーでDynamic Mediaクラシックリソースを検索する場合に使用できるオプションを定義します。
 
 * **Sites 管理者の検索レール：**
 
