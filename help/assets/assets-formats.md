@@ -3,10 +3,10 @@ title: AEM Assets でサポートされているファイル形式
 description: AEM Assetsでサポートされるファイル形式とMIMEタイプのリストと、各形式でサポートされる機能。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 2baa172088f646752e85168d432d46942ac8244e
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 60%
+source-wordcount: '1708'
+ht-degree: 59%
 
 ---
 
@@ -307,6 +307,6 @@ Dynamic Mediaの機能でサポートされるドキュメント形式は次の�
 
 >[!MORELIKETHIS]
 >
->* [MIME タイプベースの Assets／Scene7 アップロードジョブパラメーターサポートの有効化](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
+>* [MIMEタイプベースのアセットを有効にする/Dynamic Mediaクラシックアップロードジョブパラメータのサポート](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
 >* [アップロードジョブのパラメーターのサポートに対して、MIMEタイプベースの設定を行います](config-dynamic.md)。
 
