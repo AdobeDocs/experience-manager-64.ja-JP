@@ -1,24 +1,20 @@
 ---
 title: Dynamic Media - Scene7 モードのトラブルシューティング
-seo-title: Dynamic Media - Scene7 モードのトラブルシューティング
-description: Scene7 実行モードの Dynamic Media に関するトラブルシューティングです。
-seo-description: Scene7 実行モードの Dynamic Media に関するトラブルシューティングです。
-uuid: bd9653f7-e4c7-464f-84a8-dc1e8dc37ba2
+description: Dynamic Mediaのトラブルシューティング —Scene7実行モード
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: eab920f4-b56e-4ed2-9ec1-03f348810ae5
 translation-type: tm+mt
-source-git-commit: 5acb16b1734331767554261bbcf9640947f2e23f
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 88%
+source-wordcount: '1295'
+ht-degree: 86%
 
 ---
 
 
-# Dynamic Media - Scene7 モードのトラブルシューティング  {#troubleshooting-dynamic-media-scene-mode}
+# Dynamic Media - Scene7 モードのトラブルシューティング {#troubleshooting-dynamic-media-scene-mode}
 
 以下のドキュメントでは、**dynamicmedia_scene7** 実行モードで実行している Dynamic Media のトラブルシューティングについて説明します。
 
@@ -30,7 +26,7 @@ ht-degree: 88%
 * 使用可能な Dynamic Media 機能パックよりも先に、AEM 6.4 累積修正パック（CFP）がインストールされていることを確認します。**
 * オプションの機能パック 18912 がインストールされていることを確認します。
 
-   このオプションの機能パックは、FTP サポートが必要な場合や、Dynamic Media Classic（Scene7）から Dynamic Media にアセットを移行する場合に使用します。
+   このオプションの機能パックは、FTPサポート用、またはDynamic MediaクラシックからDynamic Mediaにアセットを移行する場合に使用します。
 
 * クラウドサービスのユーザーインターフェイスに移動して、「**[!UICONTROL 利用可能な設定]**」の下に割り当てられたアカウントが表示されることを確認します。
 * **[!UICONTROL Dynamic Mediaアセットアクティベーション(scene7)]**&#x200B;レプリケーションエージェントが有効になっていることを確認します。
