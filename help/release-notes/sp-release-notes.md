@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: b9dffdda37992f3a9f34953b8dd391d6f6361ceb
+source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '21618'
+source-wordcount: '21617'
 ht-degree: 24%
 
 ---
@@ -71,7 +71,7 @@ AEM 6.4.8.0は、2018年4月のAEM 6.4の一般リリース(GA)以降にリリ�
 
 ### Assets {#assets}
 
-* Dynamic MediaScene7設定(NPR-32440)とExperience Managerして、アセットを別のフォルダに移動すると、名前のないフォルダがSPS(Scene7Publishing System)に作成されます。
+* Dynamic Mediaクラシック設定(NPR-32440)では、Experience Manager内のアセットを別のフォルダーに移動すると、名前のないフォルダーがDynamic Mediaクラシックで作成されます。
 
 * PDFファイルのアセットの詳細ページで、Dynamic MediaScene7モード(NPR-32316)で実行されているExperience Managerーで、アクションボタンが表示されません。
 
