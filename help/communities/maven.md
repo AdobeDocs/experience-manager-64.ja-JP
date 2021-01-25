@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
 translation-type: tm+mt
-source-git-commit: 13d890d08a032fe4eef1dac793dcf2a3e682a52c
+source-git-commit: 5affffac6f953bcf1d436d8492ad6dd2a041b3b4
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 75%
+source-wordcount: '127'
+ht-degree: 39%
 
 ---
 
@@ -24,16 +24,52 @@ ht-degree: 75%
 
 AEM Communitiesのドキュメントのこのセクションには、次のセクションが含まれます。
 
-* [Apache Maven を使用して AEM プロジェクトをビルドする方法](../../help/sites-developing/ht-projects-maven.md)
+* [Apache Mavenを使用したAEMプロジェクトの構築を参照してください](../../help/sites-developing/ht-projects-maven.md)。
 
-現在、個々のアーティファクトに代わる 2 つの「uber」アーティファクトがあります。
+個々のアーティファクトを置き換える「uber」アーティファクトは1つだけです。
+
+* AEM [Uber API jar](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
+
+>[!NOTE]
+>
+>AEM 6.4以降では、Communities APIは明示的にリリースされません。 すべてのCommunities APIがUber jar自体に含まれるようになりました。
+>
+>コミュニティのリリースを常に最新に保つことをお勧めします。
+>
+>最新バージョンを確認するには、[最新リリース](deploy-communities.md#latest-releases)の節を参照してください。
+
+## Maven 依存関係の例 {#maven-dependency-example}
+
+```xml
+<dependency>
+    <groupId>com.adobe.aem</groupId>
+    <artifactId>uber-jar</artifactId>
+    <version>6.4.8.3</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+>[!NOTE]
+>
+>最新のUber jarアーティファクトを特定するには、[AEM Uber jarリポジトリ](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)を参照してください。
+
+<!--
+# Using Maven for Communities {#using-maven-for-communities}
+
+## Overview {#overview}
+
+This section of the AEM Communities documentation is in addition to:
+
+* [How to Build AEM Projects using Apache Maven](../../help/sites-developing/ht-projects-maven.md)
+
+There are now two "uber" artifacts that replace individual artifacts:
 
 * AEM [Communities API jar](#communities-api-jar-artifact)
 * AEM [Uber API jar](../../help/sites-developing/ht-projects-maven.md#what-is-the-uberjar)
 
-## Communities API jar アーティファクト {#communities-api-jar-artifact}
+## Communities API Jar Artifact {#communities-api-jar-artifact}
 
-AEM Communities API jar の GAV の例を次に示します。
+Following is an example of a GAV for the AEM Communities API jar:
 
 ```xml
 <dependency>
@@ -42,27 +78,28 @@ AEM Communities API jar の GAV の例を次に示します。
     <version>1.11.170</version>
     <scope>provided</scope>
 </dependency>
+
 ```
 
-指定したバージョンが、AEM Communities用にインストールされたCommunitiesパッケージのバージョンに対応していることを確認します。 インストールされているバージョン番号を確認するには：
+Ensure thet the version specified corresponds with the Communities package version installed for AEM Communities. To verify the installed version number:
 
-1. 管理者権限でログインします。
-2. [Package Manager](../../help/sites-administering/package-manager.md)を参照します。例：[http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
+1. Login with adminstrative privileges.
+2. Browse to [Package Manager](../../help/sites-administering/package-manager.md). For example, [http://localhost:4502/crx/packmgr/](http://localhost:4502/crx/packmgr/)
 
-3. パッケージ *cq-socialcommunities-pkg-1.x.xxx* を探します。
-4. パッケージ名からバージョンを抽出します。
-   * AEM 6.3 の最初のバージョンは、バージョン 1.11.170 です。
-   * 機能パックはバージョン 1.12.xxx になります。
-
+3. locate the package *cq-socialcommunities-pkg-1.x.xxx*
+4. extract the version from the package name
+    * first version for AEM 6.3 is version 1.11.170
+    * feature packs will be versions 1.12.xxx
+    
 >[!NOTE]
 >
->コミュニティのリリースを常に最新に保つことをお勧めします。
+>It is recommended to keep up-to-date with the most recent Communities release.
 >
->最新バージョンを確認するには、[最新リリース](deploy-communities.md#latest-releases)の節を参照してください。
+>Visit the [Latest Releases](deploy-communities.md#latest-releases) section to identify the most recent version.
 
-## Maven 依存関係の例  {#maven-dependency-example}
+## Maven Dependency Example {#maven-dependency-example}
 
-Uber API jar より前に Communities API jar を指定する必要があります。
+The Communities API jar must be specified before the Uber API jar.
 
 ```xml
 <dependency>
@@ -79,3 +116,4 @@ Uber API jar より前に Communities API jar を指定する必要がありま�
     <classifier>apis</classifier>
 </dependency>
 ```
+-->
