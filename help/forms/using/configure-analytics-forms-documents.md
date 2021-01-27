@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integrations
 discoiquuid: 6301e0ef-3faa-4e6f-932d-37b049577cec
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: bd7f971cf26f60acc121d194d5251e87e0403718
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1544'
 ht-degree: 79%
 
 ---
@@ -118,7 +118,7 @@ Adobe Analytics をカスタマイズして、追加のパラメーターを追�
 クラウドサービス設定は、Adobe Analytics アカウントに関する情報です。この設定で Adobe Experience Manager（AEM）を有効化し、Adobe Analytics に接続します。使用する各 Analytics アカウントに対してそれぞれ個別の設定を作成します。
 
 1.  管理者として、AEM のオーサーインスタンスにログインします。
-1. 左上隅の&#x200B;**Adobe Experience Manager**/**ツール**![ツール](assets/tools.png)**展開**/**Cloud Services**&#x200B;をクリックします。
+1. 左上隅の&#x200B;**Adobe Experience Manager**/**ツール**![ツール](assets/tools.png)**Cloud Services**/**レガシーCloud Services**&#x200B;をクリックします。
 1. 「**Adobe Analytics**」アイコンを見つけます。「**設定を表示**」をクリックし、続けて「**[+]**」をクリックして、新しい設定を追加します。
 
    初めて使用する場合は、**「今すぐ設定**」をクリックします。
