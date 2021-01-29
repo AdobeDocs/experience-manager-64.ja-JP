@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: Configuration
 discoiquuid: 71412f5d-ff34-415f-baf8-d300756b93a9
 translation-type: tm+mt
-source-git-commit: f87d70515a385fb23b36797e468325fa1a5e9ff4
+source-git-commit: f02fde7583da87d48bf72bf569762e9d604d25ce
 workflow-type: tm+mt
 source-wordcount: '272'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -43,7 +43,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td>forms-power-user</td> 
+   <td>フォームパワーユーザー</td> 
    <td>
     <ul> 
      <li>アダプティブフォームを作成、プレビュー、パブリッシュ、送信する</li> 
