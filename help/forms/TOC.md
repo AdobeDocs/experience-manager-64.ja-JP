@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.4 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 translation-type: tm+mt
-source-git-commit: b0457d967a8d366caef45e2917ae73e7550ba69e
+source-git-commit: e7603d481720b368c6976674205bb523ac0df3d0
 workflow-type: tm+mt
-source-wordcount: '3721'
-ht-degree: 74%
+source-wordcount: '3730'
+ht-degree: 75%
 
 ---
 
@@ -63,18 +63,18 @@ ht-degree: 74%
       + [インタラクティブ通信をインストールして設定する](using/installing-configuring-intreactive-communication-correspondence-management.md)
    + JEEにAEM Formsをインストール{#jee-installation}
       + [JEE上のAEM formsでサポートされるプラットフォーム](using/aem-forms-jee-supported-platforms.md)
-      + [JEE上のAEM Formsの自動インストールおよびデプロイ（JBoss版）](http://www.adobe.com/go/learn_aemforms_installTurnkey_64_jp)
-      + [ドキュメントセキュリティサーバーのみのインストールと設定](using/installing-and-configuring-the-document-security-server.md)
-      + [AEM Formsシングルサーバのインストールの準備](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64_jp)
-      + [JEE上のAEM Formsのインストールおよびデプロイ（JBoss版）](http://www.adobe.com/go/learn_aemforms_installJBoss_64_jp)
+      + [JEE上のAEM Formsのインストールおよびデプロイ（JBoss Turnkeyを使用）](http://www.adobe.com/go/learn_aemforms_installTurnkey_64_jp)
+      + [AEM Formsドキュメントセキュリティサーバーのインストールと設定](using/installing-and-configuring-the-document-security-server.md)
+      + [AEM Formsのインストールの準備（シングルサーバ）](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64_jp)
+      + [JEE上のAdobe Experience Manager Formsのインストールおよびデプロイ（JBoss版）](http://www.adobe.com/go/learn_aemforms_installJBoss_64_jp)
       + [JEE上のAEM Formsのインストールおよびデプロイ（WebLogic版）](http://www.adobe.com/go/learn_aemforms_installWebLogic_64_jp)
-      + [JEE上のAEM Formsのインストールおよびデプロイ（WebSphere版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_64_jp)
+      + [JEE上のAdobe Experience Manager Formsのインストールおよびデプロイ（WebSphere版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_64_jp)
       + [AEM FormsWorkbenchのインストール](http://help.adobe.com/ja_JP/AEMForms/6.1/InstallWorkbench/index.html)
       + [Designerのインストールと設定](using/installing-configuring-designer.md)
-      + [AEM Formsサーバークラスターのインストールの準備](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64_jp)
-      + [JBossクラスターでのJEE上のAEM Formsの設定](http://www.adobe.com/go/learn_aemforms_clusterJBoss_64_jp)
-      + [WebLogicクラスターでのJEE上のAEM Formsの設定](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_64_jp)
-      + [WebSphereクラスターでのJEE上のAEM Formsの設定](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_64)
+      + [AEM Formsのインストールの準備（サーバークラスター）](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64_jp)
+      + [JBoss ClusterでのJEE上のAdobe Experience Manager Formsの設定](http://www.adobe.com/go/learn_aemforms_clusterJBoss_64_jp)
+      + [WebLogicクラスターでのJEE上のAdobe Experience Manager Formsの設定](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_64_jp)
+      + [WebSphere ClusterでのJEE上のAdobe Experience Manager Formsの設定](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_64)
    + AEM Forms の設定 {#configure-aem-forms}
       + [AEM Forms サーバーのパフォーマンス調整](using/performance-tuning-aem-forms.md)
       + [アダプティブフォームのキャッシュの設定](using/configure-adaptive-forms-cache.md)
@@ -91,17 +91,17 @@ ht-degree: 74%
       + [互換性パッケージをインストールする](using/compatibility-package.md)
       + [AEM Forms のアセットとドキュメントの移行](using/migration-utility.md)
    + JEE上のAEM Formsをアップグレード{#aem-forms-jee-upgrade}
-      + [AEM Formsのアップグレードの準備](http://www.adobe.com/go/learn_aemforms_prepareupgrade_64_jp)
-      + [アップグレードのチェックリストと計画](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_64_jp)
+      + [AEM Forms へのアップグレードの準備](http://www.adobe.com/go/learn_aemforms_prepareupgrade_64_jp)
+      + [JEE上のAdobe Experience Manager Formsのアップグレードのチェックリストと計画](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_64_jp)
       + [JEE上のAEM 6.4 formsへのアップグレード](using/upgrade-forms-jee.md)
-      + [AEM FormsリリースからJEE上のAEM 6.4Forms（JBoss版）へのアップグレード](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_64_jp)
+      + [JEE上のAdobe Experience Manager Formsへのアップグレード（JBoss版）](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_64_jp)
       + [LiveCycle ES4 SP1 から JEE 上の Adobe Experience Manager Forms へのアップグレード（JBoss 版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-jboss-livecycle.pdf)
-      + [AEM FormsリリースからJEE上のAEM 6.4Formsへの自動アップグレード（JBoss版）](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_64_jp)
-      + [LiveCycleES4 SP1からJEE上のAEM Formsへの自動アップグレード（JBoss版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-turnkey-livecycle.pdf)
-      + [AEM FormsリリースからJEE上のAEM 6.4Formsへのアップグレード（WebLogic版）](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_64_jp)
-      + [LiveCycleES4 SP1からJEE上のAEM Formsへのアップグレード（WebLogic版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-weblogic-livecycle.pdf)
-      + [AEM FormsリリースからJEE上のAEM 6.4Forms（WebSphere版）へのアップグレード](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_64_jp)
-      + [LiveCycleES4 SP1からJEE上のAEM Formsへのアップグレード（WebSphere版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-websphere-livecycle.pdf)
+      + [JEE 上の AEM Forms への自動アップグレード（JBoss 版）](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_64_jp)
+      + [LiveCycle ES4 SP1 から JEE 上の Adobe Experience Manager Forms へのアップグレード（JBoss 自動インストールを使用）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-turnkey-livecycle.pdf)
+      + [JEE上のAdobe Experience Manager Formsへのアップグレード（WebLogic版）](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_64_jp)
+      + [LiveCycle ES4 SP1 から JEE 上の Adobe Experience Manager Forms へのアップグレード（WebLogic 版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-weblogic-livecycle.pdf)
+      + [JEE上のAdobe Experience Manager Formsへのアップグレード（WebSphere版）](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_64_jp)
+      + [LiveCycle ES4 SP1 から JEE 上の Adobe Experience Manager Forms へのアップグレード（WebSphere 版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-websphere-livecycle.pdf)
 + AEM Forms の管理 {#manage-administer-aem-forms}
    + [OSGi 上の AEM Forms のグループと権限](using/forms-groups-privileges-tasks.md)
    + [フォームを分類するための新しいフォルダーの作成](using/creating-new-folders-categorize-forms.md)
