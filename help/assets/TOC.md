@@ -7,9 +7,9 @@ user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
 translation-type: tm+mt
-source-git-commit: 1c853b441845997fbb3086ca93d7020ed02d88c4
+source-git-commit: c3eeb3d4fc4b6ce7548c6385c21c6e4ed7b2f0e6
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '730'
 ht-degree: 77%
 
 ---
@@ -167,7 +167,7 @@ ht-degree: 77%
    + [スマートコンテンツサービスのトレーニングガイドライン](smart-tags-training-guidelines.md)
    + [ビデオレンディション](video-renditions.md)
 + 3D アセット {#three-d}
-   + [AEM 3Dリリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/assets/three-d/assets-3d.html)
+   + [AEM 3Dリリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/aem3d-release-notes.html)
    + [3D アセットの使用](assets-3d.md)
    + [AEM 3D のインストールと設定](install-config-3d.md)
    + [高度な設定](advanced-config-3d.md)
