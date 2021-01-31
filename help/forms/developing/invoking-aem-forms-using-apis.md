@@ -1,8 +1,8 @@
 ---
 title: APIを使用したAEM Formsの呼び出し
 seo-title: APIを使用したAEM Formsの呼び出し
-description: 'null'
-seo-description: 'null'
+description: 'Adobe Experience Manager Formsは、共有インフラストラクチャ内で動作するサービスで構成されるJ2EEベースのエンタープライズソフトウェアです。 Java API、Webサービス、Remoting、およびREST APIを使用して、クライアントアプリケーションを使用して、AEM Formsをプログラムで呼び出す方法を説明します。 '
+seo-description: Adobe Experience Manager Formsは、共有インフラストラクチャ内で動作するサービスで構成されるJ2EEベースのエンタープライズソフトウェアです。 Java API、Webサービス、Remoting、およびREST APIを使用して、クライアントアプリケーションを使用して、AEM Formsをプログラムで呼び出す方法を説明します。
 uuid: d100e106-e508-4d3c-ba8c-b5fe13c9e2d6
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: development-tools, coding
 discoiquuid: 1825e12c-0306-4e0a-9643-47ce1ce82132
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 7ec0cd95417c015565fa6e07c753c4ac6df35cdb
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
