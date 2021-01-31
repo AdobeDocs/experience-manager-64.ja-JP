@@ -1,17 +1,17 @@
 ---
 title: Document Security | ユーザーデータの処理
 seo-title: Document Security | ユーザーデータの処理
-description: 'null'
-seo-description: 'null'
+description: AEM Formsドキュメントセキュリティでは、定義済みのセキュリティ設定を作成、保存、ドキュメントに適用できます。 これにより、許可されたユーザーだけがドキュメントを使用できるように指定できます。ドキュメントセキュリティでデータをデータベースの表にまとめ、ドキュメントのセキュリティデータにアクセスして書き出す方法、および必要に応じて、データベース内のユーザーのセキュリティデータを完全に削除する方法を説明します。
+seo-description: AEM Formsドキュメントセキュリティでは、定義済みのセキュリティ設定を作成、保存、ドキュメントに適用できます。 これにより、許可されたユーザーだけがドキュメントを使用できるように指定できます。ドキュメントセキュリティでデータをデータベースの表にまとめ、ドキュメントのセキュリティデータにアクセスして書き出す方法、および必要に応じて、データベース内のユーザーのセキュリティデータを完全に削除する方法を説明します。
 uuid: 1624a465-8b0c-4347-a53f-1118bfa6e18f
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: 7ec0cd95417c015565fa6e07c753c4ac6df35cdb
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 64%
+source-wordcount: '1054'
+ht-degree: 59%
 
 ---
 
