@@ -1,18 +1,18 @@
 ---
 title: Forms Portal | ユーザーデータの処理
 seo-title: Forms Portal | ユーザーデータの処理
-description: 'null'
-seo-description: 'null'
+description: AEM Forms ポータルには、AEM Sites ページにアダプティブフォーム、HTML5 フォームおよびその他のフォームアセットを一覧表示するために使用できるコンポーネントが用意されています。Formsポータルでドラフト用および送信済みのフォームのデータを保存する方法を説明します。 設定したデータストアにあるログインユーザーと匿名ユーザーのドラフトおよび送信済みのフォームデータにアクセスする方法を詳しく調べ、必要に応じて削除します。
+seo-description: AEM Forms ポータルには、AEM Sites ページにアダプティブフォーム、HTML5 フォームおよびその他のフォームアセットを一覧表示するために使用できるコンポーネントが用意されています。Formsポータルでドラフト用および送信済みのフォームのデータを保存する方法を説明します。 設定したデータストアにあるログインユーザーと匿名ユーザーのドラフトおよび送信済みのフォームデータにアクセスする方法を詳しく調べ、必要に応じて削除します。
 uuid: 2ac2b2a9-b603-489a-86b8-a78b697f130d
 contentOwner: vishgupt
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 48f841b7-0e7f-4216-9ee8-fb6e843acaf0
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: 7ec0cd95417c015565fa6e07c753c4ac6df35cdb
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 66%
+source-wordcount: '980'
+ht-degree: 62%
 
 ---
 
