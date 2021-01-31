@@ -1,17 +1,17 @@
 ---
 title: Correspondence Management | ユーザーデータの処理
 seo-title: Correspondence Management | ユーザーデータの処理
-description: 'null'
-seo-description: 'null'
+description: AEM Forms Correspondence Management を使用すると、顧客向けに安全でパーソナル化された通信を作成して管理し、効率性を向上できます。AEMリポジトリでドラフトと送信済みのレターのデータを保存する方法、保存されたデータにアクセスする方法、および保存されたデータを削除する方法を説明します。
+seo-description: AEM Forms Correspondence Management を使用すると、顧客向けに安全でパーソナル化された通信を作成して管理し、効率性を向上できます。AEMリポジトリでドラフトと送信済みのレターのデータを保存する方法、保存されたデータにアクセスする方法、および保存されたデータを削除する方法を説明します。
 uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 764d8e0d-604d-4c7b-89cd-7686ce5f03ff
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: 7ec0cd95417c015565fa6e07c753c4ac6df35cdb
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 81%
+source-wordcount: '614'
+ht-degree: 76%
 
 ---
 
