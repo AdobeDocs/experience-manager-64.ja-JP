@@ -1,15 +1,15 @@
 ---
 title: 公開しない最初のアダプティブドキュメントを作成
 seo-title: 公開しない最初のアダプティブドキュメントを作成
-description: 'null'
-seo-description: 'null'
+description: 公開しない
+seo-description: 公開しない
 page-status-flag: de-activated
 uuid: 2cb2bf82-130f-4d6b-a711-df0b97cb0504
 discoiquuid: f3ca177f-7c0d-4b8b-ab4b-bf04668d634c
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 7ec0cd95417c015565fa6e07c753c4ac6df35cdb
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '795'
 ht-degree: 15%
 
 ---
@@ -85,12 +85,12 @@ Customer Communicationsは、ビジネスの通信、レター、ドキュメン
 
 ## 手順3:アダプティブドキュメントフィールドへのルールの適用(Webチャネルのみ) {#step-apply-rules-to-adaptive-document-fields-web-channel-only}
 
-アダプティブドキュメントには、アダプティブドキュメントオブジェクトにルールを記述するためのエディターが用意されています。 これらのルールは、ドキュメント上の事前設定された条件とドキュメントアクションに基づいて、ユーザーオブジェクト上でトリガーされるアクションを定義します。 これにより、アダプティブドキュメントのWebバージョンの正確性を確保し、ユーザーエクスペリエンスを高速化できます。 アダプティブドキュメントルールとルールエディターについて詳しくは、[ルールエディター](/help/forms/using/rule-editor.md)を参照してください。
+アダプティブドキュメントには、アダプティブドキュメントオブジェクトにルールを記述するためのエディターが用意されています。 これらのルールは、ドキュメント上の事前設定された条件とユーザーアクションに基づいて、ドキュメントオブジェクトにトリガーするアクションを定義します。 これにより、アダプティブドキュメントのWebバージョンの正確性を確保し、ユーザーエクスペリエンスを高速化できます。 アダプティブドキュメントルールとルールエディターについて詳しくは、[ルールエディター](/help/forms/using/rule-editor.md)を参照してください。
 
 ゴール:
 
 * アダプティブドキュメントのWebチャネルフィールドの作成と適用
-* ルールを使用して、Webチャネルーでドキュメントデータモデルサービスをトリガーする
+* ルールを使用してWebチャネルーのドキュメントデータモデルサービスをトリガーする
 
 ## 手順4:アダプティブドキュメントのスタイル設定(Webチャネルのみ) {#step-style-the-adaptive-document-web-channel-only}
 
