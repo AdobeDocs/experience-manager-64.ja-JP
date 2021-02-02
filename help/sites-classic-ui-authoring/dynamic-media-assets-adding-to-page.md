@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
 workflow-type: tm+mt
-source-wordcount: '1722'
-ht-degree: 55%
+source-wordcount: '1718'
+ht-degree: 54%
 
 ---
 
@@ -41,7 +41,7 @@ AEMをWCMとして使用している場合は、ダイナミックメディア�
    >
    >詳しくは、[デザインモードでのコンポーネントの設定](/help/sites-authoring/default-components-designmode.md)を参照してください。
 
-1. **[!UICONTROL サイドキック]の鉛筆アイコンをクリックして、&lt;a0/>編集]**&#x200B;モードに戻ります。[!UICONTROL 
+1. **[!UICONTROL サイドキック]の鉛筆アイコンをクリックして、[!UICONTROL 編集]**&#x200B;モードに戻ります。
 1. サイドキックの&#x200B;**[!UICONTROL その他]**&#x200B;グループから目的の場所のページに、**[!UICONTROL Dynamic Media]**&#x200B;または&#x200B;**[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントをドラッグします。
 1. 「**[!UICONTROL 編集]**」をクリックしてコンポーネントを開きます。
 1. [](#dynamic-media-component)コンポーネントの編集を必要に応じておこない、「**[!UICONTROL OK]**」をクリックして変更内容を保存します。
@@ -95,7 +95,7 @@ Dynamic Mediaコンポーネントはスマートです。画像を追加する�
 
 このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
-**[!UICONTROL 画像修飾子]**  — 画像効果を変更するには、追加の画像コマンドを指定します。これらについては、[画像プリセットの管理](/help/assets/managing-viewer-presets.md)および[コマンドリファレンス](https://docs.adobe.com/content/help/ja-JP/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)で説明します。
+**[!UICONTROL 画像修飾子]**  — 画像効果を変更するには、追加の画像コマンドを指定します。これらについては、[画像プリセットの管理](/help/assets/managing-viewer-presets.md)および[コマンドリファレンス](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)で説明します。
 
 このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
@@ -141,7 +141,7 @@ Dynamic Mediaコンポーネントはスマートです。画像を追加する�
 
 AEM 6.2 で [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480) をインストールする場合、ビデオをセキュア SSL 接続（HTTPS）と非セキュア接続（HTTP）のどちらで配信するかを制御できます。デフォルトでは、ビデオ配信プロトコルは、埋め込み Web ページのプロトコルから自動的に継承されます。Web ページが HTTPS で読み込まれる場合、ビデオも HTTPS で配信されます。逆の場合も同様です。Web ページが HTTP で読み込まれる場合、ビデオも HTTP で配信されます。ほとんどの場合、このデフォルトの動作で問題ないため、特に設定を変更する必要はありません。ただし、ビデオをセキュアに配信するために、`VideoPlayer.ssl=on` を URL パスの最後に付加するか、または埋め込みコードスニペットにある他のビューアの設定パラメーターのリストに付加して、このデフォルトの動作をオーバーライドすることができます。
 
-ビデオのセキュア配信、および URL パスの `VideoPlayer.ssl` 設定属性の使用について詳しくは、『ビューアリファレンスガイド』の「[ビデオのセキュア配信](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html)」を参照してください。ビデオビューアの他に、セキュアビデオ配信は混在メディアビューアとインタラクティブビデオビューアで使用できます。
+ビデオのセキュア配信、および URL パスの `VideoPlayer.ssl` 設定属性の使用について詳しくは、『ビューアリファレンスガイド』の「[ビデオのセキュア配信](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html)」を参照してください。ビデオビューアの他に、セキュアビデオ配信は混在メディアビューアとインタラクティブビデオビューアで使用できます。
 
 ### インタラクティブメディアコンポーネント {#interactive-media-component}
 
