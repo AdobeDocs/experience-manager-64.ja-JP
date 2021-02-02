@@ -7,10 +7,10 @@ user-guide-title: AEM 6.4 デプロイガイド
 breadcrumb-title: デプロイガイド
 user-guide-description: Adobe Managed Services クラウドデプロイメントを含む、Adobe Experience Manager 6.4 のインストール、デプロイメント、およびアーキテクチャについて詳しく説明します。
 translation-type: tm+mt
-source-git-commit: b0457d967a8d366caef45e2917ae73e7550ba69e
+source-git-commit: 7345a3c392dc6df495454a061a8a0624a4fb46d1
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 95%
+source-wordcount: '356'
+ht-degree: 93%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 95%
    + [ジョブのオフロード](offloading.md)
    + [シングルサインオン](single-sign-on.md)
    + [リソースマッピング](resource-mapping.md)
-   + [HTTP over SSL の有効化](/help/sites-administering/ssl-by-default.md)
+   + [HTTP over SSL の有効化](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/ssl-by-default.html)
    + [整合性チェックとトラバーサルチェック](consistency-check.md)
    + [パフォーマンスガイドライン](performance-guidelines.md)
    + [パフォーマンスの最適化](configuring-performance.md)
