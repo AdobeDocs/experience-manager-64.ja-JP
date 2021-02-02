@@ -10,9 +10,9 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: de6ed870-0e69-4d16-99e4-037dd5acf413
 translation-type: tm+mt
-source-git-commit: 4b56b05117e52f38a6f7da0ab0d3b314769f2965
+source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
 workflow-type: tm+mt
-source-wordcount: '5893'
+source-wordcount: '5889'
 ht-degree: 76%
 
 ---
@@ -202,7 +202,7 @@ AEM WCM およびリポジトリに対するアクセス要求はすべてここ
       
 エラーメッセージ（様々な深刻度レベル）はここに登録されます。
 
-   * [ `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
+   * [ `ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
 
       このログは、ダイナミックメディアが有効な場合にのみ使用されます。 内部ImageServerプロセスの動作の分析に使用される統計と分析情報を提供します。
 
@@ -211,7 +211,7 @@ AEM WCM およびリポジトリに対するアクセス要求はすべてここ
       
 各アクセス要求が、応答と共にここに登録されます。
 
-   * [ `s7access-<yyyy>-<mm>-<dd>.log`](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
+   * [ `s7access-<yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
 
       このログは、ダイナミックメディアが有効な場合にのみ使用されます。 s7accessログは、`/is/image`と`/is/content`を介してDynamic Mediaに対して行われた各リクエストを記録します。
 
