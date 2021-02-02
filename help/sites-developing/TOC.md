@@ -7,10 +7,10 @@ user-guide-title: AEM 6.4 開発ユーザーガイド
 breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 translation-type: tm+mt
-source-git-commit: b0457d967a8d366caef45e2917ae73e7550ba69e
+source-git-commit: 7345a3c392dc6df495454a061a8a0624a4fb46d1
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 88%
+source-wordcount: '885'
+ht-degree: 81%
 
 ---
 
@@ -73,13 +73,13 @@ ht-degree: 88%
       + [SAP Commerce Cloud を使用した開発](sap-commerce-cloud.md)
 + コンポーネント{#components}
    + [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
-   + [スタイルシステム](/help/sites-authoring/style-system.md)
+   + [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/siteandpage/style-system.html)
    + [コンポーネントの概要](components.md)
    + [AEM コンポーネント - 基本](components-basics.md)
    + [AEM コンポーネントの開発](developing-components.md)
    + [AEM コンポーネントの開発 - コードサンプル](developing-components-samples.md)
    + [コンテンツサービス用の JSON エクスポーター](json-exporter.md)
-   + [コンポーネントの JSON 書き出しの有効化](json-exporter-components.md)
+   + [コンポーネントの JSON 書き出しの有効化](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/json-exporter-components.html)
    + [画像エディター](image-editor.md)
    + [装飾タグ   ](decoration-tag.md)
    + [非表示条件の使用](hide-conditions.md)
@@ -117,9 +117,9 @@ ht-degree: 88%
       + [SPA と Adobe Experience Platform Launch の統合](spa-launch.md)
       + [SPA およびサーバーサイドレンダリング](spa-ssr.md)
       + [SPA 参照資料](spa-reference-materials.md)
-   + [HTTP API](/help/assets/mac-api-assets.md)
-   + [コンテンツフラグメント](/help/assets/content-fragments.md)
-   + [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)
+   + [HTTP API](https://experienceleague.adobe.com/docs/experience-manager-64/assets/extending/mac-api-assets.html)
+   + [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments.html)
+   + [エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/authoring/experience-fragments.html)
    + [AEMのコンテンツフラグメントとコンテンツサービスについて](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
 + 開発ツール{#devtools}
    + [開発ツール](dev-tools.md)
@@ -176,12 +176,12 @@ ht-degree: 88%
       + [カスタムフォームマッピングの作成](extending-campaign-form-mapping.md)
       + [Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成](extending-campaign-custom-template.md)
       + [リクエスト分析スクリプト](analyze-request.md)
-   + [JMX コンソールを使用したサービスの統合](jmx-integration.md)
-   + [Bulk Editor の開発](dev-bulk-editor.md)
+   + [JMX コンソールを使用したサービスの統合](https://experienceleague.adobe.com/docs/experience-manager-64/developing/platform/jmx-integration.html)
+   + [Bulk Editor の開発](https://experienceleague.adobe.com/docs/experience-manager-64/developing/platform/dev-bulk-editor.html)
    + クラシックUIの拡張{#extending-classic-ui}
       + [Web サイトコンソールのカスタマイズ（クラシック UI）](customizing-siteadmin.md)
       + [ようこそコンソールのカスタマイズ（クラシック UI）](customizing-the-welcome-console.md)
-      + [レポートの開発](dev-reports.md)
+      + [レポートの開発](https://experienceleague.adobe.com/docs/experience-manager-64/developing/platform/dev-reports.html)
 + テスト{#testing}
    + [計画](planning.md)
    + [必要になるテスト環境の種類](test-environments.md)
@@ -194,10 +194,10 @@ ht-degree: 88%
    + [次期リリース](the-next-release.md)
    + [チェックリスト](checklists.md)
    + [Tough Day](tough-day.md)
-   + [UI のテスト](hobbes.md)
+   + [UI のテスト](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/hobbes.html)
 + ベストプラクティス{#bestpractices}
    + [ベストプラクティスの概要](best-practices.md)
-   + [AEM開発ガイドラインとベストプラクティス](dev-guidelines-bestpractices.md)
+   + [AEM開発ガイドラインとベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-64/developing/introduction/dev-guidelines-bestpractices.html)
    + [開発のベストプラクティス](development-practices.md)
    + [コンテンツのアーキテクチャ](content-architecture.md)
    + [ソフトウェアのアーキテクチャ](software-architecture.md)
