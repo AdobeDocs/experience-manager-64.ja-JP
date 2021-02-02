@@ -6,10 +6,10 @@ user-guide-title: AEM 6.4 Mobile ユーザーガイド
 breadcrumb-title: モバイルガイド
 user-guide-description: モバイルアプリ用のコンテンツを作成および管理します。
 translation-type: tm+mt
-source-git-commit: a83c39939afe85586aa32460f141fa18bfc80a3f
+source-git-commit: 7345a3c392dc6df495454a061a8a0624a4fb46d1
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 97%
+source-wordcount: '331'
+ht-degree: 95%
 
 ---
 
@@ -82,7 +82,7 @@ ht-degree: 97%
    + [モバイルアプリのページテンプレート](phonegap-apps-arch-page-templates.md)
    + [Adobe Target クラウドサービスの設定](aem-mobile-configuring-cloud-service.md)
    + [単一ページアプリケーション](phonegap-single-page-applications.md)
-   + [リポジトリ内のモデル](administer-mobile-apps.md)
+   + [リポジトリ内のモデル](https://experienceleague.adobe.com/docs/experience-manager-64/mobile/administering/administer-mobile-apps.html)
    + [AEM PhoneGap の起動](starting-aem-phonegap-app.md)
    + [モバイルアプリのテスト](develop-mobile-apps-testing.md)
    + [アプリの構造](phonegap-structure-an-app.md)
