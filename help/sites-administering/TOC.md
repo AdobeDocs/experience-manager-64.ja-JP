@@ -7,10 +7,10 @@ user-guide-title: AEM 6.4 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 7345a3c392dc6df495454a061a8a0624a4fb46d1
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 96%
+source-wordcount: '658'
+ht-degree: 91%
 
 ---
 
@@ -81,7 +81,7 @@ ht-degree: 96%
    + [AEM でのシリアル化の問題の軽減](mitigating-serialization-issues.md)
    + [ユーザーの同期](sync.md)
    + [カプセル化されたトークンのサポート](encapsulated-token.md)
-   + [シングルサインオン](/help/sites-deploying/single-sign-on.md)
+   + [シングルサインオン](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/single-sign-on.html)
    + [AEM でのユーザー管理操作を監査する方法](audit-user-management-operations.md)
    + [デフォルトの SSL](ssl-by-default.md)
    + [SAML 2.0 認証ハンドラー](saml-2-0-authenticationhandler.md)
@@ -155,11 +155,11 @@ ht-degree: 96%
    + [エクスペリエンスフラグメントとのTarget 統合](experience-fragments-target.md)
 + ベストプラクティス {#bestpractices}
    + [ベストプラクティス](administer-best-practices.md)
-   + [翻訳のベストプラクティス](tc-bp.md)
-   + [MSM のベストプラクティス](msm-best-practices.md)
+   + [翻訳のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-64/administering/introduction/tc-bp.html)
+   + [MSM のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-64/administering/introduction/msm-best-practices.html)
    + [AEM Sites - GDPR 対応](gdpr-compliance-sites.md)
-   + [AEM の基盤での GDPR 要求の処理](handling-gdpr-requests-for-aem-platform.md)
-   + [AEM Commerce - GDPR 対応](gdpr-compliance-commerce.md)
+   + [AEM の基盤での GDPR 要求の処理](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/handling-gdpr-requests-for-aem-platform.html)
+   + [AEM Commerce - GDPR 対応](https://experienceleague.adobe.com/docs/experience-manager-64/administering/ecommerce/gdpr-compliance-commerce.html)
 + コンテンツ管理 {#contentmanagement}
    + [パッケージの使用方法](package-manager.md)
    + [アセットのワークフローオフローダー](workflow-offloader.md)
