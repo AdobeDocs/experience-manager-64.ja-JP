@@ -7,9 +7,9 @@ topic-tags: dynamic-media
 content-type: reference
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
 translation-type: tm+mt
-source-git-commit: 9e6a7f0ec6ed921df419e626a155d0895dbaefde
+source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
 workflow-type: tm+mt
-source-wordcount: '3849'
+source-wordcount: '3837'
 ht-degree: 78%
 
 ---
@@ -406,7 +406,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
   </tr>
   <tr>
    <td><strong>画像の修飾子</strong></td>
-   <td><p>UI で使用できる共通の画像設定のほか、Dynamic Media では「<strong>画像の修飾子</strong>」フィールドで画像の詳細を多数指定できます。これらのパラメーターは、<a href="https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server プロトコルのコマンドリファレンス（英語）</a>で定義されています。</p> <p>重要：API にリストされている次の関数はサポートされていません。</p>
+   <td><p>UI で使用できる共通の画像設定のほか、Dynamic Media では「<strong>画像の修飾子</strong>」フィールドで画像の詳細を多数指定できます。これらのパラメーターは、<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server プロトコルのコマンドリファレンス（英語）</a>で定義されています。</p> <p>重要：API にリストされている次の関数はサポートされていません。</p>
     <ul>
      <li>基本的なテンプレートコマンドおよびテキストレンダリングコマンド：<code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> および <code>textPs=</code></li>
      <li>ローカライゼーションコマンド：<code>locale=</code> および <code>req=xlate</code></li>
@@ -423,7 +423,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 ## 画像修飾子を使用した画像プリセットオプションの定義{#defining-image-preset-options-with-image-modifiers}
 
-「**[!UICONTROL 基本]**」タブと「**[!UICONTROL 詳細]**」タブで使用できるオプションの他に、画像修飾子を定義して、画像プリセットを定義する際にさらに多くのオプションを指定できます。 イメージレンダリングは、Dynamic MediaイメージレンダリングAPIに依存しています。 APIは、『[HTTPプロトコルリファレンス](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/c-http-protocol-reference.html)』で詳しく定義されています。
+「**[!UICONTROL 基本]**」タブと「**[!UICONTROL 詳細]**」タブで使用できるオプションの他に、画像修飾子を定義して、画像プリセットを定義する際にさらに多くのオプションを指定できます。 イメージレンダリングは、Dynamic MediaイメージレンダリングAPIに依存しています。 APIは、『[HTTPプロトコルリファレンス](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/c-http-protocol-reference.html)』で詳しく定義されています。
 
 画像の修飾子を使用して実行できることについて、以下に基本的な例を示します。
 
@@ -431,7 +431,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 >
 >一部の画像の修飾子は、[AEM で使用できません](#advanced-tab-options)。
 
-* [op_invert](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-invert.html) - それぞれの色成分を、画像の効果が反対になるように逆転させます。
+* [op_invert](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-invert.html) - それぞれの色成分を、画像の効果が反対になるように逆転させます。
 
    ```xml
    &op_invert=1
@@ -439,7 +439,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
    ![chlimage_1-499](assets/chlimage_1-499.png)
 
-* [op_blur](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-blur.html) - 画像にぼかしフィルターを適用します。
+* [op_blur](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-blur.html) - 画像にぼかしフィルターを適用します。
 
    ```xml
    &op_blur=25
@@ -455,7 +455,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
    ![chlimage_1-501](assets/chlimage_1-501.png)
 
-* [op_brightness](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-brightness.html) - 明るさを増減させます。
+* [op_brightness](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-brightness.html) - 明るさを増減させます。
 
    ```xml
    &op_brightness=75
@@ -463,7 +463,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
    ![chlimage_1-502](assets/chlimage_1-502.png)
 
-* [opac](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-opac.html) - 画像の不透明度を調節します。前景の不透明度を減らすことができます。
+* [opac](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-opac.html) - 画像の不透明度を調節します。前景の不透明度を減らすことができます。
 
    ```xml
    opac=50
