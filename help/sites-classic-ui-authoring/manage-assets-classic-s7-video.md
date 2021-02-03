@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: authoring
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
 workflow-type: tm+mt
-source-wordcount: '1707'
-ht-degree: 39%
+source-wordcount: '1683'
+ht-degree: 40%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 39%
 Dynamic Mediaクラシックビデオ統合により、最適化されたビデオの提供先がすべての画面（自動デバイスおよび帯域幅検出）に拡張されます。
 
 * Dynamic Mediaクラシック(Scene7)ビデオコンポーネントは、デバイスと帯域幅の検出を自動的に実行し、デスクトップ、タブレット、モバイルで適切な形式と品質のビデオを再生します。
-* アセット — 単一のビデオアセットだけでなく、アダプティブビデオセットも含めることができます。アダプティブビデオセットは、複数の画面にわたってビデオをシームレスに再生するために必要なすべてのビデオレンディションを対象としたコンテナです。アダプティブビデオセットは、同じビデオを異なるビットレート（400 kbps、800 kbps、1000 kbpsなど）やフォーマットでエンコードしたバージョンをグループ化します。デスクトップ、iOS、Android、Blackberry、Windows携帯端末を含む複数の画面でアダプティブビデオストリーミングを行う場合は、S7ビデオコンポーネントと共にアダプティブビデオセットを使用します。詳しくは、[Scene7のアダプティブビデオセットに関するドキュメントを参照してください。](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html)
+* アセット — 単一のビデオアセットだけでなく、アダプティブビデオセットも含めることができます。アダプティブビデオセットは、複数の画面にわたってビデオをシームレスに再生するために必要なすべてのビデオレンディションを対象としたコンテナです。アダプティブビデオセットは、同じビデオを異なるビットレート（400 kbps、800 kbps、1000 kbpsなど）やフォーマットでエンコードしたバージョンをグループ化します。デスクトップ、iOS、Android、Blackberry、Windows携帯端末を含む複数の画面でアダプティブビデオストリーミングを行う場合は、S7ビデオコンポーネントと共にアダプティブビデオセットを使用します。詳しくは、[Scene7のアダプティブビデオセットに関するドキュメントを参照してください。](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)
 
 ## FFMPEGとDynamic Mediaクラシックについて{#about-ffmpeg-and-scene}
 
@@ -62,7 +62,7 @@ Dynamic Mediaクラシックビデオコンポーネントでは、次の形式�
 
 アセットのワークフローやバージョン管理が必要ない場合は、アセットをDynamic Mediaクラシックにアップロードする必要があります。 推奨されるワークフローは次のとおりです。
 
-1. Dynamic Mediaクラシックでは、[Dynamic Mediaクラシック（システム自動化）](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html)にFTPのスケジュールアップロードとエンコードを設定します。
+1. Dynamic Mediaクラシックでは、[Dynamic Mediaクラシック（システム自動化）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files)にFTPのスケジュールアップロードとエンコードを設定します。
 1. AEMでは、コンテンツファインダーの&#x200B;**[!UICONTROL Dynamic Mediaクラシック]**&#x200B;タブのWCMのビデオアセットにアクセスします。
 1. Dynamic Mediaクラシックビデオコンポーネントを使用する作成者。
 
@@ -81,7 +81,7 @@ Dynamic Mediaクラシックビデオコンポーネントでは、次の形式�
 
    >[!NOTE]
    >
-   >ビデオプリセットの意味について詳しくは、[Dynamic Mediaクラシックドキュメント](https://help.adobe.com/en_US/scene7/using/WSE86ACF2B-BD50-4c48-A1D7-9CD4405B62D0.html)を参照してください。
+   >ビデオプリセットの意味について詳しくは、[Dynamic Mediaクラシックドキュメント](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)を参照してください。
    >
    >ユニバーサルプリセットを設定する際に両方のアダプティブビデオセットを選択するか、「**[!UICONTROL アダプティブビデオエンコーディング]**」オプションを選択することをお勧めします。
 
