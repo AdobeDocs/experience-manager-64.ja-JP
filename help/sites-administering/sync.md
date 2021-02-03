@@ -10,7 +10,7 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 707b150b-7759-437f-9150-9f4784856754
 translation-type: tm+mt
-source-git-commit: 39c9ca8fb7b73d74904a56d9e6a5418950a8c98b
+source-git-commit: 770e435f41102b2d795c88cbb361de510564d319
 workflow-type: tm+mt
 source-wordcount: '2502'
 ht-degree: 67%
@@ -171,7 +171,7 @@ AEM 6.1以降、ユーザー同期が有効になっている場合、ユーザ�
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
-   * `Adobe Granite Distribution - Encrypted Password Transport Secret Provider`を検索
+   * `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name`を検索
    * 編集する既存の設定を選択します（鉛筆アイコン）
 
       検証 `property name` : **`socialpubsync-publishUser`**
