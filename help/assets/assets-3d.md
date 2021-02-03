@@ -1,18 +1,14 @@
 ---
 title: AEM 3Dアセットの操作
-seo-title: 3D アセットの使用
 description: AEM 3D での 3D アセットの使用方法を説明します
-seo-description: AEM 3D での 3D アセットの使用方法を説明します
-uuid: a1c1bb29-9d3d-4025-8142-ed9719434bf9
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: introduction
 content-type: reference
-discoiquuid: 32143da1-09c8-45ce-b50d-32adf6efe383
 translation-type: tm+mt
-source-git-commit: 11b65cf2d180f04168d4c5d0929957c95a372e3c
+source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1175'
 ht-degree: 78%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 78%
 
 >[!IMPORTANT]
 >
->AEM 6.4でのAEM 3Dのサポートは終了しました。 Adobeでは、[AEMの3Dアセット機能をCloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html)または[AEM 6.5.3以上として使用することをお勧めします。](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html)
+>AEM 6.4でのAEM 3Dのサポートは終了しました。 Adobeでは、[AEMの3Dアセット機能をCloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html)または[AEM 6.5.3以上として使用することをお勧めします。](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/assets-3d.html#dynamic)
 
 Adobe Experience Manager 3D（AEM 3D）を使用して、3D コンテンツをアップロード、管理、表示およびレンダリングできます。表示とレンダリングのサポートは、個々のオブジェクトに最適化されます。
 
