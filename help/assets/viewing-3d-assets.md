@@ -1,18 +1,14 @@
 ---
 title: 3D アセットの表示
-seo-title: 3D アセットの表示
 description: AEM のアセットの詳細ページから利用できるインタラクティブ 3D ビューア、およびインタラクティブ 3D ビューアを使用した 3D アセットの表示方法について学習します。
-seo-description: AEM のアセットの詳細ページから利用できるインタラクティブ 3D ビューア、およびインタラクティブ 3D ビューアを使用した 3D アセットの表示方法について学習します。
-uuid: 7d8133ac-3110-4979-8e19-e65090e791be
 contentOwner: Rick Brough
 topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
-discoiquuid: 65040923-a8a8-4e27-82c0-67a04348e238
 translation-type: tm+mt
-source-git-commit: 11b65cf2d180f04168d4c5d0929957c95a372e3c
+source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1778'
 ht-degree: 70%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 70%
 
 >[!IMPORTANT]
 >
->AEM 6.4でのAEM 3Dのサポートは終了しました。 Adobeでは、[AEMの3Dアセット機能をCloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html)または[AEM 6.5.3以降として使用することをお勧めします。](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/assets-3d.html) を表示3Dアセットに追加します。
+>AEM 6.4でのAEM 3Dのサポートは終了しました。 Adobeでは、[AEMの3Dアセット機能をCloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html#dynamicmedia)または[AEM 6.5.3以降として使用することをお勧めします。](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/assets-3d.html#dynamic) を表示3Dアセットに追加します。
 
 このドキュメントでは、3D アセットをアセットの詳細で表示する方法と 3D コンポーネント内のアセットをサイトで表示する方法の両方について説明します。
 
