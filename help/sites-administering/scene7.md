@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
 workflow-type: tm+mt
-source-wordcount: '5454'
+source-wordcount: '5440'
 ht-degree: 25%
 
 ---
@@ -422,7 +422,7 @@ Dynamic Mediaクラシックのアセットは、セキュアプレビューを�
 アセットを公開せずにDynamic Mediaクラシックにプッシュするには、次の設定を行う必要があります。
 
 1. [Admin Consoleを使用して、サポートケースを作成します。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) サポートケースで、Dynamic Mediaクラシックアカウントでセキュアプレビューを有効にするように要求します。
-1. [Dynamic Mediaクラシックアカウントのセキュアプレビューを設定するには、に従ってください。](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)
+1. [Dynamic Mediaクラシックアカウントのセキュアプレビューを設定するには、に従ってください。](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html#upload-publish)
 
 以下は、Dynamic Mediaクラシックで安全なテスト設定を作成する場合と同じ手順です。
 
@@ -452,7 +452,7 @@ Dynamic Mediaクラシックにプッシュされたアセットの状態を非�
 1. AEMアイコンをタップし、**[!UICONTROL 導入/Cloud Services]**&#x200B;に移動し、**[!UICONTROL Dynamic Mediaクラシック]**&#x200B;をタップして、Dynamic Mediaクラシックで設定を選択します。
 1. 「**[!UICONTROL 詳細]**」タブをタップします。**[!UICONTROL セキュア表示を有効にする]**&#x200B;ドロップダウンメニューで、**[!UICONTROL 「AEM公開アクティベーション]**&#x200B;上」を選択して、アセットを公開せずにDynamic Mediaクラシックにプッシュします。 (デフォルトでは、この値は&#x200B;**[!UICONTROL すぐに]**&#x200B;に設定されます。ここで、Dynamic Mediaクラシックアセットは直ちに公開されます)。
 
-   アセットを公開する前のテストの詳細については、[Dynamic Mediaクラシックドキュメント](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)を参照してください。
+   アセットを公開する前のテストの詳細については、[Dynamic Mediaクラシックドキュメント](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html#upload-publish)を参照してください。
 
    ![chlimage_1-302](assets/chlimage_1-302.png)
 
