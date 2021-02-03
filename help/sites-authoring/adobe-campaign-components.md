@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: f328cd1e-30a3-42d2-88b7-64455ee9eb1f
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
 workflow-type: tm+mt
-source-wordcount: '2779'
-ht-degree: 74%
+source-wordcount: '2786'
+ht-degree: 73%
 
 ---
 
@@ -180,13 +180,13 @@ Adobe Campaign と連携するように設定されているニュースレタ�
 
 ### Scene7 画像テンプレート (Campaign) {#scene-image-template-campaign}
 
-[Scene7画像](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) テンプレートはレイヤー化された画像ファイルで、コンテンツとプロパティを可変性のためにパラメータ化できます。**画像テンプレート**&#x200B;コンポーネントを使用すると、ニュースレター内で Scene7 テンプレートを使用して、テンプレートパラメーターの値を変更できます。また、Adobe Campaignのメタデータ変数をパラメーター内で使用できるので、各ユーザーがパーソナライズされた方法で画像を体験できます。
+[Scene7画像](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html#template-basics) テンプレートはレイヤー化された画像ファイルで、コンテンツとプロパティを可変性のためにパラメータ化できます。**画像テンプレート**&#x200B;コンポーネントを使用すると、ニュースレター内でDynamic Mediaクラシック(旧称Scene7)テンプレートを使用し、テンプレートパラメーターの値を変更できます。 また、Adobe Campaignのメタデータ変数をパラメーター内で使用できるので、各ユーザーがパーソナライズされた方法で画像を体験できます。
 
 ![chlimage_1-111](assets/chlimage_1-111.png)
 
-コンポーネントを設定するには、「**編集**」をクリックします。この節で説明する設定を指定できます。 このScene7画像テンプレートについて詳しくは、[Scene7画像テンプレートコンポーネント](/help/assets/scene7.md#image-template)で説明しています。
+コンポーネントを設定するには、「**編集**」をクリックします。この節で説明する設定を指定できます。 このDynamic Mediaクラシック(旧Scene7)の画像テンプレートについて詳しくは、[Scene7画像テンプレートコンポーネント](/help/assets/scene7.md#image-template)を参照してください。
 
-さらに、パラメーターパネルに、Scene7 のテンプレート用に定義されているすべてのテンプレートパラメーターが表示されます。これらのパラメーターそれぞれに対して、値を変化させたり、変数を挿入したり、デフォルト値にリセットしたりできます。
+また、パラメータパネルには、Dynamic Mediaクラシック(旧称Scene7)のテンプレート用に定義されたすべてのテンプレートパラメータがリストされます。 これらのパラメーターそれぞれに対して、値を変化させたり、変数を挿入したり、デフォルト値にリセットしたりできます。
 
 ![chlimage_1-112](assets/chlimage_1-112.png)
 
