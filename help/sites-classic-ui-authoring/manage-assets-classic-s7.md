@@ -10,9 +10,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 9ba95dce-a801-4a36-8798-45d295371b1b
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
 workflow-type: tm+mt
-source-wordcount: '3426'
+source-wordcount: '3381'
 ht-degree: 30%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 30%
 
 # ページへのDynamic Mediaクラシック機能の追加{#adding-scene-features-to-your-page}
 
-[AdobeDynamic Media](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) クラシックは、リッチメディアアセットを管理、強化、公開、およびWeb、モバイル、電子メール、インターネットに接続されたディスプレイや印刷に配信するためのホストソリューションです。
+AdobeDynamic Mediaクラシックは、リッチメディアアセットを管理、強化、公開、およびWeb、モバイル、電子メール、インターネットに接続されたディスプレイや印刷に配信するためのホストソリューションです。
 
 Dynamic Mediaクラシックで公開したAEMアセットは、様々なビューアで表示できます。
 
@@ -149,8 +149,6 @@ AEMでは、次のDynamic Mediaクラシックコンポーネントを使用で�
 
 2017年1月31日、AdobeDynamic MediaクラシックはFlashビューアプラットフォームのサポートを正式に終了しました。
 
-この重要な変更について詳しくは、[Flashビューアの提供終了FAQ](https://docs.adobe.com/content/docs/jp/aem/6-1/administer/integration/marketing-cloud/scene7/flash-eol.html)を参照してください。
-
 ### ページ{#adding-a-scene-component-to-a-page}へのDynamic Mediaクラシックコンポーネントの追加
 
 Dynamic Mediaクラシックコンポーネントをページに追加するのは、コンポーネントをページに追加するのと同じです。 Dynamic Mediaクラシックコンポーネントについては、以下の節で詳しく説明します。
@@ -248,7 +246,7 @@ Dynamic Mediaクラシック画像コンポーネントを使用すると、Dyna
 
 ### 画像テンプレート {#image-template}
 
-[Dynamic Mediaクラシック画像](https://help.adobe.com/en_US/scene7/using/WS60B68844-9054-4099-BF69-3DC998A04D3C.html) テンプレートは、Dynamic Mediaクラシックに読み込まれたレイヤーPhotoshopコンテンツです。コンテンツとプロパティは可変性を考慮してパラメータ化されていました。**[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを使用すると、画像を読み込んで、テキストを AEM で動的に変更できます。また、ClientContext の値を使用するように&#x200B;**[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを設定できます。これにより、各ユーザーが個別に画像を活用できます。
+[Dynamic Mediaクラシック画像](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html#template-basics) テンプレートは、Dynamic Mediaクラシックに読み込まれたレイヤーPhotoshopコンテンツです。コンテンツとプロパティは可変性を考慮してパラメータ化されていました。**[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを使用すると、AEMで画像を読み込んでテキストを動的に変更できます。 また、ClientContext の値を使用するように&#x200B;**[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを設定できます。これにより、各ユーザーが個別に画像を活用できます。
 
 コンポーネントを設定するには、「**[!UICONTROL 編集]**」をクリックします。[設定は、すべてのDynamic Mediaクラシックコンポーネント](/help/sites-administering/scene7.md#settingscommontoalldynamicmediaclassicscomponents)に共通の設定と、この節で説明する他の設定を構成できます。
 
