@@ -10,10 +10,10 @@ topic-tags: develop
 discoiquuid: 29fc297e-0a95-4d2a-bfe6-5676d53624db
 noindex: true
 translation-type: tm+mt
-source-git-commit: 7ea83f879d5c3f5699d2a783686c53c5292fcf8a
+source-git-commit: 12d64aebbe769c0b3fa7c721e7fbac547d320f67
 workflow-type: tm+mt
-source-wordcount: '3569'
-ht-degree: 65%
+source-wordcount: '3592'
+ht-degree: 64%
 
 ---
 
@@ -39,6 +39,8 @@ Adobe Sign と AEM Forms を統合することにより、次の機能がサポ�
 * 匿名ユーザーまたはログインユーザーとしてフォームを署名する機能
 * 動的な署名プロセスを処理する機能（AEM Forms のワークフローと統合）
 * ナレッジベース、電話、ソーシャルプロファイルによる認証機能
+
+アダプティブフォーム](https://medium.com/adobetech/using-adobe-sign-to-e-sign-an-adaptive-form-heres-the-best-way-to-do-it-dc3e15f9b684)でAdobe Signを使用し、より適切な署名エクスペリエンスを作成するための[ベストプラクティスを学びます。
 
 ## 前提条件 {#prerequisites}
 
