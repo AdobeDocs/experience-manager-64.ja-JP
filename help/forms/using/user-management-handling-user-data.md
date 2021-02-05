@@ -1,17 +1,17 @@
 ---
 title: Forms User Management | ユーザーデータの処理
 seo-title: Forms User Management | ユーザーデータの処理
-description: 'null'
-seo-description: 'null'
+description: User Management は、AEM Forms にアクセスするために AEM Forms ユーザーを作成、管理および認証することができる AEM Forms JEE コンポーネントです。ユーザーのデータとデータストアをさらに掘り下げます。 ユーザーデータにアクセスして削除する方法を説明します。
+seo-description: User Management は、AEM Forms にアクセスするために AEM Forms ユーザーを作成、管理および認証することができる AEM Forms JEE コンポーネントです。ユーザーのデータとデータストアをさらに掘り下げます。 ユーザーデータにアクセスして削除する方法を説明します。
 uuid: 2b76b69f-6f3a-4f1a-a2a4-d39f5e529f75
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: c2dcb61d65cfc5867525f5b39769da0450d92f39
 workflow-type: tm+mt
-source-wordcount: '886'
-ht-degree: 79%
+source-wordcount: '958'
+ht-degree: 78%
 
 ---
 
