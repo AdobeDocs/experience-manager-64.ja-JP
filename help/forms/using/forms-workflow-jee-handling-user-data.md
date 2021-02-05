@@ -1,17 +1,17 @@
 ---
 title: Forms JEE ワークフロー | ユーザーデータの処理
 seo-title: Forms JEE ワークフロー | ユーザーデータの処理
-description: 'null'
-seo-description: 'null'
+description: AEM FormsのJEEワークフローは、ビジネスプロセスを設計、作成、管理するツールを提供します。 ユーザーデータにアクセスして削除する方法、ワークフロー開始者または参加者がわかっている場合にプロセスインスタンスIDを識別する方法、プリミティブ変数にユーザーデータが格納されている場合にプロセスインスタンスIDを識別する方法、プロセスインスタンスIDに基づいてユーザーデータを削除する方法、およびオーファンタスクを使用する方法について説明します。
+seo-description: AEM FormsのJEEワークフローは、ビジネスプロセスを設計、作成、管理するツールを提供します。 ユーザーデータにアクセスして削除する方法、ワークフロー開始者または参加者がわかっている場合にプロセスインスタンスIDを識別する方法、プリミティブ変数にユーザーデータが格納されている場合にプロセスインスタンスIDを識別する方法、プロセスインスタンスIDに基づいてユーザーデータを削除する方法、およびオーファンタスクを使用する方法について説明します。
 uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
 translation-type: tm+mt
-source-git-commit: 61c9abca40007271f1fba49d3d5e3136df91938d
+source-git-commit: c2dcb61d65cfc5867525f5b39769da0450d92f39
 workflow-type: tm+mt
-source-wordcount: '1371'
-ht-degree: 70%
+source-wordcount: '1493'
+ht-degree: 64%
 
 ---
 
