@@ -1,17 +1,17 @@
 ---
 title: Adobe Sign との統合| ユーザーデータの処理
 seo-title: Adobe Sign との統合| ユーザーデータの処理
-description: 'null'
-seo-description: 'null'
+description: AEM Forms を Adobe Sign と統合すると、アダプティブフォームで電子署名ワークフローが有効になり、法務、販売、給与、人事管理のワークフローのフォームまたは契約書を処理することができます。ユーザーデータ、データストア、ユーザーデータのアクセスと削除を深く掘り下げます。
+seo-description: AEM Forms を Adobe Sign と統合すると、アダプティブフォームで電子署名ワークフローが有効になり、法務、販売、給与、人事管理のワークフローのフォームまたは契約書を処理することができます。ユーザーデータ、データストア、ユーザーデータのアクセスと削除を深く掘り下げます。
 uuid: cb3a455d-2e33-44c8-8f71-3a7ecd939cd8
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e9e0d8fb-955e-4021-9e9a-9c95c6ffe88d
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: c2dcb61d65cfc5867525f5b39769da0450d92f39
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 89%
+source-wordcount: '409'
+ht-degree: 84%
 
 ---
 
