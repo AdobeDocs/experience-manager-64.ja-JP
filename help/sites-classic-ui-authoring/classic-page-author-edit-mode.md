@@ -1264,7 +1264,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 >
 >詳しくは、[フォームコンポーネントの表示と非表示](/help/sites-developing/developing-forms.md#showing-and-hiding-form-components)を参照してください。
 
-### 画像ボタン {#image-button}
+### 画像ボタン  {#image-button}
 
 画像ボタンを使用すると、独自の画像やテキストのボタンを作成できます。
 
