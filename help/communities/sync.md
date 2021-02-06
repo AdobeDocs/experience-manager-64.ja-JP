@@ -222,10 +222,10 @@ AEMオーサーインスタンス：
 
 1. 管理者権限でサインインします。
 1. [Webコンソール](../../help/sites-deploying/configuring-osgi.md)にアクセスします(例：[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr))
-1. **[!UICONTROL Apache Sling Distribution Trigger - Scheduled Triggers Factory]**&#x200B;を探します。
+1. **[!UICONTROL Apache Sling配布トリガー — 予定トリガーファクトリ]**&#x200B;を探します。
 
    * 編集用に開く既存の設定を選択します（鉛筆アイコン）
-   * `Name:` **`socialpubsync`\-scheduled-trigger**&#x200B;を確認
+   * `Name:` **`socialpubsync`\-scheduled-トリガー**&#x200B;を確認
    * 間隔（秒）を目的の間隔に設定し、保存します。
 
    ![scheduled-trigger](assets/scheduled-trigger.png)
@@ -250,7 +250,7 @@ Sling配布で、購読に不一致があり、それに続く問題について
 1. **[!UICONTROL AEM Communitiesユーザー同期リスナー]**&#x200B;を探します。
 1. 編集用に開く既存の設定を選択します（鉛筆アイコン）。
 
-   検証名：**`socialpubsync`\-scheduled-trigger**
+   検証名：**`socialpubsync`\-scheduled-トリガー**
 1. 次の&#x200B;**`NodeTypes`**&#x200B;を設定します。
 
    rep:User
@@ -266,7 +266,7 @@ Sling配布で、購読に不一致があり、それに続く問題について
    sling:OrderedFolder
 
    このプロパティで指定されたノードタイプが同期され、通知情報（ブログと使用された設定）が異なる発行者間で同期されます。
-1. &lt;a0/追加>DistributedFolders **[!UICONTROL 内の同期するすべてのフォルダー。]**&#x200B;例：
+1. &lt;a0/追加>DistributedFolders ]**内の同期するすべてのフォルダー。**[!UICONTROL &#x200B;例：
 
    segments/scoring
 
