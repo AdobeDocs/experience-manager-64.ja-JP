@@ -33,7 +33,7 @@ AEMFD 互換性パッケージを使用すると、AEM Forms 6.4 で AEM Forms 6
 * データディクショナリ
 * アダプティブフォームの非推奨になったテンプレートおよびページ
 
-詳しくは、[互換性パッケージ](/help/forms/using/compatibility-package.md#assetsmadecompatible)をインストールして、&lt;a0/>AEM Forms6.4と互換性のあるアセットを参照してください。
+詳しくは、[互換性パッケージ](/help/forms/using/compatibility-package.md#assetsmadecompatible)をインストールして、AEM Forms6.4と互換性のあるアセットを参照してください。
 
 ## AEM Forms 6.4 で AEM Forms 6.3 と 6.2 のアセットのサポートを追加する {#add-support-for-aem-forms-and-assets-in-aem-forms}
 
