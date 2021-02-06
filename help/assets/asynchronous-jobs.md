@@ -23,7 +23,7 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->デフォルトでは、[!DNL Assets]タスクは並行して実行されます。 `N`がCPUコアの数である場合、デフォルトで`N/2`タスクは並行して実行できます。 タスクキューのカスタム設定を使用するには、**[!UICONTROL Webコンソール]から&lt;a0/>Async Operation Default Queue]**&#x200B;の設定を変更します。 [!UICONTROL 詳しくは、[キューの設定](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations)を参照してください。
+>デフォルトでは、[!DNL Assets]タスクは並行して実行されます。 `N`がCPUコアの数である場合、デフォルトで`N/2`タスクは並行して実行できます。 タスクキューのカスタム設定を使用するには、**[!UICONTROL Webコンソール]から[!UICONTROL Async Operation Default Queue]**&#x200B;の設定を変更します。 詳しくは、[キューの設定](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations)を参照してください。
 
 ## 非同期操作の状態の監視{#monitoring-the-status-of-asynchronous-operations}
 
