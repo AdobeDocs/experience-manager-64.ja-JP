@@ -448,7 +448,7 @@ GitHub のコード
 この拡張には、次の機能があります。
 
 * 同期を容易にして（Maven や File Vault は不要）、開発者の効率を向上させるだけでなく、AEM に関する知識が限られたフロントエンド開発者もプロジェクトに参加できるようにします。
-* [HTL](https://helpx.adobe.com/experience-manager/htl/user-guide.html)のサポートを提供します。HTL&lt;a1/>は、コンポーネントの開発を簡素化し、セキュリティを強化するために設計されたテンプレート言語です。
+* [HTL](https://helpx.adobe.com/experience-manager/htl/user-guide.html)のサポートを提供します。HTLは、コンポーネントの開発を簡素化し、セキュリティを強化するために設計されたテンプレート言語です。
 
 >[!NOTE]
 >
