@@ -143,7 +143,7 @@ XX というサフィックスは、マイルストーンを定義する追跡�
    マッピングの最適化について詳しくは、『[Adobe Analyticsでのビデオの測定](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/setup/setup-overview.html)ガイド』を参照してください。
 
 1. [追加](/help/sites-administering/adobeanalytics.md) frameworktoページ。
-1. **プレビューモード**&#x200B;で設定をテストするには、ビデオを再生してAdobe Analyticsの呼び出しをトリガーします。
+1. **プレビューモード**&#x200B;で設定をテストするには、ビデオを再生して、Adobe Analyticsからのトリガーへのコールを受け取ります。
 
 以下のAdobe Analyticsトラッキングデータの例は、4,8,16,20, 24のトラックオフセットと、CQ変数に対する次のマッピングを使用したマイルストーントラッキングに適用されます。
 
@@ -278,7 +278,7 @@ eventdata.events.milestoneXX
    マッピングの最適化について詳しくは、『[Adobe Analyticsでのビデオの測定](https://docs.adobe.com/content/help/en/media-analytics/using/sdk-implement/setup/setup-overview.html)ガイド』を参照してください。
 
 1. [追加](/help/sites-administering/adobeanalytics.md) frameworktoページ。
-1. **プレビューモード**&#x200B;で設定をテストするには、ビデオを再生してAdobe Analyticsの呼び出しをトリガーします。
+1. **プレビューモード**&#x200B;で設定をテストするには、ビデオを再生して、Adobe Analyticsからのトリガーへのコールを受け取ります。
 
 ## レガシーマイルストーン {#legacy-milestones}
 
