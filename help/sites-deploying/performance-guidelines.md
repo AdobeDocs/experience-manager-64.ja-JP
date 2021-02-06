@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: 949ec23eb548a094425622d68e1dbf4f6ec7581f
 workflow-type: tm+mt
 source-wordcount: '2993'
-ht-degree: 82%
+ht-degree: 83%
 
 ---
 
@@ -242,7 +242,7 @@ ht-degree: 82%
    <td><p> </p> </td> 
   </tr> 
   <tr> 
-   <td><p>デスクトップアプリ</p> </td> 
+   <td><p>デスクトップアプリケーション</p> </td> 
    <td><p> </p> </td> 
    <td><p> </p> </td> 
    <td><p> </p> </td> 
