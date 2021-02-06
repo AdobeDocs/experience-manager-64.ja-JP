@@ -82,7 +82,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
       * `/aem/forms` (OSGi 上の AEM Forms)
       * `/lc/forms` (JEE 上の AEM Forms)
 
-   **注：***サーバーが起動および実行されていることを確認してください。HTMLプレビューはCRXサーバーに接続し、*&#x200B;プレビューを&lt;a0/>生成&#x200B;*します。*
+   **注：***サーバーが起動および実行されていることを確認してください。HTMLプレビューはCRXサーバーに接続し、*&#x200B;プレビューを生成&#x200B;*します。*
 
    ![AEM Forms Designer のオプション ](assets/server_options.png)
 
