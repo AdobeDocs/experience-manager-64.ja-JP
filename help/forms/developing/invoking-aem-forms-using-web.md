@@ -822,7 +822,7 @@ Webサービスを使用してAEM Formsサービスを呼び出すことがで�
 1. コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 PDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
 1. `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
 1. `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出して、バイト配列にストリームデータを入力します。 読み取るバイト配列、開始位置、ストリーム長を渡します。
-1. `BLOB`オブジェクトに、`MTOM`データメンバにバイト配列の内容を割り当てて、&lt;a0/>オブジェクトを入力します。
+1. `BLOB`オブジェクトに、`MTOM`データメンバにバイト配列の内容を割り当てて、オブジェクトを入力します。
 1. `MyApplication_EncryptDocumentClient`オブジェクトの`invoke`メソッドを呼び出して、`MyApplication/EncryptDocument`プロセスを呼び出します。 PDFドキュメントを含む`BLOB`オブジェクトを渡します。 このプロセスは、`BLOB`オブジェクト内の暗号化されたPDFドキュメントを返します。
 1. コンストラクターを呼び出し、保護されたPDFドキュメントーのファイルの場所を表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
 1. `invoke`メソッドから返された`BLOB`オブジェクトのデータ内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバの値を取得して、バイト配列を入力します。
@@ -914,8 +914,8 @@ JAX-WSとSwaRefを使用して作成されたJavaプロキシファイルを使�
 1. コンストラクタを使用して `BLOB` オブジェクトを作成します。
 1. `BLOB`オブジェクトを入力するには、`setSwaRef`メソッドを呼び出し、`javax.activation.DataHandler`オブジェクトを渡します。
 1. `MyApplicationEncryptDocument`オブジェクトの`invoke`メソッドを呼び出し、PDFドキュメントを含む`BLOB`オブジェクトを渡して、`MyApplication/EncryptDocument`プロセスを呼び出します。 呼び出しメソッドは、暗号化されたPDFドキュメントを含む`BLOB`オブジェクトを返します。
-1. `javax.activation.DataHandler`オブジェクトの`getSwaRef`メソッドを呼び出して、&lt;a0/>オブジェクトを入力します。`BLOB`
-1. `javax.activation.DataHandler`オブジェクトの`getInputStream`メソッドを呼び出して、&lt;a0/>オブジェクトを`java.io.InputSteam`インスタンスに変換します。`javax.activation.DataHandler`
+1. `javax.activation.DataHandler`オブジェクトの`getSwaRef`メソッドを呼び出して、`BLOB`オブジェクトを入力します。
+1. `javax.activation.DataHandler`オブジェクトの`getInputStream`メソッドを呼び出して、`javax.activation.DataHandler`オブジェクトを`java.io.InputSteam`インスタンスに変換します。
 1. 暗号化されたPDFドキュメントを表すPDFファイルに`java.io.InputSteam`インスタンスを書き込みます。
 
 >[!NOTE]
@@ -1032,7 +1032,7 @@ JavaプロキシクラスとBLOBデータをHTTP経由で使用して、AEM Form
    ```
 
 1. コンストラクタを使用して `BLOB` オブジェクトを作成します。
-1. `BLOB`オブジェクトの`setRemoteURL`メソッドを呼び出して、&lt;a0/>オブジェクトを入力します。 `MyApplication/EncryptDocument`サービスに渡すPDFドキュメントのURI位置を指定するstring値を渡します。
+1. `BLOB`オブジェクトの`setRemoteURL`メソッドを呼び出して、オブジェクトを入力します。 `MyApplication/EncryptDocument`サービスに渡すPDFドキュメントのURI位置を指定するstring値を渡します。
 1. `MyApplicationEncryptDocument`オブジェクトの`invoke`メソッドを呼び出し、PDFドキュメントを含む`BLOB`オブジェクトを渡して、`MyApplication/EncryptDocument`プロセスを呼び出します。 このプロセスは、`BLOB`オブジェクト内の暗号化されたPDFドキュメントを返します。
 1. 暗号化されたPDFドキュメントを表すデータストリームを格納するバイト配列を作成します。 `BLOB`オブジェクトの`getRemoteURL`メソッドを呼び出します（`invoke`メソッドから返される`BLOB`オブジェクトを使用します）。
 1. コンストラクタを使用して `java.io.File` オブジェクトを作成します。このオブジェクトは、暗号化されたPDFドキュメントを表します。
@@ -1157,7 +1157,7 @@ Axis生成ライブラリファイルとDIMEを使用して（Workbenchで構築
 1. コンストラクターを使用し、`javax.activation.DataHandler`オブジェクトを渡して、`javax.activation.FileDataSource`オブジェクトを作成します。 `javax.activation.FileDataSource`オブジェクトは、コンストラクターを使用して作成し、PDFドキュメントを表す`java.io.File`オブジェクトを渡すことで作成できます。
 1. コンストラクターを使用し、`org.apache.axis.attachments.AttachmentPart`オブジェクトを渡して、`javax.activation.DataHandler`オブジェクトを作成します。
 1. `EncryptDocumentSoapBindingStub`オブジェクトの`addAttachment`メソッドを呼び出し、`org.apache.axis.attachments.AttachmentPart`オブジェクトを渡して添付ファイルを添付します。
-1. コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトの`setAttachmentID`メソッドを呼び出し、添付ファイル識別子の値を渡すことで、&lt;a0/>オブジェクトに添付ファイル識別子の値を入力します。 `BLOB`この値は、`org.apache.axis.attachments.AttachmentPart`オブジェクトの`getContentId`メソッドを呼び出して取得できます。
+1. コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトの`setAttachmentID`メソッドを呼び出し、添付ファイル識別子の値を渡すことで、`BLOB`オブジェクトに添付ファイル識別子の値を入力します。 この値は、`org.apache.axis.attachments.AttachmentPart`オブジェクトの`getContentId`メソッドを呼び出して取得できます。
 1. `EncryptDocumentSoapBindingStub`オブジェクトの`invoke`メソッドを呼び出して、`MyApplication/EncryptDocument`プロセスを呼び出します。 DIME添付ファイルを含む`BLOB`オブジェクトを渡します。 このプロセスは、`BLOB`オブジェクト内の暗号化されたPDFドキュメントを返します。
 1. 返された`BLOB`オブジェクトの`getAttachmentID`メソッドを呼び出して、添付ファイル識別子の値を取得します。 このメソッドは、返される添付ファイルの識別子の値を表すstring値を返します。
 1. `EncryptDocumentSoapBindingStub`オブジェクトの`getAttachments`メソッドを呼び出して添付ファイルを取得します。 このメソッドは、添付ファイルを表す`Objects`の配列を返します。
