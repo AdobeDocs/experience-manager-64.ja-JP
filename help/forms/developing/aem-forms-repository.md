@@ -816,7 +816,7 @@ RepositoryサービスAPI(Java)を使用してリソースを検索します。
 
    `Query.Statement`オブジェクトの`setNamespace`メソッドを呼び出し、`com.adobe.repository.infomodel.bean.ResourceProperty`クラスに含まれる静的な値の1つを渡して、左辺の演算値の名前空間を指定します。 この例では、`ResourceProperty.RESERVED_NAMESPACE_REPOSITORY`が使用されます。
 
-   &lt;a0追加/>オブジェクトの`Query`メソッドを呼び出し、`addStatement`オブジェクトを渡すことで、各ステートメントをクエリに送信します。`Query.Statement`
+   &lt;a0追加/>オブジェクトの`addStatement`メソッドを呼び出し、`Query.Statement`オブジェクトを渡すことで、各ステートメントをクエリに送信します。`Query`
 
 1. 検索結果の並べ替え順を作成する
 
@@ -824,7 +824,7 @@ RepositoryサービスAPI(Java)を使用してリソースを検索します。
 
    並べ替え順の要素を作成するには、`com.adobe.repository.query.sort.SortOrder.Element`クラスのコンストラクタの1つを呼び出します。 この例では、リソースの名前が検索の基礎として使用されるので、静的な値`Resource.ATTRIBUTE_NAME`が最初のパラメーターとして使用され、昇順の順序（`boolean`値`true`）が2番目のパラメーターとして指定されます。
 
-   &lt;a0/追加>オブジェクトの`SortOrder`メソッドを呼び出し、`addSortElement`オブジェクトを渡すことで、各要素を並べ替え順に指定します。`SortOrder.Element`
+   &lt;a0/追加>オブジェクトの`addSortElement`メソッドを呼び出し、`SortOrder.Element`オブジェクトを渡すことで、各要素を並べ替え順に指定します。`SortOrder`
 
 1. リソースの検索
 
