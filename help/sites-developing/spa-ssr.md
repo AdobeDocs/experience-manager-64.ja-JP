@@ -115,7 +115,7 @@ SSRを使用する場合、AEMのSPAの[コンポーネントの対話ワーク�
 | ブートストラップ | メリット | デメリット |
 |---|---|---|
 | AEM 経由 | AEMは、必要な場所でライブラリの挿入を管理<br>リソースの管理のみがAEMで必要 | SPA デベロッパーに馴染みのない場合がある |
-| Adobe I/O Runtime 経由 | SPA デベロッパーに馴染みがある | CSSやJavaScriptなどのアプリケーションに必要なClientlibリソースは、AEM開発者が[`allowProxy`プロパティ](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)<br>Resourcesを&lt;a1/>AEMとAdobe I/O Runtime<br>の間で同期する必要があります。SPAのオーサリングを有効にするには、Adobe I/O Runtimeのプロキシサーバーが必要な場合があります |
+| Adobe I/O Runtime 経由 | SPA デベロッパーに馴染みがある | CSSやJavaScriptなどのアプリケーションに必要なClientlibリソースは、AEM開発者が[`allowProxy`プロパティ](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)<br>ResourcesをAEMとAdobe I/O Runtime<br>の間で同期する必要があります。SPAのオーサリングを有効にするには、Adobe I/O Runtimeのプロキシサーバーが必要な場合があります |
 
 ## SSR の計画 {#planning-for-ssr}
 
