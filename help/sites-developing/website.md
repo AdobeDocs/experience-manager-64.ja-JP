@@ -260,7 +260,7 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
 
    ![chlimage_1-111](assets/chlimage_1-111.png)
 
-1. ページをmywebサイトデザインにリンクするには、CRXDE Liteで`/content/mywebsite/en/jcr:content`ノードを選択します。 「**[!UICONTROL プロパティ]**」タブで、新しいプロパティに次の値を入力し、追加「&lt;a0/>プロパティ&lt;a1/>」をクリックします。
+1. ページをmywebサイトデザインにリンクするには、CRXDE Liteで`/content/mywebsite/en/jcr:content`ノードを選択します。 「**[!UICONTROL プロパティ]**」タブで、新しいプロパティに次の値を入力し、追加「プロパティ」をクリックします。
 
    * **[!UICONTROL 名前]**:cq:designPath
    * **[!UICONTROL 種類]**：string
