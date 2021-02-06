@@ -197,7 +197,7 @@ ht-degree: 90%
 
    >[!NOTE]
    >
-   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。詳細については、このページ](/help/sites-authoring/publishing-pages.md)の[前の注意事項&lt;a1/>、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページ](/help/sites-authoring/workflows-applying.md)へのワークフローの適用を参照してください。
+   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。詳細については、このページ](/help/sites-authoring/publishing-pages.md)の[前の注意事項、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページ](/help/sites-authoring/workflows-applying.md)へのワークフローの適用を参照してください。
 
    リソースは、トリガーされたワークフローでグループ化され、それぞれに次のオプションがあります。
 
