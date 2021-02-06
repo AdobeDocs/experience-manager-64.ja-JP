@@ -590,7 +590,7 @@ VMWare ESX を使用して仮想化環境を管理およびデプロイする場
 
 ### Amazon Web Services {#amazon-web-services}
 
-MongoDBをAmazonウェブサービスと共に設定する方法に関するドキュメントについては、以下のAWS[でのMongoDBの設定ガイドを参照してください。](https://docs.aws.amazon.com/quickstart/latest/mongodb/welcome.html)
+MongoDBをAmazonウェブサービスと共に設定する方法に関するドキュメントについては、以下のAWS](https://docs.aws.amazon.com/quickstart/latest/mongodb/welcome.html)でのMongoDBの設定ガイドを参照してください。[
 
 ## デプロイメントの前に MongoDB をセキュリティ保護する {#securing-mongodb-before-deployment}
 
