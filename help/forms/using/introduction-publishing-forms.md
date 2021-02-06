@@ -65,7 +65,7 @@ Formsポータルでは、フォームリポジトリからポータルページ
 1. **Formsポータルコンポーネントを有効にする**:デフォルトでは、フォームポータルコンポーネントは使用できません。[AEM SitesページのAEM ](/help/forms/using/enabling-forms-portal-components.md) sidekickのコンポーネントを有効にします。
 1. **ページ上のリストフォーム（フォームポータルページを作成）:AEM Sitesページ** とAEM以外のサイトページの両方でフォームをリストできます。リストには、発行インスタンスで使用できるフォームが含まれます。 ユーザーは、フォームを開いて入力した開始を表示できます。 ユーザーがフォームを開くたびに、フォームの新しいインスタンスが作成されます。
 
-   1. **AEM Sitesページのリストフォーム**:ペ追加ージ上の **[リストフォームに対しては、「](/help/forms/using/creating-form-portal-page.md)** Search &amp;  **[Lister」コンポーネントを設定し、そのページ内のリスト](/help/forms/using/creating-form-portal-page.md#p-list-pane-p)** パネルを設定します。&lt;a0追加/>検索ペイン&#x200B;**[コンポーネントを](/help/forms/using/creating-form-portal-page.md#search-pane)** Search &amp; Lister **コンポーネントにも設定し、ページに検索機能を追加します。**&#x200B;フォームポータルコンポーネントを含むページは、[フォームポータルページ](/help/forms/using/creating-form-portal-page.md)と呼ばれます。
+   1. **AEM Sitesページのリストフォーム**:ペ追加ージ上の **[リストフォームに対しては、「](/help/forms/using/creating-form-portal-page.md)** Search &amp;  **[Lister」コンポーネントを設定し、そのページ内のリスト](/help/forms/using/creating-form-portal-page.md#p-list-pane-p)** パネルを設定します。&lt;a0追加/>検索ペイン&#x200B;](/help/forms/using/creating-form-portal-page.md#search-pane)**コンポーネントを** Search &amp; Lister **コンポーネントにも設定し、ページに検索機能を追加します。**[&#x200B;フォームポータルコンポーネントを含むページは、[フォームポータルページ](/help/forms/using/creating-form-portal-page.md)と呼ばれます。
    1. **AEM Sites以外のページ上のリストフォーム：フ** ォームポータル検索 [](/help/forms/using/listing-forms-webpage-using-apis.md) APIを使用して、AEM Sites以外のページ上のクエリ、取得、リストフォームを利用できます。
 
 1. **フォームポータルページ上のリストドラフトおよび送信済みフォーム**:フォームポータルページ追加のドラフトと送信コンポーネントを設定します。コンポーネントは、ドラフト状態のすべてのフォームと、既に送信済みのフォームをリストします。
