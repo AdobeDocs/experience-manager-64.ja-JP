@@ -47,7 +47,7 @@ OSGiでのAEM FormsForms中心のワークフローは、AEM Formsの作成者�
 
 >[!NOTE]
 >
->「](#next-steps)データ取得機能のインストールと設定[」の説明に従って、OSGiにAEM Formsを既にインストールしている場合は、ドキュメントの「次の手順[」のセクションに進みます。](/help/forms/using/installing-configuring-aem-forms-osgi.md)
+>「[データ取得機能のインストールと設定](/help/forms/using/installing-configuring-aem-forms-osgi.md)」の説明に従って、OSGiにAEM Formsを既にインストールしている場合は、ドキュメントの「次の手順](#next-steps)」のセクションに進みます。[
 
 OSGiでのForms中心のワークフローのインストールと設定を開始する前に、以下のことを確認します。
 
