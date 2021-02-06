@@ -493,7 +493,7 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 
 >[!NOTE]
 >
->管理者パスワードは、セキュリティコンソールからは変更できません。管理者アカウントのパスワードを変更するには、Granite Operationsが提供する[ユーザーコンソール](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user)を使用します。
+>管理者パスワードは、セキュリティコンソールでは変更できません。管理者アカウントのパスワードを変更するには、Granite Operationsが提供する[ユーザーコンソール](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user)を使用します。
 
 
 1. **セキュリティ**&#x200B;コンソールで、パスワードを変更するユーザーの名前をダブルクリックします。
