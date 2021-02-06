@@ -301,7 +301,7 @@ AEM 6.4](/help/sites-deploying/repository-restructuring.md)の親ページ[リ�
    <td><p><span class="code">/libs/settings/
       <code>
        wcm
-      </code>/template-types/skaffold/scaffoldhoold</span></p> <p><span class="code">/apps/settings/
+      </code>/template-types/skaffold/skaffold</span></p> <p><span class="code">/apps/settings/
       <code>
        wcm
       </code>/template-types/skaffold/skaffold</span></p> </td> 
