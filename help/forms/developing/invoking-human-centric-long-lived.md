@@ -186,7 +186,7 @@ Javaサーブレット内から`FirstAppSolution/PreLoanProcess`プロセスを�
 
    >[!NOTE]
    >
-   >*短時間のみ有効なプロセスは、createInvocationRequestメソッドの4番目のパラメーターとして値trueを渡すことで呼び出すことができます。値trueを渡すと同期要求が作成されます。*
+   >*短時間のみ有効なプロセスは、createInvocationRequestメソッドの4番目のパラメーターとして値trueを渡すことで呼び出すことができます。値trueを渡すと、同期要求が作成されます。*
 
 1. `ServiceClient`オブジェクトの`invoke`メソッドを呼び出し、`InvocationRequest`オブジェクトを渡して、呼び出し要求をAEM Formsに送信します。 `invoke`メソッドは`InvocationReponse`オブジェクトを返します。
 1. 長期間有効なプロセスは、呼び出し識別値を表すstring値を返します。 `InvocationReponse`オブジェクトの`getInvocationId`メソッドを呼び出して、この値を取得します。
