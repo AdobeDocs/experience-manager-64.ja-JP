@@ -20,7 +20,7 @@ ht-degree: 36%
 
 # Facebook と Twitter を使用したソーシャルログイン {#social-login-with-facebook-and-twitter}
 
-ソーシャルログインは、サイト訪問者にFacebookやTwitterアカウントでサインインするオプションを提供する機能です。 したがって、許可されたFacebookデータやTwitterデータがAEMのメンバープロファイルに含まれます。
+ソーシャルログインは、サイト訪問者にFacebookやTwitterアカウントでサインインするオプションを提供する機能です。 したがって、許可されたFacebookデータやTwitterデータがAEMの会員プロファイルに含まれます。
 
 ![socialloginretail](assets/socialloginweretail.png)
 
