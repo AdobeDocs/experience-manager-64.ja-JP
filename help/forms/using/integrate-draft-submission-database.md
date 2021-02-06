@@ -416,7 +416,7 @@ https://[*host*]:[*port*]/system/console/configMgrのページ。
 
 1. `/libs/fd/af/runtime/clientlibs/guideRuntime`に移動し、**embed**&#x200B;プロパティに`fp.validation`値を追加します。
 
-1. /libs/fd/af/runtime/clientlibs/guideRuntimeWithXFAに移動し、`fp.validation`embed **プロパティに&lt;a0/>値を追加します。**
+1. /libs/fd/af/runtime/clientlibs/guideRuntimeWithXFAに移動し、`fp.validation`embed **プロパティに**&#x200B;値を追加します。
 
    >[!NOTE]
    >
