@@ -138,7 +138,7 @@ ht-degree: 53%
 
 ## パブリッシュ環境でのエクスペリエンス {#experience-on-publish}
 
-サインイン時に、様々なグループを体験できます。例えば、](tutorials.md#demo-users)[
+サインイン時に、様々なグループを体験できます。例えば、[](tutorials.md#demo-users)
 
 * Art/History グループメンバー：emily.andrews@mailinator.com／password
    * 制限付き（秘密）グループ、アート/履歴が表示されます
