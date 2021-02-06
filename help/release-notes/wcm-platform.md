@@ -36,7 +36,7 @@ ht-degree: 80%
    * スケジュールに従ったクリーンアップメンテナンスの代わりに、MongoMK の継続的なリビジョンクリーンアップが実行されるようになりました。
 
 * ドキュメントノードストアに対するリビジョンクリーンアップの効率が向上しました。
-* 修正された問題の全体の概要については、[Apache Jackrabbit Oak Jira v. 1.8.0](https://archive.apache.org/dist/jackrabbit/oak/1.8.0/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1.8.2](https://archive.apache.org/dist/jackrabbit/oak/1.8.2/RELEASE-NOTES.txt)を参照してください。[](https://archive.apache.org/dist/jackrabbit/oak/1.8.1/RELEASE-NOTES.txt)
+* 修正された問題の全体の概要については、[Apache Jackrabbit Oak Jira v. 1.8.0](https://archive.apache.org/dist/jackrabbit/oak/1.8.0/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1.8.2](https://archive.apache.org/dist/jackrabbit/oak/1.8.2/RELEASE-NOTES.txt)を参照してください。](https://archive.apache.org/dist/jackrabbit/oak/1.8.1/RELEASE-NOTES.txt)[
 
 >[!CAUTION]
 >
