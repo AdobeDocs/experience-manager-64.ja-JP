@@ -63,7 +63,7 @@ Sarah に送信されたニュースレターは、特定の電子メール ID �
 
 #### 実際の動作確認 {#see-it-yourself}
 
-発行インスタンスで次のURLを開いて、ニュースレター電子メールをトリガーします。 `[emailID]`を有効な電子メールアカウントに置き換えて、ニュースレターを受け取るようにしてください。 ニュースレターを開き、「**[!UICONTROL Apply Now]**」をクリックして、クレジットカードの申込フォームに移動します。
+発行インスタンスで次のURLを開き、ニュースレター電子メールをトリガーします。 `[emailID]`を有効な電子メールアカウントに置き換えて、ニュースレターを受け取るようにしてください。 ニュースレターを開き、「**[!UICONTROL Apply Now]**」をクリックして、クレジットカードの申込フォームに移動します。
 
 `https://[publishServer]:[publsihPort]/content/campaigns/we-finance/start.html?app=cc&email=[emailID]&givenName=Sarah&familyName=Rose`
 
