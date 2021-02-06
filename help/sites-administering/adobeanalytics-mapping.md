@@ -57,7 +57,7 @@ CQコンポーネント変数をAdobe Analyticsレポートプロパティにマ
 
    >[!NOTE]
    >
-   >複数のAnalytics変数(同じCQ変数(例：`pagedata.title`)`eVars``events``props`
+   >複数のAnalytics変数(同じCQ変数(例：`pagedata.title`)`props``eVars``events`
 
    >[!CAUTION]
    >
