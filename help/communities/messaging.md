@@ -107,7 +107,7 @@ nameファイル拡張子のブロックリストで、先頭に「
    **(*操作が必要*** )ファイル拡張子の許可リスト(の逆)。これらを除くすべてのファイル拡張子を許可するには、ブロックリストに加える&#39;**-**&#39;アイコンを使用して、空のエントリを1つ削除します。
 
 * **[!UICONTROL serviceSelector.name]**
-(*必須*)サービスを呼び出す絶対パス（エンドポイント）（仮想リソース）。選択するパスのルートは、*OSGi config [ `Apache Sling Servlet/Script Resolver and Error Handler`](http://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)の&lt;a0/>Execution Paths*&#x200B;構成設定（`/bin/`、`/apps/`、`/services/`など）に含まれている必要があります。 サイトのメッセージング機能に対してこの設定を選択するには、このエンドポイントを`Message List and Compose Message components`の&#x200B;**`Service selector`**&#x200B;値として指定します（[メッセージ機能](configure-messaging.md)を参照）。 初期設定は */bin/messaging* です。
+(*必須*)サービスを呼び出す絶対パス（エンドポイント）（仮想リソース）。選択するパスのルートは、*OSGi config [ `Apache Sling Servlet/Script Resolver and Error Handler`](http://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)のExecution Paths*&#x200B;構成設定（`/bin/`、`/apps/`、`/services/`など）に含まれている必要があります。 サイトのメッセージング機能に対してこの設定を選択するには、このエンドポイントを`Message List and Compose Message components`の&#x200B;**`Service selector`**&#x200B;値として指定します（[メッセージ機能](configure-messaging.md)を参照）。 初期設定は */bin/messaging* です。
 
 * **[!UICONTROL fieldAllowlist.]**
 nameUse 
