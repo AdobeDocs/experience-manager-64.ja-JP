@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 73e67103e6bd9784bcc671ed04dcd508fa5597a0
+source-git-commit: 42d5a1875d78fdec1be0bb22d8ec8de2e56256ec
 workflow-type: tm+mt
 source-wordcount: '1463'
-ht-degree: 91%
+ht-degree: 90%
 
 ---
 
@@ -79,7 +79,7 @@ amount を 1.75 から 4 まで少しずつ増やします。シャープニン�
 
 monochrome パラメーター設定は 0 のままにします。
 
-### JPEF 圧縮のベストプラクティス（&amp;qlt=）  {#best-practices-for-jpef-compression-qlt}
+### JPEG圧縮(&amp;qlt=) {#best-practices-for-compression-qlt}のベストプラクティス
 
 * このパラメーターでは、JPG エンコーディング品質を制御します。値が大きいほど高画質になりますがファイルサイズも大きくなります。逆に、値が小さいほど低画質になりますがファイルサイズは小さくなります。このパラメーターの範囲は 0～100 です。
 * 画質を最適化するには、このパラメーターの値を 100 に設定しないでください。90 や 95 の設定と 100 の設定では、画質の差はほとんど感じられませんが、100 に設定することで画像ファイルのサイズが不必要に増加します。したがって、画質を最適化しながら画像ファイルが大きくなりすぎないようにするために、`qlt=<value>` を 90 または 95 に設定します。
