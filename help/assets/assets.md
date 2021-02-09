@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager Assets]の紹介'
 description: デジタルアセット管理、その使用例、 [!DNL Adobe Experience Manager Asset] オファーについて説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 02bf967a829be22ebec90d03ef1397cbe93e3d92
+source-git-commit: 91fbe9d3368feb7ecae73c56b2484c305cfb94b8
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '854'
 ht-degree: 33%
 
 ---
@@ -96,5 +96,5 @@ Assets managed within [!DNL Experience Manager] DAM can then be accessed via the
 
 >[!MORELIKETHIS]
 >
->* [最新のDAMとしてのExperience Manager資産](https://www.youtube.com/embed/PBwQqZgC-yo)
+>* [ビデオの紹介 — 最新のDAMとしてのExperience Managerアセット](https://www.youtube.com/watch?v=PBwQqZgC-yo)
 
