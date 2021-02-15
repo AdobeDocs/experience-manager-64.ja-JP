@@ -10,10 +10,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8e85ea7f-80ea-43b6-a67c-366852ef86ce
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: c66c28f138618d6f36c55f8b498f7d2a23732b83
 workflow-type: tm+mt
-source-wordcount: '1672'
-ht-degree: 89%
+source-wordcount: '1774'
+ht-degree: 84%
 
 ---
 
@@ -51,6 +51,15 @@ ht-degree: 89%
 * **ナビゲーション内で非表示にする**
 
    使用されるサイトでページがページのナビゲーションに表示されるかどうかを示します。
+
+* **ブランディング**
+
+   各ページタイトルにブランドスラッグを追加して、ページ間で一貫したブランドアイデンティティを適用します。 この機能には、[コアコンポーネントのリリース2.14.0以降のページコンポーネントを使用する必要があります。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
+
+   * **上書き**  — このページでブランドスラッグを定義する場合に選択します。
+      * **上書き**&#x200B;値も設定されていない限り、値はすべての子ページに継承されます。
+   * **上書き値**  — ページタイトルに追加するブランドスラッグのテキスト。
+      * この値は、「サイクリング・トスカーナ」などのパイプ文字の後のページ・タイトルに追加されます | WKNDの準備が常に整っています&quot;
 
 * **ページタイトル**
 
@@ -149,7 +158,7 @@ ht-degree: 89%
 
    書き出し設定を指定します。
 
-### サムネール  {#thumbnail}
+### サムネール {#thumbnail}
 
 1. **ページサムネイル**
 
