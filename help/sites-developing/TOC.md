@@ -7,7 +7,7 @@ user-guide-title: AEM 6.4 開発ユーザーガイド
 breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 translation-type: tm+mt
-source-git-commit: 7345a3c392dc6df495454a061a8a0624a4fb46d1
+source-git-commit: 5a9cdf29ca7331cdae5c0905b20a76f7124f3dd4
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 81%
@@ -79,7 +79,7 @@ ht-degree: 81%
    + [AEM コンポーネントの開発](developing-components.md)
    + [AEM コンポーネントの開発 - コードサンプル](developing-components-samples.md)
    + [コンテンツサービス用の JSON エクスポーター](json-exporter.md)
-   + [コンポーネントの JSON 書き出しの有効化](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/json-exporter-components.html)
+   + [コンポーネントの JSON 書き出しの有効化](json-exporter-components.md)
    + [画像エディター](image-editor.md)
    + [装飾タグ   ](decoration-tag.md)
    + [非表示条件の使用](hide-conditions.md)
@@ -100,7 +100,7 @@ ht-degree: 81%
       + [フォームの開発（クラシック UI）](developing-forms.md)
 + ヘッドレスエクスペリエンス管理{#headless}
    + [ヘッドレスおよび AEM とのハイブリッド](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
-   + [コンポーネントの JSON 書き出しの有効化](json-exporter-components.md)
+   + [コンポーネントの JSON 書き出しの有効化](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/json-exporter-components.html)
    + 単一ページアプリケーション{#spas}
       + [SPA の概要およびガイド](spa-walkthrough.md)
       + [SPA WKND チュートリアル](spa-wknd.md)
@@ -113,9 +113,9 @@ ht-degree: 81%
       + [SPA ブループリント](spa-blueprint.md)
       + [SPA ページコンポーネント](spa-page-component.md)
       + [SPA の動的モデルとコンポーネントのマッピング](spa-dynamic-model-to-component-mapping.md)
-      + [SPA モデルルーティング](spa-routing.md)
+      + [SPA モデルルーティング ](spa-routing.md)
       + [SPA と Adobe Experience Platform Launch の統合](spa-launch.md)
-      + [SPA およびサーバーサイドレンダリング](spa-ssr.md)
+      + [SPA およびサーバーサイドレンダリング ](spa-ssr.md)
       + [SPA 参照資料](spa-reference-materials.md)
    + [HTTP API](https://experienceleague.adobe.com/docs/experience-manager-64/assets/extending/mac-api-assets.html)
    + [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments.html)
