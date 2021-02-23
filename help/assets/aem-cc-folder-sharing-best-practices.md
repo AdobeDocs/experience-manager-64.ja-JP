@@ -3,9 +3,9 @@ title: Creative CloudとAEM Assetsフォルダを共有する
 description: Adobe Experience ManagerアセットユーザがAdobe Creative Cloudユーザとアセットフォルダを交換できるようにするための設定とベストプラクティスです。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ddfcb74451f41cea911700a64abceaaf47e7af49
+source-git-commit: e64f5b0e1333d511eaf450072756a95399e838d0
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1061'
 ht-degree: 44%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 44%
 
 >[!CAUTION]
 >
->AEM／Creative Cloud フォルダー共有機能は廃止されました。Adobeでは、[Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)や[AEMデスクトップアプリ](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html)など、新しい機能を使用することを強くお勧めします。 詳細については、[AEMとCreative Cloud統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)を参照してください。
+>AEM／Creative Cloud フォルダー共有機能は廃止されました。Adobeでは、[Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)や[AEMデスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)など、新しい機能を使用することを強くお勧めします。 詳細については、[AEMとCreative Cloud統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)を参照してください。
 
 Adobe Experience Manager(AEM)は、AEM AssetsのユーザーがCreative Cloudユーザーとフォルダーを共有できるように設定できるので、Creative Cloudアセットサービスで共有フォルダーとして使用できます。 この機能を使用すると、クリエイティブチームと AEM Assets ユーザーの間でファイルをやり取りすることができます。特に、クリエイティブユーザーが AEM Assets インスタンスへのアクセス権を持っていない（エンタープライズネットワーク上にいない）場合に便利です。
 
@@ -64,7 +64,7 @@ AEM／CC フォルダー共有を活用するベストプラクティスには�
 
 * **ボリュームに関する考慮事項：** AEM/Creative Cloudフォルダー共有は、特定のキャンペーンやアクティビティに関連するなど、少数のファイルを共有する場合に使用します。組織で承認されたアセットすべてなど、多数のアセットのセットを共有するには、他の配信方法（例えば AEM Assets Brand Portal）や AEM デスクトップアプリを使用してください。
 * **深い階層の共有を避ける：共有** は再帰的に機能し、選択的な非共有は許可されません。通常、共有するフォルダーは、サブフォルダーを持たないか、1 つ下のレベルのサブフォルダーなど非常に浅い階層しか持たないものに限るようにしてください。
-* **一方向の共有用に別々のフォルダー：最終アセットをAEM AssetsからCreative Cloudファイルに共有したり、クリエイティブに対応したアセットをCreative CloudファイルからAEM Assetsに共有したりするには、** 別々のフォルダーを使用します。これらのフォルダーに適した命名規則を組み合わせると、AEM AssetsユーザーとCreative Cloudユーザーの両方に対して、理解しやすい作業環境が作成されます。
+* **一方向の共有用に別々のフォルダー：最終アセットをAEM AssetsからCreative Cloudファイルに共有したり、クリエイティブに対応したアセットをCreative CloudファイルからAEM Assetsに共有したりするには、** 別々のフォルダーを使用します。これらのフォルダーに適した命名規則を組み合わせると、AEM AssetsユーザーとCreative Cloudユーザーの両方にとって、より分かりやすい作業環境が作成されます。
 * **共有フォルダーでのWIPの回避：** 共有フォルダーは作業中には使用しないでください。ファイルに頻繁に変更を加える必要がある作業を実行するには、Creative Cloudファイルで別のフォルダーを使用します。
 * **共有フォルダー以外での開始の新しい作業：** 新しいデザイン（クリエイティブファイル）は、Creative Cloudファイル内の別のWIPフォルダーで開始する必要があります。AEM Assetsユーザーと共有する場合は、移動するか共有フォルダーに保存します。
 * **構造の共有の簡素化：より管理しや** すいオペレーティングの設定を行うため、構造の共有を簡素化することを検討してください。すべてのクリエイティブユーザーと共有する代わりに、AEM Assetsのフォルダーは、クリエイティブディレクターやチームマネージャーなど、チームの担当者とのみ共有する必要があります。 クリエイティブサイドのマネージャーが最終アセットを受け取って作業割り当てを決定し、デザイナーは自身の Creative Cloud アカウントで WIP アセットの作業をするようにします。Creative Cloudのコラボレーション機能を使用して作業を調整し、最後に、AEM Assetsに共有するアセットを選択して、クリエイティブに対応した共有フォルダーに戻すことができます。
