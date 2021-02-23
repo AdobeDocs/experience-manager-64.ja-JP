@@ -3,10 +3,10 @@ title: Assets ガイド
 description: このガイドは、デジタルアセットの作成、管理、配信、最適化など、すべてのAEM Assetsタスクについて説明します。
 user-guide-title: Assets ガイド
 translation-type: tm+mt
-source-git-commit: ddfcb74451f41cea911700a64abceaaf47e7af49
+source-git-commit: e64f5b0e1333d511eaf450072756a95399e838d0
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 24%
+source-wordcount: '317'
+ht-degree: 29%
 
 ---
 
@@ -17,10 +17,9 @@ ht-degree: 24%
 
 ## 主要なAEM記事
 
-* [AEM 使用の手引き](https://helpx.adobe.com/jp/experience-manager/get-started.html)
 * [AEM 6.4 リリースノート](/help/release-notes/home.md)
-* [最近のドキュメントの更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
-* [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
+* [最近のドキュメントの更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=ja)
+* [AEMセキュリティチェックリスト](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.4ユーザーガイド
 
@@ -41,11 +40,11 @@ ht-degree: 24%
 
 ## 主なAEMリソース
 
-* [AEMチュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-4-videos.html)
+* [AEMチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html)
 * [ディスパッチャーユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
-* [HTLユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)
-* [コアコンポーネントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [HTLユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja)
+* [コアコンポーネントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=ja)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other#recommended/solutions/experience-manager)
-* [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
+* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja#recommended/solutions/experience-manager)
+* [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?lang=ja)
