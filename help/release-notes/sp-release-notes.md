@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: a2808c1861b6853b5e9505ad189f296f7ebd2572
 workflow-type: tm+mt
-source-wordcount: '21617'
+source-wordcount: '21579'
 ht-degree: 24%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 24%
 | 製品 | **Adobe Experience Manager（AEM）6.4** |
 |---|---|
 | バージョン | 6.4.8.0 |
-| 型 | Service Pack のリリース |
+| タイプ | Service Pack のリリース |
 | 日付 | 2020年3月5日 |
-| ダウンロード URL | AEM 6.4.8.0 on [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/servicepack/aem-service-pkg-6.4.8.zip) |
+| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/servicepack/aem-service-pkg-6.4.8.zip)上のAEM 6.4.8.0 |
 
 ## AEM 6.4.8.0 に含まれる機能 {#what-s-included-in-aem}
 
@@ -81,7 +81,7 @@ AEM 6.4.8.0は、2018年4月のAEM 6.4の一般リリース(GA)以降にリリ�
 
 * 「その他」を使用して複数のアセットに関連付けられている場合、アセットの関係が上書きされます(NPR-32196)。
 
-* [保存]ボタンを押しても、[リモートセット]は読み込まれません。これは、ユーザがDynamic Mediaクライアントの[セットエディタ]で変更を行っていない場合に限られます(NPR-32178)。
+* [保存]ボタンを押しても、[リモートセット]は読み込まれません。これは、ユーザがDynamic Mediaクライアントの[セットエディタ]で変更を行っていない場合に発生します(NPR-32178)。
 
 * PSDアセットの取り込みにより、CPUのスパイクが発生し、Experience Manager作成者インスタンスが応答しなくなる(NPR-32165)。
 
@@ -719,7 +719,7 @@ AEM 6.4.5.0 フォームの主なハイライトは次のとおりです。
 
 * 無効なPDF/Aファイルは、isPDFA操作を使用して有効なPDF/Aとしてレポートされます。 NPR-29076：CQ-4261541 のホットフィックス
 * PDFは、フォームフィールドを使用したPDF/A-1bへの変換に失敗し、表示方法が示されません。 NPR-29534：CQ-4269618 のホットフィックス
-* Output Serviceで生成されたPDFからのPDF/A変換が、AcrobatDCの検証に合格しません。 NPR-29647：CQ-4270448 のホットフィックス
+* Output Serviceで生成されたPDFからのPDF/A変換が、AcrobatDCでの検証に合格しません。 NPR-29647：CQ-4270448 のホットフィックス
 * Apache POIバンドルは例外で失敗します。 NPR-27861、NPR-28048：CQ-4245898、CQ-4244778 のホットフィックス
 
 **Forms - Designer**
@@ -932,7 +932,7 @@ AEM 6.4.4.0の主な特徴は次のとおりです。
 
 **ワークフロー**
 
-* タグフィールドを持つワークフロー通知で、完全な作業項目ダイアログを開くと、クロスマークをクリックすると、タグプロパティが追加されます。 NPR-28304：CQ-4261321 のホットフィックス
+* タグフィールドを持つワークフロー通知で、完全な作業項目ダイアログを開くと、クロスマークをクリックして、タグプロパティを追加します。 NPR-28304：CQ-4261321 のホットフィックス
 * タスクの再割り当てダイアログのユーザ選択切り替えボタンが機能しない。 NPR-28963：CQ-4264206 のホットフィックス
 
 **フォーム**
@@ -974,7 +974,7 @@ AEM 6.4.4.0 フォームの主なハイライトは次のとおりです。
 **Forms経営**
 
 Formsマネージャーの開始レビューウィザードおよび移動アセットウィザードで、handlersクライアントライブラリの使用をアンダースコアで置き換えるサポートを追加しました。 NPR-27643：CQ-4246536 のホットフィックス.
-リリース/640ブランチでForms管理パッケージをインストールした後も、1つのバンドルがインストール状態のままになります。 CQ-4265410の修正プログラム
+リリース/640ブランチでForms管理パッケージをインストールした後も、1つのバンドルがインストールされた状態が維持されます。 CQ-4265410の修正プログラム
 添付ファイルが含まれて送信されたFormsは、送信アクション「AEM Formsワークフローを呼び出し」およびポータル送信を有効にするがオンの場合、ワークフローに表示されません。 CQ-4263110 のホットフィックス
 
 **Forms ‐ バックエンド統合**
@@ -1292,7 +1292,7 @@ AEM 6.4.2.0の主な特徴は次のとおりです。
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.8.7 に更新しました。
 * HTML Template Language(HTL)Specification 1.4機能のサポートを追加しました。
 * MongoDB Enterprise 3.6のサポートを追加しました。
-* サイトページエディターでは、<a href="../sites-developing/spa-walkthrough.md">AEM SPA Editor JS SDK</a>と組み合わせて、ReactまたはAngularで構築されたクライアント側コンポーネントとのコンテキスト内編集と組版のサポートが追加されます。
+* サイトページエディターでは、<a href="../sites-developing/spa-walkthrough.md">AEM SPA Editor JS SDK</a>と組み合わせて、ReactまたはAngularで構築されるクライアント側コンポーネントとのコンテキスト内編集と組版のサポートが追加されます。
 * コンテンツフラグメントの機能強化：テキストフィールドに注釈を付ける機能、およびバージョンを並べて比較する機能が追加されました。
 * ユーザーがAEMユーザーインターフェイスから直接Adobe Stockアセットを検索、プレビュー、保存およびライセンス認証できるように、Adobe Stock[との統合を追加しました。 ](/help/assets/aem-assets-adobe-stock.md)詳しくは、[AEM Assets](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/assets/creative-workflows/adobe-stock.html)でのAdobe Stockアセットの使用を参照してください。
 * アセットで、動的な条件付きメタスキーマのサポートが追加され、アセットフォルダーのメタデータスキーマを設定できるようになりました。
@@ -1579,7 +1579,7 @@ AEM 6.4.2.0 フォームの主なハイライトは次のとおりです。
 **モバイルForms**
 
 * （フォームセット）プレビュー時のSSNおよびMobileフィールドの検証の問題。 NPR-24458：CQ-4244983 のホットフィックス
-* HTMLプレビューで複数行のフィールドの事前入力にデータが表示されない。 NPR-24549：CQ-4244212 のホットフィックス
+* HTMLプレビューで複数行のフィールドの事前入力に関してデータが表示されない。 NPR-24549：CQ-4244212 のホットフィックス
 * 複数行のフィールドでスクリプトを評価すると、データが失われます。 NPR-25333、CQ-4249610用の修正プログラム
 
 **Forms — インタラクティブコミュニケーションとCorrespondence Management**
@@ -1601,7 +1601,7 @@ AEM 6.4.2.0 フォームの主なハイライトは次のとおりです。
 * （ICエディター）「フラグメントを編集」ボタンが検出されやすくなります。 CQ-4244694 のホットフィックス
 * (XDP)レイアウトフラグメントを新しく作成したサブフォームに追加すると、空白の画面が表示されます。 CQ-4248810 のホットフィックス
 * DocumentFragment-master-DeployWithServerSideTestsテストエラー。 CQ-4245496 のホットフィックス
-* テキストモジュール変数Conditionモジュールで複製されたインスタンス。 CQ-4252128 のホットフィックス
+* テキストモジュール変数条件モジュールで複製されたインスタンス。 CQ-4252128 のホットフィックス
 * PDFプレビューURLは、公開時にトランザクションレポートを表示しません。 CQ-4246158 のホットフィックス
 * 印刷チャネルとWebチャネルーの同期に関するIC同期の問題です。 CQ-4251505 のホットフィックス
 * EXMコードのクリーンアップ：LocalFunctionMapperを削除します。 CQ-4243265 のホットフィックス
@@ -1713,7 +1713,7 @@ AEM 6.4.1.0はAEM 6.4 GAにインストールできます。 サービスパッ�
 * 公開済みWCMページに、ホットスポットのプレースホルダアイコンが表示されます。OOTBビューアに対して403エラーのCSSファイルが見つかりません。 NPR-23041：CQ-4233716 のホットフィックス
 * (詳細表示)次へ/戻るナビゲーション機能では、ダイナミックレンディションプレビュー領域にDIVオーバーレイが残り、ビューアへのアクセスがブロックされます。 NPR-23043：CQ-4238499 のホットフィックス
 * CMYK画像レンディションの彩度が正しくありません。 NPR-23048：CQ-4235470 のホットフィックス
-* SCENE7リスト情報プロバイダによるXMPメタデータ抽出は、リソースを大量に消費します。 NPR-23754
+* Scene7リスト情報プロバイダによるXMPメタデータ抽出は、リソースを大量に消費します。 NPR-23754
 * (dam-配信)HTTPフォワーダーはHTTPプロキシ設定を考慮しません。 NPR-24002：CQ-4244140 のホットフィックス
 
 **サイト**
@@ -1928,7 +1928,7 @@ AEM Forms の主なハイライトは次のとおりです。
 * （FDMクライアントSDK）プリプロセッサの前/後処理とカスタム送信アクションのテストを実行できません。 CQ-4238469 のホットフィックス
 * 真皮でのJavadocの問題の修正。 CQ-4244250 のホットフィックス
 * Web Services Description Language(WSDL)の入力が強化されました。 CQ-4244133 のホットフィックス
-* WSDLの基本認証テストを行うと、AEM 6.3とAEM 6.4で同じ設定で異なるエラーが発生します。CQ-4244132用修正プログラム
+* WSDLの基本認証テストを行うと、AEM 6.3とAEM 6.4で同じ設定に対して異なるエラーが発生します。CQ-4244132用修正プログラム
 * client-sdkおよびjavadocにValueUtilを含める要求です。 CQ-4242803 のホットフィックス
 * （FDMクラウド設定）SOAPベースの認証をクラウド構成から構成できません。 CQ-4238462 のホットフィックス
 * 真皮 — Javadocsにパッケージが見つから追加ない。 CQ-4242815 のホットフィックス
@@ -2236,14 +2236,9 @@ MavenプロジェクトでUber Jarを使用するには、[How to use Uber jar](
 
 * インストール中に次のエラーおよび警告が表示される場合があります。
 
-   * 作成コンポーネントインスタンスとサービスファクトリがnullを返した場合のエラーは、リポジトリの再起動によって発生します。
-
-      * com.day.cq.cq-personalization \[com.day.cq.personalization.impl.DefaultProfileProvider(938)\]参照profileManagerのバインドに失敗したため、コンポーネントインスタンスを作成できません
-      * org.apache.sling.commons.スケジューラーFrameworkEvent ERROR (org.osgi.framework.ServiceException:サービスファクトリがNULLを返しました。 (コンポーネント：com.day.cq.taging.impl.TagGarbageCollector (1687))
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :登録の変更が未登録に完了するのを待機中にタイムアウトが発生しました。
    * `com.adobe.granite.maintenance.impl.TaskScheduler` Granite/operations/maintenanceにメンテナンスウィンドウが見つかりません
    * `com.adobe.cq.com.adobe.cq.ui.commons bundle com.adobe.cq.com.adobe.cq.ui.commons:1.2.28 (204)[com.adobe.cq.ui.wcm.commons.internal.servlets.rte.RTEFilterServletFactory(573)]`:unbindAmmendmentメソッドが例外(java.lang.IllegalStateException:サービスは既に登録されていません)。これらのエラーはAEMインスタンスに影響を与えないので、何の操作も必要ありません。
-
 
 ### 解決された問題{#resolved-issues}
 
