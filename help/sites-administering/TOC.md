@@ -10,7 +10,7 @@ translation-type: tm+mt
 source-git-commit: 7345a3c392dc6df495454a061a8a0624a4fb46d1
 workflow-type: tm+mt
 source-wordcount: '658'
-ht-degree: 91%
+ht-degree: 93%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 91%
    + [言語コピーウィザード](tc-wizard.md)
    + [翻訳の機能強化](tc-enhancements.md)
    + [翻訳のベストプラクティス](tc-bp.md)
-   + [設定と設定ブラウザ](configurations.md)
+   + [設定と設定ブラウザー](configurations.md)
    + [AEM FAQ](aem-faqs.md)
 + 運用 {#operations}
    + [ダッシュボード](dashboards.md)
@@ -81,7 +81,7 @@ ht-degree: 91%
    + [AEM でのシリアル化の問題の軽減](mitigating-serialization-issues.md)
    + [ユーザーの同期](sync.md)
    + [カプセル化されたトークンのサポート](encapsulated-token.md)
-   + [シングルサインオン](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/single-sign-on.html)
+   + [シングルサインオン](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/single-sign-on.html?lang=ja)
    + [AEM でのユーザー管理操作を監査する方法](audit-user-management-operations.md)
    + [デフォルトの SSL](ssl-by-default.md)
    + [SAML 2.0 認証ハンドラー](saml-2-0-authenticationhandler.md)
