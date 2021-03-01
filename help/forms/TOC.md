@@ -83,7 +83,7 @@ ht-degree: 75%
       + [Connector for Microsoft SharePoint の設定](http://help.adobe.com/ja_JP/AEMForms/6.1/SharePointConfig/index.html)
       + [AEM Forms と Adobe LiveCycle の接続](using/aem-livecycle-connector.md)
       + [AEM Forms がフォームデータを JEE 上の AEM Forms プロセスに送信するための設定](using/submit-form-data-livecycle-process.md)
-      + [AEM FORMS用AEMデスクトップアプリケーション](/help/forms/using/aem-desktop-app-for-aem-forms.md)
+      + [AEM Forms用AEMデスクトップアプリケーション](/help/forms/using/aem-desktop-app-for-aem-forms.md)
 + AEM Formsをアップグレード{#upgrade-aem-forms}
    + [有効なアップグレードパス](using/upgrade.md)
    + OSGiのAEM Formsをアップグレード{#aem-forms-osgi-upgrade}
@@ -367,7 +367,7 @@ ht-degree: 75%
    + [Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントを AEM で検索可能にする](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
    + [別のユーザーの代わりにドキュメントを保護する](using/protect-document-on-behalf-of-another-user.md)
 + Forms - Designer {#use-forms-designer}
-   + [Designer の使用](http://www.adobe.com/go/learn_aemforms_designer_64_jp)
+   + [Designer の使用](http://www.adobe.com/go/learn_aemforms_designer_64)
    + [Designer クイックスタートチュートリアル](http://www.adobe.com/go/learn_aemforms_designer_quick_start_64_jp)
    + [Designer サンプル](http://www.adobe.com/go/learn_aemforms_designer_samples_64_jp)
    + [Designer スクリプティング基礎](http://www.adobe.com/go/learn_aemforms_scriptingBasics_64_jp)
