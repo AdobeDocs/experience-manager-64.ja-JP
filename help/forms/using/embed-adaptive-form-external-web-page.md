@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: author
 discoiquuid: b99c7b93-ba05-42ee-9ca8-0079e15d8602
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 6b5c051a2487ca9aa66d110e5b792a55eae8e97d
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 57%
@@ -99,7 +99,7 @@ WebページにJavaScriptの数行を挿入することで、アダプティブ�
 
 1. 埋め込まれたコードで：
 
-   * `options.path`変数の値を、アダプティブフォームの発行URLのパスに変更します。 AEM サーバーがコンテキストパス上で実行されている場合は、その URL にコンテキストパスが含まれるようにします。例えば、上記のコードとアダプティブフォームは同じaem formsサーバー上に存在するので、例ではアダプティブフォーム/content/forms/af/locbasic.htmlのコンテキストパスを使用しています。
+   * `options.path`変数の値を、アダプティブフォームの発行URLのパスに変更します。 AEM サーバーがコンテキストパス上で実行されている場合は、その URL にコンテキストパスが含まれるようにします。例えば、上記のコードとアダプティブフォームは同じaem formsサーバー上に存在するので、例ではアダプティブフォーム/content/forms/af/locbasic.htmlのコンテキストパスを使用します。
    * `options.dataRef` を URL を渡す属性と置き換えます。dataref変数を使用して[アダプティブフォーム](/help/forms/using/prepopulate-adaptive-form-fields.md)に事前入力できます。
    * `options.themePath` をアダプティブフォームで設定されたテーマ以外のテーマへのパスと置き換えます。また、リクエストの属性を使用してテーマのパスを指定することができます。
    * `CSS_Selector` は、アダプティブフォームが埋め込まれているフォームコンテナの CSS セレクターです。例えば、.customafsection cssクラスは、上記の例のCSSセレクターです。
@@ -117,7 +117,7 @@ WebページにJavaScriptの数行を挿入することで、アダプティブ�
 
 アダプティブフォームを埋め込む外部 Web ページは、プライベートネットワークのファイアウォールの中にある AEM サーバーにリクエストを送信します。リクエストを安全に AEM サーバーに向けるようにするには、リバースプロキシサーバーを設定することをお勧めします。
 
-ディスパッチャーなしで Apache 2.4 リバースプロキシサーバーをセットアップする方法について説明します。この例では、AEMサーバーを`/forms`コンテキストパスでホストし、リバースプロキシ用に`/forms`をマップします。 Apacheサーバー上の`/forms`に対するリクエストは、AEMインスタンスに送信されます。 このトポロジは、AEMサーバーへの`/forms`ルートがプレフィックス付きのすべてのリクエストとして、ディスパッチャーレイヤーでのルール数を減らすのに役立ちます。
+ディスパッチャーなしで Apache 2.4 リバースプロキシサーバーをセットアップする方法について説明します。この例では、AEMサーバーを`/forms`コンテキストパスでホストし、リバースプロキシ用に`/forms`をマップします。 Apacheサーバー上の`/forms`に対するリクエストは、AEMインスタンスに送信されます。 このトポロジは、AEMサーバーへの`/forms`ルートがプレフィックス付きのすべてのリクエストとして、ディスパッチャーレイヤーのルール数を減らすのに役立ちます。
 
 1. `httpd.conf` 設定ファイルを開き、次のコードの行をコメント解除します。または、これらのコードの行をファイルに追加することができます。
 
@@ -166,6 +166,6 @@ Web ページにアダプティブフォームを埋め込む場合、次のベ�
 
 ## AEM Forms がクロスドメインサイトに対してアダプティブフォームをサーブできるようにする  {#cross-domain-sites}
 
-1. AEM作成者インスタンスで、AEM Web Console Configuration Manager(`http://[server]:[port]/system/console/configMgr`)に移動します。
+1. AEM発行インスタンスで、AEM Web Console Configuration Manager(`http://[server]:[port]/system/console/configMgr`)に移動します。
 1. **Apache Sling転送者**&#x200B;フィルター設定を探して開きます。
 1. 「**許可済みホスト**」フィールドで、Web ページが存在するドメインを指定します。これにより、ホストは AEM サーバーに POST リクエストをできるようになります。正規式を使用して、一連の外部アプリケーションドメインを指定することもできます。
