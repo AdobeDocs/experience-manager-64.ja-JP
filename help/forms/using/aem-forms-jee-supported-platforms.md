@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 1b9f8d98-e7e8-4b9b-a0df-52ccba324da3
 translation-type: tm+mt
-source-git-commit: ee38d0ebde12a70e3af04254b0c0b4995c45519b
+source-git-commit: 53154f9ada1062dae4bdccc5eac3d3113cd730a2
 workflow-type: tm+mt
-source-wordcount: '3327'
-ht-degree: 86%
+source-wordcount: '3318'
+ht-degree: 85%
 
 ---
 
@@ -631,21 +631,17 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 
 ### デザイナー {#designer}
 
-**注：** Windows に Designer をインストールするには、インストーラーを管理者権限のある状態で実行してください。
-
-* Microsoft® Windows® 2012 Server R2、Microsoft® Windows® 2016 Server、Microsoft Windows 10
-
-   * 1 GHz 以上の高速プロセッサー（PAE、NX、および SSE2 に対応）
-   * 1 GB の RAM（32-bit OS の場合）または 2 GB の RAM（64-bit OS の場合）
-   * 16 GB のディスク空き容量（32-bit OS の場合）または 20 GB のディスク空き容量（64-bit OS の場合）
-
+* Microsoft® Windows® 2012 Server R2、Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server、Microsoft® Windows® 10
+* 1 GHz 以上の高速プロセッサー（PAE、NX、および SSE2 に対応）
+* 1 GB の RAM（32-bit OS の場合）または 2 GB の RAM（64-bit OS の場合）
+* 16 GB のディスク空き容量（32-bit OS の場合）または 20 GB のディスク空き容量（64-bit OS の場合）
 * グラフィックメモリ — 128 MBのGPU （256 MBを推奨）
 * 2.35 GB のハードディスク空き容量
 * DVD-ROM ドライブ
-* Internet Explorer 10 または 11; Firefox 45.x
 * 1024 X 768 ピクセル以上のモニター解像度
 * ビデオハードウェアアクセラレーション（オプション）
-* Acrobat Pro DC、Acrobat Standard DC または Adobe Acrobat Reader DC。
+* Acrobat Pro DC、Acrobat Standard DC、Adobe Acrobat Reader DC
+* Designerをインストールするための管理者権限
 
 ### Adobe Acrobat と Adobe Reader {#adobe-acrobat-and-adobe-reader}
 
@@ -785,7 +781,7 @@ AEM Forms アプリケーションは次のプラットフォームで利用可�
 
 ### Adobe Document Security Extension for Microsoft Office {#adobe-rights-management-extension-for-microsoft-office}
 
-Adobe Document Security Extension for Microsoft® Office の必要システム構成を見るには、[ここ](https://www.adobe.com/products/livecycle/rightsmanagement/extension/downloads.html)をクリックしてください。
+Adobe Document Security Extension for Microsoft® Office の必要システム構成を見るには、[ここ](https://www.adobe.com/jp/products/livecycle/rightsmanagement/extension/downloads.html)をクリックしてください。
 
 ### クライアントサポートの例外事項 {#exceptions-to-client-support}
 
