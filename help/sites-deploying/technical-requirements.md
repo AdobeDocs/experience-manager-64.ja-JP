@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 4d3c4650-3e2a-43b1-ad2d-8d0ae2254ca9
 translation-type: tm+mt
-source-git-commit: 5e418ea537e00dc3b23174a7b1bb01dba0fc6b3a
+source-git-commit: 53154f9ada1062dae4bdccc5eac3d3113cd730a2
 workflow-type: tm+mt
-source-wordcount: '3182'
-ht-degree: 83%
+source-wordcount: '3274'
+ht-degree: 82%
 
 ---
 
@@ -129,10 +129,10 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
  </tbody> 
 </table>
 
-1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9および10は、Oracle社のLTS以外のリリースです([OracleJava SEサポート・ロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照)。 アドビでは、AEM を実稼働環境で実行するための Java については、LTS リリース版のみサポートします。
+1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9および10は、Oracle別にLTS以外のリリースです([OracleJava SEサポート・ロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照)。 アドビでは、AEM を実稼働環境で実行するための Java については、LTS リリース版のみサポートします。
 
 1. IBM JRE は、WebSphere Application Server とともに使用する場合にのみサポートされます。
-1. パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java SE テクノロジーを利用しているすべての AEM ユーザーです。詳しくは、[Adobe Experience ManagerQ&amp;AのOracleJavaサポート](assets/adobe-oracle-java-license-agreement.pdf)を参照してください。
+1. パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java SE テクノロジーを利用しているすべての AEM ユーザーです。詳しくは、[OracleのJavaサポート(Adobe Experience ManagerQ&amp;A](assets/adobe-oracle-java-license-agreement.pdf))を参照してください。
 
 ### ストレージと永続性 {#storage-persistence}
 
@@ -523,7 +523,7 @@ LinuxでDynamic Mediaを使用する場合は、次の前提条件が必要で�
 >
 >**SELinux の無効化：**&#x200B;画像サービングは、SELinux が有効の場合は動作しません。このオプションはデフォルトで有効です。この問題を修正するには、**/etc/selinux/config** ファイルを編集し、SELinux 値を次のように変更します。
 >
->`SELINUX=enforcing` 移動先  `SELINUX=disabled`
+>`SELINUX=enforcing`コピー先：`SELINUX=disabled`
 
 >[!NOTE]
 >
@@ -627,6 +627,20 @@ x86
 >
 
 
+
+### AEM Formsデザイナーの要件{#requirements-for-aem-forms-designer}
+
+* Microsoft® Windows® 2012 Server R2、Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server、Microsoft® Windows® 10
+* 1 GHz 以上の高速プロセッサー（PAE、NX、および SSE2 に対応）
+* 1 GB の RAM（32-bit OS の場合）または 2 GB の RAM（64-bit OS の場合）
+* 16 GB のディスク空き容量（32-bit OS の場合）または 20 GB のディスク空き容量（64-bit OS の場合）
+* グラフィックメモリ — 128 MBのGPU （256 MBを推奨）
+* 2.35 GB のハードディスク空き容量
+* DVD-ROM ドライブ
+* 1024 X 768 ピクセル以上のモニター解像度
+* ビデオハードウェアアクセラレーション（オプション）
+* Acrobat Pro DC、Acrobat Standard DC、Adobe Acrobat Reader DC
+* Designerをインストールするための管理者権限
 
 ### AEM Assets の XMP メタデータの書き戻しの要件 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
