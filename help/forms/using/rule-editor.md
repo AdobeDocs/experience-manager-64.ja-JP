@@ -9,9 +9,9 @@ topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 66a3528a-489b-4fd0-be6c-b8c4b9b1f908
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 5734bcd7231f7ba8779acd8e0325b875e252e104
 workflow-type: tm+mt
-source-wordcount: '6348'
+source-wordcount: '6352'
 ht-degree: 79%
 
 ---
@@ -96,7 +96,7 @@ forms-power-users グループに追加されたユーザーは、新しいス�
 
 ルールエディターでは、ルールを記述するための、事前定義された一連のルールタイプを利用できます。ここからは、各ルールタイプについて詳しく説明します。ルールエディターでルールを記述する詳細については、「[ルールの作成](/help/forms/using/rule-editor.md#p-write-rules-p)」を参照してください。
 
-### セッションに他のセッション属性 {#when}
+### セッションに他のセッション属性    {#when}
 
 「**When**」のルールタイプは、「**条件=アクション=代替アクション**」のルール構文に従います。また、単に「**条件=アクション**」構文が使用されることもあります。このルールタイプでは、評価条件を指定し、条件が満たされた（`True`）場合にトリガするアクションを記述します。「When」のルールタイプを使用する場合、複数のANDおよびOR演算子を使用して、[ネストされた式](#nestedexpressions)を作成できます。
 
@@ -330,7 +330,7 @@ forms-power-users グループに含まれるユーザーは、コードエデ�
 AEM Forms では、ルールを記述するために最後に使用したルールエディタモードを記憶します。これにより、ルールエディタの次回起動時も同じモードで開きます。ただし、デフォルトモードを設定することで、ルールエディタを指定されたモードで開くこともできます。この作業を行うには：
 
 1. AEM Webコンソール(https://[host]:[port]/system/console/configMgr)に移動します。
-1. **[!UICONTROL アダプティブフォーム設定サービス]**&#x200B;を編集するには、をクリックします。
+1. 「**[!UICONTROL アダプティブフォームとインタラクティブコミュニケーションWebチャネルの設定]**」をクリックして編集します。
 1. 「**[!UICONTROL ルールエディターのデフォルトモード]**」のドロップダウンから、「**[!UICONTROL ビジュアルエディター]**」または「**[!UICONTROL コードエディター]**」を選択します。
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
@@ -504,7 +504,7 @@ forms-power-users グループに追加されたユーザーは、コードエ�
 
    プライベート関数は、カスタム関数としては含まれません。
 
-* **名前**
+* **Name**
 
    構文: `@name funcName <Function Name>`
 
