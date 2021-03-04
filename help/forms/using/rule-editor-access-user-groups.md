@@ -9,10 +9,10 @@ topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6bd58e37-085e-4057-8200-1404d54f41cc
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 5734bcd7231f7ba8779acd8e0325b875e252e104
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 58%
+source-wordcount: '334'
+ht-degree: 57%
 
 ---
 
@@ -32,7 +32,7 @@ AEM Forms では、各ユーザーの役割や職務に応じて、ルールエ�
 
    ![1](assets/1.png)
 
-1. Webコンソールウィンドウで、「**Adaptive Form Configuration Service**」を探してクリックします。 **Adaptive Form Configuration** Serviceダイアログが表示されます。値を変更せずに、「**保存**」をクリックします。
+1. Webコンソールウィンドウで、「**[!UICONTROL アダプティブフォームとインタラクティブコミュニケーションWebチャネルの設定]**」を探してクリックします。 **[!UICONTROL Adaptive Form and Interactive Communication Webチャネル]** 設定ダイアログが表示されます。値を変更せずに、「**[!UICONTROL 保存]**」をクリックします。
 
    これにより、CRX リポジトリに /apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config ファイルが作成されます。
 
