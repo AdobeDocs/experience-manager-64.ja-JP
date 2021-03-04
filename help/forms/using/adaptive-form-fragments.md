@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 4df5ee77-5a77-4efd-b7e1-c78e650673a9
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: 5734bcd7231f7ba8779acd8e0325b875e252e104
 workflow-type: tm+mt
-source-wordcount: '2090'
-ht-degree: 94%
+source-wordcount: '2094'
+ht-degree: 93%
 
 ---
 
@@ -112,7 +112,7 @@ ht-degree: 94%
 次の手順を実行して、フォームのフラグメントをすべて表示します。
 
 1. https:[*host*]:[*port*]/system/console/configMgrのAEM Webコンソール設定ページに移動します。
-1. 「**[!UICONTROL Adaptive Form 設定サービス]**」を検索してクリックし、編集モードで開きます。
+1. 「**[!UICONTROL アダプティブフォームとインタラクティブコミュニケーションWebチャネル設定]**」を検索してクリックし、編集モードで開きます。
 1. 「**[!UICONTROL フラグメントの代わりにプレースホルダーを有効にする]**」チェックボックスを無効にして、プレースホルダーの画像の代わりにすべてのフラグメントを表示します。
 
 ### アダプティブフォームへのフラグメントの挿入  {#insert-a-fragment-in-an-adaptive-form}
