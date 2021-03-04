@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 1b9f8d98-e7e8-4b9b-a0df-52ccba324da3
 translation-type: tm+mt
-source-git-commit: 53154f9ada1062dae4bdccc5eac3d3113cd730a2
+source-git-commit: 95b5e70c1b474d4d207a5a33e8d1ab8ef39685b6
 workflow-type: tm+mt
-source-wordcount: '3318'
+source-wordcount: '3316'
 ht-degree: 85%
 
 ---
@@ -637,7 +637,6 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 * 16 GB のディスク空き容量（32-bit OS の場合）または 20 GB のディスク空き容量（64-bit OS の場合）
 * グラフィックメモリ — 128 MBのGPU （256 MBを推奨）
 * 2.35 GB のハードディスク空き容量
-* DVD-ROM ドライブ
 * 1024 X 768 ピクセル以上のモニター解像度
 * ビデオハードウェアアクセラレーション（オプション）
 * Acrobat Pro DC、Acrobat Standard DC、Adobe Acrobat Reader DC
