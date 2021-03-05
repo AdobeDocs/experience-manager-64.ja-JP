@@ -10,7 +10,7 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 30d25772-0df7-468e-bcbd-c6fb2e962662
 translation-type: tm+mt
-source-git-commit: 0e7f4a78f63808bea2aa7a5abbb31e7e5b9d21b3
+source-git-commit: 226cd6688a579409371cb17f6ba31548bee312b3
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 64%
@@ -18,12 +18,12 @@ ht-degree: 64%
 ---
 
 
-# SPA およびサーバーサイドレンダリング{#spa-and-server-side-rendering}
+# SPA およびサーバーサイドレンダリング {#spa-and-server-side-rendering}
 
 >[!NOTE]
 >シングルページアプリケーション(SPA)エディタ機能には、[AEM 6.4サービスパック2](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)以降が必要です。
 >
->SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
+>SPAフレームワークベースのクライアント側レンダリング(ReactやAngularなど)を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ ht-degree: 64%
 
 ## SSR を使用するタイミング {#when-to-use-ssr}
 
-SSR が必要なのは一部のプロジェクトだけです。AEMはSPA向けにJS SSRを完全にサポートしていますが、Adobeは、すべてのプロジェクトに対して体系的にJS SSRを実装することを推奨しません。
+SSR が必要なのは一部のプロジェクトだけです。AEMはSPA向けにJS SSRを完全にサポートしていますが、Adobeは、すべてのプロジェクトに対して体系的にJS SSRを実装することをお勧めしません。
 
 SSR を実装することに決めたら、長期的なメンテナンスを含め、SSRを追加することがプロジェクトにとって現実的にどのような複雑さ、労力、コストをもたらすかをまず評価する必要があります。SSR アーキテクチャは、付加価値が予測コストを明確に上回る場合にのみ選択する必要があります。
 
@@ -46,7 +46,7 @@ SSR を実装することに決めたら、長期的なメンテナンスを含�
 * **SEO：**&#x200B;トラフィックをもたらす検索エンジンでサイトのインデックスを適切に作成するために SSR が実際に必要ですか。メインの検索エンジンクローラーが JS を評価するようになったことに注意してください。
 * **ページ速度：** SSR によって実際の環境の速度が大幅に上がり、全体的なユーザーエクスペリエンスが向上しますか。
 
-この2つの質問のうち少なくとも1つに対して明確な「はい」を付けて回答がなされた場合にのみ、AdobeはSSRの実装を推奨します。 次の節では、Adobe I/O Runtime を使用してこれをおこなう方法について説明します。
+この2つの質問のうち少なくとも1つに対して明確な「はい」を付けて回答がなされた場合に限り、AdobeはSSRの実装を推奨します。 次の節では、Adobe I/O Runtime を使用してこれをおこなう方法について説明します。
 
 ## Adobe I/O Runtime {#adobe-io-runtime}
 
@@ -104,7 +104,7 @@ SSRを使用する場合、AEMのSPAの[コンポーネントの対話ワーク�
 
 ![server-side-rendering-cms-drivenaemnode](assets/server-side-rendering-cms-drivenaemnode-adobeio.png)
 
-### Adobe I/O Runtime 主導の通信フロー{#adobe-io-driven-communication-flow}
+### Adobe I/O Runtime 主導の通信フロー {#adobe-io-driven-communication-flow}
 
 [AEM駆動通信フロー](#aem-driven-communication-flow)の節では、AEMがコンテンツのブートストラップと提供を行うSPAに関するサーバ側レンダリングの標準および推奨実装について説明します。
 
@@ -136,7 +136,7 @@ AEM の SPA 向け SSR では、Adobe I/O Runtime が必要です。これは、
 AEM が標準で Angular および React SPA フレームワークをサポートするのと同様に、Angular および React アプリケーションでもサーバーサイドレンダリングがサポートされます。詳しくは、両方のフレームワークの NPM ドキュメントを参照してください。
 
 * 反応：[https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
-* 角度：[https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
+* Angular:[https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
 
 単純な例については、[We.Retailジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)を参照してください。 アプリケーションサーバー側全体がレンダリングされます。 これは実際の例ではありませんが、SSRの実装に必要なものを示しています。
 
@@ -144,7 +144,7 @@ AEM が標準で Angular および React SPA フレームワークをサポー�
 >[We.Retailジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)はデモ目的でのみ使用されるので、推奨されるAdobe I/O Runtimeの代わりにNode.jsを単純な例として使用します。 この例は、どのプロジェクト作業にも使用しないでください。
 
 >[!NOTE]
->AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
+>AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
 
 ## Node.jsの使用{#using-node-js}
 
