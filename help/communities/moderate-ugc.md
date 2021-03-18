@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: d11b8fc8-5e98-4a77-a536-d445ac88e1b3
+role: Administrator
 translation-type: tm+mt
-source-git-commit: f78f83ef3b9373bcbee3e5179a9bbec4d9462255
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1520'
 ht-degree: 57%
 
 ---
@@ -192,7 +193,7 @@ UGC の事前モデレートがおこなわれる場合、投稿は、モデレ�
 
 スパム検出は自動モデレート機能です。この機能を使用すると、送信済みユーザーが生成した、望ましくないコンテンツの一部をスパムとしてマークしてフィルターから除外できます。 有効にすると、事前設定済みのスパムワードの集まりに基づいて、ユーザーが生成したコンテンツがスパムかどうかを識別します。 デフォルトのスパムワードは次の場所にあります。
 
-`/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`.
+`/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`
 
 ただし、デフォルトのスパムワードをカスタマイズまたは拡張するには、[overlay](overlay-comments.md) を使用して、デフォルトのスパムワードの構造に従って /apps ディレクトリ内にスパムワードを作成します。
 
