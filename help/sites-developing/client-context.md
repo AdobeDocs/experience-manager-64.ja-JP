@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: 7b97fc27-30de-4ef9-9efe-673aec50cff2
+feature: Context Hub
 translation-type: tm+mt
-source-git-commit: 5f84641d87b88532f0fa0d92fada4e8cca3d9684
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2992'
+source-wordcount: '2994'
 ht-degree: 82%
 
 ---
