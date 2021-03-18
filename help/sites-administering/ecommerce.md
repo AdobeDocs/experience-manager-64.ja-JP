@@ -9,11 +9,12 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: e-commerce
 content-type: reference
 discoiquuid: 68799110-8183-40fe-be4f-2a7c7a7b3018
+feature: Commerce統合フレームワーク
 translation-type: tm+mt
-source-git-commit: eb1ae2b4910e7adef48865996db4837175f588d9
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 80%
+source-wordcount: '779'
+ht-degree: 79%
 
 ---
 
@@ -35,7 +36,7 @@ ht-degree: 80%
 | フロントエンド | AEM サーバー側によってページをレンダリング | 混在型ページアプリケーション（ハイブリッドレンダリング） |
 | 製品カタログ |  — 製品インポーター、エディター、AEMでのキャッシュ<br>- AEMまたはプロキシページを含む通常のカタログ |  — 製品のインポートなし<br> — 汎用テンプレート<br> — コネクタ経由のオンデマンドデータ |
 | スケーラビリティ |  — 数百万個までの製品をサポート可能（使用事例によって異なります） <br> — ディスパッチャーでのキャッシュ |  — ボリュームに制限がない<br> — ディスパッチャーまたはCDNのキャッシュ |
-| 標準化されたデータモデル | 不可 | あり。Magento GraphQL スキーマ |
+| 標準化されたデータモデル | いいえ | あり。Magento GraphQL スキーマ |
 | 入手方法 | はい：<br> - SAPCommerce Cloud(AEM 6.4とHybris 5 （デフォルト）をサポートするように更新)、Hybris 4 <br>- SalesforceCommerce Cloud(AEM 6.4をサポートするようにオープンソースのコネクタ)との互換性を維持 | あり。GitHub 経由のオープンソース。<br>Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり） |
 | 用途 | 限定的な使用例：小さい静的なカタログの読み込みが必要な場合 | ほとんどの使用例で好ましいソリューション |
 
@@ -122,7 +123,7 @@ AEM e コマースフレームワークは、以下の機能を提供します�
    * 詳細な注文履歴
    * カタログの高速更新
 
-## フレームワーク  {#the-framework}
+## フレームワーク {#the-framework}
 
 このフレームワークの詳細については「[概念](/help/sites-administering/concepts.md)」の節で説明しますが、ここで概要を簡単に説明しておきます。
 
