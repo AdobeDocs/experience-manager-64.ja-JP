@@ -1,7 +1,7 @@
 ---
 title: モデルの概要
 seo-title: モデルの概要
-description: 'null'
+description: モデルの概要
 seo-description: 'null'
 uuid: e09dac52-9515-43f7-9d3b-6637e2283d59
 contentOwner: Jyotika Syal
@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: c8281f98-9811-42f7-9a31-f82dd0f09319
 translation-type: tm+mt
-source-git-commit: 64090e3c7cf722f44968467c51291a11aeeec237
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '786'
 ht-degree: 67%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 67%
 
 ### コンテンツモデルのエンティティ  {#entities-in-content-model}
 
-エンティティは、コンテンツモデルのインスタンスです。エンティティは、Content Services APIを介してクライアント側ライブラリに公開され、ネイティブアプリがチャネルに依存しない方法でコンテンツにアクセスする方法を提供します。
+エンティティは、コンテンツモデルのインスタンスです。エンティティは、Content Services APIを通じてクライアント側ライブラリに公開され、ネイティブアプリがチャネルに依存しない方法でコンテンツにアクセスする方法を提供します。
 
 既存の AEM コンテンツの場合、エンティティは、モデルと AEM コンテンツソースを使用して生成されます。例えば、ページエンティティは、AEMページとページモデルから生成されるチャネルとレイアウトに依存しないオブジェクトです。
 
