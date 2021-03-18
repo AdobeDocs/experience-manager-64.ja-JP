@@ -9,11 +9,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 2e783745-c986-45ba-8e65-7437d114ca38
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2796'
-ht-degree: 5%
+source-wordcount: '2797'
+ht-degree: 6%
 
 ---
 
