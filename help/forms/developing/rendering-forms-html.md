@@ -10,10 +10,11 @@ geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '4175'
+source-wordcount: '4176'
 ht-degree: 1%
 
 ---
@@ -120,7 +121,7 @@ var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature
 
 HTMLとしてレンダリングするフォームデザインを作成する場合、JavaScript言語のスクリプトのXFAサブセットに制限する必要があります。
 
-クライアントで実行するスクリプト、またはクライアントとサーバーの両方で実行するスクリプトは、XFAサブセット内で記述する必要があります。 サーバー上で実行するスクリプトは、完全なXFAスクリプティングモデルを使用でき、FormCalcも使用できます。 JavaScriptの使用について詳しくは、[Formsデザイナ](https://www.adobe.com/go/learn_aemforms_designer_63)を参照してください。
+クライアント上で実行するスクリプト、またはクライアントとサーバーの両方で実行するスクリプトは、XFAサブセット内で記述する必要があります。 サーバー上で実行するスクリプトは、完全なXFAスクリプティングモデルを使用でき、FormCalcも使用できます。 JavaScriptの使用について詳しくは、[Formsデザイナ](https://www.adobe.com/go/learn_aemforms_designer_63)を参照してください。
 
 クライアントでスクリプトを実行する場合、現在表示されているパネルのみがスクリプトを使用できます。例えば、パネルBが表示されている場合に、パネルAにあるフィールドに対してスクリプトを作成することはできません。 サーバーでスクリプトを実行する場合は、すべてのパネルにアクセスできます。
 
