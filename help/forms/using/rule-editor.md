@@ -8,10 +8,11 @@ content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 66a3528a-489b-4fd0-be6c-b8c4b9b1f908
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 5734bcd7231f7ba8779acd8e0325b875e252e104
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '6352'
+source-wordcount: '6354'
 ht-degree: 79%
 
 ---
@@ -695,7 +696,7 @@ var c = {
 
 1. 「**完了**」をクリックして、ルールを保存します。
 
-## ネスト式  {#nestedexpressions}
+## ネスト式 {#nestedexpressions}
 
 ルールエディターでは、複数の「AND」と「OR」演算子を使用して、ネストしたルールを作成することができます。ルール内には、複数の「AND」と「OR」演算子を混在させることもできます。
 
