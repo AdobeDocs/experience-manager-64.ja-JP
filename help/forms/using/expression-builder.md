@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 4a864547-edbe-4d2d-a8ee-39bc65dffe88
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '799'
 ht-degree: 78%
 
 ---
@@ -48,7 +49,7 @@ ht-degree: 78%
    * java.lang.Character
    * Char
    * java.lang.Boolean
-   * Boolean
+   * ブール型
    * java.lang.Integer
    * Int
    * java.util.list
@@ -101,7 +102,7 @@ ht-degree: 78%
    * java.lang.Character
    * Char
    * java.lang.Boolean
-   * ブール値
+   * ブール型
    * java.lang.Integer
    * Int
    * java.lang.Short
