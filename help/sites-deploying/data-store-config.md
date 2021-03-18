@@ -10,11 +10,12 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: d4636434-98a6-4cf7-bb92-4338da17c893
 legacypath: /deploy/platform/data-store-config
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 8a8e38bc9f34d6a81aa91ba83cf35caa4b03ee3f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3439'
-ht-degree: 70%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -88,7 +89,7 @@ customBlobStore=B"true"
 
 ドキュメントノードストアは、AEM MongoMK実装の基盤です。 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService` **PID**&#x200B;を使用します。 以下の設定オプションを使用できます。
 
-* `mongouri`：Mongo データベースに接続するために必要な [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) です。デフォルトは です。`mongodb://localhost:27017`
+* `mongouri`：Mongo データベースに接続するために必要な [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) です。デフォルトは `mongodb://localhost:27017` です
 
 * `db`：Mongo データベースの名前です。デフォルト値は **Oak** です。ただし、新しい AEM 6 のインストールでは、デフォルトのデータベース名として **aem-author** が使用されます。
 
@@ -145,7 +146,7 @@ customBlobStore=B"false"
 
 Amazon の Simple Storage Service（S3）にデータを格納するように AEM を設定できます。このストアでは、`org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` という PID を設定に使用します。
 
-S3 データストア機能を有効にするには、S3 データストアコネクタを含む機能パックをダウンロードしてインストールする必要があります。[Adobeリポジトリ](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/)に移動し、機能パックの1.8.xバージョン（例：com.adobe.granite.oak.s3connector-1.8.0.zip）から最新バージョンをダウンロードします。 さらに、[AEM 6.4 Service Packリリースノート](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/feature-packs-release-notes.html)ページに記載されている最新のAEM Service Packをダウンロードしてインストールする必要があります。
+S3 データストア機能を有効にするには、S3 データストアコネクタを含む機能パックをダウンロードしてインストールする必要があります。[Adobeリポジトリ](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/)に移動し、機能パックの1.8.xバージョン（例：com.adobe.granite.oak.s3connector-1.8.0.zip）から最新バージョンをダウンロードします。 さらに、[AEM 6.4 Service Packリリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/release-notes.html?lang=ja)ページに記載されている最新のAEM Service Packをダウンロードしてインストールする必要があります。
 
 >[!NOTE]
 >
@@ -176,7 +177,7 @@ java -jar aem6.4.jar -r crx3tar-nofds
 
    * `jcr_root/libs/system/config`
 
-   を
+   コピー先：
 
    * `<aem-install>/crx-quickstart/install`
 
