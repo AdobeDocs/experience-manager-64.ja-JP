@@ -5,16 +5,19 @@ audience: end-user
 user-guide-title: AEM 6.4 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM プロジェクトの管理方法について学びます。
+feature-set: Experience Manager Sites
+feature: デプロイ
+role: 開業医
 translation-type: tm+mt
-source-git-commit: a83c39939afe85586aa32460f141fa18bfc80a3f
+source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 93%
+source-wordcount: '75'
+ht-degree: 90%
 
 ---
 
 
-# AEM 6.4 管理ユーザーガイド  {#managing}
+# AEM 6.4 管理ユーザーガイド {#managing}
 
 + [ユーザガイドの管理](home.md)
 + 管理 - ベストプラクティスチェックリスト {#managing-best-practices-checklist}
