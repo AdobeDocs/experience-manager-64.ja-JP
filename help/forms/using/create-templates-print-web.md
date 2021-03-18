@@ -7,11 +7,12 @@ uuid: d7b0d9a5-f5f0-4c21-a6f8-622bf94f4491
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 40c0a17b-6894-44cc-b1f7-490913061532
+feature: インタラクティブコミュニケーション
 translation-type: tm+mt
-source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1832'
-ht-degree: 65%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -241,7 +242,7 @@ Web チャネルテンプレートを作成するには、作成したテンプ�
    | summarycharges | 請求概要 | 2 |
    | itemisedcalls | 通話明細 | 3 |
    | paynow | Pay Now | 2 |
-   | vas | 付加価値サービス | 1 |
+   | vas | 付加価値サービス | 3 |
 
    次の画像は、すべてのパネルがテンプレートに追加された後のコンテンツツリーを示しています。
 
