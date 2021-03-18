@@ -1,7 +1,7 @@
 ---
 title: AEM Brackets Extension
 seo-title: AEM Brackets Extension
-description: 'null'
+description: AEM Brackets Extension
 seo-description: 'null'
 uuid: 2f0dfa42-eb34-44ae-90eb-b5f321c03b79
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 translation-type: tm+mt
-source-git-commit: 8e2bd579e4c5edaaf86be36bd9d81dfffa13a573
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '928'
 ht-degree: 55%
 
 ---
@@ -78,9 +78,9 @@ Brackets の **File** メニューで「**Open Folder**」を選択し、`jcr_ro
 
 >[!NOTE]
 >
->コンテンツパッケージを持つプロジェクトがない場合は、[HTL TodoMVCの例](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc)を試してみてください。 GitHubで、「**ZIPをダウンロード**」をクリックし、ファイルをローカルに展開します。上記の指示に従って、Bracketsの`jcr_root`フォルダーを開きます。 次に、次の手順に従って&#x200B;**プロジェクト設定**&#x200B;を設定し、最後に、「コンテンツパッケージ全体の同期」セクションの指示に従って&#x200B;**コンテンツパッケージを書き出し**&#x200B;を実行し、AEM開発インスタンスにパッケージ全体をアップロードします。
+>コンテンツパッケージを持つプロジェクトがない場合は、[HTL TodoMVCの例](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc)を試してみてください。 GitHubで、「**ZIPをダウンロード**」をクリックし、ファイルをローカルに展開します。上記の指示に従って、Bracketsの`jcr_root`フォルダーを開きます。 次に、次の手順に従って&#x200B;**プロジェクト設定**&#x200B;を設定し、最後に、「コンテンツパッケージ全体の同期」セクションの指示に従って&#x200B;**コンテンツパッケージの書き出し**&#x200B;を実行し、AEM開発インスタンスにパッケージ全体をアップロードします。
 >
->これらの手順を実行すると、AEM開発インスタンスの`/content/todo.html` URLにアクセスできるはずです。Brackets内のコードを変更する開始は、Webブラウザーでの更新後に変更がAEMサーバーに直ちに同期された方法を確認できます。
+>これらの手順の後、AEM開発インスタンスの`/content/todo.html` URLにアクセスできるはずです。また、Brackets内のコードを変更する開始が、Webブラウザーで更新を行った後、変更がAEMサーバーに直ちに同期された方法を確認できます。
 
 ### プロジェクト設定 {#project-settings}
 
