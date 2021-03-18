@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 9b1d2bf3-f28c-41b2-9026-1f3311556422
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '15544'
+source-wordcount: '15545'
 ht-degree: 4%
 
 ---
@@ -39,7 +40,7 @@ ht-degree: 4%
 
 ドキュメントセキュリティサービスを使用して、次のタスクを実行できます。
 
-* ポリシーの作成. 詳しくは、「[ポリシーの作成](protecting-documents-policies.md#creating-policies)」を参照してください。
+* ポリシーの作成. 詳しくは、[ポリシーの作成](protecting-documents-policies.md#creating-policies)を参照してください。
 * ポリシーを変更します。 詳しくは、[ポリシーの変更](protecting-documents-policies.md#modifying-policies)を参照してください。
 * ポリシーの削除 詳しくは、[ポリシーの削除](protecting-documents-policies.md#deleting-policies)を参照してください。
 * PDFドキュメントにポリシーを適用します。 詳しくは、[PDFドキュメントへのポリシーの適用](protecting-documents-policies.md#applying-policies-to-pdf-documents)を参照してください。
