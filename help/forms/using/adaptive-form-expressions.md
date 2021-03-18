@@ -7,10 +7,11 @@ uuid: 4f33c10f-e862-4113-9d5a-67e6208e1e66
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 9f3ba207-b5a3-43a2-b59c-0d74d62c03fc
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2759'
+source-wordcount: '2761'
 ht-degree: 71%
 
 ---
@@ -89,7 +90,7 @@ ht-degree: 71%
 
 **戻り値の型**：クリック式は値を返しません。数式が値を返した場合、その値は無視されます。
 
-**例**:ボタンのクリック操作でテキストボックス **textbox1** に値 **AEM Formsを入力するには、ボタンのクリック式を次のように指定し** `textbox1.value="AEM Forms"` ます。&quot;
+**例**:ボタンのクリック操作でテキストボックス **textbox1** に値 **AEM Formsを入力するには、ボタンのクリック式を次のように指定します** `textbox1.value="AEM Forms"` 。&quot;
 
 ### 初期化スクリプト {#initialization-script}
 
@@ -166,7 +167,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->フィールドの値がプログラムによって変更された場合、値コミットスクリプトを無効にすることができます。これを行うには、`https://[server]:[port]/system/console/configMgr and change` **互換性のためのアダプティブFormsバージョン**&#x200B;から&#x200B;**AEM Forms6.1**&#x200B;に移動します。 以降、値コミットスクリプトは、ユーザーがフィールドの値をUIから変更した場合にのみ実行されます。
+>フィールドの値がプログラムによって変更された場合、値コミットスクリプトを無効にすることができます。これを行うには、`https://[server]:[port]/system/console/configMgr and change` **互換性のあるアダプティブForms版**&#x200B;から&#x200B;**AEM Forms6.1**&#x200B;に移動します。 以降、値コミットスクリプトは、ユーザーがフィールドの値をUIから変更した場合にのみ実行されます。
 
 ### 表示式  {#visibility-expression}
 
