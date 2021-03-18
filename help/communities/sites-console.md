@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 5ac2fcef-05b8-46f7-9a15-997cdd79a3db
+role: Administrator
 translation-type: tm+mt
-source-git-commit: f4cdd3d5020b917676fe8715d4e21e98f3a096b4
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3241'
+source-wordcount: '3242'
 ht-degree: 46%
 
 ---
@@ -102,7 +103,7 @@ Communitiesのサイトコンソールから次のアクセス権を利用でき
    * ベースURL ( `https://*server:port/site root/site name*)`は`Community Site Name`の下に表示されます
    * 有効なURLの場合は、ベース言語コード+ &quot;.html&quot;を追加します。
 
-      *例：*, `http://localhost:4502/content/sites/mysight/en.html`
+      *例えば*、  `http://localhost:4502/content/sites/mysight/en.html`
 
 * **[!UICONTROL コミュニティサイトテン]** プレートメニュー：プルダウンメニューを使用して、使用可能な [コミュニティサイトテンプレートを選択し](tools.md)ます。
 
@@ -520,7 +521,7 @@ UGC はサイトパッケージに含まれていません。
 
 新しいコミュニティサイトが公開されると、新しいメンバーグループが作成されます（ユーザーグループはパブリッシュ環境で作成されます）。各グループには、様々な管理の役割およびメンバーの役割に応じて適切な権限が設定されます。
 
-メンバーグループの名前には、[手順1](#step13asitetemplate)に指定された&#x200B;*サイト名*（URLに表示される名前）と、コミュニティサイトや、コミュニティサイトのルートに同じサイト名を持つグループとの競合を回避する一意のIDが含まれます。
+メンバーグループの名前には、[手順1](#step13asitetemplate)で指定された&#x200B;*サイト名*（URLに表示される名前）と、コミュニティサイトや、コミュニティサイトのルートに同じサイト名を持つグループとの競合を回避する一意のIDが含まれます。
 
 例えば、「Getting Started Tutorial」というタイトルを持つサイトのサイト名が「engage」の場合、モデレーターのユーザーグループは次のようになります。
 
