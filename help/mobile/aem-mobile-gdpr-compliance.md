@@ -1,15 +1,15 @@
 ---
 title: AEM Mobile - GDPR 対応
 seo-title: AEM Mobile - GDPR 対応
-description: 'null'
+description: '"AEM Mobile - GDPR 対応"'
 seo-description: 'null'
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 discoiquuid: 9399dd3d-a485-4f53-a6f2-7b190da4235b
 translation-type: tm+mt
-source-git-commit: 0db56cb77628b3e81b69382a314c30b43887bde6
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '697'
 ht-degree: 84%
 
 ---
@@ -41,7 +41,7 @@ Digital Publishing Suite の GDPR 要求を開始する場合は、アドビカ�
 
 顧客データを検索するには、以下の ID が必要です。サブセットを受け取った場合は、それ以外の ID がこのユーザーに該当しなかったことを意味します。
 
-必須：
+必須:
 
 * 顧客の契約 ID：*dpsc-contractId*
 
