@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
+feature: Document Security
 translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '730'
 ht-degree: 100%
 
 ---
@@ -52,7 +53,7 @@ ht-degree: 100%
 アカウントは、管理者によって無効にされるか削除されるまで有効です。
 
 1. Document Security 登録確認電子メールを開きます。
-1. メッセージに含まれる URL をクリックします。Document Security のアクティベートページが表示されます。
+1. メッセージに含まれている URL をクリックします。Document Security のアクティベートページが表示されます。
 1. 「ここ」をクリックしてログインページに移動します。
 1. 「ユーザー名」ボックスに、Document Security で登録した電子メールアドレスを入力します。この電子メールアドレスは、デフォルトの Document Security ユーザー名です。
 1. 「パスワード」ボックスに、登録時に作成したパスワードを入力し、「ログイン」をクリックします。
