@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '6243'
+source-wordcount: '6244'
 ht-degree: 4%
 
 ---
@@ -689,7 +690,7 @@ Authorization Manager Service API （Webサービス）を使用して、ロー�
 
 1. AuthorizationManagerServiceクライアントを作成します。
 
-   * `AuthorizationManagerServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `AuthorizationManagerServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`AuthorizationManagerServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/AuthorizationManagerService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。
    * `AuthorizationManagerServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
@@ -744,7 +745,7 @@ Authorization Manager Service API （Webサービス）を使用して、ロー�
  </thead> 
  <tbody>
   <tr> 
-   <td><p>1</p></td> 
+   <td><p>3</p></td> 
    <td><p>ユーザはウェブサイトにアクセスし、ユーザ名とパスワードを指定する。 この情報は、AEM FormsをホストするJ2EEアプリケーションサーバーに送信されます。</p></td> 
   </tr> 
   <tr> 
@@ -752,7 +753,7 @@ Authorization Manager Service API （Webサービス）を使用して、ロー�
    <td><p>ユーザー資格情報はAuthentication Managerサービスで認証されます。 ユーザーの資格情報が有効な場合、ワークフローは手順3に進みます。 それ以外の場合は、許可されたユーザーではないことを示すメッセージがユーザーに送信されます。</p></td> 
   </tr> 
   <tr> 
-   <td><p>1</p></td> 
+   <td><p>3</p></td> 
    <td><p>ユーザ情報とフォームデザインは、保護された企業データベースから検索される。 </p></td> 
   </tr> 
   <tr> 
@@ -870,7 +871,7 @@ User Management APIを使用して、プログラムによってユーザーを�
  </thead> 
  <tbody>
   <tr> 
-   <td><p>1</p></td> 
+   <td><p>3</p></td> 
    <td><p>AEM Formsが同期操作を実行するクライアントアプリケーション要求。</p></td> 
   </tr> 
   <tr> 
