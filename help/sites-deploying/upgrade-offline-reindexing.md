@@ -5,10 +5,11 @@ contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
+feature: アップグレード
 translation-type: tm+mt
-source-git-commit: b9a270eb29e92e98a54b596ba745ef71f73a7b55
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1344'
 ht-degree: 1%
 
 ---
