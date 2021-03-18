@@ -9,10 +9,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: ab018b6d-0233-4439-bb75-58c5421d769a
+feature: PDF Generator
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '7276'
+source-wordcount: '7278'
 ht-degree: 74%
 
 ---
@@ -405,7 +406,7 @@ PDF 設定をローカルコンピューターまたはネットワークの場�
 * サンプル画像のダウンサンプリングとエンコード
 * Type 1 フォントや Type 1 Multiple Master フォントのインスタンスの埋め込み
 
-**PostScript XObjectsを許可：PostScript XObjectsには、** 背景画像や、ヘッダーとフッターの情報など、同じファイルの多くのページに表示される情報が格納されます。PostScript XObjects を使用すると、高速で印刷できますが、より多くのプリンターメモリが必要になります。Acrobat 5 （PDF 1.4）以降の互換性で PDF ファイルを作成している場合、PostScript XObjects が作成されないようにするには、このオプションの選択を解除します。
+**PostScript XObjectsを許可：PostScript XObjectsには、背景画像やヘッダーおよびフッター情報など、同じファイルの多くのページに表示される情報が格納されます。** PostScript XObjects を使用すると、高速で印刷できますが、より多くのプリンターメモリが必要になります。Acrobat 5 （PDF 1.4）以降の互換性で PDF ファイルを作成している場合、PostScript XObjects が作成されないようにするには、このオプションの選択を解除します。
 
 **グラデーションをスムーズシェーディングに変換：ブレンドをAcrobat 4以降のスムーズシェーディングに** 変換し、PDFファイルを小さくして最終的な出力の品質を向上させる可能性があります。PDF Generator は、Adobe Illustrator、Adobe InDesign、Adobe Freehand MX、CorelDraw、Quark Xpress および Microsoft PowerPoint からグラデーションを変換します。
 
