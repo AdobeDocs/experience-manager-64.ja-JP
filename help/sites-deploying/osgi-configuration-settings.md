@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: ccddb2cd-8e67-43aa-a495-8996ad349761
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 6ac5f288de51e39bccd080123ba9e094406263f8
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3805'
+source-wordcount: '3806'
 ht-degree: 57%
 
 ---
@@ -71,7 +72,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 >必ず以下を設定してください。
 >
 >**ユーザー** 名と **パスワード**。Apache Felix Web Management Consoleにアクセスするための秘密鍵証明書です。\
->インスタンスの[セキュリティ](/help/sites-administering/security-checklist.md)を確保するために、最初のインストール後にパスワードを変更する必要があります。
+>インスタンスの[セキュリティ](/help/sites-administering/security-checklist.md)を確実にするために、最初のインストール後にパスワードを変更する必要があります。
 
 >[!NOTE]
 >
@@ -79,7 +80,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 **Apache Slingカスタマイズ可能な要求データ** ロガー設定：
 
-* **Logger** Nameおよび **Log** Formatを使用して、要求およびアクセスログの場所と形式を設定します(デフォルト： `request.log`)をクリックします。 このログファイルは、Webチェーンに関連するパフォーマンスやデバッグ機能を分析する際に不可欠です。
+* **Logger** Nameおよび **Log** Formatを使用して、要求およびアクセスログの場所と形式を設定します(デフォルト： `request.log`)をクリックします。 このログファイルは、Webチェーンに関連するパフォーマンスやデバッグ機能を分析する際に重要です。
 
    これはApache Sling Request Loggerと対になります。
 
@@ -255,7 +256,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 * プロジェクト固有のフォントを検索する「**Font Path**」を定義します。
 
-   例： `/apps/myapp/fonts`
+   例：`/apps/myapp/fonts`
 
 **Apache HTTPコンポーネントプロキシ** 設定Apache HTTPクライアントを使用するすべてのコードのプロキシ設定。HTTPが作成されたときに使用されます。例えば、レプリケーション時に
 
