@@ -1,7 +1,7 @@
 ---
 title: エクスペリエンスフラグメント
 seo-title: エクスペリエンスフラグメント
-description: 'null'
+description: エクスペリエンスフラグメント
 seo-description: 'null'
 uuid: be1aceef-eb6e-47e5-a920-be5cc6de6191
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 1fe58af0-3005-46fc-8717-5d32557947ed
 translation-type: tm+mt
-source-git-commit: 5ba23738118d7944026f405110e25b6a7f90866b
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1312'
 ht-degree: 90%
 
 ---
