@@ -7,10 +7,11 @@ uuid: 215d09a6-949c-45ef-b2b0-88cd0cb4b99c
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e9b78e2b-af7d-49d7-b37f-c96ec732015e
+feature: インタラクティブコミュニケーション
 translation-type: tm+mt
-source-git-commit: 79dcf6816e1156604c0c9279b727ea436ad1826a
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1695'
+source-wordcount: '1697'
 ht-degree: 56%
 
 ---
@@ -199,7 +200,7 @@ ht-degree: 56%
 1. 左側のペインで、「**変数**」タブを選択して「**作成**」をタップします。
 1. 「**変数の作成**」セクションで、次の手順を実行します。
 
-   1. 変数の名前として「**Previousbalance**」と入力します。
+   1. 変数の名前として「**前のバランス**」と入力します。
    1. 「**数値**」をタイプとして選択します。
    1. 「**作成**」をタップします。
 
