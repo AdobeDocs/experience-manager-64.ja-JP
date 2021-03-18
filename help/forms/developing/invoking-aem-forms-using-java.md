@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '5479'
+source-wordcount: '5480'
 ht-degree: 87%
 
 ---
@@ -992,7 +993,7 @@ Java クライアントライブラリを使用して次の手順を実行する
 1. `RepositoryInfomodelFactoryBean`オブジェクトの`newImage`メソッドを呼び出し、次の値を渡して、`Resource`オブジェクトを作成します。
 
    * `new Id()`を指定して一意のID値を指定します。
-   * `new Lid()`を指定して一意のUUID値を返します。
+   * `new Lid()`を指定して一意のUUID値を指定します。
    * リソースの名前。XDP ファイルのファイル名を指定できます。
 
    戻り値を `Resource` にキャストします。
