@@ -2,10 +2,12 @@
 title: Brand Portal へのフォルダーの公開
 description: Brand Portalにアセットを公開および非公開する方法を説明します。
 contentOwner: VG
+feature: Brand Portal
+role: 開業医
 translation-type: tm+mt
-source-git-commit: f09853921dec6602952f369982a1563c7e4a9727
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '425'
 ht-degree: 52%
 
 ---
