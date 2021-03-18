@@ -1,7 +1,7 @@
 ---
 title: We.Retail のグローバル化されたサイト構造の使用
 seo-title: We.Retail のグローバル化されたサイト構造の使用
-description: 'null'
+description: We.Retail のグローバル化されたサイト構造の使用
 seo-description: 'null'
 uuid: 5e5a809d-578f-4171-8226-cb65aa995754
 contentOwner: User
@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: d674458c-d5f3-4dee-a673-b0777c02ad30
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '423'
-ht-degree: 91%
+source-wordcount: '430'
+ht-degree: 92%
 
 ---
 
