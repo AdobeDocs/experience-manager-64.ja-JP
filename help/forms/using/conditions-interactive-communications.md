@@ -7,10 +7,11 @@ uuid: 93d69398-aead-4e23-8db3-b3e890477113
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 3ade2a54-cb9a-4e34-808c-c6feec23cfe1
+feature: インタラクティブコミュニケーション
 translation-type: tm+mt
-source-git-commit: 8afc09103b34b12e0218a133b87422456cb20d35
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1506'
+source-wordcount: '1508'
 ht-degree: 68%
 
 ---
@@ -74,7 +75,7 @@ ht-degree: 68%
 
    ![createconditionscreenassetsaddedannotated](assets/createconditionscreenassetsaddedannotated.png)
 
-   **`[A]`変更を拒否します。** アセットおよび条件のルールに対して行った変更を拒否するには、このアイコンをタップします。
+   **`[A]`変更を拒否します。** このアイコンをタップすると、アセットおよび条件のルールに対して行った変更が拒否されます。
 
    **`[B]`変更を受け入れます。** このアイコンをタップして、条件のアセットおよびルールに対して行った変更を受け入れます。
 
@@ -152,7 +153,7 @@ ht-degree: 68%
 
    ポリシータイプが「標準」の場合にアセットを表示するためのルール
 
-   * ルールを作成または編集中に、![icon_resize](assets/icon_resize.png) （サイズ変更）をタップして、ルールを作成/ルールを編集ダイアログを展開することもできます。 ダイアログを拡張して全画面表示にすると、ルールを構成する[変数](#variables)を作成できるようになります。「サイズ変更」を再度タップして、通常のルール作成ダイアログに戻ります。
+   * ルールを作成または編集中に、![icon_resize](assets/icon_resize.png) （サイズ変更）をタップして、ルールを作成/ルールを編集ダイアログを展開することもできます。 ダイアログを拡張して全画面表示にすると、ルールを構成する[変数](#variables)を作成できるようになります。「サイズ変更」を再度タップして、通常の「ルールを作成」ダイアログに戻ります。
    * 1 つのルールで複数の条件を作成することもできます。
 
 1. 「**[!UICONTROL 完了]**」をタップします。
