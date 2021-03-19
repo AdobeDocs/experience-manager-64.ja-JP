@@ -1,7 +1,7 @@
 ---
 title: SPA およびサーバーサイドレンダリング
 seo-title: SPA およびサーバーサイドレンダリング
-description: 'null'
+description: '"SPA およびサーバーサイドレンダリング"'
 seo-description: 'null'
 uuid: fbf7d0d1-865d-45d2-aeec-a7e3caf3fcb2
 contentOwner: bohnert
@@ -10,9 +10,9 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 30d25772-0df7-468e-bcbd-c6fb2e962662
 translation-type: tm+mt
-source-git-commit: 226cd6688a579409371cb17f6ba31548bee312b3
+source-git-commit: 160cc2669ac19aacdce5e96d1ba1eb4bafcb6d58
 workflow-type: tm+mt
-source-wordcount: '1711'
+source-wordcount: '1714'
 ht-degree: 64%
 
 ---
