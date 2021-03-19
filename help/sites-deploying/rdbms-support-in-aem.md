@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: 56a984a5-4b7f-4a95-8a17-95d2d355bfed
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 5513b24953438cc6c1b3f0027ff5535b4a1874d8
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '719'
 ht-degree: 68%
 
 ---
@@ -75,7 +76,7 @@ JDBC ドライバ用の OSGi バンドルの作成手順については、Apache
       * *http://serveraddress:serverport/system/console/bundles*&#x200B;に移動します。
       * **インストール/更新**&#x200B;を選択
       * ダウンロードしたZIPアーカイブから抽出したバンドルを参照して選択します
-      * **Oracle社のMySQLcom.mysql.jdbc**&#x200B;用JDBCドライバーがアクティブであることを確認し、開始します。
+      * **MySQLcom.mysql.jdbc**&#x200B;用のOracle社のJDBCドライバーがアクティブであることを確認し、開始します。
 
 1. 最後に、`crx3`と`crx3rdb`の実行モードを持つ開始AEM:
 
@@ -97,7 +98,7 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 
    * `org.postgresql.Driver` PostgreSQLの場合；
    * `com.ibm.db2.jcc.DB2Driver` for DB2;
-   * `oracle.jdbc.OracleDriver` oracleの
+   * `oracle.jdbc.OracleDriver` oracleのため
    * `com.mysql.jdbc.Driver`（MySQL および MariaDB、試行用）
    * c `om.microsoft.sqlserver.jdbc.SQLServerDriver` for Microsoft SQL Server （試験的）。
 
@@ -112,7 +113,7 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 * `jdbc:postgresql:databasename` PostgreSQLの場合；
 
 * `jdbc:db2://localhost:port/databasename` for DB2;
-* `jdbc:oracle:thin:localhost:port:SID` oracleの
+* `jdbc:oracle:thin:localhost:port:SID` oracleのため
 * `jdbc:mysql://localhost:3306/databasename`（MySQL および MariaDB、試行用）
 
 * `jdbc:sqlserver://localhost:1453;databaseName=name` (Microsoft SQL Server （試験的）用)
