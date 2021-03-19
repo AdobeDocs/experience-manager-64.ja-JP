@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: df7b60bb-4897-479e-a05e-1b1e9429ed87
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2506'
+source-wordcount: '2507'
 ht-degree: 4%
 
 ---
@@ -49,7 +50,7 @@ REST要求を使用してAEM Formsサービスを呼び出す場合、次のデ�
 
    これらのデータ型は、一般に、Workbenchで作成されたプロセスへの入力値として受け入れられます。
 
-   HTTPPOSTメソッドを使用してFormsサービスを呼び出した場合、HTTP要求本文内で引数が渡されます。 AEM Formsサービスの署名に文字列入力パラメーターがある場合、要求本文には、入力パラメーターのテキスト値を含めることができます。 サービスの署名で複数の文字列パラメーターが定義されている場合、リクエストは、HTTPの`application/x-www-form-urlencoded`表記の後に、フォームのフィールド名として使用されているパラメーター名を付けることができます。
+   HTTPPOSTメソッドを使用してFormsサービスを呼び出した場合、引数はHTTP要求本文内で渡されます。 AEM Formsサービスの署名に文字列入力パラメーターがある場合、要求本文には、入力パラメーターのテキスト値を含めることができます。 サービスの署名で複数の文字列パラメーターが定義されている場合、リクエストは、HTTPの`application/x-www-form-urlencoded`表記の後に、フォームのフィールド名として使用されているパラメーター名を付けることができます。
 
    Formsサービスが文字列パラメーターを返す場合、結果は出力パラメーターのテキスト表現になります。 サービスが複数の文字列パラメーターを返す場合、出力パラメーターを次の形式でエンコードしたXMLドキュメントが返されます。
    ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`
