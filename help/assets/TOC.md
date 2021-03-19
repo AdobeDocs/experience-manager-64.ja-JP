@@ -6,8 +6,9 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
+feature-set: Experience Manager Assets
 translation-type: tm+mt
-source-git-commit: c3eeb3d4fc4b6ce7548c6385c21c6e4ed7b2f0e6
+source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 77%
@@ -15,7 +16,7 @@ ht-degree: 77%
 ---
 
 
-# Assets ガイド {#assets}
+# Assets ガイド  {#assets}
 
 + [アセットユーザーガイド](home.md)
 + [AEM 6.4アセットリリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/assets.html)
