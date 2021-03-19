@@ -8,10 +8,11 @@ content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a1070d9e-fb7c-4134-b6d5-ffa2d3e9718d
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1083'
 ht-degree: 89%
 
 ---
@@ -221,7 +222,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr> 
   <tr> 
    <td><p><code>exclusiveMaximum</code></p> </td> 
-   <td><p>Boolean</p> </td> 
+   <td><p>ブール型</p> </td> 
    <td><p>true の場合、フォームのコンポーネントで指定された数値または日付は、maximum プロパティに指定された数値または日付よりも小さい値である必要があります。</p> <p>false の場合、フォームのコンポーネントで指定された数値または日付は、maximum プロパティに指定された数値または日付以下の値である必要があります。</p> </td> 
    <td> 
     <ul> 
@@ -232,7 +233,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr> 
   <tr> 
    <td><p><code>exclusiveMinimum</code></p> </td> 
-   <td><p>ブール値</p> </td> 
+   <td><p>ブール型</p> </td> 
    <td><p>true の場合、フォームのコンポーネントで指定された数値または日付は、minimum プロパティに指定された数値または日付よりも大きい値である必要があります。</p> <p>false の場合、フォームのコンポーネントで指定された数値または日付は、minimum プロパティに指定された数値または日付以上の値である必要があります。</p> </td> 
    <td> 
     <ul> 
@@ -301,7 +302,7 @@ bindRef</code>フィールドは、ツリー要素とスキーマ内の要素ま
 
 >[!NOTE]
 >
->属性の`bindRef`値には`@`記号が含まれており、属性と要素を区別します。 例： `/config/projectDetails/@duration`
+>属性の`bindRef`値には`@`記号が含まれており、属性と要素を区別します。 例：`/config/projectDetails/@duration`
 
 **繰り返し可能なサブフォーム（minOccours 値または maxOccurs 値が 1 より大きい）では、サブフォーム（任意の複合型から生成された構造）の個々の要素をドラッグできないのはなぜですか？**
 
