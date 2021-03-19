@@ -7,10 +7,11 @@ page-status-flag: de-activated
 uuid: 60f142aa-81ca-4333-8614-85a01e23e917
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: abf41bed195c7ea77202e0772e7be12501a6a5ac
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1154'
 ht-degree: 66%
 
 ---
