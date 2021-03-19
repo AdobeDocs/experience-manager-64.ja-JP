@@ -7,10 +7,11 @@ uuid: d1baa9eb-dffe-4e02-af95-394e7ee0d6ee
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 7bdf1f06-c298-4695-bad1-e402cf472086
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: 7c65752a969d9089ad61c29b0581327d32e022d1
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '6809'
+source-wordcount: '6811'
 ht-degree: 81%
 
 ---
