@@ -9,10 +9,11 @@ topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 1e533a8c-f200-40ca-b170-0e9abee8513e
 noindex: true
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2781'
+source-wordcount: '2783'
 ht-degree: 66%
 
 ---
@@ -49,7 +50,7 @@ ht-degree: 66%
 
    フォームモデルを使用せずにアダプティブフォームを作成できます。 レコードのドキュメントは、アダプティブフォーム用に自動的に生成されます。
 
-フォームモデルを選択する場合は、「レコードドキュメント設定のドキュメント」で使用できるオプションを使用して、レコードのテンプレートを設定します。 「[レコードテンプレートの設定のドキュメント](#document-of-record-template-configuration)」を参照してください。
+フォームモデルを選択する場合は、「レコードテンプレートの設定のドキュメント」で使用できるオプションを使用して、レコードのドキュメントを設定します。 「[レコードテンプレートの設定のドキュメント](#document-of-record-template-configuration)」を参照してください。
 
 ## 自動的に生成されたレコードのドキュメント {#automatically-generated-document-of-record}
 
@@ -286,7 +287,7 @@ ht-degree: 66%
 
    **[!UICONTROL レコードのドキュメントのスタイルと外観が定義された基本テンプレートとして XDP ファイルを使用するには、このオプションを選択します。このオプションを選択すると、AEM Forms リポジトリで利用可能なすべての XDP ファイルが表示されます。必要なファイルを選択します。]**
 
-   **レコードのドキュメントを生成する基本テンプレートとしてFormsテンプレートを選択します。レコードのテンプレートのスタイルと外観を定義する基本テンプレートとしてXDPファイルを使用する場合は、このオプションを選択します。** このオプションを選択すると、AEM Forms リポジトリで利用可能なすべての XDP ファイルが表示されます。必要なファイルを選択します。
+   **レコードのドキュメントを生成する基本テンプレートとしてFormsテンプレートを選択します** レコードのドキュメントのスタイルと外観を定義する基本テンプレートとしてXDPファイルを使用する場合は、このオプションを選択します。このオプションを選択すると、AEM Forms リポジトリで利用可能なすべての XDP ファイルが表示されます。必要なファイルを選択します。
 
    >[!NOTE]
    >
