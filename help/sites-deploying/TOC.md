@@ -6,10 +6,13 @@ audience: end-user
 user-guide-title: AEM 6.4 デプロイガイド
 breadcrumb-title: デプロイガイド
 user-guide-description: Adobe Managed Services クラウドデプロイメントを含む、Adobe Experience Manager 6.4 のインストール、デプロイメント、およびアーキテクチャについて詳しく説明します。
+feature-set: Experience Manager Sites
+feature: デプロイ
+role: アーキテクト
 translation-type: tm+mt
-source-git-commit: 7345a3c392dc6df495454a061a8a0624a4fb46d1
+source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '358'
 ht-degree: 93%
 
 ---
