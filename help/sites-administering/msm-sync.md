@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: c491f0f3-375d-4203-bdf3-234987bbf685
+feature: マルチサイトマネージャー
 translation-type: tm+mt
-source-git-commit: 38c713b2c5aa93805b10bbb60c0dbdfa24872eb1
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '2708'
 ht-degree: 82%
 
 ---
@@ -25,7 +26,7 @@ ht-degree: 82%
 * 既存のロールアウト設定が要件を満たしているかどうか、または 1 つ以上のロールアウト設定を作成する必要があるかどうかを判断します。
 * ライブコピーに使用するロールアウト設定を指定します。
 
-## インストールされるロールアウト設定とカスタムロールアウト設定 {#installed-and-custom-rollout-configurations}
+## インストールされるロールアウト設定とカスタムロールアウト設定  {#installed-and-custom-rollout-configurations}
 
 ここでは、インストールされるロールアウト設定、それらの設定で使用する同期アクションおよびカスタム設定の作成方法（必要な場合）に関する情報を示します。
 
