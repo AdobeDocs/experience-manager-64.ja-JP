@@ -9,16 +9,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3911'
+source-wordcount: '3913'
 ht-degree: 97%
 
 ---
 
 
-# HTML5 フォームのスクリプティングのサポート  {#scripting-support-for-html-forms}
+# HTML5 フォームのスクリプティングのサポート {#scripting-support-for-html-forms}
 
 以下は、JavaScript と FormCalc プロパティ、および HTML5 フォームでサポートされているメソッドの一覧です。
 
@@ -85,7 +86,7 @@ ht-degree: 97%
  </tbody> 
 </table>
 
-### $host {#host}
+### $ホスト {#host}
 
 <table> 
  <tbody> 
