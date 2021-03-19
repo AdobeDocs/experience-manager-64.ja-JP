@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '844'
 ht-degree: 57%
 
 ---
@@ -62,7 +63,7 @@ ht-degree: 57%
 
 * MongoDB は AEM と同じホストか、リモートで実行できます。
 
-### MongoDB を起動します。  {#start-mongodb}
+### MongoDB を起動します。{#start-mongodb}
 
 * &lt;mongo-install>/bin/mongod --dbpath &lt;mongo-dbpath>
 
