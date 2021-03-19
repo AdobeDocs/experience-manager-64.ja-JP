@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 01d5677f-5c87-4a6e-987b-8eda9acc0b27
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1423'
+source-wordcount: '1424'
 ht-degree: 3%
 
 ---
@@ -156,7 +157,7 @@ XMP Utilities API(Java)を使用してXMPメタデータを読み込みます。
 
    >[!NOTE]
    >
-   >adobe-pdfutility-client.jarファイルには、XMP Utilitiesサービスをプログラムで呼び出すことを可能にするクラスが含まれています。
+   >adobe-pdfutility-client.jarファイルには、XMP Utilitiesサービスをプログラム的に呼び出すことを可能にするクラスが含まれています。
 
 1. XMPUtilityServiceクライアントの作成
 
