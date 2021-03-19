@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: interactive-communications
 discoiquuid: 16c7e698-258d-4e63-9828-f538dc7d3294
+feature: インタラクティブコミュニケーション
 translation-type: tm+mt
-source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2423'
+source-wordcount: '2425'
 ht-degree: 47%
 
 ---
@@ -34,7 +35,7 @@ ht-degree: 47%
 * ポイントグラフ
 * 領域
 
-## Interactive Communication &lt;a0追加/>でグラフを設定します。{#add-and-configure-chart-in-an-interactive-communication}
+## Interactive Communicationの追加グラフの設定{#add-and-configure-chart-in-an-interactive-communication}
 
 次の手順を実行して、対話型通信にグラフを追加します。
 
@@ -98,7 +99,7 @@ ht-degree: 47%
 * **[!UICONTROL 経費の上にマウスを置くと表示される]** ツールチップ(Webチャネルのみ) — この例 `${x}: $ ${y}`では、 `[Expense Label: $ Amount]` (例：テーマパーク訪問：$ 315)
 
 ![Interactive ](assets/chartprintchannel.png)
-**CommunicationFigureの印刷出力の列グラフ：Interactive Communicationの印刷出力の** *列グラフ*
+**CommunicationFigureの印刷出力の列グラフ：Interactive** *Communicationの印刷出力の列グラフ*
 
 **A.** Y軸 — フォームデータモデルのプロパティから取得した金額、およびタイトルプロパティが金額($)に設定された **金額($)** B. **Label Direction of X-axis set to Tilt Left** C.X Axis — フォームデータモデルのプロパティから取得した費用の説明、タイトルプロパティが経費に設定された
 
