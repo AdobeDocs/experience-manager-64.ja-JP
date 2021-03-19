@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: e-commerce
 content-type: reference
 discoiquuid: ad80505f-116e-43f1-8d93-ffe6e8b1ac46
+feature: Commerce統合フレームワーク
 translation-type: tm+mt
-source-git-commit: fc2c7b62960a0a3cb45d595673b8dcfeb990d7c2
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3004'
+source-wordcount: '3007'
 ht-degree: 85%
 
 ---
@@ -496,7 +497,7 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
 1. **セクションのブループリント**&#x200B;テンプレートを使用して新規ページを作成します。
 
-   例： `Swimwear`
+   例：`Swimwear`
 
 1. 新しい`Swimwear`ページを開き、**Blueprint**&#x200B;を編集をクリックして&#x200B;**プロパティ**&#x200B;ダイアログを開きます。このダイアログで、**製品**&#x200B;の選択を設定できます。
 
