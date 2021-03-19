@@ -1,7 +1,7 @@
 ---
 title: アダプティブテンプレートレンダリング
 seo-title: アダプティブテンプレートレンダリング
-description: 'null'
+description: アダプティブテンプレートレンダリング
 seo-description: 'null'
 uuid: 97226ae1-e42a-40ae-a5e0-886cd77559d8
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: f5cb0e98-0d6e-4f14-9b94-df1a9d8cbe5b
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '490'
 ht-degree: 83%
 
 ---
