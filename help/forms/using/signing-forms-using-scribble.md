@@ -7,16 +7,17 @@ uuid: e807d0de-6d5f-458e-be3e-273ed7a521c0
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 6a806727-28c5-430e-9a83-b43e0e9d9e1c
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '513'
 ht-degree: 71%
 
 ---
 
 
-# 手書き署名を使用したフォームへの電子署名の適用  {#apply-electronic-signatures-to-a-form-using-scribble-signatures}
+# 手書き署名を使用したフォームへの電子署名の適用 {#apply-electronic-signatures-to-a-form-using-scribble-signatures}
 
 **手書き署名**&#x200B;コンポーネントや&#x200B;**署名ステップ**&#x200B;コンポーネントを使用すると、アダプティブフォームに手書きで署名することができます。署名ステップコンポーネントでは、アダプティブフォームのPDF バージョンが表示されます。「レコードのドキュメント」オプションを有効にするか、フォームテンプレートベースのアダプティブフォームで、署名手順コンポーネントを使用する必要があります。
 
