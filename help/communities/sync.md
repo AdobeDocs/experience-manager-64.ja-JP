@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 32b56b48-75cb-4cc9-a077-10e335f01a35
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2507'
+source-wordcount: '2508'
 ht-degree: 22%
 
 ---
@@ -96,7 +97,7 @@ AEM Communitiesでは、公開環境から（設定された権限に応じて�
 
 1. 最新のコードがインストールされていることを確認します。
 
-   * [AEM プラットフォームの更新](https://helpx.adobe.com/jp/experience-manager/kb/aem62-available-hotfixes.html)
+   * [AEM プラットフォームの更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)
    * [AEM Communities の更新](deploy-communities.md#latestfeaturepack)
 
 AEM Communitiesでユーザー同期を有効にするには、次の設定が必要です。 Slingコンテンツの配信が失敗しないように、これらの設定が正しいことを確認します。
