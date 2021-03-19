@@ -7,16 +7,17 @@ uuid: aa261e65-a1ec-402b-80de-0ba8a294e315
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: fea76f90-22d5-4836-9901-a35229401eb0
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 35532245929f2e404a96425e4710e911e9ce5b40
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1545'
+source-wordcount: '1547'
 ht-degree: 74%
 
 ---
 
 
-# 送信アクションの設定  {#configuring-the-submit-action}
+# 送信アクションの設定 {#configuring-the-submit-action}
 
 ## 送信アクションの概要 {#introduction-to-submit-actions}
 
@@ -49,7 +50,7 @@ ht-degree: 74%
 
 >[!CAUTION]
 >
->[](/help/forms/using/prepopulate-adaptive-form-fields.md)データに&lt;afData>、&lt;afBoundData>、&lt;/afBoundData>タグを含まないスキーマ(XMLスキーマ、JSONスキーマ、フォームテンプレート、またはフォームデータモデル)に、XMLまたはJSONデータが準拠するフォームテンプレート、フォームデータモデル、またはスキーマベースのアダプティブフォームを事前入力する場合その場合、アダプティブフォームの境界なしフィールド（境界なしフィールドはアダプティブフォームフィールドで、[bindref](/help/forms/using/prepopulate-adaptive-form-fields.md)プロパティがないアダプティブフォームフィールドです）のデータは失われます。
+>[](/help/forms/using/prepopulate-adaptive-form-fields.md)データに&lt;afData>、&lt;afBoundData>、&lt;/afBoundData>タグを含まないスキーマ(XMLスキーマ、JSONスキーマ、フォームテンプレート、またはフォームデータモデル)に、XMLまたはJSONデータを使用して、フォームテンプレート、フォームデータモデル、またはスキーマベースのアダプティブフォームを事前入力するその場合、アダプティブフォームの境界なしフィールド（境界なしフィールドはアダプティブフォームフィールドで、[bindref](/help/forms/using/prepopulate-adaptive-form-fields.md)プロパティがないアダプティブフォームフィールドです）のデータは失われます。
 
 アダプティブフォームがユースケースを実現するように、カスタム送信アクションを作成できます。詳しくは、「[アダプティブフォームのカスタム送信アクションの作成](/help/forms/using/custom-submit-action-form.md)」を参照してください。
 
