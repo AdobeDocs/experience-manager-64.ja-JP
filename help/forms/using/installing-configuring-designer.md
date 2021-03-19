@@ -10,10 +10,11 @@ topic-tags: designer
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 36560809-dba9-49cf-a8ee-23c6766382ef
 noindex: true
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '166'
 ht-degree: 92%
 
 ---
@@ -32,7 +33,7 @@ WorkBench にバンドルされている Designer は、スタンドアロンの
 1. setup.exe をダブルクリックして Designer のインストーラーを起動します。
 1. 先に進んでユーザーの詳細とユーザー情報画面のシリアル番号を入力します。
 1. 使用許諾契約に同意する場合は、「次へ」をクリックして先に進みます。
-1. （オプション）Designer を選択した場所にインストールする場合は、既定のインストールパスを変更します。 「次へ」をクリックします。
+1. （オプション）Designer を選択した場所にインストールする場合は、既定のインストールパスを変更します。 「Next」をクリックします。
 1. 「戻る」をクリックして環境設定を変更します。Designer をインストールするには、「インストール」をクリックします。
 1. インストールが完了したら「完了」をクリックします。
 
