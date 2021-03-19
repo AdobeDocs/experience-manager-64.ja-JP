@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
+role: Administrator
 translation-type: tm+mt
-source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1030'
 ht-degree: 93%
 
 ---
 
 
-# AEM Forms と Adobe LiveCycle の接続  {#connecting-aem-forms-with-adobe-livecycle}
+# AEM Forms と Adobe LiveCycle の接続 {#connecting-aem-forms-with-adobe-livecycle}
 
 Adobe Experience Manager (AEM) LiveCycle Connector を使用し、AEM Web アプリとワークフローから Adobe LiveCycle ES4 Document Services を呼び出すことができます。LiveCycle はリッチクライアント SDK を提供します。これにより、クライアントアプリケーションは Java API を使用して LiveCycle サービスを開始します。AEM LiveCycle Connector は OSGi 環境でこれらの API の使用を簡素化します。
 
