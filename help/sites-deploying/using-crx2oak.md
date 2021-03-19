@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: e938bdc7-f8f5-4da5-81f6-7f60c6b4b8e6
+feature: アップグレード
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1259'
 ht-degree: 65%
 
 ---
@@ -152,9 +153,9 @@ CRX2Oak はデフォルトで、メモリマップ操作もサポートしてい
 
 ### バージョンストアオプション {#version-store-options}
 
-* `--copy-orphaned-versions`:孤立したバージョンをコピーするのをスキップします。サポートされるパラメーターは次のとおりです。`true`、`false`、`yyyy-mm-dd`。 デフォルトは`true`です。
+* `--copy-orphaned-versions`:孤立したバージョンをコピーするのをスキップします。サポートされるパラメーターは次のとおりです。`true`、`false`、`yyyy-mm-dd`。 デフォルトは `true`.
 
-* `--copy-versions:` バージョンストレージをコピーします。パラメーター: `true`, `false`, `yyyy-mm-dd`. デフォルトは`true`です。
+* `--copy-versions:` バージョンストレージをコピーします。パラメーター: `true`, `false`, `yyyy-mm-dd`. デフォルトは `true`.
 
 #### パスオプション {#path-options}
 
