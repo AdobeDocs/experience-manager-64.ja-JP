@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1563'
 ht-degree: 0%
 
 ---
@@ -473,7 +474,7 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
 
 ## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api}を使用したフラグメントに基づくフォームのレンダリング
 
-次のコードの例は、フラグメントに基づくフォームをレンダリングします。 フォームデザインの名前は&#x200B;*PurchaseOrderDynamic.xdp*&#x200B;で、AEM Formsリポジトリ内にあります（XDPファイルはリポジトリ内のFormsFolderという名前のフォルダーに保存されます）。 また、POFragmentフォームが参照するフラグメントもリポジトリ内に配置する必要があります。 (「[フラグメントに基づくFormsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-forms-based-on-fragments)」を参照)。
+次のコードの例は、フラグメントに基づくフォームをレンダリングします。 フォームデザインの名前は&#x200B;*PurchaseOrderDynamic.xdp*&#x200B;で、AEM Formsリポジトリ内にあります（XDPファイルはリポジトリ内のFormsFolderという名前のフォルダーに保存されます）。 また、POFragmentフォームが参照するフラグメントもリポジトリ内に配置する必要があります。 ([フラグメントに基づくFormsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-forms-based-on-fragments)を参照)。
 
 ```as3
  /* 
