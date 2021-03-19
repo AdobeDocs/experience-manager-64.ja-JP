@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '4654'
+source-wordcount: '4655'
 ht-degree: 1%
 
 ---
@@ -128,7 +129,7 @@ docRef.referenceType = DocumentReference.REF_TYPE_INLINE; 
 docRef.text = "Text for my document";  // Optionally, you can override the server’s default character set  // if necessary:  // docRef.charsetName=CharacterSetName  ...
 ```
 
-* ドキュメントがサーバ上にない場合は、Remotingアップロードサーブレットを使用して、ドキュメントをAEM Formsにアップロードします。 AEM Formsでは、安全なドキュメントをアップロードする機能が新たに導入されました。 セキュアドキュメントをアップロードする場合、*ドキュメントアップロードアプリユーザ*ロールを持つユーザを使用する必要があります。 このロールがないと、セキュリティで保護されたドキュメントをアップロードできません。 セキュリティで保護されたドキュメントをアップロードするには、シングルサインオンを使用することをお勧めします。 ([Remoting](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)を使用して、保護されたドキュメントを呼び出してプロセスを呼び出すを参照)。
+* ドキュメントがサーバ上にない場合は、Remotingアップロードサーブレットを使用して、ドキュメントをAEM Formsにアップロードします。 AEM Formsでは、安全なドキュメントをアップロードする能力が新たに導入されました。 セキュアドキュメントをアップロードする場合、*ドキュメントアップロードアプリユーザ*ロールを持つユーザを使用する必要があります。 このロールがないと、セキュリティで保護されたドキュメントをアップロードできません。 セキュリティで保護されたドキュメントをアップロードするには、シングルサインオンを使用することをお勧めします。 ([Remoting](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)を使用して、保護されたドキュメントを呼び出してプロセスを呼び出すを参照)。
 
    >[!NOTE]
    セキュリティで保護されていないドキュメントのアップロードをAEM Formsで許可するように設定されている場合は、ドキュメントのアップロードドキュメントロールを持たないユーザーを使用して、アプリをアップロードできます。 ユーザは、ドキュメントのアップロード権限を持つこともできます。 ただし、AEM Formsがセキュリティで保護されたドキュメントのみを許可するように設定されている場合は、ドキュメントアップロードアプリケーションユーザーロールまたはドキュメントアップロード権限を持っていることを確認してください。 [セキュリティで保護されたドキュメントとセキュリティで保護されていないを受け入れるようにAEM Formsを設定する](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)*を参照してください。
@@ -217,7 +218,7 @@ Flexで構築されたアプリケーションからAEM Formsプロセスを呼�
 
 **AEM Formsへのチャネルを作成する**
 
-次のActionScriptの例に示すように、クライアントアプリケーションは、MXMLまたはActionScriptでチャネルを指定することでAEM Formsを呼び出すことができます。 チャネルは、`AMFChannel`、`SecureAMFChannel`、`HTTPChannel`、または`SecureHTTPChannel`でなければなりません。
+次のActionScriptの例に示すように、クライアントアプリケーションは、MXMLまたはActionScriptでチャネルを指定することで、AEM Formsを呼び出すことができます。 チャネルは、`AMFChannel`、`SecureAMFChannel`、`HTTPChannel`、または`SecureHTTPChannel`でなければなりません。
 
 ```as3
      ... 
