@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features, best-practices
 content-type: reference
 discoiquuid: 04344537-7485-40a9-ad14-804ba448f1e2
+feature: マルチサイトマネージャー
 translation-type: tm+mt
-source-git-commit: 9710c9931b4f17073c712f5869a1843c1d99ee8e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1533'
 ht-degree: 64%
 
 ---
@@ -47,7 +48,7 @@ MSM は、コンテンツのデプロイメントを自動化するための設�
 >また、[参照コンポーネント](/help/sites-authoring/default-components-foundation.md#reference)を使用して、単一のページまたは段落を再利用することもできます。ただし、次の点に注意してください。
 >
 >* MSM のほうが柔軟性が高く、同期するコンテンツや同期のタイミングを詳細に制御できます。
->* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)は基礎コンポーネントよりも推奨されています。
+>* [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)は基礎コンポーネントよりも推奨されています。
 
 >
 
