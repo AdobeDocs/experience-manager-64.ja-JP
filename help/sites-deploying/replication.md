@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 6fe1c5c5-deb7-4405-82e4-23e0f90e2bd8
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 19f6ea07e192294124d5251e31ead93deae57349
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3588'
+source-wordcount: '3589'
 ht-degree: 72%
 
 ---
@@ -108,7 +109,7 @@ AEM の標準インストールに含まれている Geometrixx Web サイトを
 
    この詳細（設定とログ）は、作成者環境のツールコンソールからアクセスできます。または
 
-   `http://localhost:4502/etc/replication/agents.author/publish.html`.
+   `http://localhost:4502/etc/replication/agents.author/publish.html`
 
 ### レプリケーションエージェント（デフォルト） {#replication-agents-out-of-the-box}
 
@@ -128,7 +129,7 @@ AEM の標準インストールに含まれている Geometrixx Web サイトを
 
 ### 設定  {#settings}
 
-* **名前**
+* **Name**
 
    レプリケーションエージェントの一意の名前です。
 
@@ -213,7 +214,7 @@ AEM の標準インストールに含まれている Geometrixx Web サイトを
 
    ディスパッチャーフラッシュエージェントの場合、URIプロパティは、パスベースの仮想ホストエントリを使用してファームを区別する場合にのみ使用されます。このフィールドを使用して、無効にするファームをターゲットします。 例えば、ファーム #1 の仮想ホストは `www.mysite.com/path1/*` で、ファーム #2 の仮想ホストは `www.mysite.com/path2/*` です。この場合、`/path1/invalidate.cache` の URL を使用して最初のファームをターゲット設定し、`/path2/invalidate.cache` を使用して 2 つ目のファームをターゲット設定できます。
 
-* **User**
+* **ユーザー**
 
    ターゲットへのアクセスに使用するアカウントのユーザー名です。
 
@@ -520,7 +521,7 @@ CRXDE Lite を使用して、レプリケーションエージェントの様々
 * `agents.publish`
 * `treeactivation`
 
-2つの`agents`は、適切な環境に関する設定情報を保持し、その環境が実行中の場合にのみアクティブになります。 例えば、`agents.publish`はパブリッシュ環境でのみ使用されます。 次のスクリーンショットは、AEM WCMに含まれる、作成者環境の発行エージェントを示しています。
+2つの`agents`は、適切な環境に関する設定情報を保持し、その環境が実行されている場合にのみアクティブになります。 例えば、`agents.publish`はパブリッシュ環境でのみ使用されます。 次のスクリーンショットは、AEM WCMに含まれる、作成者環境の発行エージェントを示しています。
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
