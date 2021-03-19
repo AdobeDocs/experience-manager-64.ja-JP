@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: a9ab5a78-2add-46e1-a8f2-444d0f25f43a
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '339'
 ht-degree: 76%
 
 ---
 
 
-# HTML5 フォームのデフォルトスタイルの変更  {#changing-default-styles-of-html-forms}
+# HTML5 フォームのデフォルトスタイルの変更 {#changing-default-styles-of-html-forms}
 
 HTML5 フォームは HTML5 機能の使用によりレンダリングされ、レンダリングされるフォームのスタイル設定は CSS の使用によって実行されます。HTML5 フォームのデフォルトの外観は、その PDF レンダリングに似ています。開発者はカスタム CSS を使用して、HTML5 フォームのデフォルトの外観を変更できます。
 
