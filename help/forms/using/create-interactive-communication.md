@@ -7,10 +7,11 @@ uuid: b98e9a49-cef2-42f2-b484-8765b859895b
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: c106aa41-cbc0-4daf-9ac6-6c0d23710010
+feature: インタラクティブコミュニケーション
 translation-type: tm+mt
-source-git-commit: 73d0dea62c294bea435364fb9c6892d80751d90d
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3152'
+source-wordcount: '3154'
 ht-degree: 48%
 
 ---
@@ -244,7 +245,7 @@ Interactive Communicationオーサリングインターフェイスについて�
 
 ## インタラクティブ通信のコンポーネントにルールを適用する {#rules}
 
-インタラクティブコミュニケーション内のコンポーネントまたはコンテンツを条件付きにするには、コンポーネント/コンテンツをタップし、![createruleicon](assets/createruleicon.png)（ルールを作成）を選択してルールエディターを起動します。
+インタラクティブコミュニケーション内のコンポーネントまたはコンテンツを条件付きにするには、コンポーネント/コンテンツの一部をタップし、![createruleicon](assets/createruleicon.png)（ルールを作成）を選択してルールエディターを起動します。
 
 詳しくは、次を参照してください。
 
