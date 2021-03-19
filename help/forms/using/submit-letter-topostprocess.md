@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 637342e8-fbdd-4cda-b175-56a805b3b480
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: f234d368163f4260563d69230a2cbda37b6d315a
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '864'
 ht-degree: 59%
 
 ---
@@ -45,7 +46,7 @@ ht-degree: 59%
 1. ユーザー名とパスワードを指定します。
 1. sun.util.calendarが「ファイアウォール設定のデシリアル化」に追加されていることを確認します。
 
-   「ファイアウォール設定のデシリアル化」に移動し、「パッケージプリフィックスのホワイトリストクラス」の下で、sun.util.calendarを追加します。
+   「ファイアウォール設定のデシリアル化」に移動し、「パッケージプリフィックスのホワイトリストに登録されたクラス」の下で、sun.util.calendarを追加します。
 
 1. これで、サーバーがマッピングされ、レターの作成時に、JEE上のAEM Formsの後処理がAEMユーザーインターフェイスで使用できるようになります。
 
