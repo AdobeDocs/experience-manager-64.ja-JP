@@ -7,10 +7,11 @@ uuid: cd123d42-f7cf-489d-8182-f3a01a2a4799
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integration
 discoiquuid: 2ee45ac0-bc15-403a-93fc-c8592afb967d
+feature: フォームデータモデル
 translation-type: tm+mt
-source-git-commit: 0fe74ef5483cf1f577be51c200ab2820d7ed64e5
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3150'
+source-wordcount: '3153'
 ht-degree: 81%
 
 ---
