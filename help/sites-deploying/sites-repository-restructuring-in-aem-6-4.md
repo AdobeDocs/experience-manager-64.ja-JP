@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 3eccb2d5-c325-43a6-9c03-5f93f7e30712
+feature: アップグレード
 translation-type: tm+mt
-source-git-commit: 007930ea6f01603cd29b56cda4000d024a8cc1f6
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1598'
 ht-degree: 73%
 
 ---
@@ -301,10 +302,10 @@ AEM 6.4](/help/sites-deploying/repository-restructuring.md)の親ページ[リ�
    <td><p><span class="code">/libs/settings/
       <code>
        wcm
-      </code>/template-types/skaffold/skaffold</span></p> <p><span class="code">/apps/settings/
+      </code>/template-types/skaffold/scaffoldhoold</span></p> <p><span class="code">/apps/settings/
       <code>
        wcm
-      </code>/template-types/skaffold/skaffold</span></p> </td> 
+      </code>/template-types/skaffold/scaffoldhoold</span></p> </td> 
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
