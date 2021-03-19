@@ -7,16 +7,17 @@ uuid: 7df2d234-e2e3-432a-9720-e73296424302
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 10bf1d44-9660-44d9-b2c3-dd9a252efc3a
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: de440f57091d814a0a7ff48e9a0383c5415a0a5b
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1174'
 ht-degree: 67%
 
 ---
 
 
-# アダプティブフォームのレイアウトの機能  {#layout-capabilities-of-adaptive-forms}
+# アダプティブフォームのレイアウトの機能 {#layout-capabilities-of-adaptive-forms}
 
 Adobe Experience Manager（AEM）では、簡単に使用できるアダプティブフォームを作成でき、エンドユーザーに動的なエクスペリエンスを提供します。フォームのレイアウトは、アダプティブフォームでの各項目やコンポーネントの表示方法をコントロールします。
 
@@ -40,7 +41,7 @@ Adobe Experience Manager（AEM）では、簡単に使用できるアダプテ�
 
 これらのすべてのパネルレイアウトは次の場所で定義されます。
 
-`/libs/fd/af/layouts`.
+`/libs/fd/af/layouts`
 
 >[!NOTE]
 >
