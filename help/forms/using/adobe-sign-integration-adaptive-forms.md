@@ -8,10 +8,11 @@ contentOwner: sashanka
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 7d494c2e-d457-4d52-89be-a77ffa07eb88
+feature: Adobe Sign，アダプティブForms
 translation-type: tm+mt
-source-git-commit: 7ea83f879d5c3f5699d2a783686c53c5292fcf8a
+source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
 workflow-type: tm+mt
-source-wordcount: '982'
+source-wordcount: '986'
 ht-degree: 63%
 
 ---
