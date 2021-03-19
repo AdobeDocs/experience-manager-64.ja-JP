@@ -7,10 +7,11 @@ uuid: ed95fc64-56b3-4ea1-a5ba-2e96953fca56
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: c5a78d6c2b8a55cad6266e86e9b990cafc038431
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '4146'
+source-wordcount: '4148'
 ht-degree: 82%
 
 ---
@@ -105,11 +106,11 @@ AEM Forms が提供する[ルールエディター](/help/forms/using/rule-edito
 ルールエディターには、ルールを記述するために、視覚的なエディターとコードエディターが用意されています。コードエディターモードを使用してルールを記述する際には、以下を考慮してください。
 
 * ルールの記述時には、フォームフィールドおよびコンポーネントには意味のある固有の名前を使用し、名前の競合を回避します。
-* ルールの式で、コンポーネント自身を参照するには、コンポーネントの `this` 演算子を使用します。これにより、コンポーネント名が変更されても、ルールは有効なままになります。例： `field1.valueCommit script: this.value > 10`
+* ルールの式で、コンポーネント自身を参照するには、コンポーネントの `this` 演算子を使用します。これにより、コンポーネント名が変更されても、ルールは有効なままになります。例：`field1.valueCommit script: this.value > 10`
 
-* 他のフォームコンポーネントを参照する場合には、コンポーネント名を使用します。フィールドまたはコンポーネントの値を取得するには、`value` プロパティを使用します。例： `field1.value`
+* 他のフォームコンポーネントを参照する場合には、コンポーネント名を使用します。フィールドまたはコンポーネントの値を取得するには、`value` プロパティを使用します。例：`field1.value`
 
-* 競合を回避するために、コンポーネントは固有の相対階層で参照します。例： `parentName.fieldName`
+* 競合を回避するために、コンポーネントは固有の相対階層で参照します。例：`parentName.fieldName`
 
 * 複雑なルールや一般的に使用されるルールを処理する場合は、指定してアダプティブフォーム間で再利用できる別のクライアントライブラリの機能としてビジネスロジックを記述することを検討してください。 クライアントライブラリは独立のライブラリとし、jQuery および Underscore.js 以外の外部依存性はなくしてください。クライアントライブラリを使用して、送信されたフォームデータの[サーバー側の再検証](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form)を強制することもできます。
 * アダプティブフォームが提供する一連の API を使用して、アダプティブフォームと通信したり、アダプティブフォーム上でアクションを実行したりできます。主要な API には次の項目が挙げられます。詳しくは、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://adobe.com/go/learn_aemforms_documentation_63)」を参照してください。
