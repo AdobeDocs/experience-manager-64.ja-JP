@@ -10,10 +10,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 discoiquuid: ba90b25f-f672-42c5-8b06-07bb32cc51de
 targetaudience: target-audience upgrader
+feature: アップグレード
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '836'
 ht-degree: 93%
 
 ---
