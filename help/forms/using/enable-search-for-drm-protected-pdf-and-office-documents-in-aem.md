@@ -9,10 +9,11 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7eebef08-83b9-4b56-90ec-35ab3b0c27e8
 noindex: true
+feature: Document Security
 translation-type: tm+mt
-source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '673'
 ht-degree: 77%
 
 ---
