@@ -7,10 +7,11 @@ uuid: 292217c2-8110-4232-a78b-edea212765d2
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integration
 discoiquuid: 1dafd400-16c0-416d-9e81-7bf53b761f98
+feature: フォームデータモデル
 translation-type: tm+mt
-source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1421'
 ht-degree: 64%
 
 ---
@@ -34,7 +35,7 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
 
 ## リレーショナルデータベースの設定 {#configure-relational-database}
 
-AEM Web Console Configuration を使用してリレーショナルデータベースを設定することができます。以下の操作を実行してください。
+AEM Web Console Configuration を使用してリレーショナルデータベースを設定することができます。次の操作を実行します。
 
 1. AEM Webコンソール(`https://[server]:[host]/system/console/configMgr`)に移動します。
 1. 「**[!UICONTROL Apache Sling Connection Pooled DataSource]**」という設定を探し、その設定をタップして編集モードで開きます。
@@ -66,7 +67,7 @@ AEM Web Console Configuration を使用してリレーショナルデータベ�
 
 ## AEM ユーザープロファイルの設定 {#configure-aem-user-profile}
 
-AEM Web コンソールでユーザープロファイルコネクター設定を使用して、AEM のユーザープロファイルを設定することができます。以下の操作を実行してください。
+AEM Web コンソールでユーザープロファイルコネクター設定を使用して、AEM のユーザープロファイルを設定することができます。次の操作を実行します。
 
 1. AEM Webコンソール(`https://[server]:[host]/system/console/configMgr`)に移動します。
 1. **[!UICONTROL 「AEM Formsデータ統合 — ユーザープロファイルコネクタ設定]**」を探し、をタップして設定を編集モードで開きます。
