@@ -8,10 +8,11 @@ content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
+role: Administrator
 translation-type: tm+mt
-source-git-commit: a3e7cd30ba6933e6f36734d3b431db41365b6e20
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '7349'
+source-wordcount: '7350'
 ht-degree: 73%
 
 ---
@@ -52,7 +53,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
 <table> 
  <thead> 
   <tr> 
-   <th><p>問題</p> </th> 
+   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -88,7 +89,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
 <table> 
  <thead> 
   <tr> 
-   <th><p>問題</p></th> 
+   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p></th> 
    <th><p>説明</p></th> 
   </tr> 
  </thead> 
@@ -117,7 +118,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
 <table> 
  <thead> 
   <tr> 
-   <th><p>問題</p> </th> 
+   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -308,7 +309,7 @@ Web Service Definition Language（WSDL）の生成は、開発者が WSDL の生
 <table> 
  <thead> 
   <tr> 
-   <th><p>問題</p> </th> 
+   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -423,7 +424,7 @@ LDAP を使用した最もよく行われる攻撃は、攻撃者が大量の認
 <table> 
  <thead> 
   <tr> 
-   <th><p>問題</p> </th> 
+   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -466,14 +467,14 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
   <tr> 
    <td><p>/ReaderExtensions/*</p> </td> 
    <td><p>PDF ドキュメントに使用権限を適用する Acrobat Reader DC Extensions エンドユーザー Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/edc/*</p> </td> 
    <td><p>Rights Management エンドユーザー Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/edcws/*</p> </td> 
@@ -484,68 +485,68 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
   <tr> 
    <td><p>/pdfgui/*</p> </td> 
    <td><p>PDF Generator 管理 Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/CM タスク/*</p> </td> 
    <td><p>Workspace エンドユーザー Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/workspace-server/*</p> </td> 
    <td><p>Workspace クライアントアプリケーションが必要とする Workspace サーブレットおよび Data Services</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/adobe-bootstrapper/*</p> </td> 
    <td><p>JEE 上の AEM Forms をブートストラップするサーブレット</p> </td> 
    <td><p>不可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/soap/*</p> </td> 
    <td><p>forms サーバー Web サービスの情報ページ</p> </td> 
    <td><p>不可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/soap/services/*</p> </td> 
    <td><p>すべての forms サーバーサービス用の Web サービス URL</p> </td> 
    <td><p>不可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/edc/admin/*</p> </td> 
    <td><p>Rights Management 管理 Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/adminui/*</p> </td> 
    <td><p>管理コンソールホームページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/TruststoreComponent/</p> <p>secured/*</p> </td> 
    <td><p>Trust Store Management 管理ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormsIVS/*</p> </td> 
    <td><p>フォームのレンダリングのテストとデバッグを行う Forms IVS アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/OutputIVS/*</p> </td> 
    <td><p>Output サービスのテストとデバッグを行う Output IVS アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/rmws/*</p> </td> 
@@ -556,56 +557,56 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
   <tr> 
    <td><p>/OutputAdmin/*</p> </td> 
    <td><p>Output 管理ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormServer/*</p> </td> 
    <td><p>Forms Web アプリケーションファイル</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormServer/GetImage</p> <p>Servlet</p> </td> 
    <td><p>HTML 変換時に、JavaScript の取得に使用</p> </td> 
    <td><p>不可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormServerAdmin/*</p> </td> 
    <td><p>Forms 管理ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/repository/*</p> </td> 
    <td><p>WebDAV（デバッグ）アクセス用の URL</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/AACComponent/*</p> </td> 
    <td><p>アプリケーションおよびサービスユーザーインターフェイス</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/WorkspaceAdmin/*</p> </td> 
    <td><p>Workspace 管理ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/rest/*</p> </td> 
    <td><p>残りのサポートページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/CoreSystemConfig/*</p> </td> 
    <td><p>JEE 上の AEM Forms Core 設定ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/um/</p> </td> 
@@ -616,13 +617,13 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
   <tr> 
    <td><p>/um/*</p> </td> 
    <td><p>User Management 管理インターフェイス</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/DoumentManager/*</p> </td> 
    <td><p>HTTP ドキュメント対応の SOAP トランスポートまたは EJB トランスポート経由でリモートエンドポイント、SOAP WSDL エンドポイントおよび Java SDK にアクセスするときに、処理するドキュメントをアップロードおよびダウンロードする。</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
    <td><p>はい</p> </td> 
   </tr> 
  </tbody> 
@@ -676,11 +677,11 @@ JEE上のAEM Formsは、転送者フィルター機能を使用してCSRF攻撃�
 
 JEE上のAEM Formsには、転送者リソースへのアクセスを許可する転送者を指定するサーバーフィルターが用意されています。 デフォルトでは、転送者フィルターは、安全なHTTPメソッド(GETなど)を使用する要求（*CSRF_CHECK_GETS*&#x200B;がtrueに設定されていない場合）をフィルタリングしません。 「許可されている転送者」エントリのポート番号が0に設定されている場合、JEE上のAEM Formsは、ポート番号に関係なく、そのホストからの転送者を持つすべての要求を許可します。 ポート番号が指定されていない場合は、デフォルトのポート 80（HTTP）またはポート 443（HTTPS）からの要求のみが許可されます。「転送者のフィルタ」は、「許可されている転送者」リストのすべてのエントリが削除された場合は無効になります。
 
-ドキュメントサービスを最初にインストールすると、許可されている転送者のリストは、ドキュメントサービスがインストールされているサーバーのアドレスで更新されます。 サーバーのエントリには、サーバー名、IPv4 アドレス、IPv6 アドレス（IPv6 が有効の場合）、ループバックアドレス、localhost エントリなどがあります。「許可されている転送者」リストに追加された名前は、ホストのオペレーティングシステムによって返されます。 例えば、IPアドレスが10.40.54.187のサーバーには、次のエントリが含まれます。`https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. ホストオペレーティングシステムによって返された修飾されていない名前（IPv4アドレス、IPv6アドレス、または修飾ドメイン名を持たない名前）の許可リストは更新されません。 ビジネス環境に合わせて「許可されている転送者」リストを変更します。 実稼働環境にformsサーバーをデプロイする際に、デフォルトの許可されている転送者リストを使用しないでください。 許可されている転送者、転送者の例外、またはURIを変更した後は、必ずサーバーを再起動し、変更を有効にしてください。
+ドキュメントサービスを最初にインストールすると、許可されている転送者のリストは、ドキュメントサービスがインストールされているサーバーのアドレスで更新されます。 サーバーのエントリには、サーバー名、IPv4 アドレス、IPv6 アドレス（IPv6 が有効の場合）、ループバックアドレス、localhost エントリなどがあります。「許可されている転送者」リストに追加された名前は、ホストのオペレーティングシステムによって返されます。 例えば、IPアドレスが10.40.54.187のサーバーには、次のエントリが含まれます。`https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. ホストオペレーティングシステムによって返された修飾されていない名前（IPv4アドレス、IPv6アドレス、または修飾ドメイン名を持たない名前）の許可リストは更新されません。 ビジネス環境に合わせて「許可されている転送者」リストを変更します。 実稼働環境にformsサーバーをデプロイする際に、デフォルトの許可されている転送者リストを使用しないでください。 許可されている転送者、転送者の例外、またはURIを変更した後は、必ずサーバーを再起動して、変更を有効にしてください。
 
 **許可されている転送者リストの管理**
 
-許可されている転送者リストは、管理コンソールのUser Managementインターフェイスから管理できます。 User Management インターフェイスを使用すると、リストを作成、編集または削除できます。許可される転送者リストの使用方法の詳細については、*管理ヘルプ*&#x200B;の* [CSRF攻撃の防止](/help/forms/using/admin-help/preventing-csrf-attacks.md)*の節を参照してください。
+許可されている転送者リストは、管理コンソールのUser Managementインターフェイスから管理できます。 User Management インターフェイスを使用すると、リストを作成、編集または削除できます。許可される転送者リストの使用方法の詳細については、管理ヘルプ&#x200B;*の* [CSRF攻撃の防止](/help/forms/using/admin-help/preventing-csrf-attacks.md)*の節を参照してください。*
 
 **許可されている転送者例外と許可されているURIリストの管理**
 
@@ -787,7 +788,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
  <thead> 
   <tr> 
    <th><p>プロトコル</p> </th> 
-   <th><p>使用方法</p> </th> 
+   <th><p>以下のように</p> </th> 
   </tr> 
  </thead> 
  <tbody>
