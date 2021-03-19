@@ -10,16 +10,17 @@ geptopics: SG_AEMFORMS/categories/jee
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 content-strategy: max-2018
 discoiquuid: a8b1f7df-e36f-4d02-883a-72120fea7046
+role: Administrator
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1873'
 ht-degree: 68%
 
 ---
 
 
-# AEM Forms のアセットとドキュメントの移行  {#migrate-aem-forms-assets-and-documents}
+# AEM Forms のアセットとドキュメントの移行 {#migrate-aem-forms-assets-and-documents}
 
 移行ユーティリティは、[アダプティブFormsアセット](/help/forms/using/introduction-forms-authoring.md)、[クラウド設定](/help/sites-developing/extending-cloud-config.md)、[Correspondence Managementアセット](/help/forms/using/cm-overview.md)を、以前のバージョンで使用されていた形式からAEM 6.4Formsで使用されていた形式に変換します。 移行ユーティリティを実行すると、次の項目が移行されます。
 
@@ -69,7 +70,7 @@ Correspondence Management のアセットを移行する場合は、以下の点
 
 ### 移行ユーティリティの実行 {#runningmigrationutility}
 
-移行ユーティリティを実行した後で、アセットに変更を加えたり、アセットを作成したりします。移行ユーティリティは、アセットの変更や作成後に実行しないことをお勧めします。移行プロセスの実行中は、Correspondence ManagementまたはAdaptiveFormsアセットのユーザーインターフェイスが開いていないことを確認してください。
+移行ユーティリティを実行した後で、アセットに変更を加えたり、アセットを作成したりします。移行ユーティリティは、アセットの変更や作成後に実行しないことをお勧めします。移行プロセスの実行中は、Correspondence ManagementまたはアダプティブFormsアセットのユーザーインターフェイスが開いていないことを確認してください。
 
 初めて移行ユーティリティを実行すると、次のパスと名前でログが作成されます。`\[aem-installation-directory]\cq-quickstart\logs\aem-forms-migration.log`. それ以降は、移行ユーティリティを実行するたびに、Correspondence Management とアダプティブフォームの移行に関する情報（アセットの移行に関する情報など）がこのログファイルに記録されます。
 
