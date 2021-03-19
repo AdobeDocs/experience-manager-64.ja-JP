@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '7932'
+source-wordcount: '7933'
 ht-degree: 4%
 
 ---
@@ -543,7 +544,7 @@ Generate PDF API（Webサービス）を使用してPDFドキュメントをRTF�
    * 変換するPDFファイルを表す`BLOB`オブジェクトです。
    * 変換するファイルのパス名を含む文字列です。
    * ファイルの場所を指定する`java.lang.String`オブジェクト。
-   * 変換のターゲットファイルの種類を指定するstringオブジェクト。 `RTF`を指定します。
+   * 変換のターゲットファイルの種類を指定するstringオブジェクト。 以下のように `RTF`.
    * PDFドキュメントの生成中に適用される設定を含む、オプションの`BLOB`オブジェクトです。
    * `ExportPDF2`メソッドによって入力される、タイプ`BLOB`の出力パラメーター。 `ExportPDF2`メソッドは、変換されたドキュメントをこのオブジェクトに入力します。 （このパラメーター値は、Webサービスの呼び出しの場合にのみ必要です）。
 
