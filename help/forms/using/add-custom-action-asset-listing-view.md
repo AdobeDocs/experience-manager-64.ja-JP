@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: b35ea921-182f-4371-90f6-482d22694b42
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: 7e58d1d861f832d073fb178868804995ee8d855b
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1381'
+source-wordcount: '1383'
 ht-degree: 57%
 
 ---
@@ -92,7 +93,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
     <tbody> 
     <tr> 
     <td><strong>名前</strong></td> 
-    <td><strong>種類</strong></td> 
+    <td><strong>型</strong></td> 
     <td><strong>値と説明</strong></td> 
     </tr> 
     <tr> 
