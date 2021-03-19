@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 1375282df15b1a1a1ab5ed760190af8d6288970e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1118'
 ht-degree: 64%
 
 ---
 
 
-# ユーザー生成コンテンツの翻訳  {#translating-user-generated-content}
+# ユーザー生成コンテンツの翻訳 {#translating-user-generated-content}
 
 AEM Communities の翻訳機能は、[ソーシャルコンポーネントフレームワーク（SCF）](scf.md)を使用することで、[ページコンテンツの翻訳](../../help/sites-administering/translation.md)という概念を、コミュニティサイトに投稿されたユーザー生成コンテンツ（UGC）にまで拡張します。
 
@@ -96,7 +97,7 @@ Web サイトに[複数の言語コピー](../../help/sites-administering/tc-pre
 
 * **[!UICONTROL 親の設定]**
 （必須）通常はデフォルトのままにします。初期設定は です。 
-`/etc/cloudservices/translation`.
+`/etc/cloudservices/translation`
 
 * **[!UICONTROL タイトル]**
 （必須）選択した表示タイトルを入力します。デフォルト値はありません。
