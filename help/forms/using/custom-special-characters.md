@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 1b5e6746-3618-46fe-ba2d-ec76bb79de1d
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '657'
 ht-degree: 69%
 
 ---
 
 
-# Correspondence Management でカスタム特殊文字を使用する  {#custom-special-characters-in-correspondence-management}
+# Correspondence Management でカスタム特殊文字を使用する {#custom-special-characters-in-correspondence-management}
 
 ## 概要 {#overview}
 
