@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 4a51ebc4-e019-4fc5-93a1-d97f695126f5
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '539'
 ht-degree: 95%
 
 ---
 
 
-# 複数手順フォームシーケンスの概要  {#introduction-to-multi-step-form-sequence}
+# 複数手順フォームシーケンスの概要 {#introduction-to-multi-step-form-sequence}
 
 フォーム作成者は、アダプティブフォームを使用すると非常に簡単に複数手順のデータ取得エクスペリエンスを作成できます。複数のパネルの作成や、各パネルと別の移動パターンとの関連付けに対する組み込みサポートが付属しています。フォーム作成者は、フォームフィールドを複数の論理的なセクションにグループ分けし、グループをパネルとして表示できます。パネル間の移動はすべてパネルレイアウトを使用して制御されます。作成者は、様々なレイアウトでパネルを配置できます。例えば、ウィザードレイアウトを使用して順番に配置したり、タブ付きレイアウトを使用してアドホックな方法で配置したりできます。 パネルレイアウトについては、「[アダプティブフォームのレイアウトの機能](/help/forms/using/layout-capabilities-adaptive-forms.md)」を参照してください。
 
