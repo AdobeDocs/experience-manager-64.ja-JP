@@ -10,16 +10,17 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1293c01a-7308-494a-ab48-bd9938205b81
 pagetitle: Community Groups Console
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1642'
-ht-degree: 51%
+source-wordcount: '1643'
+ht-degree: 50%
 
 ---
 
 
-# コミュニティグループコンソール  {#community-groups-console}
+# コミュニティグループコンソール {#community-groups-console}
 
 コミュニティサイトの[テンプレート構造](sites-console.md#step1)に[グループ関数](functions.md#groups-function)が含まれている場合、グループコンソールからコミュニティグループを作成するためのアクセスを提供します。
 
@@ -90,7 +91,7 @@ ht-degree: 51%
    * ベースURLは`Community Group Name`の下に表示されます
    * 有効なURLの場合は、「.html」を追加します。
 
-      *例：*, `http://localhost:4502/content/sites/mysight/en/mygroup.html`
+      *例えば*、  `http://localhost:4502/content/sites/mysight/en/mygroup.html`
 
 * **[!UICONTROL コミュニティグループテン]** プレートメニュー：プルダウンメニューを使用して、使用可能な [コミュニティグループテンプレートを選択し](tools.md)ます。
 
