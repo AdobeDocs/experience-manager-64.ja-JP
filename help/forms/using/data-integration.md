@@ -8,10 +8,11 @@ contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integration
 discoiquuid: b6786321-6e8e-40e2-809b-d117991246c4
+feature: フォームデータモデル
 translation-type: tm+mt
-source-git-commit: 7e1d32127ee82f4353d768e5a2446a4bf4db2f57
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '592'
 ht-degree: 96%
 
 ---
