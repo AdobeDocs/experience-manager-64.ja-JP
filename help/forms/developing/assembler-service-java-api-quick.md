@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: b7b17cf8-def5-4a77-a872-c1f286814881
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: e077347bc202b6a411006032c68aa4a3152be7c5
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1123'
 ht-degree: 0%
 
 ---
@@ -458,7 +459,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 ## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}を使用したベイツナンバリングを使用したPDFドキュメントのアセンブリ
 
-以下のJavaコードの例は、一意のページ識別子（ベート番号）を使用してPDFドキュメントをアセンブリしています。 DDXドキュメントの名前は&#x200B;*shell_Bates.xml*&#x200B;です。 Assemblerサービスから返されるPDFドキュメントは、*AssemblerResultBatesPDF.pdf*&#x200B;というPDFファイルとして保存されます。 (「[ベイツナンバリングを使用したドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering)」を参照)。
+次のJavaコードの例は、一意のページ識別子（ベート番号）を使用してPDFドキュメントをアセンブリしています。 DDXドキュメントの名前は&#x200B;*shell_Bates.xml*&#x200B;です。 Assemblerサービスから返されるPDFドキュメントは、*AssemblerResultBatesPDF.pdf*&#x200B;というPDFファイルとして保存されます。 (「[ベイツナンバリングを使用したドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering)」を参照)。
 
 ```as3
  /* 
@@ -1692,7 +1693,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
 
 >[!NOTE]
 >
->`PDFUtility` acrobatを使用して修正対象としてマークされたPDFのみを修正できます。
+>`PDFUtility` Acrobatを使用して修正対象としてマークされたPDFのみを修正できます。
 
 ```as3
 /* 
