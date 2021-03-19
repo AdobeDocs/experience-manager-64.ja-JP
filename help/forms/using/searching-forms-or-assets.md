@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: f7f19679-cfc2-4ac0-9a26-685fad09276f
+role: Administrator
 translation-type: tm+mt
-source-git-commit: db4d19e3af11f04369fc7f6a7c13377962f0650a
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '714'
 ht-degree: 87%
 
 ---
 
 
-# フォームおよびアセットの検索  {#searching-for-forms-and-assets}
+# フォームおよびアセットの検索 {#searching-for-forms-and-assets}
 
 文字列または文字列とワイルドカードを使用して、フォームまたはフォームアセットを検索することができます。また、Search パネルのさまざまなカテゴリの条件を利用して、検索結果を絞り込むこともできます。
 
@@ -52,7 +53,7 @@ Adobe Experience Manager が、メタデータプロパティ内で入力され�
 
 ### アセットパス {#asset-path}
 
-アセットパスフィルタを使用することにより、検索結果を現在のディレクトリに限定することができます。「Search In Current Directory」オプションが選択されていない場合には、ベースディレクトリに存在するアセットが検索結果に含まれます。現在のページがディレクトリではなく、「current directoryで検索」オプションが選択されている場合は、親ディレクトリに存在するアセットが返されます。
+アセットパスフィルタを使用することにより、検索結果を現在のディレクトリに限定することができます。「Search In Current Directory」オプションが選択されていない場合には、ベースディレクトリに存在するアセットが検索結果に含まれます。現在のページがディレクトリではなく、「current directoryで検索」オプションが選択されている場合、親ディレクトリに存在するアセットが検索によって返されます。
 
 ### アセットの変更 {#asset-modification}
 
