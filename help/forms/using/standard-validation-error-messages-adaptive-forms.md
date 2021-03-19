@@ -8,10 +8,11 @@ contentOwner: anujkapo
 content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 6123df01100912a5833bc8fc88bd18c1ef9e4d25
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1132'
 ht-degree: 9%
 
 ---
@@ -60,7 +61,7 @@ ht-degree: 9%
 
 ## カスタムハンドラーを追加するためのアダプティブフォーム送信の設定{#configure-adaptive-form-submission}
 
-サーバー検証エラーメッセージが標準形式で表示されない場合は、非同期送信を有効にし、アダプティブフォームの送信時にカスタムエラーハンドラーを追加して、メッセージを標準形式に変換できます。
+サーバー検証エラーメッセージが標準形式で表示されない場合は、非同期送信を有効にし、アダプティブフォーム送信にカスタムエラーハンドラーを追加して、メッセージを標準形式に変換できます。
 
 ### 非同期アダプティブフォーム送信の設定{#configure-asynchronous-adaptive-form-submission}
 
