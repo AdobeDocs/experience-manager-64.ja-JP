@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: cc993b71-e2f2-48e7-ad4e-469cb5ce2dc1
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 28948f1f8678512f8fc970a4289cb01cde86c5c2
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2542'
+source-wordcount: '2543'
 ht-degree: 48%
 
 ---
 
 
-# コミュニティ機能  {#community-functions}
+# コミュニティ機能 {#community-functions}
 
 コミュニティに必要とされる機能の種類はだいたい決まっています。コミュニティ機能はコミュニティ機能として利用できます。 基本的に、これらは、コミュニティ機能を実装するために事前に配線された1つ以上のページです。コミュニティ機能を実装するには、作成者モードでページにコンポーネントを追加する以外にも必要です。 これらは、[作成](sites-console.md)されたコミュニティサイトの[コミュニティサイトテンプレート](sites.md)の構造を定義するために使用される構成要素です。
 
@@ -119,7 +120,7 @@ Members：このチェックボックスをオンにすると、特権を持つ�
 * **[!UICONTROL 重点]**
 コンテンツを許可するオンにすると、そのアイデアは [重点コンテンツとして識別できます](featured.md)。初期設定はオンです。
 
-### カレンダー機能  {#calendar-function}
+### カレンダー機能 {#calendar-function}
 
 カレンダー機能は、タグ付けに対応した[カレンダーコンポーネント](calendar.md)を含むページです。開発者向けの[Calendar Essentials](calendar-basics-for-developers.md)も参照してください。
 
