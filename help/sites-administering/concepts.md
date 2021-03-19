@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: e-commerce
 content-type: reference
 discoiquuid: c8ef374a-38d8-4cd4-a86e-69f0a5b4c2bc
+feature: Commerce統合フレームワーク
 translation-type: tm+mt
-source-git-commit: 89d3edbd11d6a900804908ef13cd53e086e92345
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '4532'
+source-wordcount: '4535'
 ht-degree: 82%
 
 ---
@@ -138,7 +139,7 @@ AEM e コマースは、e コマースエンジンとともに実装されます
 >
 >JCR をベースとする汎用的な開発によって AEM 内に実装される AEM e コマースは、
 >
->* API の使用方法を説明するための、スタンドアロンの AEM ネイティブな e コマースのサンプルです。これにより、商品データ、ショッピングカート、チェックアウトと共に、既存のデータ表示とマーケティングキャンペーンを制御することができます。この場合、商品データは AEM にネイティブなリポジトリ（アドビの [JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html) 実装）に保存されます。\
+>* API の使用方法を説明するための、スタンドアロンの AEM ネイティブな e コマースのサンプルです。これにより、商品データ、ショッピングカート、チェックアウトと共に、既存のデータ表示とマーケティングキャンペーンを制御することができます。この場合、商品データは AEM にネイティブなリポジトリ（アドビの [JCR](https://docs.adobe.com/content/docs/jp/spec/jcr/2.0/index.html) 実装）に保存されます。\
    >  標準のAEMインストールには、[汎用のeコマース実装](/help/sites-administering/generic.md)の基本が含まれています。
 
 >
@@ -225,7 +226,7 @@ AEM e コマースは、e コマースエンジンとともに実装されます
 
    *productが属する他のカテゴリはすべて*;例：
 
-   `/special-offers/christmas/shoes`)
+   `/special-offers/christmas/shoes`）
 
 ### 商品データ {#product-data}
 
@@ -408,7 +409,7 @@ AEM e コマース実装では、パフォーマンステストを考慮に入�
 
 * フロントエンド:
 
-   フロントエンドとキャッシュの無効化が混在している場合、パフォーマンスが異常になる可能性があります。 この問題はテストによって回避できます。
+   フロントエンドとキャッシュの無効化が混在していると、パフォーマンスが予想外に高くなる可能性があります。 この問題はテストによって回避できます。
 
 このようなパフォーマンステストには、ターゲットに関する次のような知識と分析が必要です。
 
