@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '19030'
+source-wordcount: '19031'
 ht-degree: 4%
 
 ---
@@ -107,7 +108,7 @@ PDFドキュメントを作成するには、次の手順を実行します。
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必須)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必須)
 
-aem formsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
+AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
 
 **Output Clientオブジェクトの作成**
 
@@ -303,7 +304,7 @@ Output API（Webサービス）を使用してPDFドキュメントを作成し�
 
 1. Output Clientオブジェクトを作成します。
 
-   * `OutputServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `OutputServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用するには`?blob=mtom`を指定します。
    * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
@@ -429,7 +430,7 @@ PDF/Aドキュメントを作成するには、次の手順を実行します。
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必須)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必須)
 
-aem formsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
+AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
 
 **Output Clientオブジェクトの作成**
 
@@ -561,7 +562,7 @@ Output API（Webサービス）を使用してPDF/Aドキュメントを作成�
 
 1. Output Clientオブジェクトを作成します。
 
-   * `OutputServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `OutputServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用するには`?blob=mtom`を指定します。
    * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
@@ -761,7 +762,7 @@ OutputサービスとContent Services（非推奨）API（Webサービス）を�
 
 1. Outputとドキュメント管理クライアントAPIオブジェクトを作成します。
 
-   * `OutputServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `OutputServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをFormsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
    * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
@@ -911,7 +912,7 @@ OutputサービスとRepository API(Java)を使用して、リポジトリから
    `OutputClient`オブジェクトの`generatePDFOutput2`メソッドを呼び出し、次の値を渡します。
 
    * `TransformationFormat`定義済みリスト値。 PDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
-   * 画像などの追加リソースが存在するコンテンツルートを指定するstring値です。 例： `repository:///Applications/FormsApplication/1.0/FormsFolder/`
+   * 画像などの追加リソースが存在するコンテンツルートを指定するstring値です。 例：`repository:///Applications/FormsApplication/1.0/FormsFolder/`
    * フォームデザインを表す`com.adobe.idp.Document`オブジェクト（`ResourceRepositoryClient`オブジェクトの`readResourceContent`メソッドから返されるインスタンスを使用）。
    * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
    * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
@@ -1085,7 +1086,7 @@ Output Service APIとAssembler Service API（Webサービス）を使用して�
 
 1. OutputおよびAssembler Clientオブジェクトを作成します。
 
-   * `OutputServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `OutputServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用するには`?blob=mtom`を指定します。
    * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
@@ -1184,7 +1185,7 @@ Outputサービスを使用すると、XMLデータをフォームデザイン�
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-aem formsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。 （[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照。）
+AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。 （[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照。）
 
 **Output Clientオブジェクトの作成**
 
@@ -1293,7 +1294,7 @@ Output API（Webサービス）を使用してファイルに出力します。
 
 1. Output Clientオブジェクトを作成します。
 
-   * `OutputServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `OutputServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用するには`?blob=mtom`を指定します。
    * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
@@ -1389,7 +1390,7 @@ Outputサービスを使用すると、XMLデータをフォームデザイン�
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必須)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必須)
 
-aem formsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
+AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
 
 **Output Clientオブジェクトの作成**
 
@@ -1580,7 +1581,7 @@ Output API（Webサービス）を使用して、印刷ストリームをネッ�
 
 1. Output Clientオブジェクトを作成します。
 
-   * `OutputServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `OutputServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用するには`?blob=mtom`を指定します。
    * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
@@ -1730,7 +1731,7 @@ XMLデータソースに基づいて複数のPDFファイルを作成するに�
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-aem formsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
+AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
 
 **Output Clientオブジェクトの作成**
 
@@ -1875,7 +1876,7 @@ Output API（Webサービス）を使用して複数のPDFファイルを作成�
 
 1. Output Clientオブジェクトを作成します。
 
-   * `OutputServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `OutputServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用するには`?blob=mtom`を指定します。
    * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
@@ -1973,7 +1974,7 @@ Output API（Webサービス）を使用して複数のPDFファイルを作成�
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必須)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必須)
 
-aem formsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarおよびjbossall-client.jarを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
+AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarおよびjbossall-client.jarを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
 
 **Output Clientオブジェクトの作成**
 
@@ -2108,7 +2109,7 @@ Output API（Webサービス）を使用して検索ルールを作成します�
 
 1. Output Clientオブジェクトを作成します。
 
-   * `OutputServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `OutputServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用するには`?blob=mtom`を指定します。
    * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
@@ -2232,7 +2233,7 @@ Outputサービスを使用して、インタラクティブPDFドキュメン�
 * adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必要)
 * jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必要)
 
-aem formsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。 すべてのAEM FormsJARファイルの場所については、「[AEM FormsJavaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
+AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。 すべてのAEM FormsJARファイルの場所については、「[AEM FormsJavaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
 
 **Output Clientオブジェクトの作成**
 
@@ -2323,7 +2324,7 @@ Output API（Webサービス）を使用して、インタラクティブPDFド�
 
 1. Output Clientオブジェクトを作成します。
 
-   * `OutputServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `OutputServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用するには`?blob=mtom`を指定します。
    * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
