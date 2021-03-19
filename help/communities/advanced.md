@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 42fb3c50-8728-4897-ade9-6b839294a10e
+role: Administrator
 translation-type: tm+mt
-source-git-commit: ddf92a270835259998aa28f5960abcf55f56d1fc
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1142'
 ht-degree: 51%
 
 ---
 
 
-# 高度なスコアとバッジ  {#advanced-scoring-and-badges}
+# 高度なスコアとバッジ {#advanced-scoring-and-badges}
 
 ## 概要 {#overview}
 
@@ -59,7 +60,7 @@ ht-degree: 51%
 ![chlimage_1-260](assets/chlimage_1-260.png)
 
 * **[!UICONTROL スコアの]**
-重みトピックの場合、スコアの計算時に最も優先度が高い動詞を指定します。1つ以上のトピックを入力できますが、トピック**ごとに**&#x200B;動詞が1つに限られます。 [トピックと動詞](implementing-scoring.md#topics-and-verbs)を参照してください。
+重みトピックの場合、スコアを計算する際に最も優先度が高い動詞を指定します。1つ以上のトピックを入力できますが、トピック**ごとに**&#x200B;動詞が1つに限られます。 [トピックと動詞](implementing-scoring.md#topics-and-verbs)を参照してください。
 
    コンマをエスケープして`topic,verb`と入力します。 次に例を示します。
 
