@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: e12b8e370badfa0eb0d549cff18dc2ef43226758
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '292'
 ht-degree: 82%
 
 ---
@@ -34,7 +35,7 @@ HTML5 フォームで新しい形式を使用するには、テーブルを複�
  </extras>
 ```
 
-*complexTable*&#x200B;とマークされたテーブルはネイティブHTMLレンディションに従い、特定のスクリーンリーダーに対するより優れたアクセシビリティサポートを提供します。  行幅を作成するには、テーブル内の 1 つの列で連続する複数のセルを選択し、選択範囲を右クリックして、「**[!UICONTROL セルの結合]**」をクリックします。
+*complexTable*&#x200B;とマークされたテーブルはネイティブHTMLレンディションに従い、特定のスクリーンリーダーに対してより高いアクセシビリティサポートを提供します。  行幅を作成するには、テーブル内の 1 つの列で連続する複数のセルを選択し、選択範囲を右クリックして、「**[!UICONTROL セルの結合]**」をクリックします。
 
 ***注：**行幅の作成は一番左のセルでのみ機能します。*
 
