@@ -2,10 +2,12 @@
 title: AEM Assets と Brand Portal の連携の設定
 description: 'Brand Portalにアセットやコレクションを公開するためのBrand Portalを使用したAEM Assetsの設定方法について説明します。 '
 contentOwner: VG
+feature: Brand Portal
+role: Administrator
 translation-type: tm+mt
-source-git-commit: b9dffdda37992f3a9f34953b8dd391d6f6361ceb
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1650'
 ht-degree: 51%
 
 ---
@@ -227,7 +229,7 @@ Brand Portal クラウドサービス設定を作成するには、以下の手�
 
 1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。クラウド設定が作成されます。これで、AEM Assets作成者インスタンスがBrand Portalテナントと統合されました。
 
-### 設定のテスト{#test-integration}
+### 設定のテスト {#test-integration}
 
 1. AEM Assets作成者インスタンスにログインします
 
@@ -278,7 +280,7 @@ Brand Portalは、AEM Assets作成者インスタンスで正常に設定され�
 * [AEM Assets から Brand Portal へのアセットの公開](../assets/brand-portal-publish-assets.md)
 * [AEM Assets から Brand Portal へのフォルダーの公開](../assets/brand-portal-publish-folder.md)
 * [AEM Assets から Brand Portal へのコレクションの公開](../assets/brand-portal-publish-collection.md)
-* [アセット](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) ソースを設定し、Brand PortalユーザがアセットをAEM Assetsに寄稿して公開できるようにします。
+* [アセット](https://docs.adobe.com/content/help/ja/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) ソースを設定し、Brand PortalユーザがアセットをAEM Assetsに寄稿して公開できるようにします。
 
 ## 設定のアップグレード {#upgrade-integration-64}
 
