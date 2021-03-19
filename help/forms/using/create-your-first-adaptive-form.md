@@ -7,10 +7,11 @@ page-status-flag: de-activated
 uuid: 62f5222c-c787-46be-95fa-a701aa0e6115
 topic-tags: introduction
 discoiquuid: 4e247e70-c50a-4571-8ac1-fbbb07100262
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: fae6d621ad61a26db99994482c16c9d9a5f88ad9
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '969'
 ht-degree: 83%
 
 ---
@@ -43,7 +44,7 @@ ht-degree: 83%
 
 * AEM オーサーインスタンスをセットアップします。
 * [AEM Forms アドオン](/help/forms/using/installing-configuring-aem-forms-osgi.md)をオーサーインスタンスにインストールします。
-* JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。チュートリアルの例はMySQLデータベースに基づいており、Oracleの[MySQL JDBCデータベースドライバー](https://dev.mysql.com/downloads/connector/j/5.1.html)を使用しています。
+* JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。このチュートリアルの例は、MySQLデータベースに基づいており、Oracleの[MySQL JDBCデータベースドライバー](https://dev.mysql.com/downloads/connector/j/5.1.html)を使用しています。
 
 * 以下に示すフィールドを使用して、顧客データを保存するデータベースをセットアップします。アダプティブフォームを作成する場合、データベースは必須ではありません。このチュートリアルではデータベースを使用して、AEM Forms のフォームデータモデルと永続性機能を表示します。
 
