@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: e975e026-e815-4445-be3e-b1237ed3f6b2
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '923'
 ht-degree: 35%
 
 ---
 
 
-# SRP - コミュニティコンテンツストレージ  {#srp-community-content-storage}
+# SRP - コミュニティコンテンツストレージ {#srp-community-content-storage}
 
 ## 概要 {#introduction}
 
