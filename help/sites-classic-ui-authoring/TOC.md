@@ -6,11 +6,14 @@ audience: end-user
 user-guide-title: AEM 6.4 Classic UIオーサリングユーザーガイド
 breadcrumb-title: クラシックUIオーサリングガイド
 user-guide-description: このガイドでは、従来のユーザーインターフェイスでAEMでのオーサリングの概念について説明します。
+feature-set: Experience Manager Sites
+feature: オーサリング
+role: 開業医
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 83%
+source-wordcount: '322'
+ht-degree: 82%
 
 ---
 
@@ -83,9 +86,9 @@ ht-degree: 83%
    + [IBL ステージの使用について](classicui-stages-aem3d-ibl.md)
    + [3D アセットのレンダリング](classicui-rendering-3d.md)
    + [3D アセットの表示](classicui-view-3d-assets.md)
-   + [Dynamic Media アセットの配信](dynamic-media-assets-delivering.md)
+   + [Dynamic Media アセットの配信 ](dynamic-media-assets-delivering.md)
    + [Autodesk Maya および Mental Ray での標準ステージの設定](classicui-stages-aem3d-ad-mr.md)
-   + [ページへのダイナミックメディアアセットの追加](dynamic-media-assets-adding-to-page.md)
+   + [ページへの Dynamic Media アセットの追加](dynamic-media-assets-adding-to-page.md)
    + [ページへのDynamic Mediaクラシック(Scene7)機能の追加](manage-assets-classic-s7.md)
    + [Dynamic Media の操作](dynamic-media-assets.md)
    + [3D アセットの使用](classicui-3dassets.md)
