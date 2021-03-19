@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
+role: Administrator
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1606'
 ht-degree: 60%
 
 ---
 
 
-# SRP 用の Solr 設定  {#solr-configuration-for-srp}
+# SRP 用の Solr 設定 {#solr-configuration-for-srp}
 
 ## AEM プラットフォーム用の Solr {#solr-for-aem-platform}
 
@@ -69,7 +70,7 @@ SolrCloud モードで実行する場合は、MLS をインストールする前
 
 #### 1. 設定を ZooKeeper にアップロード  {#upload-a-configuration-to-zookeeper}
 
-リファレンス:\
+参照:\
 [https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities](https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities)
 
 使用方法:\
@@ -82,7 +83,7 @@ sh./scripts/cloud-scripts/zkcli.sh \\
 
 #### 2. コレクションを作成 {#create-a-collection}
 
-リファレンス:\
+参照:\
 [https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create](https://cwiki.apache.org/confluence/display/solr/Solr+Start+Script+Reference#SolrStartScriptReference-Create)
 
 使用方法:\
@@ -98,7 +99,7 @@ sh./scripts/cloud-scripts/zkcli.sh \\
 
 コレクションを ZooKeeper にアップロードした設定にリンクします。
 
-リファレンス:\
+参照:\
 [https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities](https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities)
 
 使用方法:\
