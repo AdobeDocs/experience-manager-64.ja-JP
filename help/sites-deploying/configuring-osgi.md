@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
+feature: 設定
 translation-type: tm+mt
-source-git-commit: d97828afee7a65e7a4036912c1cc8726404088c9
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2014'
 ht-degree: 59%
 
 ---
@@ -255,7 +256,7 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
 >[!CAUTION]
 >
->`/libs` パス内の設定は一切変更しないでください。
+>`/libs` パス内のものは一切変更しないでください。
 
 >[!CAUTION]
 >
