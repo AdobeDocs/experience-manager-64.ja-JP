@@ -9,10 +9,11 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: f34058c3-384a-4b73-a386-5bc9125acbf8
+feature: Document Security
 translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2190'
 ht-degree: 85%
 
 ---
@@ -90,7 +91,7 @@ ht-degree: 85%
 
 **ユーザー：自分** の個人用ポリシーまたはポリシーを適用したドキュメントに対して失効機能が有効になっている共有ポリシーで保護したユーザーのアクセス権限を失効または復元できます。ドキュメントのアクセス権限を失効させることができない場合またはポリシーを切り替えることができない場合は、管理者に問い合わせてください。
 
-**管理者：個人用ポリシーや共有ポリシーで保護され** たドキュメントなど、ポリシーで保護された任意の管理者へのアクセス権限を失効または復元できます。共有ポリシーで保護されたドキュメントのアクセス権限を失効させたのが管理者の場合、そのドキュメントのアクセス権限を復元できるのは管理者だけです。
+**管理者：個人用ポリシーや共有ポリシーで保護され** たドキュメントを含む、ポリシーで保護された任意の管理者へのアクセス権限を失効または復元できます。共有ポリシーで保護されたドキュメントのアクセス権限を失効させたのが管理者の場合、そのドキュメントのアクセス権限を復元できるのは管理者だけです。
 
 **ポリシーセットコーディネーター：自分** のポリシーセットのポリシーで保護されたドキュメントのアクセス権限を失効または復元できます。
 
