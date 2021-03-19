@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 6c405543-e339-4916-aa0f-b61d0b798cf3
+role: Administrator
 translation-type: tm+mt
-source-git-commit: f78f83ef3b9373bcbee3e5179a9bbec4d9462255
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1855'
+source-wordcount: '1856'
 ht-degree: 57%
 
 ---
 
 
-# モデレートコンソール  {#moderation-console}
+# モデレートコンソール {#moderation-console}
 
 AEM Communitiesでは、コミュニティコンテンツ[の一括モデレートは、管理者とコミュニティモデレーター（モデレーターとして割り当てられた信頼できるコミュニティメンバー）による作成者と投稿の両方の環境から実行できます。](moderate-ugc.md)
 
@@ -113,7 +114,7 @@ AEM Communitiesでは、コミュニティコンテンツ[の一括モデレー�
 
 サイドパネルアイコンにより、フィルターレールが開きます。 コンテンツ領域の左側に表示されるフィルターレールは、様々なフィルターを提供し、それぞれがコンテンツ領域に表示される参照先のUGCに直接影響します。
 
-各カテゴリ内のフィルターは&#x200B;**OR**&#x200B;一緒に結合され、異なるカテゴリ内のフィルターは&#x200B;**AND**&#x200B;一緒に結合されます。
+各カテゴリ内のフィルターは&#x200B;**OR**&#x200B;一緒になり、異なるカテゴリ内のフィルターは&#x200B;**AND**&#x200B;一緒になります。
 
 例えば、**質問**&#x200B;と&#x200B;**回答**&#x200B;の両方を確認すると、**質問** *または*&#x200B;回答&#x200B;**のコンテンツが表示されます。**
 
