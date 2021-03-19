@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 28549db2-e2f2-4a25-b0b1-785237d9d941
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 835618e8e0d01905ad7b476b0172dfecec41cf9d
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '1996'
 ht-degree: 87%
 
 ---
 
 
-# フォームメタデータの管理  {#manage-form-metadata}
+# フォームメタデータの管理 {#manage-form-metadata}
 
 ## 概要  {#overview-nbsp}
 
@@ -54,7 +55,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
    <td><strong>説明</strong><br /> </td> 
   </tr> 
   <tr> 
-   <td>タイトル</td> 
+   <td>title（タイトル）</td> 
    <td>リソース以外のすべて</td> 
    <td>フォームの名前を表示します。<br /> </td> 
   </tr> 
@@ -64,7 +65,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
    <td>フォームの説明。 ユーザーはこの値を指定できます。<br /> </td> 
   </tr> 
   <tr> 
-   <td>型</td> 
+   <td>タイプ</td> 
    <td>すべての </td> 
    <td><p>アセットのタイプを指定する読み取り専用の値です。次のいずれかの値になります。</p> 
     <ul> 
