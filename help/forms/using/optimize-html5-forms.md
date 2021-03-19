@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: bdb9edc2-6a37-4d3f-97d5-0fc5664316be
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '299'
 ht-degree: 89%
 
 ---
 
 
-# HTML5 フォームの最適化  {#optimizing-html-forms}
+# HTML5 フォームの最適化 {#optimizing-html-forms}
 
 HTML5 フォームは、フォームを HTML5 形式でレンダリングします。フォームサイズとフォーム内の画像のような要素によって、結果の出力が大きくなる場合があります。データ転送を最適化するために、推奨されるアプローチは要求を対処する Web  サーバーを使用して HTML 応答を圧縮することです。このアプローチは応答サイズ、ネットワークトラフィック、およびサーバーとクライアントマシンの間でのデータのストリーミングに要する時間を減少させます。
 
