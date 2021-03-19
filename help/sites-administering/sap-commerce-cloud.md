@@ -10,16 +10,17 @@ topic-tags: e-commerce
 content-type: reference
 discoiquuid: 9474519d-14cc-49e0-a81d-9319966fd1f6
 pagetitle: Administering hybris
+feature: Commerce統合フレームワーク
 translation-type: tm+mt
-source-git-commit: caa6c521fd6975d0b693e069a61b7a53f2ba5cd0
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1729'
 ht-degree: 88%
 
 ---
 
 
-# SAPCommerce Cloud{#sap-commerce-cloud}
+# SAP Commerce Cloud{#sap-commerce-cloud}
 
 インストール後、次のようにしてインスタンスを設定します。
 
@@ -90,7 +91,7 @@ ht-degree: 88%
 
    ![chlimage_1-39](assets/chlimage_1-39.png)
 
-1. **変更内容を保存します。**
+1. 変更内容を&#x200B;**保存**&#x200B;します。
 1. 再び「**SOLR Item types**」から、以下のスクリーンショットに従って、`price` ファセットを変更します。`category` と同様に、`price` をダブルクリックすると、「**Indexed property**」タブが表示されます。
 
    ![chlimage_1-40](assets/chlimage_1-40.png)
@@ -99,7 +100,7 @@ ht-degree: 88%
 
    ![chlimage_1-41](assets/chlimage_1-41.png)
 
-1. **変更内容を保存します。**
+1. 変更内容を&#x200B;**保存**&#x200B;します。
 1. 「**System**」、「**Facet search**」の順に選択すると、**Indexer operation ウィザード**&#x200B;が表示されます。cron ジョブを開始します。
 
    * **Indexer操作**:  `full`
