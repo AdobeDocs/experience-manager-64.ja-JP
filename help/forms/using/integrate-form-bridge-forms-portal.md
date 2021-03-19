@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: e0608649-bd49-4f40-bc1b-821c9b208883
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '427'
 ht-degree: 81%
 
 ---
 
 
-# Form Bridge と HTML5 フォームのカスタムポータルの統合  {#integrating-form-bridge-with-custom-portal-for-html-forms}
+# Form Bridge と HTML5 フォームのカスタムポータルの統合 {#integrating-form-bridge-with-custom-portal-for-html-forms}
 
 FormBridge はフォームとのやりとりを可能にする HTML5 フォームのブリッジ API です。FormBridge APIリファレンスについては、[FormBridge APIリファレンス](/help/forms/using/form-bridge-apis.md)を参照してください。
 
