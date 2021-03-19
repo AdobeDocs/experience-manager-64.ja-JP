@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: interactive-communications, correspondence-management
 discoiquuid: f376b8c1-e176-4fe6-b298-f3d493c59319
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1717'
 ht-degree: 85%
 
 ---
 
 
-# インタラクティブ通信とレターのインライン条件と繰り返し構造  {#inline-condition-and-repeat-in-interactive-communications-and-letters}
+# インタラクティブ通信とレターのインライン条件と繰り返し構造 {#inline-condition-and-repeat-in-interactive-communications-and-letters}
 
 インタラクティブ通信とレターでインライン条件と繰り返し構造を使用すると、コンテキストに応じて変化する、適切に構造化された通信を作成することができます。
 
