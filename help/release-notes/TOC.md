@@ -5,11 +5,14 @@ audience: end-user
 user-guide-title: Adobe Experience Manager6.4リリースノート
 breadcrumb-title: リリースノート
 user-guide-description: AEM 6.4の最新の新機能について、リリースノートで説明します。
+feature-set: Experience Manager
+feature: リリース情報
+role: リーダー、アーキテクト、開発者、データ・アーキテクト、データ・エンジニア、管理者、実業家
 translation-type: tm+mt
-source-git-commit: 2872b6ebbd5763e486857359b3bdee965f6c9d48
+source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 43%
+source-wordcount: '103'
+ht-degree: 45%
 
 ---
 
@@ -19,7 +22,7 @@ ht-degree: 43%
 + [AEM 6.4の概要](home.md)
 + [一般的なリリースノート](release-notes.md)
 + [Service Pack リリースノート](sp-release-notes.md)
-+ [これまでの修正パックリリースノート](cfp-release-notes.md)
++ [ 累積修正パックリリースノート ](cfp-release-notes.md)
 + [AEM Sites リリースノート](sites.md)
 + [AEM Assets リリースノート](assets.md)
 + [AEM Forms リリースノート](forms.md)
