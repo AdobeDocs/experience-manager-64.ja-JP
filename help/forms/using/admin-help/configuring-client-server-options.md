@@ -9,16 +9,17 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
+feature: Document Security
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '10281'
+source-wordcount: '10283'
 ht-degree: 84%
 
 ---
 
 
-# Document Security サーバーの設定  {#configure-the-document-security-server}
+# Document Security サーバーの設定 {#configure-the-document-security-server}
 
 1. 管理コンソールで、サービス／Document Security／設定／サーバー設定をクリックします。
 1. 設定を指定し、「OK」をクリックします。
@@ -865,7 +866,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
    * Sun Solaris
    * HP-UX
 
-   `SDKVersions` は、クライアントアプリケーションで使用される Document Security C++ Client API のバージョンを指定します。例： `"8.2"`
+   `SDKVersions` は、クライアントアプリケーションで使用される Document Security C++ Client API のバージョンを指定します。例：`"8.2"`
 
    `APPFamilies` は、クライアント API によって定義されます。
 
