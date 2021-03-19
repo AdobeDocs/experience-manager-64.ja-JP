@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 6fddb09a-ec60-4235-8ff4-0646f53f38f7
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2534'
+source-wordcount: '2535'
 ht-degree: 76%
 
 ---
 
 
-# AEM Forms におけるアセットの読み込みと書き出し  {#importing-and-exporting-assets-to-aem-forms}
+# AEM Forms におけるアセットの読み込みと書き出し {#importing-and-exporting-assets-to-aem-forms}
 
 フォームおよび関連アセット、テーマ、データディクショナリ、ドキュメントフラグメント、レターは、別々のAEM Formsインスタンス間で移動できます。 そうした移動が必要になるのは、システムを移行する場合か、ステージサーバーから実稼働サーバーへ AEM Form を移動する場合です。AEM Forms UI を介したアップロードおよび読み込みがサポートされるアセットの場合、Forms UI を使用して書き出しと読み込みを行うことをお勧めします。このようなアセットの書き出しと読み込みに AEM Package Manager を使用するのは、お勧めしません。
 
@@ -234,7 +235,7 @@ AEM Forms のユーザーインターフェイスは、フォルダーを利用�
 
 1. 関連するアセットまたはレターのページで、1 つ以上のアセットまたはレターを選択します。UI に「コピー」アイコンが表示されます。
 1. 「コピー」をタップします。UI に「貼り付け」アイコンが表示されます。また、貼り付ける前にフォルダー内を移動 / ナビゲートすることもできます。複数のフォルダーに同じ名前のアセットを保管することができます。フォルダーについて詳しくは、[フォルダーとアセットの整理](#folders-and-organizing-assets)を参照してください。
-1. 「貼り付け」をタップします。貼り付けダイアログが表示されます。アセット/レターの新しいコピーに対して名前とタイトルが自動生成されますが、アセット/レターのタイトルと名前を編集することもできます。
+1. 「貼り付け」をタップします。貼り付けダイアログが表示されます。アセット/レターの新しいコピーに対して名前とタイトルが自動的に生成されますが、アセット/レターのタイトルと名前は編集できます。
 
    アセット/レターを同じ場所にコピー&amp;ペーストする場合、アセット/レターの既存の名前に接尾辞「 —CopyXX」が追加されます。 コピーしたアセットまたはレターにタイトルが付いていない場合は、自動生成されたタイトルフィールドは空のままです。
 
