@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 36ea97a4-4e13-4e89-866b-495f3c30cb94
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2787'
+source-wordcount: '2788'
 ht-degree: 54%
 
 ---
@@ -48,7 +49,7 @@ Adobe Analytics を AEM Communities と連携させ、サポートされるコ�
 * [Q&amp;A](working-with-qna.md)
 * [ブログ](blog-feature.md)
 * [ファイルライブラリ](file-library.md)
-* [カレンダー](calendar.md)
+* [Calendar](calendar.md)
 
 ドキュメントのこのセクションでは、Analytics のレポートスイートとコミュニティ機能を接続する方法について説明します。基本的な手順は以下のとおりです。
 
@@ -65,7 +66,7 @@ Adobe Analytics を AEM Communities と連携させ、サポートされるコ�
 
 Analytics をコミュニティ機能と連携するよう設定するには、アカウント担当者と協力して Adobe Analytics アカウントと[レポートスイート](#adobe-analytics-report-suite-for-video-reporting)をセットアップする必要があります。設定が完了したら、次の情報を使用できます。
 
-* 会社名
+* name（会社名）
 
    Adobe Analyticsアカウントに関連付けられている会社
 * ユーザー名
@@ -100,7 +101,7 @@ Adobe Marketing Cloudの[Report Suite Manager](https://docs.adobe.com/content/he
 * [7 個の成功イベント](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/success-events/success-event.html)（event）
 
    * **`event1`** 有 **`event7`** 効にして
-   * 型 **`Counter`**
+   * タイプ **`Counter`**
 
       * **string not required****`Counter (no subrelations)`**
    * 既存のイベントを再利用（名前変更）したり、Communities機能で使用する新しいユーザーを作成できます。
@@ -179,7 +180,7 @@ Video Heartbeat Analytics が有効になっている場合、ビデオプレー
 
    例えば、*有効化コミュニティ分析*&#x200B;と入力します。
 
-* **[!UICONTROL 名前]**
+* **[!UICONTROL Name]**
 
    （オプション）指定しなかった場合、名前はデフォルトでタイトルから派生した有効なノード名になります。
 
@@ -199,7 +200,7 @@ Video Heartbeat Analytics が有効になっている場合、ビデオプレー
 
 ![chlimage_1-267](assets/chlimage_1-267.png)
 
-* **[!UICONTROL 会社情報]**
+* **[!UICONTROL Company]**
 
    Adobe Analyticsアカウントに関連付けられている会社
 
