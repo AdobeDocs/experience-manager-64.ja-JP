@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 1cc8ce66-2c03-44e4-9ddd-8d6944d85c99
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '249'
 ht-degree: 81%
 
 ---
@@ -33,7 +34,7 @@ ht-degree: 81%
 以下に示す AEM Communities の機能は、タグ付けを許可するように設定できます。
 
 * [ブログ](blog-feature.md)
-* [カレンダー](calendar.md)
+* [Calendar](calendar.md)
 * [ファイルライブラリ](file-library.md)
 * [フォーラム](forum.md#configuretheaddedforum)
 * [Q＆A](working-with-qna.md)
