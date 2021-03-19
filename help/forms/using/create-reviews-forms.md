@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 43fd720f-2a5a-47fb-b9d9-d19f866cd0a0
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '691'
 ht-degree: 85%
 
 ---
 
 
-# フォームのアセットのレビューの作成と管理  {#creating-and-managing-reviews-for-assets-in-forms}
+# フォームのアセットのレビューの作成と管理 {#creating-and-managing-reviews-for-assets-in-forms}
 
 ## レビュー {#review}
 
