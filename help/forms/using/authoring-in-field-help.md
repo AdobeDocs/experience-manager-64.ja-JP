@@ -7,16 +7,17 @@ uuid: 07427ddd-9d35-41f6-a807-0e418aade199
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 893a72c7-d68f-464f-9765-ec2272189e58
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '395'
 ht-degree: 100%
 
 ---
 
 
-# フォームのフィールドのための文脈依存ヘルプの作成  {#authoring-in-context-help-for-form-fields}
+# フォームのフィールドのための文脈依存ヘルプの作成 {#authoring-in-context-help-for-form-fields}
 
 ## 概要 {#introduction}
 
