@@ -9,16 +9,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 23bc7cd2-7d06-4ef8-977a-778e290daef9
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '648'
 ht-degree: 72%
 
 ---
 
 
-# HTML5フォーム内でのログの有効化  {#enable-logging-for-html-forms}
+# HTML5 フォーム内でのログの有効化 {#enable-logging-for-html-forms}
 
 ロガーユーティリティを設定することで、HTML5フォームでログの作成を開始することができます。ロガーユーティリティにはいくつかのレベルがあり、要件に応じてレベルを設定することができます。HTML5フォームは、サーバーコンポーネントとクライアントコンポーネントから構成されています。両方のコンポーネントに対してログを設定できます。 
 
@@ -90,10 +91,10 @@ ht-degree: 72%
   </tr> 
   <tr> 
    <td>0</td> 
-   <td>OFF<br type="_moz" /> </td> 
+   <td>オフ<br type="_moz" /> </td> 
   </tr> 
   <tr> 
-   <td>1</td> 
+   <td>3</td> 
    <td>FATAL<br type="_moz" /> </td> 
   </tr> 
   <tr> 
