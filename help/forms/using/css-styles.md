@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '840'
 ht-degree: 87%
 
 ---
@@ -77,7 +78,7 @@ type と name クラスの他に、フィールドコンポーネントにも **
  <tbody> 
   <tr> 
    <td><strong>コンポーネント</strong></td> 
-   <td><strong>型</strong></td> 
+   <td><strong>タイプ</strong></td> 
    <td><strong>名前</strong></td> 
   </tr> 
   <tr> 
