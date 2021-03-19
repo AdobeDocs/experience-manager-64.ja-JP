@@ -7,16 +7,17 @@ uuid: 6613a9bf-c862-4c18-a5b5-f574d301e936
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 29c0a78c-53b5-4ce7-a2f3-63e1b089b0d0
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: ba04fe705a91717f1d9658d436056ebddda6be3a
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1171'
 ht-degree: 83%
 
 ---
 
 
-# アダプティブフォームと XFA フォームテンプレートとの同期  {#synchronizing-adaptive-forms-with-xfa-form-templates}
+# アダプティブフォームと XFA フォームテンプレートとの同期 {#synchronizing-adaptive-forms-with-xfa-form-templates}
 
 ## 概要 {#introduction}
 
