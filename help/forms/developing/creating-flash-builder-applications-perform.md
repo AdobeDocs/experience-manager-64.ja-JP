@@ -9,11 +9,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: 0ff30df7-b3ad-4c34-9644-87c689acc294
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1825'
-ht-degree: 0%
+source-wordcount: '1826'
+ht-degree: 1%
 
 ---
 
@@ -643,7 +644,7 @@ SSO認証を実行するクライアントアプリケーションの作成方�
  
 ```
 
-### logout.mxmlファイル{#creating-the-logout-mxml-file}を作成しています
+### logout.mxmlファイル{#creating-the-logout-mxml-file}の作成
 
 次のコードは、logout.mxmlファイルを表しています。
 
