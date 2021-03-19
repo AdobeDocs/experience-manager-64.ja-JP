@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 076889a7-9c9f-4b6f-a45b-67a9b3923c36
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '10849'
+source-wordcount: '10850'
 ht-degree: 6%
 
 ---
@@ -897,7 +898,7 @@ TaskManagerエンドポイントをサービスに追加するには、次のタ
 
 **エンドポイントのカテゴリの作成**
 
-カテゴリは、Workspace内のサービスを整理するために使用されます。 つまり、Workspaceユーザーは、Workspace内でカテゴリを選択することで、TaskManagerエンドポイントを持つサービスを呼び出すことができます。 TaskManagerエンドポイントを作成する場合、既存のカテゴリを参照するか、新しいカテゴリをプログラムで作成することができます。
+カテゴリは、Workspace内のサービスを整理するために使用されます。 つまり、Workspaceユーザーは、Workspace内でカテゴリを選択することで、TaskManagerエンドポイントを持つサービスを呼び出すことができます。 TaskManagerエンドポイントを作成する場合、既存のカテゴリを参照するか、新しいカテゴリをプログラムで作成できます。
 
 >[!NOTE]
 >
