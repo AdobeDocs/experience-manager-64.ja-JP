@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 1b9f8d98-e7e8-4b9b-a0df-52ccba324da3
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 95b5e70c1b474d4d207a5a33e8d1ab8ef39685b6
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3316'
+source-wordcount: '3317'
 ht-degree: 85%
 
 ---
 
 
-# JEE 上の AEM Forms でサポートされているプラットフォーム  {#supported-platforms-for-aem-forms-on-jee}
+# JEE 上の AEM Forms でサポートされているプラットフォーム {#supported-platforms-for-aem-forms-on-jee}
 
 ## サポートされているプラットフォーム {#supported-platforms}
 
@@ -804,4 +805,4 @@ JEE 上の AEM Forms のサードパーティリファレンスプラットフ�
 
 サードパーティ製パッチのその他の情報については、Adobe Enterprise Support サイトで、ご使用の製品に関するナレッジベース記事を検索することによっても見つけられることがあります。
 
-[**サポートへのお問い合わせ**](https://www.adobe.com/jp/account/sign-in.supportportal.html)
+[**サポートへのお問い合わせ**](https://www.adobe.com/account/sign-in.supportportal.html)
