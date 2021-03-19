@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop, interactive-communications
 content-strategy: max-2018
 discoiquuid: c5933e2a-fb8d-4d1b-a301-c8a2bc7ee226
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '6041'
+source-wordcount: '6043'
 ht-degree: 74%
 
 ---
@@ -94,20 +95,20 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
   </tr> 
   <tr> 
    <td>1.</td> 
-   <td>タイトル</td> 
-   <td>可</td> 
+   <td>title（タイトル）</td> 
+   <td>はい</td> 
    <td>テーマの名前を表示します。</td> 
   </tr> 
   <tr> 
    <td>2.</td> 
    <td>説明</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>テーマについての説明です。</td> 
   </tr> 
   <tr> 
    <td>3.</td> 
-   <td>型</td> 
-   <td>不可</td> 
+   <td>タイプ</td> 
+   <td>いいえ</td> 
    <td> 
     <ul> 
      <li>アセットのタイプ。</li> 
@@ -117,43 +118,43 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
   <tr> 
    <td>4.</td> 
    <td>作成日</td> 
-   <td>不可</td> 
+   <td>いいえ</td> 
    <td>テーマの作成日</td> 
   </tr> 
   <tr> 
    <td>5.</td> 
    <td>作成者名</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>テーマの作成者。テーマの作成時に計算されます。</td> 
   </tr> 
   <tr> 
    <td>6.</td> 
    <td>最終変更日</td> 
-   <td>不可</td> 
+   <td>いいえ</td> 
    <td>テーマが最後に変更された日付。</td> 
   </tr> 
   <tr> 
    <td>7.</td> 
    <td>ステータス</td> 
-   <td>不可</td> 
+   <td>いいえ</td> 
    <td>テーマの状態（変更済み／発行済み）。</td> 
   </tr> 
   <tr> 
    <td>8.</td> 
    <td>Publish On Time</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>テーマを自動で発行する時間。</td> 
   </tr> 
   <tr> 
    <td>9.</td> 
    <td>Publish Off Time</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>テーマを自動で非公開にする時間。</td> 
   </tr> 
   <tr> 
    <td>10.</td> 
    <td>タグ</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>検索の向上のため、識別用にテーマに付加されるラベル。</td> 
   </tr> 
   <tr> 
@@ -169,7 +170,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
   <tr> 
    <td>12.</td> 
    <td>Clientlib の場所</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td> 
     <ul> 
      <li>このテーマに対応する clientlib が保存される、「/etc」内のユーザー定義のリポジトリのパスです。</li> 
@@ -181,7 +182,7 @@ AEM Forms では、テーマを作成、ダウンロード、アップロード�
   <tr> 
    <td>13.</td> 
    <td>Clientlib カテゴリ名</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td> 
     <ul> 
      <li>このテーマのユーザー定義の clientlib カテゴリ名です。</li> 
@@ -397,7 +398,7 @@ AEM Forms のテーマでは、フォームと非インタラクティブ通信�
  <tbody> 
   <tr> 
    <td><strong>Property</strong></td> 
-   <td><strong>使用方法</strong></td> 
+   <td><strong>以下のように</strong></td> 
   </tr> 
   <tr> 
    <td><p>寸法と位置</p> </td> 
@@ -473,7 +474,7 @@ AEM Forms のテーマでは、フォームと非インタラクティブ通信�
 
 1. キャンバスでコンポーネントを選択し、コンポーネントツールバーから適切なオプションを選択します。
 
-   サイドバーに、コンポーネントのスタイル設定をカスタマイズするためのオプションが表示されます。
+   サイドバーに、コンポーネントのスタイル設定をカスタマイズするオプションが表示されます。
 
 1. サイドバーで、状態を選択します。例えば、エラー状態です。
 1. サイドバーの「境界線」、「背景」]**などのオプションを使用して、コンポーネントの外観をカスタマイズします。**[!UICONTROL 
