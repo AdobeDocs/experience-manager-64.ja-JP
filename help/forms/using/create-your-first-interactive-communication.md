@@ -8,10 +8,11 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: interactive-communications, introduction
 discoiquuid: 954da8da-a30b-477d-bde7-3edd86a5be11
+feature: インタラクティブコミュニケーション
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1062'
 ht-degree: 88%
 
 ---
@@ -37,7 +38,9 @@ ht-degree: 88%
 * インタラクティブ通信の作成
 * インタラクティブ通信をテストしてパブリッシュする
 
-## 使用事例 {#use-case}
+## 使用事例{#use-case}
+
+
 
 最初に、このチュートリアルで使用するユースケースについて説明します。
 
@@ -52,7 +55,7 @@ ht-degree: 88%
 * AEM オーサーインスタンスを設定します。
 * 作成者インスタンスに[AEM Formsアドオン](/help/forms/using/installing-configuring-aem-forms-osgi.md)をインストール
 * MySQL データベースを設定します。
-* JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。チュートリアルの例はMySQLデータベースに基づいており、Oracleの[MySQL JDBCデータベースドライバー](https://dev.mysql.com/downloads/connector/j/5.1.html)を使用しています。
+* JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。このチュートリアルの例は、MySQLデータベースに基づいており、Oracleの[MySQL JDBCデータベースドライバー](https://dev.mysql.com/downloads/connector/j/5.1.html)を使用しています。
 
 ## 手順 1：インタラクティブ通信の計画 {#step-plan-the-interactive-communication}
 
