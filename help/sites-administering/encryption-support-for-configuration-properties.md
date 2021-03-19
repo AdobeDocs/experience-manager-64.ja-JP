@@ -1,7 +1,7 @@
 ---
 title: 設定プロパティの暗号化サポート
 seo-title: 設定プロパティの暗号化サポート
-description: 'null'
+description: 設定プロパティの暗号化サポート
 seo-description: 'null'
 uuid: 26dc5e46-9332-4d9b-8874-895b90391e8c
 contentOwner: User
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: security
 discoiquuid: 4e08c297-aa4b-44cf-84c8-1e11582d9ebb
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '285'
 ht-degree: 87%
 
 ---
