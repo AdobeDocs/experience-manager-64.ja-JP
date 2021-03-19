@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '10008'
+source-wordcount: '10009'
 ht-degree: 6%
 
 ---
@@ -659,7 +660,7 @@ Base64エンコーディングを使用する.NETクライアントアセンブ�
 1. クライアントMicrosoft .NETプロジェクトを作成します。 クライアントプロジェクトでMicrosoft .NETクライアントアセンブリを参照します。 `System.Web.Services`も参照してください。
 1. Microsoft .NETクライアントアセンブリを使用して、`MyApplication_EncryptDocumentService`オブジェクトを作成します。その場合は、デフォルトのコンストラクタを呼び出します。
 1. `MyApplication_EncryptDocumentService`オブジェクトの`Credentials`プロパティを`System.Net.NetworkCredential`オブジェクトで設定します。 `System.Net.NetworkCredential`コンストラクター内で、AEM formsユーザー名と対応するパスワードを指定します。 認証値を設定して、.NETクライアントアプリケーションがAEM FormsとSOAPメッセージを正常に交換できるようにします。
-1. コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、`MyApplication/EncryptDocument`プロセスに渡されるPDFドキュメントの保存に使用されます。
+1. コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、`MyApplication/EncryptDocument`プロセスに渡されるPDFドキュメントを保存するために使用します。
 1. コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 PDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
 1. `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列のサイズを決定できます。
 1. `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出して、バイト配列にストリームデータを入力します。 読み取るバイト配列、開始位置、ストリーム長を渡します。
@@ -928,7 +929,7 @@ JAX-WSとSwaRefを使用して作成されたJavaプロキシファイルを使�
 
 ## HTTPを介したBLOBデータを使用したAEM Formsの呼び出し{#invoking-aem-forms-using-blob-data-over-http}
 
-Webサービスを使用してAEM Formsサービスを呼び出し、HTTP経由でBLOBデータを渡すことができます。 HTTP経由でBLOBデータを渡す方法は、base64エンコード、DIME、またはMIMEを使用する代わりに、代替の方法です。 例えば、Web Service Enhancement 3.0を使用するMicrosoft .NETプロジェクトで、DIMEやMIMEをサポートしていないデータをHTTP経由で渡すことができます。 HTTP経由でBLOBデータを使用する場合、AEM Formsサービスが呼び出される前に入力データがアップロードされます。
+Webサービスを使用してAEM Formsサービスを呼び出し、HTTP経由でBLOBデータを渡すことができます。 HTTP経由でBLOBデータを渡す方法は、base64エンコード、DIME、またはMIMEを使用する代わりに、代替の方法です。 例えば、Web Service Enhancement 3.0を使用しているMicrosoft .NETプロジェクトで、DIMEやMIMEをサポートしていないデータをHTTP経由で渡すことができます。 HTTP経由でBLOBデータを使用する場合、AEM Formsサービスが呼び出される前に入力データがアップロードされます。
 
 「HTTP経由でのBLOBデータを使用したAEM Formsの呼び出し」では、HTTP経由でBLOBデータを渡すことによって、`MyApplication/EncryptDocument`という名前のAEM Forms短時間有効プロセスを呼び出す方法について説明します。
 
@@ -1113,7 +1114,7 @@ DIMEを使用してFormsサービスを呼び出すことができます。 保�
 
    * GUID値を指定するstring値。 `System.Guid.NewGuid.ToString`メソッドを呼び出して、GUID値を取得できます。
    * コンテンツタイプを指定するstring値。 このプロセスにはPDFドキュメントが必要なので、`application/pdf`を指定します。
-   * `TypeFormat`定義済みリスト値。 `TypeFormat.MediaType`を指定します。
+   * `TypeFormat`定義済みリスト値。 以下のように `TypeFormat.MediaType`.
    * AEM Formsプロセスに渡すPDFドキュメントの場所を指定するstring値です。
 
 1. コンストラクタを使用して `BLOB` オブジェクトを作成します。
@@ -1242,7 +1243,7 @@ AEM formsユーザーのIDは、秘密キーを使用して署名されたSAML�
 * AuthenticationManager APIによって公開されている任意の認証方法を使用したユーザーの認証。 通常、ユーザー名とパスワードを使用します。ただし、証明書認証を使用することもできます。
 * `AuthenticationManager.getAuthResultOnBehalfOfUser`メソッドを使用します。 このメソッドを使用すると、クライアントアプリケーションは任意のAEM formsユーザーの`AuthResult`オブジェクトを取得できます。
 
-aem formsユーザーは、取得したSAMLトークンを使用して認証できます。 このSAMLアサーション（xmlフラグメント）は、WS-Securityヘッダーの一部として、ユーザー認証用のWebサービス呼び出しと共に送信できます。 通常、クライアントアプリケーションはユーザーを認証していますが、ユーザー資格情報を保存していません。 （または、ユーザーがユーザー名とパスワード以外のメカニズムを使用してそのクライアントにログオンした。） この場合、クライアントアプリケーションは、AEM Formsの呼び出しを許可されている特定のユーザーとして、AEM Formsを呼び出し、偽装する必要があります。
+AEM formsユーザーは、取得したSAMLトークンを使用して認証できます。 このSAMLアサーション（xmlフラグメント）は、WS-Securityヘッダーの一部として、ユーザー認証用のWebサービス呼び出しと共に送信できます。 通常、クライアントアプリケーションはユーザーを認証していますが、ユーザー資格情報を保存していません。 （または、ユーザーがユーザー名とパスワード以外のメカニズムを使用してそのクライアントにログオンした。） この場合、クライアントアプリケーションは、AEM Formsの呼び出しを許可されている特定のユーザーとして、AEM Formsを呼び出し、偽装する必要があります。
 
 特定のユーザーを装うには、Webサービスを使用して`AuthenticationManager.getAuthResultOnBehalfOfUser`メソッドを呼び出します。 このメソッドは、そのユーザーのSAMLアサーションを含む`AuthResult`インスタンスを返します。
 
