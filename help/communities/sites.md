@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '464'
 ht-degree: 63%
 
 ---
 
 
-# サイトテンプレート  {#site-templates}
+# サイトテンプレート {#site-templates}
 
 サイトテンプレートコンソールは、コミュニティグループに対して関心のある機能に重点を置いた[グループテンプレート](tools-groups.md)コンソールに非常に似ています。
 
