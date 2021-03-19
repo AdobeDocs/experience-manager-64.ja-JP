@@ -8,10 +8,11 @@ contentOwner: vishgupt
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 48f841b7-0e7f-4216-9ee8-fb6e843acaf0
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 7ec0cd95417c015565fa6e07c753c4ac6df35cdb
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '981'
 ht-degree: 62%
 
 ---
@@ -67,7 +68,7 @@ Forms Portal は、次のシナリオではドラフトフォームと送信済�
 
 ログインしたユーザーおよび匿名ユーザーのドラフトと送信済みフォームデータには、設定したデータストアからアクセスし、必要に応じて削除できます。
 
-### AEM インスタンス {#aem-instances}
+### AEM インスタンス  {#aem-instances}
 
 ログインユーザーおよび匿名ユーザー用のドラフトおよび送信済みのフォームデータは、AEMインスタンス（作成者、発行またはリモート）内のすべて、AEMリポジトリの`/content/forms/fp/`ノードに保存されます。 ログインしたユーザーまたは匿名ユーザーがドラフトを保存したりフォームを送信したりするたびに、添付ファイル（該当する場合）ごとに`draft ID`または`submission ID`、`user data ID`、ランダム`ID`が生成され、それぞれのドラフトまたは送信に関連付けられます。
 
