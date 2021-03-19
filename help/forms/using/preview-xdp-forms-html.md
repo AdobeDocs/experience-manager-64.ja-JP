@@ -7,16 +7,17 @@ uuid: d004e75d-e569-4e85-8dfa-5c411bc959af
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: c142d7b3-301b-447c-a715-452c905565d1
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: 801941c060e1a912f3969bca1e89962241e7fbe0
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '822'
 ht-degree: 81%
 
 ---
 
 
-# XDP フォームの HTML5 プレビューの生成  {#generate-html-preview-of-an-xdp-form}
+# XDP フォームの HTML5 プレビューの生成 {#generate-html-preview-of-an-xdp-form}
 
 AEM Forms Designer でフォームをデザインする間、フォームの PDF レンダリングをプレビューする他に、HTML5 レンダリングをプレビューすることもできます。「**HTML プレビュー**」タブを使用すると、フォームがブラウザでどのように表示されるかをプレビューすることができます。
 
@@ -116,4 +117,4 @@ Designer では、サンプル XML データを使用してフォームをプレ
 
 AEM Forms では、リポジトリにあるフォームやドキュメントをプレビューすることができます。プレビューを使用すると、エンドユーザーによって使用される際にどのように見え、作動するのかを明確に理解できます。
 
-[**サポートへのお問い合わせ**](https://www.adobe.com/jp/account/sign-in.supportportal.html)
+[**サポートへのお問い合わせ**](https://www.adobe.com/account/sign-in.supportportal.html)
