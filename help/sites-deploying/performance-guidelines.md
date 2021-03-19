@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 9ccbc39e-aea7-455e-8639-9193abc1552f
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 949ec23eb548a094425622d68e1dbf4f6ec7581f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2993'
+source-wordcount: '2994'
 ht-degree: 83%
 
 ---
@@ -113,7 +114,7 @@ ht-degree: 83%
    <td><p> </p> </td> 
    <td><p> </p> </td> 
    <td><p>Safari</p> </td> 
-   <td><p>Audience</p> </td> 
+   <td><p>対象者</p> </td> 
   </tr> 
   <tr> 
    <td><p>Multi-site</p> </td> 
@@ -334,7 +335,7 @@ AEM では、バイナリデータをコンテンツノードとは別に格納�
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
-### デプロイメントのガイドライン {#development-guidelines}
+### 開発のガイドライン {#development-guidelines}
 
 AEM は&#x200B;**パフォーマンスとスケーラビリティ**&#x200B;を目標として開発してください。指針にすることができるいくつかのベストプラクティスを次に示します。
 
