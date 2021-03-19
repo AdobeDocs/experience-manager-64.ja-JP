@@ -10,10 +10,11 @@ topic-tags: administering
 content-type: reference
 discoiquuid: b19b3c24-82a0-468c-a077-9f3edb96afc9
 tagskeywords: scoring, badging, badges, gamification
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 09f8adac1d5fc4edeca03d6955faddf5ea045405
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2885'
+source-wordcount: '2886'
 ht-degree: 55%
 
 ---
@@ -215,7 +216,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
   <tr> 
    <th>プロパティ</th> 
    <th>型</th> 
-   <th> 値 説明</th> 
+   <th> 値の説明</th> 
   </tr> 
   <tr> 
    <td><i><code>VERB</code></i></td> 
@@ -244,7 +245,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
   </tr> 
   <tr> 
    <td><code>forOwner</code></td> 
-   <td>Boolean</td> 
+   <td>ブール型</td> 
    <td> 
     <ul> 
      <li>オプションです。メンバーが自分の所有するコンテンツを操作している場合は関係ありません。</li> 
@@ -275,7 +276,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
 
 ### このリリースに含まれているスコアルールとサブルール  {#included-scoring-rules-and-sub-rules}
 
-このリリースには、[フォーラム関数](functions.md#forum-function)の2つのスコアリングルールが含まれています（フォーラム機能の「フォーラム」コンポーネントと「コメント」コンポーネントそれぞれに1つずつ）。
+このリリースには、[フォーラム関数](functions.md#forum-function)の2つのスコアリングルールが含まれています（フォーラム機能のフォーラムコンポーネントとコメントコンポーネントごとに1つずつ）。
 
 1. /etc/community/scoring/rules/comments-scoring
 
@@ -293,7 +294,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
 
    * subRules[] =
 
-      /etc/community/scoring/rules/sub rules/member-forum-create
+      /etc/community/scoring/rules/subrules/member-forum-create
 
       /etc/community/scoring/rules/subrules/member-receive-vote
 
@@ -354,7 +355,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
   <tr> 
    <th>プロパティ</th> 
    <th>型</th> 
-   <th>値 説明</th> 
+   <th>値の説明</th> 
   </tr> 
   <tr> 
    <td>thresholds</td> 
