@@ -10,16 +10,17 @@ topic-tags: e-commerce
 content-type: reference
 discoiquuid: 44dfa10f-497e-473f-95d4-8dccae7ebf8e
 pagetitle: Deploying eCommerce with SAP Commerce Cloud
+feature: Commerce統合フレームワーク
 translation-type: tm+mt
-source-git-commit: 94dbed719c2f3360db6ba5b414230fd3f79f7955
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 89%
+source-wordcount: '734'
+ht-degree: 88%
 
 ---
 
 
-# SAPCommerce Cloud{#sap-commerce-cloud}
+# SAP Commerce Cloud{#sap-commerce-cloud}
 
 >[!NOTE]
 >
