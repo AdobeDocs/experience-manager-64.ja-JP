@@ -7,16 +7,17 @@ uuid: c3fa2aa4-a6b4-458e-8534-138e075290b1
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1140'
 ht-degree: 77%
 
 ---
 
 
-# 繰り返し可能なセクションを使用したフォームの作成  {#creating-forms-with-repeatable-sections}
+# 繰り返し可能なセクションを使用したフォームの作成 {#creating-forms-with-repeatable-sections}
 
 繰り返し可能なセクションとは、フォームに動的に追加またはフォームから動的に削除できるパネルのことです。
 
