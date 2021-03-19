@@ -8,16 +8,17 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: 90e36522-3af1-4a8a-b044-1c828c52974e
+description: カタログ作成機能
 translation-type: tm+mt
-source-git-commit: c777ad6314fb0a83f574e82aa11cb677eb52b7d6
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '901'
 ht-degree: 40%
 
 ---
 
 
-# カタログ作成機能{#catalog-producer}
+# カタログ作成{#catalog-producer}
 
 AEM Assets のカタログ作成機能で、デジタルアセットを使用して製品カタログを生成する方法を学びます。
 
