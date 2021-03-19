@@ -8,10 +8,11 @@ content-type: reference
 topic-tags: correspondence-management
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 601108d8-f432-4a6b-9ec9-831cf054e52f
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '4460'
+source-wordcount: '4462'
 ht-degree: 66%
 
 ---
@@ -89,7 +90,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
       |---|---|---|
       | fieldLabel | String | フィールド／プロパティに与える任意の名前。（ここでは「Location of recipients」） |
       | name | 文字列 | `./extendedproperties/GeoLocation` （値は、itemsノードの下で作成したフィールド名と同じにします）。 |
-      | renderReadOnly | Boolean | true |
+      | renderReadOnly | ブール型 | true |
       | sling:resourceType | 文字列 | granite/ui/components/coral/foundation/form/textfield |
 
    1. 「**すべて保存**」をクリックします。
@@ -124,7 +125,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
    |--- |--- |---|
    | fieldLabel | 文字列 | フィールド／プロパティに与える任意の名前。（ここでは「geographicallocation」） |
    | name | 文字列 | `./extendedproperties/geographicallocation` （値は、itemsノードの下で作成したフィールド名と同じにします）。 |
-   | renderReadOnly | ブール値 | true |
+   | renderReadOnly | ブール型 | true |
    | sling:resourceType | 文字列 | granite/ui/components/coral/foundation/form/select |
 
 1. プロパティノード（ここでは「geographicallocation」）に、`items` という名前の新しいノードを追加します。items ノードに、ドロップダウン内の各値のノードを追加します。ドロップダウンのデフォルト値およびユーザーがフィールドに値を指定しないためのオプションとして機能するように、最初のノードを空白として追加することをお勧めします。複数のオプション／ドロップダウン値を追加するには、次の手順を繰り返します。
@@ -249,7 +250,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
       |---|---|---|
       | fieldLabel | 文字列 | Location of recipients（または、フィールドに与える任意の名前。） |
       | name | 文字列 | 。/extendedproperties/GeographicalLocation |
-      | renderReadOnly | ブール値 | true |
+      | renderReadOnly | ブール型 | true |
       | sling:resourceType | 文字列 | /libs/granite/ui/components/coral/foundation/form/textfield |
 
 1. レターにこのタブを追加するには、次のパスにある以下の items フォルダーに類似したパス／構造でオーバーレイフォルダーを作成します。
@@ -418,7 +419,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
       |---|---|---|
       | fieldLabel | 文字列 | Location of recipients（または、フィールドに与える任意の名前。） |
       | name | 文字列 | 。/extendedproperties/GeoLocation |
-      | renderReadOnly | ブール値 | true |
+      | renderReadOnly | ブール型 | true |
       | sling:resourceType | 文字列 | granite/ui/components/coral/foundation/form/textfield |
 
 1. カスタマイズ内容を表示するには、関連するアセット（ここではテキスト）の上にカーソルを置き、「プロパティを表示」をクリックし、「**編集**」をクリックします。新しいタブとフィールド（Location of Recipients）がユーザーインターフェイスに表示されます。
@@ -537,7 +538,7 @@ Correspondence Management アセットにカスタムプロパティを追加し
       |--- |--- |--- |
       | jcr:primaryType | 名前 | nt:unstructured |
       | jcr:title | 文字列 | GeographicalLocationこの値は、UIの列ヘッダーとして表示されます。 |
-      | sortable | ブール値 | true値をtrueに設定した場合、ユーザーはこの列の値を並べ替えることができます。 |
+      | sortable | ブール型 | true値をtrueに設定した場合、ユーザーはこの列の値を並べ替えることができます。 |
 
 1. apps フォルダーに以下のフォルダー構造を作成します。
 
@@ -700,8 +701,8 @@ Correspondence Management アセットにカスタムプロパティを追加し
       |---|---|---|
       | analyzed | 文字列 | true |
       | name | 文字列 | extendedProperties/location（または、検索に追加するプロパティの名前） |
-      | propertyIndex | ブール値 | true |
-      | useInSuggest | ブール値 | true |
+      | propertyIndex | ブール型 | true |
+      | useInSuggest | ブール型 | true |
 
    1. 「**すべて保存**」をクリックします。
 
@@ -792,12 +793,12 @@ Correspondence Management アセットにカスタムプロパティを追加し
 
    | 名前 | タイプ | 値 |
    |---|---|---|
-   | hideOnCreate | ブール値 | true |
+   | hideOnCreate | ブール型 | true |
 
 1. アセットのプロパティページでカスタムプロパティを非表示にするには、次のプロパティを追加し、「**すべて保存**」をクリックします。
 
    | 名前 | タイプ | 値 |
    |---|---|---|
-   | hideOnEdit | ブール値 | true |
+   | hideOnEdit | ブール型 | true |
 
    値を再度表示するには、プロパティ値を`false`にリセットするか、プロパティエントリを削除します。
