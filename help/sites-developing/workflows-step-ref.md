@@ -1,7 +1,7 @@
 ---
 title: ワークフローステップのリファレンス
 seo-title: ワークフローステップのリファレンス
-description: 'null'
+description: ワークフローステップのリファレンス
 seo-description: 'null'
 uuid: 72a64495-d1b1-49e7-8257-d6b2ed36961c
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 25f0e0f7-9570-4748-81cb-ccec6492c0b4
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2831'
+source-wordcount: '2833'
 ht-degree: 67%
 
 ---
@@ -179,7 +179,7 @@ function check(){
 }
 ```
 
-## OR 分割  {#or-split}
+## OR 分割 {#or-split}
 
 **[!UICONTROL OR 分割]**&#x200B;は、ワークフロー内に分割を作成し、どちらか 1 つのブランチだけをアクティブにします。これを使用すると、ワークフローに条件付き処理パスを導入できます。必要に応じて、各ブランチにワークフローステップを追加できます。
 
