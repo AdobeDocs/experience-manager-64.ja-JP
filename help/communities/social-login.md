@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
+role: Administrator
 translation-type: tm+mt
-source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2840'
+source-wordcount: '2841'
 ht-degree: 36%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 36%
 
 # Facebook と Twitter を使用したソーシャルログイン {#social-login-with-facebook-and-twitter}
 
-ソーシャルログインは、サイト訪問者にFacebookやTwitterアカウントでサインインするオプションを提供する機能です。 したがって、許可されたFacebookデータやTwitterデータがAEMの会員プロファイルに含まれます。
+ソーシャルログインは、サイト訪問者にFacebookやTwitterアカウントでサインインするオプションを提供する機能です。 したがって、許可されたFacebookデータやTwitterデータがAEMのメンバープロファイルに含まれます。
 
 ![socialloginretail](assets/socialloginweretail.png)
 
@@ -282,7 +283,7 @@ Twitter アプリケーション管理の権限のセクションで、次の設
 
 1. 「**[!UICONTROL 保存]**」と「**[!UICONTROL 発行]**」を選択します。
 
-結果は、[AdobeGranite OAuth ApplicationおよびProvider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)のインスタンスが返され、これ以上の変更は必要ありません。 デフォルトの範囲には、Twitter にログインするための標準的な権限が含まれています。
+結果は、[AdobeGranite OAuth ApplicationとProvider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)のインスタンスが返され、これ以上の変更を行う必要はありません。 デフォルトの範囲には、Twitter にログインするための標準的な権限が含まれています。
 
 ### AEM Communities Twitter OAuth Provider  {#aem-communities-twitter-oauth-provider}
 
