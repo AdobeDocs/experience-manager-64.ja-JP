@@ -1,14 +1,14 @@
 ---
 title: AEM FormsJEEパッチインストーラー
-description: 'null'
+description: AEM FormsJEEパッチインストーラー
 uuid: e709871b-c04c-43bb-a7d0-45e89fbd3d44
 content-type: reference
 discoiquuid: 83bace08-1d4f-4192-a634-c7c4879963d8
 translation-type: tm+mt
-source-git-commit: 610e9a54adad3abdfecb8b2c4da67d677f75175e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 46%
+source-wordcount: '544'
+ht-degree: 48%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 46%
 
 >[!NOTE]
 >
->[詳細やパッチの入手方法については、](https://www.adobe.com/jp/account/sign-in.supportportal.html) サポートにお問い合わせください。
+>[詳細やパッチの入手方法については、](https://www.adobe.com/account/sign-in.supportportal.html) サポートにお問い合わせください。
 
 ## パッチインストーラについて{#about-the-patch-installer}
 
@@ -31,11 +31,11 @@ AEM 6.4FormsJEEパッチインストーラーには、このパッチのリリ�
 
 1. &lt;*AEM_forms_root*>/deploy フォルダーのバックアップを作成します。Quick Fix をアンインストールする場合は必須です。
 1. アプリケーションサーバーを停止します。
-1. パッチインストーラーのアーカイブファイルをハードドライブに展開します。
+1. パッチインストーラーアーカイブファイルをハードディスクに展開します。
 1. 使用しているオペレーティングシステムに従って名前が付けられたディレクトリで、次の操作を実行します。
 
-   * ****
-Windowsインストールメディアまたはハードディスク上のインストーラーのコピー先フォルダーにある適切なディレクトリに移動し、重複をクリックします 
+   * **Windows**
+インストールメディアまたはハードディスク上のインストーラーのコピー先フォルダーにある適切なディレクトリに移動し、 
 `aemforms64_cfp_install.exe` file.
 
       * （Windows 32ビット） `Windows\Disk1\InstData\VM`
@@ -72,9 +72,9 @@ Windowsインストールメディアまたはハードディスク上のイン�
 
 1. アプリケーションサーバーに応じて、以下のいずれかのドキュメントを選択し、「*AEM Forms の設定とデプロイ*」節の指示に従ってください。
 
-   * [AEM Forms のインストールおよびデプロイ（JBoss 版）](http://www.adobe.com/go/learn_aemforms_installJBoss_64_jp)
-   * [AEM Forms のインストールおよびデプロイ（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_64_jp)
-   * [AEM Forms のインストールおよびデプロイ（WebLogic 版）](http://www.adobe.com/go/learn_aemforms_installWebLogic_64_jp)
+   * [AEM Forms のインストールおよびデプロイ（JBoss 版）](http://www.adobe.com/go/learn_aemforms_installJBoss_64)
+   * [AEM Forms のインストールおよびデプロイ（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_64)
+   * [AEM Forms のインストールおよびデプロイ（WebLogic 版）](http://www.adobe.com/go/learn_aemforms_installWebLogic_64)
 
 1. （JBossのみ）パッチをインストールしてサーバーを設定した後、JBoss Application Serverのtmpおよびworkディレクトリを削除します。
 
@@ -93,7 +93,7 @@ SAML認証を設定済みで、大きいIDPメタデータに関する問題が�
 ## 影響を受けたモジュール{#impacted-modules}
 
 * ドキュメントサービス
-* ドキュメントのセキュリティ
+* Document Security
 * Foundation JEE
 * PDFG サービス
 
