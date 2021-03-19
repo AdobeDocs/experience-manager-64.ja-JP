@@ -1,7 +1,7 @@
 ---
 title: 処理に時間のかかるクエリのトラブルシューティング
 seo-title: 処理に時間のかかるクエリのトラブルシューティング
-description: 'null'
+description: 処理に時間のかかるクエリのトラブルシューティング
 seo-description: 'null'
 uuid: ad09546a-c049-44b2-99a3-cb74ee68f040
 contentOwner: User
@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 translation-type: tm+mt
-source-git-commit: c4e18cad7bc08638af9dce6ab396554052043e16
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2267'
+source-wordcount: '2269'
 ht-degree: 69%
 
 ---
@@ -61,7 +61,7 @@ AEM 6.3 では、デフォルトでトラバースの回数が 100,000 回に達
    * `*INFO* org.apache.jackrabbit.oak.query.QueryImpl Traversal query (query without index) ... ; consider creating and index`
    * このメッセージがログに記録されるのは、使用できるインデックスがない場合とクエリが多数のノードをトラバースする可能性がある場合のみです。インデックスが使用可能な場合、メッセージはログに記録されませんが、トラバースの量が少ないので処理にかかる時間は短くなります。
 
-* AEM [クエリパフォーマンス](/help/sites-administering/operations-dashboard.md#query-performance)オペレーションコンソールにアクセスし、[スロークエリの説明](/help/sites-administering/operations-dashboard.md#explain-query)でトラバーサルを探すか、インデックスクエリの説明を見つけないかを調べます。
+* AEM [クエリパフォーマンス](/help/sites-administering/operations-dashboard.md#query-performance)オペレーションコンソールにアクセスし、[スロークエリの説明](/help/sites-administering/operations-dashboard.md#explain-query)でトラバーサルを探すか、インデックスクエリの説明を見つけないかを確認します。
 
 ### 制限が不十分なクエリの検出 {#detecting-poorly-restricted-queries}
 
@@ -201,7 +201,7 @@ AEM では、以下のクエリ言語がサポートされています。
       ```
    ノードタイプの制限がないクエリにより、AEM では `nt:base` ノードタイプが想定されます。これは、AEM のすべてのノードのサブタイプなので、実質上ノードタイプの制限は存在しません。
 
-   `type=cq:Page`を設定すると、このクエリは`cq:Page`ノードのみに制限され、クエリはAEM cqPageLuceneに解決され、結果はAEMのノードのサブセット（`cq:Page`ノードのみ）に制限されます。
+   `type=cq:Page`を設定すると、このクエリは`cq:Page`ノードのみに制限され、クエリはAEM cqPageLuceneに解決され、結果はAEMではノードのサブセット（`cq:Page`ノードのみ）に制限されます。
 
 1. クエリが既存の Lucene プロパティインデックスに解決されるようにクエリのノードタイプの制限を調整します。
 
