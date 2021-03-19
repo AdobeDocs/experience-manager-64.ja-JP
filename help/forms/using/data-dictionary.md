@@ -7,10 +7,11 @@ uuid: cc976dff-f243-4807-a92c-81b78476a744
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 53595ac8-ca7e-4adc-9214-5d0b7cdf71a0
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: 48ea1c456e6f43fb5b348aa65f2380ee0b72a3f1
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '3866'
+source-wordcount: '3868'
 ht-degree: 85%
 
 ---
@@ -280,7 +281,7 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   <tr> 
    <td>参照<br />名</td> 
    <td>文字列</td> 
-   <td>必須。データディクショナリの階層や構造の変更に左右されない、DDE への参照を可能にする DDE の一意の参照名です。テキストモジュールは、この名前を使用してマップされます。</td> 
+   <td>必須. データディクショナリの階層や構造の変更に左右されない、DDE への参照を可能にする DDE の一意の参照名です。テキストモジュールは、この名前を使用してマップされます。</td> 
   </tr> 
   <tr> 
    <td>displayname</td> 
@@ -295,7 +296,7 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   <tr> 
    <td>elementType</td> 
    <td>文字列</td> 
-   <td>必須。DDEのタイプ：STRING、NUMBER、DATE、Boolean、COMPOSITE、COLLECTION のいずれかです。</td> 
+   <td>必須. DDEのタイプ：STRING、NUMBER、DATE、Boolean、COMPOSITE、COLLECTION のいずれかです。</td> 
   </tr> 
   <tr> 
    <td>elementSubType</td> 
@@ -304,12 +305,12 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   </tr> 
   <tr> 
    <td>キー</td> 
-   <td>Boolean</td> 
+   <td>ブール型</td> 
    <td>DDE がキー要素であるかどうかを示す Boolean フィールド。</td> 
   </tr> 
   <tr> 
    <td>計算済み</td> 
-   <td>ブール値</td> 
+   <td>ブール型</td> 
    <td>DDE が計算済みかどうかを示す Boolean フィールド。計算済み DDE の値は、他の DDE 値の関数です。デフォルトでは、JSP 式がサポートされます。</td> 
   </tr> 
   <tr> 
@@ -329,7 +330,7 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   </tr> 
   <tr> 
    <td>必須</td> 
-   <td>ブール値</td> 
+   <td>ブール型</td> 
    <td>このフラグは、データディクショナリに対応するインスタンスデータのソースに、この特定の DDE の値が含まれていなくてはならないことを示します。</td> 
   </tr> 
   <tr> 
@@ -562,11 +563,11 @@ Data Dictionary の実装の詳細を示すサンプルモデルおよびコー�
    <td>空（ヌル）<br /> </td> 
   </tr> 
   <tr> 
-   <td>を</td> 
+   <td>コピー先：</td> 
    <td>/note/to</td> 
   </tr> 
   <tr> 
-   <td> から</td> 
+   <td>コピー元：</td> 
    <td>/note/from</td> 
   </tr> 
   <tr> 
