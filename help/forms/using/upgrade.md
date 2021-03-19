@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 12a4785fe83c319e3b91bbdf4ae8cb5745f4f187
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '231'
 ht-degree: 100%
 
 ---
