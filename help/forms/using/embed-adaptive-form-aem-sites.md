@@ -8,11 +8,12 @@ contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: interactive-communications, author
 discoiquuid: 43362643-69cd-4006-a613-f998c79eeddc
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1114'
-ht-degree: 71%
+source-wordcount: '1116'
+ht-degree: 72%
 
 ---
 
