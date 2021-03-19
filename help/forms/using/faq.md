@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: fbe70162-ced6-4989-9322-e12772edbcbc
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1895'
+source-wordcount: '1897'
 ht-degree: 81%
 
 ---
