@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: d816bf2e-5236-4084-b7c4-c32b72cdff97
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2592'
+source-wordcount: '2593'
 ht-degree: 5%
 
 ---
@@ -483,7 +484,7 @@ PDFドキュメントを不要にするには、次の手順を実行します�
 
 ### Java API {#sanitize-pdf-documents-using-the-java-api}を使用してPDFドキュメントを不要なものにします。
 
-PDF Utilities API(Java)を使用して、ドキュメントを削除します。
+PDF Utilities API(Java)を使用してドキュメントを削除します。
 
 1. プロジェクトファイルを含める
 
