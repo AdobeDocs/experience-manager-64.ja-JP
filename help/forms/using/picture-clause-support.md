@@ -9,16 +9,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5e344be7-46cd-4e1f-ae3a-1f89c645cffe
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '638'
 ht-degree: 96%
 
 ---
 
 
-# HTML5 フォームにおけるパターン形式文字列サポート  {#picture-clause-support-for-html-forms}
+# HTML5 フォームにおけるパターン形式文字列サポート {#picture-clause-support-for-html-forms}
 
 HTML5 フォームは、日付、テキスト、および数値記号の表示値と形式設定された値の XFA パターン形式文字列をサポートしています。次のパターン形式文字列の式がサポートされています。
 
