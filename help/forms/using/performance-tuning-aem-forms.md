@@ -1,6 +1,6 @@
 ---
-title: AEM Forms サーバーのパフォーマンス調整
-seo-title: AEM Forms サーバーのパフォーマンス調整
+title: AEM Forms サーバーのパフォーマンスチューニング
+seo-title: AEM Forms サーバーのパフォーマンスチューニング
 description: AEM Forms が最適に動作するようにするために、キャッシュ設定と JVM パラメーターを微調整することができます。また、Web サーバーを使用することにより AEM Forms デプロイメントのパフォーマンスを向上することもできます。
 seo-description: AEM Forms が最適に動作するようにするために、キャッシュ設定と JVM パラメーターを微調整することができます。また、Web サーバーを使用することにより AEM Forms デプロイメントのパフォーマンスを向上することもできます。
 uuid: 77eaeecc-ca52-4d3d-92e6-1ab4d91b9edd
@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: Configuration
 discoiquuid: 5d672b56-00c4-46a0-974b-e174fbdf07d6
+role: Administrator
 translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '901'
 ht-degree: 81%
 
 ---
 
 
-# AEM Forms サーバーのパフォーマンス調整  {#performance-tuning-of-aem-forms-server}
+# AEM Forms サーバーのパフォーマンスチューニング {#performance-tuning-of-aem-forms-server}
 
 この記事では、AEM Forms デプロイメントのボトルネックを減少しパフォーマンスを最適化するための戦略とベストプラクティスを検討します。
 
@@ -59,7 +60,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 >[!NOTE]
 >
->推奨設定は、Windows 2008 R2 8 CoreおよびOracleHotSpot 1.7（64ビット）JDK用で、ご使用のシステム設定に従って拡大または縮小する必要があります。
+>推奨設定は、Windows 2008 R2 8コアおよびOracleHotSpot 1.7（64ビット）JDK用で、ご使用のシステム設定に従って拡大または縮小する必要があります。
 
 ## Web サーバーの使用 {#using-a-web-server}
 
