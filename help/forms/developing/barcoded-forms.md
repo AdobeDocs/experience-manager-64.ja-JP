@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: eb28ac30-265c-4611-8247-1f4bc826f254
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1931'
+source-wordcount: '1932'
 ht-degree: 2%
 
 ---
@@ -121,7 +122,7 @@ Barcoded Forms API(Java)を使用してフォームデータをデコードし�
 
 1. バーコードデータを含むPDFフォームの取得
 
-   * コンストラクターを使用し、PDFドキュメントの場所を指定する文字列値を渡して、バーコードデータを含むPDFフォームを表す`java.io.FileInputStream`オブジェクトを作成します。
+   * コンストラクターを使用し、PDFドキュメントの場所を指定する文字列値を渡して、バーコードデータが含まれるPDFフォームを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. PDFフォームからデータをデコードする
