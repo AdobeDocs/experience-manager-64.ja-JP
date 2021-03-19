@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: ccc59dd5-c0cf-415a-b71a-5bc0cf452ede
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '376'
 ht-degree: 89%
 
 ---
 
 
-# アクセス可能な HTML5 フォームの設計  {#designing-accessible-html-forms}
+# アクセス可能な HTML5 フォームの設計 {#designing-accessible-html-forms}
 
 HTML5 フォームは ARIA HTML5 アクセシビリティ標準を基に、アクセシビリティを備えた HTML フォームを生成します。これらのフォームは、タブナビゲーション（Mozilla FireFox を除く）をサポートし、一般的な画面読み上げアプリケーションと互換性があります。優れたアクセシビリティ機能を持つHTML5フォームを生成するには、[基本的なデザインガイドライン](/help/forms/using/best-practices-for-html5-forms.md)に基づいてXFAフォームテンプレートをデザインします。 デザインガイドラインには正しいタブ順序の設定、および各フォームコントロールのために読み上げテキストコンテンツの提供などが含まれます。AEM Formsデザイナーでは、アクセシブルなPDFフォームとHTML5フォームを生成するために、これらのフォームコントロール属性の設定をサポートしています。
 
