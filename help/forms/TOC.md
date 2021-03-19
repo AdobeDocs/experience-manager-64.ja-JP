@@ -7,15 +7,18 @@ audience: end-user
 user-guide-title: Adobe Experience Manager 6.4 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
+feature-set: Experience Manager Forms
+role: 開業医
 translation-type: tm+mt
-source-git-commit: e7603d481720b368c6976674205bb523ac0df3d0
+source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
 workflow-type: tm+mt
-source-wordcount: '3730'
+source-wordcount: '3732'
 ht-degree: 75%
 
 ---
 
-# Adobe Experience Manager 6.4 Forms ガイド  {#forms}
+
+# Adobe Experience Manager 6.4 Forms ガイド {#forms}
 
 + [AEM 6.4Formsガイド](home.md)
 + リリースノート {#release-notes-new-features}
@@ -66,9 +69,9 @@ ht-degree: 75%
       + [JEE上のAEM Formsのインストールおよびデプロイ（JBoss Turnkeyを使用）](http://www.adobe.com/go/learn_aemforms_installTurnkey_64_jp)
       + [AEM Formsドキュメントセキュリティサーバーのインストールと設定](using/installing-and-configuring-the-document-security-server.md)
       + [AEM Formsのインストールの準備（シングルサーバ）](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64_jp)
-      + [JEE上のAdobe Experience Manager Formsのインストールおよびデプロイ（JBoss版）](http://www.adobe.com/go/learn_aemforms_installJBoss_64_jp)
-      + [JEE上のAEM Formsのインストールおよびデプロイ（WebLogic版）](http://www.adobe.com/go/learn_aemforms_installWebLogic_64_jp)
-      + [JEE上のAdobe Experience Manager Formsのインストールおよびデプロイ（WebSphere版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_64_jp)
+      + [JEE上のAdobe Experience Manager Formsのインストールおよびデプロイ（JBoss版）](http://www.adobe.com/go/learn_aemforms_installJBoss_64)
+      + [JEE上のAEM Formsのインストールおよびデプロイ（WebLogic版）](http://www.adobe.com/go/learn_aemforms_installWebLogic_64)
+      + [JEE上のAdobe Experience Manager Formsのインストールおよびデプロイ（WebSphere版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_64)
       + [AEM FormsWorkbenchのインストール](http://help.adobe.com/ja_JP/AEMForms/6.1/InstallWorkbench/index.html)
       + [Designerのインストールと設定](using/installing-configuring-designer.md)
       + [AEM Formsのインストールの準備（サーバークラスター）](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64_jp)
@@ -76,7 +79,7 @@ ht-degree: 75%
       + [WebLogicクラスターでのJEE上のAdobe Experience Manager Formsの設定](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_64_jp)
       + [WebSphere ClusterでのJEE上のAdobe Experience Manager Formsの設定](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_64)
    + AEM Forms の設定 {#configure-aem-forms}
-      + [AEM Forms サーバーのパフォーマンス調整](using/performance-tuning-aem-forms.md)
+      + [AEM Forms サーバーのパフォーマンスチューニング](using/performance-tuning-aem-forms.md)
       + [アダプティブフォームのキャッシュの設定](using/configure-adaptive-forms-cache.md)
       + [AEM DS の設定](using/configuring-the-processing-server-url-.md)
       + [同期スケジューラの設定](using/configure-synchronization-scheduler.md)
@@ -366,7 +369,7 @@ ht-degree: 75%
    + [ポータブル保護ライブラリを使用して、ポリシーで保護された PDF ドキュメントを Reader 用に拡張します。](using/reader-extending-policy-protected-pdf-documents-using-ppl.md)
    + [Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントを AEM で検索可能にする](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
    + [別のユーザーの代わりにドキュメントを保護する](using/protect-document-on-behalf-of-another-user.md)
-+ Forms - Designer {#use-forms-designer}
++ Forms Designer {#use-forms-designer}
    + [Designer の使用](http://www.adobe.com/go/learn_aemforms_designer_64)
    + [Designer クイックスタートチュートリアル](http://www.adobe.com/go/learn_aemforms_designer_quick_start_64_jp)
    + [Designer サンプル](http://www.adobe.com/go/learn_aemforms_designer_samples_64_jp)
@@ -573,7 +576,7 @@ ht-degree: 75%
    + [プロセスレポートのトラブルシューティング](/help/forms/using/process-reporting/troubleshooting-process-management.md)
 + 開発者向けリファレンス {#developer-reference}
    + [開発者の基本事項](https://docs.adobe.com/content/help/en/experience-manager-64/developing/home.html)
-   + [HTML テンプレート言語](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)
+   + [HTML テンプレート言語](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)
    + [アダプティブフォームをデバッグするための AEM プラグイン。](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-4/forms/javadocs/index.html)
    + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/experience-manager/6-4/forms/ProgramLC/javadoc/index.html)
