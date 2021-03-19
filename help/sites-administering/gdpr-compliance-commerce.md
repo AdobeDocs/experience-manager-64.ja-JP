@@ -1,15 +1,16 @@
 ---
 title: AEM Commerce - GDPR 対応
 seo-title: AEM Commerce - GDPR 対応
-description: 'null'
+description: '"AEM Commerce - GDPR 対応"'
 seo-description: 'null'
 uuid: 7ca26587-8cce-4c75-8629-e0e5cfb8166c
 contentOwner: carlino
 discoiquuid: c637964a-dfcb-41fe-9c92-934620fe2cb3
+feature: Commerce統合フレームワーク
 translation-type: tm+mt
-source-git-commit: 0db56cb77628b3e81b69382a314c30b43887bde6
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '317'
 ht-degree: 69%
 
 ---
