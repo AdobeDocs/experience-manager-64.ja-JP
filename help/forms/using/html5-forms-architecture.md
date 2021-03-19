@@ -9,16 +9,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 599f1925-a17e-4bae-93d9-b54edcee92b0
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: 6f0016b6b59d27da89c41089aa4d73096846a7fb
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2040'
 ht-degree: 78%
 
 ---
 
 
-# アーキテクチャ /{#architecture-of-html-forms}
+# HTML5 フォームのアーキテクチャ {#architecture-of-html-forms}
 
 ## アーキテクチャ {#architecture}
 
@@ -109,7 +110,7 @@ HTML5 フォームは LRU 方法を使用してメモリ内キャッシングを
 
 設定サービスは HTML5 フォームの設定パラメータとキャッシュ設定の調整を可能にします。
 
-これらの設定を更新するには、CQ FelixAdmin Console（`https://[server]:[port]/system/console/configMgr`で利用可能）に移動し、「MobileForms設定」を探して選択します。
+これらの設定を更新するには、CQ FelixAdmin Console（`https://[server]:[port]/system/console/configMgr`で利用可能）に移動し、「モバイルForms設定」を探して選択します。
 
 設定サービスを使用して、キャッシュサイズを設定したりキャッシュを無効化したりできます。また、デバッグオプションパラメーターの使用によるデバッグも有効化できます。フォームのデバッグについて詳しくは、[HTML5フォームのデバッグ](/help/forms/using/debug.md)を参照してください。
 
