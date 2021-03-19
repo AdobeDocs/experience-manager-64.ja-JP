@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '449'
 ht-degree: 59%
 
 ---
@@ -104,7 +105,7 @@ poolWebコンソールを使用(configMgr):
 サービスを有効にするWebコンソールを使用(configMgr): 
 *http://localhost:4502/system/console/configMgr*
 
-1. **[コミュニティ](users.md#creating-community-members)** 管理者の作成作成者環境に対しては、クラシックUIセキュリティコンソールを使用します。 *http://localhost:4502/*
+1. **[コミュニティ](users.md#creating-community-members)** 管理者の作成作成者環境は、クラシックUIセキュリティコンソールを使用します。 *http://localhost:4502/*
  useradmincreate user(s) with path = /home/users/community
 
    * メ追加ンバーを次のグループに追加します：
