@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: upgrading
 discoiquuid: 5ca8dd7a-4efd-493e-8022-d2f10903b0a2
+feature: アップグレード
 translation-type: tm+mt
-source-git-commit: d97828afee7a65e7a4036912c1cc8726404088c9
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '814'
 ht-degree: 85%
 
 ---
