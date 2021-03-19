@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: dcf83c9f-b818-44a2-9079-80a4fc357c4f
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: cfb072f09c50e75df3a987ab7eb91f0d7cb920c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1250'
 ht-degree: 6%
 
 ---
@@ -1024,7 +1025,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 ## クイック開始:Javaプロジェクト{#quick-start-invoking-a-service-using-swaref-in-a-java-project}でSwaRefを使用してサービスを呼び出す
 
-次のJavaコードの例は、Javaプロジェクトから`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 このJavaプロジェクトでは、JAX-WSとSwaRefをエンコーディングタイプとして使用して作成したプロキシクラスを使用します。 ([SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)を使用したAEM Formsの呼び出しを参照)。
+以下のJavaコードの例は、Javaプロジェクトから`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 このJavaプロジェクトでは、JAX-WSとSwaRefをエンコーディングタイプとして使用して作成したプロキシクラスを使用します。 ([SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)を使用したAEM Formsの呼び出しを参照)。
 
 *Loan.pdf*&#x200B;というPDFファイルに基づく、保護されていないPDFドキュメントが、SwaRefを使用してAEM Formsプロセスに渡されます。 暗号化されたPDFドキュメントは、*EncryptedDocument.pdf*&#x200B;というPDFファイルとして保存されます。
 
