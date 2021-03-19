@@ -1,7 +1,7 @@
 ---
 title: 基盤コンポーネント
 seo-title: 基盤コンポーネント
-description: 'null'
+description: 基盤コンポーネント
 seo-description: 'null'
 uuid: c1eccd51-ee65-4c4d-8c27-c99b52574518
 contentOwner: User
@@ -12,9 +12,9 @@ discoiquuid: 3619ded2-a67c-4b96-b634-4c0d68f5284a
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 translation-type: tm+mt
-source-git-commit: 201ddb888e6f1797bf2b84c5719625ebf87ddc82
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '6670'
+source-wordcount: '6671'
 ht-degree: 83%
 
 ---
@@ -61,7 +61,7 @@ ht-degree: 83%
 ### アカウント項目  {#account-item}
 
 >[!CAUTION]
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
 
 タイトルと説明を含むリンクを定義できます。
 
@@ -70,7 +70,7 @@ ht-degree: 83%
 ### アダプティブ画像 {#adaptive-image}
 
 >[!CAUTION]
->この基盤コンポーネントは廃止されました。Adobeでは、代わりに[コアコンポーネントの画像コンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html)を活用することをお勧めします。
+>この基盤コンポーネントは廃止されました。Adobeでは、代わりに[コアコンポーネントの画像コンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/image.html)を活用することをお勧めします。
 
 アダプティブ画像基盤コンポーネントは、Web ページを開いたウィンドウに合うようにサイズが調整される画像を生成します。このコンポーネントを使用するには、ファイルシステムと DAM のいずれかから画像リソースを指定します。Web ページが開くと、Web ブラウザーにより、現在のウィンドウに適したサイズに調整された画像のコピーがダウンロードされます。
 
@@ -608,7 +608,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 * **段落参照**
 
-   * **リファレンス**
+   * **参照**
 
       参照するページと段落のパスを指定します（コンテンツを含める）。
 
@@ -721,7 +721,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 ### スライドショー  {#slideshow}
 
 >[!CAUTION]
->この基盤コンポーネントは廃止されました。代わりに、[カルーセルコアコンポーネント](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/carousel.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[カルーセルコアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/carousel.html)を利用することをお勧めします。
 
 >[!CAUTION]
 >
