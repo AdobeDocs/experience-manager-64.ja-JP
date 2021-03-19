@@ -9,16 +9,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5d860f05-3257-4cf7-93dd-77d226d59b39
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '670'
 ht-degree: 63%
 
 ---
 
 
-# HTML5 フォームのカスタム外観の作成  {#create-custom-appearances-in-html-forms}
+# HTML5 フォームのカスタム外観の作成 {#create-custom-appearances-in-html-forms}
 
 Mobile Forms でカスタムウィジェットをプラグインできます。外観フレームワークを使用することで、既存の jQuery ウィジェットの拡張や、独自のカスタムウィジェットの開発を行うことができます。XFAエンジンは様々なウィジェットを使用します。詳しくは、「[アダプティブフォームおよびHTML5フォームの外観フレームワーク](/help/forms/using/introduction-widgets.md)」を参照してください。
 
