@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '740'
 ht-degree: 51%
 
 ---
 
 
-# DSRP 向け MySQL 設定  {#mysql-configuration-for-dsrp}
+# DSRP 向け MySQL 設定 {#mysql-configuration-for-dsrp}
 
 MySQL は、ユーザー生成コンテンツ（UGC）の保存に使用できるリレーショナルデータベースです。
 
