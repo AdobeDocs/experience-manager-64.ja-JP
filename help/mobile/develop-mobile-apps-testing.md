@@ -1,7 +1,7 @@
 ---
 title: モバイルアプリのテスト
 seo-title: モバイルアプリのテスト
-description: 'null'
+description: モバイルアプリのテスト
 seo-description: 'null'
 uuid: 3b402d34-5cab-4280-b8b9-88ad9f8fc5e4
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 5a98e1bd-f5c1-4f2f-ac02-dbd005dc1de7
 translation-type: tm+mt
-source-git-commit: 55b6a113bcb4d39b7eb100f21a05b9b44e3fe1c3
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1029'
 ht-degree: 82%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 82%
    * パフォーマンス、
    * データ／電力消費など
 
-## ツール  {#tools}
+## ツール {#tools}
 
 モバイルアプリのテストには、さまざまなツールを使用できます。使用するツールを選択する場合は、機能、価格、サポート、対象範囲など個別の状況に応じて決定します。ここでは、使用可能なツールおよびサービスのいくつかをごく簡単に説明します。
 
