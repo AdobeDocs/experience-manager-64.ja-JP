@@ -7,16 +7,17 @@ uuid: a68f1ca1-32dd-48f9-9359-8f09abd1c3de
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: b8cd2656-8bc2-4bd7-a3d6-dc76b0a2d429
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '442'
 ht-degree: 92%
 
 ---
 
 
-# HTML5 フォームの概要  {#introduction-to-html-forms}
+# HTML5 フォームの概要 {#introduction-to-html-forms}
 
 HTML5 フォームは、HTML5 形式で XFA フォームテンプレートをレンダリングする Adobe Experience Manager 6.0（AEM 6.0）ソフトウェアの新しい機能です。この機能により、XFA ベースの PDF がサポートされていないモバイルデバイスおよびデスクトップブラウザー上のフォームのレンダリングが可能です。 HTML5 フォームは XFA フォームテンプレートの既存の機能をサポートしているだけでなく、モバイルデバイスのための新しい機能（例えば手書き署名）も追加します。
 
