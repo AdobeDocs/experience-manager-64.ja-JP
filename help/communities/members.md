@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
+role: Administrator
 translation-type: tm+mt
-source-git-commit: c53ad108620f9066179c79195f90b930d5cab0ff
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '957'
 ht-degree: 41%
 
 ---
 
 
-# メンバーコンソールとグループ管理コンソール  {#members-groups-management-consoles}
+# メンバーコンソールとグループ管理コンソール {#members-groups-management-consoles}
 
 ## 概要 {#overview}
 
@@ -177,7 +178,7 @@ IDがデフォルトで電子メールアドレスに設定されている場合
 *必須*)グループ固有のID。
    *ID は一度作成すると変更できません。*
 
-* **[!UICONTROL 名前]**
+* **[!UICONTROL Name]**
 (
 *(オプション*)グループの表示名。
 
