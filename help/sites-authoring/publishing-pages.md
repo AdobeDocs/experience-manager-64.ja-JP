@@ -1,7 +1,7 @@
 ---
 title: ページの公開
 seo-title: ページの公開
-description: 'null'
+description: ページの公開
 seo-description: 'null'
 uuid: 1222859d-ef8d-462e-a125-b76e6cfec26d
 contentOwner: Chris Bohnert
@@ -10,9 +10,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8f2714bc-9d6c-4e6f-97a1-3b4f977348c5
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1630'
+source-wordcount: '1631'
 ht-degree: 90%
 
 ---
