@@ -10,7 +10,7 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 translation-type: tm+mt
-source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+source-git-commit: 5b00783e4471a6b142ab17a7bc4a647ab04aec5f
 workflow-type: tm+mt
 source-wordcount: '2844'
 ht-degree: 78%
@@ -27,7 +27,7 @@ ht-degree: 78%
 | バージョン | 6.4 |
 | 種類 | メジャーリリース |
 | 正式版の日付 | 2018 年 4 月 4 日 |
-| 推奨される更新 | [AEMリリースとアップデート](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)を参照 |
+| 推奨される更新 | [AEMリリースとアップデート](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)を参照 |
 
 ### 参考情報 {#trivia}
 
@@ -138,7 +138,7 @@ AEM 6.4 で次世代のコンポーネントモデルへの転換が完了しま
 
 Digital Signageやキオスクのネットワークを含むすべてのマーケティングチャネルに一貫したメッセージを届けることが、AEM Screensの意味です。 AEM 6.4 では、Microsoft Windows および Google Chrome OS ハードウェアでサイネージプレーヤーを実行できるようになりました。さらに、リモートデバイス管理およびスケジュール（チャネルグループ）の機能強化もおこなわれています。
 
-画面の更新について詳しくは、[AEM Screensユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html)を参照してください。
+画面の更新について詳しくは、[AEM Screensユーザーガイド](https://docs.adobe.com/content/help/ja/experience-manager-screens/user-guide/aem-screens-introduction.html)を参照してください。
 
 ### Experience Manager Communities {#experience-manager-communities}
 
@@ -196,7 +196,7 @@ Creative Cloud エンタープライズ版の Adobe Asset Link を使用する�
 
 **AEM デスクトップアプリケーション**
 
-AEMデスクトップアプリは、AEM 6.4と互換性があるバージョン1.8に更新されました。AEMデスクトップアプリの変更点の完全なリストは、専用の[AEMデスクトップアプリリリースノート](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)ドキュメントに記載されています。
+AEMデスクトップアプリは、AEM 6.4と互換性があるバージョン1.8に更新されました。AEMデスクトップアプリの変更点の完全なリストは、専用の[AEMデスクトップアプリリリースノート](https://docs.adobe.com/content/help/ja/experience-manager-desktop-app/using/release-notes.html)ドキュメントに記載されています。
 
 AEM 6.3 リリース以降に導入された機能改善としては、フォルダー階層をバックグラウンドでアップロードできる機能、アセットのバックグラウンド操作を監視するための新しい UI、キャッシュ、ネットワーク、ログインの機能強化、全般的な安定性向上などがあります。ドキュメントには[ベストプラクティスガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)も含まれています。
 
@@ -220,7 +220,7 @@ AEM 6.3 リリース以降に導入された機能改善としては、フォル
 
 **Brand Portal**
 
-メタデータ、レポート、デジタル著作権、ログイン操作、およびアセット配布での公開のパフォーマンスに関して様々な機能強化がおこなわれています。新しい機能強化と機能について詳しくは、[AEM Assetsブランドポータルの新機能](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/introduction/whats-new.html)を参照してください。
+メタデータ、レポート、デジタル著作権、ログイン操作、およびアセット配布での公開のパフォーマンスに関して様々な機能強化がおこなわれています。新しい機能強化と機能について詳しくは、[AEM Assetsブランドポータルの新機能](https://docs.adobe.com/content/help/ja/experience-manager-brand-portal/using/introduction/whats-new.html)を参照してください。
 
 #### Dynamic Media アドオン {#dynamic-media-add-on}
 
@@ -284,7 +284,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 ## このリリースに含まれるファイルのリスト {#list-of-files-that-are-part-of-the-release}
 
-**Foundation**
+**基盤**
 
 * スタンドアロンのクイックスタート：cq-quickstart-6.4.0.jar
 * Application Server Quickstart:cq-quickstart-6.4.0.war
@@ -307,7 +307,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
    * [イタリア語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
    * [フランス語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
-* クラシック UI コンポーネントを Coral 3 に移行するための[ダイアログ変換ツール](/help/sites-developing/dialog-conversion.md)
+* [AEM最新化](/help/sites-developing/modernization-tools.md) ツールを使用してClassic UIコンポーネントをCoral 3に移行
 
 **Assets**
 
@@ -317,7 +317,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 * 強化された RAW 画像のサポートを追加するためのパッケージ（[詳細](/help/assets/camera-raw.md)）
 
-**フォーム**
+**Forms**
 
 * AEM Forms の機能パッケージ：
 
@@ -356,7 +356,7 @@ Experience Manager 6.4 は、中国語エンコーディング規格の使用に
 
 >[!NOTE]
 >
->Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9および10は、Oracle社のLTS以外のリリースです([OracleJava SEサポート・ロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照)。 アドビでは、AEM を実稼働環境で実行するための Java については、LTS リリース版のみサポートします。そのため、AEM 6.4 で使用するバージョンとしては、Java 8 をお勧めします。
+>Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9および10は、Oracle別にLTS以外のリリースです([OracleJava SEサポート・ロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照)。 アドビでは、AEM を実稼働環境で実行するための Java については、LTS リリース版のみサポートします。そのため、AEM 6.4 で使用するバージョンとしては、Java 8 をお勧めします。
 
 ## 廃止される機能および削除された機能 {#deprecated-and-removed-features}
 
