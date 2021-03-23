@@ -10,7 +10,7 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 76c570e5-46ed-46be-9864-4fe4a83f0caf
 translation-type: tm+mt
-source-git-commit: e9c5fcd8f939d88317c5184b6352b227918088e5
+source-git-commit: 5b00783e4471a6b142ab17a7bc4a647ab04aec5f
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 62%
@@ -50,7 +50,7 @@ AEM には開発に役立つその他のツールが付属しています。
 * [IntelliJ IDEA を使用して AEM プロジェクトを開発する方法](/help/sites-developing/ht-intellij.md)
 * [VLT ツールを使用する方法](/help/sites-developing/ht-vlttool.md)
 * [プロキシサーバーツールを使用する方法](/help/sites-developing/ht-proxy-server.md)
-* [ダイアログ変換ツール](/help/sites-developing/dialog-conversion.md)
+* [AEM Modernization Tools](/help/sites-developing/modernization-tools.md)
 * [AEM Repo ツール](/help/sites-developing/aem-repo-tool.md)
 
 以下は、新しいプロジェクトの作成に役立つツールです。
@@ -62,4 +62,3 @@ AEM には開発に役立つその他のツールが付属しています。
 >
 >次のチュートリアルは、新しいAEMプロジェクトを開始する際に役立つ場合があります。\
 >[AEM Sitesの使用の手引き1 — プロジェクトの設定](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html)
-
