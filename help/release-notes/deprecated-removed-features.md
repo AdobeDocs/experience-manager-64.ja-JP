@@ -2,7 +2,7 @@
 title: 廃止される機能および削除された機能
 description: リリースノート（Adobe Experience Manager 6.4 の廃止される機能および削除された機能）
 translation-type: tm+mt
-source-git-commit: 8e82c691affe3b2c4108beec394cc0ba2d607b61
+source-git-commit: 5b00783e4471a6b142ab17a7bc4a647ab04aec5f
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 45%
@@ -21,7 +21,7 @@ ht-degree: 45%
 
 このプロセスにより、機能が実際に削除されるまでに、非推奨（廃止予定）の機能の新しいバージョンまたは後継機能にお客様が実装を合わせるためのリリースサイクルが少なくとも 1 回あります。
 
-## 廃止される機能 {#deprecated-features}
+## 非推奨（廃止予定）の機能 {#deprecated-features}
 
 次の表は、AEM 6.4で非推奨とマークされたリスト機能と機能を示しています。一般に、将来のリリースで削除される予定の機能は、非推奨となる最初に設定され、代わりの機能が提供されます。
 
@@ -152,7 +152,7 @@ ht-degree: 45%
 
 | 領域 | 機能 | 代替手段 |
 |---|---|---|
-| Analytics の Activity Map | AEM に組み込まれている Activity Map のバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。現在は、Adobe Analytics](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html)が提供する[ActivityMapプラグインを使用する必要があります。 |
+| Analytics の Activity Map | AEM に組み込まれている Activity Map のバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。現在は、Adobe Analytics](https://docs.adobe.com/content/help/ja/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html)が提供する[ActivityMapプラグインを使用する必要があります。 |
 | コンポーネント —Forms | フォームキャプチャ（foundation/components/form/captcha） | Google の ReCaptcha コンポーネントを代わりに使用します。 |
 | コンポーネント | Slideshow（foundation/components/slideshow） | 代替機能はありません。 |
 | コンポーネント | Flash（foundation/components/flash） | 代替機能はありません。 |
@@ -160,7 +160,7 @@ ht-degree: 45%
 | コンポーネント | 製品テーブル（commerce/components/product_table） | 代替機能はありません。 |
 | タスク管理 | クラシック UI タスク管理（/libs/cq/taskmanagement/content/taskmanager.html） | 6.0 以降、廃止されました。ワークフロー UI に統合されている新しいタスク管理機能を使用します。 |
 | ワークフロー | 5.6 から 6.2 までで使用された通知 UI （/libs/cq/workflow/content/notifications.html） | ワークフローインボックス（/aem/inbox） |
-| フォーム | PDF Generator を使用して PDF を PDF/E-1 形式に書き出す機能は削除されました。 | PDF Generatorでは、PDFからPDF/A-1a/b、PDF/A-2a/bおよびPDF/A-3a/b形式への書き出しが引き続きサポートされます。 |
+| フォーム | PDF Generator を使用して PDF を PDF/E-1 形式に書き出す機能は削除されました。 | PDF Generatorでは、引き続きPDFからPDF/A-1a/b、PDF/A-2a/bおよびPDF/A-3a/b形式への書き出しがサポートされます。 |
 | フォーム | ドキュメントフラグメント内では画像がサポートされなくなりました。 | インタラクティブコミュニケーションでは、印刷および Web チャネルで画像を直接使用できます。 |
 | フォーム | アウトオブザプレースアップグレード | アウトオブプレースアップグレードの実行のサポートは利用できません |
 | フォーム | TarMKからDocumentMKへの移行のサイドグレード | 古いシステムからデータを書き出し、新しいセットアップシステムで読み込むことができます。 手順について詳しくは、JEE上のAEM Formsのアップグレードドキュメントを参照してください |
@@ -179,4 +179,4 @@ ht-degree: 45%
 | 領域 | 機能 | お知らせ |
 |---|---|---|
 | ブラウザーのサポート | Microsoft Internet Explorer | AEM 6.4 は、Microsoft Internet Explorer 11 をサポートする最後のリリースです。 |
-| Foundation | UI フレームワーク | Adobeでは、2019年にCoral UI 2コンポーネントが非推奨となります。 AEM 6.4は、完全にCoral UI 3に基づいています(AEM 6.2で導入)。 Adobeでは、Coral 2を使用してカスタムUIを構築した顧客およびパートナーに、Coral 3にリファクタリングすることを推奨しています。 Adobeオファーは、Coral 2のダイアログをCoral 3に変換するツールです — [詳細を読む](/help/sites-developing/dialog-conversion.md)。 |
+| 基盤 | UI フレームワーク | Adobeでは、2019年にCoral UI 2コンポーネントが非推奨となります。 AEM 6.4は、完全にCoral UI 3に基づいています(AEM 6.2で導入)。 Adobeでは、Coral 2を使用してカスタムUIを構築した顧客およびパートナーに、Coral 3にリファクタリングすることを推奨しています。 Adobeオファーは、Coral 2の対話をCoral 3に変換するツールです — [詳細を読みます。](/help/sites-developing/modernization-tools.md) |
