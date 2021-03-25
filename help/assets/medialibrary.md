@@ -1,66 +1,95 @@
 ---
-title: AEM AssetsとAEMメディアライブラリの機能の比較
-description: AEM AssetsとAEMメディアライブラリに関する、相違点を含むよくある質問(FAQ)です。
+title: 基本的なデジタルアセット管理にメディアライブラリを使用する
+description: '[!DNL Experience Manager Assets] およびアセット管理用のメディアライブラリ。'
 contentOwner: AG
+role: 建築家、リーダー
 translation-type: tm+mt
-source-git-commit: 6a1013715c538c39eaf40a22dbffc7f2df36f968
+source-git-commit: 200bb263d60ebd9f6abc79ce0c73dac95b06de53
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 79%
+source-wordcount: '467'
+ht-degree: 2%
 
 ---
 
 
-# AEM Assets と AEM Media Library との比較 {#aem-assets-vs-aem-medialibrary}
+<!--
 
-Adobe Experience Manager (AEM) Assets は、AEM プラットフォームの不可欠な構成要素です。このスムーズな統合は AEM の大きなメリットとしてとらえられており、これによってコンテンツ管理における整合性とコンテンツ作成者の高い生産性が確保されます。
+Define Media Lib
+Define req for it
+Define use cases
+Define what is not included
 
-## よくある質問 {#frequently-asked-questions}
+-->
 
-### AEM Assets とは何ですか。 {#what-is-aem-assets}
+# 基本的なアセット管理にメディアライブラリを使用{#manage-assets-using-media-library}
 
-AEM Assets は、AEM プラットフォーム上のアプリケーションです。お客様はこのアプリケーションを使用して、Web ベースのリポジトリ内でデジタルアセット（画像、ビデオ、ドキュメントおよびオーディオクリップ）を管理できます。AEM Assets には、メタデータサポート、レンディション、デジタルアセット管理ファインダーおよび AEM Assets 管理 UI が含まれています。
+[!DNL Adobe Experience Manager] プラットフォームは、アセットを管理するための様々な機能を提供します。Media Libraryを使用すると、少数のアセットをリポジトリにアップロードし、Webページ内でアセットを検索して使用し、アセットに対する単純なアセット管理タスクを実行できます。
 
-### AEM Media Library とは何ですか。 {#what-is-the-aem-media-library}
+Media Libraryは、[!DNL Adobe Experience Manager Sites]ライセンスを補完する軽量のDigital Asset Management(DAM)ソリューションです。 [!DNL Sites] は、Webコンテンツ管理(WCM)の製品です。メディアライブラリは、Experience Managerのすべての機能と連携します。
 
-AEM Media Library は、画像やその他の共有リソースの保存専用に設けられた、AEM WCM コンテンツリポジトリ内の構成要素です。Media Library は、AEM WCM のデジタルアセット管理機能を使用します。
+[!DNL Adobe Experience Manager Assets] ライセンスは別途購入可能です。[!DNL Experience Manager Assets] 企業の使用例を介したアセットの堅牢な処理、メタデータ、スキーマ、検索、ユーザーインターフェイスのカスタマイズ、およびMedia Libraryの機能を超える多数の機能を利用できます。
 
-### AEM WCM にはない AEM Assets の機能  {#what-do-i-get-from-aem-assets-that-is-not-part-of-aem-wcm}
+## ライセンス要件{#avail-media-library-license}
 
-AEM Assets のお客様だけが使用できる独自の機能は次のとおりです。
+[!DNL Sites]ライセンスを持つお客様は、Media Libraryを使用する権利が与えられます。 [!DNL Experience Manager]の全てのコンポーネントで機能します。
 
-1. タイトル、タグ、説明以外のメタデータを抽出および編集する機能。
-1. aem assets管理者は、スタートアップスクリーンで`siteadmin`の横の2番目のボタンをクリックすると表示されます。
-1. Digital Asset Managementに関連するすべてのワークフロー手順、つまり、AEMアセットの取り込み、AEM Assetsの削除、AEM Assetsのサブアセット処理、AEM Assetsのメタデータ抽出です。
-1. `dam` imパッケージ領域を含むライブラリ。
+メディアライブラリがサイトの一部としてインストールされます。 サイトのライセンスおよびインストール以外に追加のライセンスまたはパッケージは必要ありません。
 
-これらの機能を使用するには、AEM Assets の有効なライセンスが必要です。
+## [!DNL Assets] 対するメディアライブラリ  {#assets-and-media-library}
 
-### AEM Assets は個別のパッケージとして使用できますか。  {#is-aem-assets-available-as-a-separate-package}
+Experience Managerアセットは、エンタープライズグレードのDAM機能を提供します。 アセット機能は、[!DNL Experience Manager]と共に1つのパッケージとして提供されます。 ただし、アセットライセンスを購入していないユーザーは、高度なDAM機能を使用する権利を持ちません。 アセットライセンスがない場合は、[メディアライブラリ機能](#use-media-library)のみ使用できます。
 
-いいえ。インストールとデプロイメントを簡単にするために、すべての AEM アプリケーションとアドオンは、機能がすべて含まれる 1 つのパッケージで配布されます。これは、パッケージに含まれるすべての機能の使用権がユーザーにあることを表すわけではありません。
+ライセンスを取得していない[!DNL Assets]機能の意図しない使用を防ぐには、[!DNL Assets]固有のワークフロー、コンポーネント、分類、オプション、および[!DNL Assets]管理者をすべて[!DNL Experience Manager]から削除します。 これにより、ライセンスを取得していない[!DNL Assets]機能を誤ってユーザが使用するのを防ぐことができます。
 
-#### デジタルアセットのメタデータを編集したいのですが、その場合 AEM Assets は必要ですか。  {#i-want-to-edit-metadata-of-digital-assets-do-i-need-aem-assets}
+## メディアライブラリを使用{#use-media-library}
 
-タイトル、説明およびタグ以外のメタデータを編集する場合は、AEM Assets のライセンスが必要です。
+Media Libraryは、次の使用例を大まかにカバーしています。
 
-#### 画像を読み込むときに自動的にサイズ変更したいのですが、その場合 AEM Assets は必要ですか。  {#i-want-to-automatically-resize-images-upon-import-do-i-need-aem-assets}
+* [!DNL Adobe Experience Manager Sites]を使用して作成したWebページに、基本的なDAM機能を提供します。
+* [!DNL Adobe Experience Manager Forms]を使用して作成されたアダプティブフォームと通信
+* [!DNL Adobe Experience Manager Screens]を使用して作成されたデジタル画面の操作。
+* [!DNL Assets] HTTP REST API（ヘッドレス操作用）
 
-いいえ。静的な画像のサイズ変更とワークフローに基づく自動変換、およびレンディションの管理機能は、AEM Media Library の一部です。これらの機能には、AEM Assets のライセンスは必要ありません。
+<!-- TBD: Remove this after confirmation. May need to merge this list with the list provided by PMs.
 
-### カスタマイズされた画像コンポーネントを使用して画像をサイズ変更したいのですが、その場合 AEM Assets は必要ですか。  {#i-want-to-resize-images-using-a-customized-image-component-do-i-need-aem-assets}
+* Basic metadata properties
+* Tag management
+* Version control
+* Static renditions
+* Projects, tasks, workflow authoring
+* Activity stream (timeline)
+* Query Builder (API)
+* Marketing Cloud integration
+* User interface customization and extension
+* Comments and annotation
+-->
 
-画像コンポーネントは AEM WCM に含まれています。画像コンポーネントに（さらに AEM Assets にも）使用されているグラフィックライブラリは AEM プラットフォームに含まれており、AEM Assets ライセンスは必要ありません。
+メディアライブラリ機能を使用するには、デフォルトの[!DNL Experience Manager]ユーザーインターフェイスを使用できます。 Media Libraryは[!DNL Experience Manager Sites]インストールの一部であり、別のインターフェイスやアドオンを必要としません。 既存のインターフェイスを使用して、Media Libraryのユーザーは次のタスクを実行する権利があります。
 
-### 自分が AEM Assets のライセンスを所持していない場合、ユーザーが AEM Assets を使用しないようにする方法はありますか。 {#how-can-i-prevent-my-users-from-using-aem-assets-if-i-did-not-license-aem-assets}
+* フォルダーを作成してアセットを整理します。
+* アセットのアップロード.
+* アセットの公開.
+* アセットの編集、移動およびコピーを行います。
+* アセットの参照、フィルタリングおよび検索（類似性検索を含む）を行います。
+* 「スマートタグ」フィールドを除き、メタデータフィールドの値に対する値および編集追加値。このフィールドは、アセットの[!UICONTROL プロパティ]ページの「[!UICONTROL 基本]」タブでデフォルトで使用できます。
+* 静的レンディションの追加削除を行います。
+* フォルダ、アセット、アセットレンディションをダウンロードします。
+* アセットのバージョンを作成します。
+* アセットに対してレビュータスクを作成し、実行します。
+* アセットに注釈を付けます。
+* コンテン追加ツファインダーを使用して[!DNL Sites]ページにアセットを追加。
+* 使用方法 [!DNL Content Fragments].
 
-すべての AEM Assets 固有ワークフロー、コンポーネント、分類、オプション、AEM Assets 管理機能を AEM から削除できます。これにより、ライセンスを取得していないAEM Assets機能を誤って使用するのを防ぐことができます。
+<!-- TBD: Define exactly which basic Assets workflow are available for use with Media Library?
+-->
 
-### ページに画像を追加し、その画像の切り抜きやサイズ変更を実行したいのですが、その場合 AEM Assets は必要ですか。  {#i-want-to-add-images-to-a-page-and-want-to-crop-and-resize-these-images-do-i-need-aem-assets}
+>[!IMPORTANT]
+>
+>高度なDAMの使用例の多くは[!DNL Experience Manager Assets]によって満たされます。 Media Libraryのライセンスでは、Media Libraryを使用して、一覧に示されている使用例のみを満たす権限を与えられます。 使用事例が一覧に表示されない場合は、Media Libraryライセンスで使用しないでください。 クエリがある場合は、Adobeカスタマーケアにお問い合わせください。
 
-このような使用法では、AEM Assets を購入する必要はありません。Web サイト上で画像を使用する目的では、Media Library も使用する必要はありません。画像コンポーネントを使用すると、ページに画像を直接アップロードできるからです。
+<!-- TBD: Add a CTA - how to contact Adobe for queries. -->
 
 >[!MORELIKETHIS]
 >
->* [機能の違いの詳細リスト](https://docs.adobe.com/content/help/en/experience-manager-65/assets/administer/medialibrary.html#listoffeatures)
+>* [DAM機能 [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-64/assets/home.html?lang=ja)
 
