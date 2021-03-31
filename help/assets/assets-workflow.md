@@ -2,10 +2,12 @@
 title: ビジネス・プロセスの達成、監査の実施、コンプライアンスの達成、基本的な健全性の維持を目的とした資産の処理
 description: 形式の変換、レンディションの作成、アセットの管理、アセットの検証およびワークフローの実行を行うためのアセット処理。
 contentOwner: AG
+feature: ワークフロー，レンディション
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: 73d440198028bfa6b47e9fde13f3a354a1b8445f
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1052'
 ht-degree: 28%
 
 ---
@@ -21,7 +23,7 @@ ht-degree: 28%
 
 ## Experience Manager{#default-workflows}で使用可能なデフォルトのワークフロー
 
-デフォルトでは、アップロードされたすべてのアセットは、[!UICONTROL DAM Update Asset]ワークフローを使用して処理されます。 ワークフローは、アップロードされた各アセットに対して実行され、レンディションの生成、メタデータの書き戻し、ページの抽出、メディアの抽出、トランスコードなど、基本的なアセット管理タスクを実行します。
+デフォルトでは、アップロードされたすべてのアセットは、[!UICONTROL DAM Update Asset]ワークフローを使用して処理されます。 このワークフローは、アップロードされた各アセットに対して実行され、レンディションの生成、メタデータの書き戻し、ページの抽出、メディアの抽出、トランスコードなど、基本的なアセット管理タスクを実行します。
 
 デフォルトで使用可能な様々なワークフローモデルを確認するには、[!DNL Experience Manager]の[!UICONTROL ツール/ワークフロー/モデル]を参照してください。
 
