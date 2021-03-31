@@ -2,16 +2,18 @@
 title: アセットのカスタマイズと拡張
 description: アセット共有とアセットエディターをカスタマイズおよび拡張する方法について説明します。これにより、ユーザーに合わせたインターフェイスと一連の機能が提供されます。
 contentOwner: AG
+feature: 開発者ツール
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '264'
 ht-degree: 94%
 
 ---
 
 
-# アセットのカスタマイズと拡張  {#customizing-and-extending-assets}
+# アセットのカスタマイズと拡張 {#customizing-and-extending-assets}
 
 アセットエディターは、Adobe Enterprise Manager（AEM）Web サイトのユーザーがリポジトリ内のデジタルアセットを検索、表示および操作するために使用する主要なアクセスポイントです。
 
