@@ -2,11 +2,13 @@
 title: Assets のネットワークに関する考慮事項
 description: AEM Assets のデプロイメントを設計する際のネットワークの考慮事項について説明します。
 contentOwner: AG
+feature: 開発者ツール
+role: アーキテクト，管理者
 translation-type: tm+mt
-source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1015'
-ht-degree: 98%
+source-wordcount: '1019'
+ht-degree: 97%
 
 ---
 
