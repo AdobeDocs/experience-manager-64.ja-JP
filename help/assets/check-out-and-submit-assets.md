@@ -2,10 +2,12 @@
 title: デジタルアセットをチェックインし、編集用にチェックアウトする
 description: アセットを編集用にチェックアウトし、変更が完了したら再度チェックインする方法を説明します。
 contentOwner: AG
+feature: アセット管理
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '403'
 ht-degree: 66%
 
 ---
