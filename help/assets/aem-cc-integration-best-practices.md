@@ -2,10 +2,12 @@
 title: AEM と Creative Cloud の統合のベストプラクティス
 description: AEM導入をAdobe Creative Cloudと統合し、アセット転送ワークフローを合理化し、最大の効率を達成するためのベストプラクティス
 contentOwner: AG
+feature: コラボレーション，Adobeアセットリンク，Experience Managerデスクトップアプリ
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: e64f5b0e1333d511eaf450072756a95399e838d0
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '3572'
+source-wordcount: '3583'
 ht-degree: 84%
 
 ---
@@ -198,7 +200,7 @@ DAM インスタンスへの直接アクセス権を持たない外部のエー�
 
 以下の方法で、最終／承認済みアセットへのアクセスを提供することができます。
 
-* 大量のアセットへのアクセスを提供するには：[AEM Assetsブランドポータル](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html?lang=en)を使用するか、お客様がAEMパブリッシュインフラストラクチャで[アセット共有](assets-finder-editor.md)を実装する
+* 大量のアセットへのアクセスを提供するには：[AEM Assetsブランドポータル](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html?lang=ja)を使用するか、お客様がAEMパブリッシュインフラストラクチャで[アセット共有](assets-finder-editor.md)を実装する
 
 * いくつかのアセットへのアクセスを提供するには：AEM Assetsブランドポータルやアセット共有に加え、Adobe Creative CloudとのAEMフォルダ共有を使用できます。 この統合に関連するいくつかの制限事項があり、この記事で詳しく説明します。
 
