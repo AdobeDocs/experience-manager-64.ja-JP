@@ -2,10 +2,12 @@
 title: アセットをAdobe Experience Managerアセットに一括で移行
 description: アセットをAEMに取り込み、メタデータを適用し、レンディションを生成し、それらをアクティブ化してインスタンスを公開する方法。
 contentOwner: AG
+feature: 移行，レンディション，アセット管理
+role: アーキテクト，管理者
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '1797'
 ht-degree: 67%
 
 ---
