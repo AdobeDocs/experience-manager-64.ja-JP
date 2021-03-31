@@ -2,16 +2,18 @@
 title: 重複項目の検出の有効化
 description: AEM で重複アセットの検出を有効にする方法について説明します。
 contentOwner: AG
+feature: アセット管理，アセットレポート
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: 26e860cd513d70d748f872e2ce445a042d075bc6
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 61%
+source-wordcount: '161'
+ht-degree: 60%
 
 ---
 
 
-# 重複項目の検出の有効化  {#enabling-duplicate-detection}
+# 重複項目の検出の有効化 {#enabling-duplicate-detection}
 
 Adobe Experience Manager（AEM）Assets に存在するアセットをアップロードしようとすると、重複項目検出機能によって重複として識別されます。重複項目の検出はデフォルトで無効になっています。この機能を有効にするには、次の手順を実行します。
 
