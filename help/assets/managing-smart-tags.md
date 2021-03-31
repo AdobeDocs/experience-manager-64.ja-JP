@@ -5,10 +5,12 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 uuid: fd3eedf0-f222-45bf-aac7-90da6b7b7087
 contentOwner: AG
 discoiquuid: 3394b56a-3054-419b-9547-5740f8c35071
+feature: スマートタグ，タグ付け，検索
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: 7771cbb218d80247f65e92cbe7e8cdfd9720b75e
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '464'
 ht-degree: 88%
 
 ---
@@ -30,7 +32,7 @@ ht-degree: 88%
 1. 「**[!UICONTROL 保存]**」、「**[!UICONTROL OK]**」の順にクリックまたはタップして、成功ダイアログを閉じます。
 1. 画像のプロパティページに移動します。昇格したタグに高い関連性が割り当てられていること、その結果として検索結果の上位に表示されることを確認します。
 
-## スマートタグ付き AEM 検索結果について     {#understand-search-results-with-smart-tags}
+## スマートタグ付き AEM 検索結果について           {#understand-search-results-with-smart-tags}
 
 デフォルトでは、検索用語同士を `AND` 句で組み合わせて AEM 検索がおこなわれます。スマートタグを使用しても、このデフォルトの動作は変わりません。スマートタグを使用すると、適用されたスマートタグ内にある検索用語のいずれかを探すための `OR` 句が追加されます。例えば、「`woman running`」を検索する場合を考えます。デフォルトでは、「`woman`」のみ、または「`running`」のみがメタデータに含まれているアセットは、検索結果に表示されません。ただし、スマートタグを使用して `woman` か `running` のどちらかでタグ付けされたアセットは、そのような検索クエリの結果に表示されます。つまり、検索結果は、以下を組み合わせたものになります。
 
