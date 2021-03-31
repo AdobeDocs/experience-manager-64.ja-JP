@@ -3,10 +3,12 @@ title: アセットコレクションの管理
 description: 作成、表示、削除、編集、コレクションのダウンロードなど、アセットのコレクションを管理するタスクについて説明します。
 contentOwner: AG
 mini-toc-levels: 1
+feature: コレクション
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: dfe5d976da937162e902ba8afac862f290702f5b
+source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt
-source-wordcount: '2328'
+source-wordcount: '2331'
 ht-degree: 84%
 
 ---
