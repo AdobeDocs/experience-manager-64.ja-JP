@@ -4,10 +4,12 @@ description: この記事では、AEM Assetsのアセットフォルダ用のメ
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 uuid: 286a4f26-c0ad-4691-80d8-d17ba1a2dfe0
 discoiquuid: 92eacea5-7511-48ce-8a72-ff4552ebb07d
+feature: メタデータ
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: aeb84feff6c0beb0ec3700ffd1870f8663c789a5
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1089'
 ht-degree: 98%
 
 ---
