@@ -2,11 +2,13 @@
 title: タイムラインのアクティビティストリーム
 description: 'この記事では、アセットのアクティビティログをタイムラインに表示する方法について説明します。 '
 contentOwner: AG
+feature: アセット管理
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: e64f5b0e1333d511eaf450072756a95399e838d0
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 99%
+source-wordcount: '221'
+ht-degree: 98%
 
 ---
 
