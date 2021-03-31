@@ -1,11 +1,13 @@
 ---
 title: ' [!DNL Adobe Experience Manager Assets] での [!DNL Adobe Stock] アセットの管理。'
-description: ' [!DNL Adobe Experience Manager] 内から  [!DNL Adobe Stock]  アセットを、検索、取得、ライセンス、管理します。ライセンスされたアセットをその他のデジタルアセットとして使用します。'
+description: ' [!DNL Adobe Experience Manager] 内から [!DNL Adobe Stock] アセットを、検索、取得、ライセンス、管理します。ライセンスされたアセットをその他のデジタルアセットとして使用します。'
 contentOwner: AG
+feature: 検索、Adobe Stock
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: e64f5b0e1333d511eaf450072756a95399e838d0
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1120'
 ht-degree: 90%
 
 ---
