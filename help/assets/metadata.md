@@ -2,10 +2,12 @@
 title: ' [!DNL Adobe Experience Manager] でのデジタルアセットのメタデータ管理'
 description: メタデータのタイプと、 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager]  でメタデータに基づいてアセットを自動的に整理および処理できる方法について説明します。
 contentOwner: AG
+feature: タグ付け、メタデータ
+role: 建築家、リーダー
 translation-type: tm+mt
-source-git-commit: 7f8f35b9f62f61f5bb8c175062e76ba5f4966dbe
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1399'
 ht-degree: 98%
 
 ---
@@ -27,7 +29,7 @@ ht-degree: 98%
 
 * アセットの名前。
 * 最終変更の日時。
-* リポジトリに格納されたときのアセットのサイズ。
+* リポジトリーに格納されたときのアセットのサイズ。
 * アセットが含まれるフォルダーの名前。
 * 関連するアセットまたは適用したタグ。
 
@@ -70,7 +72,7 @@ ht-degree: 98%
 
 メタデータをファイルに埋め込む方法は様々です。エンコーディング規格は、次の中から選択できます。
 
-* XMP：[!DNL Assets] で抽出したメタデータをリポジトリに格納するために使用されます。
+* XMP：[!DNL Assets] で抽出したメタデータをリポジトリーに格納するために使用されます。
 * ID3：オーディオファイルおよびビデオファイル用の規格です。
 * Exif：画像ファイル用の規格です。
 * その他、従来の規格：[!DNL Microsoft Word]、[!DNL PowerPoint]、[!DNL Excel] など。
