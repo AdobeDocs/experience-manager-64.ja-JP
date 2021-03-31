@@ -2,10 +2,12 @@
 title: AEM におけるアセットの並べ替えの強化
 description: AEM Assets に導入されたサーバー側の並べ替え機能を使用して、クライアント側でバッチで並べ替えずに、フォルダーアセットまたは検索クエリを一度に並べ替える方法について説明します。
 contentOwner: AG
+feature: 検索
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '444'
 ht-degree: 93%
 
 ---
@@ -25,7 +27,7 @@ AEM Assets では、以下のフィールドに基づいてフォルダーアセ
 
 * ロケール
 * ステータス
-* 型
+* タイプ
 * サイズ
 * 評価
 * 修正日
@@ -56,9 +58,9 @@ AEM Assets では、以下のフィールドに基づいてフォルダーアセ
 
 以下のフィールドに基づいて検索結果を並べ替えることができます。
 
-* タイトル
+* title（タイトル）
 * ステータス
-* 型
+* タイプ
 * サイズ
 * 修正日
 * 公開日
