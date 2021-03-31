@@ -2,10 +2,12 @@
 title: AEM Assets でサポートされているファイル形式
 description: AEM Assetsでサポートされるファイル形式とMIMEタイプのリストと、各形式でサポートされる機能。
 contentOwner: AG
+feature: アセット管理，レンディション
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1654'
 ht-degree: 61%
 
 ---
@@ -104,7 +106,7 @@ Adobe PDF Rasterizer ライブラリは、サイズが大きくコンテンツ�
 
 Adobeイメージングトランスコーディングライブラリは、エンコーディング、トランスコード、リサンプリング、サイズ変更など、主要な画像処理機能を実行する画像処理ソリューションです。
 
-Imaging Transcoding Libraryは、JPG/JPEG、PNG（8ビットおよび16ビット）、GIF、BMP、TIFF/Compressed TIFF（32ビットのTIFFファイルおよびPTIFFファイルを除く）、ICOおよびICNのMIMEタイプをサポートします。
+Imaging Transcoding Libraryは、JPG/JPEG、PNG（8ビットおよび16ビット）、GIF、BMP、TIFF/Compressed TIFF（32ビットのTIFFファイルおよびPTIFFファイルを除く）、ICOおよびICNのMIMEタイプをサポートしています。
 
 [イメージングトランスコーディングライブラリ](imaging-transcoding-library.md)を参照してください。
 
