@@ -2,10 +2,12 @@
 title: アセットエディタページの作成と設定
 description: カスタムのアセットエディターページを作成し、複数のアセットを同時に編集する方法を学習します。
 contentOwner: AG
+feature: 開発者ツール，アセット管理
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '3314'
+source-wordcount: '3321'
 ht-degree: 79%
 
 ---
