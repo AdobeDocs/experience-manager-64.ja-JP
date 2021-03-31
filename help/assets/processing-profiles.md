@@ -5,10 +5,12 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: administering
 content-type: reference
+feature: ワークフロー，アセット管理，レンディション
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1385'
 ht-degree: 95%
 
 ---
@@ -48,7 +50,7 @@ ht-degree: 95%
 
 処理が初めて失敗したアセットに対して、再処理ワークフローを実行できます。したがって、処理プロファイルを編集していない場合や適用していない場合でも、アセットのフォルダーに対していつでも再処理ワークフローを実行できます。
 
-オプションで、再処理ワークフローのバッチサイズを、デフォルトの 50 アセットから最大 1,000 アセットまで調整できます。フォルダーに対して「_Scene7 : アセットを再処理_」ワークフローを実行すると、アセットは一括でグループ化された後、Dynamic Media サーバーに送信されて処理されます。処理の後、バッチセット全体の各アセットのメタデータが AEM 上で更新されます。バッチサイズが非常に大きい場合は、処理に遅延が生じる可能性があります。また、バッチサイズが小さすぎると、Dynamic Media サーバーへのラウンドトリップの数が多くなりすぎるおそれがあります。
+オプションで、再処理ワークフローのバッチサイズを、デフォルトの 50 アセットから最大 1,000 アセットまで調整できます。フォルダーに対して「_Scene7：アセットを再処理_」ワークフローを実行すると、アセットは一括でグループ化された後、Dynamic Media サーバーに送信されて処理されます。処理の後、バッチセット全体の各アセットのメタデータが AEM 上で更新されます。バッチサイズが非常に大きい場合は、処理に遅延が生じる可能性があります。また、バッチサイズが小さすぎると、Dynamic Media サーバーへのラウンドトリップの数が多くなりすぎるおそれがあります。
 
 詳しくは、[再処理ワークフローのバッチサイズの調整](#adjusting-load)を参照してください。
 
@@ -77,7 +79,7 @@ ht-degree: 95%
    ![アセット再処理ワークフロー（その 1）](/help/assets/assets/reprocess-assets1.png)
 
 1. 「**[!UICONTROL ワークフローを開始]**」をクリックします。
-1. 「**[!UICONTROL ワークフローを開始]**」ドロップダウンリストから「**[!UICONTROL Scene7 : アセットを再処理]**」を選択します。
+1. 「**[!UICONTROL ワークフローを開始]**」ドロップダウンリストから「**[!UICONTROL Scene7：アセットを再処理]**」を選択します。
 1. （オプション）「**ワークフローのタイトルを入力**」テキストフィールドに、ワークフローの名前を入力します。必要に応じて、ワークフローインスタンスを参照する名前を使用できます。
 
    ![アセット再処理ワークフロー（その 2）](/help/assets/assets/reprocess-assets2.png)
@@ -93,12 +95,12 @@ ht-degree: 95%
 **再処理ワークフローのバッチサイズを調整するには（オプション）**：
 
 1. Adobe Experience Manager で、「**[!UICONTROL Adobe Experience Manager]**」をタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]**（ハンマーアイコン）／**[!UICONTROL ワークフロー／モデル]**&#x200B;をタップします。
-1. ワークフローモデルページのカード表示またはリスト表示で、「**[!UICONTROL Scene7 : アセットを再処理]**」を選択します。
+1. ワークフローモデルページのカード表示またはリスト表示で、「**[!UICONTROL Scene7：アセットを再処理]**」を選択します。
 
-   ![カード表示で「Scene7 : アセットを再処理」ワークフローが選択されたワークフローモデルページ](/help/assets/assets-dm/reprocess-assets7.png)
+   ![カード表示で「Scene7：アセットを再処理」ワークフローが選択されたワークフローモデルページ](/help/assets/assets-dm/reprocess-assets7.png)
 
-1. ツールバーの「**[!UICONTROL 編集]**」をクリックします。新しいブラウザータブに、「Scene7 : アセットを再処理」ワークフローモデルページが開きます。
-1. 「Scene7 : アセットを再処理」ワークフローページで、右上隅付近の「**[!UICONTROL 編集]**」をタップして、ワークフローを「ロック解除」します。
+1. ツールバーの「**[!UICONTROL 編集]**」をクリックします。新しいブラウザータブに、「Scene7：アセットを再処理」ワークフローモデルページが開きます。
+1. 「Scene7：アセットを再処理」ワークフローページで、右上隅付近の「**[!UICONTROL 編集]**」をタップして、ワークフローを「ロック解除」します。
 1. ワークフローで、Scene7 バッチアップロードコンポーネントを選択してツールバーを開き、ツールバーの「**[!UICONTROL 設定]**」をタップします。
 
    ![Scene7 バッチアップロードコンポーネント](/help/assets/assets-dm/reprocess-assets8.png)
@@ -115,11 +117,11 @@ ht-degree: 95%
 
 1. **[!UICONTROL Scene7 へのバッチアップロード - ステップのプロパティ]**&#x200B;ダイアログボックスの右上隅にある「**[!UICONTROL 完了]**」をタップします。
 
-1. 「Scene7 : アセットを再処理」ワークフローモデルページの右上隅にある「**[!UICONTROL 同期]**」をタップします。**[!UICONTROL 同期]**&#x200B;が表示された場合、ワークフローランタイムモデルは正常に同期され、フォルダー内のアセットを再処理する準備が整います。
+1. 「Scene7：アセットを再処理」ワークフローモデルページの右上隅にある「**[!UICONTROL 同期]**」をタップします。**[!UICONTROL 同期]**&#x200B;が表示された場合、ワークフローランタイムモデルは正常に同期され、フォルダー内のアセットを再処理する準備が整います。
 
    ![ワークフローモデルの同期](/help/assets/assets-dm/reprocess-assets1.png)
 
-1. 「Scene7 : アセットを再処理」ワークフローモデルを表示しているブラウザータブを閉じます。
+1. 「Scene7：アセットを再処理」ワークフローモデルを表示しているブラウザータブを閉じます。
 
 <!-- 1. Return to the browser tab that has the open Workflow Models page, then press **Esc** to exit the selection.
 1. In the upper-left corner of the page, tap **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then tap the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
