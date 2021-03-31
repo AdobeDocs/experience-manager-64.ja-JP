@@ -2,11 +2,13 @@
 title: 追加画像マップ
 description: ハイパーリンクが指定された画像マップを画像アセットに追加する方法を学習します。
 contentOwner: AG
+feature: アセット管理
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 20%
+source-wordcount: '293'
+ht-degree: 21%
 
 ---
 
