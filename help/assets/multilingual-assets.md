@@ -2,18 +2,20 @@
 title: 多言語のアセット
 description: バイナリ、メタデータ、タグなどのアセットを複数の言語に翻訳するワークフローを自動化する方法を学習します。
 contentOwner: AG
+feature: アセット管理
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 85%
+source-wordcount: '177'
+ht-degree: 84%
 
 ---
 
 
 # 多言語のアセット {#multilingual-assets}
 
-Adobe Experience Manager (AEM) Assets を使用して、アセット（バイナリ、メタデータ、タグを含む）に対する翻訳ワークフローを自動化し、多言語プロジェクトで使用するために他の言語のアセットを生成できます。
+Adobe Experience Manager（AEM）Assets を使用して、アセット（バイナリ、メタデータ、タグを含む）に対する翻訳ワークフローを自動化し、多言語プロジェクトで使用するために他の言語のアセットを生成できます。
 
 翻訳ワークフローを自動化するには、翻訳サービスプロバイダーと AEM とを統合して、アセットを複数の言語に翻訳するためのプロジェクトを作成します。AEM では人間による翻訳と機械翻訳のワークフローがサポートされます。
 
