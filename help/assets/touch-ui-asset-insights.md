@@ -2,11 +2,13 @@
 title: アセットインサイト機能を使用して画像の使用状況を追跡する
 description: アセットインサイト機能を使用すると、サードパーティのWebサイト、マーケティングキャンペーンおよびAdobeのクリエイティブソリューションで使用される画像のユーザー評価と使用状況の統計を追跡できます。
 contentOwner: AG
+feature: アセットインサイト，アセットレポート
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: 0e0e2aa693c30c8e1ef1033b936b82d83e5b348e
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 84%
+source-wordcount: '780'
+ht-degree: 83%
 
 ---
 
