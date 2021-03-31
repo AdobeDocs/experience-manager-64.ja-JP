@@ -2,16 +2,18 @@
 title: Assets のユーザーエクスペリエンスの強化
 description: この記事では、AEM 6.4 Assets のユーザーエクスペリエンスの改善点について説明します。
 contentOwner: AG
+feature: リリース情報
+role: リーダー、実業家
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '651'
 ht-degree: 70%
 
 ---
 
 
-# Assets のユーザーエクスペリエンスの強化  {#user-experience-enhancements-in-assets}
+# Assets のユーザーエクスペリエンスの強化 {#user-experience-enhancements-in-assets}
 
 AEM 6.4 Assetsには、シームレスなユーザーエクスペリエンスを提供し、生産性を向上させるいくつかの操作性の改善が含まれています。 市場開拓コンテンツの作成および管理速度の向上は、ビジネスのコンテンツ速度を改善します。
 
