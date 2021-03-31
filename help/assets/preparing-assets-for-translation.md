@@ -2,20 +2,22 @@
 title: 翻訳用アセットの準備
 description: 言語ルートフォルダーを作成し、多言語アセットを翻訳するための準備をします。
 contentOwner: AG
+feature: プロジェクト，翻訳
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 87%
+source-wordcount: '455'
+ht-degree: 92%
 
 ---
 
 
-# 翻訳用アセットの準備  {#preparing-assets-for-translation}
+# 翻訳用アセットの準備 {#preparing-assets-for-translation}
 
 多言語アセットとは、複数の言語のバイナリ、メタデータ、タグを含むアセットです。通常、アセットのバイナリ、メタデータ、タグに使用される言語は 1 つですが、多言語プロジェクト用に他の言語へと翻訳されます。
 
-Adobe Experience Manager (AEM) Assets では、多言語アセットはフォルダーに含まれ、各フォルダーに異なる言語のアセットが格納されます。
+Adobe Experience Manager（AEM）Assets では、多言語アセットはフォルダーに含まれ、各フォルダーに異なる言語のアセットが格納されます。
 
 各言語のフォルダーは言語コピーと呼ばれます。言語コピーのルートフォルダー（言語ルート）が、言語コピー内のコンテンツの言語を識別します。例えば、*/content/dam/it*&#x200B;はイタリア語コピーのイタリア語ルートです。 ソースアセットの翻訳の実行時に適切な言語がターゲットになるように、言語コピーは、[正しく設定された言語ルート](preparing-assets-for-translation.md#creating-a-language-root)を使用する必要があります。
 
@@ -46,7 +48,7 @@ Adobe Experience Manager (AEM) Assets では、多言語アセットはフォル
 
 言語ルートを作成するには、フォルダーを作成し、「名前」プロパティの値として ISO 言語コードを使用します。言語ルートを作成したら、言語ルート内の任意のレベルに言語コピーを作成できます。
 
-例えば、サンプル階層のイタリア語言語コピーのルートページの「名前」プロパティは `it` になります。Nameプロパティは、リポジトリ内のアセットノードの名前として使用されるので、アセットのパスを決定します。(`https://[AEM_server]:[port]/assets.html/content/dam/it/*`)
+例えば、サンプル階層のイタリア語言語コピーのルートページの「名前」プロパティは `it` になります。「名前」プロパティは、リポジトリー内の asset ノードの名前として使用されます。そのため、このプロパティによってアセットのパスが指定されます(`https://[AEM_server]:[port]/assets.html/content/dam/it/*`)
 
 1. アセットコンソールで「**[!UICONTROL 作成]**」をクリックまたはタップし、メニューから「**[!UICONTROL フォルダー]**」を選択します。
 
