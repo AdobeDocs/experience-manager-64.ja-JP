@@ -2,10 +2,12 @@
 title: メタデータプロファイルを使用して、フォルダー内のすべてのアセットに初期設定のメタデータを適用する
 description: アセットのメタデータプロファイルについて理解します。また、メタデータプロファイルを作成し、フォルダーのアセットに適用する方法も学習します。
 contentOwner: AG
+feature: メタデータ
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: af1955ab1fdcf16dd9a9d3ad36336e6c1aac9312
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1236'
 ht-degree: 64%
 
 ---
@@ -50,7 +52,7 @@ ht-degree: 64%
 | [!UICONTROL セクションヘッダー] | フィールドラベル、<br>説明 |
 | [!UICONTROL 1 行のテキスト] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
 | [!UICONTROL 複数値テキスト] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
-| [!UICONTROL 番号] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
+| [!UICONTROL 数値] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
 | [!UICONTROL 日付] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
 | [!UICONTROL 標準タグ] | フィールドラベル， <br>プロパティにマップ， <br>既定値， <br>説明 |
 
