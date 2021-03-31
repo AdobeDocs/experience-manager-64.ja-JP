@@ -2,10 +2,12 @@
 title: レンディションへの XMP の書き戻し
 description: XMP の書き戻し機能を使用して、アセットのメタデータの変更を、そのアセットのすべてのレンディションまたは特定のレンディションに反映させる方法を学習します。
 contentOwner: AG
+feature: メタデータ
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: debf372e6a0b8f00bbfce16325908a5806c062d5
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '782'
 ht-degree: 61%
 
 ---
