@@ -2,16 +2,18 @@
 title: フォルダーへの翻訳クラウドサービスの適用
 description: フォルダーへの翻訳クラウドサービスの適用
 contentOwner: AG
+feature: 翻訳
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '399'
 ht-degree: 100%
 
 ---
 
 
-# フォルダーへの翻訳クラウドサービスの適用  {#applying-translation-cloud-services-to-folders}
+# フォルダーへの翻訳クラウドサービスの適用 {#applying-translation-cloud-services-to-folders}
 
 Adobe Experience Manager（AEM）では、選択した翻訳プロバイダーのクラウドベースの翻訳サービスを利用して、確実に要件に基づいてアセットを翻訳できます。
 
