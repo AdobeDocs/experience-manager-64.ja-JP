@@ -2,10 +2,12 @@
 title: デジタルアセットの使用および共有に関するレポートです。
 description: デジタルアセットの使用状況、アクティビティ、共有を理解するのに役立つ、 [!DNL Adobe Experience Manager Assets]  でのアセットに関するレポートです。
 contentOwner: AG
+feature: アセットレポート，アセット管理
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: 6faa69ee1d38ad16add95263c53f18ea0a413fd2
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1068'
 ht-degree: 89%
 
 ---
@@ -41,7 +43,7 @@ ht-degree: 89%
 * 有効期限
 * 変更
 * 公開
-* [!DNL Brand Portal] publish
+* [!DNL Brand Portal] 公開
 * ディスク使用量
 * ファイル
 * リンク共有
@@ -52,7 +54,7 @@ ht-degree: 89%
 
    ![アセットレポートに移動するツールページ](assets/navigation.png)
 
-1. アセットレポートページで、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
+1. [!UICONTROL アセットレポート]ページで、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
 1. **[!UICONTROL レポートを作成ページ]**&#x200B;から、作成するレポートを選択し、「**[!UICONTROL 次へ]**」をクリックします。
 
    ![レポートタイプの選択](assets/choose_report.png)
@@ -121,13 +123,13 @@ ht-degree: 89%
 * 有効期限
 * 変更
 * 公開
-* [!DNL Brand Portal] publish
+* [!DNL Brand Portal] 公開
 * ファイル
 
 これらのレポートにカスタム列を追加するには、次の手順に従います。
 
 1. [!DNL Manager interface] で、 **[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL レポート]**&#x200B;をクリックします 。
-1. アセットレポートページで、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
+1. [!UICONTROL アセットレポート]ページで、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
 
 1. **[!UICONTROL レポートを作成]**&#x200B;ページで、作成するレポートを選択し、「**[!UICONTROL 次へ]**」をクリックします。
 1. タイトル、説明、サムネール、フォルダーパス、期間など、該当するレポートの詳細を設定します。
