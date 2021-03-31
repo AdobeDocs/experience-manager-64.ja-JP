@@ -2,11 +2,13 @@
 title: 関連アセット
 description: 特定の共通属性を共有するアセットを関連付ける方法について説明します。この機能を使用して、アセット間にソース／派生関係を作成することもできます。
 contentOwner: AG
+feature: アセット管理，コラボレーション
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 100%
+source-wordcount: '618'
+ht-degree: 99%
 
 ---
 
