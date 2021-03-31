@@ -10,10 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: e672f4edf87bd4d3af985e2ea598feb4e26d1553
 workflow-type: tm+mt
-source-wordcount: '1804'
-ht-degree: 81%
+source-wordcount: '1769'
+ht-degree: 82%
 
 ---
 
@@ -206,7 +206,9 @@ AEMリポジトリ内の既存のユーザー（ローカルソース、LDAPま�
 
 ここでは、ユーザーはアドミンコンソールのいくつかのグループにも割り当てられています。(ユーザーとグループは、ユーザー同期ツールを使用してLDAPから同期できるか、ローカルに作成できます。上記の&#x200B;**Admin Console**&#x200B;に対するユーザーのオンボーディングの節を参照してください)。
 
-&amp;ast；ユーザーグループは、ユーザーがインスタンスにログインした場合にのみ同期されます。大量のユーザーとグループを持つお客様の場合は、グループ同期ユーティリティをAMSで実行して、上述のアクセス制御および権限管理用のグループを事前取得できます。
+>[!NOTE]
+>
+>ユーザーグループは、ユーザーがインスタンスにログインした場合にのみ同期されます。
 
 ![screen_shot_2018-09-17at94207pm](assets/screen_shot_2018-09-17at94207pm.png)
 
