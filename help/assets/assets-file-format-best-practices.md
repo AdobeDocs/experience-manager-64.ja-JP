@@ -2,16 +2,18 @@
 title: Assets のファイル形式に関するベストプラクティス
 description: AEM Assets のファイルサポートに関するベストプラクティスを紹介します。
 contentOwner: AG
+feature: アセット管理，開発者ツール
+role: Administrator
 translation-type: tm+mt
-source-git-commit: a892ef7ab018aca715693125808d7ade540c8242
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 92%
+source-wordcount: '438'
+ht-degree: 91%
 
 ---
 
 
-# Assets のファイル形式に関するベストプラクティス  {#assets-file-format-best-practices}
+# Assets のファイル形式に関するベストプラクティス {#assets-file-format-best-practices}
 
 AEM Assets はユーザーの様々なファイルサポート要件に対応するために、アドビ製およびサードパーティ製の数多くのファイル形式ライブラリをサポートしています。サポート対象のアドビのライブラリには、Adobe Camera Raw、Gibson、Adobe PDF Rasterizer、Adobe InDesign Server などがあります。さらに、AEM Assets は ImageMagick や TwelveMonkeys などのサードパーティのライブラリをサポートします。
 
