@@ -2,16 +2,18 @@
 title: AEM でのアセットの検索
 description: AEM のフィルターパネルを使用した必要なアセットの検索方法と検索で表示されたアセットの使用方法を説明します。
 contentOwner: AG
+feature: Search,Metadata
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: 6a43a972b8ff5ce5603f0fdaa999558cdf3cbb0e
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '556'
 ht-degree: 88%
 
 ---
 
 
-# AEM でのアセットの検索  {#search-assets-in-aem}
+# AEM でのアセットの検索 {#search-assets-in-aem}
 
 AEM のフィルターパネルを使用した必要なアセットの検索方法と検索で表示されたアセットの使用方法を説明します。
 
@@ -85,7 +87,7 @@ AEM のフィルターパネルを使用した必要なアセットの検索方�
 
 例えば、アセットの公開を監視する場合は、該当するオプションを使用して、公開されているアセットを検索できます。
 
-![publish](assets/publish.png)
+![公開](assets/publish.png)
 
 アセットのレビューステータスを監視する場合は、該当するオプションを使用して、承認されているアセットまたは承認待ちのアセットを検索します。
 
