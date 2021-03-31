@@ -2,10 +2,12 @@
 title: ' [!DNL Adobe Experience Manager Assets]の紹介'
 description: デジタルアセット管理、その使用例、 [!DNL Adobe Experience Manager Asset] オファーについて説明します。
 contentOwner: AG
+feature: アセット管理
+role: リーダー，アーキテクト，実業家
 translation-type: tm+mt
-source-git-commit: 91fbe9d3368feb7ecae73c56b2484c305cfb94b8
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '860'
 ht-degree: 33%
 
 ---
