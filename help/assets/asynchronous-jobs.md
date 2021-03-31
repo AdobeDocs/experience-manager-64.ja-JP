@@ -2,10 +2,12 @@
 title: ' [!DNL Adobe Experience Manager]で非同期操作を設定します。'
 description: リソースを大量に消費する一部のタスクを非同期的に完了して、 [!DNL Experience Manager Assets]のパフォーマンスを最適化します。
 contentOwner: AG
+feature: アセット管理
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: f6aa1ab2c7a0ddeda1504e95ce4bd57fe74a65fd
+source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '632'
 ht-degree: 18%
 
 ---
