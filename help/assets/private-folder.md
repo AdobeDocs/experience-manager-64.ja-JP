@@ -2,10 +2,12 @@
 title: プライベートフォルダーの共有
 description: Adobe Experience Manager (AEM) Assets でプライベートフォルダーを作成して、他のユーザーと共有し、様々な特権をユーザーに割り当てる方法について説明します。
 contentOwner: AG
+feature: コラボレーション
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '452'
 ht-degree: 100%
 
 ---
