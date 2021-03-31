@@ -2,16 +2,18 @@
 title: Assets のプロキシ開発
 description: 'プロキシは、プロキシワーカーを使用してジョブを処理する AEM インスタンスです。AEM のプロキシ、サポートされている操作、プロキシコンポーネントを設定する方法と、カスタムプロキシワーカーを開発する方法について説明します。 '
 contentOwner: AG
+feature: アセット処理
+role: 管理者、アーキテクト
 translation-type: tm+mt
-source-git-commit: 0560d47dcffbf9b74a36ea00e118f8a176adafcd
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '904'
 ht-degree: 73%
 
 ---
 
 
-# Assets のプロキシ開発  {#assets-proxy-development}
+# Assets のプロキシ開発 {#assets-proxy-development}
 
 Adobe Experience Manager（AEM）Assets では、プロキシを使用して、特定のタスクの処理を分散させます。
 
