@@ -1,12 +1,14 @@
 ---
 title: ' [!DNL Adobe Experience Manager Assets]のDigital Rights Management。'
-description: ' [!DNL Experience Manager]内のライセンス済みアセットのアセットの有効期限の状態と情報を管理する方法を説明します。'
+description: ' [!DNL Experience Manager]  でライセンスされているアセットの有効期限の状態と情報を管理する方法について説明します。'
 contentOwner: AG
+feature: DRM，アセット管理
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: fe99869df5616f8f483ab8a9517e850e45c7a117
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1430'
-ht-degree: 88%
+source-wordcount: '1436'
+ht-degree: 89%
 
 ---
 
@@ -23,7 +25,7 @@ ht-degree: 88%
 
 ![expired_flag_card](assets/expired_flag_card.png)
 
-*図：カードの表示では、カードのフラグは期限切れのアセットを示します。*
+*図：カード表示では、カードのフラグは期限切れのアセットを示します。*
 
 ![expired_flag_リスト](assets/expired_flag_list.png)
 
@@ -98,7 +100,7 @@ ht-degree: 88%
 
    >[!NOTE]
    >
-   >アセットの作成者（特定のアセットを[!DNL Assets]にアップロードする人）のみが、アセットの有効期限が切れたときに電子メールを受信します。 [!DNL Experience Manager]全体的な電子メール通知の設定に関する詳細は、[電子メール通知の設定方法](/help/sites-administering/notification.md)を参照してください。
+   >アセットの作成者（特定のアセットを[!DNL Assets]にアップロードした人）のみが、アセットの有効期限が切れたときに電子メールを受信します。 [!DNL Experience Manager]全体的な電子メール通知の設定に関する詳細は、[電子メール通知の設定方法](/help/sites-administering/notification.md)を参照してください。
 
 1. 「**[!UICONTROL Prior notification in seconds]**」フィールドで、アセットの有効期限が切れる何秒前に有効期限切れに関する通知を受け取るかを指定します。管理者かアセットの作成者の場合、アセットの有効期限が切れる前に、指定の時間が経過した後にアセットの有効期限が切れることを知らせるメッセージを受け取ります。
 
