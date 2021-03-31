@@ -2,10 +2,12 @@
 title: メタデータスキーマ
 description: 'メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。  '
 contentOwner: AG
+feature: メタデータ
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '2535'
+source-wordcount: '2539'
 ht-degree: 78%
 
 ---
@@ -222,7 +224,7 @@ AEM Assets では、次の MIME タイプとスキーマフォームがマッピ
 
 ## メタデータスキーマへのアクセス権の付与 {#granting-access-to-metadata-schemas}
 
-メタデータスキーマ機能は、管理者のみが使用できます。 ただし、管理者は、`/conf`フォルダーの&#x200B;**[!UICONTROL 作成]**、**[!UICONTROL 変更]**、**[!UICONTROL 削除]**&#x200B;の各権限を指定することで、管理者以外のユーザーにアクセスを許可できます。
+メタデータスキーマ機能は、管理者のみが使用できます。 ただし、管理者は、`/conf`フォルダーの&#x200B;**[!UICONTROL 作成]**、**[!UICONTROL 変更]**、**[!UICONTROL 削除]**&#x200B;の各権限を指定することで、管理者以外のユーザーへのアクセスを提供できます。
 
 ## フォルダー固有のメタデータの適用 {#applying-folder-specific-metadata}
 
