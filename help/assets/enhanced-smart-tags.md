@@ -6,11 +6,13 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: authoring
 discoiquuid: c1b52aac-1eaf-4cfa-801f-77aeca0d90ea
+feature: スマートタグ，検索
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: b9dffdda37992f3a9f34953b8dd391d6f6361ceb
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 80%
+source-wordcount: '1572'
+ht-degree: 81%
 
 ---
 
@@ -35,7 +37,7 @@ ht-degree: 80%
 
 要約すると、スマートコンテンツサービスを使用するための主な手順は次のとおりです。
 
-* オンボーディング
+* 使用開始 
 * アセットおよびタグの検討（分類の定義）
 * スマートコンテンツサービスのトレーニング
 * 自動タグ付け
@@ -187,6 +189,6 @@ Smart Content ServiceはAEMのアドオンとして購入できます。購入�
 >
 >後続のタグ付けサイクルでは、変更されたアセットのみが、新しくトレーニングされたタグで再度タグ付けされます。
 >
->ただし、タグ付けワークフローで最後のタグ付けサイクルと現在のタグ付けサイクルの間のギャップが24時間を超える場合は、変更されていないアセットにもタグが付けられます。
+>ただし、タグ付けワークフローの前回と現在のタグ付けサイクルの間隔が 24 時間を超えている場合は、変更されていないアセットもタグ付けされます。
 >
 >定期的なタグ付けワークフローについては、間隔が 6 ヶ月を超えると、変更されていないアセットがタグ付けされます。
