@@ -2,16 +2,18 @@
 title: AEM Assets と連携するための ImageMagick のインストールと設定
 description: ImageMagick ソフトウェアの概要と、インストール方法、コマンドラインプロセスのステップの設定方法、ImageMagick を使用して画像の編集、組み立て、サムネール生成をおこなう方法を学習します。
 contentOwner: AG
+feature: レンディション、開発者ツール
+role: Administrator
 translation-type: tm+mt
-source-git-commit: af5f8a24db589ecdbe28d603ab9583f11d29212c
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '783'
 ht-degree: 59%
 
 ---
 
 
-# AEM Assets と連携するための ImageMagick のインストールと設定  {#install-and-configure-imagemagick-to-work-with-aem-assets}
+# AEM Assets と連携するための ImageMagick のインストールと設定 {#install-and-configure-imagemagick-to-work-with-aem-assets}
 
 ImageMagickは、ビットマップ画像を作成、編集、構成または変換するためのソフトウェアプラグインです。 PNG、JPEG、JPEG-2000、GIF、TIFF、DPX、EXR、WebP、Postscript、PDF、SVGなど、様々な形式（200以上）で画像の読み取りと書き込みを行うことができます。 ImageMagick は、画像のサイズ変更、反転、ミラー、回転、変形、剪断および変換をおこなう場合に使用します。ImageMagick を使用して、画像の色を調整したり、各種特殊効果を適用したりすることもできます。また、テキスト、直線、多角形、楕円および曲線を描画することもできます。
 
