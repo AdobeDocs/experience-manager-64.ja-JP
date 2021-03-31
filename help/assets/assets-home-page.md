@@ -2,16 +2,18 @@
 title: AEM Assets のホームページの使用
 description: AEM Assets のホームページをカスタマイズして、アセットに関する最近のアクティビティのスナップショットを始め、有益なスタートアップスクリーンエクスペリエンスを実現できます。
 contentOwner: AG
+feature: 開発者ツール，アセット管理
+role: 管理者、実業家
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '581'
 ht-degree: 56%
 
 ---
 
 
-# AEM Assets のホームページの使用  {#aem-assets-home-page-experience}
+# AEM Assets のホームページの使用 {#aem-assets-home-page-experience}
 
 AEM Assets のホームページをカスタマイズして、アセットに関する最近のアクティビティのスナップショットを始め、有益なスタートアップスクリーンエクスペリエンスを実現できます。
 
@@ -77,7 +79,7 @@ Assets のホームページには次のセクションが含まれます。
 
 >[!NOTE]
 >
->Day CQ DAMイベントレコーダーとDAMイベント削除サービスを有効にすると、JCRおよび検索インデックスへの書き込み操作が増え、AEMサーバーの負荷が大幅に増加します。 AEM サーバーの負荷が増えるとパフォーマンスに影響が出ることがあります。
+>Day CQ DAMイベントレコーダーおよびDAMイベント削除サービスを有効にすると、JCRおよび検索インデックスへの書き込み操作が増加し、AEMサーバーの負荷が大幅に増加します。 AEM サーバーの負荷が増えるとパフォーマンスに影響が出ることがあります。
 
 >[!CAUTION]
 >
