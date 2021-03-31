@@ -2,11 +2,13 @@
 title: 画像トランスコーディングライブラリ
 description: エンコーディング、トランスコーディング、画像のリサンプリング、画像のサイズ変更などの中心的な画像処理機能を実行する画像処理ソリューションであるアドビの画像トランスコーディングライブラリを設定および使用する方法について説明します。
 contentOwner: AG
+feature: レンディション，開発者ツール，アセット処理
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 65f45bdb34279f5834c0466457101ca2f309d5f1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 38%
+source-wordcount: '966'
+ht-degree: 37%
 
 ---
 
@@ -55,7 +57,7 @@ Imaging Transcoding Libraryは、RHEL 7およびCentOS 7ディストリビュー
 
 `-resize`パラメーターには、次のオプションを設定できます。
 
-* `X`: `Works similar to AEM. For example -resize 319.`
+* `X`:  `Works similar to AEM. For example -resize 319.`
 
 * `WxH`:  `Aspect Ratio will not be maintained, For example -resize 319X319.`
 
