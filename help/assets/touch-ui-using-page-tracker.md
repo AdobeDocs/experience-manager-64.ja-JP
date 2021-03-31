@@ -2,11 +2,13 @@
 title: Web ページでのページトラッカーと埋め込みコードの使用
 description: ページトラッカーコードと埋め込み JavaScript コードを Web サイトコードに組み込んで、Adobe Analytics でアセットの使用状況データを収集できるようにする方法について説明します。
 contentOwner: AG
+feature: アセットレポート
+role: アーキテクト，管理者
 translation-type: tm+mt
-source-git-commit: 0644e47e5c35ee093d8676eb492a43057fff267b
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 100%
+source-wordcount: '185'
+ht-degree: 98%
 
 ---
 
@@ -78,7 +80,7 @@ ht-degree: 100%
  </head>
 ```
 
-## 埋め込みコードの追加 {#adding-embed-code}
+## 埋め込みコードの追加  {#adding-embed-code}
 
 埋め込みコードは Web サイトコードの本文に追加します。次のコードスニペットは、サンプル Web ページに組み込まれた埋め込みコードです。
 
