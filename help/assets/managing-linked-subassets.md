@@ -2,10 +2,12 @@
 title: 複合アセットを管理し、サブアセットを生成します。
 description: InDesign、Adobe Illustrator、Photoshopの各ファイル内からAEMアセットへの参照を作成する方法を説明します。 また、ページビューア機能を使用して、複数ページファイル（PDF、INDD、PPT、PPTX、AI ファイルなど）の個々のページを表示する方法についても説明します。
 contentOwner: AG
+feature: アセット管理
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: dc9ba70161f81578899416064bd03fdabe0bed5a
+source-git-commit: e46a27a1ba11b4a5973eb1ece02c8594b2ae0fc9
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1415'
 ht-degree: 47%
 
 ---
