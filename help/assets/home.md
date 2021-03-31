@@ -2,11 +2,13 @@
 title: Assets ガイド
 description: このガイドは、デジタルアセットの作成、管理、配信、最適化など、すべてのAEM Assetsタスクについて説明します。
 user-guide-title: Assets ガイド
+feature: アセット管理
+role: 実業家，建築家，管理者
 translation-type: tm+mt
-source-git-commit: e64f5b0e1333d511eaf450072756a95399e838d0
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 29%
+source-wordcount: '323'
+ht-degree: 33%
 
 ---
 
@@ -18,7 +20,7 @@ ht-degree: 29%
 ## 主要なAEM記事
 
 * [AEM 6.4 リリースノート](/help/release-notes/home.md)
-* [最近のドキュメントの更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=ja)
+* [最近のドキュメント更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=ja)
 * [AEMセキュリティチェックリスト](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.4ユーザーガイド
@@ -40,8 +42,8 @@ ht-degree: 29%
 
 ## 主なAEMリソース
 
-* [AEMチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html)
-* [ディスパッチャーユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
+* [AEMチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html?lang=ja)
+* [ディスパッチャーユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)
 * [HTLユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja)
 * [コアコンポーネントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=ja)
