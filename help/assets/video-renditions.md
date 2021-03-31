@@ -2,11 +2,13 @@
 title: ビデオレンディション
 description: ビデオレンディション
 contentOwner: AG
+feature: ビデオ，レンディション
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: 0d70a672a2944e2c03b54beb3b5f734136792ab1
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 100%
+source-wordcount: '225'
+ht-degree: 99%
 
 ---
 
