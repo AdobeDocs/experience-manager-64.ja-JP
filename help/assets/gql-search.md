@@ -2,10 +2,12 @@
 title: GQL 全文検索
 description: AEM Assets の GQL 全文検索機能について詳しく確認します。GQL 全文検索機能を使用して、タイトル、説明、作成者名などの特定のメタデータに基づいてアセットを検索できます。
 contentOwner: AG
+feature: Search,Metadata
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: adf44677a0ac833a131aad8187529b094aaca9ef
+source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '889'
 ht-degree: 76%
 
 ---
@@ -74,11 +76,11 @@ GQLの全文検索機能では、次のメタデータプロパティに基づ�
 | [!UICONTROL 型] | type:&quot;image\png&quot; |
 | [!UICONTROL 画像の幅] | width:lowerbound..上の |
 | [!UICONTROL 画像の高さ] | height:lowerbound..上の |
-| [!UICONTROL 人] | person:John |
+| [!UICONTROL Person] | person:John |
 
 複雑なクエリの検索形式の例：
 
-* 複数のファセットフィールドを持つアセットをすべて表示する（例：title=John Doe および creatortool=Adobe Photoshop）：
+* 複数のファセットフィールドを持つアセットをすべて表示する（例：title=John Doe および creatortool=Adobe Photoshop）：   
 
 tiltle:&quot;John Doe&quot; creatortool :Adobe(&amp;A);ast;
 
