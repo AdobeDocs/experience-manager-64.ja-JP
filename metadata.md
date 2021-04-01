@@ -1,12 +1,13 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 mini-toc-levels: 2
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-64.ja-JP
 solution: Experience Manager
+version: 6.4
 type: ドキュメント
 index: y
 translation-type: tm+mt
-source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
+source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 74%
