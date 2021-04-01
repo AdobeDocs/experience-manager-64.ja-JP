@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.4 管理ユーザーガイド
@@ -7,12 +7,12 @@ breadcrumb-title: 管理ガイド
 user-guide-description: AEM プロジェクトの管理方法について学びます。
 feature-set: Experience Manager Sites
 feature: デプロイ
-role: 開業医
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
+source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
 workflow-type: tm+mt
 source-wordcount: '75'
-ht-degree: 90%
+ht-degree: 93%
 
 ---
 
