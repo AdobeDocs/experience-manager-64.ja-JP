@@ -5,20 +5,22 @@ contentOwner: Rick Brough
 topic-tags: 3D
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
+exl-id: be8f6361-607d-4529-aef0-e8978dfd04b4
+feature: 3D アセット
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
-
 
 # Adobe Dimension資産の操作{#working-with-adobe-dimension-assets}
 
 >[!IMPORTANT]
 >
->AEM 6.4のAEM 3D機能パックは、サポートされなくなりました。 Adobeでは、[AEMの3Dアセット機能をCloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html#dynamicmedia)または[AEM 6.5.3以降として使用することをお勧めします。](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/assets-3d.html#dynamic) adobe dimensionアセットを使用する場合
+>AEM 6.4のAEM 3D機能パックは、サポートされなくなりました。 Adobeでは、[AEMの3Dアセット機能をCloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/assets-3d.html#dynamicmedia)または[AEM 6.5.3以降として使用することをお勧めします。](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/assets-3d.html#dynamic) Adobe Dimensionアセットを使用する場合
 
 AEM 3D機能パックは、AEM Assets、AEM Sites、AEM ScreensのAdobe Dimensionアセット（`.dn`ファイル）をサポートしています。
 
@@ -52,4 +54,3 @@ glTFビューアのユーザインターフェイスは、他のすべての3D�
 * [AEM 3Dリリース](/help/release-notes/aem3d-release-notes.md) ノート（DNアセットおよびglTFビューアに適用される制限および制限に関するもの）。
 * [3Dサイトコンポー](using-the-3d-sites-component.md) ネントの操作(Adobe Dimensionアセット固有のコンポーネントプロパティ用)
 * [AEMのインストールと設定3](install-config-3d.md) Dクラウドベースの変換サービスを設定します。
-
