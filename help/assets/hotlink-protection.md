@@ -9,14 +9,16 @@ topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 discoiquuid: a70aa448-0f58-4ed2-9381-afcc76fa827f
+exl-id: 9e27d45e-1d72-4663-a2c5-2ec48f2b23c4
+feature: アセット管理
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: 15d933a2e71a44e84cdcc9ae28f60c67b43bd8f4
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 100%
+source-wordcount: '183'
+ht-degree: 98%
 
 ---
-
 
 # Dynamic Media でのホットリンク保護の有効化 {#activating-hotlink-protection-in-dynamic-media}
 
