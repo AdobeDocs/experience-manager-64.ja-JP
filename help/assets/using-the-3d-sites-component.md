@@ -9,14 +9,16 @@ topic-tags: 3D
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 discoiquuid: 9017ab55-6d4a-4306-922f-223ab1b2504b
+exl-id: bf87b470-08c8-44b4-95d9-1251586b0610
+feature: 3D アセット
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 34%
+source-wordcount: '1043'
+ht-degree: 35%
 
 ---
-
 
 # 3Dサイトコンポーネントの操作{#working-with-the-d-sites-component}
 
@@ -87,7 +89,7 @@ AEM 3Dには、3Dモデルのインタラクティブな表示をWebページに
     <td> </td> 
     </tr> 
     <tr> 
-    <td>Stage Name</td> 
+    <td>ステージ 名前</td> 
     <td><p>使用可能なステージのリストから 3D ステージを選択します。ステージは背景とライティングを提供します。</p> <p><a href="/help/assets/about-the-use-of-stages-in-aem-3d.md" target="_blank">AEM 3Dサイトでのステージの使用について</a>を参照してください。</p> </td> 
     <td>Adobe Dimensionアセットでは無視されます。</td> 
     </tr> 
@@ -172,4 +174,3 @@ Webページが&#x200B;**[!UICONTROL 編集]**&#x200B;モードの間、3Dコン
 >**[!UICONTROL ページ情報]**&#x200B;メニューの&#x200B;**[!UICONTROL 発行ページ]**&#x200B;メニュー項目を使用すると、ページとすべてのプライマリページの依存関係が発行されます。 この方法でページを公開した場合、3D モデルや 3D ステージで参照される可能性のあるセカンダリの依存関係（テクスチャマップや IBL 画像など）は公開されません。
 >
 >Adobeでは、3Dアセットを参照するWebページを公開する前に、すべての3Dアセットとその依存関係をAEM Assetsから直接公開することをお勧めします。
-
