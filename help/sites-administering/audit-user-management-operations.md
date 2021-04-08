@@ -2,6 +2,7 @@
 title: AEM でのユーザー管理操作を監査する方法
 seo-title: AEM でのユーザー管理操作を監査する方法
 description: AEM でのユーザー管理操作を監査する方法について説明します。
+feature: 運用
 seo-description: AEM でのユーザー管理操作を監査する方法について説明します。
 uuid: 4ea704b4-9150-4b5f-b9cb-cdac95cfd70c
 contentOwner: User
@@ -9,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 437fa139-2dde-41a0-9649-6bb110039618
+exl-id: f987c4f5-64dd-491b-aafe-cb98acf0b1eb
 translation-type: tm+mt
-source-git-commit: aac5026a249e1cb09fec66313cc03b58597663f0
+source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '320'
 ht-degree: 97%
 
 ---
-
 
 # AEM でのユーザー管理操作を監査する方法{#how-to-audit-user-management-operations-in-aem}
 
