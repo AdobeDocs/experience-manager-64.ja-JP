@@ -9,14 +9,16 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 7b9d3b81-3bb4-4ca6-b6e1-f9adfb455855
+exl-id: 6d82fec0-608e-4eaa-aebd-b3ce2f7d8088
+feature: 3D アセット
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 9cc06c16122b98146c51ac61d7fa27553a9d971e
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 69%
+source-wordcount: '175'
+ht-degree: 70%
 
 ---
-
 
 # AEM 3D でのステージの使用 {#about-the-use-of-stages-in-aem-d}
 
