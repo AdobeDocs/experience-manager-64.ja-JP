@@ -2,6 +2,7 @@
 title: 操作ダッシュボード
 seo-title: 操作ダッシュボード
 description: 操作ダッシュボードの使用方法について説明します。
+feature: 運用
 seo-description: 操作ダッシュボードの使用方法について説明します。
 uuid: f1a6dcdc-307b-45f4-ade5-cedc58f0c7cf
 contentOwner: Guillaume Carlino
@@ -9,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 7599fa42-3a47-49c9-8a7f-e0b6be302ff0
+exl-id: a0cb6a30-fdd4-4806-a5fa-45c98ad15d11
 translation-type: tm+mt
-source-git-commit: d72f86b167e3e9003ad2cd2e7628f95502cf9a33
+source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '6200'
+source-wordcount: '6201'
 ht-degree: 76%
 
 ---
-
 
 # 操作ダッシュボード {#operations-dashboard}
 
@@ -637,7 +638,7 @@ Lucene Binarys Cleanupタスクには、次の場所からアクセスできま�
    <td><strong>サービスプロパティ名</strong><br /> </td> 
    <td><strong>説明</strong></td> 
    <td><strong>例</strong><br /> </td> 
-   <td><strong>型</strong></td> 
+   <td><strong>タイプ</strong></td> 
   </tr> 
   <tr> 
    <td>granite.maintenance.isStoppable</td> 
@@ -674,7 +675,7 @@ Apache Sling のジョブ処理では、このトピックからジョブを開�
  </tbody> 
 </table>
 
-上記のサービスプロパティ以外に、`JobConsumer`インターフェイスの`process()`メソッドは、メンテナンスタスクに対して実行する必要のあるコードを追加して実装する必要があります。 指定された`JobExecutionContext`は、ステータス情報を出力するために使用できます。ジョブがユーザーによって停止されているかどうかを確認し、結果（成功または失敗）を作成します。
+上記のサービスプロパティ以外に、`JobConsumer`インターフェイスの`process()`メソッドは、メンテナンスタスクに対して実行する必要のあるコードを追加して実装する必要があります。 指定された`JobExecutionContext`は、ステータス情報を出力するために使用できます。ジョブがユーザーによって停止されたかどうかを確認し、結果（成功または失敗）を作成します。
 
 すべてのインストールでメンテナンスタスクを実行する必要がない状況（例えば、発行インスタンスでのみ実行する）では、`@Component(policy=ConfigurationPolicy.REQUIRE)`を追加してサービスをアクティブにするために設定が必要になるように設定できます。その後、リポジトリに依存する実行モードとして、その設定に従ってマークを付けることができます。 詳しくは、[OSGiの設定](/help/sites-deploying/configuring-osgi.md#creating-the-configuration-in-the-repository)を参照してください。
 
@@ -912,4 +913,3 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
   </tr> 
  </tbody> 
 </table>
-
