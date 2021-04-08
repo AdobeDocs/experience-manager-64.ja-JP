@@ -9,14 +9,16 @@ topic-tags: content-fragments
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 discoiquuid: eaf65bdd-9091-4985-90bd-5eb2148965e3
+exl-id: 43b11355-ee21-421c-8809-cd8a0443a03a
+feature: コンテンツフラグメント
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '470'
 ht-degree: 97%
 
 ---
-
 
 # コンテンツフラグメント - 削除に関する考慮事項 {#content-fragments-delete-considerations}
 
@@ -97,4 +99,3 @@ ht-degree: 97%
 例えば、`remove` グループの `content-authors-no-delete` 権限の定義は次のようになります。
 
 ![cf-delete-03](assets/cf-delete-03.png)
-
