@@ -5,14 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
+exl-id: d8cc94b0-eacf-4e76-bd50-7934bbc28c92
+feature: トラブルシューティング
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1296'
 ht-degree: 86%
 
 ---
-
 
 # Dynamic Media - Scene7 モードのトラブルシューティング {#troubleshooting-dynamic-media-scene-mode}
 
@@ -86,7 +88,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
      <li><p>CRX/DE に移動します。</p> 
       <ul> 
        <li>JCR 内のプリセット <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code> が定義されているかどうかを確認します。この場所は、AEM 6.x から 6.4 にアップグレードし、移行をオプトアウトした場合に適用されます。それ以外の場合、場所は <code>/conf/global/settings/dam/dm/presets/viewer</code> になります。</li> 
-       <li>JCR のアセットに <code>dam:scene7FileStatus</code><strong></strong> があり、それが「メタデータ」で <code>PublishComplete</code> と表示されていることを確認します。</li> 
+       <li>JCR のアセットに <code>dam:scene7FileStatus</code><strong> </strong> があり、それが「メタデータ」で <code>PublishComplete</code> と表示されていることを確認します。</li> 
       </ul> </li> 
     </ol> </td> 
    <td><p>ページを更新するか、別のページに移動してから戻ります（サイドレール JSP を再コンパイルする必要があります）。</p> <p>それでも解決しない場合：</p> 
@@ -258,4 +260,3 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
   </tr> 
  </tbody> 
 </table>
-
