@@ -6,14 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
+exl-id: 36bb526c-a6d9-4296-8318-97ac72d6b3ba
+feature: 公開
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '335'
 ht-degree: 90%
 
 ---
-
 
 # レスポンシブサイト用に最適化された画像の配信 {#delivering-optimized-images-for-a-responsive-site}
 
