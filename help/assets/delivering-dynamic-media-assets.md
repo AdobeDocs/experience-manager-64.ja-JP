@@ -1,5 +1,5 @@
 ---
-title: ダイナミックメディアアセットの配信
+title: Dynamic Media アセットの配信
 seo-title: Dynamic Media アセットの配信
 description: Dynamic Media アセットの配信方法を学習します
 seo-description: Dynamic Media アセットの配信方法を学習します
@@ -9,16 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: ec394bd3-2fa6-4f50-b974-bc10f643ecac
+exl-id: e5110a90-ddc9-4244-8466-f91adfca8469
+feature: アセット管理
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '332'
 ht-degree: 91%
 
 ---
 
-
-# Dynamic Media アセットの配信  {#delivering-dynamic-media-assets}
+# Dynamic Media アセットの配信 {#delivering-dynamic-media-assets}
 
 ビデオでも画像でも、Dynamic Media アセットの配信方法は、Web サイトの実装方法によって異なります。
 
@@ -39,7 +41,7 @@ Dynamic Media を使用する場合、次の複数のオプションがありま
 
 * [WebページへのDynamic Mediaアセットの追加](adding-dynamic-media-assets-to-pages.md)
 * [ビデオビューアまたは画像ビューアのWebページへの埋め込み](embed-code.md)
-* [Dynamic Media でのホットリンク保護の有効化](https://helpx.adobe.com/jp/experience-manager/6-4/assets/using/hotlink-protection.html)
+* [Dynamic Media でのホットリンク保護の有効化](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/hotlink-protection.html?lang=ja#dynamic)
 * デジタル非表示透かし(Digimarc)とDynamic Mediaの統合（近日公開）
 * [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)
 * [レスポンシブサイト用に最適化された画像の配信](responsive-site.md)
