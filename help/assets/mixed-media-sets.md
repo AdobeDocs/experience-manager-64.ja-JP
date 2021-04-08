@@ -5,14 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
+exl-id: 252c1a50-17ac-4412-88d6-49bb6850658d
+feature: メディアセットの混在
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '1469'
-ht-degree: 76%
+source-wordcount: '1472'
+ht-degree: 78%
 
 ---
-
 
 # 混在メディアセット {#mixed-media-sets}
 
@@ -146,7 +148,7 @@ ht-degree: 76%
    >[!NOTE]
    >
    >* 混在メディアセット全体を削除するには、任意の表示モード(**[!UICONTROL カード]**&#x200B;表示や&#x200B;**[!UICONTROL 列]**&#x200B;表示など)から混在メディアセットに移動します。 アセットの上にマウスポインターを置き、チェックマークアイコンをタップして選択します。キーボードの「**[!UICONTROL バックスペース]**」を押すか、ツールバーの「**[!UICONTROL 詳細]**」（3つのドット）をタップし、「**[!UICONTROL 削除]**」をタップします。
-   >* 混在メディアセット内のアセットを編集するには、セットに移動し、左のレールで&#x200B;**[!UICONTROL メンバーを設定]**&#x200B;をタップし、個々のアセット上で&#x200B;**[!UICONTROL 鉛筆]**&#x200B;アイコンをタップして編集ウィンドウを開きます。
+   >* 混在メディアセット内のアセットを編集するには、セットの場所に移動し、左側のレールの「**[!UICONTROL メンバーを設定]**」を選択してから、個々のアセットの&#x200B;**[!UICONTROL 鉛筆]**&#x200B;アイコンをタップして編集ウィンドウを開きます。
 
 
 1. 編集が完了したら、「**[!UICONTROL 保存]**」をタップします。
@@ -168,4 +170,3 @@ ht-degree: 76%
 >[!NOTE]
 >
 >混在メディアデットを初めて公開したときに配信サービスで完全に終了しない場合は、混在メディアセットを2回目に公開する必要がある場合があります。
-
