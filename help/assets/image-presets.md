@@ -1,22 +1,24 @@
 ---
 title: Dynamic Media画像プリセットの適用
 seo-title: Dynamic Media画像プリセットの適用
-description: Dynamic Media での画像プリセットの適用方法を説明します。
-seo-description: Dynamic Media での画像プリセットの適用方法を説明します。
+description: Dynamic Media での画像プリセットの適用方法を説明します
+seo-description: Dynamic Media での画像プリセットの適用方法を説明します
 uuid: 8bafcbd0-6df0-4d5b-b2f7-116ddb4ec060
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
+exl-id: 07a4f315-a60e-456b-b02d-035b3f6ad9ad
+feature: 画像プリセット
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '329'
 ht-degree: 90%
 
 ---
-
 
 # Dynamic Media画像プリセットの適用{#applying-image-presets}
 
@@ -56,4 +58,3 @@ ht-degree: 90%
    >アセット&#x200B;*と*&#x200B;画像プリセットがまだ公開されていない場合、「**[!UICONTROL URL]**」ボタン（または該当する場合は「**[!UICONTROL URL]**」ボタンと「**[!UICONTROL RESS]**」ボタン）は使用できません。
    >
    >また、Dynamic Media サーバーでは画像プリセットが自動的に公開されることにも注意してください。
-
