@@ -2,6 +2,7 @@
 title: ユーザー管理とセキュリティ
 seo-title: ユーザー管理とセキュリティ
 description: AEM でのユーザー管理とセキュリティについて説明します。
+feature: セキュリティ
 seo-description: AEM でのユーザー管理とセキュリティについて説明します。
 uuid: f14619a1-d21f-465c-b79b-c98da1f1c016
 contentOwner: msm-service
@@ -9,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: a67b9e56-944d-424d-a64a-025f369faa5b
+exl-id: 1dd54d3f-419c-4c83-8cd8-4ae0e7feead2
 translation-type: tm+mt
-source-git-commit: ae4942dce6536f670b0f3013a489671a42225bd6
+source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '5434'
+source-wordcount: '5435'
 ht-degree: 89%
 
 ---
-
 
 # ユーザー管理とセキュリティ{#user-administration-and-security}
 
@@ -219,7 +220,7 @@ AEM WCM では、アクセス制御リスト（ACL）を使用して、様々な
 >`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`:全員に読み取りアクセスを許可します。
 >`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`:全員に読み取りアクセスを許可します。
 >`/home/users/geometrixx-outdoors`:`*/profile*`の読み取りアクセスを全員に許可し、\
->`*/social/relationships/following/*`.
+>`*/social/relationships/following/*`
 >
 >カスタムアプリケーションでは、`*/social/relationships/friend/*`や`*/social/relationships/pending-following/*`など、他の関係へのアクセスを設定できます。
 >
