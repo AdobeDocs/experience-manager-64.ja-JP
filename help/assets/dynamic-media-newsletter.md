@@ -5,14 +5,16 @@ seo-description: ビデオの使い方、ソリューションの概要、画像
 seo-title: 'AdobeDynamic Mediaニュースレター '
 solution: Dynamic Media Classic
 title: Dynamic Media ニュースレター
+exl-id: aa02c811-0296-4a02-b745-e70aeb9d1e97
+feature: コラボレーション，Dynamic Mediaクラシック
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: 0016825ced6706cda7447546af876d5a897c8ff5
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1210'
 ht-degree: 95%
 
 ---
-
 
 # ![Dynamic Media ニュースレターのロゴ](/help/assets/assets/dynamic-media-newsletter-logo.png)
 
