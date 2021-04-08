@@ -5,14 +5,16 @@ contentOwner: Alva Ware-Bevacqui
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 topic-tags: managing-assets
+exl-id: b11b19c1-712d-4698-aefc-930ff8cacbc1
+feature: Dynamic Mediaクラシック
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '2826'
+source-wordcount: '2829'
 ht-degree: 32%
 
 ---
-
 
 # ページへのDynamic Mediaクラシック機能の追加{#adding-scene-features-to-your-page}
 
@@ -159,7 +161,7 @@ HTML5 **[!UICONTROL フライアウト]**&#x200B;コンポーネントでは、�
 
 ### 画像 {#image}
 
-Dynamic Mediaクラシック&#x200B;**[!UICONTROL 画像]**&#x200B;コンポーネントを使用すると、Dynamic Mediaクラシック修飾子、画像またはビューアプリセット、シャープなどのDynamic Mediaクラシック機能を画像に追加できます。 Dynamic Mediaクラシック&#x200B;**[!UICONTROL イメージ]**&#x200B;コンポーネントは、特別なDynamic Mediaクラシック機能を持つAEMの他のイメージコンポーネントと似ています。 この例では、画像にDynamic MediaクラシックURL修飾子&#x200B;**&amp;op_invert=1**&#x200B;が適用されています。
+Dynamic Mediaクラシック&#x200B;**[!UICONTROL イメージ]**&#x200B;コンポーネントを使用すると、Dynamic Mediaクラシック修飾子、画像またはビューアプリセット、シャープなどのDynamic Mediaクラシック機能を画像に追加できます。 Dynamic Mediaクラシック&#x200B;**[!UICONTROL イメージ]**&#x200B;コンポーネントは、特別なDynamic Mediaクラシック機能を持つAEMの他のイメージコンポーネントと似ています。 この例では、画像にDynamic MediaクラシックURL修飾子&#x200B;**&amp;op_invert=1**&#x200B;が適用されています。
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
@@ -364,4 +366,3 @@ path表示されるフォルダーの名前は、選択した設定に基づき�
 ステータス発行ステータスに基づいて、アセットをフィルタリングできます。 **** 非公開または **[!UICONTROL 公開済み]**。「**[!UICONTROL 公開ステータス]**」を選択しない場合、AEMでは、デフォルトで、すべての公開ステータスが検索されます。
 
 ![chlimage_1-247](assets/chlimage_1-247.png)
-
