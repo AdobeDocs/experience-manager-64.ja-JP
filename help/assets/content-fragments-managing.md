@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: content-fragments
 content-type: reference
 discoiquuid: da8f968b-91cc-45a8-ae4b-757b4f840b8e
+exl-id: b21ba7a1-6e6f-4b95-9336-b49f7e932af5
+feature: コンテンツフラグメント
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 5ba23738118d7944026f405110e25b6a7f90866b
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1511'
 ht-degree: 98%
 
 ---
-
 
 # コンテンツフラグメントの管理 {#managing-content-fragments}
 
@@ -30,7 +32,7 @@ ht-degree: 98%
 >
 >コンテンツフラグメントは、ページのオーサリングで使用します。[コンテンツフラグメントを使用したページのオーサリング](/help/sites-authoring/content-fragments.md)を参照してください。
 
-## コンテンツフラグメントの作成  {#creating-content-fragments}
+## コンテンツフラグメントの作成 {#creating-content-fragments}
 
 ### コンテンツモデルの作成 {#creating-a-content-model}
 
@@ -120,7 +122,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->これらの多くは、[Assets](managing-assets-touch-ui.md) や [ デスクトップアプリケーション](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html)に対する標準的なアクションです。
+>これらの多くは、[Assets](managing-assets-touch-ui.md) や [ デスクトップアプリケーション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)に対する標準的なアクションです。
 
 ## フラグメントエディターを開く {#opening-the-fragment-editor}
 
@@ -157,13 +159,13 @@ ht-degree: 98%
 
    ![cfm-10](assets/cfm-10.png)
 
-1. 変更を加えた後、必要に応じて「**[!UICONTROL 保存]**」または「**[!UICONTROL キャンセル]**」をクリックします。
+1. 変更を加えた後、必要に応じて「**[!UICONTROL 保存して閉じる]**」または「**[!UICONTROL キャンセル]**」をクリックします。
 
    >[!NOTE]
    >
-   >「**[!UICONTROL 保存]**」または「**[!UICONTROL キャンセル]**」のどちらをクリックした場合も、エディターが終了します。これらの両方のオプションがコンテンツフラグメントにどのように動作するかについて詳しくは、[保存、キャンセルおよびバージョン](#save-cancel-and-versions)を参照してください。
+   >「**[!UICONTROL 保存して閉じる]**」または「**[!UICONTROL キャンセル]**」のどちらをクリックした場合も、エディターが終了します。これらの両方のオプションがコンテンツフラグメントにどのように動作するかについて詳しくは、[保存、キャンセルおよびバージョン](#save-cancel-and-versions)を参照してください。
 
-## 保存、キャンセルおよびバージョン  {#save-cancel-and-versions}
+## 保存、キャンセルおよびバージョン {#save-cancel-and-versions}
 
 >[!NOTE]
 >
@@ -199,9 +201,9 @@ ht-degree: 98%
 1. コンテンツフラグメントを開いて編集しようとすると、AEM は&#x200B;*編集セッション*&#x200B;が存在しているかどうかを示す cookie ベースのトークンの存在を確認します。
 
    1. トークンが見つかると、そのフラグメントは既存の編集セッションの一部であると見なされます。
-   1. トークンが&#x200B;**&#x200B;ないときにユーザーが編集を開始すると、バージョンが作成され、この新しい編集セッションのトークンがクライアントに送られ、cookie に保存されます。
+   1. トークンがないときにユーザーが編集を開始すると、バージョンが作成され、この新しい編集セッションのトークンがクライアントに送られ、cookie に保存されます&#x200B;*。*
 
-1. **&#x200B;アクティブな編集セッションがあるとき、編集中のコンテンツは自動的に 600 秒ごとに保存されます（デフォルト）。
+1. アクティブな編集セッションがあるとき、編集中のコンテンツは自動的に 600 秒ごとに保存されます（デフォルト）*。*
 
    >[!NOTE]
    >
@@ -237,7 +239,7 @@ ht-degree: 98%
 * バージョン、コメントおよび注釈に関する情報の表示
 * バージョンに関するアクション
 
-   * **[[!UICONTROL このバージョンに戻す]](#reverting-to-a-version)**（既存のフラグメントを選択してから特定のバージョンを選択）
+   * **[[!UICONTROL このバージョンに戻る]](#reverting-to-a-version)**（既存のフラグメントを選択してから特定のバージョンを選択）
    * **[[!UICONTROL 現在のバージョンと比較]](#comparing-fragment-versions)**（既存のフラグメントを選択してから特定のバージョンを選択）
    * **[!UICONTROL ラベル]**&#x200B;や&#x200B;**[!UICONTROL コメント]**&#x200B;の追加（既存のフラグメントを選択してから特定のバージョンを選択）
    * **[!UICONTROL バージョンとして保存]**（既存のフラグメントを選択してからタイムライン下部の上矢印を選択）
@@ -294,7 +296,7 @@ ht-degree: 98%
 
 ![cfm-6420-20](assets/cfm-6420-20.png)
 
-## 特定のバージョンに戻す  {#reverting-to-a-version}
+## 特定のバージョンへの復帰 {#reverting-to-a-version}
 
 次の方法で特定のバージョンのフラグメントに戻すことができます。
 
@@ -338,4 +340,3 @@ ht-degree: 98%
    >[!CAUTION]
    >
    >フラグメントが既にページで参照されている場合は、警告メッセージが表示されます。「**[!UICONTROL 削除を強制]**」を選択して続行を確認する必要があります。フラグメントはコンテンツフラグメントコンポーネントと一緒に、すべてのコンテンツページから削除されます。
-
