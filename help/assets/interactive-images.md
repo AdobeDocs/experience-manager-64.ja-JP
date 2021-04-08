@@ -9,16 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d630499d-740d-4979-8a34-9e3fcc3b5a23
+exl-id: 4d3299e2-269b-4a41-a979-c884c707666d
+feature: インタラクティブ画像
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '4296'
-ht-degree: 78%
+source-wordcount: '4298'
+ht-degree: 79%
 
 ---
 
-
-# インタラクティブ画像 {#interactive-images}
+# インタラクティブ画像  {#interactive-images}
 
 「買い物客」のホットスポットを画像にドラッグ&amp;ドロップすることで、静的な画像をリッチで魅力的なエクスペリエンスに簡単にできます。買い物可能なホットスポットは、製品やサービスに関する追加情報と、直接販売時点に関する「買い物かごに追加」機能や「購入」機能を組み合わせています。 顧客はこれらのホットスポットをタップして、製品やサービスに直接リンクしたり、買い物かごに追加したり、Webページにリンクしたりできます。 顧客エンゲージメントやWebサイト上のコンバージョンを増やすなど、直接的なエクスペリエンス。
 
@@ -72,14 +74,14 @@ ht-degree: 78%
    * を参照してください。AEM Assets と Dynamic Media をスタンドアロンで使用している場合は、埋め込みコードを Web サイトにコピーしてから、既存のクイックビューに統合する必要があります。[インタラクティブ画像の Web サイトへの統合](#integrating-an-interactive-image-with-your-website)を参照してください。
    * サードパーティの WCM（Web Content Manager）を使用している場合は、新しいインタラクティブビデオを、Web サイトで使用されている既存のクイックビュー実装に統合する必要があります。[インタラクティブ画像の既存のクイックビューへの統合](#integrating-an-interactive-image-with-an-existing-quickview)を参照してください。
 
-## （オプション）ホットスポットの変数の識別{#optional-identifying-hotspot-variables}
+## （オプション）ホットスポットの変数の識別 {#optional-identifying-hotspot-variables}
 
 >[!NOTE]
 >
 >このタスクが必要になるのは次に該当する場合のみです。
 >
 >* クイックビューをトリガーして、画像にインタラクティブ機能を追加する。
->* eコマースソリューション（IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が&#x200B;** eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
+>* eコマースソリューション&#x200B;*（* IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
 
 >
 >
@@ -116,7 +118,7 @@ AEM Assets 内でバナー画像にホットスポットを追加する場合は
 
 ブラウザーでネットワーク監視をオンにして、ページ上でクイックビューをトリガーします。
 
-次に、ネットワークログ内でクイックビューの·Ajax·URL·を見つけ、記録された·URL·を今後の分析のためにコピーします。クイックビューをトリガーするとほとんどの場合、大量のリクエストがサーバーに送信されます。クイックビューの·Ajax·URL·は通常、そのリスト内の最初のほうにあります。この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
+次に、ネットワークログ内でクイックビューの Ajax URL を見つけ、記録された URL を今後の分析のためにコピーします。クイックビューをトリガーするとほとんどの場合、大量のリクエストがサーバーに送信されます。クイックビューの Ajax URL は通常、そのリスト内の最初のほうにあります。この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
 
 このプロセスの実行中は、様々な製品カテゴリや製品タイプが含まれる Web サイトの様々な領域にアクセスすることが重要です。なぜなら、クイックビュー URL には、ある特定の Web サイトカテゴリに共通するが、Web サイトの異なる領域にアクセスした場合にのみ変化する部分が存在する場合があるからです。
 
@@ -188,7 +190,7 @@ AEM Assetsに付属の&#x200B;**[!UICONTROL Shoppable_Banner]**&#x200B;という
 
 カスタムインタラクティブ画像ビューアプリセットを作成する場合は、画像バナーのホットスポットの外観を決定できます。ビューアプリセットの作成中に、事前定義済みの画像ギャラリーからホットスポットのグラフィックを選択して使用できます。
 
-ビューアプリセットを保存すると、AEM Assetsの&#x200B;**[!UICONTROL ビューアプリセット]**&#x200B;リストページで、ビューアプリセットが自動的にアクティブ化（オンに）されます。 つまり、そのビューアプリセットは、インタラクティブメディアコンポーネントで、アセットを表示するときに常に表示されます。ただし、このビューアプリセットを使用したインタラクティブバナーを&#x200B;*配信*&#x200B;するには、ビューアプリセットも&#x200B;*公開*&#x200B;する必要があります（カスタムまたは初期設定のビューアプリセットに当てはまります）。
+ビューアプリセットを保存すると、AEM Assetsの&#x200B;**[!UICONTROL ビューアプリセット]**&#x200B;リストページで、ビューアプリセットが自動的にアクティブ化（オンに）されます。 つまり、そのビューアプリセットは、インタラクティブメディアコンポーネントで、アセットを表示するときに常に表示されます。ただし、このビューアプリセットを使用したインタラクティブバナーを&#x200B;*配信*&#x200B;するには、ビューアプリセットも&#x200B;*公開*&#x200B;する必要があります（カスタムまたは初期設定のビューアプリセットでは同じです）。
 
 **インタラクティブ画像ビューアプリセットを作成するには：**:
 
@@ -196,7 +198,7 @@ AEM Assetsに付属の&#x200B;**[!UICONTROL Shoppable_Banner]**&#x200B;という
 1. ページの右上隅にある「**[!UICONTROL 作成]**」をタップします。
 1. **[!UICONTROL 新しいビューアプリセット]**&#x200B;ダイアログボックスに、インタラクティブバナービューアのプリセットを説明する名前を入力します。
 
-   これは、保存後に&#x200B;**[!UICONTROL ビューアプリセット]**&#x200B;のリストページに表示されるタイトルです。
+   これは、保存後に&#x200B;**[!UICONTROL ビューアプリセット]**&#x200B;リストページに表示されるタイトルです。
 1. **[!UICONTROL リッチメディアタイプ]**&#x200B;プルダウンメニューで、**[!UICONTROL インタラクティブ画像]**&#x200B;を選択します。
 1. 「**作成**」をタップします。
 1. **[!UICONTROL ビューアプリセットを編集]**&#x200B;ページで、「**[!UICONTROL 外観]**」タブをタップします。
@@ -276,7 +278,7 @@ d.（オプション）ホットスポットを削除するには、画像上で
    * 「**[!UICONTROL クイックビュー]**」をタップします。
 
       * AEM Sitesまたはeコマースのお客様の場合は、**[!UICONTROL 製品選択]**&#x200B;アイコン（虫めがね）をタップして、**[!UICONTROL 製品を選択]**&#x200B;ページを開きます。 使用する製品をタップし、ページの右上隅にある「**[!UICONTROL 選択]**」をタップして、**[!UICONTROL ホットスポット管理]**&#x200B;ページに戻ります。
-      * ** AEM Sites または AEM eCommerce のユーザーではない場合は次のようにします。
+      * AEM Sites または AEM eCommerce *のユーザーではない場合は次のようにします*。
 
          * [ホットスポットの変数の識別](#optional-identifying-hotspot-variables)を参照してください。これらの変数を定義する必要があります。
          * 次に、SKU 値を手動で入力します。「**[!UICONTROL SKU値]**」テキストフィールドに、製品のSKU（在庫保持単位）を入力します。これは、オファーする個別の製品またはサービスごとに固有の識別子です。 入力した SKU 値によってクイックビューテンプレートの変数部分が自動的に入力され、タップされたホットスポットが特定の SKU のクイックビューに関連付けられます。
@@ -373,9 +375,9 @@ AEM Sites のユーザーである場合は、インタラクティブメディ�
 
 レスポンシブ環境用のショップ可能なインタラクティブ画像に切り抜きを適用するには、パスにインタラクティブ画像設定属性`ZoomView.iscommand`を含めます。`ZoomView`は呼び出すコンポーネントで、`iscommand`は適用する切り抜き画像サービングコマンドです。
 
-[ZoomView.iscommand](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) 設定属性を参照してください。
+[ZoomView.iscommand](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html?lang=ja) 設定属性を参照してください。
 
-[crop](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) 画像サービングコマンドを参照してください。
+[crop](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html?lang=ja) 画像サービングコマンドを参照してください。
 
 これで、インタラクティブ画像を Web サイト上の既存のクイックビューに統合できるようになりました。
 
