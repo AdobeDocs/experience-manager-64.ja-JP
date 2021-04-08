@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
+exl-id: 56b070e4-b445-4488-acff-685b7ce5785f
+feature: 設定
+role: Administrator,Business Practitioner,Developer
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 92%
+source-wordcount: '1050'
+ht-degree: 99%
 
 ---
-
 
 # クイックビューを使用したカスタムポップアップの作成 {#using-quickviews-to-create-custom-pop-ups}
 
@@ -107,8 +109,8 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
 
    `setHandlers()` メソッドについて詳しくは、以下を参照してください。
 
-   * インタラクティブ画像ビューア：[setHandlers](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
-   * インタラクティブビデオビューア：[setHandlers](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
+   * インタラクティブ画像ビューア：[setHandlers](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html?lang=ja)
+   * インタラクティブビデオビューア：[setHandlers](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html?lang=ja)
 
 1. 次に、`quickViewActivate` ハンドラーを設定する必要があります。
 
@@ -137,9 +139,9 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
 
    quickViewActivate メソッドについて詳しくは、以下を参照してください。
 
-   * インタラクティブ画像ビューア ‐ [イベントコールバック](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html)
-   * インタラクティブビデオビューア ‐ [イベントコールバック](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html)
-   * インタラクティブビデオビューアでのインタラクティブデータのサポート ‐ [インタラクティブデータのサポート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html)
+   * インタラクティブ画像ビューア ‐ [イベントコールバック](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html?lang=ja)
+   * インタラクティブビデオビューア ‐ [イベントコールバック](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html?lang=ja)
+   * インタラクティブビデオビューアでのインタラクティブデータのサポート ‐ [インタラクティブデータのサポート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html?lang=ja)
 
 1. 以下の操作を実行してください。
 
@@ -215,8 +217,8 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
 
    `init()` メソッドについて詳しくは、以下を参照してください。
 
-   * インタラクティブ画像ビューア ‐ [init](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html)
-   * インタラクティブビデオビューア ‐ [init](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html)
+   * インタラクティブ画像ビューア ‐ [init](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html?lang=ja)
+   * インタラクティブビデオビューア ‐ [init](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html?lang=ja)
 
 1. 前の手順で言及したように、ビューアにポップアップをアタッチするには、以下のコードを使用します。
 
@@ -265,4 +267,3 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
    `s7interactiveimageviewer.init()`
 
    ホストページにビューアを埋め込んだ後で、`init()` を使用してビューアを起動する前に、ビューアインスタンスが作成され、ハンドラーが読み込まれていることを確認してください。
-
