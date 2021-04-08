@@ -5,14 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
+exl-id: f0cd3a75-03ed-40a9-b336-8a782f3cfe69
+feature: ルールセット
+role: Administrator,Business Practitioner,Developer
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 90%
+source-wordcount: '763'
+ht-degree: 96%
 
 ---
-
 
 # ルールセットを使用した URL の変換 {#using-rulesets-to-transform-urls}
 
@@ -21,11 +23,11 @@ Dynamic Media でルールセットをデプロイして、URL を変換でき�
 * MIME タイプのサフィックスの付加。多くのサービスや Web サイトでは、`.jpg` を URL に付加するなど、画像のサフィックスが必要です。
 * SEO（検索エンジン最適化）のための URL へのフォルダーパスの作成。
 
-   「[AdobeDynamic MediaクラシックがSEOをサポートする方法](/help/assets/assets/s7_seo.pdf)」を参照してください。
+   「[Adobe Dynamic Media Classic が SEO をサポートする方法](/help/assets/assets/s7_seo.pdf)」を参照してください。
 
 * SEO（検索エンジン最適化）のための URL へのメタデータの付加。
 
-   「[AdobeDynamic MediaクラシックがSEOをサポートする方法](/help/assets/assets/s7_seo.pdf)」を参照してください。
+   「[Adobe Dynamic Media Classic が SEO をサポートする方法](/help/assets/assets/s7_seo.pdf)」を参照してください。
 
 * ダウンロードを開始するためのコンテンツ処理方法の設定。
 * パーソナライゼーションのための画像サービングテンプレーティング URL の簡略化。例えば、`rgb{XX,YY,ZZ}` を RTF 対応の `\redXX\greenYY\blueZZ` に変換します。
@@ -41,7 +43,7 @@ Dynamic Media のコンテキストで、XML ベースのシステムを使用�
 >ルールセットを使用する場合は、Dynamic Media のコンテンツが Web サイトに表示されなくなる可能性があるので、注意してください。
 
 用意されているサンプルルールセットを使用して、独自のルールセットを作成できます。\
-[ルールセットのリファレンス](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html)を参照してください。
+[ルールセットのリファレンス](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html?lang=ja)を参照してください。
 
 すべてのルールセットの作成と同様に、xmlvalid などの XML バリデータープログラムを使用して、XML ファイルが有効であることを確認してからアップロードしてください。\
 [ルールセットのトラブルシューティング](https://helpx.adobe.com/jp/experience-manager/scene7/kb/base/scene7-rulesets/scene7-ruleset-troubleshooting.html)も参照してください。
@@ -49,7 +51,7 @@ Dynamic Media のコンテキストで、XML ベースのシステムを使用�
 また、最初は実稼動環境に影響を与えないステージング環境でルールセットをテストしてください。\
 通常、実稼動環境とステージング環境では異なるログイン情報が必要となります。
 
-ログイン情報については、[AdobeDynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)を参照してください。
+ログイン情報については、「[Adobe Dynamic Media クラシックにサインイン](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#sign-in-dmc-app)」を参照してください。
 
 <!-- * **NA staging environment** login page: [https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
 * **EMEA staging environment** login page: [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
@@ -83,4 +85,3 @@ Dynamic Media のコンテキストで、XML ベースのシステムを使用�
    ルールセットの条件が現在の Dynamic Media の Image Server へのリクエストに適用されます。
 
    ルールセットファイルを変更した場合、変更したルールセットファイルを再アップロードして再公開すると、変更内容が直ちに適用されます。
-
