@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
+exl-id: 895103c8-df58-40f0-85d6-e29637edce53
+feature: イメージプロファイル
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '2713'
-ht-degree: 91%
+source-wordcount: '2715'
+ht-degree: 92%
 
 ---
-
 
 # Dynamic Media画像プロファイル{#image-profiles}
 
@@ -67,7 +69,7 @@ ht-degree: 91%
   <tr> 
    <td>カラーおよび画像スウォッチ</td> 
    <td>各画像の画像スウォッチを一括で生成します。</td> 
-   <td><p><strong>注意</strong>：Dynamic Media Classic ではスマートスウォッチはサポートされません。</p> <p>商品画像から色やテクスチャを示す高品質のスウォッチを自動的に検出して生成します。</p> <p>カラーおよび画像スウォッチを使用するには、「切り抜きオプション」ドロップダウンリストで「<strong>スマート切り抜き</strong>」を選択し、「カラーおよび画像スウォッチ」の右側で、この機能を有効（オン）にします。「幅」と「高さ」テキストフィールドにピクセル値を入力します。</p> <p>画像の切り抜きはすべてレンディションパネルから使用できますが、スウォッチを使用するには URL のコピー機能を利用しなければなりません。サイトでスウォッチをレンダリングするには、独自の表示コンポーネントを使用する必要があります（カルーセルバナーは例外です。カルーセルバナーで使用されるスウォッチについては、Dynamic Media が表示コンポーネントを提供します）。</p> <p><strong>画像スウォッチの使用</strong></p> <p>画像スウォッチの URL は簡単です。次のとおりです。</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>ここでは、<code>:Swatch</code> がアセット要求に追加されています。</p> <p><strong>カラースウォッチの使用</strong></p> <p>カラースウォッチを使用するには、次のように <code>req=userdata</code> 要求を作成します。</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>例えば、Dynamic Mediaクラシックのスウォッチアセットは次のようになります。</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>スウォッチアセットの対応する <code>req=userdata</code> URL は次のとおりです。</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p><code>req=userdata</code> 応答は次のとおりです。</p> <p><code class="code">SmartCropDef=Swatch
+   <td><p><strong>注意</strong>：Dynamic Media Classic ではスマートスウォッチはサポートされません。</p> <p>商品画像から色やテクスチャを示す高品質のスウォッチを自動的に検出して生成します。</p> <p>カラーおよび画像スウォッチを使用するには、「切り抜きオプション」ドロップダウンリストで「<strong>スマート切り抜き</strong>」を選択し、「カラーおよび画像スウォッチ」の右側で、この機能を有効（オン）にします。「幅」と「高さ」テキストフィールドにピクセル値を入力します。</p> <p>画像の切り抜きはすべてレンディションパネルから使用できますが、スウォッチを使用するには URL のコピー機能を利用しなければなりません。サイトでスウォッチをレンダリングするには、独自の表示コンポーネントを使用する必要があります（カルーセルバナーは例外です。カルーセルバナーで使用されるスウォッチについては、Dynamic Media が表示コンポーネントを提供します）。</p> <p><strong>画像スウォッチの使用</strong></p> <p>画像スウォッチの URL は簡単です。次のとおりです。</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>ここでは、<code>:Swatch</code> がアセット要求に追加されています。</p> <p><strong>カラースウォッチの使用</strong></p> <p>カラースウォッチを使用するには、次のように <code>req=userdata</code> 要求を作成します。</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>例えば、Dynamic Media Classic のスウォッチアセットは次のとおりです。</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>スウォッチアセットの対応する <code>req=userdata</code> URL は次のとおりです。</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p><code>req=userdata</code> 応答は次のとおりです。</p> <p><code class="code">SmartCropDef=Swatch
        SmartCropHeight=200.0
        SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200
        SmartCropType=Swatch
@@ -121,7 +123,7 @@ ht-degree: 91%
 
    [スマート切り抜きとスマートスウォッチオプション](#crop-options)および[アンシャープマスク](#unsharp-mask)も参照してください。
 
-   ![crop](assets/crop.png)
+   ![切り抜き](assets/crop.png)
 
 1. 「**[!UICONTROL 保存]**」をタップします。新しく作成されたプロファイルが、使用可能なプロファイルのリストに表示されます。
 
