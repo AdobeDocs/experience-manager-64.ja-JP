@@ -5,14 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: introduction
 content-type: reference
+exl-id: 3cee9b4f-c4be-4ffc-970c-5680c8ebba47
+feature: 3D アセット
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1177'
 ht-degree: 78%
 
 ---
-
 
 # AEM 3Dアセットの操作{#working-with-d-assets}
 
@@ -120,7 +122,7 @@ AEM 3D で使用する 3D モデルを作成する場合は、以下の点に注
 
    ASCII `.ma`形式とバイナリ`.mb`形式の両方です。
 
-* `Jupiter Tesselation (ISO 14306-1).jt`.
+* `Jupiter Tesselation (ISO 14306-1).jt`
 
     業界標準の CAD データ交換、コラボレーションおよび製品ビジュアライゼーション形式。
 
@@ -162,4 +164,3 @@ Y-upは、このリリースではFBXファイルに適した座標系です。
 ## プライマリ 3D モデルファイル内のマテリアルの命名 {#naming-materials-in-a-primary-d-model-file}
 
 *サーフェス*&#x200B;は、同じマテリアルでカバーされる 3D モデルのサーフェス領域として定義されます。このマテリアルは、サーフェスの命名にも使用されます。したがって、プライマリ 3D モデルファイルに含まれるマテリアルにはモデルに応じた名前を付けることをお勧めします。例えば、「Body」、「Windows」、「Tires」、「Rims」などの特定の名前を使用する場合は、「Red」、「Glass」、「Rubber」、「Aluminum」などの曖昧な名前を使用することをお勧めします。
-
