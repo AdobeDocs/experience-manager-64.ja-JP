@@ -2,20 +2,21 @@
 title: ユーザー、グループおよびアクセス権限の管理
 seo-title: ユーザー、グループおよびアクセス権限の管理
 description: AEM でのユーザー、グループおよびアクセス権限の管理について説明します。
+feature: セキュリティ
 seo-description: AEM でのユーザー、グループおよびアクセス権限の管理について説明します。
 uuid: 30e0d4dc-261d-4dc2-aff7-29179eca1cc2
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: cc0637ef-4a9e-454f-899d-655c9caebe2b
+exl-id: 9c14e57b-019e-45ae-9e96-40424fa609c2
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '3137'
+source-wordcount: '3138'
 ht-degree: 88%
 
 ---
-
 
 # ユーザー、グループおよびアクセス権限の管理{#user-group-and-access-rights-administration}
 
@@ -29,7 +30,7 @@ CRX リポジトリへのアクセスの有効化に関しては、以下のト�
 
 基本的な要素：
 
-**ユーザー** アカウントCRXは、ユーザーアカウントに保持されている詳細に従って、ユーザー（そのユーザーまたは他のアプリケーション）を識別および検証することでアクセスを認証します。
+**ユーザー** アカウントCRXは、ユーザーアカウントに保持されている詳細に従って、（そのユーザーまたは他のアプリケーションによる）ユーザーを識別し、検証することで、アクセスを認証します。
 
 CRX では、各ユーザーアカウントはワークスペース内のノードとなります。CRX ユーザーアカウントのプロパティには以下の特徴があります。
 
@@ -651,4 +652,3 @@ CRXDE Liteの&#x200B;**「アクセス制御**」タブを使用して、アク�
 1. 「**テスト**」をクリックして選択項目の結果を確認します。
 
    ![crx_accesscontrol_test](assets/crx_accesscontrol_test.png)
-
