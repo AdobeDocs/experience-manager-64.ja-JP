@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: content-fragments
 content-type: reference
 discoiquuid: bde54663-9050-4a5a-93cb-7cd84ac7f071
+exl-id: 209f0e02-b883-4104-8358-01cab15e5db2
+feature: コンテンツフラグメント
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 11b5f915797faa691834d4286437e9e698af187d
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '554'
+ht-degree: 97%
 
 ---
-
 
 # Markdown {#markdown}
 
@@ -219,4 +221,3 @@ ht-degree: 0%
     ` - minus sign (hyphen)`
 
     ` . dot`
-
