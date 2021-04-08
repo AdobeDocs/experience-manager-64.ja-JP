@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: content-fragments
 content-type: reference
 discoiquuid: 09536869-3806-4b89-adfd-68f408298c55
+exl-id: af4f25d4-a784-47fe-bca4-75c8d373f7d2
+feature: コンテンツフラグメント
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 3fa80e73fb6e9400fbeba29d80aa57e080b6f333
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '256'
 ht-degree: 94%
 
 ---
-
 
 # 関連コンテンツ {#associated-content}
 
@@ -57,4 +59,3 @@ ht-degree: 94%
 * コレクションに&#x200B;**アセットを追加**&#x200B;する。
 * 追加のアクションに対しアセットを選択する。
 * アセットを編集する。
-
