@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: introduction
 content-type: reference
 discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
+exl-id: f8a3936e-82b5-46c7-9614-b97162e27d6a
+feature: アセット管理，レンディション
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: 9b6c1efe1f6281892648c7b41820856d2e3fcac1
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 91%
+source-wordcount: '461'
+ht-degree: 90%
 
 ---
-
 
 # Dynamic Media の操作 {#working-with-dynamic-media}
 
@@ -43,7 +45,7 @@ Dynamic Media 限定の機能は次のとおりです。
 
 * [スピンセット](spin-sets.md)
 * [ビデオ](video.md)
-* [Dynamic Media アセットの配信](delivering-dynamic-media-assets.md)
+* [Dynamic Media アセットの配信 ](delivering-dynamic-media-assets.md)
 * [アセットの管理](managing-assets.md)
 * [クイックビューを使用したカスタムポップアップの作成](custom-pop-ups.md)
 
