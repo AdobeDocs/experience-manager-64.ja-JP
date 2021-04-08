@@ -9,14 +9,16 @@ topic-tags: content-fragments
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 discoiquuid: 22ae0d3a-083f-40e4-bf4a-7a755ae9e312
+exl-id: e2804707-7b75-4fae-937e-9e258481878f
+feature: コンテンツフラグメント
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 2d25f3154ac4a2b43aec98cf63699cabf0d113cf
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '2002'
+source-wordcount: '2004'
 ht-degree: 98%
 
 ---
-
 
 # コンテンツフラグメントの操作 {#working-with-content-fragments}
 
@@ -66,7 +68,7 @@ Adobe Experience Manager（AEM）コンテンツフラグメントを使用す�
 
 さらにこうしたコンテンツフラグメントを集めて組み立てることで、多様なチャネルにエクスペリエンスを提供できます。
 
-## コンテンツフラグメントとコンテンツサービス  {#content-fragments-and-content-services}
+## コンテンツフラグメントとコンテンツサービス {#content-fragments-and-content-services}
 
 AEM コンテンツサービスは、Web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。
 
@@ -306,4 +308,3 @@ AEM コアコンポーネントの JSON 書き出し機能と共にこの構造�
 フラグメントのサンプルを次の場所で確認できます。
 
 [http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten)
-
