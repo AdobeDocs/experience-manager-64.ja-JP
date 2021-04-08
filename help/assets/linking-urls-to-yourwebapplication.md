@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
+exl-id: e076349d-8b1a-487f-b982-9440d7de13b9
+feature: 設定
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1290'
 ht-degree: 96%
 
 ---
-
 
 # Web アプリケーションへの URL のリンク {#linking-urls-to-your-web-application}
 
@@ -140,7 +142,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
    例えば、登録 ID が `87654321|MyCompany` の場合、顧客名は `MyCompany` です。
 
 1. ページの左上隅近くにある「**[!UICONTROL Cloud Service]s**」をタップし、AEMアイコンをタップして&#x200B;**[!UICONTROL 一般/CRXDE Lite]**&#x200B;に移動します。
-1. JCR（Java コンテンツリポジトリ）のビデオレンディションパス全体をコピーします。
+1. JCR（Java コンテンツリポジトリー）のビデオレンディションパス全体をコピーします。
 
    例えば、ビデオのレンディションパスは、次のように表示されることがあります。
 
