@@ -9,14 +9,16 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 658ff671-16b9-41bd-ba24-b77a32b3346b
+exl-id: 074ab20f-02df-4f9e-9512-93a76f5d234f
+feature: 3D アセット
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '850'
 ht-degree: 54%
 
 ---
-
 
 # IBL ステージの使用について {#about-working-with-ibl-stages}
 
@@ -95,4 +97,3 @@ IBLステージは、デフォルトで直径20メートルの球状の背景画
    例えば、長さ20メートルのジェット平面モデルは、`dam:gPlaneRadius=20000`の場合は正しく表示されます。
 
 1. CRXDE Liteページの左上隅近くにある「**[!UICONTROL すべて保存]**」をタップします。
-
