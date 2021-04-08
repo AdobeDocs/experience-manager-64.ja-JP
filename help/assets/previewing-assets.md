@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 77296bff-8429-4240-af93-26076ae431ec
+exl-id: ec05569a-6449-4430-9b9f-7ab051f44970
+feature: アセット管理，レンディション
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 8c6fdcea0def7720062edfc564c536f8d47e8402
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1031'
 ht-degree: 90%
 
 ---
-
 
 # Dynamic Media アセットのプレビュー {#previewing-assets}
 
@@ -50,8 +52,8 @@ ht-degree: 90%
   </tr>
   <tr>
    <td><p>画像</p> </td> 
-   <td>可</td> 
-   <td>可</td> 
+   <td>はい</td> 
+   <td>はい</td> 
    <td><p><strong>特定のレンディションでアセットをプレビューするには：</strong></p> 
     <ul> 
      <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>レンディション</strong>」をクリックし、プレビューする特定のレンディションを選択します。</li> 
@@ -62,8 +64,8 @@ ht-degree: 90%
   </tr>
   <tr>
    <td>マルチメディア</td> 
-   <td>可</td> 
-   <td>可</td> 
+   <td>はい</td> 
+   <td>はい</td> 
    <td><p><strong>特定のレンディションでアセットをプレビューするには：</strong></p> 
     <ul> 
      <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>レンディション</strong>」をクリックし、プレビューする特定のレンディションを選択します。</li> 
@@ -110,4 +112,3 @@ ht-degree: 90%
   </tr>
  </tbody>
 </table>
-
