@@ -5,16 +5,18 @@ contentOwner: Rick Brough
 topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
+exl-id: 71f89564-a413-49f6-8d6e-c5305bf92c75
+feature: 3D アセット
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1780'
 ht-degree: 70%
 
 ---
 
-
-# 3D アセットの表示  {#viewing-d-assets}
+# 3D アセットの表示 {#viewing-d-assets}
 
 >[!IMPORTANT]
 >
@@ -183,4 +185,3 @@ AEM 3D のデフォルトのステージを使用する他に、サードパー�
 1. **Alt/option**&#x200B;キーを押しながらドラッグし、マウスの左ボタンを押して、カメラをパンします。 このアクションではカメラを横方向に移動して、ズームインしたままオブジェクトの様々な部分を見ることができます。または、[**[!UICONTROL オービット/パンの切り替え]**]ボタンをクリックして[**[!UICONTROL パン]**]モードに切り替え、マウスの左ボタンを押しながらドラッグしてカメラをパンします。 [**[!UICONTROL オービット/パンの切り替え]**]を再度クリックして、[**[!UICONTROL オービット]**]モードに戻ります。
 1. 「**[!UICONTROL ビューアをリセット]**」をクリックして、カメラをリセットします。 このアクションにより、オブジェクト全体の表示に戻り、自動スピンが有効になっている場合は自動スピンが再開されます。
 1. 「**[!UICONTROL フルスクリーン]**」をクリックしてフルスクリーンモードに切り替えます。 キーボードの&#x200B;**[!UICONTROL Escape]**&#x200B;キーを使用するか、「**[!UICONTROL フルスクリーン]**」を再度クリックして、3Dビューアをページ埋め込みモードに戻します。
-
