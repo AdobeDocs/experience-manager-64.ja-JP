@@ -7,14 +7,16 @@ uuid: 5de8844f-d5d0-4fda-b59e-74682eda949f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 2f254541-6f9b-4f8a-9201-6c70f2d4f3b9
+exl-id: 3adae6da-e148-4670-86ae-27d83008ec66
+feature: インタラクティブビデオ，ビデオ
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 7cb0f63f0cd83e6e40ed51b2fd300f010278aa56
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '6008'
+source-wordcount: '6011'
 ht-degree: 92%
 
 ---
-
 
 # インタラクティブビデオ {#interactive-videos}
 
@@ -26,7 +28,7 @@ ht-degree: 92%
 
 ## インタラクティブビデオの使用例  {#interactive-video-in-action}
 
-インタラクティブで買い物かごが可能なビデオを実際に閲覧するには、[ライブデモ](https://landing.adobe.com/jp/na/dynamic-media/ctir-2755/live-demos.html)をクリックし、ページ上の&#x200B;**[!UICONTROL 買い物かごが可能なメディア]**&#x200B;の見出しまでスクロールして、買い物かごのビデオをクリックします。
+インタラクティブで買い物かごが可能なビデオを実際に閲覧するには、[ライブデモ](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)をクリックし、ページ上の&#x200B;**[!UICONTROL 買い物かごが可能なメディア]**&#x200B;の見出しまでスクロールして、買い物かごのビデオをクリックします。
 
 * 再生中にビデオ内で製品が使用されると、同じ製品のサムネール画像が右側に表示されます。
 
@@ -73,7 +75,7 @@ ht-degree: 92%
    *この手順は、次のすべての条件を満たす場合にのみ必要です*。
 
    * クイックビューをトリガーして、ビデオにインタラクティブ機能を追加する。
-   * eコマースソリューション（IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が&#x200B;** eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
+   * eコマースソリューション&#x200B;*（* IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
 
 1. **（オプション）インタラクティブビデオのビューアプリセットの作成** - プレーヤーを構成する様々なコンポーネント（ビデオスクラバーやインタラクティブサムネールなど）の外観と動作をカスタマイズします。
 
@@ -106,7 +108,7 @@ ht-degree: 92%
 >[!NOTE]
 このタスクが必要になるのは次に該当する場合のみです。
 * クイックビューをトリガーして、ビデオにインタラクティブ機能を追加する。
-* eコマースソリューション（IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が&#x200B;** eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
+* eコマースソリューション&#x200B;*（* IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
 
 AEM の実装で AEM eCommerce を使用している場合は、このタスクをスキップして次のタスクに進みます。
 
@@ -137,7 +139,7 @@ AEM の実装で AEM eCommerce を使用している場合は、このタスク�
 
 ブラウザーでネットワーク監視をオンにして、ページ上でクイックビューをトリガーします。
 
-次に、ネットワークログ内でクイックビューの·Ajax·URL·を見つけ、記録された·URL·を今後の分析のためにコピーします。クイックビューをトリガーするとほとんどの場合、大量のリクエストがサーバーに送信されます。クイックビューの·Ajax·URL·は通常、そのリスト内の最初のほうにあります。この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
+次に、ネットワークログ内でクイックビューの Ajax URL を見つけ、記録された URL を今後の分析のためにコピーします。クイックビューをトリガーするとほとんどの場合、大量のリクエストがサーバーに送信されます。クイックビューの Ajax URL は通常、そのリスト内の最初のほうにあります。この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
 
 このプロセスの実行中は、様々な製品カテゴリや製品タイプが含まれる Web サイトの様々な領域にアクセスすることが重要です。なぜなら、クイックビュー URL には、ある特定の Web サイトカテゴリに共通するが、Web サイトの異なる領域にアクセスした場合にのみ変化する部分が存在する場合があるからです。
 
@@ -413,7 +415,7 @@ AEM の実装で AEM eCommerce を使用している場合は、このタスク�
        <ul> 
        <li>「SKU 値」テキストフィールドには、選択した製品の SKU（Stock Keeping Unit）が既に設定されています。SKU は、提供している製品またはサービスごとの一意の識別子です。これは、AEM Commerce で画像が製品に関連付けられると自動的に設定されます。</li> 
        <li>設定済みの SKU が正しくない場合は、製品ピッカーアイコン（虫眼鏡）をタップまたはクリックして製品を選択ページを開きます。使用する製品をタップまたはクリックしてから、ページの右上隅のチェックマークをタップして、インタラクティブビデオエディターに戻ります。</li> 
-       </ul> <p> <em></em>AEM Sites または AEM eCommerce のユーザーではない場合は次のようにします。</p> 
+       </ul> <p> AEM Sites または AEM eCommerce <em>のユーザーではない場合は次のようにします</em>。</p> 
        <ul> 
        <li><a href="/help/assets/carousel-banners.md#identifying-hotspot-and-image-map-variables">ホットスポットの変数の識別</a>を参照してください。これらの変数を定義する必要があります。 </li> 
        <li>デフォルトでは、この SKU フィールドでは画像アセットのファイル名を拡張子を付けずに使用します。SKU に基づいたファイルの名前が標準命名規則に従っている場合、特に編集する必要はありません。 </li> 
