@@ -9,16 +9,18 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: e43fd002-2954-4ef1-ac2b-e8d45afa75be
+exl-id: fdc82bca-e676-4052-b3e9-a198c685df96
+feature: 3D アセット
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1385'
 ht-degree: 60%
 
 ---
 
-
-# 高度な設定  {#advanced-configuration-settings}
+# 高度な設定 {#advanced-configuration-settings}
 
 一般的な使用例ではデフォルトの設定が適していますが、変更が必要になる場合もあります。
 
@@ -149,4 +151,3 @@ AEMの&#x200B;**CRXDE Lite**(**[!UICONTROL ツール/一般/CRXDE Lite]**)で、
 | `/libs/settings/dam/v3D/WebGLSites/fadeCurtains` | **[!UICONTROL true]**&#x200B;に設定すると、ロードカーテンは、ロードと初期化の後半の部分で徐々にフェードアウトします。 **[!UICONTROL false]**&#x200B;に設定した場合、読み込みと初期化が完了するまで、カーテンは不透明のままです。 |
 | `/libs/settings/dam/v3D/WebGLSites/showCurtains` | **[!UICONTROL true]**&#x200B;または&#x200B;**[!UICONTROL false]**&#x200B;に設定すると、3Dサイトコンポーネントのロードカーテンが有効または無効になります。 |
 | `/libs/settings/dam/v3D/WebGLSites/spinHeight` | 自動スピンが有効でアクティブな場合、カメラの垂直方向の位置は、3D オブジェクトの高さを基準にして自動的に調整されます。0.5 に設定すると、カメラの垂直方向の位置はオブジェクトの高さの 1/2 の位置になり、水平線は表示域の垂直方向の中心になります。大きい値を設定すると、カメラはオブジェクトを見下ろすようになり、レンダリングされる水平線の高さは高くなります。小さい値を設定すると、カメラはオブジェクトを見上げるようになり、水平線は低くなります。 |
-
