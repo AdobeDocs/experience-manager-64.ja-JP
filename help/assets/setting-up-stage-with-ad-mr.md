@@ -9,14 +9,16 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: da8fc33b-84ae-4ead-87bb-5a7870a38b1f
+exl-id: facd0411-8a3c-4b1a-af9d-0d59e0399b2c
+feature: 3D アセット
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: 4b05b24a91ba9c31a19a5a96fb481d2ffc4c9bfc
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 83%
+source-wordcount: '433'
+ht-degree: 84%
 
 ---
-
 
 # Autodesk Maya および Mental Ray での標準ステージの設定 {#setting-up-a-standard-stage-with-autodesk-maya-and-mental-ray}
 
@@ -68,4 +70,3 @@ ht-degree: 83%
 
 1. AEM でアセットのプロパティを開きます。**[!UICONTROL タイトル]**&#x200B;を、**[!UICONTROL ステージセレクター]**&#x200B;ドロップダウンリストに表示される適切な文字列に設定します。 「**[!UICONTROL クラス]**」が「**[!UICONTROL 3D ステージ]**」に設定されていることを確認します。保存して終了します。
 1. 3D アセットを開き、新しいステージを選択して、予期したとおりにプレビューされ、レンダリングされることを確認します。
-
