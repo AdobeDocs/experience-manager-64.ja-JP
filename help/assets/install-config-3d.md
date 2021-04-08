@@ -9,16 +9,18 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 5898d084-4b45-41bc-ad2e-2fcc65b0392c
+exl-id: 5baaef61-5c70-4796-8ae2-44053e855ad9
+feature: 3D アセット
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1681'
 ht-degree: 31%
 
 ---
 
-
-# AEM 3D のインストールと設定 {#installing-and-configuring-aem-d}
+# AEM 3D のインストールと設定{#installing-and-configuring-aem-d}
 
 >[!IMPORTANT]
 >
