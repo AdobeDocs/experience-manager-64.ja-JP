@@ -5,14 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
+exl-id: 47cb6d40-a5c4-4f6a-9794-bd2eddfaa7d0
+feature: スピンセット
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1845'
 ht-degree: 67%
 
 ---
-
 
 # スピンセット {#spin-sets}
 
@@ -28,7 +30,7 @@ ht-degree: 67%
 >
 >アセットユーザーインターフェイスについて詳しくは、[タッチ UI を使用したアセットの管理](managing-assets-touch-ui.md)を参照してください。
 
-## クイックスタート：スピンセット  {#quick-start-spin-sets}
+## クイックスタート：スピンセット {#quick-start-spin-sets}
 
 スピンセットをすばやく習得するには、次のワークフローに従います。
 
