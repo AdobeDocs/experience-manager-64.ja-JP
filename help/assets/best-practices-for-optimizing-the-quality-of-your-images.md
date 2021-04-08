@@ -5,14 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
+exl-id: 2e90bea1-eaac-457b-8588-b18d3a6e8d91
+feature: アセット管理，レンディション
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 42d5a1875d78fdec1be0bb22d8ec8de2e56256ec
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '1463'
-ht-degree: 90%
+source-wordcount: '1466'
+ht-degree: 91%
 
 ---
-
 
 # 画質最適化のベストプラクティス {#best-practices-for-optimizing-the-quality-of-your-images}
 
@@ -115,6 +117,6 @@ jpegSize は、メモリ容量が限られているデバイスに配信され�
 
 実験をおこなう際には、ワークフローを最適化するための次の一般的な推奨事項も役に立つでしょう。
 
-* 様々なパラメーターをリアルタイムで、直接URLでテストします。
+* 様々なパラメーターを直接 URL 上でリアルタイムにテストします。
 * ベストプラクティスとしては、Dynamic Media 画像サービングコマンドを画像プリセット内にまとめることができます。画像プリセットは基本的に、`$thumb_low$` や `&product_high$` といったカスタムプリセット名が付けられた URL コマンドマクロです。URL パス内でカスタムプリセット名を指定すると、これらのプリセットがコールされます。この機能によって、Web サイトでの様々な画像使用パターンに応じたコマンドと画質設定を管理でき、URL の全体的な長さを短縮することができます。
 * AEM では、取り込み時に画像のシャープニングを適用するなど、高度な画質調整機能を提供しています。レンダリング結果をさらに調整して最適化するためにこの機能を利用できるような高度な使用例については、[Adobe Professional Services](https://www.adobe.com/jp/experience-cloud/consulting-services.html) がお客様向けにカスタマイズした見識やベストプラクティスを提供して支援いたします。
