@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4b532cd3-1561-4b5c-8b4b-420c278926f0
+exl-id: d2fdad3f-513b-4147-a7c6-a3c1b64dd6e3
+feature: カルーセルバナー
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: f4cdd3d5020b917676fe8715d4e21e98f3a096b4
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '4787'
+source-wordcount: '4789'
 ht-degree: 87%
 
 ---
-
 
 # カルーセルバナー {#carousel-banners}
 
@@ -157,7 +159,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
      <li><p><code>https://server/product/6422350843</code></p> </li> 
      <li><p><code>https://server/product/1607745002</code></p> </li> 
      <li><p><code>https://server/product/0086724882</code></p> </li> 
-    </ul> <p>変化する部分はパスの最後の部分にあり、ホットスポット／画像マップの SKU 値（<strong><code>6422350843</code>、<code>1607745002,</code>、</strong><code>0086724882.</code>）になります</p> </td> 
+    </ul> <p>変化する部分はパスの最後の部分にあり、ホットスポット／画像マップの SKU 値（<strong><code>6422350843</code>,<code>1607745002,</code></strong><code>0086724882.</code>）になります</p> </td> 
   </tr> 
   <tr> 
    <td>SKU とカテゴリ ID（クエリ文字列内）</td> 
@@ -355,7 +357,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
    * プリセットを適用するには、ページの右上隅付近にあるプリセットドロップダウンリストをタップし、ビューアプリセットを選択します。
    * カルーセルセット全体を削除するには、カルーセルセットの場所に移動して選択し、「**[!UICONTROL 削除]**」をタップします。
 
-## （オプション）カルーセルバナーのプレビュー{#optional-previewing-carousel-banners}
+## （オプション）カルーセルバナーのプレビュー {#optional-previewing-carousel-banners}
 
 **[!UICONTROL プレビュー]**&#x200B;を使用すると、カルーセルバナーが顧客にどのように表示されるかを確認したり、カルーセルバナーのホットスポットや画像マップをテストして、期待どおりに動作するかを確認したりできます。
 
@@ -393,7 +395,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 
 また、カルーセルバナーで使用している公開済みインタラクティブ画像を変更する場合は、そのインタラクティブ画像を公開する必要があります。その後、変更がカルーセルバナーに反映されます。
 
-カルーセルバナーの公開方法に関する情報については、「[Dynamic Media アセットの公開](publishing-dynamicmedia-assets.md)」を参照してください。
+カルーセルバナーの公開方法に関する情報については、[Dynamic Media アセットの公開](publishing-dynamicmedia-assets.md)を参照してください。
 
 ## Web サイトページへのカルーセルバナーの追加  {#adding-a-carousel-banner-to-your-website-page}
 
