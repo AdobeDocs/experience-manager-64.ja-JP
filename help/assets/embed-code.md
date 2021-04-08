@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
+exl-id: bff564a8-e982-4e1a-a9b5-05e44e3e4d46
+feature: コンポーネント
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 15d933a2e71a44e84cdcc9ae28f60c67b43bd8f4
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '395'
 ht-degree: 96%
 
 ---
-
 
 # Web ページへの Dynamic Media ビデオビューアまたは画像ビューアの埋め込み {#embedding-the-video-or-image-viewer-on-a-web-page}
 
