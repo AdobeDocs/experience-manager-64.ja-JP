@@ -1,5 +1,5 @@
 ---
-title: ページへのダイナミックメディアアセットの追加
+title: ページへの Dynamic Media アセットの追加
 seo-title: ページへの Dynamic Media アセットの追加
 description: AEM 内のページに Dynamic Media コンポーネントを追加する方法
 seo-description: AEM 内のページに Dynamic Media コンポーネントを追加する方法
@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d1f45751-1761-4d6b-b17d-110b2f1117ea
+exl-id: bb97b649-a50d-49c8-97aa-18c32f18d527
+feature: コンポーネント
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '2825'
-ht-degree: 60%
+source-wordcount: '2826'
+ht-degree: 61%
 
 ---
-
 
 # ページへの Dynamic Media アセットの追加 {#adding-dynamic-media-assets-to-pages}
 
@@ -66,8 +68,8 @@ Dynamic Mediaコンポーネントをページに追加するのは、任意の�
 
    ![許可されたコンポーネント](/help/assets/assets-dm/allowed-components.png)
 
-1. **[!UICONTROL Dynamic Media]** が表示されるまでスクロールします。
-1. **[!UICONTROL Dynamic Media]** の左側にある「>」アイコンをタップしてリストを展開し、有効にする Dynamic Media コンポーネントを選択します。
+1. **[!UICONTROL ダイナミックメディア]**&#x200B;が表示されるまでスクロールします。
+1. **[!UICONTROL ダイナミックメディア]**&#x200B;の左側にある「>」アイコンをタップしてリストを展開し、有効にする Dynamic Media コンポーネントを選択します。
 
    ![Dynamic Media コンポーネントリスト](/help/assets/assets-dm/dm-components-select.png)
 
@@ -111,7 +113,7 @@ Dynamic Mediaコンポーネントはスマートです。画像を追加する�
 
 >[!NOTE]
 >
->Dynamic Media コンポーネントを追加したときに、「**[!UICONTROL Dynamic Media 設定]**」が空であるかアセットを適切に追加できない場合は、次の点を確認してください。
+>Dynamic Media コンポーネントを追加したときに、「**[!UICONTROL ダイナミックメディア設定]**」が空であるかアセットを適切に追加できない場合は、次の点を確認してください。
 >
 >* [Dynamic Media を有効にしている](config-dynamic.md)こと。Dynamic Media はデフォルトで無効になっています。
 >* 画像が PTIFF（Pyramid TIFF）ファイルであること。Dynamic Media を有効にする前に読み込まれた画像には、pyramid tiff ファイルはありません。
@@ -181,8 +183,8 @@ Dynamic Media コンポーネントを使用して、ダイナミックビデオ
 
    例えば、ビューア修飾子を使用して、次の操作を行うことができます。
 
-   * キャプションファイルをビデオ[キャプションに関連付けます。](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
-   * ナビゲーションファイルをビデオ[ナビゲーションに関連付けます。](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
+   * キャプションファイルをビデオ[キャプションに関連付けます。](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html?lang=ja)
+   * ナビゲーションファイルをビデオ[ナビゲーションに関連付けます。](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html?lang=ja)
 
 コンポーネント内の&#x200B;**[!UICONTROL 「]**&#x200B;編集」をクリックして、次の[!UICONTROL 詳細設定]を編集できます。
 
