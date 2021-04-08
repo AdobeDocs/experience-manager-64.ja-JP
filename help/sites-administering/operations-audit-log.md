@@ -2,6 +2,7 @@
 title: AEM 6 での監査ログのメンテナンス
 seo-title: AEM 6 での監査ログのメンテナンス
 description: AEM での監査ログのメンテナンスについて説明します。
+feature: 運用
 seo-description: AEM での監査ログのメンテナンスについて説明します。
 uuid: 212de4df-6bf4-434c-94e1-74186d21945a
 contentOwner: User
@@ -9,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 565d89de-b3ca-41a5-8e1c-d10905c25fb5
+exl-id: bcbdab55-4871-4c7f-b82a-b7d8280e82e3
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '616'
 ht-degree: 81%
 
 ---
-
 
 # AEM 6 での監査ログのメンテナンス{#audit-log-maintenance-in-aem}
 
@@ -101,4 +102,3 @@ AEM 6.3では、監査ログの削除タスクが完了する前にスケジュ�
    * **Audit log Replication event types：**&#x200B;パージする必要があるレプリケーション監査イベントのタイプ。
 
 1. 「**保存**」をクリックして設定を保存します。
-
