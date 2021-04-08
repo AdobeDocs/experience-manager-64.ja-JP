@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e00e7cc9-b777-4f9e-906d-824bcb2bbd41
+exl-id: af3f95aa-a162-4212-a20a-68b5a0e72d6d
+feature: 画像セット
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 77c62a8f2ca50f8aaff556a6848fabaee71017ce
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '2064'
+source-wordcount: '2066'
 ht-degree: 81%
 
 ---
-
 
 # 画像セット {#image-sets}
 
@@ -142,7 +144,7 @@ ht-degree: 81%
 
    >[!NOTE]
    >
-   >画像セットを作成するときに、画像セットのサムネールを変更したり、画像セット内のアセットに基づいて AEM がサムネールを自動的に選択するように設定したりできます。サムネールを選択するには、「**[!UICONTROL サムネールを変更]**」をタップし、任意の画像を選択します（他のフォルダーに移動して、画像を検索することもできます）。 サムネールを選択した状態で、画像セットからサムネールを自動的に生成することにした場合は、「**[!UICONTROL 自動サムネールに切り替え]**」を選択します。
+   >画像セットを作成するときに、画像セットのサムネールを変更したり、画像セット内のアセットに基づいて AEM がサムネールを自動的に選択するように設定したりできます。サムネールを選択するには、「**[!UICONTROL サムネールを変更]**」をタップし、任意の画像を選択します（他のフォルダーに移動して、画像を検索することもできます）。 サムネールを選択した状態で、画像セットからサムネールを自動的に生成することにした場合は、「**[!UICONTROL 自動サムネールに 切り替え]**」を選択します。
 
 1. 次のいずれかの操作をおこないます。
 
