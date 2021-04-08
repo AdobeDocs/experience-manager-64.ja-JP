@@ -9,14 +9,16 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 5b044519-d034-4f05-98c5-f1b299a3ea37
+exl-id: 3eecec53-0b39-4783-8730-f08705183941
+feature: 3D アセット
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 8c6fdcea0def7720062edfc564c536f8d47e8402
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '702'
 ht-degree: 75%
 
 ---
-
 
 # 3D アセットのレンダリング {#rendering-d-assets}
 
@@ -72,7 +74,7 @@ AEM で操作して保存した 3D アセットをレンダリングして、Web
 
    [AEM 3D でのステージの使用](about-the-use-of-stages-in-aem-3d.md)を参照してください。
 
-1. 以下の操作を実行してください。
+1. 次の操作を実行します。
 
    * 「**[!UICONTROL 幅]**」および「**[!UICONTROL 高さ]**」フィールドに、イメージをレンダリングするピクセル単位の幅と高さを入力します。
    * 「**[!UICONTROL イメージ名]**」フィールドに、レンダリングされたイメージの名前を入力します。
@@ -90,4 +92,3 @@ AEM で操作して保存した 3D アセットをレンダリングして、Web
 1. 「**[!UICONTROL レンダリングを開始]**」をタップして、レンダリングプロセスを開始します。
 
    レンダリングが開始されたことを示すメッセージが一時的に表示されます。便宜上、このメッセージには、選択した出力フォルダーへのリンクも含まれており、このフォルダーに直接移動できます。
-
