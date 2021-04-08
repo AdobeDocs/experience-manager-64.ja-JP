@@ -1,18 +1,20 @@
 ---
 title: ビデオ
-description: Dynamic Media でビデオを使用する方法について説明します。。
+description: Dynamic Media でビデオを使用する方法について説明します.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: Dynamic-Media
 content-type: reference
+exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
+feature: ビデオ
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 44fb6e0ae344111385be844dfad1c6618c9209f0
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '10392'
-ht-degree: 76%
+source-wordcount: '10393'
+ht-degree: 77%
 
 ---
-
 
 # ビデオ {#video}
 
@@ -144,7 +146,7 @@ Dynamic Media のビデオは、高品質のアダプティブビデオを簡単
 * 効率的なビデオアセット管理のための、メタデータが完全にサポートされたビデオの整理、参照および検索。
 * Web やデスクトップおよびモバイルデバイス（iPhone、iPad、Android、Blackberry および Windows Phone を含む）へのアダプティブビデオセットの配信。
 
-アダプティブビデオのストリーミングは、各種 iOS プラットフォームでサポートされています。『[Adobeビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)』を参照してください。
+アダプティブビデオのストリーミングは、各種 iOS プラットフォームでサポートされています。『[Adobeビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html?lang=ja)』を参照してください。
 
 Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサポートされています。このビデオ形式をサポートする Blackberry デバイスについては、[Blackberry でサポートされているビデオ形式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)のページで確認できます。
 
@@ -189,7 +191,7 @@ HLS（HTTP ライブストリーミング）は、アダプティブビデオス
 
 プログレッシブビデオは、ユーザーのデスクトップ画面やモバイルデバイスにダウンロードしてローカルに保存することで配信されます。
 
-次の表に、Dynamic Mediaビデオビューアを使用するデスクトップコンピューターおよび携帯端末でのビデオのデバイス、ブラウザー、再生方法を示します。
+デバイス、ブラウザー、およびデスクトップコンピューターやモバイルデバイスでの Dynamic Media ビデオビューアによるビデオの再生方法を次の表に示します。
 
 <table> 
  <tbody> 
@@ -206,7 +208,7 @@ HLS（HTTP ライブストリーミング）は、アダプティブビデオス
   <tr> 
    <td>デスクトップ</td>
    <td>Internate Explorer 11+</td>
-   <td>Windows 8 および Windows 10 では、HLS が要求されるたびに HTTPS を強制的に使用します。既知の制約事項：このブラウザー／オペレーティングシステムの組み合わせでは、HLS での HTTP は機能しません。<br /><br />Windows 7 - プログレッシブダウンロード。HTTP プロトコルと HTTPS プロトコルの選択には標準的なロジックが使用されます。</td>
+   <td>Windows 8 および Windows 10 では、HLS が要求されるたびに HTTPS を強制的に使用します。既知の制約事項：このブラウザー／オペレーティングシステムの組み合わせでは、HLS での HTTP は機能しません。<br /> <br /> Windows 7 - プログレッシブダウンロード。HTTP プロトコルと HTTPS プロトコルの選択には標準的なロジックが使用されます。</td>
   </tr>
   <tr> 
    <td>デスクトップ</td>
@@ -221,7 +223,7 @@ HLS（HTTP ライブストリーミング）は、アダプティブビデオス
   <tr> 
    <td>デスクトップ</td>
    <td>Chrome</td>
-   <td>HLS ビデオストリーミング。</td>
+   <td>HLSビデオストリーミング。</td>
   </tr>
   <tr> 
    <td>デスクトップ</td>
@@ -337,7 +339,7 @@ Dynamic Media を有効にし、ビデオクラウドサービスを設定済み
 
    VBR は、CBR よりエンコードに時間がかかりますが、生成されるメディアファイルは最高品質となります。VBR は、ビデオコンテンツの HTTP プログレッシブ配信に最も一般的に使用されます。
 
-**VBR と CRB のどちらを使用するべきか** VBR と CBR のどちらを選択するべきかという話になると、ほとんどの場合、メディアファイルには VBR を使用することをお勧めします。VBR は、優位性のあるビットレートで CBR より高品質のファイルを生成します。VBR を使用するときは、2 パスエンコーディングを使用し、最大ビットレートをターゲットビデオのビットレートの 1.5 倍に設定してください。
+**VBR と CBR のどちらを使用するべきか** VBR と CBR のどちらを選択するべきかという話になると、ほとんどの場合、メディアファイルには VBR を使用することをお勧めします。VBR は、優位性のあるビットレートで CBR より高品質のファイルを生成します。VBR を使用するときは、2 パスエンコーディングを使用し、最大ビットレートをターゲットビデオのビットレートの 1.5 倍に設定してください。
 
 ビデオエンコーディングプリセットを選択するときには、ターゲットのエンドユーザーの接続速度を考慮してください。その速度の 80％のデータレートを持つプリセットを選択してください。例えば、ターゲットのエンドユーザーの接続速度が 1,000 Kbps の場合の最適なプリセットは、ビデオデータレートが 800 Kbps のプリセットです。
 
@@ -381,7 +383,7 @@ Dynamic Media を有効にし、ビデオクラウドサービスを設定済み
 | 720p | 720 | 大型の画面 |
 | 1080p | 1080 | 高画質の大型の画面 |
 
-### Fps（1 秒あたりのフレーム数）{#fps-frames-per-second}
+### Fps（1 秒あたりのフレーム数） {#fps-frames-per-second}
 
 日本および米国では、ほとんどのビデオは 1 秒あたりのフレーム数（fps）が 29.97 で撮影されます。また、ヨーロッパでは、ほとんどのビデオが 25 fps で撮影されます。映画は 24 fps で撮影されます。
 
@@ -409,7 +411,7 @@ Dynamic Media を有効にし、ビデオクラウドサービスを設定済み
    <td><p>ソース</p> </td> 
    <td><p>1,920 x 1,080</p> </td> 
    <td><p>1</p> </td> 
-   <td><p>1</p> </td> 
+   <td><p>3</p> </td> 
   </tr> 
   <tr> 
    <td><p>エンコード</p> </td> 
@@ -421,7 +423,7 @@ Dynamic Media を有効にし、ビデオクラウドサービスを設定済み
    <td><p>エンコード</p> </td> 
    <td><p>640 x 360</p> </td> 
    <td><p>3</p> </td> 
-   <td><p>3</p> </td> 
+   <td><p>1</p> </td> 
   </tr> 
   <tr> 
    <td><p>エンコード</p> </td> 
@@ -442,7 +444,7 @@ Dynamic Media では、MP4 H.264 ビデオエンコーディングプリセッ�
 
 ビデオアセットを YouTube に公開するには、タグを使用して AEM Assets をセットアップします。これらのタグを YouTube チャンネルに関連付けます。ビデオアセットのタグが YouTube チャンネルのタグと一致する場合、ビデオが YouTube に公開されます。ビデオアセットにタグがない場合は、YouTubeには投稿されません。
 
-YouTubeに公開すると、AEMの処理プロファイルシステムと、ビデオエンコーディングプロファイルも無視されます。 この回避策は、YouTubeに独自のエンコーディングがあるので、ビデオ処理プロファイルを必要としないために発生します。 ただし、ほとんどの場合は、ビデオアセットにビデオ処理プロファイルを適用しておくことが予期されています。ビデオ処理プロファイルを省略してYouTubeに直接投稿する場合、AEM Asset内のビデオアセットには表示可能なサムネールが表示されません。 また、ダイナミックメディア実行モードで実行する場合、エンコードされていないビデオは、どのダイナミックメディアアセットタイプとも機能しません。
+YouTubeに公開すると、AEMの処理プロファイルシステムと、ビデオエンコーディングプロファイルも無視されます。 この回避策は、YouTubeに独自のエンコーディングがあるので、ビデオ処理プロファイルを必要としないために発生します。 ただし、ほとんどの場合は、ビデオアセットにビデオ処理プロファイルを適用しておくことが予期されています。ビデオ処理プロファイルを省略してYouTubeに直接投稿する場合は、AEM Asset内のビデオアセットに表示可能なサムネールが表示されないことを意味します。 また、ダイナミックメディア実行モードで実行する場合、エンコードされていないビデオは、どのダイナミックメディアアセットタイプとも機能しません。
 
 ビデオアセットの YouTube サーバーへの公開において、YouTube との安全でセキュアなサーバー間認証をおこなうには、次のタスクを実行する必要があります。
 
@@ -530,7 +532,7 @@ YouTube にビデオを公開するには、1 つ以上のチャネルが必要�
 
 >[!CAUTION]
 >
->YouTube &amp;ast;before&amp;ast；で1つ以上のチャネルが既に設定されていることを確認してくださいaemの「YouTube設定」にチャネルを追加します(下の「[YouTubeの設定(AEM](#setting-up-youtube-in-aem)での設定)」を参照)。 この確認をおこなわなくても、既存のチャネルが存在しないことを知らせる警告は表示されません。ただし、それでも、チャネルを追加する際に Google 認証がおこなわれますが、ビデオの送信先となるチャネルを選択するオプションがありません。
+>YouTube &amp;ast;before&amp;ast；で1つ以上のチャネルが既に設定されていることを確認してくださいAEMの「YouTube設定」にチャネルを追加します(下の「[YouTubeの設定(AEM](#setting-up-youtube-in-aem)での設定)」を参照)。 この確認をおこなわなくても、既存のチャネルが存在しないことを知らせる警告は表示されません。ただし、それでも、チャネルを追加する際に Google 認証がおこなわれますが、ビデオの送信先となるチャネルを選択するオプションがありません。
 
 **YouTubeチャネルを作成するには**:
 
@@ -582,7 +584,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
    次は、AEM で YouTube チャンネルをセットアップします。
 
 1. 「**[!UICONTROL 利用可能なチャネル]**」の右にある「**[!UICONTROL +]**」（プラス記号のアイコン）をタップします。
-1. **[!UICONTROL YouTubeチャネル設定]**&#x200B;ダイアログボックスの「**[!UICONTROL タイトル]**」フィールドに、以前のタスク&#x200B;**C[!UICONTROL YouTubeチャネルの作成]**&#x200B;で作成したチャネルの名前を入力します。
+1. **[!UICONTROL YouTubeチャネル設定]**&#x200B;ダイアログボックスの「**[!UICONTROL タイトル]**」フィールドに、YouTubeチャネルの作成時に&#x200B;**C[!UICONTROL タスク]**&#x200B;で作成したチャネルの名前を入力します。
 
    オプションで、必要に応じて説明を追加できます。
 
@@ -607,7 +609,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
 
    次は、YouTube チャンネルにビデオを公開します。
 
-### （オプション）アップロードしたビデオのデフォルト YouTube プロパティ設定の自動化{#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
+### （オプション）アップロードしたビデオのデフォルト YouTube プロパティ設定の自動化 {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
 ビデオをアップロードする際に YouTube プロパティの設定を自動化できます。これをおこなうためには、メタデータ処理プロファイルを AEM で作成します。
 
@@ -692,7 +694,7 @@ AEM では、YouTube からのコンテンツの公開に **[!UICONTROL YouTube 
 
    選択したビデオアセット（オリジナルのソースビデオや、そのエンコードされたレンディションなど）に関係なく、オリジナルのソースビデオが常にアップロードされます。
 
-1. ツールバーで、**[!UICONTROL プロパティ]**&#x200B;をタップします。
+1. ツールバーの「**[!UICONTROL プロパティ]**」をタップします。
 1. 「**[!UICONTROL 基本]**」タブの「メタデータ」見出しの下で、**[!UICONTROL タグ]**&#x200B;フィールドの右にある「**[!UICONTROL 参照]**」をタップします。
 1. **[!UICONTROL タグを選択]**&#x200B;ページで、使用するタグに移動し、1つ以上のタグを選択します。
 1. ページの右上隅にある&#x200B;**[!UICONTROL 確認]**&#x200B;アイコンをタップします。
@@ -701,7 +703,7 @@ AEM では、YouTube からのコンテンツの公開に **[!UICONTROL YouTube 
 
    オプションで、YouTube チャンネルで公開済みビデオを確認できます。
 
-### （オプション）YouTube での公開済みビデオの確認{#optional-verifying-the-published-video-on-youtube}
+### （オプション）YouTube での公開済みビデオの確認 {#optional-verifying-the-published-video-on-youtube}
 
 YouTube への公開（または非公開）の進行状況を監視できます。
 
@@ -723,7 +725,7 @@ YouTube URL は、ビデオアセットを YouTube に公開するまではコ�
 
    YouTube URL をコピーするには、*その前に*&#x200B;ビデオアセットを YouTube に&#x200B;*公開しておく*&#x200B;必要があります。
 
-1. ツールバーで、**[!UICONTROL プロパティ]**&#x200B;をタップします。
+1. ツールバーの「**[!UICONTROL プロパティ]**」をタップします。
 1. 「**[!UICONTROL 詳細]**」タブをタップします。
 1. 「**[!UICONTROL YouTube Publishing]**」という見出しの下の&#x200B;**[!UICONTROL YouTube URL]**&#x200B;リストーを選択し、URLテキストをWebブラウザーにコピーしてアセットにプレビューしたり、Webコンテンツページに追加したりします。
 
@@ -766,7 +768,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 
       ![chlimage_1-431](assets/chlimage_1-431.png)
 
-1. アセット詳細の進行状況を表示します。アセットをタップしたら、ドロップダウンメニューを開き、「**[!UICONTROL タイムライン]**」を選択します。 タイムラインを、エンコーディングや YouTube への公開などのワークフローアクティビティに絞り込むには、「**[!UICONTROL ワークフロー]**」を選択します。
+1. アセット詳細の進行状況を表示します。アセットをタップし、ドロップダウンメニューを開き、「**[!UICONTROL タイムライン]**」を選択します。 タイムラインを、エンコーディングや YouTube への公開などのワークフローアクティビティに絞り込むには、「**[!UICONTROL ワークフロー]**」を選択します。
 
    ![chlimage_1-432](assets/chlimage_1-432.png)
 
@@ -852,7 +854,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 
 ## ビデオレポートの表示 {#viewing-video-reports}
 
-ビデオレポートは、Dynamic Media — ハイブリッドモードを実行すると使用できます。dynamic media-Scene7モードを実行すると、レポートは使用できません。
+ビデオレポートは、Dynamic Media — ハイブリッドモードを実行すると使用できます。Dynamic Media-Scene7モードを実行すると、レポートは使用できません。
 
 ビデオレポートには、指定した期間における様々な集計指標が表示されます。ユーザーはビデオレポートを使用して、公開済みの個々のビデオやビデオの集合が期待どおりに動作しているかを監視できます。次のトップの指標データは、Web サイト全体のすべての公開済みビデオについて集計されるものです。
 
@@ -895,9 +897,9 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 
 1. 上位の公開済みビデオを示した表で、ビデオ名をタップしてビデオを再生し、そのビデオのオーディエンス保持（ドロップオフ）レポートを表示します。
 
-### Dynamic MediaHTML5ビューアSDK {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}を使用して作成したビデオビューアに基づくビデオレポートの表示
+### Dynamic Media HTML5 ビューア SDK を使用して作成したビデオビューアに基づくビデオレポートの表示 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
-Dynamic Mediaの提供する標準搭載のビデオビューアを使用している場合、または標準搭載のビデオビューアに基づいてカスタムビューアプリセットを作成した場合は、ビデオレポートを表示するために追加の手順は必要ありません。 ただし、HTML5ビューアSDK APIに基づいて独自のビデオビューアを作成した場合は、次の手順を使用して、ビデオビューアからDynamic Mediaビデオレポートにトラッキングイベントが送信されていることを確認してください。
+Dynamic Media で標準提供されているビデオビューアを使用している場合、または標準提供のビデオビューアからカスタムのビューアプリセットを作成した場合は、ビデオレポートを表示するための追加手順は必要ありません。ただし、HTML5ビューアSDK APIに基づいて独自のビデオビューアを作成した場合は、次の手順を使用して、ビデオビューアからDynamic Mediaビデオレポートにトラッキングイベントが送信されていることを確認してください。
 
 独自のビデオビューアを作成するには、『[AdobeDynamic Mediaビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)』および『[HTML5ビューアSDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)』を使用します。
 
@@ -971,7 +973,7 @@ HTML5ビューアSDK APIを使用して作成したビデオビューアに基�
 
 Dynamic Media には、キャプションファイルを JSON（JavaScript Object Notation）形式に変換する機能があります。このように変換できるので、JSON テキストを、ビデオの完全なトランスクリプトとして表示せずに Web ページに埋め込むことができます。この後、検索エンジンがコンテンツをクロールしてインデックスを作成できます。これにより、ビデオを検索しやすくなり、ビデオコンテンツの詳細がユーザーに提供されます。
 
-URLでのJSON関数の使用について詳しくは、*Dynamic Media画像サービングとレンダリングAPIのヘルプ*&#x200B;の[静的な（画像以外の）コンテンツの提供](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api)を参照してください。
+URLでのJSON関数の使用について詳しくは、*Dynamic Media画像サービングとレンダリングAPIのヘルプ*&#x200B;の[静的な（画像以外の）コンテンツの提供](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html?lang=ja#image-serving-api)を参照してください。
 
 **ビデオにキャプションまたはサブタイトルを追加するには**:
 
@@ -998,7 +1000,7 @@ URLでのJSON関数の使用について詳しくは、*Dynamic Media画像サ�
    通常、VTT ファイルの名前はビデオファイルと同じにして、言語ロケール（-EN、-FR、-DE など）を追加します。そうしておくと、既存の Web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
 
 1. AEM で、WebVTT キャプションファイルを DAM にアップロードします。
-1. アップロードしたキャプションファイルを関連付ける、公開済み&#x200B;**&#x200B;ビデオアセットに移動します。
+1. アップロードしたキャプションファイルを関連付ける、*公開済み*&#x200B;ビデオアセットに移動します。
 
    URL をコピーするには、その&#x200B;*前に*&#x200B;アセットを&#x200B;*公開*&#x200B;しておく必要があります。
 
@@ -1077,7 +1079,7 @@ Cost-efficient access to rapidly evolving technology.
        <td>ポップアップビデオビューアエクスペリエンスの場合</td> 
        <td> 
        <ol> 
-       <li>アップロードしたチャプターファイルを関連付ける、公開済み<i></i>ビデオアセットに移動します。URL をコピーするには、その<i>前に</i>アセットを<i>公開</i>しておく必要があります。<a href="/help/assets/publishing-dynamicmedia-assets.md">アセットの公開</a>を参照してください。</li> 
+       <li>アップロードしたチャプターファイルを関連付ける、<i>公開済み</i>ビデオアセットに移動します。URL をコピーするには、その<i>前に</i>アセットを<i>公開</i>しておく必要があります。<a href="/help/assets/publishing-dynamicmedia-assets.md">アセットの公開</a>を参照してください。</li> 
        <li>ドロップダウンメニューで、<strong>ビューア</strong>をタップします。</li> 
        <li>左側のレールで、ビデオビューアのプリセット名をタップします。 ビデオのプレビューが別のページで開きます。</li> 
        <li>左側のレールの下部にある「<strong>URL</strong>」をタップします。</li> 
@@ -1089,7 +1091,7 @@ Cost-efficient access to rapidly evolving technology.
        <td>埋め込みビデオビューアエクスペリエンスの場合 <br /> </td> 
        <td> 
        <ol> 
-       <li>アップロードしたチャプターファイルを関連付ける、公開済み<i></i>ビデオアセットに移動します。URL をコピーするには、その<i>前に</i>アセットを<i>公開</i>しておく必要があります。<a href="/help/assets/publishing-dynamicmedia-assets.md">アセットの公開</a>を参照してください。</li> 
+       <li>アップロードしたチャプターファイルを関連付ける、<i>公開済み</i>ビデオアセットに移動します。URL をコピーするには、その<i>前に</i>アセットを<i>公開</i>しておく必要があります。<a href="/help/assets/publishing-dynamicmedia-assets.md">アセットの公開</a>を参照してください。</li> 
        <li>ドロップダウンメニューで、<strong>ビューア</strong>をタップします。</li> 
        <li>左側のレールで、ビデオビューアのプリセット名をタップします。 ビデオのプレビューが別のページで開きます。</li> 
        <li>左側のレールの下部にある「<strong>埋め込み</strong>」をタップします。</li> 
