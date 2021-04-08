@@ -9,14 +9,16 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: a0319701-21eb-4b7f-8b2e-ac81a7a75875
+exl-id: 4b8b0247-0978-40b5-92e2-319cfa44b34e
+feature: 3D アセット
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 6be46f6986d1631f711cfd4464cc4f2d17014681
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '868'
 ht-degree: 79%
 
 ---
-
 
 # AEM での 3D アセットのアップロードと処理 {#about-the-uploading-and-processing-of-d-assets-in-aem}
 
@@ -90,17 +92,17 @@ Adobeでは、すべての参照ファイルをアップロードする前また
   <tr> 
    <td>4</td> 
    <td>影付きの作成</td> 
-   <td>オプション. 3D オブジェクトの下のグラウンドプレーンにアンビエントオクルージョンのドロップシャドウを生成できます。この処理を有効または無効にするには、<a href="/help/assets/advanced-config-3d.md">詳細な構成設定</a>を参照してください。</td> 
+   <td>オプション.3D オブジェクトの下のグラウンドプレーンにアンビエントオクルージョンのドロップシャドウを生成できます。この処理を有効または無効にするには、<a href="/help/assets/advanced-config-3d.md">詳細な構成設定</a>を参照してください。</td> 
   </tr> 
   <tr> 
    <td>5<br /> </td> 
    <td>ライトマップの作成</td> 
-   <td>オプション. インタラクティブプレビューの品質を向上させ、デフォルトのレンダラーでのレンダリングを高速化できます。この処理を有効または無効にするには、<a href="/help/assets/advanced-config-3d.md">詳細な構成設定</a>を参照してください。</td> 
+   <td>オプション.インタラクティブプレビューの品質を向上させ、デフォルトのレンダラーでのレンダリングを高速化できます。この処理を有効または無効にするには、<a href="/help/assets/advanced-config-3d.md">詳細な構成設定</a>を参照してください。</td> 
   </tr> 
   <tr> 
    <td>6<br /> </td> 
    <td>アニメーションの作成</td> 
-   <td>オプション. シンプルなアニメーションをレンダリングし、カード表示の視覚的なサムネールとして使用できます。この処理を有効または無効にするには、<a href="/help/assets/advanced-config-3d.md">詳細な構成設定</a>を参照してください。</td> 
+   <td>オプション.シンプルなアニメーションをレンダリングし、カード表示の視覚的なサムネールとして使用できます。この処理を有効または無効にするには、<a href="/help/assets/advanced-config-3d.md">詳細な構成設定</a>を参照してください。</td> 
   </tr> 
   <tr> 
    <td>7<br /> </td> 
@@ -113,4 +115,3 @@ Adobeでは、すべての参照ファイルをアップロードする前また
 >[!NOTE]
 >
 >3Dアセットは、**[!UICONTROL 詳細表示]**&#x200B;に表示するか、作成プレビューステージの完了後にレンダリングできます。 すべての処理ステージが完了するのを待つ必要はありません。
-
