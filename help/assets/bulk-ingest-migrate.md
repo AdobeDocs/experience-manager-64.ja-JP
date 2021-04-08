@@ -9,14 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 6198e613-a867-49a8-b9a5-a05e7889821c
+exl-id: f9bb59f6-39a5-4804-8abe-12783d4162c9
+feature: 設定
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: b1603091bb05493c9cfffa6067f414f73774edb2
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '429'
 ht-degree: 20%
 
 ---
-
 
 # 一括アセット移行用の機能パック18912をインストールしています{#installing-feature-pack}
 
