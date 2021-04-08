@@ -9,14 +9,16 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 3d063268-17d7-4db6-8028-682537645377
+exl-id: 52ecbf81-0953-4c44-bc2c-d40e507b8d98
+feature: 3D アセット
+role: Administrator,Business Practitioner
 translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '876'
 ht-degree: 37%
 
 ---
-
 
 # AEM 3D と Autodesk Maya の統合 {#integrating-aem-d-with-autodesk-maya}
 
@@ -128,4 +130,3 @@ Autodesk Maya と統合する場合は、Autodesk Maya をインストールし�
 次のスクリーンショットは、COLLADA DAEを例として使用した、追加されたファイル形式を示しています。
 
 ![image2018-6-22_12-50-39](assets/image2018-6-22_12-50-39.png)
-
