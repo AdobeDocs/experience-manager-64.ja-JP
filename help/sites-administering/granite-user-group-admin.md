@@ -2,6 +2,7 @@
 title: Granite の操作 - ユーザー管理とグループ管理
 seo-title: Granite の操作 - ユーザー管理とグループ管理
 description: Granite のユーザーとグループの管理について説明します。
+feature: セキュリティ
 seo-description: Granite のユーザーとグループの管理について説明します。
 uuid: 7b6b7767-712c-4cc8-8d90-36f26280d6e3
 contentOwner: Guillaume Carlino
@@ -9,14 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
+exl-id: bd29e81d-eb4a-4764-96f2-84e091836a8a
 translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '937'
 ht-degree: 90%
 
 ---
-
 
 # Granite の操作 - ユーザー管理とグループ管理{#granite-operations-user-and-group-administration}
 
@@ -77,15 +78,15 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
       パスワードの確認用として必須です。
 
-   * **名**
+   * **firstName**
    * **姓**
    * **電話番号**
    * **役職**
    * **番地**
    * **モバイル**
-   * **市区町村**
+   * **City**
    * **郵便番号**
-   * **国**
+   * **country**
    * **都道府県**
    * **タイトル**
    * **性別**
@@ -186,7 +187,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
       グループの一意の ID です。必須で、スペースは使用不可です。
 
-   * **名前**
+   * **Name**
 
       グループの名前です。グループコンソールに表示されます。
 
@@ -234,4 +235,3 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
    ![](do-not-localize/chlimage_1-6.png)
 
 1. 削除を確定するかどうかを確認するメッセージが表示され、確定すると、削除が実際に実行されたことを示すメッセージが表示されます。
-
