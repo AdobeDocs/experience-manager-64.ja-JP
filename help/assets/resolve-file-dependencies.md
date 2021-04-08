@@ -9,14 +9,16 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 05b7410b-82a1-4267-ac07-2edbc29e9ee8
+exl-id: 088d32a8-a47e-4ae6-a171-8d327d3dac64
+feature: 3D アセット
+role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '350'
 ht-degree: 42%
 
 ---
-
 
 # ファイルの依存関係の解決 {#resolving-file-dependencies}
 
@@ -58,4 +60,3 @@ ht-degree: 42%
 1. 「**[!UICONTROL 閉じる]**」をタップして&#x200B;**[!UICONTROL カード表示]**&#x200B;に戻ります。
 
    アセットは、新しく解決された依存関係で自動的に再処理されます。
-
