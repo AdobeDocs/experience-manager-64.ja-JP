@@ -2,8 +2,8 @@
 title: デジタルアセットをチェックインし、編集用にチェックアウトする
 description: アセットを編集用にチェックアウトし、変更が完了したら再度チェックインする方法を説明します。
 contentOwner: AG
-feature: アセット管理
-role: 業務担当者
+feature: Asset Management
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt

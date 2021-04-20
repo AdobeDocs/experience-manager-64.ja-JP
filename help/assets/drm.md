@@ -2,8 +2,8 @@
 title: ' [!DNL Adobe Experience Manager Assets]のDigital Rights Management。'
 description: ' [!DNL Experience Manager]  でライセンスされているアセットの有効期限の状態と情報を管理する方法について説明します。'
 contentOwner: AG
-feature: DRM，アセット管理
-role: 業務担当者、管理者
+feature: DRM,Asset Management
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

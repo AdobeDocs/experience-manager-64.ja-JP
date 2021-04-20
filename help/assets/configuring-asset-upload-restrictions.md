@@ -2,7 +2,7 @@
 title: アセットのアップロード制限の設定
 description: Adobe Experience Manager（AEM）Assets の設定でユーザーがアップロードできるアセット（ファイル）のタイプを制限する方法を学習します。
 contentOwner: AG
-feature: アップロード，アセット取り込み，アセット管理
+feature: Upload,Asset Ingestion,Asset Management
 role: Administrator,Architect
 exl-id: 0d817cfa-ae06-442a-ad89-5fe619bb2eff
 translation-type: tm+mt

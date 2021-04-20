@@ -2,7 +2,7 @@
 title: Assets のファイル形式に関するベストプラクティス
 description: AEM Assets のファイルサポートに関するベストプラクティスを紹介します。
 contentOwner: AG
-feature: アセット管理，開発者ツール
+feature: Asset Management,Developer Tools
 role: Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633

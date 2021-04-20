@@ -2,8 +2,8 @@
 title: アセットのカスタマイズと拡張
 description: アセット共有とアセットエディターをカスタマイズおよび拡張する方法について説明します。これにより、ユーザーに合わせたインターフェイスと一連の機能が提供されます。
 contentOwner: AG
-feature: 開発者ツール
-role: デベロッパー
+feature: Developer Tools
+role: Developer
 translation-type: tm+mt
 source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt

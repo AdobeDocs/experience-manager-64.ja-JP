@@ -2,8 +2,8 @@
 title: 翻訳用アセットの準備
 description: 言語ルートフォルダーを作成し、多言語アセットを翻訳するための準備をします。
 contentOwner: AG
-feature: プロジェクト，翻訳
-role: 業務担当者、管理者
+feature: Projects,Translation
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

@@ -2,8 +2,8 @@
 title: アセットセレクター
 description: アセットセレクターを使用して、Adobe Experience Manager（AEM）Assets 内でアセットの検索、フィルタリングおよび参照をおこなったり、アセットのメタデータを取得したりする方法を学習します。また、アセットセレクターインターフェイスをカスタマイズする方法についても学習します。
 contentOwner: AG
-feature: アセット管理，メタデータ，検索
-role: 業務担当者
+feature: Asset Management,Metadata,Search
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

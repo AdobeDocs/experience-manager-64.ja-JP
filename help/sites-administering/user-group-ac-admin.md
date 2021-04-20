@@ -2,7 +2,7 @@
 title: ユーザー、グループおよびアクセス権限の管理
 seo-title: ユーザー、グループおよびアクセス権限の管理
 description: AEM でのユーザー、グループおよびアクセス権限の管理について説明します。
-feature: セキュリティ
+feature: Security
 seo-description: AEM でのユーザー、グループおよびアクセス権限の管理について説明します。
 uuid: 30e0d4dc-261d-4dc2-aff7-29179eca1cc2
 products: SG_EXPERIENCEMANAGER/6.4/SITES

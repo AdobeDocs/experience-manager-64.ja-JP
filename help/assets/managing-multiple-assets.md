@@ -2,8 +2,8 @@
 title: 複数のアセットとコレクションのメタデータを一括編集
 description: 多数のアセットとコレクションのメタデータを同時に編集し、一般的なメタデータの変更をすばやく反映する方法について説明します。
 contentOwner: AG
-feature: アセット管理，メタデータ，コレクション
-role: 業務担当者
+feature: Asset Management,Metadata,Collections
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: introduction
 content-type: reference
 exl-id: 3cee9b4f-c4be-4ffc-970c-5680c8ebba47
-feature: 3D アセット
+feature: 3D Assets
 role: Administrator,Business Practitioner
 translation-type: tm+mt
 source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba

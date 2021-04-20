@@ -3,7 +3,7 @@ title: AEM でのアセットの検索
 description: AEM のフィルターパネルを使用した必要なアセットの検索方法と検索で表示されたアセットの使用方法を説明します。
 contentOwner: AG
 feature: Search,Metadata
-role: 業務担当者
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

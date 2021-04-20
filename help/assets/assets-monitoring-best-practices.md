@@ -2,8 +2,8 @@
 title: Assets の監視のベストプラクティス
 description: AEM インスタンスをデプロイした後の環境およびパフォーマンスの監視に関するベストプラクティス。
 contentOwner: AG
-feature: アセット管理
-role: 管理者，アーキテクト
+feature: Asset Management
+role: Administrator,Architect
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

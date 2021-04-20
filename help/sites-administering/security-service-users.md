@@ -2,7 +2,7 @@
 title: AEM のサービスユーザー
 seo-title: AEM のサービスユーザー
 description: AEM のサービスユーザーについて説明します。
-feature: セキュリティ
+feature: Security
 seo-description: AEM のサービスユーザーについて説明します。
 uuid: 4efab5fb-ba11-4922-bd68-43ccde4eb355
 contentOwner: User

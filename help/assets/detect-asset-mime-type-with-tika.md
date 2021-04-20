@@ -2,8 +2,8 @@
 title: Apache Tikaを使用してデジタルアセットのMIMEタイプを検出する
 description: Apache Tika を使用して、AEM Assets がアセットの MIME タイプをファイル拡張子ではなくコンテンツストリームから、アップロード操作中に検出できるようにします。
 contentOwner: AG
-feature: メタデータ，開発者ツール，アセット管理
-role: 管理者，アーキテクト
+feature: Metadata,Developer Tools,Asset Management
+role: Administrator,Architect
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

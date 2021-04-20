@@ -2,8 +2,8 @@
 title: Lightbox
 description: AEM Assets の Lightbox について学習します。
 contentOwner: AG
-feature: 開発者ツール，レンディション
-role: 業務担当者、管理者
+feature: Developer Tools,Renditions
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

@@ -7,8 +7,8 @@ user-guide-title: AEM 6.4 Classic UIオーサリングユーザーガイド
 breadcrumb-title: クラシックUIオーサリングガイド
 user-guide-description: このガイドでは、従来のユーザーインターフェイスでAEMでのオーサリングの概念について説明します。
 feature-set: Experience Manager Sites
-feature: オーサリング
-role: 業務担当者
+feature: Authoring
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
 workflow-type: tm+mt

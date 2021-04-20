@@ -10,7 +10,7 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 7b9d3b81-3bb4-4ca6-b6e1-f9adfb455855
 exl-id: 6d82fec0-608e-4eaa-aebd-b3ce2f7d8088
-feature: 3D アセット
+feature: 3D Assets
 role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10

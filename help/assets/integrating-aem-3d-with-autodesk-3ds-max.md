@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: 3D
 discoiquuid: 0d7fefc0-6923-4ac3-9e90-335c08fa56f0
 exl-id: 2edecd53-0a2d-44bb-968a-d988c780e142
-feature: 3D アセット
+feature: 3D Assets
 role: Administrator,Business Practitioner
 translation-type: tm+mt
 source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba

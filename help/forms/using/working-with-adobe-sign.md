@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 29fc297e-0a95-4d2a-bfe6-5676d53624db
 noindex: true
-feature: Adobe Sign，アダプティブForms
+feature: Adaptive Forms, Adobe Sign
 translation-type: tm+mt
 source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
 workflow-type: tm+mt

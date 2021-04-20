@@ -2,8 +2,8 @@
 title: Assets の検索機能の拡張
 description: AEM Assets のあらかじめ用意されている文字列によるアセットの検索機能を拡張します。
 contentOwner: AG
-feature: 検索
-role: デベロッパー
+feature: Search
+role: Developer
 translation-type: tm+mt
 source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt

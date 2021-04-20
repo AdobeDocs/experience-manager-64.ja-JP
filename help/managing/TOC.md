@@ -6,8 +6,8 @@ user-guide-title: AEM 6.4 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM プロジェクトの管理方法について学びます。
 feature-set: Experience Manager Sites
-feature: デプロイ
-role: 業務担当者
+feature: Deploying
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
 workflow-type: tm+mt

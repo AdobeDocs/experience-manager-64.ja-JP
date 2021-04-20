@@ -2,8 +2,8 @@
 title: Assets のユーザーエクスペリエンスの強化
 description: この記事では、AEM 6.4 Assets のユーザーエクスペリエンスの改善点について説明します。
 contentOwner: AG
-feature: リリース情報
-role: リーダー、実業家
+feature: Release Information
+role: Leader,Business Practitioner
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

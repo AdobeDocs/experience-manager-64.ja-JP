@@ -2,7 +2,7 @@
 title: Granite の操作 - ユーザー管理とグループ管理
 seo-title: Granite の操作 - ユーザー管理とグループ管理
 description: Granite のユーザーとグループの管理について説明します。
-feature: セキュリティ
+feature: Security
 seo-description: Granite のユーザーとグループの管理について説明します。
 uuid: 7b6b7767-712c-4cc8-8d90-36f26280d6e3
 contentOwner: Guillaume Carlino

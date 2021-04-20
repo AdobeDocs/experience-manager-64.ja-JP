@@ -2,7 +2,7 @@
 title: AEM AssetsとAdobe InDesign Serverを統合
 description: AEM Assets と InDesign Server を統合する方法を学習します。
 contentOwner: AG
-feature: 公開
+feature: Publishing
 role: Administrator
 translation-type: tm+mt
 source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759

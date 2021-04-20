@@ -2,7 +2,7 @@
 title: セキュリティチェックリスト
 seo-title: セキュリティチェックリスト
 description: AEM を設定およびデプロイする際の様々なセキュリティに関する考慮事項について説明します。
-feature: セキュリティ
+feature: Security
 seo-description: AEM を設定およびデプロイする際の様々なセキュリティに関する考慮事項について説明します。
 uuid: 8ecd0c35-249e-4f72-b7e9-97e72698b5c1
 contentOwner: msm-service

@@ -7,8 +7,8 @@ user-guide-title: AEM 6.4 開発ユーザーガイド
 breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature-set: Experience Manager Sites
-feature: 開発
-role: デベロッパー
+feature: Developing
+role: Developer
 translation-type: tm+mt
 source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
 workflow-type: tm+mt

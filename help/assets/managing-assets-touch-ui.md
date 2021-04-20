@@ -3,7 +3,7 @@ title: AEM Assetsを使用したデジタルアセットの管理
 description: タッチ操作に対応したAEM Assetsのユーザーインターフェイスを使用して実行できる様々なアセット管理および編集タスクについて説明します。
 contentOwner: AG
 mini-toc-levels: 1
-feature: アセット管理，検索，レンディション，コラボレーション
+feature: Asset Management,Search,Renditions,Collaboration
 role: Business Practitioner
 exl-id: aa1a702b-18dd-496b-a6e0-aa593af6e57c
 translation-type: tm+mt

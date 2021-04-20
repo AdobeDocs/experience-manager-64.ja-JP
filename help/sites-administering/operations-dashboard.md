@@ -2,7 +2,7 @@
 title: 操作ダッシュボード
 seo-title: 操作ダッシュボード
 description: 操作ダッシュボードの使用方法について説明します。
-feature: 運用
+feature: Operations
 seo-description: 操作ダッシュボードの使用方法について説明します。
 uuid: f1a6dcdc-307b-45f4-ade5-cedc58f0c7cf
 contentOwner: Guillaume Carlino

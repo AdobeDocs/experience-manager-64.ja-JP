@@ -1,8 +1,8 @@
 ---
 title: Experience CloudとのAEM Assets統合の設定
 description: Experience CloudとのAEM Assets統合の設定方法を説明します。
-feature: アセット管理
-role: 実業家、建築家、管理者
+feature: Asset Management
+role: Business Practitioner, Architect, Administrator
 translation-type: tm+mt
 source-git-commit: bf48918e9a549cb35dcbb32afa82ff1dd686402a
 workflow-type: tm+mt

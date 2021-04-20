@@ -2,7 +2,7 @@
 title: Smart Content Serviceを使用してアセットのタグ付けを設定します。
 description: Smart Content Serviceを使用して、 [!DNL Adobe Experience Manager]でスマートタグを設定し、高度なスマートタグを設定する方法を説明します。
 contentOwner: AG
-feature: スマートタグ，タグ付け
+feature: Smart Tags,Tagging
 role: Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633

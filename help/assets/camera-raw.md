@@ -2,7 +2,7 @@
 title: Camera Raw サポート
 description: Adobe Experience Managerアセットのサポートを有効にするCamera Raw方法を説明します。
 contentOwner: AG
-feature: 開発者ツール
+feature: Developer Tools
 role: Administrator
 translation-type: tm+mt
 source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759

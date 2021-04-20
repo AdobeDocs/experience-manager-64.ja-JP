@@ -2,8 +2,8 @@
 title: アセットパフォーマンス調整ガイド
 description: AEM Assets のボトルネックを解消し、パフォーマンスを最適化するための、AEM の設定、ハードウェア、ソフトウェアおよびネットワークコンポーネントの変更に関する留意点。
 contentOwner: AG
-feature: アセット管理
-role: アーキテクト，管理者
+feature: Asset Management
+role: Architect,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

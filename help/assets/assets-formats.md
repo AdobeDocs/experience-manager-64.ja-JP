@@ -2,8 +2,8 @@
 title: AEM Assets でサポートされているファイル形式
 description: AEM Assetsでサポートされるファイル形式とMIMEタイプのリストと、各形式でサポートされる機能。
 contentOwner: AG
-feature: アセット管理，レンディション
-role: 業務担当者、管理者
+feature: Asset Management,Renditions
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

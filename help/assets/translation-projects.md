@@ -2,8 +2,8 @@
 title: 翻訳プロジェクトの作成
 description: AEM で翻訳プロジェクトを作成する方法を学習します。
 contentOwner: AG
-feature: 翻訳
-role: アーキテクト，管理者
+feature: Translation
+role: Architect,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

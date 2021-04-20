@@ -2,8 +2,8 @@
 title: ビデオアセットの検索
 description: AEM Assets でファイルをすばやく見つけるには、キーワードのほか、MIME タイプ、サイズ、最近変更されたタイムスタンプなどのファイルプロパティを使用します。
 contentOwner: AG
-feature: ビデオ，検索
-role: 業務担当者
+feature: Video,Search
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

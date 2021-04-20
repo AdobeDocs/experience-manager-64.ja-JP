@@ -2,7 +2,7 @@
 title: AEM でのユーザー管理操作を監査する方法
 seo-title: AEM でのユーザー管理操作を監査する方法
 description: AEM でのユーザー管理操作を監査する方法について説明します。
-feature: 運用
+feature: Operations
 seo-description: AEM でのユーザー管理操作を監査する方法について説明します。
 uuid: 4ea704b4-9150-4b5f-b9cb-cdac95cfd70c
 contentOwner: User

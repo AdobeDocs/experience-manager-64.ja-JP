@@ -6,7 +6,7 @@ topic-tags: 3D
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 exl-id: 71f89564-a413-49f6-8d6e-c5305bf92c75
-feature: 3D アセット
+feature: 3D Assets
 role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10

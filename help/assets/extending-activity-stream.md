@@ -2,8 +2,8 @@
 title: Assets とアクティビティストリームの統合
 description: AEM の記録機能と、特定のイベントを記録するための AEM の設定方法について説明します。
 contentOwner: AG
-feature: アセット管理
-role: デベロッパー
+feature: Asset Management
+role: Developer
 translation-type: tm+mt
 source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
 workflow-type: tm+mt

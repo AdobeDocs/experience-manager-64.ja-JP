@@ -2,8 +2,8 @@
 title: AEM Assets のホームページの使用
 description: AEM Assets のホームページをカスタマイズして、アセットに関する最近のアクティビティのスナップショットを始め、有益なスタートアップスクリーンエクスペリエンスを実現できます。
 contentOwner: AG
-feature: 開発者ツール，アセット管理
-role: 管理者、実業家
+feature: Developer Tools,Asset Management
+role: Administrator,Business Practitioner
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

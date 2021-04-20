@@ -2,8 +2,8 @@
 title: メディアハンドラーとワークフローを使用したアセットの処理
 description: 様々なハンドラーの概要と、ワークフローでハンドラーを使用してアセットに対してタスクを実行する方法について説明します。
 contentOwner: AG
-feature: ワークフロー，レンディション
-role: 業務担当者
+feature: Workflow,Renditions
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

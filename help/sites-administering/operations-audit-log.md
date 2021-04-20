@@ -2,7 +2,7 @@
 title: AEM 6 での監査ログのメンテナンス
 seo-title: AEM 6 での監査ログのメンテナンス
 description: AEM での監査ログのメンテナンスについて説明します。
-feature: 運用
+feature: Operations
 seo-description: AEM での監査ログのメンテナンスについて説明します。
 uuid: 212de4df-6bf4-434c-94e1-74186d21945a
 contentOwner: User

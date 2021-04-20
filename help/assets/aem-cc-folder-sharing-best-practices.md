@@ -2,8 +2,8 @@
 title: Creative CloudとAEM Assetsフォルダを共有する
 description: Adobe Experience ManagerアセットユーザがAdobe Creative Cloudユーザとアセットフォルダを交換できるようにするための設定とベストプラクティスです。
 contentOwner: AG
-feature: コラボレーション
-role: 業務担当者、管理者
+feature: Collaboration
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

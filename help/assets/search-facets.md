@@ -2,8 +2,8 @@
 title: 検索ファセット
 description: この記事では、AEM で検索ファセットを作成、変更および使用する方法について説明します。
 contentOwner: AG
-feature: 検索
-role: 管理者、デベロッパー
+feature: Search
+role: Administrator,Developer
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

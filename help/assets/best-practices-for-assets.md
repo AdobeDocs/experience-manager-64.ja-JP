@@ -2,8 +2,8 @@
 title: AEMを使用してアセットを管理するためのベストプラクティス
 description: アセットの取り込みと処理に使用される機能に応じて、負荷中のシステムの安定性とパフォーマンスを向上させるベストプラクティスを特定し、それに従います。
 contentOwner: AG
-feature: アセット管理
-role: アーキテクト，管理者
+feature: Asset Management
+role: Architect,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

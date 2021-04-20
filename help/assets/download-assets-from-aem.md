@@ -2,8 +2,8 @@
 title: ' [!DNL Adobe Experience Manager]からデジタルアセットをダウンロードします。'
 description: ' [!DNL Adobe Experience Manager] からアセットをダウンロードし、ダウンロード機能を有効または無効にする方法を説明します。'
 contentOwner: AG
-feature: アセット管理，アセットの配布
-role: 業務担当者
+feature: Asset Management,Asset Distribution
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

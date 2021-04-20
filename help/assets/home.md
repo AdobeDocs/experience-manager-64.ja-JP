@@ -2,8 +2,8 @@
 title: Assets ガイド
 description: このガイドは、デジタルアセットの作成、管理、配信、最適化など、すべてのAEM Assetsタスクについて説明します。
 user-guide-title: Assets ガイド
-feature: アセット管理
-role: 実業家，建築家，管理者
+feature: Asset Management
+role: Business Practitioner,Architect,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

@@ -2,8 +2,8 @@
 title: 関連アセット
 description: 特定の共通属性を共有するアセットを関連付ける方法について説明します。この機能を使用して、アセット間にソース／派生関係を作成することもできます。
 contentOwner: AG
-feature: アセット管理，コラボレーション
-role: 業務担当者
+feature: Asset Management,Collaboration
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

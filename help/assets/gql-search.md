@@ -3,7 +3,7 @@ title: GQL 全文検索
 description: AEM Assets の GQL 全文検索機能について詳しく確認します。GQL 全文検索機能を使用して、タイトル、説明、作成者名などの特定のメタデータに基づいてアセットを検索できます。
 contentOwner: AG
 feature: Search,Metadata
-role: 業務担当者
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

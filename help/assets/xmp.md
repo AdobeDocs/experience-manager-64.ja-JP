@@ -2,8 +2,8 @@
 title: XMP メタデータ
 description: AEM Assets でメタデータ管理において使用される XMP（Extensible Metadata Platform）メタデータ規格について説明します。XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
 contentOwner: AG
-feature: メタデータ
-role: 業務担当者、管理者
+feature: Metadata
+role: Business Practitioner,Administrator
 translation-type: tm+mt
 source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
 workflow-type: tm+mt

@@ -2,7 +2,7 @@
 title: AEM と Creative Cloud の統合のベストプラクティス
 description: AEM導入をAdobe Creative Cloudと統合し、アセット転送ワークフローを合理化し、最大の効率を達成するためのベストプラクティス
 contentOwner: AG
-feature: コラボレーション，Adobeアセットリンク，デスクトップアプリ
+feature: Collaboration,Adobe Asset Link,Desktop App
 role: Business Practitioner,Administrator
 exl-id: cb9bea05-3359-4fb4-b935-59e522a5f387
 translation-type: tm+mt
