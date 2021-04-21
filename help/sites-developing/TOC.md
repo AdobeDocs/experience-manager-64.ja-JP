@@ -6,14 +6,13 @@ audience: end-user
 user-guide-title: AEM 6.4 開発ユーザーガイド
 breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
-feature-set: Experience Manager Sites
-feature: Developing
+feature: 開発
 role: Developer
 translation-type: tm+mt
-source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
+source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 82%
+source-wordcount: '886'
+ht-degree: 83%
 
 ---
 
@@ -200,7 +199,7 @@ ht-degree: 82%
    + [UI のテスト](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/hobbes.html)
 + ベストプラクティス{#bestpractices}
    + [ベストプラクティスの概要](best-practices.md)
-   + [AEM開発ガイドラインとベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-64/developing/introduction/dev-guidelines-bestpractices.html)
+   + [AEM開発ガイドラインとベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-64/developing/introduction/dev-guidelines-bestpractices.html?lang=ja)
    + [開発のベストプラクティス](development-practices.md)
    + [コンテンツのアーキテクチャ](content-architecture.md)
    + [ソフトウェアのアーキテクチャ](software-architecture.md)
