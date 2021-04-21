@@ -9,10 +9,10 @@ user-guide-description: このガイドでは、従来のユーザーインタ�
 feature: オーサリング
 role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+source-git-commit: 55e904cb24bac68c0b1bbea59786cb4c0c711d61
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 83%
+source-wordcount: '273'
+ht-degree: 80%
 
 ---
 
@@ -82,17 +82,9 @@ ht-degree: 83%
    + [Adobe Campaign のターゲット設定](classic-personalization-ac-target.md)
 + クラシックUIでのアセットのオーサリング{#assets}
    + [アセットの操作](classicui-assets.md)
-   + [IBL ステージの使用について](classicui-stages-aem3d-ibl.md)
-   + [3D アセットのレンダリング](classicui-rendering-3d.md)
-   + [3D アセットの表示](classicui-view-3d-assets.md)
    + [Dynamic Media アセットの配信 ](dynamic-media-assets-delivering.md)
-   + [Autodesk Maya および Mental Ray での標準ステージの設定](classicui-stages-aem3d-ad-mr.md)
    + [ページへの Dynamic Media アセットの追加](dynamic-media-assets-adding-to-page.md)
    + [ページへのDynamic Mediaクラシック(Scene7)機能の追加](manage-assets-classic-s7.md)
    + [Dynamic Media の操作](dynamic-media-assets.md)
-   + [3D アセットの使用](classicui-3dassets.md)
    + [ビデオ](manage-assets-classic-s7-video.md)
    + [アセットの命名規則のテスト](asset-naming-conventions.md)
-   + [AEM での 3D アセットのアップロードと処理](classicui-upload-proc-3d.md)
-   + [AEM 3D でのステージの使用](classicui-stages-aem3d.md)
-   + [ファイルの依存関係の解決](classicui-upload-proc-3d-resolve-dependencies.md)
