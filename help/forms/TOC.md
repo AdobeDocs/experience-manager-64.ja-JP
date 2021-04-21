@@ -7,18 +7,17 @@ audience: end-user
 user-guide-title: Adobe Experience Manager 6.4 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
-feature-set: Experience Manager Forms
 role: Business Practitioner
 translation-type: tm+mt
-source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
+source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
 workflow-type: tm+mt
-source-wordcount: '3732'
+source-wordcount: '3730'
 ht-degree: 75%
 
 ---
 
 
-# Adobe Experience Manager 6.4 Forms ガイド {#forms}
+# Adobe Experience Manager 6.4 Forms ガイド  {#forms}
 
 + [AEM 6.4Formsガイド](home.md)
 + リリースノート {#release-notes-new-features}
