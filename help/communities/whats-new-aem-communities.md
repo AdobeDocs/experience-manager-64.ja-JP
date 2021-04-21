@@ -1,19 +1,17 @@
 ---
 title: AEM 6.4 Communities の新機能
-seo-title: AEM 6.4 Communities の新機能
-description: 'null'
-seo-description: 'null'
+description: AEM Communities は、ビジネスパートナー、顧客および従業員が共同作業をおこなうビジネスフレームワークを提供します。
 uuid: e4bf343c-59cd-48ac-bee4-85db109e4c65
 contentOwner: mgulati
 discoiquuid: 3e3c867f-afb0-4402-94f4-16e1a556ddee
+exl-id: fcdc65c9-929d-4a87-8ff7-5e3cf5711fd9
 translation-type: tm+mt
-source-git-commit: 4a1be7a5a233557dff0e7cd3796380532f23d5eb
+source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1040'
 ht-degree: 81%
 
 ---
-
 
 # AEM 6.4 Communities の新機能 {#what-s-new-in-aem-communities}
 
