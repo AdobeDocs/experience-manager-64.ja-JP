@@ -7,10 +7,10 @@ user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
 translation-type: tm+mt
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+source-git-commit: 55e904cb24bac68c0b1bbea59786cb4c0c711d61
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 77%
+source-wordcount: '627'
+ht-degree: 78%
 
 ---
 
@@ -166,20 +166,3 @@ ht-degree: 77%
    + [プライベートフォルダーの共有](private-folder.md)
    + [スマートコンテンツサービスのトレーニングガイドライン](smart-tags-training-guidelines.md)
    + [ビデオレンディション](video-renditions.md)
-+ 3D アセット {#three-d}
-   + [AEM 3Dリリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/aem3d-release-notes.html)
-   + [3D アセットの使用](assets-3d.md)
-   + [AEM 3D のインストールと設定](install-config-3d.md)
-   + [高度な設定](advanced-config-3d.md)
-   + [Adobe Dimensionアセットの操作](working-dimension-assets.md)
-   + [AEM での 3D アセットのアップロードと処理](upload-processing-3d-assets.md)
-   + [ファイルの依存関係の解決](resolve-file-dependencies.md)
-   + [3D アセットの表示](viewing-3d-assets.md)
-   + [3D アセットのレンダリング](rendering-3d-assets.md)
-   + [AEM 3D でのステージの使用](about-the-use-of-stages-in-aem-3d.md)
-   + [Autodesk Maya および Mental Ray での標準ステージの設定](setting-up-stage-with-ad-mr.md)
-   + [3Dサイトコンポーネントの操作](using-the-3d-sites-component.md)
-   + [AEM 3D と Autodesk Maya の統合](integrate-maya-with-3d.md)
-   + [IBL ステージの使用について](working-with-ibl-stages.md)
-   + [AEM 3DとAutodesk 3ds Maxの統合](integrating-aem-3d-with-autodesk-3ds-max.md)
-   + [Autodesk Maya および Mental Ray での IBL ステージの設定](setting-up-an-ibl-stage-with-autodesk-maya-and-mental-ray.md)
