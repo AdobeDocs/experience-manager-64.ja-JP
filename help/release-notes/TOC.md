@@ -8,10 +8,10 @@ user-guide-description: AEM 6.4の最新の新機能について、リリース�
 feature: リリース情報
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Administrator, Business Practitioner
 translation-type: tm+mt
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+source-git-commit: 29fe63a731d33afa0d6492e0e4ef94064097ae1a
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 50%
+source-wordcount: '89'
+ht-degree: 48%
 
 ---
 
@@ -27,7 +27,6 @@ ht-degree: 50%
 + [AEM Forms リリースノート](forms.md)
 + [AEM FormsJEEパッチインストーラー](jee-patch-installer-64.md)
 + [AEM Communities リリースノート](communities-release-notes.md)
-+ [AEM 3D リリースノート](aem3d-release-notes.md)
 + [廃止される機能および削除された機能](deprecated-removed-features.md)
 + [既知の問題](known-issues.md)
 + [AEM FoundationとRepository](wcm-platform.md)
