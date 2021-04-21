@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 content-type: reference
 discoiquuid: 397b3267-1437-4263-963c-9d68ccc928ab
+exl-id: 3f2cb2f9-2a4e-4c5d-b937-b693f27e11da
 translation-type: tm+mt
-source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+source-git-commit: 55e904cb24bac68c0b1bbea59786cb4c0c711d61
 workflow-type: tm+mt
-source-wordcount: '1689'
-ht-degree: 59%
+source-wordcount: '1657'
+ht-degree: 60%
 
 ---
-
 
 # AEM Assets リリースノート {#aem-assets-release-notes}
 
@@ -35,7 +35,7 @@ AEM 6.4では、AEM 6.3で起動されたスマートタグに加え、人工知
 * Smart Content Serviceは、顧客のビジネス分類を学習し、それを使用して、汎用タグに加えて顧客に関連するタグをデジタルアセットに自動的にタグ付けします。 これにより、アセットの検索効率が大幅に向上し、市場投入までの時間が短縮されます。
 * Adobe SenseiはSmart Content Serviceを強化し、ビジネス分類に対する画像認識アルゴリズムのトレーニングを可能にします。 このコンテンツインテリジェンスを利用して、類似のアセットに関連性の高いタグが付加されます。
 
-AEM Assets拡張スマートタグを使用するには、AEM 6.4](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)の[最新のサービスパックをインストールします。
+AEM Assets拡張スマートタグを使用するには、AEM 6.4](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)の[最新のサービスパックをインストールします。
 
 ## スマート翻訳検索(Adobe Senseiで動作) {#smart-translation-search-powered-by-adobe-sensei}
 
@@ -106,7 +106,7 @@ AEM 6.4では、アセットレポートが大幅に強化されました。
 
 ## AEM デスクトップアプリケーション {#aem-desktop-app}
 
-AEMデスクトップアプリは、AEM 6.4と互換性があるバージョン1.8に更新されました。AEMデスクトップアプリの変更点の完全なリストは、専用の[AEMデスクトップアプリリリースノート](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)ドキュメントに記載されています。\
+AEMデスクトップアプリは、AEM 6.4と互換性があるバージョン1.8に更新されました。AEMデスクトップアプリの変更点の完全なリストは、専用の[AEMデスクトップアプリリリースノート](https://docs.adobe.com/content/help/ja/experience-manager-desktop-app/using/release-notes.html)ドキュメントに記載されています。\
 AEM 6.3のリリース以降のAEMデスクトップアプリのハイライトリストを示します。
 
 * フォルダー階層をバックグラウンドでアップロードする機能。
@@ -119,7 +119,7 @@ AEM 6.3のリリース以降のAEMデスクトップアプリのハイライト�
 ドキュメントとベストプラクティスについては、次のドキュメントを参照してください。
 
 * [アプリケーションの操作を行うエンドユーザー向けのユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)。
-* [AEMとAEMデスクトップアプリケーションが連携動作するように設定する管理者向けのインストールガイド](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/install-upgrade.html)。
+* [AEMとAEMデスクトップアプリケーションが連携動作するように設定する管理者向けのインストールガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/install-upgrade.html)。
 
 ## 階層ストレージ {#tiered-storage}
 
@@ -139,7 +139,7 @@ AEM 6.4 には、様々な階層ストレージ環境設定をサポートしラ
 
 AEM 6.4 の Dynamic Media では、マスターアセットのアップロードと管理を AEM Assets Web UI でおこなえる新しいモードをサポートしており、動的レンディションなどのダイナミックメディア機能は、Dynamic Media クラウド配信サービスによりバックグラウンドで処理されます。
 
-このモード([AEM 6.3 Feature Pack 14410および18912](https://helpx.adobe.com/experience-manager/6-3/release-notes/dynamic-media-featurepack-14410.html)のリリースで初めて導入)では、最新のAEM AssetsWeb UIを使用したエンドツーエンドのアセット管理機能と動的メディア機能が役立ち、配信URLを含むDynamic Mediaクラシック(Scene7)と下位互換の配信サービスを利用できます変更されない。
+このモード([AEM 6.3 Feature Pack 14410および18912](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes/dynamic-media-featurepack-14410.html)のリリースで初めて導入)では、最新のAEM AssetsWeb UIを使用したエンドツーエンドのアセット管理機能と動的メディア機能が役立ち、配信URLを含むDynamic Mediaクラシック(Scene7)と下位互換の配信サービスを利用できます変更されない。
 
 この他にも、AEM 6.4 で導入されているものとしては、Adobe Sensei を利用した新しい機能、VR や 3D などの新しいメディアに対応する機能強化、ダイナミックメディアビューア、インタラクティブ画像やカルーセルバナーでのエクスペリエンスフラグメントのサポートなどがあります。
 
@@ -168,7 +168,3 @@ AEM 6.4 の Dynamic Media では、マスターアセットのアップロード
 * VRビューアは、プロパティ、場所、風景を豊富に体感できます。
 * 製品画像に最適化された垂直画像ビューアが用意されています。
 * キーボードのアクセシビリティが向上しました。
-
-### 3DとDimensionCCとの統合{#d-and-integration-with-dimension-cc}
-
-[Adobe Dimension CC](https://www.adobe.com/jp/products/dimension.html)との統合により、3Dワークフローがよりシームレスに導入されました。 詳しくは、[3Dアセットの操作](../assets/assets-3d.md)のドキュメントを参照してください。
