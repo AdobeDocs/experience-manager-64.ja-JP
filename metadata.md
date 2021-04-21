@@ -3,13 +3,14 @@ cloud: Experience Cloud
 mini-toc-levels: 2
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-64.ja-JP
 solution: Experience Manager
+feature-set: Experience Manager Assets,Experience Manager,Experience Manager Sites, Experience Manager Forms
 version: 6.4
 type: Documentation
 index: y
 translation-type: tm+mt
-source-git-commit: ca18aa3d207aa9506d22286eaaabdd0991d8e4e7
+source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '135'
 ht-degree: 74%
 
 ---
@@ -17,7 +18,7 @@ ht-degree: 74%
 
 # 内部使用メタデータ
 
-metadata.md ファイルには、リポジトリー内にあるユーザーガイドの TOC.md ファイルにパススルーされるリポジトリーレベルのメタデータが含まれています。任意のユーザーガイドの metadata.md コンテンツを変更するには、任意の TOC.md ファイル内でそのように処理してください。
+metadata.md ファイルには、リポジトリー内にあるユーザガイドの TOC.md ファイルにパススルーされるリポジトリーレベルのメタデータが含まれています。任意のユーザガイドの metadata.md コンテンツを変更するには、任意の TOC.md ファイル内でそのように処理してください。
 
 | メタデータ | 動作 |
 |--- |--- |
