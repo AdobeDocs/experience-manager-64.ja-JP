@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
+exl-id: ee034595-2d2a-4887-86c4-6bf0770da6a2
 translation-type: tm+mt
-source-git-commit: 5b00783e4471a6b142ab17a7bc4a647ab04aec5f
+source-git-commit: eb55489da5e390578b2ae71be424930e9bf3efd3
 workflow-type: tm+mt
-source-wordcount: '2844'
+source-wordcount: '2813'
 ht-degree: 78%
 
 ---
-
 
 # 一般リリースノート（Adobe Experience Manager 6.4） {#general-release-notes-for-adobe-experience-manager}
 
@@ -122,7 +122,7 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 **エクスペリエンスフラグメント**
 
-構築ブロック機能により、コンテンツが同じでレイアウトの異なるフラグメントバリエーションを、より効率的に作成できるようになりました。エクスペリエンスフラグメントをFacebookやPinterestに送信するだけでなく、オファーとしてAdobe Targetに送信できるようになりました。
+構築ブロック機能により、コンテンツが同じでレイアウトの異なるフラグメントバリエーションを、より効率的に作成できるようになりました。エクスペリエンスフラグメントをFacebookやPinterestに送るだけでなく、オファーとしてAdobe Targetに送ることも可能になりました。
 
 **コンテンツサービス**
 
@@ -247,14 +247,6 @@ Dynamic Media コンポーネントでのスマート切り抜きの操作につ
 パノラマビューアや VR などの新しいビューアを使用すると、より臨場感のあるエクスペリエンスを提供できます。
 
 詳しくは、[パノラマ画像](/help/assets/panoramic-images.md)のドキュメントを参照してください。
-
-**3D アセット**
-
-3DエクスペリエンスをオーサリングするためのCreative Cloudアプリケーション、[Adobe Dimension CC](https://www.adobe.com/jp/products/dimension.html)との新しい統合。
-
-詳しくは、[3D アセットの使用](/help/assets/assets-3d.md)を参照してください。
-
-![do-not-localize/3d](assets/do-not-localize/3d.png)
 
 ### Experience Manager Forms {#experience-manager-forms}
 
