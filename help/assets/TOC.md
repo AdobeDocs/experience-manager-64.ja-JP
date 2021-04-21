@@ -6,9 +6,8 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
-feature-set: Experience Manager Assets,Experience Manager,Experience Manager Sites
 translation-type: tm+mt
-source-git-commit: 8caaa2000a179fd2bbefd70b316f96bd8c67aca5
+source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 77%
