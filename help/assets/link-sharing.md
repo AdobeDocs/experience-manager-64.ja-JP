@@ -2,16 +2,16 @@
 title: リンクを使用したアセットの共有
 description: アセット、フォルダーおよびコレクションをURLとして共有します。
 contentOwner: AG
-feature: Link Sharing,Asset Management
+feature: リンクの共有，アセットの管理
 role: Business Practitioner
+exl-id: bf4b0acf-4103-4da1-8666-c6d9fe80c41f
 translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+source-git-commit: 340061de4dc6d99e9d960613202a869ba50ed6a5
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 38%
+source-wordcount: '1024'
+ht-degree: 36%
 
 ---
-
 
 # リンク{#asset-link-sharing}を介してアセットを共有
 
@@ -28,26 +28,11 @@ ht-degree: 38%
 ユーザーと共有するアセットのURLを生成するには、リンクの共有ダイアログを使用します。 `/var/dam/share` の場所への管理者特権または読み取り権限を持つユーザーが、共有されたリンクを表示することができます。
 
 1. [!DNL Assets] のユーザーインターフェイスで、リンクとして共有するアセットを選択します。
-1. ツールバーで、**[!UICONTROL リンクを共有]** ![アセットを共有アイコン](assets/assets_share.png)をクリックします。
-
-   「[!UICONTROL 共有]」をクリックした後に作成されるリンクは、あらかじめ「[!UICONTROL 共有リンク]」フィールドに表示されます。 リンクのデフォルトの有効期間は 1 日です。
+1. ツールバーで、**[!UICONTROL リンクを共有]** ![アセットを共有アイコン](assets/assets_share.png)をクリックします。 「**[!UICONTROL 共有]**」をクリックした後に作成されるリンクは、あらかじめ「[!UICONTROL 共有リンク]」フィールドに表示されます。 「**[!UICONTROL 送信]**」をクリックするまで、リンクはまだ作成されません。
 
    ![「リンクを共有」と表示されたダイアログ](assets/chlimage_1-542.png)
 
    *図：アセットをリンクとして共有するためのダイアログ。*
-
-   >[!NOTE]
-   >
-   >[!DNL Experience Manager]作成者デプロイメントから外部エンティティにリンクを共有する場合は、`GET`リクエストのみに次のURL（リンク共有に使用）のみを公開するようにします。 セキュリティ上の理由から他のURLをブロックします。
-   >
-   >* `http://[aem_server]:[port]/linkshare.html`
-   >* `http://[aem_server]:[port]/linksharepreview.html`
-   >* `http://[aem_server]:[port]/linkexpired.html`
-
-
-1. [!DNL Experience Manager]インターフェイスで、**[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL Webコンソール]**&#x200B;にアクセスします。
-
-1. **[!UICONTROL Day CQ Link Externalizer]**&#x200B;の設定を開き、**[!UICONTROL Domains]**&#x200B;フィールドの次のプロパティを変更して、`local`、`author`および`publish`に関する値を入力します。 `local`プロパティと`author`プロパティには、それぞれローカルインスタンスとオーサーインスタンスのURLを指定します。 1つの[!DNL Experience Manager]作成者インスタンスを実行する場合、`local`プロパティと`author`プロパティの両方が同じ値を持ちます。 発行インスタンスの場合、[!DNL Experience Manager]発行インスタンスのURLを指定します。
 
 1. **[!UICONTROL リンク共有]**&#x200B;ダイアログの電子メールアドレスボックスに、リンクを共有するユーザーの電子メール ID を入力します。1人以上のユーザーを追加できます。
 
@@ -62,7 +47,7 @@ ht-degree: 38%
 1. 「**[!UICONTROL 件名]**」ボックスに、共有するアセットの件名を入力します。
 1. 「**[!UICONTROL メッセージ]**」ボックスに、オプションでメッセージを入力します。
 
-1. 「**[!UICONTROL 有効期限]**」フィールドに、リンクの動作を停止する有効期限の日時を指定します。 デフォルトでは、有効期限日はリンクを共有した日から 1 週間後に設定されます。
+1. 「**[!UICONTROL 有効期限]**」フィールドに、リンクの動作を停止する有効期限の日時を指定します。 リンクのデフォルトの有効期間は 1 日です。
 
    ![共有リンクの有効期限の設定](assets/chlimage_1-544.png)
 
@@ -70,11 +55,7 @@ ht-degree: 38%
 
 1. 「**[!UICONTROL 共有]**」をクリックします。リンクが電子メールでユーザーと共有されていることを確認するメッセージが表示されます。
 
-1. 共有アセットを表示するには、ユーザーに送信する電子メール内のリンクをクリックします。 共有アセットが [!UICONTROL Adobe Marketing Cloud] ページに表示されます。
-
-   ![共有アセットはAdobe Marketing Cloudで利用可能](assets/chlimage_1-545.png)
-
-1. アセットのプレビューを生成するには、共有アセットをクリックします。 プレビューを閉じてMarketing Cloud ]**ページに戻るには、ツールバーの**[!UICONTROL &#x200B;戻る&#x200B;]**をクリックします。**[!UICONTROL &#x200B;フォルダーを共有している場合は、「**[!UICONTROL 親フォルダー]**」をクリックして親フォルダーに戻ります。
+1. 共有アセットを表示するには、ユーザーに送信する電子メール内のリンクをクリックします。 アセットのプレビューを生成するには、共有アセットをクリックします。 プレビューを閉じるには、[**[!UICONTROL 戻る]**]をクリックします。 フォルダーを共有している場合は、「**[!UICONTROL 親フォルダー]**」をクリックして親フォルダーに戻ります。
 
    ![chlimage_1-546](assets/chlimage_1-546.png)
 
@@ -103,7 +84,7 @@ ht-degree: 38%
 
    ![chlimage_1-548](assets/chlimage_1-548.png)
 
-1. 「**[!UICONTROL 保存]**」をクリックまたはタップします。
+1. 「**[!UICONTROL 保存]**」をクリックします。
 
 ## 最大データサイズの設定 {#configure-maximum-data-size}
 
@@ -124,3 +105,10 @@ ht-degree: 38%
 * 共有アセットへのリンクを含む電子メールを送信できない場合、または他のユーザーが電子メールを受信できない場合は、[電子メールサービス](#configure-day-cq-mail-service)が設定されているかどうかを[!DNL Experience Manager]管理者に問い合わせてください。
 * リンク共有機能を使用してアセットを共有できない場合は、適切な権限を持っていることを確認してください。[アセットの共有](#share-assets)を参照してください。
 * 共有アセットが別の場所に移動されると、そのリンクは機能しなくなります。リンクを再作成し、ユーザーと再共有します。
+
+* [!DNL Experience Manager]作成者デプロイメントから外部エンティティにリンクを共有する場合は、`GET`リクエストのみに、リンク共有に使用する次のURLのみを公開するようにします。 セキュリティ上の理由から他のURLをブロックします。
+
+   * `http://[aem_server]:[port]/linkshare.html`
+   * `http://[aem_server]:[port]/linksharepreview.html`
+   * `http://[aem_server]:[port]/linkexpired.html`
+   [!DNL Experience Manager]インターフェイスで、**[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL Webコンソール]**&#x200B;にアクセスします。 **[!UICONTROL Day CQ Link Externalizer]**&#x200B;の設定を開き、**[!UICONTROL Domains]**&#x200B;フィールドの次のプロパティを変更して、`local`、`author`および`publish`に関する値を入力します。 `local`プロパティと`author`プロパティには、それぞれローカルインスタンスと作成者インスタンスのURLを指定します。 1つの[!DNL Experience Manager]作成者インスタンスを実行する場合、`local`プロパティと`author`プロパティに同じ値を使用します。 発行インスタンスの場合は、[!DNL Experience Manager]発行インスタンスのURLを指定します。
