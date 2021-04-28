@@ -9,15 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features, best-practices
 content-type: reference
 discoiquuid: 04344537-7485-40a9-ad14-804ba448f1e2
-feature: Multi Site Manager
+feature: マルチサイトマネージャー
+exl-id: f23a1c62-0191-4b5b-90be-d66d51e38f83
 translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+source-git-commit: 3ee650d0810a03878b4b0a58708ea3600fa28ff2
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1552'
 ht-degree: 64%
 
 ---
-
 
 # MSM のベストプラクティス{#msm-best-practices}
 
@@ -67,6 +67,10 @@ MSM は、コンテンツのデプロイメントを自動化するための設�
 ブループリント設定が参照されない場合、ロールアウトはライブコピー自体からのみ開始でき、基本的にはソースからコンテンツを引っ張ってきます。
 
 ライブコピーで新しいサイトを作成する際には、ブループリント設定を作成して MSM のすべての機能セットを使用可能にすると便利です。
+
+>[!NOTE]
+>
+>CUGグループは、Blueprintsからライブコピーにロールアウトできません。 ライブコピーを設定する際には、この点を考慮してください。
 
 ## コンポーネントとコンテナの同期 {#components-and-container-synchronization}
 
@@ -206,4 +210,3 @@ MSM のロールアウト設定は高度なカスタマイズが可能です。�
 * [ライブコピーの概要コンソール](/help/sites-administering/msm-livecopy-overview.md)
 * [ライブコピーの同期の設定](/help/sites-administering/msm-sync.md)
 * [MSM ロールアウトの競合](/help/sites-administering/msm-rollout-conflicts.md)
-
