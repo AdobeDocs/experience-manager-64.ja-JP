@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: ba73e267-598d-4c70-a1a8-71bcfcfbf9e5
+exl-id: 3a052270-b3ea-4d17-915c-be2b51cdc482
 translation-type: tm+mt
-source-git-commit: 1e55d049ad77aeed2fac6275ea2744c2b6551e43
+source-git-commit: 3ee650d0810a03878b4b0a58708ea3600fa28ff2
 workflow-type: tm+mt
 source-wordcount: '808'
-ht-degree: 82%
+ht-degree: 80%
 
 ---
-
 
 # 閉じられたユーザーグループの作成{#creating-a-closed-user-group}
 
@@ -84,7 +84,7 @@ CUG をページに適用するには：
 
    >[注意!]
    >
-   > 「権限」タブの CUG をブループリントからライブコピーにロールバックすることはできません。ライブコピーを設定する際には、この点を考慮してください。
+   > 「権限」タブのCUGは、Blueprintsからライブコピーにロールアウトできません。 ライブコピーを設定する際には、この点を考慮してください。
    >
    > 詳しくは、[このページ](closed-user-groups.md#aem-livecopy)を参照してください。
 
@@ -143,4 +143,3 @@ CUG用にdispatcher.anyファイル](https://helpx.adobe.com/experience-manager/
    ```
 
 1. [/allowAuthorized](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#caching-when-authentication-is-used) を `0` に設定します。
-
