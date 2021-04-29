@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: e74ffe97-5de8-4e9c-94b4-d7d63939d40c
+exl-id: daff8e4e-40c7-4762-8e4f-d85d50b86e5d
 translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+source-git-commit: 361964df6c25cbcfadb45dbf8fc10d5ab1258e6d
 workflow-type: tm+mt
-source-wordcount: '2793'
-ht-degree: 74%
+source-wordcount: '2815'
+ht-degree: 73%
 
 ---
-
 
 # レポート  {#reporting}
 
@@ -30,6 +30,10 @@ ht-degree: 74%
 * [ユーザーレポート](#user-report)
 * [ワークフローインスタンスレポート](#workflow-instance-report)
 * [ワークフローレポート](#workflow-report)
+
+>[!NOTE]
+>
+>これらのレポートは、クラシックUIでのみ使用できます。 最新のUIでのシステムの監視とレポートについては、[操作のダッシュボードを参照してください。](/help/sites-administering/operations-dashboard.md)
 
 レポートはすべて&#x200B;**ツール**&#x200B;コンソールからアクセスできます。左側のウィンドウで「**レポート**」を選択し、右側のウィンドウで必要なレポートをダブルクリックして、表示用や設定用に開きます。
 
@@ -198,7 +202,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->事前に構成されたレポートはパフォーマンスを集中的に消費するわけではありませんが、実稼働環境では毎日のスナップショットを使用することをお勧めします。 可能であれば、Webサイトにあまりアクティビティがない時間帯に毎日のスナップショットを実行します。これは、**Day CQレポート設定**&#x200B;の`Daily snapshots (repconf.hourofday)`パラメーターを使用して定義できます。この設定方法の詳細は、[OSGI設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+>事前に構成されたレポートは、パフォーマンスを集中的に消費するわけではありませんが、実稼働環境では毎日のスナップショットを使用することをお勧めします。 可能であれば、Webサイトにあまりアクティビティがない時間帯に毎日のスナップショットを実行します。これは、**Day CQレポート設定**&#x200B;の`Daily snapshots (repconf.hourofday)`パラメーターを使用して定義できます。この設定方法の詳細は、[OSGI設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
 #### 表示の制限 {#display-limits}
 
@@ -380,7 +384,7 @@ ht-degree: 74%
 
 * ページ
 * 時刻
-* 型
+* タイプ
 * User
 
 これはつまり、以下を監視できるということです。
@@ -405,7 +409,7 @@ ht-degree: 74%
 * IP アドレス
 * ページ
 * リファラー
-* 型
+* タイプ
 * ユーザー識別子
 
 次のことが可能です。
@@ -423,7 +427,7 @@ ht-degree: 74%
 次の内容に関する[情報の列](#selecting-and-positioning-the-data-columns)（適宜）があります。
 
 * 年齢
-* 国
+* country（国）
 * ドメイン
 * 電子メール
 * 姓
