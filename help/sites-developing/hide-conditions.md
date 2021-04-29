@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: components
 content-type: reference
 discoiquuid: 104d1c64-b9b3-40f5-8f9b-fe92d9daaa1f
+exl-id: 646146b1-55bf-4d13-ba3d-2e9bdfd8d8af
 translation-type: tm+mt
-source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+source-git-commit: c408d1072722fe4419e351b4f8bf257cf2e5a8a2
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 93%
+source-wordcount: '646'
+ht-degree: 98%
 
 ---
-
 
 # 非表示条件の使用{#using-hide-conditions}
 
@@ -58,7 +58,7 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
 ## 例 {#example}
 
-非表示の条件の例は、AEM 全体（特に、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)）で確認できます。例えば、[リストコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/list.html)について検討してみましょう。
+非表示の条件の例は、AEM 全体（特に、[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)）で確認できます。例えば、[リストコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/list.html)について検討してみましょう。
 
 [テンプレートエディターを使用](/help/sites-authoring/templates.md)した場合、テンプレート作成者は、ページ作成者が利用できるリストコンポーネントのオプションをデザインダイアログで定義できます。リストを静的リスト、子ページのリスト、タグ付けされたページのリストなどにできるようにするかどうかといったオプションを有効または無効にできます。
 
@@ -72,16 +72,15 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
-1. `/conf/we-retail/settings/wcm/policies/weretail/components/content/lis`tの下にポリシーノードが作成され、`disableChildren`プロパティが`true`に設定されます。
-1. 非表示条件は、ダイアログプロパティノード`/conf/we-retail/settings/wcm/policies/weretail/components/content/list`上の`granite:hid`eプロパティの値として定義されます
+1. `/conf/we-retail/settings/wcm/policies/weretail/components/content/list` の下にポリシーノードが作成され、`disableChildren` プロパティが `true` に設定されます。
+1. 非表示条件は、ダイアログのプロパティノード `/conf/we-retail/settings/wcm/policies/weretail/components/content/list` の `granite:hide` プロパティの値として定義されます。
 
    ![chlimage_1-220](assets/chlimage_1-220.png)
 
-1. `disableChildren` の値がデザイン設定から取得され、式 `${cdDesign.disableChildren}` が `false` と評価されます。つまり、そのオプションはコンポーネントの一部としてレンダリングされません。
+1. `disableChildren` の値がデザイン設定から取得され、式 `${cqDesign.disableChildren}` が `false` と評価されます。つまり、そのオプションはコンポーネントの一部としてレンダリングされません。
 
    `granite:hide` プロパティの値として非表示式を使用している例は、[GitHub のこちらのページ](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40)で確認できます。
 
 1. ページ作成者がリストコンポーネントを使用するときに、オプション「**子ページ**」が表示されなくなりました。
 
    ![chlimage_1-221](assets/chlimage_1-221.png)
-
