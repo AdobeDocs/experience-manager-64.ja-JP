@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
+exl-id: 0b263211-6cfd-4b4c-bfa5-e36f5e06c861
 translation-type: tm+mt
-source-git-commit: 3ceb701076b18ebe36949b2842242da0a25c9afe
+source-git-commit: 5c78f7e5143982490739946d5d142e144fca9593
 workflow-type: tm+mt
-source-wordcount: '3365'
-ht-degree: 66%
+source-wordcount: '3346'
+ht-degree: 79%
 
 ---
-
 
 # AEM の中心概念 {#aem-core-concepts}
 
@@ -40,9 +40,9 @@ AEM での開発には、以下のスキルが必要です。
 
 [ガイドラインおよびベストプラクティス](/help/sites-developing/dev-guidelines-bestpractices.md)を参照し、手順に従うこともお勧めします。
 
-## Java コンテンツリポジトリ {#java-content-repository}
+## Java コンテンツリポジトリー {#java-content-repository}
 
-Java コンテンツリポジトリ（JCR）の規格である [JSR 283](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html) では、コンテンツリポジトリ内で、任意の精度レベルでコンテンツに双方向アクセスするための、ベンダーにも実装にも依存しない方法が指定されています。
+Java コンテンツリポジトリー（JCR）の規格である [JSR 283](https://docs.adobe.com/content/docs/jp/spec/jcr/2.0/index.html) では、コンテンツリポジトリー内で、任意の精度レベルでコンテンツに双方向アクセスするための、ベンダーにも実装にも依存しない方法が示されています。
 
 仕様を主導しているのは、Adobe Research（スイス）AG です。
 
@@ -54,7 +54,7 @@ Experience Server は、AEM の基でありカスタムアプリケーション�
 
 [Apache Jackrabbit](https://jackrabbit.apache.org/) は、オープンソースの、JCR API 2.0 に完全準拠した実装です。
 
-## Sling のリクエスト処理  {#sling-request-processing}
+## Sling のリクエスト処理 {#sling-request-processing}
 
 ### Sling の概要 {#introduction-to-sling}
 
@@ -64,7 +64,7 @@ Sling を使用する場合、レンダリングされるコンテンツのタ�
 
 この柔軟性のメリットは、アプリケーションに幅広い様々なコンテンツ要素が含まれる場合や、簡単にカスタマイズできるページが必要な場合に明らかです。特に、WCM のような Web コンテンツ管理システムを AEM ソリューションに実装する場合です。
 
-Slingを使用した開発の最初の手順については、[Discover Slingを15分後](https://sling.apache.org/documentation/getting-started/discover-sling-in-15-minutes.html)に参照してください。
+Sling を使用した開発の概要について詳しくは、『[15 分間でわかる Sling](https://sling.apache.org/documentation/getting-started/discover-sling-in-15-minutes.html)』を参照してください。
 
 次の図は、Sling のスクリプト解決の説明です。HTTP リクエストからコンテンツノード、コンテンツノードからリソースタイプ、リソースタイプからスクリプトを得る方法と、使用可能なスクリプト変数を示しています。
 
@@ -76,12 +76,12 @@ Slingを使用した開発の最初の手順については、[Discover Slingを
 
 ### Sling はコンテンツ中心型 {#sling-is-content-centric}
 
-Sling はコンテンツ中心型です。**&#x200B;つまり、（HTTP）リクエストがそれぞれ JCR リソース（リポジトリノード）の形式でコンテンツにマップされるので、コンテンツに焦点を当てた処理がおこなわれるということです。
+Sling はコンテンツ中心型です&#x200B;*。*&#x200B;つまり、（HTTP）要求がそれぞれ JCR リソース（リポジトリーノード）の形式でコンテンツにマップされるので、コンテンツに焦点を当てた処理がおこなわれるということです。
 
 * 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です。
 * 次に、表現、つまりスクリプトが、リソースプロパティから、リクエストの一部（セレクターや拡張子など）と組み合わせて配置されます。
 
-### RESTful Sling  {#restful-sling}
+### RESTful Sling {#restful-sling}
 
 コンテンツ中心型の原理により、Sling は REST 指向のサーバーを実装するので、Web アプリケーションフレームワークの新しい概念を特徴としています。メリットは次のとおりです。
 
@@ -132,11 +132,11 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 ![chlimage_1-86](assets/chlimage_1-86.png)
 
-Slingを使用して、特定のエンティティをレンダリングするスクリプトを指定します（JCRノードで`sling:resourceType`プロパティを設定します）。 このメカニズムは、スクリプトが（PHPスクリプトのSQL文のように）データエンティティにアクセスする複数の自由度をオファーに持たせ、リソースに複数のレンディションを持たせることができます。
+Sling を使用して、特定のエンティティをレンダリングするスクリプトを指定します（JCR ノードで `sling:resourceType` プロパティを設定します）。このメカニズムは、リソースが複数のレンディションを持つことができるため、スクリプトがデータエンティティにアクセスするメカニズム（PHP スクリプトの SQL 文のように）よりも自由度が高くなります。
 
 #### リソースへのマッピングリクエスト {#mapping-requests-to-resources}
 
-リクエストは分解され、必要な情報が抽出されます。リポジトリで、リクエストされたリソース（コンテンツノード）の検索がおこなわれます。
+リクエストは分解され、必要な情報が抽出されます。リポジトリーで、リクエストされたリソース（コンテンツノード）の検索がおこなわれます。
 
 * first Slingは、要求で指定された場所にノードが存在するかどうかを確認します。例えば`../content/corporate/jobs/developer.html`
 * ノードが見つからない場合、拡張子は削除され、検索が繰り返されます。例えば`../content/corporate/jobs/developer`
@@ -148,12 +148,12 @@ Sling では JCR ノード以外のものをリソースとすることもでき
 
 適切なリソース（コンテンツノード）が見つかると、**sling リソースタイプ**&#x200B;が抽出されます。これは、コンテンツのレンダリングに使用するスクリプトを見つけるパスです。
 
-`sling:resourceType`で指定するパスは、次のいずれかになります。
+`sling:resourceType` によって指定されるパスは、次のいずれかです。
 
 * 絶対パス
 * 相対、設定パラメーターへ
 
-   移植性を高めるため、相対パスはAdobeが推奨します。
+   移植性を高めるため、相対パスが推奨されます。
 
 すべてのSlingスクリプトは、`/apps`または`/libs`のサブフォルダに保存されます。これは、この順序で検索されます（[コンポーネントと他の要素のカスタマイズ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)を参照）。
 
@@ -167,7 +167,7 @@ Sling では JCR ノード以外のものをリソースとすることもでき
    * `.java`:Javaサーブレットコンパイラ（サーバ側の実行）
    * `.jst`:JavaScriptテンプレート（クライアント側の実行）
 
-AEMの特定のインスタンスでサポートされるスクリプトエンジンのリストが、Felix Management Console(`http://<host>:<port>/system/console/slingscripting`)に一覧表示されます。
+AEM の特定のインスタンスでサポートされているスクリプトエンジンのリストは、Felix Management Console（`http://<host>:<port>/system/console/slingscripting`）にあります。
 
 また、Apache Sling では、他の一般的なスクリプトエンジン（Groovy、JRuby、Freemarker など）との統合がサポートされており、新しいスクリプトエンジンと統合する方法も提供されています。
 
@@ -177,31 +177,31 @@ AEMの特定のインスタンスでサポートされるスクリプトエン�
 
    スクリプトは/apps/hr/jobs/jobs.espになります。sling:resourceTypeの最後のセクションがファイル名を形成します。
 
-* POST要求(GET/HEADを除くすべての要求タイプ。メソッド名は大文字にする必要があります)
+* POST 要求（GET/HEAD を除くすべての要求タイプ。メソッド名は大文字にする必要があります）
 
-   スクリプト名にPOSTが使用されます。
+   スクリプト名に POST が使用されます。
 
-   スクリプトは`/apps/hr/jobs/jobs.POST.esp`になります。
+   スクリプトは `/apps/hr/jobs/jobs.POST.esp` です。
 
 * 他の形式のURL（.htmlで終わらない）
 
    例：`../content/corporate/jobs/developer.pdf`
 
-   スクリプトは`/apps/hr/jobs/jobs.pdf.esp`です。スクリプト名にサフィックスが追加されます。
+   スクリプトは `/apps/hr/jobs/jobs.pdf.esp` です。スクリプト名にサフィックスが追加されます。
 
-* セレクターを含むURL
+* セレクターを含む URL
 
-   セレクターを使用して、同じコンテンツを別の形式で表示できます。 例えば、プリンターに適したバージョン、rssフィード、サマリなどです。
+   セレクターを使用して、同じコンテンツを別の形式で表示できます。例：プリンターに適したバージョン、rss フィード、概要など。
 
    プリンターに対応したバージョンを見ると、セレクターが&#x200B;*print*;`../content/corporate/jobs/developer.print.html`と同様
 
-   スクリプトは`/apps/hr/jobs/jobs.print.esp`です。セレクターがスクリプト名に追加されます。
+   スクリプトは `/apps/hr/jobs/jobs.print.esp` です。セレクターがスクリプト名に追加されます。
 
 * sling:resourceType が定義されていない場合は、次のようになります。
 
    * コンテンツパスは、適切なスクリプトの検索に使用されます（パスに基づくResourceTypeProviderがアクティブな場合）。
 
-      例えば、`../content/corporate/jobs/developer.html`のスクリプトは、`/apps/content/corporate/jobs/`で検索を生成します。
+      例えば、`../content/corporate/jobs/developer.html` のスクリプトは、`/apps/content/corporate/jobs/` で検索を生成します。
 
    * プライマリノードタイプが使用されます。
 
@@ -215,9 +215,9 @@ AEMの特定のインスタンスでサポートされるスクリプトエン�
 
 特定のリクエストに複数のスクリプトが該当する場合は、一致率が最も高いスクリプトが選択されます。一致は具体的であるほど良くなります。つまり、リクエスト拡張子であれ、メソッド名の一致であれ、セレクターの一致が多いほど良くなります。
 
-例えば、リソースにアクセスする要求があるとします\
+例えば、次のリソースにアクセスするためのリクエストについて考えます。\
 `/content/corporate/jobs/developer.print.a4.html`\
-タイプ\
+リソースのタイプは次のとおりとします。\
 `sling:resourceType="hr/jobs"`
 
 また、次のリストのスクリプトが正しい場所にあると仮定します。
@@ -233,12 +233,12 @@ AEMの特定のインスタンスでサポートされるスクリプトエン�
 
 この場合、優先順位は (8) - (7) - (6) - (5) - (4) - (3) - (2) - (1) となります。
 
-リソースタイプ（主に`sling:resourceType`プロパティで定義）に加えて、リソーススーパータイプもあります。 これは通常、`sling:resourceSuperType`プロパティで示されます。 これらのスーパータイプは、スクリプトを検索する際にも考慮されます。 リソーススーパータイプの利点は、（デフォルトのサーブレットで使用される）デフォルトのリソースタイプ`sling/servlet/default`が実際にルートになるリソースの階層を形成できる点です。
+リソースタイプ（主に `sling:resourceType` プロパティで定義）に加えて、リソーススーパータイプもあります。これは通常、`sling:resourceSuperType` プロパティで示されます。これらのスーパータイプは、スクリプトを検索する際にも検討されます。リソーススーパータイプの利点は、（デフォルトのサーブレットで使用される）デフォルトのリソースタイプ `sling/servlet/default` が事実上のルートになるリソースの階層を形成できる点です。
 
 リソースのリソーススーパータイプは次の 2 つの方法で定義できます。
 
-* をリソースの`sling:resourceSuperType`プロパティに置き換えます。
-* を`sling:resourceType`が指すノードの`sling:resourceSuperType`プロパティに置き換えます。
+* リソースの `sling:resourceSuperType` プロパティを使用。
+* `sling:resourceSuperType` が示すノードの `sling:resourceType` プロパティを使用。
 
 次に例を示します。
 
@@ -269,7 +269,7 @@ AEMの特定のインスタンスでサポートされるスクリプトエン�
 * while for `/y`
    * 階層は`[ c, a, <default>]`です
 
-これは、`/y`は`sling:resourceSuperType`プロパティを持つのに対し、`/x`は持たないので、スーパータイプはそのリソースタイプから取られるからです。
+これは、`/y` には `sling:resourceSuperType` プロパティがあるのに対して、`/x` にはなく、スーパータイプがリソースタイプから継承されているからです。
 
 #### Sling スクリプトを直接呼び出しできない {#sling-scripts-cannot-be-called-directly}
 
@@ -284,7 +284,7 @@ Sling 内では、スクリプトを直接呼び出しできません。REST サ
 
 * コードアーキテクチャに必要なクリーン性や明確な構造が失われます。これは大規模な開発では最も重要です。
 
-### Sling API  {#sling-api}
+### Sling API {#sling-api}
 
 これはSling APIパッケージorg.apache.slingを使用します。&amp;ast;、およびタグライブラリ。
 
@@ -292,7 +292,7 @@ Sling 内では、スクリプトを直接呼び出しできません。REST サ
 
 最後の考慮事項は、スクリプト内にある既存の要素の参照の必要性です。
 
-より複雑なスクリプト（スクリプトを集約する）は、複数のリソース(ナビゲーション、サイドバー、フッター、リストの要素など)にアクセスし、*リソース*&#x200B;を含める必要がある場合があります。
+より複雑なスクリプト（集計スクリプト）は、複数のリソース（ナビゲーション、サイドバー、フッター、リストの要素など）へのアクセスが必要になる場合があり、そのために&#x200B;*リソース*&#x200B;を含めます。
 
 これを行うには、sling:include（&quot;/&lt;パス>/&lt;リソース>&quot;）コマンドを使用します。これは、イメージをレンダリングするための既存の定義を参照する次の文のように、参照先のリソースの定義を効果的に含めます。
 
@@ -313,7 +313,7 @@ OSGi は、モジュール式アプリケーションおよびライブラリを
 
 >[!NOTE]
 >
->OSGi技術に関する詳細は、[OSGiのWebサイト](https://www.osgi.org)を参照してください。
+>OSGi テクノロジーについて詳しくは、[OSGi Web サイト](https://www.osgi.org)を参照してください。
 >
 >特に、基礎教育に関するページには、プレゼンテーションやチュートリアルのコレクションが収められています。
 
@@ -321,11 +321,11 @@ OSGi は、モジュール式アプリケーションおよびライブラリを
 
 これにより、インストール内のどのパッケージでも、以下のアクションを実行できます。
 
-* インストール
+* install
 * 開始
 * 停止
 * 更新
-* アンインストール
+* uninstall
 * 現在のステータスの確認
 * 特定のバンドルに関する詳細情報（記号名、バージョン、場所など）へのアクセス
 
@@ -402,9 +402,9 @@ Page myPage = pageManager.getContainingPage(myResource);
 
 pageManagerをページマネージャーオブジェクトに、myResourceをリソースオブジェクトにします。ページマネージャーが提供するメソッドについて詳しくは、[Javadocs](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)を参照してください。
 
-## リポジトリ内の構造 {#structure-within-the-repository}
+## リポジトリー内の構造 {#structure-within-the-repository}
 
-以下のリストは、リポジトリ内で見られる構造の概要を示しています。
+以下のリストは、リポジトリー内で見られる構造の概要を示しています。
 
 >[!CAUTION]
 >
@@ -414,11 +414,11 @@ pageManagerをページマネージャーオブジェクトに、myResourceを�
 
 >[!CAUTION]
 >
->`/libs` パス内の設定は一切変更しないでください。設定やその他の変更の場合は、項目を`/libs`から`/apps`にコピーし、`/apps`内で変更を行います。
+>`/libs` パス内のものは一切変更しないでください。設定やその他の変更の場合は、項目を `/libs` から `/apps` にコピーし、`/apps` 内で変更をおこないます。
 
 * `/apps`
 
-   出願に関する事項には、webサイトに固有のコンポーネント定義が含まれます。 開発するコンポーネントは、`/libs/foundation/components`で提供されている初期状態のコンポーネントに基づくことができます。
+   出願に関する事項には、webサイトに固有のコンポーネント定義が含まれます。 開発するコンポーネントは、`/libs/foundation/components` で提供されている標準搭載のコンポーネントに基づくことができます。
 
 * `/content`
 
@@ -440,13 +440,13 @@ pageManagerをページマネージャーオブジェクトに、myResourceを�
 
 * `/var`
 
-   システムによって変更および更新されるファイル監査ログ、統計、イベント処理など。 サブフォルダー`/var/classes`には、コンポーネントスクリプトから生成されたソースフォームおよびコンパイル済みのフォームのJavaサーブレットが含まれます。
+   システムによって変更および更新されるファイル監査ログ、統計、イベント処理など。
 
 ## 環境 {#environments}
 
 AEM では、本番環境は多くの場合、[オーサーインスタンスとパブリッシュインスタンス](/help/sites-deploying/deploy.md#author-and-publish-installs)の 2 種類のインスタンスで構成されます。
 
-## Dispatcher  {#the-dispatcher}
+## Dispatcher {#the-dispatcher}
 
 Dispatcher は、キャッシュとロードバランシングのいずれかまたは両方に対応するアドビのツールです。詳しくは、[Dispatcher ](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)を参照してください。
 
