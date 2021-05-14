@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: ccddb2cd-8e67-43aa-a495-8996ad349761
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 設定
+exl-id: 5c07c773-53a3-41fd-860a-da0cb14f8bc6
+source-git-commit: 1242b301d82402c28a9c070fad024b823f8cef45
 workflow-type: tm+mt
-source-wordcount: '3806'
-ht-degree: 57%
+source-wordcount: '3561'
+ht-degree: 61%
 
 ---
-
 
 # OSGi 設定{#osgi-configuration-settings}
 
@@ -256,7 +255,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 * プロジェクト固有のフォントを検索する「**Font Path**」を定義します。
 
-   例：`/apps/myapp/fonts`
+   （例：`/apps/myapp/fonts`）。
 
 **Apache HTTPコンポーネントプロキシ** 設定Apache HTTPクライアントを使用するすべてのコードのプロキシ設定。HTTPが作成されたときに使用されます。例えば、レプリケーション時に
 
@@ -440,29 +439,6 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 詳しくは、[バージョンのパージ](/help/sites-deploying/version-purging.md)を参照してください。
 
 **Day CQワークフロー電子メール通知** サービスワークフローから送信される通知の電子メール設定を指定します。
-
-**Day CQSE HTTP** ServiceCQサーブレットエンジンの制御：
-
-* **HTTPのNIO**。HTTPにNIOを使用するかどうか。デフォルトはtrueです。HTTPが有効な場合にのみ使用されます。
-* **接続タイムアウト**、接続タイムアウト（ミリ秒）。このプロパティは、HTTP接続とHTTPS接続の両方に適用されます。初期設定は60秒です。
-
-* **HTTPSを有効にする、HTTPSが有効** かどうかを指定します。デフォルトはfalseです。
-* **Session Timeout**（セッションタイムアウト）。HTTPセッションのデフォルトの有効期間（分単位）です。タイムアウトが0以下の場合、セッションはタイムアウトしません。デフォルトは10分です。
-* **デバッグログ**（DEBUGレベルのメッセージを書き込むかどうか）。デフォルトはfalseです。
-* **Request Buffer Size**、要求のバッファーのサイズ（バイト単位）。初期設定は8KBです。
-* **スレッドの最大数**、要求の処理に使用するスレッドの最大数。初期設定は200です。
-
-以下のプロパティは、HTTPS が有効な場合にのみ適用されます。
-
-* **HTTPSポート**。HTTPS要求をリッスンするポートです。初期設定は433です。
-* **HTTPS用のNIO**。HTTPにNIOを使用するかどうか。HTTPプロパティのデフォルト値はNIOです。
-* **キーストア**、HTTPSに使用するキーストアの絶対パス。HTTPSが有効な場合は必須です。
-* **キーストアパスワード**、キーストアにアクセスするためのパスワード。
-* **Key Alias**（キーストア内の秘密鍵のエイリアス）。
-* **Key Password**, Password（キーストア内の秘密鍵のロックを解除するためのパスワード）。
-* **クライアント証明書**、有効な証明書を提供するためのクライアントの要件。初期設定はnoneです。
-
-SSL関連のオプションの詳細およびCQSEでHTTPSを有効にする方法の詳細については、「[HTTP Over SSLの有効化](/help/sites-administering/ssl-by-default.md)」も参照してください。
 
 **CQ Rewriter HTML Parser Factory**
 
