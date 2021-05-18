@@ -9,19 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: cb041407-ec30-47f8-a01e-314c4835a5d9
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 設定
+exl-id: 73f5c1a4-3d2d-4594-877e-93bd09a94e91
+source-git-commit: e22d12ee2096548e8303521b4c7dac79e7385f49
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2713'
 ht-degree: 78%
 
 ---
 
-
 # TarMK コールドスタンバイによる AEM の実行方法{#how-to-run-aem-with-tarmk-cold-standby}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 Tar Micro Kernel のコールドスタンバイ機能では、1 つ以上のスタンバイ AEM インスタンスをプライマリインスタンスに接続することができます。同期プロセスは、プライマリインスタンスからスタンバイインスタンスの方向のみ実行されるという意味で単方向です。
 
@@ -276,7 +275,7 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 
 * **Allowed IP-Ranges (`primary.allowed-client-ip-ranges`):**  — プライマリが接続を許可するIP範囲。
 * **セキュア(`secure`):SSL暗号化を** 有効にします。この設定を利用するには、すべてのインスタンスで有効にする必要があります。
-* **スタンバイ読み取りタイムアウト(`standby.readtimeout`)：スタンバイインスタンスから発行された要求の** タイムアウト（ミリ秒）。**推奨されるタイムアウト設定は 43200000 です。通常、タイムアウトは 12 時間以上の値に設定することをお勧めします。**
+* **スタンバイ読み取りタイムアウト(`standby.readtimeout`)：スタンバイインスタンスから発行された要求の** タイムアウト（ミリ秒）。デフォルト値は60000（1分）です。
 * **スタンバイ自動クリーンアップ(`standby.autoclean`)：ストアのサイズが同期サイクルで増加した場合に、クリーンアップメソッドを** 呼び出します。
 
 >[!NOTE]
@@ -400,4 +399,3 @@ Adobeでは、時間の経過とともに過剰なリポジトリの増大を防
    >[!NOTE]
    >
    >共有データストアを使用していない場合は、ガベージコレクションを最初にプライマリで実行してから、スタンバイで実行する必要があります。
-
