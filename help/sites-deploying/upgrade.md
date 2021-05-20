@@ -10,15 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 discoiquuid: 81ceb91d-039e-45f0-9b0c-b8233901dea8
 targetaudience: target-audience upgrader
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: アップグレード
+exl-id: 791da16c-bf2c-47a9-86a4-0a601a1b017e
+source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
 source-wordcount: '716'
-ht-degree: 71%
+ht-degree: 67%
 
 ---
-
 
 # AEM 6.4 へのアップグレード{#upgrading-to-aem}
 
@@ -51,7 +50,7 @@ ht-degree: 71%
 
 AEM 6.0 で、新しい Jackrabbit Oak リポジトリが導入されました。Persistence Manager は、[マイクロカーネル](/help/sites-deploying/recommended-deploys.md)で置き換えられました。バージョン 6.1 から CRX2 がサポートされなくなりました。5.6.1 のインスタンスから CRX2 リポジトリを移行するには、crx2oak という移行ツールを実行する必要があります。詳しくは、[CRX2OAK 移行ツールの使用](/help/sites-deploying/using-crx2oak.md)を参照してください。
 
-アセットインサイトを使用し、AEM 6.2 より前のバージョンからアップグレードする場合は、アセットを移行し、JMX Bean で ID を生成する必要があります。アドビの内部テストでは TarMK 環境の 12.5 万個のアセットが 1 時間で移行されましたが、ユーザーの結果は異なる場合があります。
+アセットインサイトを使用し、AEM 6.2より古いバージョンからアップグレードする場合は、アセットを移行し、JMX Beanを通じてIDを生成する必要があります。 アドビの内部テストでは TarMK 環境の 12.5 万個のアセットが 1 時間で移行されましたが、ユーザーの結果は異なる場合があります。
 
 AEM 6.3では、TarMK実装の基盤となる`SegmentNodeStore`の新しい形式が導入されました。 AEM 6.3より古いバージョンからアップグレードする場合は、システムのダウンタイムを伴う、アップグレードの一環としてリポジトリの移行が必要になります。
 
@@ -90,4 +89,3 @@ AEM のアップグレードには複数の段階があり、場合によって�
 最後に、6.4開発サイクルで、「持続可能なアップグレード」（「[持続可能なアップグレード](/help/sites-deploying/sustainable-upgrades.md)」を参照）に導入された機能を使用すると、今後のアップグレードをより効率的かつシームレスに行うためのベストプラクティスに従うことができます。
 
 ![6_4_upgrade_overviewflowchart-newpage3](assets/6_4_upgrade_overviewflowchart-newpage3.png)
-
