@@ -5,8 +5,7 @@ contentOwner: AG
 feature: リンクの共有，アセットの管理
 role: Business Practitioner
 exl-id: bf4b0acf-4103-4da1-8666-c6d9fe80c41f
-translation-type: tm+mt
-source-git-commit: 340061de4dc6d99e9d960613202a869ba50ed6a5
+source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 36%
