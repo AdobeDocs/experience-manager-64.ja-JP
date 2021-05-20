@@ -3,11 +3,10 @@ title: AEM Assetsを使用したデジタルアセットの管理
 description: タッチ操作に対応したAEM Assetsのユーザーインターフェイスを使用して実行できる様々なアセット管理および編集タスクについて説明します。
 contentOwner: AG
 mini-toc-levels: 1
-feature: Asset Management,Search,Renditions,Collaboration
+feature: アセット管理，検索，レンディション，コラボレーション
 role: Business Practitioner
 exl-id: aa1a702b-18dd-496b-a6e0-aa593af6e57c
-translation-type: tm+mt
-source-git-commit: fd79ac0694d5b7af0422c546cc4a94fdf2326d37
+source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
 source-wordcount: '10083'
 ht-degree: 64%
@@ -368,7 +367,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 1. 「**[!UICONTROL タグ]**」フィールドで、タグを 1 つ以上選択します。カスタムタグを追加するには、ボックスにタグの名前を入力し、**[!UICONTROL Enter]**&#x200B;キーを押します。 新しいタグが AEM に保存されます。
 
-   YouTubeには、YouTubeに投稿するためのタグとYouTubeへのリンクが必要です（適切なリンクが見つかる場合）。
+   YouTubeは、タグを公開し、YouTubeにリンクする必要があります（適切なリンクが見つかる場合）。
 タグを作成するには、CRXリポジトリの`/content/cq:tags/default`に対する書き込み権限が必要です。
 
 1. アセットに評価を与えるには、「**[!UICONTROL 詳細]**」タブをタップし、適切な位置の星をタップして、目的の評価を割り当てます。
@@ -586,7 +585,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
    ![非公開アクション](assets/unpublish_action.png)
    *図：公開と非公開のオプションと、スケジュールオプション。*
 
-1. すぐにアセットを操作する場合は「**[!UICONTROL 今すぐ]**」を選択し、アクションをスケジュールする場合は「**[!UICONTROL 後で]**」を選択します。 「**[!UICONTROL 後で]**」オプションを選択した場合は、日時を選択します。 「**[!UICONTROL Next]**」をクリックします。
+1. すぐにアセットを操作する場合は「**[!UICONTROL 今すぐ]**」を選択し、アクションをスケジュールする場合は「**[!UICONTROL 後で]**」を選択します。 「**[!UICONTROL 後で]**」オプションを選択した場合は、日時を選択します。 「**[!UICONTROL 次へ]**」をクリックします。
 
 1. 発行時に、アセットが他のアセットを参照している場合、その参照はウィザードに表示されます。 表示されるのは、非公開または最後に公開されてから変更された参照のみです。 公開する参照を選択します。
 
@@ -710,7 +709,7 @@ TXTファイルを編集するには、Configuration Managerで&#x200B;**[!UICON
 
    ![chlimage_1-28](assets/chlimage_1-28.png)
 
-## タイムライン{#timeline}を使用
+## タイムラインの使用 {#timeline}
 
 **[!UICONTROL タイムライン]**&#x200B;を使用すると、選択したアイテムに関する様々なイベント(アセットのアクティブなワークフロー、コメント、注釈、アクティビティログ、バージョンなど)を表示できます。
 
@@ -943,7 +942,7 @@ TXTファイルを編集するには、Configuration Managerで&#x200B;**[!UICON
 
 詳しくは、[AEMアセットへのワークフローの適用](/help/assets/assets-workflow.md#apply-a-workflow-to-an-aem-asset)を参照してください。
 
-## コレクションについて{#collections}
+## コレクションについて {#collections}
 
 コレクションとは、一連のアセットを順序よく並べたものです。コレクションを使用して、ユーザー間でアセットを共有します。
 
