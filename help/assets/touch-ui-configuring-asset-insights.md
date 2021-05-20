@@ -1,21 +1,20 @@
 ---
 title: アセットインサイトの設定
-description: AEM Assets でアセットインサイトを設定する方法を学習します。
+description: AEM Assetsでアセットインサイトを設定する方法を説明します。
 contentOwner: AG
-feature: Asset Insights,Asset Reports
+feature: アセットインサイト，アセットレポート
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: b0d62dd3-1868-4d73-95f7-3d6c3ff474d9
+source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 91%
+source-wordcount: '241'
+ht-degree: 66%
 
 ---
 
+# アセットインサイトの設定{#configuring-asset-insights}
 
-# アセットインサイトの設定 {#configuring-asset-insights}
-
-Adobe Experience Manager（AEM）Assets は、サードパーティの Web サイトで使用される AEM アセットに関する使用状況データを Adobe Analytics からフェッチします。アセットインサイトでこのようなデータを取得して洞察を得るためには、最初に Adobe Analytics と統合するようにこの機能を設定します。
+Adobe Experience Manager（AEM）Assets は、サードパーティの Web サイトで使用される AEM アセットに関する使用状況データを Adobe Analytics からフェッチします。アセットインサイトを有効にして、このデータを取得してインサイトを生成するには、まず、Adobe Analyticsと統合する機能を設定します。
 
 >[!NOTE]
 >
@@ -31,7 +30,7 @@ Adobe Experience Manager（AEM）Assets は、サードパーティの Web サ�
    ![chlimage_1-211](assets/insights_config2.png)
 
 1. 「**[!UICONTROL 認証]**」をクリックまたはタップします。
-1. AEM によって資格情報が認証されたら、**[!UICONTROL レポートスイート]**&#x200B;リストから、アセットインサイトでデータをフェッチする Adobe Analytics レポートスイートを選択します。「**[!UICONTROL 追加]**」をクリックします。
+1. AEMが資格情報を認証した後、**[!UICONTROL レポートスイート]**&#x200B;リストから、アセットインサイトからデータを取得するAdobe Analyticsレポートスイートを選択します。 「**[!UICONTROL 追加]**」をクリックします。
 1. AEMでレポートスイートを設定したら、「**[!UICONTROL 完了]**」をクリックまたはタップします。
 
 ## ページトラッカー {#page-tracker}
