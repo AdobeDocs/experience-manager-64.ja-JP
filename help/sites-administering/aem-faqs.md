@@ -6,22 +6,21 @@ seo-description: AEM の一般的なワークフローの理解と設定、ま�
 uuid: af197bcc-2c61-4c64-b781-f24d83c27c82
 contentOwner: jsyal
 discoiquuid: c66b65af-443f-4fc2-b775-9f4e3c60285a
-translation-type: tm+mt
-source-git-commit: f5b45b2c8bfcf9d82ddc08b05b5fff22937fa9fd
+exl-id: 76110cf4-0fd8-4203-b256-c0818a1b64d2
+source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
 source-wordcount: '1545'
-ht-degree: 49%
+ht-degree: 50%
 
 ---
-
 
 # AEM FAQ{#aem-faqs}
 
 AEMのトラブルシューティングと設定に関する問題の回答を得るには、このページに従ってください。
 
-## Sites {#sites}
+## サイト {#sites}
 
-### バイナリレス配布の設定方法を教えてください。{#how-do-i-configure-binary-less-distribution}
+### バイナリレスディストリビューションの設定方法を教えてください。  {#how-do-i-configure-binary-less-distribution}
 
 バイナリレスディストリビューションは、共有データストアにわたる開発でサポートされ、Vault ベースのディストリビューションパッケージエクスポーター（ファクトリ PID：`org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`）パッケージビルダーを活用するエージェントが関係します。
 
@@ -56,7 +55,7 @@ OSGI設定の`useBinaryReferences`プロパティを、エージェントが使�
 * [翻訳するコンテンツの準備](/help/sites-administering/tc-prep.md)
 * [翻訳プロジェクトの管理](/help/sites-administering/tc-manage.md)
 
-### ログイン試行や ACL／権限の変更といった AEM の機能を監査する方法を教えてください。  {#how-to-audit-aem-capabilities-such-as-login-attempts-and-acl-or-permission-changes}
+### ログイン試行、ACLまたは権限の変更などのAEM機能を監査する方法を教えてください。{#how-to-audit-aem-capabilities-such-as-login-attempts-and-acl-or-permission-changes}
 
 トラブルシューティングと監査の質を高めるために、管理に関係する変更を記録する機能が追加されました。デフォルトでは、情報は`error.log`ファイルに記録されます。 監視を容易にするために、この情報を別のログファイルにリダイレクトすることをお勧めします。\
 出力を別のログファイルにリダイレクトする方法については、[AEM でのユーザー管理操作を監査する方法](/help/sites-administering/audit-user-management-operations.md)を参照してください。
@@ -105,7 +104,7 @@ AdobeGranite HTML Library ManagerのJSプロセッサのデフォルトの設定
 
 ## Assets {#assets}
 
-### MP4ファイルのアップロード中にアセットワークフローが繰り返し表示されるのはなぜですか（例えば、ドラッグ&amp;ドロップを使用した場合）。{#why-the-assets-workflow-repeats-itself-while-uploading-mp-files-for-example-using-drag-and-drop-method}
+### MP4 ファイルのアップロード時に、Assets ワークフローが繰り返されるのはなぜですか（例えば、ドラッグ＆ドロップの使用）。  {#why-the-assets-workflow-repeats-itself-while-uploading-mp-files-for-example-using-drag-and-drop-method}
 
 ムービーファイルをアップロードするユーザーが asset ノード以下の削除権限を持っていない場合、削除チャンクノードは失敗し、アップロードが再開します。
 
