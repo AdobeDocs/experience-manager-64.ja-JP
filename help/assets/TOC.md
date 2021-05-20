@@ -6,16 +6,15 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
-translation-type: tm+mt
-source-git-commit: 55e904cb24bac68c0b1bbea59786cb4c0c711d61
+source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 78%
+source-wordcount: '625'
+ht-degree: 76%
 
 ---
 
 
-# Assets ガイド  {#assets}
+# Assets ガイド {#assets}
 
 + [アセットユーザーガイド](home.md)
 + [AEM 6.4アセットリリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/assets.html)
@@ -46,7 +45,7 @@ ht-degree: 78%
    + [Dynamic Media ビューアプリセットの適用](viewer-presets.md)
    + [Dynamic Media 画像プリセットの管理](managing-image-presets.md)
    + [Dynamic Media 画像プリセットの適用](image-presets.md)
-   + [Dynamic Media のビデオプロファイル](video-profiles.md)
+   + [Dynamic Media ビデオプロファイル](video-profiles.md)
    + [Dynamic Media イメージプロファイル](image-profiles.md)
    + [スマートイメージング](imaging-faq.md)
    + [ビデオ](s7-video.md)
@@ -108,13 +107,13 @@ ht-degree: 78%
    + [AEM AssetsとInDesignサーバの統合](indesign.md)
    + [メタデータプロファイル](metadata-profiles.md)
    + [アセットのデジタル著作権管理](drm.md)
-   + [アセットインサイトでのデモパッケージの使用](touch-ui-using-demo-package-for-asset-insights.md)
+   + [アセットインサイトに対するデモパッケージの使用](touch-ui-using-demo-package-for-asset-insights.md)
    + [Assets のオフロードのベストプラクティス](assets-offloading-best-practices.md)
    + [Assets のファイル形式に関するベストプラクティス](assets-file-format-best-practices.md)
    + [Assets の監視のベストプラクティス](assets-monitoring-best-practices.md)
    + [Camera Raw サポート](camera-raw.md)
    + [Apache Tika を使用したアセットの MIME タイプの検出](detect-asset-mime-type-with-tika.md)
-   + [トランスコーディングライブラリのイメージング](imaging-transcoding-library.md)
+   + [画像トランスコーディングライブラリ](imaging-transcoding-library.md)
    + [IPTC メタデータのサポート](iptc-support.md)
    + [メタデータスキーマ](metadata-schemas.md)
    + [コレクション、スニペットおよびスニペットテンプレートのマルチテナント](multi-tenancy.md)
@@ -155,7 +154,7 @@ ht-degree: 78%
    + [AEM からのアセットのダウンロード](download-assets-from-aem.md)
    + [非同期操作](asynchronous-jobs.md)
    + [Lightbox](touch-ui-light-box.md)
-   + [DTM でのアセットインサイトの有効化](touch-ui-using-dtm-for-asset-insights.md)
+   + [DTMを使用したアセットインサイトの有効化](touch-ui-using-dtm-for-asset-insights.md)
    + [アセットインサイトの設定](touch-ui-configuring-asset-insights.md)
    + [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
    + [Web ページでのページトラッカーと埋め込みコードの使用](touch-ui-using-page-tracker.md)
