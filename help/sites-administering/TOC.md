@@ -8,10 +8,9 @@ breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 feature: 管理
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+source-git-commit: af7bced72b8043d4460b575dc62c64f188575452
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '649'
 ht-degree: 93%
 
 ---
@@ -19,10 +18,10 @@ ht-degree: 93%
 
 # AEM 6.4 管理ユーザーガイド {#administering}
 
-+ [管理ユーザガイドの概要](home.md)
++ [管理ユーザーガイドの概要](home.md)
 + Sites の機能 {#introduction}
    + [Web サイト管理](msm-and-translation.md)
-   + [コンテンツの再利用：マルチサイトマネージャーとライブコピー](msm.md)
+   + [コンテンツの再利用：マルチサイトマネージャとライブコピー](msm.md)
    + [ライブコピーの概要コンソール](msm-livecopy-overview.md)
    + [ライブコピーの同期の設定](msm-sync.md)
    + [ライブコピーの作成と同期](msm-livecopy.md)
@@ -52,7 +51,7 @@ ht-degree: 93%
    + [Bulk Editor](bulk-editor.md)
    + [電子メール通知の設定](notification.md)
    + [アクセス可能なサイトを生成するための RTE の設定](rte-accessible-content.md)
-   + [リンクチェッカー](external-link-checker.md)
+   + [リンクチェック](external-link-checker.md)
    + [AEM のトラブルシューティング](troubleshoot.md)
    + [AEM 6 での監査ログのメンテナンス](operations-audit-log.md)
    + [編集者](enable-classic-ui-editor.md)
@@ -81,7 +80,7 @@ ht-degree: 93%
    + [AEM Managed Services に対する Adobe IMS 認証およびアドミンコンソールのサポート](ims-config-and-admin-console.md)
    + [閉じられたユーザーグループの作成](cug.md)
    + [AEM でのシリアル化の問題の軽減](mitigating-serialization-issues.md)
-   + [ユーザーの同期](sync.md)
+   + [ユーザー同期](sync.md)
    + [カプセル化されたトークンのサポート](encapsulated-token.md)
    + [シングルサインオン](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/single-sign-on.html?lang=ja)
    + [AEM でのユーザー管理操作を監査する方法](audit-user-management-operations.md)
@@ -96,8 +95,8 @@ ht-degree: 93%
    + [設定プロパティの暗号化サポート](encryption-support-for-configuration-properties.md)
    + [AEM の基盤での GDPR 要求の処理](handling-gdpr-requests-for-aem-platform.md)
    + [Content Disposition フィルター](content-disposition-filter.md)
-+ パーソナライゼーション {#personalization}
-   + [パーソナライゼーション](personalization.md)
++ パーソナライズ機能 {#personalization}
+   + [パーソナライズ機能](personalization.md)
    + [ContextHub の設定](contexthub-config.md)
    + [ClientContext](client-context.md)
    + [キャンペーン](campaigns.md)
@@ -137,13 +136,12 @@ ht-degree: 93%
    + [Adobe Dynamic Tag Management との統合](dtm.md)
    + [Adobe Analytics および Adobe Target との統合のオプトイン](opt-in.md)
    + [AEM ポータルとポートレット](aem-as-portal.md)
-   + [Dynamic MediaClassicとの統合](scene7.md)
+   + [Dynamic Media Classicとの統合](scene7.md)
    + [AEM Livefyre のレシピ](aem-livefyre-recipes.md)
    + [統合に関する問題のトラブルシューティング](troubleshooting-integration-issues.md)
    + [BrightEdge Content Optimizer との結合](brightedge.md)
    + [電子メールテンプレートのベストプラクティス](best-practices-for-email-templates.md)
-   + [カタログ作成](catalog-producer.md)
-   + [Experience Cloud および Creative Cloud との AEM Assets 統合の設定](configure-assets-cc-integration.md)
+   + [カタログ作成機能](catalog-producer.md)
    + [Silverpop Engage との統合](silverpop.md)
    + [Adobe Campaign との統合](campaign.md)
    + [ExactTarget との統合](exacttarget.md)
@@ -151,7 +149,7 @@ ht-degree: 93%
    + [Adobe Marketing Cloud との統合](marketing-cloud.md)
    + [手動での Adobe Target との統合の設定](target-configuring.md)
    + [Adobe Target との統合の前提条件](target-requirements.md)
-   + [Adobe 分類](adobeanalytics-classifications.md)
+   + [Adobe Classifications](adobeanalytics-classifications.md)
    + [Adobe Search&amp;Promote との統合](search-and-promote.md)
    + [ソリューション統合](integration.md)
    + [エクスペリエンスフラグメントとのTarget 統合](experience-fragments-target.md)
