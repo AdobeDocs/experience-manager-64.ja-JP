@@ -1,6 +1,6 @@
 ---
-title: アセットインサイトに対するデモパッケージの使用
-description: デモパッケージを使用して、Adobeアセットインサイトを有効にし、Webページのデータを取り込んでインサイトを生成します。
+title: アセットインサイト用デモパッケージの使用
+description: デモパッケージを使用して、AdobeアセットインサイトでWebページのデータをキャプチャし、インサイトを生成できるようにします。
 contentOwner: AG
 feature: アセットインサイト，アセットレポート
 role: Business Practitioner,Administrator
@@ -12,9 +12,9 @@ ht-degree: 59%
 
 ---
 
-# アセットインサイトにデモパッケージを使用する{#using-demo-package-for-asset-insights}
+# アセットインサイト用のデモパッケージ{#using-demo-package-for-asset-insights}の使用
 
-デモパッケージを使用すると、Adobeアセットインサイトを有効にして、サンプルWebページのデータを取り込み、インサイトを生成できます。
+デモパッケージを使用して、AdobeアセットインサイトでサンプルWebページのデータをキャプチャし、インサイトを生成できます。
 
 ## サンプル Web ページに対する AEM アセットインサイトの使用  {#using-aem-assets-insights-with-sample-web-page}
 
