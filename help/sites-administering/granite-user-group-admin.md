@@ -2,7 +2,7 @@
 title: Granite の操作 - ユーザー管理とグループ管理
 seo-title: Granite の操作 - ユーザー管理とグループ管理
 description: Granite のユーザーとグループの管理について説明します。
-feature: Security
+feature: セキュリティ
 seo-description: Granite のユーザーとグループの管理について説明します。
 uuid: 7b6b7767-712c-4cc8-8d90-36f26280d6e3
 contentOwner: Guillaume Carlino
@@ -11,7 +11,6 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: bd29e81d-eb4a-4764-96f2-84e091836a8a
-translation-type: tm+mt
 source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
 source-wordcount: '937'
@@ -23,7 +22,7 @@ ht-degree: 90%
 
 Granite には JCR API 仕様の CRX リポジトリ実装が組み込まれているので、独自のユーザー管理とグループ管理が使用されます。
 
-これらのアカウントは、[AEMアカウント](/help/sites-administering/security.md)の基礎となり、Granite管理で行われたアカウントの変更は、[AEMユーザーコンソール](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)からアカウントにアクセスした場合に反映されます(例：`http://localhost:4502/useradmin`)。 AEMユーザーコンソールから、権限やその他のAEMの詳細を管理することもできます。
+これらのアカウントは、[AEMアカウント](/help/sites-administering/security.md)の基礎となり、Granite管理でおこなったアカウントの変更は、[AEM Users Console](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)からアカウントにアクセスした場合に反映されます(例：`http://localhost:4502/useradmin`)です。 AEMユーザーコンソールから、権限やその他のAEMの詳細を管理することもできます。
 
 Granite ユーザー管理コンソールとグループ管理コンソールは、どちらもタッチ操作向け UI の&#x200B;**[ツール](/help/sites-administering/tools-consoles.md)**&#x200B;コンソールから利用できます。
 
@@ -87,20 +86,20 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
    * **City**
    * **郵便番号**
    * **country**
-   * **都道府県**
+   * **状態**
    * **タイトル**
    * **性別**
    * **** について
    * **アカウント設定**
 
       * **ステータス**
-アカウントにフラグを付けることもできます。 
-**** アクティブまたは **非アクティブ**。
+アカウントに 
+**** アクティベー **トは非アクティブ**
    * **写真**
 
       ここで、アバターとして使用する写真をアップロードできます。
 
-      受け入れられるファイルの種類：`.jpg .png .tif .gif`
+      使用可能なファイルの種類：`.jpg .png .tif .gif`
 
       推奨サイズ：`240x240px`
 
