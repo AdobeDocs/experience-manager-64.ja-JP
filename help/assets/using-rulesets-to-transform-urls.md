@@ -6,9 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 exl-id: f0cd3a75-03ed-40a9-b336-8a782f3cfe69
-feature: Rulesets
+feature: ルールセット
 role: Administrator,Business Practitioner,Developer
-translation-type: tm+mt
 source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
 source-wordcount: '763'
@@ -61,9 +60,9 @@ Dynamic Media のコンテキストで、XML ベースのシステムを使用�
 
 **XML ルールセットをデプロイするには：**
 
-1. [Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)にサインインします。
+1. [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)にログインします。
 
-   資格情報とサインイン情報は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
+   資格情報とログインは、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
 1. 次の手順を実行して、ルールセットファイルをアップロードします。
 
