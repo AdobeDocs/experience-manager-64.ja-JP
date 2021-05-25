@@ -2,21 +2,20 @@
 title: トラブルシューティング
 seo-title: トラブルシューティング
 description: 既知の問題を含むコミュニティのトラブルシューティング
-seo-description: トラブルシューティング 既知の問題を含むコミュニティ
+seo-description: 既知の問題を含むコミュニティのトラブルシューティング
 uuid: 99225430-fa2a-4393-ae5a-18b19541c358
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
-translation-type: tm+mt
-source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+exl-id: 1a1de20d-53f6-4787-92e3-e12f30d925d3
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '373'
-ht-degree: 87%
+ht-degree: 89%
 
 ---
-
 
 # トラブルシューティング {#troubleshooting}
 
@@ -63,7 +62,7 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 起動時（初回ではなく、2 回目以降のすべての起動時）に、次の警告がログに表示されることがあります。
 
-* 11.04.2014 08:38:07.223 **WARN** [FelixStartLevel]com.github.jcotc.handlebars.Handlebars Helper &#39;i18n&#39;は&#39;com.adobe.cq.social.handlebars.I18nHelper@15bac645&#39;に置き換えられました。
+* 11.04.2014 08:38:07.223 **WARN** [FelixStartLevel]com.github.jcotth.handlebars.Handlebars Helper &#39;i18n&#39;は、&#39;com.adobe.cq.social.handlebars.I18nHelper@15bac645&#39;に置き換えられました
 
 [SCF](scf.md#handlebarsjavascripttemplatinglanguage) で使用される jknack.handlebars.Handlebars には独自の i18n ヘルパーユーティリティが用意されているので、この警告は無視しても問題ありません。起動時に、AEM 固有の [i18n ヘルパー](handlebars-helpers.md#i-n)に置き換えられます。この警告は、既存のヘルパーのオーバーライドを確認するためにサードパーティのライブラリによって生成されます。
 
