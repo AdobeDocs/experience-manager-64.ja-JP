@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 0452062d-cf85-4009-a0a5-a1e891192ea8
-translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+exl-id: d68806f8-8ed8-4aff-9724-bafbe2b1f18e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 92%
 
 ---
-
 
 # 発行済みフォームへのアクセスと入力  {#accessing-and-filling-published-forms}
 
@@ -33,8 +32,8 @@ ht-degree: 92%
 
 フォームポータルの Search &amp; Lister コンポーネントは、AEM サーバーの公開インスタンス上で利用可能なフォームを表示します。このリストには、すべてのフォームまたはフォームポータルページの作成時のフィルターで定義されたフォームが含まれています。次の画像が示すように、フォームポータルページは似ています。
 
-![フォームポータルページのサンプル ](assets/forms-portal-page.png)
-**図：フォームポータル** *ページのサンプル*
+![フォームポータルページの例図： ](assets/forms-portal-page.png)
+**フォームポータルページのサンプル** **
 
 ### Search &amp; Lister {#search-and-lister}
 
@@ -55,8 +54,8 @@ Search &amp; Lister コンポーネントでは、次の機能をフォームポ
 
 フルテキスト検索では、特定のキーワードに基づいて find &amp; list forms を検索することができます。
 
-![アドバンス検索](assets/search-panel.png)
-**ダイアログ図：アドバンス検索** *ダイアログ*
+![詳細検索ダイ](assets/search-panel.png)
+**アログ：** *詳細検索ダイアログ*
 
 「詳細設定」では、特定フォームのプロパティに基づいてフォームを検索することができます。これにより、フルテキスト検索よりもさらに絞り込むことができます。「詳細検索」には、タグ、プロパティ（作成者、説明、タイトルなど）、修正日、フルテキストに基づいた検索が含まれています。
 
@@ -64,8 +63,8 @@ Search &amp; Lister コンポーネントでは、次の機能をフォームポ
 
 ### フォームへの入力  {#filling-a-form}
 
-![アダプティブ](assets/filling_a_form.png)
-**フォームのサンプル図：アダプティブフォーム** *のサンプル*
+![サンプルのアダプティブ](assets/filling_a_form.png)
+**フォーム図：** *サンプルのアダプティブフォーム*
 
 フォームは、そのページの Search &amp; Lister コンポーネント内のフォームと共に指定されたリンクからアクセスできます。
 
@@ -81,10 +80,10 @@ Search &amp; Lister コンポーネントでは、次の機能をフォームポ
 
 >[!NOTE]
 >
->送信済みのフォームは、アダプティブフォームの送信アクションがFormsポータル送信アクションとして設定されている場合にのみ、「送信済みのForms」タブに表示されます。 送信アクションについて詳しくは、「[送信アクションの設定](/help/forms/using/configuring-submit-actions.md)」を参照してください。
+>送信済みのフォームは、アダプティブフォームの送信アクションがFormsポータル送信アクションとして設定されている場合にのみ、「送信済みのForms 」タブに表示されます。 送信アクションについて詳しくは、「[送信アクションの設定](/help/forms/using/configuring-submit-actions.md)」を参照してください。
 
-![ドラフトと送信](assets/draft-submission.png)
-**コンポーネント図：** *ドラフトと送信コンポーネント*
+![ドラフト&amp;送信コンポ](assets/draft-submission.png)
+**ーネント図：** *ドラフト&amp;送信コンポーネント*
 
 ## 送信済みフォームのデータを使用して新規フォームを開始 {#start-a-new-form-using-submitted-form-data}
 
@@ -92,6 +91,6 @@ Search &amp; Lister コンポーネントでは、次の機能をフォームポ
 
 AEM Forms は、フォーム入力の作業を最適化する上で役立ち、フォームを再度入力および送信する際にかかる時間を大幅に削減します。エンドユーザーは、送信済みフォームのデータを使用して新規のフォームを開始することができます。この機能は[ドラフト &amp; 送信コンポーネント](/help/forms/using/draft-submission-component.md)に組み込まれています。フォームポータルのページにドラフト &amp; 送信コンポーネントを追加して公開すると、送信済みフォームのデータを使用して新しいフォームを開始するオプションが、「送信済みのフォーム」タブと「ドラフトフォーム」タブに表示されます。次の画像は、そのオプションに焦点を当てています。
 
-![開始 — 新しい形式](assets/start-a-new-form.png)
+![start-a-new-form](assets/start-a-new-form.png)
 
 新規のフォームを開始するためにボタンをクリックすると、対応する送信済みフォームから新規フォームが開きます。これで、必要に応じてレビューおよびアップデートして、フォームを送信することができるようになりました。
