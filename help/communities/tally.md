@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 9941ba90-3d40-4c90-bca8-5db49603cbfa
-translation-type: tm+mt
-source-git-commit: ad744e91e8f94d7fefb939209ba186e3b18496b7
+exl-id: f04ec253-08b8-4ee2-9873-4a51549daeba
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '310'
-ht-degree: 57%
+ht-degree: 56%
 
 ---
 
-
 # 集計の基本事項 {#tally-essentials}
 
-Tallyは抽象クラスで、メンバーが特定の製品やサービスをどのように評価するかに関する標準的なフィードバック収集方法を提供します。 匿名フィードバックはサポートされていません。 サイト訪問者は、登録してサインインし、参加してフィードバックを変更する必要があります。 サインインする必要があるとモデレートが容易になり、複数の投稿を防ぎ、フィードバックの価値を高めることができます。
+集計は、特定の製品やサービスをどのように評価するかに関するメンバーからのフィードバックを収集する標準的な方法を提供する抽象クラスです。 匿名フィードバックはサポートされていません。 サイト訪問者がフィードバックを変更するには、登録してサインインする必要があります。 ログインの要件により、モデレートが容易になり、複数の投稿を防ぐことでフィードバックの価値が高まります。
 
 抽象集計クラスを拡張することによってカスタム集計コンポーネントを作成できます。
 
@@ -30,15 +29,15 @@ Tallyは抽象クラスで、メンバーが特定の製品やサービスをど
 
 [評価](rating-basics.md)は、肯定的な意見から否定的な意見まで幅広い意見を星制度で表す集計実装です。
 
-AEM 6.1以降、*poll*&#x200B;コンポーネントは使用できなくなりました。
+AEM 6.1以降、 *poll*&#x200B;コンポーネントは使用できなくなりました。
 
-[コメン](reviews-basics.md) トと [](essentials-comments.md) 評価のハイブリッドなSCFコンポーネントの [レビュー](rating-basics.md)。
+[](reviews-basics.md) コメントと評価のハイブリッドであるSCFコンポー [](essentials-comments.md) ネント [を確認](rating-basics.md)します。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [集計 API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
@@ -46,7 +45,7 @@ AEM 6.1以降、*poll*&#x200B;コンポーネントは使用できなくなり�
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿された集計（UGC）へのアクセス  {#accessing-posted-tallies-ugc}
+### 投稿済み集計(UGC)へのアクセス{#accessing-posted-tallies-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。\
 [ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
@@ -58,7 +57,6 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例
-* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
+* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティメソッドと例
+* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
-
