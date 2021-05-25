@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 2c651302-f4ef-4211-b897-f5942ed0ffb1
-translation-type: tm+mt
-source-git-commit: a5cac0d369bb40659cfde011e5d6ef9a68dc4012
+exl-id: 890e98af-0491-4b59-9a9b-6c245db54f0f
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 82%
 
 ---
-
 
 # ブランディングのための組織ロゴの変更  {#changing-the-organization-logo-for-branding}
 
