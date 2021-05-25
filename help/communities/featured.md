@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: ee39435d-80f5-4758-ae01-1ea0d221b00b
-translation-type: tm+mt
-source-git-commit: 1bbd917ef20c4a618e93af66ffe8a6cfc8448e78
+exl-id: a0dcffed-1040-4d6d-b8e9-3bbe5f30deb4
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 60%
 
 ---
 
-
 # おすすめコンテンツ機能  {#featured-content-feature}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 おすすめコンテンツ機能は、パブリッシュ環境にサインインしているサイト訪問者（コミュニティメンバー）が以下のコンテンツに注目する領域を提供します。
 
@@ -36,26 +35,26 @@ ht-degree: 60%
 
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
-* コミュニティサイトへの重点コンテンツの追加
-* `Featured Content`コンポーネントの構成設定
+* コミュニティサイトへのおすすめコンテンツの追加
+* `Featured Content`コンポーネントの設定
 
 ## おすすめコンテンツをページに追加 {#adding-featured-content-to-a-page}
 
-作成者モードで`Featured Content`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して
+`Featured Content`コンポーネントをオーサリングモードでページに追加するには、コンポーネントブラウザーを使用して
 
 * `Communities / Featured Content`
 
 コンポーネントを探し、ページ上のおすすめコンテンツを表示する位置にドラッグします。
 
-必要な情報については、[Communities Components Basics](basics.md)を参照してください。
+必要な情報については、[コミュニティコンポーネントの基本](basics.md)を参照してください。
 
-[必要なクライアント側ライブラリ](essentials-featured.md#essentials-for-client-side)が含まれる場合、`Featured Content`コンポーネントは次のように表示されます。
+[必須のクライアント側ライブラリ](essentials-featured.md#essentials-for-client-side)を含めると、`Featured Content`コンポーネントは次のように表示されます。
 
 ![chlimage_1-13](assets/chlimage_1-13.png)
 
 ## おすすめコンテンツの設定 {#configuring-featured-content}
 
-アクセスする配置済みの`Featured Content`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
+配置済みの`Featured Content`コンポーネントを選択し、`Configure`アイコンを選択すると、編集ダイアログが開きます。
 
 ![chlimage_1-14](assets/chlimage_1-14.png) ![chlimage_1-15](assets/chlimage_1-15.png)
 
@@ -64,11 +63,11 @@ ht-degree: 60%
 「**[!UICONTROL 設定]**」タブの下で、おすすめに設定するコンテンツを指定します。
 
 * **[!UICONTROL 表示名]**&#x200B;おすすめコンテンツのリストのタイトル。例： 
-`Featured Questions` または `Featured Ideas`. 空白のままの場合の初期設定は`Featured Content`です。
+`Featured Questions` または `Featured Ideas`. 空のままの場合、初期設定は`Featured Content`です。
 
 * **[!UICONTROL おすすめコンテンツの場所]**
 
-   *（必須）* 特集コンテンツを含むページを参照します（そのページのコンポーネントは、「特集コンテンツを許可」に設定する必要があります）。例：`/content/sites/engage/en/forum`
+   *（必須）* 機能する可能性のあるコンテンツが含まれているページを参照します（そのページのコンポーネントは、「おすすめコンテンツを許可」に設定する必要があります）。例：`/content/sites/engage/en/forum`
 
 * **[!UICONTROL 最大表示数]**&#x200B;表示するおすすめコンテンツの最大数。初期設定は 5 です。
 
@@ -76,13 +75,13 @@ ht-degree: 60%
 
 コンテンツにおすすめコンテンツのフラグを設定する機能には、モデレーター権限が必要です。
 
-モデレーター表示がコンテンツを投稿すると、新しい`Feature`フラグを含むコンテキスト内モデレートフラグにアクセスできます。
+モデレーターが投稿されたコンテンツを表示すると、コンテキスト内モデレートフラグにアクセスできます。これには新しい`Feature`フラグが含まれます。
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
-機能としてフラグ付けされると、モデレーションフラグは`Unfeature`になります。
+機能としてフラグが設定されると、モデレートフラグは`Unfeature`になります。
 
-`Featured Content`コンポーネントを含むページに、この投稿が含まれるようになります。
+`Featured Content`コンポーネントを含むページに、この投稿が含まれます。
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
