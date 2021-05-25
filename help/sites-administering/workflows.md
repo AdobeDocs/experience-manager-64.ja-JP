@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: e57b7a69-6e25-4066-ad7a-917969cebbe8
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 89%
 
 ---
-
 
 # ワークフローの管理{#administering-workflows}
 
@@ -39,7 +38,7 @@ ht-degree: 89%
 >
 >詳しくは、次のセクションを参照してください。
 >
->* ワークフローの適用と参加：[ワークフローの操作](/help/sites-authoring/workflows.md)
+>* ワークフローの適用と参加：[ワークフローの操作](/help/sites-authoring/workflows.md)。
 >* ワークフローモデルの作成とワークフロー機能の拡張：[ワークフローの開発と拡張](/help/sites-developing/workflows.md)。
 >* 重要なサーバーリソースを使用するワークフローのパフォーマンスの向上：[ワークフローの同時処理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)
 
@@ -103,11 +102,10 @@ AEM には参考になるモデルが多数用意されています。また、�
 
 >[!NOTE]
 >
->プロセスステップの実行でエラーが発生した場合は、そのステップが管理者のインボックスに表示され、ワークフローの状態は&#x200B;**RUNNING**&#x200B;です。
+>プロセスステップの実行でエラーが発生した場合、そのステップは管理者のインボックスに表示され、ワークフローのステータスは&#x200B;**RUNNING**&#x200B;になります。
 
 現在のステータスによって、ワークフローインスタンスの通常の進行に介入する必要がある場合は、実行中のワークフローインスタンスに対してアクションを実行します。
 
 * **休止**：ワークフローの実行を一時的に停止します。このアクションは例外的な状況（メンテナンスなどでワークフローを進行させたくない場合）に便利です。休止を実行すると、ワークフローのステータスが「休止」に変わります。
-* **再開**:同じ設定を使用して、中断されたワークフローを、中断された実行時点と同じ時点で再開します。
-* **終了**:ワークフローの実行を終了し、状態を **ABORTEDに変更します**。中止されたワークフローインスタンスは再開できません。
-
+* **再開**:同じ設定を使用して、休止したワークフローを、休止した同じ実行時点から再開します。
+* **終了**:ワークフローの実行を終了し、状態を「中 **止」に変更します**。中止したワークフローインスタンスは再起動できません。
