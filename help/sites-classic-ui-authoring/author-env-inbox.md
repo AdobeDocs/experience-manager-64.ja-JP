@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 71f16254-336f-41bf-bf75-f69ba1051d59
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: e7111c21-1f38-4d0d-ac4b-c83133c0d8d6
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '611'
 ht-degree: 95%
 
 ---
-
 
 # インボックス{#your-inbox}
 
@@ -25,7 +24,7 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 通知のタイプで分類される 2 つのインボックスにこれらの通知を受け取ります。
 
 * 購読の結果として受け取る通知が表示されるインボックスについては、次のセクションで説明します。
-* ワークフローアイテム用の特殊なインボックスについては、「[ワークフローへの参加](/help/sites-classic-ui-authoring/classic-workflows-participating.md)」ドキュメントで説明しています。
+* ワークフロー項目用の専用のインボックスについては、[ワークフローへの参加](/help/sites-classic-ui-authoring/classic-workflows-participating.md)のドキュメントで説明しています。
 
 ## 通知の表示 {#viewing-your-notifications}
 
@@ -91,7 +90,7 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 1. 通知するページのパスを定義します。
 
    * 「**追加**」をクリックして、テーブルに新しい行を追加します。
-   * **パス**&#x200B;テーブルセルをクリックし、パスを入力します(例：`/content/docs`。
+   * **パス**&#x200B;テーブルセルをクリックし、パス(例：`/content/docs`.
    * サブツリーに属しているすべてのページについて通知するには、「**厳密?**」を「**いいえ**」に設定します。
 
       パスで定義されているページに対するアクションのみについて通知するには、「**厳密?**」を「**はい**」に設定します。
@@ -111,4 +110,3 @@ AEM インボックスに通知を受信するように選択すると、イン�
 * 「**削除**」をクリックして、通知を削除します。
 
 ![chlimage_1-9](assets/chlimage_1-9.jpeg)
-
