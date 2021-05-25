@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: f5025f64-d3ce-43e8-9666-5c7c162536c7
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: 20197226-09d5-4ac6-b4cb-0793576a56cf
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 85%
 
 ---
-
 
 # 基礎モード{#scaffolding}
 
@@ -26,5 +25,4 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->足場[mode](/help/sites-authoring/author-environment-tools.md#page-modes)がありますが、足場の保守と作成、および足場からの新しいページの作成は従来のUIで行われています。 詳しくは、クラシック UI オーサリングドキュメントの「[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)」を参照してください。
-
+>基礎モード[モード](/help/sites-authoring/author-environment-tools.md#page-modes)を使用できますが、基礎のメンテナンスと作成、および基礎からの新しいページの作成は、クラシックUIで行います。 詳しくは、クラシック UI オーサリングドキュメントの「[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)」を参照してください。
