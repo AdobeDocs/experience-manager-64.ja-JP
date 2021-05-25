@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 4c83694c-b00f-40be-9ac4-f5785cd60741
-translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+exl-id: 0bde7192-9d21-40b4-9164-314c9a30153b
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 80%
 
 ---
-
 
 # 埋め込むフォントの指定 {#specifying-fonts-to-embed}
 
@@ -28,6 +27,5 @@ Forms サービスで生成されるフォームに常に埋め込むフォン�
 
 1. 管理コンソールで、**[!UICONTROL サービス/Forms]**&#x200B;をクリックします。
 1. 「**[!UICONTROL フォント埋め込み設定]**」の「**[!UICONTROL 常に埋め込むフォント]**」ボックスに、フォームに埋め込むフォントの名前をコンマで区切って入力します。 指定するフォントは、生成されたフォームで使用されている場合にのみそのフォームに埋め込まれます。サービスに渡される XCI ファイルでフォントの埋め込みオプションが有効になっていると、この設定は無視されます。この場合は、PDF で使用されるすべてのフォントが常に埋め込まれるためです。
-1. 「**[!UICONTROL 常に埋め込まないフォント]**」ボックスに、フォームに埋め込まないフォントの名前をコンマで区切って入力します。 指定するフォントは、生成された PDF で使用されていてもその PDF に埋め込まれません。サービスに渡される XCI ファイルでフォントの埋め込みオプションが無効になっていると、この設定は無視されます。この場合は、PDF で使用されるフォントが一切埋め込まれないためです。
+1. 「**[!UICONTROL 埋め込まないフォント]**」ボックスに、フォームに埋め込まないフォントの名前をコンマで区切って入力します。 指定するフォントは、生成された PDF で使用されていてもその PDF に埋め込まれません。サービスに渡される XCI ファイルでフォントの埋め込みオプションが無効になっていると、この設定は無視されます。この場合は、PDF で使用されるフォントが一切埋め込まれないためです。
 1. 「**[!UICONTROL 保存]**」をクリックします。
-
