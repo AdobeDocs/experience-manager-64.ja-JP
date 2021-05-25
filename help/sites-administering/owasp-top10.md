@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: e5323ae8-bc37-4bc6-bca6-9763e18c8e76
-translation-type: tm+mt
-source-git-commit: 280c2b3cc8026988472d4ad0cf6649fa8a7c9c38
+exl-id: c29472c8-9a93-4cb1-9cb1-05fc155ba736
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 89%
 
 ---
-
 
 # OWASP Top 10{#owasp-top}
 
@@ -24,7 +23,7 @@ ht-degree: 89%
 
 これらのリスクおよび CRX での対処方法を以下に示します。
 
-## 1. インジェクション  {#injection}
+## 1. インジェクション {#injection}
 
 * SQL - 設計により防止されます。デフォルトのリポジトリ設定には従来のデータベースが含まれず、また必要でもありません。データはすべてコンテンツリポジトリに格納されます。すべてのアクセスは認証されたユーザーに制限され、JCR API を使用してのみ実行可能です。SQL は検索クエリ（SELECT）のみをサポートします。さらに、SQL は値バインディングをサポートします。
 * LDAP - 認証モジュールによって入力にフィルターが適用され、バインドメソッドを使用してユーザーの読み込みが実行されるので、LDAP インジェクションは不可能です。
@@ -46,9 +45,9 @@ AEM では、[Apache Jackrabbit](https://jackrabbit.apache.org/) と [Apache Sli
 
 ## 5. クロスサイトリクエストフォージェリ（CSRF）  {#cross-site-request-forgery-csrf}
 
-クロスサイト要求偽造(CSRF)は、すべてのフォームとAJAX要求に暗号化トークンを自動的に挿入し、POSTごとにサーバー上でこのトークンを検証することで軽減されます。
+クロスサイトリクエストフォージェリ(CSRF)は、すべてのフォームとAJAXリクエストに暗号化トークンを自動的に挿入し、POSTごとにサーバー上でこのトークンを検証することで軽減されます。
 
-また、AEMには転送者ヘッダーベースのフィルターが付属しています。このフィルターは、特定のホスト(リストで定義)からのPOST要求を&#x200B;**&#x200B;のみ許可するように設定できます。
+さらに、AEMにはリファラーヘッダーベースのフィルターが付属しています。このフィルターは、特定のホスト（リストで定義）からのPOSTリクエストを&#x200B;*のみ*&#x200B;に設定できます。
 
 ## 6. セキュリティ設定のミス {#security-misconfiguration}
 
@@ -73,4 +72,3 @@ AEM では、[Apache Jackrabbit](https://jackrabbit.apache.org/) と [Apache Sli
 ## 10. 未検証のリダイレクトとフォワード {#unvalidated-redirects-and-forwards}
 
 ユーザーが指定した宛先へのすべてのリダイレクトを内部の場所に制限することで軽減されます。
-
