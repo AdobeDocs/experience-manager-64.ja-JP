@@ -8,18 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: b6e88080-6ffc-4796-98c7-d7462bca454e
-translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+exl-id: 192ba4c4-a133-4e16-9882-98005f25ba7f
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 65%
 
 ---
 
-
 # レンダラーのためのドキュメントの詳細  {#document-details-for-renderer}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 AEM Forms Workspace では、複数のフォームタイプをシームレスにサポートしています。有効なタイプには以下が含まれます。
 
@@ -28,7 +27,7 @@ AEM Forms Workspace では、複数のフォームタイプをシームレスに
 * 画像
 * サードパーティアプリケーション（たとえば、Correspondence Management など）
 
-このドキュメントでは、表示を中断することなく顧客の要件を満たすように、セマンティックカスタマイゼーションおよびコンポーネントの再利用の観点からこれらのレンダラーの動作を説明します。AEM Formsワークスペースではユーザーインターフェイスやセマンティックの変更が可能ですが、様々なフォームタイプのレンダリングロジックは変更しないことをお勧めします。そうしないと、予測できない結果になる場合があります。 このドキュメントは、別々のポータルで同じワークスペースコンポーネントを使用する、同じフォームのレンダリングをサポートするためのガイド／ナレッジであり、レンダリングロジック自体を変更するためのものではありません。
+このドキュメントでは、表示を中断することなく顧客の要件を満たすように、セマンティックカスタマイゼーションおよびコンポーネントの再利用の観点からこれらのレンダラーの動作を説明します。AEM Forms Workspaceではユーザーインターフェイスやセマンティックの変更が可能ですが、様々なフォームタイプのレンダリングロジックは変更しないことをお勧めします。そうしないと、予測できない結果が生じる場合があります。 このドキュメントは、別々のポータルで同じワークスペースコンポーネントを使用する、同じフォームのレンダリングをサポートするためのガイド／ナレッジであり、レンダリングロジック自体を変更するためのものではありません。
 
 ## PDF フォーム {#pdf-forms}
 
@@ -36,7 +35,7 @@ PDF formsは`PdfTaskForm View`によってレンダリングされます。
 
 XDP フォームが PDF としてレンダリングされると、FormsAugmenter サービスは `FormBridge` JavaScript™ を追加します。この JavaScript™ （PDF フォーム内）が、フォーム送信、フォーム保存、またはフォームをオフラインにするなどのアクションを実行する手助けをします。
 
-AEM Formsのワークスペースでは、PDFTaskForm表示は`/lc/libs/ws/libs/ws/pdf.html`にある仲介者のHTMLを介して`FormBridge`javascriptと通信します。 フローを以下に示します。
+AEM Forms Workspaceでは、PDFTaskFormビューは、`/lc/libs/ws/libs/ws/pdf.html`にある中間のHTMLを介して`FormBridge`JavaScriptと通信します。 フローを以下に示します。
 
 **PDFTaskForm 表示 - pdf.html**
 
@@ -64,15 +63,15 @@ XDP フォームが CRX にデプロイされたモバイルフォームのパ�
 
 >[!NOTE]
 >
->NewHTMLTaskForm表示の内容は変更しないことをお勧めします。
+>NewHTMLTaskForm表示の内容を変更することはお勧めしません。
 
 ## Flex フォームおよびガイド {#flex-forms-and-guides}
 
 Flex フォームは SwfTaskForm によってレンダリングされ、ガイドは HtmlTaskForm 表示によってレンダリングされます。
 
-AEM Formsのワークスペースでは、これらの表示は実際のSWFと通信します。これにより、`/lc/libs/ws/libs/ws/WSNextAdapter.swf`にある中間のSWFを使用してFlexフォーム/ガイドを構成します
+AEM Forms Workspaceでは、これらのビューは実際のSWFと通信し、`/lc/libs/ws/libs/ws/WSNextAdapter.swf`にある中間のSWFを使用してFlexフォーム/ガイドを構成します
 
-通信は`swfObject.postMessage` / `window.flexMessageHandler`を使用して行われます。
+通信は`swfObject.postMessage` / `window.flexMessageHandler`を使用しておこなわれます。
 
 このプロトコルは `WsNextAdapter.swf` によって定義されています。ウィンドウオブジェクトの既存の `flexMessageHandlers` は、新しく追加される前に、以前に開いていた SWF フォームから削除されます。このロジックでは、タスクの詳細表示でフォームタブと履歴タブを切り替えることも考慮しています。`WsNextAdapter.swf` は、保存や送信などの様々なフォームアクションの実行に使用されます。
 
@@ -80,21 +79,20 @@ AEM Formsのワークスペースでは、これらの表示は実際のSWFと�
 >
 >`WSNextAdapter.swf` または SwfTaskForm / HtmlTaskForm 表示の内容を変更することはお勧めしません。
 
-## サードパーティアプリケーション（Correspondence Managementなど） {#third-party-applications-for-example-correspondence-management}
+## サードパーティアプリケーション（Correspondence Managementなど）{#third-party-applications-for-example-correspondence-management}
 
 サードパーティアプリケーションは、ExtAppTaskForm 表示を使用してレンダリングされます。
 
-**AEM Forms・ワークスペース通信へのサード・パーティ・アプリケーション**
+**AEM Forms Workspaceとの通信に対するサードパーティアプリケーション**
 
-AEM Formsワークスペースは`window.global.postMessage([Message],[Payload])`をリッスンします
+AEM Forms workspaceは`window.global.postMessage([Message],[Payload])`でリッスンします
 
-[] Messagecは次のように指定された文字列にすることができます。  `SubmitMessage`|  `CancelMessage`|  `ErrorMessage`| `actionEnabledMessage`が含まれ `runtimeMap`ます。サードパーティアプリケーションは、必要に応じてAEM FormsWorkspaceに通知するには、このインターフェイスを使用する必要があります。 このインターフェイスの使用は必須です。これは、AEM Formsワークスペースがタスクーウィンドウをクリーンアップするためにタスクが送信されたことを知る必要があるからです。
+[] Messagecanは、  `SubmitMessage`|  `CancelMessage`|  `ErrorMessage`|( `actionEnabledMessage`内)をクリックしま `runtimeMap`す。サードパーティアプリケーションは、必要に応じてAEM Forms Workspaceに通知するには、このインターフェイスを使用する必要があります。 AEM Forms Workspaceはタスクウィンドウをクリーンアップできるように、タスクが送信されたタイミングを知っている必要があるので、このインターフェイスの使用は必須です。
 
-**AEM Formsワークスペースからサードパーティアプリケーションへの通信**
+**AEM Forms workspaceからサードパーティアプリケーションへの通信**
 
-AEM Formsワークスペースの直接アクションボタンが表示されている場合は、`window.[External-App-Name].getMessage([Action])`を呼び出します。`[Action]`は`routeActionMap`から読み取られます。 サードパーティアプリケーションは、このインターフェイスをリッスンし、`postMessage ()` APIを介してAEM Formsのワークスペースに通知する必要があります。
+AEM Forms Workspaceの直接アクションボタンが表示されている場合は、`window.[External-App-Name].getMessage([Action])`を呼び出します。ここで、`[Action]`は`routeActionMap`から読み取られます。 サードパーティアプリケーションは、このインターフェイスをリッスンし、`postMessage ()` APIを介してAEM Forms Workspaceに通知する必要があります。
 
-例えば、Flexのアプリケーションでは、この通信をサポートする`ExternalInterface.addCallback('getMessage', listener)`を定義できます。 サードパーティアプリケーションが独自のボタンを使用してフォームの送信を処理する場合は、`hideDirectActions = true() in the runtimeMap`を指定し、このリスナーをスキップできます。 従って、この構築はオプションです。
+例えば、Flexアプリケーションでは、この通信をサポートする`ExternalInterface.addCallback('getMessage', listener)`を定義できます。 サードパーティアプリケーションが独自のボタンを使用してフォーム送信を処理する場合は、`hideDirectActions = true() in the runtimeMap`を指定し、このリスナーをスキップできます。 従って、この構築はオプションです。
 
 サードパーティアプリケーションの Correspondence Management との統合の詳細については、「[AEM Forms Workspace での Correspondence Management の統合](/help/forms/using/integrating-correspondence-management-html-workspace.md)」を参照してください。
-
