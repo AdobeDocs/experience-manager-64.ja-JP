@@ -10,9 +10,8 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 77296bff-8429-4240-af93-26076ae431ec
 exl-id: ec05569a-6449-4430-9b9f-7ab051f44970
-feature: Asset Management,Renditions
+feature: アセット管理，レンディション
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
 source-wordcount: '1031'
@@ -22,11 +21,11 @@ ht-degree: 90%
 
 # Dynamic Media アセットのプレビュー {#previewing-assets}
 
-**[!UICONTROL プレビュー]**&#x200B;を使用すると、Dynamic Mediaのデジタルアセットが自分のWebブラウザーで顧客に表示されたときにどのように見えるかを確認できます。 アセットに割り当てられている、デバイス間のデフォルトの埋め込みビューアが&#x200B;**[!UICONTROL プレビュー]**&#x200B;に使用されます。
+**[!UICONTROL プレビュー]**&#x200B;を使用して、顧客が独自のWebブラウザーでDynamic Mediaデジタルアセットを表示した場合の外観を確認できます。 アセットに割り当てられているデフォルトの埋め込みクロスデバイスビューアが、**[!UICONTROL プレビュー]**&#x200B;に使用されます。
 
 ビューアは、コンピューター画面やモバイルデバイスでのリッチメディアアセットの表示方法を決定する、様々な設定（「プリセット」と呼ばれます）のコレクションです。この設定には、ビューアのディスプレイサイズ、ズーム時の動作、配色、境界線、フォントなどが含まれます。
 
-ビデオ、スピンセットおよび画像セット専用のプレビュー機能を使用する他に、作成したビューアプリセットを使用してアセットをプレビューすることもできます。または、画像プリセットを使用して、プレビューのレンディションを作成します。
+ビデオ、スピンセットおよび画像セット専用のプレビュー機能を使用する以外に、作成したビューアプリセットを使用してアセットをプレビューすることもできます。または、画像プリセットを使用して、画像のレンディションをプレビューします。
 
 * [画像プリセットの適用](image-presets.md)
 * [ビューアプリセットの適用](viewer-presets.md)
@@ -37,7 +36,7 @@ ht-degree: 90%
 
 **アセットをプレビューするには**:
 
-1. **Adobe Experience Manager**&#x200B;から、**[!UICONTROL ナビゲーション]**&#x200B;ページで&#x200B;**[!UICONTROL アセット]s**&#x200B;をタップし、**[!UICONTROL ファイル]**&#x200B;をタップしてアセットにアクセスします。
+1. **Adobe Experience Manager**&#x200B;の&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;ページで、「**[!UICONTROL アセット]s**」をタップし、「**[!UICONTROL ファイル]**」をタップしてアセットにアクセスします。
 1. ページの右上隅付近にある「**[!UICONTROL 表示]**」ドロップダウンリストで「**[!UICONTROL リスト表示]**」をタップします。
 1. （オプション）「**[!UICONTROL 種類]**」列を使用して、プレビューする種類でアセットを並べ替えます。
 1. 「**[!UICONTROL タイトル]**」列で、プレビューするアセットの（サムネール画像ではなく）タイトル名をクリックします。
@@ -46,7 +45,7 @@ ht-degree: 90%
 <table> 
  <tbody>
   <tr>
-   <td><strong>タップしたアセットの種類</strong><br /> </td> 
+   <td><strong>タップしたアセットタイプ</strong><br /> </td> 
    <td><strong>特定のレンディションでアセットをプレビューできるか</strong></td> 
    <td><strong>特定のビューアでアセットをプレビューできるか</strong></td> 
   </tr>
