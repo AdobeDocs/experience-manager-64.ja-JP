@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: edc78306-5e83-45a4-a44b-ce0d21ff0f31
-translation-type: tm+mt
-source-git-commit: ee9b977515b6c1233ff87f011f7a8b4095450814
+exl-id: 308cd31b-3974-49d2-8629-6ede58f3200d
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 78%
 
 ---
 
-
 # クラシック UI でのオーサリング{#authoring-in-the-classic-ui}
 
-## クラシックUIとタッチ対応UI {#classic-ui-and-touch-enabled-ui}
+## クラシックUIとタッチ操作対応UI {#classic-ui-and-touch-enabled-ui}
 
 クラシックUIは、CQ5(AEMの旧バージョン)以降で使用可能なデスクトップ指向のユーザーインターフェイスです。 次のオーサリングに関するドキュメントでは、この UI に焦点を当てています。
 
@@ -28,7 +27,7 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->タッチベースの UI が AEM の標準 UI です。そのため、クラシック UI はもうメンテナンスがおこなわれていません。これは、クラシックUIには使用できない特定の機能があることを意味します。
+>タッチベースの UI が AEM の標準 UI です。そのため、クラシック UI はもうメンテナンスがおこなわれていません。つまり、クラシックUIには利用できない特定の機能があります。
 
 ## オーサリング（および公開）の概念{#concept-of-authoring-and-publishing}
 
