@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 7449f99e-77d7-4c0f-96d5-b67d5e1f124a
-translation-type: tm+mt
-source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+exl-id: 20c16e96-2ba8-4f2d-8cfa-8cd804e3441f
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 78%
 
 ---
 
-
 # リーダーボードの基本事項  {#leaderboard-essentials}
 
 このページでは、リーダーボード機能の操作に関する基本情報をまとめています。
 
-リーダーボードコンポーネントをページに追加する前に、[コミュニティのスコアとバッジ](implementing-scoring.md)を設定する必要があります。[スコアリングとバッジの初期設定](configure-scoring.md)も参照してください。
+リーダーボードコンポーネントをページに追加する前に、[コミュニティのスコアとバッジ](implementing-scoring.md)を設定する必要があります。[スコアとバッジの基本事項](configure-scoring.md)も参照してください。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -57,6 +56,6 @@ ht-degree: 78%
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-### ファイルライブラリ機能  {#file-library-function}
+### ファイルライブラリ機能 {#file-library-function}
 
-[リーダーボード機能](functions.md#leaderboard-function)を含むコミュニティサイト構造は、構成された`leaderboard`コンポーネントを含む。
+[リーダーボード機能](functions.md#leaderboard-function)を含むコミュニティサイト構造には、設定済みの`leaderboard`コンポーネントが含まれます。
