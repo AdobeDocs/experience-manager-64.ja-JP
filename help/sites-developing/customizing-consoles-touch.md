@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: 221ed05b-855d-4dc2-9df6-12fdeabb157a
-translation-type: tm+mt
-source-git-commit: 1dc15f323dc30d5730e2af6c0e762d623523870d
+exl-id: 31bced35-4845-40d1-9bfd-5c75d54e1a83
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 77%
 
 ---
-
 
 # コンソールのカスタマイズ{#customizing-the-consoles}
 
@@ -28,11 +27,11 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 * Clientlibs
 
-   clientlibを使用すると、デフォルトの実装を拡張して、標準の関数、オブジェクト、メソッドを再利用しながら新しい機能を実現できます。 をカスタマイズする際、`/apps.`の下に独自のclientlibを作成できます。たとえば、カスタムコンポーネントに必要なコードを保持できます。
+   clientlibsを使用すると、デフォルトの実装を拡張して新しい機能を実現し、標準の関数、オブジェクト、メソッドを再利用できます。 カスタマイズする際に、`/apps.`の下に独自のクライアントライブラリを作成できます。例えば、カスタムコンポーネントに必要なコードを保持できます。
 
 * オーバーレイ
 
-   オーバーレイはノード定義に基づいており、（`/libs`内の）標準機能をカスタマイズした独自の機能（`/apps`内の）でオーバーレイできます。 Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
+   オーバーレイはノード定義に基づいており、（`/libs`の）標準的な機能を（`/apps`の）カスタマイズした独自の機能に重ねることができます。 Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
 
 これらをさまざまな方法で使用して、AEM コンソールを拡張できます。一部については、以降で（大まかに）説明します。
 
@@ -56,7 +55,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. `/apps`の下に必要な項目（例：`/libs`に存在する項目）を再作成します
+>1. `/apps`の下で、必要な項目（`/libs`に存在）を再作成します。
    >
    >
 1. `/apps` 内で変更作業をおこないます。
@@ -65,7 +64,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 
 
-例えば、`/libs`構造内の次の場所はオーバーレイできます。
+例えば、`/libs`構造内の次の場所をオーバーレイできます。
 
 * コンソール（Granite UI ページに基づくすべてのコンソール）。次に例を示します。
 
@@ -197,7 +196,7 @@ You can find the code of this page on GitHub
 
    先頭のエントリがデフォルトになります。
 
-   使用できるノードは、使用できる表示オプションに関連しています。
+   使用可能なノードは、使用可能な表示オプションと関連があります。
 
    * `column`
    * `card`
@@ -295,7 +294,7 @@ You can find the code of this page on GitHub
 
    `jcr:content/body/content/header/items/default/items/create/items/createsite/rendercondition`
 
-   このノードでプロパティを使用して、特定のアクションの実行を許可する`groups`を定義できます。例：`administrators`
+   このノードのプロパティを使用して、特定のアクションの実行を許可する`groups`を定義できます。例： `administrators`
 
 <!-- Needs a review by Engineering -->
 <!--
@@ -368,7 +367,7 @@ You can restrict access to a navigation option using ACLs:
 
 >[!NOTE]
 >
->この機能は、テキストフィールドの列に対して最適化されています。他のデータ型の場合は、`cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer`を`/apps`にオーバーレイできます。
+>この機能は、テキストフィールドの列用に最適化されています。他のデータ型の場合は、`/apps`内の`cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer`をオーバーレイできます。
 
 <!-- Needs a review by Engineering -->
 <!--
@@ -393,9 +392,9 @@ You can find the code of this page on GitHub
 
 1. 省略可能：
 
-   * 追加のデータをプラグインする場合は、` [PageInforProvider](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)`
+   * 追加データを差し込む場合は、` [PageInforProvider](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)`
 
-      `pageInfoProviderType` プロパティの以前の場所への参照を更新します。
+      `pageInfoProviderType` property.
    例として、（GitHub から）以下に添付するクラス／バンドルを参照してください。
 
 1. これで、リスト表示の列コンフィギュレーターで列を選択できるようになります。
