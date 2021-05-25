@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: e75ce118-3850-4440-ad58-89569cb8c8eb
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 2d0f11ac-f24b-431e-9076-3e6099eab4ac
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1780'
 ht-degree: 99%
 
 ---
 
-
-# ページのコンテンツの編集{#editing-page-content}
+# ページのコンテンツの編集 {#editing-page-content}
 
 ページが作成されたら（新規作成、またはローンチやライブコピーの一部として作成）、コンテンツを編集して、必要な更新をおこなうことができます。
 
@@ -30,7 +29,7 @@ ht-degree: 99%
 >
 >問題が発生した場合は、システム管理者にお問い合わせください。
 
-## サイドキック  {#sidekick}
+## サイドキック {#sidekick}
 
 サイドキックはページのオーサリングをおこなう際の重要なツールです。ページのオーサリング中はフローティングされるので、常に表示されます。
 
@@ -174,7 +173,7 @@ ht-degree: 99%
 
 継承されたコンポーネントは、次のような様々なシナリオによって生成されます。
 
-* [複数サイト管理](/help/sites-administering/msm.md)。[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance)と組み合わせて使用されます。
+* [マルチサイト管理](/help/sites-administering/msm.md);また、[scaffolding](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance)と組み合わせて使用することもできます。
 
 * [ローンチ](/help/sites-classic-ui-authoring/classic-launches.md)（ライブコピーをベースとしている場合）
 * 特定のコンポーネント（Geometrixx 内の継承された段落システムなど）
@@ -295,7 +294,7 @@ AEM では、ユーザーが実行するアクションの履歴と、それら�
 * 段落の追加、編集、削除および移動
 * 段落コンテンツのインプレース編集
 * ページ内部での項目のコピー、カットおよび貼り付け
-* ページ間でのアイテムのコピー、切り取り、貼り付け
+* ページ間での項目のコピー、切り取り、貼り付け
 * ファイルおよび画像の追加、削除および変更
 * 注釈およびスケッチの追加、削除および変更
 * 基礎モードに対する変更
@@ -307,4 +306,3 @@ AEM では、ユーザーが実行するアクションの履歴と、それら�
 >[!NOTE]
 >
 >ファイルと画像に対する変更の取り消しおよびやり直しには、特別な権限が必要になります。また、ファイルと画像に対する変更の取り消し履歴は、少なくとも数時間保管されます。この時間を経過すると、変更の取り消しは保証されません。管理者が、権限の付与および 10 時間というデフォルト時間の変更をおこなうことができます。
-
