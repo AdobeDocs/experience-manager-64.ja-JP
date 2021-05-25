@@ -9,25 +9,24 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: aeacddc5-a128-40cd-a4c3-07fa173f90c4
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 6b8b19ae-eb3b-46d5-ab44-18c43d11aa61
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 42%
 
 ---
 
-
 # 割り当て機能  {#assignments-feature}
 
 コンポーネントブラウザーのコミュニティグループにあるイネーブルメント割り当てコンポーネントと[イネーブルメントカタログ](catalog.md)コンポーネントは、[イネーブルメントコミュニティ](overview.md#enablement-community)のコンポーネントです。
 
-有効化の割り当てコンポーネントを使用すると、現在ログインしているコミュニティのメンバー（学習者）は、割り当てられた[有効化リソース](resources.md)にアクセスできます。
+イネーブルメント割り当てコンポーネントを使用すると、現在サインインしているコミュニティメンバー（学習者）は、割り当てられた[イネーブルメントリソース](resources.md)にアクセスできます。
 
-[有効化のためのAEM Communitiesの使用の手引き](getting-started-enablement.md)チュートリアルで、[発行済みサイトの体験](enablement-published-site.md)のメンバーの割り当てとカタログの表示を参照してください。
+[AEM Communities for Enablementの手引き](getting-started-enablement.md)のチュートリアルで、「[公開済みサイトを体験する](enablement-published-site.md) 」のセクションで、メンバーの割り当てとカタログの表示を確認します。
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの[Assignments Essentials](essentials-assignments.md)ページを参照してください。
+詳しくは、開発者向けの[割り当ての基本事項](essentials-assignments.md)ページを参照してください。
 
-[割り当て関数](functions.md#assignments-function)は、[コミュニティサイト](sites-console.md)を作成する際に利用できます。
+[割り当て関数](functions.md#assignments-function)は、[コミュニティサイト](sites-console.md)を作成する際に使用できます。
