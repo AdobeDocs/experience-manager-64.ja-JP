@@ -9,18 +9,17 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e6e7e2fa-579d-4b36-8598-6ced469a94b1
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 9ed22c75-bce7-4d26-a4cd-a58e41e5068e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 92%
 
 ---
 
-
 # SSL 対応の LDAP サーバーを対象とした User Management の設定 {#configure-user-management-for-an-ssl-enabled-ldap-server}
 
-同期が LDAPS を介して正しく動作するには、認証局（CA）によって発行された LDAP 証明書をアプリケーションサーバーの Java ランタイム環境（JRE）に配置する必要があります。証明書をアプリケーションサーバーのJRE cacertsファイルに読み込みます。通常、このファイルは&#x200B;*[JAVA_HOME]*/jre/lib/security/cacertsディレクトリにあります。
+同期が LDAPS を介して正しく動作するには、認証局（CA）によって発行された LDAP 証明書をアプリケーションサーバーの Java ランタイム環境（JRE）に配置する必要があります。証明書をアプリケーションサーバーのJRE cacertsファイルに読み込みます。通常は、*[JAVA_HOME]*/jre/lib/security/cacertsディレクトリにあります。
 
 1. ディレクトリサーバーで SSL を有効にします。詳しくは、ディレクトリのベンダーによって提供されたマニュアルを参照してください。
 1. ディレクトリサーバーからクライアント証明書を書き出します。
@@ -35,4 +34,3 @@ ht-degree: 92%
 >[!NOTE]
 >
 >SSL を使用する際に問題が発生した場合は、LDAP ブラウザーを使用して、SSL を使用しているときに LDAP システムにアクセスできるかどうかを確認してください。LDAP ブラウザーでアクセスできない場合は、証明書またはアプリケーションサーバーが正しく設定されていません。LDAP ブラウザーが正常に動作していても引き続き問題が発生する場合は、User Management が正しく設定されていません。
-
