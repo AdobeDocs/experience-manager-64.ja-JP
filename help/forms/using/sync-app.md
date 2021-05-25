@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: dae1ce32-702e-4cf0-b3c6-976551208d09
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: b5681fe5-69ba-4fc0-95e3-6ffdcdd95382
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 96%
 
 ---
-
 
 # アプリケーションの同期  {#synchronizing-the-app}
 
@@ -48,4 +47,3 @@ AEM Forms サーバーがオンラインのときは、デフォルトでは、1
 * .js で、processOfflineSubmittedSavedTasks(...) 関数への呼び出しによって、保存済み／送信済みタスクをサーバーに送信します。 同期処理でのエラーや競合も処理されます。 タスクの送信に失敗すると、アプリケーションのタスクは失敗としてマークされます。 さらに、タスクは Outbox に残ります。
 * syncSubmittedTask() および syncSavedTask() 関数は、個別のタスクに操作を実行します。
 * ユーザーがサーバーへのオフライン状態の同期またはバックグラウンドスレッドによる自動同期を選択した後、タスクリストコンポーネントによって、processOfflineSubmittedSavedTasks() 関数への呼び出しが開始されます。
-
