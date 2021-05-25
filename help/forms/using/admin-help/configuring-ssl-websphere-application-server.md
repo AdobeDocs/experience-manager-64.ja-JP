@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7c0efcb3-5b07-4090-9119-b7318c8b7980
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 653daaa4-9e35-40eb-a61e-274109f5f0d2
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 92%
 
 ---
-
 
 # WebSphere Application Server に対する SSL の設定 {#configuring-ssl-for-websphere-application-server}
 
@@ -42,7 +41,7 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 
    >[!NOTE]
    >
-   >（Linux および Solaris）WebSphere Application Server のローカル OS セキュリティレジストリが機能するには、シャドーパスワードファイルが存在している必要があります。シャドウパスワードファイルは通常、**/etc/shadow***という名前で、/etc/passwdファイルに基づいています。 シャドウパスワードファイルが存在しない場合、グローバルセキュリティを有効にし、ユーザーレジストリをローカルOSとして設定した後にエラーが発生します。*
+   >（Linux および Solaris）WebSphere Application Server のローカル OS セキュリティレジストリが機能するには、シャドーパスワードファイルが存在している必要があります。シャドウパスワードファイルは通常、**/etc/shadow***という名前で、/etc/passwdファイルに基づいています。 シャドウパスワードファイルが存在しない場合は、グローバルセキュリティを有効にし、ユーザーレジストリをローカルOSとして設定した後にエラーが発生します。*
 
 1. /etc ディレクトリにあるグループファイルをテキストエディターで開きます。
 1. 手順 2 で作成したユーザーを `root` グループに追加します。
@@ -159,7 +158,7 @@ https で始まる URL を変換するには、その URL の署名者証明書�
 
 ## 動的ポートの設定  {#configuring-dynamic-ports}
 
-IBM WebSphere では、グローバルセキュリティが有効な場合、ORB.init() への複数の呼び出しは許可されません。恒久的な制限については、https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704を参照してください。
+IBM WebSphere では、グローバルセキュリティが有効な場合、ORB.init() への複数の呼び出しは許可されません。永続的な制限については、 https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704を参照してください。
 
 動的ポートを設定し、問題を解決するには、次の手順を実行してください。
 
@@ -176,11 +175,10 @@ IBM WebSphere では、グローバルセキュリティが有効な場合、ORB
 ## sling.properties ファイルを構成します。{#configure-the-sling-properties-file}
 
 1. [aem-forms_root]\crx-repository\launchpad\sling.propertiesファイルを開いて編集します。
-1. `sling.bootdelegation.ibm`プロパティを探し、`com.ibm.websphere.ssl.*`を値フィールドに追加します。 更新されたフィールドは次のようになります。
+1. `sling.bootdelegation.ibm`プロパティを探し、値フィールドに`com.ibm.websphere.ssl.*`を追加します。 更新されたフィールドは次のようになります。
 
    ```as3
    sling.bootdelegation.ibm=com.ibm.xml.*, com.ibm.websphere.ssl.*
    ```
 
 1. ファイルを保存し、サーバーを再起動します。
-
