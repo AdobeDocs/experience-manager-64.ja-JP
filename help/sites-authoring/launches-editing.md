@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: a28539fc-c1dd-43bf-a47b-5f158c5611a7
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 9f208b13-08eb-4305-b712-379e9b9b041e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 100%
 
 ---
-
 
 # ローンチの編集{#editing-launches}
 
@@ -25,10 +24,10 @@ ht-degree: 100%
 
 ページ（またはページのセット）にローンチが作成されている場合、ページのローンチコピーのコンテンツを編集できます。
 
-1. [「参照」のローンチ（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)にアクセスして使用可能なアクションを表示します。
+1. [「参照」のローンチ（Sites コンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)にアクセスして使用可能なアクションを表示します。
 1. 「**このページに移動**」を選択して編集するページを開きます。
 
-### ライブコピーへのローンチページサブジェクトを編集  {#editing-launch-pages-subject-to-a-live-copy}
+### ライブコピーへのローンチページサブジェクトの編集 {#editing-launch-pages-subject-to-a-live-copy}
 
 ローンチが[ライブコピー](/help/sites-administering/msm.md)に基づく場合は、次のようになります。
 
@@ -67,7 +66,7 @@ ht-degree: 100%
    * [ローンチコンソール](/help/sites-authoring/launches.md#the-launches-console)：
 
       * 「**編集**」を選択します。
-   * [「参照」（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
+   * [「参照」（Sites コンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
 
       * 「**ローンチを編集**」を選択します。
 
@@ -88,7 +87,7 @@ ht-degree: 100%
    * [ローンチコンソール](/help/sites-authoring/launches.md#the-launches-console)：
 
       * 「**プロパティ**」を選択します。
-   * [「参照」（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
+   * [「参照」（Sites コンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
 
       * 「**プロパティを編集**」を選択します。
 
@@ -100,7 +99,6 @@ ht-degree: 100%
 
 ## ページのローンチステータスの確認  {#discovering-the-launch-status-of-a-page}
 
-「参照」タブから特定のローンチを選択すると、ステータスが表示されます（[「参照」のローンチ（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)を参照）。
+「参照」タブから特定のローンチを選択すると、ステータスが表示されます（[「参照」のローンチ（Sites コンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)を参照）。
 
 ![chlimage_1-97](assets/chlimage_1-97.png)
-
