@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
-translation-type: tm+mt
-source-git-commit: f824b449b85ad7900aaf73fd79614f5e6140f873
+exl-id: cd036e4a-0884-4ba0-83e9-7013583bbbae
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '611'
 ht-degree: 54%
 
 ---
-
 
 # サンドボックスアプリケーションの開発  {#develop-sandbox-application}
 
@@ -28,9 +27,9 @@ ht-degree: 54%
 
 ### スーパーリソースタイプ  {#super-resource-type}
 
-最初の手順は、`/apps/an-scf-sandbox/components/playpage`ノードにリソースのスーパータイププロパティを追加して、スーパータイプのスクリプトとプロパティを継承するようにすることです。
+最初の手順は、`/apps/an-scf-sandbox/components/playpage`ノードにリソースのスーパータイププロパティを追加し、スーパータイプのスクリプトとプロパティを継承することです。
 
-CRXDE Lite を使用して、次の手順を実行します。
+CRXDE Lite の使用:
 
 <!--Resolve steps below-->
 
@@ -38,14 +37,14 @@ CRXDE Lite を使用して、次の手順を実行します。
 * 型：`String`
 * 値：`foundation/components/page`
 
-1. 緑色の&#x200B;**[!UICONTROL [+]追加]**&#x200B;をクリックします
-1. 「**[!UICONTROL すべて保存]**」をクリックします
+1. 緑の&#x200B;**[!UICONTROL [+]追加]**&#x200B;をクリックします。
+1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
 ![chlimage_1-231](assets/chlimage_1-231.png)
 
-### ヘッドとボディスクリプト{#head-and-body-scripts}
+### 先頭と本文のスクリプト{#head-and-body-scripts}
 
-1. **CRXDE Lite**&#x200B;エクスプローラペインで、`/apps/an-scf-sandbox/components/playpage`に移動し、ファイル`playpage.jsp`を重複クリックして編集ペインで開きます。
+1. **CRXDE Lite**&#x200B;エクスプローラーウィンドウで、`/apps/an-scf-sandbox/components/playpage`に移動し、ファイル`playpage.jsp`をダブルクリックして編集ウィンドウで開きます。
 
 #### /apps/an-scf-sandbox/components/playpage/playpage.jsp {#apps-an-scf-sandbox-components-playpage-playpage-jsp}
 
@@ -66,7 +65,7 @@ CRXDE Lite を使用して、次の手順を実行します。
 
 1. スクリプトの開始／終了タグに注意して、「// TODO ...」の代わりに、&lt;html> のヘッダーと本文部分のスクリプトを含めます。
 
-   スーパータイプが`foundation/components/page`の場合、この同じフォルダーに定義されていないスクリプトは、`/apps/foundation/components/page`フォルダー内のスクリプト（存在する場合）に解決され、それ以外の場合は`/libs/foundation/components/page`フォルダー内のスクリプトに解決されます。
+   スーパータイプが`foundation/components/page`の場合、この同じフォルダーに定義されていないスクリプトは`/apps/foundation/components/page`フォルダー内のスクリプト（存在する場合）に解決され、それ以外のスクリプトは`/libs/foundation/components/page`フォルダー内のスクリプトに解決されます。
 
 #### /apps/an-scf-sandbox/components/playpage/playpage.jsp {#apps-an-scf-sandbox-components-playpage-playpage-jsp-1}
 
@@ -88,16 +87,16 @@ CRXDE Lite を使用して、次の手順を実行します。
 
 1. 基盤スクリプト `head.jsp` をオーバーレイする必要はありませんが、基盤スクリプト `body.jsp` は空です。
 
-   オーサリングの設定を行うには、`body.jsp`をローカルスクリプトでオーバーレイし、本文に段落システム(parsys)を含めます。
+   オーサリング用に設定するには、`body.jsp`をローカルスクリプトでオーバーレイし、本文に段落システム(parsys)を含めます。
 
-   1. `/apps/an-scf-sandbox/components`に移動
-   1. `playpage`ノードを選択
-   1. 右クリックして`Create > Create File...`を選択します。
+   1. `/apps/an-scf-sandbox/components`に移動します。
+   1. `playpage`ノードを選択します。
+   1. 右クリックし、`Create > Create File...`を選択します。
 
       * 名前：**body.jsp**
-   1. 「**[!UICONTROL すべて保存]**」をクリックします
+   1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
-   `/apps/an-scf-sandbox/components/playpage/body.jsp`を開き、次のテキストに貼り付けます。
+   `/apps/an-scf-sandbox/components/playpage/body.jsp`を開き、次のテキストを貼り付けます。
 
    ```xml
    <%--
@@ -115,13 +114,13 @@ CRXDE Lite を使用して、次の手順を実行します。
    </body>
    ```
 
-1. 「**[!UICONTROL すべて保存]**」をクリックします
+1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
 **ページを編集モードでブラウザーに表示します。**
 
 * 標準 UI：[http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html](http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.md)
 
-見出し&#x200B;**コミュニティの再生**&#x200B;だけでなく、ページコンテンツ編集用のUIも表示されます。
+**コミュニティ再生**&#x200B;の見出しだけでなく、ページコンテンツを編集するためのUIも表示される必要があります。
 
 サイドパネルが開くように切り替え、ウィンドウがサイドコンテンツとページコンテンツの両方を表示するのに十分な大きさである場合、アセット／コンポーネントサイドパネルが表示されます。
 
@@ -129,7 +128,7 @@ CRXDE Lite を使用して、次の手順を実行します。
 
 * クラシックUI:[http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html](http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html)
 
-以下に、コンテンツファインダー(cf)を含むクラシックUIでの再生ページの表示方法を示します。
+クラシックUIでの再生ページの表示方法を次に示します(コンテンツファインダー(cf)を含む)。
 
 ![chlimage_1-233](assets/chlimage_1-233.png)
 
@@ -148,7 +147,7 @@ CRXDE Lite を使用して、次の手順を実行します。
 * レビューの概要 (表示)
 * 投票
 
-さらに、「**[!UICONTROL 一般]**&#x200B;コンポーネント(
+さらに、「**[!UICONTROL 一般]**」コンポーネント(例：
 
 * 画像
 * テーブル
@@ -157,22 +156,22 @@ CRXDE Lite を使用して、次の手順を実行します。
 
 >[!NOTE]
 >
->page parに対して有効になっているコンポーネントは、リポジトリに、`components`\
+>ページパラメーターに対して有効なコンポーネントは、`components`\
 >`/etc/designs/an-scf-sandbox/jcr:content/playpage/par` node.
 
 ## ランディングページ {#landing-page}
 
 多言語環境では、クライアントからの要求を解析して優先言語を特定するスクリプトがルートページに含まれます。
 
-この単純な例では、ルートページは英語のページにリダイレクトするように静的に設定されています。英語は、今後、再生ページへのリンクを持つメインランディングページとして開発される可能性があります。
+この簡単な例では、ルートページは英語のページにリダイレクトするように静的に設定されています。英語のページは、今後、再生ページへのリンクを持つメインランディングページとして開発される可能性があります。
 
 ブラウザーの URL をルートページ [http://localhost:4502/editor.html/content/an-scf-sandbox.html](https://locahost:4502/editor.html/content/an-scf-sandbox.html) に変更します。
 
 * ページ情報アイコンを選択します。
-* 「**[!UICONTROL プロパティを開く]**」を選択します
+* 「**[!UICONTROL プロパティを開く]**」を選択します。
 * 「詳細」タブ
 
-   * リダイレクトエントリについては、**[!UICONTROL Webサイト/SCF Sandboxサイト/SCF Sandbox]**&#x200B;を参照します。
+   * リダイレクトエントリの場合、**[!UICONTROL Webサイト/SCF Sandbox Site/SCF Sandbox]**&#x200B;を参照します。
    * 「**[!UICONTROL OK]**」をクリックします。
 
 * 「**[!UICONTROL OK]**」をクリックします。
