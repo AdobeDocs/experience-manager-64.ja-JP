@@ -10,9 +10,8 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 09536869-3806-4b89-adfd-68f408298c55
 exl-id: af4f25d4-a784-47fe-bca4-75c8d373f7d2
-feature: Content Fragments
+feature: コンテンツフラグメント
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
 source-wordcount: '256'
@@ -24,7 +23,7 @@ ht-degree: 94%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、[AEM 6.4 Service Pack 2 (6.4.2.0)以降](/help/release-notes/sp-release-notes.md)のアプリケーションが必要です。
+>一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)以降のアプリケーション](/help/release-notes/sp-release-notes.md)が必要です。
 
 関連コンテンツによって関連性がわかり、フラグメントをページに追加するときに、（オプションで）アセットをフラグメントと一緒に使用できるようになります。これにより、[ページでコンテンツフラグメントを使用するときに利用できるアセットが広範になることで](/help/sites-authoring/content-fragments.md#using-associated-content)柔軟性が生まれると同時に、適切なアセットを検索するのに要する時間の削減にもつながります。
 
