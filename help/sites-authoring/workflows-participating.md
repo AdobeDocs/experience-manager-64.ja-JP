@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 37c8b1bd-0e60-42d2-80ed-dece3f5c2342
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 7b645497-ddbf-403c-9e78-5e845f6bda50
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1535'
 ht-degree: 100%
 
 ---
-
 
 # ワークフローへの参加{#participating-in-workflows}
 
@@ -29,7 +28,7 @@ ht-degree: 100%
 * [ワークフロー項目を開いて、詳細を表示（またはアクションを実行）](#opening-a-workflow-item-to-view-details-and-take-actions)
 * [ワークロードペイロード（複数のリソース）を表示](#viewing-the-workflow-payload-multiple-resources)
 
-## 使用可能なワークフローアクションの通知  {#notifications-of-available-workflow-actions}
+## 使用可能なワークフローアクションの通知 {#notifications-of-available-workflow-actions}
 
 作業項目（**コンテンツを承認**&#x200B;など）が割り当てられると、様々なアラートや通知が表示されます。
 
@@ -286,4 +285,3 @@ ht-degree: 100%
    ![wf-78](assets/wf-78.png)
 
 1. リンクは、個別のページを開くために使用できます。
-
