@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 986d16fc-4c81-4785-b1f3-fe8bd7ff669e
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 4817d150-9bfe-4cb9-8f06-6ff4eaaa6f55
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '358'
 ht-degree: 86%
 
 ---
-
 
 # 証明書と秘密鍵証明書の管理の基本事項 {#basics-of-managing-certificates-and-credentials}
 
@@ -54,4 +53,3 @@ AEM Forms では、キーペアを生成するためのオプションは提供�
 1. 認証者に通知すると、認証者は証明書失効リストに問題が発生したキーを追加し、このキーを失効させます。
 1. 認証者から新しいキーと証明書を取得します。
 1. 問題のあったキーを使用して署名したドキュメントに、新しいキーを使用して再度署名します。
-
