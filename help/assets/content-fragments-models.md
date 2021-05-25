@@ -2,20 +2,19 @@
 title: コンテンツフラグメントモデル
 seo-title: コンテンツフラグメントモデル
 description: コンテンツフラグメントモデルは、構造化コンテンツを含むコンテンツフラグメントを作成するために使用します。
-seo-description: コンテンツフラグメントモデル は、構造化されたコンテンツを使用してコンテンツフラグメントを作成する場合に使用します。
+seo-description: コンテンツフラグメントモデル は、構造化コンテンツを含むコンテンツフラグメントの作成に使用されます。
 uuid: 59176a32-1255-4a46-ad00-344bde843ea6
 content-type: reference
 topic-tags: content-fragments
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 45e67357-4524-4d25-b5f1-21182b8e803c
 exl-id: 39ed07ec-54a6-4387-8435-e891726c411c
-feature: Content Fragments
+feature: コンテンツフラグメント
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
 source-wordcount: '706'
-ht-degree: 90%
+ht-degree: 91%
 
 ---
 
@@ -23,7 +22,7 @@ ht-degree: 90%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、[AEM 6.4 Service Pack 2 (6.4.2.0)以降](../release-notes/sp-release-notes.md)のアプリケーションが必要です。
+>一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)以降のアプリケーション](../release-notes/sp-release-notes.md)が必要です。
 
 コンテンツフラグメントモデルは、[コンテンツフラグメント](content-fragments.md)のコンテンツの構造を定義します。
 
@@ -31,7 +30,7 @@ ht-degree: 90%
 
 >[!CAUTION]
 >
->**[!UICONTROL コンテンツフラグメントモデル]**&#x200B;を有効にしない場合、**[!UICONTROL 「作成]**」オプションは、新しいモデルの作成には使用できません。
+>**[!UICONTROL コンテンツフラグメントモデル]**&#x200B;を有効にしないと、新しいモデルを作成するための「**[!UICONTROL 作成]**」オプションは使用できません。
 
 コンテンツフラグメントモデルを有効にするには、次の操作を実行する必要があります。
 
@@ -43,7 +42,7 @@ ht-degree: 90%
 [新しいコンテンツフラグメントモデルを作成する](#creating-a-content-fragment-model)には、最初に設定マネージャーを使用してコンテンツフラグメントモデルを有効にする&#x200B;**必要があります**。
 
 1. **[!UICONTROL ツール]**／**[!UICONTROL 一般]**&#x200B;に移動し、**[!UICONTROL 設定ブラウザー]**&#x200B;を開きます。
-   * 詳しくは、[設定ブラウザーのドキュメント](/help/sites-administering/configurations.md)を参照してください。
+   * 詳しくは、[](/help/sites-administering/configurations.md)設定ブラウザーのドキュメントを参照してください。
 1. Web サイトに適した場所を選択します。
 1. 「**[!UICONTROL 作成]**」を使用してダイアログを開き、次の操作をおこないます。
 
@@ -96,7 +95,7 @@ ht-degree: 90%
 
    >[!NOTE]
    >
-   >フィールドが&#x200B;**必須**&#x200B;の場合、左側のウィンドウに示される&#x200B;**ラベル**&#x200B;は、アスタリスク(**&amp;ast;**)でマークされます。
+   >フィールドが&#x200B;**必須**&#x200B;の場合、左側のウィンドウに表示される&#x200B;**ラベル**&#x200B;にアスタリスク(**&amp;ast;**)が付きます。
 
    ![cfm-6420-12](assets/cfm-6420-12.png)
 
