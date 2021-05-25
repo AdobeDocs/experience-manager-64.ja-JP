@@ -1,8 +1,8 @@
 ---
-title: PreferencesNodesのプログラム管理
-seo-title: PreferencesNodesのプログラム管理
-description: Preferences Manager Service API(Java)を使用して、環境設定ノードをプログラムで管理します。
-seo-description: Preferences Manager Service API(Java)を使用して、環境設定ノードをプログラムで管理します。
+title: PreferencesNodesをプログラムで管理する
+seo-title: PreferencesNodesをプログラムで管理する
+description: 環境設定マネージャーサービスAPI(Java)を使用して、環境設定ノードをプログラムで管理します。
+seo-description: 環境設定マネージャーサービスAPI(Java)を使用して、環境設定ノードをプログラムで管理します。
 uuid: f0cb117a-a6cc-4ca5-8511-b3bc9f6738e9
 contentOwner: admin
 content-type: reference
@@ -10,35 +10,34 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: operations
 discoiquuid: 9d4dba7f-49d8-4112-bc8a-04dafc99a936
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: d580b32c-a344-4a8c-bd61-0949da76d981
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
+# 環境設定ノード{#programmatically-managing-the-preferencesnodes}をプログラムで管理する
 
-# 環境設定ノードのプログラム管理{#programmatically-managing-the-preferencesnodes}
+このトピックでは、環境設定マネージャーサービスAPI(Java)を使用して、プログラムで環境設定ノードを管理する方法について説明します。
 
-このトピックでは、Preferences Manager Service API(Java)を使用して、環境設定ノードをプログラムで管理する方法について説明します。
+設定は、Administrator UIから手動で変更できます。 オプションを変更するには、`Home>Settings>User Management> Configuration>Manual Configuration`に移動します。 `config.xml`を読み込むと、ノード`/Adobe/Adobe Experience Manager Forms/Config/UM persist`で行われた変更を除くすべての変更が失われます。 User Managementの読み込みと書き出しのプレビューでは、他のコンポーネントの構成設定の変更はサポートされていません。 これらの変更は、`PreferencesManagerServiceClient` APIを使用して行うことができます。
 
-設定は、管理者UIから手動で変更できます。 オプションを変更するには、`Home>Settings>User Management> Configuration>Manual Configuration`に移動します。 変更を行った後で`config.xml`を読み込むと、ノード`/Adobe/Adobe Experience Manager Forms/Config/UM persist`で行われた変更以外の変更はすべて失われます。 User Managementのインポートとエクスポートのプレビューでは、他のコンポーネントの構成設定の変更はサポートされていません。 現在は、`PreferencesManagerServiceClient` APIを使用してこれらの変更を行うことができます。
-
-**手**&#x200B;順の概要環境設定ノードをプログラムで管理するには、次の手順を実行します。
+**手順の概要プ**&#x200B;ログラムで環境設定ノードを管理するには、次の手順を実行します。
 
 1. プロジェクトファイルを含めます。
 1. PreferencesManagerServiceクライアントの作成
-1. 適切なロールまたは権限操作を呼び出します
+1. 適切なロールまたは権限操作を呼び出す
 
 **プロジェクトファイルを含める**
 
-開発プロジェクトに必要なファイルを含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、プロキシファイルを必ず含めます。
+必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、プロキシファイルを必ず含めてください。
 
 **PreferencesManagerServiceクライアントの作成**
 
-User Management PreferencesManagerService操作をプログラムで実行する前に、PreferencesManagerServiceクライアントを作成する必要があります。 Java APIを使用すると、PreferencesManagerServiceClientオブジェクトを作成することで実現できます。
+User Management PreferencesManagerService操作をプログラムで実行する前に、PreferencesManagerServiceクライアントを作成する必要があります。 Java APIを使用すると、PreferencesManagerServiceClientオブジェクトを作成してこれを実現できます。
 
-**適切なロールまたは権限操作を呼び出します**
+**適切なロールまたは権限操作を呼び出す**
 
-サービスクライアントを作成したら、環境設定マネージャーの操作を呼び出すことができます。 サービスクライアントでは、権限の読み取りと設定が可能です。
+サービスクライアントを作成したら、Preferences Manager操作を呼び出すことができます。 サービスクライアントを使用すると、権限の読み取りと設定が可能です。
