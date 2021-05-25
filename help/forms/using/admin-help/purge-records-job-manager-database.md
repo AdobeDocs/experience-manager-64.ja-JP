@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 69a406f2-4fa8-40bb-b671-7b0f5b6a2c4c
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: be2e2a4b-5aac-4612-81b6-b4bbb3036d77
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 100%
 
 ---
-
 
 # ジョブマネージャーのデータベースからの古いレコードの削除 {#purge-records-from-the-job-manager-database}
 
@@ -68,4 +67,3 @@ ht-degree: 100%
    >過去の開始日時を指定した場合、AEM Forms では指定した日付に基づいて次の開始日が論理的に計算されます。例えば、週 1 回のジョブクリアを 4 月 7 日から開始するようにスケジュールし、現在の日付が 4 月 9 日である場合、最初のクリアは 4 月 14 日に行われます。
 
 1. 「スケジューラーを開始」をクリックします。以前のスケジューラーの設定はすべて、新しい設定に置き換わります。
-
