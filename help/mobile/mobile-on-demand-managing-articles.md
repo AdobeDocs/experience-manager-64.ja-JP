@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: b46058f9-4691-4fba-a656-0f8507875a79
-translation-type: tm+mt
-source-git-commit: 622e613d556acda7cd98d4b3d20a20133756fd92
+exl-id: a874b1da-26ec-4e33-97bd-f474edc6f4e9
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 89%
 
 ---
-
 
 # 記事の管理{#managing-articles}
 
@@ -28,7 +27,7 @@ ht-degree: 89%
 
 ## 記事の概要  {#articles-overview}
 
-記事は、情報を伝えるためのアートと共に、テキストを表します。
+記事は、テキストベースの情報を伝えるアートを表します。
 
 >[!NOTE]
 >
@@ -65,7 +64,7 @@ ht-degree: 89%
 
 新しい記事を読み込むワークフローは以下のとおりです。
 
-1. Mobileで、カタログからMobile On-Demand Appを選択します。
+1. 「モバイル」から、カタログからMobile On-Demandアプリを選択します。
 1. **記事を管理**&#x200B;タイルの右上隅にある下矢印をクリックし、「記事を読み込む」を選択します。
 1. ダイアログで「**記事を読み込む**」をクリックし、「閉じる」をクリックします。
 1. これで、Mobile On-Demand記事が&#x200B;**記事を管理**&#x200B;タイルに表示されます。
@@ -98,12 +97,12 @@ ht-degree: 89%
 記事を表示／編集する一般的なワークフローは以下のとおりです。
 
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
-1. **記事の管理**&#x200B;タイルから記事を選択します。
+1. **記事を管理**&#x200B;タイルから記事を選択します。
 
 1. アクションバーから「**プロパティを表示**」を選択します。
 1. コレクションの使用可能なすべてのメタデータを確認します。
 1. 必要に応じてメタデータを編集し、終わったら「**保存**」をクリックします。
-1. 必要に応じて、変更内容を即座にMobile On-Demandにアップロードします。
+1. オプションで、変更内容を直ちにMobile On-Demandにアップロードします。
 
 ## 記事のアップロード {#uploading-an-article}
 
