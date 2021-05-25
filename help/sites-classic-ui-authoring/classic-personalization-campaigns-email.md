@@ -9,21 +9,20 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: eb72f934-4b0f-4a71-b2a2-3ddf78db8c3c
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 5e97f7bd-d668-423d-9f65-7dcc8fb1943a
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1771'
 ht-degree: 94%
 
 ---
 
-
 # 電子メールマーケティング{#e-mail-marketing}
 
 >[!NOTE]
 >
->Adobeは、AEM SMTPサービスから送信される、開いている電子メールやバウンスしている電子メールをさらに拡張する予定はありません。\
->[Adobe CampaignとAEM統合](/help/sites-administering/campaign.md)の活用を推奨します。
+>Adobeは、AEM SMTPサービスから送信される、開封済み/バウンス済みのEメールの機能をさらに強化する予定はありません。\
+>[Adobe CampaignとそのAEM統合を活用](/help/sites-administering/campaign.md)することをお勧めします。
 
 電子メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成できるだけでなく、ニュースレターに固有の新しいコンテンツを追加できます。
 
@@ -90,7 +89,7 @@ ht-degree: 94%
 
    * **説明**
 
-      ニュースレターの説明です。
+      ニュースレターの説明。
 
    * **オンタイム**
 
@@ -98,7 +97,7 @@ ht-degree: 94%
 
    * **デフォルトの受信者リスト**
 
-      ニュースレターを受け取るデフォルトのリストです。
+      ニュースレターを受け取るデフォルトのリスト。
    これらの設定は、後から&#x200B;**プロパティ...** ダイアログで更新できます。
 
 1. 「**OK**」をクリックして、保存します。
@@ -146,7 +145,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->ニュースレターを送信する前に、`http://localhost:4502/system/console/configMgr`にあるDay CQ Link ExternalizerのOSGi設定を確認してください。
+>ニュースレターを送信する前に、`http://localhost:4502/system/console/configMgr`でDay CQ Link ExternalizerのOSGi設定を確認してください。
 >
 >デフォルトでは、このパラメーターの値は `localhost:4502` となります。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
 
@@ -229,7 +228,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->ニュースレターを送信する前に、`http://localhost:4502/system/console/configMgr`にあるDay CQ Link ExternalizerのOSGi設定を確認してください。
+>ニュースレターを送信する前に、`http://localhost:4502/system/console/configMgr`でDay CQ Link ExternalizerのOSGi設定を確認してください。
 >
 >デフォルトでは、このパラメーターの値は `localhost:4502` となります。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
 
@@ -302,4 +301,3 @@ ht-degree: 94%
    ![chlimage_1-169](assets/chlimage_1-169.png)
 
 1. Geometrixx Newsletter の&#x200B;**サインアップ**&#x200B;用のフィールドに電子メールアドレスを入力し、「**サインアップ**」をクリックします。これで、ニュースレターを購読できるようになりました。
-
