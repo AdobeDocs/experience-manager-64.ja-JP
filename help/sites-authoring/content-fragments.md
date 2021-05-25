@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 076a3064-80c3-454b-93f9-6ae925c54328
-translation-type: tm+mt
-source-git-commit: c10c0ca79a0dd2e79c2d821f11cce3d28058aaa0
+exl-id: bbe4ae86-e9b8-4c3f-ada3-82470e371c4e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 98%
 
 ---
 
-
 # コンテンツフラグメントを使用したページのオーサリング{#page-authoring-with-content-fragments}
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、[AEM 6.4 Service Pack 2 (6.4.2.0)以降](/help/release-notes/sp-release-notes.md)のアプリケーションが必要です。
+>一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)以降のアプリケーション](/help/release-notes/sp-release-notes.md)が必要です。
 
 Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments.md)として作成および管理されます。
 
@@ -95,7 +94,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
    >その他の編集機能について詳しくは、次を参照してください。
    >
    >* [レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)
-   >* [ページのコンテンツの編集](/help/sites-authoring/editing-content.md)
+   * [ページのコンテンツの編集](/help/sites-authoring/editing-content.md)
 
 
 ## 要素またはバリエーションの選択 {#selecting-the-element-or-variation}
@@ -119,8 +118,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
    * フラグメントが適切なテンプレートで作成されている場合に選択できます。
 
    >[!NOTE]
-   >
-   >使用できるエレメントは、使用するテンプレートによって異なります。
+   使用できるエレメントは、使用するテンプレートによって異なります。
 
 * **[!UICONTROL バリエーション]**
 
@@ -141,8 +139,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 コンポーネントツールバーの&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンを使用して、フラグメントのソースを開いて（アセットを）編集できます。この機能により、[コンテンツフラグメントを編集および管理できます](/help/assets/content-fragments.md)。
 
 >[!CAUTION]
->
->フラグメントソースの編集は、そのコンテンツフラグメントを参照するすべてのページに影響します。
+フラグメントソースの編集は、そのコンテンツフラグメントを参照するすべてのページに影響します。
 
 ## 中間コンテンツの追加  {#adding-in-between-content}
 
@@ -157,42 +154,32 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 * [関連コンテンツ](#using-associated-content)を中間コンテンツのソースとして使用する。
 
 >[!CAUTION]
->
->中間コンテンツは、ページコンテンツです。中間コンテンツはコンテンツフラグメントに保存されません。
+中間コンテンツは、ページコンテンツです。中間コンテンツはコンテンツフラグメントに保存されません。
 
 ![cfm-6420-02](assets/cfm-6420-02.png)
 
 >[!NOTE]
->
->フラグメント自体に[ビジュアルアセット（画像）を挿入](/help/assets/content-fragments-variations.md#inserting-assets-into-your-fragment)することもできます。
->
->フラグメント自体に挿入されたビジュアルアセットは、フラグメントの前の段落に配置されます。つまり、ビジュアルアセットと前の段落の間に中間コンテンツを配置することはできません。
+フラグメント自体に[ビジュアルアセット（画像）を挿入](/help/assets/content-fragments-variations.md#inserting-assets-into-your-fragment)することもできます。
+フラグメント自体に挿入されたビジュアルアセットは、フラグメントの前の段落に配置されます。つまり、ビジュアルアセットと前の段落の間に中間コンテンツを配置することはできません。
 
 >[!CAUTION]
->
->ページのコンテンツフラグメントに中間コンテンツを追加した後に、基になるコンテンツフラグメントの構造をコンテンツフラグメントエディターなどで変更すると、エラーや予期しない結果を引き起こすおそれがあります。
->
->これが発生した場合、中間コンテンツはそのまま維持されます。
->
->* 中間コンポーネントは、フラグメントフローのコンポーネントのシーケンス内に絶対位置を持ちます。この位置は、フラグメント内の段落のコンテンツが変更されても変更されません。\
-   >  中間段落は隣に位置する（フラグメント）段落とコンテキスト関係を持たないので、これにより、相対位置が変更したかのように見せることができます。
->* 2 つの段落構造が競合する場合を除きます。競合する場合、中間コンテンツは（内部的には存在していますが）表示されません。
-
->
+ページのコンテンツフラグメントに中間コンテンツを追加した後に、基になるコンテンツフラグメントの構造をコンテンツフラグメントエディターなどで変更すると、エラーや予期しない結果を引き起こすおそれがあります。
+これが発生した場合、中間コンテンツはそのまま維持されます。
+* 中間コンポーネントは、フラグメントフローのコンポーネントのシーケンス内に絶対位置を持ちます。この位置は、フラグメント内の段落のコンテンツが変更されても変更されません。\
+   中間段落は隣に位置する（フラグメント）段落とコンテキスト関係を持たないので、これにより、相対位置が変更したかのように見せることができます。
+* 2 つの段落構造が競合する場合を除きます。競合する場合、中間コンテンツは（内部的には存在していますが）表示されません。
 
 
 
-## 関連コンテンツの使用  {#using-associated-content}
+## 関連コンテンツの使用 {#using-associated-content}
 
 [コンテンツフラグメント](/help/assets/content-fragments.md)に[コンテンツを関連付けた](/help/assets/content-fragments-assoc-content.md)場合、これらのアセットは（フラグメントをコンテンツページに配置した後に）サイドパネルから使用できます。関連コンテンツは、事実上、[中間コンテンツ](#adding-in-between-content)用のコンテンツの特別なソースです。
 
 >[!NOTE]
->
->[ビジュアルアセット（画像など）](/help/assets/content-fragments.md#fragments-with-visual-assets)をフラグメントやページに追加するには、様々な方法があります。
+[ビジュアルアセット（画像など）](/help/assets/content-fragments.md#fragments-with-visual-assets)をフラグメントやページに追加するには、様々な方法があります。
 
 >[!NOTE]
->
->1 つのページに複数のコンテンツフラグメントがある場合、「**[!UICONTROL 関連コンテンツ]**」タブにすべてのフラグメントに適切なアセットが表示されます。
+1 つのページに複数のコンテンツフラグメントがある場合、「**[!UICONTROL 関連コンテンツ]**」タブにすべてのフラグメントに適切なアセットが表示されます。
 
 コンテンツが関連付けられたフラグメントをページに追加すると、新しいタブ（「**[!UICONTROL 関連コンテンツ]**」）がサイドパネルに開きます。
 
@@ -219,4 +206,3 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
 * フラグメントは、[フラグメントを Assets コンソールで作成](/help/assets/content-fragments-managing.md#publishing-and-referencing-a-fragment)した後に公開できます。
 * 公開されるページに&#x200B;*非公開のフラグメント*&#x200B;が使用されると、そのタイミングでフラグメントも公開できます。
-
