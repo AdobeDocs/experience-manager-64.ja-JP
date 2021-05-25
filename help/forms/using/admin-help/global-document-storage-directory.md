@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a33b8834-6e39-47eb-a53b-0982d32e80ad
-translation-type: tm+mt
-source-git-commit: f1558c7dec34649d00afcd04245ea552e8c6b978
+exl-id: 37d6187f-4f91-4ad4-b0d6-eaae165abe64
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '700'
 ht-degree: 97%
 
 ---
-
 
 # グローバルドキュメントストレージディレクトリ{#global-document-storage-directory}
 
@@ -45,12 +44,12 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
   <tr> 
    <td><p>デプロイされたサービスコンテナ</p></td> 
    <td><p>可</p></td> 
-   <td><p>いいえ</p></td> 
+   <td><p>不可</p></td> 
   </tr> 
   <tr> 
    <td><p>Document Manager </p></td> 
    <td><p>不可</p></td> 
-   <td><p>可</p></td> 
+   <td><p>対応</p></td> 
   </tr> 
   <tr> 
    <td><p>Forms リポジトリ</p></td> 
@@ -99,11 +98,10 @@ AEM Forms は、サービスコンテナおよび Java 2 Platform Enterprise Edi
 * adobe-core-*[appserver]*.ear
 * adobe-core-*[appserver]*-*[OS]*.ear
 
-AEM Forms の実装では、アセンブリされた複数の EAR ファイルといくつかの補助ファイルを、AEM Forms ソリューションを実行する予定のアプリケーションサーバーにデプロイします。複数のモジュールを設定およびアセンブリした場合は、デプロイ可能なモジュールがデプロイ可能な EAR ファイル内にパッケージ化されています。これらのファイルをデプロイするには、*[appserver home]*\server\all\deploy directoryにファイルをコピーします。
+AEM Forms の実装では、アセンブリされた複数の EAR ファイルといくつかの補助ファイルを、AEM Forms ソリューションを実行する予定のアプリケーションサーバーにデプロイします。複数のモジュールを設定およびアセンブリした場合は、デプロイ可能なモジュールがデプロイ可能な EAR ファイル内にパッケージ化されています。これらのファイルをデプロイするには、*[appserver home]*\server\all\deploy directoryフォルダーにファイルをコピーします。
 
 また、モジュールおよび AEM Forms アーカイブファイルは、JAR ファイルにパッケージングされています。これらのファイルの種類は J2EE ではないので、アプリケーションサーバーにはデプロイされず、GDS ディレクトリにコピーされ、それらの場所への参照が AEM Forms データベースに格納されます。このため、GDS ディレクトリをクラスターのすべてのノードで共有する必要があります。すべてのノードが DSC の中央ストレージディレクトリにアクセスできることが必要です。
 
 >[!NOTE]
 >
 >サービスコンテナをデプロイする前に、GDS ディレクトリの作成と設定を必ず行ってください（[GDS ディレクトリの設定](global-document-storage-directory.md#configuring-the-gds-directory)を参照）。
-
