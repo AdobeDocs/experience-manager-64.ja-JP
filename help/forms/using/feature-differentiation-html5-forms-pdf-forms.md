@@ -9,15 +9,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 273096d0-b0e1-4519-8af6-11b3414cc172
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 'モバイルフォーム '
+exl-id: 2b82e68c-ec11-417d-a8e2-769da9b35140
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '503'
+ht-degree: 80%
 
 ---
-
 
 # HTML5 フォームと PDF フォームの機能の違い {#feature-differentiation-between-html-forms-and-pdf-forms}
 
@@ -48,12 +47,12 @@ ht-degree: 0%
   <tr>
    <td>画像</td> 
    <td>データ URI スキームは画像の表示に使用されます。すべてのブラウザーの最新バージョンはこのスキームをサポートしていますが、それぞれのブラウザーでサポートされる画像形式の範囲に違いがあります。<br /> </td> 
-   <td>.gif、.png、.jpeg、.bmp、および.tiff形式はサポートされています。</td> 
+   <td>.gif、.png、.jpeg、.bmp、.tiff形式がサポートされています。</td> 
   </tr>
   <tr>
    <td>ページネーション<br /> </td> 
    <td><p>HTML5 フォームは、PDF フォームと同様の外観を提供するためにパネルとボックスに分けられています。ページのサイズは動的に計算されます。HTML5 フォーム内のページのすべてのコンテンツが削除されたか非表示としてマークされた場合、空白ページは非表示になり、ページ間にある空白ページの空白スペースは表示されません。</p> <p>データをマージするかスクリプトのコンテンツをページに追加した場合、新しく追加したコンテンツを取り込めるようにページの長さが拡張されます。新しく追加したコンテンツを取り込むために新しいページがフォームに追加されることはありません。 </p> <p><strong>注意：</strong>HTML5 フォーム内のページのすべてのコンテンツが削除されたか非表示としてマークされた場合、1 ページと 2 ページ間にある空白ページ（空白スペース）は表示されますが、その他のページ間にある空白ページ（空白スペース）は表示されません。</p> </td> 
-   <td>PDFでのページ編集は、結合されたデータコンテンツまたはユーザーのコンテンツに依存し、それに基づいてページ数が増減します。</td> 
+   <td>PDFでのページ編集は、結合されたデータコンテンツまたはユーザーコンテンツに依存し、それに基づいてページ数が増減します。</td> 
   </tr>
   <tr>
    <td>ヘッダー/フッター </td> 
@@ -67,7 +66,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td>XFA スクリプト API</td> 
-   <td>最も一般的に使用されるXFAスクリプト構成をサポートします。 サポートされている構成要素の詳しいリストについては、<a href="/help/forms/using/scripting-support.md">スクリプティングのサポート</a>を参照してください。</td> 
+   <td>最も一般的に使用されるXFAスクリプト構成をサポートします。 サポートされている構成要素の詳細なリストについては、<a href="/help/forms/using/scripting-support.md">スクリプティングのサポート</a>を参照してください。</td> 
    <td>すべての XFA スクリプトの構成要素をサポート。</td> 
   </tr>
   <tr>
@@ -83,5 +82,4 @@ ht-degree: 0%
  </tbody>
 </table>
 
-HTML5レンディション用のフォームテンプレートを有効にし、HTML5フォームとXFAベースのPDFの動作と外観の一貫性を保つためには、ベストプラクティスに従ってください。 ベストプラクティスの詳しい一覧については、「[HTML5 フォームをデザインする上でのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md)」を参照してください。
-
+ベストプラクティスに従ってHTML5レンディション用のフォームテンプレートを有効にし、HTML5フォームとXFAベースのPDFの動作と外観の一貫性を確保します。 ベストプラクティスの詳しい一覧については、「[HTML5 フォームをデザインする上でのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md)」を参照してください。
