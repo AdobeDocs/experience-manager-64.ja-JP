@@ -7,15 +7,14 @@ uuid: 1423038b-8261-455b-b4ff-7be7222448c9
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 75ee94f7-e939-409b-b8cb-8fdc3f79bb63
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: アダプティブフォーム
+exl-id: 969b0c11-adc7-476e-8c82-d444fccba984
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '599'
 ht-degree: 82%
 
 ---
-
 
 # アダプティブフォームのセットを使用したアダプティブフォームの作成 {#create-an-adaptive-form-using-a-set-of-adaptive-forms}
 
@@ -75,7 +74,7 @@ ht-degree: 82%
 </afData>
 ```
 
-別のフォームを挿入して、顧客に住所の入力を求める場合は、`bindref` `/application/houseAddress or /houseAddress.`XMLを次のように適用します。
+顧客が住所を入力できる別のフォームを挿入する場合は、`bindref` `/application/houseAddress or /houseAddress.`を適用すると、XMLは次のようになります。
 
 ```xml
 <afData>
@@ -101,7 +100,7 @@ ht-degree: 82%
 
 スキーマのルートと同じサブルート名にするには、（この例では`Address` ）、インデックス付きの bindref を使用します。
 
-例えば、bindref `/application/address[1]`または`/address[1]`と`/application/address[2]`または`/address[2]`を適用します。 フォームのXMLは次のとおりです。
+例えば、bindref `/application/address[1]`や`/address[1]`、`/application/address[2]`や`/address[2]`を適用します。 フォームのXMLは次のとおりです。
 
 ```xml
 <afData>
@@ -140,9 +139,8 @@ ht-degree: 82%
 アセットブラウザーを使用して、子フォームとしてアダプティブフォームを追加するステップを実行します。
 
 1. 親フォームを編集モードで開きます。
-1. サイドバーで、「**アセット** ![アセットブラウザー](assets/assets-browser.png)」をクリックします。 アセットの下で、**Adaptive Form** をドロップダウンリストから選択します。
+1. サイドバーで、「**アセット**![アセットブラウザー](assets/assets-browser.png)」をクリックします。 アセットの下で、**Adaptive Form** をドロップダウンリストから選択します。
    [ ![アセットの下でアダプティブフォームを選択する](assets/asset.png)](assets/asset-1.png)
 
 1. 子フォームとして追加するアダプティブフォームをドラッグ＆ドロップします。
-   [ ![アダプティブフォームを](assets/drag-drop.png)](assets/drag-drop-1.png)サイトにドラッグ&amp;ドロップするドロップしたアダプティブフォームは、子フォームとして追加されます。
-
+   [ ![サイトにアダプティブフォームをドラッグ&amp;ドロッ](assets/drag-drop.png)](assets/drag-drop-1.png)プします。ドロップしたアダプティブフォームは子フォームとして追加されます。
