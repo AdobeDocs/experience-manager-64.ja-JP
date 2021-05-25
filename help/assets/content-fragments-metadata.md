@@ -10,9 +10,8 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 96cf7c92-af98-417f-ab60-b368e3846ef8
 exl-id: 0123fb44-9f38-4d9e-9dce-7c9cfd4260e1
-feature: Content Fragments,Metadata
+feature: コンテンツフラグメント，メタデータ
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
 source-wordcount: '129'
@@ -24,7 +23,7 @@ ht-degree: 87%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能では、[AEM 6.4 Service Pack 2 (6.4.2.0)以降](/help/release-notes/sp-release-notes.md)のアプリケーションが必要です。
+>一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)以降のアプリケーション](/help/release-notes/sp-release-notes.md)が必要です。
 
 ## プロパティ／メタデータの編集 {#editing-properties-meta-data}
 
