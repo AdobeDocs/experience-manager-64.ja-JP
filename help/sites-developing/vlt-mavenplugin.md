@@ -1,28 +1,27 @@
 ---
-title: AdobeコンテンツパッケージMavenプラグイン
-description: Content Package Mavenプラグインを使用したAEMアプリケーションのデプロイ
-translation-type: tm+mt
-source-git-commit: 5bc6f63922f7f63d60f0048b167a08e4190a8f92
+title: Adobe Content Package Maven Plugin
+description: Content Package Maven Plugin を使用した AEM アプリケーションのデプロイについて説明します
+exl-id: 106a677b-7c89-4fbc-bb96-eaa3dfa71b58
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '163'
-ht-degree: 11%
+ht-degree: 34%
 
 ---
 
+# Adobe Content Package Maven Plugin {#adobe-content-package-maven-plugin}
 
-# AdobeコンテンツパッケージMavenプラグイン{#adobe-content-package-maven-plugin}
+パッケージデプロイメントおよび管理タスクを Maven プロジェクトに組み込むには、Adobe Content Package Maven Plugin を使用します。
 
-AdobeコンテンツパッケージMavenプラグインを使用して、パッケージの展開と管理タスクをMavenプロジェクトに統合します。
-
-構築されたパッケージのAEMへの展開は、AdobeコンテンツパッケージMavenプラグインによって実行され、AEM Package Managerを使用して通常実行されるタスクの自動化を可能にします。
+構築されたパッケージのAEMへのデプロイメントは、AdobeContent Package Mavenプラグインによって実行され、AEM Package Managerを使用して通常実行されるタスクを自動化できます。
 
 >[!TIP]
 >
->詳しくは、次を参照してください。
+>詳しくは、以下を参照してください。
 >
->* AEMの[AdobeコンテンツパッケージMavenプラグイン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools)の記事は、AEMアプリケーションの展開方法に関するCloud Serviceドキュメントとして提供されています。
->* AEMの[AEM Project Structure](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.translate.html)記事は、最新のAEMプロジェクトの構造化方法に関するCloud Serviceドキュメントとして提供されています。
->* アーキタイプを使用して新しいAEMプロジェクトを開始する方法については、[AEMプロジェクトのアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)のドキュメントを参照してください。
+>* AEMアプリケーションのデプロイ方法に関するCloud ServiceドキュメントとしてのAEMの[AdobeコンテンツパッケージMaven Plugin](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html?lang=en#developer-tools)に関する記事。
+>* AEMの最新のAEMプロジェクトの構造に関するCloud ServiceドキュメントとしてのAEMプロジェクト構造の[記事。](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)
+>* アーキタイプを使用して新しいAEMプロジェクトを開始する方法については、 [AEMプロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)のドキュメントを参照してください。
 
 >
 >
