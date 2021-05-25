@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 165b3950-b03f-4848-8361-ffb0a26d2658
-translation-type: tm+mt
-source-git-commit: a417e571d7c3b8da8f38f3d1ad814610636eabbc
+exl-id: eaa2c889-d116-4209-9063-0c0b32dd8849
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 91%
 
 ---
-
 
 # LDAP バインドパスワードの設定{#configure-the-ldap-bind-password}
 
@@ -24,7 +23,7 @@ ht-degree: 91%
 
 1. 管理コンソールで、設定／User Management／設定／既存の設定ファイルの読み込みと書き出しをクリックします。
 1. 現在の設定をファイルに書き出すには、「書き出し」をクリックして設定ファイルを別の場所に保存します。
-1. ファイル内で、`Domains` > *[ドメイン名]* > `DirectoryConfigs` > `LDAPGroupConfig`ノードを探します。 以下に例を示します。
+1. ファイル内で、 `Domains` > *[ドメイン名]* > `DirectoryConfigs` > `LDAPGroupConfig`ノードを探します。 以下に例を示します。
 
    ```as3
     <node name="LDAPGroupConfig"> 
@@ -39,7 +38,7 @@ ht-degree: 91%
 
    `bindpassword` の値部分に値を入力して変更を保存します。
 
-1. ファイル内で、`Domains` > *[ドメイン名]* > `DirectoryConfigs` > `LDAPGroupConfig` > `LDAPUserConfig`のノードを探します。 以下に例を示します。
+1. ファイル内で、 `Domains` > *[ドメイン名]* > `DirectoryConfigs` > `LDAPGroupConfig` > `LDAPUserConfig`ノードを探します。 以下に例を示します。
 
    ```as3
     <node name="LDAPUserConfig"> 
@@ -56,4 +55,3 @@ ht-degree: 91%
 
 1. 更新したファイルを読み込むには、User Management で、設定／既存の設定ファイルの読み込みと書き出しをクリックします。
 1. 「参照」をクリックしてファイルを探し、「読み込み」をクリックして「OK」をクリックします。
-
