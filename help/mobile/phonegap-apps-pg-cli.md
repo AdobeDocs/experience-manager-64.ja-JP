@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
-translation-type: tm+mt
-source-git-commit: 8078976ab79ccc0fefac5bfe6b000a008a917489
+exl-id: 7f2fcebb-1769-481a-b4df-b891053b08b6
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 91%
 
 ---
-
 
 # PhoneGap CLI によるアプリの開発{#developing-apps-with-phonegap-cli}
 
@@ -34,19 +33,19 @@ ht-degree: 91%
 
 iOS の場合：iPhone および iPad 向けに開発するには、Apple の Xcode IDE が必要です。
 
-* 無料で[ここ](https://developer.apple.com/xcode/downloads/)にダウンロードしてください。
+* [こちら](https://developer.apple.com/xcode/downloads/)から無料でダウンロードしてください。
 * [PhoneGap iOSプラットフォームガイド](https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide)
 
 Android の場合：Android 向けに開発するには、Google の Android Studio IDE が必要です。
 
-* 無料で[ここ](https://developer.android.com/sdk/index.html)にダウンロードしてください。
+* [こちら](https://developer.android.com/sdk/index.html)から無料でダウンロードしてください。
 * [PhoneGap Android プラットフォームのガイド](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
 
 ## ソースのダウンロード  {#download-the-source}
 
 開発環境を正常にブートストラップしたら、AEM アプリのビルドタイルからソースをダウンロードします。
 
-* [PhoneGap Buildタイル]ドロップダウンの山形をクリックします。
+* 「PhoneGap Buildタイル」ドロップダウンの山形をクリックします。
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
