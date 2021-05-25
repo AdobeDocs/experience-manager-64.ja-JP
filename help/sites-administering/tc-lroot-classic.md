@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 237b8cc6-158e-4c51-970d-4c9cc74f6496
-feature: Language Copy
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 言語コピー
+exl-id: 316903a8-22cf-45e6-a9f3-ac1d75beddec
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 91%
 
 ---
-
 
 # クラシック UI による言語ルートの作成{#creating-a-language-root-using-the-classic-ui}
 
@@ -27,7 +26,7 @@ ht-degree: 91%
 1. サイトの言語バージョンを表す新しい子ページを追加します。
 
    1. 新規／新しいページをクリックします。
-   1. ダイアログで、「タイトル」と「名前」を指定します。名前は`<language-code>`または`<language-code>_<country-code>`の形式にする必要があります（en、en_US、en_us、en_GB、en_gbなど）。
+   1. ダイアログで、「タイトル」と「名前」を指定します。名前の形式は`<language-code>`または`<language-code>_<country-code>`にする必要があります（例：en、en_US、en_us、en_GB、en_gb）。
 
       * サポートされている言語コードは、ISO-639-1 で定義されている小文字 2 文字のコードです。
       * サポートされている国コードは、ISO 3166 で定義されている小文字または大文字 2 文字のコードです。
@@ -59,4 +58,3 @@ ht-degree: 91%
 
 1. 「OK」をクリックしてダイアログを閉じます。
 1. 次のダイアログで、「はい」をクリックしてコピーを確定します。
-
