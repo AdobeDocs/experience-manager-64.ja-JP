@@ -1,6 +1,6 @@
 ---
 title: アセットインサイトの設定
-description: AEM Assetsでアセットインサイトを設定する方法を説明します。
+description: AEM Assetsでアセットインサイトを設定する方法について説明します。
 contentOwner: AG
 feature: アセットインサイト，アセットレポート
 role: Business Practitioner,Administrator
@@ -14,7 +14,7 @@ ht-degree: 66%
 
 # アセットインサイトの設定{#configuring-asset-insights}
 
-Adobe Experience Manager（AEM）Assets は、サードパーティの Web サイトで使用される AEM アセットに関する使用状況データを Adobe Analytics からフェッチします。アセットインサイトを有効にして、このデータを取得してインサイトを生成するには、まず、Adobe Analyticsと統合する機能を設定します。
+Adobe Experience Manager（AEM）Assets は、サードパーティの Web サイトで使用される AEM アセットに関する使用状況データを Adobe Analytics からフェッチします。アセットインサイトでこのデータを取得してインサイトを生成できるようにするには、まずAdobe Analyticsと統合するように機能を設定します。
 
 >[!NOTE]
 >
@@ -30,14 +30,14 @@ Adobe Experience Manager（AEM）Assets は、サードパーティの Web サ�
    ![chlimage_1-211](assets/insights_config2.png)
 
 1. 「**[!UICONTROL 認証]**」をクリックまたはタップします。
-1. AEMが資格情報を認証した後、**[!UICONTROL レポートスイート]**&#x200B;リストから、アセットインサイトからデータを取得するAdobe Analyticsレポートスイートを選択します。 「**[!UICONTROL 追加]**」をクリックします。
-1. AEMでレポートスイートを設定したら、「**[!UICONTROL 完了]**」をクリックまたはタップします。
+1. AEMが資格情報を認証した後、**[!UICONTROL レポートスイート]**&#x200B;リストから、アセットインサイトでデータを取得するAdobe Analyticsレポートスイートを選択します。 「**[!UICONTROL 追加]**」をクリックします。
+1. AEMがレポートスイートを設定したら、「**[!UICONTROL 完了]**」をクリックまたはタップします。
 
 ## ページトラッカー {#page-tracker}
 
  Analytics アカウントを設定すると、ページトラッカーコードが生成されます。サードパーティの Web サイトで使用される AEM アセットをアセットインサイトで追跡できるようにするには、Web サイトコードにトラッカーコードを組み込みます。AEM Assets のページトラッカーユーティリティを使用してページトラッカーコードを生成してください。サードパーティの Web サイトにページトラッカーコードを組み込む方法について詳しくは、[Web ページでのページトラッカーと埋め込みコードの使用](touch-ui-using-page-tracker.md)を参照してください。
 
-1. AEMで、**[!UICONTROL ツール/アセット]**&#x200B;をクリックします。
+1. AEMで、**[!UICONTROL ツール/Assets]**&#x200B;をクリックします。
 
    ![chlimage_1-214](assets/chlimage_1-214.png)
 
