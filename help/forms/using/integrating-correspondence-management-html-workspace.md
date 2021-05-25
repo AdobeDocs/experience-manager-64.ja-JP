@@ -7,14 +7,13 @@ uuid: 9649157c-fe28-43bf-a7d3-52ed55a0bf4f
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: f2bde2e8-da95-48ac-a652-85ead87f2cd3
-translation-type: tm+mt
-source-git-commit: 3c67867637cb3fdcdce77a5d494b9b150f128a20
+exl-id: 4df9a16c-0853-4bbf-81bb-1856ab55c5ee
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '641'
 ht-degree: 84%
 
 ---
-
 
 # AEM Forms Workspace でのサードパーティアプリケーションの統合  {#integrating-third-party-applications-in-aem-forms-workspace}
 
@@ -26,9 +25,9 @@ AEM Forms Workspace では、フォームおよびドキュメントでタスク
 
 ## Correspondence Management アセットの作成 {#create-correspondence-management-assets}
 
-AEM FormsのワークスペースにレンダリングされるサンプルのCorrespondence Managementテンプレートを作成して開始します。 詳しくは、「[レターテンプレートの作成](/help/forms/using/create-letter.md)」を参照してください。
+まず、AEM Forms WorkspaceでレンダリングされるサンプルのCorrespondence Managementテンプレートを作成します。 詳しくは、「[レターテンプレートの作成](/help/forms/using/create-letter.md)」を参照してください。
 
-Correspondence ManagementテンプレートにそのURLでアクセスし、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは`https://[server]:[port]/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`と類似したパターンを持っています
+URLでCorrespondence Managementテンプレートにアクセスして、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは`https://[server]:[port]/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`のようなパターンを持ちます
 
 ここで、`encodedLetterId` は URL エンコードされたレター ID です。Workbench で Workspace タスクにレンダリングプロセスを定義する場合は、同じレター ID を指定します。
 
@@ -50,7 +49,7 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
 
    1. プレゼンテーションデータで、「CRX アセットの使用」を選択します。
 
-      ![usearcxasset](assets/useacrxasset.png)
+      ![useacrxasset](assets/useacrxasset.png)
 
    1. アセットを参照します。フォームアセットの選択ダイアログの「レター」タブに、サーバーのすべてのレターが表示されます。
 
@@ -101,8 +100,8 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
    }
    ```
 
-   [Get ](assets/dscsample.zip)
-FileDownload DSC:上記に添付した `DSCSample.zip` ファイルには、サンプルのDSCがあります。`DSCSample.zip`ファイルをダウンロードして解凍します。 DSC サービスを使用する前に、設定する必要があります。詳しくは、[DSCサービスの設定](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)を参照してください。
+   [FileDownload DSC](assets/dscsample.zip)
+を取得：サンプルのDSCは、上記に添付されてい `DSCSample.zip` るファイルにあります。`DSCSample.zip`ファイルをダウンロードして解凍します。 DSC サービスを使用する前に、設定する必要があります。詳しくは、[DSCサービスの設定](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)を参照してください。
 
    Define Activity ダイアログで、getLetterInstanceInfo などの適切なアクティビティを選択し、「**OK**」をクリックします。
 
@@ -117,4 +116,3 @@ FileDownload DSC:上記に添付した `DSCSample.zip` ファイルには、サ�
    >[!NOTE]
    >
    >「送信」ボタンはレターの必須変数がすべて入力されるまで有効になりません。
-
