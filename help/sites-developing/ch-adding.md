@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: ac8f44df-39fb-44ea-ae17-ead0dbd1f6c0
-translation-type: tm+mt
-source-git-commit: 39b6af8ee815e8f6fa6e0b4a0a6dc80f29165243
+exl-id: 99efe308-bf8a-41ad-8203-b57fce20820c
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 96%
 
 ---
-
 
 # ページへの ContextHub の追加とストアへのアクセス {#adding-contexthub-to-pages-and-accessing-stores}
 
@@ -168,7 +167,7 @@ ContextHub のセグメントは、`/conf/we-retail/settings/wcm/segments` ノ�
 * 女性か男性かは、`gender`profile[ ストアの ](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) データ項目から判断されます。
 
 * 年齢は、profile ストアの age データ項目から判断されます。
-* [位置情報](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate)店舗の緯度データ項目と、surferinfo店舗の月データ項目とから季節を決定する。
+* シーズンは、[geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate)ストアの緯度データ項目と、surferinfoストアの月データ項目から決定されます。
 
 >[!WARNING]
 >
@@ -178,7 +177,7 @@ ContextHub のセグメントは、`/conf/we-retail/settings/wcm/segments` ノ�
 
 開発時に役立つ詳細なデバッグメッセージをログに記録するように、Adobe Granite ContextHub OSGi サービス（PID = `com.adobe.granite.contexthub.impl.ContextHubImpl`）を設定します。
 
-サービスを設定するには、[Webコンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)を使用するか、リポジトリ](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)の[JCRノードを使用します。
+このサービスを設定するには、[Webコンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリ内のJCRノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を使用します。
 
 * Web コンソール：デバッグメッセージをログに記録するには、Debug プロパティを選択します。
 * JCR ノード：デバッグメッセージをログに記録するには、`com.adobe.granite.contexthub.debug` ブールプロパティを `true` に設定します。
