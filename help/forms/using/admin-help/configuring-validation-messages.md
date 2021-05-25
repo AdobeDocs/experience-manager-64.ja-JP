@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5f2f8129-e45e-4f3f-ae30-c09330d0e152
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 2016ac85-12a1-42cb-bc03-fced94947010
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 100%
 
 ---
-
 
 # 検証メッセージの設定 {#configuring-validation-messages}
 
@@ -66,4 +65,3 @@ HTML としてレンダリングされるフォームの場合、発生したフ
    境界線のサイズは 0 以上である必要があります。既定値は 1 です。
 
 1. 「保存」をクリックします。
-
