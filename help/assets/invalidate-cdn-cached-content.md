@@ -10,9 +10,8 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e6c9b50b-c27c-48bf-b3c0-9994e7bf6d7e
 exl-id: 335c7a78-a00f-451b-8e53-225830d429c6
-feature: Asset Management,CDN Cache
+feature: アセット管理、CDNキャッシュ
 role: Administrator,Business Practitioner,Developer
-translation-type: tm+mt
 source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
 source-wordcount: '676'
@@ -28,9 +27,9 @@ CDN を使用して Dynamic Media アセットをキャッシュすることで�
 
 **CDN にキャッシュされたコンテンツを無効化するには、次の手順を実行します。**
 
-1. Dynamic Mediaクラシックデスクトップアプリケーションにサインインします。
+1. Dynamic Media Classicデスクトップアプリケーションにログインします。
 
-   [Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)
+   [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)
 
    資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
@@ -46,7 +45,7 @@ CDN を使用して Dynamic Media アセットをキャッシュすることで�
    テンプレートに `<ID>` だけが含まれている場合は、Dynamic Media が `https://<server>/is/image` 部分を埋めます。ここで、`<server>` は、「一般設定」で定義されているパブリッシュサーバー名であり、&lt;ID> は、無効化の対象として選択されたアセット（またはアセット群）です。
 
 1. ページの右下隅にある「**[!UICONTROL 閉じる]**」をクリックします。
-1. Dynamic Mediaクラシックデスクトップアプリケーションのユーザーインターフェイスで、1つまたは複数のアセットを選択し、**[!UICONTROL ファイル/CDNを無効にする]**&#x200B;をクリックします。 作成したテンプレートから生成された 1 つ以上の URL と、選択したアセット（またはアセット群）からなるリストが表示されます。このリストに使用されているのは、アプリケーションの一般設定の「公開先サーバー名」にリストされているサーバー URL です。
+1. Dynamic Media Classicデスクトップアプリケーションのユーザーインターフェイスで、1つ以上のアセットを選択し、**[!UICONTROL ファイル/CDNを無効にする]**&#x200B;をクリックします。 作成したテンプレートから生成された 1 つ以上の URL と、選択したアセット（またはアセット群）からなるリストが表示されます。このリストに使用されているのは、アプリケーションの一般設定の「公開先サーバー名」にリストされているサーバー URL です。
 
    例えば、前の手順で設定した CDN 無効化テンプレートを使用して、`Backpack_B` という名前の画像アセットを 1 つだけ選択したとします。**[!UICONTROL ファイル／CDN を無効にする]**&#x200B;をクリックすると、CDN 無効化のユーザーインターフェイスには、次のように生成された URL が表示されます。
 
