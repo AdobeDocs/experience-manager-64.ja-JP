@@ -11,14 +11,13 @@ content-type: reference
 discoiquuid: 410149d6-15bd-41e5-bdba-1d8e6eab7b87
 pagetitle: Communities Tools
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: de11be58-b576-4d06-b446-52b4013aae9a
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 25%
+source-wordcount: '110'
+ht-degree: 24%
 
 ---
-
 
 # コミュニティツール {#communities-tools}
 
@@ -28,11 +27,10 @@ ht-degree: 25%
 
 ![chlimage_1-129](assets/chlimage_1-129.png)
 
-* [サイトテンプレート](sites.md)  — コンソール：サイトテンプレートの作成と管理
+* [サイトテンプレート](sites.md)  — サイトテンプレートの作成と管理のためのコンソール
 * [グループテンプレート](tools-groups.md) — グループテンプレートの作成と管理のためのコンソール
 * [コミュニティ機能](functions.md) — コミュニティ機能の作成と管理のためのコンソール
-* [ストレージの設定](srp-config.md) - [デフォルトのSRPの設定と選択のコンソール](working-with-srp.md)
+* [ストレージ設定](srp-config.md)  — デフォルトのSRPの設定と選択のためのコン [ソール](working-with-srp.md)
 
-* [コンポーネントガイド](components-guide.md) - SCFコンポーネントの動作や設定方法、カスタマイズ方法を実験できるインタラクティブサイトを開きます。
-* [バッジ](badges.md)  — コンソールで、ス [コアリングルールおよびバッジルールに使用するカスタムバッジを追加できます。](implementing-scoring.md)
-
+* [コンポーネントガイド](components-guide.md)  - SCFコンポーネントの動作とその設定方法やカスタマイズ方法を実験できるインタラクティブなサイトを開きます。
+* [バッジ](badges.md)  — カスタムバッジを追加してスコアルールやバッジルールで使用でき [るコンソール](implementing-scoring.md)
