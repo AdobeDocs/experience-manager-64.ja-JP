@@ -1,26 +1,25 @@
 ---
 title: ページのオーサリング
 seo-title: ページのオーサリング
-description: AEMでのオーサリングについては、概要が2つあります。 (1)作成者向けの最初の手順 — 新しい作成者向けの紹介、および(2)オーサリングページ向けのクイックガイド — メインアクションのクイックガイド（高レベル）
-seo-description: AEMでのオーサリングについては、概要が2つあります。 (1)作成者向けの最初の手順 — 新しい作成者向けの紹介、および(2)オーサリングページ向けのクイックガイド — メインアクションのクイックガイド（高レベル）
+description: AEMを使用したオーサリングについては、次の2つの概要があります。 (1)作成者向けの最初の手順 — 新しい作成者向けの紹介、および(2)ページのオーサリングに関するクイックガイド — 主なアクションに関するクイックガイド（概要レベル）。
+seo-description: AEMを使用したオーサリングについては、次の2つの概要があります。 (1)作成者向けの最初の手順 — 新しい作成者向けの紹介、および(2)ページのオーサリングに関するクイックガイド — 主なアクションに関するクイックガイド（概要レベル）。
 uuid: 95d12bd6-c51d-4b7c-9d67-a152a822eb01
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
-translation-type: tm+mt
-source-git-commit: 040f776ee6a164cec57685f8a010ec82fd8bb48b
+exl-id: be2465a5-8875-4c9c-bd0d-32631b0fe294
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 78%
 
 ---
 
-
 # ページのオーサリング{#authoring-pages}
 
-次に、AEMを使用したオーサリングの概要を示します。
+AEMを使用したオーサリングの概要を次に示します。
 
 * [作成者がおこなう最初の手順](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md) - 新規の作成者向けの概要です。
 
@@ -49,4 +48,3 @@ ht-degree: 78%
 
 * **入力中の検索**
 特定のシナリオ（編集ダイアログでのパスの選択など）において、AEM インターフェイスを使用したコンテンツの検索では、クエリを入力中に動的に一致するものが表示されます。
-
