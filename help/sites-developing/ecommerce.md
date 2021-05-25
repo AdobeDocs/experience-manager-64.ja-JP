@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: platform
 discoiquuid: a8c0cd0f-268f-4b37-83de-0ccbd819a016
-translation-type: tm+mt
-source-git-commit: 3cdb22af4d3b9b8450263fd843c8af13fc772bfe
+exl-id: a5f36d26-1be4-4e06-9237-3943e903d850
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 65%
 
 ---
-
 
 # e コマース{#ecommerce}
 
@@ -32,15 +31,15 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->eCommerceフレームワークはどのeコマースソリューションでも使用できるので、Intershop、Elastic Path、またはIBM Websphere Commerceを使用した開発の可能性について詳しくは、[開発（汎用）](/help/sites-developing/generic.md)を参照してください。
+>eコマースフレームワークは任意のeコマースソリューションで使用できるので、Intershop、Elastic PathまたはIBM Websphere Commerceを使用した開発の可能性について詳しくは、 [開発（汎用）](/help/sites-developing/generic.md)を参照してください。
 
 >[!NOTE]
 >
->この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。詳しくは、[eコマースの導入](/help/sites-deploying/ecommerce.md)を参照してください。
+>この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。詳しくは、[eコマースのデプロイ](/help/sites-deploying/ecommerce.md)を参照してください。
 >
 >e コマースの実装の概念および管理について詳しくは、[e コマースの管理](/help/sites-administering/ecommerce.md)を参照してください。
 
-## API に関するドキュメント  {#api-documentation}
+## API に関するドキュメント {#api-documentation}
 
 e コマース API は、次のパッケージで提供されます。
 
@@ -50,5 +49,4 @@ e コマース API は、次のパッケージで提供されます。
 
 >[!NOTE]
 >
->eコマースプロバイダを構築するすべての手順について詳しくは、[カスタムAdobe Experience Manager6.2 eコマースプロバイダの作成](https://helpx.adobe.com/jp/experience-manager/using/ecommerce62.html)を参照してください。
-
+>eコマースプロバイダーを構築するためのすべての手順について詳しくは、[カスタムAdobe Experience Manager 6.2 eコマースプロバイダーの作成](https://helpx.adobe.com/experience-manager/using/ecommerce62.html)を参照してください。
