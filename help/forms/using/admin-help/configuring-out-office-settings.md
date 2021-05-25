@@ -9,18 +9,17 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 30312159-58a5-4781-b554-29dcbce696cb
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 8787ffa9-9ddc-439d-9934-8913d1ed459e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '691'
 ht-degree: 96%
 
 ---
 
-
 # 不在設定の指定 {#configuring-out-of-office-settings}
 
-ユーザーまたは管理者は不在機能を使用して、ユーザーが不在となり、AEM Forms によって割り当てられるタスクを実行できない日時を指定できます。あるユーザーが「不在」に設定されている場合、そのユーザーのタスクは 1 人以上の指定されたユーザーに割り当てられます。ユーザーは、Workspaceで「不在」設定を変更できます。ユーザーの代わりに、管理者がFormsワークフローで設定を変更することもできます。
+ユーザーまたは管理者は不在機能を使用して、ユーザーが不在となり、AEM Forms によって割り当てられるタスクを実行できない日時を指定できます。あるユーザーが「不在」に設定されている場合、そのユーザーのタスクは 1 人以上の指定されたユーザーに割り当てられます。ユーザーがWorkspaceで「不在」設定を変更したり、管理者がFormsワークフローでユーザーに代わって設定を変更したりできます。
 
 Workbench ユーザーは、プロセスの作成時に、不在設定が設定されている場合にタスクをリダイレクトするかどうかを指定できます。
 
@@ -71,4 +70,3 @@ Workbench ユーザーは、プロセスの作成時に、不在設定が設定�
 
    1. デフォルトユーザーに送信してはいけないプロセスがある場合は、「例外を追加」をクリックしてプロセスを選択し、リストから別のユーザーを選択します。「割り当てません」を選択して、タスクを不在のユーザーに割り当てたままにしておくこともできます。
    1. 「保存」をクリックします。
-
