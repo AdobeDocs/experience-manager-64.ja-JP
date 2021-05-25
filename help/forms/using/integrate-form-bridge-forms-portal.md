@@ -8,15 +8,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: e0608649-bd49-4f40-bc1b-821c9b208883
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 'モバイルフォーム '
+exl-id: bf4ae163-5d89-48fb-9bc4-182281b28f35
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 81%
 
 ---
-
 
 # Form Bridge と HTML5 フォームのカスタムポータルの統合 {#integrating-form-bridge-with-custom-portal-for-html-forms}
 
@@ -30,7 +29,7 @@ FormBridge API を使用して、HTML ページからフォームフィールド
 
 1. **プロファイルの選択またはプロファイルの作成**
 
-   1. CRX DEインターフェイスで、次の場所に移動します。`https://[server]:[port]/crx/de`.
+   1. CRXDEインターフェイスで、次の場所に移動します。`https://[server]:[port]/crx/de`.
    1. 管理者の資格情報を使用してログインします。
    1. プロファイルを作成するか、既存のプロファイルを選択します。
 
@@ -76,7 +75,7 @@ FormBridge API を使用して、HTML ページからフォームフィールド
 
    >[!NOTE]
    >
-   >**9**&#x200B;行目には、ページをデザインするCSSスタイルとJavaScriptファイルの追加JSP参照が含まれます。
+   >**行9**&#x200B;には、ページをデザインするCSSスタイルおよびJavaScriptファイルに関する追加のJSP参照が含まれます。
    >
    >**18 行目**&#x200B;の &lt;div id=&quot;rightdiv&quot;> タグには XFA フォームの HTML スニペットが含まれています。
    ページは 2 つのコンテナ、**left** と **right** にスタイル設定されています。right コンテナにはフォームがあります。left コンテナには 2 つの入力フィールドと外部 HTML ページの一部があります。
@@ -90,9 +89,9 @@ FormBridge API を使用して、HTML ページからフォームフィールド
 
    次にあるのは、フォームフィールドの値を設定するために追加できるサンプルのスクリプトです。
 
-   例えば、**名**&#x200B;フィールドと&#x200B;**姓**&#x200B;フィールドの値を使用して&#x200B;**EmployeeName**&#x200B;を設定する場合は、**window.formBridge.setFieldValue**&#x200B;関数を呼び出します。
+   例えば、**名**&#x200B;および&#x200B;**姓**&#x200B;のフィールドの値を使用して&#x200B;**EmployeeName**&#x200B;を設定する場合は、**window.formBridge.setFieldValue**&#x200B;関数を呼び出します。
 
-   同様に、**window.formBridge.getFieldValue **APIを呼び出すことで値を読み取ることができます。
+   同様に、 **window.formBridge.getFieldValue **APIを呼び出すことで値を読み取ることができます。
 
    ```
    $(function() {
@@ -104,4 +103,3 @@ FormBridge API を使用して、HTML ページからフォームフィールド
                    });
            });
    ```
-
