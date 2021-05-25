@@ -10,14 +10,13 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 982f7b7e-9ba9-437f-a337-76c355b328ac
 feature: PDF Generator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 29dc0b02-226d-4650-8266-2ad2c17dc6a5
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 100%
 
 ---
-
 
 # PDF の書き出しの変換設定の変更 {#modifying-the-pdf-export-conversion-settings}
 
@@ -31,4 +30,3 @@ ht-degree: 100%
 1. 「ファイルの種類」リストで、該当する形式を選択します。
 1. 「設定」をクリックし、必要に応じてファイル形式を設定します。
 1. 「OK」をクリックし、「保存」をクリックして PDF ファイルを書き出します。
-
