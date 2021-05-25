@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
-translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+exl-id: 84db73b0-1bc3-4c39-9bc2-0840e24832b0
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 80%
 
 ---
-
 
 # ベストプラクティス{#best-practices}
 
@@ -31,7 +30,7 @@ ht-degree: 80%
 管理、デプロイ、メンテナンスまたは開発のベストプラクティスについては、次のページを参照してください。
 
 * [ベストプラクティスの管理](/help/sites-administering/administer-best-practices.md)
-* [ベストプラクティスの作成](/help/sites-developing/best-practices.md)
+* [開発のベストプラクティス](/help/sites-developing/best-practices.md)
 * [デプロイのベストプラクティス](/help/sites-deploying/best-practices.md)
 
 以降の表では、特定のドキュメントの説明とリンクを示します。
@@ -55,7 +54,7 @@ ht-degree: 80%
   <tr>
    <td>ダイナミックイメージング</td> 
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">ダイナミックイメージングのベストプラクティス</a></td> 
-   <td><p>Dynamic Mediaの機能を使用している場合、またはDynamic Mediaと統合している場合に、最良の結果を得るために画像にシャープを適用する方法と、画質を最適化する最適な方法について説明します。</p> </td> 
+   <td><p>Dynamic Media機能を使用している場合やDynamic Mediaとの統合を行っている場合に、最適な結果を得るために画像をシャープにする方法と画質を最適化する最適な方法について説明します。</p> </td> 
   </tr>
   <tr>
    <td>多言語のアセット</td> 
@@ -71,8 +70,8 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
 
 |  |  |  |
 |---|---|---|
-| オーサリングツール | [オーサー環境とツール](/help/sites-authoring/author-environment-tools.md) | ページの作成に使用されるツールの概要が表示されます。 |
-| ページの整理 | [ページの作成と整理](/help/sites-authoring/managing-pages.md) | 命名規則を含む、ページを最適に整理する方法の概要を説明します。 |
+| オーサリングツール | [オーサー環境とツール](/help/sites-authoring/author-environment-tools.md) | ページの作成に使用するツールの概要を示します。 |
+| ページの整理 | [ページの作成と整理](/help/sites-authoring/managing-pages.md) | 命名規則を含む、ページの最適な整理方法の概要を示します。 |
 
 ## フォーム {#forms}
 
