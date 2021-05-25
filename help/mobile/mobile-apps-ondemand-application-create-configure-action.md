@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: ccafd49a-5c8a-44eb-9b0c-37070560bb52
-translation-type: tm+mt
-source-git-commit: 8078976ab79ccc0fefac5bfe6b000a008a917489
+exl-id: 42fa3026-ea37-40e7-8932-147fb3db2784
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 95%
 
 ---
-
 
 # アプリケーションの作成および設定アクション{#application-create-and-configuration-actions}
 
@@ -34,7 +33,7 @@ ht-degree: 95%
 >
 >ダッシュボードは、アプリのコンテンツ、メタデータおよび AEM Mobile On-Demand の接続ステータスの概要を把握できる一連の便利なタイルです。
 >
->詳しくは、[AEM Mobileアプリケーションダッシュボード](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
+>詳しくは、[AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
 
 **On-Demand アプリを作成するには：**
 
@@ -65,7 +64,7 @@ ht-degree: 95%
 
 アプリケーションダッシュボードから On-Demand アプリを作成したら、次のステップでは、アプリをクラウド設定に関連付けます。
 
-詳しくは、[Appをクラウド設定に関連付ける](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)を参照してください。
+詳しくは、[アプリのクラウド設定への関連付け](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)を参照してください。
 
 ### さらに先のステップ {#getting-ahead}
 
