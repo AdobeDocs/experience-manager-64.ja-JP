@@ -2,21 +2,20 @@
 title: コンテンツインサイト
 seo-title: コンテンツインサイト
 description: コンテンツインサイトWeb 分析や SEO の推奨を活用してページパフォーマンスに関する情報を提供します。
-seo-description: Content Insightは、Web解析とSEOレコメンデーションを使用したページのパフォーマンスに関する情報を提供します
+seo-description: コンテンツインサイトは、Web分析とSEOの推奨を使用して、ページのパフォーマンスに関する情報を提供します
 uuid: 32f5b37c-2a82-462a-9f0a-c19bed46e198
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 60f980fd-049e-43c1-8b5d-60a8279b357a
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 54ec1b84-bee2-4c1f-acbc-8e6bd0d76c87
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 92%
 
 ---
-
 
 # コンテンツインサイト{#content-insight}
 
@@ -88,7 +87,7 @@ ht-degree: 92%
 
 ## キャンペーンアクティビティレポート {#the-campaign-activity-report}
 
-アクティブなページの各キャンペーンについて、*キャンペーン名*&#x200B;アクティビティという名前のレポートが表示されます。このレポートには、オファーが提供される各セグメントのページインプレッション数とコンバージョン数が表示されます。
+アクティブなページの各キャンペーンについて、*キャンペーン名*&#x200B;アクティビティという名前のレポートが表示されます。このレポートには、オファーが提供される各セグメントのページインプレッション数およびコンバージョン数が表示されます。
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
@@ -99,4 +98,3 @@ SEO の推奨レポートには、ページの BrightEdge 分析の結果が含�
 このレポートを使用すると、ページのファインダビリティを向上させるタスクを作成できます。推奨は、推奨を実装するためのタスクが作成されていることを示します。[SEO の推奨のためのタスクの割り当て](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations)を参照してください。
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
-
