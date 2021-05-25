@@ -2,16 +2,15 @@
 title: カスケードメタデータ
 description: この記事では、アセットのカスケードメタデータを定義する方法について説明します。
 contentOwner: AG
-feature: Metadata
+feature: メタデータ
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: ea6187e8-075d-4666-afc5-01c97deccc11
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '981'
 ht-degree: 94%
 
 ---
-
 
 # カスケードメタデータ {#cascading-metadata}
 
@@ -110,7 +109,7 @@ ht-degree: 94%
 
 1. 同様に、「アセットタイプ」フィールドのビデオという値と、「コーデック」や「期間」などの他のフィールドとの依存関係を作成します。
 1. 手順を繰り返して、「**[!UICONTROL アセットタイプ]**」フィールドのドキュメントアセット（PDF、Word）と、「ページ数」や「作成者」などのフィールドとの依存関係を作成します。
-1. 「**[!UICONTROL 保存]**」をクリックします。メタデータスキーマをフォルダーに適用します。
+1. 「**[!UICONTROL 保存]**」をクリックします。フォルダーにメタデータスキーマを適用します。
 
 1. メタデータスキーマを適用したフォルダーに移動して、アセットのプロパティページを開きます。「アセットの種類」フィールドでの選択に応じて、関連するカスケードメタデータのフィールドが表示されます。
 
