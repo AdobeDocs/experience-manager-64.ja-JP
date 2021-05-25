@@ -10,20 +10,19 @@ topic-tags: administering
 content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 73c59497-43fe-4e15-afda-e3cf5264696e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '464'
 ht-degree: 56%
 
 ---
-
 
 # JSRP - JCR ストレージリソースプロバイダー {#jsrp-jcr-storage-resource-provider}
 
 ## JSRP について {#about-jsrp}
 
-AEM CommunitiesがJSRPをストレージオプションとして使用する場合（デフォルト）、コミュニティコンテンツはJCRに保存され、ユーザー生成コンテンツ(UGC)は、そのコンテンツが投稿された作成者インスタンスまたは発行インスタンスからのみアクセスできます。
+AEM CommunitiesがJSRPをストレージオプション（デフォルト）として使用する場合、コミュニティコンテンツはJCRに保存され、ユーザー生成コンテンツ(UGC)は、投稿先のオーサーインスタンスまたはパブリッシュインスタンスからのみアクセスできます。
 
 JSRP はデプロイメントが容易なので、一般的に、1 つのパブリッシュインスタンスと 1 つのオーサーインスタンスがあるデモ環境または開発環境に適しています。
 
@@ -31,11 +30,11 @@ JSRP はデプロイメントが容易なので、一般的に、1 つのパブ�
 
 ## 設定 {#configuration}
 
-### JSRP の選択 {#select-jsrp}
+### JSRP の選択  {#select-jsrp}
 
 デフォルトでは、JSRP が UGC 用のストレージオプションとして選択されています。
 
-[ストレージ設定コンソール](srp-config.md)では、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
+[ストレージ設定コンソール](srp-config.md)では、使用するSRPの実装を指定するデフォルトのストレージ設定を選択できます。
 
 オーサー環境でストレージ設定コンソールに移動するには、
 
@@ -43,8 +42,8 @@ JSRP はデプロイメントが容易なので、一般的に、1 つのパブ�
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
-* **[!UICONTROL JCRストレージリソースプロバイダー(JSRP)]**&#x200B;を選択します
-* **[!UICONTROL 送信]**&#x200B;を選択
+* **[!UICONTROL JCRストレージリソースプロバイダー(JSRP)]**&#x200B;を選択します。
+* 「**[!UICONTROL 送信]**」を選択します。
 
 ### 設定の公開 {#publishing-the-configuration}
 
@@ -53,36 +52,36 @@ JSRP はデフォルト設定ですが、パブリッシュ環境で同じ設定
 * 作成者：
 
    * グローバルナビゲーションから：**[!UICONTROL ツール/導入/レプリケーション]**
-   * 「**[!UICONTROL ツリーをアクティブにする]**」を選択します。
+   * 「**[!UICONTROL ツリーをアクティブ化]**」を選択します。
    * **[!UICONTROL 開始パス]**:
 
-      * `/conf/global/settings/community/srpc/`を参照
-   * 「**[!UICONTROL アクティブ化]**」を選択します。
+      * `/conf/global/settings/community/srpc/`を参照します。
+   * **[!UICONTROL アクティブ化]**&#x200B;を選択します。
 
 
 ## ユーザーデータの管理 {#managing-user-data}
 
 パブリッシュ環境で頻繁に入力されるユーザー、ユーザープロファイルおよびユーザーグループについては、以下を参照してください。******
 
-* [ユーザーの同期](sync.md)
+* [ユーザー同期](sync.md)
 * [ユーザーとユーザーグループの管理](users.md)
 
 ## トラブルシューティング {#troubleshooting}
 
-### UGC Not Visible in JCR {#ugc-not-visible-in-jcr}
+### UGC が JCR で表示されない  {#ugc-not-visible-in-jcr}
 
 ストレージオプションの設定を確認し、JSRP がデフォルトのプロバイダーに設定されているかを確認してください。デフォルトでは、ストレージリソースプロバイダーはJSRPです。
 
-すべての作成者および発行AEMインスタンスで、ストレージ設定コンソールに再度アクセスするか、AEMリポジトリを確認します。
+すべてのオーサーインスタンスとパブリッシュAEMインスタンスで、ストレージ設定コンソールに再度アクセスするか、AEMリポジトリを確認します。
 
-* JCRで、[/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)の場合
+* JCRで、 [/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
 
-   * [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc)ノードを含まない。ストレージプロバイダーがJSRPであることを意味する
-   * srpcノードが存在し、ノード[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)を含む場合は、デフォルトの設定のプロパティでJSRPをデフォルトプロバイダーとして定義する必要があります
+   * [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc)ノードが含まれない場合は、ストレージプロバイダーがJSRPであることを意味します。
+   * srpcノードが存在し、ノード[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)が含まれる場合は、defaultconfigurationのプロパティでJSRPをデフォルトのプロバイダーとして定義する必要があります
 
 ### UGC がオーサーインスタンスで表示されない {#ugc-not-visible-on-author-instance}
 
-これはバグではありません。JSRPの特徴は、公開環境で入力されたコミュニティコンテンツが公開環境でのみ表示されることです。
+これはバグではありません。JSRPの特徴は、パブリッシュ環境に入力されたコミュニティコンテンツがパブリッシュ環境でのみ表示されることです。
 
 ### UGC がパブリッシュインスタンスで表示されない {#ugc-not-visible-on-publish-instance}
 
