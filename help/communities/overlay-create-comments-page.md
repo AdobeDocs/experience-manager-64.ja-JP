@@ -9,22 +9,21 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: b3cb8f12-197e-4f5e-bd7d-70b55e76b0ca
-translation-type: tm+mt
-source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+exl-id: d975c32f-77c7-4203-b828-41f492adcfa2
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 61%
 
 ---
 
-
 # コメントページの作成  {#create-comments-page}
 
-**[⇐コメントをオーバーレイコンポーネントノードを作成する>](overlay-comments.md) [](overlay-create-nodes.md)**
+**[⇐コメントのオーバーレイ](overlay-comments.md) [ComponentCreateノード⇒](overlay-create-nodes.md)**
 
 ## コメントページ {#comments-page}
 
-[コミュニティコンポーネントガイド](components-guide.md)は、コメントコンポーネントの重なり合いを簡単に体験する機能を提供します。
+[コミュニティコンポーネントガイド](components-guide.md)では、コメントコンポーネントのオーバーレイを簡単に体験できます。
 
 オーサーインスタンスでページを表示します。
 
@@ -32,4 +31,4 @@ ht-degree: 61%
 
 ![chlimage_1-125](assets/chlimage_1-125.png)
 
-**[⇐コメントをオーバーレイコンポーネントノードを作成する>](overlay-comments.md) [](overlay-create-nodes.md)**
+**[⇐コメントのオーバーレイ](overlay-comments.md) [ComponentCreateノード⇒](overlay-create-nodes.md)**
