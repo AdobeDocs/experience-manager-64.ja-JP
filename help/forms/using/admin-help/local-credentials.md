@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 598a9a03-3773-4620-8867-1f754d8ca031
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: f8c6f4e3-4c2d-4843-8f29-6d3297e57c89
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 98%
 
 ---
-
 
 # ローカル秘密鍵証明書の管理 {#managing-local-credentials}
 
@@ -72,4 +71,3 @@ Acrobat Reader DC Extensions に関連する情報および手順については
 1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
 1. 削除する秘密鍵証明書のチェックボックスを選択します。
 1. 「削除」をクリックし、「OK」をクリックします。
-
