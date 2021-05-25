@@ -7,15 +7,14 @@ uuid: 6f48b64e-858f-4323-ad50-88e25f3c2e3d
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: 44e49789-9075-41b3-bce8-03e8efce2d5a
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 'モバイルフォーム '
+exl-id: e8a53976-e9bd-459d-92f5-88527c72428b
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 79%
 
 ---
-
 
 # HTML5 フォームのエラーメッセージのカスタマイズ {#customizing-error-messages-for-html-forms}
 
@@ -23,9 +22,9 @@ ht-degree: 79%
 
 この記事では、HTML5フォームのエラーメッセージをカスタマイズして、
 
-* エラーメッセージの外観および位置を変更できます。任意のフィールドの上、下、右にエラーを表示させることができます。
+* エラーメッセージの外観および位置を変更できます。エラーを作成して、任意のフィールドの上、下、右に表示できます。
 * 複数のフィールドのエラーメッセージをいつでも表示できます。
-* フィールドが選択されているかどうかに関係なく、エラーを表示します。
+* フィールドが選択されているかどうかに関わらず、エラーを表示します。
 
 ## エラーメッセージのカスタマイズ{#customizing-error-messages-nbsp}
 
@@ -40,7 +39,7 @@ ht-degree: 79%
 エラーメッセージの位置をカスタマイズするには、各エラーおよび警告フィールドごとに &lt;div> タグを追加し、&lt;div> タグを左側または右側に配置して &lt;div> タグに CSS スタイルを適用します。詳しくは、次の手順を参照してください。
 
 1. `CustomErrorManager-1.0-SNAPSHOT`フォルダーに移動し、`etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript`フォルダーを開きます。
-1. `customErrorManager.js`ファイルを開いて編集します。 ファイル内の`markError`関数は次のパラメーターを受け付けます。
+1. `customErrorManager.js`ファイルを開いて編集します。 ファイル内の`markError`関数は、次のパラメーターを受け取ります。
 
    |  |  |
    |---|---|
@@ -121,11 +120,10 @@ ht-degree: 79%
 
 ## 新しいプロファイルでフォームをレンダリングします。  {#render-the-form-with-the-new-profile-nbsp}
 
-初期設定では、html5フォームは次のデフォルトのプロファイルを使用します。https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
+初期設定では、html5フォームはデフォルトのプロファイルを使用します。https://&lt;server>/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
 
-カスタムエラーメッセージを使用してフォームを表示するには、次のエラープロファイルを使用してフォームをレンダリングします。https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
+カスタムエラーメッセージを含むフォームを表示するには、エラープロファイルを使用してフォームをレンダリングします。https://&lt;server>/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location>&amp;template=&lt;name of the xdp>
 
 >[!NOTE]
 >
 >エラープロファイルは、添付されているパッケージによりインストールされます。
-
