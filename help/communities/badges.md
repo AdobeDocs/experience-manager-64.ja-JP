@@ -10,16 +10,15 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4194278f-5127-4105-b181-60961c7a1def
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: b6aa9d73-4e20-446a-a1fc-78f8968d6844
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '319'
 ht-degree: 65%
 
 ---
 
-
-# バッジコンソール {#badges-console}
+# バッジコンソール  {#badges-console}
 
 ## バッジについて {#about-badges}
 
@@ -45,7 +44,7 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 ## バッジを作成 {#create-badge}
 
-バッジを作成するには、適度に小さい画像（高さが 26 から 32 ピクセルの 72 dpi）をアップロードし、名前を入力します。バッジ画像は`/etc/community/badging/images`のリポジトリに保存され、自動的に公開環境に複製されます。
+バッジを作成するには、適度に小さい画像（高さが 26 から 32 ピクセルの 72 dpi）をアップロードし、名前を入力します。バッジ画像はリポジトリの`/etc/community/badging/images`に保存され、パブリッシュ環境に自動的にレプリケートされます。
 
 パブリッシュ環境がパブリッシャーのファームである場合、[ユーザーの同期](sync.md)を設定する必要があります。
 
@@ -53,15 +52,15 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 * **[!UICONTROL 画像をアップロード]**
 
-   （*必須*）JPEGまたはPNG形式で、推奨サイズが32 x 32ピクセル、72 dpiのバッジ画像。
+   （*必須*）JPEG形式またはPNG形式で、32 x 32ピクセル、72dpiの推奨サイズを持つバッジ画像。
 
 * **[!UICONTROL Name]**
 
-   （*必須*）バッジ名。 これはデフォルトの`Display Name`とリポジトリノード名です。 `Name`が有効なリポジトリノード名でない場合は、変更されます。
+   （*必須*）バッジ名。 デフォルトの`Display Name`とリポジトリノード名です。 `Name`が有効なリポジトリノード名でない場合は、変更されます。
 
 * **[!UICONTROL 表示名]**
 
-   （*オプション*） UIにバッジとして表示する名前。 デフォルトは、`Name`に対して入力された変更なしのテキストです。
+   （*オプション*）UIでバッジに表示する名前。 初期設定は、`Name`に入力された、変更されていないテキストです。
 
 * **[!UICONTROL 説明]**
 
@@ -69,6 +68,6 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 ## 追加情報 {#additional-information}
 
-スコアリングルールとバッジルールの設定について詳しくは、[スコアリングとバッジ](implementing-scoring.md)を参照してください。
+スコアルールとバッジルールの設定について詳しくは、[スコアとバッジ](implementing-scoring.md)を参照してください。
 
 メンバーのバッジの管理については、[メンバーコンソール](members.md)を参照してください。
