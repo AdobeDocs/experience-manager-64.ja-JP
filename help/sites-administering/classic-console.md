@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: content
 content-type: reference
 discoiquuid: a7f31bc8-c583-439f-b2af-1dcc58f9c481
-translation-type: tm+mt
-source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
+exl-id: 0c989965-c6cc-4ec7-a90f-6c52e8362485
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 64%
 
 ---
-
 
 # クラシック UI のタグ付けコンソール{#classic-ui-tagging-console}
 
@@ -30,7 +29,7 @@ ht-degree: 64%
 * 管理者権限でサインインします。
 *  コンソールに移動します。
 
-   例：[http://localhost:4502/tagging](http://localhost:4502/tagging)
+   例： [http://localhost:4502/tagging](http://localhost:4502/tagging)
 
 ![managing_tags_usingthetagasadministrationconsole-1](assets/managing_tags_usingthetagasministrationconsole-1.png)
 
@@ -54,12 +53,12 @@ ht-degree: 64%
 
       次の特殊文字は使用しないことをお勧めします。
 
-      * `colon (:)` -名前空間区切り
-      * `forward slash (/)`  — サブタグ区切り文字
+      * `colon (:)`  — 名前空間区切り
+      * `forward slash (/)`  — サブタグ区切り
 
       これらの文字は入力しても表示されません。
 
-   * **名前**
+   * **Name**
 
       （*必須*）タグのノード名。
 
@@ -77,7 +76,7 @@ ht-degree: 64%
 1. 「**タイトル**」および「**説明**」を変更できます。
 1. 「**保存**」をクリックしてダイアログを閉じます。
 
-## タグの削除  {#deleting-tags}
+## タグの削除 {#deleting-tags}
 
 1. 右側のウィンドウで、削除するタグを選択します。
 1. 「**削除**」をクリックします。
@@ -94,7 +93,7 @@ ht-degree: 64%
 
 「**リスト**」を選択すると、新しいウィンドウが開き、ハイライト表示されたタグを使用しているすべてのページのパスが表示されます。
 
-![リスト_showing_wheretagsarereferenced](assets/list_showing_wheretagsarereferenced.png)
+![list_showing_wheretagsarereferenced](assets/list_showing_wheretagsarereferenced.png)
 
 ## Moving Tags {#moving-tags}
 
@@ -115,7 +114,7 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->タグの移動やタグIDの名前の変更はできません。必要に応じて、作成者は[タグタイトルの変更](#editing-tags)のみを行う必要があります。
+>作成者は、タグの移動やタグIDの名前の変更をおこなわないでください。必要に応じて、[タグのタイトル](#editing-tags)のみを変更してください。
 
 ## タグの統合 {#merging-tags}
 
@@ -131,7 +130,7 @@ ht-degree: 64%
 
 1. 「**Merge**」をクリックします。
 
-**タグ**&#x200B;の結合ダイアログは次のようになります。
+**タグを結合**&#x200B;ダイアログは次のようになります。
 
 ![mergetag](assets/mergetag.png)
 
@@ -144,14 +143,14 @@ ht-degree: 64%
 
 ## 他の言語でのタグの管理  {#managing-tags-in-different-languages}
 
-タグのオプションの`title`プロパティは、複数の言語に変換できます。 次に、タグ`titles`をユーザー言語またはページ言語に従って表示できます。
+タグのオプションの`title`プロパティは、複数の言語に翻訳できます。 次に、タグ`titles`は、ユーザーの言語またはページの言語に従って表示できます。
 
 ### 複数言語でのタグタイトルの定義 {#defining-tag-titles-in-multiple-languages}
 
 次の手順は、タグ&#x200B;**Animals**&#x200B;の`title`を英語、ドイツ語、フランス語に翻訳する方法を示しています。
 
 1. **タグ付け**&#x200B;コンソールに移動します。
-1. **タグ**>**写真のストック**&#x200B;の下の&#x200B;**動物**&#x200B;タグを編集します。
+1. **** Tags **/** Stock Photography **の下のタグAnimals**&#x200B;を編集します。
 1. 次の言語での翻訳を追加します。
 
    * **英語**：Animals
@@ -172,20 +171,19 @@ Tagging コンソールではユーザーの言語設定が使用されます。
 
 デフォルトでは、ページプロパティのタグ`titles`はページ言語で表示されます。 ページプロパティのタグダイアログには、異なる言語でタグ`titles`を表示できる言語フィールドがあります。 次の手順では、タグ`titles`をフランス語で表示する方法を説明します。
 
-1. 前の節を参照して、**タグ**>**ストックフォトグラフィ**&#x200B;の下の&#x200B;**動物**&#x200B;にフランス語の翻訳を追加してください。
+1. 前の節を参照して、******タグ** > **写真を保存**&#x200B;の下のAnimalsにフランス語の翻訳を追加します。
 1. **Geometrixx** サイトの英語ブランチで、**Products** ページのページプロパティを開きます。
-1. **タグ/キーワード**&#x200B;ダイアログを開き（タグ/キーワード表示領域の右側にあるプルダウンメニューを選択）、右下のプルダウンメニューから&#x200B;**フランス語**&#x200B;言語を選択します。
-1. 左右の矢印を使用してスクロールし、「**写真のストック**」タブを選択できるようにします。
+1. **タグ/キーワード**&#x200B;ダイアログを開き（「タグ/キーワード」表示領域の右側のプルダウンメニューを選択）、右下隅のプルダウンメニューから&#x200B;**フランス語**&#x200B;言語を選択します。
+1. 左右の矢印を使用してスクロールし、「**写真を保存**」タブを選択します。
 
-   **動物** （**アニモー**）タグを選択し、ダイアログの外側を選択して閉じ、ページのプロパティにタグを追加します。
+   **Animals**(**Animaux**)タグを選択し、ダイアログの外側で選択して閉じ、ページのプロパティにタグを追加します。
 
    ![french_tag](assets/french_tag.png)
 
-デフォルトでは、ページプロパティダイアログにページの言語に従って`titles`タグが表示されます。
+デフォルトでは、ページのプロパティダイアログには、ページの言語に従ってタグ`titles`が表示されます。
 
 通常は、ページ言語が有効な場合、タグの言語はページ言語から取得されます。[tag ウィジェット](/help/sites-developing/building.md#tagging-on-the-client-side)が他のケース（フォームやダイアログなど）で使用されている場合、タグの言語はコンテキストによって変わります。
 
 >[!NOTE]
 >
->タグクラウドと標準ページコンポーネントのメタキーワードは、ページ言語に基づくローカライズされたタグ`titles`を使用します（使用可能な場合）。
-
+>標準ページコンポーネントのタグクラウドとメタキーワードは、ページ言語に基づいてローカライズされたタグ`titles`を使用します（使用可能な場合）。
