@@ -9,22 +9,21 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: ee786a5c-b985-4d78-9063-6c79ae5e13e6
-translation-type: tm+mt
-source-git-commit: 565604feff7fa365a1c6b52b62a0b0eb681bb192
+exl-id: 3a16a771-e1c5-4ae4-9fc6-17a47064db54
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 62%
 
 ---
 
-
 # SRP による UGC へのアクセス {#accessing-ugc-with-srp}
 
 ## SRP について {#about-srp}
 
-すべてのAEM Communitiesのコンポーネントと機能は、[ソーシャルコンポーネントフレームワーク(SCF)](scf.md)上に構築されています。これにより、SocialResourceProvider APIが呼び出され、すべてのユーザー生成コンテンツ(UGC)にアクセスします。
+AEM Communitiesのすべてのコンポーネントと機能は、[ソーシャルコンポーネントフレームワーク(SCF)](scf.md)上に構築されています。このフレームワークは、SocialResourceProvider APIを呼び出して、すべてのユーザー生成コンテンツ(UGC)にアクセスします。
 
-コミュニティサイトを作成する前に、[ストレージリソースプロバイダー(SRP)](working-with-srp.md)を構成し、基になる[トポロジ](topologies.md)と一致する実装を選択する必要があります。 SRPの実装は、次の3つのストレージオプションに基づいています。
+コミュニティサイトを作成する前に、[ストレージリソースプロバイダー(SRP)](working-with-srp.md)を設定し、基になる[トポロジ](topologies.md)と一致する実装を選択する必要があります。 SRPの実装は、次の3つのストレージオプションに基づいています。
 
 1. [ASRP](asrp.md) - Adobe オンデマンドストレージ
 2. [MSRP](msrp.md) - MongoDB
@@ -32,7 +31,7 @@ ht-degree: 62%
 
 ## UGC のストレージについて  {#about-ugc-storage}
 
-UGCのストレージに関して知っておくべき重要な点は、サイトがASRPまたはMSRPを使用するように設定されている場合、実際のUGCはAEM [node store](../../help/sites-deploying/data-store-config.md)(JCR)に格納されないことです。
+UGCのストレージに関して知っておくべき重要な点は、ASRPまたはMSRPを使用するようにサイトを設定する場合、実際のUGCはAEM [ノードストア](../../help/sites-deploying/data-store-config.md)(JCR)に格納されないことです。
 
 UGC をコピーして有用なメタデータを提供するノードが JCR 内に存在する場合がありますが、実際の UGC とこれらのノードを混同しないでください。
 
@@ -49,10 +48,10 @@ JCR に固有のメソッドの使用は避ける必要があります。
 使用するメソッドは次のとおりです。
 
 * Sling API（Sling リソース）
-   * JCRノードがあると想定しない
+   * JCRノードがあるとは想定しないでください。
 
 * OSGi イベント
-   * JCRイベントがあると想定しない
+   * JCRイベントがあるとは想定しないでください
 
 * [Social Resource Utilities](socialutils.md#socialresourceutilities-package)
 * [SCFユーティリティ](socialutils.md#scfutilities-package)
@@ -61,7 +60,7 @@ JCR に固有のメソッドの使用は避ける必要があります。
 
 * Node API
 * JCR イベント
-* ワークフローランチャー(JCRイベントを使用)
+* ワークフローランチャー（JCRイベントを使用）
 
 ### 検索コレクションを使用する {#use-search-collections}
 
@@ -73,6 +72,6 @@ SRP ごとにネイティブなクエリー言語が異なる場合がありま�
 
 * [コミュニティコンテンツストレージ](working-with-srp.md) - UGC 共通ストアに使用できる SRP の選択肢
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例
+* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティメソッドと例
 * [検索の基本事項](search-implementation.md) - UGC の検索に関する基本情報
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
