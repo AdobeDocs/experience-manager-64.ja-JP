@@ -10,14 +10,13 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: b76d7d93-23a5-4c08-81f5-a56267b1556a
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 78fc7c4a-a634-4628-927a-c9622bdc13fc
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 98%
 
 ---
-
 
 # 大量の保護された情報の配布 {#high-volume-secure-information-delivery}
 
