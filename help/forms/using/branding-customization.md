@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: f6440a36-719a-4f89-b7db-1af918a3469a
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: 5c5cdfe6-37f2-45c7-b679-23e3592842b2
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '911'
 ht-degree: 78%
 
 ---
-
 
 # ブランディングのカスタマイズ {#branding-customization}
 
@@ -40,11 +39,11 @@ ht-degree: 78%
 #### iOS の場合 {#for-ios}
 
 1. Xcode で `Capture.xcodeproj` プロジェクトを開きます。
-1. （***アイコンのカスタマイズの場合***）キャプチャのナビゲータービューで、**[!UICONTROL キャプチャ／キャプチャ／サポートするファイル／Capture-info.plist]** に移動します。アイコンファイルの横のドロップダウンをクリックします。 アイコンファイル（.png）の名前を指定し、**[!UICONTROL キャプチャ／キャプチャ／リソース／アイコン]**&#x200B;でファイルをアップロードします。現在サポートされているディメンションは次のとおりです。29x29、50x50、58x58、72x72、100x100、144x144。
+1. （***アイコンのカスタマイズの場合***）キャプチャのナビゲータービューで、**[!UICONTROL キャプチャ／キャプチャ／サポートするファイル／Capture-info.plist]** に移動します。アイコンファイルの横にあるドロップダウンをクリックします。 アイコンファイル（.png）の名前を指定し、**[!UICONTROL キャプチャ／キャプチャ／リソース／アイコン]**&#x200B;でファイルをアップロードします。現在サポートされているディメンションは次のとおりです。29x29、50x50、58x58、72x72、100x100、144x144。
 1. （***起動画像のカスタマイズの場合***）画像のファイル名が次のいずれかであることを確認します。
 
-   * 縦向きの場合：`Default-Portrait~ipad.png`と`Default-Portrait@2x~ipad.png`
-   * 横置きの場合：`Default-Landscape~ipad.png`と`Default-Landscape@2x~ipad.png`
+   * 縦長の場合：`Default-Portrait~ipad.png`と`Default-Portrait@2x~ipad.png`
+   * 横向きの場合：`Default-Landscape~ipad.png`と`Default-Landscape@2x~ipad.png`
 
    これらのファイルをキャプチャプロジェクトにアップロードして、プロジェクトの既存のファイルと置き換えます。
 
@@ -95,13 +94,13 @@ ht-degree: 78%
 ### iOS の場合 {#for-ios-1}
 
 1. Xcode で `Capture.xcodeproj` プロジェクトを開きます。
-1. Captureのナビゲーター表示で、**[!UICONTROL Capture/Capture/Supporting Files/InfoPlist.strings]**&#x200B;に移動します。
+1. Captureのナビゲータ・ビューで、**[!UICONTROL Capture > Capture > Supporting Files > InfoPlist.strings]**&#x200B;に移動します。
 
    `CFBundleDisplayName`属性の値を、アプリに表示する名前に更新します。
 
 1. iOS デバイスまたは iOS シミュレーター上で AEM Forms アプリケーションを構築して実行します。
 
-   iOS用アプリの作成について詳しくは、[Xcodeプロジェクトの設定とiOSアプリの構築](/help/forms/using/setup-xcode-project-build-installer.md)を参照してください。
+   iOS用のアプリの構築について詳しくは、[Xcodeプロジェクトの設定とiOSアプリの構築](/help/forms/using/setup-xcode-project-build-installer.md)を参照してください。
 
 ### Android の場合 {#for-android-1}
 
