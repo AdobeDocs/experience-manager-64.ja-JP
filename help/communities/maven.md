@@ -9,22 +9,21 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
-translation-type: tm+mt
-source-git-commit: 5affffac6f953bcf1d436d8492ad6dd2a041b3b4
+exl-id: d86411b9-6ed1-4091-bf5c-d46b4e518da4
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 39%
 
 ---
 
-
 # コミュニティでの Maven の使用 {#using-maven-for-communities}
 
 ## 概要 {#overview}
 
-AEM Communitiesのドキュメントのこのセクションには、次のセクションが含まれます。
+AEM Communitiesドキュメントのこの節には、次の内容も含まれます。
 
-* [Apache Mavenを使用したAEMプロジェクトの構築を参照してください](../../help/sites-developing/ht-projects-maven.md)。
+* [Apache Mavenを使用したAEMプロジェクトの構築](../../help/sites-developing/ht-projects-maven.md)を参照してください。
 
 個々のアーティファクトを置き換える「uber」アーティファクトは1つだけです。
 
@@ -32,7 +31,7 @@ AEM Communitiesのドキュメントのこのセクションには、次のセ�
 
 >[!NOTE]
 >
->AEM 6.4以降では、Communities APIは明示的にリリースされません。 すべてのCommunities APIがUber jar自体に含まれるようになりました。
+>AEM 6.4以降では、Communities APIは明示的にリリースされていません。 すべてのCommunities APIがUber jar自体に含まれるようになりました。
 >
 >コミュニティのリリースを常に最新に保つことをお勧めします。
 >
@@ -51,7 +50,7 @@ AEM Communitiesのドキュメントのこのセクションには、次のセ�
 
 >[!NOTE]
 >
->最新のUber jarアーティファクトを特定するには、[AEM Uber jarリポジトリ](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)を参照してください。
+>[AEM Uber jarリポジトリ](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)を参照して、最新のUber jarアーティファクトを特定します。
 
 <!--
 # Using Maven for Communities {#using-maven-for-communities}
