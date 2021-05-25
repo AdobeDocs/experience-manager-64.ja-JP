@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: a91fd37e-5975-4572-a4b3-c7e8993d5f88
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 6a7de639-9c87-4e7c-b431-e48c9cdc7982
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 71%
 
 ---
-
 
 # アカウント環境の設定{#configuring-your-account-environment}
 
@@ -24,8 +23,8 @@ AEM では、アカウントおよびオーサー環境の特定項目を設定�
 
 [アカウント設定](#account-settings)と[ユーザーの環境設定](#user-preferences)を使用して、次のオプションと環境設定を定義できます。
 
-* **ツールバーの編集**&#x200B;グローバル編集ツールが必要かどうかを選択します。このツールバーは、ブラウザーウィンドウの上部に表示され、 
-**ページ上の段落コンポーネントで使用する**「Copy **」、「Cut**」、「 **Paste**」、「 **** Delete」ボタン。
+* **ツールバーの編集**&#x200B;グローバル編集ツールが必要かどうかを選択します。このツールバーはブラウザーウィンドウの上部に表示され、次の操作を行います。 
+**そのページの段落コンポーネントで使用するため**&#x200B;の、 **、**&#x200B;切り取り **、**&#x200B;貼り付け **** 、削除ボタンをコピーします。
 
    * 必要な場合に表示（デフォルト）
    * 常に表示する
@@ -35,13 +34,13 @@ AEM では、アカウントおよびオーサー環境の特定項目を設定�
 [次のユーザーとして動作](/help/sites-administering/security.md#impersonating-another-user)機能では、ユーザーは別のユーザーに成り代わって作業をおこなうことができます。
 
 * ****
-言語オーサリング環境のUIに使用する言語。使用可能なリストから必要な言語を選択します。
+言語オーサリング環境のUIで使用する言語。使用可能なリストから必要な言語を選択します。
 
 * **ウィンドウ管理**
 次のいずれかを選択します。
 
    * 複数のウィンドウ（デフォルト）:新しいウィンドウでページが開きます。
-   * 単一のウィンドウ：現在のウィンドウでページが開きます。
+   * 単一ウィンドウ：現在のウィンドウでページが開きます。
 
 ## アカウント設定 {#account-settings}
 
@@ -63,4 +62,3 @@ AEM では、アカウントおよびオーサー環境の特定項目を設定�
 このダイアログには次のオプションがあります。
 
 ![chlimage_1-171](assets/chlimage_1-171.png)
-
