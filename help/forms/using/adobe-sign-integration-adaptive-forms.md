@@ -1,6 +1,6 @@
 ---
-title: Adobe Sign を AEM Forms に統合する
-seo-title: Adobe Sign を AEM Forms に統合する
+title: Adobe Sign の AEM Forms への統合
+seo-title: Adobe Sign の AEM Forms への統合
 description: AEM Forms 用に Adobe Sign を設定する方法
 seo-description: AEM Forms 用に Adobe Sign を設定する方法
 uuid: 9efd5c44-3d87-4c56-aa6c-e65397fff243
@@ -8,19 +8,18 @@ contentOwner: sashanka
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 7d494c2e-d457-4d52-89be-a77ffa07eb88
-feature: Adaptive Forms, Adobe Sign
-translation-type: tm+mt
-source-git-commit: 5944eab0bf38551970685eaa98d90c4459720245
+feature: アダプティブForms、Adobe Sign
+exl-id: e7c27623-a889-4bd5-bfff-cfe513cd1a35
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '986'
-ht-degree: 63%
+ht-degree: 74%
 
 ---
 
+# Adobe Sign の AEM Forms への統合 {#integrate-adobe-sign-with-aem-forms}
 
-# Adobe Sign を AEM Forms に統合する {#integrate-adobe-sign-with-aem-forms}
-
-Adobe Sign により、アダプティブフォームの電子署名ワークフローを有効にすることができます。電子署名を使用すると、法務、販売、給与、人事管理など、さまざまな分野におけるドキュメント処理ワークフローが改善されます。
+Adobe Sign により、アダプティブフォームの電子署名ワークフローを有効にすることができます。電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
 
 Adobe Sign とアダプティブフォームの一般的なシナリオでは、**サービスを申し込む**&#x200B;ためのアダプティブフォームをユーザーが入力します。例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームの入力、送信、署名を行うと、サービスプロバイダーにそのフォームが送信され、追加の処理が実行されます。サービスプロバイダーは受信した申込フォームを確認し、Adobe Sign を使用してそのフォームを承認します。これに類似した電子署名ワークフローを有効にするには、Adobe Sign を AEM Forms に統合します。
 
@@ -32,32 +31,32 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 
 * 有効な [Adobe Sign 開発者アカウント](https://acrobat.adobe.com/jp/ja/why-adobe/developer-form.html)
 * [SSL が有効になっている](/help/sites-administering/ssl-by-default.md) AEM Forms サーバー
-* [Adobe Sign API アプリケーション](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
+* [Adobe Sign API アプリケーション](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)。
 * Adobe Sign API アプリケーションの資格情報（クライアントの ID と秘密鍵）
-* 再設定時に、作成者インスタンスと発行インスタンスの両方から既存のAdobe Sign設定を削除します。
-* 作成者インスタンスとパブリッシュインスタンスには、[同一の暗号キー](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed)を使用します。
+* 再設定時に、オーサーインスタンスとパブリッシュインスタンスの両方から既存のAdobe Sign設定を削除します。
+* オーサーインスタンスとパブリッシュインスタンスには、[同一の暗号キー](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed)を使用します。
 
 ## AEM Forms を使用して Adobe Sign を設定する {#configure-adobe-sign-with-aem-forms}
 
 上記の前提条件の準備が完了したら、以下の手順により、オーサーインスタンス上の AEM Forms を使用して Adobe Sign を設定します。
 
-1. AEM Forms作成者インスタンスで、**ツール** ![ハンマー](assets/hammer.png) > **一般** > **設定ブラウザー**&#x200B;に移動します。
-   * 詳しくは、[設定ブラウザーのドキュメント](/help/sites-administering/configurations.md)を参照してください。
-1. **[!UICONTROL 設定ブラウザー]**&#x200B;ページで、**[!UICONTROL 作成]**&#x200B;をタップします。
-1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログで、設定に&#x200B;**[!UICONTROL タイトル]**&#x200B;を指定し、**[!UICONTROL クラウド設定]**&#x200B;を有効にして、**[!UICONTROL 作成]**&#x200B;をタップします。 これにより、クラウドサービス用の設定コンテナが作成されます。
+1. AEM Forms のオーサーインスタンスで、**ツール**![ハンマー](assets/hammer.png)／**一般**／**設定ブラウザー**&#x200B;に移動します。
+   * 詳しくは、[](/help/sites-administering/configurations.md)設定ブラウザーのドキュメントを参照してください。
+1. **[!UICONTROL 設定ブラウザー]**&#x200B;ページで「**[!UICONTROL 作成]**」をタップします。
+1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログで、設定の&#x200B;**[!UICONTROL タイトル]**&#x200B;を指定し、「**[!UICONTROL クラウド設定]**」を有効にして「**[!UICONTROL 作成]**」をタップします。これにより、クラウドサービス用の設定コンテナが作成されます。
 1. **ツール** ![ハンマー](assets/hammer.png) > **Cloud Services** > **Adobe Sign**&#x200B;に移動し、上記の手順で作成した設定コンテナを選択します。
 
    >[!NOTE]
    >
-   >手順1 ～ 4を実行して新しい設定コンテナを作成し、コンテナでAdobe Sign設定を作成するか、**ツール** ![ハンマー](assets/hammer.png) > **Cloud Services** > **Adobe Sign**&#x200B;の既存の`global`フォルダーを使用します。 新しい設定コンテナで設定を作成する場合は、アダプティブフォームを作成する際に、**[!UICONTROL 設定コンテナ]**&#x200B;フィールドにコンテナ名を必ず指定してください。
+   >手順1～4を実行して、新しい設定コンテナを作成し、コンテナ内にAdobe Sign設定を作成するか、**ツール** ![hammer](assets/hammer.png) > **Cloud Services** > **Adobe Sign**&#x200B;内の既存の`global`フォルダーを使用します。 新しい設定コンテナで設定を作成する場合は、アダプティブフォームを作成する際に、「**[!UICONTROL 設定コンテナ]**」フィールドで必ずコンテナ名を指定してください。
 
    >[!NOTE]
    クラウドサービス設定ページの URL が「**HTTPS**」で始まっていることを確認してください。「HTTPS」で始まっていない場合は、AEM Forms サーバーで [SSL を有効](/help/sites-administering/ssl-by-default.md)にしてください。
 
 1. 設定ページで、「**[!UICONTROL 作成]**」をタップして、AEM FormsでAdobe Sign設定を作成します。
-1. **[!UICONTROL Adobe Sign構成を作成]**&#x200B;ページの「**[!UICONTROL 一般]**」タブで、設定の&#x200B;**名前**&#x200B;を指定し、「**次へ**」をタップします。 必要に応じてタイトルを指定し、設定のサムネイルを参照して選択することもできます。
+1. **[!UICONTROL Adobe Sign設定を作成]**&#x200B;ページの「**[!UICONTROL 一般]**」タブで、設定の「**名前**」を指定して、「**次へ**」をタップします。 必要に応じてタイトルを指定し、設定のサムネイルを参照して選択することもできます。
 
-1. 現在のブラウザーウィンドウのURLをメモ帳にコピーします。 この URL は、AEM Forms で Adobe Sign アプリケーションを設定する際に必要になります。
+1. 現在のブラウザーウィンドウの URL をメモ帳にコピーします。この URL は、AEM Forms で Adobe Sign アプリケーションを設定する際に必要になります。
 
 1. 以下の手順により、Adobe Sign アプリケーション用に OAuth 設定を構成します。
 
@@ -75,7 +74,7 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 
    ![OAuth 設定](assets/oauthconfig_new.png)
 
-1. 「**Adobe Sign 設定を作成**」ページに戻ります。「**[!UICONTROL 設定]**」タブで、「**[!UICONTROL OAuth URL]**」フィールドに以下のデフォルトの URL が表示されます。
+1. **Adobe Sign 設定を作成**&#x200B;ページに戻ります。「**[!UICONTROL 設定]**」タブで、「**[!UICONTROL OAuth URL]**」フィールドに以下のデフォルトの URL が表示されます。
 
    `https://secure.na1.echosign.com/public/oauth`
 
@@ -85,18 +84,18 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 
    データベースシャードの値を更新することができます。サーバーを再起動すると、データベースシャードの新しい値を使用することができます。
 
-1. **クライアントID**(アプリケーション IDとも呼ばれます)と&#x200B;**クライアントシークレット**&#x200B;を指定します。 「**添付ファイルにも Adobe Sign を有効にする**」オプションを選択すると、アダプティブフォームに添付されているファイルが、署名用に送信された対応する Adobe Sign ドキュメントに添付されます。
+1. **クライアント ID**（アプリケーション ID）と&#x200B;**クライアントの秘密鍵**&#x200B;の値を指定します。「**添付ファイルにも Adobe Sign を有効にする**」オプションを選択すると、アダプティブフォームに添付されているファイルが、署名用に送信された対応する Adobe Sign ドキュメントに添付されます。
 
-   「**[!UICONTROL Adobe Signに接続]**」をタップします。 資格情報の入力画面が表示されたら、Adobe Sign アプリケーションの作成時に使用したユーザー名とパスワードを入力します。
+   「**[!UICONTROL Adobe Sign に接続]**」をタップします。資格情報の入力画面が表示されたら、Adobe Sign アプリケーションの作成時に使用したユーザー名とパスワードを入力します。
 
    「**[!UICONTROL 作成]**」をタップして、Adobe Sign 設定を作成します。
 
-1. AEM Web コンソールを開きます。URLは`https://'[server]:[port]'/system/console/configMgr`です
+1. AEM Web コンソールを開きます。URL は `https://'[server]:[port]'/system/console/configMgr` です
 1. **Forms 共通設定サービス**&#x200B;を開きます。
-1. 「**許可**」フィールドで、「**すべてのユーザーを選択 — 匿名ユーザーまたはログインユーザーは、添付ファイルをプレビューでき、フォームを検証および署名でき、「**&#x200B;保存」をクリックします。****&#x200B;オーサーインスタンスが Adobe Sign を使用するように設定されます。
-1. [複製](/help/sites-deploying/replication.md)を使用して、対応する発行インスタンスに同じ設定を作成します。
+1. 「**許可**」フィールドで、「****&#x200B;すべてのユーザーを選択します。匿名ユーザーまたはログインユーザーは、添付ファイルのプレビュー、フォームの検証と署名を行い、「**保存」をクリックします。**&#x200B;オーサーインスタンスが Adobe Sign を使用するように設定されます。
+1. [replication](/help/sites-deploying/replication.md)を使用して、対応するパブリッシュインスタンスで同じ設定を作成します。
 
-これで Adobe Sign が AEM Forms に統合され、アダプティブフォームで使用できるようになりました。[アダプティブフォーム](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)でAdobe Signサービスを使用するには、上記で作成した設定コンテナをアダプティブフォームのプロパティで指定します。
+これで Adobe Sign が AEM Forms に統合され、アダプティブフォームで使用できるようになりました。[アダプティブフォームでAdobe Signサービスを使用するには](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)、上記でアダプティブフォームのプロパティで作成した設定コンテナを指定します。
 
 ## Adobe Sign スケジューラーを設定して署名ステータスを同期する {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
 
@@ -104,15 +103,15 @@ Adobe Sign が有効になっているアダプティブフォームは、すべ
 
 1. 管理者の資格情報を使用して AEM Forms サーバーにログインし、**ツール**／**操作**／**Web コンソール**&#x200B;に移動します。
 
-   次のURLをブラウザーウィンドウで開くこともできます。
+   また、ブラウザーウィンドウで次のURLを開くこともできます。
    `https://[localhost]:'port'/system/console/configMgr`
 
-1. 「**Adobe Sign 設定サービス**」オプションを探して選択します。「[ステータス更新スケジューラーの式](https://en.wikipedia.org/wiki/Cron#CRON_expression)」フィールドで **Cron 式**&#x200B;を指定して「**保存**」をクリックします。例えば、毎日午前0時にConfiguration Serviceを実行するには、**Status Updateスケジューラー式**&#x200B;フィールドで`0 0 0 1/1 * ? *`を指定します。
+1. 「**Adobe Sign 設定サービス**」オプションを探して選択します。「[ステータス更新スケジューラーの式](https://en.wikipedia.org/wiki/Cron#CRON_expression)」フィールドで **Cron 式**&#x200B;を指定して「**保存**」をクリックします。例えば、毎日午前0時に設定サービスを実行するには、「**Status Update Scheduler Expression**」フィールドに`0 0 0 1/1 * ? *`と指定します。
 
 これで、Adobe Sign のステータスを同期するデフォルトの間隔が変更されました。
 
 ## 関連記事 {#related-articles}
 
 * [アダプティブフォームで Adobe Sign を使用する](../../forms/using/working-with-adobe-sign.md)
-* [Adobe SignとAEM Formsの併用（ビデオ）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
-* [Adobe Sign を AEM Forms に統合する](../../forms/using/adobe-sign-integration-adaptive-forms.md)
+* [AEM FormsでのAdobe Signの使用（ビデオ）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
+* [Adobe Sign の AEM Forms への統合](../../forms/using/adobe-sign-integration-adaptive-forms.md)
