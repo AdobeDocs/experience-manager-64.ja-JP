@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: c64fa860-92ef-4b47-a779-1e7d8ac56e16
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: e2015e30-9f42-431b-a384-e25047e4e83c
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 100%
 
 ---
-
 
 # パフォーマンスとスケーラビリティ{#performance-scalability}
 
