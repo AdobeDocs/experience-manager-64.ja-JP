@@ -9,7 +9,6 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
-translation-type: tm+mt
 source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
 source-wordcount: '310'
@@ -31,7 +30,7 @@ ht-degree: 72%
 管理、デプロイ、メンテナンスまたは開発のベストプラクティスについては、次のページを参照してください。
 
 * [ベストプラクティスの管理](/help/sites-administering/administer-best-practices.md)
-* [ベストプラクティスの作成](/help/sites-developing/best-practices.md)
+* [開発のベストプラクティス](/help/sites-developing/best-practices.md)
 * [デプロイのベストプラクティス](/help/sites-deploying/best-practices.md)
 
 以降の表では、特定のドキュメントの説明とリンクを示します。
@@ -55,7 +54,7 @@ ht-degree: 72%
   <tr>
    <td>ダイナミックイメージング</td> 
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">ダイナミックイメージングのベストプラクティス</a></td> 
-   <td><p>Dynamic Mediaの機能を使用している場合、またはDynamic Mediaと統合している場合に、最良の結果を得るために画像にシャープを適用する方法と、画質を最適化する最適な方法について説明します。 </p> </td> 
+   <td><p>Dynamic Media機能を使用している場合やDynamic Mediaとの統合を行っている場合に、最適な結果を得るために画像をシャープにする方法と画質を最適化する最適な方法について説明します。 </p> </td> 
   </tr>
   <tr>
    <td>多言語のアセット</td> 
@@ -69,10 +68,10 @@ ht-degree: 72%
 
 Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
 
-オーサリング：[作成者の環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) — ページの作成方法の概要を示します。
+オーサリング：[オーサー環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) — ページのオーサー方法の概要を示します。
 
 ## フォーム {#forms}
 
-アダプティブフォーム：[アダプティブフォームの使用に関するベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) — アダプティブフォームの設定、オーサリング、カスタマイズのベストプラクティスを説明します。
+アダプティブフォーム：[アダプティブフォームの操作に関するベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) — アダプティブフォームの設定、オーサリング、カスタマイズに関するベストプラクティスについて説明します。
 
-HTML5フォーム：[HTML5フォームのデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) - HTML5フォームのレイアウトとデザインを操作する上でのベストプラクティスを説明します。
+HTML5フォーム：[HTML5フォームのデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) - HTML5フォームのレイアウトとデザインに関するベストプラクティスを説明します。
