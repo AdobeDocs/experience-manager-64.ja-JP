@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9bee0197-f275-49cc-922d-62cba826c4e5
-translation-type: tm+mt
-source-git-commit: 363f084e086c2afd5585caa08d5b55c0e02bd4b2
+exl-id: 76e36d3b-4a8a-45ee-bb4e-28b150ec089c
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 93%
 
 ---
-
 
 # ページ編集時の注釈{#annotations-when-editing-a-page}
 
@@ -39,7 +38,7 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
 
 >[!NOTE]
 >
->要件に応じて、注釈の追加、更新または削除時に通知を送信するワークフローを開発することもできます。
+>要件に応じて、注釈が追加、更新または削除されたときに通知を送信するワークフローを開発することもできます。
 
 ## 注釈 {#annotations}
 
@@ -98,7 +97,7 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
 
    * 直線
 
-      `ALT`を押しながら開始とエンドポイントをクリックします。重複クリックで終了します。
+      `ALT`キーを押しながら、始点と終点をクリックします。ダブルクリックで終了します。
 
 * スケッチモードの終了後、スケッチ線をクリックすると、そのスケッチが選択されます。
 * スケッチを移動するには、スケッチを選択して、必要な位置までドラッグします。
@@ -107,4 +106,3 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
 
 * 段落を移動またはコピーすると、関連する注釈およびスケッチも移動またはコピーされます。段落に対する位置は変わりません。
 * 注釈を削除すると、その注釈に添付されているスケッチもすべて削除されます。
-
