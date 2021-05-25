@@ -9,24 +9,22 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: authoring
 content-type: reference
 discoiquuid: 2a60cacf-0551-44d4-9965-705a715d44c5
-translation-type: tm+mt
-source-git-commit: 4ae3c1dc9af8a9d4a3cdb8a30ed8d898e1079ce6
+exl-id: 3db8153c-eb0c-4767-b7cf-10fb858468b7
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 90%
 
 ---
 
-
 # Dynamic Media の操作{#working-with-dynamic-media}
 
 [Dynamic Media ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のマスターアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
 
-Dynamic Media は、ズーム、360 度スピン、ビデオなどのインタラクティブな閲覧エクスペリエンスを提供します。Dynamic Media は Adobe Experience Manager デジタルアセット管理（AEM Assets）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡易化し、効率化します。
+ダイナミックメディアは、ズーム、360 度スピン、ビデオなどのインタラクティブな閲覧エクスペリエンスを提供します。ダイナミックメディアは Adobe Experience Manager デジタルアセット管理（AEM アセット）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡易化し、効率化します。
 
 Dynamic Media の操作は、クラシック UI では使用できません。タッチ操作対応 UI について説明している [Dynamic Media の操作](/help/assets/dynamic-media.md)を参照してください。
 
 >[!NOTE]
 >
->Dynamic Mediaを使用している場合、[Dynamic MediaクラシックをAEM](/help/sites-administering/scene7.md)に統合すると、利用可能な自動アップロードを同時に使用することはできません。 [Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media)を有効にするを参照してください。 Dynamic Media はデフォルトで無効になっています。
-
+>Dynamic Mediaを使用している場合、[Dynamic Media ClassicをAEM](/help/sites-administering/scene7.md)に統合している場合は、自動アップロードを同時に使用することはできません。 [Dynamic Media](/help/assets/config-dynamic.md#enabling-dynamic-media)の有効化を参照してください。 Dynamic Media はデフォルトで無効になっています。
