@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 3c017f9a-aa7f-4d12-ba8b-9fd92c029157
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 3cc39a24-dbdf-4a4c-9c96-4d39d8cff20d
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 100%
 
 ---
-
 
 # セキュリティ設定の指定 {#specify-security-settings}
 
@@ -27,4 +26,3 @@ Output では、XML 入力で外部エンティティを解決するかどうか
 1. 管理コンソールで、サービス／Output をクリックします。
 1. 「外部エンティティを解決」チェックボックスをオフにします。
 1. 「保存」をクリックします。
-
