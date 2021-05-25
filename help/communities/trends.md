@@ -9,38 +9,37 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: 93a112fc-ef34-4281-89b8-a0f1b3d3aca9
-translation-type: tm+mt
-source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+exl-id: a2cb9738-98a5-4ea6-8d5a-a6c0aa04cd32
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 39%
 
 ---
 
-
 # アクティビティのトレンド {#activity-trends}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
-`Community Activity List`コンポーネントは、メンバー別の投稿および表示に関するトレンド情報と、コンテンツの投稿および表示を追加する機能を提供します。
+`Community Activity List`コンポーネントを使用すると、メンバーによる投稿および表示に関するトレンド情報や、コンテンツの投稿および表示を追加できます。
 
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
 * `Community Activity List`コンポーネントを[コミュニティサイト](overview.md#community-sites)に追加する
 
-* `Community Activity List`コンポーネントの構成設定
+* `Community Activity List`コンポーネントの設定
 
 ## 要件 {#requirement}
 
-`Community Activity List`のデータは、Adobe Analyticsがコミュニティサイトに対してライセンスを取得し、設定されている場合にのみ利用できます。
+`Community Activity List`のデータは、Adobe Analyticsがライセンスを受け、コミュニティサイトに対して設定されている場合にのみ使用できます。
 
 [コミュニティ機能のための Analytics の設定](analytics.md)を参照してください。
 
 ## コミュニティのアクティビティリストをページに追加  {#adding-a-community-activity-list-to-a-page}
 
-作成者モードで`Community Activity List`コンポーネントをページに追加するには、コンポーネント`Communities / Community Activity List`を見つけてページ上の位置にドラッグします。
+`Community Activity List`コンポーネントをオーサリングモードでページに追加するには、コンポーネント`Communities / Community Activity List`を探し、ページ上の場所にドラッグします。
 
-必要な情報については、[Communities Components Basics](basics.md)を参照してください。
+必要な情報については、[コミュニティコンポーネントの基本](basics.md)を参照してください。
 
 コミュニティサイトのページに初めて配置されたとき、コンポーネントは次のように表示されます。
 
@@ -48,7 +47,7 @@ ht-degree: 39%
 
 ## コミュニティのアクティビティリストの設定  {#configuring-community-activity-list}
 
-アクセスする配置済みの`Community Activity List`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
+配置済みの`Community Activity List`コンポーネントを選択し、`Configure`アイコンを選択すると、編集ダイアログが開きます。
 
 ![chlimage_1-228](assets/chlimage_1-228.png)
 
@@ -74,14 +73,14 @@ ht-degree: 39%
 
 * **[!UICONTROL 表示数]**
 
-   リストする項目数。
+   リストする項目の数。
 
    初期設定は 10 です。
 
 * **[!UICONTROL アクティビティタイプ]**
 
-   いずれかを選択
-   * `Views`（ページ訪問数）
+   次のいずれかを選択します。
+   * `Views`（訪問ページ数）
    * `Posts`（UGCの作成）
    * `Follows`
    * `Likes`
@@ -90,7 +89,7 @@ ht-degree: 39%
 
 * **[!UICONTROL 期間]**
 
-   いずれかを選択
+   次のいずれかを選択します。
    * `Last 24 hours`
    * `Last 7 days`
    * `Last 30 days`
@@ -102,13 +101,13 @@ ht-degree: 39%
 
 * **[!UICONTROL コンテキストパス]**
 
-   特定のブログなど、サイトのサブセットに対するアクティビティのスコープを設定する機能を提供します。
+   特定のブログなど、サイトのサブセットに対するアクティビティの範囲を設定できます。
 
    初期設定は、コミュニティサイト全体です。
 
 * **[!UICONTROL メンバー数の集計]**
 
-   オフにする（オフにする）と、最上位レベルの投稿のみがカウントされます。 例えば、コンテキストがルートページ（デフォルト）の場合、`Activity Type`/`Posts`は、ルートページにコンテンツを投稿できないので、アクティビティを表示しません。 オンにすると、すべての下位のページがカウントに含まれます。
+   オフ（オフ）にすると、最上位の投稿のみがカウントされます。 例えば、コンテキストがルートページ（デフォルト）の場合、`Posts`の`Activity Type`は、ルートページにコンテンツを投稿できないので、アクティビティを表示しません。 オンにすると、すべての下位のページがカウントに含まれます。
 
    初期設定はオンです。
 
@@ -116,10 +115,10 @@ ht-degree: 39%
 
 **上位の訪問者**&#x200B;の設定：タイプ = メンバー、アクティビティタイプ = ビュー
 
-**Top** Contributorsconfig:タイプ=メンバー、アクティビティタイプ=投稿
+**上位の** 投稿者の設定：タイプ=メンバー、アクティビティタイプ=投稿
 
-**Top** Contentconfig:Type = Content、アクティビティタイプ=表示、
+**上位の** Contentconfig:タイプ=コンテンツ、アクティビティタイプ=ビュー
 
-**トレンド** の内容：タイプ=コンテンツ、アクティビティタイプ=投稿
+**Contentconfigのト** レンド分析：タイプ=コンテンツ、アクティビティタイプ=投稿
 
 ![chlimage_1-230](assets/chlimage_1-230.png)
