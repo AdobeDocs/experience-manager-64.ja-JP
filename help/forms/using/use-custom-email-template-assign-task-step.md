@@ -6,14 +6,13 @@ seo-description: 'Forms ワークフローの電子メール通知のカスタ�
 uuid: bc2af94d-d4ad-417e-b3d2-bcfffc1b306d
 topic-tags: publish
 discoiquuid: c447fc39-c0f3-4932-ac6c-465d1fb83f8c
-translation-type: tm+mt
-source-git-commit: 8b5a3e1f6616c3a07da91e4347596961ac4a8e22
+exl-id: 5af73823-2c32-41b3-9ab8-a7ad9fd9532f
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 94%
 
 ---
-
 
 # タスクの割り当て手順におけるカスタムの電子メールテンプレートの使用 {#use-custom-email-templates-in-an-assign-task-step}
 
@@ -67,7 +66,7 @@ AEM Forms には電子メール通知用の初期設定済みテンプレート�
 
 タスクの割り当て手順では、初期状態でデフォルトテンプレート htmlEmailTemplate.txt を使用するように設定されています。カスタムのテンプレートを使用するように選択できます。テンプレートの場所を変更するには：
 
-1. **[!UICONTROL タスクの割り当て]**&#x200B;の手順を開きます。
+1. **[!UICONTROL タスクの割り当て]**&#x200B;手順を開きます。
 
 1. **[!UICONTROL 担当者/HTML電子メールテンプレート]**&#x200B;に移動します。
 
