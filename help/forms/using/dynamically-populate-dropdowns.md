@@ -8,16 +8,15 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: 49453dda-7b05-4470-866e-1946bff70f27
-translation-type: tm+mt
-source-git-commit: a2f6deda8b3a34aa5893843a442241920edd6718
+exl-id: 3a32f578-23b1-4c76-bd85-dd3d812c6c28
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '346'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
-
-# ドロップダウンリストの動的な自動入力   {#dynamically-populating-drop-down-lists}
+# ドロップダウンリストの動的な自動入力  {#dynamically-populating-drop-down-lists}
 
 ## 前提条件 {#prerequisites}
 
@@ -26,9 +25,9 @@ ht-degree: 80%
 * [アダプティブフオームの作成](/help/forms/using/creating-adaptive-form.md)
 * [アダプティブフォームのオーサリング](/help/forms/using/introduction-forms-authoring.md)
 
-## ドロップダウンリストを動的に自動入力する手順  {#procedure-to-dynamically-populate-drop-down-lists}
+## ドロップダウンリストを動的に自動入力する手順 {#procedure-to-dynamically-populate-drop-down-lists}
 
-**国**&#x200B;ドロップダウンリストで選択した値に基づいて、**州**&#x200B;ドロップダウンリストに自動入力するシナリオを考えてみます。**国**&#x200B;ドロップダウンリストでオーストラリアを選択した場合、**州**&#x200B;ドロップダウンリストにはオーストラリアの州名が表示されます。次の手順では、このタスクを実行する手順を説明します。
+「**国**」ドロップダウンリストで選択した値に基づいて、「**州**」ドロップダウンリストに自動入力するシナリオを考えてみます。「**国**」ドロップダウンリストでオーストラリアを選択した場合、「**州**」ドロップダウンリストにはオーストラリアの州名が表示されます。次の手順では、このタスクを実行する手順を説明します。
 
 1. 次のモジュールでプロジェクトを作成します。
 
@@ -146,16 +145,16 @@ ht-degree: 80%
    }
    ```
 
-1. アプリ内の特定のフォルダー階層の下にドロップダウンノードを作成します（例えば、/apps/myfolder/demoの下にノードを作成します）。 ノードの`sling:resourceType`パラメーターが、サーブレットがポイントするパラメーター(/apps/populatedropdown)と同じであることを確認します。
+1. アプリケーション内の特定のフォルダー階層の下にドロップダウンノードを作成します（例えば、/apps/myfolder/demo の下にノードを作成します）。ノードの `sling:resourceType` パラメーターがサーブレットがポイントするもの（/apps/populatedropdown）と同じであるようにしてください。
 
    ![ドロップダウンノードの作成](assets/dropdown-node.png)
 
-1. コンテンツノードをパッケージ化し、その .jar ファイルを特定の場所 (例えば /apps/myfolder/demo/install/) に埋め込みます。同じファイルをサーバーにデプロイします。
+1. コンテンツノードをパッケージ化し、その .jar ファイルを特定の場所（例えば /apps/myfolder/demo/install/）に埋め込みます。同じファイルをサーバーにデプロイします。
 1. アダプティブフォームを作成し、2 つのドロップダウンリスト（国と州）をそれに追加します。国リストは、国も名前を含むことができます。州リストは、最初のリストで選択した国に対する州の名前を動的に自動入力できます。
 
    国リストに表示する国の名前を追加します。州リストに、それを国リスト内の国の名前に基づいて自動入力するスクリプトを追加します。
 
-   ![国](assets/country-dropdown.png) ![名の追加州名を入力するスクリプトの追加](assets/state-dropdown.png) ![国ドロップダウンリストと州ドロップダウンメニューの収集](assets/2dropdowns.png)
+   ![国名の追加](assets/country-dropdown.png)![州名を入力するスクリプトの追加](assets/state-dropdown.png)![「国」と「州」ドロップダウンリストを一緒に](assets/2dropdowns.png)
 
    ```
    JSON.parse(
