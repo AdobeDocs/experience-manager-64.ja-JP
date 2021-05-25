@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: 958461b0-4cbb-452b-88ea-9b98ada14750
-translation-type: tm+mt
-source-git-commit: 64090e3c7cf722f44968467c51291a11aeeec237
+exl-id: 94ac30a5-6ac8-4bbf-8ea6-e10bc7db4f31
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 81%
 
 ---
-
 
 # 共有リソースのアップロード  {#uploading-shared-resources}
 
@@ -28,7 +27,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->AEM Mobileアプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの「[AEM Mobileアプリのデザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)」を参照してください。
+>AEM Mobileアプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの[AEM Mobileアプリのデザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)を参照してください。
 
 >[!CAUTION]
 >
@@ -38,7 +37,7 @@ ht-degree: 81%
 
 通常、記事などのコンテンツは、作成者およびアプリを問わず常に同じ外観と操作性である必要があります。したがって、スクリプト、CSS およびフォントをすべての作成者およびアプリに対して利用可能にすることが必要です。このように運用すると、こうした共有リソースが Mobile On-Demand に送信されるので、後で必要に応じて利用できます。
 
-アプリを設定してクラウド設定に関連付けると、共有リソースをアップロードできます。アプリをクラウド設定に関連付ける詳細な手順については、[ここ](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)をクリックしてください。
+アプリを設定してクラウド設定に関連付けると、共有リソースをアップロードできます。アプリをクラウド設定に関連付ける手順について詳しくは、[ここ](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)をクリックしてください。
 
 >[!NOTE]
 >
@@ -46,8 +45,8 @@ ht-degree: 81%
 
 以下の手順に従って、記事の共有リソースをアップロードします。
 
-1. **記事の管理**&#x200B;タイルから記事を選択します。
-1. 「**Upload Shared Resources**」をクリックして、共有HTMLリソースをアップロードします。
+1. **記事を管理**&#x200B;タイルから記事を選択します。
+1. 「**共有リソースをアップロード**」をクリックして、共有HTMLリソースをアップロードします。
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
