@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: f3781d9a-421a-446e-8b49-40744b9ef58e
-translation-type: tm+mt
-source-git-commit: 97d60c4d18b7842f9fc7c81be33ac1acfca8b24d
+exl-id: 779e1e4c-9a6e-4446-9c12-5b2499afbf6a
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '969'
 ht-degree: 88%
 
 ---
-
 
 # AEM でのシリアル化の問題の軽減{#mitigating-serialization-issues-in-aem}
 
@@ -57,7 +56,7 @@ NotSoSerial エージェントは、アプリケーションサーバーの AEM 
    java -jar aem-quickstart-6.2.0.jar -unpack
    ```
 
-1. 新しく解凍されたAEM quickstartの場所に移動し、`crx-quickstart/opt/notsoserial/`フォルダーをAEMアプリケーションサーバーのインストール先の`crx-quickstart`フォルダーにコピーします。
+1. 新しく解凍されたAEM quickstartの場所に移動し、`crx-quickstart/opt/notsoserial/`フォルダーをAEMアプリケーションサーバーインストールの`crx-quickstart`フォルダーにコピーします。
 
 1. `/opt`の所有権を、サーバーを実行しているユーザーに変更します。
 
@@ -69,11 +68,11 @@ NotSoSerial エージェントは、アプリケーションサーバーの AEM 
 
 ## エージェントの設定  {#configuring-the-agent}
 
-ほとんどのインストールにおいて、デフォルトの設定で十分機能します。これには、既知のリモート実行脆弱クラスのブロックリストと、信頼できるデータの逆シリアル化が比較的安全であるパッケージの許可リストが含まれます。
+ほとんどのインストールにおいて、デフォルトの設定で十分機能します。これには、既知のリモート実行の脆弱なクラスのブロックリストと、信頼されたデータのシリアル化解除が比較的安全である必要があるパッケージの許可リストが含まれます。
 
    ファイアウォールの設定は動的であり、次の手順でいつでも変更できます。
 
-1. `https://server:port/system/console/configMgr`のWebコンソールに移動
+1. Webコンソール(`https://server:port/system/console/configMgr`)に移動します。
 1. 「**Deserialization Firewall Configuration**」を探してクリックします
 
    >[!NOTE]
@@ -85,13 +84,13 @@ NotSoSerial エージェントは、アプリケーションサーバーの AEM 
 
 この設定には、許可リスト、ブロックリスト、シリアル化解除ログが含まれています。
 
-**リストを許可**
+**許可リストへの登録**
 
 許可リストセクションには、シリアル化解除が許可されるクラスやパッケージ接頭辞が表示されます。独自のクラスのシリアル化解除をおこなう場合は、この許可リストにクラスまたはパッケージのいずれかを追加する必要があります。
 
-**ブロック一覧**
+**ブロックリスト**
 
- ブロックリストセクションには、シリアル化解除が許可されないクラスが表示されます。これらのクラスの初期セットは、リモート実行の攻撃に脆弱であると見なされるクラスに限定されています。このブロックリストは、許可されたエントリの一覧の前に適用されます。
+ ブロックリストセクションには、シリアル化解除が許可されないクラスが表示されます。これらのクラスの初期セットは、リモート実行の攻撃に脆弱であると見なされるクラスに限定されています。ブロックリストは、許可リストに登録されたエントリの前に適用されます。
 
 **診断ログ**
 
@@ -133,7 +132,7 @@ URL にアクセスすると、エージェントに関連するヘルスチェ�
 
    >[!NOTE]
    >
-   >NotSoSerialエージェントjarのAdobe配布は、AEMのインストール先の`crx-quickstart/opt/notsoserial/`フォルダーにあります。
+   >NotSoSerialエージェントJARのAdobe配布は、AEMインストールの`crx-quickstart/opt/notsoserial/`フォルダーにあります。
 
 1. JVM を停止して再開します。
 
@@ -142,4 +141,3 @@ URL にアクセスすると、エージェントに関連するヘルスチェ�
 ## その他の考慮事項  {#other-considerations}
 
 IBM JVM 上で実行している場合は、[こちら](https://www.ibm.com/support/knowledgecenter/SSSTCZ_2.0.0/com.ibm.rt.doc.20/user/attachapi.html)の Java Attach API のサポートに関するドキュメントを参照してください。
-
