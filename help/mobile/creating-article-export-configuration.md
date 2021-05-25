@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: bc681589-5d46-44cd-888d-b0722a2fd006
-translation-type: tm+mt
-source-git-commit: 622e613d556acda7cd98d4b3d20a20133756fd92
+exl-id: d6e8412d-09d4-4cac-a691-71703ebaa374
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 73%
 
 ---
-
 
 # 記事の書き出し設定の作成{#creating-article-export-configuration}
 
@@ -26,13 +25,13 @@ ht-degree: 73%
 
 >[!CAUTION]
 >
->**前提条件**：
+>**前提条件**:
 >
->共有リソースの作成と変更について詳しくは、[コンテンツの同期](/help/mobile/mobile-ondemand-contentsync.md)を参照して、基本的な概念を理解してください。
+>共有リソースの作成と変更について学習する前に、[コンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md)を参照して、基本的な概念を理解してください。
 
 AEM Mobile のユーザーは、コンテンツ同期を使用して、ライブコンテンツをモバイルアプリ用の静的コンテンツとして書き出します。AEM Mobile からコンテンツを Mobile On-demand Services にアップロードしたときに書き出しがおこなわれます。
 
-上の表で示した&#x200B;***dps-exportTemplate***&#x200B;プロパティは、アプリのエクスポート設定のパスを定義します。 共有リソースを作成および変更するには、このプロパティを設定します。
+上記の表に示したプロパティ&#x200B;***dps-exportTemplate***&#x200B;は、アプリの書き出し設定へのパスを定義します。 共有リソースを作成および変更するには、このプロパティを設定します。
 
 以下のリソースでは、Adobe Experience Manager（AEM）からコンテンツを書き出して AEM Mobile にアップロードする方法について説明します。
 
@@ -40,7 +39,7 @@ AEM Mobile のユーザーは、コンテンツ同期を使用して、ライブ
 
 [ContentSync](/help/mobile/mobile-ondemand-contentsync.md)を使用して、コンテンツをまとめ、***共有リソース***&#x200B;パッケージを作成します。
 
-**&lt;dps-exportTemplate>/dps-article>**&#x200B;にあるContentSync設定は、デバイスでのプロパティの静的レンダリングに必要な記事とすべてのコンテンツを書き出すように設定する必要があります。
+**&lt;dps-exportTemplate>/dps-article>**&#x200B;にあるContentSync設定は、デバイス上のプロパティ静的レンダリングに必要なすべてのコンテンツと記事を書き出すように設定する必要があります。
 
 >[!CAUTION]
 >
@@ -66,4 +65,3 @@ AEM Mobile のユーザーは、コンテンツ同期を使用して、ライブ
 >[!NOTE]
 >
 >記事のコンテンツが変更された場合は、記事を AEM Mobile On-Demand Services にアップロードまたは書き出す必要があります。
-
