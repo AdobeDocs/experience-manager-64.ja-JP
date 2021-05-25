@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: a3aac07e-7d67-4a4f-b941-ff25a981092f
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: 5ca6212f-d3c7-4239-beba-9a0bdac4b1ec
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 79%
 
 ---
-
 
 # 一般設定の更新  {#updating-general-settings}
 
@@ -25,7 +24,7 @@ AEM Forms アプリの一般設定によって、添付ファイルの取得、�
 
 アプリケーションを AEM Forms サーバーと同期すると、すべてのフォームと定義済みタスクがモバイルデバイス上にダウンロードされます。
 
-標準搭載のAEM Formsアプリソリューションでは、各フォームに関連付けられた添付ファイルをアプリが同期されたときにダウンロードすることはありません。
+標準搭載のAEM Formsアプリソリューションでは、アプリを同期する際に、各フォームに関連付けられた添付ファイルをダウンロードしません。
 
 「一般」タブで、ダウンロードの添付ファイルや、オフラインモード、ランディング画面、自動保存、および同期設定変更します。アプリの[ホーム画面](/help/forms/using/home-screen.md)を変更できます。
 
@@ -58,9 +57,9 @@ AEM Forms アプリの一般設定によって、添付ファイルの取得、�
 
 * **デフォルトカテゴリ**： ホーム画面に表示するフォームのカテゴリを選択できます。「すべて」を選択すると、すべてのフォームがホーム画面に表示されます。カテゴリは、アプリケーションにロードされるフォームに基づいて自動入力されます。Formsは、AEM Formsサーバーで指定されたフォーム設定に基づいて、アプリで使用できます。
 
-* **自動保存頻度**:モバイルアプリでフォームがデータロ [カルに保存される頻度を設定する場合](/help/forms/using/autosave-data-app.md) 。
+* **自動保存頻度**:モバイルアプリがフォームをデータロ [ーカルに保存する頻度を設](/help/forms/using/autosave-data-app.md) 定する。
 
-* **同期頻度**:モバイルアプリがオンラインモードで [AEM Formsサーバーと](/help/forms/using/sync-app.md) 同期される頻度を設定する場合。
+* **同期頻度**:モバイルアプリがオンラインモ [ードでAEM Formsサ](/help/forms/using/sync-app.md) ーバーと同期される頻度を設定する。
 
 **ローカルデータの消去**：デバイス上からデータベースを消去します。この中には、すべてのユーザやファイルストレージ用の設定とローカルデータが含まれます。 
 
