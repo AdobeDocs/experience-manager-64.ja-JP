@@ -2,16 +2,15 @@
 title: Assets の検索機能の拡張
 description: AEM Assets のあらかじめ用意されている文字列によるアセットの検索機能を拡張します。
 contentOwner: AG
-feature: Search
+feature: 検索
 role: Developer
-translation-type: tm+mt
-source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
+exl-id: d68c735f-2699-4923-a7e7-4d1356eae335
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '831'
 ht-degree: 90%
 
 ---
-
 
 # Assets の検索機能の拡張 {#extending-assets-search}
 
@@ -45,7 +44,7 @@ AEM Assets 管理パネルで追加の「検索」タブを設定することで
 
    >[!NOTE]
    >
-   >2つ目のサイト管理検索パネルを作成する場合は、フォームの競合を防ぐために、`id`プロパティを必ず設定してください。
+   >2つ目のsiteadminsearchpanelを作成する場合は、フォームの競合を防ぐために`id`プロパティを必ず設定してください。
 
 ## カスタムの述語の作成 {#creating-custom-predicates}
 
@@ -55,13 +54,13 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 カスタム述語を作成するには、[ウィジェットフレームワーク](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html)に関する基本的な知識が必要です。
 
-ベストプラクティスは、既存の述語をコピー後に変更することです。サンプル述部は`/libs/cq/search/components/predicates`にあります。
+ベストプラクティスは、既存の述語をコピー後に変更することです。サンプルの述語は`/libs/cq/search/components/predicates`にあります。
 
 ### 例：シンプルなプロパティ述語の作成 {#example-build-a-simple-property-predicate}
 
 プロパティ述語の作成手順
 
-1. プロジェクトディレクトリに`/apps/geometrixx/components/titlepredicate`のように、コンポーネントフォルダを作成します。
+1. プロジェクトディレクトリにコンポーネントフォルダー（例：`/apps/geometrixx/components/titlepredicate`）を作成します。
 1. ページの URL の末尾に `content.xml`:
 
    ```xml
@@ -144,7 +143,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
    </script>
    ```
 
-1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDEで、プライマリタイプ`cq:EditConfig`のノード`cq:editConfig`を追加します。 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として **DELETE** のみを設定します。
+1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDEで、プライマリ型`cq:EditConfig`のノード`cq:editConfig`を追加します。 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として **DELETE** のみを設定します。
 1. ブラウザーを開き、サンプルページ（`press.html` など）でデザインモードに切り替えて、述語段落システムの新しいコンポーネント（「**左揃え**」など）を有効にします。
 
 1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。「**Predicates**」列にコンポーネントを挿入し、「**Diamond**」などの検索語句を入力して、虫眼鏡アイコンをクリックして検索を開始します。
@@ -157,7 +156,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 グループ述語の作成手順
 
-1. プロジェクトディレクトリに`/apps/geometrixx/components/picspredicate`のように、コンポーネントフォルダを作成します。
+1. プロジェクトディレクトリにコンポーネントフォルダー（例：`/apps/geometrixx/components/picspredicate`）を作成します。
 1. ページの URL の末尾に `content.xml`:
 
    ```xml
@@ -251,7 +250,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
        });
    ```
 
-1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDEで、プライマリタイプ`cq:EditConfig`のノード`cq:editConfig`を追加します。 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として `DELETE` のみを設定します。
+1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDEで、プライマリ型`cq:EditConfig`のノード`cq:editConfig`を追加します。 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として `DELETE` のみを設定します。
 1. ブラウザーを開き、サンプルページ（`press.html` など）でデザインモードに切り替えて、述語段落システムの新しいコンポーネント（「**左揃え**」など）を有効にします。
 1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。「**Predicates**」列にコンポーネントを挿入します。
 
@@ -259,12 +258,12 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 
 事前設定済みの ExtJS ウィジェットでは次の述語が使用可能です。
 
-### FulltextPredicate  {#fulltextpredicate}
+### FulltextPredicate {#fulltextpredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルトは `fulltext` |
-| searchCallback | Function | イベント`keyup`上の検索をトリガーするコールバック。 デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback | Function | イベント`keyup`で検索を呼び出すコールバック。 デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
@@ -283,7 +282,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 | pathFieldPredicateName | 文字列 | デフォルトは `folder` |
 | showFlatOption | Boolean | チェックボックス`search in subfolders`を表示するフラグ。 デフォルトは true です |
 
-### DatePredicate  {#datepredicate}
+### DatePredicate {#datepredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
@@ -291,7 +290,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 | propertyname | 文字列 | JCR プロパティの名前。デフォルトは `jcr:content/jcr:lastModified` |
 | defaultValue | 文字列 | 事前設定されるデフォルト値 |
 
-### OptionsPredicate  {#optionspredicate}
+### OptionsPredicate {#optionspredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
@@ -299,7 +298,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 | predicateName | 文字列 | 述語の名前。デフォルトは `daterange` |
 | propertyname | 文字列 | JCR プロパティの名前。デフォルトは `jcr:content/metadata/cq:tags` |
 | collapse | 文字列 | 折りたたみのレベル。デフォルトは `level1` |
-| triggerSearch | ブール値 | チェック時の検索を呼び出すためのフラグ。デフォルトは false です |
+| triggerSearch | Boolean | チェック時の検索を呼び出すためのフラグ。デフォルトは false です |
 | searchCallback | 関数 | 検索を呼び出すためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | Number | タイムアウト。この時間を過ぎると searchCallback が呼び出されます。デフォルトは 800ms です |
 
