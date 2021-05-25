@@ -1,15 +1,14 @@
 ---
 title: レスポンシブサイト用に最適化された画像の配信
-description: Dynamic Mediaのレスポンシブコード機能を使用して、最適化された画像を配信する方法
+description: Dynamic Mediaのレスポンシブコード機能を使用して最適化された画像を配信する方法
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
 exl-id: 36bb526c-a6d9-4296-8318-97ac72d6b3ba
-feature: Publishing
+feature: 公開
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
 source-wordcount: '335'
@@ -41,7 +40,7 @@ ht-degree: 90%
    >
    >「**[!UICONTROL URL]**」ボタンまたは「**[!UICONTROL RESS]**」ボタンを使用可能にするには、選択したアセット&#x200B;*と*&#x200B;選択した画像プリセットまたはビューアプリセットを公開する必要があります。
    >
-   >Dynamic Media — ハイブリッドモードでは、画像プリセットを公開する必要があります。Dynamic Media-Scene7モードは、画像プリセットを自動的に公開します。
+   >Dynamic Media — ハイブリッドモードでは、画像プリセットを公開する必要があります。Dynamic Media - Scene7モードでは、画像プリセットが自動的に公開されます。
 
 1. 「**[!UICONTROL RESS]**」をタップします。
 
