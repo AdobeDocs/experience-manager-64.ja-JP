@@ -10,14 +10,13 @@ audience: developing
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: 39d1cb2e-18f5-4d08-b983-a06b1f470c51
-translation-type: tm+mt
-source-git-commit: de04a6c205e4379c7f8a9ab5574985259d6541c3
+exl-id: 0c80ee60-d2dd-49ad-a283-81fdb1fd201e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 84%
 
 ---
-
 
 # API ガイド{#api-guides}
 
