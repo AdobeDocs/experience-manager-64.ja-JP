@@ -9,22 +9,20 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/system_information_service
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 14de0652-717d-4c84-b7b4-b7b78f325baa
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 32195d6d-e800-4f21-bcc4-0e9d1601e239
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 94%
 
 ---
 
-
 # システム情報サービスのセットアップ {#set-up-the-system-information-service}
 
 システム情報サービスは情報取得のために REST API を提供します。システム情報サービスを使用するには、管理コンソールから REST エンドポイントを有効にします。REST エンドポイントを有効にするには、次の手順を実行します。
 
-1. 管理コンソールにログインします管理コンソールのデフォルトURLは`https://[hostname]:[port]/adminui.`です
+1. 管理コンソールにログインします管理コンソールのデフォルトURLは`https://[hostname]:[port]/adminui.`です。
 1. サービス／アプリケーションおよびサービス／サービスの管理に移動します。
 1. サービスの管理ページで、「**SystemInfo**」サービスをクリックします。
 1. 「エンドポイント」タブのリストで、「REST」を選択して、「**追加**」をクリックします。
 1. REST エンドポイント画面で、「**追加**」をクリックします。
-
