@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 616d42c8-2316-4c56-b89f-660903270620
-translation-type: tm+mt
-source-git-commit: 11d4d4c4aa633974df2047631cf92f3226aaf6ca
+exl-id: 9abef452-b435-4419-895c-083cae6cd7d2
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2764'
 ht-degree: 93%
 
 ---
-
 
 # 基本操作 {#basic-handling}
 
@@ -54,7 +53,7 @@ AEM のユーザーインターフェイスは、タッチ操作に対応して�
 
 ![chlimage_1-357](assets/chlimage_1-357.png)
 
-**Got！をクリックまたはタップ**」をクリックまたはタップして、概要の次のページに進みます。「**閉じる**」をクリックまたはタップするか、概要ダイアログの外側をクリックまたはタップして閉じます。
+「**分かった！」をクリックまたはタップします。**」をクリックまたはタップして、概要の次のページに進みます。「**閉じる**」をクリックまたはタップするか、概要ダイアログの外側をクリックまたはタップして閉じます。
 
 概要は、「**次回から表示しない**」オプションをオンにしない限り、次回コンソールにアクセスすると再び開始します。
 
@@ -90,15 +89,15 @@ AEM のユーザーインターフェイスは、タッチ操作に対応して�
    <td><strong>目的</strong></td> 
   </tr>
   <tr>
-   <td>Assets<br /> </td> 
+   <td>アセット<br /> </td> 
    <td>これらのコンソールでは、画像、ビデオ、ドキュメント、オーディオファイルなどのデジタルアセットを読み込んで、それらの<a href="/help/assets/assets.md">デジタルアセットを管理</a>できます。これにより、これらのアセットは、同じ AEM インスタンス上で実行されているすべての Web サイトで使用できます。 </td> 
   </tr>
   <tr>
-   <td>コミュニティ</td> 
+   <td>Communities</td> 
    <td>このコンソールを使用すると、<a href="/help/communities/overview.md#engagement-community">エンゲージメント</a>と<a href="/help/communities/overview.md#enablement-community">イネーブルメント</a>のために<a href="/help/communities/sites-console.md">コミュニティサイト</a>を作成および管理できます。</td> 
   </tr>
   <tr>
-   <td>Commerce</td> 
+   <td>コマース</td> 
    <td><a href="/help/sites-administering/ecommerce.md">コマース</a>サイトに関連する製品、製品カタログおよび注文を管理できます。</td> 
   </tr>
   <tr>
@@ -190,7 +189,7 @@ AEM のユーザーインターフェイスは、タッチ操作に対応して�
 
    ![screen_shot_2018-03-23at104126](assets/screen_shot_2018-03-23at104126.png)
 
-   これは、リスト表示でのみ使用できます。詳しくは、[リスト表示](#list-view)を参照してください。
+   これは、リスト表示でのみ使用できます。詳しくは、[リストビュー](#list-view)を参照してください。
 
 * 「**作成**」ボタン
 
@@ -244,7 +243,7 @@ AEM のユーザーインターフェイスは、タッチ操作に対応して�
    >すべてのキーボードショートカットの概要については、次のドキュメントを参照してください。
    >
    >* [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
-   >* [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
+   * [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
 
 
 ## アクションツールバー {#actions-toolbar}
@@ -264,8 +263,7 @@ AEM のユーザーインターフェイスは、タッチ操作に対応して�
 ![screen_shot_2018-03-23at104827](assets/screen_shot_2018-03-23at104827.png)
 
 >[!NOTE]
->
->利用可能な個々のアイコンについては、それぞれのコンソール、機能、シナリオに関連するページで説明しています。
+利用可能な個々のアイコンについては、それぞれのコンソール、機能、シナリオに関連するページで説明しています。
 
 ## クイックアクション  {#quick-actions}
 
@@ -287,8 +285,7 @@ AEM のユーザーインターフェイスは、タッチ操作に対応して�
 * [リスト表示](#list-view)
 
 >[!NOTE]
->
->デフォルトでは、AEM Assets は、UI のどの表示でもアセットの元のレンディションをサムネールとして表示しません。管理者の場合、オーバーレイを使用して AEM Assets で元のレンディションをサムネールとして表示するように設定できます。
+デフォルトでは、AEM Assets は、UI のどの表示でもアセットの元のレンディションをサムネールとして表示しません。管理者の場合、オーバーレイを使用して AEM Assets で元のレンディションをサムネールとして表示するように設定できます。
 
 ### リソースの選択  {#selecting-resources}
 
@@ -318,12 +315,12 @@ AEM のユーザーインターフェイスは、タッチ操作に対応して�
    <td>カード表示<br /> </td> 
    <td>
     <ul> 
-     <li>デスクトップ：<br />マウスオーバーし、チェックマーククイックアクションを使用</li> 
+     <li>デスクトップ：<br />マウスオーバーし、チェックマーククイックアクションを使用します。</li> 
      <li>モバイルデバイス：<br />カードをタップ＆ホールドする</li> 
     </ul> </td> 
    <td>
     <ul> 
-     <li>デスクトップ：<br />カードをクリック</li> 
+     <li>デスクトップ：<br />カードをクリックします</li> 
      <li>モバイルデバイス：<br />カードをタップします</li> 
     </ul> </td> 
   </tr>
@@ -439,7 +436,7 @@ AEM のユーザーインターフェイスは、タッチ操作に対応して�
       * すべてを選択解除するには、再度チェックボックスをクリックまたはタップします。
 
 
-* 「表示」ボタンの下にある「**表示設定**」オプションを使用して、表示する列を選択します。 次の列を表示できます。
+* 表示ボタンの下にある「**表示設定**」オプションを使用して、表示する列を選択します。 次の列を表示できます。
 
    * **名前** - ページ名。ページの URL の一部で、言語にかかわらず変更されないので、多言語オーサリング環境で便利です
    * **変更** - 最終変更日および最終変更者
@@ -456,8 +453,7 @@ AEM のユーザーインターフェイスは、タッチ操作に対応して�
 * リストの各項目の右端にある縦の点線マークを使用して項目の順序を変更します。
 
 >[!NOTE]
->
->順序を変更できるのは、`jcr:primaryType` 値が `sling:OrderedFolder` である順序付きフォルダーの内部のみです。
+順序を変更できるのは、`jcr:primaryType` 値が `sling:OrderedFolder` である順序付きフォルダーの内部のみです。
 
 ![screen_shot_2018-03-23at110113](assets/screen_shot_2018-03-23at110113.png)
 
@@ -482,8 +478,7 @@ AEM のユーザーインターフェイスは、タッチ操作に対応して�
 コンテンツのみが選択されている場合は、パネルアイコンのみが表示されます。他のオプションが選択されている場合は、パネルアイコンの隣にオプション名が表示されます。
 
 >[!NOTE]
->
->[キーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)を使用してパネル表示オプションをすばやく切り替えることができます。
+[キーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)を使用してパネル表示オプションをすばやく切り替えることができます。
 
 ### コンテンツツリー {#content-tree}
 
@@ -494,10 +489,8 @@ AEM のユーザーインターフェイスは、タッチ操作に対応して�
 ![screen_shot_2018-03-21at100858](assets/screen_shot_2018-03-21at100858.png)
 
 >[!NOTE]
->
->階層表示でエントリを選択すると、矢印キーを使用して階層をすばやく移動できます。
->
->詳しくは、[キーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)を参照してください。
+階層表示でエントリを選択すると、矢印キーを使用して階層をすばやく移動できます。
+詳しくは、[キーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)を参照してください。
 
 ### タイムライン {#timeline}
 
@@ -540,11 +533,10 @@ AEM のユーザーインターフェイスは、タッチ操作に対応して�
 * [言語コピー](/help/sites-administering/tc-prep.md#seeing-the-status-of-language-roots)
 * コンテンツの参照（参照コンポーネントが借りているまたは貸しているコンポーネントなど）
 
-![screen_shot_2018-03-23at11122](assets/screen_shot_2018-03-23at111122.png)
+![screen_shot_2018-03-23at111122](assets/screen_shot_2018-03-23at111122.png)
 
 ### フィルター {#filter}
 
 これを使用すると、適切な場所フィルターが既に設定された状態で[検索](/help/sites-authoring/search.md)と同じようにパネルが開き、表示したいコンテンツをさらにフィルタリングできます。
 
-![screen_shot_2018-03-23at11509](assets/screen_shot_2018-03-23at111509.png)
-
+![screen_shot_2018-03-23at111509](assets/screen_shot_2018-03-23at111509.png)
