@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: ceace3aa-78a5-485e-b519-630479e087d8
-translation-type: tm+mt
-source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+exl-id: 99f8afda-1771-471b-bd0c-99960a453bc9
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 56%
 
 ---
-
 
 # Q&amp;A の基本事項 {#qna-essentials}
 
@@ -48,14 +47,14 @@ ht-degree: 56%
   </tr>
   <tr>
    <td> properties</td> 
-   <td><a href="working-with-qna.md">QnAフォーラム機能</a>を参照</td> 
+   <td><a href="working-with-qna.md">Q&amp;Aフォーラム機能</a>を参照</td> 
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [Q&amp;A API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/qna/client/api/package-summary.html)
 
@@ -63,11 +62,11 @@ ht-degree: 56%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### Q&amp;A 機能  {#qna-function}
+### Q&amp;A 機能 {#qna-function}
 
-[QnA関数](functions.md#qna-function)を含むコミュニティサイト構造には、設定済みの`QnA`コンポーネントと、モデレートとタグに影響する設定が含まれます。 QnA関数は、[特権メンバー・ユーザー・グループ](users.md#privileged-members-group)の識別をサポートします。
+[Q&amp;A関数](functions.md#qna-function)を含むコミュニティサイト構造には、設定済みの`QnA`コンポーネントと、モデレートとタグ付けに影響する設定が含まれます。 Q&amp;A関数は、[権限を持つメンバーユーザーグループ](users.md#privileged-members-group)の識別をサポートします。
 
-### QnAフォーラム投稿(UGC)へのアクセス{#accessing-qna-forum-posts-ugc}
+### Q&amp;Aフォーラム投稿(UGC)へのアクセス{#accessing-qna-forum-posts-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。\
 [ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
@@ -79,7 +78,6 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例
-* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
+* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティメソッドと例
+* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
-
