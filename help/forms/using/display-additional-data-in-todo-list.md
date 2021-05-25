@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: b74a0933-2b96-4a88-9995-6fb21df141aa
-translation-type: tm+mt
-source-git-commit: a5cac0d369bb40659cfde011e5d6ef9a68dc4012
+exl-id: 42d8472d-0eab-4cf9-a7c3-bf2775ee6bec
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 90%
 
 ---
-
 
 # TODO リストでの追加のデータの表示  {#displaying-additional-data-in-todo-list}
 
@@ -123,7 +122,7 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
 
 ## 新規プロパティでの CSS の定義  {#defining-css-for-the-new-property}
 
-1. タスクに追加された情報（プロパティ）にスタイルを適用できます。これを行うには、`/apps/ws/css/newStyle.css`に追加された新しいプロパティにスタイル情報を追加する必要があります。
+1. タスクに追加された情報（プロパティ）にスタイルを適用できます。これをおこなうには、`/apps/ws/css/newStyle.css`に追加された新しいプロパティのスタイル情報を追加する必要があります。
 
    たとえば、以下を追加します。
 
@@ -144,7 +143,7 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
    * 追加の: `/libs/ws/js/runtime/templates/`
    * を: `/apps/ws/js/runtime/templates/`
 
-1. 追加`/apps/ws/js/runtime/templates/task.html`に対する新しい情報。
+1. `/apps/ws/js/runtime/templates/task.html`に新しい情報を追加します。
 
    例えば、`div class="taskProperties"`の下に次を追加します。
 
