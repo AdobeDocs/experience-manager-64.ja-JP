@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 40560e06-2508-45a4-a648-39629ed54f28
-translation-type: tm+mt
-source-git-commit: dda8156729aa46dd6cfd779bca120b165ccc980b
+exl-id: e1f0e210-2c63-4a5f-9e69-4e73624a4304
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '846'
 ht-degree: 69%
 
 ---
-
 
 # ダッシュボード{#dashboards}
 
@@ -90,13 +89,13 @@ AEM には、[SiteCatalyst](/help/sites-administering/adobeanalytics.md) デー�
 
 レポート用コンポーネントはデフォルト設定で初期化されており、このデフォルト設定を使用してダッシュボードをすばやく設定できます。
 
-#### 基本設定  {#basic-configuration}
+#### 基本設定 {#basic-configuration}
 
 「**基本**」タブから次の設定エントリにアクセスできます。
 
 **** タイトル：ダッシュボードに表示されるタイトル。
 
-**要求** タイプデータの要求方法。
+**リクエ** ストタイプデータのリクエスト方法。
 
 **SiteCatalyst設定（オプション）** SiteCatalystへの接続に使用する設定。指定がない場合、ダッシュボードページで（ページプロパティによって）設定されると見なされます。
 
@@ -110,9 +109,9 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 >
 >日付範囲を広く設定すると、ダッシュボードの応答性が低下する場合があります。
 
-**Date Fromデータの取得元** の絶対日付または相対日付。
+**Date From絶対** 日付またはデータの取得元の相対日付。
 
-**日付** を絶対日付またはデータを取得する相対日付。
+**Date** ToAbsoluteまたはデータの取得日の相対値。
 
 各コンポーネントで、固有の設定も定義されます。
 
@@ -120,9 +119,9 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 ![chlimage_1-26](assets/chlimage_1-26.png)
 
-**日付** 精度X軸の時間単位（日、時間など）。
+**X軸** の日付精度Time単位（日、時間など）。
 
-**** 指標表示するイベントのリスト。
+**** 指標：表示するイベントのリスト。
 
 **** 要素：グラフ内の指標データを分類する要素のリスト。
 
@@ -132,15 +131,15 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 **** 要素：グラフ内の指標データを分類する要素。
 
-**** 指標表示するイベント。
+**** 指標：表示するイベント。
 
-**不可. /**&#x200B;レポートに表示される項目数。
+**いいえ。最上位項目の数**&#x200B;レポートに表示される項目の数。
 
 #### ランクレポート {#ranked-report}
 
 ![chlimage_1-28](assets/chlimage_1-28.png)
 
-**** 指標表示するイベント。
+**** 指標：表示するイベント。
 
 **** 要素：グラフ内の指標データを分類する要素。
 
@@ -150,15 +149,15 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 ![chlimage_1-29](assets/chlimage_1-29.png)
 
-**不可. /**&#x200B;レポートに表示されるセクションの数。
+**いいえ。の上位項目数**&#x200B;レポートに表示されるセクションの数。
 
 #### トレンドレポート {#trended-report}
 
 ![chlimage_1-30](assets/chlimage_1-30.png)
 
-**日付** 精度X軸の時間単位（日、時間など）。
+**X軸** の日付精度Time単位（日、時間など）。
 
-**** 指標表示するイベント。
+**** 指標：表示するイベント。
 
 **** 要素：グラフ内の指標データを分類する要素。
 
@@ -168,13 +167,13 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 ダッシュボードは通常のページ（`cq:Page`）なので、あらゆるコンポーネントを使用してダッシュボードを構成できます。
 
-デフォルトでテンプレートで有効にされているAnalyticsレポートコンポーネントを含むデフォルトのコンポーネントグループ`Dashboard`があります。
+分析レポートコンポーネントを含むデフォルトのコンポーネントグループ`Dashboard`がテンプレートでデフォルトで有効になっています。
 
 ### Creating A Dashboard Template {#creating-a-dashboard-template}
 
 テンプレートは、新しいダッシュボードのデフォルトのコンテンツを定義するものです。様々なタイプのダッシュボードを作成するために、複数のテンプレートを使用できます。
 
-ダッシュボードテンプレートは、他のページテンプレートと同様に作成されますが、`/libs/cq/dashboards/templates/`に保存されます。「[コンテンツページテンプレートの作成](/help/sites-developing/website.md#creating-the-contentpage-template)」の節を参照してください。
+ダッシュボードテンプレートは、他のページテンプレートと同じように作成されますが、`/libs/cq/dashboards/templates/`に保存される点が異なります。[コンテンツページテンプレートの作成](/help/sites-developing/website.md#creating-the-contentpage-template)の節を参照してください。
 
 >[!NOTE]
 >
@@ -186,7 +185,7 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 ![chlimage_1-31](assets/chlimage_1-31.png)
 
-最上位の作成者コンポーネントは、`/apps/geometrixx-outdoors/components/reporting`のリポジトリに保存され、以下で構成されます。
+上位のオーサーコンポーネントは、リポジトリの`/apps/geometrixx-outdoors/components/reporting`に保存され、次の要素で構成されます。
 
 1. jcr データを読み取り、`jsp` プレースホルダーを定義する `html` ファイル。
 
@@ -196,7 +195,7 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 次の JavaScript ファイルは、`geout.reporting.topauthors`[ のクライアントライブラリ](/help/sites-developing/clientlibs.md)でコンポーネントの子として定義されます。
 
-[QueryBuilder](/help/sites-developing/querybuilder-api.md)は、`cq:AuditEvent`ノードを読み取るリポジトリのクエリに使用されます。 クエリの結果として JSON オブジェクトが返され、このオブジェクトから作成者の貢献度が抽出されます。
+[QueryBuilder](/help/sites-developing/querybuilder-api.md)は、`cq:AuditEvent`ノードを読み取るためにリポジトリに対してクエリを実行する際に使用します。 クエリの結果として JSON オブジェクトが返され、このオブジェクトから作成者の貢献度が抽出されます。
 
 #### top_authors.js {#top-authors-js}
 
@@ -243,7 +242,7 @@ $.ajax({
 });  
 ```
 
-`JSP`には`global.jsp`と`clientlib`の両方が含まれます。
+`JSP`には、`global.jsp`と`clientlib`の両方が含まれます。
 
 #### top_authors.jsp {#top-authors-jsp}
 
@@ -261,4 +260,3 @@ String reportletTitle = properties.get("title", "Top Authors");
      <div id="authors-list"></div>
 </html>
 ```
-
