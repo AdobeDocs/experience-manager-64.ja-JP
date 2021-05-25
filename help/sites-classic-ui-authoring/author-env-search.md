@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: b20e0f78-9ae4-47ba-8e9a-452a0a78b663
-translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+exl-id: 9c1d8969-6aa6-41b9-a797-3e6431475fc6
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 87%
 
 ---
-
 
 # 検索{#search-features}
 
@@ -32,7 +31,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 
 ![chlimage_1-140](assets/chlimage_1-140.png)
 
-検索パネルでは、Webサイトのすべてのページを検索できます。以下のフィールドとウィジェットが含まれます。
+検索パネルを使用すると、Webサイトのすべてのページで検索できます。次のフィールドとウィジェットが含まれます。
 
 * **フルテキスト**：指定したテキストを検索します。
 * **前後に変更**：特定の日付の期間に変更されたページのみを検索します。
@@ -81,7 +80,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
    * 検索で大文字と小文字を区別するかどうかを指定します。
    * 完全に一致する語句のみを検索するかどうかを指定します（指定しなければ、サブ文字列も検索されます）。
 
-   キーワードが見つかった場合に&#x200B;**プレビュー**&#x200B;リストをクリックします。置換する特定のインスタンスを選択/クリアできます。
+   「**プレビュー**」をクリックすると、キーワードが検出された場所が表示されます。置き換える特定のインスタンスを選択またはクリアできます。
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
 
@@ -94,11 +93,10 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 * `jcr:text`
 * `text`
 
-範囲は、Apache Felix Web Management Console（例えば、`http://localhost:4502/system/console/configMgr`）を使用して変更できます。 `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)`を選択し、必要に応じて範囲を設定します。
+スコープは、Apache Felix Web Management Console（例えば、`http://localhost:4502/system/console/configMgr`）を使用して変更できます。 `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)`を選択し、必要に応じて範囲を設定します。
 
 >[!NOTE]
 >
 >標準の AEM インストールでは、検索と置換の検索機能に Lucene が使用されます。
 >
 >Lucene では長さが 16 K までの文字列プロパティにインデックスが作成されます。この長さを超える文字列は検索されません。
-
