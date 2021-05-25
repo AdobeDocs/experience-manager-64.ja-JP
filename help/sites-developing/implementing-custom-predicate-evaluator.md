@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: 08bdade7-fdad-445d-80fe-8fc06596dace
-translation-type: tm+mt
-source-git-commit: 15bea340f3ba7d5a315d71932e521ad1f1a40073
+exl-id: afa7f346-fefa-4faa-bf2d-7480a7e5a5ee
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '795'
-ht-degree: 69%
+ht-degree: 89%
 
 ---
-
 
 # Query Builder 用のカスタム述語エバリュエーターの実装{#implementing-a-custom-predicate-evaluator-for-the-query-builder}
 
@@ -24,7 +23,7 @@ ht-degree: 69%
 
 ## 概要 {#overview}
 
-[Query Builder](/help/sites-developing/querybuilder-api.md) を使用すると、コンテンツリポジトリへのクエリを簡単に実行できます。AEMには、データ処理に役立つ述語評価演算子のセットが付属しています。
+[Query Builder](/help/sites-developing/querybuilder-api.md) を使用すると、コンテンツリポジトリへのクエリを簡単に実行できます。AEMには、データの処理に役立つ一連の述語エバリュエーターが付属しています。
 
 しかし、カスタム述語エバリュエーターを実装することによって、複雑さを軽減し、セマンティックを向上させて、クエリを単純化することができます。
 
@@ -45,7 +44,7 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでaem-search-custom-predicate-evaluatorプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)
+* [GitHub の aem-search-custom-predicate-evaluator プロジェクト](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)を開きます
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/archive/master.zip)としてダウンロードします
 
 ## 述語エバリュエーターの詳細 {#predicate-evaluator-in-detail}
@@ -56,11 +55,11 @@ GitHub のコード
 
 >[!NOTE]
 >
->`PredicateEvaluator` および `com.day.cq.search` パッケージについて詳しくは、[Java のドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/search/package-summary.html)を参照してください。
+>`PredicateEvaluator` および `com.day.cq.search` パッケージについて詳しくは、[Java のドキュメント](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/search/package-summary.html)を参照してください。
 
 ## レプリケーションメタデータ用のカスタム述語エバリュエーターの実装 {#implementing-a-custom-predicate-evaluator-for-replication-metadata}
 
-例として、レプリケーション・メタデータに基づくデータを支援するカスタム述語評価基準を作成する方法を説明します。
+一例として、この節では、次のレプリケーションメタデータに基づくデータに役立つカスタム述語エバリュエーターを作成する方法について説明します。
 
 * `cq:lastReplicated`：最終レプリケーションアクションの日付を格納
 
@@ -70,7 +69,7 @@ GitHub のコード
 
 ### デフォルトの述語エバリュエーターを使用したレプリケーションメタデータのクエリ {#querying-replication-metadata-with-default-predicate-evaluators}
 
-次のクエリは、`admin`が年の初めからアクティブ化した`/content`ブランチのノードのリストを取得します。
+次のクエリでは、年初から `admin` によってアクティベートされた `/content` ブランチ内のノードのリストを取得します。
 
 ```xml
 path=/content
@@ -86,7 +85,7 @@ daterange.lowerBound=2013-01-01T00:00:00.000+01:00
 daterange.lowerOperation=>=
 ```
 
-このクエリは有効ですが、解読しにくく、3 つのレプリケーションプロパティ間の関係が一目ではわかりません。カスタム述語評価基準を実装すると、このクエリの複雑さが軽減され、セマンティックが向上します。
+このクエリは有効ですが、解読しにくく、3 つのレプリケーションプロパティ間の関係が一目ではわかりません。カスタム述語エバリュエーターを実装すると、複雑さが軽減され、このクエリのセマンティクスが改善されます。
 
 ### 目的 {#objectives}
 
@@ -100,7 +99,7 @@ replic.since=2013-01-01T00:00:00.000+01:00
 replic.action=Activate
 ```
 
-レプリケーションメタデータ述語をカスタム述語評価子でグループ化すると、意味のあるクエリを作成するのに役立ちます。
+カスタム述語エバリュエーターを使用して、レプリケーションメタデータの述語をグループ化すると、意味のあるクエリを作成できます。
 
 ### Maven 依存関係の更新 {#updating-maven-dependencies}
 
@@ -112,11 +111,11 @@ replic.action=Activate
 
 >[!NOTE]
 >
->`cq-search`依存関係の範囲は`provided`に設定されます。これは、`cq-search`が`OSGi`コンテナによって提供されるからです。
+>`cq-search` は `OSGi` コンテナで提供されるので、`cq-search` の依存関係の範囲は `provided` に設定されます。
 
 pom.xml
 
-次のスニペットは、[unified diff形式](https://ja.wikipedia.org/wiki/Diff#.E3.83.A6.E3.83.8B.E3.83.95.E3.82.A1.E3.82.A4.E3.83.89.E5.BD.A2.E5.BC.8F_.28Unified_format.29)の違いを示しています
+次のスニペットは、違いを[unified diff形式](https://ja.wikipedia.org/wiki/Diff#.E3.83.A6.E3.83.8B.E3.83.95.E3.82.A1.E3.82.A4.E3.83.89.E5.BD.A2.E5.BC.8F_.28Unified_format.29)で示しています
 
 ```
 @@ -120,6 +120,12 @@
@@ -133,22 +132,22 @@ pom.xml
              <version>3.8.1</version></dependency>
 ```
 
-[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)-  [pom.xml](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/7aed6b35b4c8dd3655296e1b10cf40c0dd1eaa61/pom.xml)
+[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator) -  [pom.xml](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/7aed6b35b4c8dd3655296e1b10cf40c0dd1eaa61/pom.xml)
 
 ### ReplicationPredicateEvaluator の作成 {#writing-the-replicationpredicateevaluator}
 
-`cq-search`プロジェクトには`AbstractPredicateEvaluator`抽象クラスが含まれています。 これは、独自のカスタム述語評価演算子`(PredicateEvaluator`を実装するためのいくつかの手順で拡張できます)。
+`cq-search` プロジェクトには、`AbstractPredicateEvaluator` 抽象クラスが含まれます。このクラスを数ステップで拡張して、独自のカスタム述語エバリュエーター `(PredicateEvaluator`）を実装できます。
 
 >[!NOTE]
 >
->次の手順では、データをフィルタリングする `Xpath` 式を作成する方法について説明します。もう1つの方法は、行単位でデータを選択する`includes`メソッドを実装することです。 詳しくは、[Java のドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)を参照してください。
+>次の手順では、データをフィルタリングする `Xpath` 式を作成する方法について説明します。この他に、データを行単位で選択する `includes` メソッドを実装する方法もあります。詳しくは、[Java のドキュメント](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)を参照してください。
 
 1. `com.day.cq.search.eval.AbstractPredicateEvaluator` を拡張する新しい Java クラスを作成します。
-1. 次のように`@Component`をクラスに注釈を付けます。
+1. 次のように`@Component`を使用してクラスに注釈を付けます
 
    src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java
 
-   次のスニペットは、[unified diff形式](https://en.wikipedia.org/wiki/Diff#Unified_format)の違いを示しています
+   次のスニペットは、違いを[unified diff形式](https://en.wikipedia.org/wiki/Diff#Unified_format)で示しています
 
 
 ```
@@ -163,11 +162,11 @@ pom.xml
   }
 ```
 
-[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)-  [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/ec70fac35fbd0d132e00c6066a204804e9cbe70f/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
+[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator) -  [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/raw/ec70fac35fbd0d132e00c6066a204804e9cbe70f/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
 
 >[!NOTE]
 >
->`factory`は、`com.day.cq.search.eval.PredicateEvaluator/`で始まり、カスタム`PredicateEvaluator`の名前で終わる一意の文字列である必要があります。
+>`factory` は、`com.day.cq.search.eval.PredicateEvaluator/` で始まりカスタム `PredicateEvaluator` の名前で終わる一意の文字列にする必要があります。
 
 >[!NOTE]
 >
@@ -179,7 +178,7 @@ pom.xml
    public String getXPathExpression(Predicate predicate, EvaluationContext context)
    ```
 
-   オーバーライドメソッドでは、引数に指定された `Xpath` に基づいて `Predicate` 式を組み立てます。
+   オーバーライドメソッドでは、引数に指定された `Predicate` に基づいて `Xpath` 式を組み立てます。
 
 ### レプリケーションメタデータ用のカスタム述語エバリュエーターの例 {#example-of-a-custom-predicate-evalutor-for-replication-metadata}
 
@@ -328,4 +327,4 @@ public class ReplicationPredicateEvaluator extends AbstractPredicateEvaluator {
 }
 ```
 
-[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator) -  [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/blob/master/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
+[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)  -  [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/blob/master/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
