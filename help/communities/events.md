@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 3f7d1b95-729a-4c55-af96-efdb9617d333
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 72%
 
 ---
-
 
 # コミュニティコンポーネントの OSGi イベント {#osgi-events-for-communities-components}
 
@@ -24,9 +23,9 @@ ht-degree: 72%
 
 メンバーがコミュニティ機能と対話する際には、通知やゲーミフィケーション（スコアおよびバッジ）のような非同期リスナーを呼び出す OSGi イベントが送信されます。
 
-コンポーネントの[SocialEvent](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)インスタンスは、`topic`に対して発生する`actions`としてイベントを記録します。 SocialEventには、アクションに関連付けられた`verb`を返すメソッドが含まれます。 `actions`と`verbs`の間に&#x200B;*n-1*&#x200B;の関係がある。
+コンポーネントの[SocialEvent](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)インスタンスは、`topic`に対して発生した`actions`としてイベントを記録します。 SocialEventには、アクションに関連付けられた`verb`を返すメソッドが含まれます。 `actions`と`verbs`の間に&#x200B;*n-1*&#x200B;の関係があります。
 
-リリースで提供されるCommunitiesコンポーネントの場合、次の表は、使用可能な各`topic`に対して定義された`verbs`について説明します。
+リリースで提供されるCommunitiesコンポーネントについて、次の表では、使用可能な各`topic`に対して定義された`verbs`を説明します。
 
 ## トピックと動詞 {#topics-and-verbs}
 
@@ -45,7 +44,7 @@ ht-degree: 72%
 |---|---|
 | POST | メンバーがコメントを作成する |
 | 追加 | メンバーがコメントに返信する |
-| UPDATE | メンバーのコメントが編集される |
+| 更新 | メンバーのコメントが編集される |
 | DELETE | メンバーのコメントが削除される |
 
 [ファイルライブラリコンポーネント](essentials-file-library.md) SocialEvent `topic`=  = com/adobe/cq/social/fileLibrary
@@ -54,7 +53,7 @@ ht-degree: 72%
 |---|---|
 | POST | メンバーがフォルダーを作成する |
 | ATTACH | メンバーがファイルをアップロードする |
-| UPDATE | メンバーがフォルダーまたはファイルを更新する |
+| 更新 | メンバーがフォルダーまたはファイルを更新する |
 | DELETE | メンバーがフォルダーまたはファイルを削除する |
 
 [フォーラムコンポーネント](essentials-forum.md) SocialEvent `topic`=  = com/adobe/cq/social/forum
@@ -63,7 +62,7 @@ ht-degree: 72%
 |---|---|
 | POST | メンバーがフォーラムトピックを作成する |
 | 追加 | メンバーがフォーラムトピックに返信する |
-| UPDATE | メンバーのフォーラムトピックまたは返信が編集される |
+| 更新 | メンバーのフォーラムトピックまたは返信が編集される |
 | DELETE | メンバーのフォーラムトピックまたは返信が削除される |
 
 [ジャーナルコンポーネント](blog-developer-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/journal
@@ -72,7 +71,7 @@ ht-degree: 72%
 |---|---|
 | POST | メンバーがブログ記事を作成する |
 | 追加 | メンバーがブログ記事にコメントする |
-| UPDATE | メンバーのブログ記事またはコメントが編集される |
+| 更新 | メンバーのブログ記事またはコメントが編集される |
 | DELETE | メンバーのブログ記事またはコメントが削除される |
 
 [Q&amp;A コンポーネント](qna-essentials.md) SocialEvent `topic` = com/adobe/cq/social/qna
@@ -81,7 +80,7 @@ ht-degree: 72%
 |---|---|
 | POST | メンバーが Q&amp;A の質問を作成する |
 | 追加 | メンバーが Q&amp;A の回答を作成する |
-| UPDATE | メンバーの Q&amp;A の質問または回答が編集される |
+| 更新 | メンバーの Q&amp;A の質問または回答が編集される |
 | SELECT | メンバーの回答が選択される |
 | UNSELECT | メンバーの回答の選択が解除される |
 | DELETE | メンバーの Q&amp;A の質問または回答が削除される |
@@ -91,7 +90,7 @@ ht-degree: 72%
 | **動詞** | **説明** |
 |---|---|
 | POST | メンバーがレビューを作成する |
-| UPDATE | メンバーのレビューが編集される |
+| 更新 | メンバーのレビューが編集される |
 | DELETE | メンバーのレビューが削除される |
 
 [評価コンポーネント](rating-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/tally
@@ -121,9 +120,9 @@ ht-degree: 72%
 
 ## カスタムコンポーネントのイベント  {#events-for-custom-components}
 
-カスタムコンポーネントの場合、[SocialEvent抽象クラス](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)を拡張して、`topic`に対して発生する`actions`としてコンポーネントのイベントを記録する必要があります。
+カスタムコンポーネントの場合、[SocialEvent抽象クラス](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)を拡張して、コンポーネントのイベントを`topic`に対して発生する`actions`として記録する必要があります。
 
-カスタムイベントは、`getVerb()`メソッドを上書きして、`action`ごとに適切な`verb`が返されるようにします。 アクションに対して返される`verb`は、一般的に使用されるもの（`POST`など）か、コンポーネントに特化したもの（`ADD RATING`など）です。 `actions`と`verbs`の間に&#x200B;*n-1*&#x200B;の関係がある。
+カスタムイベントはメソッド`getVerb()`を上書きし、各`action`に対して適切な`verb`が返されるようにします。 アクションに対して返される`verb`は、一般的に使用されるもの（`POST`など）や、コンポーネント専用のもの（`ADD RATING`など）です。 `actions`と`verbs`の間に&#x200B;*n-1*&#x200B;の関係があります。
 
 >[!NOTE]
 >
@@ -131,8 +130,8 @@ ht-degree: 72%
 
 ### カスタムコンポーネントイベントの疑似コード {#pseudo-code-for-custom-component-event}
 
-[org.osgi.service.イベント.イベント](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);\
-[com.adobe.cq.soscial.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);\
+[org.osgi.service.event.Event](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);\
+[com.adobe.cq.social.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);\
 [com.adobe.granite.activitystreams.ObjectTypes](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/ObjectTypes.html);\
 [com.adobe.granite.activitystreams.Verbs](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/activitystreams/Verbs.html);
 
@@ -327,4 +326,3 @@ public class CommentDeleteEventActivityFilter implements ActivityStreamProviderE
 
 }
 ```
-
