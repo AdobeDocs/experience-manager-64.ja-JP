@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 17c9b69a-3c6f-47e3-a828-841bb90eba8b
-translation-type: tm+mt
-source-git-commit: a417e571d7c3b8da8f38f3d1ad814610636eabbc
+exl-id: b19cae88-a549-41ba-b4a6-4b065a995296
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 94%
 
 ---
-
 
 # フォーム出力の設定{#configuring-form-output}
 
@@ -27,7 +26,7 @@ ht-degree: 94%
 
    **フル HTML：**&#x200B;すべての HTML タグを含む形（完全な HTML ページ）でフォームをレンダリングします。これがデフォルト値です。
 
-   **Form body:(完全** なHTMLページではなく) `<BODY>` タグ内のフォームをレンダリングします。
+   **フォームの本文：** (完全なHTMLページではな `<BODY>` く)タグ内でフォームをレンダリングします。
 
 1. 「保存」をクリックします。
 
@@ -56,4 +55,3 @@ ht-degree: 94%
    >[!NOTE]
    >
    >*この機能を無効にするには、JavaScript 変数を削除するか、その値を 0 に設定します。*
-
