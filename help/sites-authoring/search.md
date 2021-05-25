@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: cd87e1e8-5329-4e60-ac9d-2705f54d0da6
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 9e93b28b-627d-4676-82a6-d719de4d152a
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 94%
 
 ---
-
 
 # 検索{#search-features}
 
@@ -120,4 +119,3 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 保存済みの検索結果を変更するには、保存済みの検索結果を選択して、検索パネルの下部にある「**保存済みの検索を編集**」をクリックします。
 
 ![screen_shot_2018-03-23at102213](assets/screen_shot_2018-03-23at102213.png)
-
