@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: dc149196-fa56-494e-975c-b11ca1ef193b
-translation-type: tm+mt
-source-git-commit: 1e867debcc1bfeed3abc4240796c9f2c2850167f
+exl-id: 7118dbca-e9b4-4b69-b4c3-34bb52008168
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 73%
 
 ---
 
-
 # コミュニティコンポーネント {#communities-components}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 AEM Communities をライセンス認証すると、コミュニティサイトの作成に加え、標準の AEM オーサリングツールを使用して、あらゆる AEM サイトにコミュニティ機能を付加できます。
 
@@ -32,7 +31,7 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 
 >[!NOTE]
 >
->オーサリング環境に詳しくない場合は、[基本操作](../../help/sites-authoring/basic-handling.md)のドキュメントと、[オーサリングページのクイックガイド](../../help/sites-authoring/qg-page-authoring.md)を表示してください。
+>オーサリング環境に馴染みがない場合は、[基本操作](../../help/sites-authoring/basic-handling.md)に関するドキュメントと、[ページのオーサリングに関するクイックガイド](../../help/sites-authoring/qg-page-authoring.md)を参照してください。
 
 ## 使用可能なコミュニティコンポーネント {#available-communities-components}
 
@@ -42,14 +41,14 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 
 >[!NOTE]
 >
->[Communities Components Basics](basics.md)をお読みください。Communitiesコンポーネントを使用したオーサリングに必要な情報が含まれています。
+>[コミュニティコンポーネントの基本](basics.md)をお読みください。コミュニティコンポーネントを使用したオーサリングに必要な情報が含まれています。
 
 | **コンポーネントのタイトル** | **機能** |
 |---|---|
 | アクティビティストリーム | [アクティビティストリーム](activities.md) |
 | ブログ | [ブログ](blog-feature.md) |
 | ブログのサイドバー | [ブログ](blog-feature.md) |
-| カレンダー | [カレンダー](calendar.md) |
+| Calendar | [Calendar](calendar.md) |
 | コメント | [コメント](comments.md) |
 | コミュニティのアクティビティリスト | [アクティビティのトレンド](trends.md) |
 | コミュニティグループメンバーのリスト | [コミュニティグループ](creating-groups.md) |
@@ -79,13 +78,12 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 
 >[!NOTE]
 >
->調査コンポーネントは使用できなくなり、Experience Managerコミュニティでサポートされます。
+>投票コンポーネントは使用できなくなり、Experience Managerコミュニティでサポートされます。
 
 ## 関連するコミュニティドキュメント {#related-communities-documentation}
 
-* 推奨される展開については、[Communitiesの展開](deploy-communities.md)を参照してください。
+* 推奨されるデプロイメントについては、[Communitiesのデプロイ](deploy-communities.md)を参照してください。
 
 * コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理およびメッセージングの設定については、[コミュニティサイトの管理](administer-landing.md)を参照してください。
 
-* Social Component Framework(SCF)とCommunitiesのコンポーネントと機能のカスタマイズについては、[Developing Communities](communities.md)を参照してください。
-
+* ソーシャルコンポーネントフレームワーク(SCF)とコミュニティのコンポーネントと機能のカスタマイズについては、 [コミュニティの開発](communities.md)を参照してください。
