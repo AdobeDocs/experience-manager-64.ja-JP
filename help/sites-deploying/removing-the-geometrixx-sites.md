@@ -8,14 +8,13 @@ contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 discoiquuid: 56761a36-ce21-46e1-856f-75a7e94acae9
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: 495031fb-b559-4071-abc4-93d238ce136d
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 100%
 
 ---
-
 
 # Geometrixx サイトの削除{#removing-the-geometrixx-sites}
 
@@ -46,4 +45,3 @@ geometrixx 関連の個別のパッケージは次のとおりです。
 >[!NOTE]
 >
 >アップグレードの際には、geometrixx サイトが自動的に再作成されます。これらのサンプルが不要な場合は、アップグレード後に geometrixx Web サイトを削除する必要があります。
-
