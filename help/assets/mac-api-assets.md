@@ -2,16 +2,15 @@
 title: Assets HTTP API（ [!DNL Adobe Experience Manager] に含まれているもの）
 description: ' [!DNL Adobe Experience Manager Assets] の HTTP API を使用した、デジタルアセットの作成、読み取り、更新、削除、管理について説明します。'
 contentOwner: AG
-feature: APIs,Assets HTTP API,Developer Tools
+feature: API,Assets HTTP API，開発者ツール
 role: Developer
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: 3d7d078c-5046-489a-a8e0-258acaea7191
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1558'
 ht-degree: 86%
 
 ---
-
 
 # Assets HTTP API {#assets-http-api}
 
@@ -28,7 +27,7 @@ API の応答は、一部の MIME タイプに対する JSON ファイル、お�
 
 >[!CAUTION]
 >
->[HTTP APIは、](#update-asset-metadata) 名前空間内のメタデータ `jcr` プロパティを更新します。ただし、Experience Managerユーザーインターフェイスは、`dc`名前空間のメタデータプロパティを更新します。
+>[HTTP APIは、名前空間のメタデータプ](#update-asset-metadata) ロパティを更新 `jcr` します。ただし、Experience Managerユーザーインターフェイスは`dc`名前空間のメタデータプロパティを更新します。
 
 ## データモデル {#data-model}
 
@@ -57,7 +56,7 @@ Assets HTTP API は、フォルダーとアセット（標準アセット用）�
 
 ### Assets {#assets}
 
-Experience Managerでは、アセットに次の要素が含まれます。
+Experience Managerでは、アセットには次の要素が含まれます。
 
 * アセットのプロパティとメタデータ
 * オリジナルのレンディション（最初にアップロードされたアセット）、サムネール、その他の各種レンディションなど複数のレンディション。追加レンディションは、サイズやビデオエンコーディングの異なる画像や、PDF ファイルまたは Adobe InDesign ファイルから抽出されたページの場合があります。
@@ -71,17 +70,17 @@ Experience Managerでは、アセットに次の要素が含まれます。
 
 Assets HTTP API には、以下の機能が含まれます。
 
-* [フォルダーのリストの取得](#retrieve-a-folder-listing).
-* [フォルダーを作成](#create-a-folder)します。
+* [フォルダーリストの取得](#retrieve-a-folder-listing)。
+* [フォルダーの作成](#create-a-folder)。
 * [アセットの作成](#create-an-asset).
 * [アセットバイナリの更新](#update-asset-binary).
-* [アセットメタデータの更新](#update-asset-metadata).
-* [アセットレンディションの作成](#create-an-asset-rendition).
-* [アセットレンディションの更新](#update-an-asset-rendition).
-* [アセットコメントの作成](#create-an-asset-comment).
-* [フォルダーまたはアセットのコピー](#copy-a-folder-or-asset).
-* [フォルダーまたはアセットの移動](#move-a-folder-or-asset).
-* [フォルダー、アセットまたはレンディションの削除](#delete-a-folder-asset-or-rendition).
+* [アセットメタデータの更新](#update-asset-metadata)。
+* [アセットレンディションの作成](#create-an-asset-rendition)。
+* [アセットレンディションの更新](#update-an-asset-rendition)。
+* [アセットコメントの作成](#create-an-asset-comment)。
+* [フォルダーまたはアセットのコピー](#copy-a-folder-or-asset)。
+* [フォルダーまたはアセットの移動](#move-a-folder-or-asset)。
+* [フォルダー、アセットまたはレンディションの削除](#delete-a-folder-asset-or-rendition)。
 
 >[!NOTE]
 >
@@ -91,7 +90,7 @@ Assets HTTP API には、以下の機能が含まれます。
 
 * `https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
 * **[!UICONTROL AdobeGranite CSRF Filter]**&#x200B;に移動します。
-* **[!UICONTROL フィルターメソッド]**&#x200B;のプロパティに次の内容が含まれていることを確認します。`POST`、`PUT`、`DELETE`。
+* プロパティ&#x200B;**[!UICONTROL フィルターメソッド]**&#x200B;に次が含まれていることを確認します。`POST`、`PUT`、`DELETE`。
 
 ## フォルダーのリストの取得 {#retrieve-a-folder-listing}
 
@@ -129,9 +128,9 @@ Assets HTTP API には、以下の機能が含まれます。
 
 ## アセットの作成 {#create-an-asset}
 
-指定されたファイルを指定されたパスに配置し、DAMリポジトリ内にアセットを作成します。 ノード名の代わりに`*`を指定した場合、サーブレットはパラメータ名またはファイル名をノード名として使用します。
+指定されたパスにファイルを配置して、DAMリポジトリー内にアセットを作成します。 ノード名の代わりに`*`を指定した場合、サーブレットはパラメーター名またはファイル名をノード名として使用します。
 
-**パラメータ**:パラメーターは、アセ `name` ット名とファイル参照 `file` 用のものです。
+**パラメーター**:パラメーターはア `name` セット名とファイル参 `file` 照用です。
 
 **リクエスト**
 
@@ -140,14 +139,14 @@ Assets HTTP API には、以下の機能が含まれます。
 
 **応答コード**：応答コードは次のとおりです。
 
-* 201 — 作成済み — アセットが正常に作成された場合。
-* 409 - CONFLICT — アセットが既に存在する場合。
+* 201 - CREATED（アセットが正常に作成された場合）
+* 409 - CONFLICT（アセットが既に存在する場合）
 * 412 - PRECONDITION FAILED（ルートコレクションが見つからないかアクセスできない場合）
 * 500 - INTERNAL SERVER ERROR（他に問題がある場合）
 
 ## アセットバイナリの更新 {#update-asset-binary}
 
-アセットのバイナリ（オリジナルの名前のレンディション）を更新します。 更新トリガーは、デフォルトのアセット処理ワークフローが設定されている場合、実行するワークフローを指定します。
+アセットのバイナリ（オリジナルの名前のレンディション）を更新します。 「更新」トリガーは、デフォルトのアセット処理ワークフローが設定されている場合に実行します。
 
 **リクエスト**：`PUT /api/assets/myfolder/myAsset.png -H"Content-Type: image/png" --data-binary @myPicture.png`
 
@@ -171,9 +170,9 @@ Assets HTTP API には、以下の機能が含まれます。
 * 412 - PRECONDITION FAILED（ルートコレクションが見つからないかアクセスできない場合）
 * 500 - INTERNAL SERVER ERROR（他に問題がある場合）
 
-### `dc`と`jcr`名前空間{#sync-metadata-between-namespaces}の間でメタデータを同期
+### `dc`と`jcr`名前空間{#sync-metadata-between-namespaces}の間でのメタデータの更新の同期
 
-APIメソッドは、`jcr`名前空間のメタデータプロパティを更新します。 タッチ操作対応UIを使用して行った更新により、`dc`名前空間のメタデータプロパティが変更されます。 メタデータ値を`dc`と`jcr`名前空間の間で同期するには、ワークフローを作成し、アセット編集時にワークフローを実行するようにExperience Managerを設定します。 ECMAスクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトでは、`dc:title`と`jcr:title`の間でタイトル文字列を同期します。
+APIメソッドは、`jcr`名前空間のメタデータプロパティを更新します。 タッチUIを使用して行われた更新により、`dc`名前空間のメタデータのプロパティが変更されます。 `dc`名前空間と`jcr`名前空間の間でメタデータ値を同期するには、ワークフローを作成し、アセットの編集時にワークフローを実行するようにExperience Managerを設定します。 ECMAスクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトは、`dc:title`と`jcr:title`の間でタイトル文字列を同期します。
 
 ```javascript
 var workflowData = workItem.getWorkflowData();
