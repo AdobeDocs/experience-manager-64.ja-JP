@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 73f37b3c-5dbe-4132-bb60-daa8de871884
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 設定
+exl-id: 3551d25c-c852-4f59-84fe-5e62f57ae63f
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 89%
 
 ---
-
 
 # 静的オブジェクトの有効期限{#expiration-of-static-objects}
 
@@ -76,7 +75,7 @@ ht-degree: 89%
    </Location>
    ```
 
-   これにより、中間キャッシュ（ブラウザーのキャッシュなど）でCSS、Javascript、PNG、GIFファイルをクライアントキャッシュに1日まで格納できます。 この例では、`/content`および`/etc/designs`より下のすべてに対するグローバル設定を説明しますが、より詳細な設定を行う必要があります。
+   これにより、中間キャッシュ（ブラウザーキャッシュなど）で、CSS、JavaScript、PNGおよびGIFファイルを最大1日クライアントキャッシュに保存できます。 この例では、`/content`と`/etc/designs`の下にあるすべての項目に対してグローバル設定を示しますが、より詳細に設定する必要があります。
 
    サイトの更新頻度によっては、HTML ページのキャッシュも検討できます。妥当な期間は 1 時間です。
 
