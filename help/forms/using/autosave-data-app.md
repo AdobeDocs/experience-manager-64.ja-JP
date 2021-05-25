@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 133d93b0-512c-46db-b5f9-f981d77b565f
-translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+exl-id: 6eb00c31-6806-478a-99d1-55912798ea69
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 75%
 
 ---
-
 
 # AEM Forms アプリケーションで自動保存を使用  {#using-autosave-in-aem-forms-app}
 
@@ -37,11 +36,10 @@ Adobe Experience Manager Forms アプリケーションでユーザーがデー�
 AEM Forms アプリケーションで自動保存の機能を使用するには、次の手順を実行します。
 
 1. アプリケーションにログインし、**[!UICONTROL 設定／一般]**&#x200B;に移動します。
-1. 一般画面で、「**[!UICONTROL 自動保存頻度]**」オプションを使用して、入力したデータを保存する間隔を選択します。
+1. 一般画面で、「**[!UICONTROL 自動保存頻度]**」オプションを使用して、入力したデータを保存する間隔をアプリで選択します。
    [ ![自動保存頻度の設定](assets/using-autosave-freq-07.png)](assets/using-autosave-freq-07-1.png)
 
-1. アプリケーションを再起動して同じユーザーでログインすると、未保存のタスクの復元ダイアログで、タスクを復元するように求められます。未保存のタスクの復元ダイアログで「**[!UICONTROL OK]**」をクリックして、保存されたタスクの操作を再開します。 「**[!UICONTROL キャンセル]**」をクリックし、最後にトリガーされた自動保存の保存済みデータを削除して、新しいタスクで作業を始めることもできます。
+1. アプリケーションを再起動して同じユーザーでログインすると、未保存のタスクの復元ダイアログで、タスクを復元するように求められます。未保存のタスクの復元ダイアログで「**[!UICONTROL OK]**」をクリックして、保存されているタスクの操作を再開します。 「**[!UICONTROL キャンセル]**」をクリックし、最後にトリガーされた自動保存の保存済みデータを削除して、新しいタスクで作業を始めることもできます。
 
-   「**[!UICONTROL OK]**」をクリックすると、アプリケーションがクラッシュする前に最後にトリガーされた自動保存に対応するデータが使用されてタスクが復元されます。フォームデータと、そのタスクに関連付けられているすべての添付ファイルが含まれます。
-   [ ![タスクを取得する&#x200B;](assets/autosave-flow.png)](assets/using-autosave-freq-06.png)**recoverA.** A進行中のフォーム **B.** Appは強制的に閉じた **C.** Appは未保存のタスクを回復ダイアログを使用して再起動しました。 **** Appは元のデータを使用して復元しました
-
+   「**[!UICONTROL OK]**」をクリックすると、アプリケーションがクラッシュする前に最後にトリガーされた自動保存に対応するデータが使用されてタスクが復元されます。タスクに関連付けられているフォームデータとすべての添付ファイルが含まれます。
+   [ ![タスクを回復&#x200B;](assets/autosave-flow.png)](assets/using-autosave-freq-06.png)**するA.** 作業中のフォーム **B.** アプリが強制的に閉じられました **C.** アプリは未保存のタスクを復元ダイアログ **D.** 元のデータで復元されました
