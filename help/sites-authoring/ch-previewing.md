@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: personalization
 discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 24f94dd5-62a4-4ac3-9a1b-a8e189da9958
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 96%
 
 ---
-
 
 # ContextHub データを使用したページのプレビュー {#previewing-pages-using-contexthub-data}
 
@@ -70,4 +69,3 @@ UI モジュールは、1 つ以上の ContextHub ストアのデータをツー
 ポップアップオーバーレイには、クリックまたはタップするとポップアップコンテンツを拡張してブラウザーウィンドウまたは画面全体に表示するアイコンを含めることができます。
 
 ![](do-not-localize/chlimage_1-18.png)
-
