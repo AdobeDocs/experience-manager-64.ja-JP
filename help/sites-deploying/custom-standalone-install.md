@@ -9,7 +9,6 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: c9e51008-6009-49a2-9c74-1c610cef2e7f
-translation-type: tm+mt
 source-git-commit: b7e5c42009acb5044d1112e66b8e65b528355736
 workflow-type: tm+mt
 source-wordcount: '1523'
@@ -24,13 +23,13 @@ ht-degree: 69%
 
 ## ファイル名の変更によるポート番号の変更 {#changing-the-port-number-by-renaming-the-file}
 
-AEMのデフォルトポートは4502です。そのポートが使用できない場合、または既に使用されている場合、Quickstartは、次のように最初に使用可能なポート番号を使用するように自動的に設定します。4502, 8080, 8081, 8082, 8083, 8084, 8085, 8888, 9362, `<random>`.
+AEMのデフォルトポートは4502です。そのポートが使用できない場合、または既に使用中の場合、Quickstartは自動的に最初に使用可能なポート番号を次のように使用するように設定します。4502、8080、8081、8082、8083、8084、8085、8888、9362、`<random>`。
 
-また、quickstart jarファイルの名前を変更してポート番号を設定し、ファイル名にポート番号が含まれるようにすることもできます。（例：`cq5-publish-p4503.jar`、`cq5-author-p6754.jar`）。
+また、quickstart jarファイルの名前を変更して、ファイル名にポート番号が含まれるようにポート番号を設定することもできます。例えば、`cq5-publish-p4503.jar`や`cq5-author-p6754.jar`などです。
 
 クイックスタート jar ファイル名を変更する際に従わなければならない様々なルールがあります。
 
-* ファイル名を変更する場合は、`cq5-publish-p4503.jar`のように`cq;`と開始する必要があります。
+* ファイル名を変更する場合は、`cq5-publish-p4503.jar`のように`cq;`で始める必要があります。
 
 * ポート番号の直前には -p を付けることをお勧めします。例えば、cq5-publish-p4503.jar または cq5-author-p6754.jar のように指定します。**
 
@@ -40,7 +39,7 @@ AEMのデフォルトポートは4502です。そのポートが使用できな�
 >
 >* ポート番号は 4 桁または 5 桁にする
 >* ダッシュの後にこれらの数字を指定する
->* ファイル名に他の桁数がある場合は、ポート番号の前に`-p`を付ける必要があります。
+>* ファイル名に他の数字がある場合は、ポート番号の前に`-p`を付ける必要があります。
 >* ファイル名の先頭のプレフィックス「cq5」は無視される
 
 >
@@ -57,12 +56,12 @@ AEMのデフォルトポートは4502です。そのポートが使用できな�
 
 * [実行モード](/help/sites-deploying/configure-runmodes.md)
 
-## ファイルインストールプロバイダーの追加  {#adding-a-file-install-provider}
+## ファイルインストールプロバイダーの追加 {#adding-a-file-install-provider}
 
-デフォルトでは、`crx-quickstart/install`フォルダーはファイルの監視対象です。\
+デフォルトでは、フォルダー`crx-quickstart/install`はファイルを監視します。\
 このフォルダーは存在しませんが、実行時に作成できます。
 
-バンドル、設定、またはコンテンツパッケージがこのディレクトリに配置されると、自動的に取得されてインストールされます。削除すると、アンインストールされます。\
+バンドル、設定またはコンテンツパッケージがこのディレクトリに配置されると、自動的に取得され、インストールされます。削除された場合は、アンインストールされます。\
 これは、バンドル、コンテンツパッケージまたは設定をリポジトリに追加するためのもう 1 つの方法です。
 
 この方法は次に示すいくつかの事例で特に有効です。
@@ -73,7 +72,7 @@ AEMのデフォルトポートは4502です。そのポートが使用できな�
 
 >[!NOTE]
 >
->例については、[サーバー起動時にCRXパッケージを自動的にインストールする方法](https://helpx.adobe.com/experience-manager/kb/HowToInstallPackagesUsingRepositoryInstall.html)も参照してください。
+>例については、[サーバーの起動時にCRXパッケージを自動的にインストールする方法](https://helpx.adobe.com/experience-manager/kb/HowToInstallPackagesUsingRepositoryInstall.html)も参照してください。
 
 ## Windows サービスとしての Adobe Experience Manager のインストールと起動 {#installing-and-starting-adobe-experience-manager-as-a-windows-service}
 
@@ -86,12 +85,12 @@ AEMのデフォルトポートは4502です。そのポートが使用できな�
 AEM を Windows サービスとしてインストールして起動するには：
 
 1. crx-quickstart\opt\helpers\instsrv.bat ファイルをテキストエディターで開きます。
-1. 64ビットWindowsサーバーを設定する場合は、prunsrvのすべてのインスタンスを、オペレーティングシステムに応じて、次のいずれかのコマンドに置き換えます。
+1. 64ビットWindowsサーバを設定する場合は、オペレーティングシステムに応じて、prunsrvのすべてのインスタンスを次のいずれかのコマンドに置き換えます。
 
    * prunsrv_amd64
    * prunsrv_ia64
 
-   このコマンドは、32ビットJavaではなく64ビットJavaのWindowsサービスデーモンを開始する適切なスクリプトを呼び出します。
+   このコマンドは、Windowsサービスデーモンを32ビットJavaではなく64ビットJavaで起動する適切なスクリプトを呼び出します。
 
 1. プロセスが複数のプロセスに分岐しないようにするには、最大ヒープサイズと PermGen JVM パラメーターの値を増やします。`set jvm_options`コマンドを探し、値を次のように設定します。
 
@@ -101,7 +100,7 @@ AEM を Windows サービスとしてインストールして起動するには�
 
    `instsrv.bat cq5`
 
-   サービスが作成されたことを確認するには、管理ツールコントロールパネルで「サービス」を開くか、コマンドプロンプトで「`start services.msc`」と入力します。 cq5サービスがリストに表示されます。
+   サービスが作成されたことを確認するには、[管理ツール]コントロールパネルの[サービス]を開くか、コマンドプロンプトに`start services.msc`と入力します。 リストにcq5サービスが表示されます。
 
 1. 次のいずれかの方法でサービスを起動します。
 
@@ -113,7 +112,7 @@ AEM を Windows サービスとしてインストールして起動するには�
 
    ![chlimage_1-72](assets/chlimage_1-72.png)
 
-1. Windowsは、サービスが実行中であることを示します。AEM開始とprunsrv実行可能ファイルがタスクマネージャーに表示されます。 Webブラウザーで、AEM(例えば、AEMを使用している開始ーに`http://localhost:4502`)に移動します。
+1. Windowsは、サービスが実行中であることを示します。AEMが起動し、prunsrv実行可能ファイルがタスクマネージャーに表示されます。 Webブラウザーで、AEM（例：`http://localhost:4502`）に移動して、AEMの使用を開始します。
 
    ![chlimage_1-73](assets/chlimage_1-73.png)
 
@@ -123,15 +122,15 @@ AEM を Windows サービスとしてインストールして起動するには�
 
 >[!NOTE]
 >
->AEMをサービスとしてインストールする場合は、Configuration Managerの`com.adobe.xmp.worker.files.ncomm.XMPFilesNComm`のlogsディレクトリの絶対パスを指定する必要があります。
+>AEMをサービスとしてインストールする場合は、Configuration Managerから`com.adobe.xmp.worker.files.ncomm.XMPFilesNComm`のログディレクトリの絶対パスを指定する必要があります。
 
 サービスをアンインストールするには、コントロールパネルの「**サービス**」で「**停止**」をクリックするか、コマンドラインでフォルダーに移動して、&quot;`instsrv.bat -uninstall cq5`&quot; と入力します。&quot;**&quot; と入力すると、コントロールパネルの「**&#x200B;サービス`net start`」のリストまたはコマンドライン内のリストからサービスが削除されます。
 
 ## 一時的な作業ディレクトリの場所の再定義 {#redefining-the-location-of-the-temporary-work-directory}
 
-Javaマシンの一時フォルダーのデフォルトの場所は`/tmp`です。AEMは、例えばパッケージの作成時に、このフォルダーも使用します。
+Javaマシンの一時フォルダーのデフォルトの場所は`/tmp`です。AEMは、例えば、パッケージの作成時に、このフォルダーも使用します。
 
-一時フォルダーの場所を変更する場合（例えば、空き容量の多いディレクトリが必要な場合）は、JVMパラメーターを追加して`<new-tmp-path>`を定義します。
+一時フォルダーの場所を変更する場合（例えば、空き領域が増えたディレクトリが必要な場合）は、JVMパラメーターを追加して`<new-tmp-path>`を定義します。
 
 `-Djava.io.tmpdir="/<new-tmp-path>"`
 
@@ -142,7 +141,7 @@ Javaマシンの一時フォルダーのデフォルトの場所は`/tmp`です�
 
 ## クイックスタートファイルから使用可能なその他のオプション  {#further-options-available-from-the-quickstart-file}
 
-その他のオプションや名前の変更規則については、クイックスタートヘルプファイルを参照してください。このファイルは —helpオプションから利用できます。ヘルプにアクセスするには、次のように入力します。
+その他のオプションと名前の変更規則については、クイックスタートヘルプファイルを参照してください。このファイルは —helpオプションから利用できます。ヘルプにアクセスするには、次のように入力します。
 
 * `java -jar cq5-<version>.jar -help`
 
@@ -233,7 +232,7 @@ Log files
 
 ## Amazon EC2 環境への AEM のインストール {#installing-aem-in-the-amazon-ec-environment}
 
-AEMをAmazon Elastic Compute Cloud(EC2)インスタンスにインストールする場合、EC2インスタンスにauthorとpublishの両方をインストールすると、AEM](/help/sites-deploying/custom-standalone-install.md)のインスタンスを[インストールする手順に従って、作成者インスタンスが正しくインストールされます。ただし、発行インスタンスは作成者になります。
+AEMをAmazon Elastic Compute Cloud(EC2)インスタンスにインストールする場合、EC2インスタンスにオーサーとパブリッシュの両方をインストールすると、 AEM](/help/sites-deploying/custom-standalone-install.md)のインスタンスを[インストールする手順に従って、オーサーインスタンスが正しくインストールされます。ただし、パブリッシュインスタンスはオーサーになります。
 
 EC2 環境にパブリッシュインスタンスをインストールする前に、次の手順を実行してください。
 
@@ -287,13 +286,13 @@ EC2 環境にパブリッシュインスタンスをインストールする前�
 
 * `http://localhost:8080/system/console`
 
-   Webコンソール
+   Webコンソール。
 
 ## インストール後のアクション {#actions-after-installation}
 
 AEM WCM の様々な設定を行うことができますが、インストール直後には特定のアクションを実行するか、または少なくとも確認が必要な項目があります。
 
-* お使いのシステムが安全であることを確認するために必要なタスクについては、[セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。
+* システムのセキュリティを確保するために必要なタスクについては、[セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。
 * AEM WCM と共にインストールされたデフォルトのユーザーとグループのリストを確認します。また、他のアカウントに対してアクションを実行するかどうかを確認します。詳しくは、[ユーザー管理とセキュリティ](/help/sites-administering/security.md)を参照してください。
 
 ## CRXDE Lite および Web コンソールへのアクセス  {#accessing-crxde-lite-and-the-web-console}
@@ -305,7 +304,7 @@ AEM WCM を起動したら、次の場所にアクセスできます。
 
 ### CRXDE Lite へのアクセス  {#accessing-crxde-lite}
 
-CRXDE Liteを開くには、ようこそ画面から&#x200B;**CRXDE Lite**&#x200B;を選択するか、ブラウザを使用して
+CRXDE Liteを開くには、ようこそ画面から「**CRXDE Lite**」を選択するか、ブラウザーを使用して
 
 ```
  https://<<i>host</i>>:<<i>port</i>>/crx/de/index.jsp
@@ -318,7 +317,7 @@ CRXDE Liteを開くには、ようこそ画面から&#x200B;**CRXDE Lite**&#x200
 
 ### Accessing the Web Console {#accessing-the-web-console}
 
-Adobe CQのWebコンソールにアクセスするには、ようこそ画面から&#x200B;**OSGiコンソール**&#x200B;を選択するか、ブラウザを使用して
+Adobe CQ Webコンソールにアクセスするには、ようこそ画面から&#x200B;**OSGiコンソール**&#x200B;を選択するか、ブラウザーを使用してに移動します。
 
 ```
  https://<<i>host</i>>:<<i>port</i>>/system/console
@@ -326,7 +325,7 @@ Adobe CQのWebコンソールにアクセスするには、ようこそ画面か
 
 次に例を示します。\
 `http://localhost:4502/system/console`\
-またはBundlesページ用\
+または（バンドルページの場合）\
 `http://localhost:4502/system/console/bundles`
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
@@ -339,7 +338,7 @@ Adobe CQのWebコンソールにアクセスするには、ようこそ画面か
 
 * [トラブルシューティング](/help/sites-deploying/troubleshooting.md)
 
-## Adobe Experience Manager のアンインストール  {#uninstalling-adobe-experience-manager}
+## Adobe Experience Manager のアンインストール {#uninstalling-adobe-experience-manager}
 
 AEM は単一のディレクトリにインストールされるので、アンインストールユーティリティは必要ありません。インストールディレクトリ全体を削除するだけでアンインストールできます。ただし、AEM のアンインストール方法は、その目的および使用している永続ストレージによって変わります。
 
