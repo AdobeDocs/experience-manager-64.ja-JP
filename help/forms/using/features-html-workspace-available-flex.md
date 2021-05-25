@@ -9,18 +9,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 66c3cdc4-0e4c-4597-a107-f457dd0cc166
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: 109adc91-2291-4a10-af7b-e93ae8947258
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 85%
 
 ---
 
-
 # Flex Workspace では利用できない AEM Forms Workspace の機能  {#features-of-aem-forms-workspace-not-available-in-flex-workspace}
 
-AEM Formsのワークスペースは、FlexベースのWorkspaceを凌ぐ革新的なワークスペースであり、オファー機能と、ビジネス統合とユーザー生産性の向上に役立つ機能を備えています。
+AEM Forms workspaceは、Flexベースのworkspaceを凌ぐ革新的な機能であり、ビジネス統合とユーザー生産性の向上に役立つ機能と機能を提供します。
 
 これらの機能の概要を以下に簡単に説明します。詳細については、この記事の最後にある関連項目を参照してください。
 
@@ -38,9 +37,8 @@ AEM Formsのワークスペースは、FlexベースのWorkspaceを凌ぐ革新�
 
 ## サードパーティアプリケーションを統合するためのサポート  {#support-for-integrating-third-party-applications}
 
-サードパーティアプリケーションに統合できる機能を使用し、ワークフローを完全に AEM Forms Workspace で利用できます。例えば、Correspondence Managementのレターテンプレートを、AEM Formsのワークスペースウィンドウ自体のタスクとしてレンダリングできます。 このようにして、AEM Forms Workspace を終了することなく、タスクを完了することができます。詳しい手順については、「[AEM FormsのワークスペースでのCorrespondence Managementの統合](/help/forms/using/integrating-correspondence-management-html-workspace.md)」を参照してください。
+サードパーティアプリケーションに統合できる機能を使用し、ワークフローを完全に AEM Forms Workspace で利用できます。例えば、Correspondence Managementのレターテンプレートを、AEM Forms Workspaceウィンドウ自体のタスクとしてレンダリングできます。 このようにして、AEM Forms Workspace を終了することなく、タスクを完了することができます。詳しい手順については、「AEM Forms WorkspaceでのCorrespondence Managementの統合](/help/forms/using/integrating-correspondence-management-html-workspace.md)」を参照してください。[
 
 ## エンドユーザーのデバイスに基づくカスタムタスクレンダリングのサポート {#support-for-custom-task-rendering-based-on-end-user-s-device}
 
-AEM Formsのワークスペースは、XDPフォームのHTMLレンダリングをサポートしています。 このサポートにより、デバイスまたはユーザーエージェントに基づいて XDP の異なる表示にルーティングするレンダリングプロセスで使用した場合、ユーザーは XDP フォームをモバイルデバイスでは HTML として表示し、デスクトップでは PDF として表示することができます。これにより、さまざまなデバイス上でさまざまな環境で作業をするユーザーに対して、プロセス管理をシームレスに提供することが可能となります。
-
+AEM Forms workspaceは、XDPフォームのHTMLレンディションをサポートしています。 このサポートにより、デバイスまたはユーザーエージェントに基づいて XDP の異なる表示にルーティングするレンダリングプロセスで使用した場合、ユーザーは XDP フォームをモバイルデバイスでは HTML として表示し、デスクトップでは PDF として表示することができます。これにより、さまざまなデバイス上でさまざまな環境で作業をするユーザーに対して、プロセス管理をシームレスに提供することが可能となります。
