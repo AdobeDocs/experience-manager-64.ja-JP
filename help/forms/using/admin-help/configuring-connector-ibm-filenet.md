@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: be4994de-12f8-436e-926a-49a6783b006e
-translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+exl-id: 3a3d59c2-6811-4513-8384-aa77fdc38686
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 94%
 
 ---
-
 
 # Connector for IBM FileNet の設定 {#configuring-connector-for-ibm-filenet}
 
@@ -81,11 +80,11 @@ FileNet と共に使用するリポジトリサービスプロバイダーを設
 
 以下のオプションが利用できます。
 
-**現在のリポジトリプロバイダー名：** 現在のリポジトリサービスプロバイダーの名前
+**Current Repository Provider Name:** 現在のリポジトリサービスプロバイダーの名前
 
-**IBM FileNetリポジトリプロバイダー：FileNetリポジトリプロバイダーをリポジトリのプロバイダーに** します。このオプションは非推奨です。
+**IBM FileNetリポジトリプロバイダー：** FileNetリポジトリプロバイダーをリポジトリのプロバイダーにします。このオプションは非推奨です。
 
-**リポジトリプロバイダー：ネイティブのリポジトリプロバイダーをリポジトリのプロバイダーに** します。
+**repository provider:** ネイティブリポジトリプロバイダーをリポジトリのプロバイダーにします。
 
 >[!NOTE]
 >
