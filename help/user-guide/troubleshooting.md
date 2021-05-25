@@ -5,29 +5,28 @@ description: AEM のトラブルシューティング
 seo-description: AEM のトラブルシューティング
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
-translation-type: tm+mt
-source-git-commit: 565dec566e02effb18b211a8691b2c694d8cae1e
+exl-id: fef17396-eed2-4c0b-a962-c1f2ae2c5d1d
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 25%
 
 ---
 
-
 # AEM のトラブルシューティング  {#troubleshooting-aem}
 
 ## オーサーインスタンスのパフォーマンスのトラブルシューティング {#performance}
 
-[AEMオーサーインスタンスのトラブルシューティングに関するヒントとこのガイドを参照してください。](/help/sites-authoring/troubleshooting.md)
+[AEMオーサーインスタンスのトラブルシューティングに関するこのガイドとヒントを参照してください。](/help/sites-authoring/troubleshooting.md)
 
-## 管理上の問題のトラブルシューティング{#administering}
+## 管理に関する問題のトラブルシューティング {#administering}
 
-[AEMでの管理上の問題のトラブルシューティングに関するヒントとこのガイドを参照してください。](/help/sites-administering/troubleshoot.md)
+[AEMの管理上の問題のトラブルシューティングに関するこのガイドおよびヒントを参照してください。](/help/sites-administering/troubleshoot.md)
 
-## AEMログのトラブルシューティング{#logs}
+## AEMログのトラブルシューティング {#logs}
 
-[AEMログのトラブルシューティングに関するヒントとこのガイドを参照してください。](/help/sites-administering/troubleshooting.md)
+[AEMログのトラブルシューティングに関するこのガイドとヒントを参照してください。](/help/sites-administering/troubleshooting.md)
 
 ## レプリケーションのトラブルシューティング {#replication}
 
-[AEMでのレプリケーションのトラブルシューティングに関するヒントとガイドを参照してください。](/help/sites-deploying/troubleshoot-rep.md)
+[AEMでのレプリケーションのトラブルシューティングに関するこのガイドとヒントを参照してください。](/help/sites-deploying/troubleshoot-rep.md)
