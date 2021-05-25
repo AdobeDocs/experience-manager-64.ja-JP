@@ -9,24 +9,23 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: aec03ea5-17a6-4775-92cb-2ad361895fdf
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: 2bc70cd6-1ea6-4594-9b42-ab3d3000a0c5
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 80%
 
 ---
 
-
 # ユーザーアバターの表示  {#displaying-the-user-avatar}
 
-ログインユーザーのアバターは、AEM Forms Workspace の右上隅に表示されます。また、組織階層の直接レポートのアバターはマネージャービューに表示されます。AEM Formsワークスペースを設定して、データベースからユーザー画像（LDAPサーバーなど）を選択できます。
+ログインユーザーのアバターは、AEM Forms Workspace の右上隅に表示されます。また、組織階層の直接レポートのアバターはマネージャービューに表示されます。AEM Forms Workspaceを設定して、データベース（LDAPサーバーなど）からユーザー画像を選択できます。
 
 >[!NOTE]
 >
 >サポートされているユーザー画像の縦横比は 1:1 です。
 
-1. 次の手順に記載されている説明を使用して DSC を作成します。詳しくは、『[AEM Formsでのプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63)』ガイドの「AEM Formsのコンポーネントの開発」トピックを参照してください。
+1. 次の手順に記載されている説明を使用して DSC を作成します。詳しくは、『AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63)によるプログラミング』ガイドの「AEM Forms用コンポーネントの開発」トピックを参照してください。[
 1. DSC で getCurrentUserImageUrl と getUserImageUrl メソッドを公開する新しい SPI を定義して、AEM Forms ユーザーの画像 URL を取得します。Java™ コードスニペットのサンプルを以下に示します。
 
    ```as3
