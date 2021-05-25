@@ -2,16 +2,15 @@
 title: AEM におけるアセットの並べ替えの強化
 description: AEM Assets に導入されたサーバー側の並べ替え機能を使用して、クライアント側でバッチで並べ替えずに、フォルダーアセットまたは検索クエリを一度に並べ替える方法について説明します。
 contentOwner: AG
-feature: Search
+feature: 検索
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
+exl-id: aa24ca68-d94e-4bd4-a5cc-113906650a2e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '442'
 ht-degree: 93%
 
 ---
-
 
 # AEM におけるアセットの並べ替えの強化 {#enhanced-sorting-of-assets-in-aem}
 
@@ -58,7 +57,7 @@ AEM Assets では、以下のフィールドに基づいてフォルダーアセ
 
 以下のフィールドに基づいて検索結果を並べ替えることができます。
 
-* title（タイトル）
+* タイトル
 * ステータス
 * タイプ
 * サイズ
@@ -83,11 +82,10 @@ AEM Assets では、注釈、バージョン、ワークフロー、アクティ
 
    ![chlimage_1-399](assets/chlimage_1-399.png)
 
-1. タイムラインで、リストからエントリを選択します。例えば、「**[!UICONTROL コメント]**」を選択すると、アセットに関連付けられた注釈のリストが表示されます。
+1. タイムラインで、リストからエントリを選択します。例えば、「**[!UICONTROL コメント]**」を選択して、アセットに関連付けられている注釈のリストを表示します。
 
    ![chlimage_1-400](assets/chlimage_1-400.png)
 
 1. 「**[!UICONTROL 日付]**」ラベルの横の&#x200B;**[!UICONTROL 並べ替え]**&#x200B;アイコンをクリックまたはタップします。選択に基づき、注釈はアセットへの追加日に基づいてリストに時系列／逆時系列順で表示されます。
 
    ![chlimage_1-401](assets/chlimage_1-401.png)
-
