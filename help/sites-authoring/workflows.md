@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 7cb99618-d903-4cfb-b0d9-b23d189f6e78
-translation-type: tm+mt
-source-git-commit: 9d13589ea95329dc6a9d3dbf3a5a9930998597f5
+exl-id: 8d318fd5-3d8f-4144-95c8-d90685378a91
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 100%
 
 ---
-
 
 # ワークフローの操作{#working-with-workflows}
 
@@ -37,4 +36,3 @@ AEM ワークフローでは、（1 つ以上の）ページおよびアセッ�
 
 * [ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md)
 * [ワークフローへの参加](/help/sites-authoring/workflows-participating.md)
-
