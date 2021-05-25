@@ -9,25 +9,24 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: 1f920892-c52e-42ca-900c-2c7ab3c503b3
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: d9730cb5-e969-4b18-bf1f-6a0ef13f6fac
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '584'
 ht-degree: 71%
 
 ---
 
-
 # 製品フィード{#product-feed}
 
-AEMは[Search&amp;Promote](https://www.adobe.com/solutions/testing-targeting/searchandpromote.html)と統合され、次のことが可能です。
+AEMは[Search&amp;Promote](https://www.adobe.com/solutions/testing-targeting/searchandpromote.html)と統合され、次の操作が可能になります。
 
 * 基になるリポジトリ構造やコマースプラットフォームと関係なく、e コマース API を使用する。
 * Search&amp;Promote のインデックスコネクタ機能を利用して、XML 形式で製品フィードを提供する。
 * Search&amp;Promote のリモート制御機能を利用して、製品フィードのオンデマンドリクエストまたはスケジュール済みリクエストを実行する。
 * クラウドサービス設定として指定された、様々な Search&amp;Promote アカウント用のフィードを生成する。
 
-有効なアカウントを持っていて、[Search&amp;Promote](/help/sites-administering/search-and-promote.md#configuring-the-connection-to-search-promote)への接続を設定する必要があります。 また、正しい[データセンター](/help/sites-administering/search-and-promote.md#configuring-the-data-center)を使用していることを確認し、**リモートサーバーのURI **が設定されていることを確認する必要があります。
+有効なアカウントを持ち、[にSearch&amp;Promote](/help/sites-administering/search-and-promote.md#configuring-the-connection-to-search-promote)への接続を設定する必要があります。 また、正しい[データセンター](/help/sites-administering/search-and-promote.md#configuring-the-data-center)を使用していることを確認し、「**リモートサーバーURI **」が設定されていることを確認する必要があります。
 
 ## 製品フィードの設定 {#set-up-the-product-feed}
 
@@ -42,7 +41,7 @@ AEMは[Search&amp;Promote](https://www.adobe.com/solutions/testing-targeting/sea
    >
    >**[!UICONTROL Webサイトのルート]**&#x200B;は、eコマースWebサイトのルートです（例：`/content/geometrixx-outdoors/en`）。
    >
-   >**[!UICONTROL Identifier属性]**&#x200B;は、製品を一意に識別するJCRプロパティです。`identifier`。
+   >**[!UICONTROL 識別子属性]**&#x200B;は、製品を一意に識別するJCRプロパティです。`identifier`.
 
 1. 「**[!UICONTROL OK]**」をクリックします。
 
@@ -74,15 +73,15 @@ AEMは[Search&amp;Promote](https://www.adobe.com/solutions/testing-targeting/sea
 
    ![chlimage_1-108](assets/chlimage_1-108.png)
 
-1. **[!UICONTROL リモートコントロールパスワード]**&#x200B;を入力します。 これは、Search&amp;Promote アカウントで設定したパスワードです。
+1. **[!UICONTROL リモート制御パスワード]**&#x200B;を入力します。 これは、Search&amp;Promote アカウントで設定したパスワードです。
 
    >[!NOTE]
    >
-   >Search&amp;Promote アカウントのパスワードではありません。このパスワードは、Search&amp;Promoteアカウントにログインし、**[!UICONTROL Index]**&#x200B;に移動してから&#x200B;**[!UICONTROL Remote control]**&#x200B;に移動すると、見つけて変更できます。
+   >Search&amp;Promote アカウントのパスワードではありません。Search&amp;Promoteアカウントにログインし、**[!UICONTROL Index]**&#x200B;に移動してから、**[!UICONTROL Remote control]**&#x200B;に移動すると、このパスワードを探して変更できます。
 
 1. 「**[!UICONTROL スケジュールを有効にする]**」ボックスをオンにします。
 1. **[!UICONTROL スケジュール]**&#x200B;を選択します。これは、実際のフィード生成スケジュールです。
-1. 「**[!UICONTROL オンデマンドのインデックス作成]**」を有効にします（または有効にしません）。この機能は、Search&amp;Promote のインデックスを手動で呼び出すために使用されます。**[!UICONTROL 製品フィード]**&#x200B;をすべてリクエストがオンになっている場合、Search&amp;Promoteは製品フィード全体をリクエストします。 それ以外の場合は、増分製品フィードがリクエストされます。
+1. 「**[!UICONTROL オンデマンドのインデックス作成]**」を有効にします（または有効にしません）。この機能は、Search&amp;Promote のインデックスを手動で呼び出すために使用されます。**[!UICONTROL 「すべての製品フィードをリクエスト]**」がオンの場合、Search&amp;Promoteは完全な製品フィードをリクエストします。 それ以外の場合は、増分製品フィードがリクエストされます。
 
    >[!NOTE]
    >
@@ -90,4 +89,4 @@ AEMは[Search&amp;Promote](https://www.adobe.com/solutions/testing-targeting/sea
 
 1. 「**[!UICONTROL OK]**」をクリックします。
 
-すべての設定が完了したら、設定済みのWebサイトのルート下にあるすべての製品を含むXMLページが表示されます。[http://localhost:4502/etc/commerce/searchpromote/feed/full](http://localhost:4502/etc/commerce/searchpromote/feed/full).
+すべての設定が完了したら、設定済みのWebサイトのルートの下に、すべての製品を含むXMLページが表示されます。[http://localhost:4502/etc/commerce/searchpromote/feed/full](http://localhost:4502/etc/commerce/searchpromote/feed/full).
