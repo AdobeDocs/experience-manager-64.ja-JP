@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 83e73a5d-c6fa-426a-8476-78769ae7a8c1
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1459'
 ht-degree: 96%
 
 ---
 
-
-# ContextHub でのセグメント化の設定{#configuring-segmentation-with-contexthub}
+# ContextHub でのセグメント化の設定 {#configuring-segmentation-with-contexthub}
 
 >[!NOTE]
 >
@@ -29,7 +28,7 @@ ht-degree: 96%
 
 サイト訪問者についてこれまでに収集した情報と、達成する目標に応じて、ターゲットコンテンツに必要なセグメントと戦略を定義する必要があります。
 
-このようなセグメントを使用して、訪問者に特定のターゲットコンテンツを提供します。このコンテンツは、Webサイトの[パーソナライゼーション](/help/sites-authoring/personalization.md)セクションに保持されます。 ここで定義された[アクティビティ](/help/sites-authoring/activitylib.md)は、任意のページに追加できます。また、専用のコンテンツを適用できる訪問者セグメントを定義できます。
+このようなセグメントを使用して、訪問者に特定のターゲットコンテンツを提供します。このコンテンツは、Webサイトの[パーソナライゼーション](/help/sites-authoring/personalization.md)セクションで管理されます。 ここで定義された[アクティビティ](/help/sites-authoring/activitylib.md)は、任意のページに追加できます。また、専用のコンテンツを適用できる訪問者セグメントを定義できます。
 
 AEM では、ユーザーエクスペリエンスを簡単にパーソナライズできます。また、セグメント定義の結果を検証することもできます。
 
@@ -45,11 +44,11 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
 
 **セグメントエディター**&#x200B;を使用すると、セグメントを簡単に変更できます。セグメントを編集するには、[セグメントリスト](/help/sites-administering/segmentation.md#accessing-segments)からセグメントを選択し、「**編集**」ボタンをクリックします。
 
-![segmenter](assets/segmenteditor.png)
+![segmenteditor](assets/segmenteditor.png)
 
 コンポーネントブラウザーを使用すると、**AND** および **OR** コンテナを追加してセグメントロジックを定義してから、別のコンポーネントを追加してプロパティや値を比較できます。また、スクリプトやその他のセグメントを参照して選択条件を定義する（[新しいセグメントの作成](#creating-a-new-segment)を参照）ことによって、セグメントの選択シナリオを正確に定義できます。
 
-ステートメント全体が true と評価されると、セグメントは解決されます。複数のセグメントを適用可能な場合、**ブースト**&#x200B;係数も使用されます。[ブースト係数の詳細については、[新しいセグメントの作成](#creating-a-new-segment)を参照してください。](/help/sites-administering/campaign-segmentation.md#boost-factor)
+ステートメント全体が true と評価されると、セグメントは解決されます。複数のセグメントを適用可能な場合、**ブースト**&#x200B;係数も使用されます。[ブースト係数について詳しくは、[新しいセグメントの作成](#creating-a-new-segment)を参照してください。](/help/sites-administering/campaign-segmentation.md#boost-factor)
 
 >[!CAUTION]
 >
@@ -155,7 +154,7 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
 1. 「**OK**」をクリックして定義を保存します。
 1. 必要に応じてその他のコンポーネントを追加します。AND 比較および OR 比較のコンテナコンポーネントを使用して、ブール式を作成できます（後述の [AND コンテナと OR コンテナの使用](/help/sites-administering/segmentation.md#using-and-and-or-containers)を参照）。セグメントエディターでは、不要になったコンポーネントを削除したり、コンポーネントをステートメント内の別の場所へドラッグしたりすることができます。
 
-### AND コンテナと OR コンテナの使用  {#using-and-and-or-containers}
+### AND コンテナと OR コンテナの使用     {#using-and-and-or-containers}
 
 AND および OR コンテナコンポーネントを使用すると、AEM で複雑なセグメントを作成できます。この際、次の基本事項に留意してください。
 
@@ -226,7 +225,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 1. **スクリプト参照**&#x200B;コンポーネントをセグメントの目的の場所に追加します。
 1. **スクリプト参照**&#x200B;コンポーネントの編集ダイアログを開きます。スクリプトが[適切に設定](/help/sites-administering/segmentation.md#defining-a-script-to-reference)されていれば、「**スクリプト名**」ドロップダウンに表示されます。
 
-## セグメントの適用のテスト  {#testing-the-application-of-a-segment}
+## セグメントの適用のテスト {#testing-the-application-of-a-segment}
 
 セグメントを定義したら、**[ContextHub](/help/sites-authoring/ch-previewing.md)** を使用して、考えられる結果についてテストすることができます。
 
