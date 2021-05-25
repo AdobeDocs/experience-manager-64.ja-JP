@@ -9,15 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
-translation-type: tm+mt
-source-git-commit: 5ddbcb2addff2d6e3a3e9d7e100a6d9ba89fdd60
+exl-id: bdf91013-2136-464a-a637-a3047144ec98
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 46%
 
 ---
-
-
 
 # 公開したサイトを使ってみる {#experience-the-published-site}
 
@@ -30,8 +28,8 @@ ht-degree: 46%
 
 まず、サイト作成時に表示された URL を参照します。ただし、このとき参照するのはパブリッシュサーバー上の URL です。次に例を示します。
 
-* author URL = [http://localhost:4502/content/sites/enable/en.html](http://localhost:4502/content/sites/enable/en.html)
-* publish URL = [http://localhost:4503/content/sites/enable/en.html](http://localhost:4503/content/sites/enable/en.html)
+* 作成者URL = [http://localhost:4502/content/sites/enable/en.html](http://localhost:4502/content/sites/enable/en.html)
+* パブリッシュURL = [http://localhost:4503/content/sites/enable/en.html](http://localhost:4503/content/sites/enable/en.html)
 
 [デフォルトホームページを設定](enablement-create-site.md#changethedefaulthomepage)した場合は、[http://localhost:4503/](http://localhost:4503/) を参照するだけでサイトが開きます。
 
@@ -43,28 +41,28 @@ ht-degree: 46%
 
 ## 匿名のサイト訪問者 {#anonymous-site-visitor}
 
-匿名のサイト訪問者には、この非公開のイネーブルメントコミュニティサイトのログインページがすぐに表示されます。自己登録やFacebookやTwitterへのログインは選択できません。
+匿名のサイト訪問者には、この非公開のイネーブルメントコミュニティサイトのログインページがすぐに表示されます。facebookやTwitterに自己登録やログインのオプションはないことに注意してください。
 
-このホームページには、次の4つのメニュー項目が表示されています。`Assignments, Ski Catalog, What's New`と`Discussions`ですが、サインインしない限り、到達できない場合があります。
+このホームページには、次の4つのメニュー項目が表示されます。`Assignments, Ski Catalog, What's New`と`Discussions`の両方に割り当てられますが、サインインしない限り、何も実行できません。
 
 >[!NOTE]
 >
->サイト訪問者に自己登録を許可することなく、イネーブルメントサイトへの匿名アクセスを許可することができます。\
->有効化リソースが`show in catalog`と`allow anonymous access`に設定されている場合、匿名サイト訪問者はカタログ内の表示リソースを使用できます。
+>サイト訪問者に自己登録を許可することなく、イネーブルメントサイトへの匿名アクセスを許可できます。\
+>イネーブルメントリソースが`show in catalog`および`allow anonymous access`に設定されている場合、匿名のサイト訪問者がカタログ内のリソースを表示できます。
 
-### JCR {#prevent-anonymous-access-on-jcr}での匿名アクセスの禁止
+### JCR {#prevent-anonymous-access-on-jcr}での匿名アクセスを防ぐ
 
-既知の制限により、jcrコンテンツとjsonを介してコミュニティサイトのコンテンツが匿名訪問者に公開されますが、**[!UICONTROL allow anonymous access]**&#x200B;はサイトのコンテンツに対して無効になっています。 ただし、この動作は、回避策として「Sling制限」を使用して制御できます。
+既知の制限により、jcrコンテンツとjsonを通じてコミュニティサイトのコンテンツを匿名訪問者に公開しますが、サイトのコンテンツに対して&#x200B;**[!UICONTROL 匿名アクセスを許可]**&#x200B;は無効になっています。 ただし、この動作は、Slingの制限を回避策として使用して制御できます。
 
-jcrコンテンツとjsonを介した匿名ユーザーによるアクセスからコミュニティサイトのコンテンツを保護するには、次の手順に従います。
+コミュニティサイトのコンテンツを、匿名ユーザーがjcrコンテンツやjsonを介してアクセスするのを防ぐには、次の手順に従います。
 
-1. AEM作成者インスタンスで、https://&lt;ホスト>:&lt;ポート>/editor.html/content/site/&lt;サイト名>.htmlに移動します。
+1. AEMオーサーインスタンスで、 https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.htmlに移動します。
 
    >[!NOTE]
    >
-   >ローカライズされたサイトには移動しないでください。
+   >ローカライズされたサイトに移動しないでください。
 
-1. **[!UICONTROL ページプロパティ]**&#x200B;に移動します。
+1. **[!UICONTROL ページのプロパティ]**&#x200B;に移動します。
 
    ![page-properties-1](assets/page-properties-1.png)
 
@@ -73,14 +71,14 @@ jcrコンテンツとjsonを介した匿名ユーザーによるアクセスか�
 
    ![site-authentication-1](assets/site-authentication-1.png)
 
-1. ログ追加インページのパス。 例： `/content/......./GetStarted`
+1. ログインページのパスを追加します。 （例：`/content/......./GetStarted`）。
 1. ページを公開します。
 
 ## 登録済みメンバー {#enrolled-member}
 
-このエクスペリエンスは、`Riley Taylor`と`Sidney Croft`が[作成](enablement-setup.md#publishcreateenablementmembers)で[割り当て](resource.md#settings)を&#x200B;*Ski Lessons*&#x200B;の学習パスに、*Community Ski Class*&#x200B;グループのメンバーシップに依存しています。
+このエクスペリエンスは、ユーザー`Riley Taylor`と`Sidney Croft`が[作成](enablement-setup.md#publishcreateenablementmembers)で、[が&#x200B;*Ski Lessons*&#x200B;の学習パスに&#x200B;*Community Ski Class*&#x200B;グループのメンバーシップを通じて割り当てられている](resource.md#settings)に依存します。
 
-ログイン
+でログイン
 
 * `Username: riley`
 * `Password: password`
@@ -103,7 +101,7 @@ jcrコンテンツとjsonを介した匿名ユーザーによるアクセスか�
 * 割り当てのタイプに関連する詳細
 * 割り当ての連絡先、エキスパートおよび作成者（指定されている場合）
 
-カード左上隅のアイコンは、割り当ての種類を示しています。道路のイメージは、イネーブルメントリソースの数を含む学習パス用です。
+カード左上隅のアイコンは、割り当ての種類を示しています。道路のイメージは、含まれるイネーブルメントリソースの数を含む学習パス用です。
 
 ![chlimage_1-435](assets/chlimage_1-435.png)
 
@@ -113,7 +111,7 @@ jcrコンテンツとjsonを介した匿名ユーザーによるアクセスか�
 
 「Ski Lesson 1」を選択すると、イネーブルメントリソースの詳細ページが表示されます。**
 
-詳細ページから、メンバーは学習し、[rate](rating.md)レッスンを学び、[comments](comments.md)を追加することができます。 メンバーのアクティビティはすべて、サイトの新機能セクションに反映されます。
+詳細ページから、メンバーは学習し、[rate](rating.md)レッスンを学習し、[comments](comments.md)を追加できます。 メンバーのアクティビティは、サイトの新機能セクションに反映されます。
 
 イネーブルメントリソースとのインタラクションは、オーサー環境からアクセスできるレポートセクションに表示されます。
 
@@ -121,7 +119,7 @@ jcrコンテンツとjsonを介した匿名ユーザーによるアクセスか�
 
 ### Ski Catalog {#ski-catalog}
 
-Ski Catalog のページは、`Tutorial` 名前空間のタグが付けられたイネーブルメントリソースのカタログです。2つの&#x200B;*Ski Lesson*&#x200B;リソースには`Skiing`タグが付けられます。例えば、`All`または`Tutorial: Sports / Skiing`以外のタグが選択されている場合は、何も表示されません。
+Ski Catalog のページは、`Tutorial` 名前空間のタグが付けられたイネーブルメントリソースのカタログです。2つの&#x200B;*Ski Lesson*&#x200B;リソースには`Skiing`タグが付けられ、`All`または`Tutorial: Sports / Skiing`以外のタグが選択されている場合は、何も表示されません。
 
 メンバーにイネーブルメントリソースが（直接または学習パスを通じて）割り当てられていないときも、カタログ内にあるイネーブルメントリソースを使用したり、コメントや評価を付けてフィードバックを与えることができます。
 
@@ -129,7 +127,7 @@ Ski Catalog のページは、`Tutorial` 名前空間のタグが付けられた
 
 ### Discussions {#discussions}
 
-有効化リソースの評価とコメント化（[有効な場合](enablement-create-site.md#step33asettings)）に加えて、`Enablement Tutorial`の作成元のコミュニティサイトテンプレートには[フォーラム関数](functions.md#forum-function)(タイトルは`Discussions)`です。
+`Enablement Tutorial`の作成元のコミュニティサイトテンプレートには、イネーブルメントリソース（[有効](enablement-create-site.md#step33asettings)）の評価とコメント付けに加えて、[フォーラム機能](functions.md#forum-function)（タイトルは`Discussions)`）が含まれます。
 
 「`Discussions`」のリンクを選択し、トピックを投稿します。
 
@@ -141,17 +139,17 @@ Sidney Croft（sidney／password）としてログインおよびログインし
 
 ### 新機能 {#what-s-new}
 
-`What's New`メニュー項目は、このコミュニティサイトの構造の[アクティビティストリーム関数](functions.md#activity-stream-function)に与えられたタイトルです。
+`What's New`メニュー項目は、このコミュニティサイトの構造で[アクティビティストリーム機能](functions.md#activity-stream-function)に与えられるタイトルです。
 
-シドニーとしてサインインしたまま、`What's New`リンクを選択してアクティビティを表示します。
+Sidneyとしてサインインしたままで、`What's New`リンクを選択してアクティビティを表示します。
 
 ![chlimage_1-440](assets/chlimage_1-440.png)
 
 ## 信頼されているコミュニティメンバー {#trusted-community-member}
 
-このエクスペリエンスでは、` [Quinn Harper](enablement-setup.md#publishcreateenablementmembers)`に[モデレーター](enablement-create-site.md#moderation)と[リソース連絡先](resource.md#settings)の役割が割り当てられたと想定しています。
+このエクスペリエンスでは、` [Quinn Harper](enablement-setup.md#publishcreateenablementmembers)`に[モデレーター](enablement-create-site.md#moderation)と[リソースの連絡先](resource.md#settings)の役割が割り当てられていると想定します。
 
-ログイン
+でログイン
 
 * `Username: quinn`
 * `Password: password`
@@ -160,11 +158,11 @@ Sidney Croft（sidney／password）としてログインおよびログインし
 
 ![chlimage_1-441](assets/chlimage_1-441.png)
 
-ホームページは、1 番目のメニュー項目として定義されている割り当てページです。Quinは、モデレーターで有効化リソースの連絡先で、有効化リソースや学習パスに登録されていなかったため、表示するものはありません。
+ホームページは、1 番目のメニュー項目として定義されている割り当てページです。Quinnはモデレーターとイネーブルメントリソースの連絡先で、イネーブルメントリソースや学習パスに登録されていなかったので、表示するものはありません。
 
-### Administration {#administration}
+### 管理 {#administration}
 
-例えば、`Riley Taylor`と`Sidney Croft. By s`2人の学習者がアクティビティし、`Administration`リンクを選択してモデレートコンソールにアクセスした場合、Quinは[一括モデレートコンソール](moderation.md)を使用して投稿をモデレートできます。
+2人の学習者（`Riley Taylor`と`Sidney Croft. By s`）がモデレートコンソールにアクセスするための`Administration`リンクを選択している場合、Quinnは[一括モデレートコンソール](moderation.md)を使用して投稿をモデレートできます。
 
 サイドパネルのアイコンを選択すると、コミュニティコンテンツの検索に使用するフィルターの展開／折りたたみが切り替わります。
 
@@ -176,18 +174,18 @@ Sidney Croft（sidney／password）としてログインおよびログインし
 
 学習者とイネーブルメントリソースに関するレポートにアクセスには、2 つの方法があります。
 
-作成者が&#x200B;**コミュニティ[リソースコンソール](resources.md)**&#x200B;に移動し、有効化リソースが管理されている場所に移動します。コミュニティサイトを選択すると、次のレポートを生成できます。
+オーサー環境で、**コミュニティ/[リソースコンソール](resources.md)**&#x200B;に移動します。このコンソールでイネーブルメントリソースを管理し、コミュニティサイトを選択すると、次のレポートを生成できます。
 
-* すべての有効化リソースと学習パス
-* 有効化に関する1つのリソースまたは学習パス
+* すべてのイネーブルメントリソースと学習パス
+* 特定のイネーブルメントリソースまたは学習パス
 
 **コミュニティ、[レポートコンソール](reports.md)**&#x200B;に移動し、
 
-* 有効化リソースと学習パスの割り当て
-* 特定の期間におけるコミュニティサイトへの投稿
-* 特定の期間のコミュニティサイトの表示（サイト訪問）
+* イネーブルメントリソースと学習パスの割り当て
+* 特定の期間のコミュニティサイトへの投稿
+* 特定の期間におけるコミュニティサイトの表示（サイト訪問）
 
-* 投稿や表示は、すべてのコンテンツに対して、または特定のコンテンツに対して行うことができます。
+* 投稿と表示は、すべてのコンテンツまたは特定のコンテンツに対して行うことができます。
 
    * フォーラム
    * フォーラムトピック
@@ -195,7 +193,7 @@ Sidney Croft（sidney／password）としてログインおよびログインし
    * Q&amp;A 質問
    * ブログ
    * ブログ記事
-   * カレンダー
+   * Calendar
    * カレンダーイベント
 
 ### リソースコンソール {#resources-console}
@@ -203,11 +201,11 @@ Sidney Croft（sidney／password）としてログインおよびログインし
 パブリッシュ環境でリソースに対しておこなわれるアクティビティやインタラクションが少ない場合は、オーサー環境でレポートを表示すると有益です。
 
 * 作成者
-* 管理者権限でサインイン
+* 管理者権限でログイン
 * メインメニューから&#x200B;**[!UICONTROL コミュニティ/リソース]**&#x200B;に移動します。
-* `Enablement Tutorial`サイトを選択
-* `Report`アイコンを選択すると、すべてのリソースの概要が表示されます
-* リソースを選択し、そのリソースのレポートの`Report`アイコンを選択します
+* `Enablement Tutorial`サイトを選択します。
+* すべてのリソースの概要を表示するには、`Report`アイコンを選択します。
+* リソースを選択し、そのリソースに関するレポート用の`Report`アイコンを選択します。
 
 Adobe Analytics のデータを表示するには時期尚早のようです。データが表示されるには 1 時間から 12 時間かかります。ただし、基本的なSCORMレポートは既に使用可能です。
 
@@ -217,7 +215,7 @@ Adobe Analytics のデータを表示するには時期尚早のようです。�
 
 #### Ski Lessons のユーザーレポート {#ski-lessons-user-report}
 
-* **[!UICONTROL コミュニティ/リソース]**&#x200B;を選択します
+* **[!UICONTROL コミュニティ/リソース]**&#x200B;を選択します。
 
 * カード`Enablement Tutorial`を開く
 * カード`Ski Lessons`を開く
@@ -233,33 +231,33 @@ Adobe Analytics のデータを表示するには時期尚早のようです。�
 * コミュニティサイトの&#x200B;**表示**
 * コミュニティサイトの&#x200B;**投稿**
 
-割り当てのレポートの場合：
+割り当てに関するレポートの場合：
 
 * 作成者
-* 管理者権限でサインイン
+* 管理者権限でログイン
 * **[!UICONTROL コミュニティ/レポート/割り当てレポート]**&#x200B;に移動します。
-* プルダウンメニューから&#x200B;**[!UICONTROL サイト]**&#x200B;を選択します（`Enablement Tutorial`を選択します）。
+* プルダウンメニューから「**[!UICONTROL サイト]**」を選択します（「`Enablement Tutorial`」を選択します）。
 
-* **[!UICONTROL グループ]**&#x200B;を選択（`Community Ski Class`を選択）
+* **[!UICONTROL グループ]**&#x200B;を選択します（`Community Ski Class`を選択）。
 
-* **[!UICONTROL 割り当て]**&#x200B;を選択（`Ski Lessons`を選択）
+* **[!UICONTROL 割り当て]**&#x200B;を選択します（`Ski Lessons`を選択）。
 
-* 「**[!UICONTROL 生成]**」を選択します
+* 「**[!UICONTROL 生成]**」を選択します。
 
 ![chlimage_1-445](assets/chlimage_1-445.png)
 
-表示のレポートの場合：
+ビューに関するレポートの場合：
 
 * 作成者
-* 管理者権限でサインイン
+* 管理者権限でログイン
 * **[!UICONTROL コミュニティ/レポート/表示レポート]**&#x200B;に移動します。
-* プルダウンメニューから&#x200B;**[!UICONTROL サイト]**&#x200B;を選択します（`Enablement Tutorial`を選択します）。
+* プルダウンメニューから「**[!UICONTROL サイト]**」を選択します（「`Enablement Tutorial`」を選択します）。
 
-* 「**[!UICONTROL コンテンツタイプ]**」を選択（「`all`」を選択）
+* 「**[!UICONTROL コンテンツタイプ]**」を選択します（「`all`」を選択）。
 
-* **[!UICONTROL 日付範囲]**&#x200B;を選択（`Last 7 days`を選択）
+* **[!UICONTROL 日付範囲]**&#x200B;を選択します（`Last 7 days`を選択）。
 
-* 「**[!UICONTROL 生成]**」を選択します
+* 「**[!UICONTROL 生成]**」を選択します。
 
 ![chlimage_1-446](assets/chlimage_1-446.png)
 
