@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5bb32fb1-4b6e-412f-aa16-f60db9dcaba1
-translation-type: tm+mt
-source-git-commit: 6a2455cb377a68254a5c58c6627c59716d284144
+exl-id: 40c2e205-0115-4ebe-ab24-66c8ee0663fa
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 97%
 
 ---
-
 
 # 証明書を Acrobat Reader DC Extensions で使用するための設定{#configuring-credentials-for-use-with-acrobat-reader-dc-extensions}
 
@@ -62,4 +61,3 @@ Trust Store には複数の Acrobat Reader DC Extensions 証明書が含まれ�
 1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
 1. 既存の証明書のエイリアスをメモしておきます。このエイリアスを選択して「削除」をクリックします。
 1. 完全に同一のエイリアス名を使用して、新しい証明書を読み込みます。
-
