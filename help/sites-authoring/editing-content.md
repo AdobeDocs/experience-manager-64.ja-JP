@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 07da66ab-dd5e-4ca8-ac6d-76fc81875fd9
-translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+exl-id: 26d1dea8-c225-4ef3-8429-bab585341c70
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '3064'
 ht-degree: 94%
 
 ---
 
-
-# ページのコンテンツの編集{#editing-page-content}
+# ページのコンテンツの編集 {#editing-page-content}
 
 ページが作成されたら（新規作成、またはローンチやライブコピーの一部として作成）、コンテンツを編集して、必要な更新をおこなうことができます。
 
@@ -42,7 +41,7 @@ ht-degree: 94%
 
 ページツールバーを使用すると、ページ設定に応じた適切な機能にアクセスできます。
 
-![screen_shot_2018-03-22at11338](assets/screen_shot_2018-03-22at111338.png)
+![screen_shot_2018-03-22at111338](assets/screen_shot_2018-03-22at111338.png)
 
 ツールバーを使用すると、様々なオプションにアクセスできます。現在のコンテキストと設定によっては、一部のオプションを使用できないことがあります。
 
@@ -68,13 +67,13 @@ ht-degree: 94%
 
    [ContextHub](/help/sites-authoring/ch-previewing.md) を開きます。プレビューモードでのみ使用できます。
 
-   ![screen_shot_2018-03-22at11543](assets/screen_shot_2018-03-22at111543.png)
+   ![screen_shot_2018-03-22at111543](assets/screen_shot_2018-03-22at111543.png)
 
 * **ページタイトル**
 
    情報のためにのみ表示されます。
 
-   ![screen_shot_2018-03-22at11554](assets/screen_shot_2018-03-22at111554.png)
+   ![screen_shot_2018-03-22at111554](assets/screen_shot_2018-03-22at111554.png)
 
 * **モードセレクター**
 
@@ -98,7 +97,7 @@ ht-degree: 94%
 
 ページが 1 つまたは複数の[ワークフロー](/help/sites-authoring/workflows.md)の一部である場合、この情報はページの編集時に画面の上部にある通知バーに表示されます。
 
-![screen_shot_2018-03-22at11739](assets/screen_shot_2018-03-22at111739.png)
+![screen_shot_2018-03-22at111739](assets/screen_shot_2018-03-22at111739.png)
 
 >[!NOTE]
 >
@@ -106,9 +105,9 @@ ht-degree: 94%
 
 通知には、ページに対して実行されているワークフローが一覧表示されます。ユーザーが現在のワークフローステップに関係している場合は、[ワークフローのステータスに影響する](/help/sites-authoring/workflows-participating.md)オプションや、ワークフローの詳細を取得するオプションを使用できます。例えば、次のようなものがあります。
 
-* **完了** - 「作業項目を **** 完了」ダイアログを開きます
+* **完了**  — 作業項目を完了ダイアログ **を** 開きます
 
-* **委任** - **Complete** Workitemダイアログを開きます
+* **委任**  — 作業項目を完了ダイアログ **を** 開きます
 
 * **詳細を表示** - ワークフローの&#x200B;**詳細**&#x200B;ウィンドウを開きます
 
@@ -124,7 +123,7 @@ ht-degree: 94%
 
 * ページに新しいコンポーネントを追加する場合（コンポーネントブラウザーからドラッグ）：
 
-   ![screen_shot_2018-03-22at11928](assets/screen_shot_2018-03-22at111928.png)
+   ![screen_shot_2018-03-22at111928](assets/screen_shot_2018-03-22at111928.png)
 
 * 既存のコンポーネントを移動する場合：
 
@@ -411,7 +410,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->レイアウトアクションは、選択したコンポーネントの範囲に限定されます。例えば、あるコンポーネントのレイアウトを編集していて、別のコンポーネントをクリックすると、（レイアウトツールバーではなく）標準の編集ツールバーが新しく選択したコンポーネントに表示され、再調整ハンドルとエミュレータツールバーが消えます。
+>レイアウトアクションは、選択したコンポーネントの範囲に限定されます。例えば、あるコンポーネントのレイアウトを編集し、別のコンポーネントをクリックすると、新しく選択したコンポーネントの標準の編集ツールバー（レイアウトツールバーではなく）が表示され、エミュレーターツールバーも表示されなくなります。
 >
 >複数のコンポーネントに影響するページの全体のレイアウトを編集する必要がある場合は、[レイアウトモード](/help/sites-authoring/responsive-layout.md)に切り替えます。
 
@@ -560,9 +559,9 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
 
 >[!NOTE]
 >
->[キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) `Ctrl-Z`を使用して、ページ編集操作を元に戻すこともできます。
+>[キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) `Ctrl-Z`を使用して、ページの編集操作を元に戻すこともできます。
 >
->キーボードショートカット`Ctrl-Y`は、ページ編集操作をやり直すためにも使用できます。
+>キーボードショートカット`Ctrl-Y`を使用して、ページの編集操作をやり直すこともできます。
 
 >[!NOTE]
 >
@@ -607,4 +606,3 @@ AEM では、ユーザーが実行するアクションの履歴と、それら�
 >[!NOTE]
 >
 >ファイルや画像への変更の履歴は、少なくとも 10 時間維持されます。この時間を経過すると、変更の取り消しは保証されません。管理者はデフォルトの 10 時間を変更できます。
-
