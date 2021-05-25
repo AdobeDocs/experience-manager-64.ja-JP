@@ -10,9 +10,8 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 exl-id: 07a4f315-a60e-456b-b02d-035b3f6ad9ad
-feature: Image Presets
+feature: 画像プリセット
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
 source-wordcount: '329'
@@ -20,7 +19,7 @@ ht-degree: 90%
 
 ---
 
-# Dynamic Media画像プリセットの適用{#applying-image-presets}
+# Dynamic Media画像プリセット{#applying-image-presets}の適用
 
 画像プリセットを使用すると、異なるサイズや異なる形式の画像、または動的に生成された他の画像プロパティを設定した画像を動的に配信できます。画像を書き出すときにプリセットを選択できます。また、この操作によって、管理者が指定した仕様に合わせて画像が再フォーマットされます。
 
