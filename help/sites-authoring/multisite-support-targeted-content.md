@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: personalization
 discoiquuid: 4dda6a03-d3ad-4e65-8b37-cee030fa4f7f
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: adf7c1d3-5e3d-42b7-b1e1-ae6980b08a90
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2906'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
-
 
 # マルチサイトでのターゲットコンテンツの操作{#working-with-targeted-content-in-multisites}
 
@@ -24,7 +23,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->ターゲットコンテンツ用マルチサイト管理は、上級者向けの機能です。この機能を使用するには、[マルチサイトマネージャー](/help/sites-administering/msm.md)とAEMとの[Adobe Targetの統合](/help/sites-administering/target.md)に精通している必要があります。
+>ターゲットコンテンツ用マルチサイト管理は、上級者向けの機能です。この機能を使用するには、[マルチサイトマネージャー](/help/sites-administering/msm.md)や、AEM と [Adobe Target の統合](/help/sites-administering/target.md)に関する詳しい知識が必要です。
 
 このドキュメントでは次の内容について説明します。
 
@@ -35,7 +34,7 @@ ht-degree: 99%
 
 パーソナライズされたコンテンツをサイト間で共有するには、以下の手順を実行する必要があります。
 
-1. [新しい領域を作成](#creating-new-areas)するか、[新しい領域をライブコピーとして作成](#creating-new-areas)します。領域には、ページ内の領域&#x200B;**&#x200B;で使用可能なすべてのアクティビティが含まれます。つまり、ページ内のこの場所が、コンポーネントのターゲットになります。新しい領域を作成した場合は空の領域が作成されますが、新しい領域をライブコピーとして作成した場合は、サイト構造をまたがってコンテンツを継承できます。
+1. [新しい領域を作成](#creating-new-areas)するか、[新しい領域をライブコピーとして作成](#creating-new-areas)します。領域には、ページ内の&#x200B;*領域*&#x200B;で使用可能なすべてのアクティビティが含まれます。つまり、ページ内のこの場所が、コンポーネントのターゲットになります。新しい領域を作成した場合は空の領域が作成されますが、新しい領域をライブコピーとして作成した場合は、サイト構造をまたがってコンテンツを継承できます。
 
 1. 領域に[サイトまたはページをリンク](#linking-sites-to-an-area)します。
 
@@ -62,7 +61,7 @@ ht-degree: 99%
 
 
 
-## 使用例  {#use-cases}
+## 使用例 {#use-cases}
 
 ターゲットコンテンツ用マルチサイト管理は、目的に応じて様々な方法で使用できます。この節では、この機能を 1 つのブランドで使用する場合の仕組みを説明します。さらに、[例：地域に基づくコンテンツのターゲット設定](#example-targeting-content-based-on-geography)では、複数のサイトでコンテンツのターゲット設定をおこなう具体的な例を示します。
 
@@ -306,4 +305,3 @@ AEM でこれを実現するには、次の作業をおこないます。
 1. **パーソナライズ機能**／**アクティビティ**&#x200B;または&#x200B;**オファー**&#x200B;に移動して、ブランドに移動します。
 1. 削除する領域の横のアイコンをタップまたはクリックします。
 1. 「**削除**」をタップまたはクリックし、その領域を削除することを確認します。
-
