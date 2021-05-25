@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 content-type: reference
 discoiquuid: 55a0b70e-5212-408b-8560-6e758bd8bb10
-translation-type: tm+mt
-source-git-commit: f8ba597c62379ba413309303c2ad066ab7afce1e
+exl-id: 3a341e72-01c5-4c63-8942-6320e5b08440
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 77%
 
 ---
-
 
 # AEM Communities リリースノート {#aem-communities-release-notes}
 
@@ -28,14 +27,14 @@ ht-degree: 77%
 
 コミュニティサイト：
 
-* コミュニティ管理者は、次のことができます。
+* コミュニティ管理者は、次の操作を実行できるようになりました。
 
    * コミュニティサイトを完全に削除
    * コンテキスト対応のコミュニティサイト設定フォルダーを選択
 
 コミュニティグループ：
 
-* コミュニティ管理者は、次のことができます。
+* コミュニティ管理者は、次の操作を実行できるようになりました。
 
    * コミュニティグループを完全に削除
    * 複数の言語でのコミュニティグループの作成
@@ -61,16 +60,16 @@ ht-degree: 77%
 
 AEM 6.4 における基盤の変更と完全に互換性があります。
 
-注意：これらの機能はすべてAEM 6.3でも利用できます。[6.3](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html)のAEM Communitiesのリリースノートを確認してください。
+注意：これらの機能はすべてAEM 6.3でも使用できます。[6.3](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html)のAEM Communitiesリリースノートを確認してください。
 
 ## 既知の問題 {#known-issues}
 
 * **モデレート**：一括モデレート UI から 1 回の削除操作で親投稿を削除できない（CQ-4236797）
-* **コンソール** - [ユーザ名を忘れた場合]または[パスワードを忘れた場合]のリンクが、対応するパスワード取得フォームではなく、ログインページにリダイレクトされる(CQ-4237682)
+* **コンソール**  - 「Forgot Username or Password」リンクが、対応するパスワード取得フォームの代わりにログインページにリダイレクトされる(CQ-4237682)
 
 ## 高度な機能 {#select-features}
 
-エキスパートスコアリング（*Adobe Sensei を利用*）を使用すると、ゲーミフィケーションを有効にすることができます。これは、コミュニティでの有益な行動を奨励し、それに報いる効果的な手段です。また、レコメンデーションやマーケティングの目的で専門家を識別するためにも使用できます。
+エキスパートスコアリング（*Adobe Sensei を利用*）を使用すると、ゲーミフィケーションを有効にすることができます。これは、コミュニティでの有益な行動を奨励し、それに報いる効果的な手段です。また、レコメンデーションやマーケティングの目的で、エキスパートを特定するためにも使用できます。
 
 ## デモ {#demonstrations}
 
