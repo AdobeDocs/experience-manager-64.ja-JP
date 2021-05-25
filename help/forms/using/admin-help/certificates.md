@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 9fd531c0-5206-4be0-a450-13e0dc806068
-translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+exl-id: b8d4f35b-dc9c-4e0a-b855-f49275d4ac1f
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 83%
 
 ---
-
 
 # 証明書の管理 {#managing-certificates}
 
@@ -70,5 +69,4 @@ Trust Manager API を使用して証明書の読み込みおよび削除を行�
 ## 証明書の削除 {#delete-a-certificate}
 
 1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/証明書]**&#x200B;をクリックします。
-1. 削除する証明書のチェックボックスを選択し、「**[!UICONTROL 削除]**」をクリックして、「**[!UICONTROL OK]**」をクリックします。
-
+1. 削除する証明書のチェックボックスをオンにして、「**[!UICONTROL 削除]**」をクリックし、「**[!UICONTROL OK]**」をクリックします。
