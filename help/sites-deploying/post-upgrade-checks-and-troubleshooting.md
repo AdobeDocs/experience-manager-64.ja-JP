@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: bc8c9aa2-f669-41f3-a526-6146ff5cf0cd
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: アップグレード
+exl-id: edd6e933-59ed-4d7e-8934-7e2ec485cfb9
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1888'
 ht-degree: 89%
 
 ---
-
 
 # アップグレード後のチェックおよびトラブルシューティング{#post-upgrade-checks-and-troubleshooting}
 
@@ -46,7 +45,7 @@ ht-degree: 89%
 
 * [テスト計画の実行](#execute-test-plan)
 
-### ログでアップグレードの成功を確認 {#verify-logs-for-upgrade-success}
+### ログでアップグレードの成功を確認  {#verify-logs-for-upgrade-success}
 
 **upgrade.log**
 
@@ -75,15 +74,15 @@ error.log は、ターゲットバージョンの jar を使用した AEM の起
 
 ### OSGi バンドルの確認  {#verify-osgi-bundles}
 
-OSGiコンソール`/system/console/bundles`に移動し、バンドルが起動していないかどうかを確認します。 バンドルがインストール状態にある場合は、`error.log`に問い合わせてルートの問題を確認してください。
+OSGiコンソール`/system/console/bundles`に移動し、開始されていないバンドルがないかどうかを確認します。 インストール状態のバンドルがある場合は、`error.log`を参照して根本的な問題を特定します。
 
 ### Oak バージョンの確認 {#verify-oak-version}
 
-アップグレード後に、Oak バージョンが **1.8.2** に更新されていることを確認する必要があります。Oakバージョンを確認するには、OSGiコンソールに移動し、Oakバンドルに関連付けられているバージョンを確認します。Oak Core、Oak Commons、Oak Segment Tar。
+アップグレード後に、Oak バージョンが **1.8.2** に更新されていることを確認する必要があります。Oakのバージョンを確認するには、OSGiコンソールに移動し、Oakバンドルに関連付けられているバージョンを確認します。Oak Core、Oak Commons、Oak Segment Tar。
 
 ### PreUpgradeBackup フォルダーの検査 {#inspect-preupgradebackup-folder}
 
-アップグレード中に、AEMはカスタマイズのバックアップを試みて`/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`の下に格納します。 このフォルダーを CRXDE Lite で表示するには、[CRXDE Lite を一時的に有効にする](/help/sites-administering/enabling-crxde-lite.md)ことが必要となります。
+アップグレード中にAEMはカスタマイズのバックアップを試み、 `/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`の下に保存します。 このフォルダーを CRXDE Lite で表示するには、[CRXDE Lite を一時的に有効にする](/help/sites-administering/enabling-crxde-lite.md)ことが必要となります。
 
 タイムスタンプがあるフォルダーには、`mergeStatus` という名前のプロパティがあり、`COMPLETED` という値である必要があります。**to-process** フォルダーは空であり、**overwritten** ノードはアップグレード中に上書きされたノードを示している必要があります。**leftovers** ノードの下のコンテンツは、アップグレード中に安全に統合できなかったコンテンツを示します。実装が（アップグレードされたコードパッケージによってまだインストールされていない）いずれかの子ノードに依存している場合は、それらの子ノードを手動で統合する必要があります。
 
@@ -91,7 +90,7 @@ OSGiコンソール`/system/console/bundles`に移動し、バンドルが起動
 
 ### ページの初期検証  {#initial-validation-of-pages}
 
-AEM の複数のページに対して初期検証を実行します。作成者環境をアップグレードする場合は、開始ページとようこそページ(`/aem/start.html`、`/libs/cq/core/content/welcome.html`)を開きます。 オーサー環境とパブリッシュ環境の両方で、アプリケーションページをいくつか開き、正しくレンダリングされるかどうかスモークテストをおこないます。問題が発生した場合は、`error.log` を調べてトラブルシューティングをおこないます。
+AEM の複数のページに対して初期検証を実行します。オーサー環境をアップグレードする場合は、開始ページとようこそページ( `/aem/start.html`、`/libs/cq/core/content/welcome.html` )を開きます。 オーサー環境とパブリッシュ環境の両方で、アプリケーションページをいくつか開き、正しくレンダリングされるかどうかスモークテストをおこないます。問題が発生した場合は、`error.log` を調べてトラブルシューティングをおこないます。
 
 ### AEM サービスパックの適用 {#apply-aem-service-packs}
 
@@ -105,7 +104,7 @@ AEM のいくつかの機能では、アップグレード後に追加の手順�
 
 #### データストアのガベージコレクションの有効化 {#enable-data-store-garbage-collection}
 
-ファイルデータストアを使用している場合は、データストアのガベージコレクションタスクが有効になっていて、週別メンテナンスリストに追加されていることを確認します。説明は[ここ](/help/sites-administering/data-store-garbage-collection.md)で説明します。
+ファイルデータストアを使用している場合は、データストアのガベージコレクションタスクが有効になっていて、週別メンテナンスリストに追加されていることを確認します。[ここで](/help/sites-administering/data-store-garbage-collection.md)の説明を説明します。
 
 >[!NOTE]
 >
@@ -121,7 +120,7 @@ MongoMK または新しい TarMK セグメント形式を使用している場�
 
 ### レプリケーションエージェントの有効化  {#enable-replication-agents}
 
-パブリッシュ環境を完全にアップグレードして検証したら、オーサー環境でレプリケーションエージェントを有効にします。エージェントがそれぞれのパブリッシュインスタンスに接続できることを確認します。イベントの順序の詳細については、[アップグレード手順](/help/sites-deploying/upgrade-procedure.md)を参照してください。
+パブリッシュ環境を完全にアップグレードして検証したら、オーサー環境でレプリケーションエージェントを有効にします。エージェントがそれぞれのパブリッシュインスタンスに接続できることを確認します。イベントの順序について詳しくは、[アップグレード手順](/help/sites-deploying/upgrade-procedure.md)を参照してください。
 
 ### スケジュール済みカスタムジョブの有効化 {#enable-custom-scheduled-jobs}
 
@@ -133,9 +132,9 @@ MongoMK または新しい TarMK セグメント形式を使用している場�
 
 これらのシナリオは、アップグレードに関連する問題の根本原因を追跡するのに役立ちます。また、プロジェクトや製品に固有の問題を識別するためにも役立ちます。
 
-### {#dynamic-media-cloud-configuration}のアップグレード後にDynamic Mediaクラウド設定を再作成する
+### {#dynamic-media-cloud-configuration}のアップグレード後のDynamic Mediaクラウド設定の再作成
 
-以前のバージョンからAEM 6.4にアップグレードした後、AEM 6.4 TouchUIから、以前の設定のDynamic Mediaクラウド設定にアクセスできなくなる場合があります。 この問題を解決するには、CRXDE Liteを使用して以前の設定を削除し、新しいDynamic Mediaクラウド設定を作成します。 AEM 6.4](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md)の[Dynamic Mediaリポジトリの再構築も参照してください。
+以前のバージョンからAEM 6.4にアップグレードした後、以前の設定からDynamic Media Cloud設定にAEM 6.4 TouchUIからアクセスできなくなる場合があります。 この問題を解決するには、CRXDE Liteを使用して以前の設定を削除し、新しいDynamic Mediaクラウド設定を作成します。 AEM 6.4での[Dynamic Mediaのリポジトリ再構築](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md)も参照してください。
 
 ### リポジトリ移行の失敗  {#repository-migration-failing-}
 
@@ -179,11 +178,11 @@ CRX2 から Oak へのデータ移行は、CQ 5.4 ベースのソースインス
 
 ほとんどの場合、これらの問題の根本原因は、起動されていないバンドルやインストールされていないパッケージによる問題と同じですが、異なる点は、問題が最初にコンポーネントを使用した時点で発生することです。
 
-問題のあるカスタムコードへの対処方法としては、まず原因を特定するためのスモークテストを実行します。見つかったら、記事の[リンク]のセクションにある推奨事項を調べて、修正方法を確認してください。
+問題のあるカスタムコードへの対処方法としては、まず原因を特定するためのスモークテストを実行します。問題が見つかったら、記事の[link]セクションの推奨事項を参照して、問題の修正方法を確認してください。
 
-### etc {#missing-customizations-under-etc}下のカスタマイズが見つかりません
+### etc {#missing-customizations-under-etc}の下にカスタマイズが見つからない
 
-`/apps` とは、アップグレード `/libs` によって適切に処理されますが、での変更 `/etc` は、アップグレード `/var/upgrade/PreUpgradeBackup` 後に手動で復元する必要がある場合があります。手動で統合する必要があるコンテンツについては、この場所を確認してください。
+`/apps` および `/libs` はアップグレードで適切に処理されますが、以下の変更は、ア `/etc` ップグレード後にから手動で復元する必要が `/var/upgrade/PreUpgradeBackup` ある場合があります。手動で統合する必要があるコンテンツについては、この場所を確認してください。
 
 ### error.log と upgrade.log の分析 {#analyzing-the-error-log-and-upgrade-log}
 
@@ -201,7 +200,7 @@ grep -v UnrelatedErrorString
 
 または
 
-* `grep -A` 」をクリックします。
+* `grep -A` を追加します。
 
 警告メッセージにエラーが見つかることもあります。有効なケースがこの状態になってしまうこともあり、実際にエラーであるかどうかをアプリケーションが常に判断できるとは限りません。これらの警告メッセージについても確認してください。
 
