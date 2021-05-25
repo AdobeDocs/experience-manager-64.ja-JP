@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 163a4887-7c33-4305-8c48-882630f2caa1
-translation-type: tm+mt
-source-git-commit: a87e078e1a8f49dc899ce9b160d789cb254338e2
+exl-id: c63e44e7-cc89-4fa0-8ba4-460d682df601
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 96%
 
 ---
-
 
 # ページのオーサリングのクイックガイド{#quick-guide-to-authoring-pages}
 
@@ -66,7 +65,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 >オーサリング作業をより簡単にできる多くのキーボードショートカットがあります。
 >
 >* [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
->* [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
+* [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
 
 
 ## ページの検索 {#finding-your-page}
@@ -107,8 +106,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
       * ページが選択されていることを示すために、カードにチェックマークが付けられます。
    >[!NOTE]
-   >
-   >選択モードを開始すると、**選択**&#x200B;アイコン（チェックマーク）が&#x200B;**選択を解除**&#x200B;アイコン（バツマーク）に変わります。
+   選択モードを開始すると、**選択**&#x200B;アイコン（チェックマーク）が&#x200B;**選択を解除**&#x200B;アイコン（バツマーク）に変わります。
 
 1. リスト表示：
 
@@ -168,8 +166,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
       * タップまたはクリックしてコンポーネントツールバーを開きます。必要に応じて、**コピー**&#x200B;アイコン、続いて&#x200B;**貼り付け**&#x200B;アイコンを使用します。
       >[!NOTE]
-      >
-      >同じページ、または別のページにコンポーネントを&#x200B;**貼り付ける**&#x200B;ことができます。切り取り／コピー操作を実行する前に開かれていたページに貼り付けるには、そのページを更新する必要があります。
+      同じページ、または別のページにコンポーネントを&#x200B;**貼り付ける**&#x200B;ことができます。切り取り／コピー操作を実行する前に開かれていたページに貼り付けるには、そのページを更新する必要があります。
 
    * コンポーネントを[削除します。](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)
 
@@ -186,8 +183,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    * 「**編集**」ドロップダウンセレクターを使用して、編集モードに戻ります（またはその他のモードを選択します）。
 
    >[!NOTE]
-   >
-   >コンテンツのリンクを使用して移動するには、[プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)を使用する必要があります。
+   コンテンツのリンクを使用して移動するには、[プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)を使用する必要があります。
 
 ## ページプロパティの編集  {#editing-the-page-properties}
 
@@ -259,8 +255,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
       * この操作の確認が求められます。
    >[!NOTE]
-   >
-   >削除は、クイックアクションでは使用できません。
+   削除は、クイックアクションでは使用できません。
 
 ## ページのロック（およびロック解除） {#locking-your-page-then-unlocking}
 
@@ -318,5 +313,3 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    * **違いを表示**
 
       * （2 つのバージョン間の）違いが強調表示されたページが開きます。
-
-
