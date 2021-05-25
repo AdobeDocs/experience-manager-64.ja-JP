@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 70be208d-185b-4b27-8e01-74e62f656344
-translation-type: tm+mt
-source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+exl-id: 358b70b8-8122-4eda-baa7-d9a58d6901f9
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 78%
 
 ---
-
 
 # 外観の変更 (HBS) {#alter-the-appearance-hbs}
 
@@ -34,7 +33,7 @@ ht-degree: 78%
 
 * [/apps/custom/components/comments/comment/comment.hbs](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)を開きます。
 
-   * コメント投稿のアバターを含むタグをコメントアウトします（～行21）。
+   * コメント投稿のアバターを含むタグをコメントアウトします（21行目前後）。
 
       ```
       <!--
@@ -44,7 +43,7 @@ ht-degree: 78%
 
 * [/apps/custom/components/comments/comments.hbs](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)を開きます。
 
-   * 次のコメントエントリ用のアバターを含むタグをコメントアウトします（～行44）。
+   * 次のコメントエントリのアバターを含むタグをコメントアウトします（44行目前後）。
 
       ```
       <!--
@@ -58,14 +57,14 @@ ht-degree: 78%
 
 アプリケーションを変更した後で、カスタムコンポーネントを再レプリケートする必要があります。
 
-その一つの方法は
+その一つの方法は、
 
 * メインメニューから
 
    * **[!UICONTROL ツール/操作/レプリケーション]**&#x200B;を選択します。
    *  `Activate Tree`
    * `Start Path`を設定：を`/apps/custom`に変更します。
-   * `Only Modified`のチェックを外す
+   * `Only Modified`をオフにします
    * `Activate`ボタンを選択
 
 ## 公開済みサンプルページでの変更されたコメントの表示 {#view-modified-comment-on-published-sample-page}
