@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: 2e408acb-3802-4837-8619-688cfc3abfa7
-translation-type: tm+mt
-source-git-commit: 14daff213297d2435765dd46039f346ce3868ac5
+exl-id: 11b791f6-b14f-4f50-a64a-27a9501adeb7
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 79%
 
 ---
-
 
 # ようこそコンソールのカスタマイズ（クラシック UI）{#customizing-the-welcome-console-classic-ui}
 
@@ -28,7 +27,7 @@ ht-degree: 79%
 
 ようこそコンソールには、AEM 内の各種コンソールおよび機能へのリンクのリストが表示されます。
 
-![cq_welcomesscreen](assets/cq_welcomescreen.png)
+![cq_welcomescreen](assets/cq_welcomescreen.png)
 
 表示されるリンクを設定できます。設定は、特定のユーザーまたはグループ向けに定義できます。実行されるアクションは、ターゲットタイプによって異なります（アクションが表示されるコンソールのセクションと相関関係があります）。
 
@@ -63,7 +62,7 @@ AEM のメインコンソールが一覧表示されます。
 
 次に例を示します。
 
-* **ツール**&#x200B;へのアクセスを制限するには、
+* **ツール**&#x200B;へのアクセスを制限するには、から読み取りアクセスを削除します。
 
    `/libs/wcm/core/content/misc`
 
@@ -164,7 +163,7 @@ AEM のメインコンソールが一覧表示されます。
 
 リンクを表すノードへの読み取りアクセス権を削除することによって、特定のユーザーまたはグループからリンクを非表示にできます。
 
-* リソース — 次へのアクセスを削除：
+* リソース — 次へのアクセスを削除します。
 
    `/libs/cq/core/content/welcome/resources/<link-target>`
 
@@ -178,11 +177,11 @@ AEM のメインコンソールが一覧表示されます。
 
 次に例を示します。
 
-* **レポート**&#x200B;へのリンクを削除するには、
+* **Reports**&#x200B;へのリンクを削除するには、から読み取りアクセス権を削除します。
 
    `/libs/cq/core/content/welcome/resources/reports`
 
-* **パッケージ**&#x200B;へのリンクを削除するには、
+* **パッケージ**&#x200B;へのリンクを削除するには、から読み取りアクセス権を削除します。
 
    `/libs/cq/core/content/welcome/features/packages`
 
@@ -190,9 +189,9 @@ AEM のメインコンソールが一覧表示されます。
 
 ### リンク選択の仕組み  {#link-selection-mechanism}
 
-`/libs/cq/core/components/welcome/welcome.jsp`では、[ConsoleUtil](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)を使用します。これは、次のプロパティを持つノードのクエリを実行します。
+`/libs/cq/core/components/welcome/welcome.jsp`では、[ConsoleUtil](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)を使用します。このConsoleUtilは、次のプロパティを持つノードに対してクエリを実行します。
 
-* `jcr:mixinTypes` に次の値を入力します。  `cq:Console`
+* `jcr:mixinTypes` 値は次のとおりです。  `cq:Console`
 
 >[!NOTE]
 >
@@ -210,7 +209,6 @@ AEM のメインコンソールが一覧表示されます。
 
 [リンク選択メカニズム](#link-selection-mechanism)を使用して、独自のカスタム項目をリンクのリストに追加できます。
 
-リストやリソースに追加`cq:Console`ミックスインを追加して、カスタムアイテムをウィジェットに追加します。 次のプロパティを定義することによって、追加をおこないます。
+`cq:Console` mixinをウィジェットまたはリソースに追加して、カスタム項目をリストに追加します。 次のプロパティを定義することによって、追加をおこないます。
 
-* `jcr:mixinTypes` に次の値を入力します。  `cq:Console`
-
+* `jcr:mixinTypes` 値は次のとおりです。  `cq:Console`
