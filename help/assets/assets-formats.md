@@ -1,19 +1,18 @@
 ---
 title: AEM Assets でサポートされているファイル形式
-description: AEM Assetsでサポートされるファイル形式とMIMEタイプのリストと、各形式でサポートされる機能。
+description: AEM Assetsでサポートされているファイル形式とMIMEタイプと、各形式でサポートされている機能のリストです。
 contentOwner: AG
-feature: Asset Management,Renditions
+feature: アセット管理，レンディション
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: ee25fe8f-36fb-42b3-9f90-0ea77bc02e2f
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1654'
+source-wordcount: '1651'
 ht-degree: 61%
 
 ---
 
-
-# AEM Assets{#assets-supported-formats}でサポートされるファイル形式
+# AEM Assets {#assets-supported-formats}
 
 AEM Assets は幅広いファイル形式をサポートしており、各機能は異なる MIME タイプに様々なサポートを提供しています。
 
@@ -29,61 +28,61 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 
 ## ラスターイメージ形式{#supported-raster-image-formats}
 
-アセット管理機能でサポートされるラスターイメージ形式は次のとおりです。
+アセット管理機能でサポートされるラスター画像形式は次のとおりです。
 
 | 形式 | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | インタラクティブ編集 | メタデータの書き戻し | インサイト |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| PNG | kid | kid | kid | kid | kid | kid | kid |
-| GIF | kid | kid | kid | kid | kid |  | kid |
-| TIFF | kid | kid | kid | kid |  | kid | kid |
-| JPEG | kid | kid | kid | kid | kid | kid | kid |
-| BMP | kid | kid | kid | kid | kid |  | kid |
-| PNM | kid | kid |  |  |  |  | kid |
-| PGM | kid | kid |  |  |  |  | kid |
-| PBM | kid | kid |  |  |  |  | kid |
-| PPM | kid | kid |  |  |  |  | kid |
-| PSD **‡** | kid | kid | kid | kid |  |  | kid |
-| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | kid | kid | kid | kid |  | kid |  |
-| PICT |  |  |  |  |  |  | kid |
-| PSB | kid | kid | kid | kid |  |  |  |
+| PNG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| GIF | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
+| TIFF | ✓ | ✓ | ✓ | ✓ |  | ✓ | ✓ |
+| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| BMP | ✓ | ✓ | ✓ | ✓ | ✓ |  | ✓ |
+| PNM | ✓ | ✓ |  |  |  |  | ✓ |
+| PGM | ✓ | ✓ |  |  |  |  | ✓ |
+| PBM | ✓ | ✓ |  |  |  |  | ✓ |
+| PPM | ✓ | ✓ |  |  |  |  | ✓ |
+| PSD **‡** | ✓ | ✓ | ✓ | ✓ |  |  | ✓ |
+| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ |  | ✓ |  |
+| PICT |  |  |  |  |  |  | ✓ |
+| PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
 
-**`** 結合された画像はPSDファイルから抽出されます。この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+**‡結** 合された画像はPSDファイルから抽出されます。この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
-Dynamic Mediaの機能でサポートされるラスターイメージ形式は次のとおりです。
+Dynamic Media機能でサポートされるラスターイメージ形式は次のとおりです。
 
-| 形式 | アップロード<br>（入力形式） | <br>画像<br>プリセット<br>を作成（出力形式） | プレビュー<br>動的<br>レンディション | <br>動的<br>レンディションを配信 | <br>動的<br>レンディションをダウンロード |
+| 形式 | <br>（入力形式）をアップロード | <br>画像<br>プリセット<br>（出力形式）を作成します。 | <br>動的<br>レンディションのプレビュー | <br>動的<br>レンディションを配信 | <br>動的<br>レンディションのダウンロード |
 |---|:---:|:---:|:---:|:---:|:---:|
-| PNG | kid | kid | kid | kid | kid |
-| GIF | kid | kid | kid | kid | kid |
-| TIFF | kid | kid | kid | kid | kid |
-| JPEG | kid | kid | kid | kid | kid |
-| BMP | kid |  |  |  |  |
+| PNG | ✓ | ✓ | ✓ | ✓ | ✓ |
+| GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
+| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
+| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
+| BMP | ✓ |  |  |  |  |
 | PNM |  |  |  |  |  |
 | PGM |  |  |  |  |  |
 | PBM |  |  |  |  |  |
 | PPM |  |  |  |  |  |
-| PSD **‡** | kid |  |  |  |  |
-| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | kid | kid | kid | kid | kid |
-| PICT | kid |  |  |  |  |
+| PSD **‡** | ✓ |  |  |  |  |
+| [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| PICT | ✓ |  |  |  |  |
 | PSB |  |  |  |  |  |
 
-**`** 結合された画像はPSDファイルから抽出されます。この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+**‡結** 合された画像はPSDファイルから抽出されます。この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
 上記の情報に加えて、以下を考慮してください。
 
-* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick](best-practices-for-imagemagick.md) を設定してください。サードパーティのツールを統合して追加機能を有効にする方法については、[コマンドラインベースのメディアハンドラー](media-handlers.md#command-line-based-media-handler)を参照してください。
+* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick](best-practices-for-imagemagick.md) を設定してください。サードパーティツールを統合して追加機能を有効にするには、[コマンドラインベースのメディアハンドラー](media-handlers.md#command-line-based-media-handler)を参照してください。
 
-* メタデータの書き戻しは、PSBファイル形式が`NComm`ハンドラに追加されたときに機能します。
+* PSBファイル形式が`NComm`ハンドラーに追加されると、メタデータの書き戻しが機能します。
 
 * EPS ファイルの動的レンディションのプレビューと生成に Dynamic Media を使用するには、[Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)を参照してください。
 
 * EPS ファイルの場合、メタデータの書き戻しは、PostScript Document Structuring Convention（PS-Adobe）バージョン 3.0 以降でサポートされています。
 
-## Dynamic Media{#unsupported-image-formats-dynamic-media}でサポートされていないラスターイメージ形式
+## Dynamic Media {#unsupported-image-formats-dynamic-media}でサポートされていないラスターイメージ形式
 
-次のリストは、Dynamic Mediaで&#x200B;*サポートされていない*&#x200B;ラスターイメージファイル形式のサブタイプを説明しています。
+次のリストは、Dynamic Mediaでサポートされていない&#x200B;**&#x200B;ラスターイメージファイル形式のサブタイプを示しています。
 
-[Dynamic Media](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)のサポートされていないファイル形式の検出も参照してください。
+[Dynamic Media](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)でサポートされていないファイル形式の検出も参照してください。
 
 * 100 MB を超える IDAT チャンクサイズを持つ PNG ファイル。
 * PSB ファイル。
@@ -96,58 +95,58 @@ Dynamic Mediaの機能でサポートされるラスターイメージ形式は�
 
 Adobe PDF Rasterizer ライブラリは、サイズが大きくコンテンツが多い Adobe Illustrator ファイルおよび PDF ファイルの高品質のサムネールとプレビューを生成します。次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
 
-* 処理にリソースを大量に消費する、コンテンツを集中的に使用するAI/PDFファイル。
+* リソースを大量に消費するコンテンツに負荷がかかるAI/PDFファイル。
 * AI／PDF ファイル。デフォルトではサムネールは生成されません。
 * Pantone Matching System（PMS）カラーを使用した AI ファイル.
 
-詳しくは、[PDFラスタライザの使用](aem-pdf-rasterizer.md)を参照してください。
+[PDF Rasterizerの使用](aem-pdf-rasterizer.md)を参照してください。
 
 ## 画像トランスコーディングライブラリ {#supported-image-transcoding-library}
 
-Adobeイメージングトランスコーディングライブラリは、エンコーディング、トランスコード、リサンプリング、サイズ変更など、主要な画像処理機能を実行する画像処理ソリューションです。
+Adobe画像トランスコーディングライブラリは、エンコーディング、トランスコーディング、再サンプリング、サイズ変更など、主要な画像処理機能を実行する画像処理ソリューションです。
 
-Imaging Transcoding Libraryは、JPG/JPEG、PNG（8ビットおよび16ビット）、GIF、BMP、TIFF/Compressed TIFF（32ビットのTIFFファイルおよびPTIFFファイルを除く）、ICOおよびICNのMIMEタイプをサポートしています。
+画像トランスコーディングライブラリは、JPG/JPEG、PNG（8ビットおよび16ビット）、GIF、BMP、TIFF/圧縮TIFF（32ビットのTIFFファイルおよびPTIFFファイルを除く）、ICOおよびICNのMIMEタイプをサポートします。
 
-[イメージングトランスコーディングライブラリ](imaging-transcoding-library.md)を参照してください。
+[画像トランスコーディングライブラリ](imaging-transcoding-library.md)を参照してください。
 
 ## Camera Raw{#supported-camera-raw}
 
-Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像を取り込むことができます。[サポート](camera-raw.md)Camera Rawを参照してください。
+Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像を取り込むことができます。[Camera Rawサポート](camera-raw.md)を参照してください。
 
 ## ドキュメント形式 {#supported-document-formats}
 
 アセット管理機能でサポートされるドキュメント形式は次のとおりです。
 
-| 形式 | ストレージ | メタデータ<br>管理 | フルテキスト<br>抽出 | メタデータ<br>抽出 | サムネール<br>の生成 | サブアセット<br>抽出 | メタデータ<br>の書き戻し |
+| 形式 | ストレージ | メタデータ<br>の管理 | フルテキスト<br>の抽出 | メタデータ<br>の抽出 | サムネール<br>の生成 | サブアセット<br>の抽出 | メタデータ<br>の書き戻し |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | kid | kid |  | kid | kid | kid | kid |
-| DOC | kid | kid | kid | kid |  |  |  |
-| DOCX | kid | kid | kid | kid |  |  |  |
-| ODT | kid | kid | kid |  |  |  |  |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | kid | kid | kid | kid | kid | kid | kid |
-| HTML | kid | kid | kid |  |  |  |  |
-| RTF | kid | kid | kid |  |  |  |  |
-| TXT | kid | kid | kid |  |  |  |  |
-| XLS | kid | kid | kid |  |  |  |  |
-| XLSX | kid | kid | kid | kid |  |  |  |
-| ODS | kid | kid | kid |  |  |  |  |
-| PPT | kid | kid | kid | kid | kid | kid |  |
-| PPTX | kid | kid | kid | kid | kid | kid |  |
-| ODP | kid | kid | kid |  |  |  |  |
-| [INDD](managing-image-presets.md#indesign-indd-file-format) | kid | kid |  | kid | kid | kid | kid |
-| PS | kid | kid |  |  |  |  |  |
-| QXP | kid | kid |  |  |  |  |  |
-| EPUB | kid | kid |  | kid | kid |  |  |
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |
+| DOC | ✓ | ✓ | ✓ | ✓ |  |  |  |
+| DOCX | ✓ | ✓ | ✓ | ✓ |  |  |  |
+| ODT | ✓ | ✓ | ✓ |  |  |  |  |
+| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| HTML | ✓ | ✓ | ✓ |  |  |  |  |
+| RTF | ✓ | ✓ | ✓ |  |  |  |  |
+| TXT | ✓ | ✓ | ✓ |  |  |  |  |
+| XLS | ✓ | ✓ | ✓ |  |  |  |  |
+| XLSX | ✓ | ✓ | ✓ | ✓ |  |  |  |
+| ODS | ✓ | ✓ | ✓ |  |  |  |  |
+| PPT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| ODP | ✓ | ✓ | ✓ |  |  |  |  |
+| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |
+| PS | ✓ | ✓ |  |  |  |  |  |
+| QXP | ✓ | ✓ |  |  |  |  |  |
+| EPUB | ✓ | ✓ |  | ✓ | ✓ |  |  |
 
-Dynamic Mediaの機能でサポートされるドキュメント形式は次のとおりです。
+Dynamic Media機能でサポートされるドキュメント形式は次のとおりです。
 
-| 形式 | アップロード<br>（入力形式） | <br>画像<br>プリセット<br>を作成（出力形式） | プレビュー<br>動的<br>レンディション | <br>動的<br>レンディションを配信 | <br>動的<br>レンディションをダウンロード |
+| 形式 | <br>（入力形式）をアップロード | <br>画像<br>プリセット<br>（出力形式）を作成します。 | <br>動的<br>レンディションのプレビュー | <br>動的<br>レンディションを配信 | <br>動的<br>レンディションのダウンロード |
 |---|:---:|:---:|:---:|:---:|:---:|
-| [愛](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | kid |  |  |  |  |
+| [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ |  |  |  |  |
 | DOC |  |  |  |  |  |
 | DOCX |  |  |  |  |  |
 | ODT |  |  |  |  |  |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | kid | kid | kid | kid | kid |
+| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | HTML |  |  |  |  |  |
 | RTF |  |  |  |  |  |
 | TXT |  |  |  |  |  |
@@ -157,7 +156,7 @@ Dynamic Mediaの機能でサポートされるドキュメント形式は次の�
 | PPT |  |  |  |  |  |
 | PPTX |  |  |  |  |  |
 | ODP |  |  |  |  |  |
-| [INDD](managing-image-presets.md#indesign-indd-file-format) | kid |  |  |  |  |
+| [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ |  |  |  |  |
 | PS |  |  |  |  |  |
 | QXP |  |  |  |  |  |
 | EPUB |  |  |  |  |  |
@@ -174,26 +173,26 @@ Dynamic Mediaの機能でサポートされるドキュメント形式は次の�
 
 | 形式 | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | FFMPEG トランスコーディング |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| AAC | kid | kid |  | - | * |
-| MIDI | kid | kid |  | - | * |
-| 3GP | kid | kid |  | - | * |
-| MP3 | kid | kid | kid | - | * |
-| MPG | kid | kid |  | - | * |
-| OGA | kid | kid |  | - | * |
-| OGG | kid | kid |  | - | * |
-| RA | kid | kid |  | - | * |
-| WAV | kid | kid |  | - | * |
-| WMA | kid | kid |  | - | * |
-| DVI | kid | kid |  | * | * |
-| FLV | kid | kid |  | * | * |
-| M4V | kid | kid |  | * | * |
-| MPEG | kid | kid |  | * | * |
-| OGV | kid | kid |  | * | * |
-| MOV | kid | kid |  | * | * |
-| WMV | kid | kid |  | * | * |
-| SWF | kid | kid |  |  |  |
+| AAC | ✓ | ✓ |  | - | * |
+| MIDI | ✓ | ✓ |  | - | * |
+| 3GP | ✓ | ✓ |  | - | * |
+| MP3 | ✓ | ✓ | ✓ | - | * |
+| MPG | ✓ | ✓ |  | - | * |
+| OGA | ✓ | ✓ |  | - | * |
+| OGG | ✓ | ✓ |  | - | * |
+| RA | ✓ | ✓ |  | - | * |
+| WAV | ✓ | ✓ |  | - | * |
+| WMA | ✓ | ✓ |  | - | * |
+| DVI | ✓ | ✓ |  | * | * |
+| FLV | ✓ | ✓ |  | * | * |
+| M4V | ✓ | ✓ |  | * | * |
+| MPEG | ✓ | ✓ |  | * | * |
+| OGV | ✓ | ✓ |  | * | * |
+| MOV | ✓ | ✓ |  | * | * |
+| WMV | ✓ | ✓ |  | * | * |
+| SWF | ✓ | ✓ |  |  |  |
 
-## Dynamic Mediaトランスコード用の入力ビデオ形式{#supported-input-video-formats-for-dynamic-media-transcoding}
+## Dynamic Mediaトランスコーディング{#supported-input-video-formats-for-dynamic-media-transcoding}の入力ビデオ形式
 
 | ビデオファイル拡張子 | コンテナ | 推奨されるビデオコーデック | サポートされないビデオコーデック |
 |---|---|---|---|
@@ -220,13 +219,13 @@ Dynamic Mediaの機能でサポートされるドキュメント形式は次の�
 
 | 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| TGZ | kid | kid | kid | kid | kid |  |
-| JAR | kid | kid | kid | kid | kid |  |
-| RAR | kid | kid | kid | kid | kid |  |
-| TAR | kid | kid | kid | kid | kid |  |
-| ZIP **†** | kid | kid | kid | kid | kid | kid |
+| TGZ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| JAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| RAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| TAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| ZIP **†** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-**†結合** した画像は、PSDファイルから抽出されます。この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。`Deflate64`アルゴリズムを使用して作成されたZIPアーカイブは、AEMではサポートが制限されています。 アーカイブ操作とアーカイブ解除操作はサポートされていません。 アップロード、参照、ダウンロードなどの操作はサポートされています。
+**†** 結合された画像はPSDファイルから抽出されます。この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。`Deflate64`アルゴリズムを使用して作成されたZIPアーカイブは、AEMでのサポートに制限があります。 アーカイブおよびアーカイブ解除操作はサポートされていません。 アップロード、参照、ダウンロードなどの操作はサポートされています。
 
 ## その他のサポートされる形式  {#other-supported-formats}
 
@@ -234,20 +233,20 @@ Dynamic Mediaの機能でサポートされるドキュメント形式は次の�
 
 | 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **#** | kid | kid | kid | kid | kid |  |
-| SVG | kid | kid | kid | kid | kid |  |
-| CSS | kid | kid | kid | kid | kid | kid |
-| VTT | kid | kid | kid | kid | kid | kid |
-| XML | kid | kid | kid | kid | kid | kid |
-| JavaScript（独自の配信ドメインで設定する場合） |  |  |  |  |  | kid |
+| **#** | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| SVG | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| VTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| XML | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| JavaScript（独自の配信ドメインで設定する場合） |  |  |  |  |  | ✓ |
 
-**#** その他の形式は、ストレージ、バージョン管理、ACL、ワークフロー、投稿、およびメタデータ管理のためにDAMでサポートされます。
+**# DAMで** は、ストレージ、バージョン管理、ACL、ワークフロー、公開、メタデータの管理に関して、その他の形式がサポートされます。
 
 ## サポートされる MIME タイプ {#supported-mime-types}
 
-デフォルトでは、AEMはファイル拡張子を使用してファイルの種類を検出します。 AEMは、ファイルの内容からそれを検出できます。 後者の場合は、AEM Webコンソールの[!UICONTROL Day CQ DAM Mime Type Service]で、「コンテンツ]からMIMEを検出」オプションを選択します。[!UICONTROL 
+デフォルトでは、AEMはファイル拡張子を使用してファイルタイプを検出します。 AEMは、ファイルの内容からこれを検出できます。 後者の場合は、AEM Webコンソールの「[!UICONTROL Day CQ DAM Mime Type Service]」で「[!UICONTROL Detect MIME from content]」オプションを選択します。
 
-サポートされるMIMEタイプのリストは、CRXDE Lite`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`で入手できます。
+サポートされるMIMEタイプのリストは、`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`のCRXDE Liteで利用できます。
 
 | ファイル拡張子 | MIME タイプ／インターネットメディアタイプ | デフォルトの jobParam 値 | 許可される jobParam 値 |
 |---|---|---|---|
@@ -309,6 +308,6 @@ Dynamic Mediaの機能でサポートされるドキュメント形式は次の�
 
 >[!MORELIKETHIS]
 >
->* [MIMEタイプベースのアセットを有効にする/Dynamic Mediaクラシックアップロードジョブパラメータのサポート](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
->* [アップロードジョブのパラメーターのサポートに対して、MIMEタイプベースの設定を行います](config-dynamic.md)。
+>* [MIMEタイプベースのAssets/Dynamic Media Classicアップロードジョブパラメーターサポートを有効にします](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
+>* [アップロードジョブパラメーターサポートのMIMEタイプベースを設定](config-dynamic.md)します。
 
