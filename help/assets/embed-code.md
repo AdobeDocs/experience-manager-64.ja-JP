@@ -2,7 +2,7 @@
 title: Web ページへの Dynamic Media ビデオビューアまたは画像ビューアの埋め込み
 seo-title: Web ページへの Dynamic Media ビデオビューアまたは画像ビューアの埋め込み
 description: Web ページに Dynamic Media ビデオまたは画像を埋め込む方法を説明します。
-seo-description: ダイナミックメディアビデオまたは画像をWebページに埋め込む方法を説明します。
+seo-description: WebページにDynamic Mediaビデオまたは画像を埋め込む方法を説明します。
 uuid: 6f786521-eb6c-4c80-8c15-9bf97b56818f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,9 +10,8 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 exl-id: bff564a8-e982-4e1a-a9b5-05e44e3e4d46
-feature: Components
+feature: コンポーネント
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
 source-wordcount: '395'
