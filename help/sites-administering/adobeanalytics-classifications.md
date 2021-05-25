@@ -1,6 +1,6 @@
 ---
 title: Adobe Classifications
-seo-title: Adobe分類
+seo-title: Adobeの分類
 description: Adobe Classifications について説明します。
 seo-description: Adobe Classifications について説明します。
 uuid: 57fb59f4-da90-4fe7-a5b1-c3bd51159a16
@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: 6787511a-2ce0-421a-bcfb-90d5f32ad35e
-translation-type: tm+mt
-source-git-commit: be46329cfe5c6fee28f616f2257e215df402e94d
+exl-id: 25e58c68-5c67-4894-9a54-1717d90d7831
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 72%
 
 ---
 
-
 # Adobe 分類{#adobe-classifications}
 
-Adobe分類は、分類データを[Adobe Analytics](/help/sites-administering/adobeanalytics.md)にスケジュール設定した方法でエクスポートします。 SAINT Exporter は、**com.adobe.cq.scheduled.exporter.Exporter** の実装です。
+Adobe分類では、分類データをスケジュールに従って[Adobe Analytics](/help/sites-administering/adobeanalytics.md)にエクスポートします。 SAINT Exporter は、**com.adobe.cq.scheduled.exporter.Exporter** の実装です。
 
 これを設定するには：
 
@@ -41,7 +40,7 @@ Adobe分類は、分類データを[Adobe Analytics](/help/sites-administering/a
    | 競合時に上書き | 「**はい**」を選択すると、データの競合が上書きされます。デフォルトでは、これは「**いいえ**」に設定されています。 |
    | 削除処理 | 「**はい**」に設定すると、書き出された後に処理したノードが削除されます。デフォルトは、「**False**」です。 |
    | ジョブの書き出しに関する説明 | Adobe Classifications ジョブの説明を入力します。 |
-   | 通知電子メール | Adobe分類通知の電子メールアドレスを入力します。 |
+   | 通知電子メール | 分類通知の電子メールアドレスをAdobeに入力します。 |
    | レポートスイート | 読み込みジョブを実行するレポートスイートを入力します。 |
    | データセット | 読み込みジョブを実行するデータセット関連 ID を入力します。 |
    | 変換サービス | ドロップダウンメニューから、変換サービスの実装を選択します。 |
@@ -52,27 +51,27 @@ Adobe分類は、分類データを[Adobe Analytics](/help/sites-administering/a
 
 ## ページサイズの変更  {#modifying-page-size}
 
-レコードは、ページで処理されます。デフォルトでは、「Adobeの分類」はページサイズが1000のページを作成します。
+レコードは、ページで処理されます。デフォルトでは、Adobe分類はページサイズが1,000のページを作成します。
 
-ページのサイズは、Adobe分類の定義ごとに最大25,000個に設定でき、Felixコンソールから変更できます。 エクスポート中、Adobe分類はソースノードをロックし、同時に変更が行われないようにします。 ノードは、書き出し後、エラー時またはセッション終了時にロックを解除されます。
+ページは、Adobe分類の定義ごと25000、最大サイズで設定でき、Felixコンソールから変更できます。 エクスポート時に、Adobe分類はソースノードをロックして、同時変更を防ぎます。 ノードは、書き出し後、エラー時またはセッション終了時にロックを解除されます。
 
 ページサイズを変更するには：
 
-1. **https://&lt;host>:&lt;port>/system/console/configMgr**&#x200B;にあるOSGIコンソールに移動し、**AdobeAEM分類エクスポーター**&#x200B;を選択します。
+1. **https://&lt;host>:&lt;port>/system/console/configMgr**&#x200B;のOSGIコンソールに移動し、「**Adobe AEM Classifications Exporter**」を選択します。
 
    ![aa-26](assets/aa-26.png)
 
 1. 「**書き出しページサイズ**」を必要に応じて更新し、**保存**&#x200B;をクリックします。
 
-## SAINTDefaultTransformer  {#saintdefaulttransformer}
+## SAINTDefaultTransformer {#saintdefaulttransformer}
 
 >[!NOTE]
 >
 >Adobe Classifications は、以前は SAINT Exporter と呼ばれていました。
 
-SAINT Exporter は、変換サービスを使用して、書き出しデータを特別な形式に変換できます。Adobe分類の場合、Transformerインターフェイスを実装するサブインターフェイス`SAINTTransformer<String[]>`が提供されています。 このインターフェイスは、SAINTAPIで使用される`String[]`にデータ型を制限し、そのようなサービスを検索して選択するためのマーカーインターフェイスを持つために使用されます。
+SAINT Exporter は、変換サービスを使用して、書き出しデータを特別な形式に変換できます。Adobe分類の場合、変換サービスインターフェイスを実装するサブインターフェイス`SAINTTransformer<String[]>`が提供されています。 このインターフェイスは、SAINTAPIで使用されるデータ型を`String[]`に制限し、選択用にこのようなサービスを見つけるためのマーカーインターフェイスを持つために使用します。
 
-デフォルトの実装SAINTDefaultTransformerでは、エクスポーターソースの子リソースは、プロパティ名をキーとし、プロパティ値を値として持つレコードとして扱われます。 **キー**&#x200B;列は、最初の列に自動的に追加され、その値がノード名になります。名前空間プロパティ（：を含む）は無視されます。
+デフォルトの実装SAINTDefaultTransformerでは、エクスポーターソースの子リソースは、プロパティ名をキー、プロパティ値を値として持つレコードとして扱われます。 **キー**&#x200B;列は、最初の列に自動的に追加され、その値がノード名になります。名前空間プロパティ（ ：を含む）は無視されます。
 
 *ノード構造：*
 
