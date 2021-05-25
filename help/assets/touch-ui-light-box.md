@@ -2,16 +2,15 @@
 title: Lightbox
 description: AEM Assets の Lightbox について学習します。
 contentOwner: AG
-feature: Developer Tools,Renditions
+feature: 開発者ツール，レンディション
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: acb61924-9b71-474a-833d-e441c0b83cc7
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '257'
 ht-degree: 98%
 
 ---
-
 
 # Lightbox {#lightbox}
 
@@ -42,4 +41,3 @@ Adobe Experience Manager（AEM）Assets のユーザーである場合、Lightbo
 1. 削除するアセットを選択します。
 1. ツールバーの「**[!UICONTROL 削除]**」をタップまたはクリックします。
 1. ダイアログで「**[!UICONTROL 削除]**」をタップまたはクリックして、削除アクションを確定します。アセットが Lightbox から削除されます。
-
