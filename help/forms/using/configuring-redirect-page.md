@@ -7,37 +7,35 @@ uuid: 5a5f912a-9696-4bc1-af3f-ead78f767e02
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: c51817aa-193a-4d4f-bd83-06518ddfb395
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: アダプティブフォーム
+exl-id: bbe10952-d6a7-4adc-bab9-388c1ee8e56a
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '264'
-ht-degree: 72%
+ht-degree: 79%
 
 ---
-
 
 # リダイレクトページの設定 {#configuring-redirect-page}
 
 フォーム作成者は、フォーム送信後にユーザーがリダイレクトされるページを各フォームに設定することができます。
 
-1. 編集モードで、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)/**アダプティブフォームコンテナ**&#x200B;をクリックし、![cmpr](assets/cmppr.png)をクリックします。
+1. 編集モードで、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)／**アダプティブフォームコンテナ**&#x200B;をクリックしてから、 ![cmppr](assets/cmppr.png) をクリックします。
 
 1. サイドバーで、「**送信**」をクリックします。
 
 1. 送信セクションの「ありがとうございました」ページで、リダイレクトページの URL を指定します。
 1. オプションとして、「送信アクション」で、「REST エンドポイントへの送信」の送信アクションについて、リダイレクトページに渡されるパラメーターを設定することができます。
 
-![リダイレクトページ](assets/thank-you-setting-1.png)
-**の設定図：** *リダイレクトページの設定*
+![リダイレクトページ設定](assets/thank-you-setting-1.png) 
+**図：** *リダイレクトページの設定*
 
 フォーム作成者は、「ありがとうございます」ページに渡される次のパラメーターを使用することができます。使用可能なすべての送信アクションに対して、`status`パラメーターと`owner`パラメーターが渡されます。 これら 2 つのパラメーターの他に、追加のパラメーターが次の送信アクションに渡されます。
 
-* **コンテンツ保存アクション** （非推奨）: `contentPath` — 送信されたデータが保存されるリポジトリ内のノードのパス — が渡されます。
+* **コンテンツ保存アクション** （非推奨） : `contentPath` — 送信されたデータが保存されるリポジトリ内のノードのパス。
 
-* **PDFの保存アクション** （非推奨）: `contentPath` — 送信されたデータと、リポジトリにPDFファイルが格納されているノードのパス — が渡されます。
+* **PDFの保存アクション** （非推奨） : `contentPath` — 送信されたデータのパスと、リポジトリ内にPDFファイルを保存しているノードのパスが渡されます。
 
 * **フォームワークフローへの送信**：フォームワークフローから返される出力パラメーターが渡されます。
 
 * **REST エンドポイントへの送信**：フィールド内にパラメーターマッピングのため追加されたパラメータが渡されます。`status` および `owner` パラメーターは、この送信アクションでは渡されません。詳しくは、[送信アクション「REST エンドポイントへの送信」の設定](/help/forms/using/configuring-submit-actions.md)を参照してください。 
-
