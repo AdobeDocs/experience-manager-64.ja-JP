@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6f775933-e989-4456-ad01-9bdf5dee3dad
-translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+exl-id: ae6b4caa-5bd0-4a09-9ccf-077405ea3868
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 97%
 
 ---
-
 
 # 監視フォルダーのバックアップ方法 {#backup-strategies-for-watched-folders}
 
@@ -47,7 +46,7 @@ ht-degree: 97%
 <table>
  <thead>
   <tr>
-   <th><p>Folder</p></th> 
+   <th><p>フォルダー</p></th> 
    <th><p>T1</p></th> 
    <th><p>T2</p></th> 
    <th><p>T3</p></th> 
@@ -156,7 +155,7 @@ ht-degree: 97%
 * 出力フォルダーおよび失敗フォルダーを頻繁に（例えば 1 時間ごとに）バックアップし、結果ファイルおよび失敗ファイルの損失を回避します。
 * 監視フォルダー以外のフォルダーに入力ファイルをバックアップします。これによって、出力フォルダーと失敗フォルダーのどちらにもファイルが見つからない場合でも、回復後にファイルを確実に利用できるようになります。ファイルの命名スキームを一貫したものにしてください。
 
-   例えば、`%F.`*拡張子*&#x200B;を付けて出力を保存する場合、出力ファイルは入力ファイルと同じ名前になります。 これにより、操作される入力ファイルおよび再送信が必要な入力ファイルを判別できます。結果フォルダーに file1_out ファイルしか確認できず、file2_out、file3_out および file4_out が見つからない場合、file2、file3 および file4 を再送信する必要があります。
+   例えば、`%F.`*拡張子*&#x200B;で出力を保存する場合、出力ファイルは入力ファイルと同じ名前になります。 これにより、操作される入力ファイルおよび再送信が必要な入力ファイルを判別できます。結果フォルダーに file1_out ファイルしか確認できず、file2_out、file3_out および file4_out が見つからない場合、file2、file3 および file4 を再送信する必要があります。
 
 * 使用可能な監視フォルダーのバックアップが、ジョブの処理時間より古い場合は、システムが新しい監視フォルダーを作成し、ファイルを自動的に入力フォルダーに配置できるようにする必要があります。
 * 使用可能な最新のバックアップが完全な最新版ではなく、バックアップ時間がファイルの処理時間より短く、監視フォルダーが復元されている場合は、ファイルは、次のいずれかのステージで操作されています。
