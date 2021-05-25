@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: cdce7a6a-2bbf-492f-bf91-5b8f07d02207
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: c87a35d5-3371-472d-af28-14d3412d6ebe
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 100%
 
 ---
-
 
 # タスクを開く  {#opening-a-task}
 
