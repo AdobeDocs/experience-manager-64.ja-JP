@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 8556d20a-99bd-4942-b7b8-2db69f64e67c
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 05c52802-adfd-4b5f-a273-d6a261a00659
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '673'
 ht-degree: 100%
 
 ---
-
 
 # ページへのワークフローの適用{#applying-workflows-to-pages}
 
@@ -42,6 +41,7 @@ ht-degree: 100%
 >
 >* [DAM アセットにワークフローを適用する方法](/help/assets/assets-workflow.md)
 >* [プロジェクトワークフローの操作](/help/sites-authoring/projects-with-workflows.md)
+
 >
 
 
@@ -108,7 +108,6 @@ ht-degree: 100%
    * **パッケージタイトル**
 
       * 識別を容易にするために、パッケージのタイトルを指定できます。
-
    >[!NOTE]
    >
    >ワークフローがマルチリソースサポートのために設定されており、複数のリソースが選択されている場合は、**ワークフローパッケージを維持**&#x200B;オプションが使用できます。[](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)
@@ -147,4 +146,3 @@ ht-degree: 100%
 ページの編集中にツールバーから「**ページ情報**」を選択できます。ドロップダウンメニューに「**ワークフローで開始**」オプションがあります。これによりダイアログが開き、必要なワークフローと必要な場合はタイトルを指定できます。
 
 ![wf-54](assets/wf-54.png)
-
