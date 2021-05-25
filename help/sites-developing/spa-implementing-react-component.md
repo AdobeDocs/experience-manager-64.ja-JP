@@ -1,83 +1,82 @@
 ---
-title: SPA用のReactコンポーネントの実装
-seo-title: SPA用のReactコンポーネントの実装
-description: この記事では、AEM SPAエディタでシンプルで既存のReactコンポーネントを適用する方法の例を紹介します。
-seo-description: この記事では、AEM SPAエディタでシンプルで既存のReactコンポーネントを適用する方法の例を紹介します。
+title: SPA への React コンポーネントの実装
+seo-title: SPA への React コンポーネントの実装
+description: この記事では、AEM SPA Editorで動作するように、シンプルな既存のReactコンポーネントを適応させる方法の例を示します。
+seo-description: この記事では、AEM SPA Editorで動作するように、シンプルな既存のReactコンポーネントを適応させる方法の例を示します。
 uuid: aebca2ea-a020-45e1-8043-f8c21154c660
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: spa
 content-type: reference
 discoiquuid: 86a981fe-25f3-451a-b262-8c497619e0ac
-translation-type: tm+mt
-source-git-commit: 8daa8943ccbca46c54f9dd7f1a25259a22a4b42f
+exl-id: da0e076b-afb7-4ebe-8e5e-48c00750e453
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '587'
-ht-degree: 16%
+ht-degree: 19%
 
 ---
 
-
-# SPA用のReactコンポーネントの実装{#implementing-a-react-component-for-spa}
+# SPA への React コンポーネントの実装{#implementing-a-react-component-for-spa}
 
 単一ページアプリケーション（SPA）により、Web サイトのユーザーに魅力的なエクスペリエンスを提供することができます。開発者は SPA フレームワークを使用してサイトを構築したいと考え、作成者はそうして構築されたサイトのコンテンツを AEM 内でシームレスに編集したいと考えています。
 
-SPA オーサリング機能には、AEM 内で SPA をサポートするための包括的なソリューションが用意されています。この記事では、AEM SPAエディタでシンプルで既存のReactコンポーネントを適用する方法の例を紹介します。
+SPA オーサリング機能には、AEM 内で SPA をサポートするための包括的なソリューションが用意されています。この記事では、AEM SPA Editorで動作するように、シンプルな既存のReactコンポーネントを適応させる方法の例を示します。
 
 >[!NOTE]
->シングルページアプリケーション(SPA)エディタ機能には、AEM 6.4 service pack 2以降が必要です。
+>シングルページアプリケーション(SPA)エディター機能には、AEM 6.4サービスパック2以降が必要です。
 >
->SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
+>SPA Editorは、SPAフレームワークベースのクライアントサイドレンダリング(ReactやAngularなど)が必要なプロジェクトで推奨されるソリューションです。
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
-AEMが必要とし、SPAとSPAエディタの間で確立するシンプルで軽量な契約のおかげで、AEMのSPAでの使用に合わせて既存のJavaScriptアプリケーションを使用し、適応させるのは簡単です。
+AEMとSPA Editorの間で確立され、SPAで必要とされるシンプルで軽量な契約のおかげで、既存のJavaScriptアプリケーションを使用し、AEMでSPAと共に使用するように適応させることは、簡単なことです。
 
-この記事では、Web.RetailジャーナルサンプルSPAの天気コンポーネントの例を説明します。
+この記事では、We.RetailジャーナルサンプルSPAの天気コンポーネントの例を示します。
 
-この記事を読む前に、AEM](/help/sites-developing/spa-getting-started-react.md)のSPAアプリケーションの[構造を理解しておく必要があります。
+この記事を読む前に、AEM](/help/sites-developing/spa-getting-started-react.md)用SPAアプリケーションの[構造を理解しておく必要があります。
 
 >[!CAUTION]
->このドキュメントでは、[We.Retailジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)は、デモ目的でのみ使用します。 どのプロジェクト作業にも使用しないでください。
+>このドキュメントでは、[We.Retail Journalアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)をデモ目的でのみ使用します。 どのプロジェクト作業にも使用しないでください。
 >
->AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
+>AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
 
 ## 気象コンポーネント{#the-weather-component}
 
-気象コンポーネントは、We.Retailジャーナルアプリの左上にあります。 定義した場所の現在の天気が表示され、気象データが動的に引き出されます。
+天気コンポーネントは、We.Retailジャーナルアプリの左上にあります。 定義した場所の現在の天気を表示し、気象データを動的に取り込みます。
 
-### Weatherウィジェットの使用{#using-the-weather-widget}
+### 気象ウィジェット{#using-the-weather-widget}の使用
 
 ![screen_shot_2018-06-08at143224](assets/screen_shot_2018-06-08at143224.png)
 
-SPA EditorでSPAのコンテンツをオーサリングする場合、気象コンポーネントは他のAEMコンポーネントと同様に表示され、ツールバーと共に完成し、編集可能です。
+SPAエディターでSPAのコンテンツをオーサリングする場合、天気コンポーネントは他のAEMコンポーネントと同様に表示され、ツールバーと共に完全に完成し、編集可能です。
 
 ![screen_shot_2018-06-08at143304](assets/screen_shot_2018-06-08at143304.png)
 
-他のAEMコンポーネントと同様に、ダイアログで都市を更新できます。
+市区町村は、他のAEMコンポーネントと同様に、ダイアログで更新できます。
 
 ![screen_shot_2018-06-08at143446](assets/screen_shot_2018-06-08at143446.png)
 
-この変更は維持され、コンポーネントは新しい気象データで自動的に更新されます。
+変更は保持され、コンポーネントは新しい天気データで自動的に更新されます。
 
 ![screen_shot_2018-06-08at143524](assets/screen_shot_2018-06-08at143524.png)
 
 ### 気象コンポーネントの実装{#weather-component-implementation}
 
-天気コンポーネントは、実際には、We.RetailジャーナルサンプルSPAアプリケーション内のコンポーネントとして機能するように設計された、[React Open Weather](https://www.npmjs.com/package/react-open-weather)と呼ばれる、一般に利用可能なReactコンポーネントに基づいています。
+天気コンポーネントは、実際には[React Open Weather](https://www.npmjs.com/package/react-open-weather)と呼ばれる、公開されているReactコンポーネントに基づいています。このコンポーネントは、We.Retail JournalサンプルSPAアプリケーション内でコンポーネントとして機能するように適応されています。
 
-以下は、React Open Weatherコンポーネントの使用に関するNPMドキュメントのスニペットです。
+React Open Weatherコンポーネントの使用に関するNPMドキュメントのスニペットを以下に示します。
 
 ![screen_shot_2018-06-08at144723](assets/screen_shot_2018-06-08at144723.png) ![screen_shot_2018-06-08at144215](assets/screen_shot_2018-06-08at144215.png)
 
-We.Retailジャーナルアプリケーションで、カスタマイズした天気コンポーネント(`Weather.js`)のコードを確認します。
+We.Retailジャーナルアプリケーションで、カスタマイズされた天気コンポーネント(`Weather.js`)のコードを確認します。
 
-* **16行目**:React Open Weatherウィジェットが必要に応じて読み込まれます。
-* **46行目**:この `MapTo` 関数は、このReactコンポーネントを対応するAEMコンポーネントに関連付け、SPAエディタで編集できるようにします。
+* **16行目**:必要に応じてReact Open Weatherウィジェットが読み込まれます。
+* **46行目**:関数 `MapTo` は、このReactコンポーネントをSPAエディターで編集できるように、対応するAEMコンポーネントに関連付けます。
 
-* **22～29行**:が定義 `EditConfig` され、市区町村が設定されているかどうかをチェックし、空の場合は値を定義します。
+* **22～29行目**:が定 `EditConfig` 義され、市区町村が設定されているかどうかを確認し、空の場合は値を定義します。
 
-* **31 ～ 44行**:Weatherコンポーネントは、 `Component` クラスを拡張し、React Open WeatherコンポーネントのNPM使用ドキュメントで定義されている必要なデータを提供し、コンポーネントをレンダリングします。
+* **31～44行目**:Weatherコンポーネントは、クラスを拡張 `Component` し、React Open WeatherコンポーネントのNPM使用に関するドキュメントで定義されている必要なデータを提供し、コンポーネントをレンダリングします。
 
 ```javascript
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -128,8 +127,8 @@ class Weather extends Component {
 MapTo('we-retail-journal/global/components/weather')(Weather, WeatherEditConfig);
 ```
 
-バックエンドコンポーネントは既に存在する必要がありますが、フロントエンド開発者は、Web.RetailジャーナルSPAのReact Open Weatherコンポーネントをコード化することなく利用できます。
+バックエンドコンポーネントは既に存在する必要がありますが、フロントエンド開発者は、コーディングをほとんどおこなわずにWe.RetailジャーナルSPAでReact Open Weatherコンポーネントを利用できます。
 
 ## 次のステップ {#next-step}
 
-AEM用SPAの開発について詳しくは、「[AEM用SPAの開発](/help/sites-developing/spa-architecture.md)」を参照してください。
+SPA for AEMの開発について詳しくは、[AEM向けSPAの開発](/help/sites-developing/spa-architecture.md)の記事を参照してください。
