@@ -2,7 +2,7 @@
 title: セキュリティチェックリスト
 seo-title: セキュリティチェックリスト
 description: AEM を設定およびデプロイする際の様々なセキュリティに関する考慮事項について説明します。
-feature: Security
+feature: セキュリティ
 seo-description: AEM を設定およびデプロイする際の様々なセキュリティに関する考慮事項について説明します。
 uuid: 8ecd0c35-249e-4f72-b7e9-97e72698b5c1
 contentOwner: msm-service
@@ -11,7 +11,6 @@ topic-tags: Security
 content-type: reference
 discoiquuid: a91e1264-8441-42f8-aa83-1d9c983d214a
 exl-id: 0be6d031-f8b8-458b-a910-ff05d2b1a155
-translation-type: tm+mt
 source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
 source-wordcount: '2844'
@@ -55,13 +54,13 @@ ht-degree: 86%
 
 以下のアカウントが該当します。
 
-* AEM `admin`アカウント
+* AEMの`admin`アカウント
 
-   AEM管理者アカウントのパスワードを変更した後は、CRXにアクセスする際に新しいパスワードを使用する必要があります。
+   AEM adminアカウントのパスワードを変更したら、CRXにアクセスする際に新しいパスワードを使用する必要があります。
 
 * OSGi Webコンソールの`admin`パスワード
 
-   この変更は、Webコンソールへのアクセスに使用する管理者アカウントにも適用されるので、アクセスする際に同じパスワードを使用する必要があります。
+   この変更は、Webコンソールへのアクセスに使用する管理者アカウントにも適用されるので、アクセス時に同じパスワードを使用する必要があります。
 
 これらの 2 つのアカウントは、個別の資格情報を使用する異なるアカウントです。デプロイメントをセキュリティで保護するには、それぞれに強力なパスワードを設定することが不可欠です。
 
@@ -86,14 +85,14 @@ Web コンソールのパスワードの変更について詳しくは、以下�
 
 #### OSGi Web コンソールの admin パスワードの変更  {#changing-the-osgi-web-console-admin-password}
 
-また、Webコンソールへのアクセスに使用するパスワードも変更する必要があります。これは、[Apache Felix OSGi管理コンソール](/help/sites-deploying/osgi-configuration-settings.md)の次のプロパティを設定することで行います。
+また、Webコンソールへのアクセスに使用するパスワードも変更する必要があります。これは、[Apache Felix OSGi Management Console](/help/sites-deploying/osgi-configuration-settings.md)の次のプロパティを設定することでおこなわれます。
 
-**ユーザー** 名と **パスワード**。Apache Felix Web Management Consoleにアクセスするための秘密鍵証明書です。\
+**ユー** ザー名と **パスワード**:Apache Felix Web Management Console自体にアクセスするための資格情報です。\
 インスタンスのセキュリティを確保するために、最初のインストール後にパスワードを変更する必要があります。
 
 次の手順を実行します。
 
-1. `<server>:<port>/system/console/configMgr`にあるWebコンソールに移動します。
+1. Webコンソール(`<server>:<port>/system/console/configMgr`)に移動します。
 1. ** Apache Felix OSGi Management Console**に移動し、**ユーザー名**&#x200B;と&#x200B;**パスワード**&#x200B;を変更します。
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
@@ -124,7 +123,7 @@ AEM の標準インストールでは、`admin` をデフォルトの[レプリ�
 
 セキュリティを考慮して、特定の使用事例に対応するように両方のユーザーを変更してください。その際の注意事項を次に示します。
 
-* **トランスポートユーザー**&#x200B;は管理者ユーザーにしないでください。代わりに、パブリッシュシステムの関連する部分へのアクセス権限のみを持つユーザーをパブリッシュシステムに設定し、そのユーザーの秘密鍵証明書をトランスポートに使用します。
+* **トランスポートユーザー**&#x200B;を管理者ユーザーにすることはできません。代わりに、パブリッシュシステムの関連する部分に対するアクセス権のみを持つユーザーをパブリッシュシステム上に設定し、そのユーザーの資格情報をトランスポートに使用します。
 
    バンドルされたレプリケーション受信者ユーザーから開始し、状況に合わせてそのユーザーのアクセス権限を設定できます。
 
@@ -174,13 +173,13 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
 * フィルター処理する HTTP メソッド
 * 空のリファラーヘッダーを使用できるかどうか
-* サーバ・ホストに加えて、サーバのリストも許可されます。
+* と、サーバホストに加えて許可されるサーバのリスト。
 
-   デフォルトでは、localhostとサーバーがバインドされる現在のホスト名のすべてのバリエーションがリスト内にあります。
+   デフォルトでは、localhostのバリエーションと、サーバーがバインドされている現在のホスト名がすべてリストに含まれます。
 
 リファラーフィルターサービスを設定するには：
 
-1. 次の場所にあるApache Felixコンソール（**設定**）を開きます。
+1. 次の場所にあるApache Felixコンソール(**Configurations**)を開きます。
 
    `https://<server>:<port_number>/system/console/configMgr`
 
@@ -298,15 +297,15 @@ DoS の悪用を防ぐ方法は次のとおりです。
 
    * 具体的には、ツリー構造が複数のレベルに及ぶ JSON レンダラーです。
 
-      例えば、リクエストは次のようになります。
+      例えば、次のリクエストがあります。
 
       `http://localhost:4502/.json`
 
-      リポジトリ全体をJSON表現でダンプできました。 これにより、サーバーで重大な問題が発生します。そのため、Sling では結果の最大数に制限を設定します。JSONレンダリングの深さを制限するには、次の値を設定します。
+      は、JSON表現でリポジトリ全体をダンプできます。 これにより、サーバーで重大な問題が発生します。そのため、Sling では結果の最大数に制限を設定します。JSONレンダリングの深さを制限するには、次の値を設定します。
 
-      **JSONの最大結果** (  `json.maximumresults`)
+      **JSONの最大結果** ( `json.maximumresults`)
 
-      [Apache SlingGETサーブレット](/help/sites-deploying/osgi-configuration-settings.md)の設定に含まれています。 この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `200` です。
+      ([Apache SlingGETサーブレット](/help/sites-deploying/osgi-configuration-settings.md)の設定)を参照してください。 この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `200` です。
 
    * 予防策として、デフォルトの他のレンダラー（HTML、プレーンテキスト、XML）を無効にします。この場合も [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md) を設定します。
    >[!CAUTION]
@@ -327,7 +326,7 @@ AEM は `FormChooserServlet` 用の標準インデックスを提供していな
 
 これを軽減するために、以下の手順に従ってください。
 
-1. Webコンソールに移動し、ブラウザで&#x200B;*https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*&#x200B;を指定します。
+1. ブラウザーで&#x200B;*https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*&#x200B;を参照して、Webコンソールに移動します。
 
 1. **Day CQ WCM Form Chooser Servlet** を検索します。
 1. エントリをクリックした後、次のウィンドウで「**Advanced Search Require**」を無効にします。
@@ -378,7 +377,7 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 推奨されませんが、既存のアプリケーションとの後方互換性確保のために以前の実装が必要な場合は、この機能を無効にすることもできます。これをおこなうには、次の手順を実行する必要があります。
 
-1. Webコンソールに移動し、**Apache Jackrabbit Oak SecurityProvider**&#x200B;のプロパティ&#x200B;**requiredServicePids**&#x200B;から** org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName**エントリを削除します。
+1. Webコンソールに移動し、**Apache Jackrabbit Oak SecurityProvider**&#x200B;の&#x200B;**requiredServicePids**&#x200B;プロパティから** org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName**エントリを削除します。
 
    また、OSGi 設定の **org.apache.jackrabbit.oak.security.internal.SecurityProviderRegistration** PID を探すことで、Oak Security Provider を見つけることもできます。
 
@@ -394,7 +393,7 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 クリックジャッキングを防ぐには、`SAMEORIGIN` に設定した HTTP ヘッダー `X-FRAME-OPTIONS` を指定するように Web サーバーを設定することをお勧めします。
 
-クリックジャックに関する詳細[は、OWASPサイト](https://www.owasp.org/index.php/Clickjacking)を参照してください。
+クリックジャッキングに関する詳細は、OWASPのサイト](https://www.owasp.org/index.php/Clickjacking)を参照してください。[
 
 ### 必要な場合は暗号鍵を適切にレプリケーションする {#make-sure-you-properly-replicate-encryption-keys-when-needed}
 
