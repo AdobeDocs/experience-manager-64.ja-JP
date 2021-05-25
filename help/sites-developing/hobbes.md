@@ -9,24 +9,23 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: components, testing
 discoiquuid: bc0130c3-826e-47dd-b18b-85e1a7bb9936
-translation-type: tm+mt
-source-git-commit: 088961dd5457f2136a5eea6f6811455105a8dd1f
+exl-id: 16b4088d-13b4-47b9-b89d-0c4a13676f12
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 76%
 
 ---
 
-
 # UI のテスト{#testing-your-ui}
 
-AEM には、AEM UI のテストを自動化するためのフレームワークが用意されています。このフレームワークを使用して、Web ブラウザーで直接 UI テストを記述して実行します。フレームワークは、テストを作成するためのJavaScript APIを提供します。
+AEM には、AEM UI のテストを自動化するためのフレームワークが用意されています。このフレームワークを使用して、Web ブラウザーで直接 UI テストを記述して実行します。このフレームワークは、テストを作成するためのJavaScript APIを提供します。
 
-AEMのテストフレームワークは、JavaScriptで記述されたテストライブラリであるHobbes.jsを使用します。 Hobbes.js フレームワークは、開発プロセスの一環として AEM のテスト用に開発されたものです。このフレームワークは現在、独自の AEM アプリケーションのテスト用に一般に利用できます。
+AEMテストフレームワークは、JavaScriptで記述されたテストライブラリであるHobbes.jsを使用します。 Hobbes.js フレームワークは、開発プロセスの一環として AEM のテスト用に開発されたものです。このフレームワークは現在、独自の AEM アプリケーションのテスト用に一般に利用できます。
 
 >[!NOTE]
 >
->APIの詳細については、Hobbes.js [ドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html)を参照してください。
+>APIの詳細については、Hobbes.jsの[ドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html)を参照してください。
 
 ## テストの構造 {#structure-of-tests}
 
@@ -34,9 +33,9 @@ AEMのテストフレームワークは、JavaScriptで記述されたテスト�
 
 |  |  |
 |---|---|
-| アクション | **アクション**&#x200B;は、リンクやボタンのクリックなど、Webページ上の特定のアクティビティです。 |
+| 動作 | **アクション**&#x200B;は、リンクやボタンのクリックなど、Webページ上の特定のアクティビティです。 |
 | テストケース | **テストケース**&#x200B;は、1つ以上の&#x200B;**アクション**&#x200B;で構成できる特定の状況です。 |
-| テストスイート | **テストスイート**&#x200B;は、関連する&#x200B;**テストケース**&#x200B;のグループで、これらを組み合わせて特定の使用例をテストします。 |
+| テストスイート | **テストスイート**&#x200B;は、関連する&#x200B;**テストケース**&#x200B;のグループで、一緒に特定の使用例をテストします。 |
 
 ## テストの実行 {#executing-tests}
 
@@ -92,13 +91,13 @@ AEMのテストフレームワークは、JavaScriptで記述されたテスト�
 
    ![](do-not-localize/chlimage_1-8.png)
 
-1. 各テストケースの結果を表示するには、そのテストケースのタイトルをタップまたはクリックします。**結果**&#x200B;パネルでテスト名をタップまたはクリックすると、すべての詳細が表示されます。
+1. 各テストケースの結果を表示するには、そのテストケースのタイトルをタップまたはクリックします。**結果**&#x200B;パネルでテストの名前をタップまたはクリックすると、すべての詳細が表示されます。
 
    ![chlimage_1-32](assets/chlimage_1-32.png)
 
 ## シンプルなテストスイートの作成と使用 {#creating-and-using-a-simple-test-suite}
 
-次の手順では、[Web.Retailコンテンツ](/help/sites-developing/we-retail.md)を使用してTest Suiteを作成および実行する手順を示しますが、テストを簡単に変更して別のWebページを使用することができます。
+以下の手順では、[We.Retailコンテンツ](/help/sites-developing/we-retail.md)を使用してテストスイートを作成および実行する手順を説明しますが、別のWebページを使用するようにテストを簡単に変更できます。
 
 独自のテストスイートの作成について詳しくは、[Hobbes.js API のドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html)を参照してください。
 
@@ -153,4 +152,3 @@ AEMのテストフレームワークは、JavaScriptで記述されたテスト�
    ```
 
 1. **テスト**&#x200B;コンソールに移動して、テストスイートを実行します。
-
