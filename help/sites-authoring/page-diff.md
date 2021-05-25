@@ -9,26 +9,25 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 5a771d8c-cc56-4979-aeab-b508755a2078
-translation-type: tm+mt
-source-git-commit: 6de5e6f12f123ca2ec45358a138becc410c89e4e
+exl-id: 1b1fa592-a145-4abe-a455-df24d551b937
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '691'
 ht-degree: 96%
 
 ---
 
-
 # ページの差分{#page-diff}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
-コンテンツの作成は反復的なプロセスです。効率的にオーサリングをおこなうには、反復するごとに何が変更されたかがわかるようにする必要があります。あるページバージョンを見てから別のページバージョンを見るのは非効率的であり、エラーが発生しやすくなります。作成者は、現在のページを他のバージョンと並べて簡単に比較したいと考えます。
+コンテンツ作成は反復的なプロセスです。効率的にオーサリングをおこなうには、反復するごとに何が変更されたかがわかるようにする必要があります。あるページバージョンを見てから別のページバージョンを見るのは非効率的であり、エラーが発生しやすくなります。作成者は、現在のページを他のバージョンと並べて簡単に比較したいと考えます。
 
 ページの差分表示を使用すると、2 つのページを並べて比較し、差分を強調表示できます。
 
 >[!CAUTION]
 >
->AEM 6.4.3より前のバージョンを実行している場合、この機能を使用するには、ノード`/content/versionhistory`に対して&#x200B;**Modify/Create/Delete**&#x200B;権限が必要です。
+>AEM 6.4.3より前のバージョンを実行している場合、この機能を使用するには、ノード`/content/versionhistory`に対する&#x200B;**変更/作成/削除**&#x200B;権限が必要です。
 >
 >この機能の技術的詳細については、[開発とページの差分](/help/sites-developing/pagediff.md#operation-details)を参照してください。
 
@@ -37,9 +36,9 @@ ht-degree: 96%
 並列比較による差分表示では、次のものを比較できます。
 
 * [バージョン](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page) - ページの以前のバージョンとその現在の状態
-* [](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page)ライブコピー - ライブコピーとそのブループリント
+* [ライブコピー](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page) - ライブコピーとそのブループリント
 * [ローンチ](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page) - ローンチとそのソース
-* [](/help/sites-administering/tc-manage.md#comparing-language-copies)言語コピー - （再）翻訳前と（再）翻訳後のページ
+* [言語コピー](/help/sites-administering/tc-manage.md#comparing-language-copies) - （再）翻訳前と（再）翻訳後のページ
 
 それらのコンテキスト内で差分の確認を開始する方法については、それぞれのトピックを参照してください。
 
@@ -111,4 +110,3 @@ ht-degree: 96%
 >[!NOTE]
 >
 >ページの差分操作の仕組みおよびページの差分に影響を与える可能性のある制限事項について詳しくは、この機能の[開発者向けドキュメント](/help/sites-developing/pagediff.md)を参照してください。
-
