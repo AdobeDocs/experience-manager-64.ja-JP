@@ -10,14 +10,13 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 feature: PDF Generator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 3eecff45-405f-482f-b0de-acf6557a7813
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 95%
 
 ---
-
 
 # PDF Generator を使用したファイルの変換{#converting-files-using-pdf-generator}
 
@@ -106,7 +105,7 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 
    ファイル変換時に「変換時間」に表示される値は、ここで指定する値よりも長くなる場合があります。「変換時間」の値には、スレッドまたはプロセスの待機時間、ファイルの変換時間、およびフォールバックコンバーターにかかる時間（該当する場合）なども含まれています。時刻. 「タイムアウト時間の指定」の値は、ファイルの変換にかかる正確な時間です。
 
-1. （オプション）「カスタムのプリフライトプロファイルを指定&#x200B;**」オプションで、「参照」をクリックし、カスタムのプリフライトプロファイル](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html)を選択します。**[プリフライトプロファイルは、ドキュメントをPDFアーカイブ(PDF/A)形式に変換する場合にのみ使用します。
+1. （オプション）「**カスタムプリフライトプロファイルを指定**」オプションで、「参照」をクリックし、[カスタムプリフライトプロファイル](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html)を選択します。 プリフライトプロファイルは、ドキュメントをPDFアーカイブ(PDF/A)形式に変換する場合にのみ使用されます。
 1. 「書き出し」をクリックします。変換が終了すると、書き出されたファイルへのリンクが表示されます。
 1. 変換されたファイルを表示するには、そのリンクをクリックします。
 
@@ -126,4 +125,3 @@ PDF Generator では、PDF ファイルのサイズを低減することがで�
    * 既存の設定ファイルを使用するには、「設定ファイルをアップロード」を選択し、「参照」をクリックしてファイルの場所に移動します。
 
 1. 「作成」をクリックします。
-
