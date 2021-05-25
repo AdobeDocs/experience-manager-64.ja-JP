@@ -1,6 +1,6 @@
 ---
-title: 起動回数の概要
-seo-title: 起動回数の概要
+title: ローンチの概要
+seo-title: ローンチの概要
 description: ローンチを使用すると、今後のリリース用にコンテンツを効率的に開発できます。現在のページを維持しながら、今後のパブリケーションに合わせて変更を加えることができます。
 seo-description: ローンチを使用すると、今後のリリース用にコンテンツを効率的に開発できます。現在のページを維持しながら、今後のパブリケーションに合わせて変更を加えることができます。
 uuid: ff6a2898-7a77-4315-bb1f-efa9caa5f3b2
@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: a7ec190d-056e-4fc9-8f2d-f4164273674d
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: a6dca5d7-21b5-4a7f-9e83-b0f5ea77bc88
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 99%
 
 ---
 
-
-# 起動の概要{#launches}
+# ローンチの概要{#launches}
 
 ローンチを使用すると、今後のリリース用にコンテンツを効率的に開発できます。
 
@@ -74,9 +73,9 @@ ht-degree: 99%
       * すべてのページまたは変更したページのみを昇格させます。
    * 自動 - これには次の要素が関与します。
 
-      * 「**ローンチ****日**（**ライブ日付**）」フィールド：ローンチを作成または編集するときに設定できます。
+      * 「**ローンチ日**（**ライブ日付**）」**フィールド**：ローンチを作成または編集するときに設定できます。
       * 「**実稼動準備完了**」フラグ：ローンチを編集するときにのみ設定できます。
-      * 「**実稼動準備完了**」フラグが設定されると、ローンチは指定の「**ローンチ****日**（**ライブ日付**）」に実稼動ページに自動的に昇格されます。昇格後、実稼働ページは自動的に公開されます。
+      * 「**実稼動準備完了**」フラグが設定されると、ローンチは指定の「**ローンチ** **日**（**ライブ日付**）」に実稼動ページに自動的に昇格されます。昇格後、実稼働ページは自動的に公開されます。
 
           日付が設定されていない場合、フラグの効果はありません。
 
@@ -113,7 +112,7 @@ ht-degree: 99%
 
 * または、[ に直接アクセスします。http://localhost:4502/libs/launches/content/launches.html](http://localhost:4502/libs/launches/content/launches.html)
 
-## 「参照」のローンチ（サイトコンソール）{#launches-in-references-sites-console}
+## 「参照」のローンチ（サイトコンソール） {#launches-in-references-sites-console}
 
 1. **サイト**&#x200B;コンソールで、ローンチのソースに移動します。
 1. **参照**&#x200B;レールを開き、ソースページを選択します。
@@ -124,4 +123,3 @@ ht-degree: 99%
 1. 適切なローンチをタップまたはクリックすると、使用可能なアクションのリストが表示されます。
 
    ![chlimage_1-237](assets/chlimage_1-237.png)
-
