@@ -10,33 +10,32 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: a7678273-81f6-4089-ac73-2458d940e374
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '796'
 ht-degree: 56%
 
 ---
-
 
 # コンテキスト内モデレート {#in-context-moderation}
 
 AEM Communities では、管理者と信頼されているコミュニティメンバーが、コミュニティコンテンツをそのコンテンツが投稿された公開済みのページ上で直接モデレートできます。
 
-[モデレートコンソール](moderation.md)を使用する場合、コンテンツに表示される情報には、コンテキスト内のモデレート時に使用できる追加のモデレートアクションにアクセスできる、公開済みページへのリンクが含まれます。
+[モデレートコンソール](moderation.md)を使用する場合、コンテンツに表示される情報には、コンテキスト内でモデレートする際に使用できる追加のモデレートアクションにアクセスできる、公開済みページへのリンクが含まれます。
 
 ## モデレートアクション {#moderation-actions}
 
-[モデレート操作](moderate-ugc.md#moderation-actions)の説明については、モデレートの概要を参照してください。
+[モデレートアクション](moderate-ugc.md#moderation-actions)の説明については、モデレートの概要を参照してください。
 
 ## モデレート UI {#moderation-ui}
 
-パブリッシュインスタンスで使用できるモデレーター用の UI は、ユーザー生成コンテンツ（UGC）を投稿および管理するためのダイアログ内にあります。UIの要素は、サイトの訪問者のステータス（該当するかどうか）によって決まります。
+パブリッシュインスタンスで使用できるモデレーター用の UI は、ユーザー生成コンテンツ（UGC）を投稿および管理するためのダイアログ内にあります。UIの要素は、サイト訪問者のステータス(訪問者が
 
 1. コンテンツを投稿したメンバー
-1. 信頼できるメンバーのモデレーター
+1. 信頼できるメンバーモデレーター
 1. 管理者
-1. サインインしたが、管理者、モデレーター、コンテンツの作成者はいません
+1. サインイン済みですが、管理者、モデレーター、コンテンツの作成者ではありません
 1. サインインしていません
 
 ## 例 {#example}
@@ -53,53 +52,53 @@ Aaron McDonald（aaron.mcdonald@mailinator.com）は、サイト作成時に com
 
 * Rebekah Larsen（rebekah.larsen@trashymail.com）としてログインします。
 
-   * フォーラムの選択
+   * フォーラムを選択
    * 新しい投稿の選択
-   * 件名の入力
+   * 件名を入力します。
 
-      ハミングバードフィーダーで花蜜を変更するタイミング
+      ハミングバードフィーダの蜜を変更するタイミング
 
-   * 本文を入力
+   * 本文を入力します。
 
-      私は毎年ハチドリの餌をつるしている時はあまり成功していません Seems they come a day or two then that is it.I change it once a week is that too long? Do I need to change it sooner?
-   * 投稿の選択
-   * ログアウトの選択
+      毎年ハチドリの餌をつるしている時は、あまり成功していません。 Seems they come a day or two then that is it.I change it once a week is that too long? Do I need to change it sooner?
+   * 投稿を選択
+   * 「ログアウト」を選択します。
 
 * Aaron McDonald（aaron.mcdonald@mailinator.com）としてログインします。
 
-   * フォーラムの選択
-   * 「Hummingbird」のトピックで、「詳細情報を読む」を選択します。
-   * 「返信を投稿」にコメントを入力します
+   * フォーラムを選択
+   * 「Hummingbird Topic」で、「Read More」を選択します。
+   * 「返信を投稿」にコメントを入力します。
 
-      私は週に1回、彼らを5月から10月まで受け取る。
+      私は週に1回私のを変更し、5月から10月までそれらを得る。
 
    * 返信の選択
-   * ログアウトの選択
+   * 「ログアウト」を選択します。
 
 * Andrew Schaeffer（andrew.schaeffer@trashymail.com）としてログインします。
 
-   * フォーラムの選択
-   * 「Hummingbird」のトピックで、「詳細情報を読む」を選択します。
-   * 「返信を投稿」にコメントを入力します
+   * フォーラムを選択
+   * 「Hummingbird Topic」で、「Read More」を選択します。
+   * 「返信を投稿」にコメントを入力します。
 
-      私は蜜と飼料を販売しています。https://my.viral.url/にアクセスしてください。
+      私は蜜と飼料を販売しています — https://my.viral.url/にアクセスしてください
 
    * 返信の選択
-   * ログアウトの選択
+   * 「ログアウト」を選択します。
 
 ### 匿名サイト訪問者(#5) {#anonymous-site-visitor}
 
-以下は、サインインしていないサイト訪問者が閲覧したフォーラムの表示です(5)。
+以下は、(5)にサインインしていないサイト訪問者が閲覧したフォーラムのビューです。
 
 匿名のサイト訪問者にできることは、フォーラムを表示することだけです。コンテンツを投稿することも、モデレートアクションを実行することもできません。
 
 ![chlimage_1](assets/chlimage_1.png)
 
-### 新しいメンバ(#4) {#new-member}
+### 新しいメンバー(#4) {#new-member}
 
-作成者がログインしたら、管理者としてログインし、[メンバーコンソール](members.md)を使用してコミュニティの関与メンバーグループの新しいメンバーとしてBoyd Larsen(boyd.larsen@dodgit.com)を追加し、「ログアウト」をクリックします。
+オーサー環境で、管理者としてログインし、[メンバーコンソール](members.md)を使用してBoyd Larsen(boyd.larsen@dodgit.com)をcommunity-engage-membersグループの新しいメンバーとして追加し、ログアウトします。
 
-公開時に、Boyd Larsenとしてログインし、`Forum`を選択し、次にHummingbird投稿の`Read more`を選択してスレッドにアクセスします。
+公開時に、Boyd Larsenとしてログインし、`Forum`を選択してスレッドにアクセスし、次にHummingbirdの投稿用に`Read more`を選択します。
 
 注意
 
@@ -113,14 +112,14 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ![chlimage_1-1](assets/chlimage_1-1.png)
 
-### 管理者(#3) {#administrator}
+### 管理者（#3） {#administrator}
 
-管理者（管理者）としてログインし、「フォーラム」を選択してスレッドにアクセスし、投稿に関して「詳細を表示」を選択します。
+管理者(admin)としてログインし、「フォーラム」を選択してスレッドにアクセスし、投稿の「詳細を表示」を選択します。
 
 注意
 
-* 管理者は、フラグ付け、削除、編集、拒否、切り取り、閉じる、ピン、機能を実行できます
-* 管理者は「管理」を選択してモデレートコンソールにアクセスできます
+* 管理者は、フラグ設定、削除、編集、拒否、切り取り、閉じる、ピン、機能を実行できます
+* 管理者は、「管理」を選択してモデレートコンソールにアクセスできます
 
 ![communityadmin-forum](assets/communityadmin-forum.png)
 
@@ -134,9 +133,9 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ![moderationconsole-publish](assets/moderationconsole-publish.png)
 
-### コミュニティモデレータ(#2) {#community-moderator}
+### コミュニティモデレーター(#2) {#community-moderator}
 
-コミュニティのモデレーターであるAaron McDonald(aaron.mcdonal@mailinator.com)としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbird投稿の詳細情報を確認します。
+コミュニティモデレーターのAaron McDonald(aaron.mcdonal@mailinator.com)としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbirdの投稿の「詳細を表示」を選択します。
 
 注意
 
@@ -159,7 +158,7 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ### コンテンツ作成者(#1) {#content-author}
 
-Rebekah Larsen(rebekah.larsen@mailinator.com)としてログインします。スレッドを開始し、「フォーラム」を選択してスレッドにアクセスし、Hummingbird投稿の詳細情報を参照してください。
+スレッドを開始したコミュニティメンバーであるRebekah Larsen(rebekah.larsen@mailinator.com)としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbirdの投稿の「続きを読む」を選択します。
 
 注意
 
@@ -168,4 +167,3 @@ Rebekah Larsen(rebekah.larsen@mailinator.com)としてログインします。�
 * Rebekah はモデレートコンソールにアクセスできません。
 
 ![chlimage_1-3](assets/chlimage_1-3.png)
-
