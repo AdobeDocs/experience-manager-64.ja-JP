@@ -10,15 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 discoiquuid: ba90b25f-f672-42c5-8b06-07bb32cc51de
 targetaudience: target-audience upgrader
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: アップグレード
+exl-id: e6092e80-3a39-4fde-8a94-084eee5fa8a9
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 93%
 
 ---
-
 
 # アップグレード手順{#upgrade-procedure}
 
@@ -64,7 +63,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 
 ### 失敗した場合（ロールバック） {#if-unsuccessful-rollback}
 
-![ロールバック](assets/rollback.jpg)
+![rollback](assets/rollback.jpg)
 
 1. コールドスタンバイインスタンスを新しいプライマリとして起動します。
 1. コールドスタンバイからオーサー環境を再構築します。
@@ -75,17 +74,17 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 
 この節で想定されるトポロジは、2 つ以上の MongoMK データベースを使用する 2 つ以上の AEM オーサーインスタンスを含む MongoMK オーサークラスターで構成されています。すべてのオーサーインスタンスは 1 つのデータストアを共有します。以下の手順は、S3 データストアとファイルデータストアの両方に適用できます。オーサーサーバーから TarMK パブリッシュファームへのレプリケーションが発生します。
 
-![モンゴトポロジー](assets/mongo-topology.jpg)
+![mongoトポロジ](assets/mongo-topology.jpg)
 
 ### アップグレードの準備 {#preparation}
 
-![mongo_upgrade_prep](assets/mongo-upgrade_prep.jpg)
+![mongo-upgrade_prep](assets/mongo-upgrade_prep.jpg)
 
 1. コンテンツのオーサリングを停止します。
 1. バックアップ用のデータストアのクローンを作成します。
 1. 1 つの AEM オーサーインスタンス（プライマリオーサー）以外をすべて停止します。
-1. 1つを除くすべてのMongoDBノードをレプリカセットから削除します。プライマリMongoインスタンスです
-1. プライマリ作成者の`DocumentNodeStoreService.cfg`ファイルを更新し、単一のメンバレプリカセットを反映する
+1. 1つのMongoDBノード以外をレプリカセット（プライマリMongoインスタンス）からすべて削除します。
+1. 単一のメンバーレプリカセットを反映するように、プライマリオーサー上の`DocumentNodeStoreService.cfg`ファイルを更新します。
 1. プライマリオーサーを再起動して、正常に再起動することを確認します。
 1. プライマリオーサーのレプリケーションエージェントを無効にします。
 1. プライマリオーサーインスタンスで[アップグレード前のメンテナンスタスク](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)を実行します。
@@ -93,7 +92,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 
 ### アップグレードの実行 {#execution}
 
-![モンゴ処刑](assets/mongo-execution.jpg)
+![mongo-execution](assets/mongo-execution.jpg)
 
 1. プライマリオーサーで[インプレースアップグレード](/help/sites-deploying/in-place-upgrade.md)を実行します。
 1. *必要に応じて*、Dispatcher モジュールまたは Web モジュールを更新します。
@@ -101,7 +100,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 
 ### 成功した場合 {#successful-1}
 
-![モンゴ秒](assets/mongo-secondaries.jpg)
+![モンゴセカンダリ](assets/mongo-secondaries.jpg)
 
 1. アップグレードされた Mongo インスタンスに接続する新しい 6.3 オーサーインスタンスを作成します。
 1. クラスターから削除された MongoDB ノードを再構築します。
@@ -111,7 +110,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 
 ### 失敗した場合（ロールバック） {#if-unsuccessful}
 
-![1回のロールバック](assets/mongo-rollback.jpg)
+![mongo-rollback](assets/mongo-rollback.jpg)
 
 1. クローン作成されたデータストアに接続するために、セカンダリオーサーインスタンスを再設定します。
 1. アップグレードされたオーサープライマリインスタンスをシャットダウンします。
