@@ -8,14 +8,13 @@ topic-tags: publish
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6ebb6420-68b6-4abc-b298-c252db038416
-translation-type: tm+mt
-source-git-commit: 79dcf6816e1156604c0c9279b727ea436ad1826a
+exl-id: c73fd1c5-6f3f-4c62-a8d6-fcd22f02c0ca
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 84%
 
 ---
-
 
 # ドラフトと送信に使用するストレージサービスの設定  {#configuring-storage-services-for-drafts-and-submissions}
 
@@ -35,13 +34,13 @@ AEM Forms ポータルのデータサービスおよびメタデータサービ�
 
 >[!NOTE]
 >
->「フォームポータル」送信アクションを使用したり、アダプティブフォームでフォームポータルにデータを保存するオプションを有効にしたりすると、フォームデータは AEM リポジトリに保存されます。実稼働環境では、ドラフトまたは送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。ドラフトと送信済みのフォームデータを保存するには、ドラフトと送信コンポーネントをエンタープライズデータベースなどの安全なストレージと統合する必要があります。
+>「フォームポータル」送信アクションを使用したり、アダプティブフォームでフォームポータルにデータを保存するオプションを有効にしたりすると、フォームデータは AEM リポジトリに保存されます。実稼働環境では、ドラフトまたは送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。代わりに、ドラフトと送信コンポーネントをエンタープライズデータベースなどの安全なストレージに統合して、ドラフトと送信済みフォームデータを保存する必要があります。
 >
 >詳しくは、「[ドラフト&amp;送信コンポーネントとデータベースの統合](/help/forms/using/integrate-draft-submission-database.md)」を参照してください。
 
 ## フォームポータルのドラフトサービスおよび送信サービスの設定  {#configuring-forms-portal-drafts-and-submissions-services}
 
-AEM Webコンソールの設定(`https://[*host*]:[*port*]/system/console/configMgr`)で、「**Formsポータルのドラフトと送信の設定**」をクリックして編集モードで開きます。
+AEM Webコンソールの設定(`https://[*host*]:[*port*]/system/console/configMgr`)で、「**Forms Portal Draft and Submission Configuration**」をクリックし、編集モードで開きます。
 
 以下の説明に従い、要件に基づいてプロパティの値を指定します。
 
@@ -105,9 +104,8 @@ AEM Webコンソールの設定(`https://[*host*]:[*port*]/system/console/config
 
 上記に示した設定のほか、設定したリモート処理用インスタンスの情報を入力します。
 
-AEM Webコンソールの設定(`https://[*host*]:[*port*]/system/console/configMgr`)で、**AEM DS Settings Service**&#x200B;をクリックして編集モードで開きます。 AEM DS Settings Service ダイアログで、処理サーバーの URL、ユーザー名、パスワードを入力します。
+AEM Web Console Configuration(`https://[*host*]:[*port*]/system/console/configMgr`)で、「**AEM DS Settings Service**」をクリックして編集モードで開きます。 AEM DS Settings Service ダイアログで、処理サーバーの URL、ユーザー名、パスワードを入力します。
 
 >[!NOTE]
 >
->ユーザーデータをデータベースに格納するためのサンプル実装も提供されます。ユーザーデータを外部データベースに格納するデータサービスとメタデータサービスを設定する方法について詳しくは、[ドラフト&amp;送信コンポーネントとデータベース](/help/forms/using/integrate-draft-submission-database.md)の統合のサンプルを参照してください。
-
+>ユーザーデータをデータベースに格納するためのサンプル実装も提供されます。ユーザーデータを外部データベースに格納するデータサービスとメタデータサービスを設定する方法については、「[ドラフト&amp;送信コンポーネントとデータベース](/help/forms/using/integrate-draft-submission-database.md)の統合例」を参照してください。
