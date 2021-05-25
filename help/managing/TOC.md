@@ -7,7 +7,6 @@ breadcrumb-title: 管理ガイド
 user-guide-description: AEM プロジェクトの管理方法について学びます。
 feature: デプロイ
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
 workflow-type: tm+mt
 source-wordcount: '73'
@@ -18,7 +17,7 @@ ht-degree: 93%
 
 # AEM 6.4 管理ユーザーガイド {#managing}
 
-+ [ユーザガイドの管理](home.md)
++ [管理ユーザーガイド](home.md)
 + 管理 - ベストプラクティスチェックリスト {#managing-best-practices-checklist}
    + [プロジェクトの管理 - ベストプラクティスチェックリスト](best-practices.md)
    + [チェックリスト](best-practices-checklist.md)
