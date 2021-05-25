@@ -1,26 +1,25 @@
 ---
-title: AEM AssetsとAdobe InDesign Serverを統合
+title: AEM AssetsとAdobe InDesign Serverの統合
 description: AEM Assets と InDesign Server を統合する方法を学習します。
 contentOwner: AG
-feature: Publishing
+feature: 公開
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
+exl-id: d80562f7-071c-460a-9c68-65f48d36fbd9
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1703'
 ht-degree: 60%
 
 ---
 
-
-# AEM AssetsをAdobe InDesign Serverと統合{#integrating-aem-assets-with-indesign-server}
+# AEM AssetsとAdobe InDesign Server{#integrating-aem-assets-with-indesign-server}の統合
 
 Adobe Experience Manager (AEM) Assets では、次のものが使用されます。
 
 * プロキシ：特定の処理タスクのロードを分配するために使用します。プロキシとは、プロキシワーカーと通信して特定のタスクを実行し、他の AEM インスタンスと通信して結果を送信する AEM インスタンスです。
 * プロキシワーカー：特定のタスクを定義し管理するために使用します。
 
-これらは様々なタスクをカバーできます。例えば、Adobe InDesign Serverを使用したファイルの処理などです。
+これらは、様々な作業をカバーできます。例えば、Adobe InDesign Serverを使用してファイルを処理します。
 
 Adobe InDesign で作成したファイルを AEM Assets に完全にアップロードするために、プロキシが使用されます。このプロキシはプロキシワーカーを使用して Adobe InDesign Server と通信します。Adobe InDesign Server ではメタデータを抽出し、AEM Assets 用の様々なレンディションを生成するための[スクリプト](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting)が実行されます。プロキシワーカーは、クラウド構成での InDesign Server と AEM インスタンスとの双方向通信を実現します。
 
@@ -34,7 +33,7 @@ Adobe InDesign で作成したファイルを AEM Assets に完全にアップ�
    >
 * [InDesign Server](https://www.adobe.com/jp/products/indesignserver.html)\
    >  このエンジンを使用すれば、InDesign での作成物に基づいてドキュメントをプログラムによって自動生成できます。このエンジンは、[ExtendScript](https://www.adobe.com/jp/devnet/scripting.html) エンジンへのインターフェイスを提供するサービスとして動作します。\
-   >  スクリプトはExtendScriptで記述され、javascriptに似ています。 Indesign のスクリプトについて詳しくは、[https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) を参照してください。
+   >  スクリプトは、JavaScriptに似たExtendScriptで記述されます。 Indesign のスクリプトについて詳しくは、[https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) を参照してください。
 
 >
 
@@ -42,7 +41,7 @@ Adobe InDesign で作成したファイルを AEM Assets に完全にアップ�
 
 ## 抽出の仕組み {#how-the-extraction-works}
 
-InDesign ServerをAEM Assetsと統合して、InDesign(`.indd`)で作成したファイルをアップロード、生成したレンディション、*すべての*&#x200B;メディア（例えば、ビデオ）を抽出し、アセットとして保存できます。
+InDesign ServerをAEM Assetsと統合して、InDesign( `.indd` )で作成されたファイルのアップロード、レンディションの生成、 *すべての*&#x200B;メディアの抽出（ビデオなど）およびアセットとしての保存をおこなうことができます。
 
 >[!NOTE]
 >
@@ -65,11 +64,11 @@ InDesign ServerをAEM Assetsと統合して、InDesign(`.indd`)で作成した�
    >
    >IDML は、InDesign ファイル内のすべての要素をレンダリングする XML ベースの形式です。**[Zip](https://www.techterms.com/definition/zip) 圧縮を使用した圧縮パッケージとして保存されます。
    >
-   >詳しくは、[Adobe InDesign交換形式INXおよびIDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)を参照してください。
+   >詳しくは、 [Adobe InDesignのデータ交換形式INXおよびIDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)を参照してください。
 
    >[!CAUTION]
    >
-   >InDesign Serverがインストールされていないか設定されていない場合でも、`.indd`ファイルをAEMにアップロードできます。 ただし、生成されるレンディションは`png`と`jpeg`に制限され、`html`、`idml`またはページレンディションを生成することはできません。
+   >InDesign Serverがインストールされていない場合や設定されていない場合でも、`.indd`ファイルをAEMにアップロードできます。 ただし、生成されるレンディションは`png`と`jpeg`に制限され、`html`、`idml`またはページレンディションを生成することはできません。
 
 1. 抽出およびレンダリング生成後：
 
@@ -114,18 +113,18 @@ InDesign Server をインストールして AEM と連携して使用を開始�
 
 ### AEM Assets ワークフローの設定 {#configuring-the-aem-assets-workflow}
 
-AEM Assetsには、InDesign専用のいくつかのプロセス手順を持つ、事前設定済みのワークフロー&#x200B;**DAM Update Asset**&#x200B;があります。
+AEM Assetsには、InDesign用に特別にいくつかのプロセスステップを持つ事前設定済みのワークフロー「**DAMアセットの更新**」があります。
 
 * [メディア抽出](#media-extraction)
 * [ページ抽出](#page-extraction)
 
-このワークフローは、様々なオーサーインスタンスで設定に適合できるデフォルト値で設定されます（これは標準的なワークフローです。詳しくは、「ワークフローの編集](/help/sites-developing/workflows-models.md#configuring-a-workflow-step)」を参照してください）。 デフォルト値（SOAPポートを含む）を使用する場合は、設定は不要です。[
+このワークフローは、様々なオーサーインスタンスで設定に合わせて調整できるデフォルト値を使用して設定されます（これは標準のワークフローなので、詳しくは、[ワークフローの編集](/help/sites-developing/workflows-models.md#configuring-a-workflow-step)を参照してください）。 デフォルト値（SOAPポートを含む）を使用している場合は、設定は不要です。
 
 設定後、通常の方法のいずれかによって InDesign ファイルを AEM Assets にアップロードすると、そのアセットを処理して各種レンディションを準備するのに必要となるワークフローが実行されます。`.indd` ファイルを AEM Assets にアップロードし、IDS で作成された各種レンディションが `<*your_asset*>.indd/Renditions` の下にあることを確認して、設定をテストしてください。
 
 #### メディア抽出 {#media-extraction}
 
-この手順で、`.indd`ファイルのメディアの抽出を制御します。
+この手順では、`.indd`ファイルからのメディアの抽出を制御します。
 
 カスタマイズするには、**[!UICONTROL メディア抽出]**&#x200B;ステップの「**[!UICONTROL 引数]**」タブを編集します。
 
@@ -133,17 +132,17 @@ AEM Assetsには、InDesign専用のいくつかのプロセス手順を持つ�
 
 メディア抽出の引数とスクリプトパス
 
-* **ExtendScript図書館**:これは、他のスクリプトで必要となる、単純なhttpのget/postメソッドライブラリです。
+* **ExtendScriptライブラリ**:これは、他のスクリプトに必要な単純なhttp get/postメソッドライブラリです。
 
-* **拡張スクリプト**:ここでは、異なるスクリプトの組み合わせを指定できます。InDesign サーバーで独自のスクリプトを実行する場合は、`/apps/settings/dam/indesign/scripts` にスクリプトを保存します。
+* **スクリプトの拡張**:ここで様々なスクリプトの組み合わせを指定できます。InDesign サーバーで独自のスクリプトを実行する場合は、`/apps/settings/dam/indesign/scripts` にスクリプトを保存します。
 
    InDesignスクリプトについて詳しくは、[https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)を参照してください。
 
 >[!CAUTION]
 >
->ExtendScript ライブラリは変更しないでください。ライブラリは、Slingとの通信に必要なHTTP機能を提供します。 この設定は、Adobe InDesign Serverに送信してそこで使用するライブラリを指定します。
+>ExtendScript ライブラリは変更しないでください。ライブラリは、Slingとの通信に必要なHTTP機能を提供します。 この設定では、Adobe InDesign Serverに送信してそこで使用するライブラリを指定します。
 
-メディア抽出のワークフロー手順で実行される`ThumbnailExport.jsx`スクリプトは、JPG形式のサムネールレンディションを生成します。 このレンディションはサムネールを処理ワークフローステップによって使用され、AEM で要求される静的レンディションを生成します。
+メディア抽出ワークフローステップで実行される`ThumbnailExport.jsx`スクリプトにより、サムネールのレンディションがJPG形式で生成されます。 このレンディションはサムネールを処理ワークフローステップによって使用され、AEM で要求される静的レンディションを生成します。
 
 サムネールを処理ワークフローステップは、異なるサイズの静的レンディションを生成するように設定できます。デフォルトの設定は AEM Assets UI によって要求されるので、削除しないでください。最後に、画像プレビューレンディションを削除ワークフローステップで不要になった .jpg 形式のサムネールレンディションが削除されます。
 
@@ -155,17 +154,17 @@ AEM Assetsには、InDesign専用のいくつかのプロセス手順を持つ�
 
 ![chlimage_1-289](assets/chlimage_1-289.png)
 
-* **ページ抽出ハンドラ**:ドロップダウンリストから、使用するハンドラーを選択します。抽出ハンドラーは、関連する `RenditionPicker`（`ExtractionHandler` API を参照）によって選択された特定のレンディションに対して動作します。デフォルトでは、IDML書き出し抽出ハンドラが使用可能です。 MediaExtract手順で生成された`IDML`レンディションで動作します。
+* **ページ抽出ハンドラー**:ドロップダウンリストから、使用するハンドラーを選択します。抽出ハンドラーは、関連する `RenditionPicker`（`ExtractionHandler` API を参照）によって選択された特定のレンディションに対して動作します。デフォルトでは、IDML書き出し抽出ハンドラーを使用できます。 MediaExtractステップで生成された`IDML`レンディションで動作します。
 
-* **ページ名**:結果のページに割り当てる名前を指定します。空白の場合、名前は「page」（「page」が既に存在する場合は派生）になります。
+* **ページ名**:生成されるページに割り当てる名前を指定します。空白の場合、名前は「page」（「page」が既に存在する場合は派生形）になります。
 
-* **ページタイトル**:結果のページに割り当てるタイトルを指定します。
+* **ページタイトル**:生成されるページに割り当てるタイトルを指定します。
 
-* **Page Root Path**:結果のページのルート位置へのパス。空白のままにすると、アセットのレンディションを保持するノードが使用されます。
+* **ページルートパス**:生成されるページのルート位置へのパス。空白の場合、アセットのレンディションを保持しているノードが使用されます。
 
-* **ページテンプレート**:結果のページの生成時に使用するテンプレートです。
+* **ページテンプレート**:ページの生成時に使用するテンプレート。
 
-* **ページデザイン**:結果のページを生成するときに使用するページデザインです。
+* **ページデザイン**:ページの生成時に使用するページデザイン。
 
 ### InDesign Server のプロキシワーカーの設定 {#configuring-the-proxy-worker-for-indesign-server}
 
@@ -181,21 +180,21 @@ AEM Assetsには、InDesign専用のいくつかのプロセス手順を持つ�
 
    ![proxy_idsworkerconfig](assets/proxy_idsworkerconfig.png)
 
-   * **IDSプール**:InDesign Serverとの通信に使用するSOAPエンドポイント。アイテムの追加、削除、および注文は必須にすることができます。
+   * **IDSプール**:InDesign Serverとの通信に使用するSOAPエンドポイント。必要な項目の追加、削除および並べ替えを行うことができます。
 
 1. 「**[!UICONTROL OK]**」をクリックして保存します。
 
 ### Day CQ Link Externalizer の設定 {#configuring-day-cq-link-externalizer}
 
-InDesign ServerとAEMが異なるホスト上にあるか、これらのアプリケーションの1つまたは両方がデフォルトポートで動作しない場合は、**Day CQ Link Externalizer**&#x200B;を設定して、InDesign Serverのホスト名、ポート、コンテンツパスを設定します。
+InDesign ServerとAEMが異なるホスト上にある場合、またはこれらのアプリケーションの一方または両方がデフォルトのInDesign Serverで動作しない場合は、**Day CQ Link Externalizer**&#x200B;を設定して、ポートのホスト名、ポートおよびコンテンツのパスを設定します。
 
 1. `https://[AEM_server]:[port]/system/console/configMgr` の URL で Configuration Manager にアクセスします。
-1. 設定&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;を探します。 「**[!UICONTROL 編集]**」をクリックして開きます。
-1. Link Externalizerの設定は、[!DNL Experience Manager]展開と[!DNL InDesign Server]の絶対的なURLを作成するのに役立ちます。 **[!UICONTROL ドメイン]**&#x200B;フィールドを使用して、[!DNL Adobe InDesign Server]のホスト名とコンテキストパスを指定します。 画面に表示される手順に従ってください。「**[!UICONTROL 保存]**」をクリックします。
+1. 設定&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;を探します。 **[!UICONTROL 編集]**&#x200B;をクリックして開きます。
+1. Link Externalizerの設定は、[!DNL Experience Manager]デプロイメントと[!DNL InDesign Server]の絶対URLを作成するのに役立ちます。 **[!UICONTROL Domains]**&#x200B;フィールドを使用して、[!DNL Adobe InDesign Server]のホスト名とコンテキストパスを指定します。 画面に表示される手順に従ってください。「**[!UICONTROL 保存]**」をクリックします。
 
-   ![Link externalizerの設定](assets/link-externalizer-config.png)
+   ![Link Externalizerの設定](assets/link-externalizer-config.png)
 
-### InDesign Serverの並列ジョブ処理を有効にする{#enabling-parallel-job-processing-for-indesign-server}
+### InDesign Server{#enabling-parallel-job-processing-for-indesign-server}の並列ジョブ処理の有効化
 
 IDS の並列ジョブ処理を有効にすることができます。
 
@@ -220,20 +219,20 @@ IDS 並列ジョブ数を設定するには：
    * **[!UICONTROL Maximum Parallel Jobs]** - `<*x*>`（上で計算した値）
 
 1. これらの変更を保存します。
-1. AdobeCS6以降でのマルチセッションのサポートを有効にするには、`com.day.cq.dam.ids.impl.IDSJobProcessor.name configuration`の下の`enable.multisession.name`チェックボックスをオンにします。
-1. IDSワーカー構成](#configuring-the-proxy-worker-for-indesign-server)にSOAPエンドポイントを追加して、`*x*>` IDワーカーの[プールを作成します。
+1. AdobeCS6以降のマルチセッションサポートを有効にするには、`com.day.cq.dam.ids.impl.IDSJobProcessor.name configuration`の下にある`enable.multisession.name`チェックボックスをオンにします。
+1. IDSワーカー設定](#configuring-the-proxy-worker-for-indesign-server)にSOAPエンドポイントを追加して、`*x*>`個のIDSワーカーの[プールを作成します。
 
    複数のマシンで InDesign Server を実行している場合は、マシンあたりのプロセッサー数から 1 を減算した数の SOAP エンドポイントを各マシンに追加します。
 
    >[!NOTE]
    >
-   >ワーカーのプールを使用する場合、IDSワーカーのブロックリストを有効にできます。
+   >ワーカーのプールを操作する場合、IDSワーカーのブロックリストを有効にできます。
    >
    >それには、`com.day.cq.dam.ids.impl.IDSJobProcessor.name` 設定の下にある「enable.retry.name」チェックボックスをオンにします。これにより、IDS ジョブ再試行が有効になります。
    >
    >また、`com.day.cq.dam.ids.impl.IDSPoolImpl.name``max.errors.to.blacklist` 設定の下のパラメーターに正の値を設定します。このパラメーターは、IDS をジョブハンドラーリストから除外するまでのジョブ再試行回数を指定します。
    >
-   >デフォルトでは、設定可能な(`retry.interval.to.whitelist.name`)時間（分単位）が経過すると、IDSワーカーが再検証されます。 ワーカーがオンラインである場合は、ブロックリストから削除されます。
+   >デフォルトでは、設定可能な(`retry.interval.to.whitelist.name`)時間（分）が経過すると、IDSワーカーが再検証されます。 ワーカーがオンラインである場合は、ブロックリストから削除されます。
 
 <!-- TBD: Make updates to configurations for allow and block list after product updates are done. See CQ-4298427.
 -->
@@ -248,9 +247,9 @@ InDesign Server 10.0 以降では、次の手順を実行してマルチセッ�
 
 >[!NOTE]
 >
->[!DNL InDesign Server]と[!DNL Assets]を統合する場合は、統合に必要なセッションサポート機能がシングルコアシステムではサポートされないので、マルチコアプロセッサを使用してください。
+>[!DNL Assets]との[!DNL InDesign Server]統合の場合、統合に必要なセッションサポート機能はシングルコアシステムではサポートされないので、マルチコアプロセッサを使用してください。
 
-## Experience Manager資格情報の構成{#configure-aem-credentials}
+## Experience Managerの資格情報{#configure-aem-credentials}を設定します
 
 Adobe InDesignサーバーとの統合を中断することなく、AEMインスタンスからInDesignサーバーにアクセスするためのデフォルトの管理者資格情報（ユーザー名とパスワード）を変更できます。
 
