@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: components
 content-type: reference
 discoiquuid: efbe46a3-c37f-4b67-8b3a-188cfc75118b
-translation-type: tm+mt
-source-git-commit: 185bdd83b8b67671a31aa3f341b80614ed819b6c
+exl-id: 733eddf1-48f9-45c2-a1b4-138cf32b4b59
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 85%
 
 ---
-
 
 # 開発者モード{#developer-mode}
 
@@ -39,7 +38,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >* （ページの編集時に）タッチ操作対応 UI でのみ使用できます。
 >* モバイルデバイスまたはデスクトップ上の小さいウィンドウでは、スペースの制約があるので使用できません。
    >   * ウィンドウの幅が 1024 px 未満の場合は使用できません。
->* `administrators`グループのメンバーであるユーザーのみ利用できます。
+>* `administrators`グループのメンバーであるユーザーのみが使用できます。
 
 
 >[!CAUTION]
@@ -48,7 +47,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >必要に応じて、次の環境で使用するように設定できます。
 >
->* nosamplecontent実行モードを使用した作成者インスタンスに対する
+>* nosamplecontent実行モードを使用するオーサーインスタンスで
 >* パブリッシュインスタンス
 
 >
@@ -71,7 +70,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 パネルは、次の 2 つのタブで構成されています。
 
-* **[コンポーネント](/help/sites-developing/developer-mode.md#components)**  — 作成者の [コンテンツツリーと同様のコンポーネントツリー](/help/sites-authoring/author-environment-tools.md#content-tree) を表示します
+* **[コンポーネント](/help/sites-developing/developer-mode.md#components)**  — 作成者向けのコンテンツツリーと同様に、コンポーネントツリ [ーが表](/help/sites-authoring/author-environment-tools.md#content-tree) 示されます
 
 * **[エラー](/help/sites-developing/developer-mode.md#errors)** - 問題が発生すると、各コンポーネントの詳細が表示されます。
 
@@ -120,7 +119,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 >[!CAUTION]
 >
->一部のリンクは`/libs`の下のスクリプトを指しています。 ただし、これらは参照用です。変更を加えると失われる可能性があるので、**`/libs`下では**&#x200B;編集しないでください。 このブランチは、アップグレードしたり、ホットフィックス／機能パックを適用するたびに変更される傾向にあります。必要な変更は`/apps`の下で行う必要があります。[オーバーレイと上書き](/help/sites-developing/overlays.md)を参照してください。
+>一部のリンクは、`/libs`の下のスクリプトを指します。 ただし、これらは参照用です。`/libs`の下にあるものは&#x200B;**編集しないでください。変更を加えると失われる可能性があります。**&#x200B;このブランチは、アップグレードしたり、ホットフィックス／機能パックを適用するたびに変更される傾向にあります。必要な変更は`/apps`の下でおこなう必要があります。[オーバーレイとオーバーライド](/help/sites-developing/overlays.md)を参照してください。
 
 ### エラー {#errors}
 
@@ -137,7 +136,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 エラーが発生すると、「コンポーネント」タブのツリーにあるコンポーネントエントリもインジケーターでマークされます。
 
-### テスト  {#tests}
+### テスト {#tests}
 
 >[!CAUTION]
 >
