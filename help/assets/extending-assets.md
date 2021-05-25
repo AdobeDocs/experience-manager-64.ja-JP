@@ -2,16 +2,15 @@
 title: アセットのカスタマイズと拡張
 description: アセット共有とアセットエディターをカスタマイズおよび拡張する方法について説明します。これにより、ユーザーに合わせたインターフェイスと一連の機能が提供されます。
 contentOwner: AG
-feature: Developer Tools
+feature: 開発者ツール
 role: Developer
-translation-type: tm+mt
-source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
+exl-id: 0291690b-874a-483d-901f-f02cb6d8ab28
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '263'
 ht-degree: 94%
 
 ---
-
 
 # アセットのカスタマイズと拡張 {#customizing-and-extending-assets}
 
@@ -28,9 +27,9 @@ AEM 開発者は、アセットエディターを様々な方法でカスタマ�
 * [Assets のプロキシ開発](proxy.md)
 * [ImageMagick の設定のベストプラクティス](best-practices-for-imagemagick.md)
 
-## 外観と操作性のカスタマイズ  {#customizing-the-look-and-feel}
+## 外観と操作性のカスタマイズ {#customizing-the-look-and-feel}
 
-アセットエディタのルック&amp;フィールの次の要素はカスタマイズ可能です。
+アセットエディターのルックアンドフィールの次の側面をカスタマイズできます。
 
 * ロゴ：組織の独自のロゴをインターフェイスに追加できます。
 * 色およびフォント：インターフェイスで使用される色およびフォントを変更できます。
