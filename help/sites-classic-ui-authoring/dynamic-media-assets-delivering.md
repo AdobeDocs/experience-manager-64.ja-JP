@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: authoring
 content-type: reference
 discoiquuid: 79d426a6-bad5-4f6d-a027-ca935576bcb9
-translation-type: tm+mt
-source-git-commit: b4a2dee750fd646ba54aed243c9fb90379565d5d
+exl-id: 07f143cc-4ba4-4b34-bb6d-641691a1afa7
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 100%
 
 ---
-
 
 # Dynamic Media アセットの配信{#delivering-dynamic-media-assets}
 
@@ -30,4 +29,3 @@ Dynamic Media を使用する場合、次の複数のオプションがありま
 詳しくは、次のトピックを参照してください。
 
 * [ページへの Dynamic Media アセットの追加](/help/sites-classic-ui-authoring/dynamic-media-assets-adding-to-page.md)
-
