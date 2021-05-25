@@ -10,22 +10,21 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f176c42b-b16b-42c9-af22-4b6421de5a90
 pagetitle: Liking Essentials
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 509d1fb4-a88d-4438-a618-ba063adb6fb9
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '295'
-ht-degree: 55%
+ht-degree: 53%
 
 ---
-
 
 # 「いいね!」の設定の基本事項  {#liking-essentials}
 
 「いいね!」の設定コンポーネントは、[集計](tally.md)のサブクラスであり、メンバーがハートアイコンをオンにするだけで特定のコンテンツに対して賛成を表明できる便利なツールです。
 
-「いいね！」コンポーネントの複数のインスタンスを同じページに配置できます。各インスタンスは、一意の`tally name`プロパティを使用して設定する必要があります。
+「いいね！」設定コンポーネントの複数のインスタンスを同じページに配置できます。各インスタンスは、一意の`tally name`プロパティを使用して設定する必要があります。
 
-匿名での「いいね!」の設定の投稿はサポートされていません。サイト訪問者は、「いいね！」に参加するには登録してサインインする必要があります。 ログイン訪問者（メンバ）は、いつでも同様にオン/オフを切り替えることができます。
+匿名での「いいね!」の設定の投稿はサポートされていません。サイト訪問者が「いいね！」を設定するには、登録してサインインする必要があります。 サインインした訪問者（メンバー）は、いつでも「いいね！」のオンとオフを切り替えることができます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -60,7 +59,7 @@ ht-degree: 55%
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [集計 API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
@@ -68,7 +67,7 @@ ht-degree: 55%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿された投票（UGC）へのアクセス  {#accessing-posted-voting-ugc}
+### 投稿された投票(UGC)へのアクセス{#accessing-posted-voting-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。\
 [ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
@@ -80,7 +79,6 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例
-* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
+* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティメソッドと例
+* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
-
