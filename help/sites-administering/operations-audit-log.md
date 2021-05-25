@@ -2,7 +2,7 @@
 title: AEM 6 での監査ログのメンテナンス
 seo-title: AEM 6 での監査ログのメンテナンス
 description: AEM での監査ログのメンテナンスについて説明します。
-feature: Operations
+feature: 運用
 seo-description: AEM での監査ログのメンテナンスについて説明します。
 uuid: 212de4df-6bf4-434c-94e1-74186d21945a
 contentOwner: User
@@ -11,7 +11,6 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 565d89de-b3ca-41a5-8e1c-d10905c25fb5
 exl-id: bcbdab55-4871-4c7f-b82a-b7d8280e82e3
-translation-type: tm+mt
 source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
 source-wordcount: '616'
@@ -41,9 +40,9 @@ ht-degree: 81%
 
 監査ログのパージを設定するには、次の手順に従います。
 
-1. ブラウザに`http://localhost:4502/system/console/configMgr/`を指定して、Webコンソール管理者に移動します。
+1. ブラウザーで`http://localhost:4502/system/console/configMgr/`
 
-1. **Pages audit Log Purge rule**&#x200B;という名前の項目を検索し、クリックします。
+1. **ページ監査ログのパージルール**&#x200B;という名前の項目を検索し、クリックします。
 
    ![chlimage_1-365](assets/chlimage_1-365.png)
 
@@ -63,15 +62,15 @@ ht-degree: 81%
 
 1. **週別メンテナンスウィンドウ**&#x200B;カードをクリックします。
 
-1. メンテナンスタスクは、**AuditLog Maintenanceタスク**&#x200B;カードに既に存在します。
+1. **AuditLog Maintenance Task**&#x200B;カードに既にメンテナンスタスクが存在します。
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
 1. 次回実行の日付を調べて設定するか、再生ボタンをクリックして手動で実行できます。
 
-AEM 6.3では、監査ログの削除タスクが完了する前にスケジュールされたメンテナンスウィンドウが閉じると、タスクが自動的に停止します。 次回のメンテナンスウィンドウを開くと、タスクは再開されます。
+AEM 6.3では、監査ログのパージタスクが完了する前に、スケジュールされたメンテナンスウィンドウが閉じると、タスクは自動的に停止します。 次回のメンテナンスウィンドウを開くと、タスクは再開されます。
 
-**AEM 6.4では**、「停止」アイコンをクリックして、実行中の監査ログの削除タスクを手動で停止でき **** ます。次回の実行時に、タスクは安全に再開されます。
+**AEM 6.4では**、実行中の監査ログのパージタスクを手動で停止するには、停止アイコンをクリック **** します。次回の実行時に、タスクは安全に再開されます。
 
 >[!NOTE]
 >
