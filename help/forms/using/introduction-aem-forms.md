@@ -8,15 +8,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: a976a854-4bf2-49f8-871e-28bc597ac496
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: アダプティブフォーム
+exl-id: 0a79111d-e42f-4eb6-8bc4-ab97424e7f90
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 99%
 
 ---
-
 
 # AEM Forms の概要 {#introduction-to-aem-forms}
 
@@ -118,5 +117,4 @@ AEM Forms を使用するビジネスユーザーは、ドキュメントテン�
 * ドキュメントの AEM Forms 用セキュリティアドオンにより、暗号化、使用ポリシー、追跡、および監査などに対応
 
 ![](do-not-localize/layout-02.png)
-**図：** *合理化されたパーソナライズされたコミュニケーションワークフロー*
-
+**図：パーソナライズされた通信** *ワークフローの効率化*
