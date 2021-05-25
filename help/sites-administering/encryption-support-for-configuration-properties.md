@@ -9,20 +9,19 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: security
 discoiquuid: 4e08c297-aa4b-44cf-84c8-1e11582d9ebb
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 077a940d-19de-4d19-ad99-61f465e68205
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 87%
 
 ---
 
-
 # 設定プロパティの暗号化サポート{#encryption-support-for-configuration-properties}
 
 ## 概要 {#overview}
 
-この機能を使用すると、すべての OSGI 設定プロパティをクリアテキストではなく保護された暗号化形式で保存できます。WebコンソールUIのフォームは、システム全体の暗号化マスター・キーを使用して、クリア・テキストから暗号化テキストを作成するために使用します。
+この機能を使用すると、すべての OSGI 設定プロパティをクリアテキストではなく保護された暗号化形式で保存できます。WebコンソールUIのフォームは、システム全体の暗号化マスターキーを使用して、クリアテキストから暗号化されたテキストを作成するために使用されます。
 
 OSGi 設定プラグインのサポートは、サービスによって使用される前に、プロパティを復号化するために追加されました。
 
