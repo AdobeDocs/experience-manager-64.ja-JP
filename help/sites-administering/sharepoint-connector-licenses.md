@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: 487fc170-3750-49a7-af59-f1cc20d5f528
-translation-type: tm+mt
-source-git-commit: b98e1ec0f4f5bf44e0d91e4eb9b9317523a23938
+exl-id: 4cd44f33-1bf9-4ec6-868f-0db60bfc56c0
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 75%
 
 ---
-
 
 # SharePoint Connector のライセンス、著作権情報および免責事項{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
@@ -28,31 +27,31 @@ ht-degree: 75%
 
 | ライブラリ | ライセンスタイプ |
 |---|---|
-| 注釈 | [Apache](#apache) |
+| annogen | [Apache](#apache) |
 | axiom-api | [Apache](#apache) |
 | 公理界 | [Apache](#apache) |
-| 公理インプル | [Apache](#apache) |
+| axiom-impl | [Apache](#apache) |
 | axis2-adb | [Apache](#apache) |
 | axis2-kernel | [Apache](#apache) |
 | Backport-util-concurrent | パブリックドメイン |
-| コモンズコーデック | [Apache](#apache) |
+| commons-codec | [Apache](#apache) |
 | commons-collections | [Apache](#apache) |
 | commons-fileupload | [Apache](#apache) |
 | commons-httpclient | [Apache](#apache) |
 | commons-io | [Apache](#apache) |
 | commons-lang | [Apache](#apache) |
-| 同時の | [同時](#concurrent) （パブリックドメイン） |
-| ジェロニモ —アクティベーション_1.1_spec | [Apache](#apache) |
-| ジェロニモ —stax-api_1.0_spec | [Apache](#apache) |
+| 同時 | [同時](#concurrent) （パブリックドメイン） |
+| geronimo-activation_1.1_spec | [Apache](#apache) |
+| geronimo-stax-api_1.0_spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
 | jackrabbit-jcr2spi | [Apache](#apache) |
-| ジャックラビット・ジクル・コモンズ | [Apache](#apache) |
-| ジャックラビット・スピ・コモンズ | [Apache](#apache) |
-| ジャックラビット・スピ | [Apache](#apache) |
+| jackrabbit-jcr-commons | [Apache](#apache) |
+| jackrabbit-spi-commons | [Apache](#apache) |
+| jackrabbit-spi | [Apache](#apache) |
 | jaxen | BSD |
 | log4j | [Apache](#apache) |
-| ルセンコア | [Apache](#apache) |
-| 新しい | [Apache](#apache) |
+| lucene-core | [Apache](#apache) |
+| nethi | [Apache](#apache) |
 | slf4j-api | [SLF4J.ORG](#slf-j-org) |
 | slf4j-jdk14 | [SLF4J.ORG](#slf-j-org) |
 | stax-api | [Apache](#apache) |
@@ -60,7 +59,7 @@ ht-degree: 75%
 | wstx-asl | [Apache](#apache) |
 | xalan | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-apis | [Apache](#apache) （パブリックドメインおよびW3Cソフトウェアライセンスが対象とする部分を含む） |
+| xml-apis | [Apache](#apache) （パブリックドメインおよびW3Cソフトウェアライセンスの対象となる部分を含む） |
 | XmlSchema | [Apache](#apache) |
 
 ## CRX のサードパーティのライブラリの概要 {#overview-of-crx-rd-party-libraries}
@@ -174,7 +173,7 @@ ht-degree: 75%
    <td><a href="#apache">Apache</a></td> 
   </tr> 
   <tr> 
-   <td>ジェロニモ —spec-j2ee-connector-1.0-M1.jar</td> 
+   <td>geronimo-spec-j2ee-connector-1.0-M1.jar</td> 
    <td><a href="#apache">Apache</a></td> 
   </tr> 
   <tr> 
@@ -426,7 +425,7 @@ ht-degree: 75%
      limitations under the License.
 ```
 
-## Concurrent {#concurrent}
+## 同時 {#concurrent}
 
 ```xml
      All classes are released to the public domain and may be used for any
@@ -438,7 +437,7 @@ ht-degree: 75%
      <a href="https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf" TARGET="_blank" >https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf</a>
 ```
 
-## Day JCR {#day-jcr}
+## Day JCR  {#day-jcr}
 
 ```xml
      Day Management AG ("Licensor") is willing to license this 
@@ -744,7 +743,7 @@ ht-degree: 75%
      2000-05-05
 ```
 
-## SLF4J.ORG {#slf-j-org}
+## SLF4J.ORG  {#slf-j-org}
 
 ```xml
      Copyright (c) 2004-2007 QOS.ch
@@ -1290,4 +1289,3 @@ database. Title to copyright in this software, database and any associated
 documentation shall at all times remain with Princeton University and 
 LICENSEE agrees to preserve same.
 ```
-
