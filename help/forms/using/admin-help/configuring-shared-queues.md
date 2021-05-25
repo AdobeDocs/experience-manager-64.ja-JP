@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: fc403a60-b635-4334-9bf8-2f3d2036b2f3
-translation-type: tm+mt
-source-git-commit: 6a2455cb377a68254a5c58c6627c59716d284144
+exl-id: 40890db3-240c-4021-967a-b6b3eb1d4b7c
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 97%
 
 ---
-
 
 # 共有キューの設定{#configuring-shared-queues}
 
@@ -85,4 +84,3 @@ ht-degree: 97%
 1. 「ユーザーによるアクセスを管理」タブで、管理するキューのユーザーを探して選択します。
 1. 右下のウィンドウには、選択したユーザーに割り当てられているユーザーキューのリストが表示されます。ユーザーキューを選択し、「失効」をクリックします。
 1. 「保存」をクリックして完了します。
-
