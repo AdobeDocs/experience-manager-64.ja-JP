@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: d4409c6b-f4ef-499c-8daa-e93a163ff8ab
-translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+exl-id: e407c643-5753-447e-ad4e-deb7b9eb2b55
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 95%
 
 ---
-
 
 # アカウントロックの設定 {#configure-account-locking-settings}
 
@@ -24,8 +23,7 @@ ht-degree: 95%
 
 ドメインの管理ページの設定を使用して、認証エラーの最大数およびアカウントがロックされている時間を指定できます。これらの設定は、アカウントロックが有効になっているすべてのドメインに適用されます。
 
-1. 管理コンソールで、**[!UICONTROL 設定/User Management/ドメインの管理]**&#x200B;をクリックします。
+1. 管理コンソールで、**[!UICONTROL 設定/User Management/ドメイン管理]**&#x200B;をクリックします。
 1. 「連続する認証エラーの最大回数」ボックスに、アカウントがロックされるまで連続して何回ログインの失敗が許可されるか、その回数を入力します。デフォルト値は 20 です。
 1. 「アカウントのロック解除までの時間（分）」ボックスに、ユーザーアカウントがロックされている時間（分）を入力します。指定した時間（分）が経過すると、ユーザーはもう一度ログインを試行できます。デフォルト値は 30 です。
 1. 「**[!UICONTROL 保存]**」をクリックします。
-
