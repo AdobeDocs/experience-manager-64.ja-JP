@@ -2,16 +2,15 @@
 title: メタデータの編集と追加
 description: AEM Assets のアセットメタデータを編集する様々な方法について説明します。
 contentOwner: AG
-feature: Metadata
+feature: メタデータ
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: f0522343-f8a9-4d89-8ce8-b3357ae3fe70
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 87%
+source-wordcount: '484'
+ht-degree: 86%
 
 ---
-
 
 # メタデータの編集と追加 {#how-to-edit-or-add-metadata}
 
@@ -27,7 +26,7 @@ ht-degree: 87%
 
    * Assets UI でアセットを選択し、ツールバーの「**[!UICONTROL プロパティを表示]**」アイコンをクリックまたはタップします。
    * アセットのサムネールから、「**[!UICONTROL プロパティを表示]**」クイックアクションを選択します。
-   * アセットページで、ツールバーの&#x200B;**[!UICONTROL 表示のプロパティ]**&#x200B;アイコン![情報アイコン](assets/do-not-localize/info_icon.png)をクリックまたはタップします。
+   * アセットページで、ツールバーの&#x200B;**[!UICONTROL プロパティを表示]**&#x200B;アイコン![情報アイコン](assets/do-not-localize/info_icon.png)をクリックまたはタップします。
 
    アセットページに、アセットのメタデータがすべて表示されます。このメタデータは、AEM Assets にアップロードされた（取り込まれた）ときに、自動的に抽出されたものです。
 
@@ -59,8 +58,9 @@ AEM 内での独自の名前空間を追加できます。cq、jcr、sling な�
 
 ## ヒントと制限事項 {#best-practices-limitations}
 
-* タッチUIを使用してメタデータを更新すると、`dc`名前空間のメタデータプロパティが変更されます。 HTTP APIを使用して更新を行うと、`jcr`名前空間ーのメタデータプロパティが変更されます。 HTTP API](/help/assets/mac-api-assets.md#update-asset-metadata)を使用してメタデータを更新する方法を参照してください。[
+* タッチUIを使用したメタデータの更新により、`dc`名前空間のメタデータのプロパティが変更されます。 HTTP APIを使用して更新をおこなうと、`jcr`名前空間のメタデータプロパティが変更されます。 [HTTP API](/help/assets/mac-api-assets.md#update-asset-metadata)を使用してメタデータを更新する方法を参照してください。
 
 >[!MORELIKETHIS]
 >
->* [メタデータとアセット内でのニーズについて](metadata.md)
+>* [メタデータとそのアセットでのニーズについて](metadata.md)
+
