@@ -9,18 +9,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 698990a2-dd3f-480f-9d15-d87563860297
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: eb7afdd3-0901-4dfb-b23c-88c46b5a4fb5
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 55%
 
 ---
 
-
 # シングルサインオンとタイムアウトハンドラー {#single-sign-on-and-timeout-handlers}
 
-AEM Forms Workspace は SSO 対応です。ユーザーがFormsマネージャーやPDF GeneratorユーザーインターフェイスなどのAEM Formsアプリケーションにログインし、同じブラウザーセッションでAEM Formsワークスペースにアクセスした場合、AEM Formsワークスペースにログインします。ワークスペースも同じです。
+AEM Forms Workspace は SSO 対応です。ユーザーがForms ManagerやPDF GeneratorなどのAEM Formsアプリケーションにログインし、同じブラウザーセッションでAEM Forms Workspaceにアクセスした場合、ユーザーはAEM Forms Workspaceにログインし、その逆も同様です。
 
 ## AEM Forms Workspace でのサーバータイムアウトの処理 {#handling-server-timeout-in-nbsp-aem-forms-workspace}
 
@@ -28,7 +27,7 @@ AEM Forms Workspace は SSO 対応です。ユーザーがFormsマネージャ�
 
 タイムアウトを設定するには、`https://[server]:[port]/adminui`にログインし、**設定/User Management/設定/詳細なシステム属性を設定**&#x200B;に移動して、必要な設定を行います。
 
-AEM Formsワークスペースでのタイムアウトは次のように処理されます。
+AEM Forms Workspaceのタイムアウトは、次のように処理されます。
 
 * ユーザーのセッション時間長は、ユーザーセッションを初期設定する `initialize` コールに応答して得られます。
 * ポップアップダイアログが表示され、セッションが期限切れになる 15 秒前に、そのことがユーザーに通知されます。
@@ -40,4 +39,4 @@ AEM Formsワークスペースでのタイムアウトは次のように処理�
 
 >[!NOTE]
 >
->何も行われない場合、ユーザーはセッション有効期限が切れる3秒前に、自動的にAEM Formsワークスペースからログアウトされます。
+>何も実行されなかった場合、ユーザーはセッションの有効期限が切れる3秒前に、AEM Forms Workspaceから自動的にログアウトされます。
