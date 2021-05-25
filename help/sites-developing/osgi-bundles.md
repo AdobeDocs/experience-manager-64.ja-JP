@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 8d3374ac-51dd-4ff5-84c9-495c937ade12
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: 19df20a9-7c89-4dfa-8eca-81c4a14c21ff
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 64%
 
 ---
 
-
 # OSGi バンドル{#osgi-bundles}
 
 ## セマンティックバージョニングを使用する {#use-semantic-versioning}
 
-セマンティックバージョン番号付けに関して合意されたベストプラクティスは、[https://semver.org/](https://semver.org/)にあります。
+セマンティックバージョン番号付けに関して合意されたベストプラクティスは、[https://semver.org/](https://semver.org/)で確認できます。
 
 ## 厳密に必要な数を超えるクラスおよび jar を OSGi バンドルに埋め込まない {#do-not-embed-more-classes-and-jars-than-strictly-needed-in-osgi-bundles}
 
@@ -30,18 +29,18 @@ ht-degree: 64%
 
 ## 最低限必要なバンドルバージョンに依存する  {#depend-on-the-lowest-needed-bundle-versions}
 
-POM ファイルのコンパイル時依存関係の場合、常に、必要な API を公開するために最低限必要なバージョンに依存するようにします。これにより、後方互換性が高くなり、古いリリースのバックポートの修正が容易になります。
+POM ファイルのコンパイル時依存関係の場合、常に、必要な API を公開するために最低限必要なバージョンに依存するようにします。これにより、後方互換性が高くなり、古いリリースへのバックポート修正が容易になります。
 
 ## OSGi バンドルから最小限のパッケージセットをエクスポートする {#export-a-minimal-set-of-packages-from-osgi-bundles}
 
-パッケージのエクスポートが完了したら、すぐに他のユーザーが依存する API を作成しておきます。書き出しはできるだけ少なくし、書き出されるものがAPIであることを確認します。 以前に書き出されたものを取り出してプライベートにするよりも、プライベートメソッド/クラスを取って公開する方がずっと簡単です。
+パッケージのエクスポートが完了したら、すぐに他のユーザーが依存する API を作成しておきます。書き出しをできるだけ少なくし、書き出す対象がAPIであることを確認します。 以前に書き出されたものを取得して非公開にするよりも、非公開のメソッドやクラスを取得して公開するほうがはるかに簡単です。
 
 実装は、必ず個別の *impl* パッケージに配置する必要があります。デフォルトでは、*maven-bundle-plugin* は、名前に *impl* が含まれていないプロジェクトにあるものをすべてエクスポートします。
 
 ## エクスポートしたパッケージごとに必ずセマンティックバージョニングを明示的に定義する  {#always-explicitly-define-a-semantic-version-for-each-package-exported}
 
-このようにすることで、API の利用者も新しいバージョンに取り組むことができます。その場合は、必ずセマンティックのバージョン管理のベストプラクティスに従ってください。 これにより、APIの利用者は、新しいバージョンで予想される変更のタイプを知ることができます。
+このようにすることで、API の利用者も新しいバージョンに取り組むことができます。その場合は、必ずセマンティックバージョン管理のベストプラクティスに従ってください。 これにより、APIの利用者は、新しいバージョンで予想される変更の種類を把握できます。
 
 ## 公開場所に関するメタタイプ情報を含める {#include-metatype-information-where-exposed}
 
-意味のあるメタタイプ情報を指定することで、Felix コンソールでのサービスおよびコンポーネントが理解しやすくなります。SCR注釈と属性のリストは、次の場所で確認できます。[https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html).
+意味のあるメタタイプ情報を指定することで、Felix コンソールでのサービスおよびコンポーネントが理解しやすくなります。SCR注釈と属性のリストは、次の場所にあります。[https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html).
