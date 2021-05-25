@@ -9,21 +9,20 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
-translation-type: tm+mt
-source-git-commit: 14daff213297d2435765dd46039f346ce3868ac5
+exl-id: 2bcc2be9-1e8a-44b5-add2-370b9ff80de8
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2323'
-ht-degree: 56%
+ht-degree: 62%
 
 ---
-
 
 # Query Builder の述語リファレンス{#query-builder-predicate-reference}
 
 ## 一般 {#general}
 
 * [root](#root)
-* [グループ](#group)
+* [group](#group)
 * [orderby](#orderby)
 
 ## 述語 {#predicates}
@@ -51,9 +50,9 @@ ht-degree: 56%
 * [tagsearch](/help/sites-developing/querybuilder-predicate-reference.md#tagsearch)
 * [type](/help/sites-developing/querybuilder-predicate-reference.md#type)
 
-### boolproperty  {#boolproperty}
+### boolproperty {#boolproperty}
 
-JCR BOOLEAN プロパティに一致します。「 `true` 」と「 `false` 」の値のみを受け入れます。 「`false`」では、プロパティの値が「`false`」の場合または存在しない場合に一致します。有効になっている場合のみ設定されるブール型のフラグをチェックする際に便利です。
+JCR BOOLEAN プロパティに一致します。値「`true`」と「`false`」のみを受け入れます。 「`false`」では、プロパティの値が「`false`」の場合または存在しない場合に一致します。有効になっている場合のみ設定されるブール型のフラグをチェックする際に便利です。
 
 継承される「`operation`」パラメーターには意味はありません。
 
@@ -61,12 +60,12 @@ JCR BOOLEAN プロパティに一致します。「 `true` 」と「 `false` 」
 
 #### プロパティ {#properties}
 
-* **例えば、**
-booleanpropertyプロパティの相対パス 
+* ****
+booleanpropertyプロパティへの相対パス（例： ）。 
 `myFeatureEnabled` か `jcr:content/myFeatureEnabled` のどちらかにする必要があります。
 
-* **プロパティをチェックする**
-値&quot; 
+* ****
+valueプロパティをチェックする値(「 
 `true`&quot; または &quot; `false`&quot;
 
 ### contentfragment {#contentfragment}
@@ -91,20 +90,20 @@ booleanpropertyプロパティの相対パス
 
 * **property1**
 
-   最初の日付プロパティへのパス
+   1 つ目の日付プロパティのパス
 
 * **property2**
 
-   2番目の日付プロパティへのパス
+   2 つ目の日付プロパティのパス
 
 * **operation**
 
-   &quot;完全一致の場合は&quot; `=`&quot;、不等価比較の場合は&quot; `!=`&quot;、property2より大きいプロパティ1の場合は&quot; `>`&quot;、property2より大きいか等しいプロパティ1の場合は&quot; `>=`&quot;です。 デフォルト値は「`=`」です。
+   &quot; `=`&quot;は完全一致、&quot; `!=`&quot;は不等価比較、&quot; `>`&quot;はproperty2より大きいプロパティ1、&quot; `>=`&quot;はproperty2以上のプロパティ1を表します。 デフォルト値は「`=`」です。
 
 ### daterange {#daterange}
 
-JCR DATE プロパティと日時の間隔を照合します。これはISO8601\
-日付と時間の形式(`YYYY-MM-DDTHH:mm:ss.SSSZ`)を指定し、`YYYY-MM-DD`のように部分的な表現も許可します。 また、ミリ秒数のタイムスタンプ（UTC タイムゾーン、UNIX 時刻形式、1970 年以降）を指定することもできます。
+JCR DATE プロパティと日時の間隔を照合します。ISO8601を使用します。\
+日付と時間の形式(`YYYY-MM-DDTHH:mm:ss.SSSZ`)を使用し、`YYYY-MM-DD`のような部分表現も使用できます。 また、ミリ秒数のタイムスタンプ（UTC タイムゾーン、UNIX 時刻形式、1970 年以降）を指定することもできます。
 
 2 つのタイムスタンプの間や、特定の日付より前または後のものを検索できるほか、両値を含めるか含めないかを選択することもできます。
 
@@ -114,7 +113,7 @@ JCR DATE プロパティと日時の間隔を照合します。これはISO8601\
 
 #### プロパティ {#properties-3}
 
-* **プロパティ**
+* **property**
 
    `DATE`プロパティの相対パス（例：`jcr:lastModified`）
 
@@ -124,21 +123,21 @@ JCR DATE プロパティと日時の間隔を照合します。これはISO8601\
 
 * **lowerOperation**
 
-   &quot; `>`&quot; （新しい）または&quot; `>=`&quot; （以降）は、`lowerBound`に適用されます。 デフォルトは「`>`」です。
+   「 `>` 」（新しい）または「 `>=` 」（以降）は、`lowerBound`に適用されます。 デフォルトは「`>`」です。
 
 * **upperBound**
 
-   `2014-10-01T12:15:00`のように、プロパティをチェックする上限
+   プロパティをチェックする上限（例：`2014-10-01T12:15:00`）
 
 * **upperOperation**
 
-   &quot; `<`&quot; （古い）または&quot; `<=`&quot; （古い）は、`upperBound`に適用されます。 デフォルトは「`<`」です。
+   「 `<` 」（古い）または「 `<=` 」（古い）は、`upperBound`に適用されます。 デフォルトは「`<`」です。
 
 * **timeZone**
 
     ISO-8601 の日付文字列で指定されていない場合に使用するタイムゾーンの ID。デフォルトは、システムのデフォルトのタイムゾーンです。
 
-### excludepaths  {#excludepaths}
+### excludepaths {#excludepaths}
 
 パスが正規表現に一致するノードを結果から除外します。
 
@@ -184,7 +183,7 @@ group.2_property=navTitle
 group.2_property.value=My Page
 ```
 
-これは概念的には`(1_property` OR `2_property)`です。
+これは概念上は `(1_property` OR `2_property)` になります。
 
 ネストされたグループの例は次のとおりです。
 
@@ -197,23 +196,23 @@ group.2_group.path=/content/dam/geometrixx
 group.2_group.type=dam:Asset
 ```
 
-これは、`/content/geometrixx/en`のページ内または`/content/dam/geometrixx`のアセット内で、「**管理**」という語を検索します。
+これにより、`/content/geometrixx/en`のページ内または`/content/dam/geometrixx`のアセット内で「**管理**」という用語が検索されます。
 
-これは概念的に`fulltext AND ( (path AND type) OR (path AND type) )`です。 このような OR 結合では、パフォーマンスの観点から適切なインデックスが必要です。
+これは概念上は `fulltext AND ( (path AND type) OR (path AND type) )` になります。このような OR 結合では、パフォーマンスの観点から適切なインデックスが必要です。
 
 #### プロパティ {#properties-6}
 
 * **p.or**
 
-   &quot; `true`&quot;に設定した場合、グループ内の1つの述語のみが一致する必要があります。 デフォルトは「`false`」です。この場合は、すべてが一致する必要があります。
+   「 `true` 」に設定した場合、グループ内の1つの述語のみが一致する必要があります。 デフォルトは「`false`」です。この場合は、すべてが一致する必要があります。
 
 * **p.not**
 
-   &quot; `true`&quot;に設定した場合、グループを無効にします（デフォルトは&quot; `false`&quot;）
+   「 `true` 」に設定すると、グループを無効にします（デフォルトは「 `false` 」）。
 
 * **&lt;predicate>**
 
-   入れ子の述語を追加します。
+   ネストされた述語を追加します
 
 * **N_&lt;predicate>**
 
@@ -229,9 +228,9 @@ group.2_group.type=dam:Asset
 
 * **hasPermission**
 
-   現在のユーザーセッションが、問題のノードに対してすべてのセッションで持つ必要があるJCRのコンマ区切り権限。例：`jcr:write`, `jcr:modifyAccessControl`
+   現在のユーザーセッションが対象のノードに対してすべて持つ必要がある、コンマ区切りのJCR権限。例： `jcr:write`、`jcr:modifyAccessControl`
 
-### language {#language}
+### 言語 {#language}
 
 特定の言語の CQ ページを検索します。ページの言語プロパティと、ページパス（一般的に最上位レベルのサイト構造に言語やロケールが含まれています）の両方を検索します。
 
@@ -243,11 +242,11 @@ group.2_group.type=dam:Asset
 
 * **language**
 
-   ISO言語コード（例：`de`）
+   ISO言語コード（例：「 `de` 」）
 
 ### mainasset {#mainasset}
 
-ノードがサブアセットではなく、DAM メインアセットであるかどうかをチェックします。基本的には、DAM メインアセットは「subassets」ノード外のすべてのノードです。`dam:Asset` ノードタイプはチェックされません。この述語を使用するには、&quot; `mainasset=true`&quot;または&quot; `mainasset=false`&quot;を設定します。これ以上のプロパティはありません。
+ノードがサブアセットではなく、DAM メインアセットであるかどうかをチェックします。基本的には、DAM メインアセットは「subassets」ノード外のすべてのノードです。`dam:Asset` ノードタイプはチェックされません。この述語を使用するには、「 `mainasset=true` 」または「 `mainasset=false` 」を設定します。それ以上のプロパティはありません。
 
 これはフィルターのみの述語で、検索インデックスは利用できません。
 
@@ -257,11 +256,11 @@ group.2_group.type=dam:Asset
 
 * **mainasset**
 
-   ブール値。メインアセットは&quot; `true`&quot;、サブアセットは&quot; `false`&quot;
+   ブール値。メインアセットの場合は「 `true` 」、サブアセットの場合は「 `false` 」
 
 ### memberOf {#memberof}
 
-特定の [sling リソースコレクション](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/resource/collection/ResourceCollection.html)のメンバーである項目を検索します。
+特定の [sling リソースコレクション](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/resource/collection/ResourceCollection.html)のメンバーである項目を検索します。
 
 これはフィルターのみの述語で、検索インデックスは利用できません。ファセットの抽出には対応していません。
 
@@ -269,9 +268,9 @@ group.2_group.type=dam:Asset
 
 * **memberOf**
 
-   Slingリソースコレクションのパス
+   Sling リソースコレクションのパス
 
-### nodename {#nodename}
+### ノデナム {#nodename}
 
 JCR ノード名と一致します。
 
@@ -279,11 +278,11 @@ JCR ノード名と一致します。
 
 #### プロパティ {#properties-11}
 
-* **ノデナム**
+* **nodename**
 
-   ワイルドカードを使用できるノード名パターン：`*` =任意または文字なし、`?` =任意の文字、`[abc]` =角括弧内の文字のみ
+   ワイルドカードを使用できるノード名パターン：`*` は 0 個以上の任意の文字、`?` は任意の文字、`[abc]` は角括弧内の文字のみ
 
-### notexpired {#notexpired}
+### notextired {#notexpired}
 
 JCR DATE プロパティが現在のサーバー時間より後か同じかをチェックすることで項目を照合します。これを使用すると、日付プロパティなどの「`expiresAt`」をチェックし、まだ有効期限が切れていないプロパティ（`notexpired=true`）または既に有効期限が切れているプロパティ（`notexpired=false`）に制限できます。
 
@@ -303,19 +302,19 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
 ### orderby {#orderby}
 
-結果の並べ替えを有効にします。複数のプロパティで順序付けが必要な場合は、`1_orderby=first`、`2_oderby=second`のように、数値のプレフィックスを使用して、この述語を複数回追加する必要があります。
+結果の並べ替えを有効にします。複数のプロパティ別に並べ替える必要がある場合は、`1_orderby=first`、`2_oderby=second` などの数字のプレフィックスを使用して、この述語を複数回追加する必要があります。
 
 #### プロパティ {#properties-13}
 
 * **orderby**
 
-   `@jcr:lastModified`や`@jcr:content/jcr:title`などの先頭に@が付いたJCRプロパティ名か、クエリ内の別の述語（例：`2_property`）で並べ替えの対象となる
+   並べ替えの基準となる、先頭が @ の JCR プロパティ名（例：`@jcr:lastModified`、`@jcr:content/jcr:title`）またはクエリ内の別の述語（例：`2_property`）
 
 * **並べ替え**
 
-   並べ替え方向（降順は&quot; `desc`&quot;、昇順は&quot; `asc`&quot;）
+   並べ替えの方向。降順の場合は「 `desc` 」、昇順の場合は「 `asc` 」（デフォルト）
 
-* **症例**
+* **ケース**
 
     「`ignore`」に設定すると、並べ替えで大文字と小文字が区別されなくなります（「a」が「B」の前になります）。空白または未指定の場合は、並べ替えで大文字と小文字が区別されます（「B」が「a」の前になります）。
 
@@ -329,21 +328,21 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
 * **path**
 
-   パスパターン；完全一致に応じて、サブツリー全体が（xpathに`//*`を付加するのと同じですが、これはベースパスを含まないことに注意してください）(exact=false、default)、または完全一致のみに一致し、ワイルドカード(`*`)を含めることができます。selfが設定されている場合、ベースノードを含むサブツリー全体が検索されます
+   パスパターン；厳密に応じて、サブツリー全体が一致します（xpathに`//*`を追加する場合など）。ただし、これはベースパスを含まない(exact=false、default)か、ワイルドカード( `*`)を含む完全なパスの一致のみです。selfが設定されている場合、ベースノードを含むサブツリー全体が検索されます
 
-* **完全一致**
+* **厳密**
 
-   `exact`がtrue/onの場合は、完全なパスは一致する必要がありますが、一致する名前を含む単純なワイルドカード(`*`)を含めることはできますが、&quot; `/`&quot;；は含めません。false（デフォルト）の場合、すべての子孫が含まれます（オプション）。
+   `exact`がtrue/onの場合、パスは完全に一致する必要がありますが、名前に一致する単純なワイルドカード(`*`)を含めることができますが、「`/`」は含めません。false（デフォルト）の場合、すべての子が含まれます（オプション）。
 
 * **平らな**
 
-   （xpathに「 `/*` 」を付加する場合など）直接の子のみを検索します（「 `exact` 」がtrueでない場合にのみ使用します。オプション）
+   直接の子のみを検索します（xpathに「 `/*` 」を付加する場合など）（「 `exact` 」がtrueでない場合にのみ使用されます。オプション）
 
 * **self**
 
     サブツリーを検索しますが、パスとして指定されたベースノードが含まれます（ワイルドカードは不可）。
 
-### property {#property}
+### プロパティ {#property}
 
 JCR プロパティとその値に一致します。
 
@@ -353,31 +352,31 @@ JCR プロパティとその値に一致します。
 
 * **プロパティ**
 
-   プロパティの相対パス（例：`jcr:title`）
+   プロパティへの相対パス（例：`jcr:title`）
 
 * **value**
 
-    プロパティでチェックする値。JCR プロパティのタイプから文字列への変換に従います。
+   プロパティでチェックする値。JCR プロパティタイプから文字列への変換に従います
 
 * **N_value**
 
-   `1_value`、`2_value`、...を使用して、複数の値（デフォルトで`OR`と組み合わされ、ifと=true）をチェックします（5.3以降）。`AND`
+   `1_value`、`2_value`、...を使用して、複数の値をチェックします（デフォルトで`OR`と組み合わされ、and=trueの場合は`AND`と組み合わされます）（5.3以降）。
 
 * **および**
 
-   複数の値(`N_value`)とANDを組み合わせる場合はtrueに設定（5.3以降）
+   複数の値(`N_value`)とANDを組み合わせる場合は、trueに設定します（5.3以降）。
 
-* **operation**
+* **操作**
 
-   完全一致（デフォルト）の場合は&quot; `equals`&quot;、不等価比較の場合は&quot; `unequals`&quot;、`jcr:like` xpath関数（オプション）の場合は&quot; `like`&quot;、一致しない場合は&quot; `not`&quot; xpathの&quot; `not(@prop)`&quot;、value paramは無視されます)、または&quot; `exists`&quot; （値はtrueの場合があります。プロパティは存在する必要があり、デフォルト値はfalseの場合は&quot; `not`&quot;と同じ）
+   &quot; `equals`&quot;(完全一致（デフォルト）、&quot; `unequals`&quot;（不等価比較）、&quot; `jcr:like` xpath関数（オプション）を使用する&quot; `like`&quot;（一致なし）、&quot; `not`&quot;(例： xpathの「 `not(@prop)` 」、値パラメーターは無視されます)、または「 `exists` 」（値はtrue、プロパティは存在する必要があり、デフォルトはfalse、「 `not`」と同じ）
 
 * **深さ**
 
-   プロパティ/相対パスが存在できるワイルドカードレベルの数（例えば、`property=size depth=2`はnode/size、node/amp;ast;/size、node/&amp;ast;/&amp;ast;/size）をチェックします
+   プロパティ/相対パスが存在できるワイルドカードレベルの数（例えば、`property=size depth=2`は、node/size、node/amp;ast;/sizeおよびnode/&amp;ast;/&amp;ast;ast;/amp;ast;/size）をチェックします。
 
 ### rangeproperty {#rangeproperty}
 
-JCR プロパティと間隔を照合します。これは、`LONG`、`DOUBLE`、`DECIMAL`などの線形型を持つプロパティに適用されます。 `DATE` に関しては、最適化された日付形式の入力情報を含む daterange 述語を参照してください。
+JCR プロパティと間隔を照合します。`LONG`、`DOUBLE`、`DECIMAL` などの線形タイプのプロパティに適用されます。`DATE` に関しては、最適化された日付形式の入力情報を含む daterange 述語を参照してください。
 
 下限と上限、またはそのいずれかを定義できます。演算（「より少ない」や「以下」など）も、下限と上限に別々に指定することができます。
 
@@ -391,11 +390,11 @@ JCR プロパティと間隔を照合します。これは、`LONG`、`DOUBLE`�
 
 * **lowerBound**
 
-   ～の特性をチェックする下限
+   プロパティをチェックする下限
 
 * **lowerOperation**
 
-   &quot; `>`&quot;（デフォルト）または&quot; `>=`&quot;が`lowerValue`に適用されます
+   &quot; `>`&quot; （デフォルト）または&quot; `>=`&quot; （`lowerValue`に適用）
 
 * **upperBound**
 
@@ -403,23 +402,23 @@ JCR プロパティと間隔を照合します。これは、`LONG`、`DOUBLE`�
 
 * **upperOperation**
 
-   &quot; `<`&quot;（デフォルト）または&quot; `<=`&quot;が`lowerValue`に適用されます
+   &quot; `<`&quot; （デフォルト）または&quot; `<=`&quot; （`lowerValue`に適用）
 
 * **decimal**
 
-   &quot; `true`&quot;チェック済みプロパティのタイプが10進の場合
+   チェックされたプロパティのタイプがDecimalの場合は&quot; `true`&quot;
 
 ### relativedaterange {#relativedaterange}
 
-`JCR DATE` プロパティと日時の間隔を照合します（現在のサーバー時間に対する時間オフセットを使用します）。ミリ秒値またはbugzilla構文`1s 2m 3h 4d 5w 6M 7y` （1秒、2分、3時間、4日、5週間、6か月、7年）を使用して`lowerBound`と`upperBound`を指定できます。 現在時間より前の負のオフセットを示す場合は、「 `-` 」というプリフィックスを付けます。 `lowerBound` または `upperBound` のいずれかのみを指定する場合は、他方がデフォルトで 0（現在の時間）になります。
+`JCR DATE` プロパティと日時の間隔を照合します（現在のサーバー時間に対する時間オフセットを使用します）。`lowerBound`と`upperBound`は、ミリ秒値またはbugzilla構文`1s 2m 3h 4d 5w 6M 7y`（1秒、2分、3時間、4日、5週間、6ヶ月、7年）を使用して指定できます。 現在の時刻より前の負のオフセットを示す「`-`」というプレフィックス。 `lowerBound` または `upperBound` のいずれかのみを指定する場合は、他方がデフォルトで 0（現在の時間）になります。
 
 次に例を示します。
 
-* `upperBound=1h` (そして `lowerBound`)次の時間には何でも選ぶ
-* `lowerBound=-1d` (そして `upperBound`)過去24時間の間に何でも選択する
-* `lowerBound=-6M` 6ヶ月 `upperBound=-3M` から3ヶ月の歳月は何でも選ぶ
-* `lowerBound=-1500` また、過去1500ミリ秒から将来5500ミリ秒の間の値を `upperBound=5500` 選択する必要があります。
-* `lowerBound=1d` 明後日 `upperBound=2d` には何でも選ぶ
+* `upperBound=1h` (そしてい `lowerBound`いえ)次の1時間には何も選択しません
+* `lowerBound=-1d` (およびいいえ `upperBound`)過去24時間以内に選択された項目は何でもかまいません
+* `lowerBound=-6M` そして `upperBound=-3M` 生後6ヶ月から3ヶ月の何かを選ぶ
+* `lowerBound=-1500` 過去 `upperBound=5500` の1500ミリ秒から将来の5500ミリ秒の間のものを選択します。
+* `lowerBound=1d` 明後 `upperBound=2d` 日何かを選ぶだろう
 
 うるう年は考慮されず、すべての月が 30 日になる点にご注意ください。
 
@@ -431,11 +430,11 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
 * **upperBound**
 
-   ミリ秒または`1s 2m 3h 4d 5w 6M 7y`（1秒、2分、3時間、4日、5週間、6か月、7年）の上限のサーバー時間、負のオフセットには「 — 」を使用します
+   現在のサーバー時間の上限（ミリ秒、2分、3時間、4日、5週間、6か月、7年）をミリ秒単位または`1s 2m 3h 4d 5w 6M 7y`（1秒、2分、3時間、4日、5週間、6ヶ月、7年）で、負のオフセットは「 — 」を使用します。
 
 * **lowerBound**
 
-   現在のサーバー時間に対する下限の日付（ミリ秒、2分、3時間、4日、5週間、6か月、7年）。負のオフセットには「 — 」を使用します`1s 2m 3h 4d 5w 6M 7y`
+   現在のサーバー時間の下限（ミリ秒、2分、3時間、4日、5週間、6ヶ月、7年）を示す日付（ミリ秒）または`1s 2m 3h 4d 5w 6M 7y`（1秒、2分、3時間、4日、5週、6ヶ月、7年）。負のオフセットは「 — 」を使用します
 
 ### root {#root}
 
@@ -451,15 +450,15 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
 * **p.limit**
 
-   ページサイズを示す数値
+   ページのサイズを表す数値
 
 * **p.guessTotal**
 
-   推奨：コストのかかる結果の総計を計算しないようにする。最大カウント総数を示す数値（1000など、粗いサイズで十分なフィードバックを与え、小さい結果を求める正確な数値）または「`true`」（最小限必要な値までカウント） + `p.limit``p.offset`
+   推奨：コストのかかる結果の全体を計算しないようにします。カウントする最大合計を示す数値（例えば、1000、小さい結果を得るのに十分な大きさと正確な数をユーザーに提供する数）または「`true`」で、最小限必要な`p.offset` + `p.limit`までカウントします。
 
 * **p.excerpt**
 
-   &quot; `true`&quot;に設定した場合、結果に全文の抜粋を含めます。
+   「 `true` 」に設定した場合は、完全なテキストの抜粋を結果に含めます
 
 * **p.hits**
 
@@ -471,19 +470,19 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
    * **full**:
 
-      ノードのsling JSONレンダリングで、ヒットのパスを示す`jcr:path`が付きます。デフォルトでは、リストの直接のプロパティだけがノードのより深いツリーを含めます。`p.nodedepth=N`は、0は無限のサブツリー全体を意味します。`p.acls=true`を追加して、指定した結果アイテムに対する現在のセッションのJCR権限を含めます(マッピング：`create` = `add_node`、`modify` = `set_property`、`delete` = `remove`)
+      ノードのsling JSONレンダリング（`jcr:path`はヒットのパスを示します）。デフォルトでは、ノードの直接のプロパティのリストのみが表示され、`p.nodedepth=N`で深いツリーを含めます。0は無限のサブツリー全体を意味します。`p.acls=true`を追加して、指定された結果項目に対する現在のセッションのJCR権限を含めます(マッピング：`create` = `add_node`、`modify` = `set_property`、`delete` = `remove`)
 
    * **選択的**:
 
-      `p.properties`に指定されたプロパティのみ。相対パスのスペース区切り（URLでは「+」を使用）リスト。相対パスの深さが1より大きい場合、これらは子オブジェクトとして表されます。特殊なjcr:pathプロパティには、ヒットのパスが含まれます。
+      `p.properties`で指定されたプロパティのみ。相対パスのリストをスペースで区切ります（URLでは「+」を使用）。相対パスの深さが1を超える場合は、子オブジェクトとして表されます。特別なjcr:pathプロパティには、ヒットのパスが含まれます。
 
 ### savedquery {#savedquery}
 
 永続的な querybuilder クエリのすべての述語を、サブグループの述語として現在のクエリに含めます。
 
-これによって追加のクエリが実行されることはありませんが、現在のクエリが拡張されます。
+これによって追加のクエリが実行されるわけではなく、現在のクエリが拡張されます。
 
-クエリは、`QueryBuilder#storeQuery()`を使用してプログラムで保持できます。 形式は、複数行の String プロパティか、Java プロパティ形式のテキストファイルとしてクエリを含む `nt:file` ノードにできます。
+クエリは `QueryBuilder#storeQuery()` を使用してプログラムで永続化できます。形式は、複数行の String プロパティか、Java プロパティ形式のテキストファイルとしてクエリを含む `nt:file` ノードにできます。
 
 保存済みクエリの述語のファセット抽出には対応していません。
 
@@ -491,9 +490,9 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
 * **savedquery**
 
-   保存されたクエリーへのパス（Stringプロパティまたは`nt:file`ノード）
+   保存されたクエリのパス（Stringプロパティまたは`nt:file`ノード）
 
-### similar {#similar}
+### 類似 {#similar}
 
 JCR XPathの`rep:similar()`を使用した類似性検索。
 
@@ -506,7 +505,7 @@ JCR XPathの`rep:similar()`を使用した類似性検索。
 * **local** 下位ノードの相対パス、または現在のノードの場合は 
 `.` 現在のノード(オプション、デフォルトは「  `.`」)
 
-### tag {#tag}
+### タグ {#tag}
 
 タグタイトルのパスを指定して、タグが付けられているコンテンツを検索します。
 
@@ -514,13 +513,13 @@ JCR XPathの`rep:similar()`を使用した類似性検索。
 
 #### プロパティ {#properties-21}
 
-* **タグ**
+* **tag**
 
     検索するタグタイトルのパス（「Asset Properties : Orientation / Landscape」など）。
 
 * **N_value**
 
-   `1_value`、`2_value`、...を使用して、複数のタグ（デフォルトで`OR`と組み合わされ、ifと=true）をチェックします（5.6以降）`AND`
+   `1_value`、`2_value`、...を使用して、複数のタグ（デフォルトでは`OR`と組み合わされ、and=trueの場合は`AND`と組み合わされている）をチェックします（5.6以降）。
 
 * **プロパティ**
 
@@ -536,11 +535,11 @@ JCR XPathの`rep:similar()`を使用した類似性検索。
 
 * **tagid**
 
-   検索するタグID（例：&quot; `properties:orientation/landscape`&quot;）
+   探すタグID（例：「 `properties:orientation/landscape` 」）。
 
 * **N_value**
 
-   `1_value`、`2_value`、...を使用して、複数のタグidをチェックします（デフォルトでは`OR`と組み合わされ、ifと=true）（5.6以降）。`AND`
+   `1_value`、`2_value`、...を使用して、複数のタグidをチェックします（デフォルトで`OR`と組み合わされ、and=trueの場合は`AND`と組み合わされます）（5.6以降）。
 
 * **プロパティ**
 
@@ -556,7 +555,7 @@ JCR XPathの`rep:similar()`を使用した類似性検索。
 
 * **tagsearch**
 
-    タグタイトル内で検索するキーワード。
+   タグタイトル内で検索するキーワード
 
 * **プロパティ**
 
@@ -568,11 +567,11 @@ JCR XPathの`rep:similar()`を使用した類似性検索。
 
 * **all**
 
-    （ブール値）タグのフルテキスト全体（すべてのタイトル、説明など）を検索します（「l `ang`」より優先）
+    （ブール値）タグのフルテキスト全体（すべてのタイトル、説明など）を検索します（「l `ang`」よりも優先）
 
 ### type {#type}
 
-特定の JCR ノードのタイプ（プライマリノードタイプまたは Mixin タイプ）に結果を制限します。そのノードタイプのサブタイプも検索します。リポジトリの検索インデックスでは、効率的に実行できるノードタイプに対応する必要があります。
+特定の JCR ノードのタイプ（プライマリノードタイプまたは Mixin タイプ）に結果を制限します。そのノードタイプのサブタイプも検索します。リポジトリーの検索インデックスでは、効率的に実行できるノードタイプに対応する必要があります。
 
 ファセットの抽出に対応しています。結果の固有のタイプごとにバケットを提供します。
 
