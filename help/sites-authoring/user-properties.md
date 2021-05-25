@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 6afbc889-c613-40e6-8a25-1570dff32d60
-translation-type: tm+mt
-source-git-commit: cfa09d2f1a78eac609cb6df7817234559c8d26dc
+exl-id: f620e85e-8c77-41a3-a238-9b93c819909d
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 95%
 
 ---
-
 
 # アカウント環境の設定{#configuring-your-account-environment}
 
@@ -108,4 +107,3 @@ AEM では、アカウントおよびオーサー環境の特定項目を設定�
 * **アセットのホームページを有効にする**
 
    このオプションは、システム管理者がアセットホームページの使用を組織全体で有効にしている場合にのみ使用できます。
-
