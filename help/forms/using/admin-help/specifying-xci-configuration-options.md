@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 162c9fda-f4d4-4ad5-a9ab-7554828e821c
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 7a13b13f-3eee-4fc0-8957-bd42f43119e9
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 100%
 
 ---
-
 
 # XCI 設定オプションの指定 {#specifying-xci-configuration-options}
 
@@ -32,4 +31,3 @@ Forms では、レンダリングに使用するカスタム XCI ファイルを
 1. 管理コンソールで、サービス／Forms をクリックします。
 1. 「システムデフォルトの XCI オプションを使用」チェックボックスをオンまたはオフにします。このオプションを選択すると、Forms では、パケット、作成者、プロデューサーおよび compressObjectStream の設定にデフォルト値が使用されます。このオプションを選択しない場合、Forms では、カスタム XCI ファイルで指定された値が使用されます。
 1. 「保存」をクリックします。
-
