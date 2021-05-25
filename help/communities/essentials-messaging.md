@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: eb8fd2b3-0a31-425e-b0f1-38f09e1106df
-translation-type: tm+mt
-source-git-commit: 98fae2d51d73bda946f3c398e9276fe4d5a8a0fe
+exl-id: c6ad3c2b-8776-4ec4-99da-ab73ecc61153
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 42%
 
 ---
-
 
 # メッセージングの基本事項 {#messaging-essentials}
 
@@ -55,7 +54,7 @@ ht-degree: 42%
  </tbody> 
 </table>
 
-**メッセージリスト** （受信トレイ、送信済み、ごみ箱用）
+**メッセージリスト** （インボックス、送信済み、ごみ箱）
 
 <table> 
  <tbody> 
@@ -64,7 +63,7 @@ ht-degree: 42%
    <td><p>social/messaging/components/hbs/messagebox</p> </td> 
   </tr> 
   <tr> 
-   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td> 
+   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientllibs</strong></a></td> 
    <td><p>cq.social.hbs.messaging</p> </td> 
   </tr> 
   <tr> 
@@ -77,7 +76,7 @@ ht-degree: 42%
   </tr> 
   <tr> 
    <td><strong>プロパティ</strong></td> 
-   <td><a href="configure-messaging.md">メッセージの設定</a>を参照</td> 
+   <td><a href="configure-messaging.md">メッセージングの設定</a>を参照してください。</td> 
   </tr> 
   <tr> 
    <td><strong>管理設定</strong></td> 
@@ -92,7 +91,7 @@ ht-degree: 42%
 
 * [メッセージングの設定](configure-messaging.md)
 
-* [SCFコンポーネント用メッセージングクライアント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) API
+* [SCFコンポーネントの](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) メッセージングクライアントAPI
 
 * [メッセージング API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html)（サービス用）
 
@@ -102,7 +101,7 @@ ht-degree: 42%
 
 >[!CAUTION]
 >
->次のMessageBuilderメソッドの場合、Stringパラメーターに末尾にスラッシュ「/」を含めることはできません*。
+>次のMessageBuilderメソッドの文字列パラメーターには、末尾にスラッシュ「/」を含めることはできません。
 >
 >* `setInboxPath`()
 >* `setSentItemsPath`()
@@ -123,14 +122,14 @@ ht-degree: 42%
 
 ### サンプルコード：メッセージ受信通知 {#sample-code-message-received-notification}
 
-ソーシャルメッセージ機能は、操作（例：`send`、`marking read`、`marking delete`）に対してイベントをスローします。 これらのイベントは、イベントに含まれるデータに対して取得し、実行されるアクションです。
+ソーシャルメッセージ機能では、`send`、`marking read`、`marking delete`など、操作に対してイベントが発生します。 これらのイベントは、イベントに含まれるデータに対して実行されるアクションをキャッチできます。
 
-次の例は、`message sent`イベントをリッスンし、`Day CQ Mail Service`を使用するすべてのイベント受信者に電子メールを送信するメッセージハンドラーです。
+次の例は、`message sent`イベントをリッスンし、`Day CQ Mail Service`を使用してすべてのメッセージ受信者に電子メールを送信するイベントハンドラーです。
 
 サーバー側サンプルスクリプトを試すには、開発環境と OSGi バンドルのビルド機能が必要です。
 
-1. ` [CRXDE|Lite](http://localhost:4502/crx/de)`に管理者としてログイン
-1. `bundle node`を`/apps/engage/install`内に作成し、次のような任意の名前を付けます。
+1. ` [CRXDE|Lite](http://localhost:4502/crx/de)`に管理者としてログインします。
+1. `bundle node`を`/apps/engage/install`内に、次のような任意の名前で作成します。
 
    * **[!UICONTROL シンボリック名]**:com.engage.media.social.messaging.MessagingNotification
    * ****&#x200B;名前：Getting Started Tutorial Message Notificaton
@@ -140,15 +139,15 @@ ht-degree: 42%
 1. `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification` に移動します。
 
    1. 自動的に作成された`Activator.java`クラスを削除します
-   1. クラス`MessageEventHandler.java`を作成
+   1. クラス`MessageEventHandler.java`を作成します
    1. 以下のコードを`MessageEventHandler.java`にコピー&amp;ペーストします。
 
-1. 「**[!UICONTROL すべて保存]**」をクリックします
-1. `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`に移動し、`MessageEventHandler.java`コードに記述されているとおりに、すべてのインポート文を追加します。
-1. バンドルの構築
-1. `Day CQ Mail Service`OSGiサービスが構成されていることを確認します
+1. 「**[!UICONTROL すべて保存]**」をクリックします。
+1. `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`に移動し、`MessageEventHandler.java`コードに記述されているように、すべてのimport文を追加します。
+1. バンドルをビルドします。
+1. `Day CQ Mail Service`OSGiサービスが設定されていることを確認します。
 1. 1人のデモユーザーとしてログインし、別のデモユーザーに電子メールを送信する
-1. 受信者は、新しいメッセージに関する電子メールを受信する必要があります
+1. 受信者は、新しいメッセージに関するEメールを受信する必要があります
 
 #### MessageEventHandler.java {#messageeventhandler-java}
 
@@ -241,4 +240,3 @@ public class MessagingEventHandler implements EventHandler {
     }
 }
 ```
-
