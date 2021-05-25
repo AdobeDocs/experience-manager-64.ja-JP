@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e83b1a59-a730-4d22-9d58-1c9c38e5d534
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 933c3903-2040-41f4-b803-4d672ce9a2dc
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 100%
 
 ---
-
 
 # Connector for EMC Documentum ユーザー向けのバックアップ方法 {#backup-strategy-for-connector-for-emc-documentum-users}
 
@@ -31,4 +30,3 @@ ECM リポジトリを使用して以下のタスクを実行し、AEM forms 環
 
 * [EMC Documentum Content Server の復元](/help/forms/using/admin-help/backing-recovering-emc-documentum-repository.md#restore-the-emc-documentum-content-server)の手順に従って、各 ECM システムを復元します。
 * このドキュメントで説明されている手順に従って、AEM Forms を回復します。
-
