@@ -10,12 +10,11 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: ec394bd3-2fa6-4f50-b974-bc10f643ecac
 exl-id: e5110a90-ddc9-4244-8466-f91adfca8469
-feature: Asset Management
+feature: アセット管理
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '330'
 ht-degree: 91%
 
 ---
@@ -39,8 +38,8 @@ Dynamic Media を使用する場合、次の複数のオプションがありま
 
 詳しくは、次のトピックを参照してください。
 
-* [WebページへのDynamic Mediaアセットの追加](adding-dynamic-media-assets-to-pages.md)
-* [ビデオビューアまたは画像ビューアのWebページへの埋め込み](embed-code.md)
+* [WebページへのDynamic Media Assetsの追加](adding-dynamic-media-assets-to-pages.md)
+* [Webページへのビデオビューアまたは画像ビューアの埋め込み](embed-code.md)
 * [Dynamic Media でのホットリンク保護の有効化](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/hotlink-protection.html?lang=ja#dynamic)
 * デジタル非表示透かし(Digimarc)とDynamic Mediaの統合（近日公開）
 * [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)
