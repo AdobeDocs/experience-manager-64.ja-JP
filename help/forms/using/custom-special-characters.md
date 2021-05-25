@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 1b5e6746-3618-46fe-ba2d-ec76bb79de1d
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: a6206ae1-b71b-4066-b7a0-ce39a60d6dd0
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '657'
 ht-degree: 69%
 
 ---
-
 
 # Correspondence Management でカスタム特殊文字を使用する {#custom-special-characters-in-correspondence-management}
 
@@ -26,14 +25,14 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
 
 たとえば、次の特殊文字を挿入できます。
 
-* 通貨記号（€、¥、£など）
-* 数学記号（∑、√、∂、^など）
-* 句読点の記号‟と
+* 通貨記号(€、¥、£など)
+* ∑、√、∂、^などの数学記号
+* 句読点（「 」と「 」）
 
 レターでは、次の場所で特殊文字を挿入することができます。
 
-* [テキストエディタ](/help/forms/using/document-fragments.md#createtext)内
-* [編集可能な、通信](/help/forms/using/create-correspondence.md#managecontent)内のインラインモジュール
+* [テキストエディター](/help/forms/using/document-fragments.md#createtext)で、
+* [編集可能な、通信内のインラインモジュール](/help/forms/using/create-correspondence.md#managecontent)内
 
 ![specialcharactersinlinemodule](assets/specialcharactersinlinemodule.png)
 
@@ -44,7 +43,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
 カスタム特殊文字の追加手順は次のとおりです。
 
 1. `https://[server]:[port]/[ContextPath]/crx/de`に移動し、管理者としてログインします。
-1. appsフォルダーに、**[!UICONTROL specialcharacters]**&#x200B;という名前のフォルダーを作成し、specialcharactersフォルダー（libsの下のtextEditorConfigフォルダーにあります）に類似したパス/構造を持たせます。
+1. appsフォルダーに、**[!UICONTROL specialcharacters]**&#x200B;という名前のフォルダーを作成します。このフォルダーのパスや構造は、specialcharactersフォルダー（libsの下のtextEditorConfigフォルダー内）と同様です。
 
    1. 次のパスにある&#x200B;**specialcharacters**&#x200B;フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
@@ -52,22 +51,22 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **パス：** /libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters
+      **パス：**  /libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters
 
       **オーバーレイの場所：** /apps/
 
-      **ノードタイプを一致：** オン
+      **ノードタイプを一致させる：** オン
 
       >[!NOTE]
       >
-      >/libsブランチは変更しないでください。 次の操作を行った場合はこのブランチが変更されるため、各自で加えた変更はすべて失われます。
+      >/libsブランチでは変更を加えないでください。 次の操作を行った場合はこのブランチが変更されるため、各自で加えた変更はすべて失われます。
       >
       >* インスタンス上でのアップグレード
       >* ホットフィックスの適用
       >* 機能パックのインストール
 
 
-   1. 「**OK**」をクリックし、「**すべて保存**」をクリックします。指定したパスに「specialcharacters」フォルダが作成されます。
+   1. 「**OK**」をクリックし、「**すべて保存**」をクリックします。指定したパスに「 specialcharacters 」フォルダーが作成されます。
 
       オーバーレイを作成したら、ノード構造タグを確認します。オーバーレイを使用して/ apps 内に作成された各ノードは、そのノードの/libs 内で定義されているのと同じクラスとプロパティを持つ必要があります。/apps の下にあるノード構造にプロパティまたはタグがない場合は、タグを /libs 内の対応するノードと同期させます。
 
@@ -75,7 +74,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
 
    | 名前 | タイプ | 値 |
    |---|---|---|
-   | cmConfigurationType | String | cmTextEditorConfiguration |
+   | cmConfigurationType | 文字列 | cmTextEditorConfiguration |
    | cssPath | 文字列 | /libs/fd/cm/ma/gui/components/admin/createasset/textcontrol/clientlibs/textcontrol |
 
 1. 次のパスにある&#x200B;**[!UICONTROL specialcharacters]**&#x200B;フォルダーを右クリックし、**作成/子ノード**&#x200B;を選択して、「**すべて保存**」をクリックします。
@@ -96,7 +95,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
    <td>カスタマイズした特殊文字を追加する</td> 
    <td> 
     <ol> 
-     <li>必須追加のプロパティを持つ「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」下の子ノード。</li> 
+     <li>必須のプロパティを持つ子ノードを「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下に追加します。</li> 
      <li>「すべて保存」をクリックします。</li> 
      <li>変更を表示するには、「テキストエディタ\Correspondence UI の作成」ページを更新します。</li> 
     </ol> </td> 
@@ -116,7 +115,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
    <td> 
     <ol> 
      <li>非表示にするノードを「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下にオーバーレイします。</li> 
-     <li>sling:hideResource (Boolean)追加プロパティを非表示にするノード（appsの下）に設定します。 </li> 
+     <li>非表示にするノード（appsの下）にsling:hideResource (Boolean)プロパティを追加します。 </li> 
      <li>「すべて保存」をクリックします。 </li> 
      <li>変更を表示するには、「テキストエディタ\Correspondence UI の作成」ページを更新します。<br /> </li> 
     </ol> </td> 
@@ -125,7 +124,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
    <td>複数の特殊文字を非表示にする</td> 
    <td> 
     <ol> 
-     <li>「sling:hideChildren (String or String[])」追加プロパティを「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」に変更します。 </li> 
+     <li>「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」にプロパティ「sling:hideChildren (String or String[])」を追加します。 </li> 
      <li>ノード名（非表示にする特殊文字）を「sling:hideChildren」プロパティの値として追加します。 </li> 
      <li>「すべて保存」をクリックします。 </li> 
      <li>変更を表示するには、「テキストエディタ\Correspondence UI の作成」ページを更新します。<br /> </li> 
@@ -135,7 +134,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
    <td>特殊文字の並び替え</td> 
    <td> 
     <ol> 
-     <li>必須追加のプロパティを持つ「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」下の子ノード。 </li> 
+     <li>必須のプロパティを持つ子ノードを「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下に追加します。 </li> 
      <li>新しく作成された子ノードに sling:orderBefore (String) プロパティを追加します。 </li> 
      <li>新たに追加した特殊文字の前に、ノード名を値として追加します。 </li> 
      <li>「すべて保存」をクリックします。 </li> 
@@ -144,4 +143,3 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
   </tr> 
  </tbody> 
 </table>
-
