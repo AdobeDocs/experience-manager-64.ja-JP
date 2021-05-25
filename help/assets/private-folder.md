@@ -2,16 +2,15 @@
 title: プライベートフォルダーの共有
 description: Adobe Experience Manager (AEM) Assets でプライベートフォルダーを作成して、他のユーザーと共有し、様々な特権をユーザーに割り当てる方法について説明します。
 contentOwner: AG
-feature: Collaboration
+feature: コラボレーション
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
+exl-id: b6aa3cba-4085-47ac-a249-7461baee2a00
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '450'
 ht-degree: 100%
 
 ---
-
 
 # プライベートフォルダーの共有 {#private-folder-sharing}
 
@@ -60,4 +59,3 @@ Adobe Experience Manager (AEM) Assets のユーザーインターフェイスに
 >[!NOTE]
 >
 >プライベートフォルダーを作成するには、プライベートフォルダーを作成する親フォルダーに対する ACL の読み取りおよび編集権限が必要です。管理者でない場合、これらの権限は */content/dam* でデフォルトでは有効になっていません。この場合、プライベートフォルダーを作成またはフォルダー設定を表示する前に、ユーザー ID またはグループ用にそれらの権限を取得します。
-
