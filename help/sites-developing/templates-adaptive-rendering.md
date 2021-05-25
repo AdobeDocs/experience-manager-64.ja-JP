@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: f5cb0e98-0d6e-4f14-9b94-df1a9d8cbe5b
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: a2adc825-2a18-42b8-a639-c48243b2279c
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 83%
 
 ---
-
 
 # アダプティブテンプレートレンダリング{#adaptive-template-rendering}
 
@@ -24,7 +23,7 @@ ht-degree: 83%
 
 ## 概要 {#overview}
 
-テンプレートは一般にレスポンシブグリッドを中心に構築されます。これらのテンプレートをベースに作成されたページは完全にレスポンシブとなり、クライアントデバイスのビューポートに合わせて自動的に調整されます。ページエディターの「エミュレータ」ツールバーを使用して、作成者はレイアウトを特定のデバイスにターゲットできます。
+テンプレートは一般にレスポンシブグリッドを中心に構築されます。これらのテンプレートをベースに作成されたページは完全にレスポンシブとなり、クライアントデバイスのビューポートに合わせて自動的に調整されます。作成者は、ページエディターのエミュレーターツールバーを使用して、特定のデバイスに対してレイアウトをターゲット設定できます。
 
 また、アダプティブレンダリングに対応するようテンプレートを設定することもできます。デバイスグループが正しく設定されている場合、エミュレーターモードでデバイスを選択すると、URL に別のセレクターを使用してページがレンダリングされます。セレクターを使用すると、特定のページレンダリングを、URL を使用して直接呼び出すことができます。
 
@@ -45,7 +44,7 @@ ht-degree: 83%
 
 この例では、We.Retail 内に&#x200B;**エクスペリエンスページ**&#x200B;テンプレートの一部としてアダプティブレンダリングセレクターが含まれるように、既存のデバイスグループである&#x200B;**スマートフォン**&#x200B;を設定します。
 
-1. `http://localhost:4502/miscadmin#/etc/mobile/groups`内のアダプティブセレクターを必要とするデバイスグループを編集
+1. `http://localhost:4502/miscadmin#/etc/mobile/groups`で、アダプティブセレクターが必要なデバイスグループを編集します。
 
    「**エミュレーターを無効にする**」オプションを設定して保存します。
 
@@ -65,7 +64,7 @@ ht-degree: 83%
 
    ![chlimage_1-159](assets/chlimage_1-159.png)
 
-1. CRX DE Liteを使用して、デバイスグループをサイトの構造上の複数値の文字列プロパティ`cq:deviceGroups`に追加することで、そのデバイスグループをサイトで使用できるようにします。
+1. CRXDE Liteを使用して、サイトの構造上の複数値文字列プロパティ`cq:deviceGroups`にデバイスグループを追加し、サイトでデバイスグループを使用できるようにします。
 
    `/content/<your-site>/jcr:content`
 
@@ -77,9 +76,8 @@ ht-degree: 83%
 
 これで、ページエディターで[エミュレーター](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints)を使用する際（[レイアウトを変更する](/help/sites-authoring/responsive-layout.md)場合など）、設定済みのデバイスグループのデバイスを選択すると、URL の一部としてセレクターを持つページがレンダリングされるようになります。
 
-この例では、**エクスペリエンスページ**&#x200B;テンプレートに基づいてページを編集し、エミュレーターでiPhone 4を選択すると、セレクターを含むページが`arctic-surfing-in-lofoten.html`ではなく`arctic-surfing-in-lofoten.smart.html`としてレンダリングされます
+この例では、**エクスペリエンスページ**&#x200B;テンプレートに基づいてページを編集し、エミュレーターでiPhone 4を選択すると、`arctic-surfing-in-lofoten.html`ではなく`arctic-surfing-in-lofoten.smart.html`としてセレクターを含むページがレンダリングされます
 
 このセレクターを使用してページを直接呼び出すこともできます。
 
 ![chlimage_1-161](assets/chlimage_1-161.png)
-
