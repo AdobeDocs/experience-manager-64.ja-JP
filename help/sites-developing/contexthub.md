@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: acf5c17a-95b7-43ba-9734-241e20f4f374
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: 0a6b815a-5055-4c44-96d1-ff238b4285f3
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 86%
 
 ---
 
-
 # ContextHub{#contexthub}
 
-ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。クライアントサイド JavaScript API を使用してデータにアクセスし、コンテンツをパーソナライズします。
+ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。：クライアントサイド JavaScript API を使用してデータにアクセスし、コンテンツをパーソナライズします。
 
 >[!NOTE]
 >
@@ -28,9 +27,9 @@ ContextHub は、コンテキストデータを保存、操作および表示す
 
 >[!CAUTION]
 >
->[We.Retail参照実装](/help/sites-developing/we-retail.md) (`/libs/settings/cloudsettings/legacy`)で使用されるサンプルのContextHub構成を含むパスは、独自の構成を作成するための参照としてのみ使用する必要があります。
+>[We.Retail参照実装](/help/sites-developing/we-retail.md)(`/libs/settings/cloudsettings/legacy`)で使用されるサンプルのContextHub設定を含むパスは、独自の設定を作成するための参照としてのみ使用する必要があります。
 >
->プロジェクトでは、独自のContextHub設定として使用しないでください。
+>プロジェクト内では、独自のContextHub設定として使用しないでください。
 
 ## 永続性 {#persistence}
 
@@ -43,7 +42,7 @@ ContextHub ストアは、コンテキストデータをクライアント上に
 * デベロッパーは、[カスタムストアタイプを作成](/help/sites-developing/ch-extend.md#creating-custom-store-candidates)できます。
 * 開発者は、JavaScript を使用して[ストアデータにアクセス](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores)できます。
 
-## セグメント化  {#segmentation}
+## セグメント化 {#segmentation}
 
 ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントの判断をするセグメント化エンジンが含まれています。いくつかのセグメントが定義されています。JavaScript API を使用して、[解決されたセグメントを判断](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments)できます。
 
