@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 667645a0-53d0-4f9b-a0ba-cc7e366a23a1
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 8eee2ed2-8263-47f2-b928-214fd9ab5f6e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 63%
 
 ---
-
 
 # Windows Vista での SSL の設定 {#configuring-ssl-on-windows-vista}
 
@@ -32,11 +31,10 @@ Windows Vista™ で SSL を設定するには、認証時に RSA 鍵が設定�
 
 1. コマンドプロンプトで、*[JAVA HOME]*/binに移動し、次のコマンドを入力して証明書とキーストアを作成します。
 
-   `keytool -genkey -keyalg RSA -dname "CN=`*ホスト* `, OU=`*NameGroup* `, O=`*NameCompany* `,L=`*NameCity City*****Name** StateCountry Code `, S=`** `, C=`*&quot;LC cert&quot;* `" -alias`** `-keypass` `*key*`** `-keystore`**_*Passwordstorestoname* `.keystore`
+   `keytool -genkey -keyalg RSA -dname "CN=`*ホス* `, OU=`*ト名* `, O=`*グルー* `,L=`*プ名Company* NameCity `, S=`** `, C=`** `" -alias`******名前** `-keypass` `*key*`StateCountry Code ** `-keystore`*&quot;LC Cert&quot;  *_*passwordkeystorename* `.keystore`
 
    >[!NOTE]
    >
-   >*[JAVA_HOME]は、JDKがインストールされているディレクトリに置き換え、斜体のテキストは、環境に対応する値に置き換えます。*
+   >*[JAVA_HOME]をJDKがインストールされているディレクトリに置き換え、斜体のテキストを環境に対応する値に置き換えます。*
 
 1. パスワードとして`changeit`と入力します。 Java インストールではこれがデフォルトのパスワードですが、システム管理者によって変更されている場合があります。
-
