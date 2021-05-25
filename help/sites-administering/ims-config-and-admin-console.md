@@ -1,22 +1,21 @@
 ---
 title: 'AEM Managed Services に対する Adobe IMS 認証およびアドミンコンソールのサポート '
 seo-title: 'AEM Managed Services に対する Adobe IMS 認証およびアドミンコンソールのサポート '
-description: AEMでAdmin Consoleを使用する方法を学びます。
-seo-description: AEMでAdmin Consoleを使用する方法を学びます。
+description: AEMでのAdmin Consoleの使用方法
+seo-description: AEMでのAdmin Consoleの使用方法
 uuid: 3f5b32c7-cf62-41a4-be34-3f71bbf224eb
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
-translation-type: tm+mt
-source-git-commit: e672f4edf87bd4d3af985e2ea598feb4e26d1553
+exl-id: 38bbad03-aead-43d3-a28c-cc716955ddfb
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1769'
 ht-degree: 82%
 
 ---
-
 
 # AEM Managed Services に対する Adobe IMS 認証およびアドミンコンソールのサポート {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
 
@@ -24,11 +23,11 @@ ht-degree: 82%
 >
 >この機能は、Adobe Managed Services のお客様にのみご利用いただけます。
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
-AEM 6.4.3.0では、AEMインスタンスとAdobeIMS(Identity Managementシステム)ベースの認証を&#x200B;**AEMManaged Services**&#x200B;のお客様にサポートするAdmin Consoleが導入されています。
+AEM 6.4.3.0では、AEMインスタンスと、**AEM Managed Services**&#x200B;のお客様向けに、AdobeIMS(Identity Management System)ベースの認証に対するAdmin Consoleサポートが導入されました。
 
-AEM がアドミンコンソールをオンボーディングしたことにより、AEM Managed Servicesのお客様は 1 つのコンソールですべての Experience Cloud ユーザーを管理できます。ユーザーとグループをAEMインスタンスに関連付けられた製品プロファイルに割り当て、特定のインスタンスにログインできます。
+AEM がアドミンコンソールをオンボーディングしたことにより、AEM Managed Servicesのお客様は 1 つのコンソールですべての Experience Cloud ユーザーを管理できます。ユーザーとグループは、AEMインスタンスに関連付けられた製品プロファイルに割り当てることができ、特定のインスタンスにログインできます。
 
 ## 主なハイライト {#key-highlights}
 
@@ -38,7 +37,7 @@ AEM がアドミンコンソールをオンボーディングしたことによ�
 * アドミンコンソールの製品プロファイルによって、ユーザーがアクセスできるインスタンスが決まります。
 * お客様独自の SAML 2 準拠の ID プロバイダーを使用したフェデレーテッド認証がサポートされています。
 * 個人用の Adobe ID ではなく、エンタープライズ ID またはフェデレーデッド ID（お客様のシングルサインオン用）のみがサポートされます。
-* ユーザー管理(Adobe Admin Console)は、引き続き顧客の管理者が所有します。
+* (Adobe Admin Consoleの)ユーザー管理は、引き続き顧客管理者が所有します。
 
 ## アーキテクチャ {#architecture}
 
@@ -56,7 +55,7 @@ IMS 認証は、AEM と Adobe IMS エンドポイントの間で OAuth プロト
 
 最初のステップとして、Adobe IMS に組織をプロビジョニングする必要があります。Adobe Enterprise のお客様は、[Adobe Admin Console](https://helpx.adobe.com/jp/enterprise/using/admin-console.html) に IMS 組織として表されています。
 
-AEMManaged Servicesのお客様は、既に組織がプロビジョニングされている必要があります。また、IMSプロビジョニングの一環として、ユーザーの権利付与とアクセスを管理するAdmin Consoleでカスタマーインスタンスを使用できるようになります。
+AEM Managed Servicesのお客様は、既に組織をプロビジョニングしておく必要があります。また、IMSプロビジョニングの一環として、ユーザーの使用権限とアクセスを管理するAdmin Consoleで顧客インスタンスを使用できるようになります。
 
 ユーザー認証のための IMS への移行は、AMS とお客様の共同作業となり、それぞれがワークフローを完了させます。
 
@@ -64,11 +63,11 @@ AEMManaged Servicesのお客様は、既に組織がプロビジョニングさ�
 
 ![image2018-9-23_23-33-25](assets/image2018-9-23_23-33-25.png)
 
-1. 指定されたシステム管理者が、Admin Consoleへのログインに関する招待を受け取ります
+1. 指定されたシステム管理者が、Admin Consoleへのログインの招待を受け取る
 1. システム管理者は、ドメインの所有権を確認するためにドメインを要求する（この例では acme.com）
 1. システム管理者はユーザーディレクトリを設定する
 1. システム管理者は、SSO 設定用に管理コンソールの ID プロバイダ（IDP）を設定する
-1. AEM 管理者は、通常どおりローカルグループ、権限、および特権を管理する。「ユーザーとグループの同期」を参照してください。
+1. AEM 管理者は、通常どおりローカルグループ、権限、および特権を管理する。ユーザーとグループの同期を参照してください。
 
 >[!NOTE]
 >
@@ -114,7 +113,7 @@ Analytics、Target、Creative Cloud などの他の Adobe 製品を管理する�
 
 [https://github.com/adobe-apiplatform/user-sync.py/releases/latest](https://github.com/adobe-apiplatform/user-sync.py/releases/latest)
 
-プレリリース版のバージョン2.4RC1は、動的グループ作成のサポートで利用でき、次の場所にあります。[https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1)
+プレリリースバージョンの2.4RC1は、動的グループ作成のサポートで利用でき、次の場所にあります。[https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1)
 
 このリリースの主な機能は、Admin Console でユーザーのメンバーシップに合わせて新しい LDAP グループを動的にマッピングする機能と、動的なユーザーグループ作成です。
 
@@ -132,7 +131,7 @@ Analytics、Target、Creative Cloud などの他の Adobe 製品を管理する�
 >Adobe I/O コンソールのドキュメントは[ここ](https://www.adobe.io/apis/cloudplatform/console.html)を参照してください。
 >
 >
->ユーザー同期ツールで使用されるUser Management APIは、この[場所](https://www.adobe.io/apis/cloudplatform/umapi-new.html)で扱います。
+>ユーザー同期ツールで使用されるUser Management APIについては、この[場所](https://www.adobe.io/apis/cloudplatform/umapi-new.html)を参照してください。
 
 >[!NOTE]
 >
@@ -194,17 +193,17 @@ AEM では引き続き、管理ユーザーのローカルログインをサポ�
 
 別の認証方式を使用していて、現在 IMS に移行されている既存の AEM インスタンスの場合、移行手順が必要です。
 
-AEMリポジトリ内の既存のユーザー（ローカルソース、LDAPまたはSAML）は、User Migration Utilityを使用して、IDPとしてIMSに移行できます。
+AEMリポジトリ内の既存のユーザー（ローカルソース、LDAPまたはSAMLを使用）は、User Migration Utilityを使用して、IDPとしてIMSを指すように移行できます。
 
 このユーティリティは、IMS プロビジョニングの一部として AMS チームによって実行されます。
 
 ### AEM での権限と ACL の管理  {#managing-permissions-and-acls-in-aem}
 
-アクセス制御と権限は、AEMで引き続き管理されます。これは、IMSからのユーザーグループ(下の例ではAEM-GRP-008)と、権限とアクセス制御が定義されたローカルグループを分離することで実現できます。 IMS から同期されたユーザーグループは、ローカルグループに割り当てられ、権限を継承することができます。
+アクセス制御と権限は、引き続きAEMで管理されます。これをおこなうには、IMSからのユーザーグループ(以下の例ではAEM-GRP-008)と、権限とアクセス制御が定義されているローカルグループを分離します。 IMS から同期されたユーザーグループは、ローカルグループに割り当てられ、権限を継承することができます。
 
 以下の例では、同期グループをローカル *Dam_Users* グループに追加しています。
 
-ここでは、ユーザーはアドミンコンソールのいくつかのグループにも割り当てられています。(ユーザーとグループは、ユーザー同期ツールを使用してLDAPから同期できるか、ローカルに作成できます。上記の&#x200B;**Admin Console**&#x200B;に対するユーザーのオンボーディングの節を参照してください)。
+ここでは、ユーザーはアドミンコンソールのいくつかのグループにも割り当てられています。(ユーザーとグループは、ユーザー同期ツールを使用してLDAPから同期することも、ローカルで作成することもできます。前述の&#x200B;**Admin Consoleへのユーザーのオンボーディング**&#x200B;の節を参照してください)。
 
 >[!NOTE]
 >
@@ -227,4 +226,3 @@ AEM では、IMS から同期されたユーザーグループを既存のロー
 以下に示すように、グループ *AEM-GRP_008* は DAM ユーザーの権限と特権を継承します。これは同期されたグループに対する権限を管理する効果的な方法であり、LDAP ベースの認証方法でも一般的に使用されています。
 
 ![screen_shot_2018-09-17at110505pm](assets/screen_shot_2018-09-17at110505pm.png)
-
