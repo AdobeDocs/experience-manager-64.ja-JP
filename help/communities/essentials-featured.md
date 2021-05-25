@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 781625f1-39a0-4e34-948c-d4eab35dd5c1
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 4805db0f-18d2-4bbc-a4d6-eaafa7a4c152
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 84%
 
 ---
-
 
 # おすすめコンテンツの基本事項  {#featured-content-essentials}
 
@@ -50,13 +49,13 @@ ht-degree: 84%
   </tr>
   <tr>
    <td><strong> properties</strong></td> 
-   <td><a href="featured.md">重点コンテンツ</a>を参照</td> 
+   <td><a href="featured.md">おすすめコンテンツ</a>を参照</td> 
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-### ファイルライブラリ機能  {#file-library-function}
+### ファイルライブラリ機能 {#file-library-function}
 
-[特集コンテンツ機能](functions.md#featured-content-function)を含むコミュニティサイト構造には、設定済みの`featured content`コンポーネントが含まれます。
+[おすすめコンテンツ機能](functions.md#featured-content-function)を含むコミュニティサイト構造には、設定済みの`featured content`コンポーネントが含まれます。
