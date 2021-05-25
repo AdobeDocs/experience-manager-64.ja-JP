@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 1bc19f9a-fa3f-43e3-813e-23ab0b708d43
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 34b509d5-4e80-4229-b155-40004856e87e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 83%
 
 ---
-
 
 # AEM のトラブルシューティング{#troubleshooting-aem}
 
@@ -79,17 +78,17 @@ ht-degree: 83%
 
 ### Sling Thread Dumper の使用  {#using-sling-thread-dumper}
 
-1. **AEM Webコンソール**&#x200B;を開きます。（例：`http://localhost:4502/system/console/`）。
+1. **AEM Webコンソール**&#x200B;を開きます。例えば、`http://localhost:4502/system/console/`に配置します。
 
-1. 「**ステータス**」タブで、「**スレッド**」を選択します。
+1. 「**ステータス**」タブで「**スレッド**」を選択します。
 
 ![screen_shot_2012-02-13at43925pm](assets/screen_shot_2012-02-13at43925pm.png)
 
-### jstack （コマンドライン） {#using-jstack-command-line}を使用
+### jstack（コマンドライン） {#using-jstack-command-line}の使用
 
 1. AEM Java インスタンスの PID（プロセス ID）を確認します。
 
-   例えば、`ps -ef`または`jps`を使用できます。
+   例えば、`ps -ef`や`jps`を使用できます。
 
 1. 実行:
 
@@ -110,7 +109,7 @@ ht-degree: 83%
 AEM WCM 用の機能を開発する場合は、JCR セッションが開かれる可能性があります（データベース接続を開く処理に相当します）。開かれたセッションが閉じられないと、システムで以下の症状が発生する可能性があります。
 
 * システムの速度が低下する。
-* 多くのCacheManagerが表示されます。resizeAllエントリ（ログファイル内）;次の数(size=&lt;x>)はキャッシュの数を示し、各セッションは複数のキャッシュを開きます。
+* 多くのCacheManagerが表示されます。resizeAllログファイル内のエントリ；次の数(size=&lt;x>)は、キャッシュの数を示し、各セッションは複数のキャッシュを開きます。
 * システムのメモリが不足することがある（重大度に応じて数時間後、数日後、数週間後に発生）。
 
 閉じられていないセッションを分析して、セッションを閉じていないコードを特定するには、ナレッジベースの記事[閉じられていないセッションの分析](https://helpx.adobe.com/crx/kb/AnalyzeUnclosedSessions.html)を参照してください。
@@ -119,9 +118,9 @@ AEM WCM 用の機能を開発する場合は、JCR セッションが開かれ�
 
 発生する可能性のある問題の初期の兆候を OSGi バンドルのステータスで確認することもできます。
 
-1. **AEM Webコンソール**&#x200B;を開きます。（例：`http://localhost:4502/system/console/`）。
+1. **AEM Webコンソール**&#x200B;を開きます。例えば、`http://localhost:4502/system/console/`に配置します。
 
-1. 「**OSGI**」タブの「**バンドル**」を選択します。
+1. 「**OSGI**」タブの下の「**Bundles**」を選択します。
 
 1. 次の項目を確認します。
 
@@ -129,4 +128,3 @@ AEM WCM 用の機能を開発する場合は、JCR セッションが開かれ�
    * いずれかのバンドルで依存関係が失われていないかどうか。個々のバンドル名（リンク）をクリックすると、詳細を確認できます（問題が発生していない場合の例を次に示します）。
 
 ![screen_shot_2012-02-13at44706pm](assets/screen_shot_2012-02-13at44706pm.png)
-
