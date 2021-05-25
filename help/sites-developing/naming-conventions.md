@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: 198098c0-432b-4a93-a94e-2552337435dd
-translation-type: tm+mt
-source-git-commit: ce717994831eb3ef90baaffa7413de50f671b07c
+exl-id: 741043c7-2ebb-455d-8163-a246b874a7b3
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 99%
 
 ---
-
 
 # 命名規則{#naming-conventions}
 
@@ -76,4 +75,3 @@ ht-degree: 99%
    * 0～9
    * _（アンダースコア）
    * `-` （ダッシュ/マイナス）
-
