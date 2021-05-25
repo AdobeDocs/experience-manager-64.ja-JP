@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 88b634bb-8f6c-4830-ad01-821668609615
-translation-type: tm+mt
-source-git-commit: ccf4f4232d6a7af0781480106526c4c6fcb7c40e
+exl-id: 25a01630-47ec-4823-ad11-9a636697f3dc
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 98%
 
 ---
-
 
 # プロセスインスタンスの検索{#searching-for-process-instances}
 
@@ -52,13 +51,13 @@ ht-degree: 98%
    * 「値」ボックスに、選択した属性に適した値を入力します。
 
 1. 行を追加するには、「フィルターを増やす」を選択します。別のセットの「属性」リスト、「フィルター」リストおよび「値」リストと、「条件」リストが表示されます。
-1. 「条件」で、「AND」または「OR」を選択します。必要に応じて手順1 ～ 3を繰り返し、検索範囲を絞り込みます。
+1. 「条件」で、「AND」または「OR」を選択します。必要に応じて手順1 ～ 3を繰り返し、検索をさらに絞り込みます。
 1. 行を追加または削除するには「フィルターを増やす」または「フィルターを減らす」をクリックします。1～4 行まで指定できます。
 1. 「検索」をクリックします。プロセスインスタンスページが表示され、見つかったインスタンスが表示されます。
 
 [プロセスインスタンスのステータスについて](/help/forms/using/admin-help/processes.md#about-process-instance-statuses)
 
-## プロセスの複合検索の実行  {#perform-a-combined-search-for-a-process}
+## プロセスの複合検索の実行 {#perform-a-combined-search-for-a-process}
 
 暗黙の AND を使用して、一般検索と詳細検索の両方に基づく検索を作成するには、プロセスの検索ページの「一般検索」と「詳細検索」の両方に条件を入力します。
 
