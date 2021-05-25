@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 53c37f8c-eb75-4134-9f91-8adb0a574360
-translation-type: tm+mt
-source-git-commit: c0c0a7223ef70d3c19954bb2fc2a92dbad8ce049
+exl-id: 8b83e8d2-09ad-4010-a69a-2af1907a1ca6
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 92%
 
 ---
-
 
 # コンポーネント{#components}
 
@@ -30,7 +29,7 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 >
 >インスタンスによっては、要件に合わせて明示的に開発されたカスタマイズコンポーネントが存在する場合があります。これらは、ここで説明するいくつかのコンポーネントと同じ名前の場合があります。
 
-## 一般的な使用方法 {#general-usage}
+## 一般的な使用方法  {#general-usage}
 
 コンポーネントは、[ページの編集](/help/sites-authoring/editing-content.md)時にページエディターのサイドパネルの「**コンポーネント**」タブで使用できます。
 
@@ -60,9 +59,9 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 
 * [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) - コアコンポーネントは柔軟かつ機能豊富なオーサリング機能を提供します。ページを作成するうえで不可欠なコンテンツタイプが用意されています。
 
-* [コミュニティ](/help/communities/author-communities.md) - コンポーネントには、Web サイトのインタラクティブな機能（フォーラムやコメントなど）が用意されています。これらのコンポーネントの多くは、[コミュニティサイト](/help/communities/overview.md)が作成されたときに含まれます。
+* [コミュニティ](/help/communities/author-communities.md) - コンポーネントには、Web サイトのインタラクティブな機能（フォーラムやコメントなど）が用意されています。これらのコンポーネントの多くは、[コミュニティサイト](/help/communities/overview.md)を作成する際に含まれます。
 
-* [eコマース](/help/sites-administering/ecommerce.md) - AEMのeコマース機能には、様々なコンポーネントも含まれています。実際の使用方法は、使用するコマースエンジンによって異なります。
+* [eコマース](/help/sites-administering/ecommerce.md)  - AEMのeコマース機能には、様々なコンポーネントが含まれています。実際の使用方法は、使用するコマースエンジンによって異なります。
 
 ### コンポーネントの設定 {#configuring-components}
 
@@ -70,4 +69,3 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 
 * ページが最新の編集可能な推奨テンプレートに基づいている場合は、[テンプレートを編集](/help/sites-authoring/templates.md)して、コンポーネントを有効／無効にしたり、特定のコンポーネントのパラメーターを編集したりできます。
 * ページが静的テンプレートに基づいている場合は、[デザインモード](/help/sites-authoring/default-components-designmode.md#enable-disable-components)を使用して、コンポーネントを有効／無効にしたり、特定のコンポーネントのパラメーターを編集したりできます。
-
