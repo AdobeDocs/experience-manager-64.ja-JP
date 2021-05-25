@@ -1,14 +1,13 @@
 ---
-title: '装飾タグ   '
-description: Web ページのコンポーネントがレンダリングされる際に、レンダリングしたコンポーネントをラッピングする HTML 要素を生成できます。AEM は、開発者向けに、含まれているコンポーネントをラップする装飾タグを制御する明確でシンプルなロジックを提供します。
-translation-type: tm+mt
-source-git-commit: 7b5cae8aea49b3fd4200bd902d07e1c0fe1090ce
+title: 装飾タグ
+description: Web ページのコンポーネントがレンダリングされる際に、レンダリングしたコンポーネントをラッピングする HTML 要素を生成できます。AEM では、含まれているコンポーネントをラップする装飾タグを制御する明確でシンプルなロジックを開発者向けに提供しています。
+exl-id: b5edfd56-8e21-44b9-9ea4-3bbdcdb23b50
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 93%
 
 ---
-
 
 # 装飾タグ     {#decoration-tag}
 
@@ -45,7 +44,7 @@ AEM は、開発者向けに、含まれているコンポーネントをラッ�
 
 ## スクリプトの制御  {#script-controls}
 
-ただし、ラッパーの動作は、要素を含めるために[HTL](/help/sites-developing/decoration-tag.md#htl)または[JSP](/help/sites-developing/decoration-tag.md#jsp)が使用されるかどうかによって異なります。
+ただし、ラッパー動作は、要素を含めるために[HTL](/help/sites-developing/decoration-tag.md#htl)と[JSP](/help/sites-developing/decoration-tag.md#jsp)のどちらを使用するかによって異なります。
 
 ### HTL {#htl}
 
@@ -138,14 +137,13 @@ HTL での開発について詳しくは、[HTL ドキュメント](https://help
 
 ## JSP {#jsp}
 
-`cq:includ`eまたは`sling:include`を使用してコンポーネントを含める場合、AEMのデフォルトの動作では、DIVを使用して要素をラップします。 ただし、このラッピングは 2 つの方法でカスタマイズできます。
+`cq:includ`eまたは`sling:include`を使用してコンポーネントを含める場合、AEMのデフォルトの動作では、DIVを使用して要素を囲みます。 ただし、このラッピングは 2 つの方法でカスタマイズできます。
 
 * `cq:noDecoration` を使用してコンポーネントをラッピングしないように明示的に AEM に指定します。
-* カスタムHTMLタグを使用して、`cq:htmlTag`/ `cq:tagName`または`decorationTagName`を使用してコンポーネントをラップします。
+* カスタムHTMLタグを使用して、 `cq:htmlTag`/ `cq:tagName`または`decorationTagName`を使用してコンポーネントを囲みます。
 
 ### デシジョンツリー {#decision-tree-1}
 
-次のデシジョンツリーは、`cq:noDecoration`、`cq:htmlTag`、`cq:tagName`および`decorationTagName`がラッパーの動作に与える影響を説明しています。
+次のデシジョンツリーは、`cq:noDecoration`、`cq:htmlTag`、`cq:tagName`および`decorationTagName`がラッパー動作に与える影響を示しています。
 
 ![chlimage_1-3](assets/chlimage_1-3.jpeg)
-
