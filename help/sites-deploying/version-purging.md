@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 56f36dcf-8fbd-43f8-bf74-e88d5b686160
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 設定
+exl-id: 357d5f23-3e75-44e3-905f-4efe960858bf
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 64%
 
 ---
-
 
 # バージョンのパージ{#version-purging}
 
@@ -33,13 +32,13 @@ ht-degree: 64%
 
 AEM には、リポジトリの管理に役立つ様々なメカニズムが備わっています。
 
-* [バージョンマネージャ](#version-manager)
+* [バージョンマネージャー](#version-manager)
 
-   新しいバージョンを作成する際に古いバージョンを削除するように設定できます。
+   これは、新しいバージョンが作成されたときに古いバージョンをパージするように設定できます。
 
-* [Purge Versions](/help/sites-deploying/monitoring-and-maintaining.md#version-purging)ツール
+* [バージョンのパージ](/help/sites-deploying/monitoring-and-maintaining.md#version-purging)ツール
 
-   これは、リポジトリの監視と管理の一部として使用されます。
+   これは、リポジトリの監視および保守の一部として使用されます。
 
    このツールを使用すると、次のパラメーターに従って、ノードまたはノードの階層の古いバージョンを削除するためにユーザーが介入できます。
 
@@ -51,7 +50,7 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
       バージョンの期間がこの値を超えると、リポジトリからパージされます。
 
-* [バージョンの削除メンテナンスタスク](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks)。 バージョンのパージメンテナンスタスクをスケジュールして、古いバージョンを自動的に削除できます。その結果、バージョンの削除ツールを手動で使用する必要が最小限に抑えられます。
+* [バージョンのパージメンテナンスタスク](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks)。 バージョンのパージメンテナンスタスクをスケジュールして、古いバージョンを自動的に削除できます。その結果、バージョンのパージツールを手動で使用する必要性を最小限に抑えることができます。
 
 >[!CAUTION]
 >
@@ -69,39 +68,39 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
 * `versionmanager.createVersionOnActivation` (ブール値、デフォルト：true)
 
-   ページがアクティブ化されたときにバージョンを作成するかどうか。
+   ページがアクティベートされたときにバージョンを作成するかどうか。
 
-   バージョンの作成が許可されていない場合は、レプリケーションエージェントがバージョンの作成を禁止するように構成されていない限り、バージョンが作成されます。バージョンマネージャーでは、
+   バージョンは、バージョンの作成を無効にするようにレプリケーションエージェントが設定されていない限り作成されます。バージョンマネージャーはこれを受け入れます
 
-   バージョンは、versionmanager.ivPathsに含まれるパスでアクティベーションが発生した場合にのみ作成されます（以下を参照）。
+   バージョンは、versionmanager.ivPathsに含まれるパスでアクティベートが発生した場合にのみ作成されます（以下を参照）。
 
 * `versionmanager.ivPaths` (文字列[]、デフォルト：{&quot;/&quot;})
 
-   versionmanager.createVersionOnActivationがtrueの場合に、アクティベーションでバージョンが暗黙的に作成されるパスです。
+   versionmanager.createVersionOnActivationがtrueの場合に、アクティベーション時にバージョンが暗黙的に作成されるパス。
 
 * `versionmanager.purgingEnabled` (ブール値、デフォルト：false)
 
-   新しいバージョンの作成時に削除を有効にするかどうか
+   新しいバージョンが作成されたときにパージを有効にするかどうか
 
 * `versionmanager.purgePaths` (文字列[]、デフォルト：{&quot;/content&quot;})
 
-   新しいバージョンが作成されたときにバージョンを削除するパス。
+   新しいバージョンが作成されたときにバージョンをパージするパス。
 
-* `versionmanager.maxAgeDays` (int、デフォルト：30)
+* `versionmanager.maxAgeDays` (整数、デフォルト：30)
 
-   削除すると、この値より古いバージョンはすべて削除されます。 この値が1より小さい場合、バージョンの古さに基づいて削除は実行されません
+   パージ時に、この値より古いバージョンが削除されます。 この値が1未満の場合、バージョンの期間に基づいてパージは実行されません
 
-* `versionmanager.maxNumberVersions` （int、デフォルト5）
+* `versionmanager.maxNumberVersions` （整数、デフォルトは5）
 
-   削除すると、n番目に新しいバージョンより古いバージョンは削除されます。 この値が1より小さい場合、バージョン数に基づいて削除は実行されません
+   パージ時に、n番目に新しいバージョンより古いバージョンが削除されます。 この値が1未満の場合、バージョン数に基づいてパージは実行されません
 
-* `versionmanager.minNumberVersions` （int、デフォルト0）
+* `versionmanager.minNumberVersions` （整数、デフォルトは0）
 
    年齢に関係なく保持するバージョンの最小数。 この値を 1 未満に設定すると、保持するバージョン数の最小数は設定されません。
 
 >[!NOTE]
 >
->リポジトリに多数のバージョンを保存することはお勧めできません。そのため、バージョンパージ操作を設定するときは、パージから多くのバージョンを除外しすぎないでください。そうしないと、リポジトリサイズが適切に最適化されません。ビジネス要件が原因で大量のバージョンを保持する場合は、Adobeサポートに連絡して、リポジトリサイズを最適化する別の方法を探してください。
+>リポジトリに多数のバージョンを保存することはお勧めできません。そのため、バージョンパージ操作を設定するときは、パージから多くのバージョンを除外しすぎないでください。そうしないと、リポジトリサイズが適切に最適化されません。ビジネス要件が原因で多数のバージョンを維持する場合は、Adobeサポートに連絡して、リポジトリサイズを最適化する別の方法を見つけてください。
 
 ### 保持オプションの組み合わせ {#combining-retention-options}
 
