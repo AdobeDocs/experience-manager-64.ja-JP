@@ -5,26 +5,25 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 uuid: 1c011496-be6e-470b-9da8-48db8c6d1108
 contentOwner: AG
 discoiquuid: a5aab094-8b2d-4a23-890f-be6f9e5137bd
-feature: Tagging,Metadata,Smart Tags
+feature: タグ付け，メタデータ，スマートタグ
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: 14241f8d-fd0b-4bcf-b2bb-1d0e52bf7748
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '461'
 ht-degree: 90%
 
 ---
 
-
 # スマートコンテンツサービスのトレーニングガイドライン {#smart-content-service-training-guidelines}
 
-ブランド画像に効果的にタグを付けるには、スマートコンテンツサービスで、トレーニング画像が特定のガイドラインに従っている必要があります。
+スマートコンテンツサービスでは、ブランド画像を効果的にタグ付けできるようにするために、トレーニング画像が特定のガイドラインに従っている必要があります。
 
 ## トレーニングのガイドライン {#guidelines-for-training}
 
 最適な結果を得るには、トレーニングセット内の画像は次のガイドラインに従う必要があります。
 
-**数量とサイズ：タグあたり** の **最小30個の画像**。長辺が 500 ピクセル以上である必要があります。
+**数とサイズ：** タグ1つ **につき30以上の画像**。長辺が 500 ピクセル以上である必要があります。
 
 **一貫性**：タグの各画像は、似たような外観にする必要があります。
 
@@ -63,4 +62,3 @@ ht-degree: 90%
 >スマートコンテンツサービスでタグのトレーニングを実施し、それらのタグを他の画像に適用できるかどうかは、トレーニングで使用する画像の質によって決まります。
 >
 >最適な結果を得るには、視覚的に似ている画像を使用し、それぞれのタグについてサービスのトレーニングを実施することをお勧めします。
-
