@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: cfaa6b49-3fd0-4c08-84a2-e86c7e7e3532
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: caa4f835-c353-49d5-b18c-4d0538c1136f
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 62%
 
 ---
-
 
 # 新規ログイン画面の作成  {#creating-a-new-login-screen}
 
@@ -27,26 +26,26 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 1. 次のアクションを実行します。
 
    1. 階層構造を複製します。の`/libs/livecycle/core/content`を`/apps/livecycle/core/content`に配置します。 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
-   1. コンテンツフォルダーをコピーします。を`/libs/livecycle/core`から`/apps/livecycle/core`に変更します。
+   1. コンテンツフォルダーをコピーします。`/libs/livecycle/core`から`/apps/livecycle/core`まで。
    1. `/apps/livecycle/core`フォルダーの内容を削除します。
 
 1. 次の操作を実行します。
 
    1. 階層構造を複製します。の`/libs/livecycle/core/components/login`を`/apps/livecycle/core/components/login`に配置します。 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
-   1. componentsフォルダーをコピーします。を`/libs/livecycle/core`から`/apps/livecycle/core`に変更します。
+   1. componentsフォルダーをコピーします。`/libs/livecycle/core`から`/apps/livecycle/core`まで。
    1. フォルダーの内容を削除します。`/apps/livecycle/core/components/login`.
 
 ## 新しいロケールの追加 {#adding-a-new-locale}
 
 1. `i18n`フォルダーをコピーします。
 
-   * `/libs/livecycle/core/components/login` から
-   * を `/apps/livecycle/core/components/login`
+   * コピー元：`/libs/livecycle/core/components/login`
+   * コピー先：`/apps/livecycle/core/components/login`
 
-1. `i18n`内のフォルダーを1つを除き（例：`en`）削除します。
+1. `i18n`内のフォルダー（`en`を除く）をすべて削除します。
 1. フォルダー `en` で、以下のアクションを実行します。
 
-   1. フォルダーの名前をサポートするロケール名に変更します。例： `ar`
+   1. フォルダーの名前をサポートするロケール名に変更します。（例：`ar`）。
    1. プロパティ`jcr:language`の値を`ar`（`ar`フォルダー用）に変更します。
 
    >[!NOTE]
@@ -55,8 +54,8 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
 1. コピー `login.jsp`:
 
-   * `/libs/livecycle/core/components/login` から
-   * を `/apps/livecycle/core/components/login`
+   * コピー元：`/libs/livecycle/core/components/login`
+   * コピー先：`/apps/livecycle/core/components/login`
 
 1. `/apps/livecycle/core/components/login/login.jsp`のコードの次のスニペットを変更します。
 
@@ -182,10 +181,10 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
 ## 新しいテキストの追加、または既存のテキストの変更  {#adding-new-text-or-modifying-existing-text}
 
-1. `i18n`フォルダーをコピー：
+1. `i18n`フォルダーをコピーします。
 
-   * `/libs/livecycle/core/components/login` から
-   * を `/apps/livecycle/core/components/login`
+   * コピー元：`/libs/livecycle/core/components/login`
+   * コピー先：`/apps/livecycle/core/components/login`
 
 1. ここで、テキストを変更するノード（該当するロケールコードフォルダの下）のプロパティ `sling:message` の値を変更します。翻訳は、ノードのプロパティ `sling:key` の値に示されているキーを介して行われます。
 1. 新しいキーと値のペアを追加するには、次のアクションを実行します。次に続くスクリーンショットの例を確認してください。
@@ -193,11 +192,11 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
    1. `sling:MessageEntry` タイプのノードを作成するか、またはすべてのロケールフォルダーの下で既存のノードをコピーして名前を変更します。
    1. コピー `login.jsp` :
 
-      * `/libs/livecycle/core/components/login` から
-      * を `/apps/livecycle/core/components/login`
+      * コピー元：`/libs/livecycle/core/components/login`
+      * コピー先：`/apps/livecycle/core/components/login`
    1. `/apps/livecycle/core/components/login/login.jsp`を変更して、新しく追加したテキストを取り込みます。
 
-   ![capture](assets/capture.png)
+   ![キャプチャ](assets/capture.png)
 
    ```
    div class="loginContent">
@@ -218,26 +217,26 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
 ## 新しいスタイルの追加、または既存のスタイルの変更 {#adding-new-style-or-modifying-existing-style}
 
-1. `login`ノードをコピー：
+1. `login`ノードをコピーします。
 
-   * `/libs/livecycle/core/content` から
-   * を `/apps/livecycle/core/content`
+   * コピー元：`/libs/livecycle/core/content`
+   * コピー先：`/apps/livecycle/core/content`
 
-1. ノード`/apps/livecycle/core/content/login.`からファイル`login.js`と`jquery-1.8.0.min.js`を削除します
+1. ノード`/apps/livecycle/core/content/login.`から`login.js`と`jquery-1.8.0.min.js`を削除します。
 1. CSS ファイルのスタイルを変更します。
 1. 新しいスタイルを追加するには：
 
-   1. &lt;a0/追加>に対する新しいスタイル`/apps/livecycle/core/content/login/login.css`
+   1. `/apps/livecycle/core/content/login/login.css`に新しいスタイルを追加する
    1. コピー `login.jsp`
 
-      * `/libs/livecycle/core/components/login` から
-      * を `/apps/livecycle/core/components/login`
+      * コピー元：`/libs/livecycle/core/components/login`
+      * コピー先：`/apps/livecycle/core/components/login`
    1. `/apps/livecycle/core/components/login/login.jsp`を変更して、新しく追加したスタイルを取り込みます。
 
 
 1. 次に例を示します。
 
-   * 追加`/apps/livecycle/core/content/login/login.css`に対して次の操作を行います。
+   * `/apps/livecycle/core/content/login/login.css`に次を追加します。
 
    ```css
    .newLoginContentArea {
@@ -258,22 +257,22 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
 >[!NOTE]
 >
->`/apps/livecycle/core/content/login`（`/libs/livecycle/core/content/login`からコピーした）内の既存の画像が削除された場合は、CSSで対応する参照を削除します。
+>`/apps/livecycle/core/content/login`（`/libs/livecycle/core/content/login`からコピー）内の既存の画像が削除された場合は、対応する参照をCSSから削除します。
 
 ## 新しい画像の追加 {#add-new-images}
 
-1. 上記の「新しいスタイルの追加、または既存のスタイルの変更」の手順に従います。
-1. &lt;a0/追加>の新しい画像。 `/apps/livecycle/core/content/login`画像を追加するには：
+1. 新しいスタイルの追加または既存のスタイルの変更の手順に従います（前述）。
+1. `/apps/livecycle/core/content/login`に新しい画像を追加します。 画像を追加するには：
 
    1. WebDAV クライアントをインストールします。
    1. webDAVクライアントを使用して`/apps/livecycle/core/content/login`フォルダーに移動します。 詳しくは、次を参照してください。[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
    1. 新しい画像を追加します。
 
-1. &lt;a1/追加>に追加された新しい画像に対応する`/apps/livecycle/core/content/login/login.css,`の新しいスタイル。`/apps/livecycle/core/content/login`
+1. `/apps/livecycle/core/content/login`に追加された新しい画像に対応する新しいスタイルを`/apps/livecycle/core/content/login/login.css,`に追加します。
 1. `/apps/livecycle/core/components`の`login.jsp`で新しいスタイルを使用します。
 1. 以下に例を示します。
 
-   * &lt;a0/追加>に対する次の操作`/apps/livecycle/core/content/login/login.css`
+   * 以下を`/apps/livecycle/core/content/login/login.css`に追加します。
 
    ```css
    .newLoginContainerBkg {
