@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: e1431ad9-3bae-4ac3-97e2-96dcbfce1f71
-translation-type: tm+mt
-source-git-commit: 36baba4ee20dd3d7d23bc50bfa91129588f55d32
+exl-id: a57bd3c4-2d50-4089-8279-1e403e9469bf
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '549'
-ht-degree: 89%
+ht-degree: 92%
 
 ---
-
 
 # アダプティブフォームのエラーメッセージのレイアウトと位置のカスタマイズ {#customize-layout-and-positioning-of-error-messages-of-an-adaptive-form}
 
@@ -34,7 +33,7 @@ ht-degree: 89%
 
 カスタムレイアウトを単一フィールドに適用するには、次の手順を実行します。
 
-1. **スタイル**&#x200B;モードでフォームを開きます。スタイルモードでフォームを開くには、ページツールバーで![canvas-drop-down](assets/canvas-drop-down.png) > **Style**&#x200B;をタップします。
+1. **スタイル**&#x200B;モードでフォームを開きます。フォームをスタイルモードで開くには、ページツールバーで![canvas-drop-down](assets/canvas-drop-down.png) / **スタイル**&#x200B;をタップします。
 1. サイドバーの「**フォームオブジェクト**」で、フィールドを選択し、編集ボタン![編集ボタン](assets/edit-button.png)をタップします。
 1. カスタマイズするフィールドの状態を選択し、その状態のスタイル設定を指定します。
 
@@ -47,7 +46,7 @@ AEM Forms では、テーマを作成してフォームに適用できるよう�
 テーマエディターを使用してテーマを作成し、フォームにおけるすべてのフィールドのレイアウトをカスタマイズします。テーマを作成するには、次の手順を実行します。
 
 1. フォームを編集モードで開きます。
-1. 編集モードで、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)/**アダプティブフォームコンテナ**&#x200B;をタップし、![cmppr](assets/cmppr.png)をタップします。
+1. 編集モードで、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)／**アダプティブフォームコンテナ**&#x200B;をタップしてから、 ![cmppr](assets/cmppr.png) をタップします。
 1. アダプティブフォームテーマのサイドバーで、テーマエディタで作成したテーマを選択します。
 
 ## カスタムフィールドレイアウトを作成  {#create-a-custom-field-layout}
