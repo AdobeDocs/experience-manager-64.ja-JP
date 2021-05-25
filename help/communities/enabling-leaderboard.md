@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: 1e96d388-8517-4a84-bb0a-d49567eb4bdf
-translation-type: tm+mt
-source-git-commit: 1bbd917ef20c4a618e93af66ffe8a6cfc8448e78
+exl-id: 1ebe0cbb-33be-4101-92e3-64253a7f7f31
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 72%
 
 ---
 
-
 # リーダーボード機能  {#leaderboard-feature}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
-`Leaderboard`コンポーネントは、獲得点（基本スコア）またはその専門知識（高度スコア）に従ってメンバーをランク付けすることで、コミュニティ内でのメンバーの関わり方を把握できます。
+`Leaderboard`コンポーネントは、獲得したポイント（基本スコア）や専門知識（高度なスコア）に基づいてメンバーをランク付けすることで、コミュニティ内でのメンバーの関わり方を把握できます。
 
 ページにリーダーボードコンポーネントを含める前に、[コミュニティのスコアとバッジ](implementing-scoring.md)を設定する必要があります。
 
@@ -30,17 +29,17 @@ ht-degree: 72%
 
 * `Leaderboard`コンポーネントを[コミュニティサイト](overview.md#community-sites)に追加する
 
-* `Leaderboard`コンポーネントの構成設定
+* `Leaderboard`コンポーネントの設定
 
 ## リーダーボードをページに追加 {#adding-a-leaderboard-to-a-page}
 
-作成者モードで`Leaderboard`コンポーネントをページに追加するには、コンポーネントを見つけます
+`Leaderboard`コンポーネントをオーサリングモードでページに追加するには、
 
 * `Communities / Leaderboard`
 
 コンポーネントを探し、ページ上の位置にドラッグします。
 
-必要な情報については、[Communities Components Basics](basics.md)を参照してください。
+必要な情報については、[コミュニティコンポーネントの基本](basics.md)を参照してください。
 
 コミュニティサイトのページに初めて配置されたとき、コンポーネントは次のように表示されます。
 
@@ -48,7 +47,7 @@ ht-degree: 72%
 
 ## リーダーボードの設定 {#configuring-leaderboard}
 
-アクセスする配置済みの`Leaderboard`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
+配置済みの`Leaderboard`コンポーネントを選択し、`Configure`アイコンを選択すると、編集ダイアログが開きます。
 
 ![chlimage_1-9](assets/chlimage_1-9.png) ![chlimage_1-10](assets/chlimage_1-10.png)
 
@@ -58,7 +57,7 @@ ht-degree: 72%
 
 * **[!UICONTROL 表示名]**&#x200B;ボードに表示する説明的な名前。バッジとスコアの表示用に選択されたルールが反映されます。
 
-   何も入力しなかった場合の初期設定は`Leaderboard`です。
+   何も入力しない場合の初期設定は`Leaderboard`です。
 
 * **[!UICONTROL バッジ]**&#x200B;オンにすると、リーダーボードにバッジアイコンの列が表示されるようになります。
 
@@ -135,6 +134,6 @@ ht-degree: 72%
 
 ## 追加情報 {#additional-information}
 
-詳しい情報は[Leaderboard Essentials](leaderboard.md)ページの開発者向けページにあります。
+詳しくは、開発者向けの[リーダーボードの基本事項](leaderboard.md)ページを参照してください。
 
-ルールの作成手順は、管理者向けの[コミュニティスコアリングとバッジ](implementing-scoring.md)ページに記載されています。
+ルールの作成手順は、管理者向けの[コミュニティのスコアとバッジ](implementing-scoring.md)ページで説明しています。
