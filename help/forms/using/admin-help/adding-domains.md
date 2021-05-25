@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: d4004ffe-c981-487d-b803-dc4492ae5998
-translation-type: tm+mt
-source-git-commit: ccf4f4232d6a7af0781480106526c4c6fcb7c40e
+exl-id: f2bafa0c-072c-4599-92bc-4eaafece5b4f
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 97%
 
 ---
-
 
 # ドメインの追加 {#adding-domains}
 
@@ -75,7 +74,7 @@ AEM forms データベースとして MySQL を使用している場合、以下
 
 * ドメイン ID とドメイン名には 1 バイト（ASCII）文字のみを使用します。拡張 ASCII 文字を使用すると、AEM Forms の動作が不安定になり、ドメインを削除しようとすると例外が発生する場合があります。この不安定な状態から回復するには、（このページ）[拡張文字またはマルチバイト文字を含むドメインの削除](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)を参照してください。
 * 大文字と小文字が異なるだけの名前で 2 つのドメインを作成することはできません。例えば、ドメイン名「*adobe*」が既に使用されている場合に、ドメイン名「*Adobe*」を登録しようとするとエラーが発生します。
-* User Management では、拡張文字によって 2 つのドメイン名を区別することはできません。例えば、*abcde*&#x200B;という名前のドメインと*âbcdè *という名前のドメインを作成した場合、これら2つは同じと見なされます。
+* User Management では、拡張文字によって 2 つのドメイン名を区別することはできません。例えば、*abcde*&#x200B;という名前のドメインと、*âbcdè *という名前のドメインを作成した場合、同じと見なされます。
 
 ### 拡張文字またはマルチバイト文字を含むドメインの削除 {#remove-a-domain-that-contains-extended-or-multi-byte-characters}
 
@@ -87,4 +86,3 @@ AEM forms データベースとして MySQL を使用している場合、以下
    * 拡張文字またはマルチバイト文字を含むドメイン名を検索し、ステータスを「旧バージョン」に設定します。
 
 1. 「[設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)」の説明に従って、更新した設定ファイルを読み込みます。
-
