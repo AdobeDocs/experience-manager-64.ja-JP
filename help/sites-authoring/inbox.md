@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 8b607b55-2412-469f-856b-0a3dea4b0efb
-translation-type: tm+mt
-source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
+exl-id: 9037f21c-5392-4322-af0d-7e220c810954
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 97%
 
 ---
-
 
 # インボックス{#your-inbox}
 
@@ -46,11 +45,9 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 >項目タイプについて詳しくは、次の項目も参照してください。
 >
 >* [プロジェクト](/help/sites-authoring/touch-ui-managing-projects.md)
->* [プロジェクト - タスクの操作](/help/sites-authoring/task-content.md)
->* [ワークフロー](/help/sites-authoring/workflows.md)
->* [フォーム](/help/forms/home.md)
-
->
+* [プロジェクト - タスクの操作](/help/sites-authoring/task-content.md)
+* [ワークフロー](/help/sites-authoring/workflows.md)
+* [フォーム](/help/forms/home.md)
 
 
 
@@ -61,8 +58,7 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 ![wf-80](assets/wf-80.png)
 
 >[!NOTE]
->
->特定のアクションは、[適切なリソースのカード表示](/help/sites-authoring/basic-handling.md#card-view)にも表示されます。
+特定のアクションは、[適切なリソースのカード表示](/help/sites-authoring/basic-handling.md#card-view)にも表示されます。
 
 ## 標準の管理タスク   {#out-of-the-box-administrative-tasks}
 
@@ -87,8 +83,7 @@ AEM 通知インボックスを開くには：
    ![wf-79](assets/wf-79.png)
 
 >[!NOTE]
->
->インボックスはコンソールとして機能するので、完了したら[グローバルナビゲーション](/help/sites-authoring/basic-handling.md#global-navigation)または[検索](/help/sites-authoring/search.md)を使用して、別の場所に移動します。
+インボックスはコンソールとして機能するので、完了したら[グローバルナビゲーション](/help/sites-authoring/basic-handling.md#global-navigation)または[検索](/help/sites-authoring/search.md)を使用して、別の場所に移動します。
 
 ### インボックス - リスト表示 {#inbox-list-view}
 
@@ -144,7 +139,7 @@ AEM 通知インボックスを開くには：
 
    アクションは項目に対応しており、次のアクションがあります。
 
-   * アクションを&#x200B;**完了**&#x200B;する;例えば、タスクやワークフロー項目です。
+   * アクションを&#x200B;**完了**&#x200B;する;例えば、タスクやワークフロー項目などです。
    * 項目の&#x200B;**再割り当て**／**委任**。
    * 項目を&#x200B;**開く**。項目タイプに応じて、このアクションでは次の操作がおこなわれます。
 
@@ -156,10 +151,8 @@ AEM 通知インボックスを開くには：
    * 項目からプロジェクトを作成する.
 
    >[!NOTE]
-   >
-   >詳しくは、次のセクションを参照してください。
-   >
-   >* ワークフローの項目 - [ワークフローへの参加](/help/sites-authoring/workflows-participating.md)
+   詳しくは、次のセクションを参照してください。
+   * ワークフローの項目 - [ワークフローへの参加](/help/sites-authoring/workflows-participating.md)
 
 
 1. 選択した項目に応じて、アクションが開始されます。例えば、次の操作がおこなわれます。
@@ -201,7 +194,7 @@ AEM 通知インボックスを開くには：
 
    * **アドバンス**
 
-      * **名前**:これはURLの形成に使用されます。空白の場合は、**タイトル**&#x200B;に基づきます。
+      * **名前**:これはURLの作成に使用されます。空白の場合は、**タイトル**&#x200B;に基づきます。
 
    ![wf-87](assets/wf-87.png)
 
@@ -214,10 +207,8 @@ AEM 通知インボックスを開くには：
 1. サムネールをタップまたはクリックして、適切なタスクを選択します。
 
    >[!NOTE]
-   >
-   >プロジェクトの作成に使用できるのは、**インボックス**&#x200B;の「**作成**」オプションを使用して作成されたタスクのみです。
-   >
-   >（ワークフローからの）作業項目はプロジェクトの作成に使用できません。
+   プロジェクトの作成に使用できるのは、**インボックス**&#x200B;の「**作成**」オプションを使用して作成されたタスクのみです。
+   （ワークフローからの）作業項目はプロジェクトの作成に使用できません。
 
 1. ツールバーの「**プロジェクトを作成**」を選択してウィザードを開きます。
 1. 適切なテンプレートを選択して、「**次へ**」を選択します。
@@ -234,8 +225,7 @@ AEM 通知インボックスを開くには：
 
       * **名前**
    >[!NOTE]
-   >
-   >詳しくは、[プロジェクトの作成](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)を参照してください。
+   詳しくは、[プロジェクトの作成](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)を参照してください。
 
 1. 「**作成**」を選択してアクションを確定します。
 
@@ -254,6 +244,4 @@ AEM 通知インボックスを開くには：
    ![wf-89](assets/wf-89.png)
 
    >[!NOTE]
-   >
-   >「[設定を表示](#inbox-view-settings)」では、[リスト表示](#inbox-list-view)を使用するときの並べ替え順を設定することもできます。
-
+   「[設定を表示](#inbox-view-settings)」では、[リスト表示](#inbox-list-view)を使用するときの並べ替え順を設定することもできます。
