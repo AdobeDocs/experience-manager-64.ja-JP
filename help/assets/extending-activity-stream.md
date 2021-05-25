@@ -2,24 +2,23 @@
 title: Assets とアクティビティストリームの統合
 description: AEM の記録機能と、特定のイベントを記録するための AEM の設定方法について説明します。
 contentOwner: AG
-feature: Asset Management
+feature: アセット管理
 role: Developer
-translation-type: tm+mt
-source-git-commit: 4acf159ae1b9923a9c93fa15faa38c7f4bc9f759
+exl-id: c25a4da7-1c58-41cf-9ff6-c094b50208e6
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '286'
 ht-degree: 76%
 
 ---
 
-
 # Assets とアクティビティストリームの統合 {#integrating-assets-with-activity-stream}
 
-Adobe Experience Manager(AEM)アセットのユーザは、アセットの作成、アップロード、削除など、様々な操作を実行します。 ユーザーが何を実行かについて履歴を提供できるよう、これらのアクションを記録することができます。ここでは、AEM の記録機能と、特定のイベントを記録するための AEM の設定方法について説明します。
+Adobe Experience Manager(AEM)Assetsのユーザーは、アセットの作成、アップロード、削除など、様々なアクションを実行します。 ユーザーが何を実行かについて履歴を提供できるよう、これらのアクションを記録することができます。ここでは、AEM の記録機能と、特定のイベントを記録するための AEM の設定方法について説明します。
 
 ## パフォーマンスに関する考慮事項とデフォルトの動作 {#performance-considerations-and-default-behavior}
 
-この統合は、一括して読み込むときなどに多くの CPU およびディスク領域を消費する可能性があります。このため、AEM Assetsとアクティビティストリームの統合はデフォルトで無効になっています。
+この統合は、一括して読み込むときなどに多くの CPU およびディスク領域を消費する可能性があります。この理由により、AEM Assetsとアクティビティストリームの統合はデフォルトで無効になっています。
 
 ## サポートされるアクションイベント {#supported-action-events}
 
@@ -43,7 +42,7 @@ Adobe Experience Manager(AEM)アセットのユーザは、アセットの作成
 
 ## AEM Assets のイベント記録機能の設定  {#configuring-aem-assets-events-recording}
 
-[Webコンソール](/help/sites-deploying/configuring-osgi.md)は、AEM Assetsイベントレコーダーのチューニングにアクセスします。 AEM Assetsイベントレコーダーを設定するには、次の手順に従います。
+[Webコンソール](/help/sites-deploying/configuring-osgi.md)から、AEM Assets Event Recorderのチューニングにアクセスできます。 AEM Assets Event Recorderを設定するには、次の手順を実行します。
 
 1. **[!UICONTROL Web コンソール]**&#x200B;に移動します。
 
