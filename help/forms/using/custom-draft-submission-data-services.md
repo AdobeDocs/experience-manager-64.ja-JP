@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: 602fd6a9-9a65-411c-8475-a4082a3fdee0
-translation-type: tm+mt
-source-git-commit: 49b7cff2c1583ee1eb929434f27c1989558e197f
+exl-id: c6243a1f-8f8f-48dc-af3b-b165f451ce73
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 80%
 
 ---
-
 
 # ドラフトおよび送信データサービスのカスタマイズ  {#customizing-draft-and-submission-data-services}
 
@@ -23,7 +22,7 @@ ht-degree: 80%
 
 AEM Forms ではアダプティブフォームをドラフトとして保存できます。ドラフト機能により、ユーザーは作業中のフォームを維持することができます。これにより、ユーザーはデバイスを問わずいつでもフォームに記入および送信できます。
 
-デフォルトでは、AEM Formsはドラフトと送信に関連付けられたユーザーデータを`/content/forms/fp`ノードの発行インスタンスに保存します。
+デフォルトでは、AEM Formsはドラフトと送信に関連付けられたユーザーデータをパブリッシュインスタンスの`/content/forms/fp`ノードに保存します。
 
 ただし、AEM Forms ポータルコンポーネントは、ドラフトおよび送信用のユーザーデータの保存の実装をカスタマイズするデータサービスを提供します。例えば、組織に現在実装されているデータストアにデータを保存することができます。
 
@@ -32,9 +31,9 @@ AEM Forms ではアダプティブフォームをドラフトとして保存で�
 ## 前提条件 {#prerequisites}
 
 * [Formsポータルコンポーネント](/help/forms/using/enabling-forms-portal-components.md)を有効にする
-* [フォームポータルページ](/help/forms/using/creating-form-portal-page.md)を作成
-* [フォームポータル用のアダプティブフォーム](/help/forms/using/draft-submission-component.md)を有効にする
-* [カスタムストレージ](/help/forms/using/draft-submission-component.md#customizing-the-storage)の導入の詳細を知る
+* [フォームポータルページ](/help/forms/using/creating-form-portal-page.md)を作成します。
+* フォームポータルの[アダプティブフォームを有効にする](/help/forms/using/draft-submission-component.md)
+* [カスタムストレージ](/help/forms/using/draft-submission-component.md#customizing-the-storage)の実装の詳細を説明します。
 
 ## ドラフトデータサービス {#draft-data-service}
 
@@ -85,7 +84,7 @@ public interface DraftAFDataService {
 
 ## 送信データサービス  {#submission-data-service}
 
-ユーザー送信データのストレージをカスタマイズするには、`SubmittedAFDataService`インターフェイスのすべてのメソッドに対して実装を提供する必要があります。
+ユーザー送信データのストレージをカスタマイズするには、`SubmittedAFDataService`インターフェイスのすべてのメソッドに対して実装を指定する必要があります。
 
 メソッドとその引数の説明を、次のインターフェイスのコードサンプルに示します。
 
@@ -131,4 +130,3 @@ public interface SubmittedAFDataService {
 
 }
 ```
-
