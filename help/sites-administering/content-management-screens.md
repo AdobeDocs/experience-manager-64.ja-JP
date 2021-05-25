@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: content
 content-type: reference
 discoiquuid: 014b5fdd-6522-4394-87bb-fe264492ba34
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: d48f9f7e-bbb8-43d4-9796-029e3fca88ce
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 100%
 
 ---
-
 
 # Screens のコンテンツ管理{#content-management-for-screens}
 
@@ -30,4 +29,3 @@ AEM Screens コンテンツマネージャーは、次のタスクをおこな�
 * スケジュールのデザイン
 * チャネルの整合性の維持
 * ビデオプロファイル
-
