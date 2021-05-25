@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 9cadec1b-f435-4fd8-b4bc-1a23a0cf11f3
-translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+exl-id: 415efbe0-95f5-4c9e-ac33-c4a384a8271e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 70%
 
 ---
-
 
 # UI の選択{#selecting-your-ui}
 
@@ -55,7 +54,7 @@ ht-degree: 70%
 
 ## UIの切り替え
 
-タッチ対応UIが標準のUIになり、サイトの管理および編集で[機能パリティ](../release-notes/touch-ui-features-status.md)にほぼ達しましたが、[従来のUI](/help/sites-classic-ui-authoring/classicui.md)に切り替えたい場合があります。 そのためのオプションがいくつか用意されています。
+タッチ操作対応UIが標準のUIになり、サイトの管理と編集はほぼ同等の機能[になりましたが、 [クラシックUI](/help/sites-classic-ui-authoring/classicui.md)に切り替えたい場合があります。 ](../release-notes/touch-ui-features-status.md)そのためのオプションがいくつか用意されています。
 
 >[!NOTE]
 >
@@ -63,11 +62,11 @@ ht-degree: 70%
 
 様々な場所で、使用する UI を定義できます。
 
-* [インスタンスのデフォルトUIの設定](#configuring-the-default-ui-for-your-instance)  — ユーザーのログイン時にデフォルトのUIが表示されますが、ユーザーはこのUIを上書きして、自分のアカウントまたは現在のセッションで別のUIを選択できます。
+* [インスタンスのデフォルトUIの設定](#configuring-the-default-ui-for-your-instance)  — ユーザーのログイン時にデフォルトUIが表示されるように設定されますが、ユーザーはこれを上書きして、自分のアカウントや現在のセッション用に別のUIを選択できます。
 
-* [アカウントに対するクラシックUIオーサリングの設定](/help/sites-authoring/select-ui.md#setting-classic-ui-authoring-for-your-account)  — ページの編集時にデフォルトとしてUIが設定されますが、ユーザーはこの設定を上書きして、自分のアカウントまたは現在のセッションに別のUIを選択できます。
+* [アカウントのクラシックUIオーサリングの設定](/help/sites-authoring/select-ui.md#setting-classic-ui-authoring-for-your-account)  — ページの編集時にデフォルトで使用されるUIが設定されますが、ユーザーはこれを上書きして、アカウントまたは現在のセッション用に別のUIを選択できます。
 
-* [現在のセッションのクラシックUIに切り替え](#switching-to-classic-ui-for-the-current-session)  — 現在のセッションのクラシックUIに切り替えます。
+* [現在のセッションのクラシックUIへの切り替え](#switching-to-classic-ui-for-the-current-session)  — 現在のセッションのクラシックUIに切り替えます。
 
 * [ページのオーサリング時には、状況に応じて、UI が自動的に上書きされます](#ui-overrides-for-the-editor)。
 
@@ -81,7 +80,7 @@ ht-degree: 70%
 >
 >以前のバージョンからアップグレードされたインスタンスでは、ページオーサリング用にクラシック UI が保持されます。
 >
->アップグレード後、ページオーサリングはタッチ対応UIに自動的に切り替わりませんが、**WCMオーサリングUIモードサービス**（`AuthoringUIMode`サービス）の[OSGi設定](/help/sites-deploying/configuring-osgi.md)を使用して設定できます。 [エディターの UI 上書き](#ui-overrides-for-the-editor)を参照してください。
+>アップグレード後、ページオーサリングが自動的にタッチ操作対応UIに切り替わることはありませんが、 **WCMオーサリングUIモードサービス**（ `AuthoringUIMode`サービス）の[OSGi設定](/help/sites-deploying/configuring-osgi.md)を使用して設定できます。 [エディターの UI 上書き](#ui-overrides-for-the-editor)を参照してください。
 
 ## ユーザーのインスタンス用のデフォルト UI の設定 {#configuring-the-default-ui-for-your-instance}
 
@@ -112,11 +111,11 @@ ht-degree: 70%
 
    例えば、**サイト**&#x200B;から **siteadmin** へのリンクなどです。
 
-   ![screen_shot_2018-03-23at11924](assets/screen_shot_2018-03-23at111924.png)
+   ![screen_shot_2018-03-23at111924](assets/screen_shot_2018-03-23at111924.png)
 
 * **URL**
 
-   従来のUIは、`welcome.html`にあるスタートアップスクリーンのURLを使用してアクセスできます。次に例を示します。
+   クラシックUIには、`welcome.html`のようこそ画面のURLを使用してアクセスできます。例：
 
    `http://localhost:4502/welcome.html`
 
@@ -145,17 +144,17 @@ ht-degree: 70%
 
 * ページのオーサリング時には次のようになります。
 
-   * URLに`cf#`を使用してページにアクセスする場合は、クラシックエディターを使用する必要があります。 次に例を示します。
+   * URLに`cf#`を使用してページにアクセスする場合、クラシックエディターが強制的に使用されます。 次に例を示します。
 
       `http://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-   * URLで`/editor.html`を使用する場合、またはタッチデバイスを使用する場合、タッチ対応エディターの使用が強制されます。 次に例を示します。
+   * URLで`/editor.html`を使用する場合、またはタッチデバイスを使用する場合、タッチ操作対応エディターが強制的に使用されます。 次に例を示します。
 
       `http://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
 * 強制は一時的なものであり、ブラウザーセッションでのみ有効です。
 
-   * Cookieのセットは、タッチ対応(`editor.html`)とクラシック(`cf#`)のどちらを使用するかによって異なります。
+   * Cookieの設定は、タッチ操作対応(`editor.html`)とクラシック(`cf#`)のどちらが使用されるかに応じて異なります。
 
 * `siteadmin` を使用してページを開くと、以下が存在するかがチェックされます。
 
@@ -175,6 +174,5 @@ ht-degree: 70%
 >* 両方のエディターを同時に開く - 例えば、別のウィンドウなど。
 
 >
-
 
 
