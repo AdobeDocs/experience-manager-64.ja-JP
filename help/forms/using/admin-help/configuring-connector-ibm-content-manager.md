@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 3094b178-3b1a-46b3-8fbd-c20388afa3a7
-translation-type: tm+mt
-source-git-commit: 6a2455cb377a68254a5c58c6627c59716d284144
+exl-id: 8c65531e-f4f0-4cc4-b328-eaefb5662cf1
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 98%
 
 ---
-
 
 # Connector for IBM Content Manager の設定{#configuring-connector-for-ibm-content-manager}
 
@@ -37,4 +36,3 @@ Connector for IBM Content Manager は、AEM Forms と IBM Content Manager 間の
 
 * サービス設定情報を保存したときにサービスが停止している場合、エラーは表示されません。ただし、次回サービスを起動すると、例外が発生し、サービスは起動しません。
 * サービス設定情報を保存したときにサービスが起動している場合、サービスは秘密鍵証明書の情報をすぐに確認しようとします。この場合、エラーが発生し、設定情報は保存されません。
-
