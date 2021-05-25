@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: 6696c325-d188-41c8-a39f-c8ae7f339fe8
-translation-type: tm+mt
-source-git-commit: e7da0bb7906c3ad3d04531db0abfbc658646f6e4
+exl-id: 9a779cde-dfdf-4d70-a452-5e7d12bf3f28
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1835'
 ht-degree: 75%
 
 ---
-
 
 # デプロイとメンテナンス{#deploying-and-maintaining}
 
@@ -30,7 +29,7 @@ ht-degree: 75%
       * [オンプレミス](#on-premise)
       * [Cloud Manager を使用した Managed Services](#managed-services-using-cloud-manager)
 
-* [概要](#getting-started)
+* [開始](#getting-started)
 
    * [前提条件](#prerequisites)
    * [ソフトウェアの入手](#getting-the-software)
@@ -58,7 +57,7 @@ ht-degree: 75%
 * [AEM プラットフォームの概要](/help/sites-deploying/platform.md)
 * [パフォーマンスガイドライン](/help/sites-deploying/performance-guidelines.md)
 * [AEM Mobile 使用の手引き](/help/mobile/getting-started-aem-mobile.md)
-* [AEM Screens とは](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [AEM Screens とは ](https://docs.adobe.com/content/help/ja/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## 基本概念 {#basic-concepts}
 
@@ -68,7 +67,7 @@ Adobe Experience Manager は、商業 Web サイトおよび関連サービス�
 
 インフラストラクチャレベルでは、AEM は以下の機能を提供します。
 
-* **Web アプリケーションサーバ**:AEMは、スタンドアロンモード（統合Jetty Webサーバーを含む）で、またはサードパーティのアプリケーションサーバー（WebLogic、WebSphereなど）内のWebアプリケーションとしてデプロイできます。
+* **Webアプリケーションサーバー**:AEMは、スタンドアロンモード（統合Jetty Webサーバーを含む）で、またはサードパーティのアプリケーションサーバー（WebLogic、WebSphereなど）内のWebアプリケーションとしてデプロイできます。
 * **Web アプリケーションフレームワーク**：AEM には Sling Web アプリケーションフレームワークが組み込まれており、RESTful な、コンテンツ指向の Web アプリケーションを簡単に作成できます。
 * **コンテンツリポジトリ**：AEM には、非構造化データおよび半構造化データ専用に設計された階層型データベースの一種である Java コンテンツリポジトリ（JCR）が含まれています。このリポジトリには、ユーザーに表示されるコンテンツだけでなく、アプリケーションで使用されるすべてのコード、テンプレートおよび内部データが格納されます。
 
@@ -77,14 +76,14 @@ Adobe Experience Manager は、商業 Web サイトおよび関連サービス�
 * **Web サイト**
 * **モバイルアプリケーション**
 * **デジタルパブリケーション**
-* **フォーム**
+* **Forms**
 * **デジタルアセット**
 * **Communities**
 * **オンライン商取引**
 
 最後に、ユーザーはこれらのインフラストラクチャレベルおよびアプリケーションレベルの構築ブロックを使用して、独自のアプリケーションを構築することによって、カスタマイズされたソリューションを作成できます。
 
-AEMサーバーは&#x200B;**Javaベース**&#x200B;で、そのプラットフォームをサポートするほとんどのオペレーティングシステム上で動作します。AEMとのすべてのクライアントの対話は、**Webブラウザー**&#x200B;を通じて行われます。
+AEMサーバーは&#x200B;**Javaベースの**&#x200B;で、そのプラットフォームをサポートするほとんどのオペレーティングシステムで動作します。クライアントとAEMとのやり取りはすべて、**Webブラウザー**&#x200B;を通じておこなわれます。
 
 ### 典型的なデプロイメントシナリオ {#typical-deployment-scenarios}
 
@@ -97,7 +96,7 @@ AEM の用語では、「インスタンス」は、サーバー上で実行さ�
 
 * **ディスパッチャー**：AEM ディスパッチャーモジュールで補強された静的 Web サーバー（Apache httpd、Microsoft IIS など）。パブリッシュインスタンスで生成された Web ページをキャッシュしてパフォーマンスを向上します。
 
-この設定には、多くの高度なオプションと詳細情報がありますが、作成者、発行、ディスパッチャーの基本パターンは、ほとんどのデプロイメントの中核にあります。まず、比較的単純な設定に焦点を当てます。アドバンス展開オプションについては、以下で説明します。
+この設定には多くの高度なオプションと詳細がありますが、オーサー、パブリッシュ、ディスパッチャーの基本的なパターンは、ほとんどのデプロイメントの中核となります。まず、比較的シンプルな設定に焦点を当てます。高度なデプロイメントオプションの説明が続きます。
 
 以下のセクションでは、両方のシナリオについて説明します。
 
@@ -117,9 +116,9 @@ AEM Managed Services は、デジタルエクスペリエンス管理のため�
 
 AEM Managed Services を使用すれば、次のようなメリットを享受できます。
 
-**市場投入までの時間の短縮：** Adobe Managed Services の柔軟なクラウドインフラストラクチャにより、組織は成功するデジタルエクスペリエンスを迅速に計画し、立ち上げ、最適化することができます。Adobeは、追加の資本、ハードウェア、ソフトウェアを必要とせずにクラウドアーキテクチャを管理し、AdobeのカスタマーサクセスエンジニアはAEMアーキテクチャ、プロビジョニング、バックエンドアプリへの接続のカスタマイズ、実稼働ベストプラクティスを支援します。
+**市場投入までの時間の短縮：** Adobe Managed Services の柔軟なクラウドインフラストラクチャにより、組織は成功するデジタルエクスペリエンスを迅速に計画し、立ち上げ、最適化することができます。Adobeは、追加の資本、ハードウェア、ソフトウェアを必要とせずにクラウドアーキテクチャを管理し、AdobeのカスタマーサクセスエンジニアがAEMのアーキテクチャ、プロビジョニング、バックエンドアプリへの接続のカスタマイズ、運用開始のベストプラクティスを支援します。
 
-**より高い性能：** 99.5％、99.9％、99.95％、および 99.99％ の 4 つのサービス可用性オプションで、ビジネスに信頼性の高いデジタル体験を提供します。また、自動バックアップおよびマルチモードの災害復旧モデルを使用して、信頼性とコンティンジェンシーの管理を確保できます。
+**より高い性能：** 99.5％、99.9％、99.95％、および 99.99％ の 4 つのサービス可用性オプションで、ビジネスに信頼性の高いデジタル体験を提供します。さらに、自動バックアップとマルチモードの災害復旧モデルを使用して、信頼性と不測の事態の管理を確保できます。
 
 **最適化された IT コスト：**&#x200B;事前のガイダンスと専門知識により、組織は AEM のバージョンを常に最新の状態に保つことができます。Adobe のプラチナメンテナンスおよびサポートは、AMS Enterprise／Basic の新規導入に自動的に組み込まれ、組織がミッションクリティカルなアプリケーションを維持するのに役立つ技術的専門知識と運用経験を提供します。無料の基本的なアナリティクス機能またはターゲット機能は、特に分析とパーソナライゼーションのニーズが限られている中堅企業にさらなる価値を提供します。
 
@@ -127,29 +126,29 @@ AEM Managed Services を使用すれば、次のようなメリットを享受�
 
 **クラウドマネージャー**：Adobe Experience Manager Services 製品の一部である Cloud Manager は、組織がクラウド内で Adobe Experience Manager を自己管理することをさらに可能にするセルフサービスポータルです。これには、IT チームと実装パートナーがパフォーマンスやセキュリティを犠牲にすることなくカスタマイズやアップデートの提供を迅速化できるようにする、最先端の継続的インテグレーションと継続的配信（CI／CD）パイプラインが含まれます。Cloud Manager は、Adobe Managed Service のお客様のみご利用いただけます。
 
-Cloud Managerとそのリソースについて詳しくは、[**Cloud Managerユーザーガイド**](https://helpx.adobe.com/experience-manager/cloud-manager/user-guide.html)を参照してください。
+Cloud Managerとそのリソースについて詳しくは、『Cloud Managerユーザーガイド&#x200B;**](https://helpx.adobe.com/experience-manager/cloud-manager/user-guide.html)』を参照してください。[**
 
 ## はじめに {#getting-started}
 
 ### 前提条件 {#prerequisites}
 
-実稼働インスタンスは、通常、正式にサポートされるOSを実行する専用マシン（[技術要件](/help/sites-deploying/technical-requirements.md)を参照）で実行されますが、Experience Managerサーバーは、[**Java Standard Edition 8**](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)をサポートする任意のシステムで実行されます。
+本番用インスタンスは、通常、正式にサポートされているOSを実行する専用のマシン（[技術要件](/help/sites-deploying/technical-requirements.md)を参照）で実行されますが、Experience Managerサーバは、実際には&#x200B;[**Java Standard Edition 8**](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)をサポートするシステムで実行されます。
 
 AEM に習熟したい場合や、AEM で開発する場合は、Apple OS X またはデスクトップ版の Microsoft Windows または Linux を実行しているローカルマシンにインストールされたインスタンスを使用するのが一般的です。
 
-クライアント側では、AEMは最新のすべてのブラウザー(**Microsoft Edge**、**Internet Explorer** 11、**Chrome** 51+、**Firefox** 47+、**Safari** 8+)と連携します。タブレットオペレーティングシステム 詳しくは、[サポートされるクライアントプラットフォーム](/help/sites-deploying/technical-requirements.md#supported-client-platforms)を参照してください。
+クライアント側では、AEMは、すべての最新のブラウザー(**Microsoft Edge**、**Internet Explorer** 11、**Chrome** 51+、**Firefox** 47+、**Safari** 8+)と連携しますとタブレットオペレーティングシステム 詳しくは、[サポートされるクライアントプラットフォーム](/help/sites-deploying/technical-requirements.md#supported-client-platforms)を参照してください。
 
 ### ソフトウェアの入手 {#getting-the-software}
 
-有効な保守サポート契約を締結しているお客様は、コード付きのメール通知を受け取り、[**AdobeライセンスWebサイト**](https://licensing.adobe.com/)からAEMをダウンロードできるようにする必要があります。ビジネスパートナーは、[**spphelp@adobe.com**](mailto:spphelp@adobe.com)&#x200B;からのダウンロードをリクエストできます。
+有効な保守およびサポート契約を締結しているお客様は、コードが記載されたメール通知を受け取り、[**AdobeライセンスWebサイト**](https://licensing.adobe.com/)からAEMをダウンロードできるようになっているはずです。ビジネスパートナーは、[**spphelp@adobe.com**](mailto:spphelp@adobe.com)&#x200B;からのダウンロードアクセスをリクエストできます。
 
 AEM ソフトウェアパッケージには、次の 2 つの形式があります。
 
-* **cq-quickstart-6.4.0.jar：起動と実行に必要なすべて** を含む、スタンドアロンの実行可能な ** jarfile。
+* **cq-quickstart-6.4.0.jar:** スタンドアロンの実行可能なjarファ ** イル。設定と実行に必要なすべてが含まれます。
 
-* **cq-quickstart-6.4.0.war：サードパーティのアプリケーションサーバーでのデプロイメ** ン ** ト用のwarfile。
+* **cq-quickstart-6.4.0.war：サードパーティのアプリケーショ**  ** ンサーバーにデプロイするための警告ファイル。
 
-次の節では、**スタンドアロンインストール**&#x200B;について説明します。アプリケーションサーバーにAEMをインストールする方法について詳しくは、[アプリケーションサーバーのインストール](/help/sites-deploying/application-server-install.md)を参照してください。
+次の節では、**スタンドアロンインストール**&#x200B;について説明します。アプリケーションサーバーへのAEMのインストールについて詳しくは、[アプリケーションサーバーのインストール](/help/sites-deploying/application-server-install.md)を参照してください。
 
 ### デフォルトのローカルインストール {#default-local-install}
 
@@ -165,7 +164,7 @@ AEM ソフトウェアパッケージには、次の 2 つの形式がありま�
 
    *ファイルディレクトリのパスには、US ASCII 文字のみを含めてください。*
 
-1. **jar**&#x200B;と&#x200B;**license**&#x200B;ファイルを次のディレクトリに配置します。
+1. **jar**&#x200B;ファイルと&#x200B;**license**&#x200B;ファイルを次のディレクトリに配置します。
 
    ```shell
    <aem-install>/
@@ -173,9 +172,9 @@ AEM ソフトウェアパッケージには、次の 2 つの形式がありま�
        license.properties
    ```
 
-   `license.properties`ファイルを指定しない場合、AEMは起動時に&#x200B;**ようこそ**&#x200B;画面にブラウザをリダイレクトします。この画面では、ライセンスキーを入力できます。 アドビの有効なライセンスキーをお持ちでない場合は、依頼する必要があります。
+   `license.properties`ファイルを指定しない場合、AEMは起動時に&#x200B;**ようこそ**&#x200B;画面にブラウザをリダイレクトし、ライセンスキーを入力します。 アドビの有効なライセンスキーをお持ちでない場合は、依頼する必要があります。
 
-1. GUI環境でインスタンスを開始アップするには、**`cq-quickstart-6.4.0.jar`**&#x200B;ファイルを重複クリックします。
+1. GUI環境でインスタンスを起動するには、**`cq-quickstart-6.4.0.jar`**&#x200B;ファイルをダブルクリックします。
 
    また、AEM はコマンドラインから起動することもできます。32 ビット Java VM の場合は、次のように入力します。
 
@@ -230,9 +229,9 @@ AEM ソフトウェアパッケージには、次の 2 つの形式がありま�
 * [カスタムスタンドアロンインストール](/help/sites-deploying/custom-standalone-install.md)
 * [実行モード](/help/sites-deploying/configure-runmodes.md)
 
-### 展開されたインストールディレクトリ  {#unpacked-install-directory}
+### 展開されたインストールディレクトリ {#unpacked-install-directory}
 
-quickstart jarを初めて起動すると、`crx-quickstart`という新しいサブディレクトリの下の同じディレクトリに自分自身を展開します。最終的には、次のようになります。
+クイックスタートjarを初めて起動すると、`crx-quickstart`という新しいサブディレクトリの下の同じディレクトリに解凍されます。最終的に、次のようになります。
 
 ```xml
 <aem-install>/
@@ -270,7 +269,7 @@ AEM が展開され、初めて起動した後は、インストールディレ�
 
 GUI からインスタンスを停止するには、デスクトップアプリケーションウィンドウで&#x200B;**オン／オフ**&#x200B;スイッチをクリックするだけです。
 
-コマンドラインから、AEMを停止して開始することもできます。このインスタンスを初めてインストールした場合、**コマンドラインスクリプト**&#x200B;は次の場所にあります。
+コマンドラインからAEMを停止して起動することもできます。インスタンスを初めてインストールした場合、**コマンドラインスクリプト**&#x200B;は次の場所にあります。
 
 **`<aem-install>/crx-quickstart/bin/`**
 
@@ -296,7 +295,7 @@ AEM が起動し、Web ブラウザーが適切なページに自動的にリダ
 * [オーサリング](/help/sites-authoring/home.md)
 * [管理](/help/sites-administering/home.md)
 * [開発](/help/sites-developing/home.md)
-* [プロジェクト管理](/help/managing/best-practices.md)
+* [管理](/help/managing/best-practices.md)
 
 ## 高度なデプロイメント {#advanced-deployment}
 
@@ -319,5 +318,4 @@ AEM が起動し、Web ブラウザーが適切なページに自動的にリダ
 * [AEM プラットフォームの概要](/help/sites-deploying/platform.md)
 * [パフォーマンスガイドライン](/help/sites-deploying/performance-guidelines.md)
 * [AEM Mobile 使用の手引き](/help/mobile/getting-started-aem-mobile.md)
-* [AEM Screens とは](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
-
+* [AEM Screens とは ](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
