@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 257f3e4a-4b59-4cbb-bf61-f72f173676e6
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 設定
+exl-id: 98f7a6b1-8b16-410c-872c-4af7bc4bcc64
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 85%
 
 ---
-
 
 # 設定方法に関する記事{#configuration-how-to-articles}
 
@@ -29,4 +28,3 @@ ht-degree: 85%
 * [パフォーマンスチューニングのヒント](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html)
 * [ようこそ画面から機能を削除する方法](/help/sites-developing/customizing-the-welcome-console.md)
 * [位置トラッカー機能を無効にする方法](https://helpx.adobe.com/experience-manager/kb/turn-off-geolocation.html)
-
