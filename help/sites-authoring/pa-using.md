@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
-translation-type: tm+mt
-source-git-commit: e99e29425578005ed9d215946d63f67e7229e8d6
+exl-id: 6509c0ce-fc3a-4248-8dc7-db10602c30d6
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 91%
 
 ---
-
 
 # ページ分析データの表示{#seeing-page-analytics-data}
 
@@ -76,7 +75,7 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 
 ### サイトからコンテンツインサイトを開く {#opening-content-insights-from-sites}
 
-ページの効果をさらに調べるには、サイトコンソールから「[Content Insight](/help/sites-authoring/content-insights.md)」を開きます。
+ページの効果をさらに調べるには、サイトコンソールから[コンテンツインサイト](/help/sites-authoring/content-insights.md)を開きます。
 
 1. サイトコンソールで、コンテンツインサイトを表示するページを選択します。
 1. ツールバーで、分析と推奨表示アイコンをクリックします。
@@ -89,4 +88,4 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 >
 >Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。
 >
->現在は、Adobe Analytics](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html)が提供する[ActivityMapプラグインを使用する必要があります。
+>Adobe Analytics](https://docs.adobe.com/content/help/ja/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html)が提供する[ActivityMapプラグインを使用する必要があります。
