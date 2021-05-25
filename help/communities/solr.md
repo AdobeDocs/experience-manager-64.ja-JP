@@ -10,16 +10,15 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: b506018d-67dc-4e47-a3d8-83ae288b5d7e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1605'
 ht-degree: 60%
 
 ---
 
-
-# SRP 用の Solr 設定 {#solr-configuration-for-srp}
+# SRP 用の Solr 設定  {#solr-configuration-for-srp}
 
 ## AEM プラットフォーム用の Solr {#solr-for-aem-platform}
 
@@ -27,13 +26,13 @@ ht-degree: 60%
 
 Oak と SRP のコレクションがどちらも高頻度で使用される場合は、パフォーマンス上の理由から 2 つ目の Solr をインストールすることもできます。
 
-実稼働環境では、[SolrCloud mode](#solrcloud-mode)を使用すると、スタンドアロンモード（ローカルで1つのSolr設定）よりもパフォーマンスが向上します。
+実稼動環境では、[SolrCloudモード](#solrcloud-mode)を使用すると、スタンドアロンモード（単一のローカルSolr設定）よりもパフォーマンスが向上します。
 
 ### 要件 {#requirements}
 
 Apache Solr のダウンロードとインストール：
 
-* [バージョン4.10](https://archive.apache.org/dist/lucene/solr/4.10.4/) または [バージョン5](https://archive.apache.org/dist/lucene/solr/5.5.3/)
+* [バージョン4.10](https://archive.apache.org/dist/lucene/solr/4.10.4/) またはバ [ージョン5](https://archive.apache.org/dist/lucene/solr/5.5.3/)
 
 * Solr には Java 1.7 以降が必要です。
 * サービスは不要
@@ -49,7 +48,7 @@ Apache Solr のダウンロードとインストール：
 
 ## SolrCloud モード {#solrcloud-mode}
 
-[実稼働環境にはSolrCloudmodeを](https://cwiki.apache.org/confluence/display/solr/SolrCloud) お勧めします。SolrCloudモードで実行する場合は、多言語検索(MLS)をインストールする前に、SolrCloudをインストールして設定する必要があります。
+[](https://cwiki.apache.org/confluence/display/solr/SolrCloud) 実稼動環境ではSolrCloudmodeを使用することをお勧めします。SolrCloudモードで実行する場合は、多言語検索(MLS)をインストールする前に、SolrCloudをインストールして設定する必要があります。
 
 SolrCloud の手順に従い、以下をインストールすることを推奨します。
 
@@ -91,7 +90,7 @@ sh./scripts/cloud-scripts/zkcli.sh \\
 -c *mycollection-name*\\
 -d *config-dir* \\
 -n *myconfig-name* \\
--p *ポート*\\
+-p *port*\\
 -s *シャード数* \\
 -rf *レプリカ数*
 
@@ -126,7 +125,7 @@ AEM Communities の MLS は、標準の MLS と高度な MLS のどちらかを�
 * ドイツ語：デコンパウンダーを追加
 * フランス語：エリジオン処理を追加
 * 中国語（簡体）：よりスマートなトークナイザーを追加
-* 各言語：ステマー、停止語のリスト、および正規化機能が追加されました。
+* 様々な言語：ステマー、ストップワードリスト、およびノーマライザーを追加しました。
 
 高度な MLS では、合計で以下の 33 の言語がサポートされます。
 
@@ -145,7 +144,7 @@ AEM Communities の MLS は、標準の MLS と高度な MLS のどちらかを�
 
 #### AEM 6.1 Solr 検索、標準の MLS、高度な MLS の比較  {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}
 
-**注意**:AEM 6.1は、AEM 6.1 Communities FP3以前を指します。
+**注意**:AEM 6.1は、AEM 6.1 Communities FP3以前を表します。
 
 ![chlimage_1-283](assets/chlimage_1-283.png)
 
@@ -156,46 +155,46 @@ AEM Communities の MLS は、標準の MLS と高度な MLS のどちらかを�
 * **schema.xml**
 * **solrconfig.xml**
 
-Solr 4.10の標準MLSファイル(スキーマ.xml、solrconfig.xml)
+Solr 4.10用の標準のMLSファイル(schema.xml、solrconfig.xml)
 
-Solr 5用の標準MLSファイル(スキーマ.xml、solrconfig.xml)
+Solr 5用の標準のMLSファイル(schema.xml、solrconfig.xml)
 
 標準の MLS ファイルは AEM リポジトリに格納されます。
 
 **注意**：Solr ファイルは msrp/ フォルダーに格納されていますが、DSRP にも対応します（変更不要）。
 
-**ダウンロード手順**:または `solrX` 必要に応じ `solr4` て `solr5` 、または
+**ダウンロード手順**:必要に応じ `solrX` て、または `solr4` で置 `solr5` き換えます。
 
 1. CRXDE|Liteを使用して、
 
    * /libs/social/config/datastore/msrp/*solrX*/**schema.xml**
    * /libs/social/config/datastore/msrp/*solrX*/**solrconfig.xml**
 
-1. Solrが展開されているローカルサーバーにダウンロード
+1. Solrがデプロイされているローカルサーバーにダウンロードします。
 
-   * `jcr:content`ノードの`jcr:data`プロパティを探します
+   * `jcr:content`ノードの`jcr:data`プロパティを探します。
    * `view`を選択してダウンロードを開始します
-   * ファイルが適切な名前とエンコード(UTF8)で保存されていることを確認します。
+   * ファイルが適切な名前とエンコーディング(UTF8)で保存されていることを確認します。
 
-1. スタンドアロンモードまたはSolrCloudモードのインストール手順に従います
+1. スタンドアロンモードまたはSolrCloudモードのインストール手順に従います。
 
 #### SolrCloud モード - 標準の MLS {#solrcloud-mode-standard-mls}
 
 1. SolrCloud モードの Solr をインストールして設定します。
 1. 以下の手順で新しい設定を用意します。
 
-   1. *new-config-dir*&#x200B;を作成します（例：*solr-install-dir*/myconfig/）
+   1. *new-config-dir*&#x200B;を作成します（例：*solr-install-dir*/myconfig/）。
 
-   1. 既存のSolr構成ディレクトリの内容を&#x200B;*new-config-dir*&#x200B;にコピーします。
+   1. 既存のSolr設定ディレクトリの内容を&#x200B;*new-config-dir*&#x200B;にコピーします。
 
       * Solr4の場合：*solr-install-dir*/example/solr/collection1/conf/&amp;ast;
-      * Solr5の場合：*solr-install-dir*/server/solr/configsets/data_driven_スキーマ_configs/&amp;ast;
-   1. ダウンロードした&#x200B;**スキーマ.xml**&#x200B;と&#x200B;**solrconfig.xml**&#x200B;を&#x200B;*new-config-dir*&#x200B;にコピーして、既存のファイルを上書きします。
+      * Solr5の場合：*solr-install-dir*/server/solr/configsets/data_driven_schema_configs/&amp;ast；をコピーします。
+   1. ダウンロードした&#x200B;**schema.xml**&#x200B;と&#x200B;**solrconfig.xml**&#x200B;を&#x200B;*new-config-dir*&#x200B;にコピーして、既存のファイルを上書きします。
 
 
-1. [新しい](#upload-a-configuration-to-zookeeper) 設定をZooKeeperにアップロード
+1. [新しい設定をZooKeeperにア](#upload-a-configuration-to-zookeeper) ップロードします。
 1. シャードの数、レプリカ数および設定名など、必要なパラメーターを設定して[コレクションを作成](#create-a-collection)します。
-1. コレクションの作成時に設定名が*提供されなかった場合、[新しく作成したコレクション](#link-a-collection-to-a-configuration-set)とZooKeeperにアップロードした設定をリンクします
+1. コレクションの作成中に設定名が提供されなかった場合は、[新しく作成したコレクション](#link-a-collection-to-a-configuration-set)とZooKeeperにアップロードした設定をリンクします。
 
 1. MSRP の場合、新規インストールである場合を除き、[MSRP インデックス再作成ツール](msrp.md#msrp-reindex-tool)を実行します。
 
@@ -221,12 +220,12 @@ Solr 5用の標準MLSファイル(スキーマ.xml、solrconfig.xml)
 
 高度な MLS をサポートするための SRP コレクション（MSRP または DSRP）については、カスタムスキーマと Solr 設定に加え、新しい Solr プラグインが必要です。必要な項目はすべて、ダウンロード可能なzipファイルにパッケージ化されます。 また、Solrがスタンドアロンモードでデプロイされる場合に使用するインストールスクリプトも含まれています。
 
-アドバンスMLSパッケージを入手するには、ドキュメントのデプロイセクションの[AEMアドバンスMLS](deploy-communities.md#aem-advanced-mls)を参照してください。
+高度なMLSパッケージを入手するには、ドキュメントのデプロイセクションの[AEM Advanced MLS](deploy-communities.md#aem-advanced-mls)を参照してください。
 
 SolrCloud モードまたはスタンドアロンモードのどちらかのインストールを開始するには：
 
-* AEM-SOLR-MLS zipアーカイブをSolrをホストするサーバにダウンロードする
-* アーカイブの解凍
+* AEM-SOLR-MLS zipアーカイブをSolrをホストするサーバーにダウンロードします。
+* アーカイブを解凍します。
 
 #### SolrCloud モード - 高度な MLS {#solrcloud-mode-advanced-mls}
 
@@ -235,7 +234,7 @@ SolrCloud モードまたはスタンドアロンモードのどちらかのイ�
 1. SolrCloud モードの Solr をインストールして設定します。
 1. 高度な MLS パッケージの内容をディスクに抽出します。内容は次のとおりです。
 
-   * **スキーマ.xml**
+   * **schema.xml**
    * **solrconfig.xml**
    * **stopwords/**&#x200B;フォルダー
    * **profiles/**&#x200B;フォルダー
@@ -245,28 +244,28 @@ SolrCloud モードまたはスタンドアロンモードのどちらかのイ�
 
    1. *new-config-dir*&#x200B;を作成します。
 
-      * 例：*solr-install-dir*/myconfig/
-      * サブフォルダーstopwords/とlang/を作成
-   1. 既存のSolr configディレクトリの内容を&#x200B;*new-config-dir*&#x200B;にコピーします。
+      * 例： *solr-install-dir*/myconfig/
+      * stopwords/とlang/のサブフォルダーを作成する
+   1. 既存のSolr設定ディレクトリの内容を&#x200B;*new-config-dir*&#x200B;にコピーします。
 
       * Solr4の場合：*solr-install-dir*/example/solr/collection1/conf/&amp;ast；をコピーします。
-      * Solr5の場合：*solr-install-dir*/server/solr/configsets/data_driven_スキーマ_configs/&amp;ast;
-   1. 抽出した&#x200B;**スキーマ.xml**&#x200B;と&#x200B;**solrconfig.xml**&#x200B;を&#x200B;*new-config-dir*&#x200B;にコピーして、既存のファイルを上書きします。
+      * Solr5の場合：*solr-install-dir*/server/solr/configsets/data_driven_schema_configs/&amp;ast；をコピーします。
+   1. 抽出した&#x200B;**schema.xml**&#x200B;と&#x200B;**solrconfig.xml**&#x200B;を&#x200B;*new-config-dir*&#x200B;にコピーして、既存のファイルを上書きします。
    1. Solr5の場合：*solr_install_dir*/server/solr/configsets/sample_techproducts_configs/conf/lang/&amp;ast;.txt&quot;を&#x200B;*new-config-dir*/lang/にコピーします。
-   1. 抽出した&#x200B;**stopwords/**&#x200B;フォルダーを&#x200B;*new-config-dir*&#x200B;にコピーし、*new-config-dir*/stopwords/&amp;ast;.txtを返します。
+   1. 抽出した&#x200B;**stopwords/**&#x200B;フォルダーを&#x200B;*new-config-dir*&#x200B;にコピーし、*new-config-dir*/stopwords/&amp;ast;.txtを生成します。
 
 
 
-1. [新しい](#upload-a-configuration-to-zookeeper) 設定をZooKeeperにアップロード
+1. [新しい設定をZooKeeperにア](#upload-a-configuration-to-zookeeper) ップロードします。
 1. 以下のとおり、新しい **profiles/** フォルダーをコピーします。
 
-   * Solr4の場合：各ノードのresources/フォルダーにコピーします
+   * Solr4の場合：各ノードのresources/フォルダーにコピーします。
    * Solr5の場合：各Solrインストールのserver/resources/フォルダーにをコピーします。 すべてのノードが同じSolrインストールディレクトリにある場合、この手順は1回だけ実行されます。
 
-1. SolrCloudの各ノードのsolr-homeディレクトリ（solr.xmlを含む）に&#x200B;**lib/**&#x200B;フォルダーを作成します。 次の場所から各ノードの新しいlib/フォルダーにjarsをコピーします。
+1. SolrCloudの各ノードのsolr-homeディレクトリ（solr.xmlを含む）に&#x200B;**lib/**&#x200B;フォルダーを作成します。 以下の場所から各ノードの新しいlib/フォルダーにjarをコピーします。
 
    * 高度な MLS のパッケージから抽出した **extra-libs/**
-   * *solr-install-dir/contrib/抽出/lib/*.jar
+   * *solr-install-dir/contrib/extraction/lib/*.jar
    * *solr-install-dir/dist/solr-cell*.jar
    * *solr-install-dir/contrib/clustering/lib/*.jar
    * *solr-install-dir/dist/solr-clustering*.jar
@@ -274,8 +273,8 @@ SolrCloud モードまたはスタンドアロンモードのどちらかのイ�
    * *solr-install-dir/dist/solr-langid*.jar
    * *solr-install-dir/contrib/velocity/lib/*.jar
    * *solr-install-dir/dist/solr-velocity*.jar
-   * *solr-install-dir/contrib/分析-extras/lib/*.jar
-   * *solr-install-dir/contrib/lucene-extras/lucene-libs/*.jar
+   * *solr-install-dir/contrib/analysis-extras/lib/*.jar
+   * *solr-install-dir/contrib/analysis-extras/lucene-libs/*.jar
 
 1. シャードの数、レプリカ数および設定名など、必要なパラメーターを設定して[コレクションを作成](#create-a-collection)します。
 1. 設定の名前をコレクション作成中に指定しなかった&#x200B;**&#x200B;場合は、ZooKeeper にアップロードした設定に[新しく作成したこのコレクションをリンク](#link-a-collection-to-a-configuration-set)します。
@@ -291,19 +290,19 @@ SolrCloud モードまたはスタンドアロンモードのどちらかのイ�
 * スタンドアロンモードの Solr をインストールします。
 * Solr5 を実行している場合、以下のコマンドで collection1 を作成します（Solr4 と同様）。
 
-   * 。/bin/solr開始
+   * 。/bin/solr start
    * 。/bin/solr create_core -c collection1 -d sample_techproducts_configs
 
-* インストールスクリプトを実行します。[-v 4|5] [-d solrhome] [-c collectionpath]をインストールします
+* インストールスクリプトを実行します。[-v 4|5] [-d solrhome] [-c collectionpath]をインストールします。
 ここで、
 
    * -d solhome
 
       Solrインストールディレクトリ
 
-   * -cコレクションパス
+   * -c collectionpath
 
-      ソルのコレクションパス
+      Solr内のコレクションパス
 
    * --help
 
@@ -323,14 +322,14 @@ SolrCloud モードまたはスタンドアロンモードのどちらかのイ�
 
 **注意**：
 
-* インストールスクリプトは、新しいスキーマをインストールする前に、バージョン.xmlとsolrconfig.xmlをバックアップします。その際に、「.orig」を付加します。
+* インストールスクリプトは、新しいバージョンをインストールする前に、「.orig」を追加してschema.xmlとsolrconfig.xmlをバックアップします。
 
 ### solrconfig.xml について {#about-solrconfig-xml}
 
 **solrconfig.xml** は、自動コミットの間隔と検索表示を制御するファイルであり、テストと調整が必要です。
 
-&lt;autoCommit>：デフォルトでは、AutoCommit（安定ストレージへのハードコミット）の間隔は、15 秒に設定されています。既定では、検索の表示にはコミット前のインデックスが使用されます。
+&lt;autoCommit>：デフォルトでは、AutoCommit（安定ストレージへのハードコミット）の間隔は、15 秒に設定されています。検索の表示は、デフォルトでコミット前のインデックスを使用します。
 
 コミットによる変更が反映された更新済みのインデックスを使用するよう検索を変更するには、含まれている &lt;openSearcher> を true に変更します。
 
-&lt;autoSoftCommit>：「ソフト」コミットを使用すると、変更は表示されます（インデックスが更新されます）が、変更は安定ストレージに同期（ハードコミット）されません。その結果、性能が向上します。 デフォルトでは、&lt;autoSoftCommit>は無効で、&lt;maxTime>は —1に設定されています。
+&lt;autoSoftCommit>：「ソフト」コミットを使用すると、変更は表示されます（インデックスが更新されます）が、変更は安定ストレージに同期（ハードコミット）されません。その結果、パフォーマンスが向上します。 デフォルトでは、&lt;autoSoftCommit>は無効で、含まれる&lt;maxTime>は —1に設定されています。
