@@ -11,18 +11,17 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 36560809-dba9-49cf-a8ee-23c6766382ef
 noindex: true
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 9791ffd5-04c4-4eed-8e99-b390e539197d
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '165'
 ht-degree: 92%
 
 ---
 
-
 # Designer のインストールと設定 {#installing-and-configuring-designer}
 
-WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。Designerのスタンドアロンインストーラーを使用する場合は、次の手順に従います。
+WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。Designer用のスタンドアロンインストーラーを使用する場合は、次の手順に従います。
 
 1. Designer のインストーラーをダウンロードする方法については、Adobe サポートまでお問い合わせください。
 
@@ -33,7 +32,6 @@ WorkBench にバンドルされている Designer は、スタンドアロンの
 1. setup.exe をダブルクリックして Designer のインストーラーを起動します。
 1. 先に進んでユーザーの詳細とユーザー情報画面のシリアル番号を入力します。
 1. 使用許諾契約に同意する場合は、「次へ」をクリックして先に進みます。
-1. （オプション）Designer を選択した場所にインストールする場合は、既定のインストールパスを変更します。 「Next」をクリックします。
-1. 「戻る」をクリックして環境設定を変更します。Designer をインストールするには、「インストール」をクリックします。
-1. インストールが完了したら「完了」をクリックします。
-
+1. （オプション）Designer を選択した場所にインストールする場合は、既定のインストールパスを変更します。 「次へ」をクリックします。
+1. 設定を変更するには、「戻る」をクリックします。Designer をインストールするには、「インストール」をクリックします。
+1. インストールが完了したら、「完了」をクリックします。
