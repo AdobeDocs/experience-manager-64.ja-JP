@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: 0e0a9b6b-fd2f-4cec-b233-500c940ee4d5
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: d8f60be3-474a-4dd1-aaa5-7b6a97e1a9bd
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 90%
 
 ---
-
 
 # フォームリスター項目にカスタムアクションボタンを追加  {#adding-custom-action-on-form-lister-items}
 
@@ -25,7 +24,7 @@ AEM Forms では、使用可能なフォームをリストしたポータルペ�
 
 この記事は、フォームポータルページから直接フォームのリンクを送信するボタンの作成方法を示します。このカスタマイズは、Search &amp; Listerコンポーネントのテンプレートのアップデートを必要とします。
 
-テンプレートにアクションを追加するのに必要なコードは以下の通りです。コードスニペットの`onclick`属性には、フォームのリンクを電子メールで送信するスクリプトがあります。
+テンプレートにアクションを追加するのに必要なコードは以下の通りです。コードスニペットの`onclick`属性には、電子メールでフォームのリンクを送信するスクリプトがあります。
 
 ```mxml
 <div class="__FP_boxes-container __FP_single-color">
@@ -46,9 +45,8 @@ AEM Forms では、使用可能なフォームをリストしたポータルペ�
 </div>
 ```
 
-カスタムテンプレートで同様のアクションを追加できます。JavaScript関数を定義するには、その機能をページレベルで追加して、必要なHTML要素にリンクします。上記の例では、`onclick`式がリンクされた関数です。
+カスタムテンプレートで同様のアクションを追加できます。JavaScript関数を定義するには、その機能をページレベルで追加して、必要なHTML要素にリンクします。上記の例では、リンクされた関数が`onclick`式になります。
 
 テンプレートに編集を行った後、サンプルのポータルページには、以下のようにEメールでフォームのリンクの送信するためのボタンが含まれています。
 
 ![email](assets/email.png)
-
