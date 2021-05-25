@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 5a96c306-790a-4721-a146-86fbceb376db
-translation-type: tm+mt
-source-git-commit: b698a1348df3ec2ab455c236422784d10cbcf7c2
+exl-id: 2af8eaed-3963-4016-9efa-a630d16a982b
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '4811'
 ht-degree: 97%
 
 ---
-
 
 # ページテンプレートの作成  {#creating-page-templates}
 
@@ -41,7 +40,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->編集可能なテンプレートを[SPAエディタ](/help/sites-developing/spa-overview.md)で使用するには、AEM 6.4.5.0以降が必要です。
+>AEM 6.4.5.0以降では、[SPA Editor](/help/sites-developing/spa-overview.md)で編集可能なテンプレートを使用する必要があります。
 
 >[!NOTE]
 >
@@ -49,7 +48,7 @@ ht-degree: 97%
 
 >[!CAUTION]
 >
->**テンプレートコンソール**&#x200B;で作成したページとテンプレートは、従来のUIでは使用できないので、このような使用はサポートされていません。
+>**テンプレートコンソール**&#x200B;で作成されたページやテンプレートは、クラシックUIでは使用できず、そのような使用はサポートされていません。
 
 ## 始める前に {#before-you-start}
 
@@ -112,7 +111,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
    * これらは[開発者によって提供されているため、](/help/sites-developing/page-templates-static.md)作成者が作成および変更することはできません。
    * 新しいページはテンプレートをコピーして作成されるので、動的接続は存在しません（ただし、情報としてテンプレート名は登録されます）。
    * 設計プロパティを保持するには、[デザインモード](/help/sites-authoring/default-components-designmode.md)を使用します。
-   * 静的テンプレートの編集は開発者のみがタスクするため、詳しくは開発者ドキュメント[ページテンプレート — 静的](/help/sites-developing/page-templates-static.md)を参照してください。
+   * 静的テンプレートの編集は開発者専用のタスクなので、詳しくは、開発者ドキュメント「[ページテンプレート — 静的](/help/sites-developing/page-templates-static.md)」を参照してください。
 
 定義により、テンプレートコンソールおよびテンプレートエディターでは、編集可能なテンプレートの作成および編集だけが可能です。このため、このドキュメントは、編集可能なテンプレートだけにフォーカスします。
 
@@ -157,7 +156,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 ### 新しいテンプレートの作成 - テンプレート作成者 {#creating-a-new-template-template-author}
 
-1. **テンプレートコンソール**（**ツール** -> **一般**&#x200B;を使用）を開き、必要なフォルダーに移動します。
+1. **テンプレートコンソール**&#x200B;を（**ツール** -> **一般**&#x200B;から）開き、必要なフォルダーに移動します。
 
    >[!NOTE]
    >
@@ -184,7 +183,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
    >
    >新しく作成されたテンプレートは、コンソールで&#x200B;**ドラフト**&#x200B;とマークされます。これは、ページ作成者がまだテンプレートを使用できないことを示します。
 
-### テンプレートプロパティの定義 - テンプレート作成者  {#defining-template-properties-template-author}
+### テンプレートプロパティの定義 - テンプレート作成者 {#defining-template-properties-template-author}
 
 テンプレートには、次のプロパティを指定できます。
 
@@ -290,7 +289,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 1. ツールバーから「**公開**」を選択してアクションを完了します。
 
-## テンプレートの編集 - テンプレート作成者 {#editing-templates-template-authors}
+## テンプレートの編集- テンプレート作成者 {#editing-templates-template-authors}
 
 テンプレートを作成（または編集）するときに、様々な側面を定義できます。テンプレートの編集は、ページのオーサリングに似ています。
 
@@ -484,7 +483,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
    >[!NOTE]
    >
-   >[](/help/sites-administering/rich-text-editor.md)リッチテキストエディターを実装するコンポーネントのコンテンツポリシーは、UI 設定を通じて RTE で提供されるオプションに対してのみ定義できます。
+   >[リッチテキストエディターを実装するコンポーネントのコンテンツポリシー](/help/sites-administering/rich-text-editor.md)は、UI 設定を通じて RTE で提供されるオプションに対してのみ定義できます。
 
 * **ポリシーおよびプロパティ（レイアウトコンテナ）**
 
@@ -613,7 +612,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 **ページデザイン**&#x200B;ダイアログにアクセスするには
 
-1. **テンプレートエディター**&#x200B;から、ツールバーから「**ページ情報**」を選択し、「**ページデザイン**」を選択してダイアログを開きます。
+1. **テンプレートエディター**&#x200B;で、ツールバーの「**ページ情報**」を選択し、「**ページデザイン**」を選択してダイアログを開きます。
 1. **ページデザイン**&#x200B;ダイアログが開いて、次の 2 つのセクションに分割されます。
 
    * 左半分は、[ページポリシー](/help/sites-authoring/templates.md#page-policies)を定義します。
@@ -724,4 +723,3 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 1. サイト固有のテンプレートに[独自のフォルダーを作成](#creating-a-template-folder-admin)します。
 1. **テンプレート**&#x200B;コンソールから[独自のテンプレートを公開](#publishing-a-template-template-author)します。
-
