@@ -8,22 +8,21 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
-translation-type: tm+mt
-source-git-commit: 5e764edb3d8ed98542c50b80cac40776c886ccf5
+exl-id: 3534864b-3d1c-42ca-96a0-5becbfbc8ce6
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 56%
 
 ---
 
-
 # タスクアクションのカスタマイズ  {#customizing-task-actions}
 
-AEM Forms Workspace で、ユーザーはタスクアクションをカスタマイズすることができます。タスクアクションをカスタマイズする前に、[AEM Formsワークスペースのカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)に示されている手順に従っていることを確認してください。
+AEM Forms Workspace で、ユーザーはタスクアクションをカスタマイズすることができます。タスクアクションをカスタマイズする前に、「[AEM Forms workspaceのカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」に示す手順に従っていることを確認してください。
 
 ## テキストスタイルのカスタマイズ {#customizing-text-style}
 
-テキストスタイルをカスタマイズするには、次のコードスニペットを`/apps/ws/css/newStyle.css`ファイルに追加します。
+テキストスタイルをカスタマイズするには、`/apps/ws/css/newStyle.css`ファイルに次のコードスニペットを追加します。
 
 ```css
 /*-------- For Task Actions visible in task list task action popup ----------------------------------------------------*/
@@ -134,11 +133,11 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
 
 ## アクションに画像のみを表示  {#showing-only-images-for-actions}
 
-アクションに画像のみを表示するには、ルートアクションで使用されているイメージをカスタマイズします。詳しくは、「[ルートアクションの画像](/help/forms/using/images-route-actions.md)」を参照してください。
+アクションに画像のみを表示するには、ルートアクションで使用されているイメージをカスタマイズします。詳細は、[ルートアクションのイメージ](/help/forms/using/images-route-actions.md)を参照してください。
 
 ### タスクリストのタスクアクション ポップアップメニュー {#task-list-task-action-nbsp-pop-up-menu}
 
-1. AEM Forms Workspace タスクリストのタスクアクションポップアップメニューのアイテムをカスタマイズするには、開発パッケージが必要です。開発パッケージの作成について詳しくは、「[AEM Formsワークスペースコードの構築」を参照してください。](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
+1. AEM Forms Workspace タスクリストのタスクアクションポップアップメニューのアイテムをカスタマイズするには、開発パッケージが必要です。開発パッケージの作成について詳しくは、「[AEM Forms Workspaceコードの構築](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)」を参照してください。
 
 1. /libs/ws/js/runtime/templates/task.htmlを`/apps/ws/js/runtime/templates/task.html`にコピーし、次のコードスニペットを置き換えます。
 
@@ -213,7 +212,7 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
        </div>
    ```
 
-1. `/apps/ws/css/newStyle.css`ファイルからアンカータグに割り当てられた固定幅を削除します。
+1. アンカータグに割り当てられている固定幅を`/apps/ws/css/newStyle.css`ファイルから削除します。
 
    ```css
    .task .taskActionsPopUp ul{
@@ -268,7 +267,7 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
 次の手順を実行して、詳細タスクのアクションポップアップメニューをカスタマイズします。
 
 * /libs/ws/js/runtime/templates/taskdetails.htmlファイルを`/apps/ws/js/runtime/templates/`フォルダーにコピーします。
-* テキストの代わりにアンカータグの内部にアイコンタグをカプセル化します。例えば、以下に示す*new code *は、アンカータグの内部にアイコンタグをカプセル化します。
+* テキストの代わりにアンカータグの内部にアイコンタグをカプセル化します。例えば、以下に示す新しいコードは、アンカータグ内にアイコンタグをカプセル化します。
 
 ```
 // Original code
@@ -363,4 +362,4 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
 * 次のテキストを探します。  `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
 * 検索したテキストを次のテキストに置き換えます。`text!/lc/apps/ws/js/runtime/templates/taskdetails.html`
 
-[**サポートへのお問い合わせ**](https://www.adobe.com/jp/account/sign-in.supportportal.html)
+[**サポートへのお問い合わせ**](https://www.adobe.com/account/sign-in.supportportal.html)
