@@ -9,11 +9,10 @@ topic-tags: installing
 discoiquuid: 1bb8360c-5543-484e-9712-590822211298
 role: Administrator
 exl-id: 45b0fb99-9f7f-47e6-a4de-4db321867f8f
-translation-type: tm+mt
 source-git-commit: 4598602f75c0cd477e4d898700735c6cd5be175a
 workflow-type: tm+mt
 source-wordcount: '1836'
-ht-degree: 84%
+ht-degree: 86%
 
 ---
 
@@ -21,7 +20,7 @@ ht-degree: 84%
 
 アダプティブフォーム、PDF フォームおよび HTML5 フォームをインストールして設定します。アダプティブフォーム用に Adobe Analytics および Adobe Target を設定して、プロファイルに基づいてフォームの使用状況を分析し、対象ユーザーを絞ります。
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 AEM Forms は、エンドユーザーからデータを取得するためのアダプティブフォーム、HTML5 フォームおよび PDF フォームのフォームセットを提供します。また、Web ページ上の利用可能なすべてのフォームを一覧表示し、フォームの使用状況を分析して対象ユーザーを絞るためのツールも提供します。これらの機能は、AEM Forms のアドオンパッケージに含まれています。アドオンパッケージは、AEM のオーサーインスタンスまたはパブリッシュインスタンスに展開されます。
 
@@ -37,7 +36,7 @@ AEM Forms は強力なエンタープライズクラスのプラットフォー�
 
 AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。AEM Forms のデータ取得機能を実行するには、少なくとも 1 つの AEM オーサーインスタンスおよび AEM パブリッシュインスタンスのみを必要とします。AEM Forms のデータ取得機能を実行するには、次のトポロジーを推奨します。トポロジーについて詳しくは、「[AEM Forms のアーキテクチャとデプロイメントトポロジー](/help/forms/using/aem-forms-architecture-deployment.md)」を参照してください。
 
-![推奨トポロジー](assets/recommended-topology.png)
+![推奨トポロジ](assets/recommended-topology.png)
 
 ## システム要件 {#system-requirements}
 
@@ -96,14 +95,14 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
-   2. パッケージのバージョンとタイプを選択します。 また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して、結果をフィルターすることもできます。
-1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「**[!UICONTROL EULA条項に同意]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
+   2. パッケージのバージョンとタイプを選択します。 **[!UICONTROL ダウンロードの検索]**&#x200B;オプションを使用して、結果をフィルターすることもできます。
+1. お使いのオペレーティングシステムに適したパッケージ名をタップし、「**[!UICONTROL EULA利用条件]**&#x200B;に同意し、**[!UICONTROL ダウンロード]**」をタップします。
 1. [パッケージマネージャー](https://docs.adobe.com/content/help/ja/experience-manager-65/administering/contentmanagement/package-manager.html)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
 1. パッケージを選択し、「**[!UICONTROL インストール]**」をクリックします。
 
    [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
 
-1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**すぐにはサーバーを再起動しないでください。** AEM Formsサーバーを停止する前に、 [AEM-Installation-Directory]/crx-quickstart/logs/error.logファイルにServiceEvent REGISTEREDメッセージとServiceEvent UNREGISTEREDメッセージが表示されなくなるまで待ち、ログは安定しています。
+1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**すぐにはサーバーを再起動しないでください。** AEM Formsサーバーを停止する前に、ServiceEvent REGISTEREDメッセージとServiceEvent UNREGISTEREDメッセージが [AEM-Installation-Directory] /crx-quickstart/logs/error.logファイルに表示されなくなり、ログが安定するまで待ちます。
 1. 手順 1 から 7 を、すべてのオーサーインスタンスとパブリッシュインスタンスで繰り返します。
 
 ## インストール後の設定 {#post-installation-configurations}
@@ -114,12 +113,12 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 #### RSA ライブラリと BouncyCastle ライブラリの設定  {#configure-rsa-and-bouncycastle-libraries}
 
-すべての作成者インスタンスと発行インスタンスで次の手順を実行し、ライブラリの委任をブートします。
+すべてのオーサーインスタンスとパブリッシュインスタンスで次の手順を実行し、ライブラリの委任を起動します。
 
 1. 基になる AEM インスタンスを停止します。
-1. [AEMインストールディレクトリ]\crx-quickstart\conf\sling.propertiesを開いて編集します。
+1. [AEMインストールディレクトリ]\crx-quickstart\conf\sling.propertiesファイルを開いて編集します。
 
-   [AEMインストールディレクトリ]\crx-quickstart\bin\start.batを開始AEMに使用した場合は、[AEM_root]\crx-quickstart\にあるsling.propertiesを編集します。
+   [AEMインストールディレクトリ]\crx-quickstart\bin\start.batを使用してAEMを起動した場合は、[AEM_root]\crx-quickstart\にあるsling.propertiesを編集します。
 
 1. 以下のプロパティを sling.properties ファイルに追加します。
 
@@ -128,7 +127,7 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
    sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*
    ```
 
-1. （AIXのみ）sling.propertiesファイル追加に対する次のプロパティ。
+1. （AIXのみ）次のプロパティをsling.propertiesファイルに追加します。
 
    ```
    sling.bootdelegation.xerces=org.apache.xerces.*
@@ -139,18 +138,18 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 #### シリアル化エージェントの設定 {#configure-the-serialization-agent}
 
-すべての作成者インスタンスと発行インスタンスで次の手順を実行し、パッケージを許可リストに追加します。
+すべてのオーサーインスタンスとパブリッシュインスタンスで次の手順を実行し、パッケージをに追加許可リストします。
 
 1. ブラウザーウィンドウで、AEM Configuration Manager を開きます。デフォルトの URL は `https://[server]:[port]/system/console/configMgr` です。
 1. **[!UICONTROL デシリアライゼーションファイアウォール設定]**&#x200B;を検索して開きます。
-1. 追加&#x200B;**[!UICONTROL 許可リスト]**&#x200B;フィールドに対する&#x200B;**[!UICONTROL sun.util.calendar]**&#x200B;パッケージ 「**[!UICONTROL 保存]**」をクリックします。
+1. **[!UICONTROL sun.util.calendar]**&#x200B;パッケージを&#x200B;**[!UICONTROL 許可リスト]**&#x200B;フィールドに追加します。 「**[!UICONTROL 保存]**」をクリックします。
 1. 手順 1 から 3 を、すべてのオーサーインスタンスとパブリッシュインスタンスで繰り返します。
 
 ### インストール後のオプションの設定 {#optional-post-installation-configurations}
 
 #### Dispatcher の設定 {#configure-dispatcher}
 
-ディスパッチャーは AEM のキャッシングおよびロードバランスツールです。AEM ディスパッチャーはまた、AEM サーバーを攻撃から保護することにも役立ちます。エンタープライズクラスの Web サーバーと一緒にディスパッチャーを使用することで、AEM インスタンスのセキュリティを向上できます。[ディスパッチャー](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html)を使用する場合は、AEM Formsに対して次の設定を行います。
+ディスパッチャーは AEM のキャッシングおよびロードバランスツールです。AEM ディスパッチャーはまた、AEM サーバーを攻撃から保護することにも役立ちます。エンタープライズクラスの Web サーバーと一緒にディスパッチャーを使用することで、AEM インスタンスのセキュリティを向上できます。[Dispatcher](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html)を使用する場合は、AEM Formsに対して次の設定を実行します。
 
 1. AEM Forms のアクセスの設定:
 
@@ -171,14 +170,14 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 * アダプティブフォームのキャッシュを使用するときは、[AEM ディスパッチャー](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) を使用してアダプティブフォームのクライアントライブラリ（CSS および JavaScript）をキャッシュします。
 * カスタムコンポーネントの開発時には、開発に使用されるサーバー上でアダプティブフォームのキャッシュを無効にしておく必要があります。
 
-次の手順を実行してアダプティブフォームのキャッシュを設定します。
+アダプティブフォームのキャッシュを設定するには、以下の手順を実行します。
 
-1. `https://[server]:[port]/system/console/configMgr`のAEM Web Console Configuration Managerに移動します。
-1. 「**[!UICONTROL アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定]**」をクリックして、設定値を編集します。設定値を編集ダイアログで、AEM Formsサーバーのインスタンスがキャッシュできるフォームまたはドキュメントの最大数を「**[!UICONTROL アダプティブFormsの数]**」フィールドに指定します。 デフォルト値は 100 です。「**[!UICONTROL 保存]**」をクリックします。
+1. `https://[server]:[port]/system/console/configMgr` の AEM Web コンソール設定マネージャーに移動します。
+1. 「**[!UICONTROL アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定]**」をクリックして、設定値を編集します。設定値を編集ダイアログで、「**[!UICONTROL アダプティブFormsの数]**」フィールドに、AEM Formsサーバーのインスタンスでキャッシュできるフォームまたはドキュメントの最大数を指定します。 デフォルト値は 100 です。「**[!UICONTROL 保存]**」をクリックします。
 
    >[!NOTE]
    >
-   >キャッシュを無効にするには、「アダプティブフォームの数」フィールドの値を **0** に設定します。キャッシュの設定を無効または変更すると、キャッシュがリセットされ、フォームとドキュメントがすべてキャッシュから削除されます。
+   >キャッシュを無効にするには、「アダプティブフォームの数」フィールドの値を **0** に設定します。キャッシュ設定を無効にしたり変更したりすると、キャッシュがリセットされ、すべてのフォームとドキュメントがキャッシュから削除されます。
 
 #### フォームデータモデルに SSL 通信を設定する {#configure-ssl-communcation-for-form-data-model}
 
@@ -204,7 +203,7 @@ AEM Forms で Adobe Analytics を使用するには、「[分析とレポート�
 
 顧客は、フォームのエクスペリエンスに魅力がない場合、フォームを放棄してしまいます。また、フォームが顧客にとって使いにくい場合は、サポート量が増加し組織のコストが膨らむことになります。コンバージョン率を向上させる顧客体験を正しく認識して提供することは、難題であると同時に非常に重要です。この問題を解決するキーは AEM Forms にあります。
 
-AEM Forms は Adobe Marketing Cloud ソリューションである Adobe Target と統合することで、個々の顧客に対応した魅力的な顧客体験を、複数のデジタルチャネルにわたって提供します。Adobe Targetを使用してA/Bテストのアダプティブフォームを使用するには、[Adobe TargetをAEM Formsと統合](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)します。
+AEM Forms は Adobe Marketing Cloud ソリューションである Adobe Target と統合することで、個々の顧客に対応した魅力的な顧客体験を、複数のデジタルチャネルにわたって提供します。Adobe TargetをA/Bテスト用のアダプティブフォームに使用するには、[Adobe TargetをAEM Forms](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)と統合します。
 
 ## 次の手順 {#next-steps}
 
