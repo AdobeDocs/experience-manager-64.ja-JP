@@ -8,19 +8,18 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 1ce9a622-5968-407f-a74b-d325a2bff669
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: アップグレード
+exl-id: a2d6524e-3f5b-4d1e-af64-61ff95889657
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 88%
 
 ---
 
-
 # AEM 6.4 における Forms リポジトリの再構築{#forms-repository-restructuring-in-aem}
 
-AEM 6.4](/help/sites-deploying/repository-restructuring.md)の親ページ[リポジトリの再構築に関する説明に従って、AEM 6.4にアップグレードしたお客様は、このページを使用して、AEM Forms・ソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
+AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明したように、AEM 6.4にアップグレードする場合は、このページを使用して、AEM Formsソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
 
 **6.4 へのアップグレード時におこなう変更**
 
@@ -33,14 +32,14 @@ AEM 6.4](/help/sites-deploying/repository-restructuring.md)の親ページ[リ�
 * [Typekit クラウドサービス設定](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md#typekit-cloud-service-configurations)
 * [その他](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md#misc)
 
-## 6.4 へのアップグレード時におこなう変更  {#with-upgrade}
+## 6.4 へのアップグレード時におこなう変更 {#with-upgrade}
 
 ### その他 {#misc}
 
 | **以前の場所** | `/etc/clientlibs/fd/fp` |
 |---|---|
 | **新しい場所** | `/libs/fd/fp/components` |
-| **再構築の手引き** | カスタムコードから「従来の」の場所への明示的な参照は、「新しい」の場所に更新する必要があります。 |
+| **再構築の手引き** | カスタムコード内の従来の場所への明示的な参照は、新しい場所に更新する必要があります。 |
 | **備考** | これらのクライアントライブラリは、変更したり拡張したりしないでください。 |
 
 | **以前の場所** | `/etc/clientlibs/fd/rte` |
@@ -128,6 +127,5 @@ AEM 6.4](/help/sites-deploying/repository-restructuring.md)の親ページ[リ�
 | **以前の場所** | `/etc/designs/fd/fp` |
 |---|---|
 | **新しい場所** | `/libs/fd/fp` |
-| **再構築の手引き** | /etcテンプレートへの参照は、最終的に`/libs`に対応するを指すように更新される必要があります。 |
+| **再構築の手引き** | /etcテンプレートへの参照は、最終的に、対応する`/libs`を指すように更新する必要があります。 |
 | **備考** | 該当なし |
-
