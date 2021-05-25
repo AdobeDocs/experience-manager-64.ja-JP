@@ -7,7 +7,6 @@ page-status-flag: never-activated
 uuid: 2fddf5ce-df5d-4d66-bd80-7d27732c5e0c
 contentOwner: alvawb
 discoiquuid: 826694f1-fb33-430f-85d1-da8e9e75f213
-translation-type: tm+mt
 source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
 workflow-type: tm+mt
 source-wordcount: '23'
