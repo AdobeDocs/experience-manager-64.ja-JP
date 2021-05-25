@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: e-commerce
 content-type: reference
 discoiquuid: cb043066-aefc-4b68-b302-2b5dd710a786
-feature: Commerce Integration Framework
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: コマース統合フレームワーク
+exl-id: d84cd0ec-4586-45c1-a07a-a4d50fcbb629
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '293'
-ht-degree: 60%
+ht-degree: 61%
 
 ---
-
 
 # e コマースの概要{#ecommerce-overview}
 
@@ -28,13 +27,13 @@ AEM の汎用 e コマースは、標準インストールの一部として提�
 |  | CIF オンプレミス | CIF クラウド |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | サポートされている AEM バージョン | AEM オンプレミスまたは AMS 6.x | AEM AMS 6.4 および 6.5 |
-| バックエンド | - AEM, Java <br> — モノリシック統合、ビルド前のマッピング（テンプレート）<br> - JCRリポジトリ | -Magento<br>- JavaとJavaScript <br>- JCRリポジトリにコマースデータが保存されていません。 |
+| バックエンド | - AEM、Java <br> — モノリシック統合、ビルド前マッピング（テンプレート）<br> - JCRリポジトリ | -Magento<br>- JavaおよびJavaScript <br>- JCRリポジトリに保存されたコマースデータはありません |
 | フロントエンド | AEM サーバー側によってページをレンダリング | 混在型ページアプリケーション（ハイブリッドレンダリング） |
-| 製品カタログ |  — 製品インポーター、エディター、AEMでのキャッシュ<br>- AEMまたはプロキシページを含む通常のカタログ |  — 製品のインポートなし<br> — 汎用テンプレート<br> — コネクタ経由のオンデマンドデータ |
-| スケーラビリティ |  — 数百万個までの製品をサポート可能（使用事例によって異なります） <br> — ディスパッチャーでのキャッシュ |  — ボリュームに制限がない<br> — ディスパッチャーまたはCDNのキャッシュ |
-| 標準化されたデータモデル | いいえ | あり。Magento GraphQL スキーマ |
-| 入手方法 | はい：<br> - SAPCommerce Cloud(AEM 6.4とHybris 5 （デフォルト）をサポートするように更新)、Hybris 4 <br>- SalesforceCommerce Cloud(AEM 6.4をサポートするようにオープンソースのコネクタ)との互換性を維持 | あり。GitHub 経由のオープンソース。<br>Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり） |
-| 用途 | 限定的な使用例：小さい静的なカタログの読み込みが必要な場合 | ほとんどの使用例で好ましいソリューション |
+| 製品カタログ | - AEM <br>の製品インポーター、エディター、キャッシュ — AEMまたはプロキシページを含む通常のカタログ |  — 製品のインポートなし<br> — 汎用テンプレート<br> — コネクタを介したオンデマンドデータ |
+| スケーラビリティ |  — 最大で数百万個の製品をサポートできます（使用例によって異なります）。<br> - Dispatcherでのキャッシュ |  — ボリューム制限なし<br> - DispatcherまたはCDNでのキャッシュ |
+| 標準化されたデータモデル | 不可 | あり。Magento GraphQL スキーマ |
+| 入手方法 | はい：<br> - SAPCommerce Cloud(AEM 6.4とHybris 5をサポートするように更新（デフォルト）、Hybris 4 <br>- SalesforceCommerce Cloud(AEM 6.4をサポートするオープンソースのコネクタ)との互換性を維持) | あり。GitHub 経由のオープンソース。<br>Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり） |
+| 用途 | 限定的な使用例：小さな静的カタログの読み込みが必要な場合 | ほとんどの使用例で好ましいソリューション |
 
 
 ## その他の実装のデプロイ  {#deploying-other-implementations}
@@ -48,4 +47,3 @@ AEM の汎用 e コマースは、標準インストールの一部として提�
 >e コマースの実装の概念および管理について詳しくは、[e コマースの管理](/help/sites-administering/ecommerce.md)を参照してください。
 >
 >eコマース機能の拡張について詳しくは、[eコマースの開発](/help/sites-developing/ecommerce.md)を参照してください。
-
