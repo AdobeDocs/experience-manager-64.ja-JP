@@ -1,34 +1,33 @@
 ---
-title: 追加画像マップ
+title: 画像マップの追加
 description: ハイパーリンクが指定された画像マップを画像アセットに追加する方法を学習します。
 contentOwner: AG
-feature: Asset Management
+feature: アセット管理
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: d6b04891-12d3-4255-a156-2e9000474fd1
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 21%
+source-wordcount: '290'
+ht-degree: 20%
 
 ---
 
-
-# 追加画像マップ{#adding-image-maps}
+# 画像マップ{#adding-image-maps}を追加します。
 
 ハイパーリンクが指定された画像マップを画像アセットに追加する方法を学習します。
 
 画像マップを使用すると、ハイパーリンクが指定された 1 つ以上の領域を追加できます。この領域は、他のハイパーリンクと同様に機能します。
 
-1. 次のいずれかの操作を行って、**[!UICONTROL インプレースイメージエディタ]**&#x200B;を開きます。
+1. 次のいずれかの操作を行って、**[!UICONTROL インプレース画像エディター]**&#x200B;を開きます。
 
-   * クイックアクションを使用して、**[!UICONTROL カード]**&#x200B;表示ー内のアセットに表示される&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップします。 リスト表示でアセットを選択し、ツールバーの&#x200B;**編集**&#x200B;アイコンをタップします。
+   * クイックアクションを使用して、**[!UICONTROL カード]**&#x200B;表示で、アセットに表示される&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップします。 リスト表示で、アセットを選択し、ツールバーの&#x200B;**編集**&#x200B;アイコンをタップします。
 
       >[!NOTE]
       >
-      >クイックアクションは&#x200B;**[!UICONTROL リスト]**&#x200B;表示では使用できません。
+      >**[!UICONTROL リスト]**&#x200B;ビューではクイックアクションは使用できません。
 
    * **[!UICONTROL カード]**&#x200B;または&#x200B;**[!UICONTROL リスト]**&#x200B;表示で、アセットを選択し、ツールバーの&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップします。
-   * アセットページから&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップします。
+   * アセットページの「**[!UICONTROL 編集]**」アイコンをタップします。
 
       ![chlimage_1-420](assets/chlimage_1-420.png)
 
@@ -40,11 +39,11 @@ ht-degree: 21%
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
 
-1. ホットスポットをタップし、URLとAltテキストを入力します。 **[!UICONTROL ターゲット]**&#x200B;リストから、同じタブ、新しいタブ、iFrameなど、画像マップを表示する場所を指定します。 例えば、URLに`https://www.adobe.com`、代替テキストに`Adobe website`を入力し、画像マップの&#x200B;**[!UICONTROL ターゲット]**&#x200B;リストから&#x200B;**[!UICONTROL 新しいタブ]**&#x200B;を指定して、新しいタブで開きます。
+1. ホットスポットをタップし、URLとAltテキストを入力します。 **[!UICONTROL Target]**&#x200B;リストから、同じタブ、新しいタブ、iFrameなど、画像マップを表示する場所を指定します。 例えば、URLに`https://www.adobe.com`、代替テキストに`Adobe website`と入力し、**[!UICONTROL Target]**&#x200B;リストから&#x200B;**[!UICONTROL 新しいタブ]**&#x200B;を指定して、新しいタブで開く画像マップを指定します。
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 
-1. **[!UICONTROL 確認]**&#x200B;アイコンをタップし、ツールバーから&#x200B;**[!UICONTROL 完了]**&#x200B;アイコンをタップして、変更を保存します。
+1. **[!UICONTROL 確認]**&#x200B;アイコンをタップし、ツールバーの&#x200B;**[!UICONTROL 完了]**&#x200B;アイコンをタップして変更を保存します。
 
    ![chlimage_1-424](assets/chlimage_1-424.png)
 
@@ -56,4 +55,4 @@ ht-degree: 21%
 
    ![chlimage_1-426](assets/chlimage_1-426.png)
 
-   「Dynamic Media」オプションが有効な場合は、アセットエディターに移動し、**[!UICONTROL マップ]**&#x200B;アイコンをタップして、適用したすべての画像マップを表示します。
+   Dynamic Mediaオプションが有効な場合は、アセットエディターに移動し、**[!UICONTROL マップ]**&#x200B;アイコンをタップして、適用されているすべての画像マップを表示します。
