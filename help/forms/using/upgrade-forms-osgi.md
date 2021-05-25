@@ -10,22 +10,21 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 183ed9c6-6a9a-4932-8405-5ae2c6fac1ec
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '849'
 ht-degree: 85%
 
 ---
 
-
 # OSGi 上の AEM 6.4 Forms へのアップグレード {#upgrade-to-aem-forms-osgi}
 
-ご使用の環境に合わせて、次のアップグレードパスのいずれかを使用します。
+お使いの環境に応じて、次のアップグレードパスのいずれかを使用します。
 
 ## AEM 6.2 Forms または AEM 6.3 Forms から AEM 6.4 Forms へのアップグレード {#upgrade-aem-forms-62-63-to-64}
 
-AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグレードすることができます。次の操作を実行します。
+AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグレードすることができます。以下の操作を実行します。
 
 1. 既存の AEM インスタンスを AEM 6.4 にアップグレードします。手順は次のとおりです。
 
@@ -40,13 +39,13 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
 
       `chmod -R 755 ../crx-quickstart`
 
-   1. AEMインスタンスをAEM 6.3にアップグレードします。詳しい手順については、[AEM 6.4](/help/sites-deploying/upgrade.md)へのアップグレードを参照してください。
+   1. AEMインスタンスをAEM 6.3にアップグレードします。詳しい手順については、「[AEM 6.4](/help/sites-deploying/upgrade.md)へのアップグレード」を参照してください。
 
       次の手順に進む前に、ServiceEvent REGISTERED および ServiceEvent UNREGISTERED メッセージが &lt;crx-repository>/error.log ファイルに出現しなくなるまで待ちます。
 
       >[!NOTE]
       >
-      >サーバーが起動して実行した後、いくつかの AEM Forms バンドルはインストール状態のままです。バンドルの数はインストールごとに異なる可能性があります。これらのバンドルの状態は無視しても問題はありません。バンドルは`https://[server]:[port]/system/console/`に一覧表示されます。
+      >サーバーが起動して実行した後、いくつかの AEM Forms バンドルはインストール状態のままです。バンドルの数はインストールごとに異なる可能性があります。これらのバンドルの状態は無視しても問題はありません。バンドルは`https://[server]:[port]/system/console/`に表示されます。
 
 
 1. AEM Forms アドオンパッケージのインストール. 手順は次のとおりです。
@@ -55,12 +54,12 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
    1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
    1. 「**[!UICONTROL フィルター]**」セクションで、
       1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
-      1. パッケージのバージョンとタイプを選択します。 また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して、結果をフィルターすることもできます。
-   1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「**[!UICONTROL EULA条項に同意]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
-   1. [パッケージマネージャー](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
+      1. パッケージのバージョンとタイプを選択します。 **[!UICONTROL ダウンロードの検索]**&#x200B;オプションを使用して、結果をフィルターすることもできます。
+   1. お使いのオペレーティングシステムに適したパッケージ名をタップし、「**[!UICONTROL EULA利用条件]**&#x200B;に同意し、**[!UICONTROL ダウンロード]**」をタップします。
+   1. [パッケージマネージャー](https://docs.adobe.com/content/help/ja/experience-manager-65/administering/contentmanagement/package-manager.html)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
    1. パッケージを選択し、「**[!UICONTROL インストール]**」をクリックします。
 
-      [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事に記載されている直接リンクを使って、パッケージをダウンロードすることもできます。
+      [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事に記載されている直接リンクを使用して、パッケージをダウンロードすることもできます。
 
       >[!NOTE]
       >
@@ -93,7 +92,7 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
       WHERE `key` = 'dataType'
       ```
 
-   * **(AEM 6.2Formsまたは以前のバージョンからアップグレードした場合のみ)Adobe Signの再設定**
+   * **(AEM 6.2 Formsまたは以前のバージョンからアップグレードする場合のみ)Adobe Signの再設定**
 
       Adobe Sign を以前のバージョンの AEM Forms で設定してある場合は、AEM Cloud サービスから Adobe Sign を再設定します。詳細については、「[Adobe Sign を AEM Forms に統合する](/help/forms/using/adobe-sign-integration-adaptive-forms.md)」を参照してください。
 
@@ -116,4 +115,4 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
 
 ## AEM 6.0 Forms または AEM 6.1 Forms から AEM 6.4 Forms へのアップグレード {#upgrade-aem-forms-60-61-to-64}
 
-**AEM 6.0 Forms** と **AEM 6.1 Forms** の場合、AEM 6.4 Forms に直接アップグレードすることはできません。AEM 6.2Forms](/help/forms/using/upgrade.md)への中間的な[アップグレードまたは[AEM 6.3Forms](/help/forms/using/upgrade.md)へのアップグレードを実行し、AEM 6.2FormsまたはAEM 6.3FormsからAEM6.4Formsにアップグレードします。
+**AEM 6.0 Forms** と **AEM 6.1 Forms** の場合、AEM 6.4 Forms に直接アップグレードすることはできません。AEM 6.2 Forms](/help/forms/using/upgrade.md)または[への中間的な[アップグレードを実行し、AEM 6.3 Forms](/help/forms/using/upgrade.md)にアップグレードしてから、AEM 6.2 FormsまたはAEM 6.3 Formsから6.4 FormsにアップグレードしまAEMす。
