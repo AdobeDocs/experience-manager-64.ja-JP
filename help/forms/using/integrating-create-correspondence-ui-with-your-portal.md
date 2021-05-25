@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: cb232931-60b7-4956-bc77-10636c19325e
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 8b1bbd85-66ba-4e96-917a-d768d84a417f
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 78%
 
 ---
-
 
 # カスタムポータルにおける通信を作成の UI の統合 {#integrating-create-correspondence-ui-with-your-custom-portal}
 
@@ -32,9 +31,9 @@ ht-degree: 78%
 
 * 目的のデータソースから取得した XML データの URL（cmDataUrl パラメーターを使用）
 
-例えば、カスタムポータルでは、\
-`https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`は、ポータル上のリンクからのhrefになる場合があります。\
-ポータルに手元のレターテンプレート名がある場合、URLは\
+例えば、カスタムポータルでは、URLを\
+`https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`（ポータル上のリンクからのhrefを指定可能）。\
+ポータルにレターテンプレート名が手元にある場合、URLは\
 `https://[server]:[port]/content/cm/createcorrespondence.html?cmLetterName=[letter name]&cmDataUrl=[data URL]`
 
 >[!NOTE]
@@ -47,7 +46,7 @@ ht-degree: 78%
 
 ## インラインデータベースの呼び出し  {#inline-data-based-invocation}
 
-通信を作成アプリケーションを呼び出すもう1つの（そして、より安全な）方法は、`https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html`のURLをヒットするだけです。一方、POSTーとデータを送信し、通信を作成アプリケーションを呼び出す（エンドユーザーに表示しない）方法です。 つまり、通信を作成アプリケーションの XML データを（cmData パラメーターを使用して、同じ要求の一部として）インラインで渡すことができることも意味します。これは、前述のアプローチでは、不可能で、理想的ではありませんでした。
+通信を作成アプリケーションを呼び出すもう1つの（より安全な）方法は、`https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html`のURLをヒットするだけです。その際、パラメーターとデータを送信して、通信を作成アプリケーションをPOSTリクエストとして呼び出します（エンドユーザーには表示されません）。 つまり、通信を作成アプリケーションの XML データを（cmData パラメーターを使用して、同じ要求の一部として）インラインで渡すことができることも意味します。これは、前述のアプローチでは、不可能で、理想的ではありませんでした。
 
 ### レターを指定するパラメーター  {#parameters-for-specifying-letter}
 
@@ -60,7 +59,7 @@ ht-degree: 78%
   </tr>
   <tr>
    <td>cmLetterInstanceId</td> 
-   <td>String</td> 
+   <td>文字列</td> 
    <td>レターインスタンスの識別子。</td> 
   </tr>
   <tr>
@@ -99,7 +98,7 @@ ht-degree: 78%
   </tr>
   <tr>
    <td>cmUseTestData</td> 
-   <td>ブール型</td> 
+   <td>ブール値</td> 
    <td>データディクショナリに添付されたテストデータを再利用します。</td> 
   </tr>
  </tbody>
@@ -118,7 +117,7 @@ ht-degree: 78%
   </tr>
   <tr>
    <td>cmPreview<br /> </td> 
-   <td>ブール型</td> 
+   <td>ブール値</td> 
    <td>「True」に設定されている場合、レターをプレビューモードで開きます<br /> </td> 
   </tr>
   <tr>
@@ -129,4 +128,4 @@ ht-degree: 78%
  </tbody>
 </table>
 
-cmDataURLにhttpまたはcqプロトコルを使用している場合、http/cqのURLは匿名でアクセスできる必要があります。
+cmDataURLにhttpまたはcqプロトコルを使用する場合、http/cqのURLは匿名でアクセスできる必要があります。
