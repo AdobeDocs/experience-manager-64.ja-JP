@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e87c7379-28ed-4fda-aef1-970d2b54f30d
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 616cd550-c3bd-4daf-887d-0470f1b08389
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 97%
 
 ---
-
 
 # Forms 設定の基本事項 {#basics-of-configuring-forms}
 
