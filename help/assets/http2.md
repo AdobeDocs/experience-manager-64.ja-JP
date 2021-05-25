@@ -1,6 +1,6 @@
 ---
-title: コンテンツの HTTP/2 配信の
-seo-title: コンテンツの HTTP/2 配信の
+title: コンテンツの HTTP/2 配信
+seo-title: コンテンツの HTTP/2 配信
 description: HTTP/2 によりブラウザーとサーバーの通信が改善され、必要な処理能力を抑えながら情報をより高速に転送できます。
 seo-description: HTTP/2 によりブラウザーとサーバーの通信が改善され、必要な処理能力を抑えながら情報をより高速に転送できます。
 uuid: d9deb945-bdf5-4d6b-95c8-8bae4442e618
@@ -10,9 +10,8 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 exl-id: 59cd9f8c-6d01-448d-bf57-bdc9fd2e381b
-feature: Asset Management
+feature: アセット管理
 role: Administrator,Business Practitioner
-translation-type: tm+mt
 source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
 source-wordcount: '733'
@@ -20,7 +19,7 @@ ht-degree: 99%
 
 ---
 
-# コンテンツの HTTP/2 配信の {#http-delivery-of-content}
+# コンテンツの HTTP/2 配信 {#http-delivery-of-content}
 
 アドビは、パフォーマンスの向上という全体的な利点をもたらすコンテンツの HTTP/2 配信に対応しました。
 
