@@ -10,16 +10,15 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 9ed54ee3-3509-4a43-a710-90f4543ccaf3
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '316'
 ht-degree: 62%
 
 ---
 
-
-# コミュニティのための FFmpeg {#ffmpeg-for-communities}
+# コミュニティのための FFmpeg  {#ffmpeg-for-communities}
 
 ## 概要 {#overview}
 
@@ -38,11 +37,11 @@ FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしている�
 
 1. OS の手順に従って FFmpeg をインストールします。
 
-1. システムパスにFmpeg実行可能ファイルが設定されていることを確認してください。
+1. FFmpeg実行可能ファイルがシステムパスに設定されていることを確認します。
 
    システム内の任意のディレクトリからFFmpegを実行できるはずです。
 
-   * 例：`ffmpeg -version`
+   * 例： `ffmpeg -version`
 
 ## FFmpeg トランスコーディングサービスの設定 {#configure-ffmpeg-transcoding-service}
 
@@ -52,23 +51,22 @@ FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしている�
 
 DAM アセットの更新のワークフローを変更するには（この例ではトランスコーディングをオフにするには）、次のようにします。
 
-* 管理者権限を持つ作成者インスタンスにサインインします
+* 管理者権限でオーサーインスタンスにログインします。
 * グローバルナビゲーションから：**[!UICONTROL ツール/ワークフロー/モデル]**
-* **[!UICONTROL DAM更新アセット]**&#x200B;を検索
-* 重複を押しながらクリックすると、編集用のワークフローがクラシックUIで開きます
+* **[!UICONTROL DAMアセットの更新]**&#x200B;を見つけます。
+* ダブルクリックして、編集用のワークフローをクラシックUIで開きます。
 
    結果の場所：[http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
-* **[!UICONTROL Fmpegトランスコード]**&#x200B;の手順を重複クリックして、手順のプロパティダイアログにアクセスします
-* 「**[!UICONTROL プロセス]**」タブの下：
+* **[!UICONTROL FFmpegトランスコーディング]**&#x200B;の手順をダブルクリックして、ステップのプロパティダイアログにアクセスします
+* 「**[!UICONTROL プロセス]**」タブで、次の操作を実行します。
 
-   * **[!UICONTROL 軍備]**:すべてのエントリを消去してトランスコードのデフォルト値を無効にします。  `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
+   * **[!UICONTROL 引数]**:トランスコーディングを無効にするには、すべてのエントリをクリアします。デフォルト値：  `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
 
 ![chlimage_1-372](assets/chlimage_1-372.png)
 
-* 「**[!UICONTROL OK]**」を選択して`Step Properties`ダイアログを閉じます
+* 「**[!UICONTROL OK]**」を選択して、`Step Properties`ダイアログを閉じます。
 
-* 「**[!UICONTROL 保存]**」を選択して`DAM Update Asset`ワークフローを保存します
+* 「**[!UICONTROL 保存]**」を選択して、`DAM Update Asset`ワークフローを保存します。
 
    （左上隅）
-
