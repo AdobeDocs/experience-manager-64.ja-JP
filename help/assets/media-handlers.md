@@ -2,43 +2,42 @@
 title: メディアハンドラーとワークフローを使用したアセットの処理
 description: 様々なハンドラーの概要と、ワークフローでハンドラーを使用してアセットに対してタスクを実行する方法について説明します。
 contentOwner: AG
-feature: Workflow,Renditions
+feature: ワークフロー，レンディション
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: 7694c68d-0a17-4052-8fbe-9bf45b229e81
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '2232'
+source-wordcount: '2230'
 ht-degree: 45%
 
 ---
 
-
 # メディアハンドラーとワークフローを使用したアセットの処理{#processing-assets-using-media-handlers-and-workflows}
 
-Adobe Experience Managerアセットには、アセットを処理するための初期設定のワークフローとメディアハンドラーのセットが用意されています。 ワークフローは、一般的なアセット管理と処理タスクを定義し、特定のタスク(サムネールの生成やメタデータの抽出など)をメディアハンドラに委任します。
+Adobe Experience Manager Assetsには、アセットを処理するためのデフォルトのワークフローとメディアハンドラーのセットが用意されています。 ワークフローは、一般的なアセット管理および処理タスクを定義し、特定のタスクをメディアハンドラーに委任します（サムネールの生成やメタデータの抽出など）。
 
-特定のタイプまたは形式のアセットがサーバーにアップロードされたときに自動的に実行されるワークフローを定義できます。 処理手順は、一連のExperience ManagerAssetsメディアハンドラーとして定義されます。 Adobe Experience Managerは、[組み込みのハンドラー](#default-media-handlers)を提供しています。その他には、[カスタム開発](#creating-a-new-media-handler)か、[コマンドラインツール](#command-line-based-media-handler)にプロセスを委任することで定義できます。
+特定のタイプまたは形式のアセットがサーバーにアップロードされたときに自動的に実行されるワークフローを定義できます。 処理手順は、一連のExperience Manager Assetsメディアハンドラーとして定義されます。 Adobe Experience Managerには、[組み込みのハンドラー](#default-media-handlers)がいくつか用意されています。[カスタム開発](#creating-a-new-media-handler)や、プロセスを[コマンドラインツール](#command-line-based-media-handler)に委任して定義できます。
 
-メディアハンドラーは、Experience Managerアセット内のサービスで、アセットに対して特定のアクションを実行します。 例えば、MP3オーディオファイルがExperience Managerにアップロードされると、ワークフローは、メタデータを抽出してサムネールを生成するMP3ハンドラをトリガーします。 メディアハンドラーは、ワークフローと共に使用します。 一般的なMIMEタイプのほとんどは、Experience Manager内でサポートされます。 次のいずれかの操作を行うと、アセットに対して特定のタスクを実行できます
+メディアハンドラーは、Experience Managerに対して特定のアクションを実行するアセットアセット内のサービスです。 例えば、MP3オーディオファイルがExperience Managerにアップロードされると、ワークフローは、メタデータを抽出してサムネールを生成するMP3ハンドラーをトリガーします。 メディアハンドラーは、ワークフローで使用します。 一般的なMIMEタイプのほとんどが、Experience Manager内でサポートされます。 次のいずれかの操作を行うことで、アセットに対して特定のタスクを実行できます
 
-* ワークフローの拡張または作成
-* メディアハンドラーの拡張または作成
-* メディアハンドラーの無効化または有効化
+* ワークフローを拡張または作成する。
+* メディアハンドラーの拡張または作成。
+* メディアハンドラーを無効または有効にします。
 
 >[!NOTE]
 >
->各形式でサポートされるExperience Managerアセットおよび機能でサポートされるすべての形式については、[サポートされるアセットの形式](assets-formats.md)のページを参照してください。
+>Experience Managerアセットでサポートされるすべての形式と、各形式でサポートされる機能の説明については、 [アセットでサポートされる形式](assets-formats.md)を参照してください。
 
 ## デフォルトのメディアハンドラー{#default-media-handlers}
 
-次のメディアハンドラーは、Experience Managerアセット内で使用でき、最も一般的なMIMEタイプを処理します。
+Assets内では、次のメディアハンドラーを使用でき、最も一般的なMIMEExperience Managerを処理できます。
 
 | ハンドラー名 | サービス名（システムコンソールでの名称） | サポートされる MIME タイプ |
 |---|---|---|
 | [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/plain |
 | [!UICONTROL PdfHandler] | com.day.cq.dam.handler.standard.pdf.PdfHandler | <ul><li>application/pdf</li><li>application/illustrator</li></ul> |
 | [!UICONTROL JpegHandler] | com.day.cq.dam.core.impl.handler.JpegHandler | image/jpeg |
-| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>重要</b> - MP3ファイルをアップロードすると、サードパーティのライブラリを使用して [処理されます](http://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html)。MP3に可変ビットレート(VBR)がある場合、ライブラリは不正確な近似長を計算します。 |
+| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>重要</b>  - MP3ファイルをアップロードすると、サードパーティの [ライブラリを使用して処理されます](http://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html)。MP3に可変ビットレート(VBR)がある場合、ライブラリは正確でない近似長を計算します。 |
 | [!UICONTROL ZipHandler] | com.day.cq.dam.handler.standard.zip.ZipHandler | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
 | [!UICONTROL PictHandler] | com.day.cq.dam.handler.standard.pict.PictHandler | image/pict |
 | [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> image/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> image/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
@@ -61,15 +60,15 @@ Adobe Experience Managerアセットには、アセットを処理するため�
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
-## ワークフロー内でメディアハンドラーを使用してアセット{#using-media-handlers-in-workflows-to-perform-tasks-on-assets}に対してタスクを実行する
+## ワークフローでメディアハンドラーを使用して、アセットに対するタスクを実行する{#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
 
 メディアハンドラーは、ワークフローで使用されるサービスです。
 
-Experience Managerには、アセットを処理するためのデフォルトのワークフローがいくつかあります。 表示するには、ワークフローコンソールを開き、「**[!UICONTROL モデル]**」タブをクリックします。Experience Managerアセットとの開始に使用されるワークフロータイトルは、アセット固有のものです。
+Experience Managerには、アセットを処理するためのデフォルトのワークフローがいくつかあります。 ワークフローを表示するには、ワークフローコンソールを開き、「**[!UICONTROL モデル]**」タブをクリックします。「アセット」で始まるExperience Managerタイトルは、アセット固有のタイトルです。
 
 特定の要件に従って、既存のワークフローを拡張し、新しいワークフローを作成してアセットを処理できます。
 
-次の例は、**[!UICONTROL AEM Assets同期]**&#x200B;ワークフローを拡張して、PDFドキュメントを除くすべてのアセットに対してサブアセットを生成する方法を示しています。
+次の例は、 **[!UICONTROL AEM Assets同期]**&#x200B;ワークフローを拡張して、PDFドキュメント以外のすべてのアセットに対してサブアセットを生成する方法を示しています。
 
 ### メディアハンドラーの無効化／有効化 {#disabling-enabling-a-media-handler}
 
@@ -84,7 +83,7 @@ Experience Managerには、アセットを処理するためのデフォルト�
 
 ### メディアハンドラーの作成{#creating-a-new-media-handler}
 
-新しいメディアタイプをサポートする場合、またはアセットに対して特定のタスクを実行する場合は、メディアハンドラーを作成する必要があります。 ここでは、その進め方について説明します。
+新しいメディアタイプをサポートしたり、アセットに対して特定のタスクを実行したりするには、メディアハンドラーを作成する必要があります。 ここでは、その進め方について説明します。
 
 #### 重要なクラスおよびインターフェイス  {#important-classes-and-interfaces}
 
@@ -104,11 +103,11 @@ Experience Managerには、アセットを処理するためのデフォルト�
 
 インターフェイスとクラスには以下が含まれます。
 
-* `com.day.cq.dam.api.handler.AssetHandler` インターフェイス：特定の MIME タイプのサポートを追加するサービスを記述します。MIME型を追加するには、このインターフェイスを実装する必要があります。 このインターフェイスには、特定のドキュメントの読み込みと書き出し、サムネールの作成およびメタデータの抽出をおこなうメソッドがあります。
+* `com.day.cq.dam.api.handler.AssetHandler` インターフェイス：特定の MIME タイプのサポートを追加するサービスを記述します。MIMEタイプを追加するには、このインターフェイスを実装する必要があります。 このインターフェイスには、特定のドキュメントの読み込みと書き出し、サムネールの作成およびメタデータの抽出をおこなうメソッドがあります。
 * `com.day.cq.dam.core.AbstractAssetHandler` クラス：その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` クラス：
    * その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。さらに、サブアセットの抽出についてよく使用される機能も提供します。
-   * 実装を開始する最善の方法は、ほとんどの処理を行い、適切なデフォルト動作を提供する、提供された抽象実装から継承することです。com.day.cq.dam.core.AbstractAssetHandlerクラス
+   * 実装を開始する最善の方法は、最も多くの点に対応し、適切なデフォルト動作を提供する付属の抽象実装から継承することです。com.day.cq.dam.core.AbstractAssetHandlerクラス。
    * このクラスには、抽象的なサービス記述子が用意されています。そのため、このクラスから継承し、maven-sling-plugin を使用する場合、inherit フラグを true に設定する必要があります。
 
 次のメソッドを実装する必要があります。
@@ -123,7 +122,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 
 インターフェイスとクラスには以下が含まれます。
 
-* `com.day.cq.dam.api.handler.AssetHandler` インターフェイス：特定の MIME タイプのサポートを追加するサービスを記述します。MIME型を追加するには、このインターフェイスを実装する必要があります。 このインターフェイスには、特定のドキュメントの読み込みと書き出し、サムネールの作成およびメタデータの抽出をおこなうメソッドがあります。
+* `com.day.cq.dam.api.handler.AssetHandler` インターフェイス：特定の MIME タイプのサポートを追加するサービスを記述します。MIMEタイプを追加するには、このインターフェイスを実装する必要があります。 このインターフェイスには、特定のドキュメントの読み込みと書き出し、サムネールの作成およびメタデータの抽出をおこなうメソッドがあります。
 * `com.day.cq.dam.core.AbstractAssetHandler` クラス：その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` クラス：その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。さらに、サブアセットの抽出についてよく使用される機能も提供します。
 
@@ -133,13 +132,13 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 
 以下の手順を実行します。
 
-Avenプラグインを使用してEclipseをインストールおよび設定し、Mavenプロジェクトに必要な依存関係を設定する方法については、[開発ツール](../sites-developing/dev-tools.md)を参照してください。
+Mavenプラグインを使用してEclipseをインストールおよび設定し、Mavenプロジェクトに必要な依存関係を設定するには、[開発ツール](../sites-developing/dev-tools.md)を参照してください。
 
 次の手順を実行した後、txtファイルをExperience Managerにアップロードすると、ファイルのメタデータが抽出され、透かし付きの2つのサムネールが生成されます。
 
 1. Eclipseで、`myBundle` Mavenプロジェクトを作成します。
 
-   1. メニューバーで、**[!UICONTROL ファイル/新規/その他]**&#x200B;をクリックします。
+   1. メニューバーで、**[!UICONTROL File/New/Other]**&#x200B;をクリックします。
    1. ダイアログボックスで、Mavenフォルダーを展開し、「Mavenプロジェクト」を選択して、「**[!UICONTROL 次へ]**」をクリックします。
    1. 「**[!UICONTROL 単純なプロジェクトを作成]**」ボックスと「**[!UICONTROL デフォルトのワークスペースの場所を使用]**」ボックスをオンにし、「**[!UICONTROL 次へ]**」をクリックします。
    1. 次の値を使用してMavenプロジェクトを定義します。
@@ -147,14 +146,14 @@ Avenプラグインを使用してEclipseをインストールおよび設定し
       * Group Id：com.day.cq5.myhandler
       * Artifact Id：myBundle
       * 名前：マイExperience Managerバンドル
-      * 説明：これは私のExperience Managerバンドルです
+      * 説明：これは私のExperience Manager束です
    1. 「**[!UICONTROL Finish]**」をクリックします。
 
 
-1. Java™コンパイラをバージョン1.5に設定します。
+1. Java™コンパイラーをバージョン1.5に設定します。
 
    1. `myBundle`プロジェクトを右クリックし、「プロパティ」を選択します。
-   1. Java™コンパイラを選択し、次のプロパティを1.5に設定します。
+   1. 「Java™コンパイラ」を選択し、次のプロパティを1.5に設定します。
 
       * Compiler compliance level
       * Generated .class files compatibility
@@ -281,14 +280,14 @@ Avenプラグインを使用してEclipseをインストールおよび設定し
 
 1. `myBundle/src/main/java`の下にJava™クラスを含むパッケージ`com.day.cq5.myhandler`を作成します。
 
-   1. 「myBundle」で`src/main/java`を右クリックし、「新規」、「パッケージ」の順に選択します。
+   1. myBundleで、`src/main/java`を右クリックし、「新規」、「パッケージ」の順に選択します。
    1. `com.day.cq5.myhandler`という名前を付け、「完了」をクリックします。
 
 1. Java™クラス`MyHandler`を作成します。
 
    1. Eclipseの`myBundle/src/main/java`で、`com.day.cq5.myhandler`パッケージを右クリックし、「新規」、「クラス」の順に選択します。
-   1. ダイアログウィンドウで、Java™ Class MyHandlerという名前を付け、「完了」をクリックします。 MyHandler.java ファイルが作成され、このファイルが開きます。
-   1. `MyHandler.java`で既存のコードを次のコードに置き換え、変更を保存します。
+   1. ダイアログウィンドウで、「Java™ Class MyHandler」という名前を付け、「完了」をクリックします。 MyHandler.java ファイルが作成され、このファイルが開きます。
+   1. `MyHandler.java`で、既存のコードを次のコードに置き換え、変更を保存します。
 
    ```java
    package com.day.cq5.myhandler; 
@@ -432,18 +431,18 @@ Avenプラグインを使用してEclipseをインストールおよび設定し
 
 1. Java™クラスをコンパイルし、バンドルを作成します。
 
-   1. myBundleプロジェクトを右クリックし、「**[!UICONTROL 実行]**」を選択して、「**[!UICONTROL Mavenインストール]**」を選択します。
-   1. バンドル`myBundle-0.0.1-SNAPSHOT.jar` （コンパイルされたクラスを含む）が`myBundle/target`の下に作成されます。
+   1. myBundleプロジェクトを右クリックし、「**[!UICONTROL 名前を付けて実行]**」を選択してから、「**[!UICONTROL Mavenインストール]**」を選択します。
+   1. バンドル`myBundle-0.0.1-SNAPSHOT.jar`（コンパイル済みのクラスを含む）が`myBundle/target`の下に作成されます。
 
-1. CRXエクスプローラーで、`/apps/myApp`の下にノードを作成します。 名前= `install`、種類= `nt:folder`。
-1. バンドル`myBundle-0.0.1-SNAPSHOT.jar`をコピーし、`/apps/myApp/install`の下に格納します（WebDAVなど）。 新しいテキストハンドラがExperience Managerでアクティブになります。
+1. CRX Explorerで、`/apps/myApp`の下にノードを作成します。 名前= `install`、タイプ= `nt:folder`。
+1. バンドル`myBundle-0.0.1-SNAPSHOT.jar`をコピーし、`/apps/myApp/install`の下に格納します（例えば、WebDAVを使用）。 これで、新しいテキストハンドラがExperience Managerでアクティブになります。
 1. ブラウザーで、Apache Felix Web Management Console を開きます。「コンポーネント」タブを選択し、デフォルトのテキストハンドラー`com.day.cq.dam.core.impl.handler.TextHandler`を無効にします。
 
 ## コマンドラインベースのメディアハンドラー {#command-line-based-media-handler}
 
-Experience Managerを使用すると、ワークフロー内の任意のコマンドラインツールを実行して、アセット（ImageMagickなど）を変換し、新しいレンディションをアセットに追加できます。 Experience Managerサーバーをホストするディスクにコマンドラインツールをインストールし、ワークフローにプロセスステップを追加して設定します。 `CommandLineProcess`と呼ばれる呼び出されたプロセスは、特定のMIMEタイプに従ってフィルターを生成し、新しいレンディションに基づいて複数のサムネールを作成します。
+Experience Managerを使用すると、ワークフロー内で任意のコマンドラインツールを実行して、アセットを変換し（ImageMagickなど）、新しいレンディションをアセットに追加できます。 Experience Managerサーバーをホストするディスクにコマンドラインツールをインストールし、ワークフローにプロセスステップを追加して設定します。 `CommandLineProcess`という呼び出しプロセスは、特定のMIMEタイプに従ってフィルタリングし、新しいレンディションに基づいて複数のサムネールを作成します。
 
-次の変換は、Experience Managerアセット内で自動的に実行および保存できます。
+次の変換を自動的に実行し、Assets内に保存することができます。Experience Manager
 
 * [ImageMagick](https://www.imagemagick.org/script/index.php) および [Ghostscript](https://www.ghostscript.com/) を使用した EPS および AI 変換
 * [FFmpeg](https://ffmpeg.org/) を使用した FLV ビデオのトランスコーディング
@@ -452,35 +451,35 @@ Experience Managerを使用すると、ワークフロー内の任意のコマ�
 
 >[!NOTE]
 >
->非 Windows システムでは、ファイル名に一重引用符（&#39;）を含むビデオアセットのレンディションの生成中に FFMpeg ツールがエラーを返します。ビデオファイルの名前に一重引用符が含まれている場合は、Experience Managerにアップロードする前に削除してください。
+>非 Windows システムでは、ファイル名に一重引用符（&#39;）を含むビデオアセットのレンディションの生成中に FFMpeg ツールがエラーを返します。ビデオファイル名に一重引用符が含まれている場合は、Experience Managerにアップロードする前に削除します。
 
 `CommandLineProcess` プロセスは、リストに表示されている順序で以下の操作を実行します。
 
 * MIME タイプを指定した場合、そのタイプに従ってファイルをフィルターします。
-* Experience Managerサーバーをホストするディスク上に一時ディレクトリを作成します。
+* ディスク・サーバをホストするディスクに一時Experience Managerを作成します。
 * 元のファイルを一時ディレクトリにストリーミングします。
-* ステップの引数で定義されたコマンドを実行します。このコマンドは、Experience Managerを実行しているユーザーの権限で、一時ディレクトリ内で実行されています。
-* 結果をExperience Managerサーバーのレンディションフォルダーにストリームバックします。
+* ステップの引数で定義されたコマンドを実行します。コマンドは、一時ディレクトリ内で、Experience Managerを実行するユーザーの権限で実行されます。
+* 結果をレンディションサーバーのレンディションフォルダーにExperience Managerします。
 * 一時ディレクトリを削除します。
 * 指定した場合は、それらのレンディションに基づいてサムネールを作成します。サムネールの数とサイズは、ステップの引数で定義されます。
 
 ### ImageMagick {#an-example-using-imagemagick}の使用例
 
-次の例は、コマンドライン処理手順の設定方法を示しています。 MIMEタイプgifまたはtiffのアセットがExperience Managerサーバーの`/content/dam`に追加されるたびに、元のアセットの反転画像が3つのサムネール（140x100、48x48および10x250）と共に作成されます。
+次の例は、コマンドライン処理のステップを設定する方法を示しています。 MIMEタイプgifまたはtiffのアセットがExperience Managerサーバー上の`/content/dam`に追加されるたびに、元の反転画像が3つのサムネール(140x100、48x48、10x250)と共に作成されます。
 
-この処理手順を行うには、ImageMagickを使用します。 Experience ManagerサーバーをホストするディスクにImageMagickをインストールします。
+この処理手順を実行するには、ImageMagickを使用します。 ImageMagickを、Image ServerをホストするディスクにExperience Managerします。
 
-1. ImageMagick のインストール. 詳しくは、[ImageMagickドキュメント](https://www.imagemagick.org/script/download.php)を参照してください。
+1. ImageMagick のインストール. 詳しくは、[ImageMagickのドキュメント](https://www.imagemagick.org/script/download.php)を参照してください。
 1. コマンドラインで `convert` を実行できるようにツールを設定します。
 1. ツールが適切にインストールされているかどうかを確認するには、コマンド `convert -h` をコマンドラインで実行します。
 
-   コンバートツールで使用可能なすべてのオプションを含むヘルプ画面が表示されます。
+   変換ツールの使用可能なすべてのオプションを含むヘルプ画面が表示されます。
 
    >[!NOTE]
    >
-   >Windows®の一部のバージョン（Windows® SEなど）では、Windows®インストールに含まれるネイティブの変換ユーティリティと競合するので、convertコマンドを実行できません。 このような場合は、画像ファイルをサムネールに変換するために使用する ImageMagick ユーティリティの完全パスを指定します。例： `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
+   >Windows®の一部のバージョン(Windows® SEなど)では、convertコマンドは、Windows®インストールに含まれるネイティブなconvertユーティリティと競合するので、実行に失敗します。 このような場合は、画像ファイルをサムネールに変換するために使用する ImageMagick ユーティリティの完全パスを指定します。例： `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
 
-1. ツールが正しく実行されるかどうかを確認するには、作業ディレクトリにJPG画像を追加し、コマンドラインでコマンド`convert <image-name>.jpg -flip <image-name>-flipped.jpg`を実行します。
+1. ツールが正しく実行されているかどうかを確認するには、作業ディレクトリにJPG画像を追加し、コマンド`convert <image-name>.jpg -flip <image-name>-flipped.jpg`をコマンドラインで実行します。
 
    反転画像がディレクトリに追加されます。
 
@@ -496,25 +495,25 @@ Experience Managerを使用すると、ワークフロー内の任意のコマ�
 
 変更したワークフローをテストするには、`/content/dam` にアセットを追加します。
 
-1. ファイルシステムで、選択したTIFF画像を取得します。 名前を `myImage.tiff` に変更し、WebDAV などを使用して、`/content/dam` にコピーします。
+1. ファイルシステムで、任意のTIFF画像を取得します。 名前を `myImage.tiff` に変更し、WebDAV などを使用して、`/content/dam` にコピーします。
 1. **[!UICONTROL CQ5 DAM]** コンソール（例：`http://localhost:4502/libs/wcm/core/content/damadmin.html`）を開きます。
 1. アセット `myImage.tiff` を開き、反転画像と 3 つのサムネールが作成されたことを確認します。
 
-#### CommandLineProcessプロセスステップ{#configuring-the-commandlineprocess-process-step}を設定
+#### CommandLineProcessプロセスステップ{#configuring-the-commandlineprocess-process-step}の設定
 
-ここでは、**[!UICONTROL の]**&#x200B;プロセス引数`CommandLineProcess`を設定する方法について説明します。[!UICONTROL プロセスの引数]の値はコンマで区切り、値を空白で開始しないでください。
+ここでは、**[!UICONTROL の]**&#x200B;プロセス引数`CommandLineProcess`を設定する方法について説明します。[!UICONTROL プロセス引数]の値はコンマで区切ります。値の先頭を空白にすることはできません。
 
 | 引数のフォーマット | 説明 |
 |---|---|
-| mime:&lt;mime-type> | オプション引数。アセットのMIMEタイプが引数の1つと同じ場合は、プロセスが適用されます。 <br>いくつかのMIME型を定義できます。 |
+| mime:&lt;mime-type> | オプション引数。アセットのMIMEタイプが引数のMIMEタイプと同じ場合にプロセスが適用されます。 <br>複数のMIMEタイプを定義できます。 |
 | tn:&lt;width>:&lt;height> | オプション引数。プロセスにより、引数で定義されたサイズのサムネールが作成されます。<br>複数のサムネールを定義できます。 |
-| cmd: &lt;command> | 実行するコマンドを定義します。 この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>次の変数を使用して、コマンドを作成できます。<br>`${filename}`入力ファイルの名前（original.jpgなど）  <br> `${file}`:入力ファイルのフルパス名(例：/tmp/cqdam0816.tmp/original.jpg)  <br> `${directory}`:入力ファイルのディレクトリ。例：/tmp/cqdam0816.tmp  <br>`${basename}`:入力ファイルの名前（拡張子なし）。例： original  <br>`${extension}`:入力ファイルの拡張子（jpgなど） |
+| cmd: &lt;command> | 実行するコマンドを定義します。 この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>コマンドの作成には、次の変数を使用できます。<br>`${filename}`入力ファイルの名前（例：original.jpg）  <br> `${file}`:入力ファイルの完全パス名(例：/tmp/cqdam0816.tmp/original.jpg)  <br> `${directory}`:入力ファイルのディレクトリ(例： /tmp/cqdam0816.tmp ) <br>`${basename}`。拡張子を含まない入力ファイルの名前（例：original）  <br>`${extension}`:入力ファイルの拡張子（例：jpg） |
 
-例えば、Experience ManagerサーバーをホストするディスクにImageMagickがインストールされていて、**CommandLineProcess**&#x200B;をImplementation、次の値をProcess Arguments **として使用してプロセス手順を作成する場合：**
+例えば、Experience ManagerサーバーをホストするディスクにImageMagickがインストールされ、**CommandLineProcess**&#x200B;を実装として使用し、以下の値を&#x200B;**プロセス引数**&#x200B;として使用してプロセスのステップを作成する場合、
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
-次に、ワークフローを実行すると、手順はMIMEタイプとして`image/gif`または`mime:image/tiff`を持つアセットにのみ適用されます。 元の画像の反転した画像が作成され、.jpgに変換されて、次の3つのサムネールが作成されます。140x100、48x48、10x250
+その後、ワークフローが実行されると、この手順はMIMEタイプが`image/gif`または`mime:image/tiff`のアセットにのみ適用されます。 元の画像の反転画像を作成し、.jpgに変換して、次の3つのサムネールを作成します。140x100、48x48、10x250
 
 ImageMagick を使用して 3 つの標準のサムネールを作成するには、以下の[!UICONTROL プロセス引数]を使用します。
 
@@ -526,4 +525,4 @@ ImageMagick を使用して Web 対応レンディションを作成するには
 
 >[!NOTE]
 >
->`CommandLineProcess`手順は、アセット（タイプ`dam:Asset`のノード）またはアセットの子孫にのみ適用されます。
+>`CommandLineProcess`手順は、アセット（ノードタイプ`dam:Asset`）またはアセットの子孫にのみ適用されます。
