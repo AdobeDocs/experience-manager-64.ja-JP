@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: personalization
 discoiquuid: 889b5ffc-3652-47d8-b576-128f3cee513a
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 5c7c1cda-0e9c-454f-91c4-8e1f37a155c3
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '880'
 ht-degree: 100%
 
 ---
-
 
 # オファーの作成と管理{#creating-and-managing-offers}
 
@@ -110,4 +109,3 @@ ht-degree: 100%
 
 1. オファーコンソールの上部で、虫眼鏡アイコンをクリックまたはタップします。デフォルトでは、検索対象はオファーに限定されます。
 1. オファーを検索するためのキーワードを入力します。結果から選択します。
-
