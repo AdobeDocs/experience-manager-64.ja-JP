@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: integrations
 discoiquuid: 6b62b280-d101-410a-ba8c-02940f766c32
-translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+exl-id: 364dd7f3-9009-440e-8aff-28e2dac08fe7
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 93%
 
 ---
-
 
 # フォームのコンバージョン率の測定と効率性の改善 {#measure-and-improve-effectiveness-and-conversion-of-forms}
 
@@ -33,7 +32,7 @@ ROI を最大化するには、顧客がサービスをどのように利用し�
 
 ## ソリューション {#the-solution}
 
-AEM Formsは[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)ソリューション[Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html)と[Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html)に統合されており、フォームのパフォーマンスを監視し、コンバージョン率を高める体験をテストして特定できます。
+AEM Formsは、Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)ソリューション[[Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html)および[Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html)と統合され、フォームのパフォーマンスを監視および分析し、コンバージョン率を向上させるエクスペリエンスを試して特定できます。
 
 ## ワークフロー {#the-workflow}
 
@@ -73,7 +72,7 @@ AEM Formsは[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)�
 
 **Target の設定**
 
-アダプティブフォームでA/Bテストを作成および実行するには、「[AEM Forms](/help/forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p)でのターゲットの設定と統合」の説明に従って、AEM Formsでターゲットを設定します。
+アダプティブフォームのA/Bテストを作成して実行するには、「[AEM FormsでのTargetの設定と統合](/help/forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p)」の説明に従って、AEM FormsでTargetを設定します。
 
 #### 手順 2：分析レポートの表示 {#step-view-analytics-report-br}
 
@@ -159,4 +158,3 @@ AEM Forms は Target と統合されているため、アダプティブフォ�
 * A/B テストに先立って仮説を立て、成功指標を特定すること。
 * 代替のエクスペリエンスにおいて最小のバリエーション（理想的にはバリエーション一つ）のみを試みて、コンバージョン率への影響度合を把握すること。
 * 頻繁にテストを実施して非効率性を排除すること。
-
