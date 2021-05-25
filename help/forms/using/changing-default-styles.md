@@ -8,21 +8,20 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: a9ab5a78-2add-46e1-a8f2-444d0f25f43a
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 'モバイルフォーム '
+exl-id: 74e54d96-e418-40aa-9b93-561fbdd6312d
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 76%
 
 ---
 
-
 # HTML5 フォームのデフォルトスタイルの変更 {#changing-default-styles-of-html-forms}
 
 HTML5 フォームは HTML5 機能の使用によりレンダリングされ、レンダリングされるフォームのスタイル設定は CSS の使用によって実行されます。HTML5 フォームのデフォルトの外観は、その PDF レンダリングに似ています。開発者はカスタム CSS を使用して、HTML5 フォームのデフォルトの外観を変更できます。
 
-この記事では、HTML5フォームのスタイルを変更するための詳細手順を説明します。[スタイルの概要](/help/forms/using/css-styles.md)記事には、HTML5フォームの様々なスタイル設定に関する詳細が記載されています。 この記事に記載されている手順を実行する前に、「スタイルの概要」記事を必ずお読みください。
+この記事では、HTML5フォームのスタイルを変更するための詳細な手順を説明します。[スタイルの概要](/help/forms/using/css-styles.md)記事では、HTML5フォームの様々なスタイル設定の側面に関する詳細な情報を説明します。 この記事に記載されている手順を実行する前に、「スタイルの概要」記事を必ずお読みください。
 
 次の 2 つの画像はデフォルトのスタイルとカスタマイズされたスタイルの違いを示しています。
 
@@ -32,7 +31,7 @@ HTML5 フォームは HTML5 機能の使用によりレンダリングされ、�
 
 1. **カスタムスタイルを追加するプロファイルの選択**
 
-   URLでCRX DEインターフェイスにアクセスします。**https://&lt;server>:&lt;port>/crx/de**&#x200B;を作成し、プロファイルを作成するか、既存のプロファイルを選択します。 プロファイルの作成方法について詳しくは、[新しいプロファイルの作成](/help/forms/using/custom-profile.md)を参照してください
+   URLでCRXDEインターフェイスにアクセスします。**https://&lt;server>:&lt;port>/crx/de**&#x200B;を作成し、プロファイルを作成するか、既存のプロファイルを選択します。 プロファイルの作成方法については、「[新しいプロファイルの作成](/help/forms/using/custom-profile.md)」を参照してください。
 
 1. **HTML5 フォームのスタイル設定用の CSS スタイルシートの作成**
 
@@ -54,4 +53,3 @@ HTML5 フォームは HTML5 機能の使用によりレンダリングされ、�
       &lt;link href=&quot;/path/to/stylesheet&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/>
 
    1.  ファイルを保存します。
-
