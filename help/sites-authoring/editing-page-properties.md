@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8e85ea7f-80ea-43b6-a67c-366852ef86ce
-translation-type: tm+mt
-source-git-commit: c66c28f138618d6f36c55f8b498f7d2a23732b83
+exl-id: b0e579a4-f5bd-4a55-a003-0496224bc940
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1774'
-ht-degree: 84%
+ht-degree: 90%
 
 ---
-
 
 # ページプロパティの編集{#editing-page-properties}
 
@@ -54,12 +53,12 @@ ht-degree: 84%
 
 * **ブランディング**
 
-   各ページタイトルにブランドスラッグを追加して、ページ間で一貫したブランドアイデンティティを適用します。 この機能には、[コアコンポーネントのリリース2.14.0以降のページコンポーネントを使用する必要があります。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
+   各ページタイトルにブランド見出しを追加して、ページ間で一貫したブランドアイデンティティを適用します。この機能では、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)のリリース 2.14.0 以降に含まれているページコンポーネントを使用する必要があります。
 
-   * **上書き**  — このページでブランドスラッグを定義する場合に選択します。
-      * **上書き**&#x200B;値も設定されていない限り、値はすべての子ページに継承されます。
-   * **上書き値**  — ページタイトルに追加するブランドスラッグのテキスト。
-      * この値は、「サイクリング・トスカーナ」などのパイプ文字の後のページ・タイトルに追加されます | WKNDの準備が常に整っています&quot;
+   * **オーバーライド** - このページにブランド見出しを定義する場合にオンにします。
+      * 子ページにも&#x200B;**オーバーライド**&#x200B;値が設定されている場合を除き、値はすべての子ページに継承されます。
+   * **値をオーバーライド** - ページタイトルに追加するブランド見出しのテキストです。
+      * この値は、「Cycling Tuscany | Always ready for the WKND」のように、ページタイトルの末尾にパイプ文字に続けて追加されます。
 
 * **ページタイトル**
 
@@ -93,7 +92,7 @@ ht-degree: 84%
 
    このページのバニティ URL を入力でき、短くより表現力のある URL にすることができます。
 
-   例えば、バニティURLがWebサイトh `ttp://example.com,`のパス/ `v1.0/startpage`で識別されるページに対してw `elcome`に設定されている場合、h `ttp://example.com/welcome`はh `ttp://example.com/content/v1.0/startpage`のバニティURLになります
+   例えば、Webサイトh `ttp://example.com,`のパス/ `v1.0/startpage`で識別されるページに対して、バニティURLがw `elcome`に設定されている場合、h `ttp://example.com/welcome`はh `ttp://example.com/content/v1.0/startpage`のバニティURLになります。
 
    >[!CAUTION]
    >
@@ -107,7 +106,7 @@ ht-degree: 84%
 
    ページにバニティ URL を使用するかどうかを示します。
 
-### アドバンス {#advanced}
+### 詳細 {#advanced}
 
 * **言語**
 
@@ -131,7 +130,7 @@ ht-degree: 84%
    >
    >例えば、`/content/we-retail/spanish` ノードに `latin-lang` というエイリアスを定義した場合、このページは `/content/we-retail/latin-language` でアクセスできます。
    >
-   >詳しくは、「SEO」の「ページ名のローカライズ」と「URL管理のベストプラクティス」を参照してください。[](/help/managing/seo-and-url-management.md#localized-page-names)
+   >詳しくは、「SEOとURL管理のベストプラクティス」の「[ページ名のローカライズ](/help/managing/seo-and-url-management.md#localized-page-names)」を参照してください。
 
 * **許可されたテンプレート**
 
@@ -145,7 +144,7 @@ ht-degree: 84%
 
    >[!CAUTION]
    >
-   >「**[権限](/help/sites-authoring/editing-page-properties.md#permissions)**」タブでは、`granite:AuthenticationRequired`ミックスインの存在に基づいてCUG設定を編集できます。 非推奨のCUG設定を使用してページ権限を設定した場合、cq:cugEnabledプロパティの存在に基づいて、**Authentication Requirement**&#x200B;に警告メッセージが表示され、このオプションは編集できず、[Permissions](/help/sites-authoring/editing-page-properties.md#permissions)も編集できません。
+   >「**[権限](/help/sites-authoring/editing-page-properties.md#permissions)**」タブでは、`granite:AuthenticationRequired` mixinの存在に基づいてCUG設定を編集できます。 cq:cugEnabledプロパティの存在に基づいて、非推奨のCUG設定を使用してページ権限が設定されている場合、警告メッセージが&#x200B;**認証要件**&#x200B;の下に表示され、オプションは編集できず、[権限](/help/sites-authoring/editing-page-properties.md#permissions)も編集できません。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
@@ -189,9 +188,9 @@ ht-degree: 84%
 
    [クラウドサービス](/help/sites-developing/extending-cloud-config.md)用のプロパティを定義します。
 
-### パーソナライゼーション {#personalization}
+### パーソナライズ機能 {#personalization}
 
-* **パーソナライゼーション**
+* **パーソナライズ機能**
 
    [ブランドを選択してターゲット設定の範囲を指定](/help/sites-authoring/personalization.md)します。
 
@@ -207,14 +206,14 @@ ht-degree: 84%
 
    >[!CAUTION]
    >
-   >「**権限**」タブでは、`granite:AuthenticationRequired`ミックスインの存在に基づいてCUG設定を編集できます。 `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
+   >「**権限**」タブでは、`granite:AuthenticationRequired` mixinの存在に基づいてCUG設定を編集できます。 `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
 
    >[!NOTE]
    >
-   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。詳しくは、ドキュメント[User, Group and Access Rights Administration](/help/sites-administering/user-group-ac-admin.md)を参照してください。
+   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。詳しくは、[ユーザー、グループ、アクセス権の管理](/help/sites-administering/user-group-ac-admin.md)のドキュメントを参照してください。
 
 ### ブループリント {#blueprint}
 
@@ -222,13 +221,13 @@ ht-degree: 84%
 
    [マルチサイト管理](/help/sites-administering/msm.md)でのブループリントページのプロパティを定義します。変更がライブコピーに適用される条件を制御します。
 
-### ライブコピー  {#live-copy}
+### ライブコピー {#live-copy}
 
 * **ライブコピー**
 
    [マルチサイト管理](/help/sites-administering/msm.md)でのライブコピーページのプロパティを定義します。ブループリントからの変更が適用される条件を制御します。
 
-### サイト構造  {#site-structure}
+### サイト構造 {#site-structure}
 
 * **サインアップページ**、**オフラインページ**&#x200B;など、サイト全体にわたる機能を提供するページへのリンクを指定します。
 
@@ -275,7 +274,7 @@ ht-degree: 84%
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. 「**プロパティを開く**」を選択すると、ダイアログが開き、適切なタブで並べ替えたプロパティを編集できます。 ツールバーの右側にある次のボタンも使用できます。
+1. 「**プロパティを開く**」を選択すると、プロパティを編集するためのダイアログが開きます。プロパティは適切なタブに分類されています。 ツールバーの右側にある次のボタンも使用できます。
 
    * **キャンセル**
    * **保存して閉じる**
@@ -299,7 +298,7 @@ ht-degree: 84%
 
 ![screen_shot_2018-03-22at100039](assets/screen_shot_2018-03-22at100039.png)
 
-ページを選択し、**プロパティ**&#x200B;オプションをクリックまたはタップすると、バルクプロパティが表示されます。
+ページを選択して「**プロパティ**」オプションをクリックまたはタップすると、一括プロパティが表示されます。
 
 ![screen_shot_2018-03-22at100114](assets/screen_shot_2018-03-22at100114.png)
 
@@ -329,7 +328,7 @@ ht-degree: 84%
    * 共通の値を持つ共通のプロパティ
 
       * 表示モードで表示されるのは、共通の値を持つプロパティのみです。
-      * フィールドが複数値（タグなど）の場合は、すべての値が共通の場合に限り、値が表示されます。**&#x200B;一部の値のみが共通の場合は、それらの値は編集時にのみ表示されます。
+      * フィールドが複数値（タグなど）の場合は、すべての値が共通の場合に限り、値が表示されます&#x200B;*。*&#x200B;一部の値のみが共通の場合は、それらの値は編集時にのみ表示されます。
 
    一般的な値を含むプロパティがない場合は、メッセージが表示されます。
 
@@ -347,4 +346,3 @@ ht-degree: 84%
 >[!NOTE]
 >
 >ページコンポーネントを設定して、一括編集が可能なフィールドを指定できます。[ページプロパティの一括編集のためのページの設定](/help/sites-developing/bulk-editing.md)を参照してください。
-
