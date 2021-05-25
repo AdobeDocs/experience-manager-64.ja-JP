@@ -1,19 +1,18 @@
 ---
-title: アセットエディタの拡張
+title: アセットエディターの拡張
 description: カスタムコンポーネントを使用したアセットエディターの機能の拡張方法を説明します。
 contentOwner: AG
-feature: Developer Tools
+feature: 開発者ツール
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: 1e02a2f6-8194-46b9-b418-87103c3f4a69
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '703'
 ht-degree: 98%
 
 ---
 
-
-# アセットエディタの拡張{#extending-asset-editor}
+# アセットエディターの拡張{#extending-asset-editor}
 
 アセットエディターは、アセット共有を使用して見つけたアセットをクリックすると開くページです。アセットエディターでは、メタデータ、サムネール、タイトルおよびタグなどのアセットの特性を編集できます。
 
@@ -49,7 +48,7 @@ AEM Assets コンポーネントでは、WCM 編集クライアントライブ�
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-サンプルでは、このJavaScriptソースを`head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`)に読み込みます。
+このサンプルでは、このJavaScriptソースを`head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`)に読み込んでいます。
 
 ### 追加のスタイルシート {#additional-style-sheets}
 
