@@ -2,16 +2,15 @@
 title: Assets のファイル形式に関するベストプラクティス
 description: AEM Assets のファイルサポートに関するベストプラクティスを紹介します。
 contentOwner: AG
-feature: Asset Management,Developer Tools
+feature: アセット管理、開発者ツール
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: ff739a17-188e-4779-8820-9e4d9b7031d0
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '437'
 ht-degree: 91%
 
 ---
-
 
 # Assets のファイル形式に関するベストプラクティス {#assets-file-format-best-practices}
 
@@ -42,7 +41,7 @@ PDF Rasterizer を使用して生成されたサムネールやプレビュー�
 
 ## Adobe InDesign Server  {#adobe-indesign-cc-server}
 
-IDML や HTML など Adobe InDesign 固有のレンディションを抽出するには、Adobe InDesign Server の使用をお勧めします。詳しくは、「[Adobe InDesign](managing-linked-subassets.md#add-aem-assets-as-references-in-adobe-indesign)でAEMアセットを参照として追加する」を参照してください。
+IDML や HTML など Adobe InDesign 固有のレンディションを抽出するには、Adobe InDesign Server の使用をお勧めします。詳しくは、[Adobe InDesign](managing-linked-subassets.md#add-aem-assets-as-references-in-adobe-indesign)でのAEMアセットの参照としての追加を参照してください。
 
 ## Dynamic Media  {#dynamic-media}
 
@@ -59,7 +58,7 @@ Dynamic Media は、パフォーマンスが最適化されスケーラビリテ
 * 透明性を保持するとき
 * PSD および PSB ファイルを処理するとき
 
-AEMでのImageMagicライブラリの設定方法について詳しくは、[Using ImageMagick](media-handlers.md#an-example-using-imagemagick)を参照してください。 最適な使用方法については、[ImageMagick の設定のベストプラクティス](best-practices-for-imagemagick.md)を参照してください。
+AEMでImageMagicライブラリを設定する方法については、[ImageMagick](media-handlers.md#an-example-using-imagemagick)の使用を参照してください。 最適な使用方法については、[ImageMagick の設定のベストプラクティス](best-practices-for-imagemagick.md)を参照してください。
 
 ## 画像トランスコーディングライブラリ  {#image-transcoding-library}
 
@@ -75,4 +74,4 @@ AEMでのImageMagicライブラリの設定方法について詳しくは、[Usi
 * ICO
 * ICN
 
-詳しくは、[イメージングトランスコードライブラリ](imaging-transcoding-library.md)を参照してください。
+詳しくは、[画像トランスコーディングライブラリ](imaging-transcoding-library.md)を参照してください。
