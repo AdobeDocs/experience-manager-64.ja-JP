@@ -8,15 +8,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 7387dfe8-0029-4ad0-b319-fc519928318b
-feature: Forms Portal
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: フォームポータル
+exl-id: 4d66ab64-a132-4f2a-89ca-3fbd8dc56ce2
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 69%
 
 ---
-
 
 # フォームポータルページの作成 {#creating-a-forms-portal-page}
 
@@ -26,14 +25,14 @@ ht-degree: 69%
 
 デフォルトでは、フォームポータルコンポーネントは使用できません。「[フォームポータルのコンポーネントを有効にする](/help/forms/using/enabling-forms-portal-components.md)」の説明に従い、フォームポータルコンポーネントにおける次のカテゴリが有効になっていることを確認してください。
 
-**ドキュメント** サービス：Search &amp; Lister、Link、Drafts and Submissionsコンポーネントが含まれます。
+**ドキュメ** ントサービスSearch &amp; Lister、Link、Drafts and Submissionsの各コンポーネントが含まれます。
 
 **Document Services Predicates**：「Date Predicate」、「Full Text Predicate」、「Properties Predicate」、および「Tags Predicate」のコンポーネントが含まれています。これらのコンポーネントは、「Search &amp; Lister」コンポーネントで検索を設定する際に使用します。
 
 これらをAEMサイトのページで有効にすると、コンポーネントの各カテゴリはコンポーネントブラウザで使用でるようになります。
 
-![コンポーネントbrowserFigureのAEM Formsポータルコンポーネント：](assets/component-categories.png)
-**** *Formsポータルコンポーネントカテゴリ*
+![AEM Formsポータルコンポーネントコンポーネン](assets/component-categories.png)
+**ト（コンポーネントブラウザー内）図：** *Formsポータルコンポーネントカテゴリ*
 
 ## Search &amp; Lister コンポーネント {#search-amp-lister-component}
 
@@ -42,21 +41,21 @@ ht-degree: 69%
 * フォームが一覧表示される「リスト」ペイン。
 * 検索機能を追加する「検索」ペイン。
 
-「Search &amp; Lister」コンポーネントは、コンポーネントブラウザーの「ドキュメントサービス」コンポーネントカテゴリからページにドラッグ&amp;ドロップできます。 コンポーネントを追加すると、下記の画像のようになります。
+Search &amp; Listerコンポーネントは、コンポーネントブラウザのDocument Servicesコンポーネントカテゴリからページにドラッグ&amp;ドロップできます。 コンポーネントを追加すると、下記の画像のようになります。
 
-![ページ内のSearch &amp; Listerコンポーネント](assets/fp-grid-viw.png)
-**図：** *グリッドレイアウトを含むページ内のSearch &amp; Listerコンポーネント*
+![ページ内のSearch &amp; Listerコンポーネ](assets/fp-grid-viw.png)
+**ント図：** *Search &amp; Listerグリッドレイアウトのページ内のコンポーネント*
 
 ### リストペイン {#list-pane}
 
-リストペインはフォームが一覧表示される領域です。Search &amp; Listerコンポーネントには、リストペインでのフォームの表示を制御するために使用できる様々な設定オプションが用意されています。
+リストペインはフォームが一覧表示される領域です。Search &amp; Listerコンポーネントは、リストペインでのフォームの表示を制御するために使用できる様々な設定オプションを提供します。
 
-リストペインを設定するには、「Search &amp; Lister」コンポーネントをタップし、![settings_icon](assets/settings_icon.png)をタップします。 「**[!UICONTROL コンポーネントを編集]**」ダイアログが開きます。
+「リスト」ペインを設定するには、「検索とリスター」コンポーネントをタップし、![settings_icon](assets/settings_icon.png)をタップします。 **[!UICONTROL コンポーネントを編集]**&#x200B;ダイアログが開きます。
 
-![編集](assets/edit-list.png)
-**モードのリストペイン図：** *編集モードのリストペイン*
+![編集モードのリスト](assets/edit-list.png)
+**ペイン図：** *編集モードのリストペイン*
 
-「**[!UICONTROL 編集]**」ダイアログには複数のタブが含まれており、以下の表で説明される設定オプションを提供します。終了したら、「**[!UICONTROL OK]**」をタップして設定を保存します。
+「**[!UICONTROL 編集]**」ダイアログには複数のタブが含まれており、以下の表で説明される設定オプションを提供します。完了したら、「**[!UICONTROL OK]**」をタップして設定を保存します。
 
 <table> 
  <tbody> 
@@ -98,17 +97,17 @@ ht-degree: 69%
   <tr> 
    <td> </td> 
    <td>結果のテキスト</td> 
-   <td><p>結果のテキストを設定します（例えば、1-12/601の</strong>「結果」<strong>）。デフォルト値は<strong>「Results」</strong>です。</strong></p> <p>例えば、このフィールドに<strong>Forms</strong>を指定し、合計601のフォームがある場合、結果のテキストは1 ～ 12/ 601 <strong>Formsに変わります。</strong></p> </td> 
+   <td><p>結果のテキストを設定します（例えば、1-12/601の</strong>「結果」<strong>）。デフォルト値は<strong>「Results」</strong>です。</strong></p> <p>例えば、このフィールドに<strong>Forms </strong>を指定し、合計601個のフォームがある場合、結果テキストは601 <strong>Forms.</strong>の1 ～ 12に変わります。</p> </td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td>ページテキスト</td> 
-   <td><p>ページテキストを設定します（例：<strong>ページ</strong>1/51）。 デフォルト値は<strong>「ページ」</strong>です。</p> <p>例えば、このフィールドに<strong>申込みフォーム</strong>を指定し、51ページある場合、ページのテキストは<strong>申込みフォーム</strong>1/51に変更されます。</p> </td> 
+   <td><p>ページテキストを設定します（例：<strong>ページ</strong>1/51）。 デフォルト値は<strong>「ページ」</strong>です。</p> <p>例えば、このフィールドに<strong>Application Form </strong>を指定し、51ページある場合、ページテキストは「<strong>Application Form </strong>1 of 51」に変わります。</p> </td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td>/ テキスト</td> 
-   <td><p></strong>の<strong>を指定したテキスト（</strong>51のページ1 <strong>）に置き換えます。 デフォルト値は <strong>/</strong> です。</strong></strong></p> <p>例えば、このフィールドで</strong>のうち<strong>を指定すると、テキストは</strong>51の<strong>ページ1に変わります。</strong></strong></p> </td> 
+   <td><p></strong>の<strong>を、指定されたテキスト（</strong>51の<strong>ページ1）に置き換えます。 デフォルト値は <strong>/</strong> です。</strong></strong></p> <p>例えば、このフィールドで</strong>の<strong>を指定すると、テキストは「</strong>51ページ<strong>」に変わります。</strong></strong></p> </td> 
   </tr> 
   <tr> 
    <td><span class="uicontrol"><strong>フォームリンク</strong></span></td> 
@@ -143,7 +142,7 @@ ht-degree: 69%
   <tr> 
    <td><span class="uicontrol"><strong>スタイル</strong></span></td> 
    <td>スタイルタイプ</td> 
-   <td>フォームのリスト表示に<strong>「スタイルなし」、「デフォルトのスタイル」</strong>、または<strong>カスタムスタイル</strong>を指定できます。</td> 
+   <td>フォームのリスト表示に<strong>スタイルなし、デフォルトのスタイル</strong>、または<strong>カスタムスタイル</strong>を指定できます。</td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -155,12 +154,12 @@ ht-degree: 69%
 
 ### 検索ペイン {#search-pane}
 
-検索ペインでは、サイドキックの「Document Services Predicates」カテゴリから、「Date Predicate」、「Full Text Predicate」、「Properties Predicate」、および「Tags Predicate」コンポーネントを追加することができます。これらのコンポーネントは、リストに表示されるフォームに対してユーザーが検索を実行するための検索機能を実装します。
+検索ペインでは、サイドキックの「Document Services Predicates」カテゴリから、「Date Predicate」、「Full Text Predicate」、「Properties Predicate」、および「Tags Predicate」コンポーネントを追加することができます。これらのコンポーネントは、ユーザーが一覧表示されたフォームに対して検索を実行するための検索機能を実装します。
 
-**チップ：***フォームポータルに表示されるフォームのリストを既定の条件に基づいて制御し、エンドユーザーに対して検索機能を非表示にできます。フォームのリストを制御するには、検索フィルターを適用するためにPredicateコンポーネントを使用します。また、デフォルトのフィルタ値を指定し、[コンポーネントを編集]ダイアログの[表示]タブで検索を無効にすることもできます。*
+**チップ：***フォームポータルに表示されるフォームのリストを既定の条件に基づいて制御し、エンドユーザーに対して検索機能を非表示にできます。フォームのリストを制御するには、検索フィルターを適用するためにPredicateコンポーネントを使用します。デフォルトのフィルター値を指定し、コンポーネントを編集ダイアログの「表示」タブで検索を無効にすることもできます。*
 
-![日付、フルテキスト、プロパティ、タグの述](assets/search-with-predicates.png)
-**語を含む検索パネル：日付、フルテキスト、プロパティ、タグの述語を含む** *検索パネル（Tags Predicateを含む）*
+![日付、フルテキスト、プロパティおよびタグの述語を含む検索パネル](assets/search-with-predicates.png)
+**図：** *日付、フルテキスト、プロパティおよびタグの述語を含む検索パネル*
 
 #### 日付の述語 {#date-predicate}
 
@@ -171,11 +170,11 @@ ht-degree: 69%
 1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png)をタップします。 編集ダイアログが開きます。
 1. 以下のプロパティを指定します。
 
-   * **[!UICONTROL タイプ：]** 使用できるオプションは「 **[!UICONTROL 最終変更日]**」のみです。
+   * **[!UICONTROL タイプ：]** 使用できるオプションは「最終変 **[!UICONTROL 更日]**」のみです。
    * **[!UICONTROL テキスト：]** Date Predicateコンポーネントのラベルまたはキャプションです。デフォルト値は&#x200B;**[!UICONTROL 最終変更日]**&#x200B;です。
-   * **[!UICONTROL 開始日のラベル：開始日フィールドの]** ラベルまたはキャプション。
-   * **[!UICONTROL 終了日のラベル：終了日フィールドの]** ラベルまたはキャプション。
-   * **[!UICONTROL 非表示：]** リストフォームにデフォルトの日付フィルターを適用します。
+   * **[!UICONTROL 開始日のラベル：]** 開始日フィールドのラベルまたはキャプションです。
+   * **[!UICONTROL 終了日のラベル：]** 終了日フィールドのラベルまたはキャプションです。
+   * **[!UICONTROL 非表示：]** デフォルトの日付フィルターを適用してフォームを一覧表示します。
 
 1. 「**[!UICONTROL OK]**」をタップします。
 
@@ -187,7 +186,7 @@ Full Text Predicate コンポーネントを構成するには、次の手順を
 
 1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png)をタップします。 編集ダイアログが開きます。
 1. 「**[!UICONTROL メインタイトル]**」フィールドにタイトルを指定します。
-1. 「**[!UICONTROL OK]**」をタップします。
+1. **[!UICONTROL Ok]**&#x200B;をタップします。
 
 #### プロパティの述語 {#properties-predicate}
 
@@ -196,13 +195,13 @@ Properties Predicateコンポーネントは、フォームプロパティ（タ
 Properties Predicate コンポーネントを構成するには、次の手順を実行します。
 
 1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png)をタップします。 **[!UICONTROL 編集ダイアログ]**&#x200B;が開きます。
-1. 「**[!UICONTROL 一般]**」タブで、検索ラベルを指定します。 デフォルト値は&#x200B;**[!UICONTROL プロパティ]**&#x200B;です。
+1. 「**[!UICONTROL 一般]**」タブで、検索ラベルを指定します。 デフォルト値は&#x200B;**[!UICONTROL Properties]**&#x200B;です。
 
-1. 「**[!UICONTROL オプション]**」タブで、**[!UICONTROL 追加アイテム]**&#x200B;をタップします。
+1. 「**[!UICONTROL オプション]**」タブで、「**[!UICONTROL 項目を追加]**」をタップします。
 1. ドロップダウンリストからプロパティを選択し、ドロップダウンリストの下のフィールドでプロパティの検索ラベルを指定します。
-1. 手順 4 を繰り返してさらにプロパティを追加します。また、指定した条件に基づいてリストフォームにデフォルトのフィルター値を指定し、エンドユーザーによる検索でプロパティを非表示にすることもできます。 プロパティの「非表示」チェックボックスを選択し、デフォルトフィルター値を指定します。
+1. 手順 4 を繰り返してさらにプロパティを追加します。デフォルトのフィルター値を指定して、指定した条件に基づいてフォームを一覧表示したり、エンドユーザーによる検索のプロパティを非表示にしたりすることもできます。 プロパティの「非表示」チェックボックスを選択し、デフォルトフィルター値を指定します。
 
-   例えば、タイトルに「Travel」という文字を含むフォームを表示するには、「タイトル」プロパティ横の「非表示」を選択します。さらに、デフォルトのフィルター値のテキストボックスで「Travel」を指定します。
+   例えば、タイトルに「Travel」という文字を含むフォームを表示するには、「タイトル」プロパティ横の「非表示」を選択します。さらに、デフォルトのフィルター値テキストボックスで「 Travel 」を指定します。
 
 1. 「**[!UICONTROL OK]**」をタップします。
 
@@ -223,23 +222,23 @@ Tags Predicate コンポーネントを構成するには、次の手順を実�
 
 ページ上でフォームを一覧表示するには、そのページに&#x200B;**[!UICONTROL Search &amp; Listerコンポーネントを追加し、]**&#x200B;リストペインを設定します&#x200B;****。エンドユーザーが、日付、テキスト、およびタグでフォームを検索できるようにするには、**[!UICONTROL 検索ペイン]**&#x200B;コンポーネントを追加します。
 
-ページ上の任意の場所からフォームにリンクするには、リンクコンポーネントを使用します。リンクコンポーネントについて詳しくは、[ページ](/help/forms/using/embedding-link-component-page.md)へのリンクコンポーネントの埋め込みを参照してください。
+ページ上の任意の場所からフォームにリンクするには、リンクコンポーネントを使用します。リンクコンポーネントについて詳しくは、[ページへのリンクコンポーネントの埋め込み](/help/forms/using/embedding-link-component-page.md)を参照してください。
 
 ドラフト状態で、既に送信済みのフォームをリストするには、「**[!UICONTROL ドラフト&amp;送信]**」コンポーネントを使用します。詳しくは、「[ドラフト・送信コンポーネントのカスタマイズ](/help/forms/using/draft-submission-component.md)」を参照してください。
 
 ## モバイルデバイスへの適合性  {#mobile-device-friendliness}
 
-フォームポータルのSearch &amp; Listerコンポーネントは、モバイルデバイスフレンドリーで、デバイスに適応します。3つのデフォルト表示すべて：Webページの幅が調整される場合、グリッド、カード、パネルは、サイトが開かれたデバイスに応じて再レイアウトされます。 簡単に言えば、Search &amp; Listerは単なるコンポーネントであり、ページレベルのスタイリングは管理しません。
+フォームポータルのSearch &amp; Listerコンポーネントは、モバイルデバイスフレンドリーで、デバイスに適応します。3つのデフォルトビュー：Webページも適応するという事実を備え、サイトを開いたデバイスに応じて、グリッド、カード、パネルが再レイアウトされます。 簡単に言えば、Search &amp; Listerは単なるコンポーネントであり、ページレベルのスタイリングは管理しません。
 
 次の画像は、モバイルデバイス上で開いた場合の Search &amp; Lister コンポーネントを示します。
 
-![Search &amp; Listerコンポー](assets/search_lister.png)
-**ネントのスクリーンショット図：** *Search &amp; Listerコンポーネント*
+![Search &amp; Listerコンポーネントのスクリ](assets/search_lister.png)
+**ーンショット図：** *Search &amp; Listerコンポーネント*
 
 ## フォームポータルページのカスタマイズ {#customizing-a-forms-portal-page-br}
 
-フォームポータルページをカスタマイズすることで、特徴のある外観にすることができます。また、メタデータを追加することで、検索機能の改善、ページのレイアウト変更、およびカスタムCCSスタイルの追加を行うこともできます。詳しくは、[Formsポータルコンポーネントのテンプレートのカスタマイズ](/help/forms/using/customizing-templates-forms-portal-components.md)を参照してください。
+フォームポータルページをカスタマイズすることで、特徴のある外観にすることができます。また、メタデータを追加することで、検索機能の改善、ページのレイアウト変更、およびカスタムCCSスタイルの追加を行うこともできます。詳しくは、「 [Forms Portalコンポーネントのテンプレートのカスタマイズ](/help/forms/using/customizing-templates-forms-portal-components.md) 」を参照してください。
 
-AEMフォームUIでは、カスタムメタデータをフォームに追加することができます。カスタムメタデータは、エンドユーザーに対してフォームの展開・検索機能を提供するのに役に立ちます。カスタムメタデータについて詳しくは、[Formsポータルコンポーネントのテンプレートのカスタマイズ](/help/forms/using/customizing-templates-forms-portal-components.md)を参照してください。
+AEMフォームUIでは、カスタムメタデータをフォームに追加することができます。カスタムメタデータは、エンドユーザーに対してフォームの展開・検索機能を提供するのに役に立ちます。カスタムメタデータについて詳しくは、[Forms Portalコンポーネントのテンプレートのカスタマイズ](/help/forms/using/customizing-templates-forms-portal-components.md)を参照してください。
 
 フォームポータルは、デフォルトでレンダリングアクションを提供します。フォームポータルをカスタマイズして、他のオプションを追加することもできます。詳しくは、「[フォームリスター項目にカスタムアクションボタンを追加する](/help/forms/using/add-custom-action-form-lister.md)」を参照してください。
