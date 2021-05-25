@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: document_services
 discoiquuid: d34f1598-38bc-46c3-b6cd-954a3880994a
-translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+exl-id: 3997b034-fa24-4366-b22f-0abf2b6d1e64
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2161'
 ht-degree: 91%
 
 ---
-
 
 # Assembler サービスの使用  {#using-assembler-service}
 
@@ -31,8 +30,8 @@ Assembler サービスを使用すると、複数の PDF ドキュメントを 1
 
 次の図は、3 つのソースドキュメントを 1 つの結果ドキュメントに統合する場合の様子を示しています。
 
-![複数のPDF](assets/as_document_assembly.png)
-**ドキュメントからの単純なPDFドキュメントのアセンブリ図：複数のPDF** *ドキュメントからの単一のPDFドキュメントのアセンブリ*
+![複数のPDFドキュメントからの単純なPDFドキュメ](assets/as_document_assembly.png)
+**ントのアセンブリ図：** *複数のPDFドキュメントからの単純なPDFドキュメントのアセンブリ*
 
 以下に、このドキュメントのアセンブリに使用される簡単な DDX ドキュメントの例を示します。この例では、結果ドキュメントの名前と共に、結果ドキュメントの生成に使用するソースドキュメントの名前も指定しています。
 
@@ -88,7 +87,7 @@ PDF ドキュメントをパスワードを使用して暗号化するために�
 次の例は、ドキュメントのヘッダに一意の識別子を含む PDF ドキュメントを示しています。
 
 ![ドキュメントの](do-not-localize/as_batesnumber.png)
-**headerFigure内に一意の識別子を含むPDFドキュメント:ドキュメント** *のヘッダー内に一意の識別子を含むPDFドキュメント*
+**headerFigure** *に一意の識別子を含むPDFドキュメント：ドキュメントのヘッダーに一意の識別子を含むPDFドキュメント*
 
 ### ドキュメントの統合およびアセンブリ {#flatten-and-assemble-documents}
 
@@ -110,8 +109,8 @@ XDP ドキュメントをアセンブリする方法には、次のようなも�
 
 次の図は、3 つの XDP ソースドキュメントを 1 つの結果 XDP ドキュメントにアセンブリする場合の様子を示しています。結果 XDP ドキュメントには、3 つのソース XDP ドキュメントと関連データが含まれます。結果ドキュメントには、ベースドキュメント（最初のソース XDP ドキュメント）から基本属性が受け継がれます。
 
-![複数のXDP](assets/as_assembler_xdpassembly.png)
-**ドキュメントからの単純なXDPドキュメントのアセンブリ図：複数のXDPドキュメントからの単一のXDPドキュメントの** *アセンブリ*
+![複数のXDPドキュメントからの単純なXDPドキュメ](assets/as_assembler_xdpassembly.png)
+**ントのアセンブリ図：** *複数のXDPドキュメントからの単純なXDPドキュメントのアセンブリ*
 
 上記の結果ドキュメントを生成する DDX ドキュメントを次に示します。
 
@@ -161,7 +160,7 @@ resolveAssets 属性の値は、XDP ソースタグまたは親の XDP 結果タ
 #### XDP ドキュメント内のすべてのソース参照を解決する  {#resolve-all-source-references-in-an-xdp-document}
 
 ソースXDPドキュメント内のすべての参照を解決するには、\
-次の例のように、結果のドキュメントをすべてに渡します。
+結果のドキュメントをすべてに（以下の例のように）
 
 ```xml
 <DDX xmlns="https://ns.adobe.com/DDX/1.0/">
@@ -173,7 +172,7 @@ resolveAssets 属性の値は、XDP ソースタグまたは親の XDP 結果タ
 </DDX
 ```
 
-また、すべてのソースXDPドキュメントに対して属性を個別に指定して、同じ属性を取得することもできます\
+また、すべてのソースXDPドキュメントの属性を個別に指定して、同じ属性を取得することもできます\
 個の結果.
 
 ```xml
@@ -225,8 +224,8 @@ Assembler サービスを使用して、フラグメントが挿入される別�
 
 次の図に、2 つの XML フォーム（XFA テンプレート）を示します。左側のフォームには、myInsertionPoint という挿入ポイントがあります。右側のフォームには、myFragment というフラグメントがあります。
 
-![フォームフラグメントのXFA](assets/as_assembler_fragment_assy_assembled.png)
-**フォームへの挿入図：フォームフラグメントのXFA** *フォームへの挿入*
+![フォームフラグメントのXFAフ](assets/as_assembler_fragment_assy_assembled.png)
+**ォームへの挿入図：** *フォームフラグメントのXFAフォームへの挿入*
 
 Assembler サービスによって以下の DDX ドキュメントが解釈されると、別の XML フォームを含む XML フォームが作成されます。myFragmentSource ドキュメントの myFragment サブフォームが、myFormSource ドキュメント内の myInsertionPoint の位置に挿入されます。
 
@@ -264,8 +263,8 @@ Assembler サービスを使用して PDF ドキュメントをディスアセ�
 
 次の図で、ページ 1 ～ 3 は、ソースドキュメントから抽出されて、新しい結果ドキュメントに配置されています。
 
-![ソース](assets/as_intro_page_extraction.png)
-**ドキュメントから特定のページを抽出する図：ソースドキュメントから特定のページを** *抽出する*
+![ソースドキュメントからの特定のペ](assets/as_intro_page_extraction.png)
+**ージの抽出図：** *ソースドキュメントからの特定のページの抽出*
 
 次に、このドキュメントのディスアセンブリに使用される DDX ドキュメントの例を示します。
 
@@ -279,8 +278,8 @@ Assembler サービスを使用して PDF ドキュメントをディスアセ�
 
 次の図は、DocA を複数の結果ドキュメントに分割する例です。ページで最初に表示されるレベル 1 のしおりが、新しい結果ドキュメントの開始位置を示します。
 
-![しおりに基づくソースドキュメントを複数の](assets/as_intro_pdfsfrombookmarks.png)
-**ドキュメントに分割図：しおりに基づくソースドキュメントを複数のドキュメントに** *分割する*
+![しおりに基づくソースドキュメントを複数のドキュメ](assets/as_intro_pdfsfrombookmarks.png)
+**ントに分割する図：** *しおりに基づくソースドキュメントを複数のドキュメントに分割する*
 
 次に、しおりを使用してソースドキュメントをディスアセンブリする DDX ドキュメントの例を示します。
 
@@ -322,7 +321,7 @@ DDX ドキュメントを使用して、Assembler サービスで次の LiveCycl
 
 **Forms サービス**：XDP ファイルと XML データファイルを結合して、データを埋め込んだインタラクティブフォームを含む PDF ドキュメントを作成することができます。
 
-**Output サービス**：動的な XML フォームを、非インタラクティブフォームを含む PDF ドキュメントに変換（フォームを統合）します。Assemblerサービスは、静的なXMLフォームとAcrobatフォームを統合する際に、Outputサービスを呼び出しません。
+**Output サービス**：動的な XML フォームを、非インタラクティブフォームを含む PDF ドキュメントに変換（フォームを統合）します。Assemblerサービスは、静的なXMLフォームとAcrobatフォームを統合し、Outputサービスを呼び出しません。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
