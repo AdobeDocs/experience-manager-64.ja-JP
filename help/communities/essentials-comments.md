@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 18f54a1c-52aa-414d-b494-1f19b5c10345
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 3d5396b5-10e5-49bc-aa11-5a3df93d70c3
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '357'
-ht-degree: 57%
+ht-degree: 56%
 
 ---
 
-
 # コメントの基本事項 {#comments-essentials}
 
-このページでは、コメントシステム（コメントコンポーネント）の操作に関する基本的な事項と、メンバーがコメントや返信を投稿する際に生成されるユーザー生成コンテンツ(UGC)を管理するためのオプションを提供します。
+このページでは、コメントシステム（コメントコンポーネント）の操作に関する基本事項と、メンバーがコメントや返信を投稿する際に生成されるユーザー生成コンテンツ(UGC)を管理するためのオプションを提供します。
 
 個々の投稿がそれぞれ単一のコメントコンポーネントで表されるように、コメントシステムが確立されます。これは、ページに含まれるコメントシステムです。 コメントシステムを呼び出すと、個々のコメントが作成されます。
 
@@ -57,20 +56,20 @@ ht-degree: 57%
 
 [クライアント側のカスタマイズ](client-customize.md)
 
-### ページごとに 1 つのインスタンス  {#one-instance-per-page}
+### ページごとに 1 つのインスタンス {#one-instance-per-page}
 
-ページネーションをおこなう場合、およびキャッシュやリンクのために URL を使用する場合は、コメントシステムごとに一意の URL を使用する必要があります。したがって、1ページにつき1つのコメントシステムのインスタンスのみが許可されます。
+ページネーションをおこなう場合、およびキャッシュやリンクのために URL を使用する場合は、コメントシステムごとに一意の URL を使用する必要があります。したがって、1ページにつき1つのコメントシステムのインスタンスのみを使用できます。
 
 その他の機能には、コメントシステムが既に含まれています。以下のとおりです。
 
 * [ブログ](blog-developer-basics.md)
-* [カレンダー](calendar-basics-for-developers.md)
+* [Calendar](calendar-basics-for-developers.md)
 * [ファイルライブラリ](essentials-file-library.md)
 * [フォーラム](essentials-forum.md)
 * [Q&amp;A](qna-essentials.md)
 * [レビュー](reviews-basics.md)
 
-### フラグ設定理由リスト  {#flag-reason-list}
+### フラグ設定理由リスト {#flag-reason-list}
 
 フラグ設定理由リストは、アプリケーションに flagreasonlist.hbs を追加して内容を上書きすることによってカスタマイズできます。
 
@@ -86,7 +85,7 @@ ht-degree: 57%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿されたコメント（UGC）へのアクセス  {#accessing-posted-comments-ugc}
+### 投稿されたコメント(UGC)へのアクセス{#accessing-posted-comments-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。\
 [ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
@@ -97,8 +96,7 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 次のページを参照してください。
 
-* [ストレージリソースプロバイダの概要](srp.md)  — 概要とリポジトリ使用の概要
-* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
-* [SocialUtilsリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピング
-
+* [ストレージリソースプロバイダーの概要](srp.md)  — 概要とリポジトリ使用の概要
+* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティメソッドと例
+* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
+* [SocialUtilsのリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドと現在のSRPユーティリティメソッドのマッピング
