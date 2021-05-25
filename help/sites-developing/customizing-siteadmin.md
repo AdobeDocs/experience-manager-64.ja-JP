@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: 73e57f20-4022-46ab-aa5c-ec866298b645
-translation-type: tm+mt
-source-git-commit: 4e6442ec089b7d07cc68debb5a630fb474716f4d
+exl-id: c7e37599-0712-44cf-8191-d444d12f95c4
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 72%
 
 ---
-
 
 # Web サイトコンソールのカスタマイズ（クラシック UI）{#customizing-the-websites-console-classic-ui}
 
@@ -120,13 +119,13 @@ public class StarredListInfoProvider implements ListInfoProvider {
 
 ### 新しいサービスのテスト {#testing-the-new-service}
 
-Web サイト管理コンソールを開いてサイトを閲覧すると、ブラウザーがコンソールの構築に使用されている JSON オブジェクトを取得するための ajax 呼び出しを発行します。例えば、`/content/geometrixx`フォルダーを参照すると、AEMサーバーに次の要求が送信され、コンソールが構築されます。
+Web サイト管理コンソールを開いてサイトを閲覧すると、ブラウザーがコンソールの構築に使用されている JSON オブジェクトを取得するための ajax 呼び出しを発行します。例えば、`/content/geometrixx`フォルダーを参照すると、コンソールを構築するためにAEMサーバーに次のリクエストが送信されます。
 
 [http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
 新しいサービスを含むバンドルのデプロイ後に、そのサービスが実行されていることを確認するには、以下をおこないます。
 
-1. ブラウザーで次のURLを指定します。
+1. ブラウザーで次のURLを参照します。
 
    [http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
@@ -136,38 +135,38 @@ Web サイト管理コンソールを開いてサイトを閲覧すると、ブ�
 
 ### 新しい列の表示 {#displaying-the-new-column}
 
-最後の手順では、Webサイト管理コンソールのノード構造を適合させ、`/libs/wcm/core/content/siteadmin`をオーバーレイしてすべてのGeometrixxページの新しいプロパティを表示します。 以下の手順を実行します。
+最後の手順では、`/libs/wcm/core/content/siteadmin`をオーバーレイして、すべてのGeometrixxページの新しいプロパティを表示するよう、Webサイト管理コンソールのノード構造を適応させます。 以下の手順を実行します。
 
-1. CRXDE Liteで、ノード構造`/apps/wcm/core/content`をタイプ`sling:Folder`のノードで作成し、構造`/libs/wcm/core/content`を反映します。
+1. CRXDE Liteで、タイプ`sling:Folder`のノードを持つノード構造`/apps/wcm/core/content`を作成し、構造`/libs/wcm/core/content`を反映します。
 
-1. ノード`/libs/wcm/core/content/siteadmin`をコピーして`/apps/wcm/core/content`の下に貼り付けます。
+1. ノード`/libs/wcm/core/content/siteadmin`をコピーし、`/apps/wcm/core/content`の下に貼り付けます。
 
 1. ノード`/apps/wcm/core/content/siteadmin/grid/assets`を`/apps/wcm/core/content/siteadmin/grid/geometrixx`にコピーし、そのプロパティを変更します。
 
    * **pageText** を削除
-   * **pathRegex**&#x200B;を`/content/geometrixx(/.*)?`に設定
+   * **pathRegex**&#x200B;を`/content/geometrixx(/.*)?`に設定します。
 
        に設定すべての Geometrixx Web サイトに対してグリッド設定が有効になります。
 
-   * **storeProxySuffix**&#x200B;を`.pages.json`に設定
+   * **storeProxySuffix**&#x200B;を`.pages.json`に設定します。
    * 複数値プロパティ **storeReaderFields** を編集し、`starred` 値を追加します。
-   * MSM機能をアクティブ化するには、次のMSMパラメーターをmulti-Stringプロパティ&#x200B;**storeReaderFields**&#x200B;に追加します。
+   * MSM機能を有効にするには、次のMSMパラメーターをmulti-Stringプロパティ&#x200B;**storeReaderFields**&#x200B;に追加します。
 
       * **msm:isSource**
       * **msm:isInBlueprint**
       * **msm:isLiveCopy**
 
-1. 追加`/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`の下の`starred`ノード（タイプ&#x200B;**nt:unstructured**）で、次のプロパティが含まれます。
+1. `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`の下に（**nt:unstructured**&#x200B;タイプの）`starred`ノードを追加し、次のプロパティを指定します。
 
-   * **dataIndex**: `starred` 文字列型
-   * **header**: `Starred` 文字列型
-   * **xtype**: `gridcolumn` 文字列型
+   * **dataIndex**: `starred` 型がStringの場合
+   * **ヘッダー**: `Starred` 型がStringの場合
+   * **xtype**: `gridcolumn` 型がStringの場合
 
-1. （オプション）`/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`に表示したくない列をドロップします。
+1. （オプション）`/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`に表示しない列をドロップします。
 
-1. `/siteadmin` は、デフォルトでは、を指すバニティパスで `/libs/wcm/core/content/siteadmin`す。
+1. `/siteadmin` は、デフォルトでを指すバニティパスで `/libs/wcm/core/content/siteadmin`す。
 
-   これを`/apps/wcm/core/content/siteadmin`上のご使用のバージョンのsiteadminにリダイレクトするには、`/libs/wcm/core/content/siteadmin`上で定義された値より大きい値を持つプロパティ`sling:vanityOrder`を定義します。 デフォルト値は 300 なので、それより大きい値が適しています。
+   これを`/apps/wcm/core/content/siteadmin`のサイト管理のお使いのバージョンにリダイレクトするには、`sling:vanityOrder`プロパティを`/libs/wcm/core/content/siteadmin`で定義した値より大きい値に定義します。 デフォルト値は 300 なので、それより大きい値が適しています。
 
 1. Webサイト管理コンソールに移動し、Geometrixxサイトに移動します。
 
@@ -181,6 +180,6 @@ Web サイト管理コンソールを開いてサイトを閲覧すると、ブ�
 >
 >**pathRegex** プロパティによって定義されるリクエストパスに複数のグリッド設定が一致する場合は、最も詳しい設定ではなく、最初の設定が使用されます。つまり、設定の順序が重要です。
 
-### サンプルパッケージ  {#sample-package}
+### サンプルパッケージ {#sample-package}
 
 このチュートリアルの結果は、パッケージ共有の[Webサイト管理コンソール](http://localhost:4502/crx/packageshare/index.html/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/helper/customizing-siteadmin)パッケージのカスタマイズで確認できます。
