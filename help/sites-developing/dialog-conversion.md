@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: development-tools
 content-type: reference
 discoiquuid: dafe26ae-b2c5-4070-b8b1-cc1da147b464
-translation-type: tm+mt
-source-git-commit: 5b00783e4471a6b142ab17a7bc4a647ab04aec5f
+exl-id: 3e19aac2-49b1-48e1-85ce-36354cd8fd32
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 84%
 
 ---
-
 
 # ダイアログ変換ツール{#dialog-conversion-tool}
 
