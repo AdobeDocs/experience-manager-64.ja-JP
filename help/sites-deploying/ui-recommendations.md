@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 42bf42cb-0c6c-4390-8170-2c540c4d3ed3
-translation-type: tm+mt
-source-git-commit: 5b00783e4471a6b142ab17a7bc4a647ab04aec5f
+exl-id: 1e5172d9-47a3-4d73-b749-166e201f4eef
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '808'
 ht-degree: 93%
 
 ---
-
 
 # 顧客向けのユーザーインターフェイスの推奨事項{#user-interface-recommendations-for-customers}
 
@@ -75,7 +74,7 @@ Adobe Experience Manager 6.4 に関する製品管理からの推奨事項を以
      <li>クラシック UI のページエディターを表示するよう「ページを編集」のアクションを設定します。<a href="#selecting-your-ui">UI の選択</a>を参照してください。</li> 
     </ol> <p>次に第 2 段階として、</p> 
     <ol> 
-     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。Adobeでは、<a href="/help/sites-developing/modernization-tools.md">AEM最新化ツール</a>を使用してコンポーネントを更新することをお勧めします。</li> 
+     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。Adobeは、<a href="/help/sites-developing/modernization-tools.md">AEM Modernization Tools</a>を使用してコンポーネントを更新することをお勧めします。</li> 
     </ol> </td> 
   </tr> 
   <tr> 
@@ -87,7 +86,7 @@ Adobe Experience Manager 6.4 に関する製品管理からの推奨事項を以
      <li>クラシック UI のページエディターを表示するよう「ページを編集」のアクションを設定します。<a href="#selecting-your-ui">UI の選択</a>を参照してください。</li> 
     </ol> <p>次に第 2 段階として、</p> 
     <ol> 
-     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。Adobeでは、<a href="/help/sites-developing/modernization-tools.md">AEM最新化ツール</a>を使用してコンポーネントを更新することをお勧めします。</li> 
+     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。Adobeは、<a href="/help/sites-developing/modernization-tools.md">AEM Modernization Tools</a>を使用してコンポーネントを更新することをお勧めします。</li> 
      <li>ContextHub（ClientContext の後継）を設定し、ContextHub を使用するようページテンプレートを更新します。ContextHub には、カスタムの ClientContext のストアを読み込むことができる互換モードがあります。</li> 
     </ol> </td> 
   </tr> 
@@ -132,4 +131,3 @@ AEM 6.3 でのタッチ操作向け UI の機能強化について詳しくは�
 
 * [タッチ操作向けカスタマイズでの AEM Gem セッション](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html)。
 * [Granite UI ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)。
-
