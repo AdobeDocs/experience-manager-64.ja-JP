@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: d4473758-674a-42d6-923a-b536f7f9c1f7
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 52eb9c2f-ce29-4622-8726-802ac40246d4
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 79%
 
 ---
-
 
 # CSV ファイルへの書き出し{#export-to-csv}
 
@@ -56,17 +55,16 @@ CSV の書き出しファイルを作成ウィザードでは、次の要素を�
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
-「**CSVエクスポートを作成**」オプションは、(リスト表示で)**サイト**&#x200B;コンソールを参照する際に使用できます。これは、**作成**&#x200B;ドロップダウンメニューのオプションです。
+**CSVの書き出し**&#x200B;を作成オプションは、（リスト表示で）**サイト**&#x200B;コンソールを参照する際に使用できます。これは、**作成**&#x200B;ドロップダウンメニューのオプションです。
 
 ![screen_shot_2018-03-21at154719](assets/screen_shot_2018-03-21at154719.png)
 
 CSV の書き出しファイルを作成するには、次の手順を実行します。
 
 1. **サイト**&#x200B;コンソールを開き、必要に応じて必要な場所まで移動します。
-1. ツールバーから、「**作成**」を選択し、「**CSVエクスポート**」を選択して、ウィザードを開きます。
+1. ツールバーの「**作成** 」を選択し、「**CSVの書き出し**」を選択してウィザードを開きます。
 
    ![screen_shot_2018-03-21at154758](assets/screen_shot_2018-03-21at154758.png)
 
 1. 書き出す必要があるプロパティを選択します。
 1. 「**作成**」を選択します。
-
