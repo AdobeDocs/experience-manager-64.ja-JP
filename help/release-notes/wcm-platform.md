@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 content-type: reference
 discoiquuid: e5dd9d0d-6d67-4430-aeb3-2be91356f624
-translation-type: tm+mt
-source-git-commit: 966263cc94f44bcad76e7e9ba5c6ecdc93574348
+exl-id: 6f131247-d35e-4298-958f-35b94ff08c58
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 80%
 
 ---
-
 
 # AEM の基盤とリポジトリ  {#aem-foundation-repository}
 
@@ -26,7 +25,7 @@ ht-degree: 80%
 
 * Oak セグメント Tar マイクロカーネル
 
-   * オンラインリビジョンクリーンアップの高速圧縮モード（末尾の圧縮）
+   * オンラインでのリビジョンクリーンアップの高速コンパクションモード（テールコンパクション）
    * 書き込み速度の向上
    * セグメント操作の統計情報が JMXBean を通じて公開
    * オフラインリビジョンクリーンアップの所要時間の見積もり
@@ -36,7 +35,7 @@ ht-degree: 80%
    * スケジュールに従ったクリーンアップメンテナンスの代わりに、MongoMK の継続的なリビジョンクリーンアップが実行されるようになりました。
 
 * ドキュメントノードストアに対するリビジョンクリーンアップの効率が向上しました。
-* 修正された問題の全体の概要については、[Apache Jackrabbit Oak Jira v. 1.8.0](https://archive.apache.org/dist/jackrabbit/oak/1.8.0/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1.8.2](https://archive.apache.org/dist/jackrabbit/oak/1.8.2/RELEASE-NOTES.txt)を参照してください。](https://archive.apache.org/dist/jackrabbit/oak/1.8.1/RELEASE-NOTES.txt)[
+* 修正された問題の完全な概要については、 [Apache Jackrabbit Oak Jira v. 1.8.0](https://archive.apache.org/dist/jackrabbit/oak/1.8.0/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1.8.1](https://archive.apache.org/dist/jackrabbit/oak/1.8.1/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1. 8.2](https://archive.apache.org/dist/jackrabbit/oak/1.8.2/RELEASE-NOTES.txt)を参照してください。
 
 >[!CAUTION]
 >
@@ -72,7 +71,7 @@ ht-degree: 80%
 
 >[!CAUTION]
 >
->* クラシック UI の機能がさらに強化される予定はありません。AEM 6.4 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。非推奨の[詳細情報](/help/sites-deploying/ui-recommendations.md)を読む間も、従来のUIは引き続き完全にサポートされます。
+>* クラシック UI の機能がさらに強化される予定はありません。AEM 6.4 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。クラシックUIは廃止中も引き続き完全にサポートされます[詳細を表示](/help/sites-deploying/ui-recommendations.md)。
 
 >
 
@@ -86,7 +85,7 @@ ht-degree: 80%
 
 ### 監視 {#monitoring}
 
-* 新しい「System Overview」では、パフォーマンスに関連するすべてのシステム・ステータスとアクティビティに関するスナップショット・表示が提供されます。
+* 新しい「システム概要」には、パフォーマンスに関連するシステムのステータスとアクティビティのスナップショットが表示されます。
 * 以下の新しいヘルスチェックが用意されています。
 
    * 大きい Lucene インデックスの検出
@@ -108,18 +107,18 @@ ht-degree: 80%
 * バージョンのパージ設定により、保持するバージョンの数を最小限に抑えることができます。
 * バージョンのパージはメンテナンスウィンドウの終了時に停止します。手動で開始および停止することもでき、次回開始したときには、増分的に続行されます。
 
-### アップグレード  {#upgrade}
+### アップグレード {#upgrade}
 
 * 下位互換性：AEM 6.4の機能には下位互換性があるので、カスタムコードはほとんどの場合そのまま動作し、アップグレードの労力を削減できます。
 * アップグレードの複雑さの評価：新しいパターン検出ツールにより、アップグレードの複雑さを評価することができます。
 * 持続可能なアップグレード：API サーフェスとコンテンツ分類が導入され、開発サイクル全体を通して次のバージョンに効率的かつシームレスにアップグレードするためのベストプラクティスに容易に従えるようになりました。
-* リポジトリの再構築：アップグレードを容易にし、導入のベスト・プラクティスを促進するための大幅な再構築（主に/etc） （[詳細情報](/help/sites-deploying/repository-restructuring.md)）。
-* これらの機能の詳細については、[アップグレードドキュメント](/help/sites-deploying/upgrade.md)を参照してください。
+* リポジトリの再構築：大幅な再構築（主に/etc）により、アップグレードが容易になり、実装のベストプラクティスが促進されます。 （[詳細情報](/help/sites-deploying/repository-restructuring.md)）。
+* これらの機能の詳細については、[アップグレードのドキュメント](/help/sites-deploying/upgrade.md)を参照してください。
 
 ### Cloud Services {#cloud-services}
 
-* 多くのCloud Servicesは、タッチUIで設定できるようになりました。残りは、レガシーCloud Servicesカードの下で設定できます。
-* サイトフォルダーとアセットフォルダーは、コンテキストに応じた方法で読み込まれるCloud Servicesーを使用して設定できます。
+* 多くのCloud Servicesは、タッチUIから設定できるようになりました。残りの設定は、「レガシーCloud Services」カードでおこなえます。
+* SitesフォルダーとAssetsフォルダーは、コンテキスト対応の方法で読み込まれるCloud Servicesーを使用して設定できます。
 
 ### セキュリティ {#security}
 
@@ -130,4 +129,3 @@ ht-degree: 80%
 
 * タッチ UI ベースのワークフローエディターで、より効率的にワークフローモデルを管理できるようになりました。
 * メンテナンスタスクでプロジェクトタスクのパージをサポートするようになりました。
-
