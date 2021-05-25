@@ -9,22 +9,21 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: f8d85d72-0215-4680-a334-e37a530fba58
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 55aa015e-e0e4-411e-8e28-75006ae3090b
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 23%
 
 ---
 
-
 # ソーシャルグラフの基本事項  {#social-graph-essentials}
 
-コミュニティのメンバーが[アクティビティ](essentials-activities.md)に従う能力は、次の2つの要素を介して確立されます。
+コミュニティメンバーが[アクティビティ](essentials-activities.md)をフォローし、フォローする機能は、次の2つのコンポーネントを通じて確立されます。
 
-`follow`コンポーネントは別のリソースと関連付ける必要があります。この関連付けは、既に[コミュニティサイト](overview.md#communitiessites)の既存のコミュニティのメンバーと機能に対して確立されています。
+`follow`コンポーネントは別のリソースに関連付ける必要があり、この関連付けは、[コミュニティサイト](overview.md#communitiessites)の既存のコミュニティメンバーおよび機能に対して既に確立されています。
 
-`following`コンポーネントは、現在のメンバーに続くメンバー、または現在のメンバーの後に続くメンバーをリストします。 会員間の関係のこのソーシャルグラフは、コミュニティサイト用に設定されたユーザプロファイルに含まれる。
+`following`コンポーネントは、現在のメンバーをフォローしているメンバー、または現在のメンバーをフォローしているメンバーをリストします。 このメンバー間の関係のソーシャルグラフは、コミュニティサイト用に確立されたユーザープロファイルに含まれます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -64,10 +63,10 @@ ht-degree: 23%
      <li>タイプ：Boolean</li> 
      <li>値：<br /> 
       <ul> 
-       <li><i>true  </i>- <code>following</code> コンポーネントは、現在サインインしているメンバをリストします。 <code>follows</code></li> 
-       <li><i>false  </i>- <code>following</code> コンポーネントは、現在サインインしているメンバ <code>follow </code>をリストします。</li> 
+       <li><i>true — コン </i>ポーネ <code>following</code> ントは、現在サインインしているメンバーをリストします <code>follows</code></li> 
+       <li><i>false — コ </i>ンポー <code>following</code> ネントは、現在サインインしているメ <code>follow </code>ンバーをリストします</li> 
       </ul> </li> 
-    </ul> <p>プロパティが見つからない場合は、デフォルトで<i>true</i>に設定されます。 現在、作成者モードで編集ダイアログを使用してこのプロパティを設定することはできません。 <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>を使用して、<code>following </code>ノードのインスタンスにプロパティを追加する必要があります。</p> </td> 
+    </ul> <p>プロパティが見つからない場合は、デフォルトで<i>true</i>に設定されます。 現在、オーサーモードの編集ダイアログを使用してこのプロパティを設定することはできません。 <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>を使用して、<code>following </code>ノードのインスタンスにプロパティを追加する必要があります。</p> </td> 
   </tr>
  </tbody>
 </table>
@@ -82,11 +81,10 @@ ht-degree: 23%
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [ソーシャルグラフ API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/graph/client/api/package-frame.html)
 
 * [ソーシャルグラフエンドポイント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/graph/client/endpoint/package-frame.html)
 
 * [サーバー側のカスタマイズ](server-customize.md)
-
