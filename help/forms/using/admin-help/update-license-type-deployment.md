@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/get_started_with_administering_aem_forms_on_jee
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e4f31377-ccc9-4986-a3bf-ef2e83d12448
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 07671470-59dd-4290-be9a-465fcd89ac2d
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 100%
 
 ---
-
 
 # デプロイメントのライセンスの種類の更新 {#update-the-license-type-for-the-deployment}
 
@@ -49,4 +48,3 @@ AEM Forms インストールプロセスの一環として、Configuration Manag
 
 1. 「はい、ライセンスの変更はデプロイ済みのすべてのモジュールに対して有効です」を選択します。
 1. 「ライセンスの変更を確認」をクリックします。ライセンスが正常に更新されたことを示すメッセージが表示されます。
-
