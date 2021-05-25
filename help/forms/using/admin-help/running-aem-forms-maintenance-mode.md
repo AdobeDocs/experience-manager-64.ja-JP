@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 94047c12-ba3d-457a-954f-e035c7cc3ecd
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 2f56bbc7-5e23-4c84-ac0a-03f0b01150b3
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 95%
 
 ---
-
 
 # メンテナンスモードでの AEM Forms の実行 {#running-aem-forms-in-maintenance-mode}
 
@@ -43,7 +42,7 @@ ht-degree: 95%
 
 1. Web ブラウザーに次のように入力します。
 
-   `https://`*[hostname]:[]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=isPaused&user=`*[portadministrator]* `&password=`*[usernamepassword ]*
+   `https://`*[hostname]:[]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=isPaused&user=`*[portadministrator usernamepassword]* `&password=`*[]*
 
    ブラウザーウィンドウにステータスが表示されます。「true」のステータスはサーバーがメンテナンスモードで動作中であることを示し、「false」はサーバーがメンテナンスモードではないことを示します。
 
@@ -51,7 +50,6 @@ ht-degree: 95%
 
 1. Web ブラウザーに次のように入力します。
 
-   `https://`*[hostname]:[]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=`*[portadministrator]* `&password=`*[usernamepassword ]*
+   `https://`*[hostname]:[]*`/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=`*[portadministrator usernamepassword]* `&password=`*[]*
 
    ブラウザーウィンドウに「実行中」のメッセージが表示されます。
-
