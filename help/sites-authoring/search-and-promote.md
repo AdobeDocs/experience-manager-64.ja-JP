@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 50ba6a09-d6cb-4ec0-8a0f-af0da8cc3d2d
-translation-type: tm+mt
-source-git-commit: b4a2dee750fd646ba54aed243c9fb90379565d5d
+exl-id: 735e5880-3226-4b2a-81f7-b8b4baa0d1ec
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 79%
 
 ---
-
 
 # ページへのSearch&amp;Promote機能の追加{#adding-search-promote-features-to-your-page}
 
@@ -31,5 +30,4 @@ Search&amp;Promote 機能は、AEM の管理者が有効にしている場合に
 
 >[!NOTE]
 >
->ページへの Search&amp;Promote 機能追加について詳しくは、クラシック UI オーサリングドキュメントに記載されています。詳しくは、[ページへのSearch &amp; Promote機能の追加](/help/sites-classic-ui-authoring/classic-feature-search-promote.md)を参照してください。
-
+>ページへの Search&amp;Promote 機能追加について詳しくは、クラシック UI オーサリングドキュメントに記載されています。詳しくは、[ページへのSearch&amp;Promote機能の追加](/help/sites-classic-ui-authoring/classic-feature-search-promote.md)を参照してください。
