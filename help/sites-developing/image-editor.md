@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: components
 discoiquuid: f6347492-cf48-4835-b8fd-ce9a75a09abe
-translation-type: tm+mt
-source-git-commit: 15bea340f3ba7d5a315d71932e521ad1f1a40073
+exl-id: 843c67d6-dda1-448f-a992-19574066e1c3
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 94%
 
 ---
-
 
 # 画像エディター{#image-editor}
 
@@ -24,7 +23,7 @@ ht-degree: 94%
 
 >[!CAUTION]
 >
->この記事で説明するイメージエディタの機能を使用するには、[機能パック24267](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/featurepack/cq-6.4.0-featurepack-24267)をインストールする必要があります。
+>この記事で説明する画像エディターの機能を使用するには、[機能パック24267](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/featurepack/cq-6.4.0-featurepack-24267)をインストールする必要があります。
 
 ## 画像マップの相対単位 {#relative-units-for-image-map}
 
@@ -97,4 +96,3 @@ ht-degree: 94%
      </cq:inplaceEditing>
  </jcr:root>
 ```
-
