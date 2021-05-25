@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 4a864547-edbe-4d2d-a8ee-39bc65dffe88
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: cd565ec5-f453-4692-83f8-e1fb06dc28c7
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 78%
 
 ---
-
 
 # 式ビルダーのリモート関数 {#remote-functions-in-expression-builder}
 
@@ -24,7 +23,7 @@ ht-degree: 78%
 
 ## 式ビルダーによる式およびリモート関数の作成 {#creating-expressions-and-remote-functions-with-expression-builder}
 
-式ビルダーは内部的にJSP ELライブラリを使用しているので、式はJSPEL構文に従います。 詳しくは、「[サンプル式](#exampleexpressions)」を参照してください。
+式ビルダーは内部的にJSP ELライブラリを使用するので、式はJSPEL構文に従います。 詳しくは、「[サンプル式](#exampleexpressions)」を参照してください。
 
 ![式ビルダー](assets/expressionbuilder.png)
 
@@ -40,7 +39,7 @@ ht-degree: 78%
 * 2つの文字列を連結するには：${str1} ${str2}
 * 2つの数値を比較するには：${age &lt; 18}
 
-詳細な情報は、「[JSP EL 仕様](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)」で確認できます。クライアント側の式マネージャーは、JSP EL仕様の特定の変数と関数をサポートしません。具体的には、次のようになります。
+詳細な情報は、「[JSP EL 仕様](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)」で確認できます。クライアント側のExpression Managerは、JSP EL仕様の特定の変数や関数をサポートしていません。具体的には、次のようになります。
 
 * クライアント側で評価される式の変数名では、コレクションのインデックスとマップのキー（[]表記を使用）はサポートされません。
 * 式に使用する関数のパラメーターの型や戻り値の型を以下に示しています。
@@ -49,7 +48,7 @@ ht-degree: 78%
    * java.lang.Character
    * Char
    * java.lang.Boolean
-   * ブール型
+   * ブール値
    * java.lang.Integer
    * Int
    * java.util.list
@@ -78,7 +77,7 @@ ht-degree: 78%
 式の中で使用する独自のリモート関数は、カスタムバンドルを作成してエクスポートすることができます。独自のリモート関数をエクスポートするカスタムバンドルを作成するには、次のタスクを実行します。このデモでは、入力文字列を大文字に変換するカスタム関数を作成する例を示します。
 
 1. Expression Manager 用にエクスポートするメソッドを含んだ OSGi サービスのインターフェイスを定義します。
-1. インターフェイスAでメソッドを宣言し、@ServiceMethod注釈を付けます(com.adobe.exm.expeval.ServiceMethod)。 Expression Manager では、注釈が付いていないメソッドはすべて無視されます。ServiceMethod注釈には、次のオプション属性があります。これらの属性も指定できます。
+1. インターフェイスAでメソッドを宣言し、@ServiceMethod注釈を付けます(com.adobe.exm.expeval.ServiceMethod)。 Expression Manager では、注釈が付いていないメソッドはすべて無視されます。ServiceMethod注釈には、次のオプションの属性を指定できます。
 
    1. **Enabled**： このメソッドを有効化するかどうかを決定します。Expression Manager では、無効なメソッドは無視されます。
    1. **familyId**：メソッドのファミリー（グループ）を指定します。空の場合、Expression Manager では、メソッドがデフォルトのファミリーに属するものと見なします。関数が選択されたファミリーのレジストリはありません（デフォルトのファミリーを除く）。Expression Manager では、様々なバンドルによって書き出されたすべての関数で指定されているすべてのファミリー ID を取得することで、レジストリが動的に作成されます。ここで指定された ID は式オーサリングユーザーインターフェイスにも表示されるので、適切に判読できることを確認します。
@@ -102,9 +101,9 @@ ht-degree: 78%
    * java.lang.Character
    * Char
    * java.lang.Boolean
-   * ブール型
+   * ブール値
    * java.lang.Integer
-   * Int
+   * 整数
    * java.lang.Short
    * Short
    * java.lang.Byte
@@ -112,7 +111,7 @@ ht-degree: 78%
    * java.lang.Double
    * 倍精度浮動小数点
    * java.lang.Long
-   * ロング
+   * Long
    * java.lang.Float
    * 浮動小数点数
    * java.util.Calendar
@@ -120,7 +119,7 @@ ht-degree: 78%
    * java.util.List
 
 
-1. インターフェイスの実装を定義し、OSGIサービスとして設定して、次のサービスプロパティを定義します。
+1. インターフェイスの実装を定義し、OSGiサービスとして設定して、次のサービスプロパティを定義します。
 
 ```
 @org.apache.felix.scr.annotations.Properties({
@@ -157,8 +156,8 @@ public class RemoteFuntionImpl implements RemoteFunction {
 
 使用するサンプルアーカイブを以下に示します。
 
-* **GoodFunctions.jar.** zipは、サンプルのリモート関数定義を含むバンドルを含むjarファイルです。GoodFunctions.jar.zip ファイルをダウンロードし、それを展開して jar ファイルを取得します。
-* **GoodFunctions.** zipは、カスタムのリモート関数を定義し、そのためのバンドルを作成するためのソースコードのパッケージです。
+* **GoodFunctions.jar.zip** は、サンプルのリモート関数定義を含むバンドルを含むjarファイルです。GoodFunctions.jar.zip ファイルをダウンロードし、それを展開して jar ファイルを取得します。
+* **GoodFunctions.** zipは、カスタムリモート関数を定義し、そのバンドルを作成するためのソースコードのパッケージです。
 
 GoodFunctions.jar.zip
 
