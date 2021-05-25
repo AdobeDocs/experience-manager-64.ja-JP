@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 533ad3f7-3905-420d-8bb9-8ae8f14fb28e
-translation-type: tm+mt
-source-git-commit: e2bb2f17035e16864b1dc54f5768a99429a3dd9f
+exl-id: f47c543d-6136-482b-915f-b4e13f83fa69
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 94%
 
 ---
-
 
 # 詳細なシステム属性の設定 {#configure-advanced-system-attributes}
 
@@ -29,7 +28,7 @@ ht-degree: 94%
 
    >[!NOTE]
    >
-   >システムが正しく機能するために、セッションのタイムアウト制限を 10 分未満に設定しないでください。推奨値は10 ～ 120（分）です。
+   >システムが正しく機能するために、セッションのタイムアウト制限を 10 分未満に設定しないでください。推奨値は10～120（分）です。
 
    **アサーションのしきい値（秒）：**&#x200B;クラスター内の AEM Forms アプリケーションサーバー間で発生するシステム時間の時間差が原因となる遅延を相殺するバッファー時間。AEM Forms のユーザーのログイン時間は、このプロパティで指定された時間（秒）だけ遡ります。有効な値は `0`～`3600` です。デフォルト値は `60` です。この設定では、設定ファイルの `SAML/Producer/assertionThresholdInSeconds` エントリキーが更新されます。
 
