@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: a6d9b08d-e669-4b9b-b591-c21cd72b6e22
-translation-type: tm+mt
-source-git-commit: 1ebe1e871767605dd4295429c3d0b4de4dd66939
+exl-id: 82e4af22-30b7-4678-9b14-84f2fecfd310
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1234'
 ht-degree: 80%
 
 ---
-
 
 # ID 管理{#identity-management}
 
@@ -25,23 +24,23 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 * [AEM Communities](/help/communities/overview.md) サイト訪問者がコミュニティにコンテンツを投稿するにはログインする必要があります。
 * [閉じられたユーザーグループ](/help/sites-administering/cug.md)
 
-   Webサイト（またはWebサイトのセクション）へのアクセスを特定の訪問者に制限する必要がある場合があります。
+   場合によっては、Webサイト（またはWebサイトのセクション）へのアクセスを特定の訪問者に制限する必要があります。
 
-* [](/help/sites-administering/personalization.md) パーソナライゼーション訪問者がWebサイトにアクセスする方法の特定の側面を設定できるようにします。
+* [](/help/sites-administering/personalization.md) パーソナライゼーション訪問者がWebサイトへのアクセス方法に関する特定の側面を設定できるようにします。
 
 ログイン（およびログアウト）機能は、[**プロファイル**](#profiles-and-user-accounts)&#x200B;付きのアカウントによって指定されます。プロファイルには、登録済みの訪問者（ユーザー）に関する追加情報が保持されます。実際の登録および承認のプロセスは状況によって異なります。
 
 * Webサイトからの自己登録
 
-   [コミュニティサイト](/help/communities/sites-console.md)は、訪問者が自己登録を行ったり、FacebookアカウントやTwitterアカウントにサインインできるように設定できます。
+   [コミュニティサイト](/help/communities/sites-console.md)は、訪問者がFacebookまたはTwitterアカウントで自己登録またはサインインできるように設定できます。
 
-* Webサイトからの登録の要求
+* 当サイトからの登録請求
 
-   非公開ユーザーグループの場合は、訪問者が登録をリクエストすることを許可し、ワークフローによって承認を強制できます。
+   閉じられたユーザーグループの場合、訪問者は登録のリクエストを許可し、ワークフローによって承認を実施できます。
 
-* 作成者環境から各アカウントを登録
+* オーサー環境からの各アカウントの登録
 
-   プロファイルの数が少ない場合は、認証が必要になるので、個々のユーザーを直接登録することもできます。
+   認証が必要なプロファイルが少数の場合は、それぞれを直接登録することもできます。
 
 訪問者による登録を許可するには、一連のコンポーネントとフォームを使用して、必要な ID 情報、追加の（多くの場合、オプションです）プロファイル情報の順に収集できます。また、登録の完了後に、訪問者が送信した詳細の確認と更新をおこなえるようにする必要があります。
 
@@ -58,14 +57,14 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 
 フォームを使用すると、登録情報を収集して新しいアカウントとプロファイルを生成できます。
 
-例えば、Geometrixxページを使用して新しいプロファイルをリクエストできます\
+例えば、ユーザーは、「Geometrixx」ページを使用して新しいプロファイルを要求できます\
 `http://localhost:4502/content/geometrixx-outdoors/en/user/register.html`
 
 ![registerform](assets/registerform.png)
 
 要求を送信すると、プロファイルページが開きます。ユーザーはこのページに個人の詳細情報を指定できます。
 
-![前塗り](assets/profilepage.png)
+![前照度](assets/profilepage.png)
 
 新しいアカウントは[ユーザーコンソール](/help/sites-administering/security.md)にも表示されます。
 
@@ -87,18 +86,18 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 
 ## プロファイルの確認と更新  {#viewing-and-updating-a-profile}
 
-登録フォームによっては、訪問者の情報が自身のプロファイルに登録されます。訪問者が以降のステージでこの情報を確認および更新できるようにする必要があります。これは、同じような形で行うことができます。例えば、Geometrixx内：
+登録フォームによっては、訪問者の情報が自身のプロファイルに登録されます。訪問者が以降のステージでこの情報を確認および更新できるようにする必要があります。これは、同様のフォームを使用しておこなうことができます。例：Geometrixx:
 
 ```
 http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 ```
 
-プロファイルの詳細を確認するには、任意のページの右上隅にある[**マイプロファイル**]をクリックします。例えば、`admin`アカウントの場合：\
+プロファイルの詳細を確認するには、ページの右上隅にある「**My Profile**」をクリックします。例えば、`admin`アカウントの場合は次のようになります。\
 `http://localhost:4502/home/users/a/admin/profile.form.html/content/geometrixx-outdoors/en/user/profile.html.`
 
 オーサー環境の [ClientContext](/help/sites-administering/client-context.md) を使用すると、別のプロファイルを確認できます（十分な権限がある場合）。
 
-1. ページを開く、例えば、Geometrixxページ：
+1. ページを開きます。例：Geometrixxページ
 
    `http://localhost:4502/cf#/content/geometrixx/en.html`
 
@@ -140,11 +139,11 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
    次回プロファイルを確認する際に、好きな色を選択できます。
 
-   ![aperkfavcolor](assets/aparkerfavcolour.png)
+   ![aparkefavcolor](assets/aparkerfavcolour.png)
 
    このフィールドは、関連するユーザーアカウントの **profile** セクションに保存されます。
 
-   ![アパルケルクルドレ](assets/aparkercrxdelite.png)
+   ![aparkerxdelite](assets/aparkercrxdelite.png)
 
 ## プロファイルの状態 {#profile-states}
 
@@ -160,7 +159,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 * [State Providers](#state-providers)
 
-   特定のプロパティの2つの状態と2つのトランジションを管理する。
+   特定のプロパティの2つの状態と、その2つの間の遷移を管理する。
 
 * [ワークフロー](#workflows)
 
@@ -188,7 +187,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 ## Profiles and User Accounts {#profiles-and-user-accounts}
 
-プロファイルは、[ユーザーアカウント](/help/sites-administering/user-group-ac-admin.md)の一部としてContent Repositoryに保存されます。
+プロファイルは、[ユーザーアカウント](/help/sites-administering/user-group-ac-admin.md)の一部としてコンテンツリポジトリに保存されます。
 
 プロファイルは`/home/users/geometrixx`の下にあります。
 
@@ -198,7 +197,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 これらのアクセス権限は次のワイルドカード ACL によって定義されます。
 
-/home everyone allow jcr:read rep:glob = &amp;ast;/プロファイル&amp;ast;
+/home everyone allow jcr:read rep:glob = &amp;ast;/profile&amp;ast;
 
 これにより、次の処理が可能になります。
 
@@ -207,7 +206,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 このようなアクセスがインストール環境に適していない場合は、デフォルト設定を変更できます。
 
-これは、**[アクセス制御](/help/sites-administering/user-group-ac-admin.md#access-right-management)**&#x200B;タブを使用して行うことができます。
+これは、「**[アクセス制御](/help/sites-administering/user-group-ac-admin.md#access-right-management)**」タブを使用しておこなえます。
 
 ![aclmanager](assets/aclmanager.png)
 
@@ -224,23 +223,22 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 デフォルト設定を使用すると、コンポーネントは次のように表示されます。
 
-![dc_プロファイル_checkedpassword](assets/dc_profiles_checkedpassword.png)
+![dc_profiles_checkedpassword](assets/dc_profiles_checkedpassword.png)
 
 ### プロファイルのアバター写真 {#profile-avatar-photo}
 
 このコンポーネントを使用すると、ユーザーがアバター写真ファイルを選択およびアップロードできるようになります。
 
-![dc_プロファイル_avataphoto](assets/dc_profiles_avatarphoto.png)
+![dc_profiles_avatarphoto](assets/dc_profiles_avatarphoto.png)
 
 ### プロファイルの詳細名 {#profile-detailed-name}
 
 このコンポーネントを使用すると、ユーザーは詳細な名前を入力できます。
 
-![dc_プロファイル_詳細名](assets/dc_profiles_detailedname.png)
+![dc_profiles_detailedname](assets/dc_profiles_detailedname.png)
 
 ### プロファイルの性別 {#profile-gender}
 
 このコンポーネントを使用すると、性別を入力できます。
 
-![dc_プロファイル_性別](assets/dc_profiles_gender.png)
-
+![dc_profiles_gender](assets/dc_profiles_gender.png)
