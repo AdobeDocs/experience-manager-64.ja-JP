@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 88932a3c-ba7f-47ba-9e0b-206755c2d42e
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: cdf5e5d3-a78c-4f32-ad40-665876392a97
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 65%
 
 ---
-
 
 # カレンダーの基本事項 {#calendar-essentials}
 
@@ -56,7 +55,7 @@ ht-degree: 65%
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [カレンダー API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
 
@@ -64,9 +63,9 @@ ht-degree: 65%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### カレンダー機能  {#calendar-function}
+### カレンダー機能 {#calendar-function}
 
-[カレンダー関数](functions.md#calendar-function)を含むコミュニティサイト構造は、c `alendar`コンポーネントを構成します。 カレンダー関数は、[特権メンバー・ユーザー・グループ](users.md#privileged-members-group)の識別をサポートします。
+[カレンダー機能](functions.md#calendar-function)を含むコミュニティサイト構造には、c `alendar`コンポーネントが設定されます。 カレンダー機能は、[権限を持つメンバー・ユーザー・グループ](users.md#privileged-members-group)の識別をサポートします。
 
 ### カレンダー投稿(UGC)へのアクセス{#accessing-calendar-posts-ugc}
 
@@ -77,7 +76,6 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例
-* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
+* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティメソッドと例
+* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
-
