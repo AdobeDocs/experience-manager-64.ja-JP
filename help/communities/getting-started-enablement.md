@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 31cc7819-cc4d-4804-9fab-005d8bef0714
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 4d968f7e-bb6f-4c7a-b266-02f53797908c
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 92%
 
 ---
-
 
 # イネーブルメントのための AEM Communities 使用の手引き  {#getting-started-with-aem-communities-for-enablement}
 
@@ -28,7 +27,7 @@ AEM Communities では、デジタルチャネルと対面チャネルにまた�
 
 >[!NOTE]
 >
->このチュートリアルでは、[Communities機能パック1](deploy-communities.md#latestfeaturepack)以降がインストールされていることを前提としています。
+>このチュートリアルでは、[Communities機能パック1](deploy-communities.md#latestfeaturepack)以降をインストールすることを前提としています。
 
 * [初期設定](enablement-setup.md)
 
@@ -37,4 +36,3 @@ AEM Communities では、デジタルチャネルと対面チャネルにまた�
 * [リソースの作成と割り当て](resource.md)
 
 * [公開したサイトを使ってみる](enablement-published-site.md)
-
