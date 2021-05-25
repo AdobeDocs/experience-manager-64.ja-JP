@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: projects
 content-type: reference
 discoiquuid: 9d2bf30c-5190-4924-82cd-bcdfde24eb39
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 9d7e9d46-9f38-44a0-9c83-4bc4fceb17c8
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 97%
 
 ---
-
 
 # プロジェクトワークフローの操作{#working-with-project-workflows}
 
@@ -35,7 +34,7 @@ ht-degree: 97%
 |---|:-:|:-:|:-:|:-:|
 | コピーをリクエスト |  | x |  |  |
 | 撮影した製品写真 |  | x | x |  |
-| 撮影した製品写真 (Commerce) |  |  | x |  |
+| 撮影した製品写真 (コマース) |  |  | x |  |
 | プロジェクト承認 | x |  |  |  |
 | ローンチをリクエスト | x |  |  |  |
 | ランディングページをリクエスト | x |  |  |  |
@@ -80,7 +79,7 @@ AEM でのワークフローの操作について詳しくは、以下を参照�
 
 プロジェクト承認ワークフローでは、コンテンツをユーザーに割り当て、レビューし、コンテンツを承認します。
 
-1. シンプルプロジェクトで、**ワークフロー**&#x200B;タイルの****+**&#x200B;記号を選択し、**プロジェクト承認ワークフロー**&#x200B;を選択します。
+1. シンプルなプロジェクトで、**ワークフロー**&#x200B;タイルの「****+**」記号を選択し、「**プロジェクト承認ワークフロー**」を選択します。
 1. タイトルを入力し、チームリストから割り当て先を選択します。必要に応じて、説明、コンテンツのパス、タスクの優先度および期限を入力します。
 
    ![chlimage_1-323](assets/chlimage_1-323.png)
