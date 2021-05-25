@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: development-tools
 content-type: reference
 discoiquuid: a2ae76a8-50b0-4e43-b791-ad3be25b8582
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 9cdd09f6-bfc2-48c3-af40-a54f98833a38
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 92%
 
 ---
-
 
 # AEM Developer Tools for Eclipse {#aem-developer-tools-for-eclipse}
 
@@ -30,7 +29,7 @@ AEM Developer Tools for Eclipse は、Apache License 2 に従ってリリース�
 
 * Eclipse Server Connector による AEM インスタンスとのシームレスな統合。
 * コンテンツと OSGI バンドルの同期。
-* コードのホットスワップ機能によるデバッグサポート。
+* コードのホットスワップ機能によるデバッグのサポート。
 * 固有のプロジェクト作成ウィザードからの AEM プロジェクトの簡単なブートストラップ.
 * JCR プロパティの容易な編集.
 
@@ -38,7 +37,7 @@ AEM Developer Tools for Eclipse は、Apache License 2 に従ってリリース�
 
 AEM Developer Tools を使用する前に、次の作業が必要です。
 
-* [Eclipse IDE for Java EE Developers](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar) をダウンロードしてインストールします。AEM Developer Toolsは、現在EclipseKepler以降をサポートしています
+* [Eclipse IDE for Java EE Developers](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar) をダウンロードしてインストールします。AEM Developer Toolsは現在、Eclipse Kepler以降をサポートしています。
 
 * AEMバージョン5.6.1以降で使用可能
 * [Eclipse に関する FAQ](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F) の説明に従って、`eclipse.ini` 設定ファイルを編集し、ヒープメモリが 1 GB 以上になるように Eclipse を設定します。
@@ -73,7 +72,7 @@ AEM Developer Tools を使用する前に、次の作業が必要です。
 
 >[!NOTE]
 >
->[AEM](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407)からダウンロードしたバンドルのEclipseでの使い方を参照してください。
+>[AEM](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407)からダウンロードしたバンドルをEclipseで使用する方法を参照してください。
 
 ## AEM パースペクティブ {#the-aem-perspective}
 
@@ -91,7 +90,7 @@ AEM Developer Tools for Eclipse には、サンプルのマルチモジュール
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
-1. 「**Next**」をクリックします。
+1. 「**次へ**」をクリックします。
 
    >[!NOTE]
    >
@@ -163,4 +162,3 @@ Apache Sling IDE tooling for Eclipse の公式 Web サイトでは、次の役�
 * [Eclipse 使用の手引き](https://eclipse.org/users/)
 * [Eclipse Luna ヘルプシステム](https://help.eclipse.org/luna/index.jsp)
 * [Maven 統合（m2eclipse）](https://www.eclipse.org/m2e/)
-
