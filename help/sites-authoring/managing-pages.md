@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: a727c57c-87a9-46c2-8d9b-1348f1ed8ac4
-translation-type: tm+mt
-source-git-commit: 1bbcf870170a5bfae68861614fe1a0a83d86ff61
+exl-id: 0182155a-0156-458c-b89b-35ab3e27819e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2307'
 ht-degree: 95%
 
 ---
-
 
 # ページの作成と整理{#creating-and-organizing-pages}
 
@@ -43,13 +42,13 @@ ht-degree: 95%
 
 Web サイトの構造は、コンテンツページを保持する「ツリー構造」と見なすことができます。これらのコンテンツページの名前は、URL の形成に使用されます。一方でタイトルは、ページコンテンツを表示したときに表示されます。
 
-次の例は、Web.Retailサイトでハイキング短縮ページ(`desert-sky-shorts`)にアクセスする場合の例を示しています。
+次に、We.Retailサイトの例です。ハイキングショートページ(`desert-sky-shorts`)にアクセスします。
 
-* 作成者環境:`http://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
+* オーサー環境：`http://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
 * 発行環境: `http://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
-インスタンスの設定によっては、パブリッシュ環境での`/content`の使用はオプションになる場合があります。
+インスタンスの設定によっては、パブリッシュ環境での`/content`の使用はオプションの場合があります。
 
 ```xml
  /content
@@ -129,16 +128,16 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
 
 #### タイトル {#title}
 
-新しいページを作成するときにページの&#x200B;**タイトル**&#x200B;のみを指定した場合、AEM ではページの&#x200B;**名前**[がこの文字列から派生され、AEM と JCR によって課された規則に基づいてページ名が検証されます。](/help/sites-developing/naming-conventions.md)「**タイトル**」フィールドに無効な文字が含まれていてもエラーにはなりませんが、派生された名前では、無効な文字が別の文字に置き換えられます。次に例を示します。
+新しいページを作成するときにページの&#x200B;**タイトル**&#x200B;のみを指定した場合、AEM ではページの&#x200B;**名前**&#x200B;がこの文字列から派生され、AEM と JCR [によって課された規則に基づいてページ名が検証されます](/help/sites-developing/naming-conventions.md)。「**タイトル**」フィールドに無効な文字が含まれていてもエラーにはなりませんが、派生された名前では、無効な文字が別の文字に置き換えられます。次に例を示します。
 
 | タイトル | 派生された名前 |
 |---|---|
 | Schön | schoen.html |
-| SC%&amp;ast;cis+ | sc---c-.html |
+| SC%&amp;ast;ç+ | sc---c-.html |
 
 #### 名前 {#name}
 
-新しいページを作成するときにページの&#x200B;**名前**&#x200B;を指定すると、AEM では AEM と JCR によって課された規則に基づいてページ名が検証されます。[](/help/sites-developing/naming-conventions.md)「**名前**」フィールドに無効な文字は指定できません。AEM で無効な文字が検出されると、フィールドが強調表示され、説明メッセージが表示されます。
+新しいページを作成するときにページの&#x200B;**名前**&#x200B;を指定すると、AEM では AEM と JCR [によって課された規則に基づいてページ名が検証されます](/help/sites-developing/naming-conventions.md)。「**名前**」フィールドに無効な文字は指定できません。AEM で無効な文字が検出されると、フィールドが強調表示され、説明メッセージが表示されます。
 
 ![screen_shot_2018-03-22at104817](assets/screen_shot_2018-03-22at104817.png)
 
@@ -168,7 +167,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 
 ### コンポーネント {#components}
 
-コンポーネントは、特定の種類のコンテンツを追加できるように、AEMが提供する要素です。AEMには、包括的な機能を提供する[標準搭載のコンポーネント](/help/sites-authoring/default-components-console.md)が付属しています。以下が含まれます。
+コンポーネントは、特定のタイプのコンテンツを追加できるようにAEMが提供する要素です。AEMには、包括的な機能を提供する[標準のコンポーネント](/help/sites-authoring/default-components-console.md)が用意されています。次のようなものがあります。
 
 * テキスト
 * 画像
@@ -420,4 +419,3 @@ AEM では、名前変更または移動がおこなわれるページへの内�
    ![chlimage_1-14](assets/chlimage_1-14.png)
 
 1. 「**作成**」を選択してフォルダーを作成します。
-
