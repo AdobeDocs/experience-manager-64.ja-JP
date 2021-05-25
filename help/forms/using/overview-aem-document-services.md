@@ -8,18 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: document_services
 discoiquuid: 0685478b-d08e-4d69-8dd3-f75270772167
-translation-type: tm+mt
-source-git-commit: 13d364ec820b48fb8b80da2ffd30faeeb7813a28
+exl-id: aabfd05d-581b-4205-8e61-5667d5713cb1
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 96%
 
 ---
 
-
 # AEM ドキュメントサービスの概要  {#overview-of-aem-document-services}
 
-AEM ドキュメントサービスは、PDF ドキュメントを作成、アセンブリ、およびセキュリティ保護のための一連の OSGi サービスです。ドキュメントサービスには、次のサービスが含まれます。
+AEM ドキュメントサービスは、PDF ドキュメントを作成、アセンブリ、およびセキュリティ保護のための一連の OSGi サービスです。ドキュメントサービスには、次のサービスが含まれています。
 
 ## Output サービス {#output-service}
 
@@ -44,7 +43,7 @@ Output サービスを使用して XML データをフォームデザインと�
 * **generatePrintedOutput**：フォームデザインをフォームデータとマージして、レーザーネットワークプリンターまたはラベルネットワークプリンターに送信するドキュメントを生成します。
 
 * **generatePDFOutputBatch**：複数のテンプレートと複数のデータレコードをマージして、1 回の実行で複数の PDF ファイルを生成します。すべての PDF ファイルをまとめて 1 つの PDF を生成するオプションもあります。
-* **generatePrintedOutputBatch**:複数のテンプレートと複数のデータレコードをマージして、1回の呼び出しで複数の印刷ドキュメント(PS、PCL、ZPL、DPL、IPL、TPCL)を生成します。1 つの印刷ドキュメントを生成するオプションもあります。
+* **generatePrintedOutputBatch**:複数のテンプレートと複数のデータレコードを結合して、1回の呼び出しで印刷ドキュメントのバッチ(PS、PCL、ZPL、DPL、IPL、TPCL)を生成します。1 つの印刷ドキュメントを生成するオプションもあります。
 
 ## Assembler サービス {#assembler-service}
 
@@ -107,7 +106,7 @@ Signature サービスでは、AEM サーバーで電子署名とドキュメン
 
 Signature サービスは、Trust Store に格納されている証明書および秘密鍵証明書にアクセスします
 
-### Encryption サービス  {#encryption-service}
+### Encryption サービス {#encryption-service}
 
 Encryption サービスは、ドキュメントの暗号化および復号化を有効にします。ドキュメントを暗号化すると、その内容は判読できなくなります。PDF ドキュメント全体（コンテンツ、メタデータおよび添付ファイル）を暗号化するか、そのメタデータ以外のすべてのデータを暗号化するか、または添付ファイルだけを暗号化することができます。許可されたユーザーはドキュメントを解読して、コンテンツにアクセスできます。PDF ドキュメントがパスワードで暗号化されている場合、ユーザーは開くためのパスワードを指定しないと、Adobe Reader または Adobe Acrobat でドキュメントを表示できません。PDF ドキュメントが証明書で暗号化されている場合、ユーザーはその PDF ドキュメントを秘密鍵（証明書）で復号化する必要があります。PDF ドキュメントの復号化に使用する秘密鍵は、そのドキュメントの暗号化に使用された公開鍵に対応している必要があります。
 
@@ -132,4 +131,4 @@ PDF ドキュメントに適切な使用権限が追加されている場合、�
 
 ## プリンターに送信サービス  {#send-to-printer-service}
 
-「Send To Printer Service」は、指定したプリンターにドキュメントを送信して印刷するためのAPIを提供します。
+「プリンターに送信」サービスは、ドキュメントを指定したプリンターに送信して印刷するためのAPIを提供します。
