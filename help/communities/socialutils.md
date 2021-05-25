@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 4ade0d6b-041e-4a2f-98f8-3b8fcae0fb29
-translation-type: tm+mt
-source-git-commit: 8f169bb9b015ae94b9160d3ebbbd1abf85610465
+exl-id: ba23188b-a72a-4349-b3e5-0fb50fd6312f
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 94%
 
 ---
 
-
 # SocialUtils のリファクタリング {#socialutils-refactoring}
 
 ## SocialUtils パッケージの廃止 {#socialutils-package-deprecated}
 
-AEM 6.1では、パッケージ&#x200B;**com.adobe.cq.sosical.ugcbase.SocialUtils**&#x200B;が非推奨となりました。
+パッケージ&#x200B;**com.adobe.cq.social.ugcbase.SocialUtils**&#x200B;はAEM 6.1で非推奨（廃止予定）となりました。
 
 以下の各表は、SocialUtils のメソッドの代わりに使用するメソッドのリストです。
 
@@ -46,7 +45,7 @@ AEM 6.1では、パッケージ&#x200B;**com.adobe.cq.sosical.ugcbase.SocialUtil
 
 | `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilitiesのメソッド |
 |---|
-| SocialResourceProvider getSocialResourceProvider(Resource resource) | replacesSocialResourceProvider getConfiguredProvider(Resource resource) |
+| SocialResourceProvider getSocialResourceProvider(Resource resource) | SocialResourceProvider getConfiguredProvider(Resource resource)を置き換えます。 |
 
 ## SCFUtilities パッケージ {#scfutilities-package}
 
@@ -89,4 +88,3 @@ AEM 6.1では、パッケージ&#x200B;**com.adobe.cq.sosical.ugcbase.SocialUtil
 | TranslationManager getTranslationManager() |
 | TranslationSaveQueue getTranslationSaveQueue() |
 | boolean mayAccessUGC(ResourceResolver resolver) |
-
