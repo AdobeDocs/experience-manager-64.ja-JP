@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
-translation-type: tm+mt
-source-git-commit: 02aee2202a570320cd7eb40c2e566d886af4e163
+exl-id: 6969dc5e-f7fa-495e-8ddf-8123ca2bc9a6
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 96%
 
 ---
-
 
 # ページプロパティの編集{#editing-page-properties}
 
@@ -82,7 +81,7 @@ ht-degree: 96%
 
    このページのバニティ URL を入力できます。これによって、短くて意味のわかりやすい URL を付けることができます。
 
-   例えば、バニティURLがWebサイトh `ttp://example.com,`のパス/ `v1.0/startpage`で識別されるページに対してw `elcome`に設定されている場合、h `ttp://example.com/welcome`はh `ttp://example.com/content/v1.0/startpage`のバニティURLになります
+   例えば、Webサイトh `ttp://example.com,`のパス/ `v1.0/startpage`で識別されるページに対して、バニティURLがw `elcome`に設定されている場合、h `ttp://example.com/welcome`はh `ttp://example.com/content/v1.0/startpage`のバニティURLになります。
 
    >[!CAUTION]
    >
@@ -96,7 +95,7 @@ ht-degree: 96%
 
    ページにバニティ URL を使用するかどうかを示します。
 
-### アドバンス {#advanced}
+### 詳細 {#advanced}
 
 * **言語**
 
@@ -134,7 +133,7 @@ ht-degree: 96%
 
    書き出し設定を指定します。
 
-### サムネール  {#thumbnail}
+### サムネール {#thumbnail}
 
 * **ページサムネイル**
 
@@ -154,15 +153,15 @@ ht-degree: 96%
 
    [クラウドサービス](/help/sites-developing/extending-cloud-config.md)用のプロパティを定義します。
 
-### パーソナライゼーション {#personalization}
+### パーソナライズ機能 {#personalization}
 
-* **パーソナライゼーション**
+* **パーソナライズ機能**
 
    [ブランドを選択してターゲット設定の範囲を指定](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)します。
 
 ### 権限 {#permissions}
 
-* **権限** （タッチ操作向けUI）
+* **権限**（タッチ操作向け UI）
 
    [有効な権限を表示し、新しい権限を追加します](/help/sites-administering/user-group-ac-admin.md)。
 
@@ -172,13 +171,13 @@ ht-degree: 96%
 
    [マルチサイト管理](/help/sites-administering/msm.md)でのブループリントページのプロパティを定義します。変更がライブコピーに適用される条件を制御します。
 
-### ライブコピー  {#live-copy}
+### ライブコピー {#live-copy}
 
 * **ライブコピー**
 
    [マルチサイト管理](/help/sites-administering/msm.md)でのライブコピーページのプロパティを定義します。ブループリントからの変更が適用される条件を制御します。
 
-### サイト構造  {#site-structure}
+### サイト構造 {#site-structure}
 
 * **サインアップページ**、**オフラインページ**&#x200B;など、サイト全体にわたる機能を提供するページへのリンクを指定します。
 
@@ -195,4 +194,3 @@ ht-degree: 96%
    複数のタブを含むダイアログが開きます。
 
 1. 必要な変更を加えたら、「**OK**」をクリックして保存します。
-
