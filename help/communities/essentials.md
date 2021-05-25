@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
-translation-type: tm+mt
-source-git-commit: 1e867debcc1bfeed3abc4240796c9f2c2850167f
+exl-id: bde29d3a-8bc8-4c30-b764-a2fa1ac34069
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 71%
 
 ---
 
-
 # コンポーネントおよび機能の基本事項  {#component-function-and-feature-essentials}
 
-サイト訪問者が AEM Communities の機能を使用し、コンテンツを投稿するには、事前にメンバー登録し、[コミュニティサイト](overview.md#communitiessites)にログインする必要があります。したがって、[コミュニティサイトテンプレート](sites.md)（コミュニティサイトが[作成](sites-console.md)される）は、ログイン機能に加え、ユーザプロファイル、メッセージング、検索、モデレート、翻訳を含むように設計されています。
+サイト訪問者が AEM Communities の機能を使用し、コンテンツを投稿するには、事前にメンバー登録し、[コミュニティサイト](overview.md#communitiessites)にログインする必要があります。したがって、コミュニティサイトが[作成](sites-console.md)される[コミュニティサイトテンプレート](sites.md)には、ログイン機能と、ユーザープロファイル、メッセージング、検索、モデレート、翻訳が含まれます。
 
-コミュニティサイトは、選択したコミュニティサイトテンプレートに[コミュニティグループ機能](functions.md#groups-function)が含まれる場合に、コミュニティグループの作成をサポートします。
+選択したコミュニティサイトテンプレートに[コミュニティグループ機能](functions.md#groups-function)が含まれると、コミュニティサイトでコミュニティグループの作成がサポートされます。
 
 次のリンクをクリックすると、コミュニティのコンポーネントおよび機能に関する基本情報にアクセスできます。
 
@@ -35,7 +34,7 @@ ht-degree: 71%
    * [「いいね!」の設定](essentials-liking.md)
    * [評価](rating-basics.md)
    * [投票](essentials-voting.md)
-   * *投票（使用できなくなりました）*
+   * *投票（利用不可）*
 
 ## 機能のあるコンポーネント {#components-with-functions}
 
@@ -43,7 +42,7 @@ ht-degree: 71%
 * [割り当て](essentials-assignments.md)
 * [ブログ](blog-developer-basics.md) ( `Journal`)
 
-* [カレンダー](calendar-basics-for-developers.md)
+* [Calendar](calendar-basics-for-developers.md)
 * [カタログ](catalog-developer-essentials.md)
 * [おすすめコンテンツ](essentials-featured.md)
 * [ファイルライブラリ](essentials-file-library.md)
@@ -53,7 +52,7 @@ ht-degree: 71%
 * [リーダーボード](leaderboard.md)
 * [質問と回答](qna-essentials.md) `(QnA)`
 
-## 特長 {#features}
+## 機能 {#features}
 
 * [クライアントライブラリ](clientlibs.md)
 * [コミュニティサイト](sites-for-developers.md)
@@ -68,7 +67,7 @@ ht-degree: 71%
 
 * [タグ付け](tag.md)
 
-## Javadoc  {#javadocs}
+## Javadoc {#javadocs}
 
 [オンライン javadoc](../../help/sites-developing/reference-materials.md) には、AEM 6.3 リリースで使用できる API が反映されています。\
 コミュニティAPIは`com.adobe.cq.social.*`パッケージに含まれています。
@@ -86,4 +85,3 @@ ht-degree: 71%
 * [コーディングのガイドライン](code-guide.md)
 * [チュートリアル](tutorials.md)
 * [トラブルシューティング](troubleshooting.md)
-
