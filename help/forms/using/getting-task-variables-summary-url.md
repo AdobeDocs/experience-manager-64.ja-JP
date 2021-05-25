@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
-translation-type: tm+mt
-source-git-commit: d0bb877bb6a502ad0131e4f1a7e399caa474a7c9
+exl-id: f80d006b-6970-4448-aa38-3ffec8b08c18
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 87%
 
 ---
-
 
 # サマリー URL でのタスク変数の取得  {#getting-task-variables-in-summary-url}
 
@@ -64,9 +63,9 @@ ht-degree: 87%
    1. プロセス **create PTO summary** を作成し、これをオーケストレーションで **Assign Task** 操作の前のサブプロセスとして使用します。
    1. **employeeName**、**employeeID**、**ptoReason**、**totalDays**、および **nodeName**&#x200B;を新しいプロセスで入力変数として定義します。これらの変数は送信されたフォームデータとして渡されます。
 
-      サマリURLの設定時に使用する出力変数**ptoNodePath **を定義します。
+      概要URLの設定時に使用される出力変数**ptoNodePath **も定義します。
 
-   1. **create PTO summary**&#x200B;プロセスで、**set value**&#x200B;コンポーネントを使用して、**nodeProperty **(**nodeProps**)マップに入力の詳細を設定します。
+   1. **create PTO summary**&#x200B;プロセスで、**set value**&#x200B;コンポーネントを使用して、**nodeProperty **(**nodeProps**)マップに入力詳細を設定します。
 
       このマップのキーは、前の手順の HTML レンダラーで定義したキーと同じである必要があります。
 
@@ -77,8 +76,8 @@ ht-degree: 87%
       これには 3 つの入力変数が必要です。
 
       * **フォルダパス**：新しい CRX ノードが作成されるパスです。パスを **/content** に設定します。
-      * **ノード名**：入力変数 nodeName をこのフィールドに割り当てます。これは一意のノード名文字列です。
-      * **ノードタイプ**:タイプを **nt:unstructured**.このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
+      * **ノード名**：入力変数 nodeName をこのフィールドに割り当てます。一意のノード名文字列です。
+      * **ノードタイプ**:タイプを **nt:unstructured**&#x200B;と定義します。このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
    1. 送信されたフォームデータ（**employeeName**、**employeeID**、**ptoReason**、および **totalDays**）を新しいプロセス **create PTO summary** への入力として渡します。**ptoSummaryNodePath** として出力を取得します。
 
 
@@ -89,4 +88,3 @@ ht-degree: 87%
 AEM Forms Workspace で、タスクを開くと、サマリー URL は CRX ノードにアクセスし、HTML レンダラーはサマリーを表示します。
 
 サマリーのレイアウトはプロセスを変更することなく変更することができます。HTML レンダラーはサマリーを適宜表示します。
-
