@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 55dba890-4847-4986-b272-33480bc1d573
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 9eeb3203-e27a-4960-a4ec-58dd9dd098a2
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 93%
 
 ---
-
 
 # AEM タッチ操作対応 UI の構造{#structure-of-the-aem-touch-enabled-ui}
 
@@ -44,7 +43,7 @@ UI はモバイルデバイスとデスクトップデバイスの両方に対�
 
 ヘッダーバーにはグローバル要素が表示されます。
 
-* 現在使用しているロゴと特定の製品/ソリューションaemの場合は、これもグローバルナビゲーションへのリンクを形成します。
+* ロゴと、現在使用している特定の製品/ソリューションAEMの場合も、グローバルナビゲーションへのリンクを形成します。
 * 検索
 * ヘルプリソースにアクセスするためのアイコン
 * その他のソリューションにアクセスするためのアイコン
@@ -167,7 +166,6 @@ AEM には、編集、プレビュー、注釈など、ページオーサリン�
 
 ## その他の情報 {#further-information}
 
-タッチ操作対応UIに関する概念について詳しくは、「[AEMタッチ対応UIの概念](/help/sites-developing/touch-ui-concepts.md)」の記事を参照してください。
+タッチ操作対応UIに関する概念の詳細については、「 [AEMタッチ操作対応UIの概念](/help/sites-developing/touch-ui-concepts.md) 」の記事を参照してください。
 
-技術情報について詳しくは、タッチ対応ページエディターの[JSドキュメントセット](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)を参照してください。
-
+技術情報について詳しくは、タッチ操作対応ページエディターの[JSドキュメントセット](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)を参照してください。
