@@ -9,7 +9,6 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8f2714bc-9d6c-4e6f-97a1-3b4f977348c5
-translation-type: tm+mt
 source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
 source-wordcount: '1631'
@@ -39,7 +38,7 @@ ht-degree: 90%
    >
    >
 * **レプリケート／レプリケーション**
-   >  これらは、ユーザーコメントの発行時や逆複製時など、ある環境から別のユーザーへのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を説明する技術用語です。
+   >  これらは、ユーザーのコメントを公開またはリバースレプリケートする場合など、環境間でのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を表す技術用語です。
 >
 
 
@@ -100,7 +99,7 @@ ht-degree: 90%
 * [クイック公開](/help/sites-authoring/publishing-pages.md#quick-publish)
 * [公開を管理](/help/sites-authoring/publishing-pages.md#manage-publication)
 
-#### クイック公開  {#quick-publish}
+#### クイック公開 {#quick-publish}
 
 **クイック公開**&#x200B;は、単純な場合のためのもので、選択したページが即座に公開されます。他に何か操作する必要はありません。このため、すべての非公開の参照も自動的に公開されます。
 
@@ -143,7 +142,7 @@ ht-degree: 90%
 
    「**次へ**」をクリックして次に進みます。
 
-1. パブリケーションの管理ウィザード&#x200B;**スコープ**&#x200B;の次の手順では、子ページを含めたり、参照を含めたりするなど、パブリケーション/非パブリケーションの範囲を定義できます。
+1. 公開を管理ウィザードの次の手順（**範囲**）で、子ページを含めたり、参照を含めたりするなど、公開/非公開の範囲を定義できます。
 
    ![screen_shot_2018-03-21at153354](assets/screen_shot_2018-03-21at153354.png)
 
@@ -197,7 +196,7 @@ ht-degree: 90%
 
    >[!NOTE]
    >
-   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。詳細については、このページ](/help/sites-authoring/publishing-pages.md)の[前の注意事項、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページ](/help/sites-authoring/workflows-applying.md)へのワークフローの適用を参照してください。
+   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。公開権限に関する前述の[ページ](/help/sites-authoring/publishing-pages.md)の注意を参照し、詳しくは、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md)を参照してください。
 
    リソースは、トリガーされたワークフローでグループ化され、それぞれに次のオプションがあります。
 
@@ -205,7 +204,7 @@ ht-degree: 90%
    * ワークフローが[複数のリソースをサポートする](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)場合、ワークフローパッケージを維持する。
    * ワークフローパッケージを維持するオプションが選択されている場合、ワークフローパッケージのタイトルを定義する。
 
-   「**発行**」または「**後で発行**」をクリックして、パブリケーションを完了します。
+   「**公開**」または「**後で公開**」をクリックして、公開を完了します。
 
    ![chlimage_1-54](assets/chlimage_1-54.png)
 
@@ -218,7 +217,7 @@ ht-degree: 90%
 * [ページエディターから](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-editor)
 * [サイトコンソールから](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-console)
 
-### エディターから非公開にする  {#unpublishing-from-the-editor}
+### エディターから非公開にする {#unpublishing-from-the-editor}
 
 ページを編集する際に、そのページを非公開にする場合、[ページを公開](/help/sites-authoring/publishing-pages.md#publishing-from-the-editor)するときと同じように、**ページ情報**&#x200B;メニューで「**ページを非公開にする**」を選択します。
 
@@ -264,7 +263,7 @@ ht-degree: 90%
 
    「**公開済みの参照**」オプションを使用して、公開する参照を確認することもできます。
 
-1. [ツリーのパブリケーションまたは非パブリケーションを完了するには、](#manage-publication) 通常どおり[パブリケーションの管理]ウィザードを続行します。
+1. [通常どおりに公開を管理ウィザードを](#manage-publication) 続行し、ツリーの公開または非公開を完了します。
 
 ## 公開ステータスの判別 {#determining-publication-status}
 
