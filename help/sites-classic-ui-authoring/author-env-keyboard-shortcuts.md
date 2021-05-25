@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: b6e42b9d-9e27-4f22-8543-442d03af48f3
-translation-type: tm+mt
-source-git-commit: ee9b977515b6c1233ff87f011f7a8b4095450814
+exl-id: f98302cf-159b-488b-aa62-8739ad32460c
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 100%
 
 ---
-
 
 # コンソールのキーボードショートカット{#keyboard-shortcuts-for-consoles}
 
@@ -27,8 +26,10 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 >デスクトップデバイスでの複数選択：
 >
 >* Windows：**Ctrl** キーを押しながら必要なコンポーネントを&#x200B;**クリック**&#x200B;します。
->
->* Mac：**Cmd** キーを押しながら必要なコンポーネントを&#x200B;**クリック**&#x200B;します。
+   >
+   >
+* Mac：**Cmd** キーを押しながら必要なコンポーネントを&#x200B;**クリック**&#x200B;します。
+
 >
 
 
