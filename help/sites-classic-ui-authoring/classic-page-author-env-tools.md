@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 278195a6-3452-4966-9d56-022815cf6fb4
-translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+exl-id: f073c876-94cd-405d-885f-bfe433817ff4
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 86%
 
 ---
-
 
 # オーサリング - 環境とツール{#authoring-the-environment-and-tools}
 
@@ -61,7 +60,7 @@ AEM から様々な&#x200B;**ヘルプ**&#x200B;リソースに直接アクセ�
 * [画像](#finding-images)
 * [ドキュメント](#finding-documents)
 * [ムービー](#finding-movies)
-* [Dynamic Mediaブラウザ](/help/sites-administering/scene7.md#scene7contentbrowser)
+* [Dynamic Media Browser](/help/sites-administering/scene7.md#scene7contentbrowser)
 * [ページ](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#finding-pages)
 * [段落](#referencing-paragraphs-from-other-pages)
 * [製品](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#products)
@@ -101,7 +100,7 @@ AEM から様々な&#x200B;**ヘルプ**&#x200B;リソースに直接アクセ�
 
 ### ページの検索 {#finding-pages}
 
-このタブには、すべてのページが表示されます。任意のページを重複クリックして、編集用に開きます。
+このタブには、すべてのページが表示されます。任意のページをダブルクリックして、編集用に開きます。
 
 ![chlimage_1-160](assets/chlimage_1-160.png)
 
@@ -140,8 +139,8 @@ AEM から様々な&#x200B;**ヘルプ**&#x200B;リソースに直接アクセ�
 以下の検索パターンで、この画像（およびこのパターンに一致するその他の画像）が見つかります。
 
 * `name:*nmv*`
-* `name:AD*`  — 文字のマッチングでは大文字と小文字が ** 区別されません。
-* `name:ad?nm??is.*` -クエリには任意の数のワイルドカードを使用できます。
+* `name:AD*`  — 文字のマッチングでは大文字と小文字 ** が区別されません。
+* `name:ad?nm??is.*` :1つのクエリで任意の数のワイルドカードを使用できます。
 
 >[!NOTE]
 >
@@ -157,7 +156,7 @@ AEM では、現在作業しているページにリンクしているページ�
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. **参照を表示を選択…** AEMは、参照ウィンドウを開き、選択したページを参照するページとそのパスを表示します。
+1. **参照を表示を選択します。** AEMは参照ウィンドウを開き、選択したページを参照するページとそのパスを表示します。
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
@@ -178,7 +177,7 @@ AEM では、現在作業しているページにリンクしているページ�
 
 ## ページ情報 {#page-information}
 
-また、Webサイトコンソール[は、ページ](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)の現在のステータスに関する情報（パブリケーション、変更、ロック、LiveCopyなど）も提供します。
+また、Webサイトコンソール[は、ページ](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)の現在のステータスに関する情報（パブリッシュ、変更、ロック、ライブコピーなど）も提供します。
 
 ## ページモード {#page-modes}
 
@@ -198,16 +197,16 @@ AEM では、現在作業しているページにリンクしているページ�
 
 * [デザイン](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#main-pars-procedure-0)
 
-   このモードでは、アクセシブルなコンポーネントを設定して、ページのデザインを編集できます。
+   このモードでは、アクセス可能なコンポーネントを設定して、ページのデザインを編集できます。
 
 >[!NOTE]
 >
 >その他に次のオプションも利用できます。
 >
 >* [基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
->* [ClientContext](/help/sites-administering/client-context.md)
->* Web サイト - Web サイトコンソールを開きます。
->* 再読み込み - ページを更新します。
+* [ClientContext](/help/sites-administering/client-context.md)
+* Web サイト - Webサイトコンソールを開きます。
+* 再読み込み - ページを更新します。
 
 
 ## キーボードショートカット {#keyboard-shortcuts}
