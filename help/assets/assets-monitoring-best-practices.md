@@ -2,16 +2,15 @@
 title: Assets の監視のベストプラクティス
 description: AEM インスタンスをデプロイした後の環境およびパフォーマンスの監視に関するベストプラクティス。
 contentOwner: AG
-feature: Asset Management
+feature: アセット管理
 role: Administrator,Architect
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: edbb275a-5ead-4ed2-8708-29e766081d75
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1769'
+source-wordcount: '1767'
 ht-degree: 87%
 
 ---
-
 
 # アセット監視のベストプラクティス{#assets-monitoring-best-practices}
 
@@ -30,20 +29,20 @@ Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の�
 
 通常、AEM Assets の監視には、ライブ監視と長期的監視の 2 種類があります。
 
-## ライブモニタリング{#live-monitoring}
+## ライブ監視{#live-monitoring}
 
 開発のパフォーマンステストの段階、または高負荷な状態になったときに、環境のパフォーマンス特性を把握するためにライブ監視を実行する必要があります。通常、ライブ監視はいくつかのツールを使用して実行します。以下にお勧めのツールを示します。
 
-* [ビジュアルVM](https://visualvm.github.io/):Visual VMを使用すると、CPU使用率、Javaメモリ使用量など、Java VMの詳細な情報を表示できます。また、インスタンス上で実行されるコードをサンプリングおよび評価できます。
+* [ビジュアルVM](https://visualvm.github.io/):Visual VMを使用すると、CPU使用率、Javaメモリ使用率など、詳細なJava VM情報を表示できます。また、インスタンス上で実行されるコードをサンプリングおよび評価できます。
 * [Top](http://man7.org/linux/man-pages/man1/top.1.html)：Top は、CPU、メモリ、IO 使用量などの使用量統計を表示するダッシュボードを開く Linux コマンドです。インスタンスの状況の概要を示します。
 * [Htop](https://hisham.hm/htop/)：Htop は、インタラクティブなプロセスビューアです。Top が提供する情報に加えて、詳細な CPU およびメモリ使用状況が表示されます。Htopは、`yum install htop`または`apt-get install htop`を使用して、ほとんどのLinuxシステムにインストールできます。
 
-* [Iotop](http://guichaz.free.fr/iotop/)：Iotop は、ディスク IO 使用量の詳細なダッシュボードです。ディスク IO を使用するプロセス、およびそのプロセスによる使用量を示すバーやメーターが表示されます。iotopは、`yum install iotop`または`apt-get install iotop`を使って、ほとんどのLinuxシステムにインストールできます。
+* [Iotop](http://guichaz.free.fr/iotop/)：Iotop は、ディスク IO 使用量の詳細なダッシュボードです。ディスク IO を使用するプロセス、およびそのプロセスによる使用量を示すバーやメーターが表示されます。Iotopは、`yum install iotop`または`apt-get install iotop`を使用して、ほとんどのLinuxシステムにインストールできます。
 
-* [Iftop](http://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。iftopは、`yum install iftop`や`apt-get install iftop`を使って、ほとんどのLinuxシステムにインストールできます。
+* [Iftop](http://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。Iftopは、`yum install iftop`または`apt-get install iftop`を使用して、ほとんどのLinuxシステムにインストールできます。
 
 * Java Flight Recorder（JFR）：非実稼動環境で自由に使用できる、Oracle の市販ツールです。詳しくは、[Java Flight Recorderを使用してCQランタイムの問題を診断する方法](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)を参照してください。
-* AEM の error.log ファイル：システムでログに記録されたエラーの詳細を AEM の error.log ファイルで調査できます。`tail -F quickstart/logs/error.log`コマンドを使用して、調査する必要のあるエラーを識別します。
+* AEM の error.log ファイル：システムでログに記録されたエラーの詳細を AEM の error.log ファイルで調査できます。`tail -F quickstart/logs/error.log`コマンドを使用して、調査する必要のあるエラーを特定します。
 * [ワークフローコンソール](../sites-administering/workflows.md)：ワークフローコンソールを使用して、遅れているワークフローや、停止しているワークフローを監視できます。
 
 通常は、これらのツールを組み合わせて使用し、AEM インスタンスのパフォーマンスについて包括的に把握します。
@@ -60,7 +59,7 @@ AEM インスタンスの長期的監視では、ライブで監視されるの�
 
 ### ログの集約とレポート  {#log-aggregation-and-reporting}
 
-Splunk（TM）や Elastic Search/Logstash/Kabana（ELK）など、いくつかのログ集約ツールがあります。AEM インスタンスの稼動時間を評価するには、システムに固有のログイベントを理解し、それに基づきアラートを作成することが重要です。開発と運用に関する慣習を十分に理解しておくと、重要なアラートを生成するログ集計プロセスを調整する方法をより深く理解できます。
+Splunk（TM）や Elastic Search/Logstash/Kabana（ELK）など、いくつかのログ集約ツールがあります。AEM インスタンスの稼動時間を評価するには、システムに固有のログイベントを理解し、それに基づきアラートを作成することが重要です。開発と運用に関する十分な知識があれば、ログ集計プロセスを調整して重要なアラートを生成する方法をより深く理解できます。
 
 ### 環境の監視 {#environment-monitoring}
 
@@ -79,7 +78,7 @@ Splunk（TM）や Elastic Search/Logstash/Kabana（ELK）など、いくつか�
 
 内部アプリケーション監視には、JVM などの AEM スタックを構成するアプリケーションコンポーネントの監視、コンテンツリポジトリの監視、およびプラットフォーム上に構築されたカスタムアプリケーションコードによる監視が含まれます。通常、SolarWinds（TM）、HP OpenView（TM）、Hyperic（TM）、Zabbix（TM）などの一般的な多くの監視ソリューションで直接監視できる JMX MBean を通して監視を実行します。JMX への直接接続をサポートしないシステムでは、JMX データを抽出して、それらのシステムがネイティブで理解できる形式で公開するシェルスクリプトを記述できます。
 
-JMX MBean へのリモートアクセスは、デフォルトで無効になっています。JMXによる監視の詳細については、[Monitoring and Management Using JMX Technology](https://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html)を参照してください。
+JMX MBean へのリモートアクセスは、デフォルトで無効になっています。JMXによる監視の詳細は、[Monitoring and Management Using JMX Technology](https://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html)を参照してください。
 
 多くの場合、統計情報を効果的に監視するにはベースラインが必要です。ベースラインを作成するには、通常の動作条件の下で一定期間システムを監視し、通常の指標を特定します。
 
@@ -87,7 +86,7 @@ JMX MBean へのリモートアクセスは、デフォルトで無効になっ�
 
 他の Java ベースのアプリケーションスタックと同様に、AEM は基盤となる Java Virtual Machine から提供されたリソースを利用します。JVM により公開されているプラットフォーム MXBean によって、それらのリソースの多くの状態を監視できます。MXBean について詳しくは、[プラットフォーム MBean サーバーおよびプラットフォーム MXBean の使用](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html)を参照してください。
 
-JVMの基準パラメーターの一部を以下に示します。
+JVMを監視できるベースラインパラメーターを次に示します。
 
 メモリ
 
@@ -122,7 +121,7 @@ AEM で監視できるベースラインパラメーターをいくつか示し�
 
 * アラーム定義：システムにブロックされたキューが存在しており、レプリケーションターゲットがダウンしているか、または到達不能であることを示しています。多くの場合、ネットワークまたはインフラストラクチャの問題により過剰なエントリがキューに登録されています。それによってシステムのパフォーマンスに悪影響が生じる可能性があります。
 
-**注意**:MBeanおよびURLパラメーターの場合は、を、監視 `<AGENT_NAME>` する複製エージェントの名前に置き換えます。
+**注意**:MBeanおよびURLパラメーターのを、監視す `<AGENT_NAME>` るレプリケーションエージェントの名前に置き換えます。
 
 セッションカウンター
 
@@ -190,9 +189,9 @@ AEM で監視できるベースラインパラメーターをいくつか示し�
 
 監視中に問題が発生した場合は、以下のトラブルシューティングを実行して、AEM インスタンスでよくある問題を解決できます。
 
-* TarMK を使用している場合は、Tar 圧縮を頻繁に実行します。詳しくは、[リポジトリの管理](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)を参照してください。
+* TarMK を使用している場合は、Tar 圧縮を頻繁に実行します。詳しくは、[リポジトリのメンテナンス](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)を参照してください。
 * `OutOfMemoryError`ログを確認します。 詳しくは、[メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)を参照してください。
-* ログを確認し、インデックス化されていないクエリ、ツリートラバーサル、インデックストラバーサルへの参照がないかを確認します。これらは、インデックス化されていないクエリ、または不適切にインデックス化されたクエリを示しています。クエリとインデックス作成のパフォーマンスを最適化するベストプラクティスについては、[クエリのベストプラクティスとインデックス作成](/help/sites-deploying/best-practices-for-queries-and-indexing.md)を参照してください。
+* ログを確認し、インデックス化されていないクエリ、ツリートラバーサル、インデックストラバーサルへの参照がないかを確認します。これらは、インデックス化されていないクエリ、または不適切にインデックス化されたクエリを示しています。クエリとインデックスのパフォーマンスの最適化に関するベストプラクティスについては、[クエリとインデックスに関するベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md)を参照してください。
 * ワークフローが予期したとおりに動作していることを確認するには、ワークフローコンソールを使用します。可能な場合は、複数のワークフローを単一のワークフローにまとめます。
 * ライブ監視を再確認し、他にボトルネックがないか、または特定のリソースを大量に使用している箇所がないかを確認します。
 * ディスパッチャーを含むクライアントネットワークからの出口ポイントおよび AEM インスタンスへの入り口ポイントを調査します。多くの場合、これらがボトルネックが発生する領域となります。詳しくは、[Assets のネットワークにおける考慮事項](assets-network-considerations.md)を参照してください。
