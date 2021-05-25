@@ -10,14 +10,13 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7620e5e4-022e-49b2-8cfe-d5eec8ab99d7
 feature: PDF Generator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 0b7642c3-d616-44e8-a5d9-3cdd362fedb5
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 97%
 
 ---
-
 
 # PDFG ネットワークプリンターの設定（Windows のみ）{#setting-up-a-pdfg-network-printer-windows-only}
 
@@ -71,4 +70,3 @@ PDFG 管理者ロールまたは PDFG ユーザーロールのいずれかを持
    ***注意&#x200B;**：ユーザーのパスワードを変更する場合、ユーザーは PDFG ネットワークプリンターをコンピューターに再インストールする必要があります。パスワードを管理コンソールから更新することはできません。*
 
 1. 「OK」をクリックします。
-
