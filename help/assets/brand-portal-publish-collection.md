@@ -4,31 +4,30 @@ description: Brand Portal を対象としたコレクションの公開および
 contentOwner: VG
 feature: Brand Portal
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: c2c6759e-f763-405e-9e45-5a90b9d32df2
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '340'
 ht-degree: 63%
 
 ---
-
 
 # Brand Portal へのコレクションの公開 {#publish-collections-to-brand-portal}
 
 Adobe Experience Manager（AEM）Assets の管理者は、組織の AEM Assets Brand Portal のインスタンスにコレクションを公開できます。ただし、最初に AEM Assets を Brand Portal と統合する必要があります。詳しくは [AEM Assets と Brand Portal の連携の設定](configure-aem-assets-with-brand-portal.md)を参照してください。
 
-AEM Assetsの元のコレクションにその後変更を加えた場合、そのコレクションを再度公開するまで、その変更はBrand Portalに反映されません。 この特性により、処理中の変更がBrand Portalで利用できなくなります。 管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
+その後、AEM Assetsで元のコレクションに変更を加えても、そのコレクションを再度公開するまで、変更はBrand Portalに反映されません。 この特性により、作業中の変更がBrand Portalでは利用できなくなります。 管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
 
 >[!NOTE]
 >
->コンテンツフラグメントは Brand Portal に公開できません。したがって、AEM作成者でコンテンツフラグメントを選択した場合、**[ブランドポータルに発行]**&#x200B;アクションは使用できません。
+>コンテンツフラグメントは Brand Portal に公開できません。したがって、AEMオーサー上でコンテンツフラグメントを選択した場合、「**[Brand Portalに公開]**」アクションは使用できません。
 >
 >コンテンツフラグメントを含むコレクションを AEM オーサーインスタンスから Brand Portal へ公開した場合は、そのフォルダー内のコンテンツフラグメントを除く全コンテンツが Brand Portal インターフェイスにレプリケートされます。
 
 ## Brand Portal へのコレクションの公開 {#publish-a-collection-to-brand-portal}
 
 1. AEM Assets の UI で AEM のロゴをタップまたはクリックします。次に、**[!UICONTROL ナビゲーション]**&#x200B;ページで&#x200B;**[!UICONTROL アセット／コレクション]**&#x200B;に移動します。
-2. コレクションコンソールから、ブランドポータルに公開するコレクションを選択します。
+2. コレクションコンソールで、Brand Portalに公開するコレクションを選択します。
 
    ![select_collection](assets/select_collection.png)
 
@@ -44,13 +43,13 @@ AEM Assetsの元のコレクションにその後変更を加えた場合、そ�
 
 ## コレクションを非公開にする {#unpublish-collections}
 
-AEM Assetsからブランドポータルに公開するコレクションは公開取り消すことができます。 元のコレクションの公開を取り消すと、そのコピーはBrand Portalユーザーに対して使用できなくなります。
+AEM AssetsからBrand Portalに公開したコレクションを非公開にできます。 元のコレクションを非公開にすると、そのコレクションのコピーはBrand Portalユーザーには使用できなくなります。
 
 1. AEM Assets インスタンスのコレクションコンソールから、非公開にしたいコレクションを選択します。
 
    ![select_collection-1](assets/select_collection-1.png)
 
-2. ツールバーで、**[!UICONTROL ブランドポータルから削除]**&#x200B;アイコンをタップまたはクリックします。
+2. ツールバーの「**[!UICONTROL Brand Portalから削除]**」アイコンをタップまたはクリックします。
 
    ![remove_from_bp_icon](assets/remove_from_bp_icon.png)
 
