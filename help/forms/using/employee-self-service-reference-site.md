@@ -7,14 +7,13 @@ uuid: ecc98e0d-c964-44dc-b219-9ebe92632d22
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: d2695f71-5126-477c-ae6b-a964fb55728b
-translation-type: tm+mt
-source-git-commit: 8cbfa421443e62c0483756e9d5812bc987a9f91d
+exl-id: 7fbdd976-5a70-4af4-b449-7c2d6bcfd915
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1644'
 ht-degree: 84%
 
 ---
-
 
 # 従業員セルフサービス リファレンスサイトのチュートリアル{#employee-self-service-reference-site-walkthrough}
 
@@ -34,9 +33,9 @@ ht-degree: 84%
 
 ## 利益相反アンケートのチュートリアル  {#conflict-of-interest-questionnaire-walkthrough}
 
-組織は、時折、社員に対して、利益相反アンケートの提出を求め、社外のアクティビティや社内と競合する可能性のある従業員の個人的な関係を特定します。
+組織は、時折、従業員に対し、利益相反アンケートの送信を求め、組織と競合する可能性のある従業員の外部活動や個人関係を特定します。
 
-Sarahの組織のコンプライアンス部門は、社員に利益相反に関するアンケートの提出を求めています。
+Sarahの組織のコンプライアンス部門は、利益相反アンケートを送信するよう従業員に求めています。
 
 ### Sarah はこの利益相反アンケートを送信 {#sarah-submits-the-conflict-of-interest-questionnaire}
 
@@ -46,19 +45,19 @@ Sarah は組織のポータルサイトにアクセスしてログインし、�
 **homeFigure:** *組織ポータル*
 
 ![employee-](assets/employee-dashboard.png)
-**dashboardFigure:** *従業員ダッシュボード*
+**dashboard図：** *従業員ダッシュボード*
 
 Sarah は「Next」ボタンを使用してフォームを移動し、「Introduction」セクションと「Definition」のセクションをすべて読みます。「Questions」セクションにあるアンケートに回答します。最後に、アンケートに署名をして送信します。
 
 組織のポータルサイトとアンケートはレスポンシブで、モバイルデバイスでも使いやすくなっています。次のワークフローは、Sarah がモバイルデバイスでアンケートに移動してアンケートを送信するまでの方法を示しています。
 
-![競合型モバイル](assets/conflict-form-on-mobile.png)
+![conflict-form-on-mobile](assets/conflict-form-on-mobile.png)
 
 **仕組み**
 
 組織のポータルサイトと従業員のダッシュボードは AEM サイトページです。このダッシュボードには、利益相反のアンケートなど複数のセルフサービスオプションが一覧表示されています。「Apply」ボタンはアダプティブフォームにリンクされています。
 
-このアダプティブフォームでは、「Questions」タブで入力された回答に基づいて情報を表示または非表示にするためのルールが使用されています。また、「Declaration」タブへの署名に対する「手書き」コンポーネントも使用されています。`https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/self-service/conflict-of-interest.html`にあるアダプティブフォームを確認します。
+このアダプティブフォームでは、「Questions」タブで入力された回答に基づいて情報を表示または非表示にするためのルールが使用されています。また、「Declaration」タブへの署名に対する「手書き」コンポーネントも使用されています。`https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/self-service/conflict-of-interest.html`でアダプティブフォームを確認します。
 
 **実際の動作確認**
 
@@ -72,17 +71,17 @@ Sarah により送信された利益相反アンケートは、確認用に Glor
 **inboxFigure:** *Gloriaのインボックス*
 
 ![conflict-](assets/conflict-approved.png)
-**approvedFigure:** *オープンタスク*
+**approvedFigure:** *タスクを開く*
 
 **仕組み**
 
-利益相反アンケートの送信アクションにより、Gloria のインボックスに承認のタスクを作成するワークフローがトリガーされます。`https://[authorHost]:[authorPort]/editor.html/conf/global/settings/workflow/models/we-finance/employee/self-service/we-finance-employee-conflict-of-interest.html`のForms Workflowを確認
+利益相反アンケートの送信アクションにより、Gloria のインボックスに承認のタスクを作成するワークフローがトリガーされます。`https://[authorHost]:[authorPort]/editor.html/conf/global/settings/workflow/models/we-finance/employee/self-service/we-finance-employee-conflict-of-interest.html`でForms Workflowを確認します。
 
-![従業員セルフサービスリファレンスサイト](assets/employee-self-service-reference-site.png)
+![employee-self-service-reference-site](assets/employee-self-service-reference-site.png)
 
 **実際の動作確認**
 
-`https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`に移動し、`grios/password`をGloria Riosのユーザー名/パスワードとして使用してログインします。 利益相反アンケート用に作成されたタスクを開き、これを承認します。
+`https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`に移動し、Gloria Riosのユーザー名/パスワードとして`grios/password`を使用してログインします。 利益相反アンケート用に作成されたタスクを開き、これを承認します。
 
 ## 法人カードの申し込みのチュートリアル {#corporate-card-application-walkthrough}
 
@@ -95,19 +94,19 @@ Sarah は組織のポータルサイトにアクセスしてログインし、�
 ![we-finance-home-1](assets/we-finance-home-1.png)
 **図：** *組織ポータル*
 
-![employee-ダッシュボード-1](assets/employee-dashboard-1.png)
-**図：** *従業員ダッシュボード*
+![employee-dashboard-1図：](assets/employee-dashboard-1.png)
+**** *従業員ダッシュボード*
 
 法人カードの申込フォームで「**[!UICONTROL Apply]**」をクリックします。単一ページの申込フォームが開きます。すべての項目に詳細を入力して「**[!UICONTROL Apply]**」をクリックし、申込書を送信します。
 
-![カード形式の](assets/card-form.png)
+![カードフォーム](assets/card-form.png)
 
 **仕組み**
 
 組織のポータルサイトと従業員のダッシュボードは AEM サイトページです。このダッシュボードには、法人カードの申し込みなど複数のセルフサービスオプションが一覧表示されています。申込フォームの「Apply」ボタンはアダプティブフォームにリンクされています。
 
-法人カード申し込みのアダプティブフォームは、単一ページに表示される簡素化されたレスポンシブフォームです。これは、テキスト、電話、数値ボックス、数値ステッパーなど、基本的なアダプティブフォームコンポーネントを使用しています。アダプティブフォームの確認先：\
-`https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/self-service/corporate-card.html`.
+法人カード申し込みのアダプティブフォームは、単一ページに表示される簡素化されたレスポンシブフォームです。これは、テキスト、電話、数値ボックス、数値ステッパーなど、基本的なアダプティブフォームコンポーネントを使用しています。次の場所でアダプティブフォームを確認します。\
+`https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/employee/self-service/corporate-card.html`
 
 **実際の動作確認**
 
@@ -118,20 +117,20 @@ Sarah は組織のポータルサイトにアクセスしてログインし、�
 Sarah により送信された法人カードの申込書は、確認用に Gloria Rios に割り当てられます。Gloria は AEM インボックスにログインし、自分に割り当てられたタスクを確認します。Sarah により送信された申込書を承認し、タスクを終了します。
 
 ![corporate-card-](assets/corporate-card-inbox.png)
-**inboxFigure:** *Gloriaのインボックス*
+**inbox図：** *Gloriaのインボックス*
 
-![corporate-card-](assets/corporate-card-approved.png)
-**approved図：** *オープンタスク*
+![corporate-card-approved図：](assets/corporate-card-approved.png)
+**** *タスクを開く*
 
 **仕組み**
 
-法人カード申し込みの送信ワークフローにより、Gloria のインボックスに承認のタスクを作成する Forms ワークフローがトリガーされます。`https://[authorHost]:[authorPort]/editor.html/conf/global/settings/workflow/models/we-finance/employee/self-service/we-finance-employee-corporate-card.html`のForms Workflowを確認
+法人カード申し込みの送信ワークフローにより、Gloria のインボックスに承認のタスクを作成する Forms ワークフローがトリガーされます。`https://[authorHost]:[authorPort]/editor.html/conf/global/settings/workflow/models/we-finance/employee/self-service/we-finance-employee-corporate-card.html`でForms Workflowを確認します。
 
-![企業向けカードワークフローモデル](assets/corporate-card-workflow-model.png)
+![corporate-card-workflow-model](assets/corporate-card-workflow-model.png)
 
 **実際の動作確認**
 
-`https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`に移動し、`grios/password`をGloria Riosのユーザー名/パスワードとして使用してログインします。 法人カードの申し込み用に作成されたタスクを開き、これを承認します。
+`https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`に移動し、Gloria Riosのユーザー名/パスワードとして`grios/password`を使用してログインします。 法人カードの申し込み用に作成されたタスクを開き、これを承認します。
 
 ## 経費報告書送信のチュートリアル {#expense-report-submission-walkthrough}
 
@@ -139,13 +138,13 @@ Sarah は出張中に出費があったため、承認を得るために経費�
 
 ### Sarah は経費報告書の申請を送信 {#sarah-submits-the-expense-report-application}
 
-Sarah は組織のポータルサイトにアクセスしてログインし、「**[!UICONTROL Employee]**」をクリックして従業員のダッシュボードにアクセスします。Gloriaは従業員ダッシュボードの経費報告書の申込書を見つけ、**[!UICONTROL 適用]**&#x200B;をクリックします。
+Sarah は組織のポータルサイトにアクセスしてログインし、「**[!UICONTROL Employee]**」をクリックして従業員のダッシュボードにアクセスします。従業員のダッシュボードで経費報告書の申請を見つけ、「**[!UICONTROL 適用]**」をクリックします。
 
 ![we-finance-home-2](assets/we-finance-home-2.png)
 **図：** *組織ポータル*
 
-![employee-ダッシュボード-2](assets/employee-dashboard-2.png)
-**図：** *従業員ダッシュボード*
+![employee-dashboard-2図：](assets/employee-dashboard-2.png)
+**** *従業員ダッシュボード*
 
 経費報告書の申請フォームで「**[!UICONTROL Apply]**」をクリックします。申請フォームが開きます。ここには、「レポート名」と「レポートの詳細」の 2 つのタブが表示されます。「レポートの詳細」タブの「**+**」アイコンをクリックすると、1 つの報告書に複数の支出項目を追加できます。
 
@@ -171,17 +170,17 @@ Sarah により送信された経費報告書は、確認用に Gloria Rios に�
 **inboxFigure:** *Gloriaのインボックス*
 
 ![expense-report-](assets/expense-report-approved.png)
-**approved図：** *オープンタスク*
+**approvedFigure:** *タスクを開く*
 
 **仕組み**
 
-経費報告の申請書の送信ワークフローにより、Gloria のインボックスに承認のタスクを作成する Forms ワークフローがトリガーされます。`https://[authorHost]:[authorPort]/editor.html/conf/global/settings/workflow/models/we-finance/employee/self-service/we-finance-employee-expense-report-workflow.html`のForms Workflowを確認
+経費報告の申請書の送信ワークフローにより、Gloria のインボックスに承認のタスクを作成する Forms ワークフローがトリガーされます。`https://[authorHost]:[authorPort]/editor.html/conf/global/settings/workflow/models/we-finance/employee/self-service/we-finance-employee-expense-report-workflow.html`でForms Workflowを確認します。
 
 ![corporate-card-expense-report-workflow-model](assets/corporate-card-expense-report-workflow-model.png)
 
 **実際の動作確認**
 
-`https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`に移動し、`grios/password`をGloria Riosのユーザー名/パスワードとして使用してログインします。 経費報告の申請用に作成されたタスクを開き、これを承認します。
+`https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`に移動し、Gloria Riosのユーザー名/パスワードとして`grios/password`を使用してログインします。 経費報告の申請用に作成されたタスクを開き、これを承認します。
 
 ## 休暇申請のチュートリアル {#leave-application-walkthrough}
 
@@ -194,14 +193,14 @@ Sarah は組織のポータルサイトにアクセスしてログインし、�
 ![we-finance-home-3](assets/we-finance-home-3.png)
 **図：** *組織ポータル*
 
-![employee-ダッシュボード-3](assets/employee-dashboard-3.png)
-**図：** *従業員ダッシュボード*
+![employee-dashboard-3図：](assets/employee-dashboard-3.png)
+**** *従業員ダッシュボード*
 
 休暇の申請フォームは、Sarah の名前と従業員 ID が入力された状態で開きます。ここには、彼女の有効な休暇日数と履歴も表示されます。各項目に詳細を入力し、承認用に申請フォームを送信します。
 
 組織のポータルサイトと申請フォームはレスポンシブで、モバイルデバイスでも使いやすくなっています。次のワークフローは、Sarah がモバイルデバイスで申請フォームに移動して送信するまでの方法を示しています。
 
-![離脱型モバイル](assets/leave-form-on-mobile.png)
+![離脱型携帯電話](assets/leave-form-on-mobile.png)
 
 **仕組み**
 
@@ -227,14 +226,14 @@ Sarah により送信された休暇申請書は、確認用に Gloria Rios に�
 **inboxFigure:** *Gloriaのインボックス*
 
 ![leave-](assets/leave-approved.png)
-**approvedFigure:** *オープンタスク*
+**approvedFigure:** *タスクを開く*
 
 **仕組み**
 
-休暇申請の送信ワークフローにより、Gloria のインボックスに承認のタスクを作成する Forms ワークフローがトリガーされます。`https://[authorHost]:[authorPort]/editor.html/conf/global/settings/workflow/models/we-finance/employee/self-service/we-finance-employee-leave-application.html`のForms Workflowを確認
+休暇申請の送信ワークフローにより、Gloria のインボックスに承認のタスクを作成する Forms ワークフローがトリガーされます。`https://[authorHost]:[authorPort]/editor.html/conf/global/settings/workflow/models/we-finance/employee/self-service/we-finance-employee-leave-application.html`でForms Workflowを確認します。
 
 ![corporate-card-leave-application-workflow-model](assets/corporate-card-leave-application-workflow-model.png)
 
 **実際の動作確認**
 
-`https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`に移動し、`grios/password`をGloria Riosのユーザー名/パスワードとして使用してログインします。 休暇の申請用に作成されたタスクを開き、これを承認します。
+`https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`に移動し、Gloria Riosのユーザー名/パスワードとして`grios/password`を使用してログインします。 休暇の申請用に作成されたタスクを開き、これを承認します。
