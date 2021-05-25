@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 1fe58af0-3005-46fc-8717-5d32557947ed
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 8906b3ab-cb08-4b3e-8796-334e36b1e491
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1312'
 ht-degree: 90%
 
 ---
-
 
 # エクスペリエンスフラグメント{#experience-fragments}
 
@@ -86,7 +85,7 @@ ht-degree: 90%
    >
    >エクスペリエンスフラグメントの構造をサイトのページ構造に合わせる必要はありません。
 
-* [許可されたテンプレートをフォルダーレベルで割り当てる](#configure-allowed-templates-folder)。
+* [許可されたテンプレートをフォルダーレベルで割り当てる。](#configure-allowed-templates-folder)
 
    >[!NOTE]
    >
@@ -96,7 +95,7 @@ ht-degree: 90%
 
 >[!CAUTION]
 >
->以下のスクリーンショットは、Adobe Experience ManagerをCloud Serviceとして使用したWKNDサイトから撮影されたものです。
+>Adobe Experience ManagerをCloud Serviceとして使用したWKNDサイトのスクリーンショットを次に示します。
 
 ![エクスペリエンスフラグメントのフォルダー](assets/xf-folders.png)
 
@@ -110,7 +109,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->また、インスタンス](#configure-allowed-templates-instance)に対して[許可されているテンプレートを設定することもできますが、アップグレード時に値が上書きされる可能性があるので、****&#x200B;推奨されません。
+>また、インスタンスに[許可されたテンプレート](#configure-allowed-templates-instance)を設定することもできますが、アップグレード時に値が上書きされる可能性があるので、この方法は&#x200B;**お勧めしません**。
 
 ### フォルダーに使用できるテンプレートの設定 {#configure-allowed-templates-folder}
 
@@ -135,7 +134,7 @@ ht-degree: 90%
 
 >[!CAUTION]
 >
->この方法では、**[!UICONTROL 許可されているテンプレート]**&#x200B;を変更しないことをお勧めします。アップグレード時に指定したテンプレートが上書きされる可能性があります。
+>指定したテンプレートがアップグレード時に上書きされる可能性があるので、この方法で「**[!UICONTROL 許可されたテンプレート]**」を変更することはお勧めしません。
 >
 >このダイアログは、情報を提供する目的でのみ使用してください。
 
@@ -183,7 +182,7 @@ ht-degree: 90%
 
 ## エクスペリエンスフラグメントの編集 {#editing-your-experience-fragment}
 
-エクスペリエンスフラグメントエディターには、通常のページエディターと似た機能があります。使用方法の詳細については、[ページコンテンツの編集](/help/sites-authoring/editing-content.md)を参照してください。
+エクスペリエンスフラグメントエディターには、通常のページエディターと似た機能があります。使い方の詳細については、[ページのコンテンツの編集](/help/sites-authoring/editing-content.md)を参照してください。
 
 次の手順の例では、商品のティーザーを作成する方法を示します。
 
@@ -315,5 +314,4 @@ URL で `.plain.` セレクターを使用すると、プレーン HTML レン�
 
 デフォルトでは、エクスペリエンスフラグメントは HTML 形式で配信され、AEM とサードパーティチャネルのどちらでも同じように使用できます。
 
-Adobe Targetへの書き出しには、HTMLが使用されます。 詳しくは、[Adobe Target とエクスペリエンスフラグメントの統合](/help/sites-administering/experience-fragments-target.md)を参照してください。
-
+Adobe Targetに書き出す場合は、HTMLが使用されます。 詳しくは、[Adobe Target とエクスペリエンスフラグメントの統合](/help/sites-administering/experience-fragments-target.md)を参照してください。
