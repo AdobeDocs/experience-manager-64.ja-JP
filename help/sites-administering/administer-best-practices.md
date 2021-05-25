@@ -1,18 +1,17 @@
 ---
 title: ベストプラクティス
-description: 管理者が運用を開始できるように、AdobeエンジニアリングチームやコンサルティングチームがコンパイルしたAdobe Experience Managerのベストプラクティスについて説明します。
+description: Adobe Experience Managerのベストプラクティスについて説明します。管理者が使い始めるのに役立つAdobeエンジニアリングチームやコンサルティングチームがコンパイルしました。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices
-translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+exl-id: 8c41dba4-bedc-4747-b67d-fd89d71c8b2c
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 81%
 
 ---
-
 
 # ベストプラクティス{#best-practices}
 
@@ -33,14 +32,14 @@ ht-degree: 81%
 
 ## Assets {#assets}
 
-Dynamic Media機能とDynamic Mediaクラシック統合を含む、アセットに関するベストプラクティスは、次の各トピックで説明されています。
+Dynamic Media機能やDynamic Media Classic統合を含む、Assetsに関するベストプラクティスについては、次のトピックで説明します。
 
 <table> 
  <tbody>
   <tr>
-   <td>読み込み中のシステムの安定性とパフォーマンスを高めるための、アセットの周辺のさまざまな領域のベストプラクティス</td> 
+   <td>負荷時のシステムの安定性とパフォーマンスを向上させるための、Assetsの様々な領域でのベストプラクティス</td> 
    <td><a href="/help/assets/organize-assets.md">Assets のベストプラクティス</a></td> 
-   <td>アセットに関する様々な領域のベストプラクティスガイドへのリンクが含まれています。 これらのガイドを確認すると、エンタープライズアセット管理システムを構築および管理する知識を習得し、そのツールを利用できるようになります。</td> 
+   <td>Assetsに関する様々な領域のベストプラクティスガイドへのリンクが含まれています。 これらのガイドを確認すると、エンタープライズアセット管理システムを構築および管理する知識を習得し、そのツールを利用できるようになります。</td> 
   </tr>
   <tr>
    <td>コンテンツの整理方法（フォルダー階層）</td> 
@@ -48,8 +47,8 @@ Dynamic Media機能とDynamic Mediaクラシック統合を含む、アセット
    <td>ビデオ、メタデータ、画像処理が常にフォルダーに適用されるので、処理プロファイルの多くはフォルダーに基づいています。このベストプラクティスドキュメントでは、フォルダー階層の定義およびセットアップ方法について説明します。フォルダー階層は、コンテンツの処理方法に大きく影響します。 </td> 
   </tr>
   <tr>
-   <td>Dynamic MediaクラシックとAEMの統合</td> 
-   <td><a href="/help/sites-administering/scene7.md#best-practices-for-integrating-scene-with-aem">Dynamic MediaクラシックとAEMの統合のベストプラクティス</a></td> 
+   <td>Dynamic Media ClassicとAEMの統合</td> 
+   <td><a href="/help/sites-administering/scene7.md#best-practices-for-integrating-scene-with-aem">Dynamic Media ClassicとAEMの統合のベストプラクティス</a></td> 
    <td><p>ポーリングインポーターを有効にすべき状況、統合を試す方法およびコンテンツブラウザーを使用すべき状況とアセットに直接アップロードすべき状況について説明します。</p> </td> 
   </tr>
   <tr>
@@ -58,8 +57,8 @@ Dynamic Media機能とDynamic Mediaクラシック統合を含む、アセット
    <td><a href="/help/assets/managing-image-presets.md">画像プリセットの管理</a>に関するドキュメントの一部として、これらのトピックでは画像プリセットの概要と、画像プリセットのオプションの選択に関するベストプラクティスについて説明します。</td> 
   </tr>
   <tr>
-   <td>Dynamic Media対Dynamic Mediaクラシック</td> 
-   <td><a href="/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media">Dynamic Mediaクラシック/AEM統合とDynamic Mediaの統合</a></td> 
+   <td>Dynamic MediaとDynamic Media Classicの直接統合</td> 
+   <td><a href="/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media">Dynamic Media Classic/AEMとDynamic Mediaの統合</a></td> 
    <td>ダイナミックメディアソリューションの使用が適している状況、Scene7 と AEM を統合すべき状況またはその両方を使用すべき状況について説明します。</td> 
   </tr>
  </tbody>
@@ -103,4 +102,3 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
   </tr>
  </tbody>
 </table>
-
