@@ -8,15 +8,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 43fd720f-2a5a-47fb-b9d9-d19f866cd0a0
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: アダプティブフォーム
+exl-id: ff113288-a69a-4083-82a6-4c65c5062411
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '691'
-ht-degree: 85%
+ht-degree: 97%
 
 ---
-
 
 # フォームのアセットのレビューの作成と管理 {#creating-and-managing-reviews-for-assets-in-forms}
 
@@ -27,13 +26,13 @@ ht-degree: 85%
 ## レビューの設定 {#setting-up-a-review}
 
 1. 「フォーム」タブに移動し、フォームを選択します。
-1. アセットに進行中のレビューがない場合は、開始レビュー![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png)アイコンがアクションバーに表示されます。 開始レビュー![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png)アイコンをクリックします。
+1. アセットに進行中のレビューがない場合には、レビューを開始 ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) アイコンがアクションバーに表示されます。レビューを開始 ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) アイコンをクリックします。
 1. 以下の情報を入力します。
 
    * レビュー名：必須。使用可能な文字は、英数字、ハイフンまたはアンダースコアです。
    * レビュー説明：任意。レビューの目的／内容の説明。
    * レビューの期限：任意。レビューが終了する日付です。デッドラインを過ぎている場合、タスクが「期限切れ」と表示されます。
-   * レビュー担当者：最低1つは必須です。 コンボボックスを使って、レビュー担当者を追加します。名前を入力すると、一致するすべての名前が表示されます。
+   * レビュー担当者：最低でも 1 人は必須です。コンボボックスを使って、レビュー担当者を追加します。名前を入力すると、一致するすべての名前が表示されます。
 
 1. 残りの詳細情報を入力し、「開始」をクリックします。
 
@@ -57,11 +56,11 @@ ht-degree: 85%
 
 1. 「フォーム」タブに移動し、フォームを選択します。
 
-1. アセットに進行中のレビューがあり、自分がレビューの開始者である場合は、レビューの管理![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png)アイコンがアクションバーに表示されます。 レビューの開始者のみがレビューを管理（更新 / 終了）することができます。
+1. アセットに進行中のレビューがあり、自分がレビューの開始者の場合、アクションバーにレビューを管理 ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) アイコンが表示されます。レビューの開始者のみがレビューを管理（更新／終了）することができます。
 
-   レビューの管理![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png)アイコンをクリックします。
+   レビューを管理 ![aem6forms_review_chat_comment](assets/aem6forms_review_chat_comment.png) アイコンをクリックします。
 
-   開始者以外のユーザーに対しては、「レビューの管理」アイコンは表示されません。
+   開始者以外のユーザーに対しては、レビューを管理アイコンは表示されません。
 
 1. 次の情報を含む画面が表示されます。
 
@@ -73,7 +72,7 @@ ht-degree: 85%
 1. フィールドを編集し、「更新」をクリックします。
 
    ![タスクマネージャーでのレビューの更新された状態](assets/tskmgr.png)
-   **図：タスクマネージャでの** *レビューの更新状態*
+   **図：** *タスクマネージャーでの更新済み状態の確認*
 
 1. レビューを終了するには、「終了」をクリックします。
 
@@ -87,7 +86,7 @@ ht-degree: 85%
 1. レビュー担当者が削除された場合：
 
    ![レビュー担当者の削除](assets/removeduser.png)
-   **図：レビュー担当者の** *削除*
+   **図：** *レビュー担当者の削除*
 
    1. 割り当てられているタスクが未完了の場合は、そのタスクが終了します。
    1. レビュー担当者は、アセットにコメントすることができなくなります。
@@ -95,7 +94,7 @@ ht-degree: 85%
 1. レビュー担当者が追加された場合：
 
    ![レビュー担当者の追加](assets/addedreviewer.png)
-   **図：レビュー担当者の** *追加*
+   **図：** *レビュー担当者の追加*
 
    1. レビュータスクが作成され、新しく追加されたレビュー担当者に割り当てられます。
    1. 新しく追加されたレビュー担当者は、アセットに対してコメントを追加することができます。
@@ -105,4 +104,3 @@ ht-degree: 85%
    1. **レビュー担当者**：各レビュー担当者のそのレビューに関連する未完了のタスクが終了します。レビュー担当者の通知セクションで、タスクが「保留中」と表示されなくなります。
    1. **開始者**：レビュー開始者に割り当てられたタスクは完了とマークされます。レビュー開始者の通知セクションから、タスクが削除されます。
    1. **全員**：レビューが「以前のレビュー」セクションに表示されます。コメントを追加することができなくなります。
-
