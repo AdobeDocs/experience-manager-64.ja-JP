@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: 94b9eeee-aae3-4b28-9d6f-1be0e4acd982
-translation-type: tm+mt
-source-git-commit: 26b7692b839e8395d090137e4f85b008171bbfc0
+exl-id: 9a6cc25e-e54e-4b8a-8fdd-bcd65d8fe601
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 89%
 
 ---
-
 
 # 新しい Granite UI フィールドコンポーネントの作成{#creating-a-new-granite-ui-field-component}
 
@@ -47,14 +46,14 @@ Granite コンポーネントを開発または拡張するには、Granite UI �
 
    * ハイパーメディア駆動型 UI を使用して一般的なインタラクションパターンを実現するための語彙（HTML 言語の拡張）を提供するクライアントライブラリのコレクション
 
-汎用Granite UIコンポーネント`field`は、2つの関心のあるファイルで構成されています。
+汎用のGranite UIコンポーネント`field`は、次の2つの対象ファイルで構成されています。
 
 * `init.jsp`：ラベル付けや説明などの一般的な処理を扱い、フィールドをレンダリングする際に必要になるフォーム値を提供します。
 * `render.jsp`：フィールドの実際のレンダリングを実行します。カスタムフィールドに対してはオーバーライドされます。`init.jsp` にインクルードされます。
 
 詳しくは、[Granite UI に関するドキュメント - フィールド](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html)を参照してください。
 
-例えば、次を参照してください。
+詳しくは、例えば、以下を参照してください。
 
 * `cqgems/customizingfield/components/colorpicker`
 
@@ -90,7 +89,7 @@ Granite コンポーネントを開発または拡張するには、Granite UI �
    vm.get("value, String.class"); 
    ```
 
-   詳細については、Graniteの標準UIフィールドの実装を参照してください。例：`/libs/granite/ui/components/foundation/form/textfield`
+   詳しくは、標準搭載のGranite UIフィールドの実装を参照してください。例： `/libs/granite/ui/components/foundation/form/textfield`
 
    >[!NOTE]
    >
@@ -103,9 +102,8 @@ Granite コンポーネントを開発または拡張するには、Granite UI �
 1. カテゴリ `cq.authoring.dialog` のクライアントライブラリを作成します。
 1. カテゴリ`cq.authoring.dialog`のclientlibを作成し、その中に`JS`/ `CSS`を定義します。
 
-   clientlib内に`JS`/ `CSS`を定義します。
+   クライアントライブラリ内に`JS`/ `CSS`を定義します。
 
    >[!NOTE]
    >
    >現時点では、Granite UI には、JS 動作を追加するために直接使用できるデフォルトのリスナーやフックはありません。そのため、JS 動作をコンポーネントに追加するには、JS フックをカスタムクラスに実装して、マークアップの生成時にコンポーネントに割り当てる必要があります。
-
