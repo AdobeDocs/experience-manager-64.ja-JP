@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: b93060bd-c6e1-40d2-8acd-ccafb8ed56da
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 6e0607d6-171c-4119-95a1-373b30fb63c1
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 82%
 
 ---
-
 
 # サービスの開始と停止 {#starting-and-stopping-services}
 
@@ -29,26 +28,25 @@ AEM Forms に含まれるサービスには以下の 2 種類があります。
 
 AEM Forms モジュール（例えば、Forms、Rights Management、Output）がサービスとして動作します。これらの AEM Forms モジュールのサービスは、場合によって起動または停止する必要があります。例えば、サービスの設定を変更した後には、AEM Forms サービスを停止してから再起動する必要があります。
 
-1. 管理コンソールで、**サービス**/**アプリケーションおよびサービス**/**サービスの管理**&#x200B;をクリックします。
+1. 管理コンソールで、**サービス** /**アプリケーションおよびサービス** /**サービスの管理**&#x200B;をクリックします。
 1. サービスの管理ページで、停止または開始するサービスの隣のチェックボックスを選択して、「停止」または「開始」をクリックします。
 
 ## アプリケーションサーバーおよびデータベースのサービスの開始と停止  {#start-or-stop-services-for-the-application-server-and-database}
 
 AEM Forms の完全な実装には、以下のアプリケーションサーバーおよびデータベースのサービスが含まれています。
 
-* *`[application server]`* aemフォーム
-* *`[database]`* aemフォーム
+* *`[application server]`* AEM formsの場合
+* *`[database]`* AEM formsの場合
 
-Windowsでは、これらのサービスには&#x200B;**管理ツール**/**サービスパネル**&#x200B;からアクセスできます。 例えば、自動オプションを使用して JBoss に AEM Forms をインストールした場合、システムでは以下のサービスを使用できます。
+Windowsでは、**管理ツール** / **サービスパネル**&#x200B;を通じてこれらのサービスにアクセスできます。 例えば、自動オプションを使用して JBoss に AEM Forms をインストールした場合、システムでは以下のサービスを使用できます。
 
 * JBoss for Adobe Experience Manager forms
 * MySQL for Adobe Experience Manager forms
 
 これらのサービスを開始または停止するには、リストからサービスを選択し、パネルの適切なアクションボタンをクリックします。
 
-UNIX®またはLinuxでは、コマンドラインから次のテキストを入力します。*`[service name]`*&#x200B;は、確認するサービスの名前です。
+UNIX®またはLinuxの場合は、コマンドラインから次のテキストを入力します。*`[service name]`*&#x200B;は、確認するサービスの名前です。
 
 ```as3
      ps -A | grep [service name]
 ```
-
