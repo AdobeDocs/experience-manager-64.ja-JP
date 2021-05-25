@@ -10,9 +10,8 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 exl-id: e076349d-8b1a-487f-b982-9440d7de13b9
-feature: Configuration
+feature: 設定
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
 source-wordcount: '1290'
@@ -30,7 +29,7 @@ Web ページやアプリケーションにこれらの URL 文字列を配置�
 
 >[!NOTE]
 >
->URL 文字列は、アセットの動的レンディションでのみ使用できます。現時点では、Dynamic Media サーバーではなく DAM に存在する静的アセットには URL 文字列を使用できません。静的なレンディションに対しては「URL」ボタンが表示されません。
+>URL 文字列は、アセットの動的レンディションでのみ使用できます。現時点では、ダイナミックメディアサーバーではなく DAM に存在する静的アセットには URL 文字列を使用できません。静的なレンディションに対しては「URL」ボタンが表示されません。
 
 [Web ページへのビデオビューアまたは画像ビューアの埋め込み](embed-code.md)も参照してください。
 
@@ -141,7 +140,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
    例えば、登録 ID が `87654321|MyCompany` の場合、顧客名は `MyCompany` です。
 
-1. ページの左上隅近くにある「**[!UICONTROL Cloud Service]s**」をタップし、AEMアイコンをタップして&#x200B;**[!UICONTROL 一般/CRXDE Lite]**&#x200B;に移動します。
+1. ページの左上隅付近で、「**[!UICONTROL Cloud Service]s**」をタップし、AEMアイコンをタップして、**[!UICONTROL 一般/CRXDE Lite]**&#x200B;に移動します。
 1. JCR（Java コンテンツリポジトリー）のビデオレンディションパス全体をコピーします。
 
    例えば、ビデオのレンディションパスは、次のように表示されることがあります。
@@ -160,7 +159,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
    これは、公開されたビデオレンディションの完全なビデオ URL です。
 
-## アダプティブストリーミング（HLS）用のビデオ URL の取得  {#obtaining-a-video-url-for-adaptive-streaming-hls}
+## アダプティブストリーミング（HLS）用のビデオ URL の取得 {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. AEM で、**[!UICONTROL ツール／デプロイメント／クラウド／Cloud Services]** に移動します。
 1. **[!UICONTROL Cloud Services]** ページで、「**[!UICONTROL Dynamic Media Cloud Services]**」見出しまでスクロールダウンして、「**[!UICONTROL 設定を表示]**」をタップします。
@@ -182,7 +181,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
    | 使用しているビデオ配信プロトコル | 使用するプロトコルセレクター |
    |---|---|
-   | HTTP  <br> HTTP(非セキュアビデオ配信)を使用している場合は、前の手順でコピーしたビデオサービスのURL値でhttpsをhttpに変更してください。 | `public/` |
+   | HTTP  <br> HTTP（セキュアでないビデオ配信）を使用している場合は、前にコピーしたビデオサービスURL値でhttpsをhttpに変更してください。 | `public/` |
    | HTTPS | `public-ssl/` |
 
 1. Dynamic Media で処理される AEM のビデオアセットのフルパスをコピーします。コピーしたビデオアセットのパスは後の手順で必要になります。
