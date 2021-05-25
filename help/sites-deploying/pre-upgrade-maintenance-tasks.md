@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: upgrading
 discoiquuid: 899ea120-c96d-4dbf-85da-e5d25959d10a
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: アップグレード
+exl-id: f146cb2f-ee77-4c99-8dff-446cdb3a7797
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2179'
 ht-degree: 77%
 
 ---
-
 
 # アップグレード前のメンテナンスタスク{#pre-upgrade-maintenance-tasks}
 
@@ -35,11 +34,11 @@ ht-degree: 77%
 * [カスタムのスケジュール済みジョブの無効化](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#disable-custom-scheduled-jobs)
 * [オフラインでのリビジョンクリーンアップの実行](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#execute-offline-revision-cleanup)
 * [データストアのガベージコレクションの実行](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#execute-datastore-garbage-collection)
-* [必要に応じてデータベーススキーマをアップグレードする](pre-upgrade-maintenance-tasks.md#upgrade-the-database-schema-if-needed)
-* [アップグレードを妨げる可能性のあるユーザーの削除](pre-upgrade-maintenance-tasks.md#delete-users-that-might-hinder-the-upgrade)
+* [必要に応じて、データベーススキーマをアップグレードします。](pre-upgrade-maintenance-tasks.md#upgrade-the-database-schema-if-needed)
+* [アップグレードの妨げになる可能性のあるユーザーの削除](pre-upgrade-maintenance-tasks.md#delete-users-that-might-hinder-the-upgrade)
 * [ログファイルのローテーション](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#rotate-log-files)
 
-## 十分なディスク領域の確保  {#ensure-sufficient-disk-space}
+## 十分なディスク領域の確保 {#ensure-sufficient-disk-space}
 
 アップグレードを実行する場合は、コンテンツおよびコードのアップグレードアクティビティの他に、リポジトリの移行を実行する必要があります。この移行により、新しい Segment Tar 形式でリポジトリのコピーが作成されます。その結果、大容量になる可能性があるリポジトリの 2 つ目のバージョンを保持するのに十分なディスク領域が必要になります。
 
@@ -49,7 +48,7 @@ ht-degree: 77%
 
 ## /etc に対する変更のバックアップ  {#backup-changes-etc}
 
-このアップグレードプロセスは、リポジトリの`/apps`パスと`/libs`パスの下から既存のコンテンツと設定を管理および結合するのに役立ちます。 `/etc`パスに対して行われた変更（Context Hub設定を含む）については、多くの場合、アップグレード後にこれらの変更を再適用する必要があります。 `/var`の下で結合できない変更のバックアップコピーはアップグレードで作成されますが、アップグレードを開始する前に、手動でこれらの変更をバックアップすることをお勧めします。
+アップグレードプロセスは、リポジトリ内の`/apps`パスと`/libs`パスの下から既存のコンテンツと設定を保守および結合するのに適しています。 Context Hub設定を含む`/etc`パスに対する変更は、多くの場合、アップグレード後にこれらの変更を再適用する必要があります。 アップグレードでは`/var`の下にマージできない変更のバックアップコピーが作成されますが、アップグレードを開始する前に、これらの変更を手動でバックアップすることをお勧めします。
 
 ## quickstart.properties ファイルの生成 {#generate-quickstart-properties}
 
@@ -89,7 +88,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
 
 `PreUpgradeTasksMBean` OSGI コンポーネントは、アップグレード前のメンテナンスタスクのリストで事前設定されており、それらのすべてのタスクを一度に実行できます。以下の手順に従ってタスクを設定できます。
 
-1. `https://serveraddress:serverport/system/console/configMgr`を参照してWebコンソールに移動
+1. `https://serveraddress:serverport/system/console/configMgr`を参照してWebコンソールに移動します。
 
 1. 「**preupgradetasks**」を検索し、最初に一致したコンポーネントをクリックします。コンポーネントのフルネームは、`com.adobe.aem.upgrade.prechecks.mbean.impl.PreUpgradeTasksMBeanImpl` です。
 
@@ -175,7 +174,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
  <tbody> 
   <tr> 
    <td><strong>メソッド名</strong></td> 
-   <td><strong>種類</strong></td> 
+   <td><strong>タイプ</strong></td> 
    <td><strong>説明</strong></td> 
   </tr> 
   <tr> 
@@ -221,7 +220,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
   <tr> 
    <td><code>runAllPreUpgradeHealthChecks(shutDownOnSuccess)</code></td> 
    <td>アクション ：</td> 
-   <td><p>アップグレード前のヘルスチェックをすべて実行し、そのステータスをSlingホームパス内の<code>preUpgradeHCStatus.properties</code>という名前のファイルに保存します。 <code>shutDownOnSuccess</code>パラメーターが<code>true</code>に設定されている場合、AEMインスタンスはシャットダウンされますが、アップグレード前のヘルスチェックのステータスがすべてOKである場合にのみシャットダウンされます。</p> <p>properties ファイルは今後のアップグレードの前提条件として使用され、<br />アップグレード前のヘルスチェックの実行に失敗した場合は、<br />アップグレードプロセスが停止されます。アップグレード前のヘルスチェックの結果を無視して<br />アップグレードを開始する場合は、このファイルを削除できます。</p> </td> 
+   <td><p>すべてのアップグレード前のヘルスチェックを実行し、Slingホームパスにある<code>preUpgradeHCStatus.properties</code>という名前のファイルにそのステータスを保存します。 <code>shutDownOnSuccess</code>パラメーターが<code>true</code>に設定されている場合、AEMインスタンスはシャットダウンされますが、アップグレード前のヘルスチェックのステータスがすべてOKの場合に限られます。</p> <p>properties ファイルは今後のアップグレードの前提条件として使用され、<br />アップグレード前のヘルスチェックの実行に失敗した場合は、<br />アップグレードプロセスが停止されます。アップグレード前のヘルスチェックの結果を無視して<br />アップグレードを開始する場合は、このファイルを削除できます。</p> </td> 
   </tr> 
   <tr> 
    <td><code>detectUsageOfUnavailableAPI(aemVersion)</code></td> 
@@ -312,30 +311,30 @@ TarMK を使用している場合は、アップグレードの前にオフラ�
 
 CRX3 インスタンスでリビジョンクリーンアップを実行した後は、データストアのガベージコレクションを実行して、データストア内の参照されていない blob を削除する必要があります。手順については、[データストアのガベージコレクション](/help/sites-administering/data-store-garbage-collection.md)に関するドキュメントを参照してください。
 
-## アップグレードの妨げになる可能性のあるユーザーの削除{#delete-users-that-might-hinder-the-upgrade}
+## アップグレードの妨げになる可能性のあるユーザーを削除する{#delete-users-that-might-hinder-the-upgrade}
 
 >[!NOTE]
 >
 >このアップグレード前のメンテナンスタスクは、次の場合にのみ必要です。
 >
->* AEM 6.3より前のAEMバージョンからアップグレードしています
->* アップグレード中に、以下に示すエラーが発生した場合。
+>* AEM 6.3より前のAEMバージョンからアップグレードします
+>* アップグレード中に、以下に示すエラーが発生しました。
 
 
-サービスユーザーが古いAEMバージョンで、通常のユーザーとして不適切にタグ付けされる場合は、例外的に発生します。
+サービスユーザーが古いAEMバージョンで通常のユーザーとして適切にタグ付けされない場合、例外的なケースがあります。
 
 この場合、アップグレードは次のようなメッセージで失敗します。
 
 `ERROR [Apache Sling Repository Startup Thread] com.adobe.granite.repository.impl.SlingRepositoryManager Exception in a SlingRepositoryInitializer, SlingRepository service registration aborted
 java.lang.RuntimeException: Unable to create service user [communities-utility-reader]:java.lang.RuntimeException: Existing user communities-utility-reader is not a service user.`
 
-この問題を回避するには、次の手順を実行します。
+この問題を回避するには、必ず次の手順を実行してください。
 
-この問題を回避するには、次の手順を実行します。
+この問題を回避するには、必ず次の手順を実行してください。
 
-* インスタンスを実稼動トラフィックから切り離す
-* 問題の原因となるユーザーのバックアップを作成します。 これは、Package Managerで行うことができます。 詳しくは、[パッケージの使い方](/help/sites-administering/package-manager.md)を参照してください。
-* 問題の原因となっているユーザーを削除します。 以下は、このカテゴリに該当する可能性のあるユーザーのリストです。
+* 実稼動トラフィックからインスタンスを分離する
+* 問題を引き起こすユーザーのバックアップを作成します。 これは、パッケージマネージャーを使用して実行できます。 詳しくは、[パッケージの使用方法](/help/sites-administering/package-manager.md)を参照してください。
+* 問題の原因となっているユーザーを削除します。 次に、このカテゴリに該当する可能性のあるユーザーのリストを示します。
    * dynamic-media-replication
    * communities-ugc-writer
    * communities-utility-reader
@@ -343,16 +342,16 @@ java.lang.RuntimeException: Unable to create service user [communities-utility-r
    * oauthservice
    * sling-scripting
 
-## 必要に応じてデータベーススキーマをアップグレード{#upgrade-the-database-schema-if-needed}
+## 必要に応じて、データベーススキーマをアップグレードします。 {#upgrade-the-database-schema-if-needed}
 
-通常、基盤となるApache OakスタックAEMで永続性を使用する場合は、必要に応じてデータベーススキーマのアップグレードが行われます。
+通常、基盤となるApache OakスタックAEMが永続性のために使用する処理は、必要に応じてデータベーススキーマのアップグレードを行います。
 
-ただし、スキーマを自動的にアップグレードできない場合があります。 これらは、ほとんどの場合、非常に限られた権限を持つユーザーの下でデータベースが実行される高いセキュリティ環境です。 この場合、AEMは古いスキーマを引き続き使用します。
+ただし、スキーマを自動的にアップグレードできない場合に発生する可能性があります。 これらは、ほとんどの場合、権限が非常に限られたユーザーでデータベースが実行される高いセキュリティ環境です。 この場合、AEMは引き続き古いスキーマを使用します。
 
-このような状況を回避するには、次の手順に従ってスキーマをアップグレードする必要があります。
+このような状況が発生しないようにするには、次の手順に従ってスキーマをアップグレードする必要があります。
 
-1. アップグレードが必要なAEMインスタンスをシャットダウンします。
-1. データベーススキーマをアップグレードします。 この処理を行うために使用する必要のあるツールを確認するには、使用するデータベースの種類に関するドキュメントを参照してください。
+1. アップグレードする必要があるAEMインスタンスをシャットダウンします。
+1. データベーススキーマをアップグレードします。 これを実現するために使用する必要があるツールを確認するには、データベースタイプのドキュメントを参照してください。
 
    Oakでのスキーマのアップグレードの処理方法について詳しくは、ApacheのWebサイト](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade)の[このページを参照してください。
 
