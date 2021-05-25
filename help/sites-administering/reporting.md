@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: e74ffe97-5de8-4e9c-94b4-d7d63939d40c
 exl-id: daff8e4e-40c7-4762-8e4f-d85d50b86e5d
-source-git-commit: 361964df6c25cbcfadb45dbf8fc10d5ab1258e6d
+source-git-commit: 5dd282cc91721a3d53bdf29d5fbb978a52c3704e
 workflow-type: tm+mt
-source-wordcount: '2815'
-ht-degree: 73%
+source-wordcount: '2871'
+ht-degree: 72%
 
 ---
 
@@ -327,6 +327,11 @@ ht-degree: 73%
 ![](assets/reportcomponent.png) ![reportcomponentreportcompentall](assets/reportcompentall.png)
 
 ### ディスク使用量 {#disk-usage}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_ctt_diskusage"
+>title="ディスク使用量レポート"
+>abstract="CTT Calculatorの入力として、ユーザーは、「http://HOST:PORT/etc/reports/diskusage.html&#39;」の下の「ディスク使用量」レポートを実行して、AEMリポジトリのサイズを予測できます。 また、次のような「path」パラメーターを使用して、特定のリポジトリパスのサイズを予測することもできます。&#39;http://HOST:PORT/etc/reports/diskusage.html?path=/content/dam&#39;."
 
 ディスク使用量レポートは、リポジトリ内に格納されているデータに関する情報を表示します。
 
