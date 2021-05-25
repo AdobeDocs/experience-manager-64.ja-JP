@@ -9,15 +9,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5e344be7-46cd-4e1f-ae3a-1f89c645cffe
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 'モバイルフォーム '
+exl-id: b63758f1-b375-4c05-bd53-69e0346733c6
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 96%
 
 ---
-
 
 # HTML5 フォームにおけるパターン形式文字列サポート {#picture-clause-support-for-html-forms}
 
@@ -108,7 +107,7 @@ HTML5 フォームは、数値のパターン形式文字列の記号をサポ�
 
 PDF フォームでは 1000000 の数値は 1,000,000 として形式設定されます。ただし、HTML フォームではその数値は 1000000 として形式設定されていないままになります。
 
-**HTMLForms**&#x200B;でサポートされる数値のパターン形式文字列の式は次のとおりです。
+**HTML Forms**&#x200B;でサポートされている数値のパターン形式文字列の式は次のとおりです。
 
 * num.integer{}
 * num.decimal{}
@@ -205,7 +204,7 @@ PDF フォームでは 1000000 の数値は 1,000,000 として形式設定さ�
 
 HTML5 フォームは、次のテキストのパターン形式文字列の式をサポートしています。
 
-* text{テキストのパターン形式文字列の記号}
+* text{textパターン形式文字列の記号}
 
 | **記号** | **解釈** |
 |---|---|
@@ -214,4 +213,3 @@ HTML5 フォームは、次のテキストのパターン形式文字列の式�
 | O | 英数字 1 文字。 |
 | 0（ゼロ） | 英数字 1 文字。 |
 | 9 | 1 桁の数値. |
-
