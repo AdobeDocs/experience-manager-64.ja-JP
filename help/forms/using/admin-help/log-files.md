@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: cf140483-470f-4bff-8870-304207508aab
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: acce13aa-864c-4999-be5c-6d49b99d5459
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 63%
 
 ---
-
 
 # ログファイル {#log-files}
 
@@ -28,15 +27,14 @@ ht-degree: 63%
 * server.log.*[yyyy-mm-dd]*
 * server.log
 
-(WebLogic)ドメインログファイルは&#x200B;*[appserverdomain]*&#x200B;ディレクトリに配置され、サーバーログファイルは*[appserverdomain]/servers/[appserver name]/logs *directoryに配置されます。
+(WebLogic)ドメインログファイルは&#x200B;*[appserverdomain]*&#x200B;ディレクトリに、サーバーログファイルは*[appserverdomain]/servers/[appserver name]/logs *directoryにあります。
 
 * access.log
 * *[appserver name]*.log
 * *[appserver name]*.out.*[incremental number]*
 
-(WebSphere)次のログファイルが&#x200B;*[appserver root]*/default/logs/*[appserver name]*&#x200B;プロファイルにあります。
+(WebSphere)次のログファイルが&#x200B;*[appserver root]*/profiles/default/logs/*[appserver name]*&#x200B;ディレクトリにあります。
 
 * SystemErr.log
 * SystemOut.log
 * StartServer.log
-
