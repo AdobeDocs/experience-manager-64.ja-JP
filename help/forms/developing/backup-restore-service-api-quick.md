@@ -1,8 +1,8 @@
 ---
 title: バックアップと復元サービスのAPIQuick開始
 seo-title: バックアップと復元サービスのAPIQuick開始
-description: Java APIクイック開始を使用してバックアップモードを開始し、終了するには、バックアップと復元サービスAPIを使用します。
-seo-description: Java APIクイック開始を使用してバックアップモードを開始し、終了するには、バックアップと復元サービスAPIを使用します。
+description: Java APIクイックスタートを使用してバックアップモードを開始および終了するには、バックアップと復元サービスAPIを使用します。
+seo-description: Java APIクイックスタートを使用してバックアップモードを開始および終了するには、バックアップと復元サービスAPIを使用します。
 uuid: c3992be2-ceb4-480d-9c8f-71eb0ea66dde
 contentOwner: admin
 content-type: reference
@@ -10,32 +10,31 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 813162be-dbf5-4dc1-80ff-e37dbc25ef60
 role: Developer
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: b4fa018f-48a6-4991-9f80-d2d6e0b30555
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
+# バックアップと復元サービスAPIのクイックスタート{#backup-and-restore-service-apiquick-starts}
 
-# バックアップと復元サービスAPIクイック開始{#backup-and-restore-service-apiquick-starts}
+Java API Quick Start(SOAP)は、バックアップと復元サービスAPIで使用できます。
 
-Java API Quick開始(SOAP)は、バックアップと復元サービスAPIで使用できます。
+[クイックスタート：Java API(SOAP)を使用したバックアップモードの開始](backup-restore-service-api-quick.md#quick-start-soap-mode-entering-backup-mode-using-the-java-api)
 
-[クイック開始:Java API(SOAP)を使用したバックアップモードの開始](backup-restore-service-api-quick.md#quick-start-soap-mode-entering-backup-mode-using-the-java-api)
+[クイックスタート：Java API(SOAP)を使用したバックアップモードの終了](backup-restore-service-api-quick.md#quick-start-soap-mode-leaving-backup-mode-using-the-java-api)
 
-[クイック開始:Java API(SOAP)を使用したバックアップモードの終了](backup-restore-service-api-quick.md#quick-start-soap-mode-leaving-backup-mode-using-the-java-api)
-
-AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsとのプログラミング」にあるクイック開始は、Formsのオペレーティングシステムに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>「 AEM Formsによるプログラミング」にあるクイックスタートは、Formsオペレーティングシステムに基づいています。 ただし、UNIXなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}を使用したバックアップモードの開始
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}を使用したバックアップモードの開始
 
-次のJavaコードの例は、2時間間一意のラベルを持つバックアップモードに入ります。 バックアップ時間が経過した後、またはバックアップモードが明示的に終了した場合は、formsサーバーはグローバルドキュメントストレージからファイルを削除するために戻ります。 （「[formsサーバーでのバックアップモードの開始](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server)」を参照）。
+次のJavaコードの例は、2時間間一意のラベルを持つバックアップモードに入ります。 バックアップ時間が経過した後、またはバックアップモードが明示的に終了した場合、formsサーバーはグローバルドキュメントストレージからファイルをパージします。 （[Formsサーバーでのバックアップモードの開始](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server)を参照）。
 
 ```as3
  /* 
@@ -149,9 +148,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-leaving-backup-mode-using-the-java-api}を使用したバックアップモードの終了
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-leaving-backup-mode-using-the-java-api}を使用してバックアップモードを終了します
 
-次のJavaコードの例では、明示的にFormsサーバーがバックアップモードを終了し、グローバルドキュメントストレージからファイルを削除する処理に戻ります。 （「[Formsサーバーでのバックアップモードの終了](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server)」を参照）。
+次のJavaコードの例を使用すると、Formsサーバーがバックアップモードを終了し、グローバルドキュメントストレージからファイルをパージします。 （[Formsサーバーのバックアップモードの終了](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server)を参照）。
 
 ```as3
  /* 
@@ -253,4 +252,3 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  } 
  
 ```
-
