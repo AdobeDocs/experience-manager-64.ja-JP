@@ -7,21 +7,20 @@ uuid: a68f1ca1-32dd-48f9-9359-8f09abd1c3de
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: b8cd2656-8bc2-4bd7-a3d6-dc76b0a2d429
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 'モバイルフォーム '
+exl-id: c69b5ae6-c5c5-46df-8290-3e41470cd09e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 92%
 
 ---
 
-
 # HTML5 フォームの概要 {#introduction-to-html-forms}
 
 HTML5 フォームは、HTML5 形式で XFA フォームテンプレートをレンダリングする Adobe Experience Manager 6.0（AEM 6.0）ソフトウェアの新しい機能です。この機能により、XFA ベースの PDF がサポートされていないモバイルデバイスおよびデスクトップブラウザー上のフォームのレンダリングが可能です。 HTML5 フォームは XFA フォームテンプレートの既存の機能をサポートしているだけでなく、モバイルデバイスのための新しい機能（例えば手書き署名）も追加します。
 
-HTML5 フォームは標準の HTML5 構造に基づいてドキュメントを生成します。HTML5 フォームは、HTML5 をサポートしている現時点のすべてのブラウザーで見ることができます。ブラウザーのための追加のブラウザープラグインをインストールする必要がありません。 サポートされるブラウザーについて詳しくは、[サポートされるクライアントプラットフォーム](https://adobe.com/go/learn_aemforms_supportedplatforms_63)を参照してください。
+HTML5 フォームは標準の HTML5 構造に基づいてドキュメントを生成します。HTML5 フォームは、HTML5 をサポートしている現時点のすべてのブラウザーで見ることができます。ブラウザーのための追加のブラウザープラグインをインストールする必要がありません。 サポートされるブラウザーについて詳しくは、「[サポートされるクライアントプラットフォーム](https://adobe.com/go/learn_aemforms_supportedplatforms_63)」を参照してください。
 
 ![](do-not-localize/mobile_form_on_an_ipad_date_14.png)
 
@@ -47,4 +46,4 @@ HTML5 フォームは標準の HTML5 構造に基づいてドキュメントを�
 
 ### フォームのカスタマイズ {#forms-customization}
 
-HTML5 フォームは、標準 HTML5 構成を使用してフォームテンプレートをレンダリングします。これにより、Web テクノロジ、主にCSS および JavaScript を使用した、HTML5 形式のフォームの拡張およびカスタマイズが容易になります。 既存のウィジェットの外観を簡単にカスタマイズし、独自のウィジェットを作成するか、フォームのカスタムスタイルを使用できます。 カスタムウィジェットの作成と既存のウィジェットのカスタマイズについて詳しくは、[「HTML5フォームのプラグインカスタムウィジェット](/help/forms/using/custom-widgets.md)」を参照してください。
+HTML5 フォームは、標準 HTML5 構成を使用してフォームテンプレートをレンダリングします。これにより、Web テクノロジ、主にCSS および JavaScript を使用した、HTML5 形式のフォームの拡張およびカスタマイズが容易になります。 既存のウィジェットの外観を簡単にカスタマイズし、独自のウィジェットを作成するか、フォームのカスタムスタイルを使用できます。 カスタムウィジェットの作成と既存のウィジェットのカスタマイズについて詳しくは、「 [HTML5フォームのプラグインカスタムウィジェット](/help/forms/using/custom-widgets.md) 」を参照してください。
