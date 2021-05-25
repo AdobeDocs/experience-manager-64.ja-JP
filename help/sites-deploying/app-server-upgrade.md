@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: c427c8b6-eb94-45fa-908f-c3d5a337427d
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: アップグレード
+exl-id: 1c72093e-82c8-49ad-bd3c-d61904aaab28
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 95%
 
 ---
-
 
 # アプリケーションサーバーのインストール環境のアップグレード手順{#upgrade-steps-for-application-server-installations}
 
@@ -57,7 +56,7 @@ ht-degree: 95%
 
 1. 次の操作をおこなって、sling.properties ファイル内の必要なプロパティを削除します。
 
-   1. `crx-quickstart/launchpad/sling.properties`にあるファイルを開きます
+   1. `crx-quickstart/launchpad/sling.properties`にあるファイルを開きます。
    1. 次のプロパティを削除してファイルを保存します。
 
       1. `sling.installer.dir`
@@ -99,11 +98,11 @@ ht-degree: 95%
 
 1. 設定ファイルを編集し、使用できる状態にします。具体的には、次のように編集します。
 
-   * &lt;a0/追加>org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config **への次の行：**
+   * 次の行を&#x200B;**org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**&#x200B;に追加します。
 
       `customBlobStore=true`
 
-   * 次に、**org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config**&#x200B;に次の行を追加します。
+   * 次に、以下の行を&#x200B;**org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config**&#x200B;に追加します。
 
       ```
       path=./crx-quickstart/repository/datastore
@@ -150,4 +149,3 @@ ht-degree: 95%
    ```shell
    cp temp/aem62.war jboss-install-folder/standalone/deployments/aem61.war
    ```
-
