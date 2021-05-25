@@ -9,23 +9,22 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 設定
+exl-id: b10bf1b6-0360-45ca-b1aa-f4184cbfb5c0
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2804'
 ht-degree: 82%
 
 ---
 
-
 # ジョブのオフロード{#offloading-jobs}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 オフロードによって、トポロジ内の Experience Manager インスタンス間で処理タスクが配布されます。オフロードでは、特定の Experience Manager インスタンスを使用して、特定のタイプの処理を実行できます。処理を特化することによって、利用可能なサーバーリソースを最大限に使用できます。
 
-オフロードは、[Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html)およびSling JobManagerの機能に基づいています。オフロードを使用するには、Experience Managerクラスタをトポロジに追加し、クラスタプロセスが行うジョブトピックを特定します。クラスターは、1つ以上のExperience Managerインスタンスで構成されるので、1つのインスタンスがクラスターと見なされます。
+オフロードは、[Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html)およびSling JobManagerの機能に基づいています。オフロードを使用するには、Experience Managerクラスターをトポロジに追加し、クラスターが処理するジョブトピックを特定します。クラスターは、1つ以上のExperience Managerインスタンスで構成され、1つのインスタンスがクラスターと見なされます。
 
 トポロジへのインスタンスの追加について詳しくは、[トポロジの管理](/help/sites-deploying/offloading.md#administering-topologies)を参照してください。
 
@@ -76,7 +75,7 @@ JobManager でジョブが作成されると、オフロードフレームワー
 
 クラスターの各インスタンスについて、複数のトポロジ関連プロパティを確認できます。
 
-* インスタンスのジョブ・コンシューマー用のトピックの許可リスト。
+* インスタンスのジョブコンシューマーに関するトピックの許可リスト。
 * トポロジとの接続用に公開されるエンドポイント
 * インスタンスがどのジョブトピックについてオフロード用に登録されているか
 * インスタンスによって処理されるジョブトピック
@@ -109,7 +108,7 @@ Web コンソールを使用してトポロジ情報を表示することもで�
 
 Experience Manager インスタンスとトポロジとのインタラクション方法を制御するために、Apache Sling のリソースベースの Discovery Service が各インスタンスで実行されます。
 
-Discovery Service によって、トポロジとの接続を確立および維持するために、定期的な POST 要求（ハートビート）が Topology Connector サービスに送信されます。Topology Connectorサービスは、トポロジに参加できるIPアドレスまたはホスト名の許可リストを維持します。
+Discovery Service によって、トポロジとの接続を確立および維持するために、定期的な POST 要求（ハートビート）が Topology Connector サービスに送信されます。Topology Connectorサービスは、トポロジへの参加を許可されるIPアドレスまたはホスト名の許可リストを維持します。
 
 * インスタンスをトポロジに参加させるには、ルートメンバーの Topology Connector サービスの URL を指定します。
 * インスタンスがトポロジに参加できるようにするには、ルートメンバーの Topology Connector サービスの許可リストにインスタンスを追加します。
@@ -139,7 +138,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
   <tr> 
    <td>最小イベント遅延（秒）</td> 
    <td>minEventDelay</td> 
-   <td><p>トポロジに変更が発生した場合、状態の変更をTOPOLOGY_CHANGINGからTOPOLOGY_CHANGEDに遅延する時間。状態がTOPOLOGY_CHANGINGの場合に発生する各変更は、この時間だけ遅延を増やします。</p> <p>この遅延によって、リスナーに大量のイベントが送られるのを防ぎます。 </p> <p>遅延を使用しない場合は、0 または負の数を指定します。</p> </td> 
+   <td><p>トポロジに変更が発生した場合、TOPOLOGY_CHANGINGからTOPOLOGY_CHANGEDへの状態の変更を遅らせる時間。状態がTOPOLOGY_CHANGINGの場合に発生する各変更により、この時間だけ遅延が増加します。</p> <p>この遅延によって、リスナーに大量のイベントが送られるのを防ぎます。 </p> <p>遅延を使用しない場合は、0 または負の数を指定します。</p> </td> 
    <td>3</td> 
   </tr> 
   <tr> 
@@ -149,7 +148,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
    <td>http://localhost:4502/libs/sling/topology/connector</td> 
   </tr> 
   <tr> 
-   <td>トポロジコネクタ許可リスト</td> 
+   <td>Topology Connectorの許可リスト</td> 
    <td>topologyConnectorWhitelist</td> 
    <td>ローカル Topology Connector サービスによってトポロジ内で許可される IP アドレスまたはホスト名のリスト。 </td> 
    <td><p>localhost</p> <p>127.0.0.1</p> </td> 
@@ -175,7 +174,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
 1. ブラウザーで Web コンソールを開きます（[http://localhost:4502/system/console](http://localhost:4502/system/console)）。
 1. Main／Topology Management をクリックします。
 1. 「 Configure Discovery Service」をクリックします。
-1. トポロジの各メンバに対して、[トポロジコネクタ許可リスト]プロパティに項目を追加し、トポロジメンバのホスト名またはIPアドレスを指定します。
+1. トポロジの各許可リストに対して、Topology Connectorメンバーのプロパティに項目を追加し、トポロジメンバーのホスト名またはIPアドレスを指定します。
 
 ## トピック使用の設定 {#configuring-topic-consumption}
 
@@ -220,7 +219,7 @@ Apache Sling JobConsumer Manager サービスによって、トピックの許�
 
 **注意：**&#x200B;インスタンスがトポロジに属している場合は、トポロジ内の任意のコンピューターでオフロードするブラウザーを使用して、トピックを有効または無効にすることもできます。
 
-有効なトピックのリストを作成するロジックは、最初に許可リスト内のすべてのトピックを許可し、次にブロックリスト上のトピックを削除します。デフォルトでは、すべてのトピックが有効(許可リスト値は`*`)で、ブロックリストは無効（値なし）です。
+有効なトピックのリストを作成するロジックは、まず許可リスト内のすべてのトピックを許可し、次にブロックリスト上のトピックを削除します。デフォルトでは、すべての許可リストが有効(ブロックリスト値は`*`)で、トピックは無効（値なし）です。
 
 Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以下のプロパティを設定します。`sling:OsgiConfig` ノードの場合、JobConsumer Manager サービスの PID は、org.apache.sling.event.impl.jobs.JobConsumerManager です。
 
@@ -237,7 +236,7 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 >
 >自動的に生成されるレプリケーションエージェントには既知の問題があるので、新しいレプリケーションエージェントを手動で作成する必要があります。オフロードのエージェントを作成する前に、[自動生成されたレプリケーションエージェントの使用に関する問題](/help/sites-deploying/offloading.md#problems-using-the-automatically-generated-replication-agents)の手順に従ってください。
 
-オフロードのためにインスタンス間でジョブペイロードを転送するレプリケーションエージェントを作成します。以下の図に、作成者からワーカーインスタンスへのオフロードに必要なエージェントを示します。作成者のSling IDは1で、ワーカーインスタンスのSling IDは2です。
+オフロードのためにインスタンス間でジョブペイロードを転送するレプリケーションエージェントを作成します。以下の図に、作成者からワーカーインスタンスへのオフロードに必要なエージェントを示します。オーサーのSling IDは1で、ワーカーインスタンスのSling IDは2です。
 
 ![chlimage_1-115](assets/chlimage_1-115.png)
 
@@ -255,17 +254,17 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
 ### オフロードのレプリケーションエージェントの命名 {#naming-the-replication-agents-for-offloading}
 
-オフロードフレームワークで特定のワーカーインスタンスに対して正しいエージェントが自動的に使用されるように、レプリケーションエージェントの&#x200B;***Name***&#x200B;プロパティに特定の形式を使用します。
+オフロードフレームワークが特定のワーカーインスタンスに対して正しいエージェントを自動的に使用するように、レプリケーションエージェントの&#x200B;***名前***&#x200B;プロパティに特定の形式を使用します。
 
 **オーサーインスタンスの送信エージェントの命名：**
 
-`offloading_<slingid>`( `<slingid>` は、ワーカーインスタンスのSling IDです)。
+`offloading_<slingid>`( `<slingid>` はワーカーインスタンスのSling IDです)。
 
 例: `offloading_f5c8494a-4220-49b8-b079-360a72f71559`
 
 **オーサーインスタンスのリバースエージェントの命名：**
 
-`offloading_reverse_<slingid>`( `<slingid>` は、ワーカーインスタンスのSling IDです)。
+`offloading_reverse_<slingid>`( `<slingid>` はワーカーインスタンスのSling IDです)。
 
 例: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
@@ -275,7 +274,7 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
 ### 送信エージェントの作成 {#creating-the-outgoing-agent}
 
-1. 作成者に&#x200B;**レプリケーションエージェント**&#x200B;を作成します。（[レプリケーションエージェントのドキュメント](/help/sites-deploying/replication.md)を参照）。 **タイトル**&#x200B;を指定します。**名前**&#x200B;は、命名規則に従う必要があります。
+1. オーサー環境に&#x200B;**レプリケーションエージェント**&#x200B;を作成します。（[レプリケーションエージェントのドキュメント](/help/sites-deploying/replication.md)を参照）。 任意の&#x200B;**タイトル**&#x200B;を指定します。**名前**&#x200B;は、命名規則に従う必要があります。
 1. 以下のプロパティを使用してエージェントを作成します。
 
    | プロパティ | 値 |
@@ -289,7 +288,7 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
 ### リバースエージェントの作成  {#creating-the-reverse-agent}
 
-1. 作成者に&#x200B;**逆複製エージェント**&#x200B;を作成します。（[レプリケーションエージェントのドキュメント](/help/sites-deploying/replication.md)を参照）**タイトル**&#x200B;を指定します。**名前**&#x200B;は、命名規則に従う必要があります。
+1. オーサー環境に&#x200B;**リバースレプリケーションエージェント**&#x200B;を作成します。（[レプリケーションエージェントのドキュメント](/help/sites-deploying/replication.md)を参照してください）任意の&#x200B;**タイトル**&#x200B;を指定します。**名前**&#x200B;は、命名規則に従う必要があります。
 1. 以下のプロパティを使用してエージェントを作成します。
 
    | プロパティ | 値 |
@@ -302,7 +301,7 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
 ### アウトボックスエージェントの作成  {#creating-the-outbox-agent}
 
-1. ワーカーインスタンスに&#x200B;**レプリケーションエージェント**&#x200B;を作成します。（[レプリケーションエージェントのドキュメント](/help/sites-deploying/replication.md)を参照）**タイトル**&#x200B;を指定します。**名前**&#x200B;は`offloading_outbox`でなければなりません。
+1. ワーカーインスタンス上に&#x200B;**レプリケーションエージェント**&#x200B;を作成します。（[レプリケーションエージェントのドキュメント](/help/sites-deploying/replication.md)を参照してください）任意の&#x200B;**タイトル**&#x200B;を指定します。**名前**&#x200B;は`offloading_outbox`にする必要があります。
 1. 以下のプロパティを使用してエージェントを作成します。
 
    | プロパティ | 値 |
@@ -315,7 +314,7 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
 以下のいずれかの方法を使用して、Experience Manager インスタンスの Sling ID を取得します。
 
-* Webコンソールを開き、「Sling Settings」でSling IDプロパティの値([http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings))を探します。 このメソッドは、インスタンスがまだトポロジに含まれていない場合に使用します。
+* Webコンソールを開き、Sling設定でSling IDプロパティの値を探します([http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings))。 この方法は、インスタンスがまだトポロジの一部でない場合に役立ちます。
 * インスタンスが既にトポロジの一部である場合は、トポロジブラウザーを使用します。
 
 ## DAM アセットの処理のオフロード  {#offloading-the-processing-of-dam-assets}
@@ -326,7 +325,7 @@ DAM で追加または更新されたアセットのバックグラウンド処�
 
 >[!CAUTION]
 >
->ワークフローのオフロードで使用する場合、ワークフローは一時的なものではありません。 例えば、アセットのオフロードに対して使用するときに DAM アセット更新ワークフローを一時的にすることはできません。ワークフローの一時的なフラグを設定/設定解除する方法については、[一時的なワークフロー](/help/assets/performance-tuning-guidelines.md#workflows)を参照してください。
+>ワークフローのオフロードと共に使用する場合、ワークフローは一時的ではありません。 例えば、アセットのオフロードに対して使用するときに DAM アセット更新ワークフローを一時的にすることはできません。ワークフローの一時的なフラグを設定/設定解除するには、[一時的なワークフロー](/help/assets/performance-tuning-guidelines.md#workflows)を参照してください。
 
 以下の手順では、次の特徴を持つオフロードトポロジを想定しています。
 
@@ -335,7 +334,7 @@ DAM で追加または更新されたアセットのバックグラウンド処�
 
 1. 各 Experience Manager インスタンスで、ルート Topology Connector を指すように Discovery Service を設定します（[トポロジメンバーシップの設定](#title4)を参照）。
 1. 接続するインスタンスが許可リストに含まれるように、ルート Topology Connector を設定します。
-1. 「ブラウザーのオフロード」を開き、ユーザーが操作してDAMアセットをアップロードまたは変更するインスタンスの`com/adobe/granite/workflow/offloading`トピックを無効にします。
+1. オフロードブラウザーを開き、DAMアセットのアップロードまたは変更の操作を行うインスタンスの`com/adobe/granite/workflow/offloading`トピックを無効にします。
 
    ![chlimage_1-116](assets/chlimage_1-116.png)
 
@@ -352,7 +351,6 @@ DAM で追加または更新されたアセットのバックグラウンド処�
 
 このページで説明した詳細以外に、以下を参照することもできます。
 
-* Java APIを使用したジョブおよびジョブコンシューマの作成について詳しくは、[オフロード用のジョブの作成と消費](/help/sites-developing/dev-offloading.md)を参照してください。
+* Java APIを使用したジョブおよびジョブコンシューマーの作成について詳しくは、[オフロード用のジョブの作成と使用](/help/sites-developing/dev-offloading.md)を参照してください。
 * アセットのオフロードの一般的なガイドラインおよびベストプラクティスについては、[アセットのオフロードの一般的なガイドラインおよびベストプラクティス](/help/assets/assets-offloading-best-practices.md#general-guidance-and-best-practices-for-asset-offloading)を参照してください。
 * オフロードエージェントの自動作成を無効にする方法については、[自動エージェント管理の無効化](/help/assets/assets-offloading-best-practices.md#turning-off-automatic-agent-management)を参照してください。
-
