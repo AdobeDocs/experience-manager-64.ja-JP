@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
 products: SG_EXPERIENCEMANAGER/6.4/FORMS, SG_AEMFORMS
 discoiquuid: 70559a94-42ea-411a-a32f-5f38bc17ff96
-translation-type: tm+mt
-source-git-commit: a172fc329a2f73b563690624dc361aefdcb5397e
+exl-id: 5392027c-eb5a-49c4-bf9b-fe7d399ae0a1
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 100%
 
 ---
-
 
 # Microsoft SQL Server データベース：設定の最適なチューニング {#microsoft-sql-server-database-fine-tuning-the-configuration}
 
