@@ -1,19 +1,18 @@
 ---
-title: アセットパフォーマンス調整ガイド
+title: Assetsパフォーマンスチューニングガイド
 description: AEM Assets のボトルネックを解消し、パフォーマンスを最適化するための、AEM の設定、ハードウェア、ソフトウェアおよびネットワークコンポーネントの変更に関する留意点。
 contentOwner: AG
-feature: Asset Management
+feature: アセット管理
 role: Architect,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: 6c1bff46-f9e0-4638-9374-a9e820d30534
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '3210'
+source-wordcount: '3208'
 ht-degree: 82%
 
 ---
 
-
-# アセットパフォーマンス調整ガイド{#assets-performance-tuning-guide}
+# アセットパフォーマンスチューニングガイド{#assets-performance-tuning-guide}
 
 Adobe Experience Manager (AEM) Assets のセットアップには、数多くのハードウェア、ソフトウェアおよびネットワークコンポーネントが含まれています。導入のシナリオによっては、パフォーマンス上のボトルネックを排除するために、ハードウェア、ソフトウェアおよびネットワークコンポーネントに対して特殊な設定変更が必要になる場合があります。
 
@@ -31,7 +30,7 @@ AEM は数々のプラットフォームでサポートされていますが、L
 
 ### 一時フォルダー  {#temp-folder}
 
-アセットのアップロード時間を短縮するには、Java 一時ディレクトリに高性能ストレージを使用します。Linux および Windows の場合は、RAM ドライブまたは SSD を使用できます。クラウドベースの環境では、同等の高速ストレージタイプを使用できます。例えば、AmazonEC2では、一時フォルダーに[Ephemeralドライブ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html)ドライブを使用できます。
+アセットのアップロード時間を短縮するには、Java 一時ディレクトリに高性能ストレージを使用します。Linux および Windows の場合は、RAM ドライブまたは SSD を使用できます。クラウドベースの環境では、同等の高速ストレージタイプを使用できます。例えば、Amazon EC2では、[エフェメラルドライブ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html)を一時フォルダーに使用できます。
 
 サーバーに十分なメモリがあるという前提で、RAM ドライブを設定します。Linux の場合、8GB RAM ドライブを作成するには、次のコマンドを実行します。
 
@@ -80,7 +79,7 @@ AEM 6.1 SP1 以降で `sling:osgiConfig` ノードを使用してこのプロパ
 
 ### 共有データストア  {#shared-data-stores}
 
-S3 または共有ファイルデータストアの実装は、ディスク領域の節約と大規模な実装におけるネットワークスループットの向上に役立ちます。共有データストアの使用の長所と短所について詳しくは、[『アセットサイズ設定ガイド](assets-sizing-guide.md)』を参照してください。
+S3 または共有ファイルデータストアの実装は、ディスク領域の節約と大規模な実装におけるネットワークスループットの向上に役立ちます。共有データストアの使用に関する長所と短所について詳しくは、[Assetsサイジングガイド](assets-sizing-guide.md)を参照してください。
 
 ### S3 データストア {#s-data-store}
 
@@ -109,7 +108,7 @@ accessKey=<snip>
 
 ## ネットワークの最適化 {#network-optimization}
 
-多くの企業には HTTP トラフィックをスニッフィングするファイアウォールがあり、ファイルのアップロードに干渉しファイルを破損するので、HTTPS を有効にすることをお勧めします。サイズの大きなファイルのアップロードについては、Wi-Fi ネットワークでは簡単に飽和するおそれがあるので、必ず有線でネットワークに接続してください。ネットワークのボトルネックの特定に関するガイドラインについては、[『Assets Sizing Guide](assets-sizing-guide.md)』を参照してください。 ネットワークトポロジを分析してネットワークのパフォーマンスを評価するには、[Assets のネットワークに関する考慮事項](assets-network-considerations.md)を参照してください。
+多くの企業には HTTP トラフィックをスニッフィングするファイアウォールがあり、ファイルのアップロードに干渉しファイルを破損するので、HTTPS を有効にすることをお勧めします。サイズの大きなファイルのアップロードについては、Wi-Fi ネットワークでは簡単に飽和するおそれがあるので、必ず有線でネットワークに接続してください。ネットワークのボトルネックを特定する際のガイドラインについては、[Assetsサイジングガイド](assets-sizing-guide.md)を参照してください。 ネットワークトポロジを分析してネットワークのパフォーマンスを評価するには、[Assets のネットワークに関する考慮事項](assets-network-considerations.md)を参照してください。
 
 第一に、ネットワークの最適化戦略は使用できる帯域幅や、AEM インスタンスに対する負荷によって変わります。ファイアウォールやプロキシなどの一般的な設定オプションは、ネットワークのパフォーマンスの改善に役立ちます。留意点は次のとおりです。
 
@@ -153,7 +152,7 @@ accessKey=<snip>
 
 デフォルトでは、AEM は最大でサーバー上のプロセッサーと同じ数の並列ジョブを実行できます。この設定の問題点は、負荷が高い期間ではすべてのプロセッサーが「DAM アセットの更新」ワークフローに占有されるので、UI の応答が遅くなり、AEM がサーバーのパフォーマンスや安定性を保護するその他の処理を実行できなくなる点です。次の手順を実行して、この値をサーバーで使用できるプロセッサーの半分の値にすることをお勧めします。
 
-1. AEM作成者で、[http://localhost:4502/system/console/slingevent](http://localhost:4702/system/console/slingevent)に移動します。
+1. AEMオーサーで、[http://localhost:4502/system/console/slingevent](http://localhost:4702/system/console/slingevent)に移動します。
 1. 実装に関連する各ワークフローキュー（Granite の一時的なワークフローキューなど）で「編集」をクリックします。
 1. 並列ジョブの最大数の値を変更し、「保存」をクリックします。
 
@@ -161,13 +160,13 @@ accessKey=<snip>
 
 ### オフロード {#offloading}
 
-ビデオトランスコードなど、リソースを大量に消費する大量のワークフローまたはワークフローの場合は、DAM更新アセットワークフローを2番目の作成者インスタンスにオフロードすることがあります。 オフロードに関するよくある問題点は、ワークフローの処理のオフロードによって節約される負荷はすべて、インスタンス間で互いにコンテンツをレプリケートするコストによって相殺される点です。
+ビデオトランスコーディングなど、リソースを大量に消費するワークフローやワークフローの場合は、DAMアセットの更新ワークフローを2番目のオーサーインスタンスにオフロードできます。 オフロードに関するよくある問題点は、ワークフローの処理のオフロードによって節約される負荷はすべて、インスタンス間で互いにコンテンツをレプリケートするコストによって相殺される点です。
 
 AEM 6.2 と AEM 6.1 の機能パックでは、バイナリなしのレプリケーションでオフロードを実行できます。このモデルでは、オーサーインスタンスが共通のデータストアを共有し、転送のレプリケーションを通じて互いにメタデータの送信のみをおこないます。このアプローチは共有ファイルデータストアに適していますが、S3 データストアでは問題が発生することがあります。背景でのスレッドの書き込みは遅延を誘発するおそれがあるので、オフロードジョブが開始する前にアセットがデータストアに書き込まれないこともあります。
 
 ### DAM アセットの更新設定 {#dam-update-asset-configuration}
 
-DAM Update Assetワークフローには、Dynamic MediaクラシックPTIFFの生成やInDesign Server統合など、タスク用に設定されたすべての手順が含まれています。 ただし、大多数のユーザーにとってこれらの手順のうちのいくつかは不要です。アドビでは「DAM アセットの更新」ワークフローモデルのカスタムコピーを作成し、不要な手順はすべて削除することをお勧めします。この場合、DAM アセットの更新のランチャーを更新して新しいモデルを参照するようにします。
+DAMアセットの更新ワークフローには、Dynamic Media Classic PTIFFの生成やInDesign Serverの統合など、タスク用に設定されたすべての手順が含まれます。 ただし、大多数のユーザーにとってこれらの手順のうちのいくつかは不要です。アドビでは「DAM アセットの更新」ワークフローモデルのカスタムコピーを作成し、不要な手順はすべて削除することをお勧めします。この場合、DAM アセットの更新のランチャーを更新して新しいモデルを参照するようにします。
 
 >[!NOTE]
 >
@@ -185,7 +184,7 @@ DAM Update Assetワークフローには、Dynamic MediaクラシックPTIFFの�
 
 多くの Sites のお客様はリクエストされた時点で画像のサイズを変更および切り抜く画像サーブレットを実装しています。これにより、パブリッシュインスタンスにさらに負荷がかけられます。ただし、これらの画像をキャッシュできる限り、問題を減らすことができます。
 
-別のアプローチは、Dynamic Mediaクラシック技術を使用して、画像操作を完全にやめることです。 さらに、AEMインフラストラクチャのレンディションの生成責任を引き継ぐだけでなく、公開層全体を引き継ぐBrand Portalを展開できます。
+別のアプローチは、Dynamic Media Classicテクノロジーを使用して画像の操作を完全にオフにすることです。 さらに、AEMインフラストラクチャのレンディション生成の責任を引き継ぐだけでなく、パブリッシュ層全体を引き継ぐBrand Portalをデプロイすることもできます。
 
 #### ImageMagick {#imagemagick}
 
@@ -206,7 +205,7 @@ DAM Update Assetワークフローには、Dynamic MediaクラシックPTIFFの�
 </policymap>
 ```
 
-さらに、*configure.xml*&#x200B;ファイル(または環境変数`MAGIC_TEMPORARY_PATH`を設定)内のImageMagickの一時フォルダーのパスを、十分な容量とIOPSを持つディスクパーティションに設定します。
+さらに、*configure.xml*&#x200B;ファイル内のImageMagickの一時フォルダーのパスを（または環境変数`MAGIC_TEMPORARY_PATH`を設定して）、十分な容量とIOPSを持つディスクパーティションに設定します。
 
 >[!CAUTION]
 >
@@ -214,9 +213,9 @@ DAM Update Assetワークフローには、Dynamic MediaクラシックPTIFFの�
 
 >[!NOTE]
 >
->ImageMagick `policy.xml`ファイルと`configure.xml`ファイルは、`/etc/ImageMagick/`ではなく`/usr/lib64/ImageMagick-*/config/`にあります。 設定ファイルの場所について詳しくは、[ImageMagickのドキュメント](https://www.imagemagick.org/script/resources.php)を参照してください。
+>ImageMagickの`policy.xml`ファイルと`configure.xml`ファイルは、`/etc/ImageMagick/`ではなく`/usr/lib64/ImageMagick-*/config/`の下にあります。 設定ファイルの場所について詳しくは、[ImageMagickのドキュメント](https://www.imagemagick.org/script/resources.php)を参照してください。
 
-Adobe Managed Services(AMS)でAEMを使用している場合は、大量のPSDまたはPSBファイルを処理する予定の場合は、Adobeカスタマーケアにお問い合わせください。 30000 x 23000ピクセルを超える高解像度のPSBファイルは、Experience Managerで処理されない場合があります。
+Adobe Managed Services(AMS)でAEMを使用している場合、大量のPSDまたはPSBファイルを処理する予定がある場合は、Adobeカスタマーケアにお問い合わせください。 Experience Managerは、30000 x 23000ピクセルを超える高解像度のPSBファイルを処理できない場合があります。
 
 <!-- 
 
@@ -294,7 +293,7 @@ Sites の実装などで、アセットを多数のパブリッシュインス�
 
 1. レプリケーションのチェーン先に使用するパブリッシュインスタンスを選択します。
 1. そのパブリッシュインスタンスで、他のパブリッシュインスタンスを指すレプリケーションエージェントを追加します。
-1. これらの各複製エージェントで、**[!UICONTROL トリガー]**&#x200B;タブの&#x200B;**[!UICONTROL 受信時]**&#x200B;を有効にします
+1. これらのレプリケーションエージェントのそれぞれで、**[!UICONTROL 「トリガー」]**&#x200B;タブの「**[!UICONTROL 受信]**」を有効にします
 
 >[!NOTE]
 >
@@ -304,7 +303,7 @@ Sites の実装などで、アセットを多数のパブリッシュインス�
 
 システムインデックスの更新が含まれている場合が多いので、最新のサービスパックやパフォーマンス関連のホットフィックスを実装してください。AEM のバージョンに応じて適用できるインデックスの最適化については、[パフォーマンスチューニングヒント | 6.x](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html) を参照してください。
 
-頻繁に実行するクエリにカスタムインデックスを作成します。詳しくは、[スロークエリの分析手法（英語）](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html)と[カスタムインデックスの作成](/help/sites-deploying/queries-and-indexing.md)を参照してください。クエリとインデックスのベストプラクティスに関するその他の洞察については、[クエリとインデックスのベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md)を参照してください。
+頻繁に実行するクエリにカスタムインデックスを作成します。詳しくは、[スロークエリの分析手法（英語）](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html)と[カスタムインデックスの作成](/help/sites-deploying/queries-and-indexing.md)を参照してください。クエリとインデックスのベストプラクティスに関する追加のインサイトについては、[クエリとインデックスに関するベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md)を参照してください。
 
 ### Lucene Index の設定 {#lucene-index-configurations}
 
@@ -313,22 +312,22 @@ Oak インデックス設定を最適化して、AEM Assets のパフォーマ�
 LuceneIndexProvider 設定を更新します。
 
 1. /system/console/configMgrorg.apache.jackrabbit.oak.plugins.index.lucene.LuceneIndexProviderService に移動します。
-1. AEM 6.2より前のバージョンでは、**[!UICONTROL CopyOnRead、CopyOnWrite、およびプリフェッチインデックスファイル]**&#x200B;を有効にします。これらの値は、AEM 6.2以降のバージョンでは、デフォルトで有効になっています。
+1. AEM 6.2より前のバージョンで、 **[!UICONTROL CopyOnRead 、 CopyOnWrite 、およびプリフェッチインデックスファイル]**&#x200B;を有効にします。これらの値は、AEM 6.2以降のバージョンではデフォルトで有効になっています。
 
 インデックス設定を更新してインデックス再構築時間を短縮します。
 
 1. CRXDe /crx/de/index.jsp を開き、管理者ユーザーとしてログインします。
 1. /oak:index/lucene を探します。
-1. 追加&#x200B;**[!UICONTROL excludedPaths]**&#x200B;という名前の文字列[]プロパティ。値は「/var」、「/etc/workflow/instances」、「/etc/replication」です。
+1. 値&quot;/var&quot;、&quot;/etc/workflow/instances&quot;、&quot;/etc/replication&quot;を持つString[]プロパティ&#x200B;**[!UICONTROL excludedPaths]**&#x200B;を追加します。
 1. /oak:index/damAssetLucene を探します。
-1. 追加&#x200B;**[!UICONTROL includedPaths]**&#x200B;という名前の文字列[]プロパティで、1つの値「/content/dam」が含まれます
+1. **[!UICONTROL includedPaths]**&#x200B;という名前のString[]プロパティを追加し、値&quot;/content/dam&quot;を1つ追加します。
 1. 保存
 
 （AEM 6.1 および 6.2 のみ）ntBaseLucene インデックスを更新して、アセットの削除および移動のパフォーマンスを向上させます。
 
 1. */oak:index/ntBaseLucene/indexRules/nt:base/properties* を参照します。
-1. 追加&#x200B;*/oak:index/ntBaseLucene/indexRules/nt:base/properties*&#x200B;の下の2つのnt:unstructuredノード&#x200B;**[!UICONTROL slingResource]**&#x200B;と&#x200B;**[!UICONTROL damResolvedPath]**
-1. ノード上で以下のプロパティを設定します（orderedプロパティとpropertyIndexプロパティのタイプは&#x200B;*Boolean*&#x200B;です）。
+1. 2つのnt:unstructuredノード&#x200B;**[!UICONTROL slingResource]**&#x200B;と&#x200B;**[!UICONTROL damResolvedPath]**&#x200B;を&#x200B;*/oak:index/ntBaseLucene/indexRules/nt:base/properties*&#x200B;の下に追加します。
+1. ノード上で以下のプロパティを設定します（ orderedプロパティとpropertyIndexプロパティの型は&#x200B;*Boolean*&#x200B;です）。
 
    slingResource
 
@@ -351,18 +350,18 @@ LuceneIndexProvider 設定を更新します。
    type=&quot;String&quot;
 
 1. /oak:index/ntBaseLucene ノードで、プロパティ `reindex=true` を設定します。
-1. 「**[!UICONTROL すべて保存]**」をクリックします
+1. 「**[!UICONTROL すべて保存]**」をクリックします。
 1. error.logを監視して、インデックス作成が完了したかどうかを確認します。
 
    インデックスの再インデックスが完了しました：[/oak:index/ntBaseLucene]
 
 1. CRXDe で /oak:index/ntBaseLucene ノードを更新すると reindex プロパティが false に戻るので、インデックス構築が完了したかどうかを確認することもできます。
-1. インデックス作成が完了したら、CRXDeに戻り、**[!UICONTROL type]**&#x200B;プロパティを無効に設定します
+1. インデックス作成が完了したら、CRXDeに戻り、これら2つのインデックスで&#x200B;**[!UICONTROL type]**&#x200B;プロパティをdisabledに設定します
 
    * */oak:index/slingResource*
    * */oak:index/damResolvedPath*
 
-1. 「**[!UICONTROL すべて保存]**」をクリックします
+1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
 Lucene テキスト抽出の無効化：
 
@@ -399,9 +398,9 @@ AEM では、サイズの大きなファイルに関連する既知の問題が�
 * ネットワークのベンチマークツールを使用する
 * ディスパッチャーに対してテストする
 
-### AEM インスタンスのテスト  {#aem-instance-testing}
+### AEM インスタンスのテスト {#aem-instance-testing}
 
-CPU を効率的に使用し、負荷を分割することで遅延を最小限に抑え、高いスループットを実現するには、AEM インスタンスのパフォーマンスを定期的に監視してください。具体的には、次のことを実行します。
+CPU を効率的に使用し、負荷を分割することで遅延を最小限に抑え、高いスループットを実現するには、AEM インスタンスのパフォーマンスを定期的に監視してください。具体的には、以下のようになります。
 
 * AEM インスタンスに対して負荷テストを実行する
 * アップロードのパフォーマンスと UI の応答性を監視する
@@ -412,13 +411,13 @@ CPU を効率的に使用し、負荷を分割することで遅延を最小限�
 * サイズの大きなアセットのアップロードには有線接続を使用する.
 * 最適な JVM パラメーターを設定する.
 * ファイルシステムデータストアまたは S3 データストアを設定する.
-* サブアセットの生成を無効にします。 この機能が有効な場合、AEMワークフローは、複数ページのアセット内の各ページに対して個別のアセットを作成します。 これらの各ページは、追加のディスク領域を消費し、バージョン管理や追加のワークフロー処理が必要な個々のアセットです。 別々のページが必要ない場合は、サブアセットの生成とページ抽出のアクティビティを無効にします。
+* サブアセットの生成を無効にします。 この機能が有効な場合、AEMワークフローは複数ページのアセットの各ページに個別のアセットを作成します。 これらの各ページは、追加のディスク領域を消費し、バージョン管理と追加のワークフロー処理が必要な個々のアセットです。 別々のページが必要ない場合は、サブアセットの生成およびページの抽出アクティビティを無効にします。
 * 一時的なワークフローを有効化する.
 * Granite のワークフローキューを調整して同時に実行されるジョブ数を制限する.
 * ImageMagick を設定してリソースの消費を制限する.
 * DAMアセットの更新ワークフローから不要な手順を削除します。
 * ワークフローとバージョンのパージを設定する.
 * Luceneインデックスの設定を最適化します。
-* 最新のサービスパックとホットフィックスでインデックスを最適化する。利用可能なインデックスのその他の最適化については、Adobeカスタマーケアにお問い合わせください。
+* 最新のサービスパックとホットフィックスでインデックスを最適化する。その他のインデックスの最適化については、Adobeカスタマーケアにお問い合わせください。
 * `guessTotal`を使用して、クエリのパフォーマンスを最適化します。
-* ファイルの内容からファイルの種類を検出するようにAEMを設定する場合([!UICONTROL AEM Webコンソール]で[!UICONTROL Day CQ DAM MIME Type Service]を設定する)、操作がリソースを大量に消費するため、ピークでない時間帯に多くのファイルを一括アップロードします。
+* ファイルの内容からファイルタイプを検出するようにAEMを設定する場合([!UICONTROL AEM Webコンソール]で[!UICONTROL Day CQ DAM Mime Type Service]を設定)、操作がリソースを消費するので、ピーク以外の時間に多くのファイルを一括でアップロードします。
