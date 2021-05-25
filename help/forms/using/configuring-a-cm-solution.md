@@ -1,22 +1,21 @@
 ---
 title: Correspondence Management Solution の設定
 seo-title: Correspondence Management Solution の設定
-description: オーサーインスタンスバージョンの復元用にオーサーインスタンスURLを定義し、パブリックインスタンスアクティベーションマネージャー用に発行インスタンスURLを定義する方法について説明します。
-seo-description: オーサーインスタンスバージョンの復元用にオーサーインスタンスURLを定義し、パブリックインスタンスアクティベーションマネージャー用に発行インスタンスURLを定義する方法について説明します。
+description: オーサーインスタンスバージョンの復元用にオーサーインスタンスURLを定義し、パブリックインスタンスアクティベーションマネージャー用にパブリッシュインスタンスURLを定義する方法について説明します。
+seo-description: オーサーインスタンスバージョンの復元用にオーサーインスタンスURLを定義し、パブリックインスタンスアクティベーションマネージャー用にパブリッシュインスタンスURLを定義する方法について説明します。
 uuid: 76b25004-fe47-44d7-9bed-7c0fd963306b
 topic-tags: correspondence-management
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 186ca75c-638b-4057-826e-cd5d56aa0397
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: a062957d-a526-4c4b-bbc5-0cda8ab007a3
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 66%
 
 ---
-
 
 # Correspondence Management Solution の設定 {#configuring-a-correspondence-management-solution}
 
@@ -26,7 +25,7 @@ ht-degree: 66%
 
 1. *https://:&lt;PublishHost>:&lt;PublishPort>/lc/system/console/configMgr*&#x200B;に移動します。 OSGi Management Console のユーザー資格情報を使ってログインします。デフォルトの資格情報は、admin/admin です。
 1. 「**[!UICONTROL com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name]**」設定の横にある「**[!UICONTROL 編集]**」アイコンをクリックします。
-1. **[!UICONTROL VersionRestoreManager作成者URL]**&#x200B;フィールドに、VersionRestoreManagerの作成者インスタンスのURLを指定します。
+1. **[!UICONTROL VersionRestoreManager Author URL]**&#x200B;フィールドに、VersionRestoreManagerのオーサーインスタンスのURLを指定します。
 
    **URL文字列**:
 
@@ -34,7 +33,7 @@ ht-degree: 66%
 
    >[!NOTE]
    >
-   >ロードバランサーによって前付けされる複数の作成者インスタンス（クラスター化）がある場合は、**[!UICONTROL VersionRestoreManager作成者URL]**&#x200B;フィールドにロードバランサーのURLを指定します。
+   >ロードバランサーで先頭に複数のオーサーインスタンス（クラスター化）がある場合は、**[!UICONTROL VersionRestoreManager Author URL]**&#x200B;フィールドにロードバランサーのURLを指定します。
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
