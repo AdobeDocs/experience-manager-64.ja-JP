@@ -8,9 +8,8 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
 exl-id: dd43de7b-8556-4e3f-9d90-14f0f5bd13e7
-feature: Configuration
+feature: 設定
 role: Administrator,Business Practitioner,Developer
-translation-type: tm+mt
 source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
 source-wordcount: '275'
@@ -24,14 +23,14 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->このドキュメントは、AEM に直接統合された Dynamic Media の機能について説明します。AEMに統合されたDynamic Mediaクラシックを使用している場合は、[Dynamic Mediaクラシック統合ドキュメント](/help/sites-administering/scene7.md)を参照してください。
+>このドキュメントは、AEM に直接統合された Dynamic Media の機能について説明します。AEMに統合されたDynamic Media Classicを使用している場合は、[Dynamic Media Classic統合ドキュメント](/help/sites-administering/scene7.md)を参照してください。
 >
->Dynamic Mediaと共にDynamic Mediaクラシックと統合されたAEMを使用したい場合は、[デュアル使用シナリオ](/help/sites-administering/scene7.md#dual-use-scenario)を参照してください。
+>Dynamic Mediaと共にDynamic Media Classicと統合されたAEMを使用する場合は、 [デュアルユースシナリオ](/help/sites-administering/scene7.md#dual-use-scenario)を参照してください。
 
 Dynamic Media の管理者には、次のトピックが参考になります。
 
-* [Dynamic Media-Scene7モードの設定](config-dms7.md) -Dynamic Mediaの新規顧客の場合は、この設定を使用します。
-* [Dynamic Mediaハイブリッドモードの設定](config-dynamic.md)  — 既存のDynamic Mediaのお客様向けアップグレードAEMの場合は、この設定を使用します。
+* [Dynamic Media - Scene7モードの設定](config-dms7.md)  -Dynamic Mediaを初めてお使いの場合は、この設定を使用します。
+* [Dynamic Media — ハイブリッドモードの設定](config-dynamic.md)  — 既存のDynamic Mediaのお客様がAEMをアップグレードする場合は、この設定を使用します。
 * [画像プリセットの管理](managing-image-presets.md)
 * [ビューアプリセットの管理](managing-viewer-presets.md)
 * [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
