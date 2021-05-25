@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 59b03638-7e1c-4cbd-bd37-671a16afa10f
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 7ce38ff8-7c21-4de5-b285-6d3e746ce458
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 70%
 
 ---
-
 
 # アプリケーションサーバーの Web サイト {#application-server-websites}
 
