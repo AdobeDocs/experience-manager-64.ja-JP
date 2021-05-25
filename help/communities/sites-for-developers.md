@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
-translation-type: tm+mt
-source-git-commit: 5e30bf76fd3304ed268c45cc8862a9c51c5d30f1
+exl-id: 2b26d937-4ebf-4a67-9715-a21c8fc45e1e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 64%
 
 ---
-
 
 # コミュニティサイトの基本事項  {#community-site-essentials}
 
@@ -27,9 +26,9 @@ ht-degree: 64%
 そうするには、次の手順を実行します。
 
 * カスタムテンプレートの作成
-* サイトテンプレートのデフォルトパスをオーバーレイ
-* オーバーレイ追加パスのカスタムテンプレート
-* `configuration`ノードに`page-template`プロパティを追加して、カスタムテンプレートを指定します
+* 既定のサイトテンプレートパスをオーバーレイ
+* オーバーレイパスにカスタムテンプレートを追加する
+* `page-template`プロパティを`configuration`ノードに追加して、カスタムテンプレートを指定します。
 
 **デフォルトのテンプレート**：
 
@@ -45,9 +44,9 @@ ht-degree: 64%
 
 **設定ノード**：
 
-/content/&lt;*コミュニティサイトのパス*>/&lt;*lang*/configuration
+/content/&lt;*コミュニティサイトのパス*/&lt;*lang*/configuration
 
-次に例を示します。/content/sites/engage/en/configuration
+例：/content/sites/engage/en/configuration
 
 >[!NOTE]
 >
@@ -59,14 +58,14 @@ ht-degree: 64%
 
 ### カスタムサイトテンプレートの例 {#custom-site-template-example}
 
-例えば、`vertical-sitepage.hbs`はサイトテンプレートで、バナーの下ではなく、ページの左下に垂直にメニューリンクを配置します。
+例えば、`vertical-sitepage.hbs`はサイトテンプレートで、メニューリンクをバナーの下に水平方向ではなく、ページの左側に垂直方向に配置します。
 
-[Get ](assets/vertical-sitepage.hbs)
-Fileオーバーレイフォルダー内にカスタムサイトテンプレートを配置します。
+[FilePlaceカス](assets/vertical-sitepage.hbs)
+タムサイトテンプレートをオーバーレイフォルダーに配置します。
 
 /**apps**/social/console/components/hbs/sitepage/**vertical-sitepage**.hbs
 
-設定ノードに`page-template`プロパティを追加して、カスタムテンプレートを特定します。
+設定ノードに`page-template`プロパティを追加して、カスタムテンプレートを識別します。
 
 /content/sites/sample/en/configuration
 
@@ -84,11 +83,11 @@ Fileオーバーレイフォルダー内にカスタムサイトテンプレー�
 
 UGC とカスタムコードはコミュニティサイトパッケージに含まれていないことに注意してください。
 
-UGCをエクスポートするには、GitHubで利用可能なオープンソース移行ツール[AEM CommunitiesUGC移行ツール](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)を使用します。
+UGCを書き出すには、GitHubで利用可能なオープンソース移行ツールである[AEM Communities UGC Migration Tool](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)を使用します。
 
 ## コミュニティサイトの削除 {#deleting-a-community-site}
 
-AEM Communities 6.3 Service Pack 1 以降では、コミュニティ／サイトコンソール内でコミュニティサイトにマウスポインターを置くと、サイトを削除アイコンが表示されます。開発中に、コミュニティサイトと開始を新規に削除したい場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次のアイテムが削除されます。
+AEM Communities 6.3 Service Pack 1 以降では、コミュニティ／サイトコンソール内でコミュニティサイトにマウスポインターを置くと、サイトを削除アイコンが表示されます。開発中にコミュニティサイトを削除して新規に開始したい場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次のアイテムが削除されます。
 
 * [UGC](#user-generated-content)
 * [ユーザーグループ](#community-user-groups)
@@ -99,16 +98,16 @@ AEM Communities 6.3 Service Pack 1 以降では、コミュニティ／サイト
 
 CRXDE を使用して、コミュニティに関連付けられている一意のサイト ID を識別するには、次の手順に従います。
 
-* `/content/sites/*<site name>*/en/rep:policy`など、サイトの言語ルートに移動します。
+* サイトの言語ルート（例：`/content/sites/*<site name>*/en/rep:policy`）に移動します。
 
-* `rep:principalName`を持つ`allow<#>`ノードを`rep:principalName = *community-enable-nrh9h-members*`の形式で探します
+* `rep:principalName`を持つ`allow<#>`ノードを、次の形式で検索します。 `rep:principalName = *community-enable-nrh9h-members*`
 
-* サイトIDは`rep:principalName`の3番目のコンポーネントです
+* サイトIDは、`rep:principalName`の3番目のコンポーネントです。
 例えば、 
 `rep:principalName = community-enable-nrh9h-members`
 
    * **サイト名** = *enable*
-   * **サイトID** =  *nrh9h*
+   * **サイトID**  =  *nrh9h*
    * **一意のサイト ID** = *enable-nrh9h*
 
 ### ユーザー生成コンテンツ {#user-generated-content}
@@ -129,19 +128,19 @@ Github から communities-srp-tools プロジェクトを取得します。
 
 すべてのオーサーインスタンスおよびパブリッシュインスタンスで、[セキュリティコンソール](../../help/sites-administering/security.md)から、以下に該当する[ユーザーグループ](users.md)を検索して削除します。
 
-* 先頭に`community`が付く
-* その後に[一意のサイトID](#community-unique-site-id)が続きます
+* 先頭に`community`が付きます。
+* [一意のサイトID](#community-unique-site-id)が続きます。
 
-例： `community-engage-x0e11-members`
+（例：`community-engage-x0e11-members`）。
 
 ### イネーブルメントアセット {#enablement-assets}
 
 メインコンソールから、次の手順に従います。
 
-* **[!UICONTROL アセット]**&#x200B;を選択
+* **[!UICONTROL アセット]**&#x200B;を選択します。
 * **[!UICONTROL 選択]**&#x200B;モードに入ります
-* [一意のサイトID](#community-unique-site-id)を使用して名前を付けたフォルダーを選択
-* 「**[!UICONTROL 削除]**」を選択します（「**[!UICONTROL 詳細情報…」を選択する必要がある場合があります）。]**)
+* [一意のサイトID](#community-unique-site-id)を持つという名前のフォルダーを選択します。
+* 「**[!UICONTROL 削除]**」を選択します（場合によっては、「**[!UICONTROL 詳細…」から選択する必要があります）。]**)
 
 ### データベースレコード {#database-records}
 
