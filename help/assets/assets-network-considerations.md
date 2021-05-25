@@ -2,16 +2,15 @@
 title: Assets のネットワークに関する考慮事項
 description: AEM Assets のデプロイメントを設計する際のネットワークの考慮事項について説明します。
 contentOwner: AG
-feature: Developer Tools
+feature: 開発者ツール
 role: Architect,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: f8f9d86f-a5e3-46ac-8d96-c2e44eac9c93
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1019'
-ht-degree: 97%
+source-wordcount: '1017'
+ht-degree: 98%
 
 ---
-
 
 # Assets のネットワークに関する考慮事項 {#assets-network-considerations}
 
@@ -76,7 +75,7 @@ Dispatcher では、100 Mbps の接続が 2 つのエンティティ（外部と
 
 AEM インスタンスでは、1 Gbps の接続が複数のサービスで共有されています。ネットワークトポロジの観点では、これは単一のチャネルを異なるサービスで共有することと同じです。
 
-クライアントデバイスから AEM インスタンスへのネットワークを確認すると、最も混雑の激しい渋滞地点は 10 メガビットの企業ファイアウォールのスロットルのように見えます。これらの値は、[アセットサイズ変更ガイド](assets-sizing-guide.md)のサイズ計算ツールで使用して、ユーザーエクスペリエンスを決定できます。
+クライアントデバイスから AEM インスタンスへのネットワークを確認すると、最も混雑の激しい渋滞地点は 10 メガビットの企業ファイアウォールのスロットルのように見えます。[アセットのサイズ設定ガイド](assets-sizing-guide.md)のサイズ計算ツールでこれらの値を使用して、ユーザーエクスペリエンスを決定できます。
 
 ## AEM ワークフローの定義済みのワークフロー {#defined-workflows-of-the-aem-instance}
 
@@ -101,4 +100,3 @@ AEM インスタンスでは、1 Gbps の接続が複数のサービスで共有
 アセットワークフローの定義に関するお客様の例は次のとおりです。
 
 ![chlimage_1-357](assets/chlimage_1-357.png)
-
