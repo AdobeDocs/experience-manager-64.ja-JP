@@ -2,16 +2,15 @@
 title: ' [!DNL Adobe Experience Manager] でのデジタルアセットのメタデータ管理'
 description: メタデータのタイプと、 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager]  でメタデータに基づいてアセットを自動的に整理および処理できる方法について説明します。
 contentOwner: AG
-feature: Tagging, Metadata
+feature: タグ付け、メタデータ
 role: Architect, Leader
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: 05bbf89a-4cf5-49bb-aea8-a585c641eda2
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1399'
+source-wordcount: '1397'
 ht-degree: 98%
 
 ---
-
 
 # デジタルアセットのメタデータの管理 {#managing-metadata-for-digital-assets}
 
@@ -23,7 +22,7 @@ ht-degree: 98%
 
 ## メタデータが必要な理由 {#why-we-need-metadata}
 
-メタデータとは、データに関する情報のことです。この点に関して、データは、例えば画像などのデジタルアセットを指します。メタデータは、効率的なアセット管理をおこなうために重要です。
+メタデータとは、データに関する情報のことです。この点に関して、データは、例えば画像などのデジタルアセットを指します。メタデータは、効率的なアセット管理を行うために重要です。
 
 メタデータは、対象のアセットで使用できるすべてのデータのコレクションですが、次のようなデータはそのアセットに含まれているとは限りません。メタデータの例を以下に示します。
 
@@ -51,7 +50,7 @@ ht-degree: 98%
 * 管理しやすくなる - 一連の同じプロパティを持つアセットを容易に検索し、これらのアセットに変更を適用できます。
 * 完全 - アセットは、より多くの情報とコンテキスト、より多くのメタデータを保持します。
 
-したがって、[!DNL Assets] ではデジタルアセットのメタデータの作成、管理およびやり取りをおこなう適切な方法を提供します。
+したがって、[!DNL Assets] ではデジタルアセットのメタデータの作成、管理およびやり取りを行う適切な方法を提供します。
 
 ## メタデータのタイプ {#types-of-metadata}
 
@@ -99,7 +98,7 @@ Exchangeable image file format（Exif）は、デジタル写真で最も一般�
 
 Exif の主な制限は、BMP、GIF、PNG などの一般的な画像ファイル形式ではサポートされないことです。
 
-Exif で定義されるメタデータフィールドは、通常、テクニカルなもので、記述メタデータ管理では使用が制限されています。このため、[!DNL Experience Manager Assets]オファーはExifプロパティを[共通のメタデータスキーマ](metadata-schemas.md)に、および[XMP](xmp-writeback.md)にマッピングします。
+Exif で定義されるメタデータフィールドは、通常、テクニカルなもので、記述メタデータ管理では使用が制限されています。このため、[!DNL Experience Manager Assets]は、Exifプロパティの[共通のメタデータスキーマ](metadata-schemas.md)と[XMP](xmp-writeback.md)へのマッピングを提供します。
 
 ### その他のメタデータ {#other-metadata}
 
