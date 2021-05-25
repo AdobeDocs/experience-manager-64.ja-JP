@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 8c7e5667-14c5-40f3-968a-c574b04671e3
-translation-type: tm+mt
-source-git-commit: da7f86f36de0688ebe234d813959000068ef67ff
+exl-id: a89cf964-cc9f-46d7-afd8-150d48948513
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2218'
-ht-degree: 93%
+ht-degree: 94%
 
 ---
-
 
 # AEM タッチ操作対応 UI の概念{#concepts-of-the-aem-touch-enabled-ui}
 
@@ -26,7 +25,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->タッチ対応UIはAEMの標準UIですが、クラシックUIは引き続きサポートされます。
+>タッチ操作対応UIはAEMの標準UIですが、クラシックUIは引き続きサポートされます。
 
 タッチ操作対応 UI は以下で構成されます。
 
@@ -78,7 +77,7 @@ ht-degree: 93%
 * 組み込みのテスト
 * ボトムアップ設計（これらの原則がすべての要素およびコンポーネントに確実に適用されます）
 
-タッチ操作対応UI構造の詳細については、「[AEM Touch-Enabled UI](/help/sites-developing/touch-ui-structure.md)の構造」を参照してください。
+タッチ操作対応UIの構造の詳しい概要については、記事[AEMタッチ操作対応UIの構造](/help/sites-developing/touch-ui-structure.md)を参照してください。
 
 ## AEM テクノロジースタック {#aem-technology-stack}
 
@@ -210,7 +209,7 @@ sling コンポーネントのコレクションによって形成され、作�
 
 ### Granite UI 基盤コンポーネント  {#granite-ui-foundation-components}
 
-[Granite UI 基盤コンポーネント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)は、UI を構築するために必要な基本の構築ブロックを提供します。次に例を示します。
+[Granite UI 基盤コンポーネント](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)は、UI を構築するために必要な基本の構築ブロックを提供します。次に例を示します。
 
 * ボタン
 * ハイパーリンク
@@ -376,7 +375,7 @@ HTML 要素の多くは、ポップアップメニューの表示／非表示な
 プラグインは次のいずれかです。
 
 * 特定の DOM 要素に作用するように設計されています。例えば、ダイアログプラグインは、`DIV class=dialog` を検索することを想定しています。
-* 自然の中で一般的です 例えば、レイアウトマネージャーは`DIV`要素または`LI`要素の任意のリストのレイアウトを提供します
+* 本質的には汎用的です。 例えば、レイアウトマネージャーは、`DIV`要素または`LI`要素のリスト用のレイアウトを提供します
 
 プラグインの動作は、次のいずれかの方法でパラメーターを使用してカスタマイズできます。
 
@@ -385,10 +384,10 @@ HTML 要素の多くは、ポップアップメニューの表示／非表示な
 
 どのプラグインについても開発者がベストアプローチを選択できますが、経験則として以下を使用します。
 
-* `data-*` 属性を使用します。例えば、列数を指定するには
+* `data-*` HTMLレイアウトに関連するオプションの属性。例えば、列数を指定するには、次のようにします。
 * API オプション／クラス - データに関連する機能の場合（表示する項目のリストを作成する場合など）
 
-フォーム検証を実装する場合も同じ概念を使用します。検証する要素の場合は、必要な入力フォームをカスタム`data-*`属性として指定する必要があります。 この属性を検証プラグインのオプションとして使用します。
+フォーム検証を実装する場合も同じ概念を使用します。要素を検証する場合、必要な入力フォームをカスタムの`data-*`属性として指定する必要があります。 この属性を検証プラグインのオプションとして使用します。
 
 >[!NOTE]
 >
@@ -406,7 +405,7 @@ HTML 要素の多くは、ポップアップメニューの表示／非表示な
 * 特定の DOM 要素に関連付けた jQuery プラグイン
 * `data-*`属性を使用した動作のカスタマイズ
 
-サンプルマークアップの抽出（data-amp;ast；として指定されたオプションに注意）属性):
+サンプルのマークアップの抽出(data-&amp;astとして指定されたオプションに注意してください。属性):
 
 ```xml
 <ul data-column-width="220" data-layout="card" class="cards">
@@ -512,4 +511,3 @@ HTML 要素プラグインおよびウィジェットはユーティリティラ
 実装:
 
 * jQuery プラグインまたは AMD 対応の JavaScript モジュール
-
