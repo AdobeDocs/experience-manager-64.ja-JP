@@ -2,16 +2,15 @@
 title: ビデオレンディション
 description: ビデオレンディション
 contentOwner: AG
-feature: Video,Renditions
+feature: ビデオ，レンディション
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: 9fc93034-e83a-42b5-901d-7867b4a850a8
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '223'
 ht-degree: 99%
 
 ---
-
 
 # ビデオレンディション {#video-renditions}
 
