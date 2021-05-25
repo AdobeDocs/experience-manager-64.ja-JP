@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
-translation-type: tm+mt
-source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
+exl-id: 407db3cf-8add-486b-8cf5-daeecc18bf30
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2203'
 ht-degree: 89%
 
 ---
-
 
 # バックアップおよび回復するファイル {#files-to-back-up-and-recover}
 
@@ -25,7 +24,7 @@ ht-degree: 89%
 バックアップと復旧に関して次の点を考慮してください。
 
 * データベースは、GDS および AEM リポジトリの前にバックアップを取る必要があります。
-* バックアップ用にクラスター環境でノードを停止する必要がある場合は、セカンダリノードがプライマリノードの前にシャットダウンされていることを確認してください。 そうしないと、クラスターまたはサーバー内で一貫性がなくなる可能性があります。また、プライマリノードは、セカンダリノードの前にライブにする必要があります。
+* バックアップのためにクラスター環境でノードを停止する必要がある場合は、プライマリノードの前にセカンダリノードをシャットダウンしてください。 そうしないと、クラスターまたはサーバー内で一貫性がなくなる可能性があります。また、プライマリノードは、セカンダリノードより前にライブにする必要があります。
 * クラスターの復旧操作では、アプリケーションサーバーはクラスター内の各ノードごとに停止する必要があります。
 
 ## グローバルドキュメントストレージディレクトリ  {#global-document-storage-directory}
@@ -59,7 +58,7 @@ GDS の場所をデフォルト以外の場所に変更した場合は、新し�
 
 管理コンソールの「コアシステム設定」、または Configuration Manager を使用して「データベースへのドキュメントの保存を有効にする」オプションを選択すると、AEM Forms ではスナップショットバックアップモードおよびローリングバックアップモードが許可されません。したがって、AEM Forms を使用してバックアップモードを管理する必要がなくなります。このオプションを使用する場合は、オプションを有効にした後、1 回のみ GDS をバックアップする必要があります。バックアップから AEM Forms を回復する場合、GDS のバックアップディレクトリの名前を変更したり GDS を復元したりする必要はありません。
 
-## AEM リポジトリ {#aem-repository}
+## AEM リポジトリ  {#aem-repository}
 
 AEM リポジトリ（crx-repository）は、AEM Forms のインストール時に crx-repository が設定された場合に作成されます。crx-repository ディレクトリの場所は、AEM Forms のインストールプロセス中に決まります。AEM Forms における AEM Forms データの一貫性を保つために、データベースと GDS と一緒に AEM リポジトリのバックアップと復旧が必要です。AEM リポジトリには、Correspondence Management Solution、Forms Manager および AEM Forms Workspace のデータが含まれます。
 
@@ -143,7 +142,7 @@ MySQLAdmin を使用するか Windows で INI ファイルを変更して、MySQ
 >
 >`binlog_format=mixed log-bin=logname`
 
-mysqldump ユーティリティを使用して、完全なデータベースバックアップを取得できます。完全バックアップは必要ですが、その実行が容易ではない場合があります。完全バックアップによって大量のバックアップファイルが生成され、処理に時間がかかります。増分バックアップを実行するには、前のセクションで説明したように、- `log-bin`オプションを使用してサーバーを開始します。 MySQL サーバーが再起動するたびに、現在のバイナリログへの書き込みが停止し、新しいログが作成され、以降はそのログが現在のバイナリログになります。`FLUSH LOGS SQL`コマンドを使用して手動でスイッチを強制できます。 最初の完全バックアップ後の増分バックアップは、mysqladmin ユーティリティと `flush-logs` コマンドを使用して実行されます。これにより新しいログファイルが作成されます。
+mysqldump ユーティリティを使用して、完全なデータベースバックアップを取得できます。完全バックアップは必要ですが、その実行が容易ではない場合があります。完全バックアップによって大量のバックアップファイルが生成され、処理に時間がかかります。増分バックアップを実行するには、前の節で説明したように、- `log-bin`オプションを指定してサーバーを起動します。 MySQL サーバーが再起動するたびに、現在のバイナリログへの書き込みが停止し、新しいログが作成され、以降はそのログが現在のバイナリログになります。`FLUSH LOGS SQL`コマンドを使用して、手動でスイッチを強制できます。 最初の完全バックアップ後の増分バックアップは、mysqladmin ユーティリティと `flush-logs` コマンドを使用して実行されます。これにより新しいログファイルが作成されます。
 
 「[Backup Strategy Summary](https://dev.mysql.com/doc/refman/5.5/en/backup-strategy-summary.html)」を参照してください。
 
@@ -160,7 +159,7 @@ log-bin=logname
 
 Content Services（非推奨）のインストール時に、コンテンツ保存場所のルートディレクトリが作成されます。コンテンツ保存場所のルートディレクトリの場所は、AEM Forms のインストールプロセス中に決まります。
 
-コンテンツストレージのルートディレクトリのデフォルトの場所は、*[aem-forms root]*/lccs_dataです。
+コンテンツ保存場所のルートディレクトリのデフォルトの場所は、*[aem-forms root]*/lccs_dataです。
 
 コンテンツ保存場所のルートディレクトリにある次のディレクトリをバックアップします。
 
@@ -182,7 +181,7 @@ Content Services（非推奨）のインストール時に、コンテンツ保�
 
 **インデックスのルートディレクトリ：**&#x200B;クラスター内の各ノードに作成されるディレクトリであり、常に同じパスおよびディレクトリ名を保持します。
 
-コンテンツストレージのルートディレクトリのデフォルトの場所は&#x200B;*[GDS root]*/lccs_dataです。*[GDS root]*&#x200B;は、[GDS location](files-back-recover.md#gds-location)で説明されている場所です。 コンテンツ保存場所のルートディレクトリにある次のディレクトリをバックアップします。
+コンテンツ保存場所のルートディレクトリのデフォルトの場所は&#x200B;*[GDS root]*/lccs_dataです。*[GDS root]*&#x200B;は[GDS location](files-back-recover.md#gds-location)で説明されている場所です。 コンテンツ保存場所のルートディレクトリにある次のディレクトリをバックアップします。
 
 /audit.contentstore
 
@@ -194,7 +193,7 @@ Content Services（非推奨）のインストール時に、コンテンツ保�
 
 /backup-lucene-indexes ディレクトリが存在しない場合、/lucene-indexes ディレクトリをバックアップします（コンテンツ保存場所のルートディレクトリにあります）。/backup-lucene-indexes ディレクトリが存在する場合、/lucene-indexes ディレクトリをバックアップしないでください。エラーが発生する可能性があります。
 
-インデックスルートディレクトリのデフォルトの場所は、各ノードの&#x200B;*[aem-forms root]*/lucene-indexesです。
+インデックスルートディレクトリのデフォルトの場所は、各ノード上の&#x200B;*[aem-forms root]*/lucene-indexesです。
 
 ## ユーザーによるインストールフォント {#customer-installed-fonts}
 
