@@ -8,18 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 58f95138-5439-4540-a8dc-193b4cb42203
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: 24ece56a-fc59-410f-b38a-46637c4dc45e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '929'
 ht-degree: 83%
 
 ---
 
-
 # 新しいレンダリングと送信サービス  {#new-render-and-submit-service}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 Workbench で `AssignTask` 操作を定義する場合は、特定のフォーム（XDP または PDF フォーム）を指定します。また、アクションプロファイル経由で一連のレンダリングと送信サービスを指定します。
 
@@ -110,7 +109,7 @@ newHTMLFormURL = `generateFormURL` API を呼び出した後で返された URL
 Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブラウザーは NPAPI ベースのプラグインを徐々にサポートしなくなっています。モバイルフォームのレンダリングを PDF から HTML に変更するには、次の手順を実行します。
 
 1. 有効なユーザーとして Workbench にログインします。
-1. 「**ファイル**/**アプリケーションの取得**」を選択します。
+1. **File** > **Get Applications**&#x200B;を選択します。
 
    Get Applications ダイアログが表示されます。
 
@@ -130,7 +129,7 @@ Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブ�
 
 アクションプロファイルに関するよくある質問の一部を次に示します。
 
-![gen_question_b_20](assets/gen_question_b_20.png) **どのレンダリング/送信プロセスを追加設定なしで使用できますか。**
+![gen_question_b_20](assets/gen_question_b_20.png) **どのレンダリング/送信プロセスが標準で使用できますか。**
 
 * Guide のレンダリング（Guide は推奨されていません）
 * Render Form Guide
@@ -141,23 +140,23 @@ Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブ�
 
 および同等の送信プロセス。
 
-![gen_question_b_20](assets/gen_question_b_20.png) **追加設定なしで使用できるアクションプロファイル**
+![gen_question_b_20](assets/gen_question_b_20.png) **追加設定なしで使用できるアクションプロファイルは何ですか。**
 
 XDP フォームの場合：
 
 * デフォルト（新しい「デフォルトのレンダリング / 送信」プロセスを使用したレンダリング / 送信）
 
-![gen_question_b_20](assets/gen_question_b_20.png) **フォームをデバイス上でHTMLに、デスクトップ上でPDFにレンダリングするには、プロセスデザイナーは何を行う必要がありますか？**
+![gen_question_b_20](assets/gen_question_b_20.png) **フォームをデバイス上ではHTML、デスクトップ上ではPDFにレンダリングできるようにするには、プロセスデザイナーは何を行う必要がありますか？**
 
 何も必要ありません。デフォルトのアクションプロファイルが自動的に選択されて、レンダリングのモードも同じく自動的に対処されます。
 
-![gen_question_b_20デスクトップでフォームをHTMLでレンダリングするには、何を行う](assets/gen_question_b_20.png) **必要がありますか。**
+![gen_question_b_20](assets/gen_question_b_20.png) **フォームをデスクトップ上でHTMLにレンダリングするには、何を行う必要がありますか？**
 
 ユーザーは、デフォルトプロファイルで HTML ラジオボタンを選択する必要があります。
 
 ![gen_question_b_20](assets/gen_question_b_20.png) **デフォルトのアクションプロファイルの動作を変更すると、アップグレードに何らかの影響がありますか。**
 
-はい。デフォルトのアクションプロファイルに関連付けられた以前のレンダリングと送信サービスは異なるため、それらは既存のフォームのカスタマイズとして処理されます。「**[!UICONTROL デフォルトに戻す]**」をクリックすると、デフォルトのレンダリングサービスと送信サービスが代わりに設定されます。
+はい。デフォルトのアクションプロファイルに関連付けられた以前のレンダリングと送信サービスは異なるため、それらは既存のフォームのカスタマイズとして処理されます。「**[!UICONTROL デフォルトに戻す]**」をクリックすると、代わりにデフォルトのレンダリングサービスと送信サービスが設定されます。
 
 既存のレンダリングまたは送信 PDF Form サービスを変更した場合またはカスタムサービス（たとえば custom1）を作成した場合、HTML レンダリングに対して同じ機能を使用したいとします。新しいレンダリングまたは送信サービス（custom2）を置き換えて、これらに同様のカスタマイズを適用する必要があります。そこで、レンダリングまたは送信の custom1 の代わりに、custom2 サービスを使用して XDP を開始するようにアクションプロファイルを変更します。
 
