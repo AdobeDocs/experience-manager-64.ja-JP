@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: e-commerce
 content-type: reference
 discoiquuid: ad80505f-116e-43f1-8d93-ffe6e8b1ac46
-feature: Commerce Integration Framework
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: コマース統合フレームワーク
+exl-id: 614815ef-6fe3-4b06-9c56-bc9fee127825
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '3007'
 ht-degree: 85%
 
 ---
-
 
 # 汎用eコマースの管理{#administering-generic-ecommerce}
 
@@ -29,7 +28,7 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 * [カタログ](/help/sites-administering/concepts.md#catalogs)
 * [プロモーション](/help/sites-administering/concepts.md#promotions)
 * [割引券](/help/sites-administering/concepts.md#vouchers)
-* [注文](/help/sites-administering/concepts.md#shopping-cart-and-orders)
+* [注文回数](/help/sites-administering/concepts.md#shopping-cart-and-orders)
 * [プロキシページ](/help/sites-administering/concepts.md#proxy-pages)
 
 >[!NOTE]
@@ -81,11 +80,11 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 
    * **ソース**
 
-      読み込むファイルブラウザーを使用してファイルを選択できます。
+      読み込むファイル。ブラウザーを使用してファイルを選択できます。
 
    * **増分読み込み**
 
-      これが（フルインポートではなく）増分インポートであるかどうかを示します。
+      （完全ではなく）増分インポートであるかどうかを示します。
    >[!NOTE]
    >
    >（サンプル geometrixx-outdoor インポーターの）増分読み込みは、商品レベルで動作します。
@@ -115,13 +114,13 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 
    * **ストア名**
 
-      製品のインポート先：
+      製品は次の場所にインポートされます。
 
       `/etc/commerce/products/<*store name*>/`
 
    * **コマースプロバイダー**
 
-      [コマースプロバイダー](/help/sites-administering/concepts.md#commerce-providers)のインポーター；デフォルトのGeometrixx。
+      [コマースプロバイダー](/help/sites-administering/concepts.md#commerce-providers)のインポーター。デフォルトのGeometrixx。
 
    * **ソースファイル**
 
@@ -129,7 +128,7 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 
    * **増分読み込み**
 
-      これが（フルインポートではなく）増分インポートであるかどうかを示します。
+      （完全ではなく）増分インポートであるかどうかを示します。
 
 1. 「**製品を読み込み**」をクリックします。
 
@@ -137,7 +136,7 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 
 >[!NOTE]
 >
->標準の商品管理は必要最小限です。Geometrixx-Outdoors の商品セットは、基本的なものだからです。複雑さは、製品[スキャフォールド](/help/sites-authoring/scaffolding.md)に基づいているので、独自の製品の足場を使用すれば、より高度な編集を実現できます。
+>標準の商品管理は必要最小限です。Geometrixx-Outdoors の商品セットは、基本的なものだからです。複雑さは製品[基礎モード](/help/sites-authoring/scaffolding.md)に基づいているので、独自の製品基礎モードを使用すると、より高度な編集を実現できます。
 
 #### 商品情報の作成 - タッチ操作向け UI {#creating-product-information-touch-optimized-ui}
 
@@ -230,7 +229,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
    `http://localhost:4502/crx/de/index.jsp#/libs/commerce/gui/content/products/aside/items/search/items/searchpanel/facets`
 
 1. 例えば、商品の検索ページに表示するサイズを変更できます。`sizegroup`ノードをクリックします。
-1. 「`items`ノード」をクリックし、「`propertypredicate`ノード」をクリックします。
+1. `items`ノードをクリックし、`propertypredicate`ノードをクリックします。
 1. `propertyValues`は変更できます。 例えば、XS または XXL を追加したり、サイズを削除したりできます。
 1. 「**すべて保存**」をクリックし、製品検索ページに移動します。 変更内容が表示されます。
 
@@ -258,7 +257,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
    ![chlimage_1-329](assets/chlimage_1-329.png)
 
 1. 「**追加**」をタップまたはクリックします。新しいアセットのプレースホルダーが表示されます。
-1. 「**Change **」をタップ/クリックすると、ダイアログが開き、アセットを選択できます。
+1. 「**変更**」をタップまたはクリックすると、アセットを選択できるダイアログが開きます。
 1. 追加するアセットを選択します。
 
    >[!NOTE]
@@ -269,8 +268,8 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
 2 つのアセットが製品コンポーネントに保存されました。商品ページに表示するアセットを設定できます。この機能は、カテゴリシステムと連動しています。まず、個々のアセットにカテゴリを追加する必要があります。
 
-1. 「**表示製品データ**」をタップまたはクリックします。
-1. アセットの下に&#x200B;**アセットカテゴリ**&#x200B;を入力します（例：`cat1`、`cat2`）。
+1. 「**製品データを表示**」をタップまたはクリックします。
+1. アセットの下に&#x200B;**アセットカテゴリ**&#x200B;を入力します（例：`cat1`と`cat2`）。
 
    >[!NOTE]
    >
@@ -280,7 +279,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
 製品コンポーネント内のアセットには、カテゴリがあります。表示するカテゴリを次の 3 種類のレベルで設定できます。
 
-* [製品ページ](#product-page)
+* [商品ページ](#product-page)
 * [カタログ](#catalog)
 * [製品コンソール](#products-console)
 
@@ -305,7 +304,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 1. 選択した&#x200B;**画像カテゴリ**&#x200B;を入力します（例：`cat1`）。
 1. 「**完了**」をタップまたはクリックします。ページを更新すると、正しいアセットが表示されます。
 
-#### カタログ   {#catalog}
+#### カタログ  {#catalog}
 
 1. カタログに移動します。
 1. 「**プロパティを表示**」をタップまたはクリックします。
@@ -318,7 +317,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 #### 製品コンソール {#products-console}
 
 1. **製品**&#x200B;コンソールを使用して、必要な製品に移動します。
-1. 「**表示製品データ**」をタップまたはクリックします。
+1. 「**製品データを表示**」をタップまたはクリックします。
 1. 「**編集**」をタップまたはクリックします。
 1. **デフォルトのアセットカテゴリ**&#x200B;を入力します。
 1. 「**完了**」をタップまたはクリックします。
@@ -330,9 +329,9 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
 >[!NOTE]
 >
->多くの場合、商品情報は商品を参照するページを通じて公開されます。例えば、製品Yを参照するページXを公開すると、AEMは製品Yも公開するかどうかを尋ねます。
+>多くの場合、商品情報は商品を参照するページを通じて公開されます。例えば、製品Yを参照するページXを公開すると、AEMは、製品Yも公開するかどうかを尋ねます。
 >  
->特別なケースでは、AEMは製品データからの直接公開もサポートしています。
+>特殊なケースでは、AEMは製品データからの直接公開もサポートします。
 
 1. （**コマース**&#x200B;から）**製品**&#x200B;コンソールを使用して、商品情報に移動します。
 1. 次のいずれかを使用します。
@@ -368,15 +367,15 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 * `com/adobe/cq/commerce/pim/PRODUCT_PAGE_MODIFIED`
 * `com/adobe/cq/commerce/pim/PRODUCT_PAGE_DELETED`
 
-`PRODUCT_*`イベントの場合、パスは`/etc/commerce/products`内の基本製品を指します。 `PRODUCT_PAGE_*`イベントーの場合、パスは`cq:Page`ノードを指します。
+`PRODUCT_*`イベントの場合、パスは`/etc/commerce/products`内の基本製品を指します。 `PRODUCT_PAGE_*`イベントの場合、パスは`cq:Page`ノードを指します。
 
-これらは、OSGIイベント(`/system/console/events`)のWebコンソールで確認できます。次に例を示します。
+OSGIイベント(`/system/console/events`)のWebコンソールで、次のように確認できます。
 
 ![](do-not-localize/chlimage_1-20.png)
 
 >[!NOTE]
 >
->AEM](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)での[イベント処理も読み込みます。 [](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)
+>AEM](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)の[イベント処理もお読みください。 [](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)
 
 ### カートへ追加リンクを含む画像 {#image-with-add-to-cart-links}
 
@@ -389,7 +388,7 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 1. [アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assets-browser)からコンポーネントに画像をドラッグ＆ドロップします。
 1. 次のいずれかを実行できます。
 
-   * コンポーネントをクリックし、「編集」アイコンをクリックします
+   * コンポーネントをクリックし、編集アイコンをクリックします。
    * ゆっくりとダブルクリックする
 
 1. フルスクリーンアイコンをクリックします。
@@ -420,7 +419,7 @@ Search&amp;Promote 統合を使用すると、次のことができます。
    ![](do-not-localize/chlimage_1-22.png)
 
 1. [プレビュー](/help/sites-authoring/editing-content.md#previewing-pages)モードに切り替えます。
-1. 「+」ホットスポットをクリックします。ダイアログが開き、**パス**&#x200B;に入力した製品のサイズと数量を選択できます。
+1. 「+」ホットスポットをクリックします。**パス**&#x200B;に入力した製品のサイズと数量を選択できるダイアログが開きます。
 
    ![chlimage_1-333](assets/chlimage_1-333.png)
 
@@ -446,9 +445,9 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
 1. 完了アイコンをクリックします。
 
-## カタログ  {#catalogs}
+## カタログ {#catalogs}
 
-### カタログの生成 {#generating-a-catalog}
+### カタログの生成  {#generating-a-catalog}
 
 #### カタログの生成 - タッチ操作向け UI {#generating-a-catalog-touch-optimized-ui}
 
@@ -464,7 +463,7 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
    ![](do-not-localize/chlimage_1-23.png)
 
-1. リストから「**カタログを作成**」を選択し、カタログを作成ウィザードが開きます。
+1. リストから「**カタログを作成**」を選択すると、カタログを作成ウィザードが開きます。
 
    ![chlimage_1-337](assets/chlimage_1-337.png)
 
@@ -497,14 +496,14 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
 1. **セクションのブループリント**&#x200B;テンプレートを使用して新規ページを作成します。
 
-   例：`Swimwear`
+   （例：`Swimwear`）。
 
-1. 新しい`Swimwear`ページを開き、**Blueprint**&#x200B;を編集をクリックして&#x200B;**プロパティ**&#x200B;ダイアログを開きます。このダイアログで、**製品**&#x200B;の選択を設定できます。
+1. 新しい`Swimwear`ページを開き、「**ブループリントを編集**」をクリックして&#x200B;**プロパティ**&#x200B;ダイアログを開き、**製品**&#x200B;の選択を設定できます。
 
    例えば、「**タグ／キーワード**」フィールドを開いてアクティビティを選択し、Geometrixx-Outdoors セクションから「Swimming」を選択します。
 
 1. 「**OK**」をクリックしてプロパティを保存します。サンプルの商品が、ブループリントページの「**製品の選択条件**」の下に表示されます。
-1. 「**ロールアウトの変更...**」をクリックし、「**ページとすべてのサブページをロールアウト**」を選択して、「**次へ**」をクリックしてから「**ロールアウト**」をクリックします。ロールアウトが正常に完了すると、**ステータス**&#x200B;インジケータが緑色で表示されます。
+1. 「**ロールアウトの変更...**」をクリックし、「**ページとすべてのサブページをロールアウト**」を選択して、「**次へ**」をクリックしてから「**ロールアウト**」をクリックします。ロールアウトが正常に完了すると、**ステータス**&#x200B;インジケーターが緑色で表示されます。
 1. 「**閉じる**」をクリックして、次の場所およびその下にある新しいカタログセクションを確認します。
 
    `http://localhost:4502/cf#/content/geometrixx-outdoors/en/swimwear.html`
@@ -519,7 +518,7 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
 カタログをロールアウトするには：
 
-1. **コマース**&#x200B;を介して、**カタログ**&#x200B;コンソールに移動します。
+1. **コマース**&#x200B;を使用して、**カタログ**&#x200B;コンソールに移動します。
 1. ロールアウトするカタログに移動します。
 1. 次のいずれかを使用します。
 
@@ -530,8 +529,8 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
    ![](do-not-localize/chlimage_1-24.png)
 
-1. ウィザードで、必要に応じてロールアウトを設定し、[**ロールアウト変更**]をタップまたはクリックします。
-1. ダイアログが表示されます。処理が終了したら「**完了**」をタップまたはクリックします。
+1. ウィザードで、必要に応じてロールアウトを設定し、「**ロールアウトの変更**」をタップまたはクリックします。
+1. ダイアログが表示されます。処理が終了したら、「**完了**」をタップまたはクリックします。
 
 #### カタログのロールアウト - クラシック UI {#rolling-out-a-catalog-classic-ui}
 
@@ -549,7 +548,7 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
 #### ブループリントインポーター - タッチ操作向け UI {#blueprint-importer-touch-optimized-ui}
 
-1. **コマース**&#x200B;を介して、**カタログ**&#x200B;コンソールに移動します。
+1. **コマース**&#x200B;を使用して、**カタログ**&#x200B;コンソールに移動します。
 1. カタログのブループリントを読み込む場所に移動します。
 1. **ブループリントを読み込み**&#x200B;アイコンをタップまたはクリックします。
 
@@ -573,9 +572,9 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 1. 必要に応じて読み込みを設定します。
 1. 「**カタログのブループリントを読み込み**」をクリックします。
 
-## プロモーション  {#promotions}
+## プロモーション {#promotions}
 
-### プロモーションの作成 {#creating-a-promotion}
+### プロモーションの作成  {#creating-a-promotion}
 
 #### プロモーションの作成 - クラシック UI {#creating-a-promotion-classic-ui}
 
@@ -603,9 +602,9 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
 1. これでプロモーションをアクティベートできるので、パブリッシュインスタンス上でプロモーションが買い物客に表示されます。
 
-## 割引券  {#vouchers}
+## 割引券 {#vouchers}
 
-### 割引券の作成 {#creating-a-voucher}
+### 割引券の作成  {#creating-a-voucher}
 
 #### 割引券の作成 - クラシック UI {#creating-a-voucher-classic-ui}
 
@@ -642,13 +641,13 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
 デモサイト（Geometrixx Outdoors - English）では、買い物かごページの実際の買い物かごの下に、割引券フォームが表示されます。
 
-## 注文回数  {#orders}
+## 注文回数 {#orders}
 
 >[!NOTE]
 >
 >デフォルトの AEM には、マーチャンダイズの返送、注文ステータスの更新、受け渡しの実行、納品書の生成など、注文に関連する標準機能に必要なアクションがないことを思い出してください。主な目的は技術のプレビューです。
 >
->AEMの一般的な注文管理は、基本的なものとして保たれています。ウィザードで使用できるフィールドは、スキャフォールドに応じて異なります。\
+>AEMの一般的な注文管理は、基本的に維持されています。ウィザードで使用できるフィールドは、基礎モードによって異なります。\
 >`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
 >
 >カスタマイズされた基礎モードを作成する場合は、さらに多くの注文情報を保存できます。
@@ -687,4 +686,3 @@ Search&amp;Promote 統合を使用すると、次のことができます。
    ![](do-not-localize/chlimage_1-27.png)
 
 1. [注文情報](/help/sites-administering/concepts.md#order-information)が表示されます。「**編集**」と「**完了**」を使用して、変更があれば実行します。
-
