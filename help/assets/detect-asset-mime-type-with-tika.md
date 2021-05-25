@@ -1,32 +1,31 @@
 ---
-title: Apache Tikaを使用してデジタルアセットのMIMEタイプを検出する
+title: Apache Tikaを使用したデジタルアセットのMIMEタイプの検出
 description: Apache Tika を使用して、AEM Assets がアセットの MIME タイプをファイル拡張子ではなくコンテンツストリームから、アップロード操作中に検出できるようにします。
 contentOwner: AG
-feature: Metadata,Developer Tools,Asset Management
+feature: メタデータ，開発者ツール，アセット管理
 role: Administrator,Architect
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: 6c9e53e9-5e54-4816-9431-41e796340d1e
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 35%
+source-wordcount: '202'
+ht-degree: 36%
 
 ---
 
+# Apache Tikaを使用してデジタルアセットのMIMEタイプを検出します。 {#detecting-mime-type-of-assets-using-apache-tika}
 
-# Apache Tikaを使用してデジタルアセットのMIMEタイプを検出{#detecting-mime-type-of-assets-using-apache-tika}
+通常、Adobe Experience Manager(AEM)Assetsは、ファイル拡張子からアップロードするアセットのMIMEタイプを検出します。 Apache Tika を使用してアセットをアップロードすると、AEM Assets は、アセットの MIME タイプをファイル拡張子ではなくコンテンツストリームから、アップロード操作中に検出します。
 
-通常、Adobe Experience Manager(AEM) Assetsは、ファイルの拡張子からアップロードするアセットのMIMEタイプを検出します。 Apache Tika を使用してアセットをアップロードすると、AEM Assets は、アセットの MIME タイプをファイル拡張子ではなくコンテンツストリームから、アップロード操作中に検出します。
-
-この機能はデフォルトでは無効になっています。この機能を有効にするには、Configuration Managerから&#x200B;**Day CQ DAM Mime Type**&#x200B;サービスを設定します。
+この機能はデフォルトでは無効になっています。この機能を有効にするには、Configuration Managerで&#x200B;**Day CQ DAM Mime Type**&#x200B;サービスを設定します。
 
 >[!NOTE]
 >
->Apache Tikaライブラリを使用したMIMEタイプの検出は、リソースを大量に消費する操作です。
+>Apache Tikaライブラリを使用したMIMEタイプ検出は、リソースを大量に消費する操作です。
 
-1. `https://[AEM_server]:[port]/system/console/configMgr`に移動し、Configuration Manager Webコンソールを開きます。
-1. サービスのリストから、「**[!UICONTROL Day CQ DAM MIME Type Service]**」を探し、横の「**[!UICONTROL Edit]**」アイコンをタップまたはクリックして、編集モードで開きます。
+1. `https://[AEM_server]:[port]/system/console/configMgr`に移動して、Configuration Manager Webコンソールを開きます。
+1. サービスのリストで、「**[!UICONTROL Day CQ DAM Mime Type Service]**」を探し、その横にある&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップまたはクリックして編集モードで開きます。
 
-1. 「**[!UICONTROL コンテンツ]**&#x200B;からMIMEを検出する」オプションを選択すると、アップロードされたアセットの解析を有効にして、ファイル拡張子を無視してMIMEタイプを決定できます。 デフォルトでは、このオプションはオフになっています。
+1. **[!UICONTROL 「コンテンツからMIMEを検出]** 」オプションを選択して、アップロードされたアセットの解析を有効にし、ファイル拡張子を無視してMIMEタイプを判断します。 デフォルトでは、このオプションはオフになっています。
 
    ![chlimage_1-333](assets/chlimage_1-333.png)
 
