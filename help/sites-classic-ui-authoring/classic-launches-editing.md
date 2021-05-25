@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 666b967a-e94b-4f94-a676-00adf150580f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 98bccd13-431a-4cba-bb93-75cdcc98830a
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 100%
 
 ---
-
 
 # ローンチの編集{#editing-launches}
 
@@ -68,4 +67,3 @@ ht-degree: 100%
 * 「**実稼動準備完了**」フラグのステータス（オレンジ = 未設定、緑 = 設定済み）。
 
 ![chlimage_1-186](assets/chlimage_1-186.png)
-
