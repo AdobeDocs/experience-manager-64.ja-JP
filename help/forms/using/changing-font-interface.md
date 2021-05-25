@@ -9,20 +9,19 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 487e3966-443a-408e-b5af-899fcba6fca6
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: bd7ec9d6-b1d2-4f01-8cef-05e5e1eceda1
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 73%
 
 ---
 
-
 # インターフェイスのフォントの変更  {#changing-the-font-on-the-interface}
 
 AEM Forms Workspace に表示されているフォントを変更することができます。ユーザーインターフェイスの特定のセクションで使用されているフォントは、スタイルシートの対応するセクションに定義されています。フォントは選択的にユーザーインタフェイス上で変更することができます。
 
-[AEM Formsワークスペースのカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)に従い、要件に応じて、CSS、HTMLまたはその両方をカスタマイズする手順に従います。
+[AEM Forms Workspaceのカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)に従い、要件に応じて、CSS、HTMLまたはその両方をカスタマイズする手順に従います。
 
 1. 既存のスタイルのフォントファミリを変更または追加します。
 1. HTML 要素でフォントファミリインラインを変更または追加します。
@@ -52,7 +51,7 @@ AEM Forms Workspace に表示されているフォントを変更することが
       <li class="preference"><a href="#/preferences" title="<%= $.t('index.header.topnav.preferences.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.preferences.name')%></a></li>
       ```
 
-      /apps/ws/js/registry.jsファイルを開いて編集し、`text!/lc/libs/ws/js/runtime/templates/appnavigation.html`を`text!/lc/apps/ws/js/runtime/templates/appnavigation.html`に置き換えます。
+      /apps/ws/js/registry.jsファイルを編集用に開き、`text!/lc/libs/ws/js/runtime/templates/appnavigation.html`を`text!/lc/apps/ws/js/runtime/templates/appnavigation.html`に置き換えます。
 
    1. フォントファミリを定義するスタイルを追加するには、/apps/ws/css にある newStyle.css ファイルに以下を追加します。
 
@@ -78,7 +77,7 @@ AEM Forms Workspace に表示されているフォントを変更することが
 1. Workspace を再起動して変更が表示されるようにブラウザのキャッシュをクリアします。
 
 ![change_font_](assets/change_font_before.png)
-**beforeFigure：フォントをカスタマイズする** *前のトップナビゲーションバー*
+**beforeFigure:** *フォントをカスタマイズする前の上部ナビゲーションバー*
 
 ![change_font_](assets/change_font_after.png)
-**afterFigure:** *最初のタブのフォントをカスタマイズした後のトップナビゲーションバー*
+**afterFigure:** *最初のタブのフォントをカスタマイズした後の上部ナビゲーションバー*
