@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archives
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: b6f6463a-2ae4-43d2-8d16-cc20a954e50e
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 12183806-5e00-46e8-bf25-5379a07a56a4
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1465'
 ht-degree: 100%
 
 ---
-
 
 # アーカイブの読み込みと管理 {#import-and-manage-archives}
 
@@ -167,4 +166,3 @@ Workbench で作成した LCA の読み込みと管理を行うには、「ア�
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／アーカイブの管理をクリックします。
 1. アーカイブの管理ページで、削除するアーカイブのチェックボックスを選択して、「削除」をクリックします。
-
