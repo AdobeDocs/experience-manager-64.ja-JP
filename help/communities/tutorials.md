@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a420b0b1-65f4-4103-a7c9-263657c7870f
-translation-type: tm+mt
-source-git-commit: 2d1e39120d79de029927011d48f7397b53ad91bc
+exl-id: 4e5c63af-78f1-4005-8dc1-2b30cb0b6c5a
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 65%
 
 ---
-
 
 # チュートリアル {#tutorials}
 
@@ -32,7 +31,7 @@ ht-degree: 65%
 
 * [コメントコンポーネントの拡張](extend-comments.md)
 
-## サーバー側のカスタマイズ  {#server-side-customization}
+## サーバー側のカスタマイズ {#server-side-customization}
 
 [SCF のサーバー側のカスタマイズ](server-customize.md)も参照してください。
 
@@ -44,11 +43,11 @@ ht-degree: 65%
 
 * [SCF コンポーネントの拡張のサンプル](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-extension)
 
-## 使い方説明{#how-to-instructions}
+## ハウツーインストラクション{#how-to-instructions}
 
-* [AEM Communities藤堂MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
+* [AEM Communities Todo MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
 
-   ToDo MVCで、SCF+SRPコンポーネントを最初から開発する方法をデモします
+   ToDo MVCでは、SCF+SRPコンポーネントを最初から開発する方法を説明します
 
 * [AEM Communities 使用の手引き](getting-started.md)
 
@@ -58,18 +57,18 @@ ht-degree: 65%
 
 * [サンプルページの作成](create-sample-page.md)
 
-## デモユーザー  {#demo-users}
+## デモユーザー {#demo-users}
 
-Geometrixxサンプルパッケージには、デモユーザーが含まれています。 訪問者（ログインしていない）とメンバー（ログインしている）の間に経験が違うことが多く、Geometrixxサンプルパッケージがインストールされている限り、[コミュニティコンポーネントガイド](components-guide.md)で調査する際に、ログイン状態をシミュレートできます。
+Geometrixxサンプルパッケージには、デモユーザーが含まれています。 訪問者（ログインしていない）またはメンバー（ログインしている）との間に経験の違いが多く、Geometrixxサンプルパッケージがインストールされている限り、これらのユーザーを使用して[コミュニティコンポーネントガイド](components-guide.md)でログイン状態をシミュレートできます。
 
-レールを使用して、**[!UICONTROL ツール／運営／セキュリティ／ユーザー]**&#x200B;の順に移動すると、デモユーザーが一覧表示されます。または、クラシックUI [セキュリティコンソール](http://localhost:4502/useradmin)を使用してユーザーとグループを管理します。
+レールを使用して、**[!UICONTROL ツール／運営／セキュリティ／ユーザー]**&#x200B;の順に移動すると、デモユーザーが一覧表示されます。または、クラシックUIの[セキュリティコンソール](http://localhost:4502/useradmin)を使用して、ユーザーとグループを管理します。
 
 [コミュニティサイトが作成されている](getting-started.md)場合、その[コミュニティユーザーグループ](users.md)にデモユーザーを割り当てることができます。
 
-***user id* /  *password:***
+***ユーザーid* / *パスワード：***
 
 * aaron.mcdonald@mailinator.com／password
-* emily.andrews@mailinator.comパスワード
-* weston.mccall@dodgit.comパスワード
+* emily.andrews@mailinator.com /パスワード
+* weston.mccall@dodgit.com /パスワード
 * andrew.schaeffer@trashymail.com／password
-* rebekah.larsen@trashymail.comパスワード
+* rebekah.larsen@trashymail.com /パスワード
