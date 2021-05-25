@@ -1,14 +1,13 @@
 ---
 title: Dynamic Media ビューアプリセットの適用
-description: 管理者が作成した、Dynamic Mediaのアセットにビューアプリセットを適用する方法について説明します。
+description: 管理者が作成し、Dynamic Mediaのアセットにビューアプリセットを適用する方法を説明します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 exl-id: 7cd62a2f-f7c9-40b1-bcd4-5853dadabf1b
-feature: Viewer Presets
+feature: ビューアプリセット
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
 workflow-type: tm+mt
 source-wordcount: '226'
