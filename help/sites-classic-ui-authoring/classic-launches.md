@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 4f62078d-b5b0-4eb9-bd9b-7647a093dec2
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: e1e5dc83-2f9c-4c8d-a031-5ded3f1316a1
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 74%
 
 ---
-
 
 # ローンチ{#launches}
 
@@ -26,12 +25,12 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->起動の原因となる理論は、標準のオーサリングドキュメントの[起動回数](/help/sites-authoring/launches.md)で詳しく説明されています。
+>ローンチの背後にある理論については、標準のオーサリングドキュメントの[Launches](/help/sites-authoring/launches.md)で詳しく説明しています。
 >
->クラシックUIで起動を使用する場合に特有の情報は、[起動の作成](/help/sites-classic-ui-authoring/classic-launches-creating.md)、[起動の編集](/help/sites-classic-ui-authoring/classic-launches-editing.md)、[起動のプロモーション](/help/sites-classic-ui-authoring/classic-launches-promoting.md)と共に、次のドキュメントに記載されています。
+>クラシックUIでのローンチの使用に関する情報は、[ローンチの作成](/help/sites-classic-ui-authoring/classic-launches-creating.md)、[ローンチの編集](/help/sites-classic-ui-authoring/classic-launches-editing.md)、[ローンチの昇格](/help/sites-classic-ui-authoring/classic-launches-promoting.md)と共に次のドキュメントに記載されています。
 
 >[!CAUTION]
 >
 >クラシック UI では、1 つのローンチに対して複数のソースブランチを持つことはできません。
 
-起動コンソールには[http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)から直接アクセスできます。
+ローンチコンソールには、[http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)を使用して直接アクセスできます。
