@@ -1,18 +1,17 @@
 ---
 title: ツールコンソール
-description: Adobe Experience Manager中の様々なツールコンソールについて説明します。
+description: Adobe Experience Manager全体の様々なツールコンソールについて説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
-translation-type: tm+mt
-source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
+exl-id: 7566e1bc-8571-4b3c-b420-4324026bd4dd
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 97%
 
 ---
-
 
 # ツールコンソール{#tools-consoles}
 
@@ -21,7 +20,7 @@ ht-degree: 97%
 * [ツール - クラシック UI](#tools-classic-ui)
 * [ツール - タッチ操作向け UI](#tools-touch-optimized-ui)
 
-## ツール - クラシック UI  {#tools-classic-ui}
+## ツール - クラシック UI {#tools-classic-ui}
 
 <table> 
  <tbody> 
@@ -46,7 +45,7 @@ ht-degree: 97%
    <td><a href="/help/sites-administering/marketing-cloud.md">Adobe Marketing Cloud との統合</a>に関連する設定を保持します。</td> 
   </tr> 
   <tr> 
-   <td><a href="/help/sites-administering/ecommerce.md">Commerce</a></td> 
+   <td><a href="/help/sites-administering/ecommerce.md">コマース</a></td> 
    <td> </td> 
    <td>インポーターと様々な製品データにアクセスできます。</td> 
   </tr> 
@@ -58,7 +57,7 @@ ht-degree: 97%
   <tr> 
    <td>DAM - ヘルスチェック<br /> </td> 
    <td> </td> 
-   <td><code>/var/dam</code>と<code>/content/dam</code>を比較し、<br />に矛盾がないかチェックします。 その後で、リスト内のファイルとフォルダーを同期または削除できます。フォルダー比較用のノードタイプを Web コンソールで設定できます。</td> 
+   <td><code>/var/dam</code>と<code>/content/dam</code>を比較し、不整合がないか<br />を確認します。 その後で、リスト内のファイルとフォルダーを同期または削除できます。フォルダー比較用のノードタイプを Web コンソールで設定できます。</td> 
   </tr> 
   <tr> 
    <td>DAM - Adobe Indesign<br /> </td> 
@@ -343,4 +342,3 @@ ht-degree: 97%
 >[!NOTE]
 >
 >上述のオプションのいくつかは実際にはクラシック UI にリンクしています。
-
