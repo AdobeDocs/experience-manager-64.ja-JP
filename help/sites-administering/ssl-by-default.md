@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: Security
 discoiquuid: 3a1817cd-357b-473d-9a09-e18bbfc60dfd
-translation-type: tm+mt
-source-git-commit: eb3ac73ebe3189c144dafa02a2596ea5d512ffba
+exl-id: 07f89673-125b-4205-bc54-c90287a1e9a5
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 81%
 
 ---
-
 
 # デフォルトの SSL{#ssl-by-default}
 
@@ -32,11 +31,11 @@ AEM ホーム画面から該当するインボックスメッセージをクリ�
 
 >[注意!]
 >
->**HTTPSの設定**&#x200B;警告がインボックスにない場合は、*<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*&#x200B;に移動してHTTPSウィザードに直接移動できます
+>**HTTPSを設定**&#x200B;アラートがインボックスにない場合は、*<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*&#x200B;に移動して、HTTPSウィザードに直接移動できます
 
 **ssl-service** というサービスユーザーが、この機能のために作成されています。このアラートを開くと、以下の設定ウィザードに進みます。
 
-1. 最初に、「ストア資格情報」を設定します。これらは、HTTPSリスナーの秘密鍵とTrust Storeを含む&#x200B;**ssl-service**&#x200B;システムユーザーのキーストアの資格情報です。
+1. 最初に、「ストア資格情報」を設定します。これらは、HTTPSリスナーの秘密鍵とTrust Storeを格納する&#x200B;**ssl-service**&#x200B;システムユーザーのキーストアの資格情報です。
 
    ![chlimage_1-342](assets/chlimage_1-342.png)
 
@@ -97,7 +96,7 @@ Content-Disposition: form-data; name="httpsPort"
 
 成功の応答とエラーの応答の両方の例を次に示します。
 
-**成功の例** (status = 200):
+**成功の例** （ステータス= 200）:
 
 ```xml
 <!DOCTYPE html>
@@ -155,7 +154,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 または、以下の必要な項目が既に含まれているパッケージをアップロードすることにより、SSL 設定を自動化できます。
 
 * ssl-service ユーザーのキーストア。これは、リポジトリの */home/users/system/security/ssl-service/keystore* にあります。
-* `GraniteSslConnectorFactory`構成
+* `GraniteSslConnectorFactory`設定
 
 ### ウィザードで使用する秘密鍵／証明書ペアの生成 {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
@@ -196,7 +195,7 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out loca
 
 >[!NOTE]
 >
->AEMで便利なcURLコマンドを一元的にリストする方法については、[AEM](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/curl.html)でのcURLの使用を参照してください。
+>AEMで役立つcURLコマンドの一元化されたリストについては、[AEMでのcURLの使用](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/curl.html)を参照してください。
 
 cURL ツールを使用して SSL 設定を自動化することもできます。そのためには、設定パラメーターを次の URL に送信します。
 
@@ -204,11 +203,11 @@ cURL ツールを使用して SSL 設定を自動化することもできます�
 
 以下は、設定ウィザードの様々な設定を変更するために使用できるパラメーターです。
 
-* `-F "keystorePassword=password"`  — キーストアパスワード；
+* `-F "keystorePassword=password"`  — キーストアのパスワード。
 
-* `-F "keystorePasswordConfirm=password"`  — キーストアのパスワードの確認；
+* `-F "keystorePasswordConfirm=password"`  — キーストアのパスワードを確認します。
 
-* `-F "truststorePassword=password"` - truststoreのパスワード；
+* `-F "truststorePassword=password"` - truststoreのパスワード
 
 * `-F "truststorePasswordConfirm=password"` - truststoreのパスワードを確認します。
 
@@ -223,7 +222,7 @@ cURL ツールを使用して SSL 設定を自動化することもできます�
 >
 >SSL 設定を自動化するための cURL は、DER および CRT ファイルが存在するフォルダーから実行すると最も速く実行されます。または、`privatekeyFile` および certificateFile 引数でフルパスを指定できます。
 >
->更新を実行するには、認証も必要です。そのため、cURLコマンドに`-u user:passeword`パラメーターを必ず追加してください。
+>また、更新を実行するには認証が必要なので、cURLコマンドに`-u user:passeword`パラメーターを必ず追加してください。
 >
 >正しい cURL POST コマンドは、次のようになります。
 
@@ -237,5 +236,5 @@ curl -u user:password -F "keystorePassword=password" -F "keystorePasswordConfirm
 
 `-F "certificateFile=@root.crt" -F "certificateFile=@localhost.crt"..`
 
-コマンドを実行したら、すべての証明書がキーストアに送信されたことを確認します。キーストアの確認元：\
+コマンドを実行したら、すべての証明書がキーストアに送信されたことを確認します。次の場所でキーストアを確認します。\
 [http://localhost:4502/libs/granite/security/content/userEditor.html/home/users/system/security/ssl-service](http://localhost:4502/libs/granite/security/content/userEditor.html/home/users/system/security/ssl-service)
