@@ -8,11 +8,10 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: 6a7e5472-cb57-4c78-b183-7c6dcac11a4e
-translation-type: tm+mt
 source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
 source-wordcount: '304'
-ht-degree: 78%
+ht-degree: 81%
 
 ---
 
@@ -29,7 +28,7 @@ ht-degree: 78%
 >
 >6.3 GA Service Pack 1 のリリースで変更されることがあります。
 
-AEM MobileContent Servicesは、AEMが管理するコンテンツをリクエストするための軽量な機能です。 これにより、AEMコンテンツリポジトリ(JCR)やWebフレームワーク(Sling)に関する深い知識を持つことなく、すべてのアプリ開発者がコンテンツを取得できる高パフォーマンスの方法を提供します。 これにより、リクエスト元のアプリケーションとコンテンツリポジトリとの切り離しが可能になります。
+AEM Mobile Content Servicesは、AEMで管理されるコンテンツをリクエストするための軽量な機能です。 これにより、AEMコンテンツリポジトリ(JCR)やWebフレームワーク(Sling)に関する深い知識を持たずに、すべてのアプリ開発者がコンテンツを取得するパフォーマンスの高い方法を提供します。 これにより、リクエストアプリケーションをコンテンツリポジトリから切り離すことができます。
 
 コンテンツサービスで導入されるいくつかの新しい AEM 構成要素を使用して、開発者は、コンテンツのリポジトリ構造を知らなくても AEM の管理対象アセットにアクセスできます。
 
@@ -45,7 +44,7 @@ AEM MobileContent Servicesは、AEMが管理するコンテンツをリクエス
 >
 >詳しくは、**[コンテンツサービスの管理](/help/mobile/developing-content-services.md)**&#x200B;を参照してください。
 >
->詳しくは、[設定ブラウザーのドキュメント](/help/sites-administering/configurations.md)を参照してください。
+>詳しくは、[](/help/sites-administering/configurations.md)設定ブラウザーのドキュメントを参照してください。
 
 ![chlimage_1-143](assets/chlimage_1-143.png)
 
