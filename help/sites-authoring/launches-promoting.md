@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 977a3dda-4292-4bd2-bfa5-af4d789d9ef9
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 2a790f7d-03a1-4f60-a59e-0a5f15c44fa5
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 98%
 
 ---
-
 
 # ローンチの昇格{#promoting-launches}
 
@@ -114,7 +113,7 @@ ht-degree: 98%
 
    * **昇格対象**
 
-      任意のソースにプロモートできます。
+      任意のソースに昇格させることができます。
 
    * **範囲** ここでは、すべてのローンチを昇格させるか、実際に編集したページのみを昇格させるかを選択できます。後者の場合、サブページを含めるか除外するかを選択できます。デフォルトの設定では、現在のページのページの変更のみを昇格させます。
 
@@ -151,4 +150,3 @@ ht-degree: 98%
 例えば、作成者がローンチページを昇格したとき、ページのアクティベートのリクエストを自動的に生成することができます。パッケージノードが変更されたときにリクエストのアクティベートワークフローを開始するよう、ワークフローランチャーを設定します。
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
-
