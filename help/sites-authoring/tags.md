@@ -9,21 +9,20 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: d0b0e47b-e68d-407d-9d06-deca2039dede
-translation-type: tm+mt
-source-git-commit: 8326ee711558a390f79fc185fc37bbbb3097e309
+exl-id: 846a925a-673e-4051-a673-1a9236701f0a
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 77%
+ht-degree: 80%
 
 ---
-
 
 # タグの使用 {#using-tags}
 
 タグを使用すると、Web サイト内のコンテンツをすばやく簡単に分類できます。タグはキーワードやラベルとしてページ、アセット、その他のコンテンツに添付し、コンテンツや関連コンテンツを検索できます。
 
-* タグの作成と管理、および適用されたコンテンツタグについては、[タグ](/help/sites-administering/tags.md)の管理を参照してください。
-* タグ付けフレームワーク、およびカスタムアプリケーションでのタグの追加と拡張について詳しくは、[開発者用のタグ付け](/help/sites-developing/tags.md)を参照してください。
+* タグの作成と管理、およびタグが適用されるコンテンツについて詳しくは、[タグの管理](/help/sites-administering/tags.md)を参照してください。
+* タグ付けのフレームワークおよびカスタムアプリケーションにタグを追加したりタグを拡張したりする方法について詳しくは、[開発者のためのタグ付け](/help/sites-developing/tags.md)を参照してください。
 
 ## タグを使用する 10 の理由 {#ten-reasons-to-use-tagging}
 
@@ -53,7 +52,7 @@ ht-degree: 77%
 
 オーサー環境では、作成者はページのプロパティにアクセスし、「**タグ／キーワード**」フィールドに 1 つ以上のタグを入力することでタグを適用できます。
 
-[事前定義タグ](/help/sites-administering/tags.md)を適用するには、**ページプロパティ**&#x200B;ウィンドウで、**タグ**&#x200B;フィールドと&#x200B;**タグを選択**&#x200B;ウィンドウを使用します。 「**標準タグ**」タブがデフォルトの名前空間です。これは、分類にプレフィックスされている `namespace-string:` がないことを意味します。
+[事前定義のタグ](/help/sites-administering/tags.md)を適用するには、**ページのプロパティ**&#x200B;ウィンドウで、**タグ**&#x200B;フィールドと&#x200B;**タグ**&#x200B;を選択ウィンドウを使用します。 「**標準タグ**」タブがデフォルトの名前空間です。これは、分類にプレフィックスされている `namespace-string:` がないことを意味します。
 
 ![chlimage_1-92](assets/chlimage_1-92.png)
 
@@ -69,7 +68,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->ページをアクティブ化すると、ダイアログが自動的に開き、そのページに属するアクティブ化されていないタグをアクティブ化できます。
+>ページをアクティベートすると、自動的にダイアログが開き、そのページに属する、アクティベートされていないタグをアクティベートできます。
 
 **アクティベートを解除**
 
@@ -77,7 +76,7 @@ ht-degree: 77%
 
 ## タグクラウド {#tag-clouds}
 
-タグクラウドには、現在のページ、Webサイト全体、または最も頻繁にアクセスされるタグのクラウドが表示されます。 タグクラウドは、ユーザーにとって興味のある（以前からある）問題を強調する手段です。 タグの表示に使用されるテキストのサイズは、タグの使用に伴って異なります。
+タグクラウドには、現在のページ、Webサイト全体、または最も一般的にアクセスされるページのタグのクラウドが表示されます。 タグクラウドは、（以前に）ユーザーが関心を持っていた問題を強調表示する手段です。 タグの表示に使用されるテキストのサイズは、使用との関係によって異なります。
 
 [タグクラウド](/help/sites-authoring/default-components-foundation.md#tag-cloud)コンポーネント（一般コンポーネントグループ）を使用して、ページにタグクラウドを追加します。
 
@@ -87,7 +86,6 @@ ht-degree: 77%
 
 ### 検索コンポーネントの使用  {#using-search-component}
 
-[検索コンポーネント](/help/sites-authoring/default-components-foundation.md#search)をページに追加すると、タグを含む検索機能が提供され、作成者と発行の両方の環境で使用できます。
+[検索コンポーネント](/help/sites-authoring/default-components-foundation.md#search)をページに追加すると、タグを含む検索機能が提供され、オーサー環境とパブリッシュ環境の両方で使用できます。
 
 ![chlimage_1-93](assets/chlimage_1-93.png)
-
