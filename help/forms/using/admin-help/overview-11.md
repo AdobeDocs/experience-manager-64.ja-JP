@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: c303e967-944d-40b0-96ca-f91e2f42a0d0
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: 70ccc0ae-04c6-4af9-9150-72d0d71c945f
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 100%
 
 ---
-
 
 # ヘルスモニターの概要 {#overview-of-health-monitor}
 
@@ -38,4 +37,3 @@ ht-degree: 100%
 **ヘルスモニターへのアクセス**
 
 1. 管理コンソールで、ページの右上隅にある「ヘルスモニター」をクリックします。
-
