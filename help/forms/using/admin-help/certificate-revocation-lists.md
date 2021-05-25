@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 9744cc2d-5e6b-4341-9270-43d479bdca04
-translation-type: tm+mt
-source-git-commit: a417e571d7c3b8da8f38f3d1ad814610636eabbc
+exl-id: 45741270-2d57-4d6d-92ef-65b6c1deb448
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 100%
 
 ---
-
 
 # 証明書失効リストの管理{#managing-certificate-revocationlists}
 
@@ -39,4 +38,3 @@ Trust Store の管理では、証明書失効リスト（CRL）の読み込み�
 
 1. 管理コンソールで、設定／Trust Store の管理／証明書の失効リストをクリックします。
 1. 削除する CRL のチェックボックスをオンにして「削除」をクリックし、「OK」をクリックします。
-
