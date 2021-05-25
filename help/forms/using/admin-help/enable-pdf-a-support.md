@@ -10,14 +10,13 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 17a6397b-0089-4fd1-b44a-686fdf60d7a9
 feature: PDF Generator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: f069ecea-1b68-4ca9-bb56-8a205a3c00ec
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 100%
 
 ---
-
 
 # PDF/A サポートの有効化 {#enable-pdf-a-support}
 
@@ -27,4 +26,3 @@ PDF Generator では、Microsoft Excel、Microsoft PowerPoint および Microsof
 1. 「新規作成」をクリックするか、既存のファイルタイプ設定を選択します。
 1. 「Microsoft Excel」、「Microsoft PowerPoint」または「Microsoft Word」をクリックしてから、「PDF/A-1a に準拠するファイルを作成」を選択して変更を保存します。
 1. ネイティブアプリケーション（Microsoft Word など）で、Adobe PDF／変換設定の変更をクリックし、「PDF/A-1b」を選択します。
-
