@@ -9,19 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: アップグレード
+exl-id: df03f65b-9951-4fd4-abf7-1672618fc1df
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2719'
 ht-degree: 76%
 
 ---
 
-
 # AEM 6.4 における共通リポジトリの再構築{#common-repository-restructuring-in-aem}
 
-AEM 6.4](/help/sites-deploying/repository-restructuring.md)の親ページ[リポジトリの再構築に関する説明に従って、AEM 6.4にアップグレードしたお客様は、このページを使用して、リポジトリの変更に関連する作業量を評価し、すべてのソリューションに影響を与える可能性があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
+AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明したように、AEM 6.4にアップグレードする場合は、このページを使用して、すべてのソリューションに影響を与える可能性があるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
 
 **6.4 へのアップグレード時におこなう変更**
 
@@ -53,7 +52,7 @@ AEM 6.4](/help/sites-deploying/repository-restructuring.md)の親ページ[リ�
 * [ベンダー翻訳コネクタクラウドサービス](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#vendor-translation-connector-cloud-services)
 * [ワークフロー通知電子メールテンプレート](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md#workflow-notification-email-templates)
 
-## 6.4 へのアップグレード時におこなう変更  {#with-upgrade}
+## 6.4 へのアップグレード時におこなう変更 {#with-upgrade}
 
 ### ContextHub 設定 {#contexthub-6.4}
 
@@ -63,10 +62,10 @@ AEM 6.4 以降、デフォルトの ContextHub 設定は用意されていませ
 1. ルートページのページのプロパティを開き、「パーソナライズ機能」タブを選択します。
 1. 「ContextHub のパス」フィールドに、独自の ContextHub の設定パスを入力します。
 
-また、ContextHub設定では、絶対値ではなく相対値に更新する必要があります。`sling:resourceType`
+さらに、ContextHub設定では、`sling:resourceType`を絶対値ではなく相対値に更新する必要があります。
 
-1. CRX DE LiteでContextHub設定ノードのプロパティを開きます(例：`/apps/settings/cloudsettings/legacy/contexthub`
-1. `sling:resourceType`を`/libs/granite/contexthub/cloudsettings/components/baseconfiguration`から`granite/contexthub/cloudsettings/components/baseconfiguration`に変更
+1. CRXDE LiteでContextHub設定ノードのプロパティを開きます(例：`/apps/settings/cloudsettings/legacy/contexthub`
+1. `sling:resourceType`を`/libs/granite/contexthub/cloudsettings/components/baseconfiguration`から`granite/contexthub/cloudsettings/components/baseconfiguration`に変更します
 
 ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対パスであることが必要です。
 
@@ -93,7 +92,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
       <ol> 
        <li>ワークフローモデルエディターを開いて、ブラウザのアドレス URL を変更し、パスセグメント /libs/settings/workflow/models を /etc/workflow/models に置き換えます。
         <ul> 
-         <li>例えば、次のように変更します。<em>http://localhost:4502/editor.html<strong>/libs/settings/workflow/models</strong>/dam/update_asset.html</em><em>http://localhost:4502/editor.html<strong>/etc/workflow/models</strong>/dam/update_asset.html</em></li> 
+         <li>例えば、次の値を変更します。<em>http://localhost:4502/editor.html<strong>/libs/settings/workflow/models</strong>/dam/update_asset.html</em>から<em>http://localhost:4502/editor.html<strong>/etc/workflow/models</strong>/dam/update_asset.html</em></li> 
         </ul> </li> 
       </ol> </li> 
      <li>ワークフローモデルエディターで編集モードを有効にします。ワークフローモデル定義が /conf/global/workflow/models にコピーされます。</li> 
@@ -138,10 +137,10 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
   <tr>
    <td><strong>備考</strong></td> 
-   <td>でのすべての明示的なパス参照 
-    「前の場所」の<code>
+   <td>での明示的なパス参照 
+    以前の場所への<code>
      custom
-    </code>コードでは、「新しい場所」も考慮に入れる必要があります。 このコードは AEM Workflow API を使用するようにリファクタリングすることをお勧めします。</td> 
+    </code>コードでも、新しい場所が考慮されます。 このコードは AEM Workflow API を使用するようにリファクタリングすることをお勧めします。</td> 
   </tr>
  </tbody>
 </table>
@@ -160,9 +159,9 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>新しい、または変更されたワークフローランチャーは<code>/conf/global/workflow/launcher/config</code>に移行する必要があります。</p> 
+   <td><p>新規または変更されたワークフローランチャーは、<code>/conf/global/workflow/launcher/config</code>に移行する必要があります。</p> 
     <ol> 
-     <li>新しいまたは変更したワークフローランチャーの設定を「前の場所」から「新しい場所」(<code>/conf/global</code>)にコピーします。</li> 
+     <li>新規または変更されたワークフローランチャー設定を、以前の場所から新しい場所(<code>/conf/global</code>)にコピーします。</li> 
     </ol> </td> 
   </tr>
   <tr>
@@ -172,7 +171,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
      <li><code>/conf/global/settings/workflow/launcher</code></li> 
      <li><code>/libs/settings/workflow/launcher</code></li> 
      <li><code>/etc/workflow/launcher</code></li> 
-    </ol> <p>したがって、前の場所に残っているAEM提供のワークフローランチャーのカスタマイズを維持する場合は、新しい場所(<code>/conf/global/settings/workflow/launcher</code>)に移動する必要があります。そうでない場合は、<code>/libs/settings/workflow/launcher</code>のAEM提供のワークフローランチャー定義に置き換えられます。</p> </td> 
+    </ol> <p>したがって、以前の場所に保持されているAEM提供のワークフローランチャーのカスタマイズは、新しい場所(<code>/conf/global/settings/workflow/launcher</code>)に移動する必要があります。そうしないと、<code>/libs/settings/workflow/launcher</code>のAEM提供のワークフローランチャー定義に置き換えられます。</p> </td> 
   </tr>
  </tbody>
 </table>
@@ -195,14 +194,14 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
     <ol> 
      <li>新規または変更されたワークフロースクリプトを以前の場所から新しい場所にコピーします。<br /> 
       <ul> 
-       <li><code>/apps/workflow/scripts</code> は、SCMで維持する必要があります。</li> 
+       <li><code>/apps/workflow/scripts</code> はSCMで管理する必要があります。</li> 
       </ul> </li> 
      <li>ワークフローモデルの以前の場所にある、ワークフロースクリプトへの参照を更新し、新しい場所を指すようにします。</li> 
     </ol> </td> 
   </tr>
   <tr>
    <td><strong>備考</strong></td> 
-   <td><p>AEM 6.4 SP1は、リリース時に、6.5まで再構築を延期できるようにします。 
+   <td><p>AEM 6.4 SP1は、リリース時に、この再構築を6.5まで延期できるようにします 
      <code>
       upgrade
      </code>.</p> <p>AEM 6.4 SP1 がリリースされる前に AEM 6.4 にアップグレードする場合、この再構築はアップグレードプロジェクトの一環として実行する必要があります。そうしない場合、以前の場所にあるスクリプトを参照するワークフローステップを編集して保存すると、ワークフローステップからワークフロースクリプト参照が完全に削除され、スクリプト選択ドロップダウンでは新しい場所にあるワークスクリプトのみが使用できるようになります。</p> </td> 
@@ -259,20 +258,20 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
    <td><strong>再構築の手引き</strong></td> 
    <td><p>SCM で管理されており、実行時にデザインダイアログから書き込まれていないデザインの場合：</p> 
     <ol> 
-     <li>前の場所のデザインを新しい場所(<code>/apps</code>)にコピーします。</li> 
+     <li>デザインを以前の場所から新しい場所(<code>/apps</code>)にコピーします。</li> 
      <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank"> を使用して、デザイン内の CSS、JavaScript、静的リソースを</a>クライアントライブラリ<code>allowProxy = true</code>に変換します。</li> 
-     <li><span class="code">の前の場所への参照を更新
+     <li><span class="code">の以前の場所への参照を更新する
        <code>
         cq
        </code>:
        <code>
         designPath
-       </code></span>プロパティ。</li> 
+       </code></span>プロパティを追加します。</li> 
      <li>以前の場所を参照しているページを更新して、新規のクライアントライブラリカテゴリを使用します（これにはページ実装コードの更新が必要です）。</li> 
      <li>/etc.clientlibs/.. プロキシサーブレットを介したクライアントライブラリの提供を許可するように AEM Dispatcher のルールを更新します。</li> 
     </ol> <p>SCM で管理されていない、デザインダイアログでランタイムを変更したデザイン。</p> 
     <ul> 
-     <li><code>/etc</code>の外にオーサリング可能なデザインを移動しないでください。</li> 
+     <li><code>/etc</code>からオーサー可能なデザインを移動しないでください。</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -300,18 +299,18 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
     <ol> 
      <li>デザインを以前の場所から新しい場所（/apps）にコピーします。</li> 
      <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank"> を使用して、デザイン内の CSS、JavaScript、静的リソースを</a>クライアントライブラリ<code>allowProxy = true</code>に変換します。</li> 
-     <li>Folio Builder 
+     <li>以前の場所の参照を 
       <code>
        cq
       </code>:
       <code>
        designPath
-      </code>プロパティ。</li> 
+      </code>プロパティを追加します。</li> 
      <li>以前の場所を参照しているページを更新して、新規のクライアントライブラリカテゴリを使用します（これにはページ実装コードの更新が必要です）。</li> 
      <li>/etc.clientlibs/.. プロキシサーブレットを介したクライアントライブラリの提供を許可するように AEM Dispatcher のルールを更新します。</li> 
     </ol> <p>SCM で管理されていない、デザインダイアログでランタイムを変更したデザイン。</p> 
     <ul> 
-     <li><code>/etc</code>の外にオーサリング可能なデザインを移動しないでください。</li> 
+     <li><code>/etc</code>からオーサー可能なデザインを移動しないでください。</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -339,18 +338,18 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
     <ol> 
      <li>デザインを以前の場所から新しい場所（/apps）にコピーします。</li> 
      <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank"> を使用して、デザイン内の CSS、JavaScript、静的リソースを</a>クライアントライブラリ<code>allowProxy = true</code>に変換します。</li> 
-     <li>Folio Builder 
+     <li>以前の場所の参照を 
       <code>
        cq
       </code>:
       <code>
        designPath
-      </code>プロパティ。</li> 
+      </code>プロパティを追加します。</li> 
      <li>以前の場所を参照しているページを更新して、新規のクライアントライブラリカテゴリを使用します（これにはページ実装コードの更新が必要です）。</li> 
      <li>/etc.clientlibs/.. プロキシサーブレットを介したクライアントライブラリの提供を許可するように AEM Dispatcher のルールを更新します。</li> 
     </ol> <p>SCM で管理されていない、デザインダイアログでランタイムを変更したデザイン。</p> 
     <ul> 
-     <li><code>/etc</code>の外にオーサリング可能なデザインを移動しないでください。</li> 
+     <li><code>/etc</code>からオーサー可能なデザインを移動しないでください。</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -378,18 +377,18 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
     <ol> 
      <li>デザインを以前の場所から新しい場所（/apps）にコピーします。</li> 
      <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank"> を使用して、デザイン内の CSS、JavaScript、静的リソースを</a>クライアントライブラリ<code>allowProxy = true</code>に変換します。</li> 
-     <li>Folio Builder 
+     <li>以前の場所の参照を 
       <code>
        cq
       </code>:
       <code>
        designPath
-      </code>プロパティ。</li> 
+      </code>プロパティを追加します。</li> 
      <li>以前の場所を参照しているページを更新して、新規のクライアントライブラリカテゴリを使用します（これにはページ実装コードの更新が必要です）。</li> 
      <li>/etc.clientlibs/.. プロキシサーブレットを介したクライアントライブラリの提供を許可するように AEM Dispatcher のルールを更新します。</li> 
     </ol> <p>SCM で管理されていない、デザインダイアログでランタイムを変更したデザイン。</p> 
     <ul> 
-     <li><code>/etc</code>の外にオーサリング可能なデザインを移動しないでください。</li> 
+     <li><code>/etc</code>からオーサー可能なデザインを移動しないでください。</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -513,11 +512,11 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>新しい、または変更されたAEMプロジェクトダッシュボードガジェットの構成は、新しい場所(<code>/apps</code>)に移行する必要があります。</p> 
+   <td><p>新規または変更されたAEMプロジェクトダッシュボードガジェット設定は、新しい場所(<code>/apps</code>)に移行する必要があります。</p> 
     <ol> 
-     <li>新しいまたは変更されたAEMプロジェクトダッシュボードガジェット構成を、前の場所から新しい場所(<code>/apps</code>)にコピーします。
+     <li>新規または変更されたAEMプロジェクトダッシュボードガジェット設定を以前の場所から新しい場所(<code>/apps</code>)にコピーします。
       <ol> 
-       <li>変更されていないAEMプロジェクトダッシュボードガジェットの構成は、新しい場所(<code>/libs</code>)に存在するので、コピーしないでください。</li> 
+       <li>変更されていないAEMプロジェクトダッシュボードガジェット設定は、新しい場所(<code>/libs</code>)に存在するので、コピーしないでください。</li> 
       </ol> </li> 
      <li>以前の場所を参照する AEM プロジェクトテンプレートを適切な新しい場所を指すように更新します。</li> 
     </ol> </td> 
@@ -543,9 +542,9 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>新しい、または変更されたレプリケーション通知電子メールテンプレートは、新しい場所(<code>/apps</code>)に移行する必要があります。</p> 
+   <td><p>新規または変更されたレプリケーション通知電子メールテンプレートは、新しい場所(<code>/apps</code>)に移行する必要があります。</p> 
     <ol> 
-     <li>新しいまたは変更されたレプリケーション通知電子メールテンプレートを、前の場所から新しい場所(<code>/apps</code>)にコピーします。</li> 
+     <li>新規または変更されたレプリケーション通知電子メールテンプレートを以前の場所から新しい場所(<code>/apps</code>)にコピーします。</li> 
      <li>移行されたすべてのレプリケーション通知電子メールテンプレートを以前の場所から削除します。</li> 
     </ol> </td> 
   </tr>
@@ -580,18 +579,18 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
     <ol> 
      <li>以前の場所から新しい場所にすべてのタグをコピーします。</li> 
      <li>以前の場所からすべてのタグを削除します。</li> 
-     <li>AEM Webコンソールから、<em>https://serveraddress:serverport/system/console/bundles/com.day.cq.cq-tagging</em>にあるDay Communique 5 Tagging OSGiバンドルを再起動し、AEMが「New Location contains」のコンテンツを認識できるようにします。このOSGiバンドルは使用する必要があります。</li> 
+     <li>AEM Webコンソールから、<em>https://serveraddress:serverport/system/console/bundles/com.day.cq.cq-tagging</em>にあるDay Communique 5 Tagging OSGiバンドルを再起動し、AEMが新しい場所にコンテンツが含まれていることを認識できるようにします。また、このバンドルを使用する必要があります。</li> 
     </ol> </td> 
   </tr>
   <tr>
    <td><strong>備考</strong></td> 
-   <td><p>Day Communique Tagging OSGi バンドルを再起動しても、以前の場所が空であれば、新しい場所がタグのルートとして登録されるだけです。</p> <p>AEM の TagManager API を活用シてタグを解決するすべての機能については、新しい場所に移行した後も、以前の場所への参照は引き続き機能します。</p> <p>パス<code>/etc/tags</code>を明示的に参照するカスタムコードは、<span class="code">/content/に更新する必要があります
+   <td><p>Day Communique Tagging OSGi バンドルを再起動しても、以前の場所が空であれば、新しい場所がタグのルートとして登録されるだけです。</p> <p>AEM の TagManager API を活用シてタグを解決するすべての機能については、新しい場所に移行した後も、以前の場所への参照は引き続き機能します。</p> <p>パス<code>/etc/tags</code>を明示的に参照するカスタムコードは、<span class="code">/content/に更新する必要があります。
       <code>
        cq
       </code>
       <code>
        :tags
-      </code></span>を使用するか、または、この移行と連携してTagManager Java APIを利用できるように書き換えます。</p> </td> 
+      </code></span>と呼ばれる場合や、この移行と組み合わせてTagManager Java APIを利用するように書き換えることをお勧めします。</p> </td> 
   </tr>
  </tbody>
 </table>
@@ -610,20 +609,20 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>新しい翻訳Cloud Servicesは、新しい場所(<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)に移行する必要があります。</p> 
+   <td><p>新しい翻訳Cloud Servicesは、新しい場所（<code>/apps</code>、<code>/conf/global</code>または<code>/conf/&lt;tenant&gt;</code>）に移行する必要があります。</p> 
     <ol> 
      <li>以前の場所にある既存の設定を新しい場所に移行します。
       <ul> 
        <li><strong>ツール／クラウドサービス／翻訳クラウドサービス</strong>の AEM オーサリング UI を使用して、新規の翻訳クラウドサービス設定を手動で再作成します。<br /> または </li> 
-       <li>新しい翻訳Cloud Servicesの設定を「前の場所」から「新しい場所」(<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)にコピーします。</li> 
+       <li>新しい翻訳Cloud Servicesの設定を以前の場所から新しい場所(<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)にコピーします。</li> 
       </ul> </li> 
      <li>該当する AEM 設定を AEM コンテンツ階層と関連付けます。
       <ol> 
        <li>「<strong>AEM Sites／ページ／ページのプロパティ／詳細タブ／クラウド設定</strong>」を使用した AEM Sites のページ階層。</li> 
        <li>「<strong>AEM エクスペリエンスフラグメント／エクスペリエンスフラグメント／プロパティ／クラウドサービスタブ／クラウド設定</strong>」を使用した AEM エクスペリエンスフラグメント階層。</li> 
        <li>「<strong>AEM エクスペリエンスフラグメント／フォルダー／プロパティ／クラウドサービスタブ／クラウド設定</strong>」を使用した AEM エクスペリエンスフラグメントフォルダー階層。<br /> </li> 
-       <li><strong>AEM Assets/フォルダー/Cloud Servicesーのプロパティ/フォルダータブ/設定</strong>を介したAEM Assetsフォルダー階層。</li> 
-       <li><strong>AEMプロジェクト/プロジェクト/プロジェクトのプロパティ/詳細タブ/クラウドの設定</strong>を介したAEMプロジェクト。</li> 
+       <li><strong>AEM Assets/フォルダー/フォルダーのプロパティ/「Cloud Services」タブ/「設定」</strong>を使用したAEM Assetsフォルダー階層。</li> 
+       <li><strong>AEM Projects/Project/Project Properties/Advanced Tab/Cloud Configuration</strong>を使用したAEMプロジェクト。</li> 
       </ol> </li> 
      <li>前述の AEM コンテンツ階層から、移行された従来の翻訳クラウドサービスとの関連付けをすべて解除します。</li> 
     </ol> </td> 
@@ -655,9 +654,9 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>新しいまたは変更された翻訳言語の定義では、すべての翻訳言語の定義を新しい場所(<code>/apps</code>)に移行する必要があります。</p> 
+   <td><p>新規または変更された翻訳言語の定義は、すべての翻訳言語の定義を新しい場所(<code>/apps</code>)に移行する必要があります。</p> 
     <ol> 
-     <li>翻訳言語の定義に追加や変更が行われた場合は、前の場所のすべての翻訳言語の定義を新しい場所(<code>/apps</code>)にコピーします。</li> 
+     <li>翻訳言語の定義に追加や変更が加えられた場合は、以前の場所から新しい場所(<code>/apps</code>)にすべての翻訳言語の定義をコピーします。</li> 
     </ol> </td> 
   </tr>
   <tr>
@@ -686,7 +685,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>変更した変換ルールXMLファイルは、新しい場所（<code>/apps</code>または<code>/conf/global</code>）に移行する必要があります。</p> <p>1. 変更した 翻訳ルール XML ファイルを以前の場所から新しい場所にコピーします。</p> </td> 
+   <td><p>変更された翻訳ルールXMLファイルは、新しい場所（<code>/apps</code>または<code>/conf/global</code>）に移行する必要があります。</p> <p>1. 変更した 翻訳ルール XML ファイルを以前の場所から新しい場所にコピーします。</p> </td> 
   </tr>
   <tr>
    <td><strong>備考</strong></td> 
@@ -721,18 +720,18 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
     <ol> 
      <li>デザインを以前の場所から新しい場所（/apps）にコピーします。</li> 
      <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank"> を使用して、デザイン内の CSS、JavaScript、静的リソースを</a>クライアントライブラリ<code>allowProxy = true</code>に変換します。</li> 
-     <li>Folio Builder 
+     <li>以前の場所の参照を 
       <code>
        cq
       </code>:
       <code>
        designPath
-      </code>プロパティ。</li> 
+      </code>プロパティを追加します。</li> 
      <li>以前の場所を参照しているページを更新して、新規のクライアントライブラリカテゴリを使用します（これにはページ実装コードの更新が必要です）。</li> 
      <li>/etc.clientlibs/.. プロキシサーブレットを介したクライアントライブラリの提供を許可するように AEM Dispatcher のルールを更新します。</li> 
     </ol> <p>SCM で管理されていない、デザインダイアログでランタイムを変更したデザイン。</p> 
     <ul> 
-     <li><code>/etc</code>の外にオーサリング可能なデザインを移動しないでください。</li> 
+     <li><code>/etc</code>からオーサー可能なデザインを移動しないでください。</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -766,20 +765,20 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>新しいベンダー変換コネクタCloud Servicesは、新しい場所（<code>/apps</code>、<code>/conf/global</code>、または<code>/conf/&lt;tenant&gt;</code>）に移行する必要があります。</p> 
+   <td><p>新しいベンダー翻訳コネクタCloud Servicesは、すべて新しい場所（<code>/apps</code>、<code>/conf/global</code>または<code>/conf/&lt;tenant&gt;</code>）に移行する必要があります。</p> 
     <ol> 
      <li>以前の場所にある既存の設定を新しい場所に移行します。
       <ul> 
        <li><strong>ツール／クラウドサービス／翻訳クラウドサービスの AEM オーサリング UI </strong>を使用して、新しいベンダー翻訳コネクタクラウドサービス設定を手動で作成します。<br /> または </li> 
-       <li>新しいベンダー変換コネクタCloud Services設定を前の場所から新しい場所(<code>/apps</code>、<code>/conf/global </code>、<code>/conf/&lt;tenant&gt;</code>)にコピーします。</li> 
+       <li>新しいベンダー翻訳コネクタCloud Services設定を以前の場所から新しい場所（<code>/apps</code>、<code>/conf/global </code>または<code>/conf/&lt;tenant&gt;</code>）にコピーします。</li> 
       </ul> </li> 
      <li>該当する AEM 設定を AEM コンテンツ階層と関連付けます。
       <ol> 
        <li>「<strong>AEM Sites／ページ／ページのプロパティ／詳細タブ／クラウド設定</strong>」を使用した AEM Sites のページ階層。</li> 
        <li>「<strong>AEM エクスペリエンスフラグメント／エクスペリエンスフラグメント／プロパティ／クラウドサービスタブ／クラウド設定</strong>」を使用した AEM エクスペリエンスフラグメント階層。</li> 
        <li>「<strong>AEM エクスペリエンスフラグメント／フォルダー／プロパティ／クラウドサービスタブ／クラウド設定</strong>」を使用した AEM エクスペリエンスフラグメントフォルダー階層。</li> 
-       <li><strong>AEM Assets/フォルダー/Cloud Servicesーのプロパティ/フォルダータブ/設定</strong>を介したAEM Assetsフォルダー階層。</li> 
-       <li><strong>AEMプロジェクト/プロジェクト/プロジェクトのプロパティ/詳細タブ/クラウドの設定</strong>を介したAEMプロジェクト。</li> 
+       <li><strong>AEM Assets/フォルダー/フォルダーのプロパティ/「Cloud Services」タブ/「設定」</strong>を使用したAEM Assetsフォルダー階層。</li> 
+       <li><strong>AEM Projects/Project/Project Properties/Advanced Tab/Cloud Configuration</strong>を使用したAEMプロジェクト。</li> 
       </ol> </li> 
      <li>前述の AEM コンテンツ階層から、移行された従来の翻訳クラウドサービスとの関連付けをすべて解除します。</li> 
     </ol> </td> 
@@ -856,4 +855,3 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
  </tbody>
 </table>
-
