@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: 1445437e-7f22-49ad-9bde-f3c0ff7d5142
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 63bf891c-572a-40e0-945f-d20a0a029224
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 95%
 
 ---
-
 
 # Marketing Campaign Manager の使用{#working-with-the-marketing-campaign-manager}
 
@@ -49,13 +48,13 @@ MCM から、以下にアクセスできます。
       特定のセグメントを選択すると、セグメント定義ページが開きます。
 
    * [レポート](/help/sites-administering/reporting.md)\
-      AEMには、インスタンスの状態を分析および監視するのに役立つ様々なレポートが用意されています。 この MCM ウィンドウにはレポートが一覧表示されます。
+      AEMは、インスタンスの状態を分析および監視するのに役立つ様々なレポートを提供します。 この MCM ウィンドウにはレポートが一覧表示されます。
 
       レポートを選択すると、レポートページが開きます。
 
    * [キャンペーン](#campaigns)
 
-      このウィンドウには、[ニュースレター](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)や[ティーザー](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)など、キャンペーンの体験をリストします。
+      このウィンドウには、[ニュースレター](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)や[ティーザー](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)など、キャンペーンのエクスペリエンスが一覧表示されます。
 
 * **[リード数](#leads)**
 
@@ -75,7 +74,7 @@ MCM から、以下にアクセスできます。
 
 ダッシュボードには、（リードの）リスト、セグメント、レポートおよびキャンペーンの概要を提供する 4 つのウィンドウが表示されます。ダッシュボードから、これらの基本機能にアクセスすることもできます。
 
-![mcm_ダッシュボード](assets/mcm_dashboard.png)
+![mcm_dashboard](assets/mcm_dashboard.png)
 
 ## リード数 {#leads}
 
@@ -211,4 +210,3 @@ MCM で「**キャンペーン**」をクリックします。リスト表示が
 MCM で「**キャンペーン**」をクリックします。リスト表示がアクティブであることを確認し、必要なキャンペーンエクスペリエンスを選択して、「**分析...**」を選択します。期間中のページの訪問数のグラフが表示されます。
 
 ![mcm_campaignanalyze](assets/mcm_campaignanalyze.png)
-
