@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 5150867a-02a9-45c9-b2fd-e536b60ffa8c
-translation-type: tm+mt
-source-git-commit: f1a5e4c5c8411e10887efab517115fee0fd1890a
+exl-id: 9c588691-0649-4d59-ab97-ebadfcd1252c
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 95%
 
 ---
-
 
 # ワークフローへのアクセスの管理{#managing-access-to-workflows}
 
@@ -54,7 +53,7 @@ ht-degree: 95%
 
 ### 特定のワークフローモデル用の ACL の /var/workflow/models への適用  {#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models}
 
-ワークフローモデルが`/var/workflow/models`内に保存されている場合は、次のフォルダーに、そのワークフローにのみ関連する特定のACLを割り当てることができます。
+ワークフローモデルが`/var/workflow/models`内に保存されている場合は、フォルダーに、そのワークフローにのみ関連する特定のACLを割り当てることができます。
 
 1. Web ブラウザーで CRXDE Lite を開きます（例：[http://localhost:4502/crx/de](http://localhost:4502/crx/de)）。
 1. ノードツリーで、次のワークフローモデルフォルダーのノードを選択します。
@@ -119,4 +118,3 @@ ht-degree: 95%
 1. 「**すべて保存**」をクリックします。
 
    `prototypes` グループのメンバーが `content-authors` フォルダーのモデルを使用できなくなります。
-
