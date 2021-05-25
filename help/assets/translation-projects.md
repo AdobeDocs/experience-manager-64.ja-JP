@@ -2,16 +2,15 @@
 title: 翻訳プロジェクトの作成
 description: AEM で翻訳プロジェクトを作成する方法を学習します。
 contentOwner: AG
-feature: Translation
+feature: 翻訳
 role: Architect,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: 1b931fef-eed0-4758-993d-cdf8d478fb6f
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '1935'
 ht-degree: 97%
 
 ---
-
 
 # 翻訳プロジェクトの作成 {#creating-translation-projects}
 
@@ -204,7 +203,7 @@ ht-degree: 97%
 
 ### 新しい翻訳プロジェクトを作成 {#create-a-new-translation-project-1}
 
-このオプションを使用する場合、言語コピーを更新するアセットのセットに対して翻訳プロジェクトが作成されます。
+このオプションを使用すると、言語コピーを更新する一連のアセットに対して翻訳プロジェクトが作成されます。
 
 1. Assets UI で、アセットを追加したソースフォルダーを選択します。
 1. **[!UICONTROL 参照]**&#x200B;パネルを開き、「**[!UICONTROL コピー]**」の下の「**[!UICONTROL 言語コピー]**」をクリックまたはタップして言語コピーのリストを表示します。
@@ -314,4 +313,4 @@ ht-degree: 97%
 
 1. アセットコンソールに移動し、翻訳済みアセットそれぞれのプロパティページを開き、翻訳されたメタデータを表示します。
 
-アセットのメタデータを効率的に変換する上でのヒントについては、[5 Steps for Expecifully Translating Metadata](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/)を参照してください。
+アセットのメタデータを効率よく翻訳するためのヒントは、[メタデータを効率的に翻訳するための5つの手順](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/)を参照してください。
