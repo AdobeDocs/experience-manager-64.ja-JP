@@ -10,20 +10,19 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 48826f03-6731-49c5-a6c5-6e2fb718f912
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 2f5c022e-bd98-4912-9409-d08137a1caf1
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 94%
 
 ---
 
-
 # ローンチの作成{#creating-launches}
 
 ローンチを作成し、今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるようにします。ローンチを作成する際は、タイトルとソースページを指定します。
 
-* タイトルは&#x200B;**サイドキック**&#x200B;に表示されます。ここから作成者はサイドキックにアクセスして作業できます。
+* タイトルは&#x200B;**サイドキック**&#x200B;に表示されます。作成者はそこからアクセスして作業できます。
 * デフォルトで、ソースページの子ページがローンチに含まれています。希望に応じて、ソースページのみを使用することもできます。
 * デフォルトでは、[ライブコピー](/help/sites-administering/msm.md)によってソースページの変更に合わせてローンチページが自動的に更新されます。静的なコピーを作成して自動更新をおこなわないように指定できます。
 
@@ -59,4 +58,3 @@ ht-degree: 94%
    >[!CAUTION]
    >
    >ネストされたローンチを削除する場合は、先に下のレベルのローンチを削除する必要があります。
-
