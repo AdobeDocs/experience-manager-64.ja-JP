@@ -10,16 +10,15 @@ topic-tags: correspondence-management, installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 38a80992-2eda-4535-89af-0de34b1a9686
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 0bfa0e65-c4cd-4c37-b42b-bff1b777a7be
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '387'
 ht-degree: 86%
 
 ---
 
-
-# 互換性パッケージのインストール{#compatibility-package}
+# 互換性パッケージ{#compatibility-package}をインストールします
 
 互換性パッケージを AEM Forms 6.4 にインストールすると、AEM Forms 6.3 および非推奨になったアダプティブォームテンプレートとページから Correspondence Management アセットを使用できます
 
@@ -34,13 +33,13 @@ AEMFD 互換性パッケージを使用すると、AEM Forms 6.4 で AEM Forms 6
 * データディクショナリ
 * アダプティブフォームの非推奨になったテンプレートおよびページ
 
-詳しくは、[互換性パッケージ](/help/forms/using/compatibility-package.md#assetsmadecompatible)をインストールして、AEM Forms6.4と互換性のあるアセットを参照してください。
+詳しくは、[互換性パッケージ](/help/forms/using/compatibility-package.md#assetsmadecompatible)をインストールして、AEM Forms 6.4と互換性を持たせたアセットを参照してください。
 
 ## AEM Forms 6.4 で AEM Forms 6.3 と 6.2 のアセットのサポートを追加する {#add-support-for-aem-forms-and-assets-in-aem-forms}
 
 アップグレードを実行した後、AEMFD 互換性パッケージをインストールしてアセットに 6.4 との互換性を持たせるには、以下を実行します。
 
-[AEM互換パッケージ](/help/sites-deploying/backward-compatibility.md)がプレインストールされていることを確認します。
+[AEM互換性パッケージ](/help/sites-deploying/backward-compatibility.md)が事前にインストールされていることを確認します。
 
 1. [互換性パッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT)をインストールします。
 
@@ -53,7 +52,7 @@ AEMFD 互換性パッケージを使用すると、AEM Forms 6.4 で AEM Forms 6
 
 ## 互換性パッケージをインストールすることにより AEM Forms 6.4 と互換性を持つようになったアセット {#assetsmadecompatible}
 
-互換性パッケージをインストールすると、次のアセットとテンプレートをAEM Forms6.4と互換性のあるものにすることができます。
+互換性パッケージをインストールすると、次のアセットとテンプレートをAEM Forms 6.4と互換性を持たせることができます。
 
 * AEM 6.3 以前の Correspondence Management アセット
 
@@ -78,4 +77,3 @@ AEMFD 互換性パッケージを使用すると、AEM Forms 6.4 で AEM Forms 6
    * /libs/fd/af/components/page/survey
    * /libs/fd/af/components/page/tabbedenrollment
    * /libs/fd/afaddon/components/page/advancedenrollment
-
