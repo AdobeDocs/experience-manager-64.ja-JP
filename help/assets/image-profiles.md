@@ -1,8 +1,8 @@
 ---
-title: Dynamic Media画像プロファイル
-seo-title: Dynamic Media画像プロファイル
-description: アンシャープマスク、スマート切り抜き、スマートスウォッチ、またはその両方の設定を含む画像プロファイルを作成し、プロファイルを画像アセットのフォルダーに適用します。
-seo-description: アンシャープマスク、スマート切り抜き、スマートスウォッチ、またはその両方の設定を含む画像プロファイルを作成し、プロファイルを画像アセットのフォルダーに適用します。
+title: Dynamic Mediaイメージプロファイル
+seo-title: Dynamic Mediaイメージプロファイル
+description: アンシャープマスク、スマート切り抜きとスマートスウォッチのいずれかまたは両方の設定を含むイメージプロファイルを作成し、そのプロファイルを画像アセットのフォルダーに適用します。
+seo-description: アンシャープマスク、スマート切り抜きとスマートスウォッチのいずれかまたは両方の設定を含むイメージプロファイルを作成し、そのプロファイルを画像アセットのフォルダーに適用します。
 uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,9 +10,8 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 exl-id: 895103c8-df58-40f0-85d6-e29637edce53
-feature: Image Profiles
+feature: イメージプロファイル
 role: Administrator,Business Practitioner
-translation-type: tm+mt
 source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
 source-wordcount: '2715'
@@ -20,7 +19,7 @@ ht-degree: 92%
 
 ---
 
-# Dynamic Media画像プロファイル{#image-profiles}
+# Dynamic Mediaイメージプロファイル{#image-profiles}
 
 画像をアップロードするときに、フォルダーにイメージプロファイルを適用することで、アップロード時に自動的に画像を切り抜くことができます。
 
@@ -69,7 +68,7 @@ ht-degree: 92%
   <tr> 
    <td>カラーおよび画像スウォッチ</td> 
    <td>各画像の画像スウォッチを一括で生成します。</td> 
-   <td><p><strong>注意</strong>：Dynamic Media Classic ではスマートスウォッチはサポートされません。</p> <p>商品画像から色やテクスチャを示す高品質のスウォッチを自動的に検出して生成します。</p> <p>カラーおよび画像スウォッチを使用するには、「切り抜きオプション」ドロップダウンリストで「<strong>スマート切り抜き</strong>」を選択し、「カラーおよび画像スウォッチ」の右側で、この機能を有効（オン）にします。「幅」と「高さ」テキストフィールドにピクセル値を入力します。</p> <p>画像の切り抜きはすべてレンディションパネルから使用できますが、スウォッチを使用するには URL のコピー機能を利用しなければなりません。サイトでスウォッチをレンダリングするには、独自の表示コンポーネントを使用する必要があります（カルーセルバナーは例外です。カルーセルバナーで使用されるスウォッチについては、Dynamic Media が表示コンポーネントを提供します）。</p> <p><strong>画像スウォッチの使用</strong></p> <p>画像スウォッチの URL は簡単です。次のとおりです。</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>ここでは、<code>:Swatch</code> がアセット要求に追加されています。</p> <p><strong>カラースウォッチの使用</strong></p> <p>カラースウォッチを使用するには、次のように <code>req=userdata</code> 要求を作成します。</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>例えば、Dynamic Media Classic のスウォッチアセットは次のとおりです。</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>スウォッチアセットの対応する <code>req=userdata</code> URL は次のとおりです。</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p><code>req=userdata</code> 応答は次のとおりです。</p> <p><code class="code">SmartCropDef=Swatch
+   <td><p><strong>注意</strong>：Dynamic Media Classic ではスマートスウォッチはサポートされません。</p> <p>商品画像から色やテクスチャを示す高品質のスウォッチを自動的に検出して生成します。</p> <p>カラーおよび画像スウォッチを使用するには、「切り抜きオプション」ドロップダウンリストで「<strong>スマート切り抜き</strong>」を選択し、「カラーおよび画像スウォッチ」の右側で、この機能を有効（オン）にします。「幅」と「高さ」テキストフィールドにピクセル値を入力します。</p> <p>画像の切り抜きはすべてレンディションパネルから使用できますが、スウォッチを使用するには URL のコピー機能を利用しなければなりません。サイトでスウォッチをレンダリングするには、独自の表示コンポーネントを使用する必要があります（カルーセルバナーは例外です。カルーセルバナーで使用されるスウォッチについては、Dynamic Media が表示コンポーネントを提供します）。</p> <p><strong>画像スウォッチの使用</strong></p> <p>画像スウォッチの URL は簡単です. 次のとおりです。</p> <p><code>/is/image/company/&lt;asset_name&gt;:Swatch</code></p> <p>ここでは、<code>:Swatch</code> がアセット要求に追加されています。</p> <p><strong>カラースウォッチの使用</strong></p> <p>カラースウォッチを使用するには、次のように <code>req=userdata</code> 要求を作成します。</p> <p><code>/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata</code></p> <p>例えば、Dynamic Media Classic のスウォッチアセットは次のとおりです。</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch</code></p> <p>スウォッチアセットの対応する <code>req=userdata</code> URL は次のとおりです。</p> <p><code>https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata</code></p> <p><code>req=userdata</code> 応答は次のとおりです。</p> <p><code class="code">SmartCropDef=Swatch
        SmartCropHeight=200.0
        SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200
        SmartCropType=Swatch
@@ -78,11 +77,11 @@ ht-degree: 92%
 
 ## アンシャープマスク {#unsharp-mask}
 
-「**アンシャープマスク**」を使用して、最終的なダウンサンプル画像に対するシャープフィルタの効果を微調整します。効果の適用度、効果の半径（ピクセル単位）および無視されるコントラストのしきい値を制御できます。この効果は、Adobe Photoshopの「アンシャープマスク」フィルターと同じオプションを使用します。
+**アンシャープマスク**&#x200B;を使用して、ダウンサンプリングされた最終的な画像に対するシャープフィルター効果を微調整します。効果の強さ、効果の半径（ピクセル単位）、無視されるコントラストのしきい値を制御できます。この効果では、Adobe Photoshopの「アンシャープマスク」フィルターと同じオプションが使用されます。
 
 >[!NOTE]
 >
->アンシャープマスクは、PTIFF（Pyramid TIFF）内のダウンスケールされたレンディション（50％以上ダウンサンプルされたもの）にのみ適用されます。つまり、PTIFF内の最大サイズのレンディションは、サムネールなどの小さいサイズのレンディションは変更される（そしてアンシャープマスクが表示される）のに対し、アンシャープマスクの影響を受けません。
+>アンシャープマスクは、PTIFF（Pyramid TIFF）内のダウンスケールされたレンディション（50％以上ダウンサンプルされたもの）にのみ適用されます。つまり、PTIFF内の最大サイズのレンディションはアンシャープマスクの影響を受けませんが、サムネールなどの小さいサイズのレンディションは変更されます（そしてアンシャープマスクが表示されます）。
 
 「**アンシャープマスク**」には次のフィルタリングオプションがあります。
 
@@ -113,7 +112,7 @@ ht-degree: 92%
 
 他のアセットタイプへの高度な処理パラメーターの定義については、[アセット処理の設定](config-dms7.md#configuring-asset-processing)を参照してください。
 
-**Dynamic Media画像プロファイルを作成するには**:
+**Dynamic Mediaイメージプロファイルを作成するには**:
 
 1. AEM のロゴをタップし、**[!UICONTROL ツール／Assets／イメージプロファイル]**&#x200B;に移動します。
 1. 「**[!UICONTROL 作成]**」をタップクリックして、新しいイメージプロファイルを追加します。
@@ -127,7 +126,7 @@ ht-degree: 92%
 
 1. 「**[!UICONTROL 保存]**」をタップします。新しく作成されたプロファイルが、使用可能なプロファイルのリストに表示されます。
 
-## Dynamic Media画像プロファイルの編集または削除{#editing-or-deleting-image-profiles}
+## Dynamic Mediaイメージプロファイルの編集または削除{#editing-or-deleting-image-profiles}
 
 1. AEM のロゴをタップし、**[!UICONTROL ツール／Assets／イメージプロファイル]**&#x200B;に移動します。
 1. 編集または削除するイメージプロファイルを選択します。編集するには、「**[!UICONTROL 画像処理プロファイルを編集]**」を選択します。削除するには、「**[!UICONTROL 画像処理プロファイルを削除]**」を選択します。
@@ -179,7 +178,7 @@ ht-degree: 92%
 
 1. 次のいずれかの操作をおこないます。
 
-   * **https://&lt;AEM server>/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam**&#x200B;に移動し、適切なプロファイルを適用して、「**保存**」をタップします。
+   * **https://&lt;AEM server>/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam**&#x200B;に移動し、適切なプロファイルを適用して「**保存**」をタップします。
 
       ![chlimage_1-257](assets/chlimage_1-257.png)
 
@@ -257,7 +256,7 @@ ht-degree: 92%
    * スマート切り抜きボックスを移動します。次のいずれかの操作をおこないます。
 
       * 画像にスマート切り抜きまたはスマートスウォッチのみが適用されている場合は、画像の切り抜きボックスを新しい場所にドラッグします。
-      * 画像にスマート切り抜きとスマートスウォッチの両方が適用されている場合は、画像の切り抜きボックスを新しい場所にドラッグします。または、画像の下のスマートスウォッチ（カラースウォッチは静的）をタップし、スマートスウォッチ切り抜きボックスを新しい場所にドラッグします。
+      * 画像にスマート切り抜きとスマートスウォッチの両方が適用されている場合は、画像の切り抜きボックスを新しい場所にドラッグします。または、画像の下にあるスマートスウォッチをタップし（カラースウォッチは静的です）、スマートスウォッチの切り抜きボックスを新しい場所にドラッグします。
 
       ![edit_smart_crops-move](assets/edit_smart_crops-move.png)
 
