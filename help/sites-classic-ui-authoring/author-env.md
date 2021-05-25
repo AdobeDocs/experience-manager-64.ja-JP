@@ -9,24 +9,23 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 8c747892-c5ba-4288-b5e7-75fd40d92f5c
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: 8421a092-6e99-4c05-9647-c0cc76667c85
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 87%
 
 ---
 
-
 # オーサー環境の操作{#working-with-the-author-environment}
 
 >[!NOTE]
 >
->以下のドキュメントでは、クラシック UI に焦点を当てています。タッチ操作対応最新UIでのオーサリングについて詳しくは、[標準のオーサリングドキュメント](/help/assets/assets.md)を参照してください。
+>以下のドキュメントでは、クラシック UI に焦点を当てています。最新のタッチ操作対応UIでのオーサリングについて詳しくは、[標準のオーサリングドキュメント](/help/assets/assets.md)を参照してください。
 
 オーサー環境では、以下に関連するタスクを実行できます。
 
-* [オーサリング](/help/sites-authoring/author.md) ( [ページ](/help/sites-authoring/qg-page-authoring.md) 認証およびアセット [の管理を含む](/help/assets/assets.md))
+* [オーサリング](/help/sites-authoring/author.md) (ペー [ジの](/help/sites-authoring/qg-page-authoring.md) オーサリングと [管理](/help/assets/assets.md)を含む)
 
 * Web サイトでのコンテンツの生成および管理の際に必要になる[管理](/help/sites-administering/administer-best-practices.md)タスク
 
@@ -39,7 +38,6 @@ ht-degree: 87%
    * デスクトップデバイス向けに設計されています。
    * もうメンテナンスはおこなわれていません。
    * 以下のドキュメントでは、このクラシック UI に焦点を当てています。最新のタッチベースの UI でのオーサリングについて詳しくは、[標準オーサリングのドキュメント](/help/sites-authoring/author.md)を参照してください。
-
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
 1. タッチ操作向け UI
@@ -47,13 +45,10 @@ ht-degree: 87%
    * これは AEM の最新の標準 UI です。
    * 灰色を基調としており、クリーンでフラットなインターフェイスになっています。
    * タッチデバイスとデスクトップデバイスの両方で使用できるようにデザインされています（タッチ操作向けに最適化されています）。ルックアンドフィールはすべてのデバイスで同じですが、[リソースの表示と選択](/help/sites-authoring/basic-handling.md)の操作がやや異なります（タップとクリックの違い）。
-   * タッチベースのUIを使用してオーサリングする方法の詳細については、[標準のオーサリングドキュメント](/help/sites-authoring/author.md)を参照してください。 以下のドキュメントでは、クラシック UI に焦点を当てています。
+   * タッチベースのUIを使用したオーサリング方法について詳しくは、[標準のオーサリングのドキュメント](/help/sites-authoring/author.md)を参照してください。 以下のドキュメントでは、クラシック UI に焦点を当てています。
 
    * デスクトップ：
-
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
    * タブレットデバイス（または幅 1024 ピクセル未満のデスクトップ）。
-
    ![chlimage_1-7](assets/chlimage_1-7.jpeg)
-
