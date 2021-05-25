@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
-translation-type: tm+mt
-source-git-commit: 8c37e09d9b00ff26fc5a0549766080d593769a24
+exl-id: a2a299b5-a15a-47d9-a9d8-83f45917d080
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 81%
 
 ---
-
 
 # ベストプラクティス{#best-practices}
 
@@ -63,7 +62,7 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
    <td>タッチ操作対応 UI の概念および構造の概要を説明しています。</td> 
   </tr>
   <tr>
-   <td>タッチ対応UI:コンソールのカスタマイズ </td> 
+   <td>タッチ操作対応UI:コンソールのカスタマイズ </td> 
    <td><a href="/help/sites-developing/customizing-consoles-touch.md">タッチ操作対応 UI のコンソールのカスタマイズ</a></td> 
    <td>タッチ操作対応 UI のコンソールを拡張するための最適な方法を説明しています。</td> 
   </tr>
@@ -80,16 +79,16 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
  </tbody>
 </table>
 
-## Communities {#communities}
+## コミュニティ {#communities}
 
-[AEM ](/help/communities/overview.md) Communitiesを使用すると、オンプレミスのコミュニティの作成と管理が簡単になります。
+[AEM Communitiesを使](/help/communities/overview.md) 用すると、オンプレミスのコミュニティを簡単に作成および管理できます。
 
 Communities のベストプラクティスは、こちらで説明しています。
 
 |  |  |  |
 |---|---|---|
-| ユーザー生成コンテンツ(UGC)を使用する場合のベストプラクティス | [コーディングのガイドライン](/help/communities/code-guide.md) | [ソーシャルコンポーネントフレームワーク](/help/communities/scf.md) (SCF)用の柔軟でポータブルなコードの開発に関するガイドライン。 |
-| Communitiesコンポーネントの使用例 | [コミュニティコンポーネントガイド](/help/communities/components-guide.md) | 対話型の開発ツールです。 |
+| ユーザー生成コンテンツ(UGC)の操作のベストプラクティス | [コーディングのガイドライン](/help/communities/code-guide.md) | [ソーシャルコンポーネントフレームワーク](/help/communities/scf.md)(SCF)用の柔軟でポータブルなコードの開発に関するガイドライン。 |
+| コミュニティコンポーネントの使用例 | [コミュニティコンポーネントガイド](/help/communities/components-guide.md) | インタラクティブな開発ツール。 |
 
 ## ツール／HTL {#tooling-htl}
 
@@ -102,6 +101,5 @@ HTML Template Language（HTL）は、AEM 6.0 で導入された新しい HTML �
 
 >[!NOTE]
 >
->次のマルチパートチュートリアルは、コアコンポーネント、編集可能なテンプレート、クライアントライブラリ、およびコンポーネントの開発の詳細を示す、新しいAEMプロジェクトを設定する際に役立つ場合があります。\
+>次のマルチパートチュートリアルは、新しいAEMプロジェクトを設定する際のベストプラクティスとして役立つ場合があります。コアコンポーネント、編集可能なテンプレート、クライアントライブラリおよびコンポーネント開発の詳細を説明します。\
 >[AEM Sites の概要 - WKND チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
-
