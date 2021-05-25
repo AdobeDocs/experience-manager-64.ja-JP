@@ -8,18 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: f547c0c1-3917-4092-9d63-c1b3aaefcef0
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: e45f7f79-a5c3-439c-bf6c-7b14590cd3fc
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 52%
 
 ---
 
-
 # エラーダイアログのカスタマイズ  {#customizing-error-dialogs}
 
-AEM Forms Workspace では、エラーダイアログをカスタマイズすることができます。[「AEM Formsワークスペースのカスタマイズ](/help/forms/using/generic-steps-html-workspace-customization.md)の一般的な手順」を実行し、次の手順に従ってエラーダイアログをカスタマイズします。
+AEM Forms Workspace では、エラーダイアログをカスタマイズすることができます。[AEM Forms Workspaceのカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)を実行し、次の手順に従ってエラーダイアログをカスタマイズします。
 
 ## テキストのカスタマイズ {#customizing-text}
 
@@ -185,7 +184,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
    }
    ```
 
-1. フットバーボタンの範囲については、`.error-dialog`ボタン範囲と`.foot-bar`ボタン範囲を複合リストから分離します。 この変更を行うには、次を newStyle.css ファイルに追加します。
+1. フットバーボタンのスパンについては、 `.error-dialog`ボタンと`.foot-bar`ボタンのスパンをコンポジットリストから分離します。 この変更を行うには、次を newStyle.css ファイルに追加します。
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
