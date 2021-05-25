@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: fd96f30c-0616-445e-adb9-050d52862ffc
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: 482c5889-d756-428b-bf0c-38c372e3c8b6
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 87%
 
 ---
-
 
 # Adobe Campaign との統合{#integrating-with-adobe-campaign}
 
@@ -36,5 +35,4 @@ Adobe Campaign は、あらゆるオンラインチャネルとオフライン�
 
 >[!NOTE]
 >
->関連するAEMコミュニティの記事を確認するには、次を参照してください。[Adobe Experience ManagerとAdobe Campaign Standardを統合してニューレター](https://helpx.adobe.com/jp/experience-manager/using/aem_campaign.html)を作ります。
-
+>関連するAEM Communityの記事を確認するには、以下を参照してください。[Adobe Experience ManagerとAdobe Campaign Standardを統合して、ニューレター](https://helpx.adobe.com/jp/experience-manager/using/aem_campaign.html)を作成します。
