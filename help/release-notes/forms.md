@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 content-type: reference
 discoiquuid: 3f592c5a-4e59-436e-b67b-3ed575c6afc3
-translation-type: tm+mt
-source-git-commit: 715cff841252d79504d702817f91db92df919bfc
+exl-id: 94989316-02df-4cfa-bb2e-c0d357dff728
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 100%
 
 ---
 
-
-# AEM Forms {#aem-forms}
+# AEM Forms  {#aem-forms}
 
 この節では、AEM 6.4 Forms リリースの重要な機能について説明します。すべての新機能の詳細な説明については、[AEM 6.4 Forms の新機能および機能強化の概要](/help/forms/using/whats-new.md)を参照してください。
 
