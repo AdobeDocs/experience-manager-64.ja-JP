@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: development-tools
 content-type: reference
 discoiquuid: 19cb3946-32ba-4f0b-89f0-f9272f2373d2
-translation-type: tm+mt
-source-git-commit: f98eccdb0251ff0262017fa42529576ba5feac97
+exl-id: 40e24cc6-95a9-4efd-b812-4144ba44b071
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2152'
-ht-degree: 88%
+ht-degree: 92%
 
 ---
-
 
 # CRXDE Lite による開発  {#developing-with-crxde-lite}
 
@@ -24,7 +23,7 @@ ht-degree: 88%
 
 使用可能な他の開発環境について詳しくは、概要のドキュメントを参照してください。
 
-CRXDE Lite は AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Liteを使用すると、プロジェクトの作成、ファイル（.jspや.javaなど）の作成と編集、フォルダー、テンプレート、コンポーネント、ダイアログ、ノード、プロパティ、バンドルの作成と編集をログ記録中に行うことができます。
+CRXDE Lite は AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Liteを使用すると、プロジェクトの作成、ファイルの作成および編集（.jspや.javaなど）、フォルダー、テンプレート、コンポーネント、ダイアログ、ノード、プロパティおよびバンドルをログに記録しながら行うことができます。
 
 CRXDE Lite は、AEM サーバーに直接アクセスできない場合、すぐに使用可能なコンポーネントと Java バンドルを拡張または変更してアプリケーションを開発する場合、または専用のデバッガー、コード補完および構文のハイライト表示を必要としない場合にお勧めします。
 
@@ -37,13 +36,13 @@ CRXDE Lite は、AEM サーバーに直接アクセスできない場合、す�
 >
 >プロジェクトの開発時には [AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md) および [AEM HTL Brackets Extension](/help/sites-developing/aem-brackets.md) を使用することをお勧めします。
 
-## CRXDE Lite の使用  {#getting-started-with-crxde-lite}
+## CRXDE Lite の使用 {#getting-started-with-crxde-lite}
 
 CRXDE Lite の使用を開始するには、次の手順に従ってください。
 
 1. AEM をインストールします。
-1. ブラウザーにhttps://`<host>`:`<port>`/crx/deと入力します。 デフォルトは`http://localhost:4502/crx/de`です。
-1. **ユーザー名**&#x200B;と&#x200B;**パスワード**&#x200B;を入力します。デフォルトでは、`admin`と`admin`です。
+1. ブラウザーにhttps://`<host>`:`<port>`/crx/deと入力します。 デフォルトでは`http://localhost:4502/crx/de`です。
+1. **ユーザー名**&#x200B;と&#x200B;**パスワード**&#x200B;を入力します。デフォルトでは`admin`と`admin`です。
 
 1. 「**OK**」をクリックします。
 
@@ -53,7 +52,7 @@ CRXDE Lite の使用を開始するには、次の手順に従ってください
 
 これで、CRXDE Lite を使用してアプリケーションを開発できます。
 
-### ユーザーインターフェイスの概要  {#overview-of-the-user-interface}
+### ユーザーインターフェイスの概要 {#overview-of-the-user-interface}
 
 CRXDE Lite には以下の機能があります。
 
@@ -128,7 +127,7 @@ CRXDE Lite には以下の機能があります。
    <td>選択したノードの名前を変更します。<br /> </td> 
   </tr> 
   <tr> 
-   <td>Mixin<br /> </td> 
+   <td>Mixin ...<br /> </td> 
    <td>Mixin タイプをノードタイプに追加できます。ほとんどの場合、Mixin タイプは高度な機能（バージョン管理、アクセス制御、参照、ロックなど）をノードに追加するために使用されます。</td> 
   </tr> 
   <tr> 
@@ -147,7 +146,7 @@ CRXDE Lite には以下の機能があります。
 CRXDE Lite でフォルダーを作成するには：
 
 1. ブラウザーで CRXDE Lite を開きます。
-1. ナビゲーションウィンドウで、新しいフォルダを作成するフォルダを右クリックし、[**作成…]を選択します。**、**フォルダーを作成…**。
+1. ナビゲーションウィンドウで、新しいフォルダーを作成するフォルダーを右クリックして、「**作成**」、「**フォルダーを作成**」の順に選択します。
 
 1. フォルダーの&#x200B;**名前**&#x200B;を入力して、「**OK**」をクリックします。
 
@@ -164,15 +163,15 @@ CRXDE Lite でテンプレートを作成するには：
 
 1. （オプション）「**許可されているパス**」を設定します。「**次へ**」をクリックします。
 
-1. この手順はオプションです。**許可されている親**&#x200B;を設定します。「**次へ**」をクリックします。
+1. この手順はオプションです。「**許可されている親**」を設定します。「**次へ**」をクリックします。
 
-1. この手順はオプションです。**許可される子**&#x200B;を設定します。「**OK**」をクリックします。
+1. この手順はオプションです。「**許可されている子**」を設定します。「**OK**」をクリックします。
 
 1. 「**すべて保存**」をクリックして、サーバーに変更を保存します。
 
 次の項目が作成されます。
 
-* テンプレートプロパティを持つタイプ`cq:Template`のノード
+* テンプレートプロパティを持つ`cq:Template`型のノード
 
 * ページコンテンツのプロパティを含む `cq:PageContent` タイプの子ノード
 
@@ -199,7 +198,7 @@ CRXDE Lite でコンポーネントを作成するには：
 
 次の項目が作成されます。
 
-* タイプ`cq:Component`のノード
+* `cq:Component`型のノード
 * コンポーネントのプロパティ
 * コンポーネントの .jsp スクリプト
 
@@ -208,7 +207,7 @@ CRXDE Lite でコンポーネントを作成するには：
 CRXDE Lite でダイアログを作成するには：
 
 1. ブラウザーで CRXDE Lite を開きます。
-1. ナビゲーションペインで、ダイアログを作成するコンポーネントを右クリックし、**作成…を選択します。**、**作成ダイアログ…**。
+1. ナビゲーションウィンドウで、ダイアログを作成するコンポーネントを右クリックし、「**作成…」を選択します。**、**ダイアログを作成…**&#x200B;と入力します。
 
 1. **ラベル**&#x200B;と&#x200B;**タイトル**&#x200B;を入力します。「**OK**」をクリックします。
 
@@ -222,7 +221,7 @@ CRXDE Lite でダイアログを作成するには：
 
 ダイアログエディターを使用してダイアログを編集することもできます。CRXDE Lite でダイアログノードをダブルクリックすると、エディターが表示されます。ダイアログエディターについて詳しくは、[こちら](/help/sites-developing/dialog-editor.md)を参照してください。
 
-### ノードの作成  {#creating-a-node}
+### ノードの作成 {#creating-a-node}
 
 CRXDE Lite でノードを作成するには：
 
@@ -266,7 +265,7 @@ CRXDE Lite でプロパティを作成するには：
 
 ### ノードタイプの書き出しと読み込み {#exporting-and-importing-node-types}
 
-CRXDE Liteを使用すると、[CND(コンパクト名前空間とノード型の定義)表記](http://jackrabbit.apache.org/jcr/node-type-notation.html)でノード型の定義を読み込んだり書き出したりできます。
+CRXDE Liteでは、ノードタイプ定義を[CND(Compact Namespace and Node Type Definition)表記](http://jackrabbit.apache.org/jcr/node-type-notation.html)で読み込んだり書き出したりできます。
 
 ノードタイプ定義を書き出すには：
 
@@ -287,7 +286,7 @@ CRXDE Liteを使用すると、[CND(コンパクト名前空間とノード型�
 
 ### ログ {#logging}
 
-CRXDE Liteを使用すると、`<crx-install-dir>/crx-quickstart/server/logs`にあるファイルシステム上のファイル`error.log`を表示し、適切なログレベルでフィルタリングできます。 以下の手順を実行します。
+CRXDE Lite では、ファイルシステムの `<crx-install-dir>/crx-quickstart/server/logs` にある `error.log` ファイルを表示して、適切なログレベルでフィルタリングできます。以下の手順を実行します。
 
 1. ブラウザーで CRXDE Lite を開きます。
 1. ウィンドウの下部にある「**コンソール**」タブの右側のドロップダウンメニューで、「**サーバーログ**」を選択します。
@@ -296,14 +295,13 @@ CRXDE Liteを使用すると、`<crx-install-dir>/crx-quickstart/server/logs`に
 
 以下の操作を実行できます。
 
-* Felixコンソールで&#x200B;**ログの設定**&#x200B;アイコンをクリックして、ログのパラメータを調整します。
+* **ログ設定**&#x200B;アイコンをクリックして、Felix コンソールでログパラメーターを調整します。
 * **ブラシ**&#x200B;アイコンをクリックしてメッセージを消去します。
 * **ピン**&#x200B;アイコンをクリックして、現在選択されている場所にメッセージを固定します。
-* 「**停止**」アイコンをクリックしてメッセージの表示を有効または無効にします。
+* **停止**&#x200B;アイコンをクリックしてメッセージの表示を有効または無効にします。
 
 ## アクセス制御 {#access-control}
 
 >[!NOTE]
 >
 >詳しくは、[ユーザー、グループおよびアクセス権の管理](/help/sites-administering/user-group-ac-admin.md)を参照してください。
-
