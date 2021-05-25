@@ -6,14 +6,13 @@ seo-description: メタデータを使用したフォームワークフローの
 uuid: 17e018c9-6bf8-4042-bba9-4ebe449304ac
 topic-tags: publish
 discoiquuid: bdf13893-630a-43cd-aaeb-c7c16bf4f8a6
-translation-type: tm+mt
-source-git-commit: 0797eeae57ac5a9676c6d308eaf2aaffab999d18
+exl-id: 248c5adf-23e9-463f-9f29-869ae2426c22
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '919'
-ht-degree: 95%
+ht-degree: 96%
 
 ---
-
 
 # 電子メール通知におけるメタデータの使用  {#use-metadata-in-an-email-notification}
 
@@ -142,11 +141,11 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
   </tr> 
   <tr> 
    <td>host_prefix</td> 
-   <td>オーサーサーバーの URL。例：https://10.41.42.66:4502<br /> </td> 
+   <td>オーサーサーバーの URL。例： https://10.41.42.66:4502<br /> </td> 
   </tr> 
   <tr> 
    <td>publish_prefix</td> 
-   <td>パブリッシュサーバーの URL。例：https://10.41.42.66:4503</td> 
+   <td>パブリッシュサーバーの URL。例： https://10.41.42.66:4503</td> 
   </tr> 
  </tbody> 
 </table>
@@ -159,7 +158,7 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
 
 [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) はスクリプト言語です。この言語は、クライアント側のスクリプト作成とサーバーアプリケーションに使用されます。次の手順を実行して、ECMAScrip を使用して電子メールテンプレートにカスタムメタデータを追加します。
 
-1. 管理者アカウントを使用して CRX DE にログインします。URLは`https://[server]:[port]/crx/de/index.jsp`です
+1. 管理者アカウントを使用して CRX DE にログインします。URL は `https://[server]:[port]/crx/de/index.jsp` です
 
 1. /apps/fd/dashboard/scripts/metadataScripts に移動します。拡張子が .ecma のファイルを作成します。例えば、usermetadata.ecma です。
 
@@ -187,7 +186,7 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
 
    タイトルを自分で指定しない場合、カスタムメタデータフィールドには、ECMAScript ファイルの完全なパスが表示されます。次の手順を実行して、スクリプトに意味のあるタイトルを指定します。
 
-   1. スクリプトノードを拡張します。**[!UICONTROL jcr:content]**&#x200B;ノードを右クリックしてから、「**[!UICONTROL Mixins]**」をクリックします。
+   1. スクリプトノードを拡張します。**[!UICONTROL jcr:content]** ノードを右クリックしてから、「**[!UICONTROL Mixins]**」をクリックします。
    1. Mixin を編集ダイアログに mix:title と入力して、「**+**」をクリックします。
    1. プロパティに次の値を入力します。
 
@@ -206,7 +205,7 @@ Java インターフェイスを使用して OSGi バンドルを作成するに
 
 1. ウィザードを選択画面で、Maven プロジェクトを選択し、「次へ」をクリックします。
 
-1. 新しい Maven プロジェクトではデフォルトを保持し、「次へ」をクリックします。archetype を選択して「次へ」をクリックします。例えば、maven-archetype-quickstart などです。プロジェクトにグループ ID、アーティファクト ID、バージョン、パッケージを指定して、「完了」をクリックします。プロジェクトが作成されます。
+1. 新しい Maven プロジェクトではデフォルトを保持し、「次へ」をクリックします。アーキタイプを選択して「次へ」をクリックします。例えば、maven-archetype-quickstart などです。プロジェクトにグループ ID、アーティファクト ID、バージョン、パッケージを指定して、「完了」をクリックします。プロジェクトが作成されます。
 
 1. 編集のために pom.xml ファイルを開き、ファイルのすべての中身を次で置き換えます。
 
@@ -250,10 +249,10 @@ Java インターフェイスを使用して OSGi バンドルを作成するに
    }
    ```
 
-1. コマンドプロンプトを開き、OSGi バンドルプロジェクトを含むディレクトリに移動します。次のコマンドを使用して OSGi バンドルを作成します。
+1. コマンドプロンプトを開き、OSGi バンドルプロジェクトを含むディレクトリに移動します。以下のコマンドを使用して OSGi バンドルを作成します。
 
    `mvn clean install`
 
-1. バンドルを AEM Forms サーバーにアップロードします。AEM Package Manager を使用して、バンドルを AEM Forms サーバーに読み込むことができます。
+1. バンドルを AEM Forms サーバーにアップロードします。AEM パッケージマネージャーを使用して、バンドルを AEM Forms サーバーに読み込むことができます。
 
 バンドルをインポートすると、タスクの割り当て手順でメタデータを選択して、電子メールテンプレートで使用できるようになります。
