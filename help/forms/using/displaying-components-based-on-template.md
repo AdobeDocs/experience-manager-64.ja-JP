@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 content-type: reference
 discoiquuid: 940e45b4-dbf1-4207-bd4a-cf677d645fb4
-translation-type: tm+mt
-source-git-commit: 74d51d46d61b005930f382a33278ae0bea6435e2
+exl-id: a4cee2e6-a56f-4355-8176-b3ed7478a775
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 65%
 
 ---
-
 
 # 使用するテンプレートに基づいたコンポーネントの表示 {#displaying-components-based-on-the-template-used}
 
@@ -24,13 +23,13 @@ ht-degree: 65%
 
 ## テンプレートのコンテンツポリシーの変更  {#changing-the-content-policy-of-a-template}
 
-テンプレートを作成すると、コンテンツリポジトリの`/conf`の下に作成されます。 `/conf`ディレクトリに作成したフォルダーに基づき、テンプレートのパスは次のとおりです。`/conf/<your-folder>/settings/wcm/templates/<your-template>`.
+テンプレートを作成すると、コンテンツリポジトリの`/conf`の下に作成されます。 `/conf`ディレクトリに作成したフォルダーに基づいて、テンプレートのパスは次のようになります。`/conf/<your-folder>/settings/wcm/templates/<your-template>`.
 
-次の手順を実行して、テンプレートのコンテンツポリシーに基づいてサイドバーにコンポーネントを表示します。
+テンプレートのコンテンツポリシーに基づいてサイドバーにコンポーネントを表示するには、次の手順を実行します。
 
 1. CRXDE Lite を開きます。
 
-   URL: `https://<server>:<port>/crx/de/index.jsp`
+   URL：`https://<server>:<port>/crx/de/index.jsp`
 
 1. CRXDE で、テンプレートを作成したフォルダーに移動します。
 
@@ -40,21 +39,21 @@ ht-degree: 65%
 
    コンポーネントのグループを選択するためには、新しいコンテンツポリシーが必要です。新しいポリシーを作成するには、デフォルトのポリシーをコピーして貼り付け、名前を変更します。
 
-   デフォルトコンテンツポリシーのパス：`/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
+   デフォルトのコンテンツポリシーのパスは次のとおりです。`/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
 
-   `gridFluidLayout` フォルダーで、デフォルトのポリシーをコピーして貼り付け、名前を変更します。例： `myPolicy`
+   `gridFluidLayout` フォルダーで、デフォルトのポリシーをコピーして貼り付け、名前を変更します。（例：`myPolicy`）。
 
    ![デフォルトのポリシーをコピー](assets/crx-default1.png)
 
-1. 作成する新しいポリシーを選択し、右側のパネルでタイプ`string[]`の&#x200B;**components**&#x200B;プロパティを選択します。
+1. 作成する新しいポリシーを選択し、タイプ`string[]`の右側のパネルで&#x200B;**components**&#x200B;プロパティを選択します。
 
    components プロパティを選択して開くと、components を編集ダイアログが表示されます。components を編集ダイアログでは、「**+**」および「**-**」ボタンを使用して、コンポーネントグループを追加または削除できます。作成者が使用するコンポーネントを含むコンポーネントグループを追加できます。
 
    ![ポリシーのコンポーネントを追加または削除](assets/add-components-list1.png)
 
-   コンポーネントグループを追加した後、「**OK**」をクリックしてリストを更新し、CRXDEアドレスバーの上にある「**すべて保存**」をクリックして更新します。
+   コンポーネントグループを追加したら、「**OK**」をクリックしてリストを更新し、CRXDEアドレスバーの上にある「**すべて保存**」をクリックして更新します。
 
-1. テンプレートで、コンテンツポリシーをデフォルトから、作成した新しいポリシーに変更します。（この例では`myPolicy`）
+1. テンプレートで、コンテンツポリシーをデフォルトから、作成した新しいポリシーに変更します。（この例では`myPolicy`です）。
 
    ポリシーを変更するには、CRXDEで`/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/guideContainer/rootPanel/items`に移動します。
 
@@ -63,4 +62,3 @@ ht-degree: 65%
    ![更新されたテンプレートコンテンツポリシー](assets/updated-policy.png)
 
    テンプレートを使用して作成したフォームを使用すると、追加したコンポーネントがサイドバーに表示されます。
-
