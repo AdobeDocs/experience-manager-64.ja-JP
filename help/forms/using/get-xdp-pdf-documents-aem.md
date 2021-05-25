@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 99da0d37-726e-42b9-b98a-5dd6c2165af6
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 50bf178d-7a3c-41df-9d13-99c74d944700
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 93%
+source-wordcount: '702'
+ht-degree: 94%
 
 ---
 
-
-# AEM Forms での XDP および PDF ドキュメントの取得 {#getting-xdp-and-pdf-documents-in-aem-forms}
+# AEM Forms での XDP および PDF ドキュメントの取得  {#getting-xdp-and-pdf-documents-in-aem-forms}
 
 ## 概要 {#overview}
 
@@ -28,7 +27,7 @@ AEM Forms でアップロードすることで、ローカルファイルシス�
 * PDF のフォーム
 * ドキュメント（非インタラクティブ PDF ドキュメント）
 
-サポートされているアセットタイプを個別にまたは ZIP アーカイブとしてアップロードできます。タイプ`Resource`のアセットは、XFAフォームと一緒にZIPアーカイブでのみアップロードできます。
+サポートされているアセットタイプを個別にまたは ZIP アーカイブとしてアップロードできます。`Resource`タイプのアセットは、XFAフォームと一緒にZIPアーカイブでのみアップロードできます。
 
 >[!NOTE]
 >
@@ -36,7 +35,7 @@ AEM Forms でアップロードすることで、ローカルファイルシス�
 
 ## フォームのアップロード  {#uploading-forms}
 
-1. `https://[server]:[port]/aem/forms.html`にアクセスして、AEM Formsユーザーインターフェイスにログインします。
+1. `https://[server]:[port]/aem/forms.html`にアクセスしてAEM Formsユーザーインターフェイスにログインします。
 1. フォームまたはフォームを含むフォルダーをアップロードしたいフォルダーに移動します。
 1. アクションツールバーで、**作成／ファイルのアップロード**&#x200B;をタップします。
 
@@ -68,7 +67,7 @@ AEM Forms サーバーを使用することで、JavaScript コードを実行�
 
 保護モードは、デフォルトではオンになっています。必要に応じて、保護モードを無効にすることができます。
 
-1. AEM Web コンソールに管理者としてログインします。URLは`https://[server]:[port]/system/console/configMgr`です
+1. AEM Web コンソールに管理者としてログインします。URL は `https://[server]:[port]/system/console/configMgr` です
 1. Mobile Forms の設定を編集用に開きます。
 1. 「保護モード」オプションの選択を解除し、「**保存**」をクリックします。保護モードは無効です。
 
@@ -86,7 +85,6 @@ XFA を参照しているアダプティブフォームは、そのフィール�
 
 ![関連 XFA の更新後の非同期のアダプティブフォームの警告](assets/dirtyaf.png)
 
-アダプティブフォームが dirty かどうかを示すフラグが保持されます。この情報は、フォームのメタデータと一緒にフォームプロパティページにあります。dirtyアダプティブフォームの場合のみ、メタデータプロパティ`Model Refresh`は`Recommended`値を表示します。
+アダプティブフォームが dirty かどうかを示すフラグが保持されます。この情報は、フォームのメタデータと一緒にフォームプロパティページにあります。ダーティなアダプティブフォームの場合のみ、メタデータプロパティ`Model Refresh`に`Recommended`値が表示されます。
 
 ![アダプティブフォームが XFA モデルと非同期であることを示す](assets/model-refresh.png)
-
