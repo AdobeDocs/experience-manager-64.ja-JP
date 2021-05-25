@@ -2,22 +2,21 @@
 title: Assets のオフロードのベストプラクティス
 description: AEM Assets におけるアセットの取り込みやレプリケーションのワークフローのオフロードの推奨される使用例およびベストプラクティス。
 contentOwner: AG
-feature: Asset Management
+feature: アセット管理
 role: Business Practitioner,Administrator
-translation-type: tm+mt
-source-git-commit: 29e3cd92d6c7a4917d7ee2aa8d9963aa16581633
+exl-id: 3ecc8988-add1-47d5-80b4-984beb4d8dab
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1823'
+source-wordcount: '1820'
 ht-degree: 78%
 
 ---
-
 
 # Assets のオフロードのベストプラクティス {#assets-offloading-best-practices}
 
 >[!WARNING]
 >
->この機能はAEM 6.4以降では廃止され、AEM 6.5では削除されます。それに応じて計画を立ててください。
+>この機能はAEM 6.4以降で廃止され、AEM 6.5で削除されます。適宜計画してください。
 
 Adobe Experience Manager（AEM）Assets で大きなファイルを扱ったり、ワークフローを実行したりすると、CPU、メモリ、I/O リソースを大量に消費する場合があります。特に、アセットのサイズ、ワークフロー、ユーザー数、アセットの取り込み頻度が、システム全体のパフォーマンスに影響を与える可能性があります。最もリソースを消費する操作には、AEM アセットの取り込みやレプリケーションのワークフローがあります。単一の AEM オーサリングインスタンスでこれらのワークフローを頻繁に使用すると、オーサリングの効率に悪影響を与える可能性があります。
 
@@ -35,7 +34,7 @@ AEM Assets は、オフロードのためのネイティブなアセット固有
 
 ### DAM アセットの更新のオフロードワークフロー {#dam-update-asset-offloading-workflow}
 
-DAMのアセットの更新のオフロードワークフローは、ユーザーがアセットをアップロードするプライマリ（作成者）サーバー上で実行されます。 このワークフローは、通常のワークフローランチャーによって実行されます。このオフロードワークフローは、アップロードされたアセットを処理する代わりに、トピック *com/adobe/granite/workflow/offloading* を使用して新しいジョブを作成します。オフロードワークフローは、ジョブのペイロードに、ターゲットワークフローの名前（この場合は DAM アセットの更新ワークフロー）およびアセットのパスを追加します。オフロードジョブを作成した後、プライマリインスタンスのオフロードワークフローは、オフロードジョブの実行が完了するまで待機します。
+DAMアセットの更新のオフロードワークフローは、ユーザーがアセットをアップロードするプライマリ（オーサー）サーバーで実行されます。 このワークフローは、通常のワークフローランチャーによって実行されます。このオフロードワークフローは、アップロードされたアセットを処理する代わりに、トピック *com/adobe/granite/workflow/offloading* を使用して新しいジョブを作成します。オフロードワークフローは、ジョブのペイロードに、ターゲットワークフローの名前（この場合は DAM アセットの更新ワークフロー）およびアセットのパスを追加します。オフロードジョブを作成した後、プライマリインスタンスのオフロードワークフローは、オフロードジョブの実行が完了するまで待機します。
 
 ### ジョブマネージャー {#job-manager}
 
@@ -47,7 +46,7 @@ DAMのアセットの更新のオフロードワークフローは、ユーザ�
 
 ### ワークフローオフロードジョブコンシューマー  {#workflow-offloading-job-consumer}
 
-ジョブがワーカーに書き込まれると、ジョブマネージャーは、*com/adobe/granite/workflow/offloading*&#x200B;トピックを担当するジョブコンシューマーを呼び出します。 その後、ジョブコンシューマーはアセットで DAM アセットの更新ワークフローを実行します。
+ジョブがワーカーに書き込まれると、ジョブマネージャーは&#x200B;*com/adobe/granite/workflow/offloading*&#x200B;トピックを担当するジョブコンシューマーを呼び出します。 その後、ジョブコンシューマーはアセットで DAM アセットの更新ワークフローを実行します。
 
 ## Sling トポロジ {#sling-topology}
 
@@ -98,7 +97,7 @@ AEM および Oak を使用する場合、複数の導入シナリオが考え�
 
 ### 自動エージェント管理の無効化 {#turning-off-automatic-agent-management}
 
-自動エージェント管理はバイナリレスレプリケーションをサポートしておらず、新しいオフロードテクノロジを設定するときに混乱を生じさせる可能性があるので、無効にすることをお勧めします。さらに、バイナリレス・レプリケーションで必要とされる転送レプリケーション・フローも自動的にはサポートされません。
+自動エージェント管理はバイナリレスレプリケーションをサポートしておらず、新しいオフロードテクノロジを設定するときに混乱を生じさせる可能性があるので、無効にすることをお勧めします。また、バイナリレスレプリケーションで必要なフォワードレプリケーションフローも自動的にはサポートされません。
 
 1. URL `http://localhost:4502/system/console/configMgr`からConfiguration Managerを開きます。
 1. `OffloadingAgentManager` (`http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingAgentManager`)の設定を開きます。
@@ -108,9 +107,9 @@ AEM および Oak を使用する場合、複数の導入シナリオが考え�
 
 オフロードトランスポートでは、デフォルトで、リバースレプリケーションを使用して、オフロードされたアセットをワーカーからプライマリにプルします。リバースレプリケーションエージェントでは、バイナリレスレプリケーションをサポートしていません。オフロードされたアセットをフォワードレプリケーションを使用してワーカーからプライマリにプッシュするようにオフロードを設定する必要があります。
 
-1. 逆複製を使用してデフォルトの構成から移行する場合は、&amp;ast；を除き、プライマリおよびワーカー上の「 `offloading_outbox` 」および「 `offloading_reverse_*` 」という名前のすべてのエージェントを無効または削除します。は、ターゲットインスタンスのSling idを表します。
-1. 各ワーカーで、プライマリを指す新しいフォワードレプリケーションエージェントを作成します。この手順は、プライマリからワーカーへの転送エージェントを作成するのと同じです。 オフロードするレプリケーションエージェントの設定手順については、[オフロード用のレプリケーションエージェントの作成](../sites-deploying/offloading.md#creating-replication-agents-for-offloading)を参照してください。
-1. `OffloadingDefaultTransporter` (`http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter`)の構成を開きます。
+1. リバースレプリケーションを使用してデフォルト設定から移行する場合は、&amp;ast；のプライマリおよびワーカーで、「 `offloading_outbox` 」および「 `offloading_reverse_*` 」という名前のすべてのエージェントを無効または削除します。は、ターゲットインスタンスのSling idを表します。
+1. 各ワーカーで、プライマリを指す新しいフォワードレプリケーションエージェントを作成します。手順は、プライマリからワーカーへの転送エージェントの作成と同じです。 オフロードレプリケーションエージェントの設定手順については、[オフロード用のレプリケーションエージェントの作成](../sites-deploying/offloading.md#creating-replication-agents-for-offloading)を参照してください。
+1. `OffloadingDefaultTransporter` (`http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter`)の設定を開きます。
 1. プロパティ`default.transport.agent-to-master.prefix`の値を`offloading_reverse`から`offloading`に変更します。
 
 <!-- TBD: Make updates to the configuration for allow and block list after product updates are done.
@@ -119,18 +118,18 @@ TBD: Update the property in the last step when GRANITE-30586 is fixed.
 
 ### オーサーとワーカーの間での共有データストアおよびバイナリレスレプリケーションの使用  {#using-shared-datastore-and-binary-less-replication-between-author-and-workers}
 
-アセットのオフロードの転送オーバーヘッドを削減するには、バイナリレスのレプリケーションの使用を推奨します。 共有データストアでバイナリレスレプリケーションを設定する方法については、[AEM でのノードストアとデータストアの設定](/help/sites-deploying/data-store-config.md)を参照してください。アセットのオフロードでは、他のレプリケーションエージェントが関係するという点を除いて手順は同じです。バイナリレス・レプリケーションは、フォワード・レプリケーション・エージェントでのみ機能するので、すべてのオフロード・エージェントに対してフォワード・レプリケーションを使用する必要があります。
+アセットのオフロードのトランスポートオーバーヘッドを削減するには、バイナリレスレプリケーションの使用をお勧めします。 共有データストアでバイナリレスレプリケーションを設定する方法については、[AEM でのノードストアとデータストアの設定](/help/sites-deploying/data-store-config.md)を参照してください。アセットのオフロードでは、他のレプリケーションエージェントが関係するという点を除いて手順は同じです。バイナリレスレプリケーションはフォワードレプリケーションエージェントでのみ機能するので、すべてのオフロードエージェントでフォワードレプリケーションも使用する必要があります。
 
 ### トランスポートパッケージの無効化 {#turning-off-transport-packages}
 
-デフォルトで、オフロードにより、オフロードジョブおよびジョブのペイロード（元のアセット）を含むコンテンツパッケージが作成され、この単一のオフロードパッケージが単一のレプリケーションリクエストを使用してトランスポートされます。バイナリレスレプリケーションを使用する場合、パッケージを作成するときにバイナリが再度パッケージにシリアル化されるので、これらのオフロードパッケージを作成すると効率性が低下します。これらのトランスポートパッケージの使用はオフにできるので、オフロードジョブとペイロードは、各ペイロードエントリに対して1つずつ、複数のレプリケーション要求でトランスポートされます。 これにより、バイナリレスレプリケーションのメリットを活かすことができます。
+デフォルトで、オフロードにより、オフロードジョブおよびジョブのペイロード（元のアセット）を含むコンテンツパッケージが作成され、この単一のオフロードパッケージが単一のレプリケーションリクエストを使用してトランスポートされます。バイナリレスレプリケーションを使用する場合、パッケージを作成するときにバイナリが再度パッケージにシリアル化されるので、これらのオフロードパッケージを作成すると効率性が低下します。これらのトランスポートパッケージの使用をオフにできるので、オフロードジョブとペイロードは、ペイロードエントリごとに1つずつ、複数のレプリケーションリクエストでトランスポートされます。 これにより、バイナリレスレプリケーションのメリットを活かすことができます。
 
-1. [http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter](http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter)にある&#x200B;*OffloadingDefaultTransporter*&#x200B;コンポーネントのコンポーネント構成を開きます。
+1. [http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter](http://localhost:4502/system/console/configMgr/com.adobe.granite.offloading.impl.transporter.OffloadingDefaultTransporter)にある&#x200B;*OffloadingDefaultTransporter*&#x200B;コンポーネントのコンポーネント設定を開きます。
 1. プロパティ&#x200B;*レプリケーションパッケージ(default.transport.contentpackage)*&#x200B;を無効にします。
 
 ### ワークフローモデルのトランスポートの無効化 {#disabling-the-transport-of-workflow-model}
 
-デフォルトでは、*DAM Update Asset Offloading*&#x200B;オフロードワークフローは、ワーカー上で呼び出すワークフローモデルをジョブペイロードに追加します。 このワークフローは、デフォルトで、標準搭載された&#x200B;*DAM Update Asset*&#x200B;モデルに従うので、この追加のペイロードを削除できます。
+デフォルトでは、*DAMアセットの更新のオフロード*&#x200B;オフロードワークフローは、ワーカーに対して呼び出すワークフローモデルをジョブのペイロードに追加します。 このワークフローは、デフォルトで標準の&#x200B;*DAMアセットの更新*&#x200B;モデルに従うので、この追加のペイロードを削除できます。
 
 ジョブのペイロードでワークフローモデルを無効にした場合は、パッケージマネージャーなどの他のツールを使用して、参照されているワークフローモデルにも変更を反映する必要があります。
 
@@ -138,21 +137,21 @@ TBD: Update the property in the last step when GRANITE-30586 is fixed.
 
 1. [http://localhost:4502/libs/cq/workflow/content/console.html](http://localhost:4502/libs/cq/workflow/content/console.html)からワークフローコンソールを開きます。
 1. 「モデル」タブを開きます。
-1. DAM Update Asset Offloadingワークフローモデルを開きます。
-1. DAMワークフローのオフロード手順の手順のプロパティを開きます。
-1. 「引数」タブを開き、「入力するモデル」追加および「出力するモデル追加」オプションの選択を解除します。
+1. 「 DAMアセットの更新のオフロード」ワークフローモデルを開きます。
+1. DAMワークフローのオフロードステップのステップのプロパティを開きます。
+1. 「引数」タブを開き、「入力にモデルを追加」および「出力にモデルを追加」オプションの選択を解除します。
 1. 変更内容をモデルに保存します。
 
 ### ポーリング間隔の最適化  {#optimizing-the-polling-interval}
 
-ワークフローのオフロードは、プライマリの外部ワークフローを使用して実装されます。このワークフローは、ワーカーのオフロードされたワークフローの完了をポーリングします。 外部ワークフロープロセスのデフォルトのポーリング間隔は 5 秒です。プライマリでのオフロードのオーバーヘッドを軽減するために、Assets のオフロードステップのポーリング間隔は 15 秒以上に設定することをお勧めします。
+ワークフローのオフロードは、プライマリ上の外部ワークフローを使用して実装され、ワーカー上のオフロードされたワークフローの完了をポーリングします。 外部ワークフロープロセスのデフォルトのポーリング間隔は 5 秒です。プライマリでのオフロードのオーバーヘッドを軽減するために、Assets のオフロードステップのポーリング間隔は 15 秒以上に設定することをお勧めします。
 
 1. [http://localhost:4502/libs/cq/workflow/content/console.html](http://localhost:4502/libs/cq/workflow/content/console.html)からワークフローコンソールを開きます。
 
 1. 「モデル」タブを開きます。
-1. DAM Update Asset Offloadingワークフローモデルを開きます。
-1. DAMワークフローのオフロード手順の手順のプロパティを開きます。
-1. 「コモンズ」タブを開き、期間プロパティの値を調整します。
+1. 「 DAMアセットの更新のオフロード」ワークフローモデルを開きます。
+1. 「 DAMワークフローのオフロード」ステップのステップのプロパティを開きます。
+1. 「コモン」タブを開き、「期間」プロパティの値を調整します。
 1. 変更内容をモデルに保存します。
 
 ## 追加のリソース  {#more-resources}
@@ -161,4 +160,3 @@ TBD: Update the property in the last step when GRANITE-30586 is fixed.
 
 * [ジョブのオフロード](/help/sites-deploying/offloading.md)
 * [アセットのワークフローオフローダー](/help/sites-administering/workflow-offloader.md)
-
