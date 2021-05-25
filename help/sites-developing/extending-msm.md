@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: fd393bb9-f77e-4fe0-a7a9-97181ca58136
-translation-type: tm+mt
-source-git-commit: 0cb1a323ac56b5b8ecd07f84c4840f1b466d5796
+exl-id: 6a531a61-39f2-4bf7-8250-4264942c0981
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2588'
 ht-degree: 68%
 
 ---
-
 
 # Multi Site Manager の拡張{#extending-the-multi-site-manager}
 
@@ -30,16 +29,15 @@ ht-degree: 68%
 
 >[!NOTE]
 >
->このページは、次の項目と組み合わせて読む必要があります。
+>このページは、次と共にお読みください。
 >* [コンテンツの再利用：マルチサイトマネージャー](/help/sites-administering/msm.md).
 >* AEM 6.4 における Sites リポジトリの再構築:
    >   * [Multi-site Manager のブループリント設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-blueprint-configurations)
-   >   * [Multi-site Manager のロールアウト設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-rollout-configurations)
+   * [Multi-site Manager のロールアウト設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-rollout-configurations)
 
 
 >[!CAUTION]
->
->Multi Site Manager とその API は Web サイトのオーサリング時に使用するものなので、オーサー環境での使用のみを目的としています。
+Multi Site Manager とその API は Web サイトのオーサリング時に使用するものなので、オーサー環境での使用のみを目的としています。
 
 ## Java API の概要  {#overview-of-the-java-api}
 
@@ -53,36 +51,36 @@ Multi Site Management は、以下のパッケージで構成されています�
 ![chlimage_1-35](assets/chlimage_1-35.png)
 
 * **`Blueprint`**
-A  `Blueprint` ( [BluePrint設定の場合と同様](/help/sites-administering/msm.md#source-blueprints-and-blueprint-configurations))は、ライブコピーがコンテンツを継承できるページを指定します。
+(ブ `Blueprint` ループリン [ト設定の](/help/sites-administering/msm.md#source-blueprints-and-blueprint-configurations)とおり)は、ライブコピーがコンテンツを継承できるページを指定します。
 
    ![chlimage_1-36](assets/chlimage_1-36.png)
 
    * ブループリント設定（`Blueprint`）の使用は任意ですが、これを使用すると、
 
-      * 作成者がソースで&#x200B;**ロールアウト**&#x200B;オプションを使用できるようにします(このソースを継承するライブコピーに対して、変更を（明示的に）プッシュします)。
+      * 作成者がソースで&#x200B;**ロールアウト**&#x200B;オプションを使用できるようにします(このソースから継承するライブコピーに対して変更を（明示的に）プッシュできます)。
       * 作成者が「**サイトを作成**」を使用できます（これにより、ユーザーが簡単に言語を選択し、ライブコピーの構造を設定できます）。
       * 作成されるすべてのライブコピーに対するデフォルトのロールアウト設定を定義できます。
 
-* **`LiveRelationship`** ライブコピーブランチのリソースと、それに対応するソース/ブループリントリソースとの接続（関係）を `LiveRelationship` 指定します。
+* **`LiveRelationship`** は、ラ `LiveRelationship` イブコピーブランチ内のリソースと、同等のソース/ブループリントリソースとの接続（関係）を指定します。
 
    * この関係は、継承およびロールアウトの実現時に使用されます。
-   * `LiveRelationship` オブジェクトは、関係に関連するロールアウト設定(  `RolloutConfig`)、 `LiveCopy` 、および `LiveStatus` オブジェクトへのアクセス（参照）を提供します。
-   * 例えば、`/content/we-retail/language-masters`のsource/blueprintから`/content/copy/us`にライブコピーが作成されます。 リソース`/content/we.retail/language-masters/en/jcr:content`と`/content/copy/us/en/jcr:content`が関係を形成します。
+   * `LiveRelationship` オブジェクトは、ロールアウト設定( )、関係に関連するオブジ `RolloutConfig`ェクトにア `LiveCopy`クセス(参 `LiveStatus` 照)します。
+   * 例えば、`/content/we-retail/language-masters`のソース/ブループリントから`/content/copy/us`にライブコピーが作成されるとします。 リソース`/content/we.retail/language-masters/en/jcr:content`と`/content/copy/us/en/jcr:content`が関係を形成します。
 
-* **`LiveCopy`** は、ライブコピーリソースとそのソース/ブループリントリソース間の関係(  `LiveRelationship`)の構成の詳細を保持します。
+* **`LiveCopy`** ライブコピーリソースとそのソース/ブループリ `LiveRelationship`ントリソースとの関係( )の設定詳細が格納されます。
 
-   * `LiveCopy`クラスを使用して、ページのパス、ソース/ブループリントページのパス、ロールアウト設定、子ページも`LiveCopy`に含めるかどうかにアクセスします。
-   * `LiveCopy`ノードは、**サイトを作成**&#x200B;または&#x200B;**ライブコピーを作成**&#x200B;が使用されるたびに作成されます。
+   * `LiveCopy`クラスを使用して、ページのパス、ソース/ブループリントページのパス、ロールアウト設定、および子ページも`LiveCopy`に含まれているかどうかにアクセスします。
+   * `LiveCopy`ノードは、**「サイトを作成」**&#x200B;または&#x200B;**「ライブコピーを作成」**&#x200B;が使用されるたびに作成されます。
 
 * **`LiveStatus`** オブジェクトは、`LiveRelationship` の実行時ステータスへのアクセスを可能にします。このオブジェクトを使用して、ライブコピーの同期ステータスを問い合わせます。
 
-* **`LiveAction`** は、ロールアウトに関連する各リソースで実行されるアクションです。
+* **`LiveAction`** は、ロールアウトに関係する各リソースで実行されるアクションです。
 
    * LiveAction は、RolloutConfig によってのみ生成されます。
 
-* **`LiveActionFactory`** 設定が指定された `LiveAction` オブジェクトを作成 `LiveAction` します。設定は、リポジトリ内にリソースとして保存されます。
+* **`LiveActionFactory`** 設定を指定 `LiveAction` してオブジェクトを `LiveAction` 作成します。設定は、リポジトリ内にリソースとして保存されます。
 
-* **`RolloutConfig`** は、トリガされたときに使用さ `LiveActions`れる、のリストを保持します。`LiveCopy`は`RolloutConfig`を継承し、結果は`LiveRelationship`に存在します。
+* **`RolloutConfig`** は、トリガーされたと `LiveActions`きに使用されるのリストを保持します。`LiveCopy`は`RolloutConfig`を継承し、結果は`LiveRelationship`に存在します。
 
    * 初めてライブコピーを設定するときは、（LiveAction を呼び出す）RolloutConfig も使用します。
 
@@ -93,7 +91,7 @@ A  `Blueprint` ( [BluePrint設定の場合と同様](/help/sites-administering/m
 * アクションを実行する[`com.day.cq.wcm.msm.api.LiveAction`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/LiveAction.html)インターフェイスの実装。
 * [`com.day.cq.wcm.msm.api.LiveActionFactory`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) インターフェイスを実装し、`LiveAction` クラスのインスタンスを作成する OSGi コンポーネント。
 
-`LiveActionFactory`は、指定した設定に対して`LiveAction`クラスのインスタンスを作成します。
+`LiveActionFactory`は、特定の設定に対して`LiveAction`クラスのインスタンスを作成します。
 
 * `LiveAction` クラスには次のメソッドが含まれます。
 
@@ -102,9 +100,9 @@ A  `Blueprint` ( [BluePrint設定の場合と同様](/help/sites-administering/m
 
 * `LiveActionFactory` クラスには次のメンバーが含まれます。
 
-   * `LIVE_ACTION_NAME`:関連付けられたフィールドの名前を含むフィールド `LiveAction`。この名前は、`getName` クラスの `LiveAction` メソッドが返す値と一致する必要があります。
-   * `createAction`:のインスタンスを作成し `LiveAction`ます。オプションの `Resource` パラメーターを使用して、設定情報を提供できます。
-   * `createsAction`:関連付けられたの名前を返し `LiveAction`ます。
+   * `LIVE_ACTION_NAME`:関連するの名前を含むフィールド `LiveAction`。この名前は、`getName` クラスの `LiveAction` メソッドが返す値と一致する必要があります。
+   * `createAction`:のインスタンスを作成しま `LiveAction`す。オプションの `Resource` パラメーターを使用して、設定情報を提供できます。
+   * `createsAction`:関連するの名前を返しま `LiveAction`す。
 
 ### LiveAction 設定ノードへのアクセス {#accessing-the-liveaction-configuration-node}
 
@@ -137,7 +135,7 @@ public LiveAction createAction(Resource resource) throws WCMException {
 
 * 値 reset は、ロールアウトのリセットモードを示します。
 
-これらのオブジェクトから、`LiveCopy` に関するすべての情報を取得できます。`Resource`オブジェクトを使用して、`ResourceResolver`、`Session`、および`Node`オブジェクトを取得することもできます。 これらのオブジェクトは、リポジトリコンテンツの操作に役立ちます。
+これらのオブジェクトから、`LiveCopy` に関するすべての情報を取得できます。`Resource`オブジェクトを使用して、`ResourceResolver`、`Session`、`Node`の各オブジェクトを取得することもできます。 これらのオブジェクトは、リポジトリコンテンツの操作に役立ちます。
 
 以下のコードの先頭行で、source はソースページの `Resource` オブジェクトです。
 
@@ -148,8 +146,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 ```
 
 >[!NOTE]
->
->`Resource`引数には、[`NonExistingResource`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/NonExistingResource.html)オブジェクトなど、`Node`オブジェクトに適合しない`null`または`Resources`オブジェクトを指定できます。
+`Resource`引数には、[`NonExistingResource`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/NonExistingResource.html)オブジェクトなど、`Node`オブジェクトに適応しない`null`オブジェクトまたは`Resources`オブジェクトを指定できます。
 
 ## 新しいロールアウト設定の作成 {#creating-a-new-rollout-configuration}
 
@@ -161,36 +158,32 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 ブループリントまたはライブコピーページでロールアウト設定を指定すると、新しいロールアウト設定が使用可能になります。
 
 >[!NOTE]
->
->[ロールアウトのカスタマイズのベストプラクティス](/help/sites-administering/msm-best-practices.md#customizing-rollouts)も参照してください。
+[ロールアウトのカスタマイズのベストプラクティス](/help/sites-administering/msm-best-practices.md#customizing-rollouts)も参照してください。
 
 ### ロールアウト設定の作成  {#create-the-rollout-configuration}
 
 新しいロールアウト設定を作成するには：
 
-1. CRXDE Liteを開く；例：
+1. CRXDE Liteを開く例：
    [http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
 1. 次の URL に移動します。
    `/apps/msm/<your-project>/rolloutconfigs`
 
    >[!NOTE]
-   >これは、プロジェクトのカスタマイズバージョン：
-   >`/libs/msm/wcm/rolloutconfigs`
-   >これが最初の設定の場合は、作成する必要があります。
+これは、プロジェクトのカスタマイズバージョンである次のものです。
+   `/libs/msm/wcm/rolloutconfigs`
+これが最初の設定の場合は、作成する必要があります。
 
    >[!NOTE]
-   >
-   >/libs パス内の設定は一切変更しないでください。
-   >/libs のコンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
-   >設定およびその他の変更に推奨される方法は次のとおりです。
-   >* 必要な項目（/libs 内に存在）を、/apps の下で再作成します。
-   >* /apps 内で変更作業をおこないます。
+   /libs パス内の設定は一切変更しないでください。/libs のコンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。設定およびその他の変更に推奨される方法は次のとおりです。
+   * 必要な項目（/libs 内に存在）を、/apps の下で再作成します。
+   * /apps 内で変更作業をおこないます。
 
 
-1. この&#x200B;**Create** a node with the following properties:
+1. この&#x200B;**の下に、次のプロパティを持つノードを作成**&#x200B;します。
 
-   * **名前**:ロールアウト設定のノード名。md#installed-synchronization-actions)。例：`contentCopy`、`workflow`。
+   * **名前**:ロールアウト設定のノード名。md#installed-synchronization-actions)に置き換えます（例：`contentCopy`や`workflow`）。
    * **型**：`cq:RolloutConfig`
 
 1. このノードに次のプロパティを追加します。
@@ -205,7 +198,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
    * **名前**：`cq:trigger`
 
       **型**：`String`
-      **値**:使用する [ロールアウト](/help/sites-administering/msm-sync.md#rollout-triggers) トリガ。次から選択：
+      **値**:使用す [るロ](/help/sites-administering/msm-sync.md#rollout-triggers) ールアウトトリガー。次から選択：
       * `rollout`
       * `modification`
       * `publish`
@@ -217,16 +210,16 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 ロールアウト設定は、`/apps/msm/<your-project>/rolloutconfigs`ノードの下に作成した[ロールアウト設定ノード](#create-the-rollout-configuration)の下に保存されます。
 
-タイプ`cq:LiveSyncAction`の追加子ノードを使用して、ロールアウト設定に同期アクションを追加します。 同期アクションノードの順序によって、アクションが実行される順序が決まります。
+タイプ`cq:LiveSyncAction`の子ノードを追加して、同期アクションをロールアウト設定に追加します。 同期アクションノードの順序によって、アクションが実行される順序が決まります。
 
-1. CRXDE Liteのまま、[設定](#create-the-rollout-configuration)のロールアウトノードを選択します。
+1. 引き続きCRXDE Liteで、[ロールアウト設定](#create-the-rollout-configuration)ノードを選択します。
 
    次に例を示します。
    `/apps/msm/myproject/rolloutconfigs/myrolloutconfig`
 
-1. **次のノードプロパティを持つノードを** 作成します。
+1. **** 次のノードプロパティを持つノードを作成します。
 
-   * **名前**：同期アクションのノード名。[同期アクション](/help/sites-administering/msm-sync.md#installed-synchronization-actions)の下のテーブルの&#x200B;**アクション名**&#x200B;と同じ名前にする必要があります（例：`contentCopy`、`workflow`）。
+   * **名前**：同期アクションのノード名。名前は、[同期アクション](/help/sites-administering/msm-sync.md#installed-synchronization-actions)の下のテーブルの&#x200B;**アクション名**&#x200B;と同じである必要があります（例：`contentCopy`や`workflow`）。
    * **型**：`cq:LiveSyncAction`
 
 1. 必要に応じてさらに同期アクションノードを追加して設定します。アクションノードを実行する順序に並べ替えます。一番上のアクションノードが最初に実行されます。
@@ -249,7 +242,7 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHub上のExperienceManager-java-msmrolloutプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout)
+* [GitHubのexperiencemanager-java-msmrolloutプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-msmrollout/archive/master.zip)としてダウンロードします
 
 ### Maven プロジェクトの作成 {#create-the-maven-project}
@@ -286,7 +279,7 @@ GitHub のコード
 
    `MyLiveActionFactory/pom.xml`
 
-1. エディターで「`pom.xml`」タブをクリックし、「`project/dependencyManagement/dependencies`」セクションを探します。
+1. エディターで、「`pom.xml`」タブをクリックし、「`project/dependencyManagement/dependencies`」セクションを見つけます。
 1. 次の XML を `dependencyManagement` 要素内に追加して、ファイルを保存します。
 
    ```xml
@@ -546,7 +539,7 @@ GitHub のコード
 
 ### ロールアウト設定例へのライブアクションの追加 {#add-the-live-action-to-the-example-rollout-configuration}
 
-前の手順で作成したロールアウト設定を設定し、`ExampleLiveActionFactory`クラスを使用するようにします。
+前の手順で作成したロールアウト設定で`ExampleLiveActionFactory`クラスを使用するように設定します。
 
 1. CRXDE Lite を開きます。例：[http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 1. `/apps/msm/rolloutconfigs/examplerolloutconfig/jcr:content`の下に次のノードを作成します。
@@ -611,15 +604,15 @@ MSM は、保存されている言語コードと国コードのリストを使�
 
 * 言語タイトル
 * 国名
-* 言語のデフォルトの国（`en`、`de`などのコード用）
+* 言語のデフォルトの国（特に`en`、`de`などのコード）
 
-言語リストは`/libs/wcm/core/resources/languages`ノードの下に保存されます。 各子ノードは、言語または言語-国を表します。
+言語リストは`/libs/wcm/core/resources/languages`ノードの下に格納されます。 各子ノードは、言語または言語-国を表します。
 
-* ノードの名前は、言語コード（`en`や`de`など）、またはlanguage_countryコード（`en_us`や`de_ch`など）です。
+* ノードの名前は、言語コード（`en`や`de`など）またはlanguage_countryコード（`en_us`や`de_ch`など）です。
 
 * ノードの `language` プロパティには、そのコードが表す言語の正式名称が格納されます。
 * ノードの `country` プロパティには、そのコードが表す国の正式名称が格納されます。
-* ノード名が言語コード（`en`など）のみで構成されている場合、countryプロパティは`*`で、追加の`defaultCountry`プロパティは、使用する国を示す言語 — 国のコードを保存します。
+* ノード名が言語コード（`en`など）のみで構成される場合、countryプロパティは`*`で、追加の`defaultCountry`プロパティは、使用する国を示す言語 — 国のコードを保存します。
 
 ![chlimage_1-38](assets/chlimage_1-38.png)
 
@@ -628,19 +621,19 @@ MSM は、保存されている言語コードと国コードのリストを使�
 1. Web ブラウザーで CRXDE Lite を開きます。例：[http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 1. `/apps`フォルダーを選択し、「**作成**」、「**フォルダーを作成**」の順にクリックします。
 
-   新しいフォルダーに`wcm`という名前を付けます。
+   新しいフォルダーに`wcm`と名前を付けます。
 
-1. 前の手順を繰り返して`/apps/wcm/core`フォルダーツリーを作成します。 `resources`という名前のコアに`sling:Folder`型のノードを作成します。 <!-- ![chlimage_1-39](assets/chlimage_1-39.png) -->
+1. 前の手順を繰り返して、`/apps/wcm/core`フォルダーツリーを作成します。 コア内に`sling:Folder`型のノード`resources`を作成します。 <!-- ![chlimage_1-39](assets/chlimage_1-39.png) -->
 
 1. `/libs/wcm/core/resources/languages`ノードを右クリックし、「**コピー**」をクリックします。
-1. `/apps/wcm/core/resources`フォルダーを右クリックし、**貼り付け**&#x200B;をクリックします。 必要に応じて子ノードを変更します。
+1. `/apps/wcm/core/resources`フォルダーを右クリックし、「**貼り付け**」をクリックします。 必要に応じて子ノードを変更します。
 1. 「**すべて保存**」をクリックします。
 1. **ツール**／**操作**／**Web コンソール**&#x200B;の順にクリックします。このコンソールから「**OSGi**」をクリックし、次に「**設定**」をクリックします。
-1. 「**Day CQ WCM Language Manager**」を探してクリックし、**言語リスト**&#x200B;の値を`/apps/wcm/core/resources/languages`に変更して、**保存**&#x200B;をクリックします。
+1. **Day CQ WCM Language Manager**&#x200B;を探してクリックし、**Language List**&#x200B;の値を`/apps/wcm/core/resources/languages`に変更して、「**保存**」をクリックします。
 
    ![chlimage_1-40](assets/chlimage_1-40.png)
 
-## ページプロパティでのMSMロックの設定（タッチ対応UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
+## ページプロパティに対するMSMロックの設定（タッチ操作対応UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
 カスタムページプロパティの作成時に、新しいプロパティをすべてのライブコピーへのロールアウトの対象にするかどうかを検討しなければならない場合があります。
 
@@ -673,7 +666,7 @@ MSM は、保存されている言語コードと国コードのリストを使�
    * 継承がキャンセルされている（チェーンリンクが解除されている）場合は、編集のみ可能です。
    * リソースの最初の子レベルにのみ適用されます
    * **型**：`String`
-   * **値**:は、検討中のプロパティの名前を保持します(かつ、プロパティの値に相当 `name`します。例えば、
+   * **値**:は、考慮中のプロパティの名前を保持します(プロパティの値に相当しま `name`す)。例えば、
 
       `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
@@ -683,17 +676,15 @@ MSM は、保存されている言語コードと国コードのリストを使�
 
    * **相対** (例： `myProperty` または `./myProperty`)
 
-      * `cq:propertyInheritanceCancelled`にプロパティを追加したり、からプロパティを削除したりします。
+      * `cq:propertyInheritanceCancelled`にプロパティを追加および削除します。
    * **絶対** (例： `/image`)
 
-      * チェーンを切断すると、`cq:LiveSyncCancelled`ミックスインを`./image`に追加し、`cq:isCancelledForChildren`を`true`に設定することで継承がキャンセルされます。
+      * チェーンを解除すると、 `cq:LiveSyncCancelled` mixinを`./image`に追加し、 `cq:isCancelledForChildren`を`true`に設定して、継承がキャンセルされます。
       * チェーンを閉じると、継承が元に戻ります。
 
 
 >[!NOTE]
->
->cq-msm-lockableは、編集対象のリソースの最初の子レベルに適用され、値が絶対値または相対値として定義されている場合でも、より深いレベルの親レベルでは機能しません。
+cq-msm-lockableは、編集するリソースの最初の子レベルに適用され、値が絶対値と相対値のどちらとして定義されているかに関係なく、より深いレベルの親レベルでは機能しません。
 
 >[!NOTE]
->
->継承を再度有効にしても、ライブコピーページのプロパティはソースのプロパティとは自動的には同期されません。必要な場合は、手動で同期をリクエストできます。
+継承を再度有効にしても、ライブコピーページのプロパティはソースのプロパティとは自動的には同期されません。必要な場合は、手動で同期をリクエストできます。
