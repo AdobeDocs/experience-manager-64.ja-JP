@@ -2,21 +2,20 @@
 title: レイアウトデザイン
 seo-title: レイアウトデザイン
 description: ここでは、レターやインタラクティブ通信で使用するレイアウトの作成方法について説明します。
-seo-description: レイアウトデザイン レターやInteractive Communicationsで使用するレイアウトの作成方法について詳しく説明します。
+seo-description: レイアウトデザイン 詳細では、レターやインタラクティブ通信に使用するレイアウトを作成する方法を説明します。
 uuid: b21af474-07f5-4bfe-af7d-0c322e2452ae
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management, interactive-communications
 discoiquuid: 046b1bf9-1ac7-4e2e-ab37-6fe5422dfa20
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 92f90e7f-2869-4201-a927-47de1fc08f5c
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1307'
 ht-degree: 93%
 
 ---
-
 
 # レイアウトデザイン {#layout-design}
 
@@ -27,7 +26,7 @@ XFA フォームテンプレートまたは XDP は、以下の項目のテン�
 
 * レイアウトフラグメント
 
-XDP は Adobe Forms Designer でデザインできます。この記事では、フォームフィールドやターゲット領域を使用する場所、レイアウトフラグメントをいつ使用するかなど、効果的な通信/インタラクティブ通信を作成するためのXDPのデザイン方法について詳しく説明します。
+XDP は Adobe Forms Designer でデザインできます。この記事では、フォームフィールドやターゲット領域を使用する場所、レイアウトフラグメントを使用するタイミングなど、効果的な通信やインタラクティブ通信を作成するためのXDPのデザイン方法について詳しく説明します。
 
 ## レターまたはインタラクティブ通信の印刷チャネル用のレイアウトを作成する {#creating-a-layout-for-letters-or-for-interactive-communications-print-channel}
 
@@ -63,7 +62,7 @@ XDP は Adobe Forms Designer でデザインできます。この記事では、
 
 関連付け可能なフィールドには、次の要件があります。
 
-* がXFA &lt;field>または&lt;exclGroup>である
+* XFA &lt;field>または&lt;exclGroup>
 * XFA 連結参照を持っている
 * &lt;exclGroup> の場合、少なくとも 1 つの子ラジオボタンフィールドが必要（それ以外の場合、値の型は決定できません）
 
@@ -128,5 +127,4 @@ XDP は Adobe Forms Designer でデザインできます。この記事では、
 
 ダイナミック XML フォームに対して、レイアウトのサーバーレンダリング形式を使用する必要があります。この形式を使用しないと、このレイアウトをベースとするレターやインタラクティブ通信が正しくレンダリングされません。デフォルトで、ADEP Designer のサーバーレンダリング形式はダイナミック XML フォームに設定されています。正しい形式を使用していることを確認するには、次の手順を実行します。
 
-* Designerで、**[!UICONTROL ファイル/フォームのプロパティ/デフォルト]**&#x200B;をクリックし、「PDFのレンダリング形式」設定が「ダイナミックXMLフォーム」に設定されていることを確認します。
-
+* Designerで、**[!UICONTROL ファイル/フォームのプロパティ/デフォルト]**&#x200B;をクリックし、「PDFのレンダリング/フォーマット」設定が「ダイナミックXMLフォーム」に設定されていることを確認します。
