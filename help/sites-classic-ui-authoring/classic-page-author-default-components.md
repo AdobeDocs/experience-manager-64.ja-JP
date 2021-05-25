@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9ed820de-c108-416e-aaf7-b63a64ab4f80
-translation-type: tm+mt
-source-git-commit: 02aee2202a570320cd7eb40c2e566d886af4e163
+exl-id: d552cbcc-8f71-48a3-9685-eba1ab8805c3
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 85%
 
 ---
-
 
 # コンポーネント{#components}
 
@@ -35,13 +34,12 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 
 * [ページオーサリング用コンポーネント](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 
-   標準ページコンテンツの作成に使用するコンポーネントは、主にグループ&#x200B;**一般**、**列**、**Forms**&#x200B;に含まれます。
+   標準ページコンテンツの作成に使用するコンポーネントは、主に&#x200B;**一般**、**列**&#x200B;および&#x200B;**Forms**&#x200B;のグループに含まれます。
 
 * [e コマース](/help/sites-administering/ecommerce.md)
 
-   AEMのeコマース機能には、**コマース**&#x200B;グループに含まれる様々なコンポーネントも含まれます。 実際の使用方法は、使用しているコマースエンジンによって異なります。
+   AEM内のeコマース機能には、**コマース**&#x200B;グループに含まれる様々なコンポーネントも含まれています。 実際の使用方法は、使用しているコマースエンジンによって異なります。
 
 ## デザインモードでのコンポーネントの設定 {#using-design-mode-to-configure-components}
 
 作成者が標準インストールのサイドキックからアクセスできるコンポーネントに加えて、他の様々なコンポーネントも使用できます。このようなコンポーネントを有効または無効にして、特定のコンポーネントのパラメーターを編集するには、[デザインモード](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#enable-disable-components)を使用します。
-
