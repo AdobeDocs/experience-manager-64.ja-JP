@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 860dde0b-7cb4-4668-9fac-6f954f1ec0a7
-translation-type: tm+mt
-source-git-commit: c58437f791daa11669198d916f0756ff4830677c
+exl-id: c1103f7b-19fe-43b2-95e8-523efdc11950
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 91%
 
 ---
-
 
 # アプリの定義{#app-definitions}
 
@@ -36,7 +35,7 @@ ht-degree: 91%
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-1. **モバイル**&#x200B;から&#x200B;**アプリ**&#x200B;を選択し、**作成をクリックします。**
+1. **モバイル**&#x200B;から&#x200B;**アプリ**&#x200B;を選択し、「**作成**」をクリックします。
 
    「**アプリ**」を選択し、詳細を入力して、新しいアプリを作成します。
 
@@ -56,4 +55,3 @@ ht-degree: 91%
 
 * [AEM と Adobe PhoneGap Enterprise での開発](/help/mobile/developing-in-phonegap.md)
 * [AEM での Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)
-
