@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 059c5bbe-07eb-4873-8157-2196df887b27
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 6562a440-887e-4a48-a14e-64dc36c70793
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 56%
 
 ---
-
 
 # フォーラムの基本事項 {#forum-essentials}
 
@@ -55,7 +54,7 @@ ht-degree: 56%
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [フォーラム API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/forum/client/api/package-summary.html)
 
@@ -63,9 +62,9 @@ ht-degree: 56%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### フォーラム機能  {#forum-function}
+### フォーラム機能 {#forum-function}
 
-[フォーラム機能](functions.md#forum-function)を含むコミュニティサイト構造は、設定済みの`forum`コンポーネントと、モデレート、タグ付け、翻訳に影響する設定を含みます。
+[フォーラム機能](functions.md#forum-function)を含むコミュニティサイト構造には、設定済みの`forum`コンポーネントのほか、モデレート、タグ付け、翻訳に影響する設定が含まれます。
 
 ### フォーラム投稿(UGC)へのアクセス{#accessing-forum-posts-ugc}
 
@@ -79,7 +78,6 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例
-* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
+* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティメソッドと例
+* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
-
