@@ -10,14 +10,13 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 905b6dc5-cf17-4f58-a687-27e2910a0729
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '207'
 ht-degree: 67%
 
 ---
-
 
 # ストレージ設定 {#storage-configuration}
 
@@ -30,7 +29,7 @@ ht-degree: 67%
 * [コミュニティコンテンツストア](working-with-srp.md)
 * [推奨されるトポロジ](topologies.md)
 
-## ストレージ設定コンソール  {#storage-configuration-console}
+## ストレージ設定コンソール {#storage-configuration-console}
 
 ![chlimage_1-188](assets/chlimage_1-188.png)
 
@@ -47,17 +46,16 @@ ht-degree: 67%
    * [DSRP](dsrp.md#select-dsrp)の選択の詳細を参照
    * [ASRP](asrp.md#select-asrp)の選択の詳細を参照
 
-* **[!UICONTROL 送信]**&#x200B;を選択
+* 「**[!UICONTROL 送信]**」を選択します。
 
 ### JCR ストレージについて {#about-jcr-storage}
 
 選択しなかった場合は、AEM リポジトリである JCR がデフォルトで使用されることに注意してください。
 
-JCRは、作成者と発行環境が共有する共通のストアではありません。*a1/>*&#x200B;コミュニティコンテンツは、そのコンテンツが作成された作成者または発行環境からのみ表示されます。
+JCRは、オーサー環境とパブリッシュ環境で共有される共通ストアでは&#x200B;*ありません*。 コミュニティコンテンツは、作成先のオーサー環境またはパブリッシュ環境からのみ表示されます。
 
 詳しくは、[JCR ストア](jsrp.md)を参照してください。
 
 >[!NOTE]
 >
 >`/etc/socialconfig`の下にノード`srpc`がない場合は、デフォルトの[JCRストア](jsrp.md)を示します。
-
