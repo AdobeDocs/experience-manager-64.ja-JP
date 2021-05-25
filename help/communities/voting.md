@@ -9,32 +9,31 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: 071cac6d-05c5-47ab-85bc-ead6693ca1f4
-translation-type: tm+mt
-source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+exl-id: 660a7106-0c21-4073-8319-4d6d20b9bc49
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 25%
 
 ---
 
-
 # 投票の使用 {#using-voting}
 
-`Voting`コンポーネントは、コミュニティのメンバーがQnAコンポーネント内の回答など、特定のコンテンツの部分を評価するのに役立つツールです。 `Voting`コンポーネントを使用して、メンバーは上向きまたは下向きの矢印を選択し、その意見を示します。
+`Voting`コンポーネントは、コミュニティメンバーがQ&amp;Aコンポーネント内の回答など、特定のコンテンツを評価するのに役立つツールです。 `Voting`コンポーネントを使用して、メンバーは上向き矢印または下向き矢印を選択して意見を示します。
 
 ## 投票をページに追加 {#adding-voting-to-a-page}
 
-作成者モードで`Voting`コンポーネントをページに追加するには、コンポーネントブラウザーを使用して`Communities / Voting`を検索し、ページ上にドラッグして配置します。例えば、ユーザーが投票できる機能に対する相対位置です。
+`Voting`コンポーネントをオーサリングモードでページに追加するには、コンポーネントブラウザーを使用して`Communities / Voting`を探し、ページ上の位置（ユーザーが投票する機能に対する相対位置など）にドラッグします。
 
-必要な情報については、[Communities Components Basics](basics.md)を参照してください。
+必要な情報については、[コミュニティコンポーネントの基本](basics.md)を参照してください。
 
-[必要なクライアント側ライブラリ](essentials-voting.md#essentials-for-client-side)が含まれる場合、`Voting`コンポーネントは次のように表示されます。
+[必須のクライアント側ライブラリ](essentials-voting.md#essentials-for-client-side)を含めると、`Voting`コンポーネントは次のように表示されます。
 
 ![chlimage_1-307](assets/chlimage_1-307.png)
 
 ## 投票の設定 {#configuring-voting}
 
-アクセスする配置済みの`Voting`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
+配置済みの`Voting`コンポーネントを選択し、`Configure`アイコンを選択すると、編集ダイアログが開きます。
 
 ![chlimage_1-308](assets/chlimage_1-308.png)
 
@@ -44,15 +43,15 @@ ht-degree: 25%
 
 * **[!UICONTROL 肯定的な返信ラベル]**
 (
-*必須*)ポジティブな反応を表す内部プロパティ名です。
+*必須*)肯定的な応答の内部プロパティ名。
 
 * **[!UICONTROL 否定的な返信ラベル]**
 (
-*必須*)否定的な応答の内部プロパティ名です。
+*必須*)負の応答の内部プロパティ名。
 
 * **[!UICONTROL 集計名]**
 (
-*必須*)投票コンポーネントのこのインスタンスの、内部で識別可能なプロパティ名。
+*必須*)投票コンポーネントのこのインスタンスの内部で識別可能なプロパティ名。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -60,10 +59,10 @@ ht-degree: 25%
 
 メンバーが投票できるのは 1 回だけですが、いつでも投票を変更できます。
 
-### 匿名  {#anonymous}
+### 匿名 {#anonymous}
 
-匿名での投票はサポートされていません。サイト訪問者は、一度投票に参加するには、登録（会員になる）し、サインインする必要があります。
+匿名での投票はサポートされていません。サイト訪問者が1回投票に参加するには、登録（メンバーになる）し、サインインする必要があります。
 
 ## 追加情報 {#additional-information}
 
-詳しい情報は、開発者向けの[投票の必須事項](essentials-voting.md)ページにあります。
+詳しくは、開発者向けの[投票の基本事項](essentials-voting.md)ページを参照してください。
