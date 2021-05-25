@@ -10,14 +10,13 @@ topic-tags: mobile-web
 content-type: reference
 discoiquuid: 20a0b2a8-7347-4875-a202-9cedd8e187ff
 legacypath: /content/docs/en/aem/6-0/develop/mobile
-translation-type: tm+mt
-source-git-commit: 7b39a715166eeefdf20eb22a4449068ff1ed0e42
+exl-id: a8005a0a-b90e-465c-8521-780d21d72e55
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 100%
 
 ---
-
 
 # モバイル Web{#mobile-web}
 
