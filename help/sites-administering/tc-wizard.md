@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: dc185a75-84a0-4075-ae1e-8bb78d414aa8
-feature: Language Copy
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 言語コピー
+exl-id: a3ac6b7e-8a18-4432-9e56-1f9bd7cf0548
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 81%
 
 ---
-
 
 # 言語コピーウィザード{#language-copy-wizard}
 
@@ -25,7 +24,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->サイトの言語コピーを作成するには、ユーザーがプロジェクト管理者グループのメンバーである必要があります。
+>サイトの言語コピーを作成するには、ユーザーがproject-administratorsグループのメンバーである必要があります。
 
 このウィザードにアクセスするには、次の手順を実行します。
 
@@ -41,7 +40,7 @@ ht-degree: 81%
 
    ![chlimage_1-50](assets/chlimage_1-50.jpeg)
 
-1. 「**次へ**」ボタンをクリックすると、ウィザードの&#x200B;**設定**&#x200B;の手順に進みます。 ここでは、言語を追加または削除し、翻訳方法を選択できます。
+1. 「**次へ**」ボタンをクリックすると、ウィザードの&#x200B;**設定**&#x200B;手順が表示されます。 ここでは、言語を追加または削除し、翻訳方法を選択できます。
 
    ![chlimage_1-51](assets/chlimage_1-51.jpeg)
 
@@ -49,7 +48,7 @@ ht-degree: 81%
    >
    >デフォルトでは、翻訳設定は 1 つのみです。他の設定を選択するには、最初にクラウド設定を設定する必要があります。[翻訳統合フレームワークの設定](/help/sites-administering/tc-tic.md)を参照してください。
 
-1. 「**次へ**」ボタンをクリックすると、ウィザードの&#x200B;**翻訳**&#x200B;手順に進みます。 ここでは、構造のみを作成するか、新しい翻訳プロジェクトを作成するか、既存の翻訳プロジェクトに追加するかを選択できます。
+1. 「**次へ**」ボタンをクリックすると、ウィザードの&#x200B;**翻訳**&#x200B;の手順に移動します。 ここでは、構造のみを作成するか、新しい翻訳プロジェクトを作成するか、既存の翻訳プロジェクトに追加するかを選択できます。
 
    >[!NOTE]
    >
@@ -60,4 +59,3 @@ ht-degree: 81%
 1. 「**作成**」ボタンをクリックすると、ウィザードは終了します。
 
    ![chlimage_1-53](assets/chlimage_1-53.jpeg)
-
