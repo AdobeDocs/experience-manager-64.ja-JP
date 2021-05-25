@@ -1,51 +1,50 @@
 ---
-title: AEM 6.4 User Guide Hub
-seo-title: AEM 6.4 User Guide Hub
-description: AEM 6.4を理解し、インストール、管理、および使用するために必要なすべてのリソースの概要
-seo-description: AEM 6.4を理解し、インストール、管理、および使用するために必要なすべてのリソースの概要
+title: AEM 6.4ユーザーガイドハブ
+seo-title: AEM 6.4ユーザーガイドハブ
+description: AEM 6.4の理解、インストール、管理および使用に関するすべての基本的なリソースの概要
+seo-description: AEM 6.4の理解、インストール、管理および使用に関するすべての基本的なリソースの概要
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
-translation-type: tm+mt
-source-git-commit: 7cb8fbc2577b9feafbcbddbd078ab06e1a341c73
+exl-id: dbeb093b-489b-46c3-b136-e33a430793e0
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 31%
 
 ---
 
+# AEM 6.4ユーザーガイドハブ{#aem-64-user-guide}
 
-# AEM 6.4 User Guide Hub {#aem-64-user-guide}
+## はじめに {#introduction}
 
-## 概要 {#introduction}
-
-| [最初の手順](https://helpx.adobe.com/jp/experience-manager/get-started.html) | [特集ビデオ](https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-5-videos.html) | [リリースノート](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes.html) |
+| [最初の手順](https://helpx.adobe.com/jp/experience-manager/get-started.html) | [機能に関するビデオ](https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-5-videos.html) | [リリースノート](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes.html) |
 |:-:|:-:|:-:|
-| AEM使用の手引きを行うためのDiscoverのチュートリアルと記事 | 6.4の新機能に関するビデオの選択 | AEM 6.4の新機能を確認する |
+| AEMを使い始めるためのチュートリアルと記事を理解する | 6.4の新機能を紹介するビデオの選択 | AEM 6.4の新機能 |
 
 ## ユーザーガイドとリソース{#user-guides-and-resources}
 
 * [AEM機能ユーザーガイド](capabilities.md)
-* [AEM導入ユーザーガイド](implementation.md)
-* [AEMリソース](resources.md)
+* [AEM実装ユーザーガイド](implementation.md)
+* [AEM Resources](resources.md)
 
 ## トラブルシューティングとヘルプ{#troubleshooting-and-help}
 
 * [AEM を初めて使用する方](new.md)
 * [AEMの機能について](learn.md)
-* [ベストプラクティス、使い方、およびAEM向けトレーニング](best-practice.md)
+* [AEMのベストプラクティス、方法およびトレーニング](best-practice.md)
 * [AEM コミュニティ](community.md)
 * [AEM のトラブルシューティング](troubleshooting.md)
 
 ## 連絡先オプション{#contact-options}
 
-サポートの代理人は、次の方法でサポートを支援できます。
+サポート代表は、次の方法で支援を受けることができます。
 
 * Web:Experience Managerサポートポータル
-* 電話番号：[地域の電話番号を探します。](https://helpx.adobe.com/contact/dma-external/DMACustomeCareRegionalPhoneNumbers.html)
+* 電話：[お住まいの地域の電話番号を確認してください。](https://helpx.adobe.com/contact/dma-external/DMACustomeCareRegionalPhoneNumbers.html)
 
 >[!NOTE]
 >
->**サポート委任**&#x200B;かどうか不明ですか？ この[ユーザータイプがあなた](https://helpx.adobe.com/experience-cloud/supported-users.html)に当てはまるかどうかを調べ、アドビの[エンタープライズサポート用語](https://helpx.adobe.com/support/programs/enterprise-support-terms.html)を知ります。
+>**サポート委任者**&#x200B;かどうか不明ですか？ この[ユーザータイプが](https://helpx.adobe.com/experience-cloud/supported-users.html)に適用されるかどうかを確認し、アドビの[エンタープライズサポート用語](https://helpx.adobe.com/support/programs/enterprise-support-terms.html)について学びます。
 
 ## コミュニティ {#community}
 
