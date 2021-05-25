@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/MANAGING
 topic-tags: managing
 content-type: reference
 discoiquuid: 150b43e3-9fb3-4c1c-b1cd-ccfd162974ad
-translation-type: tm+mt
-source-git-commit: f86765084981cda1e255834bf83be0ff8a7a2a02
+exl-id: d45fe856-4709-437b-b193-e8243a695d2c
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '3117'
 ht-degree: 98%
 
 ---
-
 
 # SEO と URL 管理のベストプラクティス{#seo-and-url-management-best-practices}
 
@@ -24,11 +23,11 @@ ht-degree: 98%
 
 このドキュメントでは、まず、AEM の実装でこうした目的を達成するための [SEO のベストプラクティス](#seo-best-practices)および推奨事項を説明します。その次に、最初の節で提示するより[複雑な実装手順](#aem-configurations)のいくつかについて詳しく説明していきます。
 
-## SEO のベストプラクティス  {#seo-best-practices}
+## SEO のベストプラクティス     {#seo-best-practices}
 
 ここでは、SEO の一般的なベストプラクティスを説明します。
 
-### URL  {#urls}
+### URL {#urls}
 
 URL に関して一般的に認められているベストプラクティスがいくつかあります。
 
@@ -54,7 +53,7 @@ SEO に対応した URL を作成する方法について、一般的なヒン�
 
    * ページでセレクターを使用する場合、セマンティック値を提供するセレクターが推奨されます。
    * ユーザーが理解できない URL は、検索エンジンでも理解できません。
-   * 次に例を示します。`mybrand.com/products/product-detail.product-category.product-name.html`は`mybrand.com/products/product-detail.1234.html`より優先されます
+   * 例：`mybrand.com/products/product-detail.product-category.product-name.html`は`mybrand.com/products/product-detail.1234.html`よりも推奨されます。
 
 * 検索エンジンではサブドメインは異なるエンティティとして扱われ、サイトの SEO 値が分断されるので、可能な限りサブドメインの使用は避けます。
 
@@ -194,7 +193,7 @@ AEM では、すべての Web ページが `/content/my-brand/my-content` に保
 
 * この場合、URL を次のように表示した方が効果的です。
 
-   `www.mydomain.com/es/casa.html`.
+   `www.mydomain.com/es/casa.html`
 
 ページ名のローカライズに伴う課題は、AEM プラットフォームで使用可能なローカリゼーションツールの多くでは、コンテンツを同期しておくためには、ロケール間でページ名を一致させる必要があるという点です。
 
@@ -218,7 +217,7 @@ AEM では、すべての Web ページが `/content/my-brand/my-content` に保
 
 >[!NOTE]
 >
-> `sling:alias`プロパティは、ページプロパティ](/help/sites-authoring/editing-page-properties.md#advanced)の編集時に[Aliasプロパティを使用して設定できます
+> `sling:alias`プロパティは、[ページプロパティ編集時のエイリアスプロパティ](/help/sites-authoring/editing-page-properties.md#advanced)を使用して設定できます
 
 #### /etc/map {#etc-map}
 
@@ -236,7 +235,7 @@ AEM では、すべての Web ページが `/content/my-brand/my-content` に保
 
    (`resource.resolver.map.location`)
 
-* 初期設定：
+* デフォルト：
 
    `/etc/map`
 
@@ -301,7 +300,7 @@ AEM で受信要求のマッピングまたはページ上の URL の書き換�
 
 これまでに、URL をページに出力するときに、定義したマッピングを使用するために、マッピングをロジックとともにコンポーネントに実装しました。
 
-最後の手順は、短縮された URL の Dispatcher での処理です。ここでは、`mod_rewrite` を使用します。`mod_rewrite` を使用する最大の利点は、URL が、Dispatcher モジュールに送信される前に長い形式に再びマッピングされる点です。**&#x200B;つまり、Dispatcher は公開サーバーに長い URL を要求し、それに応じて URL をキャッシュします。したがって、公開サーバーからの Dispatcher フラッシュ要求により、そのコンテンツを正常に無効にすることができます。
+最後の手順は、短縮された URL の Dispatcher での処理です。ここでは、`mod_rewrite` を使用します。`mod_rewrite` を使用する最大の利点は、URL が、Dispatcher モジュールに送信される&#x200B;*前に*&#x200B;長い形式に再びマッピングされる点です。つまり、Dispatcher は公開サーバーに長い URL を要求し、それに応じて URL をキャッシュします。したがって、公開サーバーからの Dispatcher フラッシュ要求により、そのコンテンツを正常に無効にすることができます。
 
 このようなルールを実装するには、Apache HTTP Server の設定で仮想ホストに `RewriteRule` 要素を追加します。前述の例の短縮された URL を拡張する場合は、次のようなルールを実装できます。
 
@@ -353,7 +352,7 @@ RewriteRule ^(.*)$ /${lowercase:$1} [R=301,L]
 
 ### 開発環境を保護するための robots.txt の実装 {#implementing-robots-txt-to-protect-development-environments}
 
-検索エンジンでは、サイトをクロールする前に、サイトのルートに *ファイルがあるかどうかがチェックされる*`robots.txt`はずです。ただし、Google、Yahoo、Bing などの主要な検索エンジンではすべてこの点が考慮されるのに対し、なじみのない検索エンジンの中には、この点が考慮されないものもあります。
+検索エンジンでは、サイトをクロールする前に、サイトのルートに *ファイルがあるかどうかがチェックされる*&#x200B;はず`robots.txt`です。ただし、Google、Yahoo、Bing などの主要な検索エンジンではすべてこの点が考慮されるのに対し、なじみのない検索エンジンの中には、この点が考慮されないものもあります。
 
 サイト全体へのアクセスをブロックするための最も簡単な方法は、`robots.txt` というファイルに次の内容を指定して、サイトのルートに配置することです。
 
