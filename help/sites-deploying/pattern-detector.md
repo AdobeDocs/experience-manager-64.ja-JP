@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: 8cdcfd3a-7003-4cce-97f4-da7a1a887d1b
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: アップグレード
+exl-id: 375e202c-21d4-41f1-a2d5-592ac95c8f25
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 93%
 
 ---
-
 
 # パターン検出を使用したアップグレードの複雑性の評価{#assessing-the-upgrade-complexity-with-the-pattern-detector}
 
@@ -49,14 +48,14 @@ ht-degree: 93%
 
 * **Felix Inventory コンソールを使用：** 
 
-1. AEM Webコンソールにアクセスするには、次の場所を参照します。https://<i></i>serveraddress:serverport/system/console/configMgr
+1. 次の場所を参照して、AEM Webコンソールに移動します。https://<i></i>serveraddress:serverport/system/console/configMgr
 1. 次の図に示すように、**ステータス - パターン検出**&#x200B;を選択します。
 
    ![screenshot-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
 * **事後対応テキストベースまたは通常の JSON インターフェイスを使用**
 
-* **リアクティブなJSON行インターフェイス**。各行に個別のJSONドキュメントを生成します。
+* **事後対応JSON行インターフェイスを使用**。各行に個別のJSONドキュメントを生成します。
 
 これらの方法の詳細を次に示します。
 
@@ -222,4 +221,3 @@ curl -Nsu 'admin:admin' http://localhost:4502/system/console/status-pattern-dete
 * Oak インデックスの定義（互換性）
 * VLT パッケージ（過剰使用）
 * rep：ユーザーノードの互換性（OAuth 設定のコンテキストで）
-
