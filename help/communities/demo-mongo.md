@@ -10,20 +10,19 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: e32fc619-6226-48c6-bbd7-1910963d1036
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '843'
 ht-degree: 57%
 
 ---
 
-
 # MongoDB をデモ用に設定する方法 {#how-to-setup-mongodb-for-demo}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
-このチュートリアルでは、*1つの作成者*&#x200B;インスタンスと&#x200B;*1つの発行*&#x200B;インスタンスに対して[MSRP](msrp.md)を設定する方法を説明します。
+このチュートリアルでは、[MSRP](msrp.md)を&#x200B;*1つのオーサー*&#x200B;インスタンスと&#x200B;*1つのパブリッシュ*&#x200B;インスタンス用に設定する方法について説明します。
 
 このセットアップを終えると、ユーザー生成コンテンツ（UGC）のフォワードまたはリバースレプリケーションをおこなわずに、オーサー環境とパブリッシュ環境の両方からコミュニティコンテンツにアクセスできるようになります。
 
@@ -31,7 +30,7 @@ ht-degree: 57%
 
 **実稼動環境では、以下のことが必要です。****
 
-* レプリカ・セットでMongoDBを実行
+* レプリカセットでMongoDBを実行する
 * SolrCloudを使用
 * 複数のパブリッシャーインスタンスを含む
 
@@ -39,7 +38,7 @@ ht-degree: 57%
 
 ### MongoDB のインストール {#install-mongodb}
 
-* [https://www.mongodb.org/](https://www.mongodb.org/)からMongoDBをダウンロード
+* [https://www.mongodb.org/](https://www.mongodb.org/)からMongoDBをダウンロードします
 
    * OSの選択：
 
@@ -48,17 +47,17 @@ ht-degree: 57%
       * Windows 7
    * バージョンの選択：
 
-      * 少なくともバージョン2.6を使用してください
+      * 少なくともバージョン2.6を使用する
 
 
 * 基本設定
 
-   * MongoDBのインストール手順に従います
-   * Mongod用の設定
+   * MongoDBのインストール手順に従います。
+   * mongod向け設定
 
-      * Mongoや共有を設定する必要がない
-   * インストールされたMongoDBフォルダは&lt;mongo-install>と呼ばれます
-   * 定義されたデータ・ディレクトリ・パスは&lt;mongo-dbpath>と呼ばれます
+      * モンゴや共有を設定する必要がない
+   * インストールされたMongoDBフォルダーは、&lt;mongo-install>と呼ばれます。
+   * 定義されたデータディレクトリのパスは、&lt;mongo-dbpath>と呼ばれます。
 
 
 * MongoDB は AEM と同じホストか、リモートで実行できます。
@@ -73,7 +72,7 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->MongoDBが&#x200B;*AEMの後に*&#x200B;起動された場合、**restart**&#x200B;すべての&#x200B;**AEM**&#x200B;インスタンスがMongoDBに正しく接続されるようにします。
+>AEM *の後にMongoDBが起動された場合、***restart**&#x200B;すべての&#x200B;**AEM**&#x200B;インスタンスがMongoDBに正しく接続されるようにします。
 
 ### 実稼動デモのオプション：MongoDB レプリカセットのセットアップ {#demo-production-option-setup-mongodb-replica-set}
 
@@ -93,28 +92,28 @@ ht-degree: 57%
    * rs.add(&quot;127.0.0.1:27019&quot;)
    * rs.status()
 
-## Solr  {#solr}
+## Solr {#solr}
 
 ### Solr のインストール {#install-solr}
 
-* [Apache Lucene](https://archive.apache.org/dist/lucene/solr/)からSolrをダウンロード：
+* [Apache Lucene](https://archive.apache.org/dist/lucene/solr/)からSolrをダウンロードします。
 
    * 任意のOSに適している
-   * バージョン4.10またはバージョン5を使用
+   * バージョン4.10またはバージョン5を使用する
    * Solr には Java 1.7 以降が必要です。
 
 * 基本設定
 
-   * 「例」ソルの設定に従う
+   * 「例」のSolr設定に従う
    * サービスは不要
-   * インストールされたSolrフォルダは、&lt;solr-install>と呼ばれます
+   * インストールされたSolrフォルダーは、&lt;solr-install>と呼ばれます。
 
 ### AEM Communities のための Solr の設定 {#configure-solr-for-aem-communities}
 
 MSRP のための Solr コレクションをデモ目的で設定するには、以下の 2 点を決定する必要があります（詳しくは、主なドキュメントへのリンクを選択してください）。
 
-1. Solrをスタンドアロンまたは[SolrCloudモード](msrp.md#solrcloudmode)で実行
-1. [standard](msrp.md#installingstandardmls)または[advanced](msrp.md#installingadvancedmls)多言語検索(MLS)をインストールします。
+1. Solrをスタンドアロンで実行するか、[SolrCloudモード](msrp.md#solrcloudmode)で実行します。
+1. [標準の](msrp.md#installingstandardmls)または[高度な](msrp.md#installingadvancedmls)多言語検索(MLS)をインストールします。
 
 ### スタンドアロンの Solr {#standalone-solr}
 
@@ -131,14 +130,14 @@ Solr を実行する方法は、バージョンとインストール方法によ
 
 >[!NOTE]
 >
->Solr コンソールが使用できない場合は、&lt;solrinstall>/example/logs にあるログを確認します。SOLRが解決できない特定のホスト名(例：&quot;user-macbook-pro&quot;)。
+>Solr コンソールが使用できない場合は、&lt;solrinstall>/example/logs にあるログを確認します。SOLRが解決できない特定のホスト名にバインドしようとしているかどうかを確認します(例：&quot;user-macbook-pro&quot;)です。
 その場合、このホスト名の新しいエントリ（127.0.0.1 user-macbook-pro など）を使用して etc/hosts ファイルを更新します。すると Solr が適切に起動します。
 
 ### SolrCloud {#solrcloud}
 
 非常に基本的な（実稼動用ではない）solrCloud のセットアップを実行するには、以下のコマンドで Solr を起動します。
 
-* java -Dbootstrap_confdir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar開始.jar
+* java -Dbootstrap_confdir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar
 
 ##  MongoDB を共通ストアとして指定{#identify-mongodb-as-common-store}
 
@@ -152,25 +151,25 @@ AEM が MongoDB を起動する前に実行されている場合、AEM インス
 
 MongoDB 共通ストアをテストおよび検証するために、パブリッシュインスタンスにコメントを投稿して、オーサーインスタンスでそのコメントを表示し、さらに MongoDB と Solr で UGC を表示します。
 
-1. 発行インスタンスで、[コミュニティコンポーネントガイド](http://localhost:4503/content/community-components/en/comments.html)ページを参照し、コメントコンポーネントを選択します。
-1. サインインしてコメントを投稿する：
+1. パブリッシュインスタンスで、[コミュニティコンポーネントガイド](http://localhost:4503/content/community-components/en/comments.html)ページを参照し、コメントコンポーネントを選択します。
+1. ログインしてコメントを投稿する：
 1. コメントテキスト入力ボックスにテキストを入力し、「**[!UICONTROL 投稿]**」をクリックします。
 
    ![chlimage_1-191](assets/chlimage_1-191.png)
 
-1. [作成者インスタンス](http://localhost:4502/content/community-components/en/comments.html)に対するコメントを表示するだけです（管理者/管理者としてサインインしている可能性が高い）。
+1. [オーサーインスタンス](http://localhost:4502/content/community-components/en/comments.html)でコメントを表示するだけです（通常はadmin / adminとしてサインインしています）。
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-   注意：オーサーインスタンスの *asipath* の下には JCR ノードがありますが、これらは SCF フレームワーク用のものです。実際のUGCはJCRにはなく、MongoDBにあります。
+   注意：オーサーインスタンスの *asipath* の下には JCR ノードがありますが、これらは SCF フレームワーク用のものです。実際のUGCはJCRには含まれず、MongoDBに含まれます。
 
-1. mongodb **[!UICONTROL Communities/Collections/Content]**&#x200B;にUGCを表示
+1. mongodb **[!UICONTROL コミュニティ/コレクション/コンテンツ]**&#x200B;でUGCを表示します。
 
    ![chlimage_1-193](assets/chlimage_1-193.png)
 
-1. UGCをSolrで表示:
+1. SolrでUGCを表示します。
 
-   * ソルダッシュボードを参照：[http://localhost:8983/solr/](http://localhost:8983/solr/)
+   * Solrダッシュボードを参照します。[http://localhost:8983/solr/](http://localhost:8983/solr/)
    * ユーザー`core selector`が`collection1`を選択
    *  `Query`
    *  `Execute Query`
@@ -179,20 +178,20 @@ MongoDB 共通ストアをテストおよび検証するために、パブリッ
 
 ## トラブルシューティング {#troubleshooting}
 
-### UGC が表示されない {#no-ugc-appears}
+### UGC が表示されない  {#no-ugc-appears}
 
-1. MongoDBが正しくインストールされ、動作していることを確認します。
+1. MongoDBがインストールされ、正しく動作していることを確認します。
 
 1. MSRPがデフォルトのプロバイダーに設定されていることを確認します。
 
-   * すべての作成者および発行AEMインスタンスで、[ストレージ設定コンソール](srp-config.md)に再度アクセスします。
+   * すべてのオーサーインスタンスとパブリッシュAEMインスタンスで、[ストレージ設定コンソール](srp-config.md)に再度アクセスします。
 
-   またはAEMリポジトリを確認します。
+   または、AEMリポジトリを確認します。
 
-   * JCRで、[/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
+   * JCRで、 [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
-      * [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)ノードを含まない。ストレージプロバイダーがJSRPであることを意味する
-      * srpcノードが存在し、ノード[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)を含む場合、デフォルトの構成のプロパティでMSRPをデフォルトプロバイダーとして定義する必要があります
+      * [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)ノードが含まれない場合は、ストレージプロバイダーがJSRPであることを意味します。
+      * srpcノードが存在し、ノード[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)が含まれる場合は、defaultconfigurationのプロパティでMSRPをデフォルトのプロバイダーとして定義する必要があります
 
 
-1. MSRPを選択した後にAEMが再起動されたことを確認します。
+1. MSRPを選択した後でAEMが再起動されたことを確認します。
