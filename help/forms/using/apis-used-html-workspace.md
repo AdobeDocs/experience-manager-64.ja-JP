@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
-translation-type: tm+mt
-source-git-commit: 0ce79686522da4fb3d017068b623c76f81c6b23a
+exl-id: 1d74fdb9-c118-45f7-93c6-116cacb2f1c4
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 100%
 
 ---
-
 
 # AEM Forms ワークスペースで使用する 各種 API  {#apis-used-in-aem-forms-workspace}
 
@@ -152,7 +151,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>claim</td> 
    <td>ProcessManagementTaskService</td> 
-   <td>claim</td> 
+   <td>請求</td> 
    <td>共有キューで使用可能なタスクを要求します。</td> 
   </tr>
   <tr>
@@ -176,7 +175,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>abandon</td> 
    <td>ProcessManagementTaskService</td> 
-   <td>abondan</td> 
+   <td>aband</td> 
    <td>タスクを削除します。</td> 
   </tr>
   <tr>
@@ -260,7 +259,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>getParticipatedProcesses</td> 
    <td>ProcessManagementProcessService</td> 
-   <td>getRendedProcesses</td> 
+   <td>getRentifedProcesses</td> 
    <td>ログインユーザーが参加したすべてのプロセス名のリストを返します。</td> 
   </tr>
   <tr>
@@ -403,6 +402,3 @@ AEM Forms ワークスペースでは次の API が使用されています。
   </tr>
  </tbody>
 </table>
-
-
-
