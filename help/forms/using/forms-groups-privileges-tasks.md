@@ -10,16 +10,15 @@ content-type: reference
 topic-tags: Configuration
 discoiquuid: 71412f5d-ff34-415f-baf8-d300756b93a9
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: a79e863e-c316-422e-a565-b0ffdeffcc00
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 98%
+source-wordcount: '272'
+ht-degree: 99%
 
 ---
 
-
-# OSGi 上の AEM Forms のグループと権限 {#aem-forms-on-osgi-groups-and-privileges}
+# OSGi 上の AEM Forms のグループと権限  {#aem-forms-on-osgi-groups-and-privileges}
 
 ユーザーをグループに割り当てることによる OSGi 上の AEM Forms の管理
 
@@ -44,7 +43,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td>フォームパワーユーザー</td> 
+   <td>forms-power-users</td> 
    <td>
     <ul> 
      <li>アダプティブフォームを作成、プレビュー、パブリッシュ、送信する</li> 
@@ -64,14 +63,14 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td>template-authors <sup>[2]</sup></td> 
+   <td>template-authors <sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>アダプティブフォームやインタラクティブ通信テンプレートを作成およびプレビューする</li> 
     </ul> </td> 
   </tr>
   <tr>
-   <td><p>fdm-authors</p> </td> 
+   <td><p>FDM 作成者</p> </td> 
    <td>
     <ul> 
      <li>フォームデータモデルを作成および変更する</li> 
@@ -85,7 +84,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td><p>workflow-editors</p> </td> 
+   <td><p>ワークフロー編集者</p> </td> 
    <td>
     <ul> 
      <li>インボックスアプリケーションを作成する</li> 
@@ -101,7 +100,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td>fd-administrators</td> 
+   <td>FD 管理者</td> 
    <td>
     <ul> 
      <li>PDF Generator を設定する</li> 
@@ -114,4 +113,3 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
 
 1. forms-user グループ権限を持つユーザーは、アダプティブフォームのスクリプトを書くことができません。
 1. template-authors グループ権限を持つユーザーは、テンプレートのスクリプトを書くことができません。
-
