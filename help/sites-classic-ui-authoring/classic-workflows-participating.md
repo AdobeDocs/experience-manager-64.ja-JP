@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 1d7a4889-82c5-4096-8567-8f66215a8458
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: a4f0f0c4-3050-4348-8d51-2ca91839208c
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '584'
 ht-degree: 98%
 
 ---
-
 
 # ワークフローへの参加{#participating-in-workflows}
 
@@ -92,4 +91,3 @@ ht-degree: 98%
    ![screen_shot_2018-08-10at155325](assets/screen_shot_2018-08-10at155325.jpg)
 
 1. 「OK」をクリックして、アクションを確定します。
-
