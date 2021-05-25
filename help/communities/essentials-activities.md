@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 8cc04993-4021-4cb7-b973-5afc4da1ed11
-translation-type: tm+mt
-source-git-commit: 4d64494dff34108d32e060a96209df697b2ce11f
+exl-id: 74dcbefa-e670-419b-af9b-b3d3c593ebaa
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 74%
 
 ---
-
 
 # アクティビティストリームの基本事項 {#activity-stream-essentials}
 
@@ -26,7 +25,7 @@ ht-degree: 74%
 
 どの[コミュニティサイト](overview.md#communitiessites)にも、サインインしているメンバーのユーザープロファイルページが用意されており、メンバーのアクティビティが同じ形式で表示されます。
 
-## 概念 {#concepts}
+## 概念  {#concepts}
 
 アクティビティストリーム&#x200B;**&#x200B;とは、メンバーが行った最新のアクティビティ、またはフォーラムトピックやブログなどの単一のコンテンツスレッドで発生した最新のアクティビティをリストにしたものです。
 
@@ -69,7 +68,7 @@ ht-degree: 74%
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [アクティビティストリーム API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
 
@@ -77,6 +76,6 @@ ht-degree: 74%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### アクティビティストリーム機能  {#activity-stream-function}
+### アクティビティストリーム機能 {#activity-stream-function}
 
-[アクティビティストリーム関数](functions.md#activity-stream-function)を含むコミュニティサイト構造は、構成された`activity streams`コンポーネントを含みます。
+[アクティビティストリーム機能](functions.md#activity-stream-function)を含むコミュニティサイト構造には、設定済みの`activity streams`コンポーネントが含まれます。
