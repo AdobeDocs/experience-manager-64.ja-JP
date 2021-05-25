@@ -9,43 +9,42 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: cdcae09f-c3cb-471e-863f-b33130e9df0f
-translation-type: tm+mt
-source-git-commit: 3d2b91565e14e85e9e701663c8d0ded03e5b430c
+exl-id: c72b246d-442e-4841-810d-1045e83f60f9
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 82%
 
 ---
 
-
 # ファイルライブラリ機能 {#file-library-feature}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 ファイルライブラリ機能は、サインインしているサイト訪問者（コミュニティメンバー）がコミュニティサイト内でファイルをアップロード、管理およびダウンロードする場所を提供します。
 
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
-* AEMサイトへのファイルライブラリ機能の追加
-* `File Library`コンポーネントの構成設定
+* ファイルライブラリ機能をAEMサイトに追加する
+* `File Library`コンポーネントの設定
 
 ## ファイルライブラリをページに追加 {#adding-a-file-library-to-a-page}
 
-作成者モードで`File Library`コンポーネントをページに追加するには、コンポーネントを見つけます
+`File Library`コンポーネントをオーサリングモードでページに追加するには、
 
 * `Communities / File Library`
 
 コンポーネントを探し、ページ上の位置にドラッグします。
 
-必要な情報については、[Communities Components Basics](basics.md)を参照してください。
+必要な情報については、[コミュニティコンポーネントの基本](basics.md)を参照してください。
 
-[必要なクライアント側ライブラリ](essentials-file-library.md#essentials-for-client-side)が含まれる場合、`File Library`コンポーネントは次のように表示されます。
+[必須のクライアント側ライブラリ](essentials-file-library.md#essentials-for-client-side)を含めると、`File Library`コンポーネントは次のように表示されます。
 
 ![chlimage_1-430](assets/chlimage_1-430.png)
 
 ## ファイルライブラリの設定 {#configuring-file-library}
 
-アクセスする配置済みの`File Library`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
+配置済みの`File Library`コンポーネントを選択し、`Configure`アイコンを選択すると、編集ダイアログが開きます。
 
 ![chlimage_1-431](assets/chlimage_1-431.png) ![chlimage_1-432](assets/chlimage_1-432.png)
 
@@ -62,7 +61,7 @@ ht-degree: 82%
 
 * **[!UICONTROL メッセージの最大長]**&#x200B;テキストボックスに入力できる最大文字数です。初期設定は 4096 文字です。
 
-* **[!UICONTROL 許可されるファイルタイプ]**&#x200B;ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルの種類を指定すると、指定されていないファイルは許可されません。 初期設定は、すべてのファイルタイプを許可するように指定されません。
+* **[!UICONTROL 許可されるファイルタイプ]**&#x200B;ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルタイプを指定した場合、指定しなかったファイルは許可されません。 デフォルトでは、すべてのファイルタイプが許可されるように指定されていません。
 
 * **[!UICONTROL リッチテキストエディター]**&#x200B;オンにすると、マークアップを使用してコメントを入力できます。初期設定はオフです。
 
@@ -101,12 +100,12 @@ ht-degree: 82%
 * **[!UICONTROL モデレートのしきい値]**&#x200B;訪問者がコメントに何回フラグを設定したらモデレーターに通知するかを指定します。初期設定は1回(
 **1**).
 
-* **[!UICONTROL フラグ付けの制限]**&#x200B;コメントに何回フラグが設定されたら、公開表示から非公開にするかを指定します。この数値は、 
+* **[!UICONTROL フラグ付けの制限]**&#x200B;コメントに何回フラグが設定されたら、公開表示から非公開にするかを指定します。この数は 
 **モデレートのしきい値**. 初期設定は 5 です。
 
 ## 追加情報 {#additional-information}
 
-詳しくは、[File Library Essentials](essentials-file-library.md)ページを参照してください。
+詳しくは、開発者向けの[ファイルライブラリの基本事項](essentials-file-library.md)ページを参照してください。
 
 投稿されたトピックとコメントのモデレートについては、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
