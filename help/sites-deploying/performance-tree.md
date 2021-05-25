@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
-translation-type: tm+mt
-source-git-commit: cdec5b3c57ce1c80c0ed6b5cb7650b52cf9bc340
+exl-id: dfc6a660-e6b3-4395-a555-f4cf8f3fed91
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 92%
 
 ---
-
 
 # パフォーマンスツリー{#performance-tree}
 
@@ -199,7 +198,7 @@ ht-degree: 92%
      <li><a href="/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing">ワークフローの同時処理</a></li> 
      <li><a href="/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow">特定のワークフロー用のキューの設定</a></li> 
      <li><a href="/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances">ワークフローインスタンスの定期的なパージ</a></li> 
-     <li><a href="/help/sites-developing/workflows.md#transient-workflows">一時的なワークフロー</a><br /> </li> 
+     <li><a href="/help/sites-developing/workflows.md#transient-workflows">一時的ワークフロー</a><br /> </li> 
     </ul> <p> </p> </td> 
   </tr> 
   <tr> 
@@ -289,7 +288,7 @@ ht-degree: 92%
   <tr> 
    <td><strong>手順 45<br /> および 47</strong><br /> </td> 
    <td>HTTP/2 の使用</td> 
-   <td>手順 37、38 および 39 の Gem セッションを参照してください。また、HTTP/2のサポートに関する<a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">この</a>フォーラムの投稿を見てください。<br /> </td> 
+   <td>手順 37、38 および 39 の Gem セッションを参照してください。また、HTTP/2サポートの<a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">この</a>フォーラム投稿もご覧ください。<br /> </td> 
   </tr> 
   <tr> 
    <td><strong>手順 49</strong></td> 
@@ -314,7 +313,7 @@ ht-degree: 92%
      <li>リソースの連結（画像、CSS スプライト、JSON など）<br /> </li> 
      <li>clientlibs の埋め込み 
       <ol> 
-       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">クライアントライブラリフォルダーの作成</a>  — リクエストを最小限に抑えるための埋め込みの使用を参照してください。</li> 
+       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">クライアントライブラリフォルダーの作成</a> - 「埋め込みを使用したリクエストの最小化」の見出しを参照してください。</li> 
       </ol> </li> 
     </ol> </td> 
   </tr> 
@@ -330,4 +329,3 @@ ht-degree: 92%
   </tr> 
  </tbody> 
 </table>
-
