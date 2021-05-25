@@ -1,14 +1,13 @@
 ---
 title: Dynamic Media - Scene7 モードのトラブルシューティング
-description: Dynamic Mediaのトラブルシューティング —Scene7実行モード
+description: Dynamic Media - Scene7実行モードのトラブルシューティング。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 exl-id: d8cc94b0-eacf-4e76-bd50-7934bbc28c92
-feature: Troubleshooting
+feature: トラブルシューティング
 role: Administrator,Business Practitioner
-translation-type: tm+mt
 source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
 workflow-type: tm+mt
 source-wordcount: '1296'
@@ -24,16 +23,16 @@ ht-degree: 86%
 
 以下の手順で、Dynamic Media が適切に設定されていることを確認します。
 
-* 開始アップコマンドには`-r dynamicmedia_scene7` runmode引数が含まれます。
+* 起動コマンドには、`-r dynamicmedia_scene7`実行モード引数が含まれます。
 * 使用可能な Dynamic Media 機能パックよりも先に、AEM 6.4 累積修正パック（CFP）がインストールされていることを確認します。**
 * オプションの機能パック 18912 がインストールされていることを確認します。
 
-   このオプションの機能パックは、FTPサポート用、またはDynamic MediaクラシックからDynamic Mediaにアセットを移行する場合に使用します。
+   このオプションの機能パックは、FTPサポート用、またはDynamic Media ClassicからDynamic Mediaにアセットを移行する場合に使用します。
 
 * クラウドサービスのユーザーインターフェイスに移動して、「**[!UICONTROL 利用可能な設定]**」の下に割り当てられたアカウントが表示されることを確認します。
-* **[!UICONTROL Dynamic Mediaアセットアクティベーション(scene7)]**&#x200B;レプリケーションエージェントが有効になっていることを確認します。
+* **[!UICONTROL Dynamic Media Asset Activation(scene7)]**&#x200B;レプリケーションエージェントが有効になっていることを確認します。
 
-   この複製エージェントは、作成者の&#x200B;**[!UICONTROL エージェント]**&#x200B;にあります。
+   このレプリケーションエージェントは、オーサーの&#x200B;**[!UICONTROL エージェント]**&#x200B;の下にあります。
 
 ## 一般（すべてのアセット） {#general-all-assets}
 
@@ -50,9 +49,9 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
 | `<object_node>/jcr:content/metadata/dam:scene7File` | `myCompany/myAssetID` | Dynamic Media のリモートアセットへの URL を生成するには、これを入力する必要があります。 |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | `success` か `failed:<error text>` のどちらかにする必要があります。 | セット（スピンセット、画像セットなど）、画像プリセット、ビューアプリセット、アセットの画像マップの更新、編集された画像などの同期ステータス。 |
 
-### 同期のログ  {#synchronization-logging}
+### 同期のログ {#synchronization-logging}
 
-同期のエラーと問題は `error.log`（AEM サーバーディレクトリの `/crx-quickstart/logs/`）に記録されます。ほとんどの問題の根本原因を特定するのに十分なログを記録できますが、詳細を収集するには、Slingコンソール([http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog))を使用して`com.adobe.cq.dam.ips`パッケージのDEBUGにログを増やします。
+同期のエラーと問題は `error.log`（AEM サーバーディレクトリの `/crx-quickstart/logs/`）に記録されます。ログにはほとんどの問題の根本原因を突き止めるのに十分な情報が記録されますが、Slingコンソール([http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog))を通じて`com.adobe.cq.dam.ips`パッケージのログをデバッグに増やして、詳細を収集できます。
 
 ### {#move-copy-delete}の移動、コピー、削除
 
@@ -62,13 +61,13 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
 * 画像やビューアプリセットの移動、コピーまたは削除操作の前に `https://<server>/crx/de/index.jsp#/etc/dam/presets/viewer/testpreset/jcr%3Acontent/metadata` の値が存在することを確認します。
 * 上記のメタデータ値がない場合、移動、コピーまたは削除処理の前にアセットを再度アップロードする必要があります。
 
-### バージョン管理{#version-control}
+### バージョン管理 {#version-control}
 
 既存のDynamic Mediaアセット（同じ名前と場所）を置き換える場合、両方のアセットを保持するか、バージョンを置き換えるか、作成するかを選択できます。
 
-* 両方を維持すると、公開済みアセットURLの一意の名前を持つ新しいアセットが作成されます。例えば、**[!UICONTROL image.jpg]**&#x200B;は元のアセット、**[!UICONTROL image1.jpg]**&#x200B;は新しくアップロードされたアセットです。
+* 両方を保持すると、公開済みアセットURLの一意の名前を持つ新しいアセットが作成されます。例えば、 **[!UICONTROL image.jpg]**&#x200B;は元のアセット、 **[!UICONTROL image1.jpg]**&#x200B;は新しくアップロードされたアセットです。
 
-* Dynamic Media - Scene7 モードの配信ではバージョン作成はサポートされていません。配信内の既存のアセットが、新しいバージョンに置き換えられます。
+* Dynamic Media - Scene7 モードの配信ではバージョン作成はサポートされていません。新しいバージョンは、配信中の既存のアセットを置き換えます。
 
 ## 画像とセット {#images-and-sets}
 
