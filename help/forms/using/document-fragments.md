@@ -2,20 +2,19 @@
 title: ドキュメントフラグメント
 seo-title: ドキュメントフラグメント
 description: Correspondence Management でドキュメントフラグメント（テキスト、リスト、条件、レイアウトフラグメントなど）を使用すると、顧客対応向けに静的コンポーネント、動的コンポーネント、および繰り返し可能なコンポーネントを生成できます。
-seo-description: ドキュメントフラグメント例えば、Correspondence Managementでは、テキスト、リスト、条件、レイアウトフラグメントなど、顧客対応の静的、動的、繰り返し可能なコンポーネントを作成できます。
+seo-description: ドキュメントフラグメントCorrespondence Managementでは、テキスト、リスト、条件、レイアウトフラグメントなど、顧客とのやり取りの静的、動的、繰り返し可能なコンポーネントを作成できます。
 uuid: 053a17e5-69a5-463d-af4f-46a86534158f
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 1f48548c-4222-454d-ad16-53da37170de2
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 54159851-bae1-4efd-8c8f-3a855776ecc4
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 91%
 
 ---
-
 
 # ドキュメントフラグメント {#document-fragments}
 
@@ -31,4 +30,3 @@ ht-degree: 91%
 
 * **リスト**：リストは、テキスト、リスト、条件、画像を含む、一連のドキュメントフラグメントです。リスト要素の順番は固定または編集可能にできます。レターを作成する際は、リスト要素の一部またはすべてを使用して、再利用可能な要素のパターンを複製することができます。
 * **レイアウトフラグメント**：レイアウトフラグメントは、1 つ以上のレター内で使用できるレイアウトです。繰り返し可能なパターン（特に動的テーブル）を作成するには、レイアウトフラグメントを使用します。レイアウトには、「アドレス」や「参照番号」などの一般的なフォームフィールドを含めることができます。また、ターゲット領域を示す空のサブフォームを含めることもできます。レイアウト（XDP）は Designer で作成され、その後 AEM Forms にアップロードされます。
-
