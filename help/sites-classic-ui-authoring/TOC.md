@@ -3,12 +3,11 @@ cloud: Experience Cloud
 product: adobe experience manager
 solution: Experience Manager, Experience Manager Sites
 audience: end-user
-user-guide-title: AEM 6.4 Classic UIオーサリングユーザーガイド
+user-guide-title: AEM 6.4クラシックUIオーサリングユーザーガイド
 breadcrumb-title: クラシックUIオーサリングガイド
-user-guide-description: このガイドでは、従来のユーザーインターフェイスでAEMでのオーサリングの概念について説明します。
+user-guide-description: このガイドでは、クラシックUIでのAEMでのオーサリングの概念について説明します。
 feature: オーサリング
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: 55e904cb24bac68c0b1bbea59786cb4c0c711d61
 workflow-type: tm+mt
 source-wordcount: '273'
@@ -17,11 +16,11 @@ ht-degree: 80%
 ---
 
 
-# AEM 6.4 Classic UIオーサリングユーザーガイド{#classic-ui}
+# AEM 6.4クラシックUIオーサリングユーザーガイド{#classic-ui}
 
 + [クラシックUIオーサリングガイドの概要](home.md)
 + クラシックUIオーサリングの概要{#introduction}
-   + [作成者が行う最初の手順](classic-page-author-first-steps.md)
+   + [作成者がおこなう最初の手順](classic-page-author-first-steps.md)
    + [クラシック UI でのオーサリング](classicui.md)
    + [オーサー環境の操作](author-env.md)
    + [基本操作](author-env-basic-handling.md)
@@ -40,7 +39,7 @@ ht-degree: 80%
    + [ページプロパティの編集](classic-page-author-edit-page-properties.md)
    + [ページ編集時の注釈](classic-page-author-annotations.md)
    + [オーサリング時の AEM のトラブルシューティング](classic-page-author-troubleshooting.md)
-   + [アクセシブルなコンテンツ（WCAG 2.0 適合）の作成 ](classic-page-author-accessible-content.md)
+   + [アクセス可能なコンテンツ（WCAG 2.0 適合）の作成 ](classic-page-author-accessible-content.md)
    + [モバイルデバイス用のページのオーサリング](classic-feature-mobile.md)
    + [ページオーサリング用コンポーネント](classic-page-author-edit-mode.md)
    + [ページ編集時のキーボードショートカット](classic-page-author-keyboard-shortcuts.md)
@@ -62,7 +61,7 @@ ht-degree: 80%
    + [ローンチの作成](classic-launches-creating.md)
    + [ローンチの編集](classic-launches-editing.md)
    + [ローンチの昇格](classic-launches-promoting.md)
-+ パーソナライゼーション {#personalization}
++ パーソナライズ機能 {#personalization}
    + [セグメント化について](classic-personalization-campaigns-segmentation.md)
    + [キャンペーンの管理](classic-personalization-campaigns.md)
    + [ティーザーと戦略](classic-personalization-campaigns-teasers-strategy.md)
@@ -82,9 +81,9 @@ ht-degree: 80%
    + [Adobe Campaign のターゲット設定](classic-personalization-ac-target.md)
 + クラシックUIでのアセットのオーサリング{#assets}
    + [アセットの操作](classicui-assets.md)
-   + [Dynamic Media アセットの配信 ](dynamic-media-assets-delivering.md)
+   + [Dynamic Media アセットの配信](dynamic-media-assets-delivering.md)
    + [ページへの Dynamic Media アセットの追加](dynamic-media-assets-adding-to-page.md)
-   + [ページへのDynamic Mediaクラシック(Scene7)機能の追加](manage-assets-classic-s7.md)
+   + [Dynamic Media Classic(Scene7)機能のページへの追加](manage-assets-classic-s7.md)
    + [Dynamic Media の操作](dynamic-media-assets.md)
    + [ビデオ](manage-assets-classic-s7-video.md)
    + [アセットの命名規則のテスト](asset-naming-conventions.md)
