@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: b35ea921-182f-4371-90f6-482d22694b42
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 00b3efc5-ef1c-4b9d-957d-2eda01c0b985
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1383'
 ht-degree: 57%
 
 ---
-
 
 # アセット一覧表示画面へのカスタムアクションの追加 {#add-custom-action-to-the-asset-listing-view}
 
@@ -29,7 +28,7 @@ Correspondence Management ソリューションでは、「アセットを管理
 * 1 つ以上のアセットタイプまたはレター。
 * 1 つまたは複数のアセット／レター選択時の実行アクション（アクション／コマンドをアクティブにする）、または非選択時の実行アクション。
 
-このカスタマイズの使用事例として、レターのアセット一覧表示画面に「Download Flat PDF」コマンドを追加するシナリオが示されます。このカスタマイズのシナリオでは、選択された1つのレターのフラットなPDFをユーザーがダウンロードできます。
+このカスタマイズの使用事例として、レターのアセット一覧表示画面に「Download Flat PDF」コマンドを追加するシナリオが示されます。このカスタマイズシナリオでは、選択した1つのレターのフラットなPDFをダウンロードできます。
 
 ### 前提条件 {#prerequisites}
 
@@ -39,7 +38,7 @@ Correspondence Management ソリューションでは、「アセットを管理
 * JavaScript
 * Java
 
-## シナリオ：レターリストの UI にコマンドを追加してレターのフラットな PDF 版をダウンロードする  {#addcommandtoletters}
+## シナリオ：レターリストの UI にコマンドを追加してレターのフラットな PDF 版をダウンロードする {#addcommandtoletters}
 
 次の手順でレターのアセット一覧画面に「Download Flat PDF」コマンドを追加し、選択されたレターのフラットな PDF のダウンロードをユーザに許可することができます。これらの手順で適切なコードとパラメーターを使用することで、データディクショナリやテキストなどこれ以外のアセットにその他の機能を追加することもできます。
 
@@ -47,7 +46,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
 1. `https://[server]:[port]/[ContextPath]/crx/de`に移動し、管理者としてログインします。
 
-1. 次の手順で、appsフォルダーに、selectionフォルダー内のitemsフォルダーに類似したパス/構造でitemsという名前のフォルダーを作成します。
+1. 次の手順を使用して、appsフォルダーに、 selectionフォルダー内のitemsフォルダーと同じパス/構造でitemsという名前のフォルダーを作成します。
 
    1. 次のパスにある&#x200B;**[!UICONTROL items]**&#x200B;フォルダーを右クリックし、「**[!UICONTROL ノードをオーバーレイ]**」を選択します。
 
@@ -64,11 +63,11 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **[!UICONTROL パス：]** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items
+      **[!UICONTROL パス：]**  /libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items
 
       **[!UICONTROL 場所：]** /apps/
 
-      **[!UICONTROL ノードタイプを一致：]** 選択
+      **[!UICONTROL ノードタイプを一致させる：]** 選択
 
       ![ノードをオーバーレイ](assets/2_createnodedownloadflatpdf.png)
 
@@ -76,15 +75,15 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
       「**[!UICONTROL すべて保存]**」をクリックします。
 
-1. 新しく作成したitemsフォルダーに、特定のアセットのカスタムのボタン/アクションのノードを追加します(例：downloadFlatPDF)を使用します。
+1. 新しく作成されたitemsフォルダーに、特定のアセットのカスタムボタン/アクションのノードを追加します(例：downloadFlatPDF)を次の手順で使用します。
 
    1. **[!UICONTROL items]**&#x200B;フォルダーを右クリックし、**[!UICONTROL 作成]**/**[!UICONTROL ノードを作成]**&#x200B;を選択します。
 
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**[!UICONTROL OK]**」をクリックします。
 
-      **[!UICONTROL 名前：]** downloadFlatPDF（またはこのプロパティに与える名前）
+      **[!UICONTROL 名前：]** downloadFlatPDF（または、このプロパティに与える任意の名前）
 
-      **[!UICONTROL Type:]** nt:unstructured
+      **[!UICONTROL タイプ：]** nt:unstructured
 
    1. 新しく作成したノードをクリックします（ここでは downloadFlatPDF）。CRX にノードのプロパティが表示されます。
    1. 次のプロパティをノード（ここでは downloadFlatPDF）に追加し、「**[!UICONTROL すべて保存]**」をクリックします。
@@ -98,18 +97,18 @@ Correspondence Management をカスタマイズしてレターのフラットな
     </tr> 
     <tr> 
     <td>class</td> 
-    <td>String</td> 
+    <td>文字列</td> 
     <td>foundation-collection-action</td> 
     </tr> 
     <tr> 
     <td>foundation-collection-action</td> 
     <td>文字列</td> 
-    <td><p>{"ターゲット":".cq-manageasset-admin-childpages", "activeSelectionCount":"single","type":"LETTER"}<br /> <br /> <br /> <strong>activeSelectionCount</strong>は、1つまたは複数に指定でき、カスタムアクションが実行される1つまたは複数のアセットを選択できます。</p> <p><strong></strong> typeは、次のうち1つ以上（カンマ区切りの複数エントリ）にすることができます。LETTER,TEXT,リスト，条件，DATADICTIONARY</p> </td> 
+    <td><p>{"target":".cq-manageasset-admin-childpages", "activeSelectionCount":"single","type":"LETTER"}<br /> <br /> <br /> <strong>activeSelectionCount</strong>は、1つまたは複数に設定して、カスタムアクションが実行される1つまたは複数のアセットを選択できます。</p> <p><strong></strong> typeは、次のうち1つ以上（コンマ区切りの複数のエントリ）にすることができます。LETTER,TEXT,LIST,CONDITION,DATADICTIONARY</p> </td> 
     </tr> 
     <tr> 
     <td>icon</td> 
     <td>文字列</td> 
-    <td>icon-download<br /><br />Correspondence Management のコマンド／メニューの左側に表示されるアイコンです。使用できる様々なアイコンと設定については、<a href="https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html" target="_blank">CoralUI Iconsドキュメント</a>を参照してください。<br /> </td> 
+    <td>icon-download<br /><br />Correspondence Management のコマンド／メニューの左側に表示されるアイコンです。使用可能な様々なアイコンと設定については、<a href="https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html" target="_blank">CoralUI Iconsのドキュメント</a>を参照してください。<br /> </td> 
     </tr> 
     <tr> 
     <td>jcr:primaryType</td> 
@@ -139,7 +138,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
     </tbody> 
     </table>
 
-1. 次の手順で、appsフォルダーに、adminフォルダー内のitemsフォルダーに類似したパス/構造でjsという名前のフォルダーを作成します。
+1. 次の手順を使用して、appsフォルダーに、 adminフォルダー内のitemsフォルダーに類似したパス/構造でjsという名前のフォルダーを作成します。
 
    1. 次のパスにある&#x200B;**[!UICONTROL js]**&#x200B;フォルダーを右クリックし、「**[!UICONTROL ノードをオーバーレイ]**」を選択します。&quot;
 
@@ -147,11 +146,11 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **[!UICONTROL パス：]** /libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js
+      **[!UICONTROL パス：]**  /libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js
 
       **[!UICONTROL 場所：]** /apps/
 
-      **[!UICONTROL ノードタイプを一致：]** 選択
+      **[!UICONTROL ノードタイプを一致させる：]** 選択
 
    1. 「**[!UICONTROL OK]**」をクリックします。apps フォルダーにフォルダー構造が作成されます。「**[!UICONTROL すべて保存]**」をクリックします。
 
@@ -161,14 +160,14 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
       `/apps/fd/cm/ma/gui/components/admin/clientlibs/admin/js`
 
-      ファイルにformaction.jsという名前を付けます。
+      ファイルにformaction.jsと名前を付けます。
 
    1. ファイルをダブルクリックして、CRX で開きます。
    1. formaction.js ファイル（/apps 階層の下）で、formaction.js ファイルのコードを次の場所にコピーします。
 
       `/libs/fd/cm/ma/gui/components/admin/clientlibs/admin/js/formaction.js`
 
-      次に、formaction.jsファイル（/apps階層の下）の末尾に次のコードを追加し、「**[!UICONTROL すべて保存]**」をクリックします。
+      次に、formaction.jsファイル（/appsブランチの下）の最後に次のコードを追加し、「**[!UICONTROL すべて保存]**」をクリックします。
 
       ```
       /* Action url for xml file to be added.*/
@@ -229,7 +228,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
       上記のコードは、この手順で作成されたレターごとのコマンド処理のアクションに使用されます。その他のアセットの処理を行うアクションについては、JavaScript コードを変更してください。
 
-1. 次の手順を使用して、appsフォルダーに、actionhandlersフォルダー内のitemsフォルダーに類似したパス/構造でitemsという名前のフォルダーを作成します。
+1. 次の手順を使用して、appsフォルダーに、 actionhandlersフォルダー内のitemsフォルダーに類似したパス/構造を持つitemsという名前のフォルダーを作成します。
 
    1. 次のパスにある&#x200B;**[!UICONTROL items]**&#x200B;フォルダーを右クリックし、「**[!UICONTROL ノードをオーバーレイ]**」を選択します。
 
@@ -237,25 +236,25 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **[!UICONTROL パス：]** /libs/fd/cm/ma/gui/content/commons/actionhandlers/items/
+      **[!UICONTROL パス：]**  /libs/fd/cm/ma/gui/content/commons/actionhandlers/items/
 
       **[!UICONTROL 場所：]** /apps/
 
-      **[!UICONTROL ノードタイプを一致：]** 選択
+      **[!UICONTROL ノードタイプを一致させる：]** 選択
 
    1. 「**[!UICONTROL OK]**」をクリックします。apps フォルダーにフォルダー構造が作成されます。
 
    1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
-1. 新しく作成されたitemsノードの下で、特定のアセットのカスタムのボタン/アクションのノードを追加します(例：letterpdfdownloaderを参照)を次の手順で使用します。
+1. 新しく作成されたitemsノードの下に、特定のアセットのカスタムボタン/アクションのノードを追加します(例：letterpdfdownloader)を次の手順で使用します。
 
    1. items フォルダーを右クリックして、「**[!UICONTROL 作成／ノードを作成]**」を選択します。
 
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**[!UICONTROL OK]**」をクリックします。
 
-      **[!UICONTROL Name:letterpdfdownloader(または、このプロパティに与える]** 名前。一意の名前を付ける必要があります。ここで別の名前を使用する場合は、formaction.jsファイルのACTION_URL変数でも同じ名前を指定します)。
+      **[!UICONTROL 名前：]** letterpdfdownloader(または、このプロパティに与える任意の名前。一意である必要があります。ここで別の名前を使用する場合は、formaction.jsファイルのACTION_URL変数にも同じ名前を指定します)。
 
-      **[!UICONTROL Type:]** nt:unstructured
+      **[!UICONTROL タイプ：]** nt:unstructured
 
    1. 新しく作成したノードをクリックします（ここでは downloadFlatPDF）。CRX にノードのプロパティが表示されます。
 
@@ -265,7 +264,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
       |---|---|---|
       | sling:resourceType | 文字列 | fd/cm/ma/gui/components/admin/clientlibs/admin |
 
-1. 次の場所に、コマンドのPOST処理用のコードを使用して、アクション.jspという名前のファイルを作成します。
+1. 次の場所に、コマンドのアクション処理のコードを含むPOST.jspという名前のファイルを作成します。
 
    /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
@@ -273,14 +272,14 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
       /apps/fd/cm/ma/gui/components/admin/clientlibs/admin
 
-      ファイルに POST.jsp という名前を付けます。(ファイル名は、POST.jspのみである必要があります)。
+      ファイルに POST.jsp という名前を付けます。(ファイル名は、POST.jspのみにする必要があります)。
 
-   1. **[!UICONTROL POST.jsp]**&#x200B;ファイルを重複クリックして、CRXで開きます。
+   1. **[!UICONTROL POST.jsp]**&#x200B;ファイルをダブルクリックして、CRXで開きます。
    1. POST.jsp ファイルに次のコードを追加して、「**[!UICONTROL すべて保存]**」をクリックします。
 
       このコードはレターのレンダリングサービスに固有のコードです。その他のアセットに関しては、このコードにアセットの Java ライブラリを追加してください。AEM Forms API について詳しくは、「[AEM Forms API](https://adobe.com/go/learn_aemforms_javadocs_63_en)」を参照してください。
 
-      AEMライブラリについて詳しくは、AEM [コンポーネント](/help/sites-developing/components.md)を参照してください。
+      AEMライブラリについて詳しくは、 AEM [コンポーネント](/help/sites-developing/components.md)を参照してください。
 
       ```xml
       /*Import libraries. Here we are downloading letter flat pdf with input xml data so we require letterRender Api. For any other Module functionality we need to first import that library. */            
@@ -349,19 +348,19 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
 ## カスタム機能によるレターのフラットな PDF のダウンロード {#download-flat-pdf-of-a-letter-using-the-custom-functionality}
 
-レターのフラットなPDFのダウンロード用にカスタム機能を追加した後、次の手順を使用して、選択したレターのフラットなPDFバージョンをダウンロードできます。
+レターのフラットなPDFをダウンロードするためのカスタム機能を追加した後、次の手順を使用して、選択したレターのフラットなPDFバージョンをダウンロードできます。
 
 1. `https://[server]:[port]/[ContextPath]/projects.html`に移動し、ログインします。
 
 1. 「**[!UICONTROL フォーム／レター]**」を選択します。Correspondence Management によってシステムで使用可能なレターが一覧表示されます。
 1. 「**[!UICONTROL 選択]**」をクリックし、レターをクリックして選択します。
-1. **[!UICONTROL 詳細]**/&lt;Download Flat PDF>（この記事の説明に従って作成されたカスタム機能）を選択します。 PDF でレターをダウンロードするダイアログが表示されます。
+1. **[!UICONTROL More]**/&lt;Download Flat PDF>（この記事の説明に従って作成されたカスタム機能）を選択します。 PDF でレターをダウンロードするダイアログが表示されます。
 
-   メニュー項目の名前、機能、代替テキストは、[シナリオで作成したカスタマイズに従います。レター追加のフラットなPDF版をダウンロードするためのレターリストユーザーインターフェイスへのコマンド。](#addcommandtoletters)
+   メニュー項目の名前、機能、代替テキストは、[シナリオで作成したカスタマイズに従います。レターのフラットなPDFバージョンをダウンロードするコマンドをレターリストのユーザーインターフェイスに追加します。](#addcommandtoletters)
 
    ![カスタム機能：フラットな PDF のダウンロード](assets/5_downloadflatpdf.png)
 
-1. PDFとしてレターをダウンロードダイアログで、PDFに入力するデータに関連するXMLを選択します。
+1. レターをPDFとしてダウンロードダイアログで、PDFにデータを入力するXMLを選択します。
 
    >[!NOTE]
    >
@@ -370,4 +369,3 @@ Correspondence Management をカスタマイズしてレターのフラットな
    ![PDF でレターをダウンロード](assets/6_downloadflatpdf.png)
 
    フラットな PDF としてレターがコンピューターにダウンロードされます。
-
