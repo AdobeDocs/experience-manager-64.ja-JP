@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: ddfacc63-1840-407e-8802-3730009c84f0
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: 設定
+exl-id: 81dddbab-1a9e-49ee-b2a5-a8e4de3630d1
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 62%
 
 ---
-
 
 # リソースマッピング{#resource-mapping}
 
@@ -25,7 +24,7 @@ ht-degree: 62%
 
 例えば、これらのマッピングを使用すると次のことが可能です。
 
-* 内部構造がWebサイトの訪問者ーに表示されないように、すべてのリクエストの先頭に`/content`を付けます。
+* すべてのリクエストに`/content`というプレフィックスを付けて、Webサイトの訪問者に対して内部構造が非表示になるようにします。
 * Webサイトの`/content/en/gateway`ページへのすべてのリクエストが`https://gbiv.com/`にリダイレクトされるように、リダイレクトを定義します。
 
 HTTP マッピングの一例として、[localhost:4503 に対するすべての要求に /content](#configuring-an-internal-redirect-to-content) というプレフィックスを指定します。このようなマッピングを使用すると、Web サイトの訪問者に対して内部構造を非表示にすることができます。例えば、次のページにアクセスできます。
@@ -36,7 +35,7 @@ HTTP マッピングの一例として、[localhost:4503 に対するすべて�
 
 `localhost:4503/geometrixx/en/products.html`
 
-を使用すると、マッピングは自動的にプレフィックス`/content`を`/geometrixx/en/products.html`に追加します。
+というマッピングは、`/content`というプレフィックスを`/geometrixx/en/products.html`に自動的に追加します。
 
 >[!CAUTION]
 >
@@ -50,11 +49,11 @@ HTTP マッピングの一例として、[localhost:4503 に対するすべて�
 
 マッピングでは 2 つのリストが作成されます。JCR Resource Resolver は、これらのリストを（トップダウン）評価して一致項目を探します。
 
-これらのリストは、Felixコンソールの&#x200B;**JCR ResourceResolver**&#x200B;オプションの下で（設定情報と共に）表示できます。例：`https://<host>:<port>/system/console/jcrresolver`:
+これらのリストは、Felixコンソールの&#x200B;**JCR ResourceResolver**&#x200B;オプションで（設定情報と共に）表示できます。例： `https://<host>:<port>/system/console/jcrresolver`:
 
 * 設定
 
-   現在の設定を示します（[Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md)の定義に従います）。
+   （[Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md)に対して定義された）現在の設定を表示します。
 
 * 設定テスト
 
@@ -91,7 +90,7 @@ URL をリソースにマップするために ResourceResolver.resolve メソ�
 
 >[!NOTE]
 >
->正規式の定義方法を説明するリソースが多数あります。例：[https://www.regular-expressions.info/](https://www.regular-expressions.info/)
+>正規表現の定義方法を説明するリソースが多数あります。例： [https://www.regular-expressions.info/](https://www.regular-expressions.info/)
 
 ## AEM でのマッピング定義の作成 {#creating-mapping-definitions-in-aem}
 
@@ -103,7 +102,7 @@ AEM の標準インストールには、次のフォルダーがあります。
 
 ### /content への内部リダイレクトの設定{#configuring-an-internal-redirect-to-content}
 
-リクエストをhttp://localhost:4503/に接頭するマッピングを作成するには、次のように`/content`を付けます。
+http://localhost:4503/に対する要求の先頭に`/content`を付加するマッピングを作成するには：
 
 1. CRXDEを使用して`/etc/map/http`に移動します。
 
@@ -134,7 +133,7 @@ AEM の標準インストールには、次のフォルダーがあります。
 `localhost:4503/geometrixx/en/products.html`\
 次のように：\
 `localhost:4503/content/geometrixx/en/products.html`\
-が要求された。
+要求されていた
 
 >[!NOTE]
 >
@@ -142,5 +141,4 @@ AEM の標準インストールには、次のフォルダーがあります。
 
 >[!NOTE]
 >
->`/etc/map.publish`を使用して、発行環境の設定を保持できます。 次に、これらを複製し、パブリッシュ環境の[Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver)の&#x200B;**Mapping Location**&#x200B;に対して設定した新しい場所(`/etc/map.publish`)を作成する必要があります。
-
+>`/etc/map.publish`を使用して、パブリッシュ環境の設定を保持できます。 次に、これらをレプリケートし、パブリッシュ環境の[Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver)の&#x200B;**Mapping Location**&#x200B;用に設定された新しい場所(`/etc/map.publish`)を作成する必要があります。
