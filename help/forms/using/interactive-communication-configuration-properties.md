@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 content-type: reference
 topic-tags: interactive-communications
 discoiquuid: 1aef2a51-4391-4075-8841-a62ace5606f9
-feature: Interactive Communication
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+feature: インタラクティブコミュニケーション
+exl-id: 2caf7242-8588-4fc9-9429-40e24416d6eb
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 70%
 
 ---
-
 
 # インタラクティブ通信の設定プロパティ {#interactive-communications-configuration-properties}
 
@@ -25,9 +24,9 @@ ht-degree: 70%
 
 インタラクティブ通信には、[AEM Forms アドオン](/help/forms/using/installing-configuring-aem-forms-osgi.md)パッケージのインストール後に自動的に設定されるプロパティが含まれています。インタラクティブ通信の作成者は、**Adobe Experience Manager Web コンソール設定**&#x200B;ページを使用して、これらのデフォルトの設定プロパティを編集できます。
 
-次のURLを使用して&#x200B;**Adobe Experience ManagerWebコンソール設定**&#x200B;ページを開きます。
+次のURLを使用して、**Adobe Experience Manager Webコンソール設定**&#x200B;ページを開きます。
 
-https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/console/configMgr
+https://&lt;server>:&lt;port>/&lt;contextPath>/system/console/configMgr
 
 設定プロパティには次のものが含まれます。
 
@@ -36,9 +35,9 @@ https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/co
 * [アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定](#adaptive-form-and-interactive-communication-web-channel-configuration)
 * [アダプティブフォームおよびインタラクティブ通信 Web チャネルテーマの設定](#adaptive-form-and-interactive-communication-web-channel-theme-configuration)
 
-## ドキュメントフラグメントの設定  {#document-fragments-configuration}
+## ドキュメントフラグメントの設定 {#document-fragments-configuration}
 
-**Adobe Experience ManagerWebコンソールの設定**&#x200B;ページで&#x200B;**ドキュメントフラグメントの設定**&#x200B;をタップし、ドキュメントフラグメントの設定プロパティを表示します。
+**Adobe Experience Manager Webコンソール設定**&#x200B;ページで「**ドキュメントフラグメントの設定**」をタップして、ドキュメントフラグメントの設定プロパティを表示します。
 
 <table> 
  <tbody> 
@@ -50,7 +49,7 @@ https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/co
   </tr> 
   <tr> 
    <td>データの表示形式</td> 
-   <td>印刷およびWebチャネル用のインタラクティブ通信を作成する際に使用できる、フィールド、変数、フォームデータモデル要素のロケール固有の表示形式。</td> 
+   <td>印刷チャネルとWebチャネル用のインタラクティブ通信を作成する際に使用できる、フィールド、変数、フォームデータモデル要素のロケール固有の表示形式。</td> 
    <td> 
     <ul> 
      <li>locale = en_US、de_DE、fr_FRおよびja_JP</li> 
@@ -84,7 +83,7 @@ https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/co
 
 ## 通信設定の作成  {#create-correspondence-configuration}
 
-**Adobe Experience ManagerWebコンソール設定**&#x200B;ページで「通信の設定を作成」**をタップし、エージェントUIの設定プロパティを表示します。**
+**Adobe Experience Manager Webコンソール設定**&#x200B;ページで「**通信の設定を作成**」をタップして、エージェントUIの設定プロパティを表示します。
 
 | プロパティ | 説明 | デフォルト | 指定できる値 |
 |---|---|---|---|
@@ -93,7 +92,7 @@ https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/co
 
 ## アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定  {#adaptive-form-and-interactive-communication-web-channel-configuration}
 
-**Adobe Experience ManagerWebコンソール設定**&#x200B;ページで「**アダプティブフォームと対話型通信Webチャネルの設定**」をタップし、アダプティブFormsおよび対話型通信Webチャネルの設定プロパティを表示します。 次のテーブルに、インタラクティブ通信に関連するプロパティを示します。
+**Adobe Experience Manager Webコンソール設定**&#x200B;ページで「**アダプティブフォームとインタラクティブ通信Webチャネルの設定**」をタップし、アダプティブFormsおよびインタラクティブ通信Webチャネルの設定プロパティを表示します。 次のテーブルに、インタラクティブ通信に関連するプロパティを示します。
 
 | プロパティ | 説明 | デフォルト | 指定できる値 |
 |---|---|---|---|
@@ -103,7 +102,7 @@ https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/co
 
 ## アダプティブフォームおよびインタラクティブ通信 Web チャネルテーマの設定  {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
-**Adobe Experience ManagerWebコンソール設定**&#x200B;ページで「**アダプティブフォームと対話型通信Webチャネルのテーマ設定**」をタップし、アダプティブFormsおよび対話型通信Webチャネルテーマの設定プロパティを表示します。
+**Adobe Experience Manager Webコンソールの設定**&#x200B;ページで「**アダプティブフォームとインタラクティブ通信Webチャネルのテーマの設定**」をタップして、アダプティブFormsおよびインタラクティブ通信Webチャネルのテーマの設定プロパティを表示します。
 
 <table> 
  <tbody> 
@@ -121,4 +120,3 @@ https://&lt;サーバー>:&lt;ポート>/&lt;コンテキストパス>/system/co
   </tr> 
  </tbody> 
 </table>
-
