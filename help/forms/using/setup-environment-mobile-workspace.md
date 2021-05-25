@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 72c3a451-fa57-4b12-8d25-fc2e6fa98adb
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: 5c60d1a6-a4a2-4131-81e6-e39a5ab07dcf
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 68%
 
 ---
-
 
 # AEM Forms アプリケーションの環境設定  {#set-up-environment-for-aem-forms-app}
 
@@ -39,9 +38,9 @@ AEM Forms アプリケーションを構築しデプロイするためには、�
 
 ## Android デバイスの場合  {#for-android-devices}
 
-* [https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)からダウンロードできるAndroid開発ツールキット（ADTバンドル）
+* [https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)からダウンロード可能なAndroid開発ツールキット（ADTバンドル）
 * MAC システム上に環境が設定される場合は、Applications フォルダーに ADT をインストールする必要があります。
-* ADTがMAC上の他の場所にインストールされている場合、または環境がWindowsシステム上で設定されている場合は、ADT SDKのパスを、抽出したソースアーカイブ`mobileworkspace-src.zip`の`src\android`フォルダーにある`local.properties`ファイルで更新する必要があります。 このファイルで、`sdk.dir` 変数をデスクトップ上の ADT SDK の場所にポイントしてください。
+* ADTがMAC上の他の場所にインストールされている場合、または環境がWindowsシステム上に設定されている場合は、ADT SDKのパスを`src\android`フォルダー内の`local.properties`ファイルに更新する必要があります。このファイルは、抽出されたソースアーカイブ`mobileworkspace-src.zip`内のにあります。 このファイルで、`sdk.dir` 変数をデスクトップ上の ADT SDK の場所にポイントしてください。
 
 >[!NOTE]
 >
