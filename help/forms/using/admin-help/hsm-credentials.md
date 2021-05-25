@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e5f17ba8-8aab-4449-811a-20ad33de1c6f
-translation-type: tm+mt
-source-git-commit: d04e08e105bba2e6c92d93bcb58839f1b5307bd8
+exl-id: f38057d7-b500-448a-8664-a45374d4cfea
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1313'
 ht-degree: 99%
 
 ---
-
 
 # HSM 秘密鍵証明書の管理 {#managing-hsm-credentials}
 
@@ -106,4 +105,3 @@ AEM Forms は、Web サービスベースの IPC/RPC メカニズムを使用し
 
 * 署名者の証明書を渡して、AEM Forms クライアント資格情報を作成します。「[Windows 64 ビットプラットフォームでの Sum JDK を使用した AEM Forms EX の HSM サポートの設定](https://kb2.adobe.com/cps/808/cpsid_80835.html)」に記載されている手順を実行します。Web サービスの場所は資格情報プロパティとして渡されます。また、証明書 DER または 証明書 SHA-1 hex を使用した HSM プロファイルのオフライン作成もサポートされています。ただし、以前のバージョンの AEM forms から AEM forms にアップグレードした場合は、資格情報に証明書と Web サービス情報が含まれているので、クライアントに変更を加える必要があります。
 * Web サービスの場所は管理コンソールの Signatures サービスで指定します（[Signature サービスの設定](/help/forms/using/admin-help/configure-service-settings.md#signature-service-settings)を参照）。この場合、クライアントは Trust Store 内の HSM プロファイルのエイリアスのみを保持します。この方法は、以前のバージョンの AEM Forms から AEM Forms にアップグレードした場合でもクライアントに変更を加えることなく、シームレスに使用できます。証明書 SHA-1 を使用して作成した HSM プロファイルは、この方法ではサポートされていません。
-
