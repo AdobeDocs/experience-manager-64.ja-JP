@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e845d13f-bef2-442d-af9a-4f92d7616a46
-translation-type: tm+mt
-source-git-commit: a417e571d7c3b8da8f38f3d1ad814610636eabbc
+exl-id: 1fb51e4a-e0e8-4a58-8877-98337fe29fac
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 100%
 
 ---
-
 
 # 国際化対応オプションの設定{#setting-internationalization-options}
 
@@ -35,4 +34,3 @@ PDF フォームをレンダリングする際に使用するロケールを指�
    HTML の変換について AEM Forms で使用できるエンコーディング値は、`java.nio.charset` パッケージで定義されています。sFormPreference が PDFForm の場合は、特定の文字セットのみがサポートされます。文字セットは、有効な正規名で指定する必要があります。デフォルト値は「ISO-8859-1」です。
 
 1. 「保存」をクリックします。
-
