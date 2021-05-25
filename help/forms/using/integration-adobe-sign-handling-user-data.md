@@ -1,22 +1,21 @@
 ---
 title: Adobe Sign との統合| ユーザーデータの処理
 seo-title: Adobe Sign との統合| ユーザーデータの処理
-description: AEM Forms を Adobe Sign と統合すると、アダプティブフォームで電子署名ワークフローが有効になり、法務、販売、給与、人事管理のワークフローのフォームまたは契約書を処理することができます。ユーザーデータ、データストア、ユーザーデータのアクセスと削除を深く掘り下げます。
-seo-description: AEM Forms を Adobe Sign と統合すると、アダプティブフォームで電子署名ワークフローが有効になり、法務、販売、給与、人事管理のワークフローのフォームまたは契約書を処理することができます。ユーザーデータ、データストア、ユーザーデータのアクセスと削除を深く掘り下げます。
+description: AEM Forms を Adobe Sign と統合すると、アダプティブフォームで電子署名ワークフローが有効になり、法務、販売、給与、人事管理のワークフローのフォームまたは契約書を処理することができます。ユーザーデータ、データストア、ユーザーデータへのアクセスと削除を詳細に分析します。
+seo-description: AEM Forms を Adobe Sign と統合すると、アダプティブフォームで電子署名ワークフローが有効になり、法務、販売、給与、人事管理のワークフローのフォームまたは契約書を処理することができます。ユーザーデータ、データストア、ユーザーデータへのアクセスと削除を詳細に分析します。
 uuid: cb3a455d-2e33-44c8-8f71-3a7ecd939cd8
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e9e0d8fb-955e-4021-9e9a-9c95c6ffe88d
 feature: Adobe Sign
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: c2061de7-8627-4595-b96c-aa2d6abffddd
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '411'
 ht-degree: 84%
 
 ---
-
 
 # Adobe Sign との統合| ユーザーデータの処理 {#integration-with-adobe-sign-handling-user-data}
 
@@ -24,7 +23,7 @@ AEM Forms を Adobe Sign と統合すると、アダプティブフォームで�
 
 1 人の署名者または複数の署名者がアダプティブフォームに署名をして送信するときに、署名者に関する情報を含む Adobe Sign の契約書が生成されます。
 
-Adobe SignとのAEM Formsの統合について詳しくは、[アダプティブフォームでのAdobe Signの使用](/help/forms/using/working-with-adobe-sign.md)を参照してください。
+AEM FormsとAdobe Signの統合について詳しくは、「[アダプティブフォームでのAdobe Signの使用](/help/forms/using/working-with-adobe-sign.md)」を参照してください。
 
 ## ユーザーデータとデータストア {#data}
 
@@ -34,6 +33,6 @@ Adobe Sign 対応のアダプティブフォームには署名者に関する情
 
 ユーザーデータは契約書内で収集されますが、いずれのサービステーブルにも保存されません。Adobe Sign を使用すると、管理者はサービスで管理する管理データを自身で選択できます。Adobe Sign サービスのプライバシー管理者は、依頼者の電子メールアドレスに基づいて契約書のリストの作成または削除を行うことができます。
 
-Adobe Sign は、参加者による契約書の検索、および必要に応じて契約書の削除を実行できる Web アプリケーションを提供しています。詳しくは、[Adobe Sign — 機能：ユーザー情報を削除](https://helpx.adobe.com/sign/help/adobesign_gdpr_user_deletion.html)。
+Adobe Sign は、参加者による契約書の検索、および必要に応じて契約書の削除を実行できる Web アプリケーションを提供しています。詳しくは、[Adobe Sign — 機能：ユーザー情報](https://helpx.adobe.com/sign/help/adobesign_gdpr_user_deletion.html)を削除します。
 
 Forms Portal の送信アクションを使用するように構成されているアダプティブフォームの契約書データも、Forms Portal のデータストアに格納されます。Forms Portal のデータストアにアクセスしてデータを削除する方法については、「[Forms Portal | ユーザーデータの処理](/help/forms/using/forms-portal-handling-user-data.md)」を参照してください。
