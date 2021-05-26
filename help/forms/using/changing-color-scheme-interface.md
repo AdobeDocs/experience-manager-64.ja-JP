@@ -9,18 +9,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
 discoiquuid: 18dab82a-badf-4c32-83a2-cd5cb04cae89
-translation-type: tm+mt
-source-git-commit: f13d358a6508da5813186ed61f959f7a84e6c19f
+exl-id: efbb9a9e-0ddf-49f2-bcb8-14cd0c6de5ee
+source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 70%
 
 ---
 
-
 # インターフェイスのカラースキーム変更  {#changing-the-color-scheme-of-the-interface}
 
-AEM Forms Workspace ユーザーインターフェイス部分のカラースキームを必要に合わせて変更できます。代表的なカラースキームのカスタマイズの例を以下にいくつか示します。この記事で説明されている手順に加えて、[「AEM Formsワークスペースのカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」を参照してください。
+AEM Forms Workspace ユーザーインターフェイス部分のカラースキームを必要に合わせて変更できます。代表的なカラースキームのカスタマイズの例を以下にいくつか示します。この記事で説明する手順に加えて、[AEM Forms Workspaceのカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)を参照してください。
 
 ## トップナビゲーションバー {#top-navigation-bar}
 
@@ -54,10 +53,10 @@ AEM Forms Workspace 上部のナビゲーションバーを更新するには：
    }
    ```
 
-## カテゴリコンポーネント {#category-component}
+## カテゴリコンポーネント  {#category-component}
 
 カテゴリコンポーネントは、左パネルでタスクのさまざまなカテゴリを表示します。 色を変更するには、CSSファイルの`.category`要素で背景色を定義します。
 
 ## タスクコンポーネント {#task-component}
 
-タスクは、TaskList コンポーネントと呼ばれる中央のパネルに表示されます。色を変更するには、スタイルシートの。タスクセレクターに関連付けられているスタイルを変更します。
+タスクは、TaskList コンポーネントと呼ばれる中央のパネルに表示されます。色を変更するには、スタイルシートの.taskセレクターに関連付けられているスタイルを変更します。
