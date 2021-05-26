@@ -32,12 +32,13 @@ ht-degree: 68%
 >このページは、次と共にお読みください。
 >* [コンテンツの再利用：マルチサイトマネージャー](/help/sites-administering/msm.md).
 >* AEM 6.4 における Sites リポジトリの再構築:
-   >   * [Multi-site Manager のブループリント設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-blueprint-configurations)
+>   * [Multi-site Manager のブループリント設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-blueprint-configurations)
    * [Multi-site Manager のロールアウト設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-rollout-configurations)
 
 
 >[!CAUTION]
-Multi Site Manager とその API は Web サイトのオーサリング時に使用するものなので、オーサー環境での使用のみを目的としています。
+>
+>Multi Site Manager とその API は Web サイトのオーサリング時に使用するものなので、オーサー環境での使用のみを目的としています。
 
 ## Java API の概要  {#overview-of-the-java-api}
 
@@ -146,7 +147,8 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 ```
 
 >[!NOTE]
-`Resource`引数には、[`NonExistingResource`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/NonExistingResource.html)オブジェクトなど、`Node`オブジェクトに適応しない`null`オブジェクトまたは`Resources`オブジェクトを指定できます。
+>
+>`Resource`引数には、[`NonExistingResource`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/NonExistingResource.html)オブジェクトなど、`Node`オブジェクトに適応しない`null`オブジェクトまたは`Resources`オブジェクトを指定できます。
 
 ## 新しいロールアウト設定の作成 {#creating-a-new-rollout-configuration}
 
@@ -158,7 +160,8 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 ブループリントまたはライブコピーページでロールアウト設定を指定すると、新しいロールアウト設定が使用可能になります。
 
 >[!NOTE]
-[ロールアウトのカスタマイズのベストプラクティス](/help/sites-administering/msm-best-practices.md#customizing-rollouts)も参照してください。
+>
+>[ロールアウトのカスタマイズのベストプラクティス](/help/sites-administering/msm-best-practices.md#customizing-rollouts)も参照してください。
 
 ### ロールアウト設定の作成  {#create-the-rollout-configuration}
 
@@ -171,14 +174,17 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
    `/apps/msm/<your-project>/rolloutconfigs`
 
    >[!NOTE]
-これは、プロジェクトのカスタマイズバージョンである次のものです。
-   `/libs/msm/wcm/rolloutconfigs`
+   >
+   >これは、プロジェクトのカスタマイズバージョンである次のものです。
+   >`/libs/msm/wcm/rolloutconfigs`
+
 これが最初の設定の場合は、作成する必要があります。
 
    >[!NOTE]
-   /libs パス内の設定は一切変更しないでください。/libs のコンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。設定およびその他の変更に推奨される方法は次のとおりです。
-   * 必要な項目（/libs 内に存在）を、/apps の下で再作成します。
-   * /apps 内で変更作業をおこないます。
+   >
+   >/libs パス内の設定は一切変更しないでください。/libs のコンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。設定およびその他の変更に推奨される方法は次のとおりです。
+   >* 必要な項目（/libs 内に存在）を、/apps の下で再作成します。
+   >* /apps 内で変更作業をおこないます。
 
 
 1. この&#x200B;**の下に、次のプロパティを持つノードを作成**&#x200B;します。
@@ -684,7 +690,9 @@ MSM は、保存されている言語コードと国コードのリストを使�
 
 
 >[!NOTE]
-cq-msm-lockableは、編集するリソースの最初の子レベルに適用され、値が絶対値と相対値のどちらとして定義されているかに関係なく、より深いレベルの親レベルでは機能しません。
+>
+>cq-msm-lockableは、編集するリソースの最初の子レベルに適用され、値が絶対値と相対値のどちらとして定義されているかに関係なく、より深いレベルの親レベルでは機能しません。
 
 >[!NOTE]
-継承を再度有効にしても、ライブコピーページのプロパティはソースのプロパティとは自動的には同期されません。必要な場合は、手動で同期をリクエストできます。
+>
+>継承を再度有効にしても、ライブコピーページのプロパティはソースのプロパティとは自動的には同期されません。必要な場合は、手動で同期をリクエストできます。

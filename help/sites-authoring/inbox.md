@@ -45,9 +45,9 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 >項目タイプについて詳しくは、次の項目も参照してください。
 >
 >* [プロジェクト](/help/sites-authoring/touch-ui-managing-projects.md)
-* [プロジェクト - タスクの操作](/help/sites-authoring/task-content.md)
-* [ワークフロー](/help/sites-authoring/workflows.md)
-* [フォーム](/help/forms/home.md)
+>* [プロジェクト - タスクの操作](/help/sites-authoring/task-content.md)
+>* [ワークフロー](/help/sites-authoring/workflows.md)
+>* [フォーム](/help/forms/home.md)
 
 
 
@@ -58,7 +58,8 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 ![wf-80](assets/wf-80.png)
 
 >[!NOTE]
-特定のアクションは、[適切なリソースのカード表示](/help/sites-authoring/basic-handling.md#card-view)にも表示されます。
+>
+>特定のアクションは、[適切なリソースのカード表示](/help/sites-authoring/basic-handling.md#card-view)にも表示されます。
 
 ## 標準の管理タスク   {#out-of-the-box-administrative-tasks}
 
@@ -83,7 +84,8 @@ AEM 通知インボックスを開くには：
    ![wf-79](assets/wf-79.png)
 
 >[!NOTE]
-インボックスはコンソールとして機能するので、完了したら[グローバルナビゲーション](/help/sites-authoring/basic-handling.md#global-navigation)または[検索](/help/sites-authoring/search.md)を使用して、別の場所に移動します。
+>
+>インボックスはコンソールとして機能するので、完了したら[グローバルナビゲーション](/help/sites-authoring/basic-handling.md#global-navigation)または[検索](/help/sites-authoring/search.md)を使用して、別の場所に移動します。
 
 ### インボックス - リスト表示 {#inbox-list-view}
 
@@ -151,8 +153,9 @@ AEM 通知インボックスを開くには：
    * 項目からプロジェクトを作成する.
 
    >[!NOTE]
-   詳しくは、次のセクションを参照してください。
-   * ワークフローの項目 - [ワークフローへの参加](/help/sites-authoring/workflows-participating.md)
+   >
+   >詳しくは、次のセクションを参照してください。
+   >* ワークフローの項目 - [ワークフローへの参加](/help/sites-authoring/workflows-participating.md)
 
 
 1. 選択した項目に応じて、アクションが開始されます。例えば、次の操作がおこなわれます。
@@ -207,8 +210,9 @@ AEM 通知インボックスを開くには：
 1. サムネールをタップまたはクリックして、適切なタスクを選択します。
 
    >[!NOTE]
-   プロジェクトの作成に使用できるのは、**インボックス**&#x200B;の「**作成**」オプションを使用して作成されたタスクのみです。
-   （ワークフローからの）作業項目はプロジェクトの作成に使用できません。
+   >
+   >プロジェクトの作成に使用できるのは、**インボックス**&#x200B;の「**作成**」オプションを使用して作成されたタスクのみです。
+   >（ワークフローからの）作業項目はプロジェクトの作成に使用できません。
 
 1. ツールバーの「**プロジェクトを作成**」を選択してウィザードを開きます。
 1. 適切なテンプレートを選択して、「**次へ**」を選択します。
@@ -224,8 +228,10 @@ AEM 通知インボックスを開くには：
    * **アドバンス**
 
       * **名前**
+
    >[!NOTE]
-   詳しくは、[プロジェクトの作成](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)を参照してください。
+   >
+   >詳しくは、[プロジェクトの作成](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)を参照してください。
 
 1. 「**作成**」を選択してアクションを確定します。
 
@@ -244,4 +250,5 @@ AEM 通知インボックスを開くには：
    ![wf-89](assets/wf-89.png)
 
    >[!NOTE]
-   「[設定を表示](#inbox-view-settings)」では、[リスト表示](#inbox-list-view)を使用するときの並べ替え順を設定することもできます。
+   >
+   >「[設定を表示](#inbox-view-settings)」では、[リスト表示](#inbox-list-view)を使用するときの並べ替え順を設定することもできます。
