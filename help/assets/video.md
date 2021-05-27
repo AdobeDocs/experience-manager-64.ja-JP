@@ -66,11 +66,11 @@ ht-degree: 77%
 
       * ソースビデオとビデオのエンコードされたレンディションを、関連するサムネールと共に表示します。
 
-         [ビデオのプレビュー](managing-video-assets.md#uploading-and-previewing-video-assets)または[アセットのプレビュー](previewing-assets.md)。
+        [ビデオのプレビュー](managing-video-assets.md#uploading-and-previewing-video-assets)または[アセットのプレビュー](previewing-assets.md)。
 
-         [ビデオレンディションの表示](video-renditions.md)
+        [ビデオレンディションの表示](video-renditions.md)
 
-[ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
+        [ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
 
       * [ビューアプリセットの管理](managing-viewer-presets.md)
       * [アセットの発行](publishing-dynamicmedia-assets.md)
@@ -78,15 +78,16 @@ ht-degree: 77%
 
       * フレームレート、オーディオおよびビデオのビットレート、コーデックなど、エンコードされたビデオレンディションのプロパティを表示します。
 
-         [ビデオレンディショのプロパティの表示](video-renditions.md)
+        [ビデオレンディショのプロパティの表示](video-renditions.md)
 
       * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
 
-[ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
+        [ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
 
       * [デジタルアセット用のメタデータの管理](metadata.md)
       * [メタデータスキーマ](metadata-schemas.md)
-   * ビデオの確認、承認、注釈の付け
+      
+      * ビデオの確認、承認、注釈の付け
 
       * [ビデオへの注釈](managing-video-assets.md#annotating-video-assets) の追加また [はアセットへの注釈の追加](managing-assets-touch-ui.md#annotating)
       * [アセットへのワークフ](assets-workflow.md) ローの適 [用またはアセットでのワークフローの開始](managing-assets-touch-ui.md#starting-a-workflow-on-an-asset)
