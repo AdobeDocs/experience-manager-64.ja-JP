@@ -33,7 +33,7 @@ ht-degree: 68%
 >* [コンテンツの再利用：マルチサイトマネージャー](/help/sites-administering/msm.md).
 >* AEM 6.4 における Sites リポジトリの再構築:
 >   * [Multi-site Manager のブループリント設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-blueprint-configurations)
-   * [Multi-site Manager のロールアウト設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-rollout-configurations)
+>   * [Multi-site Manager のロールアウト設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-rollout-configurations)
 
 
 >[!CAUTION]
