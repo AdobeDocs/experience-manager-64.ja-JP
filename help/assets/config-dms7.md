@@ -8,9 +8,9 @@ content-type: reference
 exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
 feature: 設定，Scene7モード
 role: Administrator,Business Practitioner,Developer
-source-git-commit: f4fe70a58ded345f06f0a65809612a55e7ddfb4e
+source-git-commit: 9e9108bbfcd1c71004e494e73891d3ab0afd4d74
 workflow-type: tm+mt
-source-wordcount: '5596'
+source-wordcount: '5594'
 ht-degree: 57%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 57%
 
 >[!WARNING]
 >
->Dynamic Media - Scene7モードは、*Experience Managerオーサーインスタンス専用です*。 したがって、Experience Managerオーサーインスタンスで`runmode=dynamicmedia_scene7`を設定し、Experience Managerパブリッシュインスタンスでは&#x200B;*を設定*&#x200B;しないようにする必要があります。
+>Dynamic Media - Scene7モードは、*Experience Managerオーサーインスタンス専用です*。 したがって、Experience Managerオーサーインスタンスで`runmode=dynamicmedia_scene7`を設定し、Experience Managerパブリッシュインスタンスでは&#x200B;*設定しません*。
 
 Dynamic Mediaを有効にするには、コマンドラインから`dynamicmedia_scene7`実行モードを使用してターミナルウィンドウで次のように入力してExperience Managerを起動する必要があります（使用されるポートの例は4502）。
 
