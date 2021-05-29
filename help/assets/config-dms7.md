@@ -8,7 +8,7 @@ content-type: reference
 exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
 feature: 設定，Scene7モード
 role: Administrator,Business Practitioner,Developer
-source-git-commit: a9ae157512127f27dd54063fe4e3c61b5f83b74e
+source-git-commit: f4fe70a58ded345f06f0a65809612a55e7ddfb4e
 workflow-type: tm+mt
 source-wordcount: '5596'
 ht-degree: 57%
@@ -35,9 +35,9 @@ ht-degree: 57%
 
 [Dynamic Media はデフォルトで無効になっています。](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)Dynamic Mediaの機能を活用するには、有効にする必要があります。
 
->[!NOTE]
+>[!WARNING]
 >
->Dynamic Media - Scene7モードは、Experience Managerオーサーインスタンス専用です。 そのため、パブリッシュインスタンスではなく、Experience Managerオーサーインスタンスで`runmode=dynamicmedia_scene7`をExperience Managerする必要があります。
+>Dynamic Media - Scene7モードは、*Experience Managerオーサーインスタンス専用です*。 したがって、Experience Managerオーサーインスタンスで`runmode=dynamicmedia_scene7`を設定し、Experience Managerパブリッシュインスタンスでは&#x200B;*を設定*&#x200B;しないようにする必要があります。
 
 Dynamic Mediaを有効にするには、コマンドラインから`dynamicmedia_scene7`実行モードを使用してターミナルウィンドウで次のように入力してExperience Managerを起動する必要があります（使用されるポートの例は4502）。
 
@@ -77,7 +77,7 @@ Dynamic Mediaパスワードを設定する前に、パスワードをCloud Serv
 
 **Dynamic MediaCloud Servicesを設定するには：**
 
-1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップしてから、**[!UICONTROL Cloud Services]** / **[!UICONTROL Dynamic Media設定]**&#x200B;をタップします。
+1. Experience Managerオーサーインスタンスで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップしてから、**[!UICONTROL Cloud Services]**/**[!UICONTROL Dynamic Media設定]**&#x200B;をタップします。
 1. Dynamic Media設定ブラウザーページの左側のパネルで、「**[!UICONTROL global]**」をタップし、「**[!UICONTROL 作成]**」をタップします。 [!UICONTROL global]の左側にあるフォルダーアイコンをタップまたは選択しないでください。
 1. [!UICONTROL Dynamic Media設定を作成]ページで、タイトル、Dynamic Mediaアカウントの電子メールアドレスおよびパスワードを入力します。 地域を選択します。 この情報は、プロビジョニング電子メールのAdobeによって提供されます。 Eメールを受け取っていない場合は、Adobeカスタマーケアにお問い合わせください。
 
@@ -267,7 +267,7 @@ Experience Manager Assets でサポートされていない形式のカスタム
 
 1. 空のテキストフィールドに追加した `DWG=image/vnd.dwg` を入力します。
 
-   この `DWG=image/vnd.dwg` 例は、説明の目的でのみ使用します。ここで追加する MIME タイプは、その他のサポートされていない形式でもかまいません。
+   `DWG=image/vnd.dwg`の例は、デモ目的でのみ使用します。 ここで追加する MIME タイプは、その他のサポートされていない形式でもかまいません。
 
    ![MIMEタイプの追加の例](assets/2019-08-02_16-36-36.png)
 
@@ -307,7 +307,7 @@ Experience Manager Assets でサポートされていない形式のカスタム
 
 **デフォルトの命名規則の設定**
 
-バッチセットプリセット手法で使用するデフォルトの命名規則を作成します。バッチセットプリセット定義で選択されたデフォルトの命名規則は、セットのバッチ生成で会社が必要とするもののみである可能性があります。 バッチセットプリセットは、定義するデフォルトの命名規則を使用するために作成されます。会社が定義するデフォルトの命名規則に例外がある場合のために、特定のコンテンツのセットに必要な代替のカスタム命名規則を含むバッチセットプリセットを、必要なだけいくつでも作成できます。
+バッチセットプリセット手法で使用するデフォルトの命名規則を作成します。バッチセットプリセット定義で選択されたデフォルトの命名規則は、バッチセットの生成に会社で必要なもののみである可能性があります。 バッチセットプリセットは、定義するデフォルトの命名規則を使用するために作成されます。会社が定義するデフォルトの命名規則に例外がある場合のために、特定のコンテンツのセットに必要な代替のカスタム命名規則を含むバッチセットプリセットを、必要なだけいくつでも作成できます。
 
 バッチセットプリセット機能を使用するためにデフォルトの命名規則を設定する必要はありませんが、これを使用して、1つのセットにグループ化する命名規則の要素をいくつでも定義できます。 これにより、バッチセットの作成を効率化できます。
 
@@ -445,7 +445,7 @@ spin-01-01
 
    `\w+-\w+-C(\d+)`
 
-   これらの式は説明用の例に過ぎません。 必要に応じて独自の正規表現を作成できます。
+   これらの式は、デモ目的でのみ使用される例です。 必要に応じて独自の正規表現を作成できます。
 
    >[!NOTE]
    >
