@@ -12,14 +12,14 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 exl-id: 56b070e4-b445-4488-acff-685b7ce5785f
 feature: 設定
 role: Administrator,Business Practitioner,Developer
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+source-git-commit: a842c45f0a0597f4c7f143974a550874258e5382
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 99%
+source-wordcount: '1047'
+ht-degree: 97%
 
 ---
 
-# クイックビューを使用したカスタムポップアップの作成 {#using-quickviews-to-create-custom-pop-ups}
+# クイックビュー{#using-quickviews-to-create-custom-pop-ups}を使用したカスタムポップアップの作成
 
 e コマースエクスペリエンスではデフォルトのクイックビューが使用され、ポップアップに購入を促す商品情報が表示されます。ただし、このようなポップアップにカスタムコンテンツが表示されるように設定できます。使用しているビューアに応じて、この機能により、ユーザーがホットスポット、サムネール画像、画像マップのいずれかをクリックすると情報や関連するコンテンツが表示されるようになります。
 
@@ -31,7 +31,7 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
 
 各ビューアの機能は異なりますが、サポートされる 3 つすべてのビューアでクイックビューの作成手順は同じです。
 
-**クイックビューを使用してカスタムポップアップを作成するには,**
+**クイックビューを使用してカスタムポップアップを作成するには：**
 
 1. アップロードしたアセット用にクイックビューを作成します。
 
