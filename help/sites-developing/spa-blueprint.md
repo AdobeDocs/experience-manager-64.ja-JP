@@ -9,9 +9,9 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 6d4188f4-ad98-49df-9bb4-7936b7bea9c8
 exl-id: 73995327-d781-4501-ba14-3394dc8ea4fc
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
 workflow-type: tm+mt
-source-wordcount: '2124'
+source-wordcount: '2123'
 ht-degree: 91%
 
 ---
@@ -279,7 +279,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 基になる [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) ライブラリとその [`ModelRouter`](/help/sites-developing/spa-routing.md) モジュール（デフォルトで有効）は、特定のリソースパスに関連付けられたモデルに対して、プリフェッチおよびアクセスを提供する役割を持ちます。
 
-2つのエンティティはルーティングの概念に関連していますが、 [`ModelRouter`](/help/sites-developing/spa-routing.md)は、現在のアプリケーションの状態と同期して構造化されたデータモデルで[&#39;PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)を読み込む役割のみを担います。
+2つのエンティティはルーティングの概念に関連していますが、[`ModelRouter`](/help/sites-developing/spa-routing.md)は、現在のアプリケーションの状態と同期して構成されたデータモデルで[`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager)を読み込む役割のみ担当します。
 
 詳しくは、[SPA モデルのルーティング](/help/sites-developing/spa-routing.md)を参照してください。
 
