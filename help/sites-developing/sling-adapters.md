@@ -10,10 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: c081b242-67e4-4820-9bd3-7e4495df459e
 exl-id: 7780d04d-418e-494c-85c3-76bef5f35690
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
 workflow-type: tm+mt
 source-wordcount: '1747'
-ht-degree: 89%
+ht-degree: 90%
 
 ---
 
@@ -69,7 +69,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
 `Adaptable.adaptTo()` の実装には、様々な方法があります。
 
 * オブジェクト自体による実装（このメソッド自体を実装して特定のオブジェクトにマッピングします）。
-* [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html)&#39;を使用して、任意のオブジェクトをマッピングできます。
+* [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html) を使用。これは、任意のオブジェクトをマッピングできます。
 
    オブジェクトは、引き続き `Adaptable` インターフェイスを実装し、[`SlingAdaptable`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/adapter/SlingAdaptable.html) を拡張する必要があります（これは、Central Adapter Manager の `adaptTo` 呼び出しを渡します）。
 
