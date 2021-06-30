@@ -1,14 +1,14 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-sub-product: フォーム[ふぉーむ]
-solution: Experience Manager, Experience Manager Forms
+sub-product: forms
+solution: Experience Manager, Experience Manager Forms, Experience Manager 6.4
 audience: end-user
 user-guide-title: Adobe Experience Manager 6.4 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: Business Practitioner
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+source-git-commit: 1ecb63f849f9f6167dddd4053267ae89577659fc
 workflow-type: tm+mt
 source-wordcount: '3730'
 ht-degree: 75%
@@ -71,7 +71,7 @@ ht-degree: 75%
       + [JEE上のAEM Formsのインストールおよびデプロイ（WebLogic版）](http://www.adobe.com/go/learn_aemforms_installWebLogic_64)
       + [JEE上のAdobe Experience Manager Formsのインストールおよびデプロイ（WebSphere版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_64)
       + [AEM Forms Workbenchのインストール](http://help.adobe.com/ja_JP/AEMForms/6.1/InstallWorkbench/index.html)
-      + [Designerのインストールと設定](using/installing-configuring-designer.md)
+      + [ Designer のインストールと設定](using/installing-configuring-designer.md)
       + [AEM Formsのインストールの準備（サーバークラスター）](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64_jp)
       + [JBossクラスターでのJEE上のAdobe Experience Manager Formsの設定](http://www.adobe.com/go/learn_aemforms_clusterJBoss_64_jp)
       + [WebLogicクラスターでのJEE上のAdobe Experience Manager Formsの設定](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_64_jp)
