@@ -1,14 +1,14 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites
+solution: Experience Manager, Experience Manager Sites, Experience Manager 6.4
 audience: end-user
 user-guide-title: AEM 6.4 開発ユーザーガイド
 breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: 開発
 role: Developer
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+source-git-commit: 1ecb63f849f9f6167dddd4053267ae89577659fc
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 83%
@@ -113,7 +113,7 @@ ht-degree: 83%
       + [AEM 向け SPA の開発](spa-architecture.md)
       + [SPA ブループリント](spa-blueprint.md)
       + [SPA ページコンポーネント](spa-page-component.md)
-      + [SPA の動的モデルとコンポーネントのマッピング](spa-dynamic-model-to-component-mapping.md)
+      + [コンポーネントマッピングの動的モデル (SPA用)](spa-dynamic-model-to-component-mapping.md)
       + [SPA モデルルーティング](spa-routing.md)
       + [SPA と Adobe Experience Platform Launch の統合](spa-launch.md)
       + [SPA およびサーバーサイドレンダリング](spa-ssr.md)
