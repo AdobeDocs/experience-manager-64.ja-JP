@@ -8,10 +8,10 @@ breadcrumb-title: デプロイガイド
 user-guide-description: Adobe Managed Services クラウドデプロイメントを含む、Adobe Experience Manager 6.4 のインストール、デプロイメント、およびアーキテクチャについて詳しく説明します。
 feature: デプロイ
 role: Architect
-source-git-commit: 1ecb63f849f9f6167dddd4053267ae89577659fc
+source-git-commit: 19c3ecc20d78f40a2fa49f804baf232db7483afc
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 93%
+source-wordcount: '373'
+ht-degree: 89%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 93%
    + [整合性チェックとトラバーサルチェック](consistency-check.md)
    + [パフォーマンスガイドライン](performance-guidelines.md)
    + [パフォーマンスの最適化](configuring-performance.md)
-   + [アセットパフォーマンスガイド](assets-performance-sizing.md)
+   + [アセットパフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/assets-performance-sizing.html)
    + [設定方法に関する記事](ht-deploy.md)
    + [Geometrixx サイトの削除](removing-the-geometrixx-sites.md)
    + [Webコンソールの設定](configuring-web-console.md)
@@ -85,7 +85,7 @@ ht-degree: 93%
    + [AEM 6.4 におけるリポジトリの再構築](repository-restructuring.md)
    + [AEM 6.4 における共通リポジトリの再構築](all-repository-restructuring-in-aem-6-4.md)
    + [AEM 6.4 における Sites リポジトリの再構築](sites-repository-restructuring-in-aem-6-4.md)
-   + [AEM 6.4 における Assets リポジトリの再構築](assets-repository-restructuring-in-aem-6-4.md)
+   + [AEM 6.4 における Assets リポジトリの再構築](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
    + [AEM 6.4 での Dynamic Media リポジトリの再構築](dynamicmedia-repository-restructuring-in-aem-6-4.md)
    + [AEM 6.4 における Forms リポジトリの再構築](forms-repository-restructuring-in-aem-6-4.md)
    + [AEM 6.4 における e コマースリポジトリの再構築](ecommerce-repository-restructuring-in-aem-6-4.md)
