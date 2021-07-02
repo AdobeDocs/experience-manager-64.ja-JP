@@ -10,10 +10,10 @@ topic-tags: managing
 content-type: reference
 discoiquuid: 3f4feb38-eca0-4852-88f8-9b20625e18ad
 exl-id: 34e4edd5-9e67-44ed-8c4c-bcdd3e161a35
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 8665f708a336134340a3f1abe2aa17622fa142f1
 workflow-type: tm+mt
-source-wordcount: '2843'
-ht-degree: 72%
+source-wordcount: '2850'
+ht-degree: 71%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 72%
 
 また、環境は、AEM とアプリケーションサーバーを実行する単一サーバーシステムから、複数のサーバー、複数の CPU で構成される拡張性の高いクラスターインスタンスに至るまで、多岐にわたります。実稼動システムごとに個別のコンピューターを使用し、これらのコンピューターではその他のアプリケーションを実行しないことをお勧めします。
 
-## ハードウェアサイジングに関する一般的なガイドライン  {#generic-hardware-sizing-considerations}
+## ハードウェアサイジングに関する一般的なガイドライン {#generic-hardware-sizing-considerations}
 
 この節では、様々な点を考慮しながら、ハードウェア要件を計算する方法について説明します。大規模なシステムの場合、基準設定で一連の単純な社内ベンチマークテストを実行することをお勧めします。
 
@@ -80,7 +80,7 @@ ht-degree: 72%
 * カスタマイズされたコード、カスタムワークフロー、またはサードパーティのソフトウェアライブラリの広範な使用
 * サポートされていない外部システムとの統合
 
-### ディスク容量／ハードドライブ  {#disk-space-hard-drive}
+### ディスク容量／ハードドライブ {#disk-space-hard-drive}
 
 必要なディスク容量は、主に Web アプリケーションのボリュームとタイプによって決まります。計算では次の項目を考慮する必要があります。
 
@@ -101,7 +101,7 @@ ht-degree: 72%
 
 AEM は仮想環境でも動作しますが、CPU や I/O などの要素については、物理ハードウェアと純粋に同等と見なすことはできません。ほとんどの場合、I/O 速度は非常に重要です。したがって、通常は、より高速な I/O を選択することをお勧めします。必要なリソースを正確に把握するには、環境のベンチマークテストをおこなう必要があります。
 
-### AEM インスタンスの並列化  {#parallelization-of-aem-instances}
+### AEM インスタンスの並列化 {#parallelization-of-aem-instances}
 
 #### フェイルセーフ {#fail-safeness}
 
@@ -199,7 +199,7 @@ Adobe時のベンチマークテストは、Hewlett-Packard ProLiant DL380 G5ハ
 
 AEM インスタンス実行時の最小ヒープサイズおよび最大ヒープサイズはそれぞれ 256M および 1024M です。
 
-## パブリッシュ環境用の計算  {#publish-environment-specific-calculations}
+## パブリッシュ環境用の計算 {#publish-environment-specific-calculations}
 
 ### キャッシュ効率とトラフィック {#caching-efficiency-and-traffic}
 
@@ -220,7 +220,7 @@ AEM インスタンス実行時の最小ヒープサイズおよび最大ヒー�
 
 キャッシュ率とは、ディスパッチャーが AEM にアクセスしなくても返すことができるページの割合です。100 ％は、ディスパッチャーがすべての要求に応答することを表します。0 ％は、AEM がすべてのページの処理をおこなうことを示します。
 
-### テンプレートとアプリケーションの複雑度  {#complexity-of-templates-and-applications}
+### テンプレートとアプリケーションの複雑度 {#complexity-of-templates-and-applications}
 
 複雑なテンプレートを使用している場合、AEM でページのレンダリングにかかる時間が増加します。キャッシュから取得されたページでは、このような影響はありません。ただし、全体の応答時間を考慮した場合、ページサイズはパフォーマンスに関係します。複雑なページのレンダリングでは、単純なページのレンダリングと比較して 10 倍の時間がかかることもあります。
 
@@ -290,7 +290,7 @@ AEM インスタンス実行時の最小ヒープサイズおよび最大ヒー�
 
 デフォルト Web アプリケーション用の計算に加え、次のユースケースに固有の要因を検討する必要がある場合があります。計算後の値は、デフォルトの計算結果に加算されます。
 
-### アセットに関する考慮事項  {#assets-specific-considerations}
+### アセットに関する考慮事項 {#assets-specific-considerations}
 
 デジタルアセットを大規模に処理するには、最適化されたハードウェアリソースが必要になります。最も関連する要因は、画像サイズと、処理された画像のピーク時のスループットです。
 
@@ -304,7 +304,7 @@ AEM インスタンス実行時の最小ヒープサイズおよび最大ヒー�
 
 >[!NOTE]
 >
->[アセットパフォーマンスガイド](/help/sites-deploying/assets-performance-sizing.md)も参照してください。
+>[アセットパフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/assets-performance-sizing.html)も参照してください。
 
 ### Multi Site Manager {#multi-site-manager}
 
@@ -319,7 +319,7 @@ AEM インスタンス実行時の最小ヒープサイズおよび最大ヒー�
 
 さらに考慮すべき点として、AEM MSM のユースケースで予定よりも多くのリソースが消費されると、同時に作業する作成者がパフォーマンスの低下に気付くことになります。
 
-### AEM Communities のサイジングの考慮事項  {#aem-communities-sizing-considerations}
+### AEM Communities のサイジングの考慮事項 {#aem-communities-sizing-considerations}
 
 AEM Communities の機能を含む AEM Sites （コミュニティサイト）には、パブリッシュ環境のサイト訪問者（メンバー）から高レベルのインタラクションがあります。
 
