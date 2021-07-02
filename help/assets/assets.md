@@ -5,18 +5,18 @@ contentOwner: AG
 feature: アセット管理
 role: Leader,Architect,Business Practitioner
 exl-id: 9292871d-3b10-49f8-ac1a-4770b4e44048
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 8665f708a336134340a3f1abe2aa17622fa142f1
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 33%
+source-wordcount: '863'
+ht-degree: 34%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets]をDAMソリューションとして使用する場合{#about-assets}
+# DAMソリューションとしての[!DNL Adobe Experience Manager Assets]について {#about-assets}
 
 [!DNL Assets] は、プラットフォームの不可欠な構成要素であり、企業がデジタルアセットを管理および配布でき [!DNL Experience Manager] るデジタルアセット管理(DAM)ツールです。組織内のユーザーは、画像、ビデオ、ドキュメント、オーディオクリップ、3Dファイル、リッチメディアなど、様々な種類のデジタルアセットを管理、保存、アクセスして、Web上、印刷、デジタル配信に使用できます。
 
-## デジタルアセット管理とは{#what-is-digital-asset-management}
+## Digital Asset Management とは {#what-is-digital-asset-management}
 
 [!DNL Assets]AEM は、組織の主要なデジタルアセットを、企業全体で共有および配布する機能を提供します。組織のユーザーは、画像、グラフィック、オーディオ、ビデオおよびドキュメントなどのデジタルアセットを、Web インターフェイス（または CIFS や WebDAV フォルダー）を使用して格納、管理したり、これらのデジタルアセットにアクセスしたりできます。
 
@@ -41,24 +41,24 @@ Assets managed within [!DNL Experience Manager] DAM can then be accessed via the
 
 ![screen_shot_2012-04-17at20214pm](assets/screen_shot_2012-04-17at20214pm.png) -->
 
-### デジタルアセット管理と画像コンポーネント{#digital-asset-management-versus-image-component}
+### デジタルアセット管理と画像コンポーネントの比較 {#digital-asset-management-versus-image-component}
 
 画像をDAMリポジトリに配置するか、画像コンポーネントを使用するかを決定する際は、画像のライフサイクルを考慮します。
 
 * 画像のライフサイクルがページと同じ場合は、画像コンポーネントを使用します。
 * 画像に別々のライフサイクルがある場合（例えば、画像を2回使用する場合やWCMの外部で使用する場合は、[!DNL Assets]を使用します）。
 
-## デジタルアセットとは{#what-are-digital-assets}
+## デジタルアセットとは何か {#what-are-digital-assets}
 
 アセットは、複数のレンディションを持つことができ、サブアセット（例えば、Photoshopファイルのレイヤー、PowerPointファイルのスライド、PDFのページ、ZIP内のファイル）を持つことができるデジタルドキュメント、画像、ビデオ、オーディオ（またはその一部）です。
 
-アセットは、基本的にバイナリ、メタデータ、レンディション、サブアセットを組み合わせたものです。詳しくは、[DAM パフォーマンスガイド](/help/sites-deploying/assets-performance-sizing.md)を参照してください。
+アセットは、基本的にバイナリ、メタデータ、レンディション、サブアセットを組み合わせたものです。詳しくは、[DAM パフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/assets-performance-sizing.html)を参照してください。
 
 >[!CAUTION]
 >
 >大量のアセット（特に画像）をアップロードまたは編集すると、[!DNL Experience Manager]デプロイメントのパフォーマンスに影響を与える場合があります。
 
-### [!DNL Experience Manager Assets] 用語  {#aem-assets-terminology}
+### [!DNL Experience Manager Assets] 用語 {#aem-assets-terminology}
 
 [!DNL Experience Manager]でデジタルアセットを操作する場合は、次の用語を理解する必要があります。
 
@@ -78,7 +78,7 @@ Assets managed within [!DNL Experience Manager] DAM can then be accessed via the
 
 * **サブアセット**:サブアセットは、アセットを構成するアセットです。例えば、ファイルのレイヤーやPDFフ [!DNL Adobe Photoshop] ァイルのページなどです。[!DNL Assets]では、アセットと同じようにサブアセットを管理できます。
 
-### デジタルアセットの操作方法{#how-to-work-with-assets}
+### デジタルアセットの操作方法 {#how-to-work-with-assets}
 
 アセットまたはコレクションに対してアクションを実行します。アクションでは、アセット、コレクションおよびレンディションを作成したり変更したりできます。アセットに対して実行する基本的なアクション（アップロード、削除、更新、サブアセットの保存）の多くは、事前設定済みのトリガーです。 これらは[!DNL Assets]で自動的にオンになり、[!DNL Assets]メディアハンドラーで詳しく説明します。
 
