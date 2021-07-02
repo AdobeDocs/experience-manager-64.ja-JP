@@ -10,10 +10,10 @@ topic-tags: repo_restructuring
 discoiquuid: 212930fc-3430-4a0a-842c-2fb613ef981f
 feature: アップグレード
 exl-id: 3d5bbf95-bd1e-453b-b487-517a56fe727f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 8665f708a336134340a3f1abe2aa17622fa142f1
 workflow-type: tm+mt
-source-wordcount: '1058'
-ht-degree: 54%
+source-wordcount: '1139'
+ht-degree: 51%
 
 ---
 
@@ -23,19 +23,19 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
 
 **6.4 へのアップグレード時におこなう変更**
 
-* [その他](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#misc)
+* [その他](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
 
 **6.5 へのアップグレードまでにおこなう変更**
 
-* [アセット／収集イベント電子メール通知テンプレート](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#asset-collection-event-e-mail-notification-template)
-* [従来のアセット共有デザイン](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#classic-asset-share-designs)
-* [アセットダウンロード電子メール通知テンプレート](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#download-asset-e-mail-notification-template)
-* [サンプル DRM ライセンス](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#example-drm-licenses)
+* [アセット／収集イベント電子メール通知テンプレート](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+* [従来のアセット共有デザイン](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+* [アセットダウンロード電子メール通知テンプレート](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+* [サンプル DRM ライセンス](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
 
-* [リンク共有電子メール通知テンプレート](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#link-share-e-mail-notification-template)
-* [InDesign ワークフロースクリプト](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#indesign-workflow-scripts)
-* [ビデオトランスコーディング設定](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#video-transcoding-configurations)
-* [その他](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md#misc2)
+* [リンク共有電子メール通知テンプレート](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+* [InDesign ワークフロースクリプト](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+* [ビデオトランスコーディング設定](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+* [その他](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
 
 ## 6.4 へのアップグレード時におこなう変更 {#with-upgrade}
 
@@ -62,7 +62,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody> 
 </table>
 
-## 6.5 へのアップグレードまでにおこなう変更  {#prior-to-upgrade}
+## 6.5 へのアップグレードまでにおこなう変更 {#prior-to-upgrade}
 
 ### アセット／収集イベント電子メール通知テンプレート {#asset-collection-event-e-mail-notification-template}
 
@@ -97,7 +97,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody> 
 </table>
 
-### 従来のアセット共有デザイン  {#classic-asset-share-designs}
+### 従来のアセット共有デザイン {#classic-asset-share-designs}
 
 <table> 
  <tbody> 
@@ -127,7 +127,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody> 
 </table>
 
-### アセットダウンロード電子メール通知テンプレート  {#download-asset-e-mail-notification-template}
+### アセットダウンロード電子メール通知テンプレート {#download-asset-e-mail-notification-template}
 
 <table> 
  <tbody> 
@@ -160,7 +160,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody> 
 </table>
 
-### サンプル DRM ライセンス  {#example-drm-licenses}
+### サンプル DRM ライセンス {#example-drm-licenses}
 
 | **以前の場所** | `/etc/dam/drm/licenses/` |
 |---|---|
@@ -168,7 +168,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
 | **再構築の手引き** | 該当なし |
 | **備考** | 該当なし |
 
-### リンク共有電子メール通知テンプレート  {#link-share-e-mail-notification-template}
+### リンク共有電子メール通知テンプレート {#link-share-e-mail-notification-template}
 
 <table> 
  <tbody> 
@@ -201,7 +201,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody> 
 </table>
 
-### InDesign ワークフロースクリプト  {#indesign-workflow-scripts}
+### InDesign ワークフロースクリプト {#indesign-workflow-scripts}
 
 <table> 
  <tbody> 
@@ -262,7 +262,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody> 
 </table>
 
-### ビューアプリセット設定  {#viewer-preset-configurations}
+### ビューアプリセット設定 {#viewer-preset-configurations}
 
 <table> 
  <tbody> 
