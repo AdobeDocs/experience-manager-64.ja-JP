@@ -11,10 +11,10 @@ topic-tags: repo_restructuring
 discoiquuid: fc879b0b-823b-4bdc-aaa6-36f53a33fb22
 feature: アップグレード
 exl-id: 6ff5a23a-c9b5-49ca-87b2-ba01eaf48a9f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 8665f708a336134340a3f1abe2aa17622fa142f1
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 78%
+source-wordcount: '556'
+ht-degree: 77%
 
 ---
 
@@ -38,13 +38,13 @@ AEM 6.4 にアップグレードすると、/etc の下にあるコンテンツ�
 * 6.4 へのアップグレード時におこなう変更 - /etc 再構築に伴う一部の変更は下位互換性がないので、AEM 6.4 へのアップグレードの一環として変更を計画し実行してください。
 * 6.5 へのアップグレードまでにおこなう変更 - /etc 再構築に伴う大部分の変更は、今後のアップグレードまで先送りすることができます。既に述べたように、顧客へのリリースの一環として変更が実行されるまで、AEM 6.4 コードでは古い場所を引き続き参照します。どうしても変更が必要になるようなスケジュールはありませんが、6.5 へのアップグレードまでには変更をおこなうことをお勧めします。今後提供される機能では、新しい場所を参照することが前提になる可能性があるからです。また、所定の機能のドキュメントは、慣例的に新しい場所を参照することになるので、古い場所がまだ使用されていると、混乱が生じるおそれがあります。
 
-### 再構築ガイダンス{#restructuring-guidance}
+### 再構築の手引き {#restructuring-guidance}
 
 AEM 6.4 へのアップグレードを計画している場合は、作業量を評価するために以下のソリューションごとのページを参照してください。
 
 * [すべての AEM ソリューションに共通のリポジトリ再構築](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md)
 * [AEM Sites のリポジトリ再構築](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md)
-* [AEM Assetsのリポジトリ再構築](/help/sites-deploying/assets-repository-restructuring-in-aem-6-4.md)
+* [AEM Assetsのリポジトリ再構築](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
 * [AEM Assets Dynamic Media のリポジトリ再構築](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md)
 * [AEM Formsのリポジトリ再構築](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md)
 * [AEM Communitiesのリポジトリ再構築](/help/sites-deploying/communities-repository-restructuring-in-aem-6-4.md)
