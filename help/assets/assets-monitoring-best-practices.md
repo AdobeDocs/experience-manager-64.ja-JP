@@ -3,16 +3,16 @@ title: Assets の監視のベストプラクティス
 description: AEM インスタンスをデプロイした後の環境およびパフォーマンスの監視に関するベストプラクティス。
 contentOwner: AG
 feature: アセット管理
-role: Administrator,Architect
+role: Admin,Architect
 exl-id: edbb275a-5ead-4ed2-8708-29e766081d75
-source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
+source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
 workflow-type: tm+mt
 source-wordcount: '1766'
 ht-degree: 87%
 
 ---
 
-# アセット監視のベストプラクティス{#assets-monitoring-best-practices}
+#  Assets の監視に関するベストプラクティスについて説明しています。 {#assets-monitoring-best-practices}
 
 Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の際には、以下のプロセスおよびテクノロジについての観察および報告をおこなう必要があります。
 
@@ -29,7 +29,7 @@ Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の�
 
 通常、AEM Assets の監視には、ライブ監視と長期的監視の 2 種類があります。
 
-## ライブ監視{#live-monitoring}
+## ライブ監視 {#live-monitoring}
 
 開発のパフォーマンステストの段階、または高負荷な状態になったときに、環境のパフォーマンス特性を把握するためにライブ監視を実行する必要があります。通常、ライブ監視はいくつかのツールを使用して実行します。以下にお勧めのツールを示します。
 
@@ -57,7 +57,7 @@ Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の�
 
 AEM インスタンスの長期的監視では、ライブで監視されるのと同じ部分の長期にわたる監視をおこないます。また、環境に固有のアラートも定義します。
 
-### ログの集約とレポート  {#log-aggregation-and-reporting}
+### ログの集約とレポート {#log-aggregation-and-reporting}
 
 Splunk（TM）や Elastic Search/Logstash/Kabana（ELK）など、いくつかのログ集約ツールがあります。AEM インスタンスの稼動時間を評価するには、システムに固有のログイベントを理解し、それに基づきアラートを作成することが重要です。開発と運用に関する十分な知識があれば、ログ集計プロセスを調整して重要なアラートを生成する方法をより深く理解できます。
 
@@ -74,7 +74,7 @@ Splunk（TM）や Elastic Search/Logstash/Kabana（ELK）など、いくつか�
 
 それぞれの項目を監視するには、NewRelic（TM）や AppDynamics（TM）などの外部ツールが必要です。これらのツールを使用して、システム固有のアラート（システム利用率が高い、ワークフローのバックアップ、ヘルスチェック失敗、Web サイトへの不正なアクセスなど）を定義できます。アドビでは、特定のツールを推奨することはありません。ご自身に合ったツールを見つけ、説明した項目の監視に利用してください。
 
-#### 内部アプリケーション監視  {#internal-application-monitoring}
+#### 内部アプリケーション監視 {#internal-application-monitoring}
 
 内部アプリケーション監視には、JVM などの AEM スタックを構成するアプリケーションコンポーネントの監視、コンテンツリポジトリの監視、およびプラットフォーム上に構築されたカスタムアプリケーションコードによる監視が含まれます。通常、SolarWinds（TM）、HP OpenView（TM）、Hyperic（TM）、Zabbix（TM）などの一般的な多くの監視ソリューションで直接監視できる JMX MBean を通して監視を実行します。JMX への直接接続をサポートしないシステムでは、JMX データを抽出して、それらのシステムがネイティブで理解できる形式で公開するシェルスクリプトを記述できます。
 
@@ -185,7 +185,7 @@ AEM で監視できるベースラインパラメーターをいくつか示し�
    * アラームしきい値：ステータスが OK ではない場合。
    * アラーム定義：ログファイルにエラーがあります。問題の原因について詳しくは、ログ属性を確認してください。
 
-## よくある問題と解決策   {#common-issues-and-resolutions}
+## よくある問題と解決策  {#common-issues-and-resolutions}
 
 監視中に問題が発生した場合は、以下のトラブルシューティングを実行して、AEM インスタンスでよくある問題を解決できます。
 
