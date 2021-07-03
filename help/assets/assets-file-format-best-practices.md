@@ -3,9 +3,9 @@ title: Assets のファイル形式に関するベストプラクティス
 description: AEM Assets のファイルサポートに関するベストプラクティスを紹介します。
 contentOwner: AG
 feature: アセット管理、開発者ツール
-role: Administrator
+role: Admin
 exl-id: ff739a17-188e-4779-8820-9e4d9b7031d0
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 91%
@@ -18,7 +18,7 @@ AEM Assets はユーザーの様々なファイルサポート要件に対応す
 
 サポートされるファイル形式については、[アセットでサポートされるファイル形式](assets-formats.md)を参照してください。
 
-## Adobe Camera Raw ライブラリ  {#adobe-camera-raw-library}
+## Adobe Camera Raw ライブラリ {#adobe-camera-raw-library}
 
 最適なパフォーマンスを得るために、以下については Adobe Camera Raw ライブラリを使用することをお勧めします。
 
@@ -39,7 +39,7 @@ Adobe Camera Raw ライブラリは、入力として CMYK カラープロファ
 
 PDF Rasterizer を使用して生成されたサムネールやプレビューの画質は、既製のラスター出力と比較して優れています。Adobe PDF Rasterizer ライブラリはカラースペース変換をサポートしません。ソース PDF ファイルのカラースペースに関わらず、Adobe PDF Rasterizer は RGB 出力のみを生成します。
 
-## Adobe InDesign Server  {#adobe-indesign-cc-server}
+## Adobe InDesign Server {#adobe-indesign-cc-server}
 
 IDML や HTML など Adobe InDesign 固有のレンディションを抽出するには、Adobe InDesign Server の使用をお勧めします。詳しくは、[Adobe InDesign](managing-linked-subassets.md#add-aem-assets-as-references-in-adobe-indesign)でのAEMアセットの参照としての追加を参照してください。
 
@@ -60,7 +60,7 @@ Dynamic Media は、パフォーマンスが最適化されスケーラビリテ
 
 AEMでImageMagicライブラリを設定する方法については、[ImageMagick](media-handlers.md#an-example-using-imagemagick)の使用を参照してください。 最適な使用方法については、[ImageMagick の設定のベストプラクティス](best-practices-for-imagemagick.md)を参照してください。
 
-## 画像トランスコーディングライブラリ  {#image-transcoding-library}
+## 画像トランスコーディングライブラリ {#image-transcoding-library}
 
 アドビの画像トランスコーディングライブラリは、画像のエンコーディング、トランスコーディング、リサンプリング、サイズ変更などの中心的な画像処理機能を実行する画像処理ソリューションです。
 
