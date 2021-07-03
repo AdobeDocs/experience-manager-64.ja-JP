@@ -3,9 +3,9 @@ title: Assets のユーザーエクスペリエンスの強化
 description: この記事では、AEM 6.4 Assets のユーザーエクスペリエンスの改善点について説明します。
 contentOwner: AG
 feature: リリース情報
-role: Leader,Business Practitioner
+role: Leader,User
 exl-id: 65029113-987e-46eb-86eb-8028233031f9
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 70%
@@ -20,7 +20,7 @@ AEM 6.4 Assetsには、シームレスなユーザーエクスペリエンスを
 
 カード、リスト、列などの様々な表示をパーソナライズできます。例えば、カード表示に表示するサムネールのサイズを設定できます。 リスト表示では、リスト内のアセットに対して表示する詳細レベルを設定できます。AEM 6.4 Assets には新しいツリー表示が含まれています。これを使用すると、簡単にアセットリポジトリ内を移動してアセットを見つけることができます。
 
-## 遅延読み込み  {#lazy-loading}
+## 遅延読み込み {#lazy-loading}
 
 AEM 6.4 Assets でアセットを参照または検索すると、一度に最大 200 個のアセットが表示されます。結果をすばやくスクロールできます。これは、長い結果リストを参照する場合に特に便利です。 大量のアセットが一度に読み込まれるので、スムーズに参照することができます。
 
