@@ -3,9 +3,9 @@ title: 翻訳プロジェクトの作成
 description: AEM で翻訳プロジェクトを作成する方法を学習します。
 contentOwner: AG
 feature: 翻訳
-role: Architect,Administrator
+role: Architect,Admin
 exl-id: 1b931fef-eed0-4758-993d-cdf8d478fb6f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1935'
 ht-degree: 97%
@@ -126,7 +126,7 @@ ht-degree: 97%
 
    >[!NOTE]
    >
-   >この機能は、アセットに対してもフォルダーに対しても使用できます。フォルダーではなくアセットを選択すると、そのアセットの言語コピーを作成するために、言語ルートまでのフォルダーの階層全体がコピーされます。
+   >この機能は、アセットに対してもフォルダーに対しても使用できます。フォルダーではなくアセットを選択すると、言語ルートまでのフォルダーの全階層がコピーされて、アセットの言語コピーが作成されます。
 
 ### 既存の翻訳プロジェクトに追加 {#add-to-existing-translation-project}
 
