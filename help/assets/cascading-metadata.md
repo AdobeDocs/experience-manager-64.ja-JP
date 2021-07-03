@@ -3,9 +3,9 @@ title: カスケードメタデータ
 description: この記事では、アセットのカスケードメタデータを定義する方法について説明します。
 contentOwner: AG
 feature: メタデータ
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: ea6187e8-075d-4666-afc5-01c97deccc11
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 94%
@@ -33,7 +33,7 @@ ht-degree: 94%
 * 別のフィールドに指定された値に基づいて、特定のフィールドに表示されるオプションを変更します。
 * 別のフィールドに指定された値に基づいて、特定のフィールドにデフォルトのメタデータ値を設定します。
 
-## AEM でのカスケードメタデータの設定  {#configure-cascading-metadata-in-aem}
+## AEM でのカスケードメタデータの設定 {#configure-cascading-metadata-in-aem}
 
 選択されたアセットタイプに基づいて、カスケードメタデータを表示するシナリオを検討します。いくつかの例を示します。
 
