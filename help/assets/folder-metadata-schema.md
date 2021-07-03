@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 uuid: 286a4f26-c0ad-4691-80d8-d17ba1a2dfe0
 discoiquuid: 92eacea5-7511-48ce-8a72-ff4552ebb07d
 feature: メタデータ
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: 1bc72dac-41f7-4593-aaea-d48ebd94b43e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 98%
@@ -32,14 +32,14 @@ Adobe Experience Manager (AEM) Assets では、フォルダープロパティペ
 1. フォルダーメタデータスキーマフォームページで、「**[!UICONTROL 作成]**」をタップまたはクリックします。
 1. フォームの名前を指定し、「**[!UICONTROL 作成]**」をタップまたはクリックします。新しいスキーマフォームがスキーマフォームページにリストされます。
 
-## フォルダーメタデータスキーマフォームの編集  {#edit-folder-metadata-schema-forms}
+## フォルダーメタデータスキーマフォームの編集 {#edit-folder-metadata-schema-forms}
 
 以下を含む、新しく追加された、または既存のメタデータスキーマフォームを編集できます。
 
 * タブ
 * タブ内のフォーム項目
 
-これらのフォーム項目を CRX リポジトリのメタデータノード内のフィールドにマップしたり、フォーム項目を設定したりできます。新しいタブまたはフォーム項目をメタデータスキーマフォームに追加できます。
+これらのフォーム項目を CRX リポジトリーのメタデータノード内のフィールドにマップしたり、フォーム項目を設定したりできます。新しいタブまたはフォーム項目をメタデータスキーマフォームに追加できます。
 
 1. スキーマフォームページで、作成したフォームを選択し、ツールバーの「**[!UICONTROL 編集]**」アイコンをタップまたはクリックします。
 1. フォルダーメタデータスキーマエディターページで、**[!UICONTROL +]** アイコンをタップまたはクリックして、フォームにタブを追加します。タブの名前を変更するには、デフォルト名をタップまたはクリックし、「**[!UICONTROL 設定]**」に新しい名前を指定します。
@@ -62,7 +62,7 @@ Adobe Experience Manager (AEM) Assets では、フォルダープロパティペ
 
 1. ツールバーの「**[!UICONTROL 保存]**」をタップまたはクリックして変更内容を保存します。
 
-### フォームを作成するコンポーネント  {#components-to-build-forms}
+### フォームを作成するコンポーネント {#components-to-build-forms}
 
 「**[!UICONTROL フォームを作成]**」タブには、フォルダーメタデータスキーマフォーム内で使用するフォーム項目が一覧表示されます。「**[!UICONTROL 設定]**」タブには、「**[!UICONTROL フォームを作成]**」タブで選択した各項目の属性が表示されます。以下は、「**[!UICONTROL フォームを作成]**」タブで使用可能なフォーム項目のリストです。
 
@@ -103,7 +103,7 @@ Adobe Experience Manager (AEM) Assets では、フォルダープロパティペ
 
 **[!UICONTROL クラス]**：プロパティに関連付けられているオブジェクトクラス。
 
-## フォルダーメタデータスキーマフォームの削除  {#delete-folder-metadata-schema-forms}
+## フォルダーメタデータスキーマフォームの削除 {#delete-folder-metadata-schema-forms}
 
 フォルダーメタデータスキーマフォームページから、フォルダーメタデータスキーマフォームを削除できます。フォームを削除するには、フォームを選択し、ツールバーの「削除」アイコンをタップまたはクリックします。
 
@@ -113,9 +113,9 @@ Adobe Experience Manager (AEM) Assets では、フォルダープロパティペ
 
 フォルダーメタデータスキーマフォームページから、またはフォルダーの作成時に、フォルダーにフォルダーメタデータスキーマを割り当てることができます。
 
-フォルダーのメタデータスキーマを設定すると、スキーマフォームのパスは、フォルダーノードの `folderMetadataSchema` プロパティ（.*/jcr:content* 下）に保存されます。
+フォルダーのメタデータスキーマを設定すると、スキーマフォームのパスは、フォルダーノードの `folderMetadataSchema` プロパティ（.*/jcr:content*.
 
-### フォルダーメタデータスキーマページからのスキーマへの割り当て  {#assign-to-a-schema-from-the-folder-metadata-schema-page}
+### フォルダーメタデータスキーマページからのスキーマへの割り当て {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
 1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL フォルダーメタデータスキーマ]**&#x200B;に移動します。
 1. フォルダーメタデータスキーマフォームページから、フォルダーに適用するスキーマフォームを選択します。
