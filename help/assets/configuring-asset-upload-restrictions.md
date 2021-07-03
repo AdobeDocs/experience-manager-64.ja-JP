@@ -3,16 +3,16 @@ title: アセットのアップロード制限の設定
 description: Adobe Experience Manager（AEM）Assets の設定でユーザーがアップロードできるアセット（ファイル）のタイプを制限する方法を学習します。
 contentOwner: AG
 feature: アップロード，アセット取り込み，アセット管理
-role: Administrator,Architect
+role: Admin,Architect
 exl-id: 0d817cfa-ae06-442a-ad89-5fe619bb2eff
-source-git-commit: 440194476a89092451f9fae80b5c63f055fca54e
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 90%
 
 ---
 
-# アセットのアップロード制限の設定{#configuring-asset-upload-restrictions}
+# アセットのアップロード制限の設定 {#configuring-asset-upload-restrictions}
 
 Adobe Experience Manager（AEM）Assets の設定で、ユーザーがアップロードできるアセット（ファイル）のタイプを制限できます。この機能により、望ましくない形式のアセットや悪意のあるファイルがユーザーによってアップロードされないようにすることができます。`Day CQ DAM Asset Upload Restriction` サービスを使用すると、ユーザーがアップロードできるファイルの種類を制御できます。デフォルトでは、AEM Assets はすべての MIME タイプのアセットのアップロードを許可します。ただし、アップロードを特定の MIME タイプのファイルのみに制限するようにサービスを設定できます。
 
