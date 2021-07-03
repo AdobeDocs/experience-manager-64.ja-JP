@@ -3,16 +3,16 @@ title: Camera Raw サポート
 description: Adobe Experience Manager AssetsでCamera Rawサポートを有効にする方法を説明します。
 contentOwner: AG
 feature: 開発者ツール
-role: Administrator
+role: Admin
 exl-id: 637c57ae-55a6-4032-9821-b55839b3e567
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 45%
 
 ---
 
-# Camera Rawを使用して画像を処理{#camera-raw-support}
+# Camera Rawを使用した画像の処理 {#camera-raw-support}
 
 CR2、NEF、RAFなどの生のファイル形式を処理し、画像をJPEG形式でレンダリングするCamera Rawのサポートを有効にできます。 この機能は、Adobe Experience Manager Assetsでは、ソフトウェア配布から入手可能な[Camera Rawパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)を使用してサポートされます。
 
@@ -71,7 +71,7 @@ Adobe Experience Manager AssetsでCamera Rawサポートを有効にするには
 
 Camera Raw 画像に対する編集を保存すると、その画像に対して、新しいレンディション「`AdjustedPreview.jpg`」が生成されます。Camera Raw 以外の画像タイプの場合は、変更内容がすべてのレンディションに反映されます。
 
-## ベストプラクティス、既知の問題、および制限  {#best-practices}
+## ベストプラクティス、既知の問題、および制限 {#best-practices}
 
 この機能には次の制限があります。
 
