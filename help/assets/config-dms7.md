@@ -7,11 +7,11 @@ topic-tags: dynamic-media
 content-type: reference
 exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
 feature: 設定，Scene7モード
-role: Administrator,Business Practitioner,Developer
-source-git-commit: 9e9108bbfcd1c71004e494e73891d3ab0afd4d74
+role: Admin,User,Developer
+source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
 workflow-type: tm+mt
 source-wordcount: '5594'
-ht-degree: 57%
+ht-degree: 58%
 
 ---
 
@@ -45,7 +45,7 @@ Dynamic Mediaを有効にするには、コマンドラインから`dynamicmedia
 java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.4.0.jar -gui -r author,dynamicmedia_scene7 -p 4502
 ```
 
-## （オプション）Dynamic Media のプリセットおよび設定を 6.3 から 6.4 にダウンタイムなしで移行{#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
+## （オプション）Dynamic Media のプリセットおよび設定を 6.3 から 6.4 にダウンタイムなしで移行 {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
 Experience ManagerDynamic Mediaを6.3から6.4（ダウンタイムなしのデプロイメント機能を含む）にアップグレードする場合は、次のcurlコマンドを実行して、すべてのプリセットと設定をCRXDE Liteで`/etc`から`/conf`に移行します。
 
@@ -61,7 +61,7 @@ Experience ManagerDynamic Mediaを6.3から6.4（ダウンタイムなしのデ�
 
 `curl -u admin:admin http://localhost:4502/libs/settings/dam/dm/presets/viewer.pushviewerpresets`
 
-## （オプション）一括アセット移行用の機能パック18912をインストールしています{#installing-feature-pack}
+## （オプション）一括アセット移行用の機能パック18912をインストールしています {#installing-feature-pack}
 
 機能パック18912では、FTPを使用してアセットを一括で取り込むか、Dynamic Media — ハイブリッドモードまたはDynamic Media ClassicからDynamic Media - Scene7モードにExperience Manager時にアセットを移行できます。 Adobe Professional Servicesから入手できます。
 
@@ -110,14 +110,14 @@ Dynamic Mediaパスワードを設定する前に、パスワードをCloud Serv
    * ページの右上付近にあるナビゲーションバーで、**[!UICONTROL 設定]** / **[!UICONTROL アプリケーション設定]** / **[!UICONTROL 公開設定]** / **[!UICONTROL Image Server]**&#x200B;をタップします。
    * Image Server 公開ページの「公開コンテキスト」ドロップダウンリストで、「**[!UICONTROL 画像サービングをテスト]**」を選択します。
    * 「クライアントアドレスフィルター」で、**[!UICONTROL 「追加」]**&#x200B;をタップします。
-   * アドレスを有効（オン）にするには、チェックボックスをオンにします。 （Dispatcher IPではなく）Experience ManagerオーサーインスタンスのIPアドレスを入力します。
+   * アドレスを有効（オン）にするには、チェックボックスをオンにします。（Dispatcher IPではなく）Experience ManagerオーサーインスタンスのIPアドレスを入力します。
    * 「**[!UICONTROL 保存]**」をタップします。
 
 これで基本設定が完了しました。Dynamic Media - Scene7 モードを使用する準備が整いました。
 
 設定をさらにカスタマイズする場合は、[（オプション）Dynamic Media - Scene7 モードでの詳細設定](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode)で示す任意のタスクをオプションで実行できます。
 
-## （オプション）Dynamic Media - Scene7 モードでの詳細設定{#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
+## （オプション）Dynamic Media - Scene7 モードでの詳細設定 {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
 Dynamic Media - Scene7 モードのセットアップと設定をさらにカスタマイズしたり、パフォーマンスを最適化したりする場合は、次のオプションタスクを 1 つまたは複数実行できます。
 
@@ -141,7 +141,7 @@ Dynamic Media - Scene7 モードのセットアップと設定をさらにカス
 * [サポートされていない形式のカスタム MIME タイプの追加](#adding-mime-types-for-unsupported-formats)
 * [画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
 
-#### Image Server の公開設定  {#publishing-setup-for-image-server}
+#### Image Server の公開設定 {#publishing-setup-for-image-server}
 
 公開設定は、アセットがデフォルトで Dynamic Media からどのように配信されるかを決定します。設定が指定されていない場合、Dynamic Media は、公開設定で定義されたデフォルト設定に従ってアセットを配信します。例えば、解像度属性が含まれていない画像を配信するように要求した場合、画像は初期設定のオブジェクト解像度設定で配信されます。
 
@@ -161,7 +161,8 @@ Image Server 画面では、画像を配信するためのデフォルト設定�
 
 [!UICONTROL アプリケーションの一般設定]ページを開くには、Dynamic Media Classicグローバルナビゲーションバーで、**[!UICONTROL 設定]** / **[!UICONTROL アプリケーション設定]** / **[!UICONTROL 一般設定]**&#x200B;をタップします。
 
-**[!UICONTROL サーバー -]**&#x200B;アカウントのプロビジョニング時に、会社に割り当てられているサーバーが Dynamic Media によって自動的に提供されます。これらのサーバーは、Web サイトとアプリケーションの URL 文字列を生成するのに使用されます。これらの URL 呼び出しは、アカウントに固有です。Experience Manager・サポートによって明示的に指示されない限り、サーバ名は変更しないでください。
+**[!UICONTROL サーバー -]**アカウントのプロビジョニング時に、会社に割り当てられているサーバーが Dynamic Media によって自動的に提供されます。これらのサーバーは、Web サイトとアプリケーションの URL 文字列を生成するのに使用されます。これらの URL 呼び出しは、アカウントに固有です。Experience Manager のサポートから明示的に指示されない限り、サーバー名は変更しないでください。
+
 
 **[!UICONTROL 画像を上書き]** - Dynamic Media は、2 つのファイルが同じ名前を持つことを許可しません。各項目の URL ID（ファイル名から拡張子を取り除いた部分）は一意である必要があります。これらのオプションは、置き換えるアセットのアップロード方法、つまり元のアセットを置き換えるか、重複させるかを指定します。重複するアセット名には「-1」が付けられます（例えば、chair.tif は chair-1.tif に変更されます）。これらのオプションは、元のアセットとは別のフォルダーにアップロードされるアセットや、元のアセットと異なるファイル名拡張子（JPG、TIF、PNG など）を持つアセットに影響を与えます。
 
@@ -362,7 +363,7 @@ Dynamic Media では、バッチセットプリセットを使用して、アセ
 1. プリセットリストパネルの「**[!UICONTROL 追加]**」をタップして、画面の右側にある「**[!UICONTROL 詳細]**」パネルの定義フィールドを有効にします。
 1. **[!UICONTROL 詳細]**&#x200B;パネルの「**[!UICONTROL プリセット名]**」フィールドに、プリセットの名前を入力します。
 1. **[!UICONTROL バッチセットの種類]**&#x200B;ドロップダウンメニューで、プリセットの種類を選択します。
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * **[!UICONTROL アプリケーション設定]** / **[!UICONTROL バッチセットプリセット]** / **[!UICONTROL デフォルトの命名]**&#x200B;で設定したデフォルトの命名規則を使用している場合は、**[!UICONTROL アセットの命名規則]**&#x200B;を展開し、**[!UICONTROL ファイルの命名&lt;a9/ドロップ下のリストから、「**[!UICONTROL &#x200B;デフォルト&#x200B;]**」をタップします。]**
    * プリセット&#x200B;**[!UICONTROL アセットの命名規則]**&#x200B;を設定したときに新しい命名規則を定義するには、**[!UICONTROL ファイルの命名]**&#x200B;ドロップダウンリストで「**[!UICONTROL カスタム]**」をタップします。
@@ -462,7 +463,7 @@ spin-01-01
 
    プリセットをアクティブにすると、アセットを Dynamic Media にアップロードする際に、バッチセットプリセットを適用してセットを生成できます。
 
-### （オプション）Dynamic Media - Scene7 モードのパフォーマンスの調整  {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
+### （オプション）Dynamic Media - Scene7 モードのパフォーマンスの調整 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
 Dynamic Media - Scene7モードのスムーズな実行を維持するために、Adobeでは、次の同期パフォーマンス/拡張性の微調整のヒントをお勧めします。
 
@@ -473,9 +474,9 @@ Dynamic Media - Scene7モードのスムーズな実行を維持するために�
 
 #### 様々なファイル形式の処理に対応する定義済みのジョブパラメーターを更新する
 
-ジョブパラメーターを調整して、ファイルアップロード時の処理を高速化できます。例えば、PSDファイルをアップロードしても、テンプレートとして処理したくない場合は、レイヤー抽出をfalse（オフ）に設定できます。 この場合、調整されたジョブパラメータは次のように表示されます。`process=None&createTemplate=false`.
+ジョブパラメーターを調整して、ファイルアップロード時の処理を高速化できます。例えば、PSD ファイルをアップロードしても、テンプレートとして処理しない場合は、レイヤー抽出を false（オフ）に設定できます。この場合、調整されたジョブパラメーターは次のように表示されます。`process=None&createTemplate=false`
 
-テンプレートの作成を有効にする場合は、次のパラメーターを使用します。`process=MaintainLayers&layerNaming=AppendName&createTemplate=true`.
+テンプレートの作成を有効にする場合は、次のパラメーターを使用します。`process=MaintainLayers&layerNaming=AppendName&createTemplate=true`
 
 <!-- REMOVED BASED ON CQDOC-17657 You can tune job parameters for faster processing when you upload files. For example, if you are uploading PSD files, but do not want to process them as templates, you can set layer extraction to false (off). In such case, the tuned job parameter would appear as `process=None&createTemplate=false`. -->
 
@@ -560,7 +561,7 @@ Scene7アップロード接続設定は、Experience ManagerアセットをDynam
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 
-### （オプション）レプリケーション用のアセットのフィルタリング{#optional-filtering-assets-for-replication}
+### （オプション）レプリケーション用のアセットのフィルタリング {#optional-filtering-assets-for-replication}
 
 Dynamic Media以外のデプロイメントでは、*すべての*&#x200B;アセット（画像とビデオの両方）をExperience Managerオーサー環境からExperience Managerパブリッシュノードにレプリケートします。 アセットはパブリッシュサーバーによってExperience Managerも配信されるので、このワークフローが必要です。
 
