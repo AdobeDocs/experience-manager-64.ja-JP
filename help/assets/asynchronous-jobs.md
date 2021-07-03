@@ -3,12 +3,12 @@ title: ' [!DNL Adobe Experience Manager]で非同期操作を設定します。'
 description: リソースを集中的に消費する一部のタスクを非同期的に完了し、 [!DNL Experience Manager Assets]でパフォーマンスを最適化します。
 contentOwner: AG
 feature: アセット管理
-role: Business Practitioner
+role: User
 exl-id: 0abdfe87-d932-41dd-b1e6-9f5fa5b924fe
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '630'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 18%
 >
 >デフォルトでは、[!DNL Assets]タスクは並行して実行されます。 `N`がCPUコアの数である場合、デフォルトでは`N/2`タスクを並行して実行できます。 タスクキューのカスタム設定を使用するには、[!UICONTROL Webコンソール]で&#x200B;**[!UICONTROL Async Operation Default Queue]**&#x200B;設定を変更します。 詳しくは、[キューの設定](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations)を参照してください。
 
-## 非同期操作のステータスを監視します。{#monitoring-the-status-of-asynchronous-operations}
+## 非同期操作のステータスの監視 {#monitoring-the-status-of-asynchronous-operations}
 
 [!DNL Assets]が操作を非同期で処理する場合は常に、[!DNL Experience Manager] [インボックス](/help/sites-authoring/inbox.md)に電子メールで通知が届きます。 非同期操作のステータスの詳細を表示するには、**[!UICONTROL 非同期ジョブステータス]**&#x200B;ページに移動します。
 
@@ -55,7 +55,7 @@ ht-degree: 18%
    >
    >タスクのステータスがアクティブまたはキューに登録されている場合は、タスクを削除できません。
 
-## 完了したタスクの削除{#purge-completed-tasks}
+## 完了したタスクの削除 {#purge-completed-tasks}
 
 [!DNL Experience Manager Assets] は、毎日0100時間にパージタスクを実行して、1日以上経過した完了済みの非同期タスクを削除します。
 
@@ -70,7 +70,7 @@ ht-degree: 18%
 
    ![非同期タスクのパージをスケジュールする設定](assets/purge_job.png)
 
-## 非同期削除操作のしきい値の設定{#configure-thresholds-for-asynchronous-delete-operations}
+## 非同期削除操作のしきい値の設定 {#configure-thresholds-for-asynchronous-delete-operations}
 
 削除するアセットまたはフォルダーの数がしきい値を超えると、削除操作が非同期的に実行されます。
 
@@ -80,7 +80,7 @@ ht-degree: 18%
 
    ![アセットを削除するタスクのしきい値の制限を設定](assets/delete_threshold.png)
 
-## 非同期移動操作のしきい値の設定{#configure-thresholds-for-asynchronous-move-operations}
+## 非同期移動操作のしきい値の設定 {#configure-thresholds-for-asynchronous-move-operations}
 
 移動するアセット、フォルダーまたは参照の数がしきい値の数を超えると、移動操作が非同期的に実行されます。
 
