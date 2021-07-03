@@ -3,16 +3,16 @@ title: メディアハンドラーとワークフローを使用したアセッ�
 description: 様々なハンドラーの概要と、ワークフローでハンドラーを使用してアセットに対してタスクを実行する方法について説明します。
 contentOwner: AG
 feature: ワークフロー，レンディション
-role: Business Practitioner
+role: User
 exl-id: 7694c68d-0a17-4052-8fbe-9bf45b229e81
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '2230'
 ht-degree: 45%
 
 ---
 
-# メディアハンドラーとワークフローを使用したアセットの処理{#processing-assets-using-media-handlers-and-workflows}
+# メディアハンドラーとワークフローを使用したアセットの処理 {#processing-assets-using-media-handlers-and-workflows}
 
 Adobe Experience Manager Assetsには、アセットを処理するためのデフォルトのワークフローとメディアハンドラーのセットが用意されています。 ワークフローは、一般的なアセット管理および処理タスクを定義し、特定のタスクをメディアハンドラーに委任します（サムネールの生成やメタデータの抽出など）。
 
@@ -28,7 +28,7 @@ Adobe Experience Manager Assetsには、アセットを処理するためのデ�
 >
 >Experience Managerアセットでサポートされるすべての形式と、各形式でサポートされる機能の説明については、 [アセットでサポートされる形式](assets-formats.md)を参照してください。
 
-## デフォルトのメディアハンドラー{#default-media-handlers}
+## デフォルトのメディアハンドラー {#default-media-handlers}
 
 Assets内では、次のメディアハンドラーを使用でき、最も一般的なMIMEExperience Managerを処理できます。
 
@@ -60,7 +60,7 @@ Assets内では、次のメディアハンドラーを使用でき、最も一�
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
-## ワークフローでメディアハンドラーを使用して、アセットに対するタスクを実行する{#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
+## ワークフローでメディアハンドラーを使用したアセットに対するタスクの実行 {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
 
 メディアハンドラーは、ワークフローで使用されるサービスです。
 
@@ -81,11 +81,11 @@ Experience Managerには、アセットを処理するためのデフォルト�
 1. ページを更新します。メディアハンドラーの横に、無効であることを示すアイコンが表示されます。
 1. メディアハンドラーを有効にするには、メディアハンドラーの名前の横にある「**[!UICONTROL Enable]**」をクリックします。
 
-### メディアハンドラーの作成{#creating-a-new-media-handler}
+### メディアハンドラーの作成 {#creating-a-new-media-handler}
 
 新しいメディアタイプをサポートしたり、アセットに対して特定のタスクを実行したりするには、メディアハンドラーを作成する必要があります。 ここでは、その進め方について説明します。
 
-#### 重要なクラスおよびインターフェイス  {#important-classes-and-interfaces}
+#### 重要なクラスおよびインターフェイス {#important-classes-and-interfaces}
 
 実装を開始するための最適な方法は、最も多くの点について対応し、適切なデフォルト動作を提供している付属の抽象実装から継承することです。それが `com.day.cq.dam.core.AbstractAssetHandler` クラスです。
 
@@ -463,7 +463,7 @@ Experience Managerを使用すると、ワークフロー内で任意のコマ�
 * 一時ディレクトリを削除します。
 * 指定した場合は、それらのレンディションに基づいてサムネールを作成します。サムネールの数とサイズは、ステップの引数で定義されます。
 
-### ImageMagick {#an-example-using-imagemagick}の使用例
+### ImageMagickの使用例 {#an-example-using-imagemagick}
 
 次の例は、コマンドライン処理のステップを設定する方法を示しています。 MIMEタイプgifまたはtiffのアセットがExperience Managerサーバー上の`/content/dam`に追加されるたびに、元の反転画像が3つのサムネール(140x100、48x48、10x250)と共に作成されます。
 
@@ -499,7 +499,7 @@ Experience Managerを使用すると、ワークフロー内で任意のコマ�
 1. **[!UICONTROL CQ5 DAM]** コンソール（例：`http://localhost:4502/libs/wcm/core/content/damadmin.html`）を開きます。
 1. アセット `myImage.tiff` を開き、反転画像と 3 つのサムネールが作成されたことを確認します。
 
-#### CommandLineProcessプロセスステップ{#configuring-the-commandlineprocess-process-step}の設定
+#### CommandLineProcessプロセスステップの設定 {#configuring-the-commandlineprocess-process-step}
 
 ここでは、**[!UICONTROL の]**&#x200B;プロセス引数`CommandLineProcess`を設定する方法について説明します。[!UICONTROL プロセス引数]の値はコンマで区切ります。値の先頭を空白にすることはできません。
 
