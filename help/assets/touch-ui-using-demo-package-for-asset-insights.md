@@ -2,17 +2,17 @@
 title: アセットインサイト用デモパッケージの使用
 description: デモパッケージを使用して、AdobeアセットインサイトでWebページのデータをキャプチャし、インサイトを生成できるようにします。
 contentOwner: AG
-feature: アセットインサイト，アセットレポート
-role: Business Practitioner,Administrator
+feature: アセットインサイト、アセットレポート
+role: User,Admin
 exl-id: c6d321f5-4c48-47f2-bff1-c4da988c0e84
-source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 59%
+ht-degree: 62%
 
 ---
 
-# アセットインサイト用のデモパッケージ{#using-demo-package-for-asset-insights}の使用
+# アセットインサイト用デモパッケージの使用 {#using-demo-package-for-asset-insights}
 
 デモパッケージを使用して、AdobeアセットインサイトでサンプルWebページのデータをキャプチャし、インサイトを生成できます。
 
