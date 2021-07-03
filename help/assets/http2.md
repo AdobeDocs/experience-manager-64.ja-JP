@@ -11,11 +11,11 @@ content-type: reference
 discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 exl-id: 59cd9f8c-6d01-448d-bf57-bdc9fd2e381b
 feature: アセット管理
-role: Administrator,Business Practitioner
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+role: Admin,User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '733'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 99%
 
 アドビは、パフォーマンスの向上という全体的な利点をもたらすコンテンツの HTTP/2 配信に対応しました。
 
-## HTTP/2 とは {#what-is-http}
+## HTTP/2 とは  {#what-is-http}
 
 HTTP/2 によりブラウザーとサーバーの通信が改善され、必要な処理能力を抑えながら情報をより高速に転送できます。
 
@@ -31,7 +31,7 @@ HTTP/2 によりブラウザーとサーバーの通信が改善され、必要�
 
 [https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/](https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/)
 
-## コンテンツ配信を HTTP/2 に移行する主なメリット {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
+## コンテンツ配信を HTTP/2 に移行する主なメリット  {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
 パフォーマンスがどれくらい向上するかは、Web サイトのコード、Dynamic Media の使用方法、消費者のデバイス、画面と場所などに応じて異なります。
 
@@ -44,7 +44,7 @@ HTTP/2 によりブラウザーとサーバーの通信が改善され、必要�
 
 [https://http2.akamai.com/demo](https://http2.akamai.com/demo)
 
-## HTTP/2 に切り替えるには  {#am-i-eligible-to-switch-over-to-http}
+## HTTP/2 に切り替えるには {#am-i-eligible-to-switch-over-to-http}
 
 HTTP/2 を使用するには、以下の要件を満たしている必要があります。
 
@@ -56,7 +56,7 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 
     専用ドメインがない場合、アドビが 2018 年にお客様の HTTP/2 への切り替えをスケジュールいたします。
 
-## Dynamic Media アカウントに対して HTTP/2 を有効にする方法 {#what-is-the-process-for-enabling-http-for-my-dynamic-media-account}
+## Dynamic Media アカウントに対して HTTP/2 を有効にする方法  {#what-is-the-process-for-enabling-http-for-my-dynamic-media-account}
 
 HTTP/2 に切り替えるためのリクエストを開始する必要があります。自動的にはおこなわれません。
 
@@ -78,7 +78,7 @@ HTTP/2 に切り替えるためのリクエストを開始する必要があり�
       Firefox と Chrome の場合、「HTTP/2 and SPDY Indicator」という拡張があります。ブラウザーは HTTP/2 をセキュア接続でのみサポートするので、確認するには https の付いた URL を呼び出す必要があります。この拡張では、HTTP/2 がサポートされている場合、青い稲妻マークおよび「X-Firefox-Spdy: h2」というヘッダーによって示されます。
 
 
-## HTTP/2 への切り替え見込み時期 {#when-can-i-expect-to-be-transitioned-over-to-http}
+## HTTP/2 への切り替え見込み時期  {#when-can-i-expect-to-be-transitioned-over-to-http}
 
 リクエストは、テクニカルサポートによって受信された順に処理されます。
 
@@ -86,13 +86,13 @@ HTTP/2 に切り替えるためのリクエストを開始する必要があり�
 >
 >HTTP/2 への切り替えにはキャッシュのクリアが含まれるので、リードタイムが長くなる場合があります。そのため、一度に処理できる顧客の移行は数件のみとなります。
 
-## HTTP/2 への切り替えに伴うリスク  {#what-are-the-risks-with-moving-to-http}
+## HTTP/2 への切り替えに伴うリスク {#what-are-the-risks-with-moving-to-http}
 
 HTTP/2 への切り替えには、新しい CDN 設定への移行が伴うので、CDN でキャッシュがクリアされます。
 
 キャッシュが再作成されるまで、キャッシュされていないコンテンツはアドビの元のサーバーに直接アクセスして取得されます。このため、元のサーバーからリクエストをプルするときに許容できるパフォーマンスが維持されるように、アドビでは一度に少数の顧客の移行を処理するよう計画します。
 
-## URL または Web サイトが HTTP/2 でアクティベートされていることを確認する方法  {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
+## URL または Web サイトが HTTP/2 でアクティベートされていることを確認する方法 {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
 ブラウザーにはこのことが表示されないので、拡張機能をダウンロードする必要があります。
 
