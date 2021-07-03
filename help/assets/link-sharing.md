@@ -3,16 +3,16 @@ title: リンクを使用したアセットの共有
 description: アセット、フォルダー、コレクションをURLとして共有します。
 contentOwner: AG
 feature: リンク共有，アセット管理
-role: Business Practitioner
+role: User
 exl-id: bf4b0acf-4103-4da1-8666-c6d9fe80c41f
-source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 36%
 
 ---
 
-# リンク{#asset-link-sharing}を介したアセットの共有
+# リンクを使用したアセットの共有 {#asset-link-sharing}
 
 [!DNL Adobe Experience Manager Assets] では、アセット、フォルダー、コレクションをURLとして組織のメンバーや外部（パートナーやベンダーを含む）と共有できます。リンクによるアセットの共有は、外部の関係者が [!DNL Assets] にログインすることなくリソースを利用するための便利な方法です。
 
