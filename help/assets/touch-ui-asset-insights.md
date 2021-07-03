@@ -2,13 +2,13 @@
 title: アセットインサイト機能を使用して画像の使用状況を追跡する
 description: アセットインサイト機能を使用すると、サードパーティのWebサイト、マーケティングキャンペーン、Adobeのクリエイティブソリューションで使用される画像のユーザーの評価と使用状況統計を追跡できます。
 contentOwner: AG
-feature: アセットインサイト，アセットレポート
-role: Business Practitioner,Administrator
+feature: アセットインサイト、アセットレポート
+role: User,Admin
 exl-id: a9604b09-1c83-4c1e-aff7-13107b898cb3
-source-git-commit: af2d14f92efb88143ccefe7fe29f83ae515e5981
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '798'
-ht-degree: 59%
+ht-degree: 63%
 
 ---
 
@@ -26,9 +26,9 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->インサイトは、画像に対してのみサポートおよび提供されます。
+>インサイトは画像に対してのみサポートされており、提供されています。
 
-## アセットの統計の表示{#viewing-statistics-for-an-asset}
+## アセットの統計の表示 {#viewing-statistics-for-an-asset}
 
 メタデータページで、アセットインサイトのスコアを表示できます。
 
@@ -61,11 +61,11 @@ ht-degree: 59%
    >
    >「ソリューション」セクションのデータとは異なり、「パフォーマンス統計」セクションには最新のデータが表示されます。
 
-1. パフォーマンスデータを得るためにWebサイトに組み込んだアセットの埋め込みコードを取得するには、アセットのサムネールの下の「**[!UICONTROL 埋め込みコードの取得]**」をクリックします。 サードパーティのWebページに埋め込みコードを含める方法について詳しくは、[Webページでのページトラッカーと埋め込みコードの使用](touch-ui-using-page-tracker.md)を参照してください。
+1. パフォーマンスデータを得るために Web サイトに組み込んだアセットの埋め込みコードを取得するには、アセットのサムネールの下の「**[!UICONTROL 埋め込みコードの取得]**」をクリックします。サードパーティのWebページに埋め込みコードを含める方法について詳しくは、[Webページでのページトラッカーと埋め込みコードの使用](touch-ui-using-page-tracker.md)を参照してください。
 
    ![chlimage_1-303](assets/chlimage_1-303.png)
 
-## アセットの集計統計の表示{#viewing-aggregate-statistics-for-assets}
+## アセットの集計統計の表示 {#viewing-aggregate-statistics-for-assets}
 
 **[!UICONTROL インサイト表示]**&#x200B;を使用すると、フォルダー内のすべてのアセットのスコアを同時に表示できます。
 
