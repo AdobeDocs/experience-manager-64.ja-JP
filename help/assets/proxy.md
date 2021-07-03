@@ -3,12 +3,12 @@ title: Assets のプロキシ開発
 description: 'プロキシは、プロキシワーカーを使用してジョブを処理する AEM インスタンスです。AEM のプロキシ、サポートされている操作、プロキシコンポーネントを設定する方法と、カスタムプロキシワーカーを開発する方法について説明します。 '
 contentOwner: AG
 feature: アセット処理
-role: Administrator, Architect
+role: Admin, Architect
 exl-id: c7511326-697e-4749-ab46-513cdbaa00d8
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '902'
-ht-degree: 73%
+ht-degree: 75%
 
 ---
 
@@ -20,9 +20,9 @@ Adobe Experience Manager（AEM）Assets では、プロキシを使用して、�
 
 プロキシが個別の AEM インスタンスである場合は、AEM オーサリングインスタンスの負荷の軽減に役立ちます。デフォルトでは、AEM Assetsは同じJVM（プロキシ経由で外部化）でアセット処理タスクを実行し、AEMオーサリングインスタンスの負荷を軽減します。
 
-## プロキシ（HTTPアクセス） {#proxy-http-access}
+## プロキシ（HTTP アクセス） {#proxy-http-access}
 
-プロキシは、次の場所で処理ジョブを受け入れるように設定されている場合、HTTPサーブレットを介して使用できます。`/libs/dam/cloud/proxy`. このサーブレットは、POST されたパラメーターから Sling ジョブを作成します。作成されたジョブはプロキシのジョブキューに追加され、適切なプロキシワーカーに接続されます。
+プロキシは、次の場所でのジョブの処理を受け入れるよう設定されている場合に、HTTP Servlet を介して使用できます。  `/libs/dam/cloud/proxy`.このサーブレットは、POST されたパラメーターから Sling ジョブを作成します。作成されたジョブはプロキシのジョブキューに追加され、適切なプロキシワーカーに接続されます。
 
 ### サポートされている操作 {#supported-operations}
 
@@ -78,7 +78,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 >
 >ワーカーがプロキシワーカーとして認識されるには、[sling JobProcessor](https://sling.apache.org/site/eventing-and-jobs.html) を実装する必要があります。
 
-### クライアント API  {#client-api}
+### クライアント API {#client-api}
 
 [`JobService`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html) は、ジョブを作成および削除し、ジョブの結果を取得するためのメソッドを提供する OSGi サービスとして使用できます。このサービスのデフォルトの実装（`JobServiceImpl`）は、HTTP クライアントを使用して、リモートプロキシサーブレットと通信します。
 
