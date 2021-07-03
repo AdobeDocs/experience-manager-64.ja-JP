@@ -3,9 +3,9 @@ title: 関連アセット
 description: 特定の共通属性を共有するアセットを関連付ける方法について説明します。この機能を使用して、アセット間にソース／派生関係を作成することもできます。
 contentOwner: AG
 feature: アセット管理、コラボレーション
-role: Business Practitioner
+role: User
 exl-id: d19544c4-c8e7-4a39-9c86-15a46dca848e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 99%
@@ -18,7 +18,7 @@ Adobe Experience Manager (AEM) Assets では、関連アセット機能を使用
 
 このようにすることで、ベンダーやエージェンシーに低解像度のファイル（PDF や JPG など）を共有し、要求された場合にのみ柔軟に高解像度のファイル（INDD など）を提供することができます。
 
-## アセットの関連付け  {#relating-assets}
+## アセットの関連付け {#relating-assets}
 
 1. Assets のインターフェイスから、関連付けをおこなうアセットのプロパティページを開きます。
 
@@ -63,7 +63,7 @@ Adobe Experience Manager (AEM) Assets では、関連アセット機能を使用
 
 1. 「**[!UICONTROL OK]**」をクリックまたはタップして、ダイアログを閉じます。関係を削除したアセットは、「**[!UICONTROL 関連]**」セクションの関連付けられたアセットのリストから削除されます。
 
-## 関連アセットの翻訳  {#translating-related-assets}
+## 関連アセットの翻訳 {#translating-related-assets}
 
 関連アセット機能を使用してアセット間でソース／派生関係を作成すると、翻訳ワークフローにも役立ちます。派生アセットで翻訳ワークフローを実行すると、AEM Assets は自動的にソースファイルが参照するすべてのアセットを取得し、翻訳用に組み込みます。このようにして、ソースアセットに参照されているアセットが、ソースおよび派生アセットとともに翻訳されます。例えば、以下のように英語のコピーに派生アセットおよびそのソースファイルが含まれている場合を考えてみます。
 
