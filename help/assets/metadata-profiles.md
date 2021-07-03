@@ -3,12 +3,12 @@ title: メタデータプロファイルを使用したフォルダー内のす�
 description: アセットのメタデータプロファイルについて理解します。また、メタデータプロファイルを作成し、フォルダーのアセットに適用する方法も学習します。
 contentOwner: AG
 feature: メタデータ
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: a7b0f1d6-7deb-4565-8c7f-27cad7cd6bf8
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1233'
-ht-degree: 64%
+ht-degree: 65%
 
 ---
 
@@ -109,7 +109,7 @@ ht-degree: 64%
 
 1. 「**[!UICONTROL メタデータプロファイルをフォルダーに適用]**」をタップし、新たにアップロードしたアセットを受け取る 1 つまたは複数のフォルダーを選択して、「**[!UICONTROL 完了]**」をタップします。既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
-#### 「プロパティ」からのフォルダーへのメタデータプロファイルの適用 {#applying-metadata-profiles-to-folders-from-properties}
+#### 「プロパティ」からのフォルダーへのメタデータプロファイルの適用  {#applying-metadata-profiles-to-folders-from-properties}
 
 1. 左側のレールで、「**[!UICONTROL アセット]**」をタップし、メタデータプロファイルを適用するフォルダーに移動します。
 1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
@@ -124,7 +124,7 @@ ht-degree: 64%
 
 特定のフォルダーにプロファイルを適用できるだけでなく、グローバルにプロファイルを適用することもできます。これにより、AEM Assets にアップロードされている、すべてのフォルダー内にあるすべてのコンテンツに、選択したプロファイルを適用できます。メタデータプロファイルをグローバルに適用するには、次の手順に従います。
 
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam`に移動し、適切なプロファイルを適用して、「**[!UICONTROL 保存]**」をタップまたはクリックします。
 
@@ -134,13 +134,13 @@ ht-degree: 64%
 
       ![chlimage_1-493](assets/chlimage_1-493.png)
 
-## フォルダーからのメタデータプロファイルの削除{#removing-a-metadata-profile-from-folders}
+## フォルダーからのメタデータプロファイルの削除 {#removing-a-metadata-profile-from-folders}
 
 フォルダーからメタデータプロファイルを削除すると、サブフォルダーは自動的に親フォルダーのプロファイルの削除状態を継承します。ただし、フォルダー内で実行されたファイルの処理はそのまま維持されます。
 
 **[!UICONTROL ツール]**&#x200B;メニュー内で、またはフォルダー内にいる場合は「**[!UICONTROL プロパティ]**」で、メタデータプロファイルをフォルダーから削除できます。この節では、メタデータプロファイルをフォルダーから削除する両方の方法について説明します。
 
-### プロファイルユーザーインターフェイス{#removing-metadata-profiles-from-folders-via-profiles-user-interface}を使用したフォルダーからのメタデータプロファイルの削除
+### プロファイルユーザーインターフェイスを使用したフォルダーからのメタデータプロファイルの削除 {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
 プロファイルユーザーインターフェイスを使用してフォルダーからメタデータプロファイルを削除するには、次の手順に従います。
 
@@ -150,7 +150,7 @@ ht-degree: 64%
 
    名前がフォルダー名の下に表示されなくなっていることで、メタデータプロファイルがフォルダーに適用されていないことを確認できます。
 
-### 「プロパティ{#removing-metadata-profiles-from-folders-via-properties} 」を使用して、フォルダーからメタデータプロファイルを削除します。
+### 「プロパティ」でフォルダーからメタデータプロファイルを削除する {#removing-metadata-profiles-from-folders-via-properties}
 
 1. AEM のロゴをタップして「**[!UICONTROL アセット]**」に移動した後、メタデータプロファイルを削除するフォルダーに移動します。
 1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
