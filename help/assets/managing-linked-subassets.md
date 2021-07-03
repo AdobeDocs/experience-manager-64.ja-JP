@@ -3,16 +3,16 @@ title: 複合アセットを管理し、サブアセットを生成します。
 description: InDesign、Adobe Illustrator、Photoshopの各ファイル内からAEMアセットへの参照を作成する方法を説明します。 また、ページビューア機能を使用して、複数ページファイル（PDF、INDD、PPT、PPTX、AI ファイルなど）の個々のページを表示する方法についても説明します。
 contentOwner: AG
 feature: アセット管理
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: 9fa44b26-76f7-48e2-a9df-4fd1c0074158
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1412'
 ht-degree: 47%
 
 ---
 
-# サブアセットを含む複合アセットの管理{#managing-compound-assets}
+# サブアセットを含む複合アセットの管理 {#managing-compound-assets}
 
 Adobe Experience Manager (AEM) Assets では、アップロードされたファイルに、リポジトリ内の既存のアセットへの参照が含まれているかどうかを確認できます。この機能は、サポート対象のファイル形式でのみ使用できます。アップロードされたアセットに AEM アセットへの参照が含まれている場合、アップロードされたアセットと参照元のアセットの間に双方向のリンクが作成されます。
 
@@ -41,7 +41,7 @@ AEM Assets では&#x200B;**双方向の参照**&#x200B;をサポートしてい�
 
    ![chlimage_1-260](assets/chlimage_1-260.png)
 
-## Adobe InDesign:アセットを参照として追加{#add-aem-assets-as-references-in-adobe-indesign}
+## Adobe InDesign:アセットを参照として追加 {#add-aem-assets-as-references-in-adobe-indesign}
 
 InDesign ファイル内から AEM アセットを参照するには、AEM アセットを InDesign ファイルにドラッグするか、InDesign ファイルを ZIP ファイルとして書き出します。
 
@@ -53,7 +53,7 @@ InDesign ファイル内から AEM アセットを参照するには、AEM ア�
 
 INDDファイルがアップロードされると、リポジトリ内に`xmpMM:InstanceID`プロパティと`xmpMM:DocumentID`プロパティを持つアセットに対するクエリを実行することで、参照が取得されます。
 
-###  アセットをドラッグして参照を作成 {#create-references-by-dragging-aem-assets}
+###  アセットをドラッグして参照を作成  {#create-references-by-dragging-aem-assets}
 
 この手順は、[Adobe Illustrator](#refai)でアセットを参照として追加する場合の手順と似ています。
 
@@ -83,7 +83,7 @@ INDDファイルがアップロードされると、リポジトリ内に`xmpMM:
 >
 >複合アセット内のアセットも、ドキュメント ID とインスタンス ID に基づいて参照できます。この機能は、Adobe Illustrator と Adobe Photoshop のバージョンでのみ使用できます。その他の場合、AEM の以前のバージョンと同様に、メインの複合アセット内でリンクされたアセットの相対パスに基づいて参照が実行されます。
 
-## サブアセット{#generate-subassets}を作成します。
+## サブアセットの作成 {#generate-subassets}
 
 複数ページ形式(PDFファイル、AIファイル、Microsoft PowerPointファイル、Apple Keynoteファイル、Adobe InDesignファイル)のアセットをサポートしている場合、AEMは元のアセットの個々のページに対応するサブアセットを生成できます。 これらのサブアセットは&#x200B;*親*&#x200B;アセットにリンクされ、複数ページ表示が容易になります。 その他の目的では、サブアセットはAEMでは通常のアセットと同じように扱われます。
 
@@ -129,7 +129,7 @@ InDesign では、InDesign サーバーを使用してページを抽出でき�
 
 * **** 左パネルアイコンをクリックした後の左パネルからタイムラインオ ![プション](assets/do-not-localize/aem_leftrail_contentonly.png) に、ファイルのアクティビティストリームが表示されます。
 
-## ベストプラクティスと制限事項{#best-practice-limitation-tips}
+## ベストプラクティスと制限事項 {#best-practice-limitation-tips}
 
 * サブアセットの生成は、あらゆるリソースのデプロイメントで非常にExperience Managerを消費します。 複雑なアセットがアップロードされたときにサブアセットを生成する場合は、 DAMアセットの更新ワークフローにステップを追加します。 オンデマンドでサブアセットを生成する場合は、サブアセットを生成する別のワークフローを作成します。 専用のワークフローを使用すると、 DAMアセットの更新ワークフローの他の手順をスキップして、計算リソースを保存できます。
 
