@@ -6,16 +6,16 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: f341fae1-dda3-4917-b6db-ad02fec63702
 feature: アセット管理，ビデオ
-role: Business Practitioner
+role: User
 exl-id: eb652414-5b10-45af-a8b6-f1de649994c5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 49%
 
 ---
 
-# ビデオアセットの管理  {#managing-video-assets}
+# ビデオアセットの管理 {#managing-video-assets}
 
 Adobe Experience Manager（AEM）Assets でビデオアセットを管理および編集する方法について説明します。また、Dynamic Media のライセンスをお持ちの場合は、[Dynamic Media のビデオに関するドキュメント](video.md)を参照してください。
 
@@ -33,7 +33,7 @@ AEM Assetsは、拡張子がMP4のビデオアセットのプレビューを生�
 
 1. カードの&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップして、**[!UICONTROL 詳細]**&#x200B;ビューでビデオをプレビューします。
 
-   ビデオは、ブラウザーのネイティブなビデオプレーヤーで再生されます。再生、一時停止、音量の調節およびビデオの全画面表示をおこなうことができます。
+   ビデオは、ブラウザーのネイティブなビデオプレーヤーで再生されます。再生、一時停止、音量の調節およびビデオの全画面表示を行うことができます。
 
    ![chlimage_1-202](assets/chlimage_1-202.png)
 
