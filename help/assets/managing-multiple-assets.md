@@ -3,16 +3,16 @@ title: 複数のアセットおよびコレクションのメタデータの一�
 description: 多数のアセットとコレクションのメタデータを同時に編集して、共通のメタデータの変更をすばやく反映する方法を説明します。
 contentOwner: AG
 feature: アセット管理，メタデータ，コレクション
-role: Business Practitioner
+role: User
 exl-id: 3541b50a-f226-4a6a-9c2a-03a5f47f1c23
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 59%
 
 ---
 
-# 複数のアセットとコレクションの管理{#managing-multiple-assets-and-collections}
+# 複数のアセットとコレクションの管理 {#managing-multiple-assets-and-collections}
 
 複数のアセットおよびコレクションのメタデータを同時に編集して、共通のメタデータの変更をすばやくプロパゲートする方法を学習します。
 
@@ -29,7 +29,7 @@ Adobe Enterprise Manager（AEM）Assets を使用すると、複数のアセッ�
 >
 >一括編集メソッドは、フォルダーまたはコレクションで使用可能なアセットに対して機能します。フォルダー全体で使用可能なアセットや、共通の条件に一致するアセットについては、アセット検索結果からメタデータを一括更新できます。
 
-## 複数のアセットのメタデータプロパティの編集{#editing-metadata-properties-of-multiple-assets}
+## 複数のアセットのメタデータプロパティの編集 {#editing-metadata-properties-of-multiple-assets}
 
 1. Assets ユーザーインターフェイスで、編集するアセットの場所に移動します。
 1. 共通のプロパティを編集するアセットを選択します。
