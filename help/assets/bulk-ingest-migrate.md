@@ -11,15 +11,15 @@ content-type: reference
 discoiquuid: 6198e613-a867-49a8-b9a5-a05e7889821c
 exl-id: f9bb59f6-39a5-4804-8abe-12783d4162c9
 feature: 設定
-role: Administrator,Business Practitioner
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+role: Admin,User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 20%
 
 ---
 
-# 一括アセット移行用の機能パック18912をインストールしています{#installing-feature-pack}
+# 一括アセット移行用の機能パック18912をインストールしています {#installing-feature-pack}
 
 機能パック18912のインストールは&#x200B;_オプション_&#x200B;です。
 
