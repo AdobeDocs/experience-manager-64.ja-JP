@@ -6,9 +6,9 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 340b62f7-2405-4d2d-846d-2c444d6cc77b
 feature: アセット管理、開発者ツール
-role: Business Practitioner
+role: User
 exl-id: 9b4f16e6-dd91-4179-9629-576d801fcf43
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1608'
 ht-degree: 81%
@@ -47,7 +47,7 @@ Web インターフェイスから InDesign テンプレートを編集する機
 
 また、これらの形式でローカルシステムに出力をダウンロードできます。
 
-## 販促物の作成{#creating-a-collateral}
+## 販促物の作成 {#creating-a-collateral}
 
 今後のキャンペーンのために、パンフレット、チラシおよび広告など、デジタルの印刷可能な販促物を作成し、世界中のアウトレットストアで共有するシナリオについて考えてみます。テンプレートに基づいた販促物の作成は、チャネルをまたいで統合されたカスタマーエクスペリエンスを実現するのに役立ちます。デザイナーは、InDesign などのクリエイティブソリューションを使用してキャンペーンテンプレート（単一ページまたは複数ページ）を作成し、テンプレートを AEM Assets にアップロードできます。販促物を作成する前に、1つ以上のINDDテンプレートをにアップロードし、事前にExperience Managerで利用できるようにします。
 
@@ -80,7 +80,7 @@ Web インターフェイスから InDesign テンプレートを編集する機
 
    ![chlimage_1-312](assets/chlimage_1-312.png)
 
-## 販促物の編集{#editing-a-collateral}
+## 販促物の編集 {#editing-a-collateral}
 
 販促物を作成したら、すぐに編集できます。または、テンプレートページやアセットページから開きます。
 
