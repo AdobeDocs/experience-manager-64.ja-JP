@@ -2,17 +2,17 @@
 title: アセットインサイトの設定
 description: AEM Assetsでアセットインサイトを設定する方法について説明します。
 contentOwner: AG
-feature: アセットインサイト，アセットレポート
-role: Business Practitioner,Administrator
+feature: アセットインサイト、アセットレポート
+role: User,Admin
 exl-id: b0d62dd3-1868-4d73-95f7-3d6c3ff474d9
-source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '241'
-ht-degree: 66%
+ht-degree: 68%
 
 ---
 
-# アセットインサイトの設定{#configuring-asset-insights}
+# アセットインサイトの設定 {#configuring-asset-insights}
 
 Adobe Experience Manager（AEM）Assets は、サードパーティの Web サイトで使用される AEM アセットに関する使用状況データを Adobe Analytics からフェッチします。アセットインサイトでこのデータを取得してインサイトを生成できるようにするには、まずAdobe Analyticsと統合するように機能を設定します。
 
