@@ -3,16 +3,16 @@ title: アセットエディターページの作成と設定
 description: カスタムのアセットエディターページを作成し、複数のアセットを同時に編集する方法を学習します。
 contentOwner: AG
 feature: 開発者ツール，アセット管理
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: 12899f61-9ceb-4bde-a501-6c50c93e3276
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '3318'
 ht-degree: 79%
 
 ---
 
-# アセットエディターページの作成と設定{#creating-and-configuring-asset-editor-pages}
+# アセットエディターページの作成と設定 {#creating-and-configuring-asset-editor-pages}
 
 このドキュメントは次の内容について説明します。
 
@@ -24,7 +24,7 @@ ht-degree: 79%
 >
 >アセット共有は、オープンソースの参照実装として使用できます。[Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) を参照してください。アセット共有は正式にはサポートされていません。
 
-## アセットエディターページを作成および設定する理由  {#why-create-and-configure-asset-editor-pages}
+## アセットエディターページを作成および設定する理由 {#why-create-and-configure-asset-editor-pages}
 
 デジタルアセット管理は、ますます広く使用されるようになっています。専門的な教育を受けたユーザー（写真家や分類学者など）による小規模なユーザーグループ向けの小規模なソリューションから、大規模で多様なユーザーグループ（ビジネスユーザー、WCM 作成者、ジャーナリストなど）に移行する場合、専門的なユーザー向けの Adobe Experience Manager（AEM）Assets の強力なユーザーインターフェイスでは、利用できる情報が多すぎて不便が生じることがあります。この場合、関係者にとって必要なデジタルアセットにアクセスするための目的に特化したユーザーインターフェイスやアプリケーションが求められるようになります。
 
@@ -34,7 +34,7 @@ ht-degree: 79%
 
 AEM のアセット中心型アプリケーションは、特定アセットの詳細を表示するのに利用できるアセットエディターページで構成されます。アセットエディターページでは、アセットにアクセスするユーザーが必要な権限を持っていれば、メタデータの編集も可能です。
 
-## アセット共有ページ{#creating-and-configuring-an-asset-share-page}の作成と設定
+## アセット共有ページの作成と設定 {#creating-and-configuring-an-asset-share-page}
 
 DAM Finder 機能をカスタマイズし、必要なすべての機能を持つページを作成します。これらのページがアセット共有ページと呼ばれます。新しいアセット共有ページを作成するには、Geometrixx アセット共有テンプレートを使用してページを追加し、次にそのページに対してユーザーが実行できるアクションをカスタマイズします。さらに、アセットの表示方法と、ユーザーによるクエリの作成方法を決定します。
 
@@ -45,7 +45,7 @@ DAM Finder 機能をカスタマイズし、必要なすべての機能を持つ
 * Web サイトユーザー向けの画像データベース
 * メタデータエディター向けのメディアタグ作成インターフェイス
 
-### アセット共有ページ{#creating-an-asset-share-page}の作成
+### アセット共有ページの作成 {#creating-an-asset-share-page}
 
 新しいアセット共有ページを作成する方法として、Web サイトでの作業中に作成するか、Digital Asset Manager から作成することができます。
 
@@ -82,7 +82,7 @@ Digital Asset Manager を使用して新しいアセット共有ページを作�
 
    デフォルトでは、「**[!UICONTROL 新規]**」からアセット共有ページを作成すると、アセットビューアおよびアセットエディターが自動的に作成されます。
 
-#### アクションのカスタマイズ{#customizing-actions}
+#### アクションのカスタマイズ {#customizing-actions}
 
 定義済みのアクションの選択から、選択したデジタルアセットに対してユーザーが実行できるアクションを決定できます。
 
@@ -106,7 +106,7 @@ Digital Asset Manager を使用して新しいアセット共有ページを作�
 
    ![chlimage_1-387](assets/chlimage_1-387.png)
 
-#### 検索結果の表示方法を決定します。{#determining-how-search-results-are-presented}
+#### 検索結果の表示方法の決定 {#determining-how-search-results-are-presented}
 
 事前定義済みのレンズリストで、結果の表示方法を指定します。
 
@@ -133,7 +133,7 @@ Digital Asset Manager を使用して新しいアセット共有ページを作�
 
 ![chlimage_1-389](assets/chlimage_1-389.png)
 
-#### Query Builderのカスタマイズ{#customizing-the-query-builder}
+#### Query Builderのカスタマイズ {#customizing-the-query-builder}
 
 クエリビルダーでは、検索語句を入力し、アセット共有ページのコンテンツを作成できます。クエリビルダーの編集時に、1 ページに表示する検索結果数、アセットのダブルクリック時に開くアセットエディターおよびクエリ検索パスを指定し、ノード型をカスタマイズします。
 
@@ -159,7 +159,7 @@ Digital Asset Manager を使用して新しいアセット共有ページを作�
 
    ![screen_shot_2012-04-23at15300pm](assets/screen_shot_2012-04-23at15300pm.png)
 
-#### 述語の追加{#adding-predicates}
+#### 述語の追加 {#adding-predicates}
 
 AEM Assets には、アセット共有ページに追加できる多数の述語が用意されています。述語を使用すると、ユーザーが検索をさらに絞り込むことができます。一部のケースでは、指定した述語がクエリビルダーのパラメーター（「パス」パラメーターなど）よりも優先されます。
 
@@ -188,7 +188,7 @@ AEM Assets には、アセット共有ページに追加できる多数の述語
 
    ![screen_shot_2012-04-23at15640pm](assets/screen_shot_2012-04-23at15640pm.png)
 
-## アセットエディターページ{#creating-and-configuring-an-asset-editor-page}の作成と設定
+## アセットエディターページの作成と設定 {#creating-and-configuring-an-asset-editor-page}
 
 アセットエディターをカスタマイズして、ユーザーによるデジタルアセットの表示および編集方法を指定します。これをおこなうには、新規のアセットエディターページを作成してから、ユーザーがページに対して実行できる表示とアクションをカスタマイズします。
 
@@ -196,7 +196,7 @@ AEM Assets には、アセット共有ページに追加できる多数の述語
 >
 >DAMアセットエディターにカスタムフィールドを追加する場合は、新しいcq:Widgetノードを`/apps/dam/content/asseteditors.`に追加します。
 
-### アセットエディターページ{#creating-the-asset-editor-page}を作成します。
+### アセットエディターページの作成 {#creating-the-asset-editor-page}
 
 アセットエディターページを作成する場合に、アセット共有ページのすぐ下にページを作成することをお勧めします。
 
@@ -216,7 +216,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 ![assetshare6](assets/assetshare6.bmp)
 
-#### アセット共有ページから開くアセットエディターの設定{#setting-which-asset-editor-opens-from-an-asset-share-page}
+#### アセット共有ページから開くアセットエディターの設定 {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
 カスタムのアセットエディターページを作成したら、アセット（作成したカスタムのアセット共有）をダブルクリックすると、カスタマイムのエディターページでアセットが開くことを確認する必要があります。
 
@@ -232,7 +232,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
    ![screen_shot_2012-04-23at21653pm](assets/screen_shot_2012-04-23at21653pm.png)
 
-#### アセットエディターコンポーネントの追加{#adding-asset-editor-components}
+#### アセットエディターコンポーネントの追加 {#adding-asset-editor-components}
 
 アセットエディターに含める機能を指定するには、ページにコンポーネントを追加します。
 
@@ -295,7 +295,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 アセットエディターページでは、ユーザーはこの後メタデータフィールドに値を入力し（フィールドが編集可能な場合）、終了アクション（変更内容の送信など）を実行することができます。
 
-#### サブアセット  {#sub-assets}
+#### サブアセット {#sub-assets}
 
 サブアセットコンポーネントでは、サブアセットの表示と選択をおこなうことができます。[メインアセット](assets.md#what-are-digital-assets)とサブアセットの下に表示される名前を指定できます。
 
@@ -365,7 +365,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 ![chlimage_1-392](assets/chlimage_1-392.png)
 
-#### アセットエディターのアクションの追加{#adding-asset-editor-actions}
+#### アセットエディターのアクションの追加 {#adding-asset-editor-actions}
 
 定義済みのアクションの選択から、選択したデジタルアセットに対してユーザーが実行できるアクションを決定できます。
 
@@ -390,7 +390,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 ![chlimage_1-393](assets/chlimage_1-393.png)
 
-## アセットエディターページ{#multi-editing-assets-with-the-asset-editor-page}で複数のアセットを編集
+## アセットエディターページでの複数のアセットの編集 {#multi-editing-assets-with-the-asset-editor-page}
 
 AEM Assets では複数のアセットを同時に変更できます。アセットを選択した後、それらのアセットの次の情報を同時に変更できます。
 
