@@ -3,9 +3,9 @@ title: フォルダーへの翻訳クラウドサービスの適用
 description: フォルダーへの翻訳クラウドサービスの適用
 contentOwner: AG
 feature: 翻訳
-role: Administrator
+role: Admin
 exl-id: 87883a3f-db95-41f4-b0aa-cdaeb7e6f555
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 100%
@@ -18,7 +18,7 @@ Adobe Experience Manager（AEM）では、選択した翻訳プロバイダー�
 
 翻訳クラウドサービスをアセットフォルダーに直接適用できるので、翻訳ワークフローの間もずっとアセットを利用できます。
 
-## 翻訳サービスの適用  {#applying-the-translation-services}
+## 翻訳サービスの適用 {#applying-the-translation-services}
 
 翻訳クラウドサービスをアセットフォルダーに直接適用すると、翻訳ワークフローの作成または変更時に翻訳サービスを設定する必要がなくなります。
 
@@ -38,7 +38,7 @@ Adobe Experience Manager（AEM）では、選択した翻訳プロバイダー�
 
 1. ツールバーの「**[!UICONTROL 保存]**」をクリックまたはタップし、「**[!UICONTROL OK]**」をクリックしてダイアログを閉じます。翻訳サービスがフォルダーに適用されます。
 
-## カスタム翻訳コネクタの適用   {#applying-custom-translation-connector}
+## カスタム翻訳コネクタの適用  {#applying-custom-translation-connector}
 
 翻訳ワークフローで使用する翻訳サービスにカスタムコネクタを適用する場合、カスタムコネクタを適用するには、まずパッケージマネージャーからコネクタをインストールします。次に、クラウドサービスコンソールからコネクタを設定します。コネクタを設定すると、[翻訳サービスの適用](transition-cloud-services.md#applying-the-translation-services)で説明されている「クラウドサービス」タブのコネクタのリストに表示されるようになります。カスタムコネクタを適用し、翻訳ワークフローを実行すると、翻訳プロジェクトの「**[!UICONTROL 翻訳の概要]**」タイルの「**[!UICONTROL プロバイダー]**」と「**[!UICONTROL メソッド]**」という見出しの下にコネクタの詳細が表示されます。
 
