@@ -11,8 +11,8 @@ content-type: reference
 discoiquuid: d1f45751-1761-4d6b-b17d-110b2f1117ea
 exl-id: bb97b649-a50d-49c8-97aa-18c32f18d527
 feature: コンポーネント
-role: Business Practitioner
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '2826'
 ht-degree: 61%
@@ -76,7 +76,7 @@ Dynamic Mediaコンポーネントをページに追加する操作は、任意�
 
 1. ページ上部付近のツールバーの右側で、ドロップダウンリストから「**[!UICONTROL 初期コンテンツ]**」をタップした後、通常どおりに[ページに Dynamic Media コンポーネントを追加](#adding-a-dynamic-media-component-to-a-page)します。
 
-## Dynamic Mediaコンポーネントのローカライズ{#localizing-dynamic-media-components}
+## Dynamic Mediaコンポーネントのローカライズ {#localizing-dynamic-media-components}
 
 Dynamic Media コンポーネントのローカライズの方法は 2 つあります。
 
@@ -90,7 +90,7 @@ Dynamic Media コンポーネントのローカライズの方法は 2 つあり
    >
    >現在&#x200B;**[!UICONTROL 言語]**&#x200B;メニューに表示される言語すべてにトークンが割り当てられているわけではないことに注意してください。
 
-## Dynamic Mediaコンポーネント{#dynamic-media-components}
+## Dynamic Mediaコンポーネント {#dynamic-media-components}
 
 Dynamic Mediaとインタラクティブメディアは、[!UICONTROL コンポーネント]の[!UICONTROL Dynamic Media]タブにあります。 [!UICONTROL インタラクティブメディア]コンポーネントは、すべてのインタラクティブアセット（インタラクティブビデオ、インタラクティブ画像、カルーセルセットなど）に使用します。その他すべてのダイナミックメディアコンポーネントでは、ダイナミックメディアコンポーネントを使用します。
 
@@ -224,7 +224,7 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 * **** スマート切り抜 ****
 き画像を固定サイズで表示する場合は、高さと幅の入力値（ピクセル単位）を指定します。これらの値を空にすると、アダプティブな画像になります。
 
-### インタラクティブメディアコンポーネント{#interactive-media-component}
+### インタラクティブメディアコンポーネント {#interactive-media-component}
 
 インタラクティブメディアコンポーネントは、インタラクティビティ（ホットスポットまたは画像マップ）を含むアセット用です。インタラクティブ画像、インタラクティブビデオまたはカルーセルバナーがある場合は、インタラクティブメディアコンポーネントを使用します。
 
@@ -260,7 +260,7 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 * **[!UICONTROL 製品フォーム]**
 を表示デフォルトでは、この値は選択されていません。製品フォームには、サイズや色など製品のバリエーションが含まれます。製品のバリエーションを表示しない場合はチェックマークをオフにします。
 
-### パノラマメディアコンポーネント{#panoramic-media-component}
+### パノラマメディアコンポーネント {#panoramic-media-component}
 
 パノラマメディアコンポーネントは、球パノラマ画像のアセット用です。このような画像では、室内、物件、場所、風景などをあらゆる角度から見ることができます。画像が球パノラマとして適格となるには、以下の一方または両方の条件を満たしている必要があります。
 
