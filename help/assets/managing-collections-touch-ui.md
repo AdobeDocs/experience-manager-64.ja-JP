@@ -4,9 +4,9 @@ description: コレクションの作成、表示、削除、編集、ダウン�
 contentOwner: AG
 mini-toc-levels: 1
 feature: コレクション
-role: Business Practitioner
+role: User
 exl-id: cadfc569-5725-4012-9f73-864243ba7743
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '2329'
 ht-degree: 84%
@@ -95,7 +95,7 @@ Assets UI からコレクションに、アセットをドラッグできます�
    ![files_option](assets/files_option.png)
 
 1. 「**[!UICONTROL スマートコレクションを保存]**」をタップまたはクリックします。
-1. コレクション名を指定します。「**[!UICONTROL 公開]**」を選択して、閲覧者の役割を持つ DAM ユーザーグループをスマートコレクションに追加します。
+1. コレクション名を指定します。「**[!UICONTROL 公開]**」を選択して、閲覧者のロールを持つ DAM ユーザーグループをスマートコレクションに追加します。
 
    ![save_collection](assets/save_collection.png)
 
@@ -165,7 +165,7 @@ Assets UI からコレクションに、アセットをドラッグできます�
 1. **[!UICONTROL コレクションメタデータ]**&#x200B;ページの「**[!UICONTROL 基本]**」タブと「**[!UICONTROL 詳細]**」タブでコレクションメタデータを表示します。
 1. 必要に応じてメタデータを変更し、ツールバーの「**[!UICONTROL 保存して閉じる]**」をタップまたはクリックして変更を保存します。
 
-### 複数のコレクションのメタデータを一括で編集{#editing-collection-metadata-in-bulk}
+### 複数コレクションのメタデータの一括編集 {#editing-collection-metadata-in-bulk}
 
 複数のコレクションのメタデータを同時に編集できます。この機能により、複数のコレクションで共通のメタデータをすばやくレプリケートできます。
 
@@ -199,7 +199,7 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
 トップレベルからコレクションを検索する場合は、個々のコレクションのみ検索結果に返されます。コレクション内のアセットやフォルダーは除外されます。他のすべての場合（例：個々のコレクション内またはフォルダー階層内）では、関連するすべてのアセット、フォルダー、コレクションが返されます。
 
-## コレクション内の検索{#searching-within-collections}
+## コレクション内の検索 {#searching-within-collections}
 
 コレクションコンソールで、コレクションをタップまたはクリックして開きます。
 
@@ -256,11 +256,11 @@ Assets UI からコレクションに、アセットをドラッグできます�
 
 ## 保存済みの検索結果 {#saved-searches}
 
-Assets ユーザーインターフェイスでは、特定のルール、検索条件またはカスタム検索ファセットに基づいてアセットの検索または絞り込みをおこなうことができます。その結果を&#x200B;**[!UICONTROL 保存済みの検索結果]**&#x200B;として保存すると、後でフィルターパネルの「**[!UICONTROL 保存済みの検索結果]**」リストからアクセスできます。保存済みの検索結果を作成すると、スマートコレクションも作成されます。
+Assets ユーザーインターフェイスでは、特定のルール、検索条件またはカスタム検索ファセットに基づいてアセットの検索または絞り込みを行うことができます。その結果を&#x200B;**[!UICONTROL 保存済みの検索結果]**&#x200B;として保存すると、後でフィルターパネルの「**[!UICONTROL 保存済みの検索結果]**」リストからアクセスできます。保存済みの検索結果を作成すると、スマートコレクションも作成されます。
 
 ![saved_searches_list](assets/saved_searches_list.png)
 
-### 保存済みの検索結果の作成{#creating-saved-searches}
+### 保存済みの検索結果の作成 {#creating-saved-searches}
 
 スマートコレクションの作成時には、保存済みの検索結果が作成されます。スマートコレクションは、「**[!UICONTROL 保存済みの検索結果]**」リストに自動的に追加されます。コレクションの保存済みの検索結果のクエリは、相対的な場所`/content/dam/collections/`にあるcrxdeの`dam:query`プロパティに保存されます。 保存できる検索と、リストに表示される保存済みの検索に制限はありません。
 
@@ -268,11 +268,11 @@ Assets ユーザーインターフェイスでは、特定のルール、検索�
 >
 >静的なコレクションを共有する場合と同じ方法でスマートコレクションを共有できます。
 
-### 保存済みの検索結果の編集{#editing-saved-searches}
+### 保存済みの検索結果の編集 {#editing-saved-searches}
 
 保存済みの検索結果を編集することは、スマートコレクションを編集することと同じです。詳しくは、[スマートコレクションの編集](/help/assets/managing-collections-touch-ui.md#editing-a-smart-collection)を参照してください。
 
-### 保存済みの検索結果を削除{#deleting-saved-searches}
+### 保存済みの検索結果の削除 {#deleting-saved-searches}
 
 1. Assets ユーザーインターフェイスで、ツールバーの検索アイコンをタップまたはクリックします。
 
