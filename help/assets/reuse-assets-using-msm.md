@@ -4,16 +4,16 @@ description: 親アセットから派生し、親アセットにリンクされ�
 contentOwner: AG
 mini-toc-levels: 1
 feature: アセット管理、マルチサイトマネージャ
-role: Business Practitioner,Administrator,Architect
+role: User,Admin,Architect
 exl-id: a8e9f8de-ca84-4107-8f73-2fc75eeae1f1
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '3172'
 ht-degree: 79%
 
 ---
 
-# MSM for を使用したアセットの再利用[!DNL Assets]{#reuse-assets-using-msm-for-assets}
+# MSM for を使用したアセットの再利用[!DNL Assets] {#reuse-assets-using-msm-for-assets}
 
 [!DNL Adobe Experience Manager]のマルチサイトマネージャー(MSM)機能を使用すると、一度作成したコンテンツを複数のWebサイトで再利用できます。 MSM for [!DNL Assets]機能と同じものがデジタルアセットにも使用できます。 [!DNL Assets]用のMSMを使用すると、次のことが可能になります。
 
@@ -37,7 +37,7 @@ MSM では、ソースアセットとそのライブコピーとのライブ関�
 
 * ライブ関係を休止してライブコピーを更新することも、一部の限られたフィールドについて継承を解除することもできます。ソースに対する変更はライブコピーに適用されなくなります。
 
-### MSM for Assets の用語集  {#glossary-msm-for-assets}
+### MSM for Assets の用語集 {#glossary-msm-for-assets}
 
 * **ソース：** 元のアセットまたはフォルダー。プライマリコピーの派生元となるライブコピー。
 
@@ -144,7 +144,7 @@ AEM ユーザーインターフェイスの様々な領域で、ライブコピ�
 
 ![特定のライブコピーの場合、ソースアセットが選択されていると、関係を休止したりロールアウト設定を変更したりするオプションに参照パネルからアクセスできます](assets/lc_edit_referencerail.png)
 
-### ライブコピーの参照パネルのクイックアクション  {#quick-actions-from-references-rail-for-live-copy}
+### ライブコピーの参照パネルのクイックアクション {#quick-actions-from-references-rail-for-live-copy}
 
 ライブコピーアセットまたはフォルダーの場合は、参照パネルから以下の情報を参照したり以下のアクションを直接実行したりできます。
 
@@ -188,7 +188,7 @@ AEM ユーザーインターフェイスの様々な領域で、ライブコピ�
 | [!UICONTROL プロパティ]ページのツールバー | ライブコピーのプロパティが既に開いているときに同期を開始します。 | [ライブコピーの同期](#synchronize-live-copy)を参照 |
 | [!UICONTROL ライブコピーの概要コンソール] | ソースフォルダーが選択されているか、[!UICONTROL ライブコピーの概要]コンソールが既に開いている場合に、複数のアセット（必ずしもすべてではありません）をすばやく同期します。 同期アクションは一度に 1 つのアセットに対して開始されますが、複数のアセットの同期を一度に実行する手軽な方法です。 | [ライブコピーフォルダー内の多数のアセットに対するアクション](#take-actions-on-many-assets-in-lcfolder)を参照 |
 
-### ライブコピーの同期  {#synchronize-live-copy}
+### ライブコピーの同期 {#synchronize-live-copy}
 
 同期アクションを開始するには、ライブコピーの&#x200B;**[!UICONTROL プロパティ]**&#x200B;ページを開き、「**[!UICONTROL ライブコピー]**」をクリックして、ツールバーで目的のアクションをクリックします。
 
@@ -278,7 +278,7 @@ AEM では、MSM Java API を使用して機能を拡張することができま
 * ページプロパティに対する MSM ロックの設定（タッチ操作対応 UI）は、MSM for Assets ではサポートされていません。
 * MSM for Assets の場合は、標準ロールアウト設定のみ使用します。それ以外のロールアウト設定は、MSM for Assets では使用できません。
 
-## MSM for Assetsの制限{#limitations-of-msm-for-assets}
+## MSM for Assetsの制限 {#limitations-of-msm-for-assets}
 
 MSM for Assetsの制限を次に示します。
 
