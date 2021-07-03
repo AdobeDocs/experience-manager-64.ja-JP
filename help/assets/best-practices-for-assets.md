@@ -3,16 +3,16 @@ title: AEM
 description: AEM Assetsのデプロイメントとアセットの取り込みと処理に使用する機能に応じて、負荷時のシステムの安定性とパフォーマンスを向上させるベストプラクティスを特定し、順守します。
 contentOwner: AG
 feature: アセット管理
-role: Architect,Administrator
+role: Architect,Admin
 exl-id: e2ab924b-53cb-4011-8c0a-9e8e59dd2f16
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 43%
 
 ---
 
-# AEM Assets {#best-practices-for-assets}のベストプラクティス
+# AEM Assetsのベストプラクティス {#best-practices-for-assets}
 
 Adobe Experience Manager (AEM) Assets は、コンテンツベロシティを通じてビジネス目標の達成に貢献する、高品質のデジタルマーケティングエクスペリエンスを実現するうえできわめて重要な役割を果たします。AEM Assets でビデオや Dynamic Media などの多数のアセットを操作する、または定期的に大量のアセットをアップロードする場合、システムの効率化を実現するうえでデジタルアセット管理エクスペリエンスの最適化は重要な位置を占めます。
 
