@@ -3,9 +3,9 @@ title: XMP メタデータ
 description: AEM Assets でメタデータ管理において使用される XMP（Extensible Metadata Platform）メタデータ規格について説明します。XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
 contentOwner: AG
 feature: メタデータ
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: 32c4ca3d-2e9e-46a3-b4c7-70dcc50daaaa
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 99%
@@ -20,7 +20,7 @@ XMP では、すべてのファイル形式に埋め込むことができる共�
 
 [XMP の仕様](https://www.adobe.com/devnet/xmp.html)は、アドビから入手できます。
 
-## XMPとは{#what-is-xmp}
+## XMP とは {#what-is-xmp}
 
 AEM Assets は、アドビ主導の XMP（Extensible Metadata Platform）をネイティブでサポートしています。XMP は、デジタルアセット内の標準化されたメタデータと独自メタデータを処理および格納するための規格です。XMP は、複数のアプリケーションでメタデータを効率的に使用するための共通規格となるよう設計されています。
 
@@ -37,7 +37,7 @@ XMP のメタデータは、一連のプロパティで構成されます。こ�
 
 XMP 規格は、アドビが初めて Adobe Acrobat ソフトウェア製品の一部として導入しました。それ以降、XMP 規格が広く採用されてきました。
 
-### XMPエコシステム{#xmp-ecosystem}
+### XMPエコシステム {#xmp-ecosystem}
 
 XMP によって定義される[メタデータ](https://en.wikipedia.org/wiki/Metadata)モデルは、任意の定義済みメタデータ項目のセットと併用できます。また、XMP によって、リソースで複数の処理手順が行われる際にその履歴を記録するうえで便利な基本的なプロパティに対して、特定の[スキーマ](https://en.wikipedia.org/wiki/XML_schema)も定義されます。処理手順は、撮影、[スキャン](https://en.wikipedia.org/wiki/Image_scanner)またはテキスト作成から、画像編集手順（[切り抜き](https://en.wikipedia.org/wiki/Cropping_%28image%29)やカラー調整など）を経て、最終的な画像へのアセンブリまでです。XMP の処理中に、各ソフトウェアプログラムまたはデバイスでデジタルリソースに独自の情報を付加できます。この情報は、最終的なデジタルファイルで保持されます。
 
@@ -60,18 +60,18 @@ XMP 規格は拡張できるように設計されていて、カスタムタイ�
 >
 >XMP では通常、バイナリデータタイプを埋め込むことはできません。XMP でバイナリデータ（サムネール画像など）を扱う場合、XML に対応するフォーマット（Base64 など）でエンコーディングする必要があります。
 
-## XMP の中心概念  {#xmp-core-concepts}
+## XMP の中心概念 {#xmp-core-concepts}
 
 次の節では、名前空間とスキーマ、プロパティと値、代替言語など、XMP の中心概念について説明します。
 
-### 名前空間とスキーマ  {#namespaces-and-schemata}
+### 名前空間とスキーマ {#namespaces-and-schemata}
 
 XMP スキーマは、一連のプロパティ名を共通の XML 名前空間で定義したものです。\
 名前空間には、データタイプや識別情報が含まれます。XMP スキーマは、そのスキーマの XML 名前空間 URI によって識別されます。名前空間を使用すると、異なるスキーマに存在する、名前が同じで意味が異なるプロパティとの競合を防ぐことができます。
 
 例えば、別個に設計された 2 つのスキーマにある **Creator** プロパティは、アセットを作成した個人を意味する場合と、アセットの作成元アプリケーション（Adobe Photoshop など）を意味する場合があります。
 
-### プロパティと値  {#properties-and-values}
+### プロパティと値 {#properties-and-values}
 
 XMP には、1 つ以上のスキーマからプロパティを選択し含めることができます。
 
