@@ -7,8 +7,8 @@ topic-tags: dynamic-media
 content-type: reference
 exl-id: 252c1a50-17ac-4412-88d6-49bb6850658d
 feature: 混在メディアセット
-role: Business Practitioner
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 78%
@@ -119,7 +119,7 @@ ht-degree: 78%
 1. プリセットを適用するには、右上隅にある「**[!UICONTROL プリセット]**」をタップし、アセットに適用するプリセットを選択します。
 1. 「**[!UICONTROL 保存]**」をクリックします。新しく作成した混在メディアセットが、作成先のフォルダーに表示されます。
 
-## 混在メディアセットの編集  {#editing-mixed-media-sets}
+## 混在メディアセットの編集 {#editing-mixed-media-sets}
 
 [アセットの編集と同じように](managing-assets-touch-ui.md)、ユーザーインターフェイスで直接、混在メディアセット内のアセットに対して様々な編集タスクを実行できます。また、混在メディアセットでは次のアクションも実行できます。
 
@@ -131,7 +131,7 @@ ht-degree: 78%
 
 **混在メディアセットを編集するには**:
 
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 混在メディアセットアセットの上にマウスポインターを置き、**[!UICONTROL 編集]**（鉛筆アイコン）をタップします。
    * 混在メディアセットアセットの上にマウスポインターを置き、**[!UICONTROL 選択]**（チェックマークアイコン）をタップしてからツールバーの「**[!UICONTROL 編集]**」をタップします。
@@ -162,7 +162,7 @@ ht-degree: 78%
 
 混在メディアセットのプレビュー方法について詳しくは、[アセットのプレビュー](previewing-assets.md)を参照してください。
 
-## 混在メディアセットの公開  {#publishing-mixed-media-sets}
+## 混在メディアセットの公開 {#publishing-mixed-media-sets}
 
 混在メディアセットの公開方法について詳しくは、[アセットの公開](publishing-dynamicmedia-assets.md)を参照してください。
 
