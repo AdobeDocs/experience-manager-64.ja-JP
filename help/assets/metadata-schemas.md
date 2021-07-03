@@ -3,12 +3,12 @@ title: メタデータスキーマ
 description: 'メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。  '
 contentOwner: AG
 feature: メタデータ
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: 82f42bb3-2c01-407c-a41b-9abe7be4660e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '2536'
-ht-degree: 78%
+ht-degree: 83%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 78%
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
 
-1. 使用可能なタブで、様々な編集可能なメタデータプロパティを編集できます。 ただし、プロパティページの「[!UICONTROL 基本]」タブで、アセット[!UICONTROL タイプ]を変更することはできません。
+1. 使用可能なタブで、編集可能な様々なメタデータプロパティを編集できます。ただし、プロパティページの「[!UICONTROL 基本]」タブではアセット[!UICONTROL タイプ]を変更できません。
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
@@ -40,13 +40,13 @@ ht-degree: 78%
 
 | テンプレート |  | 説明 |
 |---|---|---|
-| [!UICONTROL default] |  | アセットの基本メタデータスキーマフォーム。 |
-|  | 次の子フォームは、[!UICONTROL デフォルト]フォームのプロパティを継承します。 |  |
-|  | <ul><li> [!UICONTROL dm_video]</li></ul> | Dynamic Mediaビデオのスキーマフォーム。 |
-|  | <ul><li> [!UICONTROL 画像]</li></ul> | MIMEタイプが「image」のアセットのスキーマフォーム（例：image/jpeg、image/png）。 <br> imageformに  は、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]:サブタイプが [!UICONTROL jpeg]のアセットのスキーマフォーム。</li> <li>[!UICONTROL tiff]:サブタイプ [!UICONTROL tiff]のアセットのスキーマフォーム。</li></ul> |
-|  | <ul><li> [!UICONTROL アプリケーション]</li></ul> | application/pdf、application/zipなど、MIMEタイプが「application」のアセットのスキーマフォーム。 <br>[!UICONTROL pdf]:サブタイプpdfのアセットのスキーマフォーム。 |
-|  | <ul><li>[!UICONTROL ビデオ]</li></ul> | video/avi、video/mp4など、MIMEタイプが「video」のアセットのスキーマフォーム。 |
-| [!UICONTROL collection] |  | コレクションのスキーマフォーム。 |
+| [!UICONTROL default] |  | アセットの基本メタデータスキーマフォーム |
+|  | 次の子フォームは、[!UICONTROL default] フォームのプロパティを継承します。 |  |
+|  | <ul><li> [!UICONTROL dm_video]</li></ul> | Dynamic Media ビデオのスキーマフォーム |
+|  | <ul><li> [!UICONTROL image]</li></ul> | MIMEタイプが「image」のアセットのスキーマフォーム（例：image/jpeg、image/png）。 <br>[!UICONTROL image] フォームには、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]：サブタイプが [!UICONTROL jpeg] であるアセットのスキーマフォーム</li> <li>[!UICONTROL tiff]:サブタイプ [!UICONTROL tiff]のアセットのスキーマフォーム。</li></ul> |
+|  | <ul><li> [!UICONTROL application]</li></ul> | application/pdf、application/zipなど、MIMEタイプが「application」のアセットのスキーマフォーム。 <br>[!UICONTROL pdf]:サブタイプpdfのアセットのスキーマフォーム。 |
+|  | <ul><li>[!UICONTROL video]</li></ul> | video/avi、video/mp4など、MIMEタイプが「video」のアセットのスキーマフォーム。 |
+| [!UICONTROL collection] |  | コレクションのスキーマフォーム |
 | [!UICONTROL contentfragment] |  | コンテンツフラグメントのスキーマフォーム。 |
 | [!UICONTROL forms] |  | このスキーマフォームは、[Adobe Experience Manager Forms](/help/forms/home.md)に関連しています。 |
 
@@ -73,7 +73,7 @@ ht-degree: 78%
 * タブ
 * タブ内のフォーム項目
 
-これらのフォーム項目を CRX リポジトリのメタデータノード内のフィールドにマップしたり、フォーム項目を設定したりできます。
+これらのフォーム項目を CRX リポジトリーのメタデータノード内のフィールドにマップしたり、フォーム項目を設定したりできます。
 
 新しいタブまたはフォーム項目をメタデータスキーマフォームに追加できます。親から派生したタブおよびフォーム項目はロック状態です。子レベルではこれらを変更できません。
 
@@ -87,7 +87,7 @@ ht-degree: 78%
 
 1. コンポーネントを設定するには、コンポーネントを選択して、「**[!UICONTROL 設定]**」タブでそのプロパティを変更します。
 
-### 「フォームを作成」タブ内のコンポーネント{#components-within-the-build-form-tab}
+### 「フォームを作成」タブ内のコンポーネント  {#components-within-the-build-form-tab}
 
 「**[!UICONTROL フォームを作成]**」タブには、スキーマフォーム内で使用するフォーム項目が表示されます。「**[!UICONTROL 設定]**」タブに、「**[!UICONTROL フォームを作成]**」タブで選択した各項目の属性が表示されます。「**[!UICONTROL フォームを作成]**」タブで使用できるフォーム項目を次の表に示します。
 
@@ -186,15 +186,15 @@ AEM では、カスタムのスキーマフォームのみを削除できます�
 >
 >AEM Assets の既製のメタデータスキーマフォームは削除できません。
 
-## MIME タイプ用のスキーマフォーム  {#schema-forms-for-mime-types}
+## MIME タイプ用のスキーマフォーム {#schema-forms-for-mime-types}
 
 AEM Assets には、様々な MIME タイプですぐに使用できるデフォルトのフォームが用意されています。ただし、様々な MIME タイプのアセットにカスタムのフォームを追加することができます。
 
-### MIMEタイプ{#adding-new-forms-for-mime-types}用の新しいフォームの追加
+### MIME タイプ用の新しいフォームの追加 {#adding-new-forms-for-mime-types}
 
-適切なフォームタイプに新規フォームを作成します。例えば、サブタイプ`image/png`の新しいテンプレートを追加するには、`image`フォームの下にフォームを作成します。 スキーマフォームのタイトルはサブタイプ名です。この場合、タイトルは`png`です。
+適切なフォームタイプに新規フォームを作成します。例えば、サブタイプ`image/png`の新しいテンプレートを追加するには、`image`フォームの下にフォームを作成します。 スキーマフォームのタイトルはサブタイプ名です。この場合、タイトルは「`png`」です。
 
-### 様々なMIMEタイプ用の既存のスキーマテンプレートを使用します。 {#using-an-existing-schema-template-for-various-mime-types}
+### 様々な MIME タイプ用の既存スキーマテンプレートの使用 {#using-an-existing-schema-template-for-various-mime-types}
 
 別の MIME タイプに対して既存のテンプレートを使用できます。例えば、MIME タイプ `image/png` のアセットに対して `image/jpeg` フォームを使用します。
 
@@ -244,7 +244,7 @@ AEM Assets では、メタデータスキーマのバリアントを定義して
 
    ![chlimage_1-184](assets/chlimage_1-184.png)
 
-1. **[!UICONTROL メタデータスキーマForms]**&#x200B;ページで、`my_default`フォームを選択し、「**[!UICONTROL 編集]**」をクリックします。
+1. **[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページで、`my_default` フォームを選択し、「**[!UICONTROL 編集]**」をクリックします。
 
 1. **[!UICONTROL メタデータスキーマエディター]**&#x200B;ページで、スキーマフォームにテキストフィールドを追加します。例えば、「**[!UICONTROL カテゴリ]**」というラベルのフィールドを追加します。
 
@@ -263,7 +263,7 @@ AEM Assets では、メタデータスキーマのバリアントを定義して
 1. 「**[!UICONTROL OK]**」をクリックして、成功メッセージを閉じます。
 1. 変更したメタデータスキーマを適用したフォルダーに移動します。
 
-## 必須メタデータの定義  {#defining-mandatory-metadata}
+## 必須メタデータの定義 {#defining-mandatory-metadata}
 
 必須フィールドをフォルダーレベルで定義すると、そのフォルダーにアップロードされるアセットに強制的に適用されます。以前に定義した必須フィールドにメタデータが指定されていないアセットをアップロードすると、アセットに指定されていないメタデータをカード表示で視覚的に確認できます。
 
@@ -294,4 +294,4 @@ AEM Assets では、メタデータスキーマのバリアントを定義して
 
 >[!CAUTION]
 >
->メタデータの検証チェックは、大量のリソースを必要とするので、システムのパフォーマンスに影響を及ぼす可能性があります。検証チェックのスケジュール設定は、適切におこなう必要があります。AEMデプロイメントにパフォーマンスの問題がある場合は、このジョブを無効にしてみてください。
+>メタデータの検証チェックは、大量のリソースを必要とするので、システムのパフォーマンスに影響を及ぼす可能性があります。検証チェックのスケジュール設定は、適切に行う必要があります。AEMデプロイメントにパフォーマンスの問題がある場合は、このジョブを無効にしてみてください。
