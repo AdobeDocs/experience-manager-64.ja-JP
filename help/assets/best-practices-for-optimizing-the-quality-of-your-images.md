@@ -6,12 +6,12 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 exl-id: 2e90bea1-eaac-457b-8588-b18d3a6e8d91
-feature: アセット管理，レンディション
-role: Business Practitioner
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+feature: アセット管理、レンディション
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1466'
-ht-degree: 91%
+ht-degree: 93%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 91%
 
 AEM には、画像をチューニングおよび最適化して結果をレンダリングするための、100 を超えるダイナミックメディア画像配信コマンドがあります。次のガイドラインは、一部の基本コマンドとベストプラクティスを使用してこのプロセスを効率化し、すぐに良好な結果を得るために活用できます。
 
-## 画像形式(&amp;fmt=) {#best-practices-for-image-format-fmt}のベストプラクティス
+## 画像形式（&amp;fmt=）のベストプラクティス {#best-practices-for-image-format-fmt}
 
 * JPG または PNG は、管理しやすいサイズと重さで良い画質の画像を配信するための最適な選択肢です。
 * URL に format コマンドが含まれていない場合、Dynamic Media 画像配信のデフォルトは JPG の配信になります。
@@ -43,7 +43,7 @@ AEM には、画像をチューニングおよび最適化して結果をレン�
 
 ## 画像のシャープニングに関するベストプラクティス {#best-practices-for-image-sharpening}
 
-画像のシャープニングは、Webサイト上の画像を制御する際の最も複雑な側面で、多くのミスが生じます。 AEMでのシャープとアンシャープマスクの仕組みについて詳しくは、 AEMに適用される『Dynamic Media Classic画質のAdobe』および『シャープのベストプラクティス](/help/assets/assets/sharpening_images.pdf)』ガイドも参照してください。[
+画像のシャープ処理は、Web サイト上の画像を制御する際の最も複雑な側面で、多くのミスが生じます。AEMでのシャープとアンシャープマスクの仕組みについて詳しくは、 AEMに適用される『Dynamic Media Classic画質のAdobe』および『シャープのベストプラクティス](/help/assets/assets/sharpening_images.pdf)』ガイドも参照してください。[
 
 [アンシャープマスクを使用した画像のシャープニング](https://helpx.adobe.com/jp/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html)も参照してください。
 
@@ -80,7 +80,7 @@ amount を 1.75 から 4 まで少しずつ増やします。シャープニン�
 
 monochrome パラメーター設定は 0 のままにします。
 
-### JPEG圧縮(&amp;qlt=) {#best-practices-for-compression-qlt}のベストプラクティス
+### JPEG圧縮(&amp;qlt=)のベストプラクティス {#best-practices-for-compression-qlt}
 
 * このパラメーターでは、JPG エンコーディング品質を制御します。値が大きいほど高画質になりますがファイルサイズも大きくなります。逆に、値が小さいほど低画質になりますがファイルサイズは小さくなります。このパラメーターの範囲は 0～100 です。
 * 画質を最適化するには、このパラメーターの値を 100 に設定しないでください。90 や 95 の設定と 100 の設定では、画質の差はほとんど感じられませんが、100 に設定することで画像ファイルのサイズが不必要に増加します。したがって、画質を最適化しながら画像ファイルが大きくなりすぎないようにするために、`qlt=<value>` を 90 または 95 に設定します。
@@ -93,7 +93,7 @@ monochrome パラメーター設定は 0 のままにします。
 
 JPG 圧縮のベストプラクティスとしては、`&qlt=85,0` を使用します。
 
-## JPEGサイズ設定(&amp;jpegSize=) {#best-practices-for-jpeg-sizing-jpegsize}のベストプラクティス
+## JPEG サイズ設定のベストプラクティス（&amp;jpegSize=） {#best-practices-for-jpeg-sizing-jpegsize}
 
 jpegSize は、メモリ容量が限られているデバイスに配信される画像が特定のサイズを超えないようにしたい場合に便利なパラメーターです。
 
