@@ -3,12 +3,12 @@ title: ビデオアセットの検索
 description: AEM Assets でファイルをすばやく見つけるには、キーワードのほか、MIME タイプ、サイズ、最近変更されたタイムスタンプなどのファイルプロパティを使用します。
 contentOwner: AG
 feature: ビデオ，検索
-role: Business Practitioner
+role: User
 exl-id: d5f0beb2-e59f-47cd-8e83-698d8a1dcec3
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '580'
-ht-degree: 68%
+ht-degree: 66%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 68%
 | ビデオの高さ | 最小値と最大値として指定します。値は、ビデオレンディションのメタデータにのみ格納されます。 |
 | ビデオの幅 | 最小値と最大値として指定します。値は、ビデオレンディションのメタデータにのみ格納されます。 |
 | ビデオ形式 | DVI、Flash、MPEG4、MPEG、OGG Theora、QuickTime、Windows Media.Valueは、ソースビデオとレンディションのメタデータに保存されます。 |
-| ビデオコーデック | x264。値はビデオレンディションのメタデータにのみ保存されます。 |
+| ビデオコーデック | x264。値はビデオレンディションのメタデータにのみ格納されます。 |
 | ビデオビットレート | 最小値と最大値として指定します。値は、ビデオレンディションのメタデータにのみ格納されます。 |
 | オーディオコーデック | Libvorbis、Lame Mp3、AAC Encoding.Valueは、ビデオレンディションのメタデータにのみ保存されます。 |
 | オーディオビットレート | 最小値と最大値として指定します。値は、ビデオレンディションのメタデータにのみ格納されます。 |
