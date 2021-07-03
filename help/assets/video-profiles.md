@@ -7,15 +7,15 @@ topic-tags: administering
 content-type: reference
 exl-id: 3602e1b9-624d-408f-a7f6-1598b62dbd22
 feature: ビデオプロファイル，ビデオ
-role: Administrator,Business Practitioner
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+role: Admin,User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '3071'
 ht-degree: 74%
 
 ---
 
-# Dynamic Mediaビデオプロファイル{#video-profiles}
+# Dynamic Mediaのビデオプロファイル {#video-profiles}
 
 Dynamic Media には、事前定義済みのアダプティブビデオエンコーディングプロファイルが最初から付属しています。この標準提供プロファイルの設定は、ユーザーができる限り最高の閲覧エクスペリエンスを得られるように最適化されています。アダプティブビデオエンコーディングプロファイルを使用してマスタービデオをエンコーディングすると、再生中にビデオプレーヤーによって、顧客のインターネット接続速度に応じてビデオストリームの品質が自動調整されます。これがアダプティブストリーミングと呼ばれるものです。
 
@@ -92,7 +92,7 @@ Dynamic Media には、事前定義済みのアダプティブビデオエンコ
  </tbody> 
 </table>
 
-## アダプティブストリーミング用のDynamic Mediaビデオエンコーディングプロファイルの作成{#creating-a-video-encoding-profile-for-adaptive-streaming}
+## アダプティブストリーミング用のDynamic Mediaビデオエンコーディングプロファイルの作成 {#creating-a-video-encoding-profile-for-adaptive-streaming}
 
 Dynamic Media には、最高の閲覧エクスペリエンスを実現できるよう最適化された、事前定義済みのアダプティブビデオエンコーディングプロファイル（MP4 H.264 向けのビデオアップロード設定のグループ）が付属しています。ビデオのアップロード時にこのプロファイルを使用できます。
 
@@ -136,25 +136,25 @@ Dynamic Media には、最高の閲覧エクスペリエンスを実現できる
 1. 「ビデオサイズ」ヘッダーの下で、「**[!UICONTROL 縦横比を保持]**」チェックボックスがオンになっていることを確認します。
 1. ビデオフレームサイズの解像度をピクセル単位で設定します。**[!UICONTROL auto]** 値を使用すると、ソースの縦横比（幅と高さの比率）に合わせて自動的に拡大／縮小されます。例えば、「auto x 480」や「640 x auto」のようになります。
 
-   次のいずれかの操作をおこないます。
+   次のいずれかの操作を行います。
 
    * 「**[!UICONTROL 幅]**」フィールドに「**[!UICONTROL auto]**」と入力します。「**[!UICONTROL 高さ]**」フィールドに値をピクセル単位で入力します。
    * ビデオのサイズを視覚化するには、**[!UICONTROL 高さ]**&#x200B;の右にある&#x200B;**[!UICONTROL 情報]**&#x200B;アイコン(i)をタップして、**[!UICONTROL サイズ計算ツール]**&#x200B;ページを開きます。 **[!UICONTROL サイズ計算ツール]**&#x200B;を使用して、必要なビデオサイズ（青のボックスで表示）を設定します。完了したら、右上隅の「**[!UICONTROL X]**」をタップします。
 
 1. （オプション）「**[!UICONTROL 詳細]**」タブをタップし、「**[!UICONTROL デフォルト値を使用]**」チェックボックスがオンになっている（推奨）ことを確認します。または、ビデオおよびオーディオの詳細設定を変更します。
 1. ページの右上隅の「**[!UICONTROL 保存]**」をタップして、プリセットを保存します。
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 手順 5～10 を繰り返して、その他のエンコーディングプリセットを作成します。（アダプティブビデオストリーミングの場合は、複数のビデオプリセットが必要です）。
    * ページの右上隅の「**[!UICONTROL 保存]**」をもう一度タップして、プロファイルを保存します。
 
-## エンコーディングジョブの進行状況の監視  {#monitoring-the-progress-of-an-encoding-job}
+## エンコーディングジョブの進行状況の監視 {#monitoring-the-progress-of-an-encoding-job}
 
 ビデオエンコーディングジョブの進行状況を目視で監視できるように、処理インジケーター（進行状況バー）が表示されます。
 
 `error.log` ファイルで、エンコーディングジョブの進行状況を監視し、エンコーディングが完了したか、またはジョブのエラーが発生したかを確認することもできます。`error.log` は、AEM インスタンスのインストール先の `logs` フォルダーにあります。
 
-## プログレッシブストリーミング用のDynamic Mediaビデオエンコーディングプロファイルの作成{#creating-a-video-encoding-profile-for-progressive-streaming}
+## プログレッシブストリーミング用のDynamic Mediaビデオエンコーディングプロファイルの作成 {#creating-a-video-encoding-profile-for-progressive-streaming}
 
 「**[!UICONTROL アダプティブストリーミング用にエンコーディング]**」オプションを使用しない場合は、プロファイルに追加されるすべてのエンコーディングプリセットが、単一ビットレートのストリーミングまたはプログレッシブビデオ配信用の個々のビデオレンディションとして扱われることに注意してください。また、すべてのビデオレンディションが同じ縦横比であることを確認するための検証は実行されません。
 
@@ -192,7 +192,7 @@ Dynamic Media には、最高の閲覧エクスペリエンスを実現できる
       各オプションの横にある&#x200B;**[!UICONTROL 情報]**&#x200B;アイコンをタップすると、追加の説明や、選択したビデオ形式のコーデックに応じた推奨設定が表示されます。
 
 1. ページの右上隅の「**[!UICONTROL 保存]**」をタップして、プリセットを保存します。
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 手順 5～10 を繰り返して、その他のエンコーディングプリセットを作成します。
    * ページの右上隅の「**[!UICONTROL 保存]**」をタップして、プロファイルを保存します。
@@ -256,14 +256,14 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
    ![chlimage_1-516](assets/chlimage_1-516.png)
 
 1. ページの右下隅付近にある「**[!UICONTROL 追加]**」をタップします。
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 手順 3 および 4 を繰り返して、ビデオエンコーディングプロファイルに別のパラメーターを追加します。
    * ページの左上隅付近にある「**[!UICONTROL すべて保存]**」をタップします。
 
 1. **[!UICONTROL CRXDE Lite]**&#x200B;ページの左上隅にある「**[!UICONTROL ホームに戻る]**」アイコンをタップして、AEMに戻ります。
 
-### Dynamic Mediaビデオエンコーディングプロファイルの編集{#editing-a-video-encoding-profile}
+### Dynamic Mediaビデオエンコーディングプロファイルの編集 {#editing-a-video-encoding-profile}
 
 作成したビデオエンコーディングプロファイルを編集して、そのプロファイル内のビデオプリセットを追加、編集または削除することができます。
 
@@ -289,7 +289,7 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 1. ページの右上隅にある「**[!UICONTROL 保存]**」をタップします。
 
-### Dynamic Mediaビデオエンコーディングプロファイル{#copying-a-video-encoding-profile}のコピー
+### Dynamic Mediaビデオエンコーディングプロファイルのコピー {#copying-a-video-encoding-profile}
 
 1. AEM のロゴをタップし、**[!UICONTROL ツール／Assets／ビデオプロファイル]**&#x200B;に移動します。
 1. **[!UICONTROL ビデオプロファイル]**&#x200B;ページで、1つのビデオプロファイル名を確認します。
@@ -304,14 +304,14 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 1. ページの右上隅にある「**[!UICONTROL 保存]**」をタップします。
 
-### Dynamic Mediaビデオエンコーディングプロファイル{#deleting-a-video-encoding-profile}の削除
+### Dynamic Mediaビデオエンコーディングプロファイルの削除 {#deleting-a-video-encoding-profile}
 
 1. AEM のロゴをタップし、**[!UICONTROL ツール／Assets／ビデオプロファイル]**&#x200B;に移動します。
 1. **[!UICONTROL ビデオプロファイル]**&#x200B;ページで、1つ以上のビデオプロファイル名を確認します。
 1. ツールバーの「**[!UICONTROL 削除]**」をタップします。
 1. 「**[!UICONTROL OK]**」をタップします。
 
-## Dynamic Mediaビデオプロファイルのフォルダーへの適用{#applying-a-video-profile-to-folders}
+## Dynamic Mediaビデオプロファイルのフォルダーへの適用 {#applying-a-video-profile-to-folders}
 
 フォルダーにビデオプロファイルを割り当てると、サブフォルダーは自動的に親フォルダーのプロファイルを継承します。つまり、フォルダーに 1 つのビデオプロファイルのみを適用すればよいことになります。そのため、アセットをアップロード、保存、使用およびアーカイブする場所のフォルダー構造については入念に検討してください。
 
@@ -323,19 +323,19 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 ビデオプロファイルは、特定のフォルダーに適用することも、すべてのアセットに全体的に適用することもできます。
 
-### 特定のフォルダーへのビデオプロファイルの適用  {#applying-video-profiles-to-specific-folders}
+### 特定のフォルダーへのビデオプロファイルの適用 {#applying-video-profiles-to-specific-folders}
 
 **[!UICONTROL ツール]**&#x200B;メニュー内からフォルダーにビデオプロファイルを適用するか、またはフォルダー内にいる場合は「**[!UICONTROL プロパティ]**」から適用します。この節では、フォルダーにビデオプロファイルを適用するこれら両方の方法について説明します。
 
 既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
-#### Dynamic Mediaビデオプロファイルのプロファイルユーザーインターフェイスからのフォルダーへの適用{#applying-video-profiles-to-folders-from-profiles-user-interface}
+#### プロファイルユーザーインターフェイスを使用したフォルダーへのDynamic Mediaビデオプロファイルの適用 {#applying-video-profiles-to-folders-from-profiles-user-interface}
 
 1. AEM のロゴをタップし、**[!UICONTROL ツール／Assets／ビデオプロファイル]**&#x200B;に移動します。
 1. 1 つまたは複数のフォルダーに適用するビデオプロファイルを選択します。
 1. 「**[!UICONTROL プロファイルをフォルダーに適用]**」をタップし、新たにアップロードされたアセットを受け取る 1 つまたは複数のフォルダーを選択して、「**[!UICONTROL 適用]**」をタップします。既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
-#### 「プロパティ」{#applying-video-profiles-to-folders-from-properties}でフォルダーにDynamic Mediaビデオプロファイルを適用する
+#### 「プロパティ」でのフォルダーへのDynamic Mediaビデオプロファイルの適用 {#applying-video-profiles-to-folders-from-properties}
 
 1. AEMのロゴをタップし、「**[!UICONTROL Assets]**」に移動した後、ビデオプロファイルを適用するフォルダーに移動します。
 1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
@@ -343,7 +343,7 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
    ![chlimage_1-518](assets/chlimage_1-518.png)
 
-### Dynamic Mediaビデオプロファイルのグローバルな適用{#applying-a-video-profile-globally}
+### Dynamic Mediaビデオプロファイルのグローバルな適用 {#applying-a-video-profile-globally}
 
 特定のフォルダーにプロファイルを適用できるだけでなく、グローバルにプロファイルを適用することもできます。これにより、AEM Assets にアップロードされている、すべてのフォルダー内にあるすべてのコンテンツに、選択したプロファイルを適用できます。
 
@@ -355,13 +355,13 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
 ![chlimage_1-519](assets/chlimage_1-519.png)
 
-## フォルダー{#removing-a-video-profile-from-folders}からのDynamic Mediaビデオプロファイルの削除
+## フォルダーからのDynamic Mediaビデオプロファイルの削除 {#removing-a-video-profile-from-folders}
 
 フォルダーからビデオプロファイルを削除すると、サブフォルダーは自動的に親フォルダーのプロファイルの削除状態を継承します。ただし、フォルダー内で実行されたファイルの処理はそのまま維持されます。
 
 **[!UICONTROL ツール]**&#x200B;メニュー内から、またはフォルダー内にいる場合は「**[!UICONTROL フォルダー設定]**」から、フォルダーのビデオプロファイルを削除できます。この節では、両方の方法でフォルダーからビデオプロファイルを削除する方法について説明します。
 
-### プロファイルユーザーインターフェイス{#removing-video-profiles-from-folders-via-profiles-user-interface}を介してフォルダーからDynamic Mediaビデオプロファイルを削除する
+### プロファイルユーザーインターフェイスを使用したフォルダーからのDynamic Mediaビデオプロファイルの削除 {#removing-video-profiles-from-folders-via-profiles-user-interface}
 
 1. AEM のロゴをタップし、**[!UICONTROL ツール／Assets／ビデオプロファイル]**&#x200B;に移動します。
 1. 1 つまたは複数のフォルダーから削除するビデオプロファイルを選択します。
@@ -369,7 +369,7 @@ AEM でビデオプロファイルを作成または編集する際にはユー�
 
    名前がフォルダー名の下に表示されなくなっていることで、ビデオプロファイルがフォルダーに適用されていないことを確認できます。
 
-### 「プロパティ{#removing-video-profiles-from-folders-via-properties} 」を使用したフォルダーからのDynamic Mediaビデオプロファイルの削除
+### 「プロパティ」でフォルダーからDynamic Mediaビデオプロファイルを削除する {#removing-video-profiles-from-folders-via-properties}
 
 1. AEMのロゴをタップし、「**[!UICONTROL Assets]**」に移動した後、ビデオプロファイルを削除するフォルダーに移動します。
 1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
