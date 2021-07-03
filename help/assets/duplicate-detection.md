@@ -3,9 +3,9 @@ title: 重複項目の検出の有効化
 description: AEM で重複アセットの検出を有効にする方法について説明します。
 contentOwner: AG
 feature: アセット管理、アセットレポート
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: 138cf649-9e21-415e-9861-b07caacc85db
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 60%
