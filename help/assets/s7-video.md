@@ -7,8 +7,8 @@ topic-tags: managing-assets
 content-type: reference
 exl-id: 081e7db0-95cc-4260-8f08-318cd7d9d5b4
 feature: ビデオ
-role: Business Practitioner
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1604'
 ht-degree: 30%
@@ -27,7 +27,7 @@ Dynamic Media Classicビデオの統合により、最適化されたビデオ�
 
 詳しくは、[Dynamic Media Classicのアダプティブビデオセットに関するドキュメントを参照してください。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/video-profiles.html#dynamicmedia)
 
-## FFMPEGとDynamic Media Classic {#about-ffmpeg-and-scene}について
+## FFMPEGとDynamic Media Classicについて {#about-ffmpeg-and-scene}
 
 デフォルトのビデオエンコーディングプロセスは、ビデオプロファイルとの FFMPEG ベースの統合の使用に基づいています。そのため、組み込みの DAM 収集ワークフローには、ffmpeg ベースの次の 2 つのワークフローのステップが含まれています。
 
@@ -45,7 +45,7 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 * F4V H.264
 * MP4 H.264
 
-## ビデオのアップロード先の指定  {#deciding-where-to-upload-your-video}
+## ビデオのアップロード先の指定 {#deciding-where-to-upload-your-video}
 
 ビデオアセットのアップロード先の指定は、次の条件によって決まります。
 
@@ -93,13 +93,13 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 
 1. 選択したエンコーディングプロファイルは、この Scene7 クラウド設定用に指定した CQ DAM のターゲットフォルダーにアップロードされたすべてのビデオに自動的に適用されます。必要に応じて、別のターゲットフォルダーに別のエンコーディングプロファイルを適用することで、複数の Scene7 クラウド設定を指定できます。
 
-## ビューアとエンコーディングプリセットの更新  {#updating-viewer-and-encoding-presets}
+## ビューアとエンコーディングプリセットの更新 {#updating-viewer-and-encoding-presets}
 
 Scene7でプリセットを更新した場合は、Experience Managerでビデオのビューアプリセットとエンコーディングプリセットを更新する必要があります。 その場合は、クラウド設定のScene7設定に移動し、「**[!UICONTROL ビューアとエンコーディングプリセットを更新]**」をクリックします。
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
-## AdobeDAMからScene7にマスタービデオをアップロードしています{#uploading-your-master-video}
+## AdobeDAMからScene7にマスタービデオをアップロード {#uploading-your-master-video}
 
 1. Scene7 のエンコーディングプロファイルと共にクラウド設定を指定した CQ DAM のターゲットフォルダーに移動します。
 1. 「**[!UICONTROL アップロード]**」をクリックして、マスタービデオをアップロードします。ビデオのアップロードとエンコーディングは、DAMアセットの更新ワークフローが完了し、**[!UICONTROL Scene7に公開]**&#x200B;にチェックマークが付いた後に完了します。
@@ -124,11 +124,11 @@ Scene7 ビデオコンポーネントは、Scene7 ビデオでのみ使用でき
 >
 >S7ビデオコンポーネントは、標準で、ユニバーサルビデオプロファイルを使用します。 ただし、HTML5ベースのビデオプレーヤーをExperience Managerで入手することはできます。 標準搭載のHTML5ビデオプレーヤーの埋め込みコードをコピーし、Experience Managerページに配置します。
 
-## Experience Managerビデオコンポーネント{#aem-video-component}
+## Experience Managerビデオコンポーネント {#aem-video-component}
 
 Scene7のビデオの視聴にScene7ビデオコンポーネントの使用をお勧めします。完全性を考慮して、基盤ビデオコンポーネントでScene7ビデオを使用してください。
 
-### Experience ManagerビデオとScene7ビデオの比較{#aem-video-and-scene-video-comparison}
+### Experience ManagerビデオとScene7ビデオの比較 {#aem-video-and-scene-video-comparison}
 
 次の表に、Experience Manager基盤ビデオコンポーネントとScene7ビデオコンポーネントの間でサポートされている機能の大まかな比較を示します。
 
@@ -140,7 +140,7 @@ Scene7のビデオの視聴にScene7ビデオコンポーネントの使用を�
 | 拡張性 | ○ | はい（[HTML5ビューアSDK APIドキュメント](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)を使用） |
 | モバイルビデオ | はい | はい |
 
-### 設定  {#setting-up}
+### 設定 {#setting-up}
 
 #### ビデオプロファイルの作成 {#creating-video-profiles}
 
@@ -168,7 +168,7 @@ Scene7のビデオの視聴にScene7ビデオコンポーネントの使用を�
 
    ビデオコンポーネントで使用する、クラウド設定で選択したすべてのエンコーディングプリセットについて、この手順を繰り返します。
 
-#### デザイン{#configuring-design}の設定
+#### デザインの設定 {#configuring-design}
 
 **[!UICONTROL 基盤ビデオ]**&#x200B;コンポーネントは、ビデオソースリストの作成に使用するビデオプロファイルについて把握している必要があります。 ビデオコンポーネントデザインダイアログボックスを開き、新しいビデオプロファイルを使用するためのコンポーネントデザインを設定します。
 
