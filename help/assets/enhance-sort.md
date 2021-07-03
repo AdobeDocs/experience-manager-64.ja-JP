@@ -3,9 +3,9 @@ title: AEM におけるアセットの並べ替えの強化
 description: AEM Assets に導入されたサーバー側の並べ替え機能を使用して、クライアント側でバッチで並べ替えずに、フォルダーアセットまたは検索クエリを一度に並べ替える方法について説明します。
 contentOwner: AG
 feature: 検索
-role: Business Practitioner
+role: User
 exl-id: aa24ca68-d94e-4bd4-a5cc-113906650a2e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 93%
@@ -20,7 +20,7 @@ Adobe Experience Manager（AEM）Assets の検索機能が強化され、フォ�
 
 AEM Assets にサーバー側の並べ替え機能が導入され、フォルダー内または検索クエリ内の全アセットを（サイズの大きさを問わず）一度に並べ替えることが可能になり、クライアント側でバッチで並べ替える必要はなくなりました。これにより、事前に取得された結果をユーザーインターフェイスに迅速に表示でき、並べ替え操作がより迅速になります。
 
-## リスト表示でのアセットの並べ替え  {#sorting-assets-in-list-view}
+## リスト表示でのアセットの並べ替え {#sorting-assets-in-list-view}
 
 AEM Assets では、以下のフィールドに基づいてフォルダーアセットを並べ替えることができます。
 
