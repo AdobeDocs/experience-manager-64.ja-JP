@@ -11,8 +11,8 @@ content-type: reference
 discoiquuid: e6c9b50b-c27c-48bf-b3c0-9994e7bf6d7e
 exl-id: 335c7a78-a00f-451b-8e53-225830d429c6
 feature: アセット管理、CDNキャッシュ
-role: Administrator,Business Practitioner,Developer
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+role: Admin,User,Developer
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 92%
