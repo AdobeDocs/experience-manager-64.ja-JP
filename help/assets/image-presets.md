@@ -11,21 +11,21 @@ content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 exl-id: 07a4f315-a60e-456b-b02d-035b3f6ad9ad
 feature: 画像プリセット
-role: Business Practitioner
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 90%
 
 ---
 
-# Dynamic Media画像プリセット{#applying-image-presets}の適用
+# Dynamic Media画像プリセットの適用 {#applying-image-presets}
 
-画像プリセットを使用すると、異なるサイズや異なる形式の画像、または動的に生成された他の画像プロパティを設定した画像を動的に配信できます。画像を書き出すときにプリセットを選択できます。また、この操作によって、管理者が指定した仕様に合わせて画像が再フォーマットされます。
+画像プリセットを使用すると、Assets は異なるサイズや異なる形式の画像、あるいは動的に生成された他の画像プロパティを設定した画像を動的に配信できます。画像を書き出すときにプリセットを選択できます。また、この操作によって、管理者が指定した仕様に合わせて画像が再フォーマットされます。
 
 さらに、レスポンシブな画像プリセットを選択することもできます（画像プリセットを選択した後に「**[!UICONTROL RESS]**」ボタンを使用して指定します）。
 
-ここでは、画像プリセットの使用方法を説明します。[画像プリセットの作成と設定は管理者がおこなうことができます](managing-image-presets.md)。
+ここでは、画像プリセットの使用方法を説明します。[画像プリセットの作成と設定は管理者が行うことができます](managing-image-presets.md)。
 
 >[!NOTE]
 >
@@ -47,7 +47,7 @@ ht-degree: 90%
 
    ![chlimage_1-208](assets/chlimage_1-208.png)
 
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 動的レンディションを選択して画像プリセットをプレビューします。
    * 「**[!UICONTROL URL]**」、「**[!UICONTROL 埋め込み]**」または「**[!UICONTROL RESS]**」をタップして、ポップアップを表示します。
