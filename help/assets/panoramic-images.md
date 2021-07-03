@@ -7,8 +7,8 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
 exl-id: 51150d51-865e-4b8e-9990-ca755e4c7778
 feature: パノラマ画像
-role: Business Practitioner
-source-git-commit: 489a4b42bdd5895186ba885b9a1dc33b49427e8d
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 42%
@@ -39,7 +39,7 @@ ht-degree: 42%
 
 パノラマ画像ビューアで使用するアセットをアップロードするには、[アセットのアップロード](managing-assets-touch-ui.md#uploading-assets)を参照してください。
 
-## Dynamic Media Classic {#configuring-dynamic-media-classic-scene}の設定
+## Dynamic Media Classicの設定 {#configuring-dynamic-media-classic-scene}
 
 パノラマ画像ビューアがAEM内で正しく動作するようにするには、パノラマ画像ビューアプリセットをDynamic Media ClassicおよびDynamic Media Classic固有のメタデータと同期して、ビューアプリセットがJCRで更新されるようにする必要があります。 これをおこなうには、次の方法でDynamic Media Classicを設定します。
 
@@ -82,6 +82,6 @@ WCMの&#x200B;**[!UICONTROL パノラマメディア]**&#x200B;コンポーネ�
 
 詳しくは、[アセットのプレビュー](previewing-assets.md)を参照してください。
 
-## パノラマ画像の公開  {#publishing-panoramic-images}
+## パノラマ画像の公開 {#publishing-panoramic-images}
 
 [アセットの公開](publishing-dynamicmedia-assets.md)を参照してください。
