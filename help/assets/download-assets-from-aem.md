@@ -3,16 +3,16 @@ title: ' [!DNL Adobe Experience Manager]からデジタルアセットをダウ�
 description: ' [!DNL Adobe Experience Manager] からアセットをダウンロードする方法と、ダウンロード機能を有効または無効にする方法について説明します。'
 contentOwner: AG
 feature: アセット管理、アセット配布
-role: Business Practitioner
+role: User
 exl-id: bfe4d597-1080-4de5-a100-73a5175863d7
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 74%
 
 ---
 
-# [!DNL Adobe Experience Manager] からのアセットのダウンロード {#download-assets-from-aem}
+# [!DNL Adobe Experience Manager] からのアセットのダウンロード  {#download-assets-from-aem}
 
 静的レンディションおよび動的レンディションを含むアセットをダウンロードできます。または、アセットへのリンクを含む電子メールを [!DNL Adobe Experience Manager Assets] から直接送信できます。ダウンロードされたアセットは、ZIP ファイルにバンドルされています。書き出しジョブ用に圧縮する ZIP ファイルの最大サイズは 1 GB です。書き出しジョブあたり、最大で 500 個のアセットの合計を指定できます。
 
@@ -25,7 +25,7 @@ ht-degree: 74%
 アセットをダウンロードするには、次の手順に従います。
 
 1. AEMの左上隅にあるAEMロゴをタップし、左側のレールで「**[!UICONTROL ナビゲーション]**」をタップします。
-1. ナビゲーションページで、**[!UICONTROL アセット]** /**[!UICONTROL ファイル]**&#x200B;をタップします。
+1. ナビゲーションページで、「**[!UICONTROL アセット]**/**[!UICONTROL ファイル]**」をタップします。
 1. ダウンロードするアセットを含むフォルダーに移動します。
 1. フォルダーを選択するか、フォルダー内の 1 つ以上のアセットを選択します。
 1. ツールバーの「**[!UICONTROL ダウンロード]**」をタップします。
