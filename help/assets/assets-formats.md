@@ -2,10 +2,10 @@
 title: AEM Assets でサポートされているファイル形式
 description: AEM Assetsでサポートされているファイル形式とMIMEタイプと、各形式でサポートされている機能のリストです。
 contentOwner: AG
-feature: アセット管理，レンディション
-role: Business Practitioner,Administrator
+feature: アセット管理、レンディション
+role: User,Admin
 exl-id: ee25fe8f-36fb-42b3-9f90-0ea77bc02e2f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1651'
 ht-degree: 61%
@@ -26,7 +26,7 @@ AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリ
 | * | アドオン機能により対応 |
 | - | 適用なし |
 
-## ラスターイメージ形式{#supported-raster-image-formats}
+## ラスターイメージ形式 {#supported-raster-image-formats}
 
 アセット管理機能でサポートされるラスター画像形式は次のとおりです。
 
@@ -78,7 +78,7 @@ Dynamic Media機能でサポートされるラスターイメージ形式は次�
 
 * EPS ファイルの場合、メタデータの書き戻しは、PostScript Document Structuring Convention（PS-Adobe）バージョン 3.0 以降でサポートされています。
 
-## Dynamic Media {#unsupported-image-formats-dynamic-media}でサポートされていないラスターイメージ形式
+## Dynamic Mediaでサポートされていないラスターイメージ形式 {#unsupported-image-formats-dynamic-media}
 
 次のリストは、Dynamic Mediaでサポートされていない&#x200B;**&#x200B;ラスターイメージファイル形式のサブタイプを示しています。
 
@@ -91,7 +91,7 @@ Dynamic Media機能でサポートされるラスターイメージ形式は次�
 * 浮動小数点データを持つ TIFF ファイル。
 * Lab カラースペースを持つ TIFF ファイル。
 
-## PDF Rasterizerライブラリ{#supported-pdf-rasterizer-library}
+## PDF Rasterizerライブラリ {#supported-pdf-rasterizer-library}
 
 Adobe PDF Rasterizer ライブラリは、サイズが大きくコンテンツが多い Adobe Illustrator ファイルおよび PDF ファイルの高品質のサムネールとプレビューを生成します。次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
 
@@ -109,7 +109,7 @@ Adobe画像トランスコーディングライブラリは、エンコーディ
 
 [画像トランスコーディングライブラリ](imaging-transcoding-library.md)を参照してください。
 
-## Camera Raw{#supported-camera-raw}
+## Camera Raw {#supported-camera-raw}
 
 Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像を取り込むことができます。[Camera Rawサポート](camera-raw.md)を参照してください。
 
@@ -169,7 +169,7 @@ Dynamic Media機能でサポートされるドキュメント形式は次のと�
 
 * Dynamic Mediaを使用してINDDファイルの動的レンディションを生成するには、[InDesign(INDD)ファイル形式](../assets/managing-image-presets.md#indesign-indd-file-format)を参照してください。
 
-## マルチメディア形式{#supported-multimedia-formats}
+## マルチメディア形式 {#supported-multimedia-formats}
 
 | 形式 | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | FFMPEG トランスコーディング |
 |:---|:---:|:---:|:---:|:---:|:---:|
@@ -192,7 +192,7 @@ Dynamic Media機能でサポートされるドキュメント形式は次のと�
 | WMV | ✓ | ✓ |  | * | * |
 | SWF | ✓ | ✓ |  |  |  |
 
-## Dynamic Mediaトランスコーディング{#supported-input-video-formats-for-dynamic-media-transcoding}の入力ビデオ形式
+## Dynamic Mediaトランスコーディングの入力ビデオ形式 {#supported-input-video-formats-for-dynamic-media-transcoding}
 
 | ビデオファイル拡張子 | コンテナ | 推奨されるビデオコーデック | サポートされないビデオコーデック |
 |---|---|---|---|
@@ -213,7 +213,7 @@ Dynamic Media機能でサポートされるドキュメント形式は次のと�
 | FLAC | Native Flac | Free lossless audio codec |  |
 | MJ2 | Motion JPEG2000 | Motion JPEG 2000 codec |  |
 
-## アーカイブ形式{#supported-archive-formats}
+## アーカイブ形式 {#supported-archive-formats}
 
 サポートされるアーカイブ形式と一般的な DAM ワークフローの適用性については、次の表で説明します。
 
@@ -227,7 +227,7 @@ Dynamic Media機能でサポートされるドキュメント形式は次のと�
 
 **†** 結合された画像はPSDファイルから抽出されます。この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。`Deflate64`アルゴリズムを使用して作成されたZIPアーカイブは、AEMでのサポートに制限があります。 アーカイブおよびアーカイブ解除操作はサポートされていません。 アップロード、参照、ダウンロードなどの操作はサポートされています。
 
-## その他のサポートされる形式  {#other-supported-formats}
+## その他のサポートされる形式 {#other-supported-formats}
 
 他のいくつかのファイル形式に対する一般的な DAM ワークフローの適用性については、以下の表で説明します。
 
