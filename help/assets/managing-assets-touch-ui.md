@@ -4,9 +4,9 @@ description: AEM Assetsのタッチ操作向けUIを使用して実行できる�
 contentOwner: AG
 mini-toc-levels: 1
 feature: アセット管理，検索，レンディション，コラボレーション
-role: Business Practitioner
+role: User
 exl-id: aa1a702b-18dd-496b-a6e0-aa593af6e57c
-source-git-commit: 04f14a57fcdc5890fe78118536cc52988a2124c3
+source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
 workflow-type: tm+mt
 source-wordcount: '10131'
 ht-degree: 66%
