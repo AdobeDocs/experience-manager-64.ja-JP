@@ -12,15 +12,15 @@ discoiquuid: e78bb08a-a923-4399-b3f7-13aa4b7994d5
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 exl-id: 53e53cb7-1854-44e9-9516-51bcc99378b4
 feature: ビューアプリセット
-role: Administrator,Business Practitioner
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+role: Admin,User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '4236'
 ht-degree: 78%
 
 ---
 
-# Dynamic Mediaビューアプリセットの管理{#managing-viewer-presets}
+# Dynamic Mediaビューアプリセットの管理 {#managing-viewer-presets}
 
 Dynamic Mediaのビューアプリセットは、ユーザーがコンピューターの画面やモバイルデバイスでリッチメディアアセットを表示する方法を決定する一連の設定です。 管理者は、ビューアプリセットを作成できます。設定は、幅広いビューア設定オプションで使用できます。例えば、ビューアの表示サイズやズームの動作を変更できます。
 
@@ -37,13 +37,13 @@ Dynamic Mediaのビューアプリセットは、ユーザーがコンピュー�
 >
 >*事前に定義された標準提供ビューアプリセット*&#x200B;を編集するシナリオはサポートされていません。標準提供ビューアプリセットを編集しようとすると、そのビューアプリセットを新しい名前で保存するように指示されます。
 
-## ビューアのキーボードアクセシビリティ  {#keyboard-accessibility-for-viewers}
+## ビューアのキーボードアクセシビリティ {#keyboard-accessibility-for-viewers}
 
 すべての標準提供ビューアでキーボードアクセシビリティがサポートされています。
 
 [キーボードアクセシビリティとナビゲーション](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html?lang=ja)に関するページも参照してください。
 
-## Dynamic Mediaビューアプリセットの管理{#managing-presets}
+## Dynamic Mediaビューアプリセットの管理 {#managing-presets}
 
 AEMでビューアプリセットの追加、編集、削除、公開、非公開およびプレビューを実行できます。そのためには、**[!UICONTROL ツール/アセット/ビューアプリセット]**&#x200B;を選択します。
 
@@ -64,7 +64,7 @@ Web ページごとに異なるニーズがあります。例えば、個別の�
 >標準提供ビューアを使用するには、まずすべて公開する必要があります。\
 >[ビューアプリセットの公開](#publishing-viewer-presets)を参照してください。
 
-## ビューアプリセットのシステム互換性{#viewer-preset-system-compatibility}
+## ビューアプリセットのシステム互換性  {#viewer-preset-system-compatibility}
 
 Dynamic Media に付属するすべての標準提供ビューアプリセットは、次のシステムと完全に互換します。
 
@@ -75,7 +75,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 * Android Tablet
 * ビデオの場合、[Blackberry](https://developer.blackberry.com/devzone/develop/supported_media/bb_media_support_at_a_glance.html#kba1328730952678)と[Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/ff462087%28v=vs.105%29.aspx)でMP4の再生が追加でサポートされます。
 
-### ビューアプリセットのリッチメディアタイプ{#rich-media-types-for-viewer-presets}
+### ビューアプリセットのリッチメディアタイプ {#rich-media-types-for-viewer-presets}
 
 管理者は、新しいビューアプリセットの作成時に次のリッチメディアタイプを追加してカスタマイズすることができます。
 
@@ -99,7 +99,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 | **垂直方向ズーム** | 垂直方向ズームビューアを使用すると、製品画像の閲覧エクスペリエンスを最大限に高めて、ユーザーにとって最適な製品の表示を実現できます。スウォッチを垂直方向に配置することで、次のような利点があります。 <ul><li>スウォッチをフォールドの上に配置します。 水平スウォッチの場合、ユーザーのデスクトップ画面サイズによっては、ユーザーがページを下にスクロールするまでスウォッチが表示されませんでした。 ビューア内に垂直方向にスウォッチを配置することで、ユーザーの画面サイズに関係なく、確実にスウォッチが表示されるようになります。</li><li>メイン画像のサイズが最大化されます。水平方向のスウォッチの場合、スウォッチが表示されるようにページ上にスペースを確保する必要があります。この配置により、メイン画像のサイズが縮小されていました。ただし、スウォッチの垂直方向レイアウトでは、このスペースを確保する必要がありません。そのため、メイン画像のサイズを最大化できます。</li></ul> |
 | **ズーム** | ユーザーが領域をクリックしてズームインできます。ユーザーは、ズームイン、ズームアウトおよび画像をデフォルトのサイズにリセットするためのコントロールをクリックできます。 |
 
-## 標準提供ビューアプリセットのリスト{#list-of-out-of-the-box-viewer-presets}
+## 標準提供ビューアプリセットのリスト {#list-of-out-of-the-box-viewer-presets}
 
 次の表に、Dynamic Mediaに付属する事前定義済みの標準提供ビューアプリセットを示します。
 
@@ -159,7 +159,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 | **スワイプ** | スイッチバーをスクロール | 画像をスクロール | スピン |
 | **フリック** | スイッチバーをスクロール | 画像をスクロール | スピン |
 
-## {#increasing-the-number-of-viewer-presets-that-display}と表示されるDynamic Mediaビューアプリセットの数を増やす
+## 表示されるDynamic Mediaビューアプリセットの数の増加 {#increasing-the-number-of-viewer-presets-that-display}
 
 **[!UICONTROL 詳細ビュー／ビューア]**&#x200B;でアセットを表示したとき、AEM には様々なビューアプリセットが表示されます。表示されるビューアの数を増減できます。
 
@@ -178,7 +178,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 1. **[!UICONTROL limit]**&#x200B;プロパティで、数値を目的の数値（例：`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`）に変更します。
 1. 「**[!UICONTROL すべて保存]**」をタップします。
 
-## 新しいDynamic Mediaビューアプリセットの作成{#creating-a-new-viewer-preset}
+## 新しいDynamic Mediaビューアプリセットの作成 {#creating-a-new-viewer-preset}
 
 ビューアプリセットを作成しておくと、アセットの表示やアセットとの対話のための様々な設定を適用できます。ただし、新しいビューアプリセットを作成する必要はありません。デフォルトの、すぐに使えるビューアプリセットが既に AEM Assets に付属していますので、これを使用できます。
 
@@ -206,7 +206,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
    [ビューアプリセットのリッチメディアタイプ](#rich-media-types-for-viewer-presets)を参照してください。
 
 1. **ビューアプリセットを編集**&#x200B;ページで、「**[!UICONTROL 外観]**」タブをタップします。
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 「**[!UICONTROL 選択したタイプ]**」プルダウンメニューで、ビジュアルデザインをカスタマイズするコンポーネントを選択します。または、設定するビジュアル要素をビューアでタップして選択することもできます。
 
@@ -250,7 +250,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
    [ビューアプリセットの公開](#publishing-viewer-presets)を参照してください。
 
-## インタラクティブビデオのビューアプリセットの作成に関する考慮事項  {#special-considerations-for-creating-an-interactive-viewer-preset}
+## インタラクティブビデオのビューアプリセットの作成に関する考慮事項 {#special-considerations-for-creating-an-interactive-viewer-preset}
 
 **パネル内の画像サムネールのディスプレイモードについて**
 
@@ -296,7 +296,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
    前述の表の例では、「30 秒 / 3 ビデオサブセグメント = 各ビデオサブセグメントで 10 秒」の再生時間になります。
 
-### カルーセルバナーのビューアプリセット{#special-considerations-for-creating-a-carousel-banner-viewer-preset}の作成に関する特別な考慮事項
+### カルーセルバナーのビューアプリセットの作成に関する特別な考慮事項 {#special-considerations-for-creating-a-carousel-banner-viewer-preset}
 
 カルーセルバナーのビューアプリセットを作成するときに、ホットスポットのスタイル変更は次のように実行できます。
 
@@ -304,7 +304,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 |---|---|---|
 | **ホットスポットアイコン** | ホットスポットに使用するアイコンを変更する | ホットスポットアイコンの画像を変更するには、「**[!UICONTROL 外観]**」タブで、「**[!UICONTROL 選択したコンポーネント]**」の「**[!UICONTROL ImageMapEffect]**」をタップします。「**[!UICONTROL アイコン]**」で「**[!UICONTROL 背景]**」を選択し、「**[!UICONTROL 画像]**」フィールドで目的に背景画像に移動します。 |
 
-## Dynamic Mediaビューアプリセットのアクティベートとアクティベート解除{#activating-or-deactivating-viewer-presets}
+## Dynamic Mediaビューアプリセットのアクティベートとアクティベート解除 {#activating-or-deactivating-viewer-presets}
 
 オーサーモードでビューアプリセットがアクティベートされているかどうかで、ユーザーインターフェイスに表示されるビューアプリセットが変わります。初期設定では、ビューアプリセットは作成後の&#x200B;*オン*&#x200B;になります。 プリセットをオフにすると、オーサーモードでは表示されなくなります。プリセットを公開する場合は、オン／オフに関係なく、常に公開されます。リストが非ワイルになった場合や、ビューアプリセットを使用できなくしたい場合は、ビューアプリセットを非アクティブ化できます。
 
@@ -315,7 +315,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
    アクティベートされたビューアプリセットには、（青いボックスで）右側にトグルしたアイコンが示されます。アクティベート解除されたビューアプリセットには、（薄いグレーのボックスで）左側にトグルしたアイコンが示されます。
 
-## Dynamic Mediaビューアプリセット{#publishing-viewer-presets}の公開
+## Dynamic Mediaビューアプリセットの公開 {#publishing-viewer-presets}
 
 ビューアプリセットの状態をアクティブ化（または&#x200B;*オン*&#x200B;に切り替え）すると、Dynamic Mediaコンポーネントとインタラクティブメディアコンポーネント内、およびアセットを表示する際に表示されます。
 
@@ -331,14 +331,14 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 1. 公開するビューアプリセットを 1 つ以上選択します。
 1. ツールバーの&#x200B;**[!UICONTROL 公開]**&#x200B;アイコンをタップします。
 
-## Dynamic Mediaビューアプリセットの並べ替え{#sorting-viewer-presets}
+## Dynamic Mediaビューアプリセットの並べ替え {#sorting-viewer-presets}
 
 **Dynamic Mediaビューアプリセットを並べ替えるには**:
 
 1. AEM の左上隅にある AEM ロゴをタップし、左側のパネルで&#x200B;**ツール**（ハンマーアイコン）／**[!UICONTROL Assets／ビューアプリセット]**&#x200B;をタップします。
 1. 「**[!UICONTROL プリセットのタイトル]**」、「**[!UICONTROL タイプ]**」、「**[!UICONTROL 公開]**」または「**[!UICONTROL 状態]**」をクリックして、その見出しの列でソートします。例えば、「**[!UICONTROL タイプ]**」をクリックすると、ビューアプリセットのタイプが、アルファベット順で、またはアルファベットの逆の順序でソートされます。
 
-## Dynamic Mediaビューアプリセットの編集{#editing-viewer-presets}
+## Dynamic Mediaビューアプリセットの編集 {#editing-viewer-presets}
 
 *事前に定義された標準提供ビューアプリセット*&#x200B;を編集するシナリオはサポートされていません。標準提供ビューアプリセットを編集すると、新しい名前で保存するように指示されます。
 
@@ -348,12 +348,12 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 1. ビューアプリセットのタイトルの左側にあるチェックボックスをオンにして、プリセットを選択します。
 1. ツールバーの「**[!UICONTROL 編集]**」をタップします。
 1. **[!UICONTROL ビューアプリセットを編集]**&#x200B;ページで、ビューアプリセットに対して適宜変更をおこないます。
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 「**[!UICONTROL 保存]**」をタップして変更内容を保存し、ビューアプリセットページに戻ります。****
    * 「**[!UICONTROL キャンセル]**」をタップして変更内容をキャンセルし、ビューアプリセットページに戻ります。****
 
-## カスタムDynamic Mediaビューアプリセットの削除{#deleting-custom-viewer-presets}
+## カスタムDynamic Mediaビューアプリセットの削除 {#deleting-custom-viewer-presets}
 
 作成して Dynamic Media に追加したビューアプリセットを削除できます。
 
@@ -379,7 +379,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
    [この URL をコピー](linking-urls-to-yourwebapplication.md)して、他のユーザーと共有できます。
 
-## Dynamic Mediaビューアプリセット{#delivering-assets-with-viewer-presets}を使用したアセットの配信
+## Dynamic Mediaビューアプリセットを使用するアセットの配信 {#delivering-assets-with-viewer-presets}
 
 ビューアプリセットの URL を取得する方法については、[Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)を参照してください。[Web ページへのビデオビューアの埋め込み](embed-code.md)も参照してください。
 
