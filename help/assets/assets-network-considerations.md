@@ -3,9 +3,9 @@ title: Assets のネットワークに関する考慮事項
 description: AEM Assets のデプロイメントを設計する際のネットワークの考慮事項について説明します。
 contentOwner: AG
 feature: 開発者ツール
-role: Architect,Administrator
+role: Architect,Admin
 exl-id: f8f9d86f-a5e3-46ac-8d96-c2e44eac9c93
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 98%
@@ -41,13 +41,13 @@ ht-degree: 98%
 
 右に表示されているコンピューターは VPN を介して企業ネットワークに接続されており、アップストリームの上限は 1 Mbps です。1 Mbps 接続と 1 Gbps 接続では、ユーザーエクスペリエンスは大幅に異なります。アセットのサイズによっては、そのタスクに対して VPN アップリンクが不十分になる可能性があります。
 
-## 企業ネットワークのトポロジ  {#topology-of-the-corporate-network}
+## 企業ネットワークのトポロジ {#topology-of-the-corporate-network}
 
 ![chlimage_1-354](assets/chlimage_1-354.png)
 
 図では、企業ネットワーク内で使用されているアップリンクの速度が、通常使用されるものよりも高速になっています。これらのパイプは共有リソースです。共有スイッチが処理するクライアント数が 50 と想定されている場合、ここが渋滞地点となる可能性があります。最初の図では、2 台のコンピューターのみがその特定の接続を共有しています。
 
-## 企業ネットワークと AEM 環境からのインターネットへのアップリンク  {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
+## 企業ネットワークと AEM 環境からのインターネットへのアップリンク {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
@@ -63,7 +63,7 @@ ht-degree: 98%
 
 このサンプル図より、6 台のデバイスが 10 Mbps の概念的なチャネルを共有していると結論付けることができます。使用しているアセットのサイズによっては、これではユーザーの期待に応えるには不十分である可能性があります。
 
-## AEM 環境のトポロジ  {#topology-of-the-aem-environment}
+## AEM 環境のトポロジ {#topology-of-the-aem-environment}
 
 ![chlimage_1-356](assets/chlimage_1-356.png)
 
