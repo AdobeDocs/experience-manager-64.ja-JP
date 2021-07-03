@@ -7,11 +7,11 @@ topic-tags: dynamic-media
 content-type: reference
 exl-id: d8cc94b0-eacf-4e76-bd50-7934bbc28c92
 feature: トラブルシューティング
-role: Administrator,Business Practitioner
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+role: Admin,User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1296'
-ht-degree: 86%
+ht-degree: 87%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 86%
 
 次に全般的なヒントやテクニックを示します。
 
-### アセット同期ステータスプロパティ{#asset-synchronization-status-properties}
+### アセット同期ステータスプロパティ {#asset-synchronization-status-properties}
 
 CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dynamic Media へのアセットの同期に成功したことが確認できます。
 
@@ -53,7 +53,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
 
 同期のエラーと問題は `error.log`（AEM サーバーディレクトリの `/crx-quickstart/logs/`）に記録されます。ログにはほとんどの問題の根本原因を突き止めるのに十分な情報が記録されますが、Slingコンソール([http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog))を通じて`com.adobe.cq.dam.ips`パッケージのログをデバッグに増やして、詳細を収集できます。
 
-### {#move-copy-delete}の移動、コピー、削除
+### 移動、コピー、削除 {#move-copy-delete}
 
 移動、コピーまたは削除の処理を実行する前に次をおこなってください。
 
@@ -67,7 +67,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
 
 * 両方を保持すると、公開済みアセットURLの一意の名前を持つ新しいアセットが作成されます。例えば、 **[!UICONTROL image.jpg]**&#x200B;は元のアセット、 **[!UICONTROL image1.jpg]**&#x200B;は新しくアップロードされたアセットです。
 
-* Dynamic Media - Scene7 モードの配信ではバージョン作成はサポートされていません。新しいバージョンは、配信中の既存のアセットを置き換えます。
+* Dynamic Media - Scene7 モードの配信ではバージョン作成はサポートされていません。配信の既存アセットが新しいバージョンに置き換わります。
 
 ## 画像とセット {#images-and-sets}
 
@@ -226,7 +226,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
   </tr> 
   <tr> 
    <td>ビューアプリセットのアートワークが、アセット詳細のプレビューまたは URL／埋め込みコードのコピーで 404 を返す場合</td> 
-   <td><p>CRXDE Lite で以下をおこないます。</p> 
+   <td><p>CRXDE Lite で以下を行います。</p> 
     <ol> 
      <li>Dynamic Media 同期フォルダー内の <code>&lt;sync-folder&gt;/_CSS/_OOTB</code> フォルダー（例えば <code>/content/dam/_CSS/_OOTB</code>）に移動します。</li> 
      <li>問題のあるアセットのメタデータノードを見つけます（例えば <code>&lt;sync-folder&gt;/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png/jcr:content/metadata/</code>）。</li> 
