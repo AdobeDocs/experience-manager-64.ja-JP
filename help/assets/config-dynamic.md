@@ -9,8 +9,8 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 821eb27e-67c9-4589-9196-30dacb84fa59
 exl-id: 1e122f97-ac37-44f5-a1cd-bf53ffda6f5b
 feature: 設定，ハイブリッドモード
-role: Administrator,Business Practitioner,Developer
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+role: Admin,User,Developer
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '7796'
 ht-degree: 54%
@@ -52,7 +52,7 @@ Dynamic Mediaをご利用のお客様は、すべてのDynamic Mediaコンテン
 
 ![chlimage_1-507](assets/chlimage_1-507.png)
 
-## サポートされるDynamic Media構成{#supported-dynamic-media-configurations}
+## サポートされるDynamic Media設定 {#supported-dynamic-media-configurations}
 
 各設定タスクで参照される用語を次に示します。
 
@@ -175,7 +175,7 @@ Dynamic Media を有効にするには、コマンドラインまたはクイッ
    * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7accessログは、`/is/image`と`/is/content`を通じてDynamic Mediaに対しておこなわれた各リクエストを記録します。
    これらのログは、Dynamic Media が有効の場合のみ使用されます。これらは&#x200B;**[!UICONTROL system/console/status-Bundlelist]**&#x200B;ページから生成される&#x200B;**Download Full**&#x200B;パッケージには含まれません。Dynamic Mediaに関する問題が発生した場合は、カスタマーサポートに連絡する際に、これらのログを両方とも問題に追加してください。
 
-### AEMを別のポートまたはコンテキストパスにインストールした場合… {#if-you-installed-aem-to-a-different-port-or-context-path}
+### AEM を異なるポートやコンテキストパスにインストールした場合 {#if-you-installed-aem-to-a-different-port-or-context-path}
 
 [AEMをアプリケーションサーバー](/help/sites-deploying/application-server-install.md)にデプロイし、Dynamic Mediaを有効にしている場合は、Externalizerで&#x200B;**self**&#x200B;ドメインを設定する必要があります。そうしないと、アセットのサムネールの生成がDynamic Mediaアセットに対して正しく機能しません。
 
@@ -193,7 +193,7 @@ AEM QuickStart WARデプロイメントでは、ポート番号とコンテキ�
 >[!NOTE]
 [AEM Quickstart スタンドアロンデプロイメント](/help/sites-deploying/deploy.md)では、**self** ドメインは通常設定する必要がありません。ポート番号とコンテキストパスは自動設定されます。ただし、ネットワークインターフェイスがオフの場合は、**self** ドメインを設定する必要があります。
 
-## Dynamic Media の無効化   {#disabling-dynamic-media}
+## Dynamic Media の無効化  {#disabling-dynamic-media}
 
 Dynamic Media はデフォルトでは有効になっていません。しかし、以前に Dynamic Media を有効にした場合は、後で無効にすることができます。
 
@@ -215,7 +215,7 @@ Dynamic Media はデフォルトでは有効になっていません。しかし
    Dynamic Media実行モードが無効になると、`qdam.pyramid.tiff`レンディションを生成するワークフロー手順は自動的にスキップされます。 また、動的レンディションのサポートやその他の Dynamic Media 機能も無効になります。
    また、AEM サーバーを設定した後で Dynamic Media 実行モードを無効にすると、その実行モードの下でアップロードされたアセットがすべて無効になることにも注意してください。
 
-## （オプション）Dynamic Mediaのプリセットおよび設定を6.3から6.4にダウンタイムなしで移行する{#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
+## （オプション）Dynamic Mediaのプリセットおよび設定を6.3から6.4にダウンタイムなしで移行 {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
 AEM Dynamic Mediaを6.3から6.4にアップグレードする場合(ダウンタイムなし（オプトイン）デプロイメントの機能が含まれる)、次のcurlコマンドを実行して、すべてのプリセットと設定をCRXDE Liteで`/etc`から`/conf`に移行する必要があります。
 
@@ -229,7 +229,7 @@ AEM Dynamic Mediaを6.3から6.4にアップグレードする場合(ダウン�
 
 `curl -u admin:admin http://localhost:4502/libs/settings/dam/dm/presets/viewer.pushviewerpresets`
 
-## イメージレプリケーションの設定{#configuring-image-replication}
+## イメージレプリケーションの設定 {#configuring-image-replication}
 
 Dynamic Mediaの画像配信は、ビデオサムネールを含む画像アセットをAEMオーサーから公開し、Adobeのオンデマンドレプリケーションサービス（レプリケーションサービスのURL）にレプリケートすることで機能します。 アセットは、オンデマンドの画像配信サービス（画像サービスのURL）を通じて配信されます。
 
@@ -334,7 +334,7 @@ Replication test succeeded
 
 認証の設定時に発生する可能性がある問題と、その解決策を紹介します。その前に、レプリケーションが設定済みであることを確認してください。
 
-#### 問題：HTTP ステータスコード 401 メッセージ - 認証が必要  {#problem-http-status-code-with-message-authorization-required}
+#### 問題：HTTP ステータスコード 401 メッセージ - 認証が必要 {#problem-http-status-code-with-message-authorization-required}
 
 この問題は、`dynamic-media-replication` ユーザーのキーストアの設定に失敗したことによって発生する可能性があります。
 
@@ -375,7 +375,7 @@ Replication test to s7delivery:https://<localhost>:8580/is-publish/
 
 **解決策**：パスワードを確認します。レプリケーションエージェントに保存されたパスワードがキーストアの作成に使用されたパスワードと同じでありません。
 
-#### 問題：InvalidAlgorithmParameterException  {#problem-invalidalgorithmparameterexception}
+#### 問題：InvalidAlgorithmParameterException {#problem-invalidalgorithmparameterexception}
 
 この問題は AEM オーサーインスタンスの設定エラーが原因です。Author の java プロセスが正しい `javax.net.ssl.trustStore` を取得していません。このエラーは次のレプリケーションログで確認できます。
 
@@ -426,7 +426,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 1. 「**[!UICONTROL 接続をテスト]**」をタップして設定が有効であることを確認します。
 
-#### 問題：公開エージェントが OAuth ではなく SSL を使用している  {#problem-publish-agent-is-using-ssl-instead-of-oauth}
+#### 問題：公開エージェントが OAuth ではなく SSL を使用している {#problem-publish-agent-is-using-ssl-instead-of-oauth}
 
 この問題は、ホットフィックスまたは機能パックが正しくインストールされなかったか設定を上書きしたことが原因で発生する可能性があります。
 
@@ -458,7 +458,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 1. ページの左上隅付近にある「**[!UICONTROL すべて保存]**」をタップします。
 
-### 設定のテスト{#testing-your-configuration}
+### 設定のテスト {#testing-your-configuration}
 
 設定にはエンドツーエンドのテストを実行することをお勧めします。
 
@@ -482,7 +482,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 アセットが配信されたことをテストするもう 1 つの方法は、URL に req=exists を追加することです。
 
-## Dynamic Media クラウドサービスの設定  {#configuring-dynamic-media-cloud-services}
+## Dynamic Media クラウドサービスの設定 {#configuring-dynamic-media-cloud-services}
 
 Dynamic Media クラウドサービスは、画像とビデオのハイブリッド公開および配信、ビデオ分析、ビデオエンコーディングなどの様々なクラウドサービスをサポートします。
 
@@ -505,7 +505,7 @@ Dynamic MediaCloud Servicesを設定する前に、パブリッシュインス�
 1. 「**[!UICONTROL 保存]**」をタップして Dynamic Media 設定ブラウザーページに戻ります。
 1. AEM のロゴをタップしてグローバルナビゲーションコンソールにアクセスします。
 
-## ビデオレポートの設定{#configuring-video-reporting}
+## ビデオレポートの設定 {#configuring-video-reporting}
 
 Dynamic Media — ハイブリッドモードを使用して、AEMの複数のインストールにわたってビデオレポートを設定できます。
 
@@ -518,7 +518,7 @@ Dynamic Media — ハイブリッドモードを使用して、AEMの複数の�
 
 1. パッケージインストールの確認やデバッグをおこないます。
 
-### 最初のオーサーノード{#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}を設定した後で[!DNL Video Analytics]プリセットパッケージを作成する
+### 最初のオーサーノードを設定した後で[!DNL Video Analytics]プリセットパッケージを作成する {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
 
 このタスクが完了すると、[!DNL Video Analytics]プリセットを含むパッケージファイルが作成されます。 これらのプリセットには、レポートスイート、トラッキングサーバー、トラッキング名前空間および Marketing Cloud 組織 ID（利用可能な場合）が含まれます。
 
@@ -532,7 +532,7 @@ Dynamic Media — ハイブリッドモードを使用して、AEMの複数の�
 1. パッケージをビルドします。
 1. [!DNL Video Analytics]プリセットパッケージをダウンロードまたは共有して、後続の新しいオーサーノードと共有できるようにします。
 
-### 追加のオーサーノード{#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}を設定する前に、[!DNL Video Analytics]プリセットパッケージをインストールします。
+### 追加のオーサーノードを設定する前に[!DNL Video Analytics]プリセットパッケージをインストールする {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
 
 必ず、__&#x200B;の前に、**[!UICONTROL Dynamic Media設定（6.3より前）]**&#x200B;を設定して、このタスクを完了してください。 そうしないと、別の未使用レポートスイートが作成されます。 また、ビデオレポートは引き続き正しく機能しますが、データの収集は最適化されません。
 
@@ -547,7 +547,7 @@ Dynamic Media — ハイブリッドモードを使用して、AEMの複数の�
 1. 以下のいずれかをおこなってパッケージのインストールを確認し、必要に応じてそのデバッグをおこないます。
 
    * **JCRTを使用し [!DNL Video Analytics] てプリセットをチェ**
-ックするか、JCRを使用して [!DNL Video Analytics] プリセットをチェックします。 **[!UICONTROL CRXDE Lite]**&#x200B;にアクセスできる必要があります。
+ックするか、JCRを使用し [!DNL Video Analytics] てプリセットを確認します。 **[!UICONTROL CRXDE Lite]**&#x200B;にアクセスできる必要があります。
 
       AEM - **[!UICONTROL CRXDE Lite]**&#x200B;で、`/conf/global/settings/dam/dm/presets/analytics/jcr:content/userdata  `に移動します。
 
@@ -595,7 +595,7 @@ Dynamic Media — ハイブリッドモードを使用して、AEMの複数の�
 * 最初に[!DNL Video Analytics]プリセットパッケージをインストールしないと、新しいレポートスイートが作成される可能性があります。
 * AEM 6.3からAEM 6.4またはAEM 6.4.1にアップグレードし、**[!UICONTROL Dynamic Media設定（6.3より前）]**&#x200B;を設定しても、レポートスイートは作成されます。 これは既知の問題であり、AEM 6.4.2 で修正される予定です。
 
-### [!DNL Video Analytics]プリセット{#about-the-video-analytics-preset}について
+### [!DNL Video Analytics]プリセットについて {#about-the-video-analytics-preset}
 
 [!DNL Video Analytics]プリセット（単に分析プリセットとも呼ばれます）は、Dynamic Mediaのビューアプリセットの横に保存されます。 これは基本的にはビューアプリセットと同じですが、AppMeasurement および Video Heartbeat レポートの設定に使用される情報が付加されています。
 
@@ -623,7 +623,7 @@ AEM 6.4以降のバージョンでは、このプリセットは`/conf/global/se
 1. 「**[!UICONTROL レプリケーション]**」タブをタップします。
 1. 「**[!UICONTROL 複製]**」をタップします。
 
-## ビューアプリセットのレプリケート  {#replicating-viewer-presets}
+## ビューアプリセットのレプリケート {#replicating-viewer-presets}
 
 ビューアプリセットを使用してアセットを配信するには、ビューアプリセットをレプリケート/公開する必要があります。 （URLを取得したりアセットのコードを埋め込んだりするには、すべてのビューアプリセットをアクティベート&#x200B;_および_&#x200B;をレプリケートする必要があります）。 詳しくは、[ビューアプリセットの公開](managing-viewer-presets.md#publishing-viewer-presets)を参照してください。
 
@@ -644,7 +644,7 @@ Dynamic Media以外のデプロイメントでは、_すべての_&#x200B;アセ
 
 フィルターによって、アセットを AEM パブリッシュノードへのレプリケート対象から&#x200B;__&#x200B;除外することができます。
 
-### レプリケーション用のデフォルトのアセットフィルターの使用{#using-default-asset-filters-for-replication}
+### レプリケーション用のデフォルトのアセットフィルターの使用 {#using-default-asset-filters-for-replication}
 
 Dynamic Mediaを1)実稼動環境の&#x200B;_または_ 2)で画像とビデオを使用している場合は、アドビが提供するデフォルトのフィルターをそのまま使用できます。 次のフィルターがデフォルトでアクティブです。
 
@@ -692,7 +692,7 @@ Dynamic Mediaを1)実稼動環境の&#x200B;_または_ 2)で画像とビデオ�
 >[!NOTE]
 フィルターは、MIME タイプに適用され、パス用にはできません。
 
-### ビデオのみのデプロイメント用のアセットフィルターのセットアップ{#setting-up-asset-filters-for-video-only-deployments}
+### ビデオのみのデプロイメント用のアセットフィルターのセットアップ {#setting-up-asset-filters-for-video-only-deployments}
 
 Dynamic Media をビデオのみに使用している場合は、次の手順に従ってレプリケーション用のアセットフィルターを設定します。
 
@@ -709,7 +709,7 @@ Dynamic Media をビデオのみに使用している場合は、次の手順に
 
 これにより AEM のパブリッシュインスタンスがビデオのポスター画像と再生に必要なビデオのメタデータを配信するように設定され、ビデオ自体は Dynamic Media メディアクラウドサービスによって配信されます。また、パブリッシュインスタンスに不要な元のビデオと静的なサムネールのレンディションがフィルターによってレプリケーションから除外されます。
 
-### 実稼動以外のデプロイメントでのイメージング用のアセットフィルターのセットアップ{#setting-up-asset-filters-for-imaging-in-non-production-deployments}
+### 実稼動環境以外のデプロイメントでの画像用のアセットフィルターのセットアップ {#setting-up-asset-filters-for-imaging-in-non-production-deployments}
 
 実稼動環境以外のデプロイメントで画像に Dynamic Media を使用している場合は、次の手順に従ってレプリケーション用のアセットフィルターを設定します。
 
@@ -736,7 +736,7 @@ Dynamic Media をビデオのみに使用している場合は、次の手順に
 
 ![image-2018-01-16-10-26-28-465](assets/image-2018-01-16-10-26-28-465.png)
 
-### レプリケーション用のアセットフィルターのカスタマイズ{#customizing-asset-filters-for-replication}
+### レプリケーション用のアセットフィルターのカスタマイズ {#customizing-asset-filters-for-replication}
 
 （オプション）レプリケーション用のアセットフィルターをカスタマイズするには：
 
@@ -948,7 +948,7 @@ Dynamic Mediaは、有効にした後に[標準で動作します。](#enabling-
  </tbody> 
 </table>
 
-## Dynamic Media カラーマネジメントの設定  {#configuring-dynamic-media-color-management}
+## Dynamic Media カラーマネジメントの設定 {#configuring-dynamic-media-color-management}
 
 Dynamic Media カラーマネジメントを使用すると、プレビュー用にアセットをカラー補正できます。
 
@@ -967,7 +967,7 @@ Dynamic Media カラーマネジメントを設定して、CMYK、RGB または�
 >[!NOTE]
 標準のAdobeカラープロファイルセットは、ソフトウェアディストリビューション](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445)の[機能パック12445がインストールされている場合にのみ使用できます。 すべての機能パックとサービスパックは、[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)で入手できます。 機能パック 12445 は、Adobe カラープロファイルを提供します。
 
-### 機能パック12445 {#installing-feature-pack}をインストールしています
+### 機能パック12445をインストールしています {#installing-feature-pack}
 
 Dynamic Media のカラーマネジメント機能を使用するには、機能パック 12445 をインストールする必要があります。
 
@@ -1251,7 +1251,7 @@ Dynamic Media のカラーマネジメント機能を使用するには、機能
 * RGB 出力を返す動的レンディションは、RGB 出力を `sRGB` カラースペース内で返します。
 * CMYK 出力を返す動的レンディションは、CMYK 出力を `WebCoated` カラースペース内で返します。
 
-## Delivering Assets {#delivering-assets}
+## アセットの配信 {#delivering-assets}
 
 上記のすべてのタスクが完了すると、アクティブ化されたDynamic Mediaアセットが画像またはビデオサービスから提供されます。 AEMでは、この機能は、 **[!UICONTROL 画像のコピーURL]**、 **[!UICONTROL ビューアのコピーURL]**、 **[!UICONTROL ビューアの埋め込みコード]**&#x200B;およびWCMに表示されます。
 
@@ -1296,6 +1296,6 @@ Dynamic Media のカラーマネジメント機能を使用するには、機能
  </tbody> 
 </table>
 
-### WCM の Dynamic Media コンポーネントとインタラクティブメディアコンポーネント  {#wcm-dynamic-media-and-interactive-media-components}
+### WCM の Dynamic Media コンポーネントとインタラクティブメディアコンポーネント {#wcm-dynamic-media-and-interactive-media-components}
 
 Dynamic Media コンポーネントとインタラクティブメディアコンポーネントを参照する WCM ページは、配信サービスを参照します。
