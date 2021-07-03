@@ -7,8 +7,8 @@ topic-tags: Dynamic-Media
 content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
 feature: ビデオ
-role: Business Practitioner
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '10393'
 ht-degree: 77%
@@ -19,7 +19,7 @@ ht-degree: 77%
 
 ここでは、Dynamic Media でのビデオの操作方法について説明します。
 
-## クイックスタート：ビデオ  {#quick-start-videos}
+## クイックスタート：ビデオ {#quick-start-videos}
 
 次のワークフローの手順説明は、Dynamic Media 内のアダプティブビデオセットをすぐに使い始めることを目的としたものです。各手順に続いて、詳しい説明のあるトピックの見出しへのリンクが記載されています。
 
@@ -29,6 +29,7 @@ ht-degree: 77%
 >
 >* [Dynamic Media - ハイブリッドモードの設定の Dynamic Media クラウドサービスの設定を参照してください。](/help/assets/config-dynamic.md)
 >* [ダイナミックメディア - Scene7 モードの設定](config-dms7.md)および[ダイナミックメディア - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)を参照してください。
+
 >
 
 
@@ -53,7 +54,7 @@ ht-degree: 77%
 
 
 
-1. 次のいずれかの操作をおこなって、**Dynamic Media ビデオを管理**&#x200B;します。
+1. 次のいずれかの操作を行って、**Dynamic Media ビデオを管理**&#x200B;します。
 
    * ビデオアセットを整理、参照および検索します。
 
@@ -66,11 +67,11 @@ ht-degree: 77%
 
       * ソースビデオとビデオのエンコードされたレンディションを、関連するサムネールと共に表示します。
 
-        [ビデオのプレビュー](managing-video-assets.md#uploading-and-previewing-video-assets)または[アセットのプレビュー](previewing-assets.md)。
+         [ビデオのプレビュー](managing-video-assets.md#uploading-and-previewing-video-assets)または[アセットのプレビュー](previewing-assets.md)。
 
-        [ビデオレンディションの表示](video-renditions.md)
+         [ビデオレンディションの表示](video-renditions.md)
 
-        [ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
+[ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
 
       * [ビューアプリセットの管理](managing-viewer-presets.md)
       * [アセットの発行](publishing-dynamicmedia-assets.md)
@@ -78,16 +79,15 @@ ht-degree: 77%
 
       * フレームレート、オーディオおよびビデオのビットレート、コーデックなど、エンコードされたビデオレンディションのプロパティを表示します。
 
-        [ビデオレンディショのプロパティの表示](video-renditions.md)
+         [ビデオレンディショのプロパティの表示](video-renditions.md)
 
       * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
 
-        [ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
+[ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
 
       * [デジタルアセット用のメタデータの管理](metadata.md)
       * [メタデータスキーマ](metadata-schemas.md)
-      
-      * ビデオの確認、承認、注釈の付け
+   * ビデオの確認、承認、注釈の付け
 
       * [ビデオへの注釈](managing-video-assets.md#annotating-video-assets) の追加また [はアセットへの注釈の追加](managing-assets-touch-ui.md#annotating)
       * [アセットへのワークフ](assets-workflow.md) ローの適 [用またはアセットでのワークフローの開始](managing-assets-touch-ui.md#starting-a-workflow-on-an-asset)
@@ -97,7 +97,7 @@ ht-degree: 77%
 
 
 
-1. 次のいずれかの操作をおこなって、**Dynamic Media ビデオを公開します。**
+1. 次のいずれかの操作を行って、**Dynamic Media ビデオを公開します。**
 
    * Adobe Experience ManagerをWebコンテンツ管理システムとして使用している場合は、Webページに直接ビデオを追加できます。
 
@@ -112,11 +112,11 @@ ht-degree: 77%
          [Web ページへのビデオビューアの埋め込み](embed-code.md)。
    * [YouTube にビデオを公開します](#publishing-videos-to-youtube)。
    * [ビデオレポートを生成します](#viewing-video-reports)。
-   * [ビデオにキャプションを追加します](#adding-captions-to-video)。
+   * [ビデオへのキャプションの追加](#adding-captions-to-video).
 
 
 
-## Dynamic Media でのビデオの操作  {#working-with-video-in-dynamic-media}
+## Dynamic Media でのビデオの操作 {#working-with-video-in-dynamic-media}
 
 Dynamic Media のビデオは、高品質のアダプティブビデオを簡単に公開して、デスクトップ、iOS、Android、Blackberry、Windows などのモバイルデバイスを含む複数の画面にストリーミングするためのエンドツーエンドのソリューションです。アダプティブビデオセットでは、同じビデオを、400 kbps、800 kbps、1000 kbps などの様々なビットレートと形式でエンコードしたバージョンにグループ分けします。デスクトップコンピューターまたはモバイルデバイスによって、利用可能な帯域幅が検出されます。
 
@@ -181,7 +181,7 @@ HTML5 と CSS を使用して再生コンポーネントをデザインできる
 
 ビデオの再生は、HLS（HTTP ライブストリーミング）ビデオストリーミングか、プログレッシブビデオダウンロードを使用しておこなわれます。6.0、6.1、6.2 など以前の AEM バージョンでは、ビデオは HTTP 上でストリーミングされました。
 
-一方、AEM 6.3 以降では、DM ゲートウェイサービスの URL が常に HTTPS も使用するので、ビデオは HTTPS（つまり、HLS ビデオストリーミング）でストリーミングされます。このデフォルトの動作はユーザーに影響しません。つまり、ブラウザーでサポートされていない場合を除き、ビデオストリーミングは常に HTTPS 上でおこなわれます（以下の表を参照してください）。したがって、次のようになります。
+一方、AEM 6.3 以降では、DM ゲートウェイサービスの URL が常に HTTPS も使用するので、ビデオは HTTPS（つまり、HLS ビデオストリーミング）でストリーミングされます。このデフォルトの動作はユーザーに影響しません。つまり、ブラウザーでサポートされていない場合を除き、ビデオストリーミングは常に HTTPS 上で行われます（以下の表を参照してください）。したがって、次のようになります。
 
 * HTTPS Web サイトが HTTPS ビデオストリーミングに対応している場合は、ストリーミングが適しています。
 * HTTP Web サイトが HTTPS ビデオストリーミングに対応している場合は、ストリーミングが適しており、Web ブラウザーから混合コンテンツに関する問題は発生しません。
@@ -262,7 +262,7 @@ HLS（HTTP ライブストリーミング）は、アダプティブビデオス
  </tbody>
 </table>
 
-## Dynamic Media ビデオソリューションのアーキテクチャ {#architecture-of-dynamic-media-video-solution}
+## ダイナミックメディアビデオソリューションのアーキテクチャ {#architecture-of-dynamic-media-video-solution}
 
 次の図に、アップロード後、DMGateway によってエンコードされ、公開されるビデオのオーサリングワークフローの全体像を示します。
 
@@ -382,7 +382,7 @@ Dynamic Media を有効にし、ビデオクラウドサービスを設定済み
 | 720p | 720 | 大型の画面 |
 | 1080p | 1080 | 高画質の大型の画面 |
 
-### Fps（1 秒あたりのフレーム数） {#fps-frames-per-second}
+### Fps（1 秒あたりのフレーム数）  {#fps-frames-per-second}
 
 日本および米国では、ほとんどのビデオは 1 秒あたりのフレーム数（fps）が 29.97 で撮影されます。また、ヨーロッパでは、ほとんどのビデオが 25 fps で撮影されます。映画は 24 fps で撮影されます。
 
@@ -437,7 +437,7 @@ Dynamic Media を有効にし、ビデオクラウドサービスを設定済み
 
 Dynamic Media では、MP4 H.264 ビデオエンコーディングプリセットの使用を推奨しています。MP4 ファイルでは H.264 ビデオコーデックが使用されるので、高品質のビデオを圧縮されたファイルサイズで作成することができます。
 
-## YouTube へのビデオの公開  {#publishing-videos-to-youtube}
+## YouTube へのビデオの公開 {#publishing-videos-to-youtube}
 
 以前作成した YouTube チャンネルに、オンプレミス AEM ビデオアセットを直接公開できます。
 
@@ -525,9 +525,9 @@ YouTubeに公開するには、Googleアカウントが必要です。GMAILア�
 
    次は、YouTube チャネルを作成します。
 
-### YouTube チャネルの作成  {#creating-a-youtube-channel}
+### YouTube チャンネルの作成 {#creating-a-youtube-channel}
 
-YouTube にビデオを公開するには、1 つ以上のチャネルが必要です。既に YouTube チャンネルを作成している場合は、このタスクをスキップして、次の「**公開用タグの追加**」タスクに進んでください。
+YouTube にビデオを公開するには、1 つ以上のチャンネルが必要です。既に YouTube チャンネルを作成している場合は、このタスクをスキップして、次の「**公開用タグの追加**」タスクに進んでください。
 
 >[!CAUTION]
 >
@@ -543,7 +543,7 @@ YouTube にビデオを公開するには、1 つ以上のチャネルが必要�
 
    この名前は、AEM で YouTube をセットアップするときに入力する必要があるので、覚えておいてください。
 
-1. （オプション）必要に応じて、さらにチャネルを追加します。
+1. （オプション）必要に応じて、さらにチャンネルを追加します。
 
      次は、公開用タグを追加します。
 
@@ -571,7 +571,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
 1. 「**[!UICONTROL 作成]**」をタップします。
 1. **[!UICONTROL YouTubeアカウント設定]**&#x200B;ダイアログボックスで、「**[!UICONTROL アプリケーション名]**」フィールドにGoogleプロジェクトIDを入力します。
 
-   このプロジェクト ID は、先ほど Google Cloud 設定をおこなったときに指定したものです。
+   このプロジェクト ID は、先ほど Google Cloud 設定を行ったときに指定したものです。
 
    **[!UICONTROL YouTubeアカウント設定]**&#x200B;ダイアログボックスを開いたままにします。すぐに戻って来る
 
@@ -608,7 +608,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
 
    次は、YouTube チャンネルにビデオを公開します。
 
-### （オプション）アップロードしたビデオのデフォルト YouTube プロパティ設定の自動化 {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
+### （オプション）アップロードしたビデオのデフォルト YouTube プロパティ設定の自動化  {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
 ビデオをアップロードする際に YouTube プロパティの設定を自動化できます。これをおこなうためには、メタデータ処理プロファイルを AEM で作成します。
 
@@ -680,7 +680,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
 
    詳しくは、[メタデータプロファイル](metadata-profiles.md)と[ビデオプロファイル](video-profiles.md)を参照してください。
 
-### YouTube チャンネルへのビデオの公開  {#publishing-videos-to-your-youtube-channel}
+### YouTube チャンネルへのビデオの公開 {#publishing-videos-to-your-youtube-channel}
 
 次は、前の手順で追加したタグを、ビデオアセットに関連付けます。このプロセスによって、AEM は、YouTube チャンネルに公開するアセットを把握します。
 
@@ -702,7 +702,7 @@ AEM では、YouTube からのコンテンツの公開に **[!UICONTROL YouTube 
 
    オプションで、YouTube チャンネルで公開済みビデオを確認できます。
 
-### （オプション）YouTube での公開済みビデオの確認 {#optional-verifying-the-published-video-on-youtube}
+### （オプション）YouTube での公開済みビデオの確認  {#optional-verifying-the-published-video-on-youtube}
 
 YouTube への公開（または非公開）の進行状況を監視できます。
 
@@ -780,6 +780,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
    >* Apache Sling Job Queue Configuration
    >* Adobe Granite Workflow External Process Job Handler
    >* Granite Workflow Timeout Queue
+
    > 
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
 
@@ -812,6 +813,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
    >* Apache Sling Job Queue Configuration
    >* AdobeGranite Workflow External Process Job Handler
    >* Graniteのワークフロータイムアウトキュー
+
    >
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
 
@@ -823,7 +825,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 
 1. 中止またはエラーが発生したワークフロージョブに関する電子メール通知を受け取ることができます。これらの電子メール通知は、管理者が設定できます。詳しくは、[電子メール通知の設定](#configuring-e-mail-notifications)を参照してください。
 
-#### 電子メール通知の設定  {#configuring-e-mail-notifications}
+#### 電子メール通知の設定 {#configuring-e-mail-notifications}
 
 **[!UICONTROL ツール]**&#x200B;メニューにアクセスするには、管理者権限が必要となる場合があります。
 
@@ -880,7 +882,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 **ビデオレポートを表示するには**:
 
 1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール/アセット/ビデオレポート]**&#x200B;をタップします。
-1. ビデオレポートページで、次のいずれかの操作をおこないます。
+1. ビデオレポートページで、次のいずれかの操作を行います。
 
    * 右上付近にある&#x200B;**[!UICONTROL ビデオレポートを更新]**&#x200B;アイコンをタップします。
 
@@ -954,7 +956,6 @@ HTML5ビューアSDK APIを使用して作成したビデオビューアに基�
       trackingManager.setCallback(appMeasurementBridge.track, 
        appMeasurementBridge);
       ```
-
    appMeasurementBridge オブジェクトには組み込みのトラッキング関数があります。ただし、複数のトラッキングシステムやその他の機能をサポートするために、独自のトラッキング関数を作成することもできます。
 
 <!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
@@ -1004,7 +1005,7 @@ URLでJSON関数を使用する方法について詳しくは、 *Dynamic Media�
 
    [アセットの公開](publishing-dynamicmedia-assets.md)を参照してください。
 
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * ポップアップビデオビューアエクスペリエンスの場合、「**[!UICONTROL URL]**」をタップします。URL ダイアログボックスで、URL を選択してクリップボードにコピーし、その URL を単純なテキストエディターに貼り付けます。コピーしたビデオの URL を次の構文で追加します。
 
@@ -1069,7 +1070,7 @@ Cost-efficient access to rapidly evolving technology.
 
    [アセットのアップロード](managing-assets-touch-ui.md#uploading-assets)を参照してください。
 
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    <table> 
      <tbody> 
@@ -1102,7 +1103,7 @@ Cost-efficient access to rapidly evolving technology.
 
 ## ビデオのサムネールについて {#about-video-thumbnails}
 
-Dynamic Media によって自動的に生成される 10 個のサムネール画像の中から、ビデオに追加する画像を 1 つ選択できます。選択したサムネールは、ビデオアセットを AEM Sites、AEM Mobile または AEM Screens のオーサリング環境で Dynamic Media コンポーネントと使用するときに、ビデオプレーヤーに表示されます。サムネールは、ビデオ全体のコンテンツを最もよく表す静的な画像として機能し、さらに、ユーザーが再生ボタンをタップすることを推奨します。
+ダイナミックメディアによって自動的に生成される 10 個のサムネール画像の中から、ビデオに追加する画像を 1 つ選択できます。選択したサムネールは、ビデオアセットを AEM Sites、AEM Mobile または AEM Screens のオーサリング環境で Dynamic Media コンポーネントと使用するときに、ビデオプレーヤーに表示されます。サムネールは、ビデオ全体のコンテンツを最もよく表す静的な画像として機能し、さらに、ユーザーが再生ボタンをタップすることを推奨します。
 
 ビデオの合計時間に基づいて、Dynamic Media は、10 個（デフォルト）のサムネール画像を、1％、11％、21％、31％、41％、51％、61％、71％、81％および 91％でビデオに取り込みます。10 個のサムネールは維持されます。つまり、後で別のサムネールを選択することになっても、一連のサムネールを再生成する必要はありません。10 個のサムネール画像をプレビューした後、ビデオで使用する画像を選択します。デフォルトに変更する場合は、CRXDE Lite を使用して、サムネール画像が生成される時間間隔を設定できます。例えば、等間隔の 4 つのサムネール画像をビデオから生成するだけの場合は、間隔時間を 24％、49％、74％および 99％に設定できます。
 
@@ -1133,7 +1134,7 @@ Dynamic Media によって自動的に生成される 10 個のサムネール�
 
    詳しくは、[ビデオサムネールが生成されるデフォルトの時間間隔の設定](#configuring-the-default-time-interval-that-video-thumbnails-are-generated)を参照してください。
 
-#### ビデオサムネールが生成されるデフォルトの時間間隔の設定  {#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
+#### ビデオサムネールが生成されるデフォルトの時間間隔の設定 {#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
 
 新しいデフォルトの時間間隔を設定して保存すると、この変更は、今後アップロードするビデオに対してのみ自動的に反映されます。以前にアップロードしたビデオには、新しいデフォルトは自動的に適用されません。既存のビデオについては、サムネールを再生成する必要があります。
 
