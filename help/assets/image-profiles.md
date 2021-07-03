@@ -11,15 +11,15 @@ content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 exl-id: 895103c8-df58-40f0-85d6-e29637edce53
 feature: イメージプロファイル
-role: Administrator,Business Practitioner
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+role: Admin,User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '2715'
 ht-degree: 92%
 
 ---
 
-# Dynamic Mediaイメージプロファイル{#image-profiles}
+# Dynamic Mediaイメージプロファイル {#image-profiles}
 
 画像をアップロードするときに、フォルダーにイメージプロファイルを適用することで、アップロード時に自動的に画像を切り抜くことができます。
 
@@ -108,7 +108,7 @@ ht-degree: 92%
 
 シャープニングについては、[画像のシャープニング](/help/assets/assets/sharpening_images.pdf)を参照してください。
 
-## Dynamic Mediaイメージプロファイルの作成{#creating-image-profiles}
+## Dynamic Mediaイメージプロファイルの作成 {#creating-image-profiles}
 
 他のアセットタイプへの高度な処理パラメーターの定義については、[アセット処理の設定](config-dms7.md#configuring-asset-processing)を参照してください。
 
@@ -126,7 +126,7 @@ ht-degree: 92%
 
 1. 「**[!UICONTROL 保存]**」をタップします。新しく作成されたプロファイルが、使用可能なプロファイルのリストに表示されます。
 
-## Dynamic Mediaイメージプロファイルの編集または削除{#editing-or-deleting-image-profiles}
+## Dynamic Mediaイメージプロファイルの編集または削除 {#editing-or-deleting-image-profiles}
 
 1. AEM のロゴをタップし、**[!UICONTROL ツール／Assets／イメージプロファイル]**&#x200B;に移動します。
 1. 編集または削除するイメージプロファイルを選択します。編集するには、「**[!UICONTROL 画像処理プロファイルを編集]**」を選択します。削除するには、「**[!UICONTROL 画像処理プロファイルを削除]**」を選択します。
