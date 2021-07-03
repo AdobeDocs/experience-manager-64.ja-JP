@@ -3,16 +3,16 @@ title: Assetsパフォーマンスチューニングガイド
 description: AEM Assets のボトルネックを解消し、パフォーマンスを最適化するための、AEM の設定、ハードウェア、ソフトウェアおよびネットワークコンポーネントの変更に関する留意点。
 contentOwner: AG
 feature: アセット管理
-role: Architect,Administrator
+role: Architect,Admin
 exl-id: 6c1bff46-f9e0-4638-9374-a9e820d30534
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '3208'
 ht-degree: 82%
 
 ---
 
-# アセットパフォーマンスチューニングガイド{#assets-performance-tuning-guide}
+# Assetsパフォーマンスチューニングガイド {#assets-performance-tuning-guide}
 
 Adobe Experience Manager (AEM) Assets のセットアップには、数多くのハードウェア、ソフトウェアおよびネットワークコンポーネントが含まれています。導入のシナリオによっては、パフォーマンス上のボトルネックを排除するために、ハードウェア、ソフトウェアおよびネットワークコンポーネントに対して特殊な設定変更が必要になる場合があります。
 
@@ -28,7 +28,7 @@ AEM Assets のパフォーマンスが低下すると、インタラクティブ
 
 AEM は数々のプラットフォームでサポートされていますが、Linux や Windows ではパフォーマンスを最適化し実装を簡単にする優れたネイティブツールがサポートされています。AEM Assets のデプロイメントでは、高いメモリ要件を満たすために 64 ビットのオペレーティングシステムを採用するのが理想です。あらゆる AEM のデプロイメントにおいて、可能である場合は TarMK を実装してください。TarMK は単一のオーサーインスタンスを超えて拡張できませんが、パフォーマンスは MongoMK よりも優れています。TarMK オフロードインスタンスを追加すると、AEM Assets のデプロイメントのワークフローの処理能力を高めることができます。
 
-### 一時フォルダー  {#temp-folder}
+### 一時フォルダー {#temp-folder}
 
 アセットのアップロード時間を短縮するには、Java 一時ディレクトリに高性能ストレージを使用します。Linux および Windows の場合は、RAM ドライブまたは SSD を使用できます。クラウドベースの環境では、同等の高速ストレージタイプを使用できます。例えば、Amazon EC2では、[エフェメラルドライブ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html)を一時フォルダーに使用できます。
 
@@ -53,7 +53,7 @@ Windows OS の場合、サードパーティ製ドライバーを使用して RA
 
 2015 年 4 月を最後に Oracle は Java 7 の更新プログラムのリリースを停止しているので、AEM Assets を Java 8 にデプロイすることをお勧めします。場合によってはパフォーマンスの改善が見られます。
 
-### JVM パラメーター  {#jvm-parameters}
+### JVM パラメーター {#jvm-parameters}
 
 次の JVM パラメーターを設定してください。
 
@@ -69,7 +69,7 @@ Windows OS の場合、サードパーティ製ドライバーを使用して RA
 
 すべての AEM Assets のユーザーに、データストアをセグメントストアから分離することをお勧めします。また、`maxCachedBinarySize` パラメーターと `cacheSizeInMB` パラメーターを設定することでパフォーマンスを最大化するのに役立ちます。キャッシュに含めることができるように、`maxCachedBinarySize` を最小のファイルサイズに設定します。`cacheSizeInMB` 内のデータストアで使用するインメモリキャッシュのサイズを指定します。この値は合計ヒープサイズの 2～10％に設定することをお勧めします。ただし、負荷テストやパフォーマンステストが理想的な設定を決定するのに役立ちます。
 
-### バッファーされる画像キャッシュの最大サイズの設定  {#configure-the-maximum-size-of-the-buffered-image-cache}
+### バッファーされる画像キャッシュの最大サイズの設定 {#configure-the-maximum-size-of-the-buffered-image-cache}
 
 多数のアセットを Adobe Experience Manager にアップロードするときは、メモリ消費の予期しないスパイクに対応するために、また OutOfMemoryErrors による JVM エラーを避けるために、バッファーされる画像キャッシュの最大サイズを減らしてください。例えば、最大ヒープ（-`Xmx` パラメーター）が 5 GB のシステムで、Oak BlobCache が 1 GB、文書キャッシュが 2 GB に設定されているとします。このときに、バッファーされるキャッシュが最大 1.25 GB のメモリを使用した場合、予期しないスパイクに使用できるメモリは 0.75 GB のみとなります。
 
@@ -77,7 +77,7 @@ Windows OS の場合、サードパーティ製ドライバーを使用して RA
 
 AEM 6.1 SP1 以降で `sling:osgiConfig` ノードを使用してこのプロパティを設定する場合は、データタイプを必ず Long にします。詳しくは、[CQBufferedImageCache がアセットのアップロード中にヒープを消費する](https://helpx.adobe.com/jp/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html)を参照してください。
 
-### 共有データストア  {#shared-data-stores}
+### 共有データストア {#shared-data-stores}
 
 S3 または共有ファイルデータストアの実装は、ディスク領域の節約と大規模な実装におけるネットワークスループットの向上に役立ちます。共有データストアの使用に関する長所と短所について詳しくは、[Assetsサイジングガイド](assets-sizing-guide.md)を参照してください。
 
@@ -148,7 +148,7 @@ accessKey=<snip>
 
    例えば、一時的でない多数のワークフロー（ワークフローのインスタンスノードを作成する）を実行した後に、[ACS AEM Commons Workflow Remover](https://adobe-consulting-services.github.io/acs-aem-commons/features/workflow-remover.html) をアドホックベースで実行できます。これにより、冗長および完了したワークフローのインスタンスが即座に削除されるので、Adobe Granite のワークフローのパージスケジューラーが実行されるのを待つ必要がありません。
 
-### 並列ジョブの最大数  {#maximum-parallel-jobs}
+### 並列ジョブの最大数 {#maximum-parallel-jobs}
 
 デフォルトでは、AEM は最大でサーバー上のプロセッサーと同じ数の並列ジョブを実行できます。この設定の問題点は、負荷が高い期間ではすべてのプロセッサーが「DAM アセットの更新」ワークフローに占有されるので、UI の応答が遅くなり、AEM がサーバーのパフォーマンスや安定性を保護するその他の処理を実行できなくなる点です。次の手順を実行して、この値をサーバーで使用できるプロセッサーの半分の値にすることをお勧めします。
 
@@ -289,7 +289,7 @@ XMP の書き戻しにより、AEM でメタデータが変更されたときは
 
 Sites の実装などで、アセットを多数のパブリッシュインスタンスにレプリケートするときは、チェーンレプリケーションを使用することをお勧めします。この場合、オーサーインスタンスが単一のパブリッシュインスタンスにレプリケートし、そのパブリッシュインスタンスが代わりに他のパブリッシュインスタンスにレプリケートすることで、オーサーインスタンスを解放します。
 
-### チェーンレプリケーションの設定  {#configure-chain-replication}
+### チェーンレプリケーションの設定 {#configure-chain-replication}
 
 1. レプリケーションのチェーン先に使用するパブリッシュインスタンスを選択します。
 1. そのパブリッシュインスタンスで、他のパブリッシュインスタンスを指すレプリケーションエージェントを追加します。
@@ -312,7 +312,7 @@ Oak インデックス設定を最適化して、AEM Assets のパフォーマ�
 LuceneIndexProvider 設定を更新します。
 
 1. /system/console/configMgrorg.apache.jackrabbit.oak.plugins.index.lucene.LuceneIndexProviderService に移動します。
-1. AEM 6.2より前のバージョンで、 **[!UICONTROL CopyOnRead 、 CopyOnWrite 、およびプリフェッチインデックスファイル]**&#x200B;を有効にします。これらの値は、AEM 6.2以降のバージョンではデフォルトで有効になっています。
+1. AEM 6.2より前のバージョンで、 **[!UICONTROL CopyOnRead 、 CopyOnWriteおよびPrefetch Index Files]**&#x200B;を有効にします。これらの値は、AEM 6.2以降のバージョンではデフォルトで有効になっています。
 
 インデックス設定を更新してインデックス再構築時間を短縮します。
 
@@ -388,12 +388,12 @@ AEM では、サイズの大きなファイルに関連する既知の問題が�
 
 すべての AEM のデプロイメントでボトルネックをすばやく特定し解決できるように、パフォーマンステストの体制を確立してください。留意点は次のとおりです。
 
-### ネットワークのテスト  {#network-testing}
+### ネットワークのテスト {#network-testing}
 
 お客様からのネットワークのパフォーマンスに関するすべての懸念については、次のタスクを実行してください。
 
 * お客様のネットワーク内からネットワークのパフォーマンスをテストする
-* アドビのネットワーク内からネットワークのパフォーマンスをテストする：AMS ユーザーの場合、CSE を使用してアドビのネットワーク内からテストしてください。
+* アドビのネットワーク内からネットワークのパフォーマンスをテストする。AMS ユーザーの場合、CSE を使用してアドビのネットワーク内からテストしてください。
 * 別のアクセスポイントからネットワークのパフォーマンスをテストする
 * ネットワークのベンチマークツールを使用する
 * ディスパッチャーに対してテストする
