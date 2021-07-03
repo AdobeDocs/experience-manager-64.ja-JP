@@ -3,12 +3,12 @@ title: デジタルアセットのチェックインとチェックアウトに�
 description: 編集のためにアセットをチェックアウトし、変更が完了した後にアセットをチェックインする方法を説明します。
 contentOwner: AG
 feature: アセット管理
-role: Business Practitioner
+role: User
 exl-id: 0c79ed42-0acd-426e-8e14-412bb4117585
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '401'
-ht-degree: 66%
+ht-degree: 67%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Manager(AEM)Assetsでは、編集のためにアセットをチ
 
 この機能は、複数のユーザーが複数のチームにわたるワークフローの編集で共同作業をする際、ある作成者が変更した内容を他のユーザーが書き換えてしまう事態を防ぐのに役立ちます。
 
-## アセットのチェックアウト{#checking-out-assets}
+## アセットのチェックアウト {#checking-out-assets}
 
 1. Assets UIで、チェックアウトするアセットを選択します。 複数のアセットを選択してチェックアウトすることもできます。
 
@@ -60,7 +60,7 @@ Adobe Experience Manager(AEM)Assetsでは、編集のためにアセットをチ
 
    変更されたアセットは AEM Assets にチェックインされ、他のユーザーが編集できるようになります。
 
-## 強制チェックイン{#forced-check-in}
+## 強制チェックイン {#forced-check-in}
 
 管理者は、他のユーザーがチェックアウトしたアセットをチェックインできます。
 
