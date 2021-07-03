@@ -3,24 +3,24 @@ title: アセットエディターの拡張
 description: カスタムコンポーネントを使用したアセットエディターの機能の拡張方法を説明します。
 contentOwner: AG
 feature: 開発者ツール
-role: Business Practitioner,Administrator
+role: User,Admin
 exl-id: 1e02a2f6-8194-46b9-b418-87103c3f4a69
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '703'
 ht-degree: 98%
 
 ---
 
-# アセットエディターの拡張{#extending-asset-editor}
+# アセットエディターの拡張 {#extending-asset-editor}
 
 アセットエディターは、アセット共有を使用して見つけたアセットをクリックすると開くページです。アセットエディターでは、メタデータ、サムネール、タイトルおよびタグなどのアセットの特性を編集できます。
 
 事前設定済みの編集コンポーネントを使用してエディターを設定する方法については、[アセットエディターページの作成および設定](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page)を参照してください。
 
-Adobe Enterprise Manager（AEM）開発者は、既存のエディターコンポーネントを使用するだけでなく、独自のコンポーネントを作成することもできます。
+Adobe Experience Manager（AEM）開発者は、既存のエディターコンポーネントを使用するだけでなく、独自のコンポーネントを作成することもできます。
 
-## アセットエディターテンプレートの作成  {#creating-an-asset-editor-template}
+## アセットエディターテンプレートの作成 {#creating-an-asset-editor-template}
 
 geometrixx には次のサンプルページが含まれています。
 
@@ -58,7 +58,7 @@ AEM Assets コンポーネントでは、WCM 編集クライアントライブ�
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
 ```
 
-### Geometrixx スタイルシート  {#geometrixx-style-sheet}
+### Geometrixx スタイルシート {#geometrixx-style-sheet}
 
 サンプルページコンポーネントでは、すべてのセレクターが `static.css`（`/etc/designs/geometrixx/static.css`）の `.asseteditor` で始まっている必要があります。ベストプラクティス：すべての `.asseteditor` セレクターをスタイルシートにコピーし、ルールを必要に応じて調整します。
 
@@ -121,7 +121,7 @@ HTML 部分で、先頭のタイトルセット（アセットまたはページ
 <title><%= title %></title>
 ```
 
-## シンプルなフォームフィールドコンポーネントの作成  {#creating-a-simple-form-field-component}
+## シンプルなフォームフィールドコンポーネントの作成 {#creating-a-simple-form-field-component}
 
 この例では、読み込んだアセットのメタデータを表示するコンポーネントを作成する方法を説明します。
 
@@ -200,9 +200,9 @@ HTML 部分で、先頭のタイトルセット（アセットまたはページ
 
 1. ブラウザーを開き、サンプルページ（`asseteditor.html` など）でデザインモードに切り替え、段落システム用の新しいコンポーネントを有効にします。
 
-1. **編集**&#x200B;モードで、新しいコンポーネント（**Sample Metadata** など）がサイドキック（**アセットエディター**&#x200B;グループ内）で使用できます。コンポーネントを挿入します。メタデータを格納できるようにするには、メタデータフォームに追加する必要があります。
+1. **編集**&#x200B;モードで、新しいコンポーネント（**Sample Metadata** など）がサイドキック（**アセットエディター**&#x200B;グループ内）で使用できます。コンポーネントを挿入します。メタデータを保存するには、メタデータフォームに追加する必要があります。
 
-## メタデータオプションの変更  {#modifying-metadata-options}
+## メタデータオプションの変更 {#modifying-metadata-options}
 
 [メタデータフォーム](assets-finder-editor.md#metadata-form-and-text-field-configuring-the-view-metadata-component)で利用可能な名前空間を変更できます。
 
