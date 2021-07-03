@@ -1,8 +1,8 @@
 ---
 title: Dynamic Media アセットのプレビュー
 seo-title: Dynamic Media アセットのプレビュー
-description: Dynamic Media のアセットをプレビューする方法について説明します。
-seo-description: Dynamic Media のアセットをプレビューする方法について説明します。
+description: Dynamic Media のアセットをプレビューする方法について説明します
+seo-description: Dynamic Media のアセットをプレビューする方法について説明します
 uuid: f0ff2fc4-a263-4dbe-ba46-b07077b49ae0
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,9 +10,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 77296bff-8429-4240-af93-26076ae431ec
 exl-id: ec05569a-6449-4430-9b9f-7ab051f44970
-feature: アセット管理，レンディション
-role: Business Practitioner
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+feature: アセット管理、レンディション
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 90%
@@ -40,7 +40,7 @@ ht-degree: 90%
 1. ページの右上隅付近にある「**[!UICONTROL 表示]**」ドロップダウンリストで「**[!UICONTROL リスト表示]**」をタップします。
 1. （オプション）「**[!UICONTROL 種類]**」列を使用して、プレビューする種類でアセットを並べ替えます。
 1. 「**[!UICONTROL タイトル]**」列で、プレビューするアセットの（サムネール画像ではなく）タイトル名をクリックします。
-1. クリックしたアセットの種類に応じて、次のいずれかの操作をおこないます。
+1. クリックしたアセットの種類に応じて、次のいずれかの操作を行います。
 
 <table> 
  <tbody>
