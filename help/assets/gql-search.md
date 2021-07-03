@@ -2,13 +2,13 @@
 title: GQL 全文検索
 description: AEM Assets の GQL 全文検索機能について詳しく確認します。GQL 全文検索機能を使用して、タイトル、説明、作成者名などの特定のメタデータに基づいてアセットを検索できます。
 contentOwner: AG
-feature: 検索，メタデータ
-role: Business Practitioner
+feature: 検索、メタデータ
+role: User
 exl-id: e819501c-4ac3-447f-944c-67adc42e8c61
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 76%
+source-wordcount: '879'
+ht-degree: 74%
 
 ---
 
@@ -22,7 +22,7 @@ GQL 全文検索機能を使用すると、タイトル、説明、作成者な�
 
 例えば、「Target」というタイトルのアセットを検索するには、次の手順を実行します。
 
-## アセットの検索  {#searching-assets}
+## アセットの検索 {#searching-assets}
 
 1. Assetsユーザーインターフェイスのツールバーで、**[!UICONTROL 検索]**&#x200B;アイコンをクリックまたはタップしてオムニサーチボックスを表示します。
 
@@ -63,10 +63,10 @@ GQL全文検索機能では、次のメタデータプロパティに基づい�
 | [!UICONTROL 著作権の所有者] | copyrightowner:&quot;Adobe Systems&quot; |
 | [!UICONTROL 投稿者] | contributor:John |
 | [!UICONTROL 使用条件] | usageterms:&quot;CopyRights Reserved&quot; |
-| [!UICONTROL 作成日] | created:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL 有効期限] | expires:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL オンタイム] | ontime:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL オフタイム] | offtime:YYYY-MM-DDTHH:MM:SS.000+05:30..YYYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL 作成日] | created:YYYY-MM-DDTHH:MM:SS.000+05:30...YYYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL 有効期限] | 有効期限:YYYY-MM-DDTHH:MM:SS.000+05:30...YYYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL オンタイム] | ontime:YYYY-MM-DDTHH:MM:SS.000+05:30...YYYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL オフタイム] | offtime:YYYY-MM-DDTHH:MM:SS.000+05:30...YYYY-MM-DDTHH:MM:SS.000+05:30 |
 | [!UICONTROL 時間の範囲] （有効期限、日時、オフタイム） | facet field : lowerbound..upperbound |
 | [!UICONTROL パス] | /content/dam/&lt;folder name> |
 | [!UICONTROL PDF タイトル] | pdftitle:&quot;Adobe Document&quot; |
@@ -79,7 +79,7 @@ GQL全文検索機能では、次のメタデータプロパティに基づい�
 
 複雑なクエリの検索形式の例：
 
-* 複数のファセットフィールドを持つアセットをすべて表示する（例：title=John Doe および creatortool=Adobe Photoshop）：   
+* 複数のファセットフィールドを持つアセットをすべて表示する（例：title=John Doe および creatortool=Adobe Photoshop）：     
 
 tiltle:&quot;John Doe&quot; creatortool :Adobe&amp;アンプ；ast;
 
