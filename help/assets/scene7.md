@@ -7,15 +7,15 @@ content-type: reference
 topic-tags: managing-assets
 exl-id: b11b19c1-712d-4698-aefc-930ff8cacbc1
 feature: Dynamic Media Classic
-role: Business Practitioner
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '2829'
 ht-degree: 32%
 
 ---
 
-# ページ{#adding-scene-features-to-your-page}へのDynamic Media Classic機能の追加
+# ページへのDynamic Media Classic機能の追加 {#adding-scene-features-to-your-page}
 
 AdobeDynamic Media Classicは、Web、モバイル、Eメールおよびインターネットに接続されたディスプレイと印刷を管理、強化、公開、および配信するためのホストソリューションです。
 
@@ -39,7 +39,7 @@ AEM でのビデオコンポーネントの使用について詳しくは、[ビ
 >
 >Dynamic Media Classicのアセットが正しく表示されない場合は、Dynamic Mediaが[無効](config-dynamic.md#disabling-dynamic-media)であることを確認してから、ページを更新します。
 
-## アセット{#manually-publishing-to-scene-from-assets}からDynamic Media Classicへの手動公開
+## アセットからDynamic Media Classicへの手動公開 {#manually-publishing-to-scene-from-assets}
 
 次の手順で、デジタルアセットをDynamic Media Classicに公開できます。
 
@@ -52,7 +52,7 @@ AEM でのビデオコンポーネントの使用について詳しくは、[ビ
 >AEMはDynamic Media Classicに非同期で公開します。 「**[!UICONTROL 公開]**」をクリックした後、アセットがDynamic Media Classicに公開されるまでに数秒かかる場合があります。
 
 
-## Dynamic Media Classicコンポーネント{#scene-components}
+## Dynamic Media Classicコンポーネント {#scene-components}
 
 AEMでは、次のDynamic Media Classicコンポーネントを使用できます。
 
@@ -76,7 +76,7 @@ AEMでは、次のDynamic Media Classicコンポーネントを使用できま�
 
 2017年1月31日に、AdobeDynamic Media ClassicはFlashビューアプラットフォームのサポートを終了しました。
 
-### Dynamic Media Classicコンポーネント(Scene7)のページへの追加{#adding-a-scene-component-to-a-page}
+### Dynamic Media Classicコンポーネント(Scene7)のページへの追加 {#adding-a-scene-component-to-a-page}
 
 Dynamic Media Classic(Scene7)コンポーネントをページに追加する方法は、任意のページにコンポーネントを追加する方法と同じです。 Dynamic Media Classicコンポーネントについて、以降の節で詳しく説明します。
 
@@ -101,7 +101,7 @@ Dynamic Media Classic(Scene7)コンポーネントをページに追加する方
    >
    >タッチUIの場合のみ、画像またはビデオをページに配置したDynamic Media Classicコンポーネントにドラッグ&amp;ドロップする必要があります。 Dynamic Media Classicコンポーネントの選択と編集の後でのアセットの選択はサポートされていません。
 
-### レスポンシブサイトへのインタラクティブな表示エクスペリエンスの追加{#adding-interactive-viewing-experiences-to-a-responsive-website}
+### レスポンシブサイトへのインタラクティブな表示エクスペリエンスの追加 {#adding-interactive-viewing-experiences-to-a-responsive-website}
 
 アセットのレスポンシブデザインとは、アセットが表示される場所に適応することを意味します。レスポンシブデザインを使用すると、同じアセットを複数のデバイスで効果的に表示できます。
 
@@ -123,7 +123,7 @@ Dynamic Media Classic(Scene7)コンポーネントをページに追加する方
 
 1. ビューアがレスポンシブにサイズ変更され、すべてのインタラクションがデスクトップ、タブレットおよびモバイル用に最適化されていることを確認します。
 
-### すべてのDynamic Media Classicコンポーネントに共通の設定{#settings-common-to-all-scene-components}
+### すべてのDynamic Media Classicコンポーネントに共通の設定 {#settings-common-to-all-scene-components}
 
 設定オプションは異なりますが、次の操作はすべての[!UICONTROL Dynamic Media Classic]コンポーネントに共通です。
 
@@ -241,7 +241,7 @@ Format画像の出力形式（例：jpeg）を選択します。選択する出�
 
 ![chlimage_1-237](assets/chlimage_1-237.png)
 
-#### Dynamic Mediaクラシック画像テンプレートをリンクにする{#making-the-scene-image-template-a-link}
+#### Dynamic Media Classic画像テンプレートをリンクにする {#making-the-scene-image-template-a-link}
 
 1. Dynamic Media Classicの&#x200B;**[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを含むページで、「**[!UICONTROL 編集]**」をタップします。
 1. 「**[!UICONTROL URL]**」フィールドに、画像をタップしたときに表示されるURLを入力します。 「**[!UICONTROL 次のウィンドウで開く]**」フィールドで、ターゲットを新しいウィンドウと同じウィンドウのどちらで開くかを選択します。
@@ -269,7 +269,7 @@ Dynamic Media Classicの&#x200B;**[!UICONTROL ビデオ]**&#x200B;コンポー�
 
 Dynamic Media Classicビデオコンポーネントでアダプティブビデオセットを使用する場合は、ビデオのサイズに合わせてコンポーネントのサイズを変更する必要があります。
 
-## Dynamic Media Classicコンテンツブラウザー{#scene-content-browser}
+## Dynamic Media Classicコンテンツブラウザー {#scene-content-browser}
 
 Dynamic Media Classicコンテンツブラウザーを使用すると、Dynamic Media ClassicのコンテンツをAEMで直接表示できます。 コンテンツブラウザーにアクセスするには、**[!UICONTROL コンテンツファインダー]**&#x200B;で、タッチ操作向けUIの&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;またはクラシックUIの&#x200B;**[!UICONTROL S7]**&#x200B;アイコンを選択します。 どちらの UI を使用しても機能は同じです。
 
@@ -286,7 +286,7 @@ Dynamic Media Classicコンテンツブラウザーを使用すると、Dynamic 
    >   * 単一の F4V ビデオ
 
 
-### タッチ操作向けUIでのコンテンツの参照{#browsing-content-in-the-touch-optimized-ui}
+### タッチ操作向けUIでのコンテンツの参照 {#browsing-content-in-the-touch-optimized-ui}
 
 タッチ対応 UI またはクラシック UI を使用してコンテンツブラウザーにアクセスできます。現時点では、タッチ対応 UI には次の制限事項があります。
 
@@ -312,7 +312,7 @@ Dynamic Media Classicコンテンツブラウザーを使用すると、Dynamic 
 * アダプティブビデオセットとテンプレートの場合は、サムネール用のサイズ情報が生成されません。
 * アダプティブビデオセットの場合は、サムネール用の解像度が生成されません。
 
-### コンテンツブラウザー{#searching-for-scene-assets-with-the-content-browser}でのDynamic Media Classicアセットの検索
+### コンテンツブラウザーを使用したDynamic Media Classicアセットの検索 {#searching-for-scene-assets-with-the-content-browser}
 
 Dynamic Media Classicアセットの検索は、AEMアセットの検索と似ていますが、検索時に、実際にはAEMに直接読み込むのではなく、Dynamic Media Classicシステムにアセットのリモート表示が表示される点が異なります。
 
