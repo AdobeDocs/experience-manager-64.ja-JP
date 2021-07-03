@@ -9,15 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
 exl-id: dd43de7b-8556-4e3f-9d90-14f0f5bd13e7
 feature: 設定
-role: Administrator,Business Practitioner,Developer
-source-git-commit: 13eb1d64677f6940332a2eeb4d3aba2915ac7bba
+role: Admin,User,Developer
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '275'
-ht-degree: 74%
+ht-degree: 73%
 
 ---
 
-# Dynamic Media のセットアップ  {#setting-up-dynamic-media}
+# Dynamic Media のセットアップ {#setting-up-dynamic-media}
 
 [Dynamic Media ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)では、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信し、アセットを管理できます。これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のマスターアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
 
@@ -33,7 +33,7 @@ Dynamic Media の管理者には、次のトピックが参考になります。
 * [Dynamic Media — ハイブリッドモードの設定](config-dynamic.md)  — 既存のDynamic Mediaのお客様がAEMをアップグレードする場合は、この設定を使用します。
 * [画像プリセットの管理](managing-image-presets.md)
 * [ビューアプリセットの管理](managing-viewer-presets.md)
-* [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
+* [Dynamic Media のトラブルシューティング - Scene7モード](troubleshoot-dms7.md)
 
 次のトピックも参照してください。
 
