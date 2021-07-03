@@ -3,16 +3,16 @@ title: AEM AssetsとAdobe InDesign Serverの統合
 description: AEM Assets と InDesign Server を統合する方法を学習します。
 contentOwner: AG
 feature: 公開
-role: Administrator
+role: Admin
 exl-id: d80562f7-071c-460a-9c68-65f48d36fbd9
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1703'
 ht-degree: 60%
 
 ---
 
-# AEM AssetsとAdobe InDesign Server{#integrating-aem-assets-with-indesign-server}の統合
+# AEM AssetsとAdobe InDesign Serverの統合 {#integrating-aem-assets-with-indesign-server}
 
 Adobe Experience Manager (AEM) Assets では、次のものが使用されます。
 
@@ -76,7 +76,7 @@ InDesign ServerをAEM Assetsと統合して、InDesign( `.indd` )で作成され
    * 抽出されたテキストとファイルが AEM Assets に保存されます。
    * すべてのレンディションが AEM Assets のアセット自体に保存されます。
 
-## InDesign Server と AEM の統合  {#integrating-the-indesign-server-with-aem}
+## InDesign Server と AEM の統合 {#integrating-the-indesign-server-with-aem}
 
 プロキシの設定の後に、InDesign Server を AEM Assets と連携させて使用するには、次の手順を実行する必要があります。
 
@@ -87,7 +87,7 @@ InDesign ServerをAEM Assetsと統合して、InDesign( `.indd` )で作成され
 
 1. [InDesign Server のプロキシワーカー](#configuring-the-proxy-worker-for-indesign-server)を設定します。
 
-### InDesign Server のインストール  {#installing-the-indesign-server}
+### InDesign Server のインストール {#installing-the-indesign-server}
 
 InDesign Server をインストールして AEM と連携して使用を開始するには：
 
@@ -184,7 +184,7 @@ AEM Assetsには、InDesign用に特別にいくつかのプロセスステッ�
 
 1. 「**[!UICONTROL OK]**」をクリックして保存します。
 
-### Day CQ Link Externalizer の設定 {#configuring-day-cq-link-externalizer}
+### Day CQ Link Externalizer の設定  {#configuring-day-cq-link-externalizer}
 
 InDesign ServerとAEMが異なるホスト上にある場合、またはこれらのアプリケーションの一方または両方がデフォルトのInDesign Serverで動作しない場合は、**Day CQ Link Externalizer**&#x200B;を設定して、ポートのホスト名、ポートおよびコンテンツのパスを設定します。
 
@@ -194,7 +194,7 @@ InDesign ServerとAEMが異なるホスト上にある場合、またはこれ�
 
    ![Link Externalizerの設定](assets/link-externalizer-config.png)
 
-### InDesign Server{#enabling-parallel-job-processing-for-indesign-server}の並列ジョブ処理の有効化
+### ジョブの並列ジョブ処理のInDesign Server {#enabling-parallel-job-processing-for-indesign-server}
 
 IDS の並列ジョブ処理を有効にすることができます。
 
@@ -237,7 +237,7 @@ IDS 並列ジョブ数を設定するには：
 <!-- TBD: Make updates to configurations for allow and block list after product updates are done. See CQ-4298427.
 -->
 
-## Adobe InDesignサーバ10.0以降の{#enabling-support-for-indesign-server-or-higher}のサポートを有効にする
+## Adobe InDesign Server 10.0以降のサポートの有効化 {#enabling-support-for-indesign-server-or-higher}
 
 InDesign Server 10.0 以降では、次の手順を実行してマルチセッションサポートを有効化します。
 
@@ -249,7 +249,7 @@ InDesign Server 10.0 以降では、次の手順を実行してマルチセッ�
 >
 >[!DNL Assets]との[!DNL InDesign Server]統合の場合、統合に必要なセッションサポート機能はシングルコアシステムではサポートされないので、マルチコアプロセッサを使用してください。
 
-## Experience Managerの資格情報{#configure-aem-credentials}を設定します
+## Experience Manager資格情報の設定 {#configure-aem-credentials}
 
 Adobe InDesignサーバーとの統合を中断することなく、AEMインスタンスからInDesignサーバーにアクセスするためのデフォルトの管理者資格情報（ユーザー名とパスワード）を変更できます。
 
