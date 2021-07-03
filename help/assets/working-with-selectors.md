@@ -11,8 +11,8 @@ content-type: reference
 discoiquuid: 262eb911-3dcb-475d-b410-8bcac1347905
 exl-id: 6bd68afe-bd54-4482-bd6e-cb318868c8d0
 feature: セレクター
-role: Business Practitioner
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 99%
@@ -33,7 +33,7 @@ ht-degree: 99%
 
 ホットスポットまたは画像マップのリンク先を（手動で入力せずに）選択するときに、セレクターを使用します。サイトセレクターを使用できるのは AEM Sites ユーザーのみです。商品セレクターには AEM Commerce も必要です。
 
-## 製品の選択{#selecting-products}
+## 製品の選択 {#selecting-products}
 
 商品セレクターを使用して商品を選択するのは、ホットスポットまたは画像マップで商品カタログの特定の商品のクイックビューを提供しようとするときです。
 
