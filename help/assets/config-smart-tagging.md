@@ -2,17 +2,17 @@
 title: スマートコンテンツサービスを使用してアセットのタグ付けを設定します。
 description: スマートコンテンツサービスを使用して、 [!DNL Adobe Experience Manager]でスマートタグと拡張スマートタグを設定する方法について説明します。
 contentOwner: AG
-feature: スマートタグ，タグ付け
-role: Administrator
+feature: スマートタグ、タグ付け
+role: Admin
 exl-id: 11c5dd92-f824-41d2-9ab2-b32bdeae01b6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 48%
 
 ---
 
-# スマートコンテンツサービス{#configure-asset-tagging-using-the-smart-content-service}を使用したアセットタグ付けの設定
+# スマートコンテンツサービスを使用したアセットのタグ付けの設定 {#configure-asset-tagging-using-the-smart-content-service}
 
 [!DNL Adobe Developer Console]を使用して、[!DNL Adobe Experience Manager]をスマートコンテンツサービスと統合できます。 この設定を使用して、[!DNL Experience Manager]内からスマートコンテンツサービスにアクセスします。
 
@@ -38,7 +38,7 @@ ht-degree: 48%
 
 上記に加えて、拡張スマートタグを有効にするには、最新の[Experience Managerサービスパック](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)もインストールします。
 
-## スマートコンテンツサービス設定を作成して公開証明書を取得する{#obtain-public-certificate}
+## 公開証明書を取得するためのスマートコンテンツサービス設定の作成 {#obtain-public-certificate}
 
 公開証明書を使用すると、[!DNL Adobe Developer Console]でプロファイルを認証できます。
 
@@ -92,7 +92,7 @@ ht-degree: 48%
 
 1. [https://console.adobe.io](https://console.adobe.io) にアクセスし、**[!UICONTROL 統合]**&#x200B;ページで既存のスマートコンテンツサービスに移動します。新しい証明書をアップロードします。詳しくは、[Adobe開発者コンソール統合の作成](#create-adobe-i-o-integration)の手順を参照してください。
 
-## Adobe開発者コンソール統合の作成{#create-adobe-i-o-integration}
+## Adobe開発者コンソール統合の作成 {#create-adobe-i-o-integration}
 
 スマートコンテンツサービスAPIを使用するには、Adobe開発者コンソールで統合を作成し、[!UICONTROL APIキー](Adobe開発者コンソール統合の[!UICONTROL CLIENT ID]フィールドで生成)、[!UICONTROL テクニカルアカウントID]、[!UICONTROL 組織を取得します[!UICONTROL アセットのスマートタグサービス設定]のID]および[!UICONTROL クライアントの秘密鍵]（[!DNL Experience Manager]のクラウド設定）。
 
@@ -149,7 +149,7 @@ ht-degree: 48%
 
    検証結果は同じダイアログに表示されます。
 
-## DAMアセットの更新ワークフローでスマートタグを有効にする（オプション） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
+## DAMアセットの更新ワークフローでのスマートタグの有効化（オプション） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
 1. [!DNL Experience Manager]で、**[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**&#x200B;に移動します。
 
