@@ -3,9 +3,9 @@ title: 画像トランスコーディングライブラリ
 description: エンコーディング、トランスコーディング、画像のリサンプリング、画像のサイズ変更などの中心的な画像処理機能を実行する画像処理ソリューションであるアドビの画像トランスコーディングライブラリを設定および使用する方法について説明します。
 contentOwner: AG
 feature: レンディション，開発者ツール，アセット処理
-role: Administrator
+role: Admin
 exl-id: 0314626d-e846-4f10-950e-6c1ceb7f4c06
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 37%
@@ -56,7 +56,7 @@ ht-degree: 37%
 
 `-resize`パラメーターには、次のオプションを設定できます。
 
-* `X`: `Works similar to AEM. For example -resize 319.`
+* `X`:  `Works similar to AEM. For example -resize 319.`
 
 * `WxH`:  `Aspect Ratio will not be maintained, For example -resize 319X319.`
 
@@ -74,7 +74,7 @@ ht-degree: 37%
 
 ITL処理を設定するには、設定ファイルを作成し、ワークフローを更新して実行します。
 
-### 抽出されたバンドルの設定ファイル{#create-conf-file}を作成します
+### 抽出されたバンドルの設定ファイルの作成 {#create-conf-file}
 
 ライブラリを設定するには、次の手順を使用して、ライブラリを示す.confファイルを作成します。 管理者権限またはルート権限が必要です。
 
@@ -105,7 +105,7 @@ ITL処理を設定するには、設定ファイルを作成し、ワークフ�
 
 1. パスの値が`.`に設定されるようにするには、`echo $LD_LIBRARY_PATH`コマンドを使用します。 出力は`.`にする必要があります。 値が`.`に設定されていない場合は、セッションを再開します。
 
-### DAMアセットの更新ワークフローの設定{#configure-dam-asset-update-workflow}
+### DAMアセットの更新ワークフローの設定 {#configure-dam-asset-update-workflow}
 
 画像の処理にライブラリを使用するように、[!UICONTROL DAMアセットの更新]ワークフローを更新します。
 
