@@ -71,7 +71,7 @@ ht-degree: 77%
 
          [ビデオレンディションの表示](video-renditions.md)
 
-[ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
+         [ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
 
       * [ビューアプリセットの管理](managing-viewer-presets.md)
       * [アセットの発行](publishing-dynamicmedia-assets.md)
@@ -83,7 +83,7 @@ ht-degree: 77%
 
       * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
 
-[ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
+         [ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
 
       * [デジタルアセット用のメタデータの管理](metadata.md)
       * [メタデータスキーマ](metadata-schemas.md)
