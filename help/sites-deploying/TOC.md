@@ -8,9 +8,9 @@ breadcrumb-title: デプロイガイド
 user-guide-description: Adobe Managed Services クラウドデプロイメントを含む、Adobe Experience Manager 6.4 のインストール、デプロイメント、およびアーキテクチャについて詳しく説明します。
 feature: デプロイ
 role: Architect
-source-git-commit: 19c3ecc20d78f40a2fa49f804baf232db7483afc
+source-git-commit: 5b0eef590f9a0c709fa21b8dbcf6a2f286a20237
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '375'
 ht-degree: 89%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 89%
    + [整合性チェックとトラバーサルチェック](consistency-check.md)
    + [パフォーマンスガイドライン](performance-guidelines.md)
    + [パフォーマンスの最適化](configuring-performance.md)
-   + [アセットパフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/assets-performance-sizing.html)
+   + [アセットパフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/performance-tuning-guidelines.html?lang=en)
    + [設定方法に関する記事](ht-deploy.md)
    + [Geometrixx サイトの削除](removing-the-geometrixx-sites.md)
    + [Webコンソールの設定](configuring-web-console.md)
