@@ -5,9 +5,9 @@ contentOwner: AG
 feature: アセット管理
 role: Leader,Architect,User
 exl-id: 9292871d-3b10-49f8-ac1a-4770b4e44048
-source-git-commit: 1795b0faed0570e8130c1ba60de07bda49db8fde
+source-git-commit: cd9ffec186c5ab4c5f0e0996043724797e0516d1
 workflow-type: tm+mt
-source-wordcount: '863'
+source-wordcount: '865'
 ht-degree: 34%
 
 ---
@@ -52,7 +52,7 @@ Assets managed within [!DNL Experience Manager] DAM can then be accessed via the
 
 アセットは、複数のレンディションを持つことができ、サブアセット（例えば、Photoshopファイルのレイヤー、PowerPointファイルのスライド、PDFのページ、ZIP内のファイル）を持つことができるデジタルドキュメント、画像、ビデオ、オーディオ（またはその一部）です。
 
-アセットは、基本的にバイナリ、メタデータ、レンディション、サブアセットを組み合わせたものです。詳しくは、[DAM パフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/assets-performance-sizing.html)を参照してください。
+アセットは、基本的にバイナリ、メタデータ、レンディション、サブアセットを組み合わせたものです。詳しくは、[DAM パフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/performance-tuning-guidelines.html?lang=en)を参照してください。
 
 >[!CAUTION]
 >
