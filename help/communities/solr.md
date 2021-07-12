@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
-role: Administrator
+role: Admin
 exl-id: b506018d-67dc-4e47-a3d8-83ae288b5d7e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1605'
 ht-degree: 60%
 
 ---
 
-# SRP 用の Solr 設定  {#solr-configuration-for-srp}
+# SRP 用の Solr 設定 {#solr-configuration-for-srp}
 
 ## AEM プラットフォーム用の Solr {#solr-for-aem-platform}
 
@@ -57,7 +57,7 @@ SolrCloud の手順に従い、以下をインストールすることを推奨�
 
 また、メモリ使用量とガベージコレクションを調整するために、JVM を設定することを推奨します。
 
-### JVM の設定例  {#jvm-configuration-example}
+### JVM の設定例 {#jvm-configuration-example}
 
 ```shell
 JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xloggc:../logs/gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Djava.awt.headless=true"  
@@ -67,7 +67,7 @@ JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CM
 
 SolrCloud モードで実行する場合は、MLS をインストールする前に、以下の SolrCloud セットアップコマンドを理解して使用する必要があります。
 
-#### 1. 設定を ZooKeeper にアップロード  {#upload-a-configuration-to-zookeeper}
+#### 1. 設定を ZooKeeper にアップロード {#upload-a-configuration-to-zookeeper}
 
 参照:\
 [https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities](https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities)
@@ -142,7 +142,7 @@ AEM Communities の MLS は、標準の MLS と高度な MLS のどちらかを�
 | フィンランド語 | ラトビア語 | タイ語 |
 | フランス語 | リトアニア語 | トルコ語 |
 
-#### AEM 6.1 Solr 検索、標準の MLS、高度な MLS の比較  {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}
+#### AEM 6.1 Solr 検索、標準の MLS、高度な MLS の比較 {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}
 
 **注意**:AEM 6.1は、AEM 6.1 Communities FP3以前を表します。
 
@@ -216,7 +216,7 @@ Solr 5用の標準のMLSファイル(schema.xml、solrconfig.xml)
 1. Solr を再起動します。
 1. MSRP の場合、新規インストールである場合を除き、[MSRP インデックス再作成ツール](#msrpreindextool)を実行します。
 
-### 高度な MLS のインストール  {#installing-advanced-mls}
+### 高度な MLS のインストール {#installing-advanced-mls}
 
 高度な MLS をサポートするための SRP コレクション（MSRP または DSRP）については、カスタムスキーマと Solr 設定に加え、新しい Solr プラグインが必要です。必要な項目はすべて、ダウンロード可能なzipファイルにパッケージ化されます。 また、Solrがスタンドアロンモードでデプロイされる場合に使用するインストールスクリプトも含まれています。
 
