@@ -7,9 +7,9 @@ uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
-role: Administrator
+role: Admin
 exl-id: 8cbace00-c354-4f37-a781-04cadd441419
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1493'
 ht-degree: 64%
@@ -32,7 +32,7 @@ AEM Forms JEEワークフロープロセスの作成について詳しくは、�
 
 プロセスがトリガーされて進行すると、プロセスの参加者に関するデータ、プロセスに関連付られたフォームに参加者が入力したデータ、およびフォームに追加された添付ファイルが取得されます。これらのデータは AEM Forms JEE サーバーのデータベースに格納され、添付ファイルのような一部のデータは Global Document Storage（GDS）ディレクトリに格納されます（設定が行われている場合）。GDS ディレクトリは、共有ファイルシステムまたはデータベース上に構成できます。
 
-## ユーザーデータへのアクセスと削除  {#access-and-delete-user-data}
+## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
 
 プロセスがトリガーされると、一意のプロセスインスタンスIDと長期間有効な呼び出しIDが生成され、プロセスインスタンスに関連付けられます。 永続的呼び出し ID に基づいて、プロセスインスタンスのデータへアクセスしてデータを削除できます。プロセス開始者のユーザー名またはタスクを送信したプロセス参加者のユーザー名を使用して、プロセスインスタンスの長期間有効な呼び出しIDを推測できます。
 
