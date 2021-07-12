@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: edc3043c-7ec4-4e4a-b008-95f1784f012e
-role: Administrator
+role: Admin
 exl-id: 1de1ffc6-63f8-4316-a2fa-5095d407c265
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 51%
 
 ---
 
-# DSRP 向け MySQL 設定  {#mysql-configuration-for-dsrp}
+# DSRP 向け MySQL 設定 {#mysql-configuration-for-dsrp}
 
 MySQL は、ユーザー生成コンテンツ（UGC）の保存に使用できるリレーショナルデータベースです。
 
@@ -36,7 +36,7 @@ MySQL は、ユーザー生成コンテンツ（UGC）の保存に使用でき�
    * [MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/)
 
 
-## MySQL のインストール  {#installing-mysql}
+## MySQL のインストール {#installing-mysql}
 
 対象 OS の手順に従い、[MySQL](https://dev.mysql.com/downloads/mysql/) をダウンロードしてインストールする必要があります。
 
@@ -139,7 +139,7 @@ SQL スクリプトは、AEM リポジトリから取得されます。
 
 スクリプトでデータベース名を変更する場合は、[JDBC 設定](#configurejdbcconnections)でも変更してください。
 
-#### 手順 1：SQL ファイルを開く {#step-open-sql-file}
+#### Step 1 : open SQL file {#step-open-sql-file}
 
 MySQL Workbench で、以下の設定をおこないます。
 
@@ -148,7 +148,7 @@ MySQL Workbench で、以下の設定をおこないます。
 
 ![chlimage_1-108](assets/chlimage_1-108.png)
 
-#### 手順 2：SQL スクリプトの実行 {#step-execute-sql-script}
+#### Step 2 : execute SQL Script {#step-execute-sql-script}
 
 手順1で開いたファイルのWorkbenchウィンドウで、スクリプトを実行する`lightening (flash) icon`を選択します。
 
