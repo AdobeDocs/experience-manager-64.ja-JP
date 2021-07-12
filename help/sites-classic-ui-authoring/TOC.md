@@ -7,16 +7,16 @@ user-guide-title: AEM 6.4クラシックUIオーサリングユーザーガイ�
 breadcrumb-title: クラシックUIオーサリングガイド
 user-guide-description: このガイドでは、クラシックUIでのAEMでのオーサリングの概念について説明します。
 feature: オーサリング
-role: Business Practitioner
-source-git-commit: 55e904cb24bac68c0b1bbea59786cb4c0c711d61
+role: User
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 80%
+ht-degree: 79%
 
 ---
 
 
-# AEM 6.4クラシックUIオーサリングユーザーガイド{#classic-ui}
+# AEM 6.4クラシックUIオーサリングユーザーガイド {#classic-ui}
 
 + [クラシックUIオーサリングガイドの概要](home.md)
 + クラシックUIオーサリングの概要{#introduction}
@@ -28,7 +28,7 @@ ht-degree: 80%
    + [UI の選択](author-env-select-ui.md)
    + [検索](author-env-search.md)
    + [インボックス](author-env-inbox.md)
-   + [コンソールのキーボードショートカット](author-env-keyboard-shortcuts.md)
+   + [キーボードショートカット コンソールの場合](author-env-keyboard-shortcuts.md)
 + オーサリング {#authoring}
    + [ページのオーサリング](classic-page-author.md)
    + [オーサリング - 環境とツール](classic-page-author-env-tools.md)
