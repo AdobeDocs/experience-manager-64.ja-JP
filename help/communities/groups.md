@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1293c01a-7308-494a-ab48-bd9938205b81
 pagetitle: Community Groups Console
-role: Administrator
+role: Admin
 exl-id: f8f19ad6-d6cd-4abd-bc31-6baba3e0356e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 50%
@@ -108,7 +108,7 @@ ht-degree: 50%
 
 コミュニティサイトがパブリッシュされた後、[プロパティを編集](#modifying-group-properties)して、別のテーマを選択できます。
 
-#### コミュニティグループブランディング  {#community-group-branding}
+#### コミュニティグループブランディング {#community-group-branding}
 
 ![chlimage_1-135](assets/chlimage_1-135.png)
 
@@ -211,7 +211,7 @@ ht-degree: 50%
 
 その一方で、サブコミュニティの[構造](#modify-structure)は変更できます。
 
-### 構造の変更  {#modify-structure}
+### 構造の変更 {#modify-structure}
 
 構造パネルでは、オーサー環境またはパブリッシュ環境でサブコミュニティを作成するときに選択したコミュニティグループテンプレートから最初に作成した構造を変更できます。パネルから、次の操作が可能です。
 
@@ -242,7 +242,7 @@ ht-degree: 50%
 >
 >他の機能（[ページ機能](functions.md#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
 
-#### 例：サブコミュニティ（グループ）構造へのカレンダー機能の追加  {#example-adding-a-calendar-function-to-a-sub-community-group-structure}
+#### 例：サブコミュニティ（グループ）構造へのカレンダー機能の追加 {#example-adding-a-calendar-function-to-a-sub-community-group-structure}
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
@@ -259,7 +259,7 @@ ht-degree: 50%
 
 設定パネルでは、コミュニティの[モデレーター](#moderation)を追加できます。
 
-### メンバーシップの変更  {#modify-membership}
+### メンバーシップの変更 {#modify-membership}
 
 [メンバーシップ](#membership)パネルは情報提供のみを目的としています。設定されたグループメンバーシップの種類は、オプション、必須、制限のいずれでも変更できません。
 
