@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 0042893e-3d2c-469e-8759-404be16e7436
-role: Administrator
+role: Admin
 exl-id: 766711ea-f3d3-49ab-8346-4e4477c261bd
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 45%
@@ -34,7 +34,7 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 表形式のレポートは .csv 形式でエクスポートして別の処理に使用できます。
 
-## レポートコンソール  {#reporting-consoles}
+## レポートコンソール {#reporting-consoles}
 
 ### コミュニティサイトのレポート {#reports-for-community-sites}
 
@@ -67,7 +67,7 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 詳しくは、リソースコンソールの[レポートセクション](resources.md#report)を参照してください。
 
-## 割り当てレポート  {#assignments-report}
+## 割り当てレポート {#assignments-report}
 
 割り当てコンソールでは、イネーブルメントコミュニティサイト、ユーザー、グループおよび割り当てによってレポートをフィルタリングできます。
 
@@ -89,7 +89,7 @@ Siteイネーブルメントコミュニティサイトを選択します。
 
 ![chlimage_1-158](assets/chlimage_1-158.png)
 
-## Views Report {#views-report}
+## 表示レポート {#views-report}
 
 表示コンソールでは、指定した期間におけるコミュニティ機能別のページ表示回数のレポートを生成できます。
 
@@ -112,7 +112,7 @@ Siteコミュニティサイトを選択します。
 
 ![chlimage_1-160](assets/chlimage_1-160.png)
 
-## Posts Report {#posts-report}
+## 投稿レポート {#posts-report}
 
 投稿コンソールでは、指定した期間におけるコミュニティ機能への投稿数のレポートを生成できます。
 
@@ -137,6 +137,6 @@ Siteコミュニティサイトを選択します。
 
 ## トラブルシューティング {#troubleshooting}
 
-### コミュニティサイトが 1 つも表示されない  {#no-community-sites-listed}
+### コミュニティサイトが 1 つも表示されない {#no-community-sites-listed}
 
 コミュニティサイトが 1 つも表示されない場合は、Adobe Analytics がサイトに対して有効になっているかを確認してください。割り当てに関するレポートを選択する場合は、割り当て機能がコミュニティサイトの構造内にあることを確認します。
