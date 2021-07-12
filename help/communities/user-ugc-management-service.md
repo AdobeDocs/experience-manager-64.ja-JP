@@ -9,16 +9,16 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 discoiquuid: f564759f-fb56-4f70-a7b1-286a223755c6
-role: Administrator
+role: Admin
 exl-id: f4adc53d-6809-4d89-a3dd-5d783e938a63
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 45%
 
 ---
 
-# AEM Communities のユーザーおよび UGC 管理サービス  {#user-and-ugc-management-service-in-aem-communities}
+# AEM Communities のユーザーおよび UGC 管理サービス {#user-and-ugc-management-service-in-aem-communities}
 
 >[!IMPORTANT]
 >
@@ -40,7 +40,7 @@ AEM Communitiesでは、ユーザープロファイルの管理やユーザー�
 
 これらの API で実行できる機能を以下に示します。
 
-## ユーザーの UGC の取得  {#retrieve-the-ugc-of-a-user}
+## ユーザーの UGC の取得 {#retrieve-the-ugc-of-a-user}
 
 `getUserUgc(ResourceResolver resourceResolver, String user, OutputStream outputStream)` は、ユーザーのすべてのUGCをシステムから書き出すのに役立ちます。
 
@@ -62,7 +62,7 @@ AEM Communitiesでは、ユーザープロファイルの管理やユーザー�
 * user= weston.mccall@dodgit.com
 * operation= deleteUgc
 
-### Adobe Analytics{#delete-ugc-from-analytics}からUGCを削除
+### Adobe AnalyticsからのUGCの削除 {#delete-ugc-from-analytics}
 
 Adobe Analyticsからユーザーデータを削除するには、GDPR Analyticsのワークフローに従います。の代わりに、APIはAdobe Analyticsからユーザーデータを削除しません。
 
