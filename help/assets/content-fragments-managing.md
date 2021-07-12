@@ -11,8 +11,8 @@ content-type: reference
 discoiquuid: da8f968b-91cc-45a8-ae4b-757b4f840b8e
 exl-id: b21ba7a1-6e6f-4b95-9336-b49f7e932af5
 feature: コンテンツフラグメント
-role: Business Practitioner
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1511'
 ht-degree: 98%
@@ -71,7 +71,7 @@ ht-degree: 98%
 
       * **[!UICONTROL 説明]**
       * **[!UICONTROL タグ]**
-   * **[!UICONTROL アドバンス]**
+   * **[!UICONTROL 詳細]**
 
       * **[!UICONTROL 名前]**
 
@@ -219,19 +219,19 @@ ht-degree: 98%
 
 フラグメントを開いたら、「[バリエーション](content-fragments-variations.md)」タブを使用してコンテンツをオーサリングできます。
 
-## フラグメント内のバリエーションの作成と管理  {#creating-and-managing-variations-within-your-fragment}
+## フラグメント内のバリエーションの作成と管理 {#creating-and-managing-variations-within-your-fragment}
 
-マスターコンテンツを作成したら、そのコンテンツの[バリエーション](content-fragments-variations.md)を作成して管理できます。
+プライマリコンテンツを作成したら、そのコンテンツの[バリエーション](content-fragments-variations.md)を作成して管理できます。
 
-## コンテンツをフラグメントと関連付ける  {#associating-content-with-your-fragment}
+## コンテンツをフラグメントと関連付ける {#associating-content-with-your-fragment}
 
 フラグメントに[コンテンツを関連付ける](content-fragments-assoc-content.md)こともできます。これにより関連性を付加して、フラグメントをコンテンツページに追加するときに、アセット（画像など）を（オプションで）フラグメントと一緒に使用できるようになります。
 
-## フラグメントのメタデータ（プロパティ）の表示と編集  {#viewing-and-editing-the-metadata-properties-of-your-fragment}
+## フラグメントのメタデータ（プロパティ）の表示と編集 {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 
 「[[!UICONTROL メタデータ]](content-fragments-metadata.md)」タブを使用し、フラグメントのプロパティを表示して編集できます。
 
-## コンテンツフラグメントのタイムライン  {#timeline-for-content-fragments}
+## コンテンツフラグメントのタイムライン {#timeline-for-content-fragments}
 
 [タイムライン](managing-assets-touch-ui.md#timeline)では標準のオプションに加え、コンテンツフラグメントに固有の情報とアクションの両方が提供されます。
 
@@ -295,7 +295,7 @@ ht-degree: 98%
 
 ![cfm-6420-20](assets/cfm-6420-20.png)
 
-## 特定のバージョンへの復帰 {#reverting-to-a-version}
+## 特定のバージョンへの復帰   {#reverting-to-a-version}
 
 次の方法で特定のバージョンのフラグメントに戻すことができます。
 
