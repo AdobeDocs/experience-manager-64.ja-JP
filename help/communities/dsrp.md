@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
-role: Administrator
+role: Admin
 exl-id: 3dd2bdc9-0c4d-43d9-a731-ca8c27503e1c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 51%
 
 ---
 
-# DSRP - リレーショナルデータベースストレージリソースプロバイダー  {#dsrp-relational-database-storage-resource-provider}
+# DSRP - リレーショナルデータベースストレージリソースプロバイダー {#dsrp-relational-database-storage-resource-provider}
 
 ## DSRP について {#about-dsrp}
 
@@ -54,7 +54,7 @@ Oak と SRP のコレクションがどちらも高頻度で使用される場�
 
 インストールと設定について詳しくは、[SRP 向け Solr 設定](solr.md)を参照してください。
 
-### DSRP の選択  {#select-dsrp}
+### DSRP の選択 {#select-dsrp}
 
 [ストレージ設定コンソール](srp-config.md)では、使用するSRPの実装を指定するデフォルトのストレージ設定を選択できます。
 
@@ -107,7 +107,7 @@ Oak と SRP のコレクションがどちらも高頻度で使用される場�
 
 * 「**[!UICONTROL 送信]**」を選択します。
 
-### デフォルトのSRP {#migration-steps-0dt}のダウンタイムなしの移行手順
+### デフォルトのダウンタイムなしの移行手順 {#migration-steps-0dt}
 
 次の手順に従って、デフォルトのSRPページ[http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)が期待どおりに動作するようにします。
 
