@@ -8,9 +8,9 @@ contentOwner: vishgupt
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 48f841b7-0e7f-4216-9ee8-fb6e843acaf0
-role: Administrator
+role: Admin
 exl-id: 05dbb6ee-09fd-44ee-bb8b-a3f3ebb32f5a
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 62%
@@ -67,7 +67,7 @@ Forms Portal は、次のシナリオではドラフトフォームと送信済�
 
 ログインしたユーザーおよび匿名ユーザーのドラフトと送信済みフォームデータには、設定したデータストアからアクセスし、必要に応じて削除できます。
 
-### AEM インスタンス  {#aem-instances}
+### AEM インスタンス {#aem-instances}
 
 ログインしたユーザーと匿名ユーザーのAEMインスタンス（オーサー、パブリッシュまたはリモート）内のすべてのドラフトおよび送信済みフォームデータは、該当するAEMリポジトリの`/content/forms/fp/`ノードに保存されます。 ログインユーザーまたは匿名ユーザーがドラフトを保存したりフォームを送信したりするたびに、（該当する場合は）添付ファイルごとに`draft ID`または`submission ID`、`user data ID`、ランダムな`ID`が生成されます。
 
@@ -107,7 +107,7 @@ AEM がデータベースにデータを格納するように構成されてい�
 * メタデータ
 * additionalmetadata
 
-#### ユーザーデータへのアクセス  {#access-user-data-1}
+#### ユーザーデータへのアクセス {#access-user-data-1}
 
 ログインしたユーザーおよび匿名ユーザーのドラフトおよび送信データにデータベーステーブルからアクセスするには、次のデータベースコマンドを実行します。クエリで、 `logged-in user`を、アクセスするデータのユーザーIDに置き換えるか、匿名ユーザーの場合は`anonymous`に置き換えます。
 
