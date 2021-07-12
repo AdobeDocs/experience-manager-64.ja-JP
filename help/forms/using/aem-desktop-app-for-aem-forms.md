@@ -9,22 +9,22 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: manage
 discoiquuid: c30332b6-e012-442d-8e84-28832c116c7b
 noindex: true
-role: Administrator
+role: Admin
 exl-id: 26cd0851-cadf-4a8f-b3bf-59f77671f584
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 48%
 
 ---
 
-# AEM Forms用AEMデスクトップアプリケーション{#aem-desktop-app-for-aem-forms}
+# AEM Forms用AEMデスクトップアプリケーション {#aem-desktop-app-for-aem-forms}
 
 AEMデスクトップアプリケーションを使用すると、Adobe Experience Manager(AEM)AssetsリポジトリーとAEM Formsバイナリファイルを、システム上のネットワークディレクトリにマッピングできます。 同期されたアセットとバイナリファイルをファイルエクスプローラーで表示し、各種のアプリケーションを使用してファイルを編集することができます。ファイルを表示するだけでなく、バイナリファイルの作成、アップロード、削除を行うこともできます。また、ソフトウェアから、ファイルのオープン、編集、保存を直接実行することもできます。例えば、Designer で直接 XDP ファイルを開いて編集することができます。アセットに対してローカルで行った変更内容は、AEM アセットリポジトリと AEM Forms の UI に反映されます。
 
 AEM デスクトップアプリケーションは、AEM インスタンスからダウンロードすることができます。デスクトップアプリケーションのダウンロードについて詳しくは、「[AEMデスクトップアプリケーションリリースノート](https://helpx.adobe.com/experience-manager/desktop-app/release-notes.html)」を参照してください。
 
-## AEMデスクトップアプリケーションでサポートされるAEM Formsアセット{#aem-forms-assets-supported-in-aem-desktop-app}
+## AEMデスクトップアプリケーションでサポートされるAEM Formsアセット {#aem-forms-assets-supported-in-aem-desktop-app}
 
 AEM デスクトップアプリケーションを使用して、フォームテンプレートタイプ（.xdp）、PDF フォームタイプ（.pdf）、ドキュメントタイプ（.pdf）、画像タイプ、XML スキーマタイプ（.xsd）、スタイルシートタイプ（.xfs）の AEM Forms バイナリファイルを同期することができます。AEM デスクトップアプリケーションでは、他のすべてのファイル（サポートされていないファイル）は 0 バイトファイルとして表示されます。サポートされていないファイルを 0 バイトファイルとして表示することにより、他の使用可能なアセットが AEM Forms サーバー上に存在することをユーザーに認識させることができます。
 
@@ -32,7 +32,7 @@ AEM デスクトップアプリケーションを使用して、フォームテ�
 >
 >ファイル名には、英数字、ハイフン、下線のみを含めることができます。
 
-## AEMデスクトップアプリケーション用AEM Formsの有効化{#enable-aem-forms-for-aem-desktop-app}
+## AEMデスクトップアプリケーションでのAEM Formsの有効化 {#enable-aem-forms-for-aem-desktop-app}
 
 AEMデスクトップアプリケーションは、Microsoft WindowsではWebDAVプロトコルを使用し、Mac OS XではSMB1を使用してAEM Formsサーバーに接続します。 WebDAVまたはSMBクライアントとバイナリファイルおよび他のアセットを同期する機能は、AEM Formsサーバーでは初期設定では有効になっていません。 次の手順を実行して、 AEM Forms for AEMデスクトップアプリケーションを有効にします。
 
