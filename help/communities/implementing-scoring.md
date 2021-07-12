@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: b19b3c24-82a0-468c-a077-9f3edb96afc9
 tagskeywords: scoring, badging, badges, gamification
-role: Administrator
+role: Admin
 exl-id: 54a4a053-ca44-451a-9a31-f1c1e8cb7002
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '2885'
 ht-degree: 55%
@@ -125,7 +125,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
 
 フォーラムとコメントのデフォルトのスコアとバッジルールを使用してコミュニティサイトのスコアを有効にするには、[クイックテスト](#quick-test)の節を参照してください。
 
-### Apply Rules to Content {#apply-rules-to-content}
+### コンテンツに対するルールの適用 {#apply-rules-to-content}
 
 スコアとバッジを有効にするには、サイトのコンテンツツリー内の任意のノードに`scoringRules`プロパティと`badgingRules`プロパティを追加します。
 
@@ -144,7 +144,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
 >
 >スコアルールがバッジ授与に影響を与えていないように見える場合は、スコアルールがバッジルールの scoringRules でブロックされていないかを確認してください。[バッジルール](#badging-rules)の節を参照してください。
 
-### Enable Badges for Component {#enable-badges-for-component}
+### コンポーネントに対するバッジの有効化 {#enable-badges-for-component}
 
 スコアルールとバッジルールは、[オーサリングモード](author-communities.md)でコンポーネント設定を編集してバッジを有効にしたコンポーネントのインスタンスに対してのみ有効です。
 
@@ -189,7 +189,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
 >/etc/community/scoring/rules/site1/forums-scoring\
 >/etc/community/scoring/rules/site2/forums-scoring
 
-### Scoring Sub-Rules {#scoring-sub-rules}
+### スコアサブルール {#scoring-sub-rules}
 
 スコアサブルールには、コミュニティへの参加状況を表す値を詳細に設定するプロパティが含まれています。
 
@@ -215,7 +215,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
   <tr> 
    <th>プロパティ</th> 
    <th>タイプ</th> 
-   <th> 値 説明</th> 
+   <th> 値の説明</th> 
   </tr> 
   <tr> 
    <td><i><code>VERB</code></i></td> 
@@ -273,7 +273,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
  </tbody> 
 </table>
 
-### このリリースに含まれているスコアルールとサブルール  {#included-scoring-rules-and-sub-rules}
+### このリリースに含まれているスコアルールとサブルール {#included-scoring-rules-and-sub-rules}
 
 このリリースには、[フォーラム機能](functions.md#forum-function)の2つのスコアルールが含まれています（フォーラム機能の「フォーラム」コンポーネントと「コメント」コンポーネント用にそれぞれ1つずつ）。
 
@@ -316,7 +316,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
 
 オーサー環境でスコアルールやサブルールに対して行った変更や追加は、パブリッシュ環境にインストールする必要があります。
 
-## Badging Rules {#badging-rules}
+## バッジルール {#badging-rules}
 
 バッジルールでは、以下を指定することで、スコアルールをバッジにリンクします。
 
@@ -354,7 +354,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
   <tr> 
    <th>プロパティ</th> 
    <th>タイプ</th> 
-   <th>値 説明</th> 
+   <th>値の説明</th> 
   </tr> 
   <tr> 
    <td>thresholds</td> 
@@ -398,7 +398,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
 
 オーサー環境でバッジルールまたはバッジ画像の変更や追加をおこなった場合は、それをパブリッシュ環境でインストールする必要があります。
 
-## バッジの割り当てと取り消し  {#assign-and-revoke-badges}
+## バッジの割り当てと取り消し {#assign-and-revoke-badges}
 
 メンバーへのバッジの割り当ては、[メンバーコンソール](members.md#badges-tab)を使用するか、プログラムで cURL コマンドを使用して、おこなうことができます。
 
@@ -433,7 +433,7 @@ cURL -i -XPOST-H *header* -u *signin * -F *operation * -F *badge * *member-profi
 
 
 
-### 例： {#examples}
+### 例えば、次のような問題です。 {#examples}
 
 #### モデレーターバッジの割り当て {#assign-a-moderator-badge}
 
@@ -451,11 +451,11 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 >
 >cURL を使用したバッジの割り当てと取り消しは、どのバッジ画像でも機能します。ただし、獲得されたバッジではなく割り当てられたバッジの場合は、割り当てられたバッジとしてマークされ、相応に処理されます。
 
-## カスタムコンポーネント用のスコアとバッジ  {#scoring-and-badges-for-custom-components}
+## カスタムコンポーネント用のスコアとバッジ {#scoring-and-badges-for-custom-components}
 
 カスタムコンポーネント用に作成されたイベントトピックを動詞と関連付けることで、カスタムコンポーネント用のスコアルールとバッジルールを作成できます。
 
-## トピックと動詞  {#topics-and-verbs}
+## トピックと動詞 {#topics-and-verbs}
 
 メンバーがコミュニティ機能を操作すると、通知やスコアなどの非同期リスナーを呼び出すイベントが送信されます。
 
@@ -566,7 +566,7 @@ ComponentSocialEvent  `topic`= com/adobe/cq/social/tally/voting
 
 ## トラブルシューティング {#troubleshooting}
 
-### バッジが表示されない  {#badges-are-not-appearing}
+### バッジが表示されない {#badges-are-not-appearing}
 
 スコアルールとバッジルールがWebサイトのコンテンツに適用されているが、どのアクティビティに対してもバッジが認識されない場合は、そのコンポーネントのインスタンスでバッジが有効になっていることを確認します。
 
@@ -584,7 +584,7 @@ ComponentSocialEvent  `topic`= com/adobe/cq/social/tally/voting
 
 この機能が予想どおり動作しない場合は、データが正しく入力されているかを確認してください。
 
-## クイックテスト  {#quick-test}
+## クイックテスト {#quick-test}
 
 [Getting Started Tutorial](getting-started.md)（engage）サイトを使用すると、スコアとバッジを簡単に試すことができます。
 
@@ -599,9 +599,9 @@ ComponentSocialEvent  `topic`= com/adobe/cq/social/tally/voting
    * **型**：`String`
    * **[!UICONTROL マルチ]**&#x200B;を選択します。
    * **[!UICONTROL 追加]**&#x200B;を選択します。
-   * Enter `/etc/community/badging/rules/forums-badging`
+   * `/etc/community/badging/rules/forums-badging` と入力します。
    *  `+`
-   * `/etc/community/badging/rules/comments-badging`と入力します。
+   * `/etc/community/badging/rules/comments-badging` と入力します。
    * 「**[!UICONTROL OK]**」を選択します。
 
 * scoringRulesプロパティを追加します。
@@ -610,9 +610,9 @@ ComponentSocialEvent  `topic`= com/adobe/cq/social/tally/voting
    * **型**：`String`
    * **[!UICONTROL マルチ]**&#x200B;を選択します。
    * **[!UICONTROL 追加]**&#x200B;を選択します。
-   * `/etc/community/scoring/rules/forums-scoring`と入力します。
+   * `/etc/community/scoring/rules/forums-scoring` と入力します。
    *  `+`
-   * `/etc/community/scoring/rules/comments-scoring`と入力します。
+   * `/etc/community/scoring/rules/comments-scoring` と入力します。
    * 「**[!UICONTROL OK]**」を選択します。
 
 * 「**[!UICONTROL すべて保存]**」を選択します。
