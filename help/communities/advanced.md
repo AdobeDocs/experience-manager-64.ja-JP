@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 42fb3c50-8728-4897-ade9-6b839294a10e
-role: Administrator
+role: Admin
 exl-id: c9406aae-288e-4cdf-ac01-cb26b423639e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 51%
 
 ---
 
-# 高度なスコアとバッジ  {#advanced-scoring-and-badges}
+# 高度なスコアとバッジ {#advanced-scoring-and-badges}
 
 ## 概要 {#overview}
 
@@ -118,7 +118,7 @@ ht-degree: 51%
 
 ストップワードファイルが存在しない場合は、スコアエンジンによりエラーがスローされます。
 
-## 高度なバッジルール  {#advanced-badging-rules}
+## 高度なバッジルール {#advanced-badging-rules}
 
 高度なバッジルールのプロパティは、[基本バッジルールのプロパティ](implementing-scoring.md#badging-rules)とは異なります。
 
@@ -187,7 +187,7 @@ ht-degree: 51%
 * `rules` は、リポジトリ内の誰でも読み取れる場所に配置する必要があります。
    * ルール名は場所にかかわらず一意である必要があります。
 
-### このリリースに含まれるバッジルール  {#included-badging-rules}
+### このリリースに含まれるバッジルール {#included-badging-rules}
 
 このリリースには、[高度なフォーラムとコメントスコアルール](#included-scoring-rules-and-sub-rules)に対応する2つの高度なバッジルールが含まれています。
 
