@@ -8,9 +8,9 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e9e0d8fb-955e-4021-9e9a-9c95c6ffe88d
 feature: Adobe Sign
-role: Administrator
+role: Admin
 exl-id: c2061de7-8627-4595-b96c-aa2d6abffddd
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 84%
@@ -29,7 +29,7 @@ AEM FormsとAdobe Signの統合について詳しくは、「[アダプティブ
 
 Adobe Sign 対応のアダプティブフォームには署名者に関する情報が含まれています。これにはアダプティブフォームで収集された他のユーザーのデータが含まれている場合があります。Adobe Sign サービスは、契約書内の署名を使用してユーザーデータを格納します。この契約書は、AEM Forms のクラウドサービスに設定された Adobe Sign サーバーに保存されます。さらに、Forms Portal の送信アクションを使用するようにアダプティブフォームが構成されている場合、契約書のデータはフォームデータとともに Forms Portal のデータストアに格納されます。
 
-## ユーザーデータへのアクセスと削除  {#access-and-delete-user-data}
+## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
 
 ユーザーデータは契約書内で収集されますが、いずれのサービステーブルにも保存されません。Adobe Sign を使用すると、管理者はサービスで管理する管理データを自身で選択できます。Adobe Sign サービスのプライバシー管理者は、依頼者の電子メールアドレスに基づいて契約書のリストの作成または削除を行うことができます。
 
