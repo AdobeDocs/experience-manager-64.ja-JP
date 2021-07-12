@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 048f7b30-20c3-4567-bd32-38cf2643cf39
-role: Administrator
+role: Admin
 exl-id: 65d37adc-d5fa-4171-bb7f-05b631cad180
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 49%
@@ -106,7 +106,7 @@ ZooKeeperアンサンブルの場合は、*host1:2181,host2:2181*&#x200B;のよ�
 
 レプリカセットの操作と、アプリケーションと MongoDB のインスタンスとの間の接続を定義する方法については、MongoDB の[接続文字列の URI フォーマット](https://docs.mongodb.org/manual/reference/connection-string/)に関するドキュメントを参照してください。
 
-#### レプリカセットに接続するための URL の例   {#example-url-for-connecting-to-a-replica-set}
+#### レプリカセットに接続するための URL の例  {#example-url-for-connecting-to-a-replica-set}
 
 ```shell
 # Example url for:
@@ -215,7 +215,7 @@ MSRP をデモ用に設定するには、[MongoDB をデモ用に設定する方
 
 ## トラブルシューティング {#troubleshooting}
 
-### UGC が MongoDB で表示されない  {#ugc-not-visible-in-mongodb}
+### UGC が MongoDB で表示されない {#ugc-not-visible-in-mongodb}
 
 ストレージオプションの設定を確認し、MSRP がデフォルトのプロバイダーに設定されているかを確認してください。デフォルトでは、ストレージリソースプロバイダーはJSRPです。
 
@@ -240,7 +240,7 @@ GitHubには、この目的で利用できるオープンソースツールが�
 
 以下のエラーがログに表示された場合は、Solr スキーマファイルが適切に設定されていません。
 
-#### JsonMappingException: undefined field provider_id  {#jsonmappingexception-undefined-field-provider-id}
+#### JsonMappingException: undefined field provider_id {#jsonmappingexception-undefined-field-provider-id}
 
 ```xml
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: undefined field provider_id
@@ -255,7 +255,7 @@ at com.adobe.cq.social.scf.core.BaseSocialComponent.toJSONString(BaseSocialCompo
 * XML設定ファイルが正しいSolrの場所にコピーされました
 * 新しい設定ファイルを既存のファイルと置き換えた後に Solr を再起動した
 
-### MongoDB へのセキュア接続が失敗する  {#secure-connection-to-mongodb-fails}
+### MongoDB へのセキュア接続が失敗する {#secure-connection-to-mongodb-fails}
 
 MongoDB サーバーへのセキュア接続の試みが、クラス定義が見つからないという理由で失敗する場合は、MongoDB ドライバーバンドル `mongo-java-driver`（公開されている maven リポジトリで入手可能）を更新する必要があります。
 
