@@ -9,18 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 5ac2fcef-05b8-46f7-9a15-997cdd79a3db
-role: Administrator
+role: Admin
 exl-id: f1408709-5402-4f55-bd37-9943fe828af0
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '3241'
-ht-degree: 46%
+ht-degree: 47%
 
 ---
 
 # コミュニティサイトコンソール {#communities-sites-console}
 
-コミュニティサイトコンソールでは、次の機能にアクセスできます。
+コミュニティサイトコンソールでは、以下の操作ができます。：
 
 * サイトの作成
 * サイト編集
@@ -52,7 +52,7 @@ ht-degree: 46%
 
 ## コミュニティサイトコンソールへのアクセス {#accessing-communities-sites-console}
 
-オーサー環境でコミュニティサイトコンソールにアクセスするには、次の手順を実行します。
+オーサー環境でコミュニティサイトコンソールに移動するには、：
 
 * グローバルナビゲーションから：**[!UICONTROL コミュニティ/サイト]**
 
@@ -76,7 +76,7 @@ ht-degree: 46%
 
 作成プロセスでは、一連の手順がパネル形式で表示されます。パネルには、設定する機能セット（サブパネルとして表示）が含まれています。最後の手順でサイトをコミットする前に、**次の**&#x200B;または&#x200B;**前の手順に戻る**&#x200B;を選択できます。
 
-### Step 1 : Site Template {#step-site-template}
+### 手順 1：サイトテンプレート {#step-site-template}
 
 ![newsitetemplate](assets/newsitetemplate.png)
 
@@ -122,7 +122,7 @@ ht-degree: 46%
 
 コミュニティサイトの公開後は、[プロパティを編集](#modifying-site-properties)し、別のテーマを選択できます。
 
-#### コミュニティサイトブランディング  {#community-site-branding}
+#### コミュニティサイトブランディング {#community-site-branding}
 
 ![chlimage_1-449](assets/chlimage_1-449.png)
 
@@ -249,7 +249,7 @@ ht-degree: 46%
 
 * **[!UICONTROL コミュニティ権限を持つメンバー]**
 
-   [コミュニティ機能](functions.md)に対して`Allow Privileged Member`が選択されている場合に、1つ以上のコミュニティメンバーまたはメンバーグループを選択して、新しいコンテンツを作成できます。
+   [コミュニティ機能](functions.md)に対して`Allow Privileged Member`が選択されている場合に、1つ以上のコミュニティメンバーまたはメンバーグループを選択して、新しいコンテンツを作成できるようにします。
 
 #### モデレート {#moderation}
 
@@ -339,7 +339,7 @@ ht-degree: 46%
 
 * **[!UICONTROL スマートレンダリング]**&#x200B;次のいずれかを選択します。
 
-   * `Always show contributions in the original language` (デフォルト値)
+   * `Always show contributions in the original language`（デフォルト）
    * `Always show contributions in user preferred language`
    * `Show contributions in user preferred language for only logged-in users`
 
@@ -396,7 +396,7 @@ ht-degree: 46%
 >
 >AEM に馴染みがない場合は、[基本操作](../../help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](../../help/sites-authoring/qg-page-authoring.md)を参照してください。
 
-## サイトプロパティの変更  {#modifying-site-properties}
+## サイトプロパティの変更 {#modifying-site-properties}
 
 ![chlimage_1-462](assets/chlimage_1-462.png)
 
@@ -419,7 +419,7 @@ ht-degree: 46%
 
 その一方で、コミュニティサイトの[構造](#modify-structure)は変更できます。
 
-### 構造の変更  {#modify-structure}
+### 構造の変更 {#modify-structure}
 
 構造パネルでは、最初にコミュニティサイトテンプレートから作成された構造を変更できます。パネルから、次の操作が可能です。
 
@@ -483,7 +483,7 @@ ht-degree: 46%
 
 サムネイルパネルでは、コミュニティサイトコンソールでサイトを表現する画像をアップロードできます。
 
-### イネーブルメントの変更  {#modify-enablement}
+### イネーブルメントの変更 {#modify-enablement}
 
 イネーブルメントパネルでは、コミュニティサイトの作成中に表示された設定にアクセスできます。
 
@@ -503,7 +503,7 @@ ht-degree: 46%
 
 コミュニティサイトを公開した後、[グループコンソール](groups.md)を使用して作成された各サブコミュニティ（ネストされたグループ）を個別に公開する必要があります。
 
-## サイトの書き出し  {#exporting-the-site}
+## サイトの書き出し {#exporting-the-site}
 
 ![chlimage_1-467](assets/chlimage_1-467.png)
 
