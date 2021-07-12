@@ -6,8 +6,8 @@ user-guide-title: AEM 6.4ユーザーガイド
 user-guide-description: AEM 6.4の理解、インストール、管理および使用に関するすべての基本的なリソースの概要です。
 contentOwner: Chris Bohnert
 feature: リリース情報
-role: Leader, Architect, Developer, Data Architect, Data Engineer, Administrator, Business Practitioner
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 4%
@@ -15,7 +15,7 @@ ht-degree: 4%
 ---
 
 
-# AEM 6.4ユーザーガイド{#user-guide}
+# AEM 6.4ユーザーガイド {#user-guide}
 
 + [AEM 6.4ユーザーガイドハブ](home.md)
 + ユーザーガイドとリソース{#user-guides}
