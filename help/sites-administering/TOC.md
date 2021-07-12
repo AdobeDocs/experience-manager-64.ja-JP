@@ -7,8 +7,8 @@ user-guide-title: AEM 6.4 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 feature: 管理
-role: Administrator
-source-git-commit: af7bced72b8043d4460b575dc62c64f188575452
+role: Admin
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 93%
@@ -21,7 +21,7 @@ ht-degree: 93%
 + [管理ユーザーガイドの概要](home.md)
 + Sites の機能 {#introduction}
    + [Web サイト管理](msm-and-translation.md)
-   + [コンテンツの再利用：マルチサイトマネージャとライブコピー](msm.md)
+   + [コンテンツの再利用：マルチサイトマネージャーとライブコピー](msm.md)
    + [ライブコピーの概要コンソール](msm-livecopy-overview.md)
    + [ライブコピーの同期の設定](msm-sync.md)
    + [ライブコピーの作成と同期](msm-livecopy.md)
