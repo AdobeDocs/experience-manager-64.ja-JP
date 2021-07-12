@@ -11,8 +11,8 @@ content-type: reference
 discoiquuid: d2decc31-a04b-4a8e-bb19-65f21cf7107e
 exl-id: 4b9fd241-82db-466e-95bd-6d212717801d
 feature: コンテンツフラグメント
-role: Business Practitioner
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 85%
@@ -52,7 +52,7 @@ Adobe Experience Manager(AEM)Assetsは、アセットに加えて、[コンテ�
 
 フラグメントの一時的な言語コピーを作成することもできます。方法は、アセットの一時的なコピーを作成する場合と同様です。詳しくは、[一時的な言語コピーの作成（アセット）](translation-projects.md#creating-temporary-language-copies)を参照してください。
 
-## 混在メディアフラグメントの翻訳  {#translating-mixed-media-fragments}
+## 混在メディアフラグメントの翻訳 {#translating-mixed-media-fragments}
 
 AEM では、様々な種類のメディアアセットとコレクションが含まれているコンテンツフラグメントを翻訳できます。インラインアセットが含まれているコンテンツフラグメントを翻訳した場合、翻訳後のアセットのコピーが、ターゲット言語ルートの下に保存されます。
 
