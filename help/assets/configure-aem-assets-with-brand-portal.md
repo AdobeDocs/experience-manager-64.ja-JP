@@ -3,9 +3,9 @@ title: AEM Assets と Brand Portal の連携の設定
 description: 'AEM AssetsとBrand Portalを連携させて、アセットとコレクションをBrand Portalに公開する方法を説明します。 '
 contentOwner: VG
 feature: Brand Portal
-role: Administrator
+role: Admin
 exl-id: cde35555-259f-4d16-999f-2b93d597b8a5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1649'
 ht-degree: 51%
@@ -205,7 +205,7 @@ IMS 設定には、次の 2 つの手順が含まれます。
 >
 >IMS 設定がヘルスチェックに合格していることを確認します。設定がヘルスチェックに合格しない場合は無効です。削除して、新しい有効な設定を作成する必要があります。
 
-### Cloud Service の設定{#configure-the-cloud-service}
+### Cloud Service の設定 {#configure-the-cloud-service}
 
 Brand Portal クラウドサービス設定を作成するには、以下の手順を実行します。
 
@@ -288,7 +288,7 @@ Brand PortalがAEM Assetsオーサーインスタンスで正常に設定され�
 1. [既存の設定の削除](#delete-existing-configuration)
 1. [設定の作成](#configure-new-integration-64)
 
-### 実行中のジョブの確認{#verify-jobs}
+### 実行中のジョブの確認 {#verify-jobs}
 
 変更を加える前に、AEM Assetsオーサーインスタンスで公開ジョブが実行されていないことを確認してください。 そのために、4つのレプリケーションエージェントをすべて検証し、キューが理想的/空であることを確認できます。
 
@@ -310,7 +310,7 @@ Brand PortalがAEM Assetsオーサーインスタンスで正常に設定され�
 
    ![](assets/test-integration3.png)
 
-### 既存の構成{#delete-existing-configuration}を削除します
+### 既存の設定の削除 {#delete-existing-configuration}
 
 既存の設定を削除する際に、次のチェックリストを実行する必要があります。
 * 4つのレプリケーションエージェントをすべて削除する
