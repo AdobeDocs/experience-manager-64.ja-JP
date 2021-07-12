@@ -7,9 +7,9 @@ uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 764d8e0d-604d-4c7b-89cd-7686ce5f03ff
-role: Administrator
+role: Admin
 exl-id: 4a6b3403-2941-4098-bb30-769281adedc2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 76%
@@ -71,7 +71,7 @@ AEM デプロイメント用に設定されたデータストアの永続性に�
 
 設定されたデータストアのドラフトおよび送信済み通信データにアクセスし、必要に応じて削除することができます。
 
-### ユーザーデータへのアクセス  {#access-user-data}
+### ユーザーデータへのアクセス {#access-user-data}
 
 Correspondence Management には、ドラフトおよび送信済みレターインスタンスを検索してアクセスするために使用できる API が用意されています。API を使用すると、レターインスタンス ID または通信を保存または送信したユーザーを使用して、レターインスタンスを検索して開くことができます。詳しくは、[レターインスタンスにアクセスするためのAPI](/help/forms/using/cm-apis-to-access-letter-instances.md)を参照してください。
 
