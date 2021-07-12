@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
-role: Administrator
+role: Admin
 exl-id: 73c59497-43fe-4e15-afda-e3cf5264696e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 56%
@@ -30,7 +30,7 @@ JSRP はデプロイメントが容易なので、一般的に、1 つのパブ�
 
 ## 設定 {#configuration}
 
-### JSRP の選択  {#select-jsrp}
+### JSRP の選択 {#select-jsrp}
 
 デフォルトでは、JSRP が UGC 用のストレージオプションとして選択されています。
 
@@ -68,7 +68,7 @@ JSRP はデフォルト設定ですが、パブリッシュ環境で同じ設定
 
 ## トラブルシューティング {#troubleshooting}
 
-### UGC が JCR で表示されない  {#ugc-not-visible-in-jcr}
+### UGC が JCR で表示されない {#ugc-not-visible-in-jcr}
 
 ストレージオプションの設定を確認し、JSRP がデフォルトのプロバイダーに設定されているかを確認してください。デフォルトでは、ストレージリソースプロバイダーはJSRPです。
 
