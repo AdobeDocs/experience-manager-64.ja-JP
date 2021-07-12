@@ -2,16 +2,16 @@
 title: AEM Assets統合とExperience Cloudの設定
 description: AEM Assetsとの統合を設定する方法についてExperience Cloudします。
 feature: アセット管理
-role: Business Practitioner, Architect, Administrator
+role: User, Architect, Admin
 exl-id: f8629c30-1901-4b6e-b5a6-e46ee3c72fba
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 44%
 
 ---
 
-# AEM AssetsとExperience Cloud{#configure-aem-assets-integration-with-experience-cloud-and-creative-cloud}の統合の設定
+# AEM Assets統合とExperience Cloudの設定 {#configure-aem-assets-integration-with-experience-cloud-and-creative-cloud}
 
 Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Assets内のアセットをAdobe Creative Cloudと（または内のアセットを同期）できます。 また、アセットを Experience Cloud に（またはその逆に）同期することもできます。この同期は[!DNL Adobe I/O]を使用して設定できます。 [!DNL Adobe Marketing Cloud]の更新名は[!DNL Adobe Experience Cloud]です。
 
@@ -62,7 +62,7 @@ Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Ass
    >
    >**[!UICONTROL アプリケーション ID]** ではなく&#x200B;**[!UICONTROL アプリケーションの秘密鍵]**&#x200B;を誤ってコピーしないようにしてください。
 
-## 新しい設定をExperience Cloud{#add-a-new-configuration}に追加します
+## 新しい設定をExperience Cloudに追加 {#add-a-new-configuration}
 
 1. AEM Assets のローカルインスタンスの UI で AEM のロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL 従来のクラウドサービス]**&#x200B;の順に移動します。
 
@@ -90,7 +90,7 @@ Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Ass
 
 1. 設定ページから「**[!UICONTROL 公開鍵を表示]**」をクリックして、インスタンスに対して生成された公開鍵を表示します。または、「 **[!UICONTROL OAuth Gatewayの公開鍵をダウンロード]** 」をクリックして、公開鍵が含まれているファイルをダウンロードします。 次に、ファイルを開いて公開鍵を表示します。
 
-## 同期の有効化  {#enable-synchronization}
+## 同期の有効化 {#enable-synchronization}
 
 1. [Experience Cloud](#add-a-new-configuration)に新しい設定を追加する手順の最後で説明した、以下の方法のいずれかを使用して公開鍵を表示します。 「**[!UICONTROL 公開鍵を表示]**」をクリックします。
 
@@ -111,7 +111,7 @@ Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Ass
 
 1. レプリケーションのテストが完了したら、テスト結果の末尾の成功メッセージを確認します。
 
-## ユーザーをExperience Cloud{#add-users-to-experience-cloud}に追加
+## ユーザーをExperience Cloudに追加 {#add-users-to-experience-cloud}
 
 1. 管理者の資格情報を使用してExperience Cloudにログインします。
 1. レールから、**[!UICONTROL 管理]**&#x200B;に移動し、**[!UICONTROL Enterprise Dashboardを起動]**&#x200B;をクリックします。
@@ -123,7 +123,7 @@ Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Ass
    >
    >AEM AssetsからCreative Cloudへのアセットを共有できるのは、Experience Cloudに追加したユーザーだけです。
 
-## AEM AssetsとExperience Cloud{#exchange-assets-between-aem-and-experience-cloud}の間でアセットを交換する
+## AEM AssetsとExperience Cloud {#exchange-assets-between-aem-and-experience-cloud}
 
 1. AEM Assets にログインします。
 1. Assets コンソールで、フォルダーを作成し、いくつかのアセットをアップロードします。例えば、**mc-demo** というフォルダーを作成して、アセットをアップロードします。
