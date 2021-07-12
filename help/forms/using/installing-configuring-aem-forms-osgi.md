@@ -7,9 +7,9 @@ uuid: ce253b5a-eeb2-47d2-a6c9-e6f59384159a
 contentOwner: khsingh
 topic-tags: installing
 discoiquuid: 1bb8360c-5543-484e-9712-590822211298
-role: Administrator
+role: Admin
 exl-id: 45b0fb99-9f7f-47e6-a4de-4db321867f8f
-source-git-commit: 4598602f75c0cd477e4d898700735c6cd5be175a
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1836'
 ht-degree: 86%
@@ -193,7 +193,7 @@ Adobe Sign とアダプティブフォームの一般的なシナリオでは、
 
 AEM Forms で Adobe Sign を使用するには、「[Adobe Sign を AEM Forms に統合する](/help/forms/using/adobe-sign-integration-adaptive-forms.md)」を参照してください。
 
-#### Adobe Analytics の設定  {#configure-adobe-analytics}
+#### Adobe Analytics の設定 {#configure-adobe-analytics}
 
 AEM Forms は、Adobe Analytics と統合されているため、発行済みのフォームとドキュメントのパフォーマンス指標を取得および追跡できます。これらの指標分析の意図は、フォームやドキュメントをさらに有効利用するために必要な変更に関して十分な情報に基づいた決定を行えるよう支援することです。
 
@@ -210,5 +210,5 @@ AEM Forms は Adobe Marketing Cloud ソリューションである Adobe Target 
 AEM Forms のデータ取得機能を使用するための環境を設定しました。この機能を使用するための手順は、次のとおりです。
 
 * [最初のアダプティブフォームを作成する](/help/forms/using/create-your-first-adaptive-form.md)
-* [最初の PDF フォームを作成する](https://helpx.adobe.com/content/dam/help/jp/experience-manager/6-4/forms/pdf/designer-quickstart.pdf)
+* [最初の PDF フォームを作成する](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/designer-quickstart.pdf)
 * [HTML5 フォームの概要](/help/forms/using/introduction.md)
