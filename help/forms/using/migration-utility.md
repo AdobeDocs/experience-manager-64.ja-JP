@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 content-strategy: max-2018
 discoiquuid: a8b1f7df-e36f-4d02-883a-72120fea7046
-role: Administrator
+role: Admin
 exl-id: 72ead30c-648d-43ad-9826-9c8945a8860d
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1872'
 ht-degree: 68%
@@ -32,7 +32,7 @@ ht-degree: 68%
 >
 >アウトオブプレースアップグレードを実行する場合（Correspondence Management のアセットを移行する場合）は、アセットをインポートするたびに、移行ユーティリティを実行することができます。Correspondence Management を移行する場合は、Forms 互換性パッケージがインストールされている必要があります。
 
-## 移行の方法  {#approach-to-migration}
+## 移行の方法 {#approach-to-migration}
 
 AEM Forms 6.3または6.2からAEM Forms 6.4の最新バージョンに[アップグレード](/help/forms/using/upgrade.md)したり、新規インストールを実行したりできます。 以前のインストール環境をアップグレードしたのか、新規インストールを実行したのかに応じて、以下に示すいずれかの手順を実行してください。
 
@@ -171,7 +171,7 @@ Correspondence Management のアセットを移行する場合は、以下の点
 1. レイアウトおよびフラグメントレイアウトのXFAバージョンが3.3以降であることを確認します。 古いバージョンのレイアウトとフラグメントレイアウトを使用している場合、レターのレンダリングで問題が発生する可能性があります。 古いXFAのバージョンを最新バージョンに更新するには、次の手順を実行します。
 
    1. [FormsユーザーインターフェイスからXFAをzipフ](/help/forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p) ァイルとしてダウンロードします。
-   1. ファイルを解凍します。
+   1.  ファイルを解凍します。
    1. 最新の Designer で XFA ファイルを開き、保存します。XFA が最新バージョンに更新されます。
    1. XFA を Forms ユーザーインターフェイスでアップロードします。
 
