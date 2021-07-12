@@ -10,8 +10,8 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 45e67357-4524-4d25-b5f1-21182b8e803c
 exl-id: 39ed07ec-54a6-4387-8435-e891726c411c
 feature: コンテンツフラグメント
-role: Business Practitioner
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '706'
 ht-degree: 91%
@@ -26,7 +26,7 @@ ht-degree: 91%
 
 コンテンツフラグメントモデルは、[コンテンツフラグメント](content-fragments.md)のコンテンツの構造を定義します。
 
-## コンテンツフラグメントモデルの有効化  {#enable-content-fragment-models}
+## コンテンツフラグメントモデルの有効化 {#enable-content-fragment-models}
 
 >[!CAUTION]
 >
@@ -37,7 +37,7 @@ ht-degree: 91%
 * Configuration Manager でのコンテンツフラグメントモデル使用の有効化
 * アセットフォルダーへの設定の適用
 
-### Configuration Manager でのコンテンツフラグメントモデルの有効化  {#enable-content-fragment-models-in-configuration-manager}
+### Configuration Manager でのコンテンツフラグメントモデルの有効化 {#enable-content-fragment-models-in-configuration-manager}
 
 [新しいコンテンツフラグメントモデルを作成する](#creating-a-content-fragment-model)には、最初に設定マネージャーを使用してコンテンツフラグメントモデルを有効にする&#x200B;**必要があります**。
 
@@ -75,7 +75,7 @@ ht-degree: 91%
 
 1. 「**[!UICONTROL 作成]**」を使用して空のモデルを保存します。操作の成功を示すメッセージが表示されます。「**[!UICONTROL 開く]**」を選択してモデルをすぐに編集するか、「**[!UICONTROL 完了]**」を選択してコンソールに戻ることができます。
 
-## コンテンツフラグメントモデルの定義  {#defining-your-content-fragment-model}
+## コンテンツフラグメントモデルの定義 {#defining-your-content-fragment-model}
 
 コンテンツフラグメントモデルは、生成されるコンテンツフラグメントの構造を効果的に定義します。モデルエディターを使用して、必要なフィールドを追加および設定できます。
 
@@ -136,7 +136,7 @@ ht-degree: 91%
    >
    >モデルが参照されている場合は、警告が表示されます。適切に対処します。
 
-## コンテンツフラグメントモデルの公開  {#publishing-a-content-fragment-model}
+## コンテンツフラグメントモデルの公開 {#publishing-a-content-fragment-model}
 
 コンテンツフラグメントモデルは、依存するコンテンツフラグメントの公開時または公開前に公開する必要があります。
 
