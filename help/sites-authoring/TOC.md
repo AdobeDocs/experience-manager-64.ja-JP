@@ -7,11 +7,11 @@ user-guide-title: AEM 6.4 オーサリングユーザーガイド
 breadcrumb-title: オーサリングガイド
 user-guide-description: AEM でのコンテンツ作成やオーサリングのための主要な概念について説明します。
 feature: オーサリング
-role: Business Practitioner
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+role: User
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '293'
-ht-degree: 88%
+ht-degree: 87%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 88%
    + [検索](search.md)
    + [アカウント環境の設定](user-properties.md)
    + [インボックス](inbox.md)
-   + [コンソールのキーボードショートカット](keyboard-shortcuts.md)
+   + [キーボードショートカット コンソールの場合](keyboard-shortcuts.md)
    + [UI の選択](select-ui.md)
 + オーサリング {#authoring}
    + [オーサリング環境とツール](author-environment-tools.md)
