@@ -8,11 +8,11 @@ content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
-role: Administrator
+role: Admin
 exl-id: 5aa02fae-b9dd-45bf-9826-16e9e5686727
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '7349'
+source-wordcount: '7347'
 ht-degree: 73%
 
 ---
@@ -255,7 +255,7 @@ Configuration Manager を使用して、Acrobat Reader DC Extensions の資格�
 
 一部の forms サーバーサービスには、匿名の呼び出しによって実行される操作があります。このようなサービスへの匿名アクセスが必要ない場合は、[サービスへの不要な匿名アクセスの無効化](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services)の手順に従って、アクセスを無効にしてください。
 
-#### デフォルトの管理者パスワードの変更  {#change-the-default-administrator-password}
+#### デフォルトの管理者パスワードの変更 {#change-the-default-administrator-password}
 
 JEE 上の AEM Forms をインストールすると、上級管理者ユーザーまたはログイン ID 管理者ユーザーのために、デフォルトパスワードが「*password*」であるデフォルトユーザーアカウントが 1 つ設定されます。このパスワードは、Configuration Manager を使用して直ちに変更してください。
 
@@ -334,7 +334,7 @@ Web Service Definition Language（WSDL）の生成は、開発者が WSDL の生
 
 Oracle では、データベースアカウントで使用する必要がある権限は、CONNECT、RESOURCE および CREATE VIEW だけです。他のデータベースについての同様の要件については、「[JEE 上の AEM Forms のインストールの準備（シングルサーバー）](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)」を参照してください。
 
-#### Windows 上での統合セキュリティの設定（JBoss 版）  {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
+#### Windows 上での統合セキュリティの設定（JBoss 版） {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
 
 1. [JBOSS_HOME]\\standalone\configuration\lc_{datasource.xml}を変更して、接続URLに`integratedSecurity=true`を追加します（次の例を参照）。
 
@@ -379,7 +379,7 @@ WebSphere では、統合セキュリティを設定できるのは外部の SQL
 1. 「**アカウント**」を選択し、必要な情報を入力して、使用するログインアカウントを設定します。
 1. SQL Server のセキュリティを「**混合**」モードから「**Windows 認証のみ**」に変更します。
 
-### データベース内の機密性の高い情報の保護  {#protecting-access-to-sensitive-content-in-the-database}
+### データベース内の機密性の高い情報の保護 {#protecting-access-to-sensitive-content-in-the-database}
 
 AEM Forms データベーススキーマには、システム設定やビジネスプロセスに関する機密性の高い情報が含まれているので、ファイアウォールの内側に隠しておく必要があります。データベースは、forms サーバーと同じ信頼境界内にあると見なされる必要があります。情報の意図しない開示やビジネスデータの盗難を防ぐために、データベース管理者（DBA）は、権限のある管理者のみにアクセスを制限するようにデータベースを設定する必要があります。
 
@@ -395,20 +395,20 @@ AEM Forms データベーススキーマには、システム設定やビジネ�
 
 LDAP（Lightweight Directory Access Protocol）ディレクトリは、通常、エンタープライズユーザーおよびグループ情報のソースとして、またパスワード認証実行の手段として JEE 上の AEM Forms で使用されます。LDAP ディレクトリが SSL（Secure Socket Layer）を使用するように設定されていること、および JEE 上の AEM Forms が SSL ポートを使用して LDAP ディレクトリにアクセスするように設定されていることを確認してください。
 
-#### LDAP のサービス拒否  {#ldap-denial-of-service}
+#### LDAP のサービス拒否 {#ldap-denial-of-service}
 
 LDAP を使用した最もよく行われる攻撃は、攻撃者が大量の認証エラーを故意に引き起こすというものです。この攻撃を受けると、LDAP ディレクトリサーバーは、すべての LDAP 依存のサービスからユーザーをロックアウトしなければならなくなります。
 
 試行できる認証エラーの回数と、それに伴うロックアウト時間の値を設定すると、AEM Forms への認証でユーザーが繰り返しエラーになったときに、AEM Forms がロックアウトを実行します。管理コンソールで、小さい値を選択します。 認証エラーの許容回数を選択するときは、許容回数に達した後に、LDAP ディレクトリサーバーより前に AEM Forms がユーザーをロックアウトすることを理解することが重要です。
 
-#### 自動アカウントロックの設定  {#set-automatic-account-locking}
+#### 自動アカウントロックの設定 {#set-automatic-account-locking}
 
 1. 管理コンソールにログインします。
 1. **設定**／**ユーザー管理**／**ドメイン管理**&#x200B;をクリックします。
 1. 「自動アカウントロックの設定」で、「**連続する認証エラーの最大回数**」を 3 などの小さい値に設定します。
 1. 「**保存**」をクリックします。
 
-### 監査とログ  {#auditing-and-logging}
+### 監査とログ {#auditing-and-logging}
 
 アプリケーションの監査およびログ機能を適切に保護した状態で使用することで、セキュリティを確保し、他の異常なイベントを追跡して、それらのイベントを可能な限り迅速に検出することができます。アプリケーション内における監査とログの効果的な使用には、成功したログインと失敗したログインの追跡、キーレコードの作成と削除などのキーアプリケーションイベントの追跡などが挙げられます。
 
@@ -443,7 +443,7 @@ LDAP を使用した最もよく行われる攻撃は、攻撃者が大量の認
 
 JEE 上の AEM Forms のインストールが完了したら、定期的に環境のセキュリティの保守を行うことが重要です。ここでは、JEE 上の AEM Forms 実稼働サーバーのセキュリティを維持するための推奨タスクについて説明します。
 
-### Web アクセスのリバースプロキシの設定  {#setting-up-a-reverse-proxy-for-web-access}
+### Web アクセスのリバースプロキシの設定 {#setting-up-a-reverse-proxy-for-web-access}
 
 「*リバースプロキシ*」は、1 セットの JEE 上の AEM Forms Web アプリケーションの URL を、外部ユーザーと内部ユーザーの両方から利用できるように設定するものです。この設定は、JEE 上の AEM Forms を実行するアプリケーションサーバーへのユーザーの直接接続を許可する方法よりも、高いセキュリティで保護されます。リバースプロキシは、JEE 上の AEM Forms を実行しているアプリケーションサーバーに対するすべての HTTP 要求を実行します。ユーザーは、リバースプロキシに対するネットワークアクセスしか持たないので、リバースプロキシでサポートされている URL 接続のみを試みることができます。
 
@@ -628,7 +628,7 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
  </tbody> 
 </table>
 
-## クロスサイト要求偽造攻撃からの保護  {#protecting-from-cross-site-request-forgery-attacks}
+## クロスサイト要求偽造攻撃からの保護 {#protecting-from-cross-site-request-forgery-attacks}
 
 クロスサイトリクエストフォージェリ(CSRF)攻撃は、Webサイトがユーザーに対して持つ信頼性を悪用し、ユーザーが不正で意図しないコマンドを送信します。 この攻撃は、ユーザーが既に認証されている別のサイトにアクセスするために、Webページにリンクやスクリプト、または電子メールメッセージにURLを含めることで設定されます。
 
@@ -648,7 +648,7 @@ JEE上のAEM Formsは、リファラーフィルター機能を使用してCSRF�
 * **許可されているURI:** リファラーヘッダーを確認せずに提供されるリソースのリストです。例えば、サーバーの状態に変更を加えることのない、リソースのヘルプページをこのリストに追加できます。許可されているURIリスト内のリソースが、リファラーが誰であるかに関係なく、リファラーフィルターでブロックされることはありません。
 * **Nullリファラー：** 親Webページに関連付けられていない、または親Webページから派生していないサーバーリクエストは、Nullリファラーからのリクエストと見なされます。例えば、新しいブラウザーウィンドウを開き、アドレスを入力してEnterキーを押すと、サーバーに送信されるリファラーはnullになります。 WebサーバーにHTTPリクエストを送信するデスクトップアプリケーション（.NETまたはSWING）も、Nullリファラーをサーバーに送信します。
 
-### リファラーフィルター{#referer-filtering}
+### リファラーのフィルタリング {#referer-filtering}
 
 リファラーフィルタリングプロセスは、次のように記述できます。
 
@@ -672,7 +672,7 @@ JEE上のAEM Formsは、リファラーフィルター機能を使用してCSRF�
    1. Nullリファラーが許可されている場合は、リクエストが渡されます。
    1. Nullリファラーが許可されていない場合、サーバーは要求されたURIがNullリファラーの例外であるかどうかを確認し、それに応じて要求を処理します。
 
-### リファラーフィルターの管理{#managing-referer-filtering}
+### リファラーフィルタリングの管理 {#managing-referer-filtering}
 
 JEE上のAEM Formsには、サーバーリソースへのアクセスを許可するリファラーを指定するリファラーフィルターが用意されています。 デフォルトでは、*CSRF_CHECK_GETS*&#x200B;がtrueに設定されていない限り、リファラーフィルターは、安全なHTTPメソッド(GETなど)を使用する要求をフィルタリングしません。 許可されているリファラーエントリのポート番号が0に設定されている場合、JEE上のAEM Formsはポート番号に関係なく、そのホストからのリファラーを持つすべての要求を許可します。 ポート番号が指定されていない場合は、デフォルトのポート 80（HTTP）またはポート 443（HTTPS）からの要求のみが許可されます。許可されているリファラーリストのすべてのエントリが削除されると、リファラーフィルタリングは無効になります。
 
@@ -775,7 +775,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 * クライアントがブラウザーで動作できる場合は、そのデプロイメントモデルを試してみます。
 * 最後の手段として、許可されている URI リストにリソースを追加できます。ただし、これは推奨設定ではありません。
 
-## ネットワーク設定の保護  {#secure-network-configuration}
+## ネットワーク設定の保護 {#secure-network-configuration}
 
 ここでは、JEE 上の AEM Forms が必要とするプロトコルとポートについて説明し、保護されたネットワーク設定で JEE 上の AEM Forms をデプロイするための推奨事項を示します。
 
@@ -857,7 +857,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
  </tbody> 
 </table>
 
-### アプリケーションサーバーのポート  {#ports-for-application-servers}
+### アプリケーションサーバーのポート {#ports-for-application-servers}
 
 ここでは、サポートしている各種のアプリケーションサーバーのデフォルトポート（および代替設定の範囲）について説明します。これらのポートについては、JEE 上の AEM Forms を実行しているアプリケーションサーバーに接続するクライアントに対して許可するネットワーク機能に応じて、内側のファイアウォール上で有効と無効を切り替える必要があります。
 
@@ -927,7 +927,7 @@ JEE上のAEM Formsで必要なWebSphereポートについて詳しくは、WebSp
 
 JBoss、WebLogic および WebSphere 上で SSL を設定する手順については、[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_64)の「SSL の設定」を参照してください。
 
-### SSL リダイレクトの設定  {#configuring-ssl-redirect}
+### SSL リダイレクトの設定 {#configuring-ssl-redirect}
 
 SSL をサポートするようにアプリケーションサーバーを設定した後、 アプリケーションおよびサービスに対するすべての HTTP トラフィックは、SSL ポートを使用するように強制されます。
 
@@ -957,11 +957,11 @@ WebSphere または WebLogic で SSL リダイレクトを設定するには、�
 
 ここでは、JEE 上の AEM Forms の実行に使用する場合の Windows 固有のセキュリティ推奨事項について説明します。
 
-### JBoss サービスアカウント  {#jboss-service-accounts}
+### JBoss サービスアカウント {#jboss-service-accounts}
 
 JEE 上の AEM Forms 自動インストールは、デフォルトで、ローカルシステムアカウントを使用してサービスアカウントを設定します。組み込みのローカルシステムユーザーアカウントは、高いレベルのアクセス権限を付与されており、Administrators グループに属しています。ワーカープロセス ID をローカルシステムユーザーアカウントで実行した場合、ワーカープロセスはシステム全体に対してフルアクセス権限を持ちます。
 
-#### 管理者以外のアカウントでのアプリケーションサーバーの実行  {#run-the-application-server-using-a-non-administrative-account}
+#### 管理者以外のアカウントでのアプリケーションサーバーの実行 {#run-the-application-server-using-a-non-administrative-account}
 
 1. Microsoft 管理コンソール（MMC）で、forms サーバーサービスへのログインに使用するローカルユーザーを作成します。
 
@@ -980,7 +980,7 @@ JEE 上の AEM Forms 自動インストールは、デフォルトで、ロー�
 1. 新しく作成したユーザーアカウントに、JEE 上の AEM Forms Web コンテンツディレクトリの項目に対する「読み取りと実行」、「フォルダの内容の一覧表示」、「読み取り」の各権限を付与します。
 1. アプリケーションサーバーサービスを起動します。
 
-### ファイルシステムのセキュリティ  {#file-system-security}
+### ファイルシステムのセキュリティ {#file-system-security}
 
 JEE 上の AEM Forms は、次の方法でファイルシステムを利用します。
 
@@ -990,7 +990,7 @@ JEE 上の AEM Forms は、次の方法でファイルシステムを利用し�
 
 forms サーバーサービスのドキュメントを送受信する方法として監視フォルダーを使用する場合、ファイルシステムのセキュリティを確保するために一層の予防策を講じる必要があります。ユーザーが監視フォルダーにコンテンツをドロップした場合、コンテンツは監視フォルダーを通じて公開されます。この場合、サービスは実際のエンドユーザーを認証していません。代わりに、フォルダーレベルに設定されている ACL と共有レベルセキュリティに応じて、サービスを呼び出して実行することのできるユーザーを決定しています。
 
-## JBoss 固有のセキュリティに関する推奨事項  {#jboss-specific-security-recommendations}
+## JBoss 固有のセキュリティに関する推奨事項 {#jboss-specific-security-recommendations}
 
 ここでは、JEE上のAEM Formsを実行する際に使用されるJBoss 7.0.6に固有のアプリケーションサーバー設定に関する推奨事項について説明します。
 
@@ -998,7 +998,7 @@ forms サーバーサービスのドキュメントを送受信する方法と�
 
 JBoss 管理コンソールと JMX コンソールへのアクセスは、自動インストールオプションを使用して JBoss に JEE 上の AEM Forms をインストールしたときに設定されます。独自の JBoss Application Server を使用している場合は、JBoss 管理コンソールおよび JMX 監視コンソールへのアクセスが保護されていることを確認してください。JMX 監視コンソールへのアクセスは、jmx-invoker-service.xml という JBoss 設定ファイルで設定されています。
 
-### ディレクトリ参照の無効化  {#disable-directory-browsing}
+### ディレクトリ参照の無効化 {#disable-directory-browsing}
 
 管理コンソールにログインした後、URLを変更して、コンソールのディレクトリリストを参照できます。 例えば、URL を次のいずれかの URL に変更すると、ディレクトリ一覧が表示される場合があります。
 
@@ -1011,7 +1011,7 @@ https://<servername>:8080/um/
 
 ここでは、JEE 上の AEM Forms の実行時に WebLogic 9.1 を保護するためのアプリケーションサーバー設定の推奨事項について説明します。
 
-### ディレクトリ参照の無効化  {#disable_directory_browsing-1}
+### ディレクトリ参照の無効化 {#disable_directory_browsing-1}
 
 weblogic.xml ファイルの index-directories プロパティを `false` に設定します。次に例を示します。
 
@@ -1026,11 +1026,11 @@ weblogic.xml ファイルの index-directories プロパティを `false` に設
 
 デフォルトでは、WebLogic はデフォルト SSL リスンポート 7002 を有効にしません。SSL を設定する前に、WebLogic Server 管理コンソールでこのポートを有効にしてください。
 
-## WebSphere 固有のセキュリティに関する推奨事項  {#websphere-specific-security-recommendations}
+## WebSphere 固有のセキュリティに関する推奨事項 {#websphere-specific-security-recommendations}
 
 ここでは、JEE 上の AEM Forms の実行時に WebSphere を保護するためのアプリケーションサーバー設定の推奨事項について説明します。
 
-### ディレクトリ参照の無効化  {#disable_directory_browsing-2}
+### ディレクトリ参照の無効化 {#disable_directory_browsing-2}
 
 ibm-web-ext.xmlファイルの`directoryBrowsingEnabled`プロパティを`false`に設定します。
 
