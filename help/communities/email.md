@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
-role: Administrator
+role: Admin
 exl-id: 0a0222e7-ca30-4603-94ad-582005b2de11
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 38%
 
 ---
 
-# 電子メールの設定  {#configuring-email}
+# 電子メールの設定 {#configuring-email}
 
 AEM Communities では次の用途のために電子メールを使用します。
 
@@ -137,7 +137,7 @@ Communities の電子メール設定インスタンスに接続するには：
 
 電子メールがリポジトリに取り込まれるように、ポーリングインポーターを設定し、そのプロパティをリポジトリで手動で設定する必要があります。
 
-### 新しいポーリングインポーターの追加  {#add-new-polling-importer}
+### 新しいポーリングインポーターの追加 {#add-new-polling-importer}
 
 * プライマリパブリッシャー
 * 管理者権限でサインインしています
@@ -163,7 +163,7 @@ Communities の電子メール設定インスタンスに接続するには：
 
 * 「**[!UICONTROL OK]**」を選択します。
 
-### 新しいポーリングインポーターのプロトコルの調整  {#adjust-protocol-for-new-polling-importer}
+### 新しいポーリングインポーターのプロトコルの調整 {#adjust-protocol-for-new-polling-importer}
 
 新しいポーリング設定が保存されたら、購読電子メールインポーターのプロパティをさらに変更し、プロトコルを `POP3` から `emailreply` に変更する必要があります
 
