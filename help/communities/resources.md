@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
-role: Administrator
+role: Admin
 exl-id: 67d80ec9-64c9-43a5-8cb1-9da819471797
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '2979'
 ht-degree: 50%
 
 ---
 
-# イネーブルメントリソースのコンソール  {#enablement-resources-console}
+# イネーブルメントリソースのコンソール {#enablement-resources-console}
 
 AEM Communities のリソースコンソールは、[イネーブルメントマネージャー](users.md)が、イネーブルメントコミュニティサイトのリソースの作成、管理、メンバーへの割り当てをおこなう場所です。
 
@@ -59,7 +59,7 @@ AEM Communities のリソースコンソールは、[イネーブルメントマ
 
 学習パスは、メンバーへの割り当てを容易にするために、複数のイネーブルメントリソースを論理的にグループ化したものです。
 
-### メンバーグループ  {#members-group}
+### メンバーグループ {#members-group}
 
 コミュニティサイトの作成時にサイトの URL に指定した名前が、様々な役割にふさわしい権限を持つ[サイト固有のユーザーグループ](users.md)を作成する際に使用されます。これらの自動作成されたグループには、`Community *<site-name>*`というプレフィックスが付きます。
 
@@ -69,7 +69,7 @@ AEM Communities のリソースコンソールは、[イネーブルメントマ
 
 [イネーブルメントコミュニティ](overview.md#enablement-community)の場合は、サイトを非公開にすることを推奨します。非公開のサイトでは、管理者がユーザーをメンバーグループに追加する必要があります。
 
-## コミュニティサイトのイネーブルメントリソースへのアクセス  {#accessing-a-community-site-s-enablement-resources}
+## コミュニティサイトのイネーブルメントリソースへのアクセス {#accessing-a-community-site-s-enablement-resources}
 
 ### コミュニティリソースへの移動 {#navigate-to-communities-resources}
 
@@ -166,7 +166,7 @@ AEM Communities のリソースコンソールは、[イネーブルメントマ
 
 * 「**[!UICONTROL 次へ]**」を選択します。
 
-### 2 コンテンツの追加  {#add-content}
+### 2 コンテンツの追加 {#add-content}
 
 ![chlimage_1-170](assets/chlimage_1-170.png)
 
@@ -351,7 +351,7 @@ AEM Communities のリソースコンソールは、[イネーブルメントマ
 
 * 「**[!UICONTROL 次へ]**」を選択します。
 
-### 前提条件を追加  {#add-prerequisites}
+### 前提条件を追加 {#add-prerequisites}
 
 ![chlimage_1-178](assets/chlimage_1-178.png)
 
@@ -361,7 +361,7 @@ AEM Communities のリソースコンソールは、[イネーブルメントマ
 
 * 「**[!UICONTROL 次へ]**」を選択します。
 
-### リソースを追加  {#add-resources}
+### リソースを追加 {#add-resources}
 
 ![chlimage_1-179](assets/chlimage_1-179.png)
 
@@ -399,7 +399,7 @@ AEM Communities のリソースコンソールは、[イネーブルメントマ
 >
 >メンバーがイネーブルメントリソースとそのリソースを参照する学習パスの両方に登録されている場合、そのメンバーの割り当てには、単体のリソースと学習パス内のリソースの両方が表示されます。
 
-## リソースの管理  {#managing-a-resource}
+## リソースの管理 {#managing-a-resource}
 
 単体のイネーブルメントリソースを管理するには、
 
@@ -491,7 +491,7 @@ Analytics のタイムラインレポートには、このイネーブルメン�
 
 [Adobe Analytics が必要](sites-console.md#analytics)です。
 
-#### Viewer Engagement {#viewer-engagement}
+#### ビューアエンゲージメント {#viewer-engagement}
 
 Analytics のビューアエンゲージメントレポート（ビデオリソース用）には、リソースを表示した学習者の数が表示されます。また、学習者が最後まで再生しなかった場合は、再生をやめた時点が表示されます。
 
@@ -501,13 +501,13 @@ Analytics のビューアエンゲージメントレポート（ビデオリソ�
 
 [Marketing Cloud 組織 ID が必要](sites-console.md#enablement)です。
 
-#### デバイス別のアクション  {#engagement-by-device}
+#### デバイス別のアクション {#engagement-by-device}
 
 Analytics のデバイス別のアクションレポート（ビデオリソース用）には、デスクトップとモバイルから再生された閲覧数の割合が表示されます。
 
 [Marketing Cloud 組織 ID が必要](sites-console.md#enablement)です。
 
-#### 担当者ステータス  {#assignee-status}
+#### 担当者ステータス {#assignee-status}
 
 担当者ステータスレポートには、以下の分類に該当する学習者の数が表示されます。
 
@@ -519,7 +519,7 @@ Analytics のデバイス別のアクションレポート（ビデオリソー�
 
 評価レポートには、イネーブルメントリソースを評価した学習者の数が表示されます。それぞれの星評価の数に加え、評価の合計数と平均評価の概要が表示されます。
 
-#### レポートサマリ  {#report-summary}
+#### レポートサマリ {#report-summary}
 
 イネーブルメントリソースの場合、レポートサマリには以下の内容が表示されます。
 
