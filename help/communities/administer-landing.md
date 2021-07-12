@@ -9,12 +9,12 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 8799386a-c3b8-43cf-9f71-580ff2a81abc
-role: Administrator
+role: Admin
 exl-id: b5d20819-3a3f-4b9e-99a3-e7ae5ae28baf
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '478'
-ht-degree: 44%
+ht-degree: 45%
 
 ---
 
@@ -73,7 +73,7 @@ AEM Communities の主な機能の 1 つは、サインインしたサイト訪�
 * [メンバーコンソールとグループコンソール](members.md):オーサー環境からパブリッシュ側のメンバーとメンバーグループを作成および管理できます。
 * [ユーザーの同期](sync.md):複数のパブリッシュインスタンス間でメンバーとメンバーグループを同期する
 * [facebookとTwitterを使用したソーシャルログイン](social-login.md):サイト訪問者が、FacebookまたはTwitterの資格情報を使用してコミュニティメンバーになる機能
-* [スコアとバッジ](implementing-scoring.md):メンバーの役割を識別するために割り当てられるバッジと、コミュニティに参加してメンバーがバッジを獲得するための能力
+* [スコアとバッジ](implementing-scoring.md):メンバーの役割を識別するために割り当てられるバッジと、コミュニティに参加してメンバーがバッジを獲得する能力
 * [通知](notifications.md):メンバーがフォローしているアクティビティを通知する機能
 * [購読](subscriptions.md)：メンバーが外部の電子メールを使用してコミュニティと対話する機能
 * [メッセージ](messaging.md):メンバーが内部メッセージを使用してコミュニティと対話する機能
