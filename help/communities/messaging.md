@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 5cb571ae-eeb5-4943-a6b8-92e346e85be2
-role: Administrator
+role: Admin
 exl-id: 0e906f67-b908-4c41-b243-e4f90100ce5d
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 31%
 
 ---
 
-# メッセージングの設定  {#configuring-messaging}
+# メッセージングの設定 {#configuring-messaging}
 
 ## 概要 {#overview}
 
