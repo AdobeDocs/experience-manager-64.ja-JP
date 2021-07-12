@@ -8,16 +8,16 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: Configuration
 discoiquuid: 2c8cea3c-8d8b-41d4-8ef9-a0ada8f86be6
-role: Administrator
+role: Admin
 exl-id: 7f1c4bac-accf-43e4-9439-89c5420d50f2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 79%
 
 ---
 
-# 同期スケジューラの設定  {#configuring-the-synchronization-scheduler}
+# 同期スケジューラの設定 {#configuring-the-synchronization-scheduler}
 
 デフォルトでは、同期スケジューラーは 3 分毎に実行して、LiveCycle Workbench 11 を経由してリポジトリ内で変更および更新されたすべてのアセットを同期します。同期プロセスが完了すると、フォームおよびリソースを含むアプリケーションを AEM Forms ユーザーインターフェイスで表示することができます。
 
@@ -33,7 +33,7 @@ ht-degree: 79%
 
    頻度の単位は分です。例えば、スケジューラーを 60 分毎に実行するように設定するには、60 と指定します。
 
-## アセットの同期  {#synchronizing-assets}
+## アセットの同期 {#synchronizing-assets}
 
 「**リポジトリからアセットを同期**」オプションを使用すると、アセットを手動で同期できます。次の手順を実行して、アセットを手動で同期します。
 
