@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 774c2553-b629-456b-afa7-5713490f4a0a
-role: Administrator
+role: Admin
 exl-id: 54109f64-eb30-47cc-bf7a-756843d2da02
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 49%
@@ -45,7 +45,7 @@ AEM Communitiesでは、パブリッシュ環境で、ユーザーは自己登�
 
 詳しくは、[メンバーの貢献度の制限](limits.md)を参照してください。
 
-### 動的に作成されるユーザーグループ  {#dynamically-created-user-groups}
+### 動的に作成されるユーザーグループ {#dynamically-created-user-groups}
 
 コミュニティサイトを作成すると、オーサー環境（[オーサーグループの役割](#author-group-roles)を参照）かパブリッシュ環境（[パブリッシュグループの役割](#publish-group-roles)を参照）のどちらかで、コミュニティサイトを管理するために必要な各種管理機能の適切な権限と一意の ID（uid）を持った新しいユーザーグループが動的に作成されます。
 
@@ -69,7 +69,7 @@ AEM Communitiesでは、パブリッシュ環境で、ユーザーは自己登�
 
 オーサー環境で登録されたユーザーとユーザーグループを管理するには、[セキュリティコンソール](../../help/sites-administering/security.md)を使用します。
 
-### Author Group Roles {#author-group-roles}
+### オーサーグループの役割 {#author-group-roles}
 
 | メンバーが所属するグループ | 主な役割 |
 |---|---|
@@ -80,7 +80,7 @@ AEM Communitiesでは、パブリッシュ環境で、ユーザーは自己登�
 | コミュニティ&lt;*サイト名* > Siteenablementmanagers | コミュニティサイトイネーブルメントマネージャーグループは、コミュニティサイトのイネーブルメント[リソース](resources.md)の管理を割り当てられたユーザーで構成されます。 |
 | なし | 匿名のサイト訪問者はオーサー環境にアクセスできません。 |
 
-### システム管理者  {#system-administrators}
+### システム管理者 {#system-administrators}
 
 管理者グループのメンバーは、オーサー環境とパブリッシュ環境の両方で AEM のインストールの初期設定を実行できるシステム管理者です。
 
@@ -108,7 +108,7 @@ AEM Communitiesでは、パブリッシュ環境で、ユーザーは自己登�
 >
 >サイト訪問者が 1 つのオープンコミュニティサイトに登録すると、その訪問者は自動的に、同じパブリッシュ環境上の他のオープンコミュニティサイトのメンバーになります。
 
-### パブリッシュグループの役割  {#publish-group-roles}
+### パブリッシュグループの役割 {#publish-group-roles}
 
 | メンバーが所属するグループ | 主な役割 |
 |---|---|
@@ -127,7 +127,7 @@ AEM Communitiesでは、パブリッシュ環境で、ユーザーは自己登�
 
 選択したメンバーは、[適切なグループ](#publish-group-roles)に自動的に割り当てられ、コミュニティサイトの公開（再公開）時にそのメンバーシップが含まれます。
 
-### Privileged Members Group {#privileged-members-group}
+### 権限を持つメンバーグループ {#privileged-members-group}
 
 権限を持つメンバーのセキュリティグループの目的は、特定のコミュニティ機能のコンテンツの作成を、権限を持つコミュニティサイトの一部のメンバーだけに限定することです。
 
@@ -148,7 +148,7 @@ AEM Communitiesでは、パブリッシュ環境で、ユーザーは自己登�
 >
 >あるコミュニティサイトで、権限を持つメンバーグループにユーザーを追加しても、そのユーザーが同じコミュニティサイトのメンバーでもある場合は、そのユーザーに対して作成権限が与えられるだけです。
 
-## コミュニティメンバーの作成  {#creating-community-members}
+## コミュニティメンバーの作成 {#creating-community-members}
 
 ### リポジトリの場所 {#repository-location}
 
