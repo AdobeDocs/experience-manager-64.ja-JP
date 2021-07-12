@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 1cc8ce66-2c03-44e4-9ddd-8d6944d85c99
-role: Administrator
+role: Admin
 exl-id: 834df392-df38-498c-9e2a-489484e20e0a
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 81%
@@ -28,7 +28,7 @@ ht-degree: 81%
 
 タグ名前空間と分類は、どちらで適用する場合も同じです。
 
-## Communities の機能  {#communities-features}
+## Communities の機能 {#communities-features}
 
 以下に示す AEM Communities の機能は、タグ付けを許可するように設定できます。
 
