@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: cc993b71-e2f2-48e7-ad4e-469cb5ce2dc1
-role: Administrator
+role: Admin
 exl-id: 2007336d-d75c-4e01-af81-181751c04cfe
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '2542'
 ht-degree: 48%
 
 ---
 
-# コミュニティ機能  {#community-functions}
+# コミュニティ機能 {#community-functions}
 
 コミュニティに必要とされる機能の種類はだいたい決まっています。コミュニティ機能は、コミュニティ機能として使用できます。 基本的に、コミュニティ機能を実装するために事前に組み込まれた1つ以上のページです。この機能を使用するには、オーサリングモードでページにコンポーネントを追加するだけではなく、複数の作業が必要です。 これらは、コミュニティサイトが[作成](sites-console.md)される[コミュニティサイトテンプレート](sites.md)の構造を定義するために使用される構成要素です。
 
@@ -30,7 +30,7 @@ ht-degree: 48%
 >
 >[コミュニティサイト](sites-console.md)、[コミュニティサイトテンプレート](sites.md)、[コミュニティグループテンプレート](tools-groups.md)、[コミュニティ機能](functions.md)の作成用のコンソールは、オーサー環境でのみ使用できます。
 
-## Community Functions Console {#community-functions-console}
+## コミュニティ機能コンソール {#community-functions-console}
 
 オーサー環境でコミュニティ機能コンソールに移動するには、
 
@@ -44,13 +44,13 @@ AEM Communities で提供される機能を以下で簡単に説明します。�
 
 コミュニティサイトテンプレートは、ログイン、ユーザープロファイル、通知、メッセージング、サイトメニュー、検索、テーマ、ブランディング機能など、コミュニティサイトの構造を定義します。
 
-### タイトルと URL の設定  {#title-and-url-settings}
+### タイトルと URL の設定 {#title-and-url-settings}
 
 **タイトル**&#x200B;と **URL** は、すべてのコミュニティ機能に共通するプロパティです。
 
 コミュニティ機能をコミュニティサイトテンプレートに追加するか、コミュニティサイトの構造を[変更](sites-console.md#modifying-site-properties)すると、その機能のダイアログが開き、タイトルと URL を設定できます。
 
-#### 設定機能の詳細  {#configuration-function-details}
+#### 設定機能の詳細 {#configuration-function-details}
 
 ![chlimage_1-380](assets/chlimage_1-380.png)
 
@@ -98,7 +98,7 @@ AEM Communities で提供される機能を以下で簡単に説明します。�
 
 テンプレートへの追加時には、[タイトルと URL 設定](#title-and-url-settings)のみを設定します。
 
-### ブログ機能  {#blog-function}
+### ブログ機能 {#blog-function}
 
 ブログ機能は、タグ付け、ファイルのアップロード、フォロー、メンバー自身による編集、投票、モデレートに対応した[ブログコンポーネント](blog-feature.md)を含むページです。開発者向けの[ブログの基本事項](blog-developer-basics.md)も参照してください。
 
@@ -143,7 +143,7 @@ AEM Communities で提供される機能を以下で簡単に説明します。�
 * **[!UICONTROL おすすめコンテ]**
 ンツを許可オンにすると、アイデアをおすすめコンテンツとして識 [別できます](featured.md)。初期設定はオンです。
 
-### カタログ機能  {#catalog-function}
+### カタログ機能 {#catalog-function}
 
 カタログ機能を使用すると、[イネーブルメントコミュニティ](overview.md#enablement-community)のメンバーが、割り当てられていないイネーブルメントリソースを参照できます。 開発者向けの[イネーブルメントリソースのタグ付け](tag-resources.md)と[カタログの基本事項](catalog-developer-essentials.md)を参照してください。
 
@@ -169,13 +169,13 @@ AEM Communities で提供される機能を以下で簡単に説明します。�
 
 テンプレートへの追加時には、[タイトルと URL 設定](#title-and-url-settings)のみを設定します。
 
-### ファイルライブラリ機能  {#file-library-function}
+### ファイルライブラリ機能 {#file-library-function}
 
 ファイルライブラリ機能は、コメントの追加と削除に対応した[ファイルライブラリコンポーネント](file-library.md)を含むページです。
 
 テンプレートへの追加時には、[タイトルと URL 設定](#title-and-url-settings)のみを設定します。
 
-### フォーラム機能  {#forum-function}
+### フォーラム機能 {#forum-function}
 
 フォーラム機能は、タグ付け、ファイルのアップロード、フォロー、メンバー自身による編集、投票、モデレートに対応した[フォーラムコンポーネント](forum.md)を含むページです。
 
@@ -253,7 +253,7 @@ Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降�
 * **[!UICONTROL おすすめコンテ]**
 ンツを許可オンにすると、アイデアをおすすめコンテンツとして識 [別できます](featured.md)。初期設定はオンです。
 
-### リーダーボード機能  {#leaderboard-function}
+### リーダーボード機能 {#leaderboard-function}
 
 リーダーボード機能とは、[リーダーボーコンポーネント](enabling-leaderboard.md)を 1 つ含むページです。
 
@@ -282,7 +282,7 @@ Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降�
 
 テンプレートへの追加時には、[タイトルと URL 設定](#title-and-url-settings)のみを設定します。
 
-### Q&amp;A 機能  {#qna-function}
+### Q&amp;A 機能 {#qna-function}
 
 Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロー、メンバー自身による編集、投票、モデレートに対応した [Q&amp;A コンポーネント](working-with-qna.md)を含むページです。
 
@@ -306,7 +306,7 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 * **[!UICONTROL おすすめコンテ]**
 ンツを許可オンにすると、アイデアをおすすめコンテンツとして識 [別できます](featured.md)。初期設定はオンです。
 
-## コミュニティ機能を作成  {#create-community-function}
+## コミュニティ機能を作成 {#create-community-function}
 
 コミュニティ機能を作成するには、コミュニティ機能コンソールの上部にある`Create Community Function`アイコンを選択します。 同じAEMブループリントに基づく複数の機能を作成し、オーサー編集モードで開いて一意にカスタマイズできます。
 
@@ -345,7 +345,7 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
 サムネールパネルでは、[コミュニティ機能コンソール](#community-functions-console)に表示する画像をアップロードできます。
 
-## コミュニティ機能を開く  {#open-community-function}
+## コミュニティ機能を開く {#open-community-function}
 
 ![chlimage_1-394](assets/chlimage_1-394.png)
 
@@ -361,7 +361,7 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
 設定について詳しくは、作成者向けの[コミュニティコンポーネント](author-communities.md)を参照してください。
 
-## コミュニティ機能を編集  {#edit-community-function}
+## コミュニティ機能を編集 {#edit-community-function}
 
 ![chlimage_1-395](assets/chlimage_1-395.png)
 
