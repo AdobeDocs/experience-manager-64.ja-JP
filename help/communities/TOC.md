@@ -6,8 +6,8 @@ user-guide-title: AEM 6.4 Communities ユーザーガイド
 breadcrumb-title: Communities ガイド
 user-guide-description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。
 feature: Communities
-role: Business Practitioner
-source-git-commit: 1a7ecec2f3c2618bb6d0280a8f9a66754cd8a1a3
+role: User
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 94%
@@ -25,7 +25,7 @@ ht-degree: 94%
    + [AEM Communities リリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/communities-release-notes.html)
    + [AEM Communities 使用の手引き](getting-started.md)
    + [イネーブルメントのための AEM Communities 使用の手引き](getting-started-enablement.md)
-   + [初期設定](setup.md)
+   + [初期セットアップ](setup.md)
    + [新しいコミュニティサイトの作成](create-site.md)
    + [公開したサイトを使ってみる](published-site.md)
    + [ネストされたグループの作成](nested-groups.md)
