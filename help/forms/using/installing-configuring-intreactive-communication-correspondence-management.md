@@ -6,9 +6,9 @@ seo-description: 'AEM Forms インタラクティブ通信をインストール�
 uuid: c09b5743-3cbc-49ff-977a-b6b3eb81b160
 topic-tags: installing
 discoiquuid: 674c6b68-8a04-4cd3-a63e-9968ca686948
-role: Administrator
+role: Admin
 exl-id: c7aaa81d-d140-44d9-9144-0cbf6ec5d650
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 75%
