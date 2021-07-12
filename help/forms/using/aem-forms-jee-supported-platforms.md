@@ -8,16 +8,16 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 1b9f8d98-e7e8-4b9b-a0df-52ccba324da3
-role: Administrator
+role: Admin
 exl-id: 6609c625-0591-42fd-910b-c7c65d52c5f1
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '3316'
 ht-degree: 85%
 
 ---
 
-# JEE 上の AEM Forms でサポートされているプラットフォーム  {#supported-platforms-for-aem-forms-on-jee}
+# JEE 上の AEM Forms でサポートされているプラットフォーム {#supported-platforms-for-aem-forms-on-jee}
 
 ## サポートされているプラットフォーム {#supported-platforms}
 
@@ -68,7 +68,7 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 | E：動作する見込み | この構成は動作する見込みであり、動作しないという報告はありません。 |
 | Z：サポート対象外 | この構成はサポートされません。アドビは、この構成が動作するかどうかに関する一切の表明をせず、この構成をサポートしません。 |
 
-### Java 仮想マシン (JVM) {#java-virtual-machines-jvm}
+### Java 仮想マシン（JVM） {#java-virtual-machines-jvm}
 
 Adobe Experience Manager Forms を使用するには、Java 仮想マシンが必要です。Java 仮想マシンは、Java Development Kit（JDK）ディストリビューションに付属しています。Adobe Experience Manager は、次のバージョンの Java 仮想マシンで動作します。
 
@@ -309,7 +309,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
 >
 >JEE 上の AEM Forms では、64 ビットのオペレーティングシステムのみがサポートされています。
 
-#### 視覚化環境  {#virtualized-environment}
+#### 視覚化環境 {#virtualized-environment}
 
 JEE 上の AEM Forms は、物理マシンまたはバーチャル環境で実行できます。ただし、バーチャル環境での AEM Forms の使用に問題が発生した場合は、その問題の物理マシン上での再現を試みてください。物理マシン上で問題が解決しない場合は、Adobeサポートに問い合わせてください。 物理マシン上では再現されない問題に関しては、バーチャル環境のベンダーにお問い合わせください。
 
@@ -366,7 +366,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
 * JEE 上の AEM Forms では、クラスター環境での MySQL データベースをサポートしていません。
 * パッケージ JDBC モジュールが Weblogic 上で構成されている場合、RDBMK は DB2、MYSQL、MS SQL および Oracle データベースと一緒には機能しません。
 
-### LDAP サーバー (オプション) {#ldap-servers-optional}
+### LDAP サーバー（オプション） {#ldap-servers-optional}
 
 <table> 
  <tbody> 
@@ -405,7 +405,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
  </tbody> 
 </table>
 
-### 電子メールサーバー (オプション) {#email-servers-optional}
+### 電子メールサーバー（オプション） {#email-servers-optional}
 
 * IBM Lotus Domino 9.0
 * Microsoft Exchange 2013
@@ -442,7 +442,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
  </tbody> 
 </table>
 
-### Cordova のサポート  {#support-for-cordova}
+### Cordova のサポート {#support-for-cordova}
 
 AEM Forms AppはApache Cordovaをサポートするようになりました。次に、サポートされるCordovaのプラットフォーム固有のバージョンを示します。
 
@@ -788,9 +788,9 @@ Microsoft® Windows® 2012 は、Reader および Acrobat 以外は、指定さ�
 
 また、JEE 上の AEM Forms では、指定されたメジャーおよびマイナーバージョンのサポートソフトウェアに対して、アップデート、パッチ、および修正パックもサポートしています。ただし、次のメジャーまたはマイナーバージョンに対するアップデートは、とくに記載がない限りサポートされていません。
 
-## サードパーティパッチサポートポリシー  {#third-party-patch-support-policy}
+## サードパーティパッチサポートポリシー {#third-party-patch-support-policy}
 
-JEE 上の AEM Forms のサードパーティソフトウェアの必要システム構成は、それぞれの製品ドキュメントの「必要システム構成」セクションに記述されています。すべてのドキュメントは、 [https://adobe.com/go/learn_aemforms_documentation_64](https://adobe.com/go/learn_aemforms_documentation_64)からアクセスできます。
+JEE 上の AEM Forms のサードパーティソフトウェアの必要システム構成は、それぞれの製品ドキュメントの「必要システム構成」セクションに記述されています。すべてのドキュメントは、 [https://adobe.com/go/learn_aemforms_documentation_64](https://adobe.com/go/learn_aemforms_documentation_64_jp)からアクセスできます。
 
 JEE 上の AEM Forms のサードパーティリファレンスプラットフォームは、JEE 上の AEM Forms の開発とリリースの時点におけるサードパーティインフラストラクチャの特定のパッチレベルを記述してあり、そのバージョンの JEE 上の AEM Forms によってサポートされているインフラストラクチャの最小パッチ/サービスパックレベルを形成しています。
 
