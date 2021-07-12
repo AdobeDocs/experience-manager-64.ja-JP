@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: d11b8fc8-5e98-4a77-a536-d445ac88e1b3
-role: Administrator
+role: Admin
 exl-id: 9865b366-b9e5-40f3-8863-789ccfb792f5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1519'
 ht-degree: 57%
@@ -190,7 +190,7 @@ UGC の事前モデレートがおこなわれる場合、投稿は、モデレ�
 
 ### スパム検出 {#spam-detection}
 
-スパム検出は、自動モデレート機能で、送信されたユーザーが生成した望ましくないコンテンツをスパムとしてマークして除外します。 有効にすると、事前に設定されたスパムワードの集合に基づいて、ユーザーが生成したコンテンツがスパムかどうかを識別します。 デフォルトのスパムワードは次の場所にあります。
+スパム検出は、送信済みのユーザー生成コンテンツの中から、好ましくないコンテンツをスパムとしてマーキングして除外する自動モデレート機能です。 ユーザーが生成したコンテンツをスパムとしてマークし、望ましくない部分を送信した。 有効にすると、事前に設定されたスパムワードの集合に基づいて、ユーザーが生成したコンテンツがスパムかどうかを識別します。 デフォルトのスパムワードは次の場所にあります。
 
 `/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`
 
