@@ -8,16 +8,16 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 99da0d37-726e-42b9-b98a-5dd6c2165af6
-role: Administrator
+role: Admin
 exl-id: 50bf178d-7a3c-41df-9d13-99c74d944700
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 94%
 
 ---
 
-# AEM Forms での XDP および PDF ドキュメントの取得  {#getting-xdp-and-pdf-documents-in-aem-forms}
+# AEM Forms での XDP および PDF ドキュメントの取得 {#getting-xdp-and-pdf-documents-in-aem-forms}
 
 ## 概要 {#overview}
 
@@ -33,7 +33,7 @@ AEM Forms でアップロードすることで、ローカルファイルシス�
 >
 >XDP ファイルをアップロードすることができる `form-power-users` グループのメンバーであることを確認してください。このグループのメンバーになるには、管理者に連絡します。
 
-## フォームのアップロード  {#uploading-forms}
+## フォームのアップロード {#uploading-forms}
 
 1. `https://[server]:[port]/aem/forms.html`にアクセスしてAEM Formsユーザーインターフェイスにログインします。
 1. フォームまたはフォームを含むフォルダーをアップロードしたいフォルダーに移動します。
@@ -61,7 +61,7 @@ AEM Forms でアップロードすることで、ローカルファイルシス�
 
 アップロードが完了すると、アセットのプレビューに基づいて、バックグラウンドワークフローが各アセットごとにサムネイルを生成します。新しいバージョンのアセットがアップロードされた場合は、既存のアセットに上書きされます。
 
-### 保護モード  {#protected-mode}
+### 保護モード {#protected-mode}
 
 AEM Forms サーバーを使用することで、JavaScript コードを実行できます。悪質な JavaScript コードの場合、AEM Forms 環境に障害が発生する可能性があります。保護モードは、信頼済みのアセットおよび場所からのみ XDP ファイルを実行するように制限します。AEM Forms UI で使用可能なすべての XDP は、信頼済みのアセットと見なされます。
 
