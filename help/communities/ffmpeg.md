@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
-role: Administrator
+role: Admin
 exl-id: 9ed54ee3-3509-4a43-a710-90f4543ccaf3
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 62%
 
 ---
 
-# コミュニティのための FFmpeg  {#ffmpeg-for-communities}
+# コミュニティのための FFmpeg {#ffmpeg-for-communities}
 
 ## 概要 {#overview}
 
@@ -26,7 +26,7 @@ FFmpeg は、オーディオとビデオの変換およびストリーミング�
 
 FFmpeg は、オーサー環境で、アップロードしたイネーブルメントリソースのメタデータを取得したり、イネーブルメントリソースの一覧に表示するサムネイルを生成するときに使用します。
 
-## FFmpeg のインストール  {#installing-ffmpeg}
+## FFmpeg のインストール {#installing-ffmpeg}
 
 FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしているサーバーにインストールする必要があります。
 
