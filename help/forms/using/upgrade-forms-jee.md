@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
-role: Administrator
+role: Admin
 exl-id: e41eb0fa-ae88-44d5-9181-0d925b8b62c6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 75%
 
 ---
 
-# JEE上のAEM 6.4 Forms {#upgrade-to-aem-forms-jee}へのアップグレード
+# JEE 上の AEM 6.4 Forms へのアップグレード {#upgrade-to-aem-forms-jee}
 
 お使いの環境に応じて、次のアップグレードパスのいずれかを使用します。
 
@@ -40,7 +40,7 @@ JEE 上の AEM 6.2 Forms または JEE 上の AEM 6.3 Forms を JEE 上の AEM 6
 
 LiveCycleES2、LiveCycleES3、AEM 6.0 Forms、AEM 6.1 FormsからAEM 6.4 Formsへの直接アップグレードは使用できません。 LiveCycle または AEM Forms のバージョンを 1 つ以上中間アップグレードした後に、AEM 6.4 Forms からアップグレードすることができます。中間バージョンのリストと対応するアップグレード手順について詳しくは、「[アップグレードパスを選択する](upgrade.md)」を参照してください。
 
-## LiveCycle ES4 SP1 から JEE 上の AEM 6.4 Forms へのアップグレード  {#livecycle-es4sp1-forms-jee}
+## LiveCycle ES4 SP1 から JEE 上の AEM 6.4 Forms へのアップグレード {#livecycle-es4sp1-forms-jee}
 
 LiveCycle ES4 SP1 から JEE 上の AEM 6.4 Forms へのアップグレードは、アウトオブプレースアップグレードです。このアップグレードでは、旧バージョンのアセットとデータが、サポートされているアプリケーションサーバー、オペレーティングシステム、データベースの新しいインスタンス（新しいバージョン）に移行されます。
 
