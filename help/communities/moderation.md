@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 6c405543-e339-4916-aa0f-b61d0b798cf3
-role: Administrator
+role: Admin
 exl-id: ded38cee-fbce-46cc-974f-38d3a293a55d
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1855'
 ht-degree: 57%
 
 ---
 
-# モデレートコンソール  {#moderation-console}
+# モデレートコンソール {#moderation-console}
 
 AEM Communitiesでは、管理者とコミュニティモデレーター（モデレーターとして割り当てられた信頼できるコミュニティメンバー）が、オーサー環境とパブリッシュ環境の両方でコミュニティコンテンツ[の一括モデレートを実行できます。](moderate-ugc.md)
 
@@ -107,7 +107,7 @@ AEM Communitiesでは、管理者とコミュニティモデレーター（モ�
 >
 >コンテンツ領域には&#x200B;*無限スクロール*&#x200B;が備わっています。つまり、コンテンツの最後に達するまでスクロールを続行できます。 ツールバーは、スクロール時もコンテンツ領域の上の位置に固定されて表示されます。
 
-### フィルターレール  {#filter-rail}
+### フィルターレール {#filter-rail}
 
 ![chlimage_1-472](assets/chlimage_1-472.png)
 
@@ -237,7 +237,7 @@ AEM Communitiesでは、管理者とコミュニティモデレーター（モ�
 
 コンテンツ領域内の 1 つの投稿のみをモデレートする場合は、その投稿の上にマウスポインターを置く（デスクトップの場合）か、その投稿を指で長押しして（モバイルの場合）ボタンを表示します。1 つのコンテンツを操作するときは、削除アクションの場合に限り確認メッセージが表示されます。
 
-### 複数の投稿のモデレート  {#moderating-multiple-posts}
+### 複数の投稿のモデレート {#moderating-multiple-posts}
 
 投稿の`Select`アイコンをクリックして、一括選択モードに入ります。
 
@@ -314,7 +314,7 @@ AEM Communitiesでは、管理者とコミュニティモデレーター（モ�
 
 1つの投稿を操作する場合、UGCタイプがそのリソースのそれ以上の投稿を防ぐ機能をサポートしている場合は、閉じるアイコンが表示されます。
 
-#### Moderation History {#moderation-history}
+#### モデレート履歴 {#moderation-history}
 
 ![chlimage_1-485](assets/chlimage_1-485.png)
 
