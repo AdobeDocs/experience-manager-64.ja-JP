@@ -7,9 +7,9 @@ uuid: 2b76b69f-6f3a-4f1a-a2a4-d39f5e529f75
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
-role: Administrator
+role: Admin
 exl-id: 5005d57c-2585-46d1-9785-939e249a0128
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 78%
@@ -87,7 +87,7 @@ User Management では、次のデータベーステーブルにユーザーデ�
  </tbody> 
 </table>
 
-### AEM リポジトリ  {#aem-repository}
+### AEM リポジトリ {#aem-repository}
 
 `https://[*server*]:[*host*]/lc`の下のFormsアプリケーションに少なくとも1回アクセスしたユーザーのユーザー管理データもAEMリポジトリに保存されます。
 
@@ -95,7 +95,7 @@ User Management では、次のデータベーステーブルにユーザーデ�
 
 User Management データベースおよび AEM リポジトリにあるユーザーの User Management データにアクセスしてデータを書き出すことができます。また、必要に応じてデータを永続的に削除できます。
 
-### データベース  {#database-1}
+### データベース {#database-1}
 
 User Management データベースのユーザーデータを書き出すまたは削除するには、データベースクライアントを使用してデータベースに接続し、ユーザーの PII に基づいてプリンシパル ID を検索します。例えば、ログイン ID を使用してユーザーのプリンシパル ID を取得するには、次の `select` コマンドをデータベースで実行します。
 
@@ -107,7 +107,7 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 
 プリンシパル ID が分かったら、ユーザーデータを書き出したり、削除したりすることができます。
 
-#### ユーザーデータの書き出し  {#export-user-data}
+#### ユーザーデータの書き出し {#export-user-data}
 
 次のデータベースコマンドを実行して、プリンシパル ID の User Management データをデータベーステーブルから書き出します。`select`コマンドで、 `<principal_id>`を、書き出すデータのユーザーのプリンシパルIDに置き換えます。
 
@@ -176,11 +176,11 @@ Select * from EdcPrincipalEntity where id='<principal_id>';
 
 1. AEM Forms サーバーを開始します。
 
-### AEM リポジトリ  {#aem-repository-1}
+### AEM リポジトリ {#aem-repository-1}
 
 Forms JEE ユーザーは、AEM Forms オーサーインスタンスに少なくとも一度アクセスしている場合、AEM リポジトリにデータが格納されています。AEM リポジトリのユーザーデータにアクセスして削除することができます。
 
-#### ユーザーデータへのアクセス  {#access-user-data}
+#### ユーザーデータへのアクセス {#access-user-data}
 
 AEMリポジトリで作成されたユーザーを表示するには、AEM管理者の資格情報を使用して`https://[*server*]:[*port*]/lc/useradmin`にログインします。 URL の `*server*` と `*port*` は、AEM オーサーインスタンスのサーバーとポートであることに注意してください。ここでは、ユーザー名でユーザーを検索できます。ユーザーをダブルクリックすると、ユーザーのプロパティ、権限、グループなどの情報が表示されます。ユーザーの `Path` プロパティは、AEM リポジトリで作成されたユーザーノードへのパスを指定します。
 
