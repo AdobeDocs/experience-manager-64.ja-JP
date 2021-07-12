@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: e975e026-e815-4445-be3e-b1237ed3f6b2
-role: Administrator
+role: Admin
 exl-id: 4ff530ae-c676-4259-86f2-a3881843b642
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '922'
 ht-degree: 35%
 
 ---
 
-# SRP - コミュニティコンテンツストレージ  {#srp-community-content-storage}
+# SRP - コミュニティコンテンツストレージ {#srp-community-content-storage}
 
 ## はじめに {#introduction}
 
@@ -109,7 +109,7 @@ AEM Communities 6.1 以降では、前述のように、UGC 用の共有スト�
 
 サイトコンテンツはレプリケートされますが、UGC はレプリケートされません。
 
-### ユーザーデータの管理  {#managing-user-data}
+### ユーザーデータの管理 {#managing-user-data}
 
 また、コミュニティに関心を持つのは、[*ユーザー*、*ユーザーグループ*、*ユーザープロファイル*](users.md)&#x200B;です。 このユーザー関連データは、パブリッシュ環境で作成および更新する際に、トポロジが[パブリッシュファーム](../../help/sites-deploying/recommended-deploys.md#tarmk-farm)の場合に、他のパブリッシュインスタンスで使用可能にする必要があります。
 
