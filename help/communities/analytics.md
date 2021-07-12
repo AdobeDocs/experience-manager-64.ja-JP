@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 36ea97a4-4e13-4e89-866b-495f3c30cb94
-role: Administrator
+role: Admin
 exl-id: cb2f61df-73bb-47f7-86ce-feda4772c8d0
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '2787'
 ht-degree: 54%
@@ -86,7 +86,7 @@ Analytics をコミュニティ機能と連携するよう設定するには、�
 
    使用するAnalyticsレポートスイートの名前
 
-## Adobe Analytics Report Suite for Video Reporting {#adobe-analytics-report-suite-for-video-reporting}
+## ビデオレポートのための Adobe Analytics レポートスイート {#adobe-analytics-report-suite-for-video-reporting}
 
 Adobe Marketing Cloudの[Report Suite Manager](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)を使用して、コミュニティサイトでコミュニティ機能のレポートを提供できるようにAnalyticsレポートスイートを設定できます。
 
@@ -110,7 +110,7 @@ Adobe Marketing Cloudの[Report Suite Manager](https://docs.adobe.com/content/he
 
    * ビデオレポートコンソール
 
-      * Enable `Video Core`
+      * Enable（有効） `Video Core`
       * 「保存」を選択します。
    * ビデオコア測定コンソール
 
@@ -137,7 +137,7 @@ Adobe Marketing Cloudの[Report Suite Manager](https://docs.adobe.com/content/he
 >
 >この作業をしておかないと、修復不可能なデータ損傷が発生することがあります。
 
-### Video Heartbeat Analytics  {#video-heartbeat-analytics}
+### Video Heartbeat Analytics {#video-heartbeat-analytics}
 
 Video Heartbeat Analyticsのライセンスを取得すると、`Marketing Cloud Org Id`が割り当てられます。
 
@@ -155,7 +155,7 @@ Video Heartbeat Analytics が有効になっている場合、ビデオプレー
 
 有効にしない場合、Video Heartbeat コードはインスタンス化されず、ビデオの再生状況と再開位置の追跡のみが報告のために SRP に維持されます。
 
-## AEM Analytics クラウドサービス設定  {#aem-analytics-cloud-service-configuration}
+## AEM Analytics クラウドサービス設定 {#aem-analytics-cloud-service-configuration}
 
 オーサーインスタンスの標準UIを使用してAdobe AnalyticsとAEMコミュニティサイトを統合する、新しいAnalytics統合を作成するには：
 
@@ -199,7 +199,7 @@ Video Heartbeat Analytics が有効になっている場合、ビデオプレー
 
 ![chlimage_1-267](assets/chlimage_1-267.png)
 
-* **[!UICONTROL Company]**
+* **[!UICONTROL 会社]**
 
    Adobe Analyticsアカウントに関連付けられている会社
 
@@ -275,7 +275,7 @@ Adobe Analytics への基本的な接続を正しく設定したら、コミュ�
 
 Analytics フレームワークを作成すると、フレームワークを設定するための画面が開きます。
 
-## AEM Analytics フレームワーク設定  {#aem-analytics-framework-configuration}
+## AEM Analytics フレームワーク設定 {#aem-analytics-framework-configuration}
 
 このフレームワークは、AEM 変数を Analytics（evar および event）変数にマップするためのものです。マッピングに使用できるAnalytics変数は、[レポートスイート](#adobe-analytics-report-suite-for-video-reporting)で定義されます。
 
@@ -290,7 +290,7 @@ Analytics フレームワークを作成すると、フレームワークを設�
 
 サイドキックは必要ないので、レポートスイート設定にアクセスするときの邪魔にならないよう最小化しておくことができます。
 
-#### 「項目を追加」選択前および選択後のレポートスイートダイアログ  {#report-suites-dialog-before-and-after-selecting-add-item}
+#### 「項目を追加」選択前および選択後のレポートスイートダイアログ {#report-suites-dialog-before-and-after-selecting-add-item}
 
 ![chlimage_1-271](assets/chlimage_1-271.png)
 
@@ -319,7 +319,7 @@ Analytics フレームワークを作成すると、フレームワークを設�
 
 * Analytics フレームワーク設定に戻り、変数マッピングを調整します（オプション）。
 
-### 既存のコミュニティサイトに対する有効化  {#enable-for-existing-community-site}
+### 既存のコミュニティサイトに対する有効化 {#enable-for-existing-community-site}
 
 Analytics クラウドサービスを[既存のコミュニティサイト](sites-console.md#modifying-site-properties)に追加するには：
 
@@ -335,7 +335,7 @@ Analytics クラウドサービスを[既存のコミュニティサイト](site
 
 * Analytics フレームワーク設定に戻り、変数マッピングを調整します（オプション）。
 
-### カスタマイズされたサイトに対する有効化  {#enable-for-customized-sites}
+### カスタマイズされたサイトに対する有効化 {#enable-for-customized-sites}
 
 コミュニティサイトで Analytics の追跡とインポートが正常に機能するようにするには、`scf-js-site-title` クラスと href 属性のページ要素が存在する必要があります。コミュニティサイト用の変更されていない`sitepage.hbs`スクリプトなど、ページ上には1つの要素のみが存在する必要があります。 `siteUrl`の値が抽出され、*サイトパス*&#x200B;としてAdobe Analyticsに送信されます。
 
@@ -464,7 +464,7 @@ Communities の ever および event がレポートスイート内の既存の�
 >
 >この作業をしておかないと、修復不可能なデータ損傷が発生することがあります。
 
-### プライマリパブリッシャー  {#primary-publisher}
+### プライマリパブリッシャー {#primary-publisher}
 
 選択したデプロイメントが[パブリッシュファーム](topologies.md#tarmk-publish-farm)の場合は、レポートデータのポーリングをおこなう Adobe Analytics が [SRP](working-with-srp.md) に書き込めるよう、1 つの AEM パブリッシュインスタンスをプライマリパブリッシャーに指定する必要があります。
 
@@ -500,7 +500,7 @@ Analytics クラウドサービスをコミュニティサイトに対して有�
 
 クエリの間隔は、デフォルトで 10 秒間です。
 
-### レポートインポーター  {#report-importer}
+### レポートインポーター {#report-importer}
 
 Analyticsが有効なコミュニティサイトが公開されると、プライマリパブリッシャーの[OSGi設定](../../help/sites-deploying/configuring-osgi.md)`AEM Communities Analytics Report Importer`を設定して、CRXDEで個別に設定されない設定のデフォルトのポーリング間隔を設定できます。
 
