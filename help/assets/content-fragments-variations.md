@@ -11,8 +11,8 @@ content-type: reference
 discoiquuid: 1cdb2dfc-623b-44cf-9a7b-98cfabbb1d0c
 exl-id: 15a5fdc9-2878-4f95-83ee-02a2899aeb43
 feature: コンテンツフラグメント
-role: Business Practitioner
-source-git-commit: f9faa357f8de92d205f1a297767ba4176cfd1e10
+role: User
+source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 92%
@@ -52,7 +52,7 @@ ht-degree: 92%
 
 コンテンツフラグメントを編集用に開くと、デフォルトで「**バリエーション**」タブが開きます。このタブで、プライマリまたはバリエーション（ある場合）のコンテンツをオーサリングできます。以下の操作を実行できます。
 
-* 「**バリエーション**」タブで直接編集します。
+* 「**バリエーション**」タブで直接編集できます。
 * [全画面表示エディター](#full-screen-editor)を開いて次のことをおこないます。
 
    * [形式](#formats)の選択
@@ -309,9 +309,9 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
    >[!NOTE]
    >
-   >新しいバリエーションを作成すると、常に&#x200B;**マスター**&#x200B;がコピーされます（現在開いているバリエーションではありません）。
+   >新しいバリエーションを作成すると、常に&#x200B;**プライマリ**&#x200B;がコピーされます（現在開いているバリエーションではありません）。
 
-### バリエーションの編集  {#editing-a-variation}
+### バリエーションの編集 {#editing-a-variation}
 
 以下のいずれかを実行した後に、バリエーションコンテンツを変更できます。
 
