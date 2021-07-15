@@ -3,12 +3,12 @@ description: 'Experience League 提供の Dynamic Media ニュースレターは
 keywords: dynamic media；ニュースレター；製品アップデート；ヒントとテクニック；イベント；顧客の成功；ブログ；ブログ；画像；ビデオ；機能；機能
 seo-description: このワンストップショップニュースレターでは、ビデオやソリューションの概要、画像プリセット、ビューアプリセット、ビデオプロファイルなどの主な機能の紹介など、知識構築リソースを利用できます。
 seo-title: 'AdobeDynamic Mediaニュースレター '
-solution: Dynamic Media Classic
+solution: Experience Manager, Dynamic Media Classic
 title: Dynamic Media ニュースレター
 exl-id: aa02c811-0296-4a02-b745-e70aeb9d1e97
 feature: コラボレーション， Dynamic Media Classic
 role: Admin,User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 0d660388cd0fbbf98076610d18c19f480c75ef11
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 95%
