@@ -12,10 +12,10 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 exl-id: 895103c8-df58-40f0-85d6-e29637edce53
 feature: イメージプロファイル
 role: Admin,User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: ec0770120d04a1393c69786c0a46bb216dd67300
 workflow-type: tm+mt
-source-wordcount: '2715'
-ht-degree: 92%
+source-wordcount: '2719'
+ht-degree: 91%
 
 ---
 
@@ -164,7 +164,7 @@ ht-degree: 92%
 
 #### プロパティを使用したフォルダーへの Dynamic Media イメージプロファイルの適用 {#applying-image-profiles-to-folders-from-properties}
 
-1. AEM のロゴをタップし、「**[!UICONTROL アセット]**」に移動した後、イメージプロファイルを適用するフォルダーに移動します。
+1. AEMのロゴをタップし、**[!UICONTROL Assets]**&#x200B;に移動します。 次に、イメージプロファイルを適用するフォルダーの親フォルダーに移動します。
 1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
 1. 「**[!UICONTROL イメージプロファイル]**」タブをタップします。「**[!UICONTROL プロファイル名]**」ドロップダウンリストからプロファイルを選択し、「**[!UICONTROL 保存して閉じる]**」をタップします。既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
