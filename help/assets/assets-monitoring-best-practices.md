@@ -5,7 +5,7 @@ contentOwner: AG
 feature: アセット管理
 role: Admin,Architect
 exl-id: edbb275a-5ead-4ed2-8708-29e766081d75
-source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
+source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
 workflow-type: tm+mt
 source-wordcount: '1766'
 ht-degree: 87%
@@ -34,12 +34,12 @@ Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の�
 開発のパフォーマンステストの段階、または高負荷な状態になったときに、環境のパフォーマンス特性を把握するためにライブ監視を実行する必要があります。通常、ライブ監視はいくつかのツールを使用して実行します。以下にお勧めのツールを示します。
 
 * [ビジュアルVM](https://visualvm.github.io/):Visual VMを使用すると、CPU使用率、Javaメモリ使用率など、詳細なJava VM情報を表示できます。また、インスタンス上で実行されるコードをサンプリングおよび評価できます。
-* [Top](http://man7.org/linux/man-pages/man1/top.1.html)：Top は、CPU、メモリ、IO 使用量などの使用量統計を表示するダッシュボードを開く Linux コマンドです。インスタンスの状況の概要を示します。
+* [Top](https://man7.org/linux/man-pages/man1/top.1.html)：Top は、CPU、メモリ、IO 使用量などの使用量統計を表示するダッシュボードを開く Linux コマンドです。インスタンスの状況の概要を示します。
 * [Htop](https://hisham.hm/htop/)：Htop は、インタラクティブなプロセスビューアです。Top が提供する情報に加えて、詳細な CPU およびメモリ使用状況が表示されます。Htopは、`yum install htop`または`apt-get install htop`を使用して、ほとんどのLinuxシステムにインストールできます。
 
 * [Iotop](http://guichaz.free.fr/iotop/)：Iotop は、ディスク IO 使用量の詳細なダッシュボードです。ディスク IO を使用するプロセス、およびそのプロセスによる使用量を示すバーやメーターが表示されます。Iotopは、`yum install iotop`または`apt-get install iotop`を使用して、ほとんどのLinuxシステムにインストールできます。
 
-* [Iftop](http://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。Iftopは、`yum install iftop`または`apt-get install iftop`を使用して、ほとんどのLinuxシステムにインストールできます。
+* [Iftop](https://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。Iftopは、`yum install iftop`または`apt-get install iftop`を使用して、ほとんどのLinuxシステムにインストールできます。
 
 * Java Flight Recorder（JFR）：非実稼動環境で自由に使用できる、Oracle の市販ツールです。詳しくは、[Java Flight Recorderを使用してCQランタイムの問題を診断する方法](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)を参照してください。
 * AEM の error.log ファイル：システムでログに記録されたエラーの詳細を AEM の error.log ファイルで調査できます。`tail -F quickstart/logs/error.log`コマンドを使用して、調査する必要のあるエラーを特定します。
