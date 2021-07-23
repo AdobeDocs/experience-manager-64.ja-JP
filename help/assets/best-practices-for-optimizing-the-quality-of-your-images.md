@@ -8,9 +8,9 @@ content-type: reference
 exl-id: 2e90bea1-eaac-457b-8588-b18d3a6e8d91
 feature: アセット管理、レンディション
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1464'
 ht-degree: 93%
 
 ---
@@ -45,7 +45,7 @@ AEM には、画像をチューニングおよび最適化して結果をレン�
 
 画像のシャープ処理は、Web サイト上の画像を制御する際の最も複雑な側面で、多くのミスが生じます。AEMでのシャープとアンシャープマスクの仕組みについて詳しくは、 AEMに適用される『Dynamic Media Classic画質のAdobe』および『シャープのベストプラクティス](/help/assets/assets/sharpening_images.pdf)』ガイドも参照してください。[
 
-[アンシャープマスクを使用した画像のシャープニング](https://helpx.adobe.com/jp/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html)も参照してください。
+[アンシャープマスクを使用した画像のシャープニング](https://helpx.adobe.com/photoshop/using/adjusting-image-sharpness-blur.html)も参照してください。
 
 AEM を使用すれば、取り込み時、配信時またはその両方で画像をシャープにすることができます。ただし、ほとんどの場合は、両方ではなくどちらか一方の方法のみを使用して画像をシャープにしてください。一般に、配信時に URL 上で画像をシャープにすることで、最適な結果が得られます。
 
