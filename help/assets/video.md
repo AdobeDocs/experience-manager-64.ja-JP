@@ -8,9 +8,9 @@ content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
 feature: ビデオ
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
 workflow-type: tm+mt
-source-wordcount: '10393'
+source-wordcount: '10335'
 ht-degree: 77%
 
 ---
@@ -71,7 +71,7 @@ ht-degree: 77%
 
          [ビデオレンディションの表示](video-renditions.md)
 
-         [ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
+[ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
 
       * [ビューアプリセットの管理](managing-viewer-presets.md)
       * [アセットの発行](publishing-dynamicmedia-assets.md)
@@ -83,7 +83,7 @@ ht-degree: 77%
 
       * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
 
-         [ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
+[ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
 
       * [デジタルアセット用のメタデータの管理](metadata.md)
       * [メタデータスキーマ](metadata-schemas.md)
@@ -276,12 +276,12 @@ HLS（HTTP ライブストリーミング）は、アダプティブビデオス
 
 Dynamic Media を有効にし、ビデオクラウドサービスを設定済みの場合、**[!UICONTROL Dynamic Media エンコードビデオ]**&#x200B;ワークフローがビデオをエンコードします。このワークフローは、ワークフローの処理履歴とエラー情報を取り込みます。詳しくは、[ビデオエンコーディングと YouTube への公開の進行状況の監視](#monitoring-video-encoding-and-youtube-publishing-progress)を参照してください。Dynamic Mediaを有効にし、ビデオクラウドサービスを設定済みの場合、ビデオをアップロードすると、 **[!UICONTROL Dynamic Mediaエンコーディングビデオ]**&#x200B;ワークフローが自動的に有効になります。 （Dynamic Media を使用していない場合は、**[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローが有効になります）。
 
-ここでは、ソースビデオファイルのエンコードにおけるベストプラクティスのヒントを説明します。
+<!-- DEAD ARTICLE AND VIDEO LINK The following are best-practice tips for encoding source video files.
 
-ビデオエンコーディングに関するアドバイスについては、以下を参照してください。
+For advice about video encoding, see the following:
 
-* 記事：『ストリーミングの初歩：基礎 - コーデック、帯域幅、データレート、解像度』：*www.adobe.com/go/learn_s7_streaming101_jp*[ ](https://www.adobe.com/go/learn_s7_streaming101_jp)
-* ビデオ：『ビデオエンコーディングの基礎』：*www.adobe.com/go/learn_s7_encoding_jp*[ ](https://www.adobe.com/go/learn_s7_encoding_en)
+* Article: *Streaming 101: The Basics — Codecs, Bandwidth, Data Rate, and Resolution:* [www.adobe.com/go/learn_s7_streaming101_en](https://www.adobe.com/go/learn_s7_streaming101_en).
+* Video: *Video Encoding Basics:* [www.adobe.com/go/learn_s7_encoding_en](https://www.adobe.com/go/learn_s7_encoding_en). -->
 
 ### ソースビデオファイル {#source-video-files}
 
@@ -410,7 +410,7 @@ Dynamic Media を有効にし、ビデオクラウドサービスを設定済み
    <td><p>ソース</p> </td> 
    <td><p>1,920 x 1,080</p> </td> 
    <td><p>1</p> </td> 
-   <td><p>1</p> </td> 
+   <td><p>3</p> </td> 
   </tr> 
   <tr> 
    <td><p>エンコード</p> </td> 
@@ -422,7 +422,7 @@ Dynamic Media を有効にし、ビデオクラウドサービスを設定済み
    <td><p>エンコード</p> </td> 
    <td><p>640 x 360</p> </td> 
    <td><p>3</p> </td> 
-   <td><p>1</p> </td> 
+   <td><p>3</p> </td> 
   </tr> 
   <tr> 
    <td><p>エンコード</p> </td> 
