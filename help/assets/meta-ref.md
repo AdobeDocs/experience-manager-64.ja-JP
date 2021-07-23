@@ -5,7 +5,7 @@ contentOwner: AG
 feature: メタデータ
 role: User,Admin
 exl-id: 883bebc6-8bbc-43b1-91e5-9e2bf2470b6e
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 97%
@@ -22,7 +22,7 @@ Dublin Core メタデータは、アセットをより検索しやすい形で�
 
 シンプルな Dublin Core Metadata Element Set（DCMES）には、以下の表に示すように、15 個のメタデータ要素が含まれます。それぞれの Dublin Core 要素はオプションであり、繰り返し可能です。Dublin Core メタデータ情報は、メディアタイプ固有のメタデータと同様に、削除および追加が可能です。
 
-DCMES 以外にも、Dublin Core Metadata Initiative によって作成された他のメタデータ要素があります。詳しくは、[Dublin Core Initiative](http://dublincore.org/) を参照してください。
+DCMES 以外にも、Dublin Core Metadata Initiative によって作成された他のメタデータ要素があります。詳しくは、[Dublin Core Initiative](https://dublincore.org/) を参照してください。
 
 | プロパティ | 説明 |
 |---|---|
