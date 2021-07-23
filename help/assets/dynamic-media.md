@@ -12,10 +12,10 @@ discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 exl-id: f8a3936e-82b5-46c7-9614-b97162e27d6a
 feature: アセット管理、レンディション
 role: Admin,User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 91%
+source-wordcount: '440'
+ht-degree: 90%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 91%
 
 ダイナミックメディアは、ズーム、360 度スピン、ビデオなどのインタラクティブな閲覧エクスペリエンスを提供します。ダイナミックメディアは Adobe Experience Manager デジタルアセット管理（AEM アセット）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡易化し、効率化します。
 
->[!NOTE]
+<!-- DEAD ARTICLE >[!NOTE]
 >
->[Adobe Experience Manager および Dynamic Media の操作](https://helpx.adobe.com/jp/experience-manager/using/aem_dynamic_media.html)にコミュニティの記事があります。
+>A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html). -->
 
 ## Dynamic Media の機能 {#what-you-can-do-with-dynamic-media}
 
