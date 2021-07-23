@@ -5,7 +5,7 @@ contentOwner: AG
 feature: 公開
 role: Admin
 exl-id: d80562f7-071c-460a-9c68-65f48d36fbd9
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
 workflow-type: tm+mt
 source-wordcount: '1703'
 ht-degree: 60%
@@ -64,7 +64,7 @@ InDesign ServerをAEM Assetsと統合して、InDesign( `.indd` )で作成され
    >
    >IDML は、InDesign ファイル内のすべての要素をレンダリングする XML ベースの形式です。**[Zip](https://www.techterms.com/definition/zip) 圧縮を使用した圧縮パッケージとして保存されます。
    >
-   >詳しくは、 [Adobe InDesignのデータ交換形式INXおよびIDML](http://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)を参照してください。
+   >詳しくは、 [Adobe InDesignのデータ交換形式INXおよびIDML](https://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8)を参照してください。
 
    >[!CAUTION]
    >
