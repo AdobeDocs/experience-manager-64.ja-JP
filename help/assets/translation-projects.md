@@ -5,10 +5,10 @@ contentOwner: AG
 feature: 翻訳
 role: Architect,Admin
 exl-id: 1b931fef-eed0-4758-993d-cdf8d478fb6f
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
 workflow-type: tm+mt
-source-wordcount: '1935'
-ht-degree: 97%
+source-wordcount: '1942'
+ht-degree: 96%
 
 ---
 
@@ -313,4 +313,4 @@ ht-degree: 97%
 
 1. アセットコンソールに移動し、翻訳済みアセットそれぞれのプロパティページを開き、翻訳されたメタデータを表示します。
 
-アセットのメタデータを効率よく翻訳するためのヒントは、[メタデータを効率的に翻訳するための5つの手順](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/)を参照してください。
+アセットのメタデータを効率よく翻訳するためのヒントは、このアーカイブページでメタデータを効率的に翻訳するための5つの手順[を参照してください。](https://web.archive.org/web/20181217033517/https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/)
