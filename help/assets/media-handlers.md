@@ -5,9 +5,9 @@ contentOwner: AG
 feature: ワークフロー，レンディション
 role: User
 exl-id: 7694c68d-0a17-4052-8fbe-9bf45b229e81
-source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
+source-git-commit: e7fdddadff41f8b03dc466da531f850d45bcee9d
 workflow-type: tm+mt
-source-wordcount: '2230'
+source-wordcount: '2227'
 ht-degree: 45%
 
 ---
@@ -442,7 +442,7 @@ Mavenプラグインを使用してEclipseをインストールおよび設定�
 
 Experience Managerを使用すると、ワークフロー内で任意のコマンドラインツールを実行して、アセットを変換し（ImageMagickなど）、新しいレンディションをアセットに追加できます。 Experience Managerサーバーをホストするディスクにコマンドラインツールをインストールし、ワークフローにプロセスステップを追加して設定します。 `CommandLineProcess`という呼び出しプロセスは、特定のMIMEタイプに従ってフィルタリングし、新しいレンディションに基づいて複数のサムネールを作成します。
 
-次の変換を自動的に実行し、Assets内に保存することができます。Experience Manager
+次の変換を自動的に実行し、[!DNL Experience Manager Assets]内に保存することができます。
 
 * [ImageMagick](https://www.imagemagick.org/script/index.php) および [Ghostscript](https://www.ghostscript.com/) を使用した EPS および AI 変換
 * [FFmpeg](https://ffmpeg.org/) を使用した FLV ビデオのトランスコーディング
