@@ -9,9 +9,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 exl-id: 3a666efe-1592-4425-82f5-c4d9343f65da
 feature: 画像プリセット
 role: Admin,User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3837'
 ht-degree: 79%
 
 ---
@@ -387,7 +387,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
     </ul>
     <div>
       シャープニングについては、  
-     <a href="https://experienceleague.adobe.com/doc/experience-manager-64/assets/assets/sharpening_images.pdf">AdobeDynamic Media Classicの画質とシャープのベストプラクティス</a>。
+     <a href="https://experienceleague.adobe.com/docs/experience-manager-64/assets/sharpening_images.pdf">AdobeDynamic Media Classicの画質とシャープのベストプラクティス</a>。
     </div> </td>
   </tr>
   <tr>
