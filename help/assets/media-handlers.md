@@ -5,7 +5,7 @@ contentOwner: AG
 feature: ワークフロー，レンディション
 role: User
 exl-id: 7694c68d-0a17-4052-8fbe-9bf45b229e81
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
 workflow-type: tm+mt
 source-wordcount: '2230'
 ht-degree: 45%
@@ -37,7 +37,7 @@ Assets内では、次のメディアハンドラーを使用でき、最も一�
 | [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/plain |
 | [!UICONTROL PdfHandler] | com.day.cq.dam.handler.standard.pdf.PdfHandler | <ul><li>application/pdf</li><li>application/illustrator</li></ul> |
 | [!UICONTROL JpegHandler] | com.day.cq.dam.core.impl.handler.JpegHandler | image/jpeg |
-| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>重要</b>  - MP3ファイルをアップロードすると、サードパーティの [ライブラリを使用して処理されます](http://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html)。MP3に可変ビットレート(VBR)がある場合、ライブラリは正確でない近似長を計算します。 |
+| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>重要</b>  - MP3ファイルをアップロードすると、サードパーティの [ライブラリを使用して処理されます](https://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html)。MP3に可変ビットレート(VBR)がある場合、ライブラリは正確でない近似長を計算します。 |
 | [!UICONTROL ZipHandler] | com.day.cq.dam.handler.standard.zip.ZipHandler | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
 | [!UICONTROL PictHandler] | com.day.cq.dam.handler.standard.pict.PictHandler | image/pict |
 | [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> image/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> image/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
@@ -446,8 +446,8 @@ Experience Managerを使用すると、ワークフロー内で任意のコマ�
 
 * [ImageMagick](https://www.imagemagick.org/script/index.php) および [Ghostscript](https://www.ghostscript.com/) を使用した EPS および AI 変換
 * [FFmpeg](https://ffmpeg.org/) を使用した FLV ビデオのトランスコーディング
-* [LAME](http://lame.sourceforge.net/) を使用した MP3 エンコーディング
-* [SOX](http://sox.sourceforge.net/) を使用したオーディオ処理
+* [LAME](https://lame.sourceforge.net/) を使用した MP3 エンコーディング
+* [SOX](https://sox.sourceforge.net/) を使用したオーディオ処理
 
 >[!NOTE]
 >
