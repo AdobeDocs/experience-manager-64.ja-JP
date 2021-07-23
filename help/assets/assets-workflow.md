@@ -5,9 +5,9 @@ contentOwner: AG
 feature: ワークフロー，レンディション
 role: User,Admin
 exl-id: 4fb3d12c-feac-45b9-8d09-3b6995591b3d
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1035'
 ht-degree: 28%
 
 ---
@@ -50,7 +50,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 1. ワークフローを開始するアセットの場所に移動し、アセットをクリックしてアセットページを開きます。
 
-1. ワークフローを開始するアセットの場所に移動し、アセットをクリックしてアセットページを開きます。 メニューから「**[!UICONTROL タイムライン]**」を選択してタイムラインを表示します。
+1. ワークフローを開始するアセットの場所に移動し、アセットをクリックしてアセットページを開きます。 メニューから「**[!UICONTROL タイムライン]**」を選択して、タイムラインを表示します。
 
    ![timeline-2](assets/timeline-2.png)
 
@@ -72,7 +72,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ## 複数のアセットへのワークフローの適用 {#applying-a-workflow-to-multiple-assets}
 
-1. アセットコンソールから、ワークフローを開始するアセットの場所へ移動して、アセットを選択します。メニューから「**[!UICONTROL タイムライン]**」を選択してタイムラインを表示します。
+1. アセットコンソールから、ワークフローを開始するアセットの場所へ移動して、アセットを選択します。メニューから「**[!UICONTROL タイムライン]**」を選択して、タイムラインを表示します。
 
    ![chlimage_1-136](assets/chlimage_1-136.png)
 
@@ -114,5 +114,4 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 * [ワークフローモデルの作成とワークフロー機能の拡張](/help/sites-developing/workflows.md)
 * [ワークフローを実行する方法](/help/sites-administering/workflows-starting.md)
 * [ワークフローのベストプラクティス](/help/sites-developing/workflows-best-practices.md)
-* [ワークフローを使用したアセットの変更に関するコミュニティ記事](https://helpx.adobe.com/experience-manager/using/modify_asset_workflow.html)
 
