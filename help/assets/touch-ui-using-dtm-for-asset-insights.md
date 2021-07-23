@@ -5,10 +5,10 @@ contentOwner: AG
 feature: アセットインサイト、アセットレポート
 role: User,Admin
 exl-id: d19cea4d-5395-479d-b303-4529ae2c0bf2
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 39%
+source-wordcount: '688'
+ht-degree: 36%
 
 ---
 
@@ -115,4 +115,4 @@ DTMを使用してアセットインサイトを有効にするには、次の�
    * AppMeasurement オブジェクトは、すべての使用可能な SiteCatalyst エンジンで `satelliteLib` に対するクエリを実行して取得されます。複数のタグが設定されている場合は、配列セレクターのインデックスをそれに応じて変更します。配列のエントリは、DTM インターフェイスで使用可能な SiteCatalyst ツールの順に並んでいます。
 
 1. 保存してコードエディターウィンドウを閉じ、変更をツール設定に保存します。
-1. 「**[!UICONTROL 承認]**」タブで、承認待ちの両方を承認します。 DTM タグを Web ページに挿入する準備ができました。DTM タグを Web ページに挿入する方法について詳しくは、[カスタムページテンプレートへの DTM の統合（英語）](https://blogs.adobe.com/experiencedelivers/experience-management/integrating-dtm-custom-aem6-page-template/)を参照してください。
+1. 「**[!UICONTROL 承認]**」タブで、承認待ちの両方を承認します。 DTM タグを Web ページに挿入する準備ができました。WebページにDTMタグを挿入する方法について詳しくは、[カスタムページテンプレートへのDTMの統合](https://web.archive.org/web/20180816221834/https://blogs.adobe.com/experiencedelivers/experience-management/integrating-dtm-custom-aem6-page-template)に関するアーカイブページを参照してください。
