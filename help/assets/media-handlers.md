@@ -5,7 +5,7 @@ contentOwner: AG
 feature: ワークフロー，レンディション
 role: User
 exl-id: 7694c68d-0a17-4052-8fbe-9bf45b229e81
-source-git-commit: e7fdddadff41f8b03dc466da531f850d45bcee9d
+source-git-commit: bc27dee618ee57dc188c7f35a1af4d1dba80cf1b
 workflow-type: tm+mt
 source-wordcount: '2227'
 ht-degree: 45%
@@ -446,8 +446,8 @@ Experience Managerを使用すると、ワークフロー内で任意のコマ�
 
 * [ImageMagick](https://www.imagemagick.org/script/index.php) および [Ghostscript](https://www.ghostscript.com/) を使用した EPS および AI 変換
 * [FFmpeg](https://ffmpeg.org/) を使用した FLV ビデオのトランスコーディング
-* [LAME](https://lame.sourceforge.net/) を使用した MP3 エンコーディング
-* [SOX](https://sox.sourceforge.net/) を使用したオーディオ処理
+* [LAME](https://lame.sourceforge.io) を使用した MP3 エンコーディング
+* [SOX](https://sox.sourceforge.io) を使用したオーディオ処理
 
 >[!NOTE]
 >
