@@ -5,10 +5,10 @@ contentOwner: AG
 feature: アセット管理
 role: Admin,Architect
 exl-id: edbb275a-5ead-4ed2-8708-29e766081d75
-source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
+source-git-commit: 4048c4c76a892e3bb32dbbeef140b5dc9ebffad3
 workflow-type: tm+mt
 source-wordcount: '1766'
-ht-degree: 87%
+ht-degree: 86%
 
 ---
 
@@ -37,7 +37,7 @@ Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の�
 * [Top](https://man7.org/linux/man-pages/man1/top.1.html)：Top は、CPU、メモリ、IO 使用量などの使用量統計を表示するダッシュボードを開く Linux コマンドです。インスタンスの状況の概要を示します。
 * [Htop](https://hisham.hm/htop/)：Htop は、インタラクティブなプロセスビューアです。Top が提供する情報に加えて、詳細な CPU およびメモリ使用状況が表示されます。Htopは、`yum install htop`または`apt-get install htop`を使用して、ほとんどのLinuxシステムにインストールできます。
 
-* [Iotop](http://guichaz.free.fr/iotop/)：Iotop は、ディスク IO 使用量の詳細なダッシュボードです。ディスク IO を使用するプロセス、およびそのプロセスによる使用量を示すバーやメーターが表示されます。Iotopは、`yum install iotop`または`apt-get install iotop`を使用して、ほとんどのLinuxシステムにインストールできます。
+* [Iotop](https://guichaz.free.fr/iotop/)：Iotop は、ディスク IO 使用量の詳細なダッシュボードです。ディスク IO を使用するプロセス、およびそのプロセスによる使用量を示すバーやメーターが表示されます。Iotopは、`yum install iotop`または`apt-get install iotop`を使用して、ほとんどのLinuxシステムにインストールできます。
 
 * [Iftop](https://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。Iftopは、`yum install iftop`または`apt-get install iftop`を使用して、ほとんどのLinuxシステムにインストールできます。
 
