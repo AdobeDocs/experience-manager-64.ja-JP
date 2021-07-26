@@ -10,7 +10,7 @@ discoiquuid: 821eb27e-67c9-4589-9196-30dacb84fa59
 exl-id: 1e122f97-ac37-44f5-a1cd-bf53ffda6f5b
 feature: 設定，ハイブリッドモード
 role: Admin,User,Developer
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 9bd173e99c2bbedc77afb11b4c1eac423c62ef30
 workflow-type: tm+mt
 source-wordcount: '7796'
 ht-degree: 54%
@@ -547,7 +547,7 @@ Dynamic Media — ハイブリッドモードを使用して、AEMの複数の�
 1. 以下のいずれかをおこなってパッケージのインストールを確認し、必要に応じてそのデバッグをおこないます。
 
    * **JCRTを使用し [!DNL Video Analytics] てプリセットをチェ**
-ックするか、JCRを使用し [!DNL Video Analytics] てプリセットを確認します。 **[!UICONTROL CRXDE Lite]**&#x200B;にアクセスできる必要があります。
+ックするか、JCRを使用して [!DNL Video Analytics] プリセットをチェックします。 **[!UICONTROL CRXDE Lite]**&#x200B;にアクセスできる必要があります。
 
       AEM - **[!UICONTROL CRXDE Lite]**&#x200B;で、`/conf/global/settings/dam/dm/presets/analytics/jcr:content/userdata  `に移動します。
 
@@ -801,7 +801,7 @@ Dynamic Media 画像サーバーの設定では、Adobe CQ Scene7 ImageServer �
 >[!NOTE]
 Dynamic Mediaは、有効にした後に[標準で動作します。](#enabling-dynamic-media) ただし、オプションで、Dynamic Media 画像サーバーを特定の仕様や要件に合うように設定することで、インストールを細かく調整することもできます。
 
-**前提条件**: __ Dynamic Media Image Serverを設定する前に、WindowsのVMにMicrosoft Visual C++ Librariesがインストールされていることを確認してください。Dynamic Media 画像サーバーを実行するには、このライブラリが必要です。[ここから Microsoft Visual C++ 2010 再頒布可能パッケージ（x64）をダウンロード](https://www.microsoft.com/ja-jp/download/details.aspx?id=14632)できます。
+**前提条件**: __ Dynamic Media Image Serverを設定する前に、WindowsのVMにMicrosoft Visual C++ Librariesがインストールされていることを確認してください。Dynamic Media 画像サーバーを実行するには、このライブラリが必要です。[ここから Microsoft Visual C++ 2010 再頒布可能パッケージ（x64）をダウンロード](https://www.microsoft.com/ja-jp/download/details.aspx?id=26999)できます。
 
 **Dynamic Media Image Serverを設定するには**:
 
