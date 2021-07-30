@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7677327a-cc56-413b-b2e3-7b10d0d0319d
 feature: インタラクティブコミュニケーション
 exl-id: a689aead-7b39-4d66-8922-ae8910c5e9ef
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
 source-wordcount: '2251'
 ht-degree: 64%
@@ -88,8 +88,6 @@ ht-degree: 64%
 
 * エージェントUIを使用して[インタラクティブ通信の準備と送信](/help/forms/using/prepare-send-interactive-communication.md)中にエージェントがエージェントUIでFDMプロパティの値を編集できるようにするには、そのプロパティの&#x200B;**`[D]`**&#x200B;ロックアイコンをタップし、ロックが解除されていることを確認します。 プロパティのデフォルトの状態はロックされ、エージェントUIでプロパティを編集できない。
 
-* 
-
 フォームデータモデルのプロパティを使用して、特定のコンテンツの表示と非表示を切り替えるためのルールを作成することもできます。詳しくは、「[テキスト内でルールを作成する](#rules)」を参照してください。
 
 ## テキストドキュメントフラグメント内で変数を作成して使用する {#variables}
@@ -146,13 +144,13 @@ ht-degree: 64%
 * 関連するフォームデータモデルのプロパティ
 * テキスト内に作成された任意の変数
 
-### テキスト内でルールを作成する  {#create-rules-in-text}
+### テキスト内でルールを作成する {#create-rules-in-text}
 
 1. テキストの作成時または編集時に、ルールを使用して条件を設定するテキスト内の文字列、段落、またはコンテンツを選択します。
 
    ![selectcontentapplyrule](assets/selectcontentapplyrule.png)
 
-1. 「**[!UICONTROL ルールを作成]**」をタップします。
+1. 「**[!UICONTROL ルールを作成]**」をタップします。 
 
    ルール作成ダイアログが表示されます。文字列、数値、数式、日付のほかに、以下のデータをルールエディターで使用して、ルールのステートメントを作成することができます。
 
