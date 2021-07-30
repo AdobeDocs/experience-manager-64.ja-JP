@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
 feature: Document Security
 exl-id: 571c1391-dc60-4bed-b4f9-482a508e4bd4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
 source-wordcount: '10283'
 ht-degree: 84%
@@ -23,7 +23,7 @@ ht-degree: 84%
 1. 管理コンソールで、サービス／Document Security／設定／サーバー設定をクリックします。
 1. 設定を指定し、「OK」をクリックします。
 
-## サーバー設定  {#server-configuration-settings}
+## サーバー設定 {#server-configuration-settings}
 
 **Base URL:** サーバー名とポートを含むベースDocument Security URL。ベースに情報が追加されて、接続 URL が作成されます。例えば、/edc/Main.do が追加されて Web ページへのアクセスが行われます。ユーザーは、この URL を使用して、外部ユーザー登録の招待に応答することもできます。
 
@@ -70,7 +70,7 @@ IPv6 を使用している場合は、コンピューター名または DNS 名�
 
 **クライアント資格情報のキャッシュを有効にする：** ユーザーが資格情報（ユーザー名とパスワード）をキャッシュできるようにするには、このオプションを選択します。ユーザーの資格情報がキャッシュされていると、ドキュメントを開くたびに、または Adobe Acrobat のセキュリティポリシーを管理ページで「更新」ボタンをクリックするときに、資格情報を入力する必要がありません。ユーザーに資格情報の再入力を求める日までの日数を指定できます。日数を 0 に設定すると、資格情報は無期限にキャッシュされます。
 
-## Document Security ユーザーおよび管理者の設定  {#configuring-document-security-users-and-administrators}
+## Document Security ユーザーおよび管理者の設定 {#configuring-document-security-users-and-administrators}
 
 ### 管理者への Document Security ロールのアサイン {#assigning-document-security-roles-to-administrators}
 
@@ -78,7 +78,7 @@ AEM Forms 環境には、ユーザーおよびグループを作成するため�
 
 管理者には、管理コンソールにアクセスするための管理コンソールユーザーロールも必要です（[ロールの作成および設定](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)を参照）。
 
-### 表示されるユーザーおよびグループの設定  {#configuring-visible-users-and-groups}
+### 表示されるユーザーおよびグループの設定 {#configuring-visible-users-and-groups}
 
 選択したドメインのユーザーおよびグループをポリシーのユーザー検索で表示するには、上級管理者またはポリシーセット管理者が、各ポリシーセットについて表示されるユーザーおよびグループのリストに対して、ドメイン（UserManagement で作成）を選択して追加する必要があります。
 
@@ -94,7 +94,7 @@ AEM Forms 環境には、ユーザーおよびグループを作成するため�
 1. サービス／Document Security／設定／マイポリシーに移動し、「表示されるユーザーとグループ」タブをクリックします。
 1. 「ドメインを追加」をクリックし、必要に応じて既存のドメインを追加します。
 
-## 拡張認証プロバイダーの追加  {#add-the-extended-authentication-provider}
+## 拡張認証プロバイダーの追加 {#add-the-extended-authentication-provider}
 
 AEM Forms は、環境に合わせてカスタマイズ可能なサンプル設定を提供しています。以下の手順を実行します。
 
@@ -107,7 +107,7 @@ AEM Forms は、環境に合わせてカスタマイズ可能なサンプル設�
 1. サーバー設定ページで拡張認証を有効にします。[サーバー設定](configuring-client-server-options.md#server-configuration-settings)を参照してください。
 1. User Management 設定ファイルに、必要な SSO リダイレクト URL を追加します。[拡張認証のための SSO リダイレクト URL の追加](configuring-client-server-options.md#add-sso-redirect-urls-for-extended-authentication)を参照してください。
 
-### 拡張認証のための SSO リダイレクト URL の追加  {#add-sso-redirect-urls-for-extended-authentication}
+### 拡張認証のための SSO リダイレクト URL の追加 {#add-sso-redirect-urls-for-extended-authentication}
 
 拡張認証を有効化した状態で、ユーザーが Acrobat XI または Reader XI のポリシーで保護されたドキュメントを開くと、認証用のダイアログが表示されます。このダイアログでは、Document Security サーバーの設定で拡張認証のランディング URL として指定した HTML ページが読み込まれます。[サーバー設定](configuring-client-server-options.md#server-configuration-settings)を参照してください。
 
@@ -136,7 +136,7 @@ Document Security には、ポリシーで保護されたドキュメントを�
 
 オフラインアクセスが許可されるドキュメントでは、ファイルがオフラインで保存されるコンピューター上にキーマテリアルがキャッシュされることが必要です。このため、許可されていないユーザーがそのキーマテリアルを取得できる場合は、ファイルの安全が損なわれる危険性があります。この危険性に対処するために、キーのロールオーバーに関するオプションとしてスケジュールされたものと手動によるものがあり、許可されていない人物がキーを使用してドキュメントにアクセスするのを阻止できるようになっています。
 
-### デフォルトのオフラインリース期間の設定  {#set-a-default-offline-lease-period}
+### デフォルトのオフラインリース期間の設定 {#set-a-default-offline-lease-period}
 
 ポリシーで保護されたドキュメントの受信者は、ポリシーで指定された日数の間、ドキュメントをオフラインにすることができます。ドキュメントを最初に Document Security と同期した後、受信者はオフラインリース期間が終わるまでそのドキュメントをオフラインで使用できます。オフラインリース期間が終了した後もそのドキュメントを使用し続けるには、そのドキュメントをオンラインにしてログインし、Document Security と同期する必要があります。
 
@@ -146,7 +146,7 @@ Document Security には、ポリシーで保護されたドキュメントを�
 1. 「デフォルトのオフラインリース期間」ボックスにオフラインリース期間の日数を入力します。
 1. 「OK」をクリックします。
 
-### キーのロールオーバーの管理  {#manage-key-rollovers}
+### キーのロールオーバーの管理 {#manage-key-rollovers}
 
 Document Security では、ドキュメントの保護に暗号化アルゴリズムとライセンスを使用しています。Document Security はドキュメントを暗号化するときに、クライアントアプリケーションに渡す *DocKey* という復号キーを生成して管理します。ドキュメントを保護するポリシーでオフラインアクセスが許可されている場合は、そのドキュメントにオフラインでアクセスできるユーザーごとに、「*プリンシパルキー*」というオフラインキーも生成されます。
 
@@ -186,7 +186,7 @@ Document Security では、オフラインドキュメントを使用する場�
 1. 「今すぐキーをロールオーバー」をクリックして、「OK」をクリックします。
 1. 10 分程度待ちます。
 
-## イベント監査とプライバシーの設定  {#configuring-event-auditing-and-privacy-settings}
+## イベント監査とプライバシーの設定 {#configuring-event-auditing-and-privacy-settings}
 
 Document Security では、ポリシーで保護されたドキュメント、ポリシー、管理者およびサーバーとのやりとりに関係するイベントについての情報を監査し、記録することができます。イベント監査を設定することができ、監査するイベントのタイプを指定することができます。特定のドキュメントに関するイベントを監査するには、ポリシーの監査オプションも有効にする必要があります。
 
@@ -199,7 +199,7 @@ Document Security では、ポリシーで保護されたドキュメント、�
 * ユーザーイベント。外部ユーザーの招待と登録、アクティベートされたユーザーアカウントとアクティベート解除されたユーザーアカウント、ユーザーパスワードの変更、プロファイルの更新など。
 * AEM Forms のイベント。バージョンの不一致、使用できないディレクトリサーバーと認証プロバイダー、サーバー設定の変更など。
 
-### イベント監査の有効化または無効化  {#enable-or-disable-event-auditing}
+### イベント監査の有効化または無効化 {#enable-or-disable-event-auditing}
 
 サーバー、ポリシーで保護されたドキュメント、ポリシー、ポリシーセット、ユーザーに関係するイベントの監査を有効／無効にすることができます。イベント監査を有効にする場合、可能なイベントをすべて監査することも、特定のイベントを監査することもできます。
 
@@ -220,7 +220,7 @@ Document Security では、ポリシーで保護されたドキュメント、�
 >
 >Web ページで作業している場合は、「戻る」ボタン、「更新」ボタン、「戻る」矢印、「進む」矢印などのブラウザーボタンを使用しないでください。これらのボタンを使用すると、望ましくないデータ取得やデータ表示の問題が起きる可能性があります。
 
-### プライバシー通知の有効化または無効化  {#enable-or-disable-privacy-notification}
+### プライバシー通知の有効化または無効化 {#enable-or-disable-privacy-notification}
 
 プライバシー通知メッセージを有効／無効にすることができます。プライバシー通知を有効にすると、ポリシーで保護されたドキュメントを受信者が開こうとしたときにメッセージが表示されます。この通知により、そのドキュメントの使用が監査対象になることをユーザーに知らせます。ユーザーがプライバシーポリシーページを表示する際に使用する URL を指定することもできます（存在する場合）。
 
@@ -238,7 +238,7 @@ Document Security では、ポリシーで保護されたドキュメント、�
 >
 >プライバシー通知を無効にしても、ドキュメント使用監査は無効にはなりません。拡張された使用方法の追跡を介してサポートされている、すぐに使用可能な監査アクションおよびカスタムアクションでは、ユーザーの動作情報が引き続き収集されます。
 
-### カスタム監査イベントタイプの読み込み  {#import-a-custom-audit-event-type}
+### カスタム監査イベントタイプの読み込み {#import-a-custom-audit-event-type}
 
 特定のファイルタイプに固有なイベントなど、追加イベントの監査をサポートする Document Security 対応のアプリケーションを使用している場合は、アドビパートナーによって、Document Security に読み込むことができるカスタム監査イベントが提供されます。この機能は、アドビパートナーからカスタムイベントタイプを提供されている場合のみ使用します。
 
@@ -247,13 +247,13 @@ Document Security では、ポリシーで保護されたドキュメント、�
 1. 同じイベントコードと名前空間の組み合わせが見つかれば、読み込みによってサーバー上の既存のカスタム監査イベントタイプが上書きされます。
 1. 「OK」をクリックします。
 
-### カスタム監査イベントタイプの削除  {#delete-a-custom-audit-event-type}
+### カスタム監査イベントタイプの削除 {#delete-a-custom-audit-event-type}
 
 1. 管理コンソールで、サービス／Document Security／設定／イベントの管理をクリックします。
 1. 削除するカスタム監査イベントタイプの横のチェックボックスを選択し、「削除」をクリックします。
 1. 「OK」をクリックします。
 
-### 監査イベントの書き出し  {#export-audit-events}
+### 監査イベントの書き出し {#export-audit-events}
 
 監査イベントはアーカイブ用にファイルに書き出すことができます。
 
@@ -268,7 +268,7 @@ Document Security では、ポリシーで保護されたドキュメント、�
 
 1. 「書き出し」をクリックします。書き出しをキャンセルするには、「書き出しをキャンセル」をクリックします。別のユーザーが書き出しをスケジュールしている場合は、その書き出しが完了するまで「書き出しをキャンセル」ボタンを使用できません。「書き出しをキャンセル」ボタンは、別のユーザーが書き出しをスケジュールしていると使用できません。スケジュールされた「書き出し」または「削除」が開始または終了したかどうかを確認するには、「更新」をクリックします。
 
-### 監査イベントの削除  {#delete-audit-events}
+### 監査イベントの削除 {#delete-audit-events}
 
 作成日からの経過日数が指定した日数を超えている監査イベントを削除できます。
 
@@ -276,7 +276,7 @@ Document Security では、ポリシーで保護されたドキュメント、�
 1. 「監査イベントを削除」の「次より古い監査イベントを削除」ボックスに日数を指定します。
 1. 「削除」をクリックします。「書き出し」をクリックします。削除をキャンセルするには、「削除をキャンセル」をクリックします。別のユーザーが削除をスケジュールしている場合は、その削除が完了するまで「削除をキャンセル」ボタンを使用できません。「削除をキャンセル」ボタンは、別のユーザーが削除をスケジュールしていると使用できません。スケジュールされた「削除」が開始または終了したかどうかを確認するには、「更新」をクリックします。
 
-### イベント監査オプション  {#event-auditing-options}
+### イベント監査オプション {#event-auditing-options}
 
 イベント監査は有効および無効にすることができます。また、監査対象にするイベントのタイプを指定することができます。
 
@@ -372,7 +372,7 @@ Document Security では、ポリシーで保護されたドキュメント、�
 
 **サーバー設定の変更：** Webページを通じて、またはconfig.xmlファイルを読み込むことで手動でおこなわれる、サーバー設定の変更。これには次の設定に対する変更が含まれます。ベース URL、セッションタイムアウト、ログインロックアウト、ディレクトリ設定、キーのロールオーバー、外部登録に関する SMTP サーバー設定、透かし設定、表示オプションなど。
 
-## 拡張された使用方法の追跡の設定  {#configuring-extended-usage-tracking}
+## 拡張された使用方法の追跡の設定 {#configuring-extended-usage-tracking}
 
 Document Security では、保護されたドキュメントで実行される様々なカスタムイベントを追跡できます。イベントの追跡は、Document Security サーバーから、グローバルレベルまたはポリシーレベルで有効にできます。有効にしたら JavaScript を設定し、保護された PDF ドキュメントで実行されるボタンのクリック、ドキュメントの保存など特定のアクションを検出できます。この使用状況のデータはキーと値のペアによる XML ファイルとして送信され、このファイルを使用して詳細な分析を行うことができます。保護されたドキュメントにアクセスするエンドユーザーは、クライアントアプリケーションでこの追跡を許可または拒否できます。
 
@@ -380,7 +380,7 @@ Document Security では、保護されたドキュメントで実行される�
 
 追跡を有効にした後は、その後作成されるすべてのポリシーで、デフォルトで追跡が有効になります。サーバーで追跡を有効にする前に作成されたポリシーは手動で更新する必要があります。
 
-### 拡張された使用方法の追跡の有効化と無効化  {#enable-or-disable-extended-usage-tracking}
+### 拡張された使用方法の追跡の有効化と無効化 {#enable-or-disable-extended-usage-tracking}
 
 設定を開始する前に、サーバー監査が有効であることを確認します。監査について詳しくは、[イベント監査とプライバシーの設定](configuring-client-server-options.md#configuring-event-auditing-and-privacy-settings)を参照してください。
 
@@ -390,7 +390,7 @@ Document Security では、保護されたドキュメントで実行される�
 
 追跡されたイベントの表示には、イベントページの「ドキュメントのイベント」フィルターを使用できます。JavaScript を使用して追跡されたイベントには、「詳細な使用方法の追跡」というラベルが付与されます。イベントについて詳しくは、[イベントの監視](/help/forms/using/admin-help/monitoring-events.md#monitoring-events)を参照してください。
 
-## Document Security 表示の設定  {#configure-document-security-display-settings}
+## Document Security 表示の設定 {#configure-document-security-display-settings}
 
 1. 管理コンソールで、サービス／Document Security／設定／表示オプションをクリックします。
 1. 設定を指定し、「OK」をクリックします。
@@ -423,7 +423,7 @@ Document Security では、保護されたドキュメントで実行される�
 
 **Only Display Trusted Credential Issuers:** このオプションを選択すると、AEM formsが信頼するように設定されている秘密鍵証明書発行者からの証明書のみがクライアントアプリケーションに表示されます（証明書と秘密鍵証明書の管理を参照）。このオプションの選択を解除すると、ユーザーのシステム上の証明書すべてがユーザーに一覧表示されます。
 
-## 動的な透かしの設定  {#configure-dynamic-watermarks}
+## 動的な透かしの設定 {#configure-dynamic-watermarks}
 
 Document Security を使用して、ポリシーの作成時に適用できる動的な透かしオプションのデフォルト設定を指定できます。*透かし*&#x200B;とは、ドキュメント内のテキストの上に重ね合わされる画像のことです。ドキュメントのコンテンツを追跡するのに効果的であり、コンテンツの不正使用を識別するのに役立ちます。
 
@@ -435,7 +435,7 @@ Document Security を使用して、ポリシーの作成時に適用できる�
 
 動的な透かしは、ユーザーが Acrobat でドキュメントに直接追加できる透かしとは異なることに注意してください。つまり、ポリシーで保護されたドキュメントでは、2 つの透かしを使用できます。
 
-### 透かしを作成する場合の考慮事項  {#considerations-when-creating-watermarks}
+### 透かしを作成する場合の考慮事項 {#considerations-when-creating-watermarks}
 
 いくつかの透かし要素を使用して動的な透かしを作成できます。各要素はテキストまたは PDF として指定されます。1 つの透かしに最大 5 つの要素を含めることができます。
 
@@ -458,7 +458,7 @@ Document Security 設定ファイルを変更することで、透かし要素�
 * 透かし要素の位置を指定する場合、同じ位置に複数の要素を配置していないことを確認します。2 つの透かし要素が中央など同じ位置にある場合、ドキュメントでは、透かしに追加された順番で重なって見えます。
 * フォントのサイズおよびタイプを指定する場合は、ページ内で完全に表示されるようにテキストの長さを確認します。テキストコンテンツは新しい行にロールオーバーするので、余白に表示させようとした透かしコンテンツが、ページのコンテンツ領域に重なる可能性があります。ただし、ドキュメントを Acrobat 9 で開いた場合は、1 行に収まらない部分のテキストは表示されません。
 
-### 動的な透かしの制限  {#limitations-of-dynamic-watermarks}
+### 動的な透かしの制限 {#limitations-of-dynamic-watermarks}
 
 クライアントアプリケーションの中には、動的な透かしをサポートしていないものがあります。（詳しくは、該当する Acrobat Reader DC Extensions のヘルプを参照）。また、動的な透かしをサポートする Acrobat のバージョンについて、次の点に注意してください。
 
@@ -472,7 +472,7 @@ Document Security 設定ファイルを変更することで、透かし要素�
 
 * Acrobat 9.0 およびそれより前のバージョン：Acrobat 9.0 およびそれより前のバージョンでは、ポリシー名に動的な透かしを使用できません。動的な透かしが使用されているポリシーで保護されたドキュメントを Acrobat 9.0 で開いた場合は、そのドキュメントにポリシー名やその他の動的データが含まれていても、透かしにはポリシー名が表示されません。透かしにポリシー名しか含まれていない場合は、エラーメッセージが表示されます。
 
-### 動的な透かしのテンプレートの追加  {#add-a-dynamic-watermark-template}
+### 動的な透かしのテンプレートの追加 {#add-a-dynamic-watermark-template}
 
 動的な透かしのテンプレートを作成できます。このテンプレートは、管理者やユーザーが作成するポリシーの設定オプションとしてそのまま使用できます。
 
@@ -520,14 +520,14 @@ Document Security 設定ファイルを変更することで、透かし要素�
 1. 必要に応じて透かし要素を追加するには、透かし要素の「**新規**」をクリックします。
 1. 「OK」をクリックします。
 
-### 動的な透かしのテンプレートの編集  {#edit-a-dynamic-watermark-template}
+### 動的な透かしのテンプレートの編集 {#edit-a-dynamic-watermark-template}
 
 1. 管理コンソールで、サービス／Document Security／設定／透かしをクリックします。
 1. リストから目的の透かしをクリックします。
 1. 透かしを編集ページで、必要に応じて設定を変更します。
 1. 「OK」をクリックします。
 
-### 動的な透かしのテンプレートの削除  {#delete-a-dynamic-watermark-template}
+### 動的な透かしのテンプレートの削除 {#delete-a-dynamic-watermark-template}
 
 動的な透かしは、削除すると、新しいポリシーに追加できなくなります。ただし、その透かしを使用している既存のポリシーには残り、削除された透かしを含むポリシーを編集するまで、そのポリシーで保護されているドキュメントには動的な透かしが引き続き表示されます。ポリシーが編集されると、その透かしは適用されなくなります。ポリシー上の既存の透かしが削除されていること、およびそれに代わる別の透かしを選択できることを示すメッセージが表示されます。
 
@@ -535,7 +535,7 @@ Document Security 設定ファイルを変更することで、透かし要素�
 1. 目的の透かしの横のチェックボックスをオンにし、「削除」をクリックします。
 1. 「OK」をクリックします。
 
-## 招待ユーザーの登録の設定  {#configuring-invited-user-registration}
+## 招待ユーザーの登録の設定 {#configuring-invited-user-registration}
 
 組織の外部のユーザーは Document Security に登録することができます。自分のアカウントを登録してアクティベートした招待ユーザーは、登録時に作成した電子メールアドレスとパスワードを使用して、Document Security にログインすることができます。登録した招待ユーザーは、権限を持つポリシー保護ドキュメントを使用することができます。
 
@@ -573,7 +573,7 @@ Document Security 設定ファイルを変更することで、透かし要素�
 1. （オプション）「組み込み登録」で「はい」を選択して、このオプションを有効にします。組み込み登録を有効にしない場合は、独自のユーザー登録システムを設定する必要があります。
 1. 「OK」をクリックします。
 
-### 外部ユーザーまたはグループの除外または組み入れ  {#exclude-or-include-an-external-user-or-group}
+### 外部ユーザーまたはグループの除外または組み入れ {#exclude-or-include-an-external-user-or-group}
 
 特定の外部ユーザーまたはユーザーグループに対して、Document Security での登録を制限することができます。このオプションは、特定のユーザーグループにアクセスを許可する一方で、そのグループの特定の個人を除外する場合などに便利です。
 
@@ -627,7 +627,7 @@ Document Security 設定ファイルを変更することで、透かし要素�
 >
 >招待ユーザーの登録オプションに何らかの変更を加えた場合、config.xmlファイルが上書きされ、TLS が非アクティブ化されます。変更を上書きすると、TLS で招待ユーザーの登録がサポートされるように上記のステップを実行する必要があります。
 
-### 登録招待用の電子メールの設定  {#registration-invitation-email-settings}
+### 登録招待用の電子メールの設定 {#registration-invitation-email-settings}
 
 新しい招待ユーザーアカウントを作成したり、未登録の外部受信者や登録に招待されたことのない外部受信者を既存のユーザーがポリシーに追加したりすると、Document Security によって自動的に登録招待用の電子メールが発行されます。この電子メールにはリンクが含まれており、受信者はこのリンクを使用して登録ページにアクセスし、ユーザー名やパスワードなどの個人アカウント情報を入力します。パスワードとしては、任意の 8 文字の組み合わせを使用できます。
 
@@ -663,7 +663,7 @@ Document Security 設定ファイルを変更することで、透かし要素�
 
 **メッセージ：** 受信者のユーザーアカウントをアクティブ化する必要があることを示すメッセージの本文に表示されるテキスト。それ以外の情報として、新しいパスワードを取得するために管理者に問い合わせる方法なども含めるとよいでしょう。
 
-### パスワードリセット用の電子メールの設定  {#configure-a-password-reset-email}
+### パスワードリセット用の電子メールの設定 {#configure-a-password-reset-email}
 
 招待ユーザーのパスワードをリセットする必要がある場合は、そのユーザーに新しいパスワードを選択するように勧める確認の電子メールが生成されます。ユーザーのパスワードを特定できません。ユーザーがパスワードを忘れた場合は、リセットする必要があります。
 
@@ -685,7 +685,7 @@ Document Security 設定ファイルを変更することで、透かし要素�
 
 カスタムポリシーを作成する権限をユーザーに与える前に、個々のユーザーにどの程度のアクセスや制御を認めるかを検討します。また、検索結果にユーザーとグループを表示するにあたって、ユーザーとグループをどの程度公開するかについても検討します。
 
-### ポリシーを作成できるユーザーとグループの指定  {#specify-users-and-groups-who-can-create-policies}
+### ポリシーを作成できるユーザーとグループの指定 {#specify-users-and-groups-who-can-create-policies}
 
 管理者として、カスタムポリシーを作成できるユーザーとグループを指定します。この権限は、ユーザーレベルおよびグループレベルで設定できます。検索機能は、User Management データベースを検索してユーザーとグループを見つけます。
 
@@ -701,14 +701,14 @@ Document Security 設定ファイルを変更することで、透かし要素�
 
 選択したユーザーおよびグループに、カスタムポリシーを作成する権限が付与されます。
 
-### ユーザーまたはグループからのカスタムポリシーの作成権限の削除  {#remove-the-create-custom-policies-permission-from-a-user-or-group}
+### ユーザーまたはグループからのカスタムポリシーの作成権限の削除 {#remove-the-create-custom-policies-permission-from-a-user-or-group}
 
 1. Document Security ページで、設定／マイポリシーをクリックします。
 1. マイポリシーページで、「ポリシーを作成」タブをクリックします。カスタムポリシーの作成権限を持つユーザーとグループが表示されます。
 1. この権限から削除するユーザーとグループの横にあるチェックボックスを選択します。
 1. 「削除」をクリックし、「OK」をクリックします。
 
-### 検索結果に表示されるユーザーとグループの指定  {#specify-users-and-groups-that-are-visible-in-searches}
+### 検索結果に表示されるユーザーとグループの指定 {#specify-users-and-groups-that-are-visible-in-searches}
 
 ユーザーがカスタムポリシーを管理している場合、そのポリシーに追加するユーザーとグループを検索できます。どのドメインのユーザーとグループを検索結果に表示するかを指定する必要があります。
 
@@ -716,7 +716,7 @@ Document Security 設定ファイルを変更することで、透かし要素�
 1. マイポリシーページで、「表示されるユーザーとグループ」タブをクリックします。
 1. ドメイン内のユーザーとグループが表示されるようにするには、「ドメインを追加」をクリックして目的のドメインを選択し、「追加」をクリックします。ドメインを削除するには、ドメイン名の横にあるチェックボックスを選択し、「削除」をクリックします。
 
-## Document Security 設定ファイルの手動による編集  {#manually-editing-the-document-security-configuration-file}
+## Document Security 設定ファイルの手動による編集 {#manually-editing-the-document-security-configuration-file}
 
 Document Security データベースに格納されている設定情報は、読み込んだり書き出したりすることができます。例えば、ステージング環境から実稼働環境へ移行する際に、設定情報のバックアップコピーを作成できます。また、このファイルを編集するように設定できる高度なオプションを編集することも可能です。
 
@@ -749,12 +749,7 @@ Document Security データベースに格納されている設定情報は、�
 1. 「参照」をクリックして設定ファイルに移動し、「読み込み」をクリックします。「ファイル名」ボックスにパスを直接入力することはできません。
 1. 「OK」をクリックします。
 
-1. 
-1. 
-1. 
-1. 
-
-### オフライン同期のタイムアウト期間の指定  {#specify-a-timeout-period-for-offline-synchronization}
+### オフライン同期のタイムアウト期間の指定 {#specify-a-timeout-period-for-offline-synchronization}
 
 Document Security を使用すると、ユーザーが Document Security サーバーに接続していなくても、保護されたドキュメントを開いて使用できます。ユーザーのクライアントアプリケーションでは、ドキュメントをオフラインで使用できるように、常にサーバーと同期させて有効な状態を維持する必要があります。保護されたドキュメントをユーザーが初めて開くと、定期的なクライアント同期を行う権限をコンピューターに付与するかどうかが確認されます。
 
@@ -772,7 +767,7 @@ Document Security 設定ファイルでは、バックグラウンドで実行�
 
 1. 設定ファイルを読み込みます（[Document Security 設定ファイルの手動による編集](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file)を参照）。
 
-### 特定のアプリケーションに対する Document Security サービスの拒否  {#denying-document-security-services-for-specific-applications}
+### 特定のアプリケーションに対する Document Security サービスの拒否 {#denying-document-security-services-for-specific-applications}
 
 特定の条件を満たすアプリケーションに対するサービスを拒否するように Document Security を設定できます。プラットフォーム名などの 1 つの属性または複数の属性を条件に指定できます。この機能は、Document Security で処理する必要がある要求を制御するのに役立ちます。この機能の用途を次に示します。
 
@@ -947,7 +942,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
  </node
 ```
 
-### 透かし設定のパラメーターの変更  {#change-the-watermark-configuration-parameters}
+### 透かし設定のパラメーターの変更 {#change-the-watermark-configuration-parameters}
 
 デフォルトで、1 つの透かしに最大 5 つの要素を指定できます。また、透かしとして使用する PDF ドキュメントの最大ファイルサイズは、100 KB に制限されています。これらのパラメーターは config.xml ファイルで変更できます。
 
@@ -968,7 +963,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 
 1. 設定ファイルを読み込みます（[Document Security 設定ファイルの手動による編集](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file)を参照）。
 
-### 外部リンクの無効化  {#disabling-external-links}
+### 外部リンクの無効化 {#disabling-external-links}
 
 多くの Document Security ユーザーは、Right Management ユーザーインターフェイスを使用している間、**www.adobe.com** などの外部リンクへのアクセス権を持っていません。
 
@@ -987,7 +982,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 
 1. 設定ファイルを読み込みます（[Document Security 設定ファイルの手動による編集](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file)を参照）。
 
-### Transport Layer Security (TLS) 用に SMTP を有効にするための設定  {#configuration-to-enable-smtp-for-transport-layer-security-tls}
+### Transport Layer Security (TLS) 用に SMTP を有効にするための設定 {#configuration-to-enable-smtp-for-transport-layer-security-tls}
 
 config.xml に次の変更を加えることで、TLS で招待ユーザーの登録機能が有効化されます。
 
@@ -1004,7 +999,7 @@ config.xml に次の変更を加えることで、TLS で招待ユーザーの�
 1. `config.xml`を保存します。
 1. 設定ファイルを読み込みます（[Document Security 設定ファイルの手動による編集](configuring-client-server-options.md#manually-editing-the-document-security-configuration-file)を参照）。
 
-### Document Security ドキュメントの SOAP エンドポイントの無効化  {#disable-soap-endpoints-for-document-security-documents}
+### Document Security ドキュメントの SOAP エンドポイントの無効化 {#disable-soap-endpoints-for-document-security-documents}
 
 Document Security ドキュメントの SOAP エンドポイントを無効にするには、config.xml を次のように変更します。
 
