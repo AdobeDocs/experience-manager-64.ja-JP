@@ -10,7 +10,7 @@ topic-tags: content
 content-type: reference
 discoiquuid: 69253ee9-8c28-436b-9331-6fb875f64cba
 exl-id: 5c78edf8-148f-41a3-8b11-c1dada34090e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 49%
@@ -97,7 +97,7 @@ AEM 内のタグには以下のような機能があります。
 
 * 「**作成**」を選択します
 
-### タグの操作  {#operations-on-tags}
+### タグの操作 {#operations-on-tags}
 
 名前空間または他のタグを選択すると、次の操作をおこなえるようになります。
 
@@ -170,7 +170,7 @@ AEM 内のタグには以下のような機能があります。
 
 * 「**作成**」を選択します
 
-### タグの編集  {#editing-tags}
+### タグの編集 {#editing-tags}
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
@@ -182,7 +182,7 @@ AEM 内のタグには以下のような機能があります。
 
 ![chlimage_1-196](assets/chlimage_1-196.png)
 
-### Moving Tags {#moving-tags}
+### タグの移動 {#moving-tags}
 
 ![chlimage_1-197](assets/chlimage_1-197.png)
 
@@ -204,10 +204,9 @@ AEM 内のタグには以下のような機能があります。
 変更最初に現在の 
 `name`」と入力します。新しい`name`を入力できます。
 
-* 
 * 「**保存**」を選択します
 
-### タグの統合  {#merging-tags}
+### タグの統合 {#merging-tags}
 
 ![chlimage_1-199](assets/chlimage_1-199.png)
 
@@ -280,7 +279,7 @@ AEM 内のタグには以下のような機能があります。
       * パッケージマネージャーから`Replicate`を選択します。
 
 
-## Managing Tags in Different Languages {#managing-tags-in-different-languages}
+## 他の言語でのタグの管理 {#managing-tags-in-different-languages}
 
 タグの`title`プロパティは複数の言語に翻訳できます。 翻訳後は、ユーザーの言語またはページの言語に応じて適切なタグ`title`を表示できます。
 
