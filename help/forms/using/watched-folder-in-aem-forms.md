@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 442cd4bb-21b8-4d9d-89a4-402ee22c79a7
 exl-id: b9d2c63c-1777-4c13-a39f-6891f0ff52b2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
 source-wordcount: '7662'
 ht-degree: 92%
@@ -20,7 +20,7 @@ ht-degree: 92%
 
 管理者は、ネットワークフォルダーを監視フォルダーとして設定することにより、ユーザーが任意のファイル（例えば PDF ファイル）を監視フォルダーに追加した時点から、事前に設定されたワークフロー、サービス、またはスクリプティング操作を開始し、追加されたファイルを処理することができます。指定された操作をサービスが実行した後、指定された出力フォルダーに出力ファイルが保存されます。ワークフロー、サービス、スクリプトについて詳しくは、「[さまざまなファイル処理方法](#variousmethodsforprocessingfiles)」を参照してください。
 
-## 監視フォルダーの作成  {#create-a-watched-folder}
+## 監視フォルダーの作成 {#create-a-watched-folder}
 
 以下の方法のいずれか 1 つを使用して、監視フォルダーをファイルシステムに作成できます。
 
@@ -34,7 +34,7 @@ ht-degree: 92%
 >
 >クラスター環境では、監視フォルダーとして使用されるフォルダーは、ファイルシステムまたはネットワーク上でアクセス、書き込み、共有が有効になっている必要があります。クラスターの各アプリケーションサーバーインスタンスは同じ共有フォルダーにアクセスできる必要があります。Windows の場合は、すべてのサーバー上にマッピングされたネットワークドライブを作成し、マッピングされたネットワークドライブのパスを folderPath プロパティで指定します。
 
-## 監視フォルダー設定ノードの作成  {#create-watched-folder-configuration-node}
+## 監視フォルダー設定ノードの作成 {#create-watched-folder-configuration-node}
 
 監視フォルダーを設定するには、監視フォルダー設定ノードを作成します。次の手順を実行して、設定ノードを作成します。
 
@@ -90,7 +90,6 @@ ht-degree: 92%
 
    **注意：***この機能によってタイムアウトとマークされた入力がバックグラウンドで処理され続ける場合がありますが、しばらくすると停止します。タイムアウト機能が起動する前に入力コンテンツが消費された場合、後になって処理が完了し、結果フォルダーに出力がダンプされることがあります。タイムアウト前にコンテンツが消費されなかった場合、後でコンテンツの消費を試行する際にエラーが発生する可能性が高くなります。このエラーは同じ入力の失敗フォルダーにも記録されます。一方、ジョブまたはワークフローの断続的な失敗によって入力処理が実行されなかった場合（これが時間制限により解決しようとしている状態です）、前述のどちらの結果にも至りません。したがって、失敗フォルダー内でタイムアウトによる失敗とマークされたすべてのエントリー（失敗ログ内の「ファイルが一定時間経過しても処理されなかったため、失敗としてマークされました」というフォームのメッセージを参照）については、結果フォルダー（および、同じ入力の他のエントリー用の失敗フォルダー自体）をスキャンして、事前に設定されたイベントがすべて実際に発生したかどうか確認することを推奨します。*
 
-* 
 * **deleteExpiredStageFileOnlyWhenThrottled（ブール型、デフォルト値は true）**：監視フォルダーに制限がある場合にのみタイムアウト機能を有効にするかどうか指定します。この機能は制限のある監視フォルダーにはより重要です。制限が有効になっている場合、（ジョブまたはワークフローの断続的失敗により）未処理状態で待機している少数のファイルが、バッチ全体の処理を停止させるおそれがあるためです。このプロパティの値に true（デフォルト値）を指定すると、制限のない監視フォルダーに対して時間制限が有効になりません。このプロパティの値に false を指定すると、stageFileExpirationDuration プロパティの値が正の数になっている限り、この機能が常に有効になります。
 
 * **pollInterval（長整数型）**：入力用の監視フォルダーをスキャンする間隔（秒）。「ジョブ数を制限」設定が無効になっている場合、平均的なジョブの処理にかかる時間よりも長い時間を pollInterval に指定する必要があります。そうしないと、システムが過負荷になるおそれがあります。デフォルト値は 5 です。詳しくは、batchSize の説明を参照してください。pollInterval には 1 以上の値を指定する必要があります。
@@ -191,7 +190,7 @@ ht-degree: 92%
 
 必須プロパテイの他、いくつかのオプションのパラメータと設定パラメーターが存在する監視フォルダ設定ノードのサンプル
 
-#### ワークフロー向けの可変変数  {#mutable-variables-for-workflows}
+#### ワークフロー向けの可変変数 {#mutable-variables-for-workflows}
 
 ワークフローベースのファイル処理方法を実行するため、可変変数を作成できます。これらの変数は、ワークフローのステップに基づくデータフローのコンテナの役割を果たします。そのような変数を作成するには：
 
@@ -215,11 +214,11 @@ ht-degree: 92%
 
 ワークフロー、サービス、またはスクリプトを開始して、監視フォルダーに置かれたドキュメントを処理できます。
 
-### サービスを使用した監視フォルダーのファイルの処理  {#using-a-service-to-process-files-of-a-watched-folder-nbsp}
+### サービスを使用した監視フォルダーのファイルの処理 {#using-a-service-to-process-files-of-a-watched-folder-nbsp}
 
 サービスは `com.adobe.aemfd.watchfolder.service.api.ContentProcessor` インターフェイスのカスタム実装です。いくつかのカスタムプロパティと一緒に OSGi に登録されています。カスタムプロパティにより一意の実装を作成できるため、実装を特定するのに役立ちます。
 
-#### ContentProcessor インターフェイスのカスタム実装  {#custom-implementation-of-the-contentprocessor-interface}
+#### ContentProcessor インターフェイスのカスタム実装 {#custom-implementation-of-the-contentprocessor-interface}
 
 カスタム実装は、処理のコンテキスト（タイプ com.adobe.aemfd.watchfolder.service.api.ProcessorContext のオブジェクト）を受け取り、入力ドキュメントと設定パラメーターをコンテキストから読み取って入力を処理し、出力をコンテキストに追加します。ProcessorContext には、以下の API が用意されています。
 
@@ -257,7 +256,7 @@ public class TestContentProcessor1 implements ContentProcessor {
 }
 ```
 
-### スクリプトを使用した監視フォルダーのファイルの処理  {#using-scripts-to-process-files-of-a-watched-folder}
+### スクリプトを使用した監視フォルダーのファイルの処理 {#using-scripts-to-process-files-of-a-watched-folder}
 
 監視フォルダーに置かれたドキュメントの処理に使用されるスクリプトは、ECMAScript 準拠カスタムコードです。スクリプトは JCR ノードとして表されます。標準的な ECMAScript 変数（log、sling など）に加えて、スクリプトでは processorContext 変数を使用できます。この変数のデータ型は ProcessorContext です。ProcessorContext には、以下の API が用意されています。
 
@@ -294,7 +293,7 @@ processorContext.setResult(tempFile.getName(), new Packages.com.adobe.aemfd.docm
 
 これで、構成済みのカスタムの場所を使用してスクリプトを保存することができるようになります。
 
-### ワークフローを使用した監視フォルダーのファイルの処理  {#using-a-workflow-to-process-files-of-a-watched-folder}
+### ワークフローを使用した監視フォルダーのファイルの処理 {#using-a-workflow-to-process-files-of-a-watched-folder}
 
 ワークフローにより、Experience Manager のアクティビティを自動化できます。ワークフローは、特定の順序で実行される一連のステップで構成されます。各ステップで、ページのアクティベートや電子メールメッセージの送信など、個別のアクティビティが実行されます。ワークフローでは、リポジトリ内のアセット、ユーザーアカウントおよび Experience Manager サービスとやり取りができます。したがって、ワークフローでは複雑な連携を行わせることができます。
 
@@ -388,13 +387,13 @@ wfSvc.execute(impl, graniteWorkItem, graniteWorkflowSession, metaData);
 log.info("Exiting workflow script!")
 ```
 
-### 監視フォルダーの構造をワークフローのペイロードにマッピングするために、ペイロードマッパーフィルターを作成します。  {#create-payload-mapper-filter-to-map-structure-of-a-watched-folder-to-the-payload-of-a-workflow}
+### 監視フォルダーの構造をワークフローのペイロードにマッピングするために、ペイロードマッパーフィルターを作成します。 {#create-payload-mapper-filter-to-map-structure-of-a-watched-folder-to-the-payload-of-a-workflow}
 
 監視フォルダーを作成すると、監視対象のフォルダーの中にフォルダー構造を作成します。フォルダー構造には stage、result、preserve、input、failure フォルダーが含まれます。このフォルダー構造はワークフローへの入力ペイロードとして使用され、ワークフローからの出力を受け取ります。また、失敗ポイントのリストも作成します（存在する場合）。
 
 ペイロードの構造が監視フォルダーの構造と異なる場合、監視フォルダーの構造をペイロードにマッピングするために、カスタムのスクリプトを作成することができます。このようなスクリプトは、ペイロードマッパーフィルターと呼ばれます。デフォルトでは、AEM Forms には監視フォルダーの構造をペイロードにマッピングするためペイロードマッパーフィルターが用意されています。
 
-#### カスタムペイロードマッパーフィルターの作成  {#creating-a-custom-payload-mapper-filter}
+#### カスタムペイロードマッパーフィルターの作成 {#creating-a-custom-payload-mapper-filter}
 
 1. [Adobe Client SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk/6.3.0/aemfd-client-sdk-6.3.0.jar) をダウンロードします。
 1. maven ベースのプロジェクトのビルドパスに Client SDK をセットアップします。はじめに、選択した IDE で次の maven ベースのプロジェクトをダウンロードして開きます。
@@ -492,7 +491,7 @@ log.info("Exiting workflow script!")
 >
 >アプリケーションサーバーによって監視フォルダー内のファイルへのアクセスが削除されたことを確認してください。AEM Forms がスキャン済みファイルを入力フォルダーから削除できない場合、関連付けられたプロセスが無制限に開始されます。
 
-## 監視フォルダーに関する追加情報  {#additional-information-about-the-watched-folders}
+## 監視フォルダーに関する追加情報 {#additional-information-about-the-watched-folders}
 
 ### ジョブ数の制限について {#about-throttling}
 
@@ -502,7 +501,7 @@ log.info("Exiting workflow script!")
 >
 >ジョブ数の制限がクラスターに合わせて調整されることはありません。ジョブ数の制限が有効である場合、クラスター全体で同時に処理するジョブの数がバッチサイズに指定されている数を超えることはありません。この制限はクラスター全体に及ぶものであり、クラスターの各ノードに固有のものではありません。例えば、バッチサイズが 2 の場合、単一のノードがジョブを 2 つ処理するとジョブ数の制限に達するため、どちらかのジョブが完了するまで他のノードは入力ディレクトリをポーリングしません。
 
-#### ジョブ数制限の仕組み  {#how-throttling-works}
+#### ジョブ数制限の仕組み {#how-throttling-works}
 
 監視フォルダーは、pollInterval が呼び出されるたびに入力フォルダーをスキャンし、batchSize で指定された数のファイルを取得し、これらのファイルごとにターゲットサービスを呼び出します。例えば、各スキャンで batchSize に 4 が指定されている場合、監視フォルダーは 4 つのファイルを取得し、4 つの呼び出し要求を作成して、ターゲットサービスを呼び出します。これらの要求が完了する前に監視フォルダーが呼び出された場合、前回の 4 つのジョブが完了しているかどうかに関係なく、監視フォルダーは 4 つのジョブの処理を再び開始します。
 
@@ -512,7 +511,7 @@ log.info("Exiting workflow script!")
 * 監視フォルダーがジョブを呼び出す前に AEM Forms サーバーがダウンした場合は、管理者がステージフォルダーからファイルを移動できます。詳しくは、「[失敗ポイントおよび回復](/help/forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p)」を参照してください。
 * サービスが正しい順序で開始されず、Job Manager サービスのコールバックが発生したとき、AEM Forms サーバーが動作している一方で監視フォルダーが動作していない場合は、管理者がステージフォルダーからファイルを移動できます。詳しくは、「[失敗ポイントおよび回復](/help/forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p)」を参照してください。
 
-### 失敗ポイントおよび回復  {#failure-points-and-recoveryfailure-points-and-recovery}
+### 失敗ポイントおよび回復 {#failure-points-and-recoveryfailure-points-and-recovery}
 
 ポーリングイベントごとに、監視フォルダーは入力フォルダーをロックし、「ファイルパターンを含める」に一致するファイルをステージフォルダーに移動してから、入力フォルダーのロックを解除します。ロックは、2 つのスレッドが同じファイルを取得して同時に処理することを防ぐために必要となります。pollInterval により小さな値を指定し、batchSize により大きな値を指定すると、このような状況は発生しやすくなります。ファイルがステージフォルダーに移動されると、入力フォルダーのロックが解除され、他のスレッドが入力フォルダーをスキャンできるようになります。この手順により、あるスレッドがファイルを処理している間に他のスレッドがスキャンを実行できるため、高いスループットを実現できます。
 
@@ -525,7 +524,7 @@ log.info("Exiting workflow script!")
    * **同期**：監視フォルダーがサービスを同期的に呼び出すように設定されている場合、ステージフォルダー内のファイルはすべて未処理のままステージフォルダーに残ります。
    * **非同期**：この場合、監視フォルダーは Job Manager サービスに依存します。Job Manager サービスが監視フォルダーをコールバックした場合、ステージフォルダー内のファイルは呼び出しの結果に基づいて保存フォルダーまたは失敗フォルダーに移動されます。Job Manager サービスが監視フォルダーをコールバックしない場合、ファイルは未処理のままステージフォルダーに残ります。この状況が発生するのは、Job Manager がコールバックしようとしたときに監視フォルダーが動作していない場合です。
 
-#### ステージフォルダーに未処理のまま残っているソースファイルの回復  {#recover-unprocessed-source-files-in-the-stage-folder}
+#### ステージフォルダーに未処理のまま残っているソースファイルの回復 {#recover-unprocessed-source-files-in-the-stage-folder}
 
 監視フォルダーでステージフォルダー内のソースファイルを処理できない場合、未処理のファイルを回復できます。
 
@@ -723,7 +722,7 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
    >
    >ワークフローの作成時、title プロパティは ECMAScript の位置指定に使用されます。
 
-### ワークフローの作成  {#create-a-workflow-1}
+### ワークフローの作成 {#create-a-workflow-1}
 
 1. ブラウザーウィンドウで「AEM ワークフロー」UI を開きます。`https://[server]:[port]/workflow`
 
