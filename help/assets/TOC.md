@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
-source-git-commit: 0d660388cd0fbbf98076610d18c19f480c75ef11
+source-git-commit: d9649477328b3249dae396bbdca0f660c9c8faca
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 75%
+source-wordcount: '626'
+ht-degree: 74%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 75%
    + [画像マップの追加](image-maps.md)
    + [MSMを使用したアセットの再利用](reuse-assets-using-msm.md)
 + Dynamic Media{#dynamic}
-   + [Experience League 提供の Dynamic Media ニュースレター](dynamic-media-newsletter.md)
+   + [Dynamic Mediaニュースレターアーカイブ(Experience League別)](dynamic-media-newsletter.md)
    + [Dynamic Media のセットアップ](administering-dynamic-media.md)
    + [Dynamic Media の操作](dynamic-media.md)
    + [Dynamic Media の設定 - Scene7モード](config-dms7.md)
