@@ -9,10 +9,10 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 exl-id: 2f24c4bc-8071-4403-b959-00db0f08db34
 feature: スマートサービス
 role: User
-source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
+source-git-commit: e43e25fa1d0df2c2b5b72e49c5a54ca88c000ad2
 workflow-type: tm+mt
-source-wordcount: '2573'
-ht-degree: 60%
+source-wordcount: '2547'
+ht-degree: 61%
 
 ---
 
@@ -185,13 +185,13 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 Dynamic Mediaの会社アカウントでは、デフォルトで、スマートイメージングDPRとネットワーク最適化が無効（オフ）になっています。 これらの標準の機能強化の1つまたは両方を有効（オン）にする場合は、以下に説明するように、サポートケースを作成します。
 
-スマートイメージングDPRおよびネットワーク最適化のリリーススケジュールは次のとおりです。
+<!-- NOW AVAILABLE IN ALL THREE REGIONS AS OF AUGUST 2. 2021. SEE CQDOC- 17915 The release schedule for Smart Imaging DPR and network optimization is as follows:
 
-| 地域  | ターゲット日 |
+| Region | Target date |
 |---|---|
-| 北米 | ライブ |
-| ヨーロッパ、中東、アフリカ | 2021年8月14日 |
-| アジア太平洋 | 2021年7月23日 |
+| North America | Live |
+| Europe, Middle East, Africa | 13 Aug 2021 |
+| Asia-Pacific | 22 Jul 2021 | -->
 
 1. [Admin Console を使用して、サポートケースを作成します。](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
 1. サポートケースには、次の情報を記入してください。
@@ -280,4 +280,4 @@ Dynamic Mediaの会社アカウントでは、デフォルトで、スマート�
 
 * Experience Managerサイトコアコンポーネントは、DPRの最適化のためにデフォルトで設定されています。 サーバー側のスマートイメージングDPRの最適化による画像のサイズ超過を避けるために、 `dpr=off`は常にExperience ManagerサイトコアコンポーネントDynamic Media画像に追加されます。
 * Dynamic Media Foundationコンポーネントは、デフォルトでDPR最適化用に設定されているので、サーバー側のスマートイメージングDPRの最適化に伴う画像のサイズ超過を防ぐため、Dynamic Media Foundationコンポーネントの画像には常に`dpr=off`が追加されます。 お客様がDM基盤コンポーネントでDPRの最適化を選択解除しても、サーバー側のスマートイメージングDPRは開始されません。 要約すると、DM基盤コンポーネントでは、DPRの最適化はDM基盤コンポーネントレベルの設定に基づいてのみ有効になります。
-* ビューア側のDPRの最適化は、サーバ側のスマートイメージングDPRの最適化と連携して機能し、画像のサイズが大きくなることはありません。 つまり、ズーム対応ビューアのみのメインビューなど、ビューアでDPRが処理される場所であれば、サーバー側のスマートイメージングDPR値はトリガーされません。 同様に、スウォッチやサムネールなどのビューア要素にDPR処理がない場合は、サーバー側のスマートイメージングDPR値がトリガーされます。 —>
+* ビューア側のDPRの最適化は、サーバ側のスマートイメージングDPRの最適化と連携して機能し、画像のサイズが大きくなることはありません。 つまり、ズーム対応ビューアのみのメインビューなど、ビューアでDPRが処理される場所であれば、サーバー側のスマートイメージングDPR値はトリガーされません。 同様に、スウォッチやサムネールなどのビューア要素にDPR処理がない場合は、サーバー側のスマートイメージングDPR値がトリガーされます。
