@@ -1,5 +1,5 @@
 ---
-title: ビデオ
+title: Dynamic Mediaのビデオ
 description: Dynamic Media でビデオを使用する方法について説明します.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -8,10 +8,10 @@ content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
 feature: ビデオ
 role: User
-source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
+source-git-commit: d5b4f559b20c8671bd648d240b54cb65f73fd222
 workflow-type: tm+mt
-source-wordcount: '10335'
-ht-degree: 77%
+source-wordcount: '10377'
+ht-degree: 75%
 
 ---
 
@@ -45,8 +45,10 @@ ht-degree: 77%
       * [ビデオプロファイルのフォルダーへの適用](video-profiles.md#applying-a-video-profile-to-folders)
       * [処理プロファイルを使用するためのデジタルアセットの整理におけるベストプラクティス](organize-assets.md#organize-using-folders)に関する詳細
       * [デジタルアセットの整理](organize-assets.md)に関する詳細
-   * フォルダーにマスタービデオをアップロードします。15 GB までのビデオファイルをアップロードできます。フォルダーにビデオを追加すると、そのフォルダーに割り当てたビデオ処理プロファイルに従ってビデオがエンコードされます。
+   * フォルダーにプライマリソースビデオをアップロードします。フォルダーにビデオを追加すると、そのフォルダーに割り当てたビデオ処理プロファイルに従ってビデオがエンコードされます。
 
+      * Dynamic Mediaでは、長さが30分の短いビデオを主にサポートしています。
+      * 15 GB までのビデオファイルをアップロードできます。
       * [ビデオのアップロード](managing-video-assets.md#uploading-and-previewing-video-assets)
       * [サポートされる入力ファイル形式](assets-formats.md#supported-multimedia-formats)に関する詳細
    * アセットまたはワークフロー表示から[ビデオ処理の進行状況](#monitoring-video-encoding-and-youtube-publishing-progress)を監視します。
@@ -71,7 +73,7 @@ ht-degree: 77%
 
          [ビデオレンディションの表示](video-renditions.md)
 
-         [ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
+[ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
 
       * [ビューアプリセットの管理](managing-viewer-presets.md)
       * [アセットの発行](publishing-dynamicmedia-assets.md)
@@ -83,7 +85,7 @@ ht-degree: 77%
 
       * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
 
-         [ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
+[ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
 
       * [デジタルアセット用のメタデータの管理](metadata.md)
       * [メタデータスキーマ](metadata-schemas.md)
@@ -116,7 +118,7 @@ ht-degree: 77%
 
 
 
-## Dynamic Media でのビデオの操作 {#working-with-video-in-dynamic-media}
+## Dynamic Mediaでのビデオの操作 {#working-with-video-in-dynamic-media}
 
 Dynamic Media のビデオは、高品質のアダプティブビデオを簡単に公開して、デスクトップ、iOS、Android、Blackberry、Windows などのモバイルデバイスを含む複数の画面にストリーミングするためのエンドツーエンドのソリューションです。アダプティブビデオセットでは、同じビデオを、400 kbps、800 kbps、1000 kbps などの様々なビットレートと形式でエンコードしたバージョンにグループ分けします。デスクトップコンピューターまたはモバイルデバイスによって、利用可能な帯域幅が検出されます。
 
@@ -283,9 +285,12 @@ For advice about video encoding, see the following:
 * Article: *Streaming 101: The Basics — Codecs, Bandwidth, Data Rate, and Resolution:* [www.adobe.com/go/learn_s7_streaming101_en](https://www.adobe.com/go/learn_s7_streaming101_en).
 * Video: *Video Encoding Basics:* [www.adobe.com/go/learn_s7_encoding_en](https://www.adobe.com/go/learn_s7_encoding_en). -->
 
-### ソースビデオファイル {#source-video-files}
+### プライマリソースビデオファイル {#source-video-files}
 
 ビデオファイルをエンコードするときは、可能な限り最高品質のソースビデオファイルを使用します。以前にエンコードされたビデオファイルの使用は避けてください。そのようなファイルは既に圧縮済みで、さらにエンコードすると標準を下回る品質のビデオが作成されるからです。
+
+* Dynamic Mediaでは、主に長さ30分の短いビデオをサポートしています。
+* 15 GBまでのプライマリソースビデオファイルをアップロードできます。
 
 次の表に、ソースビデオファイルのエンコード前の推奨サイズ、縦横比および最小ビットレートを示します。
 
@@ -447,19 +452,19 @@ YouTubeへの公開では、AEMの処理プロファイルシステムがバイ�
 
 ビデオアセットの YouTube サーバーへの公開において、YouTube との安全でセキュアなサーバー間認証をおこなうには、次のタスクを実行する必要があります。
 
-1. [Google Cloud 設定](#configuring-google-cloud-settings)
-1. [YouTube チャンネルの作成](#creating-a-youtube-channel)
+1. [Google Cloud設定](#configuring-google-cloud-settings)
+1. [YouTubeチャネルの作成](#creating-a-youtube-channel)
 1. [公開用タグの追加](#adding-tags-for-publishing)
-1. [YouTube への公開のレプリケーションエージェントの有効化](#enabling-the-youtube-publish-replication-agent)
-1. [AEM での YouTube の設定](#setting-up-youtube-in-aem)
-1. [（オプション）アップロードしたビデオのデフォルト YouTube プロパティ設定の自動化 ](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
-1. [YouTube チャンネルへのビデオの公開](#publishing-videos-to-your-youtube-channel)
-1. [（オプション）YouTube での公開済みビデオの確認 ](video.md#optional-verifying-the-published-video-on-youtube)
-1. [Web アプリケーションへの YouTube URL のリンク](#linking-youtube-urls-to-your-web-application)
+1. [YouTube Publishレプリケーションエージェントの有効化](#enabling-the-youtube-publish-replication-agent)
+1. [AEMでのYouTubeの設定](#setting-up-youtube-in-aem)
+1. [（オプション）アップロードしたビデオのデフォルトのYouTubeプロパティ設定を自動化します](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
+1. [YouTubeチャネルへのビデオの公開](#publishing-videos-to-your-youtube-channel)
+1. [（オプション）YouTubeで公開済みビデオを確認する](video.md#optional-verifying-the-published-video-on-youtube)
+1. [YouTube URLのWebアプリケーションへのリンク](#linking-youtube-urls-to-your-web-application)
 
 また、[ビデオを非公開にして YouTube から削除する](#unpublishing-videos-to-remove-them-from-youtube)こともできます。
 
-### Google Cloud 設定 {#configuring-google-cloud-settings}
+### Google Cloud設定 {#configuring-google-cloud-settings}
 
 YouTubeに公開するには、Googleアカウントが必要です。GMAILアカウントを持っている場合は、既にGoogleアカウントを持っています。Googleアカウントを持っていない場合は、簡単に作成できます。ビデオアセットをYouTubeに公開するための資格情報が必要なので、アカウントが必要です。 既にアカウントを作成している場合は、このタスクをスキップして[YouTubeチャネルの作成](#creating-a-youtube-channel)に進んでください。
 
@@ -467,7 +472,7 @@ YouTubeに公開するには、Googleアカウントが必要です。GMAILア�
 >
 >以下の手順は、このドキュメントを執筆している時点で正確なものです。Google は、Web サイトを予告なく定期的に更新します。そのため、以下の手順は、最新の手順とは少し異なる場合もあります。
 
-**Google Cloudを設定するには**:
+**Google Cloud を設定するには：**
 
 1. 新しい Google アカウントを作成します。
 
@@ -533,7 +538,7 @@ YouTube にビデオを公開するには、1 つ以上のチャンネルが必�
 >
 >YouTube &amp;ast;before&amp;ast；で1つ以上のチャネルを既に設定していることを確認してください。AEMの「YouTube設定」にチャネルを追加します(下記の[AEMでのYouTubeの設定](#setting-up-youtube-in-aem)を参照)。 この確認をおこなわなくても、既存のチャネルが存在しないことを知らせる警告は表示されません。ただし、それでも、チャネルを追加する際に Google 認証がおこなわれますが、ビデオの送信先となるチャネルを選択するオプションがありません。
 
-**YouTubeチャネルを作成するには**:
+**YouTube チャンネルを作成するには：**
 
 1. [https://www.youtube.com](https://www.youtube.com/) にアクセスし、Google アカウントの資格情報を使用してログインします。
 1. YouTubeページの右上隅にあるプロフィール画像をタップし（内側に文字が表示されている色の円が表示されている場合はその円）、**[!UICONTROL YouTube設定]**（丸い歯車アイコン）をタップします。
@@ -553,7 +558,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
 
 また、AEM のデフォルトのタグを使用する場合は、このタスクをスキップして、次の [YouTube への公開のレプリケーションエージェントの有効化](#enabling-the-youtube-publish-replication-agent)タスクに進んでください。
 
-### YouTube への公開のレプリケーションエージェントの有効化 {#enabling-the-youtube-publish-replication-agent}
+### YouTube Publishレプリケーションエージェントの有効化 {#enabling-the-youtube-publish-replication-agent}
 
 1. AEMの左上隅にあるAEMロゴをタップし、左側のレールで&#x200B;**[!UICONTROL ツール/導入/レプリケーション/作成者のエージェント]**&#x200B;をタップします。
 1. **[!UICONTROL 作成者のエージェント]**&#x200B;ページで、「**[!UICONTROL YouTube発行(youtube)]**」をタップします。
@@ -563,7 +568,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
 
    次は、AEM で YouTube をセットアップします。
 
-### AEM での YouTube の設定 {#setting-up-youtube-in-aem}
+### AEMでのYouTubeの設定 {#setting-up-youtube-in-aem}
 
 1. AEMの左上隅にあるAEMロゴをタップし、左側のレールで&#x200B;**[!UICONTROL ツール/導入/Cloud Services]**&#x200B;をタップします。
 1. 「**[!UICONTROL サードパーティのサービス]**」見出しの下の「YouTube」で、「**[!UICONTROL 今すぐ設定]**」をタップします。
@@ -608,13 +613,13 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
 
    次は、YouTube チャンネルにビデオを公開します。
 
-### （オプション）アップロードしたビデオのデフォルト YouTube プロパティ設定の自動化  {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
+### （オプション）アップロードしたビデオのデフォルトのYouTubeプロパティ設定を自動化します {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
 ビデオをアップロードする際に YouTube プロパティの設定を自動化できます。これをおこなうためには、メタデータ処理プロファイルを AEM で作成します。
 
 メタデータ処理プロファイルを作成するには、まず「**[!UICONTROL フィールドラベル]**」、「**[!UICONTROL プロパティにマッピング]**」、「**[!UICONTROL 選択肢]**」の各フィールドの値をコピーします。これらはすべてビデオのメタデータスキーマで見つかります。次に、これらの値を追加して、YouTube ビデオメタデータ処理プロファイルを作成します。
 
-**オプションで、アップロードしたビデオのデフォルトのYouTubeプロパティ設定を自動化するには**:
+**オプションで、アップロードしたビデオのデフォルトのYouTubeプロパティ設定を自動化するには：**
 
 1. AEMの左上隅にあるAEMロゴをタップし、左側のレールで&#x200B;**[!UICONTROL ツール/アセット/メタデータスキーマ]**&#x200B;をタップします。
 1. 「**[!UICONTROL デフォルト値]**」をタップします。（「デフォルト値」の左側にある選択ボックスにチェックマークを追加しないでください）。
@@ -680,7 +685,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
 
    詳しくは、[メタデータプロファイル](metadata-profiles.md)と[ビデオプロファイル](video-profiles.md)を参照してください。
 
-### YouTube チャンネルへのビデオの公開 {#publishing-videos-to-your-youtube-channel}
+### YouTubeチャネルへのビデオの公開 {#publishing-videos-to-your-youtube-channel}
 
 次は、前の手順で追加したタグを、ビデオアセットに関連付けます。このプロセスによって、AEM は、YouTube チャンネルに公開するアセットを把握します。
 
@@ -702,7 +707,7 @@ AEM では、YouTube からのコンテンツの公開に **[!UICONTROL YouTube 
 
    オプションで、YouTube チャンネルで公開済みビデオを確認できます。
 
-### （オプション）YouTube での公開済みビデオの確認  {#optional-verifying-the-published-video-on-youtube}
+### （オプション）YouTubeで公開済みビデオを確認する {#optional-verifying-the-published-video-on-youtube}
 
 YouTube への公開（または非公開）の進行状況を監視できます。
 
@@ -712,13 +717,13 @@ YouTube への公開（または非公開）の進行状況を監視できます
 
 8 時間経っても「**[!UICONTROL アップロード済み（処理中、お待ちください）]**」というステータスメッセージが表示される場合は、サイトからビデオを削除して再度アップロードしてみてください。
 
-### Web アプリケーションへの YouTube URL のリンク {#linking-youtube-urls-to-your-web-application}
+### YouTube URLのWebアプリケーションへのリンク {#linking-youtube-urls-to-your-web-application}
 
 ビデオの公開後、Dynamic Media によって生成された YouTube URL 文字列を取得できます。YouTube URL をコピーしたらクリップボードに配置されるので、必要に応じて Web サイトのページまたはアプリケーションに貼り付けることができます。
 
 YouTube URL は、ビデオアセットを YouTube に公開するまではコピーできません。
 
-**YouTube URLをWebアプリケーションにリンクするには**:
+**Web アプリケーションに YouTube URL をリンクするには：**
 
 1. URLをコピーするYouTube *公開済み*&#x200B;ビデオアセットの場所に移動して選択します。
 
@@ -728,7 +733,7 @@ YouTube URL は、ビデオアセットを YouTube に公開するまではコ�
 1. 「**[!UICONTROL 詳細]**」タブをタップします。
 1. 「**[!UICONTROL YouTube Publishing]**」見出しの下にある「**[!UICONTROL YouTube URL]**」リストで、URLテキストを選択してWebブラウザーにコピーし、アセットをプレビューするか、Webコンテンツページに追加します。
 
-### ビデオを非公開にして YouTube から削除 {#unpublishing-videos-to-remove-them-from-youtube}
+### ビデオを非公開にしてYouTubeから削除する {#unpublishing-videos-to-remove-them-from-youtube}
 
 AEM でビデオアセットを非公開にすると、そのビデオは YouTube から削除されます。
 
@@ -738,12 +743,12 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 
 AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube で非公開]**&#x200B;ワークフローを使用します。このワークフローでは、進行状況を監視して、エラー情報を表示できます。詳しくは、[ビデオエンコーディングと YouTube への公開の進行状況の監視](#monitoring-video-encoding-and-youtube-publishing-progress)を参照してください。
 
-**ビデオを非公開にしてYouTubeから削除するには**:
+**ビデオを非公開にして YouTube から削除するには：**
 
-1. AEMの左上隅にあるAEMロゴをタップし、左側のレールで&#x200B;**[!UICONTROL ツール/アセット]**&#x200B;をタップします。
+1. AEMの左上隅にあるAEMロゴをタップし、左側のレールで&#x200B;**[!UICONTROL ツール]** / **[!UICONTROL アセット]**&#x200B;をタップします。
 1. YouTube チャンネルで非公開にするビデオアセットの場所に移動します。
 1. アセット選択モードで、1 つ以上の公開済みビデオアセットを選択します。
-1. ツールバーの&#x200B;**[!UICONTROL 非公開/非公開]**&#x200B;をタップします。
+1. ツールバーの&#x200B;**[!UICONTROL 非公開]** / **[!UICONTROL 非公開]**&#x200B;をタップします。
 
 ## ビデオエンコーディングと YouTube への公開の進行状況の監視 {#monitoring-video-encoding-and-youtube-publishing-progress}
 
@@ -835,7 +840,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 
 * YouTube への公開ジョブの場合、次の手順に従います。
 
-1. AEMで、**[!UICONTROL ツール/ワークフロー/モデル]**&#x200B;を選択します。
+1. AEMで、**[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデル]**&#x200B;を選択します。
 1. 「**[!UICONTROL YouTubeに公開]**」ワークフローを選択し、「**[!UICONTROL 編集]**」をタップします。
 1. **[!UICONTROL YouTubeアップロード]**&#x200B;ワークフローステップを右クリックし、「**[!UICONTROL 編集]**」をタップします。
 1. 「**[!UICONTROL 引数]s**」タブをタップします。
@@ -879,9 +884,9 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 
 ビデオレポートの正常動作のために、Dynamic Media Cloud Services の設定時に、レポートスイート ID が自動的に作成されます。そのときに、そのレポートスイート ID がパブリッシュサーバーにプッシュされ、アセットのプレビューの際に URL のコピー機能で使用できるようになります。ただし、そのためにはパブリッシュサーバーを事前にセットアップしておく必要があります。パブリッシュサーバーがセットアップされていない場合でも、公開してビデオレポートを確認することはできますが、その際には Dynamic Media クラウド設定に戻って「**OK**」をタップする必要があります。
 
-**ビデオレポートを表示するには**:
+**ビデオレポートを表示するには：**
 
-1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール/アセット/ビデオレポート]**&#x200B;をタップします。
+1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL ビデオレポート]**&#x200B;をタップします。
 1. ビデオレポートページで、次のいずれかの操作を行います。
 
    * 右上付近にある&#x200B;**[!UICONTROL ビデオレポートを更新]**&#x200B;アイコンをタップします。
@@ -896,7 +901,7 @@ AEM では、YouTube からのコンテンツの削除に **[!UICONTROL YouTube 
 
 1. 上位の公開済みビデオを示した表で、ビデオ名をタップしてビデオを再生し、そのビデオのオーディエンス保持（ドロップオフ）レポートを表示します。
 
-### Dynamic Media HTML5 ビューア SDK を使用して作成したビデオビューアに基づくビデオレポートの表示 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
+### Dynamic Media HTML5ビューアSDKを使用して作成したビデオビューアに基づいてビデオレポートを表示する {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
 Dynamic Media で標準提供されているビデオビューアを使用している場合、または標準提供のビデオビューアからカスタムのビューアプリセットを作成した場合は、ビデオレポートを表示するための追加手順は必要ありません。ただし、HTML5ビューアSDK APIをベースとして独自のビデオビューアを作成した場合は、次の手順に従って、ビデオビューアがDynamic Mediaビデオレポートにトラッキングイベントを送信するようにします。
 
@@ -974,7 +979,7 @@ Dynamic Media には、キャプションファイルを JSON（JavaScript Objec
 
 URLでJSON関数を使用する方法について詳しくは、 *Dynamic Media画像サービングおよびレンダリングAPIのヘルプ*&#x200B;の[静的（画像以外）コンテンツの提供](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html?lang=ja#image-serving-api)を参照してください。
 
-**ビデオにキャプションまたはサブタイトルを追加するには**:
+**ビデオにキャプションまたはサブタイトルを追加するには:**
 
 1. サードパーティアプリケーションまたはサービスを使用して、ビデオキャプション／サブタイトルのファイルを作成します。
 
@@ -1142,7 +1147,7 @@ Cost-efficient access to rapidly evolving technology.
 
 ビデオサムネールが生成されるデフォルトの時間間隔を設定するには：
 
-1. AEM で、**[!UICONTROL ツール／一般／CRXDE Lite]** をタップします。
+1. AEM で、**[!UICONTROL ツール]**／**[!UICONTROL 一般]**／**[!UICONTROL CRXDE Lite]** をタップします。
 
 1. CRXDE Liteページの左側のディレクトリパネルで、 `o etc/dam/imageserver/configuration/jcr:content/settings.`に移動します。
 
