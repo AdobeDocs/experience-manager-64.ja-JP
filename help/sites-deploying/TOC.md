@@ -8,10 +8,10 @@ breadcrumb-title: デプロイガイド
 user-guide-description: Adobe Managed Services クラウドデプロイメントを含む、Adobe Experience Manager 6.4 のインストール、デプロイメント、およびアーキテクチャについて詳しく説明します。
 feature: デプロイ
 role: Architect
-source-git-commit: 5b0eef590f9a0c709fa21b8dbcf6a2f286a20237
+source-git-commit: 17c9f8523992b5ba87125c77d3e4f70f86f89c58
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 89%
+source-wordcount: '373'
+ht-degree: 91%
 
 ---
 
@@ -56,11 +56,11 @@ ht-degree: 89%
    + [ジョブのオフロード](offloading.md)
    + [シングルサインオン](single-sign-on.md)
    + [リソースマッピング](resource-mapping.md)
-   + [HTTP over SSL の有効化](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/ssl-by-default.html)
+   + [HTTP over SSL の有効化](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/ssl-by-default.html)
    + [整合性チェックとトラバーサルチェック](consistency-check.md)
    + [パフォーマンスガイドライン](performance-guidelines.md)
    + [パフォーマンスの最適化](configuring-performance.md)
-   + [アセットパフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/performance-tuning-guidelines.html?lang=en)
+   + [アセットパフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/performance-tuning-guidelines.html?lang=ja)
    + [設定方法に関する記事](ht-deploy.md)
    + [Geometrixx サイトの削除](removing-the-geometrixx-sites.md)
    + [Webコンソールの設定](configuring-web-console.md)
