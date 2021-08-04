@@ -8,9 +8,9 @@ content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
 feature: ビデオ
 role: User
-source-git-commit: d5b4f559b20c8671bd648d240b54cb65f73fd222
+source-git-commit: 1d5f9be7aa1e45ebaf689922396832e82c63321f
 workflow-type: tm+mt
-source-wordcount: '10377'
+source-wordcount: '10387'
 ht-degree: 75%
 
 ---
@@ -73,7 +73,7 @@ ht-degree: 75%
 
          [ビデオレンディションの表示](video-renditions.md)
 
-         [ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
+[ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
 
       * [ビューアプリセットの管理](managing-viewer-presets.md)
       * [アセットの発行](publishing-dynamicmedia-assets.md)
@@ -85,7 +85,7 @@ ht-degree: 75%
 
       * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
 
-         [ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
+[ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
 
       * [デジタルアセット用のメタデータの管理](metadata.md)
       * [メタデータスキーマ](metadata-schemas.md)
@@ -1032,7 +1032,7 @@ URLでJSON関数を使用する方法について詳しくは、 *Dynamic Media�
 >
 >ビデオプレーヤーが、チャプターマーカーの使用をサポートしている必要があります。Dynamic Media ビデオプレーヤーは、チャプターマーカーをサポートしていますが、サードパーティのビデオプレーヤーは、チャプターマーカーを必ずしもサポートしているとは限りません。
 
-必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーション機能を備えた独自のHTML5ビューアを作成する手順については、AdobeHTML5ビューアSDK APIで、`s7sdk.video.VideoPlayer`クラスと`s7sdk.video.VideoScrubber`クラスの見出し「Customizing Behavior Using Modifiers」を参照してください。 [HTML5ビューアSDK API]((https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html))のドキュメントを参照してください。
+必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーション機能を備えた独自のHTML5ビューアを作成する手順については、AdobeHTML5ビューアSDK APIで、`s7sdk.video.VideoPlayer`クラスと`s7sdk.video.VideoScrubber`クラスの見出し「Customizing Behavior Using Modifiers」を参照してください。 [HTML5ビューアSDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)のドキュメントを参照してください。
 
  ビデオのチャプターリストを作成する方法は、キャプションを作成する方法とほとんど同じです。つまり、WebVTT ファイルを作成します。ただし、この WebVTT ファイルは、WebVTT キャプションファイルと分けておく必要があります（キャプションファイルを使用する場合）。キャプションとチャプターを 1 つの WebVTT ファイルにまとめることはできません。
 
