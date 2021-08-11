@@ -1,12 +1,12 @@
 ---
+title: Dynamic Mediaニュースレターアーカイブ
 description: 'Experience LeagueがアーカイブしたDynamic Mediaのニュースレターは、月刊ニュースレターでした。 Dynamic MediaとDynamic Media Classicをすばやく習得して、すぐに価値を実現できるようにすることを目的に設計されています。 アーカイブされたニュースレターには、廃止されたワンストップショップニュースレターで利用できる貴重な知識構築リソースが含まれています。 アーカイブされたニュースレターには、ハウツービデオとソリューションの概要が含まれます。 また、画像プリセット、ビューアプリセット、ビデオプロファイルなどの主な機能を紹介します。  '
 keywords: dynamic media；ニュースレター；製品アップデート；ヒントとテクニック；イベント；顧客の成功；ブログ；ブログ；画像；ビデオ；機能；機能
 solution: Experience Manager, Dynamic Media Classic
-title: Dynamic Mediaニュースレターアーカイブ
 exl-id: aa02c811-0296-4a02-b745-e70aeb9d1e97
 feature: コラボレーション， Dynamic Media Classic
 role: Admin,User
-source-git-commit: d9649477328b3249dae396bbdca0f660c9c8faca
+source-git-commit: 77d312235854e85b2a486365092fbe8a802faccf
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 67%
@@ -54,10 +54,6 @@ Experience LeagueによるDynamic Mediaニュースレターは、Dynamic Media�
    * Online Adobe Summit 2020 の Dynamic Media セッションを表示
    * 無料のDynamic Media Classic監査の詳細
    * John Monroe 氏（カスタマーサクセスサービス担当シニアプログラムマネージャー）へのインタビュー
-
-<!--     >[!IMPORTANT]
-    >
-    >We want to make sure we are only sending the Dynamic Media newsletter to those who want to receive it. To continue receiving the newsletter after this issue, please sign up for it [here](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&reserved=0). -->
 
 * **[2020 年 2 月、第 2 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
