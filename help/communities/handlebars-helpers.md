@@ -10,14 +10,14 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: 66045e67-4d33-4c0c-81d7-d4287ed68ccc
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
 workflow-type: tm+mt
-source-wordcount: '1540'
-ht-degree: 54%
+source-wordcount: '1527'
+ht-degree: 56%
 
 ---
 
-# SCF Handlebars ヘルパー  {#scf-handlebars-helpers}
+# SCF Handlebars ヘルパー {#scf-handlebars-helpers}
 
 | **[⇐ 機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
 |---|---|
@@ -340,7 +340,7 @@ AEM html クライアントライブラリとして js、css、または theme �
     <link href="/etc/clientlibs/social/hbs/comments.css" rel="stylesheet" type="text/css">
 ```
 
-## プリティタイム{#pretty-time}
+## Pretty-time {#pretty-time}
 
 カットオフポイントに達するまでは経過時間を表示し、それ以降は通常の日付形式を表示するヘルパーです。
 
@@ -449,8 +449,6 @@ XSS に対する保護として、HTML の href または src 属性値として
 
 ## Handlebars.js の基本的概要 {#handlebars-js-basic-overview}
 
-[Handlebars.jsドキュメント](https://handlebarsjs.com/expressions.html)のヘルパー関数の概要を簡単に説明します。
-
 * Handlebarsヘルパー呼び出しは、単純な識別子（ヘルパーの*名前*）で、その後にスペースで区切られた0個以上のパラメーターが続きます。
 * パラメーターには、単純な文字列、数値、ブール値、または JSON オブジェクトを指定し、オプションで最後のパラメーターとして一連のキー／値ペア（ハッシュ引数）を指定します。
 * ハッシュ引数内のキーは単純な識別子にする必要があります。
@@ -470,7 +468,7 @@ XSS に対する保護として、HTML の href または src 属性値として
 
 * ヘルパーから返される HTML 文字列コンテンツは SafeString になるようにすることをお勧めします。
 
-### Handlebars.jsドキュメントのシンプルなヘルパーの例を次に示します。{#an-example-of-a-simple-helper-from-handlebars-js-documentation}
+### Handlebars.js ドキュメントで紹介されている単純なヘルパーの例を次に示します。 {#an-example-of-a-simple-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link_to', function(title, options) {
@@ -496,7 +494,7 @@ template(context);
 &lt;li>&lt;a href=&quot;/posts/hello-world&quot;>ポスト！&lt;/a>&lt;/li>\
 &lt;/ul>
 
-### Handlebars.jsドキュメントのブロックヘルパーの例を次に示します。{#an-example-of-a-block-helper-from-handlebars-js-documentation}
+### Handlebars.js ドキュメントで紹介されているブロックヘルパーの例を次に示します。 {#an-example-of-a-block-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link', function(options) {
