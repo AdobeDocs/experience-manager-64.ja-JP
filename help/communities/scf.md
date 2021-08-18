@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 exl-id: 9264c888-a583-40eb-9178-273146f8a12b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
 workflow-type: tm+mt
-source-wordcount: '1506'
-ht-degree: 52%
+source-wordcount: '1502'
+ht-degree: 53%
 
 ---
 
@@ -85,7 +85,8 @@ HTTP API によって、PhoneGap アプリ、ネイティブアプリ、その�
 
 すべての SocialComponent に対して、フレームワークによって HTTP ベースの API エンドポイントが提供されます。このエンドポイントにアクセスするには、「.social.json」セレクターと拡張子を持つGETリクエストをリソースに送信します。 Slingを使用して、要求が`DefaultSocialGetServlet`に渡されます。
 
- `DefaultSocialGetServlet`
+：
+`DefaultSocialGetServlet`
 
 1. リソース(resourceType)を`SocialComponentFactoryManager`に渡し、リソースを表す`SocialComponent`を選択できるSocialComponentFactoryを受け取ります。
 
@@ -111,7 +112,7 @@ SocialComponent 操作ごとに Sling POST :operation があります。各操�
 
 ![chlimage_1-27](assets/chlimage_1-27.png)
 
-### ストレージリソースプロバイダー（SRP）{#storage-resource-provider-srp}
+### ストレージリソースプロバイダー（SRP） {#storage-resource-provider-srp}
 
 [コミュニティコンテンツストア](working-with-srp.md)に格納された UGC の処理については、以下を参照してください。
 
@@ -123,9 +124,9 @@ SocialComponent 操作ごとに Sling POST :operation があります。各操�
 
 サーバー側のコミュニティコンポーネントのビジネスロジックおよび動作のカスタマイズについて詳しくは、[サーバー側のカスタマイズ](server-customize.md)を参照してください。
 
-## Handlebars JS テンプレート言語  {#handlebars-js-templating-language}
+## Handlebars JS テンプレート言語 {#handlebars-js-templating-language}
 
-新しいフレームワークの顕著な変更の1つは、サーバークライアントレンダリング用の一般的なオープンソーステクノロジーである[Handlebars JSテンプレート言語(HBS)](https://www.handlebarsjs.com/)の使用です。
+新しいフレームワークの顕著な変更の1つは、サーバーとクライアントのレンダリングに一般的なオープンソーステクノロジーである`Handlebars JS`テンプレート言語(HBS)の使用です。
 
 HBS スクリプトは、単純で、ロジックがなく、サーバーとクライアントの両方でコンパイルされ、オーバーレイやカスタマイズが容易であり、HBS ではクライアント側のレンダリングがサポートされているのでクライアント UX と自然にバインドします。
 
@@ -141,7 +142,7 @@ Handlebars（HBS）テンプレートファイル（.hbs）は、.jsp および 
 
 .hbs ファイルへの HTTP アクセスは禁止できません。
 
-### コミュニティコンポーネントの追加またはインクルード  {#add-or-include-a-communities-component}
+### コミュニティコンポーネントの追加またはインクルード {#add-or-include-a-communities-component}
 
 ほとんどのコミュニティコンポーネントは、Sling アドレス可能リソースとして追加する必要があります。**&#x200B;一部のコミュニティコンポーネントは、ユーザー生成コンテンツ(UGC)を書き込む場所を動的に含めたりカスタマイズしたりするために、存在しないリソースとしてテンプレートに&#x200B;*含める*&#x200B;ことができます。
 
@@ -183,11 +184,11 @@ AEM 6.1以降では、コンポーネントが追加される代わりに動的�
 >
 >コンポーネントを、テンプレートに追加またはインクルードせずに、ページに動的に追加するには、[コンポーネントのサイドローディング](sideloading.md)を参照してください。
 
-### Handlebars ヘルパー  {#handlebars-helpers}
+### Handlebars ヘルパー {#handlebars-helpers}
 
 SCF で使用できるカスタムヘルパーのリストおよび説明については、[SCF Handlebars ヘルパー](handlebars-helpers.md)を参照してください。
 
-## クライアント側フレームワーク  {#client-side-framework}
+## クライアント側フレームワーク {#client-side-framework}
 
 ### モデル - ビュー JavaScript フレームワーク {#model-view-javascript-framework}
 
