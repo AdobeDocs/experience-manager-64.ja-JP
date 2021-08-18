@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 exl-id: 9264c888-a583-40eb-9178-273146f8a12b
-source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
+source-git-commit: a70f874ad7fcae59ee4c6ec20e23ffb2e339590b
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1506'
 ht-degree: 53%
 
 ---
@@ -126,7 +126,7 @@ SocialComponent 操作ごとに Sling POST :operation があります。各操�
 
 ## Handlebars JS テンプレート言語 {#handlebars-js-templating-language}
 
-新しいフレームワークの顕著な変更の1つは、サーバーとクライアントのレンダリングに一般的なオープンソーステクノロジーである`Handlebars JS`テンプレート言語(HBS)の使用です。
+この新しいフレームワークの顕著な変更の1つは、サーバークライアントレンダリング用の一般的なオープンソーステクノロジーである[Handlebars JS](https://handlebarsjs.com/)テンプレート言語(HBS)の使用です。
 
 HBS スクリプトは、単純で、ロジックがなく、サーバーとクライアントの両方でコンパイルされ、オーバーレイやカスタマイズが容易であり、HBS ではクライアント側のレンダリングがサポートされているのでクライアント UX と自然にバインドします。
 
