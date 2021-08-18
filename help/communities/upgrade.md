@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 7aa28e36-6b31-4447-b800-cab2dc78c93c
 exl-id: ef622ac3-d96d-48bf-bfb2-61516d9deb5c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '677'
 ht-degree: 62%
 
 ---
 
-# AEM 6.4 Communities へのアップグレード  {#upgrading-to-aem-communities}
+# AEM 6.4 Communities へのアップグレード {#upgrading-to-aem-communities}
 
 各サイトのトポロジや機能に応じて、AEM Communities 6.4 へのアップグレード時または最新の機能パックのインストール時に次のアクションが必要になる場合があります。
 
@@ -41,7 +41,7 @@ AEM 6.3 以降、イネーブルメント機能では、MySQL の中にレポー
 
 Enablement 1.0 からのコンテンツの移行のサポートについては、[カスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)にお問い合わせください。
 
-## AEM 6.0 からのアップグレード  {#upgrading-from-aem}
+## AEM 6.0 からのアップグレード {#upgrading-from-aem}
 
 既存のUGCを保持する必要がある場合は、デプロイメントがUGC [オンプレミス](#on-premise-storage)と[Adobeクラウド](#adobe-cloud-storage)のどちらに保存したかによって、保存方法が異なります。
 
@@ -80,9 +80,9 @@ AEM 6.0 Social Communities から AEM 6.3 Communities にアップグレード�
 
 また、[コミュニティでの Maven の使用](maven.md)も参照してください。
 
-### JSP コンポーネントテンプレートの廃止  {#no-jsp-component-templates}
+### JSP コンポーネントテンプレートの廃止 {#no-jsp-component-templates}
 
-[ソーシャルコンポーネントフレームワーク](scf.md)(SCF)は、AEM 6.0より前に使用されていたJava Server Pages(JSP)の代わりに、[HandlebarsJS](https://www.handlebarsjs.com/)(HBS)テンプレート言語を使用します。
+[ソーシャルコンポーネントフレームワーク](scf.md)(SCF)は、AEM 6.0より前に使用されていたJava Server Pages(JSP)の代わりに、`HandlebarsJS`(HBS)テンプレート言語を使用します。
 
 AEM 6.0 では、JSP コンポーネントは新しい HBS フレームワークコンポーネントと同じ場所に残っています（HBS コンポーネントは通常、「hbs」という名前のサブフォルダーに存在します）。
 
@@ -94,7 +94,7 @@ AEM 6.1 以降では JSP コンポーネントは完全に削除されていま�
 
 以前のバージョンから UGC を移行するだけでなく、MSRP から DSRP のように [SRP](working-with-srp.md) 間で UGC を移行する際にもこのツールを使用できます。
 
-## AEM 5.6.1 以前のバージョンからのアップグレード  {#upgrading-from-aem-or-earlier}
+## AEM 5.6.1 以前のバージョンからのアップグレード {#upgrading-from-aem-or-earlier}
 
 概念的に、コミュニティコンポーネントには 3 つの世代があります。
 
