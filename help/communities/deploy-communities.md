@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: d0249609-2a9c-4d3b-92ee-dbc5fbdeaac6
 exl-id: 0b7496f0-0b3c-4d12-a659-d95744157f14
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
 workflow-type: tm+mt
-source-wordcount: '2138'
-ht-degree: 40%
+source-wordcount: '2145'
+ht-degree: 39%
 
 ---
 
@@ -92,7 +92,7 @@ ht-degree: 40%
 
 AEM 6.4 Communities GAにはCommunitiesパッケージが含まれています。 AEM 6.4 [Communities](/help/release-notes/release-notes.md#experience-manager-communities) のアップデートについて詳しくは、[AEM 6.4 リリースノート](/help/release-notes/release-notes.md#release-information)を参照してください。
 
-### AEM 6.4 のアップデート  {#aem-updates}
+### AEM 6.4 のアップデート {#aem-updates}
 
 AEM 6.3 以降、Communities のアップデートは、AEM 累積修正パックおよびサービスパックの一部として提供されています。
 
@@ -196,7 +196,8 @@ SRP コレクション（MSRP または DSRP）で高度な多言語検索（MLS
 
 高度な MLS のダウンロード（「phasetwo」ともいう）は、アドビのリポジトリから入手できます。
 
-* [AEM-SOLR-MLS-phasetwo](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/tat/AEM-SOLR-MLS-phasetwo/1.2.40/)
+* AEM-SOLR-MLS-phasetwo
+高度なMLSパッケージを入手するには、ドキュメントのデプロイセクションの[AEM Advanced MLS](deploy-communities.md#aem-advanced-mls)を参照してください。
 
    * バージョン1.2.40（2016年4月7日）
    * AEM-SOLR-MLS-phasetwo-1.2.40.zipをダウンロードします。
@@ -242,7 +243,7 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ(UGC)
 
 ## 設定 {#configurations}
 
-### プライマリパブリッシャー  {#primary-publisher}
+### プライマリパブリッシャー {#primary-publisher}
 
 選択したデプロイメントが[パブリッシュファーム](topologies.md#tarmk-publish-farm)の場合、**通知**&#x200B;や&#x200B;**Adobe Analytics**&#x200B;に依存する機能など、すべてのインスタンスで発生しないアクティビティの場合、1つのAEMパブリッシュインスタンスを&#x200B;**`primary publisher`**&#x200B;として識別する必要があります。
 
@@ -291,11 +292,11 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ(UGC)
 
 以下の画像は、ポートを 4503 から 6103 に変更した結果を示しています。
 
-#### デフォルトエージェント（パブリッシュ） {#default-agent-publish}
+#### デフォルトエージェント（publish） {#default-agent-publish}
 
 ![chlimage_1-412](assets/chlimage_1-412.png)
 
-#### リバースレプリケーションエージェント（publish reverse）{#reverse-replication-agent-publish-reverse}
+#### リバースレプリケーションエージェント（publish reverse） {#reverse-replication-agent-publish-reverse}
 
 ![chlimage_1-413](assets/chlimage_1-413.png)
 
@@ -380,7 +381,7 @@ AEM 6.2以前と同様に、鍵の素材をリポジトリに保存する場合�
 
 * [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)を参照します。
 * `/etc/key`を選択します。
-* `Replication`タブを開きます。
+* `Replication`タブを開く
 * `Replicate`を選択します。
 
 * [Granite 暗号バンドルを更新します。](#refresh-the-granite-crypto-bundle)
