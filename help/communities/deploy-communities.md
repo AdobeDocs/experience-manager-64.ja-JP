@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: d0249609-2a9c-4d3b-92ee-dbc5fbdeaac6
 exl-id: 0b7496f0-0b3c-4d12-a659-d95744157f14
-source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
+source-git-commit: a70f874ad7fcae59ee4c6ec20e23ffb2e339590b
 workflow-type: tm+mt
-source-wordcount: '2145'
-ht-degree: 39%
+source-wordcount: '2187'
+ht-degree: 34%
 
 ---
 
@@ -147,21 +147,21 @@ Shareable Content Object Reference Model（SCORM）は、e ラーニングの標
 
 AEM Communities SCORM エンジンは[イネーブルメント](overview.md#enablement-community)機能で必要になります。AEM Communities 6.4バージョンでサポートされるSCORMパッケージは次のとおりです。
 
-* **[cq -social- scorm -package、バージョン1.2.11](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-pkg)**&#x200B;を参照してください。この SCORM パッケージは、AEM 6.4 Communities の全バージョンでサポートされています。
+* **[cq -social- scorm -package、バージョン1.2.11](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-pkg)**&#x200B;を参照してください。この SCORM パッケージは、AEM 6.4 Communities の全バージョンでサポートされています。
 
-* **[cq -social- scorm -package, version 2.2.2に](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)** は [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) エンジンが含まれます。このSCORMパッケージは、AEM 6.4.2.x Communities以降でサポートされます。
+* **[cq -social- scorm -package, version 2.2.2に](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg)** は [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) エンジンが含まれます。このSCORMパッケージは、AEM 6.4.2.x Communities以降でサポートされます。
 
-SCORMエンジンの新規インストールの場合は、[SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)([ cq -social- scorm -package, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg))を含むパッケージを使用する必要があります。 それによって、SCORM 2017 でサポートされているラーニングリソースを再生できます。
+SCORMエンジンの新規インストールの場合は、[SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)([ cq -social- scorm -package, version 2.2.2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg))を含むパッケージを使用する必要があります。 それによって、SCORM 2017 でサポートされているラーニングリソースを再生できます。
 
 <!--This section used to be an accordion until converted to straight Markdown. When accordions are enabled, revert-->
 
 ### SCORM パッケージを初めてインストールする場合
 
-1. **[cq-social-scorm-package, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg).**&#x200B;をインストールします。
+1. **[cq-social-scorm-package, version 2.2.2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg).**&#x200B;をインストールします。
 1. cqインスタンスから&#x200B;**`/libs/social/config/scorm/database_scormengine_data.sql`**&#x200B;をダウンロードし、mysqlサーバーで実行して、アップグレードされたscormEngineDBスキーマを作成します。
 1. パブリッシャーの`https://<hostname>;:<port>/system/console/configMgr`からCSRFフィルターのExcluded Pathsプロパティに`/content/communities/scorm/RecordResults`を追加します。
 
-作成したコースコンテンツにSCORM 2017.1が必要な場合は、既存のSCORMインストールを&#x200B;[**cq-social-scorm-package, version 2.2.2**](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg)（[SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)を使用）にアップグレードできます。
+作成したコースコンテンツにSCORM 2017.1が必要な場合は、既存のSCORMインストールを&#x200B;[**cq-social-scorm-package, version 2.2.2**](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg)（[SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)を使用）にアップグレードできます。
 
 >[!NOTE]
 >
@@ -172,7 +172,7 @@ SCORMエンジンの新規インストールの場合は、[SCORM 2017.1](https:
 ### SCORM エンジンのバージョンをアップグレードするには
 
 1. ScormEngineDB スキーマのバックアップを作成します。
-1. **[cq-social-scorm-package, version 2.2.2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/social/scorm/cq-social-scorm-2017-pkg).**&#x200B;をインストールします。
+1. **[cq-social-scorm-package, version 2.2.2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg).**&#x200B;をインストールします。
 1. `/libs/social/config/scorm/ScormEngine.zip`からパッケージをダウンロードし、同じものを抽出します。
 1. 展開したディレクトリの&#x200B;**Installer**&#x200B;フォルダーに移動します。
 1. **[!UICONTROL EngineInstall.xml]**&#x200B;の`scorm db connection url`で`SystemDatabaseConnectionString`を更新します。
@@ -197,7 +197,8 @@ SRP コレクション（MSRP または DSRP）で高度な多言語検索（MLS
 高度な MLS のダウンロード（「phasetwo」ともいう）は、アドビのリポジトリから入手できます。
 
 * AEM-SOLR-MLS-phasetwo
-高度なMLSパッケージを入手するには、ドキュメントのデプロイセクションの[AEM Advanced MLS](deploy-communities.md#aem-advanced-mls)を参照してください。
+
+   高度なMLSパッケージを入手するには、ドキュメントのデプロイセクションの[AEM Advanced MLS](deploy-communities.md#aem-advanced-mls)を参照してください。
 
    * バージョン1.2.40（2016年4月7日）
    * AEM-SOLR-MLS-phasetwo-1.2.40.zipをダウンロードします。
