@@ -1,8 +1,8 @@
 ---
 title: AEM Forms のアセットとドキュメントの移行
-seo-title: AEM Forms のアセットとドキュメントの移行
+seo-title: Migrate AEM Forms assets and documents
 description: 移行ユーティリティにより、AEM Forms のアセットとドキュメントを AEM 6.3 Forms またはそれ以前のバージョンから AEM 6.4 forms に移行できます。
-seo-description: 移行ユーティリティにより、AEM Forms のアセットとドキュメントを AEM 6.3 Forms またはそれ以前のバージョンから AEM 6.4 forms に移行できます。
+seo-description: The Migration utility allows you to Migrate AEM Forms assets and documents from AEM 6.3 Forms or prior versions to AEM 6.4 Forms.
 uuid: 593fc421-b70e-4dbe-87bc-ea49ff025368
 content-type: reference
 topic-tags: correspondence-management, installing
@@ -12,10 +12,10 @@ content-strategy: max-2018
 discoiquuid: a8b1f7df-e36f-4d02-883a-72120fea7046
 role: Admin
 exl-id: 72ead30c-648d-43ad-9826-9c8945a8860d
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1872'
-ht-degree: 68%
+source-wordcount: '1829'
+ht-degree: 66%
 
 ---
 
@@ -38,13 +38,13 @@ AEM Forms 6.3または6.2からAEM Forms 6.4の最新バージョンに[アッ�
 
 **インプレースアップグレードを実行した場合**
 
-インプレースアップグレードを実行した場合、アップグレードインスタンスにはすでにアセットやドキュメントが存在します。ただし、これらのアセットやドキュメントを使用する前に、[AEMFD 互換性パッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT)（Correspondence Management 互換性パッケージが含まれています）をインストールする必要があります。
+インプレースアップグレードを実行した場合、アップグレードインスタンスにはすでにアセットやドキュメントが存在します。ただし、これらのアセットやドキュメントを使用する前に、[AEMFD 互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)（Correspondence Management 互換性パッケージが含まれています）をインストールする必要があります。
 
 次に、移行ユーティリティ](#runningmigrationutility)を実行して、アセットとドキュメントを更新する必要があります。[
 
 **新規インストールを実行した場合**
 
-アセットとドキュメントを使用する前に、（新規の）場所外のインストールの場合は、[AEMFD互換性パッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT)（Correspondence Management互換性パッケージを含む）をインストールする必要があります。
+アセットとドキュメントを使用する前に、（新規の）場所外のインストールの場合は、[AEMFD互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)（Correspondence Management互換性パッケージを含む）をインストールする必要があります。
 
 次に、新しい設定でアセットパッケージ（zipまたはcmp）を読み込み、移行ユーティリティ](#runningmigrationutility)を実行して[アセットとドキュメントを更新する必要があります。 [後方互換性に関する要件](/help/sites-deploying/backward-compatibility.md)が変更されたことに伴い、CRX リポジトリ内のいくつかのフォルダーの場所が変更されています。以前の設定から新しい環境に依存関係（カスタムライブラリとアセット）を手動で書き出し、読み込みます。
 
@@ -107,15 +107,12 @@ Correspondence Management のアセットを移行する場合は、以下の点
    >これらのコンポーネントは、アダプティブフォームのルールエディターで開くことで移行できます。
    >
    >* カスタムコンポーネントのルールとスクリプトを（6.3からアップグレードする場合は不要）移行するには、「アダプティブFormsカスタムコンポーネントの移行」をタップし、次の画面で「移行を開始」をタップします。 次のものが移行されます。
-      >
-      >  
-   * ルールエディターで作成されたルールとスクリプト（6.1 FP1 以降）
+   >
+   >  * ルールエディターで作成されたルールとスクリプト（6.1 FP1 以降）
    >  * 6.1 以前の UI の「スクリプト」タブで作成されたスクリプト
    >* テンプレートを移行する（6.3からアップグレードする場合は不要）には、「アダプティブFormsテンプレートの移行」をタップし、次の画面で「移行を開始」をタップします。 次のものが移行されます。
-
-      >
-      >  
-   * 古いテンプレート — AEM 6.1 Forms以前を使用して/appsの下に作成されたアダプティブフォームテンプレート。 これには、テンプレートコンポーネントに定義されたスクリプトも含まれます。
+   >
+   >  * 古いテンプレート — AEM 6.1 Forms以前を使用して/appsの下に作成されたアダプティブフォームテンプレート。 これには、テンプレートコンポーネントに定義されたスクリプトも含まれます。
    >  * 新しいテンプレート — /confの下にテンプレートエディターを使用して作成されたアダプティブフォームテンプレート。 これには、ルールエディターで作成されたルールとスクリプトが含まれます。
 
 

@@ -1,8 +1,8 @@
 ---
 title: 「通信を作成」UI へのカスタムアクションまたはボタンの追加
-seo-title: 「通信を作成」UI へのカスタムアクションまたはボタンの追加
+seo-title: Add custom action/button in Create Correspondence UI
 description: 「通信を作成」UI にカスタムアクションまたはボタンを追加する方法について説明します。
-seo-description: 「通信を作成」UI にカスタムアクションまたはボタンを追加する方法について説明します。
+seo-description: Learn how to add custom action/button in Create Correspondence UI
 uuid: e3609371-caaa-4efe-8f63-4d982cd456ab
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,14 +10,14 @@ topic-tags: correspondence-management
 discoiquuid: 481856df-5db1-4ef5-80d3-3722b5bf8b67
 feature: Correspondence Management
 exl-id: 5bcb26dc-aeb7-4a81-b905-23c8fb05d6d0
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1898'
-ht-degree: 53%
+source-wordcount: '1855'
+ht-degree: 52%
 
 ---
 
-# 「通信を作成」UI へのカスタムアクションまたはボタンの追加{#add-custom-action-button-in-create-correspondence-ui}
+# 「通信を作成」UI へのカスタムアクションまたはボタンの追加 {#add-custom-action-button-in-create-correspondence-ui}
 
 ## 概要 {#overview}
 
@@ -32,7 +32,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 * CRX および JavaScript についての知識
 * LiveCycle サーバー
 
-## シナリオ：通信を作成ユーザーインターフェイスにボタンを作成してレビュー用のレターを送信する  {#scenario-create-the-button-in-the-create-correspondence-user-interface-to-send-a-letter-for-review}
+## シナリオ：通信を作成ユーザーインターフェイスにボタンを作成してレビュー用のレターを送信する {#scenario-create-the-button-in-the-create-correspondence-user-interface-to-send-a-letter-for-review}
 
 通信を作成ユーザーインターフェイスにボタンを追加して、ボタンのアクション（ここではレビュー用のレターの送信）を指定するには、次の操作を行います。
 
@@ -123,7 +123,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
-#### /apps branch 内のプロパティファイルを使用したローカルフォルダーの作成  {#create-a-locale-folder-with-properties-file-in-the-apps-branch}
+#### /apps branch 内のプロパティファイルを使用したローカルフォルダーの作成 {#create-a-locale-folder-with-properties-file-in-the-apps-branch}
 
 ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザーインターフェイスの様々なフィールドのラベルとツールチップメッセージが含まれています。 カスタマイズしたアクションやボタンを機能させるために、/apps branch にこのファイルのコピーを作成します。
 
@@ -161,7 +161,7 @@ ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザー
 
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
-#### Adobe Asset Composer 構築ブロックバンドルの再起動  {#restart-the-adobe-asset-composer-building-block-bundle}
+#### Adobe Asset Composer 構築ブロックバンドルの再起動 {#restart-the-adobe-asset-composer-building-block-bundle}
 
 サーバー側の変更をすべて加えた後、Adobe Asset Composer 構築ブロックバンドルを再起動します。このシナリオでは、サーバー側のacmExtensionsConfig.xmlファイルとACMExtensionsMessages.propertiesファイルが編集されるので、AdobeのAsset Composer構築ブロックバンドルを再起動する必要があります。
 
@@ -177,7 +177,7 @@ ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザー
 
 Adobe Asset Composer 構築ブロックバンドルを再起動した後、通信を作成ユーザーインターフェイスにカスタムボタンが表示されます。通信を作成ユーザーインターフェイスでレターを開いて、カスタムボタンをプレビューできます。
 
-### ボタンへのアクション処理の追加  {#add-action-handling-to-the-button}
+### ボタンへのアクション処理の追加 {#add-action-handling-to-the-button}
 
 通信を作成ユーザーインターフェイスはデフォルトで、次の場所にある cm.domain.js ファイルの ActionHandler を実装します。
 
@@ -322,7 +322,7 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
       '</div>';
       ```
 
-### LiveCycle プロセスの追加によるアクション<span class="acrolinxCursorMarker"></span>処理の有効化  {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
+### LiveCycle プロセスの追加によるアクション<span class="acrolinxCursorMarker"></span>処理の有効化 {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
 
 このシナリオでは、次のコンポーネントを有効にします。これは、添付されたcomponents.zipファイルに含まれています。
 
@@ -352,7 +352,7 @@ LCA プロセスは LiveCycle サーバー上で実行され、サーバーア�
 
    ![Adobe LiveCycle Client SDK Configuration](assets/3_clientsdkconfiguration.png)
 
-#### LiveCycleアーカイブ(LCA) {#install-livecycle-archive-lca}のインストール
+#### LiveCycle Archive（LCA）のインストール {#install-livecycle-archive-lca}
 
 電子メールサービスのLiveCycleを可能にする必須のプロセス。
 
@@ -380,7 +380,7 @@ LCA プロセスは LiveCycle サーバー上で実行され、サーバーア�
 
 1. 「**[!UICONTROL 読み込み]**」をクリックします。
 
-#### 許可リストに加えるされたサービスリスト{#adding-servicename-to-the-allowlisted-service-list}にServiceNameを追加しています
+#### 「許可リストに加える・サービス」リストへのServiceNameの追加 {#adding-servicename-to-the-allowlisted-service-list}
 
 AEM サーバーにアクセスする必要のある LiveCycle サービスを AEM サーバーで指定します。
 
@@ -391,7 +391,7 @@ AEM サーバーにアクセスする必要のある LiveCycle サービスを A
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
-#### 電子メールサービスの設定  {#configure-the-email-service}
+#### 電子メールサービスの設定 {#configure-the-email-service}
 
 このシナリオでは、Correspondence Management で電子メールを送信できるようにするため、LiveCycle サーバーで電子メールサービスを設定します。
 
@@ -424,11 +424,11 @@ Correspondence Management APIを使用するには、`DSCSample.jar`（このド
 
    >[!NOTE]
    >
-   >サーバー側で変更を加えるたびに LiveCycle サーバーは再起動します。独自の LiveCycle コンポーネントの作成について詳しくは、「[カスタムの DSC 開発を通じた LiveCycle ES ソフトウェアの拡張](https://www.adobe.com/devnet/livecycle/articles/dsc_development.html)」を参照してください。
+   >サーバー側で変更を加えるたびに、サーバーを再起動します。
 
    `DSCSample.jar`ファイルは`renderLetter` APIを使用します。 renderLetter APIについて詳しくは、[Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)を参照してください。
 
-#### LiveCyle への DSC の読み込み {#import-dsc-to-livecyle}
+#### JEE上のAEM FormsへのDSCの読み込み {#import-dsc-to-livecyle}
 
 `DSCSample.jar``renderLetter` ファイルは API を使用して、C で入力された XML データの PDF バイト列として レターをレンダリングします。renderLetter およびその他の API について詳しくは、「[レターのレンダリングサービス](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)」を参照してください。
 

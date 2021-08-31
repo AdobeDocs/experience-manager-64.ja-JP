@@ -1,8 +1,8 @@
 ---
 title: サーバー設定の指定
-seo-title: サーバー設定の指定
+seo-title: Configuring Server Settings
 description: サーバー設定ページから、電子メール、タスク通知および管理者通知の設定にアクセスできます。
-seo-description: サーバー設定ページから、電子メール、タスク通知および管理者通知の設定にアクセスできます。
+seo-description: The Server Settings page provides access to email, task notification and administrator notification settings.
 uuid: 73b51ac0-56e5-4748-bb33-e3986c69eb2d
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 exl-id: 7933efeb-618a-4c38-8e5e-593be8ebb00c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2625'
 ht-degree: 90%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 90%
 * **タスク通知の設定**：エンドユーザーおよびグループに、タスクに関する電子メール通知で送信されるメッセージを有効化、無効化または変更することができます（[ユーザーおよびグループへの通知の設定](configuring-server-settings.md#configuring-notifications-for-users-and-groups)を参照）。
 * **管理者通知の設定**：管理タスクについての電子メール通知で送信されるメッセージを有効化、無効化または変更することができます（[管理者への通知の設定](configuring-server-settings.md#configuring-notifications-for-administrators)を参照）。
 
-## 電子メールの設定  {#configuring-email-settings}
+## 電子メールの設定 {#configuring-email-settings}
 
 Forms サーバーの電子メールアカウントを指定できます。この電子メールアカウントを通じて、AEM Forms ユーザーおよび管理者に電子メールメッセージの送信が行われます。これらの電子メールは、完了する必要があるタスクをユーザーに通知したり、タスクが期限切れになったことをユーザーに通知したり、発生したプロセスエラーを管理者に通知したりする際に使用されます。
 
@@ -35,7 +35,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 
 設計および実装するプロセスで電子メールが不要な場合は、電子メールの設定ページのオプションを設定する必要はありません。
 
-### 送信電子メールの設定  {#configure-outgoing-email-settings}
+### 送信電子メールの設定 {#configure-outgoing-email-settings}
 
 1. 管理コンソールで、サービス／forms ワークフロー／サーバー設定／電子メールの設定をクリックします。
 1. 「送信メッセージを有効化」を選択します。
@@ -53,7 +53,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 >
 >間違った情報を入力した場合は、「キャンセル」をクリックして、前に表示したページに戻ります。
 
-### AEM Forms Workspace を使用するための電子メールの設定  {#configuring-email-templates-to-use-html-workspace}
+### AEM Forms Workspace を使用するための電子メールの設定 {#configuring-email-templates-to-use-html-workspace}
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 >
 >AEM Forms のリリースでは Flex Workspace は廃止されています。
 
-### ユーザーまたはグループへのリマインダーの設定  {#configure-reminders-for-users-or-groups}
+### ユーザーまたはグループへのリマインダーの設定 {#configure-reminders-for-users-or-groups}
 
 タスク完了のデッドラインが近づいてきたら、割り当てられているユーザーまたはグループにリマインダー通知を送信することができます。リマインダー通知の正確な送信時刻を決定するルールは、プロセス開発者が決定します。
 
@@ -99,7 +99,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 1. 「電子メールのエンコーディング」リストで、電子メールメッセージに使用するエンコーディング形式を選択します。デフォルトは UTF-8 です。日本以外のほとんどのユーザーはこれを使用します。日本のユーザーは、ISO2022-JP も選択できます。
 1. 「保存」をクリックします。
 
-### ユーザーまたはグループへのタスクの割り当て通知の設定  {#configure-task-assignment-notifications-for-users-or-groups}
+### ユーザーまたはグループへのタスクの割り当て通知の設定 {#configure-task-assignment-notifications-for-users-or-groups}
 
 ユーザーまたはグループにタスクが割り当てられたときに、それぞれにタスクの割り当て通知を送信することができます。
 
@@ -113,7 +113,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 1. 「電子メールのエンコーディング」リストで、電子メールメッセージに使用するエンコーディング形式を選択します。デフォルトは UTF-8 です。日本以外のほとんどのユーザーはこれを使用します。日本のユーザーは、ISO2022-JP も選択できます。
 1. 「保存」をクリックします。
 
-### ユーザーまたはグループへのデッドライン通知の設定  {#configure-deadline-notifications-for-users-or-groups}
+### ユーザーまたはグループへのデッドライン通知の設定 {#configure-deadline-notifications-for-users-or-groups}
 
 割り当てられたタスクの実行デッドラインを過ぎた場合、ユーザーおよびグループにデッドライン通知を送信することができます。ユーザーは割り当てられたタスクを実行できないので、デッドライン通知は情報を提供するためのものに過ぎません。
 
@@ -126,11 +126,11 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 1. 「電子メールのエンコーディング」リストで、電子メールメッセージに使用するエンコーディング形式を選択します。デフォルトは UTF-8 です。日本以外のほとんどのユーザーはこれを使用します。日本のユーザーは、ISO2022-JP も選択できます。
 1. 「保存」をクリックします。
 
-### すべての電子メールの DO NOT DELETE タグを非表示  {#hide-the-do-not-delete-tag-for-all-emails}
+### すべての電子メールの DO NOT DELETE タグを非表示 {#hide-the-do-not-delete-tag-for-all-emails}
 
-人間中心のプロセスで送信されたすべての電子メールで、DO NOT DELETE 追跡タグを非表示にするよう電子メールを設定できます。詳しくは、「[How to hide the &#39;DO-NOT-DELETE&#39; tag with CSS](https://blogs.adobe.com/LiveCycleHelp/2013/09/how-to-hide-the-do-not-delete-tag-with-css.html)」を参照してください。
+人間中心のプロセスで送信されたすべての電子メールで、DO NOT DELETE 追跡タグを非表示にするよう電子メールを設定できます。
 
-## 管理者への通知の設定  {#configuring-notifications-for-administrators}
+## 管理者への通知の設定 {#configuring-notifications-for-administrators}
 
 forms ワークフローが、管理者に送信される電子メール通知を生成する際に使用するテンプレートを設定できます。
 
@@ -139,7 +139,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 * 停止したブランチ
 * 停止した操作
 
-### 停止したブランチの通知の設定  {#configure-stalled-branch-notifications}
+### 停止したブランチの通知の設定 {#configure-stalled-branch-notifications}
 
 ブランチが停止した場合（意図的またはエラーが原因で停止した場合）、管理者または問題を調査できる別のユーザーに電子メール通知を送信することができます。
 
@@ -153,7 +153,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 1. 「電子メールのエンコーディング」リストで、電子メールメッセージに使用するエンコーディング形式を選択します。デフォルトは UTF-8 です。日本以外のほとんどのユーザーはこれを使用します。日本のユーザーは、ISO2022-JP も選択できます。
 1. 「保存」をクリックします。
 
-### 停止した操作の通知の設定  {#configure-stalled-operation-notifications}
+### 停止した操作の通知の設定 {#configure-stalled-operation-notifications}
 
 操作が停止した場合（意図的またはエラーが原因で停止した場合）、管理者または問題を調査できる別のユーザーに電子メール通知を送信することができます。
 
@@ -165,7 +165,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 1. 「通知テンプレート」ボックスに、電子メールメッセージの本文のテキストを入力します。このフィールドには、デフォルトのテキストが事前に入力されています。このフィールドのカスタマイズについて詳しくは、[通知内容のカスタマイズ](configuring-server-settings.md#customizing-the-content-of-notifications)を参照してください。
 1. 「保存」をクリックします。
 
-## 通知内容のカスタマイズ  {#customizing-the-content-of-notifications}
+## 通知内容のカスタマイズ {#customizing-the-content-of-notifications}
 
 タスク通知ページと管理者通知ページには、次に示すような、通知メッセージをカスタマイズするための様々な機能があります。
 
@@ -173,7 +173,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 * 変数選択
 * URL 生成
 
-### リッチテキストエディター  {#rich-text-editor}
+### リッチテキストエディター {#rich-text-editor}
 
 通知テンプレート領域はリッチテキストエディターなので、これを使用して電子メール通知メッセージの HTML を生成することができます。「通知テンプレート」ボックスの下に、フォントと段落の書式設定オプションがあります。フォントタイプ、サイズ、スタイル、カラーのほか、段落の配置と箇条書きについてのオプションがあります。
 
@@ -255,7 +255,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 
 **notification-** host AEM formsアプリケーションサーバーのホスト名。
 
-### 「件名」ボックスでの変数の使用{#using-a-variable-in-the-subject-box}
+### 「件名」ボックスでの変数の使用 {#using-a-variable-in-the-subject-box}
 
 タスクの割り当て通知の「件名」ボックスに、次のテキストを入力するとします。
 
@@ -265,7 +265,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 
 `Please complete task 376`
 
-### 「通知テンプレート」ボックスでの変数の使用{#using-variables-in-the-notification-template-box}
+### 「通知テンプレート」ボックスでの変数の使用 {#using-variables-in-the-notification-template-box}
 
 停止したブランチの通知の「通知テンプレート」ボックスに、次のテキストを入力するとします。
 

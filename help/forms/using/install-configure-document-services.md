@@ -1,16 +1,16 @@
 ---
 title: ドキュメントサービスのインストールと設定
-seo-title: ドキュメントサービスのインストールと設定
+seo-title: Installing and configuring document services
 description: AEM Forms ドキュメントサービスをインストールして、PDF ドキュメントを作成、アセンブル、配布、アーカイブし、デジタル署名を追加してドキュメントへのアクセスを制限し、バーコード化されたフォームをデコードしましょう。
-seo-description: AEM Forms ドキュメントサービスをインストールして、PDF ドキュメントを作成、アセンブル、配布、アーカイブし、デジタル署名を追加してドキュメントへのアクセスを制限し、バーコード化されたフォームをデコードしましょう。
+seo-description: Install AEM Forms document services to create, assemble, distribute, archive PDF documents, add digital signatures to limit access to documents, and decode barcoded forms.
 uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: b3eea94d-87f1-49b3-aabc-cdb32629ef20
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '4295'
+source-wordcount: '4251'
 ht-degree: 67%
 
 ---
@@ -85,7 +85,6 @@ AEM Forms ドキュメントサービスのインストールおよび設定に�
 >* UNIXベースのオペレーティングシステムでは、PDF Generatorは、HTMLファイルをPDFドキュメントに変換するWebKitおよびPhantomJS変換ルートをサポートしています。
 
 >
-
 
 
 ### UNIXベースのオペレーティング・システムの追加要件 {#extrarequirements}
@@ -208,7 +207,6 @@ PDF Generatorサービスを使用して、Microsoft Word、Microsoft Excel、Mi
 >
 
 
-
 Acrobat をインストールしてから、Microsoft Word を開きます。「**Acrobat**」タブで「**PDFを作成**」をクリックし、マシン上にある .doc または .docx のファイルを PDF ドキュメントに変換します。変換が成功すれば、AEM Forms が PDF Generator サービスで Acrobat を使用する準備が整っています。
 
 ### 環境変数の設定 {#setup-environment-variables}
@@ -260,8 +258,7 @@ Acrobat をインストールしてから、Microsoft Word を開きます。「
 >* UNIXベースのプラットフォームでOpenOfficeを使用している場合は、次のコマンドを実行してパス変数を設定します。
 
 >
->  
-`export OpenOffice_PATH=/opt/openoffice.org4`
+>  `export OpenOffice_PATH=/opt/openoffice.org4`
 
 
 ### （IBM WebSphere のみ）IBM SSL ソケットプロバイダーの設定 {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
@@ -387,7 +384,6 @@ Unicode フォントを、使用しているシステムに応じて、次のい
 >
 
 
-
 ## AEM Forms アドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
 AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、AEM Forms ドキュメントサービスおよびその他の AEM Forms 機能が含まれています。次の手順を実行してパッケージをインストールします。
@@ -409,7 +405,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 ### RSA/BouncyCastle ライブラリ用のブート委任の設定  {#configure-boot-delegation-for-rsa-bouncycastle-libraries}
 
-1. AEM インスタンスを停止して [AEMインストールディレクトリ]\crx-quickstart\conf\ folderに移動します。sling.propertiesファイルを開いて編集します。
+1. AEM インスタンスを停止して[AEMインストールディレクトリ]\crx-quickstart\conf\ folderに移動します。sling.propertiesファイルを開いて編集します。
 
    `[AEM installation directory]\crx-quickstart\bin\start.bat` を使用して AEM インスタンスを起動する場合は、`[AEM_root]\crx-quickstart\` フォルダー内の sling.properties ファイルを編集用として開きます。
 
@@ -440,7 +436,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 ### PDF Generator サービスを実行するためのローカルユーザーアカウントの設定  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
 
-PDF Generator サービスを実行するには、ローカルユーザーのアカウントが必要です。ローカルユーザーを作成する手順については、「[Windowsでのユーザーアカウントの作成](https://support.microsoft.com/ja-jp/help/13951/windows-create-user-account) 」または「[UNIXベースのプラットフォームでのユーザーアカウントの作成](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-starting-create-account.html) 」を参照してください。
+PDF Generator サービスを実行するには、ローカルユーザーのアカウントが必要です。ローカルユーザーを作成する手順については、「[Windowsでのユーザーアカウントの作成](https://support.microsoft.com/ja-jp/help/13951/windows-create-user-account)」またはUNIXベースのプラットフォームでのユーザーアカウントの作成を参照してください。
 
 1. [AEM Forms PDF Generator Configuration](http://localhost:4502/libs/fd/pdfg/config/ui.html)ページを開きます。
 

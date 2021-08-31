@@ -1,8 +1,8 @@
 ---
 title: Formsのレンダリング
-seo-title: Formsのレンダリング
+seo-title: Rendering Forms
 description: Formsサービスを使用して、通常はDesignerで作成されるフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャクライアントアプリケーションを作成します。 フォーム作成者は、Formsサービスが様々なブラウザー環境でPDF、SWFまたはHTMLでレンダリングする単一のフォームデザインを開発できます。
-seo-description: Formsサービスを使用して、通常はDesignerで作成されるフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャクライアントアプリケーションを作成します。 フォーム作成者は、Formsサービスが様々なブラウザー環境でPDF、SWFまたはHTMLでレンダリングする単一のフォームデザインを開発できます。
+seo-description: Use the Forms service to create interactive data capture client applications that validate, process, transform, and deliver forms typically created in Designer. Form authors can develop a single form design that the Forms service renders in PDF, SWF, or HTML in various browser environments.
 uuid: 68d7b7bc-7730-4a83-b7b9-ebe2a29d6c51
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ topic-tags: operations
 discoiquuid: f8749793-e53f-4812-a093-8278f480e6a8
 role: Developer
 exl-id: 61d63c89-26e8-4a50-b6a3-1bcf1a1b4c54
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
 
-# Forms {#rendering-forms}のレンダリング
+# Formsのレンダリング {#rendering-forms}
 
 **Formsサービスについて**
 
@@ -57,4 +57,3 @@ Formsサービスを使用して、次のタスクを実行できます。
 * フォームデータを計算します。 （[フォームデータの計算](/help/forms/developing/calculating-form-data.md)を参照）。
 * アプリケーションを最適化する。 (「[Formsサービスのパフォーマンスの最適化](/help/forms/developing/optimizing-performance-forms-service.md)」を参照)。
 
-   ***ヒント&#x200B;**:Adobe開発者のWebサイトには、Formsサービスを呼び出してフォームをレンダリングするASP.NETアプリケーションの作成方法を説明する次の記事が含まれています。[ASP.NETアプリケーションをレンダリングするフォームの作成](https://www.adobe.com/devnet/livecycle/articles/asp_net.html).*を参照してください。

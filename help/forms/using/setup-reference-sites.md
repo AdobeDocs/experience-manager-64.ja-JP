@@ -1,18 +1,18 @@
 ---
 title: AEM Forms リファレンスサイトのセットアップおよび設定
-seo-title: AEM Forms リファレンスサイトのセットアップおよび設定
+seo-title: Set up and configure AEM Forms reference sites
 description: AEM Forms のリファレンスサイトでは、AEM Forms を使用して、組織内にエンドツーエンドのワークフローを実装する方法を参照することができます。
-seo-description: AEM Forms のリファレンスサイトでは、AEM Forms を使用して、組織内にエンドツーエンドのワークフローを実装する方法を参照することができます。
+seo-description: AEM Forms reference sites showcase how you can use AEM Forms to implement end-to-end workflow in an organization.
 uuid: 087d58a1-d84e-49ac-a82d-4e7fc708f00f
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 2feb4a9c-57ad-4c6b-a572-0047bc409bbb
 exl-id: 9c5d956c-06bc-4428-afcd-02b4f81b802f
-source-git-commit: 933084f92d116111dbfea55d52b1ad60ae691505
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '2936'
-ht-degree: 47%
+source-wordcount: '2911'
+ht-degree: 46%
 
 ---
 
@@ -63,7 +63,7 @@ AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の�
  <tbody> 
   <tr> 
    <th><strong>ステップ</strong></th> 
-   <th><strong>設定</strong></th> 
+   <th><strong> の設定</strong></th> 
    <th><strong>備考</strong></th> 
   </tr> 
   <tr> 
@@ -134,7 +134,7 @@ AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の�
  </tbody> 
 </table>
 
-## AEM Forms のインストールと設定  {#install-and-configure-aem-forms}
+## AEM Forms のインストールと設定 {#install-and-configure-aem-forms}
 
 「[OSGi](/help/forms/using/installing-configuring-aem-forms-osgi.md)へのAEM Formsのインストールと設定」の説明に従って、AEM Formsをインストールしてデプロイします。
 
@@ -152,7 +152,7 @@ Adobe Sign サーバーとの通信を行うには、SSL を設定する必要�
 
 ## Day CQ Link Externalizer の設定 {#externalizer}
 
-AEMの&#x200B;**Externalizer**&#x200B;は、リソースパス(例えば、/path/to/my/page)を外部URLと絶対URL(例えば、https://www.mycompany.com/path/to/my/page)に変換します。 詳しくは、「[URL の外部化](/help/sites-developing/externalizer.md)」を参照してください。
+AEMの&#x200B;**Externalizer**&#x200B;は、事前に設定されたDNSでパスを接頭辞として付け、リソースパス（例えば、/path/to/my/page）を外部および絶対URL(例えば、https://www.mycompany.com/path/to/my/page)にプログラムで変換できるOSGIサービスです。 詳しくは、「[URL の外部化](/help/sites-developing/externalizer.md)」を参照してください。
 
 >[!CAUTION]
 >
@@ -195,7 +195,7 @@ AEMの&#x200B;**Externalizer**&#x200B;は、リソースパス(例えば、/path
 We.Finance リファレンスサイトの電子メールテンプレートには、電子メール内で使用するカスタマイズされた各種リンクが用意されています。これらのリンクには、`${placeholder}`というプレースホルダーがあります。 プレースホルダーは、電子メールの送信前に実際の値に置き換えられます。AEM のデフォルトの XSS 保護設定では、HTML コンテンツ内の URL に波括弧（**{ }**）を使用できません。ただし、パブリッシュインスタンスで以下の手順を実行することにより、デフォルトの設定を上書きすることができます。
 
 1. `/libs/cq/xssprotection/config.xml` を `/apps/cq/xssprotection/config.xml` にコピーします。
-1. `/apps/cq/xssprotection/config.xml` を開きます。
+1. 次を開きます： `/apps/cq/xssprotection/config.xml`.
 1. `common-regexps`セクションで、`onsiteURL`エントリを次のように変更し、ファイルを保存します。
 
    `<regexp name="onsiteURL" value="([\p{L}\p{N}\\\.\#@\$\{\}%\+&;\-_~,\?=/!\*\(\)]*|\#(\w)+)"/>`
@@ -232,7 +232,7 @@ AEM Formsリファレンスサイトの場合、AEM DS Settings Serviceで、処
 
 インストールが正常に完了すると、We.Gov と We.Finance のリファレンスサイトのランディングページにアクセスできるようになります。
 
-## （オプション）サンプルデータをMicrosoft Dynamicsに読み込む{#optional-import-sample-data-into-microsoft-dynamics}
+## （オプション）サンプルデータをMicrosoft Dynamicsに読み込む {#optional-import-sample-data-into-microsoft-dynamics}
 
 住宅ローン申し込みと自動保険申し込みリファレンスサイトは、Microsoft Dynamicsのレコードを使用するように構成されています。 リファレンスサイトパッケージでは、Microsoft Dynamicsに読み込んでリファレンスサイトを実行できるカスタムエンティティとサンプルレコードがインストールされます。 サンプルデータを移行して設定するには、次の手順を実行します。
 
@@ -288,7 +288,7 @@ AEM FormsでOAuthクラウドサービスを設定して、AEM FormsとMicrosoft
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 
-## リファレンスサイトの Adobe Sign クラウドサービスの設定  {#sign-service}
+## リファレンスサイトの Adobe Sign クラウドサービスの設定 {#sign-service}
 
 オーサーインスタンスとパブリッシュインスタンスの両方で以下の手順を実行します。
 
@@ -321,7 +321,7 @@ AEM FormsでOAuthクラウドサービスを設定して、AEM FormsとMicrosoft
 1. 設定を保存します。
 1. （**オーサーインスタンスのみ**）**[!UICONTROL ツール]**/**[!UICONTROL Cloud Services]**/**[!UICONTROL データソース]**/**[!UICONTROL グローバル]**&#x200B;に移動します。 **[!UICONTROL roi-rest]**&#x200B;を選択し、**[!UICONTROL プロパティ]**&#x200B;をタップします。 「**[!UICONTROL 認証設定]**」をタップし、「**[!UICONTROL 認証の種類]**」を「**[!UICONTROL 基本認証]**」に設定します。 サービスにアクセスするユーザー名とパスワードとして`admin`/ `admin`を指定します。 「**[!UICONTROL 保存して閉じる]**」をタップします。
 
-## Marketing Cloud{#integrate-with-marketing-cloud}と統合
+## Marketing Cloudとの統合 {#integrate-with-marketing-cloud}
 
 AEM FormsをAdobe AnalyticsおよびAdobe Targetと統合できます。 Adobe Analyticsは、アダプティブフォームのレポートを生成し、パフォーマンスを分析するのに役立ちますが、Adobe Targetは、パーソナライズされたエクスペリエンスを提供し、アダプティブフォームのA/Bテストを実行するのに役立ちます。
 

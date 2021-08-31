@@ -1,8 +1,8 @@
 ---
 title: 互換性パッケージ
-seo-title: 互換性パッケージ
+seo-title: Compatibility Package
 description: '互換性パッケージを AEM Forms 6.4 にインストールすると、AEM Forms 6.3 および非推奨になったアダプティブォームテンプレートとページから Correspondence Management アセットを使用できます '
-seo-description: 互換性パッケージを AEM Forms 6.4 にインストールすると、AEM Forms 6.3 および非推奨になったアダプティブォームテンプレートとページから Correspondence Management アセットを使用できます
+seo-description: Installing the Compatibility package on AEM Forms 6.4 allows you to use the Correspondence Management assets from AEM Forms 6.3 and deprecated adaptive forms templates and pages
 uuid: e50b1ff9-c357-422a-8da8-a791ff805317
 contentOwner: gtalwar
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,10 +11,10 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 38a80992-2eda-4535-89af-0de34b1a9686
 role: Admin
 exl-id: 0bfa0e65-c4cd-4c37-b42b-bff1b777a7be
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 86%
+source-wordcount: '344'
+ht-degree: 80%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 86%
 
 ## 概要 {#overview}
 
-AEM Forms 6.4 で顧客通信を作成するためのデフォルトかつ推奨のアプローチは、インタラクティブ通信です。AEM 6.3 Forms および AEM 6.2 Forms のレターを引き続き使用するには、[AEMFD 互換性パッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT)をインストールする必要があります。
+AEM Forms 6.4 で顧客通信を作成するためのデフォルトかつ推奨のアプローチは、インタラクティブ通信です。AEM 6.3 Forms および AEM 6.2 Forms のレターを引き続き使用するには、[AEMFD 互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)をインストールする必要があります。
 
 AEMFD 互換性パッケージを使用すると、AEM Forms 6.4 で AEM Forms 6.3 および 6.2 の以下のアセットを使用できます。
 
@@ -41,7 +41,7 @@ AEMFD 互換性パッケージを使用すると、AEM Forms 6.4 で AEM Forms 6
 
 [AEM互換性パッケージ](/help/sites-deploying/backward-compatibility.md)が事前にインストールされていることを確認します。
 
-1. [互換性パッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT)をインストールします。
+1. [互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)をインストールします。
 
    パッケージのアップロードおよびインストールについて詳しくは、「[パッケージの作業方法](/help/sites-administering/package-manager.md)」を参照してください。
 

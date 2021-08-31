@@ -1,8 +1,8 @@
 ---
 title: 一般リリースノート（Adobe Experience Manager 6.4）
-seo-title: リリースノート
+seo-title: Release Notes
 description: 'Adobe Experience Manager 6.4 のノートでは、リリース情報、新機能情報、インストール方法および詳細な変更リストを提供します。 '
-seo-description: 'Adobe Experience Manager 6.4 のノートでは、リリース情報、新機能情報、インストール方法および詳細な変更リストを提供します。 '
+seo-description: Adobe Experience Manager 6.4 notes outlining the release information, what's new, how to install and detailed change lists.
 uuid: 5a220301-2727-4078-ba19-4a2dbf9657f4
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
@@ -10,10 +10,10 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 exl-id: ee034595-2d2a-4887-86c4-6bf0770da6a2
-source-git-commit: eb55489da5e390578b2ae71be424930e9bf3efd3
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '2813'
-ht-degree: 78%
+source-wordcount: '2754'
+ht-degree: 77%
 
 ---
 
@@ -94,7 +94,7 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 * 新しい[「System Overview」](/help/sites-administering/operations-dashboard.md#system-overview)には、パフォーマンスに関連するすべてのシステムのステータスとアクティビティのスナップショットが表示されます。
 * インデックス作成、クエリー、メンテナンスに関する一連の[ヘルスチェック](/help/sites-administering/operations-dashboard.md#health-checks)が新しく用意されています。 
 
-#### プロジェクトとワークフロー  {#projects-and-workflows}
+#### プロジェクトとワークフロー {#projects-and-workflows}
 
 * [ワークフローモデルを作成および編集するためのワークフローエディター](/help/sites-developing/workflows-models.md)がまったく新しくなりました。
 
@@ -107,7 +107,7 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 * [リポジトリ再構築](/help/sites-deploying/repository-restructuring.md):アップグレードを容易にし、実装のベストプラクティスを促進するための大幅な再構築（主に/etc）
 * アップグレードについて詳しくは、[このページ](/help/sites-deploying/upgrade.md)を参照してください。
 
-### Experience Manager Sites  {#experience-manager-sites}
+### Experience Manager Sites {#experience-manager-sites}
 
 変更点の完全なリストは[AEM Sites とアドオン](sites.md)を参照してください。
 
@@ -127,13 +127,13 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 Sling Model Exporterとコアコンポーネントに対する様々な機能強化が含まれ、シングルページアプリで作成されるモバイルアプリとエクスペリエンスにコンテンツを埋め込むための堅牢なJSON出力が提供されます。
 
-#### サイトの構築を迅速に行う{#gettings-sites-built-quicker}
+#### サイトの構築を迅速に行う {#gettings-sites-built-quicker}
 
 AEM 6.4 で次世代のコンポーネントモデルへの転換が完了します。AEM 6.3 で導入されたコアコンポーネントの概念にスタイルシステムが加わって、新規サイトの作成や既存サイトの拡張を効率的におこなえるようになりました。
 
 新しいコンポーネントモデルの最善の活用方法については、[AEM Sites の開発の手引き - WKND チュートリアル](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)を参照されることをお勧めします。
 
-#### Screens アドオン  {#screens-add-on}
+#### Screens アドオン {#screens-add-on}
 
 デジタルサイネージやキオスクネットワークを含む、すべてのマーケティングチャネルにわたって一貫したメッセージを配信することは、AEM Screensの略です。 AEM 6.4 では、Microsoft Windows および Google Chrome OS ハードウェアでサイネージプレーヤーを実行できるようになりました。さらに、リモートデバイス管理およびスケジュール（チャネルグループ）の機能強化もおこなわれています。
 
@@ -143,7 +143,7 @@ Screensのアップデートについて詳しくは、『[AEM Screensユーザ�
 
 AEM 6.4 では、Communities に多くの新機能や機能強化が加えられています。変更点の完全なリストについては、[AEM Communities](communities-release-notes.md) を参照してください。主なものを以下に示します。
 
-#### モデレートの機能強化  {#enhancements-to-moderation}
+#### モデレートの機能強化 {#enhancements-to-moderation}
 
 **自動スパム検出**
 
@@ -163,7 +163,7 @@ AEM 6.4 では、Communities に多くの新機能や機能強化が加えられ
 
 AEM 6.4 Communities では、エンドユーザーが自分のデータを管理できるように、[すぐに使用できる API](/help/communities/user-ugc-management-service.md) とサンプル[サーブレット](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/master/bundles/communities-ugc-management-servlet)を公開しています。また、これらの API を使用すると、データ処理やデータ管理をおこなう組織で EU の GDPR に準拠することができます。
 
-#### サイトおよびグループ管理の機能強化  {#enhancements-to-site-and-group-management}
+#### サイトおよびグループ管理の機能強化 {#enhancements-to-site-and-group-management}
 
 **複数ロケールグループを1つの手順で作成**
 
@@ -175,7 +175,7 @@ AEM 6.4 Communities では、エンドユーザーが自分のデータを管理
 
 グローバルナビゲーションから操作している際に、それぞれのサイトおよびグループの削除アイコンを使用できるようになりました。このアイコンを使用すると、サイトまたはグループに関連付けられているすべての項目やコンテンツが削除され、ユーザーとの関連付けもすべて削除されます。この機能について詳しくは、[コミュニティサイトの管理](/help/communities/create-site.md#main-pars-text-fe17)および[コミュニティグループの管理](/help/communities/groups.md#main-pars-text-5e8c)を参照してください。
 
-#### イネーブルメントの機能強化  {#enhancements-to-enablement}
+#### イネーブルメントの機能強化 {#enhancements-to-enablement}
 
 グループ内で割り当て機能とカタログ機能を使用できるようになりました。これにより、ターゲットとなる特定のコミュニティメンバー向けの学習コンテンツを作成、管理、公開することができます。コミュニティグループの有効化について詳しくは、[イネーブルメントリソースの管理](/help/communities/resource.md)を参照してください。
 
@@ -263,7 +263,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 使用している AEM 6.4 インスタンスに Livefyre を統合することができます。Livefyre と AEM の統合方法については、以下を参照してください。
 
-* [Livefyre との連携](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html)
+* [Livefyre との統合](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html)
 
 ### 顧客中心開発の強化 {#leverage-customer-focused-development}
 
@@ -312,11 +312,11 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 * AEM Forms の機能パッケージ：
 
-   * [adobe-aemfd-aix-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-AIX)
-   * [adobe-aemfd-linux-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-LX)
-   * [adobe-aemfd-solaris-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-SOL)
-   * [adobe-aemfd-win-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-WIN)
-   * [adobe-aemfd-osx-pkg](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-OSX)
+   * [adobe-aemfd-aix-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+   * [adobe-aemfd-linux-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+   * [adobe-aemfd-solaris-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.htmlL)
+   * [adobe-aemfd-win-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+   * [adobe-aemfd-osx-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 
 ## 言語 {#languages}
 
@@ -355,7 +355,7 @@ Experience Manager 6.4 は、中国語エンコーディング規格の使用に
 
 Adobe Experience Manager 6.4 についての情報は、[廃止および削除された機能](deprecated-removed-features.md)を参照してください。このページには、2019 年におこなわれる変更の予告と、前のリリースからアップデートするお客様向けの重要な注意事項も含まれています。
 
-## 変更点の詳細なリスト  {#detailed-changes-lists}
+## 変更点の詳細なリスト {#detailed-changes-lists}
 
 [AEM Sites](sites.md)
 

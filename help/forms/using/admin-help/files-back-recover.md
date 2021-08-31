@@ -1,8 +1,8 @@
 ---
 title: バックアップおよび回復するファイル
-seo-title: バックアップおよび回復するファイル
+seo-title: Files to back up and recover
 description: バックアップする必要のあるアプリケーションとデータファイルについて説明します。
-seo-description: バックアップする必要のあるアプリケーションとデータファイルについて説明します。
+seo-description: This document describes the application and data files that must be backed up.
 uuid: ba04adb9-675a-48f2-ad52-39c1266e423b
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 exl-id: 407db3cf-8add-486b-8cf5-daeecc18bf30
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '2203'
+source-wordcount: '2142'
 ht-degree: 89%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 89%
 * バックアップのためにクラスター環境でノードを停止する必要がある場合は、プライマリノードの前にセカンダリノードをシャットダウンしてください。 そうしないと、クラスターまたはサーバー内で一貫性がなくなる可能性があります。また、プライマリノードは、セカンダリノードより前にライブにする必要があります。
 * クラスターの復旧操作では、アプリケーションサーバーはクラスター内の各ノードごとに停止する必要があります。
 
-## グローバルドキュメントストレージディレクトリ  {#global-document-storage-directory}
+## グローバルドキュメントストレージディレクトリ {#global-document-storage-directory}
 
 GDS は、プロセス内で使用される長期間有効なファイルの保存に使用されるディレクトリです。長期間有効なファイルの有効期間内には、AEM Forms システムが 1 回以上起動され、期間は数日間、数年間に渡る場合もあります。長期間有効なファイルには、PDF、ポリシー、フォームテンプレートなどがあります。長期間有効なファイルは、多くの AEM Forms デプロイメントの全体的な状態の中で重要な部分です。長期間有効なドキュメントが一部でも失われたり破損したりすると、forms サーバーが不安定な状態になるおそれがあります。
 
@@ -35,7 +35,7 @@ GDS は、プロセス内で使用される長期間有効なファイルの保�
 
 GDS の場所は、AEM forms のインストールプロセス中に決定するか、管理コンソールを使用して後から決定することもできます。GDS の高可用性を実現する場所を維持するほかに、ドキュメントのデータベース保存を有効にすることもできます。[ドキュメントの保存にデータベースを使用する場合のバックアップオプション](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)を参照してください。
 
-### GDS の場所  {#gds-location}
+### GDS の場所 {#gds-location}
 
 インストール時に場所を指定しないと、アプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。アプリケーションサーバーの次のディレクトリをバックアップする必要があります。
 
@@ -52,13 +52,13 @@ GDS の場所をデフォルト以外の場所に変更した場合は、新し�
 
 元の場所が使用できなくなった場合、回復中に GDS の場所を変更できます（[回復中の GDS の場所の変更](/help/forms/using/admin-help/recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)を参照）。
 
-### ドキュメントの保存にデータベースを使用する場合のバックアップオプション  {#backup-options-when-database-is-used-for-document-storage}
+### ドキュメントの保存にデータベースを使用する場合のバックアップオプション {#backup-options-when-database-is-used-for-document-storage}
 
 管理コンソールを使用して AEM Forms のデータベースで AEM Forms ドキュメントの保存を有効にすることができます。このオプションを使用してすべての永続ドキュメントをデータベースに保存する場合でも、AEM Forms にはファイルシステムベースの GDS ディレクトリが必要です。その理由は、AEM Forms のセッションと呼び出しに関連する永続ファイル、一時ファイルおよびリソースの保存に GDS ディレクトリが使用されるためです。
 
 管理コンソールの「コアシステム設定」、または Configuration Manager を使用して「データベースへのドキュメントの保存を有効にする」オプションを選択すると、AEM Forms ではスナップショットバックアップモードおよびローリングバックアップモードが許可されません。したがって、AEM Forms を使用してバックアップモードを管理する必要がなくなります。このオプションを使用する場合は、オプションを有効にした後、1 回のみ GDS をバックアップする必要があります。バックアップから AEM Forms を回復する場合、GDS のバックアップディレクトリの名前を変更したり GDS を復元したりする必要はありません。
 
-## AEM リポジトリ  {#aem-repository}
+## AEM リポジトリ {#aem-repository}
 
 AEM リポジトリ（crx-repository）は、AEM Forms のインストール時に crx-repository が設定された場合に作成されます。crx-repository ディレクトリの場所は、AEM Forms のインストールプロセス中に決まります。AEM Forms における AEM Forms データの一貫性を保つために、データベースと GDS と一緒に AEM リポジトリのバックアップと復旧が必要です。AEM リポジトリには、Correspondence Management Solution、Forms Manager および AEM Forms Workspace のデータが含まれます。
 
@@ -68,7 +68,7 @@ Correspondence Management Solution は、安全でパーソナライズされた
 
 シンプルな Correspondence Managemant Solutions セットアップには、同じマシンまたは別々のマシンに、オーサーインスタンスとパブリッシュインスタンスが含まれます。
 
-### Forms Manager  {#forms-manager}
+### Forms Manager {#forms-manager}
 
 Forms Manager は、フォームの更新、管理、リタイアのプロセスを効率的に実行します。
 
@@ -82,7 +82,7 @@ AEM Forms Workspace は、Flex Workspace（JEE 上の AEM Forms では廃止さ�
 
 Flash Player と Adobe Reader を使用しなくてもクライアントでタスク管理が可能です。 PDF フォームと Flex フォームの他に、HTML フォームのレンダリングを容易にします。
 
-## AEM Forms データベース  {#aem-forms-database}
+## AEM Forms データベース {#aem-forms-database}
 
 AEM Forms データベースに格納される情報には、フォームの生成結果、サービスの設定、プロセスの状態、GDS 内にあるファイルへのデータベース参照、およびコンテンツ保存場所のルートディレクトリ内にあるファイルへのデータベース参照（Content Services の場合）などがあります。データベースのバックアップはサービスを中断することなくリアルタイムで実行でき、特定の時点または特定の変更に回復できます。ここでは、バックアップをリアルタイムで実行するためのデータベースの設定方法について説明します。
 
@@ -92,7 +92,7 @@ AEM Forms データベースに格納される情報には、フォームの生�
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。Content Services（非推奨）の設定について詳しくは、『[Content Services の管理](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf)』を参照してください。
+>Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。
 
 ### DB2 {#db2}
 
@@ -104,7 +104,7 @@ DB2 データベースをアーカイブログモードで実行されるよう�
 
 IBM は、データベース管理者がバックアップと回復タスクを実行する際に役に立つ次のようなツールやヘルプシステムを提供しています。
 
-* IBM DB2 Archive Log Accelerator（『[IBM DB2 Archive Log Accelerator for z/OS User&#39;s Guide](https://publib.boulder.ibm.com/infocenter/dzichelp/v2r2/topic/com.ibm.db2tools.alc.doc.ug/alcugb20.pdf?noframes=true)』を参照）
+* IBM DB2 Archive Log Accelerator
 * IBM DB2 Data Archive expert（『[IBM DB2 Data Archive Expert User&#39;s Guide and Reference](https://publib.boulder.ibm.com/infocenter/mptoolic/v1r0/topic/com.ibm.db2tools.aeu.doc.ug/ahxugb13.pdf?noframes=true)』を参照）
 
 DB2 には、Tivoli Storage Manager にデータベースをバックアップするための組み込み機能があります。Tivoli Storage Manager を使用して、DB2 バックアップを他のメディアやローカルのハードドライブに保存できます。
@@ -151,11 +151,11 @@ binlog_format=mixed
 log-bin=logname
 ```
 
-## コンテンツ保存場所のルートディレクトリ（Content Services のみ）  {#content-storage-root-directory-content-services-only}
+## コンテンツ保存場所のルートディレクトリ（Content Services のみ） {#content-storage-root-directory-content-services-only}
 
 コンテンツ保存場所のルートディレクトリには、すべてのドキュメント、アーティファクト、およびインデックスの格納された Content Services（非推奨）リポジトリが含まれています。コンテンツ保存場所のルートディレクトリツリーは、バックアップする必要があります。ここでは、スタンドアロン環境およびクラスター環境で、コンテンツ保存場所のルートディレクトリの位置を判別する方法について説明します。
 
-### コンテンツ保存場所のルートディレクトリ（スタンドアロン環境）  {#content-storage-root-location-stand-alone-environment}
+### コンテンツ保存場所のルートディレクトリ（スタンドアロン環境） {#content-storage-root-location-stand-alone-environment}
 
 Content Services（非推奨）のインストール時に、コンテンツ保存場所のルートディレクトリが作成されます。コンテンツ保存場所のルートディレクトリの場所は、AEM Forms のインストールプロセス中に決まります。
 
@@ -173,7 +173,7 @@ Content Services（非推奨）のインストール時に、コンテンツ保�
 
 /backup-lucene-indexes ディレクトリが存在しない場合、/lucene-indexes ディレクトリをバックアップします（コンテンツ保存場所のルートディレクトリにあります）。/backup-lucene-indexes ディレクトリが存在する場合、/lucene-indexes ディレクトリをバックアップしないでください。エラーが発生する可能性があります。
 
-### コンテンツ保存場所のルートディレクトリ（クラスター環境）  {#content-storage-root-location-clustered-environment}
+### コンテンツ保存場所のルートディレクトリ（クラスター環境） {#content-storage-root-location-clustered-environment}
 
 クラスター環境に Content Services（非推奨）をインストールする場合、コンテンツ保存場所のルートディレクトリは次に示す 2 つの異なるディレクトリに分けられます。
 

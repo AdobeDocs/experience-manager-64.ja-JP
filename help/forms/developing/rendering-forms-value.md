@@ -1,8 +1,8 @@
 ---
 title: 値によるFormsのレンダリング
-seo-title: 値によるFormsのレンダリング
+seo-title: Rendering Forms By Value
 description: Forms API(Java)を使用して、Java APIとWebサービスAPIを使用して値でフォームをレンダリングします。
-seo-description: Forms API(Java)を使用して、Java APIとWebサービスAPIを使用して値でフォームをレンダリングします。
+seo-description: Use the Forms API (Java) to render a form by value using the Java API and Web Service API.
 uuid: b932cc54-662f-40ae-94e0-20ac82845f3b
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ topic-tags: operations
 discoiquuid: ddbb2b82-4c57-4845-a5be-2435902d312b
 role: Developer
 exl-id: 50c34781-45e3-4255-a997-44f694527c92
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '1821'
 ht-degree: 3%
 
 ---
 
-# 値{#rendering-forms-by-value}によるFormsのレンダリング
+# 値によるFormsのレンダリング {#rendering-forms-by-value}
 
 通常、Designerで作成されたフォームデザインは、Formsサービスへの参照によって渡されます。 フォームデザインは大きくなる可能性があり、その結果、フォームデザインのバイトを値でマーシャリングする必要がなく、参照で渡す方が効率的になります。 また、Formsサービスは、フォームデザインをキャッシュして、キャッシュ時にフォームデザインを継続的に読み取る必要がないようにすることもできます。
 
@@ -45,7 +45,7 @@ Formsサービスは、フォームデザイン内のリンクされたコンテ
 >
 >Formsサービスについて詳しくは、『 AEM Formsのサービスリファレンス[ 』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
 
-## 手順の概要{#summary-of-steps}
+## 手順の概要 {#summary-of-steps}
 
 値でフォームをレンダリングするには、次の手順を実行します。
 
@@ -77,7 +77,7 @@ Formsサービスは、フォームデザイン内のリンクされたコンテ
 
 >[!NOTE]
 >
->フォーム内にデータを表示する場合は、`xfa:datasets`要素内でデータを指定する必要があります。 XFAアーキテクチャについて詳しくは、[https://partners.adobe.com/public/developer/xml/index_arch.html](https://partners.adobe.com/public/developer/xml/index_arch.html)を参照してください。
+>フォーム内にデータを表示する場合は、`xfa:datasets`要素内でデータを指定する必要があります。 XFAアーキテクチャについて詳しくは、[https://www.pdfa.org/norm-refs/XFA-3_3.pdf](https://www.pdfa.org/norm-refs/XFA-3_3.pdf)を参照してください。
 
 **フォームデータストリームをクライアントWebブラウザーに書き込む**
 
@@ -99,7 +99,7 @@ Formsサービスは、値でフォームをレンダリングする場合、フ
 
 [Forms](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-## Java API {#render-a-form-by-value-using-the-java-api}を使用して値でフォームをレンダリングする
+## Java APIを使用した値によるフォームのレンダリング {#render-a-form-by-value-using-the-java-api}
 
 Forms API(Java)を使用して値でフォームをレンダリングする：
 
@@ -150,7 +150,7 @@ Forms API(Java)を使用して値でフォームをレンダリングする：
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## WebサービスAPI {#render-a-form-by-value-using-the-web-service-api}を使用して値でフォームをレンダリングする
+## WebサービスAPIを使用して値でフォームをレンダリングする {#render-a-form-by-value-using-the-web-service-api}
 
 Forms API（Webサービス）を使用して値でフォームをレンダリングする：
 

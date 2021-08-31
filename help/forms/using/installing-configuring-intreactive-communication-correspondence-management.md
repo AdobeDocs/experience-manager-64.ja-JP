@@ -1,17 +1,17 @@
 ---
 title: インタラクティブ通信をインストールして設定する
-seo-title: インタラクティブ通信をインストールして設定する
+seo-title: Install and configure Interactive Communications
 description: 'AEM Forms インタラクティブ通信をインストールして設定し、業務上の書簡、ドキュメント、取引明細書、給与金通知、マーケティング用メール、請求書、ウェルカムキットを作成します。 '
-seo-description: 'AEM Forms インタラクティブ通信をインストールして設定し、業務上の書簡、ドキュメント、取引明細書、給与金通知、マーケティング用メール、請求書、ウェルカムキットを作成します。 '
+seo-description: Install and configure AEM Forms Interactive Communications to create business correspondences, documents, statements, benefit notices, marketing mails, bills, and welcome kits.
 uuid: c09b5743-3cbc-49ff-977a-b6b3eb81b160
 topic-tags: installing
 discoiquuid: 674c6b68-8a04-4cd3-a63e-9968ca686948
 role: Admin
 exl-id: c7aaa81d-d140-44d9-9144-0cbf6ec5d650
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1420'
-ht-degree: 75%
+source-wordcount: '1386'
+ht-degree: 74%
 
 ---
 
@@ -146,7 +146,7 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 #### 互換性パッケージをインストールする {#install-compatibility-package}
 
-インタラクティブ通信は、顧客通信を作成するためのデフォルトの方法です。AEM 6.4 Forms で顧客通信を作成する場合は、インタラクティブ通信を使用することを推奨します。以前のバージョンからアップグレードまたは移行を行って、引き続きレター（Correspondence Management）を使用する予定の場合は、[AEMFD 互換性パッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT)をインストールします。
+インタラクティブ通信は、顧客通信を作成するためのデフォルトの方法です。AEM 6.4 Forms で顧客通信を作成する場合は、インタラクティブ通信を使用することを推奨します。以前のバージョンからアップグレードまたは移行を行って、引き続きレター（Correspondence Management）を使用する予定の場合は、[AEMFD 互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)をインストールします。
 
 AEMFD 互換性パッケージを使用すると、AEM 6.4 Forms で AEM 6.3 Forms および AEM 6.2 Forms の次のアセットを使用できます。
 

@@ -1,8 +1,8 @@
 ---
 title: Java API を使用した AEM Forms の呼び出し
-seo-title: Java API を使用した AEM Forms の呼び出し
+seo-title: Invoking AEM Forms using the JavaAPI
 description: リモート呼び出し用のRMIトランスポートプロトコルにはAEM Forms Java APIを使用し、ローカル呼び出し用のVMトランスポート、リモート呼び出し用のSOAP、ユーザー名とパスワード、同期および非同期の呼び出し要求などの異なる認証を使用します。
-seo-description: リモート呼び出し用のRMIトランスポートプロトコルにはAEM Forms Java APIを使用し、ローカル呼び出し用のVMトランスポート、リモート呼び出し用のSOAP、ユーザー名とパスワード、同期および非同期の呼び出し要求などの異なる認証を使用します。
+seo-description: Use the AEM Forms Java API for RMI transport protocol for remote invocation, VM transport for local invocation, SOAP for remote invocation, different authentication, such as user name and password, and synchronous and asynchronous invocation requests.
 uuid: 5e2fef2a-05f3-4283-8fd3-2d7dca411000
 contentOwner: admin
 content-type: reference
@@ -11,10 +11,10 @@ topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 role: Developer
 exl-id: 1c239c05-e221-442a-a748-0c28704ee032
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '5479'
-ht-degree: 87%
+source-wordcount: '5385'
+ht-degree: 88%
 
 ---
 
@@ -34,13 +34,6 @@ Java API は次の機能をサポートしています。
 * ユーザー名とパスワードなどの、他の認証方法
 * 同期および非同期の呼び出し要求
 
-**Adobe Developer Web サイト**
-
-Adobe Developer の Web サイトには、Java API を使用して AEM Forms サービスを呼び出す方法が記載されています。
-
-[Java サーブレットを使用した AEM Forms プロセスの呼び出し](https://www.adobe.com/devnet/livecycle/articles/java_servlets.html)
-
-[Java からの AEM Forms Distiller API の呼び出し](https://www.adobe.com/devnet/livecycle/articles/distiller_java_03.html)
 
 **関連トピック**
 
@@ -73,7 +66,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 
 * AEM Forms のデプロイ先 J2EE アプリケーションサーバー。
 
-### サービス固有の JAR ファイル  {#service-specific-jar-files}
+### サービス固有の JAR ファイル {#service-specific-jar-files}
 
 次の表に、AEM Forms サービスを呼び出すために必要な JAR ファイルを示します。
 
@@ -224,7 +217,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
  </tbody>
 </table>
 
-### 接続モードと J2EE アプリケーション JAR ファイル  {#connection-mode-and-j2ee-application-jar-files}
+### 接続モードと J2EE アプリケーション JAR ファイル {#connection-mode-and-j2ee-application-jar-files}
 
 次の表に、接続モードと AEM Forms のデプロイ先 J2EE アプリケーションサーバーに依存する JAR ファイルを示します。
 
@@ -289,7 +282,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
  </tbody>
 </table>
 
-### 呼び出しシナリオ  {#invoking-scenarios}
+### 呼び出しシナリオ {#invoking-scenarios}
 
 次の表に、呼び出しシナリオと、AEM Forms を正常に呼び出すために必要な JAR ファイルを示します。
 
@@ -627,14 +620,14 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 >
 >ユーザーの認証の詳細については、[ユーザーの認証](/help/forms/developing/users.md#authenticating-users)を参照してください。
 
-### 呼び出しシナリオ  {#invoking_scenarios-1}
+### 呼び出しシナリオ {#invoking_scenarios-1}
 
 この節では、以下の呼び出しシナリオについて説明します。
 
 * 独自の Java 仮想マシン（JVM）で実行されているクライアントアプリケーションは、スタンドアロンの AEM Forms インスタンスを呼び出します。
 * 独自の JVM で実行されているクライアントアプリケーションは、クラスター化された AEM Forms インスタンスを呼び出します。
 
-### スタンドアロン AEM Forms インスタンスを呼び出すクライアントアプリケーション  {#client-application-invoking-a-stand-alone-aem-forms-instance}
+### スタンドアロン AEM Forms インスタンスを呼び出すクライアントアプリケーション {#client-application-invoking-a-stand-alone-aem-forms-instance}
 
 次の図は、独自の JVM で実行され、スタンドアロン AEM Forms インスタンスを呼び出すクライアントアプリケーションを示しています。
 
@@ -644,7 +637,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 >
 >このシナリオは、すべてのクイックスタートが基づいている呼び出しシナリオです。
 
-### クラスター化された AEM Forms インスタンスを呼び出すクライアントアプリケーション  {#client-application-invoking-clustered-aem-forms-instances}
+### クラスター化された AEM Forms インスタンスを呼び出すクライアントアプリケーション {#client-application-invoking-clustered-aem-forms-instances}
 
 次の図は、独自の JVM で実行され、クラスター内にある AEM Forms インスタンスを呼び出すクライアントアプリケーションを示しています。
 
@@ -780,7 +773,7 @@ AEM Forms サービスは、PDF ドキュメントを `java.io.InputStream` オ�
  Document myPDFDocument = new Document(myByteArray);
 ```
 
-#### 別のドキュメントに基づいたドキュメントの作成  {#creating-a-document-based-on-another-document}
+#### 別のドキュメントに基づいたドキュメントの作成 {#creating-a-document-based-on-another-document}
 
 次のコードの例では、別の `com.adobe.idp.Document` オブジェクトに基づいた `com.adobe.idp.Document` オブジェクトを作成します。
 
@@ -801,7 +794,7 @@ AEM Forms サービスは、PDF ドキュメントを `java.io.InputStream` オ�
  Document anotherDocument = new Document(myPDFDocument);
 ```
 
-#### ファイルに基づいたドキュメントの作成  {#creating-a-document-based-on-a-file}
+#### ファイルに基づいたドキュメントの作成 {#creating-a-document-based-on-a-file}
 
 次のコードの例では、*map.pdf*&#x200B;という名前のPDFファイルに基づいて`com.adobe.idp.Document`オブジェクトを作成します。 このファイルは C ハードドライブのルートにあります。このコンストラクタは、ファイル拡張子を使用して `com.adobe.idp.Document` オブジェクトの MIME コンテンツタイプの設定を試行します。
 
@@ -817,7 +810,7 @@ AEM Forms サービスは、PDF ドキュメントを `java.io.InputStream` オ�
  Document myPDFDocument = new Document(mySourceMap,true);
 ```
 
-#### InputStream オブジェクトに基づいたドキュメントの作成  {#creating-a-document-based-on-an-inputstream-object}
+#### InputStream オブジェクトに基づいたドキュメントの作成 {#creating-a-document-based-on-an-inputstream-object}
 
 次の Java コードの例では、`com.adobe.idp.Document` オブジェクトに基づいた `java.io.InputStream` オブジェクトを作成します。
 
@@ -829,7 +822,7 @@ AEM Forms サービスは、PDF ドキュメントを `java.io.InputStream` オ�
  Document myPDFDocument = new Document(is);
 ```
 
-#### URL からアクセス可能なコンテンツに基づいたドキュメントの作成  {#creating-a-document-based-on-content-accessible-from-an-url}
+#### URL からアクセス可能なコンテンツに基づいたドキュメントの作成 {#creating-a-document-based-on-content-accessible-from-an-url}
 
 次のJavaコードの例では、*map.pdf*&#x200B;という名前のPDFファイルに基づいて`com.adobe.idp.Document`オブジェクトを作成します。 このファイルは、`WebApp` で実行されている `localhost` という名前の Web アプリケーション内にあります。このコンストラクタは、URL プロトコルで返されるコンテンツタイプを使用して `com.adobe.idp.Document` オブジェクトの MIME コンテンツタイプの設定を試行します。
 

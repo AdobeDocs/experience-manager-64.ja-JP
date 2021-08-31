@@ -1,8 +1,8 @@
 ---
 title: クライアントおよびサーバーオプションの設定
-seo-title: クライアントおよびサーバーオプションの設定
+seo-title: Configuring client and server optionsn
 description: サーバー設定、Document Security ロール、イベント監査など、各種のクライアントおよびサーバーオプションの設定方法について説明します。
-seo-description: サーバー設定、Document Security ロール、イベント監査など、各種のクライアントおよびサーバーオプションの設定方法について説明します。
+seo-description: Learn how you can configure the various client and server options, such as server configuration settings, document security roles, and event auditing.
 uuid: 1f9f9886-726e-4fad-9ff8-0ff11eef653e
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
 feature: Document Security
 exl-id: 571c1391-dc60-4bed-b4f9-482a508e4bd4
-source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '10283'
+source-wordcount: '10250'
 ht-degree: 84%
 
 ---
@@ -554,7 +554,7 @@ Document Security 設定ファイルを変更することで、透かし要素�
 
 登録電子メールには、登録ページへのリンクと登録方法に関する情報が含まれています。招待ユーザーによって登録が行われると、アクティベートページへのリンクが記載されたアクティベート用の電子メールが Document Security から送信されます。アカウントがアクティベートされると、アクティベートを解除するか削除するまで、そのアカウントは有効のままです。
 
-組み込み登録を有効にした場合は、SMTP サーバー、登録電子メールの詳細、アクセス権限およびパスワードリセット用電子メールの情報を一度だけ指定します。組み込み登録を有効にする前に、User Management 内にローカルドメインを作成済みであること、および「Document Security ユーザーの招待」ロールを組織内の適切なユーザーとグループにアサインしていることを確認してください。（[ローカルドメインの追加](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain)および[ロールの作成および設定](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)を参照）。組み込み登録を使用しない場合は、AEM Forms SDK を使用して、独自のユーザー登録システムを作成する必要があります。詳しくは、「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn-aemforms-programming-63)」の「AEM Forms 向け SPI の開発」を参照してください。組み込み登録オプションを使用しない場合は、アクティベート用の電子メールにメッセージを設定すると共に、クライアントのログイン画面で、新しいパスワードやその他の情報について管理者に問い合わせる方法をユーザーに知らせることをお勧めします。
+組み込み登録を有効にした場合は、SMTP サーバー、登録電子メールの詳細、アクセス権限およびパスワードリセット用電子メールの情報を一度だけ指定します。組み込み登録を有効にする前に、User Management 内にローカルドメインを作成済みであること、および「Document Security ユーザーの招待」ロールを組織内の適切なユーザーとグループにアサインしていることを確認してください。（[ローカルドメインの追加](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain)および[ロールの作成および設定](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)を参照）。組み込み登録を使用しない場合は、AEM Forms SDK を使用して、独自のユーザー登録システムを作成する必要があります。詳しくは、「[AEM Forms によるプログラミング](/help/forms/developing/introducing-java-api-soap-quick.md)」の「AEM Forms 向け SPI の開発」を参照してください。組み込み登録オプションを使用しない場合は、アクティベート用の電子メールにメッセージを設定すると共に、クライアントのログイン画面で、新しいパスワードやその他の情報について管理者に問い合わせる方法をユーザーに知らせることをお勧めします。
 
 **招待ユーザー登録の有効化と設定**
 

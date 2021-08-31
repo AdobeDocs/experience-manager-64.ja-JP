@@ -1,8 +1,8 @@
 ---
 title: サービス設定の指定
-seo-title: サービス設定の指定
+seo-title: Configure service settings
 description: サービス設定の指定方法について説明します。
-seo-description: サービス設定の指定方法について説明します。
+seo-description: Learn how to configure service settings.
 uuid: e95425a4-62f6-473e-b21b-d081c432e02d
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: be1f8c59-b5d8-4d87-af7b-1034d73e7e83
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '10710'
+source-wordcount: '10683'
 ht-degree: 63%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 63%
 1. 「保存」をクリックして変更を保存するか、「キャンセル」をクリックして変更を破棄します。
 1. サービス名の横にあるチェックボックスを選択し、「開始」をクリックしてサービスを再起動します。
 
-## Audit Workflow サービスの設定  {#audit-workflow-service-settings}
+## Audit Workflow サービスの設定 {#audit-workflow-service-settings}
 
 Workbench には、実行時に処理されるプロセスインスタンスを記録し、記録を再生してプロセスの動作を観察できる機能が用意されています（[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照）。forms サーバーのファイルシステム上のスペースを確保するために、保存するプロセス記録データの量を制限できます。Audit Workflow Service サービス（`AuditWorkflowService`）の次のプロパティを設定できます。
 
@@ -44,7 +44,7 @@ Workbench には、実行時に処理されるプロセスインスタンスを�
 
 **MaxNumberOfRecordingEntries:** 各記録に保存できるデータエントリの最大数。データエントリはプロセスの操作に関する情報です。一部のエントリは操作の実行ごとに保存されます。例えば、操作が開始されたかどうか、操作が完了したかどうか、操作を発生させるルートが完了したかどうか、などです。このプロパティは、プロセスに操作の実行が多数含まれる場合（例えば、永久ループが発生した場合など）に便利です。デフォルト値は 50 です。
 
-## Barcoded Forms サービスの設定  {#barcoded-forms-service-settings}
+## Barcoded Forms サービスの設定 {#barcoded-forms-service-settings}
 
 バーコードフォームサービス`(BarcodedFormsService)`は、スキャンされた画像からバーコードデータを抽出します。 このサービスは、バーコードフォーム（TIFF または PDF）を入力として受け取り、バーコードでエンコードされたデータのマシン表現を抽出します。
 
@@ -154,11 +154,11 @@ Distiller サービスでは、以下の設定を使用できます。
 
 **Pool Size:** プールの初期サイズ。Distiller サービスがデプロイされると、サービス実装インスタンスが何個作成され、呼び出し要求を待機している空きプールに割り当てられるかが、この数値を使用して特定されます。そうすると、サービスコンテナでは、サービスインスタンスを初期化する必要なく、呼び出し要求に直ちに応答できます。
 
-## Document Management サービスの設定  {#document-management-service-settings}
+## Document Management サービスの設定 {#document-management-service-settings}
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。Content Services（非推奨）の設定について詳しくは、『[Content Services の管理](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf)』を参照してください。
+>Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。
 
 Document Management サービス（`DocumentManagementService`）を使用すると、プロセスで Content Services（非推奨）のコンテンツ管理機能を使用できます。Document Management 操作には、コンテンツ管理システムのスペースとコンテンツを保守するために必要な基本的なタスクがあります。例えば、コンテンツのコピー、削除、移動、取得、および保存、スペースと関連付けの作成、コンテンツ属性の取得および設定などのタスクです。
 
@@ -168,7 +168,7 @@ Document Management サービスでは、以下の設定を使用できます。
 
 **HTTPポート：** Content Services（非推奨）へのアクセスに使用するポート。デフォルト値は 8080 です。
 
-## Email サービスの設定  {#email-service-settings}
+## Email サービスの設定 {#email-service-settings}
 
 電子メールは通常、自動化されたプロセスの一部として、コンテンツの配布やステータス情報の提供に使用されます。Email サービス（`EmailService`）によって、プロセスでは電子メールメッセージを POP3 または IMAP サーバーから受信したり、SMTP サーバーに送信したりすることができます。
 
@@ -284,7 +284,7 @@ Generate PDF サービスでは、以下の設定を使用できます。
 
 最初の変換に費やした時間が指定したタイムアウト時間より短かった場合に、PDF 変換を再試行します。例えば、タイムアウト時間が 270 秒で最初の変換に 200 秒を費やした場合、PDF Generator は変換を再試行します。最初の変換自体が 270 秒を費やした場合、変換は再試行されません。
 
-## Guides ES4 Utilities サービスの設定  {#guides-es4-utilities-service-settings}
+## Guides ES4 Utilities サービスの設定 {#guides-es4-utilities-service-settings}
 
 ガイドを作成すると、一部のリソース（ガイドの定義など）がガイドに埋め込まれます。リソースは、ローカルまたは AEM Forms サーバーに保存されているアプリケーションアセットへの参照として存在する場合もあります。ガイドにデータは含まれません。また、送信場所および入力の値は、すべての外部環境に適していません。
 
@@ -325,7 +325,7 @@ Guide Utilities サービスのデフォルト値はほとんどの使用例を�
 
 **macKeySeed:** セキュアURLを生成するためのシード値。これがオプションの場合は、キーは更新されません。異なるサーバーに同じシードを設定すると、これらのサーバーは互換性のある保護された URL を生成します。この値は、ロードバランサーの背後で複数の forms サーバーを使用している場合に便利です。文字と数字をランダムに組み合わせた文字列をシードとして入力してください。
 
-### サーバークラスターでの Guides の使用  {#using-guides-in-a-server-cluster}
+### サーバークラスターでの Guides の使用 {#using-guides-in-a-server-cluster}
 
 スティッキーセッションを使用しないサーバークラスターでのガイドのレンダリングは、NullPointerException が発生して失敗します。Guides 要求では、デフォルトで、要求を生成するサーバーに固有の保護された URL が利用されます。スティッキーセッションを使用するクラスターでは、要求がクラスター内のノードに届いた後、そのセッションまたはユーザー向けの後続するすべての要求がそのサーバーだけにルーティングされるので、順調に処理が進みます。スティッキーセッションを使用しないクラスターでは、後続する要求がクラスター内のどのサーバーにも届く可能性があります。要求が届いたサーバーが元のサーバーと異なる場合、保護された URL を解決できません。
 
@@ -337,7 +337,7 @@ macKeySeed 値は、保護された URL の生成に使用される乱数ジェ�
 
 macSeedValue が読み取られるのはシステム起動時だけなので、クラスターを再起動する必要があります。すべてのノードを再起動して、この値を読み取らせる必要があります。シード値を使用して内部的な乱数を初期化するために、各ノードがそれぞれ独立してこの値を使用するからです。
 
-## JDBC サービスの設定  {#jdbc-service-settings}
+## JDBC サービスの設定 {#jdbc-service-settings}
 
 JDBC サービス（`JdbcService`）を使用すると、プロセスにおいてデータベースとインタラクティブにやり取りを行えます。
 
@@ -345,7 +345,7 @@ JDBC サービスでは、以下の設定を使用できます。
 
 **datasourceName:** データベースサーバーへの接続に使用するデータソースのJNDI名を表すstring値。データソースは、forms サーバーをホストするアプリケーションサーバー上に定義する必要があります。デフォルト値は AEM forms データベース用のデータソースの JNDI 名です。
 
-## JMS サービスの設定  {#jms-service-settings}
+## JMS サービスの設定 {#jms-service-settings}
 
  サービス（`JMS`JMS）を使用すると、ポイントツーポイントメッセージングとパブリッシュ／サブスクライブメッセージングの両方を実装する Java Messaging System（JMS）プロバイダーをインタラクティブに操作できます。
 
@@ -505,7 +505,7 @@ PDFG Config サービス（`PDFGConfigService`）では、以下の設定を使�
 
 **Default Locale:** Generate PDFサービスがデプロイされているサーバーのデフォルトロケール（国+言語）を上書きするために使用します。このパラメーターを指定しない場合、デフォルトのロケールは、サービスがデプロイされているオペレーティングシステムから判別されます。このパラメーターでは、API に返されるエラーメッセージの言語が制御されます。
 
-## forms ワークフロー Data Services サービスの設定  {#forms-workflow-data-services-service-settings}
+## forms ワークフロー Data Services サービスの設定 {#forms-workflow-data-services-service-settings}
 
 以下のサービスは Data Services を拡張し、Workspace でサーバーとの通信に使用されるアセンブラを公開します。アドビサポートからの指示がない限り、これらのサービスの設定オプションは変更しないでください。これらのサービスは、直接的なアクセスでの使用は意図されていません。
 
@@ -523,7 +523,7 @@ Remoting サービスでは、以下の設定を使用できます。
 
 **Allow Serialization Of Non-Serializable Classes:** ほとんどのAEMフォームエンドポイントでは、呼び出しにSerializableクラスのみを使用できます。それより前のバージョンでは、Remoting エンドポイントで Flex ベースのクライアントからの呼び出しに Serializable 以外のクラスを使用できました。APS11-15 で説明されているセキュリティ脆弱性を防止するため、この変更が行われました。Flex の Remoting エンドポイントで Serializable 以外のクラスを引き続き使用する場合は、このチェックボックスをオンにします。
 
-## Repository サービスの設定  {#repository-service-settings}
+## Repository サービスの設定 {#repository-service-settings}
 
 Repository サービス（`RepositoryService`）は、リソースを保存および管理するためのサービスを AEM Forms に提供します。アプリケーションを作成するときは、アセットをファイルシステムではなくリポジトリにデプロイできます。アセットには、XML 形式、PDF 形式（Acrobat 形式を含む）、フォームのフラグメント、画像、プロファイル、ポリシー、SWF ファイル、DDX ファイル、XML スキーマ、WSDL ファイルおよびテストデータなど、任意のタイプのコラテラルが含まれます。
 
@@ -609,7 +609,7 @@ Signature サービスでは、以下の設定を使用できます。
 
 **チェーン構築中に有効な証明書の署名を要求：** チェーン構築時に使用する証明書に有効な署名をチェーンビルダーで必要とするかどうかを指定します。このチェックボックスを選択すると、証明書に無効な RSA 署名が含まれている場合、チェーンビルダーではチェーンが構築されません。チェーン CA > ICA > EE で、ICA 上の CA の署名が無効な場合について考えます。この設定が「true」の場合、チェーン構築は ICA で停止し、CA はチェーンに含まれません。この設定が「false」の場合は、完全な 3 つの証明書のチェーンが生成されます。この設定は、DSA 署名には影響しません。デフォルト値は false です。
 
-### タイムスタンププロバイダーのオプション  {#timestamp-provider-options}
+### タイムスタンププロバイダーのオプション {#timestamp-provider-options}
 
 **TSP Server URL:** デフォルトのタイムスタンププロバイダーのURL。値が有効な場合のみ使用されます。デフォルト値はありません。
 
@@ -629,7 +629,7 @@ Signature サービスでは、以下の設定を使用できます。
 
 **タイムスタンプのサーバーエクステンションを無視**: **タイムスタンプのサーバーエクステンションを無視**&#x200B;オプションを選択し、AEM Forms サーバーが特定のタイムスタンプサーバーに接続することを阻止します。このオプションを選択することで、AEM Forms とタイムスタンプサーバー間のコネクションタイムアウトによるプロセスの失敗を防ぐことができます。
 
-### 証明書失効リストのオプション  {#certificate-revocation-list-options}
+### 証明書失効リストのオプション {#certificate-revocation-list-options}
 
 **Consult Local URI First:** 失効確認のために、「Local URI」または「CRL Lookup」で指定されたCRLの場所を、証明書内で指定された場所よりも優先するかどうかを指定します。デフォルト値は false です。
 
@@ -645,7 +645,7 @@ Signature サービスでは、以下の設定を使用できます。
 
 **Require AKI extension in CRL:** Authority Key Identifier拡張をCRLに含める必要があるかどうかを指定します。デフォルト値は false です。
 
-### オンライン証明書ステータスプロトコルのオプション  {#online-certificate-status-protocol-options}
+### オンライン証明書ステータスプロトコルのオプション {#online-certificate-status-protocol-options}
 
 **OCSP Server URL:** デフォルトのOCSPサーバーのURL。この URL で指定された OCSP サーバーを使用するかどうかは、「参照 URL オプション」の設定によって決まります。デフォルト値はありません。
 
@@ -671,7 +671,7 @@ Signature サービスでは、以下の設定を使用できます。
 
 **Require OCSP ISIS-MTT CertHash Extension:** 証明書の公開鍵ハッシュ拡張をOCSP応答に含める必要があるかどうかを指定します。デフォルト値は false です。
 
-### デバッグ用のエラー処理オプション  {#error-handling-options-for-debugging}
+### デバッグ用のエラー処理オプション {#error-handling-options-for-debugging}
 
 **次のAPI呼び出し時に証明書キャッシュをパージ：** 次のSignatureサービス操作が呼び出されたときに証明書キャッシュをパージするかどうかを指定します。次の Signature サービス操作が呼び出されると、このオプションは「false」に戻ります。デフォルト値は false です。
 
@@ -679,7 +679,7 @@ Signature サービスでは、以下の設定を使用できます。
 
 **Purge OCSP Cache on next API呼び出し：** 次のSignature Service操作が呼び出されたときにOCSPキャッシュをパージするかどうかを指定します。次の Signature サービス操作が呼び出されると、このオプションは「false」に戻ります。デフォルト値は false です。
 
-## Watched Folder サービスの設定  {#watched-folder-service-settings}
+## Watched Folder サービスの設定 {#watched-folder-service-settings}
 
 Watched Folder サービス（`WatchedFolder`）では、すべての監視フォルダーエンドポイントに共通する属性を設定します。また、監視フォルダーエンドポイントのデフォルト値も指定します（[監視フォルダーエンドポイントの設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints)を参照）。このサービスは、外部クライアントアプリケーションによって呼び出されることも、Workbench で作成されたプロセスで使用されることもありません。
 
@@ -776,7 +776,7 @@ Web Service サービスでは、以下の設定を使用できます。
 * cms
 * jceks
 
-## XSLT Transformation サービスの設定  {#xslt-transformation-service-settings}
+## XSLT Transformation サービスの設定 {#xslt-transformation-service-settings}
 
 XSLT Transformation サービス（`XSLTService`）を使用すると、プロセスで XSLT（Extensible Stylesheet Language Transformations）を XML ドキュメントに適用できます。
 
@@ -784,13 +784,13 @@ XSLT Transformation サービスでは以下の設定を使用できます。
 
 **ファクトリ名：** XSLT変換の実行に使用するJavaクラスの完全修飾名。値を指定しない場合は、forms サーバーを稼働する Java 仮想マシンに設定されたデフォルトのファクトリが使用されます。
 
-## サービスのセキュリティ設定の変更  {#modifying-security-settings-for-a-service}
+## サービスのセキュリティ設定の変更 {#modifying-security-settings-for-a-service}
 
 forms サーバーでは、各サービスのセキュリティ設定を指定できます。これにより、サービスごとにアクセス制御を細かく設定できます。
 
 デフォルトのセキュリティプロファイルがインストールされ、このプロファイルはその後、システムの必要性に応じて設定できます。セキュリティプロファイルは、ユーザーレベルまたはグループレベルで作成され、ドメインに関連付けられます。
 
-### サービスのセキュリティ設定の変更  {#modify-security-settings-for-a-service}
+### サービスのセキュリティ設定の変更 {#modify-security-settings-for-a-service}
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／サービスの管理をクリックします。
 1. サービスの管理ページで、設定するサービスをクリックします。
@@ -837,16 +837,16 @@ forms サーバーでは、各サービスのセキュリティ設定を指定�
 
 1. 「追加」をクリックします。
 
-### セキュリティプロファイルからのプリンシパルの削除  {#remove-the-principal-from-a-security-profile}
+### セキュリティプロファイルからのプリンシパルの削除 {#remove-the-principal-from-a-security-profile}
 
 1. サービスの管理ページで、設定するサービスを選択します。
 1. 「**セキュリティ**」タブをクリックし、削除するセキュリティプロファイルを選択して、「**削除**」をクリックします。
 
-## サービスのプーリングの設定  {#configuring-pooling-for-a-service}
+## サービスのプーリングの設定 {#configuring-pooling-for-a-service}
 
 各サービスでは、プーリング機能を利用して、受信する呼び出し要求を処理できます。サービスプールを使用すると、サービスインスタンスは一度に 1 つのスレッドで呼び出され、複数の呼び出し要求で再利用できるので、パフォーマンスが向上する場合があります。また、プーリングを使用して「非同期サービスインスタンスの最大数」オプションを指定することもでき、同時に処理される要求の数を制限することができます。
 
-### プーリングの有効化  {#enable-pooling}
+### プーリングの有効化 {#enable-pooling}
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／サービスの管理をクリックします。
 1. サービスの管理ページで、設定するサービスをクリックします。
@@ -858,7 +858,7 @@ forms サーバーでは、各サービスのセキュリティ設定を指定�
 1. 「呼び出し待機のタイムアウト」ボックスに、サービスが呼び出し要求に対応可能になるまでの待機時間をミリ秒単位で入力します。この設定の値を指定しない場合、デフォルトは 0 で、待機時間はゼロです。
 1. 「保存」をクリックします。
 
-### プーリングの削除  {#remove-pooling}
+### プーリングの削除 {#remove-pooling}
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／サービスの管理をクリックします。
 1. サービスの管理ページで、設定するサービスをクリックします。

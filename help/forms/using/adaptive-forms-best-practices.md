@@ -1,17 +1,17 @@
 ---
 title: アダプティブフォームの操作のベストプラクティス
-seo-title: アダプティブフォームの操作のベストプラクティス
+seo-title: Best practices for working with adaptive forms
 description: AEM Forms プロジェクトのセットアップ、アダプティブフォームの開発、AEM Forms システムのパフォーマンスの最適化のための、ベストプラクティスをご紹介します。
-seo-description: AEM Forms プロジェクトのセットアップ、アダプティブフォームの開発、AEM Forms システムのパフォーマンスの最適化のための、ベストプラクティスをご紹介します。
+seo-description: Explains best practices for setting up an AEM Forms project, developing adaptive forms, and optimizing the performance for AEM Forms system.
 uuid: ed95fc64-56b3-4ea1-a5ba-2e96953fca56
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 0c64940c-273d-4f23-afcb-38bf54cddd36
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '4148'
+source-wordcount: '4108'
 ht-degree: 82%
 
 ---
@@ -48,7 +48,7 @@ Adobe Experience Manager（AEM）Forms を使用すると、複雑なトラン�
 
 * Eclipse 統合開発環境を使用している場合、AEM 開発者ツールを使用して Eclipse IDE を AEM インスタンスにシームレスに統合して、AEM アプリケーションを作成できます。詳しくは、「[Eclipse 用 AEM 開発者ツール](/help/sites-developing/aem-eclipse.md)」を参照してください。
 
-### オーサリング環境の計画  {#planning-for-authoring-environment}
+### オーサリング環境の計画 {#planning-for-authoring-environment}
 
 AEM プロジェクトのセットアップを完了したら、アダプティブフォームのテンプレートおよびコンポーネントを作成してカスタマイズするための計画を策定します。
 
@@ -98,7 +98,7 @@ AEM プロジェクトのセットアップを完了したら、アダプティ�
 
 また、「[アダプティブフォームのオーサリングの概要](/help/forms/using/introduction-forms-authoring.md)」に記載されているコンポーネントの説明とベストプラクティスを参照してください。
 
-### アダプティブフォームにおけるルールの使用  {#using-rules-in-adaptive-forms}
+### アダプティブフォームにおけるルールの使用 {#using-rules-in-adaptive-forms}
 
 AEM Forms が提供する[ルールエディター](/help/forms/using/rule-editor.md)を使用すると、アダプティブフォームコンポーネントに動的な動きを付加するルールを作成できます。これらのルールを使用すると、フィールドの表示/非表示、値の計算、ドロップダウンリストの動的な変更など、コンポーネントに対する条件やトリガー操作を評価できます。
 
@@ -112,7 +112,7 @@ AEM Forms が提供する[ルールエディター](/help/forms/using/rule-edito
 * 競合を回避するために、コンポーネントは固有の相対階層で参照します。（例：`parentName.fieldName`）。
 
 * 複雑なルールや一般的に使用されるルールを処理する場合は、ビジネスロジックを別のクライアントライブラリの機能として記述し、アダプティブフォーム間で指定および再利用することを検討してください。 クライアントライブラリは独立のライブラリとし、jQuery および Underscore.js 以外の外部依存性はなくしてください。クライアントライブラリを使用して、送信されたフォームデータの[サーバー側の再検証](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form)を実施することもできます。
-* アダプティブフォームが提供する一連の API を使用して、アダプティブフォームと通信したり、アダプティブフォーム上でアクションを実行したりできます。主要な API には次の項目が挙げられます。詳しくは、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://adobe.com/go/learn_aemforms_documentation_63)」を参照してください。
+* アダプティブフォームが提供する一連の API を使用して、アダプティブフォームと通信したり、アダプティブフォーム上でアクションを実行したりできます。主要な API には次の項目が挙げられます。詳しくは、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://adobe.com/go/learn_aemforms_documentation_63_jp)」を参照してください。
 
    * `guideBridge.reset()`:フォームをリセットします。
    * `guideBridge.submit()`:フォームを送信します。
@@ -142,7 +142,7 @@ AEM Forms が提供する[ルールエディター](/help/forms/using/rule-edito
 
 詳しくは、「[テーマ](/help/forms/using/themes.md)」を参照してください。
 
-### 大規模フォームおよび複雑なフォームのパフォーマンスの最適化  {#optimizing-performance-of-large-and-complex-forms}
+### 大規模フォームおよび複雑なフォームのパフォーマンスの最適化 {#optimizing-performance-of-large-and-complex-forms}
 
 通常、パフォーマンスに関する問題が発生するのは、フォーム作成者およびエンドユーザーが、オーサリングモードで、または実行時に大規模なフォームを読み込む場合です。フォーム内のオブジェクト（フィールドおよびパネル）が増えるにしたがって、オーサリングや実行の快適さは低下します。また、複数の作成者が共同作業したり、同時にフォームをオーサリングしたりする妨げにもなります。
 
@@ -161,9 +161,9 @@ AEM Forms が提供する[ルールエディター](/help/forms/using/rule-edito
    * レスポンシブグリッドレイアウトまたは最初のパネルには、フラグメントに遅延読み込みを設定しないでください。
    * ファイル添付および利用条件コンポーネントは、遅延読み込みフラグメントではサポートされません。
    * 遅延読み込みパネルにある値は、その値がフォームの別の部分で使用されている場合、「グローバルに値を使用」とマークします。これにより、パネルが読み込まれていない場合に、この値を使用できるようになります。
-   * フラグメントの表示ルールは、条件に基づいて表示または非表示するべきフラグメントに対して作成するようにしてください。
+   * 条件に基づいて表示または非表示する必要があるフラグメントに対して、フラグメントの表示ルールを記述することを検討します。
 
-### アダプティブフォームに事前にデータを取り込む  {#prefilling-adaptive-forms}
+### アダプティブフォームに事前にデータを取り込む {#prefilling-adaptive-forms}
 
 バックエンドから取得したデータを使用してアダプティブフォームフィールドに事前にデータを取り込んで、ユーザーの入力ミスを防いですばやくフォームに入力できるようにします。
 
@@ -191,7 +191,7 @@ Adaptive forms では、ユーザー指定のデータを処理するために�
 * フォーム内署名機能を設定する、または送信時に署名者を署名ページにリダイレクトすることができます。
 * 連続署名または並列署名のどちらか適している方を設定します。
 
-### レコードのドキュメントの生成  {#generating-document-of-record}
+### レコードのドキュメントの生成 {#generating-document-of-record}
 
 レコードのドキュメント（DoR）はアダプティブフォームのフラットな PDF 版で、印刷、署名、アーカイブが行えます。
 
@@ -229,14 +229,14 @@ Calvin SDK は、アダプティブフォームをテストするためのアダ
 
 詳しくは、「[アダプティブフォームのテスト自動化](/help/forms/using/calvin.md)」を参照してください。
 
-### AEM サーバー上でのアダプティブフォームの検証  {#validating-adaptive-forms-on-aem-server}
+### AEM サーバー上でのアダプティブフォームの検証 {#validating-adaptive-forms-on-aem-server}
 
 クライアント側で検証をすり抜ける試みを阻止するためにも、データ送信の漏洩やビジネスルール違反の可能性を阻止するためにも、サーバー側の検証が必要です。サーバー側の検証は、必要なクライアントライブラリを読み込むことにより、サーバー上で実行されます。
 
 * クライアントライブラリに、アダプティブフォームの検証式の機能を含めて、アダプティブフォームコンテナダイアログでクライアントライブラリを指定します。詳しくは、「[サーバー側の再検証](/help/forms/using/configuring-submit-actions.md#p-server-side-revalidation-in-adaptive-form-p)」を参照してください。
 * サーバーサイド検証により、フォームモデルが検証されます。検証のために別個のクライアントライブラリを作成し、1 つのクライアントライブラリに HTML のスタイルや DOM 操作を混在させないことをお勧めします。
 
-### アダプティブフォームのローカライズ  {#localizing-adaptive-forms}
+### アダプティブフォームのローカライズ {#localizing-adaptive-forms}
 
 AEM には、アダプティブフォームをローカライズするために使用できる翻訳ワークフローが用意されています。詳しくは、「[AEM 翻訳ワークフローを使用したアダプティブフォームのローカライズ](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md)」を参照してください。
 
@@ -250,7 +250,7 @@ AEM には、アダプティブフォームをローカライズするために�
 
 * AEM Formsでは、現在、英語(en)、スペイン語(es)、フランス語(fr)、イタリア語(it)、ドイツ語(de)、日本語(ja)、ポルトガル語(pt-BR)、中国語(zh-CN)、中国語 — 台湾(zh-TW)、韓国語(ko-KR)ロケールのアダプティブフォームコンテンツのローカライゼーションをサポートしています。 ただし、実行時にアダプティブフォームに対する新しいロケールのサポートを追加できます。詳しくは、「[アダプティブフォームのローカライズに対する新しいロケールのサポート](/help/forms/using/supporting-new-language-localization.md)」を参照してください。
 
-## フォームプロジェクトを実稼働で使用するための準備  {#prepare-forms-project-for-production}
+## フォームプロジェクトを実稼働で使用するための準備 {#prepare-forms-project-for-production}
 
 ### フォーム処理サーバーの追加 {#adding-forms-processing-server}
 
@@ -259,7 +259,7 @@ AEM には、アダプティブフォームをローカライズするために�
 * **バッチ処理**:繰り返されるジョブや、負荷の高いバッチでスケジュールされるジョブ。例えば、印刷明細、通信の生成や、PDF Generator、Output、アセンブラなどのドキュメントサービスの使用が例として挙げられます。
 * **PII データの保存**： PII データを処理サーバーに保存します。PII データの保存用にカスタムのストレージプロバイダーを使用している場合には必要ありません。
 
-### プロジェクトの別の環境への移動  {#moving-project-to-another-environment}
+### プロジェクトの別の環境への移動 {#moving-project-to-another-environment}
 
 AEM プロジェクトを別の環境に移動させたいという場合は、よくあります。移動時の主な留意事項は、次のとおりです。
 
@@ -269,11 +269,11 @@ AEM プロジェクトを別の環境に移動させたいという場合は、�
 * (*JEE上のAEM Formsのみ*)LCAおよびDSCをForms Workflowサーバーに手動でデプロイします。
 * [エクスポート-インポート](/help/forms/using/import-export-forms-templates.md)機能を使用して、アセットを新しい環境に移動します。複製エージェントを構成し、アセットを発行することもできます。
 
-### AEM の設定  {#configuring-aem}
+### AEM の設定 {#configuring-aem}
 
 AEM 全体のパフォーマンスを改善するために設定するベストプラクティスのいくつかは、次のとおりです。
 
-* Felix Console からの JavaScript および CSS の HTML クライアントライブラリ圧縮を有効にします。[例](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)で説明されているClientlibを参照してください。
+* Felix Console からの JavaScript および CSS の HTML クライアントライブラリ圧縮を有効にします。
 * `/etc.clientlibs/fd`のすべてのクライアントライブラリと、AEM Dispatcherの追加のカスタムクライアントライブラリをキャッシュして、発行されたフォームの応答性とセキュリティを高めます。 詳しくは、「[ディスパッチャー](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)」を参照してください。
 
 * `/content/forms/af/`と`/content/dam/formsanddocuments/*`のパスはキャッシュしないでください。 アダプティブフォームのキャッシュの設定について詳しくは、「[アダプティブフォームのキャッシュ](/help/forms/using/configure-adaptive-forms-cache.md)」を参照してください。

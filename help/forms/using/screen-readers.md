@@ -1,19 +1,19 @@
 ---
 title: HTML5 フォーム向けのスクリーンリーダー
-seo-title: HTML5 フォーム向けのスクリーンリーダー
+seo-title: Screen readers for HTML5 forms
 description: HTML5 フォームでサポートされるスクリーンリーダーを一覧表示します。
-seo-description: HTML5 フォームでサポートされるスクリーンリーダーを一覧表示します。
+seo-description: Lists the screen readers supported with HTML5 forms.
 uuid: 035354e2-957f-4eb6-bc16-4ca96ec7ac74
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
-feature: 'モバイルフォーム '
+feature: Mobile Forms
 exl-id: c27eb771-d390-4534-8e67-f1277550e760
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 71%
+source-wordcount: '335'
+ht-degree: 69%
 
 ---
 
@@ -25,9 +25,9 @@ HTML5 フォームは標準の HTML 構成を使用して、これらのフォ�
 
 ## アクセシビリティの標準 {#accessibility-standards}
 
-HTML5 フォームは既知の例外を含むアクセシビリティのリハビリテーション法第 508 条に準拠します。詳しくは、[HTML5 フォームの VPAT](https://www.adobe.com/mena_en/accessibility/compliance/livecycle-mobile-forms-es4-section-508-vpat.html) を参照してください。
+HTML5 フォームは既知の例外を含むアクセシビリティのリハビリテーション法第 508 条に準拠します。詳しくは、[HTML5 フォームの VPAT](http://wwwimages.adobe.com/content/dam/acom/en/accessibility/compliance/pdfs/livecycle-mobile-forms-es4-section-508-vpat.pdf) を参照してください。
 
-## HTML5 フォーム向けに認定されたスクリーンリーダー  {#certified-screen-readers-for-html-forms}
+## HTML5 フォーム向けに認定されたスクリーンリーダー {#certified-screen-readers-for-html-forms}
 
 * Microsoft Windows の JAWS 14.0
 * Mac OS X と iPad の VoiceOver

@@ -1,17 +1,17 @@
 ---
 title: レターの作成
-seo-title: レターの作成
+seo-title: Create Letter
 description: 'このトピックでは、レターを作成する手順、レターにデータモジュールや添付ファイルを追加する手順、Correspondence Management でレターをプレビューする手順について説明します。 '
-seo-description: 'このトピックでは、レターを作成する手順、レターにデータモジュールや添付ファイルを追加する手順、Correspondence Management でレターをプレビューする手順について説明します。 '
+seo-description: This topic gives you the steps to create a letter, add data modules and attachments to it, and preview it in Correspondence Management.
 uuid: b5cdbf01-db85-4ff8-9fda-1489542bffef
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
 feature: Correspondence Management
 exl-id: 8fa14b30-013c-4a23-bebf-2262e8212461
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '4015'
+source-wordcount: '3989'
 ht-degree: 75%
 
 ---
@@ -45,11 +45,11 @@ Correspondence Management ワークフローは、次の 4 つのフェーズか
 
 1. 作成者がレターをプレビューし、後処理用に送信します。詳しくは、「[後処理](/help/forms/using/submit-letter-topostprocess.md)」を参照してください。
 
-#### Correspondence Management に付属しているレターテンプレートの使用  {#using-letter-templates-provided-with-correspondence-management}
+#### Correspondence Management に付属しているレターテンプレートの使用 {#using-letter-templates-provided-with-correspondence-management}
 
 レイアウトテンプレートを最初から作成する代わりに、Correspondence Management に付属しているテンプレートを変更して再利用することができます。Designer を使用すると、組織のニーズに合わせて、テンプレートのブランディングフィールド、データフィールド、コンテンツフィールドをすばやく変更することができます。Correspondence Management のテンプレートについて詳しくは、「[参照レターテンプレート](/help/forms/using/reference-cm-layout-templates.md)」を参照してください。
 
-### ドキュメントフラグメントの作成  {#document-fragment-creation}
+### ドキュメントフラグメントの作成 {#document-fragment-creation}
 
 ドキュメントフラグメントは、レター\通信の構成に使用できる、通信の再利用可能なパーツ\コンポーネントです。
 
@@ -174,7 +174,7 @@ Correspondence Management ワークフローは、次の 4 つのフェーズか
 
 **レターの複雑さの推** 定特定の通信を作成する際の複雑さを判断することが重要です。この分析は、レターテンプレートの作成に必要な合計時間とスキルセットを判断する際に役立ちます。結果として、この情報は Letters Solution の実装に必要なリソースとコストを見積もる際にも役立ちます。
 
-## 通信の複雑さ  {#correspondence-complexity}
+## 通信の複雑さ {#correspondence-complexity}
 
 通信の複雑さは、次のパラメーターを分析して判断できます。
 
@@ -231,13 +231,13 @@ Correspondence Management ワークフローは、次の 4 つのフェーズか
 * [互換性パッケージ](https://helpx.adobe.com/jp/in/experience-manager/6-4/forms/using/compatibility-package.html). 互換性パッケージをインストールして、**Forms**&#x200B;ページの「**レター**」オプションを表示します。
 
 * レター XDP（[レイアウト](/help/forms/using/document-fragments.md)）。
-* レターのパーツを形成するその他の XDP （[レイアウトフラグメント](/help/forms/using/document-fragments.md)）。XDP\Layoutsは[Designer](https://help.adobe.com/en-US/AEMForms/6.1/DesignerHelp/)に作成されます。
+* レターのパーツを形成するその他の XDP （[レイアウトフラグメント](/help/forms/using/document-fragments.md)）。XDP\Layoutsは[Designer](http://www.adobe.com/go/learn_aemforms_designer_64)に作成されます。
 
 * 関連する[データディクショナリ](/help/forms/using/data-dictionary.md)（オプション）。
 * 通信に使用する[データモジュール](/help/forms/using/document-fragments.md)。
 * [Test ](/help/forms/using/data-dictionary.md#p-working-with-test-data-p) Dataは、テストデータが格納されたXMLファイルです。データディクショナリを使用する場合は、テストデータが必要です。
 
-## レターテンプレートの作成  {#create-a-letter-template}
+## レターテンプレートの作成 {#create-a-letter-template}
 
 ### レイアウトを選択してレターのプロパティを入力する {#select-a-layout-and-enter-the-letter-properties}
 
@@ -268,7 +268,7 @@ Correspondence Management ワークフローは、次の 4 つのフェーズか
 
    **次へ**:「 **開く**」をタップすると、Correspondence Managementにレイアウトが表示され、レイアウト(XDP)内のすべてのコンポーネントがリストに表示されます。[データモジュールとレイアウトフラグメントの挿入と構成](/help/forms/using/create-letter.md#p-insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them-p)の手順に進みます。
 
-### データモジュールとレイアウトフラグメントをレターに挿入し、構成します。  {#insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them}
+### データモジュールとレイアウトフラグメントをレターに挿入し、構成します。 {#insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them}
 
 通信を作成した後、「開く」をタップすると、レイアウトが表示され、レイアウト(XDP)内のすべてのサブフォーム/ターゲット領域がリストに表示されます。 各ターゲット領域では、データモジュールかレイアウトフラグメントのいずれかを挿入できます（さらに、レイアウトフラグメントにはデータモジュールを挿入できます）。
 

@@ -1,17 +1,17 @@
 ---
 title: Microsoft Dynamics OData の設定
-seo-title: Microsoft Dynamics ODtata の設定
+seo-title: Microsoft Dynamics ODtata configuration
 description: 統合機能の使用方法と、フォームデータモデルでオンラインとオンプレミスの Microsoft Dynamics サービスを使用する方法について説明します。
-seo-description: ここでは、統合機能の使用方法と、フォームデータモデルでオンラインとオンプレミスの Microsoft Dynamics サービスを使用する方法について説明します。
+seo-description: Learn how to leverage integrate and work with online and on-premises Microsoft Dynamics services through form data model.
 uuid: c9b2764f-9127-4a99-a469-b6ebcdee8fdf
 topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 62f9d1de-c397-46b5-964e-19777ddd130c
-feature: フォームデータモデル
+feature: Form Data Model
 exl-id: 18df57b6-789a-4b61-9418-fa12294b226f
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1217'
 ht-degree: 70%
 
 ---
@@ -35,7 +35,7 @@ AEM Formsアドオンパッケージには、Microsoft DynamicsとAEM Formsを�
 * MS Dynamics OData Cloud Service（OData サービス）
 * 事前に設定されたMicrosoft Dynamicsエンティティとサービスを含むフォームデータモデル。
 
-Microsoft Dynamicsのエンティティとサービスが事前に設定されたODataCloud Serviceおよびフォームデータモデルは、AEMインスタンスの実行モードが`samplecontent`（デフォルト）に設定されている場合にのみ、AEM Formsインスタンスで使用できます。 AEM インスタンスの実行モードの設定について詳しくは、「[実行モード](https://helpx.adobe.com/in/experience-manager/6-4/sites-deploying/configure-runmodes.html)」を参照してください。
+Microsoft Dynamicsのエンティティとサービスが事前に設定されたODataCloud Serviceおよびフォームデータモデルは、AEMインスタンスの実行モードが`samplecontent`（デフォルト）に設定されている場合にのみ、AEM Formsインスタンスで使用できます。 AEM インスタンスの実行モードの設定について詳しくは、「[実行モード](/help/sites-deploying/configure-runmodes.md)」を参照してください。
 
 ## 前提条件 {#prerequisites}
 
@@ -49,7 +49,7 @@ Microsoft Dynamics の設定を開始する前に、以下の項目が使用可�
 
 * [Microsoft DynamicsオンラインサービスのアプリケーションをMicrosoft Azure Active Directoryに登録しました](https://docs.microsoft.com/ja-jp/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory)。登録済みサービスのクライアント ID（アプリケーション ID）とクライアントの秘密鍵の値を書き留めてください。これらの値は [Microsoft Dynamics サービス用にクラウドサービスを設定する](/help/forms/using/ms-dynamics-odata-configuration.md#configure-cloud-service-for-your-microsoft-dynamics-service)時に使用します。
 
-## 登録された Microsoft Dynamics アプリケーションの応答 URL を設定する  {#set-reply-url-for-registered-microsoft-dynamics-application}
+## 登録された Microsoft Dynamics アプリケーションの応答 URL を設定する {#set-reply-url-for-registered-microsoft-dynamics-application}
 
 以下の手順で、登録された Microsoft Dynamics アプリケーションの応答 URL を設定します。
 
@@ -65,7 +65,7 @@ Microsoft Dynamics の設定を開始する前に、以下の項目が使用可�
 
 1. 設定を保存します。
 
-## IFD 用に Microsoft Dynamics を設定する  {#configure-microsoft-dynamics-for-ifd}
+## IFD 用に Microsoft Dynamics を設定する {#configure-microsoft-dynamics-for-ifd}
 
 外部のユーザーは、Microsoft Dynamics でクレームベース認証を使用して、Microsoft Dynamics CRM サーバー上のデータにアクセスすることができます。この機能を有効にするには、以下の手順により、インターネット接続展開（IFD）用に Microsoft Dynamics を有効にして、クレーム設定を構成します。
 
@@ -138,7 +138,7 @@ OAuth クライアントを Active Directory Federation Services（AD FS）マ�
 
 これで、MS Dynamics OData Cloud Service（OData サービス）がクラウドサービスとして設定され、Dynamics サービスに接続されます。
 
-## フォームデータモデルを作成する {#create-form-data-model}
+## フォームデータモデルの作成 {#create-form-data-model}
 
 AEM Formsパッケージをインストールすると、フォームデータモデル&#x200B;**Microsoft Dynamics FDM**&#x200B;がAEMインスタンスにデプロイされます。 デフォルトでは、フォームデータモデルは、MS Dynamics ODataCloud Service（ODataサービス）で設定されたMicrosoft Dynamicsサービスをデータソースとして使用します。
 

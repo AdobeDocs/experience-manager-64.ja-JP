@@ -1,23 +1,23 @@
 ---
 title: リファレンステーマ
-seo-title: リファレンステーマ
+seo-title: Reference Themes
 description: 'AEM Formsは、アダプティブフォームのテーマを提供し、ソフトウェア配布から取得して、フォームのスタイルを設定します。 '
-seo-description: 'AEM Formsは、アダプティブフォームのテーマを提供し、ソフトウェア配布から取得して、フォームのスタイルを設定します。 '
+seo-description: AEM Forms provides adaptive forms themes that you can get from Software Distribution and use to style a form.
 uuid: a39bc3da-0bb8-4f11-b0d5-9403cfc6e384
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 78d7d4b6-95dd-429b-870b-30aba5a3fea3
 exl-id: 6a298571-d6ff-473f-af58-a45a0c7e6175
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '552'
 ht-degree: 75%
 
 ---
 
 # リファレンステーマ {#reference-themes}
 
-[テーマ](/help/forms/using/themes.md)を使用すると、CSS に関する深い知識がなくてもフォームのスタイルを設定できます。デフォルトのテーマに加えて、[AEM-FORMS-6.3-REFERENCE-THEMES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES)パッケージをインストールすることで、次のテーマを取得できます。
+[テーマ](/help/forms/using/themes.md)を使用すると、CSS に関する深い知識がなくてもフォームのスタイルを設定できます。デフォルトのテーマに加えて、[AEM Formsアドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)をインストールすることで、次のテーマを取得できます。
 
 * Beryl
 * Exec
@@ -48,7 +48,7 @@ Exec テーマは、背景を淡色で塗りつぶさず、フォームコンポ
 
 [クリックして拡大](assets/exec-1.png)
 
-## Exec Light  {#exec-light}
+## Exec Light {#exec-light}
 
 Exec Light テーマは、ホワイトスペースを使用してシームレスなエクスペリエンスを作成します。「次へ」ボタンと「送信」ボタンは、淡色で塗りつぶされ、3D の影が付きます。左側で選択したタブには、ダブルチェックマークではなく矢印が付きます。![Exec Light テーマ](assets/exec-light.png)
 
@@ -76,7 +76,7 @@ Urbaneテーマは、フォームのミニマリストで機能的な外観を�
 
 [クリックして拡大](assets/urbane-1.png)
 
-## U.S. Web Design Standards {#u-s-web-design-standards}
+## 米国Webデザイン規格 {#u-s-web-design-standards}
 
 U.S. Web Design Standardsテーマは、名前が示すように、Draft U.S. Web Design Standardsサイトに記載されている書体とスタイルを使用します。 この Web 標準は、連邦政府の Web サイト間での Web エクスペリエンスを統一するために、連邦政府機関で使用されています。![U.S. Web Design Standards テーマ](assets/us-web-standards.png)
 

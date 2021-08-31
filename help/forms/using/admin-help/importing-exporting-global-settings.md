@@ -1,8 +1,8 @@
 ---
 title: グローバル設定の読み込みと書き出し
-seo-title: グローバル設定の読み込みと書き出し
+seo-title: Importing and exporting global settings
 description: Workspace の検索テンプレート定義とグローバル設定は、読み込んだり書き出したりすることができます。
-seo-description: Workspace の検索テンプレート定義とグローバル設定は、読み込んだり書き出したりすることができます。
+seo-description: You can import and export search template definitions and global settings for Workspace.
 uuid: 8f1f210d-e850-4b2c-bb5a-942fa8299791
 contentOwner: admin
 content-type: reference
@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 72fe5749-2fa2-442f-b679-7889faeafcac
 exl-id: 9eabafbe-2193-4799-9bdd-c2be42ead0b9
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1193'
 ht-degree: 75%
 
 ---
@@ -33,13 +33,13 @@ Workspace の検索テンプレート定義とグローバル設定は、読み�
 >
 >グローバル設定ファイルのイベントプロパティを変更した場合は、サーバーを再起動する必要があります。
 
-## 検索テンプレート定義の読み込み  {#import-a-search-template-definition}
+## 検索テンプレート定義の読み込み {#import-a-search-template-definition}
 
 1. 管理コンソールで、サービス／Workspace／グローバル管理をクリックします。
 1. 「検索テンプレート定義を読み込む」ボックスで、「ファイルを選択」をクリックし、検索テンプレートを選択します。読み込むことができるのは、Workspace のインスタンスから書き出された検索テンプレート定義だけです。
 1. 「読み込み」をクリックします。
 
-## 検索テンプレート定義の書き出し  {#export-a-search-template-definition}
+## 検索テンプレート定義の書き出し {#export-a-search-template-definition}
 
 1. グローバル管理ページの「検索テンプレート定義を書き出し」で、「すべてを一覧表示」をクリックします。
 1. 検索テンプレートのリストで、書き出すテンプレートを選択します。
@@ -50,17 +50,17 @@ Workspace の検索テンプレート定義とグローバル設定は、読み�
 
 1. 「書き出し」をクリックし、ファイルを、使用しているコンピューターに保存します。
 
-## グローバル設定の読み込み  {#import-global-settings}
+## グローバル設定の読み込み {#import-global-settings}
 
 1. グローバル管理ページの「グローバル設定を読み込む」で、「ファイルを選択」をクリックし、グローバル設定ファイルを選択します。グローバル設定ファイルは、XML 形式である必要があります。
 1. 「読み込み」をクリックします。
 
-## グローバル設定の書き出し  {#export-global-settings}
+## グローバル設定の書き出し {#export-global-settings}
 
 1. グローバル管理ページの「グローバル設定を書き出し」で、「書き出し」をクリックします。
 1. ファイルを、使用しているコンピューターに保存します。
 
-## Workspace グローバル設定  {#workspace-global-settings}
+## Workspace グローバル設定 {#workspace-global-settings}
 
 グローバル設定ファイルは変更できます。ただし、編集が必要になる可能性があるのは JChannelConnectionProperties、formViewOnly、および specialRoutes の設定だけです。
 
@@ -70,7 +70,7 @@ Workspace の検索テンプレート定義とグローバル設定は、読み�
 
 Workspace グローバル設定ファイルには、次の設定が含まれます。
 
-### specialRoutes 設定  {#specialroutes-settings}
+### specialRoutes 設定 {#specialroutes-settings}
 
 *specialRoutes* 設定では、Workspace での特別なルート、承認および拒否のプロパティを指定します。場合によっては、Workspace のタスクカードにこれらのルートのボタンが表示され、ユーザーがフォームを開かずにルートを選択できます。グローバル設定ファイルで specialRoutes 設定を変更して、承認または拒否の対象となるカスタマイズされた名前を追加したり、追加ルートを作成したりすることができます。
 
@@ -83,7 +83,7 @@ Workspace グローバル設定ファイルには、次の設定が含まれま�
 
 **client_specialRoutes_names:** リソースファイルからカスタマイズされた文字列値を探すために使用されるキー。この設定の各エントリには、名前およびスタイルの値を含める必要があります。
 
-### JGroup 設定  {#jgroup-settings}
+### JGroup 設定 {#jgroup-settings}
 
 これらの設定は、Adobe LiveCycle ES 2.5 またはそれより前のバージョンからアップグレードした場合のみ表示されます。
 
@@ -103,9 +103,7 @@ Workspace グローバル設定ファイルには、次の設定が含まれま�
 
 **server_remoteevents_JGroupName:** リモートイベント通信に使用されるJGroupの名前。この値は、ランダムに生成され、クラスター内の競合を回避します。この値は変更しないでください。
 
-JGroups および Workspace について詳しくは、「[JGroups と AEM Forms Workspace - 説明](https://blogs.adobe.com/livecycle/2011/03/jgroups-and-livecycle-workspace-explained.html)」を参照してください。
-
-### formView 設定  {#formview-settings}
+### formView 設定 {#formview-settings}
 
 **client_formView_openFormInFullScreen:** Workspaceですべてのフォームをフルスクリーンモードで表示するには、このオプションをtrueに設定します。このオプションのデフォルトは false に設定されており、フォームはフルスクリーンモードで表示されません。User サービスには、タスクと関連付けられたドキュメントをフルスクリーンモードで開くオプションがあります。このオプションを使用すると、プロセスごとに表示を制御できます。
 
@@ -125,7 +123,7 @@ JGroups および Workspace について詳しくは、「[JGroups と AEM Forms
 
 **client_pollingInterval:** 新しいタスクや変更されたタスクを検出するためにFlex Workspace(JEE上のAEM formsでは非推奨)で使用されるポーリング間隔（秒）を設定します。デフォルト値は 3 秒です。これは AEM Forms Workspace では動作しません。
 
-**client_systemContext_name:** AEM Forms Workspaceでのタスクの添付ファイルに対して「追加者」フィールド（「添付ファイル」タブ）に表示するカスタム名（例：市民）を指定します。
+**client_systemContext_name:** AEM Forms Workspaceでのタスクの添付ファイルに対して「追加者」フィールド（「添付ファイル」タブ）に表示するカスタム名（例えば、市民）を指定します。
 
 カスタム名を定義するには：
 

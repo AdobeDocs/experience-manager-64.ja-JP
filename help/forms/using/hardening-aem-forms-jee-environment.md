@@ -1,8 +1,8 @@
 ---
 title: JEE 上の AEM Forms 環境の堅牢化
-seo-title: JEE 上の AEM Forms 環境の堅牢化
+seo-title: Hardening Your AEM Forms on JEE Environment
 description: 企業のイントラネットで実行されるJEE上のAEM Formsのセキュリティを強化するための、様々なセキュリティ強化設定について説明します。
-seo-description: 企業のイントラネットで実行されるJEE上のAEM Formsのセキュリティを強化するための、様々なセキュリティ強化設定について説明します。
+seo-description: Learn a variety of security-hardening settings to enhance the security of AEM Forms on JEE running in a corporate intranet.
 uuid: f6c63690-6376-4fe1-9df2-a14fbfd62aff
 content-type: reference
 topic-tags: Security
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 5aa02fae-b9dd-45bf-9826-16e9e5686727
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '7347'
+source-wordcount: '7304'
 ht-degree: 73%
 
 ---
@@ -52,7 +52,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
 <table> 
  <thead> 
   <tr> 
-   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p> </th> 
+   <th><p>問題</p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -88,7 +88,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
 <table> 
  <thead> 
   <tr> 
-   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p></th> 
+   <th><p>問題</p></th> 
    <th><p>説明</p></th> 
   </tr> 
  </thead> 
@@ -117,7 +117,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
 <table> 
  <thead> 
   <tr> 
-   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p> </th> 
+   <th><p>問題</p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -308,7 +308,7 @@ Web Service Definition Language（WSDL）の生成は、開発者が WSDL の生
 <table> 
  <thead> 
   <tr> 
-   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p> </th> 
+   <th><p>問題</p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -423,7 +423,7 @@ LDAP を使用した最もよく行われる攻撃は、攻撃者が大量の認
 <table> 
  <thead> 
   <tr> 
-   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p> </th> 
+   <th><p>問題</p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -632,7 +632,7 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
 
 クロスサイトリクエストフォージェリ(CSRF)攻撃は、Webサイトがユーザーに対して持つ信頼性を悪用し、ユーザーが不正で意図しないコマンドを送信します。 この攻撃は、ユーザーが既に認証されている別のサイトにアクセスするために、Webページにリンクやスクリプト、または電子メールメッセージにURLを含めることで設定されます。
 
-例えば、別のWebサイトを同時に参照しながら管理コンソールにログインする場合があります。 CSRF 攻撃者は、このような状況を狙って、閲覧されるサイトの Web ページに含まれている HTML img タグの `src` 属性などに、攻撃対象 Web サイト内のサーバー側スクリプトを参照する URL を記述しておきます。Web ブラウザーに備わっている Cookie ベースのセッション認証メカニズムにより、攻撃者の Web サイトは正当なユーザーを装って、攻撃対象のサーバー側スクリプトに悪意ある要求を送信することができます。その他の例については、[https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)#Examples](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)#Examples) を参照してください。
+例えば、別のWebサイトを同時に参照しながら管理コンソールにログインする場合があります。 CSRF 攻撃者は、このような状況を狙って、閲覧されるサイトの Web ページに含まれている HTML img タグの `src` 属性などに、攻撃対象 Web サイト内のサーバー側スクリプトを参照する URL を記述しておきます。Web ブラウザーに備わっている Cookie ベースのセッション認証メカニズムにより、攻撃者の Web サイトは正当なユーザーを装って、攻撃対象のサーバー側スクリプトに悪意ある要求を送信することができます。
 
 CSRF に共通の特性を次に示します。
 
@@ -697,7 +697,7 @@ JEE上のAEM Formsには、許可されているリファラー例外リスト�
 
 APIについて詳しくは、「 JEE上のAEM Forms APIリファレンス」を参照してください。
 
-許可されているリファラーの例外の&#x200B;***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION***&#x200B;リストをグローバルレベルで使用し、すべてのアプリケーションに適用できる例外を定義します。 このリストには、絶対パス(例：`/index.html`)または相対パス(例：`/sample/`)です。 また、相対URIの末尾に正規表現を追加することもできます。例：`/sample/(.)*`.
+許可されているリファラーの例外の&#x200B;***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION***&#x200B;リストをグローバルレベルで使用し、すべてのアプリケーションに適用できる例外を定義します。 このリストには、絶対パス（`/index.html`など）または相対パス（`/sample/`など）を持つURIのみが含まれます。 相対URIの末尾に正規表現を追加することもできます（例：`/sample/(.)*`）。
 
 ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** リスト ID は、`UMConstants` 名前空間の `com.adobe.idp.um.api` クラスで定数として定義されており、`adobe-usermanager-client.jar` にあります。この AEM Forms API を使用すると、リストを取得、作成、編集または削除できます。例えば、グローバルで許可されているリファラーの例外リストを作成するには、次を使用します。
 

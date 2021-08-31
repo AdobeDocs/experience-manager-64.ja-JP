@@ -1,8 +1,8 @@
 ---
 title: 'ディレクトリの同期 '
-seo-title: 'ディレクトリの同期 '
+seo-title: Synchronizing directories
 description: 手動またはスケジュール設定による同期を使用して User Management データベースをソースディレクトリサーバーに対する変更と同期する方法について説明します。
-seo-description: 手動またはスケジュール設定による同期を使用して User Management データベースをソースディレクトリサーバーに対する変更と同期する方法について説明します。
+seo-description: Learn how to synchronize the User Management database with changes to the source directory servers using manual or scheduled synchronization.
 uuid: 71cbc04d-6172-49b7-a490-ff3233c1b2bb
 contentOwner: admin
 content-type: reference
@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 7ec0698a-9e6e-48d4-bba2-5a6eee313900
 exl-id: d6b2f389-bff4-481d-93bf-87f56114a91b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 97%
+source-wordcount: '980'
+ht-degree: 98%
 
 ---
 
@@ -25,8 +25,6 @@ ht-degree: 97%
 
 毎日実行する同期スケジュールを設定して、User Management データベースをソースディレクトリサーバーに対する変更または更新と自動的に同期することもできます。ただし、このプロセスではネットワークおよびサーバーのリソースが使用されることに注意してください。使用率が低い時間帯を選択し、システムおよびネットワークリソースを占有する不要な同期のスケジュールを設定しないようにしてください。不要な同期を最小限に抑えるには、代わりに即時同期オプションを使用します。
 
-また、ドメインの同期の際に、ユーザー情報およびグループ情報を Adobe LiveCycle Content Services 9（非推奨）に挿入するかどうかを指定できます。
-
 >[!NOTE]
 >
 >LDAP ディレクトリの同期化が進行中に、ローカルの複数のユーザーとグループを作成しないでください。この処理を試みると、エラーが発生します。
@@ -37,9 +35,9 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。Content Services（非推奨）の設定について詳しくは、『[Content Services の管理](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf)』を参照してください。
+>Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。
 
-## 差分ディレクトリ同期の有効化  {#enable-delta-directory-synchronization}
+## 差分ディレクトリ同期の有効化 {#enable-delta-directory-synchronization}
 
 差分ディレクトリ同期によってディレクトリ同期の効率が向上します。差分ディレクトリ同期を有効にすると、User Management では最後の同期以降に追加または更新されたユーザーおよびグループのみが同期されます。
 
@@ -57,14 +55,14 @@ ht-degree: 97%
 1. 「Delta の同期」の下にあるチェックボックスを選択し、「保存」をクリックします。
 1. 差分ディレクトリ同期機能を使用するエンタープライズドメインごとに、ディレクトリ設定を編集します。ユーザー設定ページとグループ設定ページの「タイムスタンプを変更」設定に、値として `modify TimeStamp` を入力します。エンタープライズドメインの編集について詳しくは、[既存のドメインの編集と変換](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)を参照してください。
 
-## 同期中の詳細なログの有効化または無効化  {#enable-or-disable-detailed-logging-during-synchronization}
+## 同期中の詳細なログの有効化または無効化 {#enable-or-disable-detailed-logging-during-synchronization}
 
 デフォルトで、User Management では、同期処理中に詳細な統計情報がログに記録されます。
 
 1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックします。
 1. 「同期統計ログ」の指定にあるチェックボックスの選択を解除して詳細なログを無効にするか、選択してログを有効にしてから、「保存」をクリックします。
 
-## ディレクトリ同期の再試行オプションの設定  {#configure-the-directory-synchronization-retry-option}
+## ディレクトリ同期の再試行オプションの設定 {#configure-the-directory-synchronization-retry-option}
 
 User Management を設定して、失敗したディレクトリ同期処理を定期的にチェックすることができます。この設定にすると、失敗した同期の完了が User Management で試行されます。
 
@@ -81,7 +79,7 @@ User Management を設定して、失敗したディレクトリ同期処理を�
 
    複数のドメインを選択した場合は、すべてのドメインに対してドメイン同期を同時に実行できます。一方、ドメインを個別に選択した場合、一度に実行できるドメイン同期は 1 つだけです。
 
-## ディレクトリの同期スケジュールの設定  {#schedule-directory-synchronization}
+## ディレクトリの同期スケジュールの設定 {#schedule-directory-synchronization}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 同期をスケジュールするには：
@@ -95,7 +93,7 @@ Cron 形式の使用方法は、Quartz オープンソースジョブスケジ�
 * （オプション）ユーザー情報およびグループ情報を Content Services（非推奨）に挿入するには、「このオプションを選択すると、ユーザーとグループが、登録済みの外部プリンシパルストレージプロバイダーに挿入されます」オプションを選択します。このオプションは、ユーザーとグループページから新しいユーザーとグループを追加する場合にも適用されます。
 * 「保存」をクリックします。
 
-## 進行中のディレクトリ同期すべての停止  {#stop-all-directory-synchronizations-currently-in-progress}
+## 進行中のディレクトリ同期すべての停止 {#stop-all-directory-synchronizations-currently-in-progress}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 「中止」をクリックします。ディレクトリ同期が進行中の場合にのみ、このボタンは表示されます。

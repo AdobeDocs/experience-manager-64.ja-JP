@@ -1,8 +1,8 @@
 ---
 title: ファイル形式とPDF形式の変換
-seo-title: ファイル形式とPDF形式の変換
+seo-title: Converting Between File Formatsand PDF
 description: Generate PDFサービスを使用して、ネイティブファイル形式をPDFに変換します。 Generate PDFサービスは、PDFを他のファイル形式に変換し、PDFドキュメントのサイズを最適化します。
-seo-description: Generate PDFサービスを使用して、ネイティブファイル形式をPDFに変換します。 Generate PDFサービスは、PDFを他のファイル形式に変換し、PDFドキュメントのサイズを最適化します。
+seo-description: Use the Generate PDF service to convert native file formats to PDF. Generate PDF service also converts PDF to other file formats and optimizes the size of PDF documents.
 uuid: f72ad603-c996-4d48-9bfc-bed7bf776af6
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ topic-tags: operations
 discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 79091a75-2669-453f-9560-e58bfffa3487
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
-source-wordcount: '7932'
+source-wordcount: '7872'
 ht-degree: 4%
 
 ---
 
-# ファイル形式とPDF {#converting-between-file-formatsand-pdf}の変換
+# ファイル形式とPDFの変換 {#converting-between-file-formatsand-pdf}
 
 **Generate PDFサービスについて**
 
@@ -86,7 +86,7 @@ Generate PDFサービスを使用して、次のタスクを実行できます�
 >
 >Generate PDFサービスについて詳しくは、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-## Word文書のPDF文書への変換{#converting-word-documents-to-pdf-documents}
+## Word文書からPDF文書への変換 {#converting-word-documents-to-pdf-documents}
 
 この節では、Generate PDF APIを使用して、Microsoft Word文書をプログラムでPDF文書に変換する方法について説明します。
 
@@ -98,7 +98,7 @@ Generate PDFサービスを使用して、次のタスクを実行できます�
 >
 >Generate PDFサービスについて詳しくは、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要{#summary-of-steps}
+### 手順の概要 {#summary-of-steps}
 
 Microsoft Word文書をPDF文書に変換するには、次のタスクを実行します。
 
@@ -140,7 +140,7 @@ Generate PDFサービスクライアントを作成した後、 `createPDF2`メ�
 
 [Generate PDFサービスAPIのクイックスタート](/help/forms/developing/generate-pdf-service-java-api.md#generate-pdf-service-java-api-quick-start-soap)
 
-### Java APIを使用してWord文書をPDF文書に変換する{#convert-word-documents-to-pdf-documents-using-the-java-api}
+### Java APIを使用したWord文書のPDF文書への変換 {#convert-word-documents-to-pdf-documents-using-the-java-api}
 
 Generate PDF API(Java)を使用して、Microsoft WordドキュメントをPDFドキュメントに変換します。
 
@@ -195,7 +195,7 @@ Generate PDF API(Java)を使用して、Microsoft WordドキュメントをPDF�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用してWordドキュメントをPDFドキュメントに変換します。 {#convert-word-documents-to-pdf-documents-using-the-web-service-api}
+### WebサービスAPIを使用したWordドキュメントのPDFドキュメントへの変換 {#convert-word-documents-to-pdf-documents-using-the-web-service-api}
 
 Generate PDF API（Webサービス）を使用して、Microsoft WordドキュメントをPDFドキュメントに変換します。
 
@@ -257,7 +257,7 @@ Generate PDF API（Webサービス）を使用して、Microsoft Wordドキュ�
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## HTMLドキュメントからPDFドキュメントへの変換{#converting-html-documents-to-pdf-documents}
+## HTMLドキュメントからPDFドキュメントへの変換 {#converting-html-documents-to-pdf-documents}
 
 この節では、Generate PDF APIを使用してHTMLドキュメントをPDFドキュメントにプログラムで変換する方法について説明します。
 
@@ -265,7 +265,7 @@ Generate PDF API（Webサービス）を使用して、Microsoft Wordドキュ�
 >
 >Generate PDFサービスについて詳しくは、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要{#summary_of_steps-1}
+### 手順の概要 {#summary_of_steps-1}
 
 HTMLドキュメントをPDFドキュメントに変換するには、次のタスクを実行します。
 
@@ -307,7 +307,7 @@ HTMLコンテンツをPDFドキュメントに変換した後、結果を取得�
 
 [Generate PDFサービスAPIのクイックスタート](/help/forms/developing/generate-pdf-service-java-api.md#generate-pdf-service-java-api-quick-start-soap)
 
-### Java API {#convert-html-content-to-a-pdf-document-using-the-java-api}を使用してHTMLコンテンツをPDFドキュメントに変換します
+### Java APIを使用したHTMLコンテンツのPDFドキュメントへの変換 {#convert-html-content-to-a-pdf-document-using-the-java-api}
 
 Generate PDF API(Java)を使用してHTMLドキュメントをPDFドキュメントに変換します。
 
@@ -352,7 +352,7 @@ Generate PDF API(Java)を使用してHTMLドキュメントをPDFドキュメン
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPI {#convert-html-content-to-a-pdf-document-using-the-web-service-api}を使用してHTMLコンテンツをPDFドキュメントに変換します
+### WebサービスAPIを使用したHTMLコンテンツのPDFドキュメントへの変換 {#convert-html-content-to-a-pdf-document-using-the-web-service-api}
 
 Generate PDF API（Webサービス）を使用して、HTMLコンテンツをPDFドキュメントに変換します。
 
@@ -407,7 +407,7 @@ Generate PDF API（Webサービス）を使用して、HTMLコンテンツをPDF
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## PDFドキュメントを非画像形式に変換する{#converting-pdf-documents-to-non-image-formats}
+## PDFドキュメントを画像以外の形式に変換 {#converting-pdf-documents-to-non-image-formats}
 
 この節では、Generate PDF Java APIとWebサービスAPIを使用して、PDFドキュメントを画像以外の形式の例であるRTFファイルにプログラムで変換する方法について説明します。 その他の画像以外の形式には、HTML、テキスト、DOC、EPSなどがあります。 PDFドキュメントをRTFに変換する場合は、送信ボタンなどのフォーム要素がPDFドキュメントに含まれていないことを確認してください。 フォーム要素は変換されません。
 
@@ -415,7 +415,7 @@ Generate PDF API（Webサービス）を使用して、HTMLコンテンツをPDF
 >
 >Generate PDFサービスについて詳しくは、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
 
-### 手順の概要{#summary_of_steps-2}
+### 手順の概要 {#summary_of_steps-2}
 
 PDFドキュメントをサポートされているいずれかのタイプに変換するには、次の手順を実行します。
 
@@ -457,7 +457,7 @@ PDFドキュメントをサポートされているいずれかのタイプに�
 
 [Generate PDFサービスAPIのクイックスタート](/help/forms/developing/generate-pdf-service-java-api.md#generate-pdf-service-java-api-quick-start-soap)
 
-### Java API {#convert-a-pdf-document-to-a-rtf-file-using-the-java-api}を使用してPDFドキュメントをRTFファイルに変換します
+### Java APIを使用したPDFドキュメントのRTFファイルへの変換 {#convert-a-pdf-document-to-a-rtf-file-using-the-java-api}
 
 Generate PDF API(Java)を使用してPDFドキュメントをRTFファイルに変換します。
 
@@ -503,7 +503,7 @@ Generate PDF API(Java)を使用してPDFドキュメントをRTFファイルに�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPI {#convert-a-pdf-document-to-a-rtf-file-using-the-web-service-api}を使用してPDFドキュメントをRTFファイルに変換します
+### WebサービスAPIを使用したPDFドキュメントのRTFファイルへの変換 {#convert-a-pdf-document-to-a-rtf-file-using-the-web-service-api}
 
 Generate PDF API（Webサービス）を使用してPDFドキュメントをRTFファイルに変換します。
 
@@ -562,7 +562,7 @@ Generate PDF API（Webサービス）を使用してPDFドキュメントをRTF�
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 追加のネイティブファイル形式{#adding-support-for-additional-native-file-formats}のサポートの追加
+## 追加のネイティブファイル形式のサポートの追加 {#adding-support-for-additional-native-file-formats}
 
 この節では、追加のネイティブファイル形式のサポートを追加する方法について説明します。 Generate PDFサービスと、このサービスでネイティブファイル形式をPDFに変換する際に使用されるネイティブアプリケーションとの間のインタラクションの概要を示します。
 
@@ -572,7 +572,7 @@ Generate PDF API（Webサービス）を使用してPDFドキュメントをRTF�
 * Generate PDFサービス、Generate PDFサービスのApplication Monitor(AppMon)コンポーネント、およびMicrosoft Wordなどのネイティブアプリケーション間のインタラクション
 * XMLグラマーがこれらの操作で果たす役割
 
-### コンポーネントの操作{#component-interactions}
+### コンポーネントの操作 {#component-interactions}
 
 Generate PDFサービスは、ネイティブファイル形式を変換します。そのためには、ファイル形式に関連付けられたアプリケーションを呼び出し、アプリケーションとやり取りして、デフォルトのプリンターを使用してドキュメントを印刷します。 デフォルトのプリンターをAdobe PDFプリンターとして設定する必要があります。
 
@@ -638,13 +638,13 @@ WinIDがテキスト、サブウィンドウ、ウィンドウクラスIDなど�
  </tbody> 
 </table>
 
-### スクリプトとダイアログのXMLファイルについて{#about-the-script-and-dialog-xml-files}
+### スクリプトとダイアログのXMLファイルについて {#about-the-script-and-dialog-xml-files}
 
 スクリプトXMLファイルは、ユーザーがアプリケーションダイアログボックス内を移動するのと同じ方法で、Generate PDFサービスにアプリケーションダイアログボックス内を移動するよう指示します。 スクリプトXMLファイルは、ボタンの押し方、チェックボックスの選択/選択解除、メニュー項目の選択などの操作を実行して、ダイアログボックスに応答するようGenerate PDFサービスに指示します。
 
 これに対し、ダイアログXMLファイルは、スクリプトXMLファイルと同じタイプのアクションを持つダイアログボックスに対応します。
 
-#### ダイアログボックスとウィンドウ要素の用語{#dialog-box-and-window-element-terminology}
+#### ダイアログボックスとウィンドウ要素の用語 {#dialog-box-and-window-element-terminology}
 
 この節と次の節では、説明するパースペクティブに応じて、ダイアログボックスと含まれるコンポーネントに対して異なる用語を使用します。 ダイアログボックスのコンポーネントは、ボタン、フィールド、コンボボックスなどの項目です。
 
@@ -664,7 +664,7 @@ WinIDがテキスト、サブウィンドウ、ウィンドウクラスIDなど�
 
 スクリプトおよびダイアログXMLの階層
 
-#### スクリプトXMLファイル{#script-xml-files}
+#### スクリプトXMLファイル {#script-xml-files}
 
 *スクリプトXMLファイル*&#x200B;は、ネイティブアプリケーションに特定のウィンドウ要素に移動し、それらの要素に応答を提供するよう指示する一連の手順を指定します。 ほとんどの応答は、対応するダイアログボックスのフィールド、コンボボックス、またはボタンにユーザーが入力する入力に対応するテキストまたはキーストロークです。
 
@@ -676,7 +676,7 @@ Generate PDFサービスでスクリプトXMLファイルをサポートする�
 
 スクリプトXMLファイルの各ステップは、ステップの指示が正常に実行された場合に表示される予定のウィンドウ要素を識別します。 スクリプトステップの実行中に予期しないダイアログボックスが表示された場合は、次の節で説明するように、Generate PDFサービスはダイアログXMLファイルを検索します。
 
-#### ダイアログXMLファイル{#dialog-xml-files}
+#### ダイアログXMLファイル {#dialog-xml-files}
 
 ネイティブアプリケーションを実行すると、異なるダイアログボックスが表示されます。これは、ネイティブアプリケーションが表示モードか非表示モードかに関係なく表示されます。 ダイアログボックスは、オペレーティングシステムによって、またはアプリケーション自体によって生成できます。 ネイティブアプリケーションがGenerate PDFサービスの制御下で実行されている場合、システムおよびネイティブアプリケーションのダイアログボックスが非表示のウィンドウに表示されます。
 
@@ -692,13 +692,13 @@ Generate PDFサービスは、ダイアログボックスに一致するもの�
 
 Generate PDFサービスで、前にリストされたファイルに記述されていないダイアログボックスが表示された場合、そのダイアログボックスのキャプションがログファイルエントリに組み込まれます。 現在実行中のジョブは、最終的にタイムアウトになります。 その後、ログファイルの情報を使用して、ネイティブアプリケーション用の追加のダイアログXMLファイルで新しい手順を作成できます。
 
-### ネイティブファイル形式{#adding-or-modifying-support-for-a-native-file-format}のサポートを追加または変更する
+### ネイティブファイル形式のサポートの追加または変更 {#adding-or-modifying-support-for-a-native-file-format}
 
 この節では、他のネイティブファイル形式をサポートするため、または既にサポートされているネイティブファイル形式のサポートを変更するために実行する必要があるタスクについて説明します。
 
 サポートを追加または変更する前に、次の作業を実行する必要があります。
 
-#### ウィンドウ要素を識別するツールの選択{#choosing-a-tool-for-identifying-window-elements}
+#### ウィンドウ要素を識別するツールの選択 {#choosing-a-tool-for-identifying-window-elements}
 
 ダイアログおよびスクリプトXMLファイルでは、ダイアログまたはスクリプト要素が応答するウィンドウ要素（ダイアログボックス、フィールド、またはその他のダイアログコンポーネント）を指定する必要があります。 例えば、スクリプトがネイティブ・アプリケーション用のメニューを起動した後、スクリプトは、キー操作またはアクションを適用するメニューのウィンドウ要素を特定する必要があります。
 
@@ -720,7 +720,7 @@ Generate PDFサービスで、前にリストされたファイルに記述さ�
 
 ダイアログまたはスクリプトXMLファイルを使用する予定がある場合は、Microsoft Spy++アプリケーションをインストールする必要があります。
 
-#### ダイアログとスクリプトファイルのパッケージ化を解除します。 {#unpackaging-the-dialog-and-script-files}
+#### ダイアログファイルとスクリプトファイルのパッケージ解除 {#unpackaging-the-dialog-and-script-files}
 
 ダイアログファイルとスクリプトファイルは、 appmondata.jarファイルにあります。 これらのファイルのいずれかを変更したり、新しいスクリプトまたはダイアログファイルを追加したりする前に、このJARファイルのパッケージを解除する必要があります。 例えば、EditPlusアプリケーションのサポートを追加するとします。 appmon.editplus.script.en_US.xmlとappmon.editplus.script.addition.en_US.xmlという2つのXMLファイルを作成します。 次に示すように、これらのXMLスクリプトをadobe-appmondata.jarファイルの2つの場所に追加する必要があります。
 
@@ -749,13 +749,13 @@ Generate PDFサービスで、前にリストされたファイルに記述さ�
 1. [アクティブなサービス]を展開します。 サービス名が実行中の場合は、その横に緑色の矢印が表示されます。 それ以外の場合、サービスは停止状態になります。
 1. サービスが停止状態の場合は、サービス名を右クリックし、「Start Service」を選択します。
 
-### ネイティブアプリケーション{#creating-or-modifying-a-script-xml-file-for-a-native-application}のスクリプトXMLファイルの作成または変更
+### ネイティブアプリケーション用のスクリプトXMLファイルの作成または変更 {#creating-or-modifying-a-script-xml-file-for-a-native-application}
 
 ファイルを新しいネイティブアプリケーションにダイレクトする場合は、そのアプリケーション用のスクリプトXMLファイルを作成する必要があります。 Generate PDFサービスと、既にサポートされているネイティブアプリケーションとのやり取りを変更する場合は、そのアプリケーションのスクリプトを変更する必要があります。
 
 スクリプトには、ネイティブアプリケーションのウィンドウ要素間を移動し、それらの要素に対して特定の応答を提供する手順が含まれています。 この情報を含むファイルはappmonです。*[appname]*.script.*[locale]*.xml例えば、 appmon.notepad.script.en_US.xmlなどがあります。
 
-#### スクリプトが実行する必要があるステップを識別します。{#identifying-steps-the-script-must-execute}
+#### スクリプトが実行する必要があるステップの識別 {#identifying-steps-the-script-must-execute}
 
 ネイティブアプリケーションを使用して、ナビゲートする必要があるウィンドウ要素と、ドキュメントを印刷するために実行する必要がある各応答を決定します。 任意の応答から生成されるダイアログボックスに注意してください。 手順は次の手順に似ています。
 
@@ -765,13 +765,13 @@ Generate PDFサービスで、前にリストされたファイルに記述さ�
 1. プリンタに必要なプロパティを指定します。
 1. 「印刷」を選択し、名前を付けて保存ダイアログボックスが表示されるのを待ちます。 Generate PDFサービスでPDFファイルの保存先を指定するには、Save Asダイアログボックスが必要です。
 
-#### キャプション属性{#identifying-the-dialogs-specified-in-caption-attributes}で指定されたダイアログの識別
+#### キャプション属性で指定されたダイアログの識別 {#identifying-the-dialogs-specified-in-caption-attributes}
 
 Microsoft Spy++を使用して、ネイティブアプリケーションのウィンドウ要素プロパティのIDを取得します。 スクリプトを記述するには、これらのIDが必要です。
 
-#### キャプション属性{#using-regular-expressions-in-caption-attributes}での正規表現の使用
+#### キャプション属性での正規表現の使用 {#using-regular-expressions-in-caption-attributes}
 
-キャプションの仕様では、正規表現を使用できます。 Generate PDFサービスは、`java.util.regex.Matcher`クラスを使用して正規表現をサポートします。 `java.util.regex.Pattern`で説明されている正規表現をサポートしています。 (JavaのWebサイト([https://java.sun.com/j2se/1.4.2/docs/api/java/util/regex/Pattern.html](https://java.sun.com/j2se/1.4.2/docs/api/java/util/regex/Pattern.html))にアクセスします。
+キャプションの仕様では、正規表現を使用できます。 Generate PDFサービスは、`java.util.regex.Matcher`クラスを使用して正規表現をサポートします。 `java.util.regex.Pattern`で説明されている正規表現をサポートしています。
 
 **メモ帳のバナーでメモ帳の前に付加されるファイル名を格納する正規表現**
 
@@ -793,7 +793,7 @@ Microsoft Spy++を使用して、ネイティブアプリケーションのウ�
  </windowList>
 ```
 
-#### window要素とwindowList要素の順序{#ordering-the-window-and-windowlist-elements}
+#### window要素とwindowList要素の順序付け {#ordering-the-window-and-windowlist-elements}
 
 `window`要素と`windowList`要素の順序は次のようにする必要があります。
 
@@ -842,7 +842,7 @@ Microsoft Spy++を使用して、ネイティブアプリケーションのウ�
  </windowList>
 ```
 
-### ネイティブアプリケーション{#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application}用の追加のダイアログXMLファイルの作成または変更
+### ネイティブアプリケーション用の追加のダイアログXMLファイルの作成または変更 {#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application}
 
 以前サポートされていなかったネイティブアプリケーション用のスクリプトを作成する場合は、そのアプリケーション用の追加のダイアログXMLファイルも作成する必要があります。 AppMonが使用するすべてのネイティブアプリケーションには、ダイアログXMLファイルを1つだけ追加する必要があります。 追加のダイアログXMLファイルは、未承諾のダイアログボックスが必要な場合でも必要です。 追加のダイアログボックスには、その`window`要素がプレースホルダーにすぎない場合でも、少なくとも1つの`window`要素が必要です。
 
@@ -865,11 +865,11 @@ Microsoft Spy++を使用して、ネイティブアプリケーションのウ�
 
 `window`要素内に子として表示される`windowList`要素を並べ替える必要があります。 （[window要素とwindowList要素の並べ替え](converting-file-formats-pdf.md#ordering-the-window-and-windowlist-elements)を参照）。
 
-### 一般ダイアログXMLファイル{#modifying-the-general-dialog-xml-file}の変更
+### 一般ダイアログXMLファイルの変更 {#modifying-the-general-dialog-xml-file}
 
 一般的なダイアログXMLファイルを変更して、システムによって生成されたダイアログボックスに応答したり、複数のアプリケーションに共通するダイアログボックスに応答したりできます。
 
-#### XML設定ファイル{#adding-a-filetype-entry-in-the-xml-configuration-file}にファイルタイプエントリを追加する
+#### XML設定ファイルへのファイルタイプエントリの追加 {#adding-a-filetype-entry-in-the-xml-configuration-file}
 
 この手順では、Generate PDFサービス設定ファイルを更新して、ファイルタイプをネイティブアプリケーションに関連付ける方法を説明します。 この設定ファイルを更新するには、管理コンソールを使用して設定データをファイルに書き出す必要があります。 設定データのデフォルトのファイル名は、 native2pdfconfig.xmlです。
 
@@ -908,7 +908,7 @@ Microsoft Spy++を使用して、ネイティブアプリケーションのウ�
      </filetype-settings>
 ```
 
-#### ネイティブアプリケーションを見つけるための環境変数{#creating-an-environment-variable-to-locate-the-native-application}の作成
+#### ネイティブアプリケーションを見つけるための環境変数の作成 {#creating-an-environment-variable-to-locate-the-native-application}
 
 ネイティブアプリケーション実行可能ファイルの場所を指定する環境変数を作成します。 変数は、*[applicationname]*_PATHの形式を使用する必要があります。*applicationname*&#x200B;は、XML設定ファイルおよびスクリプトで使用されるアプリケーション名と完全に一致し、パスに実行可能ファイルへのパスが二重引用符で囲まれている必要があります。 このような環境変数の例は`Photoshop_PATH`です。
 
@@ -935,11 +935,11 @@ Microsoft Spy++を使用して、ネイティブアプリケーションのウ�
 
 1. システム変数を有効にするための新しいコマンドラインプロンプトを起動します。
 
-#### XMLファイル{#xml-files}
+#### XMLファイル {#xml-files}
 
 AEM Formsには、Generate PDFサービスでメモ帳を使用してファイル名拡張子が.txtのファイルを処理するためのサンプルXMLファイルが含まれています。 このコードはこの節に含まれています。 さらに、この節で説明するその他の変更を行う必要があります。
 
-#### 追加のダイアログXMLファイル{#additional-dialog-xml-file}
+#### 追加のダイアログXMLファイル {#additional-dialog-xml-file}
 
 この例では、メモ帳アプリケーション用の追加のダイアログボックスが含まれています。 これらのダイアログボックスは、Generate PDFサービスで指定されたダイアログボックスに加えて使用できます。
 
@@ -955,7 +955,7 @@ AEM Formsには、Generate PDFサービスでメモ帳を使用してファイ�
  </dialogs>
 ```
 
-#### スクリプトXMLファイル{#script-xml-file}
+#### スクリプトXMLファイル {#script-xml-file}
 
 次の例では、Generate PDFサービスがメモ帳とやり取りし、Adobe PDFプリンターを使用してファイルを印刷する方法を指定します。
 
