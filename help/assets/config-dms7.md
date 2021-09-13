@@ -6,11 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
-feature: 設定，Scene7モード
+feature: Configuration,Scene7 Mode
 role: Admin,User,Developer
-source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
+source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
-source-wordcount: '5594'
+source-wordcount: '5589'
 ht-degree: 58%
 
 ---
@@ -69,7 +69,7 @@ Experience ManagerDynamic Mediaを6.3から6.4（ダウンタイムなしのデ�
 
 ## Dynamic Media クラウドサービスの設定 {#configuring-dynamic-media-cloud-services}
 
-Dynamic Mediaパスワードを設定する前に、パスワードをCloud Servicesします。 Dynamic Mediaの資格情報を含むプロビジョニング電子メールを受け取ったら、Dynamic Media Classicデスクトップアプリケーションに[サインイン](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)して、パスワードを変更する必要があります。 プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
+Dynamic Mediaパスワードを設定する前に、パスワードをCloud Servicesします。 Dynamic Mediaの資格情報を含むプロビジョニング電子メールを受け取ったら、Dynamic Media Classicデスクトップアプリケーションに[サインイン](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app)して、パスワードを変更する必要があります。 プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
 >[!NOTE]
 >

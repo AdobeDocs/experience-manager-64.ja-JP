@@ -6,11 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: Dynamic-Media
 content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
-feature: ビデオ
+feature: Video
 role: User
-source-git-commit: 1d5f9be7aa1e45ebaf689922396832e82c63321f
+source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
-source-wordcount: '10387'
+source-wordcount: '10384'
 ht-degree: 75%
 
 ---
@@ -31,7 +31,6 @@ ht-degree: 75%
 >* [ダイナミックメディア - Scene7 モードの設定](config-dms7.md)および[ダイナミックメディア - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)を参照してください。
 
 >
-
 
 
 1. 次の手順を実行して、**Dynamic Media ビデオをアップロード**&#x200B;します。
@@ -73,7 +72,7 @@ ht-degree: 75%
 
          [ビデオレンディションの表示](video-renditions.md)
 
-         [ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
+[ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
 
       * [ビューアプリセットの管理](managing-viewer-presets.md)
       * [アセットの発行](publishing-dynamicmedia-assets.md)
@@ -85,7 +84,7 @@ ht-degree: 75%
 
       * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
 
-         [ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
+[ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
 
       * [デジタルアセット用のメタデータの管理](metadata.md)
       * [メタデータスキーマ](metadata-schemas.md)
@@ -163,7 +162,7 @@ Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサ�
 
 <!-- See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480). -->
 
-『AdobeDynamic Mediaビューアリファレンスガイド』の[HTML5ビューアについて](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html?lang=en#viewers-for-aem-assets-only)も参照してください。
+『AdobeDynamic Mediaビューアリファレンスガイド』の[HTML5ビューアについて](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html?lang=ja#viewers-for-aem-assets-only)も参照してください。
 
 ## ベストプラクティス：HTML5 ビデオビューアの使用 {#best-practice-using-the-html-video-viewer}
 
@@ -387,7 +386,7 @@ For advice about video encoding, see the following:
 | 720p | 720 | 大型の画面 |
 | 1080p | 1080 | 高画質の大型の画面 |
 
-### Fps（1 秒あたりのフレーム数）  {#fps-frames-per-second}
+### Fps（1 秒あたりのフレーム数） {#fps-frames-per-second}
 
 日本および米国では、ほとんどのビデオは 1 秒あたりのフレーム数（fps）が 29.97 で撮影されます。また、ヨーロッパでは、ほとんどのビデオが 25 fps で撮影されます。映画は 24 fps で撮影されます。
 
@@ -415,7 +414,7 @@ For advice about video encoding, see the following:
    <td><p>ソース</p> </td> 
    <td><p>1,920 x 1,080</p> </td> 
    <td><p>1</p> </td> 
-   <td><p>3</p> </td> 
+   <td><p>1</p> </td> 
   </tr> 
   <tr> 
    <td><p>エンコード</p> </td> 
@@ -427,7 +426,7 @@ For advice about video encoding, see the following:
    <td><p>エンコード</p> </td> 
    <td><p>640 x 360</p> </td> 
    <td><p>3</p> </td> 
-   <td><p>3</p> </td> 
+   <td><p>1</p> </td> 
   </tr> 
   <tr> 
    <td><p>エンコード</p> </td> 
@@ -1034,7 +1033,7 @@ URLでJSON関数を使用する方法について詳しくは、 *Dynamic Media�
 
 必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーション機能を備えた独自のHTML5ビューアを作成する手順については、AdobeHTML5ビューアSDK APIで、`s7sdk.video.VideoPlayer`クラスと`s7sdk.video.VideoScrubber`クラスの見出し「Customizing Behavior Using Modifiers」を参照してください。 [HTML5ビューアSDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)のドキュメントを参照してください。
 
- ビデオのチャプターリストを作成する方法は、キャプションを作成する方法とほとんど同じです。つまり、WebVTT ファイルを作成します。ただし、この WebVTT ファイルは、WebVTT キャプションファイルと分けておく必要があります（キャプションファイルを使用する場合）。キャプションとチャプターを 1 つの WebVTT ファイルにまとめることはできません。
+ビデオのチャプターリストを作成する方法は、キャプションを作成する方法とほとんど同じです。つまり、WebVTT ファイルを作成します。ただし、この WebVTT ファイルは、WebVTT キャプションファイルと分けておく必要があります（キャプションファイルを使用する場合）。キャプションとチャプターを 1 つの WebVTT ファイルにまとめることはできません。
 
  チャプターナビゲーション機能を備えた WebVTT ファイルを作成する際に使用するフォーマットの例として、次のサンプルを使用できます。
 
@@ -1070,7 +1069,7 @@ Cost-efficient access to rapidly evolving technology.
 
 1. チャプタータイトルテキストの文字レンディションに関する問題を回避するために、`.vtt`ファイルをUTF8エンコードで保存します。
 
-    一般に、チャプター VTT ファイルの名前には、ビデオファイルと同じ名前を付けて、名前の末尾にチャプターを追加します。そうしておくと、既存の Web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
+   一般に、チャプター VTT ファイルの名前には、ビデオファイルと同じ名前を付けて、名前の末尾にチャプターを追加します。そうしておくと、既存の Web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
 1. AEM で、WebVTT チャプターファイルをアップロードします。
 
    [アセットのアップロード](managing-assets-touch-ui.md#uploading-assets)を参照してください。

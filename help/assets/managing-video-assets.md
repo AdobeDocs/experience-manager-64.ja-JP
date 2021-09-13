@@ -5,12 +5,12 @@ uuid: 56a8c221-409f-4605-97b1-a054dd2abfab
 contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: f341fae1-dda3-4917-b6db-ad02fec63702
-feature: アセット管理，ビデオ
+feature: Asset Management,Video
 role: User
 exl-id: eb652414-5b10-45af-a8b6-f1de649994c5
-source-git-commit: 1795b0faed0570e8130c1ba60de07bda49db8fde
+source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '793'
 ht-degree: 48%
 
 ---
@@ -44,7 +44,7 @@ AEM Assetsは、拡張子がMP4のビデオアセットのプレビューを生�
 大きなアセットをアップロードするには、AEM Assets設定に加えて、次の設定を変更します。
 
 * トークンの有効期間を増やします。`https://[aem_server]:[port]/system/console/configMgr`のWebコンソールの[!UICONTROL AdobeGranite CSRF Servlet]を参照してください。 詳しくは、[CSRF保護](/help/sites-developing/csrf-protection.md)を参照してください。
-* Dispatcher の設定で `receiveTimeout` を増やします。詳しくは、[Adobe Experience Manager Dispatcher の設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#renders-options)を参照してください。
+* Dispatcher の設定で `receiveTimeout` を増やします。詳しくは、[Adobe Experience Manager Dispatcher の設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)を参照してください。
 
 >[!NOTE]
 >

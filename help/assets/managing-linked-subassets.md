@@ -2,13 +2,13 @@
 title: 複合アセットを管理し、サブアセットを生成します。
 description: InDesign、Adobe Illustrator、Photoshopの各ファイル内からAEMアセットへの参照を作成する方法を説明します。 また、ページビューア機能を使用して、複数ページファイル（PDF、INDD、PPT、PPTX、AI ファイルなど）の個々のページを表示する方法についても説明します。
 contentOwner: AG
-feature: アセット管理
+feature: Asset Management
 role: User,Admin
 exl-id: 9fa44b26-76f7-48e2-a9df-4fd1c0074158
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
-source-wordcount: '1412'
-ht-degree: 47%
+source-wordcount: '1408'
+ht-degree: 48%
 
 ---
 
@@ -119,7 +119,7 @@ InDesign では、InDesign サーバーを使用してページを抽出でき�
 
 ツールバー、左側のレールおよびページビューアコントロールで、次のオプションを使用できます。
 
-* **[!UICONTROL AEMデスク]** トップアプリケーションを使用して特定のサブアセットを開く、または表示するデスクトップアクション。AEMデスクトップアプリケーションを使用している場合は、[デスクトップアクションの設定](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#desktopactions-v2)方法を参照してください。
+* **[!UICONTROL AEMデスク]** トップアプリケーションを使用して特定のサブアセットを開く、または表示するデスクトップアクション。AEMデスクトップアプリケーションを使用している場合は、[デスクトップアクションの設定](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#desktopactions-v2)方法を参照してください。
 
 * **[!UICONTROL 「]** プロパティ」オプションは、特  定のサブアセットのプロパティページを開きます。
 

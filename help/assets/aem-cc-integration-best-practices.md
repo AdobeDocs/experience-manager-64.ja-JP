@@ -2,12 +2,12 @@
 title: AEM と Creative Cloud の統合のベストプラクティス
 description: AEMデプロイメントとAdobe Creative Cloudを統合し、アセット転送ワークフローを効率化して効率を最大化するためのベストプラクティス
 contentOwner: AG
-feature: 共同作業、アドビのアセットリンク、デスクトップアプリ
+feature: Collaboration,Adobe Asset Link,Desktop App
 role: User,Admin
 exl-id: cb9bea05-3359-4fb4-b935-59e522a5f387
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
-source-wordcount: '3576'
+source-wordcount: '3566'
 ht-degree: 83%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 83%
 <!-- TBD: Reconcile with 6.5 article that's ahead of this article now in terms of content streamlining and structuring.
 -->
 
-Adobe Experience Manager Assetsは、Adobe Creative Cloudと統合して、DAMユーザーがクリエイティブチームと連携し、コンテンツ作成プロセスでのコラボレーションを合理化するデジタルアセット管理(DAM)ソリューションです。
+Adobe Experience Manager Assetsは、Adobe Creative Cloudと統合して、DAMユーザーがクリエイティブチームと連携し、コンテンツ作成プロセスでのコラボレーションを合理化する、デジタルアセット管理(DAM)ソリューションです。
 
 Adobe Creative Cloud は、デジタルアセットの作成を支援するソリューションとサービスのエコシステムをクリエイティブチームに提供します。これには、デスクトップおよびモバイルアプリケーション、デスクトップ同期や Web エクスペリエンスを備えたストレージなどのクラウドサービス、および Adobe Stock などのマーケットプレイスが含まれます。
 
@@ -103,7 +103,7 @@ The terms used in this document may have a different meaning in other contexts. 
 * **作業中（WIP）またはクリエイティブ WIP：**&#x200B;アセットライフサイクルのフェーズ。アセットに対してまだ複数の変更がおこなわれている最中であり、通常は、より広範なチームと共有するための準備がまだできていない状態。
 * **クリエイティブレディアセット：**&#x200B;より広範なチームと共有するための準備ができているアセット。または、マーケティングチームもしくは LOB チームと共有するためにクリエイティブチームによって選択／承認されているアセット。
 * **アセット承認：** 既に DAM にアップロードされているアセットに対して実行される承認プロセス。通常、ブランド承認および法的承認などが含まれます。
-* **最終アセット：**&#x200B;すべての    承認／メタデータタグ付けが完了し、より広範なチームに使用される準備ができているアセット。このようなアセットは DAM に保存され、すべてのユーザー（またはすべての関係者）が使用できるようになっています。マーケティングチャネルで使用したり、クリエイティブチームがデザインの作成に使用したりできます。
+* **最終アセット：**&#x200B;すべての承認／メタデータタグ付けが完了し、より広範なチームに使用される準備ができているアセット。このようなアセットは DAM に保存され、すべてのユーザー（またはすべての関係者）が使用できるようになっています。マーケティングチャネルで使用したり、クリエイティブチームがデザインの作成に使用したりできます。
 * **アセットの小規模な更新／変更：**&#x200B;デジタルアセットに対する迅速で小規模な変更。多くの場合、リタッチ作業や小規模な編集の要求、アセットレビューまたは承認に対応するためにおこなわれます（例えば、再配置、テキストサイズの変更、彩度／明るさ、色などの調整）。
 * **アセットの大規模な更新／変更：**&#x200B;デジタルアセットに加えられる、大規模な作業が必要な変更。その変更作業は比較的長期にわたる場合もあります。通常は複数の変更が含まれます。アセットは、更新中、複数回保存する必要があります。アセットの大規模な更新により、ほとんどの場合、アセットのステージは WIP になります。
 * **DAM：**&#x200B;デジタルアセット管理。このドキュメントでは、特に断りのない限り、Adobe Experience Manager（AEM）Assets と同義です。
@@ -112,7 +112,7 @@ The terms used in this document may have a different meaning in other contexts. 
 
 ### AEM と Creative Cloud の統合を使用する場合の考慮事項 {#considerations-when-using-aem-and-creative-cloud-integration}
 
-* [デスクトップアプリケーションのベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html?lang=en#best-practices-to-prevent-troubles)を参照してください。
+* [デスクトップアプリケーションのベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html#best-practices-to-prevent-troubles)を参照してください。
 * [Adobe Stock統合](aem-assets-adobe-stock.md)を参照
 * [Adobeアセットリンク](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)を参照
 
@@ -199,7 +199,7 @@ DAM インスタンスへの直接アクセス権を持たない外部のエー�
 
 以下の方法で、最終／承認済みアセットへのアクセスを提供することができます。
 
-* 多数のアセットへのアクセスを提供するには：[AEM Assets Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html?lang=ja)を使用するか、AEMパブリッシュインフラストラクチャで顧客の[アセット共有](assets-finder-editor.md)を実装します。
+* 多数のアセットへのアクセスを提供するには：[AEM Assets Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html)を使用するか、AEMパブリッシュインフラストラクチャで顧客の[アセット共有](assets-finder-editor.md)を実装します。
 
 * 一部のアセットへのアクセスを提供するには：Adobe Creative CloudとのAEMフォルダー共有は、AEM Assets Brand Portalやアセット共有の他にも使用できます。 この統合には、いくつかの制限があります。詳しくは、この記事を参照してください。
 

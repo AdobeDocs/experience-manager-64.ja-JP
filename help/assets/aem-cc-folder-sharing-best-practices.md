@@ -2,12 +2,12 @@
 title: AEM AssetsフォルダーをCreative Cloudと共有
 description: Adobe Experience Manager AssetsユーザーがAdobe Creative Cloudユーザーとアセットフォルダーを交換できるようにするための設定とベストプラクティス。
 contentOwner: AG
-feature: コラボレーション
+feature: Collaboration
 role: User,Admin
 exl-id: 7e2adfcc-410d-4574-8f7e-39aceecfdd4b
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1059'
 ht-degree: 44%
 
 ---
@@ -40,7 +40,7 @@ AEMとCreative Cloudーのフォルダー共有は、AEM AssetsとCreative Cloud
 この統合の主要な要素は以下のとおりです。
 
 * **エンタープラ** イズネットワーク（マネージドサービスまたはオンプレミス）にデプロイされたAEM Assetsサーバー：フォルダーの共有はここで開始されます。
-* **Adobe Marketing Cloud Assets コアサービス**：AEM と CC ストレージサービスの中間のサービスです。この統合を使用する企業の管理者は、Marketing Cloud 組織と AEM Assets インスタンスの間に信頼関係を確立する必要があります。また、管理者は、AEM Assets ユーザーがフォルダーも共有してセキュリティを強化できるように、[承認済みの Creative Cloud 共同作業者のリストを定義](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html?lang=en#assets)します。
+* **Adobe Marketing Cloud Assets コアサービス**：AEM と CC ストレージサービスの中間のサービスです。この統合を使用する企業の管理者は、Marketing Cloud 組織と AEM Assets インスタンスの間に信頼関係を確立する必要があります。また、管理者は、AEM Assets ユーザーがフォルダーも共有してセキュリティを強化できるように、[承認済みの Creative Cloud 共同作業者のリストを定義](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html#assets)します。
 * **Creative CloudアセットWebサービス** (ストレージおよびCreative CloudファイルWeb UI):ここでは、AEM Assetsフォルダーを共有している特定のCreative Cloudユーザーが、招待を受け入れ、自分のCreative Cloudアカウントストレージのフォルダーを確認できます。
 * **Creative Cloudデスクトップアプリケーション**:（オプション）クリエイティブユーザーのデスクトップから、Creative Cloudアセットストレージと同期を使用して共有フォルダー/ファイルに直接アクセスできます。
 

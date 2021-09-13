@@ -1,8 +1,8 @@
 ---
 title: ハードウェアのサイジングのガイドライン
-seo-title: ハードウェアのサイジングのガイドライン
+seo-title: Hardware Sizing Guidelines
 description: このサイジングのガイドラインでは、AEM プロジェクトのデプロイに必要なハードウェアリソースの概算値を示します。
-seo-description: このサイジングのガイドラインでは、AEM プロジェクトのデプロイに必要なハードウェアリソースの概算値を示します。
+seo-description: These sizing guidelines offer an approximation of the hardware resources required to deploy an AEM project.
 uuid: 83f928e3-986b-461b-8b3e-8faacd11172e
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/MANAGING
@@ -10,9 +10,9 @@ topic-tags: managing
 content-type: reference
 discoiquuid: 3f4feb38-eca0-4852-88f8-9b20625e18ad
 exl-id: 34e4edd5-9e67-44ed-8c4c-bcdd3e161a35
-source-git-commit: 5b0eef590f9a0c709fa21b8dbcf6a2f286a20237
+source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
-source-wordcount: '2852'
+source-wordcount: '2831'
 ht-degree: 71%
 
 ---
@@ -304,7 +304,7 @@ AEM インスタンス実行時の最小ヒープサイズおよび最大ヒー�
 
 >[!NOTE]
 >
->[アセットパフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/assets-sizing-guide.html?lang=en)も参照してください。
+>[アセットパフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/assets-sizing-guide.html)も参照してください。
 
 ### Multi Site Manager {#multi-site-manager}
 
