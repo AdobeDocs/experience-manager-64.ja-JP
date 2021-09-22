@@ -6,12 +6,12 @@ audience: end-user
 user-guide-title: AEM 6.4 開発ユーザーガイド
 breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
-feature: 開発
+feature: Developing
 role: Developer
-source-git-commit: 1ecb63f849f9f6167dddd4053267ae89577659fc
+source-git-commit: f6024ad5d213af0e726d95a5ab83ac3a271e8c18
 workflow-type: tm+mt
 source-wordcount: '886'
-ht-degree: 83%
+ht-degree: 81%
 
 ---
 
@@ -73,7 +73,7 @@ ht-degree: 83%
       + [開発（汎用）](generic.md)
       + [SAP Commerce Cloud を使用した開発](sap-commerce-cloud.md)
 + コンポーネント{#components}
-   + [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
+   + [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
    + [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/siteandpage/style-system.html)
    + [コンポーネントの概要](components.md)
    + [AEM コンポーネント - 基本](components-basics.md)
@@ -100,7 +100,7 @@ ht-degree: 83%
       + [xtype の使用（クラシック UI）](xtypes.md)
       + [フォームの作成（クラシック UI）](developing-forms.md)
 + ヘッドレスエクスペリエンス管理{#headless}
-   + [ヘッドレスおよび AEM とのハイブリッド](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [ヘッドレスおよび AEM とのハイブリッド](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [コンポーネントの JSON 書き出しの有効化](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/json-exporter-components.html)
    + 単一ページアプリケーション{#spas}
       + [SPA の概要およびガイド](spa-walkthrough.md)
