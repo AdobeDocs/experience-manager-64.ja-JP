@@ -1,8 +1,8 @@
 ---
 title: ワークフローの作成と拡張
-seo-title: ワークフローの作成と拡張
-description: AEM には、ワークフローモデルを作成し、ワークフローステップを開発し、プログラムによってワークフローとやり取りするためのツールやリソースが用意されています
-seo-description: AEM には、ワークフローモデルを作成し、ワークフローステップを開発し、プログラムによってワークフローとやり取りするためのツールやリソースが用意されています
+seo-title: Developing and Extending Workflows
+description: AEMには、ワークフローモデルの作成、ワークフローステップの開発、およびプログラムによるワークフローとの対話を行うための、いくつかのツールとリソースが用意されています。
+seo-description: AEM provides several tools and resources for creating workflow models, developing workflow steps, and for programmatically interacting with workflows
 uuid: 5a857589-3b13-4519-bda2-b1dab6005550
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,16 +10,16 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 8954e3df-3afa-4d53-a7e1-255f3b8f499f
 exl-id: 4f9bd75c-9d54-4cd6-9d73-5d580be5a9e8
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 608c0fbd7eb0fc06fccf8cbcaebf874bff36d5e0
 workflow-type: tm+mt
-source-wordcount: '1535'
-ht-degree: 74%
+source-wordcount: '1512'
+ht-degree: 71%
 
 ---
 
 # ワークフローの作成と拡張{#developing-and-extending-workflows}
 
-AEM には、ワークフローモデルを作成し、ワークフローステップを開発し、プログラムによってワークフローとやり取りするためのツールやリソースが用意されています。
+AEMは、ワークフローモデルの作成、ワークフローステップの開発、およびプログラムによるワークフローとの対話を行うためのツールとリソースを提供します。
 
 ワークフローにより、AEM 環境でリソースを管理し、コンテンツを公開するプロセスを自動化できます。ワークフローは一連のステップで構成され、ステップごとに個別のタスクが実行されます。ロジックとランタイムデータを使用して、いつプロセスを続行できるかを判断し、実行可能な複数のステップのうち 1 つを次のステップとして選択できます。
 
@@ -46,7 +46,6 @@ AEM には、ワークフローモデルを作成し、ワークフローステ�
 >* 情報の場所の変更点については、[AEM 6.4 のリポジトリの再構成](/help/sites-deploying/repository-restructuring.md)と[ワークフローに関するベストプラクティス - 場所](/help/sites-developing/workflows-best-practices.md#locations)を参照してください。
 
 >
-
 
 
 ## モデル {#model}
@@ -164,7 +163,6 @@ AEM には、ワークフローモデルを作成し、ワークフローステ�
 >
 
 
-
 >[!CAUTION]
 >
 >一時的ワークフロー内では、**ステップに移動**&#x200B;を使用しないでください。
@@ -177,7 +175,7 @@ AEM には、ワークフローモデルを作成し、ワークフローステ�
 >
 >一時的ワークフローがアセットのパフォーマンスに与える影響について詳しくは、[アセットのベストプラクティス](/help/assets/performance-tuning-guidelines.md#transient-workflows)を参照してください。
 
-### マルチリソースのサポート  {#multi-resource-support}
+### マルチリソースのサポート {#multi-resource-support}
 
 ワークフローモデルに対して&#x200B;**マルチリソースサポート**&#x200B;をアクティブにすると、複数のリソースを選択した場合でも、単一のワークフローインスタンスが開始されます。これらはパッケージとして添付されます。
 
@@ -217,6 +215,6 @@ AEM には、ワークフローモデルを作成し、ワークフローステ�
 
 新しいフォームの作成時に、フォームの送信を簡単にワークフローモデルに関連付けることができます。これにより、例えばコンテンツをリポジトリの特定の場所に格納したり、ユーザーにフォームの送信とその内容について通知したりすることができます。
 
-### ワークフローおよび翻訳  {#workflows-and-translation}
+### ワークフローおよび翻訳 {#workflows-and-translation}
 
 ワークフローは、[翻訳](/help/sites-administering/translation.md)プロセスの重要な要素でもあります。
