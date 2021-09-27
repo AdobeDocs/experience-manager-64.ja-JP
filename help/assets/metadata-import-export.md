@@ -2,12 +2,12 @@
 title: バルクメタデータ読み込みおよび書き出し
 description: この記事では、メタデータの読み込みおよび書き出しを一括でおこなう方法について説明します。
 contentOwner: AG
-feature: メタデータ
+feature: Metadata
 role: User,Admin
 exl-id: 956cdec4-2ba8-43c9-9122-564d764f4681
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 2b3a6972d703314d56d3dc711fb6a514cb1942d5
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '640'
 ht-degree: 75%
 
 ---
@@ -36,7 +36,7 @@ AEM Assets では、CSV ファイルを使用して、アセットのメタデ�
    | [!UICONTROL バッチサイズ] | メタデータを読み込むバッチ内のアセット数。デフォルト値は 50 です。最大値は 100 です。 |
    | [!UICONTROL フィールドセパレーター] | デフォルト値は`,` — コンマです。 他の文字も指定できます。 |
    | [!UICONTROL 複数の値の区切り文字] | メタデータ値のセパレーター。デフォルト値は`|` — パイプです。 |
-   | [!UICONTROL ワークフローを開始] | デフォルトでは false です。trueに設定すると、`DAM Metadata WriteBack Workflow`に対してデフォルトのランチャー設定が有効になります(メタデータをバイナリXMPデータに書き込みます)。 ローンチワークフローを有効にすると、システムのパフォーマンスに影響を与えます。 |
+   | [!UICONTROL ワークフローを開始] | デフォルトでは false です。trueに設定すると、 `DAM Metadata WriteBack Workflow`に対してデフォルト設定が有効になります(メタデータがバイナリXMPデータに書き込まれます)。 ワークフローを有効にすると、システムのパフォーマンスに影響を与えます。 |
    | [!UICONTROL アセットパス列名] | アセットが含まれている、CSV ファイルの列名を定義します。 |
 
 1. ツールバーの「**[!UICONTROL 読み込み]**」をタップまたはクリックします。メタデータが読み込まれると、通知が通知インボックスに送信されます。アセットのプロパティページに移動し、メタデータ値がアセットに正常に読み込まれたかどうかを確認します。

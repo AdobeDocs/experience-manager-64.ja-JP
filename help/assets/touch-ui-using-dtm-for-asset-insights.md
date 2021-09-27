@@ -2,12 +2,12 @@
 title: DTMを使用したアセットインサイトの有効化
 description: Assets Dynamic Tag Management(DTM)を使用してAdobeインサイトを有効にする方法を説明します。
 contentOwner: AG
-feature: アセットインサイト、アセットレポート
+feature: Asset Insights,Asset Reports
 role: User,Admin
 exl-id: d19cea4d-5395-479d-b303-4529ae2c0bf2
-source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
+source-git-commit: 2b3a6972d703314d56d3dc711fb6a514cb1942d5
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '679'
 ht-degree: 36%
 
 ---
@@ -18,11 +18,11 @@ Adobe Dynamic Tag Management は、デジタルマーケティングツールを
 
 >[!CAUTION]
 >
->AdobeDTMはAdobe Experience Platform Launchのために廃止され、まもなく[提供終了](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)に達します。 Adobeでは、アセットのインサイトに対してLaunchを[使用することをお勧めします。](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)
+>AdobeDTMは[!DNL Adobe Experience Platform]のために廃止され、まもなく[提供終了](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)に達します。 Adobeでは、アセットのインサイト](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)に[ [!DNL Adobe Experience Platform] を使用することをお勧めします。
 
 DTMを使用してアセットインサイトを有効にするには、次の手順を実行します。
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール／アセット／インサイト設定]**&#x200B;に移動します。
+1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL インサイト設定]**&#x200B;に移動します。
 1. [DTM クラウドサービスを使用して AEM インスタンスを設定します。](../sites-administering/dtm.md)
 
    [https://dtm.adobe.com](https://dtm.adobe.com/)にログオンすると、APIトークンが使用可能になります。プロファイルアイコンから&#x200B;**[!UICONTROL アカウント設定]**&#x200B;にアクセスします。 AEM SitesとAssets Insightsの統合は引き続き機能するので、Assets Insightsの観点からは、この手順は必要ありません。
