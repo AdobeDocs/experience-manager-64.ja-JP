@@ -1,8 +1,8 @@
 ---
 title: 電子メール通知の設定
-seo-title: 電子メール通知の設定
+seo-title: Configuring Email Notification
 description: AEM で電子メール通知を設定する方法について説明します。
-seo-description: AEM で電子メール通知を設定する方法について説明します。
+seo-description: Learn how to configure Email Notification in AEM.
 uuid: 6cbdc312-860b-4a69-8bbe-2feb32204a27
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: ea12035c-09b6-4197-ab23-c27fe71e7432
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3a206c2fa8c18876b6e1481e2feb86857b5219c4
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1134'
 ht-degree: 65%
 
 ---
@@ -37,7 +37,7 @@ AEM は、次のようなユーザーに電子メール通知を送信します�
 >
 >AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
-## メールサービスの設定  {#configuring-the-mail-service}
+## メールサービスの設定 {#configuring-the-mail-service}
 
 AEM で電子メールを送信できるようにするために、**Day CQ Mail Service** を適切に設定する必要があります。設定は、Web コンソールで表示できます。AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
@@ -80,9 +80,9 @@ AEM で電子メールを送信できるようにするために、**Day CQ Mail
    `<?xml version="1.0" encoding="UTF-8"?> <jcr:root xmlns:sling="https://sling.apache.org/jcr/sling/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig" email.from="name@server.com"/>`
 1. `email.from` 属性の値（`name@server.com`）を、実際の電子メールアドレスに置き換えます。
 
-1. ファイルを保存します。
+1.  ファイルを保存します。
 
-## ワークフロー電子メール通知サービスの設定  {#configuring-the-workflow-email-notification-service}
+## ワークフロー電子メール通知サービスの設定 {#configuring-the-workflow-email-notification-service}
 
 ワークフロー電子メール通知を受信したとき、送信元電子メールアドレスとホスト URL プレフィックスはいずれもデフォルトに設定されています。これらの値は、Web コンソールで **Day CQ Workflow Email Notification Service** を設定することによって変更できます。その場合は、変更をリポジトリに保持することをお勧めします。
 
@@ -94,7 +94,7 @@ AEM で電子メールを送信できるようにするために、**Day CQ Mail
 
 ページ通知用の電子メールテンプレートは次の場所にあります。
 
-`/etc/notification/email/default/com.day.cq.wcm.core.page`
+`/libs/settings/notification-templates/com.day.cq.wcm.core.page`
 
 デフォルトの英語のテンプレート（`en.txt`）は次のように定義されています。
 
@@ -121,7 +121,7 @@ This is an automatically generated message. Please do not reply.
 
 1. CRXDEで、次のファイルを開きます。
 
-   `/etc/notification/email/default/com.day.cq.wcm.core.page/en.txt`
+   `/libs/settings/notification-templates/com.day.cq.wcm.core.page/en.txt`
 
 1. ニーズに合わせてファイルを変更します。
 1. 変更内容を保存します。
@@ -146,7 +146,7 @@ This is an automatically generated message. Please do not reply.
 
    &lt;page event=&quot;&quot; type=&quot;&quot;> =>  &lt;page path=&quot;&quot;>
 
-   次に例を示します。
+   例えば、次の操作が可能です。
 
    PageModified => /content/geometrixx/en/products
 
@@ -205,7 +205,7 @@ This is an automatically generated message. Please do not reply.
 
 ワークフロー通知用の電子メールテンプレート（英語）は次の場所にあります。
 
-`/etc/workflow/notification/email/default/en.txt`
+`/libs/settings/workflow/notification/email/default/en.txt`
 
 次のように定義されています。
 
@@ -228,13 +228,13 @@ View the overview in your ${host.prefix}/aem/inbox\n \
 This is an automatically generated message. Please do not reply.
 ```
 
-#### ワークフロー通知用の電子メールテンプレートのカスタマイズ  {#customizing-email-templates-for-workflow-notification}
+#### ワークフロー通知用の電子メールテンプレートのカスタマイズ {#customizing-email-templates-for-workflow-notification}
 
 ワークフローイベント通知用の英語の電子メールテンプレートをカスタマイズするには：
 
 1. CRXDEで、次のファイルを開きます。
 
-   `/etc/workflow/notification/email/default/en.txt`
+   `/libs/settings/workflow/notification/email/default/en.txt`
 
 1. ニーズに合わせてファイルを変更します。
 1. 変更内容を保存します。
@@ -292,9 +292,9 @@ subject=<text_1>
 
 1. CRXDEで、以下に`<language-code>.txt`ファイルを追加します。
 
-   * `/etc/notification/email/default/com.day.cq.wcm.core.page` :（ページ通知の場合）
+   * `/libs/settings/notification-templates/com.day.cq.wcm.core.page` :（ページ通知の場合）
    * `/etc/notification/email/default/com.day.cq.collab.forum` :フォーラム通知
-   * `/etc/workflow/notification/email/default` :ワークフロー通知の場合
+   * `/libs/settings/workflow/notification/email/default` :ワークフロー通知の場合
 
 1. 言語に合わせてファイルを調整します。
 1. 変更内容を保存します。
