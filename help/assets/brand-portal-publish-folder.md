@@ -5,24 +5,24 @@ contentOwner: VG
 feature: Brand Portal
 role: User
 exl-id: f41ab750-5780-42ae-a131-5bc748280215
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 58%
+source-wordcount: '552'
+ht-degree: 44%
 
 ---
 
 # Brand Portal へのフォルダーの公開 {#publish-folders-to-brand-portal}
 
-Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォルダーを組織の AEM Assets Brand Portal インスタンスに公開（または公開ワークフローを未来の日時で設定）できます。ただし、最初に AEM Assets を Brand Portal と統合する必要があります。詳しくは [AEM Assets と Brand Portal の連携の設定](configure-aem-assets-with-brand-portal.md)を参照してください。
+Adobe Experience Manager Assets管理者は、アセットやフォルダーを組織の[!DNL Experience Manager Assets Brand Portal]インスタンスに公開（または公開ワークフローを後の日時にスケジュール）できます。 ただし、まず[!DNL Experience Manager Assets]を[!DNL Brand Portal]と統合する必要があります。 詳しくは、[Brand Portal](configure-aem-assets-with-brand-portal.md)での [!DNL Experience Manager Assets] の設定を参照してください。
 
 アセットまたはフォルダーを公開すると、Brand Portalのユーザーがそのアセットまたはフォルダーを使用できるようになります。
 
-その後、AEM Assetsで元のアセットまたはフォルダーに変更を加えても、そのアセットまたはフォルダーを再公開するまで、変更はBrand Portalに反映されません。 このため、作業中の変更が Brand Portal に提供されることがありません。管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
+[!DNL Assets]内の元のアセットまたはフォルダーに後で変更を加えた場合、その変更は、アセットまたはフォルダーを再公開するまでBrand Portalに反映されません。 このため、作業中の変更が Brand Portal に提供されることがありません。管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
 
 ## Brand Portal へのフォルダーの公開 {#publish-folders-to-brand-portal-1}
 
-1. AEM Assetsインターフェイスで、目的のフォルダーの上にマウスポインターを置き、クイックアクションから「**[!UICONTROL 公開]**」オプションを選択します。
+1. [!DNL Assets]インターフェイスで、目的のフォルダーの上にマウスポインターを置き、クイックアクションから「**[!UICONTROL 公開]**」オプションを選択します。
 
    あるいは、目的のフォルダーを選択して後述の手順に従います。
 
@@ -57,11 +57,11 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 
 ## Brand Portal へのフォルダーの非公開 {#unpublish-folders-from-brand-portal}
 
-AEM オーサーインスタンスからアセットインスタンスの公開を取り消すことで、Brand Portal に公開されているアセットフォルダーを削除できます。元のフォルダーを非公開にすると、Brand Portal ユーザーはそのコピーを使用できなくなります。
+[!DNL Experience Manager]オーサーインスタンスから非公開にすることで、Brand Portalに公開されているアセットフォルダーを削除できます。 元のフォルダーを非公開にすると、Brand Portal ユーザーはそのコピーを使用できなくなります。
 
 Brand Portal へのフォルダーの公開をすぐに取り消すことも、取り消しのスケジュールを未来の日時で設定することもできます。Brand Portal へのアセットフォルダーを非公開にするには、次の手順を実行します。
 
-1. AEM オーサーインスタンス内の AEM Assets インターフェイスで、公開を取り消すフォルダーを選択します。
+1. [!DNL Experience Manager]オーサーインスタンスの[!DNL Assets]インターフェイスから、非公開にするフォルダーを選択します。
 
    ![publish2bp-1](assets/publish2bp-1.png)
 

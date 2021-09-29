@@ -1,14 +1,14 @@
 ---
 title: アセットセレクター
-description: アセットセレクターを使用して、Adobe Experience Manager（AEM）Assets 内でアセットの検索、フィルタリングおよび参照をおこなったり、アセットのメタデータを取得したりする方法を学習します。また、アセットセレクターインターフェイスをカスタマイズする方法についても学習します。
+description: アセットセレクターを使用して、Adobe Experience Manager Assets内のアセットのメタデータを検索、フィルタリング、参照および取得する方法について説明します。 また、アセットセレクターインターフェイスをカスタマイズする方法についても学習します。
 contentOwner: AG
-feature: アセット管理，メタデータ，検索
+feature: Asset Management,Metadata,Search
 role: User
 exl-id: 4b518ac0-5b8b-4d61-ac31-269aa1f5abe4
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 71%
+source-wordcount: '490'
+ht-degree: 67%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->AEMの以前のバージョンでは、アセットセレクターは[アセットピッカー](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html)と呼ばれていました。
+>以前のバージョンの[!DNL Experience Manager]では、アセットセレクターは[アセットピッカー](https://helpx.adobe.com/jp/experience-manager/6-2/assets/using/asset-picker.html)と呼ばれていました。
 
 アセットセレクターを使用すると、[!DNL Adobe Experience Manager]アセット内のアセットを参照、検索およびフィルタリングできます。 また、アセットセレクターを使用して選択したアセットのメタデータを取得できます。アセットセレクターインターフェイスをカスタマイズするには、サポートされたリクエストパラメーターを使用して起動します。これらのパラメーターは、特定のシナリオ向けにアセットセレクターのコンテキストを設定します。
 

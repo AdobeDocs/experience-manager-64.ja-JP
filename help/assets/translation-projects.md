@@ -2,12 +2,12 @@
 title: 翻訳プロジェクトの作成
 description: AEM で翻訳プロジェクトを作成する方法を学習します。
 contentOwner: AG
-feature: 翻訳
+feature: Translation
 role: Architect,Admin
 exl-id: 1b931fef-eed0-4758-993d-cdf8d478fb6f
-source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
+source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
-source-wordcount: '1942'
+source-wordcount: '1939'
 ht-degree: 96%
 
 ---
@@ -282,9 +282,9 @@ ht-degree: 96%
 
 ## 一時的な言語コピーの作成 {#creating-temporary-language-copies}
 
-翻訳ワークフローを実行して、元のアセットを編集したバージョンで言語コピーを更新するとき、翻訳済みアセットをユーザーが承認するまで、既存の言語コピーが維持されます。AEM Assets は、新たに翻訳されたアセットを一時的な場所に格納しておき、ユーザーがアセットを明示的に承認した後で既存の言語コピーを更新します。ユーザーがアセットを承認しないと、言語コピーは変更されません。
+翻訳ワークフローを実行して、元のアセットを編集したバージョンで言語コピーを更新するとき、翻訳済みアセットをユーザーが承認するまで、既存の言語コピーが維持されます。[!DNL Experience Manager] Assets は、新たに翻訳されたアセットを一時的な場所に格納しておき、ユーザーがアセットを明示的に承認した後で既存の言語コピーを更新します。ユーザーがアセットを承認しないと、言語コピーは変更されません。
 
-1. 先ほど言語コピーを作成した「**[!UICONTROL 言語コピー]**」でソースルートフォルダーをクリックまたはタップしてから、「**[!UICONTROL Assets で表示]**」をクリックまたはタップすると、AEM Assets でフォルダーが開きます。
+1. 先ほど言語コピーを作成した「**[!UICONTROL 言語コピー]**」でソースルートフォルダーをクリックまたはタップしてから、「**[!UICONTROL Assets で表示]**」をクリックまたはタップすると、 Assets でフォルダーが開きます。[!DNL Experience Manager]
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 

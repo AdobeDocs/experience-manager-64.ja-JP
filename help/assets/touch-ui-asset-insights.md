@@ -2,13 +2,13 @@
 title: アセットインサイト機能を使用して画像の使用状況を追跡する
 description: アセットインサイト機能を使用すると、サードパーティのWebサイト、マーケティングキャンペーン、Adobeのクリエイティブソリューションで使用される画像のユーザーの評価と使用状況統計を追跡できます。
 contentOwner: AG
-feature: アセットインサイト、アセットレポート
+feature: Asset Insights,Asset Reports
 role: User,Admin
 exl-id: a9604b09-1c83-4c1e-aff7-13107b898cb3
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 63%
+source-wordcount: '793'
+ht-degree: 62%
 
 ---
 
@@ -77,7 +77,7 @@ ht-degree: 63%
 
 アセットインサイトは、Adobe Analyticsレポートスイートからアセットの使用状況データを定期的に取得します。 デフォルトでは、アセットインサイトは、24時間ごとに午前2時にバックグラウンドジョブを実行してデータを取得します。 この間隔と時刻は、「**[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]**」サービスを Web コンソールで設定して変更できます。
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール／運営／Web コンソール]**&#x200B;に移動します。
+1. [!DNL Experience Manager]ロゴをタップし、**[!UICONTROL ツール/運営/Webコンソール]**&#x200B;に移動します。
 1. **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** サービス設定を開きます。
 
    ![chlimage_1-304](assets/chlimage_1-304.png)

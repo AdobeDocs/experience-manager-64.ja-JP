@@ -2,19 +2,19 @@
 title: タイムラインのアクティビティストリーム
 description: 'この記事では、アセットのアクティビティログをタイムラインに表示する方法について説明します。 '
 contentOwner: AG
-feature: アセット管理
+feature: Asset Management
 role: User,Admin
 exl-id: 52fa2d59-177f-49ca-a480-7213ce0ca7d7
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 99%
+source-wordcount: '211'
+ht-degree: 85%
 
 ---
 
 # タイムラインのアクティビティストリーム {#activity-stream-in-timeline}
 
-この機能は、タイムラインにアセットのアクティビティログを表示します。Adobe Experience Manager (AEM) Assets で以下のアセット関連操作を実行すると、アクティビティストリーム機能により、タイムラインが更新され、そのアクティビティが反映されます。
+この機能は、タイムラインにアセットのアクティビティログを表示します。[!DNL Adobe Experience Manager Assets] で以下のアセット関連操作を実行すると、アクティビティストリーム機能により、タイムラインが更新され、そのアクティビティが反映されます。
 
 アクティビティストリームでログに記録される操作は次のとおりです。
 
@@ -29,7 +29,7 @@ ht-degree: 99%
 
 タイムラインに表示されるアクティビティログは、ログファイルが格納されている CRX の `/var/audit/com.day.cq.dam/content/dam` から取得されます。
 
-また、[Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)[ または AEM デスクトップアプリケーション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=ja)により、新しいアセットがアップロードされたり、既存のアセットが変更されて AEM にチェックインされたりすると、タイムラインアクティビティがログに記録されます。
+また、[Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)または[[!DNL Experience Manager] デスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=ja)を使用して新しいアセットがアップロードされたり、既存のアセットが変更されてExperience Managerにチェックインされたりすると、タイムラインアクティビティが記録されます。
 
 >[!NOTE]
 >

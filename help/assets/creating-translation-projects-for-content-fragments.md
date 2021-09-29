@@ -1,8 +1,8 @@
 ---
 title: コンテンツフラグメントの翻訳プロジェクトの作成
-seo-title: コンテンツフラグメントの翻訳プロジェクトの作成
+seo-title: Creating Translation Projects for Content Fragments
 description: コンテンツフラグメントを翻訳する方法について説明します。
-seo-description: コンテンツフラグメントを翻訳する方法について説明します。
+seo-description: Learn how to translate content fragments.
 uuid: 23176e70-4003-453c-af25-6499a5ed3f6d
 contentOwner: heimoz
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,12 +10,12 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: d2decc31-a04b-4a8e-bb19-65f21cf7107e
 exl-id: 4b9fd241-82db-466e-95bd-6d212717801d
-feature: コンテンツフラグメント
+feature: Content Fragments
 role: User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 85%
+source-wordcount: '968'
+ht-degree: 84%
 
 ---
 
@@ -54,13 +54,13 @@ Adobe Experience Manager(AEM)Assetsは、アセットに加えて、[コンテ�
 
 ## 混在メディアフラグメントの翻訳 {#translating-mixed-media-fragments}
 
-AEM では、様々な種類のメディアアセットとコレクションが含まれているコンテンツフラグメントを翻訳できます。インラインアセットが含まれているコンテンツフラグメントを翻訳した場合、翻訳後のアセットのコピーが、ターゲット言語ルートの下に保存されます。
+[!DNL Experience Manager] では、様々な種類のメディアアセットとコレクションが含まれているコンテンツフラグメントを翻訳できます。インラインアセットが含まれているコンテンツフラグメントを翻訳した場合、翻訳後のアセットのコピーが、ターゲット言語ルートの下に保存されます。
 
 このコンテンツフラグメントにコレクションが含まれている場合は、コレクション内のアセットもコンテンツフラグメントと一緒に翻訳されます。翻訳後のアセットのコピーは、適切なターゲット言語のルート内（ソース言語のルート下のソースアセットの物理的な場所と一致する場所）に、保存されます。
 
 混在メディアが含まれているコンテンツフラグメントを翻訳できるようにするには、最初に、コンテンツフラグメントに関連付けられたインラインアセットとコレクションの翻訳が可能になるように、デフォルトの翻訳フレームワークを編集します。
 
-1. AEM のロゴをクリックまたはタップし、**[!UICONTROL ツール／デプロイメント／クラウドサービス]**&#x200B;に移動します。
+1. [!DNL Experience Manager]ロゴをクリックまたはタップし、**[!UICONTROL ツール/デプロイメント/Cloud Services]**&#x200B;に移動します。
 1. **[!UICONTROL Adobe Marketing Cloud]**&#x200B;の下の&#x200B;**[!UICONTROL 翻訳統合]**&#x200B;を探し、「**[!UICONTROL 設定を表示]**」をクリックまたはタップします。
 
    ![chlimage_1-444](assets/chlimage_1-444.png)

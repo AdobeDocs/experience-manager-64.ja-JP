@@ -1,28 +1,28 @@
 ---
 title: Assets の検索機能の拡張
-description: AEM Assets のあらかじめ用意されている文字列によるアセットの検索機能を拡張します。
+description: ' [!DNL Experience Manager] Assetsの検索機能を、標準の文字列によるアセット検索以外にも拡張します。'
 contentOwner: AG
-feature: 検索
+feature: Search
 role: Developer
 exl-id: d68c735f-2699-4923-a7e7-4d1356eae335
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 90%
+source-wordcount: '820'
+ht-degree: 79%
 
 ---
 
 # Assets の検索機能の拡張 {#extending-assets-search}
 
-Adobe Experience Manager (AEM) Assets の検索機能を拡張できます。AEM Assets は、デフォルトの設定では、文字列でアセットを検索します。
+Adobe Experience Manager Assetsの検索機能を拡張できます。 初期設定では、[!DNL Experience Manager] Assetsは文字列でアセットを検索します。
 
 検索は QueryBuilder インターフェイスを介して実行されるので、複数の述語を使用して検索をカスタマイズできます。`/apps/dam/content/search/searchpanel/facets` ディレクトリにあるデフォルトの述語セットをオーバーレイできます。
 
-また、AEM Assets 管理パネルにタブを追加することもできます。
+[!DNL Experience Manager]アセット管理パネルにタブを追加することもできます。
 
 >[!CAUTION]
 >
->AEM 6.4 以降、クラシック UI は廃止されます。お知らせについては、[廃止される機能および削除された機能](../release-notes/deprecated-removed-features.md)を参照してください。タッチ対応 UI を使用することをお勧めします。カスタマイズについては、[検索ファセット](search-facets.md)を参照してください。
+>[!DNL Experience Manager] 6.4以降、クラシックUIは非推奨（廃止予定）となりました。 お知らせについては、[廃止される機能および削除された機能](../release-notes/deprecated-removed-features.md)を参照してください。タッチ対応 UI を使用することをお勧めします。カスタマイズについては、[検索ファセット](search-facets.md)を参照してください。
 
 ## オーバーレイ {#overlaying}
 
@@ -34,10 +34,9 @@ Adobe Experience Manager (AEM) Assets の検索機能を拡張できます。AEM
 >
 >デフォルトでは、/`apps` 配下のディレクトリ構造は存在しないので、新たに作成する必要があります。ノードのタイプが、/`libs` 配下のノードのタイプと一致するようにしてください。
 
-
 ## タブの追加 {#adding-tabs}
 
-AEM Assets 管理パネルで追加の「検索」タブを設定することで、タブを追加できます。追加のタブは以下の手順で作成します。
+[!DNL Experience Manager]アセット管理で追加の「検索」タブを設定することで、タブを追加できます。 追加のタブは以下の手順で作成します。
 
 1. フォルダー構造 `/apps/wcm/core/content/damadmin/tabs,` がまだ存在しない場合は作成し、`tabs` ノードを `/libs/wcm/core/content/damadmin` からコピーして貼り付けます。
 1. 必要に応じて、2 つ目のタブを作成し設定します。
@@ -48,9 +47,9 @@ AEM Assets 管理パネルで追加の「検索」タブを設定することで
 
 ## カスタムの述語の作成 {#creating-custom-predicates}
 
-AEM Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みの一連の述語が付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
+[!DNL Experience Manager] Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みの一連の述語が付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
-AEM 開発者は、既存の述語を使用するだけでなく、[Query Builder API](/help/sites-developing/querybuilder-api.md) を使用して独自の述語を作成することもできます。
+[!DNL Experience Manager]開発者は、既存の述語を使用するだけでなく、[Query Builder API](/help/sites-developing/querybuilder-api.md)を使用して独自の述語を作成することもできます。
 
 カスタム述語を作成するには、[ウィジェットフレームワーク](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html)に関する基本的な知識が必要です。
 
@@ -152,7 +151,7 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
    >
    >検索時は、大文字と小文字の違いを含めて、語句を正確に入力してください。
 
-### 例：シンプルなグループ述語の作成  {#example-build-a-simple-group-predicate}
+### 例：シンプルなグループ述語の作成 {#example-build-a-simple-group-predicate}
 
 グループ述語の作成手順
 
@@ -302,8 +301,8 @@ AEM 開発者は、既存の述語を使用するだけでなく、[Query Builde
 | searchCallback | 関数 | 検索を呼び出すためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | Number | タイムアウト。この時間を過ぎると searchCallback が呼び出されます。デフォルトは 800ms です |
 
-## 検索結果のカスタマイズ  {#customizing-search-results}
+## 検索結果のカスタマイズ {#customizing-search-results}
 
-アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。AEM Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みのレンズのセットが付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
+アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。[!DNL Experience Manager] Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みのレンズのセットが付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
-AEM 開発者は、既存のレンズを使用するだけでなく、独自のレンズを作成することもできます。
+[!DNL Experience Manager]開発者は、既存のレンズを使用するだけでなく、独自のレンズを作成することもできます。

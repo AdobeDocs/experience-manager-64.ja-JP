@@ -5,16 +5,16 @@ contentOwner: VG
 feature: Brand Portal
 role: Admin
 exl-id: cde35555-259f-4d16-999f-2b93d597b8a5
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1646'
 ht-degree: 51%
 
 ---
 
 # AEM Assets と Brand Portal の連携の設定 {#configure-integration-64}
 
-Adobe Experience Manager(AEM)Assetsは、[!DNL Adobe I/O]を通じてBrand Portalと設定され、Brand Portalテナントの認証用のIMSトークンを取得します。
+Adobe Experience Manager AssetsとBrand Portalの連携が、[!DNL Adobe I/O]を通じて設定されます。a0/>はBrand Portalテナントの認証用のIMSトークンを取得します。
 
 >[!NOTE]
 >
@@ -98,7 +98,7 @@ IMS 設定には、次の 2 つの手順が含まれます。
 
 1. AEM Assetsオーサーインスタンスにログインします。
 デフォルトURL:http:// localhost:4502/aem/start.html
-1. **ツール** ![ツール](assets/tools.png)パネルから、**[!UICONTROL セキュリティ]** >> **[!UICONTROL AdobeIMS設定]**&#x200B;に移動します。
+1. **ツール** ![ツール](assets/tools.png)パネルから、**[!UICONTROL セキュリティ]** >> **[!UICONTROL Adobe IMS設定]**&#x200B;に移動します。
 
    ![Adobe IMS アカウント設定 UI](assets/ims-config1.png)
 
@@ -106,7 +106,7 @@ IMS 設定には、次の 2 つの手順が含まれます。
 
    「**[!UICONTROL 作成]**」をクリックします。
 
-   これにより、**[!UICONTROL AdobeIMSテクニカルアカウント設定]**&#x200B;ページが表示されます。
+   **[!UICONTROL Adobe IMSテクニカルアカウント設定]**&#x200B;ページが表示されます。
 
 1. デフォルトでは、「**証明書**」タブが開きます。
 

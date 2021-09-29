@@ -2,13 +2,13 @@
 title: メタデータプロファイルを使用したフォルダー内のすべてのアセットへのデフォルトのメタデータの適用
 description: アセットのメタデータプロファイルについて理解します。また、メタデータプロファイルを作成し、フォルダーのアセットに適用する方法も学習します。
 contentOwner: AG
-feature: メタデータ
+feature: Metadata
 role: User,Admin
 exl-id: a7b0f1d6-7deb-4565-8c7f-27cad7cd6bf8
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 65%
+source-wordcount: '1226'
+ht-degree: 58%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 65%
 
 ## メタデータプロファイルの追加 {#adding-a-metadata-profile}
 
-1. AEMのロゴをタップまたはクリックし、**[!UICONTROL ツール/アセット/メタデータプロファイル]**&#x200B;の順に移動して、「**[!UICONTROL 作成]**」をタップします。
+1. [!DNL Experience Manager]のロゴをタップまたはクリックし、**[!UICONTROL ツール/アセット/メタデータプロファイル]**&#x200B;に移動して、「**[!UICONTROL 作成]**」をタップします。
 1. メタデータプロファイルのタイトル（「サンプルメタデータ」など）を入力し、「**[!UICONTROL 送信]**」をクリックします。メタデータプロファイルの&#x200B;**[!UICONTROL Edit Form]**&#x200B;が表示されます。
 
    ![chlimage_1-480](assets/chlimage_1-480.png)
@@ -34,7 +34,7 @@ ht-degree: 65%
 
    ![chlimage_1-482](assets/chlimage_1-482.png)
 
-   「**[!UICONTROL プロパティにマッピング]**」に指定した値は、アセットのメタデータノード下のプロパティとして保存されます。例えば、「**[!UICONTROL プロパティにマッピング]**」の名前として `/jcr:content/metadata/dc:desc` を指定した場合、AEM Assets はアセットのメタデータノードに値 `dc:desc` を保存します。
+   「**[!UICONTROL プロパティにマッピング]**」に指定した値は、アセットの metadata ノードの下のプロパティとして保存されます。例えば、`/jcr:content/metadata/dc:desc` プロパティにマッピ **[!UICONTROL ング]**&#x200B;の名前として、Assetsは [!DNL Experience Manager] アセットのメタデ `dc:desc` ータノードに値を保存します。
 
    * **[!UICONTROL デフォルト値]**：メタデータコンポーネントのデフォルト値を追加するには、このプロパティを使用します。例えば、「My description」と指定すると、この値がアセットのメタデータノードの `dc:desc` プロパティに割り当てられます。
 
@@ -102,7 +102,7 @@ ht-degree: 65%
 
 #### プロファイルユーザーインターフェイスからのフォルダーへのメタデータプロファイルの適用 {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール／アセット／メタデータプロファイル]**&#x200B;に移動します。
+1. [!DNL Experience Manager]のロゴをタップし、**[!UICONTROL ツール/アセット/メタデータプロファイル]**&#x200B;に移動します。
 1. 1 つまたは複数のフォルダーに適用するメタデータプロファイルを選択します。
 
    ![chlimage_1-490](assets/chlimage_1-490.png)
@@ -122,7 +122,7 @@ ht-degree: 65%
 
 ### メタデータプロファイルのグローバルな適用 {#applying-a-metadata-profile-globally}
 
-特定のフォルダーにプロファイルを適用できるだけでなく、グローバルにプロファイルを適用することもできます。これにより、AEM Assets にアップロードされている、すべてのフォルダー内にあるすべてのコンテンツに、選択したプロファイルを適用できます。メタデータプロファイルをグローバルに適用するには、次の手順に従います。
+フォルダーにプロファイルを適用する以外に、フォルダー内の[!DNL Experience Manager]アセットにアップロードされたコンテンツに選択したプロファイルが適用されるように、グローバルに適用することもできます。 メタデータプロファイルをグローバルに適用するには、次の手順に従います。
 
 1. 次のいずれかの操作を行います。
 
@@ -144,7 +144,7 @@ ht-degree: 65%
 
 プロファイルユーザーインターフェイスを使用してフォルダーからメタデータプロファイルを削除するには、次の手順に従います。
 
-1. AEM のロゴをタップし、**[!UICONTROL ツール／アセット／メタデータプロファイル]**&#x200B;に移動します。
+1. [!DNL Experience Manager]のロゴをタップし、**[!UICONTROL ツール/アセット/メタデータプロファイル]**&#x200B;に移動します。
 1. 1 つまたは複数のフォルダーから削除するメタデータプロファイルを選択します。
 1. 「**[!UICONTROL フォルダーからメタデータプロファイルを削除]**」をタップし、プロファイルを削除する1つ以上のフォルダーを選択して、「**[!UICONTROL 完了]**」をタップします。
 
@@ -152,7 +152,7 @@ ht-degree: 65%
 
 ### 「プロパティ」でフォルダーからメタデータプロファイルを削除する {#removing-metadata-profiles-from-folders-via-properties}
 
-1. AEM のロゴをタップして「**[!UICONTROL アセット]**」に移動した後、メタデータプロファイルを削除するフォルダーに移動します。
+1. [!DNL Experience Manager]ロゴをタップし、**[!UICONTROL アセット]**&#x200B;に移動した後、メタデータプロファイルを削除するフォルダーに移動します。
 1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
 1. 「**[!UICONTROL メタデータプロファイル]**」タブを選択し、ドロップダウンメニューから「**[!UICONTROL なし]**」を選択します。 「**[!UICONTROL 保存]**」をタップします。
 

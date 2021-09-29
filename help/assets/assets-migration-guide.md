@@ -2,13 +2,13 @@
 title: Adobe Experience Manager Assetsへのアセットの一括移行
 description: アセットをAEMに取り込み、メタデータを適用、レンディションを生成し、パブリッシュインスタンスに対してアクティブ化する方法。
 contentOwner: AG
-feature: 移行，レンディション，アセット管理
+feature: Migration,Renditions,Asset Management
 role: Architect,Admin
 exl-id: 31da9f3d-460a-4b71-9ba0-7487f1b159cb
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
 workflow-type: tm+mt
-source-wordcount: '1795'
-ht-degree: 67%
+source-wordcount: '1772'
+ht-degree: 58%
 
 ---
 
@@ -24,19 +24,18 @@ ht-degree: 67%
 >
 >次のアセット移行ツールは、Adobe Experience Managerには含まれていません。 Adobeカスタマーケアは、これらのツールをサポートしていません。
 >
->* ACS AEM ツールの Tag Maker
->* ACS AEM ツールの CSV Asset Importer
+>* ACS [!DNL Experience Manager]ツールタグメーカー
+>* ACS [!DNL Experience Manager]ツールのCSVアセットインポーター
 >* ACS Commons の Bulk Workflow Manager
 >* ACS Commons の Fast Action Manager
 >* 合成ワークフロー
 
 >
->
-このソフトウェアはオープンソースで、[Apache v2 License](https://adobe-consulting-services.github.io/pages/license.html) が適用されます。質問や問題を報告するには、それぞれ [ACS AEM ツール](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)と [ACS AEM Commons に関する GitHub の問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)を利用してください。
+>このソフトウェアはオープンソースで、[Apache v2 License](https://adobe-consulting-services.github.io/pages/license.html) が適用されます。質問や問題を報告するには、それぞれ [ [!DNL Experience Manager] ACS ツール](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)と [ [!DNL Experience Manager] ACS Commons に関する GitHub の問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)を利用してください。
 
-## AEM への移行 {#migrate-to-aem}
+## [!DNL Experience Manager]に移行 {#migrate-to-aem}
 
-AEM にアセットを移行するにはいくつかの手順を経る必要があるので、フェーズ別に処理することをお勧めします。移行のフェーズは次のとおりです。
+[!DNL Experience Manager]へのアセットの移行にはいくつかの手順が必要で、段階的なプロセスと見なす必要があります。 移行のフェーズは次のとおりです。
 
 1. ワークフローを無効化する。
 1. タグを読み込む。
@@ -53,7 +52,7 @@ AEM にアセットを移行するにはいくつかの手順を経る必要が�
 
 ### タグの読み込み {#load-tags}
 
-画像に適用するタグ分類は既に用意されていることがあります。CSVアセットインポーターやメタデータプロファイル機能などのツールは、アセットへのタグの適用を自動化するのに役立ちます。 その前に、「Experience Manager」にタグを追加します。 [ACS AEM ツールの Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) 機能を使用すると、システムに読み込まれた Microsoft Excel のスプレッドシートを使用してタグを入力できます。
+画像に適用するタグ分類は既に用意されていることがあります。CSVアセットインポーターやメタデータプロファイル機能などのツールは、アセットへのタグの適用を自動化するのに役立ちます。 その前に、「Experience Manager」にタグを追加します。 [ [!DNL Experience Manager] ACS ツールの Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) 機能を使用すると、システムに読み込まれた Microsoft Excel のスプレッドシートを使用してタグを入力できます。
 
 ### アセットの取り込み {#ingest-assets}
 
@@ -63,7 +62,7 @@ AEM にアセットを移行するにはいくつかの手順を経る必要が�
 
 #### HTTP 経由によるプッシュ {#push-through-http}
 
-アドビの Managed Services チームは Glutton というツールを使用してお客様の環境にデータを読み込みます。Glutton は小さな Java アプリケーションで、AEM インスタンスのあるディレクトリから別のディレクトリにすべてのアセットを読み込みます。Glutton の代わりに、Perl スクリプトなどのツールを使用してアセットをリポジトリに投稿することもできます。
+アドビの Managed Services チームは Glutton というツールを使用してお客様の環境にデータを読み込みます。Gluttonは、[!DNL Experience Manager]インスタンス上のあるディレクトリから別のディレクトリにすべてのアセットを読み込む小さなJavaアプリケーションです。 Glutton の代わりに、Perl スクリプトなどのツールを使用してアセットをリポジトリに投稿することもできます。
 
 HTTPS を通じたプッシュのアプローチには、主に次の 2 つの欠点があります。
 
@@ -74,7 +73,7 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 
 #### ローカルファイルシステムからのプル {#pull-from-the-local-file-system}
 
-[ACS AEMツールのCSV Asset Importer](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html)は、アセットをファイルシステムから、アセットメタデータをアセット読み込みのCSVファイルから、それぞれ取り込みます。 AEM Asset Manager API はアセットをシステムに取り込み、設定したメタデータプロパティを適用します。アセットはネットワークファイルマウントまたは外部ドライブを介してサーバーにマウントされているのが理想です。
+[ACS [!DNL Experience Manager] ツールのCSV Asset Importer](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html)は、アセットをファイルシステムから、アセットメタデータをアセット読み込みのCSVファイルから、それぞれ取り込みます。 [!DNL Experience Manager] Asset Manager APIは、アセットをシステムに読み込み、設定済みのメタデータプロパティを適用するために使用されます。 アセットはネットワークファイルマウントまたは外部ドライブを介してサーバーにマウントされているのが理想です。
 
 アセットがネットワークを介して送信されない場合、全体的なパフォーマンスが大幅に向上します。 この方法は、通常、リポジトリにアセットを読み込む最も効率的な方法です。 さらに、ツールがメタデータの取り込みをサポートしているので、すべてのアセットとメタデータを1つの手順で読み込むことができます。 別のツールを使用するなど、メタデータを適用するための他の手順は必要ありません。
 
@@ -85,7 +84,7 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 必要に応じてワークフローを設定したら、次の2つの方法でワークフローを実行できます。
 
 1. 最も簡単なアプローチは、[ACS Commons の Bulk Workflow Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html) です。このツールを使用すると、クエリを実行し、クエリの結果をワークフローを通じて処理します。バッチサイズを設定するオプションも用意されています。
-1. [ACS Commons の Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) は[合成ワークフロー](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)と組み合わせて使用できます。このアプローチはより複雑ですが、AEM ワークフローエンジンのオーバーヘッドを削除し、サーバーリソースの使用を最適化します。さらに、Fast Action Manager はサーバーリソースを動的に監視し、システムに配置された読み込みをスロットリングすることでパフォーマンスを大幅に向上します。サンプルスクリプトは ACS Commons の機能ページに記載されています。
+1. [ACS Commons の Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) は[合成ワークフロー](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)と組み合わせて使用できます。このアプローチはより複雑ですが、サーバーリソースの使用を最適化しながら、[!DNL Experience Manager]ワークフローエンジンのオーバーヘッドを削除できます。 さらに、Fast Action Manager はサーバーリソースを動的に監視し、システムに配置された読み込みをスロットリングすることでパフォーマンスを大幅に向上します。サンプルスクリプトは ACS Commons の機能ページに記載されています。
 
 ### アセットのアクティベート {#activate-assets}
 
@@ -93,7 +92,7 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 
 この問題を回避するには、[Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) を使用してアセットのレプリケートを管理します。これは Sling キューを使用することなく動作し、オーバーヘッドを減らすほか、ワークロードをスロットルしてサーバーのオーバーロードを防ぎます。レプリケーションの管理に FAM を使用する例は、この機能のドキュメントページに記載しています。
 
-アセットをパブリッシュファームに移行するその他のオプションは、[vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) または [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) を使用する方法です。これらは Jackrabbit の一部のツールとして提供されます。AEM インフラストラクチャのオープンソースツール [Grabbit](https://github.com/TWCable/grabbit) を使用する方法もあります。vit よりも高いパフォーマンスを発揮すると言われています。
+アセットをパブリッシュファームに移行するその他のオプションは、[vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) または [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) を使用する方法です。これらは Jackrabbit の一部のツールとして提供されます。[Grabbit](https://github.com/TWCable/grabbit)と呼ばれる、[!DNL Experience Manager]インフラストラクチャのオープンソースツールを使用する方法もあります。vitよりも高いパフォーマンスを発揮すると言われています。
 
 これらのアプローチで注意すべき点は、オーサーインスタンス上でアセットがアクティベートされていると表示されないことです。アセットのアクティベート状態を正しくフラグ設定するには、アセットをアクティベート済みとマークする別のスクリプトも実行する必要があります。
 
@@ -117,20 +116,20 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 
 移行が完了したら、レンディションの生成とメタデータの抽出をサポートするように DAM の更新アセットワークフローのランチャーを再度有効化し、稼動中のシステムが日常的に使用できるようにします。
 
-## AEMデプロイメント間でのアセットの移行 {#migrate-between-aem-instances}
+## [!DNL Experience Manager]デプロイメント間でのアセットの移行 {#migrate-between-aem-instances}
 
-それほど一般的ではありませんが、ある AEM インスタンスからもう一方のインスタンスに大量のデータを移行する必要があることもあります。例えば、AEM やお使いのハードウェアをアップグレードする場合や、AMS の移行などに伴い新しいデータセンターに移行する場合などです。
+ごく一般的ではありませんが、1つの[!DNL Experience Manager]インスタンスから別のインスタンスに大量のデータを移行する必要が生じる場合があります。例えば、[!DNL Experience Manager]アップグレードを実行する場合、ハードウェアをアップグレードする場合、またはAMS移行を使用する場合など、新しいデータセンターに移行する場合などです。
 
-このケースでは、移行するアセットには既にメタデータが入力されており、レンディションは既に生成されています。インスタンス間の移動に集中することができます。AEM インスタンス間で移行するには、次の手順を実行します。
+このケースでは、移行するアセットには既にメタデータが入力されており、レンディションは既に生成されています。インスタンス間の移動に集中することができます。[!DNL Experience Manager]インスタンス間で移行する場合は、次の手順を実行します。
 
 1. ワークフローを無効にする：アセットと共にレンディションを移行するので、DAMアセットの更新のワークフローランチャーを無効にする必要があります。
 
-1. タグの移行：ソースAEMインスタンスに既にタグが読み込まれているので、それらをコンテンツパッケージにビルドして、ターゲットインスタンスにパッケージをインストールできます。
+1. タグの移行：ソース[!DNL Experience Manager]インスタンスに既にタグが読み込まれているので、それらをコンテンツパッケージにビルドして、ターゲットインスタンスにパッケージをインストールできます。
 
-1. アセットの移行：アセットをAEMインスタンス間で移動する場合に推奨されるツールは次の2つです。
+1. アセットの移行：1つの[!DNL Experience Manager]インスタンスから別のインスタンスにアセットを移動する場合に推奨されるツールは2つあります。
 
    * **Vaultリモートコピー**( `vlt rcp`)を使用すると、ネットワーク全体でvltを使用できます。移動元と移動先のディレクトリを指定すると、vit がすべてのリポジトリデータを一方のインスタンスからダウンロードし、もう一方に読み込みます。vt rcp については、[https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html) に記載されています。
-   * **Grabbit**。Time Warner Cable が AEM の実装のために開発した、オープンソースのコンテンツ同期ツールです。継続的なデータストリームを使用するので、vlt rcp と比較して待ち時間が少なく、vlt rcp の 2 倍から 10 倍高速であると言われています。また、Grabbit はデルタコンテンツのみの同期をサポートし、最初の移行パスが完了した後に加えられた変更を同期できます。
+   * **Grabbit**[!DNL Experience Manager]。Time Warner Cable が の実装のために開発した、オープンソースのコンテンツ同期ツールです。継続的なデータストリームを使用するので、vlt rcp と比較して待ち時間が少なく、vlt rcp の 2 倍から 10 倍高速であると言われています。また、Grabbit はデルタコンテンツのみの同期をサポートし、最初の移行パスが完了した後に加えられた変更を同期できます。
 
 1. アセットのアクティベート：AEMへの最初の移行については、[アセット](#activate-assets)のアクティベートの手順に従って進めてください。
 

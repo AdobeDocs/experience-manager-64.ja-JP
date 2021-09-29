@@ -1,34 +1,34 @@
 ---
 title: フォルダーメタデータスキーマ
-description: この記事では、AEM Assetsでアセットフォルダーのメタデータスキーマを作成する方法について説明します
+description: この記事では、 [!DNL Experience Manager] Assets内にアセットフォルダーのメタデータスキーマを作成する方法について説明します。
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 uuid: 286a4f26-c0ad-4691-80d8-d17ba1a2dfe0
 discoiquuid: 92eacea5-7511-48ce-8a72-ff4552ebb07d
-feature: メタデータ
+feature: Metadata
 role: User,Admin
 exl-id: 1bc72dac-41f7-4593-aaea-d48ebd94b43e
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 98%
+source-wordcount: '1076'
+ht-degree: 93%
 
 ---
 
 # フォルダーメタデータスキーマ {#folder-metadata-schema}
 
-この記事では、AEM Assets でアセットフォルダーのメタデータスキーマを作成する方法を説明します。
+この記事では、[!DNL Experience Manager] Assets内にアセットフォルダーのメタデータスキーマを作成する方法について説明します。
 
-Adobe Experience Manager (AEM) Assets では、フォルダープロパティページに表示されるレイアウトとメタデータを定義する、アセットフォルダーのメタデータスキーマを作成できます。
+Adobe Experience Manager Assetsでは、フォルダーのプロパティページに表示されるレイアウトとメタデータを定義する、アセットフォルダーのメタデータスキーマを作成できます。
 
 >[!NOTE]
 >
->この機能を使用するには、AEM 6.4 Service Pack 2 以降がデプロイされている必要があります。AEM 6.4 サービスパックについて詳しくは、[リリースノート](/help/release-notes/sp-release-notes.md)を参照してください。
+>この機能には、少なくともService Pack 2がデプロイされた[!DNL Experience Manager] 6.4が必要です。 [!DNL Experience Manager] 6.4サービスパックの詳細については、以下の[リリースノート](/help/release-notes/sp-release-notes.md)を参照してください。
 
 ## フォルダーメタデータスキーマフォームの追加 {#add-a-folder-metadata-schema-form}
 
 フォルダーメタデータスキーマフォームエディターを使用して、フォルダーのメタデータスキーマを作成および編集します。
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL フォルダーメタデータスキーマ]**&#x200B;に移動します。
+1. [!DNL Experience Manager] のロゴをタップまたはクリックし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL フォルダーメタデータスキーマ]**&#x200B;に移動します。
 1. フォルダーメタデータスキーマフォームページで、「**[!UICONTROL 作成]**」をタップまたはクリックします。
 1. フォームの名前を指定し、「**[!UICONTROL 作成]**」をタップまたはクリックします。新しいスキーマフォームがスキーマフォームページにリストされます。
 
@@ -117,7 +117,7 @@ Adobe Experience Manager (AEM) Assets では、フォルダープロパティペ
 
 ### フォルダーメタデータスキーマページからのスキーマへの割り当て {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
-1. AEM のロゴをタップまたはクリックし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL フォルダーメタデータスキーマ]**&#x200B;に移動します。
+1. [!DNL Experience Manager] のロゴをタップまたはクリックし、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL フォルダーメタデータスキーマ]**&#x200B;に移動します。
 1. フォルダーメタデータスキーマフォームページから、フォルダーに適用するスキーマフォームを選択します。
 1. ツールバーの「**[!UICONTROL フォルダーに適用]**」をタップまたはクリックします。
 
@@ -134,7 +134,7 @@ Adobe Experience Manager (AEM) Assets では、フォルダープロパティペ
 
 フォルダーを作成するときに、フォルダーメタデータスキーマを割り当てることができます。システムに 1 つ以上のフォルダーメタデータスキーマが存在する場合は、**[!UICONTROL フォルダーを作成]**&#x200B;ダイアログに追加リストが表示されます。希望のスキーマを選択できます。デフォルトではスキーマは選択されていません。
 
-1. AEM Assets ユーザーインターフェイスで、ツールバーの「**[!UICONTROL 作成]**」をタップまたはクリックします。
+1. [!DNL Assets] ユーザーインターフェイスで、ツールバーの「**[!UICONTROL 作成]**」をタップまたはクリックします。
 1. フォルダーのタイトルと名前を指定します。
 1. フォルダーメタデータスキーマリストから希望のスキーマを選択します。次に、「**[!UICONTROL 作成]**」をタップまたはクリックします。
 

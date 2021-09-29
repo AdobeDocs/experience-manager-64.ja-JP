@@ -1,20 +1,20 @@
 ---
 title: AEM でのアセットの検索
-description: AEM のフィルターパネルを使用した必要なアセットの検索方法と検索で表示されたアセットの使用方法を説明します。
+description: フィルターパネルを使用した [!DNL Experience Manager] での必要なアセットの検索方法と検索で表示されたアセットの使用方法を説明します。
 contentOwner: AG
-feature: 検索、メタデータ
+feature: Search,Metadata
 role: User
 exl-id: cc1a5946-e13d-4433-a25a-d297fd07e2e4
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '549'
 ht-degree: 88%
 
 ---
 
-# AEM でのアセットの検索 {#search-assets-in-aem}
+# [!DNL Experience Manager] でのアセットの検索  {#search-assets-in-aem}
 
-AEM のフィルターパネルを使用した必要なアセットの検索方法と検索で表示されたアセットの使用方法を説明します。
+フィルターパネルを使用した[!DNL Experience Manager]での必要なアセットの検索方法と検索で表示されたアセットの使用方法を説明します。
 
 アセット、フォルダー、タグおよびメタデータを検索するには、フィルターパネルを使用します。ワイルドカードのアスタリスクを使用して、文字列の一部を検索できます。
 

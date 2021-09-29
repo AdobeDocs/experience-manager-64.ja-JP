@@ -2,19 +2,19 @@
 title: Web ページでのページトラッカーと埋め込みコードの使用
 description: ページトラッカーコードと埋め込み JavaScript コードを Web サイトコードに組み込んで、Adobe Analytics でアセットの使用状況データを収集できるようにする方法について説明します。
 contentOwner: AG
-feature: アセットレポート
+feature: Asset Reports
 role: Architect,Admin
 exl-id: b0154c9c-a671-43fb-8733-274a35307a34
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 100%
+source-wordcount: '180'
+ht-degree: 82%
 
 ---
 
 # Web ページでのページトラッカーと埋め込みコードの使用 {#using-page-tracker-and-embed-code-in-web-pages}
 
-ページトラッカーは、サードパーティの Web サイトコードに組み込む JavaScript コードです。このコードを使用して、Adobe Analytics がそれらの Web サイトでの Adobe Experience Manager（AEM）アセットの使用状況データを獲得できます。
+ページトラッカーは、Adobe AnalyticsがWebサイト上のAdobe Experience Managerアセットに関する使用状況データを取り込めるように、サードパーティのWebサイトのコードに組み込むJavaScriptコードです。
 
 アセット固有のイベント（クリックなど）を取得するには、サードパーティの Web サイトコードに埋め込みコードも含めます。
 

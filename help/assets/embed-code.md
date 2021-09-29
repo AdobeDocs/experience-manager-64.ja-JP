@@ -1,8 +1,8 @@
 ---
 title: Web ページへの Dynamic Media ビデオビューアまたは画像ビューアの埋め込み
-seo-title: Web ページへの Dynamic Media ビデオビューアまたは画像ビューアの埋め込み
+seo-title: Embedding the Dynamic Media Video or Image viewer on a web page
 description: Web ページに Dynamic Media ビデオまたは画像を埋め込む方法を説明します。
-seo-description: WebページにDynamic Mediaビデオまたは画像を埋め込む方法を説明します。
+seo-description: Learn how to embed Dynamic media video or images on a web page
 uuid: 6f786521-eb6c-4c80-8c15-9bf97b56818f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,12 +10,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 exl-id: bff564a8-e982-4e1a-a9b5-05e44e3e4d46
-feature: コンポーネント
+feature: Components
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 96%
+source-wordcount: '367'
+ht-degree: 95%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 96%
 
 Web ページに埋め込んでビデオを再生したりアセットを表示したりする場合は、**[!UICONTROL 埋め込みコード]**&#x200B;機能を使用します。埋め込みコードをクリップボードにコピーして、Web ページに貼り付けることができます。**[!UICONTROL 埋め込みコード]**&#x200B;ダイアログボックスでは、コードの編集はできません。
 
-AEM を WCM として使用&#x200B;_していない_&#x200B;場合に限り、URL の埋め込みを実行します。AEM を WCM として使用している場合は、[ページに直接アセットを追加](adding-dynamic-media-assets-to-pages.md)します。
+ を WCM として使用&#x200B;_していない_&#x200B;場合に限り、URL の埋め込みを実行します。[!DNL Experience Manager][!DNL Experience Manager]をWCMとして使用している場合は、[ページに直接アセットを追加します。](adding-dynamic-media-assets-to-pages.md)
 
 [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)を参照してください。
 

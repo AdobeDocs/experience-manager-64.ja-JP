@@ -2,19 +2,19 @@
 title: アセットを効率的に翻訳するためのベストプラクティス
 description: 翻訳された各バージョンを同期し、翻訳ワークフローを合理化するための、アセットの効率的な管理に関するベストプラクティス。
 contentOwner: AG
-feature: 翻訳
+feature: Translation
 role: User,Admin
 exl-id: 15162b80-ddef-4ec0-9db6-36695c93ebb1
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 98%
+source-wordcount: '498'
+ht-degree: 89%
 
 ---
 
 # アセットを効率的に翻訳するためのベストプラクティス {#best-practices-for-translating-assets-efficiently}
 
-Adobe Experience Manager（AEM）Assets は、デジタルアセットのバイナリ、メタデータおよびタグを複数のロケール用に翻訳し、翻訳されたアセットを多言語ワークフローで管理します。詳しくは、[多言語のアセット](multilingual-assets.md)を参照してください。
+Adobe Experience Manager Assetsは、デジタルアセットのバイナリ、メタデータ、タグを複数のロケールに翻訳し、翻訳済みアセットを管理する多言語ワークフローをサポートしています。 詳しくは、[多言語のアセット](multilingual-assets.md)を参照してください。
 
 アセットの管理を効率化して、翻訳された各バージョンが確実に同期されるようにするには、翻訳ワークフローを実行する前にアセットの[言語コピー](preparing-assets-for-translation.md)を作成します。
 
@@ -43,7 +43,7 @@ Adobe Experience Manager（AEM）Assets は、デジタルアセットのバイ�
 
 1. **「最終変更日を設定」ワークフローを有効化します。
 
-   アセットの最終変更日は、**「DAM メタデータの書き戻し」ワークフローが設定します。このワークフローは手順 2 で無効化しているので、AEM Assets は今後アセットの最終変更日を最新の状態に保つことができなくなります。このため、「最終変更日を設定」**&#x200B;ワークフローを有効化して、アセットの最終変更日が最新の状態に保たれるようにします。最終変更日が最新でないアセットはエラーの原因となる場合があります。
+   アセットの最終変更日は、**「DAM メタデータの書き戻し」ワークフローが設定します。手順2でこのワークフローを無効にしたので、[!DNL Experience Manager Assets]では、アセットの最終変更日を最新の状態に保つことができなくなります。 このため、「最終変更日を設定」**&#x200B;ワークフローを有効化して、アセットの最終変更日が最新の状態に保たれるようにします。最終変更日が最新でないアセットはエラーの原因となる場合があります。
 
 1. アセットのバイナリを翻訳しないように、[翻訳統合フレームワークを設定](/help/sites-administering/tc-tic.md)します。「アセット」タブの「アセットを翻訳」の選択を解除して、アセットのバイナリの翻訳を停止します。
 1. [多言語のアセットのワークフロー](multilingual-assets.md)を使用して、アセットのメタデータやタグを翻訳します。

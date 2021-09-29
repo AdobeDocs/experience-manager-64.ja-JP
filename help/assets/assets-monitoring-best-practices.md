@@ -1,20 +1,20 @@
 ---
 title: Assets の監視のベストプラクティス
-description: AEM インスタンスをデプロイした後の環境およびパフォーマンスの監視に関するベストプラクティス。
+description: デプロイ後の [!DNL Experience Manager] インスタンスの環境とパフォーマンスを監視するためのベストプラクティス。
 contentOwner: AG
-feature: アセット管理
+feature: Asset Management
 role: Admin,Architect
 exl-id: edbb275a-5ead-4ed2-8708-29e766081d75
-source-git-commit: 4048c4c76a892e3bb32dbbeef140b5dc9ebffad3
+source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
 workflow-type: tm+mt
-source-wordcount: '1766'
-ht-degree: 86%
+source-wordcount: '1745'
+ht-degree: 73%
 
 ---
 
 #  Assets の監視に関するベストプラクティスについて説明しています。 {#assets-monitoring-best-practices}
 
-Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の際には、以下のプロセスおよびテクノロジについての観察および報告をおこなう必要があります。
+Adobe Experience Manager Assetsの観点から見ると、監視には、次のプロセスおよびテクノロジーの観察とレポートを含める必要があります。
 
 * システム CPU
 * システムメモリ使用量
@@ -27,7 +27,7 @@ Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の�
 
 * OSGi コンソールヘルスチェック
 
-通常、AEM Assets の監視には、ライブ監視と長期的監視の 2 種類があります。
+通常、[!DNL Assets]は、ライブ監視と長期監視の2つの方法で監視できます。
 
 ## ライブ監視 {#live-monitoring}
 
@@ -42,10 +42,10 @@ Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の�
 * [Iftop](https://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。Iftopは、`yum install iftop`または`apt-get install iftop`を使用して、ほとんどのLinuxシステムにインストールできます。
 
 * Java Flight Recorder（JFR）：非実稼動環境で自由に使用できる、Oracle の市販ツールです。詳しくは、[Java Flight Recorderを使用してCQランタイムの問題を診断する方法](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)を参照してください。
-* AEM の error.log ファイル：システムでログに記録されたエラーの詳細を AEM の error.log ファイルで調査できます。`tail -F quickstart/logs/error.log`コマンドを使用して、調査する必要のあるエラーを特定します。
+* [!DNL Experience Manager] の error.log ファイル：システムでログに記録されたエラーの詳細を の error.log ファイルで調査できます。[!DNL Experience Manager]`tail -F quickstart/logs/error.log`コマンドを使用して、調査する必要のあるエラーを特定します。
 * [ワークフローコンソール](../sites-administering/workflows.md)：ワークフローコンソールを使用して、遅れているワークフローや、停止しているワークフローを監視できます。
 
-通常は、これらのツールを組み合わせて使用し、AEM インスタンスのパフォーマンスについて包括的に把握します。
+通常は、これらのツールを一緒に使用して、[!DNL Experience Manager]インスタンスのパフォーマンスに関する包括的なアイデアを得ます。
 
 >[!NOTE]
 >
@@ -55,11 +55,11 @@ Adobe Experience Manager（AEM）Assets の観点から見た場合、監視の�
 
 ## 長期的監視 {#long-term-monitoring}
 
-AEM インスタンスの長期的監視では、ライブで監視されるのと同じ部分の長期にわたる監視をおこないます。また、環境に固有のアラートも定義します。
+[!DNL Experience Manager]インスタンスの長期監視では、ライブで監視されるのと同じ部分を、長期間監視する必要があります。 また、環境に固有のアラートも定義します。
 
 ### ログの集約とレポート {#log-aggregation-and-reporting}
 
-Splunk（TM）や Elastic Search/Logstash/Kabana（ELK）など、いくつかのログ集約ツールがあります。AEM インスタンスの稼動時間を評価するには、システムに固有のログイベントを理解し、それに基づきアラートを作成することが重要です。開発と運用に関する十分な知識があれば、ログ集計プロセスを調整して重要なアラートを生成する方法をより深く理解できます。
+Splunk（TM）や Elastic Search/Logstash/Kabana（ELK）など、いくつかのログ集約ツールがあります。[!DNL Experience Manager]インスタンスの稼動時間を評価するには、システム固有のログイベントを理解し、それらに基づいてアラートを作成することが重要です。 開発と運用に関する十分な知識があれば、ログ集計プロセスを調整して重要なアラートを生成する方法をより深く理解できます。
 
 ### 環境の監視 {#environment-monitoring}
 
@@ -76,7 +76,7 @@ Splunk（TM）や Elastic Search/Logstash/Kabana（ELK）など、いくつか�
 
 #### 内部アプリケーション監視 {#internal-application-monitoring}
 
-内部アプリケーション監視には、JVM などの AEM スタックを構成するアプリケーションコンポーネントの監視、コンテンツリポジトリの監視、およびプラットフォーム上に構築されたカスタムアプリケーションコードによる監視が含まれます。通常、SolarWinds（TM）、HP OpenView（TM）、Hyperic（TM）、Zabbix（TM）などの一般的な多くの監視ソリューションで直接監視できる JMX MBean を通して監視を実行します。JMX への直接接続をサポートしないシステムでは、JMX データを抽出して、それらのシステムがネイティブで理解できる形式で公開するシェルスクリプトを記述できます。
+内部アプリケーションの監視には、JVM、コンテンツリポジトリ、プラットフォーム上に構築されたカスタムアプリケーションコードを介した監視など、[!DNL Experience Manager]スタックを構成するアプリケーションコンポーネントの監視が含まれます。 通常、SolarWinds（TM）、HP OpenView（TM）、Hyperic（TM）、Zabbix（TM）などの一般的な多くの監視ソリューションで直接監視できる JMX MBean を通して監視を実行します。JMX への直接接続をサポートしないシステムでは、JMX データを抽出して、それらのシステムがネイティブで理解できる形式で公開するシェルスクリプトを記述できます。
 
 JMX MBean へのリモートアクセスは、デフォルトで無効になっています。JMXによる監視の詳細は、[Monitoring and Management Using JMX Technology](https://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html)を参照してください。
 
@@ -84,7 +84,7 @@ JMX MBean へのリモートアクセスは、デフォルトで無効になっ�
 
 **JVM 監視**
 
-他の Java ベースのアプリケーションスタックと同様に、AEM は基盤となる Java Virtual Machine から提供されたリソースを利用します。JVM により公開されているプラットフォーム MXBean によって、それらのリソースの多くの状態を監視できます。MXBean について詳しくは、[プラットフォーム MBean サーバーおよびプラットフォーム MXBean の使用](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html)を参照してください。
+Javaベースのアプリケーションスタックと同様に、[!DNL Experience Manager]は、基盤となるJava仮想マシンを通じて提供されるリソースに依存します。 JVM により公開されているプラットフォーム MXBean によって、それらのリソースの多くの状態を監視できます。MXBean について詳しくは、[プラットフォーム MBean サーバーおよびプラットフォーム MXBean の使用](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html)を参照してください。
 
 JVMを監視できるベースラインパラメーターを次に示します。
 
@@ -106,11 +106,11 @@ JVMを監視できるベースラインパラメーターを次に示します�
 * アラームしきい値：スレッド数がベースラインの 150％を超えた場合。
 * アラーム定義：適切に停止できていないアクティブなプロセスがある、または非効率な操作で大量のリソースを消費しています。スレッドダンプを分析して、定義を満たすかどうか判断します。
 
-**AEM 監視**
+**[!DNL Experience Manager]監視**
 
-AEM も、JMX を通して一連の統計情報および操作を公開しています。これにより、システムヘルスの評価をおこない、ユーザーに影響を与える前に問題を特定できます。詳しくは、AEM JMX MBean の[ドキュメント](/help/sites-administering/jmx-console.md)を参照してください。
+[!DNL Experience Manager] も、JMX を通して一連の統計情報および操作を公開しています。これにより、システムヘルスの評価をおこない、ユーザーに影響を与える前に問題を特定できます。詳しくは、 JMX MBean の[ドキュメント](/help/sites-administering/jmx-console.md)を参照してください。[!DNL Experience Manager]
 
-AEM で監視できるベースラインパラメーターをいくつか示します。
+[!DNL Experience Manager]に対して監視できるベースラインパラメーターを以下に示します。
 
 レプリケーションエージェント
 
@@ -187,13 +187,13 @@ AEM で監視できるベースラインパラメーターをいくつか示し�
 
 ## よくある問題と解決策  {#common-issues-and-resolutions}
 
-監視中に問題が発生した場合は、以下のトラブルシューティングを実行して、AEM インスタンスでよくある問題を解決できます。
+監視の過程で問題が発生した場合は、以下に示すトラブルシューティングタスクを実行して、[!DNL Experience Manager]インスタンスの一般的な問題を解決します。
 
 * TarMK を使用している場合は、Tar 圧縮を頻繁に実行します。詳しくは、[リポジトリのメンテナンス](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)を参照してください。
 * `OutOfMemoryError`ログを確認します。 詳しくは、[メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)を参照してください。
 * ログを確認し、インデックス化されていないクエリ、ツリートラバーサル、インデックストラバーサルへの参照がないかを確認します。これらは、インデックス化されていないクエリ、または不適切にインデックス化されたクエリを示しています。クエリとインデックスのパフォーマンスの最適化に関するベストプラクティスについては、[クエリとインデックスに関するベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md)を参照してください。
 * ワークフローが予期したとおりに動作していることを確認するには、ワークフローコンソールを使用します。可能な場合は、複数のワークフローを単一のワークフローにまとめます。
 * ライブ監視を再確認し、他にボトルネックがないか、または特定のリソースを大量に使用している箇所がないかを確認します。
-* ディスパッチャーを含むクライアントネットワークからの出口ポイントおよび AEM インスタンスへの入り口ポイントを調査します。多くの場合、これらがボトルネックが発生する領域となります。詳しくは、[Assets のネットワークにおける考慮事項](assets-network-considerations.md)を参照してください。
-* AEM サーバーを拡張します。AEM インスタンスのサイジングが不適切な可能性があります。Adobeカスタマーケアは、サーバーのサイズが小さいかどうかを特定するのに役立ちます。
+* クライアントネットワークからのエグレスポイントと、ディスパッチャーを含む[!DNL Experience Manager]インスタンスネットワークへの入口ポイントを調べます。 多くの場合、これらがボトルネックが発生する領域となります。詳しくは、[Assets のネットワークにおける考慮事項](assets-network-considerations.md)を参照してください。
+* [!DNL Experience Manager]サーバーのサイズを大きくします。 [!DNL Experience Manager]インスタンスのサイズが不適切な可能性があります。 Adobeカスタマーケアは、サーバーのサイズが小さいかどうかを特定するのに役立ちます。
 * `access.log` および `error.log` ファイルで、不具合の発生した時刻付近のエントリを調査します。カスタムコードの異常の兆候となるパターンを探します。それらを監視するイベントのリストに追加します。

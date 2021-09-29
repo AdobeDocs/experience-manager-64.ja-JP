@@ -2,13 +2,13 @@
 title: アセットエディターの拡張
 description: カスタムコンポーネントを使用したアセットエディターの機能の拡張方法を説明します。
 contentOwner: AG
-feature: 開発者ツール
+feature: Developer Tools
 role: User,Admin
 exl-id: 1e02a2f6-8194-46b9-b418-87103c3f4a69
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 98%
+source-wordcount: '691'
+ht-degree: 93%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 98%
 
 事前設定済みの編集コンポーネントを使用してエディターを設定する方法については、[アセットエディターページの作成および設定](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page)を参照してください。
 
-Adobe Experience Manager（AEM）開発者は、既存のエディターコンポーネントを使用するだけでなく、独自のコンポーネントを作成することもできます。
+既存のエディターコンポーネントを使用する以外に、Adobe Experience Manager開発者は独自のコンポーネントを作成することもできます。
 
 ## アセットエディターテンプレートの作成 {#creating-an-asset-editor-template}
 
@@ -30,9 +30,9 @@ geometrixx には次のサンプルページが含まれています。
 
 ### clientlib の設定 {#configuring-clientlib}
 
-AEM Assets コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。クライアントライブラリは通常、`init.jsp` で読み込まれます。
+[!DNL Experience Manager Assets] コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。クライアントライブラリは通常、`init.jsp` で読み込まれます。
 
-（コアの `init.jsp` での）デフォルトクライアントライブラリの読み込みとは異なり、AEM Assets テンプレートは次の条件を満たす必要があります。
+（コアの `init.jsp` での）デフォルトクライアントライブラリの読み込みとは異なり、 テンプレートは次の条件を満たす必要があります。[!DNL Assets]
 
 * テンプレートでは、（`cq.wcm.edit` ではなく）`cq.dam.edit` クライアントライブラリを組み込む必要があります。
 
@@ -42,7 +42,7 @@ AEM Assets コンポーネントでは、WCM 編集クライアントライブ�
 
 ### JS アクションの設定 {#configuring-js-actions}
 
-一部の AEM Assets コンポーネントでは `component.js` で定義されている JS 関数が必要です。このファイルをコンポーネントディレクトリにコピーしてリンクします。
+一部の[!DNL Assets]コンポーネントには、`component.js`で定義されたJS関数が必要です。 このファイルをコンポーネントディレクトリにコピーしてリンクします。
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
@@ -52,7 +52,7 @@ AEM Assets コンポーネントでは、WCM 編集クライアントライブ�
 
 ### 追加のスタイルシート {#additional-style-sheets}
 
-一部の AEM Assets コンポーネントでは、AEM ウィジェットライブラリを使用します。コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
+一部の[!DNL Assets]コンポーネントは、[!DNL Experience Manager]ウィジェットライブラリを使用します。 コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">

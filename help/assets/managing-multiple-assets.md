@@ -2,13 +2,13 @@
 title: 複数のアセットおよびコレクションのメタデータの一括編集
 description: 多数のアセットとコレクションのメタデータを同時に編集して、共通のメタデータの変更をすばやく反映する方法を説明します。
 contentOwner: AG
-feature: アセット管理，メタデータ，コレクション
+feature: Asset Management,Metadata,Collections
 role: User
 exl-id: 3541b50a-f226-4a6a-9c2a-03a5f47f1c23
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 59%
+source-wordcount: '433'
+ht-degree: 50%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 59%
 
 複数のアセットおよびコレクションのメタデータを同時に編集して、共通のメタデータの変更をすばやくプロパゲートする方法を学習します。
 
-Adobe Enterprise Manager（AEM）Assets を使用すると、複数のアセットのメタデータを同時に編集できるので、アセットに対して共通のメタデータの変更をすばやく一括でプロパゲートできます。複数のコレクションのメタデータを同時に編集することもできます。
+AdobeEnterprise Manager Assetsでは、複数のアセットのメタデータを同時に編集できるので、アセットに対する共通のメタデータの変更を一括ですばやく反映できます。 複数のコレクションのメタデータを同時に編集することもできます。
 
 プロパティページを使用して、複数のアセットまたはコレクションのメタデータを変更できます。
 
@@ -47,7 +47,7 @@ Adobe Enterprise Manager（AEM）Assets を使用すると、複数のアセッ�
 
 ## 一括メタデータ更新の上限を設定する {#configure-limit-for-bulk-metadata-update}
 
-DOS などの状況を防ぐため、AEM では Sling 要求でサポートされるパラメーターの数を制限しています。一度に多くのアセットのメタデータを更新すると、上限に到達する可能性があり、それ以上のアセットでメタデータが更新されなくなります。AEM はログに次の警告を生成します。
+DOSなどの状況を防ぐために、[!DNL Experience Manager]はSling要求でサポートされるパラメーターの数を制限します。 一度に多くのアセットのメタデータを更新すると、上限に到達する可能性があり、それ以上のアセットでメタデータが更新されなくなります。[!DNL Experience Manager] はログに次の警告を生成します。
 
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 

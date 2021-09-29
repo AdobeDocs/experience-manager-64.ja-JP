@@ -1,26 +1,26 @@
 ---
-title: AEM Assets のホームページの使用
-description: AEM Assets のホームページをカスタマイズして、アセットに関する最近のアクティビティのスナップショットを始め、有益なスタートアップスクリーンエクスペリエンスを実現できます。
+title: '[!DNL Experience Manager Assets] ホームページエクスペリエンス'
+description: ' Assets のホームページをカスタマイズして、アセットに関する最近のアクティビティのスナップショットを始め、有益なスタートアップスクリーンエクスペリエンスを実現できます。'
 contentOwner: AG
-feature: 開発者ツール，アセット管理
+feature: Developer Tools,Asset Management
 role: Admin,User
 exl-id: f47c6da7-aa21-4f49-9c66-2a8091e19561
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 56%
+source-wordcount: '557'
+ht-degree: 45%
 
 ---
 
-# AEM Assets のホームページの使用 {#aem-assets-home-page-experience}
+# [!DNL Adobe Experience Manager Assets] ホームページエクスペリエンス {#aem-assets-home-page-experience}
 
-AEM Assets のホームページをカスタマイズして、アセットに関する最近のアクティビティのスナップショットを始め、有益なスタートアップスクリーンエクスペリエンスを実現できます。
+[!DNL Experience Manager Assets]ホームページをパーソナライズして、アセットに関する最近のアクティビティのスナップショットなど、豊富なようこそ画面エクスペリエンスを実現します。
 
-Adobe Experience Manager（AEM）Assets のホームページでは、最近のアクティビティのスナップショット（最近表示またはアップロードされたアセットなど）を始め、カスタマイズした有益なスタートアップスクリーンエクスペリエンスを実現できます。
+[!DNL Adobe Experience Manager Assets]ホームページは、最近表示またはアップロードされたアセットなど、最近のアクティビティのスナップショットを含む、パーソナライズされたリッチなウェルカムスクリーンエクスペリエンスを提供します。
 
 Assets のホームページは、デフォルトでは無効になっています。ホームページを有効にするには、次の手順を実行します。
 
-1. AEM Configuration Managerにアクセスするには、**[!UICONTROL ツール/操作/Webコンソール]**&#x200B;をクリックします。
+1. [!DNL Experience Manager] Configuration Managerにアクセスするには、**[!UICONTROL ツール/操作/Webコンソール]**&#x200B;をクリックします。
 1. **Day CQ DAM Event Recorder**&#x200B;サービスを開きます。
 1. 「**[!UICONTROL このサービスを有効にする]**」を選択して、アクティビティの記録を有効にします。
 
@@ -70,7 +70,7 @@ Assets のホームページには次のセクションが含まれます。
 
 **最近の**:このセクシ **ョ** ンの最近表示されたウィジェットには、フォルダー、コレクション、プロジェクトなど、ログインユーザーが最近アクセスしたエンティティが表示されます。
 
-**検出**:このセク **** ションの新しいウィジェットには、AEM Assetsインスタンスに最近アップロードされたアセットとレンディションが表示されます。
+**検出**:このセク **** ションの新しいウィジェットには、インスタンスに最近アップロードされたアセットとレンディションが表 [!DNL Assets] 示されます。
 
 ユーザーアクティビティデータのパージを有効にするには、Configuration Managerから&#x200B;**DAM Event Purge Service**&#x200B;を有効にします。 このサービスを有効にすると、ログインユーザーのアクティビティのうち指定した数を超えたものがシステムによって削除されます。
 
@@ -78,7 +78,7 @@ Assets のホームページには次のセクションが含まれます。
 
 >[!NOTE]
 >
->Day CQ DAM Event RecorderおよびDAM Event Purgeサービスを有効にすると、JCRへの書き込み操作と検索インデックス作成操作が増加し、AEMサーバーの負荷が大幅に増加します。 AEM サーバーの負荷が増えるとパフォーマンスに影響が出ることがあります。
+>Day CQ DAM Event RecorderとDAM Event Purgeサービスを有効にすると、JCRへの書き込み操作と検索インデックス作成操作が増加し、[!DNL Experience Manager]サーバーの負荷が大幅に増加します。 [!DNL Experience Manager]サーバーの追加負荷は、そのパフォーマンスに影響を与える場合があります。
 
 >[!CAUTION]
 >

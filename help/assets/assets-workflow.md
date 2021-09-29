@@ -2,13 +2,13 @@
 title: ビジネス・プロセスの達成、監査の実施、コンプライアンスの達成、基本的な健全性の維持を目的とした資産の処理
 description: 形式の変換、レンディションの作成、アセットの管理、アセットの検証、ワークフローの実行をおこなうアセット処理。
 contentOwner: AG
-feature: ワークフロー，レンディション
+feature: Workflow,Renditions
 role: User,Admin
 exl-id: 4fb3d12c-feac-45b9-8d09-3b6995591b3d
-source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
+source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 28%
+source-wordcount: '1032'
+ht-degree: 27%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 28%
 >
 >[!UICONTROL Request to Activate]や[!UICONTROL Request to Deactivate]など、クラシックUIで使用可能なワークフローがタッチ操作対応UIで使用できない場合は、[ワークフローモデルの作成](/help/sites-developing/workflows-models.md#make-workflow-models-available-in-touchui)を参照してください。
 
-## AEM のアセットへのワークフローの適用 {#apply-a-workflow-to-an-aem-asset}
+## [!DNL Experience Manager]アセットへのワークフローの適用 {#apply-a-workflow-to-an-aem-asset}
 
 <!-- 
 TBD: Add animated GIF for these steps instead of all these screenshots.
@@ -50,7 +50,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 1. ワークフローを開始するアセットの場所に移動し、アセットをクリックしてアセットページを開きます。
 
-1. ワークフローを開始するアセットの場所に移動し、アセットをクリックしてアセットページを開きます。 メニューから「**[!UICONTROL タイムライン]**」を選択して、タイムラインを表示します。
+1. ワークフローを開始するアセットの場所に移動し、アセットをクリックしてアセットページを開きます。 メニューから「**[!UICONTROL タイムライン]**」を選択してタイムラインを表示します。
 
    ![timeline-2](assets/timeline-2.png)
 
@@ -72,7 +72,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 ## 複数のアセットへのワークフローの適用 {#applying-a-workflow-to-multiple-assets}
 
-1. アセットコンソールから、ワークフローを開始するアセットの場所へ移動して、アセットを選択します。メニューから「**[!UICONTROL タイムライン]**」を選択して、タイムラインを表示します。
+1. アセットコンソールから、ワークフローを開始するアセットの場所へ移動して、アセットを選択します。メニューから「**[!UICONTROL タイムライン]**」を選択してタイムラインを表示します。
 
    ![chlimage_1-136](assets/chlimage_1-136.png)
 
@@ -111,7 +111,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 >[!MORELIKETHIS]
 >
 >* [ワークフローへの適用と参加](/help/sites-authoring/workflows.md)
-* [ワークフローモデルの作成とワークフロー機能の拡張](/help/sites-developing/workflows.md)
-* [ワークフローを実行する方法](/help/sites-administering/workflows-starting.md)
-* [ワークフローのベストプラクティス](/help/sites-developing/workflows-best-practices.md)
+>* [ワークフローモデルの作成とワークフロー機能の拡張](/help/sites-developing/workflows.md)
+>* [ワークフローを実行する方法](/help/sites-administering/workflows-starting.md)
+>* [ワークフローのベストプラクティス](/help/sites-developing/workflows-best-practices.md)
 

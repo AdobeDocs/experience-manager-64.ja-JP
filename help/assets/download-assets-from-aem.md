@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Asset Distribution
 role: User
 exl-id: bfe4d597-1080-4de5-a100-73a5175863d7
-source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
+source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '806'
 ht-degree: 74%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 74%
 
 アセットをダウンロードするには、次の手順に従います。
 
-1. AEMの左上隅にあるAEMロゴをタップし、左側のレールで「**[!UICONTROL ナビゲーション]**」をタップします。
+1. AEMの左上隅にある[!DNL Experience Manager]ロゴをタップし、左側のレールで&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;をタップします。
 1. ナビゲーションページで、「**[!UICONTROL アセット]**/**[!UICONTROL ファイル]**」をタップします。
 1. ダウンロードするアセットを含むフォルダーに移動します。
 1. フォルダーを選択するか、フォルダー内の 1 つ以上のアセットを選択します。

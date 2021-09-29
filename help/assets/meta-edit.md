@@ -1,14 +1,14 @@
 ---
 title: メタデータの編集と追加
-description: AEM Assets のアセットメタデータを編集する様々な方法について説明します。
+description: ' [!DNL Experience Manager] アセットのアセットメタデータと、アセットメタデータを編集する様々な方法について説明します。'
 contentOwner: AG
-feature: メタデータ
+feature: Metadata
 role: User,Admin
 exl-id: f0522343-f8a9-4d89-8ce8-b3357ae3fe70
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 86%
+source-wordcount: '479'
+ht-degree: 77%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 86%
 
 メタデータは、検索可能なアセットに関する追加情報です。画像をアップロードすると自動的に抽出されます。既存のメタデータを編集したり、新しいメタデータプロパティを既存のフィールドに追加（例えば、メタデータフィールドが空白の場合など）したりすることができます。
 
-どの企業でも、メタデータの語彙を制御して信頼性を確保する必要があります。そのため、AEM Assets では、新しいメタデータプロパティをアドホックに追加することはできません。作成者は、アセットの新しいメタデータフィールドを追加することはできませんが、開発者は追加できます。[アセットの新しいメタデータプロパティの作成](meta-edit.md#editing-metadata-schema)を参照してください。
+メタデータの語彙を制御し、信頼性を確保する必要があるので、[!DNL Experience Manager] Assetsでは新しいメタデータプロパティをアドホックに追加することはできません。 作成者は、アセットの新しいメタデータフィールドを追加することはできませんが、開発者は追加できます。[アセットの新しいメタデータプロパティの作成](meta-edit.md#editing-metadata-schema)を参照してください。
 
 ## アセットのメタデータの編集 {#editing-metadata-for-an-asset}
 
@@ -28,7 +28,7 @@ ht-degree: 86%
    * アセットのサムネールから、「**[!UICONTROL プロパティを表示]**」クイックアクションを選択します。
    * アセットページで、ツールバーの&#x200B;**[!UICONTROL プロパティを表示]**&#x200B;アイコン![情報アイコン](assets/do-not-localize/info_icon.png)をクリックまたはタップします。
 
-   アセットページに、アセットのメタデータがすべて表示されます。このメタデータは、AEM Assets にアップロードされた（取り込まれた）ときに、自動的に抽出されたものです。
+   アセットページに、アセットのメタデータがすべて表示されます。このメタデータは、 [!DNL Experience Manager]アセットにアップロード（取り込み）されたときに、自動的に抽出されました。
 
    ![chlimage_1-169](assets/chlimage_1-169.png)
 
@@ -46,7 +46,7 @@ XMP の書き戻しは、[技術要件](/help/sites-deploying/technical-requirem
 
 メタデータスキーマの編集方法について詳しくは、[メタデータスキーマフォームの編集](metadata-schemas.md#editing-metadata-schema-forms)を参照してください。
 
-## AEM 内でのカスタム名前空間の登録 {#registering-a-custom-namespace-within-aem}
+##  内でのカスタム名前空間の登録 [!DNL Experience Manager] {#registering-a-custom-namespace-within-aem}
 
 AEM 内での独自の名前空間を追加できます。cq、jcr、sling など事前に定義された名前空間があるように、リポジトリメタデータと xml 処理用の名前空間を設定できます。
 

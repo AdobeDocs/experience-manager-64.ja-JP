@@ -2,13 +2,13 @@
 title: メタデータスキーマ
 description: 'メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。  '
 contentOwner: AG
-feature: メタデータ
+feature: Metadata
 role: User,Admin
 exl-id: 82f42bb3-2c01-407c-a41b-9abe7be4660e
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '2536'
-ht-degree: 83%
+source-wordcount: '2524'
+ht-degree: 80%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 83%
 | [!UICONTROL default] |  | アセットの基本メタデータスキーマフォーム |
 |  | 次の子フォームは、[!UICONTROL default] フォームのプロパティを継承します。 |  |
 |  | <ul><li> [!UICONTROL dm_video]</li></ul> | Dynamic Media ビデオのスキーマフォーム |
-|  | <ul><li> [!UICONTROL image]</li></ul> | MIMEタイプが「image」のアセットのスキーマフォーム（例：image/jpeg、image/png）。 <br>[!UICONTROL image] フォームには、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]：サブタイプが [!UICONTROL jpeg] であるアセットのスキーマフォーム</li> <li>[!UICONTROL tiff]:サブタイプ [!UICONTROL tiff]のアセットのスキーマフォーム。</li></ul> |
+|  | <ul><li> [!UICONTROL 画像]</li></ul> | MIMEタイプが「image」のアセットのスキーマフォーム（例：image/jpeg、image/png）。 <br>[!UICONTROL 画像] フォームには、次の子フォームテンプレートがあります。 <ul><li> [!UICONTROL jpeg]：サブタイプが [!UICONTROL jpeg] であるアセットのスキーマフォーム</li> <li>[!UICONTROL tiff]:サブタイプ [!UICONTROL tiff]のアセットのスキーマフォーム。</li></ul> |
 |  | <ul><li> [!UICONTROL application]</li></ul> | application/pdf、application/zipなど、MIMEタイプが「application」のアセットのスキーマフォーム。 <br>[!UICONTROL pdf]:サブタイプpdfのアセットのスキーマフォーム。 |
 |  | <ul><li>[!UICONTROL video]</li></ul> | video/avi、video/mp4など、MIMEタイプが「video」のアセットのスキーマフォーム。 |
 | [!UICONTROL collection] |  | コレクションのスキーマフォーム |
@@ -174,7 +174,7 @@ ht-degree: 83%
 
 ## メタデータスキーマフォームの削除 {#deleting-metadata-schema-forms}
 
-AEM では、カスタムのスキーマフォームのみを削除できます。デフォルトのスキーマフォームまたはテンプレートを削除することはできません。ただし、これらのフォームでのカスタムの変更内容は削除できます。
+[!DNL Experience Manager] では、カスタムのスキーマフォームのみを削除できます。デフォルトのスキーマフォームまたはテンプレートを削除することはできません。ただし、これらのフォームでのカスタムの変更内容は削除できます。
 
 フォームを削除するには、フォームを選択して&#x200B;**[!UICONTROL 削除]**&#x200B;アイコンをクリックします。
 
@@ -184,11 +184,11 @@ AEM では、カスタムのスキーマフォームのみを削除できます�
 
 >[!NOTE]
 >
->AEM Assets の既製のメタデータスキーマフォームは削除できません。
+>[!DNL Experience Manager] Assetsの標準のメタデータスキーマフォームは削除できません。
 
 ## MIME タイプ用のスキーマフォーム {#schema-forms-for-mime-types}
 
-AEM Assets には、様々な MIME タイプですぐに使用できるデフォルトのフォームが用意されています。ただし、様々な MIME タイプのアセットにカスタムのフォームを追加することができます。
+[!DNL Experience Manager] Assets には、様々な MIME タイプですぐに使用できるデフォルトのフォームが用意されています。ただし、様々な MIME タイプのアセットにカスタムのフォームを追加することができます。
 
 ### MIME タイプ用の新しいフォームの追加 {#adding-new-forms-for-mime-types}
 
@@ -205,7 +205,7 @@ AEM Assets には、様々な MIME タイプですぐに使用できるデフォ
 | `exposedmimetype` | マッピングする既存フォームの名前 | `String` | `image/jpeg` |
 | `mimetypes` | `exposedmimetype` 属性で定義したフォームを使用する MIME タイプのリスト | `String` | `image/png` |
 
-AEM Assets では、次の MIME タイプとスキーマフォームがマッピングされます。
+[!DNL Experience Manager] Assets では、次の MIME タイプとスキーマフォームがマッピングされます。
 
 | スキーマフォーム | MIME タイプ |
 |---|---|
@@ -227,7 +227,7 @@ AEM Assets では、次の MIME タイプとスキーマフォームがマッピ
 
 ## フォルダー固有のメタデータの適用 {#applying-folder-specific-metadata}
 
-AEM Assets では、メタデータスキーマのバリアントを定義して、それを特定のフォルダーに適用できます。
+[!DNL Experience Manager] Assets では、メタデータスキーマのバリアントを定義して、それを特定のフォルダーに適用できます。
 
 例えば、デフォルトのメタデータスキーマのバリアントを定義して、それをフォルダーに適用できます。変更したスキーマを適用すると、フォルダー内のアセットに適用されている元のデフォルトのメタデータスキーマがオーバーライドされます。
 
@@ -239,7 +239,7 @@ AEM Assets では、メタデータスキーマのバリアントを定義して
 
 フォルダーにサブフォルダーがあり、サブフォルダーレベルで別のスキーマが適用されている場合、そのサブフォルダー内のアセットはそのサブフォルダーレベルで適用されているスキーマからメタデータを継承します。ただし、サブフォルダーレベルにスキーマが適用されていない、または同じスキーマが適用されている場合、サブフォルダーのアセットは親フォルダーレベルに適用されているスキーマからメタデータを継承します。
 
-1. AEM のロゴをクリックし、**[!UICONTROL ツール／アセット／メタデータスキーマ]**&#x200B;に移動します。**[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページが表示されます。
+1. [!DNL Experience Manager]のロゴをクリックし、**[!UICONTROL ツール/アセット/メタデータスキーマ]**&#x200B;に移動します。 **[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページが表示されます。
 1. フォーム（デフォルトのメタデータフォームなど）の前にあるチェックボックスをオンにし、「**[!UICONTROL コピー]**」アイコンをクリックまたはタップしてカスタムフォームとして保存します。そのフォームに `my_default` などの名前を付けます。カスタムフォームを作成することもできます。
 
    ![chlimage_1-184](assets/chlimage_1-184.png)
@@ -269,9 +269,9 @@ AEM Assets では、メタデータスキーマのバリアントを定義して
 
 >[!NOTE]
 >
->メタデータフィールドは、別のフィールドの値に基づいて、必須フィールドとして定義できます。AEM のカード表示では、このような必須メタデータフィールドのメタデータがなくても警告メッセージは表示されません。
+>メタデータフィールドは、別のフィールドの値に基づいて、必須フィールドとして定義できます。カード表示では、[!DNL Experience Manager]は、そのような必須メタデータフィールドのメタデータが見つからないことに関する警告メッセージを表示しません。
 
-1. AEM のロゴをクリックし、**[!UICONTROL ツール／アセット／メタデータスキーマ]**&#x200B;に移動します。**[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページが表示されます。
+1. [!DNL Experience Manager]のロゴをクリックし、**[!UICONTROL ツール/アセット/メタデータスキーマ]**&#x200B;に移動します。 **[!UICONTROL メタデータスキーマフォーム]**&#x200B;ページが表示されます。
 1. デフォルトのメタデータフォームをカスタムフォームとして保存します。例えば、`my_default` として保存します。
 
    ![chlimage_1-189](assets/chlimage_1-189.png)
@@ -286,7 +286,8 @@ AEM Assets では、メタデータスキーマのバリアントを定義して
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-1. （オプション）`http://[server]:[port]/system/console/components/` にアクセスします。`com.day.cq.dam.core.impl.MissingMetadataNotificationJob` コンポーネントを設定して有効にします。このコンポーネントはデフォルトで無効になっています。AEM がアセット上にあるメタデータの妥当性をチェックする頻度を設定します。この設定により、`hasValidMetadata` プロパティがアセットの jcr:content に追加されます。AEM はこのプロパティを使用して検索の結果をフィルターできます。
+1. （オプション）`http://[server]:[port]/system/console/components/`にアクセスします。`com.day.cq.dam.core.impl.MissingMetadataNotificationJob` コンポーネントを設定して有効にします。このコンポーネントはデフォルトで無効になっています。[!DNL Experience Manager]がアセット上のメタデータの有効性をチェックする頻度を設定します。
+この設定により、`hasValidMetadata` プロパティがアセットの jcr:content に追加されます。[!DNL Experience Manager]は、このプロパティを使用して検索の結果をフィルタリングできます。
 
 >[!NOTE]
 >
@@ -294,4 +295,4 @@ AEM Assets では、メタデータスキーマのバリアントを定義して
 
 >[!CAUTION]
 >
->メタデータの検証チェックは、大量のリソースを必要とするので、システムのパフォーマンスに影響を及ぼす可能性があります。検証チェックのスケジュール設定は、適切に行う必要があります。AEMデプロイメントにパフォーマンスの問題がある場合は、このジョブを無効にしてみてください。
+>メタデータの検証チェックは、大量のリソースを必要とするので、システムのパフォーマンスに影響を及ぼす可能性があります。検証チェックのスケジュール設定は、適切に行う必要があります。[!DNL Experience Manager]デプロイメントにパフォーマンスの問題がある場合は、このジョブを無効にしてみてください。

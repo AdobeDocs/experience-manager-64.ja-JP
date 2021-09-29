@@ -2,12 +2,12 @@
 title: デジタルアセットへの透かしの追加
 description: 透かし処理機能を使用して、アセットにデジタル透かしを追加する方法について説明します。
 contentOwner: AG
-feature: アセット管理
+feature: Asset Management
 role: User,Admin
 exl-id: ed01143c-b516-44f8-aceb-ad2e3f0106b2
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '319'
 ht-degree: 36%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 36%
 
 [!DNL Adobe Experience Manager Assets] では、アセットにデジタル透かしを追加して、アセットの信頼性と著作権の所有権を確認できます。[!DNL Experience Manager Assets] では、PNG および JPEG ファイル上の透かしとしてテキストを使用できます。
 
-Adobe Experience Manager(AEM)Assetsでは、画像にデジタル透かしを追加して、アセットの信頼性や著作権の所有権を確認できます。 AEM Assets では、PNG および JPEG ファイル上の透かしとしてテキストを使用できます。
+Adobe Experience Manager Assetsでは、画像にデジタル透かしを追加して、アセットの信頼性や著作権の所有権を確認できます。 [!DNL Experience Manager] Assets では、PNG および JPEG ファイル上の透かしとしてテキストを使用できます。
 
 アセットに透かしを適用できるようにするには、[!UICONTROL DAMアセットの更新]ワークフローに透かし処理ステップを追加します。
 
@@ -37,9 +37,9 @@ Adobe Experience Manager(AEM)Assetsでは、画像にデジタル透かしを追
    ![Assets における「透かしを追加」ステップの引数の指定](assets/arguments_add_watermark_aem_assets.png)
 
 1. 透かしステップを追加した **[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローを保存します。
-1. AEMユーザーインターフェイスから、サンプルアセットをアップロードします。 透かしは、上記の手順で設定した位置に、フォントサイズや色などと共に表示されます。
+1. [!DNL Experience Manager]ユーザーインターフェイスから、サンプルアセットをアップロードします。 透かしは、上記の手順で設定した位置に、フォントサイズや色などと共に表示されます。
 
-プログラムによって、または動的情報を使用してPDFドキュメントに透かしを追加するには、[AEM Document Services](/help/forms/using/overview-aem-document-services.md)の機能を使用することを検討してください。
+プログラムによって、または動的情報を使用してPDFドキュメントに透かしを追加するには、[[!DNL Experience Manager] Document Services](/help/forms/using/overview-aem-document-services.md)の機能を使用することを検討してください。
 
 ## ヒントと制限事項 {#tips-limitations}
 

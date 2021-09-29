@@ -1,14 +1,14 @@
 ---
 title: フォルダーのアセットとコレクションのレビュー
-description: フォルダーまたはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
+description: フォルダー内またはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 contentOwner: AG
-feature: コラボレーション、コレクション
+feature: Collaboration, Collections
 role: User
 exl-id: 4c62e0cd-eaa5-456e-85f3-06f7a9f160f5
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
-source-wordcount: '816'
-ht-degree: 98%
+source-wordcount: '811'
+ht-degree: 91%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 98%
 
 フォルダー内またはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 
-Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレクション内のアセットに対してアドホックレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
+Adobe Experience Manager Assetsでは、フォルダーまたはコレクション内のアセットに対してアドホックなレビューワークフローを設定し、レビュー担当者やクリエイティブパートナーと共有してフィードバックを得ることができます。
 
 レビューワークフローをプロジェクトと関連付けることも、独立したレビュータスクを作成することもできます。
 
@@ -52,7 +52,7 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
    ![review_name](assets/review_name.png)
 
 1. 「**[!UICONTROL 送信]**」、「**[!UICONTROL 完了]**」の順にタップまたはクリックし、確認メッセージを閉じます。新しいタスクに関する通知が承認者に送信されます。
-1. 承認者として AEM Assets にログインし、Assets UI に移動します。アセットを承認するには、**[!UICONTROL 通知]**&#x200B;アイコンをクリックまたはタップし、リストからレビュータスクを選択します。
+1. 承認者として[!DNL Experience Manager] Assetsにログインし、Assets UIに移動します。 アセットを承認するには、**[!UICONTROL 通知]**&#x200B;アイコンをクリックまたはタップし、リストからレビュータスクを選択します。
 
    ![通知](assets/notification.png)
 
@@ -96,7 +96,7 @@ Adobe Experience Manager（AEM）Assets では、フォルダーまたはコレ�
    ![task_details-collection](assets/task_details-collection.png)
 
 1. 「**[!UICONTROL 送信]**」、「**[!UICONTROL 完了]**」の順にタップまたはクリックし、確認メッセージを閉じます。新しいタスクに関する通知が承認者に送信されます。
-1. 承認者として AEM Assets にログインし、アセットコンソールに移動します。アセットを承認するには、**[!UICONTROL 通知]**&#x200B;アイコンをタップまたはクリックし、リストからレビュータスクを選択します。
+1. [!DNL Experience Manager] Assetsに承認者としてログインし、Assetsコンソールに移動します。 アセットを承認するには、**[!UICONTROL 通知]**&#x200B;アイコンをタップまたはクリックし、リストからレビュータスクを選択します。
 1. **[!UICONTROL レビュータスク]**&#x200B;ページでレビュータスクの詳細を確認し、「**[!UICONTROL レビュー]**」をタップまたはクリックします。
 1. コレクションのすべてのアセットがレビューページに表示されます。アセットを選択し、必要に応じて&#x200B;**[!UICONTROL 「承認」または「非承認」]**&#x200B;アイコンをタップまたはクリックして、アセットを承認するか拒否します。
 

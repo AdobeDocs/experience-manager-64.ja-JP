@@ -2,19 +2,19 @@
 title: ビデオレンディション
 description: ビデオレンディション
 contentOwner: AG
-feature: ビデオ，レンディション
+feature: Video,Renditions
 role: User
 exl-id: 9fc93034-e83a-42b5-901d-7867b4a850a8
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 99%
+source-wordcount: '220'
+ht-degree: 91%
 
 ---
 
 # ビデオレンディション {#video-renditions}
 
-Adobe Experience Manager (AEM) Assets では、様々な形式（OGG、FLV など）のビデオアセット用のビデオレンディションを生成します。
+Adobe Experience Manager Assetsは、OGG、FLVなど、様々な形式のビデオアセット用のビデオレンディションを生成します。
 
 AEM Assets では、メディアアセットの静的レンディションと動的レンディション（DM エンコードされたレンディション）がサポートされています。
 

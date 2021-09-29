@@ -1,30 +1,30 @@
 ---
-title: AEM Assets でサポートされているファイル形式
-description: AEM Assetsでサポートされているファイル形式とMIMEタイプと、各形式でサポートされている機能のリストです。
+title: ' [!DNL Experience Manager] Assetsでサポートされるファイル形式'
+description: Assetsでサポートされているファイル形式とMIMEタイプと、各形式でサポートされている機能のリストです。
 contentOwner: AG
-feature: アセット管理、レンディション
+feature: Asset Management,Renditions
 role: User,Admin
 exl-id: ee25fe8f-36fb-42b3-9f90-0ea77bc02e2f
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
 workflow-type: tm+mt
-source-wordcount: '1651'
-ht-degree: 61%
+source-wordcount: '1635'
+ht-degree: 59%
 
 ---
 
-# AEM Assets {#assets-supported-formats}
+# [!DNL Adobe Experience Manager Assets]でサポートされるファイル形式 {#assets-supported-formats}
 
-AEM Assets は幅広いファイル形式をサポートしており、各機能は異なる MIME タイプに様々なサポートを提供しています。
+[!DNL Experience Manager Assets] は幅広いファイル形式をサポートしており、各機能は異なる MIME タイプに様々なサポートを提供しています。
 
-AEM Assets を他の標準準拠のデジタルアセット管理（DAM）ソリューションおよびデスクトップソフトウェアと統合するには、アドビの Extensible Metadata Platform（XMP）を使用します。
+[!DNL Assets]を他の標準準拠のデジタルアセット管理(DAM)ソリューションやデスクトップソフトウェアと統合するには、AdobeのExtensible Metadata Platform(XMP)を使用します。
 
-凡例を使用して、サポートレベルについて理解します。
+凡例を使用すると、サポートレベルがわかります。
 
 | サポートレベル | 説明 |
 |:---:|---|
 | ✓ | サポート対象 |
 | * | アドオン機能により対応 |
-| - | 適用なし |
+| − | 適用なし |
 
 ## ラスターイメージ形式 {#supported-raster-image-formats}
 
@@ -111,7 +111,7 @@ Adobe画像トランスコーディングライブラリは、エンコーディ
 
 ## Camera Raw {#supported-camera-raw}
 
-Adobe Camera Raw ライブラリを使用すると、AEM Assets が Raw 画像を取り込むことができます。[Camera Rawサポート](camera-raw.md)を参照してください。
+Adobe Camera Rawライブラリは、[!DNL Assets]が生の画像を取り込むことを可能にします。 [Camera Rawサポート](camera-raw.md)を参照してください。
 
 ## ドキュメント形式 {#supported-document-formats}
 
@@ -244,7 +244,7 @@ Dynamic Media機能でサポートされるドキュメント形式は次のと�
 
 ## サポートされる MIME タイプ {#supported-mime-types}
 
-デフォルトでは、AEMはファイル拡張子を使用してファイルタイプを検出します。 AEMは、ファイルの内容からこれを検出できます。 後者の場合は、AEM Webコンソールの「[!UICONTROL Day CQ DAM Mime Type Service]」で「[!UICONTROL Detect MIME from content]」オプションを選択します。
+デフォルトでは、[!DNL Experience Manager]はファイル拡張子を使用してファイルの種類を検出します。 [!DNL Experience Manager] は、ファイルの内容からこれを検出できます。後者の場合は、[!DNL Experience Manager] Webコンソールの「[!UICONTROL Day CQ DAM Mime Type Service]」で「[!UICONTROL Detect MIME from content]」オプションを選択します。
 
 サポートされるMIMEタイプのリストは、`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`のCRXDE Liteで利用できます。
 

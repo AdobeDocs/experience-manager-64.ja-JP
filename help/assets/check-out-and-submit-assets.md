@@ -2,19 +2,19 @@
 title: デジタルアセットのチェックインとチェックアウトによる編集
 description: 編集のためにアセットをチェックアウトし、変更が完了した後にアセットをチェックインする方法を説明します。
 contentOwner: AG
-feature: アセット管理
+feature: Asset Management
 role: User
 exl-id: 0c79ed42-0acd-426e-8e14-412bb4117585
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 67%
+source-wordcount: '393'
+ht-degree: 66%
 
 ---
 
 # アセット内ファイルのチェックイン、チェック-アウト {#check-in-and-check-out-files-in-assets}
 
-Adobe Experience Manager(AEM)Assetsでは、編集のためにアセットをチェックアウトし、変更終了後にアセットをチェックインすることができます。 アセットをチェックアウトした後は、そのユーザーだけがアセットを編集、注釈、公開、移動または削除できます。 アセットのチェックアウトでアセットにロックがかかることになります。アセットを再びAEM Assetsにチェックインするまで、他のユーザーはアセットに対してこれらの操作を実行できません。 ただし、ロックされたアセットのメタデータは変更することができます。
+Adobe Experience Manager Assetsでは、編集のためにアセットをチェックアウトし、変更終了後にアセットをチェックインすることができます。 アセットをチェックアウトした後は、そのユーザーだけがアセットを編集、注釈、公開、移動または削除できます。 アセットのチェックアウトでアセットにロックがかかることになります。アセットを[!DNL Experience Manager] Assetsに再度チェックインするまで、他のユーザーはアセットに対してこれらの操作を実行できません。 ただし、ロックされたアセットのメタデータは変更することができます。
 
 アセットをチェックアウトまたはチェックインするには、アセットに対する書き込みアクセス権が必要です。
 
@@ -58,13 +58,13 @@ Adobe Experience Manager(AEM)Assetsでは、編集のためにアセットをチ
 
    ![chlimage_1-475](assets/chlimage_1-475.png)
 
-   変更されたアセットは AEM Assets にチェックインされ、他のユーザーが編集できるようになります。
+   変更されたアセットは [!DNL Assets] にチェックインされ、他のユーザーが編集できるようになります。
 
 ## 強制チェックイン {#forced-check-in}
 
 管理者は、他のユーザーがチェックアウトしたアセットをチェックインできます。
 
-1. 管理者として AEM Assets にログインします。
+1. 管理者として [!DNL Assets] にログインします。
 1. Assets UI で他のユーザーにチェックアウトされているアセットを 1 つ以上選択します。
 
    ![chlimage_1-476](assets/chlimage_1-476.png)

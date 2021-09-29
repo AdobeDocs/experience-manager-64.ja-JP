@@ -1,35 +1,35 @@
 ---
 title: 複合アセットを管理し、サブアセットを生成します。
-description: InDesign、Adobe Illustrator、Photoshopの各ファイル内からAEMアセットへの参照を作成する方法を説明します。 また、ページビューア機能を使用して、複数ページファイル（PDF、INDD、PPT、PPTX、AI ファイルなど）の個々のページを表示する方法についても説明します。
+description: InDesign、Adobe Illustrator、Photoshopの各ファイル内から [!DNL Experience Manager] アセットへの参照を作成する方法を説明します。 また、ページビューア機能を使用して複数ページファイルの個々のページを表示する方法についても説明します。
 contentOwner: AG
 feature: Asset Management
 role: User,Admin
 exl-id: 9fa44b26-76f7-48e2-a9df-4fd1c0074158
-source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '1408'
-ht-degree: 48%
+source-wordcount: '1377'
+ht-degree: 31%
 
 ---
 
 # サブアセットを含む複合アセットの管理 {#managing-compound-assets}
 
-Adobe Experience Manager (AEM) Assets では、アップロードされたファイルに、リポジトリ内の既存のアセットへの参照が含まれているかどうかを確認できます。この機能は、サポート対象のファイル形式でのみ使用できます。アップロードされたアセットに AEM アセットへの参照が含まれている場合、アップロードされたアセットと参照元のアセットの間に双方向のリンクが作成されます。
+Adobe Experience Manager Assetsでは、アップロードされたファイルに、リポジトリ内の既存のアセットへの参照が含まれているかどうかを確認できます。 この機能は、サポート対象のファイル形式でのみ使用できます。アップロードされたアセットに[!DNL Experience Manager]アセットへの参照が含まれている場合、アップロードされたアセットと参照先のアセットの間に双方向のリンクが作成されます。
 
-Adobe Creative Cloud アプリケーションで AEM アセットを参照することで、冗長性を排除するだけでなく、コラボレーションを強化し、ユーザーの作業効率と生産性を高めることができます。
+冗長性を排除するだけでなく、Adobe Creative Cloudアプリケーションで[!DNL Experience Manager]アセットを参照することで、共同作業が強化され、ユーザーの効率と生産性が向上します。
 
-AEM Assets では&#x200B;**双方向の参照**&#x200B;をサポートしています。参照元のアセットは、アップロードされたファイルのアセットの詳細ページで確認できます。さらに、AEM アセットの参照先のファイルは、参照元アセットのアセット詳細ページで確認できます。
+[!DNL Experience Manager] アセットでは双方向の **参照がサポートされています**。参照元のアセットは、アップロードされたファイルのアセットの詳細ページで確認できます。さらに、参照元のアセットのアセットの詳細ページで、[!DNL Experience Manager]アセットの参照元のファイルを表示できます。
 
 参照は、参照元のアセットのパス、ドキュメント ID およびインスタンス ID に基づいて解決されます。
 
 ## Adobe Illustrator:アセットを参照として追加 {#refai}
 
-既存の AEM アセットを、Adobe Illustrator ファイル内から参照できます。
+既存の[!DNL Experience Manager]アセットをAdobe Illustratorファイル内から参照できます。
 
-1. [AEM デスクトップアプリケーション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)を使用して、AEM Assets リポジトリをローカルコンピューター上のドライブとしてマウントします。マウントしたドライブ内で、参照するアセットの場所に移動します。
+1. [[!DNL Experience Manager]  デスクトップアプリケーション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)を使用して、 Assets リポジトリをローカルコンピューター上のドライブとしてマウントします。[!DNL Experience Manager]マウントしたドライブ内で、参照するアセットの場所に移動します。
 1. マウントしたドライブから Illustrator ファイルにアセットをドラッグします。
-1. Illustrator ファイルをマウントしたドライブに保存するか、AEM リポジトリに[アップロード](managing-assets-touch-ui.md#uploading-assets)します。
-1. ワークフローが完了したら、そのアセットのアセットの詳細ページに移動します。既存の AEM アセットへの参照は、「**[!UICONTROL 参照]**」列の「**[!UICONTROL 依存関係]**」に一覧表示されます。
+1. Illustrator ファイルをマウントしたドライブに保存するか、 リポジトリに[アップロード](managing-assets-touch-ui.md#uploading-assets)します。[!DNL Experience Manager]
+1. ワークフローが完了したら、そのアセットのアセットの詳細ページに移動します。既存の[!DNL Experience Manager]アセットへの参照は、**[!UICONTROL 参照]**&#x200B;列の&#x200B;**[!UICONTROL 依存関係]**&#x200B;の下に一覧表示されます。
 
    ![chlimage_1-258](assets/chlimage_1-258.png)
 
@@ -43,9 +43,9 @@ AEM Assets では&#x200B;**双方向の参照**&#x200B;をサポートしてい�
 
 ## Adobe InDesign:アセットを参照として追加 {#add-aem-assets-as-references-in-adobe-indesign}
 
-InDesign ファイル内から AEM アセットを参照するには、AEM アセットを InDesign ファイルにドラッグするか、InDesign ファイルを ZIP ファイルとして書き出します。
+InDesignファイル内から[!DNL Experience Manager]InDesignを参照するには、[!DNL Experience Manager]アセットをInDesignファイルにドラッグするか、アセットファイルをZIPファイルとして書き出します。
 
-参照元のアセットは AEM Assets に既に存在します。[設定サーバー](indesign.md)でサブInDesignを抽出できます。 InDesign ファイルに組み込まれたアセットがサブアセットとして抽出されます。
+参照元のアセットは既に[!DNL Experience Manager]アセットに存在します。 [設定サーバー](indesign.md)でサブInDesignを抽出できます。 InDesign ファイルに組み込まれたアセットがサブアセットとして抽出されます。
 
 >[!NOTE]
 >
@@ -61,19 +61,19 @@ INDDファイルがアップロードされると、リポジトリ内に`xmpMM:
 
 1. [ワークフローモデルの作成](/help/sites-developing/workflows-models.md)の手順を実行して、新しいワークフローを作成します。
 1. Adobe InDesign](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html)の[パッケージ機能を使用して、ドキュメントを書き出します。Adobe InDesignは、ドキュメントとリンクされたアセットをパッケージとして書き出すことができます。 この場合、書き出されたフォルダーには、フォルダーファイル内のサブアセットを含む`Links`InDesignーが含まれます。 `Links`フォルダーは、INDDファイルと同じフォルダーに存在します。
-1. ZIP ファイルを作成し、このファイルを AEM リポジトリにアップロードします。
+1. ZIPファイルを作成し、[!DNL Experience Manager]リポジトリにアップロードします。
 1. 解凍ワークフローを開始します。
 1. ワークフローが完了すると、リンクフォルダー内の参照がサブアセットとして自動的に参照されます。参照元のアセットのリストを表示するには、InDesign アセットのアセットの詳細ページに移動して、[パネル](/help/sites-authoring/basic-handling.md#rail-selector)を閉じます。
 
 ## Adobe Photoshop:アセットを参照として追加 {#refps}
 
-1. WebDav クライアントを使用して、AEM Assets をドライブとしてマウントします。
-1. Photoshop ファイルに AEM アセットへの参照を作成するには、Photoshop のリンクを配置機能を使用して、マウントしたドライブで対応するアセットに移動します。
+1. WebDavクライアントを使用して、[!DNL Experience Manager] Assetsをドライブとしてマウントします。
+1. Photoshopファイル内の[!DNL Experience Manager]アセットへの参照を作成するには、Photoshopの「リンクを配置」機能を使用して、マウントされたドライブ内の対応するアセットに移動します。
 
    ![chlimage_1-261](assets/chlimage_1-261.png)
 
-1. Photoshopファイルをマウントしたドライブに保存するか、AEMリポジトリに[アップロード](managing-assets-touch-ui.md#uploading-assets)します。
-1. ワークフローが完了したら、既存の AEM アセットへの参照がアセットの詳細ページに一覧表示されます。
+1. Photoshopファイルをマウントしたドライブに保存するか、[](managing-assets-touch-ui.md#uploading-assets)を[!DNL Experience Manager]リポジトリにアップロードします。
+1. ワークフローが完了すると、既存の[!DNL Experience Manager]アセットへの参照がアセットの詳細ページに表示されます。
 
    参照元のアセットを表示するには、アセットの詳細ページで[パネル](/help/sites-authoring/basic-handling.md#rail-selector)を閉じます。
 
@@ -85,7 +85,7 @@ INDDファイルがアップロードされると、リポジトリ内に`xmpMM:
 
 ## サブアセットの作成 {#generate-subassets}
 
-複数ページ形式(PDFファイル、AIファイル、Microsoft PowerPointファイル、Apple Keynoteファイル、Adobe InDesignファイル)のアセットをサポートしている場合、AEMは元のアセットの個々のページに対応するサブアセットを生成できます。 これらのサブアセットは&#x200B;*親*&#x200B;アセットにリンクされ、複数ページ表示が容易になります。 その他の目的では、サブアセットはAEMでは通常のアセットと同じように扱われます。
+複数ページ形式のアセット(PDFファイル、AIファイル、Microsoft PowerPointファイル、Apple Keynoteファイル、Adobe InDesignファイル)の場合、元のアセットの個々のページに対応するサブアセットを[!DNL Experience Manager]で生成できます。 これらのサブアセットは&#x200B;*親*&#x200B;アセットにリンクされ、複数ページ表示が容易になります。 その他の目的では、サブアセットはAEMでは通常のアセットと同じように扱われます。
 
 サブアセットの生成はデフォルトでは無効になっています。サブアセットの生成を有効にするには、次の手順に従います。
 
@@ -111,7 +111,7 @@ INDDファイルがアップロードされると、リポジトリ内に`xmpMM:
 
 ## 複数ページファイルのページの表示 {#view-pages-of-a-multi-page-file}
 
-AEM Assetsのページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページファイルを表示できます。 複数ページのアセットを開き、ページの左上隅にある「**[!UICONTROL ページを表示]**」をクリックします。 アセットのページと、各ページを参照およびズームするためのコントロールが表示されるページビューア。
+[!DNL Experience Manager] Assetsのページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページファイルを表示できます。 複数ページのアセットを開き、ページの左上隅にある「**[!UICONTROL ページを表示]**」をクリックします。 アセットのページと、各ページを参照およびズームするためのコントロールが表示されるページビューア。
 
 ![複数ページアセットのページの表示と表示](assets/view_multipage_asset_fmr.gif)
 
@@ -119,7 +119,7 @@ InDesign では、InDesign サーバーを使用してページを抽出でき�
 
 ツールバー、左側のレールおよびページビューアコントロールで、次のオプションを使用できます。
 
-* **[!UICONTROL AEMデスク]** トップアプリケーションを使用して特定のサブアセットを開く、または表示するデスクトップアクション。AEMデスクトップアプリケーションを使用している場合は、[デスクトップアクションの設定](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#desktopactions-v2)方法を参照してください。
+* **[!UICONTROL デスクト]** ップアクションを使用して特定のサブアセットを開く、または表 [!DNL Experience Manager] 示する。[!DNL Experience Manager]デスクトップアプリケーションを使用している場合は、[デスクトップアクションの設定](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#desktopactions-v2)方法を参照してください。
 
 * **[!UICONTROL 「]** プロパティ」オプションは、特  定のサブアセットのプロパティページを開きます。
 

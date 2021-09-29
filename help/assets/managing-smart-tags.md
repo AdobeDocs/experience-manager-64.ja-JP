@@ -5,12 +5,12 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 uuid: fd3eedf0-f222-45bf-aac7-90da6b7b7087
 contentOwner: AG
 discoiquuid: 3394b56a-3054-419b-9547-5740f8c35071
-feature: スマートタグ，タグ付け，検索
+feature: Smart Tags,Tagging,Search
 role: User
 exl-id: 05f43e43-ac72-4ab1-a373-687c137d2bed
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '456'
 ht-degree: 88%
 
 ---
@@ -31,9 +31,9 @@ ht-degree: 88%
 1. 「**[!UICONTROL 保存]**」、「**[!UICONTROL OK]**」の順にクリックまたはタップして、成功ダイアログを閉じます。
 1. 画像のプロパティページに移動します。昇格したタグに高い関連性が割り当てられていること、その結果として検索結果の上位に表示されることを確認します。
 
-## スマートタグ付き AEM 検索結果について {#understand-search-results-with-smart-tags}
+## スマートタグ付き [!DNL Experience Manager] 検索結果について {#understand-search-results-with-smart-tags}
 
-デフォルトでは、検索用語同士を `AND` 句で組み合わせて AEM 検索がおこなわれます。スマートタグを使用しても、このデフォルトの動作は変わりません。スマートタグを使用すると、適用されたスマートタグ内にある検索用語のいずれかを探すための `OR` 句が追加されます。例えば、「`woman running`」を検索する場合を考えます。デフォルトでは、「`woman`」のみ、または「`running`」のみがメタデータに含まれているアセットは、検索結果に表示されません。ただし、スマートタグを使用して `woman` か `running` のどちらかでタグ付けされたアセットは、そのような検索クエリの結果に表示されます。つまり、検索結果は、以下を組み合わせたものになります。
+デフォルトでは、検索用語同士を `AND` 句で組み合わせて [!DNL Experience Manager] 検索がおこなわれます。スマートタグを使用しても、このデフォルトの動作は変わりません。スマートタグを使用すると、適用されたスマートタグ内にある検索用語のいずれかを探すための `OR` 句が追加されます。例えば、「`woman running`」を検索する場合を考えます。デフォルトでは、「`woman`」のみ、または「`running`」のみがメタデータに含まれているアセットは、検索結果に表示されません。ただし、スマートタグを使用して `woman` か `running` のどちらかでタグ付けされたアセットは、そのような検索クエリの結果に表示されます。つまり、検索結果は、以下を組み合わせたものになります。
 
 * メタデータに`woman`と`running`の両方のキーワードを含むアセット
 * 上記どちらかのキーワードがメタデータ内にあるアセット。

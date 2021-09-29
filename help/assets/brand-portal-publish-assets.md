@@ -5,26 +5,26 @@ contentOwner: VG
 feature: Brand Portal
 role: User
 exl-id: 6b78124d-4022-452f-8d0f-b667de337bf4
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
-source-wordcount: '423'
-ht-degree: 52%
+source-wordcount: '403'
+ht-degree: 44%
 
 ---
 
 # Brand Portal へのアセットの公開 {#publish-assets-to-brand-portal}
 
-Adobe Experience Manager(AEM)Assets管理者は、組織のAEM Assets Brand Portalインスタンスにアセットを公開（または公開ワークフローを後の日時にスケジュール）できます。 ただし、最初にAEM AssetsとBrand Portalを連携させるように設定する必要があります。 詳しくは [AEM Assets と Brand Portal の連携の設定](configure-aem-assets-with-brand-portal.md)を参照してください。
+Adobe Experience Manager Assets管理者は、組織の[!DNL Experience Manager Assets Brand Portal]インスタンスにアセットを公開（または公開ワークフローを後の日時にスケジュール）できます。 ただし、最初に[!DNL Assets]を[!DNL Brand Portal]に設定する必要があります。 詳しくは、[ [!DNL Assets] と [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md)の設定を参照してください。
 
 公開したアセットは、Brand Portalでユーザーが利用できます。
 
-その後、AEM Assetsで元のアセットに変更を加えても、その変更はアセットを再公開するまでBrand Portalに反映されません。 このため、作業中の変更が Brand Portal に提供されることがありません。管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
+後で[!DNL Assets]の元のアセットに変更を加えても、その変更はアセットを再公開するまでBrand Portalに反映されません。 このため、作業中の変更が Brand Portal に提供されることがありません。管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
 
-レプリケーションが正常に終了したら、アセット、フォルダー、コレクションを Brand Portal に公開することができます。アセットを Brand Portal に公開するには、次の手順を実行します。
+レプリケーションが正常に完了したら、アセット、フォルダーおよびコレクションを[!DNL Brand Portal]に公開できます。 アセットを Brand Portal に公開するには、次の手順を実行します。
 
 >[!NOTE]
 >
->AEM オーサーが過剰なリソースを占有しないように、できればピーク時を避け、時間をずらして公開することをお勧めします。
+>Adobeは、できればピーク時以外に、 [!DNL Experience Manager]作成者が余分なリソースを占有しないように、時間をずらして公開することをお勧めします。
 
 1. アセットコンソールで目的のアセットにマウスポインターを置き、クイックアクションから「**[!UICONTROL 公開]**」オプションを選択します。
 

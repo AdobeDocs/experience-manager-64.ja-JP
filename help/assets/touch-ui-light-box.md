@@ -1,24 +1,24 @@
 ---
 title: Lightbox
-description: AEM Assets の Lightbox について学習します。
+description: ' [!DNL Experience Manager] AssetsのLightboxについて説明します。'
 contentOwner: AG
-feature: 開発者ツール，レンディション
+feature: Developer Tools,Renditions
 role: User,Admin
 exl-id: acb61924-9b71-474a-833d-e441c0b83cc7
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 98%
+source-wordcount: '251'
+ht-degree: 96%
 
 ---
 
 # Lightbox {#lightbox}
 
-AEM Assets の Lightbox について学習します。
+[!DNL Experience Manager]アセットのLightboxについて説明します。
 
 Lightbox は、アセットに容易にアクセスするための特別なタイプのコレクションです。Lightbox にすぐにアクセスして、アセットを追加または削除できます。Lightbox は、個人用の画像ギャラリーとして使用することができます。
 
-Adobe Experience Manager（AEM）Assets のユーザーである場合、Lightbox は、アプリケーションに最初にログインしたときに自動的に作成されます。この Lightbox は自分専用です。他のユーザーはこの Lightbox にアクセスできません。
+Adobe Experience Manager Assets のユーザーである場合は、アプリケーションに最初にログインしたときに Lightbox が自動的に作成されます。この Lightbox は自分専用です。他のユーザーはこの Lightbox にアクセスできません。
 
 ## Lightbox へのアセットの追加 {#adding-assets-to-lightbox}
 

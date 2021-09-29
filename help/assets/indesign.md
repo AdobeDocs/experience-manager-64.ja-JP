@@ -1,27 +1,27 @@
 ---
-title: AEM AssetsとAdobe InDesign Serverの統合
-description: AEM Assets と InDesign Server を統合する方法を学習します。
+title: Adobe InDesign Serverと [!DNL Experience Manager] Assetsを統合する
+description: ' [!DNL Experience Manager] AssetsとInDesign Serverの統合方法を説明します。'
 contentOwner: AG
-feature: 公開
+feature: Publishing
 role: Admin
 exl-id: d80562f7-071c-460a-9c68-65f48d36fbd9
-source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
+source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
 workflow-type: tm+mt
-source-wordcount: '1703'
-ht-degree: 60%
+source-wordcount: '1674'
+ht-degree: 46%
 
 ---
 
-# AEM AssetsとAdobe InDesign Serverの統合 {#integrating-aem-assets-with-indesign-server}
+# AssetsとAdobe InDesign Serverの統合 {#integrating-aem-assets-with-indesign-server}
 
-Adobe Experience Manager (AEM) Assets では、次のものが使用されます。
+Adobe Experience Manager Assetsでは、次のものを使用します。
 
-* プロキシ：特定の処理タスクのロードを分配するために使用します。プロキシとは、プロキシワーカーと通信して特定のタスクを実行し、他の AEM インスタンスと通信して結果を送信する AEM インスタンスです。
+* プロキシ：特定の処理タスクのロードを分配するために使用します。プロキシとは、プロキシワーカーと通信して特定のタスクを実行し、他の[!DNL Experience Manager]インスタンスと通信して結果を配信する[!DNL Experience Manager]インスタンスです。
 * プロキシワーカー：特定のタスクを定義し管理するために使用します。
 
 これらは、様々な作業をカバーできます。例えば、Adobe InDesign Serverを使用してファイルを処理します。
 
-Adobe InDesign で作成したファイルを AEM Assets に完全にアップロードするために、プロキシが使用されます。このプロキシはプロキシワーカーを使用して Adobe InDesign Server と通信します。Adobe InDesign Server ではメタデータを抽出し、AEM Assets 用の様々なレンディションを生成するための[スクリプト](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting)が実行されます。プロキシワーカーは、クラウド構成での InDesign Server と AEM インスタンスとの双方向通信を実現します。
+Adobe InDesignで作成した[!DNL Experience Manager]アセットにファイルを完全にアップロードするには、プロキシが使用されます。 このプロキシはプロキシワーカーを使用して Adobe InDesign Server と通信します。Adobe InDesign Server ではメタデータを抽出し、 Assets 用の様々なレンディションを生成するための[スクリプト](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting)が実行されます。[!DNL Experience Manager]プロキシワーカーは、クラウド構成内のInDesign Serverと[!DNL Experience Manager]インスタンス間の双方向通信を可能にします。
 
 >[!NOTE]
 >
@@ -29,25 +29,23 @@ Adobe InDesign で作成したファイルを AEM Assets に完全にアップ�
 >
 >* [InDesign](https://www.adobe.com/jp/products/indesign.html)\
    >  印刷やデジタル配信のためのページレイアウトをデザインできます。
-   >
-   >
-* [InDesign Server](https://www.adobe.com/jp/products/indesignserver.html)\
+>
+>* [InDesign Server](https://www.adobe.com/jp/products/indesignserver.html)\
    >  このエンジンを使用すれば、InDesign での作成物に基づいてドキュメントをプログラムによって自動生成できます。このエンジンは、[ExtendScript](https://www.adobe.com/jp/devnet/scripting.html) エンジンへのインターフェイスを提供するサービスとして動作します。\
-   >  スクリプトは、JavaScriptに似たExtendScriptで記述されます。 Indesign のスクリプトについて詳しくは、[https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) を参照してください。
+   >  スクリプトは、JavaScriptに似たExtendScriptで記述されます。 Adobe InDesignスクリプトについて詳しくは、 [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)を参照してください。
 
 >
-
 
 
 ## 抽出の仕組み {#how-the-extraction-works}
 
-InDesign ServerをAEM Assetsと統合して、InDesign( `.indd` )で作成されたファイルのアップロード、レンディションの生成、 *すべての*&#x200B;メディアの抽出（ビデオなど）およびアセットとしての保存をおこなうことができます。
+InDesign Serverを[!DNL Experience Manager] Assetsと統合して、InDesign(`.indd`)で作成されたファイルのアップロード、レンディションの生成、*すべての*&#x200B;メディアの抽出（ビデオなど）、アセットとしての保存を行うことができます。
 
 >[!NOTE]
 >
->以前のバージョンの AEM では XMP とサムネールを抽出できましたが、現在はすべてのメディアを抽出できるようになりました。
+>以前のバージョンの[!DNL Experience Manager]ではXMPとサムネールを抽出できましたが、現在はすべてのメディアを抽出できます。
 
-1. `.indd`ファイルをAEM Assetsにアップロードします。
+1. `.indd`ファイルを[!DNL Experience Manager]アセットにアップロードします。
 1. フレームワークにより、コマンドスクリプトが SOAP（Simple Object Access Protocol）経由で InDesign Server に送信されます。
 
    このコマンドスクリプトは、次のことを実行します。
@@ -58,7 +56,7 @@ InDesign ServerをAEM Assetsと統合して、InDesign( `.indd` )で作成され
       * 構造、テキストおよびすべてのメディアファイルが抽出されます。
       * PDF と JPG のレンディションが生成されます。
       * HTML と IDML のレンディションが生成されます。
-   * 生成されたファイルを AEM Assets に送り返します。
+   * 結果のファイルを[!DNL Experience Manager] Assetsに戻します。
 
    >[!NOTE]
    >
@@ -68,20 +66,20 @@ InDesign ServerをAEM Assetsと統合して、InDesign( `.indd` )で作成され
 
    >[!CAUTION]
    >
-   >InDesign Serverがインストールされていない場合や設定されていない場合でも、`.indd`ファイルをAEMにアップロードできます。 ただし、生成されるレンディションは`png`と`jpeg`に制限され、`html`、`idml`またはページレンディションを生成することはできません。
+   >InDesign Serverがインストールされていない場合や設定されていない場合でも、`.indd`ファイルを[!DNL Experience Manager]にアップロードできます。 ただし、生成されるレンディションは`png`と`jpeg`に制限され、`html`、`idml`またはページレンディションを生成することはできません。
 
 1. 抽出およびレンダリング生成後：
 
    * 構造が `cq:Page`（レンディションタイプ）に複製されます。
-   * 抽出されたテキストとファイルが AEM Assets に保存されます。
-   * すべてのレンディションが AEM Assets のアセット自体に保存されます。
+   * 抽出されたテキストとファイルは、[!DNL Experience Manager] Assetsに保存されます。
+   * すべてのレンディションは、アセット自体の[!DNL Experience Manager]アセットに保存されます。
 
-## InDesign Server と AEM の統合 {#integrating-the-indesign-server-with-aem}
+## InDesign Server と の統合[!DNL Experience Manager] {#integrating-the-indesign-server-with-aem}
 
-プロキシの設定の後に、InDesign Server を AEM Assets と連携させて使用するには、次の手順を実行する必要があります。
+[!DNL Experience Manager] Assetsで使用するInDesign Serverを統合するには、プロキシを設定した後、次の手順を実行する必要があります。
 
 1. [InDesign Server をインストールします](#installing-the-indesign-server)。
-1. 必要に応じて、[AEM Assets ワークフロー](#configuring-the-aem-assets-workflow)を設定します。
+1. 必要に応じて、[ [!DNL Experience Manager] アセットワークフロー](#configuring-the-aem-assets-workflow)を設定します。
 
    これは、デフォルト値がインスタンスに適さない場合にのみ必要です。
 
@@ -89,7 +87,7 @@ InDesign ServerをAEM Assetsと統合して、InDesign( `.indd` )で作成され
 
 ### InDesign Server のインストール {#installing-the-indesign-server}
 
-InDesign Server をインストールして AEM と連携して使用を開始するには：
+[!DNL Experience Manager]で使用するInDesign Serverをインストールして起動するには：
 
 1. Adobe InDesign Server をダウンロードしてインストールします。
 
@@ -111,16 +109,16 @@ InDesign Server をインストールして AEM と連携して使用を開始�
    >
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
-### AEM Assets ワークフローの設定 {#configuring-the-aem-assets-workflow}
+### [!DNL Experience Manager] Assetsワークフローの設定 {#configuring-the-aem-assets-workflow}
 
-AEM Assetsには、InDesign用に特別にいくつかのプロセスステップを持つ事前設定済みのワークフロー「**DAMアセットの更新**」があります。
+[!DNL Experience Manager] アセットには、InDesign用の次の複数のプロセスステップを含む、事前設 **定済みのワークフロー「DAMアセットの更新**」があります。
 
 * [メディア抽出](#media-extraction)
 * [ページ抽出](#page-extraction)
 
 このワークフローは、様々なオーサーインスタンスで設定に合わせて調整できるデフォルト値を使用して設定されます（これは標準のワークフローなので、詳しくは、[ワークフローの編集](/help/sites-developing/workflows-models.md#configuring-a-workflow-step)を参照してください）。 デフォルト値（SOAPポートを含む）を使用している場合は、設定は不要です。
 
-設定後、通常の方法のいずれかによって InDesign ファイルを AEM Assets にアップロードすると、そのアセットを処理して各種レンディションを準備するのに必要となるワークフローが実行されます。`.indd` ファイルを AEM Assets にアップロードし、IDS で作成された各種レンディションが `<*your_asset*>.indd/Renditions` の下にあることを確認して、設定をテストしてください。
+設定後、（通常の方法のいずれかによって）InDesignファイルを[!DNL Experience Manager] Assetsにアップロードすると、アセットの処理と様々なレンディションの準備に必要なワークフローがトリガーされます。 `.indd`[!DNL Experience Manager] ファイルを Assets にアップロードし、IDS で作成された各種レンディションが  の下にあることを確認して、設定をテストしてください。`<*your_asset*>.indd/Renditions`
 
 #### メディア抽出 {#media-extraction}
 
@@ -142,13 +140,13 @@ AEM Assetsには、InDesign用に特別にいくつかのプロセスステッ�
 >
 >ExtendScript ライブラリは変更しないでください。ライブラリは、Slingとの通信に必要なHTTP機能を提供します。 この設定では、Adobe InDesign Serverに送信してそこで使用するライブラリを指定します。
 
-メディア抽出ワークフローステップで実行される`ThumbnailExport.jsx`スクリプトにより、サムネールのレンディションがJPG形式で生成されます。 このレンディションはサムネールを処理ワークフローステップによって使用され、AEM で要求される静的レンディションを生成します。
+メディア抽出ワークフローステップで実行される`ThumbnailExport.jsx`スクリプトにより、サムネールのレンディションがJPG形式で生成されます。 このレンディションは、サムネールを処理ワークフローステップで[!DNL Experience Manager]に必要な静的レンディションを生成するために使用されます。
 
-サムネールを処理ワークフローステップは、異なるサイズの静的レンディションを生成するように設定できます。デフォルトの設定は AEM Assets UI によって要求されるので、削除しないでください。最後に、画像プレビューレンディションを削除ワークフローステップで不要になった .jpg 形式のサムネールレンディションが削除されます。
+サムネールを処理ワークフローステップは、異なるサイズの静的レンディションを生成するように設定できます。デフォルト値は[!DNL Experience Manager] AssetsのUIで必要なので、削除しないでください。 最後に、画像プレビューレンディションを削除ワークフローステップで不要になった .jpg 形式のサムネールレンディションが削除されます。
 
 #### ページ抽出 {#page-extraction}
 
-抽出された要素から AEM ページを作成します。抽出ハンドラーが、レンディション（現時点では HTML または IDML）からデータを抽出するために使用されます。このデータを元に、PageBuilder を使用してページが作成されます。
+抽出された要素から[!DNL Experience Manager]ページが作成されます。 抽出ハンドラーが、レンディション（現時点では HTML または IDML）からデータを抽出するために使用されます。このデータを元に、PageBuilder を使用してページが作成されます。
 
 カスタマイズするには、**ページ抽出**&#x200B;ステップの「**[!UICONTROL 引数]**」タブを編集します。
 
@@ -186,7 +184,7 @@ AEM Assetsには、InDesign用に特別にいくつかのプロセスステッ�
 
 ### Day CQ Link Externalizer の設定  {#configuring-day-cq-link-externalizer}
 
-InDesign ServerとAEMが異なるホスト上にある場合、またはこれらのアプリケーションの一方または両方がデフォルトのInDesign Serverで動作しない場合は、**Day CQ Link Externalizer**&#x200B;を設定して、ポートのホスト名、ポートおよびコンテンツのパスを設定します。
+InDesign Serverと[!DNL Experience Manager]が異なるホスト上にある場合、またはこれらのアプリケーションの1つまたは両方がデフォルトのInDesign Serverで動作しない場合は、**Day CQ Link Externalizer**&#x200B;を設定して、ポートのホスト名、ポートおよびコンテンツパスを設定します。
 
 1. `https://[AEM_server]:[port]/system/console/configMgr` の URL で Configuration Manager にアクセスします。
 1. 設定&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;を探します。 **[!UICONTROL 編集]**&#x200B;をクリックして開きます。
@@ -251,7 +249,7 @@ InDesign Server 10.0 以降では、次の手順を実行してマルチセッ�
 
 ## Experience Manager資格情報の設定 {#configure-aem-credentials}
 
-Adobe InDesignサーバーとの統合を中断することなく、AEMインスタンスからInDesignサーバーにアクセスするためのデフォルトの管理者資格情報（ユーザー名とパスワード）を変更できます。
+Adobe InDesignサーバーとの統合を中断することなく、[!DNL Experience Manager]インスタンスからInDesignサーバーにアクセスするためのデフォルトの管理者資格情報（ユーザー名とパスワード）を変更できます。
 
 1. `/etc/cloudservices/proxy.html` にアクセスします。
 1. ダイアログで、新しいユーザー名とパスワードを指定します。

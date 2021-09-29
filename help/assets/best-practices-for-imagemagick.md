@@ -1,44 +1,44 @@
 ---
-title: AEM Assets と連携するための ImageMagick のインストールと設定
+title: ' [!DNL Experience Manager] Assetsと連携するようにImageMagickをインストールして設定します。'
 description: ImageMagick ソフトウェアの概要と、インストール方法、コマンドラインプロセスのステップの設定方法、ImageMagick を使用して画像の編集、組み立て、サムネール生成をおこなう方法を学習します。
 contentOwner: AG
-feature: レンディション、開発者ツール
+feature: Renditions,Developer Tools
 role: Admin
 exl-id: 9aeda88a-fd66-4fad-b496-3352a6ecab81
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
-source-wordcount: '782'
-ht-degree: 59%
+source-wordcount: '764'
+ht-degree: 47%
 
 ---
 
-# AEM Assets と連携するための ImageMagick のインストールと設定 {#install-and-configure-imagemagick-to-work-with-aem-assets}
+# [!DNL Experience Manager Assets]と連携するようにImageMagickをインストールして設定します。 {#install-and-configure-imagemagick-to-work-with-aem-assets}
 
 ImageMagickは、ビットマップ画像の作成、編集、作成、変換を行うソフトウェアプラグインです。 PNG、JPEG、JPEG-2000、GIF、TIFF、DPX、EXR、WebP、Postscript、PDF、SVGなど、様々な形式（200以上）の画像の読み取りと書き込みが可能です。 ImageMagick は、画像のサイズ変更、反転、ミラー、回転、変形、剪断および変換をおこなう場合に使用します。ImageMagick を使用して、画像の色を調整したり、各種特殊効果を適用したりすることもできます。また、テキスト、直線、多角形、楕円および曲線を描画することもできます。
 
-ImageMagick で画像を処理するには、コマンドラインから Adobe Experience Manager（AEM）メディアハンドラーを使用します。ImageMagick を使用して様々なファイル形式を取り扱うには、[Assets のファイル形式に関するベストプラクティス](assets-file-format-best-practices.md)を参照してください。すべてのサポートされるファイル形式については、[Assets でサポートされるファイル形式](assets-formats.md)を参照してください。
+ImageMagickを使用して画像を処理するには、コマンドラインのAdobe Experience Managerメディアハンドラーを使用します。 ImageMagick を使用して様々なファイル形式を取り扱うには、[Assets のファイル形式に関するベストプラクティス](assets-file-format-best-practices.md)を参照してください。すべてのサポートされるファイル形式については、[Assets でサポートされるファイル形式](assets-formats.md)を参照してください。
 
-ImageMagick を使用して大きなファイルを処理する場合は、必要なメモリが通常より多くなること、IM ポリシーの変更が必要になる可能性があること、パフォーマンスへの全体的な影響を考慮してください。メモリ要件は、解像度、ビット深度、カラープロファイル、ファイル形式などの様々な要因によって異なります。ImageMagick を使用して非常に大きなファイルを処理する場合は、AEM サーバーのベンチマークを適切に実行してください。いくつかの有用なリソースを最後に紹介します。
+ImageMagick を使用して大きなファイルを処理する場合は、必要なメモリが通常より多くなること、IM ポリシーの変更が必要になる可能性があること、パフォーマンスへの全体的な影響を考慮してください。メモリ要件は、解像度、ビット深度、カラープロファイル、ファイル形式などの様々な要因によって異なります。ImageMagickを使用して非常に大きなファイルを処理する場合は、[!DNL Experience Manager]サーバーを適切にベンチマークします。 いくつかの有用なリソースを最後に紹介します。
 
 >[!NOTE]
 >
->Adobe Managed Services(AMS)でAEMを使用している場合、大量のPSDまたはPSBファイルを処理する予定がある場合は、Adobeカスタマーケアにお問い合わせください。 Experience Managerは、30000 x 23000ピクセルを超える高解像度のPSBファイルを処理できない場合があります。
+>Adobe Managed Services(AMS)で[!DNL Experience Manager]を使用している場合、大量のPSDまたはPSBファイルを処理する予定がある場合は、Adobeカスタマーケアにお問い合わせください。 Experience Managerは、30000 x 23000ピクセルを超える高解像度のPSBファイルを処理できない場合があります。
 
 ## ImageMagick のインストール {#installing-imagemagick}
 
 各種オペレーティングシステム向けに、様々なバージョンの ImageMagick インストールファイルが用意されています。オペレーティングシステムに適したバージョンを使用してください。
 
 1. お使いのオペレーティングシステムに適した[ImageMagickインストールファイル](https://www.imagemagick.org/script/download.php)をダウンロードします。
-1. AEM サーバーをホスティングしているディスクに ImageMagick をインストールするには、インストールファイルを起動します。
+1. [!DNL Experience Manager]サーバーをホストするディスクにImageMagickをインストールするには、インストールファイルを起動します。
 
 1. path 環境変数を ImageMagick のインストールディレクトリに設定します。
 1. インストールが成功したかどうかを確認するには、`identify -version` コマンドを実行します。
 
 ## コマンドラインプロセスのステップの設定 {#set-up-the-command-line-process-step}
 
-特定の使用例に応じてコマンドラインプロセスのステップを設定できます。AEMサーバー上の`/content/dam`にJPEG画像ファイルを追加するたびに、反転画像とサムネール(140 x 100、48 x 48、319 x 319、1280 x 1280)を生成するには、次の手順を実行します。
+特定の使用例に応じてコマンドラインプロセスのステップを設定できます。[!DNL Experience Manager]サーバー上の`/content/dam`にJPEG画像ファイルを追加するたびに、反転画像とサムネール(140 x 100、48 x 48、319 x 319、1280 x 1280)を生成するには、次の手順を実行します。
 
-1. AEMサーバーで、ワークフローコンソール(`https://[aem_server]:[Port]/workflow`)に移動し、**[!UICONTROL DAMアセットの更新]**&#x200B;ワークフローモデルを開きます。
+1. [!DNL Experience Manager]サーバーで、ワークフローコンソール(`https://[aem_server]:[Port]/workflow`)に移動し、**[!UICONTROL DAMアセットの更新]**&#x200B;ワークフローモデルを開きます。
 1. **[!UICONTROL DAMアセットの更新]**&#x200B;ワークフローモデルから、**[!UICONTROL EPSサムネール（ImageMagickを使用）]**&#x200B;ステップを開きます。
 1. **[!UICONTROL 「引数」タブ]**&#x200B;で、`image/jpeg`を&#x200B;**[!UICONTROL MIMEタイプ]**&#x200B;リストに追加します。
 
@@ -73,7 +73,7 @@ ImageMagick を使用して大きなファイルを処理する場合は、必�
    ![web_enabled](assets/web_enabled.png)
 
 1. ワークフローを保存します。
-1. ImageMagick が画像を正しく処理できるかどうかを確認するには、JPG 画像を AEM Assets にアップロードします。その画像の反転画像とレンディションが生成されるかどうかを確認します。
+1. ImageMagicが画像を適切に処理できるかどうかを確認するには、JPG画像を[!DNL Assets]にアップロードします。 その画像の反転画像とレンディションが生成されるかどうかを確認します。
 
 ## セキュリティの脆弱性の緩和 {#mitigating-security-vulnerabilities}
 
@@ -88,10 +88,10 @@ ImageMagick または影響を受けるライブラリを使用する場合は�
 
 >[!MORELIKETHIS]
 >
->* [AEM Assets を使用して様々なファイル形式を処理するためのベストプラクティス](assets-file-format-best-practices.md)
-* [ImageMagick のコマンドラインオプション](https://www.imagemagick.org/script/command-line-options.php)
-* [ImageMagick の基本的な使用例と高度な使用例](https://www.imagemagick.org/Usage/)
-* [ImageMagick 向けの Assets パフォーマンスチューニング](performance-tuning-guidelines.md)
-* [AEM Assets でサポートされているファイル形式の一覧](assets-formats.md)
-* [画像のファイル形式とメモリコストの理解](https://www.scantips.com/basics1d.html)
+>* [を使用して様々なファイル形式を処理するためのベストプラクティス [!DNL Assets]](assets-file-format-best-practices.md)
+>* [ImageMagick のコマンドラインオプション](https://www.imagemagick.org/script/command-line-options.php)
+>* [ImageMagick の基本的な使用例と高度な使用例](https://www.imagemagick.org/Usage/)
+>* [ImageMagick 向けの Assets パフォーマンスチューニング](performance-tuning-guidelines.md)
+>* [でサポートされているファイル形式の完全なリスト [!DNL Assets]](assets-formats.md)
+>* [画像のファイル形式とメモリコストの理解](https://www.scantips.com/basics1d.html)
 

@@ -1,20 +1,20 @@
 ---
 title: Apache Tikaを使用したデジタルアセットのMIMEタイプの検出
-description: Apache Tika を使用して、AEM Assets がアセットの MIME タイプをファイル拡張子ではなくコンテンツストリームから、アップロード操作中に検出できるようにします。
+description: Apache Tikaを有効にして、 [!DNL Experience Manager] Assetsがファイル拡張子ではなく、アップロード操作中にコンテンツストリームからアセットのMIMEタイプを検出できるようにします。
 contentOwner: AG
-feature: メタデータ，開発者ツール，アセット管理
+feature: Metadata,Developer Tools,Asset Management
 role: Admin,Architect
 exl-id: 6c9e53e9-5e54-4816-9431-41e796340d1e
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 36%
+source-wordcount: '194'
+ht-degree: 10%
 
 ---
 
 # Apache Tikaを使用したデジタルアセットのMIMEタイプの検出 {#detecting-mime-type-of-assets-using-apache-tika}
 
-通常、Adobe Experience Manager(AEM)Assetsは、ファイル拡張子からアップロードするアセットのMIMEタイプを検出します。 Apache Tika を使用してアセットをアップロードすると、AEM Assets は、アセットの MIME タイプをファイル拡張子ではなくコンテンツストリームから、アップロード操作中に検出します。
+通常、Adobe Experience Manager Assetsは、アップロードするアセットのMIMEタイプをファイル拡張子から検出します。 Apache Tikaを使用してアセットをアップロードする場合、[!DNL Experience Manager] Assetsは、アップロード操作中に、ファイル拡張子ではなくコンテンツストリームからMIMEタイプを検出します。
 
 この機能はデフォルトでは無効になっています。この機能を有効にするには、Configuration Managerで&#x200B;**Day CQ DAM Mime Type**&#x200B;サービスを設定します。
 

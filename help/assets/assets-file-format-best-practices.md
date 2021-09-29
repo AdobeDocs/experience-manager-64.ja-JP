@@ -1,20 +1,20 @@
 ---
 title: Assets のファイル形式に関するベストプラクティス
-description: AEM Assets のファイルサポートに関するベストプラクティスを紹介します。
+description: ' [!DNL Experience Manager] Assetsでのファイルサポートのベストプラクティス。'
 contentOwner: AG
-feature: アセット管理、開発者ツール
+feature: Asset Management,Developer Tools
 role: Admin
 exl-id: ff739a17-188e-4779-8820-9e4d9b7031d0
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 91%
+source-wordcount: '424'
+ht-degree: 86%
 
 ---
 
 # Assets のファイル形式に関するベストプラクティス {#assets-file-format-best-practices}
 
-AEM Assets はユーザーの様々なファイルサポート要件に対応するために、アドビ製およびサードパーティ製の数多くのファイル形式ライブラリをサポートしています。サポート対象のアドビのライブラリには、Adobe Camera Raw、Gibson、Adobe PDF Rasterizer、Adobe InDesign Server などがあります。さらに、AEM Assets は ImageMagick や TwelveMonkeys などのサードパーティのライブラリをサポートします。
+[!DNL Experience Manager Assets] はユーザーの様々なファイルサポート要件に対応するために、アドビ製およびサードパーティ製の数多くのファイル形式ライブラリをサポートしています。サポート対象のアドビのライブラリには、Adobe Camera Raw、Gibson、Adobe PDF Rasterizer、Adobe InDesign Server などがあります。また、[!DNL Assets]は、ImageMagick、TwerbMonkeysなどのサードパーティライブラリをサポートしています。
 
 サポートされるファイル形式については、[アセットでサポートされるファイル形式](assets-formats.md)を参照してください。
 
@@ -27,7 +27,7 @@ AEM Assets はユーザーの様々なファイルサポート要件に対応す
 
 Adobe Camera Raw ライブラリは、入力として CMYK カラープロファイルをサポートします。ただし、出力は RGB カラースペースで生成され、JPEG 形式の出力のみがサポートされます。サムネールにはソースファイルのカラースペース（CMYK など）は保持されません。
 
-詳しくは、AEM Assets の [Camera Raw サポート](camera-raw.md)を参照してください。
+詳しくは、[!DNL Assets]の[Camera Raw的なサポート](camera-raw.md)を参照してください。
 
 ## Adobe PDF Rasterizer ライブラリ {#adobe-pdf-rasterizer-library}
 
@@ -41,7 +41,7 @@ PDF Rasterizer を使用して生成されたサムネールやプレビュー�
 
 ## Adobe InDesign Server {#adobe-indesign-cc-server}
 
-IDML や HTML など Adobe InDesign 固有のレンディションを抽出するには、Adobe InDesign Server の使用をお勧めします。詳しくは、[Adobe InDesign](managing-linked-subassets.md#add-aem-assets-as-references-in-adobe-indesign)でのAEMアセットの参照としての追加を参照してください。
+IDML や HTML など Adobe InDesign 固有のレンディションを抽出するには、Adobe InDesign Server の使用をお勧めします。詳しくは、Adobe InDesign](managing-linked-subassets.md#add-aem-assets-as-references-in-adobe-indesign)で[アセットを参照として追加する [!DNL Experience Manager] を参照してください。
 
 ## Dynamic Media  {#dynamic-media}
 
@@ -58,7 +58,7 @@ Dynamic Media は、パフォーマンスが最適化されスケーラビリテ
 * 透明性を保持するとき
 * PSD および PSB ファイルを処理するとき
 
-AEMでImageMagicライブラリを設定する方法については、[ImageMagick](media-handlers.md#an-example-using-imagemagick)の使用を参照してください。 最適な使用方法については、[ImageMagick の設定のベストプラクティス](best-practices-for-imagemagick.md)を参照してください。
+[!DNL Experience Manager]でImageMagicライブラリを設定する方法については、[ImageMagick](media-handlers.md#an-example-using-imagemagick)の使用を参照してください。 最適な使用方法については、[ImageMagick の設定のベストプラクティス](best-practices-for-imagemagick.md)を参照してください。
 
 ## 画像トランスコーディングライブラリ {#image-transcoding-library}
 

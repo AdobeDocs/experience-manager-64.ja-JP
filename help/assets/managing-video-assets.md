@@ -8,20 +8,20 @@ discoiquuid: f341fae1-dda3-4917-b6db-ad02fec63702
 feature: Asset Management,Video
 role: User
 exl-id: eb652414-5b10-45af-a8b6-f1de649994c5
-source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
+source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
-source-wordcount: '793'
-ht-degree: 48%
+source-wordcount: '787'
+ht-degree: 45%
 
 ---
 
 # ビデオアセットの管理 {#managing-video-assets}
 
-Adobe Experience Manager（AEM）Assets でビデオアセットを管理および編集する方法について説明します。また、Dynamic Media のライセンスをお持ちの場合は、[Dynamic Media のビデオに関するドキュメント](video.md)を参照してください。
+Adobe Experience Manager Assetsでビデオアセットを管理および編集する方法について説明します。 また、Dynamic Media のライセンスをお持ちの場合は、[Dynamic Media のビデオに関するドキュメント](video.md)を参照してください。
 
 ## ビデオアセットのアップロードとプレビュー {#uploading-and-previewing-video-assets}
 
-AEM Assetsは、拡張子がMP4のビデオアセットのプレビューを生成します。 アセットの形式がMP4でない場合は、FFmpegパックをインストールしてプレビューを生成します。 FFmpegは、OGGタイプとMP4タイプのビデオレンディションを作成します。 これらのレンディションは、AEM Assets ユーザーインターフェイスでプレビューすることができます。
+[!DNL Experience Manager] Assetsは、拡張子がMP4のビデオアセットのプレビューを生成します。アセットの形式がMP4でない場合は、FFmpegパックをインストールしてプレビューを生成します。 FFmpegは、OGGタイプとMP4タイプのビデオレンディションを作成します。 これらのレンディションは、[!DNL Experience Manager] Assetsユーザーインターフェイスでプレビューできます。
 
 1. デジタルアセットフォルダー（またはサブフォルダー）で、デジタルアセットを追加する場所に移動します。
 1. アセットをアップロードするには、ツールバーの「**[!UICONTROL 作成]**」をクリックまたはタップして、「**[!UICONTROL ファイル]**」を選択します。または、アセット領域に直接ドロップします。アップロード操作について詳しくは、[アセットのアップロード](managing-assets-touch-ui.md#uploading-assets)を参照してください。
@@ -39,16 +39,16 @@ AEM Assetsは、拡張子がMP4のビデオアセットのプレビューを生�
 
 ## 2 GB を超えるアセットをアップロードするための設定 {#configuration-to-upload-video-assets-that-are-larger-than-gb}
 
-デフォルトでは、ファイルサイズの上限により、AEM Assetsでは2 GBを超えるアセットをアップロードできません。 ただし、この上限は CRXDE Lite を開き、`/apps` ディレクトリ配下にノードを作成することで上書きできます。ノードには、同じノード名とディレクトリ構造および類似した順序のノードプロパティが必要です。
+デフォルトでは、ファイルサイズの上限により、[!DNL Experience Manager] Assetsで2 GBを超えるアセットをアップロードすることはできません。 ただし、この上限は CRXDE Lite を開き、`/apps` ディレクトリ配下にノードを作成することで上書きできます。ノードには、同じノード名とディレクトリ構造および類似した順序のノードプロパティが必要です。
 
-大きなアセットをアップロードするには、AEM Assets設定に加えて、次の設定を変更します。
+[!DNL Experience Manager] Assets設定に加えて、大きなアセットをアップロードするには、次の設定を変更します。
 
 * トークンの有効期間を増やします。`https://[aem_server]:[port]/system/console/configMgr`のWebコンソールの[!UICONTROL AdobeGranite CSRF Servlet]を参照してください。 詳しくは、[CSRF保護](/help/sites-developing/csrf-protection.md)を参照してください。
 * Dispatcher の設定で `receiveTimeout` を増やします。詳しくは、[Adobe Experience Manager Dispatcher の設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)を参照してください。
 
 >[!NOTE]
 >
->AEM Classicユーザーインターフェイスには、2 GBのファイルサイズ制限はありません。 また、サイズの大きなビデオでは、エンドツーエンドのワークフローが完全にはサポートされません。
+>[!DNL Experience Manager] Classicユーザーインターフェイスには、2 GBのファイルサイズ制限はありません。 また、サイズの大きなビデオでは、エンドツーエンドのワークフローが完全にはサポートされません。
 
 ファイルサイズの制限を高めに設定するには、`/apps` ディレクトリで次の手順を実行します。
 

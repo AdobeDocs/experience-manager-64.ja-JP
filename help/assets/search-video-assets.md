@@ -1,14 +1,14 @@
 ---
 title: ビデオアセットの検索
-description: AEM Assets でファイルをすばやく見つけるには、キーワードのほか、MIME タイプ、サイズ、最近変更されたタイムスタンプなどのファイルプロパティを使用します。
+description: ' [!DNL Experience Manager] Assets内のファイルをすばやく見つけるには、キーワード、MIMEタイプ、サイズ、最近変更されたタイムスタンプなどのファイルプロパティを使用します。'
 contentOwner: AG
-feature: ビデオ，検索
+feature: Video,Search
 role: User
 exl-id: d5f0beb2-e59f-47cd-8e83-698d8a1dcec3
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 66%
+source-wordcount: '577'
+ht-degree: 62%
 
 ---
 

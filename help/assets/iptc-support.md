@@ -1,22 +1,22 @@
 ---
 title: IPTC メタデータのサポート
-description: Adobe Experience Manager (AEM) Assets で、Adobe Bridge やその他のクリエイティブアプリを通じてアセットに追加された IPTC メタデータ、クリエイティブの評価、キーワードをサポートする方法について説明します。
+description: Adobe Experience Manager Assetsが、Adobe Bridgeやその他のクリエイティブアプリを通じてアセットに追加されたIPTCメタデータ、クリエイティブの評価、キーワードをサポートする方法について説明します。
 contentOwner: AG
-feature: メタデータ
+feature: Metadata
 role: User,Admin,Leader
 exl-id: 3e22e8e4-3675-4d6d-94f4-fc1a4d4801e8
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 100%
+source-wordcount: '364'
+ht-degree: 76%
 
 ---
 
 # IPTC メタデータのサポート {#support-for-iptc-metadata}
 
-Adobe Experience Manager (AEM) Assets で、Adobe Bridge やその他のクリエイティブアプリを通じてアセットに追加された IPTC メタデータ、クリエイティブの評価、キーワードをサポートする方法について説明します。
+Adobe Experience Manager Assetsが、Adobe Bridgeやその他のクリエイティブアプリを通じてアセットに追加されたIPTCメタデータ、クリエイティブの評価、キーワードをサポートする方法について説明します。
 
-Adobe Experience Manager (AEM) Assets では、アセットの記述に広く利用されている IPTC メタデータ標準をサポートしています。このように AEM Assets では、フォトグラファー、クリエイティブエージェンシー、ライブラリ、ミュージアムなど、様々な関係者間で AEM Asset 画像を受け入れる仕組みを強化しています。
+Adobe Experience Manager Assetsは、アセットの記述に広く使用されているIPTCメタデータ標準をサポートしています。 こうして、[!DNL Experience Manager Assets]は、写真家、クリエイティブエージェンシー、図書館、美術館など、様々な関係者間での画像の受け入れを強化します。
 
 包括的なメタデータプロパティを定義するための IPTC コアおよび IPTC 拡張のメタデータスキーマが、アセット用のデフォルトのメタデータスキーマに組み込まれました。これにより、画像に示されている人、場所、製品に関して、正確で信頼性の高いデータを追加できます。また、画像作成に関する日付、名前および識別子に加え、著作権情報を表示する柔軟な方法もサポートされています。
 
