@@ -1,8 +1,8 @@
 ---
 title: ページプロパティの編集
-seo-title: ページプロパティの編集
+seo-title: Editing Page Properties
 description: ページに必要なプロパティを定義します
-seo-description: ページに必要なプロパティを定義します
+seo-description: Define the required properties for a page
 uuid: c0386cd6-ca01-4741-b8c8-36edb66e50ef
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,10 +10,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8e85ea7f-80ea-43b6-a67c-366852ef86ce
 exl-id: b0e579a4-f5bd-4a55-a003-0496224bc940
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: d01eee7602945b8d3cb3ad004ccf5ad6cbc4c73c
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 90%
+source-wordcount: '1789'
+ht-degree: 86%
 
 ---
 
@@ -92,7 +92,7 @@ ht-degree: 90%
 
    このページのバニティ URL を入力でき、短くより表現力のある URL にすることができます。
 
-   例えば、Webサイトh `ttp://example.com,`のパス/ `v1.0/startpage`で識別されるページに対して、バニティURLがw `elcome`に設定されている場合、h `ttp://example.com/welcome`はh `ttp://example.com/content/v1.0/startpage`のバニティURLになります。
+   例えば、Web サイト h `ttp://example.com,` のパス/ `v1.0/startpage` で識別されるページに対して、バニティ URL が w `elcome` に設定されている場合、h `ttp://example.com/welcome` は h `ttp://example.com/content/v1.0/startpage` のバニティ URL になります。
 
    >[!CAUTION]
    >
@@ -124,13 +124,10 @@ ht-degree: 90%
 
    このページで使用されるエイリアスを指定します。
 
-   >[!NOTE]
-   >
-   > 「エイリアス」は、リソースのエイリアス名を定義する `sling:alias` プロパティを設定します（これはリソースにのみ影響を及ぼし、パスには影響しません）。
-   >
-   >例えば、`/content/we-retail/spanish` ノードに `latin-lang` というエイリアスを定義した場合、このページは `/content/we-retail/latin-language` でアクセスできます。
-   >
-   >詳しくは、「SEOとURL管理のベストプラクティス」の「[ページ名のローカライズ](/help/managing/seo-and-url-management.md#localized-page-names)」を参照してください。
+   * 例えば、`/content/wknd/us/en/magazine/members-only` ページのエイリアス `private` を定義した場合、このページには `/content/wknd/us/en/magazine/private` を介してもアクセスできます。
+   * エイリアスを作成すると、ページノードに `sling:alias` プロパティが設定され、リソースにのみ影響を与えます。リポジトリパスには影響を与えません。
+   * エディターでエイリアスによってアクセスされたページは公開できません。 [エディ](/help/sites-authoring/publishing-pages.md) ターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
+   * 詳しくは、[SEO と URL 管理のベストプラクティスの下のページ名のローカライズ ](/help/managing/seo-and-url-management.md#localized-page-names) を参照してください。
 
 * **許可されたテンプレート**
 
@@ -144,7 +141,7 @@ ht-degree: 90%
 
    >[!CAUTION]
    >
-   >「**[権限](/help/sites-authoring/editing-page-properties.md#permissions)**」タブでは、`granite:AuthenticationRequired` mixinの存在に基づいてCUG設定を編集できます。 cq:cugEnabledプロパティの存在に基づいて、非推奨のCUG設定を使用してページ権限が設定されている場合、警告メッセージが&#x200B;**認証要件**&#x200B;の下に表示され、オプションは編集できず、[権限](/help/sites-authoring/editing-page-properties.md#permissions)も編集できません。
+   >「**[権限](/help/sites-authoring/editing-page-properties.md#permissions)**」タブでは、`granite:AuthenticationRequired` mixin の存在に基づいて CUG 設定を編集できます。 cq:cugEnabled プロパティの存在に基づいて、非推奨の CUG 設定を使用してページ権限が設定されている場合、警告メッセージが **認証要件** に表示され、オプションは編集できず、[ 権限 ](/help/sites-authoring/editing-page-properties.md#permissions) も編集できません。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
@@ -206,14 +203,14 @@ ht-degree: 90%
 
    >[!CAUTION]
    >
-   >「**権限**」タブでは、`granite:AuthenticationRequired` mixinの存在に基づいてCUG設定を編集できます。 `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
+   >「**権限**」タブでは、`granite:AuthenticationRequired` mixin の存在に基づいて CUG 設定を編集できます。 `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
 
    >[!NOTE]
    >
-   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。詳しくは、[ユーザー、グループ、アクセス権の管理](/help/sites-administering/user-group-ac-admin.md)のドキュメントを参照してください。
+   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。詳しくは、[ ユーザー、グループ、アクセス権の管理 ](/help/sites-administering/user-group-ac-admin.md) を参照してください。
 
 ### ブループリント {#blueprint}
 
@@ -243,7 +240,7 @@ ht-degree: 90%
       * 単一のページ
       * 複数のページ（まとめて編集する場合は、プロパティのサブセットのみを使用できます）
 
-* ページエディターから、次の操作をおこないます。
+* ページエディターから、次の操作を行います。
 
    * 「**ページ情報**」（その後、「**プロパティを開く**」）を使用します
 
@@ -309,7 +306,7 @@ ht-degree: 90%
 
    * いずれかのページがライブコピー中である場合、プロパティを開くときにメッセージが表示されます。
 
-一括編集を開始すると、次の操作をおこなうことができます。
+一括編集を開始すると、次の操作を行うことができます。
 
 * **表示**
 
@@ -340,7 +337,7 @@ ht-degree: 90%
 
       * 新しい値は、「**完了**」を選択したときに、選択したすべてのページに適用されます。
       * フィールドが複数値（タグなど）の場合は、新しい値を追加するか、共通の値を削除できます。
-   * 共通のフィールドに、ページによって異なる値が設定されている場合、それらのフィールドは特別な値（「`<Mixed Entries>`」というテキストなど）で示されます。そのようなフィールドを編集する際は、データが失われないように、慎重におこなう必要があります。
+   * 共通のフィールドに、ページによって異なる値が設定されている場合、それらのフィールドは特別な値（「`<Mixed Entries>`」というテキストなど）で示されます。そのようなフィールドを編集する際は、データが失われないように、慎重に行う必要があります。
 
 
 >[!NOTE]
