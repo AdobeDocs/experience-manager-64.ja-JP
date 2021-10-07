@@ -1,41 +1,41 @@
 ---
 title: AEM 6.4 における Assets リポジトリの再構築
-seo-title: AEM 6.4 における Assets リポジトリの再構築
+seo-title: Assets Repository Restructuring in AEM 6.4
 description: AEM 6.4 for Assets の新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
-seo-description: AEM 6.4 for Assets の新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
+seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.4 for Assets.
 uuid: 0e3d8163-6274-4d1b-91c7-32ca927fb83c
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 212930fc-3430-4a0a-842c-2fb613ef981f
-feature: アップグレード
+feature: Upgrading
 exl-id: 3d5bbf95-bd1e-453b-b487-517a56fe727f
-source-git-commit: 98b6a34d678827b8ced0dfc3b153a92d63c1c0de
+source-git-commit: cda63b9ece88d8172fa4d9817e315c9cff88c224
 workflow-type: tm+mt
-source-wordcount: '1157'
-ht-degree: 50%
+source-wordcount: '1113'
+ht-degree: 49%
 
 ---
 
 # AEM 6.4 における Assets リポジトリの再構築{#assets-repository-restructuring-in-aem}
 
-AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明したように、AEM 6.4にアップグレードする場合は、このページを使用して、AEM Assetsソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
+AEM 6.4 での親 [ リポジトリの再構築 ](/help/sites-deploying/repository-restructuring.md) ページで説明したように、AEM 6.4 にアップグレードする場合は、このページを使用して、AEM Assetsソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
 
 **6.4 へのアップグレード時におこなう変更**
 
-* [その他](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#misc)
+* [その他](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#misc)
 
 **6.5 へのアップグレードまでにおこなう変更**
 
-* [アセット／収集イベント電子メール通知テンプレート](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#asset-collection-event-e-mail-notification-template)
-* [従来のアセット共有デザイン](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#classic-asset-share-designs)
-* [アセットダウンロード電子メール通知テンプレート](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#download-asset-e-mail-notification-template)
-* [サンプル DRM ライセンス](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#example-drm-licenses)
+* [アセット／収集イベント電子メール通知テンプレート](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#asset-collection-event-e-mail-notification-template)
+* [従来のアセット共有デザイン](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#classic-asset-share-designs)
+* [アセットダウンロード電子メール通知テンプレート](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#download-asset-e-mail-notification-template)
+* [サンプル DRM ライセンス](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#example-drm-licenses)
 
-* [リンク共有電子メール通知テンプレート](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#link-share-e-mail-notification-template)
-* [InDesign ワークフロースクリプト](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#indesign-workflow-scripts)
-* [ビデオトランスコーディング設定](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#video-transcoding-configurations)
-* [その他](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html?lang=en#misc2)
+* [リンク共有電子メール通知テンプレート](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#link-share-e-mail-notification-template)
+* [InDesign ワークフロースクリプト](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#indesign-workflow-scripts)
+* [ビデオトランスコーディング設定](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#video-transcoding-configurations)
+* [その他](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/assets-repository-restructuring-in-aem-6-4.html#misc2)
 
 ## 6.4 へのアップグレード時におこなう変更 {#with-upgrade}
 
@@ -80,13 +80,13 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
    <td><strong>再構築の手引き</strong></td> 
    <td><p>電子メールテンプレートが顧客によって変更されている場合は、新しいリポジトリ構造に合わせるために次の操作を実行します。</p> 
     <ol> 
-     <li><code>/libs/settings/dam/notification</code>電子メールテンプレートは、<strong><code>/etc/notification/email/default</code></strong>から<strong><code>/apps/settings/notification/email/default</code></strong>にコピーする必要があります 
+     <li><code>/libs/settings/dam/notification</code> 電子メールテンプレートは、<strong><code>/etc/notification/email/default</code></strong> から <strong><code>/apps/settings/notification/email/default</code></strong> にコピーする必要があります 
       <ol> 
-       <li>宛先が<strong> <code>/apps</code></strong>にあるので、この変更はSCMに保持する必要があります。</li> 
+       <li>宛先が <strong> <code>/apps</code></strong> にあるので、この変更は SCM に保持する必要があります。</li> 
       </ol> </li> 
-     <li>フォルダーを削除します。<strong><code>/etc/dam/notification/email/default</code></strong>内の電子メールテンプレートを移動した後。<br /> 
+     <li>フォルダーを削除します。<strong><code>/etc/dam/notification/email/default</code></strong> 内の電子メールテンプレートを移動した後。<br /> 
       <ol> 
-       <li><strong> <code>/etc/notification/email/default</code></strong>の下の電子メールテンプレートに更新が行われなかった場合は、AEM 6.4のインストールの一環として元の電子メールテンプレートが<strong><code>/libs/settings/notification/email/default</code></strong>の下に存在するので、フォルダーを削除できます。</li> 
+       <li><strong> <code>/etc/notification/email/default</code></strong> の下の電子メールテンプレートに更新が行われなかった場合は、元の電子メールテンプレートがAEM 6.4 のインストールの一部として <strong><code>/libs/settings/notification/email/default</code></strong> の下に存在するので、フォルダーを削除できます。</li> 
       </ol> </li> 
     </ol> </td> 
   </tr> 
@@ -113,12 +113,12 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
    <td><strong>再構築の手引き</strong></td> 
    <td><p>SCM で管理されており、実行時にデザインダイアログから書き込まれていないデザインについては、次の操作を実行して最新のモデルに合わせます。</p> 
     <ol> 
-     <li>デザインを以前の場所から<code>/apps</code>の下の新しい場所にコピーします。</li> 
+     <li>デザインを以前の場所から <code>/apps</code> の下の新しい場所にコピーします。</li> 
      <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank"> を使用して、デザイン内の CSS、JavaScript、静的リソースを</a>クライアントライブラリ<code>allowProxy = true</code>に変換します。</li> 
      <li><code>cq:designPath</code>AEM／DAM 管理／アセット共有ページ／ページのプロパティ／詳細タブ／デザインフィールド<strong>を使用して、</strong> プロパティで以前の場所への参照を更新します。</li> 
      <li>以前の場所を参照しているすべてのページを更新して、新しいクライアントライブラリカテゴリを使用するようにします。それには、ページの実装コードを更新する必要があります。</li> 
-     <li><code>/etc.clientlibs/</code>プロキシサーブレットを介したクライアントライブラリの提供を許可するようにDispatcherルールを更新します。</li> 
-    </ol> <p>SCMで管理されず、デザインダイアログで実行時に変更されたデザインの場合は、オーサリング可能なデザインを<code>/etc</code>から移動しないでください。</p> </td> 
+     <li><code>/etc.clientlibs/</code> プロキシサーブレットを介したクライアントライブラリの提供を許可するように Dispatcher ルールを更新します。</li> 
+    </ol> <p>SCM で管理されず、デザインダイアログで実行時に変更されたデザインの場合は、オーサリング可能なデザインを <code>/etc</code> から移動しないでください。</p> </td> 
   </tr> 
   <tr> 
    <td><strong>備考</strong></td> 
@@ -143,19 +143,19 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
    <td><strong>再構築の手引き</strong></td> 
    <td><p>電子メールテンプレート（<strong>downloadasset</strong> または <strong>transientworkflowcompleted</strong>）が変更されている場合は、以下の手順に従って新しい構造に合わせます。</p> 
     <ol> 
-     <li>更新された電子メールテンプレートを<strong><code>/etc/dam/workflow/notification/email/downloadasset</code></strong>から<strong><code>/apps/settings/dam/workflow/notification/email/downloadasset</code></strong>にコピーする必要があります 
+     <li>更新された電子メールテンプレートを <strong><code>/etc/dam/workflow/notification/email/downloadasset</code></strong> から <strong><code>/apps/settings/dam/workflow/notification/email/downloadasset</code></strong> にコピーする必要があります 
       <ol> 
-       <li>宛先が<strong> <code>/apps</code></strong>にあるので、この変更はSCMに保持する必要があります。</li> 
+       <li>宛先が <strong> <code>/apps</code></strong> にあるので、この変更は SCM に保持する必要があります。</li> 
       </ol> </li> 
-     <li>フォルダーを削除します。<code>/etc/dam/workflow/notification/email/downloadasset </code>その中の電子メールテンプレートを移動した後。<br /> 
+     <li>フォルダーを削除します。<code>/etc/dam/workflow/notification/email/downloadasset </code> その中の電子メールテンプレートが移動された後。<br /> 
       <ol> 
-       <li><strong> <code>/etc</code></strong>の下の電子メールテンプレートに更新が行われなかった場合は、AEM 6.4のインストールの一環として元の電子メールテンプレートが<strong><code>/libs/settings/dam/workflownotification/email/downloadasset</code></strong>の下に存在するので、フォルダーを削除できます。</li> 
+       <li><strong> <code>/etc</code></strong> の下の電子メールテンプレートに更新が行われなかった場合は、元の電子メールテンプレートがAEM 6.4 のインストールの一部として <strong><code>/libs/settings/dam/workflownotification/email/downloadasset</code></strong> の下に存在するので、フォルダーを削除できます。</li> 
       </ol> </li> 
     </ol> </td> 
   </tr> 
   <tr> 
    <td><strong>備考</strong></td> 
-   <td><code>/conf/global/settings/dam/workflownotification/email/downloadasset</code>は、検索に対して技術的にサポートされていますが（通常のSling CAConfig参照では/appsの前に優先されますが、<code>/etc</code>の後に）、テンプレートを<code>/conf/global/settings/dam/workflownotification/email/downloadasset</code>に配置できます。 ただし、電子メールテンプレートを容易に編集できる実行時 UI がないので、これはお勧めできません。</td> 
+   <td><code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> は、検索に対して技術的にサポートされていますが（通常の Sling CAConfig 参照では/apps の前に優先されますが、<code>/etc</code> の後に）、テンプレートは <code>/conf/global/settings/dam/workflownotification/email/downloadasset</code> に配置できます。 ただし、電子メールテンプレートを容易に編集できる実行時 UI がないので、これはお勧めできません。</td> 
   </tr> 
  </tbody> 
 </table>
@@ -184,19 +184,19 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
    <td><strong>再構築の手引き</strong></td> 
    <td><p>電子メールテンプレートが顧客によって変更されている場合は、新しいリポジトリ構造に合わせるために以下を実行します。</p> 
     <ol> 
-     <li>更新された電子メールテンプレートを<strong><code>/etc/dam/adhocassetshare</code></strong>から<strong><code>/apps/settings/dam/adhocassetshare</code></strong>にコピーする必要があります 
+     <li>更新された電子メールテンプレートを <strong><code>/etc/dam/adhocassetshare</code></strong> から <strong><code>/apps/settings/dam/adhocassetshare</code></strong> にコピーする必要があります 
       <ol> 
-       <li>宛先が<strong> <code>/apps</code></strong>にあるので、この変更はSCMに保持する必要があります。</li> 
+       <li>宛先が <strong> <code>/apps</code></strong> にあるので、この変更は SCM に保持する必要があります。</li> 
       </ol> </li> 
-     <li>フォルダーを削除します。<strong><code>/etc/dam/adhocassetshare</code></strong>内の電子メールテンプレートを移動した後。<br /> 
+     <li>フォルダーを削除します。<strong><code>/etc/dam/adhocassetshare</code></strong> 内の電子メールテンプレートを移動した後。<br /> 
       <ol> 
-       <li><strong> <code>/etc</code></strong>の下の電子メールテンプレートに更新が行われなかった場合は、AEM 6.4のインストールの一環として元の電子メールテンプレートが<strong><code>/libs/settings/dam/adhocassetshare</code></strong>の下に存在するので、フォルダーを削除できます。</li> 
+       <li><strong> <code>/etc</code></strong> の下の電子メールテンプレートに更新が行われなかった場合は、元の電子メールテンプレートがAEM 6.4 のインストールの一部として <strong><code>/libs/settings/dam/adhocassetshare</code></strong> の下に存在するので、フォルダーを削除できます。</li> 
       </ol> </li> 
     </ol> </td> 
   </tr> 
   <tr> 
    <td><strong>備考</strong></td> 
-   <td><code>/conf/global/settings/dam/adhocassetshare</code>は、参照に対して技術的にサポートされていますが（通常のSling CAConfig参照では<code>/apps</code>の前が優先されますが、<code>/etc</code>の後は）、テンプレートを<code>/conf/global/settings/dam/adhocassetshare</code>に配置できます。 ただし、電子メールテンプレートを容易に編集できる実行時 UI がないので、これはお勧めできません。</td> 
+   <td><code>/conf/global/settings/dam/adhocassetshare</code> は、参照に対して技術的にサポートされていますが（通常の Sling CAConfig 参照では <code>/apps</code> の前が優先されますが、<code>/etc</code> の後は）、テンプレートを <code>/conf/global/settings/dam/adhocassetshare</code> に配置できます。 ただし、電子メールテンプレートを容易に編集できる実行時 UI がないので、これはお勧めできません。</td> 
   </tr> 
  </tbody> 
 </table>
@@ -217,20 +217,20 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
    <td><strong>再構築の手引き</strong></td> 
    <td><p>新しいリポジトリ構造に合わせるには：</p> 
     <ol> 
-     <li>すべてのカスタムスクリプトまたは変更されたスクリプトを<strong><code>/etc/dam/indesign/scripts</code></strong>から<strong><code>/apps/settings/dam/indesign/scripts</code></strong><br />にコピーします 
+     <li>すべてのカスタムスクリプトまたは変更されたスクリプトを <strong><code>/etc/dam/indesign/scripts</code></strong> から <strong><code>/apps/settings/dam/indesign/scripts</code></strong><br /> にコピーします。 
       <ol> 
-       <li>AEM 6.4では、AEMが提供する未変更のスクリプトは<strong><code>/libs/settings</code></strong>経由で使用できるので、新しいスクリプトまたは変更されたスクリプトのみをコピーできます。</li> 
+       <li>AEM 6.4 では、AEMが提供する未変更のスクリプトは <strong><code>/libs/settings</code></strong> 経由で使用できるので、新しいスクリプトまたは変更されたスクリプトのみをコピーします。</li> 
       </ol> </li> 
      <li>メディア抽出プロセスワークフローステップを使用するすべてのワークフローモデルを見つけて、以下をおこないます。 
       <ol> 
-       <li>ワークフローステップの各インスタンスに対して、必要に応じて<strong> <code>/apps/settings/dam/indesign/scripts</code></strong>または<strong><code>/libs/settings/dam/indesign/scripts</code></strong>の下の適切なスクリプトを明示的に示すように、設定内のパスを更新します。</li> 
+       <li>ワークフローステップの各インスタンスに対して、設定内のパスを更新し、必要に応じて <strong> <code>/apps/settings/dam/indesign/scripts</code></strong> または <strong><code>/libs/settings/dam/indesign/scripts</code></strong> の下の適切なスクリプトを明示的に示します。</li> 
       </ol> </li> 
-     <li><strong> <code>/etc/dam/indesign/scripts</code></strong>を完全に削除します。</li> 
+     <li><strong> <code>/etc/dam/indesign/scripts</code></strong> を完全に削除します。</li> 
     </ol> </td> 
   </tr> 
   <tr> 
    <td><strong>備考</strong></td> 
-   <td>カスタマイズしたスクリプトは、コードを保存する場所である<code>/apps</code>に保存することをお勧めします。</td> 
+   <td>カスタマイズしたスクリプトは、コードを格納する場所である <code>/apps</code> に格納することをお勧めします。</td> 
   </tr> 
  </tbody> 
 </table>
@@ -249,9 +249,9 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
   </tr> 
   <tr> 
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>必要に応じて、プロジェクトレベルのカスタマイズを同等の<code>/apps</code>パスまたは<code>/conf</code>パスの下に切り取って貼り付ける必要があります。</p> <p>AEM 6.4 のリポジトリ構造に合わせるには：</p> 
+   <td><p>プロジェクトレベルのカスタマイズは、該当する <code>/apps</code> または <code>/conf</code> の同等のパスに切り取って貼り付ける必要があります。</p> <p>AEM 6.4 のリポジトリ構造に合わせるには：</p> 
     <ol> 
-     <li>変更されたビデオ設定を<code>/etc/dam/video</code>からにコピーします。 <code>/apps/settings/dam/video</code></li> 
+     <li>変更されたビデオ設定を <code>/etc/dam/video</code> からにコピーします。 <code>/apps/settings/dam/video</code></li> 
      <li>削除 <code>/etc/dam/video</code></li> 
     </ol> </td> 
   </tr> 
@@ -278,9 +278,9 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
    <td><strong>再構築の手引き</strong></td> 
    <td><p>既製のビューアプリセットの場合は、新しい場所でのみ使用できます。</p> <p>カスタムビューアプリセットの場合：</p> 
     <ul> 
-     <li>ノードを<code>/etc</code>から<code>/conf</code>に移動するには、移行スクリプトを実行する必要があります。 スクリプトは<em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em>にあります。</li> 
+     <li>ノードを <code>/etc</code> から <code>/conf</code> に移動するには、移行スクリプトを実行する必要があります。 スクリプトは <em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em> にあります。</li> 
      <li>または、設定を編集できます。編集した設定は新しい場所に自動保存されます。</li> 
-    </ul> <p><code>/conf</code>を指すようにcopyURL/embedコードを調整する必要はありません。 <code>/etc</code>に対する既存の要求は、<code>/conf</code>から正しいコンテンツに再ルーティングされます。</p> </td> 
+    </ul> <p><code>/conf</code> を指すように copyURL/embed コードを調整する必要はありません。 <code>/etc</code> に対する既存の要求は、<code>/conf</code> から正しいコンテンツに再ルーティングされます。</p> </td> 
   </tr> 
   <tr> 
    <td><strong>備考</strong></td> 
@@ -303,7 +303,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
   </tr> 
   <tr> 
    <td><strong>再構築の手引き</strong></td> 
-   <td><p><code>/etc.clientlibs/</code> allow proxy prefixを使用して、<code>/libs</code>の下の新しいリソースを指すように参照を調整します。</p> <p>最後に、移行したclientlibsのフォルダーを <code>/etc/clientlibs/foundation/</code></p> </td> 
+   <td><p><code>/etc.clientlibs/</code> プロキシプレフィックスを許可して、<code>/libs</code> の下の新しいリソースを指すように参照を調整します。</p> <p>最後に、移行した clientlibs のフォルダーを <code>/etc/clientlibs/foundation/</code></p> </td> 
   </tr> 
   <tr> 
    <td><strong>備考</strong></td> 

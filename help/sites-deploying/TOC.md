@@ -6,17 +6,17 @@ audience: end-user
 user-guide-title: AEM 6.4 デプロイガイド
 breadcrumb-title: デプロイガイド
 user-guide-description: Adobe Managed Services クラウドデプロイメントを含む、Adobe Experience Manager 6.4 のインストール、デプロイメント、およびアーキテクチャについて詳しく説明します。
-feature: デプロイ
+feature: Deploying
 role: Architect
-source-git-commit: 17c9f8523992b5ba87125c77d3e4f70f86f89c58
+source-git-commit: cda63b9ece88d8172fa4d9817e315c9cff88c224
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 91%
+source-wordcount: '370'
+ht-degree: 93%
 
 ---
 
 
-# AEM 6.4デプロイユーザーガイド {#deploying}
+# AEM 6.4 デプロイユーザーガイド {#deploying}
 
 + [デプロイユーザーガイド](home.md)
 + AEM プラットフォームの概要 {#introduction}
@@ -63,7 +63,7 @@ ht-degree: 91%
    + [アセットパフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/performance-tuning-guidelines.html?lang=ja)
    + [設定方法に関する記事](ht-deploy.md)
    + [Geometrixx サイトの削除](removing-the-geometrixx-sites.md)
-   + [Webコンソールの設定](configuring-web-console.md)
+   + [Web コンソールの設定](configuring-web-console.md)
 + AEM 6.4 へのアップグレード {#upgrading}
    + [AEM 6.4 へのアップグレード](upgrade.md)
    + [アップグレードの計画](upgrade-planning.md)
@@ -85,7 +85,7 @@ ht-degree: 91%
    + [AEM 6.4 におけるリポジトリの再構築](repository-restructuring.md)
    + [AEM 6.4 における共通リポジトリの再構築](all-repository-restructuring-in-aem-6-4.md)
    + [AEM 6.4 における Sites リポジトリの再構築](sites-repository-restructuring-in-aem-6-4.md)
-   + [AEM 6.4 における Assets リポジトリの再構築](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=en)
+   + [AEM 6.4 における Assets リポジトリの再構築](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=ja)
    + [AEM 6.4 での Dynamic Media リポジトリの再構築](dynamicmedia-repository-restructuring-in-aem-6-4.md)
    + [AEM 6.4 における Forms リポジトリの再構築](forms-repository-restructuring-in-aem-6-4.md)
    + [AEM 6.4 における e コマースリポジトリの再構築](ecommerce-repository-restructuring-in-aem-6-4.md)
