@@ -1,8 +1,8 @@
 ---
 title: コンテンツの HTTP/2 配信
-seo-title: コンテンツの HTTP/2 配信
+seo-title: HTTP2 Delivery of Content
 description: HTTP/2 によりブラウザーとサーバーの通信が改善され、必要な処理能力を抑えながら情報をより高速に転送できます。
-seo-description: HTTP/2 によりブラウザーとサーバーの通信が改善され、必要な処理能力を抑えながら情報をより高速に転送できます。
+seo-description: HTTP/2 improves the way browsers and servers communicate, allowing for faster transfer of information while reducing the amount of needed processing power.
 uuid: d9deb945-bdf5-4d6b-95c8-8bae4442e618
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,12 +10,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 exl-id: 59cd9f8c-6d01-448d-bf57-bdc9fd2e381b
-feature: アセット管理
+feature: Asset Management
 role: Admin,User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: a750c5425e33c2a115aab581b71862c1d30cf166
 workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 100%
+source-wordcount: '705'
+ht-degree: 99%
 
 ---
 
@@ -60,7 +60,7 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 
 HTTP/2 に切り替えるためのリクエストを開始する必要があります。自動的にはおこなわれません。
 
-1. HTTP/2 に切り替えるためのテクニカルサポートリクエストを開始します。[AEM サポートポータルへのアクセス](https://helpx.adobe.com/jp/experience-manager/kb/accessing-aem-support-portal.html)を参照してください。
+1. HTTP/2 に切り替えるためのテクニカルサポートリクエストを開始します。[ カスタマーサポートポータルへのアクセス ](https://helpx.adobe.com/jp/experience-manager/kb/accessing-aem-support-portal.html) を参照してください。
 
    1. サポートリクエストには、以下の情報を記入してください。
 
