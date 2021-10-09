@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Asset Management
 role: Architect,Leader
 exl-id: f0afdae4-5777-464c-9203-e9d19c6d62f6
-source-git-commit: a3289431adb80162340a1acdbc9b91e0c29e99a0
+source-git-commit: 50ba3937ef5d3f6e5b56df99ebdca337e5e9eac9
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 86%
+source-wordcount: '536'
+ht-degree: 83%
 
 ---
 
@@ -53,9 +53,6 @@ Media Library では、次のユースケースをカバーしています。
 <!-- TBD: Remove this after confirmation. May need to merge this list with the list provided by PMs.
 
 * Static renditions
-* Projects, tasks authoring
-* Activity stream (timeline)
-* Comments and annotation
 -->
 
 Media Library 機能を使用するには、デフォルトの [!DNL Experience Manager] ユーザーインターフェイスを使用できます。Media Library は [!DNL Experience Manager Sites] インストールに含まれており、別のインターフェイスやアドオンは必要ありません。Media Library ユーザーは、既存のインターフェイスを使用して、次のタスクを実行できます。
@@ -78,6 +75,9 @@ Media Library 機能を使用するには、デフォルトの [!DNL Experience 
 * アセット管理ユーザーインターフェイスのカスタマイズと拡張。
 * クエリビルダー (API) にアクセスして検索機能を拡張します。
 * 静的タグを作成します。
+* プロジェクトとタスクの作成
+* アクティビティストリーム（タイムライン）。
+* コメントと注釈。
 
 <!-- TBD: Define exactly which basic Assets workflow are available for use with Media Library?
 
@@ -88,7 +88,7 @@ As per PM, we must avoid stating such a list, as we don't have a list that makes
 >
 >DAM の高度なユースケースの多くは、[!DNL Experience Manager Assets] で処理されます。Media Library ライセンスでは、Media Library を使用して、記載されているユースケースのみを実行することができます。ユースケースがリストに表示されていない場合は、Media Library ライセンスで使用しないでください。質問がある場合は、Adobeカスタマーサポートにお問い合わせください。
 
-スマートタグ、[!DNL Asset] リンク、[!DNL Asset] セレクター、一括タグ付け、[!DNL Assets] ライセンスのないアセットワークフローの変更は使用できません。
+[!DNL Assets] ライセンスのないMedia Libraryにアクセスするには、スマートタグ、[!DNL Asset] リンク、[!DNL Asset] セレクター、一括タグ付け、アセットワークフローの変更、標準の [!DNL Adobe Experience Manager] ユーザーインターフェイスを使用できません。
 
 <!-- TBD: Add a CTA - how to contact Adobe for queries. -->
 
