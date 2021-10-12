@@ -1,16 +1,16 @@
 ---
 title: DHTML ビューアのサポート終了に関する FAQ
-description: 2014年1月31日に、DHTMLビューアプラットフォームの正式なサポートが終了します。
+description: 2014 年 1 月 31 日に、DHTML ビューアプラットフォームの正式なサポートが終了します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: d94244ac-a5f6-4c95-ab8c-26b41d25863f
 exl-id: 7a9d6e97-2592-43cb-b5ab-4238409bd7f3
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 877eade71c2ec57ff534ba2649275111c5326d75
 workflow-type: tm+mt
 source-wordcount: '42'
-ht-degree: 80%
+ht-degree: 66%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 80%
 
 2014 年 1 月 31 日をもって、DHTML ビューアプラットフォームは正式にサポート終了となりました。
 
-サポートされている最新のビューアについては、[Dynamic Media ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html?lang=ja)を参照してください。
+サポートされている最新のビューアについては、[Dynamic Media ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html)を参照してください。
 
 <!-- **What is the change?**
 
