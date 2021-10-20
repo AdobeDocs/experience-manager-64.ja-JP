@@ -1,8 +1,8 @@
 ---
-title: AEM 6.4の既知の問題
-seo-title: AEM 6.4の既知の問題
-description: Adobe Experience Manager 6.4の既知の問題
-seo-description: Adobe Experience Manager 6.4の既知の問題。
+title: AEM 6.4 の既知の問題
+seo-title: Known Issues in AEM 6.4
+description: Adobe Experience Manager 6.4 の既知の問題
+seo-description: Known Issues in Adobe Experience Manager 6.4.
 uuid: 1733f15e-9c4f-4db3-98ee-25c2ea606f0d
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
@@ -10,84 +10,84 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 266634ab-21d3-4aac-acfa-b799a7485507
 exl-id: ba65e853-d69a-4341-93c3-5628c60c403b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 7f80933dfe8439bbd57ef85ece96399f7ec39f64
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 44%
+source-wordcount: '1073'
+ht-degree: 46%
 
 ---
 
 # 既知の問題 {#known-issues}
 
-このページは、2018年4月にリリースされた既知の問題Adobe Experience Manager 6.4の一覧を示しています。 既知の問題の詳細については、[サポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=ja)にお問い合わせください。
+このページは、2018 年 4 月にリリースされた既知の問題Adobe Experience Manager 6.4 の一覧を示します。 既知の問題について詳しくは、 [連絡先サポート](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=ja).
 
 ## ハイブリッドデバイス {#hybrid-devices}
 
 ハイブリッドデバイスはサポートされません。こうしたデバイスを使用するときは多様な問題が発生する恐れがあります。次の推奨手順は、多くの問題の解決に役立ちます。
 
-Google Chromeをブラウザーとして使用している場合：
+Google Chrome をブラウザーとして使用している場合：
 
-* アドレスバーに`chrome://flags/`と入力し、Enterキーを押します。
+* タイプ `chrome://flags/` アドレスバーで Enter キーを押します。
 * タッチイベントを有効にする/無効をクリックします。
 * ブラウザーを再起動します（すべてのタブおよびウィンドウ）。
 
-Mozilla Firefoxをブラウザーとして使用する場合：
+Mozilla Firefox をブラウザーとして使用する場合：
 
-* アドレスバーに`about:config`と入力し、Enterキーを押します。
-* 設定を`dom.w3c`にフィルターします。
-* 設定が`0`と`false`であることを確認します。
+* タイプ `about:config` アドレスバーで Enter キーを押します。
+* 次のように設定をフィルターします。 `dom.w3c`.
+* 設定が `0` および `false`.
 * ブラウザーを再起動します。
 
-Microsoft Edgeをブラウザーとして使用する場合：
+Microsoft Edge をブラウザーとして使用する場合：
 
-* アドレスバーに`about:flags`と入力し、Returnキーを押します。
-* Experimental featuresにスクロールし、**[!UICONTROL Touch]**&#x200B;をクリックします。
-* 「**[!UICONTROL タッチイベントを有効にする]**」をクリックします。
-* 「**[!UICONTROL 常にオフ]**」を選択します。
+* タイプ `about:flags` アドレスバーで Return キーを押します。
+* 「実験機能」にスクロールし、次に **[!UICONTROL タッチ]**.
+* クリック **[!UICONTROL タッチイベントの有効化]**.
+* 選択 **[!UICONTROL 常にオフ]**.
 * ブラウザーを再起動します。
 
-## プラットフォーム {#platform}
+## Platform {#platform}
 
 * **操作ダッシュボード：**&#x200B;バックアップファイルに .zip 拡張子がない場合、プログレスバーが表示されない。（GRANITE-10713）
-* **HTL:** パッケージ宣言の末尾に空白が含まれるJava Useオブジェクトが、SightlyJavaCompilerServiceをフリーズする(GRANITE-20836)
-* **Apache Felix/Sling:** configuration.delete()の後でも、設定ファイルがリポジトリ内に存在し続ける(GRANITE-20618)
-* **クラウド設定：** 設定コンテナを編集すると、コンソールが壊れる(GRANITE-20726)
-* **セキュリティ：** カスタムコンテキストパスでIMS統合が失敗する(GRANITE-20639)
-* **セキュリティ：** SSO、外部およびデフォルトのLoginModulesのデフォルトJAASランキングの改善(GRANITE-20590)
-* **ツール操作 — CRX DE Lite:** プロパティビューのリッジが上に移動し続けます(GRANITE-12040)
-* **ツール操作 — CRX DE Lite:** プロパティ名をダブルクリックしない限り、「長い」値タイプに対する変更を保存できません(GRANITE-12351)
+* **HTL:** パッケージ宣言の末尾に空白がある Java Use オブジェクトが、SightlyJavaCompilerService をフリーズする (GRANITE-20836)
+* **Apache Felix/Sling:** configuration.delete() の後も、設定ファイルはリポジトリ内に残っています (GRANITE-20618)
+* **クラウド設定：** 設定コンテナの編集後、コンソールが壊れる (GRANITE-20726)
+* **セキュリティ：** カスタムコンテキストパスで IMS 統合が失敗する (GRANITE-20639)
+* **セキュリティ：** SSO、外部およびデフォルトの LoginModule のデフォルトの JAAS ランキングの改善 (GRANITE-20590)
+* **ツール — CRX DE Lite:** Ridge of properties ビューが上に移動し続ける (GRANITE-12040)
+* **ツール — CRX DE Lite:** プロパティ名をダブルクリックしない限り、「Long」値タイプの変更を保存できない (GRANITE-12351)
 
-* **ツール操作 — CRX DE Lite:** 開いているテキストファイルでのCtrl + F検索が、RegExp検索で動作しなくなる(GRANITE-5996)
+* **ツール — CRX DE Lite:** RegExp 検索で、開いているテキストファイルの Ctrl + F 検索が停止する (GRANITE-5996)
 
-* **ツール操作 — CRX DE Lite:** ノードの名前を変更した後、ノードプロパティが表示されない(GRANITE-7160)
-* **UI:** プルダウン「続きを…」 IEとFirefoxのポップオーバー要素で開くと、すべての要素が表示されない(GRANITE-16326)
-* **UI:** 2列の並びを持つ固定列レイアウトを使用すると、情報ツールチップが非表示になる(GRANITE-16869)
+* **ツール — CRX DE Lite:** ノードの名前を変更した後、ノードプロパティが表示されない (GRANITE-7160)
+* **UI:** プルダウン「続きを…」 IE と Firefox のポップオーバー要素で開くと、すべての要素が表示されない (GRANITE-16326)
+* **UI:** 2 列の並列を持つ固定列レイアウトを使用すると、情報ツールチップが非表示になる (GRANITE-16869)
 * **UI：**&#x200B;存在しない別のユーザーとして実行している場合に未処理のエラーが発生する（GRANITE-23228）。[エラーハンドラーを実装して](/help/sites-developing/customizing-errorhandler-pages.md)エラーメッセージをカスタマイズすることで回避します。
 
-* **オムニサーチ：** バックスラッシュを使用した検索で例外が発生する(GRANITE-11769)
-* **オムニサーチ：** リスト表示で「設定を表示」を開くと、検索フィルターが変更される(GRANITE-16524)
-* **オムニサーチ：** サイトからアセット検索を行うと、列設定の誤ったリストが表示される(GRANITE-16527)
+* **オムニサーチ：** バックスラッシュを使用した検索で例外が発生する (GRANITE-11769)
+* **オムニサーチ：** リスト表示で「設定を表示」を開くと、検索フィルターが変更されます (GRANITE-16524)
+* **オムニサーチ：** サイトからアセット検索を行うと、列設定の誤ったリストが表示される (GRANITE-16527)
 
 * **オムニサーチ：**&#x200B;左レールの述語がオムニサーチサーバーの要求に影響されてしまう（GRANITE-20524）
-* **オムニサーチ：** オムニサーチはコンテキストパスをサポートしていない(GRANITE-16044)
+* **オムニサーチ：** オムニサーチはコンテキストパスをサポートしていない (GRANITE-16044)
 
 ## Assets {#assets}
 
-* **検索**:検索文字列が空白 [OAK-4786で始まる場合、検索結果が返されない](https://issues.apache.org/jira/browse/OAK-4786)
+* **検索**:検索文字列が空白で始まる場合、検索は結果を返しません [OAK-4786](https://issues.apache.org/jira/browse/OAK-4786)
 
-* **検索**:クラシックUIでタグが検索に表示されない(CQ-4235239)
+* **検索**:クラシック UI でタグが検索に表示されない (CQ-4235239)
 
-* **UI**:コピーと貼り付けおよびすべてを選択した後、アセットUIが応答しなくなる(CQ-4236142)
+* **UI**:コピーと貼り付けおよびすべて選択の後、アセット UI が応答しなくなる (CQ-4236142)
 
-* **UI**:遅延読み込み後にアセットを移動できない(CQ-4236134)
+* **UI**:遅延読み込み後にアセットを移動できない (CQ-4236134)
 
-* **レポート**:アセット変更レポートの作成時にエラーが発生しました(CQ-4239744)
+* **レポート**:アセット変更レポートの作成でエラーが発生しました (CQ-4239744)
 
-* **レポート**:スケジュール設定された、通常のアセットレポート生成が失敗する（一部のレポートはキューに残る）(CQ-4239089)
+* **レポート**:スケジュールに沿った、通常のアセットレポートの生成に一貫性がない（一部のレポートはキューに残る）(CQ-4239089)
 
-* **メタデータ**:複数値のテキストフィールドをアセットスキーマに追加すると、必須フィールドのカスケードルールが機能しない(CQ-4239333)
+* **メタデータ**:複数値のテキストフィールドをアセットスキーマに追加すると、必須のフィールドカスケードルールが機能しない (CQ-4239333)
 
-* **BrandPortal**:Brand Portalへの公開がコレクションで機能しない(CQ-4238731)
+* **BrandPortal**:Brand Portal への公開がコレクションで機能しない (CQ-4238731)
 
 * **アップロード**：ファイル名に特殊文字を含むアセットをアップロードする場合、許可されていない文字に関する検証エラーメッセージは、すべてのアセットに対して表示されるわけではありません。この検証エラーメッセージは、最初のアセットに対してのみ表示され、提供されたアセットのファイル名が許可されないということがユーザーに明確に示されます。（CQ-4256876）
 
@@ -95,19 +95,19 @@ Microsoft Edgeをブラウザーとして使用する場合：
 
 * **モデレート**：一括モデレート UI から 1 回の削除操作で親投稿を削除できない（CQ-4236797）
 
-* **コンソール**  - 「Forgot Username or Password」リンクが、対応するパスワード取得フォームの代わりにログインページにリダイレクトされる(CQ-4237682)
+* **コンソール** - 「ユーザー名またはパスワードを忘れた場合」リンクが、対応するパスワード取得フォームではなくログインページにリダイレクトされています (CQ-4237682)
 
-## フォーム {#forms}
+## Forms {#forms}
 
 ### インストールとデプロイメント
 
 * （AEM Forms JEE の場合のみ）設定マネージャーの実行中に JBoss アプリケーションサーバーをブートストラップすると、EJB 呼び出しおよびブートストラップの失敗エラーが返される。ただし、それらは無視できます（参照番号 CQ-4229793）
-* AEM Formsが起動すると、`SAX Security Manager could not be setup`警告が表示されます。 （CQ-4297403）
+* AEM Formsを起動すると、 `SAX Security Manager could not be setup` 警告が表示されます。 （CQ-4297403）
 
 ### インタラクティブコミュニケーション
 
 * グラフ要素や画像要素を含んだインタラクティブコミュニケーションをエージェント UI で読み込むのに時間がかかる（CQ-4236630）
-* 印刷プレビューのデータ表示形式はdd-mm-yyyyで、Webプレビューのデータ表示形式は`dd-mmm-yy`です(CQ-4237045)
+* 印刷プレビューでのデータ表示形式は dd-mm-yyyy で、Web プレビューでは `dd-mmm-yy` (CQ-4237045)
 * インタラクティブコミュニケーション Web チャネルが順序付きおよび順序なしリストしかサポートしない。リストドキュメントフラグメントで、インタラクティブコミュニケーションの Web チャネルについて複雑なリストとインデントがサポートされない（CQ-4233672）
 * Web チャネルを印刷チャネルに同期させる場合、以下の問題が発生します。
 
@@ -127,18 +127,20 @@ Microsoft Edgeをブラウザーとして使用する場合：
    1. CRXDE Liteコンソールで、次のノードに移動します。\
       /libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices/\
       wsdlauthenticationsettings/items/fixedcolumns/items/container/items/wsdl/items/\
-      selectAuthentication/items/customを選択します。
-   1. valueプロパティの値をtextプロパティの値と同じに更新します。
+      「認証/項目/カスタム」を選択します。
+   1. value プロパティの値を text プロパティの値と同じに更新します。
    1. 「すべて保存」をクリックして設定を保存します。
 
 （CQ-4238462）
 
 ### Adobe Sign との統合
 
-* Adobe Sign スケジューラーが断続的に機能しなくなるので、署名中のフォームが送信に移動しない。この問題を解決するには、AEM Webコンソール(https://[*server*]:[*port*]/system/console/bundles)から&#x200B;**Apache Sling Scheduler Support**&#x200B;バンドルを再起動します。
+* Adobe Sign スケジューラーが断続的に機能しなくなるので、署名中のフォームが送信に移動しない。この問題を解決するには、 **Apache Sling Scheduler のサポート** AEM web コンソール (https://) からのバンドル&#x200B;[*server*]:[*ポート*]/system/console/bundles
 
 ### アダプティブフォームの作成
 
 * アダプティブフォームのグラフコンポーネントが通常より多くの領域を占有する。
-* Forms Manager UIでアダプティブフォーム、アダプティブフォームフラグメント、またはインタラクティブ通信のプロパティを保存すると、例外が返されます。
+* Forms Manager UI でアダプティブフォーム、アダプティブフォームフラグメント、インタラクティブ通信のプロパティを保存すると、例外が返されます。
 * Samsung の Android 6.0 デバイスでは、アダプティブフォームのテキストボックスに指定された最大文字数が適用されない（参照番号 CQ-4235205）
+* 標準の HTML アップロードフィールドを含んだフォームを Apple iOS デバイスから送信すると、ファイルの内容が送信されず、送信先で 0 バイトのファイルを受信することがあります。Apple iOS 15.1 で問題の修正がおこなわれました。
+
