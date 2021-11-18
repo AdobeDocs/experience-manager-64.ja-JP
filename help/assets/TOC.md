@@ -6,22 +6,22 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
-source-git-commit: d9649477328b3249dae396bbdca0f660c9c8faca
+source-git-commit: 18901a6b1e5035e16cb4f30a040ec8a42f704d87
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 74%
+source-wordcount: '636'
+ht-degree: 75%
 
 ---
 
 
 # Assets ガイド {#assets}
 
-+ [Assetsユーザーガイド](home.md)
-+ [AEM 6.4 Assetsリリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/assets.html)
-+ [DAMについて](assets.md)
++ [Assets ユーザーガイド](home.md)
++ [AEM 6.4 Assets リリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/assets.html)
++ [DAM について](assets.md)
 + [ユーザーエクスペリエンスの改善](ux-improvements.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
-+ AEM Assets {#using}を使用
++ AEM Assetsを使用 {#using}
    + [AEM Assetsホームページエクスペリエンス](assets-home-page.md)
    + [AEM でのアセットの検索](search-assets.md)
    + [GQL 全文検索](gql-search.md)
@@ -29,11 +29,11 @@ ht-degree: 74%
    + [AEM Assets での Adobe Stock アセットの使用](aem-assets-adobe-stock.md)
    + [フォルダーのアセットとコレクションのレビュー](bulk-approval.md)
    + [タイムラインのアクティビティストリーム](activity-stream.md)
-   + [アセットの処理](assets-workflow.md)
+   + [アセットを処理](assets-workflow.md)
    + [画像マップの追加](image-maps.md)
-   + [MSMを使用したアセットの再利用](reuse-assets-using-msm.md)
+   + [MSM を使用したアセットの再利用](reuse-assets-using-msm.md)
 + Dynamic Media{#dynamic}
-   + [Dynamic Mediaニュースレターアーカイブ(Experience League別)](dynamic-media-newsletter.md)
+   + [Experience League 提供の Dynamic Media ニュースレターアーカイブ](dynamic-media-newsletter.md)
    + [Dynamic Media のセットアップ](administering-dynamic-media.md)
    + [Dynamic Media の操作](dynamic-media.md)
    + [Dynamic Media の設定 - Scene7モード](config-dms7.md)
@@ -72,7 +72,7 @@ ht-degree: 74%
    + [CDN にキャッシュされたコンテンツの無効化](invalidate-cdn-cached-content.md)
    + [一括アセット移行用の機能パック18912のインストール](bulk-ingest-migrate.md)
    + [セレクターの操作](working-with-selectors.md)
-+ アセットを拡張{#extending}
++ アセットを拡張 {#extending}
    + [アセットのカスタマイズと拡張](extending-assets.md)
    + [メディアハンドラーとワークフローを使用したアセットの処理](media-handlers.md)
    + [Assets の検索機能の拡張](searchx.md)
@@ -81,7 +81,7 @@ ht-degree: 74%
    + [アセットエディターの拡張](asseteditorx.md)
    + [Assets HTTP API](mac-api-assets.md)
    + [Assets のプロキシ開発](proxy.md)
-+ アセットの管理{#administer}
++ アセットの管理 {#administer}
    + [Assets でサポートされるファイル形式](assets-formats.md)
    + [検索ファセット](search-facets.md)
    + [アセットのメタデータの管理](metadata.md)
@@ -92,10 +92,10 @@ ht-degree: 74%
    + [メタデータ、画像およびビデオを処理するためのプロファイル](processing-profiles.md)
    + [カスケードメタデータ](cascading-metadata.md)
    + [アセットエディターページの作成と設定](assets-finder-editor.md)
-   + [Assetsサイジングガイド](assets-sizing-guide.md)
+   + [Assets サイズ設定ガイド](assets-sizing-guide.md)
    + [メタデータのスキーマに関する参照情報](meta-ref.md)
    + [アセットを効率的に翻訳するためのベストプラクティス](best-practices-for-translating-assets-efficiently.md)
-   + [Assetsパフォーマンスチューニングガイド](performance-tuning-guidelines.md)
+   + [Assets パフォーマンスチューニングガイド](performance-tuning-guidelines.md)
    + [メタデータの編集と追加](meta-edit.md)
    + [アセット移行ガイド](assets-migration-guide.md)
    + [XMP メタデータ](xmp.md)
@@ -107,7 +107,7 @@ ht-degree: 74%
    + [AEM AssetsとInDesignサーバーの統合](indesign.md)
    + [メタデータプロファイル](metadata-profiles.md)
    + [アセットのデジタル著作権管理](drm.md)
-   + [アセットインサイト用デモパッケージの使用](touch-ui-using-demo-package-for-asset-insights.md)
+   + [アセットインサイトにデモパッケージを使用する](touch-ui-using-demo-package-for-asset-insights.md)
    + [Assets のオフロードのベストプラクティス](assets-offloading-best-practices.md)
    + [Assets のファイル形式に関するベストプラクティス](assets-file-format-best-practices.md)
    + [Assets の監視のベストプラクティス](assets-monitoring-best-practices.md)
@@ -138,14 +138,14 @@ ht-degree: 74%
    + [コンテンツフラグメント - 削除に関する考慮事項](content-fragments-delete.md)
    + [コンテンツフラグメント - Markdown](content-fragments-markdown.md)
    + [コンテンツフラグメントの翻訳プロジェクトの作成](creating-translation-projects-for-content-fragments.md)
-+ アセットの管理{#managing}
++ アセットを管理 {#managing}
    + [タッチ対応 UI を使用したアセットの管理](managing-assets-touch-ui.md)
    + [複数のアセットとコレクションの管理](managing-multiple-assets.md)
    + [アセットセレクター](asset-selector.md)
    + [コレクションの管理](managing-collections-touch-ui.md)
-   + [アセット内のファイルのチェックインとチェックアウト](check-out-and-submit-assets.md)
+   + [アセット内ファイルのチェックインとチェックアウト](check-out-and-submit-assets.md)
    + [スマートコンテンツサービスを使用したアセットのタグ付けの設定](config-smart-tagging.md)
-   + [重複項目の検出の有効化](duplicate-detection.md)
+   + [重複の検出を有効にする](duplicate-detection.md)
    + [AEM におけるアセットの並べ替えの強化](enhance-sort.md)
    + [デジタルアセットの整理](organize-assets.md)
    + [ビデオアセットの管理](managing-video-assets.md)
@@ -154,7 +154,7 @@ ht-degree: 74%
    + [AEM からのアセットのダウンロード](download-assets-from-aem.md)
    + [非同期操作](asynchronous-jobs.md)
    + [Lightbox](touch-ui-light-box.md)
-   + [DTMを使用したアセットインサイトの有効化](touch-ui-using-dtm-for-asset-insights.md)
+   + [DTM を使用したアセットインサイトの有効化](touch-ui-using-dtm-for-asset-insights.md)
    + [アセットインサイトの設定](touch-ui-configuring-asset-insights.md)
    + [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
    + [Web ページでのページトラッカーと埋め込みコードの使用](touch-ui-using-page-tracker.md)
@@ -165,3 +165,7 @@ ht-degree: 74%
    + [プライベートフォルダーの共有](private-folder.md)
    + [スマートコンテンツサービスのトレーニングガイドライン](smart-tags-training-guidelines.md)
    + [ビデオレンディション](video-renditions.md)
++ 他のソリューションとの統合 {#integrations}
+   + [との統合 [!DNL Adobe Workfront]](workfront-integrations.md)
+   + [インストール [!DNL enhanced connector] 対象 [!DNL Workfront]](workfront-connector-install.md)
+   + [設定 [!DNL enhanced connector] 対象 [!DNL Workfront]](workfront-connector-configure.md)
