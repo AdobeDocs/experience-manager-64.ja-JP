@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
-source-git-commit: 18901a6b1e5035e16cb4f30a040ec8a42f704d87
+source-git-commit: ac358965790694a51d866a4cdb97810b0983bbca
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 75%
+source-wordcount: '640'
+ht-degree: 74%
 
 ---
 
@@ -104,6 +104,7 @@ ht-degree: 75%
    + [PDFラスタライザの使用](aem-pdf-rasterizer.md)
    + [アセットのアップロード制限の設定](configuring-asset-upload-restrictions.md)
    + [AEM と Creative Cloud の統合のベストプラクティス](aem-cc-integration-best-practices.md)
+   + [Adobeアセットリンクの設定](configure-asset-link.md)
    + [AEM AssetsとInDesignサーバーの統合](indesign.md)
    + [メタデータプロファイル](metadata-profiles.md)
    + [アセットのデジタル著作権管理](drm.md)
