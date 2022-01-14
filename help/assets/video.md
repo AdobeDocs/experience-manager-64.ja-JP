@@ -8,10 +8,10 @@ content-type: reference
 exl-id: acb95a2b-0171-449e-97fa-f9a533f990de
 feature: Video
 role: User
-source-git-commit: 7f4e44eb75ccae4a9ab1d95171b95a5e9fe48f64
+source-git-commit: 18ab491812b1bcc8ceee14e311bd15c0c8dd32fa
 workflow-type: tm+mt
-source-wordcount: '10383'
-ht-degree: 76%
+source-wordcount: '10401'
+ht-degree: 75%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 76%
       * [デジタルアセットの整理](organize-assets.md)に関する詳細
    * フォルダーにプライマリソースビデオをアップロードします。フォルダーにビデオを追加すると、そのフォルダーに割り当てたビデオ処理プロファイルに従ってビデオがエンコードされます。
 
-      * Dynamic Media では、主に、最長 30 分までの短いビデオをサポートしています。
+      * Dynamic Mediaは主に、最大長が 30 分で、解像度が 50 x 50 を超える短形式のビデオをサポートします。
       * 15 GB までのビデオファイルをアップロードできます。
       * [ビデオをアップロードします](managing-video-assets.md#uploading-and-previewing-video-assets)。
       * 詳しくは、[サポートされる入力ファイル形式](assets-formats.md#supported-multimedia-formats)を参照してください。
@@ -288,7 +288,7 @@ For advice about video encoding, see the following:
 
 ビデオファイルをエンコードするときは、可能な限り最高品質のソースビデオファイルを使用します。以前にエンコードされたビデオファイルの使用は避けてください。そのようなファイルは既に圧縮済みで、さらにエンコードすると標準を下回る品質のビデオが作成されるからです。
 
-* Dynamic Media では、を主に、最長 30 分までの短いビデオサポートしています。
+* Dynamic Mediaは主に、最大長が 30 分で、解像度が 50 x 50 を超える短形式のビデオをサポートします。
 * 15 GB までのプライマリソースビデオファイルをアップロードできます。
 
 次の表に、ソースビデオファイルのエンコード前の推奨サイズ、縦横比および最小ビットレートを示します。
