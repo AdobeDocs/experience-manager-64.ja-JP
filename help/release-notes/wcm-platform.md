@@ -1,8 +1,8 @@
 ---
 title: AEM の基盤とリポジトリ
-seo-title: AEM の基盤とリポジトリ
+seo-title: AEM Foundation & Repository
 description: Adobe Experience Manager 6.3 AEM プラットフォームとリポジトリ固有のリリースノート
-seo-description: Adobe Experience Manager 6.3 AEM プラットフォームとリポジトリ固有のリリースノート
+seo-description: Release notes specific to Adobe Experience Manager 6.3 AEM Platform and Repository.
 uuid: 147b38d0-cf87-467c-a52d-3399d4af7e6e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4
@@ -12,14 +12,14 @@ discoiquuid: e5dd9d0d-6d67-4430-aeb3-2be91356f624
 exl-id: 6f131247-d35e-4298-958f-35b94ff08c58
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '719'
 ht-degree: 80%
 
 ---
 
-# AEM の基盤とリポジトリ  {#aem-foundation-repository}
+# AEM の基盤とリポジトリ {#aem-foundation-repository}
 
-## 変更について  {#list-of-changes}
+## 変更について {#list-of-changes}
 
 ### リポジトリ {#repository}
 
@@ -35,14 +35,13 @@ ht-degree: 80%
    * スケジュールに従ったクリーンアップメンテナンスの代わりに、MongoMK の継続的なリビジョンクリーンアップが実行されるようになりました。
 
 * ドキュメントノードストアに対するリビジョンクリーンアップの効率が向上しました。
-* 修正された問題の完全な概要については、 [Apache Jackrabbit Oak Jira v. 1.8.0](https://archive.apache.org/dist/jackrabbit/oak/1.8.0/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1.8.1](https://archive.apache.org/dist/jackrabbit/oak/1.8.1/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1. 8.2](https://archive.apache.org/dist/jackrabbit/oak/1.8.2/RELEASE-NOTES.txt)を参照してください。
+* 詳しくは、 [Apache Jackrabbit Oak Jira v. 1.8.0](https://archive.apache.org/dist/jackrabbit/oak/1.8.0/RELEASE-NOTES.txt), [Apache Jackrabbit Oak Jira v. 1.8.1](https://archive.apache.org/dist/jackrabbit/oak/1.8.1/RELEASE-NOTES.txt) および [Apache Jackrabbit Oak Jira v. 1.8.2](https://archive.apache.org/dist/jackrabbit/oak/1.8.2/RELEASE-NOTES.txt) 修正された問題の完全な概要を参照してください。
 
 >[!CAUTION]
 >
 >* AEM 6.3 以降の新しいバージョンの Oak セグメント Tar では、リポジトリを移行する必要があります。この手順は、古いバージョンの TarMK からアップグレードする場合、または別のタイプの格納機能から新しい Segment Tar に切り替える場合に必須です。新しい Segment Tar のメリットについて詳しくは、[Oak Segment Tar への移行に関する FAQ](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar) を参照してください。
 
 >
-
 
 
 ### 検索とインデックス作成 {#search-amp-indexing}
@@ -71,10 +70,9 @@ ht-degree: 80%
 
 >[!CAUTION]
 >
->* クラシック UI の機能がさらに強化される予定はありません。AEM 6.4 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。クラシックUIは廃止中も引き続き完全にサポートされます[詳細を表示](/help/sites-deploying/ui-recommendations.md)。
+>* クラシック UI の機能がさらに強化される予定はありません。AEM 6.4 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。クラシック UI は非推奨の間も完全にサポートされ続けます [詳細を表示](/help/sites-deploying/ui-recommendations.md).
 
 >
-
 
 
 ### コンテンツの配布 {#content-distribution}
@@ -85,7 +83,7 @@ ht-degree: 80%
 
 ### 監視 {#monitoring}
 
-* 新しい「システム概要」には、パフォーマンスに関連するシステムのステータスとアクティビティのスナップショットが表示されます。
+* 新しい「システム概要」には、パフォーマンスに関するすべてのシステムステータスとアクティビティのスナップショットが表示されます
 * 以下の新しいヘルスチェックが用意されています。
 
    * 大きい Lucene インデックスの検出
@@ -113,12 +111,12 @@ ht-degree: 80%
 * アップグレードの複雑さの評価：新しいパターン検出ツールにより、アップグレードの複雑さを評価することができます。
 * 持続可能なアップグレード：API サーフェスとコンテンツ分類が導入され、開発サイクル全体を通して次のバージョンに効率的かつシームレスにアップグレードするためのベストプラクティスに容易に従えるようになりました。
 * リポジトリの再構築：大幅な再構築（主に/etc）により、アップグレードが容易になり、実装のベストプラクティスが促進されます。 （[詳細情報](/help/sites-deploying/repository-restructuring.md)）。
-* これらの機能の詳細については、[アップグレードのドキュメント](/help/sites-deploying/upgrade.md)を参照してください。
+* 詳しくは、 [アップグレードドキュメント](/help/sites-deploying/upgrade.md) を参照してください。
 
 ### Cloud Services {#cloud-services}
 
-* 多くのCloud Servicesは、タッチUIから設定できるようになりました。残りの設定は、「レガシーCloud Services」カードでおこなえます。
-* SitesフォルダーとAssetsフォルダーは、コンテキスト対応の方法で読み込まれるCloud Servicesーを使用して設定できます。
+* 多くのCloud Servicesは、タッチ UI から設定できるようになりました。残りの設定は、「レガシーCloud Services」カードでおこなえます。
+* Sites フォルダーと Assets フォルダーは、コンテキスト対応の方法で読み込まれるCloud Servicesーを使用して設定できます。
 
 ### セキュリティ {#security}
 

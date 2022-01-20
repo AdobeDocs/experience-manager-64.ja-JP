@@ -1,8 +1,8 @@
 ---
 title: 基本操作
-seo-title: 基本操作
-description: AEM オーサー環境を使用する際の基本操作の概要。これはサイトコンソールを基礎として使用します。
-seo-description: AEM オーサー環境を使用する際の基本操作の概要。これはサイトコンソールを基礎として使用します。
+seo-title: Basic Handling
+description: AEM オーサー環境を使用する際の基本操作の概要。これは Sites コンソールを基礎として使用します。
+seo-description: An overview of basic handling when using the AEM author environment. It uses the Sites console as a basis.
 uuid: ab488d7c-7b7f-4a23-a80c-99d37ac84246
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 exl-id: 49bf3e19-d299-4c99-896c-b12135f33fb7
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1194'
 ht-degree: 90%
 
 ---
@@ -21,14 +21,12 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->* このページには、AEM オーサー環境を使用する際の基本操作の概要をまとめています。これは&#x200B;**サイト**&#x200B;コンソールを基礎として使用します。
-   >
-   >
-* 一部の機能はすべてのコンソールでは使用できず、一部のコンソールにしかない機能もあります。個別のコンソールや関連する機能に関する固有情報については、他のページで詳しく取り上げます。
+>* このページには、AEM オーサー環境を使用する際の基本操作の概要をまとめています。これは **Sites** コンソールを基礎として使用します。
+>
+>* 一部の機能はすべてのコンソールでは使用できず、一部のコンソールにしかない機能もあります。個別のコンソールや関連する機能に関する固有情報については、他のページで詳しく取り上げます。
 >* AEM 全体で（特に、[コンソールを使用する](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)場合と[ページを編集する](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)場合に）、キーボードショートカットを利用できます。
 
 >
-
 
 
 ## ようこそ画面 {#the-welcome-screen}
@@ -59,7 +57,7 @@ ht-degree: 90%
   </tr> 
   <tr> 
    <td><strong>ローンチ</strong></td> 
-   <td>これは、<a href="/help/sites-classic-ui-authoring/classic-launches.md">launches</a>；の管理に役立ちます。これらを使用すると、アクティブ化された1つ以上のwebページの将来のリリース用にコンテンツを開発できます。<br /> <i>注意：タッチ操作対応UIでは、参照レールと共にサイトコンソールでも同じ機能の多くが使用できます。</i> <i>必要に応じて、このコンソールはツールコンソールから使用できます。「操作」、「ローンチ」の順に選択します。</i></td> 
+   <td>これは、 <a href="/help/sites-classic-ui-authoring/classic-launches.md">起動回数</a>;これにより、アクティベートされた 1 つ以上の web ページの将来のリリース向けにコンテンツを開発できます。<br /> <i>注意：タッチ操作対応 UI では、参照レールと共に、サイトコンソールでも同じ機能の多くを使用できます。</i> <i>必要に応じて、このコンソールはツールコンソールから使用できます。「運営」、「ローンチ」の順に選択します。</i></td> 
   </tr> 
   <tr> 
    <td><strong>インボックス </strong></td> 
@@ -92,13 +90,13 @@ ht-degree: 90%
 
 * 左側のウィンドウ
 
-   Webサイトのツリー構造と、そのWebサイト内のページが表示されます。
+   これにより、Web サイトのツリー構造と、Web サイト内のページが表示されます。
 
    また、プロジェクト、ブループリント、アセットなど、AEMのその他の側面に関する情報も表示されます。
 
 * 右側のウィンドウ
 
-   これにより、（左側のウィンドウで選択した場所に）ページが表示され、アクションを実行するために使用できます。
+   これは、ページ（左側のウィンドウで選択した場所）を表示し、アクションの実行に使用できます。
 
 ここから、ツールバーやコンテキストメニューを使用するか、ページを開いて追加のアクションを実行することで、[ページを管理](/help/sites-authoring/managing-pages.md)できます。
 
@@ -150,7 +148,7 @@ ht-degree: 90%
 
 ## Web サイトコンソールでのページ情報 {#page-information-on-the-websites-console}
 
-**Web サイト**&#x200B;コンソールの右側のパネルでは、ページに関する情報が次のようにリスト表示されます。
+**Web サイト**&#x200B;コンソールの右側のウィンドウでは、ページに関する情報が次のようにリスト表示されます。
 
 ![page-info](assets/page-info.png)
 

@@ -1,8 +1,8 @@
 ---
 title: Web アプリケーションでの AEM Forms Workspace コンポーネントの統合
-seo-title: Web アプリケーションでの AEM Forms Workspace コンポーネントの統合
+seo-title: Integrating AEM Forms workspace components in web applications
 description: 独自の Web アプリケーションで AEM Forms Workspace コンポーネントを再利用して、機能を強化し密接な統合を提供する方法。
-seo-description: 独自の Web アプリケーションで AEM Forms Workspace コンポーネントを再利用して、機能を強化し密接な統合を提供する方法。
+seo-description: How to reuse AEM Forms workspace components in your own webapps to leverage functionality and provide tight integration.
 uuid: bb9b8aa0-3f41-4f44-8eb7-944e778ee8a6
 contentOwner: robhagat
 content-type: reference
@@ -12,17 +12,17 @@ discoiquuid: 6be87939-007e-42c7-8a41-e34ac2b8bed4
 exl-id: 4e3ed3c8-ef77-432e-ad4d-7d341787cc5c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 74%
+source-wordcount: '344'
+ht-degree: 72%
 
 ---
 
-# Web アプリケーションでの AEM Forms Workspace コンポーネントの統合  {#integrating-aem-forms-workspace-components-in-web-applications}
+# Web アプリケーションでの AEM Forms Workspace コンポーネントの統合 {#integrating-aem-forms-workspace-components-in-web-applications}
 
-AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusable-components.md) を固有の Web アプリケーションで使用することができます。以下のサンプルの実装は、CRX™ インスタンスにインストールされた AEM Forms Workspace Dev パッケージのコンポーネントを使用して Web アプリケーションを作成します。下記のソリューションをカスタマイズして、個々のニーズに合わせます。サンプル実装では、Webポータル内の`UserInfo`、`FilterList`および`TaskList`コンポーネントを再利用します。
+AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusable-components.md) を固有の Web アプリケーションで使用することができます。以下のサンプルの実装は、CRX™ インスタンスにインストールされた AEM Forms Workspace Dev パッケージのコンポーネントを使用して Web アプリケーションを作成します。下記のソリューションをカスタマイズして、個々のニーズに合わせます。実装例の再利用 `UserInfo`, `FilterList`、および `TaskList`web ポータル内のコンポーネント。
 
-1. `https://[server]:[port]/lc/crx/de/`でCRXDE Lite環境にログインします。 AEM Forms Workspace Dev パッケージがインストールされていることを確認します。
-1. パス`/apps/sampleApplication/wscomponents`を作成します。
+1. 次の場所でCRXDE Lite環境にログイン `https://[server]:[port]/lc/crx/de/`. AEM Forms Workspace Dev パッケージがインストールされていることを確認します。
+1. パスの作成 `/apps/sampleApplication/wscomponents`.
 1. css、images、js/libs、js/runtime、および js/registry.js を
 
    * コピー元：`/libs/ws`
@@ -42,9 +42,9 @@ AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusab
        });
    ```
 
-1. /contentの下に名前`sampleApplication`でノードを作成し、&quot;`nt:unstructured`&quot;と入力します。 このノードのプロパティで、型がStringで値が`sampleApplication`の`sling:resourceType`を追加します。 このノードのアクセス制御リストで、jcr:read 権限を許可する `PERM_WORKSPACE_USER` にエントリを追加します。また、`/apps/sampleApplication`のアクセス制御リストで、jcr:read権限を許可する`PERM_WORKSPACE_USER`のエントリを追加します。
-1. `/apps/sampleApplication/wscomponents/js/registry.js`で、テンプレート値のパスを`/lc/libs/ws/`から`/lc/apps/sampleApplication/wscomponents/`に更新します。
-1. `/apps/sampleApplication/GET.jsp`のポータルホームページJSPファイルで、次のコードを追加して、ポータル内の必要なコンポーネントを含めます。
+1. /content の下に、名前でノードを作成します。 `sampleApplication` と入力します。 `nt:unstructured`. このノードのプロパティで、 `sling:resourceType` の型が文字列および値 `sampleApplication`. このノードのアクセス制御リストで、jcr:read 権限を許可する `PERM_WORKSPACE_USER` にエントリを追加します。また、 `/apps/sampleApplication` エントリを追加 `PERM_WORKSPACE_USER` jcr:read 権限の許可
+1. In `/apps/sampleApplication/wscomponents/js/registry.js` からパスを更新 `/lc/libs/ws/` から `/lc/apps/sampleApplication/wscomponents/` テンプレート値用。
+1. ポータルホームページの JSP ファイル ( ) `/apps/sampleApplication/GET.jsp`次のコードを追加して、必要なコンポーネントをポータル内に含めます。
 
    ```as3
    <script data-main="/lc/apps/sampleApplication/wscomponents/js/demomain" src="/lc/apps/sampleApplication/wscomponents/js/libs/require/require.js"></script>
@@ -81,7 +81,7 @@ AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusab
    });
    ```
 
-1. ポータルの CSS を修正し、ポータル上の必要なコンポーネントのレイアウト、配置、スタイルを設定します。たとえば、このポータルの背景色を黒色に保持して userInfo コンポーネントも同様に表示するとします。これを行うには、次のように`/apps/sampleApplication/wscomponents/css/style.css`の背景色を変更します。
+1. ポータルの CSS を修正し、ポータル上の必要なコンポーネントのレイアウト、配置、スタイルを設定します。たとえば、このポータルの背景色を黒色に保持して userInfo コンポーネントも同様に表示するとします。それには、 `/apps/sampleApplication/wscomponents/css/style.css` 次のように指定します。
 
    ```as3
    body {

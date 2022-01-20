@@ -1,8 +1,8 @@
 ---
 title: オフロードのためのジョブの作成と使用
-seo-title: オフロードのためのジョブの作成と使用
+seo-title: Creating and Consuming Jobs for Offloading
 description: Apache Sling Discovery 機能が提供する Java API によって、JobManager ジョブとそれを使用する JobConsumer サービスを作成できます
-seo-description: Apache Sling Discovery 機能が提供する Java API によって、JobManager ジョブとそれを使用する JobConsumer サービスを作成できます
+seo-description: The Apache Sling Discovery feature provides a Java API that enables you to create JobManager jobs and JobConsumer services that consume them
 uuid: d6a5beb0-0618-4b61-9b52-570862eac920
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: e7b6b9ee-d807-4eb0-8e96-75ca1e66a4e4
 exl-id: ec5253cd-7f1e-4408-9765-8aaa9a81095c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 86%
+source-wordcount: '392'
+ht-degree: 85%
 
 ---
 
@@ -27,8 +27,8 @@ Apache Sling Discovery 機能が提供する Java API によって、JobManager 
 
 オフロードフレームワークによって、ジョブペイロードを識別するために使用する 2 つのジョブプロパティが定義されています。これらのプロパティは、オフロードレプリケーションエージェントによって使用され、トポロジ内のインスタンスにレプリケートするリソースが識別されます。
 
-* `offloading.job.input.payload`:コンテンツパスのコンマ区切りのリスト。コンテンツは、ジョブを実行するインスタンスにレプリケートされます。
-* `offloading.job.output.payload`:コンテンツパスのコンマ区切りのリスト。ジョブの実行が完了すると、ジョブペイロードはジョブを作成したインスタンス上のこれらのパスにレプリケートされます。
+* `offloading.job.input.payload`:コンテンツパスのコンマ区切りリスト。 コンテンツは、ジョブを実行するインスタンスにレプリケートされます。
+* `offloading.job.output.payload`:コンテンツパスのコンマ区切りリスト。 ジョブの実行が完了すると、ジョブペイロードはジョブを作成したインスタンス上のこれらのパスにレプリケートされます。
 
 `OffloadingJobProperties` 列挙を使用して、プロパティ名を参照します。
 
@@ -37,13 +37,13 @@ Apache Sling Discovery 機能が提供する Java API によって、JobManager 
 
 ジョブはペイロードを必要としません。ただし、ジョブでリソースの操作が必要であり、ジョブを作成しなかったコンピューターにジョブがオフロードされる場合は、ペイロードが必要です。
 
-## オフロードのためのジョブの作成  {#creating-jobs-for-offloading}
+## オフロードのためのジョブの作成 {#creating-jobs-for-offloading}
 
 自動的に選択された JobConsumer によって実行されるジョブを作成するために、JobManager.addJob メソッドを呼び出すクライアントを作成します。以下の情報を入力してジョブを作成します。
 
 * トピック：ジョブトピック。
 * 名前：（オプション）
-* プロパティマップ：入力ペイロードパスや出力ペイロードパスなど、任意の数のプロパティを含む`Map<String, Object>`オブジェクト。 この Map オブジェクトは、ジョブを実行する JobConsumer オブジェクトで使用可能です。
+* プロパティマップ：A `Map<String, Object>` 任意の数のプロパティ（入力ペイロードパス、出力ペイロードパスなど）を含むオブジェクト。 この Map オブジェクトは、ジョブを実行する JobConsumer オブジェクトで使用可能です。
 
 以下の例のサービスでは、特定のトピックおよび入力ペイロードパスのジョブが作成されます。
 
@@ -93,7 +93,7 @@ public class JobGeneratorImpl implements JobGenerator  {
 }
 ```
 
-`com/adobe/example/offloading`トピックと`/content/geometrixx/de/services`ペイロードに対してJobGeneratorImpl.createJobが呼び出されると、ログに次のメッセージが含まれます。
+ログには次のメッセージが含まれます。JobGeneratorImpl.createJob が `com/adobe/example/offloading` トピックと `/content/geometrixx/de/services` ペイロード：
 
 ```shell
 10.06.2013 15:43:33.868 *INFO* [JobHandler: /etc/workflow/instances/2013-06-10/model_1554418768647484:/content/geometrixx/en/company] com.adobe.example.offloading.JobGeneratorImpl Received request to make job for topic com/adobe/example/offloading and payload /content/geometrixx/de/services
@@ -103,7 +103,7 @@ public class JobGeneratorImpl implements JobGenerator  {
 
 ジョブを使用するには、`org.apache.sling.event.jobs.consumer.JobConsumer` インターフェイスを実装する OSGi サービスを開発します。`JobConsumer.PROPERTY_TOPICS` プロパティを使用して、使用するトピックを特定します。
 
-次の例のJobConsumer実装は、 `com/adobe/example/offloading`トピックに登録します。 JobConsumer では、単にペイロードコンテンツノードの consumed プロパティが true に設定されます。
+次の例の JobConsumer 実装は、を `com/adobe/example/offloading` トピック。 JobConsumer では、単にペイロードコンテンツノードの consumed プロパティが true に設定されます。
 
 ```java
 package com.adobe.example.offloading;

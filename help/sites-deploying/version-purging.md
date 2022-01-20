@@ -1,20 +1,20 @@
 ---
 title: バージョンのパージ
-seo-title: バージョンのパージ
+seo-title: Version Purging
 description: この記事では、バージョンのパージで使用できるオプションについて説明します。
-seo-description: この記事では、バージョンのパージで使用できるオプションについて説明します。
+seo-description: This article describes the available options for version purging.
 uuid: 6140c87e-ae1c-409d-bdbb-71b397f0b738
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 56f36dcf-8fbd-43f8-bf74-e88d5b686160
-feature: 設定
+feature: Configuring
 exl-id: 357d5f23-3e75-44e3-905f-4efe960858bf
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '728'
-ht-degree: 64%
+source-wordcount: '716'
+ht-degree: 63%
 
 ---
 
@@ -32,13 +32,13 @@ ht-degree: 64%
 
 AEM には、リポジトリの管理に役立つ様々なメカニズムが備わっています。
 
-* [バージョンマネージャー](#version-manager)
+* の [バージョンマネージャー](#version-manager)
 
    これは、新しいバージョンが作成されたときに古いバージョンをパージするように設定できます。
 
-* [バージョンのパージ](/help/sites-deploying/monitoring-and-maintaining.md#version-purging)ツール
+* の [バージョンをパージ](/help/sites-deploying/monitoring-and-maintaining.md#version-purging) ツール
 
-   これは、リポジトリの監視および保守の一部として使用されます。
+   これは、リポジトリの監視および管理の一環として使用されます。
 
    このツールを使用すると、次のパラメーターに従って、ノードまたはノードの階層の古いバージョンを削除するためにユーザーが介入できます。
 
@@ -50,7 +50,7 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
       バージョンの期間がこの値を超えると、リポジトリからパージされます。
 
-* [バージョンのパージメンテナンスタスク](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks)。 バージョンのパージメンテナンスタスクをスケジュールして、古いバージョンを自動的に削除できます。その結果、バージョンのパージツールを手動で使用する必要性を最小限に抑えることができます。
+* の [バージョンのパージメンテナンスタスク](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks). バージョンのパージメンテナンスタスクをスケジュールして、古いバージョンを自動的に削除できます。その結果、バージョンのパージツールを手動で使用する必要性を最小限に抑えることができます。
 
 >[!CAUTION]
 >
@@ -66,45 +66,45 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
 以下のオプションが利用できます。
 
-* `versionmanager.createVersionOnActivation` (ブール値、デフォルト：true)
+* `versionmanager.createVersionOnActivation` ( ブール値、デフォルト：true)
 
    ページがアクティベートされたときにバージョンを作成するかどうか。
 
-   バージョンは、バージョンの作成を無効にするようにレプリケーションエージェントが設定されていない限り作成されます。バージョンマネージャーはこれを受け入れます
+   バージョンは、バージョンの作成を抑制するようにレプリケーションエージェントが設定されていない限り作成されます。バージョンマネージャーは、このバージョンを受け入れます
 
-   バージョンは、versionmanager.ivPathsに含まれるパスでアクティベートが発生した場合にのみ作成されます（以下を参照）。
+   バージョンは、versionmanager.ivPaths に含まれるパスでアクティベーションが発生した場合にのみ作成されます（以下を参照）。
 
-* `versionmanager.ivPaths` (文字列[]、デフォルト：{&quot;/&quot;})
+* `versionmanager.ivPaths` ( 文字列[]、デフォルト：{&quot;/&quot;})
 
-   versionmanager.createVersionOnActivationがtrueの場合に、アクティベーション時にバージョンが暗黙的に作成されるパス。
+   versionmanager.createVersionOnActivation が true の場合に、アクティベーション時にバージョンが暗黙的に作成されるパス。
 
-* `versionmanager.purgingEnabled` (ブール値、デフォルト：false)
+* `versionmanager.purgingEnabled` ( ブール値、デフォルト：false)
 
    新しいバージョンが作成されたときにパージを有効にするかどうか
 
-* `versionmanager.purgePaths` (文字列[]、デフォルト：{&quot;/content&quot;})
+* `versionmanager.purgePaths` ( 文字列[]、デフォルト：{&quot;/content&quot;})
 
-   新しいバージョンが作成されたときにバージョンをパージするパス。
+   新しいバージョンの作成時にバージョンをパージするパス。
 
-* `versionmanager.maxAgeDays` (整数、デフォルト：30)
+* `versionmanager.maxAgeDays` ( 整数、デフォルト：30)
 
-   パージ時に、この値より古いバージョンが削除されます。 この値が1未満の場合、バージョンの期間に基づいてパージは実行されません
+   パージ時に、この値より古いバージョンが削除されます。 この値が 1 未満の場合、バージョンの年齢に基づいてパージは実行されません。
 
-* `versionmanager.maxNumberVersions` （整数、デフォルトは5）
+* `versionmanager.maxNumberVersions` （整数、デフォルト 5）
 
-   パージ時に、n番目に新しいバージョンより古いバージョンが削除されます。 この値が1未満の場合、バージョン数に基づいてパージは実行されません
+   パージ時に、n 番目に新しいバージョンより古いバージョンが削除されます。 この値が 1 未満の場合、バージョン数に基づいてパージは実行されません
 
-* `versionmanager.minNumberVersions` （整数、デフォルトは0）
+* `versionmanager.minNumberVersions` （整数、デフォルト 0）
 
    年齢に関係なく保持するバージョンの最小数。 この値を 1 未満に設定すると、保持するバージョン数の最小数は設定されません。
 
 >[!NOTE]
 >
->リポジトリに多数のバージョンを保存することはお勧めできません。そのため、バージョンパージ操作を設定するときは、パージから多くのバージョンを除外しすぎないでください。そうしないと、リポジトリサイズが適切に最適化されません。ビジネス要件が原因で多数のバージョンを維持する場合は、Adobeサポートに連絡して、リポジトリサイズを最適化する別の方法を見つけてください。
+>リポジトリに多数のバージョンを保存することはお勧めできません。そのため、バージョンパージ操作を設定するときは、パージから多くのバージョンを除外しすぎないでください。そうしないと、リポジトリサイズが適切に最適化されません。ビジネス要件が原因で多数のバージョンを保持している場合は、Adobeサポートに連絡して、リポジトリサイズを最適化する別の方法を見つけてください。
 
 ### 保持オプションの組み合わせ {#combining-retention-options}
 
-どのバージョンを保持するかを定義するオプション(`maxAgeDays`、`maxNumberVersions`、`minNumberVersions`)は、要件に応じて組み合わせることができます。
+どのバージョンを保持するかを定義するオプション ( `maxAgeDays`, `maxNumberVersions`, `minNumberVersions`) を含め、必要に応じて組み合わせることができます。
 
 保持するバージョン数の最大数と、保持する最も古いバージョンを組み合わせて定義する場合の例：
 

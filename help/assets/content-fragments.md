@@ -23,9 +23,9 @@ ht-degree: 98%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)以降のアプリケーション](/help/release-notes/sp-release-notes.md)が必要です。
+>一部のコンテンツフラグメント機能には、 [AEM 6.4 Service Pack 2(6.4.2.0) 以降](/help/release-notes/sp-release-notes.md).
 
-Adobe Experience Manager(AEM)コンテンツフラグメントを使用すると、ページに依存しないコンテンツ](/help/sites-authoring/content-fragments.md)をデザイン、作成、キュレーションおよび[公開できます。 複数の場所、複数のチャネル上で使用可能なコンテンツを用意できるようになります。
+Adobe Experience Manager(AEM) コンテンツフラグメントを使用すると、 [ページに依存しないコンテンツを公開](/help/sites-authoring/content-fragments.md). 複数の場所、複数のチャネル上で使用可能なコンテンツを用意できるようになります。
 
 コンテンツフラグメントは、AEM コアコンポーネントの Sling Model（JSON）書き出し機能を使用して、JSON 形式で配信することもできます。この形式の配信では次のことが可能です。
 
@@ -103,7 +103,7 @@ AEM コアコンポーネントの JSON 書き出し機能と共にこの構造�
 
 >[!NOTE]
 >
->AEM はフラグメントコンテンツの翻訳もサポートしています。詳しくは、[コンテンツフラグメントの翻訳プロジェクトの作成](creating-translation-projects-for-content-fragments.md)を参照してください。
+>AEM はフラグメントコンテンツの翻訳もサポートしています。詳しくは、 [コンテンツフラグメントの翻訳プロジェクトの作成](creating-translation-projects-for-content-fragments.md) を参照してください。
 
 ## コンテンツフラグメントのタイプ {#types-of-content-fragment}
 

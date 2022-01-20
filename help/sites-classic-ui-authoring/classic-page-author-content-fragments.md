@@ -1,8 +1,8 @@
 ---
 title: コンテンツフラグメントを使用したページのオーサリング
-seo-title: コンテンツフラグメントを使用したページのオーサリング
+seo-title: Page Authoring with Content Fragments
 description: コンテンツフラグメントは、ページから独立したアセットとして作成および管理されます。これによりチャネルに依存しないコンテンツを、様々なバリエーションで作成できます。
-seo-description: コンテンツフラグメントは、ページから独立したアセットとして作成および管理されます。これによりチャネルに依存しないコンテンツを、様々なバリエーションで作成できます。
+seo-description: Content fragments are created and managed as page-independent assets. They allow you to create channel-neutral content, together with variations.
 page-status-flag: de-activated
 uuid: 8e3bb1bc-8720-48e2-8d06-98fbab4dd4fd
 contentOwner: Chris Bohnert
@@ -13,7 +13,7 @@ discoiquuid: 5b488f41-2cc1-41f9-8c7f-da851d325949
 exl-id: 36e00fc0-310c-4dc5-b1d7-68185fa27c30
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '110'
 ht-degree: 100%
 
 ---

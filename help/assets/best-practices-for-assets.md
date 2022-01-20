@@ -1,6 +1,6 @@
 ---
-title: AEM
-description: ' [!DNL Experience Manager]  アセットのデプロイメントと、アセットの取り込みと処理に使用する機能に応じて、負荷時のシステムの安定性とパフォーマンスを高めるベストプラクティスを特定し、順守します。'
+title: AEMを使用してアセットを管理するためのベストプラクティス
+description: 負荷時のシステムの安定性とパフォーマンスを向上させるベストプラクティスを特定し、それに従う。 [!DNL Experience Manager] アセットの取り込みと処理に使用される Assets のデプロイメントと機能。
 contentOwner: AG
 feature: Asset Management
 role: Architect,Admin
@@ -12,29 +12,29 @@ ht-degree: 14%
 
 ---
 
-# [!DNL Experience Manager] Assets のベストプラクティス {#best-practices-for-assets}
+# のベストプラクティス [!DNL Experience Manager] Assets {#best-practices-for-assets}
 
-Adobe Experience Manager Assets は、コンテンツベロシティを通じてビジネス目標の達成に貢献する、高品質のデジタルマーケティングエクスペリエンスを提供する上で重要な役割を果たします。 [!DNL Assets] 内で大量のアセットを扱う場合、またはビデオや Dynamic Media を含む多数のアセットを定期的/定期的にアップロードする場合、システムの効率を高めるには、デジタルアセット管理エクスペリエンスの最適化が重要です。
+Adobe Experience Manager Assets は、コンテンツベロシティを通じてビジネス目標の達成に貢献する、高品質のデジタルマーケティングエクスペリエンスを実現する上で重要な役割を果たします。 内で多数のアセットを操作する場合 [!DNL Assets] また、ビデオや dynamic media を含む多数のアセットを定期的/定期的にアップロードし、デジタルアセット管理エクスペリエンスを最適化することが、システムの効率性のために重要です。
 
-組織に対する [!DNL Assets] の配置方法と、アセットの取り込み、レンディションの生成、メタデータの抽出に使用する機能に応じて、様々な領域でのベストプラクティスを識別して準拠することで、負荷時のシステムの安定性とパフォーマンスが大幅に向上します。
+位置に応じて [!DNL Assets] アセットの取り込み、レンディションの生成、メタデータの取り込みに使用する組織や機能に応じて、様々な領域でのベストプラクティスを識別して準拠することで、負荷時のシステムの安定性とパフォーマンスを大幅に高めます。
 
-次のガイドを確認した後、ニーズに合ったエンタープライズアセット管理システムを構築し、管理するための知識とツールを入手できます。
+以下のガイドを確認した後、ニーズに合ったエンタープライズアセット管理システムを構築および管理するための知識とツールを入手できます。
 
-* [アセットのパフォーマンス調整ガイド実稼動環境への移行後も、実装のあらゆる時点で実行できる一連のベストプラクティスが含まれており、システムを最大限に活用することができます。](performance-tuning-guidelines.md)
-
-* [アセットのサ](assets-sizing-guide.md)
-イジングガイド Assets 実装の予測を描く際には、アセットのストレージ、CPU、メモリ、IO、およびネットワークスループットの観点から十分なリソースを確保することが重要です。これらのアイテムのサイジングには、システムに読み込まれたアセットの数を理解しておく必要があります。このガイドには、[!DNL Experience Manager] Assets のデプロイに必要なインフラストラクチャとリソースの見積もりに効率的な指標を判断するのに役立つベストプラクティスとサイジングツールが含まれています。
-* [アセット移行ガ](assets-migration-guide.md)
-イドレガシーシステムからアセットにアセットを移行する場合 [!DNL Experience Manager] は、移行プロセスを効率化するためにいくつかの手順を考慮する必要があります。移行ガイドには、アセットを [!DNL Experience Manager] に移行するタスクに関するベストプラクティスが含まれています。 これには、メタデータの適用、レンディションの生成、公開デプロイメントへのアセットのアクティベートが含まれます。
-* [Assets のネットワークに関す](assets-network-considerations.md)
-る考慮事項デプロイメン [!DNL Experience Manager] トを処理する場合、ネットワークのパフォーマンスを理解し、渋滞地点を特定し、期待されるユーザーエクスペリエンスを説明するために、ネットワークトポロジを理解することが重要です。Assets のネットワークに関する考慮事項ドキュメントでは、[!DNL Experience Manager] アセットのデプロイメントを設計する際のネットワークに関する考慮事項について説明します。
-* [アセット監視ガ](assets-monitoring-best-practices.md)
-イドデプロイメン [!DNL Experience Manager] ト後は、システムの整合性と運用の効率を確保するために、特定のタスクとシステム全般を監視する必要があります。この監視ガイドには、システムの様々な側面を監視するためのベストプラクティスが記載されています。
-* （非推奨） [Assets オフロードガイド ](assets-offloading-best-practices.md)
-[!DNL Experience Manager] Assets で大きなファイルや実行中のワークフローを処理すると、CPU、メモリ、I/O リソースを大量に消費する可能性があります。 これらのタスクのオフロードは、CPU、メモリ、IO のオーバーヘッドを減らす可能性があります。 Assets オフロードガイドには、Assets オフロードの推奨される使用例およびベストプラクティスが記載されています。
+* [Assets パフォーマンスチューニングガイド](performance-tuning-guidelines.md)
+実稼動環境に移行した後でも、実装内の任意の時点で実行できる一連のベストプラクティスを含め、システムを最大限に活用することができます。
+* [Assets サイズ設定ガイド](assets-sizing-guide.md)
+Assets 実装の予測を描く場合は、アセットのストレージ、CPU、メモリ、IO、ネットワークスループットに関して十分なリソースが確保されていることを確認することが重要です。 これらのアイテムのサイジングには、システムに読み込まれたアセットの数を理解しておく必要があります。このガイドには、導入に必要なインフラストラクチャとリソースの見積もりに効率的な指標を決定するのに役立つベストプラクティスが含まれています [!DNL Experience Manager] アセットとサイズ調整ツール。
+* [アセット移行ガイド](assets-migration-guide.md)
+既存のシステムからにアセットを移行する場合 [!DNL Experience Manager] Assets では、移行プロセスを合理化するためにいくつかの手順を検討する必要があります。 移行ガイドには、アセットをに取り込むために実行するタスクに関するベストプラクティスが含まれています [!DNL Experience Manager] 段階的に これには、メタデータの適用、レンディションの生成、公開へのアセットのアクティベートが含まれます。
+* [Assets のネットワークに関する考慮事項](assets-network-considerations.md)
+処理時 [!DNL Experience Manager] デプロイメント、ネットワークトポロジの理解は、ネットワークのパフォーマンスを理解し、渋滞地点を特定し、期待されるユーザーエクスペリエンスを説明するうえで重要です。 Assets ネットワークに関する考慮事項ドキュメントでは、 [!DNL Experience Manager] アセットのデプロイメント。
+* [Assets 監視ガイド](assets-monitoring-best-practices.md)
+次に [!DNL Experience Manager] デプロイメントを実行する場合は、システムの整合性と運用の効率性を確保するために、特定のタスクとシステム全般を監視する必要があります。 この監視ガイドには、システムの様々な側面を監視するためのベストプラクティスが記載されています。
+* （廃止） [Assets オフロードガイド](assets-offloading-best-practices.md)
+での大きなファイルの処理と実行中のワークフローの処理 [!DNL Experience Manager] アセットは、CPU、メモリ、I/O リソースを大量に消費する可能性があります。 これらのタスクをオフロードすると、CPU、メモリ、および IO のオーバーヘッドを削減できます。 Assets オフロードガイドには、Assets オフロードの推奨される使用例およびベストプラクティスが記載されています。
 * [[!DNL Experience Manager] デスクトップアプリケーションのベストプラクティス](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app-best-practices.html)
-   [!DNL Experience Manager] デスクトップアプリケーションは、デジタルアセット管理 (DAM) ソリューションとデスクトップを連携させ、 [!DNL Experience Manager] web UI で使用可能なファイルをデスクトップで直接開くことができます。[!DNL Experience Manager]デスクトップアプリケーションの使いやすいワークフローは、デスクトップのオペレーティングシステムから提供されるネットワーク共有テクノロジにより有効化されます。このガイドでは、主な機能と推奨される [!DNL Experience Manager] デスクトップアプリケーションの使用例を説明します。
-* [[!DNL Experience Manager] およびCreative Cloud統合のベス](aem-cc-integration-best-practices.md)
-トプラクティスデプロイメントと [!DNL Experience Manager] Creative Cloudは、複数の方法で統合できます。ベストプラクティスに従って統合ワークフローおよびアセット転送ワークフローを効率化すると、効率を最大化することができます。このガイドには、[!DNL Experience Manager] Assets とAdobe Creative Cloudの統合に関するベストプラクティスが記載されています。
-* （非推奨） [[!DNL Experience Manager]  フォルダー共有のベストプラクティスをCreative Cloud](aem-cc-folder-sharing-best-practices.md)
-[!DNL Experience Manager] を設定して、DAM のユーザーがCreative Cloudーユーザーとフォルダーを共有できるようにし、Creative Cloudーアセットサービスで共有フォルダーとして使用できるようにすることができます。 この機能を使用すると、クリエイティブチームと DAM ユーザーの間でファイルを交換することができます。このガイドでは、[!DNL Experience Manager] をフォルダー共有機能に活用するベストプラクティスをCreative Cloudに説明します。
+   [!DNL Experience Manager] デスクトップアプリケーションは、デジタルアセット管理 (DAM) ソリューションとデスクトップをつなぎ、 [!DNL Experience Manager] Web UI をデスクトップに直接配置できます。 [!DNL Experience Manager]デスクトップアプリケーションの使いやすいワークフローは、デスクトップのオペレーティングシステムから提供されるネットワーク共有テクノロジにより有効化されます。このガイドでは、の主な機能と推奨される使用方法を説明します [!DNL Experience Manager] デスクトップアプリケーション。
+* [[!DNL Experience Manager] とCreative Cloud統合のベストプラクティス](aem-cc-integration-best-practices.md)
+以下を [!DNL Experience Manager] Creative Cloudを使用したデプロイメントを複数の方法で実行できます。 ベストプラクティスに従って統合ワークフローおよびアセット転送ワークフローを効率化すると、効率を最大化することができます。このガイドには、の統合に関するベストプラクティスが含まれています [!DNL Experience Manager] Adobe Creative Cloudの Assets
+* （廃止） [[!DNL Experience Manager] Creative Cloudフォルダー共有のベストプラクティス](aem-cc-folder-sharing-best-practices.md)
+次の項目を設定できます。 [!DNL Experience Manager] DAM のユーザーがCreative Cloudーをフォルダーユーザーと共有できるようにして、フォルダーをCreative Cloudアセットサービスで共有フォルダーとして使用できるようにする。 この機能を使用すると、クリエイティブチームと DAM ユーザーの間でファイルを交換することができます。このガイドでは、 [!DNL Experience Manager] をCreative Cloudフォルダー共有機能に追加しました。

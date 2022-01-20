@@ -1,19 +1,19 @@
 ---
 title: HTML5 forms 用のフォームテンプレートのレンダリング
-seo-title: HTML5 forms 用のフォームテンプレートのレンダリング
+seo-title: Rendering form template for HTML5 forms
 description: HTML5 forms のプロファイルは、プロファイルレンダリングに関連付けられています。プロファイルレンダラーは Forms OSGi サービスを呼び出すことでフォームの HTML 表現を生成する役割を持つ JSP ページです。
-seo-description: HTML5 forms のプロファイルは、プロファイルレンダリングに関連付けられています。プロファイルレンダラーは Forms OSGi サービスを呼び出すことでフォームの HTML 表現を生成する役割を持つ JSP ページです。
+seo-description: HTML5 forms profiles are associated with profile renders. Profile Renders are JSP pages responsible for generating HTML representation of the form by calling the Forms OSGi service.
 uuid: 34daed78-0611-4355-9698-0d7f758e6b61
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: cb75b826-d044-44be-b364-790c046513e0
-feature: 'モバイルフォーム '
+feature: Mobile Forms
 exl-id: ccdb2045-9339-4f39-acb5-85999c4667b9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 79%
+source-wordcount: '535'
+ht-degree: 78%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 79%
 
 ## レンダリングエンドポイント {#render-endpoint}
 
-HTML5フォームには、**プロファイル**&#x200B;という概念があり、これらはRESTエンドポイントとして公開され、フォームテンプレートのモバイルレンダリングを有効にします。 これらのプロファイルは、**プロファイルレンダラー**&#x200B;を関連付けています。 これらは、Forms OSGiサービスを呼び出してフォームのHTML表現を生成する役割を持つJSPページです。 Profile ノードの JCR パスがレンダリングエンドポイントの URL を決定します。「default」プロファイルを指す、フォームのデフォルトのレンダリングエンドポイントは次のようになります。
+HTML5 の形は **プロファイル** フォームテンプレートのモバイルレンダリングを可能にするために、REST エンドポイントとして公開される。 これらのプロファイルは、 **プロファイルレンダラー**. これらは、Forms OSGi サービスを呼び出してフォームのHTML表現を生成する役割を持つ JSP ページです。 Profile ノードの JCR パスがレンダリングエンドポイントの URL を決定します。「default」プロファイルを指す、フォームのデフォルトのレンダリングエンドポイントは次のようになります。
 
-https://&lt;*host*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRoot=*xdp*>&amp;template=&lt;*xdp*&#x200B;の名前を含むフォルダーのパス
+https://&lt;*ホスト*>:&lt;*ポート*>/content/xfaforms/profiles/default.html?contentRoot=&lt;*フォーム xdp を含むフォルダーのパス*>&amp;template=&lt;*xdp の名前*>
 
 例：`http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
@@ -64,23 +64,23 @@ http://localhost:4502/content/xfaforms/profiles/default.html?
  </tbody> 
 </table>
 
-### フォームテンプレートとのデータの結合  {#merge-data-with-form-template}
+### フォームテンプレートとのデータの結合 {#merge-data-with-form-template}
 
 | パラメーター | 説明 |
 |---|---|
-| dataRef | このパラメーターはテンプレートと結合されるデータファイルの&#x200B;**絶対パス**&#x200B;を指定します。このパラメーターには、XML形式のデータを返すRESTサービスへのURLを指定できます。 |
+| dataRef | このパラメーターはテンプレートと結合されるデータファイルの&#x200B;**絶対パス**&#x200B;を指定します。このパラメーターには、XML 形式のデータを返す REST サービスへの URL を指定できます。 |
 | data | このパラメーターはテンプレートと結合される UTF-8 エンコードされたデータバイトを指定します。このパラメーターが指定されている場合、HTML5 form は dataRef パラメーターを無視します。 |
 
-### レンダリングパラメーターの送信  {#passing-the-render-parameter}
+### レンダリングパラメーターの送信 {#passing-the-render-parameter}
 
-HTML5 forms は 3 つの方法によるレンダリングパラメーターの送信をサポートしています。URL、キー値ペア、およびプロファイルノードを使用してパラメーターを渡すことができます。レンダリングパラメーターでは、キー値ペアは最高の優先度を持ち、プロファイルノードがその次に高い優先度を持ちます。URL Requestパラメーターは、最も優先順位を保持しません。
+HTML5 forms は 3 つの方法によるレンダリングパラメーターの送信をサポートしています。URL、キー値ペア、およびプロファイルノードを使用してパラメーターを渡すことができます。レンダリングパラメーターでは、キー値ペアは最高の優先度を持ち、プロファイルノードがその次に高い優先度を持ちます。URL Request パラメーターは、最も優先順位が低くなります。
 
-* **URL リクエストパラメーター**: レンダリングパラメーターを URL で指定できます。 URL リクエストパラメーターでは、パラメーターはエンドユーザーに対して表示されます。例えば、次の送信URLは、URLにテンプレートパラメーターを含んでいます。`http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp`
+* **URL リクエストパラメーター**: レンダリングパラメーターを URL で指定できます。 URL リクエストパラメーターでは、パラメーターはエンドユーザーに対して表示されます。例えば、次の送信 URL の URL には、URL に template パラメーターが含まれています。 `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp`
 
 * **SetAttribute リクエストパラメーター**: レンダリングパラメーターをキー値ペアとして指定できます。 SetAttribute リクエストパラメーターでは、パラメーターはエンドユーザーに対して表示されません。リクエストを他の JSP から HTML5 form のプロファイルレンダラ― JSP に転送し、リクエストオブジェクトで *setAttribute* を使用してすべてのレンダリングパラメーターを渡すことができます。この方法は最高の優先度を持ちます。
 
-* **プロファイルノードリクエストパラメーター：** レンダリングパラメーターは、プロファイルノードのノードプロパティとして指定できます。プロファイルノードリクエストパラメーターでは、パラメーターはエンドユーザーに対して表示されません。プロファイルノードは、リクエストが送信されるノードです。パラメーターをノードプロパティとして指定するには、CRXDE lite を使用します。
+* **プロファイルノードリクエストパラメーター：** レンダリングパラメーターは、プロファイルノードのノードプロパティとして指定できます。 プロファイルノードリクエストパラメーターでは、パラメーターはエンドユーザーに対して表示されません。プロファイルノードは、リクエストが送信されるノードです。パラメーターをノードプロパティとして指定するには、CRXDE lite を使用します。
 
-### 送信パラメーター  {#submit-parameters}
+### 送信パラメーター {#submit-parameters}
 
 HTML5 forms はデータを送信し、サーバー側スクリプトおよび Web サービスを AEM サーバーで実行します。サーバー側スクリプトと Web サービスを AEM サーバーで実行するために使用するパラメーターについて詳しくは、[HTML5 フォームサービスプロキシ](/help/forms/using/service-proxy.md)を参照してください。

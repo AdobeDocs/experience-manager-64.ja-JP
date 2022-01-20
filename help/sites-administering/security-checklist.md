@@ -54,13 +54,13 @@ ht-degree: 86%
 
 以下のアカウントが該当します。
 
-* AEMの`admin`アカウント
+* AEM `admin` アカウント
 
-   AEM adminアカウントのパスワードを変更したら、CRXにアクセスする際に新しいパスワードを使用する必要があります。
+   AEM admin アカウントのパスワードを変更したら、CRX にアクセスする際に新しいパスワードを使用する必要があります。
 
-* OSGi Webコンソールの`admin`パスワード
+* この `admin` OSGi Web コンソールのパスワード
 
-   この変更は、Webコンソールへのアクセスに使用する管理者アカウントにも適用されるので、アクセス時に同じパスワードを使用する必要があります。
+   この変更は、Web コンソールへのアクセスに使用する管理者アカウントにも適用されるので、アクセス時には同じパスワードを使用する必要があります。
 
 これらの 2 つのアカウントは、個別の資格情報を使用する異なるアカウントです。デプロイメントをセキュリティで保護するには、それぞれに強力なパスワードを設定することが不可欠です。
 
@@ -85,15 +85,15 @@ Web コンソールのパスワードの変更について詳しくは、以下�
 
 #### OSGi Web コンソールの admin パスワードの変更 {#changing-the-osgi-web-console-admin-password}
 
-また、Webコンソールへのアクセスに使用するパスワードも変更する必要があります。これは、[Apache Felix OSGi Management Console](/help/sites-deploying/osgi-configuration-settings.md)の次のプロパティを設定することでおこなわれます。
+また、Web コンソールへのアクセスに使用するパスワードを変更する必要があります。これは、 [Apache Felix OSGi Management Console](/help/sites-deploying/osgi-configuration-settings.md):
 
-**ユー** ザー名と **パスワード**:Apache Felix Web Management Console自体にアクセスするための資格情報です。\
+**ユーザー名** および **パスワード**:Apache Felix Web Management Console にアクセスするための資格情報。\
 インスタンスのセキュリティを確保するために、最初のインストール後にパスワードを変更する必要があります。
 
 次の手順を実行します。
 
-1. Webコンソール(`<server>:<port>/system/console/configMgr`)に移動します。
-1. ** Apache Felix OSGi Management Console**に移動し、**ユーザー名**&#x200B;と&#x200B;**パスワード**&#x200B;を変更します。
+1. Web コンソール ( ) に移動します。 `<server>:<port>/system/console/configMgr`.
+1. ** Apache Felix OSGi Management Console**に移動し、 **ユーザー名** および **パスワード**.
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
@@ -123,7 +123,7 @@ AEM の標準インストールでは、`admin` をデフォルトの[レプリ�
 
 セキュリティを考慮して、特定の使用事例に対応するように両方のユーザーを変更してください。その際の注意事項を次に示します。
 
-* **トランスポートユーザー**&#x200B;を管理者ユーザーにすることはできません。代わりに、パブリッシュシステムの関連する部分に対するアクセス権のみを持つユーザーをパブリッシュシステム上に設定し、そのユーザーの資格情報をトランスポートに使用します。
+* この **輸送利用者** 管理者ユーザーではない。代わりに、パブリッシュシステムの関連する部分に対するアクセス権のみを持つユーザーをパブリッシュシステム上に設定し、そのユーザーの資格情報をトランスポートに使用します。
 
    バンドルされたレプリケーション受信者ユーザーから開始し、状況に合わせてそのユーザーのアクセス権限を設定できます。
 
@@ -143,7 +143,7 @@ AEM 6 には新しく操作ダッシュボードが導入されています。�
 
 >[!NOTE]
 >
->このインスタンスが[実稼動準備モード](/help/sites-administering/production-ready.md)で実行されている場合、サンプルの We.Retail アプリケーションは削除されます。何らかの理由でこれが当てはまらない場合は、パッケージマネージャーに移動して、すべての We.Retail パッケージを検索してアンインストールすることで、サンプルコンテンツをアンインストールできます。詳しくは、[パッケージの使い方](package-manager.md)を参照してください。
+>このインスタンスが[実稼動準備モード](/help/sites-administering/production-ready.md)で実行されている場合、サンプルの We.Retail アプリケーションは削除されます。何らかの理由でこれが当てはまらない場合は、パッケージマネージャーに移動して、すべての We.Retail パッケージを検索してアンインストールすることで、サンプルコンテンツをアンインストールできます。詳しくは、 [パッケージの操作方法](package-manager.md).
 
 ### CRX 開発バンドルが存在するかどうかの確認 {#check-if-the-crx-development-bundles-are-present}
 
@@ -173,26 +173,26 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
 * フィルター処理する HTTP メソッド
 * 空のリファラーヘッダーを使用できるかどうか
-* と、サーバホストに加えて許可されるサーバのリスト。
+* と、サーバーホストに加えて許可されるサーバーのリスト。
 
-   デフォルトでは、localhostのバリエーションと、サーバーがバインドされている現在のホスト名がすべてリストに含まれます。
+   デフォルトでは、localhost のすべてのバリエーションと、サーバーがバインドされる現在のホスト名がリストに含まれます。
 
 リファラーフィルターサービスを設定するには：
 
-1. 次の場所にあるApache Felixコンソール(**Configurations**)を開きます。
+1. Apache Felix コンソール (**設定**):
 
    `https://<server>:<port_number>/system/console/configMgr`
 
-1. `admin`としてログインします。
+1. ログイン名 `admin`.
 1. **Configurations** メニューで、次の項目を選択します。
 
    `Apache Sling Referrer Filter`
 
-1. 「`Allow Hosts`」フィールドに、リファラーとして許可するすべてのホストを入力します。各エントリは、次の形式にする必要があります。
+1. 「`Allow Hosts`」フィールドに、リファラーとして許可するすべてのホストを入力します。各エントリは、フォームである必要があります
 
    &lt;protocol>://&lt;server>:&lt;port>
 
-   例えば、次の操作が可能です。
+   次に例を示します。
 
    * `https://allowed.server:80`の場合、特定のポートを使用して、このサーバーからの要求がすべて許可されます。
    * https 要求も許可する場合は、2 行目を入力する必要があります。
@@ -261,7 +261,7 @@ AEM を操作しているときは、このようなサービスの設定を管�
 
 * 無制限の数の URL を含むコンテンツページを要求する。URL にはハンドル、複数のセレクター、拡張子およびサフィックスを含めることができます。それらのいずれかを変更できます。
 
-   例えば、`.../en.html`は次のように要求することもできます。
+   例： `.../en.html` また、次のようにリクエストすることもできます。
 
    * `.../en.ExtensionDosAttack`
    * `.../en.SelectorDosAttack.html`
@@ -301,11 +301,11 @@ DoS の悪用を防ぐ方法は次のとおりです。
 
       `http://localhost:4502/.json`
 
-      は、JSON表現でリポジトリ全体をダンプできます。 これにより、サーバーで重大な問題が発生します。そのため、Sling では結果の最大数に制限を設定します。JSONレンダリングの深さを制限するには、次の値を設定します。
+      は、JSON 表現でリポジトリ全体をダンプできませんでした。 これにより、サーバーで重大な問題が発生します。そのため、Sling では結果の最大数に制限を設定します。JSON レンダリングの深さを制限するには、次の値を設定します。
 
-      **JSONの最大結果** ( `json.maximumresults`)
+      **JSON の最大結果数** ( `json.maximumresults`)
 
-      ([Apache SlingGETサーブレット](/help/sites-deploying/osgi-configuration-settings.md)の設定)を参照してください。 この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `1000` です。
+      を [Apache SlingGETサーブレット](/help/sites-deploying/osgi-configuration-settings.md). この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `1000` です。
 
    * 予防策として、デフォルトの他のレンダラー（HTML、プレーンテキスト、XML）を無効にします。この場合も [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md) を設定します。
    >[!CAUTION]
@@ -322,11 +322,11 @@ DoS の悪用を防ぐ方法は次のとおりです。
 >
 >この軽減策は、Forms を使用していない AEM 環境でのみ実行するべきです。
 
-AEM は `FormChooserServlet` 用の標準インデックスを提供していないため、クエリでフォームセレクターを使用すると、高コストのリポジトリートラバーサルが発生し、大抵の場合 AEM インスタンスが停止します。フォームセレクターは、**&amp;ast;.formの存在によって検出できます。クエリ内の&amp;ast;**&#x200B;文字列。
+AEM は `FormChooserServlet` 用の標準インデックスを提供していないため、クエリでフォームセレクターを使用すると、高コストのリポジトリートラバーサルが発生し、大抵の場合 AEM インスタンスが停止します。フォームセレクターは、 **&amp;ast;.form.&amp;ast;** 文字列をクエリに含めます。
 
 これを軽減するために、以下の手順に従ってください。
 
-1. ブラウザーで&#x200B;*https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*&#x200B;を参照して、Webコンソールに移動します。
+1. ブラウザーで *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*
 
 1. **Day CQ WCM Form Chooser Servlet** を検索します。
 1. エントリをクリックした後、次のウィンドウで「**Advanced Search Require**」を無効にします。
@@ -377,7 +377,7 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 推奨されませんが、既存のアプリケーションとの後方互換性確保のために以前の実装が必要な場合は、この機能を無効にすることもできます。これをおこなうには、次の手順を実行する必要があります。
 
-1. Webコンソールに移動し、**Apache Jackrabbit Oak SecurityProvider**&#x200B;の&#x200B;**requiredServicePids**&#x200B;プロパティから** org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName**エントリを削除します。
+1. Web コンソールに移動し、プロパティから** org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName**エントリを削除します。 **requiredServicePids** in **Apache Jackrabbit Oak SecurityProvider**.
 
    また、OSGi 設定の **org.apache.jackrabbit.oak.security.internal.SecurityProviderRegistration** PID を探すことで、Oak Security Provider を見つけることもできます。
 
@@ -393,7 +393,7 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 クリックジャッキングを防ぐには、`SAMEORIGIN` に設定した HTTP ヘッダー `X-FRAME-OPTIONS` を指定するように Web サーバーを設定することをお勧めします。
 
-クリックジャッキングに関する詳細は、OWASPのサイト](https://www.owasp.org/index.php/Clickjacking)を参照してください。[
+詳細 [クリックジャッキングに関する情報は、 OWASP のサイトを参照してください。](https://www.owasp.org/index.php/Clickjacking).
 
 ### 必要な場合は暗号鍵を適切にレプリケーションする {#make-sure-you-properly-replicate-encryption-keys-when-needed}
 
@@ -418,12 +418,12 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
    各フォルダー内の `bundle.info` ファイルは、バンドル名を示します。 
 
-1. データフォルダーに移動します。例えば、次の操作が可能です。
+1. データフォルダーに移動します。次に例を示します。
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. HMAC とマスターファイルをコピーします。
-1. 次に、HMAC 鍵の複製先となるターゲットインスタンスにアクセスし、データフォルダーに移動します。例えば、次の操作が可能です。
+1. 次に、HMAC 鍵の複製先となるターゲットインスタンスにアクセスし、データフォルダーに移動します。次に例を示します。
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
@@ -439,12 +439,12 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 #### AEM 6.2 以前のバージョンでの鍵のレプリケーション {#replicating-keys-for-aem-and-older-versions}
 
-AEM 6.2以前のバージョンでは、キーは`/etc/key`ノードの下のリポジトリに保存されます。
+AEM 6.2 以前のバージョンでは、キーは、 `/etc/key` ノード。
 
 インスタンス全体で鍵を安全にレプリケーションするために推奨される方法は、このノードのみをレプリケーションすることです。CRXDE Lite によって、ノードを選択してレプリケーションできます。
 
-1. *https://&lt;serveraddress>:4502/crx/de/index.jsp*&#x200B;に移動してCRXDE Liteを開きます。
-1. `/etc/key`ノードを選択します。
+1. CRXDE Liteを開く ( *https://&lt;serrveraddress>:4502/crx/de/index.jsp*
+1. を選択します。 `/etc/key` ノード。
 1. 「**レプリケーション**」タブに移動します。
 1. 「**レプリケーション**」ボタンを押します。
 

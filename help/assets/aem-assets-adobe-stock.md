@@ -20,7 +20,7 @@ ht-degree: 91%
 
 ## 前提条件 {#prerequisites}
 
-この統合を利用するには、[Adobe Stock エンタープライズプラン](https://stockenterprise.adobe.com/)と、最新の Service Pack 2 を展開した 6.4 が必要です。[!DNL Experience Manager][!DNL Experience Manager] 6.4サービスパックの詳細については、以下の[リリースノート](/help/release-notes/sp-release-notes.md)を参照してください。
+この統合を利用するには、[Adobe Stock エンタープライズプラン](https://stockenterprise.adobe.com/)と、最新の Service Pack 2 を展開した 6.4 が必要です。[!DNL Experience Manager]の場合 [!DNL Experience Manager] 6.4 サービスパックの詳細は、次を参照してください [リリースノート](/help/release-notes/sp-release-notes.md).
 
 ## [!DNL Experience Manager] と [!DNL Adobe Stock] の統合  {#integrate-aem-and-adobe-stock}
 
@@ -45,7 +45,7 @@ ht-degree: 91%
 
 ### [!DNL Adobe Stock] での [!DNL Experience Manager] 設定の作成  {#create-adobe-stock-configuration-in-aem}
 
-1. [!DNL Experience Manager]ユーザーインターフェイスで、**[!UICONTROL ツール]** / **[!UICONTROL Cloud Services]** / **[!UICONTROL Adobe Stock]**&#x200B;に移動します。
+1. 内 [!DNL Experience Manager] ユーザーインターフェイス、に移動する **[!UICONTROL ツール]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**.
 1. 「**[!UICONTROL 作成]**」をクリックして設定を作成し、その設定を既存の IMS 設定に関連付けます。環境パラメーターとして「`PROD`」を選択します。
 1. 「**[!UICONTROL ライセンスが必要なアセットのパス]**」フィールドの場所をそのまま残します。この場所を [!DNL Adobe Stock] アセットを保存する場所に変更しないでください。
 1. すべての必須プロパティを追加して作成を完了します。「**[!UICONTROL 保存して閉じる]**」をクリックします。
@@ -53,7 +53,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->複数の[!DNL Adobe Stock]設定がある場合は、ユーザーの環境設定パネル(**[!UICONTROL AEM]** / **[!UICONTROL ユーザーアイコン]** / **[!UICONTROL ユーザーの環境設定]** / **[!UICONTROL Stock設定]**)で目的の設定を選択します。
+>複数の [!DNL Adobe Stock] の設定を行う場合は、ユーザーの環境設定パネルで目的の設定を選択します (**[!UICONTROL AEM]** > **[!UICONTROL ユーザーアイコン]** > **[!UICONTROL ユーザーの環境設定]** > **[!UICONTROL 在庫設定]**) をクリックします。
 
 ## [!DNL Adobe Stock] での [!DNL Experience Manager] アセットの使用と管理  {#usemanage}
 
@@ -61,9 +61,9 @@ ht-degree: 91%
 
 [!DNL Experience Manager] 内で [!DNL Adobe Stock] アセットのライセンスを取得すると、そのアセットを通常のアセットと同様に使用および管理できます。ユーザーは [!DNL Experience Manager] 内でアセットの検索およびプレビュー、アセットのコピーおよび公開、[!DNL Brand Portal] でのアセットの共有、[!DNL Experience Manager] デスクトップアプリケーション経由でのアセットのアクセスおよび使用を行うことができます。
 
-![Adobe Stock Assetsの検索とAdobe Experience Manager Workspaceからの結果のフィルタリング](assets/adobe-stock-search-results-workspace.png)
+![Adobe Experience Manager Workspace からのAdobe Stock Assets の検索と結果のフィルタリング](assets/adobe-stock-search-results-workspace.png)
 
-*図：インターフェイス [!DNL Adobe Stock] からアセットを検索し、結果をフィルタリ [!DNL Experience Manager] ングします。*
+*図：を検索 [!DNL Adobe Stock] アセットとフィルターの結果 [!DNL Experience Manager] インターフェイス。*
 
 **A.**[!DNL Adobe Stock] 指定された ID のアセットと類似しているアセットを検索します。**B.** 選択した形状や向きと一致するアセットを検索します。**C.** サポートされているアセットタイプのいずれかを検索します。**D.** フィルターウィンドウを開く／折りたたみます。**E.** 選択したアセットのライセンスを取得して に保存します。[!DNL Experience Manager]**F.**[!DNL Experience Manager] アセットを透かし付きで に保存します。**G.**[!DNL Adobe Stock] 選択したアセットと類似したアセットを Web サイトで調べます。**H.**[!DNL Adobe Stock] 選択したアセットを Web サイトに表示します。**I.** 検索結果から選択したアセットの数。**J.** カード表示とリスト表示を切り替えます。
 
@@ -73,7 +73,7 @@ ht-degree: 91%
 
 * [!DNL Adobe Stock] アセットを検索するには、**[!UICONTROL ナビゲーション]**／**[!UICONTROL アセット]**／**[!UICONTROL Adobe Stock を検索]**&#x200B;をクリックします。
 
-* [!DNL Adobe Stock]と[!DNL Experience Manager Assets]にまたがるアセットを検索するには、「![search_icon](assets/search_icon.png)」をクリックします。
+* 複数のアセットを検索するには [!DNL Adobe Stock] および [!DNL Experience Manager Assets]、検索をクリック ![search_icon](assets/search_icon.png).
 
 また、アセットを選択するには、検索バーに「`Location: Adobe Stock`」と入力します。[!DNL Adobe Stock][!DNL Experience Manager] は、検索されたアセットに対する高度なフィルタリング機能を備えており、サポートされているアセットのタイプや画像の向き、ライセンスの状態などのフィルターを使用して、必要なアセットをすばやく見つけることができます。
 
@@ -123,7 +123,7 @@ ht-degree: 91%
 
 >[!MORELIKETHIS]
 >
->* [でのアセットの使用に関するビ [!DNL Adobe Stock] デオチュートリアル [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html?lang=ja)
+>* [の使用に関するビデオチュートリアル [!DNL Adobe Stock] を持つアセット [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html?lang=ja)
 >* [[!DNL Adobe Stock] エンタープライズプランのヘルプ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-stock-enterprise.ug.html)
 >* [[!DNL Adobe Stock] FAQ](https://helpx.adobe.com/jp/stock/faq.html)
 

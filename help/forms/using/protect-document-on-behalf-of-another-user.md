@@ -1,8 +1,8 @@
 ---
 title: 別のユーザーの代わりにドキュメントを保護する
-seo-title: 別のユーザーの代わりにドキュメントを保護する
-description: APIを使用して、ドキュメントを編集する権限を取得せずに、別のユーザーの代わりにドキュメントを保護する方法を説明します。
-seo-description: APIを使用して、ドキュメントを編集する権限を取得せずに、別のユーザーの代わりにドキュメントを保護する方法を説明します。
+seo-title: Protect a document on behalf of another user
+description: API を使用して、ドキュメントを編集する権限を取得することなく、別のユーザーの代わりにドキュメントを保護する方法を説明します。
+seo-description: Learn how to use the APIs to protect a document on behalf of another user without attaining the permissions to edit the document.
 uuid: 76f4b30b-6d0c-4cae-98b3-334efdbf27bb
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 7cb8140d-dd62-4659-8cc7-21361bd5d3f6
@@ -10,8 +10,8 @@ feature: Document Security
 exl-id: 76f25e65-1bc3-4801-998c-40ff533393e2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 84%
+source-wordcount: '383'
+ht-degree: 89%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 84%
 
 AEM Forms Document Security Java SDK には、別のユーザーの代わりにユーザーアカウントを使用してドキュメントを保護する API セットが用意されています。ドキュメントの編集権限を取得する必要はありません。これらの API は、ワークフロープロセスで使用することも、プログラム内でドキュメントサービスとして使用することもできます。新しく導入された API は以下のとおりです。
 
-* **** protectDocumentProtectDocument APIを使用して、
+* **protectDocumentUse** の代わりにポリシーをドキュメントに適用する ProtectDocument API です
 
    別のユーザーアカウント。 ポリシーを適用するためのユーザーアカウントの権限は、ドキュメントの保護に制限されたままになります。ドキュメントを開いて表示するための権限が付与されることはありません。RMSecureDocumentResult protectDocument(Document inDoc, String documentName, String policySetName, String policyName, RMLocale locale, boolean bExactMatchForNames)
 

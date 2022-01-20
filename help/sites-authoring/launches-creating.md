@@ -1,8 +1,8 @@
 ---
 title: ローンチの作成
-seo-title: ローンチの作成
+seo-title: Creating Launches
 description: '今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるように、ローンチを作成できます。 '
-seo-description: '今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるように、ローンチを作成できます。 '
+seo-description: You can create a launch to enable the updating of a new version of existing web pages for future activation.
 uuid: c1a32710-8189-4a2e-bf2f-428ab30d48c8
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 4b9d2f5f-aae7-4366-b6a6-a8277155cee9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '986'
 ht-degree: 98%
 
 ---
@@ -84,7 +84,7 @@ ht-degree: 98%
    * **ローンチタイトル**：ローンチの名前。作成者にとって意味のある名前にしてください。
    * **既存のコンテンツを使用**：元のコンテンツを使用してローンチを作成します。
    * **新しいテンプレートを使用してページを置き換える**：詳しくは、[新しいテンプレートでのローンチの作成](#create-launch-with-new-template)を参照してください。
-   * **ソースページのライブデータを継承**：ソースページに変更があったときにローンチページのコンテンツを自動的に更新する場合は、このオプションを選択します。このオプションは、ローンチを[ライブコピー](/help/sites-administering/msm.md)にすることでこれを実現します。
+   * **ソースページのライブデータを継承**：ソースページに変更があったときにローンチページのコンテンツを自動的に更新する場合は、このオプションを選択します。このオプションは、ローンチを [ライブコピー](/help/sites-administering/msm.md).
 
       デフォルトでは、このオプションが選択されています。
 
@@ -124,7 +124,7 @@ ht-degree: 98%
 >
 >このメカニズムを使用して、[既存のページ](/help/sites-authoring/managing-pages.md#creating-a-new-page)のテンプレートを変更できます。ただし、コンテンツが失われることは考慮する必要があります。
 
-### ネストされたローンチの作成  {#creating-a-nested-launch}
+### ネストされたローンチの作成 {#creating-a-nested-launch}
 
 ネストされたローンチを作成（ローンチをローンチ内に作成）して、既存のローンチからローンチを作成できます。これにより、作成者は各ローンチで同じ変更を複数回加えることなく、既に加えられた変更を活用できます。
 

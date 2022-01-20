@@ -1,9 +1,9 @@
 ---
 title: AEM 6 での監査ログのメンテナンス
-seo-title: AEM 6 での監査ログのメンテナンス
+seo-title: Audit Log Maintenance in AEM 6
 description: AEM での監査ログのメンテナンスについて説明します。
-feature: 運用
-seo-description: AEM での監査ログのメンテナンスについて説明します。
+feature: Operations
+seo-description: Lear about Audit Log Maintenance in AEM.
 uuid: 212de4df-6bf4-434c-94e1-74186d21945a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ discoiquuid: 565d89de-b3ca-41a5-8e1c-d10905c25fb5
 exl-id: bcbdab55-4871-4c7f-b82a-b7d8280e82e3
 source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '603'
 ht-degree: 81%
 
 ---
@@ -40,9 +40,9 @@ ht-degree: 81%
 
 監査ログのパージを設定するには、次の手順に従います。
 
-1. ブラウザーで`http://localhost:4502/system/console/configMgr/`
+1. ブラウザーで `http://localhost:4502/system/console/configMgr/`
 
-1. **ページ監査ログのパージルール**&#x200B;という名前の項目を検索し、クリックします。
+1. 次の名前の項目を検索： **ページ監査ログのパージルール** をクリックします。
 
    ![chlimage_1-365](assets/chlimage_1-365.png)
 
@@ -55,30 +55,30 @@ ht-degree: 81%
 
    >[!NOTE]
    >
-   >コンテンツパスは、リポジトリ内の`/var/audit/com.day.cq.wcm.core.page`ノードの子にのみ適用されます。
+   >コンテンツパスは、 `/var/audit/com.day.cq.wcm.core.page` ノードを作成します。
 
 1. ルールを保存します。
 1. 作成したルールを実行するためには、操作ダッシュボードに公開する必要があります。そのためには、AEM のようこそ画面から&#x200B;**ツール／操作／メンテナンス**&#x200B;に移動します。
 
 1. **週別メンテナンスウィンドウ**&#x200B;カードをクリックします。
 
-1. **AuditLog Maintenance Task**&#x200B;カードに既にメンテナンスタスクが存在します。
+1. メンテナンスタスクは既に **監査ログのメンテナンスタスク** カード。
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
 1. 次回実行の日付を調べて設定するか、再生ボタンをクリックして手動で実行できます。
 
-AEM 6.3では、監査ログのパージタスクが完了する前に、スケジュールされたメンテナンスウィンドウが閉じると、タスクは自動的に停止します。 次回のメンテナンスウィンドウを開くと、タスクは再開されます。
+AEM 6.3 では、監査ログのパージタスクが完了する前にスケジュールされたメンテナンスウィンドウが閉じると、タスクは自動的に停止します。 次回のメンテナンスウィンドウを開くと、タスクは再開されます。
 
-**AEM 6.4では**、実行中の監査ログのパージタスクを手動で停止するには、停止アイコンをクリック **** します。次回の実行時に、タスクは安全に再開されます。
+**AEM 6.4 を使用**&#x200B;を使用すると、 **停止** アイコン 次回の実行時に、タスクは安全に再開されます。
 
 >[!NOTE]
 >
 >メンテナンスタスクを停止すると、タスクの実行は休止されますが、既に進行しているジョブの監視が途切れることはありません。
 
-## DAM 監査ログのパージの設定  {#configure-dam-audit-log-purging}
+## DAM 監査ログのパージの設定 {#configure-dam-audit-log-purging}
 
-1. *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*&#x200B;のシステムコンソールに移動します。
+1. システムコンソール ( ) に移動します。 *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*
 1. **DAM 監査ログのパージ** ルールを探して結果をクリックします。
 1. それに従って、次のウィンドウでルールを設定します。オプションは以下のとおりです。
 
@@ -89,9 +89,9 @@ AEM 6.3では、監査ログのパージタスクが完了する前に、スケ�
 
 1. 「**保存**」をクリックして設定を保存します。
 
-## レプリケーション監査ログのパージの設定   {#configure-replication-audit-log-purging}
+## レプリケーション監査ログのパージの設定  {#configure-replication-audit-log-purging}
 
-1. *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*&#x200B;のシステムコンソールに移動します。
+1. システムコンソール ( ) に移動します。 *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*
 1. **レプリケーション監査ログのパージスケジューラー** を探して結果をクリックします。
 1. それに従って、次のウィンドウでルールを設定します。オプションは以下のとおりです。
 

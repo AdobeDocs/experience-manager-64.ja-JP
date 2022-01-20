@@ -1,8 +1,8 @@
 ---
 title: アダプティブテンプレートレンダリング
-seo-title: アダプティブテンプレートレンダリング
+seo-title: Adaptive Template Rendering
 description: アダプティブテンプレートレンダリング
-seo-description: 'null'
+seo-description: null
 uuid: 97226ae1-e42a-40ae-a5e0-886cd77559d8
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: f5cb0e98-0d6e-4f14-9b94-df1a9d8cbe5b
 exl-id: a2adc825-2a18-42b8-a639-c48243b2279c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '486'
 ht-degree: 83%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 83%
 
 この例では、We.Retail 内に&#x200B;**エクスペリエンスページ**&#x200B;テンプレートの一部としてアダプティブレンダリングセレクターが含まれるように、既存のデバイスグループである&#x200B;**スマートフォン**&#x200B;を設定します。
 
-1. `http://localhost:4502/miscadmin#/etc/mobile/groups`で、アダプティブセレクターが必要なデバイスグループを編集します。
+1. アダプティブセレクターが必要なデバイスグループを `http://localhost:4502/miscadmin#/etc/mobile/groups`
 
    「**エミュレーターを無効にする**」オプションを設定して保存します。
 
@@ -64,7 +64,7 @@ ht-degree: 83%
 
    ![chlimage_1-159](assets/chlimage_1-159.png)
 
-1. CRXDE Liteを使用して、サイトの構造上の複数値文字列プロパティ`cq:deviceGroups`にデバイスグループを追加し、サイトでデバイスグループを使用できるようにします。
+1. CRX DE Lite を使用して、複数値の文字列プロパティにデバイスグループを追加することで、サイトでデバイスグループを使用できるようにします `cq:deviceGroups` を使用して、サイトの構造を確認します。
 
    `/content/<your-site>/jcr:content`
 
@@ -76,7 +76,7 @@ ht-degree: 83%
 
 これで、ページエディターで[エミュレーター](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints)を使用する際（[レイアウトを変更する](/help/sites-authoring/responsive-layout.md)場合など）、設定済みのデバイスグループのデバイスを選択すると、URL の一部としてセレクターを持つページがレンダリングされるようになります。
 
-この例では、**エクスペリエンスページ**&#x200B;テンプレートに基づいてページを編集し、エミュレーターでiPhone 4を選択すると、`arctic-surfing-in-lofoten.html`ではなく`arctic-surfing-in-lofoten.smart.html`としてセレクターを含むページがレンダリングされます
+この例では、 **エクスペリエンスページ** テンプレートを作成し、エミュレーターで「 iPhone 4 」を選択すると、ページはセレクターを「 」として含めてレンダリングされます。 `arctic-surfing-in-lofoten.smart.html` の代わりに `arctic-surfing-in-lofoten.html`
 
 このセレクターを使用してページを直接呼び出すこともできます。
 

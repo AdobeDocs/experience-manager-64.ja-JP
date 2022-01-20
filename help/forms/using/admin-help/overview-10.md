@@ -1,8 +1,8 @@
 ---
 title: Workspace の概要
-seo-title: Workspace の概要
+seo-title: Overview of Workspace
 description: Workspace では、ビジネスプロセスを開始したり、ビジネスプロセスに参加したり、ビジネスプロセスを追跡したりすることができます。Workspace の詳細について説明します。
-seo-description: Workspace では、ビジネスプロセスを開始したり、ビジネスプロセスに参加したり、ビジネスプロセスを追跡したりすることができます。Workspace の詳細について説明します。
+seo-description: The workspace lets users start, participate in, and track business processes. Let us learn more about the workspace.
 uuid: 25374641-a70b-485a-8d34-5d7b156c08e8
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 2d6f90bb-62f7-4805-9250-1b913fe7d2b3
 exl-id: f33f9ef9-95a7-47cb-8d13-19f24f1b463e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '126'
 ht-degree: 100%
 
 ---

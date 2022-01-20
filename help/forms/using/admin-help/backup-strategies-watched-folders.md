@@ -1,8 +1,8 @@
 ---
 title: 監視フォルダーのバックアップ方法
-seo-title: 監視フォルダーのバックアップ方法
+seo-title: Backup strategies for watched folders
 description: ここでは、監視フォルダーが様々なバックアップと回復のシナリオから受ける影響、それらのシナリオの制限事項や結果、データ損失を最小限に抑える方法について説明します。
-seo-description: ここでは、監視フォルダーが様々なバックアップと回復のシナリオから受ける影響、それらのシナリオの制限事項や結果、データ損失を最小限に抑える方法について説明します。
+seo-description: This document describes how watched folders are affected by different backup and recovery scenarios, the limitations and outcomes of these scenarios, and how to minimize data loss.
 uuid: c61997b8-6c36-4bd9-90e5-411841a6c176
 contentOwner: admin
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: 6f775933-e989-4456-ad01-9bdf5dee3dad
 exl-id: ae6b4caa-5bd0-4a09-9ccf-077405ea3868
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1122'
-ht-degree: 97%
+source-wordcount: '1090'
+ht-degree: 96%
 
 ---
 
@@ -37,9 +37,9 @@ ht-degree: 97%
 >
 >このバックアップは、データベースやドキュメントストレージバックアップおよび回復プロセスに依存しません。
 
-## 監視フォルダーの動作方法  {#how-watched-folders-work}
+## 監視フォルダーの動作方法 {#how-watched-folders-work}
 
-ここでは、監視フォルダーのファイル操作プロセスを説明します。このプロセスを理解してから、回復計画を立てることが重要です。この例では、監視フォルダーの`Preserve On Failure`属性が有効になっています。 ファイルは、到着した順序で処理されます。
+ここでは、監視フォルダーのファイル操作プロセスを説明します。このプロセスを理解してから、回復計画を立てることが重要です。この例では、 `Preserve On Failure` 属性は、監視フォルダーに対して有効です。 ファイルは、到着した順序で処理されます。
 
 次の表は、プロセス全体での 5 つのサンプルファイル（file1、file2、file3、file4、file5）のファイル操作を示しています。表では、横軸は時間（Time 1 つまり T1）を表し、縦軸は監視フォルダー階層内のフォルダー（入力など）を表しています。
 
@@ -65,22 +65,22 @@ ht-degree: 97%
    <td><p>file4</p></td> 
    <td><p>empty</p></td> 
    <td><p>file5</p></td> 
-   <td><p>empty</p></td> 
+   <td><p>空</p></td> 
   </tr> 
   <tr>
    <td><p>ステージ</p></td> 
-   <td><p>empty</p></td> 
+   <td><p>空</p></td> 
    <td><p>file1</p></td> 
    <td><p>file2</p></td> 
    <td><p>file3</p></td> 
    <td><p>file4</p></td> 
-   <td><p>empty</p></td> 
+   <td><p>空</p></td> 
    <td><p>file5</p></td> 
   </tr> 
   <tr>
    <td><p>出力</p></td> 
-   <td><p>empty</p></td> 
-   <td><p>empty</p></td> 
+   <td><p>空</p></td> 
+   <td><p>空</p></td> 
    <td><p>file1_out</p></td> 
    <td><p>file1_out、file2_out</p></td> 
    <td><p>file1_out、file2_out</p></td> 
@@ -89,18 +89,18 @@ ht-degree: 97%
   </tr> 
   <tr>
    <td><p>失敗</p></td> 
-   <td><p>empty</p></td> 
-   <td><p>empty</p></td> 
-   <td><p>empty</p></td> 
-   <td><p>empty</p></td> 
+   <td><p>空</p></td> 
+   <td><p>空</p></td> 
+   <td><p>空</p></td> 
+   <td><p>空</p></td> 
    <td><p>file3_fail、file3 </p></td> 
    <td><p>file3_fail、file3 </p></td> 
    <td><p>file3_fail、file3 </p></td> 
   </tr> 
   <tr>
    <td><p>保存</p></td> 
-   <td><p>empty</p></td> 
-   <td><p>empty</p></td> 
+   <td><p>空</p></td> 
+   <td><p>空</p></td> 
    <td><p>file1 </p></td> 
    <td><p>file1、file2 </p></td> 
    <td><p>file1、file2 </p></td> 
@@ -130,7 +130,7 @@ ht-degree: 97%
 
 監視フォルダーファイルシステム全体を他のファイルシステムにバックアップすることをお勧めします。
 
-## 監視フォルダーの復元  {#restoring-watched-folders}
+## 監視フォルダーの復元 {#restoring-watched-folders}
 
 ここでは、監視フォルダーの復元方法について説明します。監視フォルダーは、1 分以内に完了する有効期限の短いプロセスを呼び出すことがよくあります。このような場合は、何時間単位のバックアップを使用した監視フォルダーの復元では、データ損失を防ぐことができません。
 
@@ -148,14 +148,14 @@ ht-degree: 97%
 
 **保存：**&#x200B;このフォルダー内のファイルは、処理されません。
 
-## データ損失を最小限に抑える方法  {#strategies-to-minimize-data-loss}
+## データ損失を最小限に抑える方法 {#strategies-to-minimize-data-loss}
 
 次の方法を使用すると、監視フォルダーを復元するときに出力および入力フォルダーのデータ損失を最小限に抑えることができます。
 
 * 出力フォルダーおよび失敗フォルダーを頻繁に（例えば 1 時間ごとに）バックアップし、結果ファイルおよび失敗ファイルの損失を回避します。
 * 監視フォルダー以外のフォルダーに入力ファイルをバックアップします。これによって、出力フォルダーと失敗フォルダーのどちらにもファイルが見つからない場合でも、回復後にファイルを確実に利用できるようになります。ファイルの命名スキームを一貫したものにしてください。
 
-   例えば、`%F.`*拡張子*&#x200B;で出力を保存する場合、出力ファイルは入力ファイルと同じ名前になります。 これにより、操作される入力ファイルおよび再送信が必要な入力ファイルを判別できます。結果フォルダーに file1_out ファイルしか確認できず、file2_out、file3_out および file4_out が見つからない場合、file2、file3 および file4 を再送信する必要があります。
+   例えば、 `%F.`*拡張*&#x200B;を指定した場合、出力ファイルは入力ファイルと同じ名前になります。 これにより、操作される入力ファイルおよび再送信が必要な入力ファイルを判別できます。結果フォルダーに file1_out ファイルしか確認できず、file2_out、file3_out および file4_out が見つからない場合、file2、file3 および file4 を再送信する必要があります。
 
 * 使用可能な監視フォルダーのバックアップが、ジョブの処理時間より古い場合は、システムが新しい監視フォルダーを作成し、ファイルを自動的に入力フォルダーに配置できるようにする必要があります。
 * 使用可能な最新のバックアップが完全な最新版ではなく、バックアップ時間がファイルの処理時間より短く、監視フォルダーが復元されている場合は、ファイルは、次のいずれかのステージで操作されています。

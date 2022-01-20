@@ -1,8 +1,8 @@
 ---
 title: プロセスインスタンスのリストのカスタマイズ
-seo-title: プロセスインスタンスのリストのカスタマイズ
+seo-title: Customizing the listing of process instances
 description: AEM Forms Workspace のプロセスインスタンスで表示されるプロパティをカスタマイズする方法。
-seo-description: AEM Forms Workspace のプロセスインスタンスで表示されるプロパティをカスタマイズする方法。
+seo-description: How-to customize the properties displayed in process instance in AEM Forms workspace.
 uuid: 3b55d9b9-7f73-46dd-9eb6-42be218440a1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,16 +11,16 @@ discoiquuid: 40d7d43f-ee0a-4e34-ae93-20c9c940f76b
 exl-id: e7b8206c-bac2-48a6-b353-d06bc73b29f9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 81%
+source-wordcount: '284'
+ht-degree: 79%
 
 ---
 
-# プロセスインスタンスのリストのカスタマイズ  {#customizing-the-listing-of-process-instances}
+# プロセスインスタンスのリストのカスタマイズ {#customizing-the-listing-of-process-instances}
 
 プロセスインスタンスリストは、AEM Forms Workspace のトラッキングタブに表示されます。
 
-プロセスインスタンスリストで、各プロセスインスタンスに対して AEM Forms Workspace はそのインスタンスのいくつかのプロパティを表示します。次のプロパティが各プロセスインスタンスで使用できます。これらのプロパティは、プロセスインスタンスコンポーネントモデルに属性として保存され、そのビューとテンプレートで使用できます。
+プロセスインスタンスリストで、各プロセスインスタンスに対して AEM Forms Workspace はそのインスタンスのいくつかのプロパティを表示します。次のプロパティが各プロセスインスタンスで使用できます。これらのプロパティは、プロセスインスタンスコンポーネントモデルの属性として保存され、そのビューとテンプレートで使用できます。
 
 <table> 
  <tbody> 
@@ -69,13 +69,13 @@ ht-degree: 81%
 
 **例:**
 
-プロセスインスタンスカードにプロセスインスタンスの`description`プロパティを表示するには、次の手順を実行します。
+次の手順で `description` プロセスインスタンスカード内のプロセスインスタンスのプロパティで、次の手順を実行します。
 
 1. [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)に従います。
 1. 以下の操作を実行します。
 
    1. 存在しない場合は、/libs/ws/js/runtime/templates/processinstance.html を /apps/ws/js/runtime/templates/ にコピーします。「**すべて保存**」をクリックします。
-   1. processinstance.htmlにclass = &#39;processDescription&#39;を持つプロセス説明divを追加します。
+   1. processinstance.html に、class = &#39;processDescription&#39;を持つプロセス説明 div を追加します。
 
    ```
    <div class="processDescription" title="<%= description%>"><%= description%></div>
@@ -84,7 +84,7 @@ ht-degree: 81%
 1. 以下の操作を実行します。
 
    1. /apps/ws/js/registry.js を開いて編集します。
-   1. `text!/lc/libs/ws/js/runtime/templates/processinstance.html`を&#x200B;`text!/lc/`**apps**/ws/js/runtime/templates/processinstance.htmlに置き換えます。
+   1. 検索と置換 `text!/lc/libs/ws/js/runtime/templates/processinstance.html`と `text!/lc/`**アプリ**/ws/js/runtime/templates/processinstance.html.
 
 1. 上記の変更には、次のようにしてスタイルシート /apps/ws/css/newStyle.css にエントリを追加することによって、CSS ファイルを更新する必要があります。
 

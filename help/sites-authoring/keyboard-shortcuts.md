@@ -1,8 +1,8 @@
 ---
 title: コンソールのキーボードショートカット
-seo-title: コンソールのキーボードショートカット
+seo-title: Keyboard Shortcuts for Consoles
 description: これらのキーボードショートカットを使用することで、オーサリング時の時間を節約できます
-seo-description: これらのキーボードショートカットを使用することで、オーサリング時の時間を節約できます
+seo-description: Save time when authoring by using these keyboard shortcuts
 uuid: 3b90570f-e187-4f09-9ccf-838e5657de2f
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 exl-id: 8249fd48-38af-4bf7-8dcc-2f63db6750b6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '378'
 ht-degree: 98%
 
 ---
@@ -41,7 +41,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 | コンソール | `?` | キーボードショートカットヘルプ |
 |  | `/` | [検索](/help/sites-authoring/search.md)を呼び出す |
 |  | `Alt+`&lt;`Number`> | 表示する[レールセレクター](/help/sites-authoring/basic-handling.md#rail-selector)オプションを切り替える |
-|  | &grave; | レールを非表示 |
+|  | ` | レールを非表示 |
 |  | `e` | 編集 |
 |  | `p` | プロパティ |
 |  | `m` | 移動 |

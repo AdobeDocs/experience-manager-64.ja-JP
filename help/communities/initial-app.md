@@ -1,8 +1,8 @@
 ---
 title: 初期サンドボックスアプリケーション
-seo-title: 初期サンドボックスアプリケーション
+seo-title: Initial Sandbox Application
 description: テンプレート、コンポーネントおよびスクリプトの作成
-seo-description: テンプレート、コンポーネントおよびスクリプトの作成
+seo-description: Create template, component, and script
 uuid: b0d03376-d8bc-4e98-aea2-a01744c64ccd
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,12 +12,12 @@ discoiquuid: f74d225e-0245-4d5a-bb93-0ee3f31557aa
 exl-id: 3da30cb4-39b2-4495-9e8b-93567b73b644
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 59%
+source-wordcount: '608'
+ht-degree: 58%
 
 ---
 
-# 初期サンドボックスアプリケーション  {#initial-sandbox-application}
+# 初期サンドボックスアプリケーション {#initial-sandbox-application}
 
 ここでは、次のものを作成します。
 
@@ -32,7 +32,7 @@ ht-degree: 59%
 
 1. CRXDE Lite のエクスプローラーペインで、次の手順を実行します。
 
-   * `/apps/an-scf-sandbox/templates`を選択します。
+   * 選択 `/apps/an-scf-sandbox/templates`
    * **[!UICONTROL 作成/テンプレートを作成]**
 
 1. テンプレートを作成ダイアログで、次の値を入力し、「**[!UICONTROL 次へ]**」をクリックします。
@@ -47,7 +47,7 @@ ht-degree: 59%
 
    「リソースタイプ」は、`playpage` の jcr:content ノードにプロパティ `sling:resourceType` として表示されます。ブラウザーから要求された場合に、コンテンツをレンダリングするコンポーネント（リソース）を識別します。
 
-   この場合、`playpage`テンプレートを使用して作成されたすべてのページが`an-scf-sandbox/components/playpage`コンポーネントによってレンダリングされます。 慣例により、コンポーネントへのパスは相対パスなので、Slingは最初に`/apps`フォルダー内でリソースを検索し、見つからない場合は`/libs`フォルダー内でリソースを検索できます。
+   この場合、 `playpage`テンプレートは `an-scf-sandbox/components/playpage` コンポーネント。 慣例により、コンポーネントのパスは相対パスなので、Sling は、 `/apps` フォルダーおよび（見つからない場合） `/libs` フォルダー。
 
    ![chlimage_1-75](assets/chlimage_1-75.png)
 
@@ -57,11 +57,11 @@ ht-degree: 59%
 
 1. 「許可されているパス」は、**[!UICONTROL 新しいページ]**&#x200B;ダイアログにテンプレートが表示されるように、このテンプレートを使用するページのパスを参照します。
 
-   パスを追加するには、プラスボタン`+`をクリックし、表示されるテキストボックスに「`/content(/.&ast;)?`」と入力します。 コピー/貼り付けを使用する場合は、先頭または末尾にスペースがないことを確認します。
+   パスを追加するには、プラスボタン `+` と入力します。 `/content(/.&ast;)?` をクリックします。 コピー/貼り付けを使用する場合は、先頭または末尾にスペースがないことを確認します。
 
-   注意：許可されるパスプロパティの値は、*正規表現です。*&#x200B;この表現と一致するパスを持つコンテンツページでテンプレートを使用できます。この場合、正規表現は&#x200B;**/content**&#x200B;フォルダーとそのすべてのサブページのパスと一致します。
+   注意：許可されているパスプロパティの値は、 *正規表現。*&#x200B;この表現と一致するパスを持つコンテンツページでテンプレートを使用できます。この場合、正規表現は **/content** フォルダーおよびそのすべてのサブページ。
 
-   作成者が`/content`の下にページを作成すると、使用可能なテンプレートのリストに、「An SCF Sandbox Page Template」というタイトルの`playpage`テンプレートが表示されます。
+   作成者が以下のページを作成したとき `/content`、 `playpage`使用可能なテンプレートのリストに、「SCF サンドボックスページテンプレート」というタイトルのテンプレートが表示されます。
 
    ルートページをテンプレートから作成した後、プロパティを変更して正規表現にルートパスを含めると、テンプレートへのアクセスをその Web サイトに制限できます。次に例を示します。
 
@@ -71,15 +71,15 @@ ht-degree: 59%
 
 1. 「**[!UICONTROL 次へ]**」をクリックします。
 
-   **[!UICONTROL 許可されている親]**&#x200B;パネルで「**[!UICONTROL 次へ]**」をクリックします。
+   クリック **[!UICONTROL 次へ]** 内 **[!UICONTROL 許可された親]** パネル。
 
-   **[!UICONTROL 許可されている子]**&#x200B;パネルで「**[!UICONTROL 次へ]**」をクリックします。
+   クリック **[!UICONTROL 次へ]** 内 **[!UICONTROL 許可されている子]** パネル。
 
    「**[!UICONTROL OK]**」をクリックします。
 
 1. 「OK」をクリックし、テンプレートの作成を終了すると、新しい `playpage` テンプレートについて、「プロパティ」タブの値の隅に赤い三角形が表示されていることがわかります。これらの赤い三角形は、編集内容が保存されていないことを示します。
 
-   「**[!UICONTROL すべて保存]**」をクリックして、新しいテンプレートをリポジトリに保存します。
+   クリック **[!UICONTROL すべて保存]** をクリックして、新しいテンプレートをリポジトリに保存します。
 
    ![chlimage_1-77](assets/chlimage_1-77.png)
 
@@ -87,32 +87,32 @@ ht-degree: 59%
 
 コンテンツを定義し、[playpage テンプレート](#createthepagetemplate)に基づいて作成されたページをレンダリングするコンポーネントを作成します。**
 
-1. CRXDE Liteで、**`/apps/an-scf-sandbox/components`**&#x200B;を右クリックし、**[!UICONTROL 作成/コンポーネント]**&#x200B;をクリックします。
-1. ノードの名前（ラベル）を&#x200B;*playpage*&#x200B;に設定すると、コンポーネントのパスはになります。
+1. CRXDE Liteで右クリック **`/apps/an-scf-sandbox/components`** をクリックし、 **[!UICONTROL 作成/コンポーネント]**.
+1. ノード名（ラベル）を *playpage*&#x200B;の場合、コンポーネントへのパスは
 
    `/apps/an-scf-sandbox/components/playpage`
 
-   これは、再生ページテンプレートのリソースタイプに対応します（オプションで、パスの最初の&#x200B;**`/apps/`**&#x200B;部分をマイナスにします）。
+   再生ページテンプレートのリソースタイプに対応する ( オプションで、最初の **`/apps/`** パスの一部 )。
 
    **[!UICONTROL コンポーネントを作成]**&#x200B;ダイアログで、以下のプロパティ値を入力します。
 
    * ラベル：**playpage**
    * タイトル：**An SCF Sandbox Play Component**
    * 説明：**This is the component which renders content for An SCF Sandbox page.**
-   * スーパータイプ：*&lt;空白のまま>*
+   * スーパータイプ： *&lt;leave blank=&quot;&quot;>*
    * グループ:
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-1. **[!UICONTROL 次へ]**&#x200B;をクリックして、ダイアログの&#x200B;**[!UICONTROL 許可されている子]**&#x200B;パネルが表示されるまで待ちます。
+1. クリック **[!UICONTROL 次へ]** まで **[!UICONTROL 許可されている子]** ダイアログのパネルが表示されます
 
    * 「**[!UICONTROL OK]**」をクリックします。
-   * 「**[!UICONTROL すべて保存]**」をクリックします。
+   * クリック **[!UICONTROL すべて保存]**
 
 1. コンポーネントのパスとテンプレートの resourceType が一致していることを確認します。
 
    >[!CAUTION]
    >
-   >Webサイトを正しく機能させるには、playpageコンポーネントのパスとplaypageテンプレートのsling:resourceTypeプロパティの対応関係が重要です。
+   >Web サイトを正しく機能させるには、playpage コンポーネントのパスと playpage テンプレートの sling:resourceType プロパティとの対応が重要です。
 
    ![chlimage_1-79](assets/chlimage_1-79.png)

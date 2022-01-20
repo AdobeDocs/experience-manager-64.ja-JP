@@ -1,8 +1,8 @@
 ---
 title: Target オファー
-seo-title: Target オファー
+seo-title: Target offers
 description: Target オファーの作成
-seo-description: Target オファーの作成
+seo-description: Create target offers
 uuid: 88206181-9708-454a-a22a-05e3fc0247c2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: e26bf608-c57c-4346-88fb-32a82cfa82d2
 exl-id: ca9c6fd1-7f2e-4c99-ba6e-0a064274ac24
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 71%
+source-wordcount: '91'
+ht-degree: 70%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 71%
    ![](do-not-localize/chlimage_1-11.png)
 
 1. 「**新規...**」をクリックします。
-1. **タイトル**、**名前**&#x200B;および作成するエクスペリエンスのタイプを指定できます。この場合、Test&amp;Targetオファーです。
+1. 次の項目を指定できます。 **タイトル**, **名前** 作成するエクスペリエンスのタイプ。この場合、Test&amp;Target オファーです。
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
@@ -39,4 +39,4 @@ ht-degree: 71%
 
 ## Adobe Target との統合 {#integrating-with-adobe-target}
 
-詳しくは、[Adobeとの統合](/help/sites-administering/target.md) [Target](/help/sites-administering/target.md)を参照してください。
+詳しくは、 [Adobeとの統合](/help/sites-administering/target.md) [ターゲット](/help/sites-administering/target.md) 詳細はこちら。

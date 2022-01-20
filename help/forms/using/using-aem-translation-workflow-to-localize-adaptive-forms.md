@@ -1,19 +1,19 @@
 ---
 title: AEM 翻訳ワークフローを使用したアダプティブフォームとレコードのドキュメントのローカライズ
-seo-title: AEM 翻訳ワークフローを使用したアダプティブフォームとレコードのドキュメントのローカライズ
+seo-title: Using AEM translation workflow to localize adaptive forms and document of record
 description: AEM 翻訳ワークフローを使用してアダプティブフォームとレコードのドキュメントをローカライズする方法について説明します。
-seo-description: AEM 翻訳ワークフローを使用してアダプティブフォームとレコードのドキュメントをローカライズする方法について説明します。
+seo-description: Learn to use AEM translation workflows to localize adaptive forms and document of record.
 uuid: 6c87a283-0203-4cf7-989a-3770ddbbbd6e
 content-type: reference
 topic-tags: develop
 discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 5d0dcf4d-8995-4547-acb1-4917696af95e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 95%
+source-wordcount: '753'
+ht-degree: 94%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 95%
 
 この記事では、アダプティブフォームおよびレコードのドキュメントに対する AEM 翻訳ワークフローの使用手順を説明します。
 
-## 機械翻訳によるアダプティブフォームおよびレコードのドキュメントのローカライズ  {#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
+## 機械翻訳によるアダプティブフォームおよびレコードのドキュメントのローカライズ {#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
 
 機械翻訳サービスを使用すると、アダプティブフォームおよびレコードのドキュメントを即座に翻訳することができます。AEM Forms では、機械翻訳に Microsoft Translator の体験版を使用することが事前に定義されています。アダプティブフォームおよびレコードのドキュメントの機械翻訳を有効にするには、次の手順を実行します。
 
@@ -40,7 +40,7 @@ ht-degree: 95%
    >[!NOTE]
    >
    >* ブラウザーウィンドウでローカライズバージョンのフォームを開く前に、ブラウザーのロケールがフォームと同じロケールに設定されていることを確認してください。例えば、フォームがドイツ語（de）に翻訳されているときは、ブラウザーのロケールをドイツ語（de）に設定します。
-   >* アダプティブフォームのコンポーネントは、右から左(RTL)言語をサポートしていません。 （例：ヘブライ語）。
+   >* アダプティブフォームのコンポーネントは、右から左 (RTL) 言語をサポートしていません。 （例：ヘブライ語）。
 
 
    アダプティブフォームと共に、自動生成されるレコードのドキュメントもローカライズされます。
@@ -52,7 +52,7 @@ ht-degree: 95%
 [レコードのドキュメントの設定](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#p-document-of-record-settings-p)
 
 1. [レコードのドキュメントのブランディング情報をカスタマイズ](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)し、ブラウザーのロケールを、機械語を使用してアダプティブフォームをローカライズしたのと同じ言語に設定します。ブラウザーのロケールは、レコードのドキュメントにあるブランディング情報のローカライズに役立ちます。
-1. ローカライズされたレコードのドキュメントを表示するには、「プレビューを生成」をタップします。レコードのドキュメントのPDFが生成され、ブラウザーの新しいタブで開きます。
+1. ローカライズされたレコードのドキュメントを表示するには、「プレビューを生成」をタップします。レコードのドキュメントPDFが生成され、ブラウザーの新しいタブで開きます。
 
 ## 人による翻訳を使用したアダプティブフォームおよびレコードのドキュメントのローカライズ {#localizing-an-adaptive-form-and-its-document-of-record-using-human-translation}
 
@@ -76,8 +76,6 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->* アダプティブフォームのコンポーネントは、右から左(RTL)言語をサポートしていません。 （例：ヘブライ語）。
-
+>* アダプティブフォームのコンポーネントは、右から左 (RTL) 言語をサポートしていません。 （例：ヘブライ語）。
 >
-
 

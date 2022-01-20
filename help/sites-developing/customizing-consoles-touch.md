@@ -1,8 +1,8 @@
 ---
 title: コンソールのカスタマイズ
-seo-title: コンソールのカスタマイズ
+seo-title: Customizing the Consoles
 description: AEM には、オーサリングインスタンスのコンソールをカスタマイズできる様々な仕組みが用意されています
-seo-description: AEM には、オーサリングインスタンスのコンソールをカスタマイズできる様々な仕組みが用意されています
+seo-description: AEM provides various mechanisms to enable you to customize the consoles of your authoring instance
 uuid: f10cea87-ef8a-468e-94ca-89a1017dcf44
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 221ed05b-855d-4dc2-9df6-12fdeabb157a
 exl-id: 31bced35-4845-40d1-9bfd-5c75d54e1a83
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 77%
+source-wordcount: '684'
+ht-degree: 76%
 
 ---
 
@@ -27,11 +27,11 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 * Clientlibs
 
-   clientlibsを使用すると、デフォルトの実装を拡張して新しい機能を実現し、標準の関数、オブジェクト、メソッドを再利用できます。 カスタマイズする際に、`/apps.`の下に独自のクライアントライブラリを作成できます。例えば、カスタムコンポーネントに必要なコードを保持できます。
+   clientlibs を使用すると、デフォルトの実装を拡張して新しい機能を実現し、標準の関数、オブジェクト、メソッドを再利用できます。 カスタマイズする際、独自のクライアントライブラリを `/apps.` 例えば、カスタムコンポーネントに必要なコードを保持できます。
 
 * オーバーレイ
 
-   オーバーレイはノード定義に基づいており、（`/libs`の）標準的な機能を（`/apps`の）カスタマイズした独自の機能に重ねることができます。 Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
+   オーバーレイはノード定義に基づいており、 `/libs`) を `/apps`) をクリックします。 Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
 
 これらをさまざまな方法で使用して、AEM コンソールを拡張できます。一部については、以降で（大まかに）説明します。
 
@@ -44,8 +44,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >* [Granite](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)
 
 >
->
-このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html) でも説明しています。
+>このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html) でも説明しています。
 
 >[!CAUTION]
 >
@@ -55,16 +54,14 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. `/apps`の下で、必要な項目（`/libs`に存在）を再作成します。
-   >
-   >
-1. `/apps` 内で変更作業をおこないます。
+>1. 必要な項目（内に存在）を再作成します。 `/libs`) `/apps`
+>
+>1. `/apps` 内で変更作業をおこないます。
 
 >
 
 
-
-例えば、`/libs`構造内の次の場所をオーバーレイできます。
+例えば、次の場所は、 `/libs` 構造はオーバーレイできます。
 
 * コンソール（Granite UI ページに基づくすべてのコンソール）。次に例を示します。
 
@@ -196,7 +193,7 @@ You can find the code of this page on GitHub
 
    先頭のエントリがデフォルトになります。
 
-   使用可能なノードは、使用可能な表示オプションと関連があります。
+   使用可能なノードは、使用可能な表示オプションに関連付けられます。
 
    * `column`
    * `card`
@@ -294,7 +291,7 @@ You can find the code of this page on GitHub
 
    `jcr:content/body/content/header/items/default/items/create/items/createsite/rendercondition`
 
-   このノードのプロパティを使用して、特定のアクションの実行を許可する`groups`を定義できます。例： `administrators`
+   このノードのプロパティを使用すると、 `groups` 特定のアクションを実行できる例： `administrators`
 
 <!-- Needs a review by Engineering -->
 <!--
@@ -367,7 +364,7 @@ You can restrict access to a navigation option using ACLs:
 
 >[!NOTE]
 >
->この機能は、テキストフィールドの列用に最適化されています。他のデータ型の場合は、`/apps`内の`cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer`をオーバーレイできます。
+>この機能は、テキストフィールドの列に対して最適化されています。他のデータタイプの場合、 `cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer` in `/apps`.
 
 <!-- Needs a review by Engineering -->
 <!--
@@ -392,14 +389,14 @@ You can find the code of this page on GitHub
 
 1. 省略可能：
 
-   * 追加データを差し込む場合は、` [PageInforProvider](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)`
+   * 追加データをプラグインする場合は、 ` [PageInforProvider](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)` と
 
       `pageInfoProviderType` property.
    例として、（GitHub から）以下に添付するクラス／バンドルを参照してください。
 
 1. これで、リスト表示の列コンフィギュレーターで列を選択できるようになります。
 
-## リソースのフィルタリング  {#filtering-resources}
+## リソースのフィルタリング {#filtering-resources}
 
 コンソールを使用する際の一般的な使用例は、ユーザーがリソース（ページ、コンポーネント、アセットなど）から選択する必要がある場合です。これは、例えば、作成者が項目を選択する必要があるリストの形式で表示されます。
 

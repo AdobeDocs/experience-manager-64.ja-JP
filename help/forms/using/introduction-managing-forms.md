@@ -1,8 +1,8 @@
 ---
 title: フォーム管理の概要
-seo-title: フォーム管理の概要
+seo-title: Introduction to managing forms
 description: AEM Forms は、アダプティブフォームおよび関連アセットを管理するためのツールを提供します。本記事では、主なフォーム管理機能およびユーザーインターフェイス要素を紹介します。
-seo-description: AEM Forms は、アダプティブフォームおよび関連アセットを管理するためのツールを提供します。本記事では、主なフォーム管理機能およびユーザーインターフェイス要素を紹介します。
+seo-description: AEM Forms provides tools to manage Adaptive Forms and related assets. This article introduces you to the key forms management capabilities and user interface elements.
 uuid: 8a9fe83a-e9dc-410e-9bae-eca936c6eb8a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,14 +11,14 @@ discoiquuid: 6f9cb26a-ac7f-4218-827f-9d4d55b859b4
 exl-id: 08686ad6-85cc-4de5-86d8-05d55acec418
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1576'
 ht-degree: 77%
 
 ---
 
-# フォームの管理の概要  {#introduction-to-managing-forms}
+# フォームの管理の概要 {#introduction-to-managing-forms}
 
-AEM Forms は、フォーム、ドキュメント、テーマ、レター、ドキュメントフラグメント、データディクショナリおよび関連アセットを作成および管理するためのシンプルかつパワフルなユーザーインターフェイスを提供します。開発者のデスクトップから提供まで、フォーム、ドキュメント、および関連アセットのライフサイクル全体を管理するのに役立ちます\
+AEM Forms は、フォーム、ドキュメント、テーマ、レター、ドキュメントフラグメント、データディクショナリおよび関連アセットを作成および管理するためのシンプルかつパワフルなユーザーインターフェイスを提供します。開発者のデスクトップから提供まで、フォーム、ドキュメント、および関連アセットのライフサイクル全体を管理するのに役立ちます。\
 エンドユーザー向けのポータルサーバー上にある。 AEM Forms のユーザーインターフェイスを使用して次の操作を実行できます。
 
 * AEM Forms コンポーネントへのアクセス
@@ -26,11 +26,11 @@ AEM Forms は、フォーム、ドキュメント、テーマ、レター、ド�
 
 >[!NOTE]
 >
->その他のAEMツールおよびオプションについて詳しくは、[オーサー環境の使用](/help/sites-authoring/home.md)を参照してください。
+>その他のAEMツールおよびオプションについて詳しくは、 [オーサー環境の使用](/help/sites-authoring/home.md).
 
 ## AEM Forms コンポーネントへのアクセス {#access-aem-forms-components}
 
-AEM には、フォーム、ドキュメントおよび関連アセットを作成するためのオプションに加えて、サイトの作成、アセットの作成、AEM インスタンスの管理などのオプションが用意されています。![adobeexperiencemanager](assets/adobeexperiencemanager.png)Experience Managerのロゴをクリックして、使用可能なすべてのツールに移動できます。 他のコンポーネントのコンソールへのリンクに加えて、AEM Forms のリンクもあります。AEM Formsに移動するには、**Experience Managerのロゴ** ![ adobeexperiencemanager](assets/adobeexperiencemanager.png) / **ナビゲーション** ![コンパス](assets/compass.png) / **Forms**&#x200B;をクリックします。 以下のコンソールのリンクが表示されます。
+AEM には、フォーム、ドキュメントおよび関連アセットを作成するためのオプションに加えて、サイトの作成、アセットの作成、AEM インスタンスの管理などのオプションが用意されています。次の項目をクリックします。 ![adobeexperiencemanager](assets/adobeexperiencemanager.png) Experience Managerのロゴを使用して、使用可能なすべてのツールに移動します。 他のコンポーネントのコンソールへのリンクに加えて、AEM Forms のリンクもあります。AEM Formsに移動するには、 **Experience Managerロゴ** ![adobeexperiencemanager](assets/adobeexperiencemanager.png) > **ナビゲーション** ![コンパス](assets/compass.png) > **Forms**. 以下のコンソールのリンクが表示されます。
 
 * フォームとドキュメント
 * テーマ
@@ -44,30 +44,30 @@ AEM には、フォーム、ドキュメントおよび関連アセットを作�
 
 フォームとドキュメントには、インタラクティブ通信、アダプティブフォーム、アダプティブフォームフラグメント、フォームセットを作成するためのオプションが用意されています。JEE 上の AEM Forms の場合のみ、ローカルストレージからファイルを読み込むオプションと AEM Forms アセットを Workbench と同期するオプションが「フォームとドキュメント」に表示されます。
 
-作成ボタンは、AEM Forms アセットを作成またはアップロードする処理の開始点になります。以下を作成するオプションが用意されています。
+作成ボタンは、AEM Forms アセットを作成またはアップロードする処理の開始点になります。次のようなオプションを作成できます。
 
-* **インタラクティブ通信**:インタラクティブ通信は、HTMLベースのパーソナライズされたインタラクティブなデバイス対応デジタル通信で、デジタル文書、ドキュメントを表します。インタラクティブ通信はレスポンシブな特性を持っているため、使用するデバイスや設定に応じて、レイアウトとデザインが自動的に変わります。詳しくは、「[インタラクティブ通信の概要](/help/forms/using/interactive-communications-overview.md)」を参照してください。
+* **インタラクティブ通信**:インタラクティブ通信は、HTMLベースのパーソナライズされたインタラクティブでデバイスに対応したデジタル通信、ステートメント、ドキュメントです。 インタラクティブ通信はレスポンシブな特性を持っているため、使用するデバイスや設定に応じて、レイアウトとデザインが自動的に変わります。詳しくは、「[インタラクティブ通信の概要](/help/forms/using/interactive-communications-overview.md)」を参照してください。
 
-* **アダプティブフォーム：**&#x200B;アダプティブフォームは、魅力的でレスポンシブなフォームです。アダプティブフォームを作成し、ユーザーの応答、デバイス、または作業環境に基づいてフォームのセクションを追加または削除することで、ユーザーの入力に動的に対応することができます。 アダプティブフォームについて詳しくは、「[アダプティブフォームの作成について](/help/forms/using/introduction-forms-authoring.md)」を参照してください。
+* **アダプティブフォーム：**&#x200B;アダプティブフォームは、魅力的でレスポンシブなフォームです。アダプティブフォームを作成して、ユーザーの応答、デバイス、または作業環境に基づいてフォームのセクションを追加または削除することで、ユーザーの入力に動的に適応させることができます。 アダプティブフォームについて詳しくは、「[アダプティブフォームの作成について](/help/forms/using/introduction-forms-authoring.md)」を参照してください。
 
-* **アダプティブフォームフラグメント：**&#x200B;すべてのフォームは特定の目的のためにデザインされますが、ほとんどのフォームにはいくつかの共通するセグメントがあります。例えば、名前と住所、家族の詳細、収入の詳細などの個人の詳細を入力するためのものなどです。このようなセクションに対して個別のアセットを作成できます。これらの再利用可能なスタンドアロンセグメントを、アダプティブフォームフラグメントと呼びます。 詳しくは、「[アダプティブフォームフラグメント](/help/forms/using/adaptive-form-fragments.md)」を参照してください。
+* **アダプティブフォームフラグメント：**&#x200B;すべてのフォームは特定の目的のためにデザインされますが、ほとんどのフォームにはいくつかの共通するセグメントがあります。例えば、名前と住所、家族の詳細、収入の詳細などの個人の詳細を入力するためのものなどです。このようなセクションに対して個別のアセットを作成できます。これらの再利用可能なスタンドアロンのセグメントを、アダプティブフォームフラグメントと呼びます。 詳しくは、「[アダプティブフォームフラグメント](/help/forms/using/adaptive-form-fragments.md)」を参照してください。
 
-* **フォームセット：**&#x200B;フォームセットは HTML5 フォームの集まりであり、エンドユーザーには 1 つのフォームのセットとして提供されます。エンドユーザーがフォームセットへの入力を始めると、フォームはシームレスにその内容を別のフォームにも写します。最後に、ユーザーは1回のクリックですべてのフォームを単一のエンティティとして送信できます。 詳しくは、「[AEM Forms におけるフォームセット](/help/forms/using/formset-in-aem-forms.md)」を参照してください。
+* **フォームセット：**&#x200B;フォームセットは HTML5 フォームの集まりであり、エンドユーザーには 1 つのフォームのセットとして提供されます。エンドユーザーがフォームセットへの入力を始めると、フォームはシームレスにその内容を別のフォームにも写します。最後に、ユーザーは 1 回のクリックですべてのフォームを 1 つのエンティティとして送信できます。 詳しくは、「[AEM Forms におけるフォームセット](/help/forms/using/formset-in-aem-forms.md)」を参照してください。
 
 * **フォルダー：** AEM forms ユーザーインターフェイスは、フォルダーを利用してアセットを整理します。サポートされているフォルダーは 2 種類あります。
 
    * **一般フォルダー：**&#x200B;これらのフォルダーは、AEM forms ユーザーインターフェイスで作成されたアセットに対して使用されます。これらのフォルダーには、厳密なフォルダー構造はありません。これらのフォルダーでは、フォルダー名の変更とサブフォルダーの作成を行うことができます。また、アダプティブフォーム、インタラクティブ通信、アダプティブフォームフラグメント、フォームテンプレート（XDP）、PDF フォーム、ドキュメント、関連アセットを、これらのフォルダーに保存することができます。
-   * **フォームワークフローフォルダー：**&#x200B;フォームワークフローフォルダーは、AEM Forms ユーザーインターフェイスで Workbench プロセス（LiveCycle アーカイブ）が移行および同期されるときに作成されます。このフォルダーの名前を変更することはできません。また、このフォルダー内に、サブフォルダー、インタラクティブ通信、アダプティブフォームフラグメントを作成することはできません。また、バージョンフォルダーの削除や、アダプティブフォーム、アダプティブフォームフラグメント、インタラクティブ通信の作成とアップロードを同時に行うこともできません。
+   * **フォームワークフローフォルダー：**&#x200B;フォームワークフローフォルダーは、AEM Forms ユーザーインターフェイスで Workbench プロセス（LiveCycle アーカイブ）が移行および同期されるときに作成されます。このフォルダーの名前を変更することはできません。また、このフォルダー内に、サブフォルダー、インタラクティブ通信、アダプティブフォームフラグメントを作成することはできません。また、バージョンフォルダーを削除したり、アダプティブフォーム、アダプティブフォームフラグメント、またはインタラクティブ通信をバージョンフォルダーに並行して作成およびアップロードすることはできません。
 
 ![フォルダー](assets/folders.png)
 
-**A.一般フォ** ルダ **ーB.** Forms Workflowフォルダー
+**A.** 一般フォルダー **B.** Forms Workflowフォルダー
 
 フォームとドキュメントパネルには、以下のオプションも用意されています。
 
 * **ローカルストレージからのファイルの読み込み：** PDF フォームとドキュメント、フォームテンプレート（XFA フォーム）およびその他のリソース（画像や XSD の XML スキーマ）を読み込むことができます。詳しい手順については、「[AEM Forms におけるアセットの読み込みと書き出し](/help/forms/using/import-export-forms-templates.md)」を参照してください。
 
-* **AEM Forms アセットの Workbench との同期：**「Workbench のファイル」オプションを使用して、AEM Forms ユーザーインターフェイスと Workbench の間でアセットを同期することができます。これにより、すべてのアセットがAEM FormsユーザーインターフェイスとWorkbenchのcrx-repositoryアセット選択で使用できるようになります。
+* **AEM Forms アセットの Workbench との同期：**「Workbench のファイル」オプションを使用して、AEM Forms ユーザーインターフェイスと Workbench の間でアセットを同期することができます。これにより、すべてのアセットがAEM Formsユーザーインターフェイスと Workbench の crx-repository アセットの選択で使用できるようになります。
 
 ### テーマ  {#themes}
 
@@ -91,30 +91,30 @@ AEM Forms のレターは、安全でパーソナライズされたインタラ�
 
 データディクショナリの作成と使用について詳しくは、[データディクショナリに関する記事](/help/forms/using/data-dictionary.md)を参照してください。
 
-## AEM Forms 設定へのアクセス  {#accessing-aem-forms-configurations}
+## AEM Forms 設定へのアクセス {#accessing-aem-forms-configurations}
 
-AEM ツールパネルには、様々なコンポーネント用のツールが含まれています。AEM Forms固有のツールに移動するには、**Experience Managerのロゴ** ![adobeexperiencemanager](assets/adobeexperiencemanager.png) / **ツール** ![ハンマー](assets/hammer.png) / **Forms**&#x200B;をクリックします。 以下の機能を実行するためのツールが表示されます。
+AEM ツールパネルには、様々なコンポーネント用のツールが含まれています。AEM Forms固有のツールに移動するには、 **Experience Managerロゴ** ![adobeexperiencemanager](assets/adobeexperiencemanager.png) > **ツール** ![ハンマー](assets/hammer.png) > **Forms**. 以下の機能を実行するためのツールが表示されます。
 
 * **監視フォルダーを設定：**&#x200B;管理者は、監視フォルダーと呼ばれるネットワークフォルダーを設定できます。ユーザーがファイル（PDF ファイルなど）を監視フォルダーに配置すると、設定済みの操作が開始され、ファイルが操作されます。<!-- Fix broken link For detailed information, see Create and Configure a watched folder. -->
 
-* **Forms App Offline Serviceの設定：** AEM Forms App Offline Serviceは、フォームで使用されるリソースのパスやURLをキャッシュします。フォームで使用されるリソースのパスや URL をキャッシュに保存することで、サーバー側のパフォーマンスが向上します。AEM Formsアプリのサーバー側オフラインコンポーネントを設定するには、[オフラインモードでの作業](/help/forms/using/work-offline-mode.md)を参照してください。
+* **Forms App Offline Service の設定：** AEM Forms App Offline Service は、フォームで使用されるリソースのパスまたは URL をキャッシュします。 フォームで使用されるリソースのパスや URL をキャッシュに保存することで、サーバー側のパフォーマンスが向上します。AEM Formsアプリのサーバーサイドオフラインコンポーネントを設定するには、 [オフラインモードでの作業](/help/forms/using/work-offline-mode.md).
 
 ![aem-forms-tools](assets/aem-forms-tools.png)
 
 * **PDF Generator を設定：**&#x200B;管理者は、AEM Forms PDF Generator の設定、ユーザーアカウントの追加、PDF Generator 設定の読み込みまたは書き出しを行うことができます。
-* **Correspondence Management アセットを発行：** AEM Forms では、作成者インスタンスからすべてのレター、ドキュメントフラグメント、データディクショナリおよび関連する依存関係を同時に発行できます。公開済みのアセットには、すべての Correspondence Management アセットと関連する依存性が含まれます。詳しくは、[フォームとドキュメントの発行と非公開](/help/forms/using/publishing-unpublishing-forms.md#publishallthecorrespondencemanagementassets)を参照してください。
+* **Correspondence Management アセットを発行：** AEM Forms では、作成者インスタンスからすべてのレター、ドキュメントフラグメント、データディクショナリおよび関連する依存関係を同時に発行できます。公開済みのアセットには、すべての Correspondence Management アセットと関連する依存性が含まれます。詳しくは、 [フォームとドキュメントの発行と非公開](/help/forms/using/publishing-unpublishing-forms.md#publishallthecorrespondencemanagementassets).
 * **Correspondence Management アセットを書き出し：**&#x200B;すべての Correspondence Management アセットおよび関連する依存関係を、AEM Forms インスタンスからパッケージとしてダウンロードできます。手順について詳しくは、「[AEM Forms におけるアセットの読み込みと書き出し](/help/forms/using/import-export-forms-templates.md#importandexportassetsincorrespondencemanagement)」を参照してください。
 
 ## 共通のユーザーインターフェイス要素 {#commonelements}
 
-* **左側のレール：** 左側のレールアイコンrailleftpngをクリックする ![](assets/railleftpng.png) と、AEM Formsのタイムライン機能と参照機能が表示されます。
+* **左レール：** 左側のパネルアイコン ![railleftp](assets/railleftpng.png) :AEM Formsのタイムラインおよび参照機能を表示します。
 
    * **タイムライン：**&#x200B;アセットに対するコメントをタイムラインに追加して表示し、レビューとして使用できます。手順について詳しくは、「[フォームのアセットのレビューの作成と管理](/help/forms/using/create-reviews-forms.md)」を参照してください。
-   * **参照：** 1 つの AEM Forms アセットを複数の AEM Forms アセットで使用できます。例えば、1 つのドキュメントフラグメントを複数のレターで使用できます。「参照」は、選択したアセットが使用されるアセット（他のフォームまたはリソース）のリストです。また、選択したアセットが使用している他のアセットのリストです。
+   * **参照：** 1 つの AEM Forms アセットを複数の AEM Forms アセットで使用できます。例えば、1 つのドキュメントフラグメントを複数のレターで使用できます。「参照」は、選択したアセットが使用されているアセット（他のフォームまたはリソース）のリストです。また、選択したアセットが使用している他のアセットのリストでもあります。
 
 * **パンくず：**&#x200B;パンくずは、現在のコンソールまたはフォルダーのタイトルを表します。「パンくず」オプションをクリックすると、フォルダー階層の上位のフォルダーに移動することができます。
-* **表示切り替え：** 表示切り替えアイコンviewlistor viewcardをクリックすると、リ ![](assets/viewlist.png) スト表 ![](assets/viewcard.png) 示とカード表示をすばやく切り替えることができます。共通のユーザーインターフェイスコンポーネントについて詳しくは、「[作成者環境の操作](/help/sites-authoring/basic-handling.md)」を参照してください。
-* **検索：** 検索オプション検索 ![](assets/search.png) は、必要なコンテンツやツールをすばやく見つけてジャンプする機能を提供します。コンテンツまたは製品機能の名前を入力し、提案から選択します。例えば、「ドキュメント」と入力すると、フォームとドキュメントコンソールやドキュメントフラグメントコンソールをすばやく見つけて移動できます。検索について詳しくは、AEM 6.2 の[検索](/help/sites-authoring/search.md)に関する記事を参照してください。
+* **スイッチャーの表示：** スイッチャーを表示アイコンをクリックします。 ![viewlist](assets/viewlist.png) または ![viewcard](assets/viewcard.png) をクリックして、リスト表示とカード表示をすばやく切り替えます。 共通のユーザーインターフェイスコンポーネントについて詳しくは、「[作成者環境の操作](/help/sites-authoring/basic-handling.md)」を参照してください。
+* **検索：** 検索オプション ![検索](assets/search.png) は、必要なコンテンツやツールをすばやく見つけて移動する機能を提供します。 コンテンツまたは製品機能の名前を入力し、提案から選択します。例えば、「ドキュメント」と入力すると、フォームとドキュメントコンソールやドキュメントフラグメントコンソールをすばやく見つけて移動できます。検索について詳しくは、AEM 6.2 の[検索](/help/sites-authoring/search.md)に関する記事を参照してください。
 * **アクションツールバー**：アセットを選択すると、アセット一覧の上にアクションツールバーが表示されます。このツールバーには、選択したアセットに対応するすべての管理ツールが表示されます。ツールアイコンの上にマウスを移動すると、その機能を説明するツールヒントが表示されます。
 
 >[!NOTE]

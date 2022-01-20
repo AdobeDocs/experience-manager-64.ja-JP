@@ -6,11 +6,11 @@ audience: end-user
 user-guide-title: AEM 6.4 オーサリングユーザーガイド
 breadcrumb-title: オーサリングガイド
 user-guide-description: AEM でのコンテンツ作成やオーサリングのための主要な概念について説明します。
-feature: オーサリング
+feature: Authoring
 role: User
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '292'
 ht-degree: 87%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 87%
 # AEM 6.4 オーサリングユーザーガイド {#authoring}
 
 + [オーサリングユーザーガイドの概要](home.md)
-+ AEM Authoringの基本的なタスク、ツール、概念{#essentials}
++ AEM Authoring の基本的なタスク、ツールおよび概念 {#essentials}
    + [作成者がおこなう最初の手順](first-steps.md)
    + [ページのオーサリングのクイックガイド](qg-page-authoring.md)
    + [オーサリングの概念](author.md)
@@ -74,7 +74,7 @@ ht-degree: 87%
    + [ページへのワークフローの適用](workflows-applying.md)
    + [ワークフローへの参加](workflows-participating.md)
    + [プロジェクトワークフローの操作](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/projects/projects-with-workflows.html)
-+ ページパフォーマンス{#page-performance}
++ ページ効果 {#page-performance}
    + [コンテンツインサイト](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/siteandpage/content-insights.html)
    + [ページパフォーマンスの分析](ci-analyze.md)
    + [ページ分析データの表示](pa-using.md)
@@ -89,7 +89,7 @@ ht-degree: 87%
    + [オーディエンスの管理](managing-audiences.md)
    + [オファーの作成と管理](offerlib.md)
    + [セグメント化について](segmentation-overview.md)
-+ AEMとAdobe Campaign{#aem-adobe-campaign}
++ AEMとAdobe Campaign {#aem-adobe-campaign}
    + [Adobe Campaign の使用](adobe-campaign.md)
    + [Adobe Campaign Classic および Adobe Campaign Standard の使用](campaign.md)
    + [Adobe Campaign のターゲット設定](target-adobe-campaign.md)

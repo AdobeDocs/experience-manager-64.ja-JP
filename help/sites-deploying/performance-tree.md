@@ -1,8 +1,8 @@
 ---
 title: パフォーマンスツリー
-seo-title: パフォーマンスツリー
+seo-title: Performance Tree
 description: AEM でのパフォーマンスの問題をトラブルシューティングするために実行する必要がある手順について説明します。
-seo-description: AEM でのパフォーマンスの問題をトラブルシューティングするために実行する必要がある手順について説明します。
+seo-description: Learn about the steps that need to be taken in order to troubleshoot performance issues in AEM.
 uuid: ab0624f7-6b39-4255-89e0-54c74b54cd98
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 exl-id: dfc6a660-e6b3-4395-a555-f4cf8f3fed91
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1188'
 ht-degree: 92%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 92%
 <table> 
  <tbody> 
   <tr> 
-   <td><strong>ステップ</strong></td> 
+   <td><strong>手順</strong></td> 
    <td><strong>タイトル</strong></td> 
    <td><strong>リソース</strong></td> 
   </tr> 
@@ -288,7 +288,7 @@ ht-degree: 92%
   <tr> 
    <td><strong>手順 45<br /> および 47</strong><br /> </td> 
    <td>HTTP/2 の使用</td> 
-   <td>手順 37、38 および 39 の Gem セッションを参照してください。また、HTTP/2サポートの<a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">この</a>フォーラム投稿もご覧ください。<br /> </td> 
+   <td>手順 37、38 および 39 の Gem セッションを参照してください。また、 <a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">この</a> HTTP/2 サポートに関するフォーラム投稿<br /> </td> 
   </tr> 
   <tr> 
    <td><strong>手順 49</strong></td> 
@@ -313,7 +313,7 @@ ht-degree: 92%
      <li>リソースの連結（画像、CSS スプライト、JSON など）<br /> </li> 
      <li>clientlibs の埋め込み 
       <ol> 
-       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">クライアントライブラリフォルダーの作成</a> - 「埋め込みを使用したリクエストの最小化」の見出しを参照してください。</li> 
+       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">クライアントライブラリフォルダーの作成</a> - 「埋め込みを使用した要求の最小化」の見出しを参照してください。</li> 
       </ol> </li> 
     </ol> </td> 
   </tr> 

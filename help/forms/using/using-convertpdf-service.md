@@ -1,8 +1,8 @@
 ---
-title: ConvertPDF サービス
-seo-title: Convert PDF サービス
+title: Convert PDF サービス
+seo-title: ConvertPDF Service
 description: 'AEM Forms の Convert PDF サービスを使用して、PDF ドキュメントを PostScript ファイルや画像ファイルに変換します。 '
-seo-description: 'AEM Forms の Convert PDF サービスを使用して、PDF ドキュメントを PostScript ファイルや画像ファイルに変換します。 '
+seo-description: Use AEM Forms ConvertPDF service to convert PDF documents to PostScript or image files.
 uuid: 7fa94c8c-485b-4a77-bcd3-ed716e3cf316
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,7 +11,7 @@ discoiquuid: 5ec4f0ec-a9fd-4571-9b9a-278f4622c028
 exl-id: a6fe7794-3c31-4706-9e23-fe63a506b0bc
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '398'
 ht-degree: 91%
 
 ---
@@ -29,7 +29,7 @@ Convert PDF サービスを使用すると、次のタスクを実行できま�
 
 ## サービスのプロパティの設定 {#properties}
 
-AEM コンソールにある **AEMFD Convert PDF サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。AEMコンソールのデフォルトURLは`https://[host]:[port]/system/console/configMgr`です。
+AEM コンソールにある **AEMFD Convert PDF サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。AEMコンソールのデフォルト URL は、 `https://[host]:[port]/system/console/configMgr`.
 
 ## サービスの使用 {#using-the-service}
 
@@ -135,8 +135,8 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 ワークフローから Convert PDF サービスを実行することは、JSP またはサーブレットから実行することに似ています。
 
 唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。この自動メカニズム\
-は、コードがワークフローから呼び出される場合、機能しません。 ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。次に、Documentオブジェクトが\
-リポジトリからコンテンツを読み取るためにResourceResolverオブジェクトを提供しました。
+は、コードがワークフローから呼び出された場合、機能しません。 ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。次に、Document オブジェクトが\
+リポジトリからコンテンツを読み取るための ResourceResolver オブジェクトが提供されました。
 
 以下に示したサンプルワークフロープロセスは、入力ドキュメントを PostScript ドキュメントに変換します。コードは ECMAScript で記述され、ドキュメントはワークフローペイロードとして渡されます。
 

@@ -60,7 +60,7 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 
 HTTP/2 に切り替えるためのリクエストを開始する必要があります。自動的にはおこなわれません。
 
-1. HTTP/2 に切り替えるためのテクニカルサポートリクエストを開始します。[ カスタマーサポートポータルへのアクセス ](https://helpx.adobe.com/jp/experience-manager/kb/accessing-aem-support-portal.html) を参照してください。
+1. HTTP/2 に切り替えるためのテクニカルサポートリクエストを開始します。詳しくは、 [カスタマーサポートポータルへのアクセス](https://helpx.adobe.com/jp/experience-manager/kb/accessing-aem-support-portal.html).
 
    1. サポートリクエストには、以下の情報を記入してください。
 

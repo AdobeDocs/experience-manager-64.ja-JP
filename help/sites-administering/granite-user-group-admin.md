@@ -1,9 +1,9 @@
 ---
 title: Granite の操作 - ユーザー管理とグループ管理
-seo-title: Granite の操作 - ユーザー管理とグループ管理
+seo-title: Granite Operations - User and Group Administration
 description: Granite のユーザーとグループの管理について説明します。
-feature: セキュリティ
-seo-description: Granite のユーザーとグループの管理について説明します。
+feature: Security
+seo-description: Learn about Granite user and group administration.
 uuid: 7b6b7767-712c-4cc8-8d90-36f26280d6e3
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: bd29e81d-eb4a-4764-96f2-84e091836a8a
 source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '923'
 ht-degree: 90%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 90%
 
 Granite には JCR API 仕様の CRX リポジトリ実装が組み込まれているので、独自のユーザー管理とグループ管理が使用されます。
 
-これらのアカウントは、[AEMアカウント](/help/sites-administering/security.md)の基礎となり、Granite管理でおこなったアカウントの変更は、[AEM Users Console](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)からアカウントにアクセスした場合に反映されます(例：`http://localhost:4502/useradmin`)です。 AEMユーザーコンソールから、権限やその他のAEMの詳細を管理することもできます。
+これらのアカウントは、 [AEMアカウント](/help/sites-administering/security.md) また、Granite 管理でおこなったアカウントの変更は、アカウントが [AEM Users コンソール](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) ( 例： `http://localhost:4502/useradmin`) をクリックします。 AEMユーザーコンソールから、権限やその他のAEMの詳細を管理することもできます。
 
 Granite ユーザー管理コンソールとグループ管理コンソールは、どちらもタッチ操作向け UI の&#x200B;**[ツール](/help/sites-administering/tools-consoles.md)**&#x200B;コンソールから利用できます。
 
@@ -50,9 +50,9 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
    * グループの説明
    * グループ内のユーザー／グループの数
 
-## User Administration {#user-administration}
+## ユーザー管理 {#user-administration}
 
-### Adding a New User {#adding-a-new-user}
+### 新規ユーザーの追加 {#adding-a-new-user}
 
 1. **ユーザーを追加**&#x200B;アイコンを使用します。
 
@@ -89,19 +89,19 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
    * **状態**
    * **タイトル**
    * **性別**
-   * **** について
+   * **について**
    * **アカウント設定**
 
       * **ステータス**
-アカウントに 
-**** アクティベー **トは非アクティブ**
+アカウントに次のいずれかのフラグを設定できます 
+**アクティブ** または **非アクティブ**.
    * **写真**
 
       ここで、アバターとして使用する写真をアップロードできます。
 
-      使用可能なファイルの種類：`.jpg .png .tif .gif`
+      使用可能なファイルタイプ： `.jpg .png .tif .gif`
 
-      推奨サイズ：`240x240px`
+      推奨サイズ： `240x240px`
 
    * **グループにユーザーを追加**
 
@@ -117,7 +117,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
    * 登録を中止するには、「**キャンセル**」を使用します。
    * 登録を完了するには、「**保存**」を使用します。メッセージが表示され、ユーザーアカウントの作成が確定されます。
 
-### 既存ユーザーの編集  {#editing-an-existing-user}
+### 既存ユーザーの編集 {#editing-an-existing-user}
 
 1. ユーザーコンソールで、ユーザー名のリンクからユーザー詳細にアクセスします。
 
@@ -141,7 +141,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
    パスワードが変更されたことを示すメッセージが表示されます。
 
-### 簡単なグループ割り当て  {#quick-group-assignment}
+### 簡単なグループ割り当て {#quick-group-assignment}
 
 1. クリックボックスを使用して 1 人以上のユーザーにフラグを設定します。
 1. **グループ**&#x200B;アイコンを使用します。
@@ -159,7 +159,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
    * 変更を中止するには、「**キャンセル**」を使用します。
    * 変更を確定するには、「**保存**」を使用します。
 
-### 既存ユーザーの詳細の削除  {#deleting-existing-user-details}
+### 既存ユーザーの詳細の削除 {#deleting-existing-user-details}
 
 1. クリックボックスを使用して 1 人以上のユーザーにフラグを設定します。
 1. **削除**&#x200B;アイコンを使用してユーザー詳細を削除します。
@@ -168,9 +168,9 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
 1. 削除を確定するかどうかを確認するメッセージが表示され、確定すると、削除が実際に実行されたことを示すメッセージが表示されます。
 
-## Group Administration {#group-administration}
+## グループ管理 {#group-administration}
 
-### Adding a New Group {#adding-a-new-group}
+### 新規グループの追加 {#adding-a-new-group}
 
 1. グループを追加アイコンを使用します。
 
@@ -186,7 +186,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
       グループの一意の ID です。必須で、スペースは使用不可です。
 
-   * **Name**
+   * **名前**
 
       グループの名前です。グループコンソールに表示されます。
 
@@ -207,7 +207,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
    * 登録を中止するには、「**キャンセル**」を使用します。
    * 登録を完了するには、「**保存**」を使用します。メッセージが表示され、グループの作成が確定されます。
 
-### 既存グループの編集  {#editing-an-existing-group}
+### 既存グループの編集 {#editing-an-existing-group}
 
 1. グループコンソールで、グループ名のリンクからグループ詳細にアクセスします。
 
@@ -222,7 +222,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
 1. **グループ設定を編集**&#x200B;フォームが開きます。
 
-   グループIDは元のIDと同じですが、先頭に`Copy of`が付きます。IDにスペースを含めることはできないので、これを編集する必要があります。 その他の詳細は元の情報とすべて同じです。
+   グループ ID は元の ID と同じですが、先頭にはが付きます。 `Copy of`.ID にスペースを含めることはできないので、これを編集する必要があります。 その他の詳細は元の情報とすべて同じです。
 
    [新規グループの追加](#adding-a-new-group)の場合と同様に、詳細を編集して保存できます。
 

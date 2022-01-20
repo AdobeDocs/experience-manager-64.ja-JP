@@ -1,8 +1,8 @@
 ---
 title: We.Retail のレスポンシブレイアウトの使用
-seo-title: We.Retail のレスポンシブレイアウトの使用
+seo-title: Trying out Responsive Layout in We.Retail
 description: We.Retail のレスポンシブレイアウトの使用
-seo-description: 'null'
+seo-description: null
 uuid: d9613655-f54e-458f-9175-d07bb868f58b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,14 +12,14 @@ discoiquuid: 2d374e88-ea09-43d5-986c-5d77b0705b93
 exl-id: ccb792f7-e837-4790-818f-e2c446328e71
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 75%
+source-wordcount: '247'
+ht-degree: 74%
 
 ---
 
 # We.Retail のレスポンシブレイアウトの使用{#trying-out-responsive-layout-in-we-retail}
 
-すべてのWe.Retailページは、レスポンシブデザインを実装するためにレイアウトコンテナコンポーネントを使用します。 レイアウトコンテナは、レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズおよび形式に従ってレイアウトを再編成できます。このコンポーネントを、ページエディターの&#x200B;**レイアウト**&#x200B;モードと組み合わせて使用すると、デバイスに依存するレスポンシブレイアウトを作成および編集できます。
+すべての We.Retail ページは、レスポンシブデザインを実装するためにレイアウトコンテナコンポーネントを使用します。 レイアウトコンテナは、レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズおよび形式に従ってレイアウトを再編成できます。このコンポーネントは、 **レイアウト** モードを使用して、デバイスに応じたレスポンシブレイアウトを作成および編集できます。
 
 ## 試してみる {#trying-it-out}
 
@@ -47,4 +47,4 @@ ht-degree: 75%
 
 ## その他の情報 {#further-information}
 
-技術的な詳細については、オーサリングドキュメント[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)または管理者ドキュメント[レイアウトコンテナとレイアウトモードの設定](/help/sites-administering/configuring-responsive-layout.md)を参照してください。
+詳しくは、オーサリングドキュメントを参照してください。 [レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md) または管理者ドキュメント [レイアウトコンテナとレイアウトモードの設定](/help/sites-administering/configuring-responsive-layout.md) 」を参照してください。

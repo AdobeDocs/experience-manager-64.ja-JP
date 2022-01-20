@@ -23,7 +23,7 @@ ht-degree: 95%
 
 Web ページに埋め込んでビデオを再生したりアセットを表示したりする場合は、**[!UICONTROL 埋め込みコード]**&#x200B;機能を使用します。埋め込みコードをクリップボードにコピーして、Web ページに貼り付けることができます。**[!UICONTROL 埋め込みコード]**&#x200B;ダイアログボックスでは、コードの編集はできません。
 
- を WCM として使用&#x200B;_していない_&#x200B;場合に限り、URL の埋め込みを実行します。[!DNL Experience Manager][!DNL Experience Manager]をWCMとして使用している場合は、[ページに直接アセットを追加します。](adding-dynamic-media-assets-to-pages.md)
+ を WCM として使用&#x200B;_していない_&#x200B;場合に限り、URL の埋め込みを実行します。[!DNL Experience Manager]次を使用する場合： [!DNL Experience Manager] WCM として [アセットをページに直接追加します。](adding-dynamic-media-assets-to-pages.md)
 
 [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)を参照してください。
 

@@ -1,20 +1,20 @@
 ---
 title: アダプティブフォームのローカリゼーション用に新しいロケールをサポート
-seo-title: アダプティブフォームのローカリゼーション用に新しいロケールをサポート
+seo-title: Supporting new locales for adaptive forms localization
 description: AEM Forms は、アダプティブフォームのローカライズ用に新しくロケールを追加できます。デフォルトでサポートされているロケールは、英語、フランス語、ドイツ語、日本語です。
-seo-description: AEM Forms は、アダプティブフォームのローカライズ用に新しくロケールを追加できます。デフォルトでサポートされているロケールは、英語、フランス語、ドイツ語、日本語です。
+seo-description: AEM Forms allows you to add new locales for localizing adaptive forms. The supported locales by default are English, French, German, and Japanese.
 uuid: d4cee51b-c555-4544-9ae9-4aa8d38b2b17
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: Configuration
 discoiquuid: e78f539a-109c-444c-8e52-be2260c3509f
-feature: アダプティブフォーム
+feature: Adaptive Forms
 role: Admin
 exl-id: 9f0e7284-ac11-406d-8d8c-7682f1d66fff
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '723'
-ht-degree: 88%
+source-wordcount: '691'
+ht-degree: 87%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 88%
 
 アダプティブフォームのローカリゼーションは、次の 2 種類のロケールの辞書に基づいています。
 
-**フォーム固有の辞書アダプティブ** フォームで使用される文字列を含みます。例えば、ラベル、フィールド名、エラーメッセージ、ヘルプの説明文などです。各ロケールのXLIFFファイルのセットとして管理され、https://`<host>`:`<port>`/libs/cq/i18n/translator.htmlでアクセスできます。
+**フォーム固有の辞書** アダプティブフォームで使用される文字列が含まれます。 例えば、ラベル、フィールド名、エラーメッセージ、ヘルプの説明文などです。各ロケールに対して XLIFF ファイルのセットとして管理され、https://でアクセスできます`<host>`:`<port>`/libs/cq/i18n/translator.html.
 
 **グローバル辞書** 2 つのグローバル辞書があり、AEM クライアントライブラリで JSON オブジェクトの形で管理されています。これらの辞書にはデフォルトのエラーメッセージ、12 か月の名前、通貨シンボル、日付と時間のパターンなどが含まれます。これらの辞書は CRXDe Lite の /libs/fd/xfaforms/clientlibs/I18N にあります。これらの場所では、各ロケールごと別々のフォルダーが用意されています。グローバルの辞書は頻繁に更新されることはありません。各ロケールごとに別の JavaScript ファイルを保持することで、ブラウザーによりそれらがキャッシュされるため、同一サーバー上で異なるアダプティブフォームにアクセスする際に、ネットワーク帯域幅の使用量を減らすことができます。
 
@@ -32,9 +32,9 @@ ht-degree: 88%
 
 アダプティブフォームがレンダリングされるときは、指定された順序で以下のパラメーターが参照され、リクエストされたロケールが識別されます。
 
-* リクエストパラメーター`afAcceptLang`
+* リクエストパラメーター `afAcceptLang`
 
-   ユーザーのブラウザーロケールを上書きするには、`afAcceptLang`リクエストパラメーターを渡して、ロケールを強制的に指定します。 例えば、次の URL は日本語ロケールでのフォームのレンダリングを強制します。
+   ユーザーのブラウザーロケールを上書きするには、 `afAcceptLang` リクエストパラメーターを使用して、ロケールを強制的に指定します。 例えば、次の URL は日本語ロケールでのフォームのレンダリングを強制します。
 
    `https://[*server*]:[*port*]/<*contextPath*>/<*formFolder*>/<*formName*>.html?wcmmode=disabled&afAcceptLang=ja`
 
@@ -48,7 +48,7 @@ ht-degree: 88%
 
 ## サポートされていないロケールにローカリゼーションのサポートを追加する {#add-localization-support-for-non-supported-locales}
 
-AEM Formsでは、現在、英語(en)、スペイン語(es)、フランス語(fr)、イタリア語(it)、ドイツ語(de)、日本語(ja)、ポルトガル語 — ブラジル語(pt-BR)、中国語 —(zh-CN)、中国語 — 台湾(zh-TW)、韓国語(ko-KR)ロケールのアダプティブフォームコンテンツのローカライゼーションをサポートしています。
+AEM Formsでは現在、英語 (en)、スペイン語 (es)、フランス語 (fr)、イタリア語 (it)、ドイツ語 (de)、日本語 (ja)、ポルトガル語 — ブラジル語 (pt-BR、中国語 —(zh-CN)、中国語 — 台湾 (zh-TW)、韓国語 (ko-KR) ロケールのアダプティブフォームコンテンツのローカライゼーションをサポートしています。
 
 アダプティブフォーム実行時に新しいロケールのサポートを追加するには、次を参照してください。
 

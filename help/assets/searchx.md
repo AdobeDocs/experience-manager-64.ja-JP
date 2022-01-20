@@ -1,6 +1,6 @@
 ---
 title: Assets の検索機能の拡張
-description: ' [!DNL Experience Manager] Assetsの検索機能を、標準の文字列によるアセット検索以外にも拡張します。'
+description: の検索機能の拡張 [!DNL Experience Manager] 標準搭載のアセット以外は、文字列でアセットを検索します。
 contentOwner: AG
 feature: Search
 role: Developer
@@ -14,15 +14,15 @@ ht-degree: 79%
 
 # Assets の検索機能の拡張 {#extending-assets-search}
 
-Adobe Experience Manager Assetsの検索機能を拡張できます。 初期設定では、[!DNL Experience Manager] Assetsは文字列でアセットを検索します。
+Adobe Experience Manager Assets の検索機能を拡張できます。 すぐに使える [!DNL Experience Manager] Assets は、文字列でアセットを検索します。
 
 検索は QueryBuilder インターフェイスを介して実行されるので、複数の述語を使用して検索をカスタマイズできます。`/apps/dam/content/search/searchpanel/facets` ディレクトリにあるデフォルトの述語セットをオーバーレイできます。
 
-[!DNL Experience Manager]アセット管理パネルにタブを追加することもできます。
+また、 [!DNL Experience Manager] アセット管理パネル。
 
 >[!CAUTION]
 >
->[!DNL Experience Manager] 6.4以降、クラシックUIは非推奨（廃止予定）となりました。 お知らせについては、[廃止される機能および削除された機能](../release-notes/deprecated-removed-features.md)を参照してください。タッチ対応 UI を使用することをお勧めします。カスタマイズについては、[検索ファセット](search-facets.md)を参照してください。
+>現在 [!DNL Experience Manager] 6.4、クラシック UI は非推奨（廃止予定）となりました。 お知らせについては、[廃止される機能および削除された機能](../release-notes/deprecated-removed-features.md)を参照してください。タッチ対応 UI を使用することをお勧めします。カスタマイズについては、[検索ファセット](search-facets.md)を参照してください。
 
 ## オーバーレイ {#overlaying}
 
@@ -36,30 +36,30 @@ Adobe Experience Manager Assetsの検索機能を拡張できます。 初期設
 
 ## タブの追加 {#adding-tabs}
 
-[!DNL Experience Manager]アセット管理で追加の「検索」タブを設定することで、タブを追加できます。 追加のタブは以下の手順で作成します。
+「検索」タブを追加するには、 [!DNL Experience Manager] アセット管理者。 追加のタブは以下の手順で作成します。
 
 1. フォルダー構造 `/apps/wcm/core/content/damadmin/tabs,` がまだ存在しない場合は作成し、`tabs` ノードを `/libs/wcm/core/content/damadmin` からコピーして貼り付けます。
 1. 必要に応じて、2 つ目のタブを作成し設定します。
 
    >[!NOTE]
    >
-   >2つ目のsiteadminsearchpanelを作成する場合は、フォームの競合を防ぐために`id`プロパティを必ず設定してください。
+   >2 つ目の siteadminsearchpanel を作成する場合は、必ず `id` プロパティを使用して、フォームの競合を防ぎます。
 
 ## カスタムの述語の作成 {#creating-custom-predicates}
 
 [!DNL Experience Manager] Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みの一連の述語が付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
-[!DNL Experience Manager]開発者は、既存の述語を使用するだけでなく、[Query Builder API](/help/sites-developing/querybuilder-api.md)を使用して独自の述語を作成することもできます。
+既存の述語の使用に加えて、 [!DNL Experience Manager] 開発者は、 [Query Builder API](/help/sites-developing/querybuilder-api.md).
 
 カスタム述語を作成するには、[ウィジェットフレームワーク](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html)に関する基本的な知識が必要です。
 
-ベストプラクティスは、既存の述語をコピー後に変更することです。サンプルの述語は`/libs/cq/search/components/predicates`にあります。
+ベストプラクティスは、既存の述語をコピー後に変更することです。サンプルの述語は、 `/libs/cq/search/components/predicates`.
 
 ### 例：シンプルなプロパティ述語の作成 {#example-build-a-simple-property-predicate}
 
 プロパティ述語の作成手順
 
-1. プロジェクトディレクトリにコンポーネントフォルダー（例：`/apps/geometrixx/components/titlepredicate`）を作成します。
+1. プロジェクトディレクトリにコンポーネントフォルダーを作成します。例： `/apps/geometrixx/components/titlepredicate`.
 1. ページの URL の末尾に `content.xml`:
 
    ```xml
@@ -142,7 +142,7 @@ Adobe Experience Manager Assetsの検索機能を拡張できます。 初期設
    </script>
    ```
 
-1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDEで、プライマリ型`cq:EditConfig`のノード`cq:editConfig`を追加します。 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として **DELETE** のみを設定します。
+1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDE で、ノードを追加します `cq:editConfig` プライマリタイプ `cq:EditConfig`. 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として **DELETE** のみを設定します。
 1. ブラウザーを開き、サンプルページ（`press.html` など）でデザインモードに切り替えて、述語段落システムの新しいコンポーネント（「**左揃え**」など）を有効にします。
 
 1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。「**Predicates**」列にコンポーネントを挿入し、「**Diamond**」などの検索語句を入力して、虫眼鏡アイコンをクリックして検索を開始します。
@@ -155,7 +155,7 @@ Adobe Experience Manager Assetsの検索機能を拡張できます。 初期設
 
 グループ述語の作成手順
 
-1. プロジェクトディレクトリにコンポーネントフォルダー（例：`/apps/geometrixx/components/picspredicate`）を作成します。
+1. プロジェクトディレクトリにコンポーネントフォルダーを作成します。例： `/apps/geometrixx/components/picspredicate`.
 1. ページの URL の末尾に `content.xml`:
 
    ```xml
@@ -249,7 +249,7 @@ Adobe Experience Manager Assetsの検索機能を拡張できます。 初期設
        });
    ```
 
-1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDEで、プライマリ型`cq:EditConfig`のノード`cq:editConfig`を追加します。 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として `DELETE` のみを設定します。
+1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDE で、ノードを追加します `cq:editConfig` プライマリタイプ `cq:EditConfig`. 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として `DELETE` のみを設定します。
 1. ブラウザーを開き、サンプルページ（`press.html` など）でデザインモードに切り替えて、述語段落システムの新しいコンポーネント（「**左揃え**」など）を有効にします。
 1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。「**Predicates**」列にコンポーネントを挿入します。
 
@@ -262,7 +262,7 @@ Adobe Experience Manager Assetsの検索機能を拡張できます。 初期設
 | プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルトは `fulltext` |
-| searchCallback | Function | イベント`keyup`で検索を呼び出すコールバック。 デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback | Function | イベントで検索をトリガーするコールバック `keyup`. デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
@@ -279,7 +279,7 @@ Adobe Experience Manager Assetsの検索機能を拡張できます。 初期設
 | predicateName | 文字列 | 述語の名前。デフォルトは `path` |
 | rootPath | 文字列 | 述語のルートパス。デフォルトは `/content/dam` |
 | pathFieldPredicateName | 文字列 | デフォルトは `folder` |
-| showFlatOption | Boolean | チェックボックス`search in subfolders`を表示するフラグ。 デフォルトは true です |
+| showFlatOption | Boolean | チェックボックスを表示するフラグ `search in subfolders`. デフォルトは true です |
 
 ### DatePredicate {#datepredicate}
 
@@ -297,7 +297,7 @@ Adobe Experience Manager Assetsの検索機能を拡張できます。 初期設
 | predicateName | 文字列 | 述語の名前。デフォルトは `daterange` |
 | propertyname | 文字列 | JCR プロパティの名前。デフォルトは `jcr:content/metadata/cq:tags` |
 | collapse | 文字列 | 折りたたみのレベル。デフォルトは `level1` |
-| triggerSearch | Boolean | チェック時の検索を呼び出すためのフラグ。デフォルトは false です |
+| triggerSearch | ブール値 | チェック時の検索を呼び出すためのフラグ。デフォルトは false です |
 | searchCallback | 関数 | 検索を呼び出すためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | Number | タイムアウト。この時間を過ぎると searchCallback が呼び出されます。デフォルトは 800ms です |
 
@@ -305,4 +305,4 @@ Adobe Experience Manager Assetsの検索機能を拡張できます。 初期設
 
 アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。[!DNL Experience Manager] Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みのレンズのセットが付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
-[!DNL Experience Manager]開発者は、既存のレンズを使用するだけでなく、独自のレンズを作成することもできます。
+既存のレンズの使用に加えて、 [!DNL Experience Manager] 開発者は、独自のレンズを作成することもできます。

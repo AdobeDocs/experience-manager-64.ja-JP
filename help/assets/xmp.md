@@ -1,6 +1,6 @@
 ---
 title: XMP メタデータ
-description: メタデータ管理に [!DNL Experience Manager] Assetsで使用されるXMP(Extensible Metadata Platform)メタデータ標準について説明します。 XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
+description: で使用されるXMP(Extensible Metadata Platform) メタデータ標準について説明します。 [!DNL Experience Manager] メタデータ管理用のアセット。 XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
 contentOwner: AG
 feature: Metadata
 role: User,Admin
@@ -14,7 +14,7 @@ ht-degree: 93%
 
 # XMP メタデータ {#xmp-metadata}
 
-XMP(Extensible Metadata Platform)は、すべてのメタデータ管理に[!DNL Experience Manager] Assetsで使用されるメタデータ標準です。 XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
+XMP(Extensible Metadata Platform) は、 [!DNL Experience Manager] すべてのメタデータ管理用のアセット。 XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
 
 XMP では、すべてのファイル形式に埋め込むことができる共通のメタデータエンコーディングのほか、リッチ[コンテンツモデル](xmp.md#xmp-core-concepts)も提供され、[アドビによるサポート](xmp.md#advantages-of-xmp)やその他各社のサポートがあるので、XMP を Assets と組み合わせて使用すると強力なプラットフォームを構築できます。[!DNL Experience Manager]
 
@@ -24,7 +24,7 @@ XMP では、すべてのファイル形式に埋め込むことができる共�
 
 [!DNL Experience Manager] Assets は、アドビ主導の XMP（Extensible Metadata Platform）をネイティブでサポートしています。XMP は、デジタルアセット内の標準化されたメタデータと独自メタデータを処理および格納するための規格です。XMP は、複数のアプリケーションでメタデータを効率的に使用するための共通規格となるよう設計されています。
 
-例えば制作のプロフェッショナルは、アドビのアプリケーションに組み込まれた XMP サポートを使用して、複数のファイル形式に情報を渡します。[!DNL Experience Manager] Assetsリポジトリは、XMPメタデータを抽出し、それを使用してコンテンツのライフサイクルを管理し、自動ワークフローを作成する機能を提供します。
+例えば制作のプロフェッショナルは、アドビのアプリケーションに組み込まれた XMP サポートを使用して、複数のファイル形式に情報を渡します。この [!DNL Experience Manager] アセットリポジトリは、XMPメタデータを抽出し、それを使用してコンテンツのライフサイクルを管理し、自動化ワークフローを作成する機能を提供します。
 
 XMP が提供するデータモデル、ストレージモデルおよびスキーマを使用して、メタデータの定義、作成および処理方法を規格化できます。これらの概念は、すべてこの節で説明します。
 

@@ -1,8 +1,8 @@
 ---
 title: フォームメタデータの管理
-seo-title: フォームメタデータの管理
+seo-title: Manage form metadata
 description: メタデータを使用すると、アセットの分類および編成を容易に行うことができ、特定のアセットを検索しやすくなります。
-seo-description: メタデータを使用すると、アセットの分類および編成を容易に行うことができ、特定のアセットを検索しやすくなります。
+seo-description: Metadata allows for easier categorization and organization of assets and helps users who are looking for a specific asset.
 uuid: cdb5cb52-5b93-4d99-bd97-fba017406316
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -12,7 +12,7 @@ role: Admin
 exl-id: d10bc3e9-66a6-4cb2-b484-da338259f1c8
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '1973'
 ht-degree: 91%
 
 ---
@@ -181,21 +181,21 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
 
 1. 次のいずれかの方法を使用してプロパティページを開きます。
 
-   1. クイックアクションの「プロパティを表示![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png) 」アイコンをクリックします。
+   1. 「プロパティを表示」をクリックします。 ![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png) アイコンをクリックします。
 
       >[!NOTE]
       >
       >クイックアクションは、マウスのカーソルを合わせたときにサムネール上に表示されるアクション項目です。
 
-   1. フォームを選択し、ツールバーに表示される「プロパティを表示![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png) 」アイコンをクリックします。
-   1. 選択モードではない場合にフォームのサムネールをクリックして、フォーム詳細ページに移動します。次に、右上の![aem6forms_eye_viewon](assets/aem6forms_eye_viewon.png)目のアイコンをクリックし、その下にあるリストで「プロパティ」をクリックします。
+   1. フォームを選択し、「プロパティを表示」をクリックします。 ![e_reviewmode_properties_n](assets/e_reviewmode_properties_n.png) アイコンが表示されます。
+   1. 選択モードではない場合にフォームのサムネールをクリックして、フォーム詳細ページに移動します。次に、 ![aem6forms_eye_viewon](assets/aem6forms_eye_viewon.png) 右上の目のアイコンをクリックし、その下の一覧の [ プロパティ ] をクリックします。
 
 1. プロパティページが開き、いくつかの値を保持するメタデータのプロパティのみを含むスキーマが表示されます。
 
    プロパティページには、2 つのアクションアイコンが表示されるツールバーがあります。
 
-   * 編集：![aem6forms_edit](assets/aem6forms_edit.png)メタデータプロパティの値を編集します
-   * 表示：![aem6forms_eye_viewon](assets/aem6forms_eye_viewon.png)フォームの詳細ページに移動します。このページで、プレビューモードでフォームが開きます。
+   * 編集： ![aem6forms_edit](assets/aem6forms_edit.png) メタデータプロパティの値の編集
+   * 表示： ![aem6forms_eye_viewon](assets/aem6forms_eye_viewon.png) フォームの詳細ページに移動します。このページでは、プレビューモードでフォームが開きます。
 
    コンテンツ部分は 2 つのパートに分かれています。
 
@@ -211,7 +211,7 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
 
 1. 前のセクションで説明した手順に従って、選択したフォームの既存のメタデータを表示するプロパティページを開きます。
 
-1. ツールバーの編集アイコン![aem6forms_edit](assets/aem6forms_edit.png)をクリックして、ページのモードを読み取り専用から読み取り/書き込みに変更します。
+1. ツールバーの編集アイコンをクリックします。 ![aem6forms_edit](assets/aem6forms_edit.png) ページのモードを読み取り専用から読み取り/書き込みに変更する場合。
 
 1. 編集可能な入力フィールドとスタティックテキストの組み合わせを含むスキーマを保持するプロパティページが開きます。 
 
@@ -221,8 +221,8 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
 
    このページのツールバーには、ビューモードのツールバーとは異なる 2 つのアイコンが表示されます。
 
-   * キャンセル：![aem6forms_close](assets/aem6forms_close.svg_w24.png)これまでにメタデータプロパティの値に加えた変更をキャンセルします
-   * 完了：![aem6forms_check](assets/aem6forms_check.png)これまでにメタデータプロパティの値に加えたすべての変更を保存します
+   * キャンセル： ![aem6forms_close](assets/aem6forms_close.svg_w24.png) これまでにメタデータプロパティの値に加えた変更をキャンセルします
+   * 完了： ![aem6forms_check](assets/aem6forms_check.png) これまでにメタデータプロパティの値に加えた変更をすべて保存
 
    どちらのアクションでも、更新済みの値を含むプロパティページを読み取り専用モードに戻すようユーザーは指示されます。
 
@@ -240,7 +240,6 @@ AEM Forms では、アセットに関連付けられたメタデータのプロ�
 >* 新しい画像がアップロードまたは生成されると、サムネールはこの画像に置き換えられ、以前の画像にリセットすることはできません。
 
 >
-
 
 
 ## カスタムメタデータの追加  {#add-custom-metadata-nbsp}
@@ -265,7 +264,7 @@ AEM Forms は、このツールでサポート対象のフォームタイプの�
 
 1. 任意のアセットタイプをクリックすると、`extendedmetadata` オプションを含むリストが開きます。このスキーマを編集します。
 
-1. `extendedmetadata`の横にあるチェックボックスを選択し、ツールバーに表示される![aem6forms_edit](assets/aem6forms_edit.png)を編集アイコンをクリックします。
+1. の横にあるチェックボックスを選択します。 `extendedmetadata` 次に、編集ボタン ![aem6forms_edit](assets/aem6forms_edit.png) アイコンが表示されます。
 
 1. 選択されたアセットタイプ（この場合はアダプティブフォーム）のメタデータスキーマエディターまたはフォームビルダーが、AEM Forms で開きます。
 
@@ -306,7 +305,7 @@ AEM Forms は、このツールでサポート対象のフォームタイプの�
 
    1. 要件に基づいてその他の設定を入力します。例えば、フィールドを必須フィールドにする場合は、必須オプションを選択します。
 
-   1. 追加したフィールドを削除するには、フィールドを選択し、削除![delete-1](assets/delete-1.png)アイコンをクリックします。
+   1. 追加したフィールドを削除するには、フィールドを選択し、削除アイコン ![delete-1](assets/delete-1.png) アイコン
 
 1. 必要に応じて、手順 1 から 3 に従って、別のプロパティを追加します。
 1. すべての変更を行ったら、「**完了**」をクリックします。

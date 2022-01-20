@@ -1,8 +1,8 @@
 ---
 title: AEM Forms Workspace でのサードパーティアプリケーションの統合
-seo-title: AEM Forms Workspace でのサードパーティアプリケーションの統合
+seo-title: Integrating third-party applications in AEM Forms workspace
 description: AEM Forms Workspace で Correspondence Management のようなサードパーティアプリケーションを統合する方法。
-seo-description: AEM Forms Workspace で Correspondence Management のようなサードパーティアプリケーションを統合する方法。
+seo-description: How-to integrate third-party apps like Correspondence Management in AEM Forms workspace.
 uuid: 9649157c-fe28-43bf-a7d3-52ed55a0bf4f
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-workspace
@@ -10,12 +10,12 @@ discoiquuid: f2bde2e8-da95-48ac-a652-85ead87f2cd3
 exl-id: 4df9a16c-0853-4bbf-81bb-1856ab55c5ee
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '623'
 ht-degree: 84%
 
 ---
 
-# AEM Forms Workspace でのサードパーティアプリケーションの統合  {#integrating-third-party-applications-in-aem-forms-workspace}
+# AEM Forms Workspace でのサードパーティアプリケーションの統合 {#integrating-third-party-applications-in-aem-forms-workspace}
 
 AEM Forms Workspace では、フォームおよびドキュメントでタスクの割り当ておよび完了アクティビティの管理をサポートしています。これらのフォームおよびドキュメントは、XDP、PDF、HTML、または Flex 形式にレンダリングされた XDP フォーム、Flex® フォーム、または Guide （推奨されていません）にすることができます。
 
@@ -25,13 +25,13 @@ AEM Forms Workspace では、フォームおよびドキュメントでタスク
 
 ## Correspondence Management アセットの作成 {#create-correspondence-management-assets}
 
-まず、AEM Forms WorkspaceでレンダリングされるサンプルのCorrespondence Managementテンプレートを作成します。 詳しくは、「[レターテンプレートの作成](/help/forms/using/create-letter.md)」を参照してください。
+まず、AEM Forms Workspace でレンダリングされるサンプルの Correspondence Management テンプレートを作成します。 詳しくは、 [レターテンプレートの作成](/help/forms/using/create-letter.md).
 
-URLでCorrespondence Managementテンプレートにアクセスして、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは`https://[server]:[port]/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`のようなパターンを持ちます
+URL で Correspondence Management テンプレートにアクセスして、Correspondence Management テンプレートを正常にレンダリングできるかどうかを確認します。 この URL は、 `https://[server]:[port]/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
 
 ここで、`encodedLetterId` は URL エンコードされたレター ID です。Workbench で Workspace タスクにレンダリングプロセスを定義する場合は、同じレター ID を指定します。
 
-## AEM Workspace でレターをレンダリングして送信するタスクを作成する  {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
+## AEM Workspace でレターをレンダリングして送信するタスクを作成する {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
 
 これらの手順を実行する前に、次のグループのメンバーであることを確認してください。
 
@@ -44,18 +44,18 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
 
 1. Workbench を起動します。ローカルホストに管理者としてログインします。
 1. 「ファイル／新規／アプリケーション」をクリックします。アプリケーション名フィールドで、`CMDemoSample` を入力して「終了」をクリックします。
-1. `CMDemoSample/1.0`を選択し、`NewProcess`を右クリックします。 名前フィールドで、`CMRenderer` を入力して「終了」をクリックします。
+1. 選択 `CMDemoSample/1.0` 右クリック `NewProcess`. 名前フィールドで、`CMRenderer` を入力して「終了」をクリックします。
 1. 開始ポイントアクティビティピッカーをドラッグして設定します。
 
    1. プレゼンテーションデータで、「CRX アセットの使用」を選択します。
 
-      ![useacrxasset](assets/useacrxasset.png)
+      ![usearxasset](assets/useacrxasset.png)
 
    1. アセットを参照します。フォームアセットの選択ダイアログの「レター」タブに、サーバーのすべてのレターが表示されます。
 
       ![lettertab](assets/lettertab.png)
 
-   1. 適切な文字を選択し、「**OK**」をクリックします。
+   1. 適切なレターを選択し、 **OK**.
 
 1. 「アクションプロファイルの管理」をクリックします。アクションプロファイルの管理ダイアログが表示されます。レンダリングプロセスと送信プロセスが正しく選択されていることを確認します。
 1. データ XML ファイルを使用してレターを開くために、データの準備プロセスで適切なデータファイルを参照して選択します。
@@ -100,13 +100,13 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
    }
    ```
 
-   [FileDownload DSC](assets/dscsample.zip)
-を取得：サンプルのDSCは、上記に添付されてい `DSCSample.zip` るファイルにあります。`DSCSample.zip`ファイルをダウンロードして解凍します。 DSC サービスを使用する前に、設定する必要があります。詳しくは、[DSCサービスの設定](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)を参照してください。
+   [ダウンロード](assets/dscsample.zip)
+DSC をダウンロード：サンプルの DSC は、 `DSCSample.zip` ファイルを上に添付します。 をダウンロードして展開します。 `DSCSample.zip` ファイル。 DSC サービスを使用する前に、設定する必要があります。詳しくは、 [DSC サービスの設定](/help/forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p).
 
    Define Activity ダイアログで、getLetterInstanceInfo などの適切なアクティビティを選択し、「**OK**」をクリックします。
 
 1. アプリケーションをデプロイします。指示があったら、アセットをチェックインして保存します。
-1. `https://[server]:[port]/lc/content/ws`でAEM forms workspaceにログインします。
+1. 次の場所にあるAEM forms workspace にログインします。 `https://[server]:[port]/lc/content/ws`.
 1. 追加したタスク CMRenderer を開きます。Correspondence Management レターが表示されます。
 
    ![cminworkspace](assets/cminworkspace.png)

@@ -1,8 +1,8 @@
 ---
 title: フォームの作成（クラシック UI）
-seo-title: フォームの作成（クラシック UI）
+seo-title: Developing Forms (Classic UI)
 description: フォームの作成方法について説明します
-seo-description: フォームの作成方法について説明します
+seo-description: Learn how to develop forms
 uuid: 124e63ba-8d87-4173-aa35-7809b39811d7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 0ef6a3b1-e7ce-4268-a5be-a565646ecc29
 exl-id: 6d52babc-9477-4528-9c25-35cb729f5d78
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1952'
+source-wordcount: '1943'
 ht-degree: 76%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 76%
 * フォームエレメント
 * フォーム終了
 
-これらはすべて、標準のAEMインストールで使用できる、一連のデフォルトの[フォームコンポーネント](/help/sites-authoring/default-components.md)で実現されます。
+これらはすべて、一連のデフォルトで実現されます [フォームコンポーネント](/help/sites-authoring/default-components.md)：標準のAEMインストールで使用できます。
 
 フォームで使用する[新しいコンポーネントを開発する](/help/sites-developing/developing-components-samples.md)ほかに、次のこともできます。
 
@@ -39,9 +39,9 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->このドキュメントでは、クラシック UI の[基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)を使用したフォームの作成に重点を置いて説明します。アドビでは、タッチ操作対応 UI でのフォーム作成に新しい[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)と[非表示の条件](/help/sites-developing/hide-conditions.md)を使用することをお勧めします。
+>このドキュメントでは、クラシック UI の[基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)を使用したフォームの作成に重点を置いて説明します。アドビでは、タッチ操作対応 UI でのフォーム作成に新しい[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)と[非表示の条件](/help/sites-developing/hide-conditions.md)を使用することをお勧めします。
 
-## フォーム値のプリロード  {#preloading-form-values}
+## フォーム値のプリロード {#preloading-form-values}
 
 フォーム開始コンポーネントには、**読み込み元パス**（リポジトリ内のノードを指すオプションのパス）を指定するフィールドがあります。
 
@@ -51,11 +51,11 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->[フォームアクション](#developing-your-own-form-actions)で初期値の読み込み元となるリソースを設定することもできます。これは、`init.jsp`内の`FormsHelper#setFormLoadResource`を使用して行います。
+>[フォームアクション](#developing-your-own-form-actions)で初期値の読み込み元となるリソースを設定することもできます。これは、 `FormsHelper#setFormLoadResource` inside `init.jsp`.
 >
 >設定されていない場合にのみ、作成者がフォーム開始コンポーネントに設定したパスからフォームに値が読み込まれます。
 
-## フォームフィールドへの複数値のプリロード  {#preloading-form-fields-with-multiple-values}
+## フォームフィールドへの複数値のプリロード {#preloading-form-fields-with-multiple-values}
 
 様々なフォームフィールドには、**項目読み込みパス**（リポジトリ内のノードを指すオプションのパス）もあります。
 
@@ -67,17 +67,17 @@ ht-degree: 76%
 
 「**項目読み込みパス**」を使用すると、リポジトリ内のフォルダーからリストにアクセスし、リストの値をフィールドにプリロードできます。
 
-1. 新しいslingフォルダー(`sling:Folder`)を作成します。
+1. 新しい sling フォルダー ( `sling:Folder`)
 
    例： `/etc/designs/<myDesign>/formlistvalues`
 
-1. 複数値の文字列(`String[]`)型の新しいプロパティ（例えば、`myList`）を追加して、ドロップダウン項目のリストを含めます。 コンテンツはスクリプト（JSP スクリプトやシェルスクリプトの curl など）を使用してインポートすることもできます。
+1. 新しいプロパティを追加します ( 例： `myList`) 型の複数値文字列 ( `String[]`) をクリックして、ドロップダウン項目のリストを格納します。 コンテンツはスクリプト（JSP スクリプトやシェルスクリプトの curl など）を使用してインポートすることもできます。
 
 1. 「**項目読み込みパス**」フィールドにはフルパスを指定します。
 
    例： `/etc/designs/geometrixx/formlistvalues/myList`
 
-`String[]`内の値が次のような形式の場合は、
+なお、 `String[]` の形式は次のようになります。
 
 * `AL=Alabama`
 * `AK=Alaska`
@@ -90,7 +90,7 @@ ht-degree: 76%
 
 この機能は、多言語設定などに適しています。
 
-### 独自のフォームアクションの作成  {#developing-your-own-form-actions}
+### 独自のフォームアクションの作成 {#developing-your-own-form-actions}
 
 フォームにはアクションが必要です。アクションでは、ユーザーデータが入力されたフォームが送信されたときに実行する操作を定義します。
 
@@ -104,9 +104,9 @@ ht-degree: 76%
 
 この節では、このリストに含める独自のフォームアクションを作成する方法について説明します。
 
-`/apps`の下に独自のアクションを追加するには、次の手順を実行します。
+以下に独自のアクションを追加できます。 `/apps` 次のように指定します。
 
-1. `sling:Folder`型のノードを作成します。実装するアクションを反映する名前を指定します。
+1. タイプのノードの作成 `sling:Folder`.実装するアクションを反映する名前を指定します。
 
    次に例を示します。
 
@@ -114,11 +114,11 @@ ht-degree: 76%
 
 1. このノードで、次のプロパティを定義し、「**すべて保存**」をクリックして、変更を保存します。
 
-   * `sling:resourceType`  — 次のように設定します。  `foundation/components/form/action`
-   * `componentGroup`  — 次のように定義します。  `.hidden`
+   * `sling:resourceType`  — に設定 `foundation/components/form/action`
+   * `componentGroup`  — 次の形式で定義 `.hidden`
    * 省略可能：
 
-      * `jcr:title` ：選択したタイトルを指定します。これは、ドロップダウン選択リストに表示されます。設定されていない場合は、ノード名が表示されます
+      * `jcr:title`  — 選択したタイトルを指定します。これは、ドロップダウン選択リストに表示されます。 設定されていない場合は、ノード名が表示されます
       * `jcr:description`  — 選択した説明を入力します
 
 1. フォルダーにダイアログノードを作成します。
@@ -129,18 +129,18 @@ ht-degree: 76%
 
    1. ポストスクリプト。
 
-      スクリプトの名前は`post.POST.<extension>`です。例：`post.POST.jsp`
+      スクリプトの名前は `post.POST.<extension>`例： `post.POST.jsp`
 
-      フォームを処理するためにフォームが送信されると、postスクリプトが呼び出されます。このスクリプトには、フォーム`POST`から受け取ったデータを処理するコードが含まれます。
+      フォームを処理するためにフォームが送信されると、post スクリプトが呼び出されます。このスクリプトには、フォームから到着したデータを処理するコードが含まれています `POST`.
 
    1. フォームが送信されたときに呼び出される転送スクリプトを追加します。
 
-      スクリプトの名前は`forward.<extension`です。例：`forward.jsp`
+      スクリプトの名前は `forward.<extension`>、例： `forward.jsp`
 
-      このスクリプトはパスを定義できます。 現在の要求が、指定されたパスに転送されます。
-   必要な呼び出しは`FormsHelper#setForwardPath` （2つのバリアント）です。 通常は、何らかの検証（ロジック）を実行して、ターゲットパスを見つけ、そのパスに転送し、デフォルトの Sling POST サーブレットで JCR への実際の保存を実行できるようにします。
+      このスクリプトは、パスを定義できます。 現在の要求が、指定されたパスに転送されます。
+   必要な呼び出しは、 `FormsHelper#setForwardPath` （2 つのバリアント）。 通常は、何らかの検証（ロジック）を実行して、ターゲットパスを見つけ、そのパスに転送し、デフォルトの Sling POST サーブレットで JCR への実際の保存を実行できるようにします。
 
-   また、フォームアクションと `forward.jsp` が「グルー」コードとしてのみ動作するような場合には、別のサーブレットで実際の処理を実行することもできます。例えば、`/libs/foundation/components/form/actions/mail`のメールアクションは、メールサーブレットが配置されている`<currentpath>.mail.html`に詳細を転送します。
+   また、フォームアクションと `forward.jsp` が「グルー」コードとしてのみ動作するような場合には、別のサーブレットで実際の処理を実行することもできます。例えば、次の場所にあるメールアクションです： `/libs/foundation/components/form/actions/mail`（詳細をに転送） `<currentpath>.mail.html`ここでは、メールサーブレットが設定されます。
 
    まとめると、次のようになります。
 
@@ -149,18 +149,18 @@ ht-degree: 76%
 
    スクリプトは次の順序で実行されます。
 
-   * フォームのレンダリング時(`GET`):
+   * フォームのレンダリング時 ( `GET`):
 
       1. `init.jsp`
-      1. すべてのフィールドの制約に対して、次の操作を行います。`clientvalidation.jsp`
-      1. フォームのvalidationRT:`clientvalidation.jsp`
+      1. すべてのフィールドの制約の場合： `clientvalidation.jsp`
+      1. フォームの validationRT: `clientvalidation.jsp`
       1. 設定されている場合は、読み込みリソースを介してフォームが読み込まれます
-      1. `addfields.jsp` レンダリングの中で  `<form></form>`
-   * フォーム`POST`の処理時：
+      1. `addfields.jsp` レンダリングの中で `<form></form>`
+   * フォームを扱う際に `POST`:
 
       1. `init.jsp`
-      1. すべてのフィールドの制約に対して、次の操作を行います。`servervalidation.jsp`
-      1. フォームのvalidationRT:`servervalidation.jsp`
+      1. すべてのフィールドの制約の場合： `servervalidation.jsp`
+      1. フォームの validationRT: `servervalidation.jsp`
       1. `forward.jsp`
       1. 転送パスが設定されていた場合（`FormsHelper.setForwardPath`）、要求を転送し、その後、`cleanup.jsp` を呼び出します
       1. 転送パスが設定されていなかった場合、`post.POST.jsp` を呼び出します（ここで終了し、`cleanup.jsp` は呼び出されません）
@@ -172,19 +172,19 @@ ht-degree: 76%
 
    1. フィールドを追加するためのスクリプト。
 
-      スクリプトの名前は`addfields.<extension>`です。例：`addfields.jsp`
+      スクリプトの名前は `addfields.<extension>`例： `addfields.jsp`
 
-      addfieldsスクリプトは、フォーム開始のHTMLが書き込まれた直後に呼び出されます。 これにより、カスタム入力フィールドなどの HTML をフォーム内に追加するアクションを実行できます。
+      addfields スクリプトは、フォーム開始のHTMLが記述された直後に呼び出されます。 これにより、カスタム入力フィールドなどの HTML をフォーム内に追加するアクションを実行できます。
 
    1. 初期化スクリプト。
 
-      スクリプトの名前は`init.<extension>`です。例：`init.jsp`
+      スクリプトの名前は `init.<extension>`例： `init.jsp`
 
-      このスクリプトは、フォームがレンダリングされると呼び出されます。 このスクリプトを使用して、アクションの詳細を初期化できます。&quot;
+      このスクリプトは、フォームがレンダリングされると呼び出されます。 このスクリプトを使用して、アクションの詳細を初期化できます。``
 
    1. クリーンアップスクリプト。
 
-      スクリプトの名前は`cleanup.<extension>`です。例：`cleanup.jsp`
+      スクリプトの名前は `cleanup.<extension>`例： `cleanup.jsp`
 
       このスクリプトを使用してクリーンアップを実行できます。
 
@@ -203,11 +203,11 @@ ht-degree: 76%
 * [個々のフィールド（次の手順を参照してください）](#constraints-for-individual-fields)
 * [フォームグローバル検証](#form-global-constraints)
 
-#### 個々のフィールドの制約  {#constraints-for-individual-fields}
+#### 個々のフィールドの制約 {#constraints-for-individual-fields}
 
-個々のフィールド（`/apps`の下）に独自の制約を追加するには、次の手順を実行します。
+個々のフィールド ( `/apps`) を次のように指定します。
 
-1. `sling:Folder`型のノードを作成します。実装する制約を反映する名前を指定します。
+1. タイプのノードの作成 `sling:Folder`.実装する制約を反映する名前を指定します。
 
    次に例を示します。
 
@@ -215,26 +215,26 @@ ht-degree: 76%
 
 1. このノードで、次のプロパティを定義し、「**すべて保存**」をクリックして、変更を保存します。
 
-   * `sling:resourceType`  — に設定  `foundation/components/form/constraint`
+   * `sling:resourceType`  — に設定 `foundation/components/form/constraint`
    * `constraintMessage` - フォームの送信時に、制約に照らしてフィールドが無効な場合に表示されるカスタマイズされたメッセージ
    * 省略可能：
 
-      * `jcr:title` ：選択したタイトルを指定します。これは選択リストに表示されます。設定されていない場合は、ノード名が表示されます
+      * `jcr:title`  — 選択したタイトルを指定します。これは選択リストに表示されます。 設定されていない場合は、ノード名が表示されます
       * `hint` - ユーザーに向けたフィールドの使用方法に関する追加情報
 
 1. このフォルダー内には、少なくとも次のどちらかのスクリプトが必要です。
 
    * クライアント検証スクリプト：
 
-      スクリプトの名前は`clientvalidation.<extension>`です。例：`clientvalidation.jsp`
+      スクリプトの名前は `clientvalidation.<extension>`例： `clientvalidation.jsp`
 
       これは、フォームフィールドがレンダリングされると呼び出されます。 このスクリプトを使用すると、クライアントでフィールドを検証するクライアント JavaScript を作成できます。
 
    * サーバー検証スクリプト：
 
-      スクリプトの名前は`servervalidation.<extension>`です。例：`servervalidation.jsp`
+      スクリプトの名前は `servervalidation.<extension>`例： `servervalidation.jsp`
 
-      これは、フォームの送信時に呼び出されます。 このスクリプトを使用すると、フォームの送信後にサーバーでフィールドを検証できます。
+      これは、フォームが送信されると呼び出されます。 このスクリプトを使用すると、フォームの送信後にサーバーでフィールドを検証できます。
 
 >[!NOTE]
 >
@@ -250,8 +250,8 @@ ht-degree: 76%
 
 その後、以下を定義できます。
 
-* a `clientvalidation.jsp` — フィールドのクライアント検証スクリプトの後に挿入されます
-* と`servervalidation.jsp` - `POST`での個々のフィールドサーバーの検証後にも呼び出されます。
+* a `clientvalidation.jsp`  — フィールドのクライアント検証スクリプトの後に挿入されます
+* および `servervalidation.jsp` - `POST`.
 
 ### フォームコンポーネントの表示と非表示 {#showing-and-hiding-form-components}
 
@@ -274,11 +274,11 @@ ht-degree: 76%
 * 演算子
 * フィールドの値と比較する値
 
-例えば、タイトルが`Receive email notifications?`* *のラジオグループコンポーネントには、`Yes`と`No`のラジオボタンが含まれます。 「`Email Address`」というタイトルのテキストフィールドコンポーネントは、次の条件を使用しているので、「`Yes`」が選択された場合に表示されます。
+例えば、タイトルを持つラジオグループコンポーネント `Receive email notifications?`* *次を含む `Yes` および `No` ラジオボタン。 「`Email Address`」というタイトルのテキストフィールドコンポーネントは、次の条件を使用しているので、「`Yes`」が選択された場合に表示されます。
 
 ![showhidecondition](assets/showhidecondition.png)
 
-JavaScript の場合、条件にはエレメント名プロパティの値を使用して、フィールドを参照します。前の例では、ラジオグループコンポーネントのエレメント名プロパティは`contact`です。 次のコードは、前の例と同等の JavaScript コードです。
+JavaScript の場合、条件にはエレメント名プロパティの値を使用して、フィールドを参照します。前の例では、ラジオグループコンポーネントのエレメント名プロパティは、 `contact`. 次のコードは、前の例と同等の JavaScript コードです。
 
 `((contact == "Yes"))`
 
@@ -316,11 +316,11 @@ JavaScript の場合、条件にはエレメント名プロパティの値を使
    >* パブリッシュ環境
 
 
-#### 壊れたコンポーネント参照の処理  {#handling-broken-component-references}
+#### 壊れたコンポーネント参照の処理 {#handling-broken-component-references}
 
-表示／非表示の条件では、エレメント名プロパティの値を使用して、フォーム内の他のコンポーネントを参照します。表示/非表示の設定は、削除されたコンポーネントや、要素名プロパティが変更されたコンポーネントを参照する条件がある場合に無効になります。 その場合は、手動で条件を更新する必要があります。更新しないと、フォームの読み込み時にエラーが発生します。
+表示／非表示の条件では、エレメント名プロパティの値を使用して、フォーム内の他のコンポーネントを参照します。表示/非表示の設定は、削除されたコンポーネントを参照する条件や、要素名プロパティが変更された条件がある場合は無効です。 その場合は、手動で条件を更新する必要があります。更新しないと、フォームの読み込み時にエラーが発生します。
 
-表示/非表示の設定が無効な場合、設定はJavaScriptコードとしてのみ提供されます。 コードを編集して、問題を修正します。そのコードでは、コンポーネントを参照するために元々使用していたエレメント名プロパティを使用しています。
+表示/非表示の設定が無効な場合、設定は JavaScript コードとしてのみ提供されます。 コードを編集して、問題を修正します。そのコードでは、コンポーネントを参照するために元々使用していたエレメント名プロパティを使用しています。
 
 ### フォームで使用するスクリプトの作成 {#developing-scripts-for-use-with-forms}
 

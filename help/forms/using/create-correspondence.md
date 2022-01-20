@@ -1,8 +1,8 @@
 ---
 title: 通信を作成
-seo-title: 通信を作成
+seo-title: Create Correspondence
 description: レターテンプレートを作成すれば、それを使用して、データ、コンテンツ、および添付ファイルを管理することにより AEM Forms で通信を作成できます。
-seo-description: レターテンプレートを作成すれば、それを使用して、データ、コンテンツ、および添付ファイルを管理することにより AEM Forms で通信を作成できます。
+seo-description: After you have created a letter template, you can use it to create correspondence in AEM Forms by managing data, content, and attachments.
 uuid: 72c06a81-65c8-4ddd-964d-91f0256a8f79
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
@@ -11,7 +11,7 @@ feature: Correspondence Management
 exl-id: 645b990f-279c-4731-b552-07d0aa052eb8
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '3728'
+source-wordcount: '3701'
 ht-degree: 63%
 
 ---
@@ -20,61 +20,61 @@ ht-degree: 63%
 
 ## 通信を作成ユーザーインターフェイスで通信を作成する {#create-correspondence-in-the-create-correspondence-user-interface}
 
-[レターテンプレートをCorrespondence Management](/help/forms/using/create-letter.md)で作成した後、エンドユーザー/エージェント/要求処理担当者は通信を作成ユーザーインターフェイスでレターを開き、データの入力、コンテンツの設定、添付ファイルの管理を行って通信を作成できます。 最終的に、要求処理担当者またはエージェントはプレビューモードでコンテンツを管理し、レターを送信します。
+次の後： [レターテンプレートが Correspondence Management で作成されました](/help/forms/using/create-letter.md)エンドユーザー/エージェント/要求処理担当者は、通信を作成ユーザーインターフェイスでレターを開き、データの入力、コンテンツの設定、添付ファイルの管理を行うことで、通信を作成できます。 最終的に、要求処理担当者またはエージェントはプレビューモードでコンテンツを管理し、レターを送信します。
 
-### 通信のプレビュー  {#preview-a-correspondence}
+### 通信のプレビュー {#preview-a-correspondence}
 
 プレビューするレターを次の手順で選択します。
 
-1. 「レター」ページで、「**選択**」をタップします。
+1. 「レター」ページで、 **選択**.
 1. 必要なレターをタップして選択します。
 
    ![レターを選択](assets/1_selectletter.png)
 
    レターを選択
 
-1. データディクショナリベースのレターの場合、「**プレビュー**/**プレビュー**」を選択します。 データディクショナリベース以外のレターでは、「**プレビュー**」を選択します。レターの上にマウスカーソルを置き（選択しないで）、レターのプレビューアイコンをタップすることでレターをプレビューできます。
+1. データディクショナリベースのレターの場合は、 **プレビュー** > **プレビュー**. データディクショナリベース以外のレターでは、「**プレビュー**」を選択します。レターの上にマウスカーソルを置き（選択しないで）、レターのプレビューアイコンをタップすることでレターをプレビューできます。
 
    >[!NOTE]
    >
-   >データディクショナリがレターと関連付けされていない場合、レターのプレビューが開きます。レターがデータディクショナリベースの場合、Correspondence Managementのプレビューメニューにプレビューとカスタムのオプションが表示され、2つのオプションのいずれかを選択できます。 テストデータをデータディクショナリに関連付けることもできます。[データディクショナリがテストデータ](/help/forms/using/data-dictionary.md#p-working-with-test-data-p)を関連付けている場合、プレビューオプションを選択すると、テストデータが入力された状態で通常のプレビューが開きます。
+   >データディクショナリがレターと関連付けされていない場合、レターのプレビューが開きます。レターがデータ辞書ベースの場合、Correspondence Management のプレビューメニューにプレビューとカスタムのオプションが表示され、2 つのオプションのいずれかを選択できます。 テストデータをデータディクショナリに関連付けることもできます。次の場合に [データディクショナリに関連するテストデータがあります](/help/forms/using/data-dictionary.md#p-working-with-test-data-p)「プレビュー」オプションを選択すると、テストデータが入力された状態で通常のプレビューが開きます。
 
-1. プレビュー中に通信をレンダリングするには、管理者か、次のグループの一部である必要があります。
+1. プレビュー中に通信をレンダリングするには、管理者または次のグループの一部である必要があります。
 
    * forms-users（オーサーインスタンスをプレビューする場合）
    * cm-agent-users（発行インスタンスをレンディションする場合）
 
-   必要なアクセス権を持っていない場合は、管理者に適切なアクセス権を要求します。ユーザーの作成とグループへの追加について詳しくは、[グループへのユーザーまたはグループの追加](/help/sites-administering/security.md)を参照してください。 適切な権限を持たずに通信をレンダリングしようとすると、404エラーページが表示されます。
+   必要なアクセス権を持っていない場合は、管理者に適切なアクセス権を要求します。ユーザーの作成とグループへの追加について詳しくは、 [グループへのユーザーまたはグループの追加](/help/sites-administering/security.md). 適切な権限を持たずに通信をレンダリングしようとすると、404 エラーページが表示されます。
 
-1. **プレビュー** > **カスタム**&#x200B;を選択した場合は、ダイアログが開きます。 ダイアログで、データディクショナリに対応するデータファイルを選択してレターをプレビューし、「**プレビュー**」を選択します。 特定のレターのデータディクショナリに基づいてデータファイルが作成されます。データファイルの詳細については、「[データディクショナリ](/help/forms/using/data-dictionary.md#p-working-with-test-data-p)」を参照してください。
+1. 以下を選択した場合、 **プレビュー** >  **カスタム**&#x200B;をクリックすると、ダイアログが開きます。 ダイアログで、データディクショナリに対応するデータファイルを選択して、レターをプレビューし、「 」を選択します。 **プレビュー**. 特定のレターのデータディクショナリに基づいてデータファイルが作成されます。データファイルについて詳しくは、 [データ辞書](/help/forms/using/data-dictionary.md#p-working-with-test-data-p).
 
    ![レターをプレビュー](assets/8_previewcustomdatafile.png)
 
 1. デフォルトでは、使用中の「データ」タブでレターの HTML プレビュー（モバイルフォームプレビュー）が開きます。
 
-   モバイルフォームとそのサポートする機能について詳しくは、「 [Mobile FormsとPDF formsの機能の違い](https://helpx.adobe.com/jp/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html) 」を参照してください。
+   モバイルフォームとそれらがサポートする機能について詳しくは、 [Mobile FormsとPDF formsの機能の違い](https://helpx.adobe.com/jp/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html).
 
    3 つのタブ（データ、コンテンツ、および添付ファイル）があります。データ要素（プレースホルダー変数およびレイアウトフィールド）がない場合、表示される「コンテンツ」タブで直接レターは開きます。「添付ファイル」タブは、添付ファイルが存在するか、ライブラリアクセスが有効な場合にのみ使用できます。
 
    >[!NOTE]
    >
-   >レタープレビューのHTMLまたはPDFレンディションモードの切り替えについて詳しくは、「[レターのレンディションモードの変更](#changerenditionmode)」を参照してください。 Correspondence ManagementおよびAEMでのPDFサポートについて詳しくは、「 [NPAPIブラウザプラグインの中止と、そのHTML5 Forms](https://helpx.adobe.com/jp/aem-forms/kb/pdf-forms-to-html5-forms.html)への影響](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html)および[PDF forms」を参照してください。
+   >レタープレビューのHTMLまたはPDFレンディションモードの切り替えについて詳しくは、 [レターのレンディションモードの変更](#changerenditionmode). Correspondence Management およびAEMでのPDFサポートについて詳しくは、 [NPAPI ブラウザプラグインの廃止とその影響](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html) および [PDF formsからHTML5 Forms](https://helpx.adobe.com/jp/aem-forms/kb/pdf-forms-to-html5-forms.html).
 
 ### データを入力 {#enterdata}
 
 「データ」タブで、使用可能なレイアウトフィールドとプレースホルダーを入力します。
 
-1. 必要に応じて、フィールドにデータとコンテンツの変数を入力します。アスタリスク(&amp;ast;)が付いた必須フィールドをすべて入力し、「**送信**」ボタンを有効にします。
+1. 必要に応じて、フィールドにデータとコンテンツの変数を入力します。アスタリスク (&amp;ast;) が付いているすべての必須フィールドに入力し、 **送信** 」ボタンをクリックします。
 
    「データ」タブで HTML レタープレビューのデータフィールド値をタップして、対応するデータフィールドをハイライト表示します。
 
-   ![レター](assets/2_enterdata.png) ![2_1_enterdataにデータを入力する](assets/2_1_enterdata.png)
+   ![レターにデータを入力](assets/2_enterdata.png) ![2_1_enterdata](assets/2_1_enterdata.png)
 
 ### コンテンツを管理 {#managecontent}
 
 「コンテンツ」タブで、ドキュメントのフラグメントやレター内のコンテンツ変数などのコンテンツを管理します。
 
-1. 「**コンテンツ**」を選択します。Correspondence Managementにレターの「コンテンツ」タブが表示されます。
+1. 「**コンテンツ**」を選択します。Correspondence Management にレターの「コンテンツ」タブが表示されます。
 
    ![「コンテンツ」タブ - コンテンツ内のモジュールをハイライト](assets/3_content.png)
 
@@ -84,19 +84,19 @@ ht-degree: 63%
 
    ![4_highlightmoduleincontent](assets/4_highlightmoduleincontent.png)
 
-   「コンテンツ」または「データ」タブで、HTMLレタープレビューの左上にある「選択したモジュールをハイライト」(![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))をタップして、関連するテキスト、段落またはデータフィールドをレタープレビューで選択したときに、コンテンツ/データモジュールに移動する機能を無効または有効にします。
+   「コンテンツ」タブまたは「データ」タブで、「選択したモジュールをハイライト」( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png)) を使用すると、HTMLレタープレビューの左上で、レタープレビューで関連するテキスト、段落、またはデータフィールドが選択されているときにコンテンツ/データモジュールに移動する機能を無効または有効にできます。
 
-   通信を作成ユーザーインターフェイスの様々なモジュールで使用できるアクションの詳細については、「通信を作成ユーザーインターフェイスで使用できるアクションと情報」を参照してください。[](create-letter.md)
+   通信を作成ユーザーインターフェイスの様々なモジュールで使用できるアクションの詳細については、 [通信を作成ユーザーインターフェイスで使用できるアクションと情報](create-letter.md).
 
 1. コンテンツモジュールを配置するには、「検索」フィールドを使用します。コンテンツモジュールの名前やタイトルの一部または全部を入力して、通信を検索します。
-1. リスト、テキスト、条件、またはターゲット領域の前にある表示アイコン（![表示](assets/display.png)）をタップして、レター内で表示または非表示にします。
-1. インラインまたは編集可能なテキストモジュールを編集するには、関連する&#x200B;**編集**&#x200B;アイコン(![edittextmodule](assets/edittextmodule.png))をタップするか、レタープレビューで関連するテキストモジュールをダブルクリックします。
+1. 表示アイコン ( ![表示](assets/display.png)) をクリックして、リスト、テキスト、条件、またはターゲット領域の前に配置し、レター内で表示または非表示にします。
+1. インラインまたは編集可能なテキストモジュールを編集するには、関連する **編集** アイコン ( ![edittextmodule](assets/edittextmodule.png)) をクリックするか、レタープレビューで関連するテキストモジュールをダブルクリックします。
 
    テキストを編集および書式設定するためのテキストエディターが表示されます。
 
    ブラウザーのデフォルトのスペルチェッカーにより、テキストエディターのスペルチェックが行われます。スペルチェックや文法チェックを管理するにはブラウザーのスペルチェッカーの設定を編集するか、スペルチェックや文法チェックのためのブラウザーのプラグインまたはアドオンをインストールします。
 
-   また、テキストエディターの様々なキーボードショートカットを使用して、テキストの管理、編集、書式設定を行うこともできます。 Correspondence Managementのキーボードショートカットの[テキストエディター](/help/forms/using/keyboard-shortcuts.md#correspondence-management)に関する詳細
+   また、テキストエディターで様々なキーボードショートカットを使用して、テキストの管理、編集、書式設定をおこなうこともできます。 詳しくは、 [テキストエディター](/help/forms/using/keyboard-shortcuts.md#correspondence-management) Correspondence Management のキーボードショートカット。
 
    ![5_edittextmodule](assets/5_edittextmodule.png)
 
@@ -104,11 +104,11 @@ ht-degree: 63%
 
    編集可能なテキストモジュールでは、1 つ以上のテキスト段落をコピーして貼り付けることができます。たとえば、次のような居住証明書の箇条書きリストを含む MS Word 文書があるとします。
 
-   ![pastetextmsword-1](assets/pastetextmsword-1.png)
+   ![pastextmsword-1](assets/pastetextmsword-1.png)
 
    編集可能なテキストモジュールでは、MS Word 文書からテキストを直接コピーして貼り付けることができます。箇条書きリスト、フォント、テキストの色などの書式は、テキストモジュールでも保持されます。
 
-   ![pastetexteditablemodule](assets/pastetexteditablemodule.png)
+   ![pasttexteditablemodule](assets/pastetexteditablemodule.png)
 
    >[!NOTE]
    >
@@ -122,34 +122,34 @@ ht-degree: 63%
 
    >[!NOTE]
    >
-   >テキストモジュールとレターのタブ間隔の設定について詳しくは、[テキストの配置にタブ間隔を使用する方法](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html)を参照してください。
+   >テキストモジュールとレターのタブ間隔の設定について詳しくは、 [タブの間隔を使用したテキストの整列に関する詳細](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html).
 
 1. 必要に応じて、通信に特殊文字を挿入します。例えば、特殊文字パレットを使用して、以下の特殊文字を挿入することができます。
 
-   * 通貨記号(€、¥、£など)
-   * ∑、√、∂、^などの数学記号
-   * 「 」や「 」などの句読点
+   * 通貨記号 (€、¥、£など )
+   * 数学記号 (∑、√、∂、^など )
+   * 「 」や「 」などの句読点記号
 
    ![specialcharacters-1](assets/specialcharacters-1.png)
 
-   Correspondence Managementhas では、210 種類の特殊文字に初期状態から対応しています。管理者は、カスタマイズ](/help/forms/using/custom-special-characters.md)により、追加/カスタム特殊文字のサポートを[追加できます。
+   Correspondence Managementhas では、210 種類の特殊文字に初期状態から対応しています。管理者が実行できる操作 [カスタマイズによる追加/カスタム特殊文字のサポートを追加](/help/forms/using/custom-special-characters.md).
 
 1. 編集可能なインラインモジュールのテキストの一部をハイライト表示または強調するには、テキストを選択して「ハイライト表示の色」をタップします。
 
    ![letterbackgroundcolor](assets/letterbackgroundcolor.png)
 
-   基本カラーパレットに表示されている基本色&#x200B;**[A]**&#x200B;を直接タップするか、スライダー&#x200B;**[B]**&#x200B;を使用して「**選択**」をタップして、適切な色合いを選択します。
+   基本色を直接タップすることもできます **[A]** 基本色パレットに表示されるか、 **選択** スライダーを使用した後 **[B]** をクリックして、色の適切な色合いを選択します。
 
-   必要に応じて、「詳細」タブに移動して、適切な色相、明るさ、彩度&#x200B;**[C]**&#x200B;を選択し、「**[D]**&#x200B;を選択」をタップして、テキストをハイライト表示する色を適用することもできます。
+   必要に応じて、「詳細」タブに移動して、適切な「色相」、「明るさ」、「彩度」を選択することもできます **[C]** 正確な色を作成するには、「選択」をタップします。 **[D]** をクリックして、テキストをハイライト表示する色を適用します。
 
    ![textbackgroundcolor-1](assets/textbackgroundcolor-1.png)
 
-1. 適切な内容と形式の変更を行い、「**保存**」をタップします。 ( ![editnextmodulecr](assets/editnextmoduleccr.png) )をタップして編集可能なテキストモジュール間を移動するか、**「保存」と「次へ」**&#x200B;をタップして変更を保存し、次の編集可能なテキストモジュールに移動します。
-1. また、各ブランチごとに未入力の変数も表示されます。未入力の変数が無くなると、未入力の変数は 0 として表示されます。未入力の変数がある場合は、ブランチをタップして展開し、未入力の変数を探します。コンテンツツールバーを使用して、コンテンツの削除、コンテンツのインデントの増減、コンテンツの前後に改ページの挿入を行います。
+1. 適切なコンテンツと形式の変更を行い、をタップします。 **保存**. ( ![editnextmodulecr](assets/editnextmoduleccr.png)) をクリックして編集可能なテキストモジュール間を移動するか、をタップします。 **保存して次へ** 変更を保存し、次の編集可能なテキストモジュールに移動するには、次の編集可能なテキストモジュールに移動します。
+1. また、各ブランチごとに未入力の変数も表示されます。未入力の変数が無くなると、未入力の変数は 0 として表示されます。未入力の変数がある場合は、ブランチをタップして展開し、未入力の変数を探します。コンテンツツールバーを使用して、コンテンツを削除したり、コンテンツのインデントを増減したり、コンテンツの前後に改ページを挿入したりします。
 
    データモジュールがリストや条件の一部に含まれていても、データモジュールの前後に改ページを挿入できます。
 
-1. 「コンテンツ変数を開く/閉じる」(![opencontentvariables](assets/opencontentvariables.png))をタップして、コンテンツ変数を開き、適切に入力します。
+1. コンテンツ変数を開く/閉じる ( ![opencontentvariables](assets/opencontentvariables.png)) をクリックして、コンテンツ変数を開き、適切に入力します。
 1. 未入力変数に正しく入力すると、未入力変数のカウントが 0 に設定されます。
 
    通信を作成ユーザーインターフェイスでは、少なくとも 1 つの変数を含むモジュールの階層の各レベルに、未入力変数カウントが表示されます。モジュールに未入力変数が含まれている場合は、変数、モジュール、ターゲット領域、およびレターテンプレートレベルでカウントが表示されます。
@@ -167,19 +167,19 @@ ht-degree: 63%
 
    レターテンプレート内のモジュールは、未入力変数カウントを以下のように表示します。
 
-   * **** テキストテキストモジュールに含まれる一意の未入力プレースホルダー変数とデータディクショナリ要素の合計を表示します。
-   * **** 条件条件条件に含まれる一意の未入力条件変数と、結果のモジュールに含まれる変数の合計を表示します。
-   * **** リストリストに割り当てられたモジュール内に含まれているすべての一意の未入力変数を表示します。
-   * **ターゲ** ット領域ターゲット領域に割り当てられたモジュール内に含まれるすべての一意の未入力変数を表示します。
+   * **テキスト** テキストモジュールに含まれる一意の未入力プレースホルダー変数とデータディクショナリ要素の合計を表示します。
+   * **条件** 条件に含まれる一意の未入力条件変数と、結果モジュールに含まれる変数の合計を表示します。
+   * **リスト** リストに割り当てられているモジュール内に含まれているすべての一意の未入力変数の合計を表示します。
+   * **ターゲット領域** ターゲット領域に割り当てられたモジュール内に含まれるすべての一意の未入力変数の合計を表示します。
 
    デフォルト値を持つ変数について次のことに留意してください。
 
-   * Boolean変数フィールドのデフォルト値は&#x200B;*false*&#x200B;です。 ただし、この変数は未入力として解釈されます。これは、値が&#x200B;*false*&#x200B;のブール変数フィールドが変数カウントに含まれることを意味します。
-   * 数値変数フィールドのデフォルト値は&#x200B;*0（ゼロ）*&#x200B;です。 ただし、この変数は未入力として解釈されます。これは、変数カウントに、値が&#x200B;*0（ゼロ）*&#x200B;の数値変数フィールドがすべて含まれることを意味します。
+   * ブール変数フィールドのデフォルト値はです。 *false*. ただし、この変数は未入力として解釈されます。これは、変数カウントに値を持つすべてのブール変数フィールドが含まれることを意味します *false*.
+   * 数値変数フィールドのデフォルト値はです。 *0 （ゼロ）*. ただし、この変数は未入力として解釈されます。これは、変数カウントに値を持つすべての数値変数フィールドが含まれることを意味します *0 （ゼロ）*.
 
 
 
-#### 「通信を作成」の「コンテンツ」タブで使用できるアクションと情報{#actions-and-info-available-in-the-create-correspondence-content-tab}
+#### 「通信を作成」の「コンテンツ」タブで使用できるアクションと情報 {#actions-and-info-available-in-the-create-correspondence-content-tab}
 
 **ターゲット領域**
 
@@ -207,9 +207,9 @@ ht-degree: 63%
 
 ### 添付ファイルの管理 {#manage-attachments}
 
-1. **添付ファイル**&#x200B;を選択します。 Correspondence Managementは、レターテンプレートの作成時に設定された、使用可能な添付ファイルを表示します。
+1. 選択 **添付ファイル**. Correspondence Management には、レターテンプレートの作成時に設定された、使用可能な添付ファイルが表示されます。
 1. ビューアイコンをタップすることで、レターの添付ファイルを送信しないように選択できます。また、添付ファイルの × 印をタップすると、添付ファイルをレターから削除できます。指定された添付ファイルがレターテンプレートの作成時に必須として設定されたものに対しては、ビューアイコンと削除アイコンは表示されません。
-1. ライブラリアクセス（![ライブラリアクセス](assets/libraryaccess.png)）アイコンをタップしてコンテンツライブラリにアクセスし、添付ファイルとしてDAMアセットを挿入します。
+1. ライブラリアクセス ( ![libraryaccess](assets/libraryaccess.png)) アイコンをクリックしてコンテンツライブラリにアクセスし、DAM アセットを添付ファイルとして挿入します。
 
    >[!NOTE]
    >
@@ -219,11 +219,11 @@ ht-degree: 63%
 
    詳しくは、「[添付ファイルの配信](#attachmentdelivery)」を参照してください。
 
-### プレビューでコンテンツを管理しレターを送信  {#manage-content-in-preview-and-submit-the-letter}
+### プレビューでコンテンツを管理しレターを送信 {#manage-content-in-preview-and-submit-the-letter}
 
 レイアウトやコンテンツに関する変更を行って、レターの表示を意図に合ったものにするとともに、様々なポストプロセスに送信することができます。
 
-1. レター内のすべての編集可能なコンテンツをハイライト表示するには、「**編集可能なセクションをハイライト**」をタップします。
+1. レター内のすべての編集可能コンテンツをハイライト表示するには、をタップします **編集可能なセクションをハイライト**.
 
    レターの編集可能コンテンツがグレーの背景でハイライト表示されます。
 
@@ -233,11 +233,11 @@ ht-degree: 63%
 
    例えば、下の図で「To allow us to access...」を選択すると、「コンテンツ」タブで対応するコンテンツモジュールが選択されます。
 
-   「コンテンツ内の選択したモジュールをハイライト」(![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))をタップすると、関連するテキスト、段落またはデータフィールドをレタープレビューでタップしたときに、「コンテンツ」タブでコンテンツモジュールをハイライトする機能を無効または有効にできます。
+   コンテンツ内の選択したモジュールをハイライト ( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png)を参照 )、関連するテキスト、段落、またはデータフィールドをレタープレビューでタップしたときに「コンテンツ」タブでコンテンツモジュールをハイライト表示する機能を無効または有効にできます。
 
-   通信を作成ユーザーインターフェイスの様々なモジュールで使用できるアクションの詳細については、「通信を作成ユーザーインターフェイスで使用できるアクションと情報」を参照してください。[](create-letter.md)
+   通信を作成ユーザーインターフェイスの様々なモジュールで使用できるアクションの詳細については、 [通信を作成ユーザーインターフェイスで使用できるアクションと情報](create-letter.md).
 
-1. レターに改ページを追加するには、改ページを挿入する位置をタップし、前の改ページまたは後の改ページ(![pagebreakbeforeafter](assets/pagebreakbeforeafter.png))を選択します。
+1. レターに改ページを追加するには、改ページを挿入する位置をタップし、「前に改ページ」または「後に改ページ」( ![pagebreakbeforeafter](assets/pagebreakbeforeafter.png)) をクリックします。
 
    レターに、改ページのプレースホルダーが明示的に挿入されます。明示的な改ページによりレターがどの程度影響を受けるか表示するには、統合された PDF プレビューを確認します。
 
@@ -253,7 +253,7 @@ ht-degree: 63%
 
    ドラフトレター名ダイアログにレターインスタンス ID が表示されます。この ID はオプションで編集することができます。レター ID をメモした後、「**完了**」をタップします。後でこの ID を使用して、[ドラフトレターを再読み込み](submit-letter-topostprocess.md#reloaddraft)できます。
 
-1. レターを統合されたPDFとして、送信される状態のレイアウトと改ページでプレビューするには、「プレビュー」（![プレビュー](assets/preview.png)）をタップします。
+1. レターを統合されたPDFとして、送信されるレイアウトと改ページでプレビューするには、 ( ![プレビュー](assets/preview.png)) プレビュー。
 
    レターは、統合された PDF として表示されます。統合された PDF は、レターのフォント、改ページ、レイアウトなど、送信されるレターの状態を正確に表示します。
 
@@ -261,7 +261,7 @@ ht-degree: 63%
    >
    >Mozilla Firefox と HTML レンディションを使用する場合、統合された PDF をプレビューするには、Acrobat のプラグインではなく、必ずネイティブのブラウザプラグインを使用してください。ネイティブのブラウザプラグインを選択するには、Mozilla Firefox の設定に移動し、「ファイルの種類（Content Type）」の「PDF文書」から「Firefox でプレビュー表示」を選択してください。
 
-1. 統合されたPDFのプレビューが十分な内容であるとわかった場合は、「**送信**」をタップしてレターを送信します。 レターを変更するには、「**プレビューを終了**」をタップして「通信を作成」UIに戻り、レターを変更します。 「送信」をタップすると、発行インスタンスで「レターインスタンスを管理」設定が有効になっている場合、送信レターインスタンスが生成されます。
+1. 統合されたPDFのプレビューが十分であるとわかった場合は、 **送信** をクリックして、レターを送信します。 または、 **プレビューを終了** レターの「通信を作成」UI プレビューに戻り、レターを変更します。 「送信」をタップすると、発行インスタンスで「レターインスタンスを管理」設定が有効になっている場合、送信レターインスタンスが生成されます。
 
    詳しくは、「ドラフトの保存とレターインスタンスの送信」の「ドラフトインスタンス」を参照してください。
 
@@ -269,49 +269,49 @@ ht-degree: 63%
 
    必要な変更を行った後、HTML5 プレビューからレターを送信するか、「プレビュー」を再度タップして統合された PDF 出力をレビューできます。
 
-   HTML5フォームとPDF formsの違いについて詳しくは、「[HTML5フォームとPDF formsの機能の違い](/help/forms/using/feature-differentiation-html5-forms-pdf-forms.md)」を参照してください。
+   HTML5 のフォームとPDF formsの違いについて詳しくは、 [HTML5 フォームとPDF formsの機能の違い](/help/forms/using/feature-differentiation-html5-forms-pdf-forms.md).
 
 ## ドラフトの保存とレターインスタンスの送信 {#savingdrafts}
 
-通信を作成ユーザーインターフェイスでレターがレンダリングされると、レターの表示中に保存できます。
+通信を作成ユーザーインターフェイスでレターがレンダリングされると、レターを表示中に保存できます。
 
 保存できるレターインスタンスには 2 つのタイプ（ドラフトインスタンスと送信インスタンス）があります。
 
 * **ドラフトインスタンス**：ドラフトインスタンスは、プレビュー中のレターの現在の状態をキャプチャします。ドラフトインスタンスを保存するには、レターおよびレターが参照するすべてのアセットが発行済み状態になっている必要があります。レターの発行について詳しくは、「[アセットの発行](/help/forms/using/publishing-unpublishing-forms.md#publishanasset)」を参照してください。レターはドラフトとして保存する前に発行する必要があります。レターを発行すると、その時点でレターのバージョン、これに依存するアセット、および日付が作成されます。レターの発行バージョンを自身または他のユーザーが編集することはできません。このため、発行バージョンは予期しない相違が発生することなく復元できます。後でこのインスタンスに戻り、最後の時点から続けることができます。
 
-* **送信インスタンス**： 送信インスタンスは、送信されたときのレターの状態をキャプチャします。送信インスタンスは、通信を作成ユーザーインターフェイスでユーザーが入力したデータと共に後処理された後のレターインスタンスのPDF状態を保存します。
+* **送信インスタンス**： 送信インスタンスは、送信されたときのレターの状態をキャプチャします。送信インスタンスは、通信を作成ユーザーインターフェイスでユーザーが入力したPDFと共に後処理された後のレターインスタンスのユーザー状態を保存します。
 
 これらのインスタンスは、レターが発行インスタンスで表示されているときにのみ保存できます。デフォルトでは、インスタンスでの保存は無効になっています。レターインスタンスの保存を有効にするには、次の手順を実行します。
 
-1. AEMで、次のURLを使用して、サーバーのAdobe Experience Manager Webコンソール設定を開きます。https://&lt;server>:&lt;port>/&lt;contextpath>/system/console/configMgr
-1. **[!UICONTROL Correspondence Management設定]**&#x200B;を探してクリックします。
-1. 「**[!UICONTROL 発行]**&#x200B;でレターインスタンスを管理」設定をオンにし、「**[!UICONTROL 保存]**」をクリックします。
+1. AEMで、次の URL を使用して、サーバーのAdobe Experience Manager Web Console Configuration を開きます。https://&lt;server>:&lt;port>/&lt;contextpath>/system/console/configMgr
+1. 場所 **[!UICONTROL Correspondence Management 設定]** をクリックします。
+1. チェック **[!UICONTROL 発行時にレターインスタンスを管理]** 設定を開き、 **[!UICONTROL 保存]**.
 
 レターインスタンスの保存が有効にされると、レターインスタンスの保存場所を選択するためのオプションが表示されます。レターインスタンスを保存するための 2 つのオプション（ローカル保存とリモート保存）があります。
 
 ### ローカル保存 {#local-save}
 
-レターインスタンスはパブリッシュインスタンス上に保存され、オーサーインスタンス上でリバースレプリケートされます。
+レターインスタンスは、パブリッシュインスタンスに保存され、オーサーインスタンスでリバースレプリケーションされます。
 
 ### リモート保存 {#remote-save}
 
 このオプションは、発行インスタンスでユーザーデータを保存することが心配な人のためのもので、一般には企業ファイアウォールの外側に保存することになるからです。リモート保存が有効になっていると、レターインスタンスは発行インスタンスでは保存されず、LiveCycle Client SDK の設定で指定された処理作成者でリモートに保存されます。
 
-#### リモート保存を有効にする  {#enable-remote-save}
+#### リモート保存を有効にする {#enable-remote-save}
 
-1. AEMで、次のURLを使用して、サーバーのAdobe Experience Manager Webコンソール設定を開きます。`https://<server>:<port>/<contextpath>/system/console/configMgr`
-1. 「**[!UICONTROL Correspondence Management設定]**」を検索し、クリックします。
-1. **[!UICONTROL Remote Save]**&#x200B;設定を探して確認し、「**[!UICONTROL Save]**」をクリックします。
+1. AEMで、次の URL を使用して、サーバーのAdobe Experience Manager Web Console Configuration を開きます。 `https://<server>:<port>/<contextpath>/system/console/configMgr`
+1. を検索 **[!UICONTROL Correspondence Management 設定]** をクリックします。
+1. を **[!UICONTROL リモート保存]** 設定、チェック、クリック **[!UICONTROL 保存]**.
 
 #### 処理作成者設定を指定する {#specify-processing-author-settings}
 
-1. AEMで、次のURLを使用して、サーバーのAdobe Experience Manager Webコンソール設定を開きます。`https://<server>:<port>/<contextpath>/system/console/configMgr`
+1. AEMで、次の URL を使用して、サーバーのAdobe Experience Manager Web Console Configuration を開きます。 `https://<server>:<port>/<contextpath>/system/console/configMgr`
 
-   ![Adobe Experience Manager Web Console Configuration を使用する場合](assets/2configmanager.png)
+   ![Adobe Experience Manager の Web コンソール設定を使用する場合](assets/2configmanager.png)
 
 1. このページで、Adobe LiveCycle Client SDK Configuration を探し、それをクリックして展開します。
 
-1. 「処理サーバーのURL」に、LiveCycleサーバーの名前を入力し、ログイン情報を入力して、「**保存**」をクリックします。
+1. 「処理サーバー URL」に、LiveCycleサーバーの名前を入力し、ログイン情報を入力して、 **保存**.
 
    ![LiveCycle サーバーで名前とログイン情報を入力](assets/3configmanager.png)
 
@@ -324,9 +324,9 @@ ht-degree: 63%
 * レターテンプレートに関連付けられた後処理が、通信を作成ユーザーインターフェイスを使用して、通信を送信または通信を完了の操作の一部として読み込まれた場合、添付ファイルは AttachmentDocs パラメーター内の List&lt;com.adobe.idp.Document> として渡されます。
 * 追加設定不要な配信メカニズム（電子メールや印刷など）は、生成された通信の PDF とともに添付ファイルも配信します。
 
-## レタープレビューのレンディションモード：モバイルフォームプレビューと PDF プレビュー  {#rendition-modes-of-letter-preview-mobile-forms-preview-and-pdf-preview}
+## レタープレビューのレンディションモード：モバイルフォームプレビューと PDF プレビュー {#rendition-modes-of-letter-preview-mobile-forms-preview-and-pdf-preview}
 
-AEM Forms Correspondence Management は、「通信を作成」UI でレターを HTML で表示します。ただし、Correspondence Management では、HTML プレビューの代わりに PDF プレビューに戻すことをサポートしています。プレビューのHTMLモードとPDFモードの切り替えについて詳しくは、「[レターのレンディションモードの変更](#changerenditionmode)」を参照してください。
+AEM Forms Correspondence Management は、「通信を作成」UI でレターを HTML で表示します。ただし、Correspondence Management では、HTML プレビューの代わりに PDF プレビューに戻すことをサポートしています。プレビューのHTMLモードとPDFモードの切り替えについて詳しくは、 [レターのレンディションモードの変更](#changerenditionmode).
 
 HTML および PDF プレビューの利点と使用できる機能は以下のとおりです。
 
@@ -342,18 +342,18 @@ HTML および PDF プレビューの利点と使用できる機能は以下の�
 * **改ページ**:PDFプレビューで、レターの改ページが出力に与える影響を正確に確認できます。
 * **最終プレビュー**： PDF プレビューでは、レターが出力に表示されるため、レターの書式や表示をそのまま確認できます。
 
-PDF formsでのスクリプティングのサポートについて詳しくは、「[スクリプティングのサポート](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html)」を参照してください。
+PDF formsでのスクリプティングのサポートについて詳しくは、 [スクリプティングのサポート](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html).
 
-HTML5フォームのスクリプティングのサポートについて詳しくは、「[HTML5フォームのスクリプティングのサポート](/help/forms/using/scripting-support.md)」を参照してください。
+Forms5 でのスクリプティングのサポートについて詳しくは、HTML5 フォームの [HTML5 フォームのスクリプティングのサポート](/help/forms/using/scripting-support.md).
 
 ### レターのレンディションモードの変更 {#changerenditionmode}
 
-デフォルトでは、「通信を作成」UI は HTML フォームまたはモバイルフォームを使用してレタープレビューをレンダリングします。モバイルフォームのプレビューは、ブラウザのネイティブプラグインを使用し、追加のプラグインを必要としないため、どのブラウザでレンダリングしても問題はありません。レターのプレビューモードをPDFに変更できます。 ただし、ブラウザの制約により、レターのインタラクティブな PDF プレビューの異なる機能で問題が発生する可能性があります。
+デフォルトでは、「通信を作成」UI は HTML フォームまたはモバイルフォームを使用してレタープレビューをレンダリングします。モバイルフォームのプレビューは、ブラウザのネイティブプラグインを使用し、追加のプラグインを必要としないため、どのブラウザでレンダリングしても問題はありません。レターのプレビューモードを「PDF」に変更できます。 ただし、ブラウザの制約により、レターのインタラクティブな PDF プレビューの異なる機能で問題が発生する可能性があります。
 
-レタープレビューとのブラウザーの互換性の詳細については、「 [NPAPIブラウザープラグインの中止とその影響](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html) 」を参照してください。
+レタープレビューとのブラウザの互換性について詳しくは、 [NPAPI ブラウザプラグインの廃止とその影響](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html).
 
 レターのプレビューモードを変更するには、次の手順を完了してください。
 
-1. `https://[system]:[port]/system/console/configMgr`に移動し、必要に応じて管理者としてログインします。
-1. **[!UICONTROL Correspondence Management設定]** > **[!UICONTROL レンディションタイプ]**&#x200B;に移動し、**HTMLレンディション**（デフォルト）または&#x200B;**PDFレンディション**&#x200B;を選択します。
+1. に移動します。 `https://[system]:[port]/system/console/configMgr` 必要に応じて、管理者としてログインします。
+1. に移動します。 **[!UICONTROL Correspondence Management 設定]** > **[!UICONTROL レンディションタイプ]** を選択し、 **HTMLレンディション** （デフォルト）または **PDFレンディション**.
 1. 「**[!UICONTROL 保存]**」をクリックします。

@@ -1,8 +1,8 @@
 ---
 title: XCI 設定オプションの指定
-seo-title: XCI 設定オプションの指定
+seo-title: Specifying XCI configuration options
 description: XCI 設定オプションの指定方法について説明します。
-seo-description: XCI 設定オプションの指定方法について説明します。
+seo-description: Learn how to specify XCI configuration options.
 uuid: 5d3c10c1-4a93-4336-b311-20faaf835b9f
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 162c9fda-f4d4-4ad5-a9ab-7554828e821c
 exl-id: 7a13b13f-3eee-4fc0-8957-bd42f43119e9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '130'
 ht-degree: 100%
 
 ---

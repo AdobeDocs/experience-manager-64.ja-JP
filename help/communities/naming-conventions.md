@@ -1,8 +1,8 @@
 ---
 title: 命名規則
-seo-title: 命名規則
+seo-title: Naming Conventions
 description: Java パッケージ名内のハイフン
-seo-description: Java パッケージ名内のハイフン
+seo-description: Hyphens in Java Package Name
 uuid: 48086e6c-c35b-4ffc-b216-d01feca7bf9a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: 5271feb9-70c6-4c82-8ac7-34a63d80e3aa
 exl-id: f5a63642-9f2c-436f-bd40-4459545a0ddf
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 54%
+source-wordcount: '130'
+ht-degree: 51%
 
 ---
 
@@ -25,8 +25,8 @@ Java クラスの場所を作成する際には、パッケージ名がリポジ
 
 AEM の開発では、リポジトリ項目の名前にハイフンを使用することが推奨されていますが、Java パッケージ名でハイフンを使用することはできません。
 
-基になるCRXプラットフォームでは、実際のアンダースコア「_」とハイフン「 — 」を区別できる必要があります。 したがって、JCRでは、ハイフンをそのUnicode値(u002d)に置き換え、アンダースコア「_」でエスケープする必要があります。
+基になる CRX プラットフォームでは、実際のアンダースコア「 」を区別できる必要があります。_&#39;およびハイフン&#39;-&#39; したがって、JCR では、ハイフンをその Unicode 値 (u002d) に置き換え、アンダースコア「 」でエスケープする必要があります_&#39;.
 
-例えば、リポジトリパスが&#x200B;**/apps/my-example/component/info/Info.java**&#x200B;の場合、パッケージ名は`java package apps.my_002dexample.component.info;`にする必要があります。
+例えば、リポジトリのパスが **/apps/my-example/component/info/Info.java**、パッケージ名は `java package apps.my_002dexample.component.info;`
 
-アンダースコアも同様にエスケープする必要があり、`_`が`_005f`になることに注意してください。
+アンダースコアも同様にエスケープする必要があり、次のようにします。 `_` 次に `_005f`.

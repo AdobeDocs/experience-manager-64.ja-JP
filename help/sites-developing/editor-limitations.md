@@ -1,8 +1,8 @@
 ---
 title: エディターの制限事項
-seo-title: エディターの制限事項
+seo-title: Editor Limitations
 description: タッチ操作対応の UI のエディターは、オーバーレイを使用して iframe 内に含まれるコンテンツを操作します。この操作には、エディターの使用と開発者に対していくつかの制限事項があります。
-seo-description: タッチ操作対応の UI のエディターは、オーバーレイを使用して iframe 内に含まれるコンテンツを操作します。この操作には、エディターの使用と開発者に対していくつかの制限事項があります。
+seo-description: The editor in the touch-enabled UI makes use of overlays to interact with content confined in an iframe. This interaction creates some limitations in both usage of the editor and also for developers.
 uuid: ff524530-3f3a-4c5b-9f94-4aa9aeb9d461
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: d748decb-a614-4c9e-a502-d6176b720f1a
 exl-id: ce860880-5954-4f72-8ec6-60209c1ec659
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '316'
 ht-degree: 94%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 94%
 
 タッチ操作対応の UI のエディターは、オーバーレイを使用して iframe 内に含まれるコンテンツを操作します。この操作には、エディターの使用と開発者に対していくつかの制限事項があります。このページでは、これらの制限事項をまとめ、可能な限り解決策や回避策を提供します。
 
-## 機能の制限  {#functional-limitations}
+## 機能の制限 {#functional-limitations}
 
 作成者がエディターを使用してページを作成する際、以下の機能の制限が発生する可能性があります。
 
-### リンクがアクティブにならない  {#links-not-active}
+### リンクがアクティブにならない {#links-not-active}
 
 [ページの編集](/help/sites-authoring/editing-content.md)時に、リンクがアクティブになりません。
 
@@ -39,13 +39,13 @@ ht-degree: 94%
 
 開発者は、エディターの CSS のインタラクションに関して以下の制限が発生する可能性があります。
 
-### 要素が絶対配置される  {#absolutely-positioned-elements}
+### 要素が絶対配置される {#absolutely-positioned-elements}
 
 絶対配置された要素により、そのオーバーレイの位置に問題が生じる可能性があります。
 
 * エディターではまったく同じサイズでオーバーレイが作成されるので、この問題が発生した場合は、絶対配置された要素のサイズが正しいことを確認します。
 
-### vh 単位  {#vh-units}
+### vh 単位 {#vh-units}
 
 iframe の高さは AEM によって自動調整されるので、`vh` 単位はサポートされません。
 
@@ -59,7 +59,7 @@ iframe の高さは AEM によって自動調整されるので、`vh` 単位は
 
 ページの body 要素では、100 ％の高さはサポートされていません。
 
-* 全画面表示の本文を実装するには、次のようにbody要素を「拡張」して回避できます。
+* 全画面表示の本文を実装する場合は、次のように body 要素を「拡張」することで回避できます。
 
 ```xml
 body {

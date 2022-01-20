@@ -1,8 +1,8 @@
 ---
 title: OSGi 上の AEM Forms のグループと権限
-seo-title: OSGi 上の AEM Forms のグループと権限
+seo-title: AEM Forms on OSGi Groups and Privileges
 description: ユーザーをグループに割り当てることによる OSGi 上の AEM Forms の管理
-seo-description: ユーザーをグループに割り当てることによる OSGi 上の AEM Forms の管理
+seo-description: Assign users to the groups to manage AEM Forms on OSGi
 uuid: 9ebb3a4e-4c0e-4105-921f-58077fc45281
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -13,7 +13,7 @@ role: Admin
 exl-id: a79e863e-c316-422e-a565-b0ffdeffcc00
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '254'
 ht-degree: 99%
 
 ---

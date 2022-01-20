@@ -1,8 +1,8 @@
 ---
 title: バリエーション - フラグメントコンテンツのオーサリング
-seo-title: バリエーション - フラグメントコンテンツのオーサリング
+seo-title: Variations - Authoring Fragment Content
 description: バリエーションでは、フラグメントのコンテンツをオーサリングし、目的に応じてそのコンテンツのバリエーションを作成できます（必要な場合）。
-seo-description: バリエーションでは、フラグメントのコンテンツをオーサリングし、目的に応じてそのコンテンツのバリエーションを作成できます（必要な場合）。
+seo-description: Variations allow you to author content for the fragment, then create variations of that content according to purpose (if required).
 uuid: affccda0-be5f-47d2-85b6-8701b77ac932
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,12 +10,12 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 1cdb2dfc-623b-44cf-9a7b-98cfabbb1d0c
 exl-id: 15a5fdc9-2878-4f95-83ee-02a2899aeb43
-feature: コンテンツフラグメント
+feature: Content Fragments
 role: User
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 92%
+source-wordcount: '1738'
+ht-degree: 97%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 92%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)以降のアプリケーション](../release-notes/sp-release-notes.md)が必要です。
+>一部のコンテンツフラグメント機能には、 [AEM 6.4 Service Pack 2(6.4.2.0) 以降](../release-notes/sp-release-notes.md).
 
 [バリエーション](content-fragments.md#constituent-parts-of-a-content-fragment)は、特定のチャネルやシナリオで使用するためにプライマリコンテンツのコピーを作成して編集できる、コンテンツフラグメントの重要な機能です。
 
@@ -88,7 +88,7 @@ ht-degree: 92%
 
 全画面表示エディター（複数行テキスト）を開いている場合は、次のアクションも（すべての[形式](#formats)で）使用できます。
 
-* [format](#formats)（[リッチテキスト](#rich-text)、[プレーンテキスト](#plain-text)、[Markdown](#markdown)）を選択します。
+* を選択します。 [形式](#formats) ([リッチテキスト](#rich-text), [プレーンテキスト](#plain-text), [Markdown](#markdown))
 * [テキスト統計の表示](#viewing-key-statistics)
 * [コンテンツのアップロード](#uploading-content)
 * [プライマリとの同期](#synchronizing-with-master)（バリエーションの編集時）
@@ -196,13 +196,12 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 >
 >他の言語版は、ソフトウェア配布から言語モデルパッケージとして使用できます。
 >
->* [フランス語(fr)（ソフトウェア配布版）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [ソフトウェア配布のドイツ語(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [ソフトウェア配布のイタリア語(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [ソフトウェア配布のスペイン語(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+>* [フランス語 (fr)、ソフトウェア配布から](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+>* [ドイツ語 (de)、ソフトウェア配布から](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+>* [イタリア語 (it)（ソフトウェア配布から）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+>* [スペイン語 (es)（ソフトウェア配布版）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
 
 >
-
 
 
 1. 「**[!UICONTROL プライマリ]**」または必要なバリエーションを選択します。
@@ -249,11 +248,11 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
 * 注釈が適用されたテキスト全体を削除すると、注釈も削除されます。
 
-* 注釈の一覧表示や削除をおこなうには、フラグメントエディターで「**[!UICONTROL 注釈]**」タブを選択します。
+* 注釈の一覧表示や削除を行うには、フラグメントエディターで「**[!UICONTROL 注釈]**」タブを選択します。
 
    ![cfm-6420-25](assets/cfm-6420-25.png)
 
-* 選択されたフラグメントの[タイムライン](https://helpx.adobe.com/experience-manager/6-3/assets/using/content-fragments-managing.html#timeline-for-content-fragments)で、注釈の表示や削除をおこなえます。
+* 選択されたフラグメントの[タイムライン](https://helpx.adobe.com/experience-manager/6-3/assets/using/content-fragments-managing.html#timeline-for-content-fragments)で、注釈の表示や削除を行えます。
 
 ### フラグメントへのアセットの挿入 {#inserting-assets-into-your-fragment}
 
@@ -265,7 +264,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 >
 >参照ページではこれらのアセットの移動や削除はできません。移動や削除にはフラグメントエディターを使用する必要があります。
 >
->ただし、アセットの書式設定（サイズなど）は、[ページエディター](/help/sites-authoring/content-fragments.md)でおこなう必要があります。フラグメントエディターでのアセットの表示は、純粋にコンテンツフローのオーサリング用です。
+>ただし、アセットの書式設定（サイズなど）は、[ページエディター](/help/sites-authoring/content-fragments.md)で行う必要があります。フラグメントエディターでのアセットの表示は、純粋にコンテンツフローのオーサリング用です。
 
 >[!NOTE]
 >
@@ -354,7 +353,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
 **プライマリ**&#x200B;はコンテンツフラグメントの必須の部分であり、定義に従ってコンテンツのプライマリコピーを保持します。一方、バリエーションはそのコンテンツの更新および適合された個別のバージョンを保持します。プライマリを更新した場合、これらの変更はバリエーションにも関連するので、バリエーションに送信する必要があります。
 
-バリエーションの編集時には、バリエーションの現在の要素をプライマリと同期させるアクションにアクセスできます。これにより、プライマリにおこなわれた変更内容を必要なバリエーションに自動的にコピーできます。
+バリエーションの編集時には、バリエーションの現在の要素をプライマリと同期させるアクションにアクセスできます。これにより、プライマリに行われた変更内容を必要なバリエーションに自動的にコピーできます。
 
 >[!CAUTION]
 >

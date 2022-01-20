@@ -1,6 +1,6 @@
 ---
-title: Experience ManagerアセットフォルダーをCreative Cloudと共有
-description: Adobe Experience Manager AssetsユーザーがAdobe Creative Cloudユーザーとアセットフォルダーを交換できるようにするための設定とベストプラクティス。
+title: Experience Manager AssetsフォルダーをCreative Cloudと共有
+description: Adobe Experience Manager Assets ユーザーがAdobe Creative Cloudユーザーとアセットフォルダーを交換できるようにする設定とベストプラクティス。
 contentOwner: AG
 feature: Collaboration
 role: User,Admin
@@ -12,26 +12,26 @@ ht-degree: 18%
 
 ---
 
-# [!DNL Experience Manager] フォルダー共 [!DNL Creative Cloud] 有のベストプラクティス {#aem-to-creative-cloud-folder-sharing-best-practices}
+# [!DNL Experience Manager] から [!DNL Creative Cloud] フォルダー共有のベストプラクティス {#aem-to-creative-cloud-folder-sharing-best-practices}
 
 >[!CAUTION]
 >
->Experience Managerフォルダー共有機能のCreative Cloudは非推奨（廃止予定）となりました。 Adobeでは、[AdobeExperience Managerリンク](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)や[アセットデスクトップアプリケーション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)など、新しい機能を使用することを強くお勧めします。 詳しくは、[Experience ManagerとCreative Cloudの統合に関するベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)を参照してください。
+>Experience Manager-Creative Cloudフォルダー共有機能は非推奨です。 Adobeでは、次のような新しい機能を使用することを強くお勧めします。 [Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html) または [Experience Managerデスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja). 詳しくは、 [Experience ManagerとCreative Cloudの統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md).
 
-Adobe Experience Managerは、Experience Managerアセット内のユーザーがCreative Cloudーユーザーとフォルダーを共有できるように設定でき、Creative Cloudアセットサービス内の共有フォルダーとして使用できます。 この機能は、クリエイティブチームとExperience Managerアセットユーザー間でファイルを交換する場合に使用できます。特に、クリエイティブユーザーがExperience Managerアセットインスタンスにアクセスできない場合（エンタープライズネットワーク上にない場合）に使用できます。
+Adobe Experience Managerは、Experience Manager AssetsのユーザーがCreative Cloudーユーザーとフォルダーを共有できるように設定できるので、Creative Cloudアセットサービスで共有フォルダーとして使用できます。 この機能は、クリエイティブチームとExperience Manager Assetsユーザー間でファイルを交換する場合に使用できます。特に、クリエイティブユーザーがExperience Manager Assetsインスタンスにアクセスできない場合（エンタープライズネットワーク上にない場合）に使用できます。
 
-このタイプの統合は、特にExperience Managerアセットへの直接アクセス権を持たないユーザーと作業する場合に、両方の使用例で使用できます。
+このタイプの統合は、両方の使用例で使用できます。特に、Experience Manager Assetsへの直接アクセス権を持たないユーザーを扱う場合に便利です。
 
-* Experience Managerアセットの特定のアセットのセットをCreative Cloudファイルユーザーと共有する（新しいマーケティングアクティビティのデザイン作業用のクリエイティブブリーフや承認済みアセットのセットなど）
+* Experience Manager Assetsの特定のアセットのセットをCreative Cloudファイルユーザーと共有する（新しいマーケティングアクティビティのデザイン作業に使用する、クリエイティブな概要や承認済みアセットのセットなど）
 *  Creative Cloud ユーザーから新しいファイルを受け取る。
 
 >[!NOTE]
 >
->このドキュメントを読む前に、Experience ManagerとCreative Cloudの統合に関するベストプラクティス](aem-cc-integration-best-practices.md)の概要を確認してください。[
+>このドキュメントを読む前に、 [Experience ManagerとCreative Cloudの統合のベストプラクティス](aem-cc-integration-best-practices.md) を参照してください。
 
 ## 概要 {#overview}
 
-Experience ManagerからCreative Cloudへのフォルダー共有は、Experience ManagerAssetsとCreative Cloudアカウントの間で、フォルダーとファイルをサーバー側で共有する必要があります。 また、デスクトップでCreative Cloudデスクトップアプリケーションを使用するクリエイティブプロフェッショナルは、Adobe CreativeSyncテクノロジーを使用して、共有フォルダーを直接ディスク上で使用できるようにします。
+Experience ManagerからCreative Cloudへのフォルダー共有は、Experience Manager AssetsとCreative Cloudアカウントの間で、サーバー側でフォルダーやファイルを共有する必要があります。 また、デスクトップでCreative Cloudデスクトップアプリケーションを使用するクリエイティブプロフェッショナルは、Adobe CreativeSyncテクノロジーを使用して、共有フォルダーをディスク上で直接使用できるようにします。
 
 以下の図は統合の概要を示しています。
 
@@ -39,37 +39,37 @@ Experience ManagerからCreative Cloudへのフォルダー共有は、Experienc
 
 この統合の主要な要素は以下のとおりです。
 
-* **[!DNL Assets]エンタープライズネットワーク（マネージドサービスまたはオンプレミス）にデプロイされた** サーバー：フォルダーの共有はここで開始されます。
-* **Adobe Marketing Cloud Assetsコアサービス**:Experience ManagerとCreative Cloud・ストレージ・サービスの仲介役統合を使用する会社の管理者は、Marketing Cloud組織とExperience ManagerAssetsインスタンスの間に信頼関係を確立する必要があります。 また、管理者は、 Assets ユーザーがフォルダーも共有してセキュリティを強化できるように、[承認済みの Creative Cloud 共同作業者のリストを定義](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html#assets)します。
-* **Creative CloudアセットWebサービス** (ストレージおよびCreative CloudファイルWeb UI):ここでは、Creative Cloudフォルダーが共有された特定のCreative Cloudユーザーが招待を受け入れ、自分のアカウントストレージにフォルダーが表示されます。
-* **Creative Cloudデスクトップアプリケーション**:（オプション）クリエイティブユーザーのデスクトップから、Creative Cloudアセットストレージと同期を使用して共有フォルダー/ファイルに直接アクセスできます。
+* **[!DNL Assets]server** エンタープライズネットワーク（マネージドサービスまたはオンプレミス）にデプロイされる場合：フォルダーの共有はここで開始されます。
+* **Adobe Marketing Cloud Assets コアサービス**:Experience ManagerとCreative Cloud・ストレージ・サービスの仲介を行う。 統合を使用する会社の管理者は、Marketing Cloud組織とExperience Manager Assetsインスタンスの間に信頼関係を確立する必要があります。 また、管理者は、 Assets ユーザーがフォルダーも共有してセキュリティを強化できるように、[承認済みの Creative Cloud 共同作業者のリストを定義](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html#assets)します。
+* **Creative CloudAssets Web サービス** ( ストレージおよびCreative Cloudファイル Web UI):特定のCreative Cloudユーザー（アセットフォルダーの共有先）が招待を受け入れ、Creative Cloudアカウントストレージにそのフォルダーを表示できるようになります。
+* **Creative Cloudデスクトップアプリケーション**:（オプション）クリエイティブユーザーのデスクトップから、Creative Cloudアセットストレージとの同期を介して、共有フォルダー/ファイルに直接アクセスできるようにします。
 
 ## 特徴と制限事項 {#characteristics-and-limitations}
 
-* **変更の一方向伝播：** ファイルの変更は、元々アセットが作成（アップロード）された(Experience ManagerまたはCreative Cloudアセットからの)一方向にのみ伝播されます。この統合では、2 つのシステム間で完全に自動化された双方向の同期はおこなわれません。
+* **変更の一方向の伝播：** ファイルの変更は、アセットが最初に作成（アップロード）されたシステム (Experience ManagerーまたはCreative Cloudーアセット ) から 1 方向にのみ反映されます。 この統合では、2 つのシステム間で完全に自動化された双方向の同期はおこなわれません。
 
 * **バージョン管理:**
 
-   * Experience Managerは、ファイルがExperience Managerで作成され、そこで更新された場合にのみ、更新時にアセットのバージョンを作成します。
+   * Experience Managerは、ファイルがExperience Managerで生成され、そこで更新された場合にのみ、更新時にアセットのバージョンを作成します。
    * Creative Cloud Assets には、作業中（WIP）のファイルが更新された場合に実行される独自の[バージョン管理機能](https://helpx.adobe.com/jp/creative-cloud/help/versioning-faq.html)が用意されています（原則として最大 10 日間更新が保存されます）。
 
-* **容量の制限：** 交換するファイルのサイズとボリュームは、クリエイティブユーザー向けの特定の [Creative Cloudアセットの割合(購読レベルに応じ](https://helpx.adobe.com/jp/creative-cloud/kb/file-storage-quota.html) る)と、最大5 GBのファイルサイズの制限によって制限されます。また、容量は、Adobe Marketing Cloud Assets コアサービスで組織が保有しているアセット割り当てによっても制限されます。
+* **スペースの制限：** 交換するファイルのサイズとボリュームは、特定の [Creative Cloud資産の割当](https://helpx.adobe.com/jp/creative-cloud/kb/file-storage-quota.html) クリエイティブユーザーの場合（サブスクリプションレベルに応じて異なります）と最大ファイルサイズは 5 GB に制限されています。 また、容量は、Adobe Marketing Cloud Assets コアサービスで組織が保有しているアセット割り当てによっても制限されます。
 
-* **容量の要件：** 共有フォルダー内のファイルは、Experience ManagerとCreative Cloudアカウントに物理的に保存し、キャッシュされたコピーをMarketing CloudAssetsコアサービスに保存する必要もあります。
-* **ネットワークと帯域幅：** 共有フォルダー内のファイルとすべての更新は、システム間のネットワークを介して転送する必要があります。共有する対象は、関連するファイルおよび更新のみに限るようにしてください。
-* **フォルダーの種類**：`sling:OrderedFolder` タイプの Assets フォルダーの共有はサポートされていません。フォルダーを共有する場合は、フォルダーアセットでフォルダーを作成する際に、「順序付き」Experience Managerを選択しないでください。
+* **容量要件：** また、共有フォルダー内のファイルは、Experience ManagerとCreative Cloudアカウントに物理的に保存し、キャッシュされたコピーをMarketing CloudAssets コアサービスに保存する必要があります。
+* **ネットワークと帯域幅：** 共有フォルダ内のファイルとすべての更新は、システム間のネットワークを介して転送する必要があります。 共有する対象は、関連するファイルおよび更新のみに限るようにしてください。
+* **フォルダーの種類**：`sling:OrderedFolder` タイプの Assets フォルダーの共有はサポートされていません。フォルダーを共有する場合は、Experience Manager Assetsでフォルダーを作成する際に、「並べ替え」オプションを選択しないでください。
 
 ## ベストプラクティス {#best-practices}
 
-フォルダーとフォルダーの共有をExperience Managerに活用するためのベストプラクティスは次のとおりです。Creative Cloud
+Experience Managerをフォルダー共有に活用するためのベストプラクティスは、次のとおりです。Creative Cloud
 
-* **ボリュームに関する考慮事項：** Experience Manager、Creative Cloudフォルダー共有は、特定のキャンペーンやアクティビティなど、より少ない数のファイルを共有する場合に使用します。組織内の承認済みアセットなど、大量のアセットセットを共有するには、他の配布方法(例：Experience ManagerAssets Brand Portal)やExperience Managerのデスクトップアプリケーションを使用します。
-* **深い階層の共有を避ける：** 共有は再帰的に機能し、選択的な共有解除はできません。通常、共有するフォルダーは、サブフォルダーを持たないか、1 つ下のレベルのサブフォルダーなど非常に浅い階層しか持たないものに限るようにしてください。
-* **一方向共有用にCreative Cloudーを分離する：** 最終アセットをExperience ManagerアセットからCreative Cloudファイルに共有したり、クリエイティブレディアセットをファイルからに共有したりする場合は、個別のフォルダーを使用する必要があ [!DNL Assets]ります。これらのフォルダーに適切な命名規則を適用すると、Experience ManagerアセットとCreative Cloudユーザーを同様に理解しやすい作業環境を作成できます。
-* **共有Creative Cloudー内でWIPを避ける：** 共有フォルダーは作業中には使用しないでください。ファイルに頻繁に変更を加える必要のある作業を実行するには、共有フォルダーを作業中に別のフォルダーを使用します。
-* **共有Creative Cloudー以外で新しい作業を開始：** 新しいデザイン（クリエイティブファイル）は、Experience Managerファイル内の別のWIPフォルダーで開始する必要があり、Assetsユーザーと共有する準備が整ったら、共有フォルダーに移動または保存する必要があります。
-* **共有構造の簡素化：** より管理しやすいオペレーティングセットアップをおこなうには、共有構造を簡素化することを検討してください。Experience Managerアセットフォルダーは、すべてのクリエイティブユーザーと共有する代わりに、クリエイティブディレクターやチームマネージャーなど、チーム担当者とのみ共有する必要があります。 クリエイティブサイドのマネージャーが最終アセットを受け取って作業割り当てを決定し、デザイナーは自身の Creative Cloud アカウントで WIP アセットの作業をするようにします。Creative Cloudのコラボレーション機能を使用して作業を調整し、最後に、Experience Managerアセットで共有する準備が整ったアセットを選択して、クリエイティブレディの共有フォルダーに戻すことができます。
+* **ボリュームに関する考慮事項：** Experience Manager、Creative Cloudフォルダーの共有は、特定のキャンペーンやアクティビティに関連した、より少ない数のファイルを共有する場合に使用します。 組織内の承認済みアセットなど多数のアセットを共有するには、他の配布方法 (Experience Manager Assets Brand Portalなど ) やExperience Managerデスクトップアプリケーションを使用します。
+* **深い階層を共有しない：** 共有は再帰的に機能し、選択的な共有解除は許可されません。 通常、共有するフォルダーは、サブフォルダーを持たないか、1 つ下のレベルのサブフォルダーなど非常に浅い階層しか持たないものに限るようにしてください。
+* **一方向の共有用にフォルダを分割する：** 最終的なアセットをExperience Manager AssetsからCreative Cloudファイルに共有したり、クリエイティブレディアセットをCreative Cloudファイルからに共有したりするには、個別のフォルダーを使用します。 [!DNL Assets]. これらのフォルダーに適した命名規則を使用すると、Experience Manager AssetsユーザーとCreative Cloudユーザーを同様に理解しやすい作業環境を作成できます。
+* **共有フォルダー内で WIP を回避：** 「Work in Progress」には共有フォルダを使用しないでください。「Work Files」で別のフォルダを使用して、ファイルに頻繁に変更を加える必要のある作業をCreative Cloudします。
+* **共有フォルダー以外で新しい作業を開始：** 新しいデザイン（クリエイティブファイル）は、Creative Cloudファイル内の別の WIP フォルダーで開始する必要があり、Experience Manager Assetsユーザーと共有する準備が整ったら、共有フォルダーに移動または保存する必要があります。
+* **共有構造の簡素化：** より扱いやすいオペレーティングセットアップを行うには、共有構造を簡素化することを考えてください。 すべてのクリエイティブユーザーと共有する代わりに、Experience Manager Assetsフォルダーは、クリエイティブディレクターやチームマネージャーと同様に、チーム担当者とのみ共有する必要があります。 クリエイティブサイドのマネージャーが最終アセットを受け取って作業割り当てを決定し、デザイナーは自身の Creative Cloud アカウントで WIP アセットの作業をするようにします。Creative Cloudのコラボレーション機能を使用して作業を調整し、最後に、Experience Manager Assetsで共有する準備が整ったアセットを選択して、クリエイティブレディ共有フォルダーに戻すことができます。
 
-次の図は、Experience ManagerAssetsの既存の最終アセットに基づいて新しいデザインを作成するための設定例を示しています。
+次の図は、Experience Manager Assetsの既存の最終アセットに基づいて新しいデザインを作成するための設定例を示しています。
 
 ![chlimage_1-407](assets/chlimage_1-407.png)

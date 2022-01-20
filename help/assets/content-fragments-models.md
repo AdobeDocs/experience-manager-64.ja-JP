@@ -1,20 +1,20 @@
 ---
 title: コンテンツフラグメントモデル
-seo-title: コンテンツフラグメントモデル
+seo-title: Content Fragment Models
 description: コンテンツフラグメントモデルは、構造化コンテンツを含むコンテンツフラグメントを作成するために使用します。
-seo-description: コンテンツフラグメントモデル は、構造化コンテンツを含むコンテンツフラグメントの作成に使用されます。
+seo-description: Content Fragment Models are used to create content fragments with structured content.
 uuid: 59176a32-1255-4a46-ad00-344bde843ea6
 content-type: reference
 topic-tags: content-fragments
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 discoiquuid: 45e67357-4524-4d25-b5f1-21182b8e803c
 exl-id: 39ed07ec-54a6-4387-8435-e891726c411c
-feature: コンテンツフラグメント
+feature: Content Fragments
 role: User
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '706'
-ht-degree: 91%
+source-wordcount: '689'
+ht-degree: 92%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 91%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)以降のアプリケーション](../release-notes/sp-release-notes.md)が必要です。
+>一部のコンテンツフラグメント機能には、 [AEM 6.4 Service Pack 2(6.4.2.0) 以降](../release-notes/sp-release-notes.md).
 
 コンテンツフラグメントモデルは、[コンテンツフラグメント](content-fragments.md)のコンテンツの構造を定義します。
 
@@ -30,7 +30,7 @@ ht-degree: 91%
 
 >[!CAUTION]
 >
->**[!UICONTROL コンテンツフラグメントモデル]**&#x200B;を有効にしないと、新しいモデルを作成するための「**[!UICONTROL 作成]**」オプションは使用できません。
+>を有効にしない場合、 **[!UICONTROL コンテンツフラグメントモデル]**、 **[!UICONTROL 作成]** 新しいモデルを作成する際に、オプションは使用できません。
 
 コンテンツフラグメントモデルを有効にするには、次の操作を実行する必要があります。
 
@@ -95,7 +95,7 @@ ht-degree: 91%
 
    >[!NOTE]
    >
-   >フィールドが&#x200B;**必須**&#x200B;の場合、左側のウィンドウに表示される&#x200B;**ラベル**&#x200B;にアスタリスク(**&amp;ast;**)が付きます。
+   >フィールドが **必須**、 **ラベル** 左側のウィンドウに示された部分にアスタリスク (**&amp;ast;**) をクリックします。
 
    ![cfm-6420-12](assets/cfm-6420-12.png)
 
@@ -138,7 +138,7 @@ ht-degree: 91%
 
 ## コンテンツフラグメントモデルの公開 {#publishing-a-content-fragment-model}
 
-コンテンツフラグメントモデルは、依存するコンテンツフラグメントの公開時または公開前に公開する必要があります。
+コンテンツフラグメントモデルは、そのモデルに依存するコンテンツフラグメントの公開時または公開前に公開する必要があります。
 
 コンテンツフラグメントモデルを公開するには：
 

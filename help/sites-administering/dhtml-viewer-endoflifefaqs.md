@@ -1,6 +1,6 @@
 ---
 title: DHTML ビューアのサポート終了に関する FAQ
-description: 2014 年 1 月 31 日に、DHTML ビューアプラットフォームの正式なサポートが終了します。
+description: 2014 年 1 月 31 日に、DHTML ビューアプラットフォームは正式にサポートを終了します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration

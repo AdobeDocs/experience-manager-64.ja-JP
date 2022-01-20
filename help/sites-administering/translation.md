@@ -1,8 +1,8 @@
 ---
 title: 多言語サイトのコンテンツの翻訳
-seo-title: 多言語サイトのコンテンツの翻訳
+seo-title: Translating Content for Multilingual Sites
 description: 多言語サイトのコンテンツの翻訳方法について説明します。
-seo-description: 多言語サイトのコンテンツの翻訳方法について説明します。
+seo-description: Learn how to translate content for multilingual sites.
 uuid: b8047f6f-e86a-495d-9b80-731ac7d83c66
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,11 +10,11 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 67faa2ee-cb12-44b0-8bfb-534d1d6c360a
 legacypath: /content/docs/en/aem/6-0/administer/integration/third-party-services/machine-translation
-feature: 言語コピー
+feature: Language Copy
 exl-id: 3a3f5c4d-6c3f-4201-acc8-dbd138bb59ba
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '254'
 ht-degree: 100%
 
 ---

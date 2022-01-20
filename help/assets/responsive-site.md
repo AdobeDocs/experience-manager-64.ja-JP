@@ -7,11 +7,11 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
 exl-id: 36bb526c-a6d9-4296-8318-97ac72d6b3ba
-feature: 公開
+feature: Publishing
 role: User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '334'
 ht-degree: 90%
 
 ---
@@ -51,6 +51,6 @@ ht-degree: 90%
 
 ## HTTP/2 による Dynamic Media アセットの配信 {#using-http-to-delivery-your-dynamic-media-assets}
 
-HTTP/2 は、ブラウザーとサーバーの交信を強化する、新しく更新された Web プロトコルです。このプロトコルを使用すれば、情報の伝送を高速化し、必要な処理能力を抑えることができます。Dynamic Media アセットの配信は HTTP/2 を使用しておこなうことができ、応答時間と読み込み時間を短縮できます。
+HTTP/2 は、ブラウザーとサーバーの交信を強化する、新しく更新された Web プロトコルです。このプロトコルを使用すれば、情報の伝送を高速化し、必要な処理能力を抑えることができます。Dynamic Media アセットの配信は HTTP/2 を使用して行うことができ、応答時間と読み込み時間を短縮できます。
 
 Dynamic Media アカウントでの HTTP/2 の使用方法について詳しくは、[コンテンツの HTTP/2 配信](http2.md)を参照してください。

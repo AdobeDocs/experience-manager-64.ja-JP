@@ -1,8 +1,8 @@
 ---
 title: Forms サービス
-seo-title: Forms サービス
+seo-title: Forms Service
 description: この記事では、Forms サービスのほか、Forms サービスを使用して実行できるフォーム関連のタスクについて説明します。
-seo-description: この記事では、Forms サービスのほか、Forms サービスを使用して実行できるフォーム関連のタスクについて説明します。
+seo-description: The article describes Forms service and the form-related tasks you can perform using Forms service.
 uuid: 3258d3c2-8755-4815-8c97-b2cfb9a9dfd4
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,7 +11,7 @@ discoiquuid: a9695d10-43ec-40eb-942f-7720abaa0973
 exl-id: a1c7c90f-6b50-4bc1-9972-1d3bdf8887ce
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '685'
 ht-degree: 83%
 
 ---
@@ -24,25 +24,25 @@ Forms サービスを使用すると、通常は Designer で作成されるフ�
 
 Forms サービスを使用すると、Adobe PDF 形式で電子フォームをデプロイすることによって、組織はインテリジェントデータキャプチャプロセスを拡張できます。このサービスを使用して既存の PDF フォームにデータを読み込んだり、または既存の PDF フォームからデータを書き出したりすることもできます。
 
-Formsサービスを使用して、次の操作を実行します。
+Formsサービスを使用して、以下を実行します。
 
 * テンプレートおよび XML データに基づいて PDF フォームをレンダリングする。
 * フォームデータの統合を有効にして、PDF フォームへのデータの読み込みおよび PDF フォームからのデータの抽出を行う。
 * フラグメントに基づいてフォームをレンダリングする。
 
-## PDF フォームの作成  {#creating-pdf-forms-nbsp}
+## PDF フォームの作成 {#creating-pdf-forms-nbsp}
 
 Form サービスを使用してデータキャプチャ用に PDF フォームを作成します。通常は AEM Forms Designer テンプレートを使用します。Forms サービスの `renderPDFForm`（Javadoc にリンク）操作を使用して、このテンプレートを PDF フォームに変換します。
 
-`renderPDFForm` 操作の最初のパラメーターはテンプレートファイルの名前（`ExpenseClaim.xdp` など）になります。テンプレートファイルは、ローカルファイルシステム、CRXリポジトリ、またはHTTPまたはFTPの場所に保存できます。 `renderPDFForm`操作の`PDFFormRenderOptions`パラメーターにコンテンツルートを設定して、テンプレートファイルの場所を指定できます。 `PDFFormRenderOptions` パラメーターに対して指定できるその他のオプションの詳細については、Javadoc を参照してください。
+`renderPDFForm` 操作の最初のパラメーターはテンプレートファイルの名前（`ExpenseClaim.xdp` など）になります。テンプレートファイルは、ローカルのファイルシステム、CRX リポジトリ、または HTTP または FTP の場所に保存できます。 テンプレートファイルの場所は、 `PDFFormRenderOptions` のパラメーター `renderPDFForm` 操作。 `PDFFormRenderOptions` パラメーターに対して指定できるその他のオプションの詳細については、Javadoc を参照してください。
 
-`renderPDFForm` 操作は XML データを受け取ることもできます。PDFフォームを作成する際に、XMLデータがテンプレートとマージされ、生成されるPDFフォームに指定したデータが含まれるようになります。 `renderPDFForm` 操作の 2 番目のパラメーターは、XML データを含むドキュメント（Javadoc）オブジェクトを受け取ることができます。
+`renderPDFForm` 操作は XML データを受け取ることもできます。PDFフォームの作成時に、XML データがテンプレートとマージされ、生成されたPDFフォームに指定したデータが含まれるようになります。 `renderPDFForm` 操作の 2 番目のパラメーターは、XML データを含むドキュメント（Javadoc）オブジェクトを受け取ることができます。
 
-## PDF フォームからのデータ抽出{#extracting-data-from-pdf-forms-nbsp}
+## PDF フォームからのデータ抽出 {#extracting-data-from-pdf-forms-nbsp}
 
 Forms サービスの `exportData`（Javadoc）操作を使用して、PDF フォームから XML データを抽出します。この操作はドキュメントを最初のパラメーターとして受け取ります。データは XDP ドキュメントまたは XML ファイルのどちらかとして書き出すことができます。データを XML ファイルとして書き出す場合、書き出されたデータは XDP エンベロープを削除してプレーン XML ファイルを返します。2 番目のパラメーターを使用してこの設定を指定できます。
 
-## PDF フォームへのデータの読み込み  {#importing-data-into-pdf-forms}
+## PDF フォームへのデータの読み込み {#importing-data-into-pdf-forms}
 
 Forms サービスを使用すると、AEM Forms Designer または `renderPDFForm` 操作を使用して作成された PDF フォームを XML データとマージすることもできます。Forms サービスの `importData`（Javadoc）操作は PDF フォームと XML データを受け取り、XML データを含んだ PDF フォームを返します。
 
@@ -56,4 +56,4 @@ Forms サービスでは、AEM Forms Designer を使用して作成したフラ�
 
 * **コンテンツの再利用**：複数のフォームデザインでコンテンツを再利用できます。同じコンテンツの一部を複数のフォームで再利用するには、フラグメントを作成します。コンテンツをコピーまたは再作成するのは時間がかかります。フラグメントを使用し、それをフォームで参照することで、フォームデザインの中で頻繁に使用する部分を一貫性のあるコンテンツと外観ですべてのフォームに表示できます。
 * **グローバルな更新**：1 つのファイルを 1 回変更するだけで、複数のフォームをグローバルに変更できます。フラグメントでコンテンツ、スクリプトオブジェクト、データ連結、レイアウトまたはスタイルを変更できます。変更すると、そのフラグメントを参照しているすべての XDP フォームに変更が反映されます。
-* **共有フォームの作成**：複数のリソースでフォームの作成を共有できます。スクリプティングやその他のAEM Forms Designerの高度な機能に精通したフォーム開発者は、スクリプティングと動的プロパティを使用するフラグメントを開発および共有できます。 フォーム開発者は、これらのフラグメントを使用してフォームをデザインできます。また、これらのフラグメントを使用することで、複数のフォーム間でフォームのすべての部分が一貫した外観と機能を持つようにすることができます。
+* **共有フォームの作成**：複数のリソースでフォームの作成を共有できます。スクリプティングやその他のAEM Forms Designer の高度な機能に精通したフォーム開発者は、スクリプティングと動的プロパティを使用するフラグメントを開発および共有できます。 フォーム開発者は、これらのフラグメントを使用してフォームをデザインできます。また、これらのフラグメントを使用することで、複数のフォーム間でフォームのすべての部分が一貫した外観と機能を持つようにすることができます。

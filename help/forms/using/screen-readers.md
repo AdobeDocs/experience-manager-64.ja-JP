@@ -34,15 +34,15 @@ HTML5 フォームは既知の例外を含むアクセシビリティのリハ�
 
 ### JAWS {#jaws}
 
-すべてのデフォルトのキーストロークとショートカットは HTML5 フォームで機能します。JAWSの使用に関する詳細は、[https://www.freedomscientific.com/jaws-hq.asp](https://www.freedomscientific.com/jaws-hq.asp)を参照してください。
+すべてのデフォルトのキーストロークとショートカットは HTML5 フォームで機能します。JAWS の使用の詳細は、次を参照してください： [https://www.freedomscientific.com/jaws-hq.asp](https://www.freedomscientific.com/jaws-hq.asp).
 
 ### VoiceOver {#voiceover}
 
-HTML5 フォームは VoiceOver のすべてのデフォルトのキーストロークとジェスチャーをサポートします。VoiceOverの設定と使用について詳しくは、[https://www.apple.com/accessibility/voiceover/](https://www.apple.com/accessibility/voiceover/)を参照してください。
+HTML5 フォームは VoiceOver のすべてのデフォルトのキーストロークとジェスチャーをサポートします。VoiceOver の設定と使用について詳しくは、 [https://www.apple.com/accessibility/voiceover/](https://www.apple.com/accessibility/voiceover/).
 
 ## 既知の問題 {#known-issues}
 
-* **（Internal Explorer 9のみ）** HTML5フォームでは、ページはオンデマンドで（動的に）読み込まれます。オンデマンドのページ読み込みは、スクリーンリーダーの機能で問題が生じます。スクリーンリーダーのフォーカスがページの最後のフィールドにあり、ユーザーがタブを押すと、次のページの最初のフィールドにフォーカスを設定する代わりに、フォームの最初のページの最初のフィールドにフォーカスが戻ります。
+* **（Internal Explorer 9 のみ）** HTML5 フォームでは、ページはオンデマンドで（動的に）読み込まれます。 オンデマンドのページ読み込みは、スクリーンリーダーの機能で問題が生じます。スクリーンリーダーのフォーカスがページの最後のフィールドにあり、ユーザーが Tab キーを押した場合、フォーカスを次のページの最初のフィールドに設定する代わりに、フォームの最初のページの最初のフィールドに戻します。
 * **（Internal Explorer 9 のみ）** HTML5 フォームの日付選択のコントロールはキーボードで完全にアクセスできません。日付選択のコントロールで、上向き／下向き矢印キーを複数回押した場合、日付選択のコントロールが閉じて、フォーカスが次／最後のフィールドに移動します。 
 
 * VoiceOver は、iPad safari では日付ウィジェットで矢印キーを検出できません。

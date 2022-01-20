@@ -1,8 +1,8 @@
 ---
 title: フォーム出力の設定
-seo-title: フォーム出力の設定
+seo-title: Configuring form output
 description: フォーム出力を設定する方法について説明します。
-seo-description: フォーム出力を設定する方法について説明します。
+seo-description: Learn how to configure form output.
 uuid: 70aad14e-c845-4ef3-a751-ad8860d5d505
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 17c9b69a-3c6f-47e3-a828-841bb90eba8b
 exl-id: b19cae88-a549-41ba-b4a6-4b065a995296
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '228'
 ht-degree: 94%
 
 ---
@@ -26,11 +26,11 @@ ht-degree: 94%
 
    **フル HTML：**&#x200B;すべての HTML タグを含む形（完全な HTML ページ）でフォームをレンダリングします。これがデフォルト値です。
 
-   **フォームの本文：** (完全なHTMLページではな `<BODY>` く)タグ内でフォームをレンダリングします。
+   **フォーム本文：** 内でフォームをレンダリングするには `<BODY>` タグ ( 完全なHTMLページではない )
 
 1. 「保存」をクリックします。
 
-## PDF コンテンツのレンダリング位置の指定  {#specify-the-location-where-pdf-content-is-rendered}
+## PDF コンテンツのレンダリング位置の指定 {#specify-the-location-where-pdf-content-is-rendered}
 
 1. 「Form 出力」の「レンダリング位置」リストで次のいずれかのオプションを選択します。
 
@@ -42,7 +42,7 @@ ht-degree: 94%
 
 1. 「保存」をクリックします。
 
-## フォーム送信前のカスタムスクリプトの呼び出しの設定  {#configuring-invocation-of-custom-scripts-before-form-submit}
+## フォーム送信前のカスタムスクリプトの呼び出しの設定 {#configuring-invocation-of-custom-scripts-before-form-submit}
 
 この機能を有効にするには、次の手順を実行します。
 

@@ -1,8 +1,8 @@
 ---
 title: コンテンツフラグメント用コンポーネント
-seo-title: コンテンツフラグメント用コンポーネント
+seo-title: Components for Content Fragments
 description: AEM のコンテンツフラグメントは、ページから独立したアセットとして作成および管理されます
-seo-description: AEM のコンテンツフラグメントは、ページから独立したアセットとして作成および管理されます
+seo-description: AEM content fragments are created and managed as page-independent assets
 uuid: 289ed9cb-9531-43a9-b0d8-a3499e2e9ee5
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ pagetitle: Components for Content Fragments
 exl-id: 516c1561-5c13-4301-8009-9b021087cec7
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '932'
 ht-degree: 82%
 
 ---
@@ -22,15 +22,15 @@ ht-degree: 82%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)](/help/release-notes/sp-release-notes.md)のアプリケーションが必要です。
+>一部のコンテンツフラグメント機能には、 [AEM 6.4 Service Pack 2(6.4.2.0)](/help/release-notes/sp-release-notes.md).
 
 ## フラグメントオーサリング用コンポーネント {#components-for-fragment-authoring}
 
 >[!CAUTION]
 >
->フラグメントエディターで使用される実際のコンポーネントは、まだ変更される可能性があるので、拡張または変更はお勧めしません。
+>フラグメントエディターで使用する実際のコンポーネントは、まだ変更される可能性があるので、拡張または変更することはお勧めしません。
 
-[コンテンツフラグメント管理API — クライアント側](/help/sites-developing/customizing-content-fragments.md#the-content-fragment-management-api-client-side)を参照してください。
+詳しくは、 [コンテンツフラグメント管理 API — クライアント側](/help/sites-developing/customizing-content-fragments.md#the-content-fragment-management-api-client-side).
 
 ## ページオーサリング用コンポーネント {#components-for-page-authoring}
 
@@ -40,7 +40,7 @@ ht-degree: 82%
 >
 >この節では、コンテンツフラグメント用に提供されるオリジナル コンテンツについて説明します（**一般**&#x200B;グループの&#x200B;**コンテンツフラグメント**）。
 
-Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments.md)として作成および管理されます。コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。[その後、コンテンツページをオーサリングする際に、これらのフラグメントとそのバリエーションを使用できます](/help/sites-authoring/content-fragments.md)。既存のコンテンツフラグメントアセットを使用するに [は、アセットブラウザーからページ](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) （基盤コンポーネントの画像など、他のアセットベースのコンポーネントなど）にドラッグします。既製のコンテンツフラグメントコンポーネントには、参照されているコンテンツフラグメントの[要素](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment)が 1 つだけ表示されます。コンポーネントダイアログを使用して、ページに表示する[要素、バリエーションおよびフラグメントの段落](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment)の範囲を定義できます。
+Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments.md)として作成および管理されます。コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。[その後、コンテンツページをオーサリングする際に、これらのフラグメントとそのバリエーションを使用できます](/help/sites-authoring/content-fragments.md).また、既存のコンテンツフラグメントアセットを使用する場合は、 [アセットブラウザーからページにドラッグする](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) （基盤コンポーネントの画像など、他のアセットベースのコンポーネントに関して）。 既製のコンテンツフラグメントコンポーネントには、参照されているコンテンツフラグメントの[要素](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment)が 1 つだけ表示されます。コンポーネントダイアログを使用して、 [要素、バリエーションおよびフラグメントの段落の範囲](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) を選択します。
 
 >[!NOTE]
 >
@@ -66,7 +66,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
 このライブラリは、コンテンツフラグメント専用の機能をエディターに追加します。例えば、ページ上のコンテンツフラグメントの追加および設定機能のサポート、アセットブラウザーでのコンテンツフラグメントアセットの検索機能およびサイドパネルでの関連コンテンツの検索機能を使用できます。
 
-### 中間コンテンツ  {#in-between-content}
+### 中間コンテンツ {#in-between-content}
 
 **コンテンツフラグメント**&#x200B;コンポーネントを使用すると、表示される[要素](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment)のさまざまな段落の間に追加コンポーネントを挿入できます。基本的に、表示される要素は様々な段落で構成されます（各段落はキャリッジリターンによってマークされます）。これらの段落の間に、他のコンポーネントを使用してコンテンツを挿入できます。
 
@@ -97,14 +97,14 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
    * 中間コンテンツは表示されなくなります（新しい設定によって、2 番目の parsys はレンダリングされなくなります）。
 
-### コンテンツフラグメントコンポーネントのカスタマイズ  {#customizing-the-content-fragment-component}
+### コンテンツフラグメントコンポーネントのカスタマイズ {#customizing-the-content-fragment-component}
 
 既製のコンテンツフラグメントコンポーネントを拡張のブループリントとして使用するときは、次のルールを守ってください。
 
 * HTL レンダリングスクリプトと関連 POJO を再利用して、中間コンテンツ機能の実装方法を確認します。
-* コンテンツフラグメントノードを再利用します。`cq:editConfig`
+* コンテンツフラグメントノードを再利用します。 `cq:editConfig`
 
-   * `afterinsert`/ `afteredit`/ `afterdelete`リスナーを使用してJSイベントをトリガーします。 これらのイベントを `cq.authoring.editor.plugin.cfm` クライアントライブラリで処理して、関連コンテンツをサイドパネルに表示します。
+   * この `afterinsert`/ `afteredit`/ `afterdelete` リスナーは、JS イベントのトリガーに使用されます。 これらのイベントを `cq.authoring.editor.plugin.cfm` クライアントライブラリで処理して、関連コンテンツをサイドパネルに表示します。
    * コンテンツフラグメントアセットのドラッグをサポートするように `cq:dropTargets` を設定します。
    * ページエディターでコンテンツフラグメントのオーサリングをサポートするように `cq:inplaceEditing` を設定します。フラグメントのインプレースエディターは `cq.authoring.editor.plugin.cfm` クライアントライブラリで定義され、クイックリンクによって現在の[要素／バリエーション](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment)を[フラグメントエディター](/help/assets/content-fragments-variations.md)で開けるようにします。
 
@@ -112,11 +112,11 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
 コンテンツフラグメント管理では、初期レンダリング処理を使用してページの最終的な HTML 出力を生成します。これは、コンテンツフラグメントコンポーネントによって内部で使用されますが、参照ページ上の参照フラグメントを更新するバックグラウンド処理でも使用されます。
 
-内部では、このレンダリングに Sling Rewriter を使用します。それぞれの設定は`/libs/dam/config/rewriter/cfm`にあり、必要に応じて調整できます。 詳しくは、[Apache Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html)を参照してください。
+内部では、このレンダリングに Sling Rewriter を使用します。それぞれの設定は、次の場所にあります。 `/libs/dam/config/rewriter/cfm` 必要に応じて調整できます。 詳しくは、 [Apache Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) を参照してください。
 
 既成の設定は、次の変換サービスを使用します。
 
-* `transformer-cfm-payloadfilter`  — フラグメントのHTML `body` の部分(  `<body>...</body>`)のみを取得する場合に使用します。
+* `transformer-cfm-payloadfilter`  — 取得用 `body` 部分 ( `<body>...</body>`) をフラグメントのHTMLのみ
 
 * `transformer-cfm-parfilter` - 段落範囲が指定されている場合に、不要な段落を除外します（コンテンツフラグメントコンポーネントで実行可能）
 * `transformer-cfm-assetprocessor` - フラグメントに埋め込まれたアセットのリストを取得するために内部で使用されます

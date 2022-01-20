@@ -1,17 +1,17 @@
 ---
 title: アダプティブフォームの再利用
-seo-title: アダプティブフォームの再利用
+seo-title: Reusing adaptive forms
 description: '既存のアダプティブフォームを再利用して、新しいアダプティブフォームを作成することができます。 '
-seo-description: '既存のアダプティブフォームを再利用して、新しいアダプティブフォームを作成することができます。 '
+seo-description: You can reuse an existing adaptive form to create new adaptive forms.
 uuid: f1d0fb70-e255-4dd9-8e6d-fd65eaf2e81a
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: ef564750-f107-41cb-887e-fc6d22b7d32e
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 9393fe94-002a-497b-9579-d6ad3bb3973e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '538'
 ht-degree: 81%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 81%
 
 1. アダプティブフォームを選択します。選択方法はビューによって異なります。
 
-   カード表示の場合は、選択![aem6forms_check-circle](assets/aem6forms_check-circle.png)アイコンをクリックして選択モードに切り替え、コピーするすべてのアダプティブフォームをクリックします。
+   カード表示の場合は、選択をクリックして選択モードに移動します。 ![aem6forms_check-circle](assets/aem6forms_check-circle.png) アイコンをクリックし、コピーするすべてのアダプティブフォームをクリックします。
 
    リストビューの場合は、選択するすべてのアダプティブフォームのチェックボックスをオンにします。
 
@@ -46,15 +46,15 @@ ht-degree: 81%
    >
    >コピーと貼り付けの機能はアダプティブフォームのみをサポートしていますので、選択したアセットはすべてアダプティブフォームである必要があります。また、選択したすべてのアセットは同じフォルダー内のものである必要があります。
 
-   アセットを選択したら、ツールバーにある![aem6forms_copy](assets/aem6forms_copy.png)コピーアイコンをクリックして、選択したアダプティブフォームをコピーします。
+   アセットを選択したら、コピーをクリックします ![aem6forms_copy](assets/aem6forms_copy.png) 選択したアダプティブフォームをコピーするためのアイコンがツールバーに表示されます。
 
 ### アダプティブフォームの貼り付け {#paste-an-adaptive-form}
 
-コピーアクションをクリックすると、選択モードが自動的に終了し、貼り付け![aem6forms_paste](assets/aem6forms_paste.png)アイコンが表示されます。 目的のフォルダーパスに移動し、![aem6forms_paste](assets/aem6forms_paste.png)を貼り付けアイコンをクリックして、コピーしたアダプティブフォームを貼り付けます。
+コピーアクションをクリックすると、選択モードが自動的に終了し、貼り付けが実行されます ![aem6forms_paste](assets/aem6forms_paste.png) アイコンが表示されます。 次に、目的のフォルダーパスに移動し、貼り付け ![aem6forms_paste](assets/aem6forms_paste.png) アイコンをクリックして、コピーしたアダプティブフォームを貼り付けます。
 
 同じフォルダー内に貼り付ける場合、または貼り付け先のフォルダー内に同じノード名（CRX リポジトリへの保存に使用される名前）の別のファイルがある場合は、接尾辞に 1 が追加されます（例えば、myaf は myaf1 となり、同じ場所に myaf1 がある場合は myaf が myaf2 になります）。その他のプロパティはすべて元のアダプティブフォームと同じになります。
 
-貼り付け![aem6forms_paste](assets/aem6forms_paste.png)アイコンをクリックすると、再び非表示になります。 一度に行える貼り付け操作は一回だけです。同じアセットのコピーを再び作成するには、再度アセットをコピーします。
+貼り付け ![aem6forms_paste](assets/aem6forms_paste.png) アイコンが表示されない場合は、再び非表示になります。 一度に行える貼り付け操作は一回だけです。同じアセットのコピーを再び作成するには、再度アセットをコピーします。
 
 ### 新しいアダプティブフォームのコンテンツの変更 {#change-contents-of-new-adaptive-form}
 

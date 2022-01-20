@@ -1,8 +1,8 @@
 ---
 title: Connector for EMC Documentum ユーザー向けのバックアップ方法
-seo-title: Connector for EMC Documentum ユーザー向けのバックアップ方法
+seo-title: Backup strategy for Connector for EMC Documentum users
 description: Connector for EMC Documentum ユーザー向けのバックアップ方法について説明します。
-seo-description: Connector for EMC Documentum ユーザー向けのバックアップ方法について説明します。
+seo-description: Check how to create a backup strategy for Connector for EMC Documentum users.
 uuid: 5d8a0476-5231-4e1d-96c4-ae3df68e09f0
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: e83b1a59-a730-4d22-9d58-1c9c38e5d534
 exl-id: 933c3903-2040-41f4-b803-4d672ce9a2dc
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '156'
 ht-degree: 100%
 
 ---

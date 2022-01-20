@@ -1,8 +1,8 @@
 ---
 title: AEM コンポーネントの開発 - コードサンプル
-seo-title: AEM コンポーネントの開発 - コードサンプル
+seo-title: Developing AEM Components - Code Samples
 description: この節では、AEM 用に独自のコンポーネントを作成する方法の例を示します。
-seo-description: この節では、AEM 用に独自のコンポーネントを作成する方法の例を示します。
+seo-description: This section provides some examples on how to create your own components for AEM.
 uuid: 764b5dad-d3bb-48c6-9e93-9dc4e3f623db
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ legacypath: /content/docs/en/aem/6-2/develop/components/components-develop
 exl-id: c205046f-9e60-4010-9ae3-be7d02d45248
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '217'
 ht-degree: 97%
 
 ---
@@ -34,8 +34,9 @@ ht-degree: 97%
 >AEM では、コンポーネントの分析、テストおよびデバッグを支援するために次のものが提供されています。
 >
 >* [開発者モード](/help/sites-developing/developer-mode.md)
-* [Hobbes.js ライブラリをベースとしてテストを自動化するためのフレームワーク](/help/sites-developing/hobbes.md)
+>* [Hobbes.js ライブラリをベースとしてテストを自動化するためのフレームワーク](/help/sites-developing/hobbes.md)
 
+>
 
 
 ## コードサンプル - ダイアログフィールドをカスタマイズする方法 {#code-sample-how-to-customize-dialog-fields}
@@ -44,11 +45,12 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubのaem-authoring-dialog-fields-customizationプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization)
+* [GitHub の aem-authoring-dialog-fields-customization プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization/archive/master.zip)としてダウンロードします
 
 >[!NOTE]
-このコードサンプルは、[ダイアログフィールドのカスタマイズ](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションに関連しています。
+>
+>このコードサンプルは、[ダイアログフィールドのカスタマイズ](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションに関連しています。
 
 ## 関連リソース {#related-resources}
 

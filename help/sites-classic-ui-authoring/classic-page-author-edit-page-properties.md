@@ -1,8 +1,8 @@
 ---
 title: ページプロパティの編集
-seo-title: ページプロパティの編集
+seo-title: Editing Page Properties
 description: ページのプロパティは、ページの性質によって異なることがあります。例えば、ページによってはライブコピーに接続されていたり、接続されずにライブコピー情報が必要に応じて利用可能な場合があります。
-seo-description: ページのプロパティは、ページの性質によって異なることがあります。例えば、ページによってはライブコピーに接続されていたり、接続されずにライブコピー情報が必要に応じて利用可能な場合があります。
+seo-description: Properties of a page can vary depending on the nature of the page. For example some pages might be connected to a live copy while others are not and the live copy information will be available as appropriate.
 uuid: 63d37d1b-52da-489d-b02b-e8b3d17571d1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 exl-id: 6969dc5e-f7fa-495e-8ddf-8123ca2bc9a6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '763'
 ht-degree: 96%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 96%
 
    このページのバニティ URL を入力できます。これによって、短くて意味のわかりやすい URL を付けることができます。
 
-   例えば、Webサイトh `ttp://example.com,`のパス/ `v1.0/startpage`で識別されるページに対して、バニティURLがw `elcome`に設定されている場合、h `ttp://example.com/welcome`はh `ttp://example.com/content/v1.0/startpage`のバニティURLになります。
+   例えば、バニティー URL が w に設定されている場合、 `elcome`パス/で識別されるページに `v1.0/startpage`（Web サイトの場合） `ttp://example.com,` その後 `ttp://example.com/welcome`は h のバニティー URL です。 `ttp://example.com/content/v1.0/startpage`
 
    >[!CAUTION]
    >

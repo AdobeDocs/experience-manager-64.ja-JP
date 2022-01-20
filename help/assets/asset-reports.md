@@ -1,13 +1,13 @@
 ---
-title: デジタルアセットの使用状況および共有に関するレポート。
+title: デジタルアセットの使用状況および共有に関するレポートです。
 description: デジタルアセットの使用状況、アクティビティ、共有を理解するのに役立つ、 [!DNL Adobe Experience Manager Assets]  でのアセットに関するレポートです。
 contentOwner: AG
-feature: アセットレポート、アセット管理
+feature: Asset Reports,Asset Management
 role: User,Admin
 exl-id: 6f03ee04-d2e2-47e6-892b-50fad3043a28
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1061'
 ht-degree: 89%
 
 ---
@@ -28,10 +28,10 @@ ht-degree: 89%
 
 レポートを生成するには、次の点を確認します。
 
-* **[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL Webコンソール]**&#x200B;から[!UICONTROL Day CQ DAM Event Recorder]サービスを有効にします。
-* レポートの対象となるアクティビティまたはイベントを選択します。 例えば、ダウンロードされたアセットに関するレポートを生成するには、「[!UICONTROL ダウンロードされたアセット(DOWNLOADED)]」を選択します。
+* 有効にする [!UICONTROL Day CQ DAM Event Recorder] サービス **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL Web コンソール]**.
+* レポートの対象となるアクティビティまたはイベントを選択します。 例えば、ダウンロードしたアセットに関するレポートを生成するには、「 [!UICONTROL ダウンロードされたアセット（ダウンロード済み）].
 
-![Webコンソールでのアセットレポートの有効化](assets/reports-config-day-cq-dam-event-recorder.png)
+![Web コンソールでのアセットレポートの有効化](assets/reports-config-day-cq-dam-event-recorder.png)
 
 ## レポートの生成 {#generate-reports}
 
@@ -54,17 +54,17 @@ ht-degree: 89%
    ![アセットレポートに移動するツールページ](assets/navigation.png)
 
 1. [!UICONTROL アセットレポート]ページで、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
-1. **[!UICONTROL レポートを作成ページ]**&#x200B;から、作成するレポートを選択し、「**[!UICONTROL 次へ]**」をクリックします。
+1. 次の **[!UICONTROL レポートを作成ページ]** ページで、作成するレポートを選択し、 **[!UICONTROL 次へ]**.
 
    ![レポートタイプの選択](assets/choose_report.png)
 
    >[!NOTE]
    >
-   >デフォルトでは、コンテンツフラグメントとリンク共有は、アセット[!UICONTROL ダウンロードされたレポート]に含まれます。 適切なオプションを選択して、リンク共有のレポートを作成するか、ダウンロードレポートからコンテンツフラグメントを除外します。
+   >デフォルトでは、コンテンツフラグメントとリンク共有がアセットに含まれます [!UICONTROL ダウンロードしたレポート]. 適切なオプションを選択して、リンク共有のレポートを作成するか、ダウンロードレポートからコンテンツフラグメントを除外します。
 
    >[!NOTE]
    >
-   >[!UICONTROL ダウンロード]レポートには、個別に選択され、クイックアクションを使用してダウンロードまたはダウンロードされたアセットの詳細のみが表示されます。 ただし、ダウンロードされたフォルダー内にあったアセットの詳細は含まれません。
+   >この [!UICONTROL ダウンロード] レポートには、クイックアクションを使用して個別に選択し、ダウンロードまたはダウンロードされたアセットの詳細のみが表示されます。 ただし、ダウンロードされたフォルダー内にあったアセットの詳細は含まれません。
 
 1. タイトル、説明、サムネール、CRX リポジトリー内のフォルダーパス（レポートの保存場所）など、レポートの詳細を設定します。デフォルトでは、フォルダーパスは `/content/dam` です。別のパスを指定することもできます。
 

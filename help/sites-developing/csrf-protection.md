@@ -1,8 +1,8 @@
 ---
 title: CSRF 対策フレームワーク
-seo-title: CSRF 対策フレームワーク
+seo-title: The CSRF Protection Framework
 description: このフレームワークでは、トークンを利用して、クライアントの要求が正当なものであることを保証します
-seo-description: このフレームワークでは、トークンを利用して、クライアントの要求が正当なものであることを保証します
+seo-description: The framework makes use of tokens to guarantee that the client request is legitimate
 uuid: 7cb222ba-fc7a-46ee-8b49-a5f39a53580b
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: f453427d-c813-48b7-b2f9-adadea39c67d
 exl-id: 533c348e-517f-4d70-a89c-bfc87f71a633
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 63%
+source-wordcount: '282'
+ht-degree: 60%
 
 ---
 
@@ -31,11 +31,11 @@ ht-degree: 63%
 
 ### 依存関係 {#dependencies}
 
-`granite.jquery`依存関係に依存するコンポーネントは、CSRF保護フレームワークのメリットを自動的に受けます。 どのコンポーネントでも該当しない場合は、フレームワークを使用する前に`granite.csrf.standalone`に依存関係を宣言する必要があります。
+に依存する任意のコンポーネント `granite.jquery` 依存関係は、CSRF 保護フレームワークのメリットを自動的に受けます。 どのコンポーネントでも該当しない場合は、 `granite.csrf.standalone` このフレームワークを使用する前に、
 
 ### 暗号鍵のレプリケーション {#replicating-crypto-keys}
 
-トークンを利用するには、デプロイメント内のすべてのインスタンスに`/etc/keys/hmac`バイナリをレプリケートする必要があります。 HMAC 鍵をすべてのインスタンスにコピーするには、鍵を格納するパッケージを作成し、パッケージマネージャーを使用してすべてのインスタンスにインストールする方法が便利です。
+トークンを利用するには、 `/etc/keys/hmac` バイナリをデプロイメント内のすべてのインスタンスに追加します。 HMAC 鍵をすべてのインスタンスにコピーするには、鍵を格納するパッケージを作成し、パッケージマネージャーを使用してすべてのインスタンスにインストールする方法が便利です。
 
 >[!NOTE]
 >
@@ -43,6 +43,6 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->Webアプリケーションでマニフェストキャッシュを使用する場合、トークンがCSRFトークン生成呼び出しをオフラインで受け取らないようにするために、「**&amp;ast;**」をマニフェストに追加します。 詳しくは、こちらの[リンク](https://www.w3.org/TR/offline-webapps/)を参照してください。
+>Web アプリケーションでマニフェストキャッシュを使用する場合は、必ず「**&amp;ast;**」がマニフェストに追加されます。 詳しくは、こちらの[リンク](https://www.w3.org/TR/offline-webapps/)を参照してください。
 >
 >CSRF 攻撃とその軽減方法について詳しくは、[OWASP のクロスサイトリクエストフォージェリに関するページ](https://owasp.org/www-community/attacks/csrf)を参照してください。

@@ -1,8 +1,8 @@
 ---
 title: おすすめコンテンツの基本事項
-seo-title: おすすめコンテンツの基本事項
+seo-title: Featured Content Essentials
 description: おすすめコンテンツの使用
-seo-description: おすすめコンテンツの使用
+seo-description: Working with feature content
 uuid: b376828a-1431-4d16-ad6b-b23a3ea62a75
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,12 +12,12 @@ discoiquuid: 781625f1-39a0-4e34-948c-d4eab35dd5c1
 exl-id: 4805db0f-18d2-4bbc-a4d6-eaafa7a4c152
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '113'
-ht-degree: 84%
+source-wordcount: '106'
+ht-degree: 83%
 
 ---
 
-# おすすめコンテンツの基本事項  {#featured-content-essentials}
+# おすすめコンテンツの基本事項 {#featured-content-essentials}
 
 このページでは、おすすめコンテンツを使用するための基本的な情報について説明します。
 
@@ -49,7 +49,7 @@ ht-degree: 84%
   </tr>
   <tr>
    <td><strong> properties</strong></td> 
-   <td><a href="featured.md">おすすめコンテンツ</a>を参照</td> 
+   <td>詳しくは、 <a href="featured.md">おすすめコンテンツ</a></td> 
   </tr>
  </tbody>
 </table>
@@ -58,4 +58,4 @@ ht-degree: 84%
 
 ### ファイルライブラリ機能 {#file-library-function}
 
-[おすすめコンテンツ機能](functions.md#featured-content-function)を含むコミュニティサイト構造には、設定済みの`featured content`コンポーネントが含まれます。
+を含むコミュニティサイト構造 [おすすめコンテンツ機能](functions.md#featured-content-function)（設定済みを含む） `featured content` コンポーネント。

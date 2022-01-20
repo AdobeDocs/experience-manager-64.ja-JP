@@ -69,7 +69,7 @@ User Management を設定して、失敗したディレクトリ同期処理を�
 1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックします。
 1. 「同期完了の Cron 形式」に、失敗した同期を User Management で再試行する間隔を表す Cron 形式を入力します。Cron 形式の使用方法は、Quartz オープンソースジョブスケジュールシステムのバージョン 1.4.0 に基づきます
 
-   デフォルトは0 0/13 &amp;ast；です。? &amp;ast;：チェックは13分ごとに実行されます。
+   デフォルトは 0 0/13 &amp;ast；です。? &amp;ast;：チェックは 13 分ごとに実行されます。
 
 ## 手動によるディレクトリの同期 {#manually-synchronize-directories}
 

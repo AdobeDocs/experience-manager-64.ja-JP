@@ -1,8 +1,8 @@
 ---
 title: カスタムポータルにおける通信を作成の UI の統合
-seo-title: カスタムポータルにおける通信を作成の UI の統合
+seo-title: Integrating Create Correspondence UI with your custom portal
 description: 通信の作成 UI とカスタムポータルを統合する方法について説明します。
-seo-description: 通信の作成 UI とカスタムポータルを統合する方法について説明します。
+seo-description: Learn how to integrate create correspondence UI with your custom portal
 uuid: 4ae9c5fb-bb9d-46d8-be84-455f386ab443
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -12,8 +12,8 @@ feature: Correspondence Management
 exl-id: 8b1bbd85-66ba-4e96-917a-d768d84a417f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 78%
+source-wordcount: '478'
+ht-degree: 77%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 78%
 
 ここでは、通信を作成のソリューションをお使いの環境に統合する方法の詳細を説明します。
 
-## URL ベースの呼び出し  {#url-based-invocation}
+## URL ベースの呼び出し {#url-based-invocation}
 
 通信を作成アプリケーションをカスタムポータルから呼び出す 1 つの方法として、次の要求パラメーターを持つ URL を準備する方法が挙げられます。
 
@@ -31,9 +31,9 @@ ht-degree: 78%
 
 * 目的のデータソースから取得した XML データの URL（cmDataUrl パラメーターを使用）
 
-例えば、カスタムポータルでは、URLを\
-`https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`（ポータル上のリンクからのhrefを指定可能）。\
-ポータルにレターテンプレート名が手元にある場合、URLは\
+例えば、カスタムポータルでは、次のように URL を準備します。\
+`https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`（ポータル上のリンクからの href にすることができます）。\
+ポータルにレターテンプレート名が付いている場合、URL は\
 `https://[server]:[port]/content/cm/createcorrespondence.html?cmLetterName=[letter name]&cmDataUrl=[data URL]`
 
 >[!NOTE]
@@ -44,11 +44,11 @@ ht-degree: 78%
 >
 >通信を作成アプリケーションを呼び出す前に、データを保存、アップロードして、指定された dataURL で通信を作成の UI を呼び出します。この処理は、カスタムポータル自体で実行されるか、または異なるバックエンドプロセスで実行される可能性があります。
 
-## インラインデータベースの呼び出し  {#inline-data-based-invocation}
+## インラインデータベースの呼び出し {#inline-data-based-invocation}
 
-通信を作成アプリケーションを呼び出すもう1つの（より安全な）方法は、`https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html`のURLをヒットするだけです。その際、パラメーターとデータを送信して、通信を作成アプリケーションをPOSTリクエストとして呼び出します（エンドユーザーには表示されません）。 つまり、通信を作成アプリケーションの XML データを（cmData パラメーターを使用して、同じ要求の一部として）インラインで渡すことができることも意味します。これは、前述のアプローチでは、不可能で、理想的ではありませんでした。
+通信を作成アプリケーションを呼び出すもう 1 つの（より安全な）方法は、次の場所の URL にヒットするだけで済みます。 `https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html`：通信を作成アプリケーションをPOSTリクエストとして呼び出すためのパラメーターとデータを送信する際に（エンドユーザーに対して非表示にする）。 つまり、通信を作成アプリケーションの XML データを（cmData パラメーターを使用して、同じ要求の一部として）インラインで渡すことができることも意味します。これは、前述のアプローチでは、不可能で、理想的ではありませんでした。
 
-### レターを指定するパラメーター  {#parameters-for-specifying-letter}
+### レターを指定するパラメーター {#parameters-for-specifying-letter}
 
 <table> 
  <tbody>
@@ -77,7 +77,7 @@ ht-degree: 78%
 
 テーブル中のパラメーターの順序が、レターの読み込みに使用されるパラメーターの優先順位を指定します。
 
-### XML データソースを指定するパラメーター  {#parameters-for-specifying-the-xml-data-source}
+### XML データソースを指定するパラメーター {#parameters-for-specifying-the-xml-data-source}
 
 <table> 
  <tbody>
@@ -106,7 +106,7 @@ ht-degree: 78%
 
 テーブル中のパラメーターの順序が、XML データの読み込みに使用されるパラメーターの優先順位を指定します。
 
-### その他のパラメーター  {#other-parameters}
+### その他のパラメーター {#other-parameters}
 
 <table> 
  <tbody>
@@ -128,4 +128,4 @@ ht-degree: 78%
  </tbody>
 </table>
 
-cmDataURLにhttpまたはcqプロトコルを使用する場合、http/cqのURLは匿名でアクセスできる必要があります。
+cmDataURL に http または cq プロトコルを使用している場合、http/cq の URL は匿名でアクセスできる必要があります。

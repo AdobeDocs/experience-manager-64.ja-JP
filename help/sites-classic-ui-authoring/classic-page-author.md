@@ -1,8 +1,8 @@
 ---
 title: ページのオーサリング
-seo-title: ページのオーサリング
-description: AEMを使用したオーサリングについては、次の2つの概要があります。 (1)作成者向けの最初の手順 — 新しい作成者向けの紹介、および(2)ページのオーサリングに関するクイックガイド — 主なアクションに関するクイックガイド（概要レベル）。
-seo-description: AEMを使用したオーサリングについては、次の2つの概要があります。 (1)作成者向けの最初の手順 — 新しい作成者向けの紹介、および(2)ページのオーサリングに関するクイックガイド — 主なアクションに関するクイックガイド（概要レベル）。
+seo-title: Authoring Pages
+description: AEMを使用したオーサリングには、次の 2 つの概要があります。 (1) 作成者がおこなう最初の手順 — 新しい作成者向けの紹介、および (2) ページのオーサリングのクイックガイド — 主なアクションに関するクイックガイド（概要レベル）。
+seo-description: There are two overviews to authoring with AEM. (1) First Steps for Authors - an introduction for new authors, and (2) Quick Guide to Authoring Pages - a quick guide (high-level) to the main actions.
 uuid: 95d12bd6-c51d-4b7c-9d67-a152a822eb01
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
 exl-id: be2465a5-8875-4c9c-bd0d-32631b0fe294
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 78%
+source-wordcount: '298'
+ht-degree: 86%
 
 ---
 

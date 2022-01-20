@@ -1,17 +1,17 @@
 ---
 title: フォームのプレビュー
-seo-title: フォームのプレビュー
+seo-title: Previewing a form
 description: 発行またはアクティベートする前にフォームをプレビューして、期待通りになっていることを確認します。プレビューのオプションは、サポートされているフォームタイプにより異なる場合があります。
-seo-description: 発行またはアクティベートする前にフォームをプレビューして、期待通りになっていることを確認します。プレビューのオプションは、サポートされているフォームタイプにより異なる場合があります。
+seo-description: You can preview your forms before publishing or activating to ensure it meets the expectations. Preview options may vary across the supported form types.
 uuid: 9ec359ea-f518-441c-9c3d-e3c1ea07a532
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 130bdc9f-b19e-4b7d-a6ad-ef5097c9cf41
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '365'
 ht-degree: 100%
 
 ---

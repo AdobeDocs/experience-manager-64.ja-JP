@@ -21,8 +21,8 @@ ht-degree: 69%
 
 # Dynamic Media でのホットリンク保護の有効化 {#activating-hotlink-protection-in-dynamic-media}
 
-ホットリンクは、サードパーティの Web サイトで HTML コードを使用して自社 Web サイト内の画像を表示する場合におこなわれます。訪問者のブラウザーが自社サーバーから画像に直接アクセスするので、画像が要求されるたびに帯域幅が消費されます。ホットリンク *保護* は、他の Web サイトが Web ページ上の画像、CSS、JavaScript に直接リンクするのを防ぐ方法です。 このような保護により、Dynamic Media アカウントでの不要な帯域幅使用を減らすことができます。
+ホットリンクは、サードパーティの Web サイトで HTML コードを使用して自社 Web サイト内の画像を表示する場合におこなわれます。訪問者のブラウザーが自社サーバーから画像に直接アクセスするので、画像が要求されるたびに帯域幅が消費されます。ホットリンク *保護* は、他の Web サイトが Web ページ上の画像、CSS、JavaScript に直接リンクするのを防ぐための方法です。 このような保護により、Dynamic Media アカウントでの不要な帯域幅使用を減らすことができます。
 
-[Adobeカスタマ](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja#support) ーサポートは、CDN レベルでリファラーフィルターを設定し、ドメインに許可された Web サイトにのみDynamic Mediaコンテンツを提供するようにします。
+[Adobeカスタマーサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja#support) は、CDN レベルでリファラーフィルターを設定し、ドメインに許可された Web サイトにのみDynamic Mediaコンテンツを提供できるようにします。
 
 ホットリンク保護を機能させるには、アドビ製品にバンドルされた CDN を使用する必要があります。ホットリンク保護を有効化するには、Dynamic Media アカウントの設定変更を要求するサポートチケットを管理者が作成する必要があります。ホットリンク保護を有効化するための追加費用は発生しません。

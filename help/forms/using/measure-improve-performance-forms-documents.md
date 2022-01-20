@@ -1,8 +1,8 @@
 ---
 title: フォームのコンバージョン率の測定と効率性の改善
-seo-title: フォームのコンバージョン率の測定と効率性の改善
+seo-title: Measure and improve effectiveness and conversion of forms
 description: AEM Forms は Adobe Target ソリューションと Adobe Analytics ソリューションに統合されているため、フォームのコンバージョン率を測定してパフォーマンスを改善することができます。
-seo-description: AEM Forms は Adobe Target ソリューションと Adobe Analytics ソリューションに統合されているため、フォームのコンバージョン率を測定してパフォーマンスを改善することができます。
+seo-description: AEM Forms integrates with Adobe Target and Adobe Analytics solutions that allows you to measure and improve the performance and conversion rate of your forms.
 uuid: 5876f2f3-1c97-4fb9-a032-b869ee3c6a45
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,7 +11,7 @@ discoiquuid: 6b62b280-d101-410a-ba8c-02940f766c32
 exl-id: 364dd7f3-9009-440e-8aff-28e2dac08fe7
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1278'
 ht-degree: 93%
 
 ---
@@ -32,7 +32,7 @@ ROI を最大化するには、顧客がサービスをどのように利用し�
 
 ## ソリューション {#the-solution}
 
-AEM Formsは、Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)ソリューション[[Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html)および[Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html)と統合され、フォームのパフォーマンスを監視および分析し、コンバージョン率を向上させるエクスペリエンスを試して特定できます。
+AEM Formsとの統合 [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html) ソリューション — [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html) および [Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html)  — フォームのパフォーマンスを監視および分析するのに役立ち、コンバージョン率の向上につながるエクスペリエンスを実験して特定できます。
 
 ## ワークフロー {#the-workflow}
 
@@ -43,7 +43,7 @@ AEM Formsは、Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html
 * マーケティング戦略と成功に向けて責任を負うビジネスユーザーおよびアナリスト
 * インフラストラクチャ、構成済みソリューション、メンテナンスを担当する IT 責任者
 
-### 関連する AEM Forms のコンポーネントおよび機能  {#aem-forms-components-and-features-involved}
+### 関連する AEM Forms のコンポーネントおよび機能 {#aem-forms-components-and-features-involved}
 
 * アダプティブフォーム
 * Adobe Analytics との統合（顧客がアダプティブフォームをどのように利用しているかについて、情報の収集、整理、レポートを行う）
@@ -68,11 +68,11 @@ AEM Formsは、Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html
 1. AEM で AEM Forms Analytics Configuration サービスを設定
 1. AEM でフォームの Analytics を有効化
 
-詳細な手順については、「[アダプティブフォームの分析とレポートの設定](/help/forms/using/configure-analytics-forms-documents.md)」を参照してください。
+詳細な手順については、 [アダプティブフォームの分析とレポートの設定](/help/forms/using/configure-analytics-forms-documents.md).
 
 **Target の設定**
 
-アダプティブフォームのA/Bテストを作成して実行するには、「[AEM FormsでのTargetの設定と統合](/help/forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p)」の説明に従って、AEM FormsでTargetを設定します。
+アダプティブフォームで A/B テストを作成して実行するには、AEM Formsで Target を設定します ( [AEM Formsでの Target の設定と統合](/help/forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p).
 
 #### 手順 2：分析レポートの表示 {#step-view-analytics-report-br}
 
@@ -126,7 +126,7 @@ Analytics によってフォーム用に収集されてレポートされたデ�
 
 各種のデータポイントを分析して仮説を立てることができたら、フォーム内で必要な変更を行います。
 
-#### 手順 4：分析と修正の検証  {#step-validate-your-analysis-and-fixes}
+#### 手順 4：分析と修正の検証 {#step-validate-your-analysis-and-fixes}
 
 この手順では、フォーム内で行った変更内容を検証し、それらの変更がコンバージョン率に影響するかどうかを確認します。
 

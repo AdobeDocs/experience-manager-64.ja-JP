@@ -1,8 +1,8 @@
 ---
 title: 関連するコミュニティ記事
-seo-title: 関連するコミュニティ記事
+seo-title: Related Community Articles
 description: Marketing Cloud と AEM の統合についてコミュニティがまとめた記事のリストを示します。
-seo-description: Marketing Cloud と AEM の統合についてコミュニティがまとめた記事のリストを示します。
+seo-description: Find a list of community generated articles about Marketing Cloud integrations with AEM.
 uuid: b1562a21-a6f5-4cd9-821f-f258b53a1d99
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 85bfce4f-737a-475c-987d-f94c85b3d763
 exl-id: d56c852b-655f-493f-b396-e98491a35419
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '88'
 ht-degree: 100%
 
 ---

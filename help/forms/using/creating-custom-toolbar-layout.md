@@ -1,8 +1,8 @@
 ---
 title: カスタムツールバーレイアウトの作成
-seo-title: カスタムツールバーレイアウトの作成
+seo-title: Creating custom toolbar layout
 description: フォームのツールバーレイアウトを指定できます。ツールバーレイアウトは、フォーム上のツールバーのコマンドとレイアウトを定義します。
-seo-description: フォームのツールバーレイアウトを指定できます。ツールバーレイアウトは、フォーム上のツールバーのコマンドとレイアウトを定義します。
+seo-description: You can specify a toolbar layout for the form. The toolbar layout defines the commands and the layout of the toolbar on the form.
 uuid: da60342c-f802-4264-9da4-c333df9359c2
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,12 +11,12 @@ discoiquuid: c69bb229-d680-4a55-9b2d-cd5ad0f83a9e
 exl-id: 1b273437-8d71-4224-bdcd-0ae522ae8913
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 80%
+source-wordcount: '527'
+ht-degree: 79%
 
 ---
 
-# カスタムツールバーレイアウトの作成  {#creating-custom-toolbar-layout}
+# カスタムツールバーレイアウトの作成 {#creating-custom-toolbar-layout}
 
 ## ツールバーレイアウト {#layout}
 
@@ -24,24 +24,24 @@ ht-degree: 80%
 
 ツールバーレイアウトは、複雑な JavaScript と CSS コードによるクライアントサイドのプロセッシングに大きく依存しています。このコードの提供を編成および最適化することが厄介な問題となることがあります。この問題への対処に役立つように、AEM では、クライアント側ライブラリフォルダーが提供されています。これにより、クライアント側コードをリポジトリに格納し、カテゴリ別に整理して、それぞれのコードカテゴリをクライアントに保存するタイミングと方法を定義することができます。その後、クライアント側ライブラリシステムにより、最終的な Web ページで、正しいコードを読み込むための正しいリンクが作成されます。詳細については、「[AEM におけるクライアントサイドライブラリの機能](/help/sites-developing/clientlibs.md)」を参照してください。
 
-![ツールバーのレイア](assets/default_toolbar_layout.png)
-**ウトの例図：** *ツールバーのレイアウトの例*
+![ツールバーのサンプルレイアウト](assets/default_toolbar_layout.png)
+**図：** *ツールバーのサンプルレイアウト*
 
 アダプティブフォームには、購入してすぐに使える一連のレイアウトが含まれています。
 
-![標準で使用可能なツールバーレイアウ ](assets/toolbar1.png)
-**ト図：** *標準で使用可能なツールバーレイアウト*
+![すぐに使用できるツールバーレイアウト ](assets/toolbar1.png)
+**図：** *すぐに使用できるツールバーレイアウト*
 
 カスタムのツールバーレイアウトを作成することもできます。
 
 次の手順では、カスタムツールバーを作成する手順を示します。ここでは、3 つのアクションがツールバーに表示され、その他のアクションはツールバーのドロップダウンリストに表示されます。
 
-付属のコンテンツパッケージには、以下に示すコード全体が含まれています。コンテンツパッケージをインストールしたら、`/content/forms/af/CustomLayoutDemo.html`を開いてカスタムツールバーレイアウトのデモを表示します。
+付属のコンテンツパッケージには、以下に示すコード全体が含まれています。コンテンツパッケージをインストールしたら、を開きます。 `/content/forms/af/CustomLayoutDemo.html` をクリックして、カスタムツールバーレイアウトのデモを表示します。
 
 CustomToolbarLayoutDemo.zip
 
-[FileDemoカス](assets/customtoolbarlayoutdemo.zip)
-タムツールバーレイアウトの取得
+[ダウンロード](assets/customtoolbarlayoutdemo.zip)
+デモカスタムツールバーレイアウト
 
 ## カスタムツールバーレイアウトを作成するには {#layout-1}
 
@@ -53,15 +53,15 @@ CustomToolbarLayoutDemo.zip
 
    `/libs/fd/af/layouts/toolbar`
 
-   例えば、`mobileFixedToolbarLayout`ノードを`/libs/fd/af/layouts/toolbar`フォルダーから`/apps/customlayout/toolbar`フォルダーにコピーします。
+   例えば、 `mobileFixedToolbarLayout` ノードを `/libs/fd/af/layouts/toolbar` フォルダーを `/apps/customlayout/toolbar` フォルダー。
 
-   また、toolbarCommon.jspを`/apps/customlayout/toolbar`フォルダーにコピーします。
+   また、toolbarCommon.jsp を `/apps/customlayout/toolbar` フォルダー。
 
    >[!NOTE]
    >
-   >カスタムレイアウトを維持するために作成するフォルダは、`apps`フォルダで作成されます。
+   >カスタムレイアウトを維持するために作成したフォルダーは、 `apps` フォルダー。
 
-1. コピーしたノード`mobileFixedToolbarLayout`の名前を`customToolbarLayout.`に変更します。
+1. コピーしたノードの名前を変更します。 `mobileFixedToolbarLayout`、 `customToolbarLayout.`
 
    また、ノードのための適切な説明も与えます。例えば、ノードの jcr:description を&#x200B;**ツールバーのカスタムレイアウト** に変更します。
 
@@ -83,7 +83,7 @@ CustomToolbarLayoutDemo.zip
 
 1. このカスタムツールバーレイアウトを選択し、「OK」をクリックします。
 
-   clientlib（javascriptとcss）を`/etc/customlayout`ノードに追加し、clientlibの参照を`customToolbarLayout.jsp`に含めます。
+   clientlib（javascript と css）を `/etc/customlayout` ノードに追加し、clientlib の参照を `customToolbarLayout.jsp`.
 
    ![customToolbarLayout.css ファイルのパス](assets/toolbar_3.png)
 
@@ -228,5 +228,5 @@ CustomToolbarLayoutDemo.zip
 >
 >前のステップで更新された説明は、レイアウトドロップダウンリストに表示されます。
 
-![カスタムレイアウトツールバーのデ](assets/toolbar_1.png)
-**スクトップビュー図：** *カスタムレイアウトツールバーのデスクトップビュー*
+![カスタムレイアウトツールバーのデスクトップ表示](assets/toolbar_1.png)
+**図：** *カスタムレイアウトツールバーのデスクトップ表示*

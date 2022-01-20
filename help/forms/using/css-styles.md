@@ -1,19 +1,19 @@
 ---
 title: HTML5 フォームのための CSS スタイルの作成
-seo-title: HTML5 フォームのための CSS スタイルの作成
+seo-title: Creating CSS styles for HTML5 forms
 description: 'HTML フォーム要素と関連付けられている CSS クラスを変更して、HTML5 フォームの外観を変更する方法について説明します。 '
-seo-description: 'HTML フォーム要素と関連付けられている CSS クラスを変更して、HTML5 フォームの外観を変更する方法について説明します。 '
+seo-description: Learn how to change the appearance of HTML5 forms by modifying the CSS class associated with the HTML form element.
 uuid: 43c689b4-243c-43de-a8be-1eef10d75295
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
-feature: 'モバイルフォーム '
+feature: Mobile Forms
 exl-id: 9e381e71-63ff-41ab-a6ec-9f92447b65a0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '812'
 ht-degree: 87%
 
 ---
@@ -26,7 +26,7 @@ XFA ベースのフォームテンプレートの HTML5 レンダリングは、
 >
 >CSS クラスで、幅、高さ、境界線厚さ、上、左、右、下、パディング、マージン、およびその他の位置とサイズの属性は変更しないでください。位置とサイズの属性を変更すると、フォームのレイアウトが変わります。
 
-## 要素の CSS クラス  {#css-classes-nbsp-for-elements-nbsp}
+## 要素の CSS クラス {#css-classes-nbsp-for-elements-nbsp}
 
 すべての要素には、適切に定義された CSS クラスがあります。これらのクラスを変更して、要素の外観を変更することができます。フィールド要素と描画要素を除くすべての要素は、2 つの CSS クラス（Type クラスと Name クラス）を持ちます。
 
@@ -46,11 +46,11 @@ Field 要素にはネストされた要素が 2 つ（widget と caption）あ�
 
 **Widget 要素**
 
-Widget 要素にはユーザーとやりとりするためのユーザーインターフェイス要素が含まれています。3つのCSSクラスがあります。
+Widget 要素にはユーザーとやりとりするためのユーザーインターフェイス要素が含まれています。これには 3 つの CSS クラスがあります。
 
-* **ウィジェット**:すべてのウィジェットにこのクラスがあります。
-* **名前**:AEMに付属しているすべてのウィジェットには、ウィジェット名のクラスが含まれます。カスタムウィジェットの場合、ウィジェット開発者はウィジェット名のクラスを提供します。
-* **型**:すべてのウィジェットにはユーザインターフェイス要素があります。このクラスは、ユーザーインターフェイス要素のタイプを定義します。
+* **Widget**:すべてのウィジェットにこのクラスがあります。
+* **名前**:AEMに付属しているすべてのウィジェットには、ウィジェット名のクラスが含まれています。 カスタムウィジェットの場合、ウィジェット開発者はウィジェット名クラスを提供します。
+* **type**:すべてのウィジェットにはユーザーインターフェイス要素があります。 このクラスは、ユーザーインターフェイス要素のタイプを定義します。
 
 ```xml
 <!--field with caption-->
@@ -71,7 +71,7 @@ Widget 要素にはユーザーとやりとりするためのユーザーイン�
 
 type と name クラスの他に、フィールドコンポーネントにも **subtype** という名前の追加の CSS クラスがあります。subtype はそれがどのフィールドのタイプであるかを識別します。例：NumericField、DateField、TextField。subtype クラスはオーバーライドして、subtype のタイプであるすべてのフィールドのスタイル設定を変更できます。
 
-## 異なるコンポーネントに対する CSS クラス  {#css-classes-for-different-components}
+## 異なるコンポーネントに対する CSS クラス {#css-classes-for-different-components}
 
 <table> 
  <tbody> 
@@ -123,7 +123,7 @@ type と name クラスの他に、フィールドコンポーネントにも **
  </tbody> 
 </table>
 
-## 異なるフィールドに対する CSS クラス  {#css-classes-for-different-fields}
+## 異なるフィールドに対する CSS クラス {#css-classes-for-different-fields}
 
 AEM Forms Designer はフォームで NumericField、DecimalField、および Date Field などの異なるタイプのフィールドをサポートしています。HTML ですべてのこれらのフィールドには上記の CSS クラスがあります。また、それらにはフィールドのタイプによっては、いくつかの追加のクラスがあります。
 
@@ -236,9 +236,9 @@ AEM Forms Designer を使用して、テキスト、画像など、スタティ�
 | 長方形 | rectangle |
 | 線 | line |
 
-## フォームにおける他の部分のスタイル設定  {#styling-other-parts-of-the-form}
+## フォームにおける他の部分のスタイル設定 {#styling-other-parts-of-the-form}
 
-HTMLフォームでのUIコンポーネントの外観に加えて、インラインエラー、インライン警告、検証エラーのあるフィールドなどの要素のスタイルを変更できます。
+HTMLフォームでの UI コンポーネントの外観に加えて、インラインエラー、インライン警告、検証エラーのあるフィールドなどの要素のスタイルを変更できます。
 
 `Styling Inline Errors`
 
@@ -250,4 +250,4 @@ HTMLフォームでのUIコンポーネントの外観に加えて、インラ�
 
 `Styling Fields with Validation Errors`
 
-フィールドの検証に失敗すると、ウィジェットのスタイルが変更されます。このスタイルの変更は、ウィジェットコンポーネントにCSSクラス&#x200B;**widgetError**&#x200B;を適用することでおこなわれます。 デフォルトのスタイル設定を変更するには、 **widgetError**&#x200B;クラスをオーバーライドします。
+フィールドの検証に失敗すると、ウィジェットのスタイルが変更されます。このスタイルの変更は、CSS クラスを適用しておこないます **widgetError** をウィジェットコンポーネントに追加します。 デフォルトのスタイル設定を変更するには、 **widgetError** クラス。

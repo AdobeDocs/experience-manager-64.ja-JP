@@ -1,8 +1,8 @@
 ---
 title: Forms ワークフローの概要
-seo-title: Forms ワークフローの概要
+seo-title: Overview of Forms workflow
 description: Forms ワークフローでは、ユーザーは人間中心のプロセスを設計、管理および最適化することができます。Forms ワークフローを使用すると、システムとユーザーをつなぐ、自動ビジネスプロセスアプリケーションを管理することもできます。
-seo-description: Forms ワークフローでは、ユーザーは人間中心のプロセスを設計、管理および最適化することができます。Forms ワークフローを使用すると、システムとユーザーをつなぐ、自動ビジネスプロセスアプリケーションを管理することもできます。
+seo-description: Forms workflow lets users design, manage, and optimize human-centric processes. Using forms workflow, users can also manage automated business-process applications that connect systems and people.
 uuid: b28ada7c-de75-416a-b2c8-f6494be5330c
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 7d2a9de8-13d1-4981-9ba2-9654127556b8
 exl-id: df534e6d-ec34-4851-bbd2-5b9b06d1da10
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '254'
 ht-degree: 100%
 
 ---

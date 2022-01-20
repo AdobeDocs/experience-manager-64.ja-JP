@@ -1,8 +1,8 @@
 ---
 title: Web アプリケーションへの URL のリンク
-seo-title: Web アプリケーションへの URL のリンク
+seo-title: Linking URLs to your Web Application
 description: Dynamic Media で Web アプリケーションに URL をリンクする方法
-seo-description: Dynamic Media で Web アプリケーションに URL をリンクする方法
+seo-description: How to link URLs to your web application in dynamic media
 uuid: cf599e66-b1f9-40c0-b572-cea19f2e6793
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,11 +10,11 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 exl-id: e076349d-8b1a-487f-b982-9440d7de13b9
-feature: 設定
+feature: Configuration
 role: User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1272'
 ht-degree: 96%
 
 ---
@@ -140,7 +140,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
    例えば、登録 ID が `87654321|MyCompany` の場合、顧客名は `MyCompany` です。
 
-1. ページの左上隅付近で、「**[!UICONTROL Cloud Service]s**」をタップし、AEMアイコンをタップして、**[!UICONTROL 一般/CRXDE Lite]**&#x200B;に移動します。
+1. ページの左上隅付近にあるをタップします。 **[!UICONTROL Cloud Service]s**、AEMアイコンをタップし、に移動します。 **[!UICONTROL 一般/CRXDE Lite]**.
 1. JCR（Java コンテンツリポジトリー）のビデオレンディションパス全体をコピーします。
 
    例えば、ビデオのレンディションパスは、次のように表示されることがあります。
@@ -181,7 +181,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
    | 使用しているビデオ配信プロトコル | 使用するプロトコルセレクター |
    |---|---|
-   | HTTP  <br> HTTP（セキュアでないビデオ配信）を使用している場合は、前にコピーしたビデオサービスURL値でhttpsをhttpに変更してください。 | `public/` |
+   | HTTP <br> HTTP（セキュアでないビデオ配信）を使用している場合は、前にコピーしたビデオサービス URL 値で https を http に変更してください。 | `public/` |
    | HTTPS | `public-ssl/` |
 
 1. Dynamic Media で処理される AEM のビデオアセットのフルパスをコピーします。コピーしたビデオアセットのパスは後の手順で必要になります。

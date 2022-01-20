@@ -1,8 +1,8 @@
 ---
 title: BrightEdge Content Optimizer との結合
-seo-title: BrightEdge Content Optimizer との結合
+seo-title: Integrating with BrightEdge Content Optimizer
 description: AEM と BrightEdge Content Optimizer の統合について説明します。
-seo-description: AEM と BrightEdge Content Optimizer の統合について説明します。
+seo-description: Learn about integrating AEM with BrightEdge Content Optimizer.
 uuid: 7075dd3c-2fd6-4050-af1c-9b16ad4366ec
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: cf25c9a8-0555-4c67-8aa5-55984fd8d301
 exl-id: 46d0513c-04b2-41ed-bb56-e0778fa5fd10
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '495'
 ht-degree: 100%
 
 ---
@@ -35,7 +35,7 @@ BrightEdge クラウド設定を作成して、AEM で BrightEdge アカウン�
 1. 設定のタイトルを入力します。オプションで、リポジトリに設定を保存するのに使用されるノードの名前を入力します。「作成」をクリックします。
 1. BrightEdge Content Optimizer 設定ダイアログで、BrightEdge アカウントのユーザー名とパスワードを入力して、「OK」をクリックします。
 
-## BrightEdge 設定の編集  {#editing-a-brightedge-configuration}
+## BrightEdge 設定の編集 {#editing-a-brightedge-configuration}
 
 必要に応じて、BrightEdge 設定のユーザー名とパスワードを変更します。変更は、設定を使用するすべてのページに影響します。
 
@@ -47,7 +47,7 @@ BrightEdge クラウド設定を作成して、AEM で BrightEdge アカウン�
 1. 編集したい設定の名前をクリックします。
 1. 「編集」をクリックし、プロパティ値を変更して、「OK」をクリックします。
 
-## ページの BrightEdge 設定との関連付け  {#associating-pages-with-a-brightedge-configuration}
+## ページの BrightEdge 設定との関連付け {#associating-pages-with-a-brightedge-configuration}
 
 ページを BrightEdge 設定に関連付けて、分析のためにページデータを BrightEdge サービスに送信します。ページを設定に関連付ける場合は、子ページが関連付けを継承します。通常、サイトのホームページを関連付けて、すべてのページからのデータが BrightEdge に送信されるようにします。
 

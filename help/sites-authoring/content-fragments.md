@@ -1,8 +1,8 @@
 ---
 title: コンテンツフラグメントを使用したページのオーサリング
-seo-title: コンテンツフラグメントを使用したページのオーサリング
+seo-title: Page Authoring with Content Fragments
 description: AEM コンテンツフラグメントを使用すると、ページに依存しないコンテンツの設計、作成、キュレーションおよび使用が可能になります。
-seo-description: AEM コンテンツフラグメントを使用すると、ページに依存しないコンテンツの設計、作成、キュレーションおよび使用が可能になります。
+seo-description: AEM Content Fragments allow you to design, create, curate, and use page-independent content
 uuid: 66ccdff8-1658-4374-8562-97f81f434488
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 076a3064-80c3-454b-93f9-6ae925c54328
 exl-id: bbe4ae86-e9b8-4c3f-ada3-82470e371c4e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1153'
 ht-degree: 98%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 98%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)以降のアプリケーション](/help/release-notes/sp-release-notes.md)が必要です。
+>一部のコンテンツフラグメント機能には、 [AEM 6.4 Service Pack 2(6.4.2.0) 以降](/help/release-notes/sp-release-notes.md).
 
 Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments.md)として作成および管理されます。
 
@@ -35,6 +35,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 >
 >* **コンテンツフラグメント**&#x200B;は、主にテキストや関連画像などの編集コンテンツです。これは、デザインやレイアウトを含まない純粋なコンテンツです。
 >* **エクスペリエンスフラグメント**&#x200B;は完全にレイアウトされたコンテンツであり、Web ページのフラグメントです。
+
 >
 >エクスペリエンスフラグメントには、コンテンツフラグメントの形式でコンテンツを含めることができますが、その逆はできません。
 
@@ -68,7 +69,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
    * 適切にキュレーションされた関連メディアコンテンツと連携できます。
    * アドホックコンテンツのバリエーションをフラグメント内で集中管理したまま、それらのバリエーションをその場で作成できます。
 
-## ページへのコンテンツフラグメントの追加  {#adding-a-content-fragment-to-your-page}
+## ページへのコンテンツフラグメントの追加 {#adding-a-content-fragment-to-your-page}
 
 1. 編集するページを開きます。
 
@@ -141,7 +142,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 >
 >フラグメントソースの編集は、そのコンテンツフラグメントを参照するすべてのページに影響します。
 
-## 中間コンテンツの追加  {#adding-in-between-content}
+## 中間コンテンツの追加 {#adding-in-between-content}
 
 特定のコンテンツフラグメントをページに追加すると、フラグメントの各 HTML 段落間（および上部／下部）に&#x200B;**[!UICONTROL コンポーネントをここにドラッグ]**&#x200B;プレースホルダーが表示されます。
 
@@ -162,15 +163,19 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 >[!NOTE]
 >
 >フラグメント自体に[ビジュアルアセット（画像）を挿入](/help/assets/content-fragments-variations.md#inserting-assets-into-your-fragment)することもできます。
+>
 >フラグメント自体に挿入されたビジュアルアセットは、フラグメントの前の段落に配置されます。つまり、ビジュアルアセットと前の段落の間に中間コンテンツを配置することはできません。
 
 >[!CAUTION]
 >
 >ページのコンテンツフラグメントに中間コンテンツを追加した後に、基になるコンテンツフラグメントの構造をコンテンツフラグメントエディターなどで変更すると、エラーや予期しない結果を引き起こすおそれがあります。
+>
 >これが発生した場合、中間コンテンツはそのまま維持されます。
+>
 >* 中間コンポーネントは、フラグメントフローのコンポーネントのシーケンス内に絶対位置を持ちます。この位置は、フラグメント内の段落のコンテンツが変更されても変更されません。\
->   中間段落は隣に位置する（フラグメント）段落とコンテキスト関係を持たないので、これにより、相対位置が変更したかのように見せることができます。
+   >  中間段落は隣に位置する（フラグメント）段落とコンテキスト関係を持たないので、これにより、相対位置が変更したかのように見せることができます。
 >* 2 つの段落構造が競合する場合を除きます。競合する場合、中間コンテンツは（内部的には存在していますが）表示されません。
+
 >
 
 
@@ -203,7 +208,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 * サイズの指定
 * レイアウトの設定
 
-移動、コピー、削除などの他の変更は、フラグメントエディターでおこなう必要があります。
+移動、コピー、削除などの他の変更は、フラグメントエディターで行う必要があります。
 
 ## 公開 {#publishing}
 

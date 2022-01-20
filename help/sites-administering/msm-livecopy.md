@@ -1,19 +1,19 @@
 ---
 title: ライブコピーの作成と同期
-seo-title: ライブコピーの作成と同期
+seo-title: Creating and Synchronizing Live Copies
 description: ライブコピーを作成および同期する方法について説明します。
-seo-description: ライブコピーを作成および同期する方法について説明します。
+seo-description: Learn how to create and synchronize Live Copies.
 uuid: f6f410d4-8c72-48b7-a217-afd6076b512d
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 161b591b-5871-4b5f-9c63-823b6e67b1fd
-feature: マルチサイトマネージャー
+feature: Multi Site Manager
 exl-id: 13d044bd-fa61-4e24-ac1d-69a6f10847a4
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '4022'
+source-wordcount: '4006'
 ht-degree: 91%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 91%
 
 ブループリント設定が使用されると、それをソースやブループリントのライブコピーの同期方法を指定するロールアウト設定に関連付けることができます。[使用するロールアウト設定の指定](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use)を参照してください。
 
-### ブループリント設定の作成  {#creating-a-blueprint-configuration}
+### ブループリント設定の作成 {#creating-a-blueprint-configuration}
 
 ブループリント設定を作成するには：
 
@@ -67,7 +67,7 @@ ht-degree: 91%
 
 1. 「**作成**」を選択すると、指定した内容に基づいてブループリント設定が作成されます。
 
-### ブループリント設定の編集または削除  {#editing-or-deleting-a-blueprint-configuration}
+### ブループリント設定の編集または削除 {#editing-or-deleting-a-blueprint-configuration}
 
 既存のブループリント設定を編集または削除できます。
 
@@ -92,7 +92,7 @@ ht-degree: 91%
 
 以下のような任意のページのライブコピーを作成できます。
 
-* [ブループリント設定](#creating-a-blueprint-configuration)で参照されるページ。
+* が参照するページ [ブループリント設定](#creating-a-blueprint-configuration).
 * ブループリント設定に接続されていないページ.
 * AEM では、ライブコピーを別のライブコピーのページ内に作成することもできます。
 
@@ -134,11 +134,11 @@ ht-degree: 91%
 1. （オプション）ライブコピーに使用する 1 つ以上のロールアウト設定を指定するには、「**ロールアウトの設定**」ドロップダウンリストで選択します。選択した設定がドロップダウンセレクターの下に表示されます。
 1. 「**作成**」をクリックまたはタップします。確認メッセージが表示されます。ここで「**開く**」または「**完了**」のいずれかを選択します。
 
-### ブループリント設定からのサイトのライブコピーの作成  {#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}
+### ブループリント設定からのサイトのライブコピーの作成 {#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}
 
 ブループリント設定を使用してライブコピーを作成し、ブループリント（ソース）コンテンツに基づくサイトを作成します。ブループリント設定からライブコピーを作成する場合は、コピーするブループリントのソースの言語ブランチを 1 つ以上選択し、その言語ブランチからコピーするチャプターを選択します。[ブループリント設定の作成](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)を参照してください。
 
-一部の言語ブランチまたはチャプターをライブコピーから省略した場合は、後で追加できます。[ライブコピー内でのライブコピーの作成（ブループリント設定）](#creating-a-live-copy-inside-a-live-copy-blueprint-configuration)を参照してください。
+一部の言語ブランチまたは章をライブコピーから省略した場合、後で追加できます。参照 [ライブコピー内でのライブコピーの作成（ブループリント設定）](#creating-a-live-copy-inside-a-live-copy-blueprint-configuration).
 
 >[!CAUTION]
 >
@@ -153,7 +153,7 @@ ht-degree: 91%
 * **名前**：（オプション）ライブコピーのルートページを格納する JCR ノードの名前。デフォルト値はタイトルに基づいて指定されます。
 * **サイトの所有者**：（オプション）
 * **ライブコピー**：ソースサイトとのライブの関係を確立する場合にこのオプションを選択します。このオプションを選択しない場合、ブループリントのコピーは作成されますが、後でソースと同期されることはありません。
-* **ロールアウトの設定**：（オプション）ライブコピーの同期に使用するロールアウト設定を 1 つ以上選択します。デフォルトでは、ロールアウト設定はブループリントから継承されます。詳しくは、[使用するロールアウト設定の指定](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use)を参照してください。
+* **ロールアウトの設定**：（オプション）ライブコピーの同期に使用するロールアウト設定を 1 つ以上選択します。デフォルトでは、ロールアウト設定はブループリントから継承されます。参照 [使用するロールアウト設定の指定](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use) を参照してください。
 
 ブループリント設定からサイトのライブコピーを作成するには：
 
@@ -171,9 +171,9 @@ ht-degree: 91%
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
 1. 「**初期の章**」ドロップダウンを使用して、ライブコピーに含めるブループリントのセクションを選択します。ここでも、デフォルトでは使用可能なすべてのチャプターが含まれますが、削除できます。
-1. 残りのプロパティの値を指定して「**作成**」を選択します。確認のダイアログボックスで、「**完了**」を選択して&#x200B;**サイト**&#x200B;コンソールに戻るか、「**サイトを開く**」を選択してサイトのルートページを開きます。
+1. 残りのプロパティの値を指定して「**作成**」を選択します。確認のダイアログボックスで、「**完了**」を選択して **Sites** コンソールに戻るか、「**サイトを開く**」を選択してサイトのルートページを開きます。
 
-### ライブコピー内でのライブコピーの作成（ブループリント設定）  {#creating-a-live-copy-inside-a-live-copy-blueprint-configuration}
+### ライブコピー内でのライブコピーの作成（ブループリント設定） {#creating-a-live-copy-inside-a-live-copy-blueprint-configuration}
 
 ライブコピーを（ブループリント設定を使用して作成した）既存のライブコピー内に作成する場合は、ライブコピーが最初に作成されたときには含まれていなかった任意の言語コピーまたはチャプターを挿入できます。
 
@@ -193,7 +193,7 @@ ht-degree: 91%
 
 プロパティを表示するには：
 
-1. **サイト**&#x200B;コンソールで、ライブコピーページを選択してプロパティを開きます。
+1. 内 **サイト** コンソールで、ライブコピーページを選択してプロパティを開きます。
 1. 「**ライブコピー**」タブを選択します。
 
    次に例を示します。
@@ -218,12 +218,11 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->ブループリントブランチと依存ライブコピーブランチの両方で同じページ名の新しいページが作成されると、競合が発生する可能性があります。
+>ブループリントブランチと依存するライブコピーブランチの両方に同じページ名の新しいページが作成された場合、競合が発生する可能性があります。
 >
 >このような[競合はロールアウト時に処理および解決](/help/sites-administering/msm-rollout-conflicts.md)する必要があります。
 
-
-#### ページプロパティからのブループリントのロールアウト  {#rolling-out-a-blueprint-from-page-properties}
+#### ページプロパティからのブループリントのロールアウト {#rolling-out-a-blueprint-from-page-properties}
 
 1. **Sites** コンソールで、ブループリント内のページを選択してプロパティを開きます。
 1. 「**ブループリント**」タブを開きます。
@@ -249,7 +248,7 @@ ht-degree: 91%
 
    * **背景ロールアウト**:
 
-      多数のページ/サブページが関係している場合は、ロールアウトをバックグラウンドタスクとして実行できます。
+      多数のページやサブページが関わる場合は、ロールアウトをバックグラウンドタスクとして実行できます。
    ![chlimage_1-222](assets/chlimage_1-222.png)
 
 1. これらの詳細を確認したら、「**ロールアウト**」を選択してアクションを実行します。
@@ -276,7 +275,7 @@ ht-degree: 91%
 >
 >同期では、「[ロールアウト時](/help/sites-administering/msm-sync.md#rollout-triggers)」のトリガーを使用するロールアウト設定が実行されます。
 
-1. **サイト**&#x200B;コンソールで、ライブコピーページを選択してプロパティを開きます。
+1. 内 **サイト** コンソールで、ライブコピーページを選択してプロパティを開きます。
 1. 「**ライブコピー**」タブを開きます。
 1. 「**同期**」をクリックまたはタップします。
 
@@ -284,7 +283,7 @@ ht-degree: 91%
 
    確認が求められます。「**同期**」を使用して先に進みます。
 
-#### ライブコピーの概要からのライブコピーの同期  {#synchronize-a-live-copy-from-the-live-copy-overview}
+#### ライブコピーの概要からのライブコピーの同期 {#synchronize-a-live-copy-from-the-live-copy-overview}
 
 ライブコピーの概要では、ライブコピーページを選択して、[同期アクションを実行することもできます](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)。
 
@@ -312,12 +311,11 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->ブループリントブランチと依存ライブコピーブランチの両方で同じページ名の新しいページが作成されると、競合が発生する可能性があります。
+>ブループリントブランチと依存するライブコピーブランチの両方に同じページ名の新しいページが作成された場合、競合が発生する可能性があります。
 >
 >このような[競合はロールアウト時に処理および解決](/help/sites-administering/msm-rollout-conflicts.md)する必要があります。
 
-
-### ライブコピーページへのコンポーネントの追加  {#adding-components-to-a-live-copy-page}
+### ライブコピーページへのコンポーネントの追加 {#adding-components-to-a-live-copy-page}
 
 ライブコピーページにはいつでもコンポーネントを追加できます。ライブコピーとその段落システムの継承ステータスは、コンポーネントを追加する機能を制御しません。
 
@@ -339,7 +337,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->コンポーネントがコンテナとしてマークされている場合、キャンセルおよび休止アクションは子コンポーネントに適用されません。 詳しくは、[MSMのベストプラクティス](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization)も参照してください。
+>コンポーネントがコンテナとしてマークされている場合、キャンセルおよび休止アクションはその子コンポーネントには適用されません。 関連トピック [MSM のベストプラクティス](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization) を参照してください。
 
 #### ページプロパティからの継承の休止 {#suspending-inheritance-from-page-properties}
 
@@ -367,7 +365,7 @@ ht-degree: 91%
 
    ![chlimage_1-226](assets/chlimage_1-226.png)
 
-1. ライブコピーを休止ダイアログで、「**休止**」アクションを**確認**ます。
+1. を確認します。 **休止** 「**ライブコピーを休止**」ダイアログのアクション：
 
    ![chlimage_1-227](assets/chlimage_1-227.png)
 
@@ -401,7 +399,7 @@ ht-degree: 91%
 
 1. [ライブコピーの概要](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)を開き、休止中のライブコピーページを選択します。こうすると、「**継承がキャンセルされました**」と表示されます。
 1. ツールバーの「**再開**」を選択します。
-1. 継承を元に戻した後でページを同期するかどうかを指定し、ライブコピーを再開ダイアログで「****再開**」アクションを確定**ます。
+1. 継承を元に戻した後でページを同期するかどうかを指定し、 **再開** 「**ライブコピーを再開**」ダイアログのアクションを使用します。
 
 ### 継承の深度の変更（シャロー／ディープ） {#changing-inheritance-depth-shallow-deep}
 
@@ -422,7 +420,7 @@ ht-degree: 91%
 
 * シャローライブコピーに切り替えた後、ディープライブコピーに戻した場合：
 
-   * シャロー（以前の）ライブコピーの子はすべて、手動で作成されたものと同じように扱われ、`[oldname]_msm_moved name`を使用して移動されます。
+   * （以前の）シャローライブコピーのすべての子は、手動で作成されたかのように扱われ、 `[oldname]_msm_moved name`.
 
 深度を指定または変更するには：
 
@@ -441,13 +439,13 @@ ht-degree: 91%
 
 1. 「**保存**」をクリックまたはタップして更新内容を保持します。
 
-### コンポーネントの継承のキャンセル  {#cancelling-inheritance-for-a-component}
+### コンポーネントの継承のキャンセル {#cancelling-inheritance-for-a-component}
 
 コンポーネントについてライブコピーの継承をキャンセルして、コンポーネントがソースコンポーネントと同期されないようにします。必要な場合は後で継承を有効にすることができます。
 
 >[!NOTE]
 >
->コンポーネントがコンテナとしてマークされている場合、キャンセルおよび休止アクションは子コンポーネントに適用されません。 詳しくは、[MSMのベストプラクティス](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization)も参照してください。
+>コンポーネントがコンテナとしてマークされている場合、キャンセルおよび休止アクションはその子コンポーネントには適用されません。 関連トピック [MSM のベストプラクティス](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization) を参照してください。
 
 >[!NOTE]
 >
@@ -467,7 +465,7 @@ ht-degree: 91%
 
    コンポーネントツールバーが更新されて、すべての（該当する）編集コマンドが表示されます。
 
-### コンポーネントの継承の再有効化  {#re-enabling-inheritance-for-a-component}
+### コンポーネントの継承の再有効化 {#re-enabling-inheritance-for-a-component}
 
 コンポーネントの継承を有効にするには、コンポーネントツールバーの&#x200B;**継承を再度有効にする**&#x200B;アイコンをクリックまたはタップします。
 
@@ -478,7 +476,7 @@ ht-degree: 91%
 あるライブコピーに段落システムの一部であるコンポーネントが含まれている場合、段落システムの継承は次のルールに従います。
 
 * 段落システム内のコンポーネントの順序は、継承が確立していても変更できます。
-* ロールアウト時に、コンポーネントの順序はブループリントから復元されます。ロールアウト前に新しいコンポーネントがライブコピーに追加された場合は、そのコンポーネントが追加された上のコンポーネントと共に並べ替えられます。
+* ロールアウト時に、コンポーネントの順序はブループリントから復元されます。ロールアウト前に新しいコンポーネントがライブコピーに追加された場合、新しいコンポーネントは、追加された上のコンポーネントと共に並べ替えられます。
 * 段落システムの継承がキャンセルされた場合、コンポーネントの順序はロールアウト時に復元されず、ライブコピーにそのまま残ります。
 
 >[!NOTE]
@@ -491,7 +489,7 @@ ht-degree: 91%
 1. 既存のコンポーネントをページの別の場所にドラッグします。
 1. **継承をキャンセル**&#x200B;ダイアログボックスで、「**はい**」を使用してアクションを確定します。
 
-### ライブコピーページのプロパティの上書き  {#overriding-properties-of-a-live-copy-page}
+### ライブコピーページのプロパティの上書き {#overriding-properties-of-a-live-copy-page}
 
 デフォルトでは、ライブコピーページのページプロパティはソースページから継承されます（編集不可）。
 
@@ -516,7 +514,7 @@ ht-degree: 91%
 
 1. **継承をキャンセル**&#x200B;確認ダイアログで、「**はい**」をクリックまたはタップします。
 
-### ライブコピーページのプロパティの復帰  {#revert-properties-of-a-live-copy-page}
+### ライブコピーページのプロパティの復帰 {#revert-properties-of-a-live-copy-page}
 
 プロパティの継承を有効にするには、プロパティの横に表示される&#x200B;**継承を復帰**&#x200B;アイコンをクリックまたはタップします。
 
@@ -541,7 +539,7 @@ ht-degree: 91%
 
 1. **ライブコピーをリセット**&#x200B;ダイアログボックスで、「**リセット**」を選択して確定します。
 
-#### ライブコピーの概要からのライブコピーページのリセット  {#reset-a-live-copy-page-from-the-live-copy-overview}
+#### ライブコピーの概要からのライブコピーページのリセット {#reset-a-live-copy-page-from-the-live-copy-overview}
 
 ライブコピーの概要では、ライブコピーページを選択して、[リセットアクションを実行することもできます](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)。
 
@@ -553,18 +551,18 @@ ht-degree: 91%
 
 ## ライブコピーページとブループリントページの比較 {#comparing-a-live-copy-page-with-a-blueprint-page}
 
-おこなった変更を追跡するには、**参照**&#x200B;でブループリントページを表示し、ライブコピーページと比較します。
+おこなった変更を追跡するには、でブループリントページを表示できます。 **参照** ライブコピーページと比較します。
 
 1. **サイト**&#x200B;コンソールで、[ブループリントページまたはライブコピーページに移動し、ページを選択します](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
 1. **[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開き、次のいずれかを選択します。
 
-   * **ブループリント** （ライブコピーページが選択された場合）
-   * **ライブコピー** （ブループリントページを選択した場合）
+   * **ブループリント** （ライブコピーページを選択した場合）
+   * **ライブコピー** （ブループリントページが選択されている場合）
 
 1. 特定のライブコピーを選択してから、次のいずれかを選択します。
 
    * **ブループリントと比較**（ライブコピーページを選択した場合）
-   * **ライブコピーと比較** （ブループリントページを選択した場合）
+   * **ライブコピーと比較** （ブループリントページが選択されている場合）
 
    次に例を示します。
 
@@ -584,7 +582,7 @@ ht-degree: 91%
 >
 >ライブ関係を削除し、必要に応じて後で元に戻すには、ページの[ライブコピーの継承をキャンセル](#suspending-inheritance-for-a-page)します。
 
-ツリー内で&#x200B;**分離**&#x200B;を使用する場所によって異なる処理がおこなわれます。
+ツリー内で&#x200B;**分離**&#x200B;を使用する場所によって異なる処理が行われます。
 
 * **ライブコピーのルートページで分離する**
 
@@ -622,7 +620,7 @@ ht-degree: 91%
 
 1. 確認ダイアログが表示されたら、「**分離**」を選択してアクションを完了します。
 
-### ライブコピーの概要からのライブコピーページの分離  {#detach-a-live-copy-page-from-the-live-copy-overview}
+### ライブコピーの概要からのライブコピーページの分離 {#detach-a-live-copy-page-from-the-live-copy-overview}
 
 ライブコピーの概要では、ライブコピーページを選択して、[分離アクションを実行することもできます](/help/sites-administering/msm-livecopy-overview.md#using-the-live-copy-overview)。
 

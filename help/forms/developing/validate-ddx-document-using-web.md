@@ -1,8 +1,8 @@
 ---
-title: WebサービスAPIを使用したDDXドキュメントの検証
-seo-title: WebサービスAPIを使用したDDXドキュメントの検証
-description: DDXドキュメントを検証するには、AssemblerサービスAPIを使用します。
-seo-description: DDXドキュメントを検証するには、AssemblerサービスAPIを使用します。
+title: Web サービス API を使用した DDX ドキュメントの検証
+seo-title: Validate a DDX document using theweb service API
+description: DDX ドキュメントを検証するには、Assembler Service API を使用します。
+seo-description: Use the Assembler Service API to validate a DDX document.
 uuid: f6125746-6138-4e46-a1c4-fb24fd7399c5
 contentOwner: admin
 content-type: reference
@@ -13,74 +13,74 @@ role: Developer
 exl-id: da303186-8f36-4fc8-a2db-b38a0b200c39
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '626'
 ht-degree: 2%
 
 ---
 
-# WebサービスAPI {#validate-a-ddx-document-using-theweb-service-api}を使用したDDXドキュメントの検証
+# Web サービス API を使用した DDX ドキュメントの検証 {#validate-a-ddx-document-using-theweb-service-api}
 
-Assembler Service API（Webサービス）を使用してDDXドキュメントを検証します。
+Assembler Service API（Web サービス）を使用して DDX ドキュメントを検証します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
+   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 次の WSDL 定義を使用していることを確認します。 `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >localhostをformsサーバーのIPアドレスに置き換えます。
+   >localhost を forms サーバーの IP アドレスに置き換えます。
 
-1. PDFアセンブラークライアントを作成します。
+1. Assembler クライアントをPDFします。
 
-   * デフォルトのコンストラクターを使用して`AssemblerServiceClient`オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`AssemblerServiceClient.Endpoint.Address`オブジェクトを作成します。 AEM FormsサービスにWSDLを指定するstring値を渡します（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。
-   * `AssemblerServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値は、MTOMが使用されるようにします。
-   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
+   * の作成 `AssemblerServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
+   * の作成 `AssemblerServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をAEM Formsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/AssemblerService?blob=mtom`) をクリックします。 を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます。
+   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `AssemblerServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
+   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
+   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
 
-      * フィールド`AssemblerServiceClient.ClientCredentials.UserName.UserName`にAEM formsユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド`AssemblerServiceClient.ClientCredentials.UserName.Password`に割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に定数値`HttpClientCredentialType.Basic`を割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Security.Mode`に定数値`BasicHttpSecurityMode.TransportCredentialOnly`を割り当てます。
+      * フィールドにAEM forms ユーザー名を割り当てます。 `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * 対応するパスワード値をフィールドに割り当てます。 `AssemblerServiceClient.ClientCredentials.UserName.Password`.
+      * 定数値を割り当て `HttpClientCredentialType.Basic` フィールドに `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 定数値を割り当て `BasicHttpSecurityMode.TransportCredentialOnly` フィールドに `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 既存のDDXドキュメントの参照
+1. 既存の DDX ドキュメントを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、DDXドキュメントの格納に使用されます。
-   * コンストラクターを呼び出し、DDXドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
-   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得することで、バイト配列のサイズを判断できます。
-   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
-   * `BLOB`オブジェクトの`MTOM`プロパティにバイト配列の内容を割り当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、DDX ドキュメントを保存するために使用されます。
+   * の作成 `System.IO.FileStream` オブジェクトを作成するには、コンストラクターを呼び出し、DDX ドキュメントのファイルの場所とファイルを開くモードを表す string 値を渡します。
+   * コンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクト。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリーム長を渡す。
+   * 次の項目に `BLOB` オブジェクトを割り当てる `MTOM` プロパティにバイト配列の内容を入力します。
 
-1. DDXドキュメントを検証するための実行時オプションを設定します。
+1. DDX ドキュメントを検証するための実行時オプションを設定します。
 
-   * コンストラクターを使用して、実行時オプションを格納する`AssemblerOptionSpec`オブジェクトを作成します。
-   * 値trueを`AssemblerOptionSpec`オブジェクトの`validateOnly`データメンバーに割り当てて、DDXドキュメントを検証するようAssemblerサービスに指示する実行時オプションを設定します。
-   * `AssemblerOptionSpec`オブジェクトの`logLevel`データメンバーに文字列値を割り当てて、Assemblerサービスがログファイルに書き込む情報の量を設定します。 メソッドを使用してDDXドキュメントを検証する場合、検証プロセスに役立つ詳細情報をログファイルに書き込む必要があります。 その結果、値`FINE`または`FINER`を指定できます。 設定できる実行時オプションについて詳しくは、『[AEM Forms APIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』の`AssemblerOptionSpec`クラス参照を参照してください。
+   * の作成 `AssemblerOptionSpec` コンストラクタを使用して実行時オプションを格納するオブジェクト。
+   * DDX ドキュメントを検証するように Assembler サービスに指示する実行時オプションを設定します。このオプションは、 `AssemblerOptionSpec` オブジェクトの `validateOnly` データメンバー。
+   * Assembler サービスがログファイルに書き込む情報の量を設定するには、 `AssemblerOptionSpec` オブジェクトの `logLevel` データメンバー。 メソッドを使用して DDX ドキュメントを検証する場合、検証プロセスに役立つ詳細情報をログファイルに書き込みます。 その結果、 `FINE` または `FINER`. 設定できる実行時オプションについて詳しくは、 `AssemblerOptionSpec` のクラス参照 [AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. 検証を実行します。
 
-   `AssemblerServiceClient`オブジェクトの`invokeDDX`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを使用して、次の値を渡します。
 
-   * DDXドキュメントを表す`BLOB`オブジェクト。
-   * 通常PDFドキュメントを格納する`Map`オブジェクトの値`null`です。
-   * 実行時オプションを指定する`AssemblerOptionSpec`オブジェクト。
+   * A `BLOB` DDX ドキュメントを表すオブジェクト。
+   * 値 `null` の `Map` オブジェクトを指定します。通常はPDF・ドキュメントを格納します。
+   * An `AssemblerOptionSpec` 実行時オプションを指定するオブジェクト。
 
-   `invokeDDX`メソッドは、DDXドキュメントが有効かどうかを指定する情報を含む`AssemblerResult`オブジェクトを返します。
+   この `invokeDDX` メソッドは、 `AssemblerResult` DDX ドキュメントが有効かどうかを指定する情報が格納されるオブジェクト。
 
 1. 検証結果をログファイルに保存します。
 
-   * コンストラクターを呼び出し、ログファイルのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。 ファイル名の拡張子が.xmlであることを確認します。
-   * `AssemblerResult`オブジェクトの`jobLog`データメンバーの値を取得して、ログ情報を格納する`BLOB`オブジェクトを作成します。
-   * `BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`フィールドの値を取得して、バイト配列を設定します。
-   * コンストラクターを呼び出し、`System.IO.FileStream`オブジェクトを渡して、`System.IO.BinaryWriter`オブジェクトを作成します。
-   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことにより、バイト配列の内容をPDFファイルに書き込みます。
+   * の作成 `System.IO.FileStream` オブジェクトを作成します。 ファイル名の拡張子が.xml であることを確認します。
+   * の作成 `BLOB` の値を取得してログ情報を保存するオブジェクト `AssemblerResult` オブジェクトの `jobLog` データメンバー。
+   * コンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクト。 バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` フィールドに入力します。
+   * の作成 `System.IO.BinaryWriter` オブジェクトのコンストラクタを呼び出し、 `System.IO.FileStream` オブジェクト。
+   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
    >[!NOTE]
    >
-   >DDXドキュメントが無効な場合は、`OperationException`がスローされます。 catchステートメント内で、`OperationException`オブジェクトの`jobLog`メンバの値を取得できます。
+   >DDX ドキュメントが無効な場合、 `OperationException` がスローされます。 catch 文内で、 `OperationException` オブジェクトの `jobLog` メンバー。
 
 **関連トピック**
 
-[DDXドキュメントの検証](/help/forms/developing/validating-ddx-documents.md#validating-ddx-documents)
+[DDX ドキュメントの検証](/help/forms/developing/validating-ddx-documents.md#validating-ddx-documents)
 
-[MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

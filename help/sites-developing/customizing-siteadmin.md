@@ -1,8 +1,8 @@
 ---
 title: Web サイトコンソールのカスタマイズ（クラシック UI）
-seo-title: Web サイトコンソールのカスタマイズ（クラシック UI）
+seo-title: Customizing the Websites Console (Classic UI)
 description: カスタム列を表示するように Web サイト管理コンソールを拡張できます
-seo-description: カスタム列を表示するように Web サイト管理コンソールを拡張できます
+seo-description: The Websites Administration console can be extended to display custom columns
 uuid: 7587d026-f974-46fe-bac3-3872d3a083ab
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 73e57f20-4022-46ab-aa5c-ec866298b645
 exl-id: c7e37599-0712-44cf-8191-d444d12f95c4
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '781'
 ht-degree: 72%
 
 ---
@@ -39,7 +39,6 @@ ht-degree: 72%
 >
 
 
-
 ### OSGI サービスの作成 {#creating-the-osgi-service}
 
 `ListInfoProvider` インターフェイスは、次の 2 つのメソッドを定義します。
@@ -51,7 +50,7 @@ ht-degree: 72%
 
 * `request`：関連付けられた Sling HTTP リクエストオブジェクト
 * `info`：更新する JSON オブジェクト。グローバルリストまたは現在のリスト項目に 1 つずつ
-* `resource`、Slingリソース。
+* `resource`、Sling リソース。
 
 次の実装例では、
 
@@ -116,16 +115,15 @@ public class StarredListInfoProvider implements ListInfoProvider {
 >
 
 
-
 ### 新しいサービスのテスト {#testing-the-new-service}
 
-Web サイト管理コンソールを開いてサイトを閲覧すると、ブラウザーがコンソールの構築に使用されている JSON オブジェクトを取得するための ajax 呼び出しを発行します。例えば、`/content/geometrixx`フォルダーを参照すると、コンソールを構築するためにAEMサーバーに次のリクエストが送信されます。
+Web サイト管理コンソールを開いてサイトを閲覧すると、ブラウザーがコンソールの構築に使用されている JSON オブジェクトを取得するための ajax 呼び出しを発行します。例えば、 `/content/geometrixx` フォルダーに保存された場合、次のリクエストがAEMサーバーに送信され、コンソールが構築されます。
 
 [http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
 新しいサービスを含むバンドルのデプロイ後に、そのサービスが実行されていることを確認するには、以下をおこないます。
 
-1. ブラウザーで次のURLを参照します。
+1. ブラウザーで次の URL を参照します。
 
    [http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin](http://localhost:4502/content/geometrixx.pages.json?start=0&amp;limit=30&amp;predicate=siteadmin)
 
@@ -135,40 +133,40 @@ Web サイト管理コンソールを開いてサイトを閲覧すると、ブ�
 
 ### 新しい列の表示 {#displaying-the-new-column}
 
-最後の手順では、`/libs/wcm/core/content/siteadmin`をオーバーレイして、すべてのGeometrixxページの新しいプロパティを表示するよう、Webサイト管理コンソールのノード構造を適応させます。 以下の手順を実行します。
+最後の手順では、Web サイト管理コンソールのノード構造を適応させ、すべてのGeometrixxページの新しいプロパティをオーバーレイして表示します `/libs/wcm/core/content/siteadmin`. 以下の手順を実行します。
 
-1. CRXDE Liteで、タイプ`sling:Folder`のノードを持つノード構造`/apps/wcm/core/content`を作成し、構造`/libs/wcm/core/content`を反映します。
+1. CRXDE Liteで、ノード構造を作成します。 `/apps/wcm/core/content` タイプのノード `sling:Folder` 構造を反映する `/libs/wcm/core/content`.
 
-1. ノード`/libs/wcm/core/content/siteadmin`をコピーし、`/apps/wcm/core/content`の下に貼り付けます。
+1. ノードをコピーします。 `/libs/wcm/core/content/siteadmin` をクリックし、以下に貼り付けます。 `/apps/wcm/core/content`.
 
-1. ノード`/apps/wcm/core/content/siteadmin/grid/assets`を`/apps/wcm/core/content/siteadmin/grid/geometrixx`にコピーし、そのプロパティを変更します。
+1. ノードをコピーします。 `/apps/wcm/core/content/siteadmin/grid/assets` から `/apps/wcm/core/content/siteadmin/grid/geometrixx` プロパティを変更します。
 
    * **pageText** を削除
-   * **pathRegex**&#x200B;を`/content/geometrixx(/.*)?`に設定します。
+   * 設定 **pathRegex** から `/content/geometrixx(/.*)?`
 
        に設定すべての Geometrixx Web サイトに対してグリッド設定が有効になります。
 
-   * **storeProxySuffix**&#x200B;を`.pages.json`に設定します。
+   * 設定 **storeProxySuffix** から `.pages.json`
    * 複数値プロパティ **storeReaderFields** を編集し、`starred` 値を追加します。
-   * MSM機能を有効にするには、次のMSMパラメーターをmulti-Stringプロパティ&#x200B;**storeReaderFields**&#x200B;に追加します。
+   * MSM 機能を有効にするには、次の MSM パラメーターを multi-String プロパティに追加します。 **storeReaderFields**:
 
       * **msm:isSource**
       * **msm:isInBlueprint**
       * **msm:isLiveCopy**
 
-1. `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`の下に（**nt:unstructured**&#x200B;タイプの）`starred`ノードを追加し、次のプロパティを指定します。
+1. を追加します。 `starred` ノード ( タイプ **nt:unstructured**) （以下） `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns` を次のプロパティと共に使用します。
 
-   * **dataIndex**: `starred` 型がStringの場合
-   * **ヘッダー**: `Starred` 型がStringの場合
-   * **xtype**: `gridcolumn` 型がStringの場合
+   * **dataIndex**: `starred` 文字列型
+   * **ヘッダー**: `Starred` 文字列型
+   * **xtype**: `gridcolumn` 文字列型
 
-1. （オプション）`/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`に表示しない列をドロップします。
+1. （オプション）表示しない列を次の場所にドロップします。 `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`
 
-1. `/siteadmin` は、デフォルトでを指すバニティパスで `/libs/wcm/core/content/siteadmin`す。
+1. `/siteadmin` は、デフォルトでは次を指すバニティーパスです。 `/libs/wcm/core/content/siteadmin`.
 
-   これを`/apps/wcm/core/content/siteadmin`のサイト管理のお使いのバージョンにリダイレクトするには、`sling:vanityOrder`プロパティを`/libs/wcm/core/content/siteadmin`で定義した値より大きい値に定義します。 デフォルト値は 300 なので、それより大きい値が適しています。
+   次のバージョンの siteadmin にリダイレクトする： `/apps/wcm/core/content/siteadmin` プロパティを定義する `sling:vanityOrder` の値が次の値より大きくなる `/libs/wcm/core/content/siteadmin`. デフォルト値は 300 なので、それより大きい値が適しています。
 
-1. Webサイト管理コンソールに移動し、Geometrixxサイトに移動します。
+1. Web サイト管理コンソールに移動し、Geometrixxサイトに移動します。
 
    [http://localhost:4502/siteadmin#/content/geometrixx](http://localhost:4502/siteadmin#/content/geometrixx).
 
@@ -182,4 +180,4 @@ Web サイト管理コンソールを開いてサイトを閲覧すると、ブ�
 
 ### サンプルパッケージ {#sample-package}
 
-このチュートリアルの結果は、パッケージ共有の[Webサイト管理コンソール](http://localhost:4502/crx/packageshare/index.html/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/helper/customizing-siteadmin)パッケージのカスタマイズで確認できます。
+このチュートリアルの結果は、 [Web サイト管理コンソールのカスタマイズ](http://localhost:4502/crx/packageshare/index.html/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/helper/customizing-siteadmin) パッケージをパッケージ共有に追加します。

@@ -1,8 +1,8 @@
 ---
 title: ID 管理
-seo-title: ID 管理
+seo-title: Identity Management
 description: AEM での ID 管理について説明します。
-seo-description: AEM での ID 管理について説明します。
+seo-description: Learn about identity management in AEM.
 uuid: 719601d2-b850-4114-8ece-1b11708a5078
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: a6d9b08d-e669-4b9b-b591-c21cd72b6e22
 exl-id: 82e4af22-30b7-4678-9b14-84f2fecfd310
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1226'
 ht-degree: 80%
 
 ---
@@ -24,23 +24,23 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 * [AEM Communities](/help/communities/overview.md) サイト訪問者がコミュニティにコンテンツを投稿するにはログインする必要があります。
 * [閉じられたユーザーグループ](/help/sites-administering/cug.md)
 
-   場合によっては、Webサイト（またはWebサイトのセクション）へのアクセスを特定の訪問者に制限する必要があります。
+   場合によっては、Web サイト（または Web サイトのセクション）へのアクセスを特定の訪問者に制限する必要があります。
 
-* [](/help/sites-administering/personalization.md) パーソナライゼーション訪問者がWebサイトへのアクセス方法に関する特定の側面を設定できるようにします。
+* [パーソナライズ](/help/sites-administering/personalization.md) 訪問者が Web サイトにアクセスする方法の特定の側面を設定することを許可します。
 
 ログイン（およびログアウト）機能は、[**プロファイル**](#profiles-and-user-accounts)&#x200B;付きのアカウントによって指定されます。プロファイルには、登録済みの訪問者（ユーザー）に関する追加情報が保持されます。実際の登録および承認のプロセスは状況によって異なります。
 
-* Webサイトからの自己登録
+* Web サイトからの自己登録
 
-   [コミュニティサイト](/help/communities/sites-console.md)は、訪問者がFacebookまたはTwitterアカウントで自己登録またはサインインできるように設定できます。
+   A [コミュニティサイト](/help/communities/sites-console.md) は、訪問者がFacebookまたはTwitterアカウントに自己登録したり、ログインしたりできるように設定できます。
 
-* 当サイトからの登録請求
+* ウェブサイトからの登録請求
 
-   閉じられたユーザーグループの場合、訪問者は登録のリクエストを許可し、ワークフローによって承認を実施できます。
+   閉じられたユーザーグループの場合、訪問者に対して登録のリクエストを許可し、ワークフローによる認証を実施することができます。
 
-* オーサー環境からの各アカウントの登録
+* オーサー環境から各アカウントを登録
 
-   認証が必要なプロファイルが少数の場合は、それぞれを直接登録することもできます。
+   認証が必要なプロファイルが少数ある場合は、それぞれを直接登録することもできます。
 
 訪問者による登録を許可するには、一連のコンポーネントとフォームを使用して、必要な ID 情報、追加の（多くの場合、オプションです）プロファイル情報の順に収集できます。また、登録の完了後に、訪問者が送信した詳細の確認と更新をおこなえるようにする必要があります。
 
@@ -53,18 +53,18 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 >
 >プロファイルに指定した情報を使用し、[セグメント](/help/sites-administering/campaign-segmentation.md)と[キャンペーン](/help/sites-authoring/personalization.md)を通じて、ターゲットとなるコンテンツをユーザーに提供することもできます。
 
-## 登録フォーム  {#registration-forms}
+## 登録フォーム {#registration-forms}
 
 フォームを使用すると、登録情報を収集して新しいアカウントとプロファイルを生成できます。
 
-例えば、ユーザーは、「Geometrixx」ページを使用して新しいプロファイルを要求できます\
+例えば、ユーザーは、「Geometrixx」ページを使用して新しいプロファイルをリクエストできます\
 `http://localhost:4502/content/geometrixx-outdoors/en/user/register.html`
 
 ![registerform](assets/registerform.png)
 
 要求を送信すると、プロファイルページが開きます。ユーザーはこのページに個人の詳細情報を指定できます。
 
-![前照度](assets/profilepage.png)
+![profilepage](assets/profilepage.png)
 
 新しいアカウントは[ユーザーコンソール](/help/sites-administering/security.md)にも表示されます。
 
@@ -84,15 +84,15 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 
 ログインメカニズムと共にログアウトメカニズムも必要です。ログアウトの際は、Geometrixx の「**Sign Out**」オプションを使用します。
 
-## プロファイルの確認と更新  {#viewing-and-updating-a-profile}
+## プロファイルの確認と更新 {#viewing-and-updating-a-profile}
 
-登録フォームによっては、訪問者の情報が自身のプロファイルに登録されます。訪問者が以降のステージでこの情報を確認および更新できるようにする必要があります。これは、同様のフォームを使用しておこなうことができます。例：Geometrixx:
+登録フォームによっては、訪問者の情報が自身のプロファイルに登録されます。訪問者が以降のステージでこの情報を確認および更新できるようにする必要があります。これは、同様の形式でおこなうことができます。例：Geometrixx:
 
 ```
 http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 ```
 
-プロファイルの詳細を確認するには、ページの右上隅にある「**My Profile**」をクリックします。例えば、`admin`アカウントの場合は次のようになります。\
+プロファイルの詳細を確認するには、をクリックします。 **マイプロファイル** をクリックします。例： `admin` アカウント：\
 `http://localhost:4502/home/users/a/admin/profile.form.html/content/geometrixx-outdoors/en/user/profile.html.`
 
 オーサー環境の [ClientContext](/help/sites-administering/client-context.md) を使用すると、別のプロファイルを確認できます（十分な権限がある場合）。
@@ -115,7 +115,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 1. 「**プロファイルを編集**」または「**パスワードを変更**」を使用して詳細を更新できます。
 
-## プロファイル定義へのフィールドの追加  {#adding-fields-to-the-profile-definition}
+## プロファイル定義へのフィールドの追加 {#adding-fields-to-the-profile-definition}
 
 プロファイル定義にフィールドを追加できます。例えば、Geometrixx プロファイルに「Favorite Color」（好きな色）フィールドを追加します。
 
@@ -139,7 +139,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
    次回プロファイルを確認する際に、好きな色を選択できます。
 
-   ![aparkefavcolor](assets/aparkerfavcolour.png)
+   ![aparkerfavcolor](assets/aparkerfavcolour.png)
 
    このフィールドは、関連するユーザーアカウントの **profile** セクションに保存されます。
 
@@ -159,7 +159,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 * [State Providers](#state-providers)
 
-   特定のプロパティの2つの状態と、その2つの間の遷移を管理する。
+   特定のプロパティの 2 つの状態と 2 つの間の遷移を管理する。
 
 * [ワークフロー](#workflows)
 
@@ -170,7 +170,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 * ニュースレターまたはコメントスレッドの通知を購読／購読解除
 * 友人とのつながりを追加／削除
 
-### State Providers {#state-providers}
+### 状態プロバイダー {#state-providers}
 
 状態プロバイダーは、対象となるプロパティの現在の状態を、取りうる 2 つの状態のトランジションと共に管理します。
 
@@ -185,11 +185,11 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 ワークフローは、状態に関連するアクションを実装する必要があります。例えば、通知を購読する場合、ワークフローは実際の購読アクションを処理します。通知の購読を解除する場合、ワークフローは購読リストからのユーザーの削除を処理します。
 
-## Profiles and User Accounts {#profiles-and-user-accounts}
+## プロファイルとユーザーアカウント {#profiles-and-user-accounts}
 
-プロファイルは、[ユーザーアカウント](/help/sites-administering/user-group-ac-admin.md)の一部としてコンテンツリポジトリに保存されます。
+プロファイルは、 [ユーザーアカウント](/help/sites-administering/user-group-ac-admin.md).
 
-プロファイルは`/home/users/geometrixx`の下にあります。
+プロファイルは、の下にあります。 `/home/users/geometrixx`:
 
 ![chlimage_1-385](assets/chlimage_1-385.png)
 
@@ -206,7 +206,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 このようなアクセスがインストール環境に適していない場合は、デフォルト設定を変更できます。
 
-これは、「**[アクセス制御](/help/sites-administering/user-group-ac-admin.md#access-right-management)**」タブを使用しておこなえます。
+これは、 **[アクセス制御](/help/sites-administering/user-group-ac-admin.md#access-right-management)** タブ：
 
 ![aclmanager](assets/aclmanager.png)
 
@@ -229,7 +229,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 このコンポーネントを使用すると、ユーザーがアバター写真ファイルを選択およびアップロードできるようになります。
 
-![dc_profiles_avatarphoto](assets/dc_profiles_avatarphoto.png)
+![dc_profiles_avatartphoto](assets/dc_profiles_avatarphoto.png)
 
 ### プロファイルの詳細名 {#profile-detailed-name}
 

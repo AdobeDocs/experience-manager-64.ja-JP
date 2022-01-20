@@ -1,8 +1,8 @@
 ---
 title: API を使用した Web ページ上のフォームの一覧表示
-seo-title: API を使用した Web ページ上のフォームの一覧表示
+seo-title: Listing forms on a web page using APIs
 description: プログラムから Forms Manager にクエリを 実行し、フィルターが適用されたフォームを取得して、自分の Web ページに表示します。
-seo-description: プログラムから Forms Manager にクエリを 実行し、フィルターが適用されたフォームを取得して、自分の Web ページに表示します。
+seo-description: Programmatically query Forms Manager to retrieve a filtered list of forms and display on your own web pages.
 uuid: e51cb2d4-816f-4e6d-a081-51e4999b00ba
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -10,17 +10,17 @@ topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
 source-git-commit: 9229642edd5a91bee017d8c0680cd6c10bfe43df
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 84%
+source-wordcount: '693'
+ht-degree: 83%
 
 ---
 
 
-# API を使用した Web ページ上のフォームの一覧表示  {#listing-forms-on-a-web-page-using-apis}
+# API を使用した Web ページ上のフォームの一覧表示 {#listing-forms-on-a-web-page-using-apis}
 
 AEM Forms では REST ベースの検索 API を備えており、これにより Web 開発者はクエリーを実行し、検索条件に合う一連のフォームを取得できます。API を使用することで、様々なフィルターに基づいてフォームを検索できます。応答オブジェクトには、フォームの属性、プロパティ、フォームのレンダリングエンドポイントなどがあります。
 
-REST APIを使用してフォームを検索するには、サーバーの`https://[server]:[port]/libs/fd/fm/content/manage.json`にGETリクエストと以下に説明するクエリパラメーターを送信します。
+REST API を使用してフォームを検索するには、次の場所にあるサーバーにGETリクエストを送信します。 `https://[server]:[port]/libs/fd/fm/content/manage.json` を使用します。
 
 ## クエリーパラメーター {#query-parameters}
 
@@ -45,7 +45,7 @@ REST APIを使用してフォームを検索するには、サーバーの`https
    <td><p>アセットと一緒に取得するプロパティを指定します。アスタリスク（*）を使用するとすべてのプロパティを一度に取得できます。複数のプロパティを指定する場合はパイプ（|）演算子を使用します。 </p> <p>例： <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>： </p>
     <ul>
      <li><em>ID、パス、名前などのプロパティは、常に取得されます。 </em></li>
-     <li><em>アセットごとにプロパティのセットが異なります。formUrl、pdfUrl、guideUrl などのプロパティは cutPoints 属性に依存しません。これらのプロパティはアセットタイプに依存し、アセットタイプに応じて取得されます。 </em></li>
+     <li><em>アセットごとにプロパティのセットが異なります。formUrl、pdfUrl、guideUrl などのプロパティは cutPoints 属性に依存しません。これらのプロパティはアセットタイプに依存し、それに応じて取得されます。 </em></li>
     </ul> </td>
   </tr>
   <tr>
@@ -67,7 +67,7 @@ REST APIを使用してフォームを検索するには、サーバーの`https
   </tr>
   <tr>
    <td>returnCount</td>
-   <td>指定した条件に一致する検索結果を返すかどうかを指定します。 </td>
+   <td>指定された条件に一致する検索結果を返すかどうかを指定します。 </td>
   </tr>
   <tr>
    <td>statements</td>
@@ -98,7 +98,7 @@ REST APIを使用してフォームを検索するには、サーバーの`https
   </tr>
   <tr>
    <td>orderings<br /> </td>
-   <td><p>検索結果の順序条件を指定します。条件は JSON 形式で定義されます。複数のフィールドの検索結果を並べ替えることができます。検索結果は、フィールドがクエリー内で表示されている順番のとおりに並べ替えられています。</p> <p>例：</p> <p>タイトルプロパティで昇順に並べ替えられたクエリ結果を取得するには、次のパラメーターを追加します。 </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
+   <td><p>検索結果の順序条件を指定します。条件は JSON 形式で定義されます。複数のフィールドの検索結果を並べ替えることができます。検索結果は、フィールドがクエリー内で表示されている順番のとおりに並べ替えられています。</p> <p>例：</p> <p>タイトルプロパティで昇順に並べ替えたクエリ結果を取得するには、次のパラメーターを追加します。 </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
        JSONObject orderings=new JSONObject();
        orderings.put("name", "title");
        orderings.put("criteria", "ASC");
@@ -106,16 +106,16 @@ REST APIを使用してフォームを検索するには、サーバーの`https
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
      <li><strong>name</strong>：検索結果の並べ替えに使用するプロパティの名前を指定します。</li>
-     <li><strong>criteria</strong>：結果の順序を指定します。order属性には次の値を指定できます。
+     <li><strong>criteria</strong>：結果の順序を指定します。order 属性には次の値を指定できます。
       <ul>
        <li>ASC - ASC を使用すると、結果を昇順に並べ替えます。<br /> </li>
-       <li>DES - DESを使用して、結果を降順に並べ替えます。</li>
+       <li>DES - DES を使用して、結果を降順に並べ替えます。</li>
       </ul> </li>
     </ul> </td>
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>バイナリコンテンツを取得するかどうかを指定します。<code>includeXdp</code>属性は、タイプ<code>FORM</code>、<code>PDFFORM</code>、<code>PRINTFORM</code>のアセットに適用できます。</td>
+   <td>バイナリコンテンツを取得するかどうかを指定します。この <code>includeXdp</code> 属性はタイプのアセットに適用できます <code>FORM</code>, <code>PDFFORM</code>、および <code>PRINTFORM</code>.</td>
   </tr>
   <tr>
    <td>assetType</td>
@@ -174,7 +174,7 @@ orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
 * [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)
 * [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
-* [ドラフトおよび送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
+* [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信コンポーネントとデータベースの統合のサンプル](/help/forms/using/integrate-draft-submission-database.md)
 * [フォームポータルコンポーネントのテンプレートをカスタマイズする](/help/forms/using/customizing-templates-forms-portal-components.md)
 * [ポータル上のフォーム発行の概要](/help/forms/using/introduction-publishing-forms.md)

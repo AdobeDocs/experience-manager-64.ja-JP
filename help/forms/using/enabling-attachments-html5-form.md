@@ -1,19 +1,19 @@
 ---
 title: HTML5フォームの添付ファイルの有効化
-seo-title: HTML5フォームの添付ファイルの有効化
+seo-title: Enabling attachments for an HTML5 form
 description: デフォルトでは、HTML5フォームの添付ファイルサポートは無効になっています。
-seo-description: デフォルトでは、HTML5フォームの添付ファイルサポートは無効になっています。
+seo-description: By default, the attachment support for HTML5 forms is disabled.
 uuid: 2c62ac3e-4b27-46c7-a61d-a805fb5d26fb
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 8eebfcd6-0597-44ed-b718-bf9a1baa6c12
-feature: 'モバイルフォーム '
+feature: Mobile Forms
 exl-id: 82a843c4-5cb2-4f5e-ad4d-cf2e9ea6cdb8
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 63%
+source-wordcount: '319'
+ht-degree: 61%
 
 ---
 
@@ -22,20 +22,20 @@ ht-degree: 63%
 HTML5フォームでは、添付ファイルをアップロード、プレビューおよび送信することができます。デフォルトでは、添付ファイルサポートは無効になっています。添付ファイルサポートを有効にするには：
 
 1. [ 文字列プロパティで](/help/forms/using/custom-profile.md)カスタムプロファイル`mfAttachmentOptions`を作成します。
-1. カスタムプロファイルで、`fileSizeLimit`、`multiSelect`および`buttonTex`プロパティを指定して、ファイル添付ウィジェットのオプションを設定します。 必要に応じて、さらに多くのカスタムプロパティを指定することもできます。
+1. カスタムプロファイルで、プロパティを指定します。 `fileSizeLimit`, `multiSelect`、および `buttonTex`ファイル添付ウィジェットのオプションを設定するには、t を使用します。 必要に応じて、追加のカスタムプロパティを指定することもできます。
 
 1. カスタムプロファイルでは、次の設定を使用します。
 
    * **multiSelect**-> trueまたはfalse （デフォルトでは true）
-   * **fileSizeLimit**  -> value_in_mb (say 5) （デフォルトで2 MBs）
-   * **buttonText**  ->ポップアップウィンドウのボタンテキスト（デフォルトでは「Attach」）
-   * **受け入れる**  ->ファイルタイプ（デフォルトでは&quot;audio/&amp;ast;, video/&amp;ast;, image/&amp;ast;, text/&amp;ast;, .pdf&quot;）を受け入れます。
+   * **fileSizeLimit** -> value_in_mb (say 5) （デフォルトで 2 MB）
+   * **buttonText** -> ポップアップウィンドウのボタンのテキスト（デフォルトでは「添付」）
+   * **承諾** -> 受け入れるファイルタイプ（デフォルトでは&quot;audio/&amp;ast;, video/&amp;ast;, image/&amp;ast;, text/&amp;ast;, .pdf&quot;）
 
    >[!NOTE]
    >
    >Microsoft Internet Explorer 9 では、指定された制限を超えたサイズのファイルを添付できます。これは既知の問題です。
 
-1. [メタデータエディター](/help/forms/using/manage-form-metadata.md)を使用して、上記でHTML 5フォーム用に作成したカスタムプロファイルを選択します。
+1. 以下を使用： [メタデータエディター](/help/forms/using/manage-form-metadata.md) をクリックして、上記でHTML5 のフォーム用に作成したカスタムプロファイルを選択します。
 1. カスタムプロファイルを使用してフォームテンプレートをレンダリングすると、添付ファイルアイコンがフォームツールバーの上に表示されます。
 
    >[!NOTE]
@@ -54,10 +54,10 @@ HTML5フォームでは、添付ファイルをアップロード、プレビュ
 
 ## 添付ファイル送信フォーマット {#attachment-submission-format}
 
-添付ファイルが有効である場合、HTML5フォームはマルチパート形式のデータを送信します。マルチパート送信データには、**dataXml**&#x200B;と&#x200B;**attachments**&#x200B;の2つの部分があります。
+添付ファイルが有効である場合、HTML5フォームはマルチパート形式のデータを送信します。マルチパート送信データには 2 つの部分があります **dataXml** および **添付ファイル**.
 
 >[!NOTE]
 >
->後方互換性を保つために、`mfAllowAttachments`オプションがオフになっている場合、HTML5フォームはマルチパートデータを送信しません。 **application/xml**&#x200B;形式で単純なデータxmlを送信します。
+>後方互換性の場合、 `mfAllowAttachments`オプションがオフの場合、HTML5 forms はマルチパートデータを送信しません。 単純なデータ xml を **application/xml** 形式
 
 mfAllowAttachments フラグがオンになっている場合、[送信サービスのプロキシサービス](/help/forms/using/service-proxy.md)もまたマルチパート形式のデータを dataXml と添付ファイルと共に投稿します。

@@ -19,7 +19,7 @@ ht-degree: 86%
 
 [アダプティブフォームフラグメント](/help/forms/using/adaptive-form-fragments.md)は、フォームの作成時に使用できるフィールドのグループまたはフィールドのグループを含むパネルです。これを使用してフォームを簡単にすばやく作成できます。サイドバーのアセットブラウザーを使用してアダプティブフォームフラグメントをフォームにドラッグ&amp;ドロップし、フォームエディターで編集することができます。
 
-アダプティブフォームの作成者の場合、[AEM Formsアドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)に参照フラグメントが提供されます。 次のフラグメントが含まれています。
+アダプティブフォームの作成者の場合、 [AEM Formsアドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). 次のフラグメントが含まれています。
 
 * アドレス
 * 連絡先情報
@@ -32,7 +32,7 @@ ht-degree: 86%
 * 利用条件
 * 署名付き利用条件
 
-パッケージをインストールすると、Forms &amp; Documents の下に参照用フラグメントを含む Reference Fragments フォルダーが作成されます。パッケージのインストールについては、[パッケージの使用方法](/help/sites-administering/package-manager.md)を参照してください。
+パッケージをインストールすると、Forms &amp; Documents の下に参照用フラグメントを含む Reference Fragments フォルダーが作成されます。パッケージのインストールについては、 [パッケージの操作方法](/help/sites-administering/package-manager.md).
 
 ![すべてのフラグメントが表示されている](assets/ootb-frags.png)
 

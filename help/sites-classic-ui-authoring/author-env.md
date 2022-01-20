@@ -1,8 +1,8 @@
 ---
 title: オーサー環境の操作
-seo-title: オーサー環境の操作
+seo-title: Working with the Author Environment
 description: オーサー環境では、オーサリングに関連するタスク（ページオーサリングおよびアセットの管理を含む）と、Web サイトのコンテンツの生成および管理の際に必要な管理タスクを実行できます。
-seo-description: オーサー環境では、オーサリングに関連するタスク（ページオーサリングおよびアセットの管理を含む）と、Web サイトのコンテンツの生成および管理の際に必要な管理タスクを実行できます。
+seo-description: The author environment allows you to perform tasks related to authoring (including page authoring and managing assets) and administering tasks you need when generating and maintaining the content on your website.
 uuid: ebeaa2c3-05b0-4108-8e84-69b9ba48cfbe
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 8c747892-c5ba-4288-b5e7-75fd40d92f5c
 exl-id: 8421a092-6e99-4c05-9647-c0cc76667c85
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 87%
+source-wordcount: '250'
+ht-degree: 85%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->以下のドキュメントでは、クラシック UI に焦点を当てています。最新のタッチ操作対応UIでのオーサリングについて詳しくは、[標準のオーサリングドキュメント](/help/assets/assets.md)を参照してください。
+>以下のドキュメントでは、クラシック UI に焦点を当てています。最新のタッチ操作対応 UI でのオーサリングについて詳しくは、 [標準オーサリングドキュメント](/help/assets/assets.md).
 
 オーサー環境では、以下に関連するタスクを実行できます。
 
-* [オーサリング](/help/sites-authoring/author.md) (ペー [ジの](/help/sites-authoring/qg-page-authoring.md) オーサリングと [管理](/help/assets/assets.md)を含む)
+* [オーサリング](/help/sites-authoring/author.md) ( [ページオーサリング](/help/sites-authoring/qg-page-authoring.md) および [アセットの管理](/help/assets/assets.md))
 
 * Web サイトでのコンテンツの生成および管理の際に必要になる[管理](/help/sites-administering/administer-best-practices.md)タスク
 
@@ -45,7 +45,7 @@ ht-degree: 87%
    * これは AEM の最新の標準 UI です。
    * 灰色を基調としており、クリーンでフラットなインターフェイスになっています。
    * タッチデバイスとデスクトップデバイスの両方で使用できるようにデザインされています（タッチ操作向けに最適化されています）。ルックアンドフィールはすべてのデバイスで同じですが、[リソースの表示と選択](/help/sites-authoring/basic-handling.md)の操作がやや異なります（タップとクリックの違い）。
-   * タッチベースのUIを使用したオーサリング方法について詳しくは、[標準のオーサリングのドキュメント](/help/sites-authoring/author.md)を参照してください。 以下のドキュメントでは、クラシック UI に焦点を当てています。
+   * 詳しくは、 [標準オーサリングドキュメント](/help/sites-authoring/author.md) タッチベースの UI を使用したオーサリング方法の詳細。 以下のドキュメントでは、クラシック UI に焦点を当てています。
 
    * デスクトップ：
    ![chlimage_1-150](assets/chlimage_1-150.png)

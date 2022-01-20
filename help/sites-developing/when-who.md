@@ -1,8 +1,8 @@
 ---
 title: テスト - 実行のタイミングとテスター
-seo-title: テスト - 実行のタイミングとテスター
+seo-title: Testing - when and with whom?
 description: 様々な役割のユーザーがテストに参加できます。また、プロジェクト開発の様々な段階でテストを実行できます
-seo-description: 様々な役割のユーザーがテストに参加できます。また、プロジェクト開発の様々な段階でテストを実行できます
+seo-description: Various roles can be involved in testing and at various stages of project development
 uuid: 431e8f06-80eb-4fb3-a4c7-2580608b0a1c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 6148f8e6-ab62-4eb8-8a2d-c431b8318000
 exl-id: cba4a814-052b-4b9f-96f2-8c80b2766ecc
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '274'
 ht-degree: 99%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 99%
   <tr> 
    <td>テストチーム</td> 
    <td>責任… </td> 
-   <td>参加する時期</td> 
+   <td>When...</td> 
   </tr> 
   <tr> 
    <td>開発チーム</td> 

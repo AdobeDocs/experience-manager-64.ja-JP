@@ -1,8 +1,8 @@
 ---
 title: '"IBM DB2 データベース：定期保守のコマンドの実行"'
-seo-title: '"IBM DB2 データベース：定期保守のコマンドの実行"'
+seo-title: 'IBM DB2 database: Running commands for regular maintenance'
 description: 'このドキュメントでは、AEM Forms データベースの定期保守で推奨される IBM DB2 コマンドの一覧を示します。 '
-seo-description: 'このドキュメントでは、AEM Forms データベースの定期保守で推奨される IBM DB2 コマンドの一覧を示します。 '
+seo-description: This document lists IBM DB2 commands that are recommended for regular maintenance of your AEM forms database.
 uuid: 235d59df-b9b9-4770-8b7d-00713701c3c2
 contentOwner: admin
 content-type: reference
@@ -12,18 +12,18 @@ discoiquuid: a62b68b4-7735-49b1-8938-f0d9e4c4a051
 exl-id: b4877c24-3450-44b6-adcd-78a694b28857
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 89%
+source-wordcount: '388'
+ht-degree: 88%
 
 ---
 
 # IBM DB2 データベース：定期保守のコマンドの実行 {#ibm-db-database-running-commands-for-regular-maintenance}
 
-AEM Forms データベースの定期保守には、以下の IBM DB2 コマンドが推奨されます。DB2 データベースの保守およびパフォーマンスチューニングについて詳しくは、『*IBM DB2 Administration Guide*』を参照してください。
+AEM forms データベースの定期保守には、以下の IBM DB2 コマンドが推奨されます。DB2 データベースの保守およびパフォーマンスチューニングについて詳しくは、『*IBM DB2 Administration Guide*』を参照してください。
 
 * **runstats：**&#x200B;このコマンドは、その関連インデックスと共に、データベーステーブルの物理的特性を示す統計データを更新します。AEM Forms により生成される動的 SQL ステートメントは、更新済みのこれらの統計を自動的に使用しますが、データベース内で作成される静的 SQL ステートメントでは、`db2rbind` コマンドも実行する必要があります。
-* **db2rbind:** このコマンドは、データベース内のすべてのパッケージを再バインドします。`runstats` ユーティリティの実行後に、このコマンドを使用してデータベース内のすべてのパッケージを再検証します。
-* **reorg table or index:** このコマンドは、一部のテーブルおよびインデックスの再編成が必要かどうかを確認します。
+* **db2rbind:** このコマンドは、データベース内のすべてのパッケージを再バインドします。 `runstats` ユーティリティの実行後に、このコマンドを使用してデータベース内のすべてのパッケージを再検証します。
+* **テーブルまたはインデックスを再構成：** このコマンドは、一部のテーブルとインデックスの再編成が必要かどうかをチェックします。
 
    データベースは増大および変更されていくので、テーブル統計データの再計算はデータベースパフォーマンスの向上に不可欠なものであり、定期的に実行する必要があります。これらのコマンドは、スクリプトを使用して手動で実行することも、cron ジョブを使用することもできます。
 
@@ -43,7 +43,7 @@ AEM Forms データベースの定期保守には、以下の IBM DB2 コマン�
 >
 >`runstats` コマンドは、最初のデータベース同期中にのみ実行する必要があります。ただし、同期プロセス中に 2 回（ユーザーとグループの同期中に 1 回、グループメンバーの同期中に 1 回）実行する必要があります。スクリプトを実行するたびに、実行が正常に完了したことを確認してください。
 
-正しい構文と使用法について詳しくは、データベース製造元のドキュメントを参照してください。以下の`<schema>`は、DB2ユーザー名に関連付けられたスキーマを示します。 単純なデフォルトの DB2 インストール環境である場合、これはデータベーススキーマ名となります。
+正しい構文と使用法について詳しくは、データベース製造元のドキュメントを参照してください。以下、 `<schema>` は、DB2 ユーザー名に関連付けられているスキーマを示すために使用されます。 単純なデフォルトの DB2 インストール環境である場合、これはデータベーススキーマ名となります。
 
 ```as3
      TABLE <schema>.EDCPRINCIPALGROUPENTITY 
@@ -67,7 +67,7 @@ AEM Forms データベースの定期保守には、以下の IBM DB2 コマン�
      TABLE <schema>.EDCPRINCIPALGRPCTMNTENTITY FOR INDEXES ALL
 ```
 
-## AEM Forms データベースでの reorg コマンドの実行  {#run-the-reorg-command-on-your-aem-forms-database}
+## AEM Forms データベースでの reorg コマンドの実行 {#run-the-reorg-command-on-your-aem-forms-database}
 
 以下の AEM Forms データベーステーブルおよびインデックスで `reorg` コマンドを実行します。正しい構文と使用法について詳しくは、データベース製造元のドキュメントを参照してください。
 

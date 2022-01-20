@@ -1,8 +1,8 @@
 ---
 title: UI のテスト
-seo-title: UI のテスト
+seo-title: Testing Your UI
 description: AEM には、AEM UI のテストを自動化するためのフレームワークが用意されています
-seo-description: AEM には、AEM UI のテストを自動化するためのフレームワークが用意されています
+seo-description: AEM provides a framework for automating tests for your AEM UI
 uuid: b0280a70-643e-4455-82ea-fa7a90823b53
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,20 +12,20 @@ discoiquuid: bc0130c3-826e-47dd-b18b-85e1a7bb9936
 exl-id: 16b4088d-13b4-47b9-b89d-0c4a13676f12
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '703'
 ht-degree: 76%
 
 ---
 
 # UI のテスト{#testing-your-ui}
 
-AEM には、AEM UI のテストを自動化するためのフレームワークが用意されています。このフレームワークを使用して、Web ブラウザーで直接 UI テストを記述して実行します。このフレームワークは、テストを作成するためのJavaScript APIを提供します。
+AEM には、AEM UI のテストを自動化するためのフレームワークが用意されています。このフレームワークを使用して、Web ブラウザーで直接 UI テストを記述して実行します。このフレームワークは、テストを作成するための JavaScript API を提供します。
 
-AEMテストフレームワークは、JavaScriptで記述されたテストライブラリであるHobbes.jsを使用します。 Hobbes.js フレームワークは、開発プロセスの一環として AEM のテスト用に開発されたものです。このフレームワークは現在、独自の AEM アプリケーションのテスト用に一般に利用できます。
+AEMのテストフレームワークは、JavaScript で記述されたテストライブラリ Hobbes.js を使用します。 Hobbes.js フレームワークは、開発プロセスの一環として AEM のテスト用に開発されたものです。このフレームワークは現在、独自の AEM アプリケーションのテスト用に一般に利用できます。
 
 >[!NOTE]
 >
->APIの詳細については、Hobbes.jsの[ドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html)を参照してください。
+>Hobbes.js を参照してください。 [ドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html) を参照してください。
 
 ## テストの構造 {#structure-of-tests}
 
@@ -33,9 +33,9 @@ AEMテストフレームワークは、JavaScriptで記述されたテストラ�
 
 |  |  |
 |---|---|
-| 動作 | **アクション**&#x200B;は、リンクやボタンのクリックなど、Webページ上の特定のアクティビティです。 |
-| テストケース | **テストケース**&#x200B;は、1つ以上の&#x200B;**アクション**&#x200B;で構成できる特定の状況です。 |
-| テストスイート | **テストスイート**&#x200B;は、関連する&#x200B;**テストケース**&#x200B;のグループで、一緒に特定の使用例をテストします。 |
+| 動作 | An **アクション** は、リンクやボタンのクリックなど、Web ページ上の特定のアクティビティです。 |
+| テストケース | A **テストケース** は、1 つ以上の **アクション**. |
+| テストスイート | A **テストスイート** は、関連する **テストケース** を組み合わせて、特定のユースケースをテストします。 |
 
 ## テストの実行 {#executing-tests}
 
@@ -91,19 +91,19 @@ AEMテストフレームワークは、JavaScriptで記述されたテストラ�
 
    ![](do-not-localize/chlimage_1-8.png)
 
-1. 各テストケースの結果を表示するには、そのテストケースのタイトルをタップまたはクリックします。**結果**&#x200B;パネルでテストの名前をタップまたはクリックすると、すべての詳細が表示されます。
+1. 各テストケースの結果を表示するには、そのテストケースのタイトルをタップまたはクリックします。でテストの名前をタップまたはクリック **結果** パネルには、すべての詳細が表示されます。
 
    ![chlimage_1-32](assets/chlimage_1-32.png)
 
 ## シンプルなテストスイートの作成と使用 {#creating-and-using-a-simple-test-suite}
 
-以下の手順では、[We.Retailコンテンツ](/help/sites-developing/we-retail.md)を使用してテストスイートを作成および実行する手順を説明しますが、別のWebページを使用するようにテストを簡単に変更できます。
+以下の手順で、を使用してテストスイートを作成および実行します。 [We.Retail コンテンツ](/help/sites-developing/we-retail.md)を変更して別の Web ページを使用するように簡単にテストを変更できます。
 
 独自のテストスイートの作成について詳しくは、[Hobbes.js API のドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/test-api/index.html)を参照してください。
 
 1. CRXDE Lite を開きます。([http://localhost:4502/crx/de](http://localhost:4502/crx/de))
-1. `/etc/clientlibs`フォルダーを右クリックし、**作成/フォルダーを作成**&#x200B;をクリックします。 名前に`myTests`と入力して、「**OK**」をクリックします。
-1. `/etc/clientlibs/myTests`フォルダーを右クリックし、**作成/ノードを作成**&#x200B;をクリックします。 以下のプロパティ値を使用して「**OK**」をクリックします。
+1. を右クリックします。 `/etc/clientlibs` フォルダーに移動して、 **作成/フォルダーを作成**. 名前に`myTests`と入力して、「**OK**」をクリックします。
+1. を右クリックします。 `/etc/clientlibs/myTests` フォルダーに移動して、 **作成/ノードを作成**. 以下のプロパティ値を使用して「**OK**」をクリックします。
 
    * 名前：`myFirstTest`
    * 型：`cq:ClientLibraryFolder`
@@ -121,9 +121,9 @@ AEMテストフレームワークは、JavaScriptで記述されたテストラ�
    >
    >アダプティブフォームをテストするには、categories と dependencies に次の値を追加してください。次に例を示します。
    >
-   >**カテゴリ**:  `granite.testing.hobbes.tests, granite.testing.hobbes.af.commons`
+   >**カテゴリ**: `granite.testing.hobbes.tests, granite.testing.hobbes.af.commons`
    >
-   >**依存関係**:  `granite.testing.hobbes.testrunner, granite.testing.hobbes.af`
+   >**依存**: `granite.testing.hobbes.testrunner, granite.testing.hobbes.af`
 
 1. 「**すべて保存**」をクリックします。
 1. `myFirstTest` ノードを右クリックして、**作成／ファイルを作成**&#x200B;をクリックします。ファイル名に`js.txt`と入力して、「**OK**」をクリックします。

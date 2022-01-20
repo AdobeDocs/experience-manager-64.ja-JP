@@ -1,8 +1,8 @@
 ---
 title: メタデータ - フラグメントのプロパティ
-seo-title: メタデータ - フラグメントのプロパティ
+seo-title: Metadata - Fragment Properties
 description: コンテンツフラグメントのメタデータ（プロパティ）を表示して編集できます。
-seo-description: コンテンツフラグメントのメタデータ（プロパティ）を表示して編集できます。
+seo-description: You can view and edit the metadata (properties) for content fragments.
 uuid: 2744610b-215a-4ee8-893e-e167376f9df5
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,12 +10,12 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 96cf7c92-af98-417f-ab60-b368e3846ef8
 exl-id: 0123fb44-9f38-4d9e-9dce-7c9cfd4260e1
-feature: コンテンツフラグメント，メタデータ
+feature: Content Fragments,Metadata
 role: User
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 87%
+source-wordcount: '112'
+ht-degree: 88%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 87%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)以降のアプリケーション](/help/release-notes/sp-release-notes.md)が必要です。
+>一部のコンテンツフラグメント機能には、 [AEM 6.4 Service Pack 2(6.4.2.0) 以降](/help/release-notes/sp-release-notes.md).
 
 ## プロパティ／メタデータの編集 {#editing-properties-meta-data}
 

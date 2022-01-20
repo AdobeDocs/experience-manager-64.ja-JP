@@ -14,9 +14,9 @@ ht-degree: 67%
 
 # アセットのカスタマイズと拡張 {#customizing-and-extending-assets}
 
-Adobe・エディタは、リポジトリ内のデジタル・アセットを検索、表示、操作する際に、Asset Manager Webサイトのユーザーが使用する主なアクセスポイントです。
+Asset Editor は、AdobeEnterprise Manager Web サイトのユーザーがリポジトリ内のデジタルアセットの検索、表示、操作に使用する主なアクセスポイントです。
 
-[!DNL Experience Manager]開発者は、アセットエディターを様々な方法でカスタマイズおよび拡張し、特別にカスタマイズされたインターフェイスと機能のセットをユーザーに提供できます。
+As an [!DNL Experience Manager] developer, you can customize and extend the Asset Editor in a number of ways, presenting users with a specifically tailored interface and set of functionality.
 
 以下の領域における機能について、カスタマイズまたは拡張できます。
 
@@ -29,7 +29,7 @@ Adobe・エディタは、リポジトリ内のデジタル・アセットを検
 
 ## 外観と操作性のカスタマイズ {#customizing-the-look-and-feel}
 
-アセットエディターのルックアンドフィールの次の側面をカスタマイズできます。
+アセットエディターのルックアンドフィールに関する以下の側面をカスタマイズできます。
 
 * ロゴ：組織の独自のロゴをインターフェイスに追加できます。
 * 色およびフォント：インターフェイスで使用される色およびフォントを変更できます。
@@ -37,6 +37,6 @@ Adobe・エディタは、リポジトリ内のデジタル・アセットを検
 
 ## レンディションのカスタマイズ {#customizing-renditions}
 
-[!DNL Experience Manager Assets]の用語では、レンディションとは、アセットが表示される形式です。 通常、特定のアセットは、複数のレンディションを持つ場合があります。例えば、フルカラー画像は、1 つのレンディションをオリジナルのサイズで保持し、別のレンディションを縮小サイズで、さらに別のレンディションを縮小されグレースケールに変換された状態で保持している場合があります。
+In [!DNL Experience Manager Assets] terminology a rendition is the form in which an asset is presented. 通常、特定のアセットは、複数のレンディションを持つ場合があります。例えば、フルカラー画像は、1 つのレンディションをオリジナルのサイズで保持し、別のレンディションを縮小サイズで、さらに別のレンディションを縮小されグレースケールに変換された状態で保持している場合があります。
 
 特定のアセットを利用できるレンディションは、カスタマイズできます。また、新しいレンディションを作成することもできます。

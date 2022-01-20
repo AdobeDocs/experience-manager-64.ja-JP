@@ -1,8 +1,8 @@
 ---
 title: コンテンツサービス用の JSON エクスポーター
-seo-title: コンテンツサービス用の JSON エクスポーター
+seo-title: JSON Exporter for Content Services
 description: 'AEM コンテンツサービスは、Web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。AEM コンテンツサービスにより、あらゆるクライアントで使用できる標準化された方法で、従来の AEM Web ページとは異なるチャネルにコンテンツを配信できます。 '
-seo-description: 'AEM コンテンツサービスは、Web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。AEM コンテンツサービスにより、あらゆるクライアントで使用できる標準化された方法で、従来の AEM Web ページとは異なるチャネルにコンテンツを配信できます。 '
+seo-description: AEM Content Services are designed to generalize the description and delivery of content in/from AEM beyond a focus on web pages. They provide the delivery of content to channels that are not traditional AEM web pages, using standardized methods that can be consumed by any client.
 uuid: be6457b1-fa9c-4f3b-b219-01a4afc239e7
 contentOwner: User
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
 exl-id: ead4306a-6337-4dae-8839-14fada0ae0e5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '443'
 ht-degree: 95%
 
 ---
@@ -31,7 +31,7 @@ AEM コンテンツサービスにより、あらゆるクライアントで使�
 
 >[!NOTE]
 >
->ここで説明する機能は、コアコンポーネント](https://docs.adobe.com/content/docs/en/core-components/v1.html)の[リリース1.1.0以降のすべてのコアコンポーネントで使用できます。
+>ここで説明する機能は、すべてのコアコンポーネントで使用できます。 [コアコンポーネントのリリース 1.1.0](https://docs.adobe.com/content/docs/en/core-components/v1.html).
 
 ## JSON エクスポーターとコンテンツフラグメントコアコンポーネント {#json-exporter-with-content-fragment-core-components}
 
@@ -103,4 +103,4 @@ AEM 内では、セレクター `model` と `.json` 拡張機能を使用して�
 * [コンテンツフラグメントを使用したオーサリング](/help/sites-authoring/content-fragments.md)
 * [コンポーネントの JSON 書き出しの有効化](/help/sites-developing/json-exporter-components.md)
 
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
+* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)

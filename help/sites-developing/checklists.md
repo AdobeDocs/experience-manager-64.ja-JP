@@ -1,8 +1,8 @@
 ---
 title: チェックリスト
-seo-title: チェックリスト
+seo-title: Checklists
 description: 次のチェックリストに、テストでの主な問題を示します。
-seo-description: 次のチェックリストに、テストでの主な問題を示します。
+seo-description: The following checklist highlights some of the main testing issues
 uuid: 0456c98c-779f-415d-9641-b17ac141698b
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,18 +12,18 @@ discoiquuid: 8f94c22d-5f08-4a8b-8bb5-5ec757c44bc8
 exl-id: addb71f8-d042-4b14-8775-f15ab9fa5b6b
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 75%
+source-wordcount: '157'
+ht-degree: 73%
 
 ---
 
 # チェックリスト{#checklists}
 
-次のチェックリストは、主な問題の一部を示しています。詳しくは、テストに関するその他の節を参照してください。
+次のチェックリストでは、主な問題の一部を重点的に説明しています。詳しくは、テストに関する他の節を参照してください。
 
 | チェック項目 | 回答 | 動作 | 所有者 | 期限 |
 |---|---|---|---|---|
-| 定期的なレポートメカニズムが明確に設定されているか。 |  |  |  |  |
+| 明確で定期的なレポートメカニズムが設定されているか。 |  |  |  |  |
 | （テストチームの）主要関係者がステータス会議に参加していますか。 |  |  |  |  |
 | テストの責任は明確に定義されているか（特にお客様に関して）。 |  |  |  |  |
 | 顧客はテストを実行するために必要な経験を積んでいますか。 |  |  |  |  |

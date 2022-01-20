@@ -1,8 +1,8 @@
 ---
 title: イネーブルメント機能の設定
-seo-title: イネーブルメント機能の設定
+seo-title: Configuring Enablement Features
 description: Communities でイネーブルメント機能を設定します
-seo-description: Communities でイネーブルメント機能を設定します
+seo-description: Configure enablement features in Communities
 uuid: 27be3128-1a7d-412e-99a9-6e3b3b0aec1c
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -13,8 +13,8 @@ role: Admin
 exl-id: 01cfc774-8ae1-48c0-a7e3-5836c4b39bff
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 59%
+source-wordcount: '440'
+ht-degree: 58%
 
 ---
 
@@ -38,9 +38,9 @@ ht-degree: 59%
 
 以下をセットアップします。
 
-* **コミュニ**
-ティマネージャイネーブルメントコミュニティの場合は、 
-`Community Enablement Managers` ユーザーグループにはの役割を割り当てることがで `*Community Site* Enablement Manager`き、その権限にはパブリッシュ環境でのコンテンツ作成、割り当て、メンバー管理などが含まれます。
+* **コミュニティマネージャー**
+イネーブルメントコミュニティの場合、 
+`Community Enablement Managers` ユーザーグループには、 `*Community Site* Enablement Manager`（権限には、コンテンツの作成、割り当て、パブリッシュ環境でのメンバー管理などが含まれます）
 
 オプションで以下を設定します。
 
@@ -56,22 +56,22 @@ ht-degree: 59%
 
 **すべてのオーサー／パブリッシュインスタンスで、次の手順を実行します。**
 
-1. **[MySQLUse Webコンソール用のJDBCド](deploy-communities.md#jdbc-driver-for-mysql)**
-ライバー（バンドル）をインストールします。SCORMパッケージをイ *ンストールする前に、 http://localhost:4502/system/console/*
-bundles ** Installをインストールします。
+1. **[MySQL 用の JDBC ドライバーのインストール](deploy-communities.md#jdbc-driver-for-mysql)**
+Web コンソール（バンドル）を使用：インストール *http://localhost:4502/system/console/bundles*
+インストール *前* SCORM パッケージのインストール
 
-1. **[SCORMパッケージをイ](deploy-communities.md#scorm-package)**
-ンストールします。パッケージマネージャーを使用： 
+1. **[SCORM パッケージをインストールする](deploy-communities.md#scorm-package)**
+パッケージマネージャを使用： 
 *http://localhost:4502/crx/packmgr/*
 
 **任意のサーバーで、次の手順を実行します。**
 
 1. **[MySQL、MySQL Workbench をインストール](mysql.md)**
 
-1. **[MySQLデータベースのインス](mysql.md#database-setup)**
-トールオーサーインスタンスからダウンロードしたSQLスクリプトの実行
+1. **[MySQL データベースのインストール](mysql.md#database-setup)**
+オーサーインスタンスからダウンロードした SQL スクリプトを実行
 \
-   MySQL Workbenchの使用
+   MySQL Workbench の使用
 
 **オーサーインスタンスをホストしている同じサーバーで、次の手順を実行します。**
 
@@ -79,33 +79,33 @@ bundles ** Installをインストールします。
 
 **すべてのオーサー／パブリッシュインスタンスで、次の手順を実行します。**
 
-1. **[JDBC接続プール](mysql.md#configure-jdbc-connections)**
-の設定Webコンソール(configMgr)を使用： 
+1. **[JDBC 接続プールの設定](mysql.md#configure-jdbc-connections)**
+Web コンソール (configMgr) を使用： 
 *http://localhost:4502/system/console/configMgr*
 
-1. **[SCORMエンジンサ](mysql.md#aem-communities-scormengine-service)**
-ービスの設定Webコンソール(configMgr)を使用： 
+1. **[SCORM エンジンサービスの設定](mysql.md#aem-communities-scormengine-service)**
+Web コンソール (configMgr) を使用： 
 *http://localhost:4502/system/console/configMgr*
 
-1. **[CSRFフィルタ](mysql.md#adobe-granite-csrf-filter)**
-ーを設定Webコンソール(configMgr)を使用します。 
+1. **[CSRF フィルターの設定](mysql.md#adobe-granite-csrf-filter)**
+Web コンソール (configMgr) を使用： 
 *http://localhost:4502/system/console/configMgr*
 
 **オーサーインスタンスで、次の手順を実行します。**
 
-1. （*オプション*） **[Analyticsサービスの設定](analytics.md)**
+1. (*オプション*) **[Analytics サービスの設定](analytics.md)**
 ツール/デプロイメント/Cloud Servicesコンソールを使用します。 
 *http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
-1. **[FFmpegUseワー](ffmpeg.md#configure-ffmpeg-transcoding-service)**
-クフロー/モデルコンソールの設定
+1. **[FFmpeg の設定](ffmpeg.md#configure-ffmpeg-transcoding-service)**
+ワークフロー/モデルコンソールの使用
 
-1. **[トンネルサ](deploy-communities.md#tunnel-service-on-author)**
-ービス使用Webコンソール(configMgr)を有効にします。 
+1. **[トンネルサービスの有効化](deploy-communities.md#tunnel-service-on-author)**
+Web コンソール (configMgr) を使用： 
 *http://localhost:4502/system/console/configMgr*
 
-1. **[コミュニティ管](users.md#creating-community-members)** 理者の作成オーサー環境では、クラシックUIセキュリティコンソールを使用します。 *http://localhost:4502/*
-useradmincreate user(s) with path = /home/users/community
+1. **[コミュニティ管理者の作成](users.md#creating-community-members)** オーサー環境の場合は、クラシック UI セキュリティコンソールを使用します。 *http://localhost:4502/useradmin*
+パス= /home/users/community でユーザーを作成
 
    * 次のグループにメンバーを追加します：
 
@@ -114,4 +114,4 @@ useradmincreate user(s) with path = /home/users/community
 
 ## Dispatcher {#dispatcher}
 
-デプロイメントに[AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)が含まれている場合、イネーブルメント機能を正しく動作させるには、`clientheader`セクションと`filter`セクションを変更する必要があります。 [コミュニティのための Dispatcher の設定](dispatcher.md#enablement)を参照してください。
+デプロイメントに次の条件が含まれる場合 [AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)イネーブルメント機能を正しく動作させるには、 `clientheader`および `filter`セクションは変更が必要です。 [コミュニティのための Dispatcher の設定](dispatcher.md#enablement)を参照してください。

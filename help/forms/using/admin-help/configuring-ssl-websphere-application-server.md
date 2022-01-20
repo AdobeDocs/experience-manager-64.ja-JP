@@ -1,8 +1,8 @@
 ---
 title: WebSphere Application Server に対する SSL の設定
-seo-title: WebSphere Application Server に対する SSL の設定
+seo-title: Configuring SSL for WebSphere Application Server
 description: WebSphere Application Server に対する SSL の設定方法について説明します。
-seo-description: WebSphere Application Server に対する SSL の設定方法について説明します。
+seo-description: Learn how to configure SSL for WebSphere Application Server.
 uuid: f939a806-346e-41e0-b2c0-6d0ba83f8f6f
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 7c0efcb3-5b07-4090-9119-b7318c8b7980
 exl-id: 653daaa4-9e35-40eb-a61e-274109f5f0d2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1227'
 ht-degree: 92%
 
 ---
@@ -21,19 +21,19 @@ ht-degree: 92%
 
 ここでは、IBM WebSphere Application Server で SSL を設定する次の手順について説明します。
 
-## WebSphere でのローカルユーザーアカウントの作成  {#creating-a-local-user-account-on-websphere}
+## WebSphere でのローカルユーザーアカウントの作成 {#creating-a-local-user-account-on-websphere}
 
 SSL を有効にするために、WebSphere はローカル OS ユーザーレジストリ内のシステムの管理権限を持つユーザーアカウントにアクセスする必要があります。
 
 * （Windows）Windows ユーザーを新規作成します。このユーザーは、管理者グループに属し、オペレーティングシステムの一部としての役割を果たす権限を持つように設定します（[WebSphere 用の Windows ユーザーの作成](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere)を参照）。
 * （Linux、UNIX）root ユーザーまたは root 権限を持つ別のユーザーのアカウントを使用できます。WebSphere で SSL を有効にする際に、そのユーザーのサーバー ID とパスワードを使用します。
 
-### WebSphere 用の Linux または UNIX ユーザーの作成  {#create-a-linux-or-unix-user-for-websphere}
+### WebSphere 用の Linux または UNIX ユーザーの作成 {#create-a-linux-or-unix-user-for-websphere}
 
 1. ルートユーザーとしてログインします。
 1. コマンドプロンプトに次のコマンドを入力して、新しいユーザーを作成します。
 
-   * （LinuxおよびSun Solaris） `useradd`
+   * （Linux および Sun Solaris） `useradd`
    * (IBM AIX) `mkuser`
 
 1. コマンドプロンプトで `passwd` と入力して、新しいユーザーのパスワードを設定します。
@@ -41,14 +41,14 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 
    >[!NOTE]
    >
-   >（Linux および Solaris）WebSphere Application Server のローカル OS セキュリティレジストリが機能するには、シャドーパスワードファイルが存在している必要があります。シャドウパスワードファイルは通常、**/etc/shadow***という名前で、/etc/passwdファイルに基づいています。 シャドウパスワードファイルが存在しない場合は、グローバルセキュリティを有効にし、ユーザーレジストリをローカルOSとして設定した後にエラーが発生します。*
+   >（Linux および Solaris）WebSphere Application Server のローカル OS セキュリティレジストリが機能するには、シャドーパスワードファイルが存在している必要があります。シャドウパスワードファイルの名前は通常 **/etc/shadow***とは、/etc/passwd ファイルに基づいたものです。 シャドウパスワードファイルが存在しない場合は、グローバルセキュリティを有効にし、ユーザーレジストリをローカル OS として設定した後にエラーが発生します。*
 
 1. /etc ディレクトリにあるグループファイルをテキストエディターで開きます。
 1. 手順 2 で作成したユーザーを `root` グループに追加します。
 1. ファイルを保存して閉じます。
 1. （SSL を有効にした UNIX）root ユーザーとして WebSphere を起動し、停止します。
 
-### WebSphere 用の Windows ユーザーの作成  {#create-a-windows-user-for-websphere}
+### WebSphere 用の Windows ユーザーの作成 {#create-a-windows-user-for-websphere}
 
 1. 管理者ユーザーアカウントを使用して Windows にログインします。
 1. 「**スタート／コントロールパネル／管理ツール／コンピュータ管理／ローカルユーザーとグループ**&#x200B;を選択します。
@@ -65,21 +65,21 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 1. 「Enter The Object Names To Select 」ボックスに、手順 4 で作成したユーザーの名前を入力し、「**Check Names**」をクリックして名前が正しいことを確認してから、「**OK**」をクリックします。
 1. 「**OK**」をクリックして、「Act As Part Of The Operating System」プロパティダイアログボックスを閉じます。
 
-### WebSphere が新規作成したユーザーを管理者として使用するように設定します  {#configure-websphere-to-use-the-newly-created-user-as-administrator}
+### WebSphere が新規作成したユーザーを管理者として使用するように設定します {#configure-websphere-to-use-the-newly-created-user-as-administrator}
 
 1. WebSphere が実行中であることを確認します。
 1. WebSphere 管理コンソールで、「**Security／Global Security**」を選択します。
 1. 「Administrative」セキュリティで、「**Administrative user roles**」を選択します。
 1. 「追加」をクリックして次の手順を実行します。
 
-   1. 検索ボックスに&#x200B;**&amp;ast;**&#x200B;と入力し、「検索」をクリックします。
+   1. タイプ **&amp;ast;** をクリックし、「検索」をクリックします。
    1. ロールの下の「**Administrator**」をクリックします。
    1. 新規作成したユーザーを「Mapped to role」に追加し、「Administrator」にマッピングします。
 
 1. 「**OK**」をクリックして変更を保存します。
 1. WebSphere プロファイルを再起動します。
 
-##  管理セキュリティの有効化  {#enable-administrative-security}
+##  管理セキュリティの有効化 {#enable-administrative-security}
 
 1. WebSphere 管理コンソールで「**Security／Global Security**」を選択します。
 1. 「**Security Configuration Wizard**」をクリックします。
@@ -91,7 +91,7 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 
    WebSphere はデフォルトのキーストアと信頼ストアを使用して起動します。
 
-## SSL の有効化 (カスタムキーと信頼ストア)  {#enable-ssl-custom-key-and-truststore}
+## SSL の有効化 (カスタムキーと信頼ストア) {#enable-ssl-custom-key-and-truststore}
 
 信頼ストアとキーストアは ikeyman ユーティリティまたは管理コンソールを使用して作成できます。 ikeyman を正しく機能させるために、WebSphere インストールパスに括弧が入っていないことを確認してください。
 
@@ -112,7 +112,7 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 
 1. 手順 2 ～ 10 を繰り返して、信頼ストアを作成します。
 
-## カスタムキーストアと信頼ストアをサーバーに適用します  {#apply-custom-keystore-and-truststore-to-the-server}
+## カスタムキーストアと信頼ストアをサーバーに適用します {#apply-custom-keystore-and-truststore-to-the-server}
 
 1. WebSphere Administrative Console で「**Security／SSL certificate and key management**」を選択します。
 1. 「**Manage endpoint security configuration**」をクリックします。ローカルトポロジマップが開きます。
@@ -126,14 +126,14 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 
    これで、プロファイルは SSl 設定と証明書の上で実行されます。
 
-## AEM Forms ネイティブのサポートの有効化  {#enabling-support-for-aem-forms-natives}
+## AEM Forms ネイティブのサポートの有効化 {#enabling-support-for-aem-forms-natives}
 
 1. WebSphere Administrative Console で「**Security／Global Security**」を選択します。
 1. 「Authentication」セクションで「**RMI/IIOP security**」を開き、「**CSIv2 inbound communications**」をクリックします。
 1. 「Transport」ドロップダウンリストで「**SSL-supported**」が選択されていることを確認します。
 1. WebSphere プロファイルを再起動します。
 
-## https で始まる URL を変換するための WebSphere の設定  {#configuring-websphere-to-convert-urls-that-begins-with-https}
+## https で始まる URL を変換するための WebSphere の設定 {#configuring-websphere-to-convert-urls-that-begins-with-https}
 
 https で始まる URL を変換するには、その URL の署名者証明書を WebSphere サーバーに追加します。
 
@@ -143,7 +143,7 @@ https で始まる URL を変換するには、その URL の署名者証明書�
 1. WebSphere Administrative Console で、「Signer certificates」に移動し、Security／SSL Certificate and Key Management／Key Stores and Certificates／NodeDefaultTrustStore／Signer Certificates をクリックします。
 1. 「Retrieve From Port」をクリックし、次のタスクを実行します。
 
-   * 「Host」ボックスに URL を入力します。例えば、`www.paypal.com`と入力します。
+   * 「Host」ボックスに URL を入力します。例： `www.paypal.com`.
    * 「Port」ボックスに、`443` と入力します。このポートがデフォルトの SSL ポートです。
    * 「Alias」ボックスに別名を入力します。
 
@@ -156,9 +156,9 @@ https で始まる URL を変換するには、その URL の署名者証明書�
 >
 >アプリケーションが WebSphere の内部から SSL サイトに接続するには、署名者証明書が必要です。この証明書は、SSL のハンドシェイク時に接続のリモート側から送信された証明書を、Java Secure Socket Extensions（JSSE）が確認するために使用されます。
 
-## 動的ポートの設定  {#configuring-dynamic-ports}
+## 動的ポートの設定 {#configuring-dynamic-ports}
 
-IBM WebSphere では、グローバルセキュリティが有効な場合、ORB.init() への複数の呼び出しは許可されません。永続的な制限については、 https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704を参照してください。
+IBM WebSphere では、グローバルセキュリティが有効な場合、ORB.init() への複数の呼び出しは許可されません。永続的な制限については、https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704を参照してください。
 
 動的ポートを設定し、問題を解決するには、次の手順を実行してください。
 
@@ -172,10 +172,10 @@ IBM WebSphere では、グローバルセキュリティが有効な場合、ORB
    * `CSIV2_SSL_SERVERAUTH_LISTENER_ADDRESS`
    * `CSIV2_SSL_MUTUALAUTH_LISTENER_ADDRESS`
 
-## sling.properties ファイルを構成します。{#configure-the-sling-properties-file}
+## sling.properties ファイルを構成します。 {#configure-the-sling-properties-file}
 
-1. [aem-forms_root]\crx-repository\launchpad\sling.propertiesファイルを開いて編集します。
-1. `sling.bootdelegation.ibm`プロパティを探し、値フィールドに`com.ibm.websphere.ssl.*`を追加します。 更新されたフィールドは次のようになります。
+1. 開く [aem-forms_root]\crx-repository\launchpad\sling.propertiesファイルを編集します。
+1. を `sling.bootdelegation.ibm` プロパティと追加 `com.ibm.websphere.ssl.*`をその値フィールドに追加します。 更新されたフィールドは次のようになります。
 
    ```as3
    sling.bootdelegation.ibm=com.ibm.xml.*, com.ibm.websphere.ssl.*

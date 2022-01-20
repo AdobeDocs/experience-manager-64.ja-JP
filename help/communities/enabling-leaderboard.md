@@ -1,8 +1,8 @@
 ---
 title: リーダーボード機能
-seo-title: リーダーボード機能
+seo-title: Leaderboard Feature
 description: ページへのリーダーボードコンポーネントの追加
-seo-description: ページへのリーダーボードコンポーネントの追加
+seo-description: Adding a Leaderboard component to a page
 uuid: 2a766b63-3ab4-44cd-8a26-629a71b837ea
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,34 +12,34 @@ discoiquuid: 1e96d388-8517-4a84-bb0a-d49567eb4bdf
 exl-id: 1ebe0cbb-33be-4101-92e3-64253a7f7f31
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '401'
 ht-degree: 72%
 
 ---
 
-# リーダーボード機能  {#leaderboard-feature}
+# リーダーボード機能 {#leaderboard-feature}
 
 ## はじめに {#introduction}
 
-`Leaderboard`コンポーネントは、獲得したポイント（基本スコア）や専門知識（高度なスコア）に基づいてメンバーをランク付けすることで、コミュニティ内でのメンバーの関わり方を把握できます。
+この `Leaderboard` コンポーネントを使用すると、獲得したポイント（基本スコア）や専門知識（高度なスコア）に従ってメンバーをランク付けすることで、コミュニティ内でのメンバーの関わり方を把握できます。
 
 ページにリーダーボードコンポーネントを含める前に、[コミュニティのスコアとバッジ](implementing-scoring.md)を設定する必要があります。
 
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
-* `Leaderboard`コンポーネントを[コミュニティサイト](overview.md#community-sites)に追加する
+* の追加 `Leaderboard` コンポーネントを [コミュニティサイト](overview.md#community-sites)
 
-* `Leaderboard`コンポーネントの設定
+* の設定 `Leaderboard` コンポーネント
 
 ## リーダーボードをページに追加 {#adding-a-leaderboard-to-a-page}
 
-`Leaderboard`コンポーネントをオーサリングモードでページに追加するには、
+を追加するには、以下を実行します。 `Leaderboard` コンポーネントをオーサリングモードでページに追加する場合は、
 
 * `Communities / Leaderboard`
 
 コンポーネントを探し、ページ上の位置にドラッグします。
 
-必要な情報については、[コミュニティコンポーネントの基本](basics.md)を参照してください。
+必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
 
 コミュニティサイトのページに初めて配置されたとき、コンポーネントは次のように表示されます。
 
@@ -47,17 +47,17 @@ ht-degree: 72%
 
 ## リーダーボードの設定 {#configuring-leaderboard}
 
-配置済みの`Leaderboard`コンポーネントを選択し、`Configure`アイコンを選択すると、編集ダイアログが開きます。
+配置された `Leaderboard` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
 
 ![chlimage_1-9](assets/chlimage_1-9.png) ![chlimage_1-10](assets/chlimage_1-10.png)
 
-### 「設定」タブ{#settings-tab}
+### 「設定」タブ {#settings-tab}
 
 「**[!UICONTROL 設定]**」タブで、メンバーに関連して表示する情報を指定します。
 
 * **[!UICONTROL 表示名]**&#x200B;ボードに表示する説明的な名前。バッジとスコアの表示用に選択されたルールが反映されます。
 
-   何も入力しない場合の初期設定は`Leaderboard`です。
+   デフォルトはです。 `Leaderboard`（何も入力されていない場合）
 
 * **[!UICONTROL バッジ]**&#x200B;オンにすると、リーダーボードにバッジアイコンの列が表示されるようになります。
 
@@ -71,7 +71,7 @@ ht-degree: 72%
 
    初期設定はオフです。
 
-### 「ルール」タブ{#rules-tab}
+### 「ルール」タブ {#rules-tab}
 
 「**[!UICONTROL ルール]**」タブで、コミュニティサイト、およびそのスコアルールとバッジルールを指定します。
 
@@ -134,6 +134,6 @@ ht-degree: 72%
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの[リーダーボードの基本事項](leaderboard.md)ページを参照してください。
+詳しくは、 [リーダーボードの基本事項](leaderboard.md) 開発者向けのページ
 
-ルールの作成手順は、管理者向けの[コミュニティのスコアとバッジ](implementing-scoring.md)ページで説明しています。
+ルールを作成する手順は、 [コミュニティのスコアとバッジ](implementing-scoring.md) 管理者向けのページ

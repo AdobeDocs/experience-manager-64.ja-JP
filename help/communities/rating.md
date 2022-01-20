@@ -1,8 +1,8 @@
 ---
 title: 評価の使用
-seo-title: 評価の使用
+seo-title: Using Ratings
 description: 評価コンポーネントをページに追加
-seo-description: 評価コンポーネントをページに追加
+seo-description: Adding a Rating component to a page
 uuid: a986970b-1221-4648-9a69-410f4480e0ae
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,28 +12,28 @@ discoiquuid: a0e5491e-66bc-47b0-94a5-45a02bc558da
 exl-id: 1de28140-5334-4ca2-a476-5ad253809808
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 39%
+source-wordcount: '206'
+ht-degree: 36%
 
 ---
 
 # 評価の使用 {#using-ratings}
 
-`Rating`コンポーネントは、スタンドアロンで、または他のコミュニティ機能と組み合わせて使用されます。 このコンポーネントを使用すると、サインインしたコミュニティメンバーは、コンテンツを評価して意見を表明できます。
+この `Rating`コンポーネントは、スタンドアロンで、または他のコミュニティ機能と組み合わせて使用されます。 このコンポーネントを使用すると、サインインしたコミュニティメンバーは、コンテンツを評価して意見を表明できます。
 
 ## 評価をページに追加 {#adding-a-rating-to-a-page}
 
-`Rating`コンポーネントをオーサリングモードでページに追加するには、コンポーネント`Communities / Rating`を選択し、ページ上の位置（メンバーが評価する機能に対する相対位置など）にドラッグします。
+を追加するには、以下を実行します。 `Rating`コンポーネントをオーサリングモードでページに追加する場合は、 `Communities / Rating` をクリックし、ページ上の適切な位置（メンバーが評価する機能を基準とした位置など）にドラッグします。
 
-必要な情報については、[コミュニティコンポーネントの基本](basics.md)を参照してください。
+必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
 
-[必須のクライアント側ライブラリ](rating-basics.md#essentials-for-client-side)を含めると、`Rating`コンポーネントは次のように表示されます。
+次の場合に [必要なクライアント側ライブラリ](rating-basics.md#essentials-for-client-side) が含まれる場合、この方法で `Rating` コンポーネントが表示されます。
 
 ![chlimage_1-493](assets/chlimage_1-493.png)
 
 ## 評価の設定 {#configuring-rating}
 
-配置済みの`Rating`コンポーネントを選択し、`Configure`アイコンを選択すると、編集ダイアログが開きます。
+配置された `Rating` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
 
 ![chlimage_1-494](assets/chlimage_1-494.png)
 
@@ -42,9 +42,9 @@ ht-degree: 39%
 ![chlimage_1-495](assets/chlimage_1-495.png)
 
 **[!UICONTROL 集計名]**
-(*必須*)このインスタンスを一意に識別 `Rating`する、のシンプルな名前。リポジトリの有効なノード名を指定する必要があります。
+(*必須*) `Rating`このインスタンスを一意に識別する リポジトリの有効なノード名を指定する必要があります。
 
-## サイト訪問者のエクスペリエンス  {#site-visitor-experience}
+## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
 ### メンバー {#members}
 
@@ -52,8 +52,8 @@ ht-degree: 39%
 
 ### 匿名 {#anonymous}
 
-匿名での評価投稿はサポートされていません。サイト訪問者が参加するには、登録（メンバーになる）し、サインインする必要があります。
+匿名での評価投稿はサポートされていません。サイト訪問者が参加するには、登録（メンバーになる）してサインインする必要があります。
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの[評価の基本事項](rating-basics.md)ページを参照してください。
+詳しくは、 [評価の基本事項](rating-basics.md) 開発者向けのページ

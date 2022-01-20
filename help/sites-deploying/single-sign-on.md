@@ -1,19 +1,19 @@
 ---
 title: シングルサインオン
-seo-title: シングルサインオン
+seo-title: Single Sign On
 description: AEM インスタンスに対するシングルサインオン（SSO）を設定する方法について学習します。
-seo-description: AEM インスタンスに対するシングルサインオン（SSO）を設定する方法について学習します。
+seo-description: Learn how to configure Single Sign On (SSO) for an AEM instance.
 uuid: b8dcb28e-4604-4da5-b8dd-4e1e2cbdda18
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: Security, configuring
 discoiquuid: 86e8dc12-608d-4aff-ba7a-5524f6b4eb0d
-feature: 設定
+feature: Configuring
 exl-id: ae7e8ce6-7bdd-462b-8939-361c122317b3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '740'
 ht-degree: 74%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 74%
 
 シングルサインオン（SSO）は、ユーザーが認証の資格情報（ユーザー名、パスワードなど）を一度入力すれば、その後は複数のシステムにアクセスできるようにするものです。個別のシステム（信頼された認証として知られる）が認証を実行し、Adobe Experience Manager に対してユーザーの資格情報を提供します。Adobe Experience Manager がそのユーザーのアクセス権を確認し、適用します（つまり、ユーザーがアクセスを許可されているリソースを決定します）。
 
-SSO Authentication Handlerサービス(`com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)は、信頼された認証子が提供する認証結果を処理します。 SSO Authentication Handlerは、次の順序で、特殊な属性の値としてssid（SSO識別子）を検索します。
+SSO Authentication Handler サービス ( `com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`) は、信頼された認証子が提供する認証結果を処理します。 SSO Authentication Handler は、次の順序で特別な属性の値として ssid（SSO 識別子）を検索します。
 
 1. 要求ヘッダー
 1. cookie
@@ -35,7 +35,7 @@ SSO Authentication Handlerサービス(`com.adobe.granite.auth.sso.impl.SsoAuthe
 * ログインモジュール
 * SSO 認証サービス
 
-両方のサービスに同じ属性名を指定する必要があります。 属性は、`Repository.login`に指定された`SimpleCredentials`に含まれます。 属性の値は無関係で無視され、単に存在するだけが重要で、検証されます。
+両方のサービスに同じ属性名を指定する必要があります。 属性は `SimpleCredentials` が `Repository.login`. 属性の値は無関係で無視され、単に存在するだけが重要で検証されます。
 
 ## SSO の設定 {#configuring-sso}
 
@@ -45,20 +45,20 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 
    例えば、NTLM の場合は以下のように設定します。
 
-   * **パス：** 必要に応じて例：  `/`
-   * **ヘッダー名**:  `LOGON_USER`
-   * **ID形式**:  `^<DOMAIN>\\(.+)$`
+   * **パス：** 必要に応じて例： `/`
+   * **ヘッダー名**: `LOGON_USER`
+   * **ID 形式**: `^<DOMAIN>\\(.+)$`
 
-      `<*DOMAIN*>`は、独自のドメイン名に置き換えます。
+      ここで、 `<*DOMAIN*>` は、独自のドメイン名に置き換えられます。
    CoSign の場合：
 
-   * **パス：** 必要に応じて例：  `/`
+   * **パス：** 必要に応じて例： `/`
    * **ヘッダー名**：remote_user
-   * **ID形式：** AsIs
+   * **ID 形式：** 現状
 
    SiteMinder の場合：
 
-   * **パス：** 必要に応じて例：  `/`
+   * **パス：** 必要に応じて例： `/`
    * **ヘッダー名**：SM_USER
    * **ID 形式**：AsIs
 
@@ -76,7 +76,6 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 >
 >ヘッダー、cookie および要求パラメーターの名前についても、SSO 設定で必要となるものだけを設定するようにしてください。
 
-
 >[!NOTE]
 >
 >シングルサインオンは、多くの場合、[LDAP](/help/sites-administering/ldap-config.md) と共に使用されます。
@@ -89,37 +88,33 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 >* IIS
 
 >
->
-`disp_iis.ini`内で、次の設定を行います。\
->（詳しくは、[Microsoft Internet Information Serverと共にDispatcherをインストールする](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server)を参照）。
+>In `disp_iis.ini` 設定：\
+>( [Microsoft Internet Information Server での Dispatcher のインストール](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server) 詳細はこちら
 >
 >* `servervariables=1`（IIS サーバー変数を要求ヘッダーとしてリモートインスタンスに転送します）
 >* `replaceauthorization=1`（「Basic」を除く、「Authorization」という名前のすべてのヘッダーを、その「Basic」と同等のものに置き換えます）
 
 >
->
-IIS では、次のように設定します。
+>IIS では、次のように設定します。
 >
 >* **匿名アクセス**&#x200B;を無効にします。
-   >
-   >
-* **統合 Windows 認証**&#x200B;を有効にします。
+>
+>* **統合 Windows 認証**&#x200B;を有効にします。
 
 >
-
 
 
 Felix コンソールの「**Authenticator**」オプションを使用すると、コンテンツツリーのすべてのセクションに適用される認証ハンドラーを確認できます。次に例を示します。
 
 `http://localhost:4502/system/console/slingauth`
 
-パスに最適なハンドラーが最初に照会されます。例えば、パス`/`にhandler-Aを設定し、パス`/content`にhandler-Bを設定した場合、`/content/mypage.html`に対する要求が最初にhandler-Bに対してクエリを実行します。
+パスに最適なハンドラーが最初に照会されます。例えば、パスに handler-A を設定した場合、 `/` パスに handler-B を指定します。 `/content`、次に `/content/mypage.html` が handler-B を先にクエリします。
 
 ![screen_shot_2012-02-15at21006pm](assets/screen_shot_2012-02-15at21006pm.png)
 
 ### 例 {#example}
 
-Cookieリクエスト（URL `http://localhost:4502/libs/wcm/content/siteadmin.html`を使用）の場合：
+Cookie リクエスト（URL を使用）の場合 `http://localhost:4502/libs/wcm/content/siteadmin.html`):
 
 ```xml
 GET /libs/cq/core/content/welcome.html HTTP/1.1
@@ -131,13 +126,13 @@ Cookie: TestCookie=admin
 
 * **パス**: `/`
 
-* **ヘッダー名**:  `TestHeader`
+* **ヘッダー名**: `TestHeader`
 
 * **Cookie Names**: `TestCookie`
 
-* **パラメーター名**:  `TestParameter`
+* **パラメーター名**: `TestParameter`
 
-* **ID形式**:  `AsIs`
+* **ID 形式**: `AsIs`
 
 応答は次のようになります。
 
@@ -160,27 +155,27 @@ Transfer-Encoding: chunked
 これは、次を要求した場合にも機能します。\
 `http://localhost:4502/libs/cq/core/content/welcome.html?TestParameter=admin`
 
-または、次のcurlコマンドを使用して、 `TestHeader`ヘッダーを`admin:`に送信できます。\
+または、次の curl コマンドを使用して、 `TestHeader` ヘッダー `admin:`\
 `curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
 
 >[!NOTE]
 >
 >ブラウザーで要求パラメーターを使用したときは、HTML の一部だけが（CSS なしで）表示されます。これは、HTML からの要求はすべて要求パラメーターなしでおこなわれるからです。
 
-## AEM サインアウトリンクの削除  {#removing-aem-sign-out-links}
+## AEM サインアウトリンクの削除 {#removing-aem-sign-out-links}
 
 SSO を使用する場合、サインインとサインアウトは外部で処理されるので、AEM 独自のサインアウトリンクは不要であり、削除する必要があります。
 
 ようこそ画面のサインアウトリンクは以下の手順で削除できます。
 
-1. `/libs/cq/core/components/welcome/welcome.jsp`を`/apps/cq/core/components/welcome/welcome.jsp`にオーバーレイ
+1. オーバーレイ `/libs/cq/core/components/welcome/welcome.jsp` から `/apps/cq/core/components/welcome/welcome.jsp`
 1. jsp の以下の部分を削除します。
 
    `<a href="#" onclick="signout('<%= request.getContextPath() %>');" class="signout"><%= i18n.get("sign out", "welcome screen") %>`
 
 右上隅にあるユーザーの個人メニューのサインアウトリンクを削除するには、以下の手順を実行します。
 
-1. `/libs/cq/ui/widgets/source/widgets/UserInfo.js`を`/apps/cq/ui/widgets/source/widgets/UserInfo.js`にオーバーレイ
+1. オーバーレイ `/libs/cq/ui/widgets/source/widgets/UserInfo.js` から `/apps/cq/ui/widgets/source/widgets/UserInfo.js`
 
 1. このファイルの以下の部分を削除します。
 

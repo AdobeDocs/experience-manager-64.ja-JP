@@ -17,21 +17,21 @@ ht-degree: 45%
 
 # ビデオアセットの管理 {#managing-video-assets}
 
-Adobe Experience Manager Assetsでビデオアセットを管理および編集する方法について説明します。 また、Dynamic Media のライセンスをお持ちの場合は、[Dynamic Media のビデオに関するドキュメント](video.md)を参照してください。
+Adobe Experience Manager Assets でビデオアセットを管理および編集する方法について説明します。 また、Dynamic Media のライセンスをお持ちの場合は、[Dynamic Media のビデオに関するドキュメント](video.md)を参照してください。
 
 ## ビデオアセットのアップロードとプレビュー {#uploading-and-previewing-video-assets}
 
-[!DNL Experience Manager] Assetsは、拡張子がMP4のビデオアセットのプレビューを生成します。アセットの形式がMP4でない場合は、FFmpegパックをインストールしてプレビューを生成します。 FFmpegは、OGGタイプとMP4タイプのビデオレンディションを作成します。 これらのレンディションは、[!DNL Experience Manager] Assetsユーザーインターフェイスでプレビューできます。
+[!DNL Experience Manager] Assets は、拡張子が MP4 のビデオアセットのプレビューを生成します。 アセットの形式が MP4 でない場合は、FFmpeg パックをインストールしてプレビューを生成します。 FFmpeg は、OGG タイプと MP4 タイプのビデオレンディションを作成します。 これらのレンディションは、 [!DNL Experience Manager] Assets ユーザーインターフェイス。
 
-1. デジタルアセットフォルダー（またはサブフォルダー）で、デジタルアセットを追加する場所に移動します。
+1. デジタルアセットフォルダーまたはサブフォルダー内で、デジタルアセットを追加する場所に移動します。
 1. アセットをアップロードするには、ツールバーの「**[!UICONTROL 作成]**」をクリックまたはタップして、「**[!UICONTROL ファイル]**」を選択します。または、アセット領域に直接ドロップします。アップロード操作について詳しくは、[アセットのアップロード](managing-assets-touch-ui.md#uploading-assets)を参照してください。
 1. カード表示でビデオをプレビューするには、ビデオアセットの&#x200B;**[!UICONTROL 再生]**&#x200B;ボタンをタップします。
 
    ![chlimage_1-201](assets/chlimage_1-201.png)
 
-   ビデオの一時停止や再生は、**[!UICONTROL カード]**&#x200B;表示でのみ可能です。 **[!UICONTROL リスト]**&#x200B;ビューでは、再生/一時停止ボタンは使用できません。
+   ビデオの一時停止や再生は、 **[!UICONTROL カード]** 表示のみ。 再生/一時停止ボタンは **[!UICONTROL リスト]** 表示
 
-1. カードの&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップして、**[!UICONTROL 詳細]**&#x200B;ビューでビデオをプレビューします。
+1. 次をタップします。 **[!UICONTROL 編集]** ビデオを **[!UICONTROL 詳細]** 表示
 
    ビデオは、ブラウザーのネイティブなビデオプレーヤーで再生されます。再生、一時停止、音量の調節およびビデオの全画面表示を行うことができます。
 
@@ -39,40 +39,40 @@ Adobe Experience Manager Assetsでビデオアセットを管理および編集�
 
 ## 2 GB を超えるアセットをアップロードするための設定 {#configuration-to-upload-video-assets-that-are-larger-than-gb}
 
-デフォルトでは、ファイルサイズの上限により、[!DNL Experience Manager] Assetsで2 GBを超えるアセットをアップロードすることはできません。 ただし、この上限は CRXDE Lite を開き、`/apps` ディレクトリ配下にノードを作成することで上書きできます。ノードには、同じノード名とディレクトリ構造および類似した順序のノードプロパティが必要です。
+デフォルトでは、 [!DNL Experience Manager] ファイルサイズの上限により、2 GB を超えるアセットはアップロードできません。 ただし、この上限は CRXDE Lite を開き、`/apps` ディレクトリ配下にノードを作成することで上書きできます。ノードには、同じノード名とディレクトリ構造および類似した順序のノードプロパティが必要です。
 
-[!DNL Experience Manager] Assets設定に加えて、大きなアセットをアップロードするには、次の設定を変更します。
+に加えて [!DNL Experience Manager] Assets の設定で、大きなアセットをアップロードするには、次の設定を変更します。
 
-* トークンの有効期間を増やします。`https://[aem_server]:[port]/system/console/configMgr`のWebコンソールの[!UICONTROL AdobeGranite CSRF Servlet]を参照してください。 詳しくは、[CSRF保護](/help/sites-developing/csrf-protection.md)を参照してください。
+* トークンの有効期間を増やします。詳しくは、 [!UICONTROL AdobeGranite CSRF サーブレット] Web コンソールの `https://[aem_server]:[port]/system/console/configMgr`. 詳しくは、 [CSRF 保護](/help/sites-developing/csrf-protection.md).
 * Dispatcher の設定で `receiveTimeout` を増やします。詳しくは、[Adobe Experience Manager Dispatcher の設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)を参照してください。
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Classicユーザーインターフェイスには、2 GBのファイルサイズ制限はありません。 また、サイズの大きなビデオでは、エンドツーエンドのワークフローが完全にはサポートされません。
+>この [!DNL Experience Manager] クラシックユーザーインターフェイスには、2 GB のファイルサイズ制限はありません。 また、サイズの大きなビデオでは、エンドツーエンドのワークフローが完全にはサポートされません。
 
 ファイルサイズの制限を高めに設定するには、`/apps` ディレクトリで次の手順を実行します。
 
 1. AEM で、**[!UICONTROL ツール／一般／CRXDE Lite]** をタップします。
-1. **[!UICONTROL CRXDE Lite]**&#x200B;ページの左側にあるディレクトリウィンドウで、`/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`に移動します。 ディレクトリウィンドウを表示するには、`>>`アイコンをタッチします。
-1. ツールバーの「**[!UICONTROL ノードをオーバーレイ]**」をタップします。 または、コンテキストメニューの「**[!UICONTROL ノードをオーバーレイ]**」を選択します。
+1. 内 **[!UICONTROL CRXDE Lite]** ページの左側にあるディレクトリウィンドウで、に移動します。 `/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`. ディレクトリウィンドウを表示するには、 `>>` アイコン
+1. ツールバーで、 **[!UICONTROL ノードをオーバーレイ]**. または、コンテキストメニューの「**[!UICONTROL ノードをオーバーレイ]**」を選択します。
 1. **[!UICONTROL ノードをオーバーレイ]**&#x200B;ダイアログで「**[!UICONTROL OK]**」をタップします。
 
    ![chlimage_1-203](assets/chlimage_1-203.png)
 
 1. ブラウザーを更新します。オーバーレイノード `/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload` が選択されます。
-1. サイズ上限を必要なサイズに増やすには、「**[!UICONTROL プロパティ]**」タブで適切な値をバイト単位で入力します。例えば、`32212254720`と入力して、サイズ制限を30 GBに増やします。
+1. サイズ上限を必要なサイズに増やすには、「**[!UICONTROL プロパティ]**」タブで適切な値をバイト単位で入力します。例えば、 `32212254720` の値を使用して、サイズ制限を 30 GB に増やします。
 
-1. ツールバーの「**[!UICONTROL すべて保存]**」をタップします。
+1. ツールバーで、 **[!UICONTROL すべて保存]**.
 1. AEM で、**[!UICONTROL ツール／操作／Web コンソール]**&#x200B;をタップします。
-1. **[!UICONTROL Adobe Experience Manager Web Console Bundles]**&#x200B;ページの表の&#x200B;**[!UICONTROL Name]**&#x200B;列で、**[!UICONTROL Workflow External Process Job Handler]**&#x200B;を探してタップします。
-1. **[!UICONTROL AdobeGranite Workflow External Process Job Handler]**&#x200B;ページで、「**[!UICONTROL Default Timeout]**」と「**[!UICONTROL Max Timeout]**」の両方のフィールドの秒数を`18000`（5時間）に設定します。
+1. の **[!UICONTROL Adobe Experience Manager Web コンソールバンドル]** ページの **[!UICONTROL 名前]** テーブルの列で、を探してタップします。 **[!UICONTROL AdobeGranite Workflow External Process Job Handler]**.
+1. 内 **[!UICONTROL AdobeGranite Workflow External Process Job Handler]** ページで、両方に秒を設定します。 **[!UICONTROL デフォルトのタイムアウト]** および **[!UICONTROL 最大タイムアウト]** フィールド `18000` （5 時間）
 1. 「**[!UICONTROL 保存]**」をタップします。
 1. AEM で、**[!UICONTROL ツール／ワークフロー／モデル]**&#x200B;をタップします。
-1. **[!UICONTROL ワークフローモデル]**&#x200B;ページで、「**[!UICONTROL Dynamic Media Encode Video]**」を選択し、「**[!UICONTROL 編集]**」をタップします。
-1. **[!UICONTROL ワークフロー]**&#x200B;ページで、**[!UICONTROL Dynamic Mediaビデオサービスプロセス]**&#x200B;コンポーネントをダブルタップします。
+1. の **[!UICONTROL ワークフローモデル]** ページ、選択 **[!UICONTROL Dynamic Media Encode Video]**&#x200B;次に、 **[!UICONTROL 編集]**.
+1. の **[!UICONTROL ワークフロー]** ページで、をダブルタップします。 **[!UICONTROL Dynamic Mediaビデオサービスのプロセス]** コンポーネント。
 1. **[!UICONTROL ステップのプロパティ]**&#x200B;ダイアログボックスの「**[!UICONTROL 共通]**」タブにある「**[!UICONTROL 詳細設定]**」を展開します。
 1. 「**[!UICONTROL タイムアウト]**」フィールドの値を `18000` に指定し、「**[!UICONTROL OK]**」をタップして **[!UICONTROL Dynamic Media エンコーディングビデオ]**&#x200B;ワークフローページに戻ります。
-1. ページ上部付近の&#x200B;**[!UICONTROL Dynamic Media Encode Video]**&#x200B;ページタイトルの下にある「**[!UICONTROL 保存]**」をタップします。
+1. ページ上部の、 **[!UICONTROL Dynamic Media Encode Video]** ページタイトルをタップします。 **[!UICONTROL 保存]**.
 
 ## ビデオアセットを公開する {#publishing-video-assets}
 
@@ -80,20 +80,20 @@ Adobe Experience Manager Assetsでビデオアセットを管理および編集�
 
 ## ビデオアセットに注釈を付ける {#annotating-video-assets}
 
-1. アセットコンソールで、アセットカードの&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップして、アセットの詳細ページを表示します。
-1. **[!UICONTROL プレビュー]**&#x200B;アイコンをタップしてビデオを再生します。
-1. ビデオに注釈を付けるには、「**[!UICONTROL 注釈]**」ボタンをタップします。 注釈がビデオ内の特定の時点（フレーム）に追加されます。
+1. Assets コンソールで、 **[!UICONTROL 編集]** アセットカードのアイコンをクリックして、アセットの詳細ページを表示します。
+1. 次をタップします。 **[!UICONTROL プレビュー]** アイコンをクリックしてビデオを再生します。
+1. ビデオに注釈を付けるには、 **[!UICONTROL 注釈]** 」ボタンをクリックします。 注釈がビデオ内の特定の時点（フレーム）に追加されます。
 
-   注釈を付ける際に、キャンバスに描画して、その描画を使用してコメントを含めることができます。コメントはAdobe Experience Manager Assetsに自動的に保存されます。
+   注釈を付ける際に、キャンバスに描画して、その描画をコメントに含めることができます。コメントはAdobe Experience Manager Assets に自動的に保存されます。
 
    ![chlimage_1-204](assets/chlimage_1-204.png)
 
-   注釈ウィザードを終了するには、「**[!UICONTROL 閉じる]**」をタップします。
+   注釈ウィザードを終了するには、 **[!UICONTROL 閉じる]**.
 
-1. ビデオ内の特定のポイントにジャンプするには、テキストフィールドに時間（秒）を指定し、「**[!UICONTROL ジャンプ]**」をクリックします。 例えば、ビデオの最初の 秒をスキップするには、`20`テキストフィールドに 20 と入力します。
+1. ビデオ内の特定のポイントにジャンプするには、テキストフィールドに時間（秒）を指定し、 **[!UICONTROL ジャンプ]**. 例えば、ビデオの最初の 秒をスキップするには、`20`テキストフィールドに 20 と入力します。
 
    ![chlimage_1-205](assets/chlimage_1-205.png)
 
-1. 注釈をクリックすると、タイムラインに表示されます。 **[!UICONTROL 削除]**&#x200B;をタップして、注釈をタイムラインから削除します。
+1. 注釈をクリックすると、タイムラインに表示されます。 タップ **[!UICONTROL 削除]** をクリックして、注釈をタイムラインから削除します。
 
    ![chlimage_1-206](assets/chlimage_1-206.png)

@@ -1,8 +1,8 @@
 ---
 title: 割り当ての基本事項
-seo-title: 割り当ての基本事項
+seo-title: Assignments Essentials
 description: イネーブルメントコミュニティの割り当て機能の概要
-seo-description: イネーブルメントコミュニティの割り当て機能の概要
+seo-description: Assignments feature overview for enablement communities
 uuid: 8310decf-174d-4e93-8c92-4a9583077b7a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,18 +12,18 @@ discoiquuid: 796781e6-5cab-4ea1-b484-0945bc8febbf
 exl-id: 310d9086-36b6-42ea-835f-c77d75e880cb
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 63%
+source-wordcount: '213'
+ht-degree: 62%
 
 ---
 
-# 割り当ての基本事項  {#assignments-essentials}
+# 割り当ての基本事項 {#assignments-essentials}
 
 このページでは、[イネーブルメントコミュニティ](overview.md#enablement-community)サイトの割り当て機能の操作に関する基本情報をまとめています。
 
 割り当て機能を使用すると、イネーブルメントコミュニティのメンバーに実施可能リソースおよびイネーブルメント学習パスを割り当てることができます。
 
-## クライアント側の基本事項  {#essentials-for-client-side}
+## クライアント側の基本事項 {#essentials-for-client-side}
 
 <table> 
  <tbody>
@@ -49,7 +49,7 @@ ht-degree: 63%
   </tr>
   <tr>
    <td><strong> properties</strong></td> 
-   <td><a href="assignments.md">割り当て機能</a>を参照</td> 
+   <td>詳しくは、 <a href="assignments.md">割り当て機能</a></td> 
   </tr>
  </tbody>
 </table>
@@ -80,11 +80,11 @@ ht-degree: 63%
 | 完了 | パス |
 | 完了 | 失敗 |
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 ### 割り当て機能 {#assignments-function}
 
-[割り当て機能](functions.md#assignments-function)を含むコミュニティサイト構造には、設定済みの` [assignments](assignments.md)`コンポーネントが含まれます。
+を含むコミュニティサイト構造 [割り当て機能](functions.md#assignments-function)（設定済みを含む） ` [assignments](assignments.md)` コンポーネント。
 
 ### リファレンス API {#reference-apis}
 

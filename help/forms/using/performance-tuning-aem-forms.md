@@ -1,8 +1,8 @@
 ---
 title: AEM Forms サーバーのパフォーマンスチューニング
-seo-title: AEM Forms サーバーのパフォーマンスチューニング
+seo-title: Performance tuning of AEM Forms server
 description: AEM Forms が最適に動作するようにするために、キャッシュ設定と JVM パラメーターを微調整することができます。また、Web サーバーを使用することにより AEM Forms デプロイメントのパフォーマンスを向上することもできます。
-seo-description: AEM Forms が最適に動作するようにするために、キャッシュ設定と JVM パラメーターを微調整することができます。また、Web サーバーを使用することにより AEM Forms デプロイメントのパフォーマンスを向上することもできます。
+seo-description: For AEM Forms to perform optimally, you can fine-tune the cache settings and JVM parameters. Also, using a web server can enhance the performance of AEM Forms deployment.
 uuid: 77eaeecc-ca52-4d3d-92e6-1ab4d91b9edd
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -12,7 +12,7 @@ role: Admin
 exl-id: bc750571-08a5-414c-aed5-4e839f6695ae
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '866'
 ht-degree: 81%
 
 ---
@@ -48,7 +48,7 @@ AEM Forms のデフォルトキャッシュ設定は、最適なパフォーマ�
 
 ## JVM パラメーター {#jvm-parameters}
 
-最適なパフォーマンスを得るには、次のJVM `init`引数を使用して`Java heap`および`PermGen`を設定することをお勧めします。
+最適なパフォーマンスを得るには、次の JVM を使用することをお勧めします `init` 設定する引数 `Java heap` および `PermGen`.
 
 ```java
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -Xms8192m
@@ -59,7 +59,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 >[!NOTE]
 >
->推奨設定は、Windows 2008 R2 8 CoreおよびOracleHotSpot 1.7（64ビット）JDK用で、システム構成に従って拡大または縮小する必要があります。
+>推奨設定は、Windows 2008 R2 8 Core およびOracleHotSpot 1.7（64 ビット）JDK 用で、システム構成に従って拡大または縮小する必要があります。
 
 ## Web サーバーの使用 {#using-a-web-server}
 
@@ -69,7 +69,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 >[!NOTE]
 >
->次の手順は、Apache Web Server 2.0 32ビット以外のサーバーには適用されません。 その他のサーバーに固有の手順については、対応する製品ドキュメントを参照してください。
+>次の手順は、Apache Web Server 2.0 32 ビット以外のサーバーには適用されません。 その他のサーバーに固有の手順については、対応する製品ドキュメントを参照してください。
 
 次の手順では、Apache Web サーバーで圧縮を有効にするために必要な変更を示します。
 
@@ -81,7 +81,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 Apache は HTTP プロトコルを使用して CRX と情報をやり取りできます。HTTP を使用した場合に最適化される設定になっています。
 
-1. `APACHE_HOME/conf/httpd.conf`ファイル内で次のモジュール設定のコメントを解除します。
+1. 次のモジュール設定を `APACHE_HOME/conf/httpd.conf` ファイル。
 
    ```java
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -91,18 +91,18 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
    >[!NOTE]
    >
-   >Linuxの場合、デフォルトの`APACHE_HOME`は`/etc/httpd/`です。
+   >Linux の場合、デフォルト `APACHE_HOME` が `/etc/httpd/`.
 
 1. crx のポート 4502 のプロキシを設定します。
 
-   次の設定を`APACHE_HOME/conf/httpd.conf`構成ファイルに追加します。
+   次の設定をに追加します。 `APACHE_HOME/conf/httpd.conf` 設定ファイル。
 
    ```java
    ProxyPass / https://<server>:4502/
    ProxyPassReverse / https://<server>:4502/
    ```
 
-1. 圧縮を有効化します。次の設定を`APACHE_HOME/conf/httpd.conf`構成ファイルに追加します。
+1. 圧縮を有効化します。次の設定をに追加します。 `APACHE_HOME/conf/httpd.conf` 設定ファイル。
 
    **HTML5 フォームの場合**
 
@@ -154,7 +154,7 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
 * アプリケーションサーバーの一時ディレクトリ。デフォルトの場所は以下のとおりです。
 
-   * (Jboss) [AEM installation directory]\jboss\standalone\tmp
+   * (JBoss) [AEMインストールディレクトリ]\jboss\standalone\tmp
    * Weblogic - \Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
    * Websphere - \Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
 
@@ -167,12 +167,10 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 * **（JEE 上の AEM Forms のみ）** AEM Forms サーバーのログファイルと一時ディレクトリ。デフォルトの場所は以下のとおりです。
 
    * サーバーログ — `[AEM Forms installation directory]\Adobe\AEM forms\[app-server]\server\all\logs`
-   * 一時ディレクトリ — [AEM Forms installation directory]\temp
+   * 一時ディレクトリ — [AEM Formsインストールディレクトリ]\temp
 
 >[!NOTE]
 >
->* GDSと一時ディレクトリに別の場所を使用している場合は、`https://[server]:[port]/adminui)`でAdminUIを開き、**ホーム/設定/コアシステム設定/コア設定**&#x200B;に移動して、使用中の場所を確認します。
-
-* 推奨ディレクトリを除外した後でもAEM Formsサーバーのパフォーマンスが低下した場合は、Java実行ファイル(java.exe)も除外します。
-
+>* GDS と一時ディレクトリに別の場所を使用している場合は、AdminUI( ) を開きます。 `https://[server]:[port]/adminui)`に移動します。 **「ホーム」>「設定」>「コアシステム設定」>「コア設定」** をクリックして、使用中の場所を確認します。
+* 推奨ディレクトリを除外した後でもAEM Formsサーバーのパフォーマンスが低下した場合は、Java 実行可能ファイル (java.exe) も除外します。
 

@@ -1,8 +1,8 @@
 ---
 title: カスタムツールバーアクションの作成
-seo-title: カスタムツールバーアクションの作成
+seo-title: Creating a custom toolbar action
 description: フォーム開発者は、AEM Forms のアダプティブフォーム用にカスタムツールバーアクションを作成できます。カスタムアクションフォームを使用して、作成者はより多くのワークフローとオプションをエンドユーザーに提供できます。
-seo-description: フォーム開発者は、AEM Forms のアダプティブフォーム用にカスタムツールバーアクションを作成できます。カスタムアクションフォームを使用して、作成者はより多くのワークフローとオプションをエンドユーザーに提供できます。
+seo-description: Form developers can create custom toolbar actions for adaptive forms in AEM Forms. Using custom actions form authors can provide more workflows and options to their end users.
 uuid: 6761f389-1baa-4a59-a6e0-0f86f70fc692
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,12 +11,12 @@ discoiquuid: b80a2bfe-6f57-4229-a9ee-1ec87f3c3306
 exl-id: bb0abe28-843a-4195-afd5-5ee7f0a279be
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 86%
+source-wordcount: '496'
+ht-degree: 85%
 
 ---
 
-# カスタムツールバーアクションの作成  {#creating-a-custom-toolbar-action}
+# カスタムツールバーアクションの作成 {#creating-a-custom-toolbar-action}
 
 ## 前提条件 {#prerequisite}
 
@@ -34,22 +34,22 @@ ht-degree: 86%
 
 カスタムツールバーアクションを作成するには、次の手順を実行して、記入の済んだフォームを送信する前にアダプティブフォームのすべてのフィールドをエンドユーザーがレビューするためのボタンを作成します。
 
-1. アダプティブフォームでサポートされるデフォルトのアクションはすべて`/libs/fd/af/components/actions`フォルダーに存在します。 CRXDEで、`fileattachmentlisting`ノードを`/libs/fd/af/components/actions/fileattachmentlisting`から`/apps/customaction`にコピーします。
+1. アダプティブフォームでサポートされるデフォルトのアクションは、すべて `/libs/fd/af/components/actions` フォルダー。 CRXDE で、 `fileattachmentlisting` ノードから `/libs/fd/af/components/actions/fileattachmentlisting` から `/apps/customaction`.
 
-1. ノードを`apps/customaction`フォルダーにコピーした後、ノード名を`reviewbeforesubmit`に変更します。 また、ノードの`jcr:title`および`jcr:description`プロパティを変更します。
+1. ノードを `apps/customaction` フォルダーの名前をに変更し、ノード名をに変更します。 `reviewbeforesubmit`. また、 `jcr:title` および `jcr:description` ノードのプロパティ。
 
    `jcr:title` のプロパティには、ツールバーダイアログに表示されるアクションの名前が含まれます。`jcr:description` のプロパティには、アクションにマウスオーバーしたときに表示される詳細情報が含まれます。
 
    ![ツールバーのカスタマイズに使用するノードの階層](assets/action3.png)
 
-1. `reviewbeforesubmit`ノードで`cq:template`ノードを選択します。 `guideNodeClass`プロパティの値が`guideButton`であることを確認し、それに応じて`jcr:title`プロパティを変更します。
-1. `cq:Template`ノードのtypeプロパティを変更します。 この例では、タイプのプロパティをボタンに変更します。
+1. 選択 `cq:template` ノード内 `reviewbeforesubmit` ノード。 次の値を `guideNodeClass` プロパティは `guideButton` および `jcr:title` プロパティを適切に設定します。
+1. type プロパティを `cq:Template` ノード。 この例では、タイプのプロパティをボタンに変更します。
 
    このコンポーネントで、生成された HTML に type の値が CSS クラスとして追加されます。ユーザーはこの CSS クラスを使用して、アクションのスタイルを設定できますボタン、送信、リセット、およびタイプの値を保存する際のスタイルが、モバイルとデスクトップデバイスの両方にデフォルトで用意されています。
 
 1. アダプティブフォームの編集のツールバーダイアログからカスタムアクションを選択します。パネルのツールバーにレビューボタンが表示されます。
 
-   ![カスタムアクションは、toolbarで使用できま](assets/custom_action_available_in_toolbar.png) ![す。カスタムで作成したツールバーアクションを表示します](assets/action7.png)
+   ![カスタムアクションはツールバーで使用できます](assets/custom_action_available_in_toolbar.png) ![カスタムで作成したツールバーアクションの表示](assets/action7.png)
 
 1. レビューボタンに機能を持たせるには、`reviewbeforesubmit` ノードにある init.jsp ファイルに JavaScript コード、CSS コード、およびサーバー側コードを追加します。
 

@@ -1,8 +1,8 @@
 ---
 title: プロキシサーバーツールを使用する方法
-seo-title: プロキシサーバーツールを使用する方法
+seo-title: How to use the Proxy Server Tool
 description: プロキシサーバーは、クライアントとサーバー間で要求をリレーする中間サーバーとして機能します
-seo-description: プロキシサーバーは、クライアントとサーバー間で要求をリレーする中間サーバーとして機能します
+seo-description: The proxy server acts as an intermediate server that relays requests between a client and a server
 uuid: 30f4f46d-839e-4d23-a511-12f29b3cc8aa
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,14 +12,14 @@ discoiquuid: dfbc1d2f-80c1-4564-a01c-a5028b7257d7
 exl-id: 63f3a172-b551-433a-aad5-58c6bfda82bb
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '943'
 ht-degree: 88%
 
 ---
 
 # プロキシサーバーツールを使用する方法{#how-to-use-the-proxy-server-tool}
 
-プロキシサーバーは、クライアントとサーバー間の要求をリレーする中間サーバーとして機能します。プロキシサーバーは、クライアントとサーバーのやり取りをすべて追跡し、TCP 通信全体のログを出力します。これにより、メインのサーバーにアクセスすることなく、現状を正確に監視できます。
+プロキシサーバーは、クライアントとサーバー間で要求をリレーする中間サーバーとして機能します。プロキシサーバーは、クライアントとサーバーのやり取りをすべて追跡し、TCP 通信全体のログを出力します。これにより、メインのサーバーにアクセスすることなく、現状を正確に監視できます。
 
 プロキシサーバーは AEM インストール環境の次の場所にあります。
 
@@ -56,7 +56,7 @@ ht-degree: 88%
 
 **オプション**
 
-`-q` （クワイエットモード）
+`-q` （静止モード）
 
 コンソールウィンドウに出力を書き込みません。接続速度を低下させたくない場合や出力をファイルに記録する場合はこのオプションを使用します（-logfile オプションを参照）。
 
@@ -74,11 +74,11 @@ ht-degree: 88%
 
 **`-i <numIndentions>`**（インデントの追加）
 
-アクティブな各接続には、読みやすさを考慮してインデントが指定されます。デフォルト値は 16 レベルです。この機能は`proxy.jar version 1.16`で導入されました。
+アクティブな各接続には、読みやすさを考慮してインデントが指定されます。デフォルト値は 16 レベルです。この機能は、 `proxy.jar version 1.16`.
 
 ### ログ形式 {#log-format}
 
-proxy-2.1.jarによって生成されるログエントリは、すべて次の形式になります。
+proxy-2.1.jar によって生成されるログエントリは、すべて次の形式になります。
 
 `[timestamp (optional)] [Client|Server]-[ConnectionNumber]-[BytePosition] ->[Character Stream]`
 
@@ -88,8 +88,8 @@ proxy-2.1.jarによって生成されるログエントリは、すべて次の�
 
 * C は、このエントリがクライアントからの要求（Web ページの要求）であることを示します。
 * 0 は接続数です（接続カウンターは 0 から開始します）。
-* # 00000バイトストリーム内のオフセット。これは最初のエントリなので、オフセットは0です。
-* `[GET <?>]` は、リクエストのコンテンツです。この例では、HTTPヘッダー(url)の1つを示します。
+* # 00000バイトストリーム内のオフセット。これは最初のエントリなので、オフセットは 0 です。
+* `[GET <?>]` は要求の内容です。この例では、HTTP ヘッダー (url) の 1 つです。
 
 接続を閉じると、次の情報がログに記録されます。
 
@@ -114,7 +114,7 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 
 `/content/test.jpg`
 
-`test.html`の内容は次のとおりです。
+コンテンツ `test.html` 次に該当：
 
 ```xml
 <html>
@@ -128,11 +128,11 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 </html>
 ```
 
-AEMインスタンスが`localhost:4502`上で実行されていると仮定して、次のようにプロキシを起動します。
+AEMインスタンスがで実行されていると仮定します。 `localhost:4502` プロキシは次のように開始します。
 
 `java -jar proxy.jar localhost 4502 4444 -logfile test.log`
 
-これで、CQ/CRXインスタンスは、`localhost:4444`のプロキシを介してアクセスでき、このポートを介するすべての通信が`test.log`に記録されます。
+CQ/CRX インスタンスは、次の場所のプロキシ経由でアクセスできるようになりました： `localhost:4444` このポートを介したすべての通信は、 `test.log`.
 
 プロキシの出力を監視する場合は、ブラウザーと AEM インスタンス間のやり取りを確認します。
 
@@ -147,7 +147,7 @@ using logfile: <some-dir>/crx-quickstart/opt/helpers/test.log
 
 `http://localhost:4444/content/test.html`
 
-ブラウザーがページに対して`GET`リクエストを送信するのを確認します。
+ブラウザが `GET` ページのリクエスト：
 
 ```shell
 C-0-#000000 -> [GET /content/test.html HTTP/1.1 ]

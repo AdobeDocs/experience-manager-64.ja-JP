@@ -1,8 +1,8 @@
 ---
 title: タッチ操作対応 UI 機能のステータス
-seo-title: タッチ操作対応 UI 機能のステータス
+seo-title: Touch UI Feature Status
 description: Adobe Experience Manager 6.3 タッチ操作対応 UI 固有のリリースノート
-seo-description: Adobe Experience Manager 6.3 タッチ操作対応 UI 固有のリリースノート
+seo-description: Release notes specific to Adobe Experience Manager 6.3 Touch UI.
 uuid: dc335334-6c50-4cee-8a2e-183958742686
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4
@@ -12,7 +12,7 @@ discoiquuid: 482b5eb0-1b15-4f10-a9d8-3b72dd74acf8
 exl-id: e1422581-143b-4fce-976e-e5aa3360e2d0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1060'
 ht-degree: 64%
 
 ---
@@ -21,15 +21,15 @@ ht-degree: 64%
 
 >[!CAUTION]
 >
->AEMのバージョン6.4では、[クラシックUIは非推奨(](/help/release-notes/deprecated-removed-features.md))となりました。 AdobeはクラシックUIをさらに強化する予定はありません。タッチ操作対応UIの強力な新機能を利用することをお勧めします。
+>AEMバージョン 6.4 では、 [クラシック UI は非推奨です](/help/release-notes/deprecated-removed-features.md). Adobeはクラシック UI をさらに強化する予定はありません。ユーザーは、タッチ操作対応 UI で利用できる強力な新機能を活用することをお勧めします。
 
 バージョン 6.0 から、AEM では、Adobe Marketing Cloud および全体的なアドビユーザーインターフェイスガイドラインと合致する「タッチ操作対応 UI」と呼ばれる（「タッチ UI」とも呼ばれます）新型ユーザーインターフェイスを採用しています。タッチ操作対応 UI は、従来のデスクトップ指向のインターフェイス（「クラシック UI」と呼ばれます）とほぼ同等の機能を備え、AEM の標準 UI となりました。
 
 ほとんどの機能はタッチ操作対応 UI に搭載されていますが、まだ完成せず、今後のリリースで追加される機能もあります。
 
-次のリストは、AEM 6.4で実装されている機能の現在のステータスを示しています。
+次のリストは、AEM 6.4 で実装されている機能の現在のステータスを示しています。
 
-AEM 6.4にアップグレードするお客様への推奨事項について詳しくは、[お客様向けのユーザーインターフェイスRecommendations](/help/sites-deploying/ui-recommendations.md)を参照してください。
+AEM 6.4 にアップグレードするお客様の推奨事項については、 [お客様向けのユーザーインターフェイスRecommendations](/help/sites-deploying/ui-recommendations.md) 」を参照してください。
 
 >[!NOTE]
 >
@@ -44,14 +44,14 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
 ## 凡例 {#legend}
 
 * **完全**：この機能はタッチ操作対応 UI で完全に利用できます。
-* **主に**:この機能は、タッチ操作対応UIでほとんど利用できます。
+* **ほぼ**:この機能は、ほとんどの場合、タッチ操作対応 UI で使用できます。
 * **消失**：この機能はタッチ操作対応 UI に存在せず、この操作をおこなうにはクラシック UI を使用する必要があります。
 * **置換**：この機能は動作が異なる新しい実装で置換されています。
 * **削除**：この機能は、現在タッチ操作対応 UI に存在せず、置換もされません。
 
 ## 機能ステータス：サイト管理 {#feature-status-sites-admin}
 
-これは、クラシックUIサイト管理(`/siteadmin`)が持つ機能とタッチ操作対応UI(`/sites.html`)のステータスの一覧です。
+これは、クラシック UI サイト管理者 ( `/siteadmin`) が、ステータスがタッチ操作対応 UI( `/sites.html`) をクリックします。
 
 <table> 
  <tbody>
@@ -63,7 +63,7 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
   <tr>
    <td>サイト階層を移動</td> 
    <td>完了<br /> </td> 
-   <td>AEM 6.4では、<a href="/help/sites-authoring/basic-handling.md#content-tree">コンテンツツリービュー</a>が導入されました。</td> 
+   <td>AEM 6.4 では、 <a href="/help/sites-authoring/basic-handling.md#content-tree">コンテンツツリー表示</a>.</td> 
   </tr>
   <tr>
    <td>ワークフローを開始</td> 
@@ -86,7 +86,7 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
    <td> </td> 
   </tr>
   <tr>
-   <td>新しいライブコピー<br />を作成します。 </td> 
+   <td>新しいライブコピーを作成 <br /> </td> 
    <td>完了<br /> </td> 
    <td> </td> 
   </tr>
@@ -213,14 +213,14 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
   <tr>
    <td>参照</td> 
    <td>ほぼ完全</td> 
-   <td>受信ページのリンクの表示は、AEMの2019リリースで追加されます。</td> 
+   <td>受信ページのリンクの表示は、AEMの 2019 リリースで追加されます。</td> 
   </tr>
  </tbody>
 </table>
 
 ## 機能ステータス：ページエディター {#feature-status-page-editor}
 
-これは、クラシックUIページエディター(`/cf#`)が持つ機能とタッチ操作対応(`/editor.html`)のステータスのリストです。
+これは、クラシック UI のページエディター ( `/cf#`) が、ステータスがタッチ対応 ( `/editor.html`) をクリックします。
 
 <table> 
  <tbody>
@@ -317,7 +317,7 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
   <tr>
    <td>ワークフローパッケージ処理</td> 
    <td>ほぼ完全</td> 
-   <td>タッチ操作対応UIで完全にアクセス可能。 クラシックUIで複数のワークフローペイロードが引き続き提供される。<br /> </td> 
+   <td>タッチ操作対応 UI から完全にアクセス可能。 クラシック UI では、複数のワークフローペイロードが引き続き表示されます。<br /> </td> 
   </tr>
   <tr>
    <td>ページをロック／ロック解除</td> 
@@ -325,7 +325,7 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
    <td> </td> 
   </tr>
   <tr>
-   <td>ページを公開 <br /> </td> 
+   <td>ページを発行 <br /> </td> 
    <td>完了<br /> </td> 
    <td> </td> 
   </tr>
@@ -426,7 +426,7 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
   </tr>
   <tr>
    <td>コンテンツを parsys プレースホルダーに直接ドラッグ＆ドロップしてコンポーネントを自動作成<br /> </td> 
-   <td>完全</td> 
+   <td>完了</td> 
    <td> </td> 
   </tr>
  </tbody>
@@ -434,7 +434,7 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
 
 ## 機能ステータス：テキスト、テーブルおよび画像エディター {#feature-status-text-table-and-image-editors}
 
-これは、クラシックUIのテキスト、テーブル、画像エディターの機能とタッチ操作対応UIのステータスのリストです。
+これは、クラシック UI のテキスト、テーブル、画像エディターの機能と、タッチ操作対応 UI のステータスの一覧です。
 
 <table> 
  <tbody>
@@ -449,92 +449,92 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
    <td>インプレース、ダイアログ、フルスクリーンで使用できます。</td> 
   </tr>
   <tr>
-   <td>RTEプラグインの有効化/無効化</td> 
+   <td>RTE プラグインの有効化/無効化</td> 
    <td>完了<br /> </td> 
-   <td><a href="/help/sites-authoring/templates.md">テンプレートエディター</a>を使用して実行できます。</td> 
+   <td>実行するには、 <a href="/help/sites-authoring/templates.md">テンプレートエディター</a>.</td> 
   </tr>
   <tr>
-   <td>プレーンテキストにRTEを使用</td> 
-   <td>完了<br /> </td> 
-   <td> </td> 
-  </tr>
-  <tr>
-   <td>RTEプラグイン：リンクとアンカー</td> 
-   <td>完了</td> 
-   <td> </td> 
-  </tr>
-  <tr>
-   <td>RTEプラグイン：文字マップ</td> 
-   <td>完了</td> 
-   <td> </td> 
-  </tr>
-  <tr>
-   <td>RTEプラグイン：コピー/貼り付け</td> 
-   <td>完了</td> 
-   <td> </td> 
-  </tr>
-  <tr>
-   <td>RTEプラグイン：Microsoft Word<br />から貼り付け </td> 
-   <td>完了</td> 
-   <td> </td> 
-  </tr>
-  <tr>
-   <td>RTEプラグイン：検索と置換</td> 
-   <td>完了</td> 
-   <td> </td> 
-  </tr>
-  <tr>
-   <td>RTEプラグイン：テキストフォーマット（太字、...）</td> 
+   <td>プレーンテキストに RTE を使用</td> 
    <td>完了<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：下付き文字と上付き文字</td> 
+   <td>RTE プラグイン：リンクとアンカー</td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：均等配置</td> 
+   <td>RTE プラグイン：文字マップ</td> 
+   <td>完了</td> 
+   <td> </td> 
+  </tr>
+  <tr>
+   <td>RTE プラグイン：コピー/貼り付け</td> 
+   <td>完了</td> 
+   <td> </td> 
+  </tr>
+  <tr>
+   <td>RTE プラグイン：Microsoft Word から貼り付け<br /> </td> 
+   <td>完了</td> 
+   <td> </td> 
+  </tr>
+  <tr>
+   <td>RTE プラグイン：検索と置換</td> 
+   <td>完了</td> 
+   <td> </td> 
+  </tr>
+  <tr>
+   <td>RTE プラグイン：テキストフォーマット（太字、...）</td> 
    <td>完了<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：リスト（箇条書き/数値）</td> 
+   <td>RTE プラグイン：下付き文字と上付き文字</td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：段落書式</td> 
+   <td>RTE プラグイン：両端揃え</td> 
    <td>完了<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：テキストスタイル</td> 
+   <td>RTE プラグイン：リスト（箇条書き/数値）</td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：ソースエディタ（HTMLを編集）<br /> </td> 
+   <td>RTE プラグイン：段落書式</td> 
+   <td>完了<br /> </td> 
+   <td> </td> 
+  </tr>
+  <tr>
+   <td>RTE プラグイン：テキストスタイル</td> 
+   <td>完了</td> 
+   <td> </td> 
+  </tr>
+  <tr>
+   <td>RTE プラグイン：ソースエディタ ( 編集HTML)<br /> </td> 
    <td>完了<br /> </td> 
    <td>ダイアログとフルスクリーンでのみ使用できます。<br /> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：スペルチェッカー</td> 
+   <td>RTE プラグイン：スペルチェッカー</td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：表（埋め込み表エディタ）</td> 
+   <td>RTE プラグイン：表（埋め込み表エディタ）</td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：取り消し/やり直し<br /> </td> 
+   <td>RTE プラグイン：取り消し/やり直し<br /> </td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>RTEプラグイン：インライン画像を許可する</td> 
+   <td>RTE プラグイン：インライン画像を許可</td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
@@ -544,7 +544,7 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
    <td>インプレース、ダイアログ、フルスクリーンで使用できます。<br /> </td> 
   </tr>
   <tr>
-   <td>画像を表のセルにドラッグ&amp;ドロップ<br /> </td> 
+   <td>表のセルに画像をドラッグ&amp;ドロップ<br /> </td> 
    <td>完了</td> 
    <td>インラインで使用可能</td> 
   </tr>
@@ -554,37 +554,37 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
    <td>インプレース、ダイアログ、フルスクリーンで使用できます。<br /> </td> 
   </tr>
   <tr>
-   <td>IPEプラグインの有効化/無効化</td> 
+   <td>IPE プラグインを有効/無効にする</td> 
    <td>完了</td> 
-   <td><a href="/help/sites-authoring/templates.md">テンプレートエディター</a>にUIが追加されました。</td> 
+   <td>現在、 <a href="/help/sites-authoring/templates.md">テンプレートエディター</a>.</td> 
   </tr>
   <tr>
-   <td>IPEプラグイン：切り抜き</td> 
+   <td>IPE プラグイン：切り抜き</td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>IPEプラグイン：反転</td> 
+   <td>IPE プラグイン：反転</td> 
    <td>完了<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>IPEプラグイン：取り消し/やり直し</td> 
+   <td>IPE プラグイン：取り消し/やり直し</td> 
    <td>完了<br /> </td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>IPEプラグイン：画像マップ</td> 
+   <td>IPE プラグイン：画像マップ</td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>IPEプラグイン：回転</td> 
+   <td>IPE プラグイン：回転</td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>IPEプラグイン：ズーム</td> 
+   <td>IPE プラグイン：ズーム</td> 
    <td>完了<br /> </td> 
    <td> </td> 
   </tr>
@@ -605,7 +605,7 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
   <tr>
    <td>タスク管理</td> 
    <td>置換</td> 
-   <td>6.0では、<a href="/help/sites-authoring/projects.md">プロジェクトとタスク</a>.<br />が導入されました </td> 
+   <td>6.0 を導入 <a href="/help/sites-authoring/projects.md">プロジェクトとタスク</a>.<br /> </td> 
   </tr>
   <tr>
    <td>ワークフローインボックス<br /> </td> 
@@ -613,12 +613,12 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
    <td> </td> 
   </tr>
   <tr>
-   <td>ページテンプレート設定へのワークフロー(<code>/etc/workflow/wcm/templates.html</code>)</td> 
+   <td>ワークフローからページテンプレートの設定 (<code>/etc/workflow/wcm/templates.html</code>)</td> 
    <td>消失<br /> </td> 
    <td>クラシック UI を使用します。</td> 
   </tr>
   <tr>
-   <td>管理UIのタグ付け<br /> </td> 
+   <td>管理 UI のタグ付け<br /> </td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
@@ -628,22 +628,22 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
    <td> </td> 
   </tr>
   <tr>
-   <td>ブループリントマネージャーUI</td> 
+   <td>ブループリントマネージャー UI</td> 
    <td>完了</td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>ロールアウト設定UI</td> 
+   <td>ロールアウト設定 UI</td> 
    <td>消失</td> 
    <td>クラシック UI を使用します。</td> 
   </tr>
   <tr>
-   <td>ユーザー、グループ、権限UI<br /> </td> 
+   <td>ユーザー、グループ、権限 UI<br /> </td> 
    <td>ほぼ完全<br /> </td> 
-   <td>高度な権限編集の場合は、クラシックUIを使用します。<br /> </td> 
+   <td>高度な権限編集の場合は、クラシック UI を使用します。<br /> </td> 
   </tr>
   <tr>
-   <td>バージョンのパージ(<code>/etc/versioning/purge.html</code>)</td> 
+   <td>バージョンをパージ (<code>/etc/versioning/purge.html</code>)</td> 
    <td>消失</td> 
    <td>クラシック UI を使用します。</td> 
   </tr>
@@ -653,7 +653,7 @@ AEM 6.4にアップグレードするお客様への推奨事項について詳�
    <td>クラシック UI を使用します。<br /> </td> 
   </tr>
   <tr>
-   <td>バルクエディター(<code>/etc/importers/bulkeditor.html</code>)</td> 
+   <td>バルクエディター (<code>/etc/importers/bulkeditor.html</code>)</td> 
    <td>消失<br /> </td> 
    <td>クラシック UI を使用します。</td> 
   </tr>

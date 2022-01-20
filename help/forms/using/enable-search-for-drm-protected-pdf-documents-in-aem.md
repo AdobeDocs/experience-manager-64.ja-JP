@@ -1,8 +1,8 @@
 ---
 title: Document Security によって保護された PDF ドキュメントを AEM で検索可能にする
-seo-title: Document Security によって保護された PDF ドキュメントを AEM で検索可能にする
+seo-title: Enable AEM to search document security protected PDF documents
 description: 'ネイティブ AEM 検索を有効にし、DRM 保護された PDF ドキュメントで全テキストの検索を実行する方法について説明します。  '
-seo-description: 'ネイティブ AEM 検索を有効にし、DRM 保護された PDF ドキュメントで全テキストの検索を実行する方法について説明します。  '
+seo-description: Learn how to enable native AEM search to perform full-text search on DRM protected PDF documents.
 uuid: c743cda3-252f-4c1f-8d94-e6d26d91dcd8
 contentOwner: khsingh
 content-type: reference
@@ -13,7 +13,7 @@ feature: Document Security
 exl-id: c405c69b-3588-4701-8f36-1ea0680e056d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '660'
 ht-degree: 90%
 
 ---
@@ -35,14 +35,14 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 * JEE サーバー上で AEM Forms のみを使用している場合、Indexer パッケージはすでにインストールされています。
 * すべてのバンドルが正常に実行していることを確認します。アクティブ状態になっていないバンドルが存在する場合は、すべてのバンドルが起動して実行されるまで待ちます。
 
-   * OSGi上のAEM Formsの場合、バンドルは`https://[server]:[port]/system/console/bundles`にリストされます。
-   * JEE上のAEM Formsの場合、バンドルは`https://[server]:[port]/[context-path]/system/console/bundles`に一覧表示されます。 例えば、`http://localhost:8080/lc/system/console/bundles` のように指定します。
+   * OSGi 上のAEM Formsの場合、バンドルは次の場所にリストされます。 `https://[server]:[port]/system/console/bundles`.
+   * JEE 上のAEM Formsの場合、バンドルは次の場所に一覧表示されます。 `https://[server]:[port]/[context-path]/system/console/bundles`. 例えば、`http://localhost:8080/lc/system/console/bundles` のように指定します。
 
-* *sun.util.calendar*&#x200B;パッケージをに追加し許可リストます。 パッケージをに追許可リスト加するには、次の手順を実行します。
+* を *sun.util.calendar* パッケージをに追加し許可リストます。 パッケージをに追加するに許可リストは、次の手順を実行します。
 
-   1. AEM Web コンソールを開きます。URLは`https://[server]:[port]/system/console/configMgr`です。
+   1. AEM Web コンソールを開きます。URL は `https://[server]:[port]/system/console/configMgr`.
    1. **デシリアライゼーションファイアウォール設定**&#x200B;を探して開きます。
-   1. sun.util.calendarパッケージを「ホワイトリストに登録されたクラスまたはパッケージの接頭辞」フィールドに追加し、「**保存**」をクリックします。
+   1. sun.util.calendar パッケージを「ホワイトリストに登録されたクラスまたはパッケージのプレフィックス」フィールドに追加し、 **保存**.
 
 ## AEM Forms JEE と OSGi スタック間の安全な接続の確立 {#establish-a-secure-connection-between-aem-forms-jee-and-osgi-stacks}
 
@@ -53,7 +53,7 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 
 ### JEE 上の AEM Forms の管理者資格情報を使用して Adobe LiveCycle Client SDK Bundle を設定します {#configure-adobe-livecycle-client-sdk-bundle-with-aem-forms-on-jee-admin-credentials}
 
-1. AEM Web コンソールを開きます。URLは`https://[server]:[port]/system/console/configMgr`です。
+1. AEM Web コンソールを開きます。URL は `https://[server]:[port]/system/console/configMgr`.
 1. **Adobe LiveCycle Client SDK Bundle** を探して開きます。次の各フィールドの値を指定します。
 
    * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS 経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEE キーストアファイル上の Forms のパス> のパラメータで AEM サーバーを再起動します。
@@ -63,10 +63,10 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 
    「**保存**」をクリックします。AEM は Document Security によって保護された PDF ドキュメントの検索が有効になっています。
 
-### 相互認証を使用した Adobe LiveCycle Client SDK Bundle の設定  {#configure-adobe-livecycle-client-sdk-bundle-using-mutual-authentication}
+### 相互認証を使用した Adobe LiveCycle Client SDK Bundle の設定 {#configure-adobe-livecycle-client-sdk-bundle-using-mutual-authentication}
 
 1. JEE 上の AEM Forms の相互認証を有効にします。詳しくは、「[CAC および相互認証](https://helpx.adobe.com/jp/livecycle/kb/cac-mutual-authentication.html)」を参照してください。
-1. AEM Web コンソールを開きます。URLは`https://[server]:[port]/system/console/configMgr`です。
+1. AEM Web コンソールを開きます。URL は `https://[server]:[port]/system/console/configMgr`.
 1. **Adobe LiveCycle Client SDK** Bundle を探して開きます。次の各プロパティの値を指定します。
 
    * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS 経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEE キーストアファイル上の AEM Forms のパス> のパラメータで AEM サーバーを再起動します。
@@ -79,7 +79,7 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 
    「**保存**」をクリックします。AEM は Document Security によって保護された PDF ドキュメントの検索が有効になっています。
 
-## サンプルポリシーで保護された PDF ドキュメントのインデックス作成  {#index-a-sample-policy-protected-pdf-document}
+## サンプルポリシーで保護された PDF ドキュメントのインデックス作成 {#index-a-sample-policy-protected-pdf-document}
 
 1. 管理者として AEM Assets にログインします。
 1. AEM Digital Asset Manager でフォルダーを作成し、新しく作成したフォルダーにポリシーで保護された PDF ドキュメントをアップロードします。

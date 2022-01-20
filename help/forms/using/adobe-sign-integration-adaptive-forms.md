@@ -1,18 +1,18 @@
 ---
 title: Adobe Sign の AEM Forms への統合
-seo-title: Adobe Sign の AEM Forms への統合
+seo-title: Integrate Adobe Sign with AEM Forms
 description: AEM Forms 用に Adobe Sign を設定する方法
-seo-description: AEM Forms 用に Adobe Sign を設定する方法
+seo-description: Learn how to configure Adobe Sign for AEM Forms
 uuid: 9efd5c44-3d87-4c56-aa6c-e65397fff243
 contentOwner: sashanka
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 7d494c2e-d457-4d52-89be-a77ffa07eb88
-feature: アダプティブForms、Adobe Sign
+feature: Adaptive Forms, Adobe Sign
 exl-id: e7c27623-a889-4bd5-bfff-cfe513cd1a35
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '967'
 ht-degree: 74%
 
 ---
@@ -23,7 +23,7 @@ Adobe Sign により、アダプティブフォームの電子署名ワークフ
 
 Adobe Sign とアダプティブフォームの一般的なシナリオでは、**サービスを申し込む**&#x200B;ためのアダプティブフォームをユーザーが入力します。例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームの入力、送信、署名を行うと、サービスプロバイダーにそのフォームが送信され、追加の処理が実行されます。サービスプロバイダーは受信した申込フォームを確認し、Adobe Sign を使用してそのフォームを承認します。これに類似した電子署名ワークフローを有効にするには、Adobe Sign を AEM Forms に統合します。
 
-AEM FormsでAdobe Signを使用するには、AEMクラウドサービスでAdobe Signを設定します。
+Adobe SignをAEM Formsと共に使用するには、AEM as a Cloud Services でAdobe Signを設定します。
 
 ## 前提条件 {#prerequisites}
 
@@ -40,21 +40,21 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 
 上記の前提条件の準備が完了したら、以下の手順により、オーサーインスタンス上の AEM Forms を使用して Adobe Sign を設定します。
 
-1. AEM Forms のオーサーインスタンスで、**ツール**![ハンマー](assets/hammer.png)／**一般**／**設定ブラウザー**&#x200B;に移動します。
+1. AEM Forms のオーサーインスタンスで、**ツール** ![ハンマー](assets/hammer.png)／**一般**／**設定ブラウザー**&#x200B;に移動します。
    * 詳しくは、[](/help/sites-administering/configurations.md)設定ブラウザーのドキュメントを参照してください。
 1. **[!UICONTROL 設定ブラウザー]**&#x200B;ページで「**[!UICONTROL 作成]**」をタップします。
 1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログで、設定の&#x200B;**[!UICONTROL タイトル]**&#x200B;を指定し、「**[!UICONTROL クラウド設定]**」を有効にして「**[!UICONTROL 作成]**」をタップします。これにより、クラウドサービス用の設定コンテナが作成されます。
-1. **ツール** ![ハンマー](assets/hammer.png) > **Cloud Services** > **Adobe Sign**&#x200B;に移動し、上記の手順で作成した設定コンテナを選択します。
+1. に移動します。 **ツール** ![ハンマー](assets/hammer.png) > **Cloud Services** > **Adobe Sign** をクリックし、上記の手順で作成した設定コンテナを選択します。
 
    >[!NOTE]
    >
-   >手順1～4を実行して、新しい設定コンテナを作成し、コンテナ内にAdobe Sign設定を作成するか、**ツール** ![hammer](assets/hammer.png) > **Cloud Services** > **Adobe Sign**&#x200B;内の既存の`global`フォルダーを使用します。 新しい設定コンテナで設定を作成する場合は、アダプティブフォームを作成する際に、「**[!UICONTROL 設定コンテナ]**」フィールドで必ずコンテナ名を指定してください。
+   >手順 1～4 を実行して、新しい設定コンテナを作成し、コンテナ内にAdobe Sign設定を作成するか、既存の `global` フォルダー内 **ツール** ![ハンマー](assets/hammer.png) > **Cloud Services** > **Adobe Sign**. 新しい設定コンテナで設定を作成する場合、必ず **[!UICONTROL 設定コンテナ]** フィールドに値を入力する必要があります。
 
    >[!NOTE]
    クラウドサービス設定ページの URL が「**HTTPS**」で始まっていることを確認してください。「HTTPS」で始まっていない場合は、AEM Forms サーバーで [SSL を有効](/help/sites-administering/ssl-by-default.md)にしてください。
 
-1. 設定ページで、「**[!UICONTROL 作成]**」をタップして、AEM FormsでAdobe Sign設定を作成します。
-1. **[!UICONTROL Adobe Sign設定を作成]**&#x200B;ページの「**[!UICONTROL 一般]**」タブで、設定の「**名前**」を指定して、「**次へ**」をタップします。 必要に応じてタイトルを指定し、設定のサムネイルを参照して選択することもできます。
+1. 設定ページで、をタップします。 **[!UICONTROL 作成]** AEM FormsでAdobe Sign設定を作成します。
+1. 内 **[!UICONTROL 一般]** タブ **[!UICONTROL Adobe Sign設定を作成]** ページで、 **名前** をタップします。 **次へ**. 必要に応じてタイトルを指定し、設定のサムネイルを参照して選択することもできます。
 
 1. 現在のブラウザーウィンドウの URL をメモ帳にコピーします。この URL は、AEM Forms で Adobe Sign アプリケーションを設定する際に必要になります。
 
@@ -92,26 +92,26 @@ Adobe Sign を AEM Forms に統合するには、以下のものが必要にな�
 
 1. AEM Web コンソールを開きます。URL は `https://'[server]:[port]'/system/console/configMgr` です
 1. **Forms 共通設定サービス**&#x200B;を開きます。
-1. 「**許可**」フィールドで、「****&#x200B;すべてのユーザーを選択します。匿名ユーザーまたはログインユーザーは、添付ファイルのプレビュー、フォームの検証と署名を行い、「**保存」をクリックします。**&#x200B;オーサーインスタンスが Adobe Sign を使用するように設定されます。
-1. [replication](/help/sites-deploying/replication.md)を使用して、対応するパブリッシュインスタンスで同じ設定を作成します。
+1. 内 **許可** フィールド **選択** すべてのユーザー — 匿名ユーザーまたはログインユーザーは、添付ファイルのプレビュー、フォームの検証と署名を行い、 **保存します。**&#x200B;オーサーインスタンスが Adobe Sign を使用するように設定されます。
+1. 用途 [複製](/help/sites-deploying/replication.md) 対応するパブリッシュインスタンスで同じ設定を作成する場合。
 
-これで Adobe Sign が AEM Forms に統合され、アダプティブフォームで使用できるようになりました。[アダプティブフォームでAdobe Signサービスを使用するには](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)、上記でアダプティブフォームのプロパティで作成した設定コンテナを指定します。
+これで Adobe Sign が AEM Forms に統合され、アダプティブフォームで使用できるようになりました。宛先 [アダプティブフォームでのAdobe Signサービスの使用](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)で、上記でアダプティブフォームのプロパティで作成した設定コンテナを指定します。
 
 ## Adobe Sign スケジューラーを設定して署名ステータスを同期する {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
 
-Adobe Sign が有効になっているアダプティブフォームは、すべての署名者がフォームに署名するまで送信されません。Adobe Sign スケジューラーサービスは、デフォルトで、署名者からの応答を 24 時間ごとにチェック（ポーリング）するように設定されています。現在の環境に合わせて、このデフォルト値を変更することができます。次の手順を実行して、デフォルトの間隔を変更します。
+Adobe Sign が有効になっているアダプティブフォームは、すべての署名者がフォームに署名するまで送信されません。Adobe Sign スケジューラーサービスは、デフォルトで、署名者からの応答を 24 時間ごとにチェック（ポーリング）するように設定されています。現在の環境に合わせて、このデフォルト値を変更することができます。デフォルトの間隔を変更するには、次の手順を実行します。
 
 1. 管理者の資格情報を使用して AEM Forms サーバーにログインし、**ツール**／**操作**／**Web コンソール**&#x200B;に移動します。
 
-   また、ブラウザーウィンドウで次のURLを開くこともできます。
+   また、ブラウザーウィンドウで次の URL を開くこともできます。
    `https://[localhost]:'port'/system/console/configMgr`
 
-1. 「**Adobe Sign 設定サービス**」オプションを探して選択します。「[ステータス更新スケジューラーの式](https://en.wikipedia.org/wiki/Cron#CRON_expression)」フィールドで **Cron 式**&#x200B;を指定して「**保存**」をクリックします。例えば、毎日午前0時に設定サービスを実行するには、「**Status Update Scheduler Expression**」フィールドに`0 0 0 1/1 * ? *`と指定します。
+1. 「**Adobe Sign 設定サービス**」オプションを探して選択します。「[ステータス更新スケジューラーの式](https://en.wikipedia.org/wiki/Cron#CRON_expression)」フィールドで **Cron 式**&#x200B;を指定して「**保存**」をクリックします。例えば、毎日午前 0 時に設定サービスを実行するには、次のように指定します。 `0 0 0 1/1 * ? *` 内 **ステータス更新スケジューラの式** フィールドに入力します。
 
 これで、Adobe Sign のステータスを同期するデフォルトの間隔が変更されました。
 
 ## 関連記事 {#related-articles}
 
 * [アダプティブフォームで Adobe Sign を使用する](../../forms/using/working-with-adobe-sign.md)
-* [AEM FormsでのAdobe Signの使用（ビデオ）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
+* [Adobe SignとAEM Formsの連携（ビデオ）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
 * [Adobe Sign の AEM Forms への統合](../../forms/using/adobe-sign-integration-adaptive-forms.md)

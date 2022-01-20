@@ -9,7 +9,7 @@ feature: Communities
 role: User
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '506'
 ht-degree: 94%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 94%
    + [イネーブルメントのための初期設定](enablement-setup.md)
    + [イネーブルメントのための新しいコミュニティサイトの作成](enablement-create-site.md)
    + [イネーブルメントリソースの作成と割り当て](resource.md)
-   + [公開済みイネーブルメントサイトを体験する](enablement-published-site.md)
+   + [公開済みイネーブルメントサイトを体験してください](enablement-published-site.md)
 + デプロイ {#deploy}
    + [Communities のデプロイ](deploy-communities.md)
    + [AEM 6.4 Communities へのアップグレード](upgrade.md)

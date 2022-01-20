@@ -14,7 +14,7 @@ ht-degree: 91%
 
 # ビデオレンディション {#video-renditions}
 
-Adobe Experience Manager Assetsは、OGG、FLVなど、様々な形式のビデオアセット用のビデオレンディションを生成します。
+Adobe Experience Manager Assets は、OGG、FLV など、様々な形式のビデオアセット用のビデオレンディションを生成します。
 
 AEM Assets では、メディアアセットの静的レンディションと動的レンディション（DM エンコードされたレンディション）がサポートされています。
 

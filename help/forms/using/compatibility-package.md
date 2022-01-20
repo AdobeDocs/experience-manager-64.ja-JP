@@ -18,7 +18,7 @@ ht-degree: 80%
 
 ---
 
-# 互換性パッケージのインストール {#compatibility-package}
+# 互換性パッケージをインストール {#compatibility-package}
 
 互換性パッケージを AEM Forms 6.4 にインストールすると、AEM Forms 6.3 および非推奨になったアダプティブォームテンプレートとページから Correspondence Management アセットを使用できます
 
@@ -33,26 +33,26 @@ AEMFD 互換性パッケージを使用すると、AEM Forms 6.4 で AEM Forms 6
 * データディクショナリ
 * アダプティブフォームの非推奨になったテンプレートおよびページ
 
-詳しくは、[互換性パッケージ](/help/forms/using/compatibility-package.md#assetsmadecompatible)をインストールして、AEM Forms 6.4と互換性を持たせたアセットを参照してください。
+詳しくは、 [互換性パッケージをインストールしてAEM Forms 6.4 と互換性を持たせるアセット](/help/forms/using/compatibility-package.md#assetsmadecompatible).
 
 ## AEM Forms 6.4 で AEM Forms 6.3 と 6.2 のアセットのサポートを追加する {#add-support-for-aem-forms-and-assets-in-aem-forms}
 
 アップグレードを実行した後、AEMFD 互換性パッケージをインストールしてアセットに 6.4 との互換性を持たせるには、以下を実行します。
 
-[AEM互換性パッケージ](/help/sites-deploying/backward-compatibility.md)が事前にインストールされていることを確認します。
+次の条件を満たしていることを確認します。 [AEM互換性パッケージ](/help/sites-deploying/backward-compatibility.md) プリインストール済み。
 
-1. [互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)をインストールします。
+1. のインストール [互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
    パッケージのアップロードおよびインストールについて詳しくは、「[パッケージの作業方法](/help/sites-administering/package-manager.md)」を参照してください。
 
 1. ログの状態が安定したら、サーバーを再起動します。
 1. アセットに 6.4 との互換性を持たせるには、移行ユーティリティを使用します。
 
-   詳しくは、[移行ユーティリティ](/help/forms/using/migration-utility.md)を参照してください。
+   詳しくは、 [移行ユーティリティ](/help/forms/using/migration-utility.md).
 
 ## 互換性パッケージをインストールすることにより AEM Forms 6.4 と互換性を持つようになったアセット {#assetsmadecompatible}
 
-互換性パッケージをインストールすると、次のアセットとテンプレートをAEM Forms 6.4と互換性を持たせることができます。
+互換性パッケージをインストールすると、次のアセットおよびテンプレートをAEM Forms 6.4 と互換性を持たせることができます。
 
 * AEM 6.3 以前の Correspondence Management アセット
 

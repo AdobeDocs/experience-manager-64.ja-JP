@@ -1,8 +1,8 @@
 ---
 title: ファイルライブラリ機能
-seo-title: ファイルライブラリ機能
+seo-title: File Library Feature
 description: ファイルライブラリ機能により、サインインしたサイト訪問者がファイルをアップロード、管理、ダウンロードできるようになります
-seo-description: ファイルライブラリ機能により、サインインしたサイト訪問者がファイルをアップロード、管理、ダウンロードできるようになります
+seo-description: The File Library feature lets signed-in site visitors upload, manage, and download files
 uuid: 7da94703-8334-4c02-ba2a-55b5cde22e6c
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: cdcae09f-c3cb-471e-863f-b33130e9df0f
 exl-id: c72b246d-442e-4841-810d-1045e83f60f9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 82%
+source-wordcount: '660'
+ht-degree: 81%
 
 ---
 
@@ -26,29 +26,29 @@ ht-degree: 82%
 ドキュメントのこのセクションでは、以下の内容について説明します。
 
 * ファイルライブラリ機能をAEMサイトに追加する
-* `File Library`コンポーネントの設定
+* の設定 `File Library` コンポーネント
 
 ## ファイルライブラリをページに追加 {#adding-a-file-library-to-a-page}
 
-`File Library`コンポーネントをオーサリングモードでページに追加するには、
+を追加するには、以下を実行します。 `File Library` コンポーネントをオーサリングモードでページに追加する場合は、
 
 * `Communities / File Library`
 
 コンポーネントを探し、ページ上の位置にドラッグします。
 
-必要な情報については、[コミュニティコンポーネントの基本](basics.md)を参照してください。
+必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
 
-[必須のクライアント側ライブラリ](essentials-file-library.md#essentials-for-client-side)を含めると、`File Library`コンポーネントは次のように表示されます。
+次の場合に [必要なクライアント側ライブラリ](essentials-file-library.md#essentials-for-client-side) が含まれる場合、この方法で `File Library` コンポーネントが表示されます。
 
 ![chlimage_1-430](assets/chlimage_1-430.png)
 
 ## ファイルライブラリの設定 {#configuring-file-library}
 
-配置済みの`File Library`コンポーネントを選択し、`Configure`アイコンを選択すると、編集ダイアログが開きます。
+配置された `File Library` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
 
 ![chlimage_1-431](assets/chlimage_1-431.png) ![chlimage_1-432](assets/chlimage_1-432.png)
 
-### 「コメント」タブ{#comments-tab}
+### 「コメント」タブ {#comments-tab}
 
 「**[!UICONTROL コメント]**」タブでは、アップロードしたファイルに対するコメントを表示するかどうかと、その方法を指定します。
 
@@ -57,11 +57,11 @@ ht-degree: 82%
 * **[!UICONTROL 1 ページのコメント数]** 1 ページに表示されるコメント数と返信数を制限します。初期設定は です。 
 **10**.
 
-* **[!UICONTROL 最大ファイルサイズ]**&#x200B;この値によって、アップロードするファイルサイズが制限されます。デフォルトの制限は104857600(10 Mb)です。
+* **[!UICONTROL 最大ファイルサイズ]**&#x200B;この値によって、アップロードするファイルサイズが制限されます。デフォルトの制限は104857600(10 MB) です。
 
 * **[!UICONTROL メッセージの最大長]**&#x200B;テキストボックスに入力できる最大文字数です。初期設定は 4096 文字です。
 
-* **[!UICONTROL 許可されるファイルタイプ]**&#x200B;ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルタイプを指定した場合、指定しなかったファイルは許可されません。 デフォルトでは、すべてのファイルタイプが許可されるように指定されていません。
+* **[!UICONTROL 許可されるファイルタイプ]**&#x200B;ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルタイプが指定されている場合、指定されていないファイルは許可されません。 初期設定では何も指定されず、すべてのファイルタイプが許可されます。
 
 * **[!UICONTROL リッチテキストエディター]**&#x200B;オンにすると、マークアップを使用してコメントを入力できます。初期設定はオフです。
 
@@ -79,7 +79,7 @@ ht-degree: 82%
 
 * **[!UICONTROL スレッド化された返信を許可]**&#x200B;オンにすると、投稿されたコメントに返信できるようになります。初期設定はオフです。
 
-### 「ユーザーモデレート」タブ  {#user-moderation-tab}
+### 「ユーザーモデレート」タブ {#user-moderation-tab}
 
 「**[!UICONTROL ユーザーモデレート]**」タブでは、コメントが許可されている場合に、コメントのモデレートを設定します。
 
@@ -97,7 +97,7 @@ ht-degree: 82%
 
 * **[!UICONTROL カスタムフラグ設定理由]**&#x200B;オンにすると、訪問者はコメントに「不適切」のフラグを設定した独自の理由を入力できます。初期設定はオフです。
 
-* **[!UICONTROL モデレートのしきい値]**&#x200B;訪問者がコメントに何回フラグを設定したらモデレーターに通知するかを指定します。初期設定は1回(
+* **[!UICONTROL モデレートのしきい値]**&#x200B;訪問者がコメントに何回フラグを設定したらモデレーターに通知するかを指定します。デフォルトは 1 回 (
 **1**).
 
 * **[!UICONTROL フラグ付けの制限]**&#x200B;コメントに何回フラグが設定されたら、公開表示から非公開にするかを指定します。この数は 
@@ -105,7 +105,7 @@ ht-degree: 82%
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの[ファイルライブラリの基本事項](essentials-file-library.md)ページを参照してください。
+詳しくは、 [ファイルライブラリの基本事項](essentials-file-library.md) 開発者向けのページ
 
 投稿されたトピックとコメントのモデレートについては、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 

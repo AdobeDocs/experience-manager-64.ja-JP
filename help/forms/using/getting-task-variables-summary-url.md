@@ -1,8 +1,8 @@
 ---
 title: サマリー URL でのタスク変数の取得
-seo-title: サマリー URL でのタスク変数の取得
+seo-title: Getting Task Variables in Summary URL
 description: タスクについての情報を再利用し、サマリー URL を生成してタスクを要約および説明する方法。
-seo-description: タスクについての情報を再利用し、サマリー URL を生成してタスクを要約および説明する方法。
+seo-description: How-to reuse the information about a task and generate a Summary URL to summarize or describe a task.
 uuid: 9eab3a6a-a99a-40ae-b483-33ec7d21c5b6
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,12 +11,12 @@ discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
 exl-id: f80d006b-6970-4448-aa38-3ffec8b08c18
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 87%
+source-wordcount: '432'
+ht-degree: 86%
 
 ---
 
-# サマリー URL でのタスク変数の取得  {#getting-task-variables-in-summary-url}
+# サマリー URL でのタスク変数の取得 {#getting-task-variables-in-summary-url}
 
 要約ページには、タスクに関連する情報が表示されます。この記事では、要約ページでタスクに関連する情報を再利用する方法について説明します。
 
@@ -33,7 +33,7 @@ ht-degree: 87%
 
    >[!NOTE]
    >
-   >このレンダラーは概要ページのテンプレートです。
+   >このレンダラーは概要ページテンプレートです。
 
    このレンダラーの以下のサンプルコードは、
 
@@ -63,9 +63,9 @@ ht-degree: 87%
    1. プロセス **create PTO summary** を作成し、これをオーケストレーションで **Assign Task** 操作の前のサブプロセスとして使用します。
    1. **employeeName**、**employeeID**、**ptoReason**、**totalDays**、および **nodeName**&#x200B;を新しいプロセスで入力変数として定義します。これらの変数は送信されたフォームデータとして渡されます。
 
-      概要URLの設定時に使用される出力変数**ptoNodePath **も定義します。
+      また、概要 URL の設定時に使用される出力変数**ptoNodePath **も定義します。
 
-   1. **create PTO summary**&#x200B;プロセスで、**set value**&#x200B;コンポーネントを使用して、**nodeProperty **(**nodeProps**)マップに入力詳細を設定します。
+   1. 内 **PTO 概要を作成** プロセス、 **値を設定** 入力の詳細を**nodeProperty **(**nodeProps**) マップを使用します。
 
       このマップのキーは、前の手順の HTML レンダラーで定義したキーと同じである必要があります。
 
@@ -77,7 +77,7 @@ ht-degree: 87%
 
       * **フォルダパス**：新しい CRX ノードが作成されるパスです。パスを **/content** に設定します。
       * **ノード名**：入力変数 nodeName をこのフィールドに割り当てます。一意のノード名文字列です。
-      * **ノードタイプ**:タイプを **nt:unstructured**&#x200B;と定義します。このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
+      * **ノードタイプ**:タイプを次のように定義します。 **nt:unstructured**. このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
    1. 送信されたフォームデータ（**employeeName**、**employeeID**、**ptoReason**、および **totalDays**）を新しいプロセス **create PTO summary** への入力として渡します。**ptoSummaryNodePath** として出力を取得します。
 
 

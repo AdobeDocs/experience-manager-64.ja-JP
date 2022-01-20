@@ -1,18 +1,18 @@
 ---
 title: アダプティブフォームの自動保存
-seo-title: アダプティブフォームの自動保存
+seo-title: Auto-save an adaptive form
 description: アダプティブフォームを設定して、イベントまたは既定の時間間隔に基づいてコンテンツの自動保存を開始することができます。
-seo-description: アダプティブフォームを設定して、イベントまたは既定の時間間隔に基づいてコンテンツの自動保存を開始することができます。
+seo-description: You can configure an adaptive form to automatically start saving the content based on an event or a pre-defined time-interval
 uuid: 0fe9a389-269b-438a-9489-d9d1d09558a1
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: d519ac4e-6d29-4a69-874e-792acabe87ff
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 073734e9-449b-463a-b539-d73e11f50fa4
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 89%
+source-wordcount: '688'
+ht-degree: 88%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 89%
 
 アダプティブフォームの場合、自動保存オプションは最初は有効にはなっていません。自動保存オプションを有効にするには、アダプティブフォームのプロパティの「**自動保存**」セクションで行うことができます。「**自動保存**」セクションには、その他の設定オプションがいくつか用意されています。次の手順を実行して、アダプティブフォームの自動実行オプションを有効にし設定します。
 
-1. プロパティの「自動保存」セクションにアクセスするには、コンポーネントを選択し、![フィールドレベル](assets/field-level.png) / **[!UICONTROL アダプティブフォームコンテナ]**&#x200B;をタップしてから、![cmppr](assets/cmppr.png)をタップします。
+1. プロパティの自動保存セクションにアクセスするには、コンポーネントを選択し、 ![フィールドレベル](assets/field-level.png) > **[!UICONTROL アダプティブフォームコンテナ]**&#x200B;次に、 ![cmppr](assets/cmppr.png).
 1. 「**[!UICONTROL 自動保存]**」セクションで、自動保存オプションを&#x200B;**[!UICONTROL 有効]**&#x200B;にします。
 1. 「**[!UICONTROL アダプティブフォームイベント]**」ボックスで、1 または TRUE を指定して、フォームがブラウザーに読み込まれたときに自動保存を開始します。トリガーされると true を返してフォームのコンテンツの保存を開始する条件式をイベントに指定することもできます。
 1. トリガーを指定します。設定に従い、自動保存がトリガーされます。以下のオプションがあります。
@@ -40,7 +40,7 @@ ht-degree: 89%
    トリガーを選択すると、方法の設定ボックスが有効になります。方法の設定ボックスでは、次のことができます。
 
    * **[!UICONTROL 時刻に基づいた自動保存]**&#x200B;トリガーを選択した場合は、時間間隔を指定します。
-   * 「**[!UICONTROL イベントに基づく]**」トリガーを選択した場合は、イベント名を指定します。
+   * 「 **[!UICONTROL イベントベース]** トリガー。
 
    独自の方法を作成してリストに追加することもできます。詳細については、[フォームを自動保存するためのカスタム方法の実装](/help/forms/using/auto-save-an-adaptive-form.md#p-implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms-p)を参照してください。
 
@@ -58,7 +58,7 @@ ht-degree: 89%
    >
    >自動保存オプションが匿名ユーザーに対して機能するには、すべてのユーザーにフォームのプレビュー、確認および署名を許可するように Forms Common Configuration Service が設定されていることを確認します。
    >
-   >サービスを設定するには、`https://[server]:[host]/system/console/configMgr`にあるAEM Webコンソール設定に移動し、**[!UICONTROL Forms Common Configuration Service]**&#x200B;を編集して、**[!UICONTROL Allow]**&#x200B;フィールドの「**[!UICONTROL All Users]**」オプションを選択し、設定を保存します。
+   >サービスを設定するには、 AEM Web コンソール設定 ( ) に移動します。 `https://[server]:[host]/system/console/configMgr` をクリックし、 **[!UICONTROL Forms Common Configuration Service]** 選ぶ **[!UICONTROL すべてのユーザー]** オプション **[!UICONTROL 許可]** フィールドに値を入力し、設定を保存します。
 
 ## アダプティブフォームの自動保存を有効にするカスタム方法の実装 {#implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms}
 
@@ -66,7 +66,7 @@ ht-degree: 89%
 
 1. クライアントライブラリとクライアントライブラリフォルダーを作成します。詳細手順については、[クライアント側ライブラリの使用ドキュメント](/help/sites-developing/clientlibs.md)を参照してください。
 
-   例えば、次のスクリプトでは、カスタムの`emailFocusChange`イベントを使用して自動保存機能をトリガー化します。
+   例えば、次のスクリプトでは、カスタム `emailFocusChange`イベントを使用して自動保存機能をトリガー:
 
    ```
    window.addEventListener("bridgeInitializeStart", function (){   

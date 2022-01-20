@@ -1,8 +1,8 @@
 ---
 title: Output サービスの概要
-seo-title: Output サービスの概要
+seo-title: Overview of output service
 description: Output では、XML フォームデータを、Designer で作成されたフォームデザインにマージして、様々な形式でドキュメント出力ストリームを作成できます。
-seo-description: Output では、XML フォームデータを、Designer で作成されたフォームデザインにマージして、様々な形式でドキュメント出力ストリームを作成できます。
+seo-description: Output lets you merge XML form data with a form design created in Designer to create a document output stream in various formats.
 uuid: 7890b0a6-bae5-4ad5-ae41-503b988ba3da
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 5a96f5ea-6fe3-44b1-b314-14097b9e9c01
 exl-id: 00ca8bdf-77be-4f4c-a3d3-d61d13eeba7e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '265'
 ht-degree: 97%
 
 ---

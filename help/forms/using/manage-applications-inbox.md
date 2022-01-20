@@ -1,8 +1,8 @@
 ---
 title: AEM インボックスでの Forms アプリケーションとタスクの管理
-seo-title: AEM インボックスでの Forms アプリケーションとタスクの管理
+seo-title: Manage Forms applications and tasks in AEM Inbox
 description: AEM インボックスを使用することで、アプリケーションの送信やタスクの管理を通じて Forms 中心のワークフローを起動できます。
-seo-description: AEM インボックスを使用することで、アプリケーションの送信やタスクの管理を通じて Forms 中心のワークフローを起動できます。
+seo-description: AEM Inbox allows you to launch Forms-centric workflows through submitting applications and manage tasks.
 uuid: 5173558a-542a-4130-8bb6-5ac555ecc507
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
@@ -11,12 +11,12 @@ discoiquuid: c1515c58-7d9a-4a36-9390-f6d6b980b801
 exl-id: 7076807a-40ad-4f3b-beb0-70c1577a8ee7
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '920'
 ht-degree: 95%
 
 ---
 
-# AEM インボックスでの Forms アプリケーションとタスクの管理 {#manage-forms-applications-and-tasks-in-aem-inbox}
+# AEM インボックスでの Forms アプリケーションとタスクの管理  {#manage-forms-applications-and-tasks-in-aem-inbox}
 
 Forms 中心のワークフローを起動またはトリガーする多くの方法の 1 つに、AEM インボックスのアプリケーションから行う方法があります。Forms ワークフローを使用できるようにするためのワークフローアプリケーションを、インボックス内のアプリケーションとして作成する必要があります。ワークフローアプリケーションおよび Forms ワークフローを起動するためのその他の方法について詳しくは、「[OSGi 上での Forms 中心のワークフローの起動](/help/forms/using/aem-forms-workflow.md#launch)」を参照してください。
 
@@ -32,15 +32,15 @@ Forms 中心のワークフローを起動またはトリガーする多くの�
 
 ## アプリケーションの作成 {#create-application}
 
-1. AEM Inbox(`https://[server]:[port]/aem/inbox`)に移動します。
+1. AEMインボックス ( ) に移動します。 `https://[server]:[port]/aem/inbox`.
 1. インボックスの UI で、**[!UICONTROL 作成／アプリケーション]**&#x200B;をタップします。アプリケーションを選択ページが表示されます。
-1. アプリケーションを選択してから、「**[!UICONTROL 作成]**」をクリックします。アプリケーションに関連するアダプティブフォームが開きます。フォームに入力して「**[!UICONTROL 送信]**」をタップします。 関連するワークフローが起動し、担当者のインボックスにタスクが作成されます。
+1. アプリケーションを選択してから、「**[!UICONTROL 作成]**」をクリックします。アプリケーションに関連するアダプティブフォームが開きます。フォームに入力し、 **[!UICONTROL 送信]**. 関連するワークフローが起動し、担当者のインボックスにタスクが作成されます。
 
-## タスクの管理  {#manage-tasks}
+## タスクの管理 {#manage-tasks}
 
 Forms ワークフローがトリガーされ、自分が担当者であるまたは担当者グループの一部である場合には、インボックスにタスクが表示されます。インボックス内のタスクについて、タスクの詳細を表示し、使用可能なアクションを実行できます。
 
-### タスクの要求または委任  {#claim-or-delegate-tasks}
+### タスクの要求または委任 {#claim-or-delegate-tasks}
 
 グループに割り当てられたタスクは、グループのメンバー全員のインボックスに表示されます。グループのメンバーなら誰でも、タスクを要求したり他のグループメンバーに委任したりできます。この作業を行うには、以下の手順を実行します。
 
@@ -100,7 +100,7 @@ Forms ワークフローがトリガーされ、自分が担当者であるま�
 
 タスクに対してアクションを実行すると、ワークフローの次の段階に進みます。
 
-### 完了したタスクの表示  {#view-completed-tasks}
+### 完了したタスクの表示 {#view-completed-tasks}
 
 AEM インボックスでは、アクティブなタスクのみが表示されます。完了したタスクはリストには表示されません。ただし、インボックスフィルターを使用して、いくつかのパラメーター（タスクのタイプ、状態、開始日と終了日など）に基づいてタスクをフィルターできます。完了したタスクを表示するには、以下の手順を実行します。
 
@@ -111,7 +111,7 @@ AEM インボックスでは、アクティブなタスクのみが表示され�
 
 1. タップしてタスクを選択し、「**[!UICONTROL 開く]**」をクリックします。
 
-タスクが開き、タスクに関連するドキュメントまたはアダプティブフォームが表示されます。アダプティブフォームの場合は、[タスクの割り当てワークフロー手順](/help/sites-developing/workflows-step-ref.md)の「フォーム/ドキュメント」タブで設定した読み取り専用のアダプティブフォームまたはレコードのPDFドキュメントが表示されます。
+タスクが開き、タスクに関連するドキュメントまたはアダプティブフォームが表示されます。アダプティブフォームの場合は、読み取り専用のアダプティブフォームまたはそのレコードのPDFドキュメントが、 [タスクの割り当てワークフローステップ](/help/sites-developing/workflows-step-ref.md).
 
 「タスクの詳細」セクションでは、実行済みアクション、タスクのステータス、開始日、終了日が表示されます。
 

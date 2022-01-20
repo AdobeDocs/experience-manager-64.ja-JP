@@ -1,8 +1,8 @@
 ---
 title: ワークフローの操作
-seo-title: ワークフローの操作
+seo-title: Working with Workflows
 description: AEM ワークフローでは、ページまたはアセットで実行される一連の手順を自動化することができます。例えば、パブリッシュ時にエディターは、サイトの管理者がページをアクティベートする前にコンテンツをレビューする必要があります。この例を自動化するワークフローでは、必要な作業を実行するときが来たことが各参加者に通知されます。
-seo-description: AEM ワークフローでは、ページまたはアセットで実行される一連の手順を自動化することができます。例えば、パブリッシュ時にエディターは、サイトの管理者がページをアクティベートする前にコンテンツをレビューする必要があります。この例を自動化するワークフローでは、必要な作業を実行するときが来たことが各参加者に通知されます。
+seo-description: AEM Workflows allows you to automate a series of steps that are performed on a page or asset. For example, when publishing, an editor has to review the content - before a site administrator activates the page. A workflow that automates this example notifies each participant when it is time to perform their required work.
 uuid: 3eb6e790-6589-414a-8e51-33c358f47a73
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: b11f0e4c-4dec-4b66-9f54-a0aa13ac77b9
 exl-id: 843cf933-d8a1-407d-9468-1a6409110f81
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '212'
 ht-degree: 100%
 
 ---

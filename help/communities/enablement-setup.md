@@ -1,8 +1,8 @@
 ---
 title: イネーブルメントのための初期設定
-seo-title: 初期設定
+seo-title: Initial Setup
 description: イネーブルメントのための初期設定
-seo-description: イネーブルメントのための初期設定
+seo-description: Initial Setup for Enablement
 uuid: 873ec41d-c088-41d9-a535-de5300661de6
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,18 +12,18 @@ discoiquuid: f2ac3d66-cc79-498f-83fb-dd96feb88de2
 exl-id: 92c95cb5-fdbf-4200-89a8-10c768e4bc25
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '860'
 ht-degree: 54%
 
 ---
 
-# イネーブルメントのための初期設定  {#initial-setup-for-enablement}
+# イネーブルメントのための初期設定 {#initial-setup-for-enablement}
 
 ## オーサーインスタンスおよびパブリッシュインスタンスの開始 {#start-author-and-publish-instances}
 
 開発用およびデモ用の場合、1 つのオーサーインスタンスと 1 つのパブリッシュインスタンスを実行する必要があります。
 
-基本的なAEMの「[はじめに](../../help/sites-deploying/deploy.md#getting-started)」の手順に従います。
+基本のAEM [はじめに](../../help/sites-deploying/deploy.md#getting-started) 結果として生じる指示
 
 * オーサー環境（[localhost:4502](http://localhost:4502/) 上）
 * パブリッシュ環境（[localhost:4503](http://localhost:4503/) 上）
@@ -37,9 +37,9 @@ AEM Communities では、各環境を次の目的で使用します。
    * 割り当て、表示および投稿に関するレポートの生成
    * 管理タスクと設定タスク
 
-* パブリッシュ環境は
+* パブリッシュ環境は、
 
-   * イネーブルメントマネージャーが管理するトピックに基づく学習/トレーニング
+   * イネーブルメントマネージャが管理するトピックに基づく学習/トレーニング
    * イネーブルメントリソースと学習パスのコメント化と評価
    * リソースの連絡先との連絡
 
@@ -55,23 +55,23 @@ AEM Communities では、各環境を次の目的で使用します。
 
 [エンゲージメントコミュニティサイト](overview.md#engagement-community)の作成に関するチュートリアルについては、[AEM Communities 使用の手引き](getting-started.md)を参照してください。
 
-## イネーブルメント機能の設定  {#configure-enablement-features}
+## イネーブルメント機能の設定 {#configure-enablement-features}
 
 このチュートリアルに従って操作するには、[イネーブルメントをインストールして設定](enablement.md)する必要があります。これには、MySQL や FFmpeg などのサードパーティの商品が必要です。
 
-## Analytics の設定  {#configure-analytics}
+## Analytics の設定 {#configure-analytics}
 
-コミュニティサイト](analytics.md)に[Adobe Analyticsを設定すると、コミュニティメンバー（学習者）に割り当てられたイネーブルメントリソースと学習パスに関して生成される[レポート](reports.md)に、より多くの情報が表示されます。
+条件 [Adobe Analyticsはコミュニティサイト用に設定されています](analytics.md)を使用する場合、詳しくは [レポート](reports.md) コミュニティメンバー（学習者）に割り当てられたイネーブルメントリソースと学習パスに基づいて生成されます。
 
 ## 電子メール通知の設定 {#configure-email-for-notifications}
 
-`Communities Sites`コンソールを使用して作成されるすべてのサイトでデフォルトで使用できる通知機能は、通知用のEメールチャネルを提供します。
+通知機能。デフォルトでは、 `Communities Sites` コンソール。通知用の e メールチャネルを提供します。
 
 これを使用するには、電子メールをサイト用に適切に設定する必要があります。
 
 [電子メールの設定](email.md)を参照してください。
 
-## トンネルサービスの有効化  {#enable-the-tunnel-service}
+## トンネルサービスの有効化 {#enable-the-tunnel-service}
 
 オーサー環境でコミュニティサイトを作成するときに、トンネルサービスを使用すると、パブリッシュ環境に登録されているユーザーおよびユーザーグループ（メンバー）の作成や管理と、信頼されているコミュニティメンバーへの役割の割り当て、学習者へのコンテンツの割り当てを実行できます。
 
@@ -79,11 +79,11 @@ AEM Communities では、各環境を次の目的で使用します。
 
 トンネルサービスを有効にする簡単な手順については、[トンネルサービス](deploy-communities.md#tunnel-service-on-author)を参照してください。
 
-## チュートリアルタグの作成  {#create-tutorial-tags}
+## チュートリアルタグの作成 {#create-tutorial-tags}
 
 `Tutorial` のタグ名前空間を使用して、エンゲージメントチュートリアルとイネーブルメントチュートリアルに使用するタグを作成します。
 
-[タグ付けコンソール](../../help/sites-administering/tags.md#tagging-console)を使用して、次のタグを作成します。
+以下を使用： [タグ付けコンソール](../../help/sites-administering/tags.md#tagging-console) 次のタグを作成するには：
 
 * `Tutorial: Sports / Baseball`
 * `Tutorial: Sports / Gymnastics`
@@ -97,7 +97,7 @@ AEM Communities では、各環境を次の目的で使用します。
 次に、以下の操作をおこないます。
 
 1. [タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)
-1. [タグを公開する](../../help/sites-administering/tags.md#publishing-tags)
+1. [タグを公開](../../help/sites-administering/tags.md#publishing-tags)
 
 AEM Communities 入門チュートリアル用に作成したタグのサンプルパッケージ
 
@@ -105,30 +105,30 @@ AEM Communities 入門チュートリアル用に作成したタグのサンプ�
 
 ## イネーブルメントメンバーおよびグループの作成 {#create-enablement-members-and-groups}
 
-イネーブルメントコミュニティサイトの場合、サイト訪問者は自己登録やソーシャルログイン](sites-console.md#user-management)の使用を行えません。[
+イネーブルメントコミュニティサイトでは、サイト訪問者が [自己登録またはソーシャルログインを使用](sites-console.md#user-management).
 
-代わりに、[トンネルサービス](#enable-the-tunnel-service)を有効にすると、[メンバーコンソール](members.md)を使用して、パブリッシュ環境に新しいメンバーを登録します。
+代わりに、 [トンネルサービス](#enable-the-tunnel-service) 有効、 [メンバーコンソール](members.md) は、パブリッシュ環境で新しいメンバーを登録するために使用されます。
 
-このチュートリアルでは、パブリッシュ環境で 3 人のメンバーを作成します。2人のメンバーは学習パスに割り当てられたユーザーグループのメンバーになり、3人目のメンバーはイネーブルメントリソースの連絡先になります。
+このチュートリアルでは、パブリッシュ環境で 3 人のメンバーを作成します。2 人のメンバーが学習パスに割り当てられるユーザーグループのメンバーになり、3 人目のメンバーがイネーブルメントリソースの連絡先になります。
 
 さらに、4 人目のメンバーをオーサー環境で作成し、コミュニティ管理者およびコミュニティイネーブルメントマネージャーの役割を割り当てます。
 
 >[!NOTE]
 >
->これらのメンバーは、*イネーブルメントチュートリアル*&#x200B;コミュニティサイトを作成する前に作成されています。
+>これらのメンバーは、 *イネーブルメントチュートリアル* コミュニティサイト。
 >
 >後で作成する場合は、イネーブルメントチュートリアルメンバーグループのメンバーを作成するときに、これらのメンバーをメンバーグループに追加できます。**
 >
 >または、これらのメンバーを後から[メンバーグループに割り当て](enablement-create-site.md#assignuserstocommunityenablemembersgroup)ます。
 
-### Riley Taylor - 登録者  {#riley-taylor-enrollee}
+### Riley Taylor - 登録者 {#riley-taylor-enrollee}
 
 Community Ski Class という名前の学習者グループに追加される[メンバーを作成](members.md#create-new-member)します。
 
 * **ID**:ライリー
 * **電子メール**：riley.taylor@mailinator.com
 * **パスワード**：password
-* **パスワードの確認**:パスワード
+* **パスワードを確認**:パスワード
 * **名**：Riley
 * **姓**:テイラー
 
@@ -139,18 +139,18 @@ Community Ski Class という名前の学習者グループに追加される[�
 * **ID**:シドニー
 * **電子メール**：sidney.croft@mailinator.com
 * **パスワード**：password
-* **パスワードの確認**:パスワード
+* **パスワードを確認**:パスワード
 * **名**：Sidney
-* **姓**:クロフト
+* **姓**:切り抜き
 
 ### Quinn Harper - イネーブルメントリソースの連絡先およびモデレーター {#quinn-harper-enablement-resource-contact-and-moderator}
 
-[サイトの](members.md#create-new-member) 作成後にコミュニティサイトのメンバーグループに追加されるメンバーを作成します。このメンバーシップにより、サイトのイネーブルメントリソースが作成される際に、メンバーをイネーブルメント[リソース連絡先](resources.md#settings)として割り当てることができます。
+[メンバーを作成](members.md#create-new-member) サイトの作成後にコミュニティサイトのメンバーグループに追加されるユーザー。 このメンバーシップにより、メンバーをイネーブルメントとして割り当てることができます [リソース連絡先](resources.md#settings) サイトのイネーブルメントリソースが作成されたとき。
 
 * **ID**:クイン
 * **電子メール**：quinn.harper@mailinator.com
 * **パスワード**：password
-* **パスワードの確認**:パスワード
+* **パスワードを確認**:パスワード
 * **名**：Quinn
 * **姓**:ハーパー
 
@@ -161,12 +161,12 @@ Community Ski Class という名前の[新しいグループを追加](members.m
 * **ID**:community-ski-class
 * **名前**：Community Ski Class
 * **説明**:イネーブルメントリソースを割り当てるためのサンプルグループ
-* **グループにメンバーを追加** &#39;add&#39;:
+* **メンバーをグループに追加** &#39;追加&#39;:
 
    * riley
    * sidney
 
-* 「**[!UICONTROL 保存]**」を選択します。
+* 選択 **[!UICONTROL 保存]**
 
 ### Community Ski Class のプロパティ {#community-ski-class-properties}
 
@@ -182,7 +182,7 @@ Community Ski Class という名前の[新しいグループを追加](members.m
 
 ### ユーザーを作成 {#create-user}
 
-*author*&#x200B;にコミュニティ管理者の役割を割り当てるユーザーを作成します。
+でのユーザーの作成 *作成者*&#x200B;コミュニティ管理者の役割が割り当てられているユーザー：
 
 * オーサーインスタンス上
 
@@ -190,29 +190,29 @@ Community Ski Class という名前の[新しいグループを追加](members.m
 
 * 管理者権限でログイン
 
-   * 例：ユーザー名「admin」/パスワード「admin」
+   * 例えば、ユーザー名「admin」/パスワード「admin」です。
 
-* メインコンソールで、**[!UICONTROL ツール/運営/セキュリティ/ユーザー]**&#x200B;に移動します。
-* **[!UICONTROL 編集]**&#x200B;メニューから、「**[!UICONTROL ユーザーを追加]**」を選択します。
+* メインコンソールから、に移動します。 **[!UICONTROL ツール/運営/セキュリティ/ユーザー]**
+* 次の **[!UICONTROL 編集]** メニュー、選択 **[!UICONTROL ユーザーを追加]**
 
-* `Create New User`ダイアログで、と入力します。
+* 内 `Create New User` ダイアログ入力
 
    * **ID&amp;ast;**:シリウス
    * **電子メールアドレス**：sirius.nilson@mailinator.com
-   * **パスワード(&amp;A);**:パスワード
-   * **パスワードの確認(&amp;A);**:パスワード
+   * **パスワード (&amp;A);**:パスワード
+   * **パスワードの確認 (&amp;A);**:パスワード
    * **名**：Sirius
-   * **姓(&amp;A);**:ニルソン
+   * **姓 (&amp;A);**:ニルソン
 
 ### コミュニティ管理者グループに対する Sirius の割り当て {#assign-sirius-to-community-administrators-group}
 
-`Add User to Groups`まで下にスクロールします。
+下にスクロールして `Add User to Groups`:
 
-* 検索するには&#39;C&#39;と入力します
+* 「C」と入力して検索
 
    *  `Community Administrators`
    *  `Community Enablement Managers`
 
-* 「**[!UICONTROL 保存]**」を選択します。
+* 選択 **[!UICONTROL 保存]**
 
 ![chlimage_1-419](assets/chlimage_1-419.png)

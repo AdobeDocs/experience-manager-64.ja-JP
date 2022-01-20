@@ -1,8 +1,8 @@
 ---
 title: ページのコンテンツの編集
-seo-title: ページのコンテンツの編集
+seo-title: Editing Page Content
 description: コンテンツは、ページにドラッグ可能なコンポーネントを使用して追加されます。コンポーネントはその後、そのまま編集したり、移動や削除をおこなったりすることができます。
-seo-description: コンテンツは、ページにドラッグ可能なコンポーネントを使用して追加されます。コンポーネントはその後、そのまま編集したり、移動や削除をおこなったりすることができます。
+seo-description: Content is added using components that can be dragged onto the page. These can then be edited in place, moved, or deleted.
 uuid: 0b34fb45-286a-4acb-b5d1-efc3d0e4ab70
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,12 +12,12 @@ discoiquuid: e75ce118-3850-4440-ad58-89569cb8c8eb
 exl-id: 2d0f11ac-f24b-431e-9076-3e6099eab4ac
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1755'
 ht-degree: 99%
 
 ---
 
-# ページのコンテンツの編集 {#editing-page-content}
+# ページのコンテンツの編集{#editing-page-content}
 
 ページが作成されたら（新規作成、またはローンチやライブコピーの一部として作成）、コンテンツを編集して、必要な更新をおこなうことができます。
 
@@ -85,7 +85,7 @@ ht-degree: 99%
 
 1. ページに必要なコンポーネントを挿入します。次に、段落をダブルクリックすると、段落を設定しコンテンツを追加するためのウィンドウが開きます。
 
-### コンテンツファインダーを使用したコンポーネントの挿入  {#inserting-a-component-using-the-content-finder}
+### コンテンツファインダーを使用したコンポーネントの挿入 {#inserting-a-component-using-the-content-finder}
 
 [コンテンツファインダー](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder)からアセットをドラッグして、ページに新しいコンポーネントを追加することもできます。この操作により、アセットが格納される適切なタイプの新しいコンポーネントが自動的に作成されます。
 
@@ -112,7 +112,7 @@ ht-degree: 99%
 
 1. 必要に応じて、コンポーネントを[編集](#editmovecopypastedelete)します。
 
-## コンポーネント（コンテンツとプロパティ）の編集  {#editing-a-component-content-and-properties}
+## コンポーネント（コンテンツとプロパティ）の編集 {#editing-a-component-content-and-properties}
 
 既存の段落を編集するには、次のいずれかの操作を実行します。
 
@@ -173,7 +173,7 @@ ht-degree: 99%
 
 継承されたコンポーネントは、次のような様々なシナリオによって生成されます。
 
-* [マルチサイト管理](/help/sites-administering/msm.md);また、[scaffolding](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance)と組み合わせて使用することもできます。
+* [マルチサイト管理](/help/sites-administering/msm.md);～と組み合わせて [基礎](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance).
 
 * [ローンチ](/help/sites-classic-ui-authoring/classic-launches.md)（ライブコピーをベースとしている場合）
 * 特定のコンポーネント（Geometrixx 内の継承された段落システムなど）
@@ -202,7 +202,7 @@ ht-degree: 99%
 
 [注釈](/help/sites-classic-ui-authoring/classic-page-author-annotations.md)を使用すると、他の作成者がコンテンツに関するフィードバックを提供できます。注釈は、レビューや検証の目的でよく使用されます。
 
-## ページのプレビュー  {#previewing-pages}
+## ページのプレビュー {#previewing-pages}
 
 ページのプレビューに重要な 2 つのアイコンがサイドキックの下部にあります。
 
@@ -286,7 +286,6 @@ AEM では、ユーザーが実行するアクションの履歴と、それら�
 >* 様々な[キーボードショートカット](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)を利用して取り消しとやり直しをおこなうこともできます。
 
 >
-
 
 
 取り消しおよびやり直しは、次のようなページの変更に対して使用できます。

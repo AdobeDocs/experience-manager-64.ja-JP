@@ -1,25 +1,25 @@
 ---
 title: AEM 6.4 における e コマースリポジトリの再構築
-seo-title: AEM 6.4 における e コマースリポジトリの再構築
+seo-title: E-Commerce Repository Restructuring in AEM 6.4
 description: AEM 6.4 e コマースの新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
-seo-description: AEM 6.4 e コマースの新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
+seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.4 for E-Commerce.
 uuid: 1fff1a4b-c8d0-4016-92fb-e2ea26e3a302
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 28c92e7d-2106-4333-afa6-c5528a00d7b4
-feature: アップグレード
+feature: Upgrading
 exl-id: 6adcc1a4-eb0f-4410-8219-dbd7e6bbe469
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 85%
+source-wordcount: '201'
+ht-degree: 84%
 
 ---
 
 # AEM 6.4 における e コマースリポジトリの再構築{#e-commerce-repository-restructuring-in-aem}
 
-AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明したように、AEM 6.4にアップグレードする場合は、このページを使用して、AEM E-Commerce Solutionに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
+親の説明に従って [AEM 6.4 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md) このページでは、AEM 6.4 にアップグレードするお客様は、このページを使用して、AEM E-Commerce Solution に影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
 
 ## 6.4 へのアップグレード時におこなう変更 {#with-upgrade}
 

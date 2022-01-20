@@ -1,8 +1,8 @@
 ---
 title: 開発者モード
-seo-title: 開発者モード
+seo-title: Developer Mode
 description: 開発者モードで開かれるサイドパネルのタブには、現在のページに関する開発者向けの情報が表示されます
-seo-description: 開発者モードで開かれるサイドパネルのタブには、現在のページに関する開発者向けの情報が表示されます
+seo-description: Developer mode opens a side panel with several tabs that provide a developer with infomation about the current page
 uuid: 2ff0d85e-fe49-4506-b6d6-74cc060d7ea1
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: efbe46a3-c37f-4b67-8b3a-188cfc75118b
 exl-id: 733eddf1-48f9-45c2-a1b4-138cf32b4b59
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 85%
+source-wordcount: '687'
+ht-degree: 88%
 
 ---
 
@@ -28,7 +28,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 これらのタブで、開発者は以下を実行できます。
 
 * 検出：ページが何から作成されているかを確認します。
-* デバッグ：何がいつ、どこで起きているかを確認し、問題の解決に役立てます。
+* デバッグ：発生したエラーとその場所およびタイミングを特定して、問題の修正に役立てます。
 * テスト：アプリケーションが期待どおりに動作しているかをテストします。
 
 >[!CAUTION]
@@ -38,7 +38,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >* （ページの編集時に）タッチ操作対応 UI でのみ使用できます。
 >* モバイルデバイスまたはデスクトップ上の小さいウィンドウでは、スペースの制約があるので使用できません。
    >   * ウィンドウの幅が 1024 px 未満の場合は使用できません。
->* `administrators`グループのメンバーであるユーザーのみが使用できます。
+>* `administrators` グループに所属しているユーザーのみ使用できます。
 
 
 >[!CAUTION]
@@ -47,12 +47,11 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >必要に応じて、次の環境で使用するように設定できます。
 >
->* nosamplecontent実行モードを使用するオーサーインスタンスで
+>* nosamplecontent 実行モードを使用するオーサーインスタンスで
 >* パブリッシュインスタンス
 
 >
->
-使用後は再度無効にする必要があります。
+>使用後は再度無効にする必要があります。
 
 >[!NOTE]
 >
@@ -62,7 +61,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >* [AEM 6.0 の開発者モード](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html)に関する AEM Gems セッション
 
 
-## 開発者モードを開く  {#opening-developer-mode}
+## 開発者モードを開く {#opening-developer-mode}
 
 開発者モードは、ページエディターのサイドパネルとして実装されています。パネルを開くには、ページエディターのツールバーにあるモードセレクターから「**開発者**」を選択します。
 
@@ -70,7 +69,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 パネルは、次の 2 つのタブで構成されています。
 
-* **[コンポーネント](/help/sites-developing/developer-mode.md#components)**  — 作成者向けのコンテンツツリーと同様に、コンポーネントツリ [ーが表](/help/sites-authoring/author-environment-tools.md#content-tree) 示されます
+* **[コンポーネント](/help/sites-developing/developer-mode.md#components)** - コンポーネントツリーが表示されます。これは、作成者向けの[コンテンツツリー](/help/sites-authoring/author-environment-tools.md#content-tree)に似ています。
 
 * **[エラー](/help/sites-developing/developer-mode.md#errors)** - 問題が発生すると、各コンポーネントの詳細が表示されます。
 
@@ -84,7 +83,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 * コンポーネントのレンダリングに必要な、サーバー側の計算時間を示します。
 * ツリーを展開して、ツリー内の特定のコンポーネントを選択できます。コンポーネントを選択すると、次のようなコンポーネント詳細にアクセスできます。
 
-   * リポジトリパス
+   * リポジトリーパス
    * スクリプトへのリンク（CRXDE Lite でアクセス）
 
 * 選択されたコンポーネント（コンテンツフローでは青い境界線で示されます）は、コンテンツツリーで強調表示されます（逆に、コンテンツツリーで選択されたコンポーネントはコンポーネントツリーで強調表示されます）。
@@ -119,7 +118,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 >[!CAUTION]
 >
->一部のリンクは、`/libs`の下のスクリプトを指します。 ただし、これらは参照用です。`/libs`の下にあるものは&#x200B;**編集しないでください。変更を加えると失われる可能性があります。**&#x200B;このブランチは、アップグレードしたり、ホットフィックス／機能パックを適用するたびに変更される傾向にあります。必要な変更は`/apps`の下でおこなう必要があります。[オーバーレイとオーバーライド](/help/sites-developing/overlays.md)を参照してください。
+>一部のリンクは、以下のスクリプトを指します。 `/libs`. ただし、これらは参照用です。 **次の値を指定する** 下のすべてを編集する `/libs`変更内容が失われる場合があるので、 このブランチは、アップグレードしたり、ホットフィックス／機能パックを適用するたびに変更される傾向にあります。必要な変更は、以下の下でおこなう必要があります。 `/apps`を参照してください。 [オーバーレイとオーバーライド](/help/sites-developing/overlays.md).
 
 ### エラー {#errors}
 
@@ -140,6 +139,6 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 >[!CAUTION]
 >
->AEM 6.2では、開発者モードのテスト機能がスタンドアロンのツールアプリケーションとして再実装されました。
+>AEM 6.2 では、開発者モードのテスト機能がスタンドアロンのツールアプリケーションとして再実装されました。
 >
->詳しくは、[UIのテスト](/help/sites-developing/hobbes.md)を参照してください。
+>詳しくは、 [UI のテスト](/help/sites-developing/hobbes.md).

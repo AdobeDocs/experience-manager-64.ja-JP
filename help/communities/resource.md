@@ -1,8 +1,8 @@
 ---
 title: イネーブルメントリソースの作成と割り当て
-seo-title: イネーブルメントリソースの作成と割り当て
+seo-title: Create and Assign Enablement Resources
 description: イネーブルメントリソースの追加
-seo-description: イネーブルメントリソースの追加
+seo-description: Add enablement resources
 uuid: da940242-0c9b-4ad8-8880-61fd41461c3b
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,7 +12,7 @@ discoiquuid: 8fe97181-600e-42ac-af25-d5d4db248740
 exl-id: 9f447a54-4512-41ab-b8d3-327e751eda58
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '706'
 ht-degree: 56%
 
 ---
@@ -25,15 +25,15 @@ ht-degree: 56%
 
 * オーサーインスタンス上
    * 例： [http://localhost:4502/](http://localhost:4503/)
-* システム管理者としてログインする
-* グローバルナビゲーションから、**コミュニティ/[リソース](resources.md)**を選択します。
+* システム管理者としてサインイン
+* グローバルナビゲーションから、 **コミュニティ/ [リソース](resources.md)**
 
    ![chlimage_1-199](assets/chlimage_1-199.png)
    ![chlimage_1-200](assets/chlimage_1-200.png)
 * イネーブルメントリソースを追加するコミュニティサイトを選択します。
    *  `Enablement Tutorial`
-* メニューから` Create`を選択します。
-* **[!UICONTROL Resource]**&#x200B;を選択します。
+* メニューから、 ` Create`
+* 選択 **[!UICONTROL リソース]**
 
 ![chlimage_1-201](assets/chlimage_1-201.png)
 
@@ -42,11 +42,11 @@ ht-degree: 56%
 以下のとおり、リソースの基本情報を入力します。
 
 * **[!UICONTROL サイト名]**：選択したコミュニティサイトの名前（Enablement Tutorial）に設定されます。
-* **[!UICONTROL リソース名(&amp;A);]**:Ski Lesson 1
+* **[!UICONTROL リソース名&amp;ast;]**:スキーレッスン 1
 * **[!UICONTROL タグ]**：Tutorial: Sports / Skiing
 * **[!UICONTROL カタログに表示]**：オン
 * **[!UICONTROL 説明]**：Sliding on snow for beginners
-* **[!UICONTROL 画像を追加]**:割り当てビューでメンバーにリソースを表す画像を追加します
+* **[!UICONTROL 画像を追加]**:割り当てビューでメンバに対するリソースを表す画像を追加します
    ![chlimage_1-202](assets/chlimage_1-202.png)
 * 「**[!UICONTROL 次へ]**」を選択します。
 
@@ -54,11 +54,11 @@ ht-degree: 56%
 
 複数のリソースを選択できるように見えますが、選択できるのは 1 つだけです。
 
-右上隅の`'+' icon`を選択し、ソースを識別してリソースを選択するプロセスを開始します。
+を選択します。 `'+' icon`の右上隅にあるをクリックし、ソースを識別してリソースを選択するプロセスを開始します。
 
 ![chlimage_1-203](assets/chlimage_1-203.png) ![chlimage_1-204](assets/chlimage_1-204.png)
 
-リソースをアップロードします。ビデオリソースの場合は、ビデオの再生を開始する前に表示するカスタム画像をアップロードするか、ビデオからサムネールを生成できるようにします（数分かかる場合があります。待つ必要はありません）。
+リソースをアップロードします。ビデオリソースの場合は、ビデオの再生が開始される前に表示するカスタム画像をアップロードするか、ビデオからサムネールを生成できます（数分かかる場合があります。待つ必要はありません）。
 
 ![chlimage_1-205](assets/chlimage_1-205.png)
 
@@ -73,19 +73,19 @@ ht-degree: 56%
 * **[!UICONTROL リソース作成者]**
 
    *（オプション）* 空白のままにします。
-* **[!UICONTROL リソース連絡先(&amp;A);]**
+* **[!UICONTROL リソース連絡先&amp;ast;]**
 
-   *（必須）* プルダウンメニューを使用してメンバーを選択しま `Quinn Harper`す。
+   *（必須）* プルダウンメニューを使用してメンバを選択 `Quinn Harper`.
 * **[!UICONTROL リソースエキスパート]**
 
    *（オプション）* 空白のままにします。
-   **注意**:ユーザーまたはグループが表示されない場合は、それらがグループに追加され、パブリッシュインスタ `Community Enable Members` ンスに保 ** 存されたことを確認します。
+   **注意**:ユーザーまたはグループが表示されない場合は、 `Community Enable Members` グループと *保存済み* パブリッシュインスタンス上で
    ![chlimage_1-206](assets/chlimage_1-206.png)
 * 「**[!UICONTROL 次へ]**」を選択します。
 
 ### 割り当て {#assignments}
 
-* **[!UICONTROL 割り当て先を追加]**&#x200B;ここでは未設定のままにします。このイネーブルメントリソースは学習パスに追加されるからです。学習者が個々のイネーブルメントリソースと、イネーブルメントリソースを含む学習pPathに割り当てられると、学習者はイネーブルメントリソースに2回割り当てられます。
+* **[!UICONTROL 割り当て先を追加]**&#x200B;ここでは未設定のままにします。このイネーブルメントリソースは学習パスに追加されるからです。学習者が個々のイネーブルメントリソースとイネーブルメントリソースを含む learningPath に割り当てられている場合、学習者はイネーブルメントリソースに 2 回割り当てられます。
 
 ![chlimage_1-207](assets/chlimage_1-207.png)
 
@@ -93,15 +93,15 @@ ht-degree: 56%
 
 ![chlimage_1-208](assets/chlimage_1-208.png)
 
-リソースが正常に作成されると、リソースコンソールに戻ります。新しく作成されたリソースが選択状態になっています。このコンソールから、学習者の公開、追加、その他の設定の変更を行うことができます。
+リソースが正常に作成されると、リソースコンソールに戻ります。新しく作成されたリソースが選択状態になっています。このコンソールから、学習者を公開、追加し、他の設定を変更できます。
 
 新しいバージョンのイネーブルメントリソースをアップロードする際は、新しいリソースを作成したうえで、古いバージョンのリソースからメンバーを登録解除して新しいバージョンのリソースに登録することを推奨します。
 
-### リソースの公開  {#publish-the-resource}
+### リソースの公開 {#publish-the-resource}
 
 登録者が割り当てられたリソースを確認できるようにするには、その前に次の手順でリソースを公開する必要があります。
 
-* ワールド`Publish`アイコンを選択します。
+* 世界を選択 `Publish`アイコン
 
 アクティベーションが成功したことを示す以下のメッセージが表示されます。
 
@@ -113,7 +113,7 @@ ht-degree: 56%
 
 ![chlimage_1-210](assets/chlimage_1-210.png)
 
-**** 2つ目のリソースを公開します。
+**公開** 2 つ目の Resource
 
 Enablement Tutorial のリソースのリストに戻ります。
 
@@ -125,8 +125,8 @@ Enablement Tutorial のリソースのリストに戻ります。
 
 学習パスは、複数のイネーブルメントリソースを論理的にグループ化して 1 つのコースとしたものです。
 
-* リソースコンソールで、「`+ Create`」を選択します。
-* **[!UICONTROL 学習パス]**&#x200B;を選択します。
+* リソースコンソールで、「 `+ Create`
+* 選択 **[!UICONTROL 学習パス]**
 
 ![chlimage_1-212](assets/chlimage_1-212.png)
 
@@ -135,7 +135,7 @@ Enablement Tutorial のリソースのリストに戻ります。
 * **[!UICONTROL 学習パス名]**:Ski Lessons
 * **[!UICONTROL タグ]**：Tutorial: Skiing
 * **[!UICONTROL カタログに表示]**：オフのまま
-* **[!UICONTROL リソースコンソ]** ールでの学習パスを表す画像のアップロード
+* **[!UICONTROL 画像をアップロード]** リソースコンソールで学習パスを表すには
 
 ![chlimage_1-213](assets/chlimage_1-213.png)
 
@@ -147,9 +147,9 @@ Enablement Tutorial のリソースのリストに戻ります。
 
 リソースを追加パネルで、次の操作をおこないます。
 
-* `+ Add Resources`を選択して、学習パスに追加する2つのスキーレッスンリソースを選択します。
+* 選択 `+ Add Resources` 学習パスに追加する 2 つのスキーレッスンリソースを選択するには
 
-   注意：選択できるリソースは&#x200B;**公開済み**&#x200B;のみです。
+   注意：のみ **公開済み** リソースは選択可能です。
 
 >[!NOTE]
 >
@@ -163,18 +163,18 @@ Enablement Tutorial のリソースのリストに戻ります。
 
 ![chlimage_1-216](assets/chlimage_1-216.png)
 
-* **[!UICONTROL 割り当て]**
-先の追加プルダウンメニューを使用して、 
-`Community Ski Class` グループ(メンバーと `Riley Taylor`   `Sidney Croft.`
+* **[!UICONTROL 担当者を追加]**
+プルダウンメニューを使用して、 
+`Community Ski Class` メンバーを含むグループ `Riley Taylor` および `Sidney Croft.`
 
-* **[!UICONTROL 学習パスの連絡先(&amp;A);]**
+* **[!UICONTROL 学習パスの連絡先&amp;ast;]**
 
-   *（必須）* プルダウンメニューを使用してメンバーを選択しま `Quinn Harper`す。
+   *（必須）* プルダウンメニューを使用してメンバを選択 `Quinn Harper`.
 
 * 「**[!UICONTROL 作成]**」を選択します。
 
 ![chlimage_1-217](assets/chlimage_1-217.png)
 
-学習パスが正常に作成されると、リソースコンソールに戻ります。新しく作成された学習パスが選択状態になっています。このコンソールから、学習者の公開、追加、その他の設定の変更を行うことができます。
+学習パスが正常に作成されると、リソースコンソールに戻ります。新しく作成された学習パスが選択状態になっています。このコンソールから、学習者を公開、追加し、他の設定を変更できます。
 
 学習パスを&#x200B;**公開**&#x200B;します。

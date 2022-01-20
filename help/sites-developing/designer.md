@@ -1,8 +1,8 @@
 ---
 title: デザインとデザイナー
-seo-title: デザインとデザイナー
+seo-title: Designs and the Designer
 description: Web サイト用に、また AEM で、デザインの作成が必要になります。その場合はデザイナーを使用します
-seo-description: Web サイト用に、また AEM で、デザインの作成が必要になります。その場合はデザイナーを使用します
+seo-description: You will need to create a design for your website and in AEM, you do so by using the Designer
 uuid: b880ab49-8bea-4925-9b7b-e911ebda14ee
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: f9bcb6eb-1df4-4709-bcec-bef0931f797a
 exl-id: 8a4fc7c7-03bc-44db-93f1-dbd76fc9dbd7
 source-git-commit: 9ae048ca2811a56c5d6f0b2415fcfcccc4384dbf
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 46%
+source-wordcount: '362'
+ht-degree: 43%
 
 ---
 
@@ -21,23 +21,23 @@ ht-degree: 46%
 
 >[!CAUTION]
 >
->この記事では、クラシックUIに基づくWebサイトの作成方法について説明します。 アドビでは、[AEM Sites の開発の手引き](/help/sites-developing/getting-started.md)で詳しく説明しているように、Web サイトに最新の AEM テクノロジーを利用することをお勧めします。
+>この記事では、クラシック UI に基づく Web サイトの作成方法について説明します。 アドビでは、[AEM Sites の開発の手引き](/help/sites-developing/getting-started.md)で詳しく説明しているように、Web サイトに最新の AEM テクノロジーを利用することをお勧めします。
 
-デザイナーは、AEMの[クラシックUI](/help/release-notes/touch-ui-features-status.md)を使用して、Webサイト用のデザインを作成する際に使用します。
+デザイナーは、 [クラシック UI](/help/release-notes/touch-ui-features-status.md) AEMの
 
 >[!NOTE]
 >
 >Web アクセシビリティについて詳しくは、[AEM と Web アクセシビリティのガイドライン](/help/managing/web-accessibility.md)を参照してください。
 
-## デザイナーの使用  {#using-the-designer}
+## デザイナーの使用 {#using-the-designer}
 
-デザインは、「**ツール**」タブの&#x200B;**designs**&#x200B;セクションで定義できます。
+デザインは、 **デザイン** セクション **ツール** タブ：
 
 ![screen_shot_2012-02-01at30237pm](assets/screen_shot_2012-02-01at30237pm.png)
 
 ここで、デザインの格納に必要な構造を作成し、必要なカスケーディングスタイルシート（CSS）および画像をアップロードできます。
 
-デザインは`/apps/<your-project>`の下に格納されます。 Webサイトに使用するデザインへのパスは、`jcr:content`ノードの`cq:designPath`プロパティを使用して指定します。
+デザインは、以下の場所に格納されます。 `/apps/<your-project>`. Web サイトに使用するデザインへのパスは、 `cq:designPath` プロパティ `jcr:content` ノード。
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
 
@@ -45,7 +45,7 @@ ht-degree: 46%
 >
 >デザインモードのページ上でおこなわれたすべての変更は、サイトのデザインノードの下に保持され、同じデザインを持つすべてのページに自動的に適用されます。
 
-## 必要なもの  {#what-you-will-need}
+## 必要なもの {#what-you-will-need}
 
 デザインを実現するには、以下が必要です。
 
@@ -55,15 +55,15 @@ ht-degree: 46%
 
 ### Web サイトをデザインする際の考慮事項 {#considerations-when-designing-your-website}
 
-Webサイトを開発する際は、`/apps/<your-project>`の下に画像とCSSファイルを保存し、次のスニペットで説明するように、現在のデザインに基づいてリソースを参照できるようにすることを強くお勧めします。
+Web サイトを開発する際は、画像と CSS ファイルをの下に保存することを強くお勧めします。 `/apps/<your-project>` 次のスニペットで説明するように、現在のデザインに基づいてリソースを参照できます。
 
 ```xml
 <%= currentDesign.getPath() + "/static/img/icon.gif %>
 ```
 
-前述の例には、次のような利点があります。
+前述の例には、次のようないくつかの利点があります。
 
 * 別々のデザインパスを使用しているサイトごとに、コンポーネントのルックアンドフィールを変化させることができます。
-* Webサイトの再設計は、デザインパスを`design/v1`から`design/v2.`までの間、サイトのルートにある別のノードに向けることで簡単におこなえます
+* Web サイトの再設計は、サイトのルートにある別のノードにデザインパスを指すことで、 `design/v1` から `design/v2.`
 
-* `/etc/designs` と `/content` は、ブラウザーが外部ユーザーの保護を確認する唯一の外部URLで、ツリーの下に何があるかを確認 `/apps` します。上記のURLの利点は、アセットの公開をいくつかの異なる場所に制限するので、システム管理者がより高いセキュリティを設定するのに役立ちます。
+* `/etc/designs` および `/content` は、ブラウザーが外部ユーザーの保護を目にする唯一の外部 URL で、ユーザーの下に何があるかを知るためのものです `/apps` ツリー。 上記の URL の利点は、アセットの公開をいくつかの異なる場所に制限するので、システム管理者がより高いセキュリティを設定するのに役立ちます。

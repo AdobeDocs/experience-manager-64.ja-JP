@@ -1,8 +1,8 @@
 ---
 title: 実稼動準備モードでの AEM の実行
-seo-title: 実稼動準備モードでの AEM の実行
+seo-title: Running AEM in Production Ready Mode
 description: 実稼動準備モードで AEM を実行する方法について説明します。
-seo-description: 実稼動準備モードで AEM を実行する方法について説明します。
+seo-description: Learn how to run AEM in Production Ready Mode.
 uuid: f48c8bae-c72f-4772-967e-f1526f096399
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,14 +12,14 @@ discoiquuid: 32da99f0-f058-40ae-95a8-2522622438ce
 exl-id: 2ab55a72-2eb2-49dc-8716-0a8a4d0c4b73
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 80%
+source-wordcount: '383'
+ht-degree: 79%
 
 ---
 
 # 実稼動準備モードでの AEM の実行{#running-aem-in-production-ready-mode}
 
-AEM 6.1では、Adobeは、実稼動環境でのデプロイメント用にAEMインスタンスの準備に必要な手順の自動化を目的とした新しい`"nosamplecontent"`実行モードを導入しました。
+AEM 6.1 では、Adobeで新しい `"nosamplecontent"` 実行モードは、実稼動環境でのデプロイメント用にAEMインスタンスを準備するために必要な手順の自動化を目的としています。
 
 この新しい実行モードは、セキュリティチェックリストに記載されているセキュリティのベストプラクティスに従うようにインスタンスを自動的に設定するだけでなく、サンプルの Geometrixx アプリケーションと設定をプロセスですべて削除します。
 
@@ -31,7 +31,7 @@ AEM 6.1では、Adobeは、実稼動環境でのデプロイメント用にAEM�
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
 
-AEMを実稼動準備モードで実行するには、`-r`実行モードスイッチを介して`nosamplecontent`を既存の起動引数に追加するだけです。
+実稼動準備モードでAEMを実行するには、 `nosamplecontent` 経由 `-r` 実行モードを既存の起動引数に切り替えます。
 
 ```shell
 java -jar aem-quickstart.jar -r nosamplecontent
@@ -52,13 +52,13 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 1. **Apache Sling Simple WebDAV Access To Repositories**（`org.apache.sling.jcr.webdav`）バンドルはオーサーインスタンスでのみ使用できます。****
 
 1. 新しく作成されたユーザーは、初回ログイン時にパスワードを変更する必要があります。これは admin ユーザーには適用されません。
-1. **「Generate debug** info」は **Apache Sling Java Script Handlerでは無効になっています**。
+1. **デバッグ情報を生成** は **Apache Sling Java Script Handler**.
 
 1. **Apache Sling JSP Script Handler** では、「**Mapped Content**」と「**Generate Debug Info**」が無効になります。
 
 1. **Day CQ WCM Filter** は、`edit`オーサー&#x200B;**インスタンスでは**   に設定され、`disabled`パブリッシュ&#x200B;**インスタンスでは** に設定されます。
 
-1. **AdobeGranite HTML Library Manager**&#x200B;は次の設定で設定されます。
+1. この **AdobeGraniteHTMLライブラリマネージャー** は次の設定で設定されます。
 
    1. **縮小：** `enabled`
    1. **デバッグ:** `disabled`

@@ -1,8 +1,8 @@
 ---
 title: Windows Vista での SSL の設定
-seo-title: Windows Vista での SSL の設定
+seo-title: Configuring SSL on Windows Vista
 description: Windows Vista での SSL の設定方法について説明します。
-seo-description: Windows Vista での SSL の設定方法について説明します。
+seo-description: Learn how to configure SSL on Windows Vista.
 uuid: 20bfcefb-ec84-4c55-bceb-6af106d883d7
 contentOwner: admin
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: 667645a0-53d0-4f9b-a0ba-cc7e366a23a1
 exl-id: 8eee2ed2-8263-47f2-b928-214fd9ab5f6e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '172'
-ht-degree: 63%
+source-wordcount: '159'
+ht-degree: 60%
 
 ---
 
@@ -29,12 +29,12 @@ Windows Vista™ で SSL を設定するには、認証時に RSA 鍵が設定�
 
 **SSL 証明書の作成**
 
-1. コマンドプロンプトで、*[JAVA HOME]*/binに移動し、次のコマンドを入力して証明書とキーストアを作成します。
+1. コマンドプロンプトで、に移動します。 *[JAVA ホーム]*/bin と次のコマンドを入力して、証明書とキーストアを作成します。
 
-   `keytool -genkey -keyalg RSA -dname "CN=`*ホス* `, OU=`*ト名* `, O=`*グルー* `,L=`*プ名Company* NameCity `, S=`** `, C=`** `" -alias`******名前** `-keypass` `*key*`StateCountry Code ** `-keystore`*&quot;LC Cert&quot;  *_*passwordkeystorename* `.keystore`
+   `keytool -genkey -keyalg RSA -dname "CN=`*ホスト名* `, OU=`*グループ名* `, O=`*会社名* `,L=`*市区町村******名前* `, S=`*都道府県* `, C=`*国コード* `" -alias`*&quot;LC Cert&quot;* `-keypass` `*key*`*_**パスワード* `-keystore`*keystorename* `.keystore`
 
    >[!NOTE]
    >
-   >*[JAVA_HOME]をJDKがインストールされているディレクトリに置き換え、斜体のテキストを環境に対応する値に置き換えます。*
+   >置換 *[JAVA_HOME] を JDK がインストールされているディレクトリに置き換え、斜体のテキストを環境に対応する値に置き換えます。*
 
-1. パスワードとして`changeit`と入力します。 Java インストールではこれがデフォルトのパスワードですが、システム管理者によって変更されている場合があります。
+1. タイプ `changeit` をパスワードとして設定します。 Java インストールではこれがデフォルトのパスワードですが、システム管理者によって変更されている場合があります。

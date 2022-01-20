@@ -1,19 +1,19 @@
 ---
 title: 複数ステップのフォームシーケンスの概要
-seo-title: 複数ステップのフォームシーケンスの概要
+seo-title: Introduction to multi-step form sequence
 description: AEM Forms を使用すると、ユーザーがアダプティブフォームを読み進み、記入する一連のフォームパネルを定義できます。
-seo-description: AEM Forms を使用すると、ユーザーがアダプティブフォームを読み進み、記入する一連のフォームパネルを定義できます。
+seo-description: With AEM Forms, you can define a sequence of form panel in which you want users to navigate and fill an adaptive form.
 uuid: b2b94e4c-0c28-47ba-8e23-fd8742baf71c
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 4a51ebc4-e019-4fc5-93a1-d97f695126f5
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: eec8bcbe-e2ba-42f1-98ea-08a4ca723e48
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 95%
+source-wordcount: '509'
+ht-degree: 94%
 
 ---
 

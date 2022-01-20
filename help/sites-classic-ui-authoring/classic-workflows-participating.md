@@ -1,8 +1,8 @@
 ---
 title: ワークフローへの参加
-seo-title: ワークフローへの参加
+seo-title: Participating in Workflows
 description: ワークフローには通常、ページまたはアセットでユーザーがアクティビティを実行する必要があるステップが含まれています。ワークフローでアクティビティを実行するユーザーまたはグループを選択し、その人物やグループに作業項目を割り当てます。
-seo-description: ワークフローには通常、ページまたはアセットでユーザーがアクティビティを実行する必要があるステップが含まれています。ワークフローでアクティビティを実行するユーザーまたはグループを選択し、その人物やグループに作業項目を割り当てます。
+seo-description: Workflows typically include steps that require a person to perform an activity on a page or asset. The workflow selects a user or group to perform the activity and assigns a work item to that person or group.
 uuid: 04dcc8f2-dc11-430f-b0ae-47ef2cb069a2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 1d7a4889-82c5-4096-8567-8f66215a8458
 exl-id: a4f0f0c4-3050-4348-8d51-2ca91839208c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '543'
 ht-degree: 98%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 98%
 
    あるステップまたは一連のステップを繰り返す必要がある場合は、以前のステップに戻すことができます。これによって、ワークフロー内の以前に発生したステップを、再処理のために選択できます。ワークフローが指定したステップに戻り、そこから続行されます。
 
-## ワークフローへの参加  {#participating-in-a-workflow}
+## ワークフローへの参加 {#participating-in-a-workflow}
 
 ### 割り当てられたワークフローアクションの通知 {#notifications-of-assigned-workflow-actions}
 

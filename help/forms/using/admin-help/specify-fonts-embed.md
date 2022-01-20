@@ -1,8 +1,8 @@
 ---
 title: 埋め込むフォントの指定
-seo-title: 埋め込むフォントの指定
+seo-title: Specify fonts to embed
 description: 埋め込むフォントの指定方法について説明します。
-seo-description: 埋め込むフォントの指定方法について説明します。
+seo-description: Learn how to specify fonts to embed.
 uuid: 02da5c00-0467-4633-a076-c36725cbfbad
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 180f0448-d507-4b6d-bb8a-d12a434e1250
 exl-id: e24f4123-bed3-4096-b3fb-22deb1c1e9b9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '251'
 ht-degree: 100%
 
 ---

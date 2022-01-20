@@ -1,8 +1,8 @@
 ---
-title: Convert PDFサービスJava API QuickStart(SOAP)
-seo-title: Convert PDFサービスJava API QuickStart(SOAP)
-description: Convert PDFサービスJava APIを使用して、PDFドキュメントをPostScriptおよびJPEGファイルに変換します。
-seo-description: Convert PDFサービスJava APIを使用して、PDFドキュメントをPostScriptおよびJPEGファイルに変換します。
+title: ConvertPDFサービス Java API QuickStart(SOAP)
+seo-title: Convert PDF Service Java API QuickStart(SOAP)
+description: ConvertPDFサービス Java API を使用して、PDFドキュメントを PostScript およびJPEGファイルに変換します。
+seo-description: Use the Convert PDF service Java API to convert a PDF document to PostScript and JPEG files.
 uuid: 97253ac7-f0c1-4766-a7bd-c19af52adf51
 contentOwner: admin
 content-type: reference
@@ -13,28 +13,28 @@ role: Developer
 exl-id: af0cb623-c29c-4b9e-9ffd-736047a45b8d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
-# Convert PDFサービスJava APIクイックスタート(SOAP) {#convert-pdf-service-java-api-quickstart-soap}
+# ConvertPDFサービス Java API クイックスタート (SOAP) {#convert-pdf-service-java-api-quickstart-soap}
 
-Convert PDFサービスAPIでは、以下のクイックスタートを使用できます。
+Convert Service API では、次のクイックスタートを使用することがPDFできます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントのPostScriptへの変換](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントの PostScript への変換](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントのJPEGファイルへの変換](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントのJPEGファイルへの変換](convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「 AEM formsによるプログラミング」にあるクイックスタートは、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
+>「AEM forms によるプログラミング」にあるクイックスタートは、JBoss Application Server とMicrosoft Windows オペレーティングシステムにデプロイされるForms Server に基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 詳しくは、 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api}を使用したPDFドキュメントのPostScriptへの変換
+## クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントの PostScript への変換 {#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api}
 
-次のコードの例では、*Loan.pdf*&#x200B;というPDFドキュメントを、*Loan.ps*&#x200B;というPostScriptドキュメントに変換します。 （[PDFドキュメントのPostScriptへの変換](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-postscript)を参照）。
+次のコードの例では、という名前のPDF文書を変換します。 *Loan.pdf* を PostScript ドキュメントに追加します。 *Loan.ps*. ( [PDFドキュメントを PostScript に変換中](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-postscript).)
 
 ```as3
  /* 
@@ -147,9 +147,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}を使用したPDFドキュメントのJPEGファイルへの変換
+## クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントのJPEGファイルへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api}
 
-次のJavaコードの例では、*Loan.pdf*&#x200B;というPDFドキュメントをJPEGファイルのセットに変換し、C:\Adobe directoryフォルダーに保存します。 各ファイルの名前は&#x200B;*tempFile[index].jpg*&#x200B;です。最初の画像ファイルの名前は&#x200B;*tempFile0.jpg*&#x200B;です。 （[PDFドキュメントの画像形式への変換](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats)を参照）。
+次の Java コードの例では、という名前のPDFドキュメントを変換します。 *Loan.pdf* を一連のJPEGファイルに追加し、C:\Adobe directoryフォルダーに保存します。 各ファイルの名前は *tempFile[index].jpg*（最初の画像ファイルの名前はです） *tempFile0.jpg*. ( [PDFドキュメントの画像形式への変換](/help/forms/developing/converting-pdf-postscript-image-files.md#converting-pdf-documents-to-image-formats).)
 
 ```as3
  /* 

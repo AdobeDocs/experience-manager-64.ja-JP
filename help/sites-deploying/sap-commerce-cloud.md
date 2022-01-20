@@ -1,8 +1,8 @@
 ---
 title: SAP Commerce Cloud
-seo-title: SAPCommerce Cloud
+seo-title: SAP Commerce Cloud
 description: SAP Commerce Cloud を使用した e コマースのデプロイ方法について説明します。
-seo-description: SAP Commerce Cloud を使用した e コマースのデプロイ方法について説明します。
+seo-description: Learn how to deploy eCommerce with SAP Commerce Cloud.
 uuid: a16ae42b-9c33-4da8-a130-52b72a779ec7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,22 +10,22 @@ topic-tags: e-commerce
 content-type: reference
 discoiquuid: 44dfa10f-497e-473f-95d4-8dccae7ebf8e
 pagetitle: Deploying eCommerce with SAP Commerce Cloud
-feature: コマース統合フレームワーク
+feature: Commerce Integration Framework
 exl-id: 71d0a249-8ad1-416e-ad78-d651b413e5c3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 89%
+source-wordcount: '719'
+ht-degree: 100%
 
 ---
 
-# SAP Commerce Cloud{#sap-commerce-cloud}
+# SAP Commerce Cloud {#sap-commerce-cloud}
 
 >[!NOTE]
 >
 >このページには hybris Web サイトへのリンクが含まれています。ページによっては、ログインアカウントが必要となる場合があります。
 
-## SAPCommerce Cloud{#deploying-ecommerce-with-sap-commerce-cloud}を使用したeコマースの導入
+## SAP Commerce Cloud を使用した e コマースのデプロイ {#deploying-ecommerce-with-sap-commerce-cloud}
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ ht-degree: 89%
 
 [必要な e コマースパッケージ](#packages-needed-for-ecommerce-with-hybris)をデプロイすると、e コマースフレームワークのすべての機能と共に、hybris 実装（デモカタログを含む）に付属する e コマース機能のリファレンス実装が提供されます。
 
-これは、Geometrixx Outdoorsサイトの英語（米国）ブランチ(`/content/geometrixx-outdoors/en_US`)の下で使用できます。
+これは、Geometrixx Outdoors サイトの英語（米国）ブランチ（`/content/geometrixx-outdoors/en_US`）の配下で使用できます。
 
 * [商品情報](#productinformationwithcolorvariants)（必要に応じてカラーバリエーション情報を含む）
 
@@ -46,23 +46,22 @@ ht-degree: 89%
 
 ### 技術的要件 - hybris サーバー {#technical-requirements-hybris-server}
 
-eコマース統合フレームワークのhybris拡張が更新され、[Hybris 4](/help/sites-developing/sap-commerce-cloud.md#developing-for-hybris)との後方互換性を維持しながら、Hybris 5が（デフォルトで）サポートされるようになりました。
+e コマース統合フレームワークの Hybris 拡張が更新されて、[Hybris 4](/help/sites-developing/sap-commerce-cloud.md#developing-for-hybris) との下位互換性を保ちながら、Hybris 5 が（デフォルトで）サポートされるようになりました。
 
 >[!NOTE]
 >
 >* hybris 6.4（OCC バージョン 2 付属）までをサポートします。
->* [hybris 5 サーバー](https://www.hybris.com/en/architecture-technology)を実行するには Java 7 が必要です。
->* hybris のアドオンである [Telco Accelerator](https://www.hybris.com/en/products/telecommunication) は、AEM 拡張でサポートされません。
+>* [hybris 5 サーバー](https://www.hybris.com/ja/architecture-technology)を実行するには Java 7 が必要です。
+>* hybris のアドオンである [Telco Accelerator](https://www.hybris.com/ja/products/telecommunication) は、AEM 拡張でサポートされません。
 
 >
 
 
-
-### hybris を使用した e コマースに必要なパッケージ  {#packages-needed-for-ecommerce-with-hybris}
+### hybris を使用した e コマースに必要なパッケージ {#packages-needed-for-ecommerce-with-hybris}
 
 e コマース機能をインストールするには、以下が必要です。
 
-* hybrisサーバー
+* お使いの hybris サーバー
 * AEM e コマースフレームワーク：
 
    * AEM の標準インストールの一部です。
@@ -76,7 +75,7 @@ e コマース機能をインストールするには、以下が必要です。
    * `cq-hybris-content-6.3.2`
    * hybris 固有の API 実装
    * `cq-geometrixx-hybris-content-6.3.2`
-   * hybris ( `geometrixx-outdoors/en_US` )の使用を説明する参照実装
+   * hybris の使用法を示すリファレンス実装（`geometrixx-outdoors/en_US`）
 
 ### hybris を使用した e コマースのインストール {#installation-of-ecommerce-with-hybris}
 
@@ -119,7 +118,7 @@ e コマース機能をインストールするには、以下が必要です。
 >
 >この手順を完了するには、システムに [Groovy](https://groovy-lang.org/) がインストールされている必要があります。
 
-1. hybris ダウンロードサイトから、hybris Commerce Suite のディストリビューションファイルをダウンロードします。****
+1. hybris ダウンロードサイトから、**hybris Commerce Suite** のディストリビューションファイルをダウンロードします。
 
    >[!CAUTION]
    >
@@ -141,9 +140,9 @@ e コマース機能をインストールするには、以下が必要です。
    >
    >`ant clean all`
    >
-   >必要に応じて`Return`を押します。
+   >必要に応じて、`Return` キーを押します。
 
-1. 次のファイルを、展開したhybris配布物のルートフォルダーにダウンロードします。
+1. 以下のファイルを、解凍した hybris ディストリビューションのルートフォルダーにダウンロードします。
 
    ```
        <hybris-root-directory>
@@ -200,12 +199,12 @@ e コマース機能をインストールするには、以下が必要です。
    sh hybrisserver.sh
    ```
 
-1. ブラウザーで次の URL にアクセスし、hybris 管理コンソールに移動します。****
+1. ブラウザーで次の URL にアクセスし、**hybris 管理コンソールに移動**&#x200B;します。
 
    [http://localhost:9002/hmc/hybris](http://localhost:9002/hmc/hybris)
 
 1. サイドバーナビゲーションから、「**システム**」と「**ツール**」を展開します。次に、「**読み込み**」を選択して、**ウィザード : CSV の読み込み**&#x200B;ウィンドウを開きます。
-1. 「**設定**」タブで、次の読み込みファイルをアップロードします。********
+1. 「**設定**」タブで、次の&#x200B;**読み込み**&#x200B;ファイル&#x200B;**をアップロードします**。
 
 [ファイルを入手](assets/geometrixx-outdoors-export.csv)
 
@@ -214,17 +213,17 @@ e コマース機能をインストールするには、以下が必要です。
    `en_US - English (United States)`
 
 1. 「**リソース**」タブを開きます。
-1. 次のメディア Zip をアップロードします。********
+1. 次の&#x200B;**メディア Zip** **をアップロードします**。
 
 [ファイルを入手](assets/geometrixx-outdoors-images.zip)
 
 1. 「**開始**」をクリックして、指定したファイルを読み込みます。「**結果**」タブにログエントリが表示されます。
 
-1. 「完了」をクリックして読み込みウィンドウを閉じます。****
+1. 「**完了**」をクリックして読み込みウィンドウを閉じます。
 
 1. サイドバーから、「**システム**」、「**ツール**」、「**読み込み**」を順に選択します。
 
-1. 次の読み込みファイルをアップロードします。********
+1. 次の&#x200B;**読み込みファイル** **をアップロードします**。
 
 [ファイルを入手](assets/base-store.csv)
 
@@ -238,7 +237,7 @@ e コマース機能をインストールするには、以下が必要です。
 
 1. 「**開始**」をクリックして、指定したファイルを読み込みます。「**結果**」タブにログエントリが表示されます。
 
-1. 「完了」をクリックして読み込みウィンドウを閉じます。****
+1. 「**完了**」をクリックして読み込みウィンドウを閉じます。
 
 1. これで、商品をを操作して、読み込んだカタログと製品を表示できます。
 

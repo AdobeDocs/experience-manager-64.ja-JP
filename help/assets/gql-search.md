@@ -1,6 +1,6 @@
 ---
 title: GQL 全文検索
-description: ' [!DNL Experience Manager] AssetsのGQL全文検索機能を参照します。 GQL 全文検索機能を使用して、タイトル、説明、作成者名などの特定のメタデータに基づいてアセットを検索できます。'
+description: での GQL 全文検索機能の詳細 [!DNL Experience Manager] アセット。 GQL 全文検索機能を使用して、タイトル、説明、作成者名などの特定のメタデータに基づいてアセットを検索できます。
 contentOwner: AG
 feature: Search,Metadata
 role: User
@@ -14,22 +14,22 @@ ht-degree: 72%
 
 # GQL 全文検索 {#gql-full-text-search}
 
-[!DNL Experience Manager] AssetsのGQL全文検索機能を参照します。 GQL 全文検索機能を使用して、タイトル、説明、作成者名などの特定のメタデータに基づいてアセットを検索できます。
+での GQL 全文検索機能の詳細 [!DNL Experience Manager] アセット。 GQL 全文検索機能を使用して、タイトル、説明、作成者名などの特定のメタデータに基づいてアセットを検索できます。
 
 GQL 全文検索機能を使用すると、タイトル、説明、作成者などの特定のメタデータに基づいてアセットを検索できます。
 
-メタデータ（タイトルなど）に基づいてアセットを検索するには、検索パネルで、メタデータキーワードの後に値を指定します。GQL全文検索機能は、メタデータが入力した対応する値と完全に一致するアセットのみを取得します。
+タイトルなど、メタデータに基づいてアセットを検索するには、検索パネルで、メタデータキーワードに続いてその値を指定します。GQL 全文検索機能は、入力した値に完全に一致するメタデータを持つアセットのみを取得します。
 
 例えば、「Target」というタイトルのアセットを検索するには、次の手順を実行します。
 
 ## アセットの検索 {#searching-assets}
 
-1. Assetsユーザーインターフェイスのツールバーで、**[!UICONTROL 検索]**&#x200B;アイコンをクリックまたはタップしてオムニサーチボックスを表示します。
+1. Assets ユーザーインターフェイスのツールバーで、 **[!UICONTROL 検索]** アイコンをクリックして「オムニサーチ」ボックスを表示します。
 
    ![](assets/do-not-localize/chlimage_1.png)
 
 1. オムニサーチボックスにカーソルを合わせて、Enter キーを押します。
-1. グローバルナビゲーションアイコンをクリックまたはタップして、**[!UICONTROL フィルター]**&#x200B;パネルを表示します。
+1. グローバルナビゲーションアイコンをクリックまたはタップして、 **[!UICONTROL フィルター]** パネル。
 1. オムニサーチボックスで、「Target」という値を指定します。検索範囲を特定のフォルダーに制限するには、フィルターパネルの参照アイコンをクリックまたはタップし、フォルダーを選択します。この場合は、そのフォルダーとその下のサブフォルダー内のみで、一致するものを検索します。
 
    >[!NOTE]
@@ -38,15 +38,15 @@ GQL 全文検索機能を使用すると、タイトル、説明、作成者な�
 
    ![gql_search](assets/gql_search.png)
 
-1. **[!UICONTROL Enter]** を押します。[!DNL Assets]ユーザーインターフェイスには、タイトルが「Target」と完全に一致するアセットのみが表示されます。
+1. **[!UICONTROL Enter]** を押します。この [!DNL Assets] ユーザーインターフェイスには、タイトルが「Target」と完全に一致するアセットのみが表示されます。
 
-GQL全文検索機能を使用すると、次に基づいてアセットを検索できます。
+GQL 全文検索機能では、次の条件に基づいてアセットを検索できます。
 
 * 複数のメタデータフィールド（プロパティ）に指定した値が AND 演算子によって結合された複雑なクエリ
 * 1 つのメタデータフィールドの複数値
 * 文字列の部分一致
 
-GQL全文検索機能では、次のメタデータプロパティに基づいてアセットを検索できます。プロパティの名前（author、titleなど）と値は、大文字と小文字が区別されます。
+GQL 全文検索機能では、次のメタデータプロパティに基づいてアセットを検索できます。プロパティの名前（author、title など）と値は、大文字と小文字が区別されます。
 
 >[!NOTE]
 >
@@ -63,25 +63,25 @@ GQL全文検索機能では、次のメタデータプロパティに基づい�
 | [!UICONTROL 著作権の所有者] | copyrightowner:&quot;Adobe Systems&quot; |
 | [!UICONTROL 投稿者] | contributor:John |
 | [!UICONTROL 使用条件] | usageterms:&quot;CopyRights Reserved&quot; |
-| [!UICONTROL 作成日] | created:YYYY-MM-DDTHH:MM:SS.000+05:30...YYYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL 作成日] | 作成済み:YYYY-MM-DDTHH:MM:SS.000+05:30...YYYY-MM-DDTHH:MM:SS.000+05:30 |
 | [!UICONTROL 有効期限] | 有効期限:YYYY-MM-DDTHH:MM:SS.000+05:30...YYYY-MM-DDTHH:MM:SS.000+05:30 |
 | [!UICONTROL オンタイム] | ontime:YYYY-MM-DDTHH:MM:SS.000+05:30...YYYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL オフタイム] | offtime:YYYY-MM-DDTHH:MM:SS.000+05:30...YYYY-MM-DDTHH:MM:SS.000+05:30 |
-| [!UICONTROL 時間の範囲] （有効期限、日時、オフタイム） | facet field : lowerbound..upperbound |
+| [!UICONTROL オフタイム] | オフタイム:YYYY-MM-DDTHH:MM:SS.000+05:30...YYYY-MM-DDTHH:MM:SS.000+05:30 |
+| [!UICONTROL 時間の範囲] （有効期限： dateontime、offtime） | facet field : lowerbound..upperbound |
 | [!UICONTROL パス] | /content/dam/&lt;folder name> |
 | [!UICONTROL PDF タイトル] | pdftitle:&quot;Adobe Document&quot; |
 | [!UICONTROL 件名] | subject:&quot;Training&quot; |
 | [!UICONTROL タグ] | tags:&quot;Location And Travel&quot; |
-| [!UICONTROL 型] | type:&quot;image\png&quot; |
-| [!UICONTROL 画像の幅] | width:lowerbound..upperbound |
-| [!UICONTROL 画像の高さ] | height:lowerbound..upperbound |
+| [!UICONTROL タイプ] | type:&quot;image\png&quot; |
+| [!UICONTROL 画像の幅] | width:lowerbound..上 |
+| [!UICONTROL 画像の高さ] | height:lowerbound..上 |
 | [!UICONTROL Person] | person:John |
 
 複雑なクエリの検索形式の例：
 
 * 複数のファセットフィールドを持つアセットをすべて表示する（例：title=John Doe および creatortool=Adobe Photoshop）：
 
-tiltle:&quot;John Doe&quot; creatortool :Adobe&amp;アンプ；ast;
+tiltle:&quot;John Doe&quot; creatortool :Adobe(&amp;A);
 
 * ファセット値が 1 語でなく文になっているアセットをすべて表示する（例：タイトル = Scott Reynolds）
 
@@ -117,7 +117,7 @@ title:&quot;Meeting&quot;;
 >
 >JCR クエリを記述してサブアセットのみを検索した場合、一致する参照されているアセットも、一致するサブアセットと共に表示されます。
 
-全文検索では、 — や^などの演算子もサポートされています。 これらの文字を文字列リテラルとして検索するには、検索式を二重引用符で囲みます。例えば、「Notebook - Beauty」ではなく、「&quot;Notebook - Beauty&quot;」と指定します。
+全文検索では、 — や^などの演算子もサポートされます。 これらの文字を文字列リテラルとして検索するには、検索式を二重引用符で囲みます。例えば、「Notebook - Beauty」ではなく、「&quot;Notebook - Beauty&quot;」と指定します。
 
 ## 検索の強化 {#boosting-search}
 

@@ -1,8 +1,8 @@
 ---
 title: テーマのカスタマイズ
-seo-title: テーマのカスタマイズ
+seo-title: Theme Customization
 description: AEM Forms アプリケーションのテーマのカスタマイズ方法
-seo-description: AEM Forms アプリケーションのテーマのカスタマイズ方法
+seo-description: How to customize the theme of your AEM Forms app.
 uuid: 36632e67-1cc6-416d-ae80-d84bbabab4bd
 contentOwner: robhagat
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: c72f608e-052a-4bf9-b7bc-ddf57483af35
 exl-id: fb1e0bec-c943-4468-920d-8ef360a01365
 source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 57%
+source-wordcount: '223'
+ht-degree: 55%
 
 ---
 
@@ -29,17 +29,17 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
 
 1. プロジェクトを開きます。
 
-   * iOSの場合は、Xcodeで`Capture.xcodeproj`を開きます。
+   * iOSの場合は、を開きます。 `Capture.xcodeproj` Xcode 内
    * Android の場合、Eclipse で Android プロジェクトを開きます。
-   * Windowsの場合は、Visual Studioで`MWSWindows.sln`を開きます。
+   * Windows の場合は、を開きます。 `MWSWindows.sln` Visual Studio 内。
 
 1. テンプレートフォルダーに移動します。
 
-   * Xcodeで、 **Capture > www > wsmobile > js > runtime > templates**&#x200B;フォルダーに移動します。
-   * Eclipseで、 **assets > www > wsmobile > js > runtime > templates**&#x200B;フォルダーに移動します。
-   * Visual Studioで、 **MWSWindows > www > wsmobile > js > runtime > templates**&#x200B;フォルダーに移動します。
+   * Xcode で、 **Capture > www > wsmobile > js > runtime > templates** フォルダー。
+   * Eclipse で、 **assets > www > wsmobile > js > runtime > templates** フォルダー。
+   * Visual Studio で、 **MWSWindows > www > wsmobile > js > runtime > templates** フォルダー。
 
-1. `template.html`ファイルを開いて編集します。
+1. を開きます。 `template.html` ファイルを編集します。
 1. 次の文字列を探します。
 
    ```
@@ -50,7 +50,7 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
                  <%} else 
    ```
 
-   `<%`に置き換えます。
+   次で置き換えます。 `<%`.
 
 1. `template.html` ファイル内の次のコードを探します。
 
@@ -74,13 +74,13 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
 
 1. css フォルダーに移動します。
 
-   * Xcodeで、 **Capture > www > wsmobile > css**&#x200B;に移動します。
-   * Eclipseで、**assets > www > wsmobile > css**&#x200B;に移動します。
-   * Visual Studioで、**MWSWindows > www > wsmobile > css**&#x200B;に移動します。
+   * Xcode で、 **Capture > www > wsmobile > css**.
+   * Eclipse で、に移動します。 **assets > www > wsmobile > css**.
+   * Visual Studio で、に移動します。 **MWSWindows > www > wsmobile > css**.
 
-1. `_style.css`ファイルを開いて編集します。
-1. 背景画像の場合、 `#323232`を`#fff`に変更します。
-1. 変更を保存し、`_style.css`ファイルを閉じます。
+1. を開きます。 `_style.css` ファイルを編集します。
+1. 背景画像の場合は、 `#323232` から `#fff`.
+1. 変更を保存して閉じます `_style.css` ファイル。
 1. AEM Forms アプリケーションを開きます。
 
    AEM Forms アプリケーションには、説明の代わりに手順が表示されるようになっています。

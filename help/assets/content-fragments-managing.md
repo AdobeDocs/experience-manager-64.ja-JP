@@ -1,8 +1,8 @@
 ---
 title: コンテンツフラグメントの管理
-seo-title: コンテンツフラグメントの管理
+seo-title: Managing Content Fragments
 description: コンテンツフラグメントは Assets として保存されるので、主に Assets コンソールから管理します。
-seo-description: コンテンツフラグメントは Assets として保存されるので、主に Assets コンソールから管理します。
+seo-description: Content Fragments are stored as Assets, so are primarily managed from the Assets console.
 uuid: 0659cf03-b4e8-4b8b-bec7-0082f980115a
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,11 +10,11 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: da8f968b-91cc-45a8-ae4b-757b4f840b8e
 exl-id: b21ba7a1-6e6f-4b95-9336-b49f7e932af5
-feature: コンテンツフラグメント
+feature: Content Fragments
 role: User
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1492'
 ht-degree: 98%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 98%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)以降のアプリケーション](/help/release-notes/sp-release-notes.md)が必要です。
+>一部のコンテンツフラグメント機能には、 [AEM 6.4 Service Pack 2(6.4.2.0) 以降](/help/release-notes/sp-release-notes.md).
 
 コンテンツフラグメントは **[!UICONTROL Assets]** として保存されるので、主に **[!UICONTROL Assets]** コンソールから管理します。
 
@@ -65,9 +65,9 @@ ht-degree: 98%
 
       * **[!UICONTROL タイトル]**
 
-          フラグメントタイトル。
+         フラグメントタイトル。
 
-          必須です。
+         必須です。
 
       * **[!UICONTROL 説明]**
       * **[!UICONTROL タグ]**
@@ -77,7 +77,7 @@ ht-degree: 98%
 
          URL の作成に使用される名前です。
 
-          必須。タイトルから自動的に派生しますが、変更が可能です。
+         必須。タイトルから自動的に派生しますが、変更が可能です。
 
 
 1. 「**[!UICONTROL 作成]**」を選択して操作を完了してから、編集するためにフラグメントを&#x200B;**[!UICONTROL 開く]**&#x200B;か、「**[!UICONTROL 完了]**」でコンソールに戻ります。
@@ -144,9 +144,8 @@ ht-degree: 98%
    >[!NOTE]
    >
    >1. フラグメントがコンテンツページで既に参照されている場合は、メッセージが表示されます。
-      >
-      >
-   2. **[!UICONTROL サイドパネルを切り替え]**&#x200B;アイコンを使用してサイドパネルを非表示／表示できます。
+   >
+   >2. **[!UICONTROL サイドパネルを切り替え]**&#x200B;アイコンを使用してサイドパネルを非表示／表示できます。
 
 
 1. サイドパネルのアイコンを使用して、3 つのモデル間を移動します。
@@ -256,8 +255,7 @@ ht-degree: 98%
 >* フラグメントアセットに関連付けられる
 
 >
->
-注釈（コンテンツフラグメント用）は次のとおりです。
+>注釈（コンテンツフラグメント用）は次のとおりです。
 >
 >* フラグメントエディターで入力
 >* フラグメント内の選択されたテキストセグメントに固有

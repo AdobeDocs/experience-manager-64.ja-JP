@@ -1,18 +1,18 @@
 ---
 title: フォームポータルコンポーネントのテンプレートをカスタマイズする
-seo-title: フォームポータルコンポーネントのテンプレートをカスタマイズする
+seo-title: Customizing templates for forms portal components
 description: フォームの一覧でカスタマイズしたメタデータを表示する
-seo-description: フォームの一覧でカスタマイズしたメタデータを表示する
+seo-description: Display custom metadata in form listing
 uuid: 746aeece-a6d1-417b-8065-05cd54bd66d6
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: 842d3a5a-8e09-4a21-b9a2-a8f4f5b699bd
-feature: フォームポータル
+feature: Forms Portal
 source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '1249'
-ht-degree: 68%
+source-wordcount: '1233'
+ht-degree: 65%
 
 ---
 
@@ -33,9 +33,9 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
 次のステップを実行して、様々なフォームポータルコンポーネントのカスタムテンプレートを作成します。
 
-## カスタムテンプレートの作成  {#creating-a-nbsp-custom-template}
+## カスタムテンプレートの作成 {#creating-a-nbsp-custom-template}
 
-1. */apps *の下にsling:Folderノードを作成します。
+1. */apps *の下に sling:Folder ノードを作成します。
 
    &quot;fpContentType&quot; プロパティを追加カスタムテンプレートを設定しようとしているコンポーネントに応じてプロパティの適切な値を指定します。
 
@@ -48,13 +48,13 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
    レイアウトテンプレートを選択する際に表示したいタイトルを追加します。
 
-   *注意：タイトルは、作成したsling:Folderのノード名とは異なる場合があります。 *
+   *注意：タイトルは、作成した sling:Folder のノード名とは異なる名前にすることができます。 *
    *次の画像は、Search &amp; Listerコンポーネントの構成を示します。* ![sling:Folderの作成](assets/1-3.png)
 
 1. このフォルダー内に template.html ファイルを作成して、カスタムテンプレートとして使用します。
 1. 以下のようにカスタムテンプレートを作成して、カスタムメタデータを使用します。
 
-## 作業の例  {#working-example}
+## 作業の例 {#working-example}
 
 以下は、フォームポータルが、Search &amp; Lister コンポーネントの Geometrixx Gov カードのレイアウトを取得したカスタムテンプレートの実装例です。
 
@@ -76,19 +76,19 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 </div>
 ```
 
-## カスタムテンプレートの技術仕様  {#technical-specifications-for-custom-templates}
+## カスタムテンプレートの技術仕様 {#technical-specifications-for-custom-templates}
 
-任意のForms Portalコンポーネントのカスタムテンプレートには、繰り返し可能なエントリと繰り返し不可能なエントリが含まれています。 繰り返し可能なエントリは、リスト表示の基本エンティティです。Search &amp; Lister、ドラフト&amp;提出および Link コンポーネントなどが繰り返し可能なエントリの例です。
+任意のForms Portal コンポーネントのカスタムテンプレートには、繰り返し可能なエントリと繰り返し不可能なエントリが含まれています。 繰り返し可能なエントリは、リスト表示の基本エンティティです。Search &amp; Lister、ドラフト&amp;提出および Link コンポーネントなどが繰り返し可能なエントリの例です。
 
 フォームポータルは、プレースホルダに構文を提供してカスタム /OOTB メタデータを表示します。プレースホルダは、フォーム、ドラフトまたは提出の結果を表示した後に追加されます。
 
-繰り返し可能なエントリを含めるには、**data-repeatable**&#x200B;の値を&#x200B;**true**&#x200B;に設定します。
+繰り返し可能なエントリを含めるには、属性の値を設定します **data-repeatable** から **true**.
 
-*説明した例では、2つのDiv要素がカスタムテンプレートの一番上に存在します。 最初に、&quot;__FP_boxes-container&quot; CSSクラスで、リストされているフォームのコンテナエレメントとして機能します。2番目に、&quot;__FP_boxes&quot; CSSクラスで基本エンティティのテンプレート、この場合フォームになります。Div要素に存在する&#x200B;**data-repeatable**&#x200B;属性の値は&#x200B;**true**&#x200B;です。
+*この例では、2 つの Div 要素がカスタムテンプレートの一番上に存在します。 最初に、&quot;__FP_boxes-container&quot; CSSクラスで、リストされているフォームのコンテナエレメントとして機能します。2番目に、&quot;__FP_boxes&quot; CSSクラスで基本エンティティのテンプレート、この場合フォームになります。この **data-repeatable** Div 要素に存在する属性に値が含まれている **true**.
 
-それぞれのプレースホルダーには 1 つずつ OOTB メタデータセットがあります.フォーム上の特定の場所にカスタムメタデータを表示するには、その場所に&#x200B;**$metadata_propプロパティ**&#x200B;を追加します。
+それぞれのプレースホルダーには 1 つずつ OOTB メタデータセットがあります.フォーム上の特定の場所にカスタムメタデータを表示するには、 **$metadata_prop プロパティ** その場所に
 
-*この例では、メタデータプロパティは複数のインスタンスで使用されています。例えば、**description**、**name**、**formUrl**、**htmlStyle**、**pdfUrl**、**pdfStyle**、およびで使用されます。a12/>パス&#x200B;**を所定の方法で行う。***
+*この例では、メタデータプロパティは複数のインスタンスで使用されています。例えば、**説明**,**名前**,**formUrl**,**htmlStyle**,**pdfUrl**,**pdfStyle**、および&#x200B;**パス**所定の方法で*
 
 ## デフォルトのボックスメタデータ {#out-of-the-box-metadata}
 
@@ -99,18 +99,18 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 * **タイトル：**&#x200B;フォームのタイトル
 * **名前**：フォーム名（多くの場合、タイトルと同じです）
 * **説明**：フォームの説明
-* **formUrl**:フォームをHTMLとしてレンダリングするURL
-* **pdfUrl**:フォームをPDFとしてレンダリングするURL
-* **アセットタイプ**：アセットの種類有効な値は、**フォーム**、**PDFフォーム**、**印刷フォーム**、**アダプティブフォーム**&#x200B;です
-* **htmlStyle**&amp; **pdfStyle**：HTML の表示スタイルと PDF アイコンはそれぞれレンダリングに使用されています。有効な値は、「**__FP_display_none**」または&#x200B;**blank**&#x200B;です。
+* **formUrl**:フォームをHTMLとしてレンダリングする URL
+* **pdfUrl**:フォームをPDFとしてレンダリングする URL
+* **アセットタイプ**：アセットの種類有効な値は次のとおりです。 **フォーム**, **PDFフォーム**, **印刷フォーム**、および **アダプティブフォーム**
+* **htmlStyle**&amp; **pdfStyle**：HTML の表示スタイルと PDF アイコンはそれぞれレンダリングに使用されています。有効な値は、「**__FP_display_none**&quot;または&quot; **空白**
 
-   *注意：カスタムスタイルシートで__FP_display_noneクラスを必ず使用してください*
+   *注意：カスタムスタイルシートで__FP_display_none クラスを必ず使用してください*
 
-* **downloadUrl**:アセットをダウンロードするURL。
+* **downloadUrl**:アセットをダウンロードする URL。
 
 ローカリゼーション、ソート、ユーザーインターフェイス上での設定プロパティ使用のサポート（Search &amp; Lister のみ）:
 
-1. **ローカリゼーションサポート**:静的テキストをローカライズするには、属性${localize- *****YOUR_TEXT***}** を使用し、ローカライズされた値が存在しない場合は、その値を使用可能にします。
+1. **ローカリゼーションサポート**:静的テキストをローカライズするには、属性を使用します **${localize-***YOUR_TEXT***}** ローカライズされた値が存在しない場合は、その値を使用可能にします。
 
    *説明した例では、属性 ${localize-Apply} と ${localize-Download} は、「適用」と「ダウンロード」のテキストをローカライズするのに使用します。*
 
@@ -118,18 +118,18 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
    例えば、グリッド表示の「タイトル」ヘッダーでは、「data-sortKey」ヘッダーの値が「タイトル」 です。見出しをクリックして、特定の列の値を並べ替えます。
 
-1. **設定プロパティの使用**：Search &amp; Listerコンポーネントには、ユーザーインターフェイスに使える設定がいくつかあります。例えば、編集ダイアログで保存したHTMLツールヒントテキストを表示するには、 **${config-htmlLinkText}属性を使用します。**&#x200B;同様に、PDFのツールチップテキストには、**${config-pdfLinkText}** 属性を使用します。
+1. **設定プロパティの使用**：Search &amp; Listerコンポーネントには、ユーザーインターフェイスに使える設定がいくつかあります。例えば、編集ダイアログで保存したHTMLツールチップテキストを表示するには、 **${config-htmlLinkText} 属性。**&#x200B;同様に、PDFのツールチップテキストにも&#x200B;**${config-pdfLinkText}** 属性。
 
 ### リンクコンポーネント {#link-component}
 
 * **タイトル：**&#x200B;フォームのタイトル
-* **formUrl**:フォームをHTMLとしてレンダリングするURL
+* **formUrl**:フォームをHTMLとしてレンダリングする URL
 * **ターゲット**：リンクのターゲット属性有効な値は、“_blank” および “_self”。
 * **linkText**：リンクキャプション
 
-### ドラフト&amp;送信コンポーネント:{#drafts-amp-submissions-component}
+### ドラフト&amp;送信コンポーネント： {#drafts-amp-submissions-component}
 
-* **パス**：ドラフト / 送信メタデータノードのパスドラフトまたは送信を開くには、URLとしてHTML拡張子と共に使用します。
+* **パス**：ドラフト / 送信メタデータノードのパスドラフトまたは送信を開くには、HTML拡張子を。拡張子と共に URL として使用します。
 * **contextPath**：AEM インスタンスのコンテキストパス
 * **firstLetter**：ドラフトとして保存または送信されたアダプティブフォームのタイトルの最初の文字（大文字）
 * **formName**：ドラフトとして保存または送信されたアダプティブフォームのタイトル
@@ -140,35 +140,35 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 * **diffTime**：現在の時刻と最後にドラフトが保存された時刻との差。または、現在の時刻と送信するために最後の送信操作が行われた時刻との差。
 * **iconClass**：ドラフト/送信の最初の文字を表示するのに使用される CSS クラス。フォームポータルには、様々な色の背景を提供する以下のクラスがあります。
 * **所有者**：ドラフト / 送信を作成したユーザー。
-* **今日**：DD:MM:YYYY 形式のドラフト作成日または送信日。
-* **TimeNow**：HH:MM:SS24 時間形式のドラフト作成日または送信日。
+* **今日**:DD でのドラフト作成日または送信日:MM:YYYY 形式。
+* **TimeNow**:HH でのドラフト作成時または送信時刻:MM:SS 24 時間形式
 
 *注意：*
 
-1. ドラフト&amp;送信コンポーネントの下のドラフトセクションにある削除のオプションについては、CCS クラスを &quot;__FP_deleteDraft&quot; と名付けます。さらに、値&#x200B;**${draftID}**&#x200B;を持つ属性「draftID」を含めます（対応するドラフトのドラフトID）。
+1. ドラフト&amp;送信コンポーネントの下のドラフトセクションにある削除のオプションについては、CCS クラスを &quot;__FP_deleteDraft&quot; と名付けます。さらに、属性&quot;draftID&quot;を値と共に含めます **${draftID}**：対応するドラフトのドラフト ID。
 
-1. ドラフトと送信を開くためのリンクを作成する際に、アンカータグの&#x200B;**href**&#x200B;属性の値として&#x200B;**$path.html**&#x200B;を指定できます。
+1. ドラフトと送信を開くためのリンクを作成する際に、次の項目を指定できます。 **$path.html** を **href** 属性を設定します。
 
 ![ドラフトと送信ノード](assets/raw-image-with-index.png)
 
 **A**. コンテナ要素
 
-**B.固定階層の** 「パス」メタデータ。各フォームに保存されたサムネールを取得します。
+**B.** 固定階層の「パス」メタデータを使用して、各フォームに保存されたサムネールを取得します。
 
-**C.各フォ** ームのテンプレートセクションにData-repeatable属性を使用
+**C.** 各フォームのテンプレートセクションに使用される Data-repeatable 属性
 
-**D. 「適** 用」文字列をローカライズする
+**D.** 「適用」文字列をローカライズするには
 
-**E. pdfLinkText** 設定プロパティの使用
+**E.** 設定プロパティ pdfLinkText の使用
 
-**F. 「pdfUrl」** メタデータの使用
+**金。** 「pdfUrl」メタデータの使用
 
 ## ヒント、テクニックおよび既知の問題 {#tips-tricks-and-known-issues}
 
 1. カスタムテンプレートでは一重引用符（‘）を使用しないでください。
-1. カスタムメタデータの場合、このプロパティは&#x200B;**jcr:content/metadata**&#x200B;ノードにのみ保存します。 他の場所に保存すると、Forms Portalはメタデータを表示できません。
+1. カスタムメタデータの場合、このプロパティを **jcr:content/metadata** ノードのみ。 他の場所に保存した場合、Forms Portal ではメタデータを表示できません。
 1. すべてのカスタムメタデータまたは既存のメタデータの名前にコロン（:）が含まれていないことを確認してください。含まれている場合、ユーザーインターフェイスに表示することができません。
-1. **data-repeatable** は、リンクコンポーネントに何の意味も持ち **** ません。アドビシステムズ社は、お客様がこのプロパティのリンクコンポーネントのテンプレートにおける使用を避けることを推奨します。
+1. **data-repeatable** に対して何の意味も持たない **リンク** コンポーネント。 アドビシステムズ社は、お客様がこのプロパティのリンクコンポーネントのテンプレートにおける使用を避けることを推奨します。
 
 ## 関連記事
 
@@ -176,7 +176,7 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 * [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)
 * [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
-* [ドラフトおよび送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
+* [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信コンポーネントとデータベースの統合のサンプル](/help/forms/using/integrate-draft-submission-database.md)
 * [フォームポータルコンポーネントのテンプレートをカスタマイズする](/help/forms/using/customizing-templates-forms-portal-components.md)
 * [ポータル上のフォーム発行の概要](/help/forms/using/introduction-publishing-forms.md)

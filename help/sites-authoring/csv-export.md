@@ -1,8 +1,8 @@
 ---
 title: CSV ファイルへの書き出し
-seo-title: CSV ファイルへの書き出し
+seo-title: Export to CSV
 description: ページの情報をローカルシステムの CSV ファイルに書き出します
-seo-description: ページの情報をローカルシステムの CSV ファイルに書き出します
+seo-description: Export information about your pages to a CSV file on your local system
 uuid: aa03adac-bbfb-4566-a153-25fe6f6843dd
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: d4473758-674a-42d6-923a-b536f7f9c1f7
 exl-id: 52eb9c2f-ce29-4622-8726-802ac40246d4
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 79%
+source-wordcount: '190'
+ht-degree: 77%
 
 ---
 
@@ -55,14 +55,14 @@ CSV の書き出しファイルを作成ウィザードでは、次の要素を�
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
-**CSVの書き出し**&#x200B;を作成オプションは、（リスト表示で）**サイト**&#x200B;コンソールを参照する際に使用できます。これは、**作成**&#x200B;ドロップダウンメニューのオプションです。
+作成 **CSV の書き出し** オプションは **サイト** コンソール（リスト表示）:これは、 **作成** ドロップダウンメニュー：
 
 ![screen_shot_2018-03-21at154719](assets/screen_shot_2018-03-21at154719.png)
 
 CSV の書き出しファイルを作成するには、次の手順を実行します。
 
 1. **サイト**&#x200B;コンソールを開き、必要に応じて必要な場所まで移動します。
-1. ツールバーの「**作成** 」を選択し、「**CSVの書き出し**」を選択してウィザードを開きます。
+1. ツールバーで、「 」を選択します。 **作成** その後 **CSV の書き出し** ウィザードを開くには、次の手順に従います。
 
    ![screen_shot_2018-03-21at154758](assets/screen_shot_2018-03-21at154758.png)
 

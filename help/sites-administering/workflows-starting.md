@@ -36,7 +36,7 @@ ht-degree: 58%
 >
 >* [ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md)
 >* [DAM アセットにワークフローを適用する方法](/help/assets/assets-workflow.md)
->* [AEM フォーム](https://helpx.adobe.com/jp/aem-forms/6-2/aem-workflows-submit-process-form.html)
+>* [AEM Forms](https://helpx.adobe.com/jp/aem-forms/6-2/aem-workflows-submit-process-form.html)
 >* [翻訳プロジェクト](/help/sites-administering/tc-manage.md)
 
 >
@@ -50,7 +50,7 @@ ht-degree: 58%
 
 ワークフローランチャーはコンテンツリポジトリ内の変更を監視し、変更されたノードの場所とリソースの種類に応じて、ワークフローを起動します。
 
-**Launcher** を使用すると、次の操作を実行できます。
+の使用 **ランチャー** 次の操作を実行できます。
 
 * 特定のノードに対して既に起動されているワークフローを確認する。
 * 特定のノードまたはノードの種類が変更されたときに起動するワークフローを選択する。
@@ -59,7 +59,7 @@ ht-degree: 58%
 ランチャーは任意のノードに対して作成できます。ただし、特定のノードに変更した場合、ワークフローは起動されません。次のパス以下のノードに変更した場合、ワークフローは起動されません。
 
 * `/var/workflow/instances`
-* `/home/users` ブランチの任意の場所にあるワークフローインボックスノード
+* ワークフローインボックスノードは、 `/home/users` 分岐
 * `/tmp`
 * `/var/audit`
 * `/var/classes`
@@ -68,7 +68,7 @@ ht-degree: 58%
 * `/var/mobile`
 * `/var/statistics`
 
-   * 例外：`/var/statistics/tracking` *do* 以下のノードに変更を加えると、ワークフローが起動します。
+   * 例外：以下のノードの変更 `/var/statistics/tracking` *do* ワークフローが起動する原因となります。
 
 標準インストールには、様々な定義が含まれています。それらの定義は、デジタル資産管理およびソーシャルコラボレーションのタスクに対して使用されます。
 
@@ -88,16 +88,16 @@ ht-degree: 58%
 
 ## モデルコンソールからのワークフローの開始 {#starting-a-workflow-from-the-models-console}
 
-1. **ツール**、**ワークフロー**、**モデル** を使用して、**モデル** コンソールに移動します。
+1. 次に移動： **モデル** コンソールを使用 **ツール**, **ワークフロー**&#x200B;を、 **モデル**.
 1. （コンソールの表示に従って）ワークフローを選択します。必要に応じて、検索機能（左上）を使用することもできます。
 
    ![wf-103](assets/wf-103.png)
 
    >[!NOTE]
    >
-   >**[一時的](/help/sites-developing/workflows.md#transient-workflows)** インジケーターは、ワークフローの履歴が保持されないワークフローを示します。
+   >この **[一時的](/help/sites-developing/workflows.md#transient-workflows)** インジケーターは、ワークフロー履歴が保持されないワークフローを示します。
 
-1. ツールバーの「**ワークフローを開始**」を選択します。
+1. 選択 **ワークフローを開始** をクリックします。
 1. ワークフローを実行ダイアログが開き、次の内容を指定できます。
 
    * **ペイロード**
@@ -106,17 +106,17 @@ ht-degree: 58%
 
    * **タイトル**
 
-      このインスタンスを識別するのに役立つタイトル（オプション）。
+      このインスタンスを識別するのに役立つオプションのタイトル。
 
    * **コメント**
 
-      このインスタンスの詳細を示すコメント（オプション）。
+      このインスタンスの詳細を示すのに役立つオプションのコメント。
    ![wf-104](assets/wf-104.png)
 
 ## ランチャー設定の作成 {#creating-a-launcher-configuration}
 
-1. **ツール**、**ワークフロー** を使用して **ワークフローランチャー** コンソールに移動し、**ランチャー** に移動します。
-1. 「**作成**」を選択し、「**ランチャーを追加**」を選択してダイアログを開きます。
+1. 次に移動： **ワークフローランチャー** コンソールを使用 **ツール**, **ワークフロー**&#x200B;を、 **ランチャー**.
+1. 選択 **作成**&#x200B;を、 **ランチャーを追加** ダイアログを開くには：
 
    ![wf-105](assets/wf-105.png)
 
@@ -137,7 +137,7 @@ ht-degree: 58%
 
    * **実行モード**
 
-      ワークフローランチャーが適用されるサーバーの種類。 **作成者**、**公開**、または **作成者と公開** を選択します。
+      ワークフローランチャーが適用されるサーバーの種類。 選択 **作成者**, **公開**&#x200B;または **オーサーとパブリッシュ**.
 
    * **条件**
 
@@ -155,7 +155,7 @@ ht-degree: 58%
 
    * **ワークフローモデル**
 
-      「Event Type」が、定義された「Condition」の下の「Nodetype」や「Path」で発生した場合に起動するワークフロー。
+      Event Type が、定義された Condition の Nodetype または Path で発生したときに開始するワークフロー。
 
    * **説明**
 
@@ -163,7 +163,7 @@ ht-degree: 58%
 
    * **アクティベート**
 
-      ワークフローランチャーをアクティブ化するかどうかを制御します。
+      ワークフローランチャーをアクティブにするかどうかを制御します。
 
       * 設定プロパティが満たされた場合にワークフローを起動するには、「**有効にする**」を選択します。
       * （設定プロパティが満たされた場合でも）ワークフローを実行しないときは、「**無効にする**」を選択します。
@@ -173,14 +173,14 @@ ht-degree: 58%
 
       このランチャープロパティは、項目のコンマ区切りリストです。&quot;
 
-      * `property-name` 指定したプ `jcr` ロパティ名でトリガーされたイベントを無視します。&quot;
-      * `event-user-data:<*someValue*>` は、 `*<someValue*`API `user-data` (https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String) で設定された [`ObservationManager` >]を含むイベントを無視します。
+      * `property-name` 次を無視 `jcr` 指定したプロパティ名でトリガーされたイベント。&quot;
+      * `event-user-data:<*someValue*>` は、 `*<someValue*`> `user-data` ～を通る [`ObservationManager` API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String.
 
-      例えば、次の操作が可能です。
+      次に例を示します。
 
       `jcr:lastModified,dc:modified,dc:format,jcr:lastModifiedBy,imageMap,event-user-data:changedByWorkflowProcess`
 
-      この機能を使用して、除外項目を追加することで、別のワークフロープロセスによってトリガーされた変更を無視できます。
+      この機能を使用して、除外項目を追加することで、別のワークフロープロセスによってトリガーされた変更を無視することができます。
 
       `event-user-data:changedByWorkflowProcess`
 
@@ -188,10 +188,10 @@ ht-degree: 58%
 
 
 
-1. 「**作成**」を選択してランチャーを作成し、コンソールに戻ります。
+1. 選択 **作成**&#x200B;をクリックし、ランチャーを作成してコンソールに戻ります。
 
    該当するイベントが発生すると、ランチャーが実行されてワークフローが開始します。
 
 ## ランチャー設定の管理 {#managing-a-launcher-configuration}
 
-ランチャー設定を作成したら、同じコンソールを使用してインスタンスを選択し、「**プロパティを表示**」（および編集）または「**削除**」を選択できます。
+ランチャー設定を作成したら、同じコンソールを使用してインスタンスを選択し、次に、 **プロパティを表示** （および編集）または **削除**.

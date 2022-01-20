@@ -1,8 +1,8 @@
 ---
 title: タスクアクションのカスタマイズ
-seo-title: タスクアクションのカスタマイズ
-description: タスクアクションの表示方法をカスタマイズしたり、アクションに画像のみを使用したり、ルートアクションに使用されているイメージをカスタマイズすることができます。
-seo-description: タスクアクションの表示方法をカスタマイズしたり、アクションに画像のみを使用したり、ルートアクションに使用されている画像をカスタマイズすることができます。
+seo-title: Customizing Task Actions
+description: タスクアクションの表示方法をカスタマイズしたり、アクションに画像のみを使用したり、ルートアクションに使用されている画像をカスタマイズすることができます。
+seo-description: You can customize appearance of the task actions, use only images for actions, and customize the images used in route actions.
 uuid: f6aebcd5-beac-41bf-95bf-2c07d36afa8b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,18 +11,18 @@ discoiquuid: ca3f6025-7e17-4173-8267-e24a338ea4a1
 exl-id: 3534864b-3d1c-42ca-96a0-5becbfbc8ce6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 56%
+source-wordcount: '293'
+ht-degree: 53%
 
 ---
 
-# タスクアクションのカスタマイズ  {#customizing-task-actions}
+# タスクアクションのカスタマイズ {#customizing-task-actions}
 
-AEM Forms Workspace で、ユーザーはタスクアクションをカスタマイズすることができます。タスクアクションをカスタマイズする前に、「[AEM Forms workspaceのカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」に示す手順に従っていることを確認してください。
+AEM Forms Workspace で、ユーザーはタスクアクションをカスタマイズすることができます。タスクアクションをカスタマイズする前に、次の手順に従っていることを確認してください： [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md).
 
 ## テキストスタイルのカスタマイズ {#customizing-text-style}
 
-テキストスタイルをカスタマイズするには、`/apps/ws/css/newStyle.css`ファイルに次のコードスニペットを追加します。
+テキストスタイルをカスタマイズするには、次のコードスニペットを `/apps/ws/css/newStyle.css` ファイル：
 
 ```css
 /*-------- For Task Actions visible in task list task action popup ----------------------------------------------------*/
@@ -110,7 +110,7 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
 
 ## 画像のカスタマイズ {#customizing-images}
 
-画像をカスタマイズするには、次のコードスニペットを`/apps/ws/css/newStyle.css`ファイルに追加します。 次のコードスニペットは *lock* アクションの画像をカスタマイズします。
+画像をカスタマイズするには、次のコードスニペットを `/apps/ws/css/newStyle.css` ファイル。 次のコードスニペットは *lock* アクションの画像をカスタマイズします。
 
 ```css
 #taskarea .taskActionsPopUp .lock, .task .taskActionsPopUp .lock{
@@ -131,15 +131,15 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
 }
 ```
 
-## アクションに画像のみを表示  {#showing-only-images-for-actions}
+## アクションに画像のみを表示 {#showing-only-images-for-actions}
 
-アクションに画像のみを表示するには、ルートアクションで使用されているイメージをカスタマイズします。詳細は、[ルートアクションのイメージ](/help/forms/using/images-route-actions.md)を参照してください。
+アクションに画像のみを表示するには、ルートアクションで使用されているイメージをカスタマイズします。詳しくは、 [ルートアクションのイメージ](/help/forms/using/images-route-actions.md).
 
 ### タスクリストのタスクアクション ポップアップメニュー {#task-list-task-action-nbsp-pop-up-menu}
 
-1. AEM Forms Workspace タスクリストのタスクアクションポップアップメニューのアイテムをカスタマイズするには、開発パッケージが必要です。開発パッケージの作成について詳しくは、「[AEM Forms Workspaceコードの構築](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)」を参照してください。
+1. AEM Forms Workspace タスクリストのタスクアクションポップアップメニューのアイテムをカスタマイズするには、開発パッケージが必要です。開発パッケージの作成について詳しくは、 [AEM Forms Workspace コードを構築しています。](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
 
-1. /libs/ws/js/runtime/templates/task.htmlを`/apps/ws/js/runtime/templates/task.html`にコピーし、次のコードスニペットを置き換えます。
+1. /libs/ws/js/runtime/templates/task.htmlをにコピーします。 `/apps/ws/js/runtime/templates/task.html`次のコードスニペットを置き換えます。
 
    ```
    // Orignal code
@@ -212,7 +212,7 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
        </div>
    ```
 
-1. アンカータグに割り当てられている固定幅を`/apps/ws/css/newStyle.css`ファイルから削除します。
+1. アンカータグに割り当てられている固定幅を `/apps/ws/css/newStyle.css` ファイル：
 
    ```css
    .task .taskActionsPopUp ul{
@@ -264,9 +264,9 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
 
 ### タスクの詳細タスクアクションポップアップメニュー {#task-details-task-action-pop-up-menu}
 
-次の手順を実行して、詳細タスクのアクションポップアップメニューをカスタマイズします。
+詳細タスクアクションポップアップメニューをカスタマイズするには、次の手順を実行します。
 
-* /libs/ws/js/runtime/templates/taskdetails.htmlファイルを`/apps/ws/js/runtime/templates/`フォルダーにコピーします。
+* /libs/ws/js/runtime/templates/taskdetails.htmlファイルを `/apps/ws/js/runtime/templates/` フォルダー：
 * テキストの代わりにアンカータグの内部にアイコンタグをカプセル化します。例えば、以下に示す新しいコードは、アンカータグ内にアイコンタグをカプセル化します。
 
 ```
@@ -359,7 +359,7 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
 ```
 
 * /apps/ws/js/registry.js ファイルを開いて編集します。
-* 次のテキストを探します。  `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
-* 検索したテキストを次のテキストに置き換えます。`text!/lc/apps/ws/js/runtime/templates/taskdetails.html`
+* 次のテキストを探します。 `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
+* 検索したテキストを次のテキストに置き換えます。 `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`
 
 [**サポートへのお問い合わせ**](https://www.adobe.com/account/sign-in.supportportal.html)

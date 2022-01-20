@@ -1,17 +1,17 @@
 ---
 title: アダプティブフォームコンポーネントのインラインスタイリング
-seo-title: 'アダプティブフォームコンポーネントのインライン CSS プロパティ '
+seo-title: Inline CSS properties for adaptive form components
 description: アダプティブフォームではカスタムスタイルを適用することができますが、アダプティブフォームの個々のコンポーネントにインライン CSS プロパティを適用することもできます。
-seo-description: アダプティブフォームではカスタムスタイルを適用することができますが、アダプティブフォームの個々のコンポーネントにインライン CSS プロパティを適用することもできます。
+seo-description: While you can apply custom styles on an adaptive form, you can also apply inline CSS properties on individual components of an adaptive form.
 uuid: ab948f02-3b41-4304-955b-6dd51d27088e
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 91a41bc1-3fa3-4467-b3f8-5570ba7757c0
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 8e7ba9d2-207f-419b-bcd5-74ba9b14ab92
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '526'
 ht-degree: 98%
 
 ---
@@ -96,7 +96,7 @@ ht-degree: 98%
  </tbody> 
 </table>
 
-![インラインスタイルが適用された後のテキストボックスのスタイル](assets/applied-style.png) 
+![インラインスタイルが適用された後のテキストボックスのスタイル](assets/applied-style.png)
 **図：** *インラインスタイルプロパティを適用した後のテキストボックスコンポーネント*
 
 上述の手順に従って、他のコンポーネント（パネル、送信ボタン、ラジオボタンなど）を選択し、そのスタイルを設定できます。

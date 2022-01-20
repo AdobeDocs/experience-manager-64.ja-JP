@@ -1,8 +1,8 @@
 ---
 title: SPA と Adobe Experience Platform Launch の統合
-seo-title: SPA と Adobe Experience Platform Launch の統合
+seo-title: SPA and Adobe Experience Platform Launch Integration
 description: Adobe Experience Platform Launch は、SPA 内に Analytics、ターゲットおよび Audience Manager を実装する方法として推奨されます。
-seo-description: Adobe Experience Platform Launch は、SPA 内に Analytics、ターゲットおよび Audience Manager を実装する方法として推奨されます。
+seo-description: Adobe Experience Platform Launch is the recommended way to implement Analytics, Target, and Audience Manager within SPAs.
 uuid: 8535a911-2863-4e3b-a3fb-414a0e7e9a4e
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,20 +12,20 @@ discoiquuid: a458cc95-cd94-4f3f-9e7b-d6a5780ec4d5
 exl-id: 1af29921-7c24-49b5-9f4c-60671641d4e4
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 83%
+source-wordcount: '200'
+ht-degree: 82%
 
 ---
 
-# SPAとLaunchの統合{#spa-and-launch-integration}
+# SPAと Launch の統合{#spa-and-launch-integration}
 
 Adobe Experience Platform Launch は、Analytics、ターゲットおよび Audience Manager を単一ページアプリケーション（SPA）内に実装する方法として推奨されます。
 
 >[!NOTE]
 >
->シングルページアプリケーション(SPA)エディター機能には、AEM 6.4サービスパック2以降が必要です。
+>シングルページアプリケーション (SPA) エディター機能には、AEM 6.4 Service Pack 2 以降が必要です。
 >
->SPA Editorは、SPAフレームワークベースのクライアントサイドレンダリング(ReactやAngularなど)が必要なプロジェクトで推奨されるソリューションです。
+>SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
 
 ## チュートリアル {#tutorial}
 

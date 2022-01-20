@@ -14,7 +14,7 @@ ht-degree: 82%
 
 # Web ページでのページトラッカーと埋め込みコードの使用 {#using-page-tracker-and-embed-code-in-web-pages}
 
-ページトラッカーは、Adobe AnalyticsがWebサイト上のAdobe Experience Managerアセットに関する使用状況データを取り込めるように、サードパーティのWebサイトのコードに組み込むJavaScriptコードです。
+ページトラッカーは、Adobe Analyticsがこれらの Web サイト上のAdobe Experience Managerアセットに関する使用状況データを取り込めるようにする、サードパーティの Web サイトのコードに含まれる JavaScript コードです。
 
 アセット固有のイベント（クリックなど）を取得するには、サードパーティの Web サイトコードに埋め込みコードも含めます。
 

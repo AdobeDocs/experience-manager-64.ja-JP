@@ -1,8 +1,8 @@
 ---
 title: エラーダイアログのカスタマイズ
-seo-title: エラーダイアログのカスタマイズ
+seo-title: Customizing error dialogs
 description: LiveCycle AEM Forms Workspace のエラーダイアログをカスタマイズして、異なるエラー説明を追加する方法。
-seo-description: LiveCycle AEM Forms Workspace のエラーダイアログをカスタマイズして、異なるエラー説明を追加する方法。
+seo-description: How-to customize the error dialogs of LiveCycle AEM Forms workspace to add different fault descriptions.
 uuid: 5ed1da68-bd5b-4a36-9a14-9d61733237e6
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,18 +11,18 @@ discoiquuid: f547c0c1-3917-4092-9d63-c1b3aaefcef0
 exl-id: e45f7f79-a5c3-439c-bf6c-7b14590cd3fc
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 52%
+source-wordcount: '148'
+ht-degree: 46%
 
 ---
 
-# エラーダイアログのカスタマイズ  {#customizing-error-dialogs}
+# エラーダイアログのカスタマイズ {#customizing-error-dialogs}
 
-AEM Forms Workspace では、エラーダイアログをカスタマイズすることができます。[AEM Forms Workspaceのカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)を実行し、次の手順に従ってエラーダイアログをカスタマイズします。
+AEM Forms Workspace では、エラーダイアログをカスタマイズすることができます。を実行します。 [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md) 次の手順に従って、エラーダイアログをカスタマイズします。
 
 ## テキストのカスタマイズ {#customizing-text}
 
-1. `/apps/ws/locales/en-US/translation.json`ファイルで、`wserror`の値をカスタマイズした値に変更します。 次に例を示します。
+1. 内 `/apps/ws/locales/en-US/translation.json` ファイル、 `wserror` をカスタマイズされた値に追加します。 次に例を示します。
 
    ```
    "wserror" : {
@@ -49,7 +49,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 
 ## CSS のカスタマイズ {#customizing-css}
 
-1. `/apps/ws/css/newStyle.css`ファイルに次のスニペットを追加することで、ダイアログ、ヘッダー、コンテンツ領域、フットバー、フットバーボタン、その他の関連項目を更新できます。
+1. 次のスニペットを `/apps/ws/css/newStyle.css` ファイル：
 
    ```css
    /*-------- Error Dialog -------------------------------------------------------------------------------------------------------------------*/
@@ -184,7 +184,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
    }
    ```
 
-1. フットバーボタンのスパンについては、 `.error-dialog`ボタンと`.foot-bar`ボタンのスパンをコンポジットリストから分離します。 この変更を行うには、次を newStyle.css ファイルに追加します。
+1. 足のバーボタンのスパンに対して、 `.error-dialog` および `.foot-bar` ボタンは複合リストから広がります。 この変更を行うには、次を newStyle.css ファイルに追加します。
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -219,7 +219,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 
 >[!NOTE]
 >
->追加の画像を参照している場合は、`/apps/ws/images`の下の目的の階層に画像を追加します。
+>追加の画像を参照している場合は、それらをの下の目的の階層に追加します。 `/apps/ws/images`.
 
 ## 例 {#examples}
 

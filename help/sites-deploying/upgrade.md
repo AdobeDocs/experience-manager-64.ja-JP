@@ -1,8 +1,8 @@
 ---
 title: AEM 6.4 へのアップグレード
-seo-title: AEM 6.4 へのアップグレード
+seo-title: Upgrading to AEM 6.4
 description: 古い AEM のインストールを AEM 6.4 にアップグレードするための基礎について説明します。
-seo-description: 古い AEM のインストールを AEM 6.4 にアップグレードするための基礎について説明します。
+seo-description: Learn about the basics of upgrading an older AEM installation to AEM 6.4.
 uuid: aa878528-5161-4df3-9fed-cc779fb6bdbe
 contentOwner: sarchiz
 topic-tags: upgrading
@@ -10,11 +10,11 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 discoiquuid: 81ceb91d-039e-45f0-9b0c-b8233901dea8
 targetaudience: target-audience upgrader
-feature: アップグレード
+feature: Upgrading
 exl-id: 791da16c-bf2c-47a9-86a4-0a601a1b017e
 source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '700'
 ht-degree: 67%
 
 ---
@@ -42,17 +42,17 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->アップグレードの信頼性を向上させる取り組みの一環として、AEM 6.4では包括的なリポジトリ再構築がおこなわれました。 新しい構造に合わせる方法について詳しくは、 AEM 6.4でのリポジトリの再構築[を参照してください。](/help/sites-deploying/repository-restructuring.md)
+>アップグレードの信頼性を向上させる取り組みの一環として、AEM 6.4 では包括的なリポジトリ再構築がおこなわれました。 新しい構造に合わせる方法について詳しくは、 [AEM 6.4 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md)
 
-## 変更点{#what-has-changed}
+## 変更点 {#what-has-changed}
 
 以下に、AEM の最近のいくつかのリリースでの注目すべき主な変更点を示します。
 
 AEM 6.0 で、新しい Jackrabbit Oak リポジトリが導入されました。Persistence Manager は、[マイクロカーネル](/help/sites-deploying/recommended-deploys.md)で置き換えられました。バージョン 6.1 から CRX2 がサポートされなくなりました。5.6.1 のインスタンスから CRX2 リポジトリを移行するには、crx2oak という移行ツールを実行する必要があります。詳しくは、[CRX2OAK 移行ツールの使用](/help/sites-deploying/using-crx2oak.md)を参照してください。
 
-Assets Insightsを使用し、AEM 6.2より前のバージョンからアップグレードする場合は、アセットを移行し、JMX Beanを使用してIDを生成する必要があります。 アドビの内部テストでは TarMK 環境の 12.5 万個のアセットが 1 時間で移行されましたが、ユーザーの結果は異なる場合があります。
+Assets Insights を使用し、AEM 6.2 より前のバージョンからアップグレードする場合は、アセットを移行し、JMX Bean を使用して ID を生成する必要があります。 アドビの内部テストでは TarMK 環境の 12.5 万個のアセットが 1 時間で移行されましたが、ユーザーの結果は異なる場合があります。
 
-AEM 6.3では、TarMK実装の基盤となる`SegmentNodeStore`の新しい形式が導入されました。 AEM 6.3より前のバージョンからアップグレードする場合は、アップグレードの一環として、システムのダウンタイムが伴うリポジトリの移行が必要です。
+AEM 6.3 では、 `SegmentNodeStore`:TarMK 実装の基礎です。 AEM 6.3 より前のバージョンからアップグレードする場合は、アップグレードの一環としてリポジトリの移行が必要です（システムのダウンタイムが伴います）。
 
 アドビのエンジニアリング部は、この移行には約 20 分かかると予測しています。インデックスの再作成は必要ないことに注意してください。また、新しいリポジトリ形式で機能するように crx2oak ツールの新しいバージョンがリリースされました。
 
@@ -82,10 +82,10 @@ AEM のアップグレードには複数の段階があり、場合によって�
 
 ## 6.4 でのアップグレードの機能強化を含むアップグレードフロー {#upgrade-overview-1}
 
-以下の図は、アップグレードの方法を示す、全体的なアップグレード推奨フローです。導入された新機能も示されています。アップグレードは、パターン検出から始める必要があります（[パターン検出を使用したアップグレードの複雑性の評価](/help/sites-deploying/pattern-detector.md)を参照）。生成されたレポートのパターンに基づいて、AEM 6.4との互換性を保つためにとるパスを決定できます。
+以下の図は、アップグレードの方法を示す、全体的なアップグレード推奨フローです。導入された新機能も示されています。アップグレードは、パターン検出から始める必要があります ( [パターン検出を使用したアップグレードの複雑性の評価](/help/sites-deploying/pattern-detector.md)) を使用することで、生成されるレポートのパターンに基づいて、AEM 6.4 との互換性を保つためにたどるパスを決定できます。
 
-6.4では、すべての新機能の後方互換性を維持する重点が大きくなっていましたが、後方互換性の問題が引き続き発生する場合は、開発を一時的に遅らせて、カスタムコードを6.4に準拠させることができます。[](/help/sites-deploying/backward-compatibility.md)
+6.4 では、すべての新機能の後方互換性を維持することが大きく重要でしたが、後方互換性の問題がまだある場合は、互換性モードを使用して、カスタムコードを 6.4 に準拠させる開発を一時的に延期できます。 [AEM 6.4 の後方互換性](/help/sites-deploying/backward-compatibility.md)) をクリックします。
 
-最後に、6.4の開発サイクルでは、持続可能なアップグレード（[持続可能なアップグレード](/help/sites-deploying/sustainable-upgrades.md)を参照）に基づいて導入された機能が、今後のアップグレードをより効率的かつシームレスにするためのベストプラクティスに従うのに役立ちます。
+最後に、6.4 の開発サイクルで、持続可能なアップグレードに基づいて導入された機能 ( [持続可能なアップグレード](/help/sites-deploying/sustainable-upgrades.md)) は、ベストプラクティスに従って、今後のアップグレードをより効率的かつシームレスにおこなうのに役立ちます。
 
 ![6_4_upgrade_overviewflowchart-newpage3](assets/6_4_upgrade_overviewflowchart-newpage3.png)

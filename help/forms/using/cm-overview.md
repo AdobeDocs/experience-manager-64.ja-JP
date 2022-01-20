@@ -2,7 +2,7 @@
 title: Correspondence Management の概要
 seo-title: Correspondence Management
 description: このトピックでは、Correspondence Management の概要を説明します。
-seo-description: このトピックでは、Correspondence Management の概要を説明します。
+seo-description: This topic gives you an overview of Correspondence Management.
 uuid: fa230c7e-fef1-4996-bdda-1637b36dac68
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -12,8 +12,8 @@ feature: Correspondence Management
 exl-id: 3cda92c9-5f3e-4704-a52b-55eda3b3fd2a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 91%
+source-wordcount: '217'
+ht-degree: 90%
 
 ---
 
@@ -30,7 +30,7 @@ Correspondence Management は、安全でパーソナライズされたインタ
 処理を合理化し、以下を実現します。
 
 * ビジネスユーザーに合わせて設計された直感的なインターフェイスでテンプレートとコンテンツを展開および管理できます。
-* 承認済みコンテンツとカスタム作成コンテンツの両方から通信をすばやく組み立てる
+* 事前承認済みコンテンツとカスタム作成済みコンテンツの両方から、通信を素早く組み立てる
 
 ### 管理性 {#managed}
 
@@ -39,7 +39,7 @@ Correspondence Management は、安全でパーソナライズされたインタ
 * ビジネスルールと承認済みのコンテンツを中央管理のコンテンツリポジトリで管理できます。
 * AEM DAM を使用して画像を管理できます。
 * アーカイブや監査対象の Adobe PDF ファイルを作成できます。
-* 組み込みのビジネスルールを通じて、事前に承認されたコンテンツを使用して、組織の規制に準拠したメッセージを作成する。
+* 埋め込まれたビジネスルールを通じて、事前に承認されたコンテンツを使用して、組織の規制に準拠したメッセージを作成する。
 
 ### 広範性 {#extensive}
 

@@ -1,8 +1,8 @@
 ---
 title: 検索
-seo-title: 検索
+seo-title: Search
 description: 包括的な検索を使用して、よりすばやくコンテンツを見つけます
-seo-description: 包括的な検索を使用して、よりすばやくコンテンツを見つけます
+seo-description: Find your content faster with comprehensive search
 uuid: 1e80cf85-653f-4dde-930a-de05415b994f
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: cd87e1e8-5329-4e60-ac9d-2705f54d0da6
 exl-id: 9e93b28b-627d-4676-82a6-d719de4d152a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '512'
 ht-degree: 94%
 
 ---

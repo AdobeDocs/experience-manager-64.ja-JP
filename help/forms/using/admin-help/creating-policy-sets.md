@@ -1,8 +1,8 @@
 ---
 title: ポリシーセットの作成および管理
-seo-title: ポリシーセットの作成および管理
+seo-title: Creating and managing policy sets
 description: ポリシーセットは、ある共通の目的を持つポリシーをグループ化するために使用します。ポリシーセット内のポリシーを作成、編集および削除することができます。
-seo-description: ポリシーセットは、ある共通の目的を持つポリシーをグループ化するために使用します。ポリシーセット内のポリシーを作成、編集および削除することができます。
+seo-description: Policy sets are used to group policies that have a common business purpose. You can create, edit and delete policies in a policy set.
 uuid: 11faf67c-b9b7-4394-8672-d43cace131ad
 contentOwner: admin
 content-type: reference
@@ -13,7 +13,7 @@ feature: Document Security
 exl-id: e17ab7de-9f4a-4456-be80-43ab9663940e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1295'
 ht-degree: 99%
 
 ---
@@ -44,14 +44,14 @@ ht-degree: 99%
 
 Document Security のインストール時に、「*グローバルポリシーセット*」と呼ばれるデフォルトのポリシーセットが作成されます。このポリシーセットは、ソフトウェアをインストールした管理者またはこのポリシーセットを担当しているポリシーセットコーディネーターによって管理されます。
 
-## ポリシーセットの作成  {#create-a-policy-set}
+## ポリシーセットの作成 {#create-a-policy-set}
 
 インストール時に作成されるデフォルトのポリシーセットは、グローバルポリシーセットだけです。新たにポリシーセットを作成し、ポリシー、ユーザー、ポリシーセットコーディネーターおよびドキュメント発行者を追加することができます。ポリシーセットを作成すると、そのセット内にポリシーを作成できます。
 
 ポリシーセットの作成時には、いつでも「戻る」ボタンで前の画面に戻ったり、「保存」ボタンでポリシーセットを保存することができます。
 
 1. Document Security ページで、ポリシー／「ポリシーセット」タブをクリックし、「新規作成」をクリックします。
-1. 「名前」ボックスに新しいポリシーセットの名前を入力し、必要に応じて「説明」ボックスに説明を入力して、「次へ」をクリックします。名前にコロン&#x200B;**:**&#x200B;を含めることはできません。
+1. 「名前」ボックスに新しいポリシーセットの名前を入力し、必要に応じて「説明」ボックスに説明を入力して、「次へ」をクリックします。名前にコロンを含めることはできません **:**.
 
    >[!NOTE]
    >
@@ -89,7 +89,7 @@ Document Security のインストール時に、「*グローバルポリシー�
 
 こうして作成したポリシーセットにはポリシーを追加することができます（[ポリシーの作成および編集](/help/forms/using/admin-help/creating-policies.md#creating-and-editing-policies)を参照）。
 
-## ポリシーセットの編集  {#edit-a-policy-set}
+## ポリシーセットの編集 {#edit-a-policy-set}
 
 1. Document Security ページで、ポリシー／「ポリシーセット」タブをクリックし、編集するポリシーセットをクリックします。
 1. 該当するタブをクリックし、必要に応じて編集を行います。
@@ -107,7 +107,7 @@ Document Security のインストール時に、「*グローバルポリシー�
    * ポリシーを検索するには、「ポリシー ID」または「ポリシー名」を選択し、該当する値を入力し、表示する項目数を選択して、「検索」をクリックします。
    * 新しいポリシーの作成について詳しくは、[ポリシーの作成および編集](/help/forms/using/admin-help/creating-policies.md#creating-and-editing-policies)を参照してください。
 
-## ポリシーセットの削除  {#delete-a-policy-set}
+## ポリシーセットの削除 {#delete-a-policy-set}
 
 ポリシーセットを削除すると、そのセットのポリシーは新しいドキュメントに適用されません。現在も使用中のポリシーについては、管理コンソールおよびエンドユーザー Web ページでポリシー情報を確認できます。ポリシーで保護されているドキュメントのドキュメント詳細ページからポリシー情報を表示できます。現在も使用中のポリシーについては、編集が可能です。
 

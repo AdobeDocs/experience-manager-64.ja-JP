@@ -1,8 +1,8 @@
 ---
 title: 管理コンソール
-seo-title: 管理コンソール
+seo-title: Admin Consoles
 description: AEM で使用可能な管理コンソールの使用方法について学習します。
-seo-description: AEM で使用可能な管理コンソールの使用方法について学習します。
+seo-description: Lear how to use the Admin Consoles available in AEM.
 uuid: 701dc57c-f7b4-421e-a847-577ae2585e80
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 98ba3093-1edb-4891-abbe-47cf6e4f1feb
 exl-id: f3c03562-aaeb-4d43-aee1-d92d661ee329
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 72%
+source-wordcount: '227'
+ht-degree: 70%
 
 ---
 
@@ -23,11 +23,11 @@ ht-degree: 72%
 
 ![screen_shot_2018-03-23at111956](assets/screen_shot_2018-03-23at111956.png)
 
-`/libs/cq/core/content/nav`にクラシックUIバージョンがあるすべてのコンソールを個別に有効にし直すと、コンソールアイコンにマウスオーバーすると、 **クラシックUI**&#x200B;オプションが再度ポップアップ表示されます。
+クラシック UI バージョンを持つすべてのコンソールを `/libs/cq/core/content/nav` を個別に再度有効にすることで、 **クラシック UI** オプションを選択すると、コンソールアイコンにマウスを置いたときに、再びポップアップが表示されます。
 
 以下の例では、サイトコンソールのクラシック UI を再有効化しています。
 
-1. CRXDE Liteを使用して、クラシックUIを再有効化するAdmin Consoleに対応するノードを探します。 目的のノードは次の場所にあります。
+1. CRXDE Liteを使用して、クラシック UI を再度有効にする管理コンソールに対応するノードを探します。 目的のノードは次の場所にあります。
 
    `/libs/cq/core/content/nav`
 
@@ -39,7 +39,7 @@ ht-degree: 72%
 
    `/libs/cq/core/content/nav/sites`
 
-1. **Overlay Node**&#x200B;オプションを使用してオーバーレイを作成します。例：
+1. を使用したオーバーレイの作成 **ノードをオーバーレイ** オプション；例：
 
    * **パス**: `/apps/cq/core/content/nav/sites`
    * **オーバーレイの場所**: `/apps/`

@@ -1,19 +1,19 @@
 ---
 title: アプリケーションサーバーのインストール環境のアップグレード手順
-seo-title: アプリケーションサーバーのインストール環境のアップグレード手順
+seo-title: Upgrade Steps for Application Server Installations
 description: アプリケーションサーバーからデプロイされる AEM のインスタンスのアップグレード方法について説明します。
-seo-description: アプリケーションサーバーからデプロイされる AEM のインスタンスのアップグレード方法について説明します。
+seo-description: Learn how to upgrade instances of AEM that are deployed via Application Servers.
 uuid: df3fa715-af4b-4c81-b2c5-130fbc82f395
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: c427c8b6-eb94-45fa-908f-c3d5a337427d
-feature: アップグレード
+feature: Upgrading
 exl-id: 1c72093e-82c8-49ad-bd3c-d61904aaab28
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '504'
 ht-degree: 95%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 95%
 
 1. 次の操作をおこなって、sling.properties ファイル内の必要なプロパティを削除します。
 
-   1. `crx-quickstart/launchpad/sling.properties`にあるファイルを開きます。
+   1. 次の場所にあるファイルを開きます。 `crx-quickstart/launchpad/sling.properties`
    1. 次のプロパティを削除してファイルを保存します。
 
       1. `sling.installer.dir`
@@ -71,8 +71,8 @@ ht-degree: 95%
 1. 不要なファイルとフォルダーを削除します。具体的に削除する必要のある項目は次のとおりです。
 
    * **launchpad/startup フォルダー**：ターミナルで次のコマンドを実行して削除できます。`rm -rf crx-quickstart/launchpad/startup`
-   * **base.jarファイル**:`find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
-   * **BootstrapCommandFile_timestamp.txtファイル**:`rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
+   * この **base.jar ファイル**: `find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
+   * この **BootstrapCommandFile_timestamp.txt ファイル**: `rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
 
 1. 新しく移行された segmentstore を適切な場所にコピーします。
 
@@ -98,11 +98,11 @@ ht-degree: 95%
 
 1. 設定ファイルを編集し、使用できる状態にします。具体的には、次のように編集します。
 
-   * 次の行を&#x200B;**org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**&#x200B;に追加します。
+   * 次の行を **org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**:
 
       `customBlobStore=true`
 
-   * 次に、以下の行を&#x200B;**org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config**&#x200B;に追加します。
+   * 次の行を **org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config**:
 
       ```
       path=./crx-quickstart/repository/datastore

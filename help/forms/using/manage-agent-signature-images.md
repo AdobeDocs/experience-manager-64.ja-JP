@@ -1,8 +1,8 @@
 ---
 title: エージェント署名画像の管理
-seo-title: エージェント署名画像の管理
+seo-title: Manage agent signature images
 description: 作成したレターテンプレートは、データ、コンテンツ、および添付ファイルを管理することにより、AEM Forms で通信を作成する際に使用することができます。
-seo-description: レターテンプレートを作成すれば、それを使用して、データ、コンテンツ、および添付ファイルを管理することにより AEM Forms で通信を作成できます。
+seo-description: After you have created a letter template, you can use it to create correspondence in AEM Forms by managing data, content, and attachments.
 uuid: 720dd075-9059-4311-ad52-70e2f7c76c58
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -12,27 +12,27 @@ feature: Correspondence Management
 exl-id: 4e261228-14a4-4983-97ac-6ca476bee126
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 64%
+source-wordcount: '690'
+ht-degree: 63%
 
 ---
 
-# エージェント署名画像を管理 {#manage-agent-signature-images}
+# エージェント署名画像の管理 {#manage-agent-signature-images}
 
 ## 概要 {#overview}
 
-Correspondence Managementでは、レター内にエージェント署名を描画するために画像を使用することができます。エージェント署名画像を設定した後、レターを作成する際に、送信者エージェントの署名としてレター内のエージェント署名画像をレンダリングできます。
+Correspondence Managementでは、レター内にエージェント署名を描画するために画像を使用することができます。エージェント署名画像を設定した後、レターの作成時に、送信者エージェントの署名としてレター内のエージェント署名画像をレンダリングできます。
 
-agentSignatureImage DDE は算出された DDE として、エージェントの署名画像を表します。算出された DDE の式では、Expression Manager 構築ブロックにより公開された新しいカスタム関数を使用します。このカスタム関数は、agentID と agentFolder を入力パラメーターとして取得し、これらのパラメーターに基づき画像コンテンツを取得します。SystemContextシステムデータディクショナリは、Correspondence Managementのレターに、現在のシステムコンテキストの情報へのアクセスを提供します。 システムコンテキストには、現在ログイン中のユーザーとアクティブな設定パラメーターに関する情報が含まれます。
+agentSignatureImage DDE は算出された DDE として、エージェントの署名画像を表します。算出された DDE の式では、Expression Manager 構築ブロックにより公開された新しいカスタム関数を使用します。このカスタム関数は、agentID と agentFolder を入力パラメーターとして取得し、これらのパラメーターに基づき画像コンテンツを取得します。SystemContext システムデータディクショナリを使用すると、Correspondence Management のレターは現在のシステムコンテキストの情報にアクセスできます。 システムコンテキストには、現在ログイン中のユーザーとアクティブな設定パラメーターに関する情報が含まれます。
 
-画像は、cmuserroot フォルダの下に追加することができます。[Correspondence Management設定プロパティ](/help/forms/using/cm-configuration-properties.md)では、CM User Rootプロパティを使用して、エージェント署名画像の取得元のフォルダーを変更できます。
+画像は、cmuserroot フォルダの下に追加することができます。In [Correspondence Management 設定プロパティ](/help/forms/using/cm-configuration-properties.md)を使用すると、CM User Root プロパティを使用して、エージェント署名画像の取得元のフォルダーを変更できます。
 
-agentFolder DDEの値は、Correspondence Management設定プロパティのCMUserRoot設定パラメーターから取得されます。 デフォルトでは、この設定パラメーターはCRXリポジトリの/content/cmUserRootを指します。 CMUserRoot設定の値は、設定プロパティで変更できます。\
+agentFolder DDE の値は、Correspondence Management 設定プロパティの CMUserRoot 設定パラメータから取得されます。 デフォルトでは、この設定パラメーターは CRX リポジトリの/content/cmUserRoot を指します。 CMUserRoot 設定の値は、設定プロパティで変更できます。\
 また、デフォルトのカスタム関数を上書きして、ユーザー署名画像を取得するための独自のロジックを定義することもできます。
 
 ## エージェント署名画像を追加する {#adding-agent-signature-image}
 
-1. エージェント署名画像の名前と、AEMのユーザ名が一致することを確認してください。（画像ファイル名には拡張子は不要です）。
+1. エージェント署名画像の名前と、AEMのユーザ名が一致することを確認してください。（画像ファイル名の拡張子は不要です）。
 1. CRXで、コンテンツフォルダ内に「`cmUserRoot`」フォルダを作成します。
 
    1. `https://[server]:[port]/crx/de` にアクセスします。必要に応じて、管理者としてログインします。
@@ -45,7 +45,7 @@ agentFolder DDEの値は、Correspondence Management設定プロパティのCMUs
 
       >[!NOTE]
       >
-      >デフォルトでは、AEM がエージェント署名画像を参照する際に cmUserRoot を開きます。ただし、[Correspondence Management設定プロパティ](/help/forms/using/cm-configuration-properties.md)でCM User Rootプロパティを編集することで変更できます。
+      >デフォルトでは、AEM がエージェント署名画像を参照する際に cmUserRoot を開きます。ただし、 [Correspondence Management 設定プロパティ](/help/forms/using/cm-configuration-properties.md).
 
 1. Content Explorer で cmUserRoot フォルダに移動し、その中にエージェント署名画像を追加します。
 
@@ -61,17 +61,17 @@ agentFolder DDEの値は、Correspondence Management設定プロパティのCMUs
 
       **タイプ：** nt:file
 
-      `cmUserRoot`フォルダーの下に、`JohnDoe`という新しいフォルダー（または前の手順で指定した名前）が作成されます。
+      以下 `cmUserRoot` フォルダ、新しいフォルダ `JohnDoe` （または前の手順で指定した名前）が作成されます。
 
-   1. 新しく作成したフォルダをクリックします（ここでは「`JohnDoe`」）。Content Explorerでは、フォルダーの内容が灰色表示になって表示されます。
+   1. 新しく作成したフォルダをクリックします（ここでは「`JohnDoe`」）。Content Explorer では、フォルダの内容が灰色表示になって表示されます。
 
-   1. **jcr:content**&#x200B;プロパティをダブルクリックし、そのタイプを&#x200B;**nt:resource**&#x200B;に設定して、緑のチェックマークをクリックしてエントリを保存します。
+   1. 次をダブルクリックします。 **jcr:content** プロパティ、タイプをに設定 **nt:resource**&#x200B;をクリックし、緑のチェックマークをクリックしてエントリを保存します。
 
       プロパティが表示されていない場合は、まず、名前が「jcr:content」のプロパティを作成します。
 
       ![jcr:content property](assets/3_jcrcontentntresource.png)
 
-      jcr:content サブプロパティの中に、暗く表示されている jcr:data を探します。jcr:data をダブルクリックします。プロパティが編集可能になり、「ファイルを選択」ボタンがエントリに表示されます。 「**ファイル**&#x200B;を選択」をクリックし、ロゴとして使用する画像ファイルを選択します。 画像ファイルに拡張子を付ける必要はありません。
+      jcr:content サブプロパティの中に、暗く表示されている jcr:data を探します。jcr:data をダブルクリックします。プロパティが編集可能になり、「ファイルを選択」ボタンがエントリに表示されます。 クリック **ファイルを選択** をクリックし、ロゴとして使用する画像ファイルを選択します。 画像ファイルの拡張子は不要です。
 
       ![JCR データ](assets/5_jcrdata.png)
    「**すべて保存**」をクリックします。

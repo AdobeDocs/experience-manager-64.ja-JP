@@ -1,8 +1,8 @@
 ---
 title: ワークフローへの参加
-seo-title: ワークフローへの参加
+seo-title: Participating in Workflows
 description: ワークフローには通常、ページまたはアセットでユーザーがアクティビティを実行する必要があるステップが含まれています。
-seo-description: ワークフローには通常、ページまたはアセットでユーザーがアクティビティを実行する必要があるステップが含まれています。
+seo-description: Workflows typically include steps that require a person to perform an activity on a page or asset.
 uuid: 3e195da4-b25e-459d-9a4c-84549f62d7ff
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 37c8b1bd-0e60-42d2-80ed-dece3f5c2342
 exl-id: 7b645497-ddbf-403c-9e78-5e845f6bda50
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1515'
 ht-degree: 100%
 
 ---
@@ -270,7 +270,7 @@ ht-degree: 100%
 1. 必要に応じて、適切なアクションを選択し、詳細を入力して「**OK**」（または「**キャンセル**」）で確認します。
 1. 「**保存**」または「**キャンセル**」を使用して終了します。
 
-### ワークフローペイロード（複数リソース）の表示 {#viewing-the-workflow-payload-multiple-resources}
+### ワークフローペイロード（複数リソース）の表示  {#viewing-the-workflow-payload-multiple-resources}
 
 ワークフローインスタンスに関連付けられたペイロードの詳細を表示できます。最初にパッケージの中のリソースが表示されるので、ドリルダウンして、個別のページを表示できます。
 
@@ -280,7 +280,7 @@ ht-degree: 100%
 1. アクションを実行するワークフロー項目を選択します（サムネールをタップまたはクリック）。
 1. ツールバーの「**ペイロードを表示**」を選択して、ダイアログを開きます。
 
-   ワークフローパッケージは単にリポジトリ内のパスへのポインターのコレクションなので、ここでエントリを追加／削除／変更して、ワークフローパッケージから参照されるものを調整できます。**リソース定義**&#x200B;を使用して新しいエントリを追加します。
+   ワークフローパッケージは単にリポジトリー内のパスへのポインターのコレクションなので、ここでエントリを追加／削除／変更して、ワークフローパッケージから参照されるものを調整できます。**リソース定義**&#x200B;を使用して新しいエントリを追加します。
 
    ![wf-78](assets/wf-78.png)
 

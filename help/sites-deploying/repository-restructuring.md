@@ -22,14 +22,14 @@ ht-degree: 78%
 
 ## はじめに {#introduction}
 
-AEM 6.4 以前は、顧客コードは、アップグレード時に変更される可能性のある、JCR の予測できない領域にデプロイされていました。 このため、正式なAEMリリースでは、カスタムコード、設定またはコンテンツが上書きされることがよくありました。 逆に、カスタムのコードや設定やコンテンツが AEM の製品コードやコンテンツを上書きしてしまい、製品の機能が損なわれることもありました。
+AEM 6.4 以前は、顧客コードは、JCR の予期しない領域にデプロイされていましたが、アップグレード時に変更される可能性がありました。 このため、正式なAEMリリースでは、カスタムコード、設定またはコンテンツが上書きされることがよくありました。 逆に、カスタムのコードや設定やコンテンツが AEM の製品コードやコンテンツを上書きしてしまい、製品の機能が損なわれることもありました。
 
 AEM 製品コードとカスタムコードの階層を明確に記述すれば、このような競合を回避できます。
 
-そのため、AEM 6.4 以降のリリースでも、今後もコンテンツが再構築され、リポジトリ内の他のフォルダーに、コンテンツの移動先に関するガイドラインと共に、次の大まかなルールに従っています。
+そのために、AEM 6.4 以降のリリースで引き続き、コンテンツは/etc からリポジトリ内の他のフォルダーに再構築されます。また、次の大まかなルールに従って、コンテンツの移動先に関するガイドラインも追加されます。
 
 * AEM 製品コードは必ず /libs 下に配置されます。このフォルダーをカスタムコードで上書きしてはなりません。
-* カスタムコードは/apps、/content および/conf に配置する必要があります。
+* カスタムコードは/apps、/content および/conf に配置する必要があります
 
 ## 6.4 へのアップグレード時の影響 {#impact-on-upgrades}
 
@@ -44,12 +44,12 @@ AEM 6.4 へのアップグレードを計画している場合は、作業量を
 
 * [すべての AEM ソリューションに共通のリポジトリ再構築](/help/sites-deploying/all-repository-restructuring-in-aem-6-4.md)
 * [AEM Sites のリポジトリ再構築](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md)
-* [AEM Assetsのリポジトリ再構築](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=ja)
+* [AEM Assetsリポジトリの再構築](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/repository-restructuring.html?lang=ja)
 * [AEM Assets Dynamic Media のリポジトリ再構築](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-4.md)
-* [AEM Formsのリポジトリ再構築](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md)
-* [AEM Communitiesのリポジトリ再構築](/help/sites-deploying/communities-repository-restructuring-in-aem-6-4.md)
+* [AEM Formsリポジトリの再構築](/help/sites-deploying/forms-repository-restructuring-in-aem-6-4.md)
+* [AEM Communitiesリポジトリの再構築](/help/sites-deploying/communities-repository-restructuring-in-aem-6-4.md)
 * [AEM Commerce のリポジトリ再構築](/help/sites-deploying/ecommerce-repository-restructuring-in-aem-6-4.md)
 
 各ページは、必要な変更の緊急度に応じて 2 つの節に分かれます。「6.4 へのアップグレード時におこなう変更」で説明している作業はすべて、AEM 6.4 へのアップグレードプロジェクトの一環として取り組んでください。「6.5 へのアップグレードまでにおこなう変更」で説明している作業はすべて、次のアップグレードまで任意に先送りすることができます。
 
-ページの各項目には、「再構築の手引き」フィールドが含まれています。ここには、新しい 6.4   リポジトリモデルを使用して、以前/etc フォルダーに配置されていたコンテンツに対して新しい場所が参照されるようにします。 追加の「メモ」フィールドには、有用な関連情報が記載されています。
+ページの各項目には、「再構築の手引き」フィールドが含まれています。ここには、新しい 6.4   以前/etc フォルダーに配置されていたコンテンツで、新しい場所が参照されるようにリポジトリモデルを作成します。 追加の「メモ」フィールドには、有用な関連情報が記載されています。

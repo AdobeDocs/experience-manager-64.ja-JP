@@ -1,8 +1,8 @@
 ---
 title: コンテンツフラグメントテンプレート
-seo-title: コンテンツフラグメントテンプレート
+seo-title: Content Fragment Templates
 description: テンプレートは、コンテンツフラグメントの作成時に選択され、新しいフラグメントに基本構造、要素、バリエーションを提供します
-seo-description: テンプレートは、コンテンツフラグメントの作成時に選択され、新しいフラグメントに基本構造、要素、バリエーションを提供します
+seo-description: Templates are selected when creating a content fragmen and provide the new fragment with the basic structure, element, and variation
 uuid: 74675e82-26b4-4105-8031-21de51131236
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 8c399a27-abdb-41fb-bd76-f30d22f1d68f
 exl-id: fdf1aba8-17fa-473a-9c32-7189d0628927
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '655'
-ht-degree: 83%
+source-wordcount: '632'
+ht-degree: 82%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 83%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)](/help/release-notes/sp-release-notes.md)のアプリケーションが必要です。
+>一部のコンテンツフラグメント機能には、 [AEM 6.4 Service Pack 2(6.4.2.0)](/help/release-notes/sp-release-notes.md).
 
 >[!CAUTION]
 >
@@ -39,13 +39,13 @@ ht-degree: 83%
 
 * `/apps/settings/dam/cfm/templates`
 
-   標準のテンプレートをオーバーレイする場所、または実行時に拡張/変更することを意図していない、顧客固有のアプリケーション全体のテンプレートを提供する場所。
+   標準のテンプレートをオーバーレイする場合、または実行時に拡張/変更することを意図していない、顧客固有のアプリケーション全体のテンプレートを提供する場合の場所。
 
 * `/conf/global/settings/dam/cfm/templates`
 
    実行時に変更する必要がある、インスタンス全体の顧客固有のテンプレートの場所。
 
-優先順位は（降順に）`/conf`、`/apps`、`/libs`です。
+優先順位は（降順）です `/conf`, `/apps`, `/libs`.
 
 >[!CAUTION]
 >
@@ -55,13 +55,11 @@ ht-degree: 83%
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. `/apps`の下で、必要な項目（`/libs`に存在）を再作成します。
-   >
-   >
-1. `/apps` 内で変更作業をおこないます。
+>1. 必要な項目（内に存在）を再作成します。 `/libs`) `/apps`
+>
+>1. `/apps` 内で変更作業をおこないます。
 
 >
-
 
 
 テンプレートの基本構造は、次の場所に保持されます。
@@ -145,7 +143,7 @@ conf
   <tr> 
    <td><code>version</code></td> 
    <td><p><code>Long</code></p> <p>必須</p> </td> 
-   <td><p>コンテンツ構造のバージョン。現在サポートされています。</p> <p><strong>注意</strong>:現在、このパラメーターはに設定する必要があり <code>2</code>ます。<br /> </p> </td> 
+   <td><p>コンテンツ構造のバージョン。現在サポートされています。</p> <p><strong>注意</strong>:現在、このパラメーターはに設定する必要があります <code>2</code>.<br /> </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -162,7 +160,7 @@ conf
   <tr> 
    <td><code>elements</code> </td> 
    <td><p><code>nt:unstructured</code></p> <p>必須</p> </td> 
-   <td><p>コンテンツフラグメントの要素の定義を格納するノードです。必須で、<strong>Main</strong>要素の子ノードを少なくとも1つ含める必要がありますが、[1...n] 個です。</p> <p>テンプレートを使用すると、要素のサブブランチがフラグメントのモデルのサブブランチにコピーされます。</p> <p>CRXDE Lite に表示される最初の要素は、自動的にメイン要素<i></i>と見なされます。ノード名に意味はなく、メインアセットによって表されるという点を除き、ノード自体に特別な重要性はありません。その他の要素はサブアセットとして扱われます。</p> </td> 
+   <td><p>コンテンツフラグメントの要素の定義を格納するノードです。これは必須で、 <strong>メイン</strong> 要素です。[1...n] 個です。</p> <p>テンプレートを使用すると、要素のサブブランチがフラグメントのモデルのサブブランチにコピーされます。</p> <p>CRXDE Lite に表示される最初の要素は、自動的にメイン要素<i></i>と見なされます。ノード名に意味はなく、メインアセットによって表されるという点を除き、ノード自体に特別な重要性はありません。その他の要素はサブアセットとして扱われます。</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -188,13 +186,13 @@ conf
   </tr> 
   <tr> 
    <td><code>defaultContent</code></td> 
-   <td><p><code>String</code></p> <p>オプション</p> <p>デフォルト：""</p> </td> 
-   <td>要素の初期コンテンツ<code>precreateElements</code><i> = </i><code>true</code>の場合にのみ使用されます。</td> 
+   <td><p><code>String</code></p> <p>オプション</p> <p>default: ""</p> </td> 
+   <td>要素の初期コンテンツ次の場合にのみ使用 <code>precreateElements</code><i> = </i><code>true</code></td> 
   </tr> 
   <tr> 
    <td><code>initialContentType</code></td> 
    <td><p><code>String</code></p> <p>オプション</p> <p>default: <code>text/html</code></p> </td> 
-   <td><p>要素の初期コンテンツタイプ<code>precreateElements</code><i> = </i><code>true</code>;現在サポートされている：</p> 
+   <td><p>要素の初期コンテンツタイプ次の場合にのみ使用 <code>precreateElements</code><i> = </i><code>true</code>;現在サポートされている：</p> 
     <ul> 
      <li><code>text/html</code></li> 
      <li><code>text/plain</code></li> 

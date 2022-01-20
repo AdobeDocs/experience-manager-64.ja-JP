@@ -1,8 +1,8 @@
 ---
 title: CRXDE Lite による開発
-seo-title: CRXDE Lite による開発
+seo-title: Developing with CRXDE Lite
 description: CRXDE Lite は AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます
-seo-description: CRXDE Lite は AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます
+seo-description: CRXDE Lite is embedded into AEM and enables you to perform standard development tasks in the browser
 uuid: a5eafc8c-f9fa-49ba-ad2f-0cccc427ca49
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,24 +12,24 @@ discoiquuid: 19cb3946-32ba-4f0b-89f0-f9272f2373d2
 exl-id: 40e24cc6-95a9-4efd-b812-4144ba44b071
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '2152'
+source-wordcount: '2131'
 ht-degree: 92%
 
 ---
 
-# CRXDE Lite による開発  {#developing-with-crxde-lite}
+# CRXDE Lite による開発 {#developing-with-crxde-lite}
 
 ここでは、CRXDE Lite を使用して AEM アプリケーションを開発する方法について説明します。
 
 使用可能な他の開発環境について詳しくは、概要のドキュメントを参照してください。
 
-CRXDE Lite は AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Liteを使用すると、プロジェクトの作成、ファイルの作成および編集（.jspや.javaなど）、フォルダー、テンプレート、コンポーネント、ダイアログ、ノード、プロパティおよびバンドルをログに記録しながら行うことができます。
+CRXDE Lite は AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Liteを使用して、プロジェクトを作成し、ファイル（.jspや.java など）、フォルダ、テンプレート、コンポーネント、ダイアログ、ノード、プロパティ、バンドルを作成および編集して、ログを記録できます。
 
 CRXDE Lite は、AEM サーバーに直接アクセスできない場合、すぐに使用可能なコンポーネントと Java バンドルを拡張または変更してアプリケーションを開発する場合、または専用のデバッガー、コード補完および構文のハイライト表示を必要としない場合にお勧めします。
 
 >[!NOTE]
 >
->AEM 6.4.8.1以降では、CRXDE Liteの匿名アクセスは不可能になりました。
+>AEM 6.4.8.1 以降では、CRXDE Liteの匿名アクセスは不可能になりました。
 >ユーザーはログイン画面にリダイレクトされます。
 
 >[!NOTE]
@@ -41,8 +41,8 @@ CRXDE Lite は、AEM サーバーに直接アクセスできない場合、す�
 CRXDE Lite の使用を開始するには、次の手順に従ってください。
 
 1. AEM をインストールします。
-1. ブラウザーにhttps://`<host>`:`<port>`/crx/deと入力します。 デフォルトでは`http://localhost:4502/crx/de`です。
-1. **ユーザー名**&#x200B;と&#x200B;**パスワード**&#x200B;を入力します。デフォルトでは`admin`と`admin`です。
+1. ブラウザーに、 https://と入力します。`<host>`:`<port>`/crx/de. デフォルトでは、 `http://localhost:4502/crx/de`.
+1. **ユーザー名**&#x200B;と&#x200B;**パスワード**&#x200B;を入力します。デフォルトでは、 `admin` および `admin`.
 
 1. 「**OK**」をクリックします。
 
@@ -104,7 +104,7 @@ CRXDE Lite には以下の機能があります。
   </tr> 
   <tr> 
    <td>作成 ...<br /> </td> 
-   <td><p>選択したノードの下に次の項目を作成するためのドロップダウンメニューです。<br /> </p> <p>- <strong>ノード</strong>：任意のノードタイプを持つノード<br /> </p> <p>- <strong>ファイル</strong>:nt:fileノードとそのnt:resourceサブノード</p> <p>- <strong>フォルダー</strong>：nt:folder ノード</p> <p>- <strong>テンプレート</strong>：AEM テンプレート</p> <p>- <strong>コンポーネント</strong>：AEM コンポーネント</p> <p>- <strong>ダイアログ</strong>：AEM ダイアログ</p> </td> 
+   <td><p>選択したノードの下に次の項目を作成するためのドロップダウンメニューです。<br /> </p> <p>- <strong>ノード</strong>：任意のノードタイプを持つノード<br /> </p> <p>- <strong>ファイル</strong>:nt:file ノードとその nt:resource サブノード</p> <p>- <strong>フォルダー</strong>：nt:folder ノード</p> <p>- <strong>テンプレート</strong>：AEM テンプレート</p> <p>- <strong>コンポーネント</strong>：AEM コンポーネント</p> <p>- <strong>ダイアログ</strong>：AEM ダイアログ</p> </td> 
   </tr> 
   <tr> 
    <td>削除<br /> </td> 
@@ -152,7 +152,7 @@ CRXDE Lite でフォルダーを作成するには：
 
 1. 「**すべて保存**」をクリックして、サーバーに変更を保存します。
 
-### テンプレートの作成  {#creating-a-template}
+### テンプレートの作成 {#creating-a-template}
 
 CRXDE Lite でテンプレートを作成するには：
 
@@ -163,23 +163,23 @@ CRXDE Lite でテンプレートを作成するには：
 
 1. （オプション）「**許可されているパス**」を設定します。「**次へ**」をクリックします。
 
-1. この手順はオプションです。「**許可されている親**」を設定します。「**次へ**」をクリックします。
+1. この手順はオプションです。設定 **許可された親**.クリック **次へ**.
 
-1. この手順はオプションです。「**許可されている子**」を設定します。「**OK**」をクリックします。
+1. この手順はオプションです。設定 **許可されている子**.クリック **OK**.
 
 1. 「**すべて保存**」をクリックして、サーバーに変更を保存します。
 
 次の項目が作成されます。
 
-* テンプレートプロパティを持つ`cq:Template`型のノード
+* タイプのノード `cq:Template` とテンプレートプロパティ
 
 * ページコンテンツのプロパティを含む `cq:PageContent` タイプの子ノード
 
 テンプレートにプロパティを追加できます。[プロパティの作成](#creating-a-property)の節を参照してください。
 
-### コンポーネントの作成  {#creating-a-component}
+### コンポーネントの作成 {#creating-a-component}
 
-ここで説明する機能は、ノードタイプ`cq:Component`がリポジトリで使用可能な場合にのみ使用できます。
+ここで説明する機能は、ノードタイプが `cq:Component` はリポジトリで使用できます。
 
 CRXDE Lite でコンポーネントを作成するには：
 
@@ -198,16 +198,16 @@ CRXDE Lite でコンポーネントを作成するには：
 
 次の項目が作成されます。
 
-* `cq:Component`型のノード
+* タイプのノード `cq:Component`
 * コンポーネントのプロパティ
 * コンポーネントの .jsp スクリプト
 
-### ダイアログの作成  {#creating-a-dialog}
+### ダイアログの作成 {#creating-a-dialog}
 
 CRXDE Lite でダイアログを作成するには：
 
 1. ブラウザーで CRXDE Lite を開きます。
-1. ナビゲーションウィンドウで、ダイアログを作成するコンポーネントを右クリックし、「**作成…」を選択します。**、**ダイアログを作成…**&#x200B;と入力します。
+1. ナビゲーションウィンドウで、ダイアログを作成するコンポーネントを右クリックし、「 」を選択します。 **作成…**&#x200B;を、 **ダイアログを作成…**.
 
 1. **ラベル**&#x200B;と&#x200B;**タイトル**&#x200B;を入力します。「**OK**」をクリックします。
 
@@ -250,7 +250,7 @@ CRXDE Lite でプロパティを作成するには：
 
 1. 「**すべて保存**」をクリックして、サーバーに変更を保存します。
 
-### スクリプトの作成  {#creating-a-script}
+### スクリプトの作成 {#creating-a-script}
 
 新しいスクリプトを作成するには：
 
@@ -265,7 +265,7 @@ CRXDE Lite でプロパティを作成するには：
 
 ### ノードタイプの書き出しと読み込み {#exporting-and-importing-node-types}
 
-CRXDE Liteでは、ノードタイプ定義を[CND(Compact Namespace and Node Type Definition)表記](http://jackrabbit.apache.org/jcr/node-type-notation.html)で読み込んだり書き出したりできます。
+CRXDE Liteを使用して、ノードタイプ定義を [CND(Compact Namespace and Node Type Definition) 表記](http://jackrabbit.apache.org/jcr/node-type-notation.html).
 
 ノードタイプ定義を書き出すには：
 

@@ -1,17 +1,17 @@
 ---
 title: アクセシブルなアダプティブフォームの作成
-seo-title: アクセシブルなアダプティブフォームの作成
+seo-title: Creating accessible adaptive forms
 description: AEM Forms には、アクセシブルなアダプティブフォームを作成するためのツールが用意されており、アクセシビリティ標準への準拠を支援する機能が含まれています。
-seo-description: AEM Forms には、アクセシブルなアダプティブフォームを作成するためのツールが用意されており、アクセシビリティ標準への準拠を支援する機能が含まれています。
+seo-description: AEM Forms provides you tools and to create accessible adaptive forms and helps comply with accessibility standards.
 uuid: eceb3282-0b90-4e0a-8b89-137d27029747
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 96d9ad52-074b-4084-b818-abce79282776
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: adad26fa-b27a-4bd7-806c-4ddfbaae7a37
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '903'
 ht-degree: 99%
 
 ---
@@ -76,7 +76,7 @@ ht-degree: 99%
 
 ## 十分なカラーコントラストの提供 {#provide-sufficient-color-contrast}
 
-アクセシビリティデザインでは、カラーの使用に対する特別なガイドラインを考慮する必要があります。フォーム作成者は、カラーを使用しさまざまなフォームのコンポーネントを強調表示することで、フォームの外観を向上できます。ただし、カラーの使い方が不適切だと、障害を持つ人たちがフォームを読むことを困難あるいは不可能にしてしまうことがあります。
+アクセシビリティデザインでは、カラーの使用に対する特別なガイドラインを考慮する必要があります。フォーム作成者は、カラーを使用して様々なフォームのコンポーネントを強調表示することで、フォームの外観を改善できます。ただし、カラーの使い方が不適切だと、障害を持つ人たちがフォームを読むことを困難あるいは不可能にしてしまうことがあります。
 
 視覚障害を持つユーザーは、デジタルコンテンツを読むときに、テキストと背景の間に高いコントラストを必要とします。十分なコントラストがないと、一部のユーザーがフォームを読むことが不可能ではないにしても困難になる場合があります。
 

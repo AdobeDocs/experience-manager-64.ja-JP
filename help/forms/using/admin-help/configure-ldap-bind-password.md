@@ -1,8 +1,8 @@
 ---
 title: LDAP バインドパスワードの設定
-seo-title: LDAP バインドパスワードの設定
+seo-title: Configure the LDAP bind password
 description: '設定ファイルを別のシステムに読み込む前にバインドパスワードを設定する方法について説明します。 '
-seo-description: '設定ファイルを別のシステムに読み込む前にバインドパスワードを設定する方法について説明します。 '
+seo-description: Learn how to configure the bind password field before you import the configuration file into another system.
 uuid: 1ab1907c-8b55-4b6f-bd5b-49f22d78b8a8
 contentOwner: admin
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: 165b3950-b03f-4848-8361-ffb0a26d2658
 exl-id: eaa2c889-d116-4209-9063-0c0b32dd8849
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 91%
+source-wordcount: '183'
+ht-degree: 90%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 91%
 
 1. 管理コンソールで、設定／User Management／設定／既存の設定ファイルの読み込みと書き出しをクリックします。
 1. 現在の設定をファイルに書き出すには、「書き出し」をクリックして設定ファイルを別の場所に保存します。
-1. ファイル内で、 `Domains` > *[ドメイン名]* > `DirectoryConfigs` > `LDAPGroupConfig`ノードを探します。 以下に例を示します。
+1. ファイル内で、 `Domains` > *[ドメイン名]* > `DirectoryConfigs` > `LDAPGroupConfig` ノード。 以下に例を示します。
 
    ```as3
     <node name="LDAPGroupConfig"> 
@@ -38,7 +38,7 @@ ht-degree: 91%
 
    `bindpassword` の値部分に値を入力して変更を保存します。
 
-1. ファイル内で、 `Domains` > *[ドメイン名]* > `DirectoryConfigs` > `LDAPGroupConfig` > `LDAPUserConfig`ノードを探します。 以下に例を示します。
+1. ファイル内で、 `Domains` > *[ドメイン名]* > `DirectoryConfigs` > `LDAPGroupConfig` > `LDAPUserConfig` ノード。 以下に例を示します。
 
    ```as3
     <node name="LDAPUserConfig"> 

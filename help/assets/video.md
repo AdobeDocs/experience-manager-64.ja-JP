@@ -11,7 +11,7 @@ role: User
 source-git-commit: 18ab491812b1bcc8ceee14e311bd15c0c8dd32fa
 workflow-type: tm+mt
 source-wordcount: '10401'
-ht-degree: 75%
+ht-degree: 76%
 
 ---
 
@@ -75,22 +75,22 @@ ht-degree: 75%
 [ビデオレンディションの管理。](managing-assets-touch-ui.md#managing-renditions)
 
       * [ビューアプリセットの管理](managing-viewer-presets.md)
-      * [アセットの発行](publishing-dynamicmedia-assets.md)
+      * [アセットの公開](publishing-dynamicmedia-assets.md)
    * ビデオのメタデータを操作します。
 
       * フレームレート、オーディオおよびビデオのビットレート、コーデックなど、エンコードされたビデオレンディションのプロパティを表示します。
 
          [ビデオレンディショのプロパティの表示](video-renditions.md)
 
-      * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
+      * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集：
 
-[ビデオプロパティの編集](managing-assets-touch-ui.md#editing-properties)
+[ビデオのプロパティの編集](managing-assets-touch-ui.md#editing-properties)
 
       * [デジタルアセット用のメタデータの管理](metadata.md)
       * [メタデータスキーマ](metadata-schemas.md)
    * ビデオのレビュー、承認、注釈の付け
 
-      * [ビデオへの注釈の追加](managing-video-assets.md#annotating-video-assets) または [アセットへの注釈の追加](managing-assets-touch-ui.md#annotating)
+      * [ビデオへの注釈](managing-video-assets.md#annotating-video-assets)または[アセットへの注釈](managing-assets-touch-ui.md#annotating)
       * [アセットへのワークフローの適用](assets-workflow.md) または [アセットでのワークフローの開始](managing-assets-touch-ui.md#starting-a-workflow-on-an-asset)
       * [フォルダーのアセットのレビュー](bulk-approval.md)
       * [プロジェクト](/help/sites-authoring/projects.md)

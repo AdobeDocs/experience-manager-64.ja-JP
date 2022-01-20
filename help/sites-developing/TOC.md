@@ -11,7 +11,7 @@ role: Developer
 source-git-commit: f6024ad5d213af0e726d95a5ab83ac3a271e8c18
 workflow-type: tm+mt
 source-wordcount: '886'
-ht-degree: 81%
+ht-degree: 83%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 81%
 
 + [開発ユーザーガイドの概要](home.md)
 + 開発者向けの概要{#introduction}
-   + [AEM Sites の開発の手引き - WKND チュートリアル](getting-started.md)
+   + [AEM Sites の開発の手引き - WKND チュートリアル ](getting-started.md)
    + [AEM の中心概念](the-basics.md)
    + [AEM タッチ操作対応 UI の構造](touch-ui-structure.md)
    + [AEM タッチ操作対応 UI の概念](touch-ui-concepts.md)
@@ -33,8 +33,8 @@ ht-degree: 81%
    + [AEM への貢献](contributing-to-cq.md)
    + [セキュリティ](security.md)
    + [参照資料](reference-materials.md)
-   + [完全に機能するWebサイトの作成（クラシックUI）](website.md)
-   + [デザインとデザイナー（クラシックUI）](designer.md)
+   + [完全に機能する Web サイトの作成（クラシック UI）](website.md)
+   + [デザインとデザイナー（クラシック UI）](designer.md)
 + Platform{#platform}
    + [Sling チートシート](sling-cheatsheet.md)
    + [Sling アダプターの使用](sling-adapters.md)
@@ -94,7 +94,7 @@ ht-degree: 81%
       + [UI 文字列の国際化](i18n-dev.md)
       + [トランスレーターを使用した辞書の管理](i18n-translator.md)
       + [翻訳のための文字列の抽出](i18n-extract.md)
-   + クラシックUIコンポーネント{#classic-ui-components}
+   + クラシック UI コンポーネント{#classic-ui-components}
       + [AEM コンポーネントの開発（クラシック UI）](developing-components-classic.md)
       + [ウィジェットの使用および拡張（クラシック UI）](widgets.md)
       + [xtype の使用（クラシック UI）](xtypes.md)
@@ -105,7 +105,7 @@ ht-degree: 81%
    + 単一ページアプリケーション{#spas}
       + [SPA の概要およびガイド](spa-walkthrough.md)
       + [SPA WKND チュートリアル](spa-wknd.md)
-      + [AEMでのSPAの概要 — React](spa-getting-started-react.md)
+      + [AEMでSPAを使い始める — React](spa-getting-started-react.md)
       + [AEMでのSPAの概要 —Angular](spa-getting-started-angular.md)
       + [SPA への React コンポーネントの実装](spa-implementing-react-component.md)
       + [SPA の詳細](spa-deep-dives.md)
@@ -113,7 +113,7 @@ ht-degree: 81%
       + [AEM 向け SPA の開発](spa-architecture.md)
       + [SPA ブループリント](spa-blueprint.md)
       + [SPA ページコンポーネント](spa-page-component.md)
-      + [コンポーネントマッピングの動的モデル (SPA用)](spa-dynamic-model-to-component-mapping.md)
+      + [コンポーネントマッピングの動的モデル (SPAの場合 )](spa-dynamic-model-to-component-mapping.md)
       + [SPA モデルルーティング](spa-routing.md)
       + [SPA と Adobe Experience Platform Launch の統合](spa-launch.md)
       + [SPA およびサーバーサイドレンダリング](spa-ssr.md)
@@ -167,7 +167,7 @@ ht-degree: 81%
    + トラッキングと分析{#extending-analytics}
       + [イベント追跡の拡張](extending-analytics.md)
       + [コンポーネントへのAdobe Analyticsトラッキングの追加](extending-analytics-components.md)
-      + [Adobe Analytics Frameworkのカスタマイズ](extending-analytics-framework.md)
+      + [Adobe Analytics Framework のカスタマイズ](extending-analytics-framework.md)
       + [Analytics 用のサーバー側ページネーミングの実装](extending-analytics-pa-naming.md)
    + Cloud Services {#extending-cloud-services}
       + [クラウドサービス設定](extending-cloud-config.md)
@@ -179,7 +179,7 @@ ht-degree: 81%
       + [リクエスト分析スクリプト](analyze-request.md)
    + [JMX コンソールを使用したサービスの統合](https://experienceleague.adobe.com/docs/experience-manager-64/developing/platform/jmx-integration.html)
    + [Bulk Editor の開発](https://experienceleague.adobe.com/docs/experience-manager-64/developing/platform/dev-bulk-editor.html)
-   + クラシックUIの拡張{#extending-classic-ui}
+   + クラシック UI の拡張{#extending-classic-ui}
       + [Web サイトコンソールのカスタマイズ（クラシック UI）](customizing-siteadmin.md)
       + [ようこそコンソールのカスタマイズ（クラシック UI）](customizing-the-welcome-console.md)
       + [レポートの開発](https://experienceleague.adobe.com/docs/experience-manager-64/developing/platform/dev-reports.html)
@@ -209,7 +209,7 @@ ht-degree: 81%
       + [We.Retail の編集可能テンプレートの使用](we-retail-editable-templates.md)
       + [We.Retail のレスポンシブレイアウトの使用](we-retail-responsive-layout.md)
       + [We.Retail のグローバル化されたサイト構造の使用](we-retail-globalized-site-structure.md)
-      + [We.Retailでのエクスペリエンスフラグメントの試行](we-retail-experience-fragments.md)
+      + [We.Retail でのエクスペリエンスフラグメントの試行](we-retail-experience-fragments.md)
    + [コーディングのヒント](coding-tips.md)
    + [コードの落とし穴](code-pitfalls.md)
    + [OSGi バンドル](osgi-bundles.md)

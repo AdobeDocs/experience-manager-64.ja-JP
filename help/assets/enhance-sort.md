@@ -1,6 +1,6 @@
 ---
 title: AEM におけるアセットの並べ替えの強化
-description: ' [!DNL Experience Manager] Assetsが、サーバー側の並べ替えをデプロイして、クライアント側でバッチで並べ替えるのではなく、1回でフォルダーアセットや検索クエリを並べ替える方法について説明します。'
+description: 方法 [!DNL Experience Manager] Assets：サーバー側の並べ替えがデプロイされ、クライアント側でバッチで並べ替えるのではなく、1 回でフォルダーアセットや検索クエリを並べ替えることができます。
 contentOwner: AG
 feature: Search
 role: User
@@ -14,9 +14,9 @@ ht-degree: 74%
 
 #  におけるアセットの並べ替えの強化[!DNL Experience Manager] {#enhanced-sorting-of-assets-in-aem}
 
-[!DNL Experience Manager] Assetsがサーバー側の並べ替えをデプロイして、クライアント側でバッチで並べ替えるのではなく、1回でフォルダーアセットや検索クエリを並べ替える方法について説明します。
+方法 [!DNL Experience Manager] Assets：サーバー側の並べ替えがデプロイされ、クライアント側でバッチで並べ替えるのではなく、1 回でフォルダーアセットや検索クエリを並べ替えることができます。
 
-Adobe Experience Manager Assetsの検索機能が強化され、フォルダーのリスト表示と検索結果ページで多数のアセットを効率的に並べ替えることができるようになりました。 タイムラインのエントリも並べ替えることができます。
+Adobe Experience Manager Assets の検索機能が強化され、フォルダーのリスト表示と検索結果ページで大量のアセットを効率的に並べ替えることができるようになりました。 タイムラインのエントリも並べ替えることができます。
 
 [!DNL Experience Manager] Assets にサーバー側の並べ替え機能が導入され、フォルダー内または検索クエリ内の全アセットを（サイズの大きさを問わず）一度に並べ替えることが可能になり、クライアント側でバッチで並べ替える必要はなくなりました。これにより、事前に取得された結果をユーザーインターフェイスに迅速に表示でき、並べ替え操作がより迅速になります。
 
@@ -51,7 +51,7 @@ Adobe Experience Manager Assetsの検索機能が強化され、フォルダー�
 
 >[!NOTE]
 >
->`Name`列または`Title`列の値を並べ替えるには、`/libs/dam/gui/content/commons/availablecolumns`をオーバーレイし、`sortable`の値を`True`に変更します。
+>の値を並べ替えるには `Name` または `Title`列、オーバーレイ `/libs/dam/gui/content/commons/availablecolumns` をクリックし、 `sortable` から `True`.
 
 ## 検索結果でのアセットの並べ替え {#sorting-assets-in-search-results}
 
@@ -82,7 +82,7 @@ Adobe Experience Manager Assetsの検索機能が強化され、フォルダー�
 
    ![chlimage_1-399](assets/chlimage_1-399.png)
 
-1. タイムラインで、リストからエントリを選択します。例えば、「**[!UICONTROL コメント]**」を選択して、アセットに関連付けられている注釈のリストを表示します。
+1. タイムラインで、リストからエントリを選択します。例えば、「 **[!UICONTROL コメント]** ：アセットに関連付けられている注釈のリストを表示します。
 
    ![chlimage_1-400](assets/chlimage_1-400.png)
 

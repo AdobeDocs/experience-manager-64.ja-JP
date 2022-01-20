@@ -1,8 +1,8 @@
 ---
 title: コンポーネント
-seo-title: コンポーネント
+seo-title: Components
 description: 'AEM には、すぐに使用できる様々なコンポーネントが付属しており、Web サイト作成者は包括的な機能を使用できます。 '
-seo-description: 'AEM には、すぐに使用できる様々なコンポーネントが付属しており、Web サイト作成者は包括的な機能を使用できます。 '
+seo-description: AEM comes with a variety of out-of-the-box components that provide comprehensive functionality for website authors.
 page-status-flag: de-activated
 uuid: 02720edd-853c-4893-bf28-0e7b018029ea
 contentOwner: Chris Bohnert
@@ -13,8 +13,8 @@ discoiquuid: 9ed820de-c108-416e-aaf7-b63a64ab4f80
 exl-id: d552cbcc-8f71-48a3-9685-eba1ab8805c3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 85%
+source-wordcount: '217'
+ht-degree: 84%
 
 ---
 
@@ -34,11 +34,11 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 
 * [ページオーサリング用コンポーネント](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 
-   標準ページコンテンツの作成に使用するコンポーネントは、主に&#x200B;**一般**、**列**&#x200B;および&#x200B;**Forms**&#x200B;のグループに含まれます。
+   標準ページのコンテンツの作成に使用されるコンポーネントは、主にグループに含まれます **一般**, **列** および **Forms**.
 
 * [e コマース](/help/sites-administering/ecommerce.md)
 
-   AEM内のeコマース機能には、**コマース**&#x200B;グループに含まれる様々なコンポーネントも含まれています。 実際の使用方法は、使用しているコマースエンジンによって異なります。
+   AEMの e コマース機能には、 **コマース** グループ化します。 実際の使用方法は、使用しているコマースエンジンによって異なります。
 
 ## デザインモードでのコンポーネントの設定 {#using-design-mode-to-configure-components}
 

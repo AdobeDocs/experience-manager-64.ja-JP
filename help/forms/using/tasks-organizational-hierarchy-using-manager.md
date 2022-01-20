@@ -1,8 +1,8 @@
 ---
 title: マネージャービューを使用した組織階層でのタスクの管理
-seo-title: マネージャービューを使用した組織階層でのタスクの管理
+seo-title: Managing tasks in an organizational hierarchy using Manager View
 description: マネージャーや組織のトップが AEM Forms ワークスペースの「TODO」タブで直属および直属ではない部下のタスクにアクセスして作業する方法。
-seo-description: マネージャーや組織のトップが AEM Forms ワークスペースの「TODO」タブで直属および直属ではない部下のタスクにアクセスして作業する方法。
+seo-description: How managers and organization heads can access and work on the tasks of their direct and indirect reports in the To-do tab in AEM Forms workspace.
 uuid: a44d5a64-c03a-4337-8577-b121e6202449
 contentOwner: robhagat
 content-type: reference
@@ -12,26 +12,26 @@ discoiquuid: c7cf28bf-2806-47bc-a803-8bc0e803fc4d
 exl-id: 28877528-2f91-4ee0-b9d8-c7df364ed803
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 79%
+source-wordcount: '344'
+ht-degree: 77%
 
 ---
 
-# マネージャービューを使用した組織階層でのタスクの管理  {#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
+# マネージャービューを使用した組織階層でのタスクの管理 {#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
 
 AEM Forms ワークスペースで、マネージャーは階層のメンバー（直属または直属ではない部下）に割り当てられたタスクにアクセスし、さまざまなアクションを実行できるようになりました。タスクは、AEM Forms ワークスペースの「TODO」タブで利用できます。直属の部下のタスクでサポートされているアクションを以下に示します。
 
-**** タスクを直属の部下から任意のユーザーに転送します。
+**進む** タスクを直属のレポートから任意のユーザーに転送します。
 
-**** Claim直接レポートのタスクを要求します。
+**要求** 直接レポートのタスクを要求します。
 
-**要求と** オープン直接レポートのタスクを要求し、マネージャーのTODOリストで自動的に開きます。
+**要求して開く** 直属のレポートのタスクを要求し、マネージャの TODO リストで自動的に開きます。
 
-**** Reject他のユーザーによって直属の部下に転送されたタスクを拒否します。このオプションは、他のユーザーによって直属の部下に転送されたタスクで使用できます。
+**拒否** 他のユーザーによって直属のレポートに転送されたタスクを却下します。 このオプションは、他のユーザーによって直属の部下に転送されたタスクで使用できます。
 
 AEM Forms は、ユーザーのアクセスをアクセス制御（ACL）を持つユーザーのタスクのみに制限しています。そのようなチェックを行うことで、ユーザーは自分がアクセス許可を持つタスクのみを取得できることを確認します。サードパーティの Web サービスと実装を使用して階層を定義すると、組織はマネージャーと直属の部下をニーズに合うようにカスタマイズできます。
 
-1. DSC を作成します。詳しくは、『AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63)によるプログラミング』ガイドの「AEM Forms用コンポーネントの開発」トピックを参照してください。[
+1. DSC を作成します。詳しくは、「 AEM Forms 用コンポーネントの開発」( [AEM Formsを使用したプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63) ガイド。
 1. DSC で、階層管理の新しい SPI を定義して、AEM Forms ユーザー内の直属の部下と階層を定義します。Java™ コードスニペットのサンプルを以下に示します。
 
    ```as3
@@ -111,7 +111,7 @@ AEM Forms は、ユーザーのアクセスをアクセス制御（ACL）を持�
    </component>
    ```
 
-1.  Workbench を介して DSC をデプロイします。`ProcessManagementTeamTasksService`サービスを再起動します。
+1.  Workbench を介して DSC をデプロイします。再起動 `ProcessManagementTeamTasksService` サービス。
 1. ブラウザーを更新するか、または再度ユーザーでログアウト / ログインする必要がある場合があります。
 
 次の画面は、直属の部下のタスクへのアクセスと利用可能なアクションを示しています。

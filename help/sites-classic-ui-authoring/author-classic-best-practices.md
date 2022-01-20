@@ -1,8 +1,8 @@
 ---
 title: ベストプラクティス
-seo-title: ベストプラクティス
+seo-title: Best Practices
 description: オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
-seo-description: オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
+seo-description: Authoring best practices describe how to use AEM in the most efficient and most effective way possible. This growing list of topics includes a variety of areas in AEM.
 uuid: d1f58335-0aa6-4b35-bdcd-cf6051bd1439
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,8 +11,8 @@ content-type: reference
 discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
 source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 72%
+source-wordcount: '279'
+ht-degree: 69%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 72%
 
 * [Assets](#assets)
 * [Sites](#sites)
-* [フォーム](#forms)
+* [Forms](#forms)
 
 管理、デプロイ、メンテナンスまたは開発のベストプラクティスについては、次のページを参照してください。
 
@@ -54,7 +54,7 @@ ht-degree: 72%
   <tr>
    <td>ダイナミックイメージング</td> 
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">ダイナミックイメージングのベストプラクティス</a></td> 
-   <td><p>Dynamic Media機能を使用している場合やDynamic Mediaとの統合を行っている場合に、最適な結果を得るために画像をシャープにする方法と画質を最適化する最適な方法について説明します。 </p> </td> 
+   <td><p>Dynamic Media機能を使用している場合、またはDynamic Mediaとの統合時に、最適な結果を得るために画像をシャープにする方法と、画質を最適化する最適な方法について説明します。 </p> </td> 
   </tr>
   <tr>
    <td>多言語のアセット</td> 
@@ -64,14 +64,14 @@ ht-degree: 72%
  </tbody>
 </table>
 
-## Sites {#sites}
+## サイト {#sites}
 
 Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
 
-オーサリング：[オーサー環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) — ページのオーサー方法の概要を示します。
+オーサリング： [オーサー環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md)  — ページの作成方法の概要を説明します。
 
-## フォーム {#forms}
+## Forms {#forms}
 
-アダプティブフォーム：[アダプティブフォームの操作に関するベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) — アダプティブフォームの設定、オーサリング、カスタマイズに関するベストプラクティスについて説明します。
+アダプティブフォーム： [アダプティブフォームの操作のベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md)  — アダプティブフォームの設定、オーサリング、カスタマイズに関するベストプラクティスについて説明します。
 
-HTML5フォーム：[HTML5フォームのデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) - HTML5フォームのレイアウトとデザインに関するベストプラクティスを説明します。
+HTML5 フォーム： [Forms5 を設計する際のベストプラクティスHTML](/help/forms/using/best-practices-for-html5-forms.md)  — レイアウト 5 フォームのレイアウトとデザインに関するベストプラクティスをHTMLします。

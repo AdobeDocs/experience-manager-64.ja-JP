@@ -6,11 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 exl-id: d8cc94b0-eacf-4e76-bd50-7934bbc28c92
-feature: トラブルシューティング
+feature: Troubleshooting
 role: Admin,User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1295'
 ht-degree: 87%
 
 ---
@@ -23,16 +23,16 @@ ht-degree: 87%
 
 以下の手順で、Dynamic Media が適切に設定されていることを確認します。
 
-* 起動コマンドには、`-r dynamicmedia_scene7`実行モード引数が含まれます。
+* 「起動」コマンドには、 `-r dynamicmedia_scene7` 実行モード引数。
 * 使用可能な Dynamic Media 機能パックよりも先に、AEM 6.4 累積修正パック（CFP）がインストールされていることを確認します。**
 * オプションの機能パック 18912 がインストールされていることを確認します。
 
-   このオプションの機能パックは、FTPサポート用、またはDynamic Media ClassicからDynamic Mediaにアセットを移行する場合に使用します。
+   このオプションの機能パックは、FTP サポート用、またはDynamic Media ClassicからDynamic Mediaにアセットを移行する場合に使用します。
 
 * クラウドサービスのユーザーインターフェイスに移動して、「**[!UICONTROL 利用可能な設定]**」の下に割り当てられたアカウントが表示されることを確認します。
-* **[!UICONTROL Dynamic Media Asset Activation(scene7)]**&#x200B;レプリケーションエージェントが有効になっていることを確認します。
+* 次を確認します。 **[!UICONTROL Dynamic Media Asset Activation (scene7)]** レプリケーションエージェントが有効になっています。
 
-   このレプリケーションエージェントは、オーサーの&#x200B;**[!UICONTROL エージェント]**&#x200B;の下にあります。
+   このレプリケーションエージェントは、の下にあります。 **[!UICONTROL エージェント]** 作成者。
 
 ## 一般（すべてのアセット） {#general-all-assets}
 
@@ -51,7 +51,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
 
 ### 同期のログ {#synchronization-logging}
 
-同期のエラーと問題は `error.log`（AEM サーバーディレクトリの `/crx-quickstart/logs/`）に記録されます。ログにはほとんどの問題の根本原因を突き止めるのに十分な情報が記録されますが、Slingコンソール([http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog))を通じて`com.adobe.cq.dam.ips`パッケージのログをデバッグに増やして、詳細を収集できます。
+同期のエラーと問題は `error.log`（AEM サーバーディレクトリの `/crx-quickstart/logs/`）に記録されます。ログにはほとんどの問題の根本原因を突き止めるのに十分な情報が記録されますが、ログの記録を `com.adobe.cq.dam.ips` Sling コンソール ([http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog)) をクリックして、さらに多くの情報を収集します。
 
 ### 移動、コピー、削除 {#move-copy-delete}
 
@@ -63,9 +63,9 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
 
 ### バージョン管理 {#version-control}
 
-既存のDynamic Mediaアセット（同じ名前と場所）を置き換える場合、両方のアセットを保持するか、バージョンを置き換えるか、作成するかを選択できます。
+既存のDynamic Mediaアセット（同じ名前と場所）を置き換える際に、両方のアセットを保持するか、バージョンを置き換えるか、作成するかを選択できます。
 
-* 両方を保持すると、公開済みアセットURLの一意の名前を持つ新しいアセットが作成されます。例えば、 **[!UICONTROL image.jpg]**&#x200B;は元のアセット、 **[!UICONTROL image1.jpg]**&#x200B;は新しくアップロードされたアセットです。
+* 両方を保持すると、公開済みアセット URL の一意の名前を持つ新しいアセットが作成されます。例： **[!UICONTROL image.jpg]** は元のアセットで、 **[!UICONTROL image1.jpg]** は、新しくアップロードされたアセットです。
 
 * Dynamic Media - Scene7 モードの配信ではバージョン作成はサポートされていません。配信の既存アセットが新しいバージョンに置き換わります。
 
@@ -181,7 +181,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
    <td>ビデオの処理に時間がかかりすぎる</td> 
    <td><p>ビデオのエンコーディングがまだ進行中か、エラー状態になっているかを判断するには：</p> 
     <ul> 
-     <li>ビデオのステータスを確認します。<code>http://localhost:4502/crx/de/index.jsp#/content/dam/folder/videomp4/jcr%3Acontent</code> &gt;  <span class="kbd">dam:assetState</span></li> 
+     <li>ビデオのステータスを確認します。<code>http://localhost:4502/crx/de/index.jsp#/content/dam/folder/videomp4/jcr%3Acontent</code> &gt; <span class="kbd">dam:assetState</span></li> 
      <li>ワークフローコンソールでビデオを監視します。<code>http://localhost:4502/libs/cq/workflow/content/console.html</code> &gt; 「インスタンス」タブ、「アーカイブ」タブ、「エラー」タブ。</li> 
     </ul> </td> 
    <td> </td> 
@@ -253,7 +253,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
       </ol> </li> 
      <li>クラウドサービスページで、Dynamic Media 設定ページに移動した後、Dynamic Media - Scene7 設定の設定ダイアログボックスを開きます。 
       <ul> 
-       <li>何も変更せず、「<strong>保存</strong>」をクリックします。これで、サンプルアセット、ビューアプリセット CSS およびアートワークを作成および同期するロジックが再度トリガーされます。<br />  <br /> </li> 
+       <li>何も変更せず、「<strong>保存</strong>」をクリックします。これで、サンプルアセット、ビューアプリセット CSS およびアートワークを作成および同期するロジックが再度トリガーされます。<br /> <br /> </li> 
       </ul> </li> 
     </ol> </td> 
   </tr> 

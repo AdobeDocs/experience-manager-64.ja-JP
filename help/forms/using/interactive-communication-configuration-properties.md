@@ -1,20 +1,20 @@
 ---
 title: インタラクティブ通信の設定プロパティ
-seo-title: インタラクティブ通信の設定プロパティ
+seo-title: Interactive Communication configuration properties
 description: インタラクティブ通信で使用するデフォルトの設定プロパティの編集
-seo-description: インタラクティブ通信で使用するデフォルトの設定プロパティの編集
+seo-description: Edit default configuration properties for Interactive Communications
 uuid: 793da9c0-7e8b-464c-b41d-559a72fac9eb
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 content-type: reference
 topic-tags: interactive-communications
 discoiquuid: 1aef2a51-4391-4075-8841-a62ace5606f9
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 exl-id: 2caf7242-8588-4fc9-9429-40e24416d6eb
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 70%
+source-wordcount: '531'
+ht-degree: 69%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 70%
 
 インタラクティブ通信には、[AEM Forms アドオン](/help/forms/using/installing-configuring-aem-forms-osgi.md)パッケージのインストール後に自動的に設定されるプロパティが含まれています。インタラクティブ通信の作成者は、**Adobe Experience Manager Web コンソール設定**&#x200B;ページを使用して、これらのデフォルトの設定プロパティを編集できます。
 
-次のURLを使用して、**Adobe Experience Manager Webコンソール設定**&#x200B;ページを開きます。
+を開きます。 **Adobe Experience Manager Web コンソール設定** 次の URL を使用してページを表示します。
 
-https://&lt;server>:&lt;port>/&lt;contextPath>/system/console/configMgr
+https://&lt;server>:&lt;port>/&lt;contextpath>/system/console/configMgr
 
 設定プロパティには次のものが含まれます。
 
@@ -37,7 +37,7 @@ https://&lt;server>:&lt;port>/&lt;contextPath>/system/console/configMgr
 
 ## ドキュメントフラグメントの設定 {#document-fragments-configuration}
 
-**Adobe Experience Manager Webコンソール設定**&#x200B;ページで「**ドキュメントフラグメントの設定**」をタップして、ドキュメントフラグメントの設定プロパティを表示します。
+タップ **ドキュメントフラグメントの設定** の **Adobe Experience Manager Web コンソール設定** ページを開き、ドキュメントフラグメントの設定プロパティを表示します。
 
 <table> 
  <tbody> 
@@ -49,10 +49,10 @@ https://&lt;server>:&lt;port>/&lt;contextPath>/system/console/configMgr
   </tr> 
   <tr> 
    <td>データの表示形式</td> 
-   <td>印刷チャネルとWebチャネル用のインタラクティブ通信を作成する際に使用できる、フィールド、変数、フォームデータモデル要素のロケール固有の表示形式。</td> 
+   <td>印刷チャネルと Web チャネル用のインタラクティブ通信を作成する際に使用できるフィールド、変数、フォームデータモデル要素のロケール固有の表示形式。</td> 
    <td> 
     <ul> 
-     <li>locale = en_US、de_DE、fr_FRおよびja_JP</li> 
+     <li>locale = en_US, de_DE, fr_FR, and ja_JP</li> 
      <li>dateFormat = dd-MM-yyyy</li> 
      <li>numberDecimalSeparator = .</li> 
      <li>numberGroupSeparator = ,</li> 
@@ -81,28 +81,28 @@ https://&lt;server>:&lt;port>/&lt;contextPath>/system/console/configMgr
  </tbody> 
 </table>
 
-## 通信設定の作成  {#create-correspondence-configuration}
+## 通信設定の作成 {#create-correspondence-configuration}
 
-**Adobe Experience Manager Webコンソール設定**&#x200B;ページで「**通信の設定を作成**」をタップして、エージェントUIの設定プロパティを表示します。
+タップ **通信設定を作成** の **Adobe Experience Manager Web コンソール設定** ページを開き、エージェント UI の設定プロパティを表示します。
 
 | プロパティ | 説明 | デフォルト | 指定できる値 |
 |---|---|---|---|
 | 編集用に解決されたコンテンツの表示 | エージェント UI 上でテキストモジュールを編集する際に、チェックボックスを選択して、解決されたコンテンツ（プレースホルダーではなく実際の値）を表示します。 | 未選択 | 適用なし |
-| プレビュー時に透かしの適用 | チェックボックスを選択して、インタラクティブ通信の印刷チャネルのプレビュー表示に透かしを適用します。 | 未選択 | 該当なし |
+| プレビュー時に透かしの適用 | チェックボックスを選択して、インタラクティブ通信の印刷チャネルのプレビュー表示に透かしを適用します。 | 未選択 | 適用なし |
 
-## アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定  {#adaptive-form-and-interactive-communication-web-channel-configuration}
+## アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定 {#adaptive-form-and-interactive-communication-web-channel-configuration}
 
-**Adobe Experience Manager Webコンソール設定**&#x200B;ページで「**アダプティブフォームとインタラクティブ通信Webチャネルの設定**」をタップし、アダプティブFormsおよびインタラクティブ通信Webチャネルの設定プロパティを表示します。 次のテーブルに、インタラクティブ通信に関連するプロパティを示します。
+タップ **アダプティブフォームとインタラクティブ通信の Web チャネル設定** の **Adobe Experience Manager Web コンソール設定** アダプティブFormsおよびインタラクティブ通信 Web チャネルの設定プロパティを表示するページ 次のテーブルに、インタラクティブ通信に関連するプロパティを示します。
 
 | プロパティ | 説明 | デフォルト | 指定できる値 |
 |---|---|---|---|
 | プレースホルダーを表示 | チェックボックスを選択して、アダプティブフォームおよびインタラクティブ通信に含まれているフィールドのプレースホルダー表示を有効にします。 | 選択 | 適用なし |
 | 最大キャッシュエントリ数 | キャッシュメモリを使用して取得できるアダプティブフォームおよびインタラクティブ通信の最大数を設定します。 | 100 | 数値 |
-| 一意のファイル名を作成 | チェックボックスを選択して、アダプティブフォームおよびインタラクティブ通信に添付ファイルとして含まれているファイルに一意の名前を付けます。 | 未選択 | 該当なし |
+| 一意のファイル名を作成 | チェックボックスを選択して、アダプティブフォームおよびインタラクティブ通信に添付ファイルとして含まれているファイルに一意の名前を付けます。 | 未選択 | 適用なし |
 
-## アダプティブフォームおよびインタラクティブ通信 Web チャネルテーマの設定  {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
+## アダプティブフォームおよびインタラクティブ通信 Web チャネルテーマの設定 {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
-**Adobe Experience Manager Webコンソールの設定**&#x200B;ページで「**アダプティブフォームとインタラクティブ通信Webチャネルのテーマの設定**」をタップして、アダプティブFormsおよびインタラクティブ通信Webチャネルのテーマの設定プロパティを表示します。
+タップ **アダプティブフォームとインタラクティブ通信 Web チャネルのテーマの設定** の **Adobe Experience Manager Web コンソール設定** アダプティブFormsおよびインタラクティブ通信 Web チャネルテーマの設定プロパティを表示するページ
 
 <table> 
  <tbody> 

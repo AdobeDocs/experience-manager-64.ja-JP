@@ -1,17 +1,17 @@
 ---
 title: アダプティブフォームと XFA フォームテンプレートとの同期
-seo-title: アダプティブフォームと XFA フォームテンプレートとの同期
+seo-title: Synchronizing Adaptive Forms with XFA Form Templates
 description: アダプティブフォームと XFA/XDP ファイルとの同期
-seo-description: アダプティブフォームと XFA/XDP ファイルとの同期
+seo-description: Synchronizing Adaptive forms with XFA/XDP files.
 uuid: 6613a9bf-c862-4c18-a5b5-f574d301e936
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 29c0a78c-53b5-4ce7-a2f3-63e1b089b0d0
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 014c735e-84f8-4cdb-979e-bfab24b3f666
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1155'
 ht-degree: 93%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 93%
 
 ## はじめに {#introduction}
 
-XFAフォームテンプレート（ `*.XDP`ファイル）に基づいてアダプティブフォームを作成することができます。 この方法では既存の XFA フォームが再利用でき、投資効率が得られます。XFAフォームテンプレートを使用してアダプティブフォームを作成する方法については、「[テンプレートに基づいてアダプティブフォームを作成する](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p)」を参照してください。
+XFA フォームテンプレート ( `*.XDP` ファイル ) です。 この方法では既存の XFA フォームが再利用でき、投資効率が得られます。アダプティブフォームの作成に XFA フォームテンプレートを使用する方法については、次の手順を参照してください。 [テンプレートに基づくアダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p).
 
 XDP ファイルのフィールドをアダプティブフォームで再利用することができます。これらのフィールドは、バインドされたフィールドと呼ばれます。バインドされたフィールドのプロパティ（スクリプト、ラベル、表示形式など）は、XDP ファイルからコピーされます。これらのプロパティには、値をオーバーライドできるものもあります。
 
@@ -75,7 +75,7 @@ XDP ファイルを更新した後、変更がフラグ付けされるように�
 
 1. `https://<server>:<port>/projects.html.`に移動します。指示に従って、資格情報を入力します。
 1. 左側にある「フォーム」タブをクリックします。
-1. ローカルマシンに `sample-form.xdp` ファイルをダウンロードします。XDP ファイルが、任意のファイル解凍ユーティリティで抽出できる `.zip`ファイル形式でダウンロードされます。
+1. ローカルマシンに `sample-form.xdp` ファイルをダウンロードします。XDP ファイルが、任意のファイル解凍ユーティリティで抽出可能な `.zip` ファイル形式でダウンロードされます。
 
 1. `sample-form.xdp` ファイルを開き、TextField1 のタイトルを **Text Field** から **My Text Field** に変更します。
 
@@ -99,15 +99,15 @@ XDP ファイルと同期されていないアダプティブフォームが次�
 
 XDP ファイルからアダプティブフォームにコピーされたプロパティは、作成者によってアダプティブフォーム内で（コンポーネントダイアログから）明示的に上書きされたプロパティを除き、すべて更新されます。更新されたプロパティのリストは、サーバーログで見ることができます。
 
-サンプルのアダプティブフォームのプロパティを更新するには、メッセージ内のリンク（`"Click Here"`というラベル）をクリックします。 TextField1 のタイトルが、**Text Field** から **My Text Field** に変更されます。
+サンプルのアダプティブフォームのプロパティを更新するには、リンク ( `"Click Here"`) を含める必要があります。 TextField1 のタイトルが、**Text Field** から **My Text Field** に変更されます。
 
 ![update-property](assets/update-property.png)
 
 >[!NOTE]
 >
->AF Numeric Fieldのラベルが変更されなかったのは、[アダプティブフォームへのコンテンツの追加](#p-add-content-to-adaptive-form-br-p)で説明されているように、コンポーネントのプロパティダイアログでこのプロパティを上書きしたからです。
+>AF Numeric Field というラベルは、コンポーネントのプロパティダイアログでこのプロパティを上書きしたので、変更されませんでした。詳しくは、 [アダプティブフォームにコンテンツを追加する](#p-add-content-to-adaptive-form-br-p).
 
-### XDP ファイルからアダプティブフォームへの新しいフィールドの追加{#adding-new-fields-from-xdp-file-to-adaptive-form-nbsp}
+### XDP ファイルからアダプティブフォームへの新しいフィールドの追加 {#adding-new-fields-from-xdp-file-to-adaptive-form-nbsp}
 
 「フォーム階層」タブから元の XDP ファイルに後から追加された新しいフィールドは、アダプティブフォームへとドラッグすることができます。
 

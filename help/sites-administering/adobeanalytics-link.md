@@ -1,8 +1,8 @@
 ---
 title: Adobe Analytics のリンクトラッキングの設定
-seo-title: Adobe Analytics のリンクトラッキングの設定
+seo-title: Configuring Link Tracking for Adobe Analytics
 description: SiteCatalyst のリンクトラッキングの設定について説明します。
-seo-description: SiteCatalyst のリンクトラッキングの設定について説明します。
+seo-description: Learn about configuring link tracking for SiteCatalyst.
 uuid: b6d5bd1c-f91a-4d38-9e9e-dc2bcb271dae
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: fe6ba6af-f500-4c0d-b984-fb617d4bf48a
 exl-id: d60d4fb1-7c8c-462d-a699-7aa62fa924a1
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1602'
 ht-degree: 74%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 74%
 
 ユーザーが Web サイトのページ上のリンクをクリックすると、Adobe Analytics で関連情報を取得できます。例えば、リンクトラッキングを使用してユーザーのサイトでのやり取りを学習したり、ファイルのダウンロード数を追跡したり、離脱リンクを追跡したりします。
 
-## Adobe Analytics フレームワークのリンクトラッキングの設定  {#configuring-link-tracking-for-an-adobe-analytics-framework}
+## Adobe Analytics フレームワークのリンクトラッキングの設定 {#configuring-link-tracking-for-an-adobe-analytics-framework}
 
 1. **ナビゲーション**&#x200B;を使用して、**導入**／**クラウドサービス**／**Adobe Analytics** セクションに移動します。
 
@@ -32,7 +32,7 @@ ht-degree: 74%
 
 ## ファイルのダウンロード数の追跡 {#tracking-file-downloads}
 
-関連ページからダウンロードしたファイルがAdobe Analyticsでのダウンロードとして自動的に追跡されるようにAdobe Analyticsフレームワークを設定します。 ダウンロード数の追跡を有効にすると、指定したファイルタイプのみが追跡されます。
+関連するページからダウンロードしたファイルがAdobe Analyticsでのダウンロードとして自動的に追跡されるように、Adobe Analyticsフレームワークを設定します。 ダウンロード数の追跡を有効にすると、指定したファイルタイプのみが追跡されます。
 
 デフォルトでは、次のファイルタイプのダウンロードが追跡されます。
 
@@ -57,13 +57,13 @@ s.trackDownloadLinks= true;
 s.linkDownloadFileTypes= 'exe,zip,wav,mp3,mov,mpg,avi,wmv,doc,pdf,xls';
 ```
 
-Adobe Analyticsフレームワークのダウンロード追跡を有効にするには：
+Adobe Analyticsフレームワークのダウンロードトラッキングを有効にするには：
 
 1. [Adobe Analytics フレームワークを開き、「リンクトラッキング設定」セクションを展開](#configuring-link-tracking-for-an-adobe-analytics-framework)します。
 1. 「**ダウンロードを追跡**」を有効にします。
 1. 「**ダウンロードファイルタイプ**」ボックスで、追跡するファイルのタイプのファイル名拡張子を入力します。
 
-## 外部リンクの追跡  {#tracking-external-links}
+## 外部リンクの追跡 {#tracking-external-links}
 
 ページの外部リンク（離脱リンク）のクリックを追跡できます。
 
@@ -78,7 +78,7 @@ Adobe Analyticsフレームワークの外部リンクを追跡するには：
 
 * **外部フィルター** （オプション）リンクターゲットの外部 URL に一致するフィルターを定義します。リンクターゲットがフィルターに一致する場合に、リンクが追跡されます。外部フィルターは、ページの外部リンクの一部のみを追跡するのに便利です。
 
-   追跡する外部リンクを指定するには、リンクターゲットの URL のすべてまたは一部を入力します。複数のフィルターをコンマで区切ります。文字列リテラルを一重引用符で囲みます。値なし（デフォルト値の`''`、2つの一重引用符）は、すべての外部リンクを追跡します。
+   追跡する外部リンクを指定するには、リンクターゲットの URL のすべてまたは一部を入力します。複数のフィルターをコンマで区切ります。文字列リテラルを一重引用符で囲みます。値なし ( デフォルト値は `''`、2 つの一重引用符 ) は、すべての外部リンクを追跡します。
 
 * **内部フィルター** 内部リンクの URL に一致するフィルターを定義します。リンクターゲットの URL がフィルターに一致する場合、リンクは追跡されません。デフォルト値は、現在のウィンドウアドレスの URL のホスト名を返す JavaScript コマンドです。
 
@@ -92,8 +92,8 @@ Adobe Analyticsフレームワークの外部リンクを追跡するには：
 
 外部リンクトラッキングプロパティは、ページ用に生成された `analytics.sitecatalyst.js` ファイルにコードとして実装されています。次の設定で外部リンクトラッキングを有効にしたフレームワークに関連付けられたページ用に生成されるコード例を示します。
 
-* 外部フィルタは`'google.com'`です
-* 内部フィルターは、デフォルト値の`'javascript:,'+window.location.hostname`です。
+* 外部フィルター： `'google.com'`
+* 内部フィルターは、 `'javascript:,'+window.location.hostname`
 * フィルターに対するリンクターゲットを評価する際に、クエリー文字列は含まれない
 
 ```
@@ -105,7 +105,7 @@ s.linkLeaveQueryString= false;
 
 ## リンククリック数を含む変数データの送信 {#sending-variable-data-with-link-clicks}
 
-ユーザーがリンクをクリックすると、イベントと変数のデータがAdobe Analyticsに送信されるようにAEMを設定できます。 **Link Tracking Configuration**&#x200B;プロパティを使用して、リンククリックが発生したタイミングを追跡するAdobe Analyticsイベントと変数を指定できます。
+ユーザーがリンクをクリックすると、イベントと変数のデータがAdobe Analyticsに送信されるようにAEMを設定できます。 この **リンクトラッキング設定** プロパティを使用すると、Adobe Analyticsのイベントと変数を指定して、リンクのクリックが発生したタイミングを追跡できます。
 
 フレームワークマッピングは、イベントおよび変数の値を決定します。Adobe Analytics変数を、リンクがクリックされたときに追跡するデータを保存するコンテンツコンポーネントの変数にマッピングできます。
 
@@ -116,17 +116,17 @@ s.linkLeaveQueryString= false;
 
 リンククリック数を含む変数データを送信するためのプロパティ：
 
-* **リンク追跡**
-イベントリンククリック数のカウントに使用するAdobe Analyticsイベント変数を入力します。
+* **リンクトラッキングイベント**
+リンククリックのカウントに使用するAdobe Analyticsイベント変数を入力します。
 
    複数の変数名をコンマで区切ります。
 
-   デフォルト値の`None`を指定すると、イベント追跡は行われません。
+   のデフォルト値 `None` を指定すると、イベントトラッキングが実行されません。
 
-* **リンク追**
-跡VarsリンクがクリックされたときにAdobe Analyticsに送信するAdobe Analytics変数を入力します。複数の変数名をコンマで区切ります。
+* **リンク追跡 var**
+リンクがクリックされた際にAdobe Analyticsに送信するAdobe Analytics変数を入力します。 複数の変数名をコンマで区切ります。
 
-   デフォルト値の`None`を使用すると、変数データは送信されません。
+   のデフォルト値 `None` を指定すると、変数データが送信されません。
 
 送信するイベントおよび変数を指定する場合、設定は、ページ用に生成された `analytics.sitecatalyst.js` ファイルにコードとして実装されています。次に、フレームワークが `event10` イベントおよび `prop4` プロパティを追跡する場合にページ用に生成されるコード例を示します。
 
@@ -137,14 +137,14 @@ s.linkTrackVars= 'prop4';
 
 ## リンクトラッキング設定の例 {#example-link-tracking-configuration}
 
-次の手順を実行して、Adobe Analytics統合のリンクトラッキング動作を調べます。 この手順は、[Adobe Experience Cloud Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)からの結果を示します。
+次の手順を実行して、Adobe Analytics統合のリンクトラッキング動作を調べます。 手順は次の結果を示します。 [Adobe Experience Cloud Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html).
 
 ### 一般設定 {#general-configuration}
 
 この例は、トラッキングとデバッガーのコンテキストにおいて、マッピングがどのように機能するかを示しています。
 
 1. Web ページに関連付けられているフレームワークを開きます。
-1. **ページ**&#x200B;コンポーネントをフレームワークのマッピング領域にドラッグします。**ページ**&#x200B;コンポーネントは、サイドキックの&#x200B;**一般**&#x200B;コンポーネントグループに属しています。
+1. **ページ**&#x200B;コンポーネントをフレームワークのマッピング領域にドラッグします。この **ページ** コンポーネントは **一般** サイドキックのコンポーネントグループ
 
    >[!NOTE]
    >
@@ -201,7 +201,7 @@ s.linkTrackVars= 'prop4';
  </tbody> 
 </table>
 
-### 外部リンクトラッキングを設定します。  {#configure-external-link-tracking}
+### 外部リンクトラッキングの設定 {#configure-external-link-tracking}
 
 1. フレームワークで、「**リンクトラッキング設定**」領域を展開します。
 1. 「**ダウンロードを追跡**」の設定を解除します。
@@ -212,19 +212,19 @@ s.linkTrackVars= 'prop4';
 
    `‘yahoo.com’`
 
-1. 次の値を&#x200B;**Link Track Events**&#x200B;フィールドに追加します。
+1. 次の値を **リンクトラッキングイベント** フィールド：
 
    ```
        event1,event2
    ```
 
-1. 次の値を&#x200B;**Link track vars**&#x200B;フィールドに追加します。
+1. 次の値を **リンク追跡 var** フィールド：
 
    ```
        eVar1,eVar2
    ```
 
-1. フレームワークに関連付けられたページに、**テキスト**&#x200B;コンポーネントを追加します。**テキスト**&#x200B;コンポーネント内に、次のアドレスを指すハイパーリンクを追加します。
+1. フレームワークに関連付けられたページに、**テキスト**&#x200B;コンポーネントを追加します。内部 **テキスト** コンポーネントに、次のアドレスを示すハイパーリンクを追加します。
 
    `https://search.yahoo.com/?p=this`
 
@@ -236,7 +236,7 @@ Adobe Marketing Cloud デバッガーで表示すると、呼び出しの実行�
 
 >[!NOTE]
 >
->URLにクエリ文字列が含まれていません。`?p=this`
+>URL にクエリ文字列が含まれていません。 `?p=this`
 
 ### URL パラメーターを含める {#include-the-url-parameter}
 
@@ -244,13 +244,13 @@ Adobe Marketing Cloud デバッガーで表示すると、呼び出しの実行�
 1. 「**クエリ文字列を維持**」を有効にします。
 1. ページプレビューをリロードし、リンクをクリックします。
 
-Adobe Marketing Cloud Debuggerに表示される呼び出しの詳細は、次の例のようになります。
+Adobe Marketing Cloud Debugger に表示される呼び出しの詳細は、次の例のようになります。
 
 ![aa-leavequerysearch-active](assets/aa-leavequerysearch-active.png)
 
 >[!NOTE]
 >
->今回は、URLにクエリ文字列が含まれます。`?p=this`
+>今回は、URL に次のクエリ文字列が含まれます。 `?p=this`
 
 ## アドホックリンクトラッキング {#ad-hoc-link-tracking}
 
@@ -278,7 +278,7 @@ Adobe Analyticsフレームワークを設定して、アドホックリンク�
 
 >[!NOTE]
 >
->XSS Antisamy設定がパス&#x200B;**/libs/sling/xss.config.xml**&#x200B;の下のSLINGに追加され、アドホックリンクが機能するには、次のルールをに追加する必要があります。
+>XSS Antisamy 設定が、パスの下の SLING に追加されました。 **/libs/sling/xss.config.xml** アドホックリンクを機能させるには、次のルールをに追加する必要があります。
 
 #### タグルール拡張機能のアンカー {#anchor-tag-rule-extension}
 
@@ -331,13 +331,13 @@ Adobe Analyticsフレームワークを設定して、アドホックリンク�
 
    ![aa-17](assets/aa-17.png)
 
-1. Adobe Analyticsフレームワークのリンクトラッキング設定を上書きし、現在のリンクのリンクトラッキングを有効にするには、「**カスタムリンクトラッキング**」を有効にします。
+1. 有効にする **カスタムリンクトラッキング** を使用して、Adobe Analyticsフレームワークのリンクトラッキング設定を上書きし、現在のリンクのリンクトラッキングを有効にします。
 
-1. （オプション）リンククリックのあるイベントを追跡するには、「**Adobe Analytics変数を含める**」フィールドにAdobe Analyticsイベント名を追加します。 複数のイベント名をコンマで区切ります（例： ）。
+1. （オプション）リンククリックのあるイベントを追跡するには、 **Adobe Analytics変数を含める** フィールドに入力します。 複数のイベント名をコンマで区切ります（例： ）。
 
    `event1, event22`
 
-1. （オプション）リンククリックのある変数データを追跡するには、「**Adobe Analytics変数を含める**」フィールドにAdobe Analytics変数を追加します。 次のいずれかの形式を使用します。
+1. （オプション）リンククリックのある変数データを追跡するには、Adobe Analytics変数を **Adobe Analytics変数を含める** フィールドに入力します。 次のいずれかの形式を使用します。
 
    * `*<Variable-name>*: *<Dynamic Value>*`
    * `*<Variable-name>*: *‘CONSTANT’*`

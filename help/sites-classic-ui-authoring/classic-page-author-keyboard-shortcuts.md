@@ -1,8 +1,8 @@
 ---
 title: ページ編集時のキーボードショートカット
-seo-title: ページ編集時のキーボードショートカット
+seo-title: Keyboard Shortcuts when Editing Pages
 description: AEM 全体で様々なキーボードショートカットを利用できます。キーボードショートカットは、ページの編集時や、コンソールの使用に適用されます。
-seo-description: AEM 全体で様々なキーボードショートカットを利用できます。キーボードショートカットは、ページの編集時や、コンソールの使用に適用されます。
+seo-description: Various keyboard shortcuts are available throughout AEM. Some apply when editing pages, others to the use of consoles.
 uuid: a1753e0b-5701-426c-b974-2e8b8d81a30d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
 exl-id: 04075ed1-3a52-4371-aa4e-0c3d61c878ef
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '336'
-ht-degree: 91%
+source-wordcount: '313'
+ht-degree: 90%
 
 ---
 
@@ -23,7 +23,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 >[!NOTE]
 >
->次の表では、**ショートカット**&#x200B;列のキーの組み合わせに対して、CtrlキーとCommandキーの両方がmacOSで機能します。
+>次の表で、 **ショートカット** 列の Ctrl キーと Command キーの両方がmacOSで機能します。
 
 >[!NOTE]
 >
@@ -33,7 +33,6 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 >* Mac：Cmd キーを押しながら必要なコンポーネントをクリックします。
 
 >
-
 
 
 ## キーボードショートカットの編集 {#editing-keyboard-shortcuts}
@@ -156,7 +155,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 [コンソール](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)の使用時には、デスクトップユーザー向けの様々なキーボードショートカットも利用できます。
 
-## 開発用のキーボードショートカット  {#keyboard-shortcuts-for-development}
+## 開発用のキーボードショートカット {#keyboard-shortcuts-for-development}
 
 ページエディターの使用時には、デスクトップ開発者向けの追加のキーボードショートカットを利用できます。
 
@@ -169,7 +168,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   </tr> 
   <tr> 
    <td>編集モード</td> 
-   <td>URLに次のサフィックスを設定します。<br /> <code>?debugClientLibs=true</code><br />次を使用します。<br /> <strong><code>Ctrl-Shift-U</code></strong></td> 
+   <td>URL に次のサフィックスを設定します。<br /> <code>?debugClientLibs=true</code><br /> その後、次を使用します。<br /> <strong><code>Ctrl-Shift-U</code></strong></td> 
    <td>ページ読み込みのタイミングの統計を確認します。</td> 
   </tr> 
  </tbody> 

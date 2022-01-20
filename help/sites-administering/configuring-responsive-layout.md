@@ -1,8 +1,8 @@
 ---
 title: レイアウトコンテナおよびレイアウトモードの設定
-seo-title: レイアウトコンテナおよびレイアウトモードの設定
+seo-title: Configuring Layout Container and Layout Mode
 description: レイアウトコンテナとレイアウトモードの設定方法について説明します。
-seo-description: レイアウトコンテナとレイアウトモードの設定方法について説明します。
+seo-description: Learn how to configure Layout Container and Layout Mode.
 uuid: 952b7c86-76ab-4699-8530-8638e46bb50f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,14 +13,14 @@ legacypath: /content/docs/en/aem/6-2/administer/operations/page-authoring/config
 exl-id: 3a85fd49-5929-4eb0-9f40-e62c904dbca0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1324'
-ht-degree: 81%
+source-wordcount: '1309'
+ht-degree: 82%
 
 ---
 
 # レイアウトコンテナおよびレイアウトモードの設定{#configuring-layout-container-and-layout-mode}
 
-[レスポン](/help/sites-authoring/responsive-layout.md) シブレイアウトは、レスポンシブWebデザ [インを実現するメカニズムです](https://en.wikipedia.org/wiki/Responsive_web_design)。レスポンシブレイアウトを使用すると、ユーザーが使用するデバイスのレイアウトとサイズに応じて Web ページを作成できます。
+[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md) は、 [レスポンシブ web デザイン](https://en.wikipedia.org/wiki/Responsive_web_design). レスポンシブレイアウトを使用すると、ユーザーが使用するデバイスのレイアウトとサイズに応じて Web ページを作成できます。
 
 >[!NOTE]
 >
@@ -30,9 +30,9 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 
 * [**レイアウトコンテナ**](/help/sites-authoring/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode)&#x200B;コンポーネント
 
-   このコンポーネントは、レスポンシブグリッド内にコンポーネントを追加および配置できるグリッド段落システムを提供します。ページのデフォルトのparsysとして使用したり、コンポーネントブラウザーで作成者が使用できるようにしたりできます。
+   このコンポーネントは、レスポンシブグリッド内にコンポーネントを追加および配置できるグリッド段落システムを提供します。ページのデフォルトの parsys として使用したり、コンポーネントブラウザーで作成者が使用できるようにしたりできます。
 
-   * デフォルトの&#x200B;**レイアウトコンテナ**&#x200B;コンポーネントは次の場所で定義されます。
+   * デフォルト **レイアウトコンテナ** コンポーネントは次の場所で定義されます。
 
       /libs/wcm/foundation/components/responsivegrid
 
@@ -42,11 +42,11 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
       * ページのデフォルトの parsys として。
       * 両方.
 
-         ページの標準のレイアウトコンテナを使用できますが、その中にレイアウトコンテナをさらに追加できます。例えば、列の制御を行う場合などです。
+         ページの標準としてレイアウトコンテナを使用できますが、その中にレイアウトコンテナをさらに追加できます。例えば、列の制御を行う場合などです。
 
-* **[レイ](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**
-アウトモードレイアウトコンテナをページに配置したら、 
-**** レイアウトモードを使用して、レスポンシブグリッド内にコンテンツを配置します。
+* **[レイアウトモード](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**
+レイアウトコンテナをページに配置したら、 
+**レイアウト** モード：レスポンシブグリッド内にコンテンツを配置します。
 
 * [**エミュレーター**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
 コンポーネントをインタラクティブにサイズ変更することによってデバイスやウィンドウのサイズに従ってレイアウトを再編成する、レスポンシブ Web サイトを作成および編集できます。その後、エミュレーターを使用して、コンテンツのレンダリング方法を確認できます。
@@ -74,17 +74,17 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 
 エミュレーターでページをサポートできるようにするには、ページコンポーネントを登録する必要があります。[シミュレーション用のページコンポーネントの登録](/help/sites-developing/responsive.md#registering-page-components-for-simulation)を参照してください。
 
-### デバイスグループの指定  {#specify-the-device-groups}
+### デバイスグループの指定 {#specify-the-device-groups}
 
 エミュレーターの「デバイス」リストに表示されるデバイスグループを指定するには、[デバイスグループの指定](/help/sites-developing/responsive.md#specifying-the-device-groups)を参照してください。
 
-### 指定したデバイスグループにサイトをリンク  {#link-your-site-to-the-specified-device-groups}
+### 指定したデバイスグループにサイトをリンク {#link-your-site-to-the-specified-device-groups}
 
 エミュレーターを含めるには、サイトをデバイスグループにリンクする必要があります。[「デバイス」リストの追加](/help/sites-developing/responsive.md#adding-the-devices-list)（クラシック UI とタッチ操作向け UI の両方）を参照してください。
 
 ## サイトのレイアウトモードのアクティベート {#activate-layout-mode-for-your-site}
 
-これらの手順は、サイト上で&#x200B;**レイアウト**&#x200B;モードを有効にするために使用されます。
+これらの手順は、 **レイアウト** モードを使用して設定できます。
 
 ### ブレークポイントの設定 {#configure-the-breakpoints}
 
@@ -113,15 +113,13 @@ CRXDE Lite または XML を使用して定義できます。
 >
 >* テンプレートにブレークポイントを追加する必要があります。
 >
->
-既存のプロジェクト（既存のコンテンツを含む）を移行する場合：
+>既存のプロジェクト（既存のコンテンツを含む）を移行する場合：
 >
 >* テンプレートにブレークポイントを追加する必要があります。
 >* 既存のページに同じブレークポイントを追加する\
-   >  継承が実行中の場合は、この値をコンテンツのルートページに制限できます。
+   >  継承は操作中なので、これをコンテンツのルートページに制限できます。
 
 >
-
 
 
 #### CRXDE Lite を使用したブレークポイントの設定 {#configuring-breakpoints-using-crxde-lite}
@@ -129,9 +127,9 @@ CRXDE Lite または XML を使用して定義できます。
 1. CRXDE Lite（または同等のツール）を使用して、以下のいずれかに移動します。
 
    * テンプレート定義。
-   * ページの`jcr:content`ノード。
+   * この `jcr:content` ノードに設定します。
 
-1. `jcr:content`の下に、次のノードを作成します。
+1. の下 `jcr:content` ノードを作成します。
 
    * 名前：`cq:responsive`
    * 型：`nt:unstructured`
@@ -150,7 +148,7 @@ CRXDE Lite または XML を使用して定義できます。
 
 #### XML を使用したブレークポイントの設定 {#configuring-breakpoints-using-xml}
 
-ブレークポイントは、`.context.html`の`<jcr:content>`セクション内の適切なテンプレート（またはコンテンツ）フォルダーに配置されます。
+ブレークポイントは `<jcr:content>` セクション `.context.html` 適切なテンプレート（またはコンテンツ）フォルダーの下に
 
 定義の例は以下のとおりです。
 
@@ -163,7 +161,7 @@ CRXDE Lite または XML を使用して定義できます。
 </cq:responsive>
 ```
 
-### レスポンシブ情報プロバイダーの追加  {#add-a-responsive-information-provider}
+### レスポンシブ情報プロバイダーの追加 {#add-a-responsive-information-provider}
 
 >[!NOTE]
 >
@@ -175,7 +173,7 @@ CRXDE Lite または XML を使用して定義できます。
 
 ## ページのコンポーネントサイズ変更の有効化 {#enable-component-resizing-for-the-page}
 
-これらの手順は、**レイアウト**&#x200B;モードでコンポーネントのサイズを変更するために必要です。
+これらの手順は、 **レイアウト** モード。
 
 ### レイアウトコンテナをメイン parsys として設定 {#set-layout-container-as-main-parsys}
 
@@ -264,7 +262,7 @@ AEM では、LESS を使用して、必要な CSS の一部を生成します。
 
 * `afterchildedit`
 
-レスポンシブグリッドに含まれるアダプティブ画像のコンテンツのサイズと更新を適切におこなうには、`REFRESH_PAGE`リスナーに設定された`afterEdit`を、含まれるすべてのコンポーネントの`EditConfig`ファイルに追加する必要があります。
+レスポンシブグリッドに含まれるアダプティブ画像のコンテンツのサイズと更新を適切に行うには、 `afterEdit` に設定 `REFRESH_PAGE` 聞き手 `EditConfig` 含まれるすべてのコンポーネントのファイル。
 
 次に例を示します。
 
@@ -274,13 +272,13 @@ AEM では、LESS を使用して、必要な CSS の一部を生成します。
 
 >[!CAUTION]
 >
->カスタムスタイルシートのclientlibをオーサー環境およびパブリッシュ環境で正しく機能させるには、ヘッダーの一部として読み込む必要があります。
+>カスタムスタイルシートの clientlib をオーサーおよびパブリッシュで正しく機能させるには、ヘッダーの一部として読み込む必要があります。
 
 ## ページ用にレイアウトコンテナコンポーネントを有効化 {#enable-the-layout-container-component-for-page}
 
 このタスクにより、作成者は、**レイアウトコンテナ**&#x200B;コンポーネントのインスタンスをページにドラッグできます。
 
-### ページ編集用にレイアウトコンテナコンポーネントを有効化  {#enable-the-layout-container-component-for-page-editing}
+### ページ編集用にレイアウトコンテナコンポーネントを有効化 {#enable-the-layout-container-component-for-page-editing}
 
 作成者がさらに多くのレスポンシブグリッドをコンテンツページに追加できるようにするには、ページのレイアウトコンテナコンポーネントを有効にする必要があります。これは、次のいずれかを使用しておこないます。
 

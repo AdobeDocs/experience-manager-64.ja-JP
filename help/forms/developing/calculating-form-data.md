@@ -1,8 +1,8 @@
 ---
 title: フォームデータの計算
-seo-title: フォームデータの計算
-description: Formsサービスを使用して、ユーザーがフォームに入力して結果を表示する値を計算します。 Formsサービスは、Java APIとWebサービスAPIを使用して値を計算します。
-seo-description: Formsサービスを使用して、ユーザーがフォームに入力して結果を表示する値を計算します。 Formsサービスは、Java APIとWebサービスAPIを使用して値を計算します。
+seo-title: Calculating Form Data
+description: Formsサービスを使用して、ユーザーがフォームに入力し、結果を表示する値を計算します。 Formsサービスは、Java API および Web サービス API を使用して値を計算します。
+seo-description: Use the Forms service to calculate values that a user enters into a form and display the results. Forms service calculates the values using the Java API and Web Service API.
 uuid: ccd85bc7-8ccc-44d9-9424-dfc1f603e688
 contentOwner: admin
 content-type: reference
@@ -14,23 +14,23 @@ role: Developer
 exl-id: 476b1c78-8332-4a79-93dc-a615ec58abbe
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1887'
+source-wordcount: '1853'
 ht-degree: 2%
 
 ---
 
-# フォームデータの計算{#calculating-form-data}
+# フォームデータの計算 {#calculating-form-data}
 
-Formsサービスでは、ユーザーがフォームに入力した値を計算して結果を表示できます。 フォームデータを計算するには、2つのタスクを実行する必要があります。 まず、フォームデータを計算するフォームデザインスクリプトを作成します。 フォームデザインは、3種類のスクリプトをサポートします。 1つのスクリプトタイプはクライアントで実行され、もう1つはサーバーで実行され、3つ目はサーバーとクライアントの両方で実行されます。 このトピックで説明するスクリプトタイプは、サーバー上で実行されます。 HTML、PDF、フォームガイド（非推奨）の変換では、サーバー側の計算がサポートされています。
+Formsサービスでは、ユーザーがフォームに入力した値を計算し、結果を表示することができます。 フォームデータを計算するには、2 つのタスクを実行する必要があります。 まず、フォームデータを計算するフォームデザインスクリプトを作成します。 フォームデザインは、3 種類のスクリプトをサポートしています。 1 つのスクリプトタイプはクライアントで実行され、もう 1 つはサーバーで実行され、3 つ目はサーバーとクライアントの両方で実行されます。 このトピックで説明するスクリプトタイプは、サーバー上で実行されます。 HTML、PDF、フォームガイド（非推奨）の変換では、サーバー側の計算がサポートされています。
 
-フォームデザインのプロセスの一環として、演算とスクリプトを使用し、より豊富なユーザーエクスペリエンスを提供できます。 演算とスクリプトは、ほとんどのフォームフィールドとオブジェクトに追加できます。 ユーザーがインタラクティブフォームに入力するデータに対して計算操作を実行するには、フォームデザインスクリプトを作成する必要があります。
+フォームデザインプロセスの一環として、演算とスクリプトを使用して、より豊富なユーザーエクスペリエンスを提供できます。 演算とスクリプトは、ほとんどのフォームフィールドとオブジェクトに追加できます。 ユーザーがインタラクティブフォームに入力したデータに対して計算操作を実行するには、フォームデザインスクリプトを作成する必要があります。
 
-ユーザーはフォームに値を入力し、「Calculate」ボタンをクリックして結果を表示します。 次のプロセスは、ユーザーがデータを計算できるサンプルアプリケーションを示しています。
+ユーザーがフォームに値を入力し、「計算」ボタンをクリックして結果を表示します。 次のプロセスは、ユーザーがデータを計算できるサンプル・アプリケーションを示しています。
 
-* ユーザーは、Webアプリケーションの開始ページとして機能するStartLoan.htmlというHTMLページにアクセスします。 このページは、`GetLoanForm`という名前のJavaサーブレットを呼び出します。
-* `GetLoanForm`サーブレットがローンフォームをレンダリングします。 このフォームには、スクリプト、インタラクティブフィールド、計算ボタンおよび送信ボタンが含まれています。
-* ユーザーがフォームのフィールドに値を入力し、「計算」ボタンをクリックします。 フォームが`CalculateData` Javaサーブレットに送信され、スクリプトが実行されます。 計算結果がフォームに表示された状態で、フォームがユーザーに送り返されます。
-* 満足のいく結果が表示されるまで、ユーザーは引き続き値の入力と計算を行います。 問題が解決されたら、ユーザーは「送信」ボタンをクリックしてフォームを処理します。 フォームは、送信されたデータを取得する`ProcessForm`という名前の別のJavaサーブレットに送信されます。 ([送信されたForms](/help/forms/developing/rendering-forms.md#handling-submitted-forms)の処理を参照)。
+* ユーザーが、WebHTMLの開始ページとして機能する StartLoan.html という名前のアプリケーションページにアクセスします。 このページは、という名前の Java サーブレットを呼び出します `GetLoanForm`.
+* この `GetLoanForm` サーブレットは、ローンフォームをレンダリングします。 このフォームには、スクリプト、インタラクティブフィールド、計算ボタンおよび送信ボタンが含まれています。
+* ユーザーがフォームのフィールドに値を入力し、「計算」ボタンをクリックします。 フォームが `CalculateData` スクリプトが実行される Java サーブレット。 計算結果がフォームに表示された状態で、フォームがユーザーに送り返されます。
+* ユーザは満足のいく結果が表示されるまで値の入力と計算を続けます。 確認が完了したら、ユーザーは「送信」ボタンをクリックしてフォームを処理します。 フォームは、という名前の別の Java サーブレットに送信されます。 `ProcessForm` 送信されたデータを取得する役割を持つ ( [送信済みFormsの処理](/help/forms/developing/rendering-forms.md#handling-submitted-forms).)
 
 次の図に、アプリケーションのロジック・フローを示します。
 
@@ -41,84 +41,84 @@ Formsサービスでは、ユーザーがフォームに入力した値を計算
 <table> 
  <thead>
   <tr> 
-   <th><p>ステップ</p></th> 
+   <th><p>手順</p></th> 
    <th><p>説明</p></th> 
   </tr> 
  </thead>
  <tbody>
   <tr> 
    <td><p>1</p></td> 
-   <td><p><code>GetLoanForm</code> JavaサーブレットがHTML開始ページから呼び出されます。 </p></td> 
+   <td><p>この <code>GetLoanForm</code> Java サーブレットは、HTML開始ページから呼び出されます。 </p></td> 
   </tr> 
   <tr> 
    <td><p>2</p></td> 
-   <td><p><code>GetLoanForm</code> Javaサーブレットは、FormsサービスクライアントAPIを使用して、ローンフォームをクライアントWebブラウザーにレンダリングします。 サーバー上で実行するように設定されたスクリプトを含むフォームをレンダリングする場合と、スクリプトを含まないフォームをレンダリングする場合の違いは、スクリプトの実行に使用するターゲットの場所を指定する必要がある点です。 ターゲットの場所を指定しない場合、サーバー上で実行するように設定されたスクリプトは実行されません。 例えば、この節で紹介するアプリケーションについて考えてみましょう。 <code>CalculateData</code> Javaサーブレットは、スクリプトが実行されるターゲットの場所です。</p></td> 
+   <td><p>この <code>GetLoanForm</code> Java サーブレットは、Forms service Client API を使用して、ローンフォームをクライアント Web ブラウザーにレンダリングします。 サーバー上で実行するように設定されたスクリプトを含むフォームをレンダリングする場合と、スクリプトを含まないフォームをレンダリングする場合の違いは、スクリプトの実行に使用するターゲットの場所を指定する必要がある点です。 ターゲットの場所が指定されていない場合、サーバー上で実行するように設定されたスクリプトは実行されません。 例えば、この節で紹介するアプリケーションについて考えてみましょう。 この <code>CalculateData</code> Java サーブレットは、スクリプトが実行されるターゲットの場所です。</p></td> 
   </tr> 
   <tr> 
    <td><p>3</p></td> 
-   <td><p>ユーザーがインタラクティブフィールドにデータを入力し、「計算」ボタンをクリックします。 フォームが<code>CalculateData</code> Javaサーブレットに送信され、スクリプトが実行されます。 </p></td> 
+   <td><p>ユーザーがインタラクティブフィールドにデータを入力し、「計算」ボタンをクリックします。 フォームが <code>CalculateData</code> Java サーブレット。スクリプトが実行されます。 </p></td> 
   </tr> 
   <tr> 
    <td><p>4</p></td> 
-   <td><p>計算結果がフォームに表示された状態で、フォームがWebブラウザーにレンダリングされます。 </p></td> 
+   <td><p>計算結果がフォームに表示された状態で、フォームが Web ブラウザーにレンダリングされます。 </p></td> 
   </tr> 
   <tr> 
    <td><p>5</p></td> 
-   <td><p>値が十分な場合は、ユーザーが「送信」ボタンをクリックします。 フォームは、<code>ProcessForm</code>という名前の別のJavaサーブレットに送信されます。</p></td> 
+   <td><p>ユーザーは、値が満足できる場合に「送信」ボタンをクリックします。 フォームは、という名前の別の Java サーブレットに送信されます。 <code>ProcessForm</code>.</p></td> 
   </tr> 
  </tbody> 
 </table>
 
-通常、PDFコンテンツとして送信されるフォームには、クライアントで実行されるスクリプトが含まれます。 ただし、サーバー側の計算を実行することもできます。 「送信」ボタンを使用してスクリプトを計算することはできません。 この場合、Formsサービスでインタラクションが完了すると見なされるので、計算は実行されません。
+通常、PDFコンテンツとして送信されるフォームには、クライアントで実行されるスクリプトが含まれます。 ただし、サーバー側の計算を実行することもできます。 「送信」ボタンは、スクリプトの計算には使用できません。 この場合、Formsサービスはインタラクションが完了すると見なすので、計算は実行されません。
 
-フォームデザインスクリプトの使用方法を説明するために、この節では、サーバー上で実行するように設定されたスクリプトを含むシンプルなインタラクティブフォームを調べます。 次の図は、スクリプトを含むフォームデザインを示しています。このスクリプトを使用して、ユーザーが最初の2つのフィールドに入力し、その結果を3番目のフィールドに表示します。
+フォームデザインスクリプトの使用方法を説明するために、この節では、サーバー上で実行するように設定されたスクリプトを含むシンプルなインタラクティブフォームを調べます。 次の図に示すスクリプトを含むフォームデザインを示します。このスクリプトによって、ユーザーが最初の 2 つのフィールドに入力し、その結果を 3 番目のフィールドに表示します。
 
 ![cf_cf_caldata](assets/cf_cf_caldata.png)
 
-**A.** NumericField1 B. **NumericField2 Cという名前のフィール** ド **** NumericField3という名前のフィールド
+**A.** NumericField1 という名前のフィールド **B.** NumericField2 という名前のフィールド **C.** NumericField3 という名前のフィールド
 
-このフォームデザインに含まれるスクリプトの構文は次のとおりです。
+このフォームデザインに配置されるスクリプトの構文は次のとおりです。
 
 ```as3
      NumericField3 = NumericField2 + NumericField1
 ```
 
-このフォームデザインでは、「計算」ボタンはコマンドボタンで、スクリプトはこのボタンの`Click`イベントに配置されます。 ユーザーが最初の2つのフィールド（NumericField1およびNumericField2）に値を入力し、「Calculate」ボタンをクリックすると、フォームがFormsサービスに送信され、スクリプトが実行されます。 Formsサービスは、計算の結果をNumericField3フィールドに表示して、フォームをクライアントデバイスにレンダリングし直します。
+このフォームデザインでは、「計算」ボタンはコマンドボタンで、スクリプトはこのボタンの `Click` イベント。 ユーザーが最初の 2 つのフィールド（NumericField1 および NumericField2）に値を入力し、「計算」ボタンをクリックすると、フォームがFormsサービスに送信され、スクリプトが実行されます。 Formsサービスは、NumericField3 フィールドに表示された計算結果を使用して、フォームをクライアントデバイスにレンダリングし直します。
 
 >[!NOTE]
 >
->フォームデザインスクリプトの作成について詳しくは、「[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)」を参照してください。
+>フォームデザインスクリプトの作成について詳しくは、 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 >[!NOTE]
 >
->Formsサービスについて詳しくは、『 AEM Formsのサービスリファレンス[ 』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>Formsサービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
-## 手順の概要{#summary-of-steps}
+## 手順の概要 {#summary-of-steps}
 
 フォームデータを計算するには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
-1. Forms Client APIオブジェクトを作成します。
+1. Forms Client API オブジェクトを作成します。
 1. 計算スクリプトを含むフォームを取得します。
-1. フォームデータストリームをクライアントWebブラウザーに書き戻す
+1. フォームデータストリームをクライアントの Web ブラウザーに書き戻します
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-**Forms Client APIオブジェクトの作成**
+**Forms Client API オブジェクトの作成**
 
-FormsサービスクライアントAPI操作をプログラムで実行する前に、Formsサービスクライアントを作成する必要があります。 Java APIを使用している場合は、`FormsServiceClient`オブジェクトを作成します。 Forms WebサービスAPIを使用している場合は、`FormsServiceService`オブジェクトを作成します。
+Forms Service Client API 操作をプログラムで実行する前に、Formsサービスクライアントを作成する必要があります。 Java API を使用している場合は、 `FormsServiceClient` オブジェクト。 Forms Web サービス API を使用している場合は、 `FormsServiceService` オブジェクト。
 
 **計算スクリプトを含むフォームの取得**
 
-FormsサービスクライアントAPIを使用して、サーバー上で実行するように設定されたスクリプトを含むフォームを処理するアプリケーションロジックを作成します。 このプロセスは、送信されたフォームの処理に似ています。 ([送信されたForms](/help/forms/developing/handling-submitted-forms.md)の処理を参照)。
+Forms Service Client API を使用して、サーバー上で実行するように設定されたスクリプトを含むフォームを処理するアプリケーションロジックを作成します。 このプロセスは、送信されたフォームの処理に似ています。 ( [送信済みFormsの処理](/help/forms/developing/handling-submitted-forms.md).)
 
-送信されたフォームに関連付けられている処理状態が`1` `(Calculate)`であることを確認します。つまり、Formsサービスがフォームデータに対して計算操作を実行し、結果をユーザーに書き戻す必要があります。 この場合、サーバー上で実行するように設定されたスクリプトが自動的に実行されます。
+送信されたフォームに関連付けられている処理状態が `1` `(Calculate)`：つまり、Formsサービスはフォームデータに対して計算操作を実行しており、結果をユーザーに書き戻す必要があります。 この場合、サーバー上で実行するように設定されたスクリプトが自動的に実行されます。
 
-**フォームデータストリームをクライアントWebブラウザーに書き戻す**
+**フォームデータストリームをクライアントの Web ブラウザーに書き戻します**
 
-送信されたフォームに関連付けられている処理状態が`1`であることを確認したら、結果をクライアントのWebブラウザーに書き戻す必要があります。 フォームが表示されると、計算された値が該当するフィールドに表示されます。
+送信されたフォームに関連付けられている処理状態が `1`の場合は、結果をクライアント Web ブラウザーに書き戻す必要があります。 フォームが表示されると、計算された値が適切なフィールドに表示されます。
 
 **関連トピック**
 
@@ -126,47 +126,47 @@ FormsサービスクライアントAPIを使用して、サーバー上で実行
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[FormsサービスAPIのクイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms Service API クイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
 [インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[Forms](/help/forms/developing/creating-web-applications-renders-forms.md)
+[Formsをレンダリングする Web アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-## Java APIを使用してフォームデータを計算する{#calculate-form-data-using-the-java-api}
+## Java API を使用してフォームデータを計算する {#calculate-form-data-using-the-java-api}
 
-Forms API(Java)を使用してフォームデータを計算します。
+Forms API(Java) を使用してフォームデータを計算します。
 
 1. プロジェクトファイルを含める
 
-   Javaプロジェクトのクラスパスに、adobe-forms-client.jarなどのクライアントJARファイルを含めます。
+   Java プロジェクトのクラスパスに、adobe-forms-client.jar などのクライアント JAR ファイルを含めます。
 
-1. Forms Client APIオブジェクトの作成
+1. Forms Client API オブジェクトの作成
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して`FormsServiceClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * の作成 `FormsServiceClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
 
 1. 計算スクリプトを含むフォームの取得
 
-   * 計算スクリプトを含むフォームデータを取得するには、コンストラクタを使用して`com.adobe.idp.Document`オブジェクトを作成し、コンストラクタ内から`javax.servlet.http.HttpServletResponse`オブジェクトの`getInputStream`メソッドを呼び出します。
-   * `FormsServiceClient`オブジェクトの`processFormSubmission`メソッドを呼び出し、次の値を渡します。
+   * 計算スクリプトを含むフォームデータを取得するには、 `com.adobe.idp.Document` オブジェクトのコンストラクタを使用して、 `javax.servlet.http.HttpServletResponse` オブジェクトの `getInputStream` メソッドをコンストラクタ内から呼び出します。
+   * を呼び出す `FormsServiceClient` オブジェクトの `processFormSubmission` メソッドを使用して、次の値を渡します。
 
-      * フォームデータを格納する`com.adobe.idp.Document`オブジェクト。
-      * 関連するすべてのHTTPヘッダーを含む環境変数を指定するstring値。 `CONTENT_TYPE`環境変数に1つ以上の値を指定して、処理するコンテンツタイプを指定する必要があります。 例えば、XMLデータとPDFデータを処理するには、このパラメーターに次の文字列値を指定します。`CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
-      * `HTTP_USER_AGENT`ヘッダー値を指定するstring値。例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`
-      * 実行時オプションを格納する`RenderOptionsSpec`オブジェクト。
+      * この `com.adobe.idp.Document` フォームデータを格納するオブジェクト。
+      * 関連するすべての HTTP ヘッダーを含む環境変数を指定する string 値。 処理するコンテンツタイプを指定するには、 `CONTENT_TYPE` 環境変数。 例えば、XML データとPDFデータを処理するには、このパラメーターに次の文字列値を指定します。 `CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
+      * 次を指定する string 値 `HTTP_USER_AGENT` ヘッダー値；例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+      * A `RenderOptionsSpec` 実行時オプションを保存するオブジェクト。
 
-      `processFormSubmission`メソッドは、フォーム送信の結果を含む`FormsResult`オブジェクトを返します。
+      この `processFormSubmission` メソッドは、 `FormsResult` フォーム送信の結果を含むオブジェクト。
 
-   * `FormsResult`オブジェクトの`getAction`メソッドを呼び出して、送信されたフォームに関連付けられている処理状態が`1`であることを確認します。 このメソッドが値`1`を返す場合、計算が実行され、データをクライアントWebブラウザーに書き戻すことができます。
+   * 送信されたフォームに関連付けられている処理状態が `1` を呼び出すことによって `FormsResult` オブジェクトの `getAction` メソッド。 このメソッドが値を返す場合 `1`を含めると、計算が実行され、データをクライアントの Web ブラウザーに書き戻すことができます。
 
 
-1. フォームデータストリームをクライアントWebブラウザーに書き戻す
+1. フォームデータストリームをクライアントの Web ブラウザーに書き戻します
 
-   * フォームデータストリームをクライアントのWebブラウザーに送信するために使用する`javax.servlet.ServletOutputStream`オブジェクトを作成します。
-   * `FormsResult`オブジェクトの`getOutputContent`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトを作成します。
-   * `com.adobe.idp.Document`オブジェクトの`getInputStream`メソッドを呼び出して、`java.io.InputStream`オブジェクトを作成します。
-   * `InputStream`オブジェクトの`read`メソッドを呼び出し、バイト配列を引数として渡すことで、バイト配列を作成し、フォームデータストリームに入力します。
-   * `javax.servlet.ServletOutputStream`オブジェクトの`write`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに送信します。 `write`メソッドにバイト配列を渡します。
+   * の作成 `javax.servlet.ServletOutputStream` フォームデータストリームをクライアントの Web ブラウザーに送信するために使用するオブジェクト。
+   * の作成 `com.adobe.idp.Document` を呼び出すことによってオブジェクトを取得 `FormsResult` オブジェクト `getOutputContent` メソッド。
+   * の作成 `java.io.InputStream` を呼び出すことによってオブジェクトを取得 `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッド。
+   * バイト配列を作成し、 `InputStream` オブジェクトの `read` メソッドを使用し、バイト配列を引数として渡す。
+   * を呼び出す `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッド。
 
 **関連トピック**
 
@@ -174,54 +174,54 @@ Forms API(Java)を使用してフォームデータを計算します。
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## WebサービスAPI {#calculate-form-data-using-the-web-service-api}を使用してフォームデータを計算する
+## Web サービス API を使用してフォームデータを計算する {#calculate-form-data-using-the-web-service-api}
 
-Forms API（Webサービス）を使用してフォームデータを計算します。
+Forms API（Web サービス）を使用してフォームデータを計算します。
 
 1. プロジェクトファイルを含める
 
-   * FormsサービスのWSDLを使用するJavaプロキシクラスを作成します。
-   * Javaプロキシクラスをクラスパスに含めます。
+   * Forms Service WSDL を使用する Java プロキシクラスを作成します。
+   * Java プロキシクラスをクラスパスに含めます。
 
-1. Forms Client APIオブジェクトの作成
+1. Forms Client API オブジェクトの作成
 
-   `FormsService`オブジェクトを作成し、認証値を設定します。
+   の作成 `FormsService` オブジェクトを選択し、認証値を設定します。
 
 1. 計算スクリプトを含むフォームの取得
 
-   * Javaサーブレットに投稿されたフォームデータを取得するには、コンストラクタを使用して`BLOB`オブジェクトを作成します。
-   * `javax.servlet.http.HttpServletResponse`オブジェクトの`getInputStream`メソッドを使用して、`java.io.InputStream`オブジェクトを作成します。
-   * コンストラクターを使用して`java.io.ByteArrayOutputStream`オブジェクトの長さを渡し、`java.io.InputStream`オブジェクトを作成します。
-   * `java.io.InputStream`オブジェクトの内容を`java.io.ByteArrayOutputStream`オブジェクトにコピーします。
-   * `java.io.ByteArrayOutputStream`オブジェクトの`toByteArray`メソッドを呼び出して、バイト配列を作成します。
-   * `setBinaryData`メソッドを呼び出し、バイト配列を引数として渡すことで、`BLOB`オブジェクトを設定します。
-   * コンストラクタを使用して `RenderOptionsSpec` オブジェクトを作成します。`RenderOptionsSpec`オブジェクトの`setLocale`メソッドを呼び出し、ロケール値を指定する文字列値を渡すことによって、ロケール値を設定します。
-   * `FormsServiceClient`オブジェクトの`processFormSubmission`メソッドを呼び出し、次の値を渡します。
+   * Java サーブレットに投稿されたフォームデータを取得するには、 `BLOB` オブジェクトを指定します。
+   * の作成 `java.io.InputStream` オブジェクトを `javax.servlet.http.HttpServletResponse` オブジェクトの `getInputStream` メソッド。
+   * の作成 `java.io.ByteArrayOutputStream` オブジェクトのコンストラクタを使用し、 `java.io.InputStream` オブジェクト。
+   * の内容をコピーします。 `java.io.InputStream` オブジェクトを `java.io.ByteArrayOutputStream` オブジェクト。
+   * を呼び出してバイト配列を作成する `java.io.ByteArrayOutputStream` オブジェクトの `toByteArray` メソッド。
+   * 次の項目に `BLOB` オブジェクトを呼び出す `setBinaryData` メソッドを使用し、バイト配列を引数として渡す。
+   * コンストラクタを使用して `RenderOptionsSpec` オブジェクトを作成します。を呼び出してロケール値を設定します。 `RenderOptionsSpec` オブジェクトの `setLocale` メソッドを使用して、ロケール値を指定する string 値を渡す。
+   * を呼び出す `FormsServiceClient` オブジェクトの `processFormSubmission` メソッドを使用して、次の値を渡します。
 
-      * フォームデータを格納する`BLOB`オブジェクト。
-      * 環境変数を指定するstring値に、関連するすべてのHTTPヘッダーが含まれていました。 例えば、次の文字列値を指定できます。`HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
-      * `HTTP_USER_AGENT`ヘッダー値を指定するstring値。例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`
-      * 実行時オプションを格納する`RenderOptionsSpec`オブジェクト。 その他の情報, .
-      * メソッドで設定される空の`BLOBHolder`オブジェクト。
-      * メソッドで設定される空の`javax.xml.rpc.holders.StringHolder`オブジェクト。
-      * メソッドで設定される空の`BLOBHolder`オブジェクト。
-      * メソッドで設定される空の`BLOBHolder`オブジェクト。
-      * メソッドで設定される空の`javax.xml.rpc.holders.ShortHolder`オブジェクト。
-      * メソッドで設定される空の`MyArrayOf_xsd_anyTypeHolder`オブジェクト。 このパラメーターは、フォームと共に送信される添付ファイルを保存するために使用されます。
-      * 送信されるフォームを使用してメソッドによって入力される、空の`FormsResultHolder`オブジェクト。
+      * この `BLOB` フォームデータを格納するオブジェクト。
+      * 環境変数を指定する string 値に、関連するすべての HTTP ヘッダーが含まれていました。 例えば、次の文字列値を指定できます。 `HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
+      * 次を指定する string 値 `HTTP_USER_AGENT` ヘッダー値；例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+      * A `RenderOptionsSpec` 実行時オプションを保存するオブジェクト。 その他の情報, .
+      * 空 `BLOBHolder` メソッドによって設定されるオブジェクト。
+      * 空 `javax.xml.rpc.holders.StringHolder` メソッドによって設定されるオブジェクト。
+      * 空 `BLOBHolder` メソッドによって設定されるオブジェクト。
+      * 空 `BLOBHolder` メソッドによって設定されるオブジェクト。
+      * 空 `javax.xml.rpc.holders.ShortHolder` メソッドによって設定されるオブジェクト。
+      * 空 `MyArrayOf_xsd_anyTypeHolder` メソッドによって設定されるオブジェクト。 このパラメーターは、フォームと共に送信される添付ファイルを保存するために使用されます。
+      * 空 `FormsResultHolder` 送信されるフォームを使用してメソッドによって入力されるオブジェクト。
 
-      `processFormSubmission`メソッドは、`FormsResultHolder`パラメーターにフォーム送信の結果を入力します。 `processFormSubmission`メソッドは、フォーム送信の結果を含む`FormsResult`オブジェクトを返します。
+      この `processFormSubmission` メソッドによって `FormsResultHolder` パラメーターとフォーム送信の結果。 この `processFormSubmission` メソッドは、 `FormsResult` フォーム送信の結果を含むオブジェクト。
 
-   * `FormsResult`オブジェクトの`getAction`メソッドを呼び出して、送信されたフォームに関連付けられている処理状態が`1`であることを確認します。 このメソッドが値`1`を返す場合、計算が実行され、データをクライアントWebブラウザーに書き戻すことができます。
+   * 送信されたフォームに関連付けられている処理状態が `1` を呼び出すことによって `FormsResult` オブジェクトの `getAction` メソッド。 このメソッドが値を返す場合 `1`を含めると、計算が実行され、データをクライアントの Web ブラウザーに書き戻すことができます。
 
 
-1. フォームデータストリームをクライアントWebブラウザーに書き戻す
+1. フォームデータストリームをクライアントの Web ブラウザーに書き戻します
 
-   * フォームデータストリームをクライアントのWebブラウザーに送信するために使用する`javax.servlet.ServletOutputStream`オブジェクトを作成します。
-   * `FormsResult`オブジェクトの`getOutputContent`メソッドを呼び出して、フォームデータを含む`BLOB`オブジェクトを作成します。
-   * バイト配列を作成し、`BLOB`オブジェクトの`getBinaryData`メソッドを呼び出してそれを設定します。 このタスクは、`FormsResult`オブジェクトの内容をバイト配列に割り当てます。
-   * `javax.servlet.http.HttpServletResponse`オブジェクトの`write`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに送信します。 `write`メソッドにバイト配列を渡します。
+   * の作成 `javax.servlet.ServletOutputStream` フォームデータストリームをクライアントの Web ブラウザーに送信するために使用するオブジェクト。
+   * の作成 `BLOB` を呼び出してフォームデータを含むオブジェクト `FormsResult` オブジェクトの `getOutputContent` メソッド。
+   * バイト配列を作成し、 `BLOB` オブジェクトの `getBinaryData` メソッド。 このタスクは、 `FormsResult` オブジェクトをバイト配列に変換します。
+   * を呼び出す `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッド。
 
 **関連トピック**
 
-[Base64エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Base64 エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)

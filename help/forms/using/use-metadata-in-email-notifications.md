@@ -1,15 +1,15 @@
 ---
 title: '電子メール通知におけるメタデータの使用 '
-seo-title: '電子メール通知におけるメタデータの使用 '
+seo-title: Use metadata in an email notification
 description: メタデータを使用したフォームワークフローの電子メール通知の情報の作成
-seo-description: メタデータを使用したフォームワークフローの電子メール通知の情報の作成
+seo-description: Use metadata to populate information in a forms workflow email notification
 uuid: 17e018c9-6bf8-4042-bba9-4ebe449304ac
 topic-tags: publish
 discoiquuid: bdf13893-630a-43cd-aaeb-c7c16bf4f8a6
 exl-id: 248c5adf-23e9-463f-9f29-869ae2426c22
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '902'
 ht-degree: 96%
 
 ---
@@ -97,7 +97,7 @@ message=<html><body>\n\
 </html>\n\
 ```
 
-## 電子メール通知におけるシステム生成メタデータの使用  {#using-system-generated-metadata-in-an-email-notification}
+## 電子メール通知におけるシステム生成メタデータの使用 {#using-system-generated-metadata-in-an-email-notification}
 
 AEM Forms アプリケーションには、すぐに使えるメタデータ変数（キーと値のペア）がいくつか用意されています。これらの変数を電子メールテンプレートに使用することができます。変数の値は、関連する Forms アプリケーションに基づいています。次の表では、すぐに使える全メタデータ変数のリストを示します。
 
@@ -152,7 +152,7 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
 
 ## 電子メール通知におけるカスタムメタデータの使用 {#using-custom-metadata-in-an-email-notification}
 
-電子メール通知ではカスタムメタデータを使用することもできます。カスタムメタデータには、システム生成メタデータに加えて追加情報が含まれています。例えば、データベースから取得したポリシーの詳細などです。ECMAScriptまたはOSGiバンドルを使用して、crx-repositoryにカスタムメタデータを追加できます。
+電子メール通知ではカスタムメタデータを使用することもできます。カスタムメタデータには、システム生成メタデータに加えて追加情報が含まれています。例えば、データベースから取得したポリシーの詳細などです。ECMAScript または OSGi バンドルを使用して、crx-repository にカスタムメタデータを追加できます。
 
 ### ECMAScript を使用したカスタムメタデータの追加  {#use-ecmascript-to-add-custom-metadata}
 
@@ -195,7 +195,7 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
       | 型 | String |
       | 値 | スクリプトのタイトルを指定します。例えば、ポリシーホルダーのカスタムメタデータとします。指定した値がタスクの割り当て手順に表示されます。 |
 
-### OSGi バンドルと Java インターフェースを使用したカスタムメタデータの追加  {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
+### OSGi バンドルと Java インターフェースを使用したカスタムメタデータの追加 {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
 
 WorkitemUserMetadataService Java インターフェースを使用して電子メールテンプレートにカスタムメタデータを追加することができます。WorkitemUserMetadataService Java インターフェースを使用する OSGi バンドルを作成して、AEM Forms サーバーにデプロイすることができます。これにより、タスクの割り当て手順でメタデータを選択できるようになります。
 

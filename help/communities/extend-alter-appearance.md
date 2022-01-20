@@ -1,8 +1,8 @@
 ---
 title: 外観の変更（HBS）
-seo-title: 外観の変更
+seo-title: Alter the Appearance
 description: HBS スクリプトの変更
-seo-description: HBS スクリプトの変更
+seo-description: Modify the HBS scripts
 uuid: 6e1030af-f170-4a60-9d3f-439afd05de57
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: 70be208d-185b-4b27-8e01-74e62f656344
 exl-id: 358b70b8-8122-4eda-baa7-d9a58d6901f9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 78%
+source-wordcount: '268'
+ht-degree: 77%
 
 ---
 
@@ -27,13 +27,13 @@ ht-degree: 78%
 >
 >拡張を使用するには、影響を受ける Web サイト内のコメントシステムのインスタンス（/content）によって、その resourceType がカスタムコメントシステムであるように設定される必要があります。
 
-## HBS スクリプトの変更  {#modify-the-hbs-scripts}
+## HBS スクリプトの変更 {#modify-the-hbs-scripts}
 
 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) を使用して、次の手順を実行します。
 
-* [/apps/custom/components/comments/comment/comment.hbs](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)を開きます。
+* 開く [/apps/custom/components/comments/comment/comment.hbs](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
-   * コメント投稿のアバターを含むタグをコメントアウトします（21行目前後）。
+   * コメント投稿のアバターを含むタグをコメントアウトします（21 行目前後）。
 
       ```
       <!--
@@ -41,9 +41,9 @@ ht-degree: 78%
        -->
       ```
 
-* [/apps/custom/components/comments/comments.hbs](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)を開きます。
+* 開く [/apps/custom/components/comments/comments.hbs](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
 
-   * 次のコメントエントリのアバターを含むタグをコメントアウトします（44行目前後）。
+   * 次のコメントエントリのアバターを含むタグをコメントアウトします（44 行目前後）。
 
       ```
       <!--
@@ -57,15 +57,15 @@ ht-degree: 78%
 
 アプリケーションを変更した後で、カスタムコンポーネントを再レプリケートする必要があります。
 
-その一つの方法は、
+その方法の 1 つは、
 
 * メインメニューから
 
-   * **[!UICONTROL ツール/操作/レプリケーション]**&#x200B;を選択します。
+   * 選択 **[!UICONTROL [ ツール ] > [ 操作 ] > [ レプリケーション ]]**
    *  `Activate Tree`
-   * `Start Path`を設定：を`/apps/custom`に変更します。
-   * `Only Modified`をオフにします
-   * `Activate`ボタンを選択
+   * 設定 `Start Path`:から `/apps/custom`
+   * オフ `Only Modified`
+   * 選択 `Activate` ボタン
 
 ## 公開済みサンプルページでの変更されたコメントの表示 {#view-modified-comment-on-published-sample-page}
 

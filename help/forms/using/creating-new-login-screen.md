@@ -1,8 +1,8 @@
 ---
 title: 新しいログイン画面の作成
-seo-title: 新しいログイン画面の作成
+seo-title: Creating a new login screen
 description: AEM Forms Workspace または Forms Manager を例にした、LiveCycle モジュールのログインページの変更方法。
-seo-description: AEM Forms Workspace または Forms Manager を例にした、LiveCycle モジュールのログインページの変更方法。
+seo-description: How-to modify the login page of LiveCycle modules, for example of AEM Forms workspace or Forms Manager.
 uuid: c7643f87-4a08-4c63-b87c-f987dbe18ece
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,42 +11,42 @@ discoiquuid: cfaa6b49-3fd0-4c08-84a2-e86c7e7e3532
 exl-id: caa4f835-c353-49d5-b18c-4d0538c1136f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 62%
+source-wordcount: '468'
+ht-degree: 61%
 
 ---
 
-# 新規ログイン画面の作成  {#creating-a-new-login-screen}
+# 新規ログイン画面の作成 {#creating-a-new-login-screen}
 
 AEM Forms ログイン画面を使用するすべての AEM Forms モジュールのログイン画面を変更することができます。例えば、変更すると Forms Manager および AEM Forms Workspace の両方のログイン画面に影響が及びます。
 
 ## 前提条件 {#prerequisite}
 
-1. `/lc/crx/de`に管理者権限でログインします。
+1. 次の場所にログイン： `/lc/crx/de` 管理者権限を持つ。
 1. 次のアクションを実行します。
 
-   1. 階層構造を複製します。の`/libs/livecycle/core/content`を`/apps/livecycle/core/content`に配置します。 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
-   1. コンテンツフォルダーをコピーします。`/libs/livecycle/core`から`/apps/livecycle/core`まで。
-   1. `/apps/livecycle/core`フォルダーの内容を削除します。
+   1. 階層構造をレプリケートします。/ `/libs/livecycle/core/content` 時刻 `/apps/livecycle/core/content`. 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
+   1. 次の内容フォルダーをコピーします。から `/libs/livecycle/core` から `/apps/livecycle/core`.
+   1. のコンテンツを削除 `/apps/livecycle/core` フォルダー。
 
 1. 次の操作を実行します。
 
-   1. 階層構造を複製します。の`/libs/livecycle/core/components/login`を`/apps/livecycle/core/components/login`に配置します。 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
-   1. componentsフォルダーをコピーします。`/libs/livecycle/core`から`/apps/livecycle/core`まで。
-   1. フォルダーの内容を削除します。`/apps/livecycle/core/components/login`.
+   1. 階層構造をレプリケートします。/ `/libs/livecycle/core/components/login` 時刻 `/apps/livecycle/core/components/login`. 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
+   1. components フォルダーをコピーします。から `/libs/livecycle/core` から `/apps/livecycle/core`.
+   1. フォルダーのコンテンツを削除します。 `/apps/livecycle/core/components/login`.
 
 ## 新しいロケールの追加 {#adding-a-new-locale}
 
-1. `i18n`フォルダーをコピーします。
+1. を `i18n` フォルダー：
 
    * コピー元：`/libs/livecycle/core/components/login`
    * コピー先：`/apps/livecycle/core/components/login`
 
-1. `i18n`内のフォルダー（`en`を除く）をすべて削除します。
+1. 内のすべてのフォルダーを削除 `i18n` ただ一人だけは `en`.
 1. フォルダー `en` で、以下のアクションを実行します。
 
    1. フォルダーの名前をサポートするロケール名に変更します。（例：`ar`）。
-   1. プロパティ`jcr:language`の値を`ar`（`ar`フォルダー用）に変更します。
+   1. プロパティを変更します。 `jcr:language` 値 `ar`( `ar` フォルダー )。
 
    >[!NOTE]
    >
@@ -57,7 +57,7 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
    * コピー元：`/libs/livecycle/core/components/login`
    * コピー先：`/apps/livecycle/core/components/login`
 
-1. `/apps/livecycle/core/components/login/login.jsp`のコードの次のスニペットを変更します。
+1. 次のコードのスニペットを `/apps/livecycle/core/components/login/login.jsp`:
 
    ***ロケールが言語コードである場合***
 
@@ -179,9 +179,9 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
    for(int i=0; i<locales.length; i++)
    ```
 
-## 新しいテキストの追加、または既存のテキストの変更  {#adding-new-text-or-modifying-existing-text}
+## 新しいテキストの追加、または既存のテキストの変更 {#adding-new-text-or-modifying-existing-text}
 
-1. `i18n`フォルダーをコピーします。
+1. コピー `i18n` フォルダー：
 
    * コピー元：`/libs/livecycle/core/components/login`
    * コピー先：`/apps/livecycle/core/components/login`
@@ -194,7 +194,7 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
       * コピー元：`/libs/livecycle/core/components/login`
       * コピー先：`/apps/livecycle/core/components/login`
-   1. `/apps/livecycle/core/components/login/login.jsp`を変更して、新しく追加したテキストを取り込みます。
+   1. 変更 `/apps/livecycle/core/components/login/login.jsp` 新しく追加したテキストを取り込む。
 
    ![キャプチャ](assets/capture.png)
 
@@ -217,26 +217,26 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
 ## 新しいスタイルの追加、または既存のスタイルの変更 {#adding-new-style-or-modifying-existing-style}
 
-1. `login`ノードをコピーします。
+1. コピー `login` ノード：
 
    * コピー元：`/libs/livecycle/core/content`
    * コピー先：`/apps/livecycle/core/content`
 
-1. ノード`/apps/livecycle/core/content/login.`から`login.js`と`jquery-1.8.0.min.js`を削除します。
+1. ファイルを削除 `login.js` および `jquery-1.8.0.min.js`ノードから `/apps/livecycle/core/content/login.`
 1. CSS ファイルのスタイルを変更します。
 1. 新しいスタイルを追加するには：
 
-   1. `/apps/livecycle/core/content/login/login.css`に新しいスタイルを追加する
+   1. 新しいスタイルの追加先 `/apps/livecycle/core/content/login/login.css`
    1. コピー `login.jsp`
 
       * コピー元：`/libs/livecycle/core/components/login`
       * コピー先：`/apps/livecycle/core/components/login`
-   1. `/apps/livecycle/core/components/login/login.jsp`を変更して、新しく追加したスタイルを取り込みます。
+   1. 変更 `/apps/livecycle/core/components/login/login.jsp` 新しく追加されたスタイルを組み込む。
 
 
 1. 次に例を示します。
 
-   * `/apps/livecycle/core/content/login/login.css`に次を追加します。
+   * 以下をに追加します。 `/apps/livecycle/core/content/login/login.css`.
 
    ```css
    .newLoginContentArea {
@@ -257,22 +257,22 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
 >[!NOTE]
 >
->`/apps/livecycle/core/content/login`（`/libs/livecycle/core/content/login`からコピー）内の既存の画像が削除された場合は、対応する参照をCSSから削除します。
+>既存の画像が `/apps/livecycle/core/content/login` ( コピー元： `/libs/livecycle/core/content/login`) が削除され、対応する参照が CSS から削除されます。
 
 ## 新しい画像の追加 {#add-new-images}
 
 1. 新しいスタイルの追加または既存のスタイルの変更の手順に従います（前述）。
-1. `/apps/livecycle/core/content/login`に新しい画像を追加します。 画像を追加するには：
+1. に新しい画像を追加 `/apps/livecycle/core/content/login`. 画像を追加するには：
 
    1. WebDAV クライアントをインストールします。
-   1. webDAVクライアントを使用して`/apps/livecycle/core/content/login`フォルダーに移動します。 詳しくは、次を参照してください。[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
+   1. に移動します。 `/apps/livecycle/core/content/login` フォルダー、webDAV クライアントを使用。 詳しくは、以下を参照してください。 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
    1. 新しい画像を追加します。
 
-1. `/apps/livecycle/core/content/login`に追加された新しい画像に対応する新しいスタイルを`/apps/livecycle/core/content/login/login.css,`に追加します。
-1. `/apps/livecycle/core/components`の`login.jsp`で新しいスタイルを使用します。
+1. に新しいスタイルを追加 `/apps/livecycle/core/content/login/login.css,` ～に追加された新しい画像に対応する `/apps/livecycle/core/content/login`.
+1. で新しいスタイルを使用 `login.jsp` 時刻 `/apps/livecycle/core/components`.
 1. 以下に例を示します。
 
-   * 以下を`/apps/livecycle/core/content/login/login.css`に追加します。
+   * `/apps/livecycle/core/content/login/login.css` に次の内容を追加します
 
    ```css
    .newLoginContainerBkg {

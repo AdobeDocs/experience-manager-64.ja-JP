@@ -1,8 +1,8 @@
 ---
 title: エンドポイントの追加、有効化、変更または削除
-seo-title: エンドポイントの追加、有効化、変更または削除
+seo-title: Adding, enabling, modifying, or removing endpoints
 description: エンドポイントの追加、有効化、変更または削除方法について説明します。
-seo-description: エンドポイントの追加、有効化、変更または削除方法について説明します。
+seo-description: Learn how to add, enable, modify and remove endpoints.
 uuid: c53f225b-3d55-42f6-8982-0cd7dde0c4f5
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 7d0d4f96-fc72-4e2b-a2cc-5741b0a30f74
 exl-id: 8aed1439-aa39-4f75-909b-6a7ad7840a08
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '371'
 ht-degree: 100%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 100%
 
 1. 「追加」をクリックします。
 
-## エンドポイントの有効化または無効化  {#enable-or-disable-an-endpoint}
+## エンドポイントの有効化または無効化 {#enable-or-disable-an-endpoint}
 
 デフォルトで、新しいエンドポイントは自動的に有効になります。ただし、エンドポイントを手動で無効にした場合は、有効にしない限りエンドポイントは動作しません。
 
@@ -51,7 +51,7 @@ ht-degree: 100%
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／エンドポイントの管理をクリックします。
 1. エンドポイントの管理ページで、有効または無効にするエンドポイントのチェックボックスを選択して、「有効にする」または「無効にする」をクリックします。
 
-## エンドポイントの変更  {#modify-an-endpoint}
+## エンドポイントの変更 {#modify-an-endpoint}
 
 >[!NOTE]
 >
@@ -69,7 +69,7 @@ ht-degree: 100%
 
 この操作は、サービスの管理ページでサービスを選択し、「エンドポイント」タブをクリックして実行することもできます。
 
-## エンドポイントの削除  {#remove-an-endpoint}
+## エンドポイントの削除 {#remove-an-endpoint}
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／エンドポイントの管理をクリックします。
 1. エンドポイントの管理ページで、削除するエンドポイントのチェックボックスを選択して、「削除」をクリックします。エンドポイントが表示されなくなります。

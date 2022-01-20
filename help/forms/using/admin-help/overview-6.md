@@ -1,8 +1,8 @@
 ---
 title: SSL 設定の概要
-seo-title: SSL 設定の概要
+seo-title: Overview of configuring SSL
 description: SSL を設定して通信のセキュリティを強化する方法について説明します。
-seo-description: SSL を設定して通信のセキュリティを強化する方法について説明します。
+seo-description: Learn about how to enhance security of communication by configuring SSL.
 uuid: 3e99d2bf-137b-45ba-8384-309624094623
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 8e107abb-861f-4063-b600-c87e34639019
 exl-id: 5dc68401-f6bc-42cb-84db-1db805b045c5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '211'
 ht-degree: 100%
 
 ---

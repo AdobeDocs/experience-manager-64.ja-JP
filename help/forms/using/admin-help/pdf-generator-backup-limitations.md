@@ -1,8 +1,8 @@
 ---
 title: PDF Generator バックアップの制限事項
-seo-title: PDF Generator バックアップの制限事項
+seo-title: PDF Generator backup limitations
 description: PDF Generator バックアップの制限事項について説明します。
-seo-description: PDF Generator バックアップの制限事項について説明します。
+seo-description: Learn about PDF Generator backup limitations.
 uuid: 9537ffde-4396-46d1-81ea-edcd25923ffb
 contentOwner: admin
 content-type: reference
@@ -13,7 +13,7 @@ noindex: true
 exl-id: d2ba9881-02b6-470b-b110-7d4609e6ab24
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '65'
+source-wordcount: '55'
 ht-degree: 100%
 
 ---

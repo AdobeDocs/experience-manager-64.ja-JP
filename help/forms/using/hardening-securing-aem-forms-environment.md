@@ -1,8 +1,8 @@
 ---
 title: OSGi 環境における AEM Forms のセキュリティの強化
-seo-title: OSGi 環境における AEM Forms のセキュリティの強化
+seo-title: Hardening and Securing AEM forms on OSGi environment
 description: OSGi サーバー上で AEM Forms を保護する場合の推奨事項とベストプラクティス
-seo-description: OSGi サーバー上で AEM Forms を保護する場合の推奨事項とベストプラクティス
+seo-description: Learn recommendations and best practices for securing AEM Forms on OSGi server.
 uuid: abca7e7c-38c3-44f5-8d8a-4615cfce26c6
 topic-tags: Security
 discoiquuid: b1bd04bf-0d6d-4e6b-8c7c-eafd1a24b5fe
@@ -10,7 +10,7 @@ role: Admin
 exl-id: ba3b380a-b391-44a0-884b-e57c3cb14013
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: '1443'
 ht-degree: 95%
 
 ---
@@ -30,7 +30,7 @@ OSGi サーバー上で AEM Forms を保護する場合の推奨事項とベス�
 
 以下の図は、適切なファイアウォールトポロジーが設定された、AEM Forms の一般的なデプロイメント環境で使用されるコンポーネントとプロトコルを示しています。
 
-![典型的な建築](assets/typical-architecture.png)
+![典型的なアーキテクチャ](assets/typical-architecture.png)
 
 AEM Forms は非常にカスタマイズ性が高いため、さまざまな環境で使用することができます。ここで紹介するいくつかの推奨事項は、お客様の組織に該当しない場合があります。
 
@@ -40,11 +40,11 @@ AEM Forms は非常にカスタマイズ性が高いため、さまざまな環�
 
 ### エンドポイントのアクセスの制限  {#limit-open-endpoints}
 
-外部のファイアウォールを使用して、エンドユーザーによる AEM Forms パブリッシュファームへのアクセスを制限することができます。また、内部のファイアウォールを使用して、社内の他の要素（オーサーインスタンス、処理インスタンス、データベースなど）とパブリッシュファーム間のアクセスを制限することもできます。ファイアウォールを使用して、エンドユーザーや組織の要素内の限られた数のAEM Forms URLへのアクセスを許可する。
+外部のファイアウォールを使用して、エンドユーザーによる AEM Forms パブリッシュファームへのアクセスを制限することができます。また、内部のファイアウォールを使用して、社内の他の要素（オーサーインスタンス、処理インスタンス、データベースなど）とパブリッシュファーム間のアクセスを制限することもできます。ファイアウォールを使用して、エンドユーザーや組織の要素内にある限られた数のAEM Forms URL へのアクセスを許可します。
 
 #### 外部ファイアウォールの設定  {#configure-external-firewall}
 
-外部のファイアウォールを設定することにより、AEM Forms の特定の URL に対して、インターネットへのアクセスを許可することができます。アダプティブフォーム、HTML5、Correspondence Managementレターの入力や送信、またはAEM Formsサーバーへのログインには、これらのURLへのアクセスが必要です。
+外部のファイアウォールを設定することにより、AEM Forms の特定の URL に対して、インターネットへのアクセスを許可することができます。アダプティブフォーム、HTML5、Correspondence Management レターに入力または送信したり、AEM Formsサーバーにログインするには、次の URL にアクセスする必要があります。
 
 <table> 
  <tbody>
@@ -77,7 +77,7 @@ AEM Forms は非常にカスタマイズ性が高いため、さまざまな環�
     </ul> </td> 
   </tr>
   <tr>
-   <td>フォームポータル </td> 
+   <td>Forms ポータル </td> 
    <td>
     <ul> 
      <li>/content/forms/portal/</li> 
@@ -190,7 +190,7 @@ AEM Forms では、事前に定義された場所と一時フォルダーにデ�
 
 ## AEM Forms 環境のイントラネット要素の保護 {#secure-intranet-elements-of-an-aem-forms-environment}
 
-通常、処理クラスタと Forms ワークフローアドオン（JEE 上の AEM Forms）は、ファイアウォールの背後で稼働します。そのため、これらのクラスタとアドオンのセキュリティは確保されています。これらの環境を強化するための手順をいくつか実行できます。
+通常、処理クラスタと Forms ワークフローアドオン（JEE 上の AEM Forms）は、ファイアウォールの背後で稼働します。そのため、これらのクラスタとアドオンのセキュリティは確保されています。次の手順を実行して、これらの環境を強化できます。
 
 ### 処理クラスターの保護 {#secure-processing-cluster}
 

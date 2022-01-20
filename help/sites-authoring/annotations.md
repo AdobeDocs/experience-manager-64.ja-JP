@@ -1,8 +1,8 @@
 ---
 title: ページ編集時の注釈
-seo-title: ページ編集時の注釈
+seo-title: Annotations when Editing a Page
 description: コンテンツに直接関連する多くのコンポーネントでは、注釈を追加できます
-seo-description: コンテンツに直接関連する多くのコンポーネントでは、注釈を追加できます
+seo-description: Many components directly related to content allow you to add an annotation
 uuid: 157be55c-8ab8-472e-be32-0dcc02bfa41d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: aa89326a-ad33-4b0b-8d09-c68c5a5c790a
 exl-id: 65e534ec-7f73-4333-b225-7adf082f66d5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '634'
 ht-degree: 99%
 
 ---
@@ -52,8 +52,9 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
 >様々なリソースに注釈を付けることができます。
 >
 >* [アセット](/help/assets/managing-assets-touch-ui.md#annotating)
-* [ビデオアセットへの注釈の追加](/help/assets/managing-video-assets.md#annotating-video-assets)
+>* [ビデオアセットへの注釈の追加](/help/assets/managing-video-assets.md#annotating-video-assets)
 
+>
 
 
 ### コンポーネントへの注釈の追加 {#annotating-a-component}
@@ -67,12 +68,14 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
    既存の注釈を表示できるようになりました。
 
    >[!NOTE]
-   注釈モードを終了するには、上部のツールバーの右側にある注釈アイコン（x 記号）をタップまたはクリックします。
+   >
+   >注釈モードを終了するには、上部のツールバーの右側にある注釈アイコン（x 記号）をタップまたはクリックします。
 
 1. 注釈の追加を開始するには、注釈を追加アイコン（ツールバーの左側にあるプラス記号）をクリックまたはタップします。
 
    >[!NOTE]
-   注釈の追加を終了して表示に戻るには、上部のツールバーの左側にあるキャンセルアイコン（白い円で囲まれた x 記号）をタップまたはクリックします。
+   >
+   >注釈の追加を終了して表示に戻るには、上部のツールバーの左側にあるキャンセルアイコン（白い円で囲まれた x 記号）をタップまたはクリックします。
 
 1. 注釈を追加するために必要なコンポーネント（注釈を追加できるコンポーネントは青いボーダーで強調表示されます）をクリックまたはタップして、ダイアログを開きます。
 
@@ -112,7 +115,8 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
 
 1. 注釈モードを終了し、使用していたモードに戻るには、上部のツールバーの右側にある注釈アイコン（x 記号）をタップまたはクリックします。
 
->[!NOTE]別のユーザーによってロックされているページには、注釈を追加できません。
+>[!NOTE]
+>別のユーザーによってロックされているページには、注釈を追加できません。
 
 ### 注釈インジケーター {#annotation-indicator}
 

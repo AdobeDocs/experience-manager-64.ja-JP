@@ -1,8 +1,8 @@
 ---
 title: Adobe Campaign の使用
-seo-title: Adobe Campaign の使用
+seo-title: Working with Adobe Campaign
 description: Adobe Campaign は、あらゆるオンラインチャネルとオフラインチャネルをまたいでキャンペーンのパーソナライズと配信をおこなうためのソリューションです。
-seo-description: Adobe Campaign は、あらゆるオンラインチャネルとオフラインチャネルをまたいでキャンペーンのパーソナライズと配信をおこなうためのソリューションです。
+seo-description: Adobe Campaign is a set of solutions that lets you personalize and deliver campaigns across all of your online and offline channels.
 uuid: d216ce8d-c9e5-4a3c-bd25-a922770f5b6c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: a62ddf8b-97ea-40b9-9c3b-0922fe134567
 exl-id: a5b991e7-059f-4a26-bb4e-e03fc1f5d3e6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '123'
 ht-degree: 100%
 
 ---

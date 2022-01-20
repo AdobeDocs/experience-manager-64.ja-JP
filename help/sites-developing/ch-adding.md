@@ -1,8 +1,8 @@
 ---
 title: ページへの ContextHub の追加とストアへのアクセス
-seo-title: ページへの ContextHub の追加とストアへのアクセス
+seo-title: Adding ContextHub to Pages and Accessing Stores
 description: ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、ContextHub をページに追加します
-seo-description: ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、ContextHub をページに追加します
+seo-description: Add ContextHub to your pages to enable the ContextHub features and to link to the ContextHub Javascript libraries
 uuid: ade37960-21c4-4d64-a525-68f0d199f955
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: ac8f44df-39fb-44ea-ae17-ead0dbd1f6c0
 exl-id: 99efe308-bf8a-41ad-8203-b57fce20820c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1008'
 ht-degree: 96%
 
 ---
@@ -35,7 +35,7 @@ ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリ�
 
 ContextHub ツールバーをプレビューモードで表示するかどうかも設定する必要があります。[ContextHub UI の表示／非表示](/help/sites-administering/contexthub-config.md#showing-and-hiding-the-contexthub-ui)を参照してください。
 
-## ContextHub ストアについて  {#about-contexthub-stores}
+## ContextHub ストアについて {#about-contexthub-stores}
 
 コンテキストデータを保持するには、ContextHub ストアを使用します。ContextHub には、すべてのストアタイプの基礎となる次のタイプのストアが用意されています。
 
@@ -46,7 +46,7 @@ ContextHub ツールバーをプレビューモードで表示するかどうか
 
 すべてのストアタイプは、[`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core) クラスの拡張です。新しいストアタイプの作成については、[カスタムストアの作成](/help/sites-developing/ch-extend.md#creating-custom-store-candidates)を参照してください。ストアタイプのサンプルについては、[ContextHub ストア候補のサンプル](/help/sites-developing/ch-samplestores.md)を参照してください。
 
-### 永続モード  {#persistence-modes}
+### 永続モード {#persistence-modes}
 
 ContextHub ストアは、次のいずれかの永続モードを使用します。
 
@@ -167,7 +167,7 @@ ContextHub のセグメントは、`/conf/we-retail/settings/wcm/segments` ノ�
 * 女性か男性かは、`gender`profile[ ストアの ](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) データ項目から判断されます。
 
 * 年齢は、profile ストアの age データ項目から判断されます。
-* シーズンは、[geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate)ストアの緯度データ項目と、surferinfoストアの月データ項目から決定されます。
+* シーズンは、 [位置情報](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) store 、および surferinfo ストアの月のデータ項目です。
 
 >[!WARNING]
 >
@@ -177,7 +177,7 @@ ContextHub のセグメントは、`/conf/we-retail/settings/wcm/segments` ノ�
 
 開発時に役立つ詳細なデバッグメッセージをログに記録するように、Adobe Granite ContextHub OSGi サービス（PID = `com.adobe.granite.contexthub.impl.ContextHubImpl`）を設定します。
 
-このサービスを設定するには、[Webコンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリ内のJCRノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を使用します。
+サービスを設定するには、 [Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) または [リポジトリ内の JCR ノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository):
 
 * Web コンソール：デバッグメッセージをログに記録するには、Debug プロパティを選択します。
 * JCR ノード：デバッグメッセージをログに記録するには、`com.adobe.granite.contexthub.debug` ブールプロパティを `true` に設定します。

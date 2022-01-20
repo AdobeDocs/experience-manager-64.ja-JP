@@ -1,8 +1,8 @@
 ---
 title: ローンチの作成
-seo-title: ローンチの作成
+seo-title: Creating Launches
 description: ローンチを作成し、今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるようにします。ローンチを作成するとき、タイトルとソースページを指定します。
-seo-description: ローンチを作成し、今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるようにします。ローンチを作成するとき、タイトルとソースページを指定します。
+seo-description: Create a launch to enable the updating of a new version of existing web pages for future activation. When you create a Launch, you specify a title and the source page.
 uuid: e67608a9-e6c9-42f3-bd1d-63a5fa87ae18
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,8 +13,8 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 2f5c022e-bd98-4912-9409-d08137a1caf1
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 94%
+source-wordcount: '370'
+ht-degree: 93%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 94%
 
 ローンチを作成し、今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるようにします。ローンチを作成する際は、タイトルとソースページを指定します。
 
-* タイトルは&#x200B;**サイドキック**&#x200B;に表示されます。作成者はそこからアクセスして作業できます。
+* タイトルは **サイドキック**&#x200B;作成者はここからアクセスして作業できます。
 * デフォルトで、ソースページの子ページがローンチに含まれています。希望に応じて、ソースページのみを使用することもできます。
 * デフォルトでは、[ライブコピー](/help/sites-administering/msm.md)によってソースページの変更に合わせてローンチページが自動的に更新されます。静的なコピーを作成して自動更新をおこなわないように指定できます。
 
@@ -32,7 +32,7 @@ ht-degree: 94%
 
 次の手順を使用して、ローンチを作成します。
 
-1. Webサイト管理ページ([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin))を開きます。
+1. Web サイト管理ページ ([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin)) をクリックします。
 1. 「**新規...**」をクリックし、「**新しいローンチ...**」をクリックします。
 1. **ローンチを作成**&#x200B;ダイアログで、次のプロパティの値を指定します。
 

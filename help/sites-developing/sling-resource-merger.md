@@ -1,8 +1,8 @@
 ---
 title: AEM での Sling Resource Merger の使用
-seo-title: AEM での Sling Resource Merger の使用
+seo-title: Using the Sling Resource Merger in AEM
 description: Sling Resource Merger は、リソースのアクセスとマージのためのサービスを提供します
-seo-description: Sling Resource Merger は、リソースのアクセスとマージのためのサービスを提供します
+seo-description: The Sling Resource Merger provides services to access and merge resources
 uuid: 0a28fdc9-caea-490b-8f07-7c4a6b802e09
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: ec712ba0-0fd6-4bb8-93d6-07d09127df58
 exl-id: 4ddbdba8-073b-42ed-b4c9-d97d20b4739b
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1254'
 ht-degree: 99%
 
 ---
@@ -29,7 +29,7 @@ Sling Resource Merger は、リソースのアクセスとマージのための�
 
 Sling Resource Merger を使用すると、リソースやプロパティのオーバーレイ／オーバーライドが元のリソース／プロパティにマージされます。
 
-* カスタマイズされた定義のコンテンツの方が、元の定義のコンテンツよりも優先されます（つまり、前者が後者をオーバーレイまたはオーバーライドします）。****
+* カスタマイズされた定義のコンテンツの方が、元の定義のコンテンツよりも優先されます&#x200B;*（*&#x200B;つまり、前者が後者をオーバーレイまたはオーバーライドします&#x200B;*）*。
 
 * 必要な場合には、カスタマイズされた定義に含まれる[プロパティ](#properties)が、元の定義からマージされたコンテンツをどう使用するかを指定します。
 
@@ -62,13 +62,11 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. `/apps`の下で、必要な項目（`/libs`に存在）を再作成します。
-   >
-   >
-1. `/apps` 内で変更作業をおこないます。
+>1. 必要な項目（内に存在）を再作成します。 `/libs`) `/apps`
+>
+>1. `/apps` 内で変更作業をおこないます。
 
 >
-
 
 
 ### プロパティ {#properties}
@@ -178,7 +176,7 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 
 * **ノードおよびその子の再定義**
 
-   `/libs` 内に定義されているノードとその子について、`/apps` オーバーレイ／オーバーライドで新しい設定が必要な場合は、再定義をおこないます。
+   `/libs` 内に定義されているノードとその子について、`/apps` オーバーレイ／オーバーライドで新しい設定が必要な場合は、再定義を行います。
 
    1. 次のアクションを両方実行します。
 

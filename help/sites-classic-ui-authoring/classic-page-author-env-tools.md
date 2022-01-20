@@ -1,8 +1,8 @@
 ---
 title: オーサリング - 環境とツール
-seo-title: オーサリング - 環境とツール
+seo-title: Authoring - the Environment and Tools
 description: Web サイトコンソールを使用すると、Web サイトを管理したり、Web サイト内を移動したりできます。2 つのペインを使用して、Web サイトの構造を展開したり、必要な要素に対するアクションを実行できます。
-seo-description: Web サイトコンソールを使用すると、Web サイトを管理したり、Web サイト内を移動したりできます。2 つのペインを使用して、Web サイトの構造を展開したり、必要な要素に対するアクションを実行できます。
+seo-description: The Websites console allows you to manage and navigate your website. Using two panes, the structure of your website can be expanded and actions taken on the required elements.
 uuid: ec4ccc63-a3b8-464c-9c1a-204fd5d3b121
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,14 +12,14 @@ discoiquuid: 278195a6-3452-4966-9d56-022815cf6fb4
 exl-id: f073c876-94cd-405d-885f-bfe433817ff4
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '899'
 ht-degree: 86%
 
 ---
 
 # オーサリング - 環境とツール{#authoring-the-environment-and-tools}
 
-AEM のオーサリング環境は、コンテンツを編成および編集するための様々なメカニズムを提供しています。提供されるツールには、様々なコンソールおよびページエディターからアクセスします。
+AEM のオーサリング環境は、コンテンツを編成および編集するための様々なメカニズムを提供しています. 提供されるツールには、様々なコンソールおよびページエディターからアクセスします。
 
 ## サイト管理 {#site-administration}
 
@@ -124,9 +124,9 @@ AEM から様々な&#x200B;**ヘルプ**&#x200B;リソースに直接アクセ�
 
 検索にワイルドカードを使用することもできます。サポートされているワイルドカードは、次のとおりです。
 
-* `*` - 0個以上の文字のシーケンスに一致します。
+* `*` - 0 文字以上のシーケンスに一致します。
 
-* `?` - 1文字に一致します。
+* `?` - 1 文字に一致します。
 
 >[!NOTE]
 >
@@ -139,12 +139,12 @@ AEM から様々な&#x200B;**ヘルプ**&#x200B;リソースに直接アクセ�
 以下の検索パターンで、この画像（およびこのパターンに一致するその他の画像）が見つかります。
 
 * `name:*nmv*`
-* `name:AD*`  — 文字のマッチングでは大文字と小文字 ** が区別されません。
-* `name:ad?nm??is.*` :1つのクエリで任意の数のワイルドカードを使用できます。
+* `name:AD*`  — 文字のマッチングは *not* 大文字と小文字を区別します。
+* `name:ad?nm??is.*` :1 つのクエリで任意の数のワイルドカードを使用できます。
 
 >[!NOTE]
 >
->[SQL2](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html)検索も使用できます。
+>また、 [SQL2](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html) 検索。
 
 ## 参照の表示 {#showing-references}
 
@@ -156,7 +156,7 @@ AEM では、現在作業しているページにリンクしているページ�
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. **参照を表示を選択します。** AEMは参照ウィンドウを開き、選択したページを参照するページとそのパスを表示します。
+1. 選択 **参照を表示…** AEMは参照ウィンドウを開き、選択したページを参照するページとそのパスを表示します。
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
@@ -169,7 +169,7 @@ AEM では、現在作業しているページにリンクしているページ�
 
 その他の[ページ間の関係は Web サイトコンソールから確認できます](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)。
 
-## 監査ログ  {#audit-log}
+## 監査ログ {#audit-log}
 
 **監査ログ**&#x200B;には、サイドキックの「**情報**」タブからアクセスできます。ここには、現在のページで実行された最近のアクションが一覧表示されます。次に例を示します。
 
@@ -177,7 +177,7 @@ AEM では、現在作業しているページにリンクしているページ�
 
 ## ページ情報 {#page-information}
 
-また、Webサイトコンソール[は、ページ](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)の現在のステータスに関する情報（パブリッシュ、変更、ロック、ライブコピーなど）も提供します。
+Web サイトコンソールも [ページの現在のステータスに関する情報を提供します](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) パブリッシュ、変更、ロック、ライブコピーなど
 
 ## ページモード {#page-modes}
 
@@ -204,9 +204,9 @@ AEM では、現在作業しているページにリンクしているページ�
 >その他に次のオプションも利用できます。
 >
 >* [基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
-* [ClientContext](/help/sites-administering/client-context.md)
-* Web サイト - Webサイトコンソールを開きます。
-* 再読み込み - ページを更新します。
+>* [ClientContext](/help/sites-administering/client-context.md)
+>* Web サイト - Web サイトコンソールを開きます。
+>* 再読み込み - ページを更新します。
 
 
 ## キーボードショートカット {#keyboard-shortcuts}

@@ -1,8 +1,8 @@
 ---
 title: 電子メールによるフォーム送信確認の送信
-seo-title: 電子メールによるフォーム送信確認の送信
+seo-title: Sending a form submission acknowledgement via email
 description: AEM Forms では、フォームの送信時に確認をユーザーに送信する電子メール送信アクションを設定できます。
-seo-description: AEM Forms では、フォームの送信時に確認をユーザーに送信する電子メール送信アクションを設定できます。
+seo-description: AEM Forms allows you to configure the email submit action that sends an acknowledgement to a user on submitting the form.
 uuid: 77b3c836-6011-48bd-831c-ebc214218efb
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,24 +11,24 @@ discoiquuid: 7ffe6317-174b-4d80-9ac6-9bfb5eed7e29
 exl-id: e850d2a5-cb5f-4bd4-81dd-57951923b6d3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 89%
+source-wordcount: '558'
+ht-degree: 88%
 
 ---
 
 # 電子メールによるフォーム送信確認の送信 {#sending-a-form-submission-acknowledgement-via-email}
 
-## アクティビティフォームデータ送信 {#adaptive-form-data-submission}
+## アダプティブフォームのデータ送信 {#adaptive-form-data-submission}
 
 アクティビティフォームでは、あらかじめ用意されたいくつかの[送信アクション](/help/forms/using/configuring-submit-actions.md)が使用でき、フォームデータを複数のエンドポイントに送信できます。
 
-例えば、**電子メールアクション**&#x200B;送信アクションでは、アダプティブフォームの送信が成功すると電子メールが送信されます。 これは、フォームデータと PDF を電子メールで送信するように設定することもできます。
+例えば、 **メールアクション** 送信アクションは、アダプティブフォームの送信が成功すると、電子メールを送信します。 これは、フォームデータと PDF を電子メールで送信するように設定することもできます。
 
 この記事では、アダプティブフォームで電子メールアクションを有効にする手順や、さまざまな設定について詳しく説明します。
 
 >[!NOTE]
 >
->**PDFの電子メール送信アクション**&#x200B;を使用して、完了したフォームをPDF添付ファイルとして電子メールで送信することもできます。 このアクションで使用できる設定オプションは、電子メールアクションで使用できるオプションと同じです。PDF のメール送信アクションは、XFA ベースのアダプティブフォームに対してのみ使用できます。
+>また、 **メールPDFアクション** ：入力済みのフォームをPDFの添付ファイルとして電子メールで送信します。 このアクションで使用できる設定オプションは、電子メールアクションで使用できるオプションと同じです。PDF のメール送信アクションは、XFA ベースのアダプティブフォームに対してのみ使用できます。
 
 ## メール送信アクション {#email-action}
 
@@ -38,7 +38,7 @@ ht-degree: 89%
 >
 >電子メールアクションを使用するには、[電子メールサービスの設定](/help/sites-administering/notification.md#configuring-the-mail-service)で説明されているように AEM メールサービスを設定する必要があります。
 
-### アダプティブフォームでの電子メールアクションの有効化  {#enabling-email-action-on-an-adaptive-form}
+### アダプティブフォームでの電子メールアクションの有効化 {#enabling-email-action-on-an-adaptive-form}
 
 1. アダプティブフォームを編集モードで開きます。
 
@@ -48,7 +48,7 @@ ht-degree: 89%
 
    ![アダプティブフォームのコンポーネントの編集ダイアログ](assets/start_of_adp_form.png)
 
-1. 「**送信アクション**」タブを選択し、送信アクションドロップダウンリストから「**電子メールアクション**」を選択します。
+1. を選択します。 **送信アクション** 「 」タブで「 」を選択します。 **メールアクション** 送信アクションドロップダウンリストから
 
    このタブには、現在のフォームに対して電子メールアクションを設定するためのオプションが表示されます。
 
@@ -74,7 +74,7 @@ ht-degree: 89%
 
 電子メールアクションタブでは、アクションが実行されたときに処理されるプレースホルダーを使用できます。すなわち、電子メールのヘッダー（例えば宛先、CC、BCC、件名）を、ユーザーがフォームを送信したときに生成するようにできることを意味します。
 
-プレースホルダーを定義するには、「送信アクション」タブのフィールドに`${<field name>}`を指定します。
+プレースホルダーを定義するには、次を指定します。 `${<field name>}` をクリックします。
 
 例えば、フォームが **** という`email_addr`電子メールアドレスフィールドを持っている場合、ユーザーの電子メール ID を取得するために、宛先、CC、または BCC フィールドに次のプレースホルダーを指定できます。
 

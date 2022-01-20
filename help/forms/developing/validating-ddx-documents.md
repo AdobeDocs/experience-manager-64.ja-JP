@@ -1,8 +1,8 @@
 ---
-title: DDXドキュメントの検証
-seo-title: DDXドキュメントの検証
-description: Java APIとWeb Service APIを使用して、DDXドキュメントをプログラムで検証します。
-seo-description: Java APIとWeb Service APIを使用して、DDXドキュメントをプログラムで検証します。
+title: DDX ドキュメントの検証
+seo-title: Validating DDX Documents
+description: Java API と Web Service API を使用して、プログラムによる DDX ドキュメントの検証を行います。
+seo-description: Validate a DDX document programmatically using the Java API and the Web Service API.
 uuid: da668170-d2e9-4fff-aef5-432a856bd0bd
 contentOwner: admin
 content-type: reference
@@ -14,199 +14,199 @@ role: Developer
 exl-id: 5be91b23-355b-4e50-b1f5-afed248bc8b5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1512'
 ht-degree: 3%
 
 ---
 
-# DDXドキュメントの検証{#validating-ddx-documents}
+# DDX ドキュメントの検証 {#validating-ddx-documents}
 
-Assemblerサービスで使用されるDDXドキュメントをプログラムで検証できます。 つまり、AssemblerサービスAPIを使用して、DDXドキュメントが有効かどうかを判断できます。 例えば、以前のAEM Formsバージョンからアップグレードした場合に、DDXドキュメントが有効であることを確認するには、AssemblerサービスAPIを使用して検証できます。
-
->[!NOTE]
->
->Assemblerサービスについて詳しくは、『AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)向けサービスリファレンス』を参照してください。[
+Assembler サービスで使用される DDX ドキュメントをプログラムで検証できます。 つまり、Assembler サービス API を使用して、DDX ドキュメントが有効かどうかを判断できます。 例えば、以前のAEM Formsバージョンからアップグレードした場合に、DDX ドキュメントが有効であることを確認するには、Assembler サービス API を使用してドキュメントを検証します。
 
 >[!NOTE]
 >
->DDXドキュメントについて詳しくは、『[AssemblerサービスとDDXリファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63)』を参照してください。
+>Assembler サービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
-## 手順の概要{#summary-of-steps}
+>[!NOTE]
+>
+>DDX ドキュメントについて詳しくは、 [Assembler サービスと DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63).
 
-DDXドキュメントを検証するには、次のタスクを実行します。
+## 手順の概要 {#summary-of-steps}
+
+DDX ドキュメントを検証するには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
-1. Assemblerクライアントを作成します。
-1. 既存のDDXドキュメントの参照
-1. DDXドキュメントを検証するための実行時オプションを設定します。
+1. Assembler クライアントを作成します。
+1. 既存の DDX ドキュメントを参照します。
+1. DDX ドキュメントを検証するための実行時オプションを設定します。
 1. 検証を実行します。
 1. 検証結果をログファイルに保存します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-次のJARファイルをプロジェクトのクラスパスに追加する必要があります。
+次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(AEM FormsをJBossにデプロイする場合に必要)
-* jbossall-client.jar(AEM FormsをJBossにデプロイする場合に必要)
+* adobe-utilities.jar(AEM Formsを JBoss にデプロイする場合に必要 )
+* jbossall-client.jar(AEM Formsが JBoss にデプロイされている場合に必要 )
 
-AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
 
-**PDFアセンブラークライアントの作成**
+**Assembler クライアントのPDF**
 
-プログラムでAssembler操作を実行する前に、Assemblerサービスクライアントを作成する必要があります。
+Assembler 操作をプログラムで実行する前に、Assembler サービスクライアントを作成する必要があります。
 
-**既存のDDXドキュメントの参照**
+**既存の DDX ドキュメントの参照**
 
-DDXドキュメントを検証するには、既存のDDXドキュメントを参照する必要があります。
+DDX ドキュメントを検証するには、既存の DDX ドキュメントを参照する必要があります。
 
-**DDXドキュメントを検証するための実行時オプションの設定**
+**DDX ドキュメントを検証するための実行時オプションの設定**
 
-DDXドキュメントを検証する場合は、DDXドキュメントを実行するのではなく、DDXドキュメントを検証するようにAssemblerサービスに指示する特定の実行時オプションを設定する必要があります。 また、Assemblerサービスがログファイルに書き込む情報の量を増やすこともできます。
+DDX ドキュメントを検証する場合は、DDX ドキュメントを実行するのではなく、Assembler サービスに DDX ドキュメントを検証するよう指示する特定の実行時オプションを設定する必要があります。 また、Assembler サービスがログファイルに書き込む情報の量を増やすこともできます。
 
 **検証の実行**
 
-Assemblerサービスクライアントを作成し、DDXドキュメントを参照し、実行時オプションを設定した後、`invokeDDX`操作を呼び出してDDXドキュメントを検証できます。 DDXドキュメントを検証する際に、`null`をmapパラメーターとして渡すことができます（通常、このパラメーターには、DDXドキュメントで指定された操作をAssemblerが実行するために必要なPDFドキュメントが格納されます）。
+Assembler サービスクライアントを作成し、DDX ドキュメントを参照し、実行時オプションを設定したら、 `invokeDDX` 操作を実行して DDX ドキュメントを検証します。 DDX ドキュメントを検証する際に、 `null` を map パラメーターとして ( 通常、このパラメーターは DDX ドキュメントで指定されたPDFを Assembler が実行するために必要な操作ドキュメントを格納します )。
 
-検証が失敗すると、例外がスローされ、`OperationException`インスタンスからDDXドキュメントが無効な理由を取得できる理由をログファイルに示します。 基本的なXML解析とスキーマチェックを経たら、DDX仕様に対する検証が実行されます。 DDXドキュメント内のすべてのエラーがログに記録されます。
+検証が失敗すると、例外がスローされ、DDX ドキュメントが無効な理由を `OperationException` インスタンス。 基本的な XML 解析とスキーマチェックを過ぎると、DDX 仕様に対する検証が実行されます。 DDX ドキュメントに含まれるすべてのエラーは、ログに記録されます。
 
-**検証結果をログファイルに保存する**
+**検証結果をログファイルに保存**
 
-Assemblerサービスは、XMLログファイルに書き込むことができる検証結果を返します。 Assemblerサービスがログファイルに書き込む詳細の量は、設定した実行時オプションによって異なります。
+Assembler サービスは、XML ログファイルに書き込むことができる検証結果を返します。 Assembler サービスがログファイルに書き込む詳細の量は、設定した実行時オプションによって異なります。
 
 **関連トピック**
 
-[Java APIを使用したDDXドキュメントの検証](#validate-a-ddx-document-using-the-java-api)
+[Java API を使用した DDX ドキュメントの検証](#validate-a-ddx-document-using-the-java-api)
 
-[WebサービスAPIを使用したDDXドキュメントの検証](#validate-a-ddx-document-using-the-web-service-api)
+[Web サービス API を使用した DDX ドキュメントの検証](#validate-a-ddx-document-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[PDFドキュメントのプログラムによるアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md)
+[プログラムによるPDF文書の作成](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
-## Java API {#validate-a-ddx-document-using-the-java-api}を使用したDDXドキュメントの検証
+## Java API を使用した DDX ドキュメントの検証 {#validate-a-ddx-document-using-the-java-api}
 
-AssemblerサービスAPI(Java)を使用してDDXドキュメントを検証します。
+Assembler Service API(Java) を使用して DDX ドキュメントを検証します。
 
 1. プロジェクトファイルを含めます。
 
-   Javaプロジェクトのクラスパスに、adobe-assembler-client.jarなどのクライアントJARファイルを含めます。
+   Java プロジェクトのクラスパスに、adobe-assembler-client.jar などのクライアント JAR ファイルを含めます。
 
-1. PDFアセンブラークライアントを作成します。
+1. Assembler クライアントをPDFします。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して`AssemblerServiceClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * の作成 `AssemblerServiceClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
 
-1. 既存のDDXドキュメントの参照
+1. 既存の DDX ドキュメントを参照します。
 
-   * コンストラクターを使用し、DDXファイルの場所を指定する文字列値を渡して、DDXドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。
+   * の作成 `java.io.FileInputStream` コンストラクターを使用して DDX ファイルの場所を指定する string 値を渡すことによって DDX ドキュメントを表すオブジェクト。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
-1. DDXドキュメントを検証するための実行時オプションを設定します。
+1. DDX ドキュメントを検証するための実行時オプションを設定します。
 
-   * コンストラクターを使用して、実行時オプションを格納する`AssemblerOptionSpec`オブジェクトを作成します。
-   * `AssemblerOptionSpec`オブジェクトのsetValidateOnlyメソッドを呼び出して`true`を渡すことで、DDXドキュメントを検証するようAssemblerサービスに指示する実行時オプションを設定します。
-   * `AssemblerOptionSpec`オブジェクトの`getLogLevel`メソッドを呼び出し、必要に応じて文字列値を渡すことで、Assemblerサービスがログファイルに書き込む情報の量を設定します。 DDXドキュメントを検証する場合、検証プロセスに役立つ詳細情報をログファイルに書き込む必要があります。 その結果、値`FINE`または`FINER`を渡すことができます。
+   * の作成 `AssemblerOptionSpec` コンストラクタを使用して実行時オプションを格納するオブジェクト。
+   * Assembler サービスに対して、 `AssemblerOptionSpec` オブジェクトの setValidateOnly メソッドおよび `true`.
+   * Assembler サービスがログファイルに書き込む情報量を、 `AssemblerOptionSpec` オブジェクトの `getLogLevel` メソッドを使用し、文字列値を渡すことは、要件を満たします。 DDX ドキュメントを検証する場合、検証プロセスに役立つ詳細情報をログファイルに書き込む必要があります。 その結果、 `FINE` または `FINER`.
 
 1. 検証を実行します。
 
-   `AssemblerServiceClient`オブジェクトの`invokeDDX`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを使用して、次の値を渡します。
 
-   * DDXドキュメントを表す`com.adobe.idp.Document`オブジェクト。
-   * 通常PDFドキュメントを格納するjava.io.Mapオブジェクトの値`null`。
-   * 実行時オプションを指定する`com.adobe.livecycle.assembler.client.AssemblerOptionSpec`オブジェクト。
+   * A `com.adobe.idp.Document` DDX ドキュメントを表すオブジェクト。
+   * 値 `null` 通常、PDF・ドキュメントを格納するjava.io.Map オブジェクトの場合。
+   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` 実行時オプションを指定するオブジェクト。
 
-   `invokeDDX`メソッドは、DDXドキュメントが有効かどうかを指定する情報を含む`AssemblerResult`オブジェクトを返します。
+   この `invokeDDX` メソッドは、 `AssemblerResult` DDX ドキュメントが有効かどうかを指定する情報が格納されるオブジェクト。
 
 1. 検証結果をログファイルに保存します。
 
-   * `java.io.File`オブジェクトを作成し、ファイル名の拡張子が.xmlであることを確認します。
-   * `AssemblerResult`オブジェクトの`getJobLog`メソッドを呼び出します。 このメソッドは、検証情報を含む`com.adobe.idp.Document`インスタンスを返します。
-   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします。
+   * の作成 `java.io.File` オブジェクトに置き換え、ファイル名の拡張子が.xml であることを確認します。
+   * を呼び出す `AssemblerResult` オブジェクトの `getJobLog` メソッド。 このメソッドは、 `com.adobe.idp.Document` 検証情報を含むインスタンス。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、 `com.adobe.idp.Document` オブジェクトをファイルに追加します。
 
    >[!NOTE]
    >
-   >DDXドキュメントが無効な場合は、`OperationException`がスローされます。 catchステートメント内で、`OperationException`オブジェクトの`getJobLog`メソッドを呼び出すことができます。
+   >DDX ドキュメントが無効な場合、 `OperationException` がスローされます。 catch 文内で、 `OperationException` オブジェクトの `getJobLog` メソッド。
 
 **関連トピック**
 
-[DDXドキュメントの検証](#validating-ddx-documents)
+[DDX ドキュメントの検証](#validating-ddx-documents)
 
-[クイックスタート（SOAPモード）:Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api) （SOAPモード）を使用したDDXドキュメントの検証
+[クイックスタート（SOAP モード）:Java API を使用した DDX ドキュメントの検証](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api) （SOAP モード）
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## WebサービスAPI {#validate-a-ddx-document-using-the-web-service-api}を使用したDDXドキュメントの検証
+## Web サービス API を使用した DDX ドキュメントの検証 {#validate-a-ddx-document-using-the-web-service-api}
 
-Assembler Service API（Webサービス）を使用してDDXドキュメントを検証します。
+Assembler Service API（Web サービス）を使用して DDX ドキュメントを検証します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
+   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 次の WSDL 定義を使用していることを確認します。 `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >localhostをformsサーバーのIPアドレスに置き換えます。
+   >localhost を forms サーバーの IP アドレスに置き換えます。
 
-1. PDFアセンブラークライアントを作成します。
+1. Assembler クライアントをPDFします。
 
-   * デフォルトのコンストラクターを使用して`AssemblerServiceClient`オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`AssemblerServiceClient.Endpoint.Address`オブジェクトを作成します。 AEM FormsサービスにWSDLを指定するstring値を渡します（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。
-   * `AssemblerServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値は、MTOMが使用されるようにします。
-   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
+   * の作成 `AssemblerServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
+   * の作成 `AssemblerServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をAEM Formsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/AssemblerService?blob=mtom`) をクリックします。 を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます。
+   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `AssemblerServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
+   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
+   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
 
-      * フィールド`AssemblerServiceClient.ClientCredentials.UserName.UserName`にAEM formsユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド`AssemblerServiceClient.ClientCredentials.UserName.Password`に割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に定数値`HttpClientCredentialType.Basic`を割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Security.Mode`に定数値`BasicHttpSecurityMode.TransportCredentialOnly`を割り当てます。
+      * フィールドにAEM forms ユーザー名を割り当てます。 `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * 対応するパスワード値をフィールドに割り当てます。 `AssemblerServiceClient.ClientCredentials.UserName.Password`.
+      * 定数値を割り当て `HttpClientCredentialType.Basic` フィールドに `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 定数値を割り当て `BasicHttpSecurityMode.TransportCredentialOnly` フィールドに `BasicHttpBindingSecurity.Security.Mode`.
 
-1. 既存のDDXドキュメントの参照
+1. 既存の DDX ドキュメントを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、DDXドキュメントの格納に使用されます。
-   * コンストラクターを呼び出し、DDXドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
-   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得することで、バイト配列のサイズを判断できます。
-   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
-   * `BLOB`オブジェクトの`MTOM`プロパティにバイト配列の内容を割り当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、DDX ドキュメントを保存するために使用されます。
+   * の作成 `System.IO.FileStream` オブジェクトを作成するには、コンストラクターを呼び出し、DDX ドキュメントのファイルの場所とファイルを開くモードを表す string 値を渡します。
+   * コンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクト。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリーム長を渡す。
+   * 次の項目に `BLOB` オブジェクトを割り当てる `MTOM` プロパティにバイト配列の内容を入力します。
 
-1. DDXドキュメントを検証するための実行時オプションを設定します。
+1. DDX ドキュメントを検証するための実行時オプションを設定します。
 
-   * コンストラクターを使用して、実行時オプションを格納する`AssemblerOptionSpec`オブジェクトを作成します。
-   * 値trueを`AssemblerOptionSpec`オブジェクトの`validateOnly`データメンバーに割り当てて、DDXドキュメントを検証するようAssemblerサービスに指示する実行時オプションを設定します。
-   * `AssemblerOptionSpec`オブジェクトの`logLevel`データメンバーに文字列値を割り当てて、Assemblerサービスがログファイルに書き込む情報の量を設定します。 メソッドを使用してDDXドキュメントを検証する場合、検証プロセスに役立つ詳細情報をログファイルに書き込む必要があります。 その結果、値`FINE`または`FINER`を指定できます。 設定できる実行時オプションについて詳しくは、『[AEM Forms APIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』の`AssemblerOptionSpec`クラス参照を参照してください。
+   * の作成 `AssemblerOptionSpec` コンストラクタを使用して実行時オプションを格納するオブジェクト。
+   * DDX ドキュメントを検証するように Assembler サービスに指示する実行時オプションを設定します。このオプションは、 `AssemblerOptionSpec` オブジェクトの `validateOnly` データメンバー。
+   * Assembler サービスがログファイルに書き込む情報の量を設定するには、 `AssemblerOptionSpec` オブジェクトの `logLevel` データメンバー。 メソッドを使用して DDX ドキュメントを検証する場合、検証プロセスに役立つ詳細情報をログファイルに書き込みます。 その結果、 `FINE` または `FINER`. 設定できる実行時オプションについて詳しくは、 `AssemblerOptionSpec` のクラス参照 [AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 1. 検証を実行します。
 
-   `AssemblerServiceClient`オブジェクトの`invokeDDX`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを使用して、次の値を渡します。
 
-   * DDXドキュメントを表す`BLOB`オブジェクト。
-   * 通常PDFドキュメントを格納する`Map`オブジェクトの値`null`です。
-   * 実行時オプションを指定する`AssemblerOptionSpec`オブジェクト。
+   * A `BLOB` DDX ドキュメントを表すオブジェクト。
+   * 値 `null` の `Map` オブジェクトを指定します。通常はPDF・ドキュメントを格納します。
+   * An `AssemblerOptionSpec` 実行時オプションを指定するオブジェクト。
 
-   `invokeDDX`メソッドは、DDXドキュメントが有効かどうかを指定する情報を含む`AssemblerResult`オブジェクトを返します。
+   この `invokeDDX` メソッドは、 `AssemblerResult` DDX ドキュメントが有効かどうかを指定する情報が格納されるオブジェクト。
 
 1. 検証結果をログファイルに保存します。
 
-   * コンストラクターを呼び出し、ログファイルのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。 ファイル名の拡張子が.xmlであることを確認します。
-   * `AssemblerResult`オブジェクトの`jobLog`データメンバーの値を取得して、ログ情報を格納する`BLOB`オブジェクトを作成します。
-   * `BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`フィールドの値を取得して、バイト配列を設定します。
-   * コンストラクターを呼び出し、`System.IO.FileStream`オブジェクトを渡して、`System.IO.BinaryWriter`オブジェクトを作成します。
-   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことにより、バイト配列の内容をPDFファイルに書き込みます。
+   * の作成 `System.IO.FileStream` オブジェクトを作成します。 ファイル名の拡張子が.xml であることを確認します。
+   * の作成 `BLOB` の値を取得してログ情報を保存するオブジェクト `AssemblerResult` オブジェクトの `jobLog` データメンバー。
+   * コンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクト。 バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` フィールドに入力します。
+   * の作成 `System.IO.BinaryWriter` オブジェクトのコンストラクタを呼び出し、 `System.IO.FileStream` オブジェクト。
+   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
    >[!NOTE]
    >
-   >DDXドキュメントが無効な場合は、`OperationException`がスローされます。 catchステートメント内で、`OperationException`オブジェクトの`jobLog`メンバの値を取得できます。
+   >DDX ドキュメントが無効な場合、 `OperationException` がスローされます。 catch 文内で、 `OperationException` オブジェクトの `jobLog` メンバー。
 
 **関連トピック**
 
-[DDXドキュメントの検証](#validating-ddx-documents)
+[DDX ドキュメントの検証](#validating-ddx-documents)
 
-[MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

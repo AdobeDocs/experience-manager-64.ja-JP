@@ -23,7 +23,7 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 1. AEM 6.4 用の新しいインデックス作成ツールセットです。
 1. インデックス再作成時間を削減します。より大きいリポジトリでのインデックス再作成時間に有益な影響があります。
 1. AEM でのインデックス再作成時のリソース消費を削減します。これにより、他の AEM アクティビティのシステムパフォーマンスが向上します。
-1. Oak-runは、帯域外サポートを提供します。実稼動環境で実稼動インスタンスに対して再インデックスを実行できない場合は、重要なパフォーマンスへの影響を避けるために、クローン環境を使用してインデックスを再作成できます。
+1. Oak-run は、帯域外のサポートを提供します。実稼動環境で実稼動インスタンスでインデックスの再作成を実行できない場合は、パフォーマンスに重大な影響を与えるのを避けるために、クローン環境を使用してインデックスの再作成を行うことができます。
 
 次に、`oak-run` ツールを使用したインデックス作成操作を実行する際に活用できる使用例のリストを示します。
 
@@ -106,7 +106,7 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 >
 >このシナリオについて詳しくは、[オンラインのインデックス再作成 - SegmentNodeStore](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestore) を参照してください。
 
-これは、oak-run.jarの新しいインデックス作成機能が導入される前に使用された方法です。 Oak インデックスの `reindex=true` プロパティを設定することによっておこなうことができます。
+これは、oak-run.jar の新しいインデックス作成機能が導入される前に使用されたメソッドです。 Oak インデックスの `reindex=true` プロパティを設定することによっておこなうことができます。
 
 この方法は、インデックス作成のための時間とパフォーマンスへの影響をお客様が受け入れられる場合に使用できます。これは、小～中規模の AEM インストールでよくある事例です。
 
@@ -116,9 +116,9 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 
 >[!NOTE]
 >
->このシナリオに関する詳細は、[オンラインインデックス再作成 — SegmentNodeStore - AEMインスタンスは実行中](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoretheaeminstanceisrunning)を参照してください。
+>このシナリオについて詳しくは、 [オンラインインデックス再作成 — SegmentNodeStore - AEMインスタンスが実行中です](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoretheaeminstanceisrunning).
 
-oak-run.jarを使用したTarMKのオンラインインデックス再作成は、前述のTarMK](#onlinere-indexingfortarmk)のオンラインインデックス再作成よりも高速です。 [ただし、メンテナンスウィンドウ中にも実行する必要があります。ウィンドウが短くなり、インデックスの再作成を実行するためにより多くの手順が必要になるというメンションが表示されます。
+oak-run.jar を使用した TarMK のオンラインインデックス再作成は、 [TarMK のオンラインインデックス再作成](#onlinere-indexingfortarmk) 上記の説明。 ただし、メンテナンスウィンドウ中の実行も必要です。ウィンドウが短くなり、インデックスの再作成を実行するには、より多くの手順が必要になるというメンションが表示されます。
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ Out-of-band インデックス再作成は、使用中の AEM インスタンス
 
 >[!NOTE]
 >
->このシナリオについて詳しくは、[使用例4 — インデックス定義の更新](/help/sites-deploying/oak-run-indexing-usecases.md#usecase4updatingindexdefinitions)を参照してください。
+>このシナリオについて詳しくは、 [使用例 4 — インデックス定義の更新](/help/sites-deploying/oak-run-indexing-usecases.md#usecase4updatingindexdefinitions).
 
 ### ACS Ensure Index を使用した TarMK でのインデックス定義の作成と更新 {#creatingandupdatingindexdefinitionsontarmkusingacsensureindex}
 

@@ -1,8 +1,8 @@
 ---
 title: Screens のコンテンツ管理
-seo-title: Screens のコンテンツ管理
+seo-title: Content Management for Screens
 description: Screens のコンテンツ管理の基本について説明します。
-seo-description: Screens のコンテンツ管理の基本について説明します。
+seo-description: Learn about the basics of Content Management for Screens.
 uuid: eee0036e-b352-4cde-84d2-04b27d3dfe95
 contentOwner: Jyotika Syal
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 014b5fdd-6522-4394-87bb-fe264492ba34
 exl-id: d48f9f7e-bbb8-43d4-9796-029e3fca88ce
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '103'
 ht-degree: 100%
 
 ---

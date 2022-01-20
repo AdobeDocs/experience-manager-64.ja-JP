@@ -1,50 +1,50 @@
 ---
 title: スマートコンテンツサービスを使用してアセットのタグ付けを設定します。
-description: スマートコンテンツサービスを使用して、 [!DNL Adobe Experience Manager]でスマートタグと拡張スマートタグを設定する方法について説明します。
+description: でスマートタグと拡張スマートタグを設定する方法について説明します。 [!DNL Adobe Experience Manager]スマートコンテンツサービスを使用して作成されます。
 contentOwner: AG
-feature: スマートタグ、タグ付け
+feature: Smart Tags,Tagging
 role: Admin
 exl-id: 11c5dd92-f824-41d2-9ab2-b32bdeae01b6
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1212'
 ht-degree: 48%
 
 ---
 
 # スマートコンテンツサービスを使用したアセットのタグ付けの設定 {#configure-asset-tagging-using-the-smart-content-service}
 
-[!DNL Adobe Developer Console]を使用して、[!DNL Adobe Experience Manager]をスマートコンテンツサービスと統合できます。 この設定を使用して、[!DNL Experience Manager]内からスマートコンテンツサービスにアクセスします。
+統合可能な [!DNL Adobe Experience Manager] を使用してスマートコンテンツサービスを使用する [!DNL Adobe Developer Console]. この設定を使用して、内からスマートコンテンツサービスにアクセスします [!DNL Experience Manager].
 
-この記事では、スマートコンテンツサービスの設定に必要となる以下の主要なタスクについて詳しく説明します。バックエンドでは、[!DNL Experience Manager]サーバーがスマートコンテンツサービスに要求を転送する前に、[!DNL Adobe Developer Console]ゲートウェイでサービスの資格情報を認証します。
+この記事では、スマートコンテンツサービスの設定に必要となる以下の主要なタスクについて詳しく説明します。バックエンドでは、 [!DNL Experience Manager] サーバーが、 [!DNL Adobe Developer Console] ゲートウェイを使用して、要求をスマートコンテンツサービスに転送する必要があります。
 
 1. [ でスマートコンテンツサービス設定を作成して、公開鍵を生成します。](#obtain-public-certificate)[!DNL Experience Manager]OAuth 統合用の[公開証明書を取得します](#obtain-public-certificate)。
 
 1. [Adobe 開発者コンソールで統合を作成](#create-adobe-i-o-integration)し、生成した公開鍵をアップロードします。
 
-1. [のAPIキーやその](#configure-smart-content-service) 他の資格情報を使用して、デプロイメントを設定 [!DNL Adobe Developer Console]します。
+1. [デプロイメントの設定](#configure-smart-content-service) から API キーやその他の資格情報を使用する [!DNL Adobe Developer Console].
 
 1. [設定をテストします](#validate-the-configuration)。
 
-1. オプションで、[アセットのアップロード時の自動タグ付けを有効にします](#enable-smart-tagging-in-the-update-asset-workflow-optional)。
+1. オプションで、 [アセットのアップロード時に自動タグ付けを有効にする](#enable-smart-tagging-in-the-update-asset-workflow-optional).
 
 ## 前提条件 {#prerequisites}
 
-スマートコンテンツサービスを使用する前に、次の手順を実行して[!DNL Adobe Developer Console]に統合を作成します。
+スマートコンテンツサービスを使用する前に、次の点を確認して、で統合を作成します。 [!DNL Adobe Developer Console]:
 
 * 組織の管理者権限を持つ Adobe ID アカウントがあること。
 
 * お客様の組織でスマートコンテンツサービスが有効になっている。
 
-上記に加えて、拡張スマートタグを有効にするには、最新の[Experience Managerサービスパック](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)もインストールします。
+上記に加えて、拡張スマートタグを有効にするには、最新のもインストールしてください [Experience Managerサービスパック](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html).
 
-## 公開証明書を取得するためのスマートコンテンツサービス設定の作成 {#obtain-public-certificate}
+## スマートコンテンツサービス設定を作成して公開証明書を取得する {#obtain-public-certificate}
 
-公開証明書を使用すると、[!DNL Adobe Developer Console]でプロファイルを認証できます。
+公開証明書を使用すると、でプロファイルを認証できます。 [!DNL Adobe Developer Console].
 
-1. [!DNL Experience Manager]ユーザーインターフェイスで、**[!UICONTROL ツール]** / **[!UICONTROL Cloud Services]** / **[!UICONTROL 従来のCloud Services]**&#x200B;にアクセスします。
+1. 内 [!DNL Experience Manager] ユーザーインターフェイス、アクセス **[!UICONTROL ツール]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL 従来のCloud Services]**.
 
-1. Cloud Servicesページで、「**[!UICONTROL アセットのスマートタグ]**」の下の「**[!UICONTROL 今すぐ設定]**」をクリックします。
+1. Cloud Servicesページで、 **[!UICONTROL 今すぐ設定]** under **[!UICONTROL アセットのスマートタグ]**.
 
 1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログで、スマートタグ設定のタイトルと名前を指定します。「**[!UICONTROL 作成]**」をクリックします。
 
@@ -56,16 +56,16 @@ ht-degree: 48%
 
    その他のフィールドは現時点では空白のままにします（後で指定します）。「**[!UICONTROL OK]**」をクリックします。
 
-   ![Experience ManagerサービスURLを提供するコンテンツスマートコンテンツサービスダイアログ](assets/aem_scs.png)
+   ![コンテンツサービス URL を提供するExperience Managerスマートコンテンツサービスダイアログ](assets/aem_scs.png)
 
 
-   *図：コンテンツサービスURLを提供するスマートコンテンツサービスダイアログ*
+   *図：コンテンツサービス URL を提供するスマートコンテンツサービスダイアログ*
 
    >[!NOTE]
    >
-   >[!UICONTROL サービスURL]として提供されたURLは、ブラウザーからアクセスできず、404エラーが発生します。 この設定は、[!UICONTROL Service URL]パラメーターと同じ値で正常に動作します。 サービスの全体的なステータスとメンテナンススケジュールについては、[https://status.adobe.com](https://status.adobe.com)を参照してください。
+   >指定された URL [!UICONTROL サービス URL] はブラウザーからアクセスできず、404 エラーが生成されます。 この設定は、 [!UICONTROL サービス URL] パラメーター。 サービスの全体的なステータスとメンテナンススケジュールについては、 [https://status.adobe.com](https://status.adobe.com).
 
-1. 「**[!UICONTROL OAuth統合用の公開証明書をダウンロード]**」をクリックし、公開証明書ファイル`AEM-SmartTags.crt`をダウンロードします。
+1. クリック **[!UICONTROL OAuth 統合用の公開証明書をダウンロード]**、および公開証明書ファイルをダウンロードします。 `AEM-SmartTags.crt`.
 
    ![スマートタグ付けサービス用に作成された設定の表現](assets/smart-tags-download-public-cert.png)
 
@@ -82,7 +82,7 @@ ht-degree: 48%
 
 1. 証明書の有効期限が切れた既存の **[!UICONTROL similaritysearch]** キーストアを削除します。「**[!UICONTROL 保存して閉じる]**」をクリックします。
 
-   ![キーストアの既存のsimilaritysearchエントリを削除し、新しいセキュリティ証明書を追加します](assets/smarttags_delete_similaritysearch_keystore.png)
+   ![キーストアの既存の similaritysearch エントリを削除して新しいセキュリティ証明書を追加](assets/smarttags_delete_similaritysearch_keystore.png)
 
    *図：キーストアの既存の `similaritysearch` エントリを削除して新しいセキュリティ証明書を追加.*
 
@@ -90,11 +90,11 @@ ht-degree: 48%
 
 1. 公開証明書をダウンロードするには、「**[!UICONTROL OAuth 統合用の公開証明書をダウンロード]**」をクリックします。
 
-1. [https://console.adobe.io](https://console.adobe.io) にアクセスし、**[!UICONTROL 統合]**&#x200B;ページで既存のスマートコンテンツサービスに移動します。新しい証明書をアップロードします。詳しくは、[Adobe開発者コンソール統合の作成](#create-adobe-i-o-integration)の手順を参照してください。
+1. [https://console.adobe.io](https://console.adobe.io) にアクセスし、**[!UICONTROL 統合]**&#x200B;ページで既存のスマートコンテンツサービスに移動します。新しい証明書をアップロードします。詳しくは、 [Adobe開発者コンソール統合の作成](#create-adobe-i-o-integration).
 
 ## Adobe開発者コンソール統合の作成 {#create-adobe-i-o-integration}
 
-スマートコンテンツサービスAPIを使用するには、Adobe開発者コンソールで統合を作成し、[!UICONTROL APIキー](Adobe開発者コンソール統合の[!UICONTROL CLIENT ID]フィールドで生成)、[!UICONTROL テクニカルアカウントID]、[!UICONTROL 組織を取得します[!UICONTROL アセットのスマートタグサービス設定]のID]および[!UICONTROL クライアントの秘密鍵]（[!DNL Experience Manager]のクラウド設定）。
+スマートコンテンツサービス API を使用するには、統合開発者コンソールでAdobeを作成して、 [!UICONTROL API キー] ( で生成 [!UICONTROL クライアント ID] Adobe開発者コンソール統合のフィールド )、 [!UICONTROL テクニカルアカウント ID], [!UICONTROL 組織 ID]、および [!UICONTROL クライアント秘密鍵] 対象 [!UICONTROL アセットのスマートタグサービス設定] クラウド設定の [!DNL Experience Manager].
 
 1. ブラウザーで [https://console.adobe.io](https://console.adobe.io/) にアクセスします。適切なアカウントを選択し、関連付けられた組織の役割がシステム管理者であることを確認します。
 
@@ -110,48 +110,48 @@ ht-degree: 48%
 
 1. **[!UICONTROL 製品プロファイルを選択]**&#x200B;ページで、「**[!UICONTROL スマートコンテンツサービス]**」を選択します。「**[!UICONTROL 設定済み API を保存]**」をクリックします。
 
-   設定に関する詳細情報がページに表示されます。このページを開いたままにして、スマートタグを設定するには、[!DNL Experience Manager]のクラウド設定の[!UICONTROL アセットのスマートタグサービス設定]にこれらの値をコピーして追加します。
+   設定に関する詳細情報がページに表示されます。このページを開いたままにして、これらの値をコピーし、 [!UICONTROL アセットのスマートタグサービス設定] クラウド設定の [!DNL Experience Manager] スマートタグを設定するには：
 
    ![「概要」タブで、統合について指定した情報を確認できます。](assets/integration_details.png)
 
-   *図：統合開発者コンソールでのAdobeの詳細*
+   *図：統合の詳細 (Adobe開発者コンソール )*
 
 ## スマートコンテンツサービスの設定 {#configure-smart-content-service}
 
-統合を設定するには、Adobe開発者コンソール統合の[!UICONTROL TECHNICAL ACCOUNT ID]、[!UICONTROL ORGANIZATION ID]、[!UICONTROL CLIENT SECRET]、[!UICONTROL CLIENT ID]の値を使用します。 スマートタグクラウド設定を作成すると、[!DNL Experience Manager]デプロイメントからAPIリクエストを認証できます。
+統合を設定するには、 [!UICONTROL テクニカルアカウント ID], [!UICONTROL 組織 ID], [!UICONTROL クライアント秘密鍵]、および [!UICONTROL クライアント ID] 開発者コンソール統合Adobeのフィールド。 スマートタグクラウド設定を作成すると、 [!DNL Experience Manager] デプロイメント。
 
-1. [!DNL Experience Manager]で、**[!UICONTROL ツール/Cloud Service/従来のCloud Services]**&#x200B;に移動し、[!UICONTROL Cloud Services]コンソールを開きます。
+1. In [!DNL Experience Manager]に移動します。 **[!UICONTROL ツール/Cloud Service/従来のCloud Services]** 開く [!UICONTROL Cloud Services] コンソール。
 
 1. 「**[!UICONTROL アセットのスマートタグ]**」で、上記で作成した設定を開きます。サービスの設定ページで、「**[!UICONTROL 編集]**」をクリックします。
 
 1. **[!UICONTROL AEM スマートコンテンツサービス]**&#x200B;ダイアログで、「**[!UICONTROL サービス URL]**」および「**[!UICONTROL 認証サーバー]**」フィールドに事前入力された値を使用します。
 
-1. [!UICONTROL Apiキー]、[!UICONTROL テクニカルアカウントID]、[!UICONTROL 組織ID]、[!UICONTROL クライアントの秘密鍵]の各フィールドに対して、[Adobe開発者コンソール統合](#create-adobe-i-o-integration)で生成された次の値をコピーして使用します。
+1. フィールド [!UICONTROL API キー], [!UICONTROL テクニカルアカウント ID], [!UICONTROL 組織 ID]、および [!UICONTROL クライアント秘密鍵]をコピーして、 [Adobe開発者コンソールの統合](#create-adobe-i-o-integration).
 
    | [!UICONTROL アセットのスマートタグサービス設定] | [!DNL Adobe Developer Console] 統合フィールド |
    |--- |--- |
-   | [!UICONTROL API キー] | [!UICONTROL クライアントID] |
-   | [!UICONTROL テクニカルアカウント ID] | [!UICONTROL テクニカルアカウントID] |
-   | [!UICONTROL 組織 ID] | [!UICONTROL 組織ID] |
+   | [!UICONTROL API キー] | [!UICONTROL クライアント ID] |
+   | [!UICONTROL テクニカルアカウント ID] | [!UICONTROL テクニカルアカウント ID] |
+   | [!UICONTROL 組織 ID] | [!UICONTROL 組織 ID] |
    | [!UICONTROL クライアントの秘密鍵] | [!UICONTROL クライアント秘密鍵] |
 
 ## 設定の検証 {#validate-the-configuration}
 
-設定が完了したら、JMX MBeanを使用して設定を検証します。 検証するには、次の手順に従います。
+設定が完了したら、JMX MBean を使用して設定を検証します。 検証するには、次の手順に従います。
 
-1. `https://[aem_server]:[port]`にある[!DNL Experience Manager]サーバーにアクセスします。
+1. 次にアクセス： [!DNL Experience Manager] サーバー： `https://[aem_server]:[port]`.
 
 1. **[!UICONTROL ツール／操作／Web コンソール]**&#x200B;に移動して、OSGi コンソールを開きます。**[!UICONTROL メイン／JMX]** を選択します。
 
-1. 「**[!UICONTROL com.day.cq.dam.similaritysearch.internal.impl]**」をクリックします。**[!UICONTROL SimilaritySearch Miscellaneous Tasks]**&#x200B;が開きます。
+1. 「**[!UICONTROL com.day.cq.dam.similaritysearch.internal.impl]**」をクリックします。開く **[!UICONTROL 類似性検索のその他のタスク]**.
 
-1. 「**[!UICONTROL validateConfigs()]**」をクリックします。**[!UICONTROL 設定を検証]**&#x200B;ダイアログで、「****&#x200B;を呼び出す」をクリックします。
+1. 「**[!UICONTROL validateConfigs()]**」をクリックします。内 **[!UICONTROL 設定を検証]** ダイアログ、クリック **[!UICONTROL 呼び出し]**.
 
-   検証結果は同じダイアログに表示されます。
+   検証結果は、同じダイアログに表示されます。
 
-## DAMアセットの更新ワークフローでのスマートタグの有効化（オプション） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
+## DAM アセットの更新ワークフローでのスマートタグの有効化（オプション） {#enable-smart-tagging-in-the-update-asset-workflow-optional}
 
-1. [!DNL Experience Manager]で、**[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**&#x200B;に移動します。
+1. In [!DNL Experience Manager]に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**.
 
 1. **[!UICONTROL ワークフローモデル]**&#x200B;ページで、「**[!UICONTROL DAM アセットの更新]**」ワークフローモデルを選択します。
 
@@ -165,30 +165,30 @@ ht-degree: 48%
 
 1. そのステップを編集モードで開きます。「**[!UICONTROL 詳細設定]**」で、「**[!UICONTROL ハンドラー処理の設定]**」オプションが選択されていることを確認します。
 
-   ![DAMアセットの更新ワークフローの設定とスマートタグステップの追加](assets/smart-tag-step-properties-workflow1.png)
+   ![「DAM アセットの更新」ワークフローを設定し、スマートタグステップを追加する](assets/smart-tag-step-properties-workflow1.png)
 
 
-   *図：DAMアセットの更新ワークフローの設定とスマートタグステップの追加*
+   *図：「DAM アセットの更新」ワークフローを設定し、スマートタグステップを追加する*
 
 1. 自動タグ付けのステップに失敗してもワークフローを完了させたい場合は、「**[!UICONTROL 引数]**」タブで「**[!UICONTROL エラーを無視]**」を選択します。
 
-   ![スマートタグステップを追加するDAMアセットの更新ワークフローを設定し、ハンドラー処理の設定を選択します。](assets/smart-tag-step-properties-workflow2.png)
+   ![スマートタグステップを追加し、ハンドラー処理の設定を選択するための DAM アセットの更新ワークフローを設定](assets/smart-tag-step-properties-workflow2.png)
 
 
-   *図：スマートタグステップを追加するDAMアセットの更新ワークフローを設定し、ハンドラー処理の設定を選択します。*
+   *図：スマートタグステップを追加し、ハンドラー処理の設定を選択するための DAM アセットの更新ワークフローを設定*
 
    フォルダーでスマートタグが有効になっているかに関わらずアップロード時にアセットをタグ付けするには、「**[!UICONTROL スマートタグフラグを無視]**」を選択します。
 
-   ![スマートタグステップを追加するためのDAMアセットの更新ワークフローを設定し、「スマートタグフラグを無視」を選択します。](assets/smart-tag-step-properties-workflow3.png)
+   ![スマートタグステップを追加するための DAM アセットの更新ワークフローを設定し、「スマートタグフラグを無視」を選択します。](assets/smart-tag-step-properties-workflow3.png)
 
 
-   *図：スマートタグステップを追加するためのDAMアセットの更新ワークフローを設定し、「スマートタグフラグを無視」を選択します。*
+   *図：スマートタグステップを追加するための DAM アセットの更新ワークフローを設定し、「スマートタグフラグを無視」を選択します。*
 
 1. 「**[!UICONTROL OK]**」をクリックして、プロセスステップを閉じ、ワークフローを保存します。
 
 >[!MORELIKETHIS]
 >
 >* [スマートタグの管理](managing-smart-tags.md)
-* [スマートタグの概要とスマートタグのトレーニング方法](enhanced-smart-tags.md)
-* [スマートコンテンツサービスをトレーニングするためのガイドラインとルール](smart-tags-training-guidelines.md)
+>* [スマートタグの概要とスマートタグのトレーニング方法](enhanced-smart-tags.md)
+>* [スマートコンテンツサービスのトレーニングに関するガイドラインとルール](smart-tags-training-guidelines.md)
 

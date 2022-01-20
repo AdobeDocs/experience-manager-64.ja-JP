@@ -1,19 +1,19 @@
 ---
 title: チュートリアル — 最初のインタラクティブ通信の作成
-seo-title: 最初のインタラクティブ通信を作成する
+seo-title: Create your first Interactive Communication
 description: 最初のインタラクティブ通信の作成方法を説明します。
-seo-description: 最初のインタラクティブ通信の作成方法を説明します。
+seo-description: Learn to create your first Interactive Communication.
 uuid: ed5003c6-ba3a-4fcb-8645-c7b607b22fb5
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: interactive-communications, introduction
 discoiquuid: 954da8da-a30b-477d-bde7-3edd86a5be11
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 exl-id: 4b2754dc-4b41-4d0d-a22c-d45595b36f84
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1057'
-ht-degree: 89%
+source-wordcount: '1043'
+ht-degree: 88%
 
 ---
 
@@ -37,22 +37,22 @@ ht-degree: 89%
 * インタラクティブ通信の作成
 * インタラクティブ通信をテストしてパブリッシュする
 
-## 使用事例 {#use-case}
+## 使用例 {#use-case}
 
 最初に、このチュートリアルで使用するユースケースについて説明します。
 
 通信会社が月々の請求書をお客様に電子メールで送信します。この請求書がインタラクティブ通信です。電子メールには以下が含まれます。
 
 * 本チュートリアルで印刷チャネルと呼ばれている、パスワードで保護された PDF。顧客情報、請求書の詳細、請求概要、便利なお支払い方法、使用状況などが含まれます。
-* 本チュートリアルで Web チャネルと呼ばれている、Web 版請求書へのリンク。請求書の Web 版は、PDF 版が網羅している詳細に加えて、使用状況のグラフィック表示と、Adobe Target に基づいてパーソナライズされたオファーを提供します。Web版には、オンライン支払いフォームも含まれています。 フォームを使うと、IC から離れることなくオンライン決済を行えます。
+* 本チュートリアルで Web チャネルと呼ばれている、Web 版請求書へのリンク。請求書の Web 版は、PDF 版が網羅している詳細に加えて、使用状況のグラフィック表示と、Adobe Target に基づいてパーソナライズされたオファーを提供します。Web バージョンには、オンライン支払いフォームも含まれています。 フォームを使うと、IC から離れることなくオンライン決済を行えます。
 * オンラインストレージ、音楽配信サービス、オンデマンド動画配信サービスなどの付加価値サービスへのリンク。
 
 ## 前提条件 {#prerequisites}
 
 * AEM オーサーインスタンスを設定します。
-* オーサーインスタンスに[AEM Formsアドオン](/help/forms/using/installing-configuring-aem-forms-osgi.md)をインストールします
+* インストール [AEM Formsアドオン](/help/forms/using/installing-configuring-aem-forms-osgi.md) オーサーインスタンス上
 * MySQL データベースを設定します。
-* JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。このチュートリアルの例は、MySQLデータベースに基づいており、Oracleの[MySQL JDBCデータベースドライバ](https://dev.mysql.com/downloads/connector/j/5.1.html)を使用しています。
+* JDBC データベースドライバー（JAR ファイル）をデータベースプロバイダーから取得します。このチュートリアルの例は、MySQL データベースに基づいており、Oracleの [MySQL JDBC データベースドライバー](https://dev.mysql.com/downloads/connector/j/5.1.html).
 
 ## 手順 1：インタラクティブ通信の計画 {#step-plan-the-interactive-communication}
 
@@ -76,7 +76,7 @@ ht-degree: 89%
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-フォームデータモデルにより、インタラクティブ通信を複数の異なるデータソースに接続することができます。例えば、AEM ユーザープロファイル、RESTful Web サービス、SOAP ベースの Web サービス、OData サービス、関連データベースなどに接続することができます。フォームデータモデルは、接続されたデータソースで使用可能なビジネスエンティティとサービスの統一されたデータ表現スキーマです。フォームデータモデルをインタラクティブ通信とともに使用すると、接続されたデータソースからデータを取得することができます。フォームデータモデルの詳細については、「[AEM Formsデータ統合](/help/forms/using/data-integration.md)」を参照してください。
+フォームデータモデルにより、インタラクティブ通信を複数の異なるデータソースに接続することができます。例えば、AEM ユーザープロファイル、RESTful Web サービス、SOAP ベースの Web サービス、OData サービス、関連データベースなどに接続することができます。フォームデータモデルは、接続されたデータソースで使用可能なビジネスエンティティとサービスの統一されたデータ表現スキーマです。フォームデータモデルをインタラクティブ通信とともに使用すると、接続されたデータソースからデータを取得することができます。フォームデータモデルについて詳しくは、 [AEM Forms Data Integration](/help/forms/using/data-integration.md).
 
 **ゴール:**
 
@@ -138,7 +138,7 @@ Web チャネル用のテンプレートは AEM で作成されます。テン�
 * 印刷をマスターとする印刷版および Web 版インタラクティブ通信の作成
 * Web 版インタラクティブ通信で動的テーブルを作成する
 * Web 版インタラクティブ通信でグラフを作成する
-* Web版のインタラクティブ通信でハイパーリンクを作成する
+* Web 版のインタラクティブ通信でハイパーリンクを作成する
 
 [ ](create-interactive-communication-tutorial.md)
 
@@ -146,7 +146,7 @@ Web チャネル用のテンプレートは AEM で作成されます。テン�
 
 ![11-test-your-adaptive-form](assets/11-test-your-adaptive-form.png)
 
-インタラクティブ通信を作成したら、自分が行ったすべての変更をテストすることが重要です。インタラクティブ通信のすべてのフィールドのテストは面倒です。 AEM Formsには、Webブラウザーでのインタラクティブ通信のテストを自動化するSDK(Calvin SDK)が用意されています。
+インタラクティブ通信を作成したら、自分が行ったすべての変更をテストすることが重要です。インタラクティブ通信のすべてのフィールドをテストするのは面倒です。 AEM Formsには、Web ブラウザーでのインタラクティブ通信のテストを自動化する SDK(Calvin SDK) が用意されています。
 
 **ゴール:**
 

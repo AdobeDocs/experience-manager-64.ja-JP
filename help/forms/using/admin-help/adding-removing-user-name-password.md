@@ -1,8 +1,8 @@
 ---
 title: ユーザー名とパスワードの秘密鍵証明書の追加と削除
-seo-title: ユーザー名とパスワードの秘密鍵証明書の追加と削除
+seo-title: Adding and removing user name and password credentials
 description: ユーザー名とパスワードの秘密鍵証明書を追加および削除する方法を学習します。
-seo-description: ユーザー名とパスワードの秘密鍵証明書を追加および削除する方法を学習します。
+seo-description: Learn how to add and remove user name and password credentials.
 uuid: f1d083b5-ba48-4b02-b40b-969f03732e36
 contentOwner: admin
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: 1fd28077-37a4-4cba-bbce-6d5b353f1e7d
 exl-id: 67537323-e9c8-4eec-bcec-dc5bac4b623c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 52%
+source-wordcount: '150'
+ht-degree: 46%
 
 ---
 
@@ -21,14 +21,14 @@ ht-degree: 52%
 
 Trust Store の管理ページから、Forms サービスが SOAP レベルのセキュリティで要求を受け取る際に使用するユーザー名とパスワードの秘密鍵証明書を追加および削除できます。
 
-## ユーザー名とパスワードの秘密鍵証明書の追加  {#add-a-user-name-and-password-credential}
+## ユーザー名とパスワードの秘密鍵証明書の追加 {#add-a-user-name-and-password-credential}
 
-1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/ユーザーとパスワードの資格情報]**&#x200B;をクリックし、**[!UICONTROL 追加]**&#x200B;をクリックします。
-1. 「**[!UICONTROL プロファイル名]**」ボックスに、秘密鍵証明書の名前を入力します。
-1. 「**[!UICONTROL ユーザー名]**」ボックスに、一意のユーザー名を入力します。
-1. 「**[!UICONTROL パスワード]**」ボックスにユーザーのパスワードを入力し、「**[!UICONTROL OK]**」をクリックします。
+1. 管理コンソールで、 **[!UICONTROL 設定/Trust Store の管理/ユーザーおよびパスワードの資格情報]** 次に、 **[!UICONTROL 追加]**.
+1. 内 **[!UICONTROL プロファイル名]** ボックスに、秘密鍵証明書の名前を入力します。
+1. 内 **[!UICONTROL ユーザー名]** ボックスに一意のユーザー名を入力します。
+1. 内 **[!UICONTROL パスワード]** ボックスにユーザーのパスワードを入力し、 **[!UICONTROL OK]**.
 
 ## ユーザー名とパスワードの秘密鍵証明書の削除 {#delete-a-user-name-and-password-credential}
 
-1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/ユーザーとパスワードの資格情報]**&#x200B;をクリックします。
-1. 削除する秘密鍵証明書のチェックボックスをオンにして、「**[!UICONTROL 削除]**」をクリックし、「**[!UICONTROL OK]**」をクリックします。
+1. 管理コンソールで、 **[!UICONTROL 設定/Trust Store の管理/ユーザーおよびパスワードの資格情報]**.
+1. 削除する秘密鍵証明書のチェックボックスを選択し、 **[!UICONTROL 削除]**&#x200B;をクリックし、 **[!UICONTROL OK]**.

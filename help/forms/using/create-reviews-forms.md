@@ -1,18 +1,18 @@
 ---
 title: フォームのアセットのレビューの作成と管理
-seo-title: フォームのアセットのレビューの作成と管理
+seo-title: Creating and managing reviews for assets in forms
 description: 'レビューとは、フォーム内のアセットに対し、1 人または複数のレビュー担当者にコメントを許可するメカニズムです。 '
-seo-description: 'レビューとは、フォーム内のアセットに対し、1 人または複数のレビュー担当者にコメントを許可するメカニズムです。 '
+seo-description: A Review is a mechanism that allows one or more reviewers to comment on an asset that is available in a form.
 uuid: 6b1aa54f-d03c-483a-a398-6522b285194c
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 43fd720f-2a5a-47fb-b9d9-d19f866cd0a0
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: ff113288-a69a-4083-82a6-4c65c5062411
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '659'
 ht-degree: 97%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 97%
 
 1. 残りの詳細情報を入力し、「開始」をクリックします。
 
-### レビューが設定されると発生するアクション  {#actions-that-occur-when-a-review-is-set-up}
+### レビューが設定されると発生するアクション {#actions-that-occur-when-a-review-is-set-up}
 
 本セクションでは、レビューが作成・設定された場合に起こるアクションを説明します。
 
@@ -44,7 +44,7 @@ ht-degree: 97%
 1. すべてのレビュー担当者にレビュータスクが割り当てられます。タスクが通知セクションに表示されます。レビュー担当者は、通知をクリックするか、またはインボックスに移動してタスクを表示することができます。レビュー担当者は、レビュータスクを開いてフォームを表示し、コメントの入力を開始することができます。
 
    ![レビュー担当者通知アラート](assets/noti.png)
-   **図：** *Reviewer Notificationアラート*
+   **図：** *レビュー担当者通知アラート*
 
 1. コメントボックスは、レビューの開始者およびレビュー担当者が使用することができます。その他のユーザーは、コメントを表示することはできますが、コメントを書き込むことはできません。
 
@@ -72,11 +72,11 @@ ht-degree: 97%
 1. フィールドを編集し、「更新」をクリックします。
 
    ![タスクマネージャーでのレビューの更新された状態](assets/tskmgr.png)
-   **図：** *タスクマネージャーでの更新済み状態の確認*
+   **図：** *タスクマネージャーで更新された状態を確認*
 
 1. レビューを終了するには、「終了」をクリックします。
 
-### レビューが修正されると発生するアクション  {#actions-that-occur-when-a-review-is-modified}
+### レビューが修正されると発生するアクション {#actions-that-occur-when-a-review-is-modified}
 
 本セクションでは、レビューが終了・修正された場合に起こるアクションを説明します。
 

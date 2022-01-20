@@ -1,8 +1,8 @@
 ---
 title: HTML5 フォームの Form Bridge API
-seo-title: HTML5 フォームの Form Bridge API
+seo-title: Form Bridge APIs for HTML5 forms
 description: 外部アプリケーションは FormBridge API を使用して XFA Mobile Form に接続します。API は親ウィンドウで FormBridgeInitialized イベントを送出します。
-seo-description: 外部アプリケーションは FormBridge API を使用して XFA Mobile Form に接続します。API は親ウィンドウで FormBridgeInitialized イベントを送出します。
+seo-description: External applications use the FormBridge API to connect to the XFA Mobile Form. The API dispatches a FormBridgeInitialized event on the parent window.
 uuid: 0db22649-522b-4857-9ffd-826c52381d15
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,16 +11,16 @@ discoiquuid: c05c9911-7c49-4342-89de-61b8b9953c83
 exl-id: ad669f3b-2bda-4c41-8032-cf25a192ce12
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '968'
-ht-degree: 42%
+source-wordcount: '939'
+ht-degree: 40%
 
 ---
 
-# HTML5 フォームの Form Bridge API  {#form-bridge-apis-for-html-forms}
+# HTML5 フォームの Form Bridge API {#form-bridge-apis-for-html-forms}
 
-Form Bridge APIを使用して、XFAベースのHTML5フォームとお使いのアプリケーションの間の通信チャネルを開くことができます。 Form Bridge APIには、接続を作成する&#x200B;**connect** APIが用意されています。
+Form Bridge API を使用して、XFA ベースのHTML5 フォームとアプリケーションの間の通信チャネルを開くことができます。 Form Bridge API は **接続** 接続を作成する API。
 
-**接続** API はハンドラーを引数として受け入れます。XFAベースのHTML5フォームとForm Bridge間の接続が正常に作成されると、ハンドルが呼び出されます。
+**接続** API はハンドラーを引数として受け入れます。XFA ベースの接続 5 フォームと Form Bridge 間の接続が正常にHTMLされると、ハンドルが呼び出されます。
 
 次のサンプルコードを使用して接続を作成できます。
 
@@ -49,24 +49,24 @@ window.addEventListener("FormBridgeInitialized",
 * **出力**:スクリプトライブラリのバージョン番号
 * **エラー**：なし
 
-**isConnected()** フォーム状態が初期化されたかどうかを確認します
+**isConnected()** フォームの状態が初期化されたかどうかを確認します
 
 * **入力**：なし
-* **出力**: **** Trueif the XFA Form State has been initialized
+* **出力**: **True** （XFA フォーム状態が初期化されている場合）
 
 * **エラー**：なし
 
-**connect(handler, context)**  FormBridgeに接続し、接続が確立されてフォーム状態が初期化された後に関数を実行します
+**connect(handler, context)** FormBridge に接続し、接続が確立され、フォーム状態が初期化された後に関数を実行します
 
 * **必要情報**:
 
    * **handler**：Form Bridge が接続された後に実行する関数
-   * **コンテキスト**:関数*handler *のコンテキスト(this)を設定するオブジェクト。
+   * **context**:*handler *関数のコンテキスト (this) が設定されるオブジェクト。
 
 * **出力**：なし
 * **エラー**：なし
 
-**getDataXML(options)** 現在のフォームデータをXML形式で返します
+**getDataXML(options)** 現在のフォームデータを XML 形式で返します
 
 * **必要情報:**
 
@@ -75,27 +75,27 @@ window.addEventListener("FormBridgeInitialized",
       * **error**：エラーハンドラー関数
       * **success**：サクセスハンドラー関数。 この関数には *data* プロパティに XML が含まれているオブジェクトが渡されます。
       * **context**：*success*&#x200B;関数のコンテキスト（this）の設定対象オブジェクト
-      * **validationChecker**:サーバーから受信した検証エラーを確認するための呼び出し関数。検証関数にはエラー文字列の配列が渡されます。
-      * **formState**:データXMLを返す必要があるXFAフォームのJSON状態。指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
+      * **validationChecker**:サーバーから受信した検証エラーを確認するためにを呼び出す関数。 検証関数にはエラー文字列の配列が渡されます。
+      * **formState**:データ XML を返す必要がある XFA フォームの JSON 状態。 指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**registerConfig(configName, config)** ユーザー/ポータル固有の設定をFormBridgeに登録します。これらの設定はデフォルト設定をオーバーライドします。サポートされている設定は config セクションで指定されています。
+**registerConfig(configName, config)** ユーザー/ポータル固有の設定を FormBridge に登録します。 これらの設定はデフォルト設定をオーバーライドします。サポートされている設定は config セクションで指定されています。
 
 * **必要情報:**
 
-   * **configName:** オーバーライドする設定の名前
+   * **configName:** 上書きする設定の名前
 
-      * **widgetConfig:** ユーザーがフォーム内のデフォルトウィジェットをカスタムウィジェットで上書きできるようにします。設定は次のようにオーバーライドされます。
+      * **widgetConfig:** ユーザーがフォーム内のデフォルトのウィジェットをカスタムウィジェットで上書きすることを許可します。 設定は次のようにオーバーライドされます。
 
          formBridge.registerConfig(&quot;widgetConfig&quot;:{/&amp;ast;configuration&amp;ast;/})
 
-      * **pagingConfig:** 最初のページのみをレンダリングするというデフォルトの動作を上書きできるようにします。設定は次のようにオーバーライドされます。
+      * **pagingConfig:** 最初のページのみをレンダリングするというデフォルトの動作をユーザーが上書きできるようにします。 設定は次のようにオーバーライドされます。
 
          window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true | false>, shrinkPageDisabled: &lt;true | false> }).
 
-      * **LoggingConfig:** ユーザーがログのレベル、カテゴリのログの無効化、ログコンソールを表示するかサーバーに送信するかを上書きできるようにします。設定は次のようにオーバーライドできます。
+      * **LoggingConfig:** ユーザーがログのレベルを上書きしたり、カテゴリのログを無効にしたり、ログコンソールを表示するかサーバーに送信するかを指定したりできます。 設定は次のようにオーバーライドできます。
 
       ```css
       formBridge.registerConfig{  
@@ -109,7 +109,7 @@ window.addEventListener("FormBridgeInitialized",
         }
       ```
 
-      * **SubmitServiceProxyConfig:** ユーザーが送信を登録し、プロキシサービスをロガーできるようにします。
+      * **SubmitServiceProxyConfig:** ユーザーが送信を登録し、プロキシサービスをロガーすることを許可します。
 
          ```css
          window.formBridge.registerConfig("submitServiceProxyConfig",  
@@ -127,20 +127,20 @@ window.addEventListener("FormBridgeInitialized",
 
 * **エラー**：なし
 
-**hideFields(fieldArray)**  fieldArrayでSOM式が提供されるフィールドを非表示にします。指定フィールドの presence プロパティを invisible に設定します
+**hideFields(fieldArray)** fieldArray で SOM 式が提供されているフィールドを非表示にします。 指定フィールドの presence プロパティを invisible に設定します
 
 * **必要情報:**
 
-   * **fieldArray:** 非表示にするフィールドのSOM式の配列
+   * **fieldArray:** 非表示にするフィールドの SOM 式の配列
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**showFields(fieldArray)**  fieldArrayにSOM式が提供されるフィールドを表示します。提供されたフィールドの presence プロパティを visible に設定します
+**showFields(fieldArray)** fieldArray で SOM 式が提供されるフィールドを表示します。 提供されたフィールドの presence プロパティを visible に設定します
 
 * **必要情報:**
 
-   * **fieldArray:** 表示するフィールドのSOM式の配列
+   * **fieldArray:** 表示するフィールドの SOM 式の配列
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
@@ -151,47 +151,47 @@ window.addEventListener("FormBridgeInitialized",
 * **出力**：なし
 * **エラー**：フォーム状態が初期化されていない場合、例外をスローする
 
-**getFormState()** フォームの状態を表すJSONを返す
+**getFormState()** フォームの状態を表す JSON を返します
 
 * **入力：**&#x200B;なし
-* **出力：** datapropertyに現在のフォーム状態を表すJSONが格納されているオ ** ブジェクト。
+* **出力：** 現在のフォーム状態を表す JSON を含むオブジェクト ( *データ* プロパティ。
 
 * **エラー**：なし
 
-**restoreFormState(options)** optionsオブジェクトで指定されたJSON状態からフォーム状態を復元します。状態が適用され、操作の完了後にサクセスまたはエラーハンドラーが呼び出されます。
+**restoreFormState(options)** options オブジェクトで指定された JSON 状態からフォーム状態を復元します。 状態が適用され、操作の完了後にサクセスまたはエラーハンドラーが呼び出されます。
 
 * **必要情報:**
 
-   * **オプション：** 次のプロパティを含むJavaScriptオブジェクト。
+   * **オプション：** 次のプロパティを含む JavaScript オブジェクト。
 
       * **error**：エラーハンドラー関数
       * **success**：サクセスハンドラー関数
-      * **コンテキスト**:success関数のコンテキスト(this)を設定する ** オブジェクト
-      * **formState**: フォームの JSON ステート。フォームがJSON状態に復元されます。
+      * **context**:のコンテキスト (this) の対象となるオブジェクト *成功* 関数が設定されている
+      * **formState**: フォームの JSON ステート。フォームが JSON 状態に復元されます。
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**setFocus (som)**  SOM式で指定されたフィールドにフォーカスを置く
+**setFocus (som)** SOM 式で指定されたフィールドにフォーカスを設定
 
-* **入力：** フォーカスを設定するフィールドのSOM式
+* **入力：** フォーカスを設定するフィールドの SOM 式
 * **出力：**&#x200B;なし
 * **エラー：** SOM 式が間違っている場合、例外をスローする
 
-**setFieldValue (som, value)** 指定されたSOM式のフィールドの値を設定
+**setFieldValue (som, value)** 指定された SOM 式のフィールドの値を設定
 
 * **必要情報:**
 
-   * **som：**&#x200B;フィールドの SOM 式が含まれている配列。フィールドの値を設定するSOM式。
-   * **値：** som配列で提供されたSOM式に対応する値が含ま **** れる配列。値のデータ型がfieldTypeと同じでない場合、値は変更されません。
+   * **som：**&#x200B;フィールドの SOM 式が含まれている配列。フィールドの値を設定する SOM 式。
+   * **値：** で提供された SOM 式に対応する値を含む配列 **som** 配列。 値のデータ型が fieldType と異なる場合、値は変更されません。
 
 * **出力：**&#x200B;なし
-* **エラー：** SOM式が正しくない場合に例外をスローする
+* **エラー：** SOM 式が正しくない場合に例外をスロー
 
-**getFieldValue (som)** 指定されたSOM式のフィールドの値を返す
+**getFieldValue (som)** 指定された SOM 式のフィールドの値を返します
 
-* **入力：** 値を取得する必要があるフィールドのSOM式を含む配列
-* **出力：** 結果が配列としてdatapropertyに含まれるオブジ **** ェクト。
+* **入力：** 値を取得する必要があるフィールドの SOM 式を含む配列
+* **出力：** 結果を配列として含むオブジェクト ( **データ** プロパティ。
 
 * **エラー**：なし
 
@@ -208,24 +208,24 @@ if(a.errors) {
 }
 ```
 
-**getFieldProperties(som, property)** SOM式で指定されたフィールドの指定されたプロパティの値のリストを取得
+**getFieldProperties(som, property)** SOM 式で指定されたフィールドの指定されたプロパティの値のリストを取得
 
 * **必要情報:**
 
    * **som：**&#x200B;フィールドの SOM 式が含まれている配列
    * **property：**&#x200B;値が要求されるプロパティの名前
 
-* **出力：** 結果が配列として*data *propertyに含まれるオブジェクト。
+* **出力：** 結果が配列として*data *property に含まれるオブジェクト
 
 * **エラー**：なし
 
-**setFieldProperties(som, property, values)** SOM式で指定されたすべてのフィールドに対して、指定されたプロパティの値を設定します
+**setFieldProperties(som, property, values)** SOM 式で指定されたすべてのフィールドの指定されたプロパティの値を設定します
 
 * **必要情報:**
 
-   * **som:** 値を設定する必要があるフィールドのSOM式が含まれている配列
+   * **som:** 値を設定する必要があるフィールドの SOM 式を含む配列
    * **property：**&#x200B;値の設定が要求されるプロパティ
-   * **値：** SOM式で指定されたフィールドの提供されたプロパティの値を含む配列
+   * **値：** SOM 式で指定されたフィールドの指定されたプロパティの値を含む配列
 
 * **出力：**&#x200B;なし
 * **エラー**：なし

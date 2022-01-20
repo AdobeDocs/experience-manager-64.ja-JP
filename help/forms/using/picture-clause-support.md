@@ -1,20 +1,20 @@
 ---
 title: HTML5 フォームにおけるパターン形式文字列サポート
-seo-title: HTML5 フォームにおけるパターン形式文字列サポート
+seo-title: Picture clause support for HTML5 forms
 description: HTML5 フォームは、日付、テキスト、および数値記号の表示値と形式設定された値の XFA パターン形式文字列をサポートしています。
-seo-description: HTML5 フォームは、日付、テキスト、および数値記号の表示値と形式設定された値の XFA パターン形式文字列をサポートしています。
+seo-description: HTML5 forms supports XFA Picture clause for display value and formatted value for date, text, and numeric symbols.
 uuid: ca5074ce-8219-4f27-a37c-b1f0dca4ce03
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5e344be7-46cd-4e1f-ae3a-1f89c645cffe
-feature: 'モバイルフォーム '
+feature: Mobile Forms
 exl-id: b63758f1-b375-4c05-bd53-69e0346733c6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '638'
-ht-degree: 96%
+source-wordcount: '612'
+ht-degree: 95%
 
 ---
 
@@ -27,7 +27,7 @@ HTML5 フォームは、日付、テキスト、および数値記号の表示�
 
 >[!NOTE]
 >
->現在 Mobiles Forms はパターン形式文字列の編集をサポートしていません。また、DateTimeとTimeのパターン形式文字列の記号もサポートされていません。
+>現在 Mobiles Forms はパターン形式文字列の編集をサポートしていません。また、DateTime と Time のパターン形式文字列の記号はサポートされていません。
 
 ## サポートされている日付フィールドの記号 {#supported-date-field-symbols}
 
@@ -107,7 +107,7 @@ HTML5 フォームは、数値のパターン形式文字列の記号をサポ�
 
 PDF フォームでは 1000000 の数値は 1,000,000 として形式設定されます。ただし、HTML フォームではその数値は 1000000 として形式設定されていないままになります。
 
-**HTML Forms**&#x200B;でサポートされている数値のパターン形式文字列の式は次のとおりです。
+でサポートされる数値のパターン形式文字列の式 **HTMLForms** 次の場合：
 
 * num.integer{}
 * num.decimal{}
@@ -200,11 +200,11 @@ PDF フォームでは 1000000 の数値は 1,000,000 として形式設定さ�
  </tbody>
 </table>
 
-## テキストのパターン形式文字列  {#text-picture-clause}
+## テキストのパターン形式文字列 {#text-picture-clause}
 
 HTML5 フォームは、次のテキストのパターン形式文字列の式をサポートしています。
 
-* text{textパターン形式文字列の記号}
+* text{text パターン形式文字列の記号 }
 
 | **記号** | **解釈** |
 |---|---|

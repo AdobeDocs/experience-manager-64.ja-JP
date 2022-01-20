@@ -1,8 +1,8 @@
 ---
 title: オーディエンスの管理
-seo-title: オーディエンスの管理
-description: オーディエンスコンソールを使用して、Adobe Target アカウント用のオーディエンスを作成、整理および管理したり、ContextHub 用のセグメントを管理したりできます。 またはClientContext
-seo-description: オーディエンスコンソールを使用して、Adobe Target アカウント用のオーディエンスを作成、整理および管理したり、ContextHub または ClientContext 用のセグメントを管理したりできます。
+seo-title: Managing Audiences
+description: オーディエンスコンソールを使用して、Adobe Target アカウント用のオーディエンスを作成、整理および管理したり、ContextHub 用のセグメントを管理したりできます。 または ClientContext
+seo-description: The Audiences console enables you to create, organize, and manage audiences for your Adobe Target account or manage segments for ContextHub or Client Context
 uuid: 7112a192-5f58-47ce-95fa-90638c7cdb18
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,19 +12,19 @@ discoiquuid: 0e842725-57be-4a16-b972-f5677eaad8cb
 exl-id: dcd54a52-f610-4c68-8547-39562c062d84
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '989'
 ht-degree: 94%
 
 ---
 
 # オーディエンスの管理{#managing-audiences}
 
-オーディエンスコンソールを使用して、Adobe Target アカウント用のオーディエンスを作成、整理および管理したり、ContextHub または ClientContext 用のセグメントを管理したりできます。次のことができます。
+オーディエンスコンソールを使用して、Adobe Target アカウント用のオーディエンスを作成、整理および管理したり、ContextHub 用のセグメントを管理したりできます。 または ClientContext:
 
 * オーディエンス（Adobe Target オーディエンスまたは ContextHub セグメント）の追加
 * オーディエンスの管理
 
-オーディエンス（ContextHubおよびClientContextの&#x200B;*セグメント*）は、特定の条件で定義される訪問者のクラスで、ターゲットアクティビティが表示される対象を決定します。 アクティビティにターゲットを設定すると、ターゲット設定プロセスで直接オーディエンスを選択したり、オーディエンスコンソールで新しいオーディエンスを作成したりできます。
+オーディエンス *セグメント* ContextHub と ClientContext のは、特定の条件によって定義される訪問者のクラスで、ターゲットアクティビティが表示される対象を決定します。 アクティビティにターゲットを設定すると、ターゲット設定プロセスで直接オーディエンスを選択したり、オーディエンスコンソールで新しいオーディエンスを作成したりできます。
 
 オーディエンスコンソールでは、オーディエンスはブランド別に整理されます。
 
@@ -36,7 +36,7 @@ ht-degree: 94%
 * CC - ClientContext セグメント
 * AT - Adobe Target オーディエンス
 
-## オーディエンスコンソールでの ContextHub セグメントの作成  {#creating-a-contexthub-segment-in-the-audiences-console}
+## オーディエンスコンソールでの ContextHub セグメントの作成 {#creating-a-contexthub-segment-in-the-audiences-console}
 
 ContextHub セグメントは、オーディエンスコンソールまたはターゲット設定プロセスで作成できます。
 
@@ -65,7 +65,7 @@ ContextHub を使用するセグメント作成の詳細については、「[Co
 
 >[!NOTE]
 >
->**作成**&#x200B;メニューに「**Target オーディエンスを作成**」が表示されない場合は、オーディエンスの作成に必要な権限がありません。オーディエンスを作成するには、**/etc/segmentation**&#x200B;の下に書き込み権限が必要です。 content-authors グループには、デフォルトで書き込み権限があります。
+>**作成**&#x200B;メニューに「**Target オーディエンスを作成**」が表示されない場合は、オーディエンスの作成に必要な権限がありません。書き込み権限は以下に必要です。 **/etc/segmentation** を使用して、オーディエンスを作成できます。 content-authors グループには、デフォルトで書き込み権限があります。
 
 Adobe Target オーディエンスを作成するには：
 
@@ -84,7 +84,7 @@ Adobe Target オーディエンスを作成するには：
 1. オーディエンス名を入力し、「**保存**」をタップまたはクリックします。
 1. 「**保存**」をタップまたはクリックします。オーディエンスが「オーディエンス」リストに表示されます。
 
-### 属性とそのオプション  {#attributes-and-their-options}
+### 属性とそのオプション {#attributes-and-their-options}
 
 以下の属性ごとに、ターゲット設定ルールを作成できます。
 
@@ -108,4 +108,4 @@ ContextHub オーディエンスまたは ClientContext オーディエンスは
 
 1. ナビゲーションコンソールで、「**パーソナライズ機能**」をクリックまたはタップします。「**オーディエンス**」をクリックまたはタップします。
 1. 編集する ContextHub セグメントまたは ClientContext セグメントの横のアイコンをタップまたはクリックして、「**編集**」をタップまたはクリックします。
-1. セグメントエディターで編集をおこないます。[ClientContext](/help/sites-administering/campaign-segmentation.md) または [ContextHub](/help/sites-administering/contexthub-config.md) に関するドキュメントを参照してください。
+1. セグメントエディターで編集を行います。[ClientContext](/help/sites-administering/campaign-segmentation.md) または [ContextHub](/help/sites-administering/contexthub-config.md) に関するドキュメントを参照してください。

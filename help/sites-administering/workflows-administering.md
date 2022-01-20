@@ -1,8 +1,8 @@
 ---
 title: ワークフローインスタンスの管理
-seo-title: ワークフローインスタンスの管理
+seo-title: Administering Workflow Instances
 description: ワークフローインスタンスの管理方法について説明します。
-seo-description: ワークフローインスタンスの管理方法について説明します。
+seo-description: Lear how to administer Workflow Instances.
 uuid: 81e53ef5-fe62-4ed4-b2d4-132aa986d5aa
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 70d4117b-5e49-46e4-a0b8-f56cf985536e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '818'
 ht-degree: 95%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->[JMXコンソール](/help/sites-administering/jmx-console.md#workflow-maintenance)は、追加のワークフローメンテナンス操作を提供します。
+>この [JMX コンソール](/help/sites-administering/jmx-console.md#workflow-maintenance) には、その他のワークフローメンテナンス操作が用意されています。
 
 ワークフローの管理用に、次の各種コンソールが用意されています。[グローバルナビゲーション](/help/sites-authoring/basic-handling.md#global-navigation)を使用して&#x200B;**ツール**&#x200B;パネルを開き、その後「**ワークフロー**」を選択します。
 
@@ -149,9 +149,9 @@ ht-degree: 95%
  </tbody> 
 </table>
 
-## インボックスの最大サイズの設定  {#setting-the-maximum-size-of-the-inbox}
+## インボックスの最大サイズの設定 {#setting-the-maximum-size-of-the-inbox}
 
-インボックスの最大サイズを設定するには、**AdobeGranite Workflow Service**&#x200B;を[Webコンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[を使用してリポジトリにOSGi設定を追加します](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)。 次の表では、どちらの方法でも設定するプロパティについて説明しています。
+インボックスの最大サイズは、 **AdobeGranite Workflow Service**、 [Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) または [リポジトリに OSGi 設定を追加します。](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 次の表では、どちらの方法でも設定するプロパティについて説明しています。
 
 >[!NOTE]
 >

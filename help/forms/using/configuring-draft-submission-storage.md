@@ -1,8 +1,8 @@
 ---
 title: ドラフトと送信に使用するストレージサービスの設定
-seo-title: ドラフトと送信に使用するストレージサービスの設定
+seo-title: Configuring storage services for drafts and submissions
 description: ドラフトと送信に使用するストレージの設定方法を学習します
-seo-description: ドラフトと送信に使用するストレージの設定方法を学習します
+seo-description: Learn how to configure storage for drafts and submissions
 uuid: 2f4efc07-312c-4908-8c91-84f4e6c5ad25
 topic-tags: publish
 content-type: reference
@@ -11,12 +11,12 @@ discoiquuid: 6ebb6420-68b6-4abc-b298-c252db038416
 exl-id: c73fd1c5-6f3f-4c62-a8d6-fcd22f02c0ca
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '531'
 ht-degree: 84%
 
 ---
 
-# ドラフトと送信に使用するストレージサービスの設定  {#configuring-storage-services-for-drafts-and-submissions}
+# ドラフトと送信に使用するストレージサービスの設定 {#configuring-storage-services-for-drafts-and-submissions}
 
 ## 概要 {#overview}
 
@@ -34,17 +34,17 @@ AEM Forms ポータルのデータサービスおよびメタデータサービ�
 
 >[!NOTE]
 >
->「フォームポータル」送信アクションを使用したり、アダプティブフォームでフォームポータルにデータを保存するオプションを有効にしたりすると、フォームデータは AEM リポジトリに保存されます。実稼働環境では、ドラフトまたは送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。代わりに、ドラフトと送信コンポーネントをエンタープライズデータベースなどの安全なストレージに統合して、ドラフトと送信済みフォームデータを保存する必要があります。
+>「フォームポータル」送信アクションを使用したり、アダプティブフォームでフォームポータルにデータを保存するオプションを有効にしたりすると、フォームデータは AEM リポジトリに保存されます。実稼働環境では、ドラフトまたは送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。代わりに、ドラフトと送信コンポーネントをエンタープライズデータベースなどの安全なストレージに統合して、ドラフトと送信済みのフォームデータを保存する必要があります。
 >
 >詳しくは、「[ドラフト&amp;送信コンポーネントとデータベースの統合](/help/forms/using/integrate-draft-submission-database.md)」を参照してください。
 
-## フォームポータルのドラフトサービスおよび送信サービスの設定  {#configuring-forms-portal-drafts-and-submissions-services}
+## フォームポータルのドラフトサービスおよび送信サービスの設定 {#configuring-forms-portal-drafts-and-submissions-services}
 
-AEM Webコンソールの設定(`https://[*host*]:[*port*]/system/console/configMgr`)で、「**Forms Portal Draft and Submission Configuration**」をクリックし、編集モードで開きます。
+AEM Web コンソールの設定 ( `https://[*host*]:[*port*]/system/console/configMgr`)、クリックして開く **Forms Portal のドラフトと送信の設定** 編集モードで。
 
 以下の説明に従い、要件に基づいてプロパティの値を指定します。
 
-### パブリッシュインスタンスにデータを格納する初期設定済みサービス  {#out-of-the-box-services-to-store-data-on-publish-instance}
+### パブリッシュインスタンスにデータを格納する初期設定済みサービス {#out-of-the-box-services-to-store-data-on-publish-instance}
 
 データは設定したオーサーインスタンスに逆複製されます。
 
@@ -73,7 +73,7 @@ AEM Webコンソールの設定(`https://[*host*]:[*port*]/system/console/config
  </tbody>
 </table>
 
-### リモート処理用インスタンスにデータを格納する初期設定済みボックスサービス  {#out-of-the-box-services-to-store-data-on-remote-processing-instance}
+### リモート処理用インスタンスにデータを格納する初期設定済みボックスサービス {#out-of-the-box-services-to-store-data-on-remote-processing-instance}
 
 データは設定したリモートインスタンスに直接プッシュされます。
 
@@ -104,8 +104,8 @@ AEM Webコンソールの設定(`https://[*host*]:[*port*]/system/console/config
 
 上記に示した設定のほか、設定したリモート処理用インスタンスの情報を入力します。
 
-AEM Web Console Configuration(`https://[*host*]:[*port*]/system/console/configMgr`)で、「**AEM DS Settings Service**」をクリックして編集モードで開きます。 AEM DS Settings Service ダイアログで、処理サーバーの URL、ユーザー名、パスワードを入力します。
+AEM Web コンソールの設定 ( `https://[*host*]:[*port*]/system/console/configMgr`)、クリックして開く **AEM DS Settings Service** 編集モードで。 AEM DS Settings Service ダイアログで、処理サーバーの URL、ユーザー名、パスワードを入力します。
 
 >[!NOTE]
 >
->ユーザーデータをデータベースに格納するためのサンプル実装も提供されます。ユーザーデータを外部データベースに格納するデータサービスとメタデータサービスを設定する方法については、「[ドラフト&amp;送信コンポーネントとデータベース](/help/forms/using/integrate-draft-submission-database.md)の統合例」を参照してください。
+>ユーザーデータをデータベースに格納するためのサンプル実装も提供されます。ユーザーデータを外部データベースに格納するようにデータサービスとメタデータサービスを設定する方法については、 [ドラフトと送信コンポーネントをデータベースに統合する場合のサンプル](/help/forms/using/integrate-draft-submission-database.md).

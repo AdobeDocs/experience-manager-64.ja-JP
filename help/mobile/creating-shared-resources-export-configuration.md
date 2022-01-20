@@ -1,8 +1,8 @@
 ---
 title: 共有リソースの書き出し設定の作成
-seo-title: 共有リソースの書き出し設定の作成
+seo-title: Creating Shared Resources Export Configuration
 description: このページでは、Adobe Experience Manager（AEM）から共有リソースを書き出して AEM Mobile にアップロードする手順の詳細について説明します。
-seo-description: このページでは、Adobe Experience Manager（AEM）から共有リソースを書き出して AEM Mobile にアップロードする手順の詳細について説明します。
+seo-description: Follow this page to learn about exporting shared resources from Adobe Experience Manager (AEM) for upload to AEM Mobile.
 uuid: 99b8ff94-8135-4643-a15b-aa6fb91f5401
 contentOwner: User
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: 1edf6c76-ccb1-40b6-bdf6-924f1461cd28
 exl-id: 92ee8c25-9f11-4743-a8e6-1f4986d09a6a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 69%
+source-wordcount: '302'
+ht-degree: 67%
 
 ---
 
@@ -21,23 +21,23 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
 
 >[!CAUTION]
 >
 >**前提条件**:
 >
->共有リソースの作成と変更について学習する前に、[コンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md)を参照して、基本的な概念を理解してください。
+>共有リソースの作成と変更について詳しくは、 [コンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md) を参照してください。
 
 AEM Mobile のユーザーは、コンテンツ同期を使用して、ライブコンテンツをモバイルアプリ用の静的コンテンツとして書き出します。AEM Mobile からコンテンツを Mobile On-demand Services にアップロードしたときに書き出しがおこなわれます。
 
-上記の表に示したプロパティ&#x200B;***dps-exportTemplate***&#x200B;は、アプリの書き出し設定へのパスを定義します。 共有リソースを作成および変更するには、このプロパティを設定します。
+プロパティ ***dps-exportTemplate*** 上記の表で、アプリの書き出し設定へのパスを定義します。 共有リソースを作成および変更するには、このプロパティを設定します。
 
 以下のリソースでは、Adobe Experience Manager（AEM）から共有リソースを書き出して AEM Mobile にアップロードする手順について説明しています。
 
-共有HTMLリソースを使用すると、HTMLリソースを共有できます。HTMLリソースを共有する場合は、すべての記事に複製する必要があります。また、アイコン、フォント、JavaScript、CSSを含めることもできます。
+共有HTMLリソースを使用すると、HTMLリソースを共有できます。記事が共有されていない場合は、すべての記事で複製する必要があります。また、アイコン、フォント、JavaScript、CSS を含めることができます。
 
-**&lt;dps-exportTemplate>/dps-HTMLResources>**&#x200B;にあるコンテンツ同期設定は、デバイス上でのプロパティ静的レンダリングに必要なすべてのコンテンツと記事を書き出すように設定する必要があります。
+コンテンツ同期設定が次の場所に見つかりました： **&lt;dps-exporttemplate>/dps-HTMLResources>** は、デバイス上のプロパティの静的レンダリングに必要なすべてのコンテンツと記事を書き出すように設定する必要があります。
 
 >[!CAUTION]
 >
@@ -50,11 +50,10 @@ AEM Mobile のユーザーは、コンテンツ同期を使用して、ライブ
 >
 
 
-
 サンプルの共有リソースを表示するには、以下の手順に従います。
 
 1. AEM サーバーで、CRXDE Lite を開きます。
-1. このパス&#x200B;*[/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources)*&#x200B;を参照して、サンプルの共有リソースを表示します。
+1. このパスを参照 *[/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources)*、サンプルの共有リソースを表示します。
 
    以下の図に示すように、共有リソースを作成するのに必要なすべてのプロパティを表示できます。
 

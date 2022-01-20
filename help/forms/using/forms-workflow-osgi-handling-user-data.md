@@ -1,8 +1,8 @@
 ---
 title: OSGi 上の Forms 中心のワークフロー | ユーザーデータの処理
-seo-title: OSGi 上の Forms 中心のワークフロー | ユーザーデータの処理
+seo-title: Forms-centric workflows on OSGi | Handling user data
 description: Forms 中心の AEM ワークフローにより、Forms 中心のビジネスプロセスを実際に自動化できます。ユーザーデータとデータストアの詳細を掘り下げます。 ユーザーデータにアクセスして削除する方法を説明します。
-seo-description: Forms 中心の AEM ワークフローにより、Forms 中心のビジネスプロセスを実際に自動化できます。ユーザーデータとデータストアの詳細を掘り下げます。 ユーザーデータにアクセスして削除する方法を説明します。
+seo-description: Forms-centric AEM workflows enable you to automate real-world Forms-centric business processes. Dig deeper on user data and data stores. Learn how to access and delete user data.
 uuid: 6eefbe84-6496-4bf8-b065-212aa50cd074
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,8 +11,8 @@ role: Admin
 exl-id: 65c13bc8-da82-4c4b-b014-341ce1b59b71
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 97%
+source-wordcount: '1033'
+ht-degree: 98%
 
 ---
 

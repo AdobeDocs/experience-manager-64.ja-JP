@@ -13,7 +13,7 @@ exl-id: b0e579a4-f5bd-4a55-a003-0496224bc940
 source-git-commit: d01eee7602945b8d3cb3ad004ccf5ad6cbc4c73c
 workflow-type: tm+mt
 source-wordcount: '1789'
-ht-degree: 86%
+ht-degree: 89%
 
 ---
 
@@ -92,7 +92,7 @@ ht-degree: 86%
 
    このページのバニティ URL を入力でき、短くより表現力のある URL にすることができます。
 
-   例えば、Web サイト h `ttp://example.com,` のパス/ `v1.0/startpage` で識別されるページに対して、バニティ URL が w `elcome` に設定されている場合、h `ttp://example.com/welcome` は h `ttp://example.com/content/v1.0/startpage` のバニティ URL になります。
+   例えば、バニティー URL が w に設定されている場合、 `elcome`パス/で識別されるページに `v1.0/startpage`（Web サイトの場合） `ttp://example.com,` その後 `ttp://example.com/welcome`は h のバニティー URL です。 `ttp://example.com/content/v1.0/startpage`
 
    >[!CAUTION]
    >
@@ -124,10 +124,10 @@ ht-degree: 86%
 
    このページで使用されるエイリアスを指定します。
 
-   * 例えば、`/content/wknd/us/en/magazine/members-only` ページのエイリアス `private` を定義した場合、このページには `/content/wknd/us/en/magazine/private` を介してもアクセスできます。
-   * エイリアスを作成すると、ページノードに `sling:alias` プロパティが設定され、リソースにのみ影響を与えます。リポジトリパスには影響を与えません。
-   * エディターでエイリアスによってアクセスされたページは公開できません。 [エディ](/help/sites-authoring/publishing-pages.md) ターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
-   * 詳しくは、[SEO と URL 管理のベストプラクティスの下のページ名のローカライズ ](/help/managing/seo-and-url-management.md#localized-page-names) を参照してください。
+   * 例えば、 `private` （ページの） `/content/wknd/us/en/magazine/members-only`を使用しない場合、このページには `/content/wknd/us/en/magazine/private`.
+   * エイリアスを作成すると、ページノードに `sling:alias` プロパティが設定されます。このプロパティはリソースにのみ影響し、リポジトリーパスには影響しません。
+   * エディターからエイリアスでアクセスしたページは公開できません。エディターでは、実際のパスでアクセスしたページにのみ、[公開オプション](/help/sites-authoring/publishing-pages.md)が使用可能です。
+   * 詳しくは、 [「SEO と URL 管理のベストプラクティス」のページ名のローカライズ](/help/managing/seo-and-url-management.md#localized-page-names)
 
 * **許可されたテンプレート**
 
@@ -141,7 +141,7 @@ ht-degree: 86%
 
    >[!CAUTION]
    >
-   >「**[権限](/help/sites-authoring/editing-page-properties.md#permissions)**」タブでは、`granite:AuthenticationRequired` mixin の存在に基づいて CUG 設定を編集できます。 cq:cugEnabled プロパティの存在に基づいて、非推奨の CUG 設定を使用してページ権限が設定されている場合、警告メッセージが **認証要件** に表示され、オプションは編集できず、[ 権限 ](/help/sites-authoring/editing-page-properties.md#permissions) も編集できません。
+   >この **[権限](/help/sites-authoring/editing-page-properties.md#permissions)** 「 」タブでは、 `granite:AuthenticationRequired` mixin. cq:cugEnabled プロパティの存在に基づいて、非推奨の CUG 設定を使用してページ権限が設定されている場合、次の場所に警告メッセージが表示されます。 **認証要件** また、オプションは編集できず、 [権限](/help/sites-authoring/editing-page-properties.md#permissions) 編集可能です。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
@@ -203,14 +203,14 @@ ht-degree: 86%
 
    >[!CAUTION]
    >
-   >「**権限**」タブでは、`granite:AuthenticationRequired` mixin の存在に基づいて CUG 設定を編集できます。 `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
+   >この **権限** 「 」タブでは、 `granite:AuthenticationRequired` mixin. `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
 
    >[!NOTE]
    >
-   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。詳しくは、[ ユーザー、グループ、アクセス権の管理 ](/help/sites-administering/user-group-ac-admin.md) を参照してください。
+   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。ドキュメントを参照 [ユーザー、グループ、アクセス権の管理](/help/sites-administering/user-group-ac-admin.md) を参照してください。
 
 ### ブループリント {#blueprint}
 
@@ -271,7 +271,7 @@ ht-degree: 86%
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. 「**プロパティを開く**」を選択すると、プロパティを編集するためのダイアログが開きます。プロパティは適切なタブに分類されています。 ツールバーの右側にある次のボタンも使用できます。
+1. 選択 **プロパティを開く** プロパティを編集するためのダイアログが開きます。プロパティは適切なタブに分類されています。 ツールバーの右側にある次のボタンも使用できます。
 
    * **キャンセル**
    * **保存して閉じる**
@@ -295,7 +295,7 @@ ht-degree: 86%
 
 ![screen_shot_2018-03-22at100039](assets/screen_shot_2018-03-22at100039.png)
 
-ページを選択して「**プロパティ**」オプションをクリックまたはタップすると、一括プロパティが表示されます。
+ページを選択して **プロパティ** 」オプションを選択すると、一括プロパティが表示されます。
 
 ![screen_shot_2018-03-22at100114](assets/screen_shot_2018-03-22at100114.png)
 

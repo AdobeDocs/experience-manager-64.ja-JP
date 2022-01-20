@@ -1,18 +1,18 @@
 ---
 title: アダプティブフォームのレイアウトの機能
-seo-title: アダプティブフォームのレイアウトの機能
+seo-title: Layout capabilities of adaptive forms
 description: 各種デバイスごとのアダプティブフォームのレイアウトと外観はレイアウト設定で管理できます。各種レイアウトとレイアウトの適用方法について説明します。
-seo-description: 各種デバイスごとのアダプティブフォームのレイアウトと外観はレイアウト設定で管理できます。各種レイアウトとレイアウトの適用方法について説明します。
+seo-description: Layout and appearances of adaptive forms on various devices are governed by the layout settings. Understand the various layouts and how to apply them.
 uuid: 7df2d234-e2e3-432a-9720-e73296424302
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 10bf1d44-9660-44d9-b2c3-dd9a252efc3a
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 887e88c6-4c2b-4ef3-b268-8956fdb4535f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 77%
+source-wordcount: '1143'
+ht-degree: 76%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Experience Manager（AEM）では、簡単に使用できるアダプテ�
 
 [フォーム作成の概要](/help/forms/using/introduction-forms-authoring.md)
 
-## レイアウトのタイプ{#types-of-layouts}
+## レイアウトのタイプ {#types-of-layouts}
 
 アダプティブフォームは次のタイプのレイアウトを提供します。
 
@@ -54,28 +54,28 @@ Adobe Experience Manager（AEM）では、簡単に使用できるアダプテ�
 
 パネルレイアウトは`/libs/fd/af/layouts/panel`から利用できます。
 
-![アダプティブフォームのルートパネルのパネルレイアウトのリ](assets/layouts.png)
-**スト図：** *アダプティブフォームのパネルレイアウトのリスト*
+![アダプティブフォームのルートパネルのパネルレイアウトのリスト](assets/layouts.png)
+**図：** *アダプティブフォームのパネルレイアウトのリスト*
 
 ### レスポンシブ - ナビゲーションなしですべて 1 ページに配置 {#responsive-everything-on-one-page-without-navigation-br}
 
 このパネルレイアウトを使用すると、特別なナビゲーションなしでレイアウトをデバイスの画面サイズに合うように調整するレスポンシブレイアウトを作成できます。
 
-このレイアウトを使用すると、複数の&#x200B;**[!UICONTROL パネルアダプティブフォーム]**&#x200B;コンポーネントをパネル内に順に配置できます。
+このレイアウトを使用すると、複数の **[!UICONTROL パネルアダプティブフォーム]** コンポーネントは、パネル内で次々に作成されます。
 
 ![レスポンシブレイアウトを使用したフォームの小画面での表示例](assets/responsive_layout_seen_on_small_screen.png)
 
-**図：** *レスポンシブレイアウトを使用したフォーム（小画面に表示）*
+**図：** *レスポンシブレイアウトを使用したフォームの小画面での表示*
 
 ![レスポンシブレイアウトを使用したフォームの大画面での表示例](assets/responsive_layout_seen_on_large_screen.png)
 
-**図：** *レスポンシブレイアウトを使用したフォーム（大画面に表示）*
+**図：** *レスポンシブレイアウトを使用したフォームの大画面での表示*
 
 ### ウィザード - 複数の手順を 1 つずつ表示するフォーム {#wizard-a-multi-step-form-showing-one-step-at-a-time}
 
 このパネルレイアウトを使用すると、フォーム上にガイド付きのナビゲーションが提供できます。例えば、ユーザーを 1 手順ずつガイドしながらフォーム内の必須情報を取得したい場合、このレイアウトを使用します。
 
-`Panel adaptive form`コンポーネントを使用して、パネル内でステップバイステップのナビゲーションを行います。 このレイアウトを使用すると、現在の手順を完了しない限りユーザーは次の手順に進めません。
+以下を使用： `Panel adaptive form` パネル内でのステップバイステップのナビゲーションを提供するコンポーネント。 このレイアウトを使用すると、現在の手順を完了しない限りユーザーは次の手順に進めません。
 
 ```
 window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpression)
@@ -83,7 +83,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ![複数手順フォームのウィザードレイアウトでのステップ完了の式](assets/layout-sidebar.png)
 
-**図：** *複数手順フォームのウィザードレイアウトでのステップ完了の式*
+**図：** *複数手順のフォームのウィザードレイアウトでのステップ完了式*
 
 ![ウィザードレイアウトを使用したフォーム](assets/wizard-layout.png)
 
@@ -91,29 +91,29 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ### アコーディオンデザインのレイアウト {#layout-for-accordion-design}
 
-このレイアウトを使用すると、アコーディオンスタイルのナビゲーションを備えたパネルに`Panel adaptive form`コンポーネントを配置できます。 また、このレイアウトを使用すると、繰り返し可能なパネルを作成できます。繰り返し可能なパネルを使用すれば、必要に応じて動的にパネルを追加したり削除することができます。パネルの繰り返しの最小数、最大数を定義することができます。また、パネル内の項目に入力される情報に応じて動的にパネルのタイトルを決定することができます。
+このレイアウトを使用すると、 `Panel adaptive form` アコーディオンスタイルナビゲーションを備えたパネルのコンポーネント。 また、このレイアウトを使用すると、繰り返し可能なパネルを作成できます。繰り返し可能なパネルを使用すれば、必要に応じて動的にパネルを追加したり削除することができます。パネルの繰り返しの最小数、最大数を定義することができます。また、パネル内の項目に入力される情報に応じて動的にパネルのタイトルを決定することができます。
 
 最小化したパネルのタイトルにエンドユーザーが提供した値を表示するために、サマリ式を使用することができます。
 
 ![アコーディオンレイアウトを使用したアダプティブフォームの繰り返し可能なパネル](assets/repeatable_panels_using_accordion_layout.png)
 
-**図：** *アコーディオンレイアウトを使用して作成した繰り返し可能なパネル*
+**図：** *アコーディオンレイアウトを使用して作成された繰り返し可能なパネル*
 
 ### タブ付きレイアウト - タブを左側に表示 {#tabbed-layout-tabs-appear-on-the-left}
 
-このレイアウトを使用すると、タブ付きナビゲーションのパネルに`Panel adaptive form`コンポーネントを配置できます。 タブはパネルコンテンツの左側に配置されます。
+このレイアウトを使用すると、 `Panel adaptive form` タブナビゲーション付きのパネル内のコンポーネント タブはパネルコンテンツの左側に配置されます。
 
 ![タブ付きレイアウトでタブ左側表示](assets/tabbed_layout_left.png)
 
-**図：** *パネルの左側にタブが表示される*
+**図：** *パネルの左側に表示されるタブ*
 
 ### タブ付きレイアウト - タブを上に表示 {#tabbed-layout-tabs-appear-on-the-top}
 
-このレイアウトを使用すると、タブ付きナビゲーションのパネルに`Panel adaptive form`コンポーネントを配置できます。 タブはパネルコンテンツの上に配置されます。
+このレイアウトを使用すると、 `Panel adaptive form` タブナビゲーションを備えたパネル内のコンポーネント。 タブはパネルコンテンツの上に配置されます。
 
 ![タブを上に表示したアダプティブフォームのタブ付きレイアウト](assets/tabbed_layout_top.png)
 
-**図：** *パネルの上部にタブが表示される*
+**図：** *パネルの上に表示されるタブ*
 
 ## モバイルレイアウト {#mobile-layouts}
 
@@ -127,7 +127,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 **図：** *アダプティブフォームのモバイルレイアウトのリスト*
 
-モバイルレイアウトを使用する場合、![aem6forms_form_menu](assets/aem6forms_form_menu.png)アイコンをタップすると、様々なフォームパネルにアクセスするためのフォームメニューを使用できます。
+モバイルレイアウトを使用している場合、フォームメニューを使用して様々なフォームパネルにアクセスできます。このメニューを使用するには、次のアイコンをタップします ![aem6forms_form_menu](assets/aem6forms_form_menu.png) アイコン
 
 ### フォームのヘッダー部分にパネルタイトルを表示するレイアウト {#layout-with-panel-titles-in-the-form-header}
 
@@ -135,7 +135,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ![フォームのヘッダー部分にパネルタイトルを表示するモバイルレイアウト](assets/mobile_layout_with.png)
 
-**図：** *フォームヘッダーのパネルタイトルを含むモバイルレイアウト*
+**図：** *フォームのヘッダーにパネルタイトルを表示するモバイルレイアウト*
 
 ### フォームのヘッダー部分にパネルタイトルを表示しないレイアウト {#layout-without-panel-titles-in-the-form-header}
 
@@ -143,17 +143,17 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ![フォームのヘッダー部分にパネルタイトルを表示しないモバイルレイアウト](assets/mobile_layout_without.png)
 
-**図：** *フォームヘッダーのパネルタイトルを含まないモバイルレイアウト*
+**図：** *フォームのヘッダーにパネルタイトルを表示しないモバイルレイアウト*
 
 ## ツールバーレイアウト {#toolbar-layouts}
 
-ツールバーレイアウトは、アダプティブフォームに追加するアクションボタンの位置と表示をコントロールします。 このレイアウトはフォームレベルまたは各パネルレベルで追加できます。
+ツールバーレイアウトは、アダプティブフォームに追加するアクションボタンの位置と表示を制御します。 このレイアウトはフォームレベルまたは各パネルレベルで追加できます。
 
 ![ボタンのレイアウトをコントロールするアダプティブフォームのツールバーレイアウトのリスト](assets/toolbar-layouts.png)
 
 **図：** *アダプティブフォームのツールバーレイアウトのリスト*
 
-ツールバーのレイアウトは`/libs/fd/af/layouts/toolbar`の場所で使用できます。 アダプティブフォームには、デフォルトで次のツールバーレイアウトが用意されています。
+ツールバーレイアウトは、 `/libs/fd/af/layouts/toolbar` 場所。 アダプティブフォームには、デフォルトで次のツールバーレイアウトが用意されています。
 
 ### ツールバーのデフォルトレイアウト {#default-layout-for-toolbar}
 

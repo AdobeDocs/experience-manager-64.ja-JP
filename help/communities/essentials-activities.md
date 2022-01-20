@@ -1,8 +1,8 @@
 ---
 title: アクティビティストリームの基本事項
-seo-title: アクティビティストリームの基本事項
+seo-title: Activity Stream Essentials
 description: メンバーが実行した最近のアクティビティのリスト、または単一のコンテンツスレッドの最近のアクティビティのリスト
-seo-description: メンバーが実行した最近のアクティビティのリスト、または単一のコンテンツスレッドの最近のアクティビティのリスト
+seo-description: List of recent activites performed by a member or a list of recent activities on a single thread of content
 uuid: 6e4734bb-52a8-4670-b665-e640108b036e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: 8cc04993-4021-4cb7-b973-5afc4da1ed11
 exl-id: 74dcbefa-e670-419b-af9b-b3d3c593ebaa
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 74%
+source-wordcount: '296'
+ht-degree: 72%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 74%
 
 [ソーシャルグラフ](essentials-socialgraph.md)とは、メンバー間のフォロー関係を表したものです。
 
-## クライアント側の基本事項  {#essentials-for-client-side}
+## クライアント側の基本事項 {#essentials-for-client-side}
 
 <table> 
  <tbody>
@@ -61,7 +61,7 @@ ht-degree: 74%
   </tr>
   <tr>
    <td><strong> properties</strong></td> 
-   <td><a href="activities.md">アクティビティストリーム機能</a>を参照</td> 
+   <td>詳しくは、 <a href="activities.md">アクティビティストリーム機能</a></td> 
   </tr>
  </tbody>
 </table>
@@ -78,4 +78,4 @@ ht-degree: 74%
 
 ### アクティビティストリーム機能 {#activity-stream-function}
 
-[アクティビティストリーム機能](functions.md#activity-stream-function)を含むコミュニティサイト構造には、設定済みの`activity streams`コンポーネントが含まれます。
+を含むコミュニティサイト構造 [アクティビティストリーム関数](functions.md#activity-stream-function)（設定済みを含む） `activity streams` コンポーネント。

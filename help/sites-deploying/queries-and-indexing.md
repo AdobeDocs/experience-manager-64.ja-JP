@@ -1,8 +1,8 @@
 ---
 title: Oak クエリとインデックス作成
-seo-title: Oak クエリとインデックス作成
+seo-title: Oak Queries and Indexing
 description: AEM でインデックスを設定する方法について説明します。
-seo-description: AEM でインデックスを設定する方法について説明します。
+seo-description: Learn how to configure indexes in AEM.
 uuid: a1233d2e-1320-43e0-9b18-cd6d1eeaad59
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -10,12 +10,12 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
-feature: 設定
+feature: Configuring
 exl-id: 5f43de8d-9d26-456e-b695-3ffa71a4f3bf
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '2886'
-ht-degree: 88%
+source-wordcount: '2873'
+ht-degree: 87%
 
 ---
 
@@ -35,7 +35,7 @@ Oak では、インデックスが使用されないクエリが実行される�
 *WARN* Traversed 1000 nodes with filter Filter(query=select ...) consider creating an index or changing the query
 ```
 
-## サポートされているクエリ言語  {#supported-query-languages}
+## サポートされているクエリ言語 {#supported-query-languages}
 
 Oak クエリエンジンでは、次の言語がサポートされています。
 
@@ -44,7 +44,7 @@ Oak クエリエンジンでは、次の言語がサポートされています�
 * SQL（廃止）
 * JQOM
 
-## インデクサーのタイプとコスト計算  {#indexer-types-and-cost-calculation}
+## インデクサーのタイプとコスト計算 {#indexer-types-and-cost-calculation}
 
 Apache Oak ベースのバックエンドでは、様々なインデクサーをリポジトリにプラグインすることができます。
 
@@ -52,7 +52,7 @@ Apache Oak ベースのバックエンドでは、様々なインデクサーを
 
 デフォルトでは、**Apache Lucene** および **Solr** の実装も使用できます。どちらもフルテキストのインデックスをサポートしています。
 
-他のインデクサーが使用できない場合は、**トラバーサルインデックス**&#x200B;が使用されます。 つまり、コンテンツにインデックスが作成されず、クエリに一致するものを見つけるために、コンテンツノードが走査されます。
+この **トラバーサルインデックス** 他のインデクサーを使用できない場合は、が使用されます。 つまり、コンテンツにインデックスが作成されず、クエリに一致するものを見つけるために、コンテンツノードが走査されます。
 
 あるクエリに対して複数のインデクサーを使用できる場合、使用できる各インデクサーによってクエリ実行コストが見積もられます。次に、見積もりコストが最も低いインデクサーが Oak によって選択されます。
 
@@ -64,11 +64,11 @@ Apache Oak ベースのバックエンドでは、様々なインデクサーを
 
 次に、各インデックスが参照されて、クエリのコストが見積もられます。この見積もりが完了すると、最もコストの低いインデックスの結果が取得されます。最後に、その結果がフィルター処理され、現在のユーザーがその結果の読み取りアクセス権を保持していること、およびその結果がクエリ全体に一致していることが確認されます。
 
-## インデックスの設定  {#configuring-the-indexes}
+## インデックスの設定 {#configuring-the-indexes}
 
 >[!NOTE]
 >
->大規模なリポジトリの場合、インデックスの構築には時間がかかります。 これは、最初にインデックスを作成するときと、再インデックス（定義を変更した後にインデックスを再構築すること）をおこなうときの両方に当てはまります。[Oakインデックスのトラブルシューティング](/help/sites-deploying/troubleshooting-oak-indexes.md)および[低速なインデックス再作成の防止](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing)も参照してください。
+>大規模なリポジトリの場合、インデックスの構築は時間のかかる操作です。 これは、最初にインデックスを作成するときと、再インデックス（定義を変更した後にインデックスを再構築すること）をおこなうときの両方に当てはまります。関連トピック [Oak インデックスのトラブルシューティング](/help/sites-deploying/troubleshooting-oak-indexes.md) および [インデックス再作成の遅延を防ぐ](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
 
 非常に大規模なリポジトリで再インデックスが必要な場合、特に MongoDB を使用してフルテキストのインデックスを作成する場合は、テキスト事前抽出と、oak-run を使用した初期インデックス構築および再インデックスを検討してください。
 
@@ -76,17 +76,17 @@ Apache Oak ベースのバックエンドでは、様々なインデクサーを
 
 インデックスノードのタイプは、**oak:QueryIndexDefinition** とする必要があります。各インデクサーでは、ノードのプロパティとして複数の設定オプションを使用できます。詳しくは、以下の各インデクサータイプに関する設定の詳細説明を参照してください。
 
-### プロパティインデックス  {#the-property-index}
+### プロパティインデックス {#the-property-index}
 
 プロパティインデックスは通常、プロパティの制約はあるがフルテキスト検索ではないクエリに適しています。このインデックスを設定するには、次の手順に従います。
 
-1. `http://localhost:4502/crx/de/index.jsp`に移動してCRXDEを開きます。
+1. に移動して CRXDE を開きます。 `http://localhost:4502/crx/de/index.jsp`
 1. **oak:index** の下に新しいノードを作成します。
 1. このノードに **PropertyIndex** という名前を付け、ノードタイプを **oak:QueryIndexDefinition** に設定します。
 1. 新しいノードに対して次のプロパティを設定します。
 
-   * **type:**  `property` （String型）
-   * **propertyNames:**  `jcr:uuid` （名前型）
+   * **型：**  `property` （String 型）
+   * **propertyNames:**  `jcr:uuid` （名前のタイプ）
 
    この例では、`jcr:uuid` プロパティに対してインデックスを作成します。このプロパティの役割は、関連付けられたノードの Universally Unique Identifier（UUID）を公開することです。
 
@@ -103,9 +103,9 @@ Apache Oak ベースのバックエンドでは、様々なインデクサーを
 * **declaringNodeTypes** プロパティでは、インデックスが唯一適用される特定のノードタイプを指定できます。
 * **reindex** フラグは、**true** に設定されている場合、コンテンツ全体の再インデックスをトリガーします。
 
-### 順序付きインデックス  {#the-ordered-index}
+### 順序付きインデックス {#the-ordered-index}
 
-順序付きインデックスはプロパティインデックスの拡張です。ただし、これは廃止されました。このタイプのインデックスは、[Luceneプロパティインデックス](#the-lucene-property-index)に置き換える必要があります。
+順序付きインデックスはプロパティインデックスの拡張です。ただし、これは廃止されました。このタイプのインデックスは、 [Lucene プロパティインデックス](#the-lucene-property-index).
 
 ### Lucene フルテキストインデックス {#the-lucene-full-text-index}
 
@@ -123,8 +123,8 @@ AEM 6 では、Apache Lucene ベースのフルテキストインデクサーを
 1. このノードに **LuceneIndex** という名前を付け、ノードタイプを **oak:QueryIndexDefinition** に設定します。
 1. この  ノードに次のプロパティを追加します。
 
-   * **type:**  `lucene` （String型）
-   * **async:**  `async` （String型）
+   * **型：**  `lucene` （String 型）
+   * **async:**  `async` （String 型）
 
 1. 変更内容を保存します。
 
@@ -133,10 +133,10 @@ Lucene インデックスでは次の設定オプションを使用できます�
 * インデックスのタイプを指定する **type** プロパティは **lucene** に設定する必要があります。
 * **async** プロパティは **async** に設定する必要があります。この設定により、インデックス更新プロセスがバックグラウンドスレッドに送信されます。
 * **includePropertyTypes** プロパティ。インデックスに含まれるプロパティタイプのサブセットを定義します。
-* **excludePropertyNames**&#x200B;プロパティは、プロパティ名のリスト（インデックスから除外する必要があるプロパティ）を定義します。
+* この **excludePropertyNames** プロパティ名のリストを定義するプロパティ — インデックスから除外する必要があるプロパティ。
 * **reindex** フラグ。**true** に設定されている場合、コンテンツ全体の再インデックスをトリガーします。
 
-### Lucene プロパティインデックス  {#the-lucene-property-index}
+### Lucene プロパティインデックス {#the-lucene-property-index}
 
 **Oak 1.0.8** 以降、Lucene を使用して、フルテキストではないプロパティ制約に関するインデックスを作成できます。
 
@@ -148,10 +148,10 @@ Lucene プロパティインデックスを有効にするには、**fulltextEna
 select * from [nt:base] where [alias] = '/admin'
 ```
 
-このクエリのための Lucene プロパティインデックスを定義するには、**oak:index** の下に新しいノードを作成して、次の定義を追加します。
+上記のクエリの Lucene プロパティインデックスを定義するには、以下の定義を追加します。それには、以下の下に新しいノードを作成します。 **oak:index:**
 
 * **名前:** `LucenePropertyIndex`
-* **型:** `oak:QueryIndexDefinition`
+* **タイプ:** `oak:QueryIndexDefinition`
 
 ノードを作成したら、次のプロパティを追加します。
 
@@ -173,7 +173,7 @@ select * from [nt:base] where [alias] = '/admin'
    false (of type Boolean)
    ```
 
-* **includePropertyNames:** `[alias]` （String型）
+* **includePropertyNames:** `[alias]` （String 型）
 
 >[!NOTE]
 >
@@ -189,7 +189,7 @@ Oak ではバージョン 1.2.0 以降、Lucene アナライザーをサポー�
 
 アナライザーは、ドキュメントのインデックス作成時とクエリの実行時の両方に使用されます。アナライザーは、フィールドのテキストを調査して、トークンストリームを生成します。Lucene アナライザーは、一連のトークナイザークラスおよびフィルタークラスで構成されています。
 
-アナライザーは、`oak:index`定義内の`analyzers`ノード（タイプ`nt:unstructured`）を介して設定できます。
+アナライザーは、 `analyzers` ノード ( タイプ `nt:unstructured`) を `oak:index` 定義。
 
 インデックスのデフォルトのアナライザーは、analyzers ノードの子の `default` に設定されます。
 
@@ -199,18 +199,18 @@ Oak ではバージョン 1.2.0 以降、Lucene アナライザーをサポー�
 >
 >使用可能なアナライザーのリストについては、使用中の Lucene バージョンの API ドキュメントを参照してください。
 
-#### アナライザークラスの直接の指定  {#specifying-the-analyzer-class-directly}
+#### アナライザークラスの直接の指定 {#specifying-the-analyzer-class-directly}
 
 標準のアナライザーを使用する場合は、次の手順に従って設定できます。
 
 1. `oak:index` ノードの下で、アナライザーで使用するインデックスを見つけます。
 
-1. インデックスの下に、`nt:unstructured`型の`default`という子ノードを作成します。
+1. インデックスの下に、という名前の子ノードを作成します。 `default` タイプ `nt:unstructured`.
 
 1. default ノードに次のプロパティを追加します。
 
    * **名前:** `class`
-   * **型:** `String`
+   * **タイプ:** `String`
    * **値:** `org.apache.lucene.analysis.standard.StandardAnalyzer`
 
    この値は、使用するアナライザークラスの名前です。
@@ -218,7 +218,7 @@ Oak ではバージョン 1.2.0 以降、Lucene アナライザーをサポー�
    また、特定の Lucene バージョンで使用するアナライザーを設定するには、オプションの `luceneMatchVersion` プロパティ（string）を使用することもできます。Lucene 4.7 で使用する場合の有効な構文は次のとおりです。
 
    * **名前:** `luceneMatchVersion`
-   * **型:** `String`
+   * **タイプ:** `String`
    * **値:** `LUCENE_47`
 
    `luceneMatchVersion` が指定されない場合、Oak では出荷時の Lucene のバージョンが使用されます。
@@ -226,11 +226,11 @@ Oak ではバージョン 1.2.0 以降、Lucene アナライザーをサポー�
 1. アナライザー設定にストップワードファイルを追加する場合は、`default` ノードの下に新しいノードを作成し、次のプロパティを設定します。
 
    * **名前:** `stopwords`
-   * **型:** `nt:file`
+   * **タイプ:** `nt:file`
 
 #### 構成によるアナライザーの作成 {#creating-analyzers-via-composition}
 
-アナライザーは、`Tokenizers`、`TokenFilters`および`CharFilters`に基づいて構成することもできます。 そのためには、アナライザーを指定し、オプションの tokenizer および filtersの子ノードを作成します。これらはリストされた順序で適用されます。[https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)も参照してください。
+アナライザーは、 `Tokenizers`, `TokenFilters` および `CharFilters`. そのためには、アナライザーを指定し、オプションの tokenizer および filtersの子ノードを作成します。これらはリストされた順序で適用されます。関連トピック [https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://wiki.apache.org/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
 
 例えば、次のノード構造について考えてみます。
 
@@ -239,7 +239,7 @@ Oak ではバージョン 1.2.0 以降、Lucene アナライザーをサポー�
    * **名前:** `default`
 
       * **名前:** `charFilters`
-      * **型:** `nt:unstructured`
+      * **タイプ:** `nt:unstructured`
 
          * **名前:** `HTMLStrip`
          * **名前:** `Mapping`
@@ -247,24 +247,24 @@ Oak ではバージョン 1.2.0 以降、Lucene アナライザーをサポー�
 
          * **プロパティ名:** `name`
 
-            * **型:** `String`
+            * **タイプ:** `String`
             * **値:** `Standard`
       * **名前:** `filters`
-      * **型:** `nt:unstructured`
+      * **タイプ:** `nt:unstructured`
 
          * **名前:** `LowerCase`
          * **名前:** `Stop`
 
             * **プロパティ名:** `words`
 
-               * **型:** `String`
+               * **タイプ:** `String`
                * **値:** `stop1.txt, stop2.txt`
             * **名前:** `stop1.txt`
 
-               * **型:** `nt:file`
+               * **タイプ:** `nt:file`
             * **名前:** `stop2.txt`
 
-               * **型:** `nt:file`
+               * **タイプ:** `nt:file`
 
 
 
@@ -272,11 +272,11 @@ Oak ではバージョン 1.2.0 以降、Lucene アナライザーをサポー�
 
 filters、charFilters および tokenizers の名前は、ファクトリのサフィックスを削除したものです。つまり、次のようになります。
 
-* `org.apache.lucene.analysis.standard.StandardTokenizerFactory` becomes  `standard`
+* `org.apache.lucene.analysis.standard.StandardTokenizerFactory` 次に `standard`
 
-* `org.apache.lucene.analysis.charfilter.MappingCharFilterFactory` becomes  `Mapping`
+* `org.apache.lucene.analysis.charfilter.MappingCharFilterFactory` 次に `Mapping`
 
-* `org.apache.lucene.analysis.core.StopFilterFactory` becomes  `Stop`
+* `org.apache.lucene.analysis.core.StopFilterFactory` 次に `Stop`
 
 ファクトリに必要な設定パラメーターは、該当するノードのプロパティとして指定されます。
 
@@ -290,7 +290,7 @@ AEM での統合はリポジトリレベルで実行されるので、Solr は�
 
 Solr は、組み込みサーバーとして AEM インスタンスと共に動作するか、リモートサーバーとして動作するように設定できます。
 
-### AEM での組み込み Solr サーバーの設定  {#configuring-aem-with-an-embedded-solr-server}
+### AEM での組み込み Solr サーバーの設定 {#configuring-aem-with-an-embedded-solr-server}
 
 >[!CAUTION]
 >
@@ -300,7 +300,7 @@ AEM は、Web コンソール経由で設定可能な組み込み Solr サーバ
 
 組み込み Solr サーバーは次の手順で設定できます。
 
-1. Webコンソール(`https://serveraddress:4502/system/console/configMgr`)に移動します。
+1. Web コンソール ( ) に移動します。 `https://serveraddress:4502/system/console/configMgr`
 1. 「**Oak Solr server provider**」を検索します。
 1. 編集ボタンを押し、表示されたウィンドウのドロップダウンリストで、サーバータイプを「**Embedded Solr**」に設定します。
 
@@ -313,13 +313,13 @@ AEM は、Web コンソール経由で設定可能な組み込み Solr サーバ
 1. CRXDE を開き、Admin でログインします。
 1. **solrlndex** というノード（タイプ **oak:QueryIndexDefinition**）を **oak:index** の下に追加し、次のプロパティを設定します。
 
-   * **type:** `solr`（String型）
-   * **async:** `async`（String型）
-   * **reindex:** `true`（Boolean型）
+   * **型：** `solr`（String 型）
+   * **async:** `async`（String 型）
+   * **再インデックス：** `true`（ブール型）
 
 1. 変更内容を保存します。
 
-### AEM での単一リモート Solr サーバーの設定  {#configuring-aem-with-a-single-remote-solr-server}
+### AEM での単一リモート Solr サーバーの設定 {#configuring-aem-with-a-single-remote-solr-server}
 
 AEM は、リモート Solr サーバーインスタンスと連携するように設定することもできます。
 
@@ -335,7 +335,7 @@ AEM は、リモート Solr サーバーインスタンスと連携するよう�
    `<solrunpackdirectory>\aemsolr2\node2`
 
 1. Solr パッケージ内のサンプルインスタンスを探します。通常は、パッケージのルート内の「`example`」というフォルダーにあります。
-1. サンプルインスタンスの次のフォルダーを、2つのシャードフォルダー（ `aemsolr1\node1`と`aemsolr2\node2` ）にコピーします。
+1. 次のフォルダーをサンプルインスタンスから 2 つのシャードフォルダー ( `aemsolr1\node1` および `aemsolr2\node2`):
 
    * `contexts`
    * `etc`
@@ -366,23 +366,23 @@ AEM は、リモート Solr サーバーインスタンスと連携するよう�
    ```
 
 1. 両方のシャードが起動したら、 インターフェイスに接続し（`http://localhost:8983/solr/#/`/solr/#/）、全体的に正しく実行されているかをテストします。
-1. AEMを起動し、`http://localhost:4502/system/console/configMgr`のWebコンソールに移動します。
+1. AEMを起動し、Web コンソール ( ) に移動します。 `http://localhost:4502/system/console/configMgr`
 1. 「**Oak Solr remote server configuration**」で次の設定をおこないます。
 
-   * Solr HTTP URL:`http://localhost:8983/solr/`
+   * Solr HTTP URL: `http://localhost:8983/solr/`
 
 1. 「**Oak Solr**」サーバープロバイダーのドロップダウンリストで、「**Remote Solr**」を選択します。
 
 1. CRXDE にアクセスし、Admin でログインします。
 1. **solrIndex** という新しいノードを **oak:index** の下に作成し、次のプロパティを設定します。
 
-   * **type:**solr（String型）
-   * **async:**async（String型）
-   * **reindex:**true（Boolean型）
+   * **type:**solr （String 型）
+   * **async:**async （String 型）
+   * **reindex:**true（Boolean 型）
 
 1. 変更内容を保存します。
 
-#### Solr の推奨設定  {#recommended-configuration-for-solr}
+#### Solr の推奨設定 {#recommended-configuration-for-solr}
 
 この記事で説明した 3 つの Solr デプロイメントのすべてで使用できる基本設定のサンプルを次に示します。この基本設定は、AEM に既に存在する専用のプロパティインデックスに対応するものであり、他のアプリケーションでは使用しないでください。
 
@@ -403,7 +403,7 @@ AEM 6.1 では、AEM 6.0 の次の 2 つのインデックス作成ツールが 
 
 これらのツールの使用方法について詳しくは、[操作ダッシュボードに関するドキュメント](/help/sites-administering/operations-dashboard.md)を参照してください。
 
-#### OSGi 経由でのプロパティインデックスの作成  {#creating-property-indexes-via-osgi}
+#### OSGi 経由でのプロパティインデックスの作成 {#creating-property-indexes-via-osgi}
 
 ACS Commons パッケージは、プロパティインデックスの作成に使用できる OSGi 設定も公開しています。
 
@@ -423,7 +423,7 @@ ACS Commons パッケージは、プロパティインデックスの作成に�
 
 何らかの理由でこのツールを使用できない場合は、インデックスログを単一のファイルで収集し、そのファイルを使用して特定の問題をトラブルシューティングすることができます。
 
-#### ログの有効化  {#enable-logging}
+#### ログの有効化 {#enable-logging}
 
 ログを有効にするには、Oak インデックスおよびクエリに関連するカテゴリで **DEBUG** レベルのログを有効にする必要があります。対象のカテゴリは以下のとおりです。
 
@@ -439,7 +439,7 @@ ACS Commons パッケージは、プロパティインデックスの作成に�
 
 次の手順に従って、ログを有効にすることができます。
 
-1. ブラウザーで`https://serveraddress:port/system/console/slinglog`を参照します。
+1. ブラウザーで次の場所を指定します。 `https://serveraddress:port/system/console/slinglog`
 1. コンソールの下部にある「**Add new Logger**」ボタンをクリックします。
 
 1. 新しく作成された行で、前述のカテゴリを追加します。「**+**」記号を使用して、1 つのロガーに複数のカテゴリを追加できます。
@@ -456,17 +456,17 @@ ACS Commons パッケージは、プロパティインデックスの作成に�
 
 クエリが評価される方法には、インデックス設定が大きく影響します。分析したり、サポートに送信したりする場合は、インデックス設定を取得することが重要です。設定はコンテンツパッケージとして取得するか、JSON レンディションを取得することができます。
 
-ほとんどの場合、インデックス設定はCRXDEの`/oak:index`ノードに保存されるので、JSONバージョンは次の場所で取得できます。
+ほとんどの場合、インデックス作成の設定は `/oak:index` CRXDE のノードでは、次の場所で JSON のバージョンを取得できます。
 
 `https://serveraddress:port/oak:index.tidy.-1.json`
 
 インデックスが別の場所で設定されている場合は、その場所に従ってパスを変更してください。
 
-#### MBean 出力  {#mbean-output}
+#### MBean 出力 {#mbean-output}
 
 インデックス関連の MBean の出力を取得すると、デバッグに役立つことがあります。手順は次のとおりです。
 
-1. JMXコンソール( )に移動します。
+1. JMX コンソール ( ) に移動します。
    `https://serveraddress:port/system/console/jmx`
 
 1. 次の MBean を検索します。
@@ -485,11 +485,11 @@ ACS Commons パッケージは、プロパティインデックスの作成に�
 * `https://serveraddress:port/system/sling/monitoring/mbeans/org/apache/jackrabbit/oak/%2522LuceneIndex%2522.tidy.-1.json`
 * `https://serveraddress:port/system/sling/monitoring/mbeans/org/apache/jackrabbit/oak/%2522LuceneIndex%2522.tidy.-1.json`
 
-`https://serveraddress:port/system/sling/monitoring/mbeans/org/apache/jackrabbit/oak.tidy.3.json`を介して統合JMX出力を提供することもできます。これには、Oak関連のMBeanの詳細がすべてJSON形式で含まれます。
+また、 `https://serveraddress:port/system/sling/monitoring/mbeans/org/apache/jackrabbit/oak.tidy.3.json`.これには、Oak 関連のすべての MBean の詳細が JSON 形式で含まれます。
 
 #### その他の詳細情報 {#other-details}
 
 問題のトラブルシューティングのために、次のようなその他の情報を収集できます。
 
-1. インスタンスが実行されている Oak のバージョン。これは、CRXDEを開き、ようこそページの右下隅にあるバージョンを確認するか、`org.apache.jackrabbit.oak-core`バンドルのバージョンを確認することで確認できます。
-1. 問題のあるクエリのQueryBuilder Debugger出力。デバッガーは、次の場所からアクセスできます。`https://serveraddress:port/libs/cq/search/content/querydebug.html`
+1. インスタンスが実行されている Oak のバージョン。これを確認するには、CRXDE を開き、ようこそページの右下隅でバージョンを確認するか、 `org.apache.jackrabbit.oak-core` バンドル。
+1. 問題のあるクエリの QueryBuilder Debugger 出力。デバッガーには、次の場所からアクセスできます。 `https://serveraddress:port/libs/cq/search/content/querydebug.html`

@@ -1,6 +1,6 @@
 ---
 title: アセットのアップロード制限の設定
-description: Adobe Experience Manager Assetsを設定して、ユーザーがアップロードできるアセット（ファイル）のタイプを制限する方法について説明します。
+description: Adobe Experience Manager Assets を設定して、ユーザーがアップロードできるアセット（ファイル）のタイプを制限する方法について説明します。
 contentOwner: AG
 feature: Upload,Asset Ingestion,Asset Management
 role: Admin,Architect
@@ -14,9 +14,9 @@ ht-degree: 69%
 
 # アセットのアップロード制限の設定 {#configuring-asset-upload-restrictions}
 
-Adobe Experience Manager Assetsを設定して、ユーザーがアップロードできるアセット（ファイル）のタイプを制限できます。 この機能により、望ましくない形式のアセットや悪意のあるファイルがユーザーによってアップロードされないようにすることができます。`Day CQ DAM Asset Upload Restriction` サービスを使用すると、ユーザーがアップロードできるファイルの種類を制御できます。デフォルトでは、[!DNL Experience Manager] Assetsを使用すると、すべてのMIMEタイプのアセットのアップロードが許可されます。 ただし、アップロードを特定の MIME タイプのファイルのみに制限するようにサービスを設定できます。
+Adobe Experience Manager Assets を設定して、ユーザーがアップロードできるアセット（ファイル）のタイプを制限できます。 この機能により、望ましくない形式のアセットや悪意のあるファイルがユーザーによってアップロードされないようにすることができます。`Day CQ DAM Asset Upload Restriction` サービスを使用すると、ユーザーがアップロードできるファイルの種類を制御できます。デフォルトでは、 [!DNL Experience Manager] Assets を使用すると、すべての MIME タイプのアセットをアップロードできます。 ただし、アップロードを特定の MIME タイプのファイルのみに制限するようにサービスを設定できます。
 
-1. Configuration Manager Webコンソールを開くには、`https://[AEM_server]:[port]/system/console/configMgr`にアクセスします。
+1. Configuration Manager Web コンソールを開くには、 `https://[AEM_server]:[port]/system/console/configMgr`.
 1. **[!UICONTROL Day CQ DAM Asset Upload Restriction]** サービスを編集モードで開きます。デフォルトでは、「**Allow all MIME**」オプションがオンになっており、すべての MIME タイプのファイルのアップロードが許可されます。
 
    ![chlimage_1-378](assets/chlimage_1-378.png)

@@ -27,8 +27,8 @@ ht-degree: 72%
 * 設定（プロパティや段落など）は、親から継承される。
 * パスによって、分析ノードから参照される。
 * 簡単に拡張できる。
-* [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)など、より複雑な設定に対応する柔軟性があります。
-* 依存関係のサポート(例：[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)プラグインには[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)設定が必要です)。
+* 次のような複雑な設定に対応する柔軟性がある [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
+* 依存関係のサポート ( 例： [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) プラグインには [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 設定 )。
 
 ## 構造 {#structure}
 
@@ -106,7 +106,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 
 ### コンテンツモデル {#content-model}
 
-コンテンツモデルは、次の場所に`cq:Page`として保存されます。
+コンテンツモデルは、 `cq:Page` 以下：
 
 `/etc/cloudservices/<service-name>(/*)`
 
@@ -117,7 +117,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 /etc/cloudservices/service-name/config/inherited-config
 ```
 
-設定はサブノード`jcr:content`の下に保存されます。
+設定はサブノードの下に保存されます。 `jcr:content`.
 
 * ダイアログで定義される固定プロパティは、`jcr:node` に直接保存する必要があります。
 * （`parsys` または `iparsys` を使用する）動的要素は、サブノードを使用してコンポーネントデータを保存します。
@@ -137,7 +137,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 ### AEM の統合 {#aem-integration}
 
-使用可能なサービスは、**ページのプロパティ**&#x200B;ダイアログの「**Cloud Services**」タブ（`foundation/components/page`または`wcm/mobile/components/page`から継承するページの）に表示されます。
+使用可能なサービスのリストは、 **Cloud Services** タブ **ページプロパティ** ダイアログ ( を継承するすべてのページの `foundation/components/page` または `wcm/mobile/components/page`) をクリックします。
 
 このタブでは以下についても表示されます。
 
@@ -148,7 +148,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 サービスのユーザー資格情報を保存する際は、すべてのパスワードを暗号化する必要があります。
 
-非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。このフィールドのプロパティ名には注釈`@Encrypted`が必要です。例えば、`password`フィールドの場合、名前は次のようになります。
+非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。このフィールドには注釈が必要です `@Encrypted` プロパティ名に例： `password` フィールドの名前は次のように書き込まれます。
 
 `password@Encrypted`
 
@@ -160,7 +160,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 >[!NOTE]
 >
->デフォルトでは、`EcryptionPostProcessor`は`/etc/cloudservices`に対して行われた`POST`リクエストのみを暗号化します。
+>デフォルトでは、 `EcryptionPostProcessor` 暗号化のみ `POST` に対するリクエスト `/etc/cloudservices`.
 
 #### サービスページの jcr:content ノード用の追加プロパティ {#additional-properties-for-service-page-jcr-content-nodes}
 
@@ -172,7 +172,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
   </tr> 
   <tr> 
    <td>componentReference</td> 
-   <td>コンポーネントへの参照パスをページに自動的に含めます。<br />追加機能および JS インクルージョンに使用されます。<br /> これには、が含まれるページ上のコン<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> ポーネントが含まれます(通常はタグの前 <code>body</code> にあります)。<br /> AnalyticsとTargetの場合は、これを使用して、訪問者の行動を追跡するJavaScript呼び出しなどの追加機能を含めます。</td> 
+   <td>コンポーネントへの参照パスをページに自動的に含めます。<br />追加機能および JS インクルージョンに使用されます。<br /> これには、ページ上のコンポーネントが含まれます。<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> が含まれる ( 通常は <code>body</code> タグ ) を使用します。<br /> Analytics および Target の場合は、これを使用して、訪問者の行動を追跡する JavaScript 呼び出しなどの追加機能を含めます。</td> 
   </tr> 
   <tr> 
    <td>description</td> 

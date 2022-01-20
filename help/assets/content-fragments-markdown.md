@@ -2,7 +2,7 @@
 title: Markdown
 seo-title: Markdown
 description: オーサリング中に、コンテンツフラグメントエディターは Markdown 構文を使用してユーザーがコンテンツを簡単に記述できるようにします。
-seo-description: オーサリング中に、コンテンツフラグメントエディターは Markdown 構文を使用してユーザーがコンテンツを簡単に記述できるようにします。
+seo-description: When you are authoring, the content fragment editor uses markdown syntax to allow you to easily write content.
 uuid: 12b185a5-3d87-4d7c-8d09-8cc2726009a8
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,12 +10,12 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: bde54663-9050-4a5a-93cb-7cd84ac7f071
 exl-id: 209f0e02-b883-4104-8358-01cab15e5db2
-feature: コンテンツフラグメント
+feature: Content Fragments
 role: User
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 95%
+source-wordcount: '535'
+ht-degree: 97%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 95%
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)以降のアプリケーション](/help/release-notes/sp-release-notes.md)が必要です。
+>一部のコンテンツフラグメント機能には、 [AEM 6.4 Service Pack 2(6.4.2.0) 以降](/help/release-notes/sp-release-notes.md).
 
 [オーサリング](content-fragments-variations.md#authoring-your-content)中に、コンテンツフラグメントエディターは *Markdown* 構文を使用してユーザーがコンテンツを簡単に記述できるようにします。
 
@@ -177,7 +177,7 @@ ht-degree: 95%
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-コードの範囲を示すには、逆引用符(&amp;grave;)で囲みます。 事前に書式設定されたコードブロックとは異なり、コード範囲は通常の段落内のコードを示します。
+コードの範囲を示すには、バッククォート（&amp;grave;）で囲みます。事前に書式設定されたコードブロックとは異なり、コード範囲は通常の段落内のコードを示します。
 
 次に例を示します。
 

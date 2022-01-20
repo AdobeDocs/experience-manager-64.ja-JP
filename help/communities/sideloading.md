@@ -1,8 +1,8 @@
 ---
 title: コンポーネントのサイドローディング
-seo-title: コンポーネントのサイドローディング
+seo-title: Component Sideloading
 description: コミュニティコンポーネントのサイドローディングは、Web ページが、サイト訪問者の選択に応じて表示内容が動的に変わる単純なシングルページアプリケーションとして設計されている場合に便利です
-seo-description: コミュニティコンポーネントのサイドローディングは、Web ページが、サイト訪問者の選択に応じて表示内容が動的に変わる単純なシングルページアプリケーションとして設計されている場合に便利です
+seo-description: Communities component sideloading is useful when a web page is designed as a simple, single page app that dynamically alters what is displayed depending on what is selected by the site visitor
 uuid: 8c9a5fde-26a3-4610-bc14-f8b665059015
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
 exl-id: 12fdc503-29b6-4970-a883-c22162f7a9eb
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 80%
+source-wordcount: '405'
+ht-degree: 78%
 
 ---
 
@@ -25,18 +25,18 @@ ht-degree: 80%
 
 これは、コミュニティコンポーネントがページテンプレートに存在せず、サイト訪問者の選択後に動的に追加される場合に実現されます。
 
-ソーシャルコンポーネントフレームワーク（SCF）は軽量なので、初期ページロード時に存在する SCF コンポーネントのみが登録されます。ページの読み込み後に動的に追加されるSCFコンポーネントを登録するには、SCFを呼び出してコンポーネントを「サイドロード」する必要があります。
+ソーシャルコンポーネントフレームワーク（SCF）は軽量なので、初期ページロード時に存在する SCF コンポーネントのみが登録されます。ページの読み込み後に動的に追加された SCF コンポーネントを登録するには、SCF を呼び出してコンポーネントを「サイドロード」する必要があります。
 
 コミュニティコンポーネントをサイドローディングするようページが設計されている場合、ページ全体をキャッシュすることができます。
 
 SCF コンポーネントを動的に追加する手順は、次のとおりです。
 
-1. [DOMにコンポーネントを追加する](#dynamically-add-component-to-dom)
+1. [DOM にコンポーネントを追加します。](#dynamically-add-component-to-dom)
 
-1. [次の2つの方法のい](#sideload-by-invoking-scf) ずれかを使用して、コンポーネントをサイドロードします。
+1. [コンポーネントをサイドロード](#sideload-by-invoking-scf) 次の 2 つの方法のいずれかを使用します。
 
-* [動的な組み込み](#dynamic-inclusion)
-   * 動的に追加されるすべてのコンポーネントをブーストラップする
+* [動的な追加](#dynamic-inclusion)
+   * 動的に追加されたすべてのコンポーネントをブーストラップ
 * [動的な読み込み](#dynamic-loading)
    * 特定のコンポーネントをオンデマンドで追加
 
@@ -44,19 +44,19 @@ SCF コンポーネントを動的に追加する手順は、次のとおりで�
 >
 >[存在しないリソース](scf.md#add-or-include-a-communities-component)のサイドローディングはサポートされていません。
 
-## DOM に対するコンポーネントの動的な追加  {#dynamically-add-component-to-dom}
+## DOM に対するコンポーネントの動的な追加 {#dynamically-add-component-to-dom}
 
 動的なインクルードの場合も動的なロードの場合も、最初にコンポーネントを DOM に追加する必要があります。
 
-SCF コンポーネントを追加する際に最もよく使用されるタグは DIV タグですが、他のタグを使用することもできます。SCFはページが最初に読み込まれるときにのみDOMを調べるので、SCFが明示的に呼び出されるまで、DOMへのこの追加は無視されます。
+SCF コンポーネントを追加する際に最もよく使用されるタグは DIV タグですが、他のタグを使用することもできます。SCF はページが最初に読み込まれたときにのみ DOM を調べるので、SCF が明示的に呼び出されるまで、DOM へのこの追加は無視されます。
 
 どのタグを使用する場合も、最低限、要素が通常の SCF ルート要素パターンに準拠している必要があります。そのためには、次の 2 つの属性を含めます。
 
-* **data-component-id追加さ**
-れたコンポーネントへの有効なパス
+* **data-component-id**
+追加されたコンポーネントへの有効なパス
 
-* **data-scf-**
-componentコンポーネントのresourceType
+* **data-scf-component**
+コンポーネントの resourceType
 
 以下に示すのは、追加されるコメントコンポーネントの例です。
 
@@ -79,7 +79,7 @@ componentコンポーネントのresourceType
 
 $(document).trigger(SCF.events.BOOTSTRAP_REQUEST);
 
-### 動的なロード  {#dynamic-loading}
+### 動的なロード {#dynamic-loading}
 
 動的なロードでは、ロードする SCF コンポーネントを制御できます。
 

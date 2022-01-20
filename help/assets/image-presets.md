@@ -1,8 +1,8 @@
 ---
 title: Dynamic Media画像プリセットの適用
-seo-title: Dynamic Media画像プリセットの適用
+seo-title: Applying Dynamic Media image presets
 description: Dynamic Media での画像プリセットの適用方法を説明します
-seo-description: Dynamic Media での画像プリセットの適用方法を説明します
+seo-description: Learn how to apply image presets in Dynamic Media
 uuid: 8bafcbd0-6df0-4d5b-b2f7-116ddb4ec060
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,12 +10,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 exl-id: 07a4f315-a60e-456b-b02d-035b3f6ad9ad
-feature: 画像プリセット
+feature: Image Presets
 role: User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 90%
+source-wordcount: '313'
+ht-degree: 91%
 
 ---
 
@@ -33,16 +33,15 @@ ht-degree: 90%
 
 作成者は画像をプレビューするときに、いつでも画像プリセットを適用できます。
 
-**Dynamic Media画像プリセットを適用するには**:
+**Dynamic Media画像プリセットを適用するには：**:
 
 1. アセットを開き、左側のレールでドロップダウンメニューをタップして、「**[!UICONTROL レンディション]**」をタップします。
 
    >[!NOTE]
    >
    >* 静的レンディションは、パネルの上半分に表示されます。 動的レンディションは下半分に表示されます。動的レンディションのみの場合は、URL を使用して画像を表示できます。「**[!UICONTROL URL]**」ボタンは、動的レンディションを選択した場合にのみ表示されます。「**[!UICONTROL RESS]**」ボタンは、レスポンシブ画像プリセットを選択した場合にのみ表示されます。
-      >
-      >
-   * アセットの詳細表示で「**[!UICONTROL レンディション]**」を選択すると、多数のレンディションがシステムによって表示されます。表示されるプリセットの数を増やすことができます。[表示される画像プリセット数の引き上げ](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)を参照してください。
+   >
+   >* アセットの詳細表示で「**[!UICONTROL レンディション]**」を選択すると、多数のレンディションがシステムによって表示されます。表示されるプリセットの数を増やすことができます。[表示される画像プリセット数の引き上げ](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)を参照してください。
 
 
    ![chlimage_1-208](assets/chlimage_1-208.png)

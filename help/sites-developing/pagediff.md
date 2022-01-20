@@ -1,8 +1,8 @@
 ---
 title: 開発とページの差分
-seo-title: 開発とページの差分
+seo-title: Developing and Page Diff
 description: 開発とページの差分
-seo-description: 'null'
+seo-description: null
 uuid: 48bbeca3-fe16-48ef-bb4d-ac605fe0ca76
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 13e8cbef-698f-4e69-9f8c-f9bee82e9fd1
 exl-id: 365e944d-d8a3-4f4e-8925-88629845232f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '479'
 ht-degree: 73%
 
 ---
@@ -33,19 +33,19 @@ ht-degree: 73%
 
 AEMパッチレベルに応じて、動作は異なり、正しく機能するために特定の権限が必要になる場合があります。
 
-### AEM 6.4.3より前{#prior-to-aem}
+### AEM 6.4.3 以前 {#prior-to-aem}
 
 コンテンツを比較すると、比較対象のページまでのツリー全体が次の場所に再作成されます。
 
 `/content/versionhistory/<userId>/<site structure>`
 
-ページの差分メカニズムを使用する場合、AEMでは以前のバージョンのページが再作成されるので、この機能を使用するには、特定のJCR権限が必要です。
+ページの差分メカニズムを使用する場合、AEMでは以前のバージョンのページが再作成されるので、この機能を使用するには、特定の JCR 権限が必要です。
 
 >[!CAUTION]
 >
->ページの差分機能を使用するには、ユーザーがノード`/content/versionhistory`に対して&#x200B;**変更/作成/削除**&#x200B;権限を持っている必要があります。
+>ページの差分機能を使用するには、 **変更/作成/削除** ノードに対する権限 `/content/versionhistory`.
 
-### AEM 6.4.3の時点{#as-of-aem}
+### AEM 6.4.3 以降 {#as-of-aem}
 
 コンテンツを比較すると、比較対象のページまでのツリー全体が次の場所に再作成されます。
 
@@ -57,7 +57,7 @@ AEMパッチレベルに応じて、動作は異なり、正しく機能する�
 
 ## 開発者の制限事項 {#developer-limitations}
 
-以前は、クラシックUIでは、AEMの違いを容易にするために、開発に関する特別な考慮が必要でした（`cq:text`タグライブラリの使用や、`DiffService` OSGiサービスのコンポーネントへの統合など）。 新しい差分機能ではこのような考慮は必要なくなりました。差分は DOM 比較を介してクライアント側で実行されるからです。
+以前は、クラシック UI では、AEMの違い ( `cq:text` タグ lib またはカスタム統合 `DiffService` OSGi サービスをコンポーネントに組み込む )。 新しい差分機能ではこのような考慮は必要なくなりました。差分は DOM 比較を介してクライアント側で実行されるからです。
 
 ただし、開発者が考慮する必要がある制限事項はいくつかあります。
 

@@ -1,8 +1,8 @@
 ---
 title: オーサリング時の AEM のトラブルシューティング
-seo-title: オーサリング時の AEM のトラブルシューティング
+seo-title: Troubleshooting AEM when Authoring
 description: ここでは、AEM の使用時に発生する可能性のあるいくつかの問題を取り上げます。また、それらのトラブルシューティング方法に関する推奨事項についても説明します。
-seo-description: ここでは、AEM の使用時に発生する可能性のあるいくつかの問題を取り上げます。また、それらのトラブルシューティング方法に関する推奨事項についても説明します。
+seo-description: The following section covers some issues that you might encounter when using AEM, together with suggestions on how to troubleshoot them.
 uuid: eb95e5ba-1eed-4ffb-80c1-9b8468820c22
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 9b492b17-9029-46ae-9dc0-bb21e6b484df
 exl-id: 09409631-c579-4b1f-9193-1348896f6a09
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 91%
+source-wordcount: '430'
+ht-degree: 90%
 
 ---
 
@@ -70,11 +70,11 @@ ht-degree: 91%
 
 * **問題:**
 
-   * **検索と置換**&#x200B;オプションを使用すると、`find`用語のすべてのインスタンスがページ上で置き換えられない場合があります。
+   * を使用する場合、 **検索と置換** オプションは、 `find` 用語がページ上で置き換えられます。
 
 * **理由**:
 
-   * **検索と置換**&#x200B;の機能は、コンテンツの保存方法と、コンテンツを検索できるかどうかによって異なります。 例えば、ブログテキストは `jcr:text` プロパティに格納されますが、このプロパティは検索対象として設定されません。検索と置換サーブレットのデフォルトのスコープには、以下のプロパティが含まれます。
+   * の機能 **検索と置換** コンテンツの保存方法と検索可能かどうかによって異なります。 例えば、ブログテキストは `jcr:text` プロパティに格納されますが、このプロパティは検索対象として設定されません。検索と置換サーブレットのデフォルトのスコープには、以下のプロパティが含まれます。
 
       * `jcr:title`
       * `jcr:description`

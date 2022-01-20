@@ -4,20 +4,20 @@ product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.4 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
-user-guide-description: AEM プロジェクトの管理方法について学びます。
-feature: デプロイ
+user-guide-description: AEM プロジェクトの管理方法について説明します。
+feature: Deploying
 role: User
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 93%
+source-wordcount: '72'
+ht-degree: 97%
 
 ---
 
 
 # AEM 6.4 管理ユーザーガイド {#managing}
 
-+ [管理ユーザーガイド](home.md)
++ [ユーザーガイドの管理](home.md)
 + 管理 - ベストプラクティスチェックリスト {#managing-best-practices-checklist}
    + [プロジェクトの管理 - ベストプラクティスチェックリスト](best-practices.md)
    + [チェックリスト](best-practices-checklist.md)
@@ -30,5 +30,5 @@ ht-degree: 93%
 + アクセシビリティ {#accessibility}
    + [AEM と Web アクセシビリティのガイドライン](web-accessibility.md)
    + [WCAG 2.0 クイックガイド](qg-wcag.md)
-+ データ保護{#data-protection}
++ データ保護 {#data-protection}
    + [データ保護およびデータプライバシーに関する規制に対する AEM の対応](data-protection-and-privacy.md)

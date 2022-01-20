@@ -1,8 +1,8 @@
 ---
 title: XFA または PDF フォームテンプレートのダウンロード
-seo-title: XFA または PDF フォームテンプレートのダウンロード
+seo-title: Download an XFA or a PDF form template
 description: リポジトリからローカルシステムへとフォームをエクスポートし、ダウンロードされたフォームを新しいリポジトリに移行することができます。
-seo-description: リポジトリからローカルシステムへとフォームをエクスポートし、ダウンロードされたフォームを新しいリポジトリに移行することができます。
+seo-description: You can export forms from the repository to the local system and migrate the downloaded forms to new repository.
 uuid: 5f7fbd14-cb9d-4749-8708-7efe49df89d7
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -12,8 +12,8 @@ role: Admin
 exl-id: 68d881c6-7507-4018-b40e-205604221d0c
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 88%
+source-wordcount: '313'
+ht-degree: 87%
 
 ---
 
@@ -29,7 +29,7 @@ AEM Forms では、ダウンロード操作は次のアセットタイプに対�
 
 AEM Forms では、これらのフォームタイプを個別にダウンロードするか、サポートされているフォームを 1 つまたは複数含むフォルダでダウンロードすることができます。
 
-これらのアセットの他に、フォルダー内に存在する場合は`Resource`タイプのアセットをダウンロードできます。 この機能は、XFA フォームによって参照されているリソースを、フォームとともにダウンロードできるようにするためのものです。
+これらのアセットの他に、 `Resource` アセットがフォルダー内に存在する場合は、そのアセットのタイプ。 この機能は、XFA フォームによって参照されているリソースを、フォームとともにダウンロードできるようにするためのものです。
 
 ## 1 つまたは複数のフォームのダウンロード {#download-one-or-more-forms}
 
@@ -37,7 +37,7 @@ AEM Forms では、これらのフォームタイプを個別にダウンロー�
 
 1. ダウンロードしたいアセットの場所に移動します。
 
-1. アセットを選択します。ツールバーの&#x200B;**** ![aem6forms_download](assets/aem6forms_download.png)アイコンをクリックします。
+1. アセットを選択します。次をクリック： **[!UICONTROL ダウンロード]** ![aem6forms_download](assets/aem6forms_download.png) アイコンをクリックします。
 
    >[!NOTE]
    >
@@ -49,7 +49,7 @@ AEM Forms では、これらのフォームタイプを個別にダウンロー�
 
    フォルダーをダウンロードする場合、フォルダー内のサポートされているアセットが、既存の階層にダウンロードされます。
 
-   ZIPファイルは、システム上の`Downloads`フォルダーに保存されます。
+   ZIP ファイルは、 `Downloads` フォルダーを設定します。
 
 ## アップロード操作に関する考慮事項 {#related-considerations-for-the-upload-operation}
 

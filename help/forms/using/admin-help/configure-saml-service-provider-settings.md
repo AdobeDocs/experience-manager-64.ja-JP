@@ -1,8 +1,8 @@
 ---
 title: SAML サービスプロバイダーの設定
-seo-title: SAML サービスプロバイダーの設定
+seo-title: Configure SAML service provider settings
 description: ユーザーが指定したサードパーティの ID プロバイダー（IDP）経由で AEM Forms にログインして認証できるように、SAML を認証プロバイダーとして設定できます。
-seo-description: ユーザーが指定したサードパーティの ID プロバイダー（IDP）経由で AEM Forms にログインして認証できるように、SAML を認証プロバイダーとして設定できます。
+seo-description: You can configure SAML service provider settings to allow users to login and authenticate to AEM forms via a specified third-party identity provider (IDP).
 uuid: 14c706ad-8b1c-4c03-9cd4-97424f2162bc
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 1169d0d1-cbfb-486b-acca-9b9de3d410dc
 exl-id: 7f80d46e-4ecd-4c29-abb5-949e2d429841
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '599'
 ht-degree: 98%
 
 ---

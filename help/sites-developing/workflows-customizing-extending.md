@@ -1,8 +1,8 @@
 ---
 title: ワークフロー機能の拡張
-seo-title: ワークフロー機能の拡張
+seo-title: Extending Workflow Functionality
 description: ワークフロー機能の拡張
-seo-description: 'null'
+seo-description: null
 uuid: 9f4ea2a8-8b21-4e7c-ac73-dd37d9ada111
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: e7b368b4-2fcd-43bc-b59f-ab4ba6b61f0d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '3586'
+source-wordcount: '3582'
 ht-degree: 67%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 67%
 
 [プログラムおよびスクリプトからワークフローを操作](/help/sites-developing/workflows-program-interaction.md)することもできます。
 
-## ワークフローステップコンポーネント - 基本  {#workflow-step-components-the-basics}
+## ワークフローステップコンポーネント - 基本 {#workflow-step-components-the-basics}
 
 ワークフローステップコンポーネントは、ワークフローモデルの作成時にステップの外観と動作を定義するものです。
 
@@ -37,7 +37,7 @@ ht-degree: 67%
 * コンポーネントのプロパティを設定する編集ダイアログ
 * 実行時に実行されるサービスまたはスクリプト
 
-[他のあらゆるコンポーネント](/help/sites-developing/components.md)と同様、ワークフローステップコンポーネントは、`sling:resourceSuperType` プロパティに指定されたコンポーネントから継承します。次の図は、すべてのワークフローステップコンポーネントの基礎を形成する `cq:component` ノードの階層を示しています。この図には、カスタムステップコンポーネントを開発する最も一般的な（かつ基本的な）出発点である、**プロセスステップ**、**参加者ステップ**、**動的参加者ステップ**&#x200B;の各コンポーネントも含まれています。
+[他のあらゆるコンポーネント](/help/sites-developing/components.md)と同様、ワークフローステップコンポーネントは、`sling:resourceSuperType` プロパティに指定されたコンポーネントから継承します。次の図は、すべてのワークフローステップコンポーネントの基礎を形成する `cq:component` ノードの階層を示しています。この図には、 **処理ステップ**, **参加者ステップ**、および **動的参加者ステップ** コンポーネントは、カスタムステップコンポーネントを開発するための最も一般的な（および基本的な）出発点です。
 
 ![aem_wf_componentinherit](assets/aem_wf_componentinherit.png)
 
@@ -49,15 +49,15 @@ ht-degree: 67%
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. 必要な項目（`/libs`内の`/apps`内に存在）を再作成します。
+>1. 必要な項目（内に存在）を再作成します。 `/libs` under `/apps`
 >2. `/apps` 内で変更作業をおこないます。
 
 
-`/libs/cq/workflow/components/model/step`コンポーネントは、**プロセスステップ**、**参加者ステップ**&#x200B;および&#x200B;**動的参加者ステップ**&#x200B;の最も近い共通の上位要素です。これらはすべて次の項目を継承します。
+この `/libs/cq/workflow/components/model/step` コンポーネントは、 **処理ステップ**, **参加者ステップ**、および **動的参加者ステップ**（すべて次の項目を継承）
 
 * `step.jsp`
 
-   `step.jsp`スクリプトは、ステップコンポーネントをモデルに追加すると、そのタイトルをレンダリングします。
+   この `step.jsp` スクリプトは、ステップコンポーネントをモデルに追加すると、そのタイトルをレンダリングします。
 
    ![wf-22-1](assets/wf-22-1.png)
 
@@ -74,13 +74,13 @@ ht-degree: 67%
    >
    >ステップコンポーネントの編集ダイアログのタブがこのデフォルトの外観と一致しない場合、ステップコンポーネントには、これらの継承されたタブをオーバーライドするスクリプト、ノードプロパティまたはダイアログタブが定義されています。
 
-### ECMA スクリプト  {#ecma-scripts}
+### ECMA スクリプト {#ecma-scripts}
 
-ECMAスクリプト内では、次のオブジェクトを使用できます（ステップのタイプに応じて異なります）。
+ECMA スクリプト内では、次のオブジェクトが（ステップのタイプに応じて）使用可能です。
 
-* [](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkItem.html) WorkItemworkItem
-* [](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/WorkflowSession.html) WorkflowSessionworkflowSession
-* [](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowData.html) WorkflowDataworkflowData
+* [WorkItem](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkItem.html) workItem
+* [WorkflowSession](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/WorkflowSession.html) workflowSession
+* [WorkflowData](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/workflow/exec/WorkflowData.html) workflowData
 * `args`：プロセスの引数を格納する配列
 
 * `sling`：他の OSGi サービスへのアクセス用
@@ -90,11 +90,11 @@ ECMAスクリプト内では、次のオブジェクトを使用できます（�
 
 ワークフローメタデータを使用すると、ワークフローの有効期間中に必要とされる情報を保持できます。ワークフローステップの一般的な要件は、そのワークフローで以降に使用するデータを保持したり、保持されているデータを取得することです。
 
-MetaDataMapオブジェクトには、`Workflow`、`WorkflowData`、`WorkItem`の3つのタイプがあります。 メタデータを保存する目的はすべて同じです。
+MetaDataMap オブジェクトには次の 3 種類があります。 `Workflow`, `WorkflowData` および `WorkItem` オブジェクト。 メタデータを保存する目的は、すべて同じです。
 
 WorkItem には、作業項目（ステップなど）の実行中にのみ使用できる固有の MetaDataMap があります。
 
-`Workflow`と`WorkflowData`のメタデータマップは、両方ともワークフロー全体で共有されます。 このような場合は、`WorkflowData` MetaDataMap だけを使用することをお勧めします。
+両方 `Workflow` および `WorkflowData` メタデータマップは、ワークフロー全体で共有されます。 このような場合は、`WorkflowData` MetaDataMap だけを使用することをお勧めします。
 
 ## カスタムワークフローステップコンポーネントの作成 {#creating-custom-workflow-step-components}
 
@@ -123,27 +123,26 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
 >* `./jcr:description`場所：
 
 >
->  
-この要件は、`/libs/cq/flow/components/step/step`コンポーネントが実装する「共通」タブを編集ダイアログで使用する場合に満たされます。
+>  この要件を満たすには、編集ダイアログで「共通」タブを使用し、 `/libs/cq/flow/components/step/step` コンポーネントが実装されます。
 >
->* ステップコンポーネントまたはコンポーネントの上位ページは、`/libs/cq/flow/components/step/step`コンポーネントが実装する`step.jsp`スクリプトを上書きしません。
+>* ステップコンポーネントまたはコンポーネントの上位ページは、 `step.jsp` スクリプトを `/libs/cq/flow/components/step/step` コンポーネントが実装されます。
 
 
-1. `cq:Component`ノードの下に、次のノードを追加します。
+1. 以下の `cq:Component` ノードに次のノードを追加します。
 
    * 名前：`cq:editConfig`
    * 型：`cq:EditConfig`
 
    >[!NOTE]
    >
-   >cq:editConfigノードについて詳しくは、[コンポーネントの編集動作の設定](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)を参照してください。
+   >cq:editConfig ノードについて詳しくは、 [コンポーネントの編集動作の設定](/help/sites-developing/developing-components.md#configuring-the-edit-behavior).
 
-1. `cq:EditConfig`ノードの下に、次のノードを追加します。
+1. 以下の `cq:EditConfig` ノードに次のノードを追加します。
 
    * 名前：`cq:formParameters`
    * 型：`nt:unstructured`
 
-1. 次の名前の`String`プロパティを`cq:formParameters`ノードに追加します。
+1. 追加 `String` 次の名前のプロパティを `cq:formParameters` ノード：
 
    * `jcr:title`：この値が「**共通**」タブの「**タイトル**」フィールドに設定されます。
    * `jcr:description`：この値が「**共通**」タブの「**説明**」フィールドに設定されます。
@@ -154,7 +153,7 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
 >
 >[データの保持とアクセス](#persisting-and-accessing-data)を参照してください。特に、実行時のプロパティ値へのアクセスについては、[実行時のダイアログプロパティ値へのアクセス](#accessing-dialog-property-values-at-runtime)を参照してください。
 
-`cq:Widget` 項目の name プロパティで、ウィジェットの値を保存する JCR ノードを指定します。ワークフローステップコンポーネントのダイアログ内のウィジェットが`./metaData`ノードの下に値を保存すると、その値がワークフロー`MetaDataMap`に追加されます。
+`cq:Widget` 項目の name プロパティで、ウィジェットの値を保存する JCR ノードを指定します。ワークフローステップコンポーネントのダイアログ内のウィジェットが `./metaData` ノードに値を追加すると、ワークフローに値が追加されます `MetaDataMap`.
 
 例えば、ダイアログのテキストフィールドは、次のプロパティを持つ `cq:Widget` ノードです。
 
@@ -164,15 +163,15 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
 | `name` | `String` | `./metaData/subject` |
 | `fieldLabel` | `String` | `Email Subject` |
 
-このテキストフィールドに指定された値がワークフローインスタンスの` [MetaDataMap](#metadatamaps)`オブジェクトに追加され、`subject`キーに関連付けられます。
+このテキストフィールドで指定された値が、ワークフローインスタンスの ` [MetaDataMap](#metadatamaps)` オブジェクトに関連付けられ、 `subject` キー。
 
 >[!NOTE]
 >
 >キーが `PROCESS_ARGS` の場合、この値は `args` 変数を使用して ECMA スクリプト実装ですぐに使用できます。この場合、name プロパティの値は `./metaData/PROCESS_ARGS.`
 
-### Overriding the Step Implementation {#overriding-the-step-implementation}
+### ステップ実装のオーバーライド {#overriding-the-step-implementation}
 
-各ベースステップコンポーネントを使用すると、ワークフローモデル開発者は、デザイン時に次の主要機能を設定できます。
+各基本ステップコンポーネントを使用すると、ワークフローモデル開発者は、デザイン時に次の主要機能を設定できます。
 
 * プロセスステップ：実行時に実行されるサービスまたは ECMA スクリプト。
 * 参加者ステップ：生成された作業項目を割り当てるユーザーの ID。
@@ -192,7 +191,7 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
    * 名前：`cq:formParameters`
    * 型：`nt:unstructured`
 
-1. `String`プロパティを`cq:formParameters`ノードに追加します。 コンポーネントのスーパータイプによって、プロパティの名前が次のように決定されます。
+1. を追加します。 `String` プロパティを `cq:formParameters` ノード。 コンポーネントのスーパータイプによって、プロパティの名前が次のように決定されます。
 
    * プロセスステップ: `PROCESS`
    * Participant Step: `PARTICIPANT`
@@ -202,25 +201,25 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
 
    * `PROCESS`：ステップの動作を実装する ECMA スクリプトへのパスまたはサービスの PID。
    * `PARTICIPANT`：作業項目を割り当てるユーザーの ID。
-   * `DYNAMIC_PARTICIPANT`:作業項目を割り当てるユーザーを選択するECMAスクリプトへのパスまたはサービスのPID。
+   * `DYNAMIC_PARTICIPANT`:作業項目を割り当てるユーザーを選択する ECMA スクリプトへのパスまたはサービスの PID。
 
 1. モデル開発者がプロパティ値を変更できないようにするために、コンポーネントのスーパータイプのダイアログをオーバーライドします。
 
 ### フォームとダイアログを参加者ステップに追加 {#adding-forms-and-dialogs-to-participant-steps}
 
-参加者ステップコンポーネントをカスタマイズして、[フォーム参加者ステップ](/help/sites-developing/workflows-step-ref.md#form-participant-step)および[ダイアログ参加者ステップ](/help/sites-developing/workflows-step-ref.md#dialog-participant-step)コンポーネントに含まれる機能を提供します。
+参加者ステップコンポーネントをカスタマイズして、 [フォーム参加者ステップ](/help/sites-developing/workflows-step-ref.md#form-participant-step) および [ダイアログ参加者ステップ](/help/sites-developing/workflows-step-ref.md#dialog-participant-step) コンポーネント：
 
 * 生成された作業項目を開いたときに、フォームを表示する
 * 生成された作業項目を完了したときに、カスタムダイアログを表示する
 
-新しいコンポーネントで次の手順を実行します（[カスタムワークフローステップコンポーネントの作成](#creating-custom-workflow-step-components)を参照）。
+新しいコンポーネントで次の手順を実行します ( [カスタムワークフローステップコンポーネントの作成](#creating-custom-workflow-step-components)):
 
-1. `cq:Component`ノードの下に、次のノードを追加します。
+1. 以下の `cq:Component` ノードに次のノードを追加します。
 
    * 名前：`cq:editConfig`
    * 型：`cq:EditConfig`
 
-   cq:editConfigノードについて詳しくは、[コンポーネントの編集動作の設定](/help/sites-developing/components-basics.md#edit-behavior)を参照してください。
+   cq:editConfig ノードについて詳しくは、 [コンポーネントの編集動作の設定](/help/sites-developing/components-basics.md#edit-behavior).
 
 1. cq:EditConfig ノードの下に、次のノードを追加します。
 
@@ -239,16 +238,16 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
    * 型：`String`
    * 値：ダイアログに解決されるパス
 
-### ワークフローステップの実行時の動作の設定  {#configuring-the-workflow-step-runtime-behavior}
+### ワークフローステップの実行時の動作の設定 {#configuring-the-workflow-step-runtime-behavior}
 
-`cq:Component`ノードの下に`cq:EditConfig`ノードを追加します。 その下に`nt:unstructured`ノード（`cq:formParameters`という名前が必要）を追加し、そのノードに次のプロパティを追加します。
+以下の `cq:Component` ノード、 `cq:EditConfig` ノード。 の下に、 `nt:unstructured` ノード ( `cq:formParameters`) とそのノードに、次のプロパティを追加します。
 
 * 名前：`PROCESS_AUTO_ADVANCE`
 
    * 型：`Boolean`
    * 値:
 
-      * `true`に設定すると、ワークフローはそのステップを実行して続行します。これはデフォルトで、推奨されます。
+      * 設定されている場合 `true` ワークフローはそのステップを実行して続行します。これはデフォルトで、推奨されます。
       * `false` に設定した場合、ワークフローはそのステップを実行して停止します。これには追加の処理が必要なので、`true` に設定することをお勧めします。
 
 * 名前：`DO_NOTIFY`
@@ -262,7 +261,7 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
 
 ワークフローメタデータを使用して、ワークフローの有効期間中およびステップの間で必要とされる情報を保持できます。ワークフローステップの一般的な要件は、以降に使用するデータを保持したり、以前のステップから保持されているデータを取得したりすることです。
 
-ワークフローメタデータは、[`MetaDataMap`](#metadatamaps) オブジェクトに保存されます。Java APIは、適切な`MetaDataMap`オブジェクトを提供する[`WorkflowData`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html)オブジェクトを返す[`Workflow.getWorkflowData`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html)メソッドを提供します。 この`WorkflowData` `MetaDataMap`オブジェクトは、ステップコンポーネントのOSGiサービスまたはECMAスクリプトで使用できます。
+ワークフローメタデータは、[`MetaDataMap`](#metadatamaps) オブジェクトに保存されます。Java API は、 [`Workflow.getWorkflowData`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html) 返すメソッド [`WorkflowData`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html) 適切な `MetaDataMap` オブジェクト。 この `WorkflowData` `MetaDataMap` オブジェクトは、ステップコンポーネントの OSGi サービスまたは ECMA スクリプトで使用できます。
 
 #### Java {#java}
 
@@ -284,7 +283,7 @@ public void execute(WorkItem item, WorkflowSession session, MetaDataMap args) th
 }
 ```
 
-#### ECMA スクリプト  {#ecma-script}
+#### ECMA スクリプト {#ecma-script}
 
 `graniteWorkItem` 変数は、現在の `WorkItem` Java オブジェクトの ECMA スクリプト表現です。したがって、`graniteWorkItem` 変数を使用して、ワークフローメタデータを取得できます。次の ECMA スクリプトを使用すると、ワークフローの **オブジェクトに項目を追加してから各項目を記録する**&#x200B;プロセスステップ`MetaDataMap`を実装できます。その後、これらの項目は、ワークフローの後続のステップで使用できます。
 
@@ -306,7 +305,7 @@ while (iterator.hasNext()){
 }
 ```
 
-### 実行時のダイアログプロパティ値へのアクセス  {#accessing-dialog-property-values-at-runtime}
+### 実行時のダイアログプロパティ値へのアクセス {#accessing-dialog-property-values-at-runtime}
 
 ワークフローインスタンスの `MetaDataMap` オブジェクトは、ワークフローの有効期間全体を通じてデータを保存および取得する場合に役立ちます。ワークフローステップコンポーネントの実装では、特に実行時のコンポーネントプロパティ値を取得するときに `MetaDataMap` が役立ちます。
 
@@ -316,21 +315,21 @@ while (iterator.hasNext()){
 
 ワークフローの `MetaDataMap` は、Java および ECMA スクリプトプロセス実装で次のように使用できます。
 
-* WorkflowProcessインターフェイスのJava実装では、`args`パラメーターはワークフローの`MetaDataMap`オブジェクトです。
+* WorkflowProcess インターフェイスの Java 実装では、 `args` パラメータは `MetaDataMap` オブジェクトを使用します。
 
-* ECMAスクリプト実装では、値は`args`変数と`metadata`変数を使用して使用できます。
+* ECMA スクリプト実装では、値は `args` および `metadata` 変数。
 
 ### 例：プロセスステップコンポーネントの引数の取得 {#example-retrieving-the-arguments-of-the-process-step-component}
 
-**プロセスステップ**&#x200B;コンポーネントの編集ダイアログには、**Arguments** プロパティが含まれます。**Arguments**&#x200B;プロパティの値は、ワークフローメタデータに保存され、`PROCESS_ARGS`キーに関連付けられます。
+**プロセスステップ**&#x200B;コンポーネントの編集ダイアログには、**Arguments** プロパティが含まれます。の値 **引数** プロパティはワークフローメタデータに保存され、 `PROCESS_ARGS` キー。
 
-次の図では、**Arguments**&#x200B;プロパティの値は`argument1, argument2`です。
+次の図では、 **引数** プロパティは `argument1, argument2`:
 
 ![wf-24](assets/wf-24.png)
 
 #### Java {#java-1}
 
-次の Java コードは、`execute` 実装の `WorkflowProcess` メソッドです。メソッドは、`PROCESS_ARGS`キーに関連付けられている`args` `MetaDataMap`に値を記録します。
+次の Java コードは、`execute` 実装の `WorkflowProcess` メソッドです。このメソッドでは、 `args` `MetaDataMap` が `PROCESS_ARGS` キー。
 
 ```java
 public void execute(WorkItem item, WorkflowSession session, MetaDataMap args) throws WorkflowException {
@@ -346,7 +345,7 @@ public void execute(WorkItem item, WorkflowSession session, MetaDataMap args) th
 16.02.2018 12:07:39.566 *INFO* [JobHandler: /var/workflow/instances/server0/2018-02-16/model_855140139900189:/content/we-retail/de] com.adobe.example.workflow.impl.process.LogArguments workflow metadata for key PROCESS_ARGS and value argument1, argument2
 ```
 
-#### ECMA スクリプト  {#ecma-script-1}
+#### ECMA スクリプト {#ecma-script-1}
 
 次の ECMA スクリプトは、**プロセスステップ**&#x200B;のプロセスとして使用されます。このスクリプトは、引数の数と値を記録します。
 
@@ -367,11 +366,11 @@ log.info("currentDateInMillisKey "+ graniteWorkItem.getWorkflowData().getMetaDat
 >[!NOTE]
 >ワークフローメタデータにコンポーネントのプロパティを保存するもう 1 つの例については、例：ロガーワークフローステップの作成を参照してください。この例では、メタデータ値と PROCESS_ARGS 以外のキーを関連付けるダイアログについて説明しています。
 
-### スクリプトとプロセスの引数  {#scripts-and-process-arguments}
+### スクリプトとプロセスの引数 {#scripts-and-process-arguments}
 
 **プロセスステップ**&#x200B;コンポーネント用のスクリプト内で、引数は `args` オブジェクトを通して使用できます。
 
-カスタムステップコンポーネントを作成する場合、スクリプトで`metaData`オブジェクトを使用できます。 このオブジェクトは、1つの文字列引数に制限されます。
+カスタムステップコンポーネントを作成する場合、オブジェクト `metaData` はスクリプトで使用できます。 このオブジェクトは、1 つの文字列引数に制限されます。
 
 ## プロセスステップ実装の作成 {#developing-process-step-implementations}
 
@@ -381,29 +380,29 @@ log.info("currentDateInMillisKey "+ graniteWorkItem.getWorkflowData().getMetaDat
 >
 >プロセスステップコンポーネントとサービスまたはスクリプトの関連付けについては、[プロセスステップ](/help/sites-developing/workflows-step-ref.md#process-step)または[ステップ実装のオーバーライド](#overriding-the-step-implementation)を参照してください。
 
-### Java クラスを使用したプロセスステップの実装  {#implementing-a-process-step-with-a-java-class}
+### Java クラスを使用したプロセスステップの実装 {#implementing-a-process-step-with-a-java-class}
 
 OSGI サービスコンポーネント（Java バンドル）としてプロセスステップを定義する
 
-1. バンドルを作成して、OSGI コンテナにデプロイします。[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)または[Eclipse](/help/sites-developing/howto-projects-eclipse.md)を使用したバンドルの作成に関するドキュメントを参照してください。
+1. バンドルを作成して、OSGI コンテナにデプロイします。でのバンドルの作成に関するドキュメントを参照してください。 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) または [Eclipse](/help/sites-developing/howto-projects-eclipse.md).
 
    >[!NOTE]
    >
-   >OSGIコンポーネントは、 `execute()`メソッドを使用して`WorkflowProcess`インターフェイスを実装する必要があります。 以下のコード例を参照してください。
+   >OSGi コンポーネントでは、 `WorkflowProcess` そのインターフェース `execute()` メソッド。 以下のコード例を参照してください。
 
    >[!NOTE]
    >
-   >パッケージ名は、`maven-bundle-plugin`設定の`<*Private-Package*>`セクションに追加する必要があります。
+   >パッケージ名を `<*Private-Package*>` セクション `maven-bundle-plugin` 設定。
 
-1. SCRプロパティ`process.label`を追加し、必要に応じて値を設定します。 これは、汎用の&#x200B;**プロセスステップ**&#x200B;コンポーネントを使用する場合に表示されるプロセスステップの名前です。 下の例を参照してください。
-1. **モデル**&#x200B;エディターで、汎用の&#x200B;**プロセスステップ**&#x200B;コンポーネントを使用して、プロセスステップをワークフローに追加します。
-1. （**プロセスステップ**&#x200B;の）編集ダイアログで、「**プロセス**」タブに移動し、プロセス実装を選択します。
+1. SCR プロパティを追加する `process.label`  必要に応じて値を設定します。 汎用の **処理ステップ** コンポーネント。 下の例を参照してください。
+1. 内 **モデル** エディターで、汎用 **処理ステップ** コンポーネント。
+1. ( **処理ステップ**)、に移動します。 **プロセス** 」タブをクリックし、プロセス実装を選択します。
 1. コード内で引数を使用する場合は、**プロセスの引数**&#x200B;を設定します。例：false
 1. ステップとワークフローモデルの両方に対する変更を保存します（モデルエディターの左上隅）。
 
-実行可能なJavaメソッドを実装する各クラスはOSGiサービスとして登録され、実行時にいつでもメソッドを追加できます。
+実行可能な Java メソッドを実装する Java メソッドはそれぞれ OSGi サービスとして登録され、実行時にいつでもメソッドを追加できます。
 
-次のOSGIコンポーネントは、ペイロードがページの場合に、プロパティ`approved`をページコンテンツノードに追加します。
+次の OSGi コンポーネントは、プロパティを追加します。 `approved` ペイロードがページの場合は、ページコンテンツノードに追加します。
 
 ```java
 package com.adobe.example.workflow.impl.process;
@@ -498,7 +497,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 }
 ```
 
-次のスクリプトは、ペイロードが画像（ `.png`ファイル）であるかどうかを確認し、その画像から白黒の画像を作成し、兄弟ノードとして保存します。
+次のスクリプトは、ペイロードが画像 ( `.png` ファイル ) から作成し、黒と白の画像を作成して兄弟ノードとして保存します。
 
 ```
 var workflowData = graniteWorkItem.getWorkflowData();
@@ -532,7 +531,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 スクリプトを使用するには：
 
-1. スクリプトを作成し(例えばCRXDE Liteを使用)、`/apps/myapp/workflow/scripts`の下のリポジトリに保存します。
+1. スクリプトを作成し ( 例えば、CRXDE Liteを使用 )、以下のリポジトリに保存します。 `/apps/myapp/workflow/scripts`
 1. **プロセスステップ**&#x200B;の編集ダイアログでスクリプトを識別するタイトルを指定するには、次のプロパティをスクリプトの `jcr:content` ノードに追加します。
 
    | 名前 | タイプ | 値 |
@@ -542,13 +541,13 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 1. **プロセスステップ**&#x200B;インスタンスを編集し、使用するスクリプトを指定します。
 
-## 参加者選択の作成  {#developing-participant-choosers}
+## 参加者選択の作成 {#developing-participant-choosers}
 
 **動的参加者ステップ**&#x200B;コンポーネント用の参加者選択を作成できます。
 
-ワークフロー中に&#x200B;**動的参加者ステップ**&#x200B;コンポーネントを開始する場合は、生成された作業項目を割り当てる参加者をステップで決定する必要があります。 そのためには、ステップで次のいずれかを実行します。
+When a **動的参加者ステップ** コンポーネントは、ワークフロー中に開始され、生成された作業項目を割り当てる参加者を決定する必要があります。 そのためには、ステップで次のいずれかを実行します。
 
-* OSGiサービスにリクエストを送信
+* OSGi サービスにリクエストを送信
 * 参加者を選択する ECMA スクリプトを実行する
 
 ワークフローの要件に応じて参加者を選択するサービスまたは ECMA スクリプトを作成できます。
@@ -561,11 +560,11 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 参加者ステップを OSGI サービスコンポーネント（Java クラス）として定義する
 
-1. OSGIコンポーネントは、 `getParticipant()`メソッドを使用して`ParticipantStepChooser`インターフェイスを実装する必要があります。 以下のコード例を参照してください。
+1. OSGi コンポーネントでは、 `ParticipantStepChooser` そのインターフェース `getParticipant()` メソッド。 以下のコード例を参照してください。
 
    バンドルを作成して、OSGI コンテナにデプロイします。
 
-1. SCRプロパティ`chooser.label`を追加し、必要に応じて値を設定します。 これは、**動的参加者ステップ**&#x200B;コンポーネントを使用して、参加者選択のリストに表示される名前になります。 次に例を示します。
+1. SCR プロパティを追加する `chooser.label` 必要に応じて値を設定します。 これは、参加者選択のリストに表示される名前で、 **動的参加者ステップ** コンポーネント。 次に例を示します。
 
    ```java
    package com.adobe.example.workflow.impl.process;
@@ -614,12 +613,12 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
    }
    ```
 
-1. **モデル**&#x200B;エディターで、汎用の&#x200B;**動的参加者ステップ**&#x200B;コンポーネントを使用して、動的参加者ステップをワークフローに追加します。
+1. 内 **モデル** エディターで、汎用の **動的参加者ステップ** コンポーネント。
 1. 編集ダイアログで、「**参加者セレクター**」タブを選択し、セレクターの実装を選択します。
-1. コードで引数を使用する場合は、**プロセスの引数**&#x200B;を設定します。 この例の場合：`/content/we-retail/de`.
+1. コードで引数を使用する場合は、 **プロセスの引数**. この例の場合： `/content/we-retail/de`.
 1. ステップとワークフローモデルの両方に対する変更を保存します。
 
-### ECMA スクリプトを使用した参加者選択の作成  {#developing-a-participant-chooser-using-an-ecma-script}
+### ECMA スクリプトを使用した参加者選択の作成 {#developing-a-participant-chooser-using-an-ecma-script}
 
 **参加者ステップ**&#x200B;で生成される作業項目を割り当てるユーザーを選択する ECMA スクリプトを作成できます。スクリプトには、`getParticipant` という関数を含める必要があります。この関数は引数が不要で、ユーザーまたはグループの ID を格納した `String` を返します。
 
@@ -649,7 +648,7 @@ function getParticipant() {
 }
 ```
 
-1. スクリプトを作成し(例えばCRXDE Liteを使用)、`/apps/myapp/workflow/scripts`の下のリポジトリに保存します。
+1. スクリプトを作成し ( 例えば、CRXDE Liteを使用 )、以下のリポジトリに保存します。 `/apps/myapp/workflow/scripts`
 1. **プロセスステップ**&#x200B;の編集ダイアログでスクリプトを識別するタイトルを指定するには、次のプロパティをスクリプトの `jcr:content` ノードに追加します。
 
    | 名前 | タイプ | 値 |
@@ -657,7 +656,7 @@ function getParticipant() {
    | `jcr:mixinTypes` | `Name[]` | `mix:title` |
    | `jcr:title` | `String` | 編集ダイアログに表示される名前。 |
 
-1. [動的参加者ステップ](/help/sites-developing/workflows-step-ref.md#dynamic-participant-step)インスタンスを編集し、使用するスクリプトを指定します。
+1. を編集します。 [動的参加者ステップ](/help/sites-developing/workflows-step-ref.md#dynamic-participant-step) インスタンスを作成し、使用するスクリプトを指定します。
 
 ## ワークフローパッケージの処理 {#handling-workflow-packages}
 
@@ -673,12 +672,11 @@ function getParticipant() {
 >
 
 
-
 パッケージリソースを取得して処理するワークフローステップを作成できます。`com.day.cq.workflow.collection` パッケージの以下の構成要素は、ワークフローパッケージへのアクセスを可能にします。
 
 * `ResourceCollection`:ワークフローパッケージクラス。
 * `ResourceCollectionUtil`：ResourceCollection オブジェクトの取得に使用されます。
-* `ResourceCollectionManager`:コレクションを作成し、取得します。実装は、OSGi サービスとしてデプロイされます。
+* `ResourceCollectionManager`:コレクションを作成し、取得します。 実装は、OSGi サービスとしてデプロイされます。
 
 次の Java クラスの例は、パッケージリソースの取得方法を示しています。
 
@@ -784,7 +782,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 }
 ```
 
-## 例：カスタムステップの作成  {#example-creating-a-custom-step}
+## 例：カスタムステップの作成 {#example-creating-a-custom-step}
 
 独自のカスタムステップを作成する場合は、次の場所から既存のステップをコピーする方法が簡単です。
 
@@ -796,7 +794,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    `/apps/cq/workflow/components/model`
 
-   新しいフォルダーのタイプは`nt:folder`:
+   新しいフォルダーのタイプはです `nt:folder`:
 
    ```xml
    - apps
@@ -832,7 +830,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
       既存のステップから継承する必要があります。
 
-      この例では、`cq/workflow/components/model/step`の基本手順から継承しますが、`participant`、`process`など、他のスーパータイプを使用できます。
+      この例では、を基本手順 ( `cq/workflow/components/model/step`を使用できますが、 `participant`, `process`など
 
    * `jcr:title`
 
@@ -840,7 +838,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    * `cq:icon`
 
-      ステップに[Coralアイコン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)を指定するために使用します。
+      次の項目を指定するために使用されます。 [Coral アイコン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) を選択します。
 
    * `componentGroup`
 
@@ -871,20 +869,20 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
 [基本ステップを作成](#creating-the-basic-step)したら、次の手順に沿ってステップの&#x200B;**設定**&#x200B;ダイアログを定義します。
 
-1. ノード`cq:editConfig`のプロパティを次のように設定します。
+1. ノードのプロパティを設定します `cq:editConfig` 次のように指定します。
 
    **対象プロパティ：**
 
    * `cq:inherit`
 
-      `true`に設定すると、ステップコンポーネントは`sling:resourceSuperType`で指定したステップからプロパティを継承します。
+      に設定する場合 `true`を指定した場合、ステップコンポーネントは `sling:resourceSuperType`.
 
    * `cq:disableTargeting`
 
-      必要に応じて設定します。
+      必要に応じてを設定します。
    ![wf-39](assets/wf-39.png)
 
-1. ノード`cq:formsParameter`のプロパティを次のように設定します。
+1. ノードのプロパティを設定します `cq:formsParameter` 次のように指定します。
 
    **対象プロパティ：**
 
@@ -896,7 +894,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    ![wf-40](assets/wf-40.png)
 
-1. ノード`cq:listeners`のプロパティを設定します。
+1. ノードのプロパティを設定します `cq:listeners`.
 
    `cq:listener` ノードとそのプロパティを利用すると、ステップをモデルページにドラッグしたり、ステップのプロパティを編集したりして、タッチ操作対応 UI のモデルエディターでイベントに対処するイベントハンドラーを設定できます。
 
@@ -909,7 +907,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    この設定は、エディターを適切に機能させるために必要です。ほとんどのケースで、この設定は変更しないでください。
 
-   ただし、`cq:inherit` を true に設定した場合は（`cq:editConfig` ノードで設定します。上記を参照）、この設定を継承できるので、ステップの定義に明示的に含める必要はありません。継承が設定されていない場合は、次のプロパティと値を持つこのノードを追加する必要があります。
+   ただし、`cq:inherit` を true に設定した場合は（`cq:editConfig` ノードで設定します。上記を参照）、この設定を継承できるので、ステップの定義に明示的に含める必要はありません。継承がない場合は、次のプロパティと値を持つこのノードを追加する必要があります。
 
    次の例では継承が有効になっているので、`cq:listeners` ノードを削除できます。削除しても、ステップは正常に機能します。
 
@@ -921,7 +919,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
 #### この例で使用するマークアップのサンプル {#sample-markup-used-in-this-example}
 
-カスタムステップのマークアップは、コンポーネントのルートノードの`.content.xml`に表示されます。 この例で使用するサンプル`.content.xml`は次のとおりです。
+カスタムステップのマークアップは、 `.content.xml` コンポーネントのルートノードの サンプル `.content.xml` この例では次のように使用されます。
 
 `/apps/cq/workflow/components/model/myCustomStep/.content.xml`
 
@@ -936,7 +934,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
     componentGroup="Workflow"/>
 ```
 
-この例で使用する`_cq_editConfig.xml`の例：
+この `_cq_editConfig.xml` この例では、次のサンプルを使用します。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -957,7 +955,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 </jcr:root>
 ```
 
-この例で使用する`_cq_dialog/.content.xml`の例：
+この `_cq_dialog/.content.xml` この例では、次のサンプルを使用します。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1038,17 +1036,14 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 >
 >クラシック UI のモデルエディターのダイアログは、標準のタッチ操作対応 UI のエディターでも利用できます。
 >
->クラシックUIのステップダイアログを標準のUIダイアログにアップグレードする場合、AEMには[最新化ツール](/help/sites-developing/modernization-tools.md)が用意されています。 変換後も、特定の用途に合わせてダイアログに手動で変更を加えることができます。
+>AEM has [最新化ツール](/help/sites-developing/modernization-tools.md) クラシック UI のステップダイアログを標準の UI ダイアログにアップグレードする場合。 変換後も、特定の用途に合わせてダイアログに手動で変更を加えることができます。
 >
->* アップグレードされたダイアログが空の場合は、`/libs`のダイアログで、ソリューションの提供方法の例と同様の機能を使用できます。 次に例を示します。
-   >
-   >
-* `/libs/cq/workflow/components/model`
+>* アップグレードされたダイアログが空の場合は、 `/libs` ソリューションの提供方法の例と同様の機能を持つ 次に例を示します。
+>
+>* `/libs/cq/workflow/components/model`
 >* `/libs/cq/workflow/components/workflow`
 >* `/libs/dam/components`
 >* `/libs/wcm/workflow/components/autoassign`
 >* `/libs/cq/projects`
-
 >
->  
-`/libs`内の設定は変更しないでください。例として使用してください。 既存のステップを活用する場合は、`/apps`にコピーし、そこで変更します。
+>  内の設定は一切変更しないでください `/libs`を使用する場合は、単に例として使用します。 既存の手順のいずれかを利用する場合は、次の場所にコピーします。 `/apps` そして、そこで修正を加えます。

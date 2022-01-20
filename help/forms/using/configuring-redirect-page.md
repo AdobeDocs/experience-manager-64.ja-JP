@@ -1,18 +1,18 @@
 ---
 title: リダイレクトページの設定
-seo-title: リダイレクトページの設定
+seo-title: Configuring redirect page
 description: アダプティブフォーム入力後、フォーム作成時にフォーム作成者が設定可能な Web ページへ、ユーザーをリダイレクトさせることができます。
-seo-description: アダプティブフォーム入力後、フォーム作成時にフォーム作成者が設定可能な Web ページへ、ユーザーをリダイレクトさせることができます。
+seo-description: After filling an adaptive form, users can be redirected to a webpage that form authors can configure while creating the form.
 uuid: 5a5f912a-9696-4bc1-af3f-ead78f767e02
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: c51817aa-193a-4d4f-bd83-06518ddfb395
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: bbe10952-d6a7-4adc-bab9-388c1ee8e56a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 79%
+source-wordcount: '238'
+ht-degree: 77%
 
 ---
 
@@ -27,14 +27,14 @@ ht-degree: 79%
 1. 送信セクションの「ありがとうございました」ページで、リダイレクトページの URL を指定します。
 1. オプションとして、「送信アクション」で、「REST エンドポイントへの送信」の送信アクションについて、リダイレクトページに渡されるパラメーターを設定することができます。
 
-![リダイレクトページ設定](assets/thank-you-setting-1.png) 
+![リダイレクトページ設定](assets/thank-you-setting-1.png)
 **図：** *リダイレクトページの設定*
 
-フォーム作成者は、「ありがとうございます」ページに渡される次のパラメーターを使用することができます。使用可能なすべての送信アクションに対して、`status`パラメーターと`owner`パラメーターが渡されます。 これら 2 つのパラメーターの他に、追加のパラメーターが次の送信アクションに渡されます。
+フォーム作成者は、「ありがとうございます」ページに渡される次のパラメーターを使用することができます。使用可能なすべての送信アクションに対して、 `status` および `owner` パラメーターが渡されます。 これら 2 つのパラメーターの他に、追加のパラメーターが次の送信アクションに渡されます。
 
 * **コンテンツ保存アクション** （非推奨） : `contentPath` — 送信されたデータが保存されるリポジトリ内のノードのパス。
 
-* **PDFの保存アクション** （非推奨） : `contentPath` — 送信されたデータのパスと、リポジトリ内にPDFファイルを保存しているノードのパスが渡されます。
+* **ストアPDFアクション** （非推奨） : `contentPath` — 送信されたデータのパスと、リポジトリ内のPDFファイルを格納しているノードのパスが渡されます。
 
 * **フォームワークフローへの送信**：フォームワークフローから返される出力パラメーターが渡されます。
 

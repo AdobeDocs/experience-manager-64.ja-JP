@@ -1,24 +1,24 @@
 ---
 title: Designer での Page Zero コンテンツの変更
-seo-title: Designer での Page Zero コンテンツの変更
+seo-title: Changing Page Zero content in Designer
 description: XFA PDF を Adobe 以外の PDF ビューアで表示するとき、Page Zero に表示されるメッセージを変更する方法をご存知ですか。
-seo-description: XFA PDF を Adobe 以外の PDF ビューアで表示するとき、Page Zero に表示されるメッセージを変更する方法をご存知ですか。
+seo-description: Do you know how you can change the message displayed on Page Zero of an XFA PDF when viewing it in a non-Adobe PDF viewer?
 uuid: 5697f203-bb24-437d-a692-bc4bc2609b88
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: f458054e-885c-4c7a-afcd-ad1e4465e0c1
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 0ae34ddd-9a8d-48df-af2d-80c3fe6abd62
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 88%
+source-wordcount: '243'
+ht-degree: 87%
 
 ---
 
 # Designer での Page Zero コンテンツの変更 {#changing-page-zero-content-in-designer}
 
-ChromeやFirefoxのデフォルトPDFビューアなど、Adobe PDF以外のビューアでPDF/XFAフォームのコンテンツを読み取れない場合、Page Zeroコンテンツがデフォルトで表示されます。 デフォルトの Page Zero メッセージは、以下のとおりです。
+Chrome や Firefox のデフォルトのPDFビューアなど、Adobe PDF以外のビューアでPDF/XFA フォームのコンテンツを読み取れない場合は、Page Zero コンテンツがデフォルトで表示されます。 デフォルトの Page Zero メッセージは、以下のとおりです。
 
 ![defaultpage0message](assets/defaultpage0message.png)
 

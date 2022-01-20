@@ -1,6 +1,6 @@
 ---
 title: アセットセレクター
-description: アセットセレクターを使用して、Adobe Experience Manager Assets内のアセットのメタデータを検索、フィルタリング、参照および取得する方法について説明します。 また、アセットセレクターインターフェイスをカスタマイズする方法についても学習します。
+description: アセットセレクターを使用して、Adobe Experience Manager Assets 内のアセットのメタデータを検索、フィルタリング、参照および取得する方法について説明します。 また、アセットセレクターインターフェイスをカスタマイズする方法についても学習します。
 contentOwner: AG
 feature: Asset Management,Metadata,Search
 role: User
@@ -16,17 +16,17 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->以前のバージョンの[!DNL Experience Manager]では、アセットセレクターは[アセットピッカー](https://helpx.adobe.com/jp/experience-manager/6-2/assets/using/asset-picker.html)と呼ばれていました。
+>アセットセレクターの名前は、 [アセットピッカー](https://helpx.adobe.com/jp/experience-manager/6-2/assets/using/asset-picker.html) 以前のバージョンの [!DNL Experience Manager].
 
-アセットセレクターを使用すると、[!DNL Adobe Experience Manager]アセット内のアセットを参照、検索およびフィルタリングできます。 また、アセットセレクターを使用して選択したアセットのメタデータを取得できます。アセットセレクターインターフェイスをカスタマイズするには、サポートされたリクエストパラメーターを使用して起動します。これらのパラメーターは、特定のシナリオ向けにアセットセレクターのコンテキストを設定します。
+アセットセレクターを使用すると、 [!DNL Adobe Experience Manager] アセット。 また、アセットセレクターを使用して選択したアセットのメタデータを取得できます。アセットセレクターインターフェイスをカスタマイズするには、サポートされたリクエストパラメーターを使用して起動します。これらのパラメーターは、特定のシナリオ向けにアセットセレクターのコンテキストを設定します。
 
-現在、リクエストパラメーター`assettype`(*Image/Video/Text*)と選択パラメーター`mode`(*Single/Multiple*)をアセットセレクターのコンテキスト情報として渡すことができます。選択は、選択の間変わりません。
+現在、リクエストパラメーターを渡すことができます `assettype` (*画像/ビデオ/テキスト*) および選択 `mode` (*単一/複数*) をアセットセレクターのコンテキスト情報として表示します。この情報は、選択操作の間、変わりません。
 
-アセットセレクターは、HTML5 **Window.postMessage**&#x200B;メッセージを使用して、選択したアセットのデータを受信者に送信します。
+アセットセレクターは、HTML5 **Window.postMessage** 選択したアセットのデータを受信者に送信するメッセージ。
 
 アセットセレクターは、Granite の基盤ピッカーのボキャブラリに基づいています。デフォルトでは、アセットセレクターは参照モードで動作します。 ただし、オムニサーチエクスペリエンスを使用してフィルターを適用し、特定のアセットの検索を絞り込むことができます。
 
-任意のWebページを（CQコンテナに含まれているかどうかに関係なく）アセットセレクター(`https://[AEM_server]:[port]/aem/assetpicker.html`)と統合できます。
+任意の Web ページを（CQ コンテナに含まれているかどうかに関係なく）アセットセレクター (`https://[AEM_server]:[port]/aem/assetpicker.html`) をクリックします。
 
 ## コンテキストパラメーター {#contextual-parameters}
 
@@ -38,7 +38,7 @@ ht-degree: 67%
 | mode | single、multiple | `http://localhost:4502/aem/assetpicker.html`<br>`?mode=multiple` <br> `http://localhost:4502/aem/assetpicker.html`<br>`?mode=single` | 複数モードでは、アセットセレクターを使用して、いくつかのアセットを同時に選択できます。 |
 | dialog | true、false | `http://localhost:4502/aem/assetpicker.html`<br>`?dialog=true` | アセットセレクターを Granite ダイアログとして開くには、これらのパラメーターを使用します。このオプションは、Granite パスフィールドを使用してアセットセレクターを起動し、pickerSrc URL として設定する場合にのみ適用できます。 |
 | root | `<folder_path>` | `http://localhost:4502/aem/`<br>`assetpicker.html?assettype=images`<br>`&root=/content/dam/we-retail/en/activities` | アセットセレクターのルートフォルダーを指定するには、このオプションを使用します。この場合、アセットセレクターを使用すると、ルートフォルダーの下の子アセット（直接／間接）のみを選択できます。 |
-| viewmode | 検索を |  | アセットタイプおよびMIMEタイプパラメーターを使用して、検索モードでアセットセレクターを起動するには |
+| viewmode | 検索を |  | アセットタイプおよび MIME タイプパラメーターを使用して、アセットセレクターを検索モードで起動するには |
 | assettype (S) | images、documents、multimedia、archives | <ul><li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=images`</li> <li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=documents`</li> <li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=multimedia`</li> <li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=archives`</li> | 渡された値に基づいてアセットタイプをフィルタリングするには、このオプションを使用します。 |
 | mimetype | アセットの MIME タイプ（`/jcr:content/metadata/dc:format`）（ワイルドカードもサポートされています） | <ul><li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&mimetype=image/png`</li>  <li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&?mimetype=*png`</li>  <li>`http://localhost:4502/aem/assetpicker.html?viewmode=search&mimetype=*presentation`</li>  <li>`http://localhost:4502/aem/assetpicker?viewmode=search&mimetype=*presentation&mimetype=*png`</li></ul> | MIME タイプに基づいてアセットをフィルタリングするために使用します |
 
@@ -57,4 +57,4 @@ ht-degree: 67%
 
    ![chlimage_1-443](assets/chlimage_1-443.png)
 
-1. ツールバーの「**[!UICONTROL 選択]**」をタップまたはクリックします。
+1. タップまたはクリック **[!UICONTROL 選択]** をクリックします。

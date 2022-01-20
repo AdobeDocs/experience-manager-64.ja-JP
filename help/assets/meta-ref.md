@@ -18,7 +18,7 @@ ht-degree: 96%
 
 ## Dublin Core {#dublin-core}
 
-Dublin Core メタデータは、アセットをより検索しやすい形で記述できるように、標準化された規則のセットを提供します。[!DNL Experience Manager] Assetsでは、Dublin Coreはビデオ、サウンド、画像、ドキュメントなどのデジタルアセットを記述します。
+Dublin Core メタデータは、アセットをより検索しやすい形で記述できるように、標準化された規則のセットを提供します。In [!DNL Experience Manager] Assets(Dublin Core) は、ビデオ、サウンド、画像、ドキュメントなどのデジタルアセットを記述します。
 
 シンプルな Dublin Core Metadata Element Set（DCMES）には、以下の表に示すように、15 個のメタデータ要素が含まれます。それぞれの Dublin Core 要素はオプションであり、繰り返し可能です。Dublin Core メタデータ情報は、メディアタイプ固有のメタデータと同様に、削除および追加が可能です。
 

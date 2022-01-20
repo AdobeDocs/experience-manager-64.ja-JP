@@ -1,8 +1,8 @@
 ---
 title: ContextHub データを使用したページのプレビュー
-seo-title: ContextHub データを使用したページのプレビュー
+seo-title: Previewing Pages Using ContextHub Data
 description: ContextHub ツールバーは、ContextHub ストアからのデータを表示し、ストアデータを変更することができ、コンテンツのプレビューに立ちます。
-seo-description: ContextHub ツールバーは、ContextHub ストアからのデータを表示し、ストアデータを変更することができ、コンテンツのプレビューに立ちます。
+seo-description: The ContextHub toolbar displays data from ContextHub stores and enables you to change store data and  is useful for previewing content
 uuid: 0150555a-0a92-4692-a706-bbe59fd34d6a
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,12 +12,12 @@ discoiquuid: f281ef8c-0831-470c-acb7-189f20452a50
 exl-id: 24f94dd5-62a4-4ac3-9a1b-a8e189da9958
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '365'
 ht-degree: 96%
 
 ---
 
-# ContextHub データを使用したページのプレビュー {#previewing-pages-using-contexthub-data}
+# ContextHub データを使用したページのプレビュー{#previewing-pages-using-contexthub-data}
 
 [ContextHub](/help/sites-developing/contexthub.md) ツールバーには、ContextHub ストアのデータが表示され、このツールバーを使用してストアデータを変更することができます。ContextHub ツールバーは、ContextHub ストア内のデータによって決定されるコンテンツのプレビューに役立ちます。
 
@@ -48,7 +48,7 @@ ContextHub ツールバーはプレビューモードで使用できます。こ
 
 提供する機能セットは UI モジュールごとに異なりますが、以下のタイプの機能は共通です。UI モジュールは拡張可能なので、開発者は必要に応じて他の機能を実装できます。
 
-### ツールバーコンテンツ  {#toolbar-content}
+### ツールバーコンテンツ {#toolbar-content}
 
 UI モジュールは、1 つ以上の ContextHub ストアのデータをツールバーに表示できます。UI モジュールは、アイコンとタイトルで識別されます。
 
@@ -64,7 +64,7 @@ UI モジュールは、1 つ以上の ContextHub ストアのデータをツー
 
 モジュールのポップアップオーバーレイには、ContextHub ストア内のデータを変更するためのフォーム要素を含めることができます。ページコンテンツがストアデータによって決定される場合は、このフォームを使用してページコンテンツの変更を監視できます。
 
-### 全画面表示モード  {#fullscreen-mode}
+### 全画面表示モード {#fullscreen-mode}
 
 ポップアップオーバーレイには、クリックまたはタップするとポップアップコンテンツを拡張してブラウザーウィンドウまたは画面全体に表示するアイコンを含めることができます。
 

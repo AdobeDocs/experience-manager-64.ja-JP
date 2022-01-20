@@ -1,8 +1,8 @@
 ---
 title: ページの差分
-seo-title: ページの差分
+seo-title: Page Diff
 description: ページの差分表示を使用すると、2 つのページを並べて比較し、差分を強調表示できます。
-seo-description: ページの差分表示を使用すると、2 つのページを並べて比較し、差分を強調表示できます。
+seo-description: The page diff feature allows for the convenient side-by-side comparison of two pages with their differences highlighted.
 uuid: cf029ed8-606e-4f12-ac8e-5ea9ebd70b1b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 5a771d8c-cc56-4979-aeab-b508755a2078
 exl-id: 1b1fa592-a145-4abe-a455-df24d551b937
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 96%
+source-wordcount: '672'
+ht-degree: 95%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 96%
 
 >[!CAUTION]
 >
->AEM 6.4.3より前のバージョンを実行している場合、この機能を使用するには、ノード`/content/versionhistory`に対する&#x200B;**変更/作成/削除**&#x200B;権限が必要です。
+>AEM 6.4.3 より前のバージョンを実行している場合、ユーザーは **変更/作成/削除** ノードに対する権限 `/content/versionhistory` 機能を使用するために。
 >
 >この機能の技術的詳細については、[開発とページの差分](/help/sites-developing/pagediff.md#operation-details)を参照してください。
 
@@ -42,7 +42,7 @@ ht-degree: 96%
 
 それらのコンテキスト内で差分の確認を開始する方法については、それぞれのトピックを参照してください。
 
-### 差分の表示  {#presentation-of-differences}
+### 差分の表示 {#presentation-of-differences}
 
 比較対象のコンテンツにかかわらず、差分の表示は同じです。
 
@@ -75,7 +75,7 @@ ht-degree: 96%
 >
 >言語コピーを比較する場合は、翻訳ですべてが変更され、強調表示をしても意味がないので、強調表示は無効になります。
 
-### 全画面表示および終了  {#fullscreen-and-exiting}
+### 全画面表示および終了 {#fullscreen-and-exiting}
 
 特定のコンテンツに集中するために、並列比較による差分表示のいずれかの「側」の全画面表示アイコンをクリックして、それをフルブラウザーウィンドウに拡大することができます。
 

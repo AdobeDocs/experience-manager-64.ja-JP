@@ -1,8 +1,8 @@
 ---
 title: SAML 2.0 認証ハンドラー
-seo-title: SAML 2.0 認証ハンドラー
+seo-title: SAML 2.0 Authentication Handler
 description: AEM での SAML 2.0 認証ハンドラーについて説明します。
-seo-description: AEM での SAML 2.0 認証ハンドラーについて説明します。
+seo-description: Learn about the SAML 2.0 Authentication Handler in AEM.
 uuid: 51f97315-350a-42a4-af2c-2de87307c6ad
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 4868daad-0f3e-48cb-9b20-08dee270e74e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '842'
 ht-degree: 58%
 
 ---
@@ -25,8 +25,8 @@ AEM には、[SAML](http://saml.xml.org/saml-specifications) 認証ハンドラ�
 
 * メッセージの署名と暗号化
 * ユーザーの自動作成
-* AEMの既存のグループとの同期
-* サービスプロバイダーおよびIDプロバイダーが開始した認証
+* AEMの既存のグループに対するグループの同期
+* サービスプロバイダーおよび ID プロバイダーが認証を開始しました
 
 このハンドラーは、暗号化された SAML 応答メッセージをユーザーノード（`usernode/samlResponse`）に格納して、サードパーティのサービスプロバイダーとの通信を容易にします。
 
@@ -36,7 +36,7 @@ AEM には、[SAML](http://saml.xml.org/saml-specifications) 認証ハンドラ�
 >
 >エンドツーエンドのコミュニティの記事については、[Integrating SAML with Adobe Experience Manager](https://helpx.adobe.com/jp/experience-manager/using/aem63_saml.html)を参照してください。
 
-## SAML 2.0 認証ハンドラーの設定  {#configuring-the-saml-authentication-handler}
+## SAML 2.0 認証ハンドラーの設定 {#configuring-the-saml-authentication-handler}
 
 [Web コンソール](/help/sites-deploying/configuring-osgi.md)を使用すると、[SAML](http://saml.xml.org/saml-specifications) 2.0 認証ハンドラーの設定（**Adobe Granite SAML 2.0 Authentication Handler**）にアクセスできます。設定可能なプロパティを以下に示します。
 
@@ -50,56 +50,55 @@ AEM には、[SAML](http://saml.xml.org/saml-specifications) 認証ハンドラ�
 >
 
 
-
 >[!NOTE]
 >
->SAML アサーションは署名されます。オプションとして暗号化することもできます。これを機能させるには、少なくともTrustStoreのIDプロバイダーの公開証明書を提供する必要があります。 詳しくは、[TrustStore への IdP 証明書の追加](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore)の節を参照してください。
+>SAML アサーションは署名されます。オプションとして暗号化することもできます。この機能を使用するには、少なくとも TrustStore の ID プロバイダーの公開証明書を提供する必要があります。 詳しくは、[TrustStore への IdP 証明書の追加](/help/sites-administering/saml-2-0-authenticationhandler.md#add-the-idp-certificate-to-the-aem-truststore)の節を参照してください。
 
-**** Slingがこの認証ハンドラーを使用するPathRepositoryのパス。このプロパティが空の場合は、認証ハンドラーが無効になります。
+**パス** この認証ハンドラーを Sling が使用するリポジトリパス。 このプロパティが空の場合は、認証ハンドラーが無効になります。
 
-**Service** RankingOSGi Framework Service Ranking値。このサービスを呼び出す順序を示します。これは整数値で、値が大きいほど優先順位が高くなります。
+**サービスランキング** OSGi Framework Service Ranking 値。このサービスを呼び出す順序を示します。 これは整数値で、値が大きいほど優先順位が高くなります。
 
-**IDP証明書** エイリアスグローバルトラストストア内のIdPの証明書のエイリアス。このプロパティが空の場合は、認証ハンドラーが無効になります。設定方法は、以下の「AEM TrustStore への IdP 証明書の追加」を参照してください。
+**IDP 証明書エイリアス** グローバルトラストストア内の IdP の証明書のエイリアス。 このプロパティが空の場合は、認証ハンドラーが無効になります。設定方法は、以下の「AEM TrustStore への IdP 証明書の追加」を参照してください。
 
-**SAML認証** 要求の送信先となるIDPのIDプロバイダーURL。このプロパティが空の場合は、認証ハンドラーが無効になります。
+**ID プロバイダー URL** SAML 認証リクエストの送信先となる IDP の URL。 このプロパティが空の場合は、認証ハンドラーが無効になります。
 
 >[!CAUTION]
 >
 >ID プロバイダーのホスト名は **Apache Sling Referrer Filter** の OSGi 設定に追加する必要があります。詳しくは、[Web コンソール](/help/sites-deploying/configuring-osgi.md)に関する節を参照してください。
 
-**このサービスプロバ** イダーをIDプロバイダーで一意に識別するサービスプロバイダーエンティティIDID。このプロパティが空の場合は、認証ハンドラーが無効になります。
+**サービスプロバイダーエンティティ ID** ID プロバイダーでこのサービスプロバイダーを一意に識別する ID。 このプロパティが空の場合は、認証ハンドラーが無効になります。
 
-**デフォル** トのリダイレクト：認証が成功した後にリダイレクトするデフォルトの場所。
+**デフォルトのリダイレクト** 認証が成功した後のリダイレクト先のデフォルトの場所。
 
 >[!NOTE]
 >
->この場所は、`request-path` Cookieが設定されていない場合にのみ使用されます。 設定されたパスの下に有効なログイントークンを指定せずにページを要求した場合、要求されたパスはcookieに保存されます\
->認証が成功すると、ブラウザーはこの場所にリダイレクトされます。
+>この場所は、 `request-path` cookie が設定されていません。 設定されたパスの下に有効な login-token がないページをリクエストした場合、リクエストされたパスは cookie に保存されます\
+>認証が成功すると、ブラウザーはこの場所に再度リダイレクトされます。
 
-**ユーザーID属** 性CRXリポジトリでのユーザーの認証および作成に使用されるユーザーIDを含む属性の名前。
+**User-ID 属性** CRX リポジトリでのユーザーの認証と作成に使用されるユーザー ID を含む属性の名前。
 
 >[!NOTE]
 >
 >ユーザー ID は SAML アサーションの `saml:Subject` ノードではなく、この `saml:Attribute` から取得されます。
 
-**Use** Encryptionこの認証ハンドラーが暗号化されたSAMLアサーションを必要とするかどうか。
+**暗号化を使用** この認証ハンドラーが暗号化された SAML アサーションを想定するかどうか。
 
-**CRXユーザーの自** 動作成：認証に成功した後、リポジトリ内の既存のユーザー以外を自動的に作成するかどうか。
+**CRX ユーザーを自動作成** 認証に成功した後、リポジトリ内の既存以外のユーザーを自動的に作成するかどうか。
 
 >[!CAUTION]
 >
 >CRX ユーザーの自動作成が無効な場合は、ユーザーを手動で作成する必要があります。
 
-**Add to Groups認証** が成功した後にユーザーをCRXグループに自動的に追加するかどうかを指定します。
+**グループに追加** 認証に成功した後、ユーザーを CRX グループに自動的に追加する必要があるかどうか。
 
-**Group** Membershipこのユーザーを追加する必要があるCRXグループのリストを含むsaml:Attributeの名前。
+**グループメンバーシップ** このユーザーを追加する CRX グループのリストを含む saml:Attribute の名前。
 
 ## AEM TrustStore への IdP 証明書の追加 {#add-the-idp-certificate-to-the-aem-truststore}
 
 SAML アサーションは署名されます。オプションとして暗号化することもできます。そのためには、少なくともリポジトリ内の IDP の公開証明書を指定する必要があります。これをおこなうには、次の手順を実行する必要があります。
 
-1. *http:/serveraddress:serverport/libs/granite/security/content/truststore.html*&#x200B;に移動します。
-1. **[!UICONTROL Create TrustStoreリンク]**&#x200B;を押します。
+1. に移動します。 *http:/serveraddress:serverport/libs/granite/security/content/truststore.html*
+1. を押します。 **[!UICONTROL TrustStore リンクを作成]**
 1. TrustStore のパスワードを入力して「**[!UICONTROL 保存]**」を押します。
 1. 「**[!UICONTROL TrustStore を管理]**」をクリックします。
 1. IdP 証明書をアップロードします。
@@ -111,17 +110,17 @@ SAML アサーションは署名されます。オプションとして暗号化
 
 >[!NOTE]
 >
->以下の手順は必須です。それ以外の場合は、次の例外がスローされます。`com.adobe.granite.keystore.KeyStoreNotInitialisedException: Uninitialised system trust store`
+>以下の手順は必須です。それ以外の場合は、次の例外がスローされます。 `com.adobe.granite.keystore.KeyStoreNotInitialisedException: Uninitialised system trust store`
 
-1. 次の場所に移動します。[http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html)
-1. `authentication-service`ユーザーを編集します。
+1. 移動先： [http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html)
+1. を編集します。 `authentication-service` ユーザー。
 1. 「**アカウント設定**」の「**キーストアを作成**」をクリックしてキーストアを作成します。
 
 >[!NOTE]
 >
 >以下の手順は、ハンドラーがメッセージに署名または復号化できる必要がある場合にのみ必要です。
 
-1. 「**秘密鍵ファイルを選択**」をクリックして秘密鍵ファイルをアップロードします。キーはPKCS#8形式で、DERエンコードが必要です。
+1. 「**秘密鍵ファイルを選択**」をクリックして秘密鍵ファイルをアップロードします。キーは PKCS#8 形式で、DER エンコードである必要があります。
 1. 「**証明書チェーンファイルを選択**」をクリックして証明書ファイルをアップロードします。
 1. 以下のようにエイリアスを割り当てます。
 
@@ -131,8 +130,8 @@ SAML アサーションは署名されます。オプションとして暗号化
 
 SAML の設定ミスにより発生する可能性があるすべての問題をデバッグするようにロガーを設定することができます。手順は次のとおりです。
 
-1. Webコンソール(*http://localhost:4502/system/console/configMgr*)に移動します。
-1. **Apache Sling Logging Logger Configuration**&#x200B;というエントリを探してクリックします。
+1. Web コンソール ( ) に移動します。 *http://localhost:4502/system/console/configMgr*
+1. 次の名前のエントリを検索してクリックします。 **Apache Sling Logging Logger Configuration**
 1. 次の設定でロガーを作成します。
 
    * **Log Level：** Debug

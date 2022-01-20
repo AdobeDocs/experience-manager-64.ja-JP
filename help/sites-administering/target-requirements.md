@@ -1,8 +1,8 @@
 ---
 title: Adobe Target との統合の前提条件
-seo-title: Adobe Target との統合の前提条件
+seo-title: Prerequisites for Integrating with Adobe Target
 description: Adobe Target との統合の前提条件について説明します。
-seo-description: Adobe Target との統合の前提条件について説明します。
+seo-description: Find out about the prerequisites for integrating with Adobe Target.
 uuid: 88be6a97-c964-4e42-a3a2-ed9b2c9ee49e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: a84fd0ab-0bcd-48cf-bba3-fb29308fa0f8
 exl-id: f47e5c6a-ed52-4493-83bd-73e5e693d117
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 81%
+source-wordcount: '524'
+ht-degree: 80%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 81%
 
 [AEM と Adobe Target の統合](/help/sites-administering/target.md)の一環として、Adobe Target を登録し、レプリケーションエージェントを設定して、パブリッシュノードでアクティビティ設定を保護する必要があります。
 
-## Adobe Target の登録  {#registering-with-adobe-target}
+## Adobe Target の登録 {#registering-with-adobe-target}
 
 AEM と Adobe Target を統合するには、有効な Adobe Target アカウントが必要です。このアカウントには、少なくとも**承認者**レベルの権限が必要です。 Adobe Target に登録すると、クライアントコードを受け取ります。AEM を Adobe Target に接続するには、クライアントコードおよび Adobe Target のログイン名とパスワードが必要です。
 
@@ -45,23 +45,23 @@ Test &amp; Target [レプリケーションエージェント](/help/sites-deplo
 
    >[!NOTE]
    >
-   >Test &amp; Target レプリケーションエージェントを設定する場合、URI は、「**トランスポート**」タブでデフォルトで **tnt:///** に設定されています。このURIを&#x200B;**https://admin.testandtarget.omniture.com**&#x200B;に置き換えないでください。
+   >Test &amp; Target レプリケーションエージェントを設定する場合、URI は、「**トランスポート**」タブでデフォルトで **tnt:///** に設定されています。この URI を次で置き換えない **https://admin.testandtarget.omniture.com**.
    >
-   >**tnt:///** を使用して接続をテストしようとすると、エラーが発生することに注意してください。このURIは内部でのみ使用され、**接続のテスト**&#x200B;では使用できないので、この動作は期待どおりです。
+   >**tnt:///** を使用して接続をテストしようとすると、エラーが発生することに注意してください。この URI は内部でのみ使用され、では使用しないので、これは期待された動作です。 **接続をテスト**.
 
 ## アクティビティ設定ノードの保護 {#securing-the-activity-settings-node}
 
 権限のないユーザーがアクセスできないように、パブリッシュインスタンスでアクティビティ設定ノード **cq:ActivitySettings** を保護する必要があります。アクティビティ設定ノードには、Adobe Target へのアクティビティの同期を処理するサービスのみがアクセスできるようにしてください。
 
-**cq:ActivitySettings**&#x200B;ノードは、CRXDE Liteの`/content/campaigns/*nameofbrand*`* *アクティビティjcr:contentノード；* *例えば`/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`の下で使用できます。 このノードは、コンポーネントのターゲティング後にのみ作成されます。
+この **cq:ActivitySettings** ノードは、CRXDE lite の下の `/content/campaigns/*nameofbrand*`* *activitys jcr:content ノードの下で、* 例： `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. このノードは、コンポーネントのターゲティング後にのみ作成されます。
 
-アクティビティのjcr:contentの下の&#x200B;**cq:ActivitySettings**&#x200B;ノードは、次のACLで保護されています。
+この **cq:ActivitySettings** アクティビティの jcr:content の下のノードは、次の ACL で保護されています。
 
 * すべて拒否（全員）
 * &quot;target-activity-authors&quot; に jcr:read,rep:write を許可（デフォルトで作成者はこのグループのメンバー）
 * &quot;targetservice&quot; に jcr:read,rep:write を許可
 
-これらの設定により、権限を持たないユーザーがノードプロパティにアクセスできなくなります。オーサーインスタンスとパブリッシュインスタンスの両方で同じ ACL を使用します。詳しくは、[ユーザー管理とセキュリティ](/help/sites-administering/security.md)を参照してください。
+これらの設定により、権限を持たないユーザーがノードプロパティにアクセスできなくなります。オーサーインスタンスとパブリッシュインスタンスの両方で同じ ACL を使用します。詳しくは、 [ユーザー管理とセキュリティ](/help/sites-administering/security.md) を参照してください。
 
 ## AEM Externalizer の設定 {#configuring-the-aem-externalizer}
 
@@ -69,7 +69,7 @@ Adobe Target でアクティビティを編集する場合、AEM オーサーノ
 
 AEM Externalizer を設定するには：
 
-1. OSGi Webコンソール(**https://&lt;server>:&lt;port>/system/console/configMgr.**)に移動します。
+1. OSGi Web コンソール ( ) に移動します。 **https://&lt;server>:&lt;port>/system/console/configMgr.**
 1. **Day CQ Link Externalizer** を探し、オーサーノードのドメインを入力します。
 
    ![chlimage_1-120](assets/chlimage_1-120.png)

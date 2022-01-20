@@ -1,8 +1,8 @@
 ---
 title: 'Acrobat Reader DC Extensions で使用される証明書の種類 '
-seo-title: 'Acrobat Reader DC Extensions で使用される証明書の種類 '
+seo-title: Certificate types used by Acrobat Reader DC extensions
 description: Acrobat Reader DC Extensions で使用される証明書の種類について説明します。
-seo-description: Acrobat Reader DC Extensions で使用される証明書の種類について説明します。
+seo-description: Learn about the certificate types used by Acrobat Reader DC extensions.
 uuid: 93c02abc-2d5a-44ed-b93c-981afbd0553d
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 331b9317-87b5-4a96-a1bc-429675ff90c5
 exl-id: 8a65d9cc-33d0-4176-97e1-70ad67cbb982
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '936'
 ht-degree: 89%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 89%
 * 有効期限
 * Acrobat Reader DC Extensions の使用権限
 
-## 証明書のわかりやすい名前  {#certificate-friendly-name}
+## 証明書のわかりやすい名前 {#certificate-friendly-name}
 
 Acrobat Reader DC Extensions 証明書のわかりやすい名前とは、証明書のプロパティが記述されている文字列です。例を以下に示します。
 
@@ -34,17 +34,17 @@ ARE 2D Barcode Full Production V6.1 P8 0002054
 
 この文字列には、次の要素が含まれています。
 
-**証明書の種類：** 証明書がアクティブにするAEM formsモジュールと、アクティブ化のレベル（ARE 2Dバーコードフルなど）を示します。使用可能な証明書の種類の一覧については、証明書プロファイルの表の種類の列を参照してください。
+**証明書の種類：** 証明書がアクティブにするAEM forms モジュールと、ARE 2D バーコードフルなどのアクティベーションレベルを表します。 使用可能な証明書の種類の一覧については、証明書プロファイルの表の種類の列を参照してください。
 
-**デプロイメントの種類：** 証明書の使用目的（実稼動など）を示します。値は、Evaluation（評価）または Production（実稼働環境）のどちらかです。証明書の各種類に関連付けられているデプロイメントの種類の一覧については、証明書プロファイルの表のデプロイメントの種類の列を参照してください。
+**デプロイメントタイプ：** 証明書の使用目的を示します（「実稼動」など）。 値は、Evaluation（評価）または Production（実稼働環境）のどちらかです。証明書の各種類に関連付けられているデプロイメントの種類の一覧については、証明書プロファイルの表のデプロイメントの種類の列を参照してください。
 
-**使用権限のバージョン：** V6.1など、証明書を使用できる使用権限のアルゴリズムのバージョンを示します。このバージョンは、AcrobatまたはAcrobat Reader DC拡張機能のバージョンを示しません。
+**使用権限のバージョン：** V6.1 など、証明書を使用できる使用権限アルゴリズムのバージョンを表します。このバージョンは、AcrobatまたはAcrobat Reader DC拡張機能のバージョンを表すものではありません。
 
-**プロファイルコード：** プロファイルコードは、P8など、完全な証明書プロパティの簡単な説明です。ファイルの各種類に関連付けられているプロファイルコードの一覧については、証明書プロファイルの表のプロファイルコードの列を参照してください。
+**プロファイルコード：** プロファイルコードは、P8 など、完全な証明書プロパティの簡単な説明です。 ファイルの各種類に関連付けられているプロファイルコードの一覧については、証明書プロファイルの表のプロファイルコードの列を参照してください。
 
-**シリアル番号：** シリアル番号は、0002054など、Adobeによって発行された各証明書に割り当てられます。アドビの販売代理店または営業担当者は、このシリアル番号を使用して、特定の製品注文または OEM 関係まで証明書を追跡できます。
+**シリアル番号：** シリアル番号は、0002054など、Adobeが発行した各証明書に割り当てられます。 アドビの販売代理店または営業担当者は、このシリアル番号を使用して、特定の製品注文または OEM 関係まで証明書を追跡できます。
 
-## 証明書プロファイル  {#certificate-profiles}
+## 証明書プロファイル {#certificate-profiles}
 
 次の表に、Acrobat Reader DC Extensions の証明書を分析する際に検出される可能性のある証明書プロファイルの一覧を示します。
 
@@ -145,7 +145,7 @@ ARE 2D Barcode Full Production V6.1 P8 0002054
  </tbody> 
 </table>
 
-## 有効期限  {#validity-period}
+## 有効期限 {#validity-period}
 
 評価用証明書は、製品のサンプルアプリケーションを評価および開発できるようにするために、顧客および開発者に対して発行されます。この証明書の有効期間は 60～90 日です。データが発行されてから 2 か月目の月末に期限が切れます。
 
@@ -155,7 +155,7 @@ ARE 2D Barcode Full Production V6.1 P8 0002054
 
 実稼働環境用の証明書は、Acrobat Reader DC Extensions を購入した顧客に対して発行されます。この種の証明書は、認証局（CA）によって許可された最長期間有効です（証明書プロファイルの表では、「*最大値*」と示されています）。
 
-## Acrobat Reader DC Extensions の使用権限  {#acrobat-reader-dc-extensions-usage-rights}
+## Acrobat Reader DC Extensions の使用権限 {#acrobat-reader-dc-extensions-usage-rights}
 
 証明書ビューアで Acrobat Reader DC Extensions 証明書を確認するとき、「詳細」タブで使用権限の項目が設定されている場合にこの項目を選択すると、その証明書で有効にできる Adobe Reader 使用権限の一覧が項目別に表示されます。特定のドキュメントに対して有効にされる使用権限は、証明書によって有効になる権限のサブセットの場合があります。
 

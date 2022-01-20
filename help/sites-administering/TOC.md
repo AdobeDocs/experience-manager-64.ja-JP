@@ -6,11 +6,11 @@ audience: admin-user
 user-guide-title: AEM 6.4 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
-feature: 管理
+feature: Administering
 role: Admin
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '648'
 ht-degree: 93%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 93%
 + [管理ユーザーガイドの概要](home.md)
 + Sites の機能 {#introduction}
    + [Web サイト管理](msm-and-translation.md)
-   + [コンテンツの再利用：マルチサイトマネージャーとライブコピー](msm.md)
+   + [コンテンツの再利用：マルチサイトマネージャとライブコピー](msm.md)
    + [ライブコピーの概要コンソール](msm-livecopy-overview.md)
    + [ライブコピーの同期の設定](msm-sync.md)
    + [ライブコピーの作成と同期](msm-livecopy.md)
@@ -51,7 +51,7 @@ ht-degree: 93%
    + [Bulk Editor](bulk-editor.md)
    + [電子メール通知の設定](notification.md)
    + [アクセス可能なサイトを生成するための RTE の設定](rte-accessible-content.md)
-   + [リンクチェック](external-link-checker.md)
+   + [リンクチェッカー](external-link-checker.md)
    + [AEM のトラブルシューティング](troubleshoot.md)
    + [AEM 6 での監査ログのメンテナンス](operations-audit-log.md)
    + [編集者](enable-classic-ui-editor.md)
@@ -107,7 +107,7 @@ ht-degree: 93%
 + e コマース {#ecommerce}
    + [e コマース](ecommerce.md)
    + [概念 ](concepts.md)
-   + [汎用eコマースの管理](generic.md)
+   + [汎用 e コマースの管理](generic.md)
    + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
    + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)

@@ -1,16 +1,16 @@
 ---
 title: Dynamic Media アセットの公開
-description: これらのアセットのHTTP/2配信を含むDynamic Mediaアセットの公開方法。
+description: これらのアセットの HTTP/2 配信を含むDynamic Mediaアセットの公開方法。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 exl-id: ebe30c07-1d76-4338-b301-49591f981688
-feature: アセット管理
+feature: Asset Management
 role: User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '409'
 ht-degree: 95%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 95%
 
 アセットを選択して「**[!UICONTROL 公開]**」をタップすることで、Dynamic Media アセットを公開できます。Dynamic Media アセットを公開した後は、URL または埋め込みによってそのアセットを Web ページに追加できるようになります。
 
-また、ユーザーの介入なしに、アップロードしたアセットを即座に公開することもできます。[Dynamic Media - Scene7モード](config-dms7.md)の設定を参照してください。
+また、ユーザーの介入なしに、アップロードしたアセットを即座に公開することもできます。詳しくは、 [Dynamic Media - Scene7モードの設定](config-dms7.md).
 
 **[!UICONTROL カード表示]**&#x200B;では、小さい地球のアイコンがアセット名のすぐ下に表示され、アセットが公開されていることを示します。**[!UICONTROL リスト表示]**&#x200B;では、公開されたアセットと公開されていないアセットが「**[!UICONTROL 公開]**」列でわかります。
 
@@ -39,7 +39,6 @@ ht-degree: 95%
 >* ライブ配信をするには、画像プリセットおよびビューアプリセットをアクティベートして公開する必要があります。
 
 >
-
 
 
 一連のアセットを公開する方法について詳しくは、[アセットの公開](managing-assets-touch-ui.md)を参照してください。

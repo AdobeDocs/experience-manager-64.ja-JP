@@ -1,6 +1,6 @@
 ---
 title: Flash ビューアのサポート終了に関する通知
-description: 2017年1月31日に、AdobeDynamic Media ClassicはFlashビューアプラットフォームのサポートを正式に終了しました。
+description: 2017 年 1 月 31 日、Adobe Dynamic Media ClassicはFlashビューアプラットフォームのサポートを正式に終了しました。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: integration

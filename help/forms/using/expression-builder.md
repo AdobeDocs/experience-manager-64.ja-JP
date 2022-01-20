@@ -1,8 +1,8 @@
 ---
 title: 式ビルダーのリモート関数
-seo-title: 式ビルダー
+seo-title: Expression Builder
 description: Correspondence Management の式ビルダーを使用すると、式とリモート関数を作成できます。
-seo-description: Correspondence Management の式ビルダーを使用すると、式とリモート関数を作成できます。
+seo-description: Expression Builder in Correspondence Management lets you create expressions and remote functions.
 uuid: 998f7ec9-2645-431e-b483-c68d24ef49cb
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -12,7 +12,7 @@ feature: Correspondence Management
 exl-id: cd565ec5-f453-4692-83f8-e1fb06dc28c7
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '783'
 ht-degree: 78%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 78%
 
 ## 式ビルダーによる式およびリモート関数の作成 {#creating-expressions-and-remote-functions-with-expression-builder}
 
-式ビルダーは内部的にJSP ELライブラリを使用するので、式はJSPEL構文に従います。 詳しくは、「[サンプル式](#exampleexpressions)」を参照してください。
+式ビルダーは内部的に JSP EL ライブラリを使用するので、式は JSPEL 構文に従います。 詳しくは、「[サンプル式](#exampleexpressions)」を参照してください。
 
 ![式ビルダー](assets/expressionbuilder.png)
 
@@ -35,13 +35,13 @@ ht-degree: 78%
 
 通信管理ソリューションで使用できる、一般的な JSP EL の例は以下のとおりです。
 
-* 2つの数値を追加するには：${number1 + number2}
-* 2つの文字列を連結するには：${str1} ${str2}
-* 2つの数値を比較するには：${age &lt; 18}
+* 2 つの数値を追加するには：${number1 + number2}
+* 2 つの文字列を連結するには：${str1} ${str2}
+* 2 つの数値を比較するには：${age &lt; 18}
 
-詳細な情報は、「[JSP EL 仕様](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)」で確認できます。クライアント側のExpression Managerは、JSP EL仕様の特定の変数や関数をサポートしていません。具体的には、次のようになります。
+詳細な情報は、「[JSP EL 仕様](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf)」で確認できます。クライアント側の Expression Manager は、JSP EL の仕様では、特に次のような特定の変数や関数をサポートしていません。
 
-* クライアント側で評価される式の変数名では、コレクションのインデックスとマップのキー（[]表記を使用）はサポートされません。
+* コレクションのインデックスとマッピングキー ( [] 表記 ) は、クライアント側で評価される式の変数名ではサポートされません。
 * 式に使用する関数のパラメーターの型や戻り値の型を以下に示しています。
 
    * java.lang.String
@@ -77,7 +77,7 @@ ht-degree: 78%
 式の中で使用する独自のリモート関数は、カスタムバンドルを作成してエクスポートすることができます。独自のリモート関数をエクスポートするカスタムバンドルを作成するには、次のタスクを実行します。このデモでは、入力文字列を大文字に変換するカスタム関数を作成する例を示します。
 
 1. Expression Manager 用にエクスポートするメソッドを含んだ OSGi サービスのインターフェイスを定義します。
-1. インターフェイスAでメソッドを宣言し、@ServiceMethod注釈を付けます(com.adobe.exm.expeval.ServiceMethod)。 Expression Manager では、注釈が付いていないメソッドはすべて無視されます。ServiceMethod注釈には、次のオプションの属性を指定できます。
+1. インターフェイス A でメソッドを宣言し、@ServiceMethod注釈を付けます (com.adobe.exm.expeval.ServiceMethod)。 Expression Manager では、注釈が付いていないメソッドはすべて無視されます。ServiceMethod 注釈には、次のオプションの属性が含まれ、これらも指定できます。
 
    1. **Enabled**： このメソッドを有効化するかどうかを決定します。Expression Manager では、無効なメソッドは無視されます。
    1. **familyId**：メソッドのファミリー（グループ）を指定します。空の場合、Expression Manager では、メソッドがデフォルトのファミリーに属するものと見なします。関数が選択されたファミリーのレジストリはありません（デフォルトのファミリーを除く）。Expression Manager では、様々なバンドルによって書き出されたすべての関数で指定されているすべてのファミリー ID を取得することで、レジストリが動的に作成されます。ここで指定された ID は式オーサリングユーザーインターフェイスにも表示されるので、適切に判読できることを確認します。
@@ -95,7 +95,7 @@ ht-degree: 78%
    }
    ```
 
-   メソッドのパラメーターには、必要に応じて@ServiceMethodParameter注釈(com.adobe.exm.expeval.ServiceMethodParameter)を使用して注釈を付けることもできます。 この注釈は、オーサリングユーザーインターフェイスに表示されるメソッドパラメーターの名前と説明を人間が判読できる形で指定する目的でのみ使用されます。インターフェイスメソッドのパラメーターおよび戻り値が、次の型のいずれかに属していることを確認してください。
+   メソッドのパラメーターには、 @ServiceMethodParameter注釈 (com.adobe.exm.expeval.ServiceMethodParameter) を使用して、オプションで注釈を付けることもできます。 この注釈は、オーサリングユーザーインターフェイスに表示されるメソッドパラメーターの名前と説明を人間が判読できる形で指定する目的でのみ使用されます。インターフェイスメソッドのパラメーターおよび戻り値が、次の型のいずれかに属していることを確認してください。
 
    * java.lang.String
    * java.lang.Character
@@ -107,7 +107,7 @@ ht-degree: 78%
    * java.lang.Short
    * Short
    * java.lang.Byte
-   * byte
+   * バイト
    * java.lang.Double
    * 倍精度浮動小数点
    * java.lang.Long
@@ -119,7 +119,7 @@ ht-degree: 78%
    * java.util.List
 
 
-1. インターフェイスの実装を定義し、OSGiサービスとして設定して、次のサービスプロパティを定義します。
+1. インターフェイスの実装を定義し、OSGi サービスとして設定し、次のサービスプロパティを定義します。
 
 ```
 @org.apache.felix.scr.annotations.Properties({
@@ -156,8 +156,8 @@ public class RemoteFuntionImpl implements RemoteFunction {
 
 使用するサンプルアーカイブを以下に示します。
 
-* **GoodFunctions.jar.zip** は、サンプルのリモート関数定義を含むバンドルを含むjarファイルです。GoodFunctions.jar.zip ファイルをダウンロードし、それを展開して jar ファイルを取得します。
-* **GoodFunctions.** zipは、カスタムリモート関数を定義し、そのバンドルを作成するためのソースコードのパッケージです。
+* **GoodFunctions.jar.zip** は、サンプルのリモート関数定義を含むバンドルを含む jar ファイルです。 GoodFunctions.jar.zip ファイルをダウンロードし、それを展開して jar ファイルを取得します。
+* **GoodFunctions.zip** は、カスタムリモート関数を定義し、そのバンドルを作成するためのソースコードのパッケージです。
 
 GoodFunctions.jar.zip
 

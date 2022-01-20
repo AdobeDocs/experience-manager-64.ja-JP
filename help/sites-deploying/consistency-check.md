@@ -1,19 +1,19 @@
 ---
 title: 整合性チェックとトラバーサルチェック
-seo-title: 整合性チェックとトラバーサルチェック
+seo-title: Consistency and Traversal Checks
 description: 整合性チェックとトラバーサルチェックの実行方法について説明します。
-seo-description: 整合性チェックとトラバーサルチェックの実行方法について説明します。
+seo-description: Learn how to perform consistency and traversal checks.
 uuid: 0304e378-7c60-4bf5-9052-d01149d2a6df
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 discoiquuid: af9a3e9d-194a-42e5-be28-b238e0c1e55e
-feature: 設定
+feature: Configuring
 exl-id: 67dfa0f7-24ac-41ae-83c9-3bb1a8656502
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 80%
+source-wordcount: '156'
+ht-degree: 78%
 
 ---
 
@@ -33,9 +33,9 @@ javax.jcr.RepositoryException: Error indexing workspace: Error indexing workspac
 
 ## 整合性チェックの実行 {#perform-a-consistency-check}
 
-整合性チェックを実行するには、JMX Mbean** com.adobe.granite (Repository)**の管理ページに移動します。AEMのメイン画面から、次の操作を行います。
+整合性チェックを実行するには、JMX Mbean** com.adobe.granite (Repository)**の管理ページに移動します。AEMのメイン画面から、次の操作に移動します。
 
-**ツール/ Webコンソール/メイン（メニューバー） / JMX / com.adobe.granite (Repository)**
+**ツール/Web コンソール/メイン（メニューバー）/JMX/com.adobe.granite (Repository)**
 
 デフォルトのインストールでは、このページは次の場所にあります。**[|表示|](http://localhost:4502/system/console/jmx/com.adobe.granite%3Atype%3DRepository)**
 

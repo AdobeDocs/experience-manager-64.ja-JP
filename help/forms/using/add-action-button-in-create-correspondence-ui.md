@@ -23,7 +23,7 @@ ht-degree: 52%
 
 Correspondence Management ソリューションでは、「通信を作成」UI にカスタムアクションを追加できます。
 
-このドキュメントのシナリオでは、通信を作成ユーザーインターフェイスでボタンを作成して、レビュー用のPDFとしてレターを電子メールに添付して共有する方法を説明します。
+このドキュメントのシナリオでは、通信を作成ユーザーインターフェイスでボタンを作成し、レターをレビューPDFとして電子メールに添付して共有する方法について説明します。
 
 ### 前提条件 {#prerequisites}
 
@@ -38,14 +38,14 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
 1. 通信を作成ユーザーインターフェイスにボタンを追加します
 1. ボタンにアクション処理を追加します
-1. アクション「処理」を有効にするLiveCycleプロセスの追加
+1. アクション「処理」をLiveCycleするプロセスの追加
 
 ### 通信を作成ユーザーインターフェイスへのボタンの追加 {#add-the-button-to-the-create-correspondence-user-interface}
 
-1. `https://[server]:[port]/[ContextPath]/crx/de`に移動し、管理者としてログインします。
-1. appsフォルダーに、（configフォルダー内の）defaultAppフォルダーに類似したパス/構造で`defaultApp`という名前のフォルダーを作成します。 フォルダーの作成手順は次のとおりです。
+1. に移動します。 `https://[server]:[port]/[ContextPath]/crx/de` 管理者としてログインします。
+1. apps フォルダーに、 `defaultApp` （config フォルダー内の）defaultApp フォルダーに似たパス/構造を持つ フォルダーの作成手順は次のとおりです。
 
-   * 次のパスにある&#x200B;**[!UICONTROL defaultApp]**&#x200B;フォルダーを右クリックし、「**[!UICONTROL ノードをオーバーレイ]**」を選択します。
+   * を右クリックします。 **[!UICONTROL defaultApp]** 次のパスにあるフォルダーを選択し、 **[!UICONTROL ノードをオーバーレイ]**:
 
       /libs/fd/cm/config/defaultApp/
 
@@ -57,7 +57,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
       **[!UICONTROL オーバーレイの場所：]** /apps/
 
-      **[!UICONTROL ノードタイプを一致させる：]** オン
+      **[!UICONTROL ノードタイプを一致させる：]** 確認済み
 
       ![ノードをオーバーレイ](assets/2_defaultappoverlaynode.png)
 
@@ -68,7 +68,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
    * 「/libs/fd/cm/config/defaultApp/acmExtensionsConfig.xml」に移動します。
 
-   * acmExtensionsConfig.xmlファイルを右クリックし、「**[!UICONTROL コピー]**」を選択します。
+   * acmExtensionsConfig.xml ファイルを右クリックし、「 」を選択します。 **[!UICONTROL コピー]**.
 
       ![acmExtensionsConfig.xml をコピーします](assets/3_acmextensionsconfig_xml_copy.png)
 
@@ -92,7 +92,7 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
    </extensionsConfig> 
    ```
 
-1. レターを電子メールで送信するには、LiveCycle Forms ワークフローを使用します。次のように、 acmExtensionsConfig.xml内のmodelExtensionタグの下にcustomActionタグを追加します。
+1. レターを電子メールで送信するには、LiveCycle Forms ワークフローを使用します。次のように、acmExtensionsConfig.xml の modelExtension タグの下に customAction タグを追加します。
 
    ```xml
     <customAction name="Letter Review" label="Letter Review" tooltip="Letter Review" styleName="" permissionName="forms-users" actionHandler="CM.domain.CCRCustomActionHandler">
@@ -104,30 +104,30 @@ Correspondence Management ソリューションでは、「通信を作成」UI 
 
    modelExtension タグには、アクションボタンのアクション、権限、外観を設定する customAction 子タグのセットが含まれています。以下は customAction 設定タグの一覧です。
 
-   | **Name** | **説明** |
+   | **名前** | **説明** |
    |---|---|
-   | name | 実行するアクションの英数字の名前。 このタグの値は必須です。modelExtension タグ内で一意であり、アルファベットで始まる必要があります。 |
+   | name | 実行するアクションの英数字名。 このタグの値は必須です。modelExtension タグ内で一意であり、アルファベットで始まる必要があります。 |
    | label | アクションボタンに表示するラベル。 |
    | tooltip | ボタンのツールチップテキスト。ボタンにカーソルを置くと表示されます。 |
    | styleName | アクションボタンに適用されるカスタムスタイルの名前。 |
-   | permissionName | 対応するアクションは、ユーザーがpermissionNameで指定された権限を持っている場合にのみ表示されます。 permissionNameを`forms-users`と指定すると、すべてのユーザーがこのオプションにアクセスできます。 |
-   | actionHandler | ユーザーがボタンをクリックしたときに呼び出されるActionHandlerクラスの完全修飾名。 |
+   | permissionName | 対応するアクションは、ユーザーが permissionName で指定された権限を持つ場合にのみ表示されます。 permissionName をとして指定する場合 `forms-users`の場合、すべてのユーザーがこのオプションにアクセスできます。 |
+   | actionHandler | ユーザーがボタンをクリックしたときに呼び出される ActionHandler クラスの完全修飾名。 |
 
-   上記のパラメーター以外に、customAction には追加の設定を関連付けることができます。これらの追加の設定は、 CustomActionオブジェクトを通じてハンドラーで使用できます。
+   上記のパラメーター以外に、customAction には追加の設定を関連付けることができます。これらの追加の設定は、 CustomAction オブジェクトを通じてハンドラーで使用できます。
 
    | **名前** | **説明** |
    |---|---|
-   | serviceName | customActionにserviceNameという名前の子タグが含まれている場合、関連するボタンまたはリンクをクリックすると、serviceNameタグで表される名前でプロセスが呼び出されます。 このプロセスにレターのPostProcessと同じ署名が含まれていることを確認します。 サービス名に「Forms Workflow ->」プレフィックスを追加します。 |
-   | タグ名にcm_プレフィックスを含むパラメーター | customActionにcm_で始まる子タグが含まれている場合、後処理（レター後処理またはserviceNameタグで表される特殊な処理）では、これらのパラメーターは、cm_プレフィックスが削除された関連タグの下の入力XMLコードで使用できます。 |
-   | actionName | クリックによって後処理が行われるたびに、送信されたXMLには、ユーザーアクションの名前を持つタグの下に、名前を持つ特殊なタグが含まれます。 |
+   | serviceName | customAction に serviceName という名前の子タグが含まれている場合、関連する button/link をクリックすると、serviceName タグで表される名前でプロセスが呼び出されます。 このプロセスが Letter PostProcess と同じ署名を持っていることを確認します。 サービス名に「Forms Workflow ->」プレフィックスを追加します。 |
+   | タグ名に cm_プレフィックスを含むパラメーター | customAction に cm_で始まる子タグが含まれている場合、後処理（レター後処理、または serviceName タグで表される特殊な処理）では、これらのパラメーターは、cm_プレフィックスが削除された関連タグの下の入力 XML コードで使用できます。 |
+   | actionName | クリックによる後処理が発生するたびに、送信された XML には、ユーザーアクションの名前を持つタグの下に、名前を持つ特殊なタグが含まれます。 |
 
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
 #### /apps branch 内のプロパティファイルを使用したローカルフォルダーの作成 {#create-a-locale-folder-with-properties-file-in-the-apps-branch}
 
-ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザーインターフェイスの様々なフィールドのラベルとツールチップメッセージが含まれています。 カスタマイズしたアクションやボタンを機能させるために、/apps branch にこのファイルのコピーを作成します。
+ACMExtensionsMessages.properties ファイルには、通信を作成ユーザーインターフェイスの様々なフィールドのラベルとツールチップメッセージが含まれています。 カスタマイズしたアクションやボタンを機能させるために、/apps branch にこのファイルのコピーを作成します。
 
-1. 次のパスにある&#x200B;**[!UICONTROL locale]**&#x200B;フォルダーを右クリックし、「**[!UICONTROL ノードをオーバーレイ]**」を選択します。
+1. を右クリックします。 **[!UICONTROL ロケール]** 次のパスにあるフォルダーを選択し、 **[!UICONTROL ノードをオーバーレイ]**:
 
    /libs/fd/cm/config/defaultApp/locale
 
@@ -137,11 +137,11 @@ ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザー
 
    **[!UICONTROL オーバーレイの場所：]** /apps/
 
-   **[!UICONTROL ノードタイプを一致させる：]** オン
+   **[!UICONTROL ノードタイプを一致させる：]** 確認済み
 
 1. 「**[!UICONTROL OK]**」をクリックします。
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
-1. 次のファイルを右クリックし、「**[!UICONTROL コピー]**」を選択します。
+1. 次のファイルを右クリックし、「 」を選択します。 **[!UICONTROL コピー]**:
 
    `/libs/fd/cm/config/defaultApp/locale/ACMExtensionsMessages.properties`
 
@@ -151,19 +151,19 @@ ACMExtensionsMessages.propertiesファイルには、通信を作成ユーザー
 
    ACMExtensionsMessages.properties ファイルがローカルフォルダーにコピーされます。
 
-1. 新しく追加されたカスタムアクション/ボタンのラベルをローカライズするには、`/apps/fd/cm/config/defaultApp/locale/`内に、関連するロケールのACMExtensionsMessages.propertiesファイルを作成します。
+1. 新しく追加されたカスタムアクション/ボタンのラベルをローカライズするには、内の関連ロケールの ACMExtensionsMessages.properties ファイルを作成します。 `/apps/fd/cm/config/defaultApp/locale/`.
 
    たとえば、この記事で作成したカスタムアクションまたはボタンをローカライズするには、次のエントリを使用して ACMExtensionsMessages_fr.properties という名前のファイルを作成します。
 
    `loc.letterInstance.letterreview.label=Revue De Lettre`
 
-   同様に、このファイルにツールチップやスタイルなどのプロパティを追加できます。
+   同様に、このファイルにツールチップやスタイルのプロパティなどを追加できます。
 
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
 #### Adobe Asset Composer 構築ブロックバンドルの再起動 {#restart-the-adobe-asset-composer-building-block-bundle}
 
-サーバー側の変更をすべて加えた後、Adobe Asset Composer 構築ブロックバンドルを再起動します。このシナリオでは、サーバー側のacmExtensionsConfig.xmlファイルとACMExtensionsMessages.propertiesファイルが編集されるので、AdobeのAsset Composer構築ブロックバンドルを再起動する必要があります。
+サーバー側の変更をすべて加えた後、Adobe Asset Composer 構築ブロックバンドルを再起動します。このシナリオでは、サーバー側の acmExtensionsConfig.xml ファイルと ACMExtensionsMessages.properties ファイルが編集されるので、AdobeAsset Composer 構築ブロックバンドルを再起動する必要があります。
 
 >[!NOTE]
 >
@@ -185,11 +185,11 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
 
 カスタムのアクション処理の場合は、CRX の /apps branch にある cm.domain.js ファイルのオーバーレイを作成します。
 
-アクション/ボタンをクリックする際のアクション/ボタンの処理には、次のロジックが含まれます。
+アクション/ボタンをクリックした際のアクション/ボタンの処理には、次のロジックが含まれています。
 
 * 新しく追加したアクションを表示または非表示にする：actionVisible() 関数をオーバーライドして実行します。
-* 新しく追加されたアクションを有効または無効にする：actionEnabled()関数を上書きして実行されます。
-* ユーザーがボタンをクリックした場合の実際のアクション処理：handleAction()関数の実装を上書きして実行されます。
+* 新しく追加したアクションを有効/無効にする：actionEnabled() 関数をオーバーライドして実行されます。
+* ユーザーがボタンをクリックしたときの実際のアクション処理：handleAction() 関数の実装を上書きして実行されます。
 
 1. `https://[server]:[port]/[ContextPath]/crx/de` にアクセスします。必要に応じて、管理者としてログインします。
 
@@ -199,7 +199,7 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
 
    フォルダーの作成手順は次のとおりです。
 
-   1. 次のパスにある&#x200B;**[!UICONTROL js]**&#x200B;フォルダーを右クリックし、「**[!UICONTROL ノードをオーバーレイ]**」を選択します。
+   1. を右クリックします。 **[!UICONTROL js]** 次のパスにあるフォルダーを選択し、 **[!UICONTROL ノードをオーバーレイ]**:
 
       `/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js`
 
@@ -209,14 +209,14 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
 
       **[!UICONTROL オーバーレイの場所：]** /apps/
 
-      **[!UICONTROL ノードタイプを一致させる：]** オン
+      **[!UICONTROL ノードタイプを一致させる：]** 確認済み
 
    1. 「**[!UICONTROL OK]**」をクリックします。
    1. 「**[!UICONTROL すべて保存]**」をクリックします。
 
-1. 次の手順を使用して、ボタンのアクション処理のコードを含むccrcustomization.jsという名前のファイルをjsフォルダーに作成します。
+1. 次の手順に従って、ccrcustomization.js という名前のファイルを js フォルダーに作成し、ボタンのアクション処理のためのコードを指定します。
 
-   1. 次のパスにある&#x200B;**[!UICONTROL js]**&#x200B;フォルダーを右クリックし、**[!UICONTROL 作成/ファイルを作成]**&#x200B;を選択します。
+   1. を右クリックします。 **[!UICONTROL js]** 次のパスにあるフォルダーを選択し、 **[!UICONTROL 作成/ファイルを作成]**:
 
       `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/js`
 
@@ -324,12 +324,12 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
 
 ### LiveCycle プロセスの追加によるアクション<span class="acrolinxCursorMarker"></span>処理の有効化 {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
 
-このシナリオでは、次のコンポーネントを有効にします。これは、添付されたcomponents.zipファイルに含まれています。
+このシナリオでは、添付された components.zip ファイルに含まれる次のコンポーネントを有効にします。
 
-* DSCコンポーネントjar(`DSCSample.jar`)
-* レビュープロセスLCA(`SendLetterForReview.lca`)用の送信レター
+* DSC コンポーネント jar (`DSCSample.jar`)
+* レビュープロセス LCA(`SendLetterForReview.lca`)
 
-`components.zip`ファイルをダウンロードして解凍し、`DSCSample.jar`ファイルと`SendLetterForReview.lca`ファイルを取得します。 これらのファイルは、次の手順に従って使用します。
+をダウンロードして展開します。 `components.zip` 取得するファイル `DSCSample.jar` および `SendLetterForReview.lca` ファイル。 これらのファイルは、次の手順に従って使用します。
 
 [ファイルを入手](assets/components.zip)
 
@@ -337,57 +337,57 @@ Adobe Asset Composer 構築ブロックバンドルを再起動した後、通�
 
 >[!NOTE]
 >
->この手順は、「 OSGiセットアップ」を使用し、実装するカスタマイズのタイプにLC統合が必要な場合にのみ必要です。
+>この手順は、「 OSGi 設定」を使用していて、実装するカスタマイズのタイプに LC 統合が必要な場合にのみ必要です。
 
 LCA プロセスは LiveCycle サーバー上で実行され、サーバーアドレスとログイン情報が必要になります。
 
-1. `https://[server]:[port]/system/console/configMgr`に移動し、管理者としてログインします。
+1. に移動します。 `https://[server]:[port]/system/console/configMgr` 管理者としてログインします。
 1. Adobe LiveCycle Client SDK Configuration を見つけて、「**[!UICONTROL 編集]**」（編集アイコン）をクリックします。「設定」パネルが開きます。
 
-1. 次の詳細を入力し、「**[!UICONTROL 保存]**」をクリックします。
+1. 次の詳細を入力し、 **[!UICONTROL 保存]**:
 
-   * **[!UICONTROL サーバーUrl]**:アクションハンドラーコードがSend For Reviewサービスを使用するLCサーバーのURL。
-   * **[!UICONTROL ユーザー名]**:LC Serverの管理者ユーザー名
+   * **[!UICONTROL サーバー URL]**:Send For Review サービスがアクションハンドラーコードで使用する LC サーバーの URL。
+   * **[!UICONTROL ユーザー名]**:LC サーバーの管理者ユーザー名
    * **[!UICONTROL パスワード]**：管理者ユーザー名のパスワード
 
    ![Adobe LiveCycle Client SDK Configuration](assets/3_clientsdkconfiguration.png)
 
 #### LiveCycle Archive（LCA）のインストール {#install-livecycle-archive-lca}
 
-電子メールサービスのLiveCycleを可能にする必須のプロセス。
+電子メールサービスのLiveCycleを可能にする必要なプロセス。
 
 >[!NOTE]
 >
 >このプロセスの処理を表示するか、独自の類似プロセスを作成するには、Workbench が必要になります。
 
-1. `https:/[lc server]/:[lc port]/adminui`で、Livecycle Server adminuiに管理者としてログインします。
+1. 次の場所に Livecycle Server adminui に管理者としてログインします。 `https:/[lc server]/:[lc port]/adminui`.
 
 1. **[!UICONTROL ホーム／サービス／アプリケーションおよびサービス／アプリケーションの管理]**&#x200B;に移動します。
 
-1. SendLetterForReviewアプリケーションが既に存在する場合は、この手順の残りの手順をスキップします。存在しない場合は、次の手順に進みます。
+1. SendLetterForReview アプリケーションが既に存在する場合は、この手順の残りの手順をスキップします。それ以外の場合は、次の手順に進みます。
 
    ![UI 内の SendLetterForReview アプリケーション](assets/12_applicationmanagementlc.png)
 
 1. 「**[!UICONTROL 読み込み]**」をクリックします。
 
-1. 「**[!UICONTROL ファイル]**&#x200B;を選択」をクリックし、**[!UICONTROL SendLetterForReview.lca]**&#x200B;を選択します。
+1. クリック **[!UICONTROL ファイルを選択]** を選択し、 **[!UICONTROL SendLetterForReview.lca]**.
 
    ![SendLetterForReview.lca ファイルを選択します](assets/14_sendletterforreview_lca.png)
 
 1. 「**[!UICONTROL プレビュー]**」をクリックします。
 
-1. 「読み込みの完了時にアセットをランタイムにデプロイ&#x200B;**[!UICONTROL 」を選択します。]**
+1. 選択 **[!UICONTROL 読み込みの完了時にアセットをランタイムにデプロイする]**.
 
 1. 「**[!UICONTROL 読み込み]**」をクリックします。
 
-#### 「許可リストに加える・サービス」リストへのServiceNameの追加 {#adding-servicename-to-the-allowlisted-service-list}
+#### 「許可リストに加えるサービス」リストへの ServiceName の追加 {#adding-servicename-to-the-allowlisted-service-list}
 
 AEM サーバーにアクセスする必要のある LiveCycle サービスを AEM サーバーで指定します。
 
-1. `https:/[host]/:[port]/system/console/configMgr`に管理者としてログインします。
+1. に管理者としてログインします。 `https:/[host]/:[port]/system/console/configMgr`.
 
-1. 「**[!UICONTROL AdobeLiveCycleクライアントSDK設定]**」を探してクリックします。 AdobeLiveCycleのClient SDK Configurationパネルが表示されます。
-1. 「サービス名」リストで+アイコンをクリックし、serviceName **[!UICONTROL SendLetterForReview/SendLetterForReviewProcess]**&#x200B;を追加します。
+1. を探して、 **[!UICONTROL AdobeLiveCycleクライアント SDK の設定]**. AdobeLiveCycleClient SDK Configuration パネルが表示されます。
+1. 「サービス名」リストで、「 + 」アイコンをクリックし、 serviceName を追加します。 **[!UICONTROL SendLetterForReview/SendLetterForReviewProcess]**.
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
@@ -395,50 +395,50 @@ AEM サーバーにアクセスする必要のある LiveCycle サービスを A
 
 このシナリオでは、Correspondence Management で電子メールを送信できるようにするため、LiveCycle サーバーで電子メールサービスを設定します。
 
-1. `https:/[lc server]:[lc port]/adminui`で、Livecycle Server adminuiに管理者の資格情報を使用してログインします。
+1. 管理者の資格情報を使用して、次の場所に Livecycle Server adminui にログインします。 `https:/[lc server]:[lc port]/adminui`.
 
 1. **[!UICONTROL ホーム／サービス／アプリケーションおよびサービス／サービスの管理]**&#x200B;に移動します。
 
 1. 「**[!UICONTROL 電子メールサービス]**」を検索してクリックします。
 
-1. **[!UICONTROL SMTP Host]**&#x200B;で、電子メールサービスを設定します。
+1. In **[!UICONTROL SMTP ホスト]**、電子メールサービスを設定します。
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
 #### DSC サービスの設定 {#configure-the-dsc-service}
 
-Correspondence Management APIを使用するには、`DSCSample.jar`（このドキュメントに添付されている`components.zip`の一部として添付）をダウンロードし、LiveCycleサーバーにアップロードします。 `DSCSample.jar`ファイルがLiveCycleサーバーにアップロードされた後、AEMサーバーは`DSCSample.jar`ファイルを使用してrenderLetter APIにアクセスします。
+Correspondence Management API を使用するには、 `DSCSample.jar` ( このドキュメントに `components.zip`) をクリックし、LiveCycleサーバーにアップロードします。 次の期間の後 `DSCSample.jar` ファイルがLiveCycleサーバーにアップロードされた場合、AEMサーバーは `DSCSample.jar` ファイルを使用して、renderLetter API にアクセスします。
 
-詳しくは、「[AEM FormsとAdobeLiveCycle](/help/forms/using/aem-livecycle-connector.md)の接続」を参照してください。
+詳しくは、 [AEM FormsとAdobeLiveCycle](/help/forms/using/aem-livecycle-connector.md).
 
-1. `DSCSample.jar`のcmsa.propertiesのAEMサーバーURLを更新します。次の場所にあります。
+1. の cmsa.properties でAEMサーバー URL を更新します。 `DSCSample.jar`（以下の場所）。
 
    DSCSample.jar\com\adobe\livecycle\cmsa.properties
 
 1. 設定ファイルに次のパラメーターを指定します。
 
-   * **crx.serverUrl**=https:/[host]/:[port]/[context path]/[AEM URL]
+   * **crx.serverUrl**=https:/[ホスト]/:[ポート]/[コンテキストパス]/[AEM URL]
    * **crx.username**= AEM ユーザー名
-   * **crx.password** = AEM password
+   * **crx.password**= AEMパスワード
    * **crx.appRoot**=/content/apps/cm
 
    >[!NOTE]
    >
    >サーバー側で変更を加えるたびに、サーバーを再起動します。
 
-   `DSCSample.jar`ファイルは`renderLetter` APIを使用します。 renderLetter APIについて詳しくは、[Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)を参照してください。
+   この `DSCSample.jar` ファイルは `renderLetter` API renderLetter API について詳しくは、 [インターフェイス LetterRenderService](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html).
 
-#### JEE上のAEM FormsへのDSCの読み込み {#import-dsc-to-livecyle}
+#### DSC を JEE 上のAEM Formsに読み込む {#import-dsc-to-livecyle}
 
 `DSCSample.jar``renderLetter` ファイルは API を使用して、C で入力された XML データの PDF バイト列として レターをレンダリングします。renderLetter およびその他の API について詳しくは、「[レターのレンダリングサービス](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)」を参照してください。
 
 1. Livecycle Workbenchを起動してログインします。
-1. **[!UICONTROL Window/Show Views/Components]**&#x200B;を選択します。 ComponentsビューがWorkbench ES2に追加されます。
+1. 選択 **[!UICONTROL Window > Show Views > Components]**. Components ビューが Workbench ES2 に追加されます。
 
-1. **[!UICONTROL Components]**&#x200B;を右クリックし、「**[!UICONTROL Install Component]**」を選択します。
+1. 右クリック **[!UICONTROL コンポーネント]** を選択し、 **[!UICONTROL コンポーネントをインストール]**.
 
-1. ファイルブラウザーで`DSCSample.jar`ファイルを選択し、「**[!UICONTROL 開く]**」をクリックします。
-1. **[!UICONTROL RenderWrapper]**&#x200B;を右クリックし、「**[!UICONTROL コンポーネントを開始]**」を選択します。 コンポーネントが起動すると、コンポーネント名の横に緑色の矢印が表示されます。
+1. を選択します。 `DSCSample.jar` ファイルをファイルブラウザーで指定し、 **[!UICONTROL 開く]**.
+1. 右クリック **[!UICONTROL RenderWrapper]** を選択し、 **[!UICONTROL 開始コンポーネント]**. コンポーネントが起動すると、コンポーネント名の横に緑色の矢印が表示されます。
 
 ## レビュー用のレターの送信 {#send-letter-for-review}
 
@@ -446,7 +446,7 @@ Correspondence Management APIを使用するには、`DSCSample.jar`（このド
 
 1. ブラウザーのキャッシュをクリアします。
 
-1. 「通信を作成」UIで、「**[!UICONTROL レターのレビュー]**」をクリックし、レビュー担当者の電子メールIDを指定します。
+1. 通信を作成 UI で、 **[!UICONTROL レターのレビュー]** レビュー担当者の電子メール ID を指定します。
 
 1. 「**[!UICONTROL 送信]**」をクリックします。
 

@@ -1,8 +1,8 @@
 ---
 title: クイックビューを使用したカスタムポップアップの作成
-seo-title: クイックビューを使用したカスタムポップアップの作成
+seo-title: Using Quickviews to create custom pop-ups
 description: e コマースエクスペリエンスではデフォルトのクイックビューが使用され、ポップアップに購入を促す商品情報が表示されます。このようなポップアップにカスタムコンテンツが表示されるように設定できます。
-seo-description: e コマースエクスペリエンスではデフォルトのクイックビューが使用され、ポップアップに購入を促す商品情報が表示されます。このようなポップアップにカスタムコンテンツが表示されるように設定できます。
+seo-description: The default Quickview is used in ecommerce experiences whereby a pop-up is displayed with product information to drive a purchase. You can trigger custom content to display in the pop-ups.
 uuid: b906cfff-ac44-4989-b6da-8a9bbf02af03
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,11 +10,11 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 exl-id: 56b070e4-b445-4488-acff-685b7ce5785f
-feature: 設定
+feature: Configuration
 role: Admin,User,Developer
 source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1010'
 ht-degree: 97%
 
 ---
@@ -108,8 +108,8 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
 
    `setHandlers()` メソッドについて詳しくは、以下を参照してください。
 
-   * インタラクティブ画像ビューア：[setHandlers](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html?lang=ja)
-   * インタラクティブビデオビューア：[setHandlers](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html?lang=ja)
+   * インタラクティブ画像ビューア： [setHandlers](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html?lang=ja)
+   * インタラクティブビデオビューア： [setHandlers](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html?lang=ja)
 
 1. 次に、`quickViewActivate` ハンドラーを設定する必要があります。
 

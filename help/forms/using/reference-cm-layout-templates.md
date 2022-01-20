@@ -20,7 +20,7 @@ ht-degree: 89%
 
 Correspondence Management のレターテンプレートには、一般的なフォームフィールド、ヘッダーやフッターなどのレイアウト機能、コンテンツを配置するための空の「ターゲット領域」が含まれています。
 
-Correspondence Managementは、AEM Formsパッケージ[AEM Formsアドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)にレターテンプレートを提供します。 パッケージのインストールについては、[パッケージの使用方法](/help/sites-administering/package-manager.md)を参照してください。 ブランディングやビジネスのニーズに合わせて、Designerでテンプレートをカスタマイズできます。 パッケージには次のテンプレートが含まれています。
+Correspondence Management では、レターテンプレートをAEM Formsパッケージで提供します [AEM Formsアドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). パッケージのインストールについては、 [パッケージの操作方法](/help/sites-administering/package-manager.md). ブランディングやビジネスニーズに応じて、Designer でテンプレートをカスタマイズできます。 パッケージには次のテンプレートが含まれています。
 
 * クラシック
 * クラシックシンプル

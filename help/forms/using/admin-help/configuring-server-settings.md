@@ -57,13 +57,13 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 
 >[!NOTE]
 >
->Flex Workspaceは、AEM formsのリリースでは非推奨（廃止予定）となっています。
+>Flex Workspace は、AEM forms のリリースで非推奨（廃止予定）となりました。
 
 デフォルトでは、AEM forms によって送信される電子メールは Flex Workspace（JEE 上の AEM forms では廃止されています）へのリンクを含みます。AEM forms によって送信される電子メールが AEM Forms Workspace へのリンクを含むように設定できます。Flex Workspace（JEE 上の AEM forms では廃止されています）を上回る AEM Forms Workspace のメリットについて詳しくは、こちらの[記事](/help/forms/using/features-html-workspace-available-flex.md)を参照してください。
 
 1. 管理コンソールで、ホーム／サービス／forms ワークフロー／サーバー設定／タスク通知をクリックします。
 1. タスクの割り当てテンプレートを開きます。
-1. タスク通知のテンプレートを次のとおりに設定します。  `https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@`
+1. タスク通知のテンプレートを次のとおりに設定します。 `https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@`
 
    ```as3
    https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@
@@ -193,9 +193,9 @@ forms ワークフローが、管理者に送信される電子メール通知�
 >
 >AEM Forms のリリースでは Flex Workspace は廃止されています。
 
-ソリューションがクラスター環境にデプロイされている場合は、`@@notification-host@@`をクラスターアドレスに置き換えます。
+ソリューションがクラスター環境にデプロイされている場合は、 `@@notification-host@@` クラスターアドレスを指定します。
 
-`<`** `>` PORTは、アプリケーションサーバーのHTTPリスナーのポート番号です。サポートされるアプリケーションサーバーのデフォルトの HTTP リスナーポートは、以下のとおりです。
+`<`*ポート* `>` は、アプリケーションサーバーの HTTP リスナーのポート番号です。 サポートされるアプリケーションサーバーのデフォルトの HTTP リスナーポートは、以下のとおりです。
 
 **JBoss：** 8080
 
@@ -203,7 +203,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 
 **IBM WebSphere:** 9080
 
-これらのURLを正しく機能させるには、 `<`*PORT* `>`を、ご使用の環境に適したポート番号に置き換えます。
+これらの URL を正しく機能させるには、 `<`*ポート* `>` お使いの環境に適したポート番号を持つ
 
 >[!NOTE]
 >
@@ -211,27 +211,27 @@ forms ワークフローが、管理者に送信される電子メール通知�
 
 ### 変数選択 {#variable-picker}
 
-変数選択リストには便利な変数があり、「件名」ボックスまたは「通知テンプレート」ボックスにドラッグアンドドロップできます。「件名」ボックスまたは「通知テンプレート」ボックスにドロップした変数は、`@@taskid@@`のように、両側に2つの@記号が付いた実際のフォームワークフロー変数名に変わります。
+変数選択リストには便利な変数があり、「件名」ボックスまたは「通知テンプレート」ボックスにドラッグアンドドロップできます。「件名」ボックスまたは「通知テンプレート」ボックスにドロップした変数は、両側に 2 つの@記号が付いた、実際の forms ワークフロー変数名に変わります。例： `@@taskid@@`.
 
 ユーザーまたはグループへのリマインダー、タスクの割り当て、およびデッドラインの場合、「件名」ボックスと「通知テンプレート」ボックスで以下の変数を使用できます。
 
-**** description:Workbench内のプロセスのユーザー手順（開始ポイント、「Assign Task」操作、または「Assign Multiple Tasks」操作）で定義された、Descriptionプロパティの内容。
+**説明** Workbench 内のプロセスのユーザー手順（開始点、Assign Task 操作、または Assign Multiple Tasks 操作）で定義された Description プロパティの内容。
 
-**** instructions Workbenchのプロセスのユーザーステップで定義されるTask Instructionsプロパティの内容。
+**説明** Workbench のプロセスのユーザーステップで定義される Task Instructions プロパティの内容。
 
-**notification-** host AEM formsアプリケーションサーバーのホスト名。
+**notification-host** AEM forms アプリケーションサーバーのホスト名です。
 
-**process-** nameプロセスの名前。
+**process-name** プロセスの名前。
 
-**operation-** name — ステップの名前。
+**operation-name** ステップの名前。
 
-**** taskid現在のタスクの一意の識別子。
+**タスク** 現在のタスクの一意の ID です。
 
-**** actionsProduces受信者がクリックできる有効なルート（承認、拒否など）の番号付きリストを生成します。
+**アクション** 受信者がクリックできる有効なルート（承認、拒否など）の番号付きリストを生成します。
 
 また、グループリマインダー、グループタスクの割り当ておよびグループのデッドラインの場合、次の変数も使用できます。
 
-**group-** name：作業項目を割り当てるグループの名前。
+**group-name** 作業項目を割り当てるグループの名前。
 
 >[!NOTE]
 >
@@ -239,21 +239,21 @@ forms ワークフローが、管理者に送信される電子メール通知�
 
 停止したブランチの場合は、次の変数を「件名」ボックスおよび「通知テンプレート」ボックスで使用できます。
 
-**branch-** idブランチの識別子。
+**branch-id** ブランチの識別子。
 
-**process-id-** プロセスインスタンスの識別子。
+**process-id** プロセスインスタンスの識別子。
 
-**notification-** host AEM formsアプリケーションサーバーのホスト名。
+**notification-host** AEM forms アプリケーションサーバーのホスト名です。
 
 停止した操作の場合は、次の変数を「件名」ボックスおよび「通知テンプレート」ボックスで使用できます。
 
-**action-id操作** の識別子。
+**action-id** 操作の識別子。
 
-**branch-** idブランチの識別子。
+**branch-id** ブランチの識別子。
 
-**process-id-** プロセスインスタンスの識別子。
+**process-id** プロセスインスタンスの識別子。
 
-**notification-** host AEM formsアプリケーションサーバーのホスト名。
+**notification-host** AEM forms アプリケーションサーバーのホスト名です。
 
 ### 「件名」ボックスでの変数の使用 {#using-a-variable-in-the-subject-box}
 

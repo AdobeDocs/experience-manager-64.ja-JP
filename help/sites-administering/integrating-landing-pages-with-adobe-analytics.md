@@ -1,8 +1,8 @@
 ---
 title: ランディングページと Adobe Analytics の統合
-seo-title: ランディングページと Adobe Analytics の統合
+seo-title: Integrating Landing Pages with Adobe Analytics
 description: ランディングページと Adobe Analytics を統合する方法について説明します。
-seo-description: ランディングページと Adobe Analytics を統合する方法について説明します。
+seo-description: Learn how to integrate landing pages with Adobe Analytics.
 uuid: 8f6672d1-497f-4ccb-b3cc-f6120fc467ba
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,27 +12,27 @@ discoiquuid: 8ae7ccec-489b-4d20-ac56-6101402fb18a
 exl-id: 2923ae94-375a-4c44-a08f-f992eb08000a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 48%
+source-wordcount: '376'
+ht-degree: 46%
 
 ---
 
 # ランディングページと Adobe Analytics の統合{#integrating-landing-pages-with-adobe-analytics}
 
-AEMは、次のコールトゥアクション(CTA)コンポーネントを使用して、ランディングページソリューションを[Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst)と統合しました。
+AEMは、ランディングページソリューションを [Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst) 次のコールトゥアクション (CTA) コンポーネントを使用する。
 
 1. クリックスルーコンポーネント
 1. グラフィックリンクコンポーネント
 
-これらのコンポーネントは、Adobe Analytics変数（トラフィック変数、コンバージョン変数）および成功イベントを使用してマッピングできる特定の属性を公開し、Adobe Analyticsに情報を送信します。
+これらのコンポーネントは、Adobe Analytics変数（トラフィック、コンバージョン変数）および成功イベントを使用してマッピングでき、Adobe Analyticsに情報を送信するための特定の属性を公開します。
 
 ## 前提条件 {#prerequisites}
 
-Adobeでは、[既存のAEM-Adobe Analytics統合](/help/sites-administering/adobeanalytics.md)を確認して、この統合の仕組みを理解することをお勧めします。
+Adobeでは、 [既存のAEMとAdobe Analyticsの統合](/help/sites-administering/adobeanalytics.md) を参照して、この統合の仕組みを理解してください。
 
 ## マッピングに使用できるコンポーネント {#components-available-for-mapping}
 
-AEMでは、サイドキックに表示される&#x200B;**Call to Action**&#x200B;コンポーネント（**ClickThroughLink**&#x200B;および&#x200B;**GraphicalLink**）をAdobe Analytics変数にマッピングできます。
+AEMで、 **コールトゥアクション** コンポーネント — **ClickThroughLink** および **GraphicalLink**  — サイドキックに表示され、Adobe Analytics変数にマッピングできます。
 
 ![chlimage_1-21](assets/chlimage_1-21.jpeg)
 
@@ -68,7 +68,7 @@ AEMでは、サイドキックに表示される&#x200B;**Call to Action**&#x200
   <tr>
    <td><strong>CTA グラフィックリンク</strong></td> 
    <td><i>eventdata.clicktroughImageLabel</i> <br /> </td> 
-   <td>CTA画像のタイトル </td> 
+   <td>CTA 画像のタイトル </td> 
   </tr>
   <tr>
    <td><br type="_moz" /> </td> 
@@ -89,7 +89,7 @@ AEMでは、サイドキックに表示される&#x200B;**Call to Action**&#x200
 </table>
 
 1. コンテンツファインダーで、これらの公開される属性と Adobe Analytics 変数をマッピングします。これで、フレームワークを使用する準備が整いました。
-1. 新しいランディングページを作成するか、既存のCTAコンポーネントを使用して既存のランディングページを開き、サイドキックの「**Cloud Services**」タブをクリックします(タッチ操作向けUIでは、**Cloud Services**&#x200B;を選択し、**プロパティ**&#x200B;を設定します)をランディングページと共に使用する場合。 ****&#x200B;ドロップダウンリストからフレームワークを選択します。
+1. これで、新しいランディングページを作成するか、既存の CTA コンポーネントを含む既存のランディングページを開いて、 **Cloud Services** タブ **ページプロパティ** サイドキック（タッチ操作向け UI）で、 **プロパティを開く** をクリックし、 **Cloud Services**) をクリックし、ランディングページで使用するフレームワークを設定します。 ドロップダウンリストからフレームワークを選択します。
 
    ![chlimage_1-25](assets/chlimage_1-25.png)
 

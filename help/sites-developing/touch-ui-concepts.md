@@ -1,8 +1,8 @@
 ---
 title: AEM タッチ操作対応 UI の概念
-seo-title: AEM タッチ操作対応 UI の概念
+seo-title: Concepts of the AEM Touch-Enabled UI
 description: アドビは、AEM 5.6 でオーサー環境にレスポンシブデザインを採用した新しいタッチ操作対応 UI を導入しました
-seo-description: アドビは、AEM 5.6 でオーサー環境にレスポンシブデザインを採用した新しいタッチ操作対応 UI を導入しました
+seo-description: With AEM 5.6 Adobe introduced a new touch-optimized UI with responsive design for the author environment
 uuid: 8ec6514e-f623-40be-a7bf-2e85bf4385ca
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 8c7e5667-14c5-40f3-968a-c574b04671e3
 exl-id: a89cf964-cc9f-46d7-afd8-150d48948513
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '2218'
+source-wordcount: '2197'
 ht-degree: 94%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->タッチ操作対応UIはAEMの標準UIですが、クラシックUIは引き続きサポートされます。
+>タッチ操作対応 UI はAEMの標準 UI ですが、クラシック UI は引き続きサポートされます。
 
 タッチ操作対応 UI は以下で構成されます。
 
@@ -77,7 +77,7 @@ ht-degree: 94%
 * 組み込みのテスト
 * ボトムアップ設計（これらの原則がすべての要素およびコンポーネントに確実に適用されます）
 
-タッチ操作対応UIの構造の詳しい概要については、記事[AEMタッチ操作対応UIの構造](/help/sites-developing/touch-ui-structure.md)を参照してください。
+タッチ操作対応 UI の構造の詳しい概要については、この記事を参照してください [AEMタッチ操作対応 UI の構造](/help/sites-developing/touch-ui-structure.md).
 
 ## AEM テクノロジースタック {#aem-technology-stack}
 
@@ -207,7 +207,7 @@ sling コンポーネントのコレクションによって形成され、作�
  </tbody> 
 </table>
 
-### Granite UI 基盤コンポーネント  {#granite-ui-foundation-components}
+### Granite UI 基盤コンポーネント {#granite-ui-foundation-components}
 
 [Granite UI 基盤コンポーネント](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)は、UI を構築するために必要な基本の構築ブロックを提供します。次に例を示します。
 
@@ -282,7 +282,7 @@ Granite UI を使用するように ExtJS コードをアップグレードす�
 * 基盤コンポーネントを使用した事前定義済みコンポーネント
 * コンポーネントのカスタマイズが可能
 
-## Coral UI  {#coral-ui}
+## Coral UI {#coral-ui}
 
 Coral UI（CUI）は、アドビのタッチ操作対応 UI 用のビジュアルスタイル実装です。タッチ操作対応 UI は、複数の製品間で一貫性のあるユーザーエクスペリエンスを提供するように設計されています。Coral UI は、オーサー環境で使用されるビジュアルスタイルを採用するために必要となるすべてのものを備えています。
 
@@ -299,15 +299,13 @@ Coral UI（CUI）は、アドビのタッチ操作対応 UI 用のビジュア�
 >* わずかにカスタマイズされている場合
 
 >
->
-以下の場合は、Coral UI は使用しないでください。
+>以下の場合は、Coral UI は使用しないでください。
 >
 >* アドビに関係のないドキュメントその他の項目
 >* コンテンツ作成環境（前述の項目が他人によって生成されるおそれがある場合）
 >* アドビと明確なつながりのないアプリケーション／コンポーネント／Web ページ
 
 >
-
 
 
 Coral UI は、Web アプリケーションを開発するための構成要素のコレクションです。
@@ -375,19 +373,19 @@ HTML 要素の多くは、ポップアップメニューの表示／非表示な
 プラグインは次のいずれかです。
 
 * 特定の DOM 要素に作用するように設計されています。例えば、ダイアログプラグインは、`DIV class=dialog` を検索することを想定しています。
-* 本質的には汎用的です。 例えば、レイアウトマネージャーは、`DIV`要素または`LI`要素のリスト用のレイアウトを提供します
+* 本質的には一般的です。 例えば、レイアウトマネージャーは、 `DIV` または `LI` 要素
 
 プラグインの動作は、次のいずれかの方法でパラメーターを使用してカスタマイズできます。
 
 * Javascript 呼び出しによってパラメーターを渡します。
-* HTMLマークアップに関連付けられた専用の`data-*`属性を使用する
+* 専用のを使用 `data-*` 属性マークアップに関連付けられたHTML
 
 どのプラグインについても開発者がベストアプローチを選択できますが、経験則として以下を使用します。
 
-* `data-*` HTMLレイアウトに関連するオプションの属性。例えば、列数を指定するには、次のようにします。
+* `data-*` 属性を使用します。HTML・レイアウトに関連するオプションの場合。 例えば、列数を指定するには
 * API オプション／クラス - データに関連する機能の場合（表示する項目のリストを作成する場合など）
 
-フォーム検証を実装する場合も同じ概念を使用します。要素を検証する場合、必要な入力フォームをカスタムの`data-*`属性として指定する必要があります。 この属性を検証プラグインのオプションとして使用します。
+フォーム検証を実装する場合も同じ概念を使用します。検証する要素に対して、必要な入力フォームをカスタムとして指定する必要があります `data-*` 属性。 この属性を検証プラグインのオプションとして使用します。
 
 >[!NOTE]
 >
@@ -403,9 +401,9 @@ HTML 要素の多くは、ポップアップメニューの表示／非表示な
 実装:
 
 * 特定の DOM 要素に関連付けた jQuery プラグイン
-* `data-*`属性を使用した動作のカスタマイズ
+* 使用 `data-*` 動作をカスタマイズする属性
 
-サンプルのマークアップの抽出(data-&amp;astとして指定されたオプションに注意してください。属性):
+サンプルのマークアップの抽出（data-&amp;ast として指定されたオプションに注意）属性 ):
 
 ```xml
 <ul data-column-width="220" data-layout="card" class="cards">

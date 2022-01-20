@@ -1,8 +1,8 @@
 ---
 title: リッチテキストエディターを使用したコンテンツのオーサリング
-seo-title: リッチテキストエディターを使用したコンテンツのオーサリング
+seo-title: Using the Rich Text Editor to Author Content
 description: リッチテキストエディターを使用したAEMでのテキストの作成。
-seo-description: リッチテキストエディターを使用したAEMでのテキストの作成。
+seo-description: Using the Rich Text Editor to author text in AEM.
 uuid: d8dc5989-7a1c-4bab-88fd-040c2c9aa69f
 contentOwner: asgupta
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,14 +12,14 @@ discoiquuid: 29e0bdfa-1d49-47d9-a332-04da062d3d3f
 exl-id: 26d912e1-d8ee-44fc-8c82-ccc66551ddc1
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 33%
+source-wordcount: '289'
+ht-degree: 32%
 
 ---
 
-# リッチテキストエディターを使用したコンテンツのオーサリング{#using-the-rich-text-editor-to-author-content}
+# リッチテキストエディターを使用したコンテンツのオーサリング {#using-the-rich-text-editor-to-author-content}
 
-リッチテキストエディター(RTE)は、AEMページでテキストをオーサリングするための基本的な構成要素です。 テキスト、テキストと画像、表などの多くのコンポーネントは、RTEに基づいています。
+リッチテキストエディター (RTE) は、AEMページでテキストをオーサリングするための基本的な構成要素です。 テキスト、テキストと画像、表などの多くのコンポーネントは、RTE に基づいています。
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ ht-degree: 33%
 
 ## インプレース編集 {#in-place-editing}
 
-1回タップまたはクリックしてテキストベースのコンポーネントを選択すると、[コンポーネントツールバー](../sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)が表示されます。
+1 回のタップまたはクリックでテキストベースのコンポーネントを選択すると、 [コンポーネントツールバー](../sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste).
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
@@ -51,13 +51,13 @@ ht-degree: 33%
 
 * **保存**
 
-## 全画面編集{#full-screen-editing}
+## 全画面表示編集 {#full-screen-editing}
 
 テキストベースのコンポーネントの場合、ツールバーからフルスクリーンモードを選択すると、リッチテキストエディターが開き、残りのページコンテンツが非表示になります。
 
 ![](do-not-localize/screen_shot_2018-03-21at163236.png)
 
-全画面表示モードには、管理者が設定したリッチテキストエディターのすべてのオプションが表示されます。 これらは、管理者またはAEM開発者が提供する設定](../sites-administering/rich-text-editor.md)に応じて、AEMインスタンス[間で異なる場合があります。 オプションが見つからない場合は、管理者に問い合わせて使用可能にしてください。
+フルスクリーンモードには、管理者が設定したリッチテキストエディターのすべてのオプションが表示されます。 これらは、AEMインスタンス間で異なる場合があります [設定に応じて](../sites-administering/rich-text-editor.md) 管理者またはAEM開発者が提供します。 オプションが見つからない場合は、管理者に問い合わせて、使用可能にしてもらってください。
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 

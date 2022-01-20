@@ -29,7 +29,7 @@ AEM は、次のようなユーザーに電子メール通知を送信します�
 前提条件：
 
 * ユーザーのプロファイルで有効な電子メールアドレスが定義されている必要があります。
-* **Day CQ Mail Service**&#x200B;を正しく設定する必要があります。
+* この **Day CQ Mail Service** を適切に設定する必要があります。
 
 ユーザーへの通知は、各自がプロファイルで定義している言語の電子メールで送信されます。言語ごとに、独自のカスタマイズ可能なテンプレートがあります。新しい言語用には新しい電子メールテンプレートを追加できます。
 
@@ -45,7 +45,7 @@ AEM で電子メールを送信できるようにするために、**Day CQ Mail
 
 * **SMTP サーバーポート**&#x200B;は 25 以上にする必要があります。
 
-* **SMTPサーバーのホスト名**&#x200B;は空白にできません。
+* この **SMTP サーバーのホスト名** は空にできません。
 * **「送信元」アドレス**&#x200B;は空白にしてはなりません。
 
 **Day CQ Mail Service** の問題をデバッグしやすくするために、サービスのログを監視できます。
@@ -60,20 +60,20 @@ AEM で電子メールを送信できるようにするために、**Day CQ Mail
 
 ページまたはフォーラムのイベント通知を購読するとき、送信元の電子メールアドレスは、デフォルトで `no-reply@acme.com` に設定されます。この値は、Web コンソールで **Notification Email Channel** サービスを設定することで変更できます。
 
-差出人の電子メールアドレスを設定するには、リポジトリに`sling:OsgiConfig`ノードを追加します。 次の手順を実行し、ノードを直接CRXDE Liteします。
+送信元電子メールアドレスを設定するには、 `sling:OsgiConfig` ノードをリポジトリに追加します。 以下の手順を実行し、ノードを使用してCRXDE Liteを直接追加します。
 
 1. CRXDE Lite で、`config` という名前のノードを、アプリケーションフォルダーの下に追加します。
-1. configフォルダーに、次の名前のノードを追加します。
+1. config フォルダーに、という名前のノードを追加します。
 
    `com.day.cq.wcm.notification.email.impl.EmailChannel`リソースのタイプは次のとおりとします。`sling:OsgiConfig`
 
-1. `String`プロパティを`email.from`という名前のノードに追加します。 値には、使用する電子メールアドレスを指定します。
+1. を追加します。 `String` プロパティを `email.from`. 値には、使用する電子メールアドレスを指定します。
 
 1. 「**すべて保存**」をクリックします。
 
 次の手順を使用して、コンテンツパッケージソースフォルダーでノードを定義します。
 
-1. `jcr_root/apps/*app_name*/config folder`に、`com.day.cq.wcm.notification.email.impl.EmailChannel.xml`という名前のファイルを作成します。
+1. を `jcr_root/apps/*app_name*/config folder`、という名前のファイルを作成します。 `com.day.cq.wcm.notification.email.impl.EmailChannel.xml`
 
 1. このノードを表現する次の XML を追加します。
 
@@ -119,7 +119,7 @@ This is an automatically generated message. Please do not reply.
 
 ページ通知用の英語の電子メールテンプレートをカスタマイズするには：
 
-1. CRXDEで、次のファイルを開きます。
+1. CRXDE で、次のファイルを開きます。
 
    `/libs/settings/notification-templates/com.day.cq.wcm.core.page/en.txt`
 
@@ -141,12 +141,12 @@ This is an automatically generated message. Please do not reply.
 
 * `${userFullName}`：イベントをトリガーしたユーザーの完全名。
 
-* `${userId}`：イベントをトリガーしたユーザーのID。
+* `${userId}`：イベントをトリガーしたユーザーの ID。
 * `${modifications}`は、ページイベントのタイプとページパスを次の形式で表します。
 
-   &lt;page event=&quot;&quot; type=&quot;&quot;> =>  &lt;page path=&quot;&quot;>
+   &lt;page event=&quot;&quot; type=&quot;&quot;> => &lt;page path=&quot;&quot;>
 
-   例えば、次の操作が可能です。
+   次に例を示します。
 
    PageModified => /content/geometrixx/en/products
 
@@ -177,7 +177,7 @@ This is an automatically generated message. Please do not reply.
 
 フォーラム通知用の英語の電子メールテンプレートをカスタマイズするには：
 
-1. CRXDEで、次のファイルを開きます。
+1. CRXDE で、次のファイルを開きます。
 
    `/etc/notification/email/default/com.day.cq.collab.forum/en.txt`
 
@@ -193,7 +193,7 @@ This is an automatically generated message. Please do not reply.
  footer=<text_4>
 ```
 
-`<text_x>`は、静的テキストと動的文字列変数を組み合わせた値にすることができます。
+ここで、 `<text_x>` は、静的テキストと動的文字列変数を組み合わせることができます。
 
 フォーラム通知用の電子メールテンプレート内では次の変数を使用できます。
 
@@ -232,7 +232,7 @@ This is an automatically generated message. Please do not reply.
 
 ワークフローイベント通知用の英語の電子メールテンプレートをカスタマイズするには：
 
-1. CRXDEで、次のファイルを開きます。
+1. CRXDE で、次のファイルを開きます。
 
    `/libs/settings/workflow/notification/email/default/en.txt`
 
@@ -250,49 +250,49 @@ subject=<text_1>
 
 >[!NOTE]
 >
->`<text_x>`は、静的テキストと動的文字列変数を組み合わせた値にすることができます。 `<text_x>`項目の各行は、最後のインスタンスを除き、バックスラッシュ(`\`)で終わる必要があります。バックスラッシュがない場合、`<text_x>`文字列変数の終わりを示します。
+>ここで、 `<text_x>` は、静的テキストと動的文字列変数を組み合わせることができます。 各行の `<text_x>` 項目の末尾はバックスラッシュ ( `\`) を使用します。ただし、最後のインスタンスを除き、バックスラッシュがない場合は `<text_x>` 文字列変数。
 >
 >テンプレート形式について詳しくは、[Properties.load() メソッドの javadocs](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-) を参照してください。
 
-メソッド`${payload.path.open}`は、作業項目のペイロードへのパスを表示します。 例えば、Sitesのページの場合、`payload.path.open`は`/bin/wcmcommand?cmd=open&path=…`に似ています。;これはサーバー名が付いていないので、テンプレートでは`${host.prefix}`が先頭に追加されます。
+メソッド `${payload.path.open}` 作業項目のペイロードへのパスを表示します。 例えば、サイトのページの場合は、 `payload.path.open` 次に似ています： `/bin/wcmcommand?cmd=open&path=…`.;サーバー名が付いていないので、テンプレートの前にはが付きます。 `${host.prefix}`.
 
 電子メールテンプレート内では以下の変数を使用できます。
 
 * `${event.EventType}`、イベントのタイプ
 * `${event.TimeStamp}`、イベントの日時
 * `${event.User}`：イベントをトリガーしたユーザー
-* `${initiator.home}`、イニシエータノードパス
+* `${initiator.home}`、イニシエータノードのパス
 
-* `${initiator.name}`、イニシエータ名
+* `${initiator.name}`、イニシエーター名
 
-* `${initiator.email}`（イニシエーターのEメールアドレス）
-* `${item.id}`（作業項目のID）
-* `${item.node.id}`（この作業項目に関連付けられたワークフローモデル内のノードのid）
-* `${item.node.title}`（作業項目のタイトル）
-* `${participant.email}`（参加者の電子メールアドレス）
+* `${initiator.email}`（イニシエーターの E メールアドレス）
+* `${item.id}`（作業項目の id）
+* `${item.node.id}`（この作業項目に関連付けられたワークフローモデル内のノードの id）
+* `${item.node.title}`、作業項目のタイトル
+* `${participant.email}`、参加者のメールアドレス
 * `${participant.name}`、参加者の名前
 * `${participant.familyName}`（参加者の姓）
-* `${participant.id}`、参加者のid
+* `${participant.id}`（参加者の id）
 * `${participant.language}`、参加者の言語
-* `${instance.id}`、ワークフローID
-* `${instance.state}`（ワークフローの状態）
-* `${model.title}`（ワークフローモデルのタイトル）
-* `${model.id}`（ワークフローモデルのid）
+* `${instance.id}`、ワークフロー ID
+* `${instance.state}`、ワークフローの状態
+* `${model.title}`、ワークフローモデルのタイトル
+* `${model.id}`（ワークフローモデルの id）
 
 * `${model.version}`（ワークフローモデルのバージョン）
 * `${payload.data}`、ペイロード
 
 * `${payload.type}`、ペイロードタイプ
-* `${payload.path}`（ペイロードのパス）
-* `${host.prefix}`、ホストプレフィックス。例：http://localhost:4502
+* `${payload.path}`、ペイロードのパス
+* `${host.prefix}`、ホストプレフィックス、例：http://localhost:4502
 
 ### 新しい言語用の電子メールテンプレートの追加 {#adding-an-email-template-for-a-new-language}
 
 新しい言語用のテンプレートを追加するには：
 
-1. CRXDEで、以下に`<language-code>.txt`ファイルを追加します。
+1. CRXDE で、ファイルを追加します。 `<language-code>.txt` 以下：
 
-   * `/libs/settings/notification-templates/com.day.cq.wcm.core.page` :（ページ通知の場合）
+   * `/libs/settings/notification-templates/com.day.cq.wcm.core.page` :（ページ通知）
    * `/etc/notification/email/default/com.day.cq.collab.forum` :フォーラム通知
    * `/libs/settings/workflow/notification/email/default` :ワークフロー通知の場合
 
@@ -301,7 +301,7 @@ subject=<text_1>
 
 >[!NOTE]
 >
->電子メールテンプレートのファイル名として使用される`<language-code>`は、AEMで認識される2文字の小文字の言語コードにする必要があります。 言語コードについては、AEM は ISO-639-1 に依存しています。
+>この `<language-code>` 電子メールテンプレートのファイル名として使用する場合、AEMで認識される 2 文字の小文字の言語コードを使用する必要があります。 言語コードについては、AEM は ISO-639-1 に依存しています。
 
 ## AEM Assets の電子メール通知の設定 {#assetsconfig}
 

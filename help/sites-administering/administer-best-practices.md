@@ -1,6 +1,6 @@
 ---
 title: ベストプラクティス
-description: Adobe Experience Managerのベストプラクティスについて説明します。管理者が使い始めるのに役立つAdobeエンジニアリングチームやコンサルティングチームがコンパイルしました。
+description: 管理者の立ち上げと実行を支援するAdobe Experience Managerのベストプラクティスを、Adobeエンジニアリングチームとコンサルティングチームがまとめて説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
@@ -32,14 +32,14 @@ ht-degree: 81%
 
 ## Assets {#assets}
 
-Dynamic Media機能やDynamic Media Classic統合を含む、Assetsに関するベストプラクティスについては、次のトピックで説明します。
+Dynamic Media機能やDynamic Media Classic統合を含む、Assets に関するベストプラクティスについては、次のトピックで説明します。
 
 <table> 
  <tbody>
   <tr>
-   <td>負荷時のシステムの安定性とパフォーマンスを向上させるための、Assetsの様々な領域でのベストプラクティス</td> 
+   <td>Assets の様々な領域でのベストプラクティスにより、負荷時のシステムの安定性とパフォーマンスを向上</td> 
    <td><a href="/help/assets/organize-assets.md">Assets のベストプラクティス</a></td> 
-   <td>Assetsに関する様々な領域のベストプラクティスガイドへのリンクが含まれています。 これらのガイドを確認すると、エンタープライズアセット管理システムを構築および管理する知識を習得し、そのツールを利用できるようになります。</td> 
+   <td>Assets に関する様々な領域でのベストプラクティスガイドへのリンクが含まれています。 これらのガイドを確認すると、エンタープライズアセット管理システムを構築および管理する知識を習得し、そのツールを利用できるようになります。</td> 
   </tr>
   <tr>
    <td>コンテンツの整理方法（フォルダー階層）</td> 
@@ -64,7 +64,7 @@ Dynamic Media機能やDynamic Media Classic統合を含む、Assetsに関する�
  </tbody>
 </table>
 
-## Sites {#sites}
+## サイト {#sites}
 
 Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
 

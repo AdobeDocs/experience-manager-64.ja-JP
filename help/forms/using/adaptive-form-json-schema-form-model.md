@@ -1,17 +1,17 @@
 ---
 title: JSON スキーマを使用したアダプティブフォームの作成
-seo-title: JSON スキーマを使用したアダプティブフォームの作成
+seo-title: Creating adaptive forms using JSON Schema
 description: 'アダプティブフォームではフォームモデルとして JSON スキーマを使用できるため、アダプティブフォームの作成に既存の JSON スキーマを活用できます。 '
-seo-description: 'アダプティブフォームではフォームモデルとして JSON スキーマを使用できるため、アダプティブフォームの作成に既存の JSON スキーマを活用できます。 '
+seo-description: Adaptive forms can use JSON schema as form model, allowing you to leverage existing JSON schemas to create adaptive forms.
 uuid: e73b4b4c-6ad7-4400-b776-5892549970c3
 topic-tags: develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: bcda96ff-6c7d-46c4-a9e8-7e0fb245cde9
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 42c41625-7441-479c-bd07-7e96e867cc0a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1207'
 ht-degree: 82%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 82%
 * [アダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md)
 * [JSON スキーマ](https://json-schema.org/)
 
-## フォームモデルとしての JSON スキーマの使用     {#using-a-json-schema-as-form-model}
+## フォームモデルとしての JSON スキーマの使用  {#using-a-json-schema-as-form-model}
 
 AEM Forms では、既存の JSON スキーマをフォームモデルとして使用したアダプティブフォームの作成がサポートされています。JSON スキーマは、組織内のバックエンドシステムによってデータが作成または使用される構造を表します。使用する JSON スキーマは、[v4 仕様](https://json-schema.org/draft-04/schema)に準拠している必要があります。
 
@@ -46,7 +46,7 @@ JSON 要素とアダプティブフォームコンポーネントのマッピン
    <th><strong>アダプティブフォームコンポーネント</strong></th> 
   </tr> 
   <tr> 
-   <td><p>enum および enumNames 制約を含む string プロパティ。</p> <p>構文、</p> <p> <code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"enum" : ["M", "F"]</code></p> <p><code>"enumNames" : ["Male", "Female"]</code></p> <p><code>}</code></p> <p> </p> </td> 
+   <td><p>enum および enumNames 制約を含む string プロパティ。</p> <p>構文</p> <p> <code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"enum" : ["M", "F"]</code></p> <p><code>"enumNames" : ["Male", "Female"]</code></p> <p><code>}</code></p> <p> </p> </td> 
    <td><p>ドロップダウンコンポーネント：</p> 
     <ul> 
      <li>enumNames にリストされた値はドロップボックスに表示されます。</li> 
@@ -54,7 +54,7 @@ JSON 要素とアダプティブフォームコンポーネントのマッピン
     </ul> </td> 
   </tr> 
   <tr> 
-   <td><p>format 制約を含む string プロパティ。例えば、電子メール、日付など。</p> <p>構文、</p> <p><code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"format" : "email"</code></p> <p><code>}</code></p> <p> </p> </td> 
+   <td><p>format 制約を含む string プロパティ。例えば、電子メール、日付など。</p> <p>構文</p> <p><code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"format" : "email"</code></p> <p><code>}</code></p> <p> </p> </td> 
    <td> 
     <ul> 
      <li>type が string で format が email の場合、電子メールコンポーネントがマップされます。</li> 
@@ -92,16 +92,16 @@ JSON 要素とアダプティブフォームコンポーネントのマッピン
 
 アダプティブフォームは JSON スキーマで使用可能な情報を使用して、生成された各フィールドをマッピングします。具体的には、以下のようになります。
 
-* titleプロパティは、アダプティブフォームコンポーネントのラベルとして機能します。
-* descriptionプロパティは、アダプティブフォームコンポーネントの詳細な説明として設定されます。
-* defaultプロパティは、アダプティブフォームフィールドの初期値として機能します。
-* maxLengthプロパティは、テキストフィールドコンポーネントのmaxlength属性として設定されます。
-* minimum、maximum、exclusiveMinimumおよびexclusiveMaximumプロパティは、数値ボックスコンポーネントに使用されます。
-* DatePickerコンポーネントの範囲をサポートするために、追加のJSONスキーマプロパティminDateおよびmaxDateが提供されます。
-* minItemsプロパティとmaxItemsプロパティを使用して、パネルコンポーネントに追加または削除できる項目/フィールドの数を制限します。
-* readOnlyプロパティは、アダプティブフォームコンポーネントのreadonly属性を設定します。
-* requiredプロパティはアダプティブフォームフィールドを必須としてマークしますが、パネル（タイプがオブジェクトの場合）では、最終的な送信済みJSONデータは、そのオブジェクトに対応する値が空のフィールドを持ちます。
-* patternプロパティは、アダプティブフォームの検証パターン（正規表現）として設定されます。
+* title プロパティは、アダプティブフォームコンポーネントのラベルとして機能します。
+* description プロパティは、アダプティブフォームコンポーネントの詳細な説明として設定されます。
+* default プロパティは、アダプティブフォームフィールドの初期値として機能します。
+* maxLength プロパティは、テキストフィールドコンポーネントの maxlength 属性として設定されます。
+* minimum、maximum、exclusiveMinimum および exclusiveMaximum プロパティは、数値ボックスコンポーネントに使用されます。
+* DatePicker コンポーネントの範囲をサポートするために、JSON スキーマの追加のプロパティ minDate および maxDate が提供されます。
+* minItems プロパティと maxItems プロパティを使用して、パネルコンポーネントに追加または削除できる項目/フィールドの数を制限します。
+* readOnly プロパティは、アダプティブフォームコンポーネントの readonly 属性を設定します。
+* 必須プロパティはアダプティブフォームフィールドを必須としてマークします。一方、パネル（タイプはオブジェクト）の場合、最終的に送信される JSON データは、そのオブジェクトに対応する空の値を持つフィールドを持ちます。
+* pattern プロパティは、アダプティブフォームの検証パターン（正規表現）として設定されます。
 * JSON スキーマファイルの拡張子は、.schema.json を維持する必要があります。例えば、&lt;filename>.schema.json のように指定します。
 
 ## JSON スキーマのサンプル {#sample-json-schema}
@@ -317,9 +317,9 @@ JSON スキーマの例を示します。
 
 上記の例では、各顧客が出荷先と請求先の両方の住所を持つ顧客レコードを定義します。どちらの住所も構造（都道府県、市区町村、番地など）が同じ場合は、住所が重複しないようにすることをお勧めします。また、今後変更が行われたときに、簡単にフィールドを追加したり削除したりできます。
 
-## JSON スキーマ定義でのフィールドの事前設定  {#pre-configuring-fields-in-json-schema-definition}
+## JSON スキーマ定義でのフィールドの事前設定 {#pre-configuring-fields-in-json-schema-definition}
 
-**aem:afProperties**&#x200B;プロパティを使用して、JSONスキーマフィールドを事前設定し、カスタムのアダプティブフォームコンポーネントにマッピングすることができます。 以下に例を示します。
+以下を使用して、 **aem:afProperties** プロパティを使用して、カスタムのアダプティブフォームコンポーネントにマッピングするための「 JSON スキーマ」フィールドを事前設定します。 以下に例を示します。
 
 ```
 {
@@ -339,9 +339,9 @@ JSON スキーマの例を示します。
 }
 ```
 
-## アダプティブフォームコンポーネントで許容される値の制限  {#limit-acceptable-values-for-an-adaptive-form-component}
+## アダプティブフォームコンポーネントで許容される値の制限 {#limit-acceptable-values-for-an-adaptive-form-component}
 
-JSONスキーマの要素に次の制限を追加して、アダプティブフォームコンポーネントで許容される値を制限することができます。
+JSON スキーマ要素に次の制限を追加して、アダプティブフォームコンポーネントで使用できる値を制限することができます。
 
 <table> 
  <tbody> 
@@ -419,7 +419,7 @@ JSONスキーマの要素に次の制限を追加して、アダプティブフ�
    <td><p>文字のシーケンスを指定します。文字が指定されたパターンに適合すると、コンポーネントはその文字を受け入れます。</p> <p>この pattern プロパティは、対応するアダプティブフォームコンポーネントの検証パターンにマッピされます。</p> </td> 
    <td> 
     <ul> 
-     <li>XSDスキーマにマッピングされているすべてのアダプティブフォームコンポーネント </li> 
+     <li>XSD スキーマにマッピングされるすべてのアダプティブフォームコンポーネント </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -437,7 +437,7 @@ JSONスキーマの要素に次の制限を追加して、アダプティブフ�
  </tbody> 
 </table>
 
-## サポート対象外の構成 {#non-supported-constructs}
+## サポート対象外の構成  {#non-supported-constructs}
 
 アダプティブフォームは以下の JSON スキーマ構成をサポートしていません。
 
@@ -448,7 +448,7 @@ JSONスキーマの要素に次の制限を追加して、アダプティブフ�
 
 ## よくある質問 {#frequently-asked-questions}
 
-**繰り返し可能なサブフォーム（minOccours 値または maxOccurs 値が 1 より大きい）では、サブフォーム（任意の複合型から生成された構造）の個々の要素をドラッグできないのはなぜですか？**
+**繰り返し可能なサブフォーム（minOccurs 値または maxOccurs 値が 1 より大きい）では、サブフォーム（任意の複合型から生成された構造）の個々の要素をドラッグできないのはなぜですか？**
 
 繰り返し可能なサブフォームでは、完全なサブフォームを使用する必要があります。選択した一部のフィールドのみを使用する場合は、構造全体を使用し、不要部分を削除します。
 

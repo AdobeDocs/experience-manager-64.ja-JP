@@ -1,9 +1,9 @@
 ---
 title: AEM でのユーザー管理操作を監査する方法
-seo-title: AEM でのユーザー管理操作を監査する方法
+seo-title: How to Audit User Management Operations in AEM
 description: AEM でのユーザー管理操作を監査する方法について説明します。
-feature: 運用
-seo-description: AEM でのユーザー管理操作を監査する方法について説明します。
+feature: Operations
+seo-description: Learn how to audit User Management Operations in AEM.
 uuid: 4ea704b4-9150-4b5f-b9cb-cdac95cfd70c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ discoiquuid: 437fa139-2dde-41a0-9649-6bb110039618
 exl-id: f987c4f5-64dd-491b-aafe-cb98acf0b1eb
 source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '302'
 ht-degree: 97%
 
 ---
@@ -32,11 +32,11 @@ ht-degree: 97%
 
 デフォルトでは、ログエントリは `error.log` ファイルに書き込まれます。ログエントリを別のログファイルにリダイレクトすると、監視が容易になります。このリダイレクト方法について詳しくは、次の説明を参照してください。
 
-## 別のログファイルへの出力のリダイレクト  {#redirecting-the-output-to-a-separate-log-file}
+## 別のログファイルへの出力のリダイレクト {#redirecting-the-output-to-a-separate-log-file}
 
 別のログファイルにログ出力をリダイレクトするには、新しい **Apache Sling Logging Logger** 設定を作成する必要があります。次の例では、別のファイルの名前として、`useraudit.log` を使用します。
 
-1. `https://<serveraddress>:<serverport>/system/console/configMgr`を参照してWebコンソールに移動します。
+1. Web コンソールに移動するには、 `https://<serveraddress>:<serverport>/system/console/configMgr`
 1. **Apache Sling Logging Logger Configuration** を検索します。次に、エントリの右側にある「+」を押して、新しいファクトリ設定を作成します。
 1. 次の設定を作成します。
 

@@ -1,6 +1,6 @@
 ---
 title: スマートコンテンツサービスのトレーニングガイドライン
-description: アセットにスマートタグを適用するためのAIサービスのトレーニング
+description: アセットにスマートタグを適用するための AI サービスのトレーニング
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 uuid: 1c011496-be6e-470b-9da8-48db8c6d1108
 contentOwner: AG
@@ -17,13 +17,13 @@ ht-degree: 89%
 
 # スマートコンテンツサービスのトレーニングガイドライン {#smart-content-service-training-guidelines}
 
-スマートコンテンツサービスでは、ブランド画像を効果的にタグ付けできるようにするために、トレーニング画像が特定のガイドラインに従っている必要があります。
+To be able to effectively tag your brand images, the Smart Content Service requires that the training images conform to certain guidelines.
 
 ## トレーニングのガイドライン {#guidelines-for-training}
 
 最適な結果を得るには、トレーニングセット内の画像は次のガイドラインに従う必要があります。
 
-**数とサイズ：** タグ1つ **につき30以上の画像**。長辺が 500 ピクセル以上である必要があります。
+**Quantity and size:** Minimum **30 images per tag**. 長辺が 500 ピクセル以上である必要があります。
 
 **一貫性**：タグの各画像は、似たような外観にする必要があります。
 
@@ -53,7 +53,7 @@ ht-degree: 89%
 
 * 画像内の細かい違いを認識することはできません。例えば、シャツのサイズが細身か標準かなどの違いは認識できません。
 * 画像の細かい模様や部分に基づいてタグを識別することはできません。例えば、T シャツのロゴなどです。
-* タグ付けは、[!DNL Experience Manager]がサポートされているロケールでサポートされています。 言語の一覧については、](/help/release-notes/smart-content-service-release-notes.md)スマートコンテンツサービスのリリースノート[を参照してください。
+* タグ付けは、 [!DNL Experience Manager] はでサポートされています。 言語の一覧については、](/help/release-notes/smart-content-service-release-notes.md)スマートコンテンツサービスのリリースノート[を参照してください。
 
 スマートタグ（通常または拡張）付きのアセットを検索するには、アセットのオムニサーチ（全文検索）を使用します。スマートタグには個別の検索用述語はありません。
 

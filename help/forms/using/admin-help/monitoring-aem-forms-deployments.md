@@ -1,8 +1,8 @@
 ---
 title: AEM Forms のデプロイメントの監視
-seo-title: AEM Forms のデプロイメントの監視
+seo-title: Monitoring AEM forms deployments
 description: AEM Forms のデプロイメントは、システムレベルおよび内部レベルの両方で監視できます。このドキュメントでは、AEM Forms のデプロイメントの監視について説明します。
-seo-description: AEM Forms のデプロイメントは、システムレベルおよび内部レベルの両方で監視できます。このドキュメントでは、AEM Forms のデプロイメントの監視について説明します。
+seo-description: You can monitor AEM forms deployments from both a system level and an internal level. Learn more about monitoring AEM forms deployments from this document.
 uuid: 032b7a93-3069-4ad5-a8c6-4c160f290669
 contentOwner: admin
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: b3e7bca0-5aaf-4f28-bddb-fd7e8ed72ee8
 exl-id: d2cd532b-4086-4553-ac26-f311da6d5ca9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 75%
+source-wordcount: '614'
+ht-degree: 73%
 
 ---
 
@@ -23,14 +23,14 @@ AEM Forms のデプロイメントは、システムレベルおよび内部レ�
 
 AEM Forms のデプロイメントの監視について詳しくは、「[AEM Forms デプロイメントの監視用テクニカルガイド](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf)」を参照してください。
 
-## MBean を使用した監視  {#monitoring-using-mbeans}
+## MBean を使用した監視 {#monitoring-using-mbeans}
 
 AEM Forms には、ナビゲーションおよび統計情報を提供する 2 つの MBean が登録されています。統合とインスペクションのためにサポートされている MBean はこれらのみです。
 
 * **ServiceStatistic：**&#x200B;この MBean はサービス名とそのバージョンに関する情報を提供します。
 * **OperationStatistic：**&#x200B;この MBean は Forms サーバーのすべてのサービスに関する統計情報を提供します。この MBean で管理者は呼び出し時間、エラー数など、特定のサービスに関する情報を取得できます。
 
-### ServiceStatisticMbean 公開インターフェイス  {#servicestatisticmbean-public-interfaces}
+### ServiceStatisticMbean 公開インターフェイス {#servicestatisticmbean-public-interfaces}
 
 次の ServiceStatistic MBean の公開インターフェイスには、テスト用途でアクセスできます。
 
@@ -40,7 +40,7 @@ AEM Forms には、ナビゲーションおよび統計情報を提供する 2 �
  public int getMinorVersion();
 ```
 
-### OperationStatisticMbean 公開インターフェイス  {#operationstatisticmbean-public-interfaces}
+### OperationStatisticMbean 公開インターフェイス {#operationstatisticmbean-public-interfaces}
 
 次の OperationStatistic MBean の公開インターフェイスには、テスト用途でアクセスできます。
 
@@ -68,43 +68,43 @@ AEM Forms には、ナビゲーションおよび統計情報を提供する 2 �
  public void setExceptionMessage(String errorMessage);
 ```
 
-### MBean ツリーおよび運用の統計情報  {#mbean-tree-operation-statistics}
+### MBean ツリーおよび運用の統計情報 {#mbean-tree-operation-statistics}
 
 JMX コンソール（JConsole）を使用すると、OperationStatistic MBean の統計情報を使用できます。この統計情報は MBean の属性です。次の階層ツリーで移動できます。
 
 **MBean ツリー**
 
-**Adobeドメイン名：** アプリケーションサーバーに依存します。アプリケーションサーバーがドメインを定義していない場合、デフォルトは adobe.com です。
+**Adobeドメイン名：** アプリケーションサーバーに依存します。 アプリケーションサーバーがドメインを定義していない場合、デフォルトは adobe.com です。
 
-**ServiceType:** AdobeServiceは、すべてのサービスのリストに使用される名前です。
+**サービスタイプ：** 「AdobeService」は、すべてのサービスのリストを表示するために使用される名前です。
 
-**AdobeServiceName:** サービス名またはサービスID。
+**AdobeServiceName:** サービス名またはサービス ID。
 
 **バージョン：** サービスのバージョン。
 
 **運用の統計情報**
 
-**呼び出し時間：** メソッドの実行に要した時間。要求のシリアライズ、クライアントからサーバーへの転送、およびデシリアライズにかかる時間は含まれません。
+**呼び出し時間：** メソッドの実行に要した時間。 要求のシリアライズ、クライアントからサーバーへの転送、およびデシリアライズにかかる時間は含まれません。
 
 **呼び出し回数：** サービスが呼び出された回数。
 
 **平均呼び出し時間：** サーバーの起動後に実行されたすべての呼び出しの平均時間。
 
-**最大呼び出し時間：** サーバーの起動後に実行された呼び出しの最長時間。
+**最大呼び出し時間：** サーバーが起動されてから実行された呼び出しの最長時間。
 
-**最小呼び出し時間：** サーバーの起動後に実行された呼び出しの最短時間。
+**最小呼び出し時間：** サーバーが起動されてから実行された呼び出しの最短期間。
 
-**例外数：** 失敗につながった呼び出しの数。
+**例外数：** 失敗に至った呼び出しの数。
 
 **例外メッセージ：** 最後に発生した例外のエラーメッセージ。
 
-**Last Sampling Date Time:** 最後の呼び出し日。
+**前回のサンプリング日時：** 最後の呼び出しの日付。
 
 **時間単位：** デフォルトはミリ秒です。
 
 JMX 監視を有効にするには、一般的にアプリケーションサーバーに何らかの設定が必要です。詳しくは、アプリケーションサーバーのドキュメントを参照してください。
 
-### オープン JMX アクセスをセットアップする方法の例  {#examples-of-how-to-set-up-open-jmx-access}
+### オープン JMX アクセスをセットアップする方法の例 {#examples-of-how-to-set-up-open-jmx-access}
 
 **JBoss 4.0.3/4.2.0 - JVM スタートアップの設定**
 
@@ -119,7 +119,7 @@ JConsole から MBean を表示するには、JBoss アプリケーションサ�
 
 **WebLogic 9.2 /10 - JVM スタートアップの設定**
 
-1. [WebLogic home]*/user_projects/domains/domain_Live_Cycle/binの下にあるstartWebLogic.batファイルを編集します。
+1. *の下にある startWebLogic.bat ファイルを編集します。 [WebLogic ホーム]*/user_projects/domains/domains_Live_Cycle/bin にAdobeします。
 1. JAVA_OPTS 行を見つけ、次の内容を追加します。
 
    ```as3

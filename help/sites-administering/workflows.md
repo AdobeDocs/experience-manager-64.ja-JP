@@ -1,8 +1,8 @@
 ---
 title: ワークフローの管理
-seo-title: ワークフローの管理
+seo-title: Administering Workflows
 description: AEM でワークフローを管理する方法について説明します。
-seo-description: AEM でワークフローを管理する方法について説明します。
+seo-description: Learn how to administer workflows in AEM.
 uuid: d000a13c-97cb-4b1b-809e-6c3eb0d675e8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 4b09cd44-434e-4834-bc0d-c9c082a4ba5a
 exl-id: e57b7a69-6e25-4066-ad7a-917969cebbe8
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 89%
+source-wordcount: '764'
+ht-degree: 88%
 
 ---
 
@@ -38,15 +38,14 @@ ht-degree: 89%
 >
 >詳しくは、次のセクションを参照してください。
 >
->* ワークフローの適用と参加：[ワークフローの操作](/help/sites-authoring/workflows.md)。
->* ワークフローモデルの作成とワークフロー機能の拡張：[ワークフローの開発と拡張](/help/sites-developing/workflows.md)。
+>* ワークフローの適用と参加： [ワークフローの操作](/help/sites-authoring/workflows.md).
+>* ワークフローモデルの作成とワークフロー機能の拡張： [ワークフローの開発と拡張](/help/sites-developing/workflows.md).
 >* 重要なサーバーリソースを使用するワークフローのパフォーマンスの向上：[ワークフローの同時処理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)
 
 >
 
 
-
-## ワークフローモデルとワークフローインスタンス  {#workflow-models-and-instances}
+## ワークフローモデルとワークフローインスタンス {#workflow-models-and-instances}
 
 AEM の[ワークフローモデル](/help/sites-developing/workflows.md#model)とは、次のようなビジネスプロセスの表現および実装のことです。
 
@@ -59,7 +58,7 @@ AEM の[ワークフローモデル](/help/sites-developing/workflows.md#model)�
 
 >[!CAUTION]
 >
->実行されるステップは、インスタンスが生成されるときに&#x200B;**&#x200B;ワークフローで定義されます。詳しくは、[ワークフローの開発](/help/sites-developing/workflows.md#model)を参照してください。
+>実行されるステップは、インスタンスが生成されるときに&#x200B;**&#x200B;ワークフローで定義されます。詳しくは、 [ワークフローの開発](/help/sites-developing/workflows.md#model) 詳しくは、を参照してください。
 
 ワークフローインスタンスのライフサイクルを次に示します。
 
@@ -89,7 +88,7 @@ AEM には参考になるモデルが多数用意されています。また、�
 >
 >エラーが発生した場合は、サービスやステップの実装でエラーシナリオの動作を管理してください。ワークフローエンジン自体はジョブを再試行し、エラーをログに記録してインスタンスを停止します。
 
-## ワークフローのステータスとアクション  {#workflow-status-and-actions}
+## ワークフローのステータスとアクション {#workflow-status-and-actions}
 
 ワークフローのステータスは以下のいずれかになります。
 
@@ -102,10 +101,10 @@ AEM には参考になるモデルが多数用意されています。また、�
 
 >[!NOTE]
 >
->プロセスステップの実行でエラーが発生した場合、そのステップは管理者のインボックスに表示され、ワークフローのステータスは&#x200B;**RUNNING**&#x200B;になります。
+>プロセスステップの実行でエラーが発生した場合は、そのステップが管理者のインボックスに表示され、ワークフローのステータスは「 **実行中**.
 
 現在のステータスによって、ワークフローインスタンスの通常の進行に介入する必要がある場合は、実行中のワークフローインスタンスに対してアクションを実行します。
 
 * **休止**：ワークフローの実行を一時的に停止します。このアクションは例外的な状況（メンテナンスなどでワークフローを進行させたくない場合）に便利です。休止を実行すると、ワークフローのステータスが「休止」に変わります。
 * **再開**:同じ設定を使用して、休止したワークフローを、休止した同じ実行時点から再開します。
-* **終了**:ワークフローの実行を終了し、状態を「中 **止」に変更します**。中止したワークフローインスタンスは再起動できません。
+* **終了**:ワークフローの実行を終了し、状態を **中止**.中止されたワークフローインスタンスを再開することはできません。

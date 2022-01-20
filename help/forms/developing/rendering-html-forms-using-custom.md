@@ -1,8 +1,8 @@
 ---
-title: カスタムCSSファイルを使用したHTML Formsのレンダリング
-seo-title: カスタムCSSファイルを使用したHTML Formsのレンダリング
-description: Formsサービスを使用して、WebブラウザーからのHTTP要求に応答してHTMLフォームをレンダリングするカスタムCSSファイルを参照します。 Java APIおよびWebサービスAPIを使用して、CSSファイルを使用するHTMLフォームをレンダリングできます。
-seo-description: Formsサービスを使用して、WebブラウザーからのHTTP要求に応答してHTMLフォームをレンダリングするカスタムCSSファイルを参照します。 Java APIおよびWebサービスAPIを使用して、CSSファイルを使用するHTMLフォームをレンダリングできます。
+title: カスタム CSS ファイルを使用したHTMLFormsのレンダリング
+seo-title: Rendering HTML Forms Using Custom CSS Files
+description: Formsサービスを使用して、Web ブラウザーからの HTTP 要求に応じてHTMLフォームをレンダリングするカスタム CSS ファイルを参照します。 Java API および WebHTMLAPI を使用して、CSS ファイルを使用するサービスフォームをレンダリングできます。
+seo-description: Use the Forms service to refer to custom CSS files to render HTML forms in response to an HTTP request from a web browser. You can render an HTML form that uses a CSS file using the Java API and Web Service API.
 uuid: a44e96f1-001d-48a2-8c96-15cb9d0c71b3
 contentOwner: admin
 content-type: reference
@@ -14,185 +14,185 @@ role: Developer
 exl-id: d10cbb97-1cec-4b1b-9104-48063e75a2cd
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1674'
 ht-degree: 2%
 
 ---
 
-# カスタムCSSファイル{#rendering-html-forms-using-custom-css-files}を使用したHTML Formsのレンダリング
+# カスタム CSS ファイルを使用したHTMLFormsのレンダリング {#rendering-html-forms-using-custom-css-files}
 
-Formsサービスは、WebブラウザーからのHTTP要求に応じてHTMLフォームをレンダリングします。 HTMLフォームのレンダリング時に、FormsサービスはカスタムCSSファイルを参照できます。 Formsサービスを使用してHTMLフォームをレンダリングする場合は、ビジネス要件を満たすカスタムCSSファイルを作成し、そのCSSファイルを参照することができます。
+The Forms service renders HTML forms in response to an HTTP request from a web browser. Formsサービスは、HTMLフォームのレンダリング時にカスタム CSS ファイルを参照できます。 You can create a custom CSS file to meet your business requirements and reference that CSS file when using the Forms service to render HTML forms.
 
-Formsサービスは、カスタムCSSファイルをサイレントに解析します。 つまり、Formsサービスは、カスタムCSSファイルがCSS標準に準拠していない場合に発生する可能性のあるエラーを報告しません。 この場合、Formsサービスはスタイルを無視し、CSSファイル内の残りのスタイルを引き続き使用します。
+Formsサービスは、カスタム CSS ファイルをサイレントで解析します。 That is, the Forms service does not report errors that may be encountered if the custom CSS file does not comply with CSS standards. この場合、Formsサービスはスタイルを無視し、CSS ファイルに残っているスタイルを使用し続けます。
 
-次のリストは、カスタムCSSファイルでサポートされるスタイルを指定します。
+次のリストでは、カスタム CSS ファイルでサポートされるスタイルを指定します。
 
-* **クラスレベルのセレクタースタイルのペア**:カスタムCSSファイルに存在する場合は、HTMLフォームでクラススタイルとして使用されるセレクターが使用されます。未使用のクラススタイルは無視されます。
-* **識別子レベルのセレクタースタイルのペア**:HTMLフォームで使用される場合は、すべての識別子スタイルが使用されます。
-* **要素レベルのセレクタースタイルのペア**:HTMLフォームで使用される場合は、すべての要素スタイルが使用されます。
-* **スタイルの優先度**:スタイルの優先度（重要な場合など）はサポートされ、カスタムCSSファイルで使用できます。
-* **メディアタイプ**:1つ以上のセレクタースタイルのペアを@mediaスタイルでラップして、メディアのタイプを定義できます。Formsサービスは、指定されたメディアタイプがサポートされているかどうかを確認しません。 カスタムCSSファイルで指定されたメディアタイプがHTMLフォームにマージされます。
+* **クラスレベルのセレクタースタイルのペア**:カスタム CSS ファイルに存在する場合は、クラススタイルとしてHTMLフォームで使用されるセレクターが使用されます。 未使用のクラススタイルは無視されます。
+* **識別子レベルのセレクタースタイルのペア**:識別子のスタイルが識別子フォームで使用される場合は、すべてのHTMLスタイルが使用されます。
+* **要素レベルのセレクタースタイルのペア**:要素スタイルが要素フォームで使用される場合は、すべてのHTMLスタイルを使用します。
+* **スタイルの優先度**:スタイルの優先度（重要な場合と同様）はサポートされ、カスタム CSS ファイルで使用できます。
+* **メディアタイプ**:1 つ以上のセレクタースタイルのペアを@mediaスタイルでラップして、メディアタイプを定義できます。 Formsサービスは、指定されたメディアタイプがサポートされているかどうかを確認しません。 カスタム CSS ファイルで指定されたメディアタイプが、メディアフォームにHTMLされます。
 
-FormsIVSアプリケーションを使用して、サンプルのCSSファイルを取得できます。 フォームをアップロードし、「フォームデザインをテスト」ページでフォームを選択して、「CSSを生成」をクリックします。 ボタンをクリックする前にHTML変換タイプを設定する必要はありません。 次に「保存」を選択します。 このCSSファイルは、ビジネス要件に合わせて編集できます。
-
->[!NOTE]
->
->カスタムCSSファイルを使用するHTMLフォームをレンダリングする前に、HTMLフォームのレンダリングについて十分に理解しておくことが重要です。 ([FormsをHTMLとしてレンダリングする](/help/forms/developing/rendering-forms-html.md)を参照)。
+FormsIVS アプリケーションを使用して、サンプルの CSS ファイルを取得できます。 フォームをアップロードし、「フォームデザインをテスト」ページでフォームを選択して、「CSS を生成」をクリックします。 ボタンをクリックする前に、HTML変換タイプを設定する必要はありません。 次に「保存」を選択します。 この CSS ファイルは、ビジネス要件に合わせて編集できます。
 
 >[!NOTE]
 >
->Formsサービスについて詳しくは、『 AEM Formsのサービスリファレンス[ 』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>カスタム CSS ファイルを使用するHTMLフォームをレンダリングする前に、HTMLフォームのレンダリングについて十分に理解しておくことが重要です。 ( [FormsをHTMLとしてレンダリング](/help/forms/developing/rendering-forms-html.md).)
 
-## 手順の概要{#summary-of-steps}
+>[!NOTE]
+>
+>Formsサービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
-CSSファイルを使用するHTMLフォームをレンダリングするには、次のタスクを実行します。
+## 手順の概要 {#summary-of-steps}
+
+CSS ファイルを使用するHTMLフォームをレンダリングするには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
-1. Forms Java APIオブジェクトを作成します。
-1. CSSファイルを参照します。
-1. HTMLフォームをレンダリングします。
-1. フォームデータストリームをクライアントWebブラウザーに書き込みます。
+1. Forms Java API オブジェクトを作成します。
+1. CSS ファイルを参照します。
+1. HTMLフォームをレンダリング
+1. フォームデータストリームをクライアントの Web ブラウザーに書き込みます。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、プロキシファイルを必ず含めてください。
+開発プロジェクトに必要なファイルを含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-**Forms Java APIオブジェクトの作成**
+**Forms Java API オブジェクトの作成**
 
 Formsサービスでサポートされている操作をプログラムで実行する前に、Formsクライアントオブジェクトを作成する必要があります。
 
-**CSSファイルの参照**
+**CSS ファイルの参照**
 
-カスタムCSSファイルを使用するHTMLフォームをレンダリングするには、必ず既存のCSSファイルを参照してください。
+カスタム CSS ファイルを使用するHTMLフォームをレンダリングするには、必ず既存の CSS ファイルを参照するようにしてください。
 
-**HTMLフォームのレンダリング**
+**HTMLフォームをレンダリング**
 
-HTMLフォームをレンダリングするには、Designerで作成し、XDPファイルとして保存するフォームデザインを指定する必要があります。 また、HTML変換タイプを選択する必要があります。 例えば、Internet Explorer 5.0以降用の動的HTMLをレンダリングするHTML変換タイプを指定できます。
+HTMLフォームをレンダリングするには、Designer で作成し、XDP ファイルとして保存したフォームデザインを指定する必要があります。 You must also select an HTML transformation type. 例えば、Internet Explorer 5.0 以降の動的HTMLをレンダリングするHTML変換の種類を指定できます。
 
-HTMLフォームのレンダリングには、他のフォームタイプのレンダリングに必要なURI値などの値も必要です。
+HTMLフォームのレンダリングには、他のフォームタイプのレンダリングに必要な URI 値などの値も必要です。
 
-**フォームデータストリームをクライアントWebブラウザーに書き込む**
+**フォームデータストリームをクライアント Web ブラウザーに書き込む**
 
-Formsサービスは、HTMLフォームをレンダリングする際に、フォームデータストリームを返します。このストリームをクライアントWebブラウザーに書き込んで、HTMLフォームをユーザーに表示させる必要があります。
+FormsサービスがHTMLフォームをレンダリングすると、フォームデータストリームが返されます。このストリームをクライアント Web ブラウザーに書き込み、HTMLフォームをユーザーに表示させる必要があります。
 
 **関連トピック**
 
-[Java APIを使用してCSSファイルを使用するHTMLフォームをレンダリングする](#render-an-html-form-that-uses-a-css-file-using-the-java-api)
+[Java API を使用して、CSS ファイルを使用するHTMLフォームをレンダリングする](#render-an-html-form-that-uses-a-css-file-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[FormsサービスAPIのクイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms Service API クイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
 [インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
 [FormsをHTMLとしてレンダリング](/help/forms/developing/rendering-forms-html.md)
 
-[Forms](/help/forms/developing/creating-web-applications-renders-forms.md)
+[Formsをレンダリングする Web アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-## Java API {#render-an-html-form-that-uses-a-css-file-using-the-java-api}を使用して、CSSファイルを使用するHTMLフォームをレンダリングします
+## Java API を使用して、CSS ファイルを使用するHTMLフォームをレンダリングする {#render-an-html-form-that-uses-a-css-file-using-the-java-api}
 
-Forms API(Java)を使用して、カスタムCSSファイルを使用するHTMLフォームをレンダリングします。
+Forms API(Java) を使用して、カスタム CSS ファイルを使用するHTMLフォームをレンダリングします。
 
-1. プロジェクトファイルを含める
+1. Include project files
 
-   Javaプロジェクトのクラスパスに、adobe-forms-client.jarなどのクライアントJARファイルを含めます。
+   Java プロジェクトのクラスパスに、adobe-forms-client.jar などのクライアント JAR ファイルを含めます。
 
-1. Forms Java APIオブジェクトの作成
+1. Forms Java API オブジェクトの作成
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
    * コンストラクタを使用して `FormsServiceClient` オブジェクトを渡すことによって、`ServiceClientFactory` オブジェクトを作成します。
 
-1. CSSファイルの参照
+1. CSS ファイルの参照
 
-   * `HTMLRenderSpec`オブジェクトを作成するには、コンストラクタを使用します。
-   * カスタムCSSファイルを使用するHTMLフォームをレンダリングするには、`HTMLRenderSpec`オブジェクトの`setCustomCSSURI`メソッドを呼び出し、CSSファイルの場所と名前を指定する文字列値を渡します。
+   * の作成 `HTMLRenderSpec` オブジェクトを指定します。
+   * カスタム CSS ファイルを使用するHTMLフォームをレンダリングするには、 `HTMLRenderSpec` オブジェクトの `setCustomCSSURI` メソッドを使用して、CSS ファイルの場所と名前を指定する string 値を渡します。
 
-1. HTMLフォームのレンダリング
+1. Render an HTML form
 
-   `FormsServiceClient`オブジェクトの`(Deprecated) (Deprecated) renderHTMLForm`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `FormsServiceClient` オブジェクトの `(Deprecated) (Deprecated) renderHTMLForm` メソッドを使用して、次の値を渡します。
 
-   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、必ず`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`のように完全なパスを指定してください。
-   * HTML環境設定タイプを指定する`TransformTo`列挙値。 例えば、Internet Explorer 5.0以降の動的HTMLと互換性のあるHTMLフォームをレンダリングするには、`TransformTo.MSDHTML`と指定します。
-   * フォームとマージするデータを含む`com.adobe.idp.Document`オブジェクト。 データを結合しない場合は、空の`com.adobe.idp.Document`オブジェクトを渡します。
-   * HTML実行時オプションを格納する`HTMLRenderSpec`オブジェクト。
-   * `HTTP_USER_AGENT`ヘッダー値を指定するstring値（`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`など）。
-   * HTMLフォームをレンダリングするために必要なURI値を格納する`URLSpec`オブジェクト。
-   * 添付ファイルを格納する`java.util.HashMap`オブジェクト。 これはオプションのパラメーターで、フォームにファイルを添付しない場合は`null`を指定できます。
+   * ファイル名拡張子を含むフォームデザイン名を指定する string 値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定してください。 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+   * A `TransformTo` HTMLの環境設定タイプを指定する enum 値。 例えば、Internet Explorer 5.0 以降の動的HTMLと互換性のあるHTMLフォームをレンダリングするには、次のように指定します。 `TransformTo.MSDHTML`.
+   * A `com.adobe.idp.Document` フォームに結合するデータを含むオブジェクト。 データを結合しない場合は、空の `com.adobe.idp.Document` オブジェクト。
+   * この `HTMLRenderSpec` オブジェクトを指定します。HTMLの実行時オプションが格納されます。
+   * 次を指定する string 値 `HTTP_USER_AGENT` ヘッダー値（例： ） `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+   * A `URLSpec` object that stores URI values required to render an HTML form.
+   * A `java.util.HashMap` 添付ファイルを保存するオブジェクト。 This is an optional parameter, and you can specify `null` if you do not want to attach files to the form.
 
-   `(Deprecated) renderHTMLForm`メソッドは、クライアントのWebブラウザーに書き込む必要があるフォームデータストリームを含む`FormsResult`オブジェクトを返します。
+   この `(Deprecated) renderHTMLForm` メソッドは、 `FormsResult` クライアントの Web ブラウザーに書き込む必要があるフォームデータストリームを含むオブジェクト。
 
-1. フォームデータストリームをクライアントWebブラウザーに書き込む
+1. フォームデータストリームをクライアント Web ブラウザーに書き込む
 
-   * `FormsResult`オブジェクトの`getOutputContent`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトを作成します。
-   * `getContentType`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトのコンテンツタイプを取得します。
-   * `setContentType`メソッドを呼び出し、`com.adobe.idp.Document`オブジェクトのコンテンツタイプを渡すことで、`javax.servlet.http.HttpServletResponse`オブジェクトのコンテンツタイプを設定します。
-   * `javax.servlet.h\ttp.HttpServletResponse`オブジェクトの`getOutputStream`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに書き込むための`javax.servlet.ServletOutputStream`オブジェクトを作成します。
-   * `com.adobe.idp.Document`オブジェクトの`getInputStream`メソッドを呼び出して、`java.io.InputStream`オブジェクトを作成します。
-   * `InputStream`オブジェクトの`read`メソッドを呼び出し、バイト配列を引数として渡すことで、バイト配列を作成し、フォームデータストリームに入力します。
-   * `javax.servlet.ServletOutputStream`オブジェクトの`write`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに送信します。 `write`メソッドにバイト配列を渡します。
+   * の作成 `com.adobe.idp.Document` を呼び出すことによってオブジェクトを取得 `FormsResult` オブジェクト `getOutputContent` メソッド。
+   * のコンテンツタイプを取得する `com.adobe.idp.Document` オブジェクトを呼び出す `getContentType` メソッド。
+   * を `javax.servlet.http.HttpServletResponse` を呼び出すことによるオブジェクトのコンテンツタイプ `setContentType` メソッドを使用して、 `com.adobe.idp.Document` オブジェクト。
+   * の作成 `javax.servlet.ServletOutputStream` オブジェクトを使用します。オブジェクトは、 `javax.servlet.h\ttp.HttpServletResponse` オブジェクトの `getOutputStream` メソッド。
+   * の作成 `java.io.InputStream` を呼び出すことによってオブジェクトを取得 `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッド。
+   * バイト配列を作成し、 `InputStream` オブジェクトの `read` メソッドを使用し、バイト配列を引数として渡す。
+   * を呼び出す `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッド。
 
 **関連トピック**
 
-[カスタムCSSファイルを使用したHTML Formsのレンダリング](#rendering-html-forms-using-custom-css-files)
+[カスタム CSS ファイルを使用したHTMLFormsのレンダリング](#rendering-html-forms-using-custom-css-files)
 
-[クイックスタート（SOAPモード）:Java APIを使用したCSSファイルを使用するHTMLフォームのレンダリング](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用した CSS ファイルを使用するHTMLフォームのレンダリング](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## WebサービスAPI {#render-an-html-form-that-uses-a-css-file-using-the-web-service-api}を使用して、CSSファイルを使用するHTMLフォームをレンダリングします
+## Web サービス API を使用して、CSS ファイルを使用するHTMLフォームをレンダリングする {#render-an-html-form-that-uses-a-css-file-using-the-web-service-api}
 
-Forms API（Webサービス）を使用して、カスタムCSSファイルを使用するHTMLフォームをレンダリングします。
+Forms API（Web サービス）を使用して、カスタム CSS ファイルを使用するHTMLフォームをレンダリングします。
 
 1. プロジェクトファイルを含める
 
-   * FormsサービスのWSDLを使用するJavaプロキシクラスを作成します。
-   * クラスパスにJavaプロキシクラスを含めます。
+   * Forms Service WSDL を使用する Java プロキシクラスを作成します。
+   * クラスパスに Java プロキシクラスを含めます。
 
-1. Forms Java APIオブジェクトの作成
+1. Forms Java API オブジェクトの作成
 
-   `FormsService`オブジェクトを作成し、認証値を設定します。
+   の作成 `FormsService` オブジェクトを選択し、認証値を設定します。
 
-1. CSSファイルの参照
+1. CSS ファイルの参照
 
-   * `HTMLRenderSpec`オブジェクトを作成するには、コンストラクタを使用します。
-   * カスタムCSSファイルを使用するHTMLフォームをレンダリングするには、`HTMLRenderSpec`オブジェクトの`setCustomCSSURI`メソッドを呼び出し、CSSファイルの場所と名前を指定する文字列値を渡します。
+   * の作成 `HTMLRenderSpec` オブジェクトを指定します。
+   * カスタム CSS ファイルを使用するHTMLフォームをレンダリングするには、 `HTMLRenderSpec` オブジェクトの `setCustomCSSURI` メソッドを使用して、CSS ファイルの場所と名前を指定する string 値を渡します。
 
-1. HTMLフォームのレンダリング
+1. HTMLフォームをレンダリング
 
-   `FormsService`オブジェクトの`(Deprecated) renderHTMLForm`メソッドを呼び出し、次の値を渡します。
+   Invoke the `FormsService` object’s `(Deprecated) renderHTMLForm` method and pass the following values:
 
-   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、必ず`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`のように完全なパスを指定してください。
-   * HTML環境設定タイプを指定する`TransformTo`列挙値。 例えば、Internet Explorer 5.0以降の動的HTMLと互換性のあるHTMLフォームをレンダリングするには、`TransformTo.MSDHTML`と指定します。
-   * フォームとマージするデータを含む`BLOB`オブジェクト。 データを結合しない場合は、`null`を渡します。 ([編集可能なレイアウトを使用したFormsの事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md)を参照)。
-   * HTML実行時オプションを格納する`HTMLRenderSpec`オブジェクト。
-   * `HTTP_USER_AGENT`ヘッダー値を指定するstring値（`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`など）。 この値を設定しない場合は、空の文字列を渡すことができます。
-   * HTMLフォームをレンダリングするために必要なURI値を格納する`URLSpec`オブジェクト。
-   * 添付ファイルを格納する`java.util.HashMap`オブジェクト。 これはオプションのパラメーターで、フォームにファイルを添付しない場合は`null`を指定できます。
-   * `(Deprecated) renderHTMLForm`メソッドで設定される空の`com.adobe.idp.services.holders.BLOBHolder`オブジェクト。 このパラメーター値は、レンダリングされたフォームを保存します。
-   * `(Deprecated) renderHTMLForm`メソッドで設定される空の`com.adobe.idp.services.holders.BLOBHolder`オブジェクト。 このパラメーターは、出力XMLデータを格納します。
-   * `(Deprecated) renderHTMLForm`メソッドで設定される空の`javax.xml.rpc.holders.LongHolder`オブジェクト。 この引数は、フォームのページ数を保存します。
-   * `(Deprecated) renderHTMLForm`メソッドで設定される空の`javax.xml.rpc.holders.StringHolder`オブジェクト。 この引数はロケール値を格納します。
-   * `(Deprecated) renderHTMLForm`メソッドで設定される空の`javax.xml.rpc.holders.StringHolder`オブジェクト。 この引数は、使用されるHTMLレンダリング値を格納します。
-   * この操作の結果を格納する空の`com.adobe.idp.services.holders.FormsResultHolder`オブジェクト。
+   * ファイル名拡張子を含むフォームデザイン名を指定する string 値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定してください。 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
+   * A `TransformTo` HTMLの環境設定タイプを指定する enum 値。 例えば、Internet Explorer 5.0 以降の動的HTMLと互換性のあるHTMLフォームをレンダリングするには、次のように指定します。 `TransformTo.MSDHTML`.
+   * A `BLOB` フォームに結合するデータを含むオブジェクト。 データを結合しない場合は、 `null`. ( [編集可能なレイアウトを使用したFormsの事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
+   * この `HTMLRenderSpec` オブジェクトを指定します。HTMLの実行時オプションが格納されます。
+   * 次を指定する string 値 `HTTP_USER_AGENT` ヘッダー値（例： ） `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. この値を設定しない場合は、空の文字列を渡すことができます。
+   * A `URLSpec` オブジェクトフォームのレンダリングに必要な URI 値をHTMLするオブジェクト。
+   * A `java.util.HashMap` 添付ファイルを保存するオブジェクト。 これはオプションのパラメーターで、 `null` フォームにファイルを添付しない場合。
+   * 空 `com.adobe.idp.services.holders.BLOBHolder` オブジェクト `(Deprecated) renderHTMLForm` メソッド。 このパラメーター値は、レンダリングされたフォームを保存します。
+   * 空 `com.adobe.idp.services.holders.BLOBHolder` オブジェクト `(Deprecated) renderHTMLForm` メソッド。 このパラメーターは、出力 XML データを格納します。
+   * 空 `javax.xml.rpc.holders.LongHolder` オブジェクト `(Deprecated) renderHTMLForm` メソッド。 This argument stores the number of pages in the form.
+   * 空 `javax.xml.rpc.holders.StringHolder` オブジェクト `(Deprecated) renderHTMLForm` メソッド。 この引数はロケール値を格納します。
+   * An empty `javax.xml.rpc.holders.StringHolder` object that is populated by the `(Deprecated) renderHTMLForm` method. この引数は、使用されるHTMLレンダリング値を格納します。
+   * 空 `com.adobe.idp.services.holders.FormsResultHolder` この操作の結果を格納するオブジェクト。
 
-   `(Deprecated) renderHTMLForm`メソッドは、最後の引数値として渡される`com.adobe.idp.services.holders.FormsResultHolder`オブジェクトに、クライアントWebブラウザーに書き込む必要のあるフォームデータストリームを設定します。
+   この `(Deprecated) renderHTMLForm` メソッドによって `com.adobe.idp.services.holders.FormsResultHolder` オブジェクト。クライアント Web ブラウザーに書き込む必要があるフォームデータストリームを含む最後の引数値として渡されます。
 
-1. フォームデータストリームをクライアントWebブラウザーに書き込む
+1. フォームデータストリームをクライアント Web ブラウザーに書き込む
 
-   * `com.adobe.idp.services.holders.FormsResultHolder`オブジェクトの`value`データメンバーの値を取得して、`FormResult`オブジェクトを作成します。
-   * `FormsResult`オブジェクトの`getOutputContent`メソッドを呼び出して、フォームデータを含む`BLOB`オブジェクトを作成します。
-   * `getContentType`メソッドを呼び出して、`BLOB`オブジェクトのコンテンツタイプを取得します。
-   * `setContentType`メソッドを呼び出し、`BLOB`オブジェクトのコンテンツタイプを渡すことで、`javax.servlet.http.HttpServletResponse`オブジェクトのコンテンツタイプを設定します。
-   * `javax.servlet.http.HttpServletResponse`オブジェクトの`getOutputStream`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに書き込むための`javax.servlet.ServletOutputStream`オブジェクトを作成します。
-   * バイト配列を作成し、`BLOB`オブジェクトの`getBinaryData`メソッドを呼び出してそれを設定します。 このタスクは、`FormsResult`オブジェクトの内容をバイト配列に割り当てます。
-   * `javax.servlet.http.HttpServletResponse`オブジェクトの`write`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに送信します。 `write`メソッドにバイト配列を渡します。
+   * の作成 `FormResult` オブジェクトを作成するには、 `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトの `value` データメンバー。
+   * の作成 `BLOB` を呼び出してフォームデータを含むオブジェクト `FormsResult` オブジェクトの `getOutputContent` メソッド。
+   * のコンテンツタイプを取得する `BLOB` オブジェクトを呼び出す `getContentType` メソッド。
+   * Set the `javax.servlet.http.HttpServletResponse` object’s content type by invoking its `setContentType` method and passing the content type of the `BLOB` object.
+   * Create a `javax.servlet.ServletOutputStream` object used to write the form data stream to the client web browser by invoking the `javax.servlet.http.HttpServletResponse` object’s `getOutputStream` method.
+   * バイト配列を作成し、 `BLOB` オブジェクトの `getBinaryData` メソッド。 このタスクは、 `FormsResult` オブジェクトをバイト配列に変換します。
+   * を呼び出す `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッド。
 
 **関連トピック**
 
-[カスタムCSSファイルを使用したHTML Formsのレンダリング](#rendering-html-forms-using-custom-css-files)
+[カスタム CSS ファイルを使用したHTMLFormsのレンダリング](#rendering-html-forms-using-custom-css-files)
 
-[Base64エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Invoking AEM Forms using Base64 encoding](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)

@@ -57,7 +57,7 @@ ht-degree: 97%
   <tr> 
    <td>DAM - ヘルスチェック<br /> </td> 
    <td> </td> 
-   <td><code>/var/dam</code>と<code>/content/dam</code>を比較し、不整合がないか<br />を確認します。 その後で、リスト内のファイルとフォルダーを同期または削除できます。フォルダー比較用のノードタイプを Web コンソールで設定できます。</td> 
+   <td>比較 <code>/var/dam</code> および <code>/content/dam</code> およびが<br /> 不整合がある場合は、 その後で、リスト内のファイルとフォルダーを同期または削除できます。フォルダー比較用のノードタイプを Web コンソールで設定できます。</td> 
   </tr> 
   <tr> 
    <td>DAM - Adobe Indesign<br /> </td> 
@@ -192,7 +192,7 @@ ht-degree: 97%
  </tbody> 
 </table>
 
-## ツール - タッチ操作向け UI  {#tools-touch-optimized-ui}
+## ツール - タッチ操作向け UI {#tools-touch-optimized-ui}
 
 <table> 
  <tbody> 
@@ -243,7 +243,7 @@ ht-degree: 97%
   </tr> 
   <tr> 
    <td> </td> 
-   <td><a href="https://helpx.adobe.com/cloud-manager/using/using-cloud-manager.html">Cloud Services </a></td> 
+   <td><a href="https://helpx.adobe.com/cloud-manager/using/using-cloud-manager.html">Cloud Services</a></td> 
    <td>Adobe Marketing Cloud に接続します。</td> 
   </tr> 
   <tr> 

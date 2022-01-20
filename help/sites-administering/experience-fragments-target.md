@@ -1,8 +1,8 @@
 ---
 title: エクスペリエンスフラグメントとのTarget 統合
-seo-title: エクスペリエンスフラグメントとのTarget 統合
+seo-title: Target Integration with Experience Fragments
 description: エクスペリエンスフラグメントとのTarget 統合
-seo-description: エクスペリエンスフラグメントとのTarget 統合
+seo-description: Target Integration with Experience Fragments
 uuid: 621f57d4-3b8d-49ea-b193-8530c8fbd74e
 contentOwner: carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 6911c8e3-b12c-466e-8255-5dcd09557d35
 exl-id: dbde3cb6-4132-4462-bd4c-0e4439110e2e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 76%
+source-wordcount: '647'
+ht-degree: 75%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->この機能には、[AEM 6.4 Service Pack 2(6.4.2.0)](/help/release-notes/sp-release-notes.md)以降が必要です。
+>この機能を使用するには、 [AEM 6.4 Service Pack 2(6.4.2.0)](/help/release-notes/sp-release-notes.md) または後で。
 
 Adobe Target 向けに Adobe Experience Manager（AEM）で作成された[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)を書き出すことができます。書き出したエクスペリエンスフラグメントは、Target アクティビティのオファーとして使用し、幅広くエクスペリエンスをテストおよびパーソナライズできます。これにより、AEM の使いやすさおよび機能性と、Target の強力な自動インテリジェンス（AI）機能および機械学習（ML）機能を組み合わせることができます。
 
@@ -29,12 +29,12 @@ Adobe Target 向けに Adobe Experience Manager（AEM）で作成された[エ�
 
 様々なアクションが必要です。
 
-1. AEM を Target と統合する必要があります。詳しくは、[Adobe Targetとの統合](/help/sites-administering/target.md)を参照してください。
+1. AEM を Target と統合する必要があります。詳しくは、 [Adobe Targetとの統合](/help/sites-administering/target.md) を参照してください。
 1. エクスペリエンスフラグメントはオーサーインスタンスから書き出されるので、リンクが公開インスタンスに対して確実に外部化されるように、オーサーインスタンスに [Link Externalizer を設定する](/help/sites-developing/externalizer.md)必要があります。
 
-## クラウド設定{#add-the-cloud-configuration}の追加
+## クラウド設定を追加 {#add-the-cloud-configuration}
 
-フラグメントを書き出す前に、**Adobe Target**&#x200B;の&#x200B;**クラウド設定**&#x200B;をフラグメントまたはフォルダーに追加する必要があります。
+フラグメントを書き出す前に、 **クラウド設定** 対象 **Adobe Target** をフラグメントまたはフォルダーに追加します。
 
 1. **エクスペリエンスフラグメント**&#x200B;コンソールに移動します。
 1. 適切なフォルダーまたはフラグメントの&#x200B;**ページのプロパティ**&#x200B;を開きます。
@@ -48,11 +48,11 @@ Adobe Target 向けに Adobe Experience Manager（AEM）で作成された[エ�
 1. 「**クラウドサービス**」タブを選択します。
 
 1. **クラウドサービス設定**&#x200B;のドロップダウンリストから、**Adobe Target** を選択します。
-1. **Adobe Target**&#x200B;で、適切な設定を選択します。
+1. の下 **Adobe Target**、適切な設定を選択します。
 
 1. **保存して閉じます**。
 
-## Target へのエクスペリエンスフラグメントの書き出し  {#exporting-an-experience-fragment-to-target}
+## Target へのエクスペリエンスフラグメントの書き出し {#exporting-an-experience-fragment-to-target}
 
 >[!NOTE]
 >
@@ -79,9 +79,9 @@ AEM から Target にエクスペリエンスフラグメントを書き出す�
 
    >[!NOTE]
    >
-   >「**公開**」を選択すると、エクスペリエンスフラグメントがすぐに公開され、Targetに送信されます。
+   >「**公開**」を選択すると、エクスペリエンスフラグメントがすぐに公開され、Target に送信されます。
 
-1. 確認ダイアログで「**OK**」をタップまたはクリックします。
+1. タップまたはクリック **OK** をクリックします。
 
    エクスペリエンスフラグメントは Target に送信されているはずです。
 
@@ -89,9 +89,9 @@ AEM から Target にエクスペリエンスフラグメントを書き出す�
 >
 >あるいは、[ページ情報](/help/sites-authoring/author-environment-tools.md#page-information)メニューの同等のコマンドを使用して、ページエディターから書き出しを実行することもできます。
 
-## Target でのエクスペリエンスフラグメントの使用  {#using-your-experience-fragments-in-target}
+## Target でのエクスペリエンスフラグメントの使用 {#using-your-experience-fragments-in-target}
 
-前述のタスクを実行すると、エクスペリエンスフラグメントがTargetのオファーページに表示されます。 Target 側でできることを詳しく知るには、[Target に特化したドキュメント](https://experiencecloud.adobe.com/resources/help/en_US/target/target/aem-experience-fragments.html)を参照してください。
+上記のタスクを実行すると、エクスペリエンスフラグメントが Target のオファーページに表示されます。 Target 側でできることを詳しく知るには、[Target に特化したドキュメント](https://experiencecloud.adobe.com/resources/help/en_US/target/target/aem-experience-fragments.html)を参照してください。
 
 ## Target に書き出し済みのエクスペリエンスフラグメントの削除 {#deleting-an-experience-fragment-already-exported-to-target}
 
@@ -104,8 +104,8 @@ Target に書き出し済みのエクスペリエンスフラグメントを削�
 
    AEM のエラーメッセージは、ユーザーがエクスペリエンスフラグメントを（強制的に）削除することを禁止するものではありません。エクスペリエンスフラグメントを削除した場合：
 
-   * AEMエクスペリエンスフラグメントを含むTargetオファーで、望ましくない動作が表示される場合があります
+   * AEMエクスペリエンスフラグメントを含む Target オファーで、望ましくない動作が表示される場合があります
 
-      * エクスペリエンスフラグメントHTMLがTargetにプッシュされた場合、オファーは引き続きレンダリングされる可能性が高くなります
-      * 参照元のアセットがAEMでも削除された場合、エクスペリエンスフラグメント内の参照が正しく機能しない可能性があります。
-   * もちろん、エクスペリエンスフラグメントはAEMに存在しなくなったので、エクスペリエンスフラグメントに対するそれ以上の変更は不可能です。
+      * エクスペリエンスフラグメントHTMLが Target にプッシュされたので、オファーは引き続きレンダリングされる可能性が高くなります
+      * 参照元のアセットがAEMでも削除された場合、エクスペリエンスフラグメント内の参照は正しく機能しない可能性があります。
+   * もちろん、エクスペリエンスフラグメントがAEMに存在しなくなったので、エクスペリエンスフラグメントに対するそれ以上の変更は不可能です。

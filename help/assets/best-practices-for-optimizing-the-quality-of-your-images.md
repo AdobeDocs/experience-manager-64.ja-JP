@@ -6,11 +6,11 @@ products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 exl-id: 2e90bea1-eaac-457b-8588-b18d3a6e8d91
-feature: アセット管理、レンディション
+feature: Asset Management,Renditions
 role: User
 source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1461'
 ht-degree: 93%
 
 ---
@@ -43,9 +43,9 @@ AEM には、画像をチューニングおよび最適化して結果をレン�
 
 ## 画像のシャープニングに関するベストプラクティス {#best-practices-for-image-sharpening}
 
-画像のシャープ処理は、Web サイト上の画像を制御する際の最も複雑な側面で、多くのミスが生じます。AEMでのシャープとアンシャープマスクの仕組みについて詳しくは、 AEMに適用される『Dynamic Media Classic画質のAdobe』および『シャープのベストプラクティス](/help/assets/assets/sharpening_images.pdf)』ガイドも参照してください。[
+画像のシャープ処理は、Web サイト上の画像を制御する際の最も複雑な側面で、多くのミスが生じます。AEMでのシャープニングとアンシャープマスクの仕組みについて詳しくは、 [Adobe Dynamic Media Classicの画質とシャープのベストプラクティス](/help/assets/assets/sharpening_images.pdf) AEMにも適用されるガイドです。
 
-[アンシャープマスクを使用した画像のシャープニング](https://helpx.adobe.com/photoshop/using/adjusting-image-sharpness-blur.html)も参照してください。
+関連トピック [アンシャープマスクを使用した画像のシャープニング](https://helpx.adobe.com/photoshop/using/adjusting-image-sharpness-blur.html).
 
 AEM を使用すれば、取り込み時、配信時またはその両方で画像をシャープにすることができます。ただし、ほとんどの場合は、両方ではなくどちらか一方の方法のみを使用して画像をシャープにしてください。一般に、配信時に URL 上で画像をシャープにすることで、最適な結果が得られます。
 
@@ -65,7 +65,7 @@ AEM を使用すれば、取り込み時、配信時またはその両方で画�
 
              このパラメーターは、シャープにされるピクセルが周囲の領域とどの程度違えば、そのピクセルをエッジのピクセルと見なしてフィルターによりシャープにするかを決定するものです。「**[!UICONTROL しきい値]**」パラメーターを使用することで、肌のトーンなど、同じような色の領域が過剰にシャープニングされるのを防ぎます。例えば、しきい値を 12 にした場合、肌のトーンの明るさにわずかな差があっても無視して「ノイズ」が加わるのを防ぎながら、まつげと肌が隣り合う場所など、コントラストの高い領域に対してエッジコントラストを追加することができます。
          
-         フィルターで使用するベストプラクティスを含む、これら3つのパラメーターの設定方法について詳しくは、『 Dynamic Media Classic画質のAdobe』および『シャープのベストプラクティス](/help/assets/assets/sharpening_images.pdf) 』ガイド(AEMのDynamic Mediaにも適用)を参照してください。[
+         これら 3 つのパラメーターの設定方法の詳細については、フィルターで使用するベストプラクティスなど、 [Adobe Dynamic Media Classicの画質とシャープのベストプラクティス](/help/assets/assets/sharpening_images.pdf) ガイド (AEM上のDynamic Mediaにも適用されます )
    * AEM では第 4 パラメーターの monochrome（0,1）も制御できます。このパラメーターでは、アンシャープマスクをそれぞれの色成分に個別に適用するか（値が 0 の場合）、または画像の明るさ／明度に対して適用するか（値が 1 の場合）を指定します。
 
 
@@ -80,7 +80,7 @@ amount を 1.75 から 4 まで少しずつ増やします。シャープニン�
 
 monochrome パラメーター設定は 0 のままにします。
 
-### JPEG圧縮(&amp;qlt=)のベストプラクティス {#best-practices-for-compression-qlt}
+### JPEG圧縮のベストプラクティス (&amp;qlt=) {#best-practices-for-compression-qlt}
 
 * このパラメーターでは、JPG エンコーディング品質を制御します。値が大きいほど高画質になりますがファイルサイズも大きくなります。逆に、値が小さいほど低画質になりますがファイルサイズは小さくなります。このパラメーターの範囲は 0～100 です。
 * 画質を最適化するには、このパラメーターの値を 100 に設定しないでください。90 や 95 の設定と 100 の設定では、画質の差はほとんど感じられませんが、100 に設定することで画像ファイルのサイズが不必要に増加します。したがって、画質を最適化しながら画像ファイルが大きくなりすぎないようにするために、`qlt=<value>` を 90 または 95 に設定します。

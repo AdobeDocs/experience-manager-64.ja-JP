@@ -3,23 +3,23 @@ cloud: Experience Cloud
 product: adobe experience manager
 solution: Experience Manager, Experience Manager Sites
 audience: end-user
-user-guide-title: AEM 6.4クラシックUIオーサリングユーザーガイド
-breadcrumb-title: クラシックUIオーサリングガイド
-user-guide-description: このガイドでは、クラシックUIでのAEMでのオーサリングの概念について説明します。
-feature: オーサリング
+user-guide-title: AEM 6.4 Classic UI オーサリングユーザーガイド
+breadcrumb-title: クラシック UI オーサリングガイド
+user-guide-description: このガイドでは、クラシック UI でのAEMでのオーサリングの概念について説明します。
+feature: Authoring
 role: User
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 79%
+source-wordcount: '272'
+ht-degree: 80%
 
 ---
 
 
-# AEM 6.4クラシックUIオーサリングユーザーガイド {#classic-ui}
+# AEM 6.4 Classic UI オーサリングユーザーガイド {#classic-ui}
 
-+ [クラシックUIオーサリングガイドの概要](home.md)
-+ クラシックUIオーサリングの概要{#introduction}
++ [クラシック UI オーサリングガイドの概要](home.md)
++ クラシック UI オーサリングの概要 {#introduction}
    + [作成者がおこなう最初の手順](classic-page-author-first-steps.md)
    + [クラシック UI でのオーサリング](classicui.md)
    + [オーサー環境の操作](author-env.md)
@@ -79,11 +79,11 @@ ht-degree: 79%
    + [Adobe Campaign の使用](classic-personalization-ac.md)
    + [Adobe Campaign コンポーネント](classic-personalization-ac-components.md)
    + [Adobe Campaign のターゲット設定](classic-personalization-ac-target.md)
-+ クラシックUIでのアセットのオーサリング{#assets}
++ クラシック UI でのアセットのオーサリング {#assets}
    + [アセットの操作](classicui-assets.md)
    + [Dynamic Media アセットの配信](dynamic-media-assets-delivering.md)
    + [ページへの Dynamic Media アセットの追加](dynamic-media-assets-adding-to-page.md)
-   + [Dynamic Media Classic(Scene7)機能のページへの追加](manage-assets-classic-s7.md)
+   + [ページへのDynamic Media Classic(Scene7) 機能の追加](manage-assets-classic-s7.md)
    + [Dynamic Media の操作](dynamic-media-assets.md)
    + [ビデオ](manage-assets-classic-s7-video.md)
    + [アセットの命名規則のテスト](asset-naming-conventions.md)

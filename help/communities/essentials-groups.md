@@ -1,8 +1,8 @@
 ---
 title: コミュニティグループの基本事項
-seo-title: コミュニティグループの基本事項
+seo-title: Community Group Essentials
 description: コミュニティサイトを動的に作成する
-seo-description: コミュニティサイトを動的に作成する
+seo-description: Creating community sites dynamically
 uuid: 168e7aeb-6e9a-468d-8ac4-274007cea252
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,14 +12,14 @@ discoiquuid: 4f85cd3c-5158-4f23-abe2-7e375fd0c8d4
 exl-id: 357a130a-af60-4e86-9161-5dc7056aa052
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 44%
+source-wordcount: '418'
+ht-degree: 43%
 
 ---
 
 # コミュニティグループの基本事項 {#community-group-essentials}
 
-コミュニティグループ機能は、パブリッシュ環境およびオーサー環境の権限を持つユーザーが、コミュニティサイト内でサブコミュニティを動的に作成する機能です。
+コミュニティグループ機能を使用すると、パブリッシュ環境およびオーサー環境から許可されたユーザーがコミュニティサイト内でサブコミュニティを動的に作成できます。
 
 Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降、別のグループ内でグループをネストできるようになりました。
 
@@ -47,7 +47,7 @@ Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降�
   </tr>
   <tr>
    <td><strong>properties</strong></td> 
-   <td><a href="creating-groups.md">コミュニティグループ</a>を参照</td> 
+   <td>詳しくは、 <a href="creating-groups.md">コミュニティグループ</a></td> 
   </tr>
  </tbody>
 </table>
@@ -87,11 +87,11 @@ Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降�
 
 ### グループ機能 {#groups-function}
 
-[グループ機能](functions.md#groups-function)を含むコミュニティサイト構造は、パブリッシュ環境とオーサー環境からの新しい`community groups`の作成をサポートします。 作成したコミュニティグループには、グループのメンバーをリストする`community groups member list`コンポーネントが含まれます。
+を含むコミュニティサイト構造 [グループ機能](functions.md#groups-function) は、 `community groups` パブリッシュ環境およびオーサー環境から。 作成したコミュニティグループには、 `community groups member list` グループのメンバーをリストするコンポーネント。
 
-コミュニティグループページのデザインを提供する1つ以上の[コミュニティグループテンプレート](tools-groups.md)は、[コミュニティサイトテンプレート](sites.md)に機能を追加する際、またはコミュニティグループテンプレート内にネストする際に、グループ機能用に設定できます。
+1 つ以上 [コミュニティグループテンプレート](tools-groups.md)（コミュニティグループページのデザインを提供）は、機能を [コミュニティサイトテンプレート](sites.md) またはコミュニティグループテンプレート内にネストされている
 
-複数のコミュニティグループテンプレートを含めると、作成者向けの[コミュニティグループ](creating-groups.md)の節に示すように、コミュニティサイト用の新しいコミュニティグループを作成する際に、承認済みユーザーにデザインを提示できます。
+複数のコミュニティグループテンプレートを組み込むと、コミュニティサイト用に新しいコミュニティグループを作成する際に、承認済みユーザーに提示するデザインを選択できます (「 [コミュニティグループ](creating-groups.md) 作成者向け
 
 ### ネストされたグループ {#nested-groups}
 
@@ -99,10 +99,10 @@ Communities [FP1](deploy-communities.md#latestfeaturepack) 以降では、グル
 
 コミュニティサイトまたはグループテンプレートにグループ機能が含まれる場合、以下の操作が可能です。
 
-* オーサー環境でのサブコミュニティの作成
-* パブリッシュ環境でグループを作成する（許可するように設定されている場合）
+* オーサー環境にサブコミュニティを作成する
+* 許可するように設定されている場合は、パブリッシュ環境でグループを作成します。
 
-オーサー環境でグループを作成するときは、まずコミュニティサイトを公開してから、グループを公開する必要があります。コミュニティサイトを公開すると、ACLが設定されているサブコミュニティのメンバーグループを作成せずに、グループのページが公開されます。 したがって、グループが明示的に公開されるまで、制限付き（シークレット）グループが表示される場合があります。
+オーサー環境でグループを作成するときは、まずコミュニティサイトを公開してから、グループを公開する必要があります。コミュニティサイトを公開すると、ACL が設定されているサブコミュニティのメンバーグループを作成せずに、グループのページが公開されます。 したがって、制限付き（シークレット）グループは、グループが明示的に公開されるまで表示される場合があります。
 
 ## リンクと関連情報 {#links-and-related-information}
 

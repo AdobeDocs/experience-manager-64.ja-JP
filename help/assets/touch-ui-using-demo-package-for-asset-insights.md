@@ -1,6 +1,6 @@
 ---
-title: アセットインサイト用デモパッケージの使用
-description: デモパッケージを使用して、AdobeアセットインサイトでWebページのデータをキャプチャし、インサイトを生成できるようにします。
+title: アセットインサイトにデモパッケージを使用する
+description: デモパッケージを使用して、Adobeアセットインサイトで Web ページのデータを取得し、インサイトを生成できるようにします。
 contentOwner: AG
 feature: Asset Insights,Asset Reports
 role: User,Admin
@@ -12,14 +12,14 @@ ht-degree: 41%
 
 ---
 
-# アセットインサイト用デモパッケージの使用 {#using-demo-package-for-asset-insights}
+# アセットインサイトにデモパッケージを使用する {#using-demo-package-for-asset-insights}
 
-デモパッケージを使用して、AdobeアセットインサイトでサンプルWebページのデータをキャプチャし、インサイトを生成できます。
+デモパッケージを使用して、Adobeアセットインサイトでサンプル Web ページのデータを取り込み、インサイトを生成できます。
 
-## サンプルWebページでの[!DNL Experience Manager]アセットインサイトの使用  {#using-aem-assets-insights-with-sample-web-page}
+## 使用 [!DNL Experience Manager] サンプル Web ページを使用したアセットインサイト  {#using-aem-assets-insights-with-sample-web-page}
 
-1. [アセットインサイトの設定](touch-ui-configuring-asset-insights.md)の手順に従って、アセットインサイトを設定します。
-1. サンプルの[!DNL Experience Manager]アセットパッケージを下からダウンロードし、CRXDEパッケージマネージャーからパッケージをインストールします。
+1. アセットインサイトの設定は、 [アセットインサイトの設定](touch-ui-configuring-asset-insights.md).
+1. サンプルをダウンロード [!DNL Experience Manager] 下のアセットパッケージから、CRXDE パッケージマネージャーからパッケージをインストールします。
 
 [ファイルを入手](assets/insightsdemo.zip)
 
@@ -35,4 +35,4 @@ ht-degree: 41%
 
    >[!NOTE]
    >
-   >外部Webページは、[!DNL Experience Manager]自体に含めることができます。
+   >外部 Web ページは、 [!DNL Experience Manager] それ自体。

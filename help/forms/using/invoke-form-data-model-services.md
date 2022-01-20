@@ -1,18 +1,18 @@
 ---
 title: アダプティブフォームからフォームデータモデルサービスを呼び出すための API
-seo-title: アダプティブフォームからフォームデータモデルサービスを呼び出すための API
+seo-title: API to invoke form data model service from adaptive forms
 description: 'アダプティブフォームフィールド内から WSDL で記述された、Web サービスを呼び出す API について説明します。 '
-seo-description: 'アダプティブフォームフィールド内から WSDL で記述された、Web サービスを呼び出す API について説明します。 '
+seo-description: Explains the invokeWebServices API that you can use to invoke web services written in WSDL from within an adaptive form field.
 uuid: 40561086-e69d-4e6a-9543-1eb2f54cd836
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: aa3e50f1-8f5a-489d-a42e-a928e437ab79
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 0653b0e4-a697-472a-8093-5ed48ede3c75
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 92%
+source-wordcount: '351'
+ht-degree: 91%
 
 ---
 
@@ -38,7 +38,7 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 |---|---|
 | `operationInfo` | フォームデータモデルの識別子、操作タイトル、操作名を指定する構造 |
 | `inputs` | サービス操作に値が入力されるフォームオブジェクトを指定する構造 |
-| `outputs` | サービス操作によって返された値を使用して入力されるフォームオブジェクトを指定する構造 |
+| `outputs` | サービス操作によって返される値を使用して入力されるフォームオブジェクトを指定する構造 |
 
 `guidelib.dataIntegrationUtils.executeOperation` API の構造は、サービス操作の詳細を指定します。この構造の構文は以下のとおりです。
 

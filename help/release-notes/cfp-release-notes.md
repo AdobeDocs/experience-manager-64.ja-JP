@@ -7,7 +7,7 @@ exl-id: a63e77a3-da48-4072-bc75-c4c41a2f62a3
 source-git-commit: 1d5d2ef3840a40df7c3b223c7b5835e41553e9f1
 workflow-type: tm+mt
 source-wordcount: '4693'
-ht-degree: 16%
+ht-degree: 17%
 
 ---
 
@@ -91,7 +91,7 @@ Adobe Experience Manager 6.4.8.4 では、次の問題が修正されていま�
 
 **AEM Forms-6.4.0-0027 で修正された問題**
 
-* （JEE のみ）Apache Log4j2 に対して報告された重大なセキュリティ脆弱性 (CVE-2021-44228および CVE-2021-45046)。
+* （JEE のみ）Apache Log4j2 に対して報告された重大なセキュリティ脆弱性（CVE-2021-44228 および CVE-2021-45046）。
 
 セキュリティ更新について詳しくは、 [Experience Managerセキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html).
 

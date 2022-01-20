@@ -1,8 +1,8 @@
 ---
 title: PDF の書き出しの変換設定の変更
-seo-title: PDF の書き出しの変換設定の変更
+seo-title: Modifying the PDF Export conversion settings
 description: PDF の書き出しの変換設定を変更する方法について説明します。
-seo-description: PDF の書き出しの変換設定を変更する方法について説明します。
+seo-description: Learn how to modify the PDF Export conversion settings.
 uuid: 7bade010-f422-4a76-a876-705e3cf346e6
 contentOwner: admin
 content-type: reference
@@ -13,7 +13,7 @@ feature: PDF Generator
 exl-id: 29dc0b02-226d-4650-8266-2ad2c17dc6a5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '166'
 ht-degree: 100%
 
 ---

@@ -1,25 +1,25 @@
 ---
 title: AEM 6.4 における Forms リポジトリの再構築
-seo-title: AEM 6.4 における Forms リポジトリの再構築
+seo-title: Forms Repository Restructuring in AEM 6.4
 description: AEM 6.4 for Forms の新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
-seo-description: AEM 6.4 for Forms の新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
+seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.4 for Forms.
 uuid: e60830d4-23ca-4be9-941a-ee4abe4786a6
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 1ce9a622-5968-407f-a74b-d325a2bff669
-feature: アップグレード
+feature: Upgrading
 exl-id: a2d6524e-3f5b-4d1e-af64-61ff95889657
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 88%
+source-wordcount: '529'
+ht-degree: 87%
 
 ---
 
 # AEM 6.4 における Forms リポジトリの再構築{#forms-repository-restructuring-in-aem}
 
-AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明したように、AEM 6.4にアップグレードする場合は、このページを使用して、AEM Formsソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
+親の説明に従って [AEM 6.4 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md) このページでは、AEM 6.4 にアップグレードするお客様は、このページを使用して、AEM Formsソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
 
 **6.4 へのアップグレード時におこなう変更**
 
@@ -39,7 +39,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
 | **以前の場所** | `/etc/clientlibs/fd/fp` |
 |---|---|
 | **新しい場所** | `/libs/fd/fp/components` |
-| **再構築の手引き** | カスタムコード内の従来の場所への明示的な参照は、新しい場所に更新する必要があります。 |
+| **再構築の手引き** | カスタムコード内で従来の場所への明示的な参照は、新しい場所に更新する必要があります。 |
 | **備考** | これらのクライアントライブラリは、変更したり拡張したりしないでください。 |
 
 | **以前の場所** | `/etc/clientlibs/fd/rte` |
@@ -90,7 +90,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
 | **再構築の手引き** | これらのクライアントライブラリを変更することは推奨されず、サポートもされていません。変更された場合は、AEM 提供のコードを使用するようにクライアントライブラリをロールバックしてください。 |
 | **備考** | 該当なし |
 
-## 6.5 へのアップグレードまでにおこなう変更  {#prior-to-upgrade}
+## 6.5 へのアップグレードまでにおこなう変更 {#prior-to-upgrade}
 
 ### EchoSign クラウドサービス設定 {#echosign-cloud-service-configuration}
 
@@ -100,7 +100,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
 | **再構築の手引き** | [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md)ユーティリティを Forms 移行 UI からトリガーします。 |
 | **備考** | 該当なし |
 
-### reCAPTCHA クラウドサービス設定  {#recaptcha-cloud-service-configurations}
+### reCAPTCHA クラウドサービス設定 {#recaptcha-cloud-service-configurations}
 
 | **以前の場所** | `/etc/cloudservices/recaptcha` |
 |---|---|
@@ -108,7 +108,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
 | **再構築の手引き** | [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md)ユーティリティを Forms 移行 UI からトリガーします。 |
 | **備考** | 該当なし |
 
-### Typekit クラウドサービス設定  {#typekit-cloud-service-configurations}
+### Typekit クラウドサービス設定 {#typekit-cloud-service-configurations}
 
 | **以前の場所** | `/etc/cloudservices/typekit` |
 |---|---|
@@ -116,7 +116,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
 | **再構築の手引き** | [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md)ユーティリティを Forms 移行 UI からトリガーします。 |
 | **備考** | 該当なし |
 
-### その他  {#misc-1}
+### その他 {#misc-1}
 
 | **以前の場所** | `/etc/cloudservices/fdm` |
 |---|---|
@@ -127,5 +127,5 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
 | **以前の場所** | `/etc/designs/fd/fp` |
 |---|---|
 | **新しい場所** | `/libs/fd/fp` |
-| **再構築の手引き** | /etcテンプレートへの参照は、最終的に、対応する`/libs`を指すように更新する必要があります。 |
+| **再構築の手引き** | /etc テンプレートへの参照は、最終的に、それらのテンプレートを指すように更新されます。 `/libs` 対応する |
 | **備考** | 該当なし |

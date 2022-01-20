@@ -1,8 +1,8 @@
 ---
 title: 画像エディター
-seo-title: 画像エディター
+seo-title: Image Editor
 description: 画像エディターは AEM の中核となる要素で、コンポーネントを利用することでコンテンツ作成者は画像を操作しやなります。
-seo-description: 画像エディターは AEM の中核となる要素で、コンポーネントを利用することでコンテンツ作成者は画像を操作しやなります。
+seo-description: The Image Editor is a core piece of AEM and can be leveraged by components to facilitate the manipulation of images by content authors.
 uuid: de6ac71b-380a-4b67-b697-ac34a79a9cc4
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: f6347492-cf48-4835-b8fd-ce9a75a09abe
 exl-id: 843c67d6-dda1-448f-a992-19574066e1c3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '305'
 ht-degree: 94%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 94%
 
 >[!CAUTION]
 >
->この記事で説明する画像エディターの機能を使用するには、[機能パック24267](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/featurepack/cq-6.4.0-featurepack-24267)をインストールする必要があります。
+>この記事で説明している画像エディターの機能を使用するには、 [機能パック24267](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/featurepack/cq-6.4.0-featurepack-24267) をインストールする必要があります。
 
 ## 画像マップの相対単位 {#relative-units-for-image-map}
 

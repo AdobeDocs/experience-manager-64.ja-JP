@@ -27,13 +27,13 @@ ht-degree: 62%
 
 ### Solr のインデックス再作成 {#reindex-solr}
 
-MSRP を使用して設定したデプロイメントに新しい Communities 機能パックをインストールする場合は、次の操作が必要です。
+MSRP で設定されたデプロイメントに新しい Communities 機能パックをインストールする場合は、次の操作が必要になります。
 
-1. [ 最新の機能パック ](deploy-communities.md#latestfeaturepack) をインストールします。
-2. [ 最新の Solr 設定ファイル ](msrp.md#upgrading) をインストールします。
+1. のインストール [最新の機能パック](deploy-communities.md#latestfeaturepack)
+2. のインストール [最新の Solr 設定ファイル](msrp.md#upgrading)
 3. MSRP のインデックス再作成
 
-   [MSRP インデックス再作成ツール ](msrp.md#msrp-reindex-tool) を参照してください。
+   セクションを参照 [MSRP インデックス再作成ツール](msrp.md#msrp-reindex-tool)
 
 ### Enablement 2.0 {#enablement}
 
@@ -43,25 +43,25 @@ Enablement 1.0 からのコンテンツの移行のサポートについては�
 
 ## AEM 6.0 からのアップグレード {#upgrading-from-aem}
 
-既存の UGC を保持する必要がある場合は、UGC [ オンプレミス ](#on-premise-storage) と [Adobeクラウド ](#adobe-cloud-storage) のどちらにデプロイメントが保存されているかによって、保存方法が異なります。
+既存の UGC を保持する必要がある場合は、その方法は、デプロイメントが UGC を保存したかどうかによって異なります [オンプレミス](#on-premise-storage) または [Adobe雲](#adobe-cloud-storage).
 
 ### アドビクラウドストレージ {#adobe-cloud-storage}
 
 アップグレードされたサイトがアドビクラウドストレージを使用するように設定された場合、SRP のメソッドは古い場所にある既存の UGC を見つけることができなくなるので、すべての UGC が失われたかのように（誤って）表示される可能性があります。
 
-したがって、ASRP に `AEM 6.0 compatability-mode` を使用して UGC にアクセスするように指示する機能があります。
+したがって、ASRP に対して、 `AEM 6.0 compatability-mode` をクリックして UGC にアクセスします。
 
 AEM 6.3 のすべてのオーサーインスタンスとパブリッシュインスタンスについて:
 
-1. 管理者権限でログインし、[ASRP](asrp.md) を設定します。
-1. 次の手順に従って、既存の UGC を表示します。
+1. 管理者権限でログインし、設定します。 [ASRP](asrp.md).
+1. 既存の UGC を表示するには、次の手順に従います。
 
    i.Web コンソールを参照します。 デフォルトの URL は、
-   `https://localhost:4502/system/console/configMgr`。
+   `https://localhost:4502/system/console/configMgr`
 
-   ii.**[!UICONTROL AEM Communities Utilities]** 設定を探し、を選択して設定パネルを展開します。
+   ii.場所 **[!UICONTROL AEM Communities Utilities]** 設定を選択し、設定パネルを展開します。
 
-   iii.「**[!UICONTROL クラウドストレージ]**」をオフにし、「**[!UICONTROL 保存]**」をクリックします。
+   iii.オフ **[!UICONTROL クラウドストレージ]** をクリックし、 **[!UICONTROL 保存]**.
 
 ![chlimage_1-126](assets/chlimage_1-126.png)
 
@@ -74,7 +74,7 @@ AEM 6.3 のすべてのオーサーインスタンスとパブリッシュイン
 
 ### Java API {#java-apis}
 
-AEM 6.0 Social Communities から AEM 6.3 Communities にアップグレードするときは、多くの API が異なるパッケージに再編成されていることに注意してください。IDE を使用して Communities 機能をカスタマイズする場合は、ほとんどを簡単に解決できます。
+AEM 6.0 Social Communities から AEM 6.3 Communities にアップグレードするときは、多くの API が異なるパッケージに再編成されていることに注意してください。コミュニティ機能のカスタマイズに IDE を使用する場合は、ほとんどを簡単に解決できます。
 
 廃止された SocialUtils パッケージについて詳しくは、[SocialUtils のリファクタリング](socialutils.md)を参照してください。
 
@@ -82,11 +82,11 @@ AEM 6.0 Social Communities から AEM 6.3 Communities にアップグレード�
 
 ### JSP コンポーネントテンプレートの廃止 {#no-jsp-component-templates}
 
-[ ソーシャルコンポーネントフレームワーク ](scf.md)(SCF) は、AEM 6.0 より前の Java Server Pages(JSP) の代わりに、[HandlebarsJS](https://handlebarsjs.com/)(HBS) テンプレート言語を使用します。
+この [ソーシャルコンポーネントフレームワーク](scf.md) (SCF) は、 [HandlebarsJS](https://handlebarsjs.com/) AEM 6.0 より前の Java Server Pages(JSP) の代わりに (HBS) テンプレート言語を使用します。
 
 AEM 6.0 では、JSP コンポーネントは新しい HBS フレームワークコンポーネントと同じ場所に残っています（HBS コンポーネントは通常、「hbs」という名前のサブフォルダーに存在します）。
 
-AEM 6.1 以降では JSP コンポーネントは完全に削除されています。Communities の場合は、JSP コンポーネントの使用をすべて SCF コンポーネントで置き換えることをお勧めします。
+AEM 6.1 以降では JSP コンポーネントは完全に削除されています。コミュニティの場合は、JSP コンポーネントのすべての使用を SCF コンポーネントに置き換えることをお勧めします。
 
 ## AEM Communities UGC Migration Tool {#aem-communities-ugc-migration-tool}
 
@@ -100,6 +100,6 @@ AEM 6.1 以降では JSP コンポーネントは完全に削除されていま�
 
 **第 1 世代**：おおよそ CQ 5.4 から AEM 5.6.0 まで - これらは、プラットフォーム間で UGC を同期する手段としてレプリケーションを使用して UGC をローカルリポジトリに保存した **collab** コンポーネントです。その他の違いとしては、Java Server Pages(JSP) を使用した実装と、オーサー環境でのみオーサリングで構成されるブログ機能があります。
 
-**第 2 世代**：AEM 5.6.1 から AEM 6.1 まで - **collab** コンポーネントと **social** コンポーネントが混在しています。AEM 6.0 では新しい [ ソーシャルコンポーネントフレームワーク ](scf.md)(SCF) が導入され、AEM 6.2 では [ 共通の UGC ストア ](working-with-srp.md) が導入されました。ここでは、[ ストレージリソースプロバイダー ](srp.md)(SRP) を使用して UGC にアクセスします。
+**第 2 世代**：AEM 5.6.1 から AEM 6.1 まで - **collab** コンポーネントと **social** コンポーネントが混在しています。AEM 6.0 では新しい [ソーシャルコンポーネントフレームワーク](scf.md) (SCF) およびAEM 6.2 では、 [共通 UGC ストア](working-with-srp.md) UGC には、 [ストレージリソースプロバイダー](srp.md) (SRP)。
 
-**第 3 世代**:AEM 6.2 以降では、SCF に Handlebars(HBS) コンポーネントとして実装さ **** れ、UGC 用の SRP の選択が必要な socialcomponents のみが存在します。
+**第 3 世代**:AEM 6.2 以降では、 **social** SCF で Handlebars(HBS) コンポーネントとして実装され、UGC 用の SRP の選択が必要なコンポーネント。

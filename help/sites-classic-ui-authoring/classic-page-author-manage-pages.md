@@ -1,8 +1,8 @@
 ---
 title: ページの作成と整理
-seo-title: ページの作成と整理
+seo-title: Creating and Organizing Pages
 description: ここでは、ページ上でコンテンツを作成できるように、AEM でページを作成および管理する方法について説明します。
-seo-description: ここでは、ページ上でコンテンツを作成できるように、AEM でページを作成および管理する方法について説明します。
+seo-description: This section describes how to create and manage pages with AEM so that you can then create content on those pages.
 uuid: 47ce137a-7a85-4b79-b4e0-fdf08a9e77bd
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 14b8758b-f164-429a-b299-33b0703f8bec
 exl-id: c5fa7561-0e21-4e29-be8e-4a6d3b61092d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1910'
 ht-degree: 90%
 
 ---
@@ -48,7 +48,7 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
 
    `http://localhost:4503/content/geometrixx/en/products/triangle.html`
 
-   インスタンスの設定によっては、パブリッシュ環境での`/content`の使用はオプションの場合があります。
+   インスタンスの設定に応じて、を使用します。 `/content` は、パブリッシュ環境ではオプションの場合があります。
 
 ```xml
   /content
@@ -70,7 +70,7 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
     /...
 ```
 
-この構造はWebサイトコンソールから表示でき、[ツリー構造](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15)内を移動します。
+この構造は Web サイトコンソールから表示でき、 [ツリー構造内を移動する](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15).
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
@@ -88,9 +88,9 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
    * これは URI の生成に使用されます。
    * このフィールドへの入力はオプションです。指定しない場合、名前はタイトルから派生します。
 
-新しいページを作成する際に、AEMはAEMとJCRによって課された規則](/help/sites-developing/naming-conventions.md)に基づいてページ名を検証します。[
+新しいページを作成する際に、AEMは [規則に従ってページ名を検証する](/help/sites-developing/naming-conventions.md) AEMと JCR によって課せられます。
 
-実装と許可される文字のリストは、UIによって少し異なります（タッチ操作対応UIの方が広い）が、許可される最小限の文字は次のとおりです。
+実装と許可される文字のリストは UI によって少し異なります（タッチ操作対応 UI の方が広い）が、最小限許可されているのは次のとおりです。
 
 * &#39;a&#39; から &#39;z&#39;
 * &#39;A&#39; から &#39;Z&#39;
@@ -113,10 +113,10 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
 
 新しいページを作成するときにページの「**名前**」を指定すると、AEM では AEM と JCR [の規則に基づいてページ名が検証されます](/help/sites-developing/naming-conventions.md)。
 
-クラシックUIでは、****&#x200B;名前&#x200B;**フィールドに無効な文字**&#x200B;を入力することはできません。
+クラシック UI では、次の操作を行います。 **無効な文字を入力できません** 内 **名前** フィールドに入力します。
 
 >[!NOTE]
->タッチ操作対応UIでは、**「名前」**&#x200B;フィールドに無効な文字&#x200B;**を送信できません。** AEM で無効な文字が検出されると、そのフィールドは強調表示され、対象の文字を削除または置換する必要があることを示す説明メッセージが表示されます。
+>タッチ操作対応 UI では、次の操作を実行できます。 **無効な文字を送信できません** 内 **名前** フィールドに入力します。 AEM で無効な文字が検出されると、そのフィールドは強調表示され、対象の文字を削除または置換する必要があることを示す説明メッセージが表示されます。
 
 >[!NOTE]
 >
@@ -148,7 +148,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 * ビデオ
 * その他
 
-ページを作成して開いたら、[コンポーネント](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)を使用してコンテンツを追加できます。コンポーネントは[サイドキック](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)から入手できます。
+ページを作成して開いたら、次の操作を実行できます。 [コンポーネントを使用してコンテンツを追加](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)( [サイドキック](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick).
 
 ## ページの管理 {#managing-pages}
 
@@ -194,7 +194,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 
    >[!NOTE]
    >
-   >また、既存のページの編集中にページを作成することもできます。サイドキックの「****ページ**」タブの「子ページを作成**」を使用すると、編集中のページの直下に新しいページが作成されます。
+   >また、既存のページの編集中にページを作成することもできます。「**子ページを作成**」を **ページ** サイドキックの「 」タブで、編集中のページのすぐ下に新しいページが作成されます。
 
 ### ページを開いて編集 {#opening-a-page-for-editing}
 
@@ -206,7 +206,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 
 * ページを開いた後で、ハイパーリンクをクリックすると、サイト内の他のページに移動できます（その後、編集できます）。
 
-### ページのコピーと貼り付け  {#copying-and-pasting-a-page}
+### ページのコピーと貼り付け {#copying-and-pasting-a-page}
 
 コピーできる対象は次のいずれかです。
 
@@ -291,7 +291,7 @@ AEM では、名前変更または移動がおこなわれるページへの内�
       参照しているページを再発行します。この項目も、ページごとに選択または選択解除できます。
    >[!NOTE]
    >
-   >既にアクティベートされているページを移動すると、自動的にアクティベート解除されます。デフォルトでは、移動が完了すると再アクティブ化されますが、**移動**&#x200B;ウィンドウでページの「**再公開**」フィールドをオフにすると、この動作を変更できます。
+   >既にアクティベートされているページを移動すると、自動的にアクティベート解除されます。デフォルトでは、移動が完了すると再びアクティブになりますが、これは、 **再公開** フィールドの値を **移動** ウィンドウ
 
 1. 「**移動**」をクリックします。確認が必要です。「**OK**」をクリックして確定します。
 

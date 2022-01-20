@@ -1,8 +1,8 @@
 ---
 title: ジョブマネージャーのデータベースからの古いレコードの削除
-seo-title: ジョブマネージャーのデータベースからの古いレコードの削除
+seo-title: Purge records from the Job Manager database
 description: 大規模なプロセスデータでは、AEM Forms のパフォーマンスが低下します。レコードが不要になったら、プロセスデータを削除することをお勧めします。
-seo-description: 大規模なプロセスデータでは、AEM Forms のパフォーマンスが低下します。レコードが不要になったら、プロセスデータを削除することをお勧めします。
+seo-description: Large process data can result in lower AEM forms performance. It is good practice to purge process data when records are no longer necessary.
 uuid: cf214498-36e9-4dcc-b4d4-e7c46f80dbab
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 69a406f2-4fa8-40bb-b671-7b0f5b6a2c4c
 exl-id: be2e2a4b-5aac-4612-81b6-b4bbb3036d77
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '468'
 ht-degree: 100%
 
 ---

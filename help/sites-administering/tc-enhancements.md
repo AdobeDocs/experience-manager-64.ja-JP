@@ -1,18 +1,18 @@
 ---
 title: 翻訳の機能強化
-seo-title: 翻訳の機能強化
+seo-title: Translation Enhancements
 description: AEM の翻訳の機能強化です。
-seo-description: AEM の翻訳の機能強化です。
+seo-description: Translation enhancements in AEM.
 uuid: 0563603f-327b-48f1-ac14-6777c06734b9
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 42df2db3-4d3c-4954-a03e-221e2f548305
-feature: 言語コピー
+feature: Language Copy
 exl-id: 57a77cec-e228-4ec7-8502-e6e23baddd92
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '552'
 ht-degree: 70%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 70%
 
 ## 翻訳プロジェクトの自動化 {#translation-project-automation}
 
-翻訳ローンチの自動昇格と削除、翻訳プロジェクトの繰り返し実行のスケジュール設定など、翻訳プロジェクトでの生産性を向上させるオプションが追加されました。
+翻訳ローンチの自動昇格と削除、翻訳プロジェクトの定期的な実行のスケジュールなど、翻訳プロジェクトでの生産性を向上させるオプションが追加されました。
 
 1. 翻訳プロジェクトで、「**翻訳の概要**」タイルの下部にある省略記号をクリックまたはタップします。
 
@@ -37,19 +37,19 @@ ht-degree: 70%
 
    ![screen_shot_2018-04-19at224033](assets/screen_shot_2018-04-19at224033.jpg)
 
-1. 翻訳プロジェクトの反復実行を選択するには、「**翻訳を繰り返す**」の下のドロップダウンで頻度を選択します。繰り返しプロジェクトの実行では、指定した間隔で翻訳ジョブが自動的に作成および実行されます。
+1. 翻訳プロジェクトの反復実行を選択するには、「**翻訳を繰り返す**」の下のドロップダウンで頻度を選択します。定期的なプロジェクトの実行では、指定された間隔で翻訳ジョブが自動的に作成および実行されます。
 
    ![screen_shot_2018-04-19at223820](assets/screen_shot_2018-04-19at223820.jpg)
 
 ## 多言語翻訳プロジェクト {#multilingual-translation-projects}
 
-1つの翻訳プロジェクトで複数のターゲット言語を設定して、作成される翻訳プロジェクトの合計数を減らすことができます。
+1 つの翻訳プロジェクトで複数のターゲット言語を設定して、作成する翻訳プロジェクトの合計数を減らすことができます。
 
 1. 翻訳プロジェクトで、「**翻訳の概要**」タイルの下部にある省略記号をクリックまたはタップします。
 
    ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
-1. 「**詳細**」タブに切り替えます。**ターゲット言語**&#x200B;の下に複数の言語を追加できます。
+1. 「**詳細**」タブに切り替えます。以下に複数の言語を追加できます。 **ターゲット言語**.
 
    ![screen_shot_2018-04-22at212601](assets/screen_shot_2018-04-22at212601.jpg)
 
@@ -65,11 +65,11 @@ ht-degree: 70%
 
 翻訳済みコンテンツを手動で編集すると、翻訳管理システム（TMS）に同期し直され、翻訳メモリに反映されます。
 
-1. サイトコンソールから、翻訳されたページのテキストコンテンツを更新した後、「**翻訳メモリを更新**」を選択します。
+1. サイトコンソールから、翻訳済みページのテキストコンテンツを更新した後で、「 」を選択します。 **翻訳メモリを更新**.
 
    ![screen_shot_2018-04-22at234430](assets/screen_shot_2018-04-22at234430.jpg)
 
-1. リストビューでは、編集されたすべてのテキストコンポーネントについて、ソースと翻訳が横に並んで比較表示されます。翻訳メモリに同期する翻訳の更新を選択し、「**メモリを更新**」を選択します。
+1. リストビューでは、編集されたすべてのテキストコンポーネントについて、ソースと翻訳が横に並んで比較表示されます。翻訳メモリに同期する翻訳の更新を選択し、「 」を選択します。 **メモリを更新**.
 
    ![screen_shot_2018-04-22at235024](assets/screen_shot_2018-04-22at235024.jpg)
 
@@ -91,8 +91,7 @@ ht-degree: 70%
 >* `/content/we-retail/language-masters/americas/central-america/es`
 
 >
->
-この `es` 言語コピーは、`en` ノードから 2 レベル離れている（americas/central-america）ので、検出されません。
+>この `es` 言語コピーは、`en` ノードから 2 レベル離れている（americas/central-america）ので、検出されません。
 
 >[!NOTE]
 >

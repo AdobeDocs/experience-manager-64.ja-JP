@@ -3,13 +3,13 @@ title: インストール [!DNL Workfront for Experience Manager enhanced connec
 description: インストール [!DNL Workfront for Experience Manager enhanced connector]
 role: Admin
 feature: Integrations
-source-git-commit: 18901a6b1e5035e16cb4f30a040ec8a42f704d87
+exl-id: 967391db-e7ba-4cf8-af9e-28c28d2d96d5
+source-git-commit: 657bb7df01a7b8e03d39c3bda868d87253b81b2a
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
 
 ---
-
 
 # インストール [!DNL Workfront for Experience Manager enhanced connector] {#assets-integration-overview}
 

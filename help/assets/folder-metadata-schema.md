@@ -1,6 +1,6 @@
 ---
 title: フォルダーメタデータスキーマ
-description: この記事では、 [!DNL Experience Manager] Assets内にアセットフォルダーのメタデータスキーマを作成する方法について説明します。
+description: この記事では、 [!DNL Experience Manager] Assets
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 uuid: 286a4f26-c0ad-4691-80d8-d17ba1a2dfe0
 discoiquuid: 92eacea5-7511-48ce-8a72-ff4552ebb07d
@@ -16,13 +16,13 @@ ht-degree: 93%
 
 # フォルダーメタデータスキーマ {#folder-metadata-schema}
 
-この記事では、[!DNL Experience Manager] Assets内にアセットフォルダーのメタデータスキーマを作成する方法について説明します。
+この記事では、 [!DNL Experience Manager] アセット。
 
-Adobe Experience Manager Assetsでは、フォルダーのプロパティページに表示されるレイアウトとメタデータを定義する、アセットフォルダーのメタデータスキーマを作成できます。
+Adobe Experience Manager Assets では、フォルダープロパティページに表示されるレイアウトとメタデータを定義する、アセットフォルダーのメタデータスキーマを作成できます。
 
 >[!NOTE]
 >
->この機能には、少なくともService Pack 2がデプロイされた[!DNL Experience Manager] 6.4が必要です。 [!DNL Experience Manager] 6.4サービスパックの詳細については、以下の[リリースノート](/help/release-notes/sp-release-notes.md)を参照してください。
+>この機能には、 [!DNL Experience Manager] 6.4（少なくとも Service Pack 2 がデプロイされている場合） の場合 [!DNL Experience Manager] 6.4 サービスパックの詳細は、次を参照してください [リリースノート](/help/release-notes/sp-release-notes.md).
 
 ## フォルダーメタデータスキーマフォームの追加 {#add-a-folder-metadata-schema-form}
 
@@ -71,7 +71,7 @@ Adobe Experience Manager Assetsでは、フォルダーのプロパティペー�
 | [!UICONTROL セクションヘッダー] | 共通コンポーネントのリストに対してセクションヘッダーを追加します。 |
 | [!UICONTROL 1 行のテキスト] | 1 行のテキストのプロパティを追加します。これは文字列として保存されます。 |
 | [!UICONTROL 複数値テキスト] | 複数値テキストプロパティを追加します。これは文字列の配列として保存されます。 |
-| [!UICONTROL 番号] | 数値コンポーネントを追加します。 |
+| [!UICONTROL 数値] | 数値コンポーネントを追加します。 |
 | [!UICONTROL 日付] | 日付コンポーネントを追加します。 |
 | [!UICONTROL ドロップダウン] | ドロップダウンリストを追加します。 |
 | [!UICONTROL 標準タグ] | タグを追加します。 |

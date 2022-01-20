@@ -1,8 +1,8 @@
 ---
 title: JCR 統合
-seo-title: JCR 統合
+seo-title: JCR Integration
 description: JCR レベルでの統合が必要な場合のヒント
-seo-description: JCR レベルでの統合が必要な場合のヒント
+seo-description: Tips for when you must integrate at the JCR level
 uuid: 11518baf-521e-471d-ad4f-2baa76075cfa
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: e6647a11-a36e-4808-bb61-29b2895c6b1d
 exl-id: 3e9727a5-32f8-40ad-aa06-619f50d109b2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 78%
+source-wordcount: '295'
+ht-degree: 77%
 
 ---
 
@@ -23,13 +23,13 @@ ht-degree: 78%
 
 Sling API は、JCR API よりも高度な抽象レベルで機能します。これにより、コードの再利用性を高め、コードを基になるストレージから独立させることができます。したがって、必要に応じて ResourceProvider メカニズムを利用して外部の仮想データを含めることがより簡単になります。
 
-## 可能な限りクエリを回避する  {#avoid-queries-wherever-possible}
+## 可能な限りクエリを回避する {#avoid-queries-wherever-possible}
 
 常に、クエリを実行するよりも、リポジトリ内を移動してデータを取得する方が速くなります。エンドユーザークエリやリポジトリ全体から構造化されたコンテンツを探す必要がある場合などクエリが必要になりますが、それ以外の場合は必要なノードに移動することをお勧めします。ナビゲーションコンポーネント、「最近使用した項目リスト」、項目数などのレンダリングロジックでは、クエリは常に避ける必要があります。 このような場合、階層をたどっていくか、レンダリング時に直接結果を使用できるように事前に結果をキャッシュに格納しておく方が効率的です。
 
-## JCR 監視の範囲を制限する  {#restrict-the-scope-of-jcr-observation}
+## JCR 監視の範囲を制限する {#restrict-the-scope-of-jcr-observation}
 
-リポジトリでのイベントをリスンするときには、できる限り範囲を絞り込むことが重要です。例えば、`/etc`でリッスンするよりも、`/etc/mycompany`でイベントをリッスンする方がはるかに効果的です。 リポジトリのルートでイベントをリッスンしないでください。 さらに、コールバックメソッドが実行できない場合は、できるだけ早くコールバックメソッドを実行するようにしてください。
+リポジトリでのイベントをリスンするときには、できる限り範囲を絞り込むことが重要です。例えば、 `/etc/mycompany` ～に耳を傾けるより `/etc`. リポジトリのルートでイベントをリッスンしないでください。 さらに、コールバックメソッドで実行することがない場合は、できるだけ早くコールバックメソッドを実行するようにしてください。
 
 ## JCR 管理者アクセスの使用を排除する {#eliminate-use-of-jcr-admin-access}
 

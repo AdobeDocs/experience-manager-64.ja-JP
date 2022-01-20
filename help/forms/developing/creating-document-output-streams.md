@@ -1,7 +1,7 @@
 ---
 title: 'ドキュメント出力ストリームの作成 '
 seo-title: Creating Document Output Streams
-description: Outputサービスを使用して、ドキュメントをPDF（PDF/Aドキュメントを含む）、PostScript、Printer Control Language(PCL)およびZebra - ZPL、Intermec - IPL、Datamax - DPL、TecToshiba - TPCLラベル形式で変換します。
+description: Output サービスを使用して、ドキュメントをPDF(PDF/A ドキュメントを含む )、PostScript、Printer Control Language(PCL) および Zebra - ZPL、Intermec - IPL、Datamax - DPL、TecToshiba - TPCL ラベル形式で変換します。
 seo-description: Use the Output service to convert documents as PDF (including PDF/A documents), PostScript, Printer Control Language (PCL), and Zebra - ZPL, Intermec - IPL, Datamax - DPL, and TecToshiba - TPCL label formats.
 uuid: 80c28efa-35ce-4073-9ca6-2d93bcd67fdd
 contentOwner: admin
@@ -20,108 +20,108 @@ ht-degree: 5%
 
 # ドキュメント出力ストリームの作成  {#creating-document-output-streams}
 
-**Outputサービスについて**
+**Output サービスについて**
 
-Outputサービスを使用すると、ドキュメントをPDF（PDF/Aドキュメントを含む）、PostScript、Printer Control Language(PCL)および次のラベル形式で出力できます。
+Output サービスを使用すると、ドキュメントをPDF(PDF/A ドキュメントを含む )、PostScript、Printer Control Language(PCL) および次のラベル形式で出力できます。
 
 * ゼブラ — ZPL
 * Intermec - IPL
 * Datamax - DPL
-* TecToshiba - TPCL
+* 東芝 — TPCL
 
-Outputサービスを使用すると、XMLフォームデータをフォームデザインとマージし、ドキュメントをネットワークプリンターまたはファイルに出力できます。
+Output サービスを使用すると、XML フォームデータをフォームデザインと結合し、ドキュメントをネットワークプリンターまたはファイルに出力できます。
 
-フォームデザイン（XDPファイル）をOutputサービスに渡す方法は2つあります。 フォームデザインを含む`com.adobe.idp.Document`インスタンスをOutputサービスに渡すこともできます。 または、フォームデザインの場所を指定するURI値を渡すこともできます。 これらの方法は、*AEM formsによるプログラミング*&#x200B;で説明します。
+フォームデザイン（XDP ファイル）を Output サービスに渡す方法は 2 つあります。 次のいずれかの方法で `com.adobe.idp.Document` フォームデザインを含む Output サービスへのインスタンス。 または、フォームデザインの場所を指定する URI 値を渡すこともできます。 これらの両方の方法については、 *AEM forms によるプログラミング*.
 
 >[!NOTE]
 >
->Outputサービスは、アプリケーションオブジェクト固有のスクリプトを含むAcroform PDFドキュメントをサポートしていません。 アプリケーションオブジェクト固有のスクリプトを含むAcroform PDFドキュメントは、レンダリングされません。
+>Output サービスは、アプリケーションオブジェクト固有のスクリプトを含む AcroformPDFドキュメントをサポートしていません。 アプリケーションPDF固有のスクリプトを含む Acroform アプリケーションドキュメントは、レンダリングされません。
 
-次の節では、URI値を使用してフォームデザインをOutputサービスに渡す方法について説明します。
+次の節では、URI 値を使用してフォームデザインを Output サービスに渡す方法を示します。
 
-* [PDFドキュメントの作成](creating-document-output-streams.md#creating-pdf-documents)
-* [PDF/Aドキュメントの作成](creating-document-output-streams.md#creating-pdf-a-documents)
+* [PDF文書の作成](creating-document-output-streams.md#creating-pdf-documents)
+* [PDF/A ドキュメントの作成](creating-document-output-streams.md#creating-pdf-a-documents)
 
-以下の節では、`com.adobe.idp.Document`インスタンス内でフォームデザインを渡す方法を示します。
+以下の節では、 `com.adobe.idp.Document` インスタンス：
 
-* [Content Services（非推奨）にあるドキュメントをOutputサービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
+* [Content Services（非推奨）にあるドキュメントを Output サービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [フラグメントを使用したPDFドキュメントの作成](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
-使用する方法を決定する際の考慮事項の1つは、別のAEM Formsサービスからフォームデザインを取得し、`com.adobe.idp.Document`インスタンス内で渡す場合です。 「*Apsing Documents to the Output Service*」および「*Creating PDF Documents using Fragments*」の両方の節で、別のAEM Formsサービスからフォームデザインを取得する方法を示します。 最初の節では、Content Services（非推奨）からフォームデザインを取得します。 2つ目の節では、フォームデザインをAssemblerサービスから取得します。
+どの方法を使用するかを決定する際の考慮事項として、別のAEM Formsサービスからフォームデザインを取得し、そのフォームデザインを `com.adobe.idp.Document` インスタンス。 両方の *Output サービスにドキュメントを渡す* および *フラグメントを使用したPDFドキュメントの作成* セクションでは、別のAEM Formsサービスからフォームデザインを取得する方法を示します。 最初の節では、Content Services（非推奨）からフォームデザインを取得します。 2 つ目の節では、Assembler サービスからフォームデザインを取得します。
 
-ファイルシステムなどの固定の場所からフォームデザインを取得する場合は、どちらの方法でも使用できます。 つまり、URI値をXDPファイルに指定するか、`com.adobe.idp.Document`インスタンスを使用できます。
+ファイルシステムなどの固定の場所からフォームデザインを取得する場合は、どちらの方法でも使用できます。 つまり、URI 値を XDP ファイルに指定するか、 `com.adobe.idp.Document` インスタンス。
 
-PDFドキュメントの作成時にフォームデザインの場所を指定するURI値を渡すには、`generatePDFOutput`メソッドを使用します。 同様に、PDFドキュメントの作成時に`com.adobe.idp.Document`インスタンスをOutputサービスに渡すには、`generatePDFOutput2`メソッドを使用します。
+PDFドキュメントの作成時にフォームデザインの場所を指定する URI 値を渡すには、 `generatePDFOutput` メソッド。 同様に、 `com.adobe.idp.Document` インスタンスを Output サービスに追加する場合は、PDFドキュメントを作成する際に、 `generatePDFOutput2` メソッド。
 
-出力ストリームをネットワークプリンターに送信する場合は、どちらの方法も使用できます。 フォームデザインを含む`com.adobe.idp.Document`インスタンスを渡して出力ストリームをプリンターに送信するには、`sendToPrinter2`メソッドを使用します。 URI値を渡して出力ストリームをプリンターに送信するには、`sendToPrinter`メソッドを使用します。 *プリンターへの印刷ストリームの送信*&#x200B;セクションでは、`sendToPrinter`メソッドを使用します。
+出力ストリームをネットワークプリンターに送信する場合は、どちらの方法でも使用できます。 出力ストリームをプリンタに送信するには、 `com.adobe.idp.Document` フォームデザインを含むインスタンスを使用するには、 `sendToPrinter2`メソッド。 URI 値を渡して出力ストリームをプリンターに送信するには、 `sendToPrinter`メソッド。 この *プリンタへの印刷ストリームの送信* セクションでは `sendToPrinter` メソッド。
 
-Outputサービスを使用して、次のタスクを実行できます。
+Output サービスを使用して、次のタスクを実行できます。
 
-* [PDFドキュメントの作成](creating-document-output-streams.md#creating-pdf-documents)
-* [PDF/Aドキュメントの作成](creating-document-output-streams.md#creating-pdf-a-documents)
-* [Content Services（非推奨）にあるドキュメントをOutputサービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
+* [PDF文書の作成](creating-document-output-streams.md#creating-pdf-documents)
+* [PDF/A ドキュメントの作成](creating-document-output-streams.md#creating-pdf-a-documents)
+* [Content Services（非推奨）にあるドキュメントを Output サービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [フラグメントを使用したPDFドキュメントの作成](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 * [ファイルへの印刷](creating-document-output-streams.md#printing-to-files)
-* [プリンターへの印刷ストリームの送信](creating-document-output-streams.md#sending-print-streams-to-printers)
+* [プリンタへの印刷ストリームの送信](creating-document-output-streams.md#sending-print-streams-to-printers)
 * [複数の出力ファイルの作成](creating-document-output-streams.md#creating-multiple-output-files)
 * [検索ルールの作成](creating-document-output-streams.md#creating-search-rules)
-* [PDFドキュメントの統合](creating-document-output-streams.md#flattening-pdf-documents)
+* [PDF文書の統合](creating-document-output-streams.md#flattening-pdf-documents)
 
 >[!NOTE]
 >
->Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>Output サービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
-## PDFドキュメントの作成 {#creating-pdf-documents}
+## PDF文書の作成 {#creating-pdf-documents}
 
-Outputサービスを使用して、指定したフォームデザインとXMLフォームデータに基づくPDFドキュメントを作成できます。 Outputサービスで作成されるPDFドキュメントは、インタラクティブPDFドキュメントではありません。ユーザーはフォームデータを入力または変更できません。
+Output サービスを使用して、指定したフォームデザインと XML フォームデータに基づくPDFドキュメントを作成できます。 Output サービスで作成されるPDFドキュメントは、インタラクティブなPDFドキュメントではありません。ユーザーはフォームデータを入力または変更できません。
 
-長期保存を目的としたPDFドキュメントを作成する場合は、PDF/Aドキュメントを作成することをお勧めします。 （[PDF/Aドキュメントの作成](creating-document-output-streams.md#creating-pdf-a-documents)を参照）。
+長期保存を目的としたPDFドキュメントを作成する場合は、PDF/A ドキュメントを作成することをお勧めします。 ( [PDF/A ドキュメントの作成](creating-document-output-streams.md#creating-pdf-a-documents).)
 
-ユーザーがデータを入力できるインタラクティブPDFフォームを作成するには、Formsサービスを使用します。 ([インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms)を参照)。
+ユーザーがデータを入力できるインタラクティブなPDFフォームを作成するには、Formsサービスを使用します。 ( [インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms).)
 
 >[!NOTE]
 >
->Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>Output サービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 手順の概要 {#summary-of-steps}
 
-PDFドキュメントを作成するには、次の手順を実行します。
+PDF・ドキュメントを作成するには、次の手順に従います。
 
 1. プロジェクトファイルを含めます。
-1. Outputクライアントオブジェクトを作成します。
-1. XMLデータソースを参照します。
-1. PDF実行時オプションを設定します。
+1. Output Client オブジェクトを作成します。
+1. XML データソースを参照します。
+1. PDFの実行時オプションを設定します。
 1. レンダリングの実行時オプションを設定します。
-1. PDFドキュメントを生成します。
+1. PDF文書を生成
 1. 操作の結果を取得します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、必ずプロキシファイルを含めてください。
+開発プロジェクトに必要なファイルを含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
 
-次のJARファイルをプロジェクトのクラスパスに追加する必要があります。
+次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必須)
-* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必須)
+* adobe-utilities.jar(AEM Formsを JBoss にデプロイする場合に必須 )
+* jbossall-client.jar(AEM Formsが JBoss にデプロイされている場合に必須 )
 
-AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
 
-**Outputクライアントオブジェクトの作成**
+**出力クライアントオブジェクトの作成**
 
-プログラムによってOutputサービス操作を実行する前に、Outputサービスクライアントオブジェクトを作成する必要があります。 Java APIを使用している場合は、`OutputClient`オブジェクトを作成します。 Output WebサービスAPIを使用している場合は、`OutputServiceService`オブジェクトを作成します。
+Output サービスの操作をプログラムで実行する前に、Output サービスのクライアントオブジェクトを作成する必要があります。 Java API を使用している場合は、 `OutputClient` オブジェクト。 Output Web サービス API を使用している場合、 `OutputServiceService` オブジェクト。
 
-**XMLデータソースの参照**
+**XML データソースの参照**
 
-データとフォームデザインを結合するには、データを含むXMLデータソースを参照する必要があります。 データを入力するフォームフィールドごとに、XML要素が存在する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
+データをフォームデザインと結合するには、データを含む XML データソースを参照する必要があります。 データを入力するフォームフィールドごとに、XML 要素が存在する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべての XML 要素が指定されている場合、XML 要素の表示順序を一致させる必要はありません。
 
-次のサンプルのローン申し込みフォームを考えてみましょう。
+次のサンプルのローン申し込みフォームについて考えてみましょう。
 
 ![cp_cp_loanformdata](assets/cp_cp_loanformdata.png)
 
-このフォームデザインにデータをマージするには、フォームに対応するXMLデータソースを作成する必要があります。 次のXMLは、サンプルの住宅ローン申し込みフォームに対応するXDP XMLデータソースを表しています。
+データをこのフォームデザインに結合するには、フォームに対応する XML データソースを作成する必要があります。 次の XML は、サンプルの住宅ローン申し込みフォームに対応する XDP XML データソースを表しています。
 
 ```as3
  <?xml version="1.0" encoding="UTF-8" ?>  
@@ -154,782 +154,782 @@ AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサ�
  </xfa:datasets>
 ```
 
-**PDF実行時オプションの設定**
+**PDF実行時オプションを設定**
 
-PDFドキュメントを作成する際に「file URI」オプションを設定します。 このオプションは、Outputサービスが生成するPDFファイルの名前と場所を指定します。
-
->[!NOTE]
->
->ファイルURIランタイムオプションを設定する代わりに、Outputサービスから返される複雑なデータ型からPDFドキュメントをプログラムで取得できます。 ただし、ファイルURIランタイムオプションを設定することで、PDFドキュメントをプログラムで取得するアプリケーションロジックを作成する必要はありません。
-
-**レンダリング実行時オプションの設定**
-
-PDFドキュメントの作成時にレンダリングの実行時オプションを設定できます。 これらのオプションは必須ではありませんが（必要なPDFランタイムオプションとは異なり）、Outputサービスのパフォーマンス向上などのタスクを実行できます。 例えば、Outputサービスが使用するフォームデザインをキャッシュして、パフォーマンスを向上させることができます。
-
-タグ付きAcrobatフォームを入力として使用する場合、OutputサービスJavaまたはWebサービスAPIを使用してタグ付き設定をオフにすることはできません。 プログラムでこのオプションを`false`に設定しようとすると、結果のPDFドキュメントは引き続きタグ付けされます。
+ファイルドキュメントを作成する際に「 file URI 」オプションをPDFします。 このオプションは、Output サービスが生成するPDFファイルの名前と場所を指定します。
 
 >[!NOTE]
 >
->レンダリング実行時オプションを指定しない場合は、デフォルト値が使用されます。 実行時オプションのレンダリングについて詳しくは、`RenderOptionsSpec`クラス参照を参照してください。 (『AEM Forms APIリファレンス[』を参照)。](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)
+>ファイル URI の実行時オプションを設定する代わりに、Output サービスから返される複雑なデータ型からPDFドキュメントをプログラムで取得することができます。 ただし、ファイル URI の実行時オプションを設定することで、プログラムによってPDFドキュメントを取得するアプリケーションロジックを作成する必要はありません。
 
-**PDFドキュメントの生成**
+**レンダリング実行時オプションを設定**
 
-フォームデータを含む有効なXMLデータソースを参照し、実行時オプションを設定したら、Outputサービスを呼び出すと、PDFドキュメントが生成されます。
+レンダリングの実行時オプションは、PDFドキュメントの作成時に設定できます。 これらのオプションは必須ではありませんが ( 必要なPDFランタイムオプションとは異なり )、Output サービスのパフォーマンス向上などのタスクを実行できます。 例えば、Output サービスが使用するフォームデザインをキャッシュして、パフォーマンスを向上させることができます。
 
-PDFドキュメントを生成する場合、PDFドキュメントを作成するためにOutputサービスで必要なURI値を指定します。 フォームデザインは、サーバーファイルシステムなどの場所や、AEM Formsアプリケーションの一部として保存できます。 Formsアプリケーションの一部として存在するフォームデザイン（または画像ファイルなどの他のリソース）は、コンテンツルートURI値`repository:///`を使用して参照できます。 例えば、*Applications/FormsApplication*&#x200B;という名前のFormsアプリケーション内にある&#x200B;*Loan.xdp*&#x200B;という名前のフォームデザインを考えてみましょう。
+タグ付きAcrobatフォームを入力として使用する場合、Output サービス Java または Web サービス API を使用してタグ付き設定をオフにすることはできません。 プログラムによってこのオプションをに設定しようとした場合、 `false`を指定しない場合、結果PDFドキュメントはタグ付けされたままになります。
+
+>[!NOTE]
+>
+>レンダリングの実行時オプションを指定しない場合は、デフォルト値が使用されます。 実行時オプションのレンダリングについて詳しくは、 `RenderOptionsSpec` クラス参照。 ( [AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)) をクリックします。
+
+**PDF文書を生成**
+
+フォームデータを含む有効な XML データソースを参照し、ランタイムオプションを設定した後、Output サービスを呼び出すと、PDFドキュメントが生成されます。
+
+PDFドキュメントを生成する際に、Output サービスでPDFドキュメントを作成するために必要な URI 値を指定します。 フォームデザインは、サーバーのファイルシステムなどの場所や、AEM Formsアプリケーションの一部として保存できます。 Formsアプリケーションの一部として存在するフォームデザイン（または画像ファイルなどの他のリソース）は、コンテンツルート URI 値を使用して参照できます `repository:///`. 例えば、次のフォームデザインの名前が *Loan.xdp* という名前のFormsアプリケーション内にある *Applications/FormsApplication*:
 
 ![cp_cp_formrepository](assets/cp_cp_formrepository.png)
 
-前の図に示すLoan.xdpファイルにアクセスするには、`OutputClient`オブジェクトの`generatePDFOutput`メソッドに渡す3番目のパラメーターとして`repository:///Applications/FormsApplication/1.0/FormsFolder/`を指定します。 フォーム名(*Loan.xdp*)を、`OutputClient`オブジェクトの`generatePDFOutput`メソッドに渡す2番目のパラメーターとして指定します。
+前の図に示す Loan.xdp ファイルにアクセスするには、次のように指定します。 `repository:///Applications/FormsApplication/1.0/FormsFolder/` を返します。 `OutputClient` オブジェクトの `generatePDFOutput` メソッド。 フォーム名 (*Loan.xdp*) を `OutputClient` オブジェクトの `generatePDFOutput` メソッド。
 
-XDPファイルに画像（またはフラグメントなどの他のリソース）が含まれている場合は、XDPファイルと同じアプリケーションフォルダーにリソースを配置します。 AEM Formsは、コンテンツルートURIをベースパスとして使用して、画像への参照を解決します。 例えば、Loan.xdpファイルに画像が含まれている場合、必ず`Applications/FormsApplication/1.0/FormsFolder/`に画像を配置してください。
-
->[!NOTE]
->
->`OutputClient`オブジェクトの`generatePDFOutput`または`generatePrintedOutput`メソッドを呼び出すときに、FormsアプリケーションURIを参照できます。
+XDP ファイルに画像（またはフラグメントなどの他のリソース）が含まれている場合は、XDP ファイルと同じアプリケーションフォルダーにリソースを配置します。 AEM Formsは、画像への参照を解決するためのベースパスとしてコンテンツルート URI を使用します。 例えば、Loan.xdp ファイルに画像が含まれている場合、必ず次の場所に画像を配置します。 `Applications/FormsApplication/1.0/FormsFolder/`.
 
 >[!NOTE]
 >
->Formsアプリケーション内のXDPを参照してPDFドキュメントを作成する完全なクイックスタートを確認するには、「[クイックスタート（EJBモード）」を参照してください。Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api)を使用したアプリケーションXDPファイルに基づくPDFドキュメントの作成
+>Formsアプリケーション URI は、 `OutputClient` オブジェクトの `generatePDFOutput` または `generatePrintedOutput` メソッド。
+
+>[!NOTE]
+>
+>Formsアプリケーション内の XDP を参照してPDFドキュメントを作成する完全なクイックスタートについては、 [クイックスタート（EJB モード）:Java API を使用したPDFXDP ファイルに基づくアプリケーションドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api).
 
 **操作の結果の取得**
 
-Outputサービスが操作を実行すると、その操作が成功したかどうかを示すステータスXMLデータなど、様々なデータ項目が返されます。
+Output サービスは操作を実行した後、操作が成功したかどうかを示すステータス XML データなど、様々なデータ項目を返します。
 
 **関連トピック**
 
-[Java APIを使用したPDFドキュメントの作成](creating-document-output-streams.md#create-a-pdf-document-using-the-java-api)
+[Java API を使用したPDFドキュメントの作成](creating-document-output-streams.md#create-a-pdf-document-using-the-java-api)
 
-[WebサービスAPIを使用したPDFドキュメントの作成](creating-document-output-streams.md#create-a-pdf-document-using-the-web-service-api)
+[Web サービス API を使用してPDFドキュメントを作成する](creating-document-output-streams.md#create-a-pdf-document-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
+[Output サービス API のクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### Java APIを使用したPDFドキュメントの作成 {#create-a-pdf-document-using-the-java-api}
+### Java API を使用したPDFドキュメントの作成 {#create-a-pdf-document-using-the-java-api}
 
-Output API(Java)を使用してPDFドキュメントを作成します。
+Output API(Java) を使用してPDFドキュメントを作成します。
 
 1. プロジェクトファイルを含めます。
 
-   Javaプロジェクトのクラスパスに、adobe-output-client.jarなどのクライアントJARファイルを含めます。
+   Java プロジェクトのクラスパスに、adobe-output-client.jar などのクライアント JAR ファイルを含めます。
 
-1. Outputクライアントオブジェクトを作成します。
+1. Output Client オブジェクトを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して`OutputClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * の作成 `OutputClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
 
-1. XMLデータソースを参照します。
+1. XML データソースを参照します。
 
-   * PDFドキュメントのコンストラクターを使用し、XMLファイルの場所を指定する文字列値を渡すことで、PDFドキュメントの入力に使用されるXMLデータソースを表す`java.io.FileInputStream`オブジェクトを作成します。
-   * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを作成します。`java.io.FileInputStream`オブジェクトを渡します。
+   * の作成 `java.io.FileInputStream` コンストラクタを使用し、XML ファイルの場所を指定する string 値を渡すことで、PDF・ドキュメントにデータを入力するために使用される XML データ・ソースを表すオブジェクト。
+   * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを作成します。パス `java.io.FileInputStream` オブジェクト。
 
-1. PDF実行時オプションを設定します。
+1. PDFの実行時オプションを設定します。
 
    * コンストラクタを使用して `PDFOutputOptionsSpec` オブジェクトを作成します。
-   * `PDFOutputOptionsSpec`オブジェクトの`setFileURI`メソッドを呼び出して、「 File URI 」オプションを設定します。 Outputサービスが生成するPDFファイルの場所を指定するstring値を渡します。 「ファイルURI 」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対して相対的なもので、クライアントコンピューターに対しては相対的なものではありません。
+   * を呼び出して、「 File URI 」オプションを設定します。 `PDFOutputOptionsSpec` オブジェクトの `setFileURI` メソッド。 Output サービスが生成するPDFファイルの場所を指定する string 値を渡します。 「ファイル URI 」オプションは、クライアントコンピューターではなく、AEM Formsをホストする J2EE アプリケーションサーバーに対する相対パスです。
 
 1. レンダリングの実行時オプションを設定します。
 
    * コンストラクタを使用して `RenderOptionsSpec` オブジェクトを作成します。
-   * `RenderOptionsSpec`オブジェクトの`setCacheEnabled`を呼び出して`true`を渡すことで、フォームデザインをキャッシュし、Outputサービスのパフォーマンスを向上させます。
+   * フォームデザインをキャッシュし、 `RenderOptionsSpec` オブジェクトの `setCacheEnabled` そして通り過ぎ `true`.
 
    >[!NOTE]
    >
-   >入力ドキュメントがAcrobatフォーム(Acrobatで作成されたフォーム)または署名または認証されたXFAドキュメントの場合は、 `RenderOptionsSpec`オブジェクトの`setPdfVersion`メソッドを使用してPDFドキュメントのバージョンを設定することはできません。 出力PDFドキュメントは、元のPDFバージョンを保持します。 同様に、入力ドキュメントがAcrobatフォームまたは署名済みまたは認証済みのXFAドキュメントの場合、 `RenderOptionsSpec`オブジェクトの`setTaggedPDF`*メソッドを呼び出して、タグ付きAdobe PDFオプションを設定することはできません。*
+   >次を使用してPDFドキュメントのバージョンを設定することはできません： `RenderOptionsSpec` オブジェクトの `setPdfVersion` メソッドを使用します。入力ドキュメントが、Acrobatフォーム (Acrobatで作成されたフォーム ) または署名または認証された XFA ドキュメントの場合。 出力PDFドキュメントには、元のPDFバージョンが保持されます。 同様に、 `RenderOptionsSpec` オブジェクトの `setTaggedPDF`*入力ドキュメントがAcrobatフォーム、または署名済みまたは認証済みの XFA ドキュメントの場合は、メソッドを使用します。*
 
    >[!NOTE]
    >
-   >入力PDFドキュメントが認証またはデジタル署名されている場合、`RenderOptionsSpec`オブジェクトの`setLinearizedPDF`メソッドを使用して線形化されたPDFオプションを設定することはできません。 （[PDFドキュメントのデジタル署名&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)*を参照）*
+   >線形化PDFは、 `RenderOptionsSpec` オブジェクトの `setLinearizedPDF` メソッド：入力PDFドキュメントが認証済みまたはデジタル署名済みの場合。 ( [デジタル署名PDF文書&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)*.)*
 
-1. PDFドキュメントを生成します。
+1. PDF文書を生成
 
-   `OutputClient`オブジェクトの`generatePDFOutput`メソッドを呼び出し、次の値を渡してPDFドキュメントを作成します。
+   を呼び出してPDFドキュメントを作成する `OutputClient` オブジェクトの `generatePDFOutput` メソッドを使用して、次の値を渡します。
 
-   * `TransformationFormat`列挙値。 PDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
+   * A `TransformationFormat` 列挙値。 PDF・ドキュメントを生成するには、 `TransformationFormat.PDF`.
    * フォームデザイン名を指定する string 値。
-   * フォームデザインが存在するコンテンツルートを指定するstring値。
-   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
-   * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
-   * フォームデザインとマージするデータを含むXMLデータソースを含む`com.adobe.idp.Document`オブジェクト。
+   * フォームデザインが配置されているコンテンツルートを指定する string 値です。
+   * A `PDFOutputOptionsSpec` PDFの実行時オプションを含むオブジェクト。
+   * A `RenderOptionsSpec` レンダリングの実行時オプションを含むオブジェクト。
+   * この `com.adobe.idp.Document` フォームデザインとマージするデータが含まれる XML データソースを含むオブジェクト。
 
-   `generatePDFOutput`メソッドは、操作の結果を含む`OutputResult`オブジェクトを返します。
-
-   >[!NOTE]
-   >
-   >`generatePDFOutput`メソッドを呼び出してPDFドキュメントを生成する場合、署名または認証されたXFA PDFフォームとデータを結合することはできません。 （[Digital Signing and Certifying Documents ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*を参照）。*
+   この `generatePDFOutput` メソッドは、 `OutputResult` 操作の結果を格納するオブジェクト。
 
    >[!NOTE]
    >
-   >`OutputResult`オブジェクトの`getRecordLevelMetaDataList`メソッドは、`null`*.*&#x200B;を返します。
+   >を呼び出してPDFドキュメントを生成する場合 `generatePDFOutput` メソッドを使用する場合、署名または認証された XFAPDFフォームとデータを結合することはできません。 ( [ドキュメントのデジタル署名と認証&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
 
    >[!NOTE]
    >
-   >`OutputClient`オブジェクトの`generatePDFOutput2`メソッドを呼び出して、PDFドキュメントを作成することもできます。 ([Content Services（非推奨）にあるドキュメントをOutputサービスに渡す&#x200B;](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*を参照)*
+   >この `OutputResult` オブジェクトの `getRecordLevelMetaDataList` メソッドの戻り値 `null`*.*
+
+   >[!NOTE]
+   >
+   >また、 `OutputClient` オブジェクトの `generatePDFOutput2` メソッド。 ( [Content Services（非推奨）にあるドキュメントを Output サービスに渡す&#x200B;](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
 
 1. 操作の結果を取得します。
 
-   * `OutputResult`オブジェクトの`getStatusDoc`メソッドを呼び出して、`generatePDFOutput`操作のステータスを表す`com.adobe.idp.Document`オブジェクトを取得します。 このメソッドは、操作が成功したかどうかを示すステータスXMLデータを返します。
-   * 操作の結果を格納する`java.io.File`オブジェクトを作成します。 ファイル名の拡張子が.xmlであることを確認します。
-   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします（`getStatusDoc`メソッドで返された`com.adobe.idp.Document`オブジェクトを使用するようにしてください）。
+   * の取得 `com.adobe.idp.Document` オブジェクトのステータスを表すオブジェクト `generatePDFOutput` を呼び出すことによる操作 `OutputResult` オブジェクトの `getStatusDoc` メソッド。 このメソッドは、操作が成功したかどうかを示すステータス XML データを返します。
+   * の作成 `java.io.File` 操作の結果を格納するオブジェクト。 ファイル名の拡張子が.xml であることを確認します。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、 `com.adobe.idp.Document` オブジェクトをファイルに追加します ( `com.adobe.idp.Document` が返したオブジェクト `getStatusDoc` メソッド )。
 
-   Outputサービスは、 `PDFOutputOptionsSpec`オブジェクトの`setFileURI`メソッドに渡される引数で指定された場所にPDFドキュメントを書き込みますが、 `OutputResult`オブジェクトの`getGeneratedDoc`メソッドを呼び出すことで、プログラムでPDF/Aドキュメントを取得できます。
+   Output サービスはPDFドキュメントを、 `PDFOutputOptionsSpec` オブジェクトの `setFileURI` メソッドを使用すると、 `OutputResult` オブジェクトの `getGeneratedDoc` メソッド。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[クイックスタート（EJBモード）:Java APIを使用したPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
+[クイックスタート（EJB モード）:Java API を使用したPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したPDFドキュメントの作成 {#create-a-pdf-document-using-the-web-service-api}
+### Web サービス API を使用してPDFドキュメントを作成する {#create-a-pdf-document-using-the-web-service-api}
 
-Output API（Webサービス）を使用してPDFドキュメントを作成します。
+Output API（Web サービス）を使用してPDFドキュメントを作成します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 次の WSDL 定義を使用していることを確認します。 `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >`localhost`*を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。*
+   >置換 `localhost`* AEM Formsをホストするサーバーの IP アドレス*
 
-1. Outputクライアントオブジェクトを作成します。
+1. Output Client オブジェクトを作成します。
 
-   * デフォルトのコンストラクターを使用して`OutputServiceClient`オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに渡す文字列値（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）を渡します。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用する場合は`?blob=mtom`を指定します。
-   * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値は、MTOMが使用されるようにします。
-   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
+   * の作成 `OutputServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
+   * の作成 `OutputServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をAEM Formsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/OutputService?blob=mtom`.) を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます。 ただし、 `?blob=mtom` MTOM を使用する。
+   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `OutputServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
+   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
+   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
 
-      * フィールド`OutputServiceClient.ClientCredentials.UserName.UserName`にAEM formsユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド`OutputServiceClient.ClientCredentials.UserName.Password`に割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に定数値`HttpClientCredentialType.Basic`を割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Security.Mode`に定数値`BasicHttpSecurityMode.TransportCredentialOnly`を割り当てます。
+      * フィールドにAEM forms ユーザー名を割り当てます。 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 対応するパスワード値をフィールドに割り当てます。 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 定数値を割り当て `HttpClientCredentialType.Basic` フィールドに `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 定数値を割り当て `BasicHttpSecurityMode.TransportCredentialOnly` フィールドに `BasicHttpBindingSecurity.Security.Mode`.
 
-1. XMLデータソースを参照します。
+1. XML データソースを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、PDFドキュメントとマージされるXMLデータを保存するために使用されます。
-   * コンストラクターを呼び出し、フォームデータを含むXMLファイルのファイル位置を表す文字列値を渡して、`System.IO.FileStream`オブジェクトを作成します。
-   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得することで、バイト配列のサイズを判断できます。
-   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
-   * `BLOB`オブジェクトの`MTOM`フィールドにバイト配列の内容を割り当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、PDF・ドキュメントと結合される XML データを格納するために使用されます。
+   * の作成 `System.IO.FileStream` オブジェクトを指定します。
+   * コンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクト。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリーム長を渡す。
+   * 次の項目に `BLOB` オブジェクトを割り当てる `MTOM` フィールドにバイト配列の内容を入力します。
 
-1. PDF実行時オプションの設定
+1. PDF実行時オプションを設定
 
    * コンストラクタを使用して `PDFOutputOptionsSpec` オブジェクトを作成します。
-   * Outputサービスが生成するPDFファイルの場所を指定する文字列値を`PDFOutputOptionsSpec`オブジェクトの`fileURI`データメンバーに割り当てて、「File URI」オプションを設定します。 「ファイルURI 」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対して相対的なもので、クライアントコンピューターに対しては相対的なものではありません。
+   * Output サービスが生成するPDFファイルの場所をに指定する string 値を割り当てて、「File URI」オプションを設定します `PDFOutputOptionsSpec` オブジェクトの `fileURI` データメンバー。 「ファイル URI 」オプションは、クライアントコンピューターではなく、AEM Formsをホストする J2EE アプリケーションサーバーに対する相対パスです。
 
 1. レンダリングの実行時オプションを設定します。
 
    * コンストラクタを使用して `RenderOptionsSpec` オブジェクトを作成します。
-   * 値`true`を`RenderOptionsSpec`オブジェクトの`cacheEnabled`データメンバーに割り当てることで、フォームデザインをキャッシュして、Outputサービスのパフォーマンスを向上させます。
+   * 値を割り当てて Output サービスのパフォーマンスを向上させるためにフォームデザインをキャッシュします `true` から `RenderOptionsSpec` オブジェクトの `cacheEnabled` データメンバー。
 
    >[!NOTE]
    >
-   >入力ドキュメントがAcrobatフォーム(Acrobatで作成されたフォーム)または署名または認証されたXFAドキュメントの場合は、 `RenderOptionsSpec`オブジェクトの`setPdfVersion`メソッドを使用してPDFドキュメントのバージョンを設定することはできません。 出力PDFドキュメントは、元のPDFバージョンを保持します。 同様に、入力ドキュメントがAcrobatフォームまたは署名済みまたは認証済みのXFAドキュメントの場合、 `RenderOptionsSpec`オブジェクトの`setTaggedPDF`*メソッドを呼び出して、タグ付きAdobe PDFオプションを設定することはできません。*
+   >次を使用してPDFドキュメントのバージョンを設定することはできません： `RenderOptionsSpec` オブジェクトの `setPdfVersion` メソッドを使用します。入力ドキュメントが、Acrobatフォーム (Acrobatで作成されたフォーム ) または署名または認証された XFA ドキュメントの場合。 出力PDFドキュメントには、元のPDFバージョンが保持されます。 同様に、 `RenderOptionsSpec` オブジェクトの `setTaggedPDF`*入力ドキュメントがAcrobatフォーム、または署名済みまたは認証済みの XFA ドキュメントの場合は、メソッドを使用します。*
 
    >[!NOTE]
    >
-   >入力PDFドキュメントが認証またはデジタル署名されている場合、`RenderOptionsSpec`オブジェクトの`linearizedPDF`メンバを使用して線形化されたPDFオプションを設定することはできません。 （[PDFドキュメントのデジタル署名&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)*を参照）*
+   >線形化PDFは、 `RenderOptionsSpec` オブジェクトの `linearizedPDF` メンバー：入力PDF・ドキュメントが認証済みまたはデジタル署名済みの場合。 ( [デジタル署名PDF文書&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)*.)*
 
-1. PDFドキュメントを生成します。
+1. PDF文書を生成
 
-   `OutputServiceService`オブジェクトの`generatePDFOutput`メソッドを呼び出し、次の値を渡してPDFドキュメントを作成します。
+   を呼び出してPDFドキュメントを作成する `OutputServiceService` オブジェクトの `generatePDFOutput`メソッドを使用して、次の値を渡します。
 
-   * `TransformationFormat`列挙値。 PDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
+   * A `TransformationFormat` 列挙値。 PDF・ドキュメントを生成するには、 `TransformationFormat.PDF`.
    * フォームデザイン名を指定する string 値。
-   * フォームデザインが存在するコンテンツルートを指定するstring値。
-   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
-   * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
-   * フォームデザインとマージするデータを含むXMLデータソースを含む`BLOB`オブジェクト。
-   * `generatePDFOutput`メソッドによって設定される`BLOB`オブジェクト。 `generatePDFOutput`メソッドは、このオブジェクトに、ドキュメントを表す生成済みのメタデータを入力します。 （このパラメーター値は、Webサービスの呼び出しにのみ必要です）。
-   * `generatePDFOutput`メソッドによって設定される`BLOB`オブジェクト。 `generatePDFOutput`メソッドは、このオブジェクトに結果データを入力します。 （このパラメーター値は、Webサービスの呼び出しにのみ必要です）。
-   * 操作の結果を格納する`OutputResult`オブジェクト。 （このパラメーター値は、Webサービスの呼び出しにのみ必要です）。
+   * フォームデザインが配置されているコンテンツルートを指定する string 値です。
+   * A `PDFOutputOptionsSpec` PDFの実行時オプションを含むオブジェクト。
+   * A `RenderOptionsSpec` レンダリングの実行時オプションを含むオブジェクト。
+   * この `BLOB` フォームデザインとマージするデータが含まれる XML データソースを含むオブジェクト。
+   * A `BLOB` オブジェクト `generatePDFOutput` メソッド。 この `generatePDFOutput` メソッドは、ドキュメントを表す生成されたメタデータをこのオブジェクトに設定します。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+   * A `BLOB` オブジェクト `generatePDFOutput` メソッド。 この `generatePDFOutput` メソッドは、このオブジェクトに結果データを入力します。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+   * An `OutputResult` 操作の結果を格納するオブジェクト。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
 
    >[!NOTE]
    >
-   >`generatePDFOutput`メソッドを呼び出してPDFドキュメントを生成する場合、署名または認証されたXFA PDFフォームとデータを結合することはできません。 （[Digital Signing and Certifying Documents ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*を参照）。*
+   >を呼び出してPDFドキュメントを生成する場合 `generatePDFOutput` メソッドを使用する場合、署名または認証された XFAPDFフォームとデータを結合することはできません。 ( [ドキュメントのデジタル署名と認証&#x200B;](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
 
    >[!NOTE]
    >
-   >`OutputClient`オブジェクトの`generatePDFOutput2`メソッドを呼び出して、PDFドキュメントを作成することもできます。 ([Content Services（非推奨）にあるドキュメントをOutputサービスに渡す&#x200B;](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*を参照)*
+   >また、 `OutputClient` オブジェクトの `generatePDFOutput2` メソッド。 ( [Content Services（非推奨）にあるドキュメントを Output サービスに渡す&#x200B;](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
 
 1. 操作の結果を取得します。
 
-   * コンストラクターを呼び出し、結果データを含むXMLファイルの場所を表す文字列値を渡すことで、`System.IO.FileStream`オブジェクトを作成します。 ファイル名の拡張子が.xmlであることを確認します。
-   * `OutputServiceService`オブジェクトの`generatePDFOutput`メソッド（8番目のパラメーター）によって結果データが入力された`BLOB`オブジェクトのデータコンテンツを格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM` `field`の値を取得して、バイト配列を設定します。
-   * コンストラクターを呼び出し、`System.IO.FileStream`オブジェクトを渡して、`System.IO.BinaryWriter`オブジェクトを作成します。
-   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことにより、バイト配列の内容をXMLファイルに書き込みます。
+   * の作成 `System.IO.FileStream` オブジェクトを作成します。 ファイル名の拡張子が.xml であることを確認します。
+   * のデータコンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクトに `OutputServiceService` オブジェクトの `generatePDFOutput` メソッド（8 番目のパラメーター）。 バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` `field`.
+   * の作成 `System.IO.BinaryWriter` オブジェクトのコンストラクタを呼び出し、 `System.IO.FileStream` オブジェクト。
+   * を呼び出して、バイト配列の内容を XML ファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
    関連トピック
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[SwaRef を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
    >[!NOTE]
    >
-   >`OutputServiceService`オブジェクトの`generateOutput`メソッドは非推奨です。
+   >この `OutputServiceService` オブジェクトの `generateOutput` メソッドは非推奨です。
 
-## PDF/Aドキュメントの作成 {#creating-pdf-a-documents}
+## PDF/A ドキュメントの作成 {#creating-pdf-a-documents}
 
-Outputサービスを使用してPDF/Aドキュメントを作成できます。 PDF/Aはドキュメントのコンテンツを長期保存するためのアーカイブ形式なので、すべてのフォントが埋め込まれ、ファイルが非圧縮になります。 その結果、通常、PDF/A ドキュメントは標準の PDF ドキュメントよりも大きくなります。また、PDF/Aドキュメントにはオーディオおよびビデオコンテンツは含まれません。 他のOutputサービスタスクと同様に、フォームデザインとフォームデザインとのマージ用のデータの両方を提供して、PDF/Aドキュメントを作成します。
+Output サービスを使用してPDF/A ドキュメントを作成できます。 PDF/A はドキュメントのコンテンツを長期保存するためのアーカイブ形式なので、すべてのフォントが埋め込まれ、ファイルが非圧縮になります。 その結果、通常、PDF/A ドキュメントは標準の PDF ドキュメントよりも大きくなります。また、PDF/A ドキュメントには、オーディオおよびビデオコンテンツは含まれていません。 他の Output サービスタスクと同様に、フォームデザインとデータの両方を提供して、フォームデザインとマージし、PDF/A ドキュメントを作成します。
 
-PDF/A-1仕様は、aとbの2つの準拠レベルで構成されています。この2つの主な違いは、論理構造（アクセシビリティ）のサポートに関するもので、適合レベルbには必要ありません。適合レベルに関係なく、PDF/A-1では、生成されるPDF/Aドキュメントにすべてのフォントが埋め込まれます。
+PDF/A-1 仕様は、a と b の 2 つの適合レベルで構成されます。この 2 つの主な違いは、論理構造（アクセシビリティ）のサポートに関するもので、適合レベル b には必要ありません。適合レベルに関係なく、PDF/A-1 では、生成されたPDF/A ドキュメントにすべてのフォントが埋め込まれます。
 
-PDF/AはPDFドキュメントのアーカイブの標準ですが、会社のニーズを満たす標準PDFドキュメントの場合は、PDF/Aをアーカイブに使用する必要はありません。 PDF/A標準の目的は、ドキュメントの保存要件を満たすと共に、長期間保存できるPDFファイルを確立することです。 例えば、URLが無効になる可能性があるので、PDF/AにURLを埋め込むことはできません。
+PDF/A はPDFドキュメントのアーカイブの標準ですが、標準PDFドキュメントがお客様の企業のニーズを満たす場合に、アーカイブにPDF/A を使用する必要はありません。 PDF/A 規格の目的は、ドキュメントの保存要件を満たし、長期間保存できるPDFファイルを確立することです。 例えば、ある URL をPDF/A に埋め込むことはできません。これは、URL が時間の経過と共に無効になる可能性があるためです。
 
-組織は、独自のニーズ、ドキュメントの保持期間、ファイルサイズに関する考慮事項を評価し、独自のアーカイブ戦略を決定する必要があります。 DocConverterサービスを使用すると、PDFドキュメントがPDF/Aに準拠しているかどうかをプログラムで判断できます。 （[プログラムによるPDF/Aの準拠の判別](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)を参照）。
+組織は、独自のニーズ、ドキュメントの保持期間、ファイルサイズに関する考慮事項を評価し、独自のアーカイブ戦略を決定する必要があります。 DocConverter サービスを使用すると、PDFドキュメントがPDF/A に準拠しているかどうかをプログラムで判断できます。 ( [プログラムによるPDF/A 準拠の判断](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
 
-PDF/Aドキュメントでは、フォームデザインで指定されたフォントを使用する必要があり、フォントを置き換えることはできません。 その結果、PDFドキュメント内のフォントがホストオペレーティングシステム(OS)で使用できない場合、例外が発生します。
+PDF/A ドキュメントでは、フォームデザインで指定されたフォントを使用する必要があり、フォントを置き換えることはできません。 その結果、PDFドキュメント内のフォントがホストオペレーティングシステム (OS) 上で使用できない場合は、例外が発生します。
 
-AcrobatでPDF/Aドキュメントを開くと、次の図に示すように、ドキュメントがPDF/Aドキュメントであることを確認するメッセージが表示されます。
+AcrobatでPDF/A ドキュメントを開くと、次の図に示すように、ドキュメントがPDF/A ドキュメントであることを確認するメッセージが表示されます。
 
 ![cp_cp_pdfamessage](assets/cp_cp_pdfamessage.png)
 
 >[!NOTE]
 >
->AIIMのWebサイトには、[https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml](https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml)でアクセスできるPDF/AのFAQセクションがあります。
+>AIM Web サイトには、次の URL でアクセスできるPDF/A の FAQ セクションがあります。 [https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml](https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml).
 
 >[!NOTE]
 >
->Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_64)
+>Output サービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_64).
 
 ### 手順の概要 {#summary_of_steps-1}
 
-PDF/Aドキュメントを作成するには、次の手順を実行します。
+PDF/A ドキュメントを作成するには、次の手順を実行します。
 
 1. プロジェクトファイルを含めます。
-1. Outputクライアントオブジェクトを作成します。
-1. XMLデータソースを参照します。
-1. PDF/Aランタイムオプションを設定します。
+1. Output Client オブジェクトを作成します。
+1. XML データソースを参照します。
+1. PDF/A ランタイムオプションを設定します。
 1. レンダリングの実行時オプションを設定します。
-1. PDF/Aドキュメントを生成します。
+1. PDF/A ドキュメントを生成します。
 1. 操作の結果を取得します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してカスタムアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、必ずプロキシファイルを含めてください。
+開発プロジェクトに必要なファイルを含めます。 Java を使用してカスタムアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
 
-次のJARファイルをプロジェクトのクラスパスに追加する必要があります。
+次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必須)
-* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必須)
+* adobe-utilities.jar(AEM Formsを JBoss にデプロイする場合に必須 )
+* jbossall-client.jar(AEM Formsが JBoss にデプロイされている場合に必須 )
 
-AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
 
-**Outputクライアントオブジェクトの作成**
+**出力クライアントオブジェクトの作成**
 
-プログラムによってOutputサービス操作を実行する前に、Outputサービスクライアントオブジェクトを作成する必要があります。 Java APIを使用している場合は、`OutputClient`オブジェクトを作成します。 Output WebサービスAPIを使用している場合は、`OutputServiceService`オブジェクトを作成します。
+Output サービスの操作をプログラムで実行する前に、Output サービスのクライアントオブジェクトを作成する必要があります。 Java API を使用している場合は、 `OutputClient` オブジェクト。 Output Web サービス API を使用している場合、 `OutputServiceService` オブジェクト。
 
-**XMLデータソースの参照**
+**XML データソースの参照**
 
-データとフォームデザインを結合するには、データを含むXMLデータソースを参照する必要があります。 データを入力するフォームフィールドごとに、XML要素が存在する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
+データをフォームデザインと結合するには、データを含む XML データソースを参照する必要があります。 データを入力するフォームフィールドごとに、XML 要素が存在する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべての XML 要素が指定されている場合、XML 要素の表示順序を一致させる必要はありません。
 
-**PDF/Aランタイムオプションの設定**
+**PDF/A ランタイムオプションを設定**
 
-PDF/Aドキュメントを作成する際に、「ファイルURI 」オプションを設定できます。 このURIは、AEM FormsをホストするJ2EEアプリケーションサーバーに対する相対パスです。 つまり、C:\Adobeを設定した場合、ファイルはクライアントコンピューターではなく、サーバー上のフォルダーに書き込まれます。 このURIは、Outputサービスが生成するPDF/Aファイルの名前と場所を指定します。
+PDF/A ドキュメントの作成時に「 File URI 」オプションを設定できます。 URI は、AEM Formsをホストする J2EE アプリケーションサーバーに対する相対 URI です。 つまり、C:\Adobeを設定した場合、ファイルはクライアントコンピューターではなく、サーバー上のフォルダーに書き込まれます。 URI は、Output サービスが生成するPDF/A ファイルの名前と場所を指定します。
 
-**レンダリング実行時オプションの設定**
+**レンダリング実行時オプションを設定**
 
-PDF/Aドキュメントの作成時にレンダリングの実行時オプションを設定できます。 PDF/Aに関連して設定できるオプションは、`PDFAConformance`と`PDFARevisionNumber`の2つです。 `PDFAConformance`の値は、電子ドキュメントの長期保存方法を指定する要件にPDFドキュメントがどのように従うかを示します。 このオプションの有効な値は`A`と`B`です。 レベルaおよびbの準拠について詳しくは、「*ISO 19005-1 Document management*」というタイトルのPDF/A-1 ISO仕様を参照してください。
+レンダリングの実行時オプションは、PDF/A ドキュメントの作成時に設定できます。 設定できるPDF/A 関連のオプションは次の 2 つです。 `PDFAConformance` および `PDFARevisionNumber` 値。 この `PDFAConformance` 値とは、PDFドキュメントが電子ドキュメントの長期保存方法を指定する要件にどのように従うかを指します。 このオプションの有効な値は次のとおりです。 `A` および `B`. レベル a および b の準拠について詳しくは、タイトルが「PDF/A-1 ISO」仕様を参照してください。 *ISO 19005-1 文書管理*.
 
-`PDFARevisionNumber`値は、PDF/Aドキュメントのリビジョン番号を参照します。 PDF/Aドキュメントのリビジョン番号について詳しくは、「*ISO 19005-1 Document management*」というタイトルのPDF/A-1 ISO仕様を参照してください。
+この `PDFARevisionNumber` の値は、PDF/A ドキュメントのリビジョン番号を参照します。 PDF/A ドキュメントのリビジョン番号について詳しくは、タイトルが付いたPDF/A-1 ISO 仕様を参照してください。 *ISO 19005-1 文書管理*.
 
 >[!NOTE]
 >
->PDF/A 1Aドキュメントを作成する際に、タグ付きAdobe PDFオプションを`false`に設定することはできません。 PDF/A 1Aは、常にタグ付きPDFドキュメントになります。 また、PDF/A 1Bドキュメントを作成する際に、タグ付きAdobe PDFオプションを`true`に設定することはできません。 PDF/A 1Bは、常にタグなしのPDFドキュメントになります。
+>タグ付きAdobe PDFオプションを `false` (PDF/A 1A ドキュメントの作成時 ) PDF/A 1A は、常にタグ付きPDF文書になります。 また、タグ付きAdobe PDFオプションを `true` (PDF/A 1B ドキュメントを作成する場合 ) PDF/A 1B は、常にタグなしのPDF文書になります。
 
-**PDF/Aドキュメントの生成**
+**PDF/A ドキュメントを生成**
 
-フォームデータを含む有効なXMLデータソースを参照し、ランタイムオプションを設定した後、Outputサービスを呼び出して、PDF/Aドキュメントを生成することができます。
+フォームデータを含む有効な XML データソースを参照し、ランタイムオプションを設定した後、Output サービスを呼び出して、PDF/A ドキュメントを生成することができます。
 
 **操作の結果の取得**
 
-Outputサービスが操作を実行すると、その操作が成功したかどうかを示すXMLデータなど、様々なデータ項目が返されます。
+Output サービスは操作を実行した後、XML データなど、操作が成功したかどうかを示す様々なデータ項目を返します。
 
 **関連トピック**
 
-[Java APIを使用したPDF/Aドキュメントの作成](creating-document-output-streams.md#create-a-pdf-a-document-using-the-java-api)
+[Java API を使用したPDF/A ドキュメントの作成](creating-document-output-streams.md#create-a-pdf-a-document-using-the-java-api)
 
-[WebサービスAPIを使用したPDF/Aドキュメントの作成](creating-document-output-streams.md#create-a-pdf-a-document-using-the-web-service-api)
+[Web サービス API を使用してPDF/A ドキュメントを作成する](creating-document-output-streams.md#create-a-pdf-a-document-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
+[Output サービス API のクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### Java APIを使用したPDF/Aドキュメントの作成 {#create-a-pdf-a-document-using-the-java-api}
+### Java API を使用したPDF/A ドキュメントの作成 {#create-a-pdf-a-document-using-the-java-api}
 
-Output API(Java)を使用してPDF/Aドキュメントを作成します。
+Output API(Java) を使用してPDF/A ドキュメントを作成します。
 
 1. プロジェクトファイルを含めます。
 
-   Javaプロジェクトのクラスパスに、adobe-output-client.jarなどのクライアントJARファイルを含めます。
+   Java プロジェクトのクラスパスに、adobe-output-client.jar などのクライアント JAR ファイルを含めます。
 
-1. Outputクライアントオブジェクトを作成します。
+1. Output Client オブジェクトを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して`OutputClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * の作成 `OutputClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
 
-1. XMLデータソースを参照します。
+1. XML データソースを参照します。
 
-   * PDF/Aドキュメントのコンストラクターを使用し、XMLファイルの場所を指定する文字列値を渡すことで、PDF/Aドキュメントの入力に使用されるXMLデータソースを表す`java.io.FileInputStream`オブジェクトを作成します。
+   * の作成 `java.io.FileInputStream` コンストラクタを使用し、XML ファイルの場所を指定する string 値を渡すことによって、PDF/A ドキュメントにデータを取り込むために使用される XML データソースを表すオブジェクト。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
-1. PDF/Aランタイムオプションを設定します。
+1. PDF/A ランタイムオプションを設定します。
 
    * コンストラクタを使用して `PDFOutputOptionsSpec` オブジェクトを作成します。
-   * `PDFOutputOptionsSpec`オブジェクトの`setFileURI`メソッドを呼び出して、「 File URI 」オプションを設定します。 Outputサービスが生成するPDFファイルの場所を指定するstring値を渡します。 「ファイルURI 」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対して相対的なもので、クライアントコンピューターに対しては相対的なものではありません。
+   * を呼び出して、「 File URI 」オプションを設定します。 `PDFOutputOptionsSpec` オブジェクトの `setFileURI` メソッド。 Output サービスが生成するPDFファイルの場所を指定する string 値を渡します。 「ファイル URI 」オプションは、クライアントコンピューターではなく、AEM Formsをホストする J2EE アプリケーションサーバーに対する相対パスです。
 
 1. レンダリングの実行時オプションを設定します。
 
    * コンストラクタを使用して `RenderOptionsSpec` オブジェクトを作成します。
-   * `RenderOptionsSpec`オブジェクトの`setPDFAConformance`メソッドを呼び出し、適合レベルを指定する`PDFAConformance`列挙値を渡すことで、`PDFAConformance`値を設定します。 例えば、適合レベルAを指定するには、`PDFAConformance.A`を渡します。
-   * `RenderOptionsSpec`オブジェクトの`setPDFARevisionNumber`メソッドを呼び出して`PDFARevisionNumber.Revision_1`を渡すことで、`PDFARevisionNumber`値を設定します。
+   * を `PDFAConformance` を呼び出すことによる値 `RenderOptionsSpec` オブジェクトの `setPDFAConformance` メソッドと `PDFAConformance` 適合レベルを指定する enum 値。 たとえば、適合レベル A を指定するには、 `PDFAConformance.A`.
+   * を `PDFARevisionNumber` を呼び出すことによる値 `RenderOptionsSpec` オブジェクトの `setPDFARevisionNumber` メソッドとパス `PDFARevisionNumber.Revision_1`.
 
    >[!NOTE]
    >
-   >PDF/AドキュメントのPDFバージョンは、`RenderOptionsSpec`オブジェクトの&#x200B;`setPdfVersion`*メソッドに対してどの値を指定したかに関係なく、1.4です。*
+   >PDFバージョンのPDF/A ドキュメントは、 `RenderOptionsSpec` オブジェクトの `setPdfVersion`*メソッド。*
 
-1. PDF/Aドキュメントを生成します。
+1. PDF/A ドキュメントを生成します。
 
-   `OutputClient`オブジェクトの`generatePDFOutput`メソッドを呼び出し、次の値を渡してPDF/Aドキュメントを作成します。
+   を呼び出してPDF/A ドキュメントを作成する `OutputClient` オブジェクトの `generatePDFOutput` メソッドを使用して、次の値を渡します。
 
-   * `TransformationFormat`列挙値。 PDF/Aドキュメントを生成するには、`TransformationFormat.PDFA`を指定します。
+   * A `TransformationFormat` 列挙値。 PDF/A ドキュメントを生成するには、次を指定します。 `TransformationFormat.PDFA`.
    * フォームデザイン名を指定する string 値。
-   * フォームデザインが存在するコンテンツルートを指定するstring値。
-   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
-   * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
-   * フォームデザインとマージするデータを含むXMLデータソースを含む`com.adobe.idp.Document`オブジェクト。
+   * フォームデザインが配置されているコンテンツルートを指定する string 値です。
+   * A `PDFOutputOptionsSpec` PDFの実行時オプションを含むオブジェクト。
+   * A `RenderOptionsSpec` レンダリングの実行時オプションを含むオブジェクト。
+   * この `com.adobe.idp.Document` フォームデザインとマージするデータが含まれる XML データソースを含むオブジェクト。
 
-   `generatePDFOutput`メソッドは、操作の結果を含む`OutputResult`オブジェクトを返します。
-
-   >[!NOTE]
-   >
-   >`OutputResult`オブジェクトの`getRecordLevelMetaDataList`メソッドは`null`*を返します。 *
+   この `generatePDFOutput` メソッドは、 `OutputResult` 操作の結果を格納するオブジェクト。
 
    >[!NOTE]
    >
-   >`OutputClient`オブジェクトの`generatePDFOutput`2メソッドを呼び出して、PDF /Aドキュメントを作成することもできます。 ([Content Services（非推奨）にあるドキュメントをOutputサービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)を参照)。
+   >この `OutputResult` オブジェクトの `getRecordLevelMetaDataList` メソッドの戻り値 `null`*.*
+
+   >[!NOTE]
+   >
+   >また、 `OutputClient` オブジェクトの `generatePDFOutput`2 メソッド。 ( [Content Services（非推奨）にあるドキュメントを Output サービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
 1. 操作の結果を取得します。
 
-   * `OutputResult`オブジェクトの`getStatusDoc`メソッドを呼び出して、`generatePDFOutput`メソッドのステータスを表す`com.adobe.idp.Document`オブジェクトを作成します。
-   * 操作の結果を格納する`java.io.File`オブジェクトを作成します。 ファイル名の拡張子が.xmlであることを確認します。
-   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします（`getStatusDoc`メソッドで返された`com.adobe.idp.Document`オブジェクトを使用するようにしてください）。
+   * の作成 `com.adobe.idp.Document` オブジェクトのステータスを表すオブジェクト `generatePDFOutput` メソッドを呼び出す `OutputResult` オブジェクトの `getStatusDoc` メソッド。
+   * の作成 `java.io.File` 操作の結果を格納するオブジェクト。 ファイル名の拡張子が.xml であることを確認します。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、 `com.adobe.idp.Document` オブジェクトをファイルに追加します ( `com.adobe.idp.Document` が返したオブジェクト `getStatusDoc` メソッド )。
 
    >[!NOTE]
    >
-   >Outputサービスは、 `PDFOutputOptionsSpec`オブジェクトの`setFileURI`メソッドに渡される引数で指定された場所にPDF/Aドキュメントを書き込みますが、 `OutputResult`オブジェクトの`getGeneratedDoc`*メソッドを呼び出すことで、プログラムでPDF/Aドキュメントを取得できます。*
+   >Output サービスはPDF/A ドキュメントを、 `PDFOutputOptionsSpec` オブジェクトの `setFileURI` メソッドを使用すると、 `OutputResult` オブジェクトの `getGeneratedDoc`*メソッド。*
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDF/Aドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したPDF/A ドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-### WebサービスAPIを使用したPDF/Aドキュメントの作成 {#create-a-pdf-a-document-using-the-web-service-api}
+### Web サービス API を使用してPDF/A ドキュメントを作成する {#create-a-pdf-a-document-using-the-web-service-api}
 
-Output API（Webサービス）を使用してPDF/Aドキュメントを作成します。
+Output API（Web サービス）を使用してPDF/A ドキュメントを作成します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 次の WSDL 定義を使用していることを確認します。 `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >`localhost`*を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。*
+   >置換 `localhost`* AEM Formsをホストするサーバーの IP アドレス*
 
-1. Outputクライアントオブジェクトを作成します。
+1. Output Client オブジェクトを作成します。
 
-   * デフォルトのコンストラクターを使用して`OutputServiceClient`オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに渡す文字列値（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）を渡します。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用する場合は`?blob=mtom`を指定します。
-   * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値は、MTOMが使用されるようにします。
-   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
+   * の作成 `OutputServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
+   * の作成 `OutputServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をAEM Formsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/OutputService?blob=mtom`.) を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます。 ただし、 `?blob=mtom` MTOM を使用する。
+   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `OutputServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
+   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
+   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
 
-      * フィールド`OutputServiceClient.ClientCredentials.UserName.UserName`にAEM formsユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド`OutputServiceClient.ClientCredentials.UserName.Password`に割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に定数値`HttpClientCredentialType.Basic`を割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Security.Mode`に定数値`BasicHttpSecurityMode.TransportCredentialOnly`を割り当てます。
+      * フィールドにAEM forms ユーザー名を割り当てます。 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 対応するパスワード値をフィールドに割り当てます。 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 定数値を割り当て `HttpClientCredentialType.Basic` フィールドに `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 定数値を割り当て `BasicHttpSecurityMode.TransportCredentialOnly` フィールドに `BasicHttpBindingSecurity.Security.Mode`.
 
-1. XMLデータソースを参照します。
+1. XML データソースを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、PDF/Aドキュメントとマージされるデータを保存するために使用します。
-   * コンストラクターを呼び出し、暗号化するPDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
-   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得することで、バイト配列のサイズを判断できます。
-   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
-   * `BLOB`オブジェクトの`MTOM`フィールドにバイト配列の内容を割り当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、PDF/A ドキュメントと結合されるデータを保存するために使用されます。
+   * の作成 `System.IO.FileStream` オブジェクトを呼び出し、暗号化するPDFドキュメントのファイルの場所と、ファイルを開くモードを表す string 値を渡すことによって、オブジェクトを指定します。
+   * コンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクト。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリーム長を渡す。
+   * 次の項目に `BLOB` オブジェクトを割り当てる `MTOM` フィールドにバイト配列の内容を入力します。
 
-1. PDF/Aランタイムオプションを設定します。
+1. PDF/A ランタイムオプションを設定します。
 
    * コンストラクタを使用して `PDFOutputOptionsSpec` オブジェクトを作成します。
-   * Outputサービスが生成するPDFファイルの場所を指定する文字列値を`PDFOutputOptionsSpec`オブジェクトの`fileURI`データメンバーに割り当てて、「File URI」オプションを設定します。 「ファイルURI 」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対して相対的なもので、クライアントコンピューターに対しては相対的なものではありません
+   * Output サービスが生成するPDFファイルの場所をに指定する string 値を割り当てて、「File URI」オプションを設定します `PDFOutputOptionsSpec` オブジェクトの `fileURI` データメンバー。 「ファイル URI 」オプションは、AEM Formsをホストする J2EE アプリケーションサーバーに対する相対パスであり、クライアントコンピューターに対する相対パスではありません
 
 1. レンダリングの実行時オプションを設定します。
 
    * コンストラクタを使用して `RenderOptionsSpec` オブジェクトを作成します。
-   * `PDFAConformance`値を設定するには、`RenderOptionsSpec`オブジェクトの`PDFAConformance`データメンバーに`PDFAConformance`列挙値を割り当てます。 例えば、適合レベルAを指定するには、このデータメンバーに`PDFAConformance.A`を割り当てます。
-   * `PDFARevisionNumber`値を設定するには、`RenderOptionsSpec`オブジェクトの`PDFARevisionNumber`データメンバーに`PDFARevisionNumber`列挙値を割り当てます。 `PDFARevisionNumber.Revision_1`をこのデータメンバーに割り当てます。
+   * を `PDFAConformance` 値を割り当てる `PDFAConformance` enum 値を `RenderOptionsSpec` オブジェクトの `PDFAConformance` データメンバー。 たとえば、適合レベル A を指定するには、 `PDFAConformance.A` をこのデータメンバーに追加します。
+   * を `PDFARevisionNumber` 値を割り当てる `PDFARevisionNumber` enum 値を `RenderOptionsSpec` オブジェクトの `PDFARevisionNumber` データメンバー。 割り当て `PDFARevisionNumber.Revision_1` をこのデータメンバーに追加します。
 
    >[!NOTE]
    >
-   >PDF/AドキュメントのPDFバージョンは、指定した値に関係なく1.4です。
+   >PDF値に関係なく、PDF/A ドキュメントのバージョンは 1.4 です。
 
-1. PDF/Aドキュメントを生成します。
+1. PDF/A ドキュメントを生成します。
 
-   `OutputServiceService`オブジェクトの`generatePDFOutput`メソッドを呼び出し、次の値を渡してPDFドキュメントを作成します。
+   を呼び出してPDFドキュメントを作成する `OutputServiceService` オブジェクトの `generatePDFOutput`メソッドを使用して、次の値を渡します。
 
-   * TransformationFormat列挙値。 PDFドキュメントを生成するには、`TransformationFormat.PDFA`を指定します。
+   * TransformationFormat 列挙値。 PDF・ドキュメントを生成するには、 `TransformationFormat.PDFA`.
    * フォームデザイン名を指定する string 値。
-   * フォームデザインが存在するコンテンツルートを指定するstring値。
-   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
-   * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
-   * フォームデザインとマージするデータを含むXMLデータソースを含む`BLOB`オブジェクト。
-   * `generatePDFOutput`メソッドによって設定される`BLOB`オブジェクト。 `generatePDFOutput`メソッドは、このオブジェクトに、ドキュメントを表す生成済みのメタデータを入力します。 （このパラメーター値は、Webサービスの呼び出しのみに必要です）。
-   * `generatePDFOutput`メソッドによって設定される`BLOB`オブジェクト。 `generatePDFOutput`メソッドは、このオブジェクトに結果データを入力します。 （このパラメーター値は、Webサービスの呼び出しのみに必要です）。
-   * 操作の結果を格納する`OutputResult`オブジェクト。 （このパラメーター値は、Webサービスの呼び出しのみに必要です）。
+   * フォームデザインが配置されているコンテンツルートを指定する string 値です。
+   * A `PDFOutputOptionsSpec` PDFの実行時オプションを含むオブジェクト。
+   * A `RenderOptionsSpec` レンダリングの実行時オプションを含むオブジェクト。
+   * この `BLOB` フォームデザインとマージするデータが含まれる XML データソースを含むオブジェクト。
+   * A `BLOB` オブジェクト `generatePDFOutput` メソッド。 この `generatePDFOutput` メソッドは、ドキュメントを表す生成されたメタデータをこのオブジェクトに設定します。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+   * A `BLOB` オブジェクト `generatePDFOutput` メソッド。 この `generatePDFOutput` メソッドは、このオブジェクトに結果データを入力します。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+   * An `OutputResult` 操作の結果を格納するオブジェクト。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
 
    >[!NOTE]
    >
-   >`OutputClient`オブジェクトの`generatePDFOutput`2メソッドを呼び出して、PDF /Aドキュメントを作成することもできます。 ([Content Services（非推奨）にあるドキュメントをOutputサービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)を参照)。
+   >また、 `OutputClient` オブジェクトの `generatePDFOutput`2 メソッド。 ( [Content Services（非推奨）にあるドキュメントを Output サービスに渡す](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
 1. 操作の結果を取得します。
 
-   * コンストラクターを呼び出し、結果データを含むXMLファイルの場所を表す文字列値を渡すことで、`System.IO.FileStream`オブジェクトを作成します。 ファイル名の拡張子が.xmlであることを確認します。
-   * `OutputServiceService`オブジェクトの`generatePDFOutput`メソッド（8番目のパラメーター）によって結果データが入力された`BLOB`オブジェクトのデータコンテンツを格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`フィールドの値を取得して、バイト配列を設定します。
-   * コンストラクターを呼び出し、`System.IO.FileStream`オブジェクトを渡して、`System.IO.BinaryWriter`オブジェクトを作成します。
-   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことにより、バイト配列の内容をXMLファイルに書き込みます。
+   * の作成 `System.IO.FileStream` オブジェクトを作成します。 ファイル名の拡張子が.xml であることを確認します。
+   * のデータコンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクトに `OutputServiceService` オブジェクトの `generatePDFOutput` メソッド（8 番目のパラメーター）。 バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` フィールドに入力します。
+   * の作成 `System.IO.BinaryWriter` オブジェクトのコンストラクタを呼び出し、 `System.IO.FileStream` オブジェクト。
+   * を呼び出して、バイト配列の内容を XML ファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[SwaRef を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Content Services（非推奨）にあるドキュメントをOutputサービスに渡す {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
+## Content Services（非推奨）にあるドキュメントを Output サービスに渡す {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
 
-Outputサービスは、通常はXDPファイルとして保存され、Designerで作成されたフォームデザインに基づく非インタラクティブPDFフォームをレンダリングします。 フォームデザインを含む`com.adobe.idp.Document`オブジェクトをOutputサービスに渡すことができます。 次に、Outputサービスは、`com.adobe.idp.Document`オブジェクト内のフォームデザインをレンダリングします。
+Output サービスは、通常は XDP ファイルとして保存され、Designer で作成されたフォームデザインに基づく、非インタラクティブなPDFフォームをレンダリングします。 次の条件を満たす場合に、 `com.adobe.idp.Document` フォームデザインを含んで Output サービスに送信するオブジェクト。 次に、Output サービスは、 `com.adobe.idp.Document` オブジェクト。
 
-`com.adobe.idp.Document`オブジェクトをOutputサービスに渡す利点の1つは、他のAEM Formsサービス操作が`com.adobe.idp.Document`インスタンスを返すことです。 つまり、別のサービス操作から`com.adobe.idp.Document`インスタンスを取得してレンダリングできます。 例えば、次の図に示すように、XDPファイルが`/Company Home/Form Designs`という名前のContent Services（非推奨）ノードに格納されているとします。
+を通過する利点 `com.adobe.idp.Document` Output サービスのオブジェクトは、他のAEM Formsサービス操作が `com.adobe.idp.Document` インスタンス。 つまり、 `com.adobe.idp.Document` インスタンスを別のサービス操作から削除し、レンダリングします。 例えば、XDP ファイルがという名前の Content Services（非推奨）ノードに格納されているとします。 `/Company Home/Form Designs`（次の図に示すように）
 
-プログラムによってContent Services（非推奨）からLoan.xdpを取得し、`com.adobe.idp.Document`オブジェクト内でXDPファイルをOutputサービスに渡すことができます。
+プログラムによって Content Services（非推奨）から Loan.xdp を取得し、 `com.adobe.idp.Document` オブジェクト。
 
 >[!NOTE]
 >
->Formsサービスについて詳しくは、『 AEM Formsのサービスリファレンス[ 』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>Formsサービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 手順の概要 {#summary_of_steps-2}
 
-Content Services（非推奨）から取得したドキュメントをOutputサービスに渡すには、次のタスクを実行します。
+Content Services（非推奨）から取得したドキュメントを Output サービスに渡すには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
-1. OutputとDocument Management Client APIオブジェクトを作成します。
+1. 出力とドキュメント管理クライアント API オブジェクトを作成します。
 1. Content Services（非推奨）からフォームデザインを取得します。
-1. 非インタラクティブPDFフォームをレンダリングします。
-1. データストリームを使用してアクションを実行します。
+1. 非インタラクティブPDFフォームをレンダリング
+1. データストリームでアクションを実行します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、プロキシファイルを含めます。
+必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを含めます。
 
-**出力とドキュメント管理クライアントAPIオブジェクトの作成**
+**出力とドキュメント管理クライアント API オブジェクトの作成**
 
-プログラムでOutputサービスAPI操作を実行する前に、OutputクライアントAPIオブジェクトを作成します。 また、このワークフローはContent Services（非推奨）からXDPファイルを取得するので、Document Management APIオブジェクトを作成します。
+Output サービス API 操作をプログラムで実行する前に、Output クライアント API オブジェクトを作成します。 また、このワークフローは Content Services（非推奨）から XDP ファイルを取得するので、Document Management API オブジェクトを作成します。
 
 **Content Services（非推奨）からフォームデザインを取得する**
 
-JavaまたはWebサービスAPIを使用して、Content Services（非推奨）からXDPファイルを取得します。 XDPファイルは、`com.adobe.idp.Document`インスタンス（Webサービスを使用している場合は`BLOB`インスタンス）内で返されます。 その後、`com.adobe.idp.Document`インスタンスをOutputサービスに渡すことができます。
+Java または Web サービス API を使用して、Content Services（非推奨）から XDP ファイルを取得します。 XDP ファイルは、 `com.adobe.idp.Document` インスタンス ( または `BLOB` インスタンス（web サービスを使用する場合）。 その後、 `com.adobe.idp.Document` インスタンスを Output サービスに追加します。
 
 **非インタラクティブPDFフォームのレンダリング**
 
-非インタラクティブフォームをレンダリングするには、Content Services（非推奨）から返された`com.adobe.idp.Document`インスタンスをOutputサービスに渡します。
+非インタラクティブフォームをレンダリングするには、 `com.adobe.idp.Document` Content Services（非推奨）から Output サービスに返されたインスタンス。
 
 >[!NOTE]
 >
->`generatePDFOutput2`およびg `eneratePrintedOutput2`という2つの新しいメソッドは、フォームデザインを含む`com.adobe.idp.Document`オブジェクトを受け取ります。 また、印刷ストリームをネットワークプリンターに送信する際に、フォームデザインを含む`com.adobe.idp.Document`をOutputサービスに渡すこともできます。
+>次の 2 つの新しいメソッド： `generatePDFOutput2`および g `eneratePrintedOutput2`受け入れる `com.adobe.idp.Document` フォームデザインを含むオブジェクト。 また、 `com.adobe.idp.Document`印刷ストリームをネットワークプリンターに送信する際に Output サービスにフォームデザインを含む
 
-**フォームデータストリームを使用してアクションを実行する**
+**フォームデータストリームを使用してアクションを実行します**
 
-非インタラクティブフォームをPDFファイルとして保存できます。 フォームは、Adobe ReaderまたはAcrobatで表示できます。
+非インタラクティブフォームは、保存ファイルとしてPDFできます。 フォームは、Adobe ReaderまたはAcrobatで表示できます。
 
 **関連トピック**
 
-[Java APIを使用してドキュメントをOutputサービスに渡す](creating-document-output-streams.md#pass-documents-to-the-output-service-using-the-java-api)
+[Java API を使用してドキュメントを Output Service に渡す](creating-document-output-streams.md#pass-documents-to-the-output-service-using-the-java-api)
 
-[WebサービスAPIを使用してドキュメントをOutputサービスに渡す](creating-document-output-streams.md#pass-documents-to-the-output-service-using-the-web-service-api)
+[Web サービス API を使用してドキュメントを Output Service に渡す](creating-document-output-streams.md#pass-documents-to-the-output-service-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
+[Output サービス API のクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
 [フラグメントを使用したPDFドキュメントの作成](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
-### Java APIを使用してドキュメントをOutputサービスに渡す {#pass-documents-to-the-output-service-using-the-java-api}
+### Java API を使用してドキュメントを Output Service に渡す {#pass-documents-to-the-output-service-using-the-java-api}
 
-OutputサービスおよびContent Services（非推奨）API(Java)を使用してContent Services（非推奨）から取得したドキュメントを渡します。
+Output サービスおよび Content Services（非推奨）API(Java) を使用して Content Services（非推奨）から取得したドキュメントを渡します。
 
 1. プロジェクトファイルを含めます。
 
-   Javaプロジェクトのクラスパスに、adobe-output-client.jarやadobe-contentservices-client.jarなどのクライアントJARファイルを含めます。
+   Java プロジェクトのクラスパスに、adobe-output-client.jar や adobe-contentservices-client.jar などのクライアント JAR ファイルを含めます。
 
-1. OutputとDocument Management Client APIオブジェクトを作成します。
+1. 出力とドキュメント管理クライアント API オブジェクトを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
-   * コンストラクターを使用して`OutputClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * の作成 `OutputClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
    * コンストラクタを使用して `DocumentManagementServiceClientImpl` オブジェクトを渡すことによって、`ServiceClientFactory` オブジェクトを作成します。
 
 1. Content Services（非推奨）からフォームデザインを取得します。
 
-   `DocumentManagementServiceClientImpl`オブジェクトの`retrieveContent`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `DocumentManagementServiceClientImpl` オブジェクトの `retrieveContent` メソッドを使用して、次の値を渡します。
 
-   * コンテンツが追加されるストアを指定するstring値。 デフォルトのストアは`SpacesStore`です。 この値は必須のパラメーターです。
-   * 取得するコンテンツの完全修飾パスを指定するstring値（例：`/Company Home/Form Designs/Loan.xdp`）。 この値は必須のパラメーターです。
-   * バージョンを指定するstring値。 この値はオプションのパラメーターで、空の文字列を渡すことができます。 この場合、最新バージョンが取得されます。
+   * コンテンツが追加されるストアを指定する string 値です。 デフォルトのストアは `SpacesStore`. この値は必須のパラメータです。
+   * 取得するコンテンツの完全修飾パスを指定する string 値 ( 例： `/Company Home/Form Designs/Loan.xdp`) をクリックします。 この値は必須のパラメータです。
+   * バージョンを指定する string 値。 この値はオプションのパラメーターで、空の文字列を渡すことができます。 この場合、最新バージョンが取得されます。
 
-   `retrieveContent`メソッドは、XDPファイルを含む`CRCResult`オブジェクトを返します。 `CRCResult`オブジェクトの`getDocument`メソッドを呼び出して、`com.adobe.idp.Document`インスタンスを取得します。
+   この `retrieveContent` メソッドは、 `CRCResult` XDP ファイルを格納するオブジェクト。 の取得 `com.adobe.idp.Document` を呼び出すことによるインスタンス `CRCResult` オブジェクトの `getDocument` メソッド。
 
-1. 非インタラクティブPDFフォームをレンダリングします。
+1. 非インタラクティブPDFフォームをレンダリング
 
-   `OutputClient`オブジェクトの`generatePDFOutput2`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `OutputClient` オブジェクトの `generatePDFOutput2` メソッドを使用して、次の値を渡します。
 
-   * `TransformationFormat`列挙値。 PDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
-   * 画像などの追加リソースが配置されるコンテンツルートを指定するstring値。
-   * フォームデザインを表す`com.adobe.idp.Document`オブジェクト（`CRCResult`オブジェクトの`getDocument`メソッドから返されるインスタンスを使用）。
-   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
-   * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
-   * フォームデザインとマージするデータを含むXMLデータソースを含む`com.adobe.idp.Document`オブジェクト。
+   * A `TransformationFormat` 列挙値。 PDF・ドキュメントを生成するには、 `TransformationFormat.PDF`.
+   * 画像などの追加リソースが存在するコンテンツルートを指定する string 値です。
+   * A `com.adobe.idp.Document` フォームデザインを表すオブジェクト ( `CRCResult` オブジェクトの `getDocument` メソッド )。
+   * A `PDFOutputOptionsSpec` PDFの実行時オプションを含むオブジェクト。
+   * A `RenderOptionsSpec` レンダリングの実行時オプションを含むオブジェクト。
+   * この `com.adobe.idp.Document` フォームデザインとマージするデータが含まれる XML データソースを含むオブジェクト。
 
-   `generatePDFOutput2`メソッドは、操作の結果を含む`OutputResult`オブジェクトを返します。
+   この `generatePDFOutput2` メソッドは、 `OutputResult` 操作の結果を格納するオブジェクト。
 
 1. フォームデータストリームを使用してアクションを実行します。
 
-   * `OutputResult`オブジェクトの`getGeneratedDoc`メソッドを呼び出して、非インタラクティブフォームを表す`com.adobe.idp.Document`オブジェクトを取得します。
-   * 操作の結果を格納する`java.io.File`オブジェクトを作成します。 ファイル名の拡張子が.pdfであることを確認します。
-   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします（`getGeneratedDoc`メソッドで返された`com.adobe.idp.Document`オブジェクトを使用するようにしてください）。
+   * の取得 `com.adobe.idp.Document` を呼び出して非インタラクティブフォームを表すオブジェクト `OutputResult` オブジェクトの `getGeneratedDoc` メソッド。
+   * の作成 `java.io.File` 操作の結果を格納するオブジェクト。 ファイル名の拡張子が.pdf であることを確認します。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、 `com.adobe.idp.Document` オブジェクトをファイルに追加します ( `com.adobe.idp.Document` が返したオブジェクト `getGeneratedDoc` メソッド )。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[クイックスタート（EJBモード）:Java APIを使用してOutputサービスにドキュメントを渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
+[クイックスタート（EJB モード）:Java API を使用して Output Service にドキュメントを渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用してOutputサービスにドキュメントを渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用して Output Service にドキュメントを渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用してドキュメントをOutputサービスに渡す {#pass-documents-to-the-output-service-using-the-web-service-api}
+### Web サービス API を使用してドキュメントを Output Service に渡す {#pass-documents-to-the-output-service-using-the-web-service-api}
 
-OutputサービスおよびContent Services（非推奨）API（Webサービス）を使用してContent Services（非推奨）から取得したドキュメントを渡します。
+Output サービスおよび Content Services（非推奨）API（Web サービス）を使用して Content Services（非推奨）から取得したドキュメントを渡します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 このクライアントアプリケーションは2つのAEM Formsサービスを呼び出すので、2つのサービス参照を作成します。 Outputサービスに関連付けられたサービス参照に、次のWSDL定義を使用します。`http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 このクライアントアプリケーションは 2 つのAEM Formsサービスを呼び出すので、2 つのサービス参照を作成します。 Output サービスに関連付けられたサービス参照に、次の WSDL 定義を使用します。 `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
-   Document Managementサービスに関連付けられたサービス参照に、次のWSDL定義を使用します。`http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`.
+   Document Management サービスに関連付けられたサービス参照に対して、次の WSDL 定義を使用します。 `http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`.
 
-   `BLOB`データ型は両方のサービス参照に共通なので、`BLOB`データ型を使用する際には完全に修飾します。 対応するWebサービスのクイックスタートでは、すべての`BLOB`インスタンスが完全に認定されます。
-
-   >[!NOTE]
-   >
-   >`localhost`*を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。*
-
-1. OutputとDocument Management Client APIオブジェクトを作成します。
-
-   * デフォルトのコンストラクターを使用して`OutputServiceClient`オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 FormsサービスにWSDLを指定するstring値を渡します（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます)。
-   * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値は、MTOMが使用されるようにします。
-   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
-
-      * フィールド`OutputServiceClient.ClientCredentials.UserName.UserName`にAEM formsユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド`OutputServiceClient.ClientCredentials.UserName.Password`に割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に定数値`HttpClientCredentialType.Basic`を割り当てます。
-   * フィールド`BasicHttpBindingSecurity.Security.Mode`に定数値`BasicHttpSecurityMode.TransportCredentialOnly`を割り当てます。
+   これは、 `BLOB` データタイプは、両方のサービス参照に共通で、完全に修飾されます `BLOB` データタイプを使用する場合。 対応する Web サービスのクイックスタートで、 `BLOB` インスタンスは完全に選定されています。
 
    >[!NOTE]
    >
-   >`DocumentManagementServiceClient`*サービスクライアントに対して、この手順を繰り返します。*
+   >置換 `localhost`* AEM Formsをホストするサーバーの IP アドレス*
+
+1. 出力とドキュメント管理クライアント API オブジェクトを作成します。
+
+   * の作成 `OutputServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
+   * の作成 `OutputServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をFormsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/OutputService?blob=mtom`) をクリックします。 を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます )。
+   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `OutputServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
+   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
+   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
+
+      * フィールドにAEM forms ユーザー名を割り当てます。 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 対応するパスワード値をフィールドに割り当てます。 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 定数値を割り当て `HttpClientCredentialType.Basic` フィールドに `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+   * 定数値を割り当て `BasicHttpSecurityMode.TransportCredentialOnly` フィールドに `BasicHttpBindingSecurity.Security.Mode`.
+
+   >[!NOTE]
+   >
+   >以下の手順を `DocumentManagementServiceClient`*サービスクライアント。*
 
 1. Content Services（非推奨）からフォームデザインを取得します。
 
-   `DocumentManagementServiceClient`オブジェクトの`retrieveContent`メソッドを呼び出し、次の値を渡して、コンテンツを取得します。
+   を呼び出して、コンテンツを取得する `DocumentManagementServiceClient` オブジェクトの `retrieveContent` メソッドを使用して、次の値を渡します。
 
-   * コンテンツが追加されるストアを指定するstring値。 デフォルトのストアは`SpacesStore`です。 この値は必須のパラメーターです。
-   * 取得するコンテンツの完全修飾パスを指定するstring値（例：`/Company Home/Form Designs/Loan.xdp`）。 この値は必須のパラメーターです。
-   * バージョンを指定するstring値。 この値はオプションのパラメーターで、空の文字列を渡すことができます。 この場合、最新バージョンが取得されます。
+   * コンテンツが追加されるストアを指定する string 値です。 デフォルトのストアは `SpacesStore`. この値は必須のパラメータです。
+   * 取得するコンテンツの完全修飾パスを指定する string 値 ( 例： `/Company Home/Form Designs/Loan.xdp`) をクリックします。 この値は必須のパラメータです。
+   * バージョンを指定する string 値。 この値はオプションのパラメーターで、空の文字列を渡すことができます。 この場合、最新バージョンが取得されます。
    * 参照リンクの値を格納する文字列出力パラメーター。
-   * コンテンツを格納する`BLOB`出力パラメーター。 この出力パラメーターを使用して、コンテンツを取得できます。
-   * コンテンツ属性を格納する`ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType`出力パラメーター。
-   * `CRCResult`出力パラメータ。 このオブジェクトを使用する代わりに、 `BLOB`出力パラメーターを使用してコンテンツを取得できます。
+   * A `BLOB` コンテンツを格納する出力パラメーター。 この出力パラメーターを使用して、コンテンツを取得できます。
+   * A `ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType` コンテンツ属性を格納する出力パラメーター。
+   * A `CRCResult` 出力パラメーター。 このオブジェクトを使用する代わりに、 `BLOB` コンテンツを取得する出力パラメーター。
 
-1. 非インタラクティブPDFフォームをレンダリングします。
+1. 非インタラクティブPDFフォームをレンダリング
 
-   `OutputServiceClient`オブジェクトの`generatePDFOutput2`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `OutputServiceClient` オブジェクトの `generatePDFOutput2` メソッドを使用して、次の値を渡します。
 
-   * `TransformationFormat`列挙値。 PDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
-   * 画像などの追加リソースが配置されるコンテンツルートを指定するstring値。
-   * フォームデザインを表す`BLOB`オブジェクト(Content Services（非推奨）から返される`BLOB`インスタンスを使用)。
-   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
-   * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
-   * フォームデザインとマージするデータを含むXMLデータソースを含む`BLOB`オブジェクト。
-   * `generatePDFOutput2`メソッドによって設定される出力`BLOB`オブジェクト。 `generatePDFOutput2`メソッドは、このオブジェクトに、ドキュメントを表す生成済みのメタデータを入力します。 （このパラメーター値は、Webサービスの呼び出しにのみ必要です）。
-   * 操作の結果を含む出力`OutputResult`オブジェクト。 （このパラメーター値は、Webサービスの呼び出しにのみ必要です）。
+   * A `TransformationFormat` 列挙値。 PDF・ドキュメントを生成するには、 `TransformationFormat.PDF`.
+   * 画像などの追加リソースが存在するコンテンツルートを指定する string 値です。
+   * A `BLOB` フォームデザインを表すオブジェクト ( `BLOB` Content Services（非推奨）から返されたインスタンスです。
+   * A `PDFOutputOptionsSpec` PDFの実行時オプションを含むオブジェクト。
+   * A `RenderOptionsSpec` レンダリングの実行時オプションを含むオブジェクト。
+   * この `BLOB` フォームデザインとマージするデータが含まれる XML データソースを含むオブジェクト。
+   * 出力 `BLOB` オブジェクト `generatePDFOutput2` メソッド。 この `generatePDFOutput2` メソッドは、ドキュメントを表す生成されたメタデータをこのオブジェクトに設定します。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+   * 出力 `OutputResult` 操作の結果を格納するオブジェクト。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
 
-   `generatePDFOutput2`メソッドは、非インタラクティブPDFフォームを含む`BLOB`オブジェクトを返します。
+   この `generatePDFOutput2` メソッドは、 `BLOB` 非インタラクティブPDFフォームを含むオブジェクト。
 
 1. フォームデータストリームを使用してアクションを実行します。
 
-   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 インタラクティブPDFドキュメントのファイルの場所と、ファイルを開くモードを表すstring値を渡します。
-   * `generatePDFOutput2`メソッドから取得した`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバーの値を取得して、バイト配列を設定します。
-   * コンストラクターを呼び出し、`System.IO.FileStream`オブジェクトを渡して、`System.IO.BinaryWriter`オブジェクトを作成します。
-   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことにより、バイト配列の内容をPDFファイルに書き込みます。
+   * の作成 `System.IO.FileStream` オブジェクトを指定します。 インタラクティブPDFドキュメントのファイルの場所と、ファイルを開くモードを表す string 値を渡します。
+   * コンテンツを格納するバイト配列を作成します。 `BLOB` から取得したオブジェクト `generatePDFOutput2` メソッド。 バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバー。
+   * の作成 `System.IO.BinaryWriter` オブジェクトのコンストラクタを呼び出し、 `System.IO.FileStream` オブジェクト。
+   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-## リポジトリ内のドキュメントをOutputサービスに渡す {#passing-documents-located-in-the-repository-to-the-output-service}
+## リポジトリ内のドキュメントを Output サービスに渡す {#passing-documents-located-in-the-repository-to-the-output-service}
 
-Outputサービスは、通常はXDPファイルとして保存され、Designerで作成されたフォームデザインに基づく非インタラクティブPDFフォームをレンダリングします。 フォームデザインを含む`com.adobe.idp.Document`オブジェクトをOutputサービスに渡すことができます。 次に、Outputサービスは、`com.adobe.idp.Document`オブジェクト内のフォームデザインをレンダリングします。
+Output サービスは、通常は XDP ファイルとして保存され、Designer で作成されたフォームデザインに基づく、非インタラクティブなPDFフォームをレンダリングします。 次の条件を満たす場合に、 `com.adobe.idp.Document` フォームデザインを含んで Output サービスに送信するオブジェクト。 次に、Output サービスは、 `com.adobe.idp.Document` オブジェクト。
 
-`com.adobe.idp.Document`オブジェクトをOutputサービスに渡す利点の1つは、他のAEM Formsサービス操作が`com.adobe.idp.Document`インスタンスを返すことです。 つまり、別のサービス操作から`com.adobe.idp.Document`インスタンスを取得してレンダリングできます。 例えば、次の図に示すように、XDPファイルがAEM Formsリポジトリに格納されているとします。
+を通過する利点 `com.adobe.idp.Document` Output サービスのオブジェクトは、他のAEM Formsサービス操作が `com.adobe.idp.Document` インスタンス。 つまり、 `com.adobe.idp.Document` インスタンスを別のサービス操作から削除し、レンダリングします。 例えば、次の図に示すように、XDP ファイルがAEM Formsリポジトリに格納されているとします。
 
 ![pd_pd_formrepository](assets/pd_pd_formrepository.png)
 
-*FormsFolder*&#x200B;フォルダーは、AEM Formsリポジトリ内のユーザー定義の場所です（この場所は例で、デフォルトでは存在しません）。 この例では、Loan.xdpという名前のフォームデザインがこのフォルダーに配置されています。 この場所には、フォームデザインに加えて、画像などの他のフォームの販促物を格納できます。 AEM Formsリポジトリ内のリソースへのパスは次のとおりです。
+この *FormsFolder* folder は、AEM Formsリポジトリ内のユーザー定義の場所です（この場所は例で、デフォルトでは存在しません）。 この例では、Loan.xdp という名前のフォームデザインがこのフォルダー内にあります。 フォームデザインに加えて、画像などの他のフォームの販促物もこの場所に保存できます。 AEM Formsリポジトリ内のリソースへのパスは次のとおりです。
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
-プログラムによってAEM FormsリポジトリからLoan.xdpを取得し、`com.adobe.idp.Document`オブジェクト内でOutputサービスに渡すことができます。
+プログラムによってAEM Formsリポジトリから Loan.xdp を取得し、 `com.adobe.idp.Document` オブジェクト。
 
-リポジトリ内のXDPファイルをベースにしたPDFを作成するには、次の2つの方法のいずれかを使用します。 XDPの場所は、参照によって渡すことも、XDPをプログラムでリポジトリから取得し、XDPファイル内でOutputサービスに渡すこともできます。
+リポジトリ内の XDP ファイルに基づいてPDFを作成するには、2 つの方法のいずれかを使用します。 XDP の場所は、参照によって渡すことも、プログラムによってリポジトリから XDP を取得し、XDP ファイル内で Output サービスに渡すこともできます。
 
-[クイックスタート（EJBモード）:Java APIを使用したアプリケーションXDPファイルに基づくPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api) （参照でXDPファイルの場所を渡す方法を示します）。
+[クイックスタート（EJB モード）:Java API を使用したPDFXDP ファイルに基づくアプリケーションドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api) （参照によって XDP ファイルの場所を渡す方法を示します）。
 
-[クイックスタート（EJBモード）:Java APIを使用してAEM Formsリポジトリ内のドキュメントをOutputサービスに渡す方法](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (プログラムによってAEM FormsリポジトリからXDPファイルを取得し、インスタンス内でOutputサービスに渡す方法を示し `com.adobe.idp.Document` ます)。（この節では、このタスクの実行方法について説明します）。
+[クイックスタート（EJB モード）:Java API を使用してAEM Formsリポジトリ内のドキュメントを Output サービスに渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) ( プログラムによってAEM Formsリポジトリから XDP ファイルを取得し、 `com.adobe.idp.Document` インスタンス )。 （このセクションでは、このタスクの実行方法について説明します）。
 
 >[!NOTE]
 >
->Formsサービスについて詳しくは、『 AEM Formsのサービスリファレンス[ 』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>Formsサービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 手順の概要 {#summary_of_steps-3}
 
-AEM Formsリポジトリから取得したドキュメントをOutputサービスに渡すには、次のタスクを実行します。
+AEM Formsリポジトリから取得したドキュメントを Output サービスに渡すには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
-1. OutputとDocument Management Client APIオブジェクトを作成します。
+1. 出力とドキュメント管理クライアント API オブジェクトを作成します。
 1. AEM Formsリポジトリからフォームデザインを取得します。
-1. 非インタラクティブPDFフォームをレンダリングします。
-1. データストリームを使用してアクションを実行します。
+1. 非インタラクティブPDFフォームをレンダリング
+1. データストリームでアクションを実行します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、プロキシファイルを含めます。
+必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを含めます。
 
-**出力とドキュメント管理クライアントAPIオブジェクトの作成**
+**出力とドキュメント管理クライアント API オブジェクトの作成**
 
-プログラムでOutputサービスAPI操作を実行する前に、OutputクライアントAPIオブジェクトを作成します。 また、このワークフローはContent Services（非推奨）からXDPファイルを取得するので、Document Management APIオブジェクトを作成します。
+Output サービス API 操作をプログラムで実行する前に、Output クライアント API オブジェクトを作成します。 また、このワークフローは Content Services（非推奨）から XDP ファイルを取得するので、Document Management API オブジェクトを作成します。
 
 **AEM Formsリポジトリからフォームデザインを取得する**
 
-Repository APIを使用して、AEM FormsリポジトリからXDPファイルを取得します。 （[リソースの読み取り](/help/forms/developing/aem-forms-repository.md#reading-resources)を参照）。
+Repository API を使用して、AEM Formsリポジトリから XDP ファイルを取得します。 ( [リソースの読み取り](/help/forms/developing/aem-forms-repository.md#reading-resources).)
 
-XDPファイルは、`com.adobe.idp.Document`インスタンス（Webサービスを使用している場合は`BLOB`インスタンス）内で返されます。 その後、`com.adobe.idp.Document`インスタンスをOutputサービスに渡すことができます。
+XDP ファイルは、 `com.adobe.idp.Document` インスタンス ( または `BLOB` インスタンス（web サービスを使用する場合）。 その後、 `com.adobe.idp.Document` Output サービスのインスタンス。
 
 **非インタラクティブPDFフォームのレンダリング**
 
-非インタラクティブフォームをレンダリングするには、AEM FormsリポジトリAPIを使用して返された`com.adobe.idp.Document`インスタンスを渡します。
+非インタラクティブフォームをレンダリングするには、 `com.adobe.idp.Document` AEM Forms Repository API を使用して返されたインスタンス。
 
 >[!NOTE]
 >
->`generatePDFOutput2`および`generatePrintedOutput2`という2つの新しいメソッドは、フォームデザインを含む`com.adobe.idp.Document`オブジェクトを受け取ります。 また、印刷ストリームをネットワークプリンターに送信する際に、フォームデザインを含む`com.adobe.idp.Document`をOutputサービスに渡すこともできます。
+>次の 2 つの新しいメソッド： `generatePDFOutput2`および `generatePrintedOutput2`受け入れる `com.adobe.idp.Document`フォームデザインを含むオブジェクト。 また、 `com.adobe.idp.Document` 印刷ストリームをネットワークプリンターに送信する際に Output サービスにフォームデザインを含む
 
-**フォームデータストリームを使用してアクションを実行する**
+**フォームデータストリームを使用してアクションを実行します**
 
-非インタラクティブフォームをPDFファイルとして保存できます。 フォームは、Adobe ReaderまたはAcrobatで表示できます。
+非インタラクティブフォームは、保存ファイルとしてPDFできます。 フォームは、Adobe ReaderまたはAcrobatで表示できます。
 
 **関連トピック**
 
-[Java APIを使用して、リポジトリ内のドキュメントをOutputサービスに渡す](creating-document-output-streams.md#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api)
+[Java API を使用して、リポジトリ内のドキュメントを Output Service に渡します](creating-document-output-streams.md#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
+[Output サービス API のクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
 ResourceRepositoryClient
 
-### Java APIを使用して、リポジトリ内のドキュメントをOutputサービスに渡す {#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api}
+### Java API を使用して、リポジトリ内のドキュメントを Output Service に渡します {#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api}
 
-OutputサービスとリポジトリAPI(Java)を使用してリポジトリから取得したドキュメントを渡します。
+Output サービスと Repository API(Java) を使用してリポジトリから取得したドキュメントを渡します。
 
 1. プロジェクトファイルを含めます。
 
-   Javaプロジェクトのクラスパスに、adobe-output-client.jarやadobe-repository-client.jarなどのクライアントJARファイルを含めます。
+   Java プロジェクトのクラスパスに、adobe-output-client.jar や adobe-repository-client.jar などのクライアント JAR ファイルを含めます。
 
-1. OutputとDocument Management Client APIオブジェクトを作成します。
+1. 出力とドキュメント管理クライアント API オブジェクトを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
-   * コンストラクターを使用して`OutputClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * の作成 `OutputClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
    * コンストラクタを使用して `DocumentManagementServiceClientImpl` オブジェクトを渡すことによって、`ServiceClientFactory` オブジェクトを作成します。
 
 1. AEM Formsリポジトリからフォームデザインを取得します。
 
-   `ResourceRepositoryClient`オブジェクトの`readResourceContent`メソッドを呼び出し、URIの場所を指定する文字列値をXDPファイルに渡します。 例えば、`/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` のようになります。この値は必須です。 このメソッドは、XDPファイルを表す`com.adobe.idp.Document`インスタンスを返します。
+   を呼び出す `ResourceRepositoryClient` オブジェクトの `readResourceContent` メソッドを使用して URI の場所を指定する string 値を XDP ファイルに渡します。 例えば、`/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` のようになります。この値は必須です。 このメソッドは、 `com.adobe.idp.Document` XDP ファイルを表すインスタンス。
 
-1. 非インタラクティブPDFフォームをレンダリングします。
+1. 非インタラクティブPDFフォームをレンダリング
 
-   `OutputClient`オブジェクトの`generatePDFOutput2`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `OutputClient` オブジェクトの `generatePDFOutput2` メソッドを使用して、次の値を渡します。
 
-   * `TransformationFormat`列挙値。 PDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
-   * 画像などの追加リソースが配置されるコンテンツルートを指定するstring値。 （例：`repository:///Applications/FormsApplication/1.0/FormsFolder/`）。
-   * フォームデザインを表す`com.adobe.idp.Document`オブジェクト（`ResourceRepositoryClient`オブジェクトの`readResourceContent`メソッドから返されるインスタンスを使用）。
-   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
-   * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
-   * フォームデザインとマージするデータを含むXMLデータソースを含む`com.adobe.idp.Document`オブジェクト。
+   * A `TransformationFormat` 列挙値。 PDF・ドキュメントを生成するには、 `TransformationFormat.PDF`.
+   * 画像などの追加リソースが存在するコンテンツルートを指定する string 値です。 （例：`repository:///Applications/FormsApplication/1.0/FormsFolder/`）。
+   * A `com.adobe.idp.Document` フォームデザインを表すオブジェクト ( `ResourceRepositoryClient` オブジェクトの `readResourceContent` メソッド )。
+   * A `PDFOutputOptionsSpec` PDFの実行時オプションを含むオブジェクト。
+   * A `RenderOptionsSpec` レンダリングの実行時オプションを含むオブジェクト。
+   * この `com.adobe.idp.Document` フォームデザインとマージするデータが含まれる XML データソースを含むオブジェクト。
 
-   `generatePDFOutput2`メソッドは、操作の結果を含む`OutputResult`オブジェクトを返します。
+   この `generatePDFOutput2` メソッドは、 `OutputResult` 操作の結果を格納するオブジェクト。
 
 1. フォームデータストリームを使用してアクションを実行します。
 
-   * `OutputResult`オブジェクトの`getGeneratedDoc`メソッドを呼び出して、非インタラクティブフォームを表す`com.adobe.idp.Document`オブジェクトを取得します。
-   * 操作の結果を格納する`java.io.File`オブジェクトを作成します。 ファイル名の拡張子が.pdfであることを確認します。
-   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします（`getGeneratedDoc`メソッドで返された`com.adobe.idp.Document`オブジェクトを使用するようにしてください）。
+   * の取得 `com.adobe.idp.Document` を呼び出して非インタラクティブフォームを表すオブジェクト `OutputResult` オブジェクトの `getGeneratedDoc` メソッド。
+   * の作成 `java.io.File` 操作の結果を格納するオブジェクト。 ファイル名の拡張子が.pdf であることを確認します。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、 `com.adobe.idp.Document` オブジェクトをファイルに追加します ( `com.adobe.idp.Document` が返したオブジェクト `getGeneratedDoc` メソッド )。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[クイックスタート（EJBモード）:Java APIを使用してAEM Formsリポジトリ内のドキュメントをOutputサービスに渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
+[クイックスタート（EJB モード）:Java API を使用してAEM Formsリポジトリ内のドキュメントを Output サービスに渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -937,490 +937,490 @@ OutputサービスとリポジトリAPI(Java)を使用してリポジトリか�
 
 ## フラグメントを使用したPDFドキュメントの作成 {#creating-pdf-documents-using-fragments}
 
-OutputサービスとAssemblerサービスを使用して、フラグメントに基づく出力ストリーム（PDFドキュメントなど）を作成できます。 Assemblerサービスは、複数のXDPファイル内のフラグメントに基づくXDPドキュメントをアセンブリします。 アセンブリされたXDPドキュメントがOutputサービスに渡され、PDFドキュメントが作成されます。 このワークフローでは、生成中のPDFドキュメントが表示されますが、Outputサービスでは、このワークフローに対してZPLなどの他の出力タイプを生成できます。 PDFドキュメントは、ディスカッションの目的でのみ使用します。
+Output サービスと Assembler サービスを使用して、フラグメントに基づく出力ストリーム (PDFドキュメントなど ) を作成できます。 Assembler サービスは、複数の XDP ファイル内に配置されたフラグメントに基づく XDP ドキュメントをアセンブリします。 アセンブリされた XDP ドキュメントが Output サービスに渡され、Output サービスがPDFドキュメントを作成します。 このワークフローでは、生成中のPDFドキュメントが表示されますが、Output サービスでは、このワークフローに対して ZPL などの他の出力タイプを生成できます。 PDFドキュメントは、ディスカッションの目的でのみ使用されます。
 
 次の図に、このワークフローを示します。
 
 ![cp_cp_outputassemblefragments](assets/cp_cp_outputassemblefragments.png)
 
-*Fragments*&#x200B;を使用したPDFドキュメントの作成を読む前に、Assemblerサービスを使用して複数のXDPドキュメントをアセンブリする方法を理解しておくことをお勧めします。 （[複数のXDPフラグメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments)を参照）。
+読む前に *フラグメントを使用したPDFドキュメントの作成*&#x200B;を使用する場合は、Assembler サービスを使用して複数の XDP ドキュメントをアセンブリする方法を理解しておくことをお勧めします。 ( [複数の XDP フラグメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments).)
 
 >[!NOTE]
 >
->また、Assemblerサービスによってアセンブルされたフォームデザインを、Outputサービスの代わりにFormsサービスに渡すこともできます。 OutputサービスとFormsサービスの主な違いは、FormsサービスでインタラクティブPDFドキュメントが生成され、Outputサービスで非インタラクティブPDFドキュメントが生成される点です。 また、Formsサービスは、ZPLなどのプリンターベースの出力ストリームを生成できません。
+>また、Assembler サービスによってアセンブルされたフォームデザインを、Output サービスの代わりにFormsサービスに渡すこともできます。 Output サービスとFormsサービスの主な違いは、FormsサービスがインタラクティブなPDFドキュメントを生成し、Output サービスが非インタラクティブなPDFドキュメントを生成する点です。 また、Formsサービスは、ZPL などのプリンターベースの出力ストリームを生成できません。
 
 >[!NOTE]
 >
->Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>Output サービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 手順の概要 {#summary_of_steps-4}
 
-フラグメントに基づいてPDFドキュメントを作成するには、次の手順を実行します。
+フラグメントに基づいてPDFドキュメントを作成するには、次の手順に従います。
 
 1. プロジェクトファイルを含めます。
-1. OutputおよびAssembler Clientオブジェクトを作成します。
-1. フォームデザインを生成するには、Assemblerサービスを使用します。
-1. Outputサービスを使用してPDFドキュメントを生成します。
-1. PDFドキュメントをPDFファイルとして保存します。
+1. Output および Assembler Client オブジェクトを作成します。
+1. フォームデザインを生成するには、Assembler サービスを使用します。
+1. Output サービスを使用してPDFドキュメントを生成します。
+1. PDF・ドキュメントをPDF・ファイルとして保存します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、必ずプロキシファイルを含めてください。
+開発プロジェクトに必要なファイルを含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
 
 **出力およびアセンブラクライアントオブジェクトの作成**
 
-プログラムでOutputサービスAPI操作を実行する前に、OutputクライアントAPIオブジェクトを作成します。 また、このワークフローはAssemblerサービスを呼び出してフォームデザインを作成するので、AssemblerクライアントAPIオブジェクトを作成します。
+Output サービス API 操作をプログラムで実行する前に、Output クライアント API オブジェクトを作成します。 また、このワークフローは Assembler サービスを呼び出してフォームデザインを作成するので、Assembler クライアント API オブジェクトを作成します。
 
-**フォームデザインの生成にAssemblerサービスを使用する**
+**Assembler サービスを使用してフォームデザインを生成する**
 
-Assemblerサービスを使用して、フラグメントを使用してフォームデザインを生成します。 Assemblerサービスは、フォームデザインを含む`com.adobe.idp.Document`インスタンスを返します。
+Assembler サービスを使用して、フラグメントを使用してフォームデザインを生成します。 Assembler サービスが `com.adobe.idp.Document` フォームデザインを含むインスタンス。
 
-**Outputサービスを使用してPDFドキュメントを生成する**
+**Output サービスを使用してPDFドキュメントを生成**
 
-Outputサービスを使用して、Assemblerサービスが作成したフォームデザインを使用してPDFドキュメントを生成できます。 Assemblerサービスが返した`com.adobe.idp.Document`インスタンスをOutputサービスに渡します。
+Output サービスを使用して、Assembler サービスが作成したフォームデザインを使用してPDFドキュメントを生成できます。 パス `com.adobe.idp.Document` Assembler サービスが Output サービスに返したインスタンス。
 
 **PDFドキュメントをPDFファイルとして保存**
 
-OutputサービスでPDFドキュメントが生成されたら、PDFファイルとして保存できます。
+Output サービスがPDFドキュメントを生成したら、ドキュメントをPDFファイルとして保存できます。
 
 **関連トピック**
 
-[Java APIを使用して、フラグメントに基づくPDFドキュメントを作成する](creating-document-output-streams.md#create-a-pdf-document-based-on-fragments-using-the-java-api)
+[Java API を使用して、フラグメントに基づくPDFドキュメントを作成する](creating-document-output-streams.md#create-a-pdf-document-based-on-fragments-using-the-java-api)
 
-[WebサービスAPIを使用して、フラグメントに基づくPDFドキュメントを作成する](creating-document-output-streams.md#create-a-pdf-document-based-on-fragments-using-the-web-service-api)
+[Web サービス API を使用して、フラグメントに基づくPDFドキュメントを作成します](creating-document-output-streams.md#create-a-pdf-document-based-on-fragments-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
+[Output サービス API のクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-[複数のXDPフラグメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments)
+[複数の XDP フラグメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments)
 
-[PDFドキュメントの作成](creating-document-output-streams.md#creating-pdf-documents)
+[PDF文書の作成](creating-document-output-streams.md#creating-pdf-documents)
 
-### Java APIを使用して、フラグメントに基づくPDFドキュメントを作成する {#create-a-pdf-document-based-on-fragments-using-the-java-api}
+### Java API を使用して、フラグメントに基づくPDFドキュメントを作成する {#create-a-pdf-document-based-on-fragments-using-the-java-api}
 
-OutputサービスAPIとAssemblerサービスAPI(Java)を使用して、フラグメントに基づいたPDFドキュメントを作成します。
+Output Service API と Assembler Service API(Java) を使用して、フラグメントに基づいてPDFドキュメントを作成します。
 
 1. プロジェクトファイルを含めます。
 
-   Javaプロジェクトのクラスパスに、adobe-output-client.jarなどのクライアントJARファイルを含めます。
+   Java プロジェクトのクラスパスに、adobe-output-client.jar などのクライアント JAR ファイルを含めます。
 
-1. OutputおよびAssembler Clientオブジェクトを作成します。
+1. Output および Assembler Client オブジェクトを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して`OutputClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
-   * コンストラクターを使用して`AssemblerServiceClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * の作成 `OutputClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
+   * の作成 `AssemblerServiceClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
 
-1. フォームデザインを生成するには、Assemblerサービスを使用します。
+1. フォームデザインを生成するには、Assembler サービスを使用します。
 
-   `AssemblerServiceClient`オブジェクトの`invokeDDX`メソッドを呼び出し、次の必須値を渡します。
+   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを使用して、以下の必須値を渡します。
 
-   * 使用するDDXドキュメントを表す`com.adobe.idp.Document`オブジェクト。
-   * 入力XDPファイルを格納する`java.util.Map`オブジェクト。
-   * デフォルトのフォントやジョブのログレベルなど、実行時のオプションを指定する`com.adobe.livecycle.assembler.client.AssemblerOptionSpec`オブジェクト。
+   * A `com.adobe.idp.Document` 使用する DDX ドキュメントを表すオブジェクト。
+   * A `java.util.Map` 入力 XDP ファイルを格納するオブジェクト。
+   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` デフォルトのフォントやジョブログレベルを含む、実行時のオプションを指定するオブジェクト。
 
-   `invokeDDX`メソッドは、アセンブリされたXDPドキュメントを含む`com.adobe.livecycle.assembler.client.AssemblerResult`オブジェクトを返します。 アセンブリ済みのXDPドキュメントを取得するには、次の操作を実行します。
+   この `invokeDDX` メソッドは、 `com.adobe.livecycle.assembler.client.AssemblerResult` アセンブリされた XDP ドキュメントを格納するオブジェクト。 アセンブリされた XDP ドキュメントを取得するには、次の操作を実行します。
 
-   * `AssemblerResult`オブジェクトの`getDocuments`メソッドを呼び出します。 このメソッドは`java.util.Map`オブジェクトを返します。
-   * `java.util.Map`オブジェクトを繰り返し処理して、結果の`com.adobe.idp.Document`オブジェクトを見つけます。
-   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、アセンブリされたXDPドキュメントを抽出します。
+   * を呼び出す `AssemblerResult` オブジェクトの `getDocuments` メソッド。 このメソッドは、 `java.util.Map` オブジェクト。
+   * 反復処理 `java.util.Map` 結果が見つかるまでオブジェクトを閉じます。 `com.adobe.idp.Document` オブジェクト。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、アセンブリされた XDP ドキュメントを抽出します。
 
 
-1. Outputサービスを使用してPDFドキュメントを生成します。
+1. Output サービスを使用してPDFドキュメントを生成します。
 
-   `OutputClient`オブジェクトの`generatePDFOutput2`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `OutputClient` オブジェクトの `generatePDFOutput2` メソッドを使用して、次の値を渡します。
 
-   * `TransformationFormat`列挙値。 PDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
-   * 画像などの追加リソースが存在するコンテンツルートを指定するstring値
-   * フォームデザインを表す`com.adobe.idp.Document`オブジェクト（Assemblerサービスから返されたインスタンスを使用）
-   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト
-   * レンダリング実行時オプションを含む`RenderOptionsSpec`オブジェクト
-   * フォームデザインとマージするデータが含まれるXMLデータソースを含む`com.adobe.idp.Document`オブジェクト
+   * A `TransformationFormat` 列挙値。 PDF・ドキュメントを生成するには、 `TransformationFormat.PDF`
+   * 画像などの追加リソースが配置されるコンテンツルートを指定する string 値です
+   * A `com.adobe.idp.Document` フォームデザインを表すオブジェクト（Assembler サービスから返されるインスタンスを使用）
+   * A `PDFOutputOptionsSpec` PDF実行時オプションを含むオブジェクト
+   * A `RenderOptionsSpec` レンダリング実行時オプションを含むオブジェクト
+   * この `com.adobe.idp.Document` フォームデザインとマージするデータが含まれる XML データソースを含むオブジェクト
 
-   `generatePDFOutput2`メソッドは、操作の結果を含む`OutputResult`オブジェクトを返します
+   この `generatePDFOutput2` メソッドは、 `OutputResult` 操作の結果を格納するオブジェクト
 
-1. PDFドキュメントをPDFファイルとして保存します。
+1. PDF・ドキュメントをPDF・ファイルとして保存します。
 
-   * `OutputResult`オブジェクトの`getGeneratedDoc`メソッドを呼び出して、PDFドキュメントを表す`com.adobe.idp.Document`オブジェクトを取得します。
-   * 操作の結果を格納する`java.io.File`オブジェクトを作成します。 ファイル名の拡張子が.pdfであることを確認します。
-   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします。 （`getGeneratedDoc`メソッドが返す`com.adobe.idp.Document`オブジェクトを使用してください）。
+   * の取得 `com.adobe.idp.Document` を呼び出してPDFドキュメントを表すオブジェクト `OutputResult` オブジェクトの `getGeneratedDoc` メソッド。
+   * の作成 `java.io.File` 操作の結果を格納するオブジェクト。 ファイル名の拡張子が.pdf であることを確認します。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、 `com.adobe.idp.Document` オブジェクトをファイルに追加します。 ( 必ず `com.adobe.idp.Document` オブジェクト `getGeneratedDoc` メソッドが返されました )。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[クイックスタート（EJBモード）:Java APIを使用したフラグメントに基づくPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
+[クイックスタート（EJB モード）:Java API を使用して、フラグメントに基づくPDFドキュメントを作成する](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したフラグメントに基づくPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用して、フラグメントに基づくPDFドキュメントを作成する](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-### WebサービスAPIを使用して、フラグメントに基づくPDFドキュメントを作成する {#create-a-pdf-document-based-on-fragments-using-the-web-service-api}
+### Web サービス API を使用して、フラグメントに基づくPDFドキュメントを作成します {#create-a-pdf-document-based-on-fragments-using-the-web-service-api}
 
-OutputサービスAPIとAssemblerサービスAPI（Webサービス）を使用して、フラグメントに基づいたPDFドキュメントを作成します。
+Output Service API と Assembler Service API（Web サービス）を使用して、フラグメントに基づいてPDFドキュメントを作成します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 Outputサービスに関連付けられたサービス参照に、次のWSDL定義を使用します。
+   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 Output サービスに関連付けられたサービス参照に、次の WSDL 定義を使用します。
 
    ```as3
     http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1.
    ```
 
-   Assemblerサービスに関連付けられたサービス参照には、次のWSDL定義を使用します。
+   Assembler サービスに関連付けられたサービス参照に対して、次の WSDL 定義を使用します。
 
    ```as3
     http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1.
    ```
 
-   `BLOB`データ型は両方のサービス参照に共通なので、`BLOB`データ型を使用する際には完全に修飾します。 対応するWebサービスのクイックスタートでは、すべての`BLOB`インスタンスが完全に認定されます。
+   これは、 `BLOB` データタイプは、両方のサービス参照に共通で、完全に修飾されます `BLOB` データタイプを使用する場合。 対応する Web サービスのクイックスタートで、 `BLOB` インスタンスは完全に選定されています。
 
    >[!NOTE]
    >
-   >`localhost`*を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。*
+   >置換 `localhost`* AEM Formsをホストするサーバーの IP アドレス*
 
-1. OutputおよびAssembler Clientオブジェクトを作成します。
+1. Output および Assembler Client オブジェクトを作成します。
 
-   * デフォルトのコンストラクターを使用して`OutputServiceClient`オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに渡す文字列値（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）を渡します。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用する場合は`?blob=mtom`を指定します。
-   * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値は、MTOMが使用されるようにします。
-   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
+   * の作成 `OutputServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
+   * の作成 `OutputServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をAEM Formsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/OutputService?blob=mtom`.) を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます。 ただし、 `?blob=mtom` MTOM を使用する。
+   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `OutputServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
+   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
+   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
 
-      * `OutputServiceClient.ClientCredentials.UserName.UserName`フィールドにAEM formsユーザー名を割り当てます。
-      * 対応するパスワード値を`OutputServiceClient.ClientCredentials.UserName.Password`フィールドに割り当てます。
-      * 定数値`HttpClientCredentialType.Basic`を`BasicHttpBindingSecurity.Transport.ClientCredentialType`フィールドに割り当てます。
-   * `BasicHttpSecurityMode.TransportCredentialOnly`定数値を`BasicHttpBindingSecurity.Security.Mode`フィールドに割り当てます。
+      * AEM forms ユーザー名を `OutputServiceClient.ClientCredentials.UserName.UserName`フィールドに入力します。
+      * 対応するパスワード値を `OutputServiceClient.ClientCredentials.UserName.Password`フィールドに入力します。
+      * 定数値を割り当て `HttpClientCredentialType.Basic` から `BasicHttpBindingSecurity.Transport.ClientCredentialType`フィールドに入力します。
+   * を `BasicHttpSecurityMode.TransportCredentialOnly` 定数値 `BasicHttpBindingSecurity.Security.Mode`フィールドに入力します。
 
    >[!NOTE]
    >
-   >`AssemblerServiceClient`*オブジェクトに対して、次の手順を繰り返します。*
+   >以下の手順を `AssemblerServiceClient`*オブジェクト。*
 
-1. フォームデザインを生成するには、Assemblerサービスを使用します。
+1. フォームデザインを生成するには、Assembler サービスを使用します。
 
-   `AssemblerServiceClient`オブジェクトの`invokeDDX`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを使用して、次の値を渡します。
 
-   * DDXドキュメントを表す`BLOB`オブジェクト
-   * 必要なファイルを含む`MyMapOf_xsd_string_To_xsd_anyType`オブジェクト
-   * 実行時オプションを指定する`AssemblerOptionSpec`オブジェクト
+   * A `BLOB` DDX ドキュメントを表すオブジェクト
+   * この `MyMapOf_xsd_string_To_xsd_anyType` 必要なファイルを含むオブジェクト
+   * An `AssemblerOptionSpec` 実行時のオプションを指定するオブジェクト
 
-   `invokeDDX`メソッドは、ジョブの結果と発生した例外を含む`AssemblerResult`オブジェクトを返します。 新しく作成したXDPドキュメントを取得するには、次の操作を実行します。
+   この `invokeDDX` メソッドは、 `AssemblerResult` ジョブの結果と発生した例外を含むオブジェクト。 新しく作成した XDP ドキュメントを取得するには、次の操作を実行します。
 
-   * `AssemblerResult`オブジェクトの`documents`フィールド（結果のPDFドキュメントを含む`Map`オブジェクト）にアクセスします。
-   * `Map`オブジェクトを繰り返し処理して、アセンブリされたフォームデザインを取得します。 配列メンバの`value`を`BLOB`にキャストします。 この`BLOB`インスタンスをOutputサービスに渡します。
+   * 次にアクセス： `AssemblerResult` オブジェクトの `documents` フィールド ( `Map` 結果のPDF・ドキュメントを格納するオブジェクト。
+   * 反復処理 `Map` オブジェクトを使用して、アセンブルされたフォームデザインを取得します。 その配列メンバのキャスト `value` から `BLOB`. これを渡す `BLOB` インスタンスを Output サービスに追加します。
 
 
-1. Outputサービスを使用してPDFドキュメントを生成します。
+1. Output サービスを使用してPDFドキュメントを生成します。
 
-   `OutputServiceClient`オブジェクトの`generatePDFOutput2`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `OutputServiceClient` オブジェクトの `generatePDFOutput2` メソッドを使用して、次の値を渡します。
 
-   * `TransformationFormat`列挙値。 PDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
-   * 画像などの追加リソースが存在するコンテンツルートを指定するstring値。
-   * フォームデザインを表す`BLOB`オブジェクト（Assemblerサービスから返される`BLOB`インスタンスを使用）。
-   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
-   * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
-   * フォームデザインとマージするデータを含むXMLデータソースを含む`BLOB`オブジェクト。
-   * `generatePDFOutput2`メソッドが設定する出力`BLOB`オブジェクト。 `generatePDFOutput2`メソッドは、このオブジェクトに、ドキュメントを表す生成済みのメタデータを入力します。 （このパラメーター値は、Webサービスの呼び出しにのみ必要です）。
-   * 操作の結果を含む出力`OutputResult`オブジェクト。 （このパラメーター値は、Webサービスの呼び出しにのみ必要です）。
+   * A `TransformationFormat` 列挙値。 PDF・ドキュメントを生成するには、 `TransformationFormat.PDF`.
+   * 画像などの追加リソースが存在するコンテンツルートを指定する string 値です。
+   * A `BLOB` フォームデザインを表すオブジェクト ( `BLOB` Assembler サービスによって返されるインスタンス )。
+   * A `PDFOutputOptionsSpec` PDFの実行時オプションを含むオブジェクト。
+   * A `RenderOptionsSpec` レンダリングの実行時オプションを含むオブジェクト。
+   * この `BLOB` フォームデザインとマージするデータが含まれる XML データソースを含むオブジェクト。
+   * 出力 `BLOB` オブジェクト `generatePDFOutput2` メソッドが設定されます。 この `generatePDFOutput2` メソッドは、ドキュメントを表す生成されたメタデータをこのオブジェクトに設定します。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+   * 出力 `OutputResult` 操作の結果を格納するオブジェクト。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
 
-   `generatePDFOutput2`メソッドは、非インタラクティブPDFフォームを含む`BLOB`オブジェクトを返します。
+   この `generatePDFOutput2` メソッドは、 `BLOB` 非インタラクティブPDFフォームを含むオブジェクト。
 
-1. PDFドキュメントをPDFファイルとして保存します。
+1. PDF・ドキュメントをPDF・ファイルとして保存します。
 
-   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 インタラクティブPDFドキュメントのファイルの場所と、ファイルを開くモードを表すstring値を渡します。
-   * `generatePDFOutput2`メソッドから取得した`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバーの値を取得して、バイト配列を設定します。
-   * コンストラクターを呼び出し、`System.IO.FileStream`オブジェクトを渡して、`System.IO.BinaryWriter`オブジェクトを作成します。
-   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことにより、バイト配列の内容をPDFファイルに書き込みます。
+   * の作成 `System.IO.FileStream` オブジェクトを指定します。 インタラクティブPDFドキュメントのファイルの場所と、ファイルを開くモードを表す string 値を渡します。
+   * コンテンツを格納するバイト配列を作成します。 `BLOB` から取得したオブジェクト `generatePDFOutput2` メソッド。 バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバー。
+   * の作成 `System.IO.BinaryWriter` オブジェクトのコンストラクタを呼び出し、 `System.IO.FileStream` オブジェクト。
+   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
 ## ファイルへの印刷 {#printing-to-files}
 
-Outputサービスを使用して、PostScript、Printer Control Language(PCL)、または次のラベル形式などのストリームをファイルに印刷できます。
+Output サービスを使用すると、PostScript、Printer Control Language(PCL) などのストリームや、次のラベル形式をファイルに印刷できます。
 
 * ゼブラ — ZPL
 * Intermec - IPL
 * Datamax - DPL
-* TecToshiba - TPCL
+* 東芝 — TPCL
 
-Outputサービスを使用すると、XMLデータをフォームデザインとマージし、フォームをファイルに印刷できます。 次の図に、Outputサービスでのレーザーファイルとラベルファイルの作成を示します。
-
->[!NOTE]
->
->プリントストリームをプリンターに送信する方法については、[Sending Print Streams to Printers](creating-document-output-streams.md#sending-print-streams-to-printers)を参照してください。
+Output サービスを使用すると、XML データをフォームデザインと結合し、フォームをファイルに印刷することができます。 次の図に、Output サービスでのレーザーファイルとラベルファイルの作成を示します。
 
 >[!NOTE]
 >
->Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>プリンターに印刷ストリームを送信する方法については、を参照してください。 [プリンタへの印刷ストリームの送信](creating-document-output-streams.md#sending-print-streams-to-printers).
+
+>[!NOTE]
+>
+>Output サービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 手順の概要 {#summary_of_steps-5}
 
-ファイルに印刷するには、次の手順を実行します。
+ファイルに印刷するには、次の手順に従います。
 
 1. プロジェクトファイルを含めます。
-1. Outputクライアントオブジェクトを作成します。
-1. XMLデータソースを参照します。
-1. ファイルに印刷するために必要な印刷実行時オプションを設定します。
+1. Output Client オブジェクトを作成します。
+1. XML データソースを参照します。
+1. ファイルへの印刷に必要な印刷実行時オプションを設定します。
 1. 印刷ストリームをファイルに印刷します。
 1. 操作の結果を取得します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、必ずプロキシファイルを含めてください。
+開発プロジェクトに必要なファイルを含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
 
-次のJARファイルをプロジェクトのクラスパスに追加する必要があります。
+次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(AEM FormsをJBossにデプロイする場合に必要)
-* jbossall-client.jar(AEM FormsをJBossにデプロイする場合に必要)
+* adobe-utilities.jar(AEM Formsを JBoss にデプロイする場合に必要 )
+* jbossall-client.jar(AEM Formsが JBoss にデプロイされている場合に必要 )
 
-AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。 （[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照。）
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。 （[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照。）
 
-**Outputクライアントオブジェクトの作成**
+**出力クライアントオブジェクトの作成**
 
-プログラムによってOutputサービス操作を実行する前に、Outputサービスクライアントオブジェクトを作成する必要があります。 Java APIを使用している場合は、`OutputClient`オブジェクトを作成します。 Output WebサービスAPIを使用している場合は、`OutputServiceService`オブジェクトを作成します。
+Output サービスの操作をプログラムで実行する前に、Output サービスのクライアントオブジェクトを作成する必要があります。 Java API を使用している場合は、 `OutputClient` オブジェクト。 Output Web サービス API を使用している場合、 `OutputServiceService` オブジェクト。
 
-**XMLデータソースの参照**
+**XML データソースの参照**
 
-データを含むドキュメントを印刷するには、データを入力するすべてのフォームフィールドに対して、XML要素を含むXMLデータソースを参照する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
+データを含むドキュメントを印刷するには、データを入力するすべてのフォームフィールドの XML 要素を含む XML データソースを参照する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべての XML 要素が指定されている場合、XML 要素の表示順序を一致させる必要はありません。
 
-**ファイルへの印刷に必要な印刷実行時オプションの設定**
+**印刷に必要な印刷実行時オプションをファイルに設定する**
 
-ファイルに印刷するには、Outputサービスが印刷するファイルの場所と名前を指定して、「ファイルURIランタイム」オプションを設定する必要があります。 例えば、Outputサービスに&#x200B;*MortgageForm.ps*&#x200B;という名前のPostScriptファイルをC:\Adobeに印刷するように指示するには、C:\Adobe\MortgageForm.psと指定します。
+ファイルに印刷するには、Output サービスが印刷するファイルの場所と名前を指定して、「ファイル URI 実行時」オプションを設定する必要があります。 例えば、Output サービスに対して、という名前の PostScript ファイルを印刷するように指示するには *MortgageForm.ps* C:\Adobeに、C:\Adobe\MortgageForm.psを指定します。
 
 >[!NOTE]
 >
->オプションで定義できる実行時オプションがあります。 設定できるすべてのオプションについて詳しくは、「 [AEM Forms APIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en) 」の`PrintedOutputOptionsSpec`クラス参照を参照してください。
+>定義できる実行時オプションがあります。 設定できるすべてのオプションについては、 `PrintedOutputOptionsSpec` のクラス参照 [AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **印刷ストリームをファイルに印刷する**
 
-フォームデータを含む有効なXMLデータソースを参照し、印刷実行時オプションを設定した後、Outputサービスを呼び出すと、ファイルが印刷されます。
+フォームデータを含む有効な XML データソースを参照し、印刷の実行時オプションを設定した後、Output サービスを呼び出すと、ファイルが印刷されます。
 
 **操作の結果の取得**
 
-Outputサービスが操作を実行すると、XMLデータなど、操作が成功したかどうかを示す様々なデータ項目が返されます。
+Output サービスは操作を実行した後、XML データなど、操作が成功したかどうかを示す様々なデータ項目を返します。
 
 **関連トピック**
 
-[Java APIを使用してファイルに出力](creating-document-output-streams.md#print-to-files-using-the-java-api)
+[Java API を使用してファイルに出力](creating-document-output-streams.md#print-to-files-using-the-java-api)
 
-[WebサービスAPIを使用してファイルに出力](creating-document-output-streams.md#print-to-files-using-the-web-service-api)
+[Web サービス API を使用してファイルに印刷](creating-document-output-streams.md#print-to-files-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
+[Output サービス API のクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### Java APIを使用してファイルに出力 {#print-to-files-using-the-java-api}
+### Java API を使用してファイルに出力 {#print-to-files-using-the-java-api}
 
-出力API(Java)を使用してファイルに出力：
+Output API(Java) を使用してファイルに出力します。
 
 1. プロジェクトファイルを含めます。
 
-   Javaプロジェクトのクラスパスに、adobe-output-client.jarなどのクライアントJARファイルを含めます。
+   Java プロジェクトのクラスパスに、adobe-output-client.jar などのクライアント JAR ファイルを含めます。
 
-1. Outputクライアントオブジェクトを作成します。
+1. Output Client オブジェクトを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して`OutputClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * の作成 `OutputClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
 
-1. XMLデータソースを参照します。
+1. XML データソースを参照します。
 
-   * コンストラクタを使用し、XMLファイルの場所を指定する文字列値を渡すことで、ドキュメントの入力に使用されるXMLデータソースを表す`java.io.FileInputStream`オブジェクトを作成します。
+   * の作成 `java.io.FileInputStream` コンストラクタを使用し、XML ファイルの場所を指定する string 値を渡すことによって、ドキュメントにデータを入力するために使用される XML データソースを表すオブジェクト。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
-1. ファイルに印刷するために必要な印刷実行時オプションを設定します。
+1. ファイルへの印刷に必要な印刷実行時オプションを設定します。
 
    * コンストラクタを使用して `PrintedOutputOptionsSpec` オブジェクトを作成します。
-   * PrintedOutputOptionsSpecオブジェクトの`setFileURI`メソッドを呼び出し、ファイルの名前と場所を表す文字列値を渡すことによって、ファイルを指定します。 例えば、C:\Adobeにある* MortgageForm.ps*という名前のPostScriptファイルにOutputサービスを印刷する場合は、C:\\Adobe\MortgageForm.psと指定します。
-   * `PrintedOutputOptionsSpec`オブジェクトの`setCopies`メソッドを呼び出し、印刷部数を表す整数値を渡して、印刷部数を指定します。
+   * PrintedOutputOptionsSpec オブジェクトの `setFileURI` メソッドを使用し、ファイルの名前と場所を表す string 値を渡す方法を示します。 例えば、Output サービスをC:\Adobeにある PostScript ファイル* MortgageForm.ps*に印刷する場合は、C:\\Adobe\MortgageForm.psと指定します。
+   * を呼び出して、印刷する部数を指定します。 `PrintedOutputOptionsSpec` オブジェクトの `setCopies` メソッドを使用し、コピー数を表す整数値を渡す。
 
 1. 印刷ストリームをファイルに印刷します。
 
-   `OutputClient`オブジェクトの`generatePrintedOutput`メソッドを呼び出し、次の値を渡して、ファイルに出力します。
+   を呼び出してファイルに出力 `OutputClient` オブジェクトの `generatePrintedOutput` メソッドを使用して、次の値を渡します。
 
-   * 作成する印刷ストリーム形式を指定する`PrintFormat`列挙値。 例えば、PostScript印刷ストリームを作成するには、`PrintFormat.PostScript`を渡します。
+   * A `PrintFormat` 作成する印刷ストリーム形式を指定する列挙値。 例えば、PostScript 印刷ストリームを作成するには、 `PrintFormat.PostScript`.
    * フォームデザイン名を指定する string 値。
-   * 画像ファイルなど、関連する販促物ファイルの場所を指定するstring値。
-   * 使用するXDCファイルの場所を指定するstring値（`PrintedOutputOptionsSpec`オブジェクトを使用して使用するXDCファイルを指定した場合、`null`を渡すことができます）。
-   * ファイルに印刷するために必要な実行時オプションを含む`PrintedOutputOptionsSpec`オブジェクト。
-   * フォームデータを含むXMLデータソースを含む`com.adobe.idp.Document`オブジェクト。
+   * 画像ファイルなど、関連する販促物ファイルの場所を指定する string 値です。
+   * 使用する XDC ファイルの場所を指定する string 値 ( `null` 使用する XDC ファイルを指定した場合は、 `PrintedOutputOptionsSpec` オブジェクト )。
+   * この `PrintedOutputOptionsSpec` ファイルに印刷するために必要な実行時オプションを含むオブジェクト。
+   * この `com.adobe.idp.Document` フォームデータを含む XML データソースを含むオブジェクト。
 
-   `generatePrintedOutput`メソッドは、操作の結果を含む`OutputResult`オブジェクトを返します。
+   この `generatePrintedOutput` メソッドは、 `OutputResult` 操作の結果を格納するオブジェクト。
 
    >[!NOTE]
    >
-   >`OutputResult`オブジェクトの`getRecordLevelMetaDataList`メソッドは`null`*を返します。 *
+   >この `OutputResult` オブジェクトの `getRecordLevelMetaDataList` メソッドの戻り値 `null`*.*
 
 1. 操作の結果を取得します。
 
-   * `OutputResult`オブジェクトの`getStatusDoc`メソッド（`generatePrintedOutput`メソッドで返された`OutputResult`オブジェクト）を呼び出して、`generatePrintedOutput`メソッドの状態を表す`com.adobe.idp.Document`オブジェクトを作成します。
-   * 操作の結果を格納する`java.io.File`オブジェクトを作成します。 ファイル拡張子がXMLであることを確認します。
-   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします（`getStatusDoc`メソッドで返された`com.adobe.idp.Document`オブジェクトを使用するようにしてください）。
+   * の作成 `com.adobe.idp.Document` オブジェクトのステータスを表すオブジェクト `generatePrintedOutput` メソッドを呼び出す `OutputResult` オブジェクトの `getStatusDoc` メソッド ( `OutputResult` オブジェクトが `generatePrintedOutput` メソッド )。
+   * の作成 `java.io.File` 操作の結果を格納するオブジェクト。 ファイル拡張子が XML であることを確認します。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、 `com.adobe.idp.Document` オブジェクトをファイルに追加します ( `com.adobe.idp.Document` が返したオブジェクト `getStatusDoc` メソッド )。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[クイックスタート（SOAPモード）:Java APIを使用したファイルへの印刷](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-printing-to-a-file-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したファイルへの印刷](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-printing-to-a-file-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-### WebサービスAPIを使用してファイルに出力 {#print-to-files-using-the-web-service-api}
+### Web サービス API を使用してファイルに印刷 {#print-to-files-using-the-web-service-api}
 
-Output API（Webサービス）を使用してファイルに出力します。
+Output API（Web サービス）を使用してファイルに印刷します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 次の WSDL 定義を使用していることを確認します。 `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >`localhost`*を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。*
+   >置換 `localhost`* AEM Formsをホストするサーバーの IP アドレス*
 
-1. Outputクライアントオブジェクトを作成します。
+1. Output Client オブジェクトを作成します。
 
-   * デフォルトのコンストラクターを使用して`OutputServiceClient`オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに渡す文字列値（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）を渡します。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用する場合は`?blob=mtom`を指定します。
-   * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値は、MTOMが使用されるようにします。
-   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
+   * の作成 `OutputServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
+   * の作成 `OutputServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をAEM Formsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/OutputService?blob=mtom`.) を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます。 ただし、 `?blob=mtom` MTOM を使用する。
+   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `OutputServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
+   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
+   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
 
-      * フィールド`OutputServiceClient.ClientCredentials.UserName.UserName`にAEM formsユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド`OutputServiceClient.ClientCredentials.UserName.Password`に割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に定数値`HttpClientCredentialType.Basic`を割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Security.Mode`に定数値`BasicHttpSecurityMode.TransportCredentialOnly`を割り当てます。
+      * フィールドにAEM forms ユーザー名を割り当てます。 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 対応するパスワード値をフィールドに割り当てます。 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 定数値を割り当て `HttpClientCredentialType.Basic` フィールドに `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 定数値を割り当て `BasicHttpSecurityMode.TransportCredentialOnly` フィールドに `BasicHttpBindingSecurity.Security.Mode`.
 
-1. XMLデータソースを参照します。
+1. XML データソースを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、フォームデータの格納に使用されます。
-   * コンストラクターを呼び出し、フォームデータを含むXMLファイルの場所を指定する文字列値を渡すことで、`System.IO.FileStream`オブジェクトを作成します。
-   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得することで、バイト配列のサイズを判断できます。
-   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
-   * `BLOB`オブジェクトの`binaryData`プロパティにバイト配列の内容を割り当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、フォームデータの保存に使用されます。
+   * の作成 `System.IO.FileStream` オブジェクトを作成するには、コンストラクタを呼び出し、フォームデータを含む XML ファイルの場所を指定する string 値を渡します。
+   * コンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクト。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリーム長を渡す。
+   * 次の項目に `BLOB` オブジェクトを割り当てる `binaryData` プロパティにバイト配列の内容を入力します。
 
-1. ファイルに印刷するために必要な印刷実行時オプションを設定します。
+1. ファイルへの印刷に必要な印刷実行時オプションを設定します。
 
    * コンストラクタを使用して `PrintedOutputOptionsSpec` オブジェクトを作成します。
-   * ファイルの場所と名前を表すstring値を`PrintedOutputOptionsSpec`オブジェクトの`fileURI`データメンバーに割り当てて、ファイルを指定します。 例えば、C:\AdobeにあるPostScriptファイル&#x200B;*MortgageForm.ps*&#x200B;にOutputサービスを印刷する場合は、C:\\Adobe\MortgageForm.psと指定します。
-   * `PrintedOutputOptionsSpec`オブジェクトの`copies`データメンバにコピー数を表す整数値を割り当てて、印刷するコピー数を指定します。
+   * ファイルの場所と名前を表す string 値を `PrintedOutputOptionsSpec` オブジェクトの `fileURI` データメンバー。 例えば、Output サービスを PostScript ファイル ( *MortgageForm.ps* C:\Adobeにあり、C:\\Adobe\MortgageForm.psと指定します。
+   * 印刷部数を指定するには、印刷部数を表す整数値を割り当てます。 `PrintedOutputOptionsSpec` オブジェクトの `copies` データメンバー。
 
 1. 印刷ストリームをファイルに印刷します。
 
-   `OutputServiceService`オブジェクトの`generatePrintedOutput`メソッドを呼び出し、次の値を渡して、ファイルに出力します。
+   を呼び出してファイルに出力 `OutputServiceService` オブジェクトの `generatePrintedOutput` メソッドを使用して、次の値を渡します。
 
-   * 作成する印刷ストリーム形式を指定する`PrintFormat`列挙値。 例えば、PostScript印刷ストリームを作成するには、`PrintFormat.PostScript`を渡します。
+   * A `PrintFormat` 作成する印刷ストリーム形式を指定する列挙値。 例えば、PostScript 印刷ストリームを作成するには、 `PrintFormat.PostScript`.
    * フォームデザイン名を指定する string 値。
-   * 画像ファイルなど、関連する販促物ファイルの場所を指定するstring値。
-   * 使用するXDCファイルの場所を指定するstring値（`PrintedOutputOptionsSpec`オブジェクトを使用して使用するXDCファイルを指定した場合、`null`を渡すことができます）。
-   * ファイルに印刷するために必要な印刷実行時オプションを含む`PrintedOutputOptionsSpec`オブジェクト。
-   * フォームデータを含むXMLデータソースを含む`BLOB`オブジェクト。
-   * `generatePDFOutput`メソッドによって設定される`BLOB`オブジェクト。 `generatePDFOutput`メソッドは、このオブジェクトに、ドキュメントを表す生成済みのメタデータを入力します。 （このパラメーター値は、Webサービスの呼び出しのみに必要です）。
-   * `generatePDFOutput`メソッドによって設定される`BLOB`オブジェクト。 `generatePDFOutput`メソッドは、このオブジェクトに結果データを入力します。 （このパラメーター値は、Webサービスの呼び出しのみに必要です）。
-   * 操作の結果を格納する`OutputResult`オブジェクト。 （このパラメーター値は、Webサービスの呼び出しのみに必要です）。
+   * 画像ファイルなど、関連する販促物ファイルの場所を指定する string 値です。
+   * 使用する XDC ファイルの場所を指定する string 値 ( `null` 使用する XDC ファイルを指定した場合は、 `PrintedOutputOptionsSpec` オブジェクト )。
+   * この `PrintedOutputOptionsSpec` ファイルに印刷するために必要な印刷実行時オプションを含むオブジェクト。
+   * この `BLOB` フォームデータを含む XML データソースを含むオブジェクト。
+   * A `BLOB` オブジェクト `generatePDFOutput` メソッド。 この `generatePDFOutput` メソッドは、ドキュメントを表す生成されたメタデータをこのオブジェクトに設定します。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+   * A `BLOB` オブジェクト `generatePDFOutput` メソッド。 この `generatePDFOutput` メソッドは、このオブジェクトに結果データを入力します。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+   * An `OutputResult` 操作の結果を格納するオブジェクト。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
 
 1. 操作の結果を取得します。
 
-   * コンストラクターを呼び出し、結果データを含むXMLファイルの場所を表す文字列値を渡すことで、`System.IO.FileStream`オブジェクトを作成します。 ファイル拡張子がXMLであることを確認します。
-   * `OutputServiceService`オブジェクトの`generatePDFOutput`メソッド（8番目のパラメーター）によって結果データが入力された`BLOB`オブジェクトのデータコンテンツを格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバーの値を取得して、バイト配列を設定します。
-   * コンストラクターを呼び出し、`System.IO.FileStream`オブジェクトを渡して、`System.IO.BinaryWriter`オブジェクトを作成します。
-   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことにより、バイト配列の内容をXMLファイルに書き込みます。
+   * の作成 `System.IO.FileStream` オブジェクトを作成します。 ファイル拡張子が XML であることを確認します。
+   * のデータコンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクトに `OutputServiceService` オブジェクトの `generatePDFOutput` メソッド（8 番目のパラメーター）。 バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバー。
+   * の作成 `System.IO.BinaryWriter` オブジェクトのコンストラクタを呼び出し、 `System.IO.FileStream` オブジェクト。
+   * を呼び出して、バイト配列の内容を XML ファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[SwaRef を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## プリンターへの印刷ストリームの送信 {#sending-print-streams-to-printers}
+## プリンタへの印刷ストリームの送信 {#sending-print-streams-to-printers}
 
-Outputサービスを使用して、PostScript、Printer Control Language(PCL)、または次のラベル形式などの印刷ストリームをネットワークプリンターに送信できます。
+Output サービスを使用して、PostScript、Printer Control Language(PCL) などの印刷ストリームや、次のラベル形式をネットワークプリンターに送信できます。
 
 * ゼブラ — ZPL
 * Intermec - IPL
 * Datamax - DPL
-* TecToshiba - TPCL
+* 東芝 — TPCL
 
-Outputサービスを使用すると、XMLデータをフォームデザインとマージし、フォームを印刷ストリームとして出力できます。 例えば、PostScript印刷ストリームを作成して、ネットワークプリンターに送信できます。 次の図は、印刷ストリームをネットワークプリンターに送信するOutputサービスを示しています。
-
->[!NOTE]
->
->この節では、印刷ストリームをネットワークプリンタに送信する方法を示すために、SharedPrinterプロトコルを使用してPostScript印刷ストリームをネットワークプリンタに送信します。
+Output サービスを使用すると、XML データをフォームデザインと結合し、フォームを印刷ストリームとして出力できます。 例えば、PostScript 印刷ストリームを作成して、ネットワークプリンターに送信できます。 次の図は、印刷ストリームをネットワークプリンターに送信する Output サービスを示しています。
 
 >[!NOTE]
 >
->Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>印刷ストリームをネットワークプリンタに送信する方法を示すために、このセクションでは、SharedPrinter プリンタプロトコルを使用して PostScript 印刷ストリームをネットワークプリンタに送信します。
+
+>[!NOTE]
+>
+>Output サービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 手順の概要 {#summary_of_steps-6}
 
 印刷ストリームをネットワークプリンタに送信するには、次の手順に従います。
 
 1. プロジェクトファイルを含めます。
-1. Outputクライアントオブジェクトを作成します。
-1. XMLデータソースを参照します。
-1. 印刷実行時オプションの設定
+1. Output Client オブジェクトを作成します。
+1. XML データソースを参照します。
+1. 印刷実行時オプションを設定する
 1. 印刷するドキュメントを取得します。
-1. ドキュメントをネットワークプリンターに送信します。
+1. ドキュメントをネットワークプリンタに送信します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、必ずプロキシファイルを含めてください。
+開発プロジェクトに必要なファイルを含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
 
-次のJARファイルをプロジェクトのクラスパスに追加する必要があります。
+次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必須)
-* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必須)
+* adobe-utilities.jar(AEM Formsを JBoss にデプロイする場合に必須 )
+* jbossall-client.jar(AEM Formsが JBoss にデプロイされている場合に必須 )
 
-AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
 
-**Outputクライアントオブジェクトの作成**
+**出力クライアントオブジェクトの作成**
 
-プログラムによってOutputサービス操作を実行する前に、Outputサービスクライアントオブジェクトを作成します。 Java APIを使用している場合は、`OutputClient`オブジェクトを作成します。 Output WebサービスAPIを使用している場合は、`OutputServiceClient`オブジェクトを作成します。
+Output サービスの操作をプログラムで実行する前に、Output サービスのクライアントオブジェクトを作成します。 Java API を使用している場合は、 `OutputClient` オブジェクト。 Output Web サービス API を使用している場合、 `OutputServiceClient` オブジェクト。
 
-**XMLデータソースの参照**
+**XML データソースの参照**
 
-データを含むドキュメントを印刷するには、データを入力するすべてのフォームフィールドに対して、XML要素を含むXMLデータソースを参照する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
+データを含むドキュメントを印刷するには、データを入力するすべてのフォームフィールドの XML 要素を含む XML データソースを参照する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべての XML 要素が指定されている場合、XML 要素の表示順序を一致させる必要はありません。
 
-**印刷実行時オプションの設定**
+**印刷実行時オプションを設定する**
 
-印刷ストリームをプリンターに送信する際に、次のオプションを含む実行時オプションを設定できます。
+印刷ストリームをプリンタに送信する際に、次のオプションを含む実行時のオプションを設定できます。
 
-* **コピー**:プリンタに送信する部数を指定します。デフォルト値は 1 です。
-* **ステープル**:ステープル印刷が使用されると、XCIオプションが設定されます。このオプションは、設定モデルでステープル要素で指定でき、PSプリンターとPCLプリンターにのみ使用されます。
-* **OutputJog**:XCIオプションは、出力ページをジョグ（出力トレイ内で物理的にシフト）する必要がある場合に設定されます。このオプションは、PSおよびPCLプリンター専用です。
-* **出力ビン**:印刷ドライバが適切な出力binを選択できるようにするために使用されるXCI値。
+* **コピー**:プリンタに送信する部数を指定します。 デフォルト値は 1 です。
+* **ホチキス止め**:ステープル印刷が使用されると、XCI オプションが設定されます。 このオプションは、設定モデル内で staple 要素によって指定でき、PS および PCL プリンターにのみ使用されます。
+* **OutputJog**:XCI オプションは、出力ページを（出力トレイで物理的にシフトした）ジョグ付けする場合に設定されます。 このオプションは、PS および PCL プリンター専用です。
+* **OutputBin**:印刷ドライバが適切な出力 bin を選択できるようにするために使用される XCI 値です。
 
 >[!NOTE]
 >
->設定できるすべての実行時オプションについて詳しくは、`PrintedOutputOptionsSpec`クラス参照を参照してください。
+>設定できるすべての実行時オプションについて詳しくは、 `PrintedOutputOptionsSpec` クラス参照。
 
-**印刷するドキュメントの取得**
+**印刷するドキュメントを取得**
 
-プリンターに送信する印刷ストリームを取得します。 例えば、PostScriptファイルを取得してプリンターに送信できます。
+プリンタに送信する印刷ストリームを取得します。 例えば、PostScript ファイルを取得してプリンターに送信できます。
 
-プリンターがPDFをサポートしている場合は、PDFファイルを送信するように選択できます。 ただし、PDFドキュメントをプリンターに送信する際の問題は、プリンターの製造元ごとにPDFインタープリターの実装が異なる点です。 つまり、一部の印刷メーカーはAdobe PDFの解釈を使用しますが、プリンターによって異なります。 その他のプリンターには、独自のPDFインタープリターがあります。 その結果、印刷結果が異なる場合があります。
+プリンタがPDFをサポートしている場合は、PDFファイルを送信するように選択できます。 ただし、プリンタにPDFドキュメントを送信する際の問題は、各プリンタの製造元が異なるPDFインタプリタの実装を持っていることです。 つまり、印刷メーカーによってはAdobe PDFの解釈を使用するものもありますが、プリンタによって異なります。 他のプリンタには独自のPDF通訳がある。 その結果、印刷結果が異なる場合があります。
 
-PDFドキュメントをプリンターに送信するもう1つの制限は、単に印刷することです。両面印刷、用紙トレイの選択、ホチキス止めは、プリンタの設定を使用しない限り使用できません。
+プリンタにPDFドキュメントを送信するもう 1 つの制限は、単に印刷することです。両面印刷、用紙トレイの選択、ホチキス止めは、プリンタの設定を使用しない限り使用できません。
 
-印刷するドキュメントを取得するには、`generatePrintedOutput`メソッドを使用します。 次の表は、`generatePrintedOutput`メソッドを使用する際に指定の印刷ストリームに設定されるコンテンツタイプを示しています。
+印刷するドキュメントを取得するには、 `generatePrintedOutput` メソッド。 次の表は、 `generatePrintedOutput` メソッド。
 
 <table> 
  <thead> 
@@ -1432,222 +1432,222 @@ PDFドキュメントをプリンターに送信するもう1つの制限は、�
  <tbody>
   <tr> 
    <td><p>DPL </p></td> 
-   <td><p>デフォルトまたはカスタムのxdc出力ストリームでdpl203.xdcを作成します。</p></td> 
+   <td><p>デフォルトまたはカスタムの xdc 出力ストリームで dpl203.xdc を作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>DPL 300 DPI </p></td> 
-   <td><p>DPL 300 DPI出力ストリームを作成します。</p></td> 
+   <td><p>DPL 300 DPI 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>DPL 406 DPI </p></td> 
-   <td><p>DPL 400 DPI出力ストリームを作成します。</p></td> 
+   <td><p>DPL 400 DPI 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>DPL 600 DPI </p></td> 
-   <td><p>DPL 600 DPI出力ストリームを作成します。</p></td> 
+   <td><p>DPL 600 DPI 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>GenericColorPCL </p></td> 
-   <td><p>汎用カラーPCL(5c)出力ストリームを作成します。</p></td> 
+   <td><p>Generic Color PCL(5c) 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>GenericPSLevel3 </p></td> 
-   <td><p>汎用PostScriptレベル3の出力ストリームを作成します。</p></td> 
+   <td><p>汎用 PostScript Level 3 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>IPL </p></td> 
-   <td><p>カスタムIPL出力ストリームを作成します。</p></td> 
+   <td><p>カスタム IPL 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>IPL 300 DPI </p></td> 
-   <td><p>IPL 300 DPI出力ストリームを作成します。</p></td> 
+   <td><p>IPL 300 DPI 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>IPL 400 DPI </p></td> 
-   <td><p>IPL 400 DPI出力ストリームを作成します。</p></td> 
+   <td><p>IPL 400 DPI 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>PCL </p></td> 
-   <td><p>汎用モノクロPCL(5e)出力ストリームを作成します。</p></td> 
+   <td><p>汎用モノクロ PCL(5e) 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>PostScript </p></td> 
-   <td><p>汎用PostScriptレベル2の出力ストリームを作成します。</p></td> 
+   <td><p>汎用 PostScript Level 2 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>TPCL </p></td> 
-   <td><p>カスタムTPCL出力ストリームを作成します。</p></td> 
+   <td><p>カスタム TPCL 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>TPCL 305 DPI </p></td> 
-   <td><p>TPCL 305 DPI出力ストリームを作成します。</p></td> 
+   <td><p>TPCL 305 DPI 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>TPCL 600 DPI </p></td> 
-   <td><p>TPCL 600 DPI出力ストリームを作成します。</p></td> 
+   <td><p>TPCL 600 DPI 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>ZPL </p></td> 
-   <td><p>ZPL 203 DPI出力ストリームを作成します。</p></td> 
+   <td><p>ZPL 203 DPI 出力ストリームを作成します。</p></td> 
   </tr> 
   <tr> 
    <td><p>ZPL 300 DPI </p></td> 
-   <td><p>ZPL 300 DPI出力ストリームを作成します。</p></td> 
+   <td><p>ZPL 300 DPI 出力ストリームを作成します。</p></td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->`generatePrintedOutput2`メソッドを使用して、印刷ストリームをプリンターに送信することもできます。 ただし、「プリントストリームをプリンターに送信する」セクションに関連するクイックスタートでは、`generatePrintedOutput`メソッドを使用します。
+>また、 `generatePrintedOutput2` メソッド。 ただし、[ プリンタへの印刷ストリームの送信 ] セクションに関連するクイックスタートでは、 `generatePrintedOutput` メソッド。
 
 **印刷ストリームをネットワークプリンタに送信する**
 
-印刷するドキュメントを取得した後、Outputサービスを呼び出すと、印刷ストリームがネットワークプリンターに送信されます。 Outputサービスでプリンターを正しく見つけるには、プリントサーバーとプリンター名の両方を指定する必要があります。 また、印刷プロトコルも指定する必要があります。
+印刷するドキュメントを取得した後、Output サービスを呼び出すと、印刷ストリームがネットワークプリンターに送信されます。 Output サービスでプリンタを正常に見つけるには、プリントサーバーとプリンタ名の両方を指定する必要があります。 また、印刷プロトコルも指定する必要があります。
 
 >[!NOTE]
 >
->PDFGがformsサーバーにインストールされ、サーバーがWindows Server 2008で実行されている場合、SharedPrinterプロパティは使用できません。 この場合は、別のプリンタープロトコルを使用します。
+>PDFG が forms サーバーにインストールされ、そのサーバーが Windows Server 2008 で実行されている場合、SharedPrinter プロパティは使用できません。 この場合は、別のプリンタプロトコルを使用します。
 
 >[!NOTE]
 >
->ネットワークプリンタを使用し、アクセスメカニズムがSharedPrinterの場合は、プリンタの完全なネットワークパスを指定する必要があります。Java APIを使用して、印刷ストリームをネットワークプリンタに送信します
+>ネットワークプリンタを使用し、アクセスメカニズムが SharedPrinter の場合は、プリンタの完全なネットワークパスを指定する必要があります。Java API を使用して、ネットワークプリンタに印刷ストリームを送信します
 
-Output API(Java)を使用して、印刷ストリームをネットワークプリンターに送信します。
+Output API(Java) を使用して、印刷ストリームをネットワークプリンターに送信します。
 
 1. プロジェクトファイルを含めます。
 
-   Javaプロジェクトのクラスパスに、adobe-output-client.jarなどのクライアントJARファイルを含めます。
+   Java プロジェクトのクラスパスに、adobe-output-client.jar などのクライアント JAR ファイルを含めます。
 
-1. Outputクライアントオブジェクトの作成
+1. 出力クライアントオブジェクトの作成
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して`OutputClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * の作成 `OutputClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
 
-1. XMLデータソースの参照
+1. XML データソースの参照
 
-   * コンストラクタを使用し、XMLファイルの場所を指定する文字列値を渡すことで、ドキュメントの入力に使用されるXMLデータソースを表す`java.io.FileInputStream`オブジェクトを作成します。
+   * の作成 `java.io.FileInputStream` コンストラクタを使用し、XML ファイルの場所を指定する string 値を渡すことによって、ドキュメントにデータを入力するために使用される XML データソースを表すオブジェクト。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
-1. 印刷実行時オプションの設定
+1. 印刷実行時オプションを設定する
 
-   印刷ランタイムオプションを表す`PrintedOutputOptionsSpec`オブジェクトを作成します。 例えば、 `PrintedOutputOptionsSpec`オブジェクトの`setCopies`メソッドを呼び出して、印刷する部数を指定できます。
+   の作成 `PrintedOutputOptionsSpec` 印刷実行時オプションを表すオブジェクト。 例えば、 `PrintedOutputOptionsSpec` オブジェクトの `setCopies` メソッド。
 
    >[!NOTE]
    >
-   >ZPL印刷ストリームを生成する場合は、 `PrintedOutputOptionsSpec`オブジェクトの`setPagination`メソッドを使用してページネーション値を設定することはできません。 同様に、ZPL印刷ストリームに対して次のオプションを設定することはできません。OutputJog、PageOffset、およびStaple。 `setPagination`*メソッドはPostScriptの生成には無効です。 PCL生成にのみ有効です。*
+   >ページネーションの値は、 `PrintedOutputOptionsSpec` オブジェクトの `setPagination` メソッドを使用します。 同様に、ZPL 印刷ストリームに対して次のオプションを設定することはできません。OutputJog、PageOffset、および Staple。 この `setPagination`* PostScript の生成に対してメソッドが無効です。 PCL の生成にのみ有効です。*
 
-1. 印刷するドキュメントの取得
+1. 印刷するドキュメントを取得
 
-   * `OutputClient`オブジェクトの`generatePrintedOutput`メソッドを呼び出し、次の値を渡して、印刷するドキュメントを取得します。
+   * を呼び出して、印刷するドキュメントを取得します。 `OutputClient` オブジェクトの `generatePrintedOutput` メソッドを使用して、次の値を渡します。
 
-      * 印刷ストリームを指定する`PrintFormat`列挙値。 例えば、PostScript印刷ストリームを作成するには、`PrintFormat.PostScript`を渡します。
+      * A `PrintFormat` 印刷ストリームを指定する列挙値。 例えば、PostScript 印刷ストリームを作成するには、 `PrintFormat.PostScript`.
       * フォームデザイン名を指定する string 値。
-      * 関連する販促物ファイル（画像ファイルなど）の場所を指定するstring値。
-      * 使用するXDCファイルの場所を指定するstring値。
-      * ファイルに印刷するために必要な実行時オプションを含む`PrintedOutputOptionsSpec`オブジェクト。
-      * フォームデザインとマージするフォームデータが含まれるXMLデータソースを表す`com.adobe.idp.Document`オブジェクト。
+      * 関連する販促物ファイル（画像ファイルなど）の場所を指定する string 値です。
+      * 使用する XDC ファイルの場所を指定する string 値です。
+      * この `PrintedOutputOptionsSpec` ファイルに印刷するために必要な実行時オプションを含むオブジェクト。
+      * この `com.adobe.idp.Document` フォームデザインとマージするフォームデータが含まれる XML データソースを表すオブジェクト。
 
-      このメソッドは、操作の結果を含む`OutputResult`オブジェクトを返します。
+      このメソッドは、 `OutputResult` 操作の結果を格納するオブジェクト。
 
-   * `OutputResult`オブジェクトの`getGeneratedDoc`メソッドを呼び出して、プリンターに送信する`com.adobe.idp.Document`オブジェクトを作成します。 このメソッドは`com.adobe.idp.Document`オブジェクトを返します。
+   * の作成 `com.adobe.idp.Document` を呼び出してプリンターに送信するオブジェクト `OutputResult` オブジェクト `getGeneratedDoc` メソッド。 このメソッドは、 `com.adobe.idp.Document` オブジェクト。
 
 
 1. 印刷ストリームをネットワークプリンタに送信する
 
-   `OutputClient`オブジェクトの`sendToPrinter`メソッドを呼び出し、次の値を渡して、印刷ストリームをネットワークプリンターに送信します。
+   を呼び出して、印刷ストリームをネットワークプリンターに送信します。 `OutputClient` オブジェクトの `sendToPrinter` メソッドを使用して、次の値を渡します。
 
-   * プリンターに送信する印刷ストリームを表す`com.adobe.idp.Document`オブジェクト。
-   * 使用するプリンタープロトコルを指定する`PrinterProtocol`列挙値。 例えば、SharedPrinterプロトコルを指定するには、`PrinterProtocol.SharedPrinter`を渡します。
-   * プリントサーバーの名前を指定するstring値。 例えば、プリントサーバーの名前がPrintSever1の場合、`\\\PrintSever1`を渡します。
-   * プリンターの名前を指定するstring値。 例えば、プリンター名がPrinter1の場合、`\\\PrintSever1\Printer1`を渡します。
+   * A `com.adobe.idp.Document` プリンタに送信する印刷ストリームを表すオブジェクト。
+   * A `PrinterProtocol` 使用するプリンタープロトコルを指定する列挙値。 たとえば、SharedPrinter プロトコルを指定するには、 `PrinterProtocol.SharedPrinter`.
+   * 印刷サーバーの名前を指定する string 値です。 例えば、印刷サーバーの名前が PrintServer1 であると仮定し、 `\\\PrintSever1`.
+   * プリンターの名前を指定する string 値です。 例えば、プリンタ名が Printer1 であると仮定した場合、 `\\\PrintSever1\Printer1`.
 
    >[!NOTE]
    >
-   >`sendToPrinter`メソッドがバージョン8.2.1のAEM Forms APIに追加されました。
+   >この `sendToPrinter` メソッドがAEM Forms API バージョン 8.2.1 に追加されました。
 
-### WebサービスAPIを使用したプリンターへの印刷ストリームの送信 {#send-a-print-stream-to-a-printer-using-the-web-service-api}
+### Web サービス API を使用してプリンターに印刷ストリームを送信する {#send-a-print-stream-to-a-printer-using-the-web-service-api}
 
-Output API（Webサービス）を使用して、印刷ストリームをネットワークプリンターに送信します。
+Output API（Web サービス）を使用して、印刷ストリームをネットワークプリンターに送信します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 次の WSDL 定義を使用していることを確認します。 `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >`localhost`*を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。*
+   >置換 `localhost`* AEM Formsをホストするサーバーの IP アドレス*
 
-1. Outputクライアントオブジェクトを作成します。
+1. Output Client オブジェクトを作成します。
 
-   * デフォルトのコンストラクターを使用して`OutputServiceClient`オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに渡す文字列値（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）を渡します。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用する場合は`?blob=mtom`を指定します。
-   * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値は、MTOMが使用されるようにします。
-   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
+   * の作成 `OutputServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
+   * の作成 `OutputServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をAEM Formsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/OutputService?blob=mtom`.) を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます。 ただし、 `?blob=mtom` MTOM を使用する。
+   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `OutputServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
+   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
+   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
 
-      * フィールド`OutputServiceClient.ClientCredentials.UserName.UserName`にAEM formsユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド`OutputServiceClient.ClientCredentials.UserName.Password`に割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に定数値`HttpClientCredentialType.Basic`を割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Security.Mode`に定数値`BasicHttpSecurityMode.TransportCredentialOnly`を割り当てます。
+      * フィールドにAEM forms ユーザー名を割り当てます。 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 対応するパスワード値をフィールドに割り当てます。 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 定数値を割り当て `HttpClientCredentialType.Basic` フィールドに `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 定数値を割り当て `BasicHttpSecurityMode.TransportCredentialOnly` フィールドに `BasicHttpBindingSecurity.Security.Mode`.
 
-1. XMLデータソースを参照します。
+1. XML データソースを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、フォームデータの格納に使用されます。
-   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 フォームデータを含むXMLファイルの場所を指定するstring値を渡します。
-   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得して、バイト配列の長さを決定します。
-   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
-   * `BLOB`オブジェクトの`MTOM`フィールドにバイト配列の内容を割り当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、フォームデータの保存に使用されます。
+   * の作成 `System.IO.FileStream` オブジェクトを指定します。 フォームデータを含む XML ファイルの場所を指定する string 値を渡します。
+   * コンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクト。 バイト配列の長さを決定するには、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリーム長を渡す。
+   * 次の項目に `BLOB` オブジェクトを割り当てる `MTOM` フィールドにバイト配列の内容を入力します。
 
 1. 印刷実行時オプションを設定します。
 
-   コンストラクタを使用して `PrintedOutputOptionsSpec` オブジェクトを作成します。例えば、`PrintedOutputOptionsSpec`オブジェクトの`copies`データメンバーにコピー数を表す整数値を割り当てて、印刷するコピー数を指定できます。
+   コンストラクタを使用して `PrintedOutputOptionsSpec` オブジェクトを作成します。例えば、印刷部数を指定するには、 `PrintedOutputOptionsSpec` オブジェクトの `copies` データメンバー。
 
    >[!NOTE]
    >
-   >ZPL印刷ストリームを生成する場合は、`PrintedOutputOptionsSpec`オブジェクトの`pagination`データメンバを使用してページネーション値を設定することはできません。 同様に、ZPL印刷ストリームに対して次のオプションを設定することはできません。OutputJog、PageOffsetおよびStaple。 `pagination`*データメンバはPostScriptの生成には無効です。 PCL生成にのみ有効です。*
+   >ページネーションの値は、 `PrintedOutputOptionsSpec` オブジェクトの `pagination` ZPL 印刷ストリームを生成する場合は、データメンバー。 同様に、ZPL 印刷ストリームに対して次のオプションを設定することはできません。OutputJog、PageOffset および Staple。 この `pagination`*データメンバーは PostScript の生成に対して無効です。 PCL の生成にのみ有効です。*
 
 1. 印刷するドキュメントを取得します。
 
-   * `OutputServiceService`オブジェクトの`generatePrintedOutput`メソッドを呼び出し、次の値を渡して、印刷するドキュメントを取得します。
+   * を呼び出して、印刷するドキュメントを取得します。 `OutputServiceService` オブジェクトの `generatePrintedOutput` メソッドを使用して、次の値を渡します。
 
-      * 印刷ストリームを指定する`PrintFormat`列挙値。 例えば、PostScript印刷ストリームを作成するには、`PrintFormat.PostScript`を渡します。
+      * A `PrintFormat` 印刷ストリームを指定する列挙値。 例えば、PostScript 印刷ストリームを作成するには、 `PrintFormat.PostScript`.
       * フォームデザイン名を指定する string 値。
-      * 関連する販促物ファイル（画像ファイルなど）の場所を指定するstring値。
-      * 使用するXDCファイルの場所を指定するstring値。
-      * 印刷ストリームをネットワークプリンターに送信する際に使用される印刷実行時オプションを含む`PrintedOutputOptionsSpec`オブジェクト。
-      * フォームデータを含むXMLデータソースを含む`BLOB`オブジェクト。
-      * `generatePrintedOutput`メソッドによって設定される`BLOB`オブジェクト。 `generatePrintedOutput`メソッドは、このオブジェクトに、ドキュメントを表す生成済みのメタデータを入力します。 （このパラメーター値は、Webサービスの呼び出しのみに必要です）。
-      * `generatePrintedOutput`メソッドによって設定される`BLOB`オブジェクト。 `generatePrintedOutput`メソッドは、このオブジェクトに結果データを入力します。 （このパラメーター値は、Webサービスの呼び出しのみに必要です）。
-      * 操作の結果を格納する`OutputResult`オブジェクト。 （このパラメーター値は、Webサービスの呼び出しのみに必要です）。
-   * `OutputResult`オブジェクトの`generatedDoc`メソッドの値を取得して、プリンターに送信する`BLOB`オブジェクトを作成します。 このメソッドは、 `generatePrintedOutput`メソッドで返されるPostScriptデータを含む`BLOB`オブジェクトを返します。
+      * 関連する販促物ファイル（画像ファイルなど）の場所を指定する string 値です。
+      * 使用する XDC ファイルの場所を指定する string 値です。
+      * この `PrintedOutputOptionsSpec` 印刷ストリームをネットワークプリンタに送信する際に使用する印刷実行時のオプションを含むオブジェクト。
+      * この `BLOB` フォームデータを含む XML データソースを含むオブジェクト。
+      * A `BLOB` オブジェクト `generatePrintedOutput` メソッド。 この `generatePrintedOutput` メソッドは、ドキュメントを表す生成されたメタデータをこのオブジェクトに設定します。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+      * A `BLOB` オブジェクト `generatePrintedOutput` メソッド。 この `generatePrintedOutput` メソッドは、このオブジェクトに結果データを入力します。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+      * An `OutputResult` 操作の結果を格納するオブジェクト。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+   * の作成 `BLOB` オブジェクトを指定して、 `OutputResult` オブジェクト `generatedDoc` メソッド。 このメソッドは、 `BLOB` 次の式で返される PostScript データを含むオブジェクト `generatePrintedOutput` メソッド。
 
 
 1. 印刷ストリームをネットワークプリンタに送信します。
 
-   `OutputClient`オブジェクトの`sendToPrinter`メソッドを呼び出し、次の値を渡して、印刷ストリームをネットワークプリンターに送信します。
+   を呼び出して、印刷ストリームをネットワークプリンターに送信します。 `OutputClient` オブジェクトの `sendToPrinter` メソッドを使用して、次の値を渡します。
 
-   * プリンターに送信する印刷ストリームを表す`BLOB`オブジェクト。
-   * 使用するプリンタープロトコルを指定する`PrinterProtocol`列挙値。 例えば、SharedPrinterプロトコルを指定するには、`PrinterProtocol.SharedPrinter`を渡します。
-   * 前のパラメータ値を使用するかどうかを指定する`bool`値。 値`true`を渡します。 （このパラメーター値は、Webサービスの呼び出しのみに必要です）。
-   * プリントサーバーの名前を指定するstring値。 例えば、プリントサーバーの名前がPrintSever1である場合は、`\\\PrintSever1`を渡します。
-   * プリンターの名前を指定するstring値。 例えば、プリンター名がPrinter1である場合は、`\\\PrintSever1\Printer1`を渡します。
+   * A `BLOB` プリンタに送信する印刷ストリームを表すオブジェクト。
+   * A `PrinterProtocol` 使用するプリンタープロトコルを指定する列挙値。 たとえば、SharedPrinter プロトコルを指定するには、 `PrinterProtocol.SharedPrinter`.
+   * A `bool` 以前のパラメータ値を使用するかどうかを指定する値。 値を渡す `true`. （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+   * 印刷サーバーの名前を指定する string 値です。 例えば、印刷サーバーの名前が PrintServer1 であると仮定した場合、 `\\\PrintSever1`.
+   * プリンターの名前を指定する string 値です。 例えば、プリンタ名が Printer1 であると仮定した場合、 `\\\PrintSever1\Printer1`.
 
    >[!NOTE]
    >
-   >`sendToPrinter`メソッドがバージョン8.2.1のAEM Forms APIに追加されました。
+   >この `sendToPrinter` メソッドがAEM Forms API バージョン 8.2.1 に追加されました。
 
 ## 複数の出力ファイルの作成 {#creating-multiple-output-files}
 
-Outputサービスでは、XMLデータソース内のレコードごとに別々のドキュメントを作成することも、すべてのレコードを含む単一のファイルを作成することもできます（この機能はデフォルトです）。 例えば、10件のレコードがXMLデータソース内に配置され、Output Service APIを使用して各レコードに対して個別のPDFドキュメント（または他のタイプの出力）を作成するようにOutputサービスに指示したとします。 その結果、Outputサービスは10個のPDFドキュメントを生成します。 （ドキュメントを作成する代わりに、1台のプリンターに複数の印刷ストリームを送信できます）。
+Output サービスでは、XML データソース内のレコードごとに別々のドキュメントを作成することも、すべてのレコードを含む単一のファイルを作成することもできます（この機能はデフォルトです）。 例えば、10 個のレコードが XML データソース内に配置され、Output Service API を使用して、各レコードに対して個別のPDFドキュメント（または他の種類の出力）を作成するように Output サービスに指示したとします。 その結果、Output サービスは 10 個のドキュメントをPDFします。 （ドキュメントを作成する代わりに、1 台のプリンターに複数の印刷ストリームを送信できます）。
 
-次の図に、複数のレコードを含むXMLデータファイルを処理するOutputサービスを示します。 ただし、すべてのデータレコードを含む単一のPDFドキュメントを作成するようにOutputサービスに指示したとします。 この場合、Outputサービスは、すべてのレコードを含む1つのドキュメントを生成します。
+次の図は、複数のレコードを含む XML データファイルを Output サービスが処理する様子も示しています。 ただし、すべてのデータレコードを含む単一のPDFドキュメントを作成するように Output サービスに指示したとします。 この場合、Output サービスは、すべてのレコードを含む 1 つのドキュメントを生成します。
 
-次の図に、複数のレコードを含むXMLデータファイルを処理するOutputサービスを示します。 Outputサービスに対して、データレコードごとに個別のPDFドキュメントを作成するよう指示したとします。 この場合、Outputサービスは、データレコードごとに個別のPDFドキュメントを生成します。
+次の図に、複数のレコードを含む XML データファイルを Output サービスが処理する様子を示します。 Output サービスに対して、データレコードごとに個別のPDFドキュメントを作成するよう指示したとします。 この場合、Output サービスは、データレコードごとに個別のPDFドキュメントを生成します。
 
 ![cm_outputbatchmany](assets/cm_outputbatchmany.png)
 
-次のXMLデータは、3つのデータレコードを含むデータファイルの例を示しています。
+次の XML データは、3 つのデータレコードを含むデータファイルの例を示しています。
 
 ```as3
  <?xml version="1.0" encoding="UTF-8"?> 
@@ -1700,71 +1700,71 @@ Outputサービスでは、XMLデータソース内のレコードごとに別�
  </batch>
 ```
 
-各データレコードを開始および終了するXML要素は`LoanRecord`です。 このXML要素は、複数のファイルを生成するアプリケーションロジックによって参照されます。
+各データレコードを開始および終了する XML 要素は、次のようになっています。 `LoanRecord`. この XML 要素は、複数のファイルを生成するアプリケーションロジックによって参照されます。
 
 >[!NOTE]
 >
->Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>Output サービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 手順の概要 {#summary_of_steps-7}
 
-1つのXMLデータソースに基づいて複数のPDFファイルを作成するには、次の手順を実行します。
+1 つの XML データソースに基づいて複数のPDFファイルを作成するには、次の手順を実行します。
 
 1. プロジェクトファイルを含めます。
-1. Outputクライアントオブジェクトを作成します。
-1. XMLデータソースを参照します。
-1. PDF実行時オプションを設定します。
+1. Output Client オブジェクトを作成します。
+1. XML データソースを参照します。
+1. PDFの実行時オプションを設定します。
 1. レンダリングの実行時オプションを設定します。
-1. 複数のPDFファイルを生成します。
+1. 複数のPDFファイルを生成
 1. 操作の結果を取得します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、必ずプロキシファイルを含めてください。
+開発プロジェクトに必要なファイルを含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
 
-次のJARファイルをプロジェクトのクラスパスに追加する必要があります。
+次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(AEM FormsをJBossにデプロイする場合に必要)
-* jbossall-client.jar(AEM FormsをJBossにデプロイする場合に必要)
+* adobe-utilities.jar(AEM Formsを JBoss にデプロイする場合に必要 )
+* jbossall-client.jar(AEM Formsが JBoss にデプロイされている場合に必要 )
 
-AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
 
-**Outputクライアントオブジェクトの作成**
+**出力クライアントオブジェクトの作成**
 
-プログラムによってOutputサービス操作を実行する前に、Outputサービスクライアントオブジェクトを作成する必要があります。 Java APIを使用している場合は、`OutputClient`オブジェクトを作成します。 Output WebサービスAPIを使用している場合は、`OutputServiceService`オブジェクトを作成します。
+Output サービスの操作をプログラムで実行する前に、Output サービスのクライアントオブジェクトを作成する必要があります。 Java API を使用している場合は、 `OutputClient` オブジェクト。 Output Web サービス API を使用している場合、 `OutputServiceService` オブジェクト。
 
-**XMLデータソースの参照**
+**XML データソースの参照**
 
-複数のレコードを含むXMLデータソースを参照します。 データレコードを区切るには、XML要素を使用する必要があります。 例えば、この節で前述したXMLデータソースの例では、データレコードを区切るXML要素の名前は`LoanRecord`です。
+複数のレコードを含む XML データソースを参照します。 データレコードを区切るには、XML 要素を使用する必要があります。 例えば、この節で前述した XML データソースの例では、データレコードを区切る XML 要素にと名前が付けられています `LoanRecord`.
 
-データを入力するフォームフィールドごとに、XML要素が存在する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
+データを入力するフォームフィールドごとに、XML 要素が存在する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべての XML 要素が指定されている場合、XML 要素の表示順序を一致させる必要はありません。
 
-**PDF実行時オプションの設定**
+**PDF実行時オプションを設定**
 
-XMLデータソースに基づいて複数のファイルを正常に作成するには、Outputサービスに次のランタイムオプションを設定する必要があります。
+Output サービスで XML データソースに基づいて複数のファイルを正常に作成するには、次のランタイムオプションを設定する必要があります。
 
-* **多数のファイル**:Outputサービスで1つのドキュメントを作成するか、複数のドキュメントを作成するかを指定します。trueまたはfalseを指定できます。 XMLデータソース内のデータレコードごとに個別のドキュメントを作成するには、trueを指定します。
-* **ファイルURI**:Outputサービスが生成するファイルの場所を指定します。例えば、C:\\Adobe\forms\Loan.pdfと指定したとします。 この場合、OutputサービスはLoan.pdfという名前のファイルを作成し、C:\\Adobe\forms folderフォルダーに配置します。 複数のファイルが存在する場合、ファイル名はLoan0001.pdf、Loan0002.pdf、Loan0003.pdfなどです。 ファイルの場所を指定した場合、ファイルはクライアントコンピューターではなくサーバーに配置されます。
-* **レコード名**:データレコードを区切るデータソース内のXML要素名を指定します。例えば、この節で前に示したXMLデータソースの例では、データレコードを区切るXML要素は`LoanRecord`と呼ばれます。 (「レコード名」実行時オプションを設定する代わりに、データレコードを含む要素レベルを示す数値をレコードレベルに割り当てて、レコードレベルを設定できます。 ただし、「レコード名」または「レコードレベル」のみを設定できます。 両方の値を設定することはできません)。
+* **多数のファイル**:Output サービスで 1 つのドキュメントを作成するか、複数のドキュメントを作成するかを指定します。 true または false を指定できます。 XML データソース内のデータレコードごとに個別のドキュメントを作成するには、true を指定します。
+* **ファイル URI**:Output サービスが生成するファイルの場所を指定します。 例えば、C:\\Adobe\forms\Loan.pdfと指定したとします。 この場合、Output サービスは Loan.pdf という名前のファイルを作成し、C:\\Adobe\forms folderフォルダーに配置します。 複数のファイルが存在する場合、ファイル名は Loan0001.pdf、Loan0002.pdf、Loan0003.pdf などです。 ファイルの場所を指定した場合、ファイルはクライアントコンピューターではなくサーバーに配置されます。
+* **レコード名**:データレコードを区切るデータソース内の XML 要素名を指定します。 例えば、この節で前述した XML データソースの例では、データレコードを区切る XML 要素がと呼ばれます。 `LoanRecord`. (「レコード名」実行時オプションを設定する代わりに、データレコードを含む要素レベルを示す数値をレコードレベルに割り当てることで、レコードレベルを設定できます。 ただし、「レコード名」または「レコードレベル」のみを設定できます。 両方の値を設定することはできません )。
 
-**レンダリング実行時オプションの設定**
+**レンダリング実行時オプションを設定**
 
-複数のファイルを作成する際に、レンダリングの実行時オプションを設定できます。 これらのオプションは必須ではありませんが（必須の出力ランタイムオプションとは異なり）、Outputサービスのパフォーマンス向上などのタスクを実行できます。 例えば、Outputサービスが使用するフォームデザインをキャッシュして、パフォーマンスを向上させることができます。
+複数のファイルを作成する際に、レンダリングの実行時オプションを設定できます。 これらのオプションは必須ではありませんが（必須の出力ランタイムオプションとは異なり）、Output サービスのパフォーマンス向上などのタスクを実行できます。 例えば、Output サービスが使用するフォームデザインをキャッシュして、パフォーマンスを向上させることができます。
 
-Outputサービスがバッチレコードを処理する場合、複数のレコードを含むデータを増分方法で読み取ります。 つまり、Outputサービスはデータをメモリに読み取り、レコードのバッチが処理されるたびにデータを解放します。 Outputサービスは、2つのランタイムオプションのいずれかが設定されている場合、増分方法でデータを読み込みます。 「Record Name」ランタイムオプションを設定した場合、Outputサービスは増分方法でデータを読み取ります。 同様に、「Record Level」実行時オプションを2以上に設定した場合、Outputサービスは増分方法でデータを読み取ります。
+Output サービスがバッチレコードを処理する場合、複数のレコードを含むデータを増分方式で読み取ります。 つまり、Output サービスはデータをメモリに読み取り、レコードのバッチが処理されるたびにデータを解放します。 Output サービスは、2 つの実行時オプションのいずれかが設定されている場合、増分方式でデータを読み込みます。 「Record Name」実行時オプションを設定した場合、Output サービスは増分方式でデータを読み取ります。 同様に、「Record Level」実行時オプションを 2 以上に設定した場合、Output サービスは増分方式でデータを読み取ります。
 
-`PDFOutputOptionsSpec`または`PrintedOutputOptionSpec`オブジェクトの`setLazyLoading`メソッドを使用して、Outputサービスで増分読み込みを実行するかどうかを制御できます。 このメソッドに値`false`を渡すと、増分読み込みがオフになります。
+Output サービスで増分読み込みを実行するかどうかは、 `PDFOutputOptionsSpec` または `PrintedOutputOptionSpec` オブジェクトの `setLazyLoading` メソッド。 値は `false` をこのメソッドに追加します。
 
-**複数のPDFファイルの生成**
+**複数のPDFファイルを生成**
 
-複数のデータレコードと実行時オプションを設定した有効なXMLデータソースを参照した後、Outputサービスを呼び出すと、複数のファイルが生成されます。 複数のレコードを生成する場合、`OutputResult`オブジェクトの`getGeneratedDoc`メソッドは`null`を返します。
+複数のデータレコードと実行時オプションを設定した有効な XML データソースを参照した後、Output サービスを呼び出すと、複数のファイルが生成されます。 複数のレコードを生成する場合、 `OutputResult` オブジェクトの `getGeneratedDoc` メソッドの戻り値 `null`.
 
 **操作の結果の取得**
 
-Outputサービスが操作を実行すると、その操作が成功したかどうかを示すXMLデータが返されます。 次のXMLがOutputサービスによって返されます。 この場合、Outputサービスは42個のドキュメントを生成しました。
+Output サービスが操作を実行すると、操作が成功したかどうかを示す XML データが返されます。 次の XML が Output サービスによって返されます。 この場合、Output サービスは 42 個のドキュメントを生成しました。
 
 ```as3
  <?xml version="1.0" encoding="UTF-8"?> 
@@ -1801,215 +1801,215 @@ Outputサービスが操作を実行すると、その操作が成功したか�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
+[Output サービス API のクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### Java APIを使用した複数のPDFファイルの作成 {#create-multiple-pdf-files-using-the-java-api}
+### Java API を使用した複数のPDFファイルの作成 {#create-multiple-pdf-files-using-the-java-api}
 
-Output API(Java)を使用して複数のPDFファイルを作成します。
+Output API(Java) を使用して複数のPDFファイルを作成します。
 
-1. プロジェクトファイルを含める&quot;
+1. プロジェクトファイルを含める»
 
-   Javaプロジェクトのクラスパスに、adobe-output-client.jarなどのクライアントJARファイルを含めます。.
+   Java プロジェクトのクラスパスに、adobe-output-client.jar などのクライアント JAR ファイルを含めます。.
 
-1. Outputクライアントオブジェクトの作成
+1. 出力クライアントオブジェクトの作成
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して`OutputClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * の作成 `OutputClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
 
-1. XMLデータソースの参照
+1. XML データソースの参照
 
-   * コンストラクタを使用し、XMLファイルの場所を指定する文字列値を渡すことで、複数のレコードを含むXMLデータソースを表す`java.io.FileInputStream`オブジェクトを作成します。
+   * の作成 `java.io.FileInputStream` コンストラクタを使用し、XML ファイルの場所を指定する string 値を渡すことによって、複数のレコードを含む XML データソースを表すオブジェクト。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
-1. PDF実行時オプションの設定
+1. PDF実行時オプションを設定
 
    * コンストラクタを使用して `PDFOutputOptionsSpec` オブジェクトを作成します。
-   * `PDFOutputOptionsSpec`オブジェクトの`setGenerateManyFiles`メソッドを呼び出して、「多数のファイル」オプションを設定します。 例えば、値`true`を渡して、XMLデータソース内の各レコードに対して個別のPDFファイルを作成するようにOutputサービスに指示します。 （`false`を渡すと、すべてのレコードを含む単一のPDFドキュメントがOutputサービスによって生成されます）。
-   * `PDFOutputOptionsSpec`オブジェクトの`setFileUri`メソッドを呼び出し、Outputサービスが生成するファイルの場所を指定する文字列値を渡すことで、「File URI」オプションを設定します。 「ファイルURI 」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対して相対的なもので、クライアントコンピューターに対しては相対的なものではありません。
-   * `OutputOptionsSpec`オブジェクトの`setRecordName`メソッドを呼び出し、データレコードを区切るデータソース内のXML要素名を指定する文字列値を渡すことで、「レコード名」オプションを設定します。 (例えば、この節で前述したXMLデータソースについて考えてみましょう。 データレコードを区切るXML要素の名前はLoanRecordです。
+   * を呼び出して、「多数のファイル」オプションを設定します。 `PDFOutputOptionsSpec` オブジェクトの `setGenerateManyFiles` メソッド。 例えば、 `true` を使用して、XML データソース内のレコードごとに個別のPDFファイルを作成するように Output サービスに指示します。 ( `false`を指定した場合、Output サービスは、すべてのレコードを含む単一のPDFドキュメントを生成します。
+   * を呼び出して、「 File URI 」オプションを設定します。 `PDFOutputOptionsSpec` オブジェクトの `setFileUri` メソッドを使用して、Output サービスが生成するファイルの場所を指定する string 値を渡します。 「ファイル URI 」オプションは、クライアントコンピューターではなく、AEM Formsをホストする J2EE アプリケーションサーバーに対する相対パスです。
+   * を呼び出して、「レコード名」オプションを設定します。 `OutputOptionsSpec` オブジェクトの `setRecordName` メソッドを使用し、データレコードを区切るデータソース内の XML 要素名を指定する文字列値を渡す ( 例えば、この節で前述した XML データソースを考えてみましょう。 データレコードを区切る XML 要素の名前は LoanRecord です。
 
-1. レンダリング実行時オプションの設定
+1. レンダリング実行時オプションを設定
 
    * コンストラクタを使用して `RenderOptionsSpec` オブジェクトを作成します。
-   * `RenderOptionsSpec`オブジェクトの`setCacheEnabled`を呼び出し、`true`の`Boolean`値を渡すことで、フォームデザインをキャッシュしてOutputサービスのパフォーマンスを向上させます。
+   * フォームデザインをキャッシュし、 `RenderOptionsSpec` オブジェクトの `setCacheEnabled` そして `Boolean` 値 `true`.
 
-1. 複数のPDFファイルの生成
+1. 複数のPDFファイルを生成
 
-   `OutputClient`オブジェクトの`generatePDFOutput`メソッドを呼び出し、次の値を渡して、複数のPDFファイルを生成します。
+   を呼び出して複数のPDFファイルを生成する `OutputClient` オブジェクトの `generatePDFOutput` メソッドを使用して、次の値を渡します。
 
-   * `TransformationFormat`列挙値。 PDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
+   * A `TransformationFormat` enum 値。 PDF・ドキュメントを生成するには、 `TransformationFormat.PDF`.
    * フォームデザイン名を指定する string 値。
-   * フォームデザインが存在するコンテンツルートを指定するstring値。
-   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
-   * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
-   * フォームデザインとマージするデータを含むXMLデータソースを含む`com.adobe.idp.Document`オブジェクト。
+   * フォームデザインが配置されているコンテンツルートを指定する string 値です。
+   * A `PDFOutputOptionsSpec` PDFの実行時オプションを含むオブジェクト。
+   * A `RenderOptionsSpec` レンダリングの実行時オプションを含むオブジェクト。
+   * この `com.adobe.idp.Document` フォームデザインとマージするデータが含まれる XML データソースを含むオブジェクト。
 
-   `generatePDFOutput`メソッドは、操作の結果を含む`OutputResult`オブジェクトを返します。
+   この `generatePDFOutput` メソッドは、 `OutputResult` 操作の結果を格納するオブジェクト。
 
 1. 操作の結果の取得
 
-   * `generatePDFOutput`メソッドの結果を格納するXMLファイルを表す`java.io.File`オブジェクトを作成します。 ファイル名の拡張子が.xmlであることを確認します。
-   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします（`applyUsageRights`メソッドで返された`com.adobe.idp.Document`オブジェクトを使用するようにしてください）。
+   * の作成 `java.io.File` の結果を含む XML ファイルを表すオブジェクト `generatePDFOutput` メソッド。 ファイル名の拡張子が.xml であることを確認します。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、 `com.adobe.idp.Document` オブジェクトをファイルに追加します ( `com.adobe.idp.Document` が返したオブジェクト `applyUsageRights` メソッド )。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[クイックスタート（EJBモード）:Java APIを使用した複数のPDFファイルの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api)
+[クイックスタート（EJB モード）:Java API を使用した複数のPDFファイルの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-multiple-pdf-files-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用した複数のPDFファイルの作成 {#create-multiple-pdf-files-using-the-web-service-api}
+### Web サービス API を使用した複数のPDFファイルの作成 {#create-multiple-pdf-files-using-the-web-service-api}
 
-Output API（Webサービス）を使用して複数のPDFファイルを作成します。
+Output API（Web サービス）を使用して複数のPDFファイルを作成します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 次の WSDL 定義を使用していることを確認します。 `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
+   >置換 `localhost` を、AEM Formsをホストするサーバーの IP アドレスに設定します。
 
-1. Outputクライアントオブジェクトを作成します。
+1. Output Client オブジェクトを作成します。
 
-   * デフォルトのコンストラクターを使用して`OutputServiceClient`オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに渡す文字列値（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）を渡します。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用する場合は`?blob=mtom`を指定します。
-   * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値は、MTOMが使用されるようにします。
-   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
+   * の作成 `OutputServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
+   * の作成 `OutputServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をAEM Formsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/OutputService?blob=mtom`.) を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます。 ただし、 `?blob=mtom` MTOM を使用する。
+   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `OutputServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
+   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
+   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
 
-      * フィールド`OutputServiceClient.ClientCredentials.UserName.UserName`にAEM formsユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド`OutputServiceClient.ClientCredentials.UserName.Password`に割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に定数値`HttpClientCredentialType.Basic`を割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Security.Mode`に定数値`BasicHttpSecurityMode.TransportCredentialOnly`を割り当てます。
+      * フィールドにAEM forms ユーザー名を割り当てます。 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 対応するパスワード値をフィールドに割り当てます。 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 定数値を割り当て `HttpClientCredentialType.Basic` フィールドに `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 定数値を割り当て `BasicHttpSecurityMode.TransportCredentialOnly` フィールドに `BasicHttpBindingSecurity.Security.Mode`.
 
-1. XMLデータソースを参照します。
+1. XML データソースを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、複数のレコードを含むフォームデータを格納するために使用します。
-   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 複数のレコードを含むXMLファイルのファイルの場所を表すstring値を渡します。
-   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得することで、バイト配列のサイズを判断できます。
-   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
-   * `BLOB`オブジェクトの`MTOM`フィールドにバイト配列の内容を割り当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、複数のレコードを含むフォームデータを保存するために使用します。
+   * の作成 `System.IO.FileStream` オブジェクトを指定します。 複数のレコードを含む XML ファイルのファイルの場所を表す string 値を渡します。
+   * コンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクト。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリーム長を渡す。
+   * 次の項目に `BLOB` オブジェクトを割り当てる `MTOM` フィールドにバイト配列の内容を入力します。
 
-1. PDF実行時オプションを設定します。
+1. PDFの実行時オプションを設定します。
 
    * コンストラクタを使用して `PDFOutputOptionsSpec` オブジェクトを作成します。
-   * `OutputOptionsSpec`オブジェクトの`generateManyFiles`データメンバーにブール値を割り当てて、「多数のファイル」オプションを設定します。 例えば、このデータメンバーに値`true`を割り当てて、XMLデータソース内の各レコードに対して個別のPDFファイルを作成するようにOutputサービスに指示します。 （このデータメンバーに`false`を割り当てると、Outputサービスは、すべてのレコードを含む単一のPDFを生成します）。
-   * Outputサービスが生成するファイルの場所を指定する文字列値を`OutputOptionsSpec`オブジェクトの`fileURI`データメンバーに割り当てて、「file URI」オプションを設定します。 「ファイルURI 」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対して相対的なもので、クライアントコンピューターに対しては相対的なものではありません。
-   * `OutputOptionsSpec`オブジェクトの`recordName`データメンバーにデータレコードを分離するデータソース内のXML要素名を指定する文字列値を割り当てて、レコード名オプションを設定します。
-   * Outputサービスが`OutputOptionsSpec`オブジェクトの`copies`データメンバーに生成するコピー数を指定する整数値を割り当てて、copiesオプションを設定します。
+   * 「多数のファイル」オプションを設定するには、 `OutputOptionsSpec` オブジェクトの `generateManyFiles` データメンバー。 例えば、 `true` をこのデータメンバーに指示して、XML データソース内のレコードごとに個別のPDFファイルを作成するように Output サービスに指示します。 ( `false` このデータメンバーに対して、Output サービスは、すべてのレコードを含む単一のPDFを生成します。
+   * Output サービスが生成するファイルの場所を指定する string 値をに割り当てて、「 file URI 」オプションを設定します `OutputOptionsSpec` オブジェクトの `fileURI` データメンバー。 「ファイル URI 」オプションは、クライアントコンピューターではなく、AEM Formsをホストする J2EE アプリケーションサーバーに対する相対パスです。
+   * データレコードをに分割するデータソース内の XML 要素名を指定する文字列値を割り当てて、レコード名オプションを設定します。 `OutputOptionsSpec` オブジェクトの `recordName` データメンバー。
+   * Output サービスが生成するコピーの数を指定する整数値を割り当てて、copies オプションを設定します `OutputOptionsSpec` オブジェクトの `copies` データメンバー。
 
 1. レンダリングの実行時オプションを設定します。
 
    * コンストラクタを使用して `RenderOptionsSpec` オブジェクトを作成します。
-   * 値`true`を`RenderOptionsSpec`オブジェクトの`cacheEnabled`データメンバーに割り当てることで、フォームデザインをキャッシュして、Outputサービスのパフォーマンスを向上させます。
+   * 値を割り当てて Output サービスのパフォーマンスを向上させるためにフォームデザインをキャッシュします `true` から `RenderOptionsSpec` オブジェクトの `cacheEnabled` データメンバー。
 
-1. 複数のPDFファイルを生成します。
+1. 複数のPDFファイルを生成
 
-   `OutputServiceService`オブジェクトの`generatePDFOutput`メソッドを呼び出し、次の値を渡して、複数のPDFファイルを作成します。
+   を呼び出して複数のPDFファイルを作成する `OutputServiceService` オブジェクトの `generatePDFOutput`メソッドを使用して、次の値を渡します。
 
-   * TransformationFormat列挙値。 PDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
+   * TransformationFormat 列挙値。 PDF・ドキュメントを生成するには、 `TransformationFormat.PDF`.
    * フォームデザイン名を指定する string 値。
-   * フォームデザインが存在するコンテンツルートを指定するstring値。
-   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
-   * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
-   * フォームデザインとマージするデータを含むXMLデータソースを含む`BLOB`オブジェクト。
-   * `generatePDFOutput`メソッドによって設定される`BLOB`オブジェクト。 `generatePDFOutput`メソッドは、このオブジェクトに、ドキュメントを表す生成済みのメタデータを入力します。
-   * `generatePDFOutput`メソッドによって設定される`BLOB`オブジェクト。 `generatePDFOutput`メソッドは、このオブジェクトに結果データを入力します。
-   * 操作の結果を格納する`OutputResult`オブジェクト。
+   * フォームデザインが配置されているコンテンツルートを指定する string 値です。
+   * A `PDFOutputOptionsSpec` PDFの実行時オプションを含むオブジェクト。
+   * A `RenderOptionsSpec` レンダリングの実行時オプションを含むオブジェクト。
+   * この `BLOB` フォームデザインとマージするデータが含まれる XML データソースを含むオブジェクト。
+   * A `BLOB` オブジェクト `generatePDFOutput` メソッド。 この `generatePDFOutput` メソッドは、ドキュメントを表す生成されたメタデータをこのオブジェクトに設定します。
+   * A `BLOB` オブジェクト `generatePDFOutput` メソッド。 この `generatePDFOutput` メソッドは、このオブジェクトに結果データを入力します。
+   * An `OutputResult` 操作の結果を格納するオブジェクト。
 
 1. 操作の結果の取得
 
-   * コンストラクターを呼び出し、結果データを含むXMLファイルの場所を表す文字列値を渡すことで、`System.IO.FileStream`オブジェクトを作成します。 ファイル名の拡張子が.xmlであることを確認します。
-   * `OutputServiceService`オブジェクトの`generatePDFOutput`メソッド（8番目のパラメーター）によって結果データが入力された`BLOB`オブジェクトのデータコンテンツを格納するバイト配列を作成します。 `BLOB`オブジェクトの`binaryData`データメンバーの値を取得して、バイト配列を設定します。
-   * コンストラクターを呼び出し、`System.IO.FileStream`オブジェクトを渡して、`System.IO.BinaryWriter`オブジェクトを作成します。
-   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことにより、バイト配列の内容をXMLファイルに書き込みます。
+   * の作成 `System.IO.FileStream` オブジェクトを作成します。 ファイル名の拡張子が.xml であることを確認します。
+   * のデータコンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクトに `OutputServiceService` オブジェクトの `generatePDFOutput` メソッド（8 番目のパラメーター）。 バイト配列を生成するには、 `BLOB` オブジェクトの `binaryData` データメンバー。
+   * の作成 `System.IO.BinaryWriter` オブジェクトのコンストラクタを呼び出し、 `System.IO.FileStream` オブジェクト。
+   * を呼び出して、バイト配列の内容を XML ファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[SwaRef を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
 ## 検索ルールの作成 {#creating-search-rules}
 
-Outputサービスで入力データを調べ、データコンテンツに基づいて様々なフォームデザインを使用して出力を生成する検索ルールを作成できます。 例えば、入力データ内にテキスト&#x200B;*mortgage*&#x200B;が配置されている場合、OutputサービスはMortgage.xdpという名前のフォームデザインを使用できます。 同様に、入力データ内にテキスト&#x200B;*automobile*&#x200B;が配置されている場合、Outputサービスでは、AutomobileLoan.xdpとして保存されたフォームデザインを使用できます。 Outputサービスでは異なる出力タイプを生成できますが、この節では、OutputサービスでPDFファイルが生成されることを前提としています。 次の図に、XMLデータファイルを処理し、様々なフォームデザインの1つを使用してPDFファイルを生成するOutputサービスを示します。
+Output サービスが入力データを調べ、データコンテンツに基づいて様々なフォームデザインを使用して出力を生成する結果となる検索ルールを作成できます。 例えば、 *抵当* が入力データ内に配置されている場合、Output サービスは Mortgage.xdp という名前のフォームデザインを使用できます。 同様に、 *自動車* が入力データに配置されている場合、Output サービスは、AutomobileLoan.xdp として保存されたフォームデザインを使用できます。 Output サービスでは異なる出力タイプを生成できますが、この節では、Output サービスで生成される出力ファイルを想定してPDFします。 次の図に、XML データファイルを処理し、多数のフォームデザインの 1 つを使用してPDFファイルを生成する Output サービスを示します。
 
-さらに、Outputサービスでは、複数のレコードがデータセットに提供され、各レコードがフォームデザインに一致し、1つのドキュメントが複数のフォームデザインで構成されるドキュメントパッケージを生成できます。
+また、Output サービスではドキュメントパッケージを生成できます。このパッケージでは、データセットに複数のレコードが含まれ、各レコードがフォームデザインと照合され、1 つのドキュメントが複数のフォームデザインで構成されます。
 
 ![cs_outputbatchmanyformdesigns2](assets/cs_outputbatchmanyformdesigns2.png)
 
 >[!NOTE]
 >
->Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>Output サービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 手順の概要 {#summary_of_steps-8}
 
-ドキュメントの生成時に検索ルールを使用するようにOutputサービスに指示するには、次の手順を実行します。
+ドキュメントの生成時に検索ルールを使用するように Output サービスに指示するには、次の手順を実行します。
 
 1. プロジェクトファイルを含めます。
-1. Outputクライアントオブジェクトを作成します。
-1. XMLデータソースを参照します。
+1. Output Client オブジェクトを作成します。
+1. XML データソースを参照します。
 1. 検索ルールを定義します。
-1. PDF実行時オプションを設定します。
+1. PDFの実行時オプションを設定します。
 1. レンダリングの実行時オプションを設定します。
-1. PDFドキュメントを生成します。
+1. PDF文書を生成
 1. 操作の結果を取得します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、プロキシファイルを必ず含めてください。
+開発プロジェクトに必要なファイルを含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-次のJARファイルをプロジェクトのクラスパスに追加する必要があります。
+次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(AEM FormsがJBossにデプロイされている場合に必須)
-* jbossall-client.jar(AEM FormsがJBossにデプロイされている場合に必須)
+* adobe-utilities.jar(AEM Formsを JBoss にデプロイする場合に必須 )
+* jbossall-client.jar(AEM Formsが JBoss にデプロイされている場合に必須 )
 
-AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarとjbossall-client.jarを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
 
-**Outputクライアントオブジェクトの作成**
+**出力クライアントオブジェクトの作成**
 
-プログラムによってOutputサービス操作を実行する前に、Outputサービスクライアントオブジェクトを作成する必要があります。
+Output サービスの操作をプログラムで実行する前に、Output サービスのクライアントオブジェクトを作成する必要があります。
 
-**XMLデータソースの参照**
+**XML データソースの参照**
 
-データを入力するフォームフィールドごとに、XML要素が存在する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべてのXML要素が指定されている限り、XML要素の表示順を一致させる必要はありません。
+データを入力するフォームフィールドごとに、XML 要素が存在する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべての XML 要素が指定されている限り、XML 要素の表示順を一致させる必要はありません。
 
 **検索ルールの定義**
 
-検索ルールを定義するには、Outputサービスが入力データ内で検索する1つ以上のテキストパターンを定義します。 定義するテキストパターンごとに、テキストパターンが存在する場合に使用する対応するフォームデザインを指定します。 テキストパターンが見つかった場合、Outputサービスは対応するフォームデザインを使用して出力を生成します。 例えば、*mortgage*&#x200B;などのテキストパターンがあります。
+検索ルールを定義するには、Output サービスが入力データで検索する 1 つ以上のテキストパターンを定義します。 定義する各テキストパターンに対して、テキストパターンが存在する場合に使用する対応するフォームデザインを指定します。 テキストパターンが見つかった場合、Output サービスは対応するフォームデザインを使用して出力を生成します。 テキストパターンの例を次に示します。 *抵当*.
 
 >[!NOTE]
 >
 >テキストパターンが見つからない場合は、デフォルトのフォームが使用されます。 使用するすべてのフォームデザインがコンテンツルートに配置されていることを確認します。
 
-**PDF実行時オプションの設定**
+**PDF実行時オプションを設定**
 
-Outputサービスが複数のフォームデザインに基づいてPDFドキュメントを正常に作成するために、次のPDFランタイムオプションを設定します。
+Output サービスが複数のフォームデザインに基づいてPDFドキュメントを正しく作成するために、次のPDFランタイムオプションを設定します。
 
-* **ファイルURI**:Outputサービスが生成するPDFファイルの名前と場所を指定します。
+* **ファイル URI**:Output サービスが生成するPDFファイルの名前と場所を指定します。
 * **ルール**:定義したルールを指定します。
-* **LookAhead**:定義済みのテキストパターンをスキャンするために入力データファイルの先頭から使用するバイト数を指定します。デフォルトは500バイトです。
+* **LookAHead**:定義されたテキストパターンをスキャンするために入力データファイルの先頭から使用するバイト数を指定します。 デフォルトは 500 バイトです。
 
-**レンダリング実行時オプションの設定**
+**レンダリング実行時オプションを設定**
 
-PDFファイルの作成時にレンダリングの実行時オプションを設定できます。 PDFの実行時オプションとは異なり、これらのオプションは必須ではありませんが、Outputサービスのパフォーマンス向上などのタスクを実行できます。 例えば、Outputサービスが使用するフォームデザインをキャッシュして、パフォーマンスを向上させることができます。
+レンダリングの実行時オプションは、PDFファイルの作成時に設定できます。 これらのオプションは必須ではありませんが (PDFのランタイムオプションとは異なり )、Output サービスのパフォーマンス向上などのタスクを実行できます。 例えば、Output サービスが使用するフォームデザインをキャッシュして、パフォーマンスを向上させることができます。
 
-**PDFドキュメントの生成**
+**PDF文書を生成**
 
-有効なXMLデータソースを参照し、実行時オプションを設定した後、Outputサービスを呼び出すと、PDFドキュメントが生成されます。 Outputサービスが入力データ内で指定されたテキストパターンを見つけた場合は、対応するフォームデザインが使用されます。 テキストパターンを使用しない場合、Outputサービスはデフォルトのフォームデザインを使用します。
+有効な XML データソースを参照し、実行時オプションを設定した後、Output サービスを呼び出して、PDFドキュメントを生成できます。 Output サービスが入力データ内で指定されたテキストパターンを見つけた場合は、対応するフォームデザインを使用します。 テキストパターンを使用しない場合、Output サービスはデフォルトのフォームデザインを使用します。
 
 **操作の結果の取得**
 
-Outputサービスが操作を実行すると、その操作が成功したかどうかを示すXMLデータが返されます。
+Output サービスが操作を実行すると、操作が成功したかどうかを示す XML データが返されます。
 
 **関連トピック**
 
@@ -2017,356 +2017,356 @@ Outputサービスが操作を実行すると、その操作が成功したか�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
+[Output サービス API のクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### Java APIを使用した検索ルールの作成 {#create-search-rules-using-the-java-api}
+### Java API を使用した検索ルールの作成 {#create-search-rules-using-the-java-api}
 
-Output API(Java)を使用して検索ルールを作成します。
+Output API(Java) を使用して検索ルールを作成します。
 
 1. プロジェクトファイルを含めます。
 
-   Javaプロジェクトのクラスパスに、adobe-output-client.jarなどのクライアントJARファイルを含めます。
+   Java プロジェクトのクラスパスに、adobe-output-client.jar などのクライアント JAR ファイルを含めます。
 
-1. Outputクライアントオブジェクトを作成します。
+1. Output Client オブジェクトを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して`OutputClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * の作成 `OutputClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
 
-1. XMLデータソースを参照します。
+1. XML データソースを参照します。
 
-   * PDFドキュメントのコンストラクターを使用し、XMLファイルの場所を指定する文字列値を渡すことで、PDFドキュメントの入力に使用されるXMLデータソースを表す`java.io.FileInputStream`オブジェクトを作成します。
+   * の作成 `java.io.FileInputStream` コンストラクタを使用し、XML ファイルの場所を指定する string 値を渡すことで、PDF・ドキュメントにデータを入力するために使用される XML データ・ソースを表すオブジェクト。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. 検索ルールを定義します。
 
    * コンストラクタを使用して `Rule` オブジェクトを作成します。
-   * `Rule`オブジェクトの`setPattern`メソッドを呼び出し、テキストパターンを指定する文字列値を渡すことで、テキストパターンを定義します。
-   * `Rule`オブジェクトの`setForm`メソッドを呼び出して、対応するフォームデザインを定義します。 フォームデザインの名前を指定するstring値を渡します。
+   * を呼び出して、テキストパターンを定義する `Rule` オブジェクトの `setPattern` メソッドを使用し、テキストパターンを指定する string 値を渡す。
+   * を呼び出して、対応するフォームデザインを定義します。 `Rule` オブジェクトの `setForm` メソッド。 フォームデザインの名前を指定する string 値を渡します。
 
    >[!NOTE]
    >
-   >定義するテキストパターンごとに、前の3つのサブ手順を繰り返します。
+   >定義する文字パターンごとに、前の 3 つのサブステップを繰り返します。
 
-   * `java.util.ArrayList`コンストラクターを使用して`java.util.List`オブジェクトを作成します。
-   * 作成した各`Rule`オブジェクトに対して、`java.util.List`オブジェクトの`add`メソッドを呼び出し、`Rule`オブジェクトを渡します。
+   * の作成 `java.util.List` オブジェクトを `java.util.ArrayList` コンストラクタ。
+   * 各 `Rule` 作成したオブジェクトを呼び出します。 `java.util.List` オブジェクトの `add` メソッドを使用して、 `Rule` オブジェクト。
 
 
-1. PDF実行時オプションを設定します。
+1. PDFの実行時オプションを設定します。
 
    * コンストラクタを使用して `PDFOutputOptionsSpec` オブジェクトを作成します。
-   * `PDFOutputOptionsSpec`オブジェクトの`setFileURI`メソッドを呼び出して、Outputサービスが生成するPDFファイルの名前と場所を指定します。 PDFファイルの場所を指定するstring値を渡します。 「ファイルURI 」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対して相対的なもので、クライアントコンピューターに対しては相対的なものではありません。
-   * `PDFOutputOptionsSpec`オブジェクトの`setRules`メソッドを呼び出して、定義したルールを設定します。 `Rule`オブジェクトを含む`java.util.List`オブジェクトを渡します。
-   * `PDFOutputOptionsSpec`オブジェクトの`setLookAhead`メソッドを呼び出して、定義済みのテキストパターンをスキャンするバイト数を設定します。 バイト数を表す整数値を渡します。
+   * を呼び出して、Output サービスが生成するPDFファイルの名前と場所を指定します。 `PDFOutputOptionsSpec` オブジェクトの `setFileURI` メソッド。 PDFファイルの場所を指定する string 値を渡します。 「ファイル URI 」オプションは、クライアントコンピューターではなく、AEM Formsをホストする J2EE アプリケーションサーバーに対する相対パスです。
+   * を呼び出して定義したルールを設定します。 `PDFOutputOptionsSpec` オブジェクトの `setRules` メソッド。 パス `java.util.List` を含むオブジェクト `Rule` オブジェクト。
+   * を呼び出して、定義済みのテキストパターンをスキャンするバイト数を設定します。 `PDFOutputOptionsSpec` オブジェクトの `setLookAhead` メソッド。 バイト数を表す整数値を渡します。
 
 1. レンダリングの実行時オプションを設定します。
 
    * コンストラクタを使用して `RenderOptionsSpec` オブジェクトを作成します。
-   * `RenderOptionsSpec`オブジェクトの`setCacheEnabled`を呼び出して`true`を渡すことで、Outputサービスのパフォーマンスを向上させるためにフォームデザインをキャッシュします。
+   * を呼び出して Output サービスのパフォーマンスを向上させるために、フォームデザインをキャッシュします。 `RenderOptionsSpec` オブジェクトの `setCacheEnabled` そして通り過ぎ `true`.
 
-1. PDFドキュメントを生成します。
+1. PDF文書を生成
 
-   `OutputClient`オブジェクトの`generatePDFOutput`メソッドを呼び出し、次の値を渡すことで、複数のフォームデザインに基づいたPDFドキュメントを生成します。
+   を呼び出して、複数のフォームデザインに基づくPDFドキュメントを生成する `OutputClient` オブジェクトの `generatePDFOutput` メソッドを使用して、次の値を渡します。
 
-   * `TransformationFormat`列挙値。 PDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
-   * デフォルトのフォームデザインの名前を指定するstring値。 つまり、テキストパターンが見つからない場合に使用されるフォームデザインです。
-   * フォームデザインが配置されるコンテンツルートを指定するstring値。
-   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
-   * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
-   * 定義されたテキストパターンについてOutputサービスが検索するフォームデータを含む`com.adobe.idp.Document`オブジェクト。
+   * A `TransformationFormat` 列挙値。 PDF・ドキュメントを生成するには、 `TransformationFormat.PDF`.
+   * デフォルトのフォームデザインの名前を指定する string 値です。 つまり、テキストパターンが見つからない場合に使用されるフォームデザインです。
+   * フォームデザインが配置されているコンテンツルートを指定する string 値です。
+   * A `PDFOutputOptionsSpec` PDFの実行時オプションを含むオブジェクト。
+   * A `RenderOptionsSpec` レンダリングの実行時オプションを含むオブジェクト。
+   * この `com.adobe.idp.Document` 定義済みのテキストパターンについて Output サービスで検索されるフォームデータを含むオブジェクト。
 
-   `generatePDFOutput`メソッドは、操作の結果を含む`OutputResult`オブジェクトを返します。
+   この `generatePDFOutput` メソッドは、 `OutputResult` 操作の結果を格納するオブジェクト。
 
 1. 操作の結果を取得します。
 
-   * `OutputResult`オブジェクトの`getStatusDoc`メソッドを呼び出して、`generatePDFOutput`メソッドのステータスを表す`com.adobe.idp.Document`オブジェクトを作成します。
-   * 操作の結果を格納する`java.io.File`オブジェクトを作成します。 ファイル拡張子が.xmlであることを確認します。
-   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容をファイルにコピーします（`getStatusDoc`メソッドで返された`com.adobe.idp.Document`オブジェクトを使用するようにしてください）。
+   * の作成 `com.adobe.idp.Document` オブジェクトのステータスを表すオブジェクト `generatePDFOutput` メソッドを呼び出す `OutputResult` オブジェクトの `getStatusDoc` メソッド。
+   * の作成 `java.io.File` 操作の結果を格納するオブジェクト。 ファイル拡張子が.xml であることを確認します。
+   * を呼び出す `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを使用して、 `com.adobe.idp.Document` オブジェクトをファイルに追加します ( `com.adobe.idp.Document` が返したオブジェクト `getStatusDoc` メソッド )。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[クイックスタート（EJBモード）:Java APIを使用した検索ルールの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
+[クイックスタート（EJB モード）:Java API を使用した検索ルールの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した検索ルールの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用した検索ルールの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用した検索ルールの作成 {#create-search-rules-using-the-web-service-api}
+### Web サービス API を使用した検索ルールの作成 {#create-search-rules-using-the-web-service-api}
 
-Output API（Webサービス）を使用して検索ルールを作成します。
+Output API（Web サービス）を使用して検索ルールを作成します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 次の WSDL 定義を使用していることを確認します。 `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
+   >置換 `localhost` を、AEM Formsをホストするサーバーの IP アドレスに設定します。
 
-1. Outputクライアントオブジェクトを作成します。
+1. Output Client オブジェクトを作成します。
 
-   * デフォルトのコンストラクターを使用して`OutputServiceClient`オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに渡す文字列値（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）を渡します。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用する場合は`?blob=mtom`を指定します。
-   * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値は、MTOMが使用されるようにします。
-   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
+   * の作成 `OutputServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
+   * の作成 `OutputServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をAEM Formsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/OutputService?blob=mtom`.) を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます。 ただし、 `?blob=mtom` MTOM を使用する。
+   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `OutputServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
+   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
+   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
 
-      * フィールド`OutputServiceClient.ClientCredentials.UserName.UserName`にAEM formsユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド`OutputServiceClient.ClientCredentials.UserName.Password`に割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に定数値`HttpClientCredentialType.Basic`を割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Security.Mode`に定数値`BasicHttpSecurityMode.TransportCredentialOnly`を割り当てます。
+      * フィールドにAEM forms ユーザー名を割り当てます。 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 対応するパスワード値をフィールドに割り当てます。 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 定数値を割り当て `HttpClientCredentialType.Basic` フィールドに `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 定数値を割り当て `BasicHttpSecurityMode.TransportCredentialOnly` フィールドに `BasicHttpBindingSecurity.Security.Mode`.
 
-1. XMLデータソースを参照します。
+1. XML データソースを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、PDFドキュメントとマージされるデータを保存するために使用されます。
-   * コンストラクターを呼び出し、暗号化するPDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
-   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得することで、バイト配列のサイズを判断できます。
-   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
-   * `BLOB`オブジェクトの`MTOM`フィールドにバイト配列の内容を割り当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、PDFドキュメントと結合されるデータを保存するために使用されます。
+   * の作成 `System.IO.FileStream` オブジェクトを呼び出し、暗号化するPDFドキュメントのファイルの場所と、ファイルを開くモードを表す string 値を渡すことによって、オブジェクトを指定します。
+   * コンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクト。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリーム長を渡す。
+   * 次の項目に `BLOB` オブジェクトを割り当てる `MTOM` フィールドにバイト配列の内容を入力します。
 
 1. 検索ルールを定義します。
 
    * コンストラクタを使用して `Rule` オブジェクトを作成します。
-   * `Rule`オブジェクトの`pattern`データメンバにテキストパターンを指定する文字列値を割り当てて、テキストパターンを定義します。
-   * `Rule`オブジェクトの`form`データメンバーにフォームデザインを指定する文字列値を割り当てて、対応するフォームデザインを定義します。
+   * テキストパターンを定義するには、 `Rule` オブジェクトの `pattern` データメンバー。
+   * 対応するフォームデザインを定義するには、フォームデザインを指定する文字列値を `Rule` オブジェクトの `form` データメンバー。
 
    >[!NOTE]
    >
-   >定義するテキストパターンごとに、前の3つのサブ手順を繰り返します。
+   >定義する文字パターンごとに、前の 3 つのサブステップを繰り返します。
 
-   * ルールを保存する`MyArrayOf_xsd_anyType`オブジェクトを作成します。
-   * 各`Rule`オブジェクトを`MyArrayOf_xsd_anyType`配列の要素に割り当てます。 各`Rule`オブジェクトに対して`MyArrayOf_xsd_anyType`オブジェクトの`Add`メソッドを呼び出します。
+   * の作成 `MyArrayOf_xsd_anyType` オブジェクトに含める必要があります。
+   * 各 `Rule` オブジェクトを `MyArrayOf_xsd_anyType` 配列。 を呼び出す `MyArrayOf_xsd_anyType` オブジェクトの `Add` メソッド `Rule` オブジェクト。
 
 
-1. PDF実行時オプションの設定
+1. PDF実行時オプションを設定
 
    * コンストラクタを使用して `PDFOutputOptionsSpec` オブジェクトを作成します。
-   * Outputサービスが生成するPDFファイルの場所を指定する文字列値を`PDFOutputOptionsSpec`オブジェクトの`fileURI`データメンバーに割り当てて、「file URI」オプションを設定します。 「ファイルURI 」オプションは、AEM FormsをホストするJ2EEアプリケーションサーバーに対して相対的なもので、クライアントコンピューターに対しては相対的なものではありません。
-   * Outputサービスが`PDFOutputOptionsSpec`オブジェクトの`copies`データメンバーに生成するコピー数を指定する整数値を割り当てて、copiesオプションを設定します。
-   * ルールを格納する`MyArrayOf_xsd_anyType`オブジェクトを`PDFOutputOptionsSpec`オブジェクトの`rules`データメンバーに割り当てて、定義したルールを設定します。
-   * 定義済みのテキストパターンをスキャンするバイト数を設定します。スキャンするバイト数を表す整数値を`PDFOutputOptionsSpec`オブジェクトの`lookAhead`データメソッドに割り当てます。
+   * Output サービスが生成するPDFファイルの場所をに指定する string 値を割り当てて、「 file URI 」オプションを設定します `PDFOutputOptionsSpec` オブジェクトの `fileURI` データメンバー。 「ファイル URI 」オプションは、クライアントコンピューターではなく、AEM Formsをホストする J2EE アプリケーションサーバーに対する相対パスです。
+   * Output サービスが生成するコピーの数を指定する整数値を割り当てて、copies オプションを設定します `PDFOutputOptionsSpec` オブジェクトの `copies` データメンバー。
+   * 定義したルールを設定するには、 `MyArrayOf_xsd_anyType` ルールを `PDFOutputOptionsSpec` オブジェクトの `rules` データメンバー。
+   * 定義したテキストパターンをスキャンするバイト数を設定します。スキャンするバイト数を表す整数値を割り当てます。 `PDFOutputOptionsSpec` オブジェクトの `lookAhead` データメソッド。
 
-1. レンダリング実行時オプションの設定
+1. レンダリング実行時オプションを設定
 
    * コンストラクタを使用して `RenderOptionsSpec` オブジェクトを作成します。
-   * 値`true`を`RenderOptionsSpec`オブジェクトの`cacheEnabled`データメンバーに割り当てて、Outputサービスのパフォーマンスを向上させるためにフォームデザインをキャッシュします。
+   * 値を割り当てて Output サービスのパフォーマンスを向上させるために、フォームデザインをキャッシュします `true` から `RenderOptionsSpec` オブジェクトの `cacheEnabled` データメンバー。
 
    >[!NOTE]
    >
-   >入力ドキュメントがAcrobatフォームの場合、`RenderOptionsSpec`オブジェクトの`pdfVersion`メンバーを使用してPDFドキュメントのバージョンを設定することはできません。 出力PDFドキュメントには、AcrobatフォームのPDFバージョンが保持されます。 同様に、入力ドキュメントがAcrobatフォームの場合は、 `RenderOptionsSpec`オブジェクトの`taggedPDF`メソッドを使用して、タグ付きPDFオプションを設定することはできません。
+   >次を使用してPDFドキュメントのバージョンを設定することはできません： `RenderOptionsSpec` オブジェクトの `pdfVersion` メンバー ( 入力ドキュメントがAcrobatフォームの場合 ) 出力PDFドキュメントには、AcrobatフォームのPDF版が保持されます。 同様に、タグ付きPDFオプションを `RenderOptionsSpec` オブジェクトの `taggedPDF` メソッドを使用します。
 
    >[!NOTE]
    >
-   >入力PDFドキュメントが認証またはデジタル署名されている場合、`RenderOptionsSpec`オブジェクトの`linearizedPDF`メンバを使用して線形化されたPDFオプションを設定することはできません。 詳しくは、[PDFドキュメントのデジタル署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)を参照してください。
+   >線形化PDFは、 `RenderOptionsSpec` オブジェクトの `linearizedPDF` メンバー：入力PDF・ドキュメントが認証済みまたはデジタル署名済みの場合。 詳しくは、 [デジタル署名PDF文書](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).
 
-1. PDFドキュメントの生成
+1. PDF文書を生成
 
-   `OutputServiceService`オブジェクトの`generatePDFOutput`メソッドを呼び出し、次の値を渡してPDFドキュメントを作成します。
+   を呼び出してPDFドキュメントを作成する `OutputServiceService` オブジェクトの `generatePDFOutput`メソッドを使用して、次の値を渡します。
 
-   * `TransformationFormat`列挙値。 PDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
+   * A `TransformationFormat` 列挙値。 PDF・ドキュメントを生成するには、 `TransformationFormat.PDF`.
    * フォームデザイン名を指定する string 値。
-   * フォームデザインが存在するコンテンツルートを指定するstring値。
-   * PDFランタイムオプションを含む`PDFOutputOptionsSpec`オブジェクト。
-   * レンダリングの実行時オプションを含む`RenderOptionsSpec`オブジェクト。
-   * フォームデザインとマージするデータを含むXMLデータソースを含む`BLOB`オブジェクト。
-   * `generatePDFOutput`メソッドによって設定される`BLOB`オブジェクト。 `generatePDFOutput`メソッドは、このオブジェクトに、ドキュメントを表す生成済みのメタデータを入力します。 （このパラメーター値は、Webサービスの呼び出しにのみ必要です）。
-   * `generatePDFOutput`メソッドによって設定される`BLOB`オブジェクト。 `generatePDFOutput`メソッドは、このオブジェクトに結果データを入力します。 （このパラメーター値は、Webサービスの呼び出しにのみ必要です）。
-   * 操作の結果を格納する`OutputResult`オブジェクト。 （このパラメーター値は、Webサービスの呼び出しにのみ必要です）。
+   * フォームデザインが配置されているコンテンツルートを指定する string 値です。
+   * A `PDFOutputOptionsSpec` PDFの実行時オプションを含むオブジェクト。
+   * A `RenderOptionsSpec` レンダリングの実行時オプションを含むオブジェクト。
+   * この `BLOB` フォームデザインとマージするデータが含まれる XML データソースを含むオブジェクト。
+   * A `BLOB` オブジェクト `generatePDFOutput` メソッド。 この `generatePDFOutput` メソッドは、ドキュメントを表す生成されたメタデータをこのオブジェクトに設定します。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+   * A `BLOB` オブジェクト `generatePDFOutput` メソッド。 この `generatePDFOutput` メソッドは、このオブジェクトに結果データを入力します。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
+   * An `OutputResult` 操作の結果を格納するオブジェクト。 （このパラメーター値は、Web サービスの呼び出しにのみ必要です）。
 
    >[!NOTE]
    >
-   >`generatePDFOutput`メソッドを呼び出してPDFドキュメントを生成する場合、使用権限を含む、署名済みまたは認証済みのXFA PDFフォームとのデータの結合はできないことに注意してください。 使用権限について詳しくは、[PDFドキュメントへの使用権限の適用](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)を参照してください。
+   >を呼び出してPDFドキュメントを生成する場合 `generatePDFOutput` メソッドを使用する場合、署名、認証、使用権限を含む XFAPDFフォームにデータを結合することはできません。 使用権限について詳しくは、 [使用権限のPDF・ドキュメントへの適用](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
 
 1. 操作の結果の取得
 
-   * コンストラクターを呼び出し、結果データを含むXMLファイルの場所を表す文字列値を渡すことで、`System.IO.FileStream`オブジェクトを作成します。 ファイル拡張子がXMLであることを確認します。
-   * `OutputServiceService`オブジェクトの`generatePDFOutput`メソッド（8番目のパラメーター）によって結果データが入力された`BLOB`オブジェクトのデータコンテンツを格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバーの値を取得して、バイト配列を設定します。
-   * コンストラクターを呼び出し、`System.IO.FileStream`オブジェクトを渡して、`System.IO.BinaryWriter`オブジェクトを作成します。
-   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことにより、バイト配列の内容をXMLファイルに書き込みます。
+   * の作成 `System.IO.FileStream` オブジェクトを作成します。 ファイル拡張子が XML であることを確認します。
+   * のデータコンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクトに `OutputServiceService` オブジェクトの `generatePDFOutput` メソッド（8 番目のパラメーター）。 バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバー。
+   * の作成 `System.IO.BinaryWriter` オブジェクトのコンストラクタを呼び出し、 `System.IO.FileStream` オブジェクト。
+   * を呼び出して、バイト配列の内容を XML ファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[SwaRef を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## PDFドキュメントの統合 {#flattening-pdf-documents}
+## PDF文書の統合 {#flattening-pdf-documents}
 
-Outputサービスを使用して、インタラクティブPDFドキュメントを非インタラクティブPDFに変換できます。 インタラクティブPDFドキュメントを使用すると、ユーザーはPDFドキュメントフィールドにデータを入力または変更できます。 インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに変換するプロセスは、*統合*&#x200B;と呼ばれます。 PDFドキュメントを統合すると、ユーザーはドキュメントフィールド内のデータを変更できなくなります。 PDF ドキュメントを統合する理由の 1 つは、データを変更できないようにすることです。
+Output サービスを使用して、インタラクティブPDFドキュメントを非インタラクティブPDFに変換できます。 インタラクティブPDFドキュメントを使用すると、ユーザーは「PDFドキュメント」フィールドのデータを入力または変更できます。 インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに変換するプロセスは、 *フラット化*. PDFドキュメントを統合すると、ユーザーはドキュメントフィールド内のデータを変更できません。 PDF ドキュメントを統合する理由の 1 つは、データを変更できないようにすることです。
 
 次のタイプの PDF ドキュメントを統合できます。
 
-* インタラクティブXFA PDFドキュメント
-* AcrobatForms
+* インタラクティブ XFAPDFドキュメント
+* Acrobat Forms
 
-非インタラクティブPDFドキュメントのPDFをフラット化しようとすると、例外が発生します。
+非インタラクティブPDFドキュメントのPDFを統合しようとすると、例外が発生します。
 
 >[!NOTE]
 >
->Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>Output サービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### 手順の概要 {#summary_of_steps-9}
 
-インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに統合するには、次の手順を実行します。
+インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに統合するには、次の手順に従います。
 
 1. プロジェクトファイルを含めます。
-1. Outputクライアントオブジェクトを作成します。
-1. インタラクティブPDFドキュメントを取得します。
-1. PDFドキュメントを変換します。
+1. Output Client オブジェクトを作成します。
+1. インタラクティブPDFドキュメントの取得
+1. PDF文書を変換
 1. 非インタラクティブPDFドキュメントをPDFファイルとして保存します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、必ずプロキシファイルを含めてください。
+必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用する場合は、必ずプロキシファイルを含めてください。
 
-次のJARファイルをプロジェクトのクラスパスに追加する必要があります。
+次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-output-client.jar
-* adobe-utilities.jar(AEM FormsをJBossにデプロイする場合に必要)
-* jbossall-client.jar(AEM FormsをJBossにデプロイする場合に必要)
+* adobe-utilities.jar(AEM Formsを JBoss にデプロイする場合に必要 )
+* jbossall-client.jar(AEM Formsが JBoss にデプロイされている場合に必要 )
 
-AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。 すべてのAEM Forms JARファイルの場所について詳しくは、「[AEM Forms Javaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
+AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。 すべてのAEM Forms JAR ファイルの場所について詳しくは、 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
-**Outputクライアントオブジェクトの作成**
+**出力クライアントオブジェクトの作成**
 
-プログラムによってOutputサービス操作を実行する前に、Outputサービスクライアントオブジェクトを作成する必要があります。 Java APIを使用している場合は、`OutputClient`オブジェクトを作成します。 Output WebサービスAPIを使用している場合は、`OutputServiceService`オブジェクトを作成します。
+Output サービスの操作をプログラムで実行する前に、Output サービスのクライアントオブジェクトを作成する必要があります。 Java API を使用している場合は、 `OutputClient` オブジェクト。 Output Web サービス API を使用している場合、 `OutputServiceService` オブジェクト。
 
 **インタラクティブPDFドキュメントの取得**
 
 非インタラクティブPDFドキュメントに変換するインタラクティブPDFドキュメントを取得します。 非インタラクティブPDFドキュメントを変換しようとすると、例外が発生します。
 
-**PDFドキュメントの変換**
+**変換PDF**
 
-インタラクティブPDFドキュメントを取得した後、そのドキュメントを非インタラクティブPDFドキュメントに変換できます。 Outputサービスは非インタラクティブPDFドキュメントを返します。
+インタラクティブPDFドキュメントを取得した後、そのドキュメントを非インタラクティブPDFドキュメントに変換できます。 Output サービスは、非インタラクティブPDFドキュメントを返します。
 
-**非インタラクティブPDFドキュメントをPDFファイルとして保存します**
+**非インタラクティブPDFドキュメントをPDFファイルとして保存**
 
-非インタラクティブPDFドキュメントをPDFファイルとして保存できます。
+非インタラクティブPDFドキュメントは、PDFファイルとして保存できます。
 
 **関連トピック**
 
-[Java APIを使用したPDFドキュメントの統合](creating-document-output-streams.md#flatten-a-pdf-document-using-the-java-api)
+[Java API を使用したPDFドキュメントの統合](creating-document-output-streams.md#flatten-a-pdf-document-using-the-java-api)
 
-[WebサービスAPIを使用したPDFドキュメントの統合](creating-document-output-streams.md#flatten-a-pdf-document-using-the-web-service-api)
+[Web サービス API を使用したPDFドキュメントの統合](creating-document-output-streams.md#flatten-a-pdf-document-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
+[Output サービス API のクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### Java APIを使用したPDFドキュメントの統合 {#flatten-a-pdf-document-using-the-java-api}
+### Java API を使用したPDFドキュメントの統合 {#flatten-a-pdf-document-using-the-java-api}
 
-Output API(Java)を使用して、インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに統合します。
+Output API(Java) を使用して、インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに統合します。
 
 1. プロジェクトファイルを含めます。
 
-   Javaプロジェクトのクラスパスに、adobe-output-client.jarなどのクライアントJARファイルを含めます。
+   Java プロジェクトのクラスパスに、adobe-output-client.jar などのクライアント JAR ファイルを含めます。
 
-1. Outputクライアントオブジェクトを作成します。
+1. Output Client オブジェクトを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して`OutputClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * の作成 `OutputClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
 
-1. インタラクティブPDFドキュメントを取得します。
+1. インタラクティブPDFドキュメントの取得
 
-   * 変換するインタラクティブPDFドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。その際、コンストラクターを使用し、インタラクティブPDFファイルの場所を指定するstring値を渡します。
+   * の作成 `java.io.FileInputStream` 変換するインタラクティブPDFドキュメントを表すオブジェクト。このオブジェクトのコンストラクタを使用し、インタラクティブPDFファイルの場所を指定する string 値を渡します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
-1. PDFドキュメントを変換します。
+1. PDF文書を変換
 
-   `OutputServiceService`オブジェクトの`transformPDF`メソッドを呼び出し、次の値を渡すことで、インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに変換します。
+   を呼び出して、インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに変換します。 `OutputServiceService` オブジェクトの `transformPDF` メソッドを使用して、次の値を渡します。
 
-   * インタラクティブPDFドキュメントを格納する`com.adobe.idp.Document`オブジェクト。
-   * `TransformationFormat`列挙値。 非インタラクティブPDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
-   * リビジョン番号を指定する`PDFARevisionNumber`列挙値。 このパラメーターはPDF/Aドキュメント用なので、`null`を指定できます。
-   * 修正番号と年をコロンで区切って表すstring値です。 このパラメーターはPDF/Aドキュメント用なので、`null`を指定できます。
-   * PDF/A準拠レベルを表す`PDFAConformance`列挙値。 このパラメーターはPDF/Aドキュメント用なので、`null`を指定できます。
+   * この `com.adobe.idp.Document` インタラクティブPDFドキュメントを格納するオブジェクト。
+   * A `TransformationFormat` enum 値。 非インタラクティブPDFドキュメントを生成するには、 `TransformationFormat.PDF`.
+   * A `PDFARevisionNumber` リビジョン番号を指定する enum 値。 このパラメーターはPDF/A ドキュメント向けなので、次の項目を指定できます。 `null`.
+   * 修正番号と修正年をコロンで区切って表す string 値です。 このパラメーターはPDF/A ドキュメント向けなので、次の項目を指定できます。 `null`.
+   * A `PDFAConformance` 適合レベル「PDF/A」を表す enum 値。 このパラメーターはPDF/A ドキュメント向けなので、次の項目を指定できます。 `null`.
 
-   `transformPDF`メソッドは、非インタラクティブPDFドキュメントを含む`com.adobe.idp.Document`オブジェクトを返します。
+   この `transformPDF` メソッドは、 `com.adobe.idp.Document` 非インタラクティブPDFドキュメントを含むオブジェクト。
 
 1. 非インタラクティブPDFドキュメントをPDFファイルとして保存します。
 
-   * `java.io.File`オブジェクトを作成し、ファイル名拡張子が.pdfであることを確認します。
-   * `Document`オブジェクトの`copyToFile`メソッドを呼び出して、`Document`オブジェクトの内容をファイルにコピーします（`transformPDF`メソッドで返された`Document`オブジェクトを使用するようにしてください）。
+   * の作成 `java.io.File` オブジェクトにマッピングされ、ファイル名の拡張子が.pdf であることを確認します。
+   * を呼び出す `Document` オブジェクトの `copyToFile` メソッドを使用して、 `Document` オブジェクトをファイルに追加します ( `Document` が返したオブジェクト `transformPDF` メソッド )。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[クイックスタート（EJBモード）:Java APIを使用したPDFドキュメントの変換](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
+[クイックスタート（EJB モード）:Java API を使用したPDFドキュメントの変換](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントの変換](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントの変換](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPIを使用したPDFドキュメントの統合 {#flatten-a-pdf-document-using-the-web-service-api}
+### Web サービス API を使用したPDFドキュメントの統合 {#flatten-a-pdf-document-using-the-web-service-api}
 
-Output API（Webサービス）を使用して、インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに統合します。
+Output API（Web サービス）を使用して、インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに統合します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 次の WSDL 定義を使用していることを確認します。 `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
    >[!NOTE]
    >
-   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
+   >置換 `localhost` を、AEM Formsをホストするサーバーの IP アドレスに設定します。
 
-1. Outputクライアントオブジェクトを作成します。
+1. Output Client オブジェクトを作成します。
 
-   * デフォルトのコンストラクターを使用して`OutputServiceClient`オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`OutputServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに渡す文字列値（例：`http://localhost:8080/soap/services/OutputService?blob=mtom`）を渡します。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、MTOMを使用する場合は`?blob=mtom`を指定します。
-   * `OutputServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値は、MTOMが使用されるようにします。
-   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
+   * の作成 `OutputServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
+   * の作成 `OutputServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をAEM Formsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/OutputService?blob=mtom`.) を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます。 ただし、 `?blob=mtom` MTOM を使用する。
+   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `OutputServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
+   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
+   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
 
-      * フィールド`OutputServiceClient.ClientCredentials.UserName.UserName`にAEM formsユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド`OutputServiceClient.ClientCredentials.UserName.Password`に割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に定数値`HttpClientCredentialType.Basic`を割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Security.Mode`に定数値`BasicHttpSecurityMode.TransportCredentialOnly`を割り当てます。
+      * フィールドにAEM forms ユーザー名を割り当てます。 `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * 対応するパスワード値をフィールドに割り当てます。 `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * 定数値を割り当て `HttpClientCredentialType.Basic` フィールドに `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+      * 定数値を割り当て `BasicHttpSecurityMode.TransportCredentialOnly` フィールドに `BasicHttpBindingSecurity.Security.Mode`.
 
-1. インタラクティブPDFドキュメントを取得します。
+1. インタラクティブPDFドキュメントの取得
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、インタラクティブPDFドキュメントの保存に使用されます。
-   * コンストラクターを呼び出し、インタラクティブPDFドキュメントのファイルの場所を表すstring値を渡すことで、`System.IO.FileStream`オブジェクトを作成します。
-   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得することで、バイト配列のサイズを判断できます。
-   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
-   * `BLOB`オブジェクトの`MTOM`プロパティにバイト配列の内容を割り当てて、オブジェクトを設定します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、インタラクティブPDFドキュメントを保存するために使用します。
+   * の作成 `System.IO.FileStream` オブジェクトを指定します。
+   * コンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクト。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
+   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリーム長を渡す。
+   * 次の項目に `BLOB` オブジェクトを割り当てる `MTOM` プロパティにバイト配列の内容を入力します。
 
-1. PDFドキュメントを変換します。
+1. PDF文書を変換
 
-   `OutputClient`オブジェクトの`transformPDF`メソッドを呼び出し、次の値を渡すことで、インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに変換します。
+   を呼び出して、インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに変換します。 `OutputClient` オブジェクトの `transformPDF` メソッドを使用して、次の値を渡します。
 
-   * インタラクティブPDFドキュメントを格納する`BLOB`オブジェクト。
-   * `TransformationFormat`列挙値。 非インタラクティブPDFドキュメントを生成するには、`TransformationFormat.PDF`を指定します。
-   * リビジョン番号を指定する`PDFARevisionNumber`列挙値。
-   * `PDFARevisionNumber`列挙値を使用するかどうかを指定するBoolean値。 このパラメーターはPDF/Aドキュメント用なので、`false`を指定できます。
-   * 修正番号と年をコロンで区切って表すstring値です。 このパラメーターはPDF/Aドキュメント用なので、`null`を指定できます。
-   * PDF/A準拠レベルを表す`PDFAConformance`列挙値。
-   * `PDFAConformance`列挙値を使用するかどうかを指定するブール値。 このパラメーターはPDF/Aドキュメント用なので、`false`を指定できます。
+   * A `BLOB` インタラクティブPDFドキュメントを格納するオブジェクト。
+   * A `TransformationFormat` 列挙値。 非インタラクティブPDFドキュメントを生成するには、 `TransformationFormat.PDF`.
+   * A `PDFARevisionNumber` リビジョン番号を指定する enum 値。
+   * Boolean 値で、 `PDFARevisionNumber` enum 値が使用されます。 このパラメーターはPDF/A ドキュメント向けなので、次の項目を指定できます。 `false`.
+   * 修正番号と修正年をコロンで区切って表す string 値です。 このパラメーターはPDF/A ドキュメント向けなので、次の項目を指定できます。 `null`.
+   * A `PDFAConformance` 適合レベル「PDF/A」を表す enum 値。
+   * ブール値。 `PDFAConformance` enum 値が使用されます。 このパラメーターはPDF/A ドキュメント向けなので、次の項目を指定できます。 `false`.
 
-   `transformPDF`メソッドは、非インタラクティブPDFドキュメントを含む`BLOB`オブジェクトを返します。
+   この `transformPDF` メソッドは、 `BLOB` 非インタラクティブPDFドキュメントを含むオブジェクト。
 
 1. 非インタラクティブPDFドキュメントをPDFファイルとして保存します。
 
-   * コンストラクターを呼び出し、非インタラクティブPDFドキュメントのファイルの場所を表すstring値を渡すことで、`System.IO.FileStream`オブジェクトを作成します。
-   * `transformPDF`メソッドで返された`BLOB`オブジェクトのデータ内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバーの値を取得して、バイト配列を設定します。
-   * コンストラクターを呼び出し、`System.IO.FileStream`オブジェクトを渡して、`System.IO.BinaryWriter`オブジェクトを作成します。
-   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことにより、バイト配列の内容をPDFファイルに書き込みます。
+   * の作成 `System.IO.FileStream` オブジェクトを指定します。
+   * のデータコンテンツを格納するバイト配列を作成します。 `BLOB` が返したオブジェクト `transformPDF` メソッド。 バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバー。
+   * の作成 `System.IO.BinaryWriter` オブジェクトのコンストラクタを呼び出し、 `System.IO.FileStream` オブジェクト。
+   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 **関連トピック**
 
 [手順の概要](creating-document-output-streams.md#summary-of-steps)
 
-[MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-[SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
+[SwaRef を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)

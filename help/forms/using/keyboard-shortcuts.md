@@ -1,19 +1,19 @@
 ---
 title: AEM Forms のキーボードショートカット
-seo-title: AEM Forms のキーボードショートカット
+seo-title: AEM Forms Keyboard Shortcuts
 description: この記事では、Windows オペレーティングシステムと Macintosh オペレーティングシステムのアダプティブフォームエディター、テーマエディター、コンテンツブラウザー、Correspondence Management で使用できるキーボードショートカットについて説明します。
-seo-description: この記事では、アダプティブフォームエディター、テーマエディター、コンテンツブラウザー、Correspondence Management で使用できるキーボードショートカットについて説明します。
+seo-description: This article lists the keyboard shortcuts that can be used with Adaptive Form Editor, Theme Editor, Content Browser, and Correspondence Management.
 uuid: 1a16c2e6-c0f1-42e0-9ab4-692f3e58eeaf
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
 topic-tags: author, correspondence-management
 discoiquuid: 010e3639-b1a9-40fb-8615-7d18c4784b73
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 08cf95bc-3417-48d4-9df2-5bd56797bc5d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 79%
+source-wordcount: '1147'
+ht-degree: 78%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 79%
 
 ## アダプティブフォームエディター {#adaptiveformeditor}
 
-| **動作** | **Windows のショートカットキー** | **Mac OS のショートカットキー** |
+| **アクション** | **Windows のショートカットキー** | **Mac OS のショートカットキー** |
 |---|---|---|
 | 選択したアダプティブフォームコンポーネントのプロパティブラウザーを開く | Alt + Enter | Alt + Return |
 | 選択したアダプティブフォームコンポーネントのプロパティブラウザーを閉じる | Ctrl + Alt + W | Command + Alt + W |
@@ -34,17 +34,17 @@ ht-degree: 79%
 | 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl+Y&amp;ast; |
 | 複数のコンポーネントを選択する | Shift キーを押しながらクリック | Shift キーを押しながらクリック |
 | 選択したコンポーネントをコピーする | Ctrl + C | Ctrl+C&amp;ast; |
-| 選択した 1 つ以上のコンポーネントを切り取る切り取られたコンポーネントは、新しい位置に貼り付けられるまで非表示になりません。 | Ctrl + X | Ctrl+X&amp;ast; |
-| コンポーネントの貼り付け | Ctrl + V | Ctrl + V |
+| 選択した 1 つ以上のコンポーネントを切り取る切り取ったコンポーネントは、新しい位置に貼り付けられるまで表示されません。 | Ctrl + X | Ctrl+X&amp;ast; |
+| コンポーネントを貼り付け | Ctrl + V | Ctrl + V |
 | 選択した 1 つ以上のコンポーネントを削除する | Ctrl + Del | Ctrl+Del&amp;ast; |
 | 選択した 1 つ以上のコンポーネントを削除する | Ctrl + Backspace | Ctrl+Backspace&amp;ast; |
 | プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + B | Ctrl+B&amp;ast; |
-| プレビューモードでリッチテキストエディターコンポーネントを使用している場合にテキストを斜体にする | Ctrl + I | Ctrl+I&amp;A;ast; |
+| プレビューモードでリッチテキストエディターコンポーネントを使用している場合にテキストを斜体にする | Ctrl + I | Ctrl+I&amp;ast; |
 | プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + U | Ctrl+U&amp;ast; |
 
 >[!NOTE]
 >
->Mac OSのCtrlキーとCommandキーの両方で、「&amp;ast;」とマークされたショートカットが機能します。
+>「&amp;ast;」でマークされたショートカットは、Mac OS の Ctrl キーと Command キーの両方で動作します。
 
 >[!NOTE]
 >
@@ -56,10 +56,9 @@ ht-degree: 79%
 >
 
 
-
 ## テーマエディター  {#themeeditor}
 
-| **動作** | **Windows のショートカットキー** | **Mac OS のショートカットキー** |
+| **アクション** | **Windows のショートカットキー** | **Mac OS のショートカットキー** |
 |---|---|---|
 | テーマで選択したコンポーネントのプロパティブラウザーを開く | Alt + Enter | Alt + Return |
 | テーマで選択したコンポーネントのプロパティブラウザーを閉じる | Ctrl + Alt + W | Command + Alt + W |
@@ -69,28 +68,28 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->Mac OSのCtrlキーとCommandキーの両方で、「&amp;ast;」とマークされたショートカットが機能します。
+>「&amp;ast;」でマークされたショートカットは、Mac OS の Ctrl キーと Command キーの両方で動作します。
 
 ## コンテンツブラウザー  {#contentbrowser}
 
-| **動作** | **Windows のショートカットキー** | **Mac OS のショートカットキー** |
+| **アクション** | **Windows のショートカットキー** | **Mac OS のショートカットキー** |
 |---|---|---|
-| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを展開する | Ctrl + Aですべてのアコーディオンを選択し、右向き矢印で展開します。 | Command + Aですべてのアコーディオンを選択し、右向き矢印で展開します。 |
-| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを折りたたむ | Ctrl + Aを押してすべてのアコーディオンを選択し、左向き矢印を押して折りたたむ | Command + Aですべてのアコーディオンを選択し、左向き矢印で折りたたむ |
+| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを展開する | Ctrl + A ですべてのアコーディオンを選択し、右向き矢印で展開します。 | Command + A ですべてのアコーディオンを選択し、右向き矢印で展開します。 |
+| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを折りたたむ | Ctrl + A ですべてのアコーディオンを選択し、左向き矢印で折りたたむ | Command + A ですべてのアコーディオンを選択し、左向き矢印で折りたたむ |
 | 選択したアコーディオンをフォームオブジェクトツリーで展開する | 右向き矢印 | 右向き矢印 |
 | 選択したアコーディオンをフォームオブジェクトツリーで折りたたむ | 左向き矢印 | 左向き矢印 |
 | フォームオブジェクトツリーで次の項目を選択する | 下向き矢印 | 下向き矢印 |
 | フォームオブジェクトツリーで前の項目を選択する | 上向き矢印 | 上向き矢印 |
 
-[1]  Windowsの場合はCtrl +右向き矢印、Mac OSの場合はCommand +右向き矢印に置き換えます。\
-[2]  Windowsの場合はCtrl +左向き矢印、Mac OSの場合はCommand +左向き矢印に置き換えます。
+[1] Windows の場合は Ctrl +右矢印キー、Mac OS の場合は Command +右矢印キーを置き換えます。\
+[2] Windows の場合は Ctrl +左矢印キー、Mac OS の場合は Command +左矢印キーを置き換えます。
 
 ## Correspondence Management {#correspondence-management}
 
 このセクションでは、Correspondence Management のテキストエディターで使用できる各種キーボードとアクセシビリティのショートカットキーについて説明します。これらのショートカットキーを使用して、以下の操作を行うことができます。
 
-* [テキスト](document-fragments.md)アセットの作成または編集
-* [通信](/help/forms/using/create-correspondence.md)を作成する際に、関連する編集アイコン(![edittextmodule](assets/edittextmodule.png))をタップしてからテキストモジュールを編集する。
+* の作成または編集 [テキスト](document-fragments.md) アセット
+* 関連する編集アイコン ( ![edittextmodule](assets/edittextmodule.png)) [通信の作成](/help/forms/using/create-correspondence.md).
 
 ### テキストの選択とカーソルの移動 {#text-selection-and-moving-the-cursor-around}
 
@@ -242,7 +241,7 @@ ht-degree: 79%
  </tbody>
 </table>
 
-### 取り消し／やり直しの操作  {#undo-and-redo-actions}
+### 取り消し／やり直しの操作 {#undo-and-redo-actions}
 
 <table> 
  <tbody>
@@ -264,7 +263,7 @@ ht-degree: 79%
  </tbody>
 </table>
 
-### フォントサイズの変更  {#changing-font-size}
+### フォントサイズの変更 {#changing-font-size}
 
 <table> 
  <tbody>
@@ -286,7 +285,7 @@ ht-degree: 79%
  </tbody>
 </table>
 
-### 単語の削除  {#deleting-a-word}
+### 単語の削除 {#deleting-a-word}
 
 <table> 
  <tbody>
@@ -308,7 +307,7 @@ ht-degree: 79%
  </tbody>
 </table>
 
-### コピー &amp; ぺースト  {#copy-and-paste}
+### コピー &amp; ぺースト {#copy-and-paste}
 
 <table> 
  <tbody>
@@ -335,7 +334,8 @@ ht-degree: 79%
  </tbody>
 </table>
 
-### 書式設定 {#formatting}
+### 
+フォーマ {#formatting}
 
 <table> 
  <tbody>
@@ -351,7 +351,7 @@ ht-degree: 79%
   </tr>
   <tr>
    <td><p>選択したテキストを斜体にする</p> </td> 
-   <td><p>Ctrl+Alt+I / Ctrl+I </p> </td> 
+   <td><p>Ctrl + Alt + I / Ctrl + I </p> </td> 
    <td>Command + I</td> 
   </tr>
   <tr>

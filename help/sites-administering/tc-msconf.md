@@ -1,20 +1,20 @@
 ---
 title: Microsoft Translator への接続
-seo-title: Microsoft Translator への接続
+seo-title: Connecting to Microsoft Translator
 description: AEM を Microsoft Translator に接続する方法について説明します。
-seo-description: AEM を Microsoft Translator に接続する方法について説明します。
+seo-description: Learn how to connect AEM to Microsoft Translator.
 uuid: 5e3916ec-36a0-4d31-94ff-c340a462411a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: a7958411-b509-428e-bbe2-42efe8fd1add
-feature: 言語コピー
+feature: Language Copy
 exl-id: 6387fd5d-d8de-4ea8-b1e6-3274b53d4f41
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 80%
+source-wordcount: '604'
+ht-degree: 79%
 
 ---
 
@@ -43,17 +43,17 @@ Microsoft Translation アカウントを使用して AEM ページのコンテ�
 1. 「作成」をクリックします。
 1. 表示されるダイアログボックスで、プロパティの値を入力して「OK」をクリックします。
 
-## Microsoft Translator クラウドサービスのサンプル設定  {#sample-microsoft-translator-cloud-service-configurations}
+## Microsoft Translator クラウドサービスのサンプル設定 {#sample-microsoft-translator-cloud-service-configurations}
 
-次のMicrosoft Translatorクラウドサービス設定が、Geometrixxサンプルと共にインストールされています。一部の設定例では、1ヶ月あたり最大2,000,000文字の無料翻訳文字を使用できるMicrosoft翻訳アカウントの体験版を使用しています。
+次のMicrosoft Translator クラウドサービス設定が、Geometrixxサンプルと共にインストールされています。一部の設定例では、1 ヶ月あたり最大 2,000,000 個の無料翻訳文字を使用できる体験版Microsoft翻訳アカウントを使用しています。
 
 ### Microsoft Translator 試用版ライセンス {#microsoft-translator-trial-license}
 
-Microsoft Translator試用版ライセンス設定は、Microsoft Translatorサンプルパッケージと共にインストールされるサンプルGeometrixx Outdoorsです。この設定では、1ヶ月に2000文字の翻訳が可能な無料のサブスクリプションを持つMicrosoft Translatorアカウントを使用します。
+Microsoft Translator 体験版ライセンス設定は、Geometrixx Outdoorsサンプルパッケージと共にインストールされるサンプル設定です。この設定では、1 ヶ月に 2000 文字の翻訳文字を使用できる無料のサブスクリプションを持つMicrosoft Translator アカウントを使用します。
 
 ### Microsoft Translator 試用版ライセンス - Geometrixx-outdoors {#microsoft-translator-trial-license-geometrixx-outdoors}
 
-Microsoft Translator 試用版ライセンス - Geometrixx-outdoors 設定は、Geometrixx Outdoors サンプルパッケージと共にインストールされるサンプル設定です。この設定では、Microsoft Translator 試用版ライセンス設定と同じ無料の Microsoft Translator アカウントを使用します。アカウントには、月に2000,000文字の翻訳が可能な無料のサブスクリプションがあります。
+Microsoft Translator 試用版ライセンス - Geometrixx-outdoors 設定は、Geometrixx Outdoors サンプルパッケージと共にインストールされるサンプル設定です。この設定では、Microsoft Translator 試用版ライセンス設定と同じ無料の Microsoft Translator アカウントを使用します。このアカウントには、1 か月に 2000,000 文字の翻訳が可能な無料のサブスクリプションがあります。
 
 この Microsoft Translator 設定は、Geometrixx Outdoors サンプルサイトのコンテンツのタイプで使用するために最適化されます。
 
@@ -78,9 +78,9 @@ Microsoft Translation 設定ページには、Microsoft Translator エンジン�
 1. 「Microsoft Translator」領域で、「設定を表示」をクリックまたはタップして、カスタマイズする設定をクリックまたはタップします。
 1. 設定ページで、「トランスレーターをカスタマイズ」をクリックします。表示された Microsoft の Web ページを使用して、サービスをカスタマイズします。
 
-## 翻訳サービス設定のアクティベート  {#activating-the-translator-service-configurations}
+## 翻訳サービス設定のアクティベート {#activating-the-translator-service-configurations}
 
-パブリッシュインスタンスでレプリケーションされる翻訳コンテンツをサポートするには、クラウドサービス設定をアクティベートする必要があります。[セクション全体（ツリー）](/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree)をアクティブ化する方法を使用して、Microsoft Translatorまたはサードパーティのクラウドサービス設定を保存するリポジトリノードをアクティブ化します。 このノードは以下に示す親ノードの下にあります。
+パブリッシュインスタンスでレプリケーションされる翻訳コンテンツをサポートするには、クラウドサービス設定をアクティベートする必要があります。次のメソッドを使用： [セクション全体（ツリー）のアクティブ化](/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree) : Microsoft Translator またはサードパーティのクラウドサービス設定を保存するリポジトリノードをアクティベートする場合。 このノードは以下に示す親ノードの下にあります。
 
 * Microsoft翻訳サービス：/libs/settings/cloudconfigs/translation/msft-translation
-* サードパーティ翻訳：/etc/cloudservices/machine-translation
+* サードパーティの翻訳：/etc/cloudservices/machine-translation

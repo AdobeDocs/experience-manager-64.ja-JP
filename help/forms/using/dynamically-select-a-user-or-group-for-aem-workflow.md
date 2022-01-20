@@ -1,8 +1,8 @@
 ---
 title: AEM Forms 中心のワークフローステップのためのユーザーまたはグループの動的な選択
-seo-title: AEM Forms 中心のワークフローステップのためのユーザーまたはグループの動的な選択
+seo-title: Dynamically select a user or group for AEM Forms-centric workflow steps
 description: '実行時に AEM Forms ワークフローのユーザーまたはグループを選択する方法について説明します。 '
-seo-description: '実行時に AEM Forms ワークフローのユーザーまたはグループを選択する方法について説明します。 '
+seo-description: Learn how to select a user or group for an AEM Forms workflow at the runtime.
 uuid: 19dcbda4-61af-40b3-b10b-68a341373410
 content-type: troubleshooting
 topic-tags: publish
@@ -10,7 +10,7 @@ discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
 exl-id: c63e6e5c-c4c9-45b8-8401-87ee37a30c97
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '920'
 ht-degree: 98%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 98%
 
 大規模な組織では、プロセスのユーザーを動的に選択する必要があります。例えば、お客様に対応するフィールドエージェントを、お客様とエージェントの近さを基準として選択します。このようなシナリオで、エージェントは動的に選択されます。
 
-OSGi](/help/forms/using/aem-forms-workflow.md)上の[Forms中心のワークフローのタスクとAdobe Signステップの割り当てには、ユーザーを動的に選択するオプションが用意されています。 ECMAScript または OSGi バンドルを使用して、タスクの割り当て手順の担当者を動的に選択したり、ドキュメントに署名手順の署名者を選択したりできます。
+タスクの割り当て手順とAdobe Sign手順 [OSGi 上のForms中心のワークフロー](/help/forms/using/aem-forms-workflow.md) ユーザーを動的に選択するオプションを提供します。 ECMAScript または OSGi バンドルを使用して、タスクの割り当て手順の担当者を動的に選択したり、ドキュメントに署名手順の署名者を選択したりできます。
 
 ## ECMAScript を使用したユーザーまたはグループの動的な選択 {#use-ecmascript-to-dynamically-select-a-user-or-group}
 

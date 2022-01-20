@@ -1,8 +1,8 @@
 ---
 title: レスポンシブレイアウト
-seo-title: レスポンシブレイアウト
+seo-title: Responsive Layout
 description: AEM では、ページにレスポンシブレイアウトを作成できます
-seo-description: AEM では、ページにレスポンシブレイアウトを作成できます
+seo-description: AEM allows you to realize a responsive layout for your pages
 uuid: 4db45d78-9fca-4251-b504-ae3481fd9a8b
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 668d1a8a-c757-4c9f-833f-e5dada4d0384
 exl-id: 788bb439-fb8a-4ab9-b367-cea6a17c0c43
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1798'
-ht-degree: 93%
+source-wordcount: '1785'
+ht-degree: 94%
 
 ---
 
@@ -67,7 +67,7 @@ AEM は、次のメカニズムを組み合わせて使用することにより�
 
 >[!NOTE]
 >
->前述のメカニズムの使用は、テンプレートでの設定によって有効になります。詳しくは、[レスポンシブレイアウトの設定](/help/sites-administering/configuring-responsive-layout.md)を参照してください。
+>前述のメカニズムの使用は、テンプレートでの設定によって有効になります。詳しくは、 [レスポンシブレイアウトの設定](/help/sites-administering/configuring-responsive-layout.md) を参照してください。
 
 ## レイアウトの定義、デバイスのエミュレーションおよびブレークポイント {#layout-definitions-device-emulation-and-breakpoints}
 
@@ -160,7 +160,7 @@ AEM では、デバイスの幅に依存するレイアウトを定義できま�
 
    ![screen_shot_2018-03-23at085500](assets/screen_shot_2018-03-23at085500.png)
 
-## レイアウトコンテナでの選択およびアクションの実行（編集モード）{#selecting-and-taking-action-on-a-layout-container-edit-mode}
+## レイアウトコンテナでの選択およびアクションの実行（編集モード） {#selecting-and-taking-action-on-a-layout-container-edit-mode}
 
 他のコンポーネントと同様に、レイアウトコンテナは、選択してからアクション（切り取り、コピー、削除）を実行できます（**編集**&#x200B;モードのとき）。
 
@@ -263,9 +263,8 @@ AEM では、デバイスの幅に依存するレイアウトを定義できま�
    >
    >上記の例では、フロートと非表示のアクションが使用可能になっています。これは、このレイアウトコンテナが親レイアウトコンテナ内にネストされているからです。
 
-   * **コンポ**
-ーネントを表示親コンポーネントを選択し、 
-**「非表示のコンポーネ** ントを表示」オプションこの例では、2 つのコンポーネントが非表示にされています。
+   * **コンポーネントを表示**&#x200B;親コンポーネントを選択して、「 
+**非表示のコンポーネントを表示**」オプションを含むアクションツールバーを表示します。この例では、2 つのコンポーネントが非表示にされています。
    ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
 
    「**非表示のコンポーネントを表示**」オプションを選択すると、現在非表示のコンポーネントが元の場所で青色で表示されます。

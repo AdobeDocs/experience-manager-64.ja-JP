@@ -1,8 +1,8 @@
 ---
 title: ウィジェットの使用および拡張（クラシック UI）
-seo-title: ウィジェットの使用および拡張（クラシック UI）
+seo-title: Using and Extending Widgets (Classic UI)
 description: AEM の Web ベースインターフェイスでは、AJAX やその他の最新のブラウザー技術が使用されています。これらの技術により、作成者は、Web ページ上でコンテンツの WYSIWYG 編集や書式設定をおこなうことができます
-seo-description: AEM の Web ベースインターフェイスでは、AJAX やその他の最新のブラウザー技術が使用されています。これらの技術により、作成者は、Web ページ上でコンテンツの WYSIWYG 編集や書式設定をおこなうことができます
+seo-description: AEM's web-based interface uses AJAX and other modern browser technologies to enable WYSIWYG editing and formatting of content by authors right on the web page
 uuid: e8dfa140-dab7-4e08-a790-d703adf86d6f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 508f4fab-dd87-4306-83ae-12e544b8b723
 exl-id: c747bfda-e82a-4b2d-a4af-5792bfe82576
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '5182'
+source-wordcount: '5151'
 ht-degree: 59%
 
 ---
@@ -45,13 +45,13 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
 >
 >このページでは、クラシック UI でのウィジェットの使用について説明します。アドビでは、[Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) および [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components) をベースとした最新の[タッチ操作対応 UI](/help/sites-developing/touch-ui-concepts.md) の使用を推奨しています。
 
-## クライアント側コードのページへの組み込み  {#including-the-client-sided-code-in-a-page}
+## クライアント側コードのページへの組み込み {#including-the-client-sided-code-in-a-page}
 
-クライアント側のJavaScriptとスタイルシートコードは、クライアントライブラリに配置する必要があります。
+クライアント側の JavaScript とスタイルシートコードは、クライアントライブラリに配置する必要があります。
 
 クライアントライブラリを作成するには：
 
-1. `/apps/<project>`の下に、次のプロパティを持つノードを作成します。
+1. 以下にノードを作成します。 `/apps/<project>` を次のプロパティと共に使用します。
 
    ```
        name="clientlib"
@@ -64,13 +64,13 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
 
    >[!NOTE]
    >
-   >注意：`<category-name>`は、カスタムライブラリの名前です(例：&quot;cq.extjstraining&quot;)と呼ばれ、ページにライブラリを組み込むために使用されます。
+   >注意： `<category-name>` はカスタムライブラリの名前です ( 例：&quot;cq.extjstraining&quot;) と呼ばれ、ページにライブラリを組み込むために使用されます。
 
-1. `clientlib`の下に、`css`フォルダーと`js`フォルダー(nt:folder)を作成します。
+1. 下 `clientlib` を作成します。 `css` および `js` フォルダー (nt:folder)。
 
-1. `clientlib`の下に、`css.txt`ファイルと`js.txt`ファイル(nt:files)を作成します。 これらの .txt ファイルには、ライブラリに組み込むファイルを記述します。
+1. 下 `clientlib` を作成します。 `css.txt` および `js.txt` ファイル (nt:files) これらの .txt ファイルには、ライブラリに組み込むファイルを記述します。
 
-1. `js.txt`を編集：「 `#base=js` 」で始まり、CQクライアントライブラリサービスによって集計されるファイルのリストが続く必要があります。例：
+1. 編集 `js.txt`:「 」で始める必要があります `#base=js`&#39;の後に、CQ クライアントライブラリサービスによって集計されるファイルのリストが続きます。例：
 
    ```
    #base=js
@@ -81,7 +81,7 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
     InsertTextPlugin.js
    ```
 
-1. `css.txt`を編集：「 `#base=css` 」で始まり、CQクライアントライブラリサービスによって集計されるファイルのリストが続く必要があります。例：
+1. 編集 `css.txt`:「 」で始める必要があります `#base=css`&#39;の後に、CQ クライアントライブラリサービスによって集計されるファイルのリストが続きます。例：
 
    ```
    #base=css
@@ -90,7 +90,7 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
 
 1. `js` フォルダーの下に、ライブラリに属する Javascript ファイルを配置します。
 
-1. `css`フォルダーの下に、`.css`ファイルと、CSSファイルで使用されるリソース(例：`my_icon.png`)です。
+1. 以下の `css` フォルダーに、 `.css` css ファイルで使用されるファイルとリソース ( 例： `my_icon.png`) をクリックします。
 
 >[!NOTE]
 >
@@ -102,7 +102,7 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
 
    `<ui:includeClientLib categories="<category-name1>, <category-name2>, ..."/>`
 
-   `<category-nameX>`はクライアント側ライブラリの名前です。
+   場所 `<category-nameX>` はクライアント側ライブラリの名前です。
 
 * Javascript コードのみを組み込むには：
 
@@ -118,26 +118,26 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
     }
 ```
 
-### サンプルの使用  {#getting-started-with-the-samples}
+### サンプルの使用 {#getting-started-with-the-samples}
 
-このページのチュートリアルに従うには、**Using ExtJS Widgets**&#x200B;という名前のパッケージをローカルのAEMインスタンスにインストールし、コンポーネントが含まれるサンプルページを作成します。 この作業を行うには、以下の手順を実行します。
+このページのチュートリアルに従うには、 **ExtJS ウィジェットの使用** ローカルAEMインスタンスで、コンポーネントを組み込むサンプルページを作成します。 この作業を行うには、以下の手順を実行します。
 
-1. AEMインスタンスで、パッケージ共有から&#x200B;**Using ExtJS Widgets (v01)**&#x200B;という名前のパッケージをダウンロードし、インストールします。 リポジトリ内の`/apps`の下にプロジェクト`extjstraining`が作成されます。
+1. AEMインスタンスで、という名前のパッケージをダウンロードします。 **ExtJS ウィジェット (v01) の使用** パッケージ共有から、パッケージをインストールします。 プロジェクトが作成されます `extjstraining` 下 `/apps` リポジトリ内に保存されます。
 
-1. **Geometrixx**&#x200B;ブランチの新しいページにサンプルコンポーネントを含めるので、geometrixxページjspのheadタグに、スクリプト(js)とスタイルシート(css)を含むクライアントライブラリを含めます。
+1. サンプルコンポーネントを **Geometrixx** ブランチ：
 
-   **CRXDE Lite**&#x200B;で、ファイル`/apps/geometrixx/components/page/headlibs.jsp`を開き、次のように`cq.extjstraining`カテゴリを既存の`<ui:includeClientLib>`タグに追加します。
+   in **CRXDE Lite** ファイルを開く `/apps/geometrixx/components/page/headlibs.jsp` をクリックし、 `cq.extjstraining` 既存の `<ui:includeClientLib>` タグの下に次のように記述します。
 
    `%><ui:includeClientLib categories="apps.geometrixx-main, cq.extjstraining"/><%`
 
-1. `/content/geometrixx/en/products`の下の&#x200B;**Geometrixx**&#x200B;ブランチに新しいページを作成し、**Using ExtJS Widgets**&#x200B;と呼び出します。
+1. で新しいページを作成します。 **Geometrixx** 下の分岐 `/content/geometrixx/en/products` そして、 **ExtJS ウィジェットの使用**.
 
 1. デザインモードに切り替え、**Using ExtJS Widgets** という名前のグループのすべてのコンポーネントを Geometrixx のデザインに追加します。
-1. 編集モードに戻ります。**Using ExtJS Widgets**&#x200B;グループのコンポーネントは、サイドキックで使用できます。
+1. 編集モードに戻ります。グループの構成要素 **ExtJS ウィジェットの使用** は、サイドキックで使用できます。
 
 >[!NOTE]
 >
->このページの例は、Geometrixx サンプルコンテンツに基づいています。これは現在、AEM には付属しておらず、We.Retail に置き換えられています。Geometrixxをダウンロードしてインストールする方法については、ドキュメント[We.Retail参照実装](/help/sites-developing/we-retail.md#we-retail-geometrixx)を参照してください。
+>このページの例は、Geometrixx サンプルコンテンツに基づいています。これは現在、AEM には付属しておらず、We.Retail に置き換えられています。ドキュメントを参照 [We.Retail 参照実装](/help/sites-developing/we-retail.md#we-retail-geometrixx) を参照してください。
 
 ### 基本ダイアログ {#basic-dialogs}
 
@@ -145,7 +145,7 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
 
 `http://localhost:4502/<path-to-dialog>.-1.json`
 
-サイドキックにある **Using ExtJS Widgets** グループの最初のコンポーネントは、**1.Dialog Basics** という名前で、4 つの基本ダイアログが入っています。これらのダイアログは、すぐに使用できるウィジェットで作成されており、カスタマイズした Javascript ロジックは含まれていません。ダイアログは`/apps/extjstraining/components/dialogbasics`の下に保存されます。 基本ダイアログを次に示します。
+サイドキックにある **Using ExtJS Widgets** グループの最初のコンポーネントは、**1.Dialog Basics** という名前で、4 つの基本ダイアログが入っています。これらのダイアログは、すぐに使用できるウィジェットで作成されており、カスタマイズした Javascript ロジックは含まれていません。ダイアログは、以下に保存されます。 `/apps/extjstraining/components/dialogbasics`. 基本ダイアログを次に示します。
 
 *  ダイアログ（`full`full ノード）：3 つのタブを持つウィンドウが表示されます。各タブには、2 つのテキストフィールドがあります。
 
@@ -155,7 +155,7 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
 
 次の手順に従って、**1.Dialog Basics** コンポーネントをサンプルページに組み込みます。
 
-1. **1.**&#x200B;サイドキック&#x200B;**の**「Using ExtJS Widgets **」タブからサンプルページにDialog Basics**&#x200B;コンポーネントを追加します。
+1. **1.ダイアログの基本** コンポーネントを **ExtJS ウィジェットの使用** 」タブをクリックします。 **サイドキック**.
 
 1. このコンポーネントには、タイトル、テキストおよび&#x200B;**プロパティ**&#x200B;リンクが表示されます。リンクをクリックすると、リポジトリに保存されている段落のプロパティが表示されます。リンクをもう一度クリックすると、プロパティが非表示になります。
 
@@ -167,16 +167,16 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
 
 **Full** ダイアログには、3 つのタブを持つウィンドウが表示されます。各タブには、2 つのテキストフィールドがあります。これは、**Dialog Basics** コンポーネントのデフォルトダイアログです。特性は次のとおりです。
 
-* ノードによって定義されます。node type = `cq:Dialog`、xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog)。
+* 次のノードで定義されます。ノードタイプ= `cq:Dialog`, xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog).
 
-* 3つのタブが表示されます(node type = `cq:Panel`)。
-* 各タブには2つのテキストフィールドがあります（ノードタイプ= `cq:Widget`、xtype = [`textfield`](/help/sites-developing/xtypes.md#textfield)）。
+* 3 つのタブが表示されます ( ノードタイプ= `cq:Panel`) をクリックします。
+* 各タブには 2 つのテキストフィールドがあります ( ノードタイプ= `cq:Widget`, xtype = [`textfield`](/help/sites-developing/xtypes.md#textfield)) をクリックします。
 
 * ノードによって定義されます：
 
    `/apps/extjstraining/components/dialogbasics/full`
 
-* 次を要求することで、JSON形式でレンダリングされます。
+* 次を要求することで、JSON 形式でレンダリングされます。
 
    `http://localhost:4502/apps/extjstraining/components/dialogbasics/full.-1.json`
 
@@ -188,9 +188,9 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
 
 **Single Panel** ダイアログには、1 つのタブを持つウィンドウが表示されます。このタブには、2 つのテキストフィールドがあります。特性は次のとおりです。
 
-* 1つのタブを表示します(node type = `cq:Dialog`、xtype = [`panel`](/help/sites-developing/xtypes.md#panel))
+* 1 つのタブが表示されます ( ノードタイプ= `cq:Dialog`, xtype = [`panel`](/help/sites-developing/xtypes.md#panel))
 
-* このタブには2つのテキストフィールドがあります（ノードタイプ= `cq:Widget`、xtype = [`textfield`](/help/sites-developing/xtypes.md#textfield)）
+* タブには 2 つのテキストフィールドがあります ( ノードタイプ= `cq:Widget`, xtype = [`textfield`](/help/sites-developing/xtypes.md#textfield))
 
 * ノードによって定義されます：
 
@@ -207,11 +207,11 @@ Single Panel ダイアログを使用するには：
 
 1. **Dialog Basics** コンポーネントのダイアログを **Single Panel** ダイアログに置き換えます。
 
-   1. **CRXDE Lite**&#x200B;で、ノードを削除します。`/apps/extjstraining/components/dialogbasics/dialog`
+   1. In **CRXDE Lite**、ノードを削除します。 `/apps/extjstraining/components/dialogbasics/dialog`
    1. 「**すべて保存**」をクリックして変更を保存します。
-   1. ノードをコピーします。`/apps/extjstraining/components/dialogbasics/singlepanel`
-   1. コピーしたノードを次の場所に貼り付けます。`/apps/extjstraining/components/dialogbasics`
-   1. ノードを選択します。`/apps/extjstraining/components/dialogbasics/Copy of singlepanel`と名前を`dialog`に変更します。
+   1. ノードをコピーします。 `/apps/extjstraining/components/dialogbasics/singlepanel`
+   1. コピーしたノードを次の場所に貼り付けます。 `/apps/extjstraining/components/dialogbasics`
+   1. ノードを選択します。 `/apps/extjstraining/components/dialogbasics/Copy of singlepanel`と名前を変更します。 `dialog`.
 
 1. コンポーネントを編集します。次のようなダイアログが表示されます。
 
@@ -221,10 +221,10 @@ Single Panel ダイアログを使用するには：
 
 **Multi Panel** ダイアログは、**Full** ダイアログと同じ表示内容ですが、ダイアログの作成の仕方が異なります。特性は次のとおりです。
 
-* ノードによって定義されます（ノードタイプ= `cq:Dialog`、xtype = [`tabpanel`](/help/sites-developing/xtypes.md#tabpanel)）。
+* ノードによって定義されます (node type = `cq:Dialog`, xtype = [`tabpanel`](/help/sites-developing/xtypes.md#tabpanel)) をクリックします。
 
-* 3つのタブが表示されます(node type = `cq:Panel`)。
-* 各タブには2つのテキストフィールドがあります（ノードタイプ= `cq:Widget`、xtype = [`textfield`](/help/sites-developing/xtypes.md#textfield)）。
+* 3 つのタブが表示されます ( ノードタイプ= `cq:Panel`) をクリックします。
+* 各タブには 2 つのテキストフィールドがあります ( ノードタイプ= `cq:Widget`, xtype = [`textfield`](/help/sites-developing/xtypes.md#textfield)) をクリックします。
 
 * ノードによって定義されます：
 
@@ -240,9 +240,9 @@ Single Panel ダイアログを使用するには：
 
 マルチパネルダイアログを使用するには：
 
-1. **Dialog Basics**&#x200B;コンポーネントのダイアログを&#x200B;**Multi Panel**&#x200B;ダイアログに置き換えます。
+1. ダイアログを **ダイアログの基本** コンポーネント **マルチパネル** ダイアログ：
 
-   [例2で説明されている手順に従います。シングルパネルダイアログ](#example-single-panel-dialog)
+   以下の手順に従って、 [例 2:シングルパネルダイアログ](#example-single-panel-dialog)
 
 1. コンポーネントを編集します。次のようなダイアログが表示されます。
 
@@ -252,12 +252,12 @@ Single Panel ダイアログを使用するには：
 
 **Rich** ダイアログには、2 つのタブを持つウィンドウが表示されます。最初のタブには、テキストフィールド、ドロップダウンメニューおよび折り畳み可能なテキスト領域があります。2 番目のタブには、4 つのテキストフィールドを含むフィールドセットと、2 つのテキストフィールドを含む折り畳み可能なフィールドセットがあります。特性は次のとおりです。
 
-* ノードによって定義されます（ノードタイプ= `cq:Dialog`、xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog)）。
+* ノードによって定義されます (node type = `cq:Dialog`, xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog)) をクリックします。
 
-* 2つのタブが表示されます(node type = `cq:Panel`)。
-* 最初のタブには、[`textfield`](/help/sites-developing/xtypes.md#textfield)と3つのオプションを持つ[`selection`](/help/sites-developing/xtypes.md#selection)ウィジェットを持つ[`dialogfieldset`](/help/sites-developing/xtypes.md#dialogfieldset)ウィジェットと、[`textarea`](/help/sites-developing/xtypes.md#textarea)ウィジェットを持つ折りたたみ可能な[`dialogfieldset`](/help/sites-developing/xtypes.md#dialogfieldset)ウィジェットがあります。
+* 2 つのタブが表示されます ( ノードタイプ= `cq:Panel`) をクリックします。
+* 最初のタブには [`dialogfieldset`](/help/sites-developing/xtypes.md#dialogfieldset) ウィジェット [`textfield`](/help/sites-developing/xtypes.md#textfield) および [`selection`](/help/sites-developing/xtypes.md#selection) 3 つのオプションを持つウィジェットと折りたたみ可能 [`dialogfieldset`](/help/sites-developing/xtypes.md#dialogfieldset) と [`textarea`](/help/sites-developing/xtypes.md#textarea) ウィジェット。
 
-* 2番目のタブには、4つの[`textfield`](/help/sites-developing/xtypes.md#textfield)ウィジェットを持つ[`dialogfieldset`](/help/sites-developing/xtypes.md#dialogfieldset)ウィジェットと、2つの[`textfield`](/help/sites-developing/xtypes.md#textfield)ウィジェットを持つ折りたたみ可能な`dialogfieldset`ウィジェットがあります。
+* 2 番目のタブには、 [`dialogfieldset`](/help/sites-developing/xtypes.md#dialogfieldset) 4 つのウィジェット [`textfield`](/help/sites-developing/xtypes.md#textfield) ウィジェットと折りたたみ可能 `dialogfieldset` 2 [`textfield`](/help/sites-developing/xtypes.md#textfield) ウィジェット。
 
 * ノードによって定義されます：
 
@@ -269,23 +269,23 @@ Single Panel ダイアログを使用するには：
 
 **Rich** ダイアログを使用するには：
 
-1. **Dialog Basics**&#x200B;コンポーネントのダイアログを&#x200B;**Rich**&#x200B;ダイアログに置き換えます。
+1. ダイアログを **ダイアログの基本** コンポーネント **リッチ** ダイアログ：
 
-   [例2で説明されている手順に従います。シングルパネルダイアログ](#example-single-panel-dialog)
+   以下の手順に従って、 [例 2:シングルパネルダイアログ](#example-single-panel-dialog)
 
 1. コンポーネントを編集します。次のようなダイアログが表示されます。
 
-![screen_shot_2012-01-31at50429](assets/screen_shot_2012-01-31at50429pm.png) ![pmscreen_shot_2012-01-31at50519pm](assets/screen_shot_2012-01-31at50519pm.png)
+![screen_shot_2012-01-31at50429pm](assets/screen_shot_2012-01-31at50429pm.png) ![screen_shot_2012-01-31at50519pm](assets/screen_shot_2012-01-31at50519pm.png)
 
 ### Dynamic Dialogs {#dynamic-dialogs}
 
-サイドキックにある **Using ExtJS Widgets** グループの 2 番目のコンポーネントは、**2.Dynamic Dialogs** という名前で、3 つの動的ダイアログが含まれています。これらのダイアログは、すぐに使用できるウィジェットと、**カスタマイズされた Javascript ロジック**&#x200B;から作成されています。ダイアログは`/apps/extjstraining/components/dynamicdialogs`の下に保存されます。 動的ダイアログは次のとおりです。
+サイドキックにある **Using ExtJS Widgets** グループの 2 番目のコンポーネントは、**2.Dynamic Dialogs** という名前で、3 つの動的ダイアログが含まれています。これらのダイアログは、すぐに使用できるウィジェットと、**カスタマイズされた Javascript ロジック**&#x200B;から作成されています。ダイアログは、以下に保存されます。 `/apps/extjstraining/components/dynamicdialogs`. 動的ダイアログは次のとおりです。
 
 * Switch Tabs ダイアログ（`switchtabs` ノード）：2 つのタブを持つウィンドウが表示されます。最初のタブでは、ラジオボタンにより、3 つのオプションのいずれかを選択できます。オプションを選択すると、選択したオプションに関連付けられているタブが表示されます。2 番目のタブには、2 つのテキストフィールドがあります。
 *  ダイアログ（`arbitrary`arbitrary ノード）：1 つのタブを持つウィンドウが表示されます。このタブには、2 つのフィールドがあります。一つは、アセットをドロップまたはアップロードするためのフィールド、もう一つは、コンポーネントを含むページに関する情報とアセットに関する情報（アセットが参照されている場合）を表示するフィールドです。
-* [フィールドの切り替え]ダイアログ（ `togglefield`ノード）:1つのタブを持つウィンドウが表示されます。 このタブには、1 つのチェックボックスがあります。このチェックボックスを選択すると、2 つのテキストフィールドを含むフィールドセットが表示されます。
+* フィールドを切り替えダイアログ ( `togglefield` ノード ):1 つのタブを持つウィンドウが表示されます。 このタブには、1 つのチェックボックスがあります。このチェックボックスを選択すると、2 つのテキストフィールドを含むフィールドセットが表示されます。
 
-**2. Dynamic Dialogs** コンポーネントをサンプルページに組み込むには：
+を含めるには、 **2. Dynamic Dialogs** コンポーネントをサンプルページに組み込むには：
 
 1. **2.  Dynamic Dialogs** コンポーネントをサンプルページに追加します（**サイドキック**&#x200B;にある「**Using ExtJS Widgets**」タブから）。
 
@@ -301,12 +301,12 @@ Single Panel ダイアログを使用するには：
 
 このダイアログの主な特徴を次に示します。
 
-* ノードによって定義されます（ノードタイプ= `cq:Dialog`、xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog)）。
+* ノードによって定義されます (node type = `cq:Dialog`, xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog)) をクリックします。
 
-* 次の2つのタブが表示されます(node type = `cq:Panel`)。「1」タブの場合、「2」タブの場合は、「1」タブでの選択内容（「3」オプション）に応じて異なります。
-* 3つのオプションのタブ(node type = `cq:Panel`)があり、各タブには2つのテキストフィールドがあります(node type = `cq:Widget`、xtype = [`textfield`](/help/sites-developing/xtypes.md#textfield))。 「オプション」タブは、同時に 1 つしか表示されません。
+* 2 つのタブが表示されます ( ノードタイプ= `cq:Panel`):「1 選択」タブ、「2 番目のタブ」は、「1 番目のタブでの選択」（3 つのオプション）によって異なります。
+* 3 つのオプションのタブがあります ( ノードタイプ= `cq:Panel`) の場合、それぞれに 2 つのテキストフィールドがあります ( ノードタイプ= `cq:Widget`, xtype = [`textfield`](/help/sites-developing/xtypes.md#textfield)) をクリックします。 「オプション」タブは、同時に 1 つしか表示されません。
 
-* 次の場所にある`switchtabs`ノードによって定義されます。
+* が `switchtabs` ノード：
 
    `/apps/extjstraining/components/dynamicdialogs/switchtabs`
 
@@ -316,17 +316,17 @@ Single Panel ダイアログを使用するには：
 
 ロジックは、次のようにイベントリスナーと Javascript コードによって実装されています。
 
-* ダイアログノードには、ダイアログが表示される前に、すべてのオプションのタブを非表示にする「`beforeshow`」リスナーがあります。
+* ダイアログノードには、 `beforeshow`」ダイアログが表示される前に、すべてのオプションのタブを非表示にするリスナー：
 
    `beforeshow="function(dialog){Ejst.x2.manageTabs(dialog.items.get(0));}"`
 
-   `dialog.items.get(0)` 選択パネルと3つのオプションパネルを含むタブパネルを取得します。
+   `dialog.items.get(0)` 選択パネルと 3 つのオプションパネルを含むタブパネルを取得します。
 
-* `Ejst.x2`オブジェクトは、次の場所にある`exercises.js`ファイルで定義されます。
+* この `Ejst.x2` オブジェクトが `exercises.js` ファイルの場所：
 
    `/apps/extjstraining/clientlib/js/exercises.js`
 
-* `Ejst.x2.manageTabs()`メソッドでは、`index`の値が —1なので、すべてのオプションのタブが非表示になります(1 ～ 3)。
+* 内 `Ejst.x2.manageTabs()` メソッド、 `index` が —1 の場合、すべてのオプションのタブは非表示になります (1 ～ 3)。
 
 * 「選択範囲」タブには、2 つのリスナーがあります。一つは、ダイアログのロード（「`loadcontent`」イベント）時に選択済みのタブを表示するリスナー、もう一つは、選択内容の変更（「`selectionchanged`」イベント）時に選択済みのタブを表示するリスナーです。
 
@@ -334,9 +334,9 @@ Single Panel ダイアログを使用するには：
 
    `selectionchanged="function(field,value){Ejst.x2.showTab(field);}"`
 
-* `Ejst.x2.showTab()`メソッドで、次の操作を実行します。
+* 内 `Ejst.x2.showTab()` メソッド：
 
-   `field.findParentByType('tabpanel')` すべてのタブを含むタブパネルを取得しま `field` す（選択ウィジェットを表す）。
+   `field.findParentByType('tabpanel')` すべてのタブ ( `field` （選択ウィジェットを表します）
 
    `field.getValue()` 選択の値を取得します。例：tab2
 
@@ -346,13 +346,13 @@ Single Panel ダイアログを使用するには：
 
    `render="function(tab){Ejst.x2.hideTab(tab);}"`
 
-* `Ejst.x2.hideTab()`メソッドで、次の操作を実行します。
+* 内 `Ejst.x2.hideTab()` メソッド：
 
    `tabPanel` は、すべてのタブを含むタブパネルです
 
-   `index` はオプションのタブのインデックスです
+   `index` はオプションタブのインデックスです
 
-   `tabPanel.hideTabStripItem(index)` タブを非表示
+   `tabPanel.hideTabStripItem(index)` タブを非表示にします
 
 次のように表示されます。
 
@@ -366,13 +366,13 @@ Single Panel ダイアログを使用するには：
 
 このダイアログの主な特徴を次に示します。
 
-* ノードによって定義されます（ノードタイプ= `cq:Dialog`、xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog)）。
+* ノードによって定義されます (node type = `cq:Dialog`, xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog)) をクリックします。
 
-* 1つのパネル(node type = `cq:Panel`)を含む1つのtabpanelウィジェット(node type = `cq:Widget`、xtype = [`tabpanel`](/help/sites-developing/xtypes.md#tabpanel))を表示します。
+* 1 つのタブパネルウィジェットを表示します (node type = `cq:Widget`, xtype = [`tabpanel`](/help/sites-developing/xtypes.md#tabpanel)) を 1 つのパネル (node type = `cq:Panel`)
 
-* このパネルには、smartfileウィジェット(node type = `cq:Widget`、xtype = [`smartfile`](/help/sites-developing/xtypes.md#smartfile))とownerdrawウィジェット(node type = `cq:Widget`、xtype = [`ownerdraw`](/help/sites-developing/xtypes.md#ownerdraw))があります。
+* パネルには smartfile ウィジェットがあります (node type = `cq:Widget`, xtype = [`smartfile`](/help/sites-developing/xtypes.md#smartfile)) と ownerdraw ウィジェット (node type = `cq:Widget`, xtype = [`ownerdraw`](/help/sites-developing/xtypes.md#ownerdraw))
 
-* 次の場所にある`arbitrary`ノードによって定義されます。
+* が `arbitrary` ノード：
 
    `/apps/extjstraining/components/dynamicdialogs/arbitrary`
 
@@ -382,35 +382,35 @@ Single Panel ダイアログを使用するには：
 
 ロジックは、次のようにイベントリスナーと Javascript コードによって実装されています。
 
-* ownerdrawウィジェットには、コンポーネントを含むページに関する情報と、コンテンツの読み込み時にsmartfileウィジェットが参照するアセットに関する情報を表示する「`loadcontent`」リスナーがあります。
+* ownerdraw ウィジェットには `loadcontent`&quot;コンテンツの読み込み時に、コンポーネントを含むページと smartfile ウィジェットが参照するアセットに関する情報を表示するリスナー：
 
    `loadcontent="function(field,rec,path){Ejst.x2.showInfo(field,rec,path);}"`
 
-   `field` ownerdrawオブジェクトを使用して設定します。
+   `field` は ownerdraw オブジェクトで設定されます。
 
-   `path` コンポーネントのコンテンツパスを使用して設定します(例：/content/geometrixx/en/products/triangle/ui-tutorial/jcr:content/par/dynamicdialogs)
+   `path` はコンポーネントのコンテンツパスで設定されます ( 例：/content/geometrixx/en/products/triangle/ui-tutorial/jcr:content/par/dynamicdialogs)
 
-* `Ejst.x2`オブジェクトは、次の場所にある`exercises.js`ファイルで定義されます。
+* この `Ejst.x2` オブジェクトが `exercises.js` ファイルの場所：
 
    `/apps/extjstraining/clientlib/js/exercises.js`
 
-* `Ejst.x2.showInfo()`メソッドで、次の操作を実行します。
+* 内 `Ejst.x2.showInfo()` メソッド：
 
-   `pagePath` は、コンポーネントを含むページのパスです。
+   `pagePath` は、コンポーネントを含むページのパスです
 
-   `pageInfo` は、ページプロパティをjson形式で表します。
+   `pageInfo` は、ページプロパティを json 形式で表します。
 
-   `reference` は参照先のアセットのパスです。
+   `reference` は参照元のアセットのパスです
 
-   `metadata` アセットのメタデータをjson形式で表します。
+   `metadata` アセットのメタデータを json 形式で表します
 
-   `ownerdraw.getEl().update(html);` 作成したhtmlがダイアログに表示されます。
+   `ownerdraw.getEl().update(html);` 作成した html がダイアログに表示されます
 
 **Arbitrary** ダイアログを使用するには：
 
-1. **ダイナミックダイアログ**&#x200B;コンポーネントのダイアログを&#x200B;**任意の**&#x200B;ダイアログに置き換えます。
+1. ダイアログを **動的ダイアログ** コンポーネント **任意** ダイアログ：
 
-   [例2で説明されている手順に従います。シングルパネルダイアログ](#example-single-panel-dialog)
+   以下の手順に従って、 [例 2:シングルパネルダイアログ](#example-single-panel-dialog)
 
 1. コンポーネントを編集します。次のようなダイアログが表示されます。
 
@@ -422,13 +422,13 @@ Single Panel ダイアログを使用するには：
 
 このダイアログの主な特徴を次に示します。
 
-* ノードによって定義されます（ノードタイプ= `cq:Dialog`、xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog)）。
+* ノードによって定義されます (node type = `cq:Dialog`, xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog)) をクリックします。
 
-* 1つのパネル(node type = `cq:Panel`)を持つ1つのtabpanelウィジェット(node type = `cq:Widget`、xtype = [`tabpanel`](/help/sites-developing/xtypes.md#textpanel))を表示します。
+* 1 つのタブパネルウィジェットを表示します (node type = `cq:Widget`, xtype = [`tabpanel`](/help/sites-developing/xtypes.md#textpanel)) を 1 つのパネル (node type = `cq:Panel`) をクリックします。
 
-* このパネルには、2つのtextfieldウィジェット(node type = `cq:Widget`、xtype = [`textfield`](/help/sites-developing/xtypes.md#textfield))でデフォルトで非表示になる、selection/checkboxウィジェット(node type = `cq:Widget`、xtype = [`selection`](/help/sites-developing/xtypes.md#selection)、type = [`checkbox`](/help/sites-developing/xtypes.md#checkbox))と折りたたみ可能なdialogfieldsetウィジェット(node type = `cq:Widget`、xtype = [`dialogfieldset`](/help/sites-developing/xtypes.md#dialogfieldset))があります。
+* パネルには、選択/チェックボックスウィジェット (node type = `cq:Widget`, xtype = [`selection`](/help/sites-developing/xtypes.md#selection), type = [`checkbox`](/help/sites-developing/xtypes.md#checkbox)) と折りたたみ可能な dialogfieldset ウィジェット ( ノードタイプ= `cq:Widget`, xtype = [`dialogfieldset`](/help/sites-developing/xtypes.md#dialogfieldset)) 内に表示されます。デフォルトでは非表示になり、2 つの textfield ウィジェット (node type = `cq:Widget`, xtype = [`textfield`](/help/sites-developing/xtypes.md#textfield)) をクリックします。
 
-* 次の場所にある`togglefields`ノードによって定義されます。
+* が `togglefields` ノード：
 
    `/apps/extjstraining/components/dynamicdialogs/togglefields`
 
@@ -438,29 +438,29 @@ Single Panel ダイアログを使用するには：
 
 ロジックは、次のようにイベントリスナーと Javascript コードによって実装されています。
 
-* 「選択」タブには、2つのリスナーがあります。コンテンツの読み込み時にdialogfieldsetを表示するもの（「`loadcontent`」イベント）と、選択が変更されたときにdialogfieldsetを表示するもの（「`selectionchanged`」イベント）を次に示します。
+* 「選択」タブには、2 つのリスナーがあります。コンテンツの読み込み時に dialogfieldset を表示するもの (&quot; `loadcontent`&quot;イベント ) と、選択が変更されたときに dialogfieldset を表示するもの (&quot; `selectionchanged`&quot;イベント ):
 
    `loadcontent="function(field,rec,path){Ejst.x2.toggleFieldSet(field);}"`
 
    `selectionchanged="function(field,value){Ejst.x2.toggleFieldSet(field);}"`
 
-* `Ejst.x2`オブジェクトは、次の場所にある`exercises.js`ファイルで定義されます。
+* この `Ejst.x2` オブジェクトが `exercises.js` ファイルの場所：
 
    `/apps/extjstraining/clientlib/js/exercises.js`
 
-* `Ejst.x2.toggleFieldSet()`メソッドで、次の操作を実行します。
+* 内 `Ejst.x2.toggleFieldSet()` メソッド：
 
-   * `box` は選択オブジェクトです。
-   * `panel` は、選択およびdialogfieldsetウィジェットを含むパネルです。
-   * `fieldSet` dialogfieldsetオブジェクト
-   * `show` は選択範囲の値です（trueまたはfalse）
-   * 「 `show` 」に基づいて、dialogfieldsetが表示されるかどうかを設定します。
+   * `box` は選択オブジェクトです
+   * `panel` は、選択および dialogfieldset ウィジェットを含むパネルです
+   * `fieldSet` は dialogfieldset オブジェクトです。
+   * `show` は選択範囲の値です（true または false）
+   * 「 」に基づく `show`&#39; dialogfieldset が表示されているかどうか
 
-**フィールドの切り替え**&#x200B;ダイアログを使用するには：
+次の手順で **フィールドを切り替え** ダイアログ：
 
-1. **ダイナミックダイアログ**&#x200B;コンポーネントのダイアログを、**フィールドの切り替え**&#x200B;ダイアログに置き換えます。
+1. ダイアログを **動的ダイアログ** コンポーネント **フィールドを切り替え** ダイアログ：
 
-   [例2で説明されている手順に従います。シングルパネルダイアログ](#example-single-panel-dialog)
+   以下の手順に従って、 [例 2:シングルパネルダイアログ](#example-single-panel-dialog)
 
 1. コンポーネントを編集します。次のようなダイアログが表示されます。
 
@@ -468,7 +468,7 @@ Single Panel ダイアログを使用するには：
 
 ### カスタムウィジェット {#custom-widgets}
 
-AEM に付属しているすぐに使用できるウィジェットは、ほとんどのケースに対応できます。ただし、プロジェクト固有の要件をカバーするためにカスタムウィジェットを作成する必要が生じる場合があります。 カスタムウィジェットは、既存のウィジェットを拡張して作成できます。こうしたカスタマイズをおこなう際の手助けとなるように、**Using ExtJS Widgets** パッケージには、3 つの異なるカスタムウィジェットを使用する 3 つのダイアログが含まれています。
+AEM に付属しているすぐに使用できるウィジェットは、ほとんどのケースに対応できます。ただし、プロジェクト固有の要件をカバーするカスタムウィジェットの作成が必要になる場合があります。 カスタムウィジェットは、既存のウィジェットを拡張して作成できます。こうしたカスタマイズをおこなう際の手助けとなるように、**Using ExtJS Widgets** パッケージには、3 つの異なるカスタムウィジェットを使用する 3 つのダイアログが含まれています。
 
 * Multi Field ダイアログ（`multifield` ノード）。1 つのタブを持つウィンドウが表示されます。このタブには、カスタマイズされた multifield ウィジェットがあり、2 つのオプションを選択できるドロップダウンメニューとテキストフィールドという 2 つのフィールドが含まれています。このタブは、すぐに使用できる `multifield` ウィジェット（テキストフィールドのみを持つ）に基づいているので、`multifield` ウィジェットの機能をすべて使用できます。
 
@@ -491,22 +491,22 @@ AEM に付属しているすぐに使用できるウィジェットは、ほと�
 
 **Custom Multifield** ウィジェットベースのダイアログ：
 
-* ノードによって定義されます（ノードタイプ= `cq:Dialog`、xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog)）。
+* ノードによって定義されます (node type = `cq:Dialog`, xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog)) をクリックします。
 
-* 1つのパネル(node type = `cq:Widget`、xtype = [`panel`](/help/sites-developing/xtypes.md#panel))を含む1つのtabpanelウィジェット(node type = `cq:Widget`、xtype = [`tabpanel`](/help/sites-developing/xtypes.md#tabpanel))を表示します。
+* 1 つのタブパネルウィジェットを表示します (node type = `cq:Widget`, xtype = [`tabpanel`](/help/sites-developing/xtypes.md#tabpanel)) にパネルが含まれている ( ノードタイプ= `cq:Widget`, xtype = [`panel`](/help/sites-developing/xtypes.md#panel)) をクリックします。
 
-* このパネルには、`multifield`ウィジェット(node type = `cq:Widget`、xtype = [`multifield`](/help/sites-developing/xtypes.md#multifield))があります。
+* パネルには `multifield` widget ( ノードタイプ= `cq:Widget`, xtype = [`multifield`](/help/sites-developing/xtypes.md#multifield)) をクリックします。
 
-* `multifield`ウィジェットには、カスタムxtype &#39; `ejstcustom`&#39;に基づくfieldconfig (node type = `nt:unstructured`、xtype = `ejstcustom`、optionsProvider = `Ejst.x3.provideOptions`)があります。
+* この `multifield` ウィジェットには fieldconfig があります ( ノードタイプ= `nt:unstructured`, xtype = `ejstcustom`, optionsProvider = `Ejst.x3.provideOptions`) を返します。 `ejstcustom`&#39;:
 
-   * 「 `fieldconfig` 」は、[`CQ.form.MultiField`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.MultiField)オブジェクトの設定オプションです。
-   * 「 `optionsProvider` 」は`ejstcustom`ウィジェットの設定です。 これは、`exercises.js`で次の場所に定義されている`Ejst.x3.provideOptions`メソッドを使用して設定されます。
+   * &#39; `fieldconfig`&#39;は、 [`CQ.form.MultiField`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.MultiField) オブジェクト。
+   * &#39; `optionsProvider`&#39;は `ejstcustom` ウィジェット。 これは、 `Ejst.x3.provideOptions` 次で定義されるメソッド： `exercises.js` 時刻：
 
       `/apps/extjstraining/clientlib/js/exercises.js`
 
-      とは、2つのオプションを返します。
+      とは、2 つのオプションを返します。
 
-* 次の場所にある`multifield`ノードによって定義されます。
+* が `multifield` ノード：
 
    `/apps/extjstraining/components/customwidgets/multifield`
 
@@ -522,20 +522,20 @@ Custom Multifield ウィジェット（xtype = `ejstcustom`）：
 
    `/apps/extjstraining/clientlib/js/CustomWidget.js`
 
-* [`CQ.form.CompositeField`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.CompositeField)ウィジェットを拡張します。
+* を [`CQ.form.CompositeField`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.CompositeField) ウィジェット。
 
-* 次の3つのフィールドがあります。`hiddenField`（テキストフィールド）、`allowField`(ComboBox)、`otherField`（テキストフィールド）
+* 次の 3 つのフィールドがあります。 `hiddenField` （テキストフィールド）、 `allowField` (ComboBox) および `otherField` （テキストフィールド）
 
-* `CQ.Ext.Component#initComponent`を上書きして3つのフィールドを追加します。
+* 上書き `CQ.Ext.Component#initComponent` 3 つのフィールドを追加するには：
 
-   * `allowField` は [CQ.form.](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Selection) タイプ「select」のSelectionobjectです。optionsProviderは、ダイアログで定義されたCustomWidgetのoptionsProvider設定でインスタンス化されるSelectionオブジェクトの設定です
+   * `allowField` は [CQ.form.Selection](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Selection) 「select」型のオブジェクト。 optionsProvider は、ダイアログで定義された CustomWidget の optionsProvider 設定でインスタンス化される Selection オブジェクトの設定です
    * `otherField` は、[CQ.Ext.form.TextField](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TextField) オブジェクトです。
 
-* [CQ.form.CompositeField](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.CompositeField)のメソッド`setValue`、`getValue`および`getRawValue`を上書きして、次の形式のCustomWidgetの値を設定および取得します。
+* メソッドを上書き `setValue`, `getValue` および `getRawValue` / [CQ.form.CompositeField](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.CompositeField) 次の形式で CustomWidget の値を設定して取得するには：
 
    `<allowField value>/<otherField value>, e.g.: 'Bla1/hello'`
 
-* 自分自身を&#39; `ejstcustom`&#39; xtypeとして登録します。
+* 自身を&#39;として登録 `ejstcustom`&#39; xtype:
 
    `CQ.Ext.reg('ejstcustom', Ejst.CustomWidget);`
 
@@ -549,13 +549,13 @@ Custom Multifield ウィジェット（xtype = `ejstcustom`）：
 
 カスタム treebrowse ダイアログ：
 
-* ノードによって定義されます（ノードタイプ= `cq:Dialog`、xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog)）。
+* ノードによって定義されます (node type = `cq:Dialog`, xtype = [`dialog`](/help/sites-developing/xtypes.md#dialog)) をクリックします。
 
-* 1つのパネル(node type = `cq:Widget`、xtype = [`panel`](/help/sites-developing/xtypes.md#panel))を含む1つのtabpanelウィジェット(node type = `cq:Widget`、xtype = [`tabpanel`](/help/sites-developing/xtypes.md#tabpanel))を表示します。
+* 1 つのタブパネルウィジェットを表示します (node type = `cq:Widget`, xtype = [`tabpanel`](/help/sites-developing/xtypes.md#tabpanel)) にパネルが含まれている ( ノードタイプ= `cq:Widget`, xtype = [`panel`](/help/sites-developing/xtypes.md#panel)) をクリックします。
 
-* このパネルにはカスタムウィジェット(node type = `cq:Widget`、xtype = `ejstbrowse`)があります。
+* このパネルにはカスタムウィジェットがあります (node type = `cq:Widget`, xtype = `ejstbrowse`)
 
-* 次の場所にある`treebrowse`ノードによって定義されます。
+* が `treebrowse` ノード：
 
    `/apps/extjstraining/components/customwidgets/treebrowse`
 
@@ -570,16 +570,16 @@ Custom Multifield ウィジェット（xtype = `ejstcustom`）：
 
    `/apps/extjstraining/clientlib/js/CustomBrowseField.js`
 
-* [`CQ.Ext.form.TriggerField`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TriggerField)を拡張します。
+* 拡張 [`CQ.Ext.form.TriggerField`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TriggerField).
 * `browseWindow` という名前の参照ウィンドウを定義します。
 
-* 矢印をクリックしたときに参照ウィンドウを表示するように[`CQ.Ext.form.TriggerField`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TriggerField#onTriggerClick)を上書きします。
-* [`CQ.Ext.tree.TreePanel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.tree.TreePanel)オブジェクトを定義します。
+* 上書き [`CQ.Ext.form.TriggerField`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TriggerField#onTriggerClick) をクリックすると、参照ウィンドウが表示されます。
+* を定義します。 [`CQ.Ext.tree.TreePanel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.tree.TreePanel) オブジェクト：
 
-   * `/bin/wcm/siteadmin/tree.json`に登録されたサーブレットを呼び出すことで、データを取得します。
-   * ルートは「`apps/extjstraining`」です。
+   * データを取得するには、に登録されているサーブレットを呼び出します。 `/bin/wcm/siteadmin/tree.json`.
+   * そのルートは「」です。 `apps/extjstraining`&quot;.
 
-* `window`オブジェクト([`CQ.Ext.Window`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window))を定義します。
+* を定義します。 `window` オブジェクト ([`CQ.Ext.Window`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)):
 
    * 事前定義済みのパネルに基づいています。
    * 選択されたパスの値を設定し、パネルを非表示にする「**OK**」ボタンを組み込みます。
@@ -587,15 +587,15 @@ Custom Multifield ウィジェット（xtype = `ejstcustom`）：
 * ウィンドウは、「**パス**」フィールドの下に固定されます。
 * 選択されたパスは、`show` イベントが発生したときに、参照フィールドからウィンドウに渡されます。
 
-* 自分自身を&#39; `ejstbrowse`&#39; xtypeとして登録します。
+* 自身を&#39;として登録 `ejstbrowse`&#39; xtype:
 
    `CQ.Ext.reg('ejstbrowse', Ejst.CustomBrowseField);`
 
-**Custom Treebrowse**&#x200B;ウィジェットベースのダイアログを使用するには：
+次の手順で **Custom Treebrowse** ウィジェットベースのダイアログ：
 
-1. **カスタムウィジェット**&#x200B;コンポーネントのダイアログを、**カスタムツリー参照**&#x200B;ダイアログに置き換えます。
+1. ダイアログを **カスタムウィジェット** コンポーネント **Custom Treebrowse** ダイアログ：
 
-   [例2で説明されている手順に従います。シングルパネルダイアログ](#example-single-panel-dialog)
+   以下の手順に従って、 [例 2:シングルパネルダイアログ](#example-single-panel-dialog)
 
 1. コンポーネントを編集します。次のようなダイアログが表示されます。
 
@@ -607,7 +607,7 @@ Custom Multifield ウィジェット（xtype = `ejstcustom`）：
 
 **RTE プラグイン**&#x200B;ベースのダイアログ：
 
-* 次の場所にあるrtepluginノードによって定義されます。
+* 次の場所にある rteplugin ノードによって定義されます。
 
    `/apps/extjstraining/components/customwidgets/rteplugin`
 
@@ -615,7 +615,7 @@ Custom Multifield ウィジェット（xtype = `ejstcustom`）：
 
    `http://localhost:4502/apps/extjstraining/components/customwidgets/rteplugin.-1.json`
 
-* `rtePlugins`ノードには、プラグインの名前にちなんだ子ノード`inserttext`（ノードタイプ= `nt:unstructured`）があります。 このノードには、RTE で使用可能なプラグイン機能を定義する `features` という名前のプロパティがあります。
+* この `rtePlugins` ノードに子ノードがあります `inserttext` ( ノードタイプ= `nt:unstructured`) を呼び出します。 このノードには、RTE で使用可能なプラグイン機能を定義する `features` という名前のプロパティがあります。
 
 RTE プラグイン：
 
@@ -625,19 +625,19 @@ RTE プラグイン：
 
    `/apps/extjstraining/clientlib/js/InsertTextPlugin.js`
 
-* [`CQ.form.rte.plugins.Plugin`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)オブジェクトを拡張します。
+* を [`CQ.form.rte.plugins.Plugin`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin) オブジェクト。
 * 次のメソッドは、[`CQ.form.rte.plugins.Plugin`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin) オブジェクトを定義するもので、プラグインの実装時に上書きされます。
 
-   * `getFeatures()` は、プラグインが使用可能にするすべての機能の配列を返します。
-   * `initializeUI()` RTEツールバーに新しいボタンを追加します。
-   * `notifyPluginConfig()` ボタンにカーソルを合わせると、タイトルとテキストが表示されます。
-   * `execute()` が呼び出され、プラグインのアクションが実行されます。含めるテキストを定義するウィンドウが表示されます。
+   * `getFeatures()` プラグインが使用可能にするすべての機能の配列を返します。
+   * `initializeUI()` を使用すると、RTE ツールバーに新しいボタンが追加されます。
+   * `notifyPluginConfig()` ボタンにマウスポインターを置くと、タイトルとテキストが表示されます。
+   * `execute()` が呼び出され、次のプラグインアクションが実行されます。含めるテキストを定義するウィンドウが表示されます。
 
-* `insertText()` 対応するダイアログオブジェクトを使用してテキ `Ejst.InsertTextPlugin.Dialog` ストを挿入します（後で参照）。
+* `insertText()` 対応するダイアログオブジェクトを使用してテキストを挿入します。 `Ejst.InsertTextPlugin.Dialog` （後で参照）。
 
-* `executeInsertText()` は、ダイアログの `apply()` メソッドによって呼び出され、「 **** OK」ボタンがクリックされたときにトリガーされます。
+* `executeInsertText()` が `apply()` ダイアログのメソッド。 **OK** 」ボタンがクリックされたときに表示されます。
 
-* 自分自身を「`inserttext`」プラグインとして登録します。
+* 自身を&#39;として登録 `inserttext`&#39;プラグイン：
 
    `CQ.form.rte.plugins.PluginRegistry.register("inserttext", Ejst.InsertTextPlugin);`
 
@@ -645,14 +645,14 @@ RTE プラグイン：
 
 **リッチテキストエディター（RTE）プラグイン**&#x200B;ベースのダイアログを使用するには：
 
-1. **カスタムウィジェット**&#x200B;コンポーネントのダイアログを、**リッチテキストエディター(RTE)プラグイン**&#x200B;ベースのダイアログに置き換えます。
+1. ダイアログを **カスタムウィジェット** コンポーネント **リッチテキストエディター (RTE) プラグイン** ベースダイアログ：
 
-   [例2で説明されている手順に従います。シングルパネルダイアログ](#example-single-panel-dialog)
+   以下の手順に従って、 [例 2:シングルパネルダイアログ](#example-single-panel-dialog)
 
 1. コンポーネントを編集します。
-1. 右側の最後のアイコン（4つの矢印の付いたアイコン）をクリックします。 パスを入力して「**OK**」をクリックします。
+1. 右側の最後のアイコン（4 つの矢印の付いたアイコン）をクリックします。 パスを入力して「**OK**」をクリックします。
 
-   パスは角括弧(`[]`)で囲んで表示されます。
+   パスは角括弧 (`[]`) をクリックします。
 
 1. 「**OK**」をクリックしてリッチテキストエディターを閉じます。
 
@@ -662,7 +662,7 @@ RTE プラグイン：
 
 >[!NOTE]
 >
->この例は、ロジックのクライアント側の部分の実装方法を示しています。プレースホルダー(*[text]*)は、サーバー側で明示的に解析する必要があります（例：コンポーネントJSP内）。
+>この例は、ロジックのクライアント側の部分の実装方法を示しています。プレースホルダ (*[テキスト]*) をサーバー側で明示的に解析する必要があります（例：コンポーネント JSP 内）。
 
 ### Tree Overview {#tree-overview}
 
@@ -703,15 +703,15 @@ Tree Overview コンポーネント：
 
 * ページからツリーウィンドウの取得を試みることにより、`tree` オブジェクトを定義します。
 
-* ツリーを表示するウィンドウが存在しない場合は、`treePanel`([CQ.Ext.tree.TreePanel](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.tree.TreePanel))が作成されます。
+* ツリーを表示するウィンドウが存在しない場合は、 `treePanel` ([CQ.Ext.tree.TreePanel](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.tree.TreePanel)) が作成されました。
 
    * `treePanel` には、ウィンドウの作成に使用されるデータが含まれています。
    * データは、次で登録されたサーブレットを呼び出すことにより、取得されます。
       `/bin/wcm/siteadmin/tree.json`
 
-* `beforeload`リスナーは、クリックされたノードが読み込まれたことを確認します。
-* `root`オブジェクトは、パス`apps/extjstraining`をツリーのルートとして設定します。
-* `tree` ([`CQ.Ext.Window`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window))は事前定義に基づいて設定さ `treePanel`れ、次のように表示されます。
+* この `beforeload` リスナーは、クリックされたノードが読み込まれていることを確認します。
+* この `root` オブジェクトはパスを設定します `apps/extjstraining` を、木の根元として。
+* `tree` ([`CQ.Ext.Window`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)) は、事前定義された `treePanel`、およびは次の情報と共に表示されます。
 
    `tree.show();`
 
@@ -720,11 +720,11 @@ Tree Overview コンポーネント：
 コンポーネントダイアログ：
 
 * ツリー概要ウィンドウのサイズ（幅と高さ）を設定するための 2 つのフィールドとウィンドウをドッキング、ドッキング解除するための 1 つのフィールドを持つ 1 つのタブを表示します。
-* ノードによって定義されます（ノードタイプ= `cq:Dialog`、xtype = [`panel`](/help/sites-developing/xtypes.md#panel)）。
+* ノードによって定義されます (node type = `cq:Dialog`, xtype = [`panel`](/help/sites-developing/xtypes.md#panel)) をクリックします。
 
-* このパネルには、sizefieldウィジェット(node type = `cq:Widget`、xtype = [`sizefield`](/help/sites-developing/xtypes.md#sizefield))と、2つのオプション(true/false)を持つ選択ウィジェット(node type = `cq:Widget`、xtype = [`selection`](/help/sites-developing/xtypes.md#selection)、type = `radio`)があります。
+* このパネルには sizefield ウィジェットがあります (node type = `cq:Widget`, xtype = [`sizefield`](/help/sites-developing/xtypes.md#sizefield)) と選択ウィジェット (node type = `cq:Widget`, xtype = [`selection`](/help/sites-developing/xtypes.md#selection), type = `radio`) に 2 つのオプション (true/false) を含める
 
-* 次の場所にあるdialogノードによって定義されます。
+* 次の場所にある dialog ノードによって定義されます。
 
    `/apps/extjstraining/components/treeoverview/dialog`
 
@@ -745,12 +745,12 @@ Tree Overview コンポーネント：
 * ビュー：ユーザーインターフェイスが含まれます。
 * 選択モデル：選択の動作。
 
-**Using ExtJS Widgets**&#x200B;パッケージに含まれるGrid Overviewコンポーネントでは、データを表形式で表示する方法を示します。
+Grid Overview コンポーネントには、 **ExtJS ウィジェットの使用** パッケージでは、データを表形式で表示する方法を示します。
 
 * 例 1 では、静的データを使用しています。
-* 例2では、リポジトリから取得したデータを使用します。
+* 例 2 では、リポジトリから取得したデータを使用します。
 
-Grid Overviewコンポーネントをサンプルページに含めるには：
+Grid Overview コンポーネントをサンプルページに含めるには：
 
 1. **5.  Grid Overview** コンポーネントをサンプルページに追加します（**サイドキック**&#x200B;にある「**Using ExtJS Widgets**」タブで）。
 
@@ -787,7 +787,7 @@ Grid Overview コンポーネント：
 
    `<script type="text/javascript" src="/apps/extjstraining/components/gridoverview/defaultgrid.js"></script>`
 
-   `defaultgrid.js` では、一部の静的データをGridPanelオブジェクトの基礎として定義します。
+   `defaultgrid.js` では、一部の静的データを GridPanel オブジェクトの基礎として定義します。
 
 * GridPanel オブジェクトを使用する Window オブジェクトを Javascript コードで定義して、Javascript タグの間に埋め込みます。
 * 次で定義されます。
@@ -800,22 +800,22 @@ Grid Overview コンポーネント：
 
    `var grid = CQ.Ext.getCmp("<%= node.getName() %>-grid");`
 
-* `grid`が存在しない場合、[CQ.Ext.grid.GridPanel](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)オブジェクト(`gridPanel`)は、`getGridPanel()`メソッドを呼び出すことで定義されます（以下を参照）。 このメソッドは、`defaultgrid.js` で定義されます。
+* If `grid` が存在しない場合、 [CQ.Ext.grid.GridPanel](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) オブジェクト ( `gridPanel`) は、 `getGridPanel()` メソッドを使用します（以下を参照）。 このメソッドは、`defaultgrid.js` で定義されます。
 
-* `grid` は、事前 [`CQ.Ext.Window`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)定義済みのGridPanelに基づくオブジェクトで、次のように表示されます。  `grid.show();`
+* `grid` は [`CQ.Ext.Window`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)オブジェクト（事前定義済みの GridPanel に基づく）を選択し、次の操作を実行して表示します。 `grid.show();`
 
-* `grid`が既に存在する場合は、リポジトリから取得した幅、高さ、ドッキングの各プロパティに基づいて表示されます。
+* If `grid` 既に存在する場合は、リポジトリから取得した幅、高さ、ドッキングの各プロパティに基づいて表示されます。
 
-コンポーネントjspで参照されるJavaScriptファイル( `defaultgrid.js` )では、JSPに埋め込まれたスクリプトによって呼び出され、静的データに基づいて[`CQ.Ext.grid.GridPanel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)オブジェクトを返す`getGridPanel()`メソッドを定義します。 ロジックを次に示します。
+JavaScript ファイル ( `defaultgrid.js`) をコンポーネント jsp で参照する場合は、 `getGridPanel()` メソッド。JSP に埋め込まれたスクリプトによって呼び出され、 [`CQ.Ext.grid.GridPanel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) オブジェクトに作成します。 ロジックを次に示します。
 
 * `myData` は、静的データの配列で、5 列 x 4 行の表として書式設定されています。
-* `store` は、を使用す `CQ.Ext.data.Store` るオブジェクトで `myData`す。
+* `store` は `CQ.Ext.data.Store` を消費するオブジェクト `myData`.
 
-* `store` はメモリに読み込まれます。
+* `store` はメモリに読み込まれます：
 
    `store.load();`
 
-* `gridPanel` は、次を使用す [`CQ.Ext.grid.GridPanel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) るオブジェクトで `store`す。
+* `gridPanel` は [`CQ.Ext.grid.GridPanel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) を消費するオブジェクト `store`:
 
    * 列幅は常に再調整されます。
 
@@ -827,13 +827,13 @@ Grid Overview コンポーネント：
 
 #### 例 2：参照検索グリッド {#example-reference-search-grid}
 
-パッケージをインストールすると、**Grid Overview**&#x200B;コンポーネントの`content.jsp`に、静的データに基づくグリッドが表示されます。 次の特徴を持つグリッドを表示するようにコンポーネントを変更することが可能です。
+パッケージをインストールすると、 `content.jsp` の **グリッドの概要** コンポーネントは、静的データに基づくグリッドを表示します。 次の特徴を持つグリッドを表示するようにコンポーネントを変更することが可能です。
 
 * 3 つの列を持つ。
 * サーブレットを呼び出すことにより、リポジトリから取得したデータを基礎にする。
 * 最後の列のセルを編集できる。この値は、先頭の列に表示されたパスで定義されたノードの下にある `test` プロパティに保持されます。
 
-前の節で説明したように、windowオブジェクトは、`/apps/extjstraining/components/gridoverview/defaultgrid.js`にある`defaultgrid.js`ファイルで定義されている`getGridPanel()`メソッドを呼び出して、[`CQ.Ext.grid.GridPanel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)オブジェクトを取得します。 **Grid Overview**&#x200B;コンポーネントは、`/apps/extjstraining/components/gridoverview/referencesearch.js`にある`referencesearch.js`ファイルで定義されている、`getGridPanel()`メソッドに対して異なる実装を提供します。 コンポーネント jsp で参照される .js ファイルを切り替えることにより、グリッドは、リポジトリから取得したデータに基づくようになります。
+前の節で説明したように、window オブジェクトは、 [`CQ.Ext.grid.GridPanel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) オブジェクトを `getGridPanel()` メソッドが `defaultgrid.js` ～にファイルを送る `/apps/extjstraining/components/gridoverview/defaultgrid.js`. この **グリッドの概要** コンポーネントは、 `getGridPanel()` メソッド ( `referencesearch.js` ～にファイルを送る `/apps/extjstraining/components/gridoverview/referencesearch.js`. コンポーネント jsp で参照される .js ファイルを切り替えることにより、グリッドは、リポジトリから取得したデータに基づくようになります。
 
 コンポーネント jsp で参照される .js ファイルを切り替えます。
 
@@ -852,11 +852,11 @@ Grid Overview コンポーネント：
 
 ![screen_shot_2012-02-01at121429pm](assets/screen_shot_2012-02-01at121429pm.png)
 
-コンポーネントjspで参照されるJavaScriptコード(`referencesearch.js`)は、コンポーネントjspから呼び出される`getGridPanel()`メソッドを定義し、リポジトリから動的に取得されるデータに基づいて[`CQ.Ext.grid.GridPanel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)オブジェクトを返します。 `referencesearch.js` のロジックでは、一部の動的データが GridPanel の基礎として定義されています。
+コンポーネント jsp で参照される JavaScript コード (`referencesearch.js`) は、 `getGridPanel()` メソッドは、コンポーネント jsp から呼び出され、 [`CQ.Ext.grid.GridPanel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel) オブジェクトに格納されます。 `referencesearch.js` のロジックでは、一部の動的データが GridPanel の基礎として定義されています。
 
 * `reader` は、JSON 形式のサーブレット応答を読み取る 3 列用の [`CQ.Ext.data.JsonReader`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.JsonReader) オブジェクトです。
 
-* `cm` は3列 [`CQ.Ext.grid.ColumnModel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.ColumnModel) のオブジェクトです。
+* `cm` は [`CQ.Ext.grid.ColumnModel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.ColumnModel) 3 列のオブジェクト。
 
    「テスト」列のセルは、editor で定義されているので、編集することが可能です。
 
@@ -866,13 +866,13 @@ Grid Overview コンポーネント：
 
    `cm.defaultSortable = true;`
 
-* `store` はオブジェクト [`CQ.Ext.data.GroupingStore`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.GroupingStore) です。
+* `store` は [`CQ.Ext.data.GroupingStore`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.GroupingStore) オブジェクト：
 
-   * クエリのフィルタリングに使用するパラメーターをいくつか指定して、「 `/bin/querybuilder.json` 」に登録されたサーブレットを呼び出すことで、データを取得します
+   * データを取得するには、「 」に登録されているサーブレットを呼び出します。 `/bin/querybuilder.json`」を追加します。
    * 前に定義した `reader` に基づきます。
    * 表は、「**jcr:path**」列に従って、昇順で並べ替えられます。
 
-* `gridPanel` は、編集 [`CQ.Ext.grid.EditorGridPanel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.EditorGridPanel) 可能なオブジェクトです。
+* `gridPanel` は [`CQ.Ext.grid.EditorGridPanel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.EditorGridPanel) 編集可能なオブジェクト：
 
    * 事前定義済みの `store` と列モデル `cm` に基づいています。
    * 選択できる行は一度に 1 つのみです。
@@ -881,5 +881,5 @@ Grid Overview コンポーネント：
 
    * `afteredit` リスナーは、「**テスト**」列のセルが編集されたことを確認します。
 
-      * 「**jcr:path**」列で定義されたパスにあるノードのプロパティ「`test`」は、セルの値を使用してリポジトリに設定されます
+      * プロパティ&#39; `test`&#39; &#39;**jcr:path**」列がリポジトリに設定され、セルの値が
       * POST が成功した場合は、値が `store` オブジェクトに追加されます。POST が失敗した場合は、値が拒否されます。

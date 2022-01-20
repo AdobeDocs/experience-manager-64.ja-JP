@@ -1,8 +1,8 @@
 ---
 title: ローンチの編集
-seo-title: ローンチの編集
+seo-title: Editing Launches
 description: ページ（またはページのセット）にローンチが作成されている場合、ページのローンチコピーのコンテンツを編集できます。
-seo-description: ページ（またはページのセット）にローンチが作成されている場合、ページのローンチコピーのコンテンツを編集できます。
+seo-description: When a launch has been created for a page (or set of pages) you can edit the content in the launch copy of the page(s).
 uuid: 3a310eeb-553d-4d2b-98b5-c5bc523b2aca
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 98bccd13-431a-4cba-bb93-75cdcc98830a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '291'
 ht-degree: 100%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 100%
 
 1. 「**保存**」をクリックします。
 
-## ページのローンチステータスの確認  {#discovering-the-launch-status-of-a-page}
+## ページのローンチステータスの確認 {#discovering-the-launch-status-of-a-page}
 
 ページのローンチの編集時、ローンチについての情報がサイドキックの「**バージョン管理**」タブの下部に表示されます。
 

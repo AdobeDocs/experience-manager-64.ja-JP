@@ -1,8 +1,8 @@
 ---
 title: 証明書の管理
-seo-title: 証明書の管理
+seo-title: Managing certificates
 description: 証明書の取り込みおよび書き出し方法とその信頼設定を編集する方法について説明します。
-seo-description: 証明書の取り込みおよび書き出し方法とその信頼設定を編集する方法について説明します。
+seo-description: Learn how to import and export a certificate and edit its trust settings.
 uuid: 46b1dbe5-517c-4294-bb52-cc6700a768e8
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 9fd531c0-5206-4be0-a450-13e0dc806068
 exl-id: b8d4f35b-dc9c-4e0a-b855-f49275d4ac1f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '641'
 ht-degree: 83%
 
 ---
@@ -32,9 +32,9 @@ Trust Store の管理では、電子署名の検証および証明書認証の�
 
 Trust Manager API を使用して証明書の読み込みおよび削除を行うこともできます。詳しくは、「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63)」の「Trust Manager API を使用した証明書の読み込み」および「Trust Manager API を使用した証明書の削除」を参照してください。
 
-## 証明書の読み込み  {#import-a-certificate}
+## 証明書の読み込み {#import-a-certificate}
 
-1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/証明書]**&#x200B;をクリックします。
+1. 管理コンソールで、 **[!UICONTROL 設定/Trust Store の管理/証明書]**.
 1. 「読み込み」をクリックし、「Trust Store の種類」で次のいずれかのオプションを選択します。
 
    * **SSL 接続で信頼：** SSL 経由で外部システムに接続するために AEM Forms で証明書を使用できることを指定します。
@@ -49,24 +49,24 @@ Trust Manager API を使用して証明書の読み込みおよび削除を行�
    >Trust Store ではアドビのルート証明書の証明書認証、署名、署名の認証および ID が暗黙的に信頼されます。
 
 1. 「エイリアス」ボックスに、この証明書の ID を入力します。
-1. 「**[!UICONTROL 参照]**」をクリックして証明書を探し、「**[!UICONTROL OK]**」をクリックします。
+1. クリック **[!UICONTROL 参照]** 証明書を探し、 **[!UICONTROL OK]**.
 
 ## 証明書の書き出し {#export-a-certificate}
 
-1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/証明書]**&#x200B;をクリックします。
-1. 書き出す証明書のエイリアス名をクリックします。**[!UICONTROL 証明書の詳細]**&#x200B;ページが表示されます。
-1. 「**[!UICONTROL 書き出し]**」をクリックし、指示に従って証明書を書き出し、「**[!UICONTROL OK]**」をクリックします。
+1. 管理コンソールで、 **[!UICONTROL 設定/Trust Store の管理/証明書]**.
+1. 書き出す証明書のエイリアス名をクリックします。この **[!UICONTROL 証明書の詳細]** ページが表示されます。
+1. クリック **[!UICONTROL 書き出し]**&#x200B;をクリックし、指示に従って証明書を書き出し、 **[!UICONTROL OK]**.
 
 ## 証明書の信頼設定と Trust Store の種類の編集 {#edit-a-certificate-s-trust-settings-and-trust-store-type}
 
-1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/証明書]**&#x200B;をクリックします。
+1. 管理コンソールで、 **[!UICONTROL 設定/Trust Store の管理/証明書]**.
 1. 編集する証明書のエイリアス名をクリックします。
-1. 「**[!UICONTROL 証明書を更新]**」をクリックします。
+1. クリック **[!UICONTROL 証明書を更新]**.
 1. 証明書のエイリアス名を変更するには、「エイリアス」ボックスに新しい名前を入力します。
 1. 証明書の Trust Store の種類を更新するには、適切な Trust Store の種類を選択します。
-1. ポリシー制限を更新するには、「証明書ポリシー」ボックスにポリシー情報を入力し、「**[!UICONTROL OK]**」をクリックします。
+1. ポリシー制限を更新するには、[ 証明書のポリシー ] ボックスにポリシー情報を入力し、 **[!UICONTROL OK]**.
 
 ## 証明書の削除 {#delete-a-certificate}
 
-1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/証明書]**&#x200B;をクリックします。
-1. 削除する証明書のチェックボックスをオンにして、「**[!UICONTROL 削除]**」をクリックし、「**[!UICONTROL OK]**」をクリックします。
+1. 管理コンソールで、 **[!UICONTROL 設定/Trust Store の管理/証明書]**.
+1. 削除する証明書のチェックボックスをオンにして、 **[!UICONTROL 削除]**&#x200B;をクリックし、 **[!UICONTROL OK]**.

@@ -1,8 +1,8 @@
 ---
-title: 作成者が行う最初の手順
-seo-title: 作成者がおこなう最初の手順
+title: 作成者がおこなう最初の手順
+seo-title: First Steps for Authors
 description: AEM でコンテンツのオーサリングを開始する際に使用する主なタスクの概要です
-seo-description: AEM でコンテンツのオーサリングを開始する際に使用する主なタスクの概要です
+seo-description: An overview of the main tasks that you will be using when starting to author content with AEM
 uuid: 13aec50b-f902-4b5e-9e8b-bc94810d7b88
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 9086b14c-cd75-4fc9-928e-81c8ad6b6292
 exl-id: c4b0211f-aaaf-44e5-89bb-6b951dbdb98f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 93%
+source-wordcount: '440'
+ht-degree: 92%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 93%
 
 次の内容について説明します。
 
-* [はじめに](#getting-started)  — 最初のページを作成して公開するために必要な基本的なイベントのシーケンスを詳しく説明します。
+* [はじめに](#getting-started)  — 最初のページを作成して公開するために必要なイベントの基本的なシーケンスの詳細を説明します。
 
-* [その他のアクション](#further-actions)  — オーサリング時に使用できるその他の多くのアクションに続きます。
+* [その他のアクション](#further-actions)  — に続いて、オーサリング時に使用できるその他の多くのアクションを示します。
 
 ## 概要 {#overview}
 
@@ -43,11 +43,11 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 
 編集前に、[新しいページを作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)する必要があります。
 
-### ページを開く  {#opening-a-page}
+### ページを開く {#opening-a-page}
 
 編集などの多くのアクションで、[ページを開く](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)必要があります。
 
-### ページの編集  {#editing-a-page}
+### ページの編集 {#editing-a-page}
 
 インスタンスに既存のページがあるか、新しいページを自分で作成した直後の場合は、次の方法で[ページを編集](/help/sites-authoring/editing-content.md)できます。
 
@@ -64,7 +64,7 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 
 ページの編集が完了したら、Web サイトへの訪問者がコンテンツを閲覧できるように、[ページを公開（またはアクティベート）](/help/sites-authoring/publishing-pages.md)します。
 
-## その他のアクション  {#further-actions}
+## その他のアクション {#further-actions}
 
 基本的な手順を実行した後も、他の多くのアクションをオーサリング時に使用できます。
 
@@ -76,7 +76,7 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 
 [ページの移動と名前変更](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)は、基本的に同じアクションにより実行されます。
 
-### ページの非公開  {#unpublishing-a-page}
+### ページの非公開 {#unpublishing-a-page}
 
 以前公開（またはアクティベート）したコンテンツを公開 Web サイトで使用できないようにするには、[ページを非公開（またはアクティベート解除）](/help/sites-authoring/publishing-pages.md)にします。
 
@@ -84,14 +84,14 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 
 ページが不要になった場合は、[ページを削除](/help/sites-authoring/managing-pages.md#deleting-a-page)できます。
 
-### ページプロパティの設定  {#setting-the-page-properties}
+### ページプロパティの設定 {#setting-the-page-properties}
 
 すべての[ページにプロパティがあり](/help/sites-authoring/editing-page-properties.md)、これらのプロパティを定義することで、ページ操作の様々な側面を指定できます。ページプロパティはいずれの UI でも更新できます。
 
-### ページのバージョンの作成  {#creating-a-version-of-a-page}
+### ページのバージョンの作成 {#creating-a-version-of-a-page}
 
 ページの[バージョンを作成](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version)して、必要に応じて[そのバージョンに戻す](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version)ことができます。
 
-## 詳細情報  {#more-information}
+## 詳細情報 {#more-information}
 
 オーサリングに関する詳細情報については、[ページのオーサリング](/help/sites-authoring/author-environment-tools.md)および[オーサー環境の操作](/help/sites-authoring/home.md)で説明しています。

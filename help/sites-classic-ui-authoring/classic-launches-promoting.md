@@ -1,8 +1,8 @@
 ---
 title: ローンチの昇格
-seo-title: ローンチの昇格
+seo-title: Promoting Launches
 description: コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。ローンチページが昇格されると、ソースページの対応するページが、昇格済みのページのコンテンツに置き換わります。
-seo-description: コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。ローンチページが昇格されると、ソースページの対応するページが、昇格済みのページのコンテンツに置き換わります。
+seo-description: You need to promote launch pages to move the content back into the source (production) before publishing. When a launch page is promoted, the corresponding page of the source pages is replaced with the content of the promoted page.
 uuid: 91f1c6ac-8c4e-4459-aaab-feaa32befc45
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,8 +13,8 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 793c44fa-9dd1-45f2-b1ab-219b436fcb54
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 96%
+source-wordcount: '314'
+ht-degree: 95%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 96%
 1. サイドキックの「**ページ**」タブで、「**ローンチを昇格**」をクリックします。
 1. 昇格するページを指定します。
 
-   * （デフォルト）現在のページのみを昇格させるには、「**ページの変更を実稼動版に昇格**」を選択します。
+   * （デフォルト）現在のページのみを昇格させるには、 **ページの変更を実稼動版に昇格**.
    * 現在のページの子ページも昇格させるには、「**サブページを含める**」を選択します。
    * ローンチ内のすべてのページを昇格させるには、「**完全なローンチを実稼動版に昇格**」を選択します。
 

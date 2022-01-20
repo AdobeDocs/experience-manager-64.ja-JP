@@ -1,8 +1,8 @@
 ---
 title: Dynamic Media アセットのプレビュー
-seo-title: Dynamic Media アセットのプレビュー
+seo-title: Previewing Dynamic Media assets
 description: Dynamic Media のアセットをプレビューする方法について説明します
-seo-description: Dynamic Media のアセットをプレビューする方法について説明します
+seo-description: Learn how to preview assets in Dynamic Media
 uuid: f0ff2fc4-a263-4dbe-ba46-b07077b49ae0
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,18 +10,18 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 77296bff-8429-4240-af93-26076ae431ec
 exl-id: ec05569a-6449-4430-9b9f-7ab051f44970
-feature: アセット管理、レンディション
+feature: Asset Management,Renditions
 role: User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1016'
 ht-degree: 90%
 
 ---
 
 # Dynamic Media アセットのプレビュー {#previewing-assets}
 
-**[!UICONTROL プレビュー]**&#x200B;を使用して、顧客が独自のWebブラウザーでDynamic Mediaデジタルアセットを表示した場合の外観を確認できます。 アセットに割り当てられているデフォルトの埋め込みクロスデバイスビューアが、**[!UICONTROL プレビュー]**&#x200B;に使用されます。
+以下を使用できます。 **[!UICONTROL プレビュー]** を使用して、Dynamic Mediaデジタルアセットがユーザー自身の Web ブラウザーで表示されたときにどのように表示されるかを確認できます。 アセットに割り当てられるデフォルトの埋め込みクロスデバイスビューアが **[!UICONTROL プレビュー]**.
 
 ビューアは、コンピューター画面やモバイルデバイスでのリッチメディアアセットの表示方法を決定する、様々な設定（「プリセット」と呼ばれます）のコレクションです。この設定には、ビューアのディスプレイサイズ、ズーム時の動作、配色、境界線、フォントなどが含まれます。
 
@@ -36,7 +36,7 @@ ht-degree: 90%
 
 **アセットをプレビューするには**:
 
-1. **Adobe Experience Manager**&#x200B;の&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;ページで、「**[!UICONTROL アセット]s**」をタップし、「**[!UICONTROL ファイル]**」をタップしてアセットにアクセスします。
+1. 送信者 **Adobe Experience Manager**、 **[!UICONTROL ナビゲーション]** ページ、タップ **[!UICONTROL アセット]s**&#x200B;を、 **[!UICONTROL ファイル]** をクリックして、アセットにアクセスします。
 1. ページの右上隅付近にある「**[!UICONTROL 表示]**」ドロップダウンリストで「**[!UICONTROL リスト表示]**」をタップします。
 1. （オプション）「**[!UICONTROL 種類]**」列を使用して、プレビューする種類でアセットを並べ替えます。
 1. 「**[!UICONTROL タイトル]**」列で、プレビューするアセットの（サムネール画像ではなく）タイトル名をクリックします。

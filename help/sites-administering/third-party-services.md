@@ -1,8 +1,8 @@
 ---
 title: サードパーティのサービスとの統合
-seo-title: サードパーティのサービスとの統合
+seo-title: Integrating with Third-Party Services
 description: AEM とサードパーティのサービスを統合する方法について説明します。
-seo-description: AEM とサードパーティのサービスを統合する方法について説明します。
+seo-description: Learn how to integrate AEM with third party services.
 uuid: bfafd00b-46bc-4af2-b3e8-874afb1ed697
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: e0d6478a-4420-46a6-96fe-082a30ee82f0
 exl-id: 9a3857fd-4f62-4293-950b-75626e4dcf50
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '326'
 ht-degree: 93%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 93%
 * Twitter - ソーシャルネットワーキング
 * YouTube - ビデオ共有
 
-さらに、AEMを[Marketing Cloud](/help/sites-administering/marketing-cloud.md)および[Creative Cloud](/help/assets/aem-cc-integration-best-practices.md)と統合できます。
+また、AEMを [Marketing Cloud](/help/sites-administering/marketing-cloud.md) そして [Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
 
 ## Salesforce との統合 {#integrating-with-salesforce}
 
@@ -41,7 +41,7 @@ Salesforce.com は企業向けのクラウドコンピューティングを提�
 
 AEM サイトと Salesforce の統合については、[Salesforce との統合](/help/sites-administering/salesforce.md)を参照してください。
 
-## Silverpop Engage との統合  {#integrating-with-silverpop-engage}
+## Silverpop Engage との統合 {#integrating-with-silverpop-engage}
 
 >[!NOTE]
 >
@@ -51,17 +51,17 @@ Silverpop Engage は、マーケティングの自動化、電子メール、モ
 
 AEM サイトと ExactTarget の統合については、[Silverpop Engage との統合](/help/sites-administering/silverpop.md)を参照してください。
 
-## ExactTarget との統合  {#integrating-with-exacttarget}
+## ExactTarget との統合 {#integrating-with-exacttarget}
 
 ExactTarget の電子メールマーケティングソリューションを使用すると、あらゆる規模の組織において、ターゲットを厳選し、完全に統合された、きわめて重要な電子メールキャンペーンを企画して実施できます。
 
 AEM サイトと ExactTarget の統合については、[ExactTarget との統合](/help/sites-administering/exacttarget.md)を参照してください。
 
-## Facebook および Twitter との統合  {#integrating-with-facebook-and-twitter}
+## Facebook および Twitter との統合 {#integrating-with-facebook-and-twitter}
 
 Facebook および Twitter は広く普及しているソーシャルネットワーキングサービスです。AEM と Facebook および Twitter の統合によって、組織が所有しているデジタル資産に Facebook または Twitter のログインオプションを付けて、プロファイル情報に基づいてユーザーエクスペリエンスをパーソナライズすることができます。マーケティング担当者は、プロファイル情報を他のソースのデータ（顧客関係管理システムや Web サイトのプロファイルなど）と組み合わせて、統一されたユーザービューを作成することもできます。
 
-詳しくは、[ソーシャルログイン](/help/communities/social-login.md)を参照してください。
+詳しくは、 [ソーシャルログイン](/help/communities/social-login.md) を参照してください。
 
 ## その他のプロバイダーとの統合 {#integrating-with-other-providers}
 

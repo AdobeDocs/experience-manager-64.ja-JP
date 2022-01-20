@@ -1,8 +1,8 @@
 ---
 title: 'AEM Developer Tools for Eclipse '
-seo-title: 'AEM Developer Tools for Eclipse '
+seo-title: AEM Developer Tools for Eclipse
 description: 'AEM Developer Tools for Eclipse '
-seo-description: 'null'
+seo-description: null
 uuid: 566e49f2-6f28-4aa7-bfe0-b5f9675310bf
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: a2ae76a8-50b0-4e43-b791-ad3be25b8582
 exl-id: 9cdd09f6-bfc2-48c3-af40-a54f98833a38
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '808'
 ht-degree: 92%
 
 ---
@@ -37,9 +37,9 @@ AEM Developer Tools for Eclipse は、Apache License 2 に従ってリリース�
 
 AEM Developer Tools を使用する前に、次の作業が必要です。
 
-* [Eclipse IDE for Java EE Developers](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar) をダウンロードしてインストールします。AEM Developer Toolsは現在、Eclipse Kepler以降をサポートしています。
+* [Eclipse IDE for Java EE Developers](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar) をダウンロードしてインストールします。AEM Developer Tools は現在、Eclipse Kepler以降をサポートしています。
 
-* AEMバージョン5.6.1以降で使用可能
+* AEMバージョン 5.6.1 以降で使用できます。
 * [Eclipse に関する FAQ](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F) の説明に従って、`eclipse.ini` 設定ファイルを編集し、ヒープメモリが 1 GB 以上になるように Eclipse を設定します。
 
 >[!NOTE]
@@ -72,7 +72,7 @@ AEM Developer Tools を使用する前に、次の作業が必要です。
 
 >[!NOTE]
 >
->[AEM](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407)からダウンロードしたバンドルをEclipseで使用する方法を参照してください。
+>詳しくは、 [AEMからダウンロードした際に Eclipse でバンドルを操作する方法](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407).
 
 ## AEM パースペクティブ {#the-aem-perspective}
 
@@ -82,7 +82,7 @@ AEM Development Tools for Eclipse には、AEM プロジェクトおよびイン
 
 ## サンプルのマルチモジュールプロジェクト {#sample-multi-module-project}
 
-AEM Developer Tools for Eclipse には、サンプルのマルチモジュールプロジェクトが同梱されています。このプロジェクトは、Eclipse でのプロジェクト設定を手早くおこなうために役立つだけでなく、いくつかの AEM 機能に対するベストプラクティスガイドの役割も果たします。プロジェクトのアーキタイプについて詳しくは、[こちら](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)を参照してください。
+AEM Developer Tools for Eclipse には、サンプルのマルチモジュールプロジェクトが同梱されています。このプロジェクトは、Eclipse でのプロジェクト設定を手早く行うために役立つだけでなく、いくつかの AEM 機能に対するベストプラクティスガイドの役割も果たします。プロジェクトのアーキタイプについて詳しくは、[こちら](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)を参照してください。
 
 次の手順を実行して、サンプルプロジェクトを作成します。
 

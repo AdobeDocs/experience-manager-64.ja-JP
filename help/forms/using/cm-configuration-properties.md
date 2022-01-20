@@ -1,8 +1,8 @@
 ---
 title: Correspondence Management設定プロパティ
-seo-title: Correspondence Management設定プロパティ
+seo-title: Correspondence Management Configuration Properties
 description: このトピックでは、ソリューションごとの設定でAsset Composerを変更する方法について説明します。このトピックでは、編集可能なプロパティの説明、デフォルト値および指定できる値などの詳細について説明します。
-seo-description: このトピックでは、ソリューションごとの設定でAsset Composerを変更する方法について説明します。このトピックでは、編集可能なプロパティの説明、デフォルト値および指定できる値などの詳細について説明します。
+seo-description: This topic explains how you can modify Asset Composer with solution-specific configurations. This topic details the properties you can edit, with their description, default values, and acceptable values.
 uuid: 6b401d51-9332-459b-b751-42a9b5a1462d
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -12,14 +12,14 @@ feature: Correspondence Management
 exl-id: 102e4f39-192e-4cc1-a249-4b6bc641919d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '879'
-ht-degree: 96%
+source-wordcount: '845'
+ht-degree: 95%
 
 ---
 
 # Correspondence Management設定プロパティ {#correspondence-management-configuration-properties}
 
-これらのプロパティを設定するには、ブラウザーで次のURLを開きます。`https://<server>:<port>/<contextPath>/system/console/configMgr`を選択し、「**Correspondence Management設定**」を選択します。
+これらのプロパティを設定するには、ブラウザーで次の URL を開きます。 `https://<server>:<port>/<contextPath>/system/console/configMgr` を選択し、 **Correspondence Management 設定**.
 
 Correspondence Management には以下の設定プロパティがあります。
 
@@ -155,13 +155,13 @@ Correspondence Management には以下の設定プロパティがあります。
    <td><p>日付の表示形式</p> </td> 
    <td><p>データのロケール固有表示を指定します</p> </td> 
    <td><p>locale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=truelocale=de_DE; dateFormat=dd-MM-yyyy; numberDecimalSeparator=,; numberGroupSeparator=.; numberUseGroupSeparator=truelocale=fr_FR; dateFormat=dd-MM-yyyy; numberDecimalSeparator=,; numberGroupSeparator= ; numberUseGroupSeparator=truelocale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=true</p> </td> 
-   <td><p>—</p> </td> 
+   <td><p>--</p> </td> 
   </tr> 
   <tr> 
    <td><p>日付の編集形式</p> </td> 
    <td><p>データの編集形式これは、データを文字列として書き込む、または文字列から解析する場合に使用されます</p> </td> 
    <td><p>locale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.;numberGroupSeparator=,;numberUseGroupSeparator=true</p> </td> 
-   <td>—<p> </p> </td> 
+   <td>--<p> </p> </td> 
   </tr> 
   <tr> 
    <td><p>「発行」でレターインスタンスを管理</p> </td> 
@@ -243,7 +243,7 @@ Correspondence Management には以下の設定プロパティがあります。
   </tr> 
   <tr> 
    <td><p>CM ユーザールート</p> </td> 
-   <td><p>すべてのCorrespondence Managementユーザーアセットを含むフォルダーのURL</p> </td> 
+   <td><p>すべての Correspondence Management ユーザーアセットを含むフォルダーの URL</p> </td> 
    <td><p>—</p> </td> 
    <td><p>有効なフォルダーの位置</p> </td> 
   </tr> 
@@ -255,7 +255,7 @@ Correspondence Management には以下の設定プロパティがあります。
   </tr> 
   <tr> 
    <td><p>レターキャッシュの有効化</p> </td> 
-   <td><p>レターキャッシュを有効化または無効化します。</p> <p>この値を変更すると、  <code>in-memory </code> キャッシュ。</p> </td> 
+   <td><p>レターキャッシュを有効化または無効化します。</p> <p>この値を変更すると、 <code>in-memory </code> キャッシュ。</p> </td> 
    <td><p>true</p> </td> 
    <td><p>true ／ false</p> </td> 
   </tr> 
@@ -290,8 +290,8 @@ Correspondence Management には以下の設定プロパティがあります。
    <td> </td> 
   </tr> 
   <tr> 
-   <td><p>Debugディレクトリ </p> <p> </p> </td> 
-   <td>デバッグのファイルシステムフォルダーの場所。ディレクトリが  <code>exists</code>に設定されていない場合、デバッグダンプは生成されません。</td> 
+   <td><p>Debug ディレクトリ </p> <p> </p> </td> 
+   <td>デバッグのファイルシステムフォルダーの場所。ディレクトリが <code>exists</code>, no debug dumps will be generated.</td> 
    <td>acm.debugディレクトリ</td> 
    <td> </td> 
   </tr> 

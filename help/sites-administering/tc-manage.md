@@ -1,19 +1,19 @@
 ---
 title: 翻訳プロジェクトの管理
-seo-title: 翻訳プロジェクトの管理
+seo-title: Managing Translation Projects
 description: AEM で翻訳プロジェクトを管理する方法について説明します。
-seo-description: AEM で翻訳プロジェクトを管理する方法について説明します。
+seo-description: Learn how to manage translation projects in AEM.
 uuid: f6f79b5b-dc08-4dde-b464-719345d233a6
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: c8672774-6911-497d-837b-1e5953c4226a
-feature: 言語コピー
+feature: Language Copy
 exl-id: 191b9aff-3acd-4272-8683-d3e6899fe78c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3418'
 ht-degree: 92%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 92%
 
 翻訳プロジェクトを使用すると、AEM コンテンツの翻訳を管理できます。翻訳プロジェクトは AEM [プロジェクト](/help/sites-authoring/projects.md)の一種であり、他の言語に翻訳するリソースがその中に格納されます。これらのリソースは、言語マスターから作成される[言語コピー](/help/sites-administering/tc-prep.md)のページとアセットです。
 
-翻訳プロジェクトにリソースが追加されると、そのリソース用の翻訳ジョブが作成されます。リソースで実行される人間による翻訳と機械翻訳のワークフローの管理に使用するコマンドとステータス情報がジョブによって提供されます。
+翻訳プロジェクトにリソースが追加されると、そのリソース用の翻訳ジョブが作成されます。ジョブには、リソースで実行される人間による翻訳と機械翻訳のワークフローの管理に使用するコマンドとステータス情報が含まれています。
 
 >[!NOTE]
 >
@@ -54,8 +54,8 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
 
 例えば、マスター言語 /content/geometrixx/en のフランス語の翻訳用に言語ルート /content/geometrixx/fr が作成されるとします。フランス語の言語コピーにその他のページはありません。
 
-* フランス語の言語コピーをターゲットとした、/content/geometrixx/en/products ページおよびすべての子ページ用の翻訳プロジェクトが作成されます。言語コピーには/content/geometrixx/fr/productsページが含まれないので、AEMは即座に/content/geometrixx/en/productsページとすべての子ページをフランス語の言語コピーにコピーします。 これらのコピーは翻訳プロジェクトにも追加されます。
-* フランス語の言語コピーをターゲットに、/content/geometrixx/enページとすべての子ページ用に翻訳プロジェクトが作成されます。言語コピーには/content/geometrixx/enページ（言語ルート）に対応するページが含まれるので、AEMは/content/geometrixx/enページとすべての子ページをコピーしてローンチに追加します。コピーも翻訳プロジェクトに含まれます。
+* フランス語の言語コピーをターゲットとした、/content/geometrixx/en/products ページおよびすべての子ページ用の翻訳プロジェクトが作成されます。言語コピーには/content/geometrixx/fr/products ページが含まれないので、AEMは直ちに/content/geometrixx/en/products ページとすべての子ページをフランス語の言語コピーにコピーします。 これらのコピーは翻訳プロジェクトにも追加されます。
+* フランス語の言語コピーをターゲットに、/content/geometrixx/en ページとすべての子ページ用に翻訳プロジェクトが作成されます。言語コピーには/content/geometrixx/en ページ（言語ルート）に対応するページが含まれているので、AEMは/content/geometrixx/en ページとすべての子ページをコピーしてローンチに追加します。コピーは翻訳プロジェクトにも含まれます。
 
 ## 参照パネルを使用した翻訳プロジェクトの作成 {#creating-translation-projects-using-the-references-panel}
 
@@ -178,7 +178,7 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
 
 翻訳ジョブにページやアセットが追加されます。
 
-## 翻訳ジョブへの I18N 辞書の追加  {#adding-i-n-dictionaries-to-a-translation-job}
+## 翻訳ジョブへの I18N 辞書の追加 {#adding-i-n-dictionaries-to-a-translation-job}
 
 翻訳プロジェクトの翻訳ジョブにページ、アセット、タグおよび I18N 辞書を追加できます。I18N 辞書を追加するには：
 
@@ -200,7 +200,7 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
 
 >[!NOTE]
 >
->i18n辞書の詳細については、[Using Translator to Manage Dictionarys](/help/sites-developing/i18n-translator.md)を参照してください。
+>i18n 辞書について詳しくは、 [Translator を使用した辞書の管理](/help/sites-developing/i18n-translator.md).
 
 ## 翻訳ジョブへのタグの追加 {#adding-tags-to-a-translation-job}
 
@@ -262,7 +262,7 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
 
 ジョブ内の各ファイルのステータスを確認するには、タイルの下部にある省略記号をクリックまたはタップします。
 
-## 翻訳ジョブの期限の設定  {#setting-the-due-date-of-translation-jobs}
+## 翻訳ジョブの期限の設定 {#setting-the-due-date-of-translation-jobs}
 
 翻訳ベンダーが翻訳済みのファイルを戻す必要のある期限を指定します。プロジェクトの期限または特定のジョブの期限を設定できます。
 
@@ -303,7 +303,7 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
 >
 >スコーピングはオプションです。スコーピングをおこなわずに翻訳ジョブを開始できます。
 
-翻訳ジョブをスコーピングする場合、ジョブのステータスは`Scope Requested`になります。翻訳ベンダーがスコープを返すと、ステータスは`Scope Completed`に変更されます。 スコーピングが完了したら、「範囲を表示」コマンドを使用してスコーピング結果を確認できます。
+翻訳ジョブをスコーピングする場合、ジョブのステータスは「 `Scope Requested`.翻訳ベンダーがスコープを返すと、ステータスが「 `Scope Completed`. スコーピングが完了したら、「範囲を表示」コマンドを使用してスコーピング結果を確認できます。
 
 スコーピングを正しく使用できるのは、使用する翻訳ベンダーがこの機能をサポートしている場合のみです。
 
@@ -314,7 +314,7 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
 
 1. ジョブのステータスが「スコーピング完了」に変わったら、「翻訳ジョブ」タイルでコマンドメニューをクリックまたはタップして、「範囲を表示」をクリックまたはタップします。
 
-## 翻訳ジョブの開始  {#starting-a-translation-job}
+## 翻訳ジョブの開始 {#starting-a-translation-job}
 
 翻訳ジョブを開始して、ソースページをターゲット言語に翻訳します。翻訳は「翻訳の概要」タイルのプロパティ値に従って実行されます。
 
@@ -331,13 +331,13 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
 
 ## 翻訳ジョブのキャンセル {#canceling-a-translation-job}
 
-翻訳ジョブをキャンセルして、翻訳プロセスを中断し、翻訳ベンダーが以降の翻訳を実行しないようにします。ジョブのステータスが`Committed For Translation`または`Translation In Progress`の場合は、ジョブをキャンセルできます。
+翻訳ジョブをキャンセルして、翻訳プロセスを中断し、翻訳ベンダーが以降の翻訳を実行しないようにします。ジョブが `Committed For Translation` または `Translation In Progress` ステータス。
 
 1. プロジェクトコンソールで、翻訳プロジェクトを開きます。
 1. 「翻訳ジョブ」タイルで、コマンドメニューをクリックまたはタップして、「キャンセル」をクリックまたはタップします。
 1. 翻訳のキャンセルを確定するアクションダイアログで、「OK」をクリックまたはタップします。
 
-## ワークフローの承認／拒否  {#accept-reject-workflow}
+## ワークフローの承認／拒否 {#accept-reject-workflow}
 
 コンテンツが翻訳から戻り、「レビューへの準備完了」ステータスになったら、翻訳ジョブに移動してコンテンツを承認または却下できます。
 
@@ -349,7 +349,7 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
 
 コンテンツを拒否すると、コンテンツは翻訳ベンダーに戻され、翻訳ベンダーではコメントを参照できます。
 
-## Reviewing and Promoting Updated Content {#reviewing-and-promoting-updated-content}
+## 更新されたコンテンツのレビューと昇格 {#reviewing-and-promoting-updated-content}
 
 既存の言語コピーのコンテンツの翻訳が完了したら、翻訳をレビューし、必要に応じて変更を行ってから、翻訳を昇格して言語コピーに移動します。翻訳ジョブのステータスが「レビューへの準備完了」と表示されたら、翻訳済みのファイルをレビューできます。
 
@@ -375,7 +375,7 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
 1. **サイト**&#x200B;コンソールで、比較する言語コピーに移動します。
 1. **[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開きます。
 1. **コピー**&#x200B;見出しの下で、「**言語コピー**」を選択します。
-1. 特定の言語コピーを選択し、「**マスターと比較**」または「**前と比較**」（該当する場合）をクリックできます。
+1. 特定のマスターコピーを選択して、「**言語と比較**」または「**前と比較**」（該当する場合）をクリックできます。
 
    ![chlimage_1-37](assets/chlimage_1-37.jpeg)
 

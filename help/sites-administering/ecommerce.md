@@ -1,24 +1,24 @@
 ---
 title: e コマース
-seo-title: e コマース
+seo-title: eCommerce
 description: 'AEM e コマースフレームワークは、特定のブランド用に構築され、顧客ごとにパーソナライズされたショッピングエクスペリエンスを、Web、モバイル、ソーシャルという各種タッチポイントにまたがって提供するために役立ちます。 '
-seo-description: 'AEM e コマースフレームワークは、特定のブランド用に構築され、顧客ごとにパーソナライズされたショッピングエクスペリエンスを、Web、モバイル、ソーシャルという各種タッチポイントにまたがって提供するために役立ちます。 '
+seo-description: AEM eCommerce helps marketers deliver branded, personalized shopping experiences across web, mobile, and social touchpoints.
 uuid: 14af7a3a-7211-4a56-aeef-1603128d5d8a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: e-commerce
 content-type: reference
 discoiquuid: 68799110-8183-40fe-be4f-2a7c7a7b3018
-feature: コマース統合フレームワーク
+feature: Commerce Integration Framework
 exl-id: 3c046e16-5f54-4a16-aa5b-256b679808fa
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 80%
+source-wordcount: '760'
+ht-degree: 100%
 
 ---
 
-# e コマース{#ecommerce}
+# e コマース {#ecommerce}
 
 * [概念 ](/help/sites-administering/concepts.md)
 * [管理（汎用）](/help/sites-administering/generic.md)
@@ -31,13 +31,13 @@ ht-degree: 80%
 |  | CIF オンプレミス | CIF クラウド |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | サポートされている AEM バージョン | AEM オンプレミスまたは AMS 6.x | AEM AMS 6.4 および 6.5 |
-| バックエンド | - AEM、Java <br> — モノリシック統合、ビルド前マッピング（テンプレート）<br> - JCRリポジトリ | -Magento<br>- JavaおよびJavaScript <br>- JCRリポジトリに保存されたコマースデータはありません |
+| バックエンド | - AEM、Java <br> - モノリシック統合、ビルド前のマッピング（テンプレート）<br> - JCR リポジトリ | - Magento <br>- Java と JavaScript <br>- JCR リポジトリにはコマースデータは保存されません |
 | フロントエンド | AEM サーバー側によってページをレンダリング | 混在型ページアプリケーション（ハイブリッドレンダリング） |
-| 製品カタログ | - AEM <br>の製品インポーター、エディター、キャッシュ — AEMまたはプロキシページを含む通常のカタログ |  — 製品のインポートなし<br> — 汎用テンプレート<br> — コネクタを介したオンデマンドデータ |
-| スケーラビリティ |  — 最大で数百万個の製品をサポートできます（使用例によって異なります）。<br> - Dispatcherでのキャッシュ |  — ボリューム制限なし<br> - DispatcherまたはCDNでのキャッシュ |
+| 製品カタログ | - AEMでの製品インポーター、エディター、キャッシュ <br>- AEM またはプロキシページを含む通常のカタログ | - 製品のインポートなし <br>- 汎用テンプレート <br> - コネクタを介したオンデマンドデータ |
+| スケーラビリティ | - 数億個までの製品をサポート可能（ユースケースによって異なる） <br> - Dispatcher でのキャッシュ | - ボリューム制限なし <br>- Dispatcher または CDN でのキャッシュ |
 | 標準化されたデータモデル | 不可 | あり。Magento GraphQL スキーマ |
-| 入手方法 | はい：<br> - SAPCommerce Cloud(AEM 6.4とHybris 5をサポートするように更新（デフォルト）、Hybris 4 <br>- SalesforceCommerce Cloud(AEM 6.4をサポートするオープンソースのコネクタ)との互換性を維持) | あり。GitHub 経由のオープンソース。<br>Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり） |
-| 用途 | 限定的な使用例：小さな静的カタログの読み込みが必要な場合 | ほとんどの使用例で好ましいソリューション |
+| 入手方法 | はい：<br> - SAP Commerce Cloud（AEM 6.4 と Hybris 5（デフォルト）をサポートし、Hybris 4 との互換性を維持するように更新された拡張機能）<br>- Salesforce Commerce Cloud（AEM 6.4 をサポートする オープンソースコネクタ） | あり。GitHub 経由のオープンソース。<br>Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり） |
+| 用途 | 限定的なユースケース：小規模で静的なカタログのインポートが必要なシナリオの場合 | ほとんどの使用例で好ましいソリューション |
 
 e コマースフレームワークは、商品情報管理（PIM）と連動して、オンラインストアでの商品の販売に焦点を合わせた Web サイトの以下のアクティビティを扱います。
 
@@ -63,15 +63,15 @@ AEM e コマースフレームワークは、特定のブランド用に構築�
 
 >[!NOTE]
 >
->この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。詳しくは、[eコマースのデプロイ](/help/sites-deploying/ecommerce.md)を参照してください。
+>この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。詳しくは、[e コマースのデプロイ](/help/sites-deploying/ecommerce.md)を参照してください。
 >
->eコマース機能の拡張について詳しくは、[eコマースの開発](/help/sites-developing/ecommerce.md)を参照してください。
+>e コマース機能の拡張について詳しくは、[e コマースの開発](/help/sites-developing/ecommerce.md)を参照してください。
 
 ## 主な機能 {#main-features}
 
 AEM e コマースフレームワークは、以下の機能を提供します。
 
-* プロジェクトで何を実現できるかを示すための&#x200B;**標準のAEMコンポーネント**&#x200B;が多数あります。
+* プロジェクトで実現できる機能を示す、以下のような様々な&#x200B;**標準 AEM コンポーネント**&#x200B;があります。
 
    * 商品の表示
    * 買い物かご
@@ -95,7 +95,7 @@ AEM e コマースフレームワークは、以下の機能を提供します�
 
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
-* AEM機能を使用して、複数のチャネル&#x200B;**（完全なブラウザーウィンドウやモバイルデバイスなど）にコンテンツを**&#x200B;表示します。 これにより、訪問者が必要とする形式でコンテンツが提供されます。
+* フルブラウザーウィンドウやモバイルデバイスなど、**複数のチャネルにコンテンツを表示する** AEM 機能を使用します。これにより、訪問者が必要とする形式でコンテンツが提供されます。
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 

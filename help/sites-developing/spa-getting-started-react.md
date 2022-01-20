@@ -1,8 +1,8 @@
 ---
-title: AEMでのSPAの概要 — React
-seo-title: AEMでのSPAの概要 — React
+title: AEMでSPAを使い始める — React
+seo-title: Getting Started with SPAs in AEM - React
 description: この記事では、サンプルの SPA アプリケーションを紹介し、その設定方法を説明するほか、React を使用して独自の SPA の運用を速やかに開始する方法についても説明します。
-seo-description: この記事では、サンプルの SPA アプリケーションを紹介し、その設定方法を説明するほか、React を使用して独自の SPA の運用を速やかに開始する方法についても説明します。
+seo-description: This article presents a sample SPA application, explains how it is put together, and allows you to get up-and-running with your own SPA quickly using the React framework.
 uuid: e863fdc7-6c8e-49c5-9513-d3ed88196f07
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,12 +12,12 @@ discoiquuid: 0843ceff-2607-4733-8383-681820e513d1
 exl-id: 43376dfd-9cef-46f5-af14-21e379fbb79a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1180'
 ht-degree: 86%
 
 ---
 
-# AEMでのSPAの概要 — React {#getting-started-with-spas-in-aem-react}
+# AEMでSPAを使い始める — React {#getting-started-with-spas-in-aem-react}
 
 単一ページアプリケーション（SPA）により、Web サイトのユーザーに魅力的なエクスペリエンスを提供することができます。開発者は SPA フレームワークを使用してサイトを構築したいと考え、作成者はそうして構築されたサイトのコンテンツを AEM 内でシームレスに編集したいと考えています。
 
@@ -28,9 +28,9 @@ SPA オーサリング機能には、AEM 内で SPA をサポートするため�
 >この記事は React フレームワークに基づいています。対応する Angular フレームワークのドキュメントについては、「[Angular を使用した AEM での SPA の概要](/help/sites-developing/spa-getting-started-angular.md)」を参照してください。
 
 >[!NOTE]
->シングルページアプリケーション(SPA)エディター機能には、AEM 6.4サービスパック2以降が必要です。
+>シングルページアプリケーション (SPA) エディター機能には、AEM 6.4 Service Pack 2 以降が必要です。
 >
->SPA Editorは、SPAフレームワークベースのクライアントサイドレンダリング(ReactやAngularなど)が必要なプロジェクトで推奨されるソリューションです。
+>SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
 
 ## はじめに {#introduction}
 
@@ -83,7 +83,7 @@ react
 
 >[!CAUTION]
 >
->必要な`aem-clientlib-generator`の最小バージョンは1.4.1です。
+>の最小バージョン `aem-clientlib-generator` 必須は 1.4.1 です。
 
 `aem-clientlib-generator` は、`clientlib.config.js` ファイルで次のように設定されています。
 
@@ -282,10 +282,10 @@ export default MapTo('my-react-app/react/components/structure/page')(PageClass, 
 
 ## 次の手順 {#next-steps}
 
-独自のSPAを作成する手順ガイドについては、「 [AEM SPA Editor使用の手引き — WKNDイベントチュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html) 」を参照してください。
+独自のSPAを作成する手順については、 [AEM SPA Editor 使用の手引き — WKND イベントチュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html).
 
-SPA for AEMを開発するための編成方法について詳しくは、[AEM向けSPAの開発](/help/sites-developing/spa-architecture.md)を参照してください。
+SPA for AEMを開発するための組織化方法について詳しくは、この記事を参照してください [SPA for AEMの開発](/help/sites-developing/spa-architecture.md).
 
-動的モデルとコンポーネントのマッピングおよびAEMのSPA内での動作方法について詳しくは、SPA](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)の動的モデルとコンポーネントのマッピングの記事を参照してください。[
+動的モデルとコンポーネントのマッピング、およびAEMのSPA内での動作について詳しくは、この記事を参照してください [SPAの動的モデルとコンポーネントのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
 
-ReactやAngular以外のフレームワーク用にAEMにSPAを実装する場合や、AEM用SPA SDKの仕組みを深く掘り下げたい場合は、[SPA Blueprint](/help/sites-developing/spa-blueprint.md)の記事を参照してください。
+AEMに React やAngular以外のフレームワーク用にSPAを実装する場合や、AEM用SPA SDK の仕組みを詳しく知りたい場合は、 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 記事。

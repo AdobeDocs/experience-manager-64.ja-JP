@@ -1,8 +1,8 @@
 ---
 title: デバイスグループフィルターの作成
-seo-title: デバイスグループフィルターの作成
+seo-title: Creating Device Group Filters
 description: デバイスグループフィルターを作成して、一連のデバイスの機能の要件を定義します
-seo-description: デバイスグループフィルターを作成して、一連のデバイスの機能の要件を定義します
+seo-description: Create a device group filter to define a set of device capability requirements
 uuid: 8db98b98-f26d-4924-930a-a682cd7df866
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,8 +13,8 @@ legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 exl-id: abbbf606-aff2-44b4-b16e-ceb54997115f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 87%
+source-wordcount: '802'
+ht-degree: 86%
 
 ---
 
@@ -30,11 +30,11 @@ ht-degree: 87%
 
 作成したフィルターは[グループ設定](/help/sites-developing/mobile.md#creating-a-device-group)で使用できます。
 
-## フィルターの Java クラス  {#the-filter-java-class}
+## フィルターの Java クラス {#the-filter-java-class}
 
 デバイスグループフィルターは、[com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスを実装する OSGi コンポーネントです。この実装クラスをデプロイすると、デバイスグループ設定に使用可能なフィルターサービスが提供されます。
 
-この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。したがって、この例のJavaクラスでは`@Component`注釈と`@Service`注釈を使用しています。 このクラスの構造は次のとおりです。
+この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。したがって、Java クラスの例では `@Component`および `@Service` 注釈。 このクラスの構造は次のとおりです。
 
 ```java
 package com.adobe.example.myapp;
@@ -72,7 +72,7 @@ public class myDeviceGroupFilter implements DeviceGroupFilter {
 * getTitle：フィルターの名前を返します。この名前は、デバイスグループ用のフィルターを選択した場合に表示されます。
 * matches：デバイスに必要な機能が搭載されているかどうかを判断します。
 
-### フィルターの名前と説明の指定  {#providing-the-filter-name-and-description}
+### フィルターの名前と説明の指定 {#providing-the-filter-name-and-description}
 
 `getTitle` メソッドと `getDescription` メソッドは、それぞれフィルターの名前と説明を返します。次のコードは、最も単純な実装を示しています。
 
@@ -88,7 +88,7 @@ public String getTitle() {
 
 1 言語のオーサリング環境の場合、名前と説明のテキストをハードコードするだけで十分です。複数言語を使用する場合や、ソースコードを再コンパイルせずに文字列の変更を有効にする場合は、文字列をエクスターナライズすることを検討してください。
 
-### フィルター条件に対する評価  {#evaluating-against-filter-criteria}
+### フィルター条件に対する評価 {#evaluating-against-filter-criteria}
 
 デバイスの機能がすべてのフィルター条件を満たす場合、`matches` 関数は `true` を返します。デバイスがグループに属しているかどうかを判断するには、メソッドの引数に指定された情報を評価します。次の値が引数として指定されます。
 
@@ -105,7 +105,7 @@ boolean cssSupport = true;
 cssSupport = NumberUtils.toInt(capabilities.get(DeviceSpecsConstants.DSPEC_XHTML_SUPPORT_LEVEL)) > 1;
 ```
 
-`org.apache.commons.lang.math`パッケージは`NumberUtils`クラスを提供します。
+この `org.apache.commons.lang.math` パッケージは `NumberUtils` クラス。
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ cssSupport = NumberUtils.toInt(capabilities.get(DeviceSpecsConstants.DSPEC_XHTML
 
 以下に示すサンプルの DeviceGroupFilter 実装では、デバイスの物理サイズが最小要件を満たしているかどうかを判断します。このフィルターは、タッチデバイスグループに精度を追加します。アプリケーション UI のボタンのサイズは、画面の物理サイズに関係なく同じにしてください。他の項目（テキストなど）のサイズは変更できます。フィルターを使用すると、UI 要素のサイズを制御する特定の CSS を動的に選択できます。
 
-このフィルターは、 `physical_screen_height`および`physical_screen_width` WURFL™のプロパティ名にサイズ条件を適用します。
+このフィルターを適用すると、 `physical_screen_height` および `physical_screen_width` WURFL™プロパティ名。
 
 ```java
 package com.adobe.example.myapp;
@@ -184,11 +184,11 @@ getTitle メソッドと getDescription メソッドが返す値 String は、�
 
 **依存関係:**
 
-* `cq-wcm-mobile-api-5.5.2.jar`:DeviceGroupおよびDeviceGroupFilterインターフェイスを提供します。
+* `cq-wcm-mobile-api-5.5.2.jar`:DeviceGroup および DeviceGroupFilter インターフェイスを提供します。
 
 * `org.apache.felix.scr.annotations.jar`：Component アノテーションと Service アノテーションを提供します。
 
-DeviceGroupおよびDeviceGroupFilterインターフェイスは、Day Communique 5 WCM Mobile APIバンドルに含まれています。Felix注釈は、Apache Felix Declarative Servicesバンドルに含まれています。このJARファイルは、パブリック・リポジトリからAdobeできます。
+DeviceGroup インターフェイスと DeviceGroupFilter インターフェイスは、 Day Communique 5 WCM Mobile API バンドルに含まれています。Felix 注釈は、Apache Felix Declarative Services バンドルに含まれています。この JAR ファイルは、パブリック・リポジトリからAdobeできます。
 
 この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。このバージョンが環境にデプロイされているバンドルのバージョンであることを確認するには、アドビの Web コンソール（[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)）を使用してください。
 

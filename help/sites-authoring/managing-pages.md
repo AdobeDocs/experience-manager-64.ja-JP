@@ -1,8 +1,8 @@
 ---
 title: ページの作成と整理
-seo-title: ページの作成と整理
+seo-title: Creating and Organizing Pages
 description: AEM を使用してページを作成および管理する方法
-seo-description: AEM を使用してページを作成および管理する方法
+seo-description: How to create and manage pages with AEM
 uuid: 9bdc3222-6a0c-48a2-be1d-79ceb3bbc828
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: a727c57c-87a9-46c2-8d9b-1348f1ed8ac4
 exl-id: 0182155a-0156-458c-b89b-35ab3e27819e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '2307'
+source-wordcount: '2295'
 ht-degree: 95%
 
 ---
@@ -42,13 +42,13 @@ ht-degree: 95%
 
 Web サイトの構造は、コンテンツページを保持する「ツリー構造」と見なすことができます。これらのコンテンツページの名前は、URL の形成に使用されます。一方でタイトルは、ページコンテンツを表示したときに表示されます。
 
-次に、We.Retailサイトの例です。ハイキングショートページ(`desert-sky-shorts`)にアクセスします。
+次に、We.Retail サイトの例で、ハイキング用のショートページ ( `desert-sky-shorts`) にアクセスします。
 
-* オーサー環境：`http://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
+* オーサー環境： `http://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
 * 発行環境: `http://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
-インスタンスの設定によっては、パブリッシュ環境での`/content`の使用はオプションの場合があります。
+インスタンスの設定に応じて、を使用します。 `/content` は、パブリッシュ環境ではオプションの場合があります。
 
 ```xml
  /content
@@ -167,7 +167,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 
 ### コンポーネント {#components}
 
-コンポーネントは、特定のタイプのコンテンツを追加できるようにAEMが提供する要素です。AEMには、包括的な機能を提供する[標準のコンポーネント](/help/sites-authoring/default-components-console.md)が用意されています。次のようなものがあります。
+コンポーネントは、特定のタイプのコンテンツを追加できるようにAEMが提供する要素です。AEMには様々な [すぐに使用できるコンポーネント](/help/sites-authoring/default-components-console.md) は包括的な機能を提供します。これには次が含まれます。
 
 * テキスト
 * 画像
@@ -261,7 +261,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 >
 >ページエディターから他のページへの移動は、編集モードではリンクがアクティブにならないので、プレビューモードでのみ実行できます。
 
-### ページのコピーと貼り付け  {#copying-and-pasting-a-page}
+### ページのコピーと貼り付け {#copying-and-pasting-a-page}
 
 ページとそのすべてのサブページを新しい場所にコピーできます。
 
@@ -300,13 +300,13 @@ AEM では、複数のテンプレートが標準提供されています。使�
 >
 >ページは、ページが基にしているテンプレートが許可される場所にのみ移動できます。詳しくは、[使用可能なテンプレート](/help/sites-developing/templates.md#template-availability)を参照してください。
 
-ページの移動手順と名前の変更手順は基本的に同じで、同じウィザードで処理します。このウィザードでは、次の操作をおこなうことができます。
+ページの移動手順と名前の変更手順は基本的に同じで、同じウィザードで処理します。このウィザードでは、次の操作を行うことができます。
 
 * ページを移動せずに名前変更する.
 * ページを名前変更せずに移動する.
-* 移動と名前変更を同時におこなう.
+* 移動と名前変更を同時に行う.
 
-AEM では、名前変更または移動がおこなわれるページへの内部リンクを更新する機能が用意されています。この機能はページ単位で実行できるので、非常に柔軟性があります。
+AEM では、名前変更または移動が行われるページへの内部リンクを更新する機能が用意されています。この機能はページ単位で実行できるので、非常に柔軟性があります。
 
 1. 移動対象のページが表示されるまで移動します。
 1. 次のいずれかを使用してページを選択します。
@@ -377,7 +377,7 @@ AEM では、名前変更または移動がおこなわれるページへの内�
    * **削除する前にページをアーカイブしますか？** - 選択すると、削除対象として選択したページのバージョンが削除時に作成されます。
       * [バージョンは、後日復元できます。](/help/sites-authoring/working-with-page-versions.md)
       * 以前のバージョンがない場合は、ページを復元できません。
-      * このオプションは、AEMバージョン6.4.7.0からのみ使用できます。
+      * このオプションは、AEMバージョン 6.4.7.0 からのみ使用できます。
    * **キャンセル**：アクションを停止します。
    * **削除**：アクションの実行を確定します。
 
@@ -409,7 +409,6 @@ AEM では、名前変更または移動がおこなわれるページへの内�
 >* ライブコピー内ではフォルダーを選択できません。
 
 >
-
 
 
 1. **Sites** コンソールを開いて、必要な場所まで移動します。

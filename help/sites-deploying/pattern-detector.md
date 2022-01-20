@@ -1,19 +1,19 @@
 ---
 title: パターン検出を使用したアップグレードの複雑性の評価
-seo-title: パターン検出を使用したアップグレードの複雑性の評価
+seo-title: Assessing the Upgrade Complexity with the Pattern Detector
 description: パターン検出を使用してアップグレードの複雑性を評価する方法について説明します。
-seo-description: パターン検出を使用してアップグレードの複雑性を評価する方法について説明します。
+seo-description: Learn how to use the Pattern Detector to assess the complexity of your upgrade.
 uuid: 4fcfdb16-3183-442a-aa5b-5f9c4fb7e091
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: 8cdcfd3a-7003-4cce-97f4-da7a1a887d1b
-feature: アップグレード
+feature: Upgrading
 exl-id: 375e202c-21d4-41f1-a2d5-592ac95c8f25
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '500'
 ht-degree: 93%
 
 ---
@@ -48,14 +48,14 @@ ht-degree: 93%
 
 * **Felix Inventory コンソールを使用：** 
 
-1. 次の場所を参照して、AEM Webコンソールに移動します。https://<i></i>serveraddress:serverport/system/console/configMgr
+1. 次の場所を参照してAEM Web コンソールに移動します。https://<i></i>serveraddress:serverport/system/console/configMgr
 1. 次の図に示すように、**ステータス - パターン検出**&#x200B;を選択します。
 
    ![screenshot-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
 * **事後対応テキストベースまたは通常の JSON インターフェイスを使用**
 
-* **事後対応JSON行インターフェイスを使用**。各行に個別のJSONドキュメントを生成します。
+* **反応性の高い JSON 行インターフェイスを使用**&#x200B;を生成します。これは各行に個別の JSON ドキュメントを生成します。
 
 これらの方法の詳細を次に示します。
 
@@ -68,7 +68,7 @@ ht-degree: 93%
 1. プレーンテキストインターフェイス
 1. JSON インターフェイス
 
-## プレーンテキストインターフェイスの処理  {#handling-the-plain-text-interface}
+## プレーンテキストインターフェイスの処理 {#handling-the-plain-text-interface}
 
 出力の情報は、一連のイベントエントリとして書式設定されます。違反を公開するためのチャネルと、現在の進行状況を公開するためのチャネルがあります。
 
@@ -98,7 +98,7 @@ curl -Nsu 'admin:admin' http://localhost:4502/system/console/status-pattern-dete
 2018-02-13T14:19:35.685+01:00 [PROGRESS] Finished in period=PT13.782
 ```
 
-## JSON インターフェイスの処理  {#handling-the-json-interface}
+## JSON インターフェイスの処理 {#handling-the-json-interface}
 
 同様に、[jq ツール](https://stedolan.github.io/jq/)を使用すると、公開された JSON をすぐに処理できます。
 

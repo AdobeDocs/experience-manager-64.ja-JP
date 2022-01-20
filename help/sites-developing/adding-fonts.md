@@ -1,8 +1,8 @@
 ---
 title: グラフィックレンダリング用のフォントの追加
-seo-title: グラフィックレンダリング用のフォントの追加
+seo-title: Adding Fonts for Graphic-Rendering
 description: AEM では、コンテンツから動的に取得したテキストを取り込んだグラフィックを生成できます
-seo-description: AEM では、コンテンツから動的に取得したテキストを取り込んだグラフィックを生成できます
+seo-description: AEM allows you to generate graphics incorporating text dynamically taken from your content
 uuid: 67d9b10f-e986-4d29-bde2-10e08075fe17
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,14 +12,14 @@ discoiquuid: 6af48ef5-75e6-4b66-bc0d-ecf254b1c4ef
 exl-id: f29868e3-d05c-4898-94d1-0c77ab6b72eb
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 64%
+source-wordcount: '183'
+ht-degree: 61%
 
 ---
 
 # グラフィックレンダリング用のフォントの追加{#adding-fonts-for-graphic-rendering}
 
-AEM では、コンテンツから動的に取得したテキストを取り込んだグラフィックを生成できます.
+AEM では、コンテンツから動的に取得したテキストを取り込んだグラフィックを生成できます。
 
 その際に、独自のフォントを読み込んで使用することもできます。
 
@@ -29,7 +29,7 @@ AEM では、コンテンツから動的に取得したテキストを取り込�
 
    `/apps/<your-project>/`
 
-1. `/apps/<your-project>/`の下に、新しいノードを作成します。
+1. の下 `/apps/<your-project>/` 新しいノードを作成します。
 
    * **名前**：`fonts`
    * **型**：`sling:Folder`
@@ -40,11 +40,11 @@ AEM では、コンテンツから動的に取得したテキストを取り込�
 
    >[!NOTE]
    >
-   >リポジトリ内のフォントファイルには、サフィックス`*.ttf`または`*.TTF`が必要です。
+   >リポジトリ内のフォントファイルにはサフィックスが必要です `*.ttf` または `*.TTF`.
 
-1. [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md)の[OSGi設定](/help/sites-deploying/configuring-osgi.md)を更新します。フォントフォルダーにパスを追加します。例：`/apps/<your-project>/fonts`と入力します。
+1. を更新します。 [OSGi 設定](/help/sites-deploying/configuring-osgi.md) / [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md).フォントフォルダーにパスを追加します。例： `/apps/<your-project>/fonts`.
 
-1. CRXDE Lite に戻ります。これで、読み込んだフォントの名前を含む`.fontlist`ノードがフォルダー内に表示されます。
+1. CRXDE Lite に戻ります。これで、 `.fontlist` 読み込んだフォントの名前を含むフォルダー内のノード。
 
    これらのフォントは、今後 Java API で使用できます。
 

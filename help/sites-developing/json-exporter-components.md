@@ -1,8 +1,8 @@
 ---
 title: コンポーネントの JSON 書き出しの有効化
-seo-title: コンポーネントの JSON 書き出しの有効化
+seo-title: Enabling JSON Export for a Component
 description: モデラーフレームワークに基づいてコンテンツの JSON 書き出しを生成するように、コンポーネントを適応させることができます。
-seo-description: モデラーフレームワークに基づいてコンテンツの JSON 書き出しを生成するように、コンポーネントを適応させることができます。
+seo-description: Components can be adapted to generate JSON export of their content based on a modeler framework.
 uuid: d7cc3347-2adb-4ea5-94a4-a847a2e66d28
 contentOwner: User
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 448ad337-d4bb-4603-a27b-77da93feadbd
 exl-id: ce9a1c1f-a37b-4765-b87e-5b2359312cfe
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '540'
 ht-degree: 98%
 
 ---
@@ -30,7 +30,7 @@ JSON 書き出しは、[Sling Model](https://sling.apache.org/documentation/bund
 * [コンポーネントに Sling Model を定義する](/help/sites-developing/json-exporter-components.md#define-a-sling-model-for-the-component)
 * [Sling Model インターフェイスに注釈を付ける](#annotate-the-sling-model-interface)
 
-## コンポーネントに Sling Model を定義する     {#define-a-sling-model-for-the-component}
+## コンポーネントに Sling Model を定義する {#define-a-sling-model-for-the-component}
 
 まず、コンポーネントに Sling Model を定義する必要があります。
 
@@ -72,7 +72,7 @@ https://<server>:<port>/content/page.model.selector1.selector2.json
 
 JSON エクスポーターフレームワークで認識されるようにするには、モデルインターフェイスに `ComponentExporter` インターフェイス（またはコンテナコンポーネントの場合は `ContainerExporter`）を実装する必要があります。
 
-対応する Sling Model インターフェイス（`MyComponent`）には、[Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)を使用して注釈が付けられ、どのように書き出し（シリアル化）がおこなわれるかが定義されます。
+対応する Sling Model インターフェイス（`MyComponent`）には、[Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)を使用して注釈が付けられ、どのように書き出し（シリアル化）が行われるかが定義されます。
 
 Model インターフェイスには、シリアル化されるメソッドを定義するために適切に注釈を付ける必要があります。デフォルトでは、getter の通常の命名規則に準拠するすべてのメソッドがシリアル化され、JSON プロパティ名が getter 名からそのまま派生されます。これを回避または上書きするには、`@JsonIgnore` または `@JsonProperty` を使用して JSON プロパティの名前を変更します。
 

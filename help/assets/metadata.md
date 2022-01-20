@@ -1,14 +1,14 @@
 ---
 title: ' [!DNL Adobe Experience Manager] でのデジタルアセットのメタデータ管理'
-description: メタデータのタイプと、 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager]  でメタデータに基づいてアセットを自動的に整理および処理できる方法について説明します。
+description: メタデータのタイプと方法について説明します [!DNL Adobe Experience Manager Assets] は、アセットのメタデータを管理して、アセットの分類と整理を容易におこなえるようにします。 [!DNL Experience Manager] を使用すると、メタデータに基づいてアセットを自動的に整理および処理できます。
 contentOwner: AG
-feature: タグ付け、メタデータ
+feature: Tagging, Metadata
 role: Architect, Leader
 exl-id: 05bbf89a-4cf5-49bb-aea8-a585c641eda2
 source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 98%
+source-wordcount: '1409'
+ht-degree: 96%
 
 ---
 
@@ -98,7 +98,7 @@ Exchangeable image file format（Exif）は、デジタル写真で最も一般�
 
 Exif の主な制限は、BMP、GIF、PNG などの一般的な画像ファイル形式ではサポートされないことです。
 
-Exif で定義されるメタデータフィールドは、通常、テクニカルなもので、記述メタデータ管理では使用が制限されています。このため、[!DNL Experience Manager Assets]は、Exifプロパティの[共通のメタデータスキーマ](metadata-schemas.md)と[XMP](xmp-writeback.md)へのマッピングを提供します。
+Exif で定義されるメタデータフィールドは、通常、テクニカルなもので、記述メタデータ管理では使用が制限されています。この理由で [!DNL Experience Manager Assets] は、Exif プロパティのマッピングを [共通のメタデータスキーマ](metadata-schemas.md) と [XMP](xmp-writeback.md).
 
 ### その他のメタデータ {#other-metadata}
 

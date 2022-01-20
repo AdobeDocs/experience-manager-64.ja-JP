@@ -1,8 +1,8 @@
 ---
 title: キャンペーンの管理
-seo-title: キャンペーンの管理
+seo-title: Campaign Management
 description: キャンペーン管理では、デジタルマーケティング担当者は、パーソナライズされたコンテンツを配信し、訪問者に対して個別のエクスペリエンスを作成できます。これにより、Web、電子メールおよびモバイルサービス内のマーケティングキャンペーンを統合し、訪問者との関係を深めることができます。
-seo-description: キャンペーン管理では、デジタルマーケティング担当者は、パーソナライズされたコンテンツを配信し、訪問者に対して個別のエクスペリエンスを作成できます。これにより、Web、電子メールおよびモバイルサービス内のマーケティングキャンペーンを統合し、訪問者との関係を深めることができます。
+seo-description: Campaign management provides digital marketers the opportunity to deliver personalized content and so create dedicated experiences for visitors. It allows you to orchestrate your marketing campaigns across the web, email and mobile services and so engage your visitors.
 uuid: 202d614b-a607-45de-8c24-1ee66b230315
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: e8b70971-4f23-45f8-8c23-e147413243c2
 exl-id: 2980ec6d-cdd4-4fbd-b4a4-5e45e4508903
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 88%
+source-wordcount: '628'
+ht-degree: 87%
 
 ---
 
@@ -39,16 +39,16 @@ ht-degree: 88%
 AEMでは、ブランドは最上位の単位で、 
 **キャンペーン**.
 
-* ****
-キャンペーンキャンペーンは、個々の 
+* **キャンペーン**
+キャンペーンは個人の集まりです 
 **エクスペリエンス**.
 
-* ****
-エクスペリエンスフォーカスされたコンテンツは、様々なエクスペリエンスを形成し、訪問者に対して次の場所に表示されます。 
+* **エクスペリエンス**
+フォーカスされたコンテンツは、様々なエクスペリエンスを形成し、次の場所で訪問者に表示されます。 
 **タッチポイント**. 次のような様々なタイプのエクスペリエンスが使用できます。
 
    * **Teaser**
-      [ティーザーページ/段落](#teasers) は、特定の訪問者セグメントを、その **** 訪問者の関心に焦点を当てたコンテンツに誘導するために使用します。
+      [ティーザーページ/段落](#teasers) を使用して、特定の訪問者を導く **セグメント** 興味に焦点を当てたコンテンツに対して
 
       Teaser ページでは、次のようなことができます。
 
@@ -59,7 +59,7 @@ AEMでは、ブランドは最上位の単位で、
 
    * **ニュースレター**
 
-      [電子メール通信は、](#emailmarketing) ユーザーを惹きつけ、Webサイトを訪問するよう促すために使用されます。通常はニュースレターの形式で&#x200B;**リード**（通常は&#x200B;**リスト**&#x200B;にグループ化されます）に送信されます。**注意：**&#x200B;この機能がさらに強化される予定はありません。[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
+      [電子メール通信](#emailmarketing) を使用してユーザーを惹きつけ、Web サイトにアクセスするよう促します。 通常はニュースレターの形式で&#x200B;**リード**（通常は&#x200B;**リスト**&#x200B;にグループ化されます）に送信されます。**注意：**&#x200B;この機能がさらに強化される予定はありません。[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
 
    * **Adobe Target**
 
@@ -82,7 +82,7 @@ AEMでは、ブランドは最上位の単位で、
 
    リードは通常、リストにグループ分けされ、これらのリード全体に対してアクションを実行することができます。**注意：**&#x200B;この機能がさらに強化される予定はありません。
 
-   Adobe Campaignの活用とAEMへの統合を[お勧めします。](/help/sites-administering/campaign.md)
+   お勧めは次のとおりです。 [Adobe CampaignとAEMの統合を活用します。](/help/sites-administering/campaign.md)
 
 * **セグメント**
 

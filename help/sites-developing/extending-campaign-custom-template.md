@@ -1,8 +1,8 @@
 ---
 title: Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成
-seo-title: Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成
+seo-title: Creating Custom AEM Page Template with Adobe Campaign Form Components
 description: Adobe Campaign フォームコンポーネントを使用するカスタムページテンプレートを作成します
-seo-description: Adobe Campaign フォームコンポーネントを使用するカスタムページテンプレートを作成します
+seo-description: Build a custom page template that uses Adobe Campaign Form components
 uuid: 8162ace2-b661-4c39-b0fb-288e1c035b9c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,26 +12,26 @@ discoiquuid: c3f6eed4-bbda-454a-88ce-c7f2041d4217
 exl-id: e70c9d23-5a4d-4137-82ad-3f3237f468c0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 61%
+source-wordcount: '238'
+ht-degree: 57%
 
 ---
 
 # Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-このページでは、[Adobe Campaign Form](/help/sites-authoring/adobe-campaign-components.md)コンポーネントを使用するカスタムページテンプレートの作成方法を説明し、Geometrixxアウトドアテンプレート(`/apps/geometrixx-outdoors/components/page_campaign_profile`)の実装方法と、独自のカスタムテンプレートの作成時に必要となる重要な情報を示します。
+このページでは、 [Adobe Campaign Form](/help/sites-authoring/adobe-campaign-components.md) コンポーネントを使用するには、Geometrixxアウトドアテンプレート ( `/apps/geometrixx-outdoors/components/page_campaign_profile`) が実装され、独自のカスタムテンプレートを作成する際に必要となる重要な情報を示します。
 
 >[!NOTE]
 >
->[電子メールとフォームのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md)。パッケージ共有からサンプルGeometrixxコンテンツをダウンロードしてください。
+>[電子メールとフォームのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md)。サンプルGeometrixxコンテンツをパッケージ共有からダウンロードしてください。
 
 Adobe Campaign フォームコンポーネントを使用してカスタム AEM ページテンプレートを作成するには以下が必要な条件となります。
 
 1. **適切な resourceSuperType**
 
-   ページコンポーネントが`mcm/campaign/components/profile`から継承されていることを確認します。
+   ページコンポーネントが `mcm/campaign/components/profile`.
 
-   これは、サーブレットが情報を取得して保存するために必要です
+   サーブレットが情報を取得して保存するには、この操作が必要です
 
    * `com.day.cq.mcm.campaign.servlets.TemplateListServlet`
    * `com.day.cq.mcm.campaign.servlets.SaveProfileServlet`
@@ -40,9 +40,9 @@ Adobe Campaign フォームコンポーネントを使用してカスタム AEM 
 
 1. **ClientContext 設定**
 
-   clientcontextの設定(`/etc/designs/geometrixx-outdoors/jcr:content/page_campaign_profile`)を見ると、次の設定が表示されます。
+   ClientContext の設定 ( `/etc/designs/geometrixx-outdoors/jcr:content/page_campaign_profile`) には、次の設定が表示されます。
 
-   * ClientContextが`/etc/clientcontext/campaign`を指す
+   * ClientContextが指す `/etc/clientcontext/campaign`
    * 追加の *config* ノードもあります。
 
    ![chlimage_1-202](assets/chlimage_1-202.png)
@@ -59,7 +59,7 @@ Adobe Campaign フォームコンポーネントを使用してカスタム AEM 
 
 1. **body.jsp（/apps/geometrixx-outdoors/components/page_campaign_profile/body.jsp）**
 
-   **body.jsp**&#x200B;では、クラウドサービスがページの下部に読み込まれます。
+   In **body.jsp**&#x200B;の場合、クラウドサービスはページの下部に読み込まれます。
 
    ```
    <cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/>
@@ -75,7 +75,7 @@ Adobe Campaign フォームコンポーネントを使用してカスタム AEM 
 
 1. **テンプレートの設定**
 
-   テンプレート(`/apps/geometrixx-outdoors/templates/campaign_profile/jcr:content`)には、次のデフォルト値が表示されます。
+   テンプレート ( `/apps/geometrixx-outdoors/templates/campaign_profile/jcr:content`) には、次のデフォルト値が表示されます。
 
    | **acMapping** | mapRecipient（Adobe Campaign 6.1 の場合）、profile（Adobe Campaign Standard の場合） |
    |---|---|

@@ -1,8 +1,8 @@
 ---
 title: We.Retail 参照実装
-seo-title: We.Retail 参照実装
+seo-title: We.Retail Reference Implementation
 description: We.Retail は参照実装の技術プレビューであり、AEM を使用したオンラインプレゼンスをセットアップする際に推奨される方法を示しています
-seo-description: We.Retail は参照実装の技術プレビューであり、AEM を使用したオンラインプレゼンスをセットアップする際に推奨される方法を示しています
+seo-description: We.Retail is a technology preview of a reference implementation that illustrates the recommended way of setting up an online presence with AEM
 uuid: d8833192-b592-4812-bf9b-bd882e8ee7f0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: f50150af-deff-4c29-bfe0-1cfc67b29d51
 exl-id: 66c19394-9d2f-4bdd-9c17-f0ec8090f0b4
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 89%
+source-wordcount: '751'
+ht-degree: 88%
 
 ---
 
@@ -39,7 +39,7 @@ We.Retail は、AEM の標準的な参照実装として、AEM の最も強力�
 | [HTML テンプレート言語](https://helpx.adobe.com/jp/experience-manager/htl/user-guide.html) | すべてのコンポーネントが HTL に基づいています。 |  |
 | [e コマース機能](/help/sites-developing/ecommerce.md) | 製品カタログを特徴としています。 |  |
 | [コミュニティサイト](/help/communities/overview.md) | 訪問者がコミュニティでのディスカッションに参加したりブログを読んだりできるようにします。 |  |
-| [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html) | すべてのコンポーネントが新しいコアコンポーネントに基づいており、使いやすく、設定変更も手早くおこなえます。 | [試してみる](/help/sites-developing/we-retail-core-components.md) |
+| [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) | すべてのコンポーネントが新しいコアコンポーネントに基づいており、使いやすく、設定変更も手早くおこなえます。 | [試してみる](/help/sites-developing/we-retail-core-components.md) |
 | [コンテンツフラグメント](/help/assets/content-fragments.md) | We.Retail エクスペリエンスのセクションは、コンテンツフラグメントによってコンテンツを再利用する方法を示します。 | [試してみる](/help/sites-developing/we-retail-content-fragments.md) |
 | [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md) | エクスペリエンスフラグメントは、ページ内で参照できるコンテンツおよびレイアウトを含む 1 つ以上のコンポーネントのグループです。 | [試してみる](/help/sites-developing/we-retail-experience-fragments.md) |
 
@@ -49,7 +49,7 @@ We.Retail は AEM のサンプルコンテンツとして提供されていま�
 
 >[!CAUTION]
 >
->We.Retail は、実稼動インスタンスにインストールしないでください。実稼動インスタンスは、`nosamplecontent` [実行モード](/help/sites-deploying/configure-runmodes.md)で起動する必要があります。
+>We.Retail は、実稼動インスタンスにインストールしないでください。実稼動インスタンスは、で開始する必要があります `nosamplecontent` [runmode](/help/sites-deploying/configure-runmodes.md).
 
 >[!CAUTION]
 >
@@ -57,7 +57,7 @@ We.Retail は AEM のサンプルコンテンツとして提供されていま�
 
 ### 最新バージョン {#latest-version}
 
-We.Retail は AEM リリースと共に配布されますが、リリース後にコンテンツおよびその機能が更新される可能性があります。したがって、GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)から[最新リリースをダウンロードし、[upload](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system)と[install](/help/sites-administering/package-manager.md#installing-packages)をAEMインスタンス上のパッケージとしてダウンロードすることができます。
+We.Retail は AEM リリースと共に配布されますが、リリース後にコンテンツおよびその機能が更新される可能性があります。したがって、 [GitHub から最新リリースをダウンロード](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) その後 [アップロード](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system) および [インストール](/help/sites-administering/package-manager.md#installing-packages) AEMインスタンス上のパッケージとして使用されます。
 
 ### 最初の手順 {#first-steps}
 
@@ -93,8 +93,8 @@ We.Retail には、最新の AEM テクノロジーが搭載されています�
 | 原稿 | 使用不可 | 使用可 |
 | カルーセル、ダウンロード、グラフのコンポーネント | 使用不可 | 使用可 |
 | 列の制御 | レイアウトコンテナに置き換え | 使用可 |
-| フォーム | 使用不可 | 使用可 |
-| Campaign | Eメールのサンプルがありません | 使用可 |
+| Forms | 使用不可 | 使用可 |
+| Campaign | 電子メールのサンプルがありません | 使用可 |
 
 >[!NOTE]
 >
@@ -108,12 +108,12 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubのaem-sample-we-retailプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
+* [GitHub の aem-sample-we-retail プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/archive/master.zip)としてダウンロードします
 
 最新のリリースは、インストール可能なパッケージとして[直接ダウンロード](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/latest)することもできます。
 
-問題が発生した場合は、[GitHub issues](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues)を送信してください。
+問題が発生した場合は、次を送信してください： [GitHub の問題](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/issues).
 
 自由にフォークするか、[プル要求](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/pulls)によって貢献してください。
 

@@ -1,8 +1,8 @@
 ---
 title: コマンドラインによる起動と停止
-seo-title: コマンドラインによる起動と停止
+seo-title: Command Line Start and Stop
 description: コマンドラインから AEM の起動と停止をおこなう方法を学習します。
-seo-description: コマンドラインから AEM の起動と停止をおこなう方法を学習します。
+seo-description: Learn how to start and stop AEM from the command line.
 uuid: 585f071c-2286-4a2c-af07-404bf298cba8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 9333ff84-f624-4cfa-a9e4-c5e3882171ff
 exl-id: 9d2682c2-6360-402e-a020-0021f5051a2d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 78%
+source-wordcount: '366'
+ht-degree: 77%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 78%
 
 ## コマンドラインからの Adobe Experience Manager の起動 {#starting-adobe-experience-manager-from-the-command-line}
 
-`start`スクリプトは、*&lt;cq-installation>/bin*&#x200B;ディレクトリにあります。 Unix版とWindows版の両方が用意されています。 スクリプトは、*&lt;cq-installation>*&#x200B;ディレクトリにインストールされたインスタンスを起動します。
+この `start` スクリプトは、以下で使用できます。 *の &lt;cq-installation>/bin* ディレクトリ。 Unix 版と Windows 版の両方が用意されています。 スクリプトは、 *&lt;cq-installation>* ディレクトリ。
 
-これらの2つのバージョンは、AEMインスタンスの開始と調整に使用できる環境変数のリストをサポートしています。
+これら 2 つのバージョンは、AEMインスタンスの開始と調整に使用できる環境変数のリストをサポートしています。
 
 <table> 
  <tbody> 
@@ -101,7 +101,7 @@ AEM を停止するには、次のいずれかを実行します。
 
 ## コマンドラインからの Adobe Experience Manager の停止 {#stopping-adobe-experience-manager-from-the-command-line}
 
-`stop`スクリプトは、*&lt;cq-installation>/bin*&#x200B;ディレクトリにあります。 Unix版とWindows版の両方が用意されています。 スクリプトは、*&lt;cq-installation>*&#x200B;ディレクトリにインストールされた実行中のインスタンスを停止します。
+この `stop` スクリプトは、以下で使用できます。 *の &lt;cq-installation>/bin* ディレクトリ。 Unix 版と Windows 版の両方が用意されています。 スクリプトは、 *&lt;cq-installation>* ディレクトリ。
 
 ### Unix プラットフォームの stop スクリプトの例 {#unix-platform-stop-script-example}
 
@@ -117,10 +117,10 @@ AEM を停止するには、次のいずれかを実行します。
 
 リポジトリを事前設定するだけ（場所の変更なし）の場合に必要なのは次の手順だけです。
 
-* 必要な場所に`repository.xml`を抽出します。
+* 抽出する `repository.xml` 必要な場所に
 
-* 必要に応じて`repository.xml`を更新
+* 更新 `repository.xml` 必要に応じて
 
-* `bootstrap.properties`を作成し、`repository.config`を定義します。
+* 作成 `bootstrap.properties` および定義 `repository.config`
 
 これも、実際のインストールを開始する前におこないます。

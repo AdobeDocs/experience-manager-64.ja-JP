@@ -1,8 +1,8 @@
 ---
 title: ヘルスモニターのパフォーマンスに関する微調整
-seo-title: ヘルスモニターのパフォーマンスに関する微調整
+seo-title: Fine-tuning Health Monitor performance
 description: ヘルスモニターのパフォーマンスを微調整する方法について説明します。
-seo-description: ヘルスモニターのパフォーマンスを微調整する方法について説明します。
+seo-description: Learn how to fine-tune Health Monitor performance
 uuid: 770b10cb-065f-41b5-9594-a291e4311151
 contentOwner: admin
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: b8f8bddc-0d38-4d5e-b33f-978f04bc16c6
 exl-id: b2814b0d-e843-4aba-8c74-a3be0a96f726
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 88%
+source-wordcount: '407'
+ht-degree: 87%
 
 ---
 
@@ -63,23 +63,23 @@ ht-degree: 88%
  </tbody> 
 </table>
 
-## JBoss への Java オプションの追加  {#add-java-options-to-jboss}
+## JBoss への Java オプションの追加 {#add-java-options-to-jboss}
 
 1. JBoss アプリケーションサーバーを停止します。
-1. *[appserver root]*/bin/run.bat(Windows)またはrun.sh（LinuxまたはUNIX）をエディターで開き、必要に応じてJavaオプションを追加します。
+1. を開きます。 *[appserver root]*/bin/run.bat (Windows) または run.sh （Linux または UNIX）をエディターに追加し、必要に応じて任意の Java オプションを追加します。
 1. サーバーを再起動します。
 
-## WebLogic への Java オプションの追加  {#add-java-options-to-weblogic}
+## WebLogic への Java オプションの追加 {#add-java-options-to-weblogic}
 
-1. WebブラウザーのURL行にhttps://[host name]:[port]/consoleと入力して、WebLogic管理コンソールを起動します。
+1. 「 https:// 」と入力して WebLogic 管理コンソールを起動します。[ホスト名]:[ポート]/console （Web ブラウザーの URL 行）
 1. WebLogic Server ドメインに対して作成したユーザー名とパスワードを入力し、「Log In」をクリックします。「Change Center」で、「Lock &amp; Edit」をクリックします。
 1. 「Domain Structure」で、Environment／Servers をクリックし、右側のウィンドウで、管理対象サーバー名をクリックします。
 1. 次の画面で、「Configuration」タブ／「Server Start」タブをクリックします。
-1. 「Arguments」ボックスで、現在の内容の末尾に必要な引数を付加します。例えば、 - `Dadobe.healthmonitor.enabled=false`を追加すると、ヘルスモニターが無効になります。
+1. 「Arguments」ボックスで、現在の内容の末尾に必要な引数を付加します。例えば、次を追加します。 `Dadobe.healthmonitor.enabled=false` ヘルスモニターを無効にします。
 1. 「Save」をクリックし、「Activate Changes」をクリックします。
 1. WebLogic 管理対象サーバーを再起動します。
 
-## WebSphere への Java オプションの追加  {#add-java-options-to-websphere}
+## WebSphere への Java オプションの追加 {#add-java-options-to-websphere}
 
 1. WebSphere Administrative Console のナビゲーションツリーで、アプリケーションサーバーに対して次の操作を実行します。
 

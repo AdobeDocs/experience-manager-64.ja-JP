@@ -8,13 +8,13 @@ exl-id: 87883a3f-db95-41f4-b0aa-cdaeb7e6f555
 source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
 source-wordcount: '395'
-ht-degree: 90%
+ht-degree: 97%
 
 ---
 
 # フォルダーへの翻訳クラウドサービスの適用 {#applying-translation-cloud-services-to-folders}
 
-Adobe Experience Managerでは、任意の翻訳プロバイダーからクラウドベースの翻訳サービスを利用して、要件に基づいてアセットを翻訳できます。
+Adobe Experience Manager では、選択した翻訳プロバイダーのクラウドベースの翻訳サービスを利用して、要件に基づいてアセットを確実に翻訳できます。
 
 翻訳クラウドサービスをアセットフォルダーに直接適用できるので、翻訳ワークフローの間もずっとアセットを利用できます。
 
@@ -43,7 +43,7 @@ Adobe Experience Managerでは、任意の翻訳プロバイダーからクラ�
 翻訳ワークフローで使用する翻訳サービスにカスタムコネクタを適用する場合、カスタムコネクタを適用するには、まずパッケージマネージャーからコネクタをインストールします。次に、クラウドサービスコンソールからコネクタを設定します。コネクタを設定すると、[翻訳サービスの適用](transition-cloud-services.md#applying-the-translation-services)で説明されている「クラウドサービス」タブのコネクタのリストに表示されるようになります。カスタムコネクタを適用し、翻訳ワークフローを実行すると、翻訳プロジェクトの「**[!UICONTROL 翻訳の概要]**」タイルの「**[!UICONTROL プロバイダー]**」と「**[!UICONTROL メソッド]**」という見出しの下にコネクタの詳細が表示されます。
 
 1. パッケージマネージャーからコネクタをインストールします。
-1. [!DNL Experience Manager]ロゴをクリックまたはタップし、**[!UICONTROL ツール/デプロイメント/Cloud Services]**&#x200B;に移動します。
+1. 次をクリックまたはタップします。 [!DNL Experience Manager] ロゴをクリックし、に移動します。 **[!UICONTROL ツール/導入/Cloud Services]**.
 1. インストールしたコネクタを&#x200B;**[!UICONTROL クラウドサービス]**&#x200B;ページの「**[!UICONTROL サードパーティのサービス]**」の下で探します。
 
    ![chlimage_1-218](assets/chlimage_1-218.png)

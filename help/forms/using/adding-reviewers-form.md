@@ -1,18 +1,18 @@
 ---
 title: 送信レビュー担当者のフォームへの関連付け
-seo-title: 送信レビュー担当者のフォームへの関連付け
+seo-title: Associating submission reviewers with a form
 description: AEM Forms のフォームへ送信レビュー担当者を関連付ける方法を説明します。関連付けられたレビュー担当者は、送信されたフォームをフォームポータル経由でレビューします。
-seo-description: AEM Forms のフォームへ送信レビュー担当者を関連付ける方法を説明します。関連付けられたレビュー担当者は、送信されたフォームをフォームポータル経由でレビューします。
+seo-description: Learn how to associate submission reviewers with a form in AEM Forms. Associated reviewers review a form submitted via forms portal.
 uuid: 66834c2b-ae70-4a6e-ae8e-07d0e38de06b
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: 7c39383b-b430-40a1-9bcb-f5aaccb616ad
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: b45d844e-acf9-4da2-b54e-08c67aa183a3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 94%
+source-wordcount: '493'
+ht-degree: 93%
 
 ---
 
@@ -24,18 +24,18 @@ AEM Forms では、レビュー担当者グループをフォームに関連付�
 
 フォームに割り当てられたレビュー担当者グループは指定されたフォームのみをレビューできます。
 
-## 必要条件 {#prerequisite}
+## 前提条件 {#prerequisite}
 
-### メタデータスキーマエディターを使用してアダプティブフォームで送信レビュー担当者グループのプロパティを有効化  {#enabling-submission-reviewer-groups-property-for-adaptive-forms-using-metadata-schema-editor}
+### メタデータスキーマエディターを使用してアダプティブフォームで送信レビュー担当者グループのプロパティを有効化 {#enabling-submission-reviewer-groups-property-for-adaptive-forms-using-metadata-schema-editor}
 
 レビュー担当者グループをフォームに関連付けるには、アダプティブフォームのメタデータスキーマを編集します。デフォルトでは、送信されたフォームにレビュー担当者グループを追加できません。
 
 メタデータスキーマを編集するには、以下の手順に従います。
 
 1. オーサーモードで、Experience Manager の&#x200B;**[!UICONTROL ツール／アセット／メタデータスキーマ]**&#x200B;をクリックします。
-1. スキーマFormsページで、**[!UICONTROL Forms/AEMで作成されたForms]**&#x200B;に移動します。
+1. スキーマFormsページで、に移動します。 **[!UICONTROL Forms / Forms AEMで作成]**.
 
-   ページのURLは次のとおりです。
+   ページの URL は次のようになります。
 
    ```
    https://<hostname>:<port>/mnt/overlay/dam/gui/content/metadataschemaeditor/
@@ -66,7 +66,7 @@ AEM Forms では、レビュー担当者グループをフォームに関連付�
 アダプティブフォームにユーザーグループを関連付けるには、次の手順に従います。
 
 1. 作成者モードで、**[!UICONTROL フォーム／フォームとドキュメント]**&#x200B;に移動します。
-1. **[!UICONTROL 「]**&#x200B;を選択」オプションを使用してアダプティブフォームを選択し、「**[!UICONTROL プロパティを表示]**」をクリックします。
+1. 以下を使用： **[!UICONTROL 選択]** アダプティブフォームを選択するオプションを選択し、 **[!UICONTROL プロパティを表示]**.
 1. フォームのプロパティウィンドウで「**[!UICONTROL 編集]**」をクリックし、「**[!UICONTROL 詳細]**」をクリックします。
 1. 送信レビュー担当者グループのフィールドにグループを入力し、「**[!UICONTROL 完了]**」をクリックします。
 

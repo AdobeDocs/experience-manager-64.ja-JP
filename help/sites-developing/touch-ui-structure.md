@@ -1,8 +1,8 @@
 ---
 title: AEM タッチ操作対応 UI の構造
-seo-title: AEM タッチ操作対応 UI の構造
+seo-title: Structure of the AEM Touch-Enabled UI
 description: AEM に実装されているタッチ操作対応 UI には、基盤となる原則があり、いくつかの主要な要素で構成されています
-seo-description: AEM に実装されているタッチ操作対応 UI には、基盤となる原則があり、いくつかの主要な要素で構成されています
+seo-description: The touch-optimized UI, as implemented in AEM, has several underlying principles and is made up of several key elements
 uuid: 9a255238-1adc-4a40-9c37-30cb53ffb26c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 55dba890-4847-4986-b272-33480bc1d573
 exl-id: 9eeb3203-e27a-4960-a4ec-58dd9dd098a2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '861'
 ht-degree: 93%
 
 ---
@@ -43,7 +43,7 @@ UI はモバイルデバイスとデスクトップデバイスの両方に対�
 
 ヘッダーバーにはグローバル要素が表示されます。
 
-* ロゴと、現在使用している特定の製品/ソリューションAEMの場合も、グローバルナビゲーションへのリンクを形成します。
+* ロゴと、現在使用している特定の製品/ソリューションAEMの場合は、グローバルナビゲーションへのリンクも形成されます。
 * 検索
 * ヘルプリソースにアクセスするためのアイコン
 * その他のソリューションにアクセスするためのアイコン
@@ -148,7 +148,7 @@ AEM には、編集、プレビュー、注釈など、ページオーサリン�
 >
 >レイヤーは強力な概念であり、ページコンテンツのユーザーのビューや、ページコンテンツとのインタラクションに影響します。独自のレイヤーを開発するときは、終了時にレイヤーがクリーンアップされることを確認する必要があります。
 
-### レイヤースイッチャー  {#layer-switcher}
+### レイヤースイッチャー {#layer-switcher}
 
 レイヤースイッチャーを使用すると、使用するレイヤーを選択できます。閉じると、現在使用中のレイヤーが示されます。
 
@@ -166,6 +166,6 @@ AEM には、編集、プレビュー、注釈など、ページオーサリン�
 
 ## その他の情報 {#further-information}
 
-タッチ操作対応UIに関する概念の詳細については、「 [AEMタッチ操作対応UIの概念](/help/sites-developing/touch-ui-concepts.md) 」の記事を参照してください。
+タッチ操作対応 UI に関する概念について詳しくは、この記事を参照してください。 [AEMタッチ操作対応 UI の概念](/help/sites-developing/touch-ui-concepts.md).
 
-技術情報について詳しくは、タッチ操作対応ページエディターの[JSドキュメントセット](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)を参照してください。
+技術情報について詳しくは、 [JS ドキュメントセット](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) タッチ操作対応ページエディター用。

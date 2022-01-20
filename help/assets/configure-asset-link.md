@@ -4,13 +4,13 @@ description: Experience Manager Assetsを設定アプリケーション用のAdo
 contentOwner: Vishabh Gupta
 role: Admin
 feature: Asset Management
-source-git-commit: 227b929c7eecb4fa65f5c50fffc5d9ed802411e1
+exl-id: 6d9a954f-433d-41ec-9bb9-45e857890aba
+source-git-commit: 657bb7df01a7b8e03d39c3bda868d87253b81b2a
 workflow-type: tm+mt
 source-wordcount: '3135'
 ht-degree: 5%
 
 ---
-
 
 # Experience Manager AssetsをAdobeAsset Link 用に設定 {#adobe-asset-link}
 
@@ -291,12 +291,7 @@ Asset Asset Link の設定時や使用時に問題が発生した場合は、次
 
 >[!MORELIKETHIS]
 >
->* [Adobe Asset Link について](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
+>* [Adobe Asset Link について](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)
 >* [アセットデスクトップアプリケーションでのCreative Cloudリンクの使用とアセットの管理](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
->* [Adobe Experience Manager Assets のas a Cloud Service設定](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html).
-
-
-
-
-
+>* [Adobe Experience Manager Assets のas a Cloud Service設定](https://helpx.adobe.com/jp/enterprise/using/configure-aem-assets-for-asset-link.html).
 

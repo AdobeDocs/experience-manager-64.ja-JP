@@ -1,13 +1,13 @@
 ---
-title: ' [!DNL Adobe Experience Manager Assets]のDigital Rights Management。'
+title: Digital Rights Management [!DNL Adobe Experience Manager Assets].
 description: ' [!DNL Experience Manager]  でライセンスされているアセットの有効期限の状態と情報を管理する方法について説明します。'
 contentOwner: AG
-feature: DRM，アセット管理
+feature: DRM,Asset Management
 role: User,Admin
 exl-id: 3eea4983-9dd5-4d69-ad93-3cd37a656d22
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '1433'
+source-wordcount: '1430'
 ht-degree: 89%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 89%
 
 アセットの有効期限は、アセットのライセンス要件を徹底する有効な方法です。公開済みアセットの有効期限が切れたらアセットを非公開にすることで、ライセンス違反が発生する可能性を回避します。管理者権限のないユーザーは、有効期限切れのアセットを編集、コピー、移動、公開、ダウンロードできません。
 
-アセットの有効期限切れのステータスは、カード表示とリスト表示の両方の[!DNL Assets]コンソールで確認できます。
+アセットの有効期限切れのステータスは、 [!DNL Assets] コンソール（カード表示とリスト表示の両方）
 
 ![expired_flag_card](assets/expired_flag_card.png)
 
@@ -28,9 +28,9 @@ ht-degree: 89%
 
 ![expired_flag_list](assets/expired_flag_list.png)
 
-*図：リスト表示では、「  Status」列に「Expiredbanner」が表示  されます。*
+*図：リスト表示では、 [!UICONTROL ステータス] 列には、 [!UICONTROL 期限切れ] バナー。*
 
-アセットの有効期限切れのステータスは、左側のパネルの[!UICONTROL タイムライン]で確認できます。
+アセットの有効期限切れのステータスは、 [!UICONTROL タイムライン] をクリックします。
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
@@ -38,7 +38,7 @@ ht-degree: 89%
 >
 >アセットの有効期限の表示はタイムゾーンごとに異なります。
 
-アセットの有効期限切れのステータスは、**[!UICONTROL 参照]**&#x200B;レールで確認することもできます。 ここではアセットの有効期限切れのステータスと、複合アセットと参照元のサブアセット、コレクションおよびプロジェクトの間の関係を管理します。
+また、 **[!UICONTROL 参照]** パネル ここではアセットの有効期限切れのステータスと、複合アセットと参照元のサブアセット、コレクションおよびプロジェクトの間の関係を管理します。
 
 1. 参照先の Web ページと複合アセットを表示するアセットに移動します。
 1. アセットを選択し、[!DNL Experience Manager] ロゴをクリックします。
@@ -69,15 +69,15 @@ ht-degree: 89%
 
    ![chlimage_1-150](assets/chlimage_1-150.png)
 
-1. [!DNL Experience Manager]ロゴをクリックして検索パネルを表示します。
+1. クリック [!DNL Experience Manager] ロゴ：検索パネルを表示します。
 
    ![chlimage_1-151](assets/chlimage_1-151.png)
 
-1. 「**[!UICONTROL 有効期限ステータス]**」オプションをクリックして展開します。
+1. 次をクリック： **[!UICONTROL 有効期限ステータス]** オプションを使用して展開できます。
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
-1. **[!UICONTROL 期限切れ]**&#x200B;を選択します。 有効期限切れのアセットが検索結果に表示されます。
+1. 選択 **[!UICONTROL 期限切れ]**. 有効期限切れのアセットが検索結果に表示されます。
 
    ![chlimage_1-153](assets/chlimage_1-153.png)
 
@@ -99,7 +99,7 @@ ht-degree: 89%
 
    >[!NOTE]
    >
-   >アセットの有効期限が切れると、アセットの作成者（特定のアセットを[!DNL Assets]にアップロードしたユーザー）のみが電子メールを受け取ります。 [!DNL Experience Manager]レベル全体での電子メール通知の設定に関する詳細については、[電子メール通知の設定方法](/help/sites-administering/notification.md)を参照してください。
+   >アセットの作成者（特定のアセットをアップロードしたユーザー）のみ [!DNL Assets]) は、アセットの有効期限が切れると電子メールを受信します。 詳しくは、 [電子メール通知の設定方法](/help/sites-administering/notification.md) 電子メール通知の設定に関する追加の詳細は、 [!DNL Experience Manager] レベル。
 
 1. 「**[!UICONTROL Prior notification in seconds]**」フィールドで、アセットの有効期限が切れる何秒前に有効期限切れに関する通知を受け取るかを指定します。管理者かアセットの作成者の場合、アセットの有効期限が切れる前に、指定の時間が経過した後にアセットの有効期限が切れることを知らせるメッセージを受け取ります。
 
@@ -130,9 +130,9 @@ ht-degree: 89%
 
 1. 「詳細」タブの「**[!UICONTROL 期限切れ]**」フィールドで、アセットの有効期限日を設定します。
 
-   ![「期限切れ」フィールドにアセットの有効期限の日時を設定します](assets/chlimage_1-159.png)
+   ![「期限切れ」フィールドでアセットの有効期限の日時を設定する](assets/chlimage_1-159.png)
 
-   *図：  アセットのプロパティペ  ージの「詳細」タブで、アセットの有効期限を設定します。*
+   *図： [!UICONTROL 詳細] アセットのタブ [!UICONTROL プロパティ] ページを開き、アセットの有効期限を設定します。*
 
 1. 「**[!UICONTROL 保存]**」をクリックし、次に「**[!UICONTROL 閉じる]**」をクリックしてアセットコンソールを表示します。
 1. アセットの公開ステータスは、カード表示のアセットのサムネールの下部に、有効期限切れのステータスを示します。リスト表示では、アセットのステータスが「**[!UICONTROL 期限切れ]**」と表示されます。
@@ -181,7 +181,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
-> の以前のリリースにライセンスを保存するために使用されていた場所 `/etc/dam/drm/licenses` は非推奨（廃止予定）となりました。[!DNL Experience Manager]
+>の以前のリリースにライセンスを保存するために使用されていた場所 `/etc/dam/drm/licenses` は非推奨（廃止予定）となりました。[!DNL Experience Manager]
 >
 >ライセンスページを作成または変更する場合、または [!DNL Experience Manager] の以前のリリースから移植する場合は、ライセンスページを `/apps/settings/dam/drm/licenses` または `/conf/&ast;/settings/dam/drm/licenses` に保存することをお勧めします。
 

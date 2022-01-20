@@ -1,8 +1,8 @@
 ---
 title: ベストプラクティス
-seo-title: ベストプラクティス
+seo-title: Best Practices
 description: AEM を可能な限り効率的かつ効果的に使用する方法です
-seo-description: AEM を可能な限り効率的かつ効果的に使用する方法です
+seo-description: How to use AEM in the most efficient and most effective way possible
 uuid: b3044cdf-8ca4-4012-b290-11f73c0cb1bf
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 exl-id: 84db73b0-1bc3-4c39-9bc2-0840e24832b0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 80%
+source-wordcount: '285'
+ht-degree: 78%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 80%
 
 * [Assets](#assets)
 * [Sites](#sites)
-* [フォーム](#forms)
+* [Forms](#forms)
 
 管理、デプロイ、メンテナンスまたは開発のベストプラクティスについては、次のページを参照してください。
 
@@ -54,7 +54,7 @@ ht-degree: 80%
   <tr>
    <td>ダイナミックイメージング</td> 
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">ダイナミックイメージングのベストプラクティス</a></td> 
-   <td><p>Dynamic Media機能を使用している場合やDynamic Mediaとの統合を行っている場合に、最適な結果を得るために画像をシャープにする方法と画質を最適化する最適な方法について説明します。</p> </td> 
+   <td><p>Dynamic Media機能を使用している場合、またはDynamic Mediaとの統合時に、最適な結果を得るために画像をシャープにする方法と、画質を最適化する最適な方法について説明します。</p> </td> 
   </tr>
   <tr>
    <td>多言語のアセット</td> 
@@ -64,16 +64,16 @@ ht-degree: 80%
  </tbody>
 </table>
 
-## Sites {#sites}
+## サイト {#sites}
 
 Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
 
 |  |  |  |
 |---|---|---|
 | オーサリングツール | [オーサー環境とツール](/help/sites-authoring/author-environment-tools.md) | ページの作成に使用するツールの概要を示します。 |
-| ページの整理 | [ページの作成と整理](/help/sites-authoring/managing-pages.md) | 命名規則を含む、ページの最適な整理方法の概要を示します。 |
+| ページの整理 | [ページの作成と整理](/help/sites-authoring/managing-pages.md) | 命名規則を含む、ページの最適な整理方法の概要を説明します。 |
 
-## フォーム {#forms}
+## Forms {#forms}
 
 |  |  |  |
 |---|---|---|

@@ -1,19 +1,19 @@
 ---
 title: HTML5 フォームのスクリプティングのサポート
-seo-title: HTML5 フォームのスクリプティングのサポート
+seo-title: Scripting support for HTML5 forms
 description: JavaScript と FormCalc プロパティ、および HTML5 フォームでサポートされているメソッド。
-seo-description: JavaScript と FormCalc プロパティ、および HTML5 フォームでサポートされているメソッド。
+seo-description: JavaScript, FormCalc properties, and other methods that are supported in HTML5 Forms.
 uuid: 697d5ec4-c818-41e4-b813-883c01b7ff3a
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
-feature: 'モバイルフォーム '
+feature: Mobile Forms
 exl-id: 2194bbbb-22d9-4422-aefb-9651fd795ca3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '3913'
+source-wordcount: '3894'
 ht-degree: 97%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 97%
    <td>ユーザーの操作に応じて変更される前のフィールドのコンテンツを指定します。この値は「元に戻す」と同様に、再び呼び出すことができます。</td> 
    <td><p>ドロップダウンリストとリストボックスでは機能しません。次の場合、<code>PrevText </code> は正常に機能しません。</p> 
     <ul> 
-     <li>iPadの数値フィールドに一部の特殊文字キー(たとえば、$、(、)、&amp;、@など)を入力すると、 </li> 
+     <li>iPadの数値フィールドに一部の特殊文字キー ( 例：$、(、)、&amp;、@など ) を入力すると、 </li> 
      <li>日付フィールド（カレンダーをとおして日付が入力される場合）<br /> </li> 
     </ul> <p>スクリプトによる値の設定はサポートされていません。</p> </td> 
   </tr> 
@@ -48,7 +48,7 @@ ht-degree: 97%
   <tr> 
    <td><code>newtext</code></td> 
    <td>ユーザーの操作に応じて変更された後のフィールドのコンテンツを指定します。</td> 
-   <td><p>次の場合、 <code>newText</code>プロパティは正しく機能しません。</p> 
+   <td><p>この <code>newText</code> 次の場合、プロパティは適切に機能しません。</p> 
     <ul> 
      <li>テキストを選択置換するとき。</li> 
      <li>テキストの削除、コピー、およびペーストするとき。</li> 
@@ -63,7 +63,7 @@ ht-degree: 97%
   <tr> 
    <td>change</td> 
    <td>ユーザーがフィールドに入力したり貼り付けたりした直後の値を表します。 </td> 
-   <td><p>次の場合、changeプロパティは正しく機能しません。</p> 
+   <td><p>次の場合、change プロパティは正しく機能しません。</p> 
     <ul> 
      <li>テキストを選択置換するとき。</li> 
      <li>テキストの削除、コピー、およびペーストするとき。</li> 
@@ -102,7 +102,7 @@ ht-degree: 97%
   <tr> 
    <td><code>name</code></td> 
    <td>現在のアプリケーションの名前を返します。</td> 
-   <td>ブラウザー名とそのバージョンを返します。例えば、Chromeブラウザーでは、返される値は <code>Chrome &lt;version&gt;.</code></td> 
+   <td>ブラウザー名とそのバージョンを返します。例えば、Chrome ブラウザーでは、返される値は次のようになります。 <code>Chrome &lt;version&gt;.</code></td> 
   </tr> 
   <tr> 
    <td><code>numPages</code></td> 
@@ -218,7 +218,7 @@ ht-degree: 97%
   </tr> 
   <tr> 
    <td><code>fillcolor</code></td> 
-   <td>このフィールドの背景色の値を指定します。別々にborder.fill.presenceプロパティをvisibleに設定する必要があります。</td> 
+   <td>このフィールドの背景色の値を指定します。別々に border.fill.presence プロパティを visible に設定する必要があります。</td> 
    <td>それはフィールドのデフォルトの色を正しく返しません。</td> 
   </tr> 
   <tr> 
@@ -238,7 +238,7 @@ ht-degree: 97%
   </tr> 
   <tr> 
    <td><code>borderColor</code></td> 
-   <td>このフィールドの境界線の色の値を指定します。別々にborder.edge.presenceプロパティをvisibleに設定する必要があります。</td> 
+   <td>このフィールドの境界線の色の値を指定します。別々に border.edge.presence プロパティを visible に設定する必要があります。</td> 
    <td>それはフィールドのデフォルトの境界線の色を正しく返しません。</td> 
   </tr> 
   <tr> 
@@ -431,7 +431,7 @@ ht-degree: 97%
   </tr> 
   <tr> 
    <td>borderColor</td> 
-   <td>このフィールドの境界線の色の値を指定します。別々にborder.edge.presenceプロパティをvisibleに設定する必要があります。</td> 
+   <td>このフィールドの境界線の色の値を指定します。別々に border.edge.presence プロパティを visible に設定する必要があります。</td> 
    <td>なし</td> 
   </tr> 
   <tr> 
@@ -507,12 +507,12 @@ ht-degree: 97%
    <td>現在のオブジェクトのすべての子オブジェクトのリストを返します。</td> 
    <td> 
     <ul> 
-     <li>xfa.nodes, descに対してはサポートされていません。</li> 
+     <li>xfa.nodes, desc に対してはサポートされていません</li> 
      <li>PDF と HTML に対してレポートされるノード数は異なります。 </li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td>name</td> 
+   <td>名前</td> 
    <td>このノードの名前を指定します。</td> 
    <td>HTML ではスクリプトの使用による名前の設定は許可されていません。</td> 
   </tr> 
@@ -593,7 +593,7 @@ ht-degree: 97%
    <td><strong>例外</strong></td> 
   </tr> 
   <tr> 
-   <td>color</td> 
+   <td>カラー</td> 
    <td>color プロパティは一意の塗りつぶしカラーを定義します。</td> 
    <td> 
     <ul> 
@@ -614,7 +614,7 @@ ht-degree: 97%
    <td><strong>例外</strong></td> 
   </tr> 
   <tr> 
-   <td>color</td> 
+   <td>カラー</td> 
    <td>color プロパティは、フォーム上のリニアグラデーション塗りつぶしのための一意のカラーを記述します。</td> 
    <td> 
     <ul> 
@@ -652,7 +652,7 @@ ht-degree: 97%
    <td><strong>例外</strong></td> 
   </tr> 
   <tr> 
-   <td>color</td> 
+   <td>カラー</td> 
    <td>color プロパティは、パターンオブジェクトの一意のカラーを記述します。 </td> 
    <td> 
     <ul> 
@@ -673,7 +673,7 @@ ht-degree: 97%
    <td><strong>例外</strong></td> 
   </tr> 
   <tr> 
-   <td>color</td> 
+   <td>カラー</td> 
    <td>color プロパティは、放射状オブジェクトの一意のカラーを記述します。</td> 
    <td> 
     <ul> 
@@ -694,7 +694,7 @@ ht-degree: 97%
    <td><strong>例外</strong></td> 
   </tr> 
   <tr> 
-   <td>color</td> 
+   <td>カラー</td> 
    <td>color プロパティは、点描オブジェクトの一意のカラーを記述します。</td> 
    <td> 
     <ul> 
@@ -730,7 +730,7 @@ ht-degree: 97%
    <td> </td> 
   </tr> 
   <tr> 
-   <td>name</td> 
+   <td>名前</td> 
    <td>スクリプト式でこのオブジェクトまたはイベントを指定するために使用可能な識別子を指定します。</td> 
    <td>ランタイムでの値の設定はサポートされていません。</td> 
   </tr> 
@@ -752,7 +752,7 @@ ht-degree: 97%
    <td><strong>例外</strong></td> 
   </tr> 
   <tr> 
-   <td>color</td> 
+   <td>カラー</td> 
    <td>color プロパティは、コーナーオブジェクトの一意のカラーを記述します。</td> 
    <td> 
     <ul> 
@@ -881,7 +881,7 @@ ht-degree: 97%
    <td><strong>例外</strong></td> 
   </tr> 
   <tr> 
-   <td>border</td> 
+   <td>ボーダー</td> 
    <td>border オブジェクトは、オブジェクトを囲む境界線を表します。<br /> </td> 
    <td>なし</td> 
   </tr> 
@@ -949,7 +949,7 @@ ht-degree: 97%
   </tr> 
   <tr> 
    <td>caption</td> 
-   <td>  captionオブジェクトは、フォームデザインオブジェクトに関連付けられた説明ラベルを表します。<br /> </td> 
+   <td>  caption オブジェクトは、フォームデザインオブジェクトに関連付けられた説明ラベルを表します。<br /> </td> 
    <td>なし</td> 
   </tr> 
   <tr> 
@@ -973,7 +973,7 @@ ht-degree: 97%
    <td>exclgrp 内の個々の項目については、常にオープンを返します。 </td> 
   </tr> 
   <tr> 
-   <td>name</td> 
+   <td>名前</td> 
    <td>スクリプト式でこのオブジェクトまたはイベントを指定するために使用可能な識別子を指定します。</td> 
    <td>なし</td> 
   </tr> 
@@ -1115,7 +1115,7 @@ ht-degree: 97%
 
 FormCalc は e フォーム中心のロジックと計算のルートを作成するための XFA 固有の言語です。FormCalculation は強力なビルド関数のセットを提供します。
 
-### FormCalc によってサポートされている関数  {#formcalc-supported-functions}
+### FormCalc によってサポートされている関数 {#formcalc-supported-functions}
 
 ### FormCalc 式のサポート {#formcalc-expression-support}
 
@@ -1163,7 +1163,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   <tr> 
    <td>for each</td> 
    <td><br type="_moz" /> </td> 
-   <td>for each i in (1, 2, 3)  <br /> do s = s + i endfor</td> 
+   <td>for each i in (1, 2, 3) <br /> do s = s + i endfor</td> 
   </tr> 
   <tr> 
    <td>関数の宣言</td> 
@@ -1173,7 +1173,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
  </tbody> 
 </table>
 
-### Acrobat API のサポート  {#acrobat-api-support}
+### Acrobat API のサポート {#acrobat-api-support}
 
 1. **演算関数**
 
@@ -1328,7 +1328,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   <tr> 
    <td>app.formsVersion</td> 
    <td>ビューアフォームソフトウェアのバージョン番号。スクリプトで下位互換性を保つ場合、このプロパティを確認して、ソフトウェアの新しいバージョンにあるオブジェクト、プロパティ、またはメソッドが使用できるかどうかを特定します。</td> 
-   <td>11.001は常に。</td> 
+   <td>常に 11.001 です。</td> 
   </tr> 
   <tr> 
    <td>app.language</td> 
@@ -1338,15 +1338,15 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
  </tbody> 
 </table>
 
-## サポートされる XFA イベント  {#supported-xfa-events}
+## サポートされる XFA イベント {#supported-xfa-events}
 
 次のクライアント側の XFA イベントがサポートされていません。
 
 * Initialize
-* Validate
+* Validate（検証）
 * Calculate
 * クリック
-* Enter
+*  と入力します。
 * Exit
 * 変更点
 * ValidationState

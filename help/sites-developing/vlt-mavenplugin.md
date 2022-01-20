@@ -19,8 +19,8 @@ ht-degree: 35%
 >
 >詳しくは、以下を参照してください。
 >
->* AEMアプリケーションのデプロイ方法に関するAEMas a Cloud Serviceドキュメントの [Adobeコンテンツパッケージ Maven プラグイン ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html#developer-tools) の記事。
->* 最新のAEMプロジェクトの構築方法に関するAEMas a Cloud Serviceドキュメントの [AEM Project Structure](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) 記事。
->* アーキタイプを使用して新しいAEMプロジェクトを開始する方法については、[AEM Project Archetype](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html) のドキュメントを参照してください。
+>* この [Adobeコンテンツパッケージ Maven プラグイン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html#developer-tools) AEMアプリケーションのデプロイ方法に関するAEMas a Cloud Serviceドキュメントの記事です。
+>* この [AEM Project Structure](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) 最新のAEMプロジェクトの構造化方法に関するAEMas a Cloud Serviceドキュメントの記事です。
+>* この [AEM Project Archetype](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html) アーキタイプを使用して新しいAEMプロジェクトを開始する方法に関するドキュメントです。
 >
 >3 つのドキュメントはすべてAEM 6.4 に適用されます。

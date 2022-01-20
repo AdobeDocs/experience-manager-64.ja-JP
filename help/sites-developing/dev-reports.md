@@ -1,8 +1,8 @@
 ---
 title: レポートの開発
-seo-title: レポートの開発
+seo-title: Developing Reports
 description: AEM には、レポートフレームワークに基づく様々な標準レポートが用意されています。
-seo-description: AEM には、レポートフレームワークに基づく様々な標準レポートが用意されています。
+seo-description: AEM provides a selection of standard reports based on a reporting framework
 uuid: 1b406d15-bd77-4531-84c0-377dbff5cab2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,18 +12,18 @@ discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 exl-id: 837c79af-a50f-40bb-b60d-205e1cac3f39
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '5252'
+source-wordcount: '5238'
 ht-degree: 48%
 
 ---
 
 # レポートの開発{#developing-reports}
 
-AEMは、[標準のレポート](/help/sites-administering/reporting.md)を選択できます。そのほとんどはレポートフレームワークに基づいています。
+AEMは、 [標準レポート](/help/sites-administering/reporting.md) そのほとんどはレポートフレームワークに基づいています。
 
-このフレームワークを使用して、これらの標準レポートを拡張することも、まったく新規のレポートを独自に開発することもできます。レポートフレームワークは、既存のCQ5の概念や原則と緊密に統合され、開発者は、CQ5に関する既存の知識をレポート開発の出発点として使用できます。
+このフレームワークを使用して、これらの標準レポートを拡張することも、まったく新規のレポートを独自に開発することもできます。レポートフレームワークは、既存の CQ5 の概念や原則と緊密に統合されているので、開発者は、CQ5 に関する既存の知識を、レポートの開発の出発点として使用できます。
 
-AEMで提供される標準レポートの場合：
+AEMで配信される標準レポートの場合：
 
 * これらのレポートは、次のレポートフレームワークに基づいて構築されます。
 
@@ -48,38 +48,30 @@ AEMで提供される標準レポートの場合：
 >
 >以下の例と定義では、次の表記が使用されています。
 >
->* 各行は、次の場合にノードまたはプロパティを定義します。
-   >
-   >  
-* `N:<name> [<nodeType>]`
+>* 各行は、次の場所にあるノードまたはプロパティを定義します。
+>
+>  * `N:<name> [<nodeType>]`
+
    > 
-   >     
-   名前が`<*name*>`、ノードタイプが&#x200B;`<*nodeType*>`*.*&#x200B;のノードを表します。
+   >     という名前のノードを表します。 `<*name*>` およびのノードタイプ `<*nodeType*>`*.*
+>
+>  * `P:<name> [<propertyType]`
    >
-   >  
-* `P:<name> [<propertyType]`
+   >     という名前のプロパティを記述します。 `<*name*>` およびのプロパティタイプ `<*propertyType*>`.
+>
+>  * `P:<name> = <value>`
    >
-   >     
-   名前が`<*name*>`で、プロパティタイプが`<*propertyType*>`のプロパティについて説明します。
-   >
-   >  
-* `P:<name> = <value>`
-   >
-   >     
-   `<value>`の値に設定する必要があるプロパティ`<name>`について説明します。
-   >
-   >
-* インデントは、ノード間の階層的依存関係を示します。
->* 次で区切られた項目 |は、指定可能な項目のリストを示します。例：タイプまたは名前：
+   >     プロパティを記述します `<name>` を `<value>`.
+>
+>* インデントは、ノード間の階層的依存関係を示します。
+>* 次で区切られた項目 |は可能な項目のリストを示します。例えば、型や名前は次のようになります。
 
 >
->  
-例：`String|String[]`は、プロパティがStringまたはString[]であることを意味します。
+>  例： `String|String[]` は、プロパティが String または String のいずれかであることを示します。[].
 >
->* `[]` 配列を描く例えば、[] クエリ定義 [の文字列やノードの配](#query-definition)列などです。
+>* `[]` は配列を示し、例：文字列[] または、 [クエリ定義](#query-definition).
 >
->
-特に指定のない限り、デフォルトのタイプは次のとおりです。
+>特に指定のない限り、デフォルトのタイプは次のようになります。
 >
 >* ノード数 - `nt:unstructured`
 >* プロパティ - `String`
@@ -91,12 +83,12 @@ AEMで提供される標準レポートの場合：
 
 * CQ5 QueryBuilder が実行するクエリによって返される結果セットに、完全に基づいています。
 * 結果セットは、レポートに表示するデータを定義します。 結果セットの各行は、レポートの表形式ビューの行に対応します。
-* 結果セットに対して実行できる操作は、RDBMSの概念と似ています。主に&#x200B;*グループ化*&#x200B;と&#x200B;*集計*&#x200B;です。
+* 結果セットの実行に使用できる操作は、RDBMS の概念に似ています。主に *グループ化* および *集計*.
 
 * データの取得と処理は、ほとんどサーバー側でおこなわれます。
-* クライアントは、事前処理されたデータの表示のみを担当します。 処理タスク（セルコンテンツ内のリンクの作成など）が軽微な場合にのみ実行されます。
+* クライアントは、事前に処理されたデータの表示のみをおこないます。 小規模な処理タスク（セルコンテンツ内のリンクの作成など）のみがクライアント側で実行されます。
 
-レポートフレームワーク（標準レポートの構造で示される）は、処理キューによって供給される次の構成要素を使用します。
+レポートフレームワーク（標準レポートの構造で示される）は、次の構成要素を使用し、処理キューによって送信されます。
 
 ![chlimage_1-248](assets/chlimage_1-248.png)
 
@@ -104,34 +96,34 @@ AEMで提供される標準レポートの場合：
 
 レポートページ：
 
-* 標準のCQ5ページです。
+* 標準の CQ5 ページです。
 * [レポート用に設定された CQ5 の標準テンプレート](#report-template)に基づいています。
 
-### レポートベース  {#report-base}
+### レポートベース {#report-base}
 
 [`reportbase` コンポーネント](#report-base-component)は、次のようにすべてのレポートの基礎となるものです。
 
 * 基になる結果セットのデータを提供する[クエリ](#the-query-and-data-retrieval)の定義を保持します。
 
-* レポートに追加されたすべての列(`columnbase`)を含む、適応した段落システムです。
+* すべての列を含む、適応した段落システムです ( `columnbase`) がレポートに追加されました。
 * 使用可能なチャートタイプおよび現在アクティブなチャートタイプを定義します。
-* 編集ダイアログを定義します。このダイアログでは、ユーザーがレポートの特定の側面を設定できます。
+* 編集ダイアログを定義します。このダイアログでは、レポートの特定の側面を設定できます。
 
 ### 列ベース {#column-base}
 
-各列は、 [ `columnbase`コンポーネント](#column-base-component)のインスタンスで、次のようなものがあります。
+各列は、 [ `columnbase` コンポーネント](#column-base-component) 次の内容：
 
-* それぞれのレポートのparsys( `reportbase` )で使用される段落です。
-* [基になる結果セット](#the-query-and-data-retrieval)へのリンクを定義します。つまり、この結果セット内で参照される特定のデータと、その処理方法を定義します。
-* 追加の定義が含まれる。例えば、使用可能な集計やフィルター、およびデフォルト値です。
+* は parsys ( `reportbase`) に含まれます。
+* リンク先の [基になる結果セット](#the-query-and-data-retrieval);つまり、この結果セット内で参照される特定のデータと、その処理方法を定義します。
+* 追加の定義を保持します。例えば、使用可能な集計やフィルターをデフォルト値と共に使用できます。
 
-### クエリとデータの取得  {#the-query-and-data-retrieval}
+### クエリとデータの取得 {#the-query-and-data-retrieval}
 
 クエリの概要は次のとおりです。
 
 * [`reportbase`](#report-base) コンポーネントの一部として定義されます。
 * [CQ QueryBuilder](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/QueryBuilder.html) に基づいています。
-* レポートの基礎として使用されるデータを取得します。 結果セット（テーブル）の各行が、ノードに 1 つずつ関連付けられ、クエリから返されます。次に、[個々の列](#column-base-component)に関する特定の情報を、このデータセットから抽出します。
+* レポートの基準として使用されるデータを取得します。 結果セット（テーブル）の各行が、ノードに 1 つずつ関連付けられ、クエリから返されます。特定の情報： [個々の列](#column-base-component) がこのデータセットから抽出されます。
 
 * 通常、次のデータから構成されます。
 
@@ -147,9 +139,9 @@ AEMで提供される標準レポートの場合：
 
 **重要な点は、クエリの結果セットに返されるノードを 1 つ使用して、レポートの行が 1 つ生成される（ノードと行は 1 対 1 の関係にある）ことです。**
 
-開発者は、レポートに対して定義したクエリによって、そのレポートに適切なノードセットが返されることを確認する必要があります。ただし、ノード自体に必要な情報をすべて保持する必要はありません。親ノードや子ノードから派生させることもできます。 例えば、[ユーザーレポート](/help/sites-administering/reporting.md#user-report)で使用されるクエリでは、ノードタイプ（この場合は `rep:user`）に基づいてノードが選択されます。ただし、このレポートの列のほとんどは、これらのノードから直接データを取り出すのではなく、子ノード`profile`からデータを取り出します。
+開発者は、レポートに対して定義したクエリによって、そのレポートに適切なノードセットが返されることを確認する必要があります。ただし、ノード自体に必要な情報をすべて保持する必要はありません。親ノードや子ノードから派生させることもできます。 例えば、[ユーザーレポート](/help/sites-administering/reporting.md#user-report)で使用されるクエリでは、ノードタイプ（この場合は `rep:user`）に基づいてノードが選択されます。ただし、このレポートのほとんどの列は、これらのノードから直接データを取り出すのではなく、子ノードからデータを取り出します `profile`.
 
-### Processing Queue {#processing-queue}
+### 処理キュー {#processing-queue}
 
 [クエリ](#the-query-and-data-retrieval)によって返される結果セットのデータが、レポート上で行として表示されます。結果セットの各行は、（サーバー側の）[いくつかのフェーズ](#phases-of-the-processing-queue)で処理をおこなってから、クライアントに転送され、レポートに表示されます。
 
@@ -163,7 +155,7 @@ AEMで提供される標準レポートの場合：
 
    例えば、パスをタイトル（対応する *jcr:title* プロパティの、わかりやすいコンテンツ）にマップできます。
 
-* 様々なポイントでのフィルターの適用
+* 様々なポイントでフィルターを適用する。
 * 必要に応じて、複合値を作成します。
 
    例えば、ユーザーに表示されるテキストから、値を作成してソートに使用したり、追加の URL を作成して（クライアント側で）リンクの作成に使用したりできます。
@@ -178,9 +170,9 @@ AEMで提供される標準レポートの場合：
 
 具体的な手順と要素は次のとおりです。
 
-1. [初期クエリ(reportbase)](#query-definition)から返された結果を、値抽出を使用して基本的な結果セットに変換します。
+1. が返す結果を変換します [初期クエリ (reportbase)](#query-definition) を、値抽出を使用して基本の結果セットに追加します。
 
-   値抽出は、[列のタイプ](#column-specific-definitions)によって自動的に選択されます。値抽出を使用して、基になる JCR クエリから値を読み取り、その値から結果セットを作成し、その後の処理で適用できるようにします。例えば、`diff`型の場合、値抽出器は2つのプロパティを読み取り、1つの値を計算して結果セットに追加します。 値抽出を構成できません。
+   値抽出は、[列のタイプ](#column-specific-definitions)によって自動的に選択されます。値抽出を使用して、基になる JCR クエリから値を読み取り、その値から結果セットを作成し、その後の処理で適用できるようにします。例えば、 `diff` 値抽出では、2 つのプロパティが読み取られ、結果セットに追加される単一の値が計算されます。 値抽出を設定できません。
 
 1. 生データを含むこの初期結果セットに、[初期フィルター](#column-specific-definitions)（*raw* フェーズ）が適用されます。
 
@@ -191,38 +183,38 @@ AEMで提供される標準レポートの場合：
 1. [指定されたリゾルバー](#processing-queue)によって、値が解決されます。
 1. 解決された値に対して、[フィルタリング](#column-specific-definitions)（*resolved* フェーズに割り当てられています）が実行されます。
 
-1. データは[グループ化され、集計](#column-specific-definitions)されます。
+1. データは [グループ化および集計](#column-specific-definitions).
 1. 配列データは、 （文字列ベースの）リストに変換することで解決されます。
 
    この手順は、複数の値を持つ結果をリストに変換して表示できるようにする暗黙の手順です。複数の値を持つ JCR プロパティに基づいた（集計されていない）セル値が必要です。
 
-1. 値は再び[前処理された](#processing-queue)です。*afterApply*&#x200B;フェーズで定義されたとおりです。
+1. 値が再び [前処理済み](#processing-queue);定義された *afterApply* フェーズ。
 
 1. データが並べ替えられます。
-1. 処理されたデータはクライアントに転送される。
+1. 処理されたデータはクライアントに転送されます。
 
 >[!NOTE]
 >
 >基になるデータの結果セットを返す初期クエリは、`reportbase` コンポーネントで定義されます。
 >
->処理キューのその他の要素は、`columnbase`コンポーネントで定義されます。
+>処理キューの他の要素は、 `columnbase` コンポーネント。
 
 ## レポートの構成と設定 {#report-construction-and-configuration}
 
 レポートの構成および設定には、次の要素が必要です。
 
 * [独自のレポートコンポーネントの定義で使用する場所](#location-of-report-components)
-* a [ `reportbase`コンポーネント](#report-base-component)
+* a [ `reportbase` コンポーネント](#report-base-component)
 * 1 つ以上の [`columnbase` コンポーネント](#column-base-component)
 * [ページコンポーネント](#page-component)
 * [レポートデザイン](#report-design)
 * [レポートテンプレート](#report-template)
 
-### レポートコンポーネントの場所  {#location-of-report-components}
+### レポートコンポーネントの場所 {#location-of-report-components}
 
-デフォルトのレポートコンポーネントは`/libs/cq/reporting/components`の下に保持されます。
+デフォルトのレポートコンポーネントは、の下に保持されます。 `/libs/cq/reporting/components`.
 
-ただし、これらのノードは更新しないことを強くお勧めします。ただし、`/apps/cq/reporting/components`の下に独自のコンポーネントノードを作成するか、より適切な場合は`/apps/<yourProject>/reports/components`の下に独自のコンポーネントノードを作成します。
+ただし、これらのノードは更新しないで、以下に独自のコンポーネントノードを作成することを強くお勧めします。 `/apps/cq/reporting/components` またはより適切な場合 `/apps/<yourProject>/reports/components`.
 
 定義（例）は次のとおりです。
 
@@ -245,15 +237,15 @@ N:apps
                         N:<columnname> [cq:Component]  // column base component
 ```
 
-### ページコンポーネント {#page-component}
+### ページコンポーネント  {#page-component}
 
-レポートページでは、`/libs/cq/reporting/components/reportpage`の`sling:resourceType`を使用する必要があります。
+レポートページでは、 `sling:resourceType` / `/libs/cq/reporting/components/reportpage`.
 
 ページコンポーネントのカスタマイズは、（ほとんどの場合）必要ありません。
 
-## レポートベースコンポーネント  {#report-base-component}
+## レポートベースコンポーネント {#report-base-component}
 
-各レポートタイプには、`/libs/cq/reporting/components/reportbase`から派生したコンテナコンポーネントが必要です。
+各レポートタイプには、 `/libs/cq/reporting/components/reportbase`.
 
 このコンポーネントは、レポート全体のコンテナとして使用され、次の情報が含まれます。
 
@@ -269,7 +261,7 @@ N:<reportname> [cq:Component]
     N:queryBuilder
 ```
 
-### クエリ定義  {#query-definition}
+### クエリ定義 {#query-definition}
 
 ```xml
 N:queryBuilder
@@ -302,7 +294,7 @@ N:queryBuilder
     ]
    ```
 
-   `admin`ユーザーが最後に変更した`textimage`コンポーネントをすべて返します。
+   すべての `textimage` 最後に変更されたコンポーネント `admin` ユーザー。
 
 * `nodeTypes`
 
@@ -312,7 +304,7 @@ N:queryBuilder
 
    指定したプロパティをすべて持つノードのみを結果セットに含める場合に使用できます。**&#x200B;プロパティの値は考慮されません。
 
-すべてはオプションで、必要に応じて組み合わせることができますが、少なくとも1つを定義する必要があります。
+すべてはオプションで、必要に応じて組み合わせることができますが、少なくとも 1 つを定義する必要があります。
 
 ### チャート定義 {#chart-definitions}
 
@@ -339,21 +331,21 @@ N:charting
 
    * `active`
 
-      複数の設定を定義できるので、これを使用して現在アクティブなノードを定義できます。これらはノードの配列によって定義されます（これらのノードには必須の命名規則はありませんが、標準レポートでは通常、`0`、`1`... `x`を使用します）。各ノードには次のプロパティがあります。
+      複数の設定を定義できるので、これを使用して現在アクティブなノードを定義できます。これらはノードの配列によって定義されます ( これらのノードには必須の命名規則はありませんが、標準レポートでは通常、 `0`, `1`... `x`) に分類され、それぞれが次のプロパティを持ちます。
 
       * `id`
 
-         アクティブなグラフのID。 チャート定義（`definitions`）のいずれかのチャートの ID に一致する必要があります。
+         アクティブなグラフの ID。 チャート定義（`definitions`）のいずれかのチャートの ID に一致する必要があります。
 
 * `definitions`
 
    レポートでの使用が可能なチャートタイプを定義します。`definitions` のうち使用されるタイプが、`active` で指定されます。
 
-   定義は、ノードの配列を使用して指定します（通常は`0`、`1`... `x`という名前です）。それぞれに次のプロパティがあります。
+   定義は、ノードの配列を使用して指定します（同じ名前を付けることが多い）。 `0`, `1`... `x`) に分類され、それぞれに次のプロパティがあります。
 
    * `id`
 
-      グラフID。
+      グラフ ID。
 
    * `type`
 
@@ -364,23 +356,23 @@ N:charting
       * `lineseries`線系列（実際のスナップショットを表す点をつないだもの）履歴データからのみ生成されます。
    * グラフのタイプに応じて、追加のプロパティを使用できます。
 
-      * グラフタイプ`pie`の場合：
+      * グラフのタイプ `pie`:
 
          * `maxRadius`（`Double/Long`）
 
-            この円グラフで許容される半径の最大値、つまりこのチャートで許容される最大サイズ（凡例を使用しない場合）。`fixedRadius`が定義されている場合は無視されます。
+            この円グラフで許容される半径の最大値、つまりこのチャートで許容される最大サイズ（凡例を使用しない場合）。次の場合は無視 `fixedRadius` が定義されている。
 
          * `minRadius`（`Double/Long`）
 
-            円グラフで許容される最小半径。 `fixedRadius`が定義されている場合は無視されます。
+            円グラフに使用できる最小半径です。 次の場合は無視 `fixedRadius` が定義されている。
 
-         * `fixedRadius` (  `Double/Long`)円グラフの固定半径を定義します。
-      * グラフタイプ[`lineseries`](/help/sites-administering/reporting.md#display-limits)の場合：
+         * `fixedRadius` ( `Double/Long`) 円グラフの固定半径を定義します。
+      * グラフのタイプ [`lineseries`](/help/sites-administering/reporting.md#display-limits):
 
          * `totals`（`Boolean`）
 
-            **Total**を示す追加の行が表示される場合は、trueを指定します。
-デフォルト値: `false`
+            True を指定すると、 **合計** が表示される必要があります。
+default: `false`
 
          * `series`（`Long`）
 
@@ -389,7 +381,7 @@ N:charting
 
          * `hoverLimit`（`Long`）
 
-            ユーザーがグラフの凡例の異なる値または対応するラベルにマウスポインターを置いたときに、ポップアップを表示する集計スナップショット（各水平線に表示される点、異なる値を表す点）の最大数。
+            ポップアップを表示する最大の集計スナップショット（各水平線に表示され、個別の値を表すドット）の数。つまり、ユーザーがグラフの凡例の個別の値または対応するラベルにマウスポインターを置いたときに表示されます。
 
             デフォルト：`35`（現在のチャート設定で適用される個別の値が 35 個を超える場合は、ポップアップが表示されません）。
 
@@ -399,9 +391,9 @@ N:charting
 
 ### 設定ダイアログ {#configuration-dialog}
 
-各レポートには設定ダイアログを設定でき、ユーザーはレポートの様々なパラメーターを指定できます。 このダイアログは、レポートページが開いているときに「****&#x200B;を編集」ボタンを使用してアクセスできます。
+各レポートには設定ダイアログを設定でき、ユーザーはレポートの様々なパラメーターを指定できます。 このダイアログには、 **編集** 」ボタンをクリックします。
 
-このダイアログは、標準のCQ [dialog](/help/sites-developing/components-basics.md#dialogs)で、そのように設定できます（詳しくは、 [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)を参照してください）。
+このダイアログは標準の CQ です [ダイアログ](/help/sites-developing/components-basics.md#dialogs) また、 [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog) を参照 )。
 
 ダイアログの例を次に示します。
 
@@ -460,17 +452,17 @@ N:charting
 
    `/libs/cq/reporting/components/commons/processing`
 
-   レポートの処理モード用のセレクター（手動/自動データ読み込み）。
+   レポートの処理モード用のセレクター（手動/自動）。
 
 * **`scheduling`**
 
    `/libs/cq/reporting/components/commons/scheduling`
 
-   履歴チャートのスナップショットをスケジュールするためのセレクタ。
+   履歴グラフのスナップショットをスケジュールするためのセレクター。
 
 >[!NOTE]
 >
->参照されるコンポーネントは、`.infinity.json`サフィックスを使用して含める必要があります（上記の例を参照）。
+>参照されるコンポーネントは、 `.infinity.json` サフィックス（上記の例を参照）
 
 ### ルートパス {#root-path}
 
@@ -482,12 +474,12 @@ N:charting
 
    次の方法で指定できます。
 
-   * [レポートテンプレート](#report-template)（固定値または設定ダイアログのデフォルト値）
+   * の [レポートテンプレート](#report-template) （固定値または設定ダイアログのデフォルト値として）。
    * ユーザー（このパラメーターを使用）
 
-## 列ベースコンポーネント  {#column-base-component}
+## 列ベースコンポーネント {#column-base-component}
 
-各列タイプには、`/libs/cq/reporting/components/columnbase`から派生したコンポーネントが必要です。
+各列タイプには、 `/libs/cq/reporting/components/columnbase`.
 
 列コンポーネントは、次の組み合わせを定義します。
 
@@ -525,7 +517,7 @@ N:<columnname> [cq:Component]
 
 [新規レポートの定義](#defining-your-new-report)も参照してください。
 
-### 列固有のクエリ  {#column-specific-query}
+### 列固有のクエリ {#column-specific-query}
 
 個別の列で使用する特定のデータを（[レポートデータの結果セット](#the-query-and-data-retrieval)から）抽出する方法を定義します。
 
@@ -542,16 +534,16 @@ N:definitions
 
    セルの実値の計算に使用するプロパティを指定します。
 
-   プロパティがString[]と定義されている場合、複数のプロパティが（順に）スキャンされ、実際の値が見つかります。
+   プロパティが String として定義されている場合[] 複数のプロパティが（順に）スキャンされ、実際の値が見つかります。
 
-   例えば、次の場合、
+   例えば、次の場合です。
 
    `property = [ "jcr:lastModified", "jcr:created" ]`
 
-   対応する値抽出（ここで制御）は、次のようになります。
+   対応する値抽出（ここで制御している）は、次のようになります。
 
    * 有効な jcr:lastModified プロパティが存在するかどうかを確認し、存在する場合はそのプロパティを使用します。
-   * 使用可能なjcr:lastModifiedプロパティがない場合は、代わりにjcr:createdの内容が使用されます。
+   * 使用可能な jcr:lastModified プロパティがない場合は、代わりに jcr:created の内容が使用されます。
 
 * `subPath`
 
@@ -565,17 +557,17 @@ N:definitions
 
 * `secondarySubPath`
 
-   subPathと同様、 `secondaryProperty`が使用される場合。
+   subPath に似ている場合、 `secondaryProperty` が使用されます。
 
 ほとんどの場合、`property` のみを使用します。
 
 ### クライアントフィルター {#client-filter}
 
-クライアントフィルタは、サーバから返されたデータから、表示する情報を抽出する。
+クライアントフィルタは、サーバから返されたデータから表示する情報を抽出する。
 
 >[!NOTE]
 >
->このフィルターは、サーバーサイドの処理全体が適用された後で、クライアントサイドで実行されます。
+>このフィルターは、サーバーサイドの処理全体が適用された後に、クライアントサイドで実行されます。
 
 ```xml
 N:definitions
@@ -585,7 +577,7 @@ N:definitions
 
 `clientFilter` は、JavaScript 関数として、次のように定義されます。
 
-* 入力として、は1つのパラメーターを受け取ります。サーバーから返されるデータ（処理が完了している）
+* 入力として、は 1 つのパラメーターを受け取ります。サーバーから返されたデータ（完全に前処理済み）
 * 出力時、フィルターを適用した後の（処理後の）値を返します。返すデータは、入力時のデータから抽出または取得したものです。
 
 次の例では、コンポーネントのパスから対応するページパスが抽出されます。
@@ -600,7 +592,7 @@ function(v) {
 }
 ```
 
-### リゾルバーと前処理  {#resolvers-and-preprocessing}
+### リゾルバーと前処理 {#resolvers-and-preprocessing}
 
 [処理キュー](#processing-queue)で様々なリゾルバーを指定し、前処理を設定します。
 
@@ -624,19 +616,19 @@ N:definitions
 
    * `default`
 
-      デフォルトのリゾルバー。 これは実際に何も解決しないダミーのリゾルバーです
+      デフォルトのリゾルバー。 これは、実際に何も解決しないダミーのリゾルバーです。
 
    * `page`
 
-      パスの値を、対応するページのパス（正確には、対応する `jcr:content` ノード）に解決します。例えば、`/content/.../page/jcr:content/par/xyz`は`/content/.../page/jcr:content`に解決されます。
+      パスの値を、対応するページのパス（正確には、対応する `jcr:content` ノード）に解決します。例： `/content/.../page/jcr:content/par/xyz` が次の値に解決されます： `/content/.../page/jcr:content`.
 
    * `path`
 
-      パスの値にオプションとしてサブパスを付加し、解決されたパスにあるノードのプロパティ（`resolverConfig` で指定）から実値を取得することで、パスの値を解決します。例えば、`path`の`/content/.../page/jcr:content`を`jcr:title`プロパティの内容に解決できる場合、ページパスはページタイトルに解決されます。
+      パスの値にオプションとしてサブパスを付加し、解決されたパスにあるノードのプロパティ（`resolverConfig` で指定）から実値を取得することで、パスの値を解決します。例： `path` / `/content/.../page/jcr:content` を `jcr:title` プロパティを使用する場合、ページパスはページタイトルに解決されます。
 
    * `pathextension`
 
-      パスを先頭に付加し、解決されたパスのノードのプロパティから実値を取得することで、値を解決します。例えば、国コード`de`を言語の説明`German`に解決するために、値`de`の前に`/libs/wcm/core/resources/languages`プロパティ`language`から値を取り出すパスを付けることができます。
+      パスを先頭に付加し、解決されたパスのノードのプロパティから実値を取得することで、値を解決します。例：値 `de` 次のような経路の前に `/libs/wcm/core/resources/languages`（プロパティから値を取得） `language`（国コードを解決する場合） `de` 言語の説明に `German`.
 
 * `resolverConfig`
 
@@ -646,7 +638,7 @@ N:definitions
 
       プロパティを使用して、解決する定数を指定します。プロパティの名前で、解決する定数を指定します。プロパティの値で、解決後の値を指定します。
 
-      例えば、**名前**= `1`および&#x200B;**値** `=One`を持つプロパティは1を1に解決します。
+      例えば、 **名前**= `1` および **値** `=One` は 1 を 1 に解決します。
 
    * `default`
 
@@ -656,12 +648,12 @@ N:definitions
 
       *  (オプション)`propertyName`
 
-         値の解決に使用するプロパティの名前を指定します。指定しなかった場合は、デフォルト値の&#x200B;*jcr:title*（ページタイトル）が使用されます。`page`リゾルバーの場合、つまり、最初にパスがページパスに解決され、次にページタイトルに解決されます。
+         値の解決に使用するプロパティの名前を指定します。指定しない場合、 *jcr:title* （ページタイトル）が使用されます。の `page` つまり、パスが最初にページパスに解決され、次にページタイトルに解決されます。
    * `path`
 
       *  (オプション)`propertyName`
 
-         値の解決に使用するプロパティの名前を指定します。指定しなかった場合は、デフォルト値の`jcr:title`が使用されます。
+         値の解決に使用するプロパティの名前を指定します。指定しない場合、 `jcr:title` が使用されます。
 
       *  (オプション)`subPath`
 
@@ -678,13 +670,13 @@ N:definitions
 
       * `i18n` （オプション）type Boolean)
 
-         解決された値を&#x200B;*国際化*&#x200B;する（[CQ5の国際化サービス](/help/sites-administering/tc-manage.md)を使用する）かどうかを指定します。
+         解決された値が *国際化* ( 例： [CQ5 の国際化サービス](/help/sites-administering/tc-manage.md)) をクリックします。
 
 
 
 * `preprocessing`
 
-   前処理はオプションで、処理フェーズ&#x200B;*apply*&#x200B;または&#x200B;*applyAfter*&#x200B;に（別々に）バインドできます。
+   前処理はオプションで、処理フェーズに（別々に）結び付けることができます *適用* または *applyAfter*:
 
    * `apply`
 
@@ -696,13 +688,13 @@ N:definitions
 
 #### リゾルバー {#resolvers}
 
-リゾルバーは、必要な情報を抽出するために使用されます。 様々なリゾルバーの例を次に示します。
+リゾルバーを使用して、必要な情報を抽出します。 様々なリゾルバーの例を次に示します。
 
 **定数**
 
-次の式は、`VersionCreated`のcontant値を文字列`New version created`に解決します。
+次のコードを実行すると、 `VersionCreated` 文字列に `New version created`.
 
-`/libs/cq/reporting/components/auditreport/typecol/definitions/data` を参照してください。
+参照先 `/libs/cq/reporting/components/auditreport/typecol/definitions/data`.
 
 ```xml
 N:data
@@ -713,9 +705,9 @@ N:data
 
 **ページ**
 
-パス値を、対応するページのjcr:content（子）ノードのjcr:descriptionプロパティに解決します。
+パス値を、対応するページの jcr:content（子）ノードの jcr:description プロパティに解決します。
 
-`/libs/cq/reporting/components/compreport/pagecol/definitions/data` を参照してください。
+参照先 `/libs/cq/reporting/components/compreport/pagecol/definitions/data`.
 
 ```xml
 N:data
@@ -726,9 +718,9 @@ N:data
 
 **パス**
 
-次の例では、`/content/.../page`のパスを`jcr:title`プロパティのコンテンツに解決します。これは、ページパスがページタイトルに解決されることを意味します。
+以下は、 `/content/.../page` を `jcr:title` プロパティを使用する場合、ページパスはページタイトルに解決されます。
 
-`/libs/cq/reporting/components/auditreport/pagecol/definitions/data` を参照してください。
+参照先 `/libs/cq/reporting/components/auditreport/pagecol/definitions/data`.
 
 ```xml
 N:data
@@ -740,9 +732,9 @@ N:data
 
 **パス拡張**
 
-次のコードは、パス拡張子`/libs/wcm/core/resources/languages`の値`de`の前に追加し、プロパティ`language`から値を取得して、国コード`de`を言語の説明`German`に解決します。
+次のコードでは、値の前に `de` パスの拡張子を持つ `/libs/wcm/core/resources/languages`を呼び出し、プロパティから値を取得します。 `language`（国コードを解決する場合） `de` 言語の説明に `German`.
 
-`/libs/cq/reporting/components/userreport/languagecol/definitions/data` を参照してください。
+参照先 `/libs/cq/reporting/components/userreport/languagecol/definitions/data`.
 
 ```xml
 N:data
@@ -758,13 +750,13 @@ N:data
 
 * 元の値：
 
-   元の値の前処理定義は、`apply`や`applyAfter`で直接指定します。
+   元の値の前処理の定義をに指定します。 `apply` および/または `applyAfter` 直接
 
-* 値の集計：
+* 値の集計状態：
 
    必要に応じて、集計ごとに個別の定義を指定できます。
 
-   集計値の前処理を明示的に指定するには、前処理の定義をそれぞれの`aggregated`子ノード(`apply/aggregated`、`applyAfter/aggregated`)に配置する必要があります。 個別の集計に対して、前処理を明示的に指定する必要がある場合は、各集計の名前が付いた子ノード（例えば `apply/aggregated/min/max` などの集計）で前処理の定義をおこなう必要があります。
+   集計値の前処理を明示的に指定するには、前処理の定義をそれぞれの `aggregated` 子ノード ( `apply/aggregated`, `applyAfter/aggregated`) をクリックします。 個別の集計に対して、前処理を明示的に指定する必要がある場合は、各集計の名前が付いた子ノード（例えば `apply/aggregated/min/max` などの集計）で前処理の定義をおこなう必要があります。
 
 前処理中に使用する次のいずれかを指定できます。
 
@@ -772,7 +764,7 @@ N:data
 
 * [データタイプフォーマッター](#preprocessing-data-type-formatters)
 
-   数値を相対文字列に変換します。例えば、1時間の時間差を表す値「」は、`1:24PM (1 hour ago)`などの文字列に解決されます。
+   数値を相対文字列に変換します。例えば、1 時間の時間差を表す値「」は、 `1:24PM (1 hour ago)`.
 
 次に例を示します。
 
@@ -787,9 +779,9 @@ N:definitions
                 P:format          // data type formatter
 ```
 
-#### 前処理 - パターンの検索と置換  {#preprocessing-find-and-replace-patterns}
+#### 前処理 - パターンの検索と置換 {#preprocessing-find-and-replace-patterns}
 
-前処理の場合は、 `pattern` （[正規表現](https://en.wikipedia.org/wiki/Regular_expression)または正規表現として定義）を指定し、 `replace`パターンで置き換えます。
+前処理の場合は、 `pattern` ( [正規表現](https://en.wikipedia.org/wiki/Regular_expression) または正規表現 ) を検索し、 `replace` パターン：
 
 * `pattern`
 
@@ -799,25 +791,25 @@ N:definitions
 
    元の文字列の置き換えに使用する文字列、または文字列の表現。通常、`pattern` の正規表現によって検索される文字列のサブ文字列を示します。
 
-置換の例を次のように分類できます。
+置き換え例を次のように分類できます。
 
-* 次の2つのプロパティを持つノード`definitions/data/preprocessing/apply`の場合：
+* ノードの `definitions/data/preprocessing/apply` を次の 2 つのプロパティと共に使用します。
 
    * `pattern`: `(.*)(/jcr:content)(/|$)(.*)`
-   * `replace`:  `$1`
+   * `replace`: `$1`
 
 * 次のような文字列が検索されます。
 
    * `/content/geometrixx/en/services/jcr:content/par/text`
 
-* 次の4つのセクションに分類されます。
+* 次の 4 つのセクションに分類されます。
 
-   * `$1` -  `(.*)` -  `/content/geometrixx/en/services`
-   * `$2` -  `(/jcr:content)` -  `/jcr:content`
-   * `$3` -  `(/|$)` -  `/`
-   * `$4` -  `(.*)` -  `par/text`
+   * `$1` - `(.*)` - `/content/geometrixx/en/services`
+   * `$2` - `(/jcr:content)` - `/jcr:content`
+   * `$3` - `(/|$)` - `/`
+   * `$4` - `(.*)` - `par/text`
 
-* `$1`で表される文字列に置き換えます。
+* で表される文字列に置き換えられます。 `$1`:
 
    * `/content/geometrixx/en/services`
 
@@ -825,7 +817,7 @@ N:definitions
 
 これらのフォーマッタは、数値を相対文字列に変換します。
 
-例えば、`min`、`avg`および`max`の集計を許可する時間列に使用できます。 `min`/ `avg`/ `max`集計は&#x200B;*時間差*&#x200B;として表示されます(例：`10 days ago`)の場合は、データフォーマッタが必要です。 この場合、`datedelta`フォーマッタは`min`/`avg`/`max`集計値に適用されます。 `count`集計も使用可能な場合は、元の値もフォーマッターは必要ありません。
+例えば、これを `min`, `avg` および `max` 集計。 形式 `min`/ `avg`/ `max` 集計は *時間差* ( 例： `10 days ago`) の場合は、データフォーマッターが必要です。 この場合、 `datedelta` フォーマッタが `min`/ `avg`/ `max` 集計値。 次の場合、 `count` また、元の値も含まず、フォーマッタも必要なく、集計を使用することもできます。
 
 現在使用可能なデータ型フォーマッターは次のとおりです。
 
@@ -835,9 +827,9 @@ N:definitions
 
    * `duration`
 
-      期間は、2つの定義済み日付の間の期間です。 例えば、ワークフローアクションの開始から終了までの時間を 1 時間とした場合、開始を 2011 年 2 月 13 日 11 時 23 分とすると、終了は 1 時間後の 2011 年 2 月 13 日 12 時 23 分となります。
+      期間は、2 つの定義された日付の間の期間です。 例えば、ワークフローアクションの開始から終了までの時間を 1 時間とした場合、開始を 2011 年 2 月 13 日 11 時 23 分とすると、終了は 1 時間後の 2011 年 2 月 13 日 12 時 23 分となります。
 
-      数値（ミリ秒と解釈）を期間文字列に変換します。例えば、`30000`は* `30s`.*という形式で記述します。
+      数値（ミリ秒と解釈）を期間文字列に変換します。例： `30000` は*の形式で指定します `30s`.*
 
    * `datedelta`
 
@@ -845,7 +837,7 @@ N:definitions
 
       数値（日単位の時間差として解釈）が、対応する日付の文字列に変換されます。例えば、1 という値は 1 日前にフォーマットされます。
 
-次の例では、`min`集計と`max`集計の`datedelta`書式を定義します。
+次の例は、 `datedelta` フォーマット `min` および `max` 集計：
 
 ```xml
 N:definitions
@@ -898,22 +890,22 @@ N:definitions
    * `sortable`
 
       異なる値（異なるプロパティの値）を使用してソートし、表示できる値に適用します。
-   それに加えて. 上記のいずれかを複数の値として定義できます。例えば、`string[]`は文字列の配列を定義します。
+   それに加えて. 上記のいずれかを複数の値として定義できます。例： `string[]` 文字列の配列を定義します。
 
-   値抽出は、列のタイプによって選択されます。値抽出が列の型に対して使用可能な場合は、この抽出が使用されます。 それ以外の場合は、デフォルト値抽出が使用されます。
+   値抽出は、列のタイプによって選択されます。値抽出が列のタイプに対して使用可能な場合は、この抽出が使用されます。 それ以外の場合は、デフォルト値抽出が使用されます。
 
-   タイプには、（オプションとして）パラメーターを指定できます。例えば、`timeslot:year`は日付フィールドから年を抽出します。 パラメーターを使用して型を指定します。
+   タイプには、（オプションとして）パラメーターを指定できます。例： `timeslot:year` 日付フィールドから年を抽出します。 タイプとそのパラメーター：
 
-   * `timeslot`  — 値は、対応する定数と比較できま `java.utils.Calendar`す。
+   * `timeslot`  — 値は、 `java.utils.Calendar`.
 
       * `timeslot:year` - `Calendar.YEAR`
-      * `timeslot:month-of-year` -  `Calendar.MONTH`
-      * `timeslot:week-of-year` -  `Calendar.WEEK_OF_YEAR`
-      * `timeslot:day-of-month` -  `Calendar.DAY_OF_MONTH`
-      * `timeslot:day-of-week` -  `Calendar.DAY_OF_WEEK`
-      * `timeslot:day-of-year` -  `Calendar.DAY_OF_YEAR`
-      * `timeslot:hour-of-day` -  `Calendar.HOUR_OF_DAY`
-      * `timeslot:minute-of-hour` -  `Calendar.MINUTE`
+      * `timeslot:month-of-year` - `Calendar.MONTH`
+      * `timeslot:week-of-year` - `Calendar.WEEK_OF_YEAR`
+      * `timeslot:day-of-month` - `Calendar.DAY_OF_MONTH`
+      * `timeslot:day-of-week` - `Calendar.DAY_OF_WEEK`
+      * `timeslot:day-of-year` - `Calendar.DAY_OF_YEAR`
+      * `timeslot:hour-of-day` - `Calendar.HOUR_OF_DAY`
+      * `timeslot:minute-of-hour` - `Calendar.MINUTE`
 
 
 * `groupable`
@@ -986,7 +978,7 @@ N:definitions
 
       * `sum`
 
-         すべての値の合計を返します。
+         すべての値の合計を提供します。
 
       * `median`
 
@@ -1007,11 +999,11 @@ N:defaults
 
 * `aggregate`
 
-   有効な`aggregate`値は、`aggregates`の`type`と同じです( [列固有の定義（定義 — フィルター/集計）](#column-specific-definitions)を参照)。
+   有効 `aggregate` の値は、 `type` under `aggregates` ( [列固有の定義（定義 — フィルター/集計）](#column-specific-definitions) ) をクリックします。
 
 ### イベントおよびアクション {#events-and-actions}
 
-編集設定を使用して、リスナーが検出する必要のあるイベントおよびそのイベント発生後に適用するアクションを定義できます。背景情報については、[コンポーネント開発の概要](/help/sites-developing/components.md)を参照してください。
+編集設定を使用して、リスナーが検出する必要のあるイベントおよびそのイベント発生後に適用するアクションを定義できます。詳しくは、 [コンポーネント開発の概要](/help/sites-developing/components.md) 」を参照してください。
 
 必要なアクションがすべて実行されるようにするには、次の値を指定します。
 
@@ -1035,11 +1027,11 @@ N:cq:editConfig [cq:EditConfig]
 
 個々の汎用コンポーネントに対して、カスタマイズした（標準）ダイアログを使用します。 このダイアログを使用して、レポートのユーザーがレポートページ上の一般列のプロパティを指定できます（「**列のプロパティ...**」のメニューオプションを使用）。
 
-例えば、**ユーザーレポート**&#x200B;の&#x200B;**一般**&#x200B;列は、`/libs/cq/reporting/components/userreport/genericcol`を参照してください。
+例えば、 **汎用** 列 **ユーザーレポート**;参照 `/libs/cq/reporting/components/userreport/genericcol`.
 
 列を汎用にするには：
 
-* 列の`definition`ノードの`type`プロパティを`generic`に設定します。
+* を `type` 列の `definition` ノードから `generic`.
 
    参照先 `/libs/cq/reporting/components/userreport/genericcol/definitions`
 
@@ -1049,7 +1041,7 @@ N:cq:editConfig [cq:EditConfig]
 
    * ダイアログのフィールドが、対応するコンポーネントプロパティと同じ名前（パスを含む）を参照する必要があります。
 
-      例えば、汎用列のタイプをダイアログで設定できるようにする場合は、`./definitions/type`という名前のフィールドを使用します。
+      例えば、汎用列のタイプをダイアログで設定できるようにする場合は、「 `./definitions/type`.
 
    * UI（ダイアログ）を使用して指定されるプロパティは、`columnbase` コンポーネントで指定されるプロパティより優先されます。
 
@@ -1067,8 +1059,8 @@ N:cq:editConfig [cq:EditConfig]
    * `definitions/aggregates`  — 集計
    * `definitions/filters` - filters
    * `definitions/type` — 列のタイプ（セレクター/コンボボックスまたは非表示のフィールドを使用して、ダイアログで定義する必要があります）
-   * `definitions/data/resolver` と( `definitions/data/resolverConfig` ただし、または `definitions/data/preprocessing` ではな `.../clientFilter`い) — リゾルバーと設定
-   * `definitions/queryBuilder` - query builderの設定
+   * `definitions/data/resolver` および `definitions/data/resolverConfig` ( ただし、 `definitions/data/preprocessing` または `.../clientFilter`) — リゾルバーと設定
+   * `definitions/queryBuilder`  — クエリビルダーの設定
    * `defaults/aggregate`  — デフォルトの集計
 
    「**ユーザーレポート**」の一般列に新しいインスタンスを作成した場合、ダイアログで指定されるプロパティは次の場所に保持されます。
@@ -1081,15 +1073,15 @@ N:cq:editConfig [cq:EditConfig]
 
 各レポートに個別のデザインを作成することを強くお勧めします。 これにより、完全な柔軟性が確保されます。 [新規レポートの定義](#defining-your-new-report)も参照してください。
 
-デフォルトのレポートコンポーネントは`/etc/designs/reports`の下に保持されます。
+デフォルトのレポートコンポーネントは、の下に保持されます。 `/etc/designs/reports`.
 
 レポートの格納場所は、独自のコンポーネントを配置した場所によって次のいずれかになります。
 
-* `/etc/designs/reports/<yourReport>` は、レポートが  `/apps/cq/reporting`
+* `/etc/designs/reports/<yourReport>` は、レポートが `/apps/cq/reporting`
 
-* `/etc/designs/<yourProject>/reports/<*yourReport*>` (パターンを使用したレポ `/apps/<yourProject>/reports` ート)
+* `/etc/designs/<yourProject>/reports/<*yourReport*>` を使用してレポートを作成する `/apps/<yourProject>/reports` pattern
 
-必要なデザインプロパティは、`jcr:content/reportpage/report/columns`に登録されます（例：`/etc/designs/reports/<reportName>/jcr:content/reportpage/report/columns`）。
+必要なデザインプロパティは、に登録されます。 `jcr:content/reportpage/report/columns` ( 例： `/etc/designs/reports/<reportName>/jcr:content/reportpage/report/columns`):
 
 * `components`
 
@@ -1097,7 +1089,7 @@ N:cq:editConfig [cq:EditConfig]
 
 * `sling:resourceType`
 
-   値が`cq/reporting/components/repparsys`のプロパティ。
+   プロパティと値 `cq/reporting/components/repparsys`.
 
 （コンポーネントレポートのデザインから取得した）デザインスニペットの例を次に示します。
 
@@ -1129,20 +1121,20 @@ N:cq:editConfig [cq:EditConfig]
 
 >[!NOTE]
 >
->レポートの作成時に、デフォルトの列を自動的に作成できます。 これらは、テンプレートで指定されます。
+>レポートの作成時に、デフォルトの列を自動的に作成できます。 これらはテンプレートで指定されます。
 
-## レポートテンプレート  {#report-template}
+## レポートテンプレート {#report-template}
 
-各レポートタイプは、テンプレートを提供する必要があります。 これらは標準の[CQテンプレート](/help/sites-developing/templates.md)であり、そのように設定できます。
+各レポートタイプは、テンプレートを提供する必要があります。 これらは標準です [CQ テンプレート](/help/sites-developing/templates.md) また、そのように設定できます。
 
-テンプレートは次の要件を満たす必要があります。
+テンプレートは次の条件を満たす必要があります。
 
-* `sling:resourceType`を`cq/reporting/components/reportpage`に設定します。
+* 設定 `sling:resourceType` から `cq/reporting/components/reportpage`
 
 * 使用するデザインを示す
-* `sling:resourceType`プロパティを使用してコンテナ(`reportbase`)コンポーネントを参照する`report`子ノードを作成します。
+* を作成する `report` コンテナ ( `reportbase`) コンポーネントを `sling:resourceType` プロパティ
 
-（コンポーネントレポートテンプレートから取得した）テンプレートスニペットの例を次に示します。
+（コンポーネントレポートテンプレートから取得される）テンプレートスニペットの例を次に示します。
 
 ```xml
 <!-- ... -->
@@ -1173,9 +1165,9 @@ N:cq:editConfig [cq:EditConfig]
 <!-- .. -->
 ```
 
-デフォルトのレポートテンプレートは`/libs/cq/reporting/templates`の下に保持されます。
+デフォルトのレポートテンプレートは、の下に保持されます。 `/libs/cq/reporting/templates`.
 
-ただし、これらのノードは更新しないことを強くお勧めします。ただし、`/apps/cq/reporting/templates`の下に独自のコンポーネントノードを作成するか、より適切な場合は`/apps/<yourProject>/reports/templates`の下に独自のコンポーネントノードを作成します。
+ただし、これらのノードは更新しないで、以下に独自のコンポーネントノードを作成することを強くお勧めします。 `/apps/cq/reporting/templates` またはより適切な場合 `/apps/<yourProject>/reports/templates`.
 
 定義例は次のとおりです（[レポートコンポーネントの場所](#location-of-report-components)も参照）。
 
@@ -1209,7 +1201,7 @@ N:apps
 1. レポートテンプレートのルート
 1. レポートテンプレート
 
-これらの手順を説明するために、次の例では、リポジトリ内のすべてのOSGi設定をリストするレポートを定義しています。つまり、`sling:OsgiConfig`ノードのすべてのインスタンスです。
+これらの手順を説明するために、次の例では、リポジトリ内のすべての OSGi 設定をリストするレポートを定義します。つまり、 `sling:OsgiConfig` ノード。
 
 >[!NOTE]
 >
@@ -1217,7 +1209,7 @@ N:apps
 
 1. 新しいレポートのルートノードを作成します。
 
-   例えば、`/apps/cq/reporting/components/osgireport`の下に。
+   例えば、次の場所に `/apps/cq/reporting/components/osgireport`.
 
    ```xml
    N:cq [nt:folder]
@@ -1226,7 +1218,7 @@ N:apps
                N:osgireport [sling:Folder]
    ```
 
-1. レポートベースを定義します。例えば、`/apps/cq/reporting/components/osgireport`の下に`osgireport[cq:Component]`を配置します。
+1. レポートベースを定義します。例： `osgireport[cq:Component]` under `/apps/cq/reporting/components/osgireport`.
 
    ```xml
    N:osgireport [sling:Folder]
@@ -1274,11 +1266,11 @@ N:apps
 
    これは、次のようなレポートベースコンポーネントを定義します。
 
-   * `sling:OsgiConfig`型のすべてのノードを検索
-   * `pie`グラフと`lineseries`グラフの両方を表示します。
+   * タイプのすべてのノードを検索 `sling:OsgiConfig`
+   * 次の両方を表示 `pie` および `lineseries` グラフ
    * ユーザーがレポート設定できるダイアログを提供する
 
-1. 最初の列（columnbase）コンポーネントを定義します。例えば、`/apps/cq/reporting/components/osgireport`の下に`bundlecol[cq:Component]`を配置します。
+1. 最初の列（columnbase）コンポーネントを定義します。例： `bundlecol[cq:Component]` under `/apps/cq/reporting/components/osgireport`.
 
    ```xml
    N:osgireport [sling:Folder]
@@ -1306,29 +1298,29 @@ N:apps
                    P:property [String] = "jcr:path"
    ```
 
-   次のような列ベースコンポーネントを定義します。
+   これは、次のような列の基本コンポーネントを定義します。
 
    * サーバーから受信する値（この場合、`jcr:path` の各ノードの `sling:OsgiConfig` プロパティ）を検索し、その値を返す
-   * `count`集計を提供します。
+   * には `count` 集計
    * グループ化はできない
    * タイトル（テーブル内の列タイトル）は `Bundle`
-   * サイドキックグループ`OSGi Report`にあります。
+   * サイドキックグループ内にある `OSGi Report`
    * 指定のイベントで更新される
 
    >[!NOTE]
    >
-   >この例では、`N:data`と`P:clientFilter`の定義はありません。 これは、サーバーから受け取った値が1:1単位で返されるためです。これはデフォルトの動作です。
+   >この例では、 `N:data` および `P:clientFilter`. これは、サーバーから受け取った値が 1:1 単位で返されるためです。これはデフォルトの動作です。
    >
-   >これは定義と同じです。
+   >これは、定義と同じです。
    >
    >
    ```
    >N:data [nt:unstructured]
    >   P:clientFilter [String] = "function(v) { return v; }"
    >```
-   >関数は、受け取った値を返すだけです。
+   >この関数は、受け取った値を返すだけです。
 
-1. レポートデザインを定義します。例えば、`/etc/designs/reports`の下に`osgireport[cq:Page]`を配置します。
+1. レポートデザインを定義します。例： `osgireport[cq:Page]` under `/etc/designs/reports`.
 
    ```xml
    N:osgireport [cq:Page]
@@ -1344,7 +1336,7 @@ N:apps
 
 1. 新しいレポートテンプレートのルートノードを作成します。
 
-   例えば、`/apps/cq/reporting/templates/osgireport`の下に。
+   例えば、次の場所に `/apps/cq/reporting/templates/osgireport`.
 
    ```xml
    N:cq [nt:folder]
@@ -1353,7 +1345,7 @@ N:apps
                N:osgireport [cq:Template]
    ```
 
-1. レポートテンプレートを定義します。例えば、`/apps/cq/reporting/templates`の下に`osgireport[cq:Template]`を配置します。
+1. レポートテンプレートを定義します。例： `osgireport[cq:Template]` under `/apps/cq/reporting/templates`.
 
    ```xml
    N:osgireport [cq:Template]
@@ -1371,9 +1363,9 @@ N:apps
        N:thumbnail.png [nt:file]
    ```
 
-   これにより、次のようなテンプレートが定義されます。
+   これは、次のようなテンプレートを定義します。
 
-   * 結果のレポートの`allowedPaths`を定義します。上記の場合は`/etc/reports`の下の任意の場所に配置します。
+   * は、 `allowedPaths` 結果のレポートの場合 — 上記の場合は、 `/etc/reports`
    * テンプレートのタイトルと説明を指定する
    * テンプレートリストで使用するサムネール画像を指定する（このノードの詳細な定義は表示していません。既存のレポートから thumbnail.png のインスタンスをコピーするのが最も簡単な方法です）。
 
@@ -1384,13 +1376,13 @@ N:apps
 1. **ツール**&#x200B;コンソールを開きます。
 
 1. 左側のウィンドウで、「**レポート**」を選択します。
-1. **新規…**&#x200B;をツールバーから開きます。 **タイトル**&#x200B;と&#x200B;**名前**&#x200B;を定義し、新しいレポートタイプ（**OSGiレポートテンプレート**）をテンプレートのリストから選択して、「**作成**」をクリックします。
+1. 次に、 **新規…** をクリックします。 を定義 **タイトル** および **名前**」で、新しいレポートタイプ ( **OSGi レポートテンプレート**) をクリックし、 **作成**.
 1. 新しいレポートインスタンスがリストに表示されます。 ダブルクリックして開きます。
 1. サイドキックからコンポーネント（この例では、「**OSGi Report**」グループの「**バンドル**」）をドラッグして最初の列を作成し、[レポートの定義を開始](/help/sites-administering/reporting.md#the-basics-of-report-customization)します。
 
    >[!NOTE]
    >
-   >この例ではグループ化可能な列がないので、グラフは使用できません。 グラフを表示するには、`groupable`を`true`に設定します。
+   >この例では、グループ化可能な列がないので、グラフは使用できません。 グラフを表示するには、 `groupable` から `true`:
    >
    >
    ```
@@ -1404,19 +1396,19 @@ N:apps
 
 この節では、レポートフレームワークの実装に使用する OSGi サービスの高度な設定オプションについて説明します。
 
-これらは、Webコンソールの設定メニュー（`http://localhost:4502/system/console/configMgr`など）を使用して表示できます。 AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+これらは、Web コンソールの設定メニュー ( 例えば、 `http://localhost:4502/system/console/configMgr`) をクリックします。 AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
-### 基本サービス（Day CQ レポート設定）  {#basic-service-day-cq-reporting-configuration}
+### 基本サービス（Day CQ レポート設定） {#basic-service-day-cq-reporting-configuration}
 
-* **** Timezoneは、タイムゾーン履歴データの作成対象となるタイムゾーンを定義します。これは、履歴グラフに世界中の各ユーザーの同じデータが表示されるようにするためです。
-* **** Localeは、履歴データに対してタイムゾーンと組み合わせて使用す **** るロケールを定義します。ロケールは、ロケール固有のカレンダー設定の一部（例えば、週の最初の日が日曜日か月曜日か）を決定するために使用されます。
+* **タイムゾーン** は、に対するタイムゾーン履歴データの作成を定義します。 これは、過去のグラフで、世界中の各ユーザーの同じデータが確実に表示されるようにするためです。
+* **ロケール** は、 **タイムゾーン** 履歴データに対して。 ロケールは、ロケール固有のカレンダー設定（週の最初の曜日が日曜日か月曜日かなど）を決定するために使用されます。
 
-* **スナップシ** ョット・パスは、履歴グラフのスナップショットを保存するルート・パスを定義します。
-* **レポートへ** のパスは、レポートの場所のパスを定義します。これは、実際にスナップショットを取るレポートを決定するために、スナップショットサービスで使用されます。
-* **日別ス** ナップショットは、日別のスナップショットを取る1日の時間を定義します。指定された時間は、サーバーのローカルタイムゾーンになります。
-* **時間別ス** ナップショット：時間別スナップショットを取得する時間を1時間ごとに定義します。
-* **行数（最大）** ：各スナップショットに保存される最大行数を定義します。この値は合理的に選択する必要があります。値が大きすぎる場合は、リポジトリのサイズに影響します。値が小さすぎる場合は、履歴データの処理方法が原因で、データが正確でない可能性があります。
-* **偽のデータ**（有効な場合）は、セレクターを使用して、偽の履歴データを作成で `fakedata` きます。無効にすると、セレクターを使 `fakedata` 用して例外がスローされます。
+* **スナップショットパス** 履歴グラフのスナップショットを保存するルートパスを定義します。
+* **レポートへのパス** は、レポートの場所のパスを定義します。 これは、実際にスナップショットを作成するレポートを決定するために、スナップショットサービスで使用されます。
+* **毎日のスナップショット** は、毎日のスナップショットを取る 1 日の時間を定義します。 指定された時間は、サーバーのローカルタイムゾーンになります。
+* **時間別スナップショット** は、時間別のスナップショットを取得する時間（分）を定義します。
+* **行（最大）** は、各スナップショットに対して保存される最大行数を定義します。 この値は合理的に選択する必要があります。値が大きすぎる場合は、リポジトリのサイズに影響します。値が小さすぎる場合は、履歴データの処理方法が原因で、データが正確でない可能性があります。
+* **偽データ**&#x200B;有効にした場合、 `fakedata` セレクター；無効にした場合、 `fakedata` セレクターは例外をスローします。
 
    フェイクデータは、必ずテストおよびデバッグの用途でのみ使用してください。**
 
@@ -1428,21 +1420,19 @@ N:apps
 
    ただし、ユーザーを指定するとセキュリティリスクが高まる可能性もあります。
 
-* 「**Enforce snapshot user**」を有効にすると、すべてのスナップショットが、「Snapshot user **」で指定したユーザーを使用して取得されます。正しく処理されないと、セキュリティに重大な影響が生じる可能性があります。
+* 「**Enforce snapshot user**」を有効にすると、すべてのスナップショットが、「Snapshot user **」で指定したユーザーを使用して取得されます。正しく処理されない場合は、セキュリティに重大な影響が及ぶ可能性があります。
 
-### キャッシュ設定(Day CQ Reporting Cache) {#cache-settings-day-cq-reporting-cache}
+### キャッシュ設定（Day CQ レポートキャッシュ） {#cache-settings-day-cq-reporting-cache}
 
-* **** 「有効」を使用すると、レポートデータのキャッシュを有効または無効にできます。レポートのキャッシュを有効にすると、複数の要求がおこなわれる間、レポートデータがメモリに保持されます。これにより、パフォーマンスが向上しますが、メモリ消費が増加し、極端な状況ではメモリ不足になる場合があります。
-* **** TTLは、レポートデータをキャッシュする時間（秒）を定義します。数値を大きくするとパフォーマンスが向上しますが、期間内にデータが変更された場合は、不正確なデータが返される場合もあります。
-* **「最** 大値」では、一度にキャッシュできるレポートの最大数を定義します。
+* **有効にする** では、レポートデータのキャッシュを有効または無効にできます。 レポートのキャッシュを有効にすると、複数の要求がおこなわれる間、レポートデータがメモリに保持されます。これにより、パフォーマンスが向上しますが、メモリ消費が増加し、極端な状況ではメモリ不足に陥る場合があります。
+* **TTL** は、レポートデータがキャッシュされる時間（秒）を定義します。 数値を大きくするとパフォーマンスが向上しますが、期間内にデータが変更された場合は不正確なデータが返される場合もあります。
+* **最大エントリ数** は、一度にキャッシュできるレポートの最大数を定義します。
 
 >[!NOTE]
 >
->レポートデータは、ユーザーと言語ごとに異なる場合があります。 したがって、レポートデータは、レポート、ユーザーおよび言語ごとにキャッシュされます。 つまり、**Max entries**&#x200B;値`2`は、次のいずれかのデータを実際にキャッシュします。
+>レポートデータは、ユーザーと言語ごとに異なる場合があります。 したがって、レポートデータは、レポート、ユーザーおよび言語ごとにキャッシュされます。 これは、 **最大エントリ数** 値 `2` は、次のいずれかのデータを実際にキャッシュします。
 >
->* 言語設定が異なる2人のユーザー向けの1つのレポート
+>* 言語設定が異なる 2 人のユーザー向けの 1 つのレポート
 >* 1 人のユーザーに対し、2 つのレポート
-
 >
-
 

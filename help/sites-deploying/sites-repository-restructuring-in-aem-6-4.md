@@ -1,25 +1,25 @@
 ---
 title: AEM 6.4 における Sites リポジトリの再構築
-seo-title: AEM 6.4 における Sites リポジトリの再構築
+seo-title: Sites Repository Restructuring in AEM 6.4
 description: AEM 6.4 での Sites の新しいリポジトリ構造に移行するために、必要な変更を加える方法について説明します。
-seo-description: AEM 6.4 での Sites の新しいリポジトリ構造に移行するために、必要な変更を加える方法について説明します。
+seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.4 for Sites.
 uuid: 6dc5f8bd-1680-40af-9b8f-26c1f4bc3304
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 3eccb2d5-c325-43a6-9c03-5f93f7e30712
-feature: アップグレード
+feature: Upgrading
 exl-id: d0cdb15d-196a-44e3-bd98-91588b6979ab
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1598'
-ht-degree: 73%
+source-wordcount: '1572'
+ht-degree: 72%
 
 ---
 
 # AEM 6.4 における Sites リポジトリの再構築{#sites-repository-restructuring-in-aem}
 
-AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明したように、AEM 6.4にアップグレードする場合は、このページを使用して、AEM Sitesソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
+親の説明に従って [AEM 6.4 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md) このページでは、AEM 6.4 にアップグレードするお客様は、このページを使用して、AEM Sitesソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
 
 **6.4 へのアップグレード時におこなう変更**
 
@@ -58,16 +58,16 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
    <td><strong>再構築の手引き</strong></td> 
    <td><p>新規または変更された ContextHub セグメントが AEM で編集されるのではなく、ソース管理で編集されることを意図している場合は、それらを新しい場所に移行する必要があります。</p> 
     <ol> 
-     <li>新規または変更されたContextHubセグメントを以前の場所から適切な新しい場所(/<code>apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)にコピーします。</li> 
-     <li>以前の場所のContextHubセグメントへの参照を、新しい場所(<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)の移行済みのContextHubセグメントに更新します。</li> 
+     <li>新規または変更された ContextHub セグメントを以前の場所から適切な新しい場所 (/<code>apps</code>, <code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>)</li> 
+     <li>以前の場所の ContextHub セグメントへの参照を、移行された新しい場所の ContextHub セグメントに更新します (<code>/apps</code>, <code>/conf/global</code>, <code>/conf/&lt;tenant&gt;</code>) をクリックします。</li> 
     </ol> <p>次の QueryBuilder クエリは、以前の場所内の ContextHub セグメントへのすべての参照を探します。<br /> <br /> <code class="code">path=/content
        property=cq:segments
        property.operation=like
-       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> これは、 <a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEM QueryBuilder Debugger UIを使用して実行できます</a>。これはトラバースクエリなので、実稼動環境に対して実行しないでください。また、必要に応じてトラバーサル制限を調整してください。</p> </td> 
+       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> これは、 <a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEM QueryBuilder Debugger UI</a>. これはトラバースクエリなので、実稼動環境に対して実行しないでください。また、必要に応じてトラバーサル制限を調整してください。</p> </td> 
   </tr>
   <tr>
    <td><strong>備考</strong></td> 
-   <td><p>以前の場所に保存されている ContextHub セグメントは、<strong>AEM／パーソナライゼーション／オーディエンス</strong>に読み取り専用として表示されます。</p> <p>AEMで編集可能なContextHubセグメントは、新しい場所（<code>/conf/global</code>または<code>/conf/&lt;tenant&gt;</code>）に移行する必要があります。 AEMで作成された新しいContentHubセグメントは、新しい場所（<code>/conf/global</code>または<code>/conf/&lt;tenant&gt;</code>）に保持されます。</p> <p>AEM Sitesのページプロパティでは、以前の場所(<code>/etc</code>)または1つの新しい場所（<code>/apps</code>、<code>/conf/global</code>または<code>/conf/&lt;tenant&gt;</code>）のみを選択できるので、それに応じてContextHubセグメントを移行する必要があります。</p> <p>AEM 参照サイトからの未使用の ContextHub セグメントは削除でき、新しい場所に移行されません。</p> 
+   <td><p>以前の場所に保存されている ContextHub セグメントは、<strong>AEM／パーソナライゼーション／オーディエンス</strong>に読み取り専用として表示されます。</p> <p>AEMで ContextHub セグメントを編集可能にするには、新しい場所 (<code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>) をクリックします。 AEMで作成された新しい ContentHub セグメントは、新しい場所 (<code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>) をクリックします。</p> <p>AEM Sitesのページプロパティでは、以前の場所 (<code>/etc</code>) または単一の新しい場所 (<code>/apps</code>, <code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>) が選択されている場合は、それに応じて ContextHub セグメントを移行する必要があります。</p> <p>AEM 参照サイトからの未使用の ContextHub セグメントは削除でき、新しい場所に移行されません。</p> 
     <ul> 
      <li>/etc/segmentation/geometrixx/</li> 
      <li>/etc/segmentation/geometrixx-outdoors</li> 
@@ -76,7 +76,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-## 6.5 へのアップグレードまでにおこなう変更  {#prior-to-upgrade}
+## 6.5 へのアップグレードまでにおこなう変更 {#prior-to-upgrade}
 
 ### Adobe Analytics クライアントライブラリ {#adobe-analytics-client-libraries}
 
@@ -135,14 +135,14 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
    <td><strong>再構築の手引き</strong></td> 
    <td><p>SCM で管理されており、実行時にデザインダイアログから書き込まれていないデザインの場合：</p> 
     <ol> 
-     <li>デザインを以前の場所から新しい場所(<code>/apps</code>)にコピーします。</li> 
+     <li>以前の場所から新しい場所 (<code>/apps</code>) をクリックします。</li> 
      <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank"> を使用して、デザイン内の CSS、JavaScript、静的リソースを</a>クライアントライブラリ<code>allowProxy = true</code>に変換します。</li> 
      <li>cq:designPath プロパティの以前の場所への参照を更新します。</li> 
      <li>以前の場所を参照しているページを更新して、新規のクライアントライブラリカテゴリを使用します（これにはページ実装コードの更新が必要です）。</li> 
-     <li>AEM Dispatcherのルールを更新し、<code>/etc.clientlibs/</code>プロキシサーブレットを介したクライアントライブラリの提供を許可します。</li> 
+     <li>AEM Dispatcher のルールを更新して、 <code>/etc.clientlibs/</code> プロキシサーブレット。</li> 
     </ol> <p>SCM で管理されておらず、実行時にデザインダイアログで変更されたデザインの場合：</p> 
     <ul> 
-     <li><code>/etc</code>からオーサー可能なデザインを移動しないでください。</li> 
+     <li>次の場所からオーサー可能なデザインを移動しない <code>/etc</code>.</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -152,7 +152,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-### モバイルデバイスエミュレーター設定  {#mobile-device-emulator-configurations}
+### モバイルデバイスエミュレーター設定 {#mobile-device-emulator-configurations}
 
 <table> 
  <tbody>
@@ -168,24 +168,24 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
    <td><strong>再構築の手引き</strong></td> 
    <td>新しいモバイルデバイスエミュレーター設定は、新しい場所に移行する必要があります。
     <ol> 
-     <li>新しいモバイルデバイスエミュレーター設定を以前の場所から新しい場所(<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code>)にコピーします。</li> 
-     <li>これらのモバイルデバイスエミュレーター設定に依存するAEM Sitesページに対して、ページの<span class="code">を更新します。
+     <li>新しいモバイルデバイスエミュレーター設定を以前の場所から新しい場所 (<code>/apps</code>, <code>/conf/global</code>, <code>/conf/&lt;tenant&gt;</code>) をクリックします。</li> 
+     <li>これらのモバイルデバイスエミュレーター設定に依存するAEM Sitesページの場合、ページの <span class="code">
        <code>
         jcr
        </code>
        <code>
         :content
-       </code></span>ノード：<br /> <span class="code">[cq:Page]/jcr:content@cq:
+       </code></span> ノード： <br /> <span class="code">[cq:Page]/jcr:content@cq:
        <code>
         deviceGroups
        </code> = String[ mobile/groups/responsive ]</span></li> 
-     <li>これらのモバイルデバイスエミュレーター設定に依存する編集可能なテンプレートに対して、<span class="code">
+     <li>これらのモバイルデバイスエミュレーター設定に依存する編集可能なテンプレートに対して、編集可能なテンプレートを更新し、 <span class="code">
        <code>
         cq
        </code>:
        <code>
         deviceGroups
-       </code></span>を新しい場所に追加します。</li> 
+       </code></span> を「新しい場所」に追加します。</li> 
     </ol> </td> 
   </tr>
   <tr>
@@ -212,24 +212,24 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
   </tr>
   <tr>
    <td><strong>新しい場所</strong></td> 
-   <td><p><code>/apps/msm</code> （お客様のブループリント設定）</p> <p><code>/libs/msm</code> （Screens、Commerceの標準ブループリント設定）</p> </td> 
+   <td><p><code>/apps/msm</code> （顧客のブループリント設定）</p> <p><code>/libs/msm</code> （Screens、Commerce の標準ブループリント設定）</p> </td> 
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>新規または変更されたMulti-site Managerのブループリント設定は、新しい場所(<code>/apps</code>)に移行する必要があります。</p> 
+   <td><p>新規または変更された Multi-site Manager ブループリント設定は、新しい場所 (<code>/apps</code>) をクリックします。</p> 
     <ol> 
-     <li>新規または変更されたMulti-site Managerのブループリント設定を以前の場所から新しい場所(<code>/apps</code>)にコピーします。</li> 
+     <li>新規または変更された Multi-site Manager ブループリント設定を以前の場所から新しい場所 (<code>/apps</code>) をクリックします。</li> 
      <li>移行した Multi-site Manager のブループリント設定を以前の場所から削除します。</li> 
     </ol> </td> 
   </tr>
   <tr>
    <td><strong>備考</strong></td> 
-   <td><p>AEMが提供するMulti-site Managerのブループリント設定はすべて、<code>/libs</code>の新しい場所に存在します。</p> <p>コンテンツは Multi-site Manager のブループリント設定を参照していないため、調整するコンテンツ参照はありません。</p> </td> 
+   <td><p>Multi-site Manager で提供されるすべてのAEMのブループリント設定は、 <code>/libs</code>.</p> <p>コンテンツは Multi-site Manager のブループリント設定を参照していないため、調整するコンテンツ参照はありません。</p> </td> 
   </tr>
  </tbody>
 </table>
 
-### Multi-site Manager のロールアウト設定  {#multi-site-manager-rollout-configurations}
+### Multi-site Manager のロールアウト設定 {#multi-site-manager-rollout-configurations}
 
 <table> 
  <tbody>
@@ -245,8 +245,8 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
    <td><strong>再構築の手引き</strong></td> 
    <td><p>新規または変更された Multi-Site Manager のロールアウト設定は、新しい場所に移行する必要があります。</p> 
     <ol> 
-     <li>新規または変更されたMulti-site Managerのロールアウト設定を以前の場所から新しい場所(<code>/apps</code>)にコピーします。</li> 
-     <li>AEMページの参照を、以前の場所のMulti-site Managerロールアウト設定に更新し、新しい場所（<code>/libs</code>または<code>/apps</code>）の対応する場所を指すようにします。</li> 
+     <li>新規または変更された Multi-site Manager のロールアウト設定を以前の場所から新しい場所 (<code>/apps</code>) をクリックします。</li> 
+     <li>AEMページ上の参照を、以前の場所の Multi-site Manager ロールアウト設定に更新し、新しい場所 (<code>/libs</code> または <code>/apps</code>) をクリックします。</li> 
     </ol> <p>移行した Multi-site Manager のロールアウト設定を以前の場所から削除します。</p> </td> 
   </tr>
   <tr>
@@ -256,7 +256,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-### ページイベント通知電子メールテンプレート  {#page-event-notification-e-mail-template}
+### ページイベント通知電子メールテンプレート {#page-event-notification-e-mail-template}
 
 <table> 
  <tbody>
@@ -279,9 +279,9 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
   </tr>
   <tr>
    <td><strong>備考</strong></td> 
-   <td><p>新規または変更されたページイベント通知電子メールテンプレートは、<code>/apps</code>の下の新しい場所に移行する必要があります。</p> 
+   <td><p>新規または変更されたページイベント通知電子メールテンプレートは、以下の新しい場所に移行する必要があります。 <code>/apps</code>:</p> 
     <ol> 
-     <li>新規または変更されたページイベント通知電子メールテンプレートを以前の場所から新しい場所(<code>/apps</code>)にコピーします。</li> 
+     <li>新規または変更されたページイベント通知電子メールテンプレートを以前の場所から新しい場所 (<code>/apps</code>) をクリックします。</li> 
      <li>移行したページイベント通知電子メールテンプレートを以前の場所からすべて削除します。</li> 
     </ol> </td> 
   </tr>
@@ -317,7 +317,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-### レスポンシブグリッド LESS  {#responsive-grid-less}
+### レスポンシブグリッド LESS {#responsive-grid-less}
 
 <table> 
  <tbody>
@@ -359,14 +359,14 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
    <td><strong>再構築の手引き</strong></td> 
    <td><p>SCM で管理されており、実行時にデザインダイアログから書き込まれていないデザインの場合：</p> 
     <ol> 
-     <li>デザインを以前の場所から新しい場所(<code>/apps</code>)にコピーします。</li> 
+     <li>以前の場所から新しい場所 (<code>/apps</code>) をクリックします。</li> 
      <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank"> を使用して、デザイン内の CSS、JavaScript、静的リソースを</a>クライアントライブラリ<code>allowProxy = true</code>に変換します。</li> 
      <li><code>cq:designPath</code>AEM／Sites／カスタムサイトページ／ページのプロパティ／詳細タブ／デザインフィールド<strong>で </strong> プロパティの以前の場所への参照を更新します。</li> 
      <li>以前の場所を参照しているページを更新して、新規のクライアントライブラリカテゴリを使用します（これにはページ実装コードの更新が必要です）。</li> 
-     <li>AEM Dispatcherルールを更新し、<code>/etc.clientlibs/</code>プロキシサーブレットを介したクライアントライブラリの提供を許可します。</li> 
+     <li>AEM Dispatcher のルールを更新して、 <code>/etc.clientlibs/</code> プロキシサーブレット。</li> 
     </ol> <p>SCM で管理されておらず、実行時にデザインダイアログで変更されたデザインの場合：</p> 
     <ul> 
-     <li><code>/etc</code>からオーサー可能なデザインを移動しないでください。</li> 
+     <li>次の場所からオーサー可能なデザインを移動しない <code>/etc</code>.</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -376,7 +376,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-### Adobe Search and Promote 統合クライアントライブラリ  {#adobe-search-and-promote-integration-client-libraries}
+### Adobe Search and Promote 統合クライアントライブラリ {#adobe-search-and-promote-integration-client-libraries}
 
 <table> 
  <tbody>

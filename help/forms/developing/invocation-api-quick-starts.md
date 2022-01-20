@@ -1,8 +1,8 @@
 ---
-title: 呼び出しAPIのクイックスタート
-seo-title: 呼び出しAPIのクイックスタート
+title: 呼び出し API のクイックスタート
+seo-title: Invocation API Quick Starts
 description: クイックスタートを使用して、AEM Formsサービスをプログラムで呼び出します。
-seo-description: クイックスタートを使用して、AEM Formsサービスをプログラムで呼び出します。
+seo-description: Use the Quick Starts to programmatically invoke AEM Forms services.
 uuid: acf67177-98a4-4c99-95a5-3086907d7c2c
 contentOwner: admin
 content-type: reference
@@ -13,30 +13,30 @@ role: Developer
 exl-id: dcfc1c9f-fedd-4e00-9b09-19268620fc6d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1235'
 ht-degree: 6%
 
 ---
 
-# 呼び出しAPIのクイックスタート{#invocation-api-quick-starts}
+# 呼び出し API のクイックスタート {#invocation-api-quick-starts}
 
-AEM Formsサービスをプログラムで呼び出すには、次のクイックスタートを使用できます。
+次のクイックスタートは、AEM Formsサービスをプログラムで呼び出すために使用できます。
 
 <table> 
  <thead> 
   <tr> 
    <th><p>説明</p></th> 
-   <th><p>リモートAPI</p></th> 
+   <th><p>リモート API</p></th> 
    <th><p>Java API</p></th> 
-   <th><p>WebサービスAPI</p></th> 
+   <th><p>Web サービス API</p></th> 
   </tr> 
  </thead> 
  <tbody>
   <tr> 
    <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking_human_centric_long_lived_processes">人間中心の長期間有効なプロセスの呼び出し</a></p></td> 
-   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking-a-long-lived-process-using-remoting">(AEM formsでは非推奨)AEM Forms Remotingを使用した長期間有効なプロセスの呼び出し</a></p></td> 
-   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_invocation_api">クイックスタート：呼び出しAPIを使用した長期間有効なプロセスの呼び出し</a></p></td> 
-   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_web_service_api">クイックスタート：WebサービスAPIを使用した長期間有効なプロセスの呼び出し</a></p></td> 
+   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking-a-long-lived-process-using-remoting">(AEM forms では廃止 )AEM Forms Remoting を使用した長期間有効なプロセスの呼び出し</a></p></td> 
+   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_invocation_api">クイックスタート：呼び出し API を使用した長期間有効なプロセスの呼び出し</a></p></td> 
+   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_web_service_api">クイックスタート：Web サービス API を使用した長期間有効なプロセスの呼び出し</a></p></td> 
   </tr> 
   <tr> 
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking_a_short_lived_process_using_the_invocation_api">呼び出し API を使用した短時間のみ有効なプロセスの呼び出し</a></p></td> 
@@ -45,77 +45,77 @@ AEM Formsサービスをプログラムで呼び出すには、次のクイッ�
    <td><p>該当なし</p></td> 
   </tr> 
   <tr> 
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding">Base64エンコーディングを使用したAEM Formsの呼び出し</a> （Java Webサービスプロキシ）</p></td> 
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding">Base64 エンコーディングを使用したAEM Formsの呼び出し</a> （Java Web サービスプロキシ）</p></td> 
    <td><p>該当なし</p></td> 
    <td><p>該当なし</p></td> 
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_java_proxy_files_and_base64_encoding">クイックスタート：JavaプロキシファイルとBase64エンコーディングを使用したサービスの呼び出し</a></p></td> 
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_java_proxy_files_and_base64_encoding">クイックスタート：Java プロキシファイルと Base64 エンコーディングを使用したサービスの呼び出し</a></p></td> 
   </tr> 
   <tr> 
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding">Base64エンコーディングを使用したAEM Formsの呼び出し</a> （.NET Webサービスプロキシ）</p></td> 
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding">Base64 エンコーディングを使用したAEM Formsの呼び出し</a> （.NET Web サービスプロキシ）</p></td> 
    <td><p>該当なし</p></td> 
    <td><p>該当なし</p></td> 
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_base64_in_a_microsoft_net_project">クイックスタート：Microsoft .NETプロジェクトでbase64を使用したサービスの呼び出し</a></p></td> 
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_base64_in_a_microsoft_net_project">クイックスタート：Microsoft .NET プロジェクトで base64 を使用したサービスの呼び出し</a></p></td> 
   </tr> 
   <tr> 
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom">MTOMを使用したAEM Formsの呼び出し</a> （.NET Webサービスの例）</p></td> 
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom">MTOM を使用したAEM Formsの呼び出し</a> （.NET Web サービスの例）</p></td> 
    <td><p>該当なし</p></td> 
    <td><p>該当なし</p></td> 
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_mtom_in_a_net_project">クイックスタート：.NETプロジェクトでのMTOMを使用したサービスの呼び出し</a></p></td> 
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_mtom_in_a_net_project">クイックスタート：.NET プロジェクトでの MTOM を使用したサービスの呼び出し</a></p></td> 
   </tr> 
   <tr> 
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref">SwaRefを使用したAEM Formsの呼び出し</a> （Java Webサービスの例）</p></td> 
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref">SwaRef を使用したAEM Formsの呼び出し</a> （Java Web サービスの例）</p></td> 
    <td><p>該当なし</p></td> 
    <td><p>該当なし</p></td> 
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_swaref_in_a_java_project">クイックスタート：JavaプロジェクトでのSwaRefを使用したサービスの呼び出し</a></p></td> 
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_swaref_in_a_java_project">クイックスタート：Java プロジェクトでの SwaRef を使用したサービスの呼び出し</a></p></td> 
   </tr> 
   <tr> 
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">HTTP経由でのBLOBデータを使用したAEM Formsの呼び出し</a> （Java Webサービスの例）</p></td> 
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">HTTP 経由での BLOB データを使用したAEM Formsの呼び出し</a> （Java Web サービスの例）</p></td> 
    <td><p>該当なし</p></td> 
    <td><p>該当なし</p></td> 
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_net_project">クイックスタート：.NETプロジェクトでHTTP経由のBLOBデータを使用したサービスの呼び出し</a></p></td> 
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_net_project">クイックスタート：.NET プロジェクトで HTTP 経由での BLOB データを使用したサービスの呼び出し</a></p></td> 
   </tr> 
   <tr> 
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">HTTP経由でのBLOBデータを使用したAEM Formsの呼び出し</a> （.NET Webサービスの例）</p></td> 
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">HTTP 経由での BLOB データを使用したAEM Formsの呼び出し</a> （.NET Web サービスの例）</p></td> 
    <td><p>該当なし</p></td> 
    <td><p>該当なし</p></td> 
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_java_project">クイックスタート：JavaプロジェクトでHTTP経由のBLOBデータを使用したサービスの呼び出し</a></p></td> 
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_java_project">クイックスタート：Java プロジェクトで HTTP 経由での BLOB データを使用したサービスの呼び出し</a></p></td> 
   </tr> 
   <tr> 
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime">DIMEを使用したAEM Formsの呼び出し</a> （Java Webサービスの例）</p></td> 
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime">DIME を使用したAEM Formsの呼び出し</a> （Java Web サービスの例）</p></td> 
    <td><p>該当なし</p></td> 
    <td><p>該当なし</p></td> 
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_dime_in_a_java_project">クイックスタート：JavaプロジェクトでのDIMEを使用したサービスの呼び出し</a></p></td> 
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_dime_in_a_java_project">クイックスタート：Java プロジェクトでの DIME を使用したサービスの呼び出し</a></p></td> 
   </tr> 
   <tr> 
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">(AEM formsでは非推奨)AEM Forms Remotingを使用したAEM Formsの呼び出し</a></p></td> 
-   <td><p><a href="invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting">クイックスタート：(AEM formsでは非推奨)AEM Forms Remotingを使用して安全でないドキュメントを渡すことによる、短時間のみ有効なプロセスの呼び出し</a></p></td> 
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">(AEM forms では廃止 )AEM Forms Remoting を使用したAEM Formsの呼び出し</a></p></td> 
+   <td><p><a href="invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting">クイックスタート：AEM Forms Remoting (AEM forms では非推奨 ) を使用して安全でないドキュメントを渡すことによる、短時間のみ有効なプロセスの呼び出し</a></p></td> 
    <td><p>該当なし</p></td> 
    <td><p>該当なし</p></td> 
   </tr> 
   <tr> 
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#passing_secure_documents_to_invoke_processes_using_remoting">リモート処理を使用してプロセスを呼び出すための安全なドキュメントの受け渡し</a></p></td> 
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting">クイックスタート：(AEM formsでは非推奨)AEM Forms Remotingを使用してセキュリティで保護されたドキュメントを渡すことによる、短時間のみ有効なプロセスの呼び出し</a></p></td> 
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting">クイックスタート：(AEM forms では非推奨 )AEM Forms Remoting を使用してセキュリティで保護されたドキュメントを渡すことによる、短時間のみ有効なプロセスの呼び出し</a></p></td> 
    <td><p>該当なし</p></td> 
    <td><p>該当なし</p></td> 
   </tr> 
   <tr> 
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking_custom_component_services_using_remoting">リモート処理を使用したカスタムコンポーネントサービスの呼び出し</a></p></td> 
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-the-customer-custom-service-using-remoting">クイックスタート：(AEM formsでは非推奨)AEM Forms Remotingを使用した顧客カスタムサービスの呼び出し</a></p></td> 
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-the-customer-custom-service-using-remoting">クイックスタート：(AEM forms では廃止 )AEM Forms Remoting を使用した顧客カスタムサービスの呼び出し</a></p></td> 
    <td><p>該当なし</p></td> 
    <td><p>該当なし</p></td> 
   </tr> 
  </tbody> 
 </table>
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「 AEM formsによるプログラミング」にあるクイックスタートは、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
+>「AEM forms によるプログラミング」のクイックスタートは、JBoss Application Server とMicrosoft Windows オペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 詳しくは、 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ## クイックスタート：呼び出し API を使用した短時間のみ有効なプロセスの呼び出し {#quick-start-invoking-a-short-lived-process-using-the-invocation-api}
 
-次のJavaコードの例では、`MyApplication/EncryptDocument`という名前の短時間のみ有効なプロセスを呼び出しています。 このプロセスは同期的に呼び出されます。 このプロセスの入力パラメーターは`inDoc`です。 このプロセスの出力パラメーターは`outDoc`という名前です。 パスワードで暗号化されたPDFドキュメントは、`EncryptLoan.pdf`という名前のPDFファイルとして保存されます。 （[呼び出しAPI](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api)を使用した短時間のみ有効なプロセスの呼び出しを参照）。
+次の Java コードの例では、という名前の短時間のみ有効なプロセスを呼び出しています。 `MyApplication/EncryptDocument`. このプロセスは同期的に呼び出されます。 このプロセスの入力パラメーターは、 `inDoc`. このプロセスの出力パラメーターは、 `outDoc`. パスワードで暗号化されたPDF・ドキュメントは、という名前のPDF・ファイルとして保存されます。 `EncryptLoan.pdf`. ( [呼び出し API を使用した短時間のみ有効なプロセスの呼び出し](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api).)
 
 ```as3
  /* 
@@ -227,11 +227,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート：Microsoft .NETプロジェクト{#quick-start-invoking-a-service-using-base64-in-a-microsoft-net-project}でbase64を使用してサービスを呼び出す
+## クイックスタート：Microsoft .NET プロジェクトで base64 を使用したサービスの呼び出し {#quick-start-invoking-a-service-using-base64-in-a-microsoft-net-project}
 
-次のC#コードの例では、Base64エンコーディングを使用して、Microsoft .NETプロジェクトから`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 ([Base64エンコーディング](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)を使用したAEM Formsの呼び出しを参照)。
+次の C#コードの例は、という名前のプロセスを呼び出します。 `MyApplication/EncryptDocument` Base64 エンコーディングを使用したMicrosoft .NET プロジェクトから。 ( [Base64 エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
 
-*Loan.pdf*&#x200B;という名前のPDFファイルに基づいた、保護されていないPDFドキュメントがAEM Formsプロセスに渡されます。 このプロセスは、パスワードで暗号化されたPDFドキュメントを返します。このドキュメントは、*EncryptedPDF.pdf*&#x200B;という名前のPDFファイルとして保存されます。
+という名前のPDFファイルに基づく保護されていないPDFドキュメント *Loan.pdf* がAEM Formsプロセスに渡されます。 このプロセスは、パスワードで暗号化されたPDF・ドキュメントを返します。このドキュメントは、という名前のPDF・ファイルとして保存されます。 *EncryptedPDF.pdf*.
 
 ```as3
  /* 
@@ -308,11 +308,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート：JavaプロキシファイルとBase64エンコーディング{#quick-start-invoking-a-service-using-java-proxy-files-and-base64-encoding}を使用したサービスの呼び出し
+## クイックスタート：Java プロキシファイルと Base64 エンコーディングを使用したサービスの呼び出し {#quick-start-invoking-a-service-using-java-proxy-files-and-base64-encoding}
 
-次のJavaコードの例では、JAX-WSおよびBase64エンコーディングを使用して作成されたJavaプロキシファイルを使用して`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 ([Base64エンコーディング](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)を使用したAEM Formsの呼び出しを参照)。
+次の Java コードの例は、という名前のプロセスを呼び出します。 `MyApplication/EncryptDocument` JAX-WS および Base64 エンコーディングを使用して作成された Java プロキシファイルを使用します。 ( [Base64 エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
 
-*Loan.pdf*&#x200B;という名前のPDFファイルに基づいた、保護されていないPDFドキュメントがAEM Formsプロセスに渡されます。 このプロセスは、パスワードで暗号化されたPDFドキュメントを返します。このドキュメントは、*EncryptedDocument.pdf*&#x200B;という名前のPDFファイルとして保存されます。
+という名前のPDFファイルに基づく保護されていないPDFドキュメント *Loan.pdf* がAEM Formsプロセスに渡されます。 このプロセスは、パスワードで暗号化されたPDF・ドキュメントを返します。このドキュメントは、という名前のPDF・ファイルとして保存されます。 *EncryptedDocument.pdf*.
 
 ```as3
  /** 
@@ -394,13 +394,13 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート：(AEM formsでは非推奨)AEM Forms Remoting {#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting}を使用した、安全でないドキュメントを渡すことによる、短時間のみ有効なプロセスの呼び出し
+## クイックスタート：AEM Forms Remoting (AEM forms では非推奨 ) を使用して安全でないドキュメントを渡すことによる、短時間のみ有効なプロセスの呼び出し {#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting}
 
-次のFlexコードの例では、`MyApplication/EncryptDocument`という名前の短時間のみ有効なプロセスを呼び出しています。 (「[(AEM formsでは非推奨)AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)を使用したAEM Formsの呼び出し」を参照)。
+次のFlexコードの例では、という名前の短時間のみ有効なプロセスを呼び出しています。 `MyApplication/EncryptDocument`. ( [(AEM forms では廃止 )AEM Forms Remoting を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
 
 >[!NOTE]
 >
->このクイックスタートでは、AEM Formsプロセスを呼び出し、安全でないドキュメントをアップロードします。 このクイックスタートを実行するには、安全でないドキュメントをアップロードするようにAEM Formsを設定する必要があります。 安全でないドキュメントを受け入れるようにAEM Formsを設定する方法について詳しくは、[安全でないドキュメントと安全でないドキュメントを受け入れるようにAEM Formsを設定する](/help/forms/developing/invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)を参照してください。
+>このクイックスタートでは、AEM Formsプロセスを呼び出し、安全でないドキュメントをアップロードします。 このクイックスタートを実行するには、安全でないドキュメントをアップロードするようにAEM Formsを設定する必要があります。 安全でないドキュメントを受け入れるようにAEM Formsを設定する方法について詳しくは、 [安全なドキュメントと安全でないドキュメントを受け入れるためのAEM Formsの設定](/help/forms/developing/invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents).
 
 ```as3
  <?xml version="1.0" encoding="utf-8"?> 
@@ -551,11 +551,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート：.NETプロジェクト{#quick-start-invoking-a-service-using-dime-in-a-net-project}でのDIMEを使用したサービスの呼び出し
+## クイックスタート：.NET プロジェクトでの DIME を使用したサービスの呼び出し {#quick-start-invoking-a-service-using-dime-in-a-net-project}
 
-次のC#コードの例は、Dimeを使用してMicrosoft .NETプロジェクトから`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 ([Base64エンコーディング](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)を使用したAEM Formsの呼び出しを参照)。
+次の C#コードの例は、という名前のプロセスを呼び出します。 `MyApplication/EncryptDocument` Dime を使用してMicrosoft .NET プロジェクトから ( [Base64 エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
 
-*map.pdf*&#x200B;という名前のPDFファイルに基づく、保護されていないPDFドキュメントが、DIMEを使用してAEM Formsプロセスに渡されます。 このプロセスは、パスワードで暗号化されたPDFドキュメントを返します。このドキュメントは、*mapEncrypt.pdf*&#x200B;という名前のPDFファイルとして保存されます。
+という名前のPDFファイルに基づく保護されていないPDFドキュメント *map.pdf* は、DIME を使用してAEM Formsプロセスに渡されます。 このプロセスは、パスワードで暗号化されたPDF・ドキュメントを返します。このドキュメントは、という名前のPDF・ファイルとして保存されます。 *mapEncrypt.pdf*.
 
 ```as3
  /** 
@@ -656,11 +656,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート：Javaプロジェクト{#quick-start-invoking-a-service-using-dime-in-a-java-project}でDIMEを使用したサービスの呼び出し
+## クイックスタート：Java プロジェクトでの DIME を使用したサービスの呼び出し {#quick-start-invoking-a-service-using-dime-in-a-java-project}
 
-次のJavaコードの例では、DIMEを使用して`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 ([DIMEを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime)を参照)。
+次の Java コードの例は、という名前のプロセスを呼び出します。 `MyApplication/EncryptDocument` DIME を使用して。 ( [DIME を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime).)
 
-*Loan.pdf*&#x200B;という名前のPDFファイルに基づいた、保護されていないPDFドキュメントが、DIMEを使用してAEM Formsプロセスに渡されます。 このプロセスは、パスワードで暗号化されたPDFドキュメントを返します。このドキュメントは、*EncryptLoan.pdf*&#x200B;という名前のPDFファイルとして保存されます。
+という名前のPDFファイルに基づく保護されていないPDFドキュメント *Loan.pdf* は、DIME を使用してAEM Formsプロセスに渡されます。 このプロセスは、パスワードで暗号化されたPDF・ドキュメントを返します。このドキュメントは、という名前のPDF・ファイルとして保存されます。 *EncryptLoan.pdf*.
 
 ```as3
  /** 
@@ -757,11 +757,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート：Javaプロジェクト{#quick-start-invoking-a-service-using-blob-data-over-http-in-a-java-project}でHTTP経由のBLOBデータを使用したサービスの呼び出し
+## クイックスタート：Java プロジェクトで HTTP 経由での BLOB データを使用したサービスの呼び出し {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-java-project}
 
-次のJavaコードの例では、HTTP経由のデータを使用して`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 ([HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http)を介したBLOBデータを使用したAEM Formsの呼び出しを参照)。
+次の Java コードの例は、という名前のプロセスを呼び出します。 `MyApplication/EncryptDocument` HTTP 経由でのデータの使用。 ( [HTTP 経由での BLOB データを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
 
-*Loan.pdf*&#x200B;という名前のPDFファイルに基づく、保護されていないPDFドキュメントが、SOAP over HTTPを使用してAEM Formsプロセスに渡されます。 PDFファイルは次のURLにあります。`https://[server]:[port]/FormsQS`. このプロセスは、パスワードで暗号化されたPDFドキュメントを返します。このドキュメントは、*EncryptedDocument.pdf*&#x200B;という名前のPDFファイルとして保存されます。
+という名前のPDFファイルに基づく保護されていないPDFドキュメント *Loan.pdf* は、SOAP over HTTP を使用してAEM Formsプロセスに渡されます。 PDFファイルは次の URL にあります。 `https://[server]:[port]/FormsQS`. このプロセスは、パスワードで暗号化されたPDF・ドキュメントを返します。このドキュメントは、という名前のPDF・ファイルとして保存されます。 *EncryptedDocument.pdf*.
 
 ```as3
  /** 
@@ -832,11 +832,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート：.NETプロジェクト{#quick-start-invoking-a-service-using-blob-data-over-http-in-a-net-project}でHTTP経由のBLOBデータを使用したサービスの呼び出し
+## クイックスタート：.NET プロジェクトで HTTP 経由での BLOB データを使用したサービスの呼び出し {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-net-project}
 
-次のC#コードの例では、HTTP経由のデータを使用して、Microsoft .NETプロジェクトから`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 ([HTTP](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http)を介したBLOBデータを使用したAEM Formsの呼び出しを参照)。
+次の C#コードの例は、という名前のプロセスを呼び出します。 `MyApplication/EncryptDocument` HTTP 経由のデータを使用してMicrosoft .NET プロジェクトから ( [HTTP 経由での BLOB データを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http).)
 
-*Loan.pdf*&#x200B;という名前のPDFファイルに基づく、保護されていないPDFドキュメントが、HTTP経由のBLOBを使用してAEM Formsプロセスに渡されます。 このプロセスは、パスワードで暗号化されたPDFドキュメントを返します。このドキュメントは、*EncryptedPDF.pdf*&#x200B;という名前のPDFファイルとして保存されます。
+という名前のPDFファイルに基づく保護されていないPDFドキュメント *Loan.pdf* は、BLOB over HTTP を使用してAEM Formsプロセスに渡されます。 このプロセスは、パスワードで暗号化されたPDF・ドキュメントを返します。このドキュメントは、という名前のPDF・ファイルとして保存されます。 *EncryptedPDF.pdf*.
 
 ```as3
  /* 
@@ -932,11 +932,11 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート：.NETプロジェクト{#quick-start-invoking-a-service-using-mtom-in-a-net-project}でMTOMを使用したサービスの呼び出し
+## クイックスタート：.NET プロジェクトでの MTOM を使用したサービスの呼び出し {#quick-start-invoking-a-service-using-mtom-in-a-net-project}
 
-次のC#コードの例では、MTOMを使用してMicrosoft .NETプロジェクトから`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 ([MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)を参照)。
+次の C#コードの例は、という名前のプロセスを呼び出します。 `MyApplication/EncryptDocument` MTOM を使用したMicrosoft .NET プロジェクトから。 ( [MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).)
 
-*loan.pdf*&#x200B;という名前のPDFファイルに基づく、保護されていないPDFドキュメントが、MTOMを使用してAEM Formsプロセスに渡されます。 このプロセスは、パスワードで暗号化されたPDFドキュメントを返します。このドキュメントは、*EncryptedDocument.pdf*&#x200B;という名前のPDFファイルとして保存されます。
+という名前のPDFファイルに基づく保護されていないPDFドキュメント *loan.pdf* は、MTOM を使用してAEM Formsプロセスに渡されます。 このプロセスは、パスワードで暗号化されたPDF・ドキュメントを返します。このドキュメントは、という名前のPDF・ファイルとして保存されます。 *EncryptedDocument.pdf*.
 
 ```as3
  ???/** 
@@ -1020,13 +1020,13 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->AEM Formsサービスの操作の実行方法を示すクイックスタートの多くには、MTOMコードの例が含まれています。
+>AEM Formsサービスの操作の実行方法を示すクイックスタートの多くには、MTOM コードの例が含まれています。
 
-## クイックスタート：Javaプロジェクト{#quick-start-invoking-a-service-using-swaref-in-a-java-project}でSwaRefを使用したサービスの呼び出し
+## クイックスタート：Java プロジェクトでの SwaRef を使用したサービスの呼び出し {#quick-start-invoking-a-service-using-swaref-in-a-java-project}
 
-次のJavaコードの例は、Javaプロジェクトから`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 このJavaプロジェクトでは、JAX-WSとSwaRefをエンコーディングタイプとして使用して作成されたプロキシクラスを使用します。 ([SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)を使用したAEM Formsの呼び出しを参照)。
+次の Java コードの例は、という名前のプロセスを呼び出します。 `MyApplication/EncryptDocument` を Java プロジェクトから取得します。 この Java プロジェクトでは、JAX-WS と SwaRef をエンコーディングタイプとして使用して作成されたプロキシクラスを使用します。 ( [SwaRef を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref).)
 
-*Loan.pdf*&#x200B;という名前のPDFファイルに基づく、保護されていないPDFドキュメントが、SwaRefを使用してAEM Formsプロセスに渡されます。 暗号化されたPDFドキュメントは、*EncryptedDocument.pdf*&#x200B;という名前のPDFファイルとして保存されます。
+という名前のPDFファイルに基づく保護されていないPDFドキュメント *Loan.pdf* は、SwaRef を使用してAEM Formsプロセスに渡されます。 暗号化されたPDFドキュメントは、という名前のPDFファイルとして保存されます *EncryptedDocument.pdf*.
 
 ```as3
  /** 
@@ -1113,4 +1113,4 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->サービス操作の実行方法を示すクイックスタートの多くには、SwaRefコードの例が含まれます。
+>サービス操作の実行方法を示すクイックスタートの多くには、SwaRef コード例が含まれます。

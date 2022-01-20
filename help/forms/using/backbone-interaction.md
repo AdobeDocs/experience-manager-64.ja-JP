@@ -1,8 +1,8 @@
 ---
 title: Backbone インタラクション
-seo-title: Backbone インタラクション
+seo-title: Backbone interaction
 description: AEM Forms Workspace における Backbone JavaScript モデルの使用についての概念情報。
-seo-description: AEM Forms Workspace における Backbone JavaScript モデルの使用についての概念情報。
+seo-description: Conceptual information about use of Backbone JavaScript models in AEM Forms workspace.
 uuid: c70da848-e514-42bc-a59b-44a7c00aa529
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,24 +11,24 @@ discoiquuid: d363eec3-172b-413e-9743-ed51804ea1e9
 exl-id: f726cb73-732c-4893-bdb5-10ddcf4a340a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '434'
 ht-degree: 79%
 
 ---
 
 # Backbone インタラクション {#backbone-interaction}
 
-Backbone は、Web アプリケーションで MVC アーキテクチャの作成および追随に役立つライブラリです。Backbone の基本概念は、ユーザーのインターフェイスをモデルによって裏付けられたロジックビューに編成し、モデルを変更する場合はページを作り直すことなく、個々に更新できるようにすることです。Backboneの詳細については、[https://backbonejs.org](https://backbonejs.org/)を参照してください。
+Backbone は、Web アプリケーションで MVC アーキテクチャの作成および追随に役立つライブラリです。Backbone の基本概念は、ユーザーのインターフェイスをモデルによって裏付けられたロジックビューに編成し、モデルを変更する場合はページを作り直すことなく、個々に更新できるようにすることです。Backbone の詳細については、 [https://backbonejs.org](https://backbonejs.org/).
 
 いくつかの主要な概念を次に示します。
 
-**Backbone** modelデータと、このデータに関連するほとんどのロジックが含まれます。
+**Backbone モデル** データと、このデータに関連するほとんどのロジックが含まれます。
 
-**対応す** るモデルの状態を表すために使用するBackbone viewUsed。Backbone ビューは実際にはコントローラと同じように動作します。ユーザーがクリックするなどのユーザーインターフェイスイベントやモデルイベント（データが変更されたなど）をリッスンし、ユーザーインターフェイスを適宜変更します。
+**Backbone ビュー** 対応するモデルの状態を表すために使用されます。 Backbone ビューは実際にはコントローラと同じように動作します。ユーザーがクリックするなどのユーザーインターフェイスイベントやモデルイベント（データが変更されたなど）をリッスンし、ユーザーインターフェイスを適宜変更します。
 
-**HTMLテンプ** レートモデルによって入力されたプレースホルダーを持つラッパーテンプレート。
+**HTMLテンプレート** モデルによって設定されたプレースホルダーを持つラッパーテンプレート。
 
-**AEM Forms** workspace複数の個々のコンポーネントが含まれます。各コンポーネントは、
+**AEM Forms workspace** 複数の個々のコンポーネントが含まれます。 各コンポーネントは、
 
 * 単一の論理ユーザーインターフェイス要素を表します。
 * 同じコンポーネントのコレクションにすることができます。
@@ -52,8 +52,8 @@ Backbone ビューには、対応するハンドラとのユーザーインタ�
 
 1. ユーザーはタスクリストでタスクテンプレートをクリックします。
 1. タスクビューはクリックをリッスンし、タスクモデルでレンダリング関数を呼び出します。
-1. その後、タスクモデルは、AEM Formsサーバーとのすべての通信に共通するポイントであるサービスを呼び出します。
-1. サービスクラスは、ajaxを介してレンダリングメソッドのAEM Forms RESTエンドポイントを呼び出します。
+1. その後、タスクモデルは、AEM Formsサーバーとのすべての通信の共通ポイントであるサービスを呼び出します。
+1. サービスクラスは、ajax を介したレンダリングメソッドに対してAEM Forms REST エンドポイントを呼び出します。
 1. この Ajax 呼び出しの成功コールバックはタスクモデルに定義されています。
 1. タスクモデルはバックボーンイベントをレンダリング呼び出しが完了した通知として発生させます。
 1. 別のビューであるタスクの詳細ビューは、タスクモデルからこのイベントをリッスンします。

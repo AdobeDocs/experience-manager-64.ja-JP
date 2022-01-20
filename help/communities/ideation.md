@@ -1,8 +1,8 @@
 ---
 title: アイディエーションの基本事項
-seo-title: アイディエーションの基本事項
+seo-title: Ideation Essentials
 description: アイディエーション機能の概要
-seo-description: アイディエーション機能の概要
+seo-description: Ideation feature overview
 uuid: abaf03ee-8bf4-4241-96c3-474c95a30a88
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,12 +12,12 @@ discoiquuid: a9e4f2f0-d1ff-40c0-abcf-645e40586a84
 exl-id: 7fb68293-c6e3-4793-b433-205bcfc23e20
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 66%
+source-wordcount: '106'
+ht-degree: 65%
 
 ---
 
-# アイディエーションの基本事項  {#ideation-essentials}
+# アイディエーションの基本事項 {#ideation-essentials}
 
 このページでは、アイディエーション機能の操作に関する基本情報をまとめています。この機能は、フォーラムに似ていますが、ドラフトとして保存する機能があるほか、共同作業しやすくなります。
 
@@ -47,7 +47,7 @@ ht-degree: 66%
   </tr>
   <tr>
    <td><strong> properties</strong></td> 
-   <td><a href="ideation-feature.md">アイディエーション機能</a>を参照</td> 
+   <td>詳しくは、 <a href="ideation-feature.md">アイディエーション機能</a></td> 
   </tr>
  </tbody>
 </table>
@@ -56,4 +56,4 @@ ht-degree: 66%
 
 ### アイディエーション機能 {#ideation-function}
 
-[アイディエーション機能](functions.md#ideation-function)を含むコミュニティサイト構造には、設定済みの`ideation`コンポーネントが含まれます。
+を含むコミュニティサイト構造 [アイディエーション関数](functions.md#ideation-function)（設定済みを含む） `ideation` コンポーネント。

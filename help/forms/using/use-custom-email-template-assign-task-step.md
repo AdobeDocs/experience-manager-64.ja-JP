@@ -1,15 +1,15 @@
 ---
 title: タスクの割り当て手順におけるカスタムの電子メールテンプレートの使用
-seo-title: タスクの割り当て手順におけるカスタムの電子メールテンプレートの使用
+seo-title: Use custom email templates in an Assign Task step
 description: 'Forms ワークフローの電子メール通知のカスタム電子メールテンプレート '
-seo-description: 'Forms ワークフローの電子メール通知のカスタム電子メールテンプレート '
+seo-description: Custom email templates for forms workflow email notifications
 uuid: bc2af94d-d4ad-417e-b3d2-bcfffc1b306d
 topic-tags: publish
 discoiquuid: c447fc39-c0f3-4932-ac6c-465d1fb83f8c
 exl-id: 5af73823-2c32-41b3-9ab8-a7ad9fd9532f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '531'
 ht-degree: 94%
 
 ---
@@ -66,12 +66,12 @@ AEM Forms には電子メール通知用の初期設定済みテンプレート�
 
 タスクの割り当て手順では、初期状態でデフォルトテンプレート htmlEmailTemplate.txt を使用するように設定されています。カスタムのテンプレートを使用するように選択できます。テンプレートの場所を変更するには：
 
-1. **[!UICONTROL タスクの割り当て]**&#x200B;手順を開きます。
+1. を開きます。 **[!UICONTROL タスクを割り当て]** 手順
 
-1. **[!UICONTROL 担当者/HTML電子メールテンプレート]**&#x200B;に移動します。
+1. に移動します。 **[!UICONTROL 担当者/HTMLメールテンプレート]**.
 
 1. 新規作成された HTML 電子メールテンプレートを選択します。
 
 1. 「**[!UICONTROL OK]**」をクリックします。テンプレートが変更されました。
 
-電子メール通知では、[メタデータ](/help/forms/using/use-metadata-in-email-notifications.md)も使用します。例えば、期限、優先度、ワークフロー名などです。また、[カスタムメタデータ](/help/forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification)を使用するようにテンプレートを設定することもできます。
+電子メール通知では、[メタデータ](/help/forms/using/use-metadata-in-email-notifications.md)も使用します。例えば、期限、優先度、ワークフロー名などです。また、使用するテンプレートを設定することもできます [カスタムメタデータ](/help/forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).

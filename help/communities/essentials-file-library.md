@@ -1,8 +1,8 @@
 ---
 title: ファイルライブラリの基本事項
-seo-title: ファイルライブラリの基本事項
+seo-title: File Library Essentials
 description: ファイルライブラリ機能の操作
-seo-description: ファイルライブラリ機能の操作
+seo-description: Working with the file library feature
 uuid: 0630f13e-97b4-4f93-9dce-07f559287c29
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: 9019b967-fff8-4dda-bc5a-fd4a3e14a4ef
 exl-id: 0e9d508e-d7dc-478a-99c0-c6885bcdcb81
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 59%
+source-wordcount: '256'
+ht-degree: 60%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 59%
 
 このページでは、ファイルライブラリ機能の操作に関する基本情報をまとめています。
 
-## クライアント側の基本事項  {#essentials-for-client-side}
+## クライアント側の基本事項 {#essentials-for-client-side}
 
 <table> 
  <tbody>
@@ -47,7 +47,7 @@ ht-degree: 59%
   </tr>
   <tr>
    <td><strong> properties</strong></td> 
-   <td><a href="file-library.md">ファイルライブラリ機能</a>を参照</td> 
+   <td>詳しくは、 <a href="file-library.md">ファイルライブラリ機能</a></td> 
   </tr>
  </tbody>
 </table>
@@ -64,9 +64,9 @@ ht-degree: 59%
 
 ### ファイルライブラリ機能 {#file-library-function}
 
-[ファイルライブラリ機能](functions.md#file-library-function)を含むコミュニティサイト構造には、設定済みの`file library`コンポーネントが含まれます。
+を含むコミュニティサイト構造 [ファイルライブラリ関数](functions.md#file-library-function)（設定済みを含む） `file library` コンポーネント。
 
-### ファイルライブラリ(UGC)に投稿されたコメントへのアクセス{#accessing-comments-posted-for-file-libraries-ugc}
+### ファイルライブラリに投稿されたコメント（UGC）へのアクセス {#accessing-comments-posted-for-file-libraries-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。\
 [ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
@@ -78,6 +78,6 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティメソッドと例
-* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
+* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例
+* [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングガイドライン
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係

@@ -1,8 +1,8 @@
 ---
 title: デプロイのベストプラクティス
-seo-title: デプロイのベストプラクティス
+seo-title: Deploying Best Practices
 description: デプロイおよび保守のベストプラクティス。
-seo-description: デプロイおよび保守のベストプラクティス。
+seo-description: Deploying and maintaining best practices.
 uuid: 4546ed2c-43d5-40f3-874f-567b324e78c2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 4b5c0677-c630-4fae-867e-4f4583ac8507
 exl-id: 0c8fefb5-6fa0-4fab-a890-9f5ae7508459
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '430'
 ht-degree: 73%
 
 ---
@@ -72,11 +72,11 @@ ht-degree: 73%
 
 ## コミュニティ {#communities}
 
-AEM Communitiesは、オンプレミスのコミュニティの作成と管理を簡素化します。 AEM Communitiesのベストプラクティスについては、以下を参照してください。
+AEM Communitiesは、オンプレミスの Communities の作成と管理を簡単にします。 AEM Communitiesのベストプラクティスについては、ここで説明します。
 
-[コミュニティコンテンツストア](/help/communities/working-with-srp.md)  — ユーザー生成コンテンツ(UGC)の新しい共有ストレージ機能と、基盤となるトポロジを選択する際の考慮事項について [説明します](/help/communities/topologies.md)。
+[コミュニティコンテンツストア](/help/communities/working-with-srp.md)  — ユーザー生成コンテンツ (UGC) の新しい共有ストレージ機能と、基になるコンテンツを選択する際の考慮事項について説明します [トポロジ](/help/communities/topologies.md).
 
-[コミュニティの推奨デプロイメント](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  - Communitiesの推奨デプロイメントについて説明します。 |
+[コミュニティに推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) - Communities の推奨されるデプロイメントについて説明します。 |
 
 ## UI {#ui}
 
@@ -84,7 +84,7 @@ AEM Communitiesは、オンプレミスのコミュニティの作成と管理�
 
 [顧客向けのユーザーインターフェイスの推奨事項](/help/sites-deploying/ui-recommendations.md)
 
-AEMには現在、2つのUIがあります。クラシックUIとタッチ操作向けUIが同じリリースに含まれている。したがって、お客様は、プロジェクトの実装時に、どの使用をするかを決定する必要があります。このドキュメントは、適切な選択を見つけるのに役立つように作成されています。
+AEMには現在、2 つの UI があります。クラシック UI とタッチ操作向け UI の両方を同じリリースで使用できます。したがって、お客様は、プロジェクトの実装時に、どの使用をするかを決定する必要があります。このドキュメントは、適切な選択肢を見つけるのに役立つように作成されています。
 
 ## パフォーマンス {#performance}
 
@@ -95,7 +95,7 @@ AEMには現在、2つのUIがあります。クラシックUIとタッチ操作
   <tr>
    <td>品質保証のベストプラクティス</td> 
    <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">品質保証のベストプラクティス</a></td> 
-   <td>テストの概念の定義に関する問題の標準化された概要です。特に、<em>publish</em>環境のパフォーマンステスト用です。 主に QA エンジニア、プロジェクトマネージャーおよびシステム管理者向けの内容となっています。</td> 
+   <td>特にのパフォーマンステスト用のテスト概念の定義に関する問題の標準化された概要 <em>公開</em> 環境。 主に QA エンジニア、プロジェクトマネージャーおよびシステム管理者向けの内容となっています。</td> 
   </tr>
   <tr>
    <td>CDN での Dispatcher の使用</td> 

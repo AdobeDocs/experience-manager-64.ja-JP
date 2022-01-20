@@ -1,8 +1,8 @@
 ---
 title: サンドボックスコンテンツの開発
-seo-title: サンドボックスコンテンツの開発
+seo-title: Develop Sandbox Content
 description: 'コンテンツの開発 '
-seo-description: 'コンテンツの開発 '
+seo-description: Develop content
 uuid: ca046cf8-f6cd-41a1-97c8-74a86fbe9cd2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,12 +12,12 @@ discoiquuid: b97abfc9-62e6-470c-bb86-086e662c8091
 exl-id: ad2bb8d0-d446-4bc0-8e1d-a0ad196cc206
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '43'
+source-wordcount: '38'
 ht-degree: 100%
 
 ---
 
-# サンドボックスコンテンツの開発  {#develop-sandbox-content}
+# サンドボックスコンテンツの開発 {#develop-sandbox-content}
 
 **[⇐ clientlib の追加](add-clientlibs.md)**
 

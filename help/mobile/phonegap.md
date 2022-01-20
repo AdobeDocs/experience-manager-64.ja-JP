@@ -2,7 +2,7 @@
 title: PhoneGap
 seo-title: PhoneGap
 description: PhoneGap
-seo-description: 'このページでは、AEM での Adobe PhoneGap Enterprise 用のオーサリングの概要について説明します。  '
+seo-description: Follow this page to get started with authoring for Adobe PhoneGap Enterprise in AEM.
 uuid: 256a9f66-4c66-434c-be79-01be3c02d688
 contentOwner: msm-service
 content-type: reference
@@ -11,8 +11,8 @@ discoiquuid: d9ab4d38-1c17-477d-9341-02bda80f3c23
 exl-id: 33eeb203-1e4b-4112-ab08-f13b9e0b82bb
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 81%
+source-wordcount: '201'
+ht-degree: 80%
 
 ---
 
@@ -30,9 +30,9 @@ Adobe Experience Manager（AEM）Mobile は、完全な AEM プラットフォ�
 * **開発者**
 * **作成者**
 
-## PhoneGap アプリケーションのオーサリング  {#authoring-phonegap-applications}
+## PhoneGap アプリケーションのオーサリング {#authoring-phonegap-applications}
 
-***AEMオーサー*（または&#x200B;*マーケター*）**は、標準のテンプレートとコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAMからのすべてのタイプのメディアの追加が可能です。
+An ***AEM オーサー* ( または *マーケター*)**では、標準搭載のテンプレートおよびコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAM からのすべてのタイプのメディア（画像、ビデオ、テキストフラグメント）の追加をおこなうことができます。
 
 まずは以下のリソースを参照してください。
 

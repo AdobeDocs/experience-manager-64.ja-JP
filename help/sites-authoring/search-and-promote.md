@@ -1,8 +1,8 @@
 ---
 title: ページへのSearch&Promote機能の追加
-seo-title: ページへのSearch&Promote機能の追加
+seo-title: Adding Search&Promote features to your page
 description: Web サイトに Search&Promote 機能を統合するには、Search&Promote コンポーネントを使用して、キーワード検索、検索結果のページ、検索の絞り込み、およびバナー機能をページに追加します。
-seo-description: Web サイトに Search&Promote 機能を統合するには、Search&Promote コンポーネントを使用して、キーワード検索、検索結果のページ、検索の絞り込み、およびバナー機能をページに追加します。
+seo-description: To integrate Search&Promote capabilities in your web site, use the Search&Promote components to add keyword search, search results page, search refinement, and banners features to your page
 uuid: 382cf784-4214-4bf3-ace6-6f66451195e2
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 50ba6a09-d6cb-4ec0-8a0f-af0da8cc3d2d
 exl-id: 735e5880-3226-4b2a-81f7-b8b4baa0d1ec
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '123'
 ht-degree: 79%
 
 ---
@@ -30,4 +30,4 @@ Search&amp;Promote 機能は、AEM の管理者が有効にしている場合に
 
 >[!NOTE]
 >
->ページへの Search&amp;Promote 機能追加について詳しくは、クラシック UI オーサリングドキュメントに記載されています。詳しくは、[ページへのSearch&amp;Promote機能の追加](/help/sites-classic-ui-authoring/classic-feature-search-promote.md)を参照してください。
+>ページへの Search&amp;Promote 機能追加について詳しくは、クラシック UI オーサリングドキュメントに記載されています。詳しくは、 [ページへの Search&amp;Promote 機能の追加](/help/sites-classic-ui-authoring/classic-feature-search-promote.md) を参照してください。

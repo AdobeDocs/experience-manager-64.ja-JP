@@ -1,8 +1,8 @@
 ---
 title: Dynamic Media の操作
-seo-title: Dynamic Media の操作
+seo-title: Working with Dynamic Media
 description: Dynamic Media を使用して、Web、モバイルおよびソーシャルサイトで使用するためにアセットを配信する方法を学習します。
-seo-description: Dynamic Media を使用して、Web、モバイルおよびソーシャルサイトで使用するためにアセットを配信する方法を学習します。
+seo-description: Learn how to use Dynamic Media to deliver assets for consumption on web, mobile, and social sites.
 uuid: 4dc0f436-d20e-4e8b-aeff-5515380fa44d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,18 +10,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 exl-id: f8a3936e-82b5-46c7-9614-b97162e27d6a
-feature: アセット管理、レンディション
+feature: Asset Management,Renditions
 role: Admin,User
 source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '416'
 ht-degree: 90%
 
 ---
 
 # Dynamic Media の操作 {#working-with-dynamic-media}
 
-[Dynamic Media ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のマスターアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
+[Dynamic Media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のマスターアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
 
 ダイナミックメディアは、ズーム、360 度スピン、ビデオなどのインタラクティブな閲覧エクスペリエンスを提供します。ダイナミックメディアは Adobe Experience Manager デジタルアセット管理（AEM アセット）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡易化し、効率化します。
 
@@ -52,7 +52,7 @@ Dynamic Media 限定の機能は次のとおりです。
 
 >[!NOTE]
 >
->Dynamic Mediaの使用とDynamic Media ClassicとAEMの統合の違いについては、[Dynamic Media ClassicとDynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)の統合を参照してください。
+>Dynamic Mediaの使用とAEMとのDynamic Media Classicの統合の違いについては、 [Dynamic Media Classic統合とDynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media).
 
 ## Dynamic Media が有効な場合と無効な場合の比較 {#dynamic-media-on-versus-dynamic-media-off}
 
@@ -62,7 +62,7 @@ Dynamic Media が有効（オン）になっているかどうかは、次の特
 * 画像セット、スピンセット、混在メディアセットを使用できる。
 * PTIFF レンディションが作成されている。
 
-Dynamic Media [が有効](config-dynamic.md#enabling-dynamic-media)の場合、画像アセットをクリックしたときのアセットの表示は異なります。 Dynamic Media では、オンデマンドの HTML5 ビューアが使用されます。
+画像アセットをクリックした場合、Dynamic Mediaとはアセットの表示が異なります [有効](config-dynamic.md#enabling-dynamic-media). Dynamic Media では、オンデマンドの HTML5 ビューアが使用されます。
 
 ### 動的レンディション {#dynamic-renditions}
 

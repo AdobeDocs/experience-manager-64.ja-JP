@@ -1,8 +1,8 @@
 ---
 title: AEM コンポーネントの開発（クラシック UI）
-seo-title: AEM コンポーネントの開発（クラシック UI）
+seo-title: Developing AEM Components (Classic UI)
 description: クラシック UI では、ExtJS を使用して、コンポーネントのルックアンドフィールを提供するウィジェットを作成します。HTL は、AEM の推奨スクリプティング言語ではありません。
-seo-description: クラシック UI では、ExtJS を使用して、コンポーネントのルックアンドフィールを提供するウィジェットを作成します。HTL は、AEM の推奨スクリプティング言語ではありません。
+seo-description: The classic UI uses ExtJS to create widgets that provide the look-and-feel of the components. HTL is not the recommended scripting language for AEM.
 uuid: ed53d7c6-5996-4892-81a4-4ac30df85f04
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 725e4f82-7019-4365-9c01-b5d95ea2a8fa
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '2420'
+source-wordcount: '2391'
 ht-degree: 73%
 
 ---
@@ -24,17 +24,17 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->コンポーネント開発の多くの側面は、クラシックUIとタッチ操作対応UIの両方に共通なので、**このページを使用する前に[AEM Components - The Basics](/help/sites-developing/components-basics.md)を読む必要があります。**
+>コンポーネント開発の多くの側面は、クラシック UI とタッチ操作対応 UI の両方で共通なので、 **次を読む必要があります。 [AEMコンポーネント — 基本](/help/sites-developing/components-basics.md) 前** このページを使用して、クラシック UI の詳細を取り上げます。
 
 >[!NOTE]
 >
 >クラシック UI 用のコンポーネントの開発には HTML テンプレート言語（HTL）と JSP のどちらも使用できますが、このページでは JSP を使用した開発について説明します。これは単に、クラシック UI 内では JSP が使用されてきたからです。
 >
->現在では、HTL が AEM の推奨スクリプティング言語とされています。[HTL](https://helpx.adobe.com/jp/experience-manager/htl/user-guide.html)と[AEMコンポーネントの開発](/help/sites-developing/developing-components.md)を参照して、メソッドを比較してください。
+>現在では、HTL が AEM の推奨スクリプティング言語とされています。詳しくは、 [HTL](https://helpx.adobe.com/jp/experience-manager/htl/user-guide.html) および [AEM Components の開発](/help/sites-developing/developing-components.md) メソッドを比較します。
 
 ## 構造 {#structure}
 
-コンポーネントの基本構造については、「 [AEM Components - The Basics](/help/sites-developing/components-basics.md#structure) 」ページで説明しています。このページでは、タッチ操作対応UIとクラシックUIの両方を適用します。 新しいコンポーネントでタッチ操作対応 UI の設定を使用する必要がない場合でも、この情報は既存のコンポーネントを継承する際に設定を把握するのに役立ちます。
+コンポーネントの基本的な構造については、ページで説明します [AEMコンポーネント — 基本](/help/sites-developing/components-basics.md#structure)：タッチ操作対応 UI とクラシック UI の両方を適用します。 新しいコンポーネントでタッチ操作対応 UI の設定を使用する必要がない場合でも、この情報は既存のコンポーネントを継承する際に設定を把握するのに役立ちます。
 
 ## JSP スクリプト {#jsp-scripts}
 
@@ -54,28 +54,28 @@ JSP スクリプトファイルの `global.jsp` は、コンポーネントの�
 
 >[!NOTE]
 >
->CQ 5.3以前のバージョンで使用されていたパス`/libs/wcm/global.jsp`は、現在は使用されていません。
+>パス `/libs/wcm/global.jsp`は、CQ 5.3 以前のバージョンで使用されていましたが、現在は廃止されています。
 
 ### global.jsp、使用される API および Taglib の機能 {#function-of-global-jsp-used-apis-and-taglibs}
 
 デフォルトの `global.jsp` から提供される最も重要なオブジェクトを次に示します。
 
-概要：
+概要:
 
 * `<cq:defineObjects />`
 
-   * `slingRequest`  — ラップされたリクエストオブジェクト(  `SlingHttpServletRequest`)。
-   * `slingResponse`  — ラップされた応答オブジェクト(  `SlingHttpServletResponse`)。
-   * `resource` - Slingリソースオブジェクト(  `slingRequest.getResource();`)。
-   * `resourceResolver` - Sling Resource Resolverオブジェクト(  `slingRequest.getResoucreResolver();`)。
+   * `slingRequest`  — ラップされたリクエストオブジェクト ( `SlingHttpServletRequest`) をクリックします。
+   * `slingResponse`  — ラップされた応答オブジェクト ( `SlingHttpServletResponse`) をクリックします。
+   * `resource` - Sling Resource オブジェクト ( `slingRequest.getResource();`) をクリックします。
+   * `resourceResolver` - Sling Resource Resolver オブジェクト ( `slingRequest.getResoucreResolver();`) をクリックします。
    * `currentNode` - リクエストに対して解決された JCR ノード。
-   * `log`  — デフォルトのロガー()。
-   * `sling` - Slingスクリプトヘルパー。
-   * `properties`  — 指定されたリソースのプロパ `resource.adaptTo(ValueMap.class);`ティ( )。
+   * `log`  — デフォルトのロガー ()。
+   * `sling` - Sling スクリプトヘルパー。
+   * `properties`  — 指定されたリソース ( `resource.adaptTo(ValueMap.class);`) をクリックします。
    * `pageProperties` - 指定されたリソースのページのプロパティ。
-   * `pageManager` - AEMコンテンツページにアクセスするためのページマネージ `resourceResolver.adaptTo(PageManager.class);`ャー( )。
+   * `pageManager` - AEMコンテンツページにアクセスするためのページマネージャー ( `resourceResolver.adaptTo(PageManager.class);`) をクリックします。
    * `component` - 現在の AEM コンポーネントのコンポーネントオブジェクト。
-   * `designer`  — デザイン情報を取得するためのデザイナーオブジェ `resourceResolver.adaptTo(Designer.class);`クト( )。
+   * `designer`  — デザイン情報を取得するデザイナーオブジェクト ( `resourceResolver.adaptTo(Designer.class);`) をクリックします。
    * `currentDesign` - 指定されたリソースのデザイン。
    * `currentStyle` - 指定されたリソースのスタイル。
 
@@ -83,51 +83,51 @@ JSP スクリプトファイルの `global.jsp` は、コンポーネントの�
 
 AEM WCM のコンテンツにアクセスするには、3 つの方法があります。
 
-* `global.jsp`に示すプロパティオブジェクトを使用：
+* に示すプロパティオブジェクトを使用 `global.jsp`:
 
    properties オブジェクトは、ValueMap のインスタンス（[Sling API](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ValueMap.html) を参照）で、現在のリソースのプロパティがすべて含まれています。
 
-   例：`String pageTitle = properties.get("jcr:title", "no title");`は、ページコンポーネントのレンダリングスクリプトで使用されます。
+   例： `String pageTitle = properties.get("jcr:title", "no title");` ページコンポーネントのレンダリングスクリプトで使用されます。
 
-   例：`String paragraphTitle = properties.get("jcr:title", "no title");`は、標準の段落コンポーネントのレンダリングスクリプトで使用されます。
+   例： `String paragraphTitle = properties.get("jcr:title", "no title");` 標準段落コンポーネントのレンダリングスクリプトで使用されます。
 
-* `global.jsp`で導入された`currentPage`オブジェクトを使用：
+* を使用 `currentPage` ～に導入された物 `global.jsp`:
 
-   `currentPage`オブジェクトはページのインスタンスです([AEM API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.mhtml)を参照)。 ページクラスには、コンテンツにアクセスするためのメソッドがいくつかあります。
+   この `currentPage` オブジェクトはページのインスタンスです ( [AEM API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.mhtml)) をクリックします。 ページクラスには、コンテンツにアクセスするためのメソッドがいくつかあります。
 
-   例: `String pageTitle = currentPage.getTitle();`
+   例：`String pageTitle = currentPage.getTitle();`
 
-* `global.jsp`に導入された`currentNode`オブジェクトを使用：
+* 経由 `currentNode` ～に導入された物 `global.jsp`:
 
-   `currentNode`オブジェクトはノードのインスタンスです（[JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html)を参照）。 ノードのプロパティには、`getProperty()`メソッドでアクセスできます。
+   この `currentNode` オブジェクトは、ノードのインスタンスです ( [JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html)) をクリックします。 ノードのプロパティには、 `getProperty()` メソッド。
 
-   例: `String pageTitle = currentNode.getProperty("jcr:title");`
+   例：`String pageTitle = currentNode.getProperty("jcr:title");`
 
 ## JSP タグライブラリ {#jsp-tag-libraries}
 
 CQ と Sling のタグライブラリを使用すると、テンプレートやコンポーネントの JSP スクリプトで使用する特定の機能にアクセスできます。
 
-詳しくは、[タグライブラリ](/help/sites-developing/taglib.md)を参照してください。
+詳しくは、 [タグライブラリ](/help/sites-developing/taglib.md).
 
 ## クライアント側 HTML ライブラリの使用 {#using-client-side-html-libraries}
 
 最近の Web サイトは、複雑な JavaScript や CSS コードを利用したクライアント側の処理に大きく依存しています。このコードの提供を編成および最適化することが厄介な問題となることがあります。
 
-この問題に対処するために、AEMには&#x200B;**クライアント側ライブラリフォルダー**&#x200B;が用意されています。このフォルダーを使用して、クライアント側コードをリポジトリに保存し、カテゴリに整理し、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます。 その後、クライアント側ライブラリシステムにより、最終的な Web ページで、正しいコードを読み込むための正しいリンクが作成されます。
+この問題に対処するために、AEMでは、 **クライアント側ライブラリフォルダー**：クライアント側コードをリポジトリに保存し、カテゴリに整理して、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます。 その後、クライアント側ライブラリシステムにより、最終的な Web ページで、正しいコードを読み込むための正しいリンクが作成されます。
 
-詳しくは、[クライアント側HTMLライブラリの使用](/help/sites-developing/clientlibs.md)を参照してください。
+ドキュメントを参照 [クライアント側HTMLライブラリの使用](/help/sites-developing/clientlibs.md) を参照してください。
 
 ## ダイアログ {#dialog}
 
 コンポーネントのコンテンツを作成者が追加したり設定できるようにするには、ダイアログが必要です。
 
-詳しくは、 [AEMコンポーネント — 基本](/help/sites-developing/components-basics.md#dialogs)を参照してください。
+詳しくは、 [AEMコンポーネント — 基本](/help/sites-developing/components-basics.md#dialogs) 詳しくは、を参照してください。
 
 ## 編集動作の設定 {#configuring-the-edit-behavior}
 
 コンポーネントの編集動作を設定できます。これには、コンポーネントに対して使用可能なアクションなどの属性、インプレースエディターの特性、コンポーネントに対するイベントに関連するリスナーも含まれます。固有の相違点は多少ありますが、設定はタッチ操作対応 UI とクラシック UI の両方に共通です。
 
-コンポーネントの[編集動作は、タイプ`cq:EditConfig`の`cq:editConfig`ノードを（タイプ`cq:Component`の）コンポーネントノードの下に追加し、特定のプロパティと子ノードを追加することで](/help/sites-developing/components-basics.md#edit-behavior)設定します。
+この [コンポーネントの編集動作が設定されている](/help/sites-developing/components-basics.md#edit-behavior) を `cq:editConfig` タイプのノード `cq:EditConfig` コンポーネントノードの下 ( タイプ `cq:Component`) をクリックし、特定のプロパティと子ノードを追加します。
 
 ## ExtJS ウィジェットの使用と拡張 {#using-and-extending-extjs-widgets}
 
@@ -137,7 +137,7 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
 
 詳しくは、[xtype の使用](/help/sites-developing/xtypes.md)を参照してください。
 
-## 新しいコンポーネントの開発  {#developing-new-components}
+## 新しいコンポーネントの開発 {#developing-new-components}
 
 この節では、独自のコンポーネントを作成し、それを段落システムに追加する方法について説明します。
 
@@ -145,7 +145,7 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
 
 コンポーネントの開発方法の例について詳しくは、[テキストコンポーネントと画像コンポーネントの拡張 - 例](#extending-the-text-and-image-component-an-example)を参照してください。
 
-### 新しいコンポーネントの開発（既存のコンポーネントの利用）  {#develop-a-new-component-adapt-existing-component}
+### 新しいコンポーネントの開発（既存のコンポーネントの利用） {#develop-a-new-component-adapt-existing-component}
 
 既存のコンポーネントをベースに新しい AEM コンポーネントを開発するには、既存のコンポーネントをコピーし、新しいコンポーネント用の JavaScript ファイルを作成して、AEM からアクセスできる場所に保存します（「[コンポーネントおよびその他の要素のカスタマイズ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)」も参照してください）。
 
@@ -158,19 +158,19 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
    * コピー元：`/libs/foundation/components/text`
    * コピー先：`/apps/myProject/components/text`
 
-1. `jcr:title`を変更して、新しい名前を反映します。
+1. を変更します。 `jcr:title` 新しい名前を反映させる
 1. 新しいコンポーネントフォルダーを開き、必要な変更をおこないます。また、フォルダー内にある不要な情報を削除します。
 
    例えば、次のような変更をおこなうことができます。
 
    * ダイアログボックスへの新しいフィールドの追加
 
-      * `cq:dialog`  — タッチ操作対応UI用ダイアログ
+      * `cq:dialog`  — タッチ操作対応 UI 用のダイアログ
       * `dialog` - クラシック UI 用ダイアログ
-   * `.jsp`ファイルの置き換え（新しいコンポーネントの後に名前を付けます）
+   * の置き換え `.jsp` ファイル（新しいコンポーネントの後に名前を付けます）
    * または、コンポーネント全体の作成し直し（必要な場合）
 
-   例えば、標準のテキストコンポーネントのコピーを作成した場合は、ダイアログボックスにフィールドを追加し、`.jsp`を更新してそこで行った入力を処理できます。
+   例えば、標準テキストコンポーネントのコピーを作成した場合、ダイアログボックスにフィールドを追加して、 `.jsp` 入力を処理するために。
 
    >[!NOTE]
    >
@@ -190,30 +190,30 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
 
 1. 新しいコンポーネントを表示するには、次のいずれかのノードが存在し、適切に初期化されている必要があります。
 
-   * `cq:dialog`  — タッチ操作対応UI用ダイアログ
+   * `cq:dialog`  — タッチ操作対応 UI 用のダイアログ
    * `dialog` - クラシック UI 用ダイアログ
    * `cq:editConfig` - 編集環境でのコンポーネントの動作（ドラッグ＆ドロップなど）
-   * `design_dialog`  — デザインモード用ダイアログ（クラシックUIのみ）
+   * `design_dialog`  — デザインモード用のダイアログ（クラシック UI のみ）
 
 1. 次のどちらかの方法で、段落システムで新しいコンポーネントを利用できるようにします。
 
-   * CRXDE Liteを使用して、ノード`/etc/designs/geometrixx/jcr:content/contentpage/par`のプロパティコンポーネントに値`<path-to-component>`（例えば、`/apps/geometrixx/components/myComponent`）を追加します。
+   * CRXDE Liteを使用して値を追加 `<path-to-component>` ( 例： `/apps/geometrixx/components/myComponent`) をノードのプロパティコンポーネントに追加します。 `/etc/designs/geometrixx/jcr:content/contentpage/par`
    * 「[段落システムへの新しいコンポーネントの追加](#adding-a-new-component-to-the-paragraph-system-design-mode)」の手順を実行します。
 
 1. AEM WCM で、Web サイトのページを開き、作成した新しいタイプの段落を挿入してコンポーネントが正常に動作することを確認します。
 
 >[!NOTE]
 >
->ページの読み込みのタイミング統計を確認するには、Ctrl+Shift+Uキーを使用し、URLに`?debugClientLibs=true`を設定します。
+>ページの読み込みのタイミング統計を確認するには、Ctrl + Shift + U — を `?debugClientLibs=true` を URL に設定します。
 
-### 段落システム（デザインモード）への新しいコンポーネントの追加{#adding-a-new-component-to-the-paragraph-system-design-mode}
+### 段落システムへの新しいコンポーネントの追加（デザインモード） {#adding-a-new-component-to-the-paragraph-system-design-mode}
 
 コンポーネントを開発したら、段落システムに追加します。この操作により、ページの編集時に、作成者がコンポーネントを選択して使用できるようになります。
 
-1. 段落システムを使用するオーサリング環境内のページにアクセスします（例：`<contentPath>/Test.html`）。
+1. 例えば段落システムを使用するオーサリング環境内のページにアクセスする `<contentPath>/Test.html`.
 1. 次のどちらかの方法でデザインモードに切り替えます。
 
-   * URLの末尾に`?wcmmode=design`を追加し、再度アクセスする（例： ）。
+   * 追加 `?wcmmode=design` を URL の末尾に追加して、再度アクセスする方法を示します。例：
 
       `<contextPath>/ Test.html?wcmmode=design`
 
@@ -229,7 +229,7 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
 
 1. コンポーネントをアクティブ化したら、標準編集モードに戻り、利用可能かどうかを確認します。
 
-### テキストコンポーネントと画像コンポーネントの拡張 - 例  {#extending-the-text-and-image-component-an-example}
+### テキストコンポーネントと画像コンポーネントの拡張 - 例 {#extending-the-text-and-image-component-an-example}
 
 この節では、広く利用されているテキストと画像の標準コンポーネントを、設定可能な画像配置機能を使用して拡張する方法について説明します。
 
@@ -252,75 +252,75 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
 
 >[!NOTE]
 >
->この例は、Geometrixx サンプルコンテンツに基づいています。これは、AEM に付属されなくなり、We.Retail に置き換えられました。Geometrixxをダウンロードしてインストールする方法については、ドキュメント[We.Retail参照実装](/help/sites-developing/we-retail.md#we-retail-geometrixx)を参照してください。
+>この例は、Geometrixx サンプルコンテンツに基づいています。これは、AEM に付属されなくなり、We.Retail に置き換えられました。ドキュメントを参照 [We.Retail 参照実装](/help/sites-developing/we-retail.md#we-retail-geometrixx) を参照してください。
 
 #### 既存の textimage コンポーネントの拡張 {#extending-the-existing-textimage-component}
 
-新しいコンポーネントを作成するには、標準のtextimageコンポーネントを基礎として使用し、変更します。 ここでは、Geometrixx AEM WCM の例のアプリケーションに新しいコンポーネントを保存します。
+新しいコンポーネントを作成するには、標準の textimage コンポーネントを基礎として使用し、変更します。 ここでは、Geometrixx AEM WCM の例のアプリケーションに新しいコンポーネントを保存します。
 
-1. ターゲットノード名としてtextimageを使用して、`/libs/foundation/components/textimage`からGeometrixxコンポーネントフォルダー`/apps/geometrixx/components`に標準のtextimageコンポーネントをコピーします。 （コンポーネントに移動し、右クリックして「コピー」を選択し、ターゲットディレクトリに移動することでコンポーネントをコピーします）。
+1. 標準の textimage コンポーネントを `/libs/foundation/components/textimage` をGeometrixxコンポーネントフォルダーに追加する `/apps/geometrixx/components`（ターゲットノード名として textimage を使用） （コンポーネントに移動し、右クリックして「コピー」を選択し、ターゲットディレクトリに移動することでコンポーネントをコピーします）。
 
    ![chlimage_1-59](assets/chlimage_1-59.png)
 
 1. この例ではシンプルに保つために、コピーしたコンポーネントに移動し、新しい textimage ノードから、以下に示すサブノードを除く、すべてのサブノードを削除します。
 
-   * ダイアログ定義：`textimage/dialog`
-   * コンポーネントスクリプト：`textimage/textimage.jsp`
-   * 設定ノードを編集（アセットのドラッグ&amp;ドロップを許可）:`textimage/cq:editConfig`
+   * ダイアログ定義： `textimage/dialog`
+   * コンポーネントスクリプト： `textimage/textimage.jsp`
+   * 設定ノードを編集（アセットのドラッグ&amp;ドロップを許可）: `textimage/cq:editConfig`
 
    >[!NOTE]
    >
    >ダイアログの定義は、UI に依存します。
    >
-   >* タッチ操作対応UI:`textimage/cq:dialog`
-   >* クラシック UI：`textimage/dialog`
+   >* タッチ操作対応 UI: `textimage/cq:dialog`
+   >* クラシック UI: `textimage/dialog`
 
 
 1. コンポーネントのメタデータを編集します。
 
    * コンポーネント名
 
-      * `jcr:description`を`Text Image Component (Extended)`に設定します。
-      * `jcr:title`を`Text Image (Extended)`に設定します。
+      * 設定 `jcr:description` から `Text Image Component (Extended)`
+      * 設定 `jcr:title` から `Text Image (Extended)`
    * サイドキック内でコンポーネントが一覧表示されるグループ（修正しない）
 
-      * `componentGroup`は`General`のままにします。
+      * 終了 `componentGroup` に設定 `General`
    * 新しいコンポーネントの親コンポーネント（標準の textimage コンポーネント）
 
-      * `sling:resourceSuperType`を`foundation/components/textimage`に設定します。
+      * 設定 `sling:resourceSuperType` から `foundation/components/textimage`
 
    この手順を終えると、コンポーネントのノードは以下のようになります。
 
    ![chlimage_1-60](assets/chlimage_1-60.png)
 
-1. 画像の編集設定ノードの`sling:resourceType`プロパティを変更します(プロパティ：`textimage/cq:editConfig/cq:dropTargets/image/parameters/sling:resourceType`)から`geometrixx/components/textimage.`へ
+1. を `sling:resourceType` 画像の編集設定ノードのプロパティ ( プロパティ： `textimage/cq:editConfig/cq:dropTargets/image/parameters/sling:resourceType`) から `geometrixx/components/textimage.`
 
    これで、画像がページ上のコンポーネントにドロップされると、拡張された textimage コンポーネントの `sling:resourceType` プロパティが `geometrixx/components/textimage.` に設定されます。
 
 1. コンポーネントのダイアログボックスを変更して新しいオプションを含めます。新しいコンポーネントは元のコンポーネントと同じダイアログボックスのパーツを継承します。「**詳細**」タブを拡張するために、「**左**」と「**右**」のオプションのある「**画像の位置**」ドロップダウンリストだけを追加します。
 
-   * `textimage/dialog`プロパティは変更しないでください。
+   * を `textimage/dialog`プロパティは変更されません。
 
    `textimage/dialog/items` に、textimage ダイアログボックスの 4 つのタブを表す 4 つのサブノード（tab1 から tab4）があることを確認します。
 
    * 最初の 2 つのタブ（tab1 および tab2）：
 
       * xtype を cqinclude に変更します（標準コンポーネントから継承するため）。
-      * それぞれ`/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`と`/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`の値を持つパスプロパティを追加します。
+      * 値を持つパスプロパティを追加します。 `/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`および `/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`、それぞれ。
       * その他のすべてのプロパティとサブネットを削除します。
    * tab3：
 
       * プロパティとサブノードは変更せずに保持します。
-      * 新しいフィールド定義を`tab3/items`に追加します。ノードの位置は`cq:Widget`型です。
-      * 新しい`tab3/items/position`ノードに対して、次のプロパティ（タイプがString）を設定します。
+      * 新しいフィールド定義をに追加 `tab3/items`，タイプのノード位置 `cq:Widget`
+      * 新しい `tab3/items/position`ノード：
 
          * `name`: `./imagePosition`
-         * `xtype`:  `selection`
-         * `fieldLabel`:  `Image Position`
-         * `type`:  `select`
-      * 画像配置の2つの選択肢を表す`cq:WidgetCollection`型のサブノード`position/options`を追加し、その下に`nt:unstructured`型のo1とo2の2つのノードを作成します。
-      * ノード`position/options/o1`の場合、次のプロパティを設定します。`text`から`Left`、`value`から`left.`へ
-      * ノード`position/options/o2`の場合、次のプロパティを設定します。`text`から`Right`、`value`から`right`の順に移動します。
+         * `xtype`: `selection`
+         * `fieldLabel`: `Image Position`
+         * `type`: `select`
+      * サブノードを追加 `position/options` タイプ `cq:WidgetCollection` 画像配置の 2 つの選択肢を表し、その下に 2 つのノード（タイプの o1 と o2）を作成します `nt:unstructured`.
+      * ノードの場合 `position/options/o1` プロパティを設定します。 `text` から `Left` および `value` から `left.`
+      * ノードの場合 `position/options/o2` プロパティを設定します。 `text` から `Right` および `value` から `right`.
    * tab4 を削除します。
 
    画像の位置は、`imagePosition` の段落を表すノードの `textimage` プロパティとしてコンテンツ内で保持されます。これらの手順を終えると、コンポーネントのダイアログボックスは以下のようになります。
@@ -365,17 +365,17 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
 
 コンポーネントには、Company ページの段落のコンテンツが格納されます。
 
-### 画像コンポーネントのアップロード機能の無効化  {#disable-upload-capability-of-the-image-component}
+### 画像コンポーネントのアップロード機能の無効化 {#disable-upload-capability-of-the-image-component}
 
-この機能を無効にするには、標準の画像コンポーネントを基礎として使用し、変更します。 Geometrixx の例のアプリケーションに新しいコンポーネントを保存します。
+この機能を無効にするには、標準の画像コンポーネントを基礎として使用し、それを変更します。 Geometrixx の例のアプリケーションに新しいコンポーネントを保存します。
 
-1. ターゲットノード名としてimageを使用して、`/libs/foundation/components/image`からGeometrixxコンポーネントフォルダー`/apps/geometrixx/components`に標準の画像コンポーネントをコピーします。
+1. 次の標準画像コンポーネントをコピーします。 `/libs/foundation/components/image` をGeometrixxコンポーネントフォルダーに追加する `/apps/geometrixx/components`（ターゲットノード名として画像を使用）
 
    ![chlimage_1-62](assets/chlimage_1-62.png)
 
 1. コンポーネントのメタデータを編集します。
 
-   * **jcr:title**&#x200B;を`Image (Extended)`に設定します。
+   * 設定 **jcr:title** から `Image (Extended)`
 
 1. `/apps/geometrixx/components/image/dialog/items/image` に移動します。
 1. 新しいプロパティを追加します。

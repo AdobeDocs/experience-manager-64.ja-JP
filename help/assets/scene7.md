@@ -1,6 +1,6 @@
 ---
 title: ページへのDynamic Media Classic機能の追加
-description: Dynamic Media Classicコンポーネントと、それらをAEMページに追加する方法について説明します。
+description: Dynamic Media Classicコンポーネントと、AEMページに追加する方法について説明します。
 contentOwner: Alva Ware-Bevacqui
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
@@ -10,14 +10,14 @@ feature: Dynamic Media Classic
 role: User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '2829'
+source-wordcount: '2826'
 ht-degree: 32%
 
 ---
 
 # ページへのDynamic Media Classic機能の追加 {#adding-scene-features-to-your-page}
 
-AdobeDynamic Media Classicは、Web、モバイル、Eメールおよびインターネットに接続されたディスプレイと印刷を管理、強化、公開、および配信するためのホストソリューションです。
+Adobe Dynamic Media Classicは、リッチメディアアセットを管理、強化、公開、および Web、モバイル、電子メール、インターネットに接続されたディスプレイと印刷できる、ホストソリューションです。
 
 Dynamic Media Classicで公開されたAEMアセットは、様々なビューアで表示できます。
 
@@ -27,9 +27,9 @@ Dynamic Media Classicで公開されたAEMアセットは、様々なビュー�
 * 画像テンプレート
 * 画像
 
-デジタルアセットをAEMからDynamic Media Classicに直接公開したり、Dynamic Media ClassicからAEMに公開したりできます。
+デジタルアセットをAEMからDynamic Media Classicに直接公開したり、デジタルアセットをDynamic Media ClassicからAEMに公開したりできます。
 
-このドキュメントでは、AEMからDynamic Media Classicにデジタルアセットを公開する方法と、その逆の方法について説明します。 また、ビューアについても詳しく説明します。AEM for Dynamic Media Classicの設定について詳しくは、[Dynamic Media ClassicとAEM](/help/sites-administering/scene7.md)の統合を参照してください。
+このドキュメントでは、デジタルアセットをAEMからDynamic Media Classicに公開する方法と、その逆の方法について説明します。 また、ビューアについても詳しく説明します。AEM for Dynamic Media Classicの設定について詳しくは、 [Dynamic Media ClassicとAEMの統合](/help/sites-administering/scene7.md).
 
 [画像マップの追加](image-maps.md)も参照してください。
 
@@ -37,20 +37,19 @@ AEM でのビデオコンポーネントの使用について詳しくは、[ビ
 
 >[!NOTE]
 >
->Dynamic Media Classicのアセットが正しく表示されない場合は、Dynamic Mediaが[無効](config-dynamic.md#disabling-dynamic-media)であることを確認してから、ページを更新します。
+>Dynamic Media Classicのアセットが正しく表示されない場合は、Dynamic Media が [無効](config-dynamic.md#disabling-dynamic-media) ページを更新します。
 
 ## アセットからDynamic Media Classicへの手動公開 {#manually-publishing-to-scene-from-assets}
 
-次の手順で、デジタルアセットをDynamic Media Classicに公開できます。
+デジタルアセットは、次の手順でDynamic Media Classicに公開できます。
 
 * [クラシック UI を使用して Assets コンソールから](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md#publishing-from-the-assets-console)
 * [クラシック UI を使用してアセットから](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md#publishing-from-an-asset)
-* [CQ Targetフォルダーの外部からのクラシックユーザーインターフェイス](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md#publishing-assets-from-outside-the-cq-target-folder)
+* [CQ Target フォルダーの外部からのクラシックユーザーインターフェイス](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md#publishing-assets-from-outside-the-cq-target-folder)
 
 >[!NOTE]
 >
->AEMはDynamic Media Classicに非同期で公開します。 「**[!UICONTROL 公開]**」をクリックした後、アセットがDynamic Media Classicに公開されるまでに数秒かかる場合があります。
-
+>AEMはDynamic Media Classicに非同期で公開します。 次をクリックした後： **[!UICONTROL 公開]**( アセットがDynamic Media Classicに公開されるまで数秒かかる場合があります )。
 
 ## Dynamic Media Classicコンポーネント {#scene-components}
 
@@ -64,42 +63,42 @@ AEMでは、次のDynamic Media Classicコンポーネントを使用できま�
 
 >[!NOTE]
 >
->これらのコンポーネントはデフォルトでは使用できないので、使用する前に&#x200B;**[!UICONTROL デザイン]**&#x200B;モードで選択する必要があります。
+>これらのコンポーネントはデフォルトでは使用できないので、で選択する必要があります。 **[!UICONTROL デザイン]** モードを使用してください。
 
-**[!UICONTROL デザイン]**&#x200B;モードで使用可能になったら、他のAEMコンポーネントと同様に、コンポーネントをページに追加できます。 まだDynamic Media Classicに公開されていないアセットは、同期されたフォルダー内、ページ上、またはDynamic Media Classicクラウド設定を使用している場合、Dynamic Media Classicに公開されます。
+これらが **[!UICONTROL デザイン]** モードでは、他のAEMコンポーネントと同様に、コンポーネントをページに追加できます。 まだDynamic Media Classicに公開されていないアセットは、同期済みフォルダー内、ページ上、またはDynamic Media Classicクラウド設定を使用している場合、Dynamic Media Classicに公開されます。
 
 >[!NOTE]
 >
->カスタムビューアを作成および開発し、コンテンツファインダーを使用する場合は、**[!UICONTROL allowfullscreen]**&#x200B;パラメーターを明示的に追加する必要があります。
+>カスタムビューアを作成および開発し、コンテンツファインダーを使用する場合は、 **[!UICONTROL allowfullscreen]** パラメーター。
 
 ### Flash ビューアのサポート終了に関する通知 {#flash-viewers-end-of-life-notice}
 
-2017年1月31日に、AdobeDynamic Media ClassicはFlashビューアプラットフォームのサポートを終了しました。
+Adobe Dynamic Media Classicは、2017 年 1 月 31 日にFlashビューアプラットフォームのサポートを終了しました。
 
-### Dynamic Media Classicコンポーネント(Scene7)のページへの追加 {#adding-a-scene-component-to-a-page}
+### ページへのDynamic Media Classicコンポーネント (Scene7) の追加 {#adding-a-scene-component-to-a-page}
 
-Dynamic Media Classic(Scene7)コンポーネントをページに追加する方法は、任意のページにコンポーネントを追加する方法と同じです。 Dynamic Media Classicコンポーネントについて、以降の節で詳しく説明します。
+Dynamic Media Classic(Scene7) コンポーネントをページに追加する操作は、任意のページにコンポーネントを追加する操作と同じです。 Dynamic Media Classicコンポーネントについて、以降の節で詳しく説明します。
 
-**Dynamic Media Classic(Scene7)コンポーネントをページに追加するには**:
+**ページにDynamic Media Classic(Scene7) コンポーネントを追加するには**:
 
-1. AEMで、Dynamic Media Classic(Scene7)コンポーネントを追加するページを開きます。
+1. AEMで、Dynamic Media Classic(Scene7) コンポーネントを追加するページを開きます。
 
-1. Dynamic Media Classicコンポーネントが使用できない場合は、「**[!UICONTROL デザイン]**」モードをクリックし、青い境界線の付いた任意のコンポーネントをタップし、**[!UICONTROL 親]**&#x200B;アイコンをタップして、**[!UICONTROL 設定]**&#x200B;アイコンをタップします。 **[!UICONTROL Parsys(Design)]**&#x200B;で、すべてのDynamic Media Classicコンポーネントを選択して使用可能にし、「**[!UICONTROL OK]**」をクリックします。
+1. 使用できるDynamic Media Classicコンポーネントがない場合は、 **[!UICONTROL デザイン]** モード、青い境界線の付いた任意のコンポーネントをタップ、 **[!UICONTROL 親]** アイコン、 **[!UICONTROL 設定]** アイコン In **[!UICONTROL Parsys （デザイン）]**&#x200B;をクリックし、使用可能にするDynamic Media Classicのすべてのコンポーネントを選択して、 **[!UICONTROL OK]**.
 
    ![chlimage_1-224](assets/chlimage_1-224.png)
 
-1. 「**[!UICONTROL 編集]**」をクリックして、「**[!UICONTROL 編集]**」モードに戻ります。
+1. クリック **[!UICONTROL 編集]** 戻る **[!UICONTROL 編集]** モード。
 
 1. サイドキックのDynamic Media Classicグループからページの目的の場所にコンポーネントをドラッグします。
 
-1. **[!UICONTROL 設定]**&#x200B;アイコンをクリックして、コンポーネントを開きます。
+1. 次をクリック： **[!UICONTROL 設定]** アイコンをクリックして、コンポーネントを開きます。
 
 1. コンポーネントの編集を必要に応じておこない、「**[!UICONTROL OK]**」をクリックして変更内容を保存します。
 1. 画像またはビデオをコンテンツブラウザーからページに追加したDynamic Media Classicコンポーネントにドラッグします。
 
    >[!NOTE]
    >
-   >タッチUIの場合のみ、画像またはビデオをページに配置したDynamic Media Classicコンポーネントにドラッグ&amp;ドロップする必要があります。 Dynamic Media Classicコンポーネントの選択と編集の後でのアセットの選択はサポートされていません。
+   >タッチ UI のみで、画像またはビデオをページに配置したDynamic Media Classicコンポーネントにドラッグ&amp;ドロップする必要があります。 Dynamic Media Classicコンポーネントの選択と編集の後でのアセットの選択はサポートされていません。
 
 ### レスポンシブサイトへのインタラクティブな表示エクスペリエンスの追加 {#adding-interactive-viewing-experiences-to-a-responsive-website}
 
@@ -109,15 +108,15 @@ Dynamic Media Classic(Scene7)コンポーネントをページに追加する方
 
 **レスポンシブサイトにインタラクティブな表示エクスペリエンスを追加するには**:
 
-1. AEMにログインし、[AdobeDynamic Media ClassicCloud Services](/help/sites-administering/scene7.md#configuring-scene-integration)が設定され、Dynamic Media Classicコンポーネントが使用可能であることを確認します。
+1. AEMにログインし、 [設定済みのAdobe Dynamic Media ClassicCloud Services](/help/sites-administering/scene7.md#configuring-scene-integration) Dynamic Media Classicコンポーネントを使用できます。
 
    >[!NOTE]
    >
-   >Dynamic Media Classicコンポーネントを使用できない場合は、デザインモード](/help/sites-authoring/default-components-designmode.md)を使用して有効にするように[してください。
+   >Dynamic Media Classicコンポーネントを使用できない場合は、 [デザインモードで有効にするには](/help/sites-authoring/default-components-designmode.md).
 
-1. **[!UICONTROL Dynamic Media Classic]**&#x200B;コンポーネントが有効なWebサイトで、**[!UICONTROL 画像]**&#x200B;コンポーネントをページにドラッグします。
+1. Web サイト内の **[!UICONTROL Dynamic Media Classic]** 有効なコンポーネント、ドラッグ **[!UICONTROL 画像]** コンポーネントをページに追加します。
 1. コンポーネントを選択し、設定アイコンをタップします。
-1. 「**[!UICONTROL Dynamic Media Classic設定]**」タブで、ブレークポイントを調整します。
+1. 内 **[!UICONTROL Dynamic Media Classic Settings]** タブで、ブレークポイントを調整します。
 
    ![chlimage_1-225](assets/chlimage_1-225.png)
 
@@ -125,99 +124,99 @@ Dynamic Media Classic(Scene7)コンポーネントをページに追加する方
 
 ### すべてのDynamic Media Classicコンポーネントに共通の設定 {#settings-common-to-all-scene-components}
 
-設定オプションは異なりますが、次の操作はすべての[!UICONTROL Dynamic Media Classic]コンポーネントに共通です。
+設定オプションは異なりますが、次の操作はすべての [!UICONTROL Dynamic Media Classic] コンポーネント：
 
-* **[!UICONTROL ファ]**
-イル参照するファイルを参照します。ファイル参照は、アセットのURLを表示しますが、必ずしもURLコマンドやパラメーターを含む完全なDynamic Media Classic URLとは限りません。 このフィールドにDynamic Media Classic URLコマンドおよびパラメーターを追加することはできません。 それらは、コンポーネントの対応する機能を使用して追加する必要があります。
-* ****
-幅：幅を設定します。
-* ****
-Height：高さを設定します。
+* **[!UICONTROL ファイル参照]**
+参照するファイルを参照します。 ファイル参照は、アセット URL を表示しますが、必ずしも URL コマンドやパラメーターを含む完全なDynamic Media Classic URL ではありません。 このフィールドにDynamic Media Classic URL のコマンドとパラメーターを追加することはできません。 それらは、コンポーネントの対応する機能を使用して追加する必要があります。
+* **[!UICONTROL 幅]**
+幅を設定できます。
+* **[!UICONTROL 高さ]**
+高さを設定できます。
 
-これらの設定オプションを設定するには、例えば&#x200B;**[!UICONTROL ズーム]**&#x200B;コンポーネントを開く際に、Dynamic Media Classicコンポーネントを開く（ダブルクリックする）必要があります。
+これらの設定オプションを設定するには、例えば、Dynamic Media Classicコンポーネントを開く（ダブルクリックする）と、 **[!UICONTROL ズーム]** コンポーネント：
 
 ![chlimage_1-226](assets/chlimage_1-226.png)
 
 ### ズーム {#zoom}
 
-**[!UICONTROL +]**&#x200B;ボタンを押すと、HTML5ズームコンポーネントで大きな画像が表示されます。
+HTML5 ズームコンポーネントで、 **[!UICONTROL +]** 」ボタンをクリックします。
 
-アセットの下部にはズームツールが用意されています。**[!UICONTROL +]**&#x200B;をタップして拡大します。 **[!UICONTROL -]**&#x200B;をタップして減らします。 **[!UICONTROL x]**&#x200B;をタップするか、ズームのリセット矢印をタップすると、画像が元のサイズに戻ります。 斜めの矢印をタップして、全画面表示にします。 「**[!UICONTROL 編集]**」をタップして、コンポーネントを設定します。 このコンポーネントを使用すると、すべての[!UICONTROL Dynamic Media Classic]コンポーネント](#settings-common-to-all-scene-components)に共通の[設定を構成できます。
+アセットの下部にはズームツールが用意されています。タップ **[!UICONTROL +]** を拡大します。 タップ **[!UICONTROL -]** 減らす。 次をタップ **[!UICONTROL x]** または「ズームをリセット」矢印を使用すると、画像は読み込み時の元のサイズに戻ります。 斜めの矢印をタップして、全画面表示にします。 タップ **[!UICONTROL 編集]** コンポーネントを設定する場合。 このコンポーネントを使用すると、 [すべての [!UICONTROL Dynamic Media Classic] コンポーネント](#settings-common-to-all-scene-components).
 
 ![chlimage_1-227](assets/chlimage_1-227.png)
 
 ### フライアウト {#flyout}
 
-HTML5の&#x200B;**[!UICONTROL フライアウト]**&#x200B;コンポーネントでは、アセットは分割画面で表示されます。アセットを指定されたサイズのままにした。ズーム部分の右側が表示されます。 「**[!UICONTROL 編集]**」をタップして、コンポーネントを設定します。 このコンポーネントを使用すると、すべてのDynamic Media Classicコンポーネント](#settings-common-to-all-scene-components)に共通の[設定を構成できます。
+HTML5 **[!UICONTROL フライアウト]** コンポーネントの場合、アセットは分割画面で表示されます。アセットを指定されたサイズで残し、ズーム部分の右側が表示されます。 タップ **[!UICONTROL 編集]** コンポーネントを設定する場合。 このコンポーネントを使用すると、 [すべてのDynamic Media Classicコンポーネントに共通の設定](#settings-common-to-all-scene-components).
 
 >[!NOTE]
 >
->**[!UICONTROL フライアウト]**&#x200B;コンポーネントでカスタムサイズを使用する場合は、そのカスタムサイズが使用され、コンポーネントのレスポンシブ設定が無効になります。
+>次に、 **[!UICONTROL フライアウト]** コンポーネントでカスタムサイズが使用され、そのカスタムサイズが使用されて、コンポーネントのレスポンシブ設定が無効になります。
 >
->**[!UICONTROL フライアウト]**&#x200B;コンポーネントで、**[!UICONTROL デザインビュー]**&#x200B;で設定したデフォルトのサイズを使用する場合は、デフォルトのサイズが使用され、コンポーネントが拡大されて、レスポンシブなコンポーネント設定に合わせます。ただし、コンポーネントのレスポンシブ設定には制限があることに注意してください。**[!UICONTROL フライアウト]**&#x200B;コンポーネントをレスポンシブに設定して使用する場合は、ページ全体を拡大して使用しないでください。そうしないと、**[!UICONTROL フライアウト]**&#x200B;がページの右の境界線を越えて伸びる場合があります。
+>次に、 **[!UICONTROL フライアウト]** コンポーネントは、 **[!UICONTROL デザインビュー]**&#x200B;を指定した場合は、デフォルトのサイズが使用され、コンポーネントが拡張され、コンポーネントのレスポンシブ設定に応じてページレイアウトのサイズに調整されます。ただし、コンポーネントのレスポンシブ設定には制限があることに注意してください。を **[!UICONTROL フライアウト]** レスポンシブ設定のコンポーネント。フルページで拡大して使用しないでください。それ以外の場合は、 **[!UICONTROL フライアウト]** は、ページの右の境界線を越えて拡大する場合があります。
 
 ![chlimage_1-228](assets/chlimage_1-228.png)
 
 ### 画像 {#image}
 
-Dynamic Media Classicの&#x200B;**[!UICONTROL 画像]**&#x200B;コンポーネントを使用すると、Dynamic Media Classicの修飾子、画像またはビューアプリセット、シャープニングなど、Dynamic Media Classicの機能を画像に追加できます。 Dynamic Media Classicの&#x200B;**[!UICONTROL 画像]**&#x200B;コンポーネントは、AEMの特別なDynamic Media Classic機能を持つ他の画像コンポーネントと似ています。 この例では、画像にDynamic Media Classic URL修飾子&#x200B;**&amp;op_invert=1**&#x200B;が適用されています。
+ザDynamic Media Classic **[!UICONTROL 画像]** コンポーネントを使用すると、Dynamic Media Classicの修飾子、画像またはビューアプリセット、シャープニングなどのDynamic Media Classic機能を画像に追加できます。 ザDynamic Media Classic **[!UICONTROL 画像]** コンポーネントは、AEMの特別なDynamic Media Classic機能を備えた他の画像コンポーネントと似ています。 この例では、画像にDynamic Media Classic URL 修飾子が含まれています。 **&amp;op_invert=1** 適用済み
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
-* **[!UICONTROL タイトル、代替テ]**
-キスト「詳 **** 細」タブで、グラフィックの表示をオフにしているユーザー向けのタイトルと代替テキストを画像に追加します。
+* **[!UICONTROL タイトル、代替テキスト]**
+内 **[!UICONTROL 詳細]** 「 」タブで、グラフィックの表示をオフにしているユーザー向けのタイトルと代替テキストを画像に追加します。
 
-* **[!UICONTROL URL、開く：リ]**
-ンクを開く元のアセットを設定できます。「**[!UICONTROL URL]**」と「**[!UICONTROL 次のウィンドウで開く]**」で、同じウィンドウで開くか新しいウィンドウで開くかを指定します。
+* **[!UICONTROL URL、で開く]**
+からアセットを設定して、リンクを開くことができます。 「**[!UICONTROL URL]**」と「**[!UICONTROL 次のウィンドウで開く]**」で、同じウィンドウで開くか新しいウィンドウで開くかを指定します。
 
 ![chlimage_1-230](assets/chlimage_1-230.png)
 
-* **[!UICONTROL ビュー]**
-アプリセットドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
+* **[!UICONTROL ビューアプリセット]**
+ドロップダウンメニューから既存のビューアプリセットを選択します。 探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
-* **[!UICONTROL Dynamic Media Classic]**
-設定SPSからアクティブな画像プリセットを取得するために使用するDynamic Media Classic設定を選択します。
+* **[!UICONTROL Dynamic Media Classic Configuration]**
+SPS からアクティブな画像プリセットを取得するために使用するDynamic Media Classic設定を選択します。
 
-* **[!UICONTROL 画像プ]**
-リセット：ドロップダウンメニューから既存の画像プリセットを選択します。探している画像プリセットが表示されない場合は、表示できるように設定する必要があります。[画像プリセットの管理](/help/assets/managing-image-presets.md)を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
+* **[!UICONTROL 画像プリセット]**
+ドロップダウンメニューから既存の画像プリセットを選択します。 探している画像プリセットが表示されない場合は、表示できるように設定する必要があります。[画像プリセットの管理](/help/assets/managing-image-presets.md)を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
-* **[!UICONTROL Output]**
-Format画像の出力形式（例：jpeg）を選択します。選択する出力形式によっては、追加の設定オプションが表示される場合があります。[画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)を参照してください。
+* **[!UICONTROL 出力形式]**
+画像の出力形式（例：jpeg）を選択します。 選択する出力形式によっては、追加の設定オプションが表示される場合があります。[画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)を参照してください。
 
-* ****
-シャープ：画像にシャープを適用する方法を選択します。シャープニングについて詳しくは、[画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)および[シャープニングのベストプラクティス](/help/assets/assets/sharpening_images.pdf)を参照してください。
+* **[!UICONTROL シャープ]**
+画像にシャープを適用する方法を選択します。 シャープニングについて詳しくは、[画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)および[シャープニングのベストプラクティス](/help/assets/assets/sharpening_images.pdf)を参照してください。
 
-* **[!UICONTROL URL修飾]**
-子追加のDynamic Media Classic画像コマンドを指定して、画像効果を変更できます。詳しくは、[画像プリセット](/help/assets/managing-image-presets.md)および「[コマンドリファレンス](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)」を参照してください。
+* **[!UICONTROL URL 修飾子]**
+追加のDynamic Media Classic画像コマンドを指定すると、画像エフェクトを変更できます。 詳しくは、[画像プリセット](/help/assets/managing-image-presets.md)および「[コマンドリファレンス](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)」を参照してください。
 
-* ****
-ブレークポイントWebサイトがレスポンシブな場合は、ブレークポイントを調整する必要があります。ブレークポイントはコンマ（,）で区切って指定してください。
+* **[!UICONTROL ブレークポイント]**
+レスポンシブ Web サイトの場合は、ブレークポイントを調整する必要があります。 ブレークポイントはコンマ（,）で区切って指定してください。
 
 ### 画像テンプレート {#image-template}
 
-[Dynamic Media Classic Image Templates](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#creating-the-initial-template) は、Dynamic Media Classicに読み込まれたPhotoshopコンテンツのレイヤーです。コンテンツとプロパティは、可変性を考慮してパラメーター化されています。**[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを使用すると、画像を読み込んで、テキストを AEM で動的に変更できます。また、ClientContext の値を使用するように&#x200B;**[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを設定できます。これにより、各ユーザーが個別に画像を活用できます。
+[Dynamic Media Classic画像テンプレート](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#creating-the-initial-template) は、Dynamic Media Classicに読み込まれたPhotoshopコンテンツに重ね合わされ、可変性を考慮してコンテンツとプロパティがパラメーター化されました。 **[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを使用すると、画像を読み込んで、テキストを AEM で動的に変更できます。また、ClientContext の値を使用するように&#x200B;**[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを設定できます。これにより、各ユーザーが個別に画像を活用できます。
 
-「**[!UICONTROL 編集]**」をタップして、コンポーネントを設定します。 すべてのDynamic Media Classicコンポーネント](#settings-common-to-all-scene-components)に共通の[設定や、この節で説明するその他の設定を構成できます。
+タップ **[!UICONTROL 編集]** コンポーネントを設定する場合。 次の項目を設定できます。 [すべてのDynamic Media Classicコンポーネントに共通の設定](#settings-common-to-all-scene-components) と、この節で説明するその他の設定。
 
 ![chlimage_1-231](assets/chlimage_1-231.png)
 
 * **[!UICONTROL ファイル参照、幅、高さ]**
-すべてのDynamic Media Classicコンポーネントに共通の設定。
+すべてのDynamic Media Classicコンポーネントに共通の設定を参照してください。
 
    >[!NOTE]
    >
-   >Dynamic Media Classic URLのコマンドとパラメーターは、ファイル参照URLに直接追加できません。 これらは、**[!UICONTROL パラメーター]**&#x200B;パネルのコンポーネントの UI でのみ定義できます。
+   >Dynamic Media Classic URL のコマンドとパラメーターをファイル参照 URL に直接追加することはできません。 これらは、**[!UICONTROL パラメーター]**&#x200B;パネルのコンポーネントの UI でのみ定義できます。
 
-* **[!UICONTROL タイトル、代替テキ]**
-ストDynamic Mediaの「クラシック画像テンプレート」タブで、グラフィックの表示をオフにしているユーザー向けのタイトルと代替テキストを画像に追加します。
+* **[!UICONTROL タイトル、代替テキスト]**
+「 Dynamic Media Classic画像テンプレート」タブで、グラフィックの表示をオフにしているユーザー向けのタイトルと代替テキストを画像に追加します。
 
-* **[!UICONTROL URL、開く：リ]**
-ンクを開く元のアセットを設定できます。「URL」と「次のウィンドウで開く」で、同じウィンドウで開くか新しいウィンドウで開くかを指定します。
+* **[!UICONTROL URL、で開く]**
+からアセットを設定して、リンクを開くことができます。 「URL」と「次のウィンドウで開く」で、同じウィンドウで開くか新しいウィンドウで開くかを指定します。
 
 ![chlimage_1-232](assets/chlimage_1-232.png)
 
-* **[!UICONTROL パラメ]**
-ータPanel画像を読み込むと、画像からの情報があらかじめパラメータに設定されます。動的に変更できるコンテンツがない場合、このウィンドウは空になります。
+* **[!UICONTROL パラメータパネル]**
+画像を読み込む際に、画像からの情報がパラメーターに事前に設定されます。 動的に変更できるコンテンツがない場合、このウィンドウは空になります。
 
 ![chlimage_1-233](assets/chlimage_1-233.png)
 
@@ -227,13 +226,13 @@ Format画像の出力形式（例：jpeg）を選択します。選択する出�
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
-画像内のテキストが変更されます。フィールドの横にある「**[!UICONTROL リセット]**」をタップして、テキストを元の値に戻すことができます。
+画像内のテキストが変更されます。をタップして、テキストを元の値に戻すことができます。 **[!UICONTROL リセット]** をクリックします。
 
 ![chlimage_1-235](assets/chlimage_1-235.png)
 
 #### ClientContext の値を反映したテキストの変更 {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-フィールドをClientContext値にリンクするには、**[!UICONTROL 「]**&#x200B;を選択」をタップしてClientContextメニューを開き、ClientContextを選択して「**[!UICONTROL OK]**」をタップします。 この例では、「名前」フィールドとプロファイル内の書式設定された名前とのリンクに基づいて名前が変わります。
+フィールドを ClientContext の値にリンクするには、 **[!UICONTROL 選択]** client-context メニューを開くには、clientcontext を選択し、 **[!UICONTROL OK]**. この例では、「名前」フィールドとプロファイル内の書式設定された名前とのリンクに基づいて名前が変わります。
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
@@ -243,8 +242,8 @@ Format画像の出力形式（例：jpeg）を選択します。選択する出�
 
 #### Dynamic Media Classic画像テンプレートをリンクにする {#making-the-scene-image-template-a-link}
 
-1. Dynamic Media Classicの&#x200B;**[!UICONTROL 画像テンプレート]**&#x200B;コンポーネントを含むページで、「**[!UICONTROL 編集]**」をタップします。
-1. 「**[!UICONTROL URL]**」フィールドに、画像をタップしたときに表示されるURLを入力します。 「**[!UICONTROL 次のウィンドウで開く]**」フィールドで、ターゲットを新しいウィンドウと同じウィンドウのどちらで開くかを選択します。
+1. Dynamic Media Classicを含むページ上 **[!UICONTROL 画像テンプレート]** コンポーネント、タップ **[!UICONTROL 編集]**.
+1. 内 **[!UICONTROL URL]** 「 」フィールドに、画像がタップされたときの移動先 URL を入力します。 「**[!UICONTROL 次のウィンドウで開く]**」フィールドで、ターゲットを新しいウィンドウと同じウィンドウのどちらで開くかを選択します。
 
    ![chlimage_1-238](assets/chlimage_1-238.png)
 
@@ -252,11 +251,11 @@ Format画像の出力形式（例：jpeg）を選択します。選択する出�
 
 ### ビデオコンポーネント {#video-component}
 
-Dynamic Media Classicの&#x200B;**[!UICONTROL ビデオ]**&#x200B;コンポーネント(サイドキックのDynamic Media Classicセクションから利用可能)は、デバイスと帯域幅の検出を使用して、適切なビデオを各画面に提供します。 このコンポーネントは HTML5 ビデオプレーヤー（チャネルを超えて使用可能な単一のビューア）です。
+ザDynamic Media Classic **[!UICONTROL ビデオ]** ( サイドキックの「Dynamic Media Classic」セクションから利用可能な ) コンポーネントは、デバイスと帯域幅の検出を使用して、適切なビデオを各画面に表示します。 このコンポーネントは HTML5 ビデオプレーヤー（チャネルを超えて使用可能な単一のビューア）です。
 
 このコンポーネントはアダプティブビデオセット（単一の MP4 ビデオまたは単一の F4V ビデオ）で使用できます。
 
-ビデオとDynamic Media Classicの統合の連携について詳しくは、[ビデオ](s7-video.md)を参照してください。 また、[Dynamic Media Classicビデオコンポーネントと基盤ビデオコンポーネント](s7-video.md)を参照してください。
+詳しくは、 [ビデオ](s7-video.md) ビデオとDynamic Media Classicの統合の連携について詳しくは、こちらを参照してください。 また、 [Dynamic Media Classicビデオコンポーネントと基盤ビデオコンポーネントの比較](s7-video.md).
 
 ![chlimage_1-239](assets/chlimage_1-239.png)
 
@@ -264,43 +263,42 @@ Dynamic Media Classicの&#x200B;**[!UICONTROL ビデオ]**&#x200B;コンポー�
 
 マスタービデオがアップロードされると、Adobe DAM および WCM が表示されます。次に示すプロキシアセットは表示されません。
 
-* Dynamic Media Classicのエンコードされたレンディション
+* Dynamic Media Classicエンコードされたレンディション
 * Dynamic Media Classicアダプティブビデオセット
 
-Dynamic Media Classicビデオコンポーネントでアダプティブビデオセットを使用する場合は、ビデオのサイズに合わせてコンポーネントのサイズを変更する必要があります。
+Dynamic Media Classicビデオコンポーネントでアダプティブビデオセットを使用する場合、ビデオのサイズに合わせてコンポーネントのサイズを変更する必要があります。
 
-## Dynamic Media Classicコンテンツブラウザー {#scene-content-browser}
+## Dynamic Media Classic Content Browser {#scene-content-browser}
 
-Dynamic Media Classicコンテンツブラウザーを使用すると、Dynamic Media ClassicのコンテンツをAEMで直接表示できます。 コンテンツブラウザーにアクセスするには、**[!UICONTROL コンテンツファインダー]**&#x200B;で、タッチ操作向けUIの&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;またはクラシックUIの&#x200B;**[!UICONTROL S7]**&#x200B;アイコンを選択します。 どちらの UI を使用しても機能は同じです。
+Dynamic Media Classicのコンテンツブラウザーを使用すると、Dynamic Media ClassicのコンテンツをAEMで直接表示できます。 コンテンツブラウザーにアクセスするには、 **[!UICONTROL コンテンツファインダー]**&#x200B;を選択します。 **[!UICONTROL Dynamic Media Classic]** （タッチ操作向け UI）または **[!UICONTROL S7]** アイコンをクリックします。 どちらの UI を使用しても機能は同じです。
 
-設定が複数ある場合、AEM では既定で[デフォルト設定](/help/sites-administering/scene7.md#configuring-a-default-configuration)が表示されます。Dynamic Media Classicのコンテンツブラウザーのドロップダウンメニューで、様々な設定を直接選択できます。
+設定が複数ある場合、AEM では既定で[デフォルト設定](/help/sites-administering/scene7.md#configuring-a-default-configuration)が表示されます。様々な設定を、Dynamic Media Classicコンテンツブラウザーのドロップダウンメニューで直接選択できます。
 
 >[!NOTE]
 >
->* アドホックフォルダー内のアセットは、Dynamic Media Classicコンテンツブラウザーには表示されません。
->* [セキュアプレビューを有効にすると](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)、Dynamic Media Classicで公開済みと非公開の両方のアセットがDynamic Media Classicコンテンツブラウザーに表示されます。
->* コンテンツブラウザーで&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;や&#x200B;**[!UICONTROL S7]**&#x200B;アイコンがオプションとして表示されない場合は、AEM](/help/sites-administering/scene7.md)と連携するように[Dynamic Media Classicを設定する必要があります。
+>* アドホックフォルダーにあるアセットは、Dynamic Media Classicコンテンツブラウザーに表示されません。
+>* 条件 [プレビューの保護が有効になっています](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)に設定されている場合、Dynamic Media Classic上の公開済みアセットと未公開アセットの両方がDynamic Media Classicコンテンツブラウザーに表示されます。
+>* 表示されない **[!UICONTROL Dynamic Media Classic]** または **[!UICONTROL S7]** アイコンをコンテンツブラウザーのオプションとして使用する場合は、 [AEMと連携するDynamic Media Classicの設定](/help/sites-administering/scene7.md).
 >* ビデオの場合、Dynamic Media Classicコンテンツブラウザーは次の機能をサポートしています。
    >   * アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
    >   * 単一の MP4 ビデオ
    >   * 単一の F4V ビデオ
 
 
-### タッチ操作向けUIでのコンテンツの参照 {#browsing-content-in-the-touch-optimized-ui}
+### タッチ操作向け UI でのコンテンツの参照 {#browsing-content-in-the-touch-optimized-ui}
 
 タッチ対応 UI またはクラシック UI を使用してコンテンツブラウザーにアクセスできます。現時点では、タッチ対応 UI には次の制限事項があります。
 
-* Dynamic Media ClassicのFXGおよびFlashアセットはサポートされていません。
+* Dynamic Media Classicの FXG およびFlashアセットはサポートされていません。
 
-3番目のドロップダウンメニューから「**[!UICONTROL Dynamic Media Classic]**」を選択して、Dynamic Media Classicアセットを参照します。 Dynamic Media Classic/AEMの統合を設定していない場合、Dynamic Media Classicはリストに表示されません。
+選択によるDynamic Media Classicアセットの参照 **[!UICONTROL Dynamic Media Classic]** 3 番目のドロップダウンメニューから。 Dynamic Media Classic/AEMの統合を設定していない場合、Dynamic Media Classicはリストに表示されません。
 
 >[!NOTE]
 >
->* Dynamic Media Classicコンテンツブラウザーは、約100個のアセットを読み込んで名前順に並べ替えます。
+>* Dynamic Media Classicコンテンツブラウザーは、約 100 個のアセットを読み込み、名前順に並べ替えます。
 >* セキュリティで保護されたプレビューサーバーが設定されている場合、ブラウザーはそのプレビューサーバーを使用してサムネールとアセットをレンダリングします。
 
 >
-
 
 
 ![chlimage_1-240](assets/chlimage_1-240.png)
@@ -312,21 +310,21 @@ Dynamic Media Classicコンテンツブラウザーを使用すると、Dynamic 
 * アダプティブビデオセットとテンプレートの場合は、サムネール用のサイズ情報が生成されません。
 * アダプティブビデオセットの場合は、サムネール用の解像度が生成されません。
 
-### コンテンツブラウザーを使用したDynamic Media Classicアセットの検索 {#searching-for-scene-assets-with-the-content-browser}
+### コンテンツブラウザーでのDynamic Media Classicアセットの検索 {#searching-for-scene-assets-with-the-content-browser}
 
-Dynamic Media Classicアセットの検索は、AEMアセットの検索と似ていますが、検索時に、実際にはAEMに直接読み込むのではなく、Dynamic Media Classicシステムにアセットのリモート表示が表示される点が異なります。
+Dynamic Media Classicアセットの検索は、AEMアセットの検索と似ていますが、検索時に、実際にはAEMに直接読み込むのではなく、Dynamic Media Classicシステムにアセットのリモートビューが表示される点が異なります。
 
 クラシック UI またはタッチ操作向け UI を使用して、アセットを表示および検索できます。インターフェイスによって検索方法は多少異なります。
 
 どちらの UI で検索する場合でも、次の基準でフィルターを適用できます（ここでは、タッチ操作向け UI を示しています）。
 
-* **[!UICONTROL キーワ]**
-ードの入力名前でアセットを検索できます。検索時には、入力したキーワードで始まるファイル名が検索されます。例えば、「swimming」という単語を入力すると、入力した順序どおりの文字列で始まるアセットファイルの名前が検索されます。アセットを検索するキーワードを入力した後、必ずEnterキーを押してください。
+* **[!UICONTROL キーワードを入力]**
+アセットを名前で検索できます。 検索時には、入力したキーワードで始まるファイル名が検索されます。例えば、「swimming」という単語を入力すると、入力した順序どおりの文字列で始まるアセットファイルの名前が検索されます。アセットを検索するには、キーワードを入力した後、必ず Enter キーを押してください。
 
 ![chlimage_1-242](assets/chlimage_1-242.png)
 
-* **[!UICONTROL フォルダー/]**
-パス表示されるフォルダーの名前は、選択した設定に基づいています。フォルダーアイコンをタップしてサブフォルダーを選択し、チェックマークをタップして下位レベルまでドリルダウンできます。
+* **[!UICONTROL フォルダー/パス]**
+表示されるフォルダーの名前は、選択した設定に基づいています。 フォルダーアイコンをタップしてサブフォルダーを選択し、チェックマークをタップして選択すると、下位レベルまでドリルダウンできます。
 
 キーワードを入力してフォルダーを選択すると、AEM ではそのフォルダーがとすべてのサブフォルダーが検索されます。ただし、検索時にキーワードを入力しない場合は、フォルダーを選択してもそのフォルダー内のアセットしか表示されず、サブフォルダーは含まれません。
 
@@ -334,34 +332,32 @@ Dynamic Media Classicアセットの検索は、AEMアセットの検索と似�
 
 ![chlimage_1-243](assets/chlimage_1-243.png)
 
-* **[!UICONTROL AssetSelect]**
-Dynamic Media Classicを選 **[!UICONTROL 択し]** て、Dynamic Media Classicコンテンツを参照します。このオプションは、Dynamic Media Classicが設定されている場合にのみ使用できます。
+* **[!UICONTROL アセットのタイプ]**
+選択 **[!UICONTROL Dynamic Media Classic]** Dynamic Media Classicコンテンツを参照します。 このオプションは、Dynamic Media Classicが設定されている場合にのみ使用できます。
 
 ![chlimage_1-244](assets/chlimage_1-244.png)
 
-* ****
-設定 [!UICONTROL Cloud Services]で複数のDynamic Media Classic設定を定義している場合は、ここで選択できます。そのため、選択した設定に基づいてフォルダーが変わります。
+* **[!UICONTROL 設定]**
+複数のDynamic Media Classic設定を [!UICONTROL Cloud Services]を選択する場合は、ここで選択できます。 そのため、選択した設定に基づいてフォルダーが変わります。
 
 ![chlimage_1-245](assets/chlimage_1-245.png)
 
-* **[!UICONTROL アセッ]**
-トタイプDynamic Media Classicブラウザーでは、結果をフィルタリングして、次のいずれかを含めることができます。画像、テンプレート、ビデオおよびアダプティブビデオセットを参照してください。アセットタイプを選択しない場合、AEM ではデフォルトですべてのアセットタイプが検索されます。
+* **[!UICONTROL アセットタイプ]**
+Dynamic Media Classicブラウザー内で、結果をフィルタリングして、次のいずれかを含めることができます。画像、テンプレート、ビデオおよびアダプティブビデオセットを参照してください。 アセットタイプを選択しない場合、AEM ではデフォルトですべてのアセットタイプが検索されます。
 
 ![chlimage_1-246](assets/chlimage_1-246.png)
 
 >[!NOTE]
 >
 >* クラシック UI では、**Flash** と **FXG** も検索できます。現時点では、タッチ対応 UI でのこれらのフィルタリングはサポートされていません。
-   >
-   >
-* ビデオを検索するときは、単一のレンディションが検索されています。結果は、元のレンディション（&amp;ast;.mp4のみ）とエンコードされたレンディションを返します。
->* アダプティブビデオセットを検索する場合、検索対象のフォルダーとすべてのサブフォルダーは、検索にキーワードを追加した場合にのみ検索されます。 キーワードを追加しない場合、AEM はサブフォルダーを検索しません。
+>
+>* ビデオを検索するときは、単一のレンディションが検索されています。結果は、元のレンディション（&amp;ast;.mp4 のみ）とエンコードされたレンディションを返します。
+>* アダプティブビデオセットを検索する場合、検索にキーワードを追加した場合にのみ、フォルダーとすべてのサブフォルダーを検索します。 キーワードを追加しない場合、AEM はサブフォルダーを検索しません。
 
 >
 
 
-
-* **[!UICONTROL 公開ステ]**
-ータス公開ステータスに基づいてアセットをフィルタリングできます。 **** 非公開または **[!UICONTROL 公開済み]**「**[!UICONTROL 公開ステータス]**」を選択しない場合、AEMはデフォルトですべての公開ステータスを検索します。
+* **[!UICONTROL 公開ステータス]**
+公開ステータスに基づいてアセットをフィルタリングできます。 **[!UICONTROL 非公開]** または **[!UICONTROL 公開済み]**. 選択しない場合は、 **[!UICONTROL 公開ステータス]**、AEMはデフォルトで、すべての公開ステータスを検索します。
 
 ![chlimage_1-247](assets/chlimage_1-247.png)

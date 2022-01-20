@@ -1,8 +1,8 @@
 ---
 title: 効果的なニュースレターのランディングページの作成
-seo-title: 効果的なニュースレターのランディングページの作成
+seo-title: Creating an Effective Newsletter Landing Page
 description: 効果的なニュースレターのランディングページは、ニュースレター（または他の電子メールマーケティングキャンペーン）に新規登録するユーザーを増やすことができます。ニュースレターの新規登録で収集する情報は、見込み客の獲得に利用できます。
-seo-description: 効果的なニュースレターのランディングページは、ニュースレター（または他の電子メールマーケティングキャンペーン）に新規登録するユーザーを増やすことができます。ニュースレターの新規登録で収集する情報は、見込み客の獲得に利用できます。
+seo-description: An effective newsletter landing page helps you get as many people as possible to sign up for your newsletter (or other email marketing campaign). You can use the information you gather from your newsletter sign ups to get leads.
 uuid: 810f3d1c-6648-4342-9fbc-0701765311a1
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: dfe0ad66-9df5-4ea3-9e66-543b5ccd594a
 exl-id: 1ab81235-2627-4304-bbf2-71598de948db
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '613'
 ht-degree: 93%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 93%
 >[!NOTE]
 >
 >Adobeは、この機能（リードとリストの管理）をさらに強化する予定はありません。\
->[Adobe CampaignとそのAEM統合](/help/sites-administering/campaign.md)を活用することをお勧めします。
+>レバレッジ [Adobe CampaignとそのAEMの統合](/help/sites-administering/campaign.md).
 
 ## ニュースレター用リストの作成 {#creating-a-list-for-the-newsletter}
 
@@ -87,7 +87,7 @@ Teaser を追加して効果的なニュースレターのランディングペ�
 
 1. 2 つの Teaser があるキャンペーンを作成します。1 つには business タグを付け、もう 1 つにはタグを付けません。
 
-## 購読者へのコンテンツのプッシュ  {#pushing-content-to-subscribers}
+## 購読者へのコンテンツのプッシュ {#pushing-content-to-subscribers}
 
 MCM のニュースレター機能を使用して、すべての変更をページにプッシュします。次に、更新したコンテンツを購読者にプッシュします。
 

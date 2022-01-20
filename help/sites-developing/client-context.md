@@ -1,8 +1,8 @@
 ---
 title: ClientContext の詳細
-seo-title: ClientContext の詳細
+seo-title: Client Context in Detail
 description: ClientContext はユーザーデータを動的にまとめたコレクションを表します
-seo-description: ClientContext はユーザーデータを動的にまとめたコレクションを表します
+seo-description: The Client Context represents a dynamically assembled collection of user data
 uuid: 31cfcfd0-14f3-4777-ae85-45eb352756d0
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ feature: Context Hub
 exl-id: fb613a57-d064-45eb-be15-c4f7e06bb0ee
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '2994'
+source-wordcount: '2977'
 ht-degree: 82%
 
 ---
@@ -34,7 +34,7 @@ ClientContext は、主として次の要素で構成されます。
 
 スタンドアロンのセッションストアを作成して ClientContext に追加するか、コンテキストストアコンポーネントに関連付けられたセッションストアを作成するために、すぐに使用可能なコンテキストストアコンポーネントが AEM によっていくつかインストールされています。これらのコンポーネントは、作成するコンポーネントの基礎として使用できます。
 
-ClientContextを開く、表示する情報を設定する、ユーザーエクスペリエンスをシミュレートする方法については、[ClientContext](/help/sites-administering/client-context.md)を参照してください。
+ClientContext を開く、表示する情報を設定する、およびユーザーエクスペリエンスのシミュレーションについて詳しくは、 [ClientContext](/help/sites-administering/client-context.md).
 
 ## セッションストア {#session-stores}
 
@@ -47,7 +47,7 @@ ClientContext フレームワークが提供する [JavaScript API](/help/sites-
 
 セッションストアのデータはクライアント上に残ります。ClientContext はデータをサーバーに書き戻しません。データをサーバーに送信するには、フォームを使用するか、カスタム JavaScript を作成してください。
 
-各セッションストアは、プロパティと値のペアのコレクションです。 セッションストアは、（あらゆる種類の）データのコレクション、すなわちデザイナーや開発者が決める概念的意味を表します。次のサンプルのJavaScriptコードは、セッションストアに格納される可能性のあるプロファイルデータを表すオブジェクトを定義しています。
+各セッションストアは、プロパティと値のペアのコレクションです。 セッションストアは、（あらゆる種類の）データのコレクション、すなわちデザイナーや開発者が決める概念的意味を表します。次のサンプルの JavaScript コードは、セッションストアに格納されるプロファイルデータを表すオブジェクトを定義しています。
 
 ```
 {
@@ -71,7 +71,7 @@ ClientContext フレームワークが提供する [JavaScript API](/help/sites-
 
 ### コンテキストストアコンポーネント {#context-store-components}
 
-コンテキストストアコンポーネントは、ClientContextに追加できるAEMコンポーネントです。 一般的に、コンテキストストアコンポーネントは、関連付けられているセッションストアのデータを表示します。ただし、コンテキストストアコンポーネントが表示する情報は、セッションストアのデータに限定されません。
+コンテキストストアコンポーネントは、ClientContext に追加できるAEMコンポーネントです。 一般的に、コンテキストストアコンポーネントは、関連付けられているセッションストアのデータを表示します。ただし、コンテキストストアコンポーネントが表示する情報は、セッションストアのデータに限定されません。
 
 コンテキストストアコンポーネントには、次のアイテムを含めることができます。
 
@@ -90,11 +90,11 @@ ClientContext フレームワークが提供する [JavaScript API](/help/sites-
 
 [ターゲット設定されたコンテンツ](/help/sites-authoring/content-targeting-touch.md)の配信にはプロファイル情報も使用します。
 
-![clientcontext_](assets/clientcontext_targetedcontentdelivery.png) ![targetedcontentdeliveryclientcontext_targetedcontentdeliverydetail](assets/clientcontext_targetedcontentdeliverydetail.png)
+![clientcontext_targetedcontentdelivery](assets/clientcontext_targetedcontentdelivery.png) ![clientcontext_targetedcontentdeliverydetail](assets/clientcontext_targetedcontentdeliverydetail.png)
 
 ## ページへの ClientContext の追加 {#adding-client-context-to-a-page}
 
-ClientContext を有効にするには、ClientContext コンポーネントを Web ページの body セクションに含めます。ClientContextコンポーネントノードのパスは`/libs/cq/personalization/components/clientcontext`です。 このコンポーネントを含めるには、次のコードをページコンポーネントの JSP ファイルに追加します。場所は、ページの `body` 要素のすぐ下です。
+ClientContext を有効にするには、ClientContext コンポーネントを Web ページの body セクションに含めます。ClientContext コンポーネントノードのパスは次のとおりです。 `/libs/cq/personalization/components/clientcontext`. このコンポーネントを含めるには、次のコードをページコンポーネントの JSP ファイルに追加します。場所は、ページの `body` 要素のすぐ下です。
 
 ```java
 <cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext"/>
@@ -110,7 +110,7 @@ ClientContext コンポーネントによって、ClientContext を実装する�
 
 ClientContext UI は、オーサーインスタンス上でのみ使用可能です。
 
-## ClientContext の拡張  {#extending-client-context}
+## ClientContext の拡張 {#extending-client-context}
 
 ClientContext を拡張するには、次のようなセッションストアを作成し、オプションでストアデータを表示します。
 
@@ -121,7 +121,7 @@ ClientContext を拡張するには、次のようなセッションストアを
 >
 >データを提供できる `JSONP` サービスがある（または作成する）場合は、`JSONP` コンテキストストアコンポーネントを使用して、その JSONP サービスにマップするだけです。JSONP サービスがセッションストアを処理します。
 
-### セッションストアの作成  {#creating-a-session-store}
+### セッションストアの作成 {#creating-a-session-store}
 
 ClientContext に追加または ClientContext から取得する必要があるデータ用のセッションストアを作成します。一般的に、セッションストアを作成するには、次の手順を実行します。
 
@@ -137,22 +137,22 @@ ClientContext に追加または ClientContext から取得する必要がある
 >
 >コンテキストストアコンポーネントの一部としてセッションストアを作成する場合は、代わりに JavaScript をコンポーネントの init.js.jsp ファイル内に配置できます。この場合は、コンポーネントが ClientContext に追加された場合にのみセッションストアが作成されます。
 
-#### セッションストアのタイプ  {#types-of-session-stores}
+#### セッションストアのタイプ {#types-of-session-stores}
 
 セッションストアは、ブラウザーセッション中に作成され、使用できるか、ブラウザーストレージまたは cookie に保持されます。ClientContext JavaScript API によって、次の 2 つのタイプのデータストアを表すクラスが定義されます。
 
-* [`CQ_Analytics.SessionStore`](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore):これらのオブジェクトはページDOMにのみ存在します。データはページが存続する間、作成され、保持されます。
+* [`CQ_Analytics.SessionStore`](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore):これらのオブジェクトはページ DOM 内にのみ存在します。 データはページが存続する間、作成され、保持されます。
 * [`CQ_Analytics.PerstistedSessionStore`](/help/sites-developing/ccjsapi.md#cq-analytics-persistedsessionstore)：このタイプのオブジェクトはページ DOM 内に存在し、ブラウザーストレージまたは cookie に保持されます。データは、ページおよびユーザーセッションをまたがって使用できます。
 
-また、JSONデータまたはJSONPデータの格納に特化した、次のクラスの拡張も提供します。
+また、API は、JSON データまたは JSONP データの格納専用の次のクラスの拡張も提供します。
 
-* セッションのみのオブジェクト：[`CQ_Analytics.JSONStore`](/help/sites-developing/ccjsapi.md#cq-analytics-jsonstore)と[`CQ-Analytics.JSONPStore`](/help/sites-developing/ccjsapi.md#cq-analytics-jsonpstore)が表示されます。
+* セッションのみのオブジェクト： [`CQ_Analytics.JSONStore`](/help/sites-developing/ccjsapi.md#cq-analytics-jsonstore) および [`CQ-Analytics.JSONPStore`](/help/sites-developing/ccjsapi.md#cq-analytics-jsonpstore).
 
-* 永続化されたオブジェクト：[`CQ_Analytics.PersistedJSONStore`](/help/sites-developing/ccjsapi.md#cq-analytics-persistedjsonstore)と[`CQ-Analytics.PersistedJSONPStore`](/help/sites-developing/ccjsapi.md#cq-analyics-persistedjsonpstore)が表示されます。
+* 永続化されたオブジェクト： [`CQ_Analytics.PersistedJSONStore`](/help/sites-developing/ccjsapi.md#cq-analytics-persistedjsonstore) および [`CQ-Analytics.PersistedJSONPStore`](/help/sites-developing/ccjsapi.md#cq-analyics-persistedjsonpstore).
 
 #### セッションストアオブジェクトの作成 {#creating-the-session-store-object}
 
-クライアントライブラリフォルダーの JavaScript によってセッションストアを作成し、初期化します。その後、Context Store Manager を使用して、セッションストアを登録する必要があります。次の例では、[CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore)オブジェクトを作成して登録します。
+クライアントライブラリフォルダーの JavaScript によってセッションストアを作成し、初期化します。その後、Context Store Manager を使用して、セッションストアを登録する必要があります。次の例では、を作成し、 [CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore) オブジェクト。
 
 ```
 //Create the session store
@@ -168,7 +168,7 @@ if (CQ_Analytics.ClientContextMgr){
 }
 ```
 
-JSONデータを保存するために、次の例では[CQ_Analytics.JSONStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore)オブジェクトを作成して登録します。
+次の例では、JSON データを保存するために、を作成して登録します。 [CQ_Analytics.JSONStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore) オブジェクト。
 
 ```
 if (!CQ_Analytics.myJSONStore) {
@@ -185,7 +185,7 @@ ClientContext でセッションストアデータをレンダリングするに
 * セッションストアを初期化するための JSP スクリプト。
 * （オプション）セッションストアを作成するクライアントライブラリフォルダー。コンテキストストアコンポーネントが既存のセッションストアを使用する場合、クライアントライブラリフォルダーを含める必要はありません。
 
-#### 提供されているコンテキストストアコンポーネントの拡張  {#extending-the-provided-context-store-components}
+#### 提供されているコンテキストストアコンポーネントの拡張 {#extending-the-provided-context-store-components}
 
 AEM が提供する genericstore および genericstoreproperties コンテキストストアコンポーネントは拡張できます。ストアデータの構造によって、拡張するコンポーネントが決まります。
 
@@ -201,31 +201,31 @@ AEM が提供する genericstore および genericstoreproperties コンテキ�
 
    * `@param {String} divId`
 
-      ストアをレンダリングする必要があるdivのID。
+      ストアをレンダリングする必要がある div の ID。
 
 >[!NOTE]
 >
->すべての ClientContext コンポーネントは、汎用ストアコンポーネントまたは汎用ストアのプロパティコンポーネントの拡張です。いくつかの例が`/libs/cq/personalization/components/contextstores`フォルダーにインストールされています。
+>すべての ClientContext コンポーネントは、汎用ストアコンポーネントまたは汎用ストアのプロパティコンポーネントの拡張です。いくつかの例が `/libs/cq/personalization/components/contextstores` フォルダー。
 
 #### サイドキックでの表示の設定 {#configuring-the-appearance-in-sidekick}
 
 ClientContext の編集時、コンテキストストアコンポーネントがサイドキックに表示されます。すべてのコンポーネントと同様に、ClientContext コンポーネントの `componentGroup` プロパティと `jcr:title` プロパティによって、コンポーネントのグループと名前が決まります。
 
-`componentGroup`プロパティ値が`Client Context`のコンポーネントは、デフォルトでサイドキックに表示されます。 `componentGroup`プロパティに別の値を使用する場合は、デザインモードを使用して、コンポーネントを手動でサイドキックに追加する必要があります。
+All components that have a `componentGroup` property value of `Client Context` appear in Sidekick by default. 異なる値を `componentGroup` プロパティを使用する場合は、デザインモードを使用して手動でコンポーネントをサイドキックに追加する必要があります。
 
 #### コンテキストストアコンポーネントインスタンス {#context-store-component-instances}
 
-コンテキストストアコンポーネントをClientContextに追加すると、コンポーネントインスタンスを表すノードが`/etc/clientcontext/default/content/jcr:content/stores`の下に作成されます。 このノードには、コンポーネントの編集ダイアログを使用して設定するプロパティ値が格納されます。
+コンテキストストアコンポーネントを ClientContext に追加すると、コンポーネントインスタンスを表すノードが以下に作成されます `/etc/clientcontext/default/content/jcr:content/stores`. このノードには、コンポーネントの編集ダイアログを使用して設定するプロパティ値が格納されます。
 
 ClientContext が初期化されると、これらのノードが処理されます。
 
-#### 関連付けられたセッションストアの初期化  {#initializing-the-associated-session-store}
+#### 関連付けられたセッションストアの初期化 {#initializing-the-associated-session-store}
 
 init.js.jsp ファイルをコンポーネントに追加して、コンテキストストアコンポーネントが使用するセッションストアを初期化する JavaScript コードを生成します。例えば、初期化スクリプトを使用してコンポーネントの設定プロパティを取得し、それらを使用してセッションストアを設定します。
 
 生成された JavaScript は、オーサーインスタンスおよびパブリッシュインスタンス上でのページの読み込み時に ClientContext が初期化されると、ページに追加されます。この JSP は、コンテキストストアコンポーネントインスタンスが読み込まれ、レンダリングされる前に実行されます。
 
-このコードでは、ファイルのMIMEタイプを`text/javascript`に設定する必要があります。そうしないと、実行されません。
+このコードでは、ファイルの MIME タイプをに設定する必要があります。 `text/javascript`実行されない場合に限られます。
 
 >[!CAUTION]
 >
@@ -241,11 +241,11 @@ init.js.jsp ファイルをコンポーネントに追加して、コンテキ�
    <%@page contentType="text/javascript" %>
    ```
 
-### genericstoreproperties コンポーネントのセッションストアデータのレンダリング  {#rendering-session-store-data-for-genericstoreproperties-components}
+### genericstoreproperties コンポーネントのセッションストアデータのレンダリング {#rendering-session-store-data-for-genericstoreproperties-components}
 
 一貫性ある形式を使用して、ClientContext にセッションストアデータを表示します。
 
-#### プロパティデータの表示  {#displaying-property-data}
+#### プロパティデータの表示 {#displaying-property-data}
 
 パーソナライズタグライブラリが、セッションストアのプロパティの値を表示する `personalization:storePropertyTag` タグを提供します。このタグを使用するには、JSP ファイルに次のコード行を含めます。
 
@@ -294,7 +294,7 @@ personalization.ui クライアントライブラリフォルダー（/etc/clien
 </div>
 ```
 
-`/libs/cq/personalization/components/contextstores/profiledata`コンテキストストアコンポーネントは、この構造を使用して、プロファイルセッションストアのデータを表示します。 `cq-cc-thumbnail` クラスは、サムネール画像を配置します。`cq-cc-store-property-level*x*`クラスは、英数字データを書式設定します。
+この `/libs/cq/personalization/components/contextstores/profiledata` コンテキストストアコンポーネントは、この構造を使用して、プロファイルセッションストアのデータを表示します。 `cq-cc-thumbnail` クラスは、サムネール画像を配置します。この `cq-cc-store-property-level*x*` クラスは、英数字データを書式設定します。
 
 * level0、level1 および level2 は垂直方向に配置され、白いフォントを使用します。
 * level3 およびその他すべてのレベルは水平方向に配置され、白いフォントと濃い色の背景を使用します。
@@ -305,10 +305,10 @@ personalization.ui クライアントライブラリフォルダー（/etc/clien
 
 genericstore コンポーネントを使用してストアデータをレンダリングするには、以下を実行する必要があります。
 
-* セッションストアの名前を識別するために、 personalization:storeRendererTagタグをコンポーネントのJSPスクリプトに追加します。
+* セッションストアの名前を識別するために、コンポーネントの JSP スクリプトに personalization:storeRendererTag タグを追加します。
 * セッションストアクラスにレンダラーメソッドを実装します。
 
-#### genericstore セッションストアの識別  {#identifying-the-genericstore-session-store}
+#### genericstore セッションストアの識別 {#identifying-the-genericstore-session-store}
 
 パーソナライズタグライブラリが、セッションストアのプロパティの値を表示する `personalization:storePropertyTag` タグを提供します。このタグを使用するには、JSP ファイルに次のコード行を含めます。
 
@@ -322,7 +322,7 @@ genericstore コンポーネントを使用してストアデータをレンダ�
 <personalization:storeRendererTag store="store_name"/>
 ```
 
-#### セッションストアのレンダラーメソッドの実装  {#implementing-the-session-store-renderer-method}
+#### セッションストアのレンダラーメソッドの実装 {#implementing-the-session-store-renderer-method}
 
 セッションストアには、コンポーネントをレンダリングする必要があるたびに呼び出される「レンダラー」メソッドが必要になります。レンダラー関数は、次の 2 つのパラメーターと一緒に呼び出されます。
 
@@ -332,15 +332,15 @@ genericstore コンポーネントを使用してストアデータをレンダ�
 
 * `@param {String} divId`
 
-   ストアをレンダリングする必要があるdivのID。
+   ストアをレンダリングする必要がある div の ID。
 
 ## セッションストアとのやり取り {#interacting-with-session-stores}
 
 セッションストアとやり取りするには、JavaScript を使用します。
 
-### セッションストアへのアクセス  {#accessing-session-stores}
+### セッションストアへのアクセス {#accessing-session-stores}
 
-ストアに対してデータを読み取りまたは書き込むためのセッションストアオブジェクトを取得します。[`CQ_Analytics.ClientContextMgr`](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextmgr) を使用すると、ストア名に基づいてストアにアクセスできます。取得したら、 [`CQ-Analytics.SessionStore`](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore)または[`CQ-Analytics.PersistedSessionStore`](/help/sites-developing/ccjsapi.md#cq-analytics-persistedsessionstore)のメソッドを使用してストアデータを操作します。
+ストアに対してデータを読み取りまたは書き込むためのセッションストアオブジェクトを取得します。[`CQ_Analytics.ClientContextMgr`](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextmgr) を使用すると、ストア名に基づいてストアにアクセスできます。Once obtained, use the methods of the [`CQ-Analytics.SessionStore`](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore) or [`CQ-Analytics.PersistedSessionStore`](/help/sites-developing/ccjsapi.md#cq-analytics-persistedsessionstore) to interact with store data.
 
 次の例では、`profile` ストアを取得し、このストアから `formattedName` プロパティを取得しています。
 
@@ -359,7 +359,7 @@ function getName(){
 
 セッションストアはイベントを発生させるので、リスナーを追加して、これらのイベントに基づいてイベントを発生させることができます。
 
-セッションストアは`Observable`パターンに基づいて構築されます。 [`addListener`](/help/sites-developing/ccjsapi.md#addlistener-event-fct-scope)メソッドを提供する[`CQ_Analytics.Observable`](/help/sites-developing/ccjsapi.md#cq-analytics-observable)を拡張します。
+セッションストアは、 `Observable` パターン。 拡張 [`CQ_Analytics.Observable`](/help/sites-developing/ccjsapi.md#cq-analytics-observable) は [`addListener`](/help/sites-developing/ccjsapi.md#addlistener-event-fct-scope) メソッド。
 
 次の例では、`update` セッションストアの `profile` イベントにリスナーを追加しています。
 
@@ -387,13 +387,13 @@ if( profileStore ) {
 * XHR 要求の応答時間
 * セッションストアに対する動的な変更
 
-[`CQ_Analytics.ClientContextUtils`](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextutils)オブジェクトの[`onStoreRegistered`](/help/sites-developing/ccjsapi.md#onstoreregistered-storename-callback)メソッドと[`onStoreInitialized`](/help/sites-developing/ccjsapi.md#onstoreinitialized-storename-callback-delay)メソッドを使用して、セッションストアが使用可能な場合にのみアクセスします。 これらのメソッドを使用すると、セッション登録イベントおよびセッション初期化イベントに対処するイベントリスナーを登録できます。
+Use the [`CQ_Analytics.ClientContextUtils`](/help/sites-developing/ccjsapi.md#cq-analytics-clientcontextutils) object&#39;s [`onStoreRegistered`](/help/sites-developing/ccjsapi.md#onstoreregistered-storename-callback) and [`onStoreInitialized`](/help/sites-developing/ccjsapi.md#onstoreinitialized-storename-callback-delay) methods to access session stores only when they are available. これらのメソッドを使用すると、セッション登録イベントおよびセッション初期化イベントに対処するイベントリスナーを登録できます。
 
 >[!CAUTION]
 >
 >別のストアを使用する場合は、そのストアが登録されない場合を考慮する必要があります。
 
-次の例では、`onStoreRegistered` セッションストアの `profile` イベントを使用しています。ストアが登録されると、リスナーがセッションストアの `update` イベントに追加されます。ストアが更新されると、ページ上の`<div class="welcome">`要素のコンテンツが`profile`ストアの名前で更新されます。
+次の例では、`onStoreRegistered` セッションストアの `profile` イベントを使用しています。ストアが登録されると、リスナーがセッションストアの `update` イベントに追加されます。ストアが更新されると、 `<div class="welcome">` ページ上の要素が `profile` ストア。
 
 ```
 //listen for the store registration
@@ -488,43 +488,43 @@ window.CQMobileSlider["geometrixx-outdoors"] = {
 この例では、外部サービスからデータを取得してセッションストアに保存するコンテキストストアコンポーネントを次のように作成します。
 
 * genericstoreproperties コンポーネントを拡張します。
-* `CQ_Analytics.JSONPStore` JavaScriptオブジェクトを使用してストアを初期化します。
+* Initializes a store using a `CQ_Analytics.JSONPStore` javascript object.
 * JSONP サービスを呼び出してデータを取得し、ストアに追加します。
 * ClientContext でデータをレンダリングします。
 
-### ジオロケーションコンポーネントの追加  {#add-the-geoloc-component}
+### ジオロケーションコンポーネントの追加 {#add-the-geoloc-component}
 
 CQ アプリケーションを作成し、ジオロケーションコンポーネントを追加します。
 
 1. Web ブラウザーで CRXDE Lite を開きます（[http://localhost:4502/crx/de](http://localhost:4502/crx/de)）。
-1. `/apps`フォルダーを右クリックし、作成/フォルダーを作成をクリックします。 「`myapp`」という名前を指定して、「OK」をクリックします。
-1. 同様に、`myapp`の下に、`contextstores`という名前のフォルダーを作成します。
-1. `/apps/myapp/contextstores`フォルダーを右クリックし、作成/コンポーネントを作成をクリックします。 次のプロパティ値を指定して、「次へ」をクリックします。
+1. Right-click the `/apps` folder and click Create > Create Folder. 「`myapp`」という名前を指定して、「OK」をクリックします。
+1. 同様に、以下 `myapp`、という名前のフォルダーを作成します。 `contextstores`.&quot;
+1. を右クリックします。 `/apps/myapp/contextstores` フォルダーに移動し、作成/コンポーネントを作成をクリックします。 次のプロパティ値を指定して、「次へ」をクリックします。
 
-   * ラベル：**geoloc**
-   * タイトル：**ロケーションストア**
-   * スーパータイプ：**`cq/personalization/components/contextstores/genericstoreproperties`**
-   * グループ：**クライアントコンテキスト**
+   * ラベル： **geoloc**
+   * タイトル： **ロケーションストア**
+   * スーパータイプ： **`cq/personalization/components/contextstores/genericstoreproperties`**
+   * グループ： **ClientContext**
 
 1. コンポーネントを作成ダイアログで、「OK」が有効になるまで各ページ上で「次へ」をクリックしてから、「OK」をクリックします。
 1. 「すべて保存」をクリックします。
 
-### ジオロケーション編集ダイアログの作成  {#create-the-geoloc-edit-dialog}
+### ジオロケーション編集ダイアログの作成 {#create-the-geoloc-edit-dialog}
 
 コンテキストストアコンポーネントには編集ダイアログが必要です。ジオロケーション編集ダイアログには、設定するプロパティがないことを示す静的メッセージが表示されます。
 
-1. `/libs/cq/personalization/components/contextstores/genericstoreproperties/dialog`ノードを右クリックし、「コピー」をクリックします。
-1. `/apps/myapp/contextstores/geoloc`ノードを右クリックし、「貼り付け」をクリックします。
-1. /apps/myapp/contextstores/geoloc/dialog/items/items/tab1/itemsノードの下にあるすべての子ノードを削除します。
+1. Right-click the `/libs/cq/personalization/components/contextstores/genericstoreproperties/dialog` node and click Copy.
+1. Right-click the `/apps/myapp/contextstores/geoloc` node and click paste.
+1. Delete all of the child nodes below the /apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items node:
 
    * store
    * properties
    * thumbnail
 
-1. `/apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items`ノードを右クリックし、作成/ノードを作成をクリックします。 次のプロパティ値を指定して、「OK」をクリックします。
+1. を右クリックします。 `/apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items` ノードを選択し、作成/ノードを作成をクリックします。 次のプロパティ値を指定して、「OK」をクリックします。
 
-   * 名前：**静的**
-   * 型：**cq:Widget**
+   * 名前： **静的**
+   * タイプ： **cq:Widget**
 
 1. この  ノードに次のプロパティを追加します。
 
@@ -544,7 +544,7 @@ init.js.jsp ファイルをジオロケーションコンポーネントに追�
 
 init.js.jsp ファイルは、ClientContext がページによって読み込まれると実行されます。この時点までに、ClientContext JavaScript API が読み込まれ、スクリプトで使用できるようになっています。
 
-1. `/apps/myapp/contextstores/geoloc`ノードを右クリックし、**作成/ファイルを作成**&#x200B;をクリックします。 init.js.jsp の名前を指定して、「OK」をクリックします。
+1. Right-click the `/apps/myapp/contextstores/geoloc` node and click **Create -> Create File**. init.js.jsp の名前を指定して、「OK」をクリックします。
 1. 次のコードをページの上部に追加して、「すべて保存」をクリックします。
 
    ```java
@@ -562,13 +562,13 @@ init.js.jsp ファイルは、ClientContext がページによって読み込ま
    <% log.info(" ***** done initializing geoloc ************"); %>
    ```
 
-### ジオロケーションセッションのストアデータのレンダリング  {#render-the-geoloc-session-store-data}
+### ジオロケーションセッションのストアデータのレンダリング {#render-the-geoloc-session-store-data}
 
 ClientContext でストアデータをレンダリングするには、ジオロケーションコンポーネントの JSP ファイルにコードを追加します。
 
 ![chlimage_1-224](assets/chlimage_1-224.png)
 
-1. CRXDE Liteで、`/apps/myapp/contextstores/geoloc/geoloc.jsp`ファイルを開きます。
+1. CRXDE Liteで、 `/apps/myapp/contextstores/geoloc/geoloc.jsp` ファイル。
 1. 次の HTML コードをスタブコードの下に追加します。
 
    ```xml
@@ -597,24 +597,24 @@ ClientContext でストアデータをレンダリングするには、ジオロ
 
 1. 「すべて保存」をクリックします。
 
-### ClientContext へのコンポーネントの追加  {#add-the-component-to-client-context}
+### ClientContext へのコンポーネントの追加 {#add-the-component-to-client-context}
 
 ページの読み込み時に初期化されるように、ロケーションストアコンポーネントを ClientContext に追加します。
 
 1. オーサーインスタンス上で Geometrixx Outdoors のホームページを開きます（[http://localhost:4502/content/geometrixx-outdoors/en.html](http://localhost:4502/content/geometrixx-outdoors/en.html)）。
-1. Ctrl + Alt + cキー(Windows)またはControl + Option + cキー(Mac)をクリックして、ClientContextを開きます。
+1. Ctrl + Alt + C キー (Windows) または Control + Option + C キー (Mac) をクリックして、ClientContext を開きます。
 1. ClientContext の上部にある編集アイコンをクリックして、ClientContext デザイナーを開きます。
 
    ![](do-not-localize/chlimage_1-11.png)
 
 1. ロケーションストアコンポーネントを ClientContext にドラッグします。
 
-### ClientContext でのロケーション情報の表示  {#see-the-location-information-in-client-context}
+### ClientContext でのロケーション情報の表示 {#see-the-location-information-in-client-context}
 
 編集モードで Geometrixx Outdoors のホームページを開き、ClientContext を開いてロケーションストアコンポーネントのデータを表示します。
 
 1. Geometrixx Outdoors サイトの英語ページを開きます。（[http://localhost:4502/content/geometrixx-outdoors/en.html](http://localhost:4502/content/geometrixx-outdoors/en.html)）
-1. ClientContextを開くには、Ctrl + Alt + Cキー(Windows)またはControl + Option + Cキー(Mac)を押します。
+1. To open Client Context, press Ctrl-Alt-c (windows) or control-option-c (Mac).
 
 ## カスタマイズされた ClientContext の作成 {#creating-a-customized-client-context}
 
@@ -626,7 +626,7 @@ ClientContext でストアデータをレンダリングするには、ジオロ
 
    `/content`
 
-   は、カスタマイズされたClientContextの内容を含みます。
+   カスタマイズされた ClientContext の内容が含まれます。
 
 * フォルダー：
 
@@ -634,7 +634,7 @@ ClientContext でストアデータをレンダリングするには、ジオロ
 
    では、コンテキストストアに対して異なる設定を定義できます。
 
-カスタマイズしたClientContextを使用するには、プロパティを編集します\
+カスタマイズした ClientContext を使用するには、プロパティを編集します\
 `path`\
-ページテンプレートに含まれる、clientcontextコンポーネントのデザインスタイル。 例えば、は次の標準的な場所です。\
+ページテンプレートに含まれる、clientcontext コンポーネントのデザインスタイル。 例えば、の標準的な場所は次のようになります。\
 `/libs/cq/personalization/components/clientcontext/design_dialog/items/path`

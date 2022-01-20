@@ -1,8 +1,8 @@
 ---
-title: FormsServiceにドキュメントを渡す
-seo-title: FormsServiceにドキュメントを渡す
-description: フォームデザインを含むcom.adobe.idp.DocumentオブジェクトをFormsサービスに渡します。 Formsサービスは、com.adobe.idp.Documentオブジェクト内のフォームデザインをレンダリングします。
-seo-description: フォームデザインを含むcom.adobe.idp.DocumentオブジェクトをFormsサービスに渡します。 Formsサービスは、com.adobe.idp.Documentオブジェクト内のフォームデザインをレンダリングします。
+title: FormsService にドキュメントを渡す
+seo-title: Passing Documents to the FormsService
+description: フォームデザインを含む com.adobe.idp.Document オブジェクトをFormsサービスに渡します。 Formsサービスは、com.adobe.idp.Document オブジェクトにあるフォームデザインをレンダリングします。
+seo-description: Pass a com.adobe.idp.Document object that contains the form design to the Forms service. The Forms service renders the form design located in the com.adobe.idp.Document object.
 uuid: 841e97f3-ebb8-4340-81a9-b6db11f0ec82
 contentOwner: admin
 content-type: reference
@@ -14,56 +14,56 @@ role: Developer
 exl-id: fe19e9b3-d662-4df2-b372-5006b794cde8
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1670'
 ht-degree: 3%
 
 ---
 
-# Formsサービスにドキュメントを渡す{#passing-documents-to-the-formsservice}
+# Forms Service にドキュメントを渡す {#passing-documents-to-the-formsservice}
 
-AEM Formsサービスは、ユーザーから情報を収集するために、インタラクティブPDF formsをクライアントデバイス（通常はWebブラウザー）にレンダリングします。 インタラクティブPDFフォームは、通常はXDPファイルとして保存され、Designerで作成されるフォームデザインに基づいています。 AEM Forms以降は、フォームデザインを含む`com.adobe.idp.Document`オブジェクトをFormsサービスに渡すことができます。 次に、Formsサービスは、`com.adobe.idp.Document`オブジェクト内のフォームデザインをレンダリングします。
+AEM Formsサービスは、ユーザーから情報を収集するために、インタラクティブPDF formsをクライアントデバイス（通常は Web ブラウザー）にレンダリングします。 インタラクティブPDFフォームは、通常 XDP ファイルとして保存され、Designer で作成されるフォームデザインに基づいています。 AEM Forms以降、 `com.adobe.idp.Document` フォームデザインを含むFormsサービスへのオブジェクト。 次に、Formsサービスは、 `com.adobe.idp.Document` オブジェクト。
 
-`com.adobe.idp.Document`オブジェクトをFormsサービスに渡す利点の1つは、他のサービス操作が`com.adobe.idp.Document`インスタンスを返すことです。 つまり、別のサービス操作から`com.adobe.idp.Document`インスタンスを取得してレンダリングできます。 例えば、次の図に示すように、XDPファイルが`/Company Home/Form Designs`という名前のContent Services（非推奨）ノードに格納されているとします。
+を通過する利点 `com.adobe.idp.Document` Formsサービスに対するオブジェクトは、他のサービス操作が `com.adobe.idp.Document` インスタンス。 つまり、 `com.adobe.idp.Document` インスタンスを別のサービス操作から削除し、レンダリングします。 例えば、XDP ファイルがという名前の Content Services（非推奨）ノードに格納されているとします。 `/Company Home/Form Designs`（次の図に示すように）
 
-プログラムによってContent Services（非推奨）からLoan.xdpを取得し、`com.adobe.idp.Document`オブジェクト内でXDPファイルをFormsサービスに渡すことができます。
+プログラムによって Content Services（非推奨）（非推奨）から Loan.xdp を取得し、XDP ファイルを `com.adobe.idp.Document` オブジェクト。
 
 >[!NOTE]
 >
->Formsサービスについて詳しくは、『 AEM Formsのサービスリファレンス[ 』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>Formsサービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
-## 手順の概要{#summary-of-steps}
+## 手順の概要 {#summary-of-steps}
 
 Content Services（非推奨）から取得したドキュメントをFormsサービスに渡すには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
-1. FormsとDocument Management Client APIオブジェクトを作成します。
+1. Formsと Document Management Client API オブジェクトを作成します。
 1. Content Services（非推奨）からフォームデザインを取得します。
-1. インタラクティブPDFフォームをレンダリングします。
+1. インタラクティブPDFフォームをレンダリング
 1. フォームデータストリームを使用してアクションを実行します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、プロキシファイルを含めます。
+必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを含めます。
 
-**FormsとDocument Management Client APIオブジェクトの作成**
+**Formsと Document Management Client API オブジェクトの作成**
 
-プログラムでForms Service API操作を実行する前に、Forms Client APIオブジェクトを作成します。 また、このワークフローはContent Services（非推奨）からXDPファイルを取得するので、Document Management APIオブジェクトを作成します。
+プログラムによってForms Service API 操作を実行する前に、Forms Client API オブジェクトを作成します。 また、このワークフローは Content Services（非推奨）から XDP ファイルを取得するので、Document Management API オブジェクトを作成します。
 
 **Content Services（非推奨）からフォームデザインを取得する**
 
-JavaまたはWebサービスAPIを使用して、Content Services（非推奨）からXDPファイルを取得します。 XDPファイルは、`com.adobe.idp.Document`インスタンス（Webサービスを使用している場合は`BLOB`インスタンス）内で返されます。 その後、`com.adobe.idp.Document`インスタンスをFormsサービスに渡すことができます。
+Java または Web サービス API を使用して、Content Services（非推奨）から XDP ファイルを取得します。 XDP ファイルは、 `com.adobe.idp.Document` インスタンス ( または `BLOB` インスタンス（web サービスを使用する場合）。 その後、 `com.adobe.idp.Document` Formsサービスのインスタンス。
 
 **インタラクティブPDFフォームのレンダリング**
 
-インタラクティブフォームをレンダリングするには、Content Services（非推奨）から返された`com.adobe.idp.Document`インスタンスをFormsサービスに渡します。
+インタラクティブフォームをレンダリングするには、 `com.adobe.idp.Document` Content Services（非推奨）からFormsサービスに返されたインスタンス。
 
 >[!NOTE]
 >
->フォームデザインを含む`com.adobe.idp.Document`をFormsサービスに渡すことができます。 `renderPDFForm2`および`renderHTMLForm2`という2つの新しいメソッドは、フォームデザインを含む`com.adobe.idp.Document`オブジェクトを受け取ります。
+>次の条件を満たす場合に、 `com.adobe.idp.Document` フォームデザインを含んだFormsサービスへの 次の 2 つの新しいメソッド： `renderPDFForm2` および `renderHTMLForm2` 受け入れる `com.adobe.idp.Document` フォームデザインを含むオブジェクト。
 
-**フォームデータストリームを使用してアクションを実行する**
+**フォームデータストリームを使用してアクションを実行します**
 
-クライアントアプリケーションのタイプに応じて、フォームをクライアントWebブラウザーに書き込むか、フォームをPDFファイルとして保存できます。 通常、Webベースのアプリケーションは、フォームをWebブラウザーに書き込みます。 ただし、デスクトップアプリケーションは通常、フォームをPDFファイルとして保存します。
+クライアントアプリケーションの種類に応じて、フォームをクライアント Web ブラウザーに書き込んだり、フォームをPDFファイルとして保存したりできます。 通常、Web ベースのアプリケーションは、フォームを Web ブラウザーに書き込みます。 ただし、デスクトップアプリケーションは通常、フォームをPDFファイルとして保存します。
 
 **関連トピック**
 
@@ -71,130 +71,130 @@ JavaまたはWebサービスAPIを使用して、Content Services（非推奨）
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[FormsサービスAPIのクイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms Service API クイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-## Java API {#pass-documents-to-the-forms-service-using-the-java-api}を使用してFormsサービスにドキュメントを渡す
+## Java API を使用してForms Service にドキュメントを渡す {#pass-documents-to-the-forms-service-using-the-java-api}
 
-FormsサービスおよびContent Services（非推奨）API(Java)を使用して、Content Services（非推奨）から取得したドキュメントを渡します。
+Formsサービスおよび Content Services（非推奨）API(Java) を使用して Content Services（非推奨）から取得したドキュメントを渡します。
 
 1. プロジェクトファイルを含める
 
-   Javaプロジェクトのクラスパスに、adobe-forms-client.jarやadobe-contentservices-client.jarなどのクライアントJARファイルを含めます。
+   Java プロジェクトのクラスパスに、adobe-forms-client.jar や adobe-contentservices-client.jar などのクライアント JAR ファイルを含めます。
 
-1. FormsとDocument Management Client APIオブジェクトの作成
+1. Formsと Document Management Client API オブジェクトの作成
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
-   * コンストラクターを使用して`FormsServiceClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * の作成 `FormsServiceClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
    * コンストラクタを使用して `DocumentManagementServiceClientImpl` オブジェクトを渡すことによって、`ServiceClientFactory` オブジェクトを作成します。
 
 1. Content Services（非推奨）からフォームデザインを取得する
 
-   `DocumentManagementServiceClientImpl`オブジェクトの`retrieveContent`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `DocumentManagementServiceClientImpl` オブジェクトの `retrieveContent` メソッドを使用して、次の値を渡します。
 
-   * コンテンツが追加されるストアを指定するstring値。 デフォルトのストアは`SpacesStore`です。 この値は必須のパラメーターです。
-   * 取得するコンテンツの完全修飾パスを指定するstring値（例：`/Company Home/Form Designs/Loan.xdp`）。 この値は必須のパラメーターです。
-   * バージョンを指定するstring値。 この値はオプションのパラメーターで、空の文字列を渡すことができます。 この場合、最新バージョンが取得されます。
+   * コンテンツが追加されるストアを指定する string 値です。 デフォルトのストアは `SpacesStore`. この値は必須のパラメータです。
+   * 取得するコンテンツの完全修飾パスを指定する string 値 ( 例： `/Company Home/Form Designs/Loan.xdp`) をクリックします。 この値は必須のパラメータです。
+   * バージョンを指定する string 値。 この値はオプションのパラメーターで、空の文字列を渡すことができます。 この場合、最新バージョンが取得されます。
 
-   `retrieveContent`メソッドは、XDPファイルを含む`CRCResult`オブジェクトを返します。 `CRCResult`オブジェクトの`getDocument`メソッドを呼び出して、`com.adobe.idp.Document`インスタンスを取得します。
+   この `retrieveContent` メソッドは、 `CRCResult` XDP ファイルを格納するオブジェクト。 の取得 `com.adobe.idp.Document` を呼び出すことによるインスタンス `CRCResult` オブジェクトの `getDocument` メソッド。
 
 1. インタラクティブPDFフォームのレンダリング
 
-   `FormsServiceClient`オブジェクトの`renderPDFForm2`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `FormsServiceClient` オブジェクトの `renderPDFForm2` メソッドを使用して、次の値を渡します。
 
-   * Content Services（非推奨）から取得したフォームデザインを含む`com.adobe.idp.Document`オブジェクト。
-   * フォームとマージするデータを含む`com.adobe.idp.Document`オブジェクト。 データを結合しない場合は、空の`com.adobe.idp.Document`オブジェクトを渡します。
-   * 実行時オプションを格納する`PDFFormRenderSpec`オブジェクト。 この値はオプションのパラメーターです。実行時オプションを指定しない場合は、`null`を指定できます。
-   * URI値を含む`URLSpec`オブジェクト。 この値はオプションのパラメーターで、`null`を指定できます。
-   * 添付ファイルを格納する`java.util.HashMap`オブジェクト。 この値はオプションのパラメーターです。フォームにファイルを添付しない場合は、`null`を指定できます。
+   * A `com.adobe.idp.Document` Content Services（非推奨）から取得したフォームデザインを含むオブジェクト。
+   * A `com.adobe.idp.Document` フォームに結合するデータを含むオブジェクト。 データを結合しない場合は、空の `com.adobe.idp.Document` オブジェクト。
+   * A `PDFFormRenderSpec` 実行時オプションを保存するオブジェクト。 この値はオプションのパラメータで、 `null` 実行時のオプションを指定しない場合。
+   * A `URLSpec` URI 値を格納するオブジェクト。 この値はオプションのパラメータで、 `null`.
+   * A `java.util.HashMap` 添付ファイルを保存するオブジェクト。 この値はオプションのパラメータで、 `null` フォームにファイルを添付しない場合。
 
-   `renderPDFForm`メソッドは、クライアントのWebブラウザーに書き込む必要があるフォームデータストリームを含む`FormsResult`オブジェクトを返します。
+   この `renderPDFForm` メソッドは、 `FormsResult` クライアントの Web ブラウザーに書き込む必要があるフォームデータストリームを含むオブジェクト。
 
-1. フォームデータストリームを使用してアクションを実行する
+1. フォームデータストリームを使用してアクションを実行します
 
-   * `FormsResult`オブジェクトの`getOutputContent`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトを作成します。
-   * `getContentType`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトのコンテンツタイプを取得します。
-   * `setContentType`メソッドを呼び出し、`com.adobe.idp.Document`オブジェクトのコンテンツタイプを渡すことで、`javax.servlet.http.HttpServletResponse`オブジェクトのコンテンツタイプを設定します。
-   * `javax.servlet.http.HttpServletResponse`オブジェクトの`getOutputStream`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに書き込むための`javax.servlet.ServletOutputStream`オブジェクトを作成します。
-   * `com.adobe.idp.Document`オブジェクトの`getInputStream`メソッドを呼び出して、`java.io.InputStream`オブジェクトを作成します。
-   * `InputStream`オブジェクトの`read`メソッドを呼び出して、バイト配列を作成し、フォームデータストリームを設定します。 バイト配列を引数として渡します。
-   * `javax.servlet.ServletOutputStream`オブジェクトの`write`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに送信します。 `write`メソッドにバイト配列を渡します。
+   * の作成 `com.adobe.idp.Document` を呼び出すことによってオブジェクトを取得 `FormsResult` オブジェクト `getOutputContent` メソッド。
+   * のコンテンツタイプを取得する `com.adobe.idp.Document` オブジェクトを呼び出す `getContentType` メソッド。
+   * を `javax.servlet.http.HttpServletResponse` を呼び出すことによるオブジェクトのコンテンツタイプ `setContentType` メソッドを使用して、 `com.adobe.idp.Document` オブジェクト。
+   * の作成 `javax.servlet.ServletOutputStream` オブジェクトを使用します。オブジェクトは、 `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッド。
+   * の作成 `java.io.InputStream` を呼び出すことによってオブジェクトを取得 `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッド。
+   * バイト配列を作成し、 `InputStream` オブジェクトの `read` メソッド。 バイト配列を引数として渡します。
+   * を呼び出す `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッド。
 
 **関連トピック**
 
-[クイックスタート（SOAPモード）:Java APIを使用してForms Serviceにドキュメントを渡す](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用してForms Service にドキュメントを渡す](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## WebサービスAPI {#pass-documents-to-the-forms-service-using-the-web-service-api}を使用して、ドキュメントをFormsサービスに渡す
+## Web サービス API を使用してForms Service にドキュメントを渡す {#pass-documents-to-the-forms-service-using-the-web-service-api}
 
-FormsサービスおよびContent Services（非推奨）API（Webサービス）を使用して、Content Services（非推奨）から取得したドキュメントを渡します。
+Formsサービスおよび Content Services（非推奨） API（Web サービス）を使用して Content Services（非推奨）から取得したドキュメントを渡します。
 
 1. プロジェクトファイルを含める
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 このクライアントアプリケーションは2つのAEM Formsサービスを呼び出すので、2つのサービス参照を作成します。 Formsサービスに関連付けられたサービス参照に、次のWSDL定義を使用します。`http://localhost:8080/soap/services/FormsService?WSDL&lc_version=9.0.1`.
+   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 このクライアントアプリケーションは 2 つのAEM Formsサービスを呼び出すので、2 つのサービス参照を作成します。 Formsサービスに関連付けられたサービス参照に、次の WSDL 定義を使用します。 `http://localhost:8080/soap/services/FormsService?WSDL&lc_version=9.0.1`.
 
-   Document Managementサービスに関連付けられたサービス参照に、次のWSDL定義を使用します。`http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`.
+   Document Management サービスに関連付けられたサービス参照に対して、次の WSDL 定義を使用します。 `http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`.
 
-   `BLOB`データ型は両方のサービス参照に共通なので、`BLOB`データ型を使用する際には完全に修飾します。 対応するWebサービスのクイックスタートでは、すべての`BLOB`インスタンスが完全に認定されます。
-
-   >[!NOTE]
-   >
-   >`localhost`*を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。*
-
-1. FormsとDocument Management Client APIオブジェクトの作成
-
-   * デフォルトのコンストラクターを使用して`FormsServiceClient`オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`FormsServiceClient.Endpoint.Address`オブジェクトを作成します。 AEM FormsサービスにWSDLを指定するstring値を渡します（例：`http://localhost:8080/soap/services/FormsService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます)。
-   * `FormsServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値は、MTOMが使用されるようにします。
-   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
-
-      * フィールド`FormsServiceClient.ClientCredentials.UserName.UserName`にAEM formsユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド`FormsServiceClient.ClientCredentials.UserName.Password`に割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に定数値`HttpClientCredentialType.Basic`を割り当てます。
-   * フィールド`BasicHttpBindingSecurity.Security.Mode`に定数値`BasicHttpSecurityMode.TransportCredentialOnly`を割り当てます。
+   これは、 `BLOB` データタイプは、両方のサービス参照に共通で、完全に修飾されます `BLOB` データタイプを使用する場合。 対応する Web サービスのクイックスタートで、 `BLOB` インスタンスは完全に選定されています。
 
    >[!NOTE]
    >
-   >`DocumentManagementServiceClient`*サービスクライアントに対して、この手順を繰り返します。*
+   >置換 `localhost`* AEM Formsをホストするサーバーの IP アドレス*
+
+1. Formsと Document Management Client API オブジェクトの作成
+
+   * の作成 `FormsServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
+   * の作成 `FormsServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をAEM Formsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/FormsService?WSDL`) をクリックします。 を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます )。
+   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `FormsServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
+   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
+   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
+
+      * フィールドにAEM forms ユーザー名を割り当てます。 `FormsServiceClient.ClientCredentials.UserName.UserName`.
+      * 対応するパスワード値をフィールドに割り当てます。 `FormsServiceClient.ClientCredentials.UserName.Password`.
+      * 定数値を割り当て `HttpClientCredentialType.Basic` フィールドに `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
+   * 定数値を割り当て `BasicHttpSecurityMode.TransportCredentialOnly` フィールドに `BasicHttpBindingSecurity.Security.Mode`.
+
+   >[!NOTE]
+   >
+   >以下の手順を `DocumentManagementServiceClient`*サービスクライアント。*
 
 1. Content Services（非推奨）からフォームデザインを取得する
 
-   `DocumentManagementServiceClient`オブジェクトの`retrieveContent`メソッドを呼び出し、次の値を渡して、コンテンツを取得します。
+   を呼び出して、コンテンツを取得する `DocumentManagementServiceClient` オブジェクトの `retrieveContent` メソッドを使用して、次の値を渡します。
 
-   * コンテンツが追加されるストアを指定するstring値。 デフォルトのストアは`SpacesStore`です。 この値は必須のパラメーターです。
-   * 取得するコンテンツの完全修飾パスを指定するstring値（例：`/Company Home/Form Designs/Loan.xdp`）。 この値は必須のパラメーターです。
-   * バージョンを指定するstring値。 この値はオプションのパラメーターで、空の文字列を渡すことができます。 この場合、最新バージョンが取得されます。
+   * コンテンツが追加されるストアを指定する string 値です。 デフォルトのストアは `SpacesStore`. この値は必須のパラメータです。
+   * 取得するコンテンツの完全修飾パスを指定する string 値 ( 例： `/Company Home/Form Designs/Loan.xdp`) をクリックします。 この値は必須のパラメータです。
+   * バージョンを指定する string 値。 この値はオプションのパラメーターで、空の文字列を渡すことができます。 この場合、最新バージョンが取得されます。
    * 参照リンクの値を格納する文字列出力パラメーター。
-   * コンテンツを格納する`BLOB`出力パラメーター。 この出力パラメーターを使用して、コンテンツを取得できます。
-   * コンテンツ属性を格納する`ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType`出力パラメーター。
-   * `CRCResult`出力パラメータ。 このオブジェクトを使用する代わりに、 `BLOB`出力パラメーターを使用してコンテンツを取得できます。
+   * A `BLOB` コンテンツを格納する出力パラメーター。 この出力パラメーターを使用して、コンテンツを取得できます。
+   * A `ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType` コンテンツ属性を格納する出力パラメーター。
+   * A `CRCResult` 出力パラメーター。 このオブジェクトを使用する代わりに、 `BLOB` 出力パラメーターを使用して、コンテンツを取得します。
 
 1. インタラクティブPDFフォームのレンダリング
 
-   `FormsServiceClient`オブジェクトの`renderPDFForm2`メソッドを呼び出し、次の値を渡します。
+   を呼び出す `FormsServiceClient` オブジェクトの `renderPDFForm2` メソッドを使用して、次の値を渡します。
 
-   * Content Services（非推奨）から取得したフォームデザインを含む`BLOB`オブジェクト。
-   * フォームとマージするデータを含む`BLOB`オブジェクト。 データを結合しない場合は、空の`BLOB`オブジェクトを渡します。
-   * 実行時オプションを格納する`PDFFormRenderSpec`オブジェクト。 この値はオプションのパラメーターです。実行時オプションを指定しない場合は、`null`を指定できます。
-   * URI値を含む`URLSpec`オブジェクト。 この値はオプションのパラメーターで、`null`を指定できます。
-   * 添付ファイルを格納する`Map`オブジェクト。 この値はオプションのパラメーターです。フォームにファイルを添付しない場合は、`null`を指定できます。
-   * ページ数を格納するために使用される長い出力パラメーター。
-   * ロケール値の格納に使用される文字列出力パラメーター。
-   * インタラクティブPDFフォーム`.`の保存に使用される`FormsResult`出力パラメーター
+   * A `BLOB` Content Services（非推奨）から取得したフォームデザインを含むオブジェクト。
+   * A `BLOB` フォームに結合するデータを含むオブジェクト。 データを結合しない場合は、空の `BLOB` オブジェクト。
+   * A `PDFFormRenderSpec` 実行時オプションを保存するオブジェクト。 この値はオプションのパラメータで、 `null` 実行時のオプションを指定しない場合。
+   * A `URLSpec` URI 値を格納するオブジェクト。 この値はオプションのパラメータで、 `null`.
+   * A `Map` 添付ファイルを保存するオブジェクト。 この値はオプションのパラメータで、 `null` フォームにファイルを添付しない場合。
+   * ページ数の保存に使用される長い出力パラメーター。
+   * ロケール値の格納に使用される文字列出力パラメーターです。
+   * A `FormsResult` インタラクティブPDFフォームの保存に使用する出力パラメーター `.`
 
-   `renderPDFForm2`メソッドは、インタラクティブPDFフォームを含む`FormsResult`オブジェクトを返します。
+   この `renderPDFForm2` メソッドは、 `FormsResult` インタラクティブPDFフォームを含むオブジェクト。
 
-1. フォームデータストリームを使用してアクションを実行する
+1. フォームデータストリームを使用してアクションを実行します
 
-   * `FormsResult`オブジェクトの`outputContent`フィールドの値を取得して、フォームデータを格納する`BLOB`オブジェクトを作成します。
-   * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 インタラクティブPDFドキュメントのファイルの場所と、ファイルを開くモードを表すstring値を渡します。
-   * `FormsResult`オブジェクトから取得した`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバーの値を取得して、バイト配列を設定します。
-   * コンストラクターを呼び出し、`System.IO.FileStream`オブジェクトを渡して、`System.IO.BinaryWriter`オブジェクトを作成します。
-   * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことにより、バイト配列の内容をPDFファイルに書き込みます。
+   * の作成 `BLOB` オブジェクトの `FormsResult` オブジェクトの `outputContent` フィールドに入力します。
+   * の作成 `System.IO.FileStream` オブジェクトを指定します。 インタラクティブPDFドキュメントのファイルの場所と、ファイルを開くモードを表す string 値を渡します。
+   * コンテンツを格納するバイト配列を作成します。 `BLOB` から取得したオブジェクト `FormsResult` オブジェクト。 バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバー。
+   * の作成 `System.IO.BinaryWriter` オブジェクトのコンストラクタを呼び出し、 `System.IO.FileStream` オブジェクト。
+   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
 
 **関連トピック**
 
-[MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

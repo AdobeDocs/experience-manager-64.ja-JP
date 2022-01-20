@@ -1,5 +1,5 @@
 ---
-title: アセットエディターの拡張
+title: アセットエディターを拡張
 description: カスタムコンポーネントを使用したアセットエディターの機能の拡張方法を説明します。
 contentOwner: AG
 feature: Developer Tools
@@ -12,13 +12,13 @@ ht-degree: 93%
 
 ---
 
-# アセットエディターの拡張 {#extending-asset-editor}
+# アセットエディターを拡張 {#extending-asset-editor}
 
 アセットエディターは、アセット共有を使用して見つけたアセットをクリックすると開くページです。アセットエディターでは、メタデータ、サムネール、タイトルおよびタグなどのアセットの特性を編集できます。
 
 事前設定済みの編集コンポーネントを使用してエディターを設定する方法については、[アセットエディターページの作成および設定](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page)を参照してください。
 
-既存のエディターコンポーネントを使用する以外に、Adobe Experience Manager開発者は独自のコンポーネントを作成することもできます。
+Adobe Experience Managerの開発者は、既存のエディターコンポーネントを使用する以外に、独自のコンポーネントを作成することもできます。
 
 ## アセットエディターテンプレートの作成 {#creating-an-asset-editor-template}
 
@@ -42,17 +42,17 @@ geometrixx には次のサンプルページが含まれています。
 
 ### JS アクションの設定 {#configuring-js-actions}
 
-一部の[!DNL Assets]コンポーネントには、`component.js`で定義されたJS関数が必要です。 このファイルをコンポーネントディレクトリにコピーしてリンクします。
+一部の [!DNL Assets] コンポーネントには、 `component.js`. このファイルをコンポーネントディレクトリにコピーしてリンクします。
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-このサンプルでは、このJavaScriptソースを`head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`)に読み込んでいます。
+このサンプルでは、この JavaScript ソースを `head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`) をクリックします。
 
 ### 追加のスタイルシート {#additional-style-sheets}
 
-一部の[!DNL Assets]コンポーネントは、[!DNL Experience Manager]ウィジェットライブラリを使用します。 コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
+一部の [!DNL Assets] コンポーネントは、 [!DNL Experience Manager] ウィジェットライブラリ。 コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">

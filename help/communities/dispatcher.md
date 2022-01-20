@@ -1,8 +1,8 @@
 ---
-title: Communities 用のディスパッチャーの設定
-seo-title: Communities 用の Dispatcher の設定
+title: Communities 用の Dispatcher の設定
+seo-title: Configuring Dispatcher for Communities
 description: AEM Communities 用の Dispatcher の設定
-seo-description: AEM Communities 用の Dispatcher の設定
+seo-description: Configure the dispatcher for AEM Communities
 uuid: c17daca9-3244-4b10-9d4e-2e95df633dd9
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,12 +12,12 @@ discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 exl-id: dc4e27dd-fb2e-485d-8c7f-ab830bde1d3d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '627'
 ht-degree: 70%
 
 ---
 
-# Communities 用の Dispatcher の設定  {#configuring-dispatcher-for-communities}
+# Communities 用の Dispatcher の設定 {#configuring-dispatcher-for-communities}
 
 ## AEM Communities {#aem-communities}
 
@@ -25,9 +25,9 @@ AEM Communities では、[コミュニティサイト](overview.md#community-sit
 
 特定のデプロイメントとサイトデザインにとって何が必要かについては
 
-* [カスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)にお問い合わせください
+* 連絡先 [カスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)
 
-主な[Dispatcherのドキュメント](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)も参照してください。
+メイン [Dispatcher のドキュメント](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
 
 ## Dispatcher のキャッシュ {#dispatcher-caching}
 
@@ -35,7 +35,7 @@ AEM Communities では、[コミュニティサイト](overview.md#community-sit
 
 AEM Communities 用の Dispatcher のキャッシュとは、Dispatcher によってコミュニティサイトのページの完全にキャッシュされたバージョンを提供する機能です。
 
-現在、コミュニティサイトを閲覧するユーザー、検索の結果コミュニティページに辿り着いたユーザー、ページのインデックスを作成する検索エンジンなど、匿名のサイト訪問者に対してのみサポートされます。その利点は、匿名ユーザーと検索エンジンのパフォーマンスが向上するという点です。
+現在、コミュニティサイトを閲覧するユーザー、検索の結果コミュニティページに辿り着いたユーザー、ページのインデックスを作成する検索エンジンなど、匿名のサイト訪問者に対してのみサポートされます。メリットは、匿名のユーザーと検索エンジンのパフォーマンスが向上することです。
 
 サインインしているメンバーの場合、Dispatcher はキャッシュをバイパスして、要求をパブリッシャーに直接リレーするため、すべてのページが動的に生成されて提供されます。
 
@@ -43,36 +43,36 @@ Dispatcher のキャッシュをサポートするように設定すると、TTL
 
 ### 要件 {#requirements}
 
-* Dispatcherバージョン4.1.2以降（最新バージョンについては、「[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)のインストール」を参照）
+* Dispatcher バージョン 4.1.2 以降 ( [Dispatcher のインストール](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html) （最新バージョンの場合）
 * [ACS AEM Commons パッケージ](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * バージョン 3.3.2 以降
-   * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age` OSGi設定
+   * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age` OSGi 設定
 
 ### 設定 {#configuration}
 
 OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」で、指定されたパスに保存されるキャッシュされたページの有効期限を設定します。
 
-* [Webコンソール](../../help/sites-deploying/configuring-osgi.md)から
+* 次の [Web コンソール](../../help/sites-deploying/configuring-osgi.md)
 
    * 例： [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`を探します
-* 「+」アイコンを選択して、新しい接続設定を作成します。
+* 場所 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
+* 「+」アイコンを選択して新しい接続設定を作成
 
 ![chlimage_1-339](assets/chlimage_1-339.png)
 
 * **フィルターパターン**
 
-   *（必須）* コミュニティページへの1つ以上のパス。（例：`/content/sites/engage/(.*)`）。
+   *（必須）* コミュニティページへの 1 つ以上のパス。 （例：`/content/sites/engage/(.*)`）。
 
-* **キャッシュ制御の最大経過時間**
+* **Cache-Control の最大経過時間**
 
-   *（必須）* キャッシュ制御ヘッダーに追加する最大経過時間（秒）。この値はゼロ（0）より大きくする必要があります。
+   *（必須）* キャッシュ制御ヘッダーに追加する最大経過時間（秒）。 この値はゼロ（0）より大きくする必要があります。
 
-## Dispatcher クライアントヘッダー  {#dispatcher-client-headers}
+## Dispatcher クライアントヘッダー {#dispatcher-client-headers}
 
-`dispatcher.any`の/clientheadersセクションで、特定のヘッダーのセットをリストする場合、[イネーブルメント機能](enablement.md)が正しく動作するように、`"CSRF-Token"`を含める必要があります。
+/clientheaders セクション ( `dispatcher.any`特定のヘッダーセットをリストする場合は、 `"CSRF-Token"` ～のために [イネーブルメント機能](enablement.md) 正しく動作させる。
 
 ## Dispatcher フィルター {#dispatcher-filters}
 
@@ -91,7 +91,7 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
 >[!NOTE]
 >
 >**プロパティ名の例**
->表示されるすべてのプロパティ名（**/0050**&#x200B;や&#x200B;**/0170**&#x200B;など）は、既存のdispatcher.any設定ファイルに合わせて調整する必要があります。
+>表示されるすべてのプロパティ名（例： ） **/0050** および **/0170**&#x200B;を使用する場合は、既存の dispatcher.any 設定ファイル内に収まるように調整する必要があります。
 
 以下のエントリを /filter セクションの最後に追加する必要があります（特にすべての拒否エントリの後）。
 
@@ -167,7 +167,7 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
 
 ## Dispatcher ルール {#dispatcher-rules}
 
-`dispatcher.any` のルールセクションは、要求された URL に基づいてキャッシュされる応答を定義します。コミュニティの場合、ルールセクションを使用して、キャッシュしない対象を定義します。
+`dispatcher.any` のルールセクションは、要求された URL に基づいてキャッシュされる応答を定義します。Communities の場合、ルールセクションを使用して、キャッシュしないものを定義します。
 
 ```shell
 # Never cache the client-side .social.json calls
@@ -192,7 +192,7 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
 
 よくある問題の原因は、フィルタールールを挿入するときに、以前のルールへの影響を考慮しないことです。特に、アクセスを拒否するルールを追加するときには注意が必要です。
 
-通常は、最初のフィルターパターンであらゆるものを拒否し、後続のフィルターで何らかの規則性に基づいてアクセスを認めるという方法をとります。1つのリクエストに複数のフィルターが適用される場合、最後に適用されるフィルターが有効になります。
+通常は、最初のフィルターパターンであらゆるものを拒否し、後続のフィルターで何らかの規則性に基づいてアクセスを認めるという方法をとります。1 つのリクエストに複数のフィルターが適用される場合、最後に適用されるフィルターが有効になります。
 
 ## dispatcher.any のサンプル {#sample-dispatcher-any}
 

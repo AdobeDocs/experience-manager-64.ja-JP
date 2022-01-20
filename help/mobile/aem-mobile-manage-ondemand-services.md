@@ -1,8 +1,8 @@
 ---
 title: プリフライトによるプレビュー
-seo-title: プリフライトによるプレビュー
+seo-title: Previewing with Preflight
 description: このページでは、プリフライトアプリによるプレビューについて説明します。
-seo-description: Mobile On-Demand プリフライトアプリでは、アクセス権を持つすべてのプロジェクトを表示できます。このページでは、この詳細について説明します。
+seo-description: With the Mobile On Demand Preflight app, you can view all projects to which you have access. Follow this page to learn more about this.
 uuid: bea83055-8172-4634-88ec-5d3f163ad8e0
 contentOwner: User
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: c08729f6-1512-4aee-82bb-7cc05749a72f
 exl-id: 1eb9f997-70ff-4309-a219-87ef56b723e5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '327'
-ht-degree: 96%
+source-wordcount: '299'
+ht-degree: 95%
 
 ---
 
@@ -33,7 +33,7 @@ Mobile On-Demand プリフライトアプリでは、アクセス権を持つす
 >
 >プリフライトアプリは、本質的に PhoneGap Enterprise ビューアと似ています。
 
-## プリフライトによるプレビュー  {#previewing-with-preflight-1}
+## プリフライトによるプレビュー {#previewing-with-preflight-1}
 
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
 1. **記事を管理**（またはバナー／コレクション）タイルから省略記号（...）をクリックします。
@@ -45,11 +45,11 @@ Mobile On-Demand プリフライトアプリでは、アクセス権を持つす
 
 >[!NOTE]
 >
->AEM Preflightアプリは、コンテンツのプレビューとページの参照に使用します。 プリフライトアプリについて詳しくは、[こちら](https://helpx.adobe.com/jp/digital-publishing-solution/help/preflight-app.html)を参照してください。
+>AEM Preflight アプリは、コンテンツのプレビューとページの参照に使用します。 プリフライトアプリについて詳しくは、[こちら](https://helpx.adobe.com/jp/digital-publishing-solution/help/preflight-app.html)を参照してください。
 >
 >AEM Preflight アプリは、[iTunes App Store](https://itunes.apple.com/jp/app/adobe-experience-manager-mobile/id1042687518?mt=8)、[Google Play ストア](https://play.google.com/store/apps/details?id=com.adobe.dps.preflight&amp;hl=ja)および [Windows ストア](https://www.microsoft.com/ja-jp/store/p/adobe-experience-manager-mobile-preflight/9nblggh5wmxq)から入手できます。
 
-### さらに先のステップ  {#getting-ahead}
+### さらに先のステップ {#getting-ahead}
 
 コンテンツのオーサリングについてさらに詳しい情報が必要な場合は、AEM Mobile アプリケーションにおけるコンテンツの作成と管理について以下のリソースを参照してください。
 

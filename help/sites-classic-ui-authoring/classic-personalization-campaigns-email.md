@@ -1,8 +1,8 @@
 ---
 title: 電子メールマーケティング
-seo-title: 電子メールマーケティング
+seo-title: E-mail Marketing
 description: 電子メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成できるだけでなく、ニュースレターに固有の新しいコンテンツを追加できます。
-seo-description: 電子メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成できるだけでなく、ニュースレターに固有の新しいコンテンツを追加できます。
+seo-description: E-mail marketing (for example, newsletters) are an important part of any marketing campaign as you use them to push content to your leads. In AEM, you can create newsletters from existing AEM content as well as add new content, specific to the newsletters.
 uuid: 798e06cd-64dd-4a8d-8a7a-9a7ba80045f6
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: eb72f934-4b0f-4a71-b2a2-3ddf78db8c3c
 exl-id: 5e97f7bd-d668-423d-9f65-7dcc8fb1943a
 source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
-source-wordcount: '1771'
+source-wordcount: '1726'
 ht-degree: 94%
 
 ---
@@ -21,8 +21,8 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobeは、AEM SMTPサービスから送信される、開封済み/バウンス済みのEメールの機能をさらに強化する予定はありません。\
->[Adobe CampaignとそのAEM統合を活用](/help/sites-administering/campaign.md)することをお勧めします。
+>Adobeは、AEM SMTP サービスから送信されるオープン/バウンス済みの E メールをさらに強化する予定はありません。\
+>お勧めは、 [Adobe CampaignとAEMの統合を活用](/help/sites-administering/campaign.md).
 
 電子メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成できるだけでなく、ニュースレターに固有の新しいコンテンツを追加できます。
 
@@ -69,7 +69,7 @@ ht-degree: 94%
 
    「**デフォルトの受信者リスト**」は、このニュースレターのタッチポイントを構成するので、必須フィールドです（リストについて詳しくは、[リストの使用](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)を参照してください）。
 
-   ![mcm_newnewsletterdialog](assets/mcm_newnewsletterdialog.png)
+   ![mcm_newnewnewsletterdialog](assets/mcm_newnewsletterdialog.png)
 
    * **送信元の名前**
 
@@ -97,10 +97,10 @@ ht-degree: 94%
 
    * **デフォルトの受信者リスト**
 
-      ニュースレターを受け取るデフォルトのリスト。
+      ニュースレターを受け取るデフォルトのリストです。
    これらの設定は、後から&#x200B;**プロパティ...** ダイアログで更新できます。
 
-1. 「**OK**」をクリックして、保存します。
+1. 「**OK**」をクリックして保存します。
 
 ## ニュースレターへのコンテンツの追加 {#adding-content-to-newsletters}
 
@@ -145,7 +145,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->ニュースレターを送信する前に、`http://localhost:4502/system/console/configMgr`でDay CQ Link ExternalizerのOSGi設定を確認してください。
+>ニュースレターを送信する前に、 Day CQ Link Externalizer の OSGi 設定を次の場所で確認します。 `http://localhost:4502/system/console/configMgr`.
 >
 >デフォルトでは、このパラメーターの値は `localhost:4502` となります。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
 
@@ -226,7 +226,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->ニュースレターを送信する前に、`http://localhost:4502/system/console/configMgr`でDay CQ Link ExternalizerのOSGi設定を確認してください。
+>ニュースレターを送信する前に、 Day CQ Link Externalizer の OSGi 設定を次の場所で確認します。 `http://localhost:4502/system/console/configMgr`.
 >
 >デフォルトでは、このパラメーターの値は `localhost:4502` となります。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
 

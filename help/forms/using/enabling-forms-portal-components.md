@@ -1,39 +1,39 @@
 ---
 title: フォームポータルコンポーネントの有効化
-seo-title: フォームポータルコンポーネントの有効化
+seo-title: Enabling forms portal components
 description: デフォルトでは、フォームポータルコンポーネントは無効になっています。フォームポータルコンポーネントを有効にするには、Document Services と Document Services Predicates グループを有効にします。
-seo-description: デフォルトでは、フォームポータルコンポーネントは無効になっています。フォームポータルコンポーネントを有効にするには、Document Services と Document Services Predicates グループを有効にします。
+seo-description: Out of the box, Forms Portal components are disabled. Enable Document Services and Document Services Predicates groups to enable Forms Portal components.
 uuid: 92d25da6-f1df-4ac0-bf84-2edf9e2722b3
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: publish
 discoiquuid: 4d318908-c724-4582-a82b-6e9b1c55705b
-feature: フォームポータル
+feature: Forms Portal
 source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
 workflow-type: tm+mt
-source-wordcount: '348'
-ht-degree: 48%
+source-wordcount: '320'
+ht-degree: 44%
 
 ---
 
 
 # フォームポータルコンポーネントの有効化 {#enabling-forms-portal-components}
 
-フォームポータルコンポーネントは、デフォルトで使用できません。AEMのサイドキックで使用可能なコンポーネントのリストにコンポーネントを表示するには、次の手順を実行します。
+デフォルトでは、フォームポータルコンポーネントは使用できません。AEMサイドキックで使用可能なコンポーネントのリストにコンポーネントを表示するには、次の手順を実行します。
 
-1. Webサイトのオーサーインスタンスにログインし、AEM Sitesページを開きます。
+1. Web サイトのオーサーインスタンスにログインし、AEM Sitesページを開きます。
 
-1. 静的テンプレートを使用するページに対して、次の手順を実行します。
+1. 静的テンプレートを使用するページでは、次の手順を実行します。
 
-   1. ページヘッダーで、![canvas-drop-down](assets/canvas-drop-down.png) / **Design**&#x200B;をタップし、デザインモードでページを開きます。
-   1. 任意の（青い境界線の付いた）コンポーネントをタップし、![フィールドレベル](assets/field-level.png)をタップして、現在のコンポーネントを含む段落システムを選択します。
-   1. 段落システムで、![settings_icon](assets/settings_icon.png)をタップして、段落システムの編集ダイアログを開きます。
+   1. ページのヘッダーで、 ![キャンバスドロップダウン](assets/canvas-drop-down.png) > **デザイン** をクリックして、デザインモードでページを開きます。
+   1. 任意のコンポーネント（青い境界線付き）をタップし、 ![フィールドレベル](assets/field-level.png) 現在のコンポーネントを含む段落システムを選択します。
+   1. 段落システムで、 ![settings_icon](assets/settings_icon.png) をクリックして、段落システムの編集ダイアログを開きます。
    1. 「**[!UICONTROL 許可されているコンポーネント]**」のリストから、**[!UICONTROL Document Services]** コンポーネントと **[!UICONTROL Document Services Predicates]** コンポーネントのチェックボックスをオンにします。「**[!UICONTROL OK]**」をタップします。
 
-1. 動的テンプレートを使用するページに対して、次の手順を実行します。
+1. 動的テンプレートを使用するページでは、次の手順を実行します。
 
-   1. ページヘッダーで、![プロパティ](assets/properties.png) / **テンプレートを編集**&#x200B;をタップして、ページのテンプレートを開きます。
-   1. **レイアウトコンテナ**&#x200B;をタップし、![FeedManagement](assets/FeedManagement.png)をタップします。 「**許可されているコンポーネント**」タブで、「**Document Services」および「Document Servicesの述語**」オプションを有効にして、![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)をタップします。
+   1. ページのヘッダーで、 ![プロパティ](assets/properties.png) > **テンプレートを編集** をクリックして、ページのテンプレートを開きます。
+   1. タップ **レイアウトコンテナ** とタップします。 ![FeedManagement](assets/FeedManagement.png). 内 **許可されたコンポーネント** タブ、有効 **Document Services と Document Services の述語** オプションを選択し、次のタップを押します。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 >[!NOTE]
 >
@@ -47,7 +47,7 @@ ht-degree: 48%
 * [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)
 * [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
-* [ドラフトおよび送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
+* [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信コンポーネントとデータベースの統合のサンプル](/help/forms/using/integrate-draft-submission-database.md)
 * [フォームポータルコンポーネントのテンプレートをカスタマイズする](/help/forms/using/customizing-templates-forms-portal-components.md)
 * [ポータル上のフォーム発行の概要](/help/forms/using/introduction-publishing-forms.md)

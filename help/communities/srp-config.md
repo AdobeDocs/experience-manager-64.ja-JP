@@ -1,8 +1,8 @@
 ---
 title: ストレージ設定
-seo-title: ストレージ設定
+seo-title: Storage Configuration
 description: ストレージ設定コンソールへのアクセス方法
-seo-description: ストレージ設定コンソールへのアクセス方法
+seo-description: How to access the Storage Configuration Console
 uuid: 6a5a71d5-6aaa-4635-8852-4dae33c497a9
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -13,8 +13,8 @@ role: Admin
 exl-id: 905b6dc5-cf17-4f58-a687-27e2910a0729
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 67%
+source-wordcount: '198'
+ht-degree: 66%
 
 ---
 
@@ -35,27 +35,27 @@ ht-degree: 67%
 
 オーサー環境でストレージ設定コンソールに移動するには、
 
-* グローバルナビゲーションから：**[!UICONTROL ツール/コミュニティ/ストレージ設定]**
+* グローバルナビゲーションから： **[!UICONTROL ツール/コミュニティ/ストレージ設定]**
 
 デフォルトの JCR 以外のストレージオプションを選択するには、
 
 * オプションを選択します。
 * 適切な設定
 
-   * [MSRP](msrp.md#select-msrp)の選択の詳細を参照
-   * [DSRP](dsrp.md#select-dsrp)の選択の詳細を参照
-   * [ASRP](asrp.md#select-asrp)の選択の詳細を参照
+   * 詳細を見る [MSRP の選択](msrp.md#select-msrp)
+   * 詳細を見る [DSRP の選択](dsrp.md#select-dsrp)
+   * 詳細を見る [ASRP の選択](asrp.md#select-asrp)
 
-* 「**[!UICONTROL 送信]**」を選択します。
+* 選択 **[!UICONTROL 送信]**
 
 ### JCR ストレージについて {#about-jcr-storage}
 
 選択しなかった場合は、AEM リポジトリである JCR がデフォルトで使用されることに注意してください。
 
-JCRは、オーサー環境とパブリッシュ環境で共有される共通ストアでは&#x200B;*ありません*。 コミュニティコンテンツは、作成先のオーサー環境またはパブリッシュ環境からのみ表示されます。
+JCR は *not* オーサー環境とパブリッシュ環境で共有される共通ストア。 コミュニティコンテンツは、作成先のオーサー環境またはパブリッシュ環境からのみ表示されます。
 
 詳しくは、[JCR ストア](jsrp.md)を参照してください。
 
 >[!NOTE]
 >
->`/etc/socialconfig`の下にノード`srpc`がない場合は、デフォルトの[JCRストア](jsrp.md)を示します。
+>ノードがない `srpc`under `/etc/socialconfig` デフォルトを示します [JCR ストア](jsrp.md).

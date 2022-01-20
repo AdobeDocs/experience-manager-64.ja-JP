@@ -1,8 +1,8 @@
 ---
 title: コンポーネントコンソール
-seo-title: コンポーネントコンソール
+seo-title: Components Console
 description: コンポーネントコンソール
-seo-description: 'null'
+seo-description: null
 uuid: 308b7fa1-9525-43f3-8c15-1076485b3f8c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 8774c38a-abd2-4dc2-868e-d6760c96f3f6
 exl-id: fa583a06-e75c-41de-a977-7e459ab8bca9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '260'
 ht-degree: 95%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 95%
 
 コンポーネントコンソールを使用すると、インスタンスに定義されたすべてのコンポーネントを参照し、各コンポーネントの主な情報を確認できます。
 
-**ツール** -> **一般** -> **コンポーネント**&#x200B;からアクセスできます。 コンソールでは、カード表示およびリスト表示を使用できます。コンポーネントのツリー構造がないので、列表示は使用できません。
+次の場所からアクセスできます。 **ツール** -> **一般** -> **コンポーネント**. コンソールでは、カード表示およびリスト表示を使用できます。コンポーネントのツリー構造がないので、列表示は使用できません。
 
 ![chlimage_1-301](assets/chlimage_1-301.png)
 

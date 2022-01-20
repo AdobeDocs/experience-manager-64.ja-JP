@@ -1,8 +1,8 @@
 ---
 title: コンテンツフラグメントのカスタマイズと拡張
-seo-title: コンテンツフラグメントのカスタマイズと拡張
+seo-title: Customizing and Extending Content Fragments
 description: コンテンツフラグメントは、標準アセットを拡張します。
-seo-description: コンテンツフラグメントは、標準アセットを拡張します。
+seo-description: A content fragment extends a standard asset.
 uuid: f8d0bb22-0b51-4488-a1c8-29e50213c913
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,16 +12,16 @@ discoiquuid: af95c6c7-0475-4f55-88a8-ec5e39a9ddcd
 exl-id: 540391a8-b846-4e5e-bf77-ab20726f06d0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '2759'
-ht-degree: 82%
+source-wordcount: '2747'
+ht-degree: 83%
 
 ---
 
-# コンテンツフラグメントのカスタマイズと拡張 {#customizing-and-extending-content-fragments}
+# コンテンツフラグメントのカスタマイズと拡張{#customizing-and-extending-content-fragments}
 
 >[!CAUTION]
 >
->一部のコンテンツフラグメント機能には、[AEM 6.4 Service Pack 2(6.4.2.0)](/help/release-notes/sp-release-notes.md)のアプリケーションが必要です。
+>一部のコンテンツフラグメント機能には、 [AEM 6.4 Service Pack 2(6.4.2.0)](/help/release-notes/sp-release-notes.md).
 
 コンテンツフラグメントは、標準アセットを拡張します。
 
@@ -33,9 +33,9 @@ ht-degree: 82%
 
 コンテンツフラグメントの基本的な[構成要素](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment)は次のとおりです。
 
-* A *コンテンツフラグメント，*
-* 1つ以上の&#x200B;*コンテンツ要素*&#x200B;で構成される
-* 1つ以上の&#x200B;*コンテンツバリエーション*&#x200B;を持つことができます。
+* A *コンテンツフラグメント*
+* 1 つ以上の *コンテンツ要素* s,
+* （1 つ以上） *コンテンツのバリエーション* s.
 
 フラグメントのタイプによって、モデルまたはテンプレートも使用します。
 
@@ -63,7 +63,7 @@ ht-degree: 82%
    * テンプレートでは、コンテンツフラグメントの作成時にその構造（基本的なテキストのみ）を定義します。
    * テンプレートは作成時にフラグメントにコピーされるので、それ以降にテンプレートに変更を加えても、既存のフラグメントには反映されません。
    * 新しいバリエーションを追加するときなどは、それに合わせてフラグメントを更新する必要があります。
-   * [コンテンツフ](/help/sites-developing/content-fragment-templates.md) ラグメントテンプレートは、AEMエコシステム内の他のテンプレートメカニズム（ページテンプレートなど）とは異なる方法で個別に作成されます。そのため、分けて考える必要があります。
+   * [コンテンツフラグメントテンプレート](/help/sites-developing/content-fragment-templates.md) は、AEMエコシステム内の他のテンプレートメカニズム（ページテンプレートなど）とは異なる方法で動作します。 そのため、分けて考える必要があります。
    * テンプレートを基にした場合、コンテンツの MIME タイプは実際のコンテンツに基づいて管理されます。つまり、要素およびバリエーションごとに MIME タイプが異なる場合もあります。
 
 ## AEM Assets との統合 {#integration-with-assets}
@@ -90,13 +90,13 @@ ht-degree: 82%
 
       例：`jcr:content/data/myvariation`
 
-   * 各要素のデータは、要素名を持つプロパティとして各サブノードに保存されます。
+   * 各要素のデータは、それぞれのサブノードに、要素名を持つプロパティとして保存されます。
 
-      例えば、要素`text`の内容は、`jcr:content/data/master`上のプロパティ`text`として保存されます。
+      例：要素のコンテンツ `text` はプロパティとして保存されます `text` オン `jcr:content/data/master`
 
-* メタデータと関連コンテンツは、`jcr:content/metadata`の下に格納されます。
+* メタデータと関連コンテンツは、以下に格納されます。 `jcr:content/metadata`
 
-   タイトルと説明を除き、従来のメタデータと見なされず、`jcr:content`に保存されます。
+   タイトルと説明（従来のメタデータと見なされず、次の場所に保存される）を除く。 `jcr:content`
 
 ### シンプルコンテンツフラグメントのアセットへのマッピング {#mapping-simple-content-fragments-to-assets}
 
@@ -136,7 +136,7 @@ ht-degree: 82%
 >
 >[コンテンツフラグメントコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)が推奨されます。詳しくは、[コアコンポーネントの開発](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)を参照してください。
 
-コンテンツフラグメントは、その他のアセットタイプと同様に、AEM ページから参照できます。AEM では、[****&#x200B;コンテンツフラグメントコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)を利用できます。これは、[コンテンツフラグメントをページ上に含めることができるコンポーネント](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)です。また、この&#x200B;**コンテンツフラグメント**&#x200B;コアコンポーネントを拡張することもできます。
+コンテンツフラグメントは、その他のアセットタイプと同様に、AEM ページから参照できます。AEM では、[****&#x200B;コンテンツフラグメントコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)を利用できます。これは、[コンテンツフラグメントをページ上に含めることができるコンポーネント](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)です。また、 **コンテンツフラグメント** コアコンポーネント。
 
 * このコンポーネントは、`fragmentPath` プロパティを使用して、実際のコンテンツフラグメントを参照します。`fragmentPath` プロパティは、その他のアセットタイプの類似プロパティと同じ方法で処理されます。例えば、コンテンツフラグメントが別の場所に移動された場合などです。
 
@@ -184,19 +184,19 @@ ht-degree: 82%
 
 次のガイドラインに沿って、コンポーネントがコンテンツフラグメントのバックグラウンド処理に対応できるようにする必要があります。
 
-* レンダリングする要素が定義されているプロパティの名前は、`element`または`elementNames`にする必要があります。
+* レンダリングする要素を定義するプロパティの名前は、次のいずれかにする必要があります。 `element` または `elementNames`.
 
 * レンダリングされるバリエーションが定義するプロパティの名前は、`variation` または `variationName` にする必要があります。
 
-* 複数の要素の出力がサポートされている場合（`elementNames`を使用して複数の要素を指定）、実際の表示モードはプロパティ`displayMode`によって定義されます。
+* 複数の要素の出力がサポートされている場合 ( `elementNames` 複数の要素を指定する場合 )、実際の表示モードはプロパティで定義されます `displayMode`:
 
-   * 値が`singleText`（1つの要素のみが設定されている）の場合、要素は、中間コンテンツ、レイアウトのサポートなどを含むテキストとしてレンダリングされます。 レンダリングされる要素が 1 つのみのフラグメントでは、これがデフォルトです。
+   * 値が `singleText` （および 1 つの要素のみが設定されています）その要素は、中間コンテンツ、レイアウトサポートなどを含むテキストとしてレンダリングされます。 レンダリングされる要素が 1 つのみのフラグメントでは、これがデフォルトです。
    * それ以外の場合は、よりシンプルな「フォーム表示」と呼ばれる方法が使用されます。この方法では中間コンテンツがサポートされず、フラグメントコンテンツが「そのまま」表示されます。
 
-* `displayMode` == `singleText`用にフラグメントがレンダリングされる場合（暗黙的または明示的）、次の追加プロパティが使用されます。
+* フラグメントが `displayMode` == `singleText` （暗黙的または明示的に）次の追加のプロパティが使用されます。
 
-   * `paragraphScope` すべての段落をレンダリングするか、一連の段落のみをレンダリングするかを定義します(値： `all` 対 `range`)
-   * `paragraphScope` == `range`の場合、プロパティ`paragraphRange`はレンダリングする段落の範囲を定義します
+   * `paragraphScope` すべての段落をレンダリングするか、一連の段落のみをレンダリングするかを定義します ( 値： `all` 対 `range`)
+   * if `paragraphScope` == `range` プロパティを `paragraphRange` レンダリングする段落の範囲を定義します
 
 ### その他のフレームワークとの統合 {#integration-with-other-frameworks}
 
@@ -204,11 +204,11 @@ ht-degree: 82%
 
 * **翻訳**
 
-   コンテンツフラグメントは、[AEM翻訳ワークフロー](/help/sites-administering/tc-manage.md)と完全に統合されています。 つまり、アーキテクチャレベルでは以下を意味します。
+   コンテンツフラグメントは、[AEM の翻訳ワークフロー](/help/sites-administering/tc-manage.md)と完全に統合されています。つまり、アーキテクチャレベルでは以下を意味します。
 
    * コンテンツフラグメントの個々の翻訳は、実際には別々のフラグメントです。例えば、以下のようになります。
 
-      * 異なる言語のルートの下に配置されます。
+      * 異なる言語のルートの下に配置されています。
 
          `/content/dam/<path>/en/<to>/<fragment>`
 
@@ -242,7 +242,7 @@ ht-degree: 82%
    必要に応じて拡張できます。
 * 各スキーマフォームは、フラグメントエディターと統合されています。
 
-## コンテンツフラグメント管理 API - サーバー側  {#the-content-fragment-management-api-server-side}
+## コンテンツフラグメント管理 API - サーバー側 {#the-content-fragment-management-api-server-side}
 
 サーバー側 API を使用して、コンテンツフラグメントにアクセスできます。以下を参照してください。
 
@@ -252,7 +252,7 @@ ht-degree: 82%
 >
 >コンテンツ構造に直接アクセスする代わりに、サーバー側 API を使用することを強くお勧めします。
 
-### 主要インターフェイス  {#key-interfaces}
+### 主要インターフェイス {#key-interfaces}
 
 次の 3 つのインターフェイスが、入口の役割を果たします。
 
@@ -260,7 +260,7 @@ ht-degree: 82%
 
    <pre><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html">FragmentTemplate</a></pre>
 
-   `FragmentTemplate.createFragment()`を使用して、新しいフラグメントを作成します。
+   用途 `FragmentTemplate.createFragment()` 新しいフラグメントを作成する場合。
 
    ```
    Resource templateOrModelRsc = resourceResolver.getResource("...");
@@ -368,14 +368,14 @@ ht-degree: 82%
 
 
 
-### 適応 - adaptTo() の使用 {#adapting-using-adaptto}
+### 適応 - adaptTo() の使用  {#adapting-using-adaptto}
 
 次のものを適応させることができます。
 
 * `ContentFragment` は、次のものに適応させることができます。
 
-   * `Resource`  — 基になるSlingリソース。基になるを直接更新するに `Resource` は、オブジェクトを再構築する必要が `ContentFragment` あります。
-   * `Asset`  — コンテンツフ `Asset` ラグメントを表すDAMの抽象化。を直接更新するに `Asset` は、オブジェクトを再構築する必要があ `ContentFragment` ります。
+   * `Resource`  — 基になる Sling リソース。基になる `Resource` 直接、再構築が必要 `ContentFragment` オブジェクト。
+   * `Asset` - DAM `Asset` コンテンツフラグメントを表す抽象化なお、 `Asset` 直接、再構築が必要 `ContentFragment` オブジェクト。
 
 * `ContentElement` は、次のものに適応させることができます。
 
@@ -426,7 +426,7 @@ ht-degree: 82%
 
 編集セッションの制御には、次の要件があります。
 
-* 複数のビュー（= HTMLページ）にまたがるコンテンツフラグメントの編集はアトミックである必要があります。
+* 複数のビュー (=HTMLページ ) にまたがる可能性のあるコンテンツフラグメントの編集は、アトミックである必要があります。
 * さらに、編集はトランザクション単位&#x200B;**&#x200B;でおこなう必要があります。すなわち、編集セッションの終了時には、変更をコミット（保存）するか、ロールバック（キャンセル）します。
 * エッジケースを適切に処理する必要があります。例としては、ユーザーが手動で URL を入力したりグローバルナビゲーションを使用したりしてページから移動する場合などが考えられます。
 * データが失われないよう、定期的な自動保存（x 分ごと）をおこなう必要があります。
@@ -479,7 +479,7 @@ ht-degree: 82%
 
 * コンテンツ変更
 
-   * ユーザーがコンテンツを変更し、編集セッションが存在しない場合は、新しい編集セッションが作成されます（[セッションの開始](#processes)を参照）。
+   * ユーザーがコンテンツを変更し、編集セッションが存在しない場合は、新しい編集セッションが作成されます ( [セッションの開始](#processes)) をクリックします。
 
 * ページからの移動
 
@@ -505,7 +505,7 @@ if (fragmentResource != null) {
 } 
 ```
 
-### 例：新しいコンテンツフラグメントの作成  {#example-creating-a-new-content-fragment}
+### 例：新しいコンテンツフラグメントの作成 {#example-creating-a-new-content-fragment}
 
 新しいコンテンツフラグメントをプログラムによって作成するには、以下を使用する必要があります。
 
@@ -519,7 +519,7 @@ FragmentTemplate tpl = templateOrModelRsc.adaptTo(FragmentTemplate.class);
 ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "A fragment description.");
 ```
 
-### 例：自動保存間隔の指定  {#example-specifying-the-auto-save-interval}
+### 例：自動保存間隔の指定 {#example-specifying-the-auto-save-interval}
 
 自動保存間隔（秒単位）は、設定マネージャー（ConfMgr）を使用して定義できます。
 

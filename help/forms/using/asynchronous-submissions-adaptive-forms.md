@@ -1,18 +1,18 @@
 ---
 title: アダプティブフォームの非同期送信
-seo-title: アダプティブフォームの非同期送信
+seo-title: Asynchronous submission of adaptive forms
 description: ここでは、アダプティブフォームの非同期送信を設定する方法について説明します。
-seo-description: ここでは、アダプティブフォームの非同期送信を設定する方法について説明します。
+seo-description: Learn to configure asynchronous submission for adaptive forms.
 uuid: 3b8aeac8-cb38-4a2b-8375-556b2736d58b
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 6e4e3af5-4260-4f38-9b29-0818e92bc182
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 1ca492e9-9832-4e5d-8020-2690ac4f5505
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '655'
 ht-degree: 94%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 94%
 
 アダプティブフォームの非同期送信を設定するには、以下の手順を実行します。
 
-1. アダプティブフォームのオーサリングモードで、フォームコンテナオブジェクトを選択し、![cmppr1](assets/cmppr1.png)をタップしてプロパティを開きます。
+1. アダプティブフォームのオーサリングモードで、フォームコンテナオブジェクトを選択し、 ![cmppr1](assets/cmppr1.png) をクリックしてプロパティを開きます。
 1. 「**[!UICONTROL 送信]**」プロパティセクションで、「**[!UICONTROL 非同期送信を使用]**」を有効にします。
 1. 「**[!UICONTROL 送信時]**」セクションで、フォームが正常に送信された場合に実行するオプションを以下のどちらかから選択します。
 
@@ -66,7 +66,7 @@ AEM Forms には、フォーム送信が成功した場合と失敗した場合�
 
 成功ハンドラーは、サーバー応答を読み取り、それに応じて、設定されたページ URL にリダイレクトしたりメッセージを表示したりします。
 
-### 送信エラーイベントに対するサーバー応答  {#server-response-for-submission-error-event}
+### 送信エラーイベントに対するサーバー応答 {#server-response-for-submission-error-event}
 
 送信エラーイベントに対するサーバー応答は、以下のような構造になっています。
 
@@ -96,7 +96,7 @@ AEM Forms には、フォーム送信が成功した場合と失敗した場合�
 
 成功イベントとエラーイベントを処理するためのルールをコードエディターで記述するには、以下の手順を実行します。
 
-1. アダプティブフォームをオーサリングモードで開き、任意のフォームオブジェクトを選択してから、![edit-rules1](assets/edit-rules1.png)をタップして、ルールエディターを開きます。
+1. アダプティブフォームをオーサリングモードで開き、任意のフォームオブジェクトを選択して、をタップします。 ![edit-rules1](assets/edit-rules1.png) をクリックして、ルールエディターを開きます。
 1. フォームオブジェクトツリーで「**[!UICONTROL フォーム]**」選択し、「**[!UICONTROL 作成]**」をタップします。
 1. モード選択ドロップダウンで「**[!UICONTROL コードエディター]**」を選択します。
 1. コードエディターで「**[!UICONTROL コードを編集]**」をタップします。確認ダイアログで「**[!UICONTROL 編集]**」をタップします。

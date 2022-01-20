@@ -1,8 +1,8 @@
 ---
 title: ページ分析データの表示
-seo-title: ページ分析データの表示
+seo-title: Seeing Page Analytics Data
 description: ページ分析データを使用すると、ページコンテンツの効果を測定できます。
-seo-description: ページ分析データを使用すると、ページコンテンツの効果を測定できます。
+seo-description: Use page analytics data to gauge the effectiveness of their page content
 uuid: 8dda89be-13e3-4a13-9a44-0213ca66ed9c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
 exl-id: 6509c0ce-fc3a-4248-8dc7-db10602c30d6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '441'
 ht-degree: 91%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 91%
 
 ページ分析データを使用すると、ページコンテンツの効果を測定できます。
 
-## コンソールに表示できる分析結果  {#analytics-visible-from-the-console}
+## コンソールに表示できる分析結果 {#analytics-visible-from-the-console}
 
 ![aa-10](assets/aa-10.png)
 
@@ -75,17 +75,17 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 
 ### サイトからコンテンツインサイトを開く {#opening-content-insights-from-sites}
 
-ページの効果をさらに調べるには、サイトコンソールから[コンテンツインサイト](/help/sites-authoring/content-insights.md)を開きます。
+開く [コンテンツインサイト](/help/sites-authoring/content-insights.md) サイトコンソールから、ページの効果をさらに調べます。
 
 1. サイトコンソールで、コンテンツインサイトを表示するページを選択します。
 1. ツールバーで、分析と推奨表示アイコンをクリックします。
 
    ![](do-not-localize/chlimage_1-16.png)
 
-## ページエディターに表示できる分析結果（Activity Map）  {#analytics-visible-from-the-page-editor-activity-map}
+## ページエディターに表示できる分析結果（Activity Map） {#analytics-visible-from-the-page-editor-activity-map}
 
 >[!CAUTION]
 >
 >Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。
 >
->Adobe Analytics](https://docs.adobe.com/content/help/ja/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html)が提供する[ActivityMapプラグインを使用する必要があります。
+>この [Adobe Analyticsが提供する ActivityMap プラグイン](https://docs.adobe.com/content/help/ja/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html) 現在はを使用する必要があります。

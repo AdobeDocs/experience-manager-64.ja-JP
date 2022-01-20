@@ -1,8 +1,8 @@
 ---
 title: SharePoint Connector のライセンス、著作権情報および免責事項
-seo-title: SharePoint Connector のライセンス、著作権情報および免責事項
+seo-title: SharePoint Connector Licenses, Copyright Notices, and Disclaimers
 description: SharePoint Connector のライセンス、著作権情報および免責事項について説明します。
-seo-description: SharePoint Connector のライセンス、著作権情報および免責事項について説明します。
+seo-description: Learn about SharePoint Connector Licenses, Copyright Notices and Disclaimers.
 uuid: fba2c8ad-c6f3-484e-87b6-ddc426f7087a
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 487fc170-3750-49a7-af59-f1cc20d5f528
 exl-id: 4cd44f33-1bf9-4ec6-868f-0db60bfc56c0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 75%
+source-wordcount: '362'
+ht-degree: 74%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 75%
 
 この節では、Day JCR Connector for MS SharePoint に関して明示的に記載する必要があるすべてのライセンス、著作権情報および免責事項について説明します。
 
-## Connector のサードパーティのライブラリの概要  {#overview-of-connector-rd-party-libraries}
+## Connector のサードパーティのライブラリの概要 {#overview-of-connector-rd-party-libraries}
 
 以下の表に、SharePoint Connector のコアライブラリ内で使用されるサードパーティのライブラリ、およびそれらに適用されるライセンス、著作権情報または免責事項を示します。
 
@@ -42,7 +42,7 @@ ht-degree: 75%
 | commons-lang | [Apache](#apache) |
 | 同時 | [同時](#concurrent) （パブリックドメイン） |
 | geronimo-activation_1.1_spec | [Apache](#apache) |
-| geronimo-stax-api_1.0_spec | [Apache](#apache) |
+| ジェロニモ —stax-api_1.0_spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
 | jackrabbit-jcr2spi | [Apache](#apache) |
 | jackrabbit-jcr-commons | [Apache](#apache) |
@@ -51,7 +51,7 @@ ht-degree: 75%
 | jaxen | BSD |
 | log4j | [Apache](#apache) |
 | lucene-core | [Apache](#apache) |
-| nethi | [Apache](#apache) |
+| 新着 | [Apache](#apache) |
 | slf4j-api | [SLF4J.ORG](#slf-j-org) |
 | slf4j-jdk14 | [SLF4J.ORG](#slf-j-org) |
 | stax-api | [Apache](#apache) |
@@ -59,7 +59,7 @@ ht-degree: 75%
 | wstx-asl | [Apache](#apache) |
 | xalan | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-apis | [Apache](#apache) （パブリックドメインおよびW3Cソフトウェアライセンスの対象となる部分を含む） |
+| xml-apis | [Apache](#apache) （パブリックドメインおよび W3C ソフトウェアライセンスの対象となる部分が含まれます） |
 | XmlSchema | [Apache](#apache) |
 
 ## CRX のサードパーティのライブラリの概要 {#overview-of-crx-rd-party-libraries}
@@ -437,7 +437,7 @@ ht-degree: 75%
      <a href="https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf" TARGET="_blank" >https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf</a>
 ```
 
-## Day JCR  {#day-jcr}
+## Day JCR {#day-jcr}
 
 ```xml
      Day Management AG ("Licensor") is willing to license this 
@@ -743,7 +743,7 @@ ht-degree: 75%
      2000-05-05
 ```
 
-## SLF4J.ORG  {#slf-j-org}
+## SLF4J.ORG {#slf-j-org}
 
 ```xml
      Copyright (c) 2004-2007 QOS.ch

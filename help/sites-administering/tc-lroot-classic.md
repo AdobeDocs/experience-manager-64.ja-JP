@@ -1,19 +1,19 @@
 ---
 title: クラシック UI による言語ルートの作成
-seo-title: クラシック UI による言語ルートの作成
+seo-title: Creating a Language Root Using the Classic UI
 description: クラシック UI を使用して言語ルートを作成する方法について説明します。
-seo-description: クラシック UI を使用して言語ルートを作成する方法について説明します。
+seo-description: Learn how to create a language root using the Classic UI.
 uuid: d44a51a0-1507-4838-851c-cacff48ad825
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 237b8cc6-158e-4c51-970d-4c9cc74f6496
-feature: 言語コピー
+feature: Language Copy
 exl-id: 316903a8-22cf-45e6-a9f3-ac1d75beddec
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '316'
 ht-degree: 91%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 91%
 1. サイトの言語バージョンを表す新しい子ページを追加します。
 
    1. 新規／新しいページをクリックします。
-   1. ダイアログで、「タイトル」と「名前」を指定します。名前の形式は`<language-code>`または`<language-code>_<country-code>`にする必要があります（例：en、en_US、en_us、en_GB、en_gb）。
+   1. ダイアログで、「タイトル」と「名前」を指定します。名前は、 `<language-code>` または `<language-code>_<country-code>`例えば、en、en_US、en_us、en_GB、en_gb などです。
 
       * サポートされている言語コードは、ISO-639-1 で定義されている小文字 2 文字のコードです。
       * サポートされている国コードは、ISO 3166 で定義されている小文字または大文字 2 文字のコードです。

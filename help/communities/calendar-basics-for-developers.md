@@ -1,8 +1,8 @@
 ---
 title: カレンダーの基本事項
-seo-title: カレンダーの基本事項
+seo-title: Calendar Essentials
 description: カレンダー機能の概要
-seo-description: カレンダー機能の概要
+seo-description: Calendar feature overview
 uuid: 14ff7a83-b2a7-4f7e-8ee7-88f336329a1a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: 88932a3c-ba7f-47ba-9e0b-206755c2d42e
 exl-id: cdf5e5d3-a78c-4f32-ad40-665876392a97
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 65%
+source-wordcount: '216'
+ht-degree: 66%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 65%
 
 このページでは、カレンダー機能の操作に関する基本情報をまとめています。
 
-## クライアント側の基本事項  {#essentials-for-client-side}
+## クライアント側の基本事項 {#essentials-for-client-side}
 
 <table> 
  <tbody>
@@ -65,9 +65,9 @@ ht-degree: 65%
 
 ### カレンダー機能 {#calendar-function}
 
-[カレンダー機能](functions.md#calendar-function)を含むコミュニティサイト構造には、c `alendar`コンポーネントが設定されます。 カレンダー機能は、[権限を持つメンバー・ユーザー・グループ](users.md#privileged-members-group)の識別をサポートします。
+を含むコミュニティサイト構造 [カレンダー関数](functions.md#calendar-function) が設定されます。 `alendar`コンポーネント。 カレンダー関数は、 [権限を持つメンバーユーザーグループ](users.md#privileged-members-group).
 
-### カレンダー投稿(UGC)へのアクセス{#accessing-calendar-posts-ugc}
+### カレンダー投稿（UGC）へのアクセス {#accessing-calendar-posts-ugc}
 
 AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)を使用する際に、選択されたストレージオプション（ASRP、MSRP、JSRP など）に関係なく、プログラムによって UGC にアクセスする必要があります。
 
@@ -76,6 +76,6 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティメソッドと例
-* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
+* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例
+* [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングガイドライン
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係

@@ -1,8 +1,8 @@
 ---
 title: フォームと関連リソースの削除
-seo-title: フォームと関連リソースの削除
+seo-title: Deleting forms and related resources
 description: AEM Forms でのフォームまたはアセットの削除方法と、参照先および参照元アセットと XFA フォームに対する影響。
-seo-description: AEM Forms でのフォームまたはアセットの削除方法と、参照先および参照元アセットと XFA フォームに対する影響。
+seo-description: How to delete a form or an asset in AEM Forms and the impact on referenced and referring assets and XFA forms.
 uuid: df522b87-59d8-4678-922d-c9aab82b1381
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -12,8 +12,8 @@ role: Admin
 exl-id: 94a66d83-b359-4be6-b668-4b4ba024b1e7
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 94%
+source-wordcount: '371'
+ht-degree: 93%
 
 ---
 
@@ -25,8 +25,8 @@ ht-degree: 94%
 
 ## フォームの削除方法 {#how-to-delete-a-form}
 
-1. `https://[hostname]:[portport]/aem/forms.html.`にアクセスしてAEM Formsユーザーインターフェイスにログインします。
-1. 削除するフォームを探して選択します。ツールバーの「 ![aem6forms_delete2](assets/aem6forms_delete2.png)を削除」をクリックして、削除操作を確定します。
+1. にアクセスしてAEM Formsユーザーインターフェイスにログインします。 `https://[hostname]:[portport]/aem/forms.html.`
+1. 削除するフォームを探して選択します。削除をクリックします。 ![aem6forms_delete2](assets/aem6forms_delete2.png) をクリックし、削除操作を確定します。
 
    >[!NOTE]
    >

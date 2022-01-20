@@ -1,8 +1,8 @@
 ---
-title: ページオーサリングのクイックガイド
-seo-title: ページのオーサリングのクイックガイド
+title: ページのオーサリングのクイックガイド
+seo-title: Quick Guide to Authoring Pages
 description: オーサリングページのコンテンツの主なアクションに関する概要レベルのクイックガイドです
-seo-description: オーサリングページのコンテンツの主なアクションに関する概要レベルのクイックガイドです
+seo-description: A quick, high-level guide to the key actions of authoring page content
 uuid: 35442d98-caf9-4cdb-8e68-4fc611e66290
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 163a4887-7c33-4305-8c48-882630f2caa1
 exl-id: c63e44e7-cc89-4fa0-8ba4-460d682df601
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1538'
 ht-degree: 96%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 96%
 
 ここでは、AEM でページコンテンツをオーサリングする際の主なアクションについて、概要レベルのクイックガイドとなる手順を示します。
 
-このクイックガイドの特徴は次のとおりです。
+開発者は、次の作業を行います。
 
 * すべての内容を網羅しているわけではありません。
 * 詳細を示すドキュメントへのリンクが用意されています。
@@ -35,7 +35,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 具体的な事例の概要を取り上げる前に、覚えておく価値のある一般的なヒントを紹介します。特に[クラシック UI のオーサリング環境](/help/sites-classic-ui-authoring/classicui.md)に慣れている場合に有用です。
 
-### サイトコンソール {#sites-console}
+### Sites コンソール {#sites-console}
 
 * **作成**
 
@@ -65,7 +65,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 >オーサリング作業をより簡単にできる多くのキーボードショートカットがあります。
 >
 >* [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
-* [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
+>* [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
 
 
 ## ページの検索 {#finding-your-page}
@@ -89,7 +89,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 1. [新しいページの作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)に必要な情報を収集するためのウィザードが開きます。画面に表示される手順に従ってください。
 
-## その他のアクションを実行するページの選択  {#selecting-your-page-for-further-action}
+## その他のアクションを実行するページの選択 {#selecting-your-page-for-further-action}
 
 アクションを実行するページを選択できます。ページを選択するとツールバーが自動的に更新され、そのリソースに関連するアクションが表示されます。
 
@@ -106,7 +106,8 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
       * ページが選択されていることを示すために、カードにチェックマークが付けられます。
    >[!NOTE]
-   選択モードを開始すると、**選択**&#x200B;アイコン（チェックマーク）が&#x200B;**選択を解除**&#x200B;アイコン（バツマーク）に変わります。
+   >
+   >選択モードを開始すると、**選択**&#x200B;アイコン（チェックマーク）が&#x200B;**選択を解除**&#x200B;アイコン（バツマーク）に変わります。
 
 1. リスト表示：
 
@@ -166,7 +167,8 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
       * タップまたはクリックしてコンポーネントツールバーを開きます。必要に応じて、**コピー**&#x200B;アイコン、続いて&#x200B;**貼り付け**&#x200B;アイコンを使用します。
       >[!NOTE]
-      同じページ、または別のページにコンポーネントを&#x200B;**貼り付ける**&#x200B;ことができます。切り取り／コピー操作を実行する前に開かれていたページに貼り付けるには、そのページを更新する必要があります。
+      >
+      >同じページ、または別のページにコンポーネントを&#x200B;**貼り付ける**&#x200B;ことができます。切り取り／コピー操作を実行する前に開かれていたページに貼り付けるには、そのページを更新する必要があります。
 
    * コンポーネントを[削除します。](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)
 
@@ -183,9 +185,10 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    * 「**編集**」ドロップダウンセレクターを使用して、編集モードに戻ります（またはその他のモードを選択します）。
 
    >[!NOTE]
-   コンテンツのリンクを使用して移動するには、[プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)を使用する必要があります。
+   >
+   >コンテンツのリンクを使用して移動するには、[プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)を使用する必要があります。
 
-## ページプロパティの編集  {#editing-the-page-properties}
+## ページプロパティの編集 {#editing-the-page-properties}
 
 [ページプロパティを編集する](/help/sites-authoring/editing-page-properties.md)には、（主に）以下の 2 つの方法があります。
 
@@ -237,7 +240,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    詳しくは、[ページの公開](/help/sites-authoring/publishing-pages.md#unpublishing-pages)を参照してください。
 
-## ページの移動、コピー、貼り付けまたは削除  {#move-copy-and-paste-or-delete-your-page}
+## ページの移動、コピー、貼り付けまたは削除 {#move-copy-and-paste-or-delete-your-page}
 
 1. 移動、コピー、貼り付けまたは削除をおこなう[ページに移動します。](#finding-your-page)
 1. 必要に応じて、次のいずれかを使用して、コピー（続いて貼り付け）、移動または削除のアイコンを選択します。
@@ -255,7 +258,8 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
       * この操作の確認が求められます。
    >[!NOTE]
-   削除は、クイックアクションでは使用できません。
+   >
+   >削除は、クイックアクションでは使用できません。
 
 ## ページのロック（およびロック解除） {#locking-your-page-then-unlocking}
 
@@ -283,7 +287,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 1. 詳細を表示して適宜その他のアクションを実行するには、必要なタイプの参照をタップまたはクリックします。
 
-## ページのバージョンの作成  {#creating-a-version-of-your-page}
+## ページのバージョンの作成 {#creating-a-version-of-your-page}
 
 1. タイムラインレールを開くには、（**[ページ選択](/help/sites-authoring/basic-handling.md#timeline)**&#x200B;の前または後に）ツールバーアイコンを使用して「[タイムライン](#selecting-your-page-for-further-action)」を選択します。
 

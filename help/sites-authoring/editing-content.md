@@ -1,8 +1,8 @@
 ---
 title: ページのコンテンツの編集
-seo-title: ページのコンテンツの編集
+seo-title: Editing Page Content
 description: ページを作成したら、必要な変更をおこなうためにコンテンツを編集できます
-seo-description: ページを作成したら、必要な変更をおこなうためにコンテンツを編集できます
+seo-description: Once your page is created you can edit the content to make the updates you require
 uuid: e689c979-855d-4e70-9408-7ba7325e113c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,12 +12,12 @@ discoiquuid: 07da66ab-dd5e-4ca8-ac6d-76fc81875fd9
 exl-id: 26d1dea8-c225-4ef3-8429-bab585341c70
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '3064'
-ht-degree: 94%
+source-wordcount: '3045'
+ht-degree: 93%
 
 ---
 
-# ページのコンテンツの編集 {#editing-page-content}
+# ページのコンテンツの編集{#editing-page-content}
 
 ページが作成されたら（新規作成、またはローンチやライブコピーの一部として作成）、コンテンツを編集して、必要な更新をおこなうことができます。
 
@@ -105,9 +105,9 @@ ht-degree: 94%
 
 通知には、ページに対して実行されているワークフローが一覧表示されます。ユーザーが現在のワークフローステップに関係している場合は、[ワークフローのステータスに影響する](/help/sites-authoring/workflows-participating.md)オプションや、ワークフローの詳細を取得するオプションを使用できます。例えば、次のようなものがあります。
 
-* **完了**  — 作業項目を完了ダイアログ **を** 開きます
+* **完了** - **作業項目を完了** ダイアログ
 
-* **委任**  — 作業項目を完了ダイアログ **を** 開きます
+* **委任** - **作業項目を完了** ダイアログ
 
 * **詳細を表示** - ワークフローの&#x200B;**詳細**&#x200B;ウィンドウを開きます
 
@@ -164,7 +164,7 @@ ht-degree: 94%
 
 1. 選択したコンポーネントがページの下部に追加されます。必要に応じてコンポーネントを[編集](#edit-content)します。
 
-### アセットブラウザーを使用したコンポーネントの挿入  {#inserting-a-component-using-the-assets-browser}
+### アセットブラウザーを使用したコンポーネントの挿入 {#inserting-a-component-using-the-assets-browser}
 
 [アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assets-browser)からアセットをドラッグして、ページに新しいコンポーネントを追加することもできます。この操作により、適切なタイプの新しいコンポーネント（アセットが格納される）が自動的に作成されます。
 
@@ -303,14 +303,14 @@ ht-degree: 94%
 
    ![](do-not-localize/screen_shot_2018-03-22at113033.png)
 
-## 編集（コンテンツ）{#edit-content}
+## 編集（コンテンツ） {#edit-content}
 
 コンポーネント内のコンテンツを追加または編集するには、次の 2 つの方法があります。
 
 * [編集用のコンポーネントのダイアログ](#component-edit-dialog)を開きます。
 * アセットブラウザーから[アセットをドラッグ＆ドロップ](#inserting-a-component-using-the-assets-browser)して、コンテンツを直接追加します。
 
-### コンポーネントの編集ダイアログ  {#component-edit-dialog}
+### コンポーネントの編集ダイアログ {#component-edit-dialog}
 
 [コンポーネントツールバーの編集（鉛筆）アイコン](#edit-configure-copy-cut-delete-paste)を使用して、コンポーネントを開いてコンテンツを編集できます。
 
@@ -353,7 +353,7 @@ ht-degree: 94%
 | ビデオ | Flash |
 | コンテンツフラグメント | コンテンツフラグメント |
 
-## フルスクリーンモードで（コンテンツを）編集  {#edit-content-full-screen-mode}
+## フルスクリーンモードで（コンテンツを）編集 {#edit-content-full-screen-mode}
 
 次のアイコンを使用して、すべてのコンポーネントで全画面表示モードにアクセス（または終了）できます。
 
@@ -410,7 +410,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->レイアウトアクションは、選択したコンポーネントの範囲に限定されます。例えば、あるコンポーネントのレイアウトを編集し、別のコンポーネントをクリックすると、新しく選択したコンポーネントの標準の編集ツールバー（レイアウトツールバーではなく）が表示され、エミュレーターツールバーも表示されなくなります。
+>レイアウトアクションは、選択したコンポーネントの範囲に限定されます。例えば、あるコンポーネントのレイアウトを編集して別のコンポーネントをクリックすると、新しく選択したコンポーネントの標準の編集ツールバー（レイアウトツールバーではなく）と再調整ハンドルが表示され、エミュレーターツールバーが表示されなくなります。
 >
 >複数のコンポーネントに影響するページの全体のレイアウトを編集する必要がある場合は、[レイアウトモード](/help/sites-authoring/responsive-layout.md)に切り替えます。
 
@@ -452,7 +452,7 @@ ht-degree: 94%
 
 ページが[編集可能なテンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)に基づいている場合は、[ページ情報メニュー](/help/sites-authoring/author-environment-tools.md#page-information)の&#x200B;**編集テンプレート**&#x200B;を選択することによって、[テンプレートエディター](/help/sites-authoring/templates.md#editing-templates-template-authors)に簡単に切り替えることができます。
 
-ページが[静的テンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)に基づいている場合は、ツールバーの[ページモードセレクター](/help/sites-authoring/author-environment-tools.md#page-modes)を使用して[デザインモード](/help/sites-authoring/default-components-designmode.md)に切り替え、ページで使用するコンポーネントを有効/無効にできます。
+ページが [静的テンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)を使用する場合、 [デザインモード](/help/sites-authoring/default-components-designmode.md) の使用 [ページモードセレクター](/help/sites-authoring/author-environment-tools.md#page-modes) をクリックして、ページで使用するコンポーネントを有効または無効にします。
 
 [列表示](/help/sites-authoring/basic-handling.md#column-view)または[リスト表示](/help/sites-authoring/basic-handling.md#list-view)でページを選択するときに、ページが基にしているテンプレートを簡単に確認できます。
 
@@ -471,7 +471,7 @@ ht-degree: 94%
 
 [注釈](/help/sites-authoring/annotations.md)を使用すると、レビュー担当者や他の作成者がコンテンツに関するフィードバックを提供できます。注釈は、レビューや検証の目的でよく使用されます。
 
-## ページのプレビュー  {#previewing-pages}
+## ページのプレビュー {#previewing-pages}
 
 ページをプレビューするには、以下の 2 つの方法があります。
 
@@ -486,7 +486,6 @@ ht-degree: 94%
 >* プレビューと最後に選択したモードを切り替えるには、[キーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md) `Ctrl-Shift-M` を使用します。
 
 >
-
 
 
 >[!NOTE]
@@ -559,9 +558,9 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
 
 >[!NOTE]
 >
->[キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) `Ctrl-Z`を使用して、ページの編集操作を元に戻すこともできます。
+>この [キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) `Ctrl-Z` は、ページの編集操作を元に戻す場合にも使用できます。
 >
->キーボードショートカット`Ctrl-Y`を使用して、ページの編集操作をやり直すこともできます。
+>キーボードショートカット `Ctrl-Y` また、ページの編集アクションをやり直すこともできます。
 
 >[!NOTE]
 >
@@ -588,7 +587,6 @@ AEM では、ユーザーが実行するアクションの履歴と、それら�
 >* 様々な[キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)を利用して取り消しとやり直しをおこなうこともできます。
 
 >
-
 
 
 取り消しおよびやり直しは、次のようなページの変更に対して使用できます。

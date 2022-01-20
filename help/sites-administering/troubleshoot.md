@@ -1,8 +1,8 @@
 ---
 title: AEM のトラブルシューティング
-seo-title: AEM のトラブルシューティング
+seo-title: Troubleshooting AEM
 description: AEM に関する問題のトラブルシューティングについて説明します。
-seo-description: AEM に関する問題のトラブルシューティングについて説明します。
+seo-description: Learn about troubleshooting issues with AEM.
 uuid: d68e9ead-8aa6-4108-9f1e-85d7cd7a370f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 1bc19f9a-fa3f-43e3-813e-23ab0b708d43
 exl-id: 34b509d5-4e80-4229-b155-40004856e87e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 83%
+source-wordcount: '547'
+ht-degree: 84%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 83%
 >
 >問題が発生した場合は、そのインスタンス（リリースおよびサービスパック）の[既知の問題](/help/release-notes/known-issues.md)の一覧を確認すると役に立ちます。
 
-## 管理者が実行するトラブルシューティングのシナリオ  {#troubleshooting-scenarios-for-administrators}
+## 管理者が実行するトラブルシューティングのシナリオ {#troubleshooting-scenarios-for-administrators}
 
 次の表は、管理者がトラブルシューティングをおこなう必要のある問題の概要を示しています。
 
@@ -62,7 +62,7 @@ ht-degree: 83%
  </tbody> 
 </table>
 
-## インストールの問題  {#installation-issues}
+## インストールの問題 {#installation-issues}
 
 以下のトラブルシューティングのシナリオについては、[一般的なインストールの問題](/help/sites-deploying/troubleshooting.md#common-installation-issues)を参照してください。
 
@@ -70,25 +70,25 @@ ht-degree: 83%
 * CRX で動作しているアプリケーションでメモリ不足のエラーが発生する。
 * AEM Quickstart をダブルクリックした後に、ブラウザーで AEM ようこそ画面が表示されない。
 
-## トラブルシューティング分析の方法  {#methods-for-troubleshooting-analysis}
+## トラブルシューティング分析の方法 {#methods-for-troubleshooting-analysis}
 
 ### スレッドダンプの作成 {#making-a-thread-dump}
 
 スレッドダンプは、現在アクティブなすべての Java スレッドのリストです。AEM が適切に応答しない場合は、デッドロックまたはその他の問題をスレッドダンプで特定できます。
 
-### Sling Thread Dumper の使用  {#using-sling-thread-dumper}
+### Sling Thread Dumper の使用 {#using-sling-thread-dumper}
 
-1. **AEM Webコンソール**&#x200B;を開きます。例えば、`http://localhost:4502/system/console/`に配置します。
+1. を開きます。 **AEM Web コンソール**;例： `http://localhost:4502/system/console/`.
 
-1. 「**ステータス**」タブで「**スレッド**」を選択します。
+1. を選択します。 **スレッド** under **ステータス** タブをクリックします。
 
 ![screen_shot_2012-02-13at43925pm](assets/screen_shot_2012-02-13at43925pm.png)
 
-### jstack（コマンドライン） {#using-jstack-command-line}の使用
+### jstack の使用（コマンドライン） {#using-jstack-command-line}
 
 1. AEM Java インスタンスの PID（プロセス ID）を確認します。
 
-   例えば、`ps -ef`や`jps`を使用できます。
+   例えば、 `ps -ef` または `jps`.
 
 1. 実行:
 
@@ -98,7 +98,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->`>>`出力リダイレクトを使用して、スレッドダンプをログファイルに追加できます。
+>スレッドダンプをログファイルに追加するには、 `>>` 出力リダイレクト：
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
@@ -109,18 +109,18 @@ ht-degree: 83%
 AEM WCM 用の機能を開発する場合は、JCR セッションが開かれる可能性があります（データベース接続を開く処理に相当します）。開かれたセッションが閉じられないと、システムで以下の症状が発生する可能性があります。
 
 * システムの速度が低下する。
-* 多くのCacheManagerが表示されます。resizeAllログファイル内のエントリ；次の数(size=&lt;x>)は、キャッシュの数を示し、各セッションは複数のキャッシュを開きます。
+* CacheManager の多くを確認できます。resize ログファイル内のすべてのエントリ；次の数値 (size=&lt;x>) はキャッシュの数を示し、各セッションは複数のキャッシュを開きます。
 * システムのメモリが不足することがある（重大度に応じて数時間後、数日後、数週間後に発生）。
 
 閉じられていないセッションを分析して、セッションを閉じていないコードを特定するには、ナレッジベースの記事[閉じられていないセッションの分析](https://helpx.adobe.com/crx/kb/AnalyzeUnclosedSessions.html)を参照してください。
 
-### Adobe Experience Manager Web コンソールの使用  {#using-the-adobe-experience-manager-web-console}
+### Adobe Experience Manager Web コンソールの使用 {#using-the-adobe-experience-manager-web-console}
 
 発生する可能性のある問題の初期の兆候を OSGi バンドルのステータスで確認することもできます。
 
-1. **AEM Webコンソール**&#x200B;を開きます。例えば、`http://localhost:4502/system/console/`に配置します。
+1. を開きます。 **AEM Web コンソール**;例： `http://localhost:4502/system/console/`.
 
-1. 「**OSGI**」タブの下の「**Bundles**」を選択します。
+1. 選択 **バンドル** under **OSGI** タブをクリックします。
 
 1. 次の項目を確認します。
 

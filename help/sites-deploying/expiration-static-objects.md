@@ -1,20 +1,20 @@
 ---
 title: 静的オブジェクトの有効期限
-seo-title: 静的オブジェクトの有効期限
+seo-title: Expiration of Static Objects
 description: 静的オブジェクトが（ある程度の期間）期限切れにならないように AEM を設定する方法を学習します。
-seo-description: 静的オブジェクトが（ある程度の期間）期限切れにならないように AEM を設定する方法を学習します。
+seo-description: Learn how to configure AEM so that static objects do not expire (for a reasonable period of time).
 uuid: ee019a3d-4133-4d40-98ec-e0914b751fb3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 73f37b3c-5dbe-4132-bb60-daa8de871884
-feature: 設定
+feature: Configuring
 exl-id: 3551d25c-c852-4f59-84fe-5e62f57ae63f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 89%
+source-wordcount: '414'
+ht-degree: 88%
 
 ---
 
@@ -75,7 +75,7 @@ ht-degree: 89%
    </Location>
    ```
 
-   これにより、中間キャッシュ（ブラウザーキャッシュなど）で、CSS、JavaScript、PNGおよびGIFファイルを最大1日クライアントキャッシュに保存できます。 この例では、`/content`と`/etc/designs`の下にあるすべての項目に対してグローバル設定を示しますが、より詳細に設定する必要があります。
+   これにより、中間キャッシュ（ブラウザーキャッシュなど）で、CSS、JavaScript、PNG およびGIFファイルを、最大 1 日間クライアントキャッシュに保存できます。 この例では、以下のすべての設定についてグローバル設定を示します `/content` および `/etc/designs`を使用する場合は、より詳細にする必要があります。
 
    サイトの更新頻度によっては、HTML ページのキャッシュも検討できます。妥当な期間は 1 時間です。
 

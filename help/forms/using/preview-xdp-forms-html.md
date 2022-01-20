@@ -1,17 +1,17 @@
 ---
 title: XDP フォームの HTML5 プレビューの生成
-seo-title: XDP フォームの HTML5 プレビューの生成
+seo-title: Generate HTML5 preview of an XDP form
 description: LiveCycle Designer の HTML プレビュータブを使用して、フォームがブラウザーで表示される状態をプレビューできます。
-seo-description: LiveCycle Designer の HTML プレビュータブを使用して、フォームがブラウザーで表示される状態をプレビューできます。
+seo-description: Preview HTML tab in LiveCycle Designer can be used to preview forms as they appear in a browser.
 uuid: d004e75d-e569-4e85-8dfa-5c411bc959af
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: author
 discoiquuid: c142d7b3-301b-447c-a715-452c905565d1
-feature: 'モバイルフォーム '
+feature: Mobile Forms
 exl-id: f855d3f9-cf3c-4883-b82b-d607250c3dae
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '795'
 ht-degree: 81%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 81%
 
 AEM Forms Designer でフォームをデザインする間、フォームの PDF レンダリングをプレビューする他に、HTML5 レンダリングをプレビューすることもできます。「**HTML プレビュー**」タブを使用すると、フォームがブラウザでどのように表示されるかをプレビューすることができます。
 
-## Designer での XDP フォームの HTML プレビューの有効化  {#html-preview-of-forms-in-forms-designer}
+## Designer での XDP フォームの HTML プレビューの有効化 {#html-preview-of-forms-in-forms-designer}
 
 Designer での XDP フォームの HTML プレビューの生成を有効にするには、次の設定を行います。
 
@@ -30,9 +30,9 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 ### Apache Sling Authentication Service の設定 {#configure-apache-sling-authentication-service}
 
-1. OSGi上で実行されているAEM Formsの`https://[server]:[port]/system/console/configMgr`に移動するか、
+1. に移動します。 `https://[server]:[port]/system/console/configMgr` OSGi または
 
-   `https://[server]:[port]/lc/system/console/configMgr` (JEE上で動作するAEM Forms)
+   `https://[server]:[port]/lc/system/console/configMgr` (JEE 上で動作するAEM Forms)
 
 1. **Apache Sling Authentication Service** 設定を探してクリックし、編集モードで開きます。 
 
@@ -56,24 +56,24 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 ### 保護モードの無効化 {#disable-protected-mode}
 
-[保護モード](/help/forms/using/get-xdp-pdf-documents-aem.md)は、デフォルトで有効になっています。実稼働環境の場合、このモードを有効のままにしてください。開発環境でこのモードを無効にすると、Designer で HTML5 フォームのプレビューを表示することができます。次の手順を実行して無効にします。
+[保護モード](/help/forms/using/get-xdp-pdf-documents-aem.md)は、デフォルトで有効になっています。実稼働環境の場合、このモードを有効のままにしてください。開発環境でこのモードを無効にすると、Designer で HTML5 フォームのプレビューを表示することができます。無効にするには、次の手順を実行します。
 
 1. 管理者として AEM Web コンソールにログインします。
 
-   * OSGi上のAEM FormsのURLは`https://[server]:[port]/system/console/configMgr`
-   * JEE上のAEM FormsのURLは`https://[server]:[port]/lc/system/console/configMgr`です
+   * OSGi 上のAEM Formsの URL が `https://[server]:[port]/system/console/configMgr`
+   * JEE 上のAEM Formsの URL は `https://[server]:[port]/lc/system/console/configMgr`
 
 1. **[!UICONTROL Mobile Forms の設定]**&#x200B;を編集用に開きます。
 1. 「**[!UICONTROL 保護モード]**」オプションの選択を解除して「**[!UICONTROL 保存]**」をクリックします。
 
-### AEM Forms サーバーの詳細の指定  {#provide-details-of-aem-forms-server}
+### AEM Forms サーバーの詳細の指定 {#provide-details-of-aem-forms-server}
 
 1. Designer で、**ツール**／**オプション**&#x200B;に移動します。
-1. 「オプション」ウィンドウで「**サーバーオプション**」ページを選択し、次の詳細を入力して「**OK**」をクリックします。
+1. 「オプション」ウィンドウで、「 **サーバーオプション** ページで、以下の詳細を入力し、 **OK**.
 
    * **Server URL**：AEM Forms サーバーの URL です。
    * **HTTP port number**：AEM サーバーポート。デフォルト値は 4502 です。
-   * **HTMLプレビューのコンテキスト：** XFAフォームのレンダリング用のプロファイルのパス。次のデフォルトのプロファイルを使用して、Designerでフォームをプレビューします。 ただし、カスタムプロファイルへのパスを指定することもできます。
+   * **HTMLプレビューのコンテキスト：** XFA フォームのレンダリング用のプロファイルのパス。 次のデフォルトのプロファイルを使用して、Designer でフォームをプレビューします。 ただし、カスタムプロファイルへのパスを指定することもできます。
 
       * `/content/xfaforms/profiles/default.html` (OSGi 上の AEM Forms)
       * `/lc/content/xfaforms/profiles/default.html` (JEE 上の AEM Forms)
@@ -82,13 +82,13 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
       * `/aem/forms` (OSGi 上の AEM Forms)
       * `/lc/forms` (JEE 上の AEM Forms)
 
-   **注：***サーバーが起動および実行されていることを確認してください。HTMLプレビューは、CRXサーバーに接続し、プレビューを*&#x200B;生成&#x200B;*します。*
+   **注：***サーバーが起動および実行されていることを確認してください。HTMLプレビューは、CRX サーバーに接続し、*&#x200B;生成&#x200B;*プレビュー。*
 
    ![AEM Forms Designer のオプション ](assets/server_options.png)
 
    AEM Forms Designer のオプション
 
-1. HTMLでフォームをプレビューするには、「**HTMLのプレビュー**」タブをクリックします。
+1. フォームをHTMLでプレビューするには、 **プレビューHTML** タブをクリックします。
 
    >[!NOTE]
    >

@@ -1,8 +1,8 @@
 ---
 title: Marketing Campaign Manager の使用
-seo-title: Marketing Campaign Manager の使用
+seo-title: Working with the Marketing Campaign Manager
 description: Marketing Campaign Manager（MCM）は、マルチチャネルのキャンペーンを管理できるコンソールです。このマーケティング自動化ソフトウェアを使用して、ブランド、キャンペーンおよびエクスペリエンスと、関連するセグメント、リスト、リードおよびレポートをすべて管理できます。
-seo-description: Marketing Campaign Manager（MCM）は、マルチチャネルのキャンペーンを管理できるコンソールです。このマーケティング自動化ソフトウェアを使用して、ブランド、キャンペーンおよびエクスペリエンスと、関連するセグメント、リスト、リードおよびレポートをすべて管理できます。
+seo-description: The Marketing Campaign Manager (MCM) is a console that helps you manage multi-channel campaigns. With this marketing automation software you can manage all your brands, campaigns and experiences together with the related segments, lists, leads, and reports.
 uuid: 3df6c0b8-dc0a-4a02-a38c-8250fb829404
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,8 +12,8 @@ discoiquuid: 1445437e-7f22-49ad-9bde-f3c0ff7d5142
 exl-id: 63bf891c-572a-40e0-945f-d20a0a029224
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 95%
+source-wordcount: '1175'
+ht-degree: 94%
 
 ---
 
@@ -48,13 +48,13 @@ MCM から、以下にアクセスできます。
       特定のセグメントを選択すると、セグメント定義ページが開きます。
 
    * [レポート](/help/sites-administering/reporting.md)\
-      AEMは、インスタンスの状態を分析および監視するのに役立つ様々なレポートを提供します。 この MCM ウィンドウにはレポートが一覧表示されます。
+      AEMには、インスタンスの状態を分析および監視するのに役立つ様々なレポートが用意されています。 この MCM ウィンドウにはレポートが一覧表示されます。
 
       レポートを選択すると、レポートページが開きます。
 
    * [キャンペーン](#campaigns)
 
-      このウィンドウには、[ニュースレター](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)や[ティーザー](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)など、キャンペーンのエクスペリエンスが一覧表示されます。
+      このウィンドウには、次のようなキャンペーンエクスペリエンスが表示されます。 [newsletters](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters) および [ティーザー](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers).
 
 * **[リード数](#leads)**
 
@@ -135,7 +135,7 @@ AEM MCM では、リードの構成および追加ができます。これをお
 
    これらのアイコンをダブルクリックして、ブランドの概要を表示できます。
 
-#### ブランドの概要  {#brand-overview}
+#### ブランドの概要 {#brand-overview}
 
 ![mcm_brandoverview](assets/mcm_brandoverview.png)
 
@@ -153,7 +153,7 @@ AEM MCM では、リードの構成および追加ができます。これをお
 
 * キャンペーンの概要を表示します（右側のウィンドウでキャンペーンをダブルクリックするか、左側のウィンドウでシングルクリックします）。
 
-#### キャンペーンの概要  {#campaign-overview}
+#### キャンペーンの概要 {#campaign-overview}
 
 個々のキャンペーンで、次の 2 つの表示を使用できます。
 
@@ -185,7 +185,7 @@ AEM MCM では、リードの構成および追加ができます。これをお
 
    ここから次の操作ができます。
 
-   * **新規作成…**&#x200B;エクスペリエンス；例えば、Adobe Targetオファー、ティーザー、ニュースレターなどです。
+   * の作成 **新規…** 経験例えば、Adobe Targetオファー、ティーザー、ニュースレターなどです。
    * 「**編集**」を使用して、特定のティーザーページまたはニュースレターの詳細を編集します（ダブルクリックも使用できます）。
    * 「**プロパティ...**」を使用して、特定のティーザーページまたはニュースレターのプロパティを定義します。
    * 「**シミュレート**」を使用して、エクスペリエンス（Teaser ページやニュースレター）の外観と操作性をシミュレートします。
@@ -197,7 +197,7 @@ AEM MCM では、リードの構成および追加ができます。これをお
    * 「**検索**」を使用して、テキストを検索します（エクスペリエンスのタイトルフィールドが検索されます）。
    * 「**詳細**」検索を使用して、検索結果にフィルターを適用します。
 
-### キャンペーンエクスペリエンスのシミュレート  {#simulating-your-campaign-experiences}
+### キャンペーンエクスペリエンスのシミュレート {#simulating-your-campaign-experiences}
 
 MCM で「**キャンペーン**」をクリックします。リスト表示がアクティブであることを確認し、必要なキャンペーンエクスペリエンスを選択して、「**シミュレート**」をクリックします。タッチポイント（ティーザーまたはニュースレターのページ）が開き、選択したエクスペリエンスが訪問者に表示されるとおりに表示されます。
 
@@ -205,7 +205,7 @@ MCM で「**キャンペーン**」をクリックします。リスト表示が
 
 ここからサイドキックを開き（小さい下向き矢印をクリック）、編集モードに変更してページを更新することもできます。
 
-### キャンペーンエクスペリエンスの分析  {#analyzing-your-campaign-experiences}
+### キャンペーンエクスペリエンスの分析 {#analyzing-your-campaign-experiences}
 
 MCM で「**キャンペーン**」をクリックします。リスト表示がアクティブであることを確認し、必要なキャンペーンエクスペリエンスを選択して、「**分析...**」を選択します。期間中のページの訪問数のグラフが表示されます。
 

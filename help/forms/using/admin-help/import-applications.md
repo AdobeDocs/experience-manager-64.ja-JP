@@ -1,8 +1,8 @@
 ---
 title: アプリケーションの読み込みと管理
-seo-title: アプリケーションの読み込みと管理
+seo-title: Import and manage applications
 description: アプリケーションの読み込みと管理の方法について説明します。
-seo-description: アプリケーションの読み込みと管理の方法について説明します。
+seo-description: Learn how to import and manage applications.
 uuid: 7fba6c4e-1a3e-4a4b-9201-acf2ff66a9df
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: dc53a6d0-317a-4abd-990c-455e13f8b824
 exl-id: 81a48c01-8052-47b1-be39-e126c37c7f0f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '820'
 ht-degree: 98%
 
 ---
@@ -36,7 +36,7 @@ Workbench で作成したアプリケーションの読み込みと管理を行�
 * エンドポイント構成設定
 * セキュリティプロファイル
 
-## アプリケーションまたはアーカイブの読み込み  {#import-an-application-or-archive}
+## アプリケーションまたはアーカイブの読み込み {#import-an-application-or-archive}
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／アプリケーションの管理をクリックします。
 1. 「読み込み」をクリックします。
@@ -57,7 +57,7 @@ Workbench で作成したアプリケーションの読み込みと管理を行�
 
    **syncState** プロパティは AEM Forms サーバーと CRX リポジトリ間のデータ同期の状態を示します。インポートプロセスが始まるとすぐに、この状態は 0 (ゼロ) に設定されます。この状態はデータが現在同期されていないことを示します。データが同期されると、状態は 1 に設定されます。
 
-## アプリケーションのデプロイ  {#deploy-an-application}
+## アプリケーションのデプロイ {#deploy-an-application}
 
 読み込んだアプリケーション（Workbench ユーザーが Workbench から読み込んだアプリケーション）をデプロイすることができます。
 
@@ -65,7 +65,7 @@ Workbench で作成したアプリケーションの読み込みと管理を行�
 1. デプロイするアプリケーションの横にあるチェックボックスを選択し、「デプロイ」をクリックします。
 1. 表示される確認ダイアログボックスで「OK」をクリックします。
 
-## アプリケーションのデプロイ解除  {#undeploy-an-application}
+## アプリケーションのデプロイ解除 {#undeploy-an-application}
 
 ランタイムからアプリケーションのデプロイを解除できます。
 
@@ -73,7 +73,7 @@ Workbench で作成したアプリケーションの読み込みと管理を行�
 1. デプロイを解除するアプリケーションの横にあるチェックボックスを選択し、「デプロイ解除」をクリックします。
 1. 表示される確認ダイアログボックスで「OK」をクリックします。
 
-## サーバーからのアプリケーションの削除  {#remove-an-application-from-the-server}
+## サーバーからのアプリケーションの削除 {#remove-an-application-from-the-server}
 
 アプリケーションをサーバーから削除する前に、アプリケーションのデプロイを解除します。
 
@@ -81,7 +81,7 @@ Workbench で作成したアプリケーションの読み込みと管理を行�
 1. 削除するアプリケーションの横にあるチェックボックスを選択し、「削除」をクリックします。
 1. 表示される確認ダイアログボックスで「OK」をクリックします。
 
-## アプリケーションのランタイム設定の読み込み  {#import-an-application-s-runtime-configuration}
+## アプリケーションのランタイム設定の読み込み {#import-an-application-s-runtime-configuration}
 
 アプリケーション管理者がアプリケーションのランタイム設定を書き出したら、ユーザーはデプロイ済みのアプリケーションにそのランタイム設定を読み込むことができます。この読み込みは、管理コンソールを使用するか、またはスクリプト化された LCA のデプロイメントを介して行うことができます。
 
@@ -91,7 +91,7 @@ Workbench で作成したアプリケーションの読み込みと管理を行�
 1. 「参照」をクリックし、ランタイム設定を含む XML ファイルを選択します。
 1. 「読み込み」をクリックします。
 
-## アプリケーションのランタイム設定の書き出し  {#export-an-application-s-runtime-configuration}
+## アプリケーションのランタイム設定の書き出し {#export-an-application-s-runtime-configuration}
 
 デプロイ済みのアプリケーション用にランタイム設定情報を書き出すことができます。
 
@@ -99,7 +99,7 @@ Workbench で作成したアプリケーションの読み込みと管理を行�
 1. アプリケーションの名前をクリックします。
 1. 「ランタイム用の設定を書き出し」をクリックし、生成される設定ファイル（XML）を保存します。
 
-## AEM Forms アプリケーションのスクリプト化されたデプロイメント  {#scripted-deployment-of-aem-forms-applications}
+## AEM Forms アプリケーションのスクリプト化されたデプロイメント {#scripted-deployment-of-aem-forms-applications}
 
 スクリプト化されたデプロイメントツールを使用して、次の設定を指定する settings.xml ファイルなどのアプリケーションファイルをデプロイすることもできます。
 
@@ -110,7 +110,7 @@ Workbench で作成したアプリケーションの読み込みと管理を行�
 
 スクリプト化されたデプロイメントにより、デプロイしたアプリケーションを起動する前に、実稼働環境において手動で再設定する必要がなくなります。
 
-1. コマンドプロンプトで、*[aem-forms root]*/sdk/misc/Foundation/ArchiveManagementに移動します。
+1. コマンドプロンプトで、に移動します。 *[aem-forms ルート]*/sdk/misc/Foundation/ArchiveManagement
 1. ReadMe.txt ファイルで詳細な手順を確認します。
 1. readme.txt ファイルの説明に従い、scriptedDeploy.bat および sample-files/sample.xml ファイルを手動で変更します。
 1. scriptedDeploy.bat ファイルを実行します。この操作により、AEM Forms アーカイブファイルが、変更後の設定でデプロイされます。

@@ -1,8 +1,8 @@
 ---
 title: ローンチの編集
-seo-title: ローンチの編集
+seo-title: Editing Launches
 description: 'ページ（またはページのセット）にローンチを作成したら、ページのローンチコピーのコンテンツを編集できます。 '
-seo-description: 'ページ（またはページのセット）にローンチを作成したら、ページのローンチコピーのコンテンツを編集できます。 '
+seo-description: After creating a launch for your page (or set of pages) you can edit the content in the launch copy of the page(s).
 uuid: 851bcbbe-1dff-457f-a3bc-468ace9b4ac4
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 9f208b13-08eb-4305-b712-379e9b9b041e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '489'
 ht-degree: 100%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 100%
    >
    >ローンチにページを追加するには、ページが共通の言語ルートの下（単一のサイト内）にある必要があります。
 
-## ローンチの設定の編集  {#editing-a-launch-configuration}
+## ローンチの設定の編集 {#editing-a-launch-configuration}
 
 ローンチのプロパティは、任意のタイミングで編集できます。
 
@@ -95,9 +95,9 @@ ht-degree: 100%
 
 1. 必要な変更を加え、「**保存**」で確定します。
 
-   「**ローンチ日**」フィールドと「**実稼動準備完了**」フィールドの目的とインタラクションについて詳しくは、[ローンチ - イベントの順序](/help/sites-authoring/launches.md#launches-the-order-of-events)を参照してください。
+   「**ローンチ日**」フィールドと「**実稼働準備完了**」フィールドの目的とインタラクションについて詳しくは、[ローンチ - イベントの順序](/help/sites-authoring/launches.md#launches-the-order-of-events)を参照してください。
 
-## ページのローンチステータスの確認  {#discovering-the-launch-status-of-a-page}
+## ページのローンチステータスの確認 {#discovering-the-launch-status-of-a-page}
 
 「参照」タブから特定のローンチを選択すると、ステータスが表示されます（[「参照」のローンチ（Sites コンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)を参照）。
 

@@ -1,8 +1,8 @@
 ---
 title: ターゲットコンテンツ用マルチサイト管理の構造
-seo-title: ターゲットコンテンツ用マルチサイト管理の構造
+seo-title: How Multisite Management for Targeted Content is Structured
 description: 図は、ターゲットコンテンツ用マルチサイトサポートの構造を示しています。
-seo-description: 図は、ターゲットコンテンツ用マルチサイトサポートの構造を示しています。
+seo-description: A diagram shows how multisite support for targeted content is structured
 uuid: 2d30cdf0-ab77-490d-aac0-db3a0d417a58
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 7dd851ab-3fa7-426e-89cb-08b67e9b5999
 exl-id: 28c45577-e5cd-4706-b5b2-227279126ad9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '177'
 ht-degree: 100%
 
 ---

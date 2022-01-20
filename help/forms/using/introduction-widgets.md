@@ -1,8 +1,8 @@
 ---
 title: アダプティブフォームおよび HTML5 フォームの外観フレームワーク
-seo-title: アダプティブフォームおよび HTML5 フォームの外観フレームワーク
+seo-title: Appearance framework for adaptive and HTML5 forms
 description: 'Mobile Forms はフォームテンプレートを HTML5 フォームとしてレンダリングします。これらのフォームは jQuery、Backbone.js および Underscore.js ファイルを外観、およびスクリプティングの有効化のために使用します。 '
-seo-description: 'Mobile Forms はフォームテンプレートを HTML5 フォームとしてレンダリングします。これらのフォームは jQuery、Backbone.js および Underscore.js ファイルを外観、およびスクリプティングの有効化のために使用します。 '
+seo-description: Mobile Forms render Form Templates as HTML5 forms. These forms use jQuery, Backbone.js and Underscore.js files for the appearance and to enable scripting.
 uuid: 183b8d71-44fc-47bf-8cb2-1cf920ffd23a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,12 +11,12 @@ discoiquuid: 3c2a44a7-24e7-49ee-bf18-eab0e44efa42
 exl-id: 272d3ec1-7f92-4f4a-9e98-954136b20b27
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1200'
-ht-degree: 88%
+source-wordcount: '1170'
+ht-degree: 87%
 
 ---
 
-# アダプティブフォームおよび HTML5 フォームの外観フレームワーク  {#appearance-framework-for-adaptive-and-html-forms}
+# アダプティブフォームおよび HTML5 フォームの外観フレームワーク {#appearance-framework-for-adaptive-and-html-forms}
 
 フォーム（アダプティブフォームと HTML5 フォーム）は、[jQuery](https://jquery.com/)、[Backbone.js](https://backbonejs.org/)および[Underscore.js](https://underscorejs.org/)ライブラリを外観とスクリプト作成のために使用します。このフォームはまた、フォーム内のすべての対話操作要素（例えばフィールドやボタン）に対して [jQuery UI](https://jqueryui.com/) **Widgets**&#x200B;アーキテクチャを使用します。このアーキテクチャはフォーム開発者が、フォームで豊富な使用可能な jQuery ウィジェットとプラグインのセットを利用できるようにします。また、ユーザーから leadDigits/trailDigits の制限やパターン形式文字列の実装などのデータを取得しながら、フォーム固有のロジックを実装することもできます。フォーム開発者はカスタム外観を作成して使用し、データ取得の体験を改善し、よりユーザーフレンドリーにすることができます。
 
@@ -28,7 +28,7 @@ ht-degree: 88%
 * 外観はコントラクトの一部として、enter や exit などの一連の インベントのセットをトリガーします。
 * 一連の関数を実装するには、外観が必要となります。その関数には一般的なものから、フィールドタイプ固有のものも含まれています。
 
-## 一般的なオプション  {#common-options}
+## 一般的なオプション {#common-options}
 
 次にあるのはグローバルオプションのセットです。これらのオプションはすべてのフィールドで使用できます。
 
@@ -52,11 +52,11 @@ ht-degree: 88%
   </tr>
   <tr>
    <td>screenReaderText</td> 
-   <td>スクリーンリーダーはこの値を使用して、フィールドについての情報を読み上げます。フォームが値を提供し、値を上書きできます。<br /> </td> 
+   <td>スクリーンリーダーはこの値を使用して、フィールドについての情報を読み上げます。フォームが値を提供し、その値を上書きできます。<br /> </td> 
   </tr>
   <tr>
    <td>tabIndex</td> 
-   <td>フォームのタブシーケンスにおけるフィールドの位置フォームのデフォルトのタブ順序を変更する場合にのみ、tabIndexを上書きします。</td> 
+   <td>フォームのタブシーケンスにおけるフィールドの位置フォームのデフォルトのタブ順序を変更する場合にのみ、tabIndex を上書きします。</td> 
   </tr>
   <tr>
    <td>role</td> 
@@ -87,11 +87,11 @@ ht-degree: 88%
 
 これらのオプションとは別に、フィールドのタイプによって異なるいくつかの他のオプションがフレームワークによって提供されます。フィールド固有のオプションの詳細は、以下に記載されています。
 
-### フォームのフレームワークとのインタラクション  {#interaction-with-forms-framework}
+### フォームのフレームワークとのインタラクション {#interaction-with-forms-framework}
 
 Forms のフレームワークとやりとりするために、ウィジェットはいくつかのイベントをトリガーし、フォームスクリプトが機能するように有効化します。ウィジェットがこれらのイベントをスローしない場合、そのフィールドのためにフォーム内に書かれたスクリプトの一部が機能していません。
 
-#### ウィジェットによってトリガーされるイベント  {#events-triggered-by-widget}
+#### ウィジェットによってトリガーされるイベント {#events-triggered-by-widget}
 
 <table> 
  <tbody>
@@ -120,7 +120,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 
 #### ウィジェットで実装された API {#apis-implemented-by-widget}
 
-外観フレームワークはカスタムウィジェットで実装されたウィジェットの関数をいくつか呼び出します。ウィジェットは、次の関数を実装する必要があります。
+外観フレームワークはカスタムウィジェットで実装されたウィジェットの関数をいくつか呼び出します。ウィジェットは次の関数を実装する必要があります。
 
 <table> 
  <tbody>
@@ -134,10 +134,10 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
   </tr>
   <tr>
    <td>click : function()</td> 
-   <td>フィールドにフォーカスを置き、XFA_CLICK_EVENTを呼び出します。</td> 
+   <td>フィールドにフォーカスを置き、XFA_CLICK_EVENT を呼び出します。</td> 
   </tr>
   <tr>
-   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage:エラー<br /> <em>errorTypeを表す文字列</em>:string ("warning"/"error")</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td> 
+   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage:文字列 </em>エラーを表す<br /> <em>errorType:文字列 ("warning"/"error")</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td> 
    <td>エラーメッセージとエラータイプをウィジェットに送信します。ウィジェットはエラーを表示します。</td> 
   </tr>
   <tr>
@@ -147,7 +147,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
  </tbody>
 </table>
 
-## フィールドのタイプに固有のオプション  {#options-specific-to-type-of-field}
+## フィールドのタイプに固有のオプション {#options-specific-to-type-of-field}
 
 すべてのカスタムウィジェットは上記の仕様に準拠する必要があります。異なるフィールドの機能を使用するには、ウィジェットがその特定のフィールドのガイドラインに従う必要があります。
 
@@ -174,7 +174,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
  </tbody>
 </table>
 
-### ChoiceList: DropDownList, ListBox  {#choicelist-dropdownlist-listbox}
+### ChoiceList: DropDownList, ListBox {#choicelist-dropdownlist-listbox}
 
 <table> 
  <tbody>
@@ -214,7 +214,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
    <th>説明</th> 
   </tr>
   <tr>
-   <td><p>addItem:<em> function(itemValues)<br /> itemValues:表示値と保存値を含むオブジェクト<br /> {sDisplayVal:&lt;displayValue&gt;, sSaveVal:&lt;値を保存&gt;}</em></p> </td> 
+   <td><p>addItem:<em> function(itemValues)<br /> itemValues:表示と保存の値を含むオブジェクト <br /> {sDisplayVal: &lt;displayvalue&gt;, sSaveVal: &lt;save value=""&gt;}</em></p> </td> 
    <td>リストに項目を追加します。</td> 
   </tr>
   <tr>
@@ -228,7 +228,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
  </tbody>
 </table>
 
-### NumericEdit: NumericField, DecimalField  {#numericedit-numericfield-decimalfield}
+### NumericEdit: NumericField, DecimalField {#numericedit-numericfield-decimalfield}
 
 | オプション | 説明 |
 |---|---|
@@ -238,7 +238,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 | zero | フィールドのロケールでのゼロの文字列表現。 |
 | decimal | フィールドのロケールでの小数点の文字列表現。 |
 
-### CheckButton: RadioButton, CheckBox  {#checkbutton-radiobutton-checkbox}
+### CheckButton: RadioButton, CheckBox {#checkbutton-radiobutton-checkbox}
 
 <table> 
  <tbody>
@@ -247,16 +247,16 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
    <th>説明</th> 
   </tr>
   <tr>
-   <td>values</td> 
+   <td>値</td> 
    <td><p>値の配列（オン／オフ／中間）。</p> <p>これは、checkButton のさまざまなステートのための値の配列です。 values[0] はステートがオンのときの値です。values[1] はステートがオフのときの値です。<br />values[2] はステートが中間のときの値です。 値配列の長さは、state オプションの値と同じです。<br /> </p> </td> 
   </tr>
   <tr>
    <td>states</td> 
-   <td><p>許可される状態の数。 </p> <p>アダプティブフォームの場合は2つ（オン、オフ）、HTML5フォームの場合は3つ（オン、オフ、中間）です。</p> </td> 
+   <td><p>許可される状態の数。 </p> <p>アダプティブフォームの場合は 2 つ（オン、オフ）、HTML5 フォームの場合は 3 つ（オン、オフ、中立）です。</p> </td> 
   </tr>
   <tr>
    <td>state</td> 
-   <td><p>要素の現在の状態です。</p> <p>アダプティブフォームの場合は2つ（オン、オフ）、HTML5フォームの場合は3つ（オン、オフ、中間）です。</p> </td> 
+   <td><p>要素の現在の状態です。</p> <p>アダプティブフォームの場合は 2 つ（オン、オフ）、HTML5 フォームの場合は 3 つ（オン、オフ、中立）です。</p> </td> 
   </tr>
  </tbody>
 </table>
@@ -265,7 +265,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 
 | オプション | 説明 |
 |---|---|
-| days | そのフィールドのローカライズされた曜日の名前。 |
+| 日 | そのフィールドのローカライズされた曜日の名前。 |
 | months | そのフィールドのローカライズされた月の名前。 |
 | ゼロ | 数字の 0 のローカライズされたテキスト。 |
 | clearText | 「クリア」ボタンのローカライズされたテキスト。 |

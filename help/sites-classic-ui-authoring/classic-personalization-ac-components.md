@@ -1,8 +1,8 @@
 ---
 title: Adobe Campaign コンポーネント
-seo-title: Adobe Campaign コンポーネント
+seo-title: Adobe Campaign Components
 description: Adobe Campaign と統合しているときは、ニュースレター用とフォーム用のコンポーネントを使用できます。
-seo-description: Adobe Campaign と統合しているときは、ニュースレター用とフォーム用のコンポーネントを使用できます。
+seo-description: When you integrate with Adobe Campaign, you have components available for when working with newsletters and with forms.
 uuid: 5c75c216-dc28-4d3b-b6f7-3c4726143c8b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 560b62b7-6bff-4cc4-baf9-c6573daa61ef
 exl-id: 66fc7691-1c93-4714-b75f-ae03512261e9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '2475'
+source-wordcount: '2454'
 ht-degree: 78%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 78%
 
 Adobe Campaign と統合しているときは、ニュースレター用とフォーム用のコンポーネントを使用できます。このドキュメントでは、両方のコンポーネントについて説明します。
 
-## Adobe Campaign ニュースレターコンポーネント  {#adobe-campaign-newsletter-components}
+## Adobe Campaign ニュースレターコンポーネント {#adobe-campaign-newsletter-components}
 
 すべての Adobe Campaign コンポーネントは、[電子メールテンプレートのベストプラクティス](/help/sites-administering/best-practices-for-email-templates.md)で概説されているベストプラクティスに従います。また、Adobe マークアップ言語 [HTL](https://helpx.adobe.com/jp/experience-manager/htl/using/overview.html) をベースとしています。
 
@@ -39,7 +39,7 @@ Adobe Campaign と連携するように設定されているニュースレタ�
 
 ![chlimage_1-112](assets/chlimage_1-112.png)
 
-### 見出し (Campaign) {#heading-campaign}
+### 見出し（Campaign） {#heading-campaign}
 
 見出しコンポーネントは、次のいずれかを表示します。
 
@@ -61,7 +61,7 @@ Adobe Campaign と連携するように設定されているニュースレタ�
 
 ![chlimage_1-114](assets/chlimage_1-114.png)
 
-### Image (Campaign) {#image-campaign}
+### 画像（Campaign） {#image-campaign}
 
 画像（Campaign）コンポーネントは、指定されたパラメーターに従って、画像とそれに付随するテキストを表示します。
 
@@ -99,7 +99,7 @@ Adobe Campaign と連携するように設定されているニュースレタ�
 
 * **リンク先**
 
-   Webサイト内のアセットや他のページへのリンクを作成します。
+   Web サイト内のアセットや他のページへのリンクを作成します。
 
 * **説明**
 
@@ -115,12 +115,11 @@ Adobe Campaign と連携するように設定されているニュースレタ�
 >
 >`Validation failed. Verify the values of the marked fields.`
 
-
 画像（Campaign）コンポーネントの表示例を以下に示します。
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
-### リンク（キャンペーン） {#link-campaign}
+### リンク（Campaign） {#link-campaign}
 
 リンク（Campaign）コンポーネントを使用して、ニュースレターにリンクを追加できます。このコンポーネントはクラシック UI にのみ表示されますが、タッチ操作向け UI でこのコンポーネントを追加して、互換モードで開くことができます。
 
@@ -132,24 +131,23 @@ Adobe Campaign と連携するように設定されているニュースレタ�
 
 * **リンクツールチップ**&#x200B;リンクの使用方法に関する追加情報を付加します。
 
-* ****
-LinkTypeドロップダウンリストで、 
-**カスタ** ムURLとアダプテ **ィブドキュメント**&#x200B;このフィールドは必須です。「カスタム URL」を選択した場合は、リンクの URL を指定できます。「アダプティブドキュメント」を選択した場合は、ドキュメントのパスを指定できます。
+* **LinkType**
+ドロップダウンリストで、 
+**カスタム URL** および **アダプティブドキュメント**. このフィールドは必須です。「カスタム URL」を選択した場合は、リンクの URL を指定できます。「アダプティブドキュメント」を選択した場合は、ドキュメントのパスを指定できます。
 
 * **追加の URL パラメーター**&#x200B;追加の URL パラメーターがあれば追加します。「項目を追加」をクリックして、複数の項目を追加します。
 
 >[!NOTE]
 >
->「**URL情報**」タブの「**リンクタイプ**」フィールドに情報を入力する必要があります。入力しないと、コンポーネントを保存できず、次のエラーメッセージが表示されます。
+>情報を **リンクタイプ** フィールド **URL 情報** 」タブに移動しないと、コンポーネントを保存できず、次のエラーメッセージが表示されます。
 >
 >`Validation failed. Verify the values of the marked fields.`
-
 
 リンク（Campaign）コンポーネントの表示例を以下に示します。
 
 ![chlimage_1-118](assets/chlimage_1-118.png)
 
-### ターゲット参照 (Campaign) {#targeted-reference-campaign}
+### ターゲット参照（Campaign） {#targeted-reference-campaign}
 
 ターゲット参照（Campaign）コンポーネントを使用して、ターゲット段落への参照を作成できます。
 
@@ -157,7 +155,7 @@ LinkTypeドロップダウンリストで、
 
 ドロップダウンメニューをクリックして、参照する段落に移動します。終了したら、「**OK**」をクリックします。
 
-### テキストと画像（Campaign）  {#text-image-campaign}
+### テキストと画像（Campaign） {#text-image-campaign}
 
 テキストと画像（Campaign）コンポーネントでは、テキストブロックと画像を追加します。
 
@@ -171,7 +169,7 @@ LinkTypeドロップダウンリストで、
 * **画像**
 コンテンツファインダーから画像をドラッグするか、クリックして画像を参照します。必要に応じて、切り抜きや回転をおこないます。
 
-* **画像プロパティ** (**詳細画像プロパティ**)
+* **画像のプロパティ** (**詳細画像プロパティ**)
 
    以下を指定できます。
 
@@ -185,7 +183,7 @@ LinkTypeドロップダウンリストで、
 
    * **リンク先**
 
-      Webサイト内のアセットや他のページへのリンクを作成します。
+      Web サイト内のアセットや他のページへのリンクを作成します。
 
    * **説明**
 
@@ -201,14 +199,13 @@ LinkTypeドロップダウンリストで、
 >
 >`Validation failed. Verify the values of the marked fields.`
 
-
 テキストと画像（Campaign）コンポーネントの表示例を以下に示します。
 
 ![chlimage_1-120](assets/chlimage_1-120.png)
 
-### テキストおよびパーソナライゼーション (Campaign) {#text-personalization-campaign}
+### テキストおよびパーソナライゼーション（Campaign） {#text-personalization-campaign}
 
-テキストおよびパーソナライゼーション(Campaign)コンポーネントを使用すると、WYSIWYGエディターを使用してテキストブロックを入力できます。この機能は、[リッチテキストエディター](/help/sites-authoring/rich-text-editor.md)で提供されます。 さらに、このコンポーネントでは、Adobe Campaign のコンテキストフィールドとパーソナライゼーションブロックを使用できます。[パーソナライゼーションの挿入](/help/sites-classic-ui-authoring/classic-personalization-ac-campaign.md#inserting-personalization)も参照してください。
+テキストおよびパーソナライゼーション (Campaign) コンポーネントを使用すると、WYSIWYG エディターを使用してテキストブロックを入力できます。この機能は、 [リッチテキストエディター](/help/sites-authoring/rich-text-editor.md). さらに、このコンポーネントでは、Adobe Campaign のコンテキストフィールドとパーソナライゼーションブロックを使用できます。[パーソナライゼーションの挿入](/help/sites-classic-ui-authoring/classic-personalization-ac-campaign.md#inserting-personalization)も参照してください。
 
 フォントの文字、配置、リンク、リスト、インデントなど、多様なアイコンでテキストの書式を設定できます。
 
@@ -228,7 +225,7 @@ Adobe Campaign コンポーネントを使用して、ニュースレターの�
 
 各コンポーネントフィールドを Adobe Campaign データベースフィールドにリンクできます。[コンポーネントとデータタイプ](#components-and-data-type)セクションで説明しているように、利用可能なフィールドは、格納するデータのタイプによって異なります。受信者スキーマを Adobe Campaign で拡張した場合は、データタイプが一致するコンポーネントで新しいフィールドが利用可能になります。
 
-Adobe Campaignと統合するように設定されたフォームを開くと、**Adobe Campaign**&#x200B;セクションに次のコンポーネントが表示されます。
+Adobe Campaignと統合するように設定されたフォームを開くと、次のコンポーネントが **Adobe Campaign** セクション：
 
 * チェックボックス（Campaign）
 * 日付フィールド（Campaign）と日付フィールド／HTML5（Campaign）
@@ -242,7 +239,7 @@ Adobe Campaignと統合するように設定されたフォームを開くと、
 
 このセクションでは、各コンポーネントについて詳しく説明します。
 
-### コンポーネントとデータタイプ  {#components-and-data-type}
+### コンポーネントとデータタイプ {#components-and-data-type}
 
 以下の表に、Adobe Campaign プロファイルデータの表示および変更に利用できるコンポーネントを示します。各コンポーネントを Adobe Campaign プロファイルフィールドにマップすることで、フィールドの値をフォームに表示したり、フォームが送信されたときにフィールドを更新したりできます。各種コンポーネントは、適切なデータタイプのフィールドにのみマップできます。
 
@@ -255,7 +252,7 @@ Adobe Campaignと統合するように設定されたフォームを開くと、
   </tr> 
   <tr> 
    <td><p>チェックボックス (Campaign)</p> </td> 
-   <td><p>ブール型</p> </td> 
+   <td><p>ブール値</p> </td> 
    <td><p>今後は連絡しない（どのチャネルからも）</p> </td> 
   </tr> 
   <tr> 
@@ -281,13 +278,13 @@ Adobe Campaignと統合するように設定されたフォームを開くと、
  </tbody> 
 </table>
 
-### 大部分のコンポーネントに共通の設定  {#settings-common-to-most-components}
+### 大部分のコンポーネントに共通の設定 {#settings-common-to-most-components}
 
 Adobe Campaign コンポーネントには、ほとんどのコンポーネント（暗号化されたプライマリキーコンポーネントと非表示の調整キーコンポーネントを除く）に共通の設定があります。
 
 大部分のコンポーネントでは、次の項目を設定できます。
 
-#### タイトルとテキスト  {#title-and-text}
+#### タイトルとテキスト {#title-and-text}
 
 * **タイトル**
 
@@ -295,15 +292,15 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 * **タイトルを非表示にする**
 
-   タイトルを表示しない場合は、このチェックボックスをオンにします。
+   タイトルを表示しない場合は、このチェックボックスを選択します。
 
 * **説明**
 
-   フィールドに説明を追加して、ユーザーに詳細を提供します。
+   フィールドに説明を追加して、ユーザーに詳細情報を提供します。
 
 * **値の表示のみ**
 
-   値が1つある場合にのみ値を表示します
+   値が存在する場合にのみ値を表示
 
 #### Adobe Campaign {#adobe-campaign}
 
@@ -321,7 +318,7 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 * **必須**
 
-   このチェックボックスをオンにすると、このコンポーネントが必須になります。つまり、ユーザーは値を入力する必要があります。
+   このコンポーネントを必須にするには、このチェックボックスを選択します。つまり、ユーザーは値を入力する必要があります。
 
 * **必須メッセージ**
 
@@ -333,7 +330,7 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
    このコンポーネントに使用する CSS クラスを入力します。
 
-### チェックボックス (Campaign) {#checkbox-campaign}
+### チェックボックス（Campaign） {#checkbox-campaign}
 
 チェックボックス（Campaign）コンポーネントを使用すると、boolean データタイプの Adobe Campaign プロファイルフィールドをユーザーに変更させることができます。例えば、チェックボックス（Campaign）コンポーネントを使用して、受信者に連絡を希望するかどうかを選択させるオプションを作成できます。
 
@@ -343,29 +340,29 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 ![chlimage_1-122](assets/chlimage_1-122.png)
 
-### 日付フィールド(Campaign)と日付フィールド/HTML 5(Campaign) {#date-field-campaign-and-date-field-html-campaign}
+### 日付フィールド（Campaign）と日付フィールド／HTML 5（Campaign） {#date-field-campaign-and-date-field-html-campaign}
 
 日付フィールドを使用して、受信者に日付を指定させることができます。例えば、受信者に誕生日を指定させることができます。日付の形式は、Adobe Campaign インスタンスで使用されている形式と一致します。
 
 [大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)に加え、次の項目を設定できます。
 
-* **制約 — 制** 約ドロップダウン
+* **制約 — 制約** ドロップダウン
 
-   「**なし**」または「**日付**」を選択して、日付の制約を追加するか、制約を追加しないかを選択できます。 日付を選択した場合、回答ユーザーは日付形式で入力する必要があります。
+   次を選択できます。 **なし** または **日付**  — 日付の制約を追加するか、制約を追加しません。 日付を選択した場合、回答ユーザーは「 」フィールドに日付形式で入力する必要があります。
 
 * **制約メッセージ**
 
-   また、制約メッセージを追加して、回答を適切に書式設定する方法をユーザーに知らせることができます。
+   また、制約メッセージを追加して、回答を適切に書式設定する方法をユーザーに知らせることもできます。
 
 * **スタイル設定 — 幅**
 
-   **+**&#x200B;アイコンと&#x200B;**-**&#x200B;アイコンをクリックまたはタップするか、数値を入力して、フィールドの幅を調整します。
+   フィールドの幅を調整するには、 **+** および **-** アイコンをクリックするか、数値を入力します。
 
 幅が調整された日付フィールド（Campaign）コンポーネントの表示例を以下に示します。
 
 ![chlimage_1-123](assets/chlimage_1-123.png)
 
-### 暗号化されたプライマリキー (Campaign) {#encrypted-primary-key-campaign}
+### 暗号化されたプライマリキー（Campaign） {#encrypted-primary-key-campaign}
 
 このコンポーネントは、Adobe Campaign プロファイルの識別子（それぞれ Adobe Campaign Standard では&#x200B;**メインリソース識別子**、Adobe Campaign 6.1 では&#x200B;**暗号化されたプライマリキー**）を含む URL パラメーター名を定義します。
 
@@ -375,17 +372,17 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 * **タイトルとテキスト — 要素名**
 
-   デフォルトはencryptedPKです。 フォーム上の別のエレメント名と競合する場合にのみ、エレメント名を変更する必要があります。2 つのフォームフィールドが同じエレメント名を持つことはできません。
+   デフォルトでは、encryptedPK に設定されます。 フォーム上の別のエレメント名と競合する場合にのみ、エレメント名を変更する必要があります。2 つのフォームフィールドが同じエレメント名を持つことはできません。
 
-* **Adobe Campaign - URLパラメーター**
+* **Adobe Campaign - URL パラメーター**
 
-   EPKのURLパラメーターを追加します。 例えば、値 **epk** を使用できます。
+   EPK の URL パラメーターを追加します。 例えば、値 **epk** を使用できます。
 
 暗号化されたプライマリキー（Campaign）コンポーネントの表示例を以下に示します。
 
 ![chlimage_1-124](assets/chlimage_1-124.png)
 
-### エラー表示 (Campaign) {#error-display-campaign}
+### エラー表示（Campaign） {#error-display-campaign}
 
 このコンポーネントを使用して、バックエンドのエラーを表示できます。このコンポーネントを適切に機能させるには、フォームのエラー処理を「転送」に設定する必要があります。
 
@@ -393,43 +390,43 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 ![chlimage_1-125](assets/chlimage_1-125.png)
 
-### 非表示の調整キー (Campaign) {#hidden-reconciliation-key-campaign}
+### 非表示の調整キー（Campaign） {#hidden-reconciliation-key-campaign}
 
-非表示の紐付けキー(Campaign)コンポーネントを使用すると、紐付けキーの一部として非表示のフィールドをフォームに追加できます。
+非表示の紐付けキー (Campaign) コンポーネントを使用すると、非表示のフィールドを紐付けキーの一部としてフォームに追加できます。
 
 非表示の調整キー（Campaign）コンポーネントでは、次の項目を設定できます。
 
 * **タイトルとテキスト — 要素名**
 
-   デフォルトはreconcilKeyです。 フォーム上の別のエレメント名と競合する場合にのみ、エレメント名を変更する必要があります。2 つのフォームフィールドが同じエレメント名を持つことはできません。
+   デフォルトは reconcilKey です。 フォーム上の別のエレメント名と競合する場合にのみ、エレメント名を変更する必要があります。2 つのフォームフィールドが同じエレメント名を持つことはできません。
 * **Adobe Campaign - マッピング** Adobe Campaign パーソナライゼーションフィールドにマップします。
 
 非表示の調整キー（Campaign）コンポーネントの表示例を以下に示します。
 
 ![chlimage_1-126](assets/chlimage_1-126.png)
 
-### 数値フィールド (Campaign) {#numeric-field-campaign}
+### 数値フィールド（Campaign） {#numeric-field-campaign}
 
 数値フィールドを使用して、受信者に年齢などの数字を入力させることができます。
 
 [大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)に加え、次の項目を設定できます。
 
-* **制約 — 制** 約ドロップダウン
+* **制約 — 制約** ドロップダウン
 
-   「**なし**」または「**数値**」を選択して、数値の制約を追加するか、制約を追加しないかを選択できます。 数値を選択した場合、回答ユーザーは数値を入力する必要があります。
+   次を選択できます。 **なし** または **数値**  — 数値の制約を追加するか、制約を追加しません。 数値を選択した場合、回答ユーザーは数値を入力する必要があります。
 
 * **制約メッセージ**
 
-   また、制約メッセージを追加して、回答を適切に書式設定する方法をユーザーに知らせることができます。
-* **スタイル設定 —**
-Width 
-**+** および — **アイコ** ンを押すか、数値を入力します。
+   また、制約メッセージを追加して、回答を適切に書式設定する方法をユーザーに知らせることもできます。
+* **スタイル設定 — 幅**
+フィールドの幅を調整するには、 
+**+** および **-** アイコンをクリックするか、数値を入力します。
 
 幅が設定された数値フィールド（Campaign）コンポーネントの表示例を以下に示します。
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
-### オプションフィールド (Campaign) {#option-field-campaign}
+### オプションフィールド（Campaign） {#option-field-campaign}
 
 このドロップダウンリストを使用して、受信者の性別やステータスなどのオプションを選択できます。
 
@@ -439,11 +436,11 @@ Width
 
 ![chlimage_1-128](assets/chlimage_1-128.png)
 
-### 購読チェックリスト (Campaign) {#subscriptions-checklist-campaign}
+### 購読チェックリスト（Campaign） {#subscriptions-checklist-campaign}
 
 **購読チェックリスト（Campaign）**&#x200B;コンポーネントを使用して、Adobe Campaign プロファイルに関連付けられた購読を変更できます。
 
-このコンポーネントをフォームに追加すると、利用可能なすべての購読がチェックボックスとして表示されるので、ユーザーに目的の購読を選択させることができます。ユーザーがフォームを送信すると、このコンポーネントは、フォームのアクションタイプ(**Adobe Campaign:サービス**&#x200B;または&#x200B;**Adobe Campaignを購読する：サービスの購読解除**)。
+このコンポーネントをフォームに追加すると、利用可能なすべての購読がチェックボックスとして表示されるので、ユーザーに目的の購読を選択させることができます。ユーザーがフォームを送信すると、このコンポーネントは、フォームアクションタイプ (**Adobe Campaign:サービスを購読** または **Adobe Campaign:サービスを購読解除**) をクリックします。
 
 >[!NOTE]
 >
@@ -455,23 +452,23 @@ Width
 
 ![chlimage_1-129](assets/chlimage_1-129.png)
 
-### テキストフィールド (Campaign) {#text-field-campaign}
+### テキストフィールド（Campaign） {#text-field-campaign}
 
 テキストフィールド（Campaign）コンポーネントを使用すると、名、姓、住所、電子メールアドレスなど、文字列タイプのデータを入力できます。
 
 [大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)に加え、次の項目を設定できます。
 
-* **制約 — 制** 約ドロップダウン
+* **制約 — 制約** ドロップダウン
 
-   「**なし」、「Eメール」、「**」または「**名前（ウムラウトなし）**」を選択して、Eメールアドレス、名前、制約なしのいずれかの制約を追加できます。 「電子メール」を選択した場合は、このフィールドに電子メールアドレスを入力する必要があります。「name」を選択する場合は、名前にする必要があります（ウムラウトは使用できません）。
+   次を選択できます。 **なし、メール、** または **名前（ウムラウトなし）**  — 電子メールアドレス、名前、または制約なしの制約を追加します。 「電子メール」を選択した場合は、このフィールドに電子メールアドレスを入力する必要があります。名前を選択した場合は、名前にする必要があります（ウムラウトは使用できません）。
 
 * **制約メッセージ**
 
-   また、制約メッセージを追加して、回答を適切に書式設定する方法をユーザーに知らせることができます。
+   また、制約メッセージを追加して、回答を適切に書式設定する方法をユーザーに知らせることもできます。
 
 * **スタイル設定 — 幅**
 
-   **+**&#x200B;アイコンと&#x200B;**-**&#x200B;アイコンをクリックまたはタップするか、数値を入力して、フィールドの幅を調整します。
+   フィールドの幅を調整するには、 **+** および **-** アイコンをクリックするか、数値を入力します。
 
 テキストフィールド（Campaign）コンポーネントの表示例を以下に示します。
 

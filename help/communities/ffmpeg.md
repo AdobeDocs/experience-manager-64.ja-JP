@@ -1,8 +1,8 @@
 ---
 title: コミュニティのための FFmpeg
-seo-title: コミュニティのための FFmpeg
+seo-title: FFmpeg for Communities
 description: コミュニティのための FFmpeg をインストールおよび設定する方法
-seo-description: コミュニティのための FFmpeg をインストールおよび設定する方法
+seo-description: How to install and configure FFmpeg for Communities
 uuid: ef2f821c-70e9-4889-a8d7-a93b10a1d428
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -13,8 +13,8 @@ role: Admin
 exl-id: 9ed54ee3-3509-4a43-a710-90f4543ccaf3
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 62%
+source-wordcount: '305'
+ht-degree: 61%
 
 ---
 
@@ -30,16 +30,16 @@ FFmpeg は、オーサー環境で、アップロードしたイネーブルメ�
 
 FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしているサーバーにインストールする必要があります。
 
-1. [https://www.ffmpeg.org](https://www.ffmpeg.org/)に移動します。
+1. に移動します。 [https://www.ffmpeg.org](https://www.ffmpeg.org/)
 1. 特定の環境用（Macintosh、Windows または Linux）の FFmpeg の最新バージョンをダウンロードします。
 
    * 古いバージョンにはセキュリティ脆弱性があるので、FFmpeg を最新の状態に保つことが重要です。
 
 1. OS の手順に従って FFmpeg をインストールします。
 
-1. FFmpeg実行可能ファイルがシステムパスに設定されていることを確認します。
+1. FFmpeg 実行可能ファイルがシステムパスに設定されていることを確認します。
 
-   システム内の任意のディレクトリからFFmpegを実行できるはずです。
+   システム内の任意のディレクトリから FFmpeg を実行できるはずです。
 
    * 例： `ffmpeg -version`
 
@@ -51,22 +51,22 @@ FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしている�
 
 DAM アセットの更新のワークフローを変更するには（この例ではトランスコーディングをオフにするには）、次のようにします。
 
-* 管理者権限でオーサーインスタンスにログインします。
-* グローバルナビゲーションから：**[!UICONTROL ツール/ワークフロー/モデル]**
-* **[!UICONTROL DAMアセットの更新]**&#x200B;を見つけます。
-* ダブルクリックして、編集用のワークフローをクラシックUIで開きます。
+* 管理者権限でオーサーインスタンスにサインイン
+* グローバルナビゲーションから： **[!UICONTROL ツール/ワークフロー/モデル]**
+* 場所 **[!UICONTROL DAM アセットの更新]**
+* ダブルクリックして、編集用のワークフローをクラシック UI で開きます
 
-   結果の場所：[http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
+   結果の場所： [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
-* **[!UICONTROL FFmpegトランスコーディング]**&#x200B;の手順をダブルクリックして、ステップのプロパティダイアログにアクセスします
-* 「**[!UICONTROL プロセス]**」タブで、次の操作を実行します。
+* 次をダブルクリックします。 **[!UICONTROL FFmpeg トランスコード]** ステップのプロパティダイアログにアクセスする手順
+* 以下 **[!UICONTROL プロセス]** タブ：
 
-   * **[!UICONTROL 引数]**:トランスコーディングを無効にするには、すべてのエントリをクリアします。デフォルト値：  `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
+   * **[!UICONTROL アルグメント]**:すべてのエントリをクリアしてトランスコードを無効にします。デフォルト値： `profile:firefoxhq,profile:hq,profile:flv,profile:iehq`
 
 ![chlimage_1-372](assets/chlimage_1-372.png)
 
-* 「**[!UICONTROL OK]**」を選択して、`Step Properties`ダイアログを閉じます。
+* 選択 **[!UICONTROL OK]** 閉じる `Step Properties` ダイアログ
 
-* 「**[!UICONTROL 保存]**」を選択して、`DAM Update Asset`ワークフローを保存します。
+* 選択 **[!UICONTROL 保存]** 保存する `DAM Update Asset` ワークフロー
 
    （左上隅）

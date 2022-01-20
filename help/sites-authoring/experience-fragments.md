@@ -1,8 +1,8 @@
 ---
 title: エクスペリエンスフラグメント
-seo-title: エクスペリエンスフラグメント
+seo-title: Experience Fragments
 description: エクスペリエンスフラグメント
-seo-description: 'null'
+seo-description: null
 uuid: be1aceef-eb6e-47e5-a920-be5cc6de6191
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 1fe58af0-3005-46fc-8717-5d32557947ed
 exl-id: 8906b3ab-cb08-4b3e-8796-334e36b1e491
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1309'
 ht-degree: 90%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 90%
 >
 >問題が発生している場合は、システム管理者にお問い合わせください。
 
-## エクスペリエンスフラグメントを使用するタイミング    {#when-should-you-use-experience-fragments}
+## エクスペリエンスフラグメントを使用するタイミング {#when-should-you-use-experience-fragments}
 
 エクスペリエンスフラグメントは次の場合に使用します。
 
@@ -77,7 +77,7 @@ ht-degree: 90%
 
 * [これらのフォルダーで使用可能なテンプレートを設定する](#configure-allowed-templates-folder)。
 
-フォルダーを作成すると、次の操作をおこなうことができます。
+フォルダーを作成すると、次の操作を行うことができます。
 
 * エクスペリエンスフラグメントにとって意味のある構造（例：分類に従った構造）を作成する。
 
@@ -91,11 +91,11 @@ ht-degree: 90%
    >
    >[テンプレートエディター](/help/sites-authoring/templates.md)を使用すると、独自のテンプレートを作成できます。
 
-次の例は、`Contributors`に従って構造化されたエクスペリエンスフラグメントを示しています。 また、使用される構造は、マルチサイト管理（言語コピーを含む）などの他の機能の使用方法の例も示します。
+次の例は、 `Contributors`. また、使用される構造は、マルチサイト管理（言語コピーを含む）などの他の機能の使用方法の例も示します。
 
 >[!CAUTION]
 >
->Adobe Experience ManagerをCloud Serviceとして使用したWKNDサイトのスクリーンショットを次に示します。
+>Adobe Experience Manager as a Cloud Serviceを使用した WKND サイトのスクリーンショットを次に示します。
 
 ![エクスペリエンスフラグメントのフォルダー](assets/xf-folders.png)
 
@@ -109,7 +109,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->また、インスタンスに[許可されたテンプレート](#configure-allowed-templates-instance)を設定することもできますが、アップグレード時に値が上書きされる可能性があるので、この方法は&#x200B;**お勧めしません**。
+>また、 [お使いのインスタンスで使用できるテンプレート](#configure-allowed-templates-instance)を返しますが、このメソッドは **not** を推奨します。アップグレード時に値が上書きされる場合があるからです。
 
 ### フォルダーに使用できるテンプレートの設定 {#configure-allowed-templates-folder}
 
@@ -134,7 +134,7 @@ ht-degree: 90%
 
 >[!CAUTION]
 >
->指定したテンプレートがアップグレード時に上書きされる可能性があるので、この方法で「**[!UICONTROL 許可されたテンプレート]**」を変更することはお勧めしません。
+>この **[!UICONTROL 許可されたテンプレート]** この方法では、指定したテンプレートがアップグレード時に上書きされる場合があるので、この方法を使用します。
 >
 >このダイアログは、情報を提供する目的でのみ使用してください。
 
@@ -158,7 +158,7 @@ ht-degree: 90%
 
    ![screen_shot_2018-04-05at92221am1](assets/screen_shot_2018-04-05at92221am1.png)
 
-1. 必要なフォルダーに移動し、「**[!UICONTROL 作成]**」を選択します。
+1. 必要なフォルダーに移動し、「 」を選択します。 **[!UICONTROL 作成]**.
 
 1. 「**[!UICONTROL エクスペリエンスフラグメント]**」を選択して、**[!UICONTROL エクスペリエンスフラグメントを作成]**&#x200B;ウィザードを開きます。
 
@@ -182,7 +182,7 @@ ht-degree: 90%
 
 ## エクスペリエンスフラグメントの編集 {#editing-your-experience-fragment}
 
-エクスペリエンスフラグメントエディターには、通常のページエディターと似た機能があります。使い方の詳細については、[ページのコンテンツの編集](/help/sites-authoring/editing-content.md)を参照してください。
+エクスペリエンスフラグメントエディターには、通常のページエディターと似た機能があります。詳しくは、 [ページのコンテンツの編集](/help/sites-authoring/editing-content.md) を参照してください。
 
 次の手順の例では、商品のティーザーを作成する方法を示します。
 
@@ -276,7 +276,7 @@ ht-degree: 90%
 
 ### 構築ブロックの管理 {#managing-a-building-block}
 
-構築ブロックは、「**[!UICONTROL 構築ブロック]**」タブに表示されます。各ブロックでは、次の操作をおこなえます。
+構築ブロックは、「**[!UICONTROL 構築ブロック]**」タブに表示されます。各ブロックでは、次の操作を行えます。
 
 * マスターに移動（マスターバリエーションを新しいタブで開く）
 * 名前を変更
@@ -314,4 +314,4 @@ URL で `.plain.` セレクターを使用すると、プレーン HTML レン�
 
 デフォルトでは、エクスペリエンスフラグメントは HTML 形式で配信され、AEM とサードパーティチャネルのどちらでも同じように使用できます。
 
-Adobe Targetに書き出す場合は、HTMLが使用されます。 詳しくは、[Adobe Target とエクスペリエンスフラグメントの統合](/help/sites-administering/experience-fragments-target.md)を参照してください。
+Adobe Targetへの書き出しには、HTMLが使用されます。 詳しくは、[Adobe Target とエクスペリエンスフラグメントの統合](/help/sites-administering/experience-fragments-target.md)を参照してください。

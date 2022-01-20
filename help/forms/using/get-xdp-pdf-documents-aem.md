@@ -1,8 +1,8 @@
 ---
 title: AEM Forms での XDP および PDF ドキュメントの取得
-seo-title: AEM Forms での XDP および PDF ドキュメントの取得
+seo-title: Getting XDP and PDF documents in AEM Forms
 description: AEM Forms では、フォームやサポートされているアセットをアップロードし、アダプティブフォームで使用できます。複数のフォームや関連リソースを一括して ZIP としてアップロードすることもできます。
-seo-description: AEM Forms では、フォームやサポートされているアセットをアップロードし、アダプティブフォームで使用できます。複数のフォームや関連リソースを一括して ZIP としてアップロードすることもできます。
+seo-description: AEM Forms allows you to upload forms and supported assets to use with adaptive forms. You can also bulk upload forms and related resources as a ZIP.
 uuid: c2a86d89-0c56-4d29-932a-dd09277fa7cb
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -12,8 +12,8 @@ role: Admin
 exl-id: 50bf178d-7a3c-41df-9d13-99c74d944700
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 94%
+source-wordcount: '667'
+ht-degree: 93%
 
 ---
 
@@ -27,7 +27,7 @@ AEM Forms でアップロードすることで、ローカルファイルシス�
 * PDF のフォーム
 * ドキュメント（非インタラクティブ PDF ドキュメント）
 
-サポートされているアセットタイプを個別にまたは ZIP アーカイブとしてアップロードできます。`Resource`タイプのアセットは、XFAフォームと一緒にZIPアーカイブでのみアップロードできます。
+サポートされているアセットタイプを個別にまたは ZIP アーカイブとしてアップロードできます。タイプのアセットをアップロードできます `Resource`ZIP アーカイブ内の XFA フォームと一緒にのみ作成できます。
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ AEM Forms でアップロードすることで、ローカルファイルシス�
 
 ## フォームのアップロード {#uploading-forms}
 
-1. `https://[server]:[port]/aem/forms.html`にアクセスしてAEM Formsユーザーインターフェイスにログインします。
+1. にアクセスしてAEM Formsユーザーインターフェイスにログインします `https://[server]:[port]/aem/forms.html`.
 1. フォームまたはフォームを含むフォルダーをアップロードしたいフォルダーに移動します。
 1. アクションツールバーで、**作成／ファイルのアップロード**&#x200B;をタップします。
 
@@ -85,6 +85,6 @@ XFA を参照しているアダプティブフォームは、そのフィール�
 
 ![関連 XFA の更新後の非同期のアダプティブフォームの警告](assets/dirtyaf.png)
 
-アダプティブフォームが dirty かどうかを示すフラグが保持されます。この情報は、フォームのメタデータと一緒にフォームプロパティページにあります。ダーティなアダプティブフォームの場合のみ、メタデータプロパティ`Model Refresh`に`Recommended`値が表示されます。
+アダプティブフォームが dirty かどうかを示すフラグが保持されます。この情報は、フォームのメタデータと一緒にフォームプロパティページにあります。ダーティアダプティブフォームの場合のみ、メタデータプロパティ `Model Refresh` 表示 `Recommended` の値です。
 
 ![アダプティブフォームが XFA モデルと非同期であることを示す](assets/model-refresh.png)

@@ -1,8 +1,8 @@
 ---
 title: ユーザーアバターの表示
-seo-title: ユーザーアバターの表示
+seo-title: Displaying the user avatar
 description: AEM Forms Workspace をカスタマイズしてログインしたユーザーの画像を表示する方法。
-seo-description: AEM Forms Workspace をカスタマイズしてログインしたユーザーの画像を表示する方法。
+seo-description: How to customize the AEM Forms workspace to display the image of a logged-in user.
 uuid: 2961dc93-f0d0-4842-80f1-3c239a20e348
 contentOwner: robhagat
 content-type: reference
@@ -12,20 +12,20 @@ discoiquuid: aec03ea5-17a6-4775-92cb-2ad361895fdf
 exl-id: 2bc70cd6-1ea6-4594-9b42-ab3d3000a0c5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 80%
+source-wordcount: '192'
+ht-degree: 78%
 
 ---
 
-# ユーザーアバターの表示  {#displaying-the-user-avatar}
+# ユーザーアバターの表示 {#displaying-the-user-avatar}
 
-ログインユーザーのアバターは、AEM Forms Workspace の右上隅に表示されます。また、組織階層の直接レポートのアバターはマネージャービューに表示されます。AEM Forms Workspaceを設定して、データベース（LDAPサーバーなど）からユーザー画像を選択できます。
+ログインユーザーのアバターは、AEM Forms Workspace の右上隅に表示されます。また、組織階層の直接レポートのアバターはマネージャービューに表示されます。AEM Forms Workspace を設定して、データベース（LDAP サーバーなど）からユーザー画像を選択できます。
 
 >[!NOTE]
 >
 >サポートされているユーザー画像の縦横比は 1:1 です。
 
-1. 次の手順に記載されている説明を使用して DSC を作成します。詳しくは、『AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63)によるプログラミング』ガイドの「AEM Forms用コンポーネントの開発」トピックを参照してください。[
+1. 次の手順に記載されている説明を使用して DSC を作成します。詳しくは、「 AEM Forms 用コンポーネントの開発」( [AEM Formsを使用したプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63) ガイド。
 1. DSC で getCurrentUserImageUrl と getUserImageUrl メソッドを公開する新しい SPI を定義して、AEM Forms ユーザーの画像 URL を取得します。Java™ コードスニペットのサンプルを以下に示します。
 
    ```as3
@@ -83,5 +83,5 @@ ht-degree: 80%
    </component>
    ```
 
-1. Workbench を介して DSC をデプロイします。`ProcessManagementClientSessionService`サービスを再起動します。
+1. Workbench を介して DSC をデプロイします。再起動 `ProcessManagementClientSessionService` サービス。
 1. ブラウザを更新するか、またはユーザーとログアウトして再度ログインする必要がある場合があります。

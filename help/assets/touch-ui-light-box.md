@@ -1,6 +1,6 @@
 ---
 title: Lightbox
-description: ' [!DNL Experience Manager] AssetsのLightboxについて説明します。'
+description: の Lightbox について説明します。 [!DNL Experience Manager] アセット。
 contentOwner: AG
 feature: Developer Tools,Renditions
 role: User,Admin
@@ -14,7 +14,7 @@ ht-degree: 96%
 
 # Lightbox {#lightbox}
 
-[!DNL Experience Manager]アセットのLightboxについて説明します。
+の Lightbox について説明します。 [!DNL Experience Manager] アセット。
 
 Lightbox は、アセットに容易にアクセスするための特別なタイプのコレクションです。Lightbox にすぐにアクセスして、アセットを追加または削除できます。Lightbox は、個人用の画像ギャラリーとして使用することができます。
 

@@ -1,25 +1,25 @@
 ---
 title: 6.4 における AEM Communities のリポジトリ再構築
-seo-title: 6.4 における AEM Communities のリポジトリ再構築
+seo-title: Repository Restructuring for AEM Communities in 6.4
 description: AEM 6.4 for Communities の新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
-seo-description: AEM 6.4 for Communities の新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
+seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.4 for Communities.
 uuid: d161655f-4074-44a7-8d69-38e80934c58b
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 7383265b-0ed4-4ea7-b741-0a417d187bdd
-feature: アップグレード
+feature: Upgrading
 exl-id: f66e349f-09a1-47f1-88fc-61eb51f65664
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 61%
+source-wordcount: '1008'
+ht-degree: 60%
 
 ---
 
 # 6.4 における AEM Communities のリポジトリ再構築{#repository-restructuring-for-aem-communities-in}
 
-AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明したように、AEM 6.4にアップグレードする場合は、このページを使用して、AEM Communitiesソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
+親の説明に従って [AEM 6.4 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md) このページでは、AEM 6.4 にアップグレードするお客様は、このページを使用して、AEM Communitiesソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
 
 **6.4 へのアップグレード時におこなう変更**
 
@@ -54,7 +54,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>「<code>/apps/settings</code>」の下の新しいパスに移動する場合は、手動移行が必要です。 Granite 設定マネージャーを使用して、移行を実行できます。</p> <p>移行を実行するには、「<code>/libs/settings/community/subscriptions</code>」ノードでプロパティ<code>mergeList</code>を<code>true</code>に設定し、<code>nt:unstructured</code>子ノードを追加します。</p> </td> 
+   <td><p>「<code>/apps/settings</code>". Granite 設定マネージャーを使用して、移行を実行できます。</p> <p>移行は、プロパティを設定して実行できます <code>mergeList</code> から <code>true</code> 」<code>/libs/settings/community/subscriptions</code>」ノードを追加し、 <code>nt:unstructured</code> 子ノード。</p> </td> 
   </tr>
   <tr>
    <td><strong>備考</strong></td> 
@@ -63,7 +63,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-### サブスクリプション設定  {#subscription-configurations}
+### サブスクリプション設定 {#subscription-configurations}
 
 <table> 
  <tbody>
@@ -77,7 +77,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>「<code>/apps/settings</code>」の下の新しいパスに移動する場合は、手動移行が必要です。 Granite 設定マネージャーを使用して、移行を実行できます。</p> <p>移行を実行するには、「<code>/libs/settings/community/subscriptions</code>」ノードでプロパティ<code>mergeList</code>を<code>true</code>に設定し、<code>nt:unstructured</code>子ノードを追加します。</p> </td> 
+   <td><p>「<code>/apps/settings</code>". Granite 設定マネージャーを使用して、移行を実行できます。</p> <p>移行は、プロパティを設定して実行できます <code>mergeList</code> から <code>true</code> 」<code>/libs/settings/community/subscriptions</code>」ノードを追加し、 <code>nt:unstructured</code> 子ノード。</p> </td> 
   </tr>
   <tr>
    <td><strong>備考</strong></td> 
@@ -86,7 +86,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-### 監視ワード設定  {#watchwords-configurations}
+### 監視ワード設定 {#watchwords-configurations}
 
 <table> 
  <tbody>
@@ -100,7 +100,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td>Communities 設定をクリーンアップするために、遅延移行タスクを利用できます。<br /> <p>タスクはウォッチワードを<code>/etc/watchwords</code>から<code>/conf/global/settings/community/watchwords</code>に移動します。</p> <p>カスタマイズした監視ワードがSCMに格納されている場合は、<code>/apps/settings/...</code>にデプロイする必要があります。優先されるオーバーレイ<code>/conf/global/settings/...</code>設定がないことを確認する必要があります。</p> <p>移行タスクにより、<code>/etc</code>の場所が削除されます。</p> </td> 
+   <td>Communities 設定をクリーンアップするために、遅延移行タスクを利用できます。<br /> <p>タスクはウォッチワードを <code>/etc/watchwords</code> から <code>/conf/global/settings/community/watchwords</code>.</p> <p>カスタマイズした監視ワードが SCM に格納されている場合は、 <code>/apps/settings/...</code> そしてオーバーレイがないようにする必要があります <code>/conf/global/settings/...</code> 優先する設定です。</p> <p>移行タスクが削除されました <code>/etc</code> 場所。</p> </td> 
   </tr>
   <tr>
    <td><strong>備考</strong></td> 
@@ -109,7 +109,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-## 6.5 へのアップグレードまでにおこなう変更  {#prior-to-upgrade}
+## 6.5 へのアップグレードまでにおこなう変更 {#prior-to-upgrade}
 
 ### バッジ設定 {#badging-configurations}
 
@@ -121,7 +121,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
   </tr>
   <tr>
    <td><strong>新しい場所</strong></td> 
-   <td><p><strong>バッジルール：</strong></p> <p><code>/libs/settings/community/badging</code></p> <p><strong>バッジ画像：</strong></p> <p>デフォルトの画像の場合： <code>/etc/community/badging/images are moved to /libs/community/badging/images</code></p> <p>カスタム画像の場合： <code>/content/community/badging/images</code></p> <p> </p> </td> 
+   <td><p><strong>バッジルール：</strong></p> <p><code>/libs/settings/community/badging</code></p> <p><strong>バッジ画像：</strong></p> <p>デフォルト画像の場合： <code>/etc/community/badging/images are moved to /libs/community/badging/images</code></p> <p>カスタム画像の場合： <code>/content/community/badging/images</code></p> <p> </p> </td> 
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
@@ -129,11 +129,11 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
     <ol> 
      <li><strong>ツール</strong>の下の<strong>設定ブラウザー</strong>を使用して、サイトコンテキストバケットを作成します。</li> 
      <li>サイトのルートに移動します。</li> 
-     <li><code>cq:confproperty</code>を、すべての設定を保存するバケットパスに設定します。 同じ設定をサイトの「<strong>編集ウィザード - クラウド設定入力</strong>」でおこなうこともできます。</li> 
-     <li>関連するバッジルールとスコアルールを<code>/etc/community/*</code>から、前の手順で作成したサイトコンテキストバケットに移動します。</li> 
+     <li>設定 <code>cq:confproperty</code> を、すべての設定を保存するバケットのパスに設定します。 同じ設定をサイトの「<strong>編集ウィザード - クラウド設定入力</strong>」でおこなうこともできます。</li> 
+     <li>次の場所に関連するバッジルールとスコアルールを移動します： <code>/etc/community/*</code> を、前の手順で作成したサイトコンテキストバケットに追加します。</li> 
      <li>新しいルールの場所への相対参照を使用するように、サイトルートのバッジルールおよびスコアルールプロパティを調整します。 
       <ol> 
-       <li>例えば、<code>cq:conf = /conf/we-retail</code>のプロパティの場合、ルールがこの新しいバケットに移動された場合は<code>badgingRules [] = community/badging/rules</code>です。</li> 
+       <li>例えば、 <code>cq:conf = /conf/we-retail</code>を、 <code>badgingRules [] = community/badging/rules</code> （ルールがこの新しいバケットに移動された場合）。</li> 
       </ol> </li> 
      <li>同様に、バッジルールノードのスコアルールへの参照も相対パスに変更します。</li> 
     </ol> <p> </p> <p>最後に、リソースを削除してクリーンアップします <code>/etc/community/badging</code></p> </td> 
@@ -145,7 +145,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-### 従来のコミュニティコンソールデザイン  {#classic-communities-console-designs}
+### 従来のコミュニティコンソールデザイン {#classic-communities-console-designs}
 
 <table> 
  <tbody>
@@ -168,7 +168,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-### Facebook ソーシャルログイン設定  {#facebook-social-login-configurations}
+### Facebook ソーシャルログイン設定 {#facebook-social-login-configurations}
 
 <table> 
  <tbody>
@@ -188,9 +188,9 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
      <li>以前の場所にある既存の設定を新しい場所に移行します。
       <ol> 
        <li><strong>ツール／クラウドサービス／Facebook ソーシャルログイン設定</strong>で、AEM オーサリング UI を使用して新しい Facebook ソーシャルログイン設定を手動で再作成します。<br /> か <br /> のどちらかにする必要があります。 </li> 
-       <li>新しいFacebookクラウド設定を以前の場所から適切な新しい場所（<code>/conf/global or /conf/&lt;tenant&gt;</code>の下）にコピーします。</li> 
+       <li>新しいFacebookクラウド設定を以前の場所から適切な新しい場所（の下）にコピーします。 <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li> 
       </ol> </li> 
-     <li>新しいFacebook Socialログイン設定を参照するようにAEM Communitiesサイトのルートを更新します。それには、 <code>[cq:Page]/jcr:content@cq:conf</code>プロパティを新しい場所の絶対パスに設定します。</li> 
+     <li>新しいAEM Communities Social ログイン設定を参照するように、 Facebookサイトのルートを更新するには、 <code>[cq:Page]/jcr:content@cq:conf</code> プロパティを新しい場所の絶対パスに設定します。</li> 
      <li>新しい場所を参照するように更新した AEM Communities サイトのルートから、従来の Facebook Connect クラウドサービスの関連付けを解除します。</li> 
     </ol> </td> 
   </tr>
@@ -201,7 +201,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-### 言語オプション設定  {#language-options-configurations}
+### 言語オプション設定 {#language-options-configurations}
 
 <table> 
  <tbody>
@@ -224,7 +224,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-### Pinterest ソーシャルログイン設定  {#pinterest-social-login-configurations}
+### Pinterest ソーシャルログイン設定 {#pinterest-social-login-configurations}
 
 <table> 
  <tbody>
@@ -244,9 +244,9 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
      <li>以前の場所にある既存の設定を新しい場所に移行します。
       <ol> 
        <li><strong>ツール／クラウドサービス／Pinterest ソーシャルログイン設定</strong>で、AEM オーサリング UI を使用して新しい Pinterest ソーシャルログイン設定を手動で再作成します。<br /> または</li> 
-       <li>新しいPinterestクラウド設定を以前の場所から<code>/conf/global or /conf/&lt;tenant&gt;</code>の下の適切な新しい場所にコピーします。</li> 
+       <li>新しいPinterestクラウド設定を以前の場所からの適切な新しい場所 ( <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li> 
       </ol> </li> 
-     <li>新しいPinterest Socialログイン設定を参照するようにAEM Communitiesサイトのルートを更新します。それには、 <code>[cq:Page]/jcr:content@cq:conf</code>プロパティを新しい場所の絶対パスに設定します。</li> 
+     <li>AEM Communities Site のルートを更新し、新しいPinterest Social ログイン設定を参照するように、 <code>[cq:Page]/jcr:content@cq:conf</code> プロパティを新しい場所の絶対パスに設定します。</li> 
      <li>新しい場所を参照するように更新した AEM Communities サイトのルートから、従来の Pinterest Connect クラウドサービスの関連付けを解除します。</li> 
     </ol> </td> 
   </tr>
@@ -257,7 +257,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-### スコアリング設定  {#scoring-configurations}
+### スコアリング設定 {#scoring-configurations}
 
 <table> 
  <tbody>
@@ -271,17 +271,17 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>新しいリポジトリ構造に合わせるために、スコアルールを<code>/apps/settings/</code>または/に保存できます。<code>conf/.../settings</code></p> 
+   <td><p>新しいリポジトリ構造に合わせるために、スコア付けルールを <code>/apps/settings/</code> または/<code>conf/.../settings</code></p> 
     <ol> 
-     <li><code>/apps/settings</code>の場合、これはSCMで管理されるグローバルルールまたはデフォルトルールとして機能します。</li> 
-    </ol> <p>CRXDE Liteを使用して、<code>/conf/</code>でコンテキスト対応設定を作成します。</p> 
+     <li>の場合 <code>/apps/settings</code>を指定した場合、SCM で管理されるグローバルルールまたはデフォルトルールとして機能します。</li> 
+    </ol> <p>でのコンテキスト対応設定の作成 <code>/conf/</code> CRXDE Lite を使用する場合：</p> 
     <ol> 
-     <li>目的の<code>/conf/.../settings</code>場所<br />に設定を作成します。 </li> 
-     <li>コミュニティサイトには、<code>cq:conf </code>プロパティを設定する必要があります。
+     <li>目的ので設定を作成します。 <code>/conf/.../settings</code> 場所<br /> </li> 
+     <li>コミュニティサイトに <code>cq:conf </code>プロパティプロパティセット。
       <ol> 
-       <li><code>cq:conf</code>が設定されていない場合、スコアルールは、サイトのルートノードにあるプロパティ'<code>scoringRules</code>'の指定されたパスから直接読み取られます。次に例を示します。 <code>/content/we-retail/us/en/community/jcr:content</code></li> 
+       <li>指定しない場合 <code>cq:conf</code> が設定されている場合、スコア付けルールは、プロパティ「 」の指定されたパスから直接読み取られます<code>scoringRules</code>「 」をサイトのルートノードに配置します。例： <code>/content/we-retail/us/en/community/jcr:content</code></li> 
       </ol> </li> 
-    </ol> <p>クリーンアップ：リソースの削除 <code>/etc/community/scoring</code></p> </td> 
+    </ol> <p>クリーンアップ：リソースを削除 <code>/etc/community/scoring</code></p> </td> 
   </tr>
   <tr>
    <td><strong>備考</strong></td> 
@@ -290,7 +290,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
  </tbody>
 </table>
 
-### Twitter ソーシャルログイン設定  {#twitter-social-login-configurations}
+### Twitter ソーシャルログイン設定 {#twitter-social-login-configurations}
 
 <table> 
  <tbody>
@@ -310,9 +310,9 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
      <li>以前の場所にある既存の設定を新しい場所に移行します。
       <ol> 
        <li><strong>ツール／クラウドサービス／Twitter ソーシャルログイン設定</strong>で、AEM オーサリング UI を使用して新しい Twitter ソーシャルログイン設定を手動で再作成します。<br /> か <br /> のどちらかにする必要があります。 </li> 
-       <li>新しいTwitterクラウド設定を以前の場所から適切な新しい場所（<code>/conf/global or /conf/&lt;tenant&gt;</code>の下）にコピーします。</li> 
+       <li>新しいTwitterクラウド設定を以前の場所から適切な新しい場所（の下）にコピーします。 <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li> 
       </ol> </li> 
-     <li>新しいTwitter Socialログイン設定を参照するようにAEM Communitiesサイトのルートを更新します。それには、 <code>[cq:Page]/jcr:content@cq:conf</code>プロパティを新しい場所の絶対パスに設定します。</li> 
+     <li>新しいAEM Communities Social ログイン設定を参照するように、 Twitterサイトのルートを更新するには、 <code>[cq:Page]/jcr:content@cq:conf</code> プロパティを新しい場所の絶対パスに設定します。</li> 
      <li>新しい場所を参照するように更新した AEM Communities サイトのルートから、従来の Twitter Connect クラウドサービスの関連付けを解除します。</li> 
     </ol> </td> 
   </tr>
@@ -341,7 +341,7 @@ AEM 6.4の親[リポジトリの再構築](/help/sites-deploying/repository-rest
   </tr>
   <tr>
    <td><strong>備考</strong></td> 
-   <td>既存のカスタムテンプレートは、次の場所に移動します。 <code>/conf/global/settings/community/template/&lt;groups/sites/functions&gt;</code></td> 
+   <td>既存のカスタムテンプレートの移動先 <code>/conf/global/settings/community/template/&lt;groups/sites/functions&gt;</code></td> 
   </tr>
  </tbody>
 </table>

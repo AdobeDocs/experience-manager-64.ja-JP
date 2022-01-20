@@ -1,8 +1,8 @@
 ---
 title: ページ編集時の注釈
-seo-title: ページ編集時の注釈
+seo-title: Annotations when Editing a Page
 description: Web サイトのページにコンテンツを追加すると、実際に公開する前に議論の対象となることが多くあります。このために、コンテンツに直接関係するコンポーネントの多くに注釈を追加することができます。
-seo-description: Web サイトのページにコンテンツを追加すると、実際に公開する前に議論の対象となることが多くあります。このために、コンテンツに直接関係するコンポーネントの多くに注釈を追加することができます。
+seo-description: Adding content to the pages of your website is often subject to discussions prior to it actually being published. To aid this, many components directly related to content allow you to add an annotation.
 page-status-flag: de-activated
 uuid: d8d6ba76-f2aa-4044-98bf-5d506742d90d
 contentOwner: Chris Bohnert
@@ -13,7 +13,7 @@ discoiquuid: 9bee0197-f275-49cc-922d-62cba826c4e5
 exl-id: 76e36d3b-4a8a-45ee-bb4e-28b150ec089c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '782'
 ht-degree: 93%
 
 ---
@@ -38,7 +38,7 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
 
 >[!NOTE]
 >
->要件に応じて、注釈が追加、更新または削除されたときに通知を送信するワークフローを開発することもできます。
+>必要に応じて、注釈が追加、更新または削除されたときに通知を送信するワークフローを開発することもできます。
 
 ## 注釈 {#annotations}
 
@@ -83,7 +83,6 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
 >
 
 
-
 スケッチは、注釈の機能の 1 つであり、ブラウザーウィンドウ（表示部分）のどこにでも、簡単な線図を作成できます。
 
 ![chlimage_1-138](assets/chlimage_1-138.png)
@@ -97,7 +96,7 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
 
    * 直線
 
-      `ALT`キーを押しながら、始点と終点をクリックします。ダブルクリックで終了します。
+      抑える `ALT` そして、始点と終点をクリックします。ダブルクリックで終了します。
 
 * スケッチモードの終了後、スケッチ線をクリックすると、そのスケッチが選択されます。
 * スケッチを移動するには、スケッチを選択して、必要な位置までドラッグします。

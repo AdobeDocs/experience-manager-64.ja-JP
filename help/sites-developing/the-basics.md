@@ -45,7 +45,7 @@ Java コンテンツリポジトリー（JCR）の規格である [JSR 283](http
 
 仕様を主導しているのは、Adobe Research（スイス）AG です。
 
-[JCR API 2.0](https://www.adobe.io/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) パッケージ、javax.jcr。&amp;ast;は、リポジトリコンテンツへの直接アクセスおよび操作に使用されます。
+この [JCR API 2.0](https://www.adobe.io/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) パッケージ、javax.jcr。&amp;ast;は、リポジトリコンテンツへの直接アクセスと操作に使用されます。
 
 ## Experience Server（CRX）と Jackrabbit {#experience-server-crx-and-jackrabbit}
 
@@ -106,17 +106,17 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 |---|---|---|---|---|---|---|---|---|
 | https:// | myhost | tools/spy | .printable.a4. | html | ／ | a/b | ? | x=12 |
 
-**** protocolHTTP
+**protocol** HTTP
 
-**** Web サイトの hostName。
+**ホスト** Web サイトの名前。
 
-**content** path レンダリングするコンテンツを指定する path。拡張機能と組み合わせて使用されます。この例では、tools/spy.htmlに変換します。
+**コンテンツパス** レンダリングするコンテンツを指定するパス。 拡張機能と組み合わせて使用されます。この例では、tools/spy.htmlに変換します。
 
-**selector(s)** コンテンツのレンダリングの代替方法に使用します。この例では、A4 形式のプリンターに適したバージョンです。
+**セレクター** コンテンツのレンダリングの代替方法に使用されます。この例では、A4 形式のプリンターに適したバージョンです。
 
-**** extensionContent format;また、レンダリングに使用するスクリプトを指定します。
+**拡張** コンテンツフォーマットまた、レンダリングに使用するスクリプトを指定します。
 
-**** suffixConfig は、追加情報を指定するために使用できます。
+**サフィックス** 追加情報を指定する場合に使用できます。
 
 **パラメーター** 動的コンテンツに必要なパラメーター。
 
@@ -137,8 +137,8 @@ Sling を使用して、特定のエンティティをレンダリングする�
 
 リクエストは分解され、必要な情報が抽出されます。リポジトリーで、リクエストされたリソース（コンテンツノード）の検索が行われます。
 
-* 最初の Sling は、要求で指定された場所にノードが存在するかどうかを確認します。例：`../content/corporate/jobs/developer.html`
-* ノードが見つからない場合は、拡張機能が削除され、検索が繰り返されます。例：`../content/corporate/jobs/developer`
+* 最初の Sling は、リクエストで指定された場所にノードが存在するかどうかを確認します。例： `../content/corporate/jobs/developer.html`
+* ノードが見つからない場合、拡張機能は削除され、検索が繰り返されます。例： `../content/corporate/jobs/developer`
 * それでもノードが見つからない場合、Sling は HTTP コード 404（Not Found）を返します。
 
 Sling では JCR ノード以外のものをリソースとすることもできますが、これは高度な機能です。
@@ -150,11 +150,11 @@ Sling では JCR ノード以外のものをリソースとすることもでき
 `sling:resourceType` によって指定されるパスは、次のいずれかです。
 
 * 絶対パス
-* 相対、設定パラメータに対して
+* 相対、設定パラメータに対する
 
    移植性を高めるため、相対パスが推奨されます。
 
-すべての Sling スクリプトは、`/apps` または `/libs` のサブフォルダーに保存され、この順序で検索されます（[ コンポーネントとその他の要素のカスタマイズ ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements) を参照）。
+すべての Sling スクリプトは、次の `/apps` または `/libs`（この順序で検索されます）。 [コンポーネントおよびその他の要素のカスタマイズ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)) をクリックします。
 
 その他の注意点は次のとおりです。
 
@@ -162,7 +162,7 @@ Sling では JCR ノード以外のものをリソースとすることもでき
 * 以下のような様々なスクリプトエンジンがサポートされています。
 
    * `.esp, .ecma`:ECMAScript(JavaScript) ページ（サーバー側実行）
-   * `.jsp`:Java Server Pages（サーバー側実行）
+   * `.jsp`:Java サーバーページ（サーバー側実行）
    * `.java`:Java Servlet Compiler（サーバー側実行）
    * `.jst`:JavaScript テンプレート（クライアント側実行）
 
@@ -170,11 +170,11 @@ AEM の特定のインスタンスでサポートされているスクリプト�
 
 また、Apache Sling では、他の一般的なスクリプトエンジン（Groovy、JRuby、Freemarker など）との統合がサポートされており、新しいスクリプトエンジンと統合する方法も提供されています。
 
-上記の例で、`sling:resourceType` が `hr/jobs` の場合は、次のようになります。
+上記の例を使用すると、 `sling:resourceType` が `hr/jobs` 次の場合：
 
 * GET/HEADリクエスト、および.html で終わる URL（デフォルトのリクエストタイプ、デフォルトの形式）
 
-   スクリプトは/apps/hr/jobs/jobs.espになります。sling:resourceType の最後のセクションがファイル名を形成します。
+   スクリプトは/apps/hr/jobs/jobs.espになります。sling:resourceType の最後のセクションがファイル名となります。
 
 * POST 要求（GET/HEAD を除くすべての要求タイプ。メソッド名は大文字にする必要があります）
 
@@ -192,13 +192,13 @@ AEM の特定のインスタンスでサポートされているスクリプト�
 
    セレクターを使用して、同じコンテンツを別の形式で表示できます。例：プリンターに適したバージョン、rss フィード、概要など。
 
-   プリンターに適したバージョンを見ると、セレクターが *print* になります。例： `../content/corporate/jobs/developer.print.html`
+   プリンターに適したバージョンでセレクターが *印刷*;次に示すように `../content/corporate/jobs/developer.print.html`
 
    スクリプトは `/apps/hr/jobs/jobs.print.esp` です。セレクターがスクリプト名に追加されます。
 
 * sling:resourceType が定義されていない場合は、次のようになります。
 
-   * コンテンツパスは、適切なスクリプトの検索に使用されます（パスベースの ResourceTypeProvider がアクティブな場合）。
+   * コンテンツパスは、適切なスクリプトの検索に使用されます（パスに基づく ResourceTypeProvider がアクティブな場合）。
 
       例えば、`../content/corporate/jobs/developer.html` のスクリプトは、`/apps/content/corporate/jobs/` で検索を生成します。
 
@@ -206,7 +206,7 @@ AEM の特定のインスタンスでサポートされているスクリプト�
 
 * スクリプトがまったく見つからない場合は、デフォルトのスクリプトが使用されます。
 
-   デフォルトのレンディションは、現在、プレーンテキスト (.txt)、HTML(.html)、JSON(.json) としてサポートされています。すべてのノードのプロパティがリストされます（適切な形式）。 拡張子.res のデフォルトのレンディション、またはリクエスト拡張子のないリクエストは、（可能な場合は）リソースをスプールします。
+   デフォルトのレンディションは、現在、プレーンテキスト (.txt)、HTML(.html) および JSON(.json) としてサポートされています。すべてに、ノードのプロパティが（適切な形式で）リストされます。 拡張子.res のデフォルトのレンディション、またはリクエスト拡張子のないリクエストは、（可能な場合は）リソースをスプールします。
 * HTTP エラー処理（コード 403 または 404）の場合、Sling は以下のいずれかの場所でスクリプトを検索します。
 
    * [カスタマイズスクリプト](/help/sites-developing/customizing-errorhandler-pages.md)の /apps/sling/servlet/errorhandler
@@ -265,8 +265,8 @@ AEM の特定のインスタンスでサポートされているスクリプト�
 
 * `/x`
    * は、`[ c, b, a, <default>]`
-* &lt;a0/の場合`/y`
-   * 階層は `[ c, a, <default>]` です。
+* 次のために `/y`
+   * 階層は `[ c, a, <default>]`
 
 これは、`/y` には `sling:resourceSuperType` プロパティがあるのに対して、`/x` にはなく、スーパータイプがリソースタイプから継承されているからです。
 
@@ -279,13 +279,13 @@ Sling 内では、スクリプトを直接呼び出しできません。REST サ
 * GET 以外の HTTP メソッドの自動処理。これには以下が含まれます。
 
    * Sling のデフォルトの実装で処理される POST、PUT、DELETE
-   * sling:resourceType の場所の `POST.jsp` スクリプト
+   * の `POST.jsp` sling:resourceType の場所のスクリプト
 
 * コードアーキテクチャに必要なクリーン性や明確な構造が失われます。これは大規模な開発では最も重要です。
 
 ### Sling API {#sling-api}
 
-Sling API パッケージ org.apache.sling を使用します。&amp;ast；およびタグライブラリ。
+これは、Sling API パッケージ org.apache.sling を使用します。&amp;ast;、およびタグライブラリ。
 
 ### sling:include を使用した既存の要素の参照 {#referencing-existing-elements-using-sling-include}
 
@@ -293,7 +293,7 @@ Sling API パッケージ org.apache.sling を使用します。&amp;ast；お�
 
 より複雑なスクリプト（集計スクリプト）は、複数のリソース（ナビゲーション、サイドバー、フッター、リストの要素など）へのアクセスが必要になる場合があり、そのために&#x200B;*リソース*&#x200B;を含めます。
 
-これをおこなうには、 sling:include(&quot;/&lt;path>/&lt;resource>&quot;) コマンドを使用します。これにより、参照元のリソースの定義が効果的に含まれます。次の文は、画像のレンダリング用の既存の定義を参照します。
+これを行うには、sling:include(&quot;/&lt;path>/&lt;resource>&quot;) コマンドを使用します。これにより、画像のレンダリング用の既存の定義を参照する次の文のように、参照されるリソースの定義が効果的に含まれます。
 
 ```xml
 %><sling:include resourceType="geometrixx/components/image/img"/><% 
@@ -334,11 +334,11 @@ OSGi は、モジュール式アプリケーションおよびライブラリを
 
 開発の際に関心の的となるものを以下に示します。
 
-**** Item 項目は、ノードまたはプロパティです。
+**項目** 項目は、ノードまたはプロパティです。
 
 Item オブジェクトの操作方法について詳しくは、javax.jcr Interface Item の [Javadocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html) を参照してください。
 
-**ノード（およびそのプロパティ）** ノードとそのプロパティは、JCR API 2.0 仕様 (JSR 283) で定義されています。コンテンツ、オブジェクト定義、レンダリングスクリプト、およびその他のデータを格納します。
+**ノード（およびそのプロパティ）** ノードとそのプロパティは、JCR API 2.0 仕様 (JSR 283) で定義されています。 コンテンツ、オブジェクト定義、レンダリングスクリプトおよびその他のデータを格納します。
 
 ノードがコンテンツ構造を定義し、ノードのプロパティに実際のコンテンツおよびメタデータが格納されます。
 
@@ -350,23 +350,23 @@ Item オブジェクトの操作方法について詳しくは、javax.jcr Inter
 
 `PropertyIterator properties = currentNode.getProperties();`
 
-currentNode は現在のノードオブジェクトです。
+currentNode が現在のノードオブジェクトである場合。
 
 Node オブジェクトの操作方法について詳しくは、[Javadocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html) を参照してください。
 
-**** WidgetIn AEMでは、すべてのユーザー入力はウィジェットで管理されます。多くの場合、コンテンツの編集を制御するために使用されます。
+**Widget** AEMでは、すべてのユーザー入力はウィジェットで管理されます。 多くの場合、コンテンツの一部の編集を制御するために使用されます。
 
 ダイアログはウィジェットを組み合わせて構築されます。
 
 AEM は、ウィジェットの ExtJS ライブラリを使用して開発されました。
 
-**** DialogA ダイアログは特殊なタイプのウィジェットです。
+**ダイアログ** ダイアログは特別なタイプのウィジェットです。
 
 コンテンツを編集する際、AEM はアプリケーション開発者が定義したダイアログを使用します。一連のウィジェットを組み合わせて、関連するコンテンツの編集に必要なすべてのフィールドおよびアクションをユーザーに提示します。
 
 ダイアログは、メタデータの編集や、様々な管理ツールでも使用します。
 
-**** コンポーネントソフトウェアコンポーネントは、事前に定義されたサービスまたはイベントを提供し、他のコンポーネントと通信できるシステム要素です。
+**コンポーネント** ソフトウェアコンポーネントは、事前定義されたサービスまたはイベントを提供し、他のコンポーネントと通信できるシステム要素です。
 
 AEM 内では、コンポーネントは多くの場合、リソースのコンテンツをレンダリングする目的で使用されます。リソースがページである場合、それをレンダリングするコンポーネントは、トップレベルコンポーネントまたはページコンポーネントと呼ばれます。ただし、コンポーネントがコンテンツをレンダリングすることや、特定のリソースにリンクすることは、必須ではありません。例えば、ナビゲーションコンポーネントでは複数のリソースに関する情報が表示されます。
 
@@ -375,7 +375,7 @@ AEM 内では、コンポーネントは多くの場合、リソースのコン�
 * コンテンツのレンダリングに使用するコード
 * ユーザー入力および結果コンテンツの設定のためのダイアログ
 
-**** テンプレートテンプレートは、特定のタイプのページのベースとなります。「Web サイト」タブでページを作成する場合、ユーザーはテンプレートを選択する必要があります。 新しいページが作成され、このテンプレートをコピーします。
+**テンプレート** テンプレートは、特定のタイプのページのベースとなります。 「Web サイト」タブでページを作成する場合、ユーザーはテンプレートを選択する必要があります。 新しいページが作成され、このテンプレートをコピーします。
 
 テンプレートは、作成するページと同じ構造を持つノードの階層ですが、実際のコンテンツは含まれていません。
 
@@ -383,7 +383,7 @@ AEM 内では、コンポーネントは多くの場合、リソースのコン�
 
 **ページコンポーネント（トップレベルコンポーネント）** ページのレンダリングに使用するコンポーネント。
 
-**** PageA ページは、テンプレートの「インスタンス」です。
+**ページ** ページは、テンプレートの「インスタンス」です。
 
 ページには、タイプが cq:Page の階層ノードと、タイプが cq:PageContent のコンテンツノードが含まれます。コンテンツノードのプロパティ sling:resourceType は、ページのレンダリングに使用するページコンポーネントを指します。
 
@@ -391,15 +391,15 @@ AEM 内では、コンポーネントは多くの場合、リソースのコン�
 
 S`tring pageName = currentPage.getName();`
 
-currentPage は現在のページオブジェクトです。ページオブジェクトの操作について詳しくは、[Javadocs](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) を参照してください。
+currentPage が現在のページオブジェクトである場合。ページオブジェクトの操作について詳しくは、 [Javadocs](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html).
 
-**ページマ** ネージャーページマネージャーは、ページレベルの操作のためのメソッドを提供するインターフェイスです。
+**ページマネージャー** ページマネージャーは、ページレベルの操作用のメソッドを提供するインターフェイスです。
 
 例えば、リソースを含むページを取得するには、スクリプト内で次のコードを使用します。
 
 Page myPage = pageManager.getContainingPage(myResource);
 
-pageManager はページマネージャーオブジェクト、myResource はリソースオブジェクトです。ページマネージャーが提供するメソッドについて詳しくは、[Javadocs](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html) を参照してください。
+pageManager はページマネージャーオブジェクトで、 myResource はリソースオブジェクトです。ページマネージャーが提供するメソッドについて詳しくは、 [Javadocs](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html).
 
 ## リポジトリー内の構造 {#structure-within-the-repository}
 
@@ -417,7 +417,7 @@ pageManager はページマネージャーオブジェクト、myResource はリ
 
 * `/apps`
 
-   適用に関する事項には、Web サイトに固有のコンポーネント定義が含まれます。 開発するコンポーネントは、`/libs/foundation/components` で提供されている標準搭載のコンポーネントに基づくことができます。
+   アプリケーション関連には、Web サイトに固有のコンポーネント定義が含まれます。 開発するコンポーネントは、`/libs/foundation/components` で提供されている標準搭載のコンポーネントに基づくことができます。
 
 * `/content`
 
@@ -427,19 +427,19 @@ pageManager はページマネージャーオブジェクト、myResource はリ
 
 * `/home`
 
-   ユーザーおよびグループの情報。
+   ユーザーおよびグループ情報。
 
 * `/libs`
 
-   AEMのコアに属するライブラリと定義。 `/libs` 内のサブフォルダーは、検索やレプリケーションなど、標準のAEM機能を表します。 `/libs` 内のコンテンツは、AEMの動作に影響を与えるので、変更しないでください。 Web サイトに固有の機能は、`/apps` に基づいて開発する必要があります（[ コンポーネントとその他の要素のカスタマイズ ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements) を参照）。
+   AEMのコアに属するライブラリと定義です。 のサブフォルダー `/libs` は、検索やレプリケーションなど、標準搭載のAEM機能を表します。 のコンテンツ `/libs` はAEMの動作に影響するので、変更しないでください。 Web サイトに固有の機能は、以下の下で開発する必要があります。 `/apps` ( [コンポーネントおよびその他の要素のカスタマイズ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)) をクリックします。
 
 * `/tmp`
 
-   仮作業領域。
+   一時作業領域。
 
 * `/var`
 
-   変更され、システムによって更新されるファイル（監査ログ、統計、イベント処理など）。
+   変更され、システムによって更新されるファイル。（監査ログ、統計、イベント処理など）。
 
 ## 環境 {#environments}
 

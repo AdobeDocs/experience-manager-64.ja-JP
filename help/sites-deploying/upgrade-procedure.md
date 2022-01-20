@@ -1,8 +1,8 @@
 ---
 title: アップグレード手順
-seo-title: アップグレード手順
+seo-title: Upgrade Procedure
 description: AEM のアップグレード手順について説明します。
-seo-description: AEM のアップグレード手順について説明します。
+seo-description: Learn about the procedure you need to follow in order to upgrade AEM.
 uuid: 56fb6af7-6e5f-4288-822b-f40c4605a28b
 contentOwner: sarchiz
 topic-tags: upgrading
@@ -10,12 +10,12 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 discoiquuid: ba90b25f-f672-42c5-8b06-07bb32cc51de
 targetaudience: target-audience upgrader
-feature: アップグレード
+feature: Upgrading
 exl-id: e6092e80-3a39-4fde-8a94-084eee5fa8a9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 93%
+source-wordcount: '820'
+ht-degree: 94%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 93%
 
 AEM 環境をアップグレードする場合は、作成者とエンドユーザーのダウンタイムを最小化するために、オーサー環境とパブリッシュ環境のアップグレードのアプローチの違いを考慮する必要があります。このページでは、AEM 6.x のバージョンで現在実行されている AEM トポロジをアップグレードする手順の概要を説明します。オーサー層とパブリッシュ層および Mongo ベースと TarMK ベースのデプロイメントではプロセスが異なるので、各層およびマイクロカーネルは個別の節に記載されています。デプロイメントを実行するときは、最初にオーサー環境をアップグレードし、成功を確認してから、パブリッシュ環境をアップグレードすることをお勧めします。
 
-## TarMK のオーサー層  {#tarmk-author-tier}
+## TarMK のオーサー層 {#tarmk-author-tier}
 
 ### トポロジの開始 {#starting-topology}
 
@@ -44,7 +44,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. オーサーのレプリケーションエージェントを無効にします。
 1. [アップグレード前のメンテナンスタスク](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)を実行します。
 
-### アップグレードの実行  {#upgrade-execution-1}
+### アップグレードの実行 {#upgrade-execution-1}
 
 ![execute_upgrade](assets/execute_upgrade.jpg)
 
@@ -74,7 +74,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 
 この節で想定されるトポロジは、2 つ以上の MongoMK データベースを使用する 2 つ以上の AEM オーサーインスタンスを含む MongoMK オーサークラスターで構成されています。すべてのオーサーインスタンスは 1 つのデータストアを共有します。以下の手順は、S3 データストアとファイルデータストアの両方に適用できます。オーサーサーバーから TarMK パブリッシュファームへのレプリケーションが発生します。
 
-![mongoトポロジ](assets/mongo-topology.jpg)
+![mongo トポロジ](assets/mongo-topology.jpg)
 
 ### アップグレードの準備 {#preparation}
 
@@ -83,8 +83,8 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. コンテンツのオーサリングを停止します。
 1. バックアップ用のデータストアのクローンを作成します。
 1. 1 つの AEM オーサーインスタンス（プライマリオーサー）以外をすべて停止します。
-1. 1つのMongoDBノード以外をレプリカセット（プライマリMongoインスタンス）からすべて削除します。
-1. 単一のメンバーレプリカセットを反映するように、プライマリオーサー上の`DocumentNodeStoreService.cfg`ファイルを更新します。
+1. 1 つ以外の MongoDB ノードをレプリカセット（プライマリ Mongo インスタンス）からすべて削除します。
+1. を更新します。 `DocumentNodeStoreService.cfg` 単一のメンバレプリカセットを反映するプライマリオーサー上のファイル
 1. プライマリオーサーを再起動して、正常に再起動することを確認します。
 1. プライマリオーサーのレプリケーションエージェントを無効にします。
 1. プライマリオーサーインスタンスで[アップグレード前のメンテナンスタスク](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)を実行します。
@@ -100,7 +100,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 
 ### 成功した場合 {#successful-1}
 
-![モンゴセカンダリ](assets/mongo-secondaries.jpg)
+![モンゴ秒](assets/mongo-secondaries.jpg)
 
 1. アップグレードされた Mongo インスタンスに接続する新しい 6.3 オーサーインスタンスを作成します。
 1. クラスターから削除された MongoDB ノードを再構築します。
@@ -108,7 +108,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. オーサーインスタンスを 1 つずつ再起動します。
 1. クローン作成されたデータストアを削除します。
 
-### 失敗した場合（ロールバック） {#if-unsuccessful}
+### 失敗した場合（ロールバック）  {#if-unsuccessful}
 
 ![mongo-rollback](assets/mongo-rollback.jpg)
 
@@ -120,7 +120,7 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. セカンダリオーサーインスタンスを起動します。
 1. アップグレードされたオーサーインスタンス、Mongo ノードおよびデータストアをクリーンアップします。
 
-## TarMK パブリッシュファーム  {#tarmk-publish-farm}
+## TarMK パブリッシュファーム {#tarmk-publish-farm}
 
 ### TarMK パブリッシュファーム {#publish-farm}
 
@@ -174,4 +174,4 @@ AEM 環境をアップグレードする場合は、作成者とエンドユー�
 1. コンテンツのオーサリングを再開します。
 1. [アップグレード後のチェック](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)を実行します。
 
-![final](assets/final.jpg)
+![最終](assets/final.jpg)

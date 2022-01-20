@@ -1,8 +1,8 @@
 ---
 title: AEM Forms ワークスペースで使用する各種 API
-seo-title: AEM Forms ワークスペースで使用する各種 API
+seo-title: APIs used in AEM Forms workspace
 description: Public Java API、JavaScript API、および LiveCycle AEM Forms ワークスペースのメソッド、カスタマイズとオートメーションのために開示。
-seo-description: Public Java API、JavaScript API、および LiveCycle AEM Forms ワークスペースのメソッド、カスタマイズとオートメーションのために開示。
+seo-description: Public Java and JavaScript APIs and methods of LiveCycle AEM Forms workspace, exposed for customization and automation.
 uuid: 9602990e-8ac7-42eb-b507-50b3594055ba
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,12 +11,12 @@ discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 exl-id: 1d74fdb9-c118-45f7-93c6-116cacb2f1c4
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '997'
 ht-degree: 100%
 
 ---
 
-# AEM Forms ワークスペースで使用する 各種 API  {#apis-used-in-aem-forms-workspace}
+# AEM Forms ワークスペースで使用する 各種 API {#apis-used-in-aem-forms-workspace}
 
 AEM Forms ワークスペースでは次の API が使用されています。
 
@@ -115,7 +115,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>complete</td> 
    <td>ProcessManagementTaskService</td> 
-   <td>complete</td> 
+   <td>完了</td> 
    <td>タスクを完了し、タスクはプロセス設計に従って次の手順に渡されます。</td> 
   </tr>
   <tr>
@@ -139,7 +139,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>forward</td> 
    <td>ProcessManagementTaskService</td> 
-   <td>forward</td> 
+   <td>転送</td> 
    <td>別のユーザーにタスクを転送します。</td> 
   </tr>
   <tr>
@@ -157,7 +157,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>unlock</td> 
    <td>ProcessManagementTaskService</td> 
-   <td>unlock</td> 
+   <td>ロック解除</td> 
    <td>タスクをロック解除します。</td> 
   </tr>
   <tr>
@@ -175,7 +175,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>abandon</td> 
    <td>ProcessManagementTaskService</td> 
-   <td>aband</td> 
+   <td>離脱</td> 
    <td>タスクを削除します。</td> 
   </tr>
   <tr>
@@ -259,7 +259,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>getParticipatedProcesses</td> 
    <td>ProcessManagementProcessService</td> 
-   <td>getRentifedProcesses</td> 
+   <td>getRenitedProcesses</td> 
    <td>ログインユーザーが参加したすべてのプロセス名のリストを返します。</td> 
   </tr>
   <tr>
@@ -319,7 +319,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>initialize</td> 
    <td>ProcessManagementClientSessionService</td> 
-   <td>initialize</td> 
+   <td>初期化</td> 
    <td>必要に応じてアサーションを更新します。ユーザーを認証します。サーバー / クライアント情報のセッションパラメータを設定します。ユーザー情報およびポーリング間隔を返します。</td> 
   </tr>
   <tr>

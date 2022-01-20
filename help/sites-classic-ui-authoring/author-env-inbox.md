@@ -1,8 +1,8 @@
 ---
 title: インボックス
-seo-title: インボックス
+seo-title: Your Inbox
 description: AEM の様々な領域から通知を受け取ることができます。例えば、ページコンテンツに対して実行する必要のあるアクションを表す作業項目やタスクに関する通知を受け取ります。
-seo-description: AEM の様々な領域から通知を受け取ることができます。例えば、ページコンテンツに対して実行する必要のあるアクションを表す作業項目やタスクに関する通知を受け取ります。
+seo-description: You can receive notifications from various areas of AEM such as notification about work items or tasks that represent actions that you need to perform on page content.
 uuid: 90a3b4db-add9-47d4-a95d-fcc3863d6255
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 71f16254-336f-41bf-bf75-f69ba1051d59
 exl-id: e7111c21-1f38-4d0d-ac4b-c83133c0d8d6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '581'
 ht-degree: 95%
 
 ---
@@ -24,7 +24,7 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 通知のタイプで分類される 2 つのインボックスにこれらの通知を受け取ります。
 
 * 購読の結果として受け取る通知が表示されるインボックスについては、次のセクションで説明します。
-* ワークフロー項目用の専用のインボックスについては、[ワークフローへの参加](/help/sites-classic-ui-authoring/classic-workflows-participating.md)のドキュメントで説明しています。
+* ワークフロー項目用の専用インボックスについては、 [ワークフローへの参加](/help/sites-classic-ui-authoring/classic-workflows-participating.md) 文書。
 
 ## 通知の表示 {#viewing-your-notifications}
 
@@ -90,7 +90,7 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 1. 通知するページのパスを定義します。
 
    * 「**追加**」をクリックして、テーブルに新しい行を追加します。
-   * **パス**&#x200B;テーブルセルをクリックし、パス(例：`/content/docs`.
+   * 次をクリック： **パス** 表のセルを開き、パスを入力します。例： `/content/docs`.
    * サブツリーに属しているすべてのページについて通知するには、「**厳密?**」を「**いいえ**」に設定します。
 
       パスで定義されているページに対するアクションのみについて通知するには、「**厳密?**」を「**はい**」に設定します。
@@ -101,7 +101,7 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 
 1. 「**OK**」をクリックして設定を保存します。
 
-## 通知の処理  {#processing-your-notifications}
+## 通知の処理 {#processing-your-notifications}
 
 AEM インボックスに通知を受信するように選択すると、インボックスに通知が入るようになります。[通知を参照](#viewing-your-notifications)し、必要な通知を選択して、次の操作を実行できます。
 

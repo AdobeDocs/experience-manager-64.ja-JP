@@ -1,8 +1,8 @@
 ---
 title: レイアウトデザイン
-seo-title: レイアウトデザイン
+seo-title: Layout Design
 description: ここでは、レターやインタラクティブ通信で使用するレイアウトの作成方法について説明します。
-seo-description: レイアウトデザイン 詳細では、レターやインタラクティブ通信に使用するレイアウトを作成する方法を説明します。
+seo-description: Layout Design Details explains how you can create layouts to be used for your letters or Interactive Communications.
 uuid: b21af474-07f5-4bfe-af7d-0c322e2452ae
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -12,8 +12,8 @@ feature: Correspondence Management
 exl-id: 92f90e7f-2869-4201-a927-47de1fc08f5c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 93%
+source-wordcount: '1285'
+ht-degree: 94%
 
 ---
 
@@ -26,7 +26,7 @@ XFA フォームテンプレートまたは XDP は、以下の項目のテン�
 
 * レイアウトフラグメント
 
-XDP は Adobe Forms Designer でデザインできます。この記事では、フォームフィールドやターゲット領域を使用する場所、レイアウトフラグメントを使用するタイミングなど、効果的な通信やインタラクティブ通信を作成するためのXDPのデザイン方法について詳しく説明します。
+XDP は Adobe Forms Designer でデザインできます。この記事では、フォームフィールドやターゲット領域を使用する場所、レイアウトフラグメントを使用するタイミングなど、効果的な通信/インタラクティブ通信を作成するための XDP のデザイン方法について詳しく説明します。
 
 ## レターまたはインタラクティブ通信の印刷チャネル用のレイアウトを作成する {#creating-a-layout-for-letters-or-for-interactive-communications-print-channel}
 
@@ -56,13 +56,13 @@ XDP は Adobe Forms Designer でデザインできます。この記事では、
 1. レターまたはインタラクティブ通信内で使用されるレイアウトとすべてのフラグメントレイアウトでは、そのレターまたはインタラクティブ通信と同じスキーマが使用されます。
 1. データの入力が必要なフィールドはすべて、スキーマに連結されます。
 
-## 関連付け可能なフィールドの作成  {#creating-relatable-fields}
+## 関連付け可能なフィールドの作成 {#creating-relatable-fields}
 
 デフォルトで、すべてのフィールドは他の多様なデータソースと関連付け可能と見なされています。レイアウトに、データソースと関連付け可能ではないフィールドが含まれる場合は、そのフィールドに「_int」（internal）というサフィックスの名前を付けます（例えば、pageCount_int）。
 
 関連付け可能なフィールドには、次の要件があります。
 
-* XFA &lt;field>または&lt;exclGroup>
+* XFA である &lt;field> または &lt;exclgroup>
 * XFA 連結参照を持っている
 * &lt;exclGroup> の場合、少なくとも 1 つの子ラジオボタンフィールドが必要（それ以外の場合、値の型は決定できません）
 
@@ -74,13 +74,13 @@ XDP は Adobe Forms Designer でデザインできます。この記事では、
 
 * 名前に「_int」サフィックスが含まれる
 * 連結が「なし」に設定されている
-* &lt;exclGroup>要素の子である
+* 子どもである &lt;exclgroup> 要素
 
 関連付け可能なフィールドが上記の条件を満たす限り、レイアウトの任意の位置、任意の深さの入れ子に配置できます。マスターページ内で関連付け可能なフィールドを使用できます。
 
 レイアウトの設定で、フィールドはターゲット領域のサブフォームよりも柔軟に使用できますが、単一の値の型に関連付けられています。フィールドのサイズを大きくしたり、幅と高さを固定したりできます。解決されたモジュールまたはルールの結果は、フィールドにプッシュされます。
 
-## サブフォームとテキストフィールドを使用するタイミングの判断  {#deciding-when-to-use-subforms-and-text-nbsp-fields}
+## サブフォームとテキストフィールドを使用するタイミングの判断 {#deciding-when-to-use-subforms-and-text-nbsp-fields}
 
 トップダウンの縦型フローレイアウトの複数モジュールコンテンツ（複数の段落や画像）をキャプチャする場合、サブフォームを使用します。このレイアウトは、コンテンツに合わせてサブフォームの高さが増加することに対処する必要があります。サブフォームまたはターゲットに関連付けられるコンテンツが、レイアウトでサブフォーム用に予約したスペースを超えないと確信できない場合、フローされるサブフォームコンテナ内の子としてサブフォームを作成します。このプロセスによって、サブフォームの下のレイアウトオブジェクトは、サブフォームの成長に合わせて下方にフローします。
 
@@ -119,12 +119,12 @@ XDP は Adobe Forms Designer でデザインできます。この記事では、
  </tbody> 
 </table>
 
-## 繰り返し要素の設定  {#setting-up-repetitive-elements}
+## 繰り返し要素の設定 {#setting-up-repetitive-elements}
 
 会社のロゴや住所などの要素が、レターまたはインタラクティブ通信のすべてのページに表示されている場合は、それらの要素用のフォームフィールドを作成してマスターページ上に配置します。これらのフィールドには名前（フィールド名）の連結を使用します。
 
-## サーバーレンダリング形式の指定  {#specify-the-server-nbsp-render-format}
+## サーバーレンダリング形式の指定 {#specify-the-server-nbsp-render-format}
 
 ダイナミック XML フォームに対して、レイアウトのサーバーレンダリング形式を使用する必要があります。この形式を使用しないと、このレイアウトをベースとするレターやインタラクティブ通信が正しくレンダリングされません。デフォルトで、ADEP Designer のサーバーレンダリング形式はダイナミック XML フォームに設定されています。正しい形式を使用していることを確認するには、次の手順を実行します。
 
-* Designerで、**[!UICONTROL ファイル/フォームのプロパティ/デフォルト]**&#x200B;をクリックし、「PDFのレンダリング/フォーマット」設定が「ダイナミックXMLフォーム」に設定されていることを確認します。
+* Designer で、 **[!UICONTROL ファイル/フォームのプロパティ/デフォルト]**&#x200B;をクリックし、「PDFのレンダリング/形式」設定が「動的 XML フォーム」に設定されていることを確認します。

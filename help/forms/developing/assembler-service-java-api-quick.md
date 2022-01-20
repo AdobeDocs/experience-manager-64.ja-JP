@@ -1,8 +1,8 @@
 ---
-title: AssemblerサービスJava API QuickStart(SOAP)
-seo-title: AssemblerサービスJava API QuickStart(SOAP)
-description: Assemblerサービスを使用したPDFドキュメントのアセンブリ、PDFドキュメントのディスアセンブリ、暗号化されたPDFドキュメントのアセンブリ、通し番号付きPDFドキュメントのアセンブリ、非対話型PDFドキュメントのアセンブリ、PDFドキュメントの検証、DDXドキュメントのブックマークのアセンブリ、複数のポートフォリオのアセンブリxdpフラグメント。
-seo-description: Assemblerサービスを使用したPDFドキュメントのアセンブリ、PDFドキュメントのディスアセンブリ、暗号化されたPDFドキュメントのアセンブリ、通し番号付きPDFドキュメントのアセンブリ、非対話型PDFドキュメントのアセンブリ、PDFドキュメントの検証、DDXドキュメントのブックマークのアセンブリ、複数のポートフォリオのアセンブリxdpフラグメント。
+title: Assembler サービス Java API QuickStart(SOAP)
+seo-title: Assembler Service Java API QuickStart(SOAP)
+description: Assembler サービスを使用して、PDFドキュメントのPDF、PDFドキュメントの分解、暗号化PDFドキュメントの組み立て、通し番号付きPDFドキュメントの組み立て、非対話PDFドキュメントの組み立て、DDX ドキュメントの検証、DDX ドキュメントの組み立て、複数の XDP フラグメントの組み立てを行います。
+seo-description: Use the Assembler service to assemble a PDF document, disassemble a PDF document, assemble an encrypted PDF document, assemble a PDF document with bates numbering, assemble a non-interactive PDF document, determine whether a document is PDF/A compliant, validate DDX documents, assemble PDF documents with bookmarks, create a DDX document dynamically, assemble PDF portfolios, and assemble multiple XDP fragments.
 uuid: 33ad5f7a-4f4c-4e72-937d-85891498a80e
 contentOwner: admin
 content-type: reference
@@ -13,46 +13,46 @@ role: Developer
 exl-id: 2efc0a84-4808-47dd-a859-76caf98b1872
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1057'
 ht-degree: 0%
 
 ---
 
-# AssemblerサービスJava API QuickStart(SOAP) {#assembler-service-java-api-quickstart-soap}
+# Assembler サービス Java API QuickStart(SOAP) {#assembler-service-java-api-quickstart-soap}
 
-AssemblerサービスでJava APIクイックスタート(SOAP)を使用できる
+Assembler サービスで Java API Quick Start(SOAP) を使用できる
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントのディスアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントの分解](assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した暗号化されたPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用した暗号化されたPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したベート番号付きPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントのベイト番号付きアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した非インタラクティブPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用した非インタラクティブPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したドキュメントがPDF/Aに準拠しているかどうかの判断](assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したドキュメントのPDF/A 準拠の確認](assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したDDXドキュメントの検証](assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用した DDX ドキュメントの検証](assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したしおりを使用したPDFドキュメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントのブックマークとのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したDDXドキュメントの動的な作成](assembler-service-java-api-quick.md#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用した DDX ドキュメントの動的な作成](assembler-service-java-api-quick.md#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFPortfolioのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したPDFPortfolioのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した複数のXDPフラグメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用した複数の XDP フラグメントのアセンブリ](assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「 AEM Formsによるプログラミング」にあるクイックスタートは、JBoss Application ServerとMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
+>「 AEM Formsのプログラミング」にあるクイックスタートは、JBoss Application Server とMicrosoft Windows オペレーティングシステムにデプロイされるForms Server に基づいています。 ただし、UNIX などの別のオペレーティング・システムを使用している場合は、Windows 固有のパスを、該当するオペレーティング・システムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 詳しくは、 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}を使用したPDFドキュメントのアセンブリ
+## クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例では、* map.pdf*および&#x200B;*directions.pdf*&#x200B;という2つのPDFソースドキュメントを1つのPDFドキュメントにマージします。 単一のPDFドキュメントの名前は&#x200B;*AssemblerResultPDF.pdf*&#x200B;です。 DDXドキュメントの名前は&#x200B;*shell.xml*&#x200B;です。 （[PDFドキュメントのプログラムによるアセンブリ](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents)を参照）。
+次の Java コードの例では、* map.pdf*という名前の 2 つのPDFソースドキュメントを結合します。 *directions.pdf* を単一のPDF文書に 単一PDF文書の名前は *AssemblerResultPDF.pdf*. DDX ドキュメントの名前は次のとおりです。 *shell.xml*. ( [プログラムによるPDF文書の作成](/help/forms/developing/assembling-pdf-documents.md#programmatically-assembling-pdf-documents).)
 
 ```as3
  /* 
@@ -194,9 +194,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}を使用したPDFドキュメントのディスアセンブリ
+## クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントの分解 {#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例では、*AssemblerResultPDF.pdf*&#x200B;という名前のPDFドキュメントを分解します。 DDXドキュメントの名前は&#x200B;*shell_disassemble.xml*&#x200B;です。 分解された各PDFドキュメントには、*ResultPDF[Number].pdf*&#x200B;という名前が付けられます。 つまり、最初に分解されたPDFドキュメントの名前は&#x200B;*ResultPDF1.pdfになります。* このコード例で使用される *shell_disassemble.* xmlDDXドキュメントについて詳しくは、「PDFドキュメントのプログラムによるディスアセンブリ [](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents)」を参照してください。
+次の Java コードの例では、という名前のPDFドキュメントを分解します。 *AssemblerResultPDF.pdf*. DDX ドキュメントの名前は *shell_disassemble.xml*. 分解された各PDF文書には、 *ResultPDF[数値].pdf*. つまり、最初に分解されたPDFドキュメントの名前は *ResultPDF1.pdf* 詳しくは、 *shell_disassemble.xml* このコードの例で使用されている DDX ドキュメントについては、 [プログラムによるPDFドキュメントの分解](/help/forms/developing/assembling-pdf-documents.md#programmatically-disassembling-pdf-documents).
 
 ```as3
  /* 
@@ -333,9 +333,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api}を使用した暗号化されたPDFドキュメントのアセンブリ
+## クイックスタート（SOAP モード）:Java API を使用した暗号化されたPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、パスワードで暗号化されたPDFドキュメントをアセンブルします。 保護されていないPDFドキュメントの名前は&#x200B;*Loan.pdf*&#x200B;です。 DDXドキュメントの名前は&#x200B;*shell_Encrypt.xml*&#x200B;です。 暗号化されたPDFドキュメントの名前は&#x200B;*AssemblerEncryptedPDF.pdf*&#x200B;です。 （[暗号化されたPDFドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents)を参照）。
+次の Java コードの例は、パスワードで暗号化されたPDFドキュメントを構築します。 保護されていないPDFドキュメントの名前はです *Loan.pdf*. DDX ドキュメントの名前は *shell_Encrypt.xml*. 暗号化されたPDFドキュメントの名前はです *AssemblerEncryptedPDF.pdf*. ( [暗号化されたPDF文書の作成](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents).)
 
 ```as3
  /* 
@@ -456,9 +456,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}を使用したベート番号付きPDFドキュメントのアセンブリ
+## クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントのベイト番号付きアセンブリ {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}
 
-次のJavaコードの例は、一意のページ識別子（通し番号付け）を使用してPDFドキュメントをアセンブリします。 DDXドキュメントの名前は&#x200B;*shell_Bates.xml*&#x200B;です。 Assemblerサービスから返されたPDFドキュメントは、*AssemblerResultBatesPDF.pdf*&#x200B;という名前のPDFファイルとして保存されます。 （[ベイツナンバリングを使用したドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering)を参照）。
+次の Java コードの例では、一意のPDF識別子（ベイト番号付け）を使用してページドキュメントを構築しています。 DDX ドキュメントの名前は *shell_Bates.xml*. Assembler サービスから返されたPDFドキュメントは、という名前のPDFファイルとして保存されます。 *AssemblerResultBatesPDF.pdf*. ( [ベイツナンバリングを使用したドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering).)
 
 ```as3
  /* 
@@ -614,9 +614,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api}を使用した非インタラクティブPDFドキュメントのアセンブリ
+## クイックスタート（SOAP モード）:Java API を使用した非インタラクティブPDFドキュメントのアセンブリ {#quick-start-soap-mode-assembling-a-non-interactive-pdf-document-using-the-java-api}
 
-次のJavaコードの例は、非インタラクティブPDFドキュメントをアセンブリします。 Assemblerサービスに渡されるインタラクティブPDFドキュメントの名前は&#x200B;*Loan.pdf*&#x200B;です。 DDXドキュメントの名前は&#x200B;*shell_XFA.xml*&#x200B;です。 非インタラクティブPDFドキュメントは、*AssembleNonInteractivePDF.pdf*&#x200B;という名前のPDFファイルとして保存されます。 （[非インタラクティブPDFドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-non-interactive-pdf-documents)を参照）。
+次の Java コードの例は、非インタラクティブPDFドキュメントをアセンブリします。 Assembler サービスに渡されるインタラクティブPDFドキュメントの名前はとなります *Loan.pdf*. DDX ドキュメントの名前は *shell_XFA.xml*. 非インタラクティブPDFドキュメントは、 *AssembleNonInteractivePDF.pdf*. ( [非インタラクティブPDFドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-non-interactive-pdf-documents).)
 
 ```as3
  /* 
@@ -738,9 +738,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}を使用したドキュメントがPDF/Aに準拠しているかどうかの判断
+## クイックスタート（SOAP モード）:Java API を使用したドキュメントのPDF/A 準拠の確認 {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
 
-次のJavaコードの例を使用すると、入力PDFドキュメントがPDF/Aに準拠しているかどうかを判断できます。 Assemblerサービスに渡される入力PDFドキュメントの名前は&#x200B;*Loan.pdf*&#x200B;です。 DDXドキュメントの名前はshell_PDFA.xmlです。 Assemblerサービスから返され、入力PDFドキュメントがPDF/Aに準拠しているかどうかを指定するXMLドキュメントを、result.xmlという名前のXMLファイルとして保存します。 このコード例で使用される&#x200B;*shell_PDFA.xml* DDXドキュメントについて詳しくは、[ドキュメントがPDF/Aに準拠しているかどうかの判断](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant)を参照してください。
+次の Java コードの例では、入力PDFドキュメントがPDF/A に準拠しているかどうかを判断します。 Assembler サービスに渡される入力PDFドキュメントは、という名前が付けられます *Loan.pdf*. DDX ドキュメントの名前は shell_PDFA.xml です。 Assembler サービスから返され、入力PDFドキュメントがPDF/A に準拠しているかどうかを指定する XML ドキュメントは、result.xml という名前の XML ファイルとして保存されます。 詳しくは、 *shell_PDFA.xml* このコードの例で使用されている DDX ドキュメントについては、 [ドキュメントがPDF/A に準拠しているかどうかの判断](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant).
 
 ```as3
  /* 
@@ -884,9 +884,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-validating-ddx-documents-using-the-java-api}を使用したDDXドキュメントの検証
+## クイックスタート（SOAP モード）:Java API を使用した DDX ドキュメントの検証 {#quick-start-soap-mode-validating-ddx-documents-using-the-java-api}
 
-次のJavaコードの例を使用して、*bookmarkDDX.xml*&#x200B;という名前のファイルに基づいてDDXドキュメントを検証します。 （[DDXドキュメントの検証](/help/forms/developing/assembling-pdf-documents.md#validating-ddx-documents)を参照）。
+次の Java コードの例では、という名前のファイルに基づいて DDX ドキュメントを検証します。 *bookmarkDDX.xml*. ( [DDX ドキュメントの検証](/help/forms/developing/assembling-pdf-documents.md#validating-ddx-documents).)
 
 ```as3
  /* 
@@ -1015,9 +1015,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}を使用したしおりでのPDFドキュメントのアセンブリ
+## クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントのブックマークとのアセンブリ {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}
 
-次のJavaコードの例は、しおりを含むPDFドキュメントをアセンブリします。 DDXドキュメントの名前は&#x200B;*bookmarkDDX.xml*&#x200B;です。 PDFドキュメントに追加するしおりを記述するしおりXMLドキュメントの名前は、bookmarks.xmlです。 結果のPDFドキュメントは、AssemblerResultBookmarks.pdfという名前のPDFファイルとして保存されます。 （[しおりを使用したPDFドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks)を参照）。
+次の Java コードの例は、ブックマークを含むPDFドキュメントを構築します。 DDX ドキュメントの名前は次のとおりです。 *bookmarkDDX.xml*. ブックマークドキュメントに追加するブックマークを示すPDFXML ドキュメントの名前は、bookmarks.xml です。 結果のPDFドキュメントは、AssemblerResultBookmarks.pdf という名前のPDFファイルとして保存されます。 ( [ブックマークを使用したPDFドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks).)
 
 ```as3
  /* 
@@ -1185,15 +1185,14 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api}を使用したDDXドキュメントの動的な作成
+## クイックスタート（SOAP モード）:Java API を使用した DDX ドキュメントの動的な作成 {#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api}
 
-次のJavaコードの例では、PDFドキュメントをディスアセンブリするDDXドキュメントを動的に作成します。 入力PDFドキュメントのレベル1のブックマークごとに、新しいPDFドキュメントが作成されます。 このコード例には、2つのユーザー定義メソッドが含まれています。
+次の Java コードの例では、DDX ドキュメントを動的に作成し、そのドキュメントをPDFします。 新しいPDFドキュメントは、入力PDFドキュメントのレベル 1 のブックマークごとに作成されます。 このコードの例には、次の 2 つのユーザー定義メソッドが含まれています。
 
-* `createDDX`:Assemblerサービスに送信されるDDXドキュメントを表すオブジェクトを作成しま `org.w3c.dom.Document` す。このユーザー定義メソッドは、`org.w3c.dom.Document`オブジェクトを返します。
-* `convertDDX`:オブジェクト `org.w3c.dom.Document` をオブジェクトに変 `com.adobe.idp.Document` 換します。このメソッドは、`org.w3c.dom.Document`オブジェクトを入力パラメーターとして受け取り、`com.adobe.idp.Document`オブジェクトを返します。
+* `createDDX`:を `org.w3c.dom.Document` Assembler サービスに送信される DDX ドキュメントを表すオブジェクト。 このユーザー定義メソッドは、 `org.w3c.dom.Document` オブジェクト。
+* `convertDDX`:変換後の `org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクト。 このメソッドは、 `org.w3c.dom.Document` オブジェクトを入力パラメーターとして渡し、 `com.adobe.idp.Document` オブジェクト。
 
-   このクイックスタートでは、これらのメソッドが両方とも呼び出されます。 （[DDXドキュメントの動的な作成](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)を参照）。
-&quot;
+   このクイックスタートでは、これらの両方のメソッドが呼び出されます。 ( [DDX ドキュメントの動的な作成](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)) &quot;
 
 ```java
 /*
@@ -1382,9 +1381,9 @@ public class AssemblePDFWithDynamicDDXSOAP {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}を使用したPDFPortfolioのアセンブリ
+## クイックスタート（SOAP モード）:Java API を使用したPDFPortfolioのアセンブリ {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
 
-次のJavaコードの例は、PDFポートフォリオを作成します。 PDFポートフォリオは、*AssemblerResultPortfolio.pdf*&#x200B;という名前のPDFファイルとして保存されます。 ([PDFPortfolioのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios)を参照)。
+次の Java コードの例は、ポートフォリオをPDFします。 PDFポートフォリオは、という名前のPDFファイルとして保存されます。 *AssemblerResultPortfolio.pdf*. ( [組み立てPDFPortfolio](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios).)
 
 ```as3
  /* 
@@ -1533,9 +1532,9 @@ public class AssemblePDFWithDynamicDDXSOAP {
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api}を使用した複数のXDPフラグメントのアセンブリ
+## クイックスタート（SOAP モード）:Java API を使用した複数の XDP フラグメントのアセンブリ {#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api}
 
-次のJavaコードの例では、次のXDPファイルに基づくXDPフラグメントをアセンブリしています。*tuc018_template_flowed.xdp*、*tuc018_contact.xdp*、および* tuc018_patient.xdp*。 すべてのフラグメントを含むアセンブリ済みのXDPドキュメントは、*AssemblerResultXDP.xdp*&#x200B;という名前のXDPファイルとして保存されます。 （[複数のXDPフラグメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments)を参照）。
+次の Java コードの例では、次の XDP ファイルに基づく XDP フラグメントをアセンブリします。 *tuc018_template_flowed.xdp*, *tuc018_contact.xdp*, and* tuc018_patient.xdp*. すべてのフラグメントを含むアセンブリ済みの XDP ドキュメントは、という名前の XDP ファイルとして保存されます。 *AssemblerResultXDP.xdp*. ( [複数の XDP フラグメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments).)
 
 ```as3
  /* 
@@ -1686,9 +1685,9 @@ public class AssemblePDFWithDynamicDDXSOAP {
  }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}を使用したPDFドキュメントの修正
+## クイックスタート（SOAP モード）:Java API を使用したPDFドキュメントの修正 {#quick-start-soap-mode-redacting-a-pdf-document-using-the-java-api}
 
-次のコードの例では、`PDFUtility`を使用してPDFドキュメントを修正します。
+次のコードの例では、 `PDFUtility`.
 
 >[!NOTE]
 >

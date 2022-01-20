@@ -2,13 +2,13 @@
 title: Assets HTTP API（ [!DNL Adobe Experience Manager] に含まれているもの）
 description: ' [!DNL Adobe Experience Manager Assets] の HTTP API を使用した、デジタルアセットの作成、読み取り、更新、削除、管理について説明します。'
 contentOwner: AG
-feature: API,Assets HTTP API，開発者ツール
+feature: APIs,Assets HTTP API,Developer Tools
 role: Developer
 exl-id: 3d7d078c-5046-489a-a8e0-258acaea7191
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1558'
-ht-degree: 86%
+source-wordcount: '1552'
+ht-degree: 87%
 
 ---
 
@@ -21,13 +21,13 @@ Assets HTTP API を使用すれば、デジタルアセット（メタデータ�
 1. API サービスドキュメント（`https://[hostname]:[port]/api.json`）を開きます。
 1. `https://[hostname]:[server]/api/assets.json` への Assets サービスリンクをクリックします。
 
-API の応答は、一部の MIME タイプに対する JSON ファイル、およびすべての MIME タイプに対する応答コードです。JSON 応答はオプションであり、PDF ファイルなどでは利用できない場合があります。詳細な分析やアクションをおこなう場合は、応答コードを利用します。
+API の応答は、一部の MIME タイプに対する JSON ファイル、およびすべての MIME タイプに対する応答コードです。JSON 応答はオプションであり、PDF ファイルなどでは利用できない場合があります。詳細な分析やアクションを行う場合は、応答コードを利用します。
 
 [!UICONTROL オフタイム]の経過後、アセットとそのレンディションは、[!DNL Assets] Web インターフェイスでも HTTP API でも使用できません。[!UICONTROL オンタイム]が未来の場合、または[!UICONTROL オフタイム]が過去の場合、API は 404 エラーメッセージを返します。
 
 >[!CAUTION]
 >
->[HTTP APIは、名前空間のメタデータプ](#update-asset-metadata) ロパティを更新 `jcr` します。ただし、Experience Managerユーザーインターフェイスは`dc`名前空間のメタデータプロパティを更新します。
+>[HTTP API がメタデータのプロパティを更新します](#update-asset-metadata) 内 `jcr` 名前空間。 ただし、Experience Managerユーザーインターフェイスは、 `dc` 名前空間。
 
 ## データモデル {#data-model}
 
@@ -56,7 +56,7 @@ Assets HTTP API は、フォルダーとアセット（標準アセット用）�
 
 ### Assets {#assets}
 
-Experience Managerでは、アセットには次の要素が含まれます。
+Experience Managerでは、アセットには次の要素が含まれています。
 
 * アセットのプロパティとメタデータ
 * オリジナルのレンディション（最初にアップロードされたアセット）、サムネール、その他の各種レンディションなど複数のレンディション。追加レンディションは、サイズやビデオエンコーディングの異なる画像や、PDF ファイルまたは Adobe InDesign ファイルから抽出されたページの場合があります。
@@ -89,8 +89,8 @@ Assets HTTP API には、以下の機能が含まれます。
 **前提条件**
 
 * `https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
-* **[!UICONTROL AdobeGranite CSRF Filter]**&#x200B;に移動します。
-* プロパティ&#x200B;**[!UICONTROL フィルターメソッド]**&#x200B;に次が含まれていることを確認します。`POST`、`PUT`、`DELETE`。
+* に移動します。 **[!UICONTROL AdobeGranite CSRF フィルタ]**.
+* プロパティを確認します。 **[!UICONTROL フィルターメソッド]** 次を含む： `POST`, `PUT`, `DELETE`.
 
 ## フォルダーのリストの取得 {#retrieve-a-folder-listing}
 
@@ -128,9 +128,9 @@ Assets HTTP API には、以下の機能が含まれます。
 
 ## アセットの作成 {#create-an-asset}
 
-指定されたパスにファイルを配置して、DAMリポジトリー内にアセットを作成します。 ノード名の代わりに`*`を指定した場合、サーブレットはパラメーター名またはファイル名をノード名として使用します。
+指定されたファイルを指定されたパスに配置して、DAM リポジトリー内にアセットを作成します。 次の場合、 `*` ノード名の代わりにが指定され、サーブレットパラメーター名またはファイル名がノード名として使用されます。
 
-**パラメーター**:パラメーターはア `name` セット名とファイル参 `file` 照用です。
+**パラメーター**:パラメーターは次のとおりです。 `name` （アセット名）と `file` を参照してください。
 
 **リクエスト**
 
@@ -146,7 +146,7 @@ Assets HTTP API には、以下の機能が含まれます。
 
 ## アセットバイナリの更新 {#update-asset-binary}
 
-アセットのバイナリ（オリジナルの名前のレンディション）を更新します。 「更新」トリガーは、デフォルトのアセット処理ワークフローが設定されている場合に実行します。
+アセットのバイナリ（元の名前のレンディション）を更新します。 「更新」トリガーは、デフォルトのアセット処理ワークフローが設定されている場合に実行します。
 
 **リクエスト**：`PUT /api/assets/myfolder/myAsset.png -H"Content-Type: image/png" --data-binary @myPicture.png`
 
@@ -170,9 +170,9 @@ Assets HTTP API には、以下の機能が含まれます。
 * 412 - PRECONDITION FAILED（ルートコレクションが見つからないかアクセスできない場合）
 * 500 - INTERNAL SERVER ERROR（他に問題がある場合）
 
-### `dc`と`jcr`名前空間{#sync-metadata-between-namespaces}の間でのメタデータの更新の同期
+### メタデータの更新を次の間で同期 `dc` および `jcr` 名前空間 {#sync-metadata-between-namespaces}
 
-APIメソッドは、`jcr`名前空間のメタデータプロパティを更新します。 タッチUIを使用して行われた更新により、`dc`名前空間のメタデータのプロパティが変更されます。 `dc`名前空間と`jcr`名前空間の間でメタデータ値を同期するには、ワークフローを作成し、アセットの編集時にワークフローを実行するようにExperience Managerを設定します。 ECMAスクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトは、`dc:title`と`jcr:title`の間でタイトル文字列を同期します。
+API メソッドは、 `jcr` 名前空間。 タッチ UI を使用して行われた更新により、 `dc` 名前空間。 次の間でメタデータ値を同期するには： `dc` および `jcr` 名前空間では、アセットの編集時にExperience Managerを実行するようにワークフローを作成し、ワークフローを設定することができます。 ECMA スクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトは、 `dc:title` および `jcr:title`.
 
 ```javascript
 var workflowData = workItem.getWorkflowData();

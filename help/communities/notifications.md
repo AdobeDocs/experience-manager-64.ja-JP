@@ -1,8 +1,8 @@
 ---
 title: コミュニティの通知
-seo-title: コミュニティの通知
+seo-title: Communities Notifications
 description: AEM Communities には、サインインしているコミュニティメンバーにとって興味深いイベントを表示する通知が用意されています
-seo-description: AEM Communities には、サインインしているコミュニティメンバーにとって興味深いイベントを表示する通知が用意されています
+seo-description: AEM Communities has notifications that display events of interest to the signed-in community member
 uuid: d6ef12f1-7367-49a5-b891-56800a38b2ab
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -13,8 +13,8 @@ role: Admin
 exl-id: f6c6619e-b386-4d34-9d17-654d7c97aedd
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 48%
+source-wordcount: '521'
+ht-degree: 47%
 
 ---
 
@@ -28,21 +28,21 @@ AEM Communities には、サインインしているコミュニティメンバ�
 
 * コンテンツを投稿するメンバー
 * 別のメンバーに従うことを選択したメンバー
-* 特定のトピック、記事、およびコンテンツの他のスレッドをフォローすることを選択したメンバー
+* 特定のトピック、記事、およびコンテンツの他のスレッドに従うことを選択したメンバー
 
 通知は以下の点でアクティビティや購読と異なります。
 
 * 通知セクションへのリンクは、コミュニティサイトのヘッダーに常に存在します
-   * アクティビティでは、コミュニティサイトの構造に[アクティビティストリーム機能](functions.md#activity-stream-function)を含める必要があります
-   * サブスクリプションには[電子メール](email.md)の設定が必要
+   * アクティビティには [アクティビティストリーム機能](functions.md#activity-stream-function) コミュニティサイトの構造に含まれる
+   * 購読にはが必要です [電子メールの設定](email.md)
 * 通知の実装は、拡張性とプラグ可能なチャネルを通じて行われます
-   * アクティビティはWebでのみ使用できます
-   * 購読はEメールを使用した場合のみ利用できます
+   * アクティビティは Web でのみ使用できます
+   * 購読は E メールでのみ利用できます
 
 Communities [FP1](deploy-communities.md#latestfeaturepack) 以降、使用可能な通知チャネルは以下のとおりです。
 
-* `Notifications`リンクを使用してアクセスするWebチャネル
-* Eメールチャネル（Eメールが正しく設定されている場合に使用可能）
+* Web チャネル ( `Notifications` リンク
+* E メールチャネル（E メールが正しく設定されている場合に使用可能）
 
 今後のチャネルとしてモバイルおよびデスクトップがあります。
 
@@ -56,11 +56,11 @@ Communities [FP1](deploy-communities.md#latestfeaturepack) 以降、使用可能
 
 **フォローの有効化**
 
-フォローを有効にするようにコンポーネントを設定する必要があります。以下を可能にする機能には、[blog](blog-feature.md)、[forum](forum.md)、[Q&amp;A](working-with-qna.md)、[calendar](calendar.md)、[filelibrary](file-library.md)、[comments](comments.md)があります。
+フォローを有効にするようにコンポーネントを設定する必要があります。次の機能を使用できます。 [ブログ](blog-feature.md), [フォーラム](forum.md), [Q&amp;A](working-with-qna.md), [カレンダー](calendar.md), [filelibrary](file-library.md)、および [コメント](comments.md).
 
 以下の点に注意してください。
 
-* コミュニティ[サイトテンプレート](sites.md)および[グループテンプレート](tools-groups.md)内で使用されるコンポーネントは、既にフォローを許可するように設定されている場合があります
+* コミュニティ内で使用されるコンポーネント [サイトテンプレート](sites.md) および [グループテンプレート](tools-groups.md) は、既に次を許可するように設定されている可能性があります
 
 * メンバープロファイルは、他のメンバーがフォローできるように既に設定されています
 
@@ -68,16 +68,16 @@ Communities [FP1](deploy-communities.md#latestfeaturepack) 以降、使用可能
 
 ![chlimage_1-254](assets/chlimage_1-254.png)
 
-「**フォロー**」ボタンを使用すると、エントリをアクティビティや購読、通知としてフォローできます。「**フォロー**」ボタンを選択するたびに、選択のオン/オフを切り替えることができます。 `Email Subscriptions`は、設定時にのみ表示されます。
+「**フォロー**」ボタンを使用すると、エントリをアクティビティや購読、通知としてフォローできます。毎回 **フォロー** ボタンが選択されている場合、選択のオン/オフを切り替えることができます。 この `Email Subscriptions` 選択が存在するのは、設定時のみです。
 
-フォロー方法が選択されると、ボタンのテキストが「**フォロー中**」に変わります。 便宜上、`Unfollow All`を選択してすべてのメソッドをオフに切り替えることができます。
+フォロー方法が選択されると、ボタンのテキストが「**フォロー中**」に変わります。 便宜上、 `Unfollow All` をクリックして、すべてのメソッドをオフにします。
 
-「**フォロー**」ボタンが表示されます
+この **フォロー** ボタンが表示されます
 
 * 別のメンバーのプロファイルを表示する場合
 * フォーラム、Q&amp;A、ブログなどのメイン機能ページ
    * その一般的な機能のすべてのアクティビティに従う
-* フォーラムトピック、Q&amp;A質問、ブログ記事などの特定のエントリ
+* フォーラムトピック、Q&amp;A 質問、ブログ記事などの特定のエントリ
    * その特定のエントリのすべてのアクティビティに従う
 
 ## 通知設定の管理 {#managing-notification-settings}
@@ -102,9 +102,9 @@ Web チャネルは常に有効になっています。
 
 ### Web 通知 {#web-notifications}
 
-[ウィザードで作成されたコミュニティサイト](sites-console.md)に、バナーの上にあるサイトのヘッダーバーに`Notifications`機能へのリンクが含まれるようになりました。 メッセージとは異なり、通知はコミュニティサイトごとに作成され、メッセージはサイト作成プロセス中に有効にする必要があります。
+A [ウィザードが作成したコミュニティサイト](sites-console.md) に、 `Notifications` 機能を使用します。 メッセージとは異なり、通知はすべてのコミュニティサイトに対して作成されますが、メッセージはサイト作成プロセス中に有効にする必要があります。
 
-公開済みサイトにアクセスする際に、`Notifications`リンクを選択すると、そのメンバーに関するすべての通知が表示されます。
+公開されたサイトにアクセスする際に、 `Notifications` リンクは、メンバーのすべての通知を表示します。
 
 ![chlimage_1-258](assets/chlimage_1-258.png)
 

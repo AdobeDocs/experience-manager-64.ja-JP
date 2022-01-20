@@ -1,8 +1,8 @@
 ---
 title: デプロイメントのライセンスの種類の更新
-seo-title: デプロイメントのライセンスの種類の更新
+seo-title: Update the license type for the deployment
 description: 管理コンソールのライセンスを変更ページを使用して、デプロイメントのライセンスの種類を更新します。
-seo-description: 管理コンソールのライセンスを変更ページを使用して、デプロイメントのライセンスの種類を更新します。
+seo-description: Update the license type for the deployment by using the Change License page in administration console.
 uuid: 0152635e-2c00-4944-b9b6-64b368589a91
 contentOwner: admin
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: e4f31377-ccc9-4986-a3bf-ef2e83d12448
 exl-id: 07671470-59dd-4290-be9a-465fcd89ac2d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '270'
 ht-degree: 100%
 
 ---
@@ -34,7 +34,7 @@ AEM Forms インストールプロセスの一環として、Configuration Manag
 >
 >ライセンスの変更はすべてのデプロイ済みモジュールに適用されます。ライセンスの種類を変更する前に、ライセンスを発行しないモジュールのデプロイを解除します。デプロイされているモジュールの一覧にアドビから購入したもの以外のモジュールが含まれている場合は、ライセンスの種類で「製品」を選択しないでください。
 
-## ライセンスの種類の更新  {#update-the-license-type}
+## ライセンスの種類の更新 {#update-the-license-type}
 
 1. 管理コンソールで「ライセンス」をクリックします。
 1. AEM Forms のエンドユーザー使用許諾契約書を読み、契約書の条項に同意する場合は「同意します」を選択し、「次へ」をクリックします。

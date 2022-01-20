@@ -1,19 +1,19 @@
 ---
 title: ライブコピーの同期の設定
-seo-title: ライブコピーの同期の設定
+seo-title: Configuring Live Copy Synchronization
 description: ライブコピーの同期の設定について説明します。
-seo-description: ライブコピーの同期の設定について説明します。
+seo-description: Learn about configuring Live Copy Synchronization.
 uuid: a14fab89-fd1c-4fec-a9e0-9f6511f764a6
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: c491f0f3-375d-4203-bdf3-234987bbf685
-feature: マルチサイトマネージャー
+feature: Multi Site Manager
 exl-id: 42b92993-abde-4ae4-8f0d-44166a3ea22e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '2708'
+source-wordcount: '2695'
 ht-degree: 83%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 83%
 
 >[!CAUTION]
 >
->初期設定の（インストール済みの）ロールアウト設定を更新または変更することは、**お勧めしません**。 カスタムライブアクションの要件がある場合は、カスタムロールアウト設定に追加してください。
+>標準（インストール済み）のロールアウト設定の更新または変更は次のとおりです。 **not** 推奨。 カスタムライブアクションの要件がある場合は、カスタムロールアウト設定に追加してください。
 
 ### ロールアウトトリガー {#rollout-triggers}
 
@@ -49,7 +49,7 @@ ht-degree: 83%
 >
 >変更時トリガーを使用すると、パフォーマンスに影響を及ぼす可能性があります。詳しくは、[MSM のベストプラクティス](/help/sites-administering/msm-best-practices.md#onmodify)を参照してください。
 
-### インストールされるロールアウト設定  {#installed-rollout-configurations}
+### インストールされるロールアウト設定 {#installed-rollout-configurations}
 
 次の表に、AEM と共にインストールされるロールアウト設定のリストを示します。表には各ロールアウト設定のトリガーと同期アクションが含まれます。インストールされるロールアウト設定のアクションが要件を満たさない場合は、[新しいロールアウト設定を作成](#creating-a-rollout-configuration)できます。
 
@@ -59,7 +59,7 @@ ht-degree: 83%
    <th>名前</th> 
    <th>説明</th> 
    <th>トリガー</th> 
-   <th>同期アクション<br /> <br /> <a href="#installed-synchronization-actions">インストール済みの同期アクション</a>も参照</th> 
+   <th>同期アクション<br /> <br /> 関連項目 <a href="#installed-synchronization-actions">インストール済みの同期アクション</a></th> 
   </tr> 
   <tr> 
    <td>標準のロールアウト設定</td> 
@@ -126,7 +126,7 @@ ht-degree: 83%
 
 ### インストールされる同期アクション {#installed-synchronization-actions}
 
-次の表に、AEM と共にインストールされる同期アクションのリストを示します。インストール済みのアクションが要件を満たさない場合は、[新しい同期アクション](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)を作成できます。
+次の表に、AEM と共にインストールされる同期アクションのリストを示します。インストールされたアクションが要件を満たさない場合は、次の操作を実行できます。 [新しい同期アクションの作成](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action).
 
 <table> 
  <tbody> 
@@ -137,25 +137,25 @@ ht-degree: 83%
   </tr> 
   <tr> 
    <td>contentCopy</td> 
-   <td>ソースのノードがライブコピーに存在しない場合は、ライブコピーにノードをコピーします。<a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Copy Actionサービスを設定し</a> て、除外するノードタイプ、段落項目およびページプロパティを指定します。  <br /> </td> 
+   <td>ソースのノードがライブコピーに存在しない場合は、ライブコピーにノードをコピーします。<a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Copy Action サービスの設定</a> をクリックして、除外するノードタイプ、段落項目およびページプロパティを指定します。 <br /> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>contentDelete</td> 
-   <td><p>ソースに存在しないライブコピーのノードを削除します。<a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Delete Actionサービス</a>を設定して、除外するノードタイプ、段落項目およびページプロパティを指定します。 </p> </td> 
+   <td><p>ソースに存在しないライブコピーのノードを削除します。 <a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Delete Action サービスの設定</a> をクリックして、除外するノードタイプ、段落項目およびページプロパティを指定します。 </p> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>contentUpdate</td> 
-   <td>ソースからの変更を使用してライブコピーのコンテンツを更新します。<a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Update Actionサービスを設定し</a> て、除外するノードタイプ、段落項目およびページプロパティを指定します。  <br /> </td> 
+   <td>ソースからの変更を使用してライブコピーのコンテンツを更新します。<a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Update Action サービスの設定</a> をクリックして、除外するノードタイプ、段落項目およびページプロパティを指定します。 <br /> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>editProperties</td> 
-   <td><p>ライブコピーのプロパティを編集します。編集するプロパティとその値は editMap プロパティで指定します。editMap プロパティの値は次の形式にしてください。</p> <p><code>[property_name_1]#[current_value]#</code>[new_value],<br /> <code>[property_name_2]#[current_value]#</code>[new_value],<br /> ... ,<br /> <code>[property_name_n]#[current_value]#</code>[new_value]</p> <p><code>current_value</code>項目と<code>new_value</code>項目は正規表現です。<br /> </p> <p>例えば、editMap の次の値を検討してください。</p> <p><code>sling:resourceType#/</code>(contentpage|homepage)#/<br /> mobilecontentpage,<br /> cq:template#/contentpage#/mobilecontentpage</p> <p>この値は、ライブコピーのノードのプロパティを次のように編集します。</p> 
+   <td><p>ライブコピーのプロパティを編集します。編集するプロパティとその値は editMap プロパティで指定します。editMap プロパティの値は次の形式にしてください。</p> <p><code>[property_name_1]#[current_value]#</code>[new_value],<br /> <code>[property_name_2]#[current_value]#</code>[new_value],<br /> ... ,<br /> <code>[property_name_n]#[current_value]#</code>[new_value]</p> <p>この <code>current_value</code> および <code>new_value</code> 項目は正規表現です。 <br /> </p> <p>例えば、editMap の次の値を検討してください。</p> <p><code>sling:resourceType#/</code>(contentpage|homepage)#/<br /> mobilecontentpage,<br /> cq:template#/contentpage#/mobilecontentpage</p> <p>この値は、ライブコピーのノードのプロパティを次のように編集します。</p> 
     <ul> 
-     <li><code>sling:resourceType</code>プロパティは、<code>contentpage</code>または<code>homepage</code>に設定されます。 <code>mobilecontentpage.</code></li> 
-     <li><code>contentpage</code>に設定された<code>cq:template</code>プロパティは、 <code>mobilecontentpage.</code></li> 
+     <li>この <code>sling:resourceType</code> 次のいずれかに設定されたプロパティ： <code>contentpage</code> または <code>homepage</code> が <code>mobilecontentpage.</code></li> 
+     <li>この <code>cq:template</code> に設定されたプロパティ <code>contentpage</code> が <code>mobilecontentpage.</code></li> 
     </ul> </td> 
    <td><p> </p> <p>editMap：（文字列）プロパティ、現在の値および新しい値を識別します。説明を参照してください。<br /> </p> </td> 
   </tr> 
@@ -203,7 +203,7 @@ ht-degree: 83%
      <li>ActionSet.ACTION_NAME_SET_PROPERTY</li> 
      <li>ActionSet.ACTION_NAME_ACL_MODIFY</li> 
     </ul> <p>このアクションはページにのみ使用してください。</p> </td> 
-   <td>ターゲット：(String)権限を設定するグループのID。<br /> </td> 
+   <td>ターゲット：(String) 権限を設定するグループの ID。 <br /> </td> 
   </tr> 
   <tr> 
    <td>mandatoryContent</td> 
@@ -216,7 +216,7 @@ ht-degree: 83%
   </tr> 
   <tr> 
    <td>mandatoryStructure</td> 
-   <td>ライブコピーページ上のActionSet.ACTION_NAME_REMOVE ACLの権限を、特定のユーザーグループに対して読み取り専用に設定します。このアクションはページに対してのみ使用します。</td> 
+   <td>ライブコピーページ上の ActionSet.ACTION_NAME_REMOVE ACL の権限を、特定のユーザーグループに対して読み取り専用に設定します。このアクションは、ページに対してのみ使用します。</td> 
    <td>target：（String）権限を設定するグループの ID。 </td> 
   </tr> 
   <tr> 
@@ -267,7 +267,7 @@ ht-degree: 83%
 
 ### プロパティとノードタイプの同期からの除外 {#excluding-properties-and-node-types-from-synchronization}
 
-対応する同期アクションをサポートする複数のOSGiサービスを設定して、特定のノードタイプやプロパティに影響を与えないようにすることができます。例えば、AEMの内部機能に関連する多くのプロパティやサブノードを、ライブコピーに含めないでください。ページのユーザーに関連するコンテンツのみをコピーする必要があります。
+対応する同期アクションをサポートする複数の OSGi サービスを設定して、特定のノードタイプやプロパティに影響を与えないようにすることができます。例えば、AEMの内部機能に関連する多くのプロパティやサブノードを、ライブコピーに含めないでください。ページのユーザーに関連するコンテンツのみをコピーする必要があります。
 
 AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
@@ -303,7 +303,7 @@ AEM を操作しているときは、このようなサービスの設定を管�
   </tr> 
   <tr> 
    <td><p>Ignored Mixin NodeTypes</p> <p>cq.wcm.msm.action.ignoredMixin</p> </td> 
-   <td>CQ MSM Content Update Actionでのみ使用できます。同期アクションから除外するmixinノードタイプの名前に一致する正規表現。</td> 
+   <td>CQ MSM Content Update Action でのみ使用できます。同期アクションから除外する mixin ノードタイプの名前に一致する正規表現。</td> 
   </tr> 
  </tbody> 
 </table>
@@ -314,7 +314,7 @@ AEM を操作しているときは、このようなサービスの設定を管�
 
 >[!NOTE]
 >
->タッチ操作対応UIでは、[ページプロパティに対するMSMロックの設定](/help/sites-developing/extending-msm.md)も参照してください。
+>タッチ操作対応 UI では、 [ページプロパティに対する MSM ロックの設定 )](/help/sites-developing/extending-msm.md).
 
 #### CQ MSM Content Update Action - 除外 {#cq-msm-content-update-action-exclusions}
 
@@ -346,11 +346,11 @@ AEM を操作しているときは、このようなサービスの設定を管�
   </tr> 
   <tr> 
    <td><p>Update Reference across nested LiveCopies</p> <p>cq.wcm.msm.impl.action.referencesupdate.prop_updateNested</p> </td> 
-   <td>CQ MSM References Update Action でのみ使用できます。このオプション（Webコンソール）を選択するか、このブール値プロパティをtrue（リポジトリ設定）に設定して、最上位のライブコピーのブランチ内にあるリソースをターゲットとする参照を置き換えます。</td> 
+   <td>CQ MSM References Update Action でのみ使用できます。最上位のライブコピーのブランチ内にあるリソースをターゲットとする参照を置き換えるには、このオプション（Web コンソール）を選択するか、このブール値プロパティを true（リポジトリ設定）に設定します。</td> 
   </tr> 
   <tr> 
    <td><p>Update Referencing Pages</p> <p>cq.wcm.msm.impl.actions.pagemove.prop_referenceUpdate</p> </td> 
-   <td>CQ MSM Page Move Actionでのみ使用できます。 元のページを使用する参照を更新してライブコピーページを参照するには、このオプション（Webコンソール）を選択するか、このブール値プロパティを<code>true</code>（リポジトリ設定）に設定します。</td> 
+   <td>CQ MSM Page Move Action でのみ使用できます。 このオプション（Web コンソール）を選択するか、このブール値プロパティを次のように設定します。 <code>true</code> （リポジトリ設定）を使用して、元のページを使用する参照を更新し、ライブコピーページを参照します。</td> 
   </tr> 
  </tbody> 
 </table>
@@ -370,7 +370,7 @@ MSM を使用すると、通常使用するロールアウト設定のセット�
 
 * どのブループリントページまたはライブコピーページもロールアウト設定を使用するように設定されていない。この場合、MSM では、システムのデフォルトのロールアウト設定をすべてのライブコピーページに使用します。
 * We.Retail 参照サイトのルートページが複数のロールアウト設定を使用して設定されている。この場合、MSM では、これらのロールアウト設定をすべてのライブコピーページに使用します。
-* We.Retail参照サイトのルートページは複数のロールアウト設定で設定され、ライブコピーサイトのルートページは異なるロールアウト設定で設定されます。 この場合、MSM では、ライブコピーサイトのルートページで設定されたロールアウト設定を使用します。
+* We.Retail 参照サイトのルートページは複数のロールアウト設定で設定され、ライブコピーサイトのルートページは別のロールアウト設定で設定されます。 この場合、MSM では、ライブコピーサイトのルートページで設定されたロールアウト設定を使用します。
 
 ### ライブコピーページ用のロールアウト設定の指定 {#setting-the-rollout-configurations-for-a-live-copy-page}
 

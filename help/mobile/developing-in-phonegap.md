@@ -1,8 +1,8 @@
 ---
 title: PhoneGap
-seo-title: Adobe PhoneGap Enterprise 用のコンテンツのオーサリング
+seo-title: Authoring Content for Adobe PhoneGap Enterprise
 description: このページでは、AEM と PhoneGap Enterprise を連携させたアプリ開発の概要について説明します。AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単に作成できます。PhoneGap と連携することで、そのコンテンツを利用するユーティリティアプリを作成できます。
-seo-description: このページでは、AEM と PhoneGap Enterprise を連携させたアプリ開発の概要について説明します。AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単に作成できます。PhoneGap と連携することで、そのコンテンツを利用するユーティリティアプリを作成できます。
+seo-description: This page serves as starting point for developing apps using PhoneGap Enterprise with AEM. AEM integrates with PhoneGap so that you can easily create apps using AEM pages. PhoneGap allows the user to create utility apps that lets user to work with the content.
 uuid: c6ac02fa-d41c-4b57-95d8-171a96540dd6
 contentOwner: User
 content-type: reference
@@ -11,8 +11,8 @@ discoiquuid: bc61e495-b53b-49c5-99e5-c2e35873e6bd
 exl-id: c21c66e1-ac14-4b34-8821-c0c819c05b21
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 82%
+source-wordcount: '251'
+ht-degree: 79%
 
 ---
 
@@ -36,13 +36,13 @@ Adobe PhoneGap と連携して AEM Mobile を使用するには、以下のリ�
 
 * [AEM Mobile コンテンツサービス：概要](/help/mobile/develop-content-as-a-service.md)
 
-   * コンテンツサービスとデータモデルを有効にするには、「[コンテンツサービスの管理](/help/mobile/developing-content-services.md)」を参照してください。
-   * モデルの作成について詳しくは、[モデルの開発](/help/mobile/administer-mobile-apps.md)を参照してください。
-   * レンダリングと配信について詳しくは、[コンテンツサービスのレンダリングと配信](/help/mobile/rendering-and-delivery.md)を参照してください。
+   * コンテンツサービスとデータモデルを有効にするには、 [コンテンツサービスの管理](/help/mobile/developing-content-services.md)
+   * モデルの作成については、 [モデルの開発](/help/mobile/administer-mobile-apps.md)
+   * レンダリングと配信について詳しくは、 [コンテンツサービスのレンダリングと配信](/help/mobile/rendering-and-delivery.md)
 
 >[!NOTE]
 >
->任意のiOSまたはAndroidモバイルデバイスでAEMモバイルアプリケーションを実行するには、[AEM Verifyアプリを使用したモバイルクイックスタート](/help/mobile/phonegap-mobile-quickstart.md)を参照してください。
+>任意のiOSまたは Android モバイルデバイスでAEMモバイルアプリケーションを実行するには、 [AEM Verify App を使用したモバイルクイックスタート](/help/mobile/phonegap-mobile-quickstart.md).
 
 ## さらに先のステップ {#getting-ahead}
 

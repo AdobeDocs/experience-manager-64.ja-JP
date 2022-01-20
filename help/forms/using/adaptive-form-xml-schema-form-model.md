@@ -1,19 +1,19 @@
 ---
-title: XML スキーマを使ったアダプティブフォームの作成
-seo-title: XML スキーマを使用したアダプティブフォームの作成
+title: XML スキーマを使用したアダプティブフォームの作成
+seo-title: Creating adaptive forms using XML Schema
 description: アダプティブフォームではフォームモデルとして XML スキーマを使用できるため、アダプティブフォームの作成に既存の XSD テンプレートを活用できます。スキーマ要素を XSD からアダプティブフォームにドラッグアンドドロップできます。
-seo-description: アダプティブフォームではフォームモデルとして XML スキーマを使用できるため、アダプティブフォームの作成に既存の XSD テンプレートを活用できます。スキーマ要素を XSD からアダプティブフォームにドラッグアンドドロップできます。
+seo-description: Adaptive forms can use XML schema as form model, allowing you to leverage existing XSD templates to create adaptive forms. You can drag-and-drop schema elements from XSD onto your adaptive form.
 uuid: a5f5d423-9b83-47e8-b0fa-88210d0d18d9
 content-type: reference
 topic-tags: adaptive_forms, develop
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: a1070d9e-fb7c-4134-b6d5-ffa2d3e9718d
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 5f6d23b2-ab8b-48fd-b853-eea7d6c9d651
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 91%
+source-wordcount: '1044'
+ht-degree: 90%
 
 ---
 
@@ -172,12 +172,11 @@ XML スキーマの例を示します。
 >* キャメルケースの単語の境界にスペースを挿入します。
 
 >
->
-例えば、スキーマ要素`userFirstName`を追加した場合、アダプティブフォームで生成されるキャプションは`User First Name`になります。
+>例えば、 `userFirstName` スキーマ要素の場合、アダプティブフォームで生成されるキャプションは次のようになります。 `User First Name`.
 
 ## アダプティブフォームコンポーネントで許容される値の制限 {#limit-acceptable-values-for-an-adaptive-form-component}
 
-XMLスキーマ要素に次の制限を追加して、アダプティブフォームコンポーネントで許容される値を制限することができます。
+XML スキーマ要素に次の制限を追加して、アダプティブフォームのコンポーネントで許容される値を制限することができます。
 
 <table> 
  <tbody> 
@@ -190,7 +189,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   <tr> 
    <td><p><code>totalDigits</code></p> </td> 
    <td><p>文字列</p> </td> 
-   <td><p>コンポーネントで許可される最大桁数を指定します。桁数は 0 以上である必要があります。</p> </td> 
+   <td><p>コンポーネントで許可される最大桁数を指定します。桁数は 1 以上である必要があります。</p> </td> 
    <td> 
     <ul> 
      <li>数値ボックス</li> 
@@ -283,27 +282,27 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
    <td><p>文字のシーケンスを指定します。文字が指定されたパターンに適合すると、コンポーネントはその文字を受け入れます。</p> <p>この pattern プロパティは、対応するアダプティブフォームコンポーネントの検証パターンにマッピされます。</p> </td> 
    <td> 
     <ul> 
-     <li>XSDスキーマにマッピングされているすべてのアダプティブフォームコンポーネント </li> 
+     <li>XSD スキーマにマッピングされるすべてのアダプティブフォームコンポーネント </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## よくある質問 {#frequently-asked-questions}
+## よくある質問  {#frequently-asked-questions}
 
 **ツリーのどの要素がどの XML 要素に関連付けられているかをどうやって判断しますか？**
 
-コンテンツファインダーで要素をダブルクリックすると、フィールド名と`bindRef`というプロパティがポップアップに表示されます。 このプロパティはツリー要素をスキーマ内の要素または属性にマッピングします。
+コンテンツファインダーで要素をダブルクリックすると、ポップアップにフィールド名と、 `bindRef`. このプロパティはツリー要素をスキーマ内の要素または属性にマッピングします。
 
 ![XML スキーマ要素の bindref フィールド](assets/dblclick.png)
 
-bindRef</code>フィールドは、ツリー要素とスキーマ内の要素または属性との関連付けを示します。
+bindRef</code> フィールドには、ツリー要素とスキーマ内の要素または属性との関連付けが表示されます。
 
 >[!NOTE]
 >
->属性の`bindRef`値には`@`記号が含まれ、要素と区別します。 （例：`/config/projectDetails/@duration`）。
+>属性には `@` 彼らのシンボル `bindRef`の値を使用して、要素と区別します。 （例：`/config/projectDetails/@duration`）。
 
-**繰り返し可能なサブフォーム（minOccours 値または maxOccurs 値が 1 より大きい）では、サブフォーム（任意の複合型から生成された構造）の個々の要素をドラッグできないのはなぜですか？**
+**繰り返し可能なサブフォーム（minOccurs 値または maxOccurs 値が 1 より大きい）では、サブフォーム（任意の複合型から生成された構造）の個々の要素をドラッグできないのはなぜですか？**
 
 繰り返し可能なサブフォームでは、完全なサブフォームを使用する必要があります。選択した一部のフィールドのみを使用する場合は、構造全体を使用し、不要部分を削除します。
 

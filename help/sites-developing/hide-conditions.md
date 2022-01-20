@@ -1,8 +1,8 @@
 ---
 title: 非表示条件の使用
-seo-title: 非表示条件の使用
+seo-title: Using Hide Conditions
 description: 非表示の条件を使用して、コンポーネントリソースをレンダリングするかどうかを決定できます。
-seo-description: 非表示の条件を使用して、コンポーネントリソースをレンダリングするかどうかを決定できます。
+seo-description: Hide conditions can be used to determine if a component resource is rendered or not.
 uuid: 93b4f450-1d94-4222-9199-27b5f295f8e6
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: 104d1c64-b9b3-40f5-8f9b-fe92d9daaa1f
 exl-id: 646146b1-55bf-4d13-ba3d-2e9bdfd8d8af
 source-git-commit: c408d1072722fe4419e351b4f8bf257cf2e5a8a2
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '628'
 ht-degree: 98%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 98%
 >
 >式に基づいたリソースの非表示は、ACL アクセス権限の代わりにはなりません。コンテンツは編集可能なまま、表示されなくなるだけです。
 
-## 実装と使用の詳細  {#implementation-and-usage-details}
+## 実装と使用の詳細 {#implementation-and-usage-details}
 
 `com.adobe.granite.ui.components.FilteringResourceWrapper` は、フィルタリング対象のフィールドの `granite:hide` プロパティの有無と値に基づいてリソースをフィルタリングします。`/libs/cq/gui/components/authoring/dialog/dialog.jsp` の実装には、`FilteringResourceWrapper.` のインスタンスが含まれます。
 
@@ -57,7 +57,7 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
 ## 例 {#example}
 
-非表示の条件の例は、AEM 全体（特に、[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)）で確認できます。例えば、[リストコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/list.html)について検討してみましょう。
+非表示の条件の例は、AEM 全体（特に、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)）で確認できます。例えば、[リストコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/list.html)について検討してみましょう。
 
 [テンプレートエディターを使用](/help/sites-authoring/templates.md)した場合、テンプレート作成者は、ページ作成者が利用できるリストコンポーネントのオプションをデザインダイアログで定義できます。リストを静的リスト、子ページのリスト、タグ付けされたページのリストなどにできるようにするかどうかといったオプションを有効または無効にできます。
 

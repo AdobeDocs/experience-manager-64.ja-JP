@@ -1,8 +1,8 @@
 ---
 title: ローンチの昇格
-seo-title: ローンチの昇格
+seo-title: Promoting Launches
 description: 'コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。 '
-seo-description: 'コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。 '
+seo-description: You need to promote launch pages to move the content back into the source (production) before publishing.
 uuid: 56483f8f-d66e-4677-a7bd-3b1425625b2b
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 2a790f7d-03a1-4f60-a59e-0a5f15c44fa5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '723'
 ht-degree: 98%
 
 ---
@@ -50,10 +50,9 @@ ht-degree: 98%
 >
 
 
-
 ローンチは、**サイト**&#x200B;コンソールまたは&#x200B;**ローンチ**&#x200B;コンソールを使用して昇格させることができます。
 
-1. 次のファイルを開きます。
+1. 次を開きます：:
 
    * **サイト**&#x200B;コンソールの場合：
 
@@ -90,7 +89,7 @@ ht-degree: 98%
 
 1. 「**昇格**」を選択します。
 
-## 編集中のローンチページの昇格  {#promoting-launch-pages-when-editing}
+## 編集中のローンチページの昇格 {#promoting-launch-pages-when-editing}
 
 ローンチページの編集中、**ローンチを昇格**&#x200B;アクションは「**ページ情報**」からも実行できます。これによりウィザードが開き、必要な情報が収集されます。
 
@@ -100,7 +99,7 @@ ht-degree: 98%
 >
 >これは単一および[ネストされたローンチ](#promoting-a-nested-launch)で使用できます。
 
-## ネストされたローンチの昇格  {#promoting-a-nested-launch}
+## ネストされたローンチの昇格 {#promoting-a-nested-launch}
 
 ネストされたローンチを作成後、任意のソース（ルートソース（実稼動）を含む）に戻して昇格させることができます。
 

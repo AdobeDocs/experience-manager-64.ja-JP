@@ -1,20 +1,20 @@
 ---
 title: ログ
-seo-title: ログ
+seo-title: Logging
 description: 一元的なログサービスのグローバルパラメーターの設定、個々のサービスに特有の設定、またはデータのログ記録の要求をおこなう方法を学習します。
-seo-description: 一元的なログサービスのグローバルパラメーターの設定、個々のサービスに特有の設定、またはデータのログ記録の要求をおこなう方法を学習します。
+seo-description: Learn how to configure global parameters for the central logging service, specific settings for the individual services or how to request data logging.
 uuid: 8c9e3628-2f2c-445d-9706-5c7725b85fe2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 5aa69b10-2cd0-4d34-8104-8c3b88405926
-feature: 設定
+feature: Configuring
 exl-id: d94b776d-db06-4f46-ac7f-c3b8e4160b69
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 83%
+source-wordcount: '664'
+ht-degree: 82%
 
 ---
 
@@ -24,7 +24,7 @@ AEM では、次の設定が可能です。
 
 * 中央のログサービスのグローバルパラメーター
 * 要求データのログ（要求情報用の特殊なログ設定）
-* 個々のサービス固有の設定;例えば、個々のログファイルとログメッセージの形式などです
+* 個々のサービス固有の設定;例えば、個々のログファイルとログメッセージの形式などです。
 
 これらはすべて、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)です。
 
@@ -71,17 +71,17 @@ AEM では、以下の手順でログメッセージをファイルに書き込�
 
    メッセージを生成するサービスを定義します。
 
-* **ログファイル(Logging Logger)**
+* **ログファイル (Logging Logger)**
 
    ログメッセージを保存する物理ファイルを定義します。
 
-   これは、Logging LoggerをLogging Writerとリンクするために使用します。 接続を行うには、値がLogging Writer設定の同じパラメーターと同じである必要があります。
+   これは、Logging Logger を Logging Writer とリンクするために使用します。 接続を確立するには、値が Logging Writer 設定の同じパラメーターと同じである必要があります。
 
-* **ログファイル(Logging Writer)**
+* **ログファイル (Logging Writer)**
 
    ログメッセージの書き込み先の物理ファイルを定義します。
 
-   これは、Logging Writer設定の同じパラメーターと同じである必要があります。同じでない場合、一致はおこなわれません。 一致するものがない場合は、デフォルト設定（毎日のログローテーション）で暗黙のライターが作成されます。
+   これは、Logging Writer 設定の同じパラメーターと同じである必要があります。同じでない場合は、一致しません。 一致するものがない場合は、デフォルト設定（毎日のログローテーション）で暗黙のライターが作成されます。
 
 ### 標準のロガーおよびライター {#standard-loggers-and-writers}
 

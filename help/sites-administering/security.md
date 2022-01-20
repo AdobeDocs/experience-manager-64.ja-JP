@@ -1,9 +1,9 @@
 ---
 title: ユーザー管理とセキュリティ
-seo-title: ユーザー管理とセキュリティ
+seo-title: User Administration and Security
 description: AEM でのユーザー管理とセキュリティについて説明します。
-feature: セキュリティ
-seo-description: AEM でのユーザー管理とセキュリティについて説明します。
+feature: Security
+seo-description: Learn about User Administration and Security in AEM.
 uuid: f14619a1-d21f-465c-b79b-c98da1f1c016
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -13,7 +13,7 @@ discoiquuid: a67b9e56-944d-424d-a64a-025f369faa5b
 exl-id: 1dd54d3f-419c-4c83-8cd8-4ae0e7feead2
 source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
-source-wordcount: '5435'
+source-wordcount: '5422'
 ht-degree: 89%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 89%
 
 この章では、ユーザー認証を設定して管理する方法を説明します。また、AEM における認証と承認の機能の背後にある理論についても説明します。
 
-## AEM のユーザーとグループ  {#users-and-groups-in-aem}
+## AEM のユーザーとグループ {#users-and-groups-in-aem}
 
 この節では、管理しやすいユーザー管理概念の設定に役立つ様々なエンティティと、関連する概念について詳しく取り上げます。
 
@@ -45,7 +45,7 @@ ht-degree: 89%
 
 構造がよく計画され、整理されていれば、その構造に合わせてグループを使用できます。これにより、全体を把握しやすくなり、効率的な方法で更新をおこなえるようになります。
 
-### 組み込みのユーザーとグループ  {#built-in-users-and-groups}
+### 組み込みのユーザーとグループ {#built-in-users-and-groups}
 
 AEM WCM では複数のユーザーとグループがインストールされます。インストール後に初めてセキュリティコンソールにアクセスすると、表示されます。
 
@@ -92,7 +92,7 @@ AEM WCM では複数のユーザーとグループがインストールされま
    <td>content-authors</td> 
    <td>グループ</td> 
    <td><p>コンテンツ編集を担当するグループ。読み取り、変更、作成および削除の権限が必要です。</p> </td> 
-   <td>読み取り、変更、作成および削除権限を追加した場合、プロジェクト固有のアクセス権を持つ独自のcontent-authorグループを作成できます。</td> 
+   <td>読み取り、変更、作成および削除権限を追加した場合、プロジェクト固有のアクセス権を持つ独自の content-author グループを作成できます。</td> 
   </tr> 
   <tr> 
    <td>contributor</td> 
@@ -138,7 +138,7 @@ AEM WCM では複数のユーザーとグループがインストールされま
  </tbody> 
 </table>
 
-## Permissions in AEM {#permissions-in-aem}
+## AEM の権限 {#permissions-in-aem}
 
 AEM では、ACL を使用して、ユーザーまたはグループが実行できるアクションとそのアクションを実行できる場所を決定します。
 
@@ -146,13 +146,13 @@ AEM では、ACL を使用して、ユーザーまたはグループが実行で
 
 権限では、リソースに対してどのユーザーがどのようなアクションを実行できるかを定義します。権限は、[アクセス制御](#access-control-lists-and-how-they-are-evaluated)の評価の結果です。
 
-個々のAEM [アクション](security.md#actions)のチェックボックスをオンまたはオフにすることで、特定のユーザーに付与/拒否された権限を変更できます。チェックマークは、アクションが許可されていることを示します。チェックマークなしは、アクションが拒否されたことを示します。
+個々のAEMのチェックボックスをオンまたはオフにすることで、特定のユーザーに対して付与/拒否された権限を変更できます [アクション](security.md#actions).チェックマークは、アクションが許可されていることを示します。チェックマークが付いていない場合は、アクションが拒否されたことを示します。
 
 また、グリッド内のチェックマークは、AEM 内のどの場所（パス）でどのような権限がユーザーに付与されているかを示します。
 
 ### アクション {#actions}
 
-アクションはページ（リソース）に対して実行できます。階層内のページごとに、ユーザーがそのページに対して実行できるアクションを指定できます。[](#permissions-and-acls) 権限：アクションを許可または拒否できます。
+アクションはページ（リソース）に対して実行できます。階層内のページごとに、ユーザーがそのページに対して実行できるアクションを指定できます。[権限](#permissions-and-acls) を使用して、アクションを許可または拒否できます。
 
 <table> 
  <tbody> 
@@ -185,7 +185,7 @@ AEM では、ACL を使用して、ユーザーまたはグループが実行で
     <ul> 
      <li>ページまたはその子ページから既存の段落を削除する。</li> 
      <li>ページまたは子ページを削除する。</li> 
-    </ul> <p><strong>modify</strong>が拒否された場合、jcr:contentの削除はページの変更と見なされるので、jcr:contentの下のサブツリーは明確に除外されます。これは、jcr:content子ノードを定義するノードにのみ適用されます。</p> </td> 
+    </ul> <p>If <strong>変更</strong> jcr:content の削除とその子ノードがページの変更と見なされるので、jcr:content の下のサブツリーは特に除外されます。これは、jcr:content 子ノードを定義するノードにのみ適用されます。</p> </td> 
   </tr> 
   <tr> 
    <td>ACL 読み取り</td> 
@@ -204,9 +204,9 @@ AEM では、ACL を使用して、ユーザーまたはグループが実行で
 
 >[!NOTE]
 >
->AEMは、[コレクション](/help/assets/managing-collections-touch-ui.md)の役割割り当て（所有者、編集者、閲覧者）のユーザーグループを自動的に生成します。 ただし、それらのグループに ACL を手動で追加すると、AEM 内にセキュリティ上の脆弱性をもたらす恐れがあります。ACL を手動で追加することはお勧めしません。
+>AEMは、 [コレクション](/help/assets/managing-collections-touch-ui.md). ただし、それらのグループに ACL を手動で追加すると、AEM 内にセキュリティ上の脆弱性をもたらす恐れがあります。ACL を手動で追加することはお勧めしません。
 
-### アクセス制御リストとその評価方法  {#access-control-lists-and-how-they-are-evaluated}
+### アクセス制御リストとその評価方法 {#access-control-lists-and-how-they-are-evaluated}
 
 AEM WCM では、アクセス制御リスト（ACL）を使用して、様々なページに適用される権限を整理します。
 
@@ -214,16 +214,16 @@ AEM WCM では、アクセス制御リスト（ACL）を使用して、様々な
 
 >[!NOTE]
 >
->ACL はサンプルに付属しています。アプリケーションに適した ACL を確認し、決定しておくことをお勧めします。含まれるACLを確認するには、**CRXDE **に移動し、次のノードの「**アクセス制御**」タブを選択します。
+>ACL はサンプルに付属しています。アプリケーションに適した ACL を確認し、決定しておくことをお勧めします。含まれる ACL を確認するには、**CRXDE **に移動し、 **アクセス制御** タブに次のノードを表示します。
 >
 >`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`:全員に読み取りアクセスを許可します。
 >`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`:全員に読み取りアクセスを許可します。
->`/home/users/geometrixx-outdoors`:`*/profile*`および\
+>`/home/users/geometrixx-outdoors`:の全員に読み取りアクセスを許可 `*/profile*` および\
 >`*/social/relationships/following/*`
 >
->カスタムアプリケーションは、`*/social/relationships/friend/*`や`*/social/relationships/pending-following/*`など、他の関係に対するアクセスを設定できます。
+>カスタムアプリケーションは、次のような他の関係に対するアクセスを設定できます。 `*/social/relationships/friend/*` または `*/social/relationships/pending-following/*`.
 >
->コミュニティに固有のACLを作成する場合、これらのコミュニティに参加するメンバーに追加の権限が付与される場合があります。 例えば、ユーザーが`/content/geometrixx-outdoors/en/community/hiking`または`/content/geometrixx-outdoors/en/community/winter-sports`でコミュニティに参加する場合に、このような状況が発生する可能性があります。
+>コミュニティに固有の ACL を作成する場合、コミュニティに参加するメンバーに追加の権限が付与される場合があります。 例えば、ユーザーが `/content/geometrixx-outdoors/en/community/hiking` または `/content/geometrixx-outdoors/en/community/winter-sports`.
 
 ### 権限の状態 {#permission-states}
 
@@ -235,7 +235,7 @@ AEM WCM では、アクセス制御リスト（ACL）を使用して、様々な
 >
 >後方互換性を確保するために、アクションのテストでは、**jcr:content** を定義するノードの特別な処理を考慮しません。
 
-| **動作** | **説明** |
+| **アクション** | **説明** |
 |---|---|
 | 許可（チェックマーク） | AEM WCM がこのページまたはその子ページに対するアクションの実行をユーザーに許可します。 |
 | 拒否（チェックマークなし） | AEM WCM がこのページまたはその子ページに対するアクションの実行をユーザーに許可しません。 |
@@ -309,7 +309,7 @@ AEM WCM では、アクセス制御リスト（ACL）を使用して、様々な
 
 AEM には、グリッド表示の他にも、特定のパスにおける選択したユーザー／グループの権限の詳細表示が用意されています。この詳細表示には追加情報が示されます。
 
-情報の表示に加えて、現在のユーザーまたはグループをグループに含めたり、グループから除外したりすることもできます。[権限の追加時のユーザーまたはグループの追加](#adding-users-or-groups-while-adding-permissions)を参照してください。ここで行った変更は、詳細ビューの上部に即座に反映されます。
+情報の表示に加えて、現在のユーザーやグループをグループに含めたり、グループから除外したりすることもできます。詳しくは、 [権限の追加時のユーザーまたはグループの追加](#adding-users-or-groups-while-adding-permissions).ここで行った変更は、詳細ビューの上部に即座に反映されます。
 
 詳細表示にアクセスするには、「**権限**」タブで、選択したグループ／ユーザーおよびパスの「**詳細**」をクリックします。
 
@@ -339,7 +339,7 @@ AEM には、グリッド表示の他にも、特定のパスにおける選択�
  </tbody> 
 </table>
 
-### 別のユーザーとしての実行  {#impersonating-another-user}
+### 別のユーザーとしての実行 {#impersonating-another-user}
 
 [別のユーザーとして実行する機能](/help/sites-authoring/user-properties.md#user-settings)では、ユーザーは別のユーザーに成り代わって作業をおこなうことができます。
 
@@ -349,7 +349,7 @@ AEM には、グリッド表示の他にも、特定のパスにおける選択�
 
 >[!NOTE]
 >
->非管理者ユーザーで別のユーザーとして動作させるには、別のユーザー（上記の場合はuser-B）が`/home/users`パスのREAD権限を持っている必要があります。
+>非管理者ユーザーに対して偽装を実行するには、次の `/home/users` パス。
 >
 >これを実現する方法の詳細については、[AEM の権限](/help/sites-administering/security.md#permissions-in-aem)を参照してください。
 
@@ -375,7 +375,7 @@ AEM には、グリッド表示の他にも、特定のパスにおける選択�
 | **&#x200B;テスト | 練習のためのテストインストールを利用して、様々なユーザーとグループ間の関係を把握してください。 |
 | *デフォルトのユーザー／グループ* | セキュリティの問題を回避するために、インストール直後にデフォルトのユーザーとグループを必ず更新してください。 |
 
-## ユーザーとグループの管理  {#managing-users-and-groups}
+## ユーザーとグループの管理 {#managing-users-and-groups}
 
 ユーザーには、システムおよびそのシステムに対する要求をおこなう外部システムを使用する人々が含まれます。
 
@@ -383,7 +383,7 @@ AEM には、グリッド表示の他にも、特定のパスにおける選択�
 
 ユーザーとグループは、セキュリティコンソール内のユーザー管理機能を使用して設定できます。
 
-### セキュリティコンソールを使用したユーザー管理へのアクセス  {#accessing-user-administration-with-the-security-console}
+### セキュリティコンソールを使用したユーザー管理へのアクセス {#accessing-user-administration-with-the-security-console}
 
 すべてのユーザー、グループおよび関連付けられている権限にアクセスするには、セキュリティコンソールを使用します。ここで説明する手順はすべて、このウィンドウで実行されます。
 
@@ -393,7 +393,7 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 
 ![](do-not-localize/wcmtoolbar.png)
 
-* `https://<server>:<port>/useradmin`に直接移動します。管理者としてAEMにログインしてください。
+* に直接移動します。 `https://<server>:<port>/useradmin`.必ずAEMに管理者としてログインしてください。
 
 次のウィンドウが表示されます。
 
@@ -412,12 +412,12 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 | フィルターボックス | 表示されているユーザーとグループをフィルタリングするためのメカニズムです。[ユーザーとグループのフィルタリング](#filtering-users-and-groups)を参照してください。 |
 | ユーザー非表示 | 表示されているすべてのユーザーを非表示にして、グループだけを残すための切り替えスイッチです。[ユーザーとグループの非表示](#hiding-users-and-groups)を参照してください。 |
 | グループ非表示 | 表示されているすべてのグループを非表示にして、ユーザーだけを残すための切り替えスイッチです。[ユーザーとグループの非表示](#hiding-users-and-groups)を参照してください。 |
-| 編集 | ユーザーやグループの作成と削除、アクティベートとアクティベート解除を行うことができるメニュー。[ユーザーとグループの作成](#creating-users-and-groups)および[ユーザーとグループの削除](#deleting-users-and-groups)を参照してください。 |
-| プロパティ | 電子メールの情報、説明および名前の情報を含めることができるユーザーまたはグループの情報が表示されます。ユーザーのパスワードを変更することもできます。[ユーザーとグループの作成](#creating-users-and-groups)、[ユーザーとグループのプロパティの変更](#modifying-user-and-group-properties)および[ユーザーパスワードの変更](#changing-a-user-password)を参照してください。 |
+| 編集 | ユーザーやグループの作成と削除、アクティベートとアクティベート解除を行うことができるメニュー。詳しくは、 [ユーザーとグループの作成](#creating-users-and-groups) および [ユーザーとグループの削除](#deleting-users-and-groups). |
+| プロパティ | 電子メールの情報、説明および名前の情報を含めることができるユーザーまたはグループの情報が表示されます。ユーザーのパスワードを変更することもできます。詳しくは、 [ユーザーとグループの作成](#creating-users-and-groups), [ユーザーおよびグループのプロパティの変更](#modifying-user-and-group-properties) および [ユーザーパスワードの変更](#changing-a-user-password). |
 | グループ | 選択したユーザーまたはグループが属するすべてのグループが表示されます。選択したユーザーまたはグループを他のグループに割り当てたり、グループから削除したりできます。[グループ](#adding-users-or-groups-to-a-group)を参照してください。 |
 | メンバー | グループについてのみ使用できます。特定のグループのメンバーが表示されます。[メンバー](#members-adding-users-or-groups-to-a-group)を参照してください。 |
-| 権限 | ユーザーまたはグループに権限を割り当てることができます。以下の権限を制御できます。<ul><li>特定のページ／ノードに関連する権限。[権限の設定](#setting-permissions)を参照してください。 </li><li>ページの作成と削除および階層の変更に関連する権限。??? を使用すると、ページを作成および削除するための[権限を割り当てる](#settingprivileges)ことができます（階層の変更など）。</li><li>（通常は作成者から公開への）パスに従った[レプリケーション権限](#setting-replication-privileges)に関連する権限。</li></ul> |
-| 実行 | 別のユーザーのアカウントを実行できます。あるユーザーが別のユーザーの代理として操作をおこなう必要がある場合に役立ちます。[別のユーザーとして実行する](#impersonating-another-user)を参照してください。 |
+| 権限 | ユーザーまたはグループに権限を割り当てることができます。以下の権限を制御できます。<ul><li>特定のページ／ノードに関連する権限。詳しくは、 [権限の設定](#setting-permissions). </li><li>ページの作成と削除および階層の変更に関連する権限。??? を使用すると、ページを作成および削除するための[権限を割り当てる](#settingprivileges)ことができます（階層の変更など）。</li><li>（通常は作成者から公開への）パスに従った[レプリケーション権限](#setting-replication-privileges)に関連する権限。</li></ul> |
+| 実行 | 別のユーザーのアカウントを実行できます。あるユーザーが別のユーザーの代理として操作をおこなう必要がある場合に役立ちます。詳しくは、 [別のユーザーとして実行](#impersonating-another-user). |
 | 環境設定 | [グループまたはユーザーの環境設定](#setting-user-and-group-preferences)を指定します。例えば、言語の環境設定などです。 |
 
 ### ユーザーとグループのフィルタリング {#filtering-users-and-groups}
@@ -433,7 +433,7 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 
 1. すべてのフィルターを削除する場合は、**x** をクリックします。
 
-### Hiding Users and Groups {#hiding-users-and-groups}
+### ユーザーとグループの非表示 {#hiding-users-and-groups}
 
 システム内のすべてのユーザーとグループのリストをフィルタリングする方法として、ユーザーまたはグループを非表示にすることもできます。切り替えのメカニズムは 2 つあります。「ユーザー非表示」をクリックすると、すべてのユーザーが非表示になります。「グループ非表示」をクリックすると、すべてのグループが非表示になります（ユーザーとグループの両方を同時に非表示にすることはできません）。フィルター式を使用してリストをフィルタリングするには、[ユーザーとグループのフィルタリング](#filtering-users-and-groups)を参照してください。
 
@@ -465,7 +465,7 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 
 1. 「**作成**」をクリックします。作成したユーザーまたはグループがツリーリストに表示されます。
 
-### ユーザーとグループの削除  {#deleting-users-and-groups}
+### ユーザーとグループの削除 {#deleting-users-and-groups}
 
 ユーザーまたはグループを削除するには：
 
@@ -487,14 +487,13 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 >
 >ユーザーのプロパティの一番下にユーザーのパスが表示されます。このパスは変更できません。
 
-### Changing a User Password {#changing-a-user-password}
+### ユーザーパスワードの変更 {#changing-a-user-password}
 
 以下の手順を使用して、ユーザーのパスワードを変更します。
 
 >[!NOTE]
 >
->セキュリティコンソールを使用して管理者パスワードを変更することはできません。adminアカウントのパスワードを変更するには、Granite Operationsが提供する[ユーザーコンソール](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user)を使用します。
-
+>セキュリティコンソールを使用して管理者パスワードを変更することはできません。admin アカウントのパスワードを変更するには、 [ユーザーコンソール](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user) Granite Operations で提供される
 
 1. **セキュリティ**&#x200B;コンソールで、パスワードを変更するユーザーの名前をダブルクリックします。
 1. 「**プロパティ**」タブをクリックします（まだアクティブでない場合）。
@@ -506,7 +505,7 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 1. 新しいパスワードを 2 回入力します。パスワードはクリアテキストとして表示されないので、確認のために 2 回入力する必要があります。2 つのパスワードが一致しない場合は、エラーが表示されます。
 1. 「**設定**」をクリックして、アカウントの新しいパスワードを有効にします。
 
-### グループへのユーザーまたはグループの追加  {#adding-users-or-groups-to-a-group}
+### グループへのユーザーまたはグループの追加 {#adding-users-or-groups-to-a-group}
 
 AEM には、ユーザーまたはグループを既存のグループに追加するための方法が 3 つ用意されています。
 
@@ -514,7 +513,7 @@ AEM には、ユーザーまたはグループを既存のグループに追加�
 * メンバーである場合は、グループにメンバーを追加できます。
 * 権限を使用する場合は、グループにメンバーを追加できます。
 
-### グループ - グループへのユーザーまたはグループの追加  {#groups-adding-users-or-groups-to-a-group}
+### グループ - グループへのユーザーまたはグループの追加 {#groups-adding-users-or-groups-to-a-group}
 
 「**グループ**」タブには、現在のアカウントが属するグループが表示されます。このタブを使用して、選択したアカウントをグループに追加できます。
 
@@ -526,7 +525,7 @@ AEM には、ユーザーまたはグループを既存のグループに追加�
 
 1. 「**保存**」をクリックして変更を保存します。
 
-### Members - Adding Users or Groups to a Group {#members-adding-users-or-groups-to-a-group}
+### メンバー - グループへのユーザーまたはグループの追加 {#members-adding-users-or-groups-to-a-group}
 
 「**メンバー**」タブはグループについてのみ使用できます。このタブには、現在のグループに属しているユーザーとグループが表示されます。このタブを使用して、アカウントをグループに追加できます。
 
@@ -538,7 +537,7 @@ AEM には、ユーザーまたはグループを既存のグループに追加�
 
 1. 「**保存**」をクリックして変更を保存します。
 
-### Adding Users or Groups while Adding Permissions {#adding-users-or-groups-while-adding-permissions}
+### 権限を追加する際のユーザーまたはグループの追加 {#adding-users-or-groups-while-adding-permissions}
 
 特定のパスにあるグループにメンバーを追加するには：
 
@@ -600,13 +599,13 @@ AEM には、ユーザーまたはグループをグループから削除する�
 1. 対象のパスに対する権限を追加するメンバーの「**メンバー**」列のチェックボックスをオンにします。権限を削除するメンバーのチェックボックスはオフにしてください。変更をおこなったセルには赤い三角形が表示されます。
 1. 「**OK**」をクリックして、変更を保存します。
 
-### ユーザーの同期 {#user-synchronization}
+### ユーザー同期 {#user-synchronization}
 
-デプロイメントが[パブリッシュファーム](/help/sites-deploying/recommended-deploys.md#tarmk-farm)の場合、ユーザーとグループをすべてのパブリッシュノード間で同期する必要があります。
+デプロイメントが [パブリッシュファーム](/help/sites-deploying/recommended-deploys.md#tarmk-farm)、すべてのパブリッシュノード間でユーザーとグループを同期する必要があります。
 
 ユーザー同期の概要とそれを有効にする方法について詳しくは、[ユーザー同期](/help/sites-administering/sync.md)を参照してください。
 
-## 権限の管理  {#managing-permissions}
+## 権限の管理 {#managing-permissions}
 
 ここでは、権限（レプリケーション権限を含む）を設定する方法について説明します。
 
@@ -634,10 +633,9 @@ AEM には、ユーザーまたはグループをグループから削除する�
 >
 >* グループに適用されたレプリケーション権限は、そのグループ内のすべてのユーザーに適用されます。
 >* ユーザーのレプリケーション権限はグループのレプリケーション権限に優先します。
->* 「レプリケーションを許可」権限の方が、「レプリケーションを拒否」権限の方が優先されます。詳しくは、AEM](#permissions-in-aem)の[権限を参照してください。
+>* 「許可」レプリケーション権限の方が、「拒否」レプリケーション権限よりも優先されます。詳しくは、 [AEMの権限](#permissions-in-aem) を参照してください。
 
 >
-
 
 
 レプリケーション権限を設定するには：
@@ -651,7 +649,7 @@ AEM には、ユーザーまたはグループをグループから削除する�
 
 1. 「**保存**」をクリックして変更を保存します。
 
-### ノードの検索  {#searching-for-nodes}
+### ノードの検索 {#searching-for-nodes}
 
 権限を追加または削除する場合に、ノードを参照または検索できます。
 
@@ -711,7 +709,7 @@ AEM には、ユーザーまたはグループをグループから削除する�
 
 1. 必要に応じて、グループまたはユーザーの環境設定を変更し、完了したら「**保存**」をクリックします。
 
-### ユーザーまたは管理者に他のユーザーの管理権限を付与するための設定  {#setting-users-or-administrators-to-have-the-privilege-to-manage-other-users}
+### ユーザーまたは管理者に他のユーザーの管理権限を付与するための設定 {#setting-users-or-administrators-to-have-the-privilege-to-manage-other-users}
 
 ユーザーまたは管理者が他のユーザーを削除／アクティベート／アクティベート解除する権限を付与するための設定をおこなうには：
 
@@ -725,17 +723,17 @@ AEM には、ユーザーまたはグループをグループから削除する�
 
    これで、選択したユーザーがユーザーのアクティベート解除、アクティベート、削除および作成をおこなうことができます。
 
-### プロジェクトレベルでの権限の拡張  {#extending-privileges-on-a-project-level}
+### プロジェクトレベルでの権限の拡張 {#extending-privileges-on-a-project-level}
 
 アプリケーション専用の権限を実装する場合に、カスタム権限を実装するために確認しておく必要のある情報および CQ 全体でその権限を適用する方法を以下に示します。
 
-階層変更権限は、jcr-privilegesの組み合わせでカバーされます。レプリケーション権限は、**crx:replicate**&#x200B;という名前で、jcrリポジトリ上の他の権限と共に保存/評価されます。ただし、jcrレベルでは適用されません。
+階層の変更権限は、jcr-privileges の組み合わせでカバーされます。レプリケーション権限の名前はです **crx:replicate** jcr リポジトリ上の他の権限と共に保存/評価されるただし、jcr レベルでは適用されません。
 
-カスタム権限の定義と登録は、正式にはバージョン2.4以降の[Jackrabbit API](https://jackrabbit.apache.org/api/2.8/org/apache/jackrabbit/api/security/authorization/PrivilegeManager.html)に含まれています（[JCR-2887](https://issues.apache.org/jira/browse/JCR-2887)も参照してください）。 その他の使用方法は、[JSR 283](https://jcp.org/en/jsr/detail?id=283) (section 16)で定義されているように、JCRアクセス制御管理でカバーされます。 さらに、Jackrabbit APIは、いくつかの拡張を定義します。
+カスタム権限の定義と登録は、正式に [Jackrabbit API](https://jackrabbit.apache.org/api/2.8/org/apache/jackrabbit/api/security/authorization/PrivilegeManager.html) バージョン 2.4 以降 ( [JCR-2887](https://issues.apache.org/jira/browse/JCR-2887)) をクリックします。 その他の使用方法は、で定義されているように、JCR Access Control Management でカバーされます。 [JSR 283](https://jcp.org/en/jsr/detail?id=283) （第 16 条） さらに、Jackrabbit API は、いくつかの拡張を定義します。
 
-権限登録メカニズムは、**リポジトリ設定**&#x200B;のUIに反映されます。
+権限の登録メカニズムは、UI の **リポジトリ設定**.
 
-新しい（カスタム）権限の登録は、リポジトリレベルで付与する必要がある組み込みの権限によって保護されます(JCR内の場合：ac mgt apiで「absPath」パラメーターとして「null」を渡す（詳しくは、 jsr 333を参照）。 デフォルトでは、**admin**&#x200B;と管理者のすべてのメンバーにこの権限が付与されます。
+新しい（カスタム）権限の登録は、リポジトリレベル (JCR:ac mgt api で「absPath」パラメーターとして「null」を渡す（詳しくは、 jsr 333 を参照）。 デフォルトでは、 **admin** また、管理者のすべてのメンバーがこの権限を付与しています。
 
 >[!NOTE]
 >

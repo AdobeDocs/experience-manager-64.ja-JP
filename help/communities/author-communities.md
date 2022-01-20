@@ -1,8 +1,8 @@
 ---
 title: コミュニティコンポーネント
-seo-title: コミュニティコンポーネント
+seo-title: Communities Components
 description: 'AEM サイトへのコミュニティ機能の追加 '
-seo-description: 'AEM サイトへのコミュニティ機能の追加 '
+seo-description: Adding community features to any AEM site
 uuid: 676abcda-3021-498d-a6eb-b60004315349
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: dc149196-fa56-494e-975c-b11ca1ef193b
 exl-id: 7118dbca-e9b4-4b69-b4c3-34bb52008168
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 73%
+source-wordcount: '286'
+ht-degree: 72%
 
 ---
 
@@ -31,17 +31,17 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 
 >[!NOTE]
 >
->オーサリング環境に馴染みがない場合は、[基本操作](../../help/sites-authoring/basic-handling.md)に関するドキュメントと、[ページのオーサリングに関するクイックガイド](../../help/sites-authoring/qg-page-authoring.md)を参照してください。
+>オーサリング環境に詳しくない場合は、 [基本操作](../../help/sites-authoring/basic-handling.md) および [ページのオーサリングのクイックガイド](../../help/sites-authoring/qg-page-authoring.md).
 
 ## 使用可能なコミュニティコンポーネント {#available-communities-components}
 
 以下の表に、コンポーネントブラウザー（サイドキック）で有効なときに作成者に表示されるコミュニティコンポーネントを示します。
 
-インタラクティブな[コミュニティコンポーネントガイド](components-guide.md)も参照してください。
+インタラクティブ [コミュニティコンポーネントガイド](components-guide.md).
 
 >[!NOTE]
 >
->[コミュニティコンポーネントの基本](basics.md)をお読みください。コミュニティコンポーネントを使用したオーサリングに必要な情報が含まれています。
+>読み取り [コミュニティコンポーネントの基本](basics.md) コミュニティコンポーネントを使用したオーサリングに必要な情報が含まれているので、
 
 | **コンポーネントのタイトル** | **機能** |
 |---|---|
@@ -78,12 +78,12 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 
 >[!NOTE]
 >
->投票コンポーネントは使用できなくなり、Experience Managerコミュニティでサポートされます。
+>投票コンポーネントは使用できなくなり、Experience ManagerCommunities でサポートされます。
 
 ## 関連するコミュニティドキュメント {#related-communities-documentation}
 
-* 推奨されるデプロイメントについては、[Communitiesのデプロイ](deploy-communities.md)を参照してください。
+* 訪問 [コミュニティのデプロイ](deploy-communities.md) を参照して、推奨されるデプロイメントについて確認してください。
 
 * コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理およびメッセージングの設定については、[コミュニティサイトの管理](administer-landing.md)を参照してください。
 
-* ソーシャルコンポーネントフレームワーク(SCF)とコミュニティのコンポーネントと機能のカスタマイズについては、 [コミュニティの開発](communities.md)を参照してください。
+* 訪問 [コミュニティの開発](communities.md) ソーシャルコンポーネントフレームワーク (SCF) と、コミュニティのコンポーネントと機能のカスタマイズについて説明します。

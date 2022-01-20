@@ -1,8 +1,8 @@
 ---
 title: セレクターの操作
-seo-title: セレクターの操作
+seo-title: Working with Selectors
 description: インタラクティブ画像、インタラクティブビデオ、カルーセルバナーのアセットの選択
-seo-description: インタラクティブ画像、インタラクティブビデオ、カルーセルバナーのアセットの選択
+seo-description: Selecting assets for interactive images, interactive video, and carousel banners
 uuid: 6231739c-bf49-4069-90a4-57848cc68d9a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -10,11 +10,11 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 262eb911-3dcb-475d-b410-8bcac1347905
 exl-id: 6bd68afe-bd54-4482-bd6e-cb318868c8d0
-feature: セレクター
+feature: Selectors
 role: User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '726'
 ht-degree: 99%
 
 ---

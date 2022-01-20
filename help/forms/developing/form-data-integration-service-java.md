@@ -1,8 +1,8 @@
 ---
-title: フォームデータ統合サービスJavaAPIクイックスタート(SOAP)
-seo-title: フォームデータ統合サービスJavaAPIクイックスタート(SOAP)
-description: Form Data Integrationサービスを使用して、データをPDFフォームに読み込み、Java APIを使用してPDFフォームからデータを書き出します。
-seo-description: Form Data Integrationサービスを使用して、データをPDFフォームに読み込み、Java APIを使用してPDFフォームからデータを書き出します。
+title: フォームデータ統合サービス JavaAPI クイックスタート (SOAP)
+seo-title: Form Data Integration Service JavaAPI Quick Start(SOAP)
+description: Form Data Integration サービスを使用して、Java API を使用して、データをPDFフォームに読み込み、PDFフォームからデータを書き出します。
+seo-description: Use the Form Data Integration service to import data into a PDF form and export data from a PDF form using the Java API.
 uuid: bde8e83d-56d3-4331-a025-82b327c219b7
 contentOwner: admin
 content-type: reference
@@ -13,28 +13,28 @@ role: Developer
 exl-id: c60ef25a-26a0-4421-b635-ced54baa324d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
 
-# フォームデータ統合サービスJava APIクイックスタート(SOAP) {#form-data-integration-service-javaapi-quick-start-soap}
+# フォームデータ統合サービス Java API クイックスタート (SOAP) {#form-data-integration-service-javaapi-quick-start-soap}
 
-Form Data Integrationサービスでは、次のクイックスタートを使用できます。
+Form Data Integration サービスでは、次のクイックスタートを使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したフォームデータの読み込み](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したフォームデータの読み込み](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したフォームデータの書き出し](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
+[クイックスタート（SOAP モード）:Java API を使用したフォームデータの書き出し](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「 AEM formsによるプログラミング」にあるクイックスタートは、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
+>「AEM forms によるプログラミング」にあるクイックスタートは、JBoss Application Server とMicrosoft Windows オペレーティングシステムにデプロイされるForms Server に基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 詳しくは、 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-importing-form-data-using-the-java-api}を使用したフォームデータの読み込み
+## クイックスタート（SOAP モード）:Java API を使用したフォームデータの読み込み {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
-次のJavaコードの例では、データをPDFフォームに読み込みます。 データは&#x200B;*Loan_data.xml*&#x200B;というXMLファイルに格納され、PDFフォームは&#x200B;*ResultLoanForm.pdf*&#x200B;というPDFファイルとして保存されます。 （[フォームデータの読み込み](/help/forms/developing/importing-exporting-data.md#importing-form-data)を参照）。
+次の Java コードの例では、データをPDFフォームに読み込みます。 データは、という名前の XML ファイルに格納されています。 *Loan_data.xml* PDFフォームは、 *ResultLoanForm.pdf*. ( [フォームデータの読み込み](/help/forms/developing/importing-exporting-data.md#importing-form-data).)
 
 ```as3
  /* 
@@ -134,9 +134,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-exporting-form-data-using-the-java-api}を使用してフォームデータを書き出す
+## クイックスタート（SOAP モード）:Java API を使用したフォームデータの書き出し {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
 
-次のJavaコードの例では、PDFフォームからデータを書き出しています。 フォームデータは、*Loan_data.xml*&#x200B;というXMLファイルとして保存されます。 （[フォームデータの書き出し](/help/forms/developing/importing-exporting-data.md#exporting-form-data)を参照）。
+次の Java コードの例では、データをPDFフォームから書き出します。 フォームデータは、 *Loan_data.xml*. ( [フォームデータの書き出し](/help/forms/developing/importing-exporting-data.md#exporting-form-data).)
 
 ```as3
  /* 

@@ -1,8 +1,8 @@
 ---
 title: Geometrixx サイトの削除
-seo-title: Geometrixx サイトの削除
+seo-title: Removing the Geometrixx Sites
 description: サンプルの Geometrixx コンテンツの削除方法について説明します。
-seo-description: サンプルの Geometrixx コンテンツの削除方法について説明します。
+seo-description: Learn how to remove the sample Geometrixx content.
 uuid: 07d20837-3375-4e64-bb07-3e4d10452335
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -11,7 +11,7 @@ discoiquuid: 56761a36-ce21-46e1-856f-75a7e94acae9
 exl-id: 495031fb-b559-4071-abc4-93d238ce136d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '132'
 ht-degree: 100%
 
 ---

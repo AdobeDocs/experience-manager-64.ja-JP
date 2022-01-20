@@ -1,8 +1,8 @@
 ---
 title: 'ドロップダウンリストの動的な自動入力 '
-seo-title: 'ドロップダウンリストの動的な自動入力 '
+seo-title: Dynamically populating drop-down lists
 description: あるロジックに基づいてドロップダウンリストを動的に自動入力する手順
-seo-description: あるロジックに基づいてドロップダウンリストを動的に自動入力する手順
+seo-description: Procedure to dynamically populate drop-down lists based on some logic
 uuid: b58a184f-6c96-47ff-8a2e-829c93b63324
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,7 +11,7 @@ discoiquuid: 49453dda-7b05-4470-866e-1946bff70f27
 exl-id: 3a32f578-23b1-4c76-bd85-dd3d812c6c28
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '332'
 ht-degree: 100%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 100%
 
 ## 前提条件 {#prerequisites}
 
-* [OSGI バンドルの作成](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
+* [OSGI バンドルの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja&amp;CID=RedirectAEMCommunityKautuk)
 * [AEM コンポーネントの開発](/help/sites-developing/components.md)
 * [アダプティブフオームの作成](/help/forms/using/creating-adaptive-form.md)
 * [アダプティブフォームのオーサリング](/help/forms/using/introduction-forms-authoring.md)

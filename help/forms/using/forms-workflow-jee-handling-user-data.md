@@ -1,8 +1,8 @@
 ---
 title: Forms JEE ワークフロー | ユーザーデータの処理
-seo-title: Forms JEE ワークフロー | ユーザーデータの処理
-description: AEM Forms JEEワークフローは、ビジネスプロセスを設計、作成、管理するためのツールを提供します。 ユーザーデータのアクセスと削除、ワークフローの開始者または参加者がわかっている場合のプロセスインスタンスIDの特定、プリミティブ変数にユーザーデータが格納されている場合のプロセスインスタンスIDの特定、プロセスインスタンスIDに基づくワークフローインスタンスからのユーザーデータの削除、オーファンタスクの操作
-seo-description: AEM Forms JEEワークフローは、ビジネスプロセスを設計、作成、管理するためのツールを提供します。 ユーザーデータのアクセスと削除、ワークフローの開始者または参加者がわかっている場合のプロセスインスタンスIDの特定、プリミティブ変数にユーザーデータが格納されている場合のプロセスインスタンスIDの特定、プロセスインスタンスIDに基づくワークフローインスタンスからのユーザーデータの削除、オーファンタスクの操作
+seo-title: Forms JEE workflows | Handling user data
+description: AEM Forms JEE ワークフローは、ビジネスプロセスを設計、作成、管理するためのツールを提供します。 ユーザーデータへのアクセスと削除、ワークフローの開始者または参加者がわかっている場合のプロセスインスタンス ID の識別、プリミティブ変数にユーザーデータが格納されている場合のプロセスインスタンス ID の識別、プロセスインスタンス ID に基づくワークフローインスタンスからのユーザーデータの削除、孤立タスクの操作
+seo-description: AEM Forms JEE workflows provide tools to design, create, and manage business processes. Learn more on how to access and delete user data, identify process instance IDs when workflow initiator or participant is known, identify process instance IDs when user data is stored in primitive variables, purge user data from workflow instances based on process instance IDs, and work with orphan tasks.
 uuid: 3b06ef19-d3c4-411e-9530-2c5d2159b559
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,14 +11,14 @@ role: Admin
 exl-id: 8cbace00-c354-4f37-a781-04cadd441419
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
-source-wordcount: '1493'
-ht-degree: 64%
+source-wordcount: '1425'
+ht-degree: 67%
 
 ---
 
 # Forms JEE ワークフロー | ユーザーデータの処理 {#forms-jee-workflows-handling-user-data}
 
-AEM Forms JEEワークフローは、ビジネスプロセスを設計、作成、管理するためのツールを提供します。 ワークフロープロセスは、特定の順序で実行される一連のステップで構成されます。各ステップで、ユーザーへのタスクの割り当てや電子メールメッセージの送信など、特定の処理が実行されます。プロセスは、アセット、ユーザーアカウントおよびサービスとインタラクティブに動作し、次のいずれかの方法でトリガーすることができます。
+AEM Forms JEE ワークフローは、ビジネスプロセスを設計、作成、管理するためのツールを提供します。 ワークフロープロセスは、特定の順序で実行される一連のステップで構成されます。各ステップで、ユーザーへのタスクの割り当てや電子メールメッセージの送信など、特定の処理が実行されます。プロセスは、アセット、ユーザーアカウントおよびサービスとインタラクティブに動作し、次のいずれかの方法でトリガーすることができます。
 
 * AEM Forms Workspace からのプロセスの開始
 * SOAP または RESTful サービスの使用
@@ -26,7 +26,7 @@ AEM Forms JEEワークフローは、ビジネスプロセスを設計、作成�
 * 監視フォルダーの使用
 * 電子メールの使用
 
-AEM Forms JEEワークフロープロセスの作成について詳しくは、「 [Workbenchヘルプ](https://helpx.adobe.com/jp/content/dam/help/en/experience-manager/6-4/forms/pdf/WorkbenchHelp.pdf) 」を参照してください。
+AEM Forms JEE ワークフロープロセスの作成について詳しくは、 [Workbench ヘルプ](https://helpx.adobe.com/jp/content/dam/help/en/experience-manager/6-4/forms/pdf/WorkbenchHelp.pdf).
 
 ## ユーザーデータとデータストア {#user-data-and-data-stores}
 
@@ -34,19 +34,19 @@ AEM Forms JEEワークフロープロセスの作成について詳しくは、�
 
 ## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
 
-プロセスがトリガーされると、一意のプロセスインスタンスIDと長期間有効な呼び出しIDが生成され、プロセスインスタンスに関連付けられます。 永続的呼び出し ID に基づいて、プロセスインスタンスのデータへアクセスしてデータを削除できます。プロセス開始者のユーザー名またはタスクを送信したプロセス参加者のユーザー名を使用して、プロセスインスタンスの長期間有効な呼び出しIDを推測できます。
+プロセスがトリガーされると、一意のプロセスインスタンス ID と長期間有効な呼び出し ID が生成され、プロセスインスタンスに関連付けられます。 永続的呼び出し ID に基づいて、プロセスインスタンスのデータへアクセスしてデータを削除できます。プロセス開始者またはタスクを送信したプロセス参加者のユーザー名を使用して、プロセスインスタンスの長期間有効な呼び出し ID を推測できます。
 
 ただし、以下のシナリオでは開始者のプロセスインスタンス ID を特定することはできません。
 
 * **監視フォルダーを介してトリガーされたプロセス**：プロセスが監視フォルダーによりトリガーされた場合、そのプロセスの開始者を使用してプロセスインスタンスを特定することはできません。この場合、ユーザー情報は格納済みデータでエンコードされます。
 * **AEM の発行インスタンスから開始されたプロセス**：AEM 発行インスタンスからトリガーされたすべてのプロセスインスタンスは、開始者に関する情報を取得しません。ただし、ユーザーデータは、ワークフロー変数に格納されているプロセスに関連付けられたフォームに取得される場合があります。
-* **プロセスはEメールを通じて開始されます**:送信者のEメールIDは、データベーステーブルの不透明なblob列のプロパティとして取り込まれま `tb_job_instance` す。直接照会することはできません。
+* **プロセスは E メールを通じて開始されました**:送信者の E メール ID は、 `tb_job_instance` データベーステーブル。直接クエリを実行することはできません。
 
 ### ワークフローの開始者または参加者が分かっている場合のプロセスインスタンス ID の特定 {#initiator-participant}
 
 ワークフローの開始者または参加者のプロセスインスタンス ID を特定するには、次の手順を実行します。
 
-1. AEM Formsサーバーデータベースで次のコマンドを実行して、`edcprincipalentity`データベーステーブルからワークフロー開始者または参加者のプリンシパルIDを取得します。
+1. AEM Formsサーバーデータベースで次のコマンドを実行して、ワークフローの開始者または参加者のプリンシパル ID を `edcprincipalentity` データベーステーブル。
 
    ```sql
    select id from edcprincipalentity where canonicalname='user_ID'
@@ -60,12 +60,12 @@ AEM Forms JEEワークフロープロセスの作成について詳しくは、�
    select * from tb_task where start_task = 1 and create_user_id= 'initiator_principal_id'
    ```
 
-   クエリは、指定された`initiator`_ `principal_id`によって開始されたタスクを返します。 タスクには次の 2 つのタイプがあります。
+   クエリは、指定した `initiator`_ `principal_id`. タスクには次の 2 つのタイプがあります。
 
-   * **完了したタスク**:これらのタスクは送信され、「 」フィールドに英数字の値が表示さ `process_instance_id` れます。送信済みタスクのすべてのプロセスインスタンス ID をメモして、手順を続行します。
-   * **開始されたが完了していないタスク**：これらのタスクは開始されていますが、まだ送信されていません。これらのタスクの`process_instance_id`フィールドの値は、**0**（ゼロ）です。 この場合、対応するタスク ID をメモして、「[オーファンタスクの操作](#orphan)」を参照してください。
+   * **完了したタスク**:これらのタスクは送信され、 `process_instance_id` フィールドに入力します。 送信済みタスクのすべてのプロセスインスタンス ID をメモして、手順を続行します。
+   * **開始されたが完了していないタスク**：これらのタスクは開始されていますが、まだ送信されていません。の値 `process_instance_id` 次のタスクのフィールド： **0** （ゼロ）を返します。 この場合、対応するタスク ID をメモして、「[オーファンタスクの操作](#orphan)」を参照してください。
 
-1. （**ワークフロー参加者**&#x200B;の場合）次のコマンドを実行して、イニシエーターのプロセス参加者のプリンシパルIDに関連付けられたプロセスインスタンスIDを`tb_assignment`データベーステーブルから取得します。
+1. (**ワークフロー参加者用**) 次のコマンドを実行して、イニシエーターのプロセス参加者のプリンシパル ID に関連付けられているプロセスインスタンス ID を、 `tb_assignment` データベーステーブル。
 
    ```sql
    select distinct a.process_instance_id from tb_assignment a join tb_queue q on a.queue_id = q.id where q.workflow_user_id='participant_principal_id'
@@ -75,13 +75,13 @@ AEM Forms JEEワークフロープロセスの作成について詳しくは、�
 
    送信済みタスクのすべてのプロセスインスタンス ID をメモして、手順を続行します。
 
-   オーファンタスクまたは`process_instance_id`が0（ゼロ）のタスクの場合は、対応するタスクIDをメモして、「[オーファンタスクの操作](#orphan)」を参照してください。
+   オーファンタスクまたは `process_instance_id` が 0（ゼロ）の場合は、対応するタスク ID をメモして、 [オーファンタスクの操作](#orphan).
 
-1. [プロセスインスタンスID](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge)に基づいてワークフローインスタンスからユーザーデータをパージするの手順に従って、識別されたプロセスインスタンスIDのユーザーデータを削除します。
+1. 詳しくは、 [プロセスインスタンス ID に基づいて、ワークフローインスタンスからユーザーデータをパージします](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 」セクションを使用して、識別されたプロセスインスタンス ID のユーザーデータを削除します。
 
 ### ユーザーデータがプリミティブ変数に格納されている場合のプロセスインスタンス ID の特定 {#primitive}
 
-ワークフローは、ユーザーデータがデータベース内のBLOBとして保存される変数に取り込まれるように設計できます。 このような場合、次のプリミティブ型変数のいずれかに格納されている場合にのみ、ユーザーデータのクエリを実行できます。
+ワークフローは、ユーザーデータがデータベース内の BLOB として保存される変数に取り込まれるように設計できます。 このような場合、次のプリミティブ型変数のいずれかに格納されている場合にのみ、ユーザーデータのクエリを実行できます。
 
 * **文字列**：ユーザー ID は直接またはサブ文字列として含まれ、SQL を使用してクエリを実行できます。
 * **数値**：ユーザー ID は直接含まれています。
@@ -95,13 +95,13 @@ AEM Forms JEEワークフロープロセスの作成について詳しくは、�
    select database_table from omd_object_type where name='pt_<app_name>/<workflow_name>'
    ```
 
-   クエリは、指定されたアプリケーション(`app_name`)とワークフロー(`workflow_name`)に対して、`tb_<number>`形式のテーブル名を返します。
+   クエリは、 `tb_<number>` 指定したアプリケーション ( `app_name`) およびワークフロー ( ) `workflow_name`) をクリックします。
 
    >[!NOTE]
    >
    >ワークフローがアプリケーション内のサブフォルダーにネストされている場合、`name` プロパティの値は複合型にすることができます。ワークフローへの正確なフルパスを指定するようにしてください。これは、`omd_object_type` データベーステーブルから取得できます。
 
-1. `tb_<number>`テーブルスキーマを確認します。 テーブルには、指定されたワークフローのユーザーデータを格納する変数が含まれています。テーブルの変数はワークフローの変数に対応しています。
+1. 以下を確認します。 `tb_<number>` テーブルスキーマ。 テーブルには、指定されたワークフローのユーザーデータを格納する変数が含まれています。テーブルの変数はワークフローの変数に対応しています。
 
    ユーザー ID を含むワークフロー変数に対応する変数を特定してメモしておきます。特定された変数がプリミティブ型の場合は、クエリを実行して、ユーザー ID に関連付けられたワークフローインスタンスを確認できます。
 
@@ -113,25 +113,25 @@ AEM Forms JEEワークフロープロセスの作成について詳しくは、�
 
    クエリを実行すると、指定された `user_ID` に関連付けられたすべてのプロセスインスタンス ID が返されます。
 
-1. [プロセスインスタンスID](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge)に基づいてワークフローインスタンスからユーザーデータをパージするの手順に従って、識別されたプロセスインスタンスIDのユーザーデータを削除します。
+1. 詳しくは、 [プロセスインスタンス ID に基づいて、ワークフローインスタンスからユーザーデータをパージします](/help/forms/using/forms-workflow-jee-handling-user-data.md#purge) 」セクションを使用して、識別されたプロセスインスタンス ID のユーザーデータを削除します。
 
 ### プロセスインスタンス ID に基づいてワークフローインスタンスからユーザーデータを削除する {#purge}
 
 これでユーザーに関連付けられたプロセスインスタンス ID を特定できたので、次の手順を実行して個々のプロセスインスタンスからユーザーデータを削除します。
 
-1. `tb_process_instance`テーブルからプロセスインスタンスの長期間有効な呼び出しIDとステータスを取得するには、次のコマンドを実行します。
+1. 次のコマンドを実行して、プロセスインスタンスの長時間有効な呼び出し ID とステータスを `tb_process_instance` 表。
 
    ```sql
    select long_lived_invocation_id, status from tb_process_instance where id='process_instance_id'
    ```
 
-   クエリは、指定された`process_instance_id`の長期間有効な呼び出しIDとステータスを返します。
+   クエリは、指定した `process_instance_id`.
 
-1. `ServiceClientFactory`インスタンスを使用し、正しい接続設定でパブリック`ProcessManager`クライアント(`com.adobe.idp.workflow.client.ProcessManager`)のインスタンスを作成します。
+1. パブリックのインスタンスの作成 `ProcessManager` クライアント ( `com.adobe.idp.workflow.client.ProcessManager`) を `ServiceClientFactory` インスタンスの接続設定が正しいこと。
 
    詳しくは、「[Class ProcessManager](https://helpx.adobe.com/jp/experience-manager/6-4/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html)」の Java API リファレンスを参照してください。
 
-1. ワークフローインスタンスのステータスを確認します。ステータスが2(COMPLETE)または4(TERMINATED)以外の場合は、次のメソッドを呼び出して、最初にインスタンスを終了します。
+1. ワークフローインスタンスのステータスを確認します。ステータスが 2(COMPLETE) または 4(TERMINATED) 以外の場合は、次のメソッドを呼び出して、最初にインスタンスを終了します。
 
    `ProcessManager.terminateProcess(<long_lived_invocation_id>)`
 
@@ -143,7 +143,7 @@ AEM Forms JEEワークフロープロセスの作成について詳しくは、�
 
 ### オーファンタスクの操作 {#orphan}
 
-オーファンタスクは、プロセスが開始されているがまだ送信されていないプロセスを含むタスクです。この場合、`process_instance_id`は&#x200B;**0**（ゼロ）です。 したがって、プロセスインスタンス ID を使用してオーファンタスクに保存されたユーザーデータを追跡することはできません。ただし、オーファンタスクのタスク ID を使用してユーザーデータを追跡することができます。「`tb_task`ワークフローの開始者または参加者が分かっている場合のプロセスインスタンス ID の特定[」で説明されているように、ユーザーの ](/help/forms/using/forms-workflow-jee-handling-user-data.md#initiator-participant) テーブルからタスク ID を特定することができます。
+オーファンタスクは、プロセスが開始されているがまだ送信されていないプロセスを含むタスクです。この場合、 `process_instance_id` が **0** （ゼロ）を返します。 したがって、プロセスインスタンス ID を使用してオーファンタスクに保存されたユーザーデータを追跡することはできません。ただし、オーファンタスクのタスク ID を使用してユーザーデータを追跡することができます。「`tb_task`ワークフローの開始者または参加者が分かっている場合のプロセスインスタンス ID の特定[」で説明されているように、ユーザーの ](/help/forms/using/forms-workflow-jee-handling-user-data.md#initiator-participant) テーブルからタスク ID を特定することができます。
 
 タスク ID が特定されたら、次を実行して GDS およびデータベースからオーファンタスクに関連するファイルおよびデータを削除します。
 
@@ -165,7 +165,7 @@ AEM Forms JEEワークフロープロセスの作成について詳しくは、�
 
       GDS ファイルシステムで次の手順を実行します。
 
-      1. 次のセッションID文字列を拡張子として持つファイルを検索します。
+      1. 次のセッション ID 文字列を拡張子として持つファイルを検索します。
       * `_wfattach<task_id>`
       * `_wftask<fd_id>`
       * `_wftaskformid<fd_id>`
@@ -173,7 +173,7 @@ AEM Forms JEEワークフロープロセスの作成について詳しくは、�
          これらの拡張子を持つファイルはマーカーファイルです。これらのファイルは次の形式のファイル名で保存されます。
 
          `<file_name_guid>.session<session_id_string>`
-      1. すべてのマーカーファイルと、正確なファイル名が`<file_name_guid>`の他のファイルをファイルシステムから削除します。
+      1. すべてのマーカーファイルと、正確なファイル名を持つ他のファイルを削除します。 `<file_name_guid>` ファイルシステムから。
    1. **データベースの GDS**
 
       セッション ID ごとに次のコマンドを実行します。

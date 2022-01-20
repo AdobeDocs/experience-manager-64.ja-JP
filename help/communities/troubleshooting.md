@@ -1,8 +1,8 @@
 ---
 title: トラブルシューティング
-seo-title: トラブルシューティング
+seo-title: Troubleshooting
 description: 既知の問題を含むコミュニティのトラブルシューティング
-seo-description: 既知の問題を含むコミュニティのトラブルシューティング
+seo-description: Troubleshooting Community including Known Issues
 uuid: 99225430-fa2a-4393-ae5a-18b19541c358
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
 exl-id: 1a1de20d-53f6-4787-92e3-e12f30d925d3
 source-git-commit: a70f874ad7fcae59ee4c6ec20e23ffb2e339590b
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 89%
+source-wordcount: '367'
+ht-degree: 88%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 89%
 
 CQ 5.4 でフォーラムが作成され、トピックが投稿された後、サイトが AEM 5.6.1 以降にアップグレードされた場合、既存の投稿を表示しようとすると、ページに次のエラーが表示されることがあります。
 
-不正なパターン文字&#39;a&#39;\
+無効なパターン文字「a」\
 このサーバーで/content/demoforums/forum-test.htmlに要求を提供できません
 
 さらに、ログには次のように記録されます。
@@ -62,7 +62,7 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 起動時（初回ではなく、2 回目以降のすべての起動時）に、次の警告がログに表示されることがあります。
 
-* 11.04.2014 08:38:07.223 **WARN** [FelixStartLevel]com.github.jcotth.handlebars.Handlebarsヘルパー&#39;i18n&#39;は、&#39;com.adobe.cq.social.handlebars.I18nHelper@15bac645&#39;に置き換えられました。
+* 11.04.2014 08:38:07.223 **警告** [FelixStartLevel]com.github.jcoth.handlebars.Handlebars ヘルパー「i18n」は「com.adobe.cq.social.handlebars.I18nHelper@15bac645」に置き換えられました
 
 [SCF](scf.md#handlebarsjavascripttemplatinglanguage) で使用される jknack.handlebars.Handlebars には独自の i18n ヘルパーユーティリティが用意されているので、この警告は無視しても問題ありません。起動時に、AEM 固有の [i18n ヘルパー](handlebars-helpers.md#i-n)に置き換えられます。この警告は、既存のヘルパーのオーバーライドを確認するためにサードパーティのライブラリによって生成されます。
 

@@ -1,8 +1,8 @@
 ---
 title: コミュニティコンポーネントの OSGi イベント
-seo-title: コミュニティコンポーネントの OSGi イベント
+seo-title: OSGi Events for Communities Components
 description: 非同期リスナーを呼び出す OSGi イベントが送信されます
-seo-description: 非同期リスナーを呼び出す OSGi イベントが送信されます
+seo-description: OSGi events are sent that can trigger asynchronous listeners
 uuid: 317e2add-689d-4c99-ae38-0703b6649cb7
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: 25b7ac08-6cdc-4dd5-a756-d6169b86f9ab
 exl-id: 3f7d1b95-729a-4c55-af96-efdb9617d333
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 72%
+source-wordcount: '665'
+ht-degree: 71%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 72%
 
 メンバーがコミュニティ機能と対話する際には、通知やゲーミフィケーション（スコアおよびバッジ）のような非同期リスナーを呼び出す OSGi イベントが送信されます。
 
-コンポーネントの[SocialEvent](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)インスタンスは、`topic`に対して発生した`actions`としてイベントを記録します。 SocialEventには、アクションに関連付けられた`verb`を返すメソッドが含まれます。 `actions`と`verbs`の間に&#x200B;*n-1*&#x200B;の関係があります。
+コンポーネントの [SocialEvent](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) インスタンスは、イベントを `actions`それは `topic`. SocialEvent には、 `verb`アクションに関連付けられている。 ここに *n-1* ～間の関係 `actions`および `verbs`.
 
-リリースで提供されるCommunitiesコンポーネントについて、次の表では、使用可能な各`topic`に対して定義された`verbs`を説明します。
+リリースで提供されるコミュニティコンポーネントについて、次の表で次の内容を説明します。 `verbs`それぞれに定義 `topic`使用可能
 
 ## トピックと動詞 {#topics-and-verbs}
 
@@ -118,11 +118,11 @@ ht-degree: 72%
 | CLOSE | メンバーがコメントの編集と返信を閉じる |
 | OPEN | メンバーがコメントを再度開く |
 
-## カスタムコンポーネントのイベント  {#events-for-custom-components}
+## カスタムコンポーネントのイベント {#events-for-custom-components}
 
-カスタムコンポーネントの場合、[SocialEvent抽象クラス](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)を拡張して、コンポーネントのイベントを`topic`に対して発生する`actions`として記録する必要があります。
+カスタムコンポーネントの場合、 [SocialEvent 抽象クラス](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) コンポーネントのイベントを次の形式で記録するために、を拡張する必要があります。 `actions`それは `topic`.
 
-カスタムイベントはメソッド`getVerb()`を上書きし、各`action`に対して適切な`verb`が返されるようにします。 アクションに対して返される`verb`は、一般的に使用されるもの（`POST`など）や、コンポーネント専用のもの（`ADD RATING`など）です。 `actions`と`verbs`の間に&#x200B;*n-1*&#x200B;の関係があります。
+カスタムイベントは、メソッドをオーバーライドします。 `getVerb()` 適切な `verb`が返される `action`. この `verb` アクションに対して返されるのは、一般的に使用される ( `POST`) またはコンポーネント専用の ( 例えば `ADD RATING`) をクリックします。 ここに *n-1* ～間の関係 `actions`および `verbs`.
 
 >[!NOTE]
 >
@@ -235,7 +235,7 @@ public class RecipeEvent extends SocialEvent<RecipeEvent.RecipeActions> {
 
 次の疑似コードのサンプルでは、コメントコンポーネントの DELETE イベントをアクティビティストリームから削除します。
 
-### EventListener の疑似コード  {#pseudo-code-for-eventlistener}
+### EventListener の疑似コード {#pseudo-code-for-eventlistener}
 
 [最新の機能パック](deploy-communities.md#latestfeaturepack)が必要です。
 

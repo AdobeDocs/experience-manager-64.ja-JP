@@ -1,8 +1,8 @@
 ---
 title: レビューの基本事項
-seo-title: レビューの基本事項
+seo-title: Reviews Essentials
 description: レビューとレビューの概要コンポーネント
-seo-description: レビューとレビューの概要コンポーネント
+seo-description: Reviews and Review Summary components
 uuid: 540c106e-ee3b-4261-82b2-a909d254dbf7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,7 +12,7 @@ discoiquuid: 62669a9d-2107-4644-a4bf-143d0ac148b3
 exl-id: ddd2bd98-b375-4d1e-b9d1-5efc3dbca398
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '319'
 ht-degree: 58%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 58%
 
 この機能は、連携して動作する 2 つのコンポーネント（レビューとレビュー概要）で構成されます。
 
-レビューは、[コメントシステム](essentials-comments.md)に基づく複合コンポーネントで、[評価](rating-basics.md)（集計）コンポーネントが1つ以上含まれます。
+レビューは、 [コメントシステム](essentials-comments.md) 1 つ以上の [評価](rating-basics.md) （集計）コンポーネント
 
-匿名でのレビュー投稿はサポートされていません。サイト訪問者は、レビューを追加するには、登録してサインインする必要があります。 サインインした訪問者（メンバー）は、いつでもレビューを更新できます。
+匿名でのレビュー投稿はサポートされていません。サイトの訪問者は、レビューを追加するには、登録してサインインする必要があります。 サインインした訪問者（メンバー）は、いつでもレビューを更新できます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -53,7 +53,7 @@ ht-degree: 58%
   </tr>
   <tr>
    <td><strong>properties</strong></td> 
-   <td><a href="reviews.md">レビューの使用</a>を参照</td> 
+   <td>詳しくは、 <a href="reviews.md">レビューの使用</a></td> 
   </tr>
  </tbody>
 </table>
@@ -62,11 +62,11 @@ ht-degree: 58%
 
 | **resourceType** | social/reviews/components/hbs/summary |
 |---|---|
-| [**インクルード可能**](scf.md#add-or-include-a-communities-component) | はい — プロパティは*デザイン*モードで編集可能 |
+| [**インクルード可能**](scf.md#add-or-include-a-communities-component) | はい — プロパティは*デザイン*モードで編集可能です |
 | [**clientllibs**](client-customize.md#clientlibs-for-scf) | cq.social.hbs.reviews |
 | **テンプレート** | /libs/social/reviews/components/hbs/summary/summary.hbs |
 | **css** | /libs/social/reviews/components/hbs/reviews/clientlibs/review.css |
-| **プロパティ** | [レビューの使用](reviews.md)を参照 |
+| **プロパティ** | 詳しくは、 [レビューの使用](reviews.md) |
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
@@ -78,7 +78,7 @@ ht-degree: 58%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿されたレビュー(UGC)へのアクセス{#accessing-posted-reviews-ugc}
+### 投稿されたレビュー（UGC）へのアクセス {#accessing-posted-reviews-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。\
 [ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
@@ -90,6 +90,6 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティメソッドと例
-* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
+* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例
+* [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングガイドライン
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係

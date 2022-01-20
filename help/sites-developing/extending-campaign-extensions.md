@@ -1,8 +1,8 @@
 ---
 title: カスタム拡張の作成
-seo-title: カスタム拡張の作成
+seo-title: Creating Custom Extensions
 description: AEM から Adobe Campaign のカスタムコードを呼び出したり、AEM から Adobe Campaign への呼び出しをおこなうことができます
-seo-description: AEM から Adobe Campaign のカスタムコードを呼び出したり、AEM から Adobe Campaign への呼び出しをおこなうことができます
+seo-description: You can call your custom code in Adobe Campaign from AEM or from AEM to Adobe Campaign
 uuid: 8392aa0d-06cd-4b37-bb20-f67e6a0550b1
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
@@ -12,7 +12,7 @@ discoiquuid: f536bcc1-7744-4f05-ac6a-4cec94a1ffb6
 exl-id: 8a56b5a0-90da-4fd4-ba26-74bbc7b6b445
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '518'
 ht-degree: 81%
 
 ---
@@ -38,15 +38,15 @@ AEM と Adobe Campaign の標準の統合は、JSON と JSSP（JavaScript Server
 
 >[!NOTE]
 >
->[この例については、Geometrixx](/help/sites-developing/we-retail.md)（パッケージ共有から入手可能）を参照してください。
+>[この例については、Geometrixxを参照してください](/help/sites-developing/we-retail.md)：パッケージ共有から入手できます。
 
 この例では、新しいカスタム JSSP ファイルを作成し、AEM 側から呼び出して、結果を取得します。例えば、この方法を利用して、Adobe Campaign からデータを取得したり、Adobe Campaign にデータを保存したりできます。
 
-1. Adobe Campaignで、新しいJSSPファイルを作成するには、**新規**&#x200B;アイコンをクリックします。
+1. Adobe Campaignで、新しい JSSP ファイルを作成するには、 **新規** アイコン
 
    ![](do-not-localize/chlimage_1-4.png)
 
-1. この JSSP ファイルの名前を入力します。この例では、**cus:custom.jssp**&#x200B;を使用します（**cus**&#x200B;名前空間に格納されます）。
+1. この JSSP ファイルの名前を入力します。この例では、 **cus:custom.jssp** ( つまり、 **カス** 名前空間 ) で使用されます。
 
    ![chlimage_1-16](assets/chlimage_1-16.png)
 
@@ -65,7 +65,7 @@ AEM と Adobe Campaign の標準の統合は、JSON と JSSP（JavaScript Server
    * AEM と Adobe Campaign 間に有効な接続がある
    * Adobe Campaign クラウドサービスが **/content/geometrixx-outdoors** に設定されている
 
-   この例で最も重要なオブジェクトは&#x200B;**GenericCampaignConnector**&#x200B;です。これにより、Adobe Campaign側でJSSPファイルを呼び出す（取得して投稿する）ことができます。
+   この例で最も重要なオブジェクトは、 **GenericCampaignConnector**:Adobe Campaign側で jssp ファイルを呼び出す（取得および投稿する）ことができます。
 
    コードの抜粋を以下に示します。
 
@@ -162,7 +162,7 @@ public class CustomServlet extends SlingSafeMethodsServlet {
 }
 ```
 
-## 例 2：Adobe Campaign から AEM  {#example-adobe-campaign-to-aem}
+## 例 2：Adobe Campaign から AEM {#example-adobe-campaign-to-aem}
 
 AEM には、サイト管理エクスプローラービューのどこでも使用できるオブジェクトを取得するための API がデフォルトで用意されています。
 
@@ -170,9 +170,9 @@ AEM には、サイト管理エクスプローラービューのどこでも使�
 
 >[!NOTE]
 >
->[この例については、Geometrixx](/help/sites-developing/we-retail.md)（パッケージ共有から入手可能）を参照してください。
+>[この例については、Geometrixxを参照してください](/help/sites-developing/we-retail.md)：パッケージ共有から入手できます。
 
-エクスプローラー内の各ノードには、それにリンクされたAPIがあります。 ノードの例：
+エクスプローラー内の各ノードには、そのノードにリンクされた API があります。 ノードの例：
 
 * [http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends](http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends)
 
@@ -188,7 +188,7 @@ API を利用するには、デフォルトでは、AEM が基本認証を使用
 
 6.1.1（build 8624 以上）では、複数のロジックの中でこのロジックを実装する JS ライブラリ **amcIntegration.js** を使用できます。
 
-### AEM の API 呼び出し  {#aem-api-call}
+### AEM の API 呼び出し {#aem-api-call}
 
 ```java
 loadLibrary("nms:amcIntegration.js");

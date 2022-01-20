@@ -190,7 +190,7 @@ ht-degree: 96%
 
    ![chlimage_1-83](assets/chlimage_1-83.png)
 
-   詳しくは、[翻訳ジョブのステータスの監視](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)を参照してください。
+   詳しくは、 [翻訳ジョブのステータスの監視](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job).
 
 1. 翻訳が完了すると、ステータスが「レビューへの準備完了」に変更されます。Assets UI に移動し、翻訳済みアセットそれぞれのプロパティページを開き、翻訳されたメタデータを表示します。
 
@@ -313,4 +313,4 @@ ht-degree: 96%
 
 1. アセットコンソールに移動し、翻訳済みアセットそれぞれのプロパティページを開き、翻訳されたメタデータを表示します。
 
-アセットのメタデータを効率よく翻訳するためのヒントは、このアーカイブページでメタデータを効率的に翻訳するための5つの手順[を参照してください。](https://web.archive.org/web/20181217033517/https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/)
+アセットのメタデータを効率的に翻訳するためのヒントについては、次のアーカイブページを参照してください： [メタデータを効率的に翻訳するための 5 つの手順](https://web.archive.org/web/20181217033517/https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/).

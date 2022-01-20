@@ -1,8 +1,8 @@
 ---
 title: フォームとドキュメントの公開と非公開
-seo-title: フォームとドキュメントの公開と非公開
+seo-title: Publishing and unpublishing forms and documents
 description: フォームの公開と非公開をスケジュールできます。公開されたフォームはパブリッシュインスタンスに複製されます。
-seo-description: フォームの公開と非公開をスケジュールできます。公開されたフォームはパブリッシュインスタンスに複製されます。
+seo-description: You can schedule publishing and unpublishing of forms. Published forms are replicated on the publish instance.
 uuid: 4de958f8-46d0-4356-ab88-70fa3d480216
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -12,18 +12,18 @@ discoiquuid: 7dd08e81-5df6-4522-9f8c-48b4bba8927b
 exl-id: 1afef311-c1e6-48ec-ae23-dbd553a99ac6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1413'
 ht-degree: 98%
 
 ---
 
-# フォームとドキュメントの公開と非公開  {#publishing-and-unpublishing-forms-and-documents}
+# フォームとドキュメントの公開と非公開 {#publishing-and-unpublishing-forms-and-documents}
 
 AEM Forms では、フォームを簡単に作成、公開、および非公開できます。AEM Forms の詳細については、[フォーム管理の概要](/help/forms/using/introduction-managing-forms.md)を参照してください。
 
-AEM Forms サーバーは 2 つのインスタンス（オーサーとパブリッシュ）を提供します。オーサーインスタンスは、フォームのアセットとリソースを作成し管理するためのものです。パブリッシュインスタンスは、エンドユーザーに対して使用可能なアセットや関連リソースを保持するためのものです。XDP フォームと PDF フォームはオーサーモードで読み込むことができます。詳しくは、[AEM Forms](/help/forms/using/get-xdp-pdf-documents-aem.md)でのXDPおよびPDFドキュメントの取得を参照してください。
+AEM Forms サーバーは 2 つのインスタンス（オーサーとパブリッシュ）を提供します。オーサーインスタンスは、フォームのアセットとリソースを作成し管理するためのものです。パブリッシュインスタンスは、エンドユーザーに対して使用可能なアセットや関連リソースを保持するためのものです。XDP フォームと PDF フォームはオーサーモードで読み込むことができます。詳しくは、 [AEM Formsでの XDP およびPDFドキュメントの取得](/help/forms/using/get-xdp-pdf-documents-aem.md).
 
-## サポートされているアセットタイプ{#supported-assets-nbsp}
+## サポートされているアセットタイプ  {#supported-assets-nbsp}
 
 AEM Forms では、次のアセットタイプをサポートしています。
 
@@ -46,13 +46,13 @@ AEM Forms では、次のアセットタイプをサポートしています。
 * 編集可能なアダプティブフォームテンプレート
 * Adobe Sign、Typekit、reCAPTCHA、フォームデータモデルのクラウドサービスの構成
 * その他のクラウドサービスの設定は、ユーザーが管理者権限を保有している場合にのみアクティブ化されます。
-* カスタマイズ。これには以下が含まれますが、これらに限定されません。
+* カスタマイズ。以下のようなものが含まれます。
 
    * カスタムレイアウト
    * カスタム外観
    * CSS ファイル - アダプティブフォームのコンテナプロパティダイアログで入力値として使用
    * クライアントライブラリカテゴリ - アダプティブフォームのコンテナプロパティダイアログで入力値として使用
-   * アダプティブフォームテンプレートの一部として含まれる可能性のあるその他のクライアントライブラリ。
+   * アダプティブフォームテンプレートの一部として含まれる可能性のあるその他のクライアントライブラリ
    * デザインパス
 
 ## アセットの状態 {#asset-states}
@@ -89,7 +89,7 @@ AEM Forms では、次のアセットタイプをサポートしています。
 
    ![関連するすべてのアセットとリソースが表示されている確認ダイアログ](assets/p4.png)
 
-   関連するすべてのアセットとリソースが表示されている確認ダイアログ.
+   関連するすべてのアセットとリソースが表示されている確認ダイアログ。
 
    >[!NOTE]
    >
@@ -107,22 +107,22 @@ AEM Forms では、サーバー上のすべての Correspondence Management ア�
 
 1. AEM Forms サーバーにログインします。
 1. グローバルナビゲーションバーで「**Adobe Experience Manager**」をタップします。
-1. ![tools-1](assets/tools-1.png)をタップし、**Forms**&#x200B;をタップします。
+1. タップ ![tools-1](assets/tools-1.png)次に、 **Forms**.
 1. 「**Correspondence Management アセットを公開する**」をタップします。
 
    ![publish-cmp-assets-1](assets/publish-cmp-assets-1.png)
 
-   「すべての Correspondence Management アセットを公開する」ページが表示され、前回の Correspondence Management アセットを公開処理についての情報が示されます。
+   「すべての Correspondence Management アセットを公開する」ページが表示され、前回の Correspondence Management アセットの公開処理についての情報が示されます。
 
    ![publish-last-run-details](assets/publish-last-run-details.png)
 
 1. 「**公開**」をタップし、確認メッセージで「**OK**」をタップします。
 
-   バッチ処理が完了すると、前回の実行詳細を表示できます。これには管理者ログインや、バッチが正常に実行されたか、失敗したかなどの情報が含まれます。
+   バッチ処理が完了すると、前回の実行詳細を表示できます。これには管理者ログインや、バッチの実行が成功したか失敗したかなどの情報が含まれます。
 
    >[!NOTE]
    >
-   >公開処理は、一度開始するとキャンセルすることはできません。また、公開処理の進行中は、アセットを作成、削除、修正、公開したり、また「すべての Correspondence Management アセットを書き出し」を開始しないでください。
+   >公開処理は、一度開始するとキャンセルすることはできません。また、公開処理の進行中は、アセットの作成、削除、修正、公開や、「すべての Correspondence Management アセットを書き出し」を開始しないでください。
 
 ## フォームとドキュメントの公開と非公開の自動化 {#automate-publishing-and-unpublishing-for-forms-amp-documents}
 
@@ -138,10 +138,10 @@ AEM Forms では、フォームとドキュメントでアセットの公開と�
 
 ## アセットの非公開 {#unpublish-an-asset}
 
-1. 公開されるアセットを選択し、「**[!UICONTROL 非公開]**![非公開](assets/unpublish.png)」をタップします。
+1. 公開されるアセットを選択し、「**[!UICONTROL 非公開]** ![非公開](assets/unpublish.png)」をタップします。
 1. 次のいずれかの手順を使用して、アセットを選択し非公開にします。
 
-   1. ポインターをアセットの上に置き、「**[!UICONTROL 非公開]**![非公開](assets/unpublish.png)」をタップします。
+   1. ポインターをアセットの上に置き、「**[!UICONTROL 非公開]** ![非公開](assets/unpublish.png)」をタップします。
    1. 次のいずれかを行い、「非公開」をタップします。
 
       * カード表示になっている場合は、「**[!UICONTROL 選択を入力]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)」をタップし、アセットをタップします。アセットが選択されます。
@@ -174,7 +174,7 @@ AEM Forms では、フォームとドキュメントでアセットの公開と�
 >
 >アセットを削除すると、パブリッシュインスタンスからアセットが削除されます。アセットを削除すると、そのアセットのバージョン履歴も、ベースバージョンを除いて削除されます。
 
-1. アセットを選択し、「**[!UICONTROL 削除]**![削除](assets/delete.png)」をタップします。
+1. アセットを選択し、「**[!UICONTROL 削除]** ![削除](assets/delete.png)」をタップします。
 
    >[!NOTE]
    >
@@ -184,7 +184,7 @@ AEM Forms では、フォームとドキュメントでアセットの公開と�
 
    >[!NOTE]
    >
-   >選択されているアセットだけが削除され、従属アセットは削除されません。アセットの参照を確認するには、![参照](assets/references.png)をタップしてからアセットを選択します。
+   >選択されているアセットだけが削除され、従属アセットは削除されません。アセットの参照を確認するには、![参照](assets/references.png) をタップしてからアセットを選択します。
    >
    >削除しようとしているアセットが別のアセットの子アセットである場合、削除されません。そのようなアセットを削除するには、別のアセットからのそのアセットへの参照を削除してから再度実行します。
 

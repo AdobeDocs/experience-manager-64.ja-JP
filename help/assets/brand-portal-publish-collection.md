@@ -14,19 +14,19 @@ ht-degree: 41%
 
 # Brand Portal へのコレクションの公開 {#publish-collections-to-brand-portal}
 
-Adobe Experience Manager Assets管理者は、組織の[!DNL Experience Manager Assets Brand Portal]インスタンスにコレクションを公開できます。 ただし、最初に Assets を Brand Portal と統合する必要があります。詳しくは [ Assets と Brand Portal の連携の設定](configure-aem-assets-with-brand-portal.md)を参照してください。
+Adobe Experience Manager Assets 管理者は、コレクションを [!DNL Experience Manager Assets Brand Portal] 組織のインスタンス。 ただし、最初に Assets を Brand Portal と統合する必要があります。詳しくは [ Assets と Brand Portal の連携の設定](configure-aem-assets-with-brand-portal.md)を参照してください。
 
-その後、Assets内の元のコレクションに変更を加えても、そのコレクションを再度公開するまで、変更はBrand Portalに反映されません。 この特性により、作業中の変更がBrand Portalでは利用できなくなります。 管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
+その後、Assets 内の元のコレクションに変更を加えても、そのコレクションを再度公開するまで、変更はBrand Portalに反映されません。 この特性により、作業中の変更がBrand Portalでは利用できなくなります。 管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
 
 >[!NOTE]
 >
->コンテンツフラグメントは Brand Portal に公開できません。したがって、[!DNL Experience Manager]オーサーでコンテンツフラグメントを選択した場合、「**[Brand Portalに公開]**」アクションは使用できません。
+>コンテンツフラグメントは Brand Portal に公開できません。したがって、 [!DNL Experience Manager] 作成者、その後 **[Brand Portalに公開]** アクションは使用できません。
 >
->コンテンツフラグメントを含むコレクションを[!DNL Experience Manager]オーサーからBrand Portalに公開した場合、コンテンツフラグメントを除くフォルダー内のすべてのコンテンツがBrand Portalインターフェイスにレプリケートされます。
+>コンテンツフラグメントを含むコレクションをから公開する場合 [!DNL Experience Manager] Brand Portalにオーサリングした後、コンテンツフラグメントを除くフォルダーのすべてのコンテンツがBrand Portalインターフェイスにレプリケートされます。
 
 ## Brand Portal へのコレクションの公開 {#publish-a-collection-to-brand-portal}
 
-1. Assets UIで、[!DNL Experience Manager]ロゴをタップまたはクリックします。 次に、**[!UICONTROL ナビゲーション]**&#x200B;ページで&#x200B;**[!UICONTROL アセット／コレクション]**&#x200B;に移動します。
+1. Assets UI で、 [!DNL Experience Manager] ロゴ 次に、**[!UICONTROL ナビゲーション]**&#x200B;ページで&#x200B;**[!UICONTROL アセット／コレクション]**&#x200B;に移動します。
 2. コレクションコンソールで、Brand Portalに公開するコレクションを選択します。
 
    ![select_collection](assets/select_collection.png)
@@ -43,13 +43,13 @@ Adobe Experience Manager Assets管理者は、組織の[!DNL Experience Manager 
 
 ## コレクションを非公開にする {#unpublish-collections}
 
-AssetsからBrand Portalに公開したコレクションを非公開にできます。 元のコレクションを非公開にすると、そのコレクションのコピーはBrand Portalユーザーには使用できなくなります。
+Assets からBrand Portalに公開したコレクションを非公開にできます。 元のコレクションを非公開にすると、そのコピーはBrand Portalのユーザーは使用できなくなります。
 
-1. [!DNL Assets]インスタンスのコレクションコンソールから、非公開にするコレクションを選択します。
+1. コレクションコンソールから、 [!DNL Assets] インスタンスを選択し、非公開にするコレクションを選択します。
 
    ![select_collection-1](assets/select_collection-1.png)
 
-2. ツールバーの「**[!UICONTROL Brand Portalから削除]**」アイコンをタップまたはクリックします。
+2. ツールバーの **[!UICONTROL Brand Portalから削除]** アイコン
 
    ![remove_from_bp_icon](assets/remove_from_bp_icon.png)
 

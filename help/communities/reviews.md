@@ -1,8 +1,8 @@
 ---
 title: レビューおよびレビューの概要（表示）の使用
-seo-title: レビューおよびレビューの概要（表示）の使用
+seo-title: Using Reviews and Reviews Summary (Display)
 description: レビューおよびレビューの概要コンポーネントをページに追加
-seo-description: レビューおよびレビューの概要コンポーネントをページに追加
+seo-description: Adding the Reviews and Reviews Summary components to a page
 uuid: bd1ccee7-b26b-4a27-b1ea-89609f5080af
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/COMMUNITIES
@@ -12,38 +12,38 @@ discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 exl-id: 5aae7744-73cc-472b-a4e6-ecd88284b70c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1303'
 ht-degree: 49%
 
 ---
 
-# レビューおよびレビューの概要（表示）の使用  {#using-reviews-and-reviews-summary-display}
+# レビューおよびレビューの概要（表示）の使用 {#using-reviews-and-reviews-summary-display}
 
-`Reviews`コンポーネントは、使用可能な[ `Comments`](comments.md)と[ `Rating`](rating.md)コンポーネントの複合です。
+この `Reviews`コンポーネントは、 [ `Comments`](comments.md) および [ `Rating`](rating.md) コンポーネントを使用する準備が整いました。
 
-`Reviews Summary (Display)`コンポーネントは、サイト上の他の場所に表示する`Reviews`コンポーネントのアクティブなインスタンスまたは閉じられたインスタンスの概要を提供します。
+この `Reviews Summary (Display)` コンポーネントは、アクティブなインスタンスまたは閉じたインスタンスの概要を提供します `Reviews` サイト上の他の場所に表示するコンポーネント。
 
 >[!NOTE]
 >
->匿名でのレビュー投稿はサポートされていません。サイト訪問者が参加するには、登録（メンバーになる）し、サインインする必要があります。 サインインした訪問者は、いつでもレビューを更新できます。
+>匿名でのレビュー投稿はサポートされていません。サイト訪問者が参加するには、登録（メンバーになる）してサインインする必要があります。 サインインした訪問者は、いつでもレビューを更新できます。
 
 ## レビューをページに追加 {#adding-a-review-to-a-page}
 
-`Reviews`コンポーネントをオーサリングモードでページに追加するには、コンポーネントブラウザーを使用して`Communities / Reviews`を探し、ページ上の位置（ユーザーが確認できる機能に対する相対位置など）にドラッグします。
+を追加するには、以下を実行します。 `Reviews` コンポーネントをオーサリングモードでページに追加する場合は、コンポーネントブラウザーを使用して `Communities / Reviews` をクリックし、ページ上の適切な位置（ユーザーが確認できる機能を基準とした位置など）にドラッグします。
 
-必要な情報については、[コミュニティコンポーネントの基本](basics.md)を参照してください。
+必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
 
-[必須のクライアント側ライブラリ](reviews-basics.md#essentials-for-client-side)を含めると、`Reviews`コンポーネントは次のように表示されます。
+次の場合に [必要なクライアント側ライブラリ](reviews-basics.md#essentials-for-client-side) が含まれる場合、この方法で `Reviews`コンポーネントが表示されます。
 
 ![chlimage_1-340](assets/chlimage_1-340.png)
 
 ## レビューの設定 {#configuring-reviews}
 
-配置済みの`Reviews`コンポーネントを選択し、`Configure`アイコンを選択すると、編集ダイアログが開きます。
+配置された `Reviews` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
 
 ![chlimage_1-341](assets/chlimage_1-341.png)
 
-「**[!UICONTROL 許可された評価]**」タブで、メンバーに表示する評価の完全なリストを指定します。 最初の評価は、`Review Summary (Display)`コンポーネントの平均評価を提供する評価なので、全体/一般評価にする必要があります。 デフォルト設定の次の2つの評価には、「サブレーティング1」または「サブレーティング2」以外の異なるタイトルを付与する必要があります。
+以下 **[!UICONTROL 許可された評価]** タブで、メンバーに表示する評価の完全なリストを指定します。 最初の評価は、全体的/一般的な評価である必要があります。これは、の平均評価を提供する評価です。 `Review Summary (Display)` コンポーネント。 デフォルト設定の次の 2 つの評価には、「サブレーティング 1」または「サブレーティング 2」以外の異なるタイトルを付ける必要があります。
 
 ![chlimage_1-342](assets/chlimage_1-342.png)
 
@@ -55,15 +55,15 @@ ht-degree: 49%
 
    評価の選択肢を追加するには、「**[!UICONTROL 項目を追加]**」をクリックします。
 
-「**[!UICONTROL 必須評価]**」タブで、「**[!UICONTROL 許可された評価]**」のリストから、評価が必要な項目を再入力します。 「許可された評価」タブでのみ指定された項目は、メンバーが送信した際にマークが付いていない場合があります。
+以下 **[!UICONTROL 必須の評価]** 」タブで、 **[!UICONTROL 許可された評価]** 評価が必要です。 「許可された評価」タブでのみ指定された項目は、メンバーが送信した際に、マークが付いていないままにすることができます。
 
-Web サイト上では、必須の評価はアスタリスク付きで表示されます。項目が必須でマークが付いていない場合は、必要な評価がすべてマークされるまで、メッセージがメンバーに表示され、送信が拒否されます。
+Web サイト上では、必須の評価はアスタリスク付きで表示されます。項目が必須で、マークが付いていない場合は、必要な評価がすべてマークされるまで、メッセージがメンバーに表示され、送信が拒否されます。
 
 ![chlimage_1-343](assets/chlimage_1-343.png)
 
 * **[!UICONTROL 必須の評価]**
 
-   許可された評価のサブセット。必要な評価を示します。
+   許可された評価のサブセットで、必要な評価を示します。
 
    表示される選択肢を変更するには、上向き矢印、下向き矢印および削除ボタンを使用します。
 
@@ -71,9 +71,9 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 
 >[!NOTE]
 >
->**[!UICONTROL 「必須の評価]**」タブに入力した項目が「**[!UICONTROL 許可された評価]**」タブで指定されていない場合、評価する項目には含まれません。
+>項目が **[!UICONTROL 必須の評価]** タブ **[!UICONTROL 許可された評価]** 」タブに値を入力した場合、評価する項目には含まれません。
 
-「**[!UICONTROL レビュー]**」タブで、レビューの処理方法を指定します。
+以下 **[!UICONTROL レビュー]** タブで、レビューの処理方法を指定します。
 
 ![chlimage_1-344](assets/chlimage_1-344.png)
 
@@ -87,13 +87,13 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 
 * **[!UICONTROL メッセージの最大長]**&#x200B;テキストボックスに入力できる最大文字数です。初期設定は 4096 文字です。
 
-* **[!UICONTROL 許可されるファイルタイプ]**「**[!UICONTROL ファイルのアップロードを許可]**」がオンの場合にのみ関係します。ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルタイプを指定した場合、指定しなかったファイルは許可されません。 デフォルトでは、すべてのファイルタイプが許可されるように指定されていません。
+* **[!UICONTROL 許可されるファイルタイプ]**「**[!UICONTROL ファイルのアップロードを許可]**」がオンの場合にのみ関係します。ドット付きのファイル拡張子をコンマ区切りで指定します（例：.jpg, .jpeg, .png, .doc, .docx, .pdf）。ファイルタイプが指定されている場合、指定されていないファイルは許可されません。 初期設定では何も指定されず、すべてのファイルタイプが許可されます。
 
 * **[!UICONTROL リッチテキストエディター]**&#x200B;オンにすると、マークアップを使用して投稿を入力できます。初期設定はオフです。
 
 * **[!UICONTROL 投票を許可]**&#x200B;オンにすると、トピックに投票機能が組み込まれます。初期設定はオフです。
 
-「**[!UICONTROL ユーザーモデレート]**」タブで、投稿されたレビューの管理方法を指定します。 詳しくは、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
+以下 **[!UICONTROL ユーザーモデレート]** タブで、投稿されたレビューの管理方法を指定します。 詳しくは、 [ユーザー生成コンテンツのモデレート](moderate-ugc.md).
 
 ![chlimage_1-345](assets/chlimage_1-345.png)
 
@@ -111,21 +111,21 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 
 * **[!UICONTROL カスタムフラグ設定理由]**&#x200B;オンにすると、メンバーはレビューに「不適切」のフラグを設定した独自の理由を入力できます。初期設定はオフです。
 
-* **[!UICONTROL モデレートのしきい値]**&#x200B;メンバーがレビューに何回フラグを設定したらモデレーターに通知するかを指定します。初期設定は1回です。
+* **[!UICONTROL モデレートのしきい値]**&#x200B;メンバーがレビューに何回フラグを設定したらモデレーターに通知するかを指定します。初期設定は 1 回 (1) です。
 
-* **[!UICONTROL フラグ付けの制限]**&#x200B;レビューに何回フラグが設定されたら、公開表示から非公開にするかを指定します。この数値は、**[!UICONTROL モデレートのしきい値]**&#x200B;以上にする必要があります。 初期設定は 5 です。
+* **[!UICONTROL フラグ付けの制限]**&#x200B;レビューに何回フラグが設定されたら、公開表示から非公開にするかを指定します。この数は **[!UICONTROL モデレートのしきい値]**. 初期設定は 5 です。
 
 ### レビューの概要（表示）をページに追加 {#adding-a-review-summary-display-to-a-page}
 
-`Reviews Summary (Display)`コンポーネントをオーサリングモードでページに追加するには、
+を追加するには、以下を実行します。 `Reviews Summary (Display)` コンポーネントをオーサリングモードでページに追加する場合は、
 
 * `Communities / Reviews Summary (Display)`
 
 コンポーネントを探し、ページ上のアクティブなレビューまたは閉じられたレビューを表示する位置にドラッグします。
 
-必要な情報については、[コミュニティコンポーネントの基本](basics.md)を参照してください。
+必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
 
-[必須のクライアント側ライブラリ](reviews-basics.md#essentials-for-client-side)を含めると、`Reviews Summary (Display)`コンポーネントは次のように表示されます。
+次の場合に [必要なクライアント側ライブラリ](reviews-basics.md#essentials-for-client-side) が含まれる場合、この方法で `Reviews Summary (Display)`コンポーネントが表示されます。
 
 ![chlimage_1-346](assets/chlimage_1-346.png)
 
@@ -133,9 +133,9 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 >
 >「平均」は、要約するレビューの「許可された評価」タブに指定されている最初の項目への投票を反映します。
 
-### レビューの概要（表示）の設定  {#configuring-reviews-summary-display}
+### レビューの概要（表示）の設定 {#configuring-reviews-summary-display}
 
-配置済みの`Reviews Summary (Display)`コンポーネントを選択し、`Configure`アイコンを選択すると、編集ダイアログが開きます。
+配置された `Reviews Summary (Display)` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
 
 ![chlimage_1-347](assets/chlimage_1-347.png)
 
@@ -145,13 +145,13 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 
 * `Review Path`
 
-   要約する`reviews`コンポーネントの配置済みインスタンスを入力または参照します。例えば、[GeometrixxエンゲージサイトのWebページに追加すると、パスは次のようになります。](getting-started.md)
+   配置されたインスタンスを入力するか、参照します `reviews`要約するコンポーネント ( 例えば、 [Geometrixxエンゲージサイト](getting-started.md) パスは次のようになります。
 
    /content/sites/engage/en/page/jcr:content/content/primary/reviews
 
 * `Include histogram`
 
-   オンにすると、要約するレビューに含まれる各星評価の数を示す棒グラフが表示されます。 初期設定はオフです。
+   オンにした場合、要約するレビューに含まれる各星評価の数を示す棒グラフの表示を含めます。 初期設定はオフです。
 
 ### カスタムレビュータイプへの変更 {#changing-to-a-custom-review-type}
 
@@ -159,27 +159,27 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 
 コメントリソースタイプを変更すると、デフォルトを使用するコメントのインスタンスではなく、開発者によってカスタマイズ（拡張）されたコメントのインスタンスが生成されるようになります。
 
-カスタムリソースタイプがわかったら、[デザインモード](../../help/sites-authoring/default-components-designmode.md)に入り、配置された`Comments`コンポーネントをダブルクリックして、追加のタブを含むダイアログを開きます。
+カスタムリソースタイプがわかったら、次のように入力します。 [デザインモード](../../help/sites-authoring/default-components-designmode.md) そして、配置された `Comments` 追加のタブを含むダイアログを開くコンポーネント。
 
-「**[!UICONTROL リソースタイプ]**」タブで、`Comments or Voting`コンポーネントの新しいインスタンスのカスタムresourceTypeを指定します。
+以下 **[!UICONTROL リソースタイプ]** タブで、新しいインスタンスのカスタム resourceType を指定します。 `Comments or Voting`コンポーネント：
 
 ![chlimage_1-349](assets/chlimage_1-349.png)
 
 * **[!UICONTROL コメントリソースタイプ]**
 
-   /apps内の拡張`comment`コンポーネント（単一のコメント）のresourceTypeに移動します。 例：`/apps/social/commons/components/hbs/comments/comment`
+   拡張の resourceType に移動します。 `comment`/apps 内のコンポーネント（単一のコメント）。 例：`/apps/social/commons/components/hbs/comments/comment`
 
-   このリソースは、訪問者がコメントを投稿したときに作成されるUGCのresourceTypeを識別します。
+   このリソースは、訪問者がコメントを投稿したときに作成された UGC の resourceType を識別します。
 
 * **[!UICONTROL 投票リソースタイプ]**
 
-   /apps内の拡張`voting`コンポーネントのresourceTypeに移動します。 例：`/apps/social/components/hbs/voting`
+   拡張の resourceType に移動します。 `voting`/apps 内のコンポーネント。 例：`/apps/social/components/hbs/voting`
 
-   このリソースは、訪問者が投票を投稿したときに作成されるUGCのリソースタイプを識別します。
+   このリソースは、訪問者が投票を投稿したときに作成された UGC のリソースタイプを識別します。
 
 * **[!UICONTROL コメントシステムリソースタイプ]**
 
-   /apps内の拡張`comments`コンポーネント（コメントシステム）のresourceTypeに移動します。 ページテンプレート[で、コメントシステムが基になるスクリプトにリソース（コメントノード）としてページに追加されるのではなく、](scf.md#add-or-include-a-communities-component)が動的に含まれる場合を除き、空のままにします。 詳しくは、[{{include}}ヘルパー](handlebars-helpers.md#include)を参照してください
+   拡張の resourceType に移動します。 `comments`/apps 内のコンポーネント（コメントシステム）。 ページテンプレートがない場合は空白のままにします [動的に含む](scf.md#add-or-include-a-communities-component) コメントシステムをリソースとしてページに追加する代わりに、基になるスクリプト内で使用します（コメントノード）。 詳しくは、 [{{include}} ヘルパー](handlebars-helpers.md#include)
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 
@@ -191,9 +191,9 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 
 サイト訪問者がサインインすると、設定に応じて次のことができます。
 
-* 新しいレビューの投稿
-* 自分のレビューの編集
-* 自分のレビューの削除
+* 新しいレビューを投稿
+* 自分のレビューを編集
+* 自分のレビューを削除
 * 他のユーザーのレビューコメントにフラグを設定する
 
 1 人のメンバーが付けられる評価は 1 つだけです。メンバーは、いつでも評価を変更できます。
@@ -204,8 +204,8 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの[レビューの基本事項](reviews-basics.md)ページを参照してください。
+詳しくは、 [レビューの基本事項](reviews-basics.md) 開発者向けのページ
 
-投稿されたコメントのモデレートについては、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
+投稿されたコメントのモデレートについては、 [ユーザー生成コンテンツのモデレート](moderate-ugc.md).
 
 投稿されたコメントの翻訳については、[ユーザー生成コンテンツの翻訳](translate-ugc.md)を参照してください。

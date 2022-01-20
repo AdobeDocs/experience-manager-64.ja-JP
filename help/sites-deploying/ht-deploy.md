@@ -1,20 +1,20 @@
 ---
 title: 設定方法に関する記事
-seo-title: 設定方法に関する記事
+seo-title: Configuration How-To Articles
 description: AEM の特定のデプロイメントタスクを実行する方法について説明する記事のリストです。
-seo-description: AEM の特定のデプロイメントタスクを実行する方法について説明する記事のリストです。
+seo-description: A list of articles that describe how to accomplish specific deployment tasks in AEM.
 uuid: 5a339a6f-9c1a-4324-92d3-08b975131a1b
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 257f3e4a-4b59-4cbb-bf61-f72f173676e6
-feature: 設定
+feature: Configuring
 exl-id: 98f7a6b1-8b16-410c-872c-4af7bc4bcc64
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 85%
+source-wordcount: '84'
+ht-degree: 82%
 
 ---
 

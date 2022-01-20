@@ -1,8 +1,8 @@
 ---
 title: タスクを開く
-seo-title: タスクを開く
+seo-title: Opening a task
 description: AEM Forms アプリケーションでタスクを開く手順。
-seo-description: AEM Forms アプリケーションでタスクを開く手順。
+seo-description: Steps to open a task on your AEM Forms app.
 uuid: 3f543391-a62b-40ef-aa28-59b7f99554f1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,12 +11,12 @@ discoiquuid: cdce7a6a-2bbf-492f-bf91-5b8f07d02207
 exl-id: c87a35d5-3371-472d-af28-14d3412d6ebe
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '323'
 ht-degree: 100%
 
 ---
 
-# タスクを開く  {#opening-a-task}
+# タスクを開く {#opening-a-task}
 
 AEM Forms アプリケーションが AEM Forms サーバーと同期されている場合は、自分に割り当てられているタスクを操作することができます。タスクとは、ワークベンチまたは AEM ワークフローエディターで定義されるワークフロー内の手順のことです。例については、[Geometrixx Gov リファレンスサイトの「Conard が査定タスクを受け取る」](/help/forms/using/gov-reference-site-walkthrough.md#conard-assessment-task)を参照してください。現在自分に割り当てられているすべてのタスクに変更を加えることができます。すべてのタスクは「タスク」タブで利用できます。下書きとして保存したタスクは「タスク」タブに残ります。
 
