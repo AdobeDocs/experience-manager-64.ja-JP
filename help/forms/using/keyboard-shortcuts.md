@@ -334,8 +334,7 @@ ht-degree: 78%
  </tbody>
 </table>
 
-### 
-フォーマ {#formatting}
+### フォーマ {#formatting}
 
 <table> 
  <tbody>
