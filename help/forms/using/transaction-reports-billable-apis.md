@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-manager
 discoiquuid: 82e72ffb-2faa-45fe-8bb2-f485d8fa043e
 exl-id: 18b5c6e2-3b0c-4ec8-9e65-c4105b47be4e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: eeaa70855980ca62574f89e280b46c02c0b65bdc
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1859'
 ht-degree: 10%
 
 ---
@@ -492,7 +492,7 @@ OSGi 上の Form 中心のAEM Workflows のタスクとドキュメントサー�
 
 ## カスタムコードのトランザクションとしての課金対象 API の記録 {#recording-billable-apis-as-transactions-for-custom-code}
 
-PDFフォームの送信、エージェント UI によるインタラクティブ通信のプレビュー、非標準のフォーム送信、カスタム実装のトランザクションとしての対応は考慮されません。 AEM Formsは、トランザクションなどのアクションを記録する API を提供します。 カスタム実装から API を呼び出して、 [取引を記録する](https://www.bdnsw.gov.bn/PublishingImages/page-under-construction.jpg).
+PDFフォームの送信、エージェント UI によるインタラクティブ通信のプレビュー、非標準のフォーム送信、カスタム実装のトランザクションとしての対応は考慮されません。 AEM Formsは、トランザクションなどのアクションを記録する API を提供します。 カスタム実装から API を呼び出して、 [取引を記録する](record-transaction-custom-implementation.md).
 
 ## 関連記事 {#related-articles}
 
