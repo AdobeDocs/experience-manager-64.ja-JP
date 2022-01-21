@@ -43,7 +43,6 @@ ht-degree: 100%
 >* [SAP Commerce Cloud](/help/sites-administering/sap-commerce-cloud.md)
 >
 >* [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
-
 >
 
 
@@ -136,7 +135,7 @@ AEM e コマースは、e コマースエンジンとともに実装されます
 >JCR をベースとする汎用的な開発によって AEM 内に実装される AEM e コマースは、
 >
 >* API の使用方法を説明するための、スタンドアロンの AEM ネイティブな e コマースのサンプルです。これにより、商品データ、ショッピングカート、チェックアウトと共に、既存のデータ表示とマーケティングキャンペーンを制御することができます。この場合、商品データは AEM にネイティブなリポジトリ（アドビの [JCR](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html) 実装）に保存されます。\
-   >  標準的な AEM のインストールには、[一般的な e コマースの実装](/help/sites-administering/generic.md)の基本が含まれています。
+>  標準的な AEM のインストールには、[一般的な e コマースの実装](/help/sites-administering/generic.md)の基本が含まれています。
 
 
 ### コマースプロバイダー {#commerce-providers}
@@ -552,7 +551,7 @@ AEM では、
 
 プロモーションは、通常は商品情報マネージャーではなくマーケティングマネージャーが保守します。
 
-* プロモーションは、Web サイトコンソールを使用して作成／編集されるページベースのコンポーネントです。``
+* プロモーションは、Web サイトコンソールを使用して作成／編集されるページベースのコンポーネントです。&grave;&grave;
 * プロモーションは、次のものを提供します。
 
    * 優先度

@@ -53,7 +53,6 @@ e コマース統合フレームワークの Hybris 拡張が更新されて、[
 >* hybris 6.4（OCC バージョン 2 付属）までをサポートします。
 >* [hybris 5 サーバー](https://www.hybris.com/ja/architecture-technology)を実行するには Java 7 が必要です。
 >* hybris のアドオンである [Telco Accelerator](https://www.hybris.com/ja/products/telecommunication) は、AEM 拡張でサポートされません。
-
 >
 
 
