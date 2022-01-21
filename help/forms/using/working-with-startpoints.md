@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: forms-app
 discoiquuid: 265eee8a-364e-4edf-b2a0-f42617169944
 exl-id: ef9352c7-c164-4cbf-8f18-5b97aa5f56be
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 977ada5fefe476c7cd2fe1470eb024a517a681d2
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 76%
+ht-degree: 70%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 76%
 >
 >この概念について参照すると、スタートポイント、スタートプロセス、フォームという用語が区別なく使用される場合があります。
 
-AEM Formsアプリからプロセスを開始するには、タイプの開始点が必要です **Workspace** を設定します。 また、スタートポイントに対して「**[!UICONTROL Mobile Workspace でスタートポイントを表示する]**」オプションをオンにする必要もあります。
+AEM Formsアプリからプロセスを開始するには、タイプの開始点が必要です **Workspace** を設定します。 また、 **[!UICONTROL Mobile Workspace に表示]** オプションを使用します。
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
