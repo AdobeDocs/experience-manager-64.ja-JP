@@ -1,8 +1,6 @@
 ---
-title: ページへの Dynamic Media アセットの追加
-seo-title: Adding Dynamic Media Assets to Pages
-description: AEM 内のページに Dynamic Media コンポーネントを追加する方法
-seo-description: How to add Dynamic Media components to a page in AEM
+title: ページへのDynamic Media Assets の追加
+description: Adobe Experience ManagerでページにDynamic Mediaコンポーネントを追加する方法
 uuid: 77abcb87-2df7-449b-be52-540d749890b6
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -12,14 +10,14 @@ discoiquuid: d1f45751-1761-4d6b-b17d-110b2f1117ea
 exl-id: bb97b649-a50d-49c8-97aa-18c32f18d527
 feature: Components
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 50b657456d2a0eaaaf681d3902eba38b15d00e12
 workflow-type: tm+mt
-source-wordcount: '2808'
+source-wordcount: '2809'
 ht-degree: 60%
 
 ---
 
-# ページへの Dynamic Media アセットの追加 {#adding-dynamic-media-assets-to-pages}
+# ページへのDynamic Media Assets の追加 {#adding-dynamic-media-assets-to-pages}
 
 Web サイトで使用するアセットに Dynamic Media 機能を追加するには、 **Dynamic Media** または **インタラクティブメディア** コンポーネントを直接ページ上に配置できます。 そのためには、レイアウトモードに切り替えて、ダイナミックメディアコンポーネントを有効にします。次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。ダイナミックメディアコンポーネントおよびインタラクティブメディアコンポーネントはスマートであり、追加しているアセットが画像であるかビデオであるかを自動的に把握します。それに従って、使用可能なオプションが変わります。
 

@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
-source-git-commit: ac358965790694a51d866a4cdb97810b0983bbca
+source-git-commit: 50b657456d2a0eaaaf681d3902eba38b15d00e12
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 75%
 
 ---
@@ -49,7 +49,6 @@ ht-degree: 75%
    + [Dynamic Media 画像プロファイル](image-profiles.md)
    + [スマートイメージング](imaging-faq.md)
    + [ビデオ](s7-video.md)
-   + [ページへのDynamic Media Classic機能の追加](scene7.md)
    + [コンテンツの HTTP/2 配信](http2.md)
    + [Dynamic Media アセットの配信](delivering-dynamic-media-assets.md)
    + [Dynamic Media でのホットリンク保護の有効化](hotlink-protection.md)
@@ -65,6 +64,7 @@ ht-degree: 75%
    + [レスポンシブサイト用に最適化された画像の配信](responsive-site.md)
    + [Dynamic Media アセットのプレビュー](previewing-assets.md)
    + [ページへの Dynamic Media アセットの追加](adding-dynamic-media-assets-to-pages.md)
+   + [ページへのDynamic Media Classicコンポーネントの追加](scene7.md)
    + [Web ページへのダイナミックビデオ／画像ビューアの埋め込み](embed-code.md)
    + [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)
    + [ルールセットを使用した URL の変換](using-rulesets-to-transform-urls.md)

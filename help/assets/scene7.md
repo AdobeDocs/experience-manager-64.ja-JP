@@ -1,6 +1,6 @@
 ---
-title: ページへのDynamic Media Classic機能の追加
-description: Dynamic Media Classicコンポーネントと、AEMページに追加する方法について説明します。
+title: ページへのDynamic Media Classicコンポーネントの追加
+description: Adobe Experience ManagerのページにDynamic Media Classicの機能とコンポーネントを追加する方法。
 contentOwner: Alva Ware-Bevacqui
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
@@ -8,14 +8,14 @@ topic-tags: managing-assets
 exl-id: b11b19c1-712d-4698-aefc-930ff8cacbc1
 feature: Dynamic Media Classic
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 50b657456d2a0eaaaf681d3902eba38b15d00e12
 workflow-type: tm+mt
-source-wordcount: '2826'
+source-wordcount: '2824'
 ht-degree: 32%
 
 ---
 
-# ページへのDynamic Media Classic機能の追加 {#adding-scene-features-to-your-page}
+# ページへのDynamic Media Classicコンポーネントの追加 {#adding-scene-features-to-your-page}
 
 Adobe Dynamic Media Classicは、リッチメディアアセットを管理、強化、公開、および Web、モバイル、電子メール、インターネットに接続されたディスプレイと印刷できる、ホストソリューションです。
 
