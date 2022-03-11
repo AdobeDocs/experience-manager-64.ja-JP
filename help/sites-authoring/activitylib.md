@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 358d32bc-be5f-4500-9637-525d35cdbeff
 exl-id: 269eee08-5fca-4621-a56e-93db9361fa64
-source-git-commit: b926143f7b5eb6b40796bf41d1fb94f56c7f77a7
+source-git-commit: 1c9da35f65b6b9edacc3d5529ee80e7be94495d2
 workflow-type: tm+mt
-source-wordcount: '2002'
-ht-degree: 97%
+source-wordcount: '2001'
+ht-degree: 96%
 
 ---
 
@@ -96,7 +96,7 @@ ht-degree: 97%
 
 アクティビティを追加するには：
 
-1. アクティビティを作成するブランドをクリックまたはタップして、「**作成**」、「**アクティビティを作成**」の順にクリックまたはタップします。編集する場合は、アクティビティを選択し、「 」をクリックまたはタップします **編集**.
+1. アクティビティを作成するブランドをクリックまたはタップし、「 」をクリックまたはタップします **作成** その後 **アクティビティを作成**. 編集する場合は、アクティビティを選択し、「 」をクリックまたはタップします **編集**.
 1. 以下の情報を指定して、「**次へ**」をクリックまたはタップします。
 
    * アクティビティ名。
