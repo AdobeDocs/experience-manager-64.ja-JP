@@ -2,13 +2,13 @@
 cloud: Experience Cloud
 product: adobe experience manager
 sub-product: forms
-solution: Experience Manager, Experience Manager Forms, Experience Manager 6.4
+solution: Experience Manager, Experience Manager Forms
 audience: end-user
 user-guide-title: Adobe Experience Manager 6.4 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: 35aea0e087334a1c1e6a708f2182bd9dee799dc0
 workflow-type: tm+mt
 source-wordcount: '3729'
 ht-degree: 75%
@@ -22,7 +22,7 @@ ht-degree: 75%
 + リリースノート {#release-notes-new-features}
    + [リリースノート](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/forms.html)
    + [新機能の概要](using/whats-new.md)
-   + [非推奨（廃止予定）の機能](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html)
+   + [廃止される機能](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html)
 + はじめに {#getting-started}
    + [AEM Forms の概要](using/introduction-aem-forms.md)
    + [アダプティブフォームのオーサリングの概要](using/introduction-forms-authoring.md)
@@ -67,9 +67,9 @@ ht-degree: 75%
       + [JEE 上のAEM Formsの自動インストールおよびデプロイ（JBoss 版）](http://www.adobe.com/go/learn_aemforms_installTurnkey_64_jp)
       + [AEM Forms Document Security サーバーのインストールと設定](using/installing-and-configuring-the-document-security-server.md)
       + [AEM Forms（シングルサーバー）のインストールの準備](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64_jp)
-      + [JEE 上のAdobe Experience Manager Formsのインストールおよびデプロイ（JBoss 版）](http://www.adobe.com/go/learn_aemforms_installJBoss_64)
+      + [JEE 上のAdobe Experience Manager Formsのインストールおよびデプロイ（JBoss 版）](http://www.adobe.com/go/learn_aemforms_installJBoss_64_jp)
       + [JEE 上のAEM Formsのインストールおよびデプロイ（WebLogic 版）](http://www.adobe.com/go/learn_aemforms_installWebLogic_64)
-      + [JEE 上のAdobe Experience Manager Formsのインストールおよびデプロイ（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_64)
+      + [JEE 上のAdobe Experience Manager Formsのインストールおよびデプロイ（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_64_jp)
       + [AEM Forms Workbench のインストール](http://help.adobe.com/ja_JP/AEMForms/6.1/InstallWorkbench/index.html)
       + [ Designer のインストールと設定](using/installing-configuring-designer.md)
       + [AEM Forms（サーバークラスター）のインストールの準備](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64_jp)
