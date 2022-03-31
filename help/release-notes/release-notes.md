@@ -10,10 +10,10 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 exl-id: ee034595-2d2a-4887-86c4-6bf0770da6a2
-source-git-commit: d750c852b6367d753d18be57c8910bf5671fd5e8
+source-git-commit: 722a82c1048105c18d59dfc35815548f9b7eace4
 workflow-type: tm+mt
 source-wordcount: '2751'
-ht-degree: 79%
+ht-degree: 82%
 
 ---
 
@@ -25,8 +25,8 @@ ht-degree: 79%
 |---|---|
 | バージョン | 6.4 |
 | 種類 | メジャーリリース |
-| 正式版の日付 | 2018年4月4日（PT） |
-| 推奨される更新 | 詳しくは、 [AEMのリリースと更新](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html) |
+| 一般公開日 | 2018年4月4日（PT） |
+| 推奨される更新 | 詳しくは、 [AEMのリリースと更新](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html?lang=ja) |
 
 ### 参考情報 {#trivia}
 
@@ -40,9 +40,9 @@ Adobe Experience Manager 6.4 は、2018 年 4 月 4 日より正式版として�
 
 ## 新機能 {#what-s-new}
 
-Adobe Experience Manager 6.4 は、Adobe Experience Manager 6.3 コードベースのアップグレードリリースです。新機能および強化機能、お客様向けの重要な修正、お客様向けの優先順位の高い機能強化、製品の安定性向上のための全般的なバグ修正が加えられています。また、すべてのAdobe Experience Manager 6.3 機能パック、ホットフィックス、サービスパックリリースの大部分も含まれています。
+Adobe Experience Manager 6.4 は、Adobe Experience Manager 6.3 コードベースのアップグレードリリースです。新機能と強化された機能、お客様向けの重要な修正、お客様向けの優先順位の高い機能強化、製品の安定性向上のための全般的なバグ修正が加えられています。また、すべてのAdobe Experience Manager 6.3 機能パック、ホットフィックス、サービスパックリリースの大部分も含まれています。
 
-以下のリストでは概要を説明します。その後のページでは詳細を示します。
+次のリストはその概要です。詳細については以降のページを参照してください。
 
 ### Experience Manager の基盤 {#experience-manager-foundation}
 
@@ -67,7 +67,7 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 >[!CAUTION]
 >
->クラシック UI の機能がさらに強化される予定はありません。AEM 6.4 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。クラシック UI は廃止中は引き続き完全にサポートされます。[詳細情報](/help/sites-deploying/ui-recommendations.md)。
+>クラシック UI の機能がさらに強化される予定はありません。AEM 6.4 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。クラシック UI は非推奨になっても引き続き完全にサポートされます。[詳細情報](/help/sites-deploying/ui-recommendations.md)。
 
 #### コンテンツリポジトリ {#content-repository}
 
@@ -117,7 +117,7 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 **[コンテンツフラグメント](/help/assets/content-fragments.md)**
 
-ビジュアルな[コンテンツモデル](/help/assets/content-fragments-models.md)エディターと新しい[設定可能なコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/content-fragment-component.html)が AEM 6.4 で新たに導入され、コンテンツサービスに組む込む HTML 出力と JSON を柔軟に生成できるようになりました。
+ビジュアルな[コンテンツモデル](/help/assets/content-fragments-models.md)エディターと新しい[設定可能なコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/content-fragment-component.html)が AEM 6.4 で新たに導入され、コンテンツサービスに組む込む HTML 出力と JSON を柔軟に生成できるようになりました。
 
 **エクスペリエンスフラグメント**
 
@@ -249,7 +249,7 @@ Dynamic Media コンポーネントでのスマート切り抜きの操作につ
 
 ### Experience Manager Forms {#experience-manager-forms}
 
-AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられています。主なものを以下に示します。
+AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられています。主なものは次のとおりです。
 
 * マルチチャネルのインタラクティブコミュニケーション
 * ビジネスアプリケーションからインタラクティブコミュニケーションへの事前入力
@@ -261,7 +261,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 ### Experience Manager Livefyre {#experience-manager-livefyre}
 
-使用している AEM 6.4 インスタンスに Livefyre を統合することができます。Livefyre と AEM の統合方法については、以下を参照してください。
+使用している AEM 6.4 インスタンスを Livefyre と統合できます。Livefyre と AEM の統合方法については、以下を参照してください。
 
 * [Livefyre との統合](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html)
 
@@ -269,7 +269,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 アドビは、お客様が開発のすべての段階、つまり仕様、開発、テストに関与できる顧客中心開発モデルを使用しています。このプロセスにご協力いただいているお客様とパートナーの皆様に感謝いたします。
 
-アドビでは、お客様中心のバグ修正と機能強化リクエストの開発に関する情報収集、優先順位付け、追跡の手順およびプロセスを整備しています。この [Adobe Marketing Cloud Support Portal](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) は、Adobe機能強化および欠陥追跡システムと統合されています。 お客様からの問い合わせは、可能な場合はカスタマーケアで特定および解決されます。研究開発部門にエスカレートされた場合は、すべての顧客情報が収集され、優先順位付けとレポートに使用されます。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
+アドビでは、お客様志向のバグ修正と機能強化リクエストの開発に関する、情報収集、優先順位付け、追跡のための手順とプロセスを整備しています。この [Adobe Marketing Cloud Support Portal](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) は、Adobe機能強化および欠陥追跡システムと統合されています。 お客様からの問い合わせは、可能な場合はカスタマーケアで特定および解決されます。研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
 
 この優先順位付けのプロセスにより、AEM 6.4 では 500 件を超えるお客様中心の変更がおこなわれました。
 
@@ -293,10 +293,10 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 * 様々なプラットフォーム向けの AEM Screens Players（[ダウンロード](https://download.macromedia.com/screens/)）
 * スマートコンテンツの言語モデル。英語は事前インストール済み。ほかに以下の言語がダウンロード可能
 
-   * [ドイツ語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
-   * [スペイン語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
-   * [イタリア語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
-   * [フランス語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+   * [ドイツ語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+   * [スペイン語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+   * [イタリア語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+   * [フランス語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
 * [AEM Modernization Tools](/help/sites-developing/modernization-tools.md) クラシック UI コンポーネントを Coral 3 に移行するには
 
@@ -312,9 +312,9 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 * AEM Forms の機能パッケージ：
 
-   * [adobe-aemfd-aix-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+   * [adobe-aemfd-aix-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
    * [adobe-aemfd-linux-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
-   * [adobe-aemfd-solaris-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.htmlL)
+   * [adobe-aemfd-solaris-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
    * [adobe-aemfd-win-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
    * [adobe-aemfd-osx-pkg](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
 
@@ -327,7 +327,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 * フランス語
 * スペイン語
 * イタリア語
-* ブラジル語ポルトガル語
+* ポルトガル語（ブラジル）
 * 日本語
 * 簡体字中国語
 * 繁体字中国語（限定的にサポート）
@@ -375,6 +375,6 @@ Adobe Experience Manager 6.4 についての情報は、[廃止および削除�
 
 以下のサイトは既存ユーザーのみが参照できます。アクセス権が必要な既存ユーザーの方は、アドビのアカウントマネージャーまでお問い合わせください。
 
-* [licensing.adobe.com での製品のダウンロード](https://licensing.adobe.com/).
-* の追加機能に関する製品アップデート、パッチ、パッケージ [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
-* [Admin Console](https://adminconsole.adobe.com/). 詳しくは、 [新しいAdobeカスタマーサポートエクスペリエンス](https://docs.adobe.com/content/help/en/customer-one/using/home.html).
+* [licensing.adobe.com での製品のダウンロード](https://licensing.adobe.com/)。
+* 製品の追加機能に関する[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)上のアップデート、パッチ、パッケージ。
+* [Admin Console 経由でのカスタマーサポート](https://adminconsole.adobe.com/)。詳しくは、[新しいアドビカスタマーサポートエクスペリエンス](https://docs.adobe.com/content/help/ja-JP/customer-one/using/home.html)を参照してください。
