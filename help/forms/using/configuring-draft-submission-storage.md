@@ -12,7 +12,7 @@ exl-id: c73fd1c5-6f3f-4c62-a8d6-fcd22f02c0ca
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '531'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -34,13 +34,13 @@ AEM Forms ポータルのデータサービスおよびメタデータサービ�
 
 >[!NOTE]
 >
->「フォームポータル」送信アクションを使用したり、アダプティブフォームでフォームポータルにデータを保存するオプションを有効にしたりすると、フォームデータは AEM リポジトリに保存されます。実稼働環境では、ドラフトまたは送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。代わりに、ドラフトと送信コンポーネントをエンタープライズデータベースなどの安全なストレージに統合して、ドラフトと送信済みのフォームデータを保存する必要があります。
+>「フォームポータル」送信アクションを使用したり、アダプティブフォームでフォームポータルにデータを保存するオプションを有効にしたりすると、フォームデータは AEM リポジトリーに保存されます。実稼働環境では、ドラフトまたは送信されたフォームデータを AEM リポジトリーに保存しないことをお勧めします。代わりに、ドラフトと送信コンポーネントをエンタープライズデータベースなどの安全なストレージと統合して、ドラフトと送信済みフォームデータを格納する必要があります。
 >
 >詳しくは、「[ドラフト&amp;送信コンポーネントとデータベースの統合](/help/forms/using/integrate-draft-submission-database.md)」を参照してください。
 
 ## フォームポータルのドラフトサービスおよび送信サービスの設定 {#configuring-forms-portal-drafts-and-submissions-services}
 
-AEM Web コンソールの設定 ( `https://[*host*]:[*port*]/system/console/configMgr`)、クリックして開く **Forms Portal のドラフトと送信の設定** 編集モードで。
+AEM Web Console Configuration（`https://[*host*]:[*port*]/system/console/configMgr`）で、「**Forms Portal Draft and Submission Configuration**」をクリックし、編集モードで開きます。
 
 以下の説明に従い、要件に基づいてプロパティの値を指定します。
 
@@ -104,8 +104,8 @@ AEM Web コンソールの設定 ( `https://[*host*]:[*port*]/system/console/con
 
 上記に示した設定のほか、設定したリモート処理用インスタンスの情報を入力します。
 
-AEM Web コンソールの設定 ( `https://[*host*]:[*port*]/system/console/configMgr`)、クリックして開く **AEM DS Settings Service** 編集モードで。 AEM DS Settings Service ダイアログで、処理サーバーの URL、ユーザー名、パスワードを入力します。
+AEM Web Console Configuration（`https://[*host*]:[*port*]/system/console/configMgr`）で、「**AEM DS Settings Service**」をクリックし、編集モードで開きます。AEM DS Settings Service ダイアログで、処理サーバーの URL、ユーザー名、パスワードを入力します。
 
 >[!NOTE]
 >
->ユーザーデータをデータベースに格納するためのサンプル実装も提供されます。ユーザーデータを外部データベースに格納するようにデータサービスとメタデータサービスを設定する方法については、 [ドラフトと送信コンポーネントをデータベースに統合する場合のサンプル](/help/forms/using/integrate-draft-submission-database.md).
+>ユーザーデータをデータベースに格納するためのサンプル実装も提供されます。ユーザーデータを既存のデータベースに格納するデータサービスとメタデータサービスを設定する方法を理解するには、「[サンプル：ドラフトと送信コンポーネントのデータベースへの統合](/help/forms/using/integrate-draft-submission-database.md)」を参照してください。

@@ -13,13 +13,13 @@ exl-id: 25e58c68-5c67-4894-9a54-1717d90d7831
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '573'
-ht-degree: 72%
+ht-degree: 99%
 
 ---
 
 # Adobe分類{#adobe-classifications}
 
-Adobe分類を使用して、分類データを [Adobe Analytics](/help/sites-administering/adobeanalytics.md) スケジュールに沿って SAINT Exporter は、**com.adobe.cq.scheduled.exporter.Exporter** の実装です。
+Adobe Classifications は、分類データをスケジュールに従って [Adobe Analytics](/help/sites-administering/adobeanalytics.md) にエクスポートします。SAINT Exporter は、**com.adobe.cq.scheduled.exporter.Exporter** の実装です。
 
 これを設定するには：
 
@@ -36,11 +36,11 @@ Adobe分類を使用して、分類データを [Adobe Analytics](/help/sites-ad
 
    | **フィールド** | **説明** |
    |---|---|
-   | 有効 | 「**はい**」を選択すると、Adobe Classifications の設定が有効になります。 |
+   | Enabled | 「**はい**」を選択すると、Adobe Classifications の設定が有効になります。 |
    | 競合時に上書き | 「**はい**」を選択すると、データの競合が上書きされます。デフォルトでは、これは「**いいえ**」に設定されています。 |
    | 削除処理 | 「**はい**」に設定すると、書き出された後に処理したノードが削除されます。デフォルトは、「**False**」です。 |
    | ジョブの書き出しに関する説明 | Adobe Classifications ジョブの説明を入力します。 |
-   | 通知電子メール | 分類の通知用の電子メールアドレスをAdobeします。 |
+   | 通知電子メール | Adobe Classifications の通知用のメールアドレスを入力します。 |
    | レポートスイート | 読み込みジョブを実行するレポートスイートを入力します。 |
    | データセット | 読み込みジョブを実行するデータセット関連 ID を入力します。 |
    | 変換サービス | ドロップダウンメニューから、変換サービスの実装を選択します。 |
@@ -51,13 +51,13 @@ Adobe分類を使用して、分類データを [Adobe Analytics](/help/sites-ad
 
 ## ページサイズの変更 {#modifying-page-size}
 
-レコードは、ページで処理されます。デフォルトでは、Adobe分類はページサイズが 1,000 のページを作成します。
+レコードは、ページで処理されます。デフォルトでは、Adobe Classifications はページサイズが 1,000 のページを作成します。
 
-ページのサイズは、Adobe分類の定義ごと25000、最大で設定でき、Felix コンソールから変更できます。 エクスポート時に、Adobe分類はソースノードをロックして、同時に変更できないようにします。 ノードは、書き出し後、エラー時またはセッション終了時にロックを解除されます。
+Adobe Classifications の定義に従い、ページの最大サイズは 25,000 に設定ができます（Felix コンソールから変更可）。エクスポート中に、Adobe Classifications はソースノードをロックして、同時変更を防ぎます。ノードは、書き出し後、エラー時またはセッション終了時にロックを解除されます。
 
 ページサイズを変更するには：
 
-1. OSGI コンソール ( ) に移動します。 **https://&lt;host>:&lt;port>/system/console/configMgr** を選択し、 **AdobeAEM分類エクスポータ**.
+1. **https://&lt;host>:&lt;port>/system/console/configMgr** にある OSGI コンソールに移動し、「**Adobe AEM Classifications Exporter**」を選択します。
 
    ![aa-26](assets/aa-26.png)
 
@@ -69,9 +69,9 @@ Adobe分類を使用して、分類データを [Adobe Analytics](/help/sites-ad
 >
 >Adobe Classifications は、以前は SAINT Exporter と呼ばれていました。
 
-SAINT Exporter は、変換サービスを使用して、書き出しデータを特別な形式に変換できます。Adobe分類の場合、サブインターフェイス `SAINTTransformer<String[]>` 変換サービスの実装インターフェイスが提供されました。 このインターフェイスは、データタイプを次の値に制限するために使用します。 `String[]` これは、SAINTAPI で使用され、選択用にこのようなサービスを見つけるためのマーカーインターフェイスを持つために使用されます。
+SAINT Exporter は、変換サービスを使用して、書き出しデータを特別な形式に変換できます。Adobe Classifications では、Transformer インターフェイスを実装するサブインターフェイス `SAINTTransformer<String[]>` が提供されています。このインターフェイスは、データタイプを SAINT API で使用される `String[]` に制限し、マーカーインターフェイスで対応するサービスを検索して選択するために使用されます。
 
-デフォルトの実装 SAINTDefaultTransformer では、エクスポータソースの子リソースは、プロパティ名をキーとし、プロパティ値を値として持つレコードとして扱われます。 **キー**&#x200B;列は、最初の列に自動的に追加され、その値がノード名になります。名前空間プロパティ（：を含む）は無視されます。
+デフォルト実装の SAINTDefaultTransformer では、書き出しソースの子リソースは、keys というプロパティ名と values というプロパティ値を持つレコードとして扱われます。**キー**&#x200B;列は、最初の列として自動的に追加され、その値がノード名になります。名前空間プロパティ（：を含む）は無視されます。
 
 *ノード構造：*
 
@@ -117,7 +117,7 @@ SAINT Exporter は、変換サービスを使用して、書き出しデータ�
   </tr> 
   <tr> 
    <td>description</td> 
-   <td>ジョブの説明。 <br /> </td> 
+   <td>ジョブの説明。<br /> </td> 
   </tr> 
   <tr> 
    <td>overwrite</td> 

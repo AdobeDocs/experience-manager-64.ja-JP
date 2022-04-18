@@ -13,7 +13,7 @@ exl-id: 407db3cf-8add-486b-8cf5-daeecc18bf30
 source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
 source-wordcount: '2142'
-ht-degree: 89%
+ht-degree: 95%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 89%
 バックアップと復旧に関して次の点を考慮してください。
 
 * データベースは、GDS および AEM リポジトリの前にバックアップを取る必要があります。
-* バックアップ用にクラスター環境でノードを停止する必要がある場合は、プライマリノードの前にセカンダリノードを必ずシャットダウンしてください。 そうしないと、クラスターまたはサーバー内で一貫性がなくなる可能性があります。また、プライマリノードは、セカンダリノードの前にライブにする必要があります。
+* バックアップのためにクラスター環境内でノードを下げる必要がある場合は、セカンダリノードをプライマリノードの前にシャットダウンしてください。そうしないと、クラスターまたはサーバー内で一貫性がなくなる可能性があります。また、プライマリノードはすべてのセカンダリノードよりも前にライブにする必要があります。
 * クラスターの復旧操作では、アプリケーションサーバーはクラスター内の各ノードごとに停止する必要があります。
 
 ## グローバルドキュメントストレージディレクトリ {#global-document-storage-directory}
@@ -92,7 +92,7 @@ AEM Forms データベースに格納される情報には、フォームの生�
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。
+>Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[アドビ製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。
 
 ### DB2 {#db2}
 
@@ -105,7 +105,7 @@ DB2 データベースをアーカイブログモードで実行されるよう�
 IBM は、データベース管理者がバックアップと回復タスクを実行する際に役に立つ次のようなツールやヘルプシステムを提供しています。
 
 * IBM DB2 Archive Log Accelerator
-* IBM DB2 Data Archive expert（『[IBM DB2 Data Archive Expert User&#39;s Guide and Reference](https://publib.boulder.ibm.com/infocenter/mptoolic/v1r0/topic/com.ibm.db2tools.aeu.doc.ug/ahxugb13.pdf?noframes=true)』を参照）
+* IBM DB2 Data Archive エキスパート ( [IBM DB2 Data Archive Expert ユーザーガイドおよびリファレンス](https://publib.boulder.ibm.com/infocenter/mptoolic/v1r0/topic/com.ibm.db2tools.aeu.doc.ug/ahxugb13.pdf?noframes=true).)
 
 DB2 には、Tivoli Storage Manager にデータベースをバックアップするための組み込み機能があります。Tivoli Storage Manager を使用して、DB2 バックアップを他のメディアやローカルのハードドライブに保存できます。
 
@@ -130,7 +130,7 @@ SQL Server には、次の 2 つのバックアップと回復ツールもあり
 * SQL Server Management Studio（GUI）
 * T-SQL（コマンドライン）
 
-詳しくは、 [バックアップと復元](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx).
+詳しくは、[バックアップと復元](https://msdn.microsoft.com/en-us/library/ms187048(v=SQL.90).aspx)を参照してください。
 
 ### MySQL {#mysql}
 
@@ -142,7 +142,7 @@ MySQLAdmin を使用するか Windows で INI ファイルを変更して、MySQ
 >
 >`binlog_format=mixed log-bin=logname`
 
-mysqldump ユーティリティを使用して、完全なデータベースバックアップを取得できます。完全バックアップは必要ですが、その実行が容易ではない場合があります。完全バックアップによって大量のバックアップファイルが生成され、処理に時間がかかります。増分バックアップを実行するには、必ず — を使用してサーバを起動します。 `log-bin` オプションを使用できます。 MySQL サーバーが再起動するたびに、現在のバイナリログへの書き込みが停止し、新しいログが作成され、以降はそのログが現在のバイナリログになります。手動での切り替えを `FLUSH LOGS SQL` コマンドを使用します。 最初の完全バックアップ後の増分バックアップは、mysqladmin ユーティリティと `flush-logs` コマンドを使用して実行されます。これにより新しいログファイルが作成されます。
+mysqldump ユーティリティを使用して、完全なデータベースバックアップを取得できます。完全バックアップは必要ですが、その実行が容易ではない場合があります。完全バックアップによって大量のバックアップファイルが生成され、処理に時間がかかります。増分バックアップを実行する場合は、前の節で説明したように `log-bin` オプションを使用してサーバーを起動してください。MySQL サーバーが再起動するたびに、現在のバイナリログへの書き込みが停止し、新しいログが作成され、以降はそのログが現在のバイナリログになります。`FLUSH LOGS SQL` コマンドを使用すると、手動で強制的に切り替えることができます。最初の完全バックアップ後の増分バックアップは、mysqladmin ユーティリティと `flush-logs` コマンドを使用して実行されます。これにより新しいログファイルが作成されます。
 
 「[Backup Strategy Summary](https://dev.mysql.com/doc/refman/5.5/en/backup-strategy-summary.html)」を参照してください。
 

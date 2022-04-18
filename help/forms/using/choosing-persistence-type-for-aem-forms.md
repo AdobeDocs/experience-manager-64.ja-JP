@@ -14,7 +14,7 @@ exl-id: ef486673-30fe-410a-83cf-c55be6064ce4
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '372'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -28,12 +28,12 @@ ht-degree: 93%
 >
 >LiveCycle ES4 SP1 では TarPM 永続性を使用してコンテンツを格納します。
 
-次の表に、サポートされるすべての永続性タイプと、環境の永続性タイプを選択する際に役立つ様々なパラメーターを示します。
+次の表は、サポートしているすべての永続性タイプと各種のパラメーターを示しています。現在の環境に合わせて永続性タイプを選択する際に、この表を参照してください。
 
 <table> 
  <tbody>
   <tr>
-   <th><strong>インストールの種類 / コスト</strong></th> 
+   <th><strong>インストールのタイプ／コスト</strong></th> 
    <th><strong>TarMK</strong></th> 
    <th><strong>MongoMk</strong></th> 
    <th><strong>RDBMK</strong></th> 
@@ -46,13 +46,13 @@ ht-degree: 93%
   </tr>
   <tr>
    <th><strong>クラスターセットアップ</strong></th> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
    <th><strong>ライセンスコスト</strong></th> 
-   <td>AEMに含まれる </td> 
+   <td>AEM に含まれる </td> 
    <td>別途ライセンスが必要</td> 
    <td>別途ライセンスが必要</td> 
   </tr>

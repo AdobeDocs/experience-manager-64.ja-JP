@@ -13,7 +13,7 @@ exl-id: d85fa478-8192-42b9-a5fc-a38a87cfc7dd
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '316'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 80%
 
 ## ダウンロード {#download}
 
-AEM Project Best Practices チェックリスト v2
+AEM プロジェクトのベストプラクティスチェックリスト v2
 
 [ファイルを入手](assets/aem_project_bp_checklistv2-64.xlsx)
 
@@ -39,7 +39,7 @@ AEM Project Best Practices チェックリスト v2
 * **[役割別のスタータス](/help/managing/best-practices.md#status-by-role)**
 * [ペルソナ](/help/managing/best-practices.md#persona)、[フェーズおよびマイルストーン](/help/managing/best-practices.md#phases-and-milestones)に応じた一連のチェックリスト
 * **用語集**
-   * 「用語集」には、プロジェクトチェックリストのすべての成果物ドキュメントの詳細がリストされます。
+   * 用語集には、プロジェクトチェックリストのすべての成果物ドキュメントの詳細が記載されています。
    * [用語集](/help/managing/best-practices-glossary.md)は、ドキュメントの一部としても入手できます。
 * **[ペルソナの定義](/help/managing/best-practices.md#persona)**
 
@@ -47,8 +47,8 @@ AEM Project Best Practices チェックリスト v2
 
 高品質のプロジェクトの提供を成功させるには、チェックリスト内のすべての項目を、可能な限り順番どおりに完了する必要があります。
 
-1. チェックリストは、 **[ペルソナ](/help/managing/best-practices.md#persona)** （役割）が関与しています。 各担当者は、プロジェクトでの役割に応じた適切なチェックリストを使用する必要があります。
-1. チェックリストは **[必須ドキュメント](/help/managing/best-practices.md#required-documents)** および **[成果物](/help/managing/best-practices.md#deliverables)** マイルストーンごとに、適切なペルソナがステータスフィールドと品質フィールドを適切に設定する必要があります。
+1. チェックリストは、関与する&#x200B;**[ペルソナ](/help/managing/best-practices.md#persona)**（役割）に応じて定義されます。各自が、プロジェクトでの自分の役割に応じたチェックリストを使用する必要があります。
+1. チェックリストは、各マイルストーンの&#x200B;**[必須ドキュメント](/help/managing/best-practices.md#required-documents)**&#x200B;と&#x200B;**[成果物](/help/managing/best-practices.md#deliverables)**&#x200B;をカバーしています。関連するペルソナが、ステータスフィールドと品質フィールドを適切に設定する必要があります。
 
    >[!NOTE]
    >

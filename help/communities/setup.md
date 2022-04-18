@@ -110,8 +110,8 @@ Adobe Analyticsとの統合はオプションです。
 
 * 「C」と入力して検索
 
-   *  `Community Administrators`
-   *  `Community Enablement Managers`
+   * 選択 `Community Administrators`
+   * 選択 `Community Enablement Managers`
 
 * 選択 **[!UICONTROL 保存]**
 

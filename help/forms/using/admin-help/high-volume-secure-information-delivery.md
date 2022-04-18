@@ -14,7 +14,7 @@ exl-id: 78fc7c4a-a634-4628-927a-c9622bdc13fc
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '324'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -30,4 +30,4 @@ Document Security は抽象ポリシーもサポートしています。抽象�
 
 抽象ポリシーの作成は、Document Security Java SDK を使用した場合にのみサポートされます。ただし、抽象ポリシーから作成したポリシーは、Document Security Web ページで管理できます。この方法で作成したポリシーは、挙動に関しては Document Security Web ページで作成したものとまったく変わりません。
 
-詳しくは、「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63)」を参照してください。
+詳しくは、「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63_jp)」を参照してください。

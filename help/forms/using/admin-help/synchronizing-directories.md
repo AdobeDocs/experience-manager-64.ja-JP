@@ -13,7 +13,7 @@ exl-id: d6b2f389-bff4-481d-93bf-87f56114a91b
 source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
 source-wordcount: '980'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。
+>Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[アドビ製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html?lang=ja)を参照してください。
 
 ## 差分ディレクトリ同期の有効化 {#enable-delta-directory-synchronization}
 
@@ -53,23 +53,23 @@ ht-degree: 98%
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 「Delta の同期」の下にあるチェックボックスを選択し、「保存」をクリックします。
-1. 差分ディレクトリ同期機能を使用するエンタープライズドメインごとに、ディレクトリ設定を編集します。ユーザー設定ページとグループ設定ページの「タイムスタンプを変更」設定に、値として `modify TimeStamp` を入力します。エンタープライズドメインの編集について詳しくは、[既存のドメインの編集と変換](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)を参照してください。
+1. 差分ディレクトリ同期機能を使用するエンタープライズドメインごとに、ディレクトリ設定を編集します。ユーザー設定ページとグループ設定ページで、「タイムスタンプを変更」設定を見つけ、値として `modify TimeStamp` を入力します。エンタープライズドメインの編集について詳しくは、[既存のドメインの編集と変換](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)を参照してください。
 
 ## 同期中の詳細なログの有効化または無効化 {#enable-or-disable-detailed-logging-during-synchronization}
 
 デフォルトで、User Management では、同期処理中に詳細な統計情報がログに記録されます。
 
-1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックします。
+1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックしてください。
 1. 「同期統計ログ」の指定にあるチェックボックスの選択を解除して詳細なログを無効にするか、選択してログを有効にしてから、「保存」をクリックします。
 
 ## ディレクトリ同期の再試行オプションの設定 {#configure-the-directory-synchronization-retry-option}
 
 User Management を設定して、失敗したディレクトリ同期処理を定期的にチェックすることができます。この設定にすると、失敗した同期の完了が User Management で試行されます。
 
-1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックします。
+1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックしてください。
 1. 「同期完了の Cron 形式」に、失敗した同期を User Management で再試行する間隔を表す Cron 形式を入力します。Cron 形式の使用方法は、Quartz オープンソースジョブスケジュールシステムのバージョン 1.4.0 に基づきます
 
-   デフォルトは 0 0/13 &amp;ast；です。? &amp;ast;：チェックは 13 分ごとに実行されます。
+   デフォルトは 0 0/13 &amp;ast; ?&amp;ast;、この設定ではチェックが 13 分ごとに実行されます。
 
 ## 手動によるディレクトリの同期 {#manually-synchronize-directories}
 

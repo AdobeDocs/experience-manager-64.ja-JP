@@ -1,5 +1,5 @@
 ---
-title: アセットエディターを拡張
+title: アセットエディターの拡張
 description: カスタムコンポーネントを使用したアセットエディターの機能の拡張方法を説明します。
 contentOwner: AG
 feature: Developer Tools
@@ -8,11 +8,11 @@ exl-id: 1e02a2f6-8194-46b9-b418-87103c3f4a69
 source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
 source-wordcount: '691'
-ht-degree: 93%
+ht-degree: 97%
 
 ---
 
-# アセットエディターを拡張 {#extending-asset-editor}
+# アセットエディターの拡張 {#extending-asset-editor}
 
 アセットエディターは、アセット共有を使用して見つけたアセットをクリックすると開くページです。アセットエディターでは、メタデータ、サムネール、タイトルおよびタグなどのアセットの特性を編集できます。
 
@@ -30,9 +30,9 @@ geometrixx には次のサンプルページが含まれています。
 
 ### clientlib の設定 {#configuring-clientlib}
 
-[!DNL Experience Manager Assets] コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。クライアントライブラリは通常、`init.jsp` で読み込まれます。
+[!DNL Experience Manager Assets] コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。クライアントライブラリは通常、`init.jsp` に読み込まれます。
 
-（コアの `init.jsp` での）デフォルトクライアントライブラリの読み込みとは異なり、 テンプレートは次の条件を満たす必要があります。[!DNL Assets]
+（コアの `init.jsp` での）デフォルトクライアントライブラリの読み込みとは異なり、[!DNL Assets] テンプレートは次の条件を満たす必要があります。
 
 * テンプレートでは、（`cq.wcm.edit` ではなく）`cq.dam.edit` クライアントライブラリを組み込む必要があります。
 
@@ -42,17 +42,17 @@ geometrixx には次のサンプルページが含まれています。
 
 ### JS アクションの設定 {#configuring-js-actions}
 
-一部の [!DNL Assets] コンポーネントには、 `component.js`. このファイルをコンポーネントディレクトリにコピーしてリンクします。
+一部の [!DNL Assets] コンポーネントでは `component.js` で定義されている JS 関数が必要です。このファイルをコンポーネントディレクトリにコピーしてリンクします。
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-このサンプルでは、この JavaScript ソースを `head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`) をクリックします。
+このサンプルでは、この JavaScript ソースを `head.jsp`（`/apps/geometrixx/components/asseteditor/head.jsp`）で読み込んでいます。
 
 ### 追加のスタイルシート {#additional-style-sheets}
 
-一部の [!DNL Assets] コンポーネントは、 [!DNL Experience Manager] ウィジェットライブラリ。 コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
+一部の [!DNL Assets] コンポーネントでは、 ウィジェットライブラリが使用されます。[!DNL Experience Manager]コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
@@ -69,7 +69,7 @@ geometrixx には次のサンプルページが含まれています。
 次に例を示します。
 
 * プレーンフォームページ：[http://localhost:4502/content/geometrixx/jp/press/asseteditor.html](http://localhost:4502/content/geometrixx/jp/press/asseteditor.html)
-* フォームページに読み込まれるアセット：[](http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/jp/press/asseteditor.html)http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/jp/press/asseteditor.html
+* フォームページに読み込まれるアセット：[http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/jp/press/asseteditor.html](http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/jp/press/asseteditor.html)
 
 `head.jsp`（`/apps/geometrixx/components/asseteditor/head.jsp`）のサンプルハンドルは、次の処理をおこないます。
 

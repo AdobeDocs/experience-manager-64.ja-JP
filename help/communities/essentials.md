@@ -32,7 +32,7 @@ ht-degree: 70%
 * [集計](tally.md)
 
    * [「いいね!」の設定](essentials-liking.md)
-   * [評価](rating-basics.md)
+   * [レーティング](rating-basics.md)
    * [投票](essentials-voting.md)
    * *投票（利用不可）*
 

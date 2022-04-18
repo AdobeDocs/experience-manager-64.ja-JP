@@ -11,7 +11,7 @@ exl-id: 6172d936-9348-4f3f-a437-6465dd156f3b
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '878'
-ht-degree: 72%
+ht-degree: 86%
 
 ---
 
@@ -66,31 +66,31 @@ AEM Inbox は、OSGi 上でForms中心のAEMワークフローを実行および
   <tr>
    <td>アダプティブフォームにフィールドレベルでファイルを添付する</td> 
    <td>サポート対象</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
   </tr>
   <tr>
    <td>カレンダーを表示する</td> 
    <td>サポート対象</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
   </tr>
   <tr>
    <td>タスクレベルでコメントを追加する</td> 
    <td>サポート対象</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
   </tr>
   <tr>
    <td>キューを使用する（共有個人用キューの使用と、キュー内のタスクの要求）</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
    <td>不在通知を送信する</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
    <td>複数のユーザーにタスクを割り当てる</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
  </tbody>
@@ -143,7 +143,7 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
    <td>サポート対象</td> 
   </tr>
   <tr>
-   <td>担当者の動的選択 </td> 
+   <td>担当者の動的な選択 </td> 
    <td>サポート対象</td> 
    <td>サポート対象</td> 
   </tr>
@@ -159,8 +159,8 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>タスクとフォームアプリケーションの管理</td> 
-   <td>サポート <sup>[2]</sup><br /> </td> 
-   <td>サポート <sup>[2]</sup></td> 
+   <td>サポート対象 <sup>[2]</sup><br /> </td> 
+   <td>サポート対象 <sup>[2]</sup></td> 
   </tr>
   <tr>
    <td>ドキュメントサービス</td> 
@@ -180,27 +180,27 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   <tr>
    <td>リセットボタン</td> 
    <td>サポート対象</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
   </tr>
   <tr>
    <td>ワークフローステージ</td> 
    <td>サポート対象</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
   </tr>
   <tr>
    <td>読み取り専用アダプティブフォーム</td> 
    <td>サポート対象</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
   </tr>
   <tr>
    <td>デフォルトの保存ボタンを非表示</td> 
    <td>サポート対象</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
   </tr>
   <tr>
    <td>ワークフローの詳細セクションの詳細な制御</td> 
    <td>サポート対象</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
   </tr>
   <tr>
    <td>HTML5 フォーム、インタラクティブ PDF フォーム、フォームセット<br /> </td> 
@@ -219,27 +219,27 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>スタートポイントカテゴリ</td> 
-   <td>サポートなし </td> 
+   <td>サポート対象外 </td> 
    <td>サポート対象 </td> 
   </tr>
   <tr>
-   <td>一括タスクの承認 </td> 
-   <td>サポートなし </td> 
+   <td>タスクの一括承認 </td> 
+   <td>サポート対象外 </td> 
    <td>サポート対象 </td> 
   </tr>
   <tr>
    <td>ドラフトをカスタム名で保存</td> 
-   <td>サポートなし </td> 
+   <td>サポート対象外 </td> 
    <td>サポート対象 </td> 
   </tr>
   <tr>
    <td>既存のプロセスデータによるプロセスの開始<br /> </td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象 </td> 
   </tr>
   <tr>
    <td>スタートポイントをドラフトとして保存</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
@@ -249,12 +249,12 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>マネージャービュー</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象<br /> </td> 
   </tr>
   <tr>
    <td>検索テンプレート</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象<br /> </td> 
   </tr>
   <tr>
@@ -264,32 +264,32 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>ワークフローアプリケーションまたはスタートポイントのタスクレベルの添付ファイル</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
    <td>リマインダー電子メール</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
    <td>タスクのタイムアウト時におけるタイトルの変更</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
    <td>タスク委任時とタスク要求時の電子メール</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
    <td>ワークフロー終了時の電子メール送信</td> 
-   <td>サポート <sup>[7]</sup></td> 
+   <td>サポート対象 <sup>[7]</sup></td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
    <td>異なるグループ間での委任</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
@@ -299,39 +299,39 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>XSLT 変換</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
-   <td>ゲートウェイ、待機なし</td> 
+   <td>ゲートウェイ、NO WAIT</td> 
    <td>サポート対象 </td> 
    <td>サポート対象 </td> 
   </tr>
   <tr>
-   <td>OR、AND 分割</td> 
-   <td>サポートなし</td> 
+   <td>OR、AND 分岐</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
    <td>動的タスクの優先度</td> 
-   <td>サポートなし</td> 
-   <td>サポートなし</td> 
+   <td>サポート対象外</td> 
+   <td>サポート対象外</td> 
   </tr>
  </tbody>
 </table>
 
-1. OSGi 上のフォーム中心のAEMワークフローを使用して、既に入力済みのアダプティブフォームに署名することができます。 OSGi 上のフォーム中心のAEM Workflows は、フォームの署名をサポートしています。 この [フォーム内署名](/help/forms/using/working-with-adobe-sign.md#create-in-form-signing-experience) エクスペリエンスはサポートされていません。
+1. OSGi 上のフォーム中心のAEMワークフローを使用して、既に入力済みのアダプティブフォームに署名することができます。 OSGi 上の Forms 中心の AEM ワークフローでは、フォーム外署名機能がサポートされています。[フォーム内署名](/help/forms/using/working-with-adobe-sign.md#create-in-form-signing-experience)エクスペリエンスはサポートされていません。
 
 1. AEM Forms の OSGi AEM ワークフローを実行してモニターするには、AEM インボックスにアクセスする必要があります。AEM Forms JEE ワークフローを実行してモニターするには、HTML Workspace にアクセスする必要があります。
-1. ネイティブの AEM Forms Document Services は、OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワークフローの両方で使用することができます。AEM Workflow は、OSGi 上の Form 中心のAEM Workflows とAEM Forms JEE(Process Management)Workflows 用のネイティブドキュメントサービスを使用します。
+1. ネイティブの AEM Forms ドキュメントサービスは、OSGi 上のフォーム中心の AEM ワークフローと AEM Forms JEE ワークフローの両方で使用することができます。AEM ワークフローでは、OSGi 上のフォーム中心の AEM ワークフローと AEM Forms JEE ワークフローに対して、ネイティブのドキュメントサービスが使用されます。
 1. AEM Forms JEE ワークフローでレンダリングできるのは、アダプティブフォームだけです。アダプティブフォームを PDF ドキュメントとしてレンダリングすることはできません。
 1. AEM Forms JEE ワークフローには、Adobe Sign 用の独立したステップは存在しません。AEM Forms JEE ワークフローに対して、Adobe Sign が有効になっているアダプティブフォームを使用する必要があります。詳しくは、[Adobe Sign のドキュメント](/help/forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component)を参照してください。
-1. 以下を使用して、 [フォームデータモデルサービスを起動](/help/forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p) web サービスを呼び出し、サードパーティのアプリケーションからデータを投稿または取得する手順です。
-1. 以下を使用して、 [メールの送信](/help/forms/using/aem-forms-workflow-step-reference.md#send-email-step) 電子メールを送信する手順です。
+1. [フォームデータモデルサービスを呼び出し](/help/forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p)する手順を使用して、Web サービスのサービスを呼び出し、サードパーティアプリケーションからデータを投稿または取得できます。
+1. [メールの送信](/help/forms/using/aem-forms-workflow-step-reference.md#send-email-step)手順を使用して、メールを送信できます。
 
 ## AEM インボックスの機能と AEM Forms アプリケーションの機能との違い {#differences-between-aem-inbox-and-aem-forms-app-features}
 
-Forms中心のワークフローを起動する主な方法の 2 つは、 [AEM Inbox](/help/forms/using/manage-applications-inbox.md) とAEM Formsアプリ。 ただし、AEM インボックスの機能と AEM Forms アプリケーションの機能は異なっています。AEM Inbox は、 [Forms中心のワークフロー](/help/forms/using/aem-forms-workflow.md) 一方、AEM Formsアプリは、Forms中心のワークフローとプロセス管理の両方で動作します。
+Forms 中心のワークフローを起動するには、[AEM インボックス](/help/forms/using/manage-applications-inbox.md)と AEM Forms アプリケーションの 2 つの方法があります。ただし、AEM インボックスの機能と AEM Forms アプリケーションの機能は異なっています。AEM インボックスは [Forms 中心のワークフロー](/help/forms/using/aem-forms-workflow.md)でのみ機能するのに対して、AEM Forms アプリケーションは Forms 中心のワークフローだけでなく、Process Management でも機能します。
 
 以下の表に、AEM インボックスの機能と AEM Forms アプリケーションの機能を示します。
 
@@ -355,12 +355,12 @@ Forms中心のワークフローを起動する主な方法の 2 つは、 [AEM 
   <tr>
    <td><p>タスクを委任する</p> </td> 
    <td><p>サポート対象</p> </td> 
-   <td><p>サポートなし</p> </td> 
+   <td><p>サポート対象外</p> </td> 
   </tr>
   <tr>
    <td><p>タスクの履歴と概要を追跡する</p> </td> 
    <td><p>サポート対象</p> </td> 
-   <td><p>サポートなし</p> </td> 
+   <td><p>サポート対象外</p> </td> 
   </tr>
   <tr>
    <td><p>タスクレベルの添付ファイルを追加する</p> </td> 
@@ -380,7 +380,7 @@ Forms中心のワークフローを起動する主な方法の 2 つは、 [AEM 
   <tr>
    <td><p>カレンダービューを表示する</p> </td> 
    <td><p>サポート対象</p> </td> 
-   <td><p>サポートなし</p> </td> 
+   <td><p>サポート対象外</p> </td> 
   </tr>
   <tr>
    <td><p>コメントを追加する</p> </td> 

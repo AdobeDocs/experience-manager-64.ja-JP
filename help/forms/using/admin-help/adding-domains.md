@@ -82,7 +82,7 @@ AEM forms データベースとして MySQL を使用している場合、以下
 1. 設定ファイルを開き、Domains ノード以下から、拡張文字またはマルチバイト文字を使用して作成したドメイン名と name 属性が一致するノードを探します。そのドメインに関連するノード全体を削除します。
 1. データベースの edcprincipaldomainentity テーブル内でドメインを検索します。
 
-   * 選択 `*` edcprincipaldomainentity から。
+   * edcprincipaldomainentity から `*` を選択します。
    * 拡張文字またはマルチバイト文字を含むドメイン名を検索し、ステータスを「旧バージョン」に設定します。
 
 1. 「[設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)」の説明に従って、更新した設定ファイルを読み込みます。

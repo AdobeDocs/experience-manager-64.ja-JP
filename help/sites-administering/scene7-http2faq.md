@@ -9,7 +9,7 @@ exl-id: 2da4c0b3-119e-436e-9f03-f794283e9a37
 source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
 source-wordcount: '784'
-ht-degree: 86%
+ht-degree: 89%
 
 ---
 
@@ -46,7 +46,7 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 * アドビ製品にバンドルされたコンテンツ配信ネットワーク（CDN）を Dynamic Media Classic ライセンスの一部として使用している。
 * 汎用の Dynamic Media Classic ドメイン（`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` のいずれか）ではなく、専用ドメイン（`images.company.com` または `mycompany.scene7.com`）を使用している。
 
-   ドメインを見つけるには、 [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app). 次に、 **[!UICONTROL 「設定」>「アプリケーション設定」>「一般設定」]**. 「**公開先サーバー名**」というラベルの付いたフィールドを見つけます。現在、汎用の Dynamic Media ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
+   ドメインを見つけるには、 [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=ja#system-requirements-dmc-app). 次に、 **[!UICONTROL 「設定」>「アプリケーション設定」>「一般設定」]**. **公開先サーバー名**&#x200B;というラベルの付いたフィールドを見つけます。現在、汎用の Dynamic Media ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
 
 ## Dynamic Media Classic アカウントに対して HTTP/2 を有効にする方法  {#what-is-the-process-for-enabling-http-for-my-scene-account}
 
@@ -63,7 +63,7 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
    * 直接的関係で管理するのではなく、アドビを介して CDN を使用していることを確認します。
    * 専用ドメインを使用していることを確認します。つまり、`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` などの汎用の Dynamic Media ドメインではなく、`images.company.com` または `mycompany.scene7.com` です。
 
-      ドメインを見つけるには、 [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app). 次に、 **[!UICONTROL 「設定」>「アプリケーション設定」>「一般設定」]**. 「**[!UICONTROL 公開先サーバー名」というラベルの付いたフィールドを見つけます。]**&#x200B;現在、汎用の Dynamic Media ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
+      ドメインを見つけるには、 [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app). 次に、 **[!UICONTROL 「設定」>「アプリケーション設定」>「一般設定」]**. **[!UICONTROL 公開先サーバー名というラベルの付いたフィールドを見つけます。]**&#x200B;現在、汎用の Dynamic Media ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
    1. テクニカルサポートによって、リクエストの送信順に基づいて HTTP/2 の顧客待機リストに追加されます。
    1. アドビでリクエストを処理する準備が整うと、サポートから連絡があり、移行についての調整および完了予定日の設定がおこなわれます。
    1. 完了後に通知があり、HTTP/2 への正常な切り替えを確認できます。

@@ -1,5 +1,5 @@
 ---
-title: UI の選択
+title: 'UI の選択 '
 seo-title: Selecting your UI
 description: AEM で使用するインターフェイスを設定します
 seo-description: Configure which interface you will use to work in AEM
@@ -13,11 +13,11 @@ exl-id: 415efbe0-95f5-4c9e-ac33-c4a384a8271e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 70%
+ht-degree: 84%
 
 ---
 
-# UI の選択{#selecting-your-ui}
+# UI の選択 {#selecting-your-ui}
 
 ## UI について
 
@@ -25,11 +25,11 @@ ht-degree: 70%
 
 * [オーサリング](/help/sites-authoring/author.md)（[ページオーサリング](/help/sites-authoring/author-environment-tools.md)、[アセットの管理](/help/assets/home.md)、[コミュニティ](/help/communities/author-communities.md)を含む）
 
-* Web サイトでのコンテンツの生成および管理の際に必要になる[管理](/help/sites-administering/home.md)タスク
+* web サイトでのコンテンツの生成および管理の際に必要になる[管理](/help/sites-administering/home.md)タスク
 
 これらの操作のために次の 2 つのグラフィカルユーザーインターフェイスが提供されており、最近のすべてのブラウザーからアクセスできます。
 
-1. タッチ操作向け UI
+1. タッチ操作対応 UI
 
    * これは、最新のデフォルトのAEM UI です。
    * 灰色を基調としており、クリーンでフラットなインターフェイスになっています。
@@ -74,13 +74,13 @@ ht-degree: 70%
 >
 >クラシック UI に切り替えるための様々なオプションは、そのまますぐに使用することはできません。使用しているインスタンス用に設定する必要があります。
 >
->詳しくは、 [クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md) を参照してください。
+>詳しくは、[クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md)を参照してください。
 
 >[!NOTE]
 >
 >以前のバージョンからアップグレードされたインスタンスでは、ページオーサリング用にクラシック UI が保持されます。
 >
->アップグレード後、ページオーサリングは自動的にタッチ操作対応 UI に切り替わりませんが、次を使用して設定できます： [OSGi 設定](/help/sites-deploying/configuring-osgi.md) の **WCM オーサリング UI モードサービス** ( `AuthoringUIMode` サービス )。 [エディターの UI 上書き](#ui-overrides-for-the-editor)を参照してください。
+>アップグレード後、ページオーサリングが自動的にタッチ対応 UI に切り替わることはありませんが、**WCM オーサリング UI モードサービス**（`AuthoringUIMode` サービス）の [OSGi 設定](/help/sites-deploying/configuring-osgi.md)を使用すると、その切り替えを設定できます。[エディターの UI 上書き](#ui-overrides-for-the-editor)を参照してください。
 
 ## ユーザーのインスタンス用のデフォルト UI の設定 {#configuring-the-default-ui-for-your-instance}
 
@@ -105,17 +105,17 @@ ht-degree: 70%
    >クラシック UI に切り替えるためのこのオプションは、そのまますぐに使用することはできません。使用しているインスタンス用に設定する必要があります。
    >
    >
-   >詳しくは、 [クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md) を参照してください。
+   >詳しくは、[クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md)を参照してください。
 
-   これが有効な場合、該当するコンソールの上にマウスポインターを置くたびに、アイコン（モニターのシンボル）が表示され、これをタップ／クリックすると、適切な場所がクラシック UI で開きます。
+   この設定を有効にすると、該当するコンソールの上にマウスポインターを置くたびに、アイコン（モニターのシンボル）が表示され、これをタップ／クリックすると、適切な場所がクラシック UI で開きます。
 
-   例えば、**サイト**&#x200B;から **siteadmin** へのリンクなどです。
+   例えば、**Sites** から **siteadmin** へのリンクなどです。
 
    ![screen_shot_2018-03-23at111924](assets/screen_shot_2018-03-23at111924.png)
 
 * **URL**
 
-   クラシック UI には、ようこそ画面の URL( `welcome.html`.例：
+   クラシック UI には、`welcome.html` のようこそ画面の URL を使用してアクセスできます。例は次のとおりです。
 
    `http://localhost:4502/welcome.html`
 
@@ -132,7 +132,7 @@ ht-degree: 70%
 >
 >クラシック UI に切り替えるためのこのオプションは、そのまますぐに使用することはできません。使用しているインスタンス用に設定する必要があります。
 >
->詳しくは、 [クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md) を参照してください。
+>詳しくは、[クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md)を参照してください。
 
 有効な場合は、**ページ情報**&#x200B;ダイアログで&#x200B;**クラシック UI を開く**&#x200B;が使用可能です。
 
@@ -144,23 +144,23 @@ ht-degree: 70%
 
 * ページのオーサリング時には次のようになります。
 
-   * を使用してページにアクセスする際に、従来のエディターが強制的に使用されます `cf#` 」と入力します。 次に例を示します。
+   * URL で `cf#` を使用してページにアクセスする場合、クラシックエディターが強制的に使用されます。次に例を示します。
 
       `http://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-   * 使用時に、タッチ操作対応エディターが強制的に使用されます `/editor.html` （タッチデバイスを使用する場合） 次に例を示します。
+   * URL で `/editor.html` を使用しているか、タッチデバイスを使用している場合、タッチ対応エディターが強制的に使用されます。次に例を示します。
 
       `http://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
 * 強制は一時的なものであり、ブラウザーセッションでのみ有効です。
 
-   * Cookie は、タッチ操作対応 ( `editor.html`) または classic ( `cf#`) が使用されます。
+   * Cookie は、タッチ対応（`editor.html`）とクラシック（`cf#`）のどちらが使用されているかに応じて設定されます。
 
 * `siteadmin` を使用してページを開くと、以下が存在するかがチェックされます。
 
    * Cookie
    * ユーザーの環境設定
-   * どちらも存在しない場合は、[WCM オーサリング UI モードサービス](/help/sites-deploying/configuring-osgi.md)（**サービス）の** OSGi 設定`AuthoringUIMode`で指定された定義がデフォルトで使用されます。
+   * どちらも存在しない場合は、**WCM オーサリング UI モードサービス**（`AuthoringUIMode` サービス）の [OSGi 設定](/help/sites-deploying/configuring-osgi.md)で指定された定義がデフォルトで使用されます。
 
 >[!NOTE]
 >
@@ -171,6 +171,6 @@ ht-degree: 70%
 >既に説明したように、Cookie を使用しているので、次の操作はお勧めしません。
 >
 >* URL の手動編集 - 非標準の URL を使用すると予期しない状況となり、機能しなくなる可能性があります。
->* 両方のエディターを同時に開く - 例えば、別のウィンドウなど。
+>* 両方のエディターを同時に開くこと - 例えば、別のウィンドウで開くなど。
 >
 

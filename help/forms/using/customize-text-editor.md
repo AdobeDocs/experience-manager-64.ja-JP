@@ -13,7 +13,7 @@ exl-id: 5e9f8e0f-209e-4613-b230-2b826b46ba6b
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '605'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
@@ -39,10 +39,10 @@ ht-degree: 62%
 
 フォントをカスタマイズするには、次のファイルを編集します。 tbxeditor-config.xml file。次の手順を実行します。
 
-1. に移動します。 `https://[server]:[port]/[ContextPath]/crx/de` 管理者としてログインします。
-1. 次の手順を使用して、apps フォルダーに、config フォルダー（libs/fd/cm/config にある）と同様のパス/構造で config という名前のフォルダーを作成します。
+1. `https://[server]:[port]/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
+1. apps フォルダーに、libs/fd/cm/config の config フォルダーに類似したパスまたはフォルダー構造を持つ config という名前のフォルダーを次の手順で作成します。
 
-   1. 次のパスにある items フォルダを右クリックし、を選択します。 **ノードをオーバーレイ**:
+   1. 以下のパスにある items フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
       `/libs/fd/cm/config`
 
@@ -50,11 +50,11 @@ ht-degree: 62%
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **パス：** /libs/fd/cm/config
+      **パス：** /libs/fd/cm/config
 
-      **場所：** /apps/
+      **場所：** /apps/
 
-      **ノードタイプを一致させる：** 選択済み
+      **ノードタイプを一致させる：**&#x200B;選択済み
 
       ![ノードをオーバーレイ](assets/2-2.png)
 
@@ -69,11 +69,11 @@ ht-degree: 62%
 
       `apps/fd/cm/config`
 
-   1. 貼り付けたファイルの名前は、デフォルトでは、です。 `copy of tbxeditor-config.xml.` ファイル名をに変更します。 `tbxeditor-config.xml` をクリックし、 **すべて保存**.
+   1. 貼り付けたファイルの名前は、デフォルトでは `copy of tbxeditor-config.xml.` です。ファイル名を `tbxeditor-config.xml` に変更し、「**すべて保存**」をクリックします。
 
-1. apps/fd/cm/config にある tbxeditor-config.xml ファイルを開き、必要な変更を行います。
+1. apps/fd/cm/config の tbxeditor-config.xml ファイルを開き、必要な変更を加えます。
 
-   1. apps/fd/cm/config にある tbxeditor-config.xml ファイルをダブルクリックします。 ファイルが開きます。
+   1. apps/fd/cm/config にある tbxeditor-config.xml ファイルをダブルクリックします。ファイルが開きます。
 
       ```xml
       <editorConfig>
@@ -160,16 +160,16 @@ ht-degree: 62%
       </editorConfig>
       ```
 
-   1. ファイルで必要な変更を行い、フォント設定で以下を変更します。
+   1. 必要となる変更をファイルに加え、フォント設定で以下を変更します。
 
       * フォントファミリーとサイズの追加または削除
       * 高さ、文字間隔などのプロパティ
       * フォントファミリーとサイズ、高さ、文字間隔、日付形式のデフォルト値
       * 箇条書きのインデント
 
-      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには  XML ファイル： `<font>Sazanami Mincho Medium</font>`. また、このフォントをクライアントマシンにインストールし、フォントのカスタマイズにアクセスして操作する必要があります。 詳しくは、「[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)」を参照してください。
+      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには XML ファイル：`<font>Sazanami Mincho Medium</font>`。アクセスしてフォントのカスタマイズを行うクライアントマシンにも、このフォントをインストールしておく必要があります。詳しくは、[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)を参照してください。
 
-      また、テキストの様々な側面のデフォルトを変更し、エントリを削除して、テキストエディターからフォントを削除することもできます。
+      また、様々な特性を持つテキストのデフォルト設定を変更したり、エントリを削除してテキストエディターからフォントを削除したりすることもできます。
 
    1. 「**すべて保存**」をクリックします。
 
@@ -180,16 +180,16 @@ Correspondence Management テキストエディターに格納されたフォン
 
 フォントのインストールについて詳しくは、次を参照してください。
 
-* [フォントをインストールまたはアンインストールする](https://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts)
+* [Windows でフォントをインストールまたはアンインストールする](https://windows.microsoft.com/ja-jp/windows-vista/install-or-uninstall-fonts)
 * [Mac ハンドブック：Font Book](https://support.apple.com/ja-jp/HT201749)
 
 ## カスタマイズしたフォントへのアクセス {#access-font-customizations}
 
-CRX の tbxeditor-config.xml ファイルのフォントを変更し、AEM Formsにアクセスするために使用するクライアントマシンに必要なフォントをインストールすると、変更がテキストエディターに表示されます。
+CRX の tbxeditor-config.xml ファイルのフォントに変更を加え、さらに AEM Forms へのアクセスに使用するクライアントマシンに必要なフォントをインストールすると、テキストエディターに変更が反映されます。
 
-例えば、Sazanami Mincho Medium フォントは [CRX の tbxeditor-config.xml ファイルを編集してフォントをカスタマイズ](#customizefonts) 手順は、テキストエディター UI に次のように表示されます。
+例えば、[CRX の tbxeditor-config.xml ファイルを編集してフォントをカスタマイズする](#customizefonts)手順で Sazanami Mincho Medium フォントを追加した場合、テキストエディターの UI で以下のように表示されます。
 
-![sazanaminchointext](assets/sazanamiminchointext.png)
+![sazanamiminchointext](assets/sazanamiminchointext.png)
 
 >[!NOTE]
 >

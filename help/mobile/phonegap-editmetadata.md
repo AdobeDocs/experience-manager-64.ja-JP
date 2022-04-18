@@ -92,4 +92,4 @@ ht-degree: 71%
 管理者および開発者の役割と責任について詳しくは、以下のリソースを参照してください。
 
 * [AEM と Adobe PhoneGap Enterprise での開発](/help/mobile/developing-in-phonegap.md)
-* [AEM での Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)
+* [AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)

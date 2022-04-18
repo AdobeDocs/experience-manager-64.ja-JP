@@ -1,5 +1,5 @@
 ---
-title: AEM アプリケーションへのタグの作成
+title: AEM アプリケーションへのタグ付けの構築
 seo-title: Building Tagging into an AEM Application
 description: カスタム AEM アプリケーション内のタグまたは拡張タグをプログラムで操作します
 seo-description: Programmatically work with tags or extending tags within a custom AEM application
@@ -14,11 +14,11 @@ exl-id: b3b0f505-3d7d-493d-a37b-abc8a365f95b
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '875'
-ht-degree: 67%
+ht-degree: 100%
 
 ---
 
-# AEM アプリケーションへのタグの作成{#building-tagging-into-an-aem-application}
+# AEM アプリケーションへのタグ付けの構築{#building-tagging-into-an-aem-application}
 
 カスタム AEM アプリケーション内のタグまたは拡張タグをプログラムで操作するために、このページでは、次の使用方法を説明します。
 
@@ -30,12 +30,12 @@ ht-degree: 67%
 
 タグに関する関連情報については、次を参照してください。
 
-* [タグの管理](/help/sites-administering/tags.md) タグの作成と管理、およびタグが適用されるコンテンツについて説明します。
+* タグの作成と管理、およびタグが適用されているコンテンツについては、「[タグの管理](/help/sites-administering/tags.md)」を参照してください。
 * コンテンツのタグ付けについては、[タグの使用](/help/sites-authoring/tags.md)を参照してください。
 
 ## タグ付け API の概要 {#overview-of-the-tagging-api}
 
-AEM の[タグ付けフレームワーク](/help/sites-developing/framework.md)の実装により、JCR API を使用してタグおよびタグコンテンツを管理できます。TagManager は、値として入力されたタグを `cq:tags` 文字列配列プロパティが重複していない場合、存在しないタグを指すタグ ID が削除され、移動したタグまたは結合されたタグの TagID が更新されます。 TagManager は、間違った変更を元に戻す JCR 監視リスナーを使用します。メインクラスは [com.day.cq.tagging](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/tagging/package-summary.html) パッケージ内にあります。
+AEM の[タグ付けフレームワーク](/help/sites-developing/framework.md)の実装により、JCR API を使用してタグおよびタグコンテンツを管理できます。TagManager は、`cq:tags` 文字列配列プロパティに値として入力されたタグが重複しないようにして、存在しないタグを指している TagID を削除し、移動または結合されたタグの TagID を更新してください。TagManager は、間違った変更を元に戻す JCR 監視リスナーを使用します。メインクラスは [com.day.cq.tagging](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/tagging/package-summary.html) パッケージ内にあります。
 
 * JcrTagManagerFactory - `TagManager` の JCR ベースの実装を返します。タグ付け API のリファレンス実装です。
 * `TagManager` - パスと名前を使用して、タグを解決して作成できます。
@@ -43,7 +43,7 @@ AEM の[タグ付けフレームワーク](/help/sites-developing/framework.md)�
 
 ### JCR ベースの TagManager の取得 {#getting-a-jcr-based-tagmanager}
 
-TagManager インスタンスを取得するには、JCR `Session` を取得して `getTagManager(Session)` ) を呼び出す必要があります。
+TagManager インスタンスを取得するには、JCR `Session` を取得して `getTagManager(Session)` を呼び出す必要があります。
 
 ```java
 @Reference
@@ -74,7 +74,7 @@ Tag tag = tagManager.createTag("my/tag"); // for new tags
 Tag tag = resource.adaptTo(Tag.class);
 ```
 
-タグは（ノードではなく）リソースからのみ変換できますが、タグはノードとリソースの両方に変換できます。
+タグは、ノードからではなく、*リソース *からのみ変換できますが、ノードとリソースの両方に変換できます。
 
 ```java
 Node node = tag.adaptTo(Node.class);
@@ -130,11 +130,11 @@ replicator.replicate(session, replicationActionType, tagPath);
 
 ## クライアント側でのタグ付け {#tagging-on-the-client-side}
 
-`CQ.tagging.TagInputField` は、タグを入力するためのフォームウィジェットです。既存のタグから選択できるポップアップメニューを備えており、自動入力などの機能もあります。xtype はです。 `tags`.
+`CQ.tagging.TagInputField` は、タグを入力するためのフォームウィジェットです。既存のタグから選択できるポップアップメニューを備えており、自動入力などの機能もあります。xtype は `tags` です。
 
 ## タグのガベージコレクター {#the-tag-garbage-collector}
 
-タグのガベージコレクターは、非表示および未使用のタグをクリーンアップするバックグラウンドサービスです。非表示および未使用のタグは以下のタグです `/content/cq:tags` それは `cq:movedTo` プロパティとは異なり、コンテンツノードでは使用されません。このプロパティの数は 0 です。 この遅延削除プロセスを使用すると、移動や結合操作の一環としてコンテンツノード（`cq:tags` プロパティ）をアップデートする必要がありません。`cq:tags` プロパティの参照は、`cq:tags` プロパティがアップデートされると自動的にアップデートされます（例：ページプロパティダイアログを介して）。
+タグのガベージコレクターは、非表示および未使用のタグをクリーンアップするバックグラウンドサービスです。非表示および未使用のタグとは、`cq:movedTo`プロパティが設定された`/content/cq:tags`の下にあるタグのことで、コンテンツノードでは使用されません（カウントはゼロになります）。この遅延削除プロセスを使用すると、移動や結合操作の一環としてコンテンツノード（`cq:tags` プロパティ）をアップデートする必要がありません。`cq:tags` プロパティの参照は、`cq:tags` プロパティがアップデートされると自動的にアップデートされます（例：ページプロパティダイアログを介して）。
 
 タグのガベージコレクターは、デフォルトで 1 日に 1 回実行されます。これは、次の場所で設定できます。
 
@@ -146,15 +146,15 @@ http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbag
 
 タグ検索およびタグ一覧は次のように動作します。
 
-* TagID の検索では、プロパティを持つタグを検索します `cq:movedTo` を TagID に設定し、 `cq:movedTo` タグ ID。
+* TagID の検索では、`cq:movedTo` プロパティが TagID に設定されているタグを検索します。`cq:movedTo` の TagID に従って検索します。
 
-* タグタイトルを検索すると、 `cq:movedTo` プロパティ。
+* タグタイトルの検索では、`cq:movedTo` プロパティのないタグのみを検索します。
 
 ## 他の言語のタグ {#tags-in-different-languages}
 
-タグの管理に関するドキュメントの説明に従い、の節を参照してください。 [異なる言語でのタグの管理](/help/sites-administering/tags.md#managing-tags-in-different-languages)、タグ `title`は異なる言語で定義できます。 言語に依存するプロパティがタグノードに追加されます。このプロパティは `jcr:title.<locale>` の形式を持ちます（例：フランス語訳は `jcr:title.fr`）`<locale>` は小文字の ISO ロケール文字列である必要があり、「 — 」の代わりに「_」を使用します。次に例を示します。 `de_ch`.
+タグの管理に関するドキュメントの[他の言語でのタグ管理](/help/sites-administering/tags.md#managing-tags-in-different-languages)の節で説明されているように、タグの `title` は別の言語で定義できます。言語に依存するプロパティがタグノードに追加されます。このプロパティは `jcr:title.<locale>` の形式を持ちます（例：フランス語訳は `jcr:title.fr`）`<locale>` は、小文字の ISO ロケール文字列で、「-」ではなく「_」を使用する必要があります（例：`de_ch`）。
 
-次の場合に **動物** タグが **製品** ページ、値 `stockphotography:animals` がプロパティに追加される `cq:tags` /content/geometrixx/en/products/jcr:content ノードの 翻訳は、タグノードから参照されます。
+**Animals** タグが **Products** ページに追加されると、値 `stockphotography:animals` は /content/geometrixx/en/products/jcr:content ノードの `cq:tags` プロパティに追加されます。翻訳は、タグノードから参照されます。
 
 サーバーサイド API には、ローカライズされた `title` 関連のメソッドがあります。
 
@@ -188,13 +188,13 @@ AEM では、言語はページ言語またはユーザー言語のどちらか�
 
 ### タグを編集ダイアログへの新しい言語の追加 {#adding-a-new-language-to-the-edit-tag-dialog}
 
-以下の手順では、新しい言語（フィンランド語）を **タグ編集** ダイアログ：
+次の手順では、新しい言語（フィンランド語）を&#x200B;**タグを編集**&#x200B;ダイアログに追加する方法を説明します。
 
 1. **CRXDE** で、ノード `/content/cq:tags` の複数値プロパティ `languages` を編集します。
 
-1. 追加 `fi_fi`  — フィンランド語のロケールを表す — 変更を保存します。
+1. フィンランド語のロケールを表す `fi_fi` を追加して、変更を保存してください。
 
-新しい言語（フィンランド語）が、ページプロパティのタグダイアログで、 **タグを編集** ダイアログで **タグ付け** コンソール。
+**タグ付け**&#x200B;コンソールでタグを編集する際に、ページプロパティタグダイアログと&#x200B;**タグを編集**&#x200B;ダイアログで、新しい言語（フィンランド語）を使用できるようになりました。
 
 >[!NOTE]
 >

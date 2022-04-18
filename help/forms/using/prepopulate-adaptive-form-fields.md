@@ -8,13 +8,13 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: develop
 discoiquuid: 2ddb33a5-0d62-46f4-8f8c-0f0807a975cb
 feature: Adaptive Forms
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: 67bb208a-042b-4fa1-9ab1-23325e0c7e4c
+source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
 workflow-type: tm+mt
 source-wordcount: '2001'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
-
 
 # アダプティブフォームのフィールドの事前入力 {#prefill-adaptive-form-fields}
 
@@ -80,7 +80,7 @@ ht-degree: 97%
 
 ## XFA フォームテンプレートを使用したアダプティブフォーム {#xfa-based-af}
 
-XFA ベースのアダプティブフォームの事前入力 XML と送信済み XML の構造は次のとおりです。
+ XFA ベースのアダプティブフォームの事前入力 XML と送信済み XML の構造は次のとおりです。
 
 * **事前入力 XML 構造**：XFA ベースのアダプティブフォームのための事前入力 XML は、XFA フォームテンプレートのデータスキーマに準拠していなければなりません。連結されていないフィールドを事前入力するには、事前入力 XML 構造を `/afData/afBoundData` タグにラップします。
 
@@ -202,7 +202,7 @@ JSON スキーマモデルを使用するフィールドの場合、以下の JS
 
 ## フォームモデルのないアダプティブフォーム {#adaptive-form-with-no-form-model}
 
-フォームモデルがないアダプティブフォームの場合、すべてのフィールドのデータは、 `<data>` タグ `<afUnboundData> tag`.
+フォームモデルが含まれていないアダプティブフォームの場合、すべてのフィールドのデータは、`<afUnboundData> tag` の `<data>` タグの下にあります。
 
 また、次のことを控えておいてください：
 
@@ -299,8 +299,8 @@ http://localhost:4502/content/forms/af/xml.html?wcmmode=disabled&dataRef=http://
 http://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=service://[SERVICE_NAME]/[IDENTIFIER]
 ```
 
-* SERVICE_NAME は OSGI 事前入力サービスの名前を参照します。[事前入力サービスの作成と実行](/help/forms/using/prepopulate-adaptive-form-fields.md#create-and-run-a-prefill-service)を参照してください。
-* IDENTIFIER は、事前入力データを取得するために OSGI 事前入力サービスが必要とするメタデータを参照します。ログイン済みユーザーの識別子は、使用できるメタデータの一例です。
+* SERVICE_NAME とは OSGI 事前入力サービスの名前を指します。[事前入力サービスの作成と実行](/help/forms/using/prepopulate-adaptive-form-fields.md#create-and-run-a-prefill-service)を参照してください。
+* 識別情報とは、OSGI 事前入力サービスが事前入力データを取得するために必要なメタデータを指します。ログイン済みユーザーの識別子は、使用できるメタデータの一例です。
 
 >[!NOTE]
 >
@@ -371,4 +371,3 @@ prefill-page component.zip
 1. アダプティブフォームをフォームエディターで開き、フォームコンテナのプロパティパネルを開きます。
 1. プロパティコンソールで、に移動します。 **[!UICONTROL AEM Formsコンテナ/基本/事前入力サービス]**.
 1. Default Prefill Service を選択し、「**[!UICONTROL 保存]**」をクリックします。サービスはフォームに関連付けられます。
-

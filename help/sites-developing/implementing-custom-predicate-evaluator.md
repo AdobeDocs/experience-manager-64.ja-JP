@@ -13,7 +13,7 @@ exl-id: afa7f346-fefa-4faa-bf2d-7480a7e5a5ee
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '774'
-ht-degree: 89%
+ht-degree: 95%
 
 ---
 
@@ -115,7 +115,7 @@ replic.action=Activate
 
 pom.xml
 
-次のスニペットは、 [統合差分形式](https://ja.wikipedia.org/wiki/Diff#.E3.83.A6.E3.83.8B.E3.83.95.E3.82.A1.E3.82.A4.E3.83.89.E5.BD.A2.E5.BC.8F_.28Unified_format.29)
+次のスニペットは、[ユニファイド diff 形式](https://ja.wikipedia.org/wiki/Diff#.E3.83.A6.E3.83.8B.E3.83.95.E3.82.A1.E3.82.A4.E3.83.89.E5.BD.A2.E5.BC.8F_.28Unified_format.29)での違いを示しています
 
 ```
 @@ -120,6 +120,12 @@
@@ -143,11 +143,11 @@ pom.xml
 >次の手順では、データをフィルタリングする `Xpath` 式を作成する方法について説明します。この他に、データを行単位で選択する `includes` メソッドを実装する方法もあります。詳しくは、[Java のドキュメント](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)を参照してください。
 
 1. `com.day.cq.search.eval.AbstractPredicateEvaluator` を拡張する新しい Java クラスを作成します。
-1. クラスに `@Component` 以下のように
+1. 次のように、`@Component` を使用してクラスに注釈を付けます
 
    src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java
 
-   次のスニペットは、 [統合差分形式](https://en.wikipedia.org/wiki/Diff#Unified_format)
+   次のスニペットは、[ユニファイド diff 形式](https://en.wikipedia.org/wiki/Diff#Unified_format)での違いを示しています
 
 
 ```
@@ -327,4 +327,4 @@ public class ReplicationPredicateEvaluator extends AbstractPredicateEvaluator {
 }
 ```
 
-[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator) - [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/blob/master/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)
+[aem-search-custom-predicate-evaluator](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)- [src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/blob/master/src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java)

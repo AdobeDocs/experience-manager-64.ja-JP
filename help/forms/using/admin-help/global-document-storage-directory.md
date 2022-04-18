@@ -13,7 +13,7 @@ exl-id: 37d6187f-4f91-4ad4-b0d6-eaae165abe64
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '676'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -38,33 +38,33 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
  <tbody>
   <tr> 
    <td><p>アプリケーションデータ（ユーザー、ロール、プロセス、ポリシー、エンドポイント、イベントなど）</p></td> 
-   <td><p>可</p></td> 
-   <td><p>不可</p></td> 
+   <td><p>はい</p></td> 
+   <td><p>いいえ</p></td> 
   </tr> 
   <tr> 
    <td><p>デプロイされたサービスコンテナ</p></td> 
-   <td><p>可</p></td> 
-   <td><p>不可</p></td> 
+   <td><p>はい</p></td> 
+   <td><p>いいえ</p></td> 
   </tr> 
   <tr> 
    <td><p>Document Manager </p></td> 
-   <td><p>不可</p></td> 
-   <td><p>可</p></td> 
+   <td><p>いいえ</p></td> 
+   <td><p>はい</p></td> 
   </tr> 
   <tr> 
    <td><p>Forms リポジトリ</p></td> 
-   <td><p>可</p></td> 
+   <td><p>はい</p></td> 
    <td><p>いいえ</p></td> 
   </tr> 
   <tr> 
    <td><p>システム設定</p></td> 
-   <td><p>可</p></td> 
-   <td><p>不可</p></td> 
+   <td><p>はい</p></td> 
+   <td><p>いいえ</p></td> 
   </tr> 
   <tr> 
    <td><p>監視フォルダー</p></td> 
-   <td><p>不可</p></td> 
-   <td><p>可</p></td> 
+   <td><p>いいえ</p></td> 
+   <td><p>はい</p></td> 
   </tr> 
  </tbody> 
 </table>
@@ -73,9 +73,9 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
 
 GDS ディレクトリの場所は、AEM Forms のインストール時に手動で設定できます。インストール時に場所を指定しないと、次に示すアプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。
 
-* (JBoss) `*[appserver root]*/server/*[type]*/svcnative/DocumentStorage`
+* （JBoss）`*[appserver root]*/server/*[type]*/svcnative/DocumentStorage`
 * (WebLogic) `*[appserverdomain]*/*[server]*/adobe/DocumentServer/DocumentStorage`
-* (WebSphere) `*[appserver root]*/installedApps/adobe/*[server]*/DocumentStorage`
+* （WebSphere）`*[appserver root]*/installedApps/adobe/*[server]*/DocumentStorage`
 
 ## GDS のデフォルトの場所の変更 {#change-the-default-gds-location}
 
@@ -98,7 +98,7 @@ AEM Forms は、サービスコンテナおよび Java 2 Platform Enterprise Edi
 * adobe-core-*[appserver]*.ear
 * adobe-core-*[appserver]*-*[OS]*.ear
 
-AEM Forms の実装では、アセンブリされた複数の EAR ファイルといくつかの補助ファイルを、AEM Forms ソリューションを実行する予定のアプリケーションサーバーにデプロイします。複数のモジュールを設定およびアセンブリした場合は、デプロイ可能なモジュールがデプロイ可能な EAR ファイル内にパッケージ化されています。これらのファイルをデプロイするには、 *[appserver home]*\server\all\deploy directory.
+AEM Forms の実装では、アセンブリされた複数の EAR ファイルといくつかの補助ファイルを、AEM Forms ソリューションを実行する予定のアプリケーションサーバーにデプロイします。複数のモジュールを設定およびアセンブリした場合は、デプロイ可能なモジュールがデプロイ可能な EAR ファイル内にパッケージ化されています。これらのファイルをデプロイするには、ファイルを *[appserver home]*\server\all\deploy ディレクトリにコピーします。
 
 また、モジュールおよび AEM Forms アーカイブファイルは、JAR ファイルにパッケージングされています。これらのファイルの種類は J2EE ではないので、アプリケーションサーバーにはデプロイされず、GDS ディレクトリにコピーされ、それらの場所への参照が AEM Forms データベースに格納されます。このため、GDS ディレクトリをクラスターのすべてのノードで共有する必要があります。すべてのノードが DSC の中央ストレージディレクトリにアクセスできることが必要です。
 

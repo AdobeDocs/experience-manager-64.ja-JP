@@ -21,7 +21,7 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 ## モバイルアプリのページテンプレート {#page-templates-for-mobile-apps-1}
 
@@ -65,7 +65,7 @@ Angular ページのボディは、wcm モードが検出されたかどうか�
 
 この方法により、何も変更を加えることなく、オーサー機能（段落システム、サイドキック、デザインモードでのコンポーネントの追加および編集など）を使用可能にすることができます。アプリ向けのページなどクライアント側のレンダリングを利用するページは、AEM オーサーモードではパフォーマンスがよくありません。
 
-template.jsp インクルードは `div` 要素 `ng-controller` ディレクティブ。 この構造により、DOM コンテンツをコントローラーとリンクできます。このため、クライアント側で自身をレンダリングするページは失敗しますが、同じようにレンダリングする個々のコンポーネントは正常に機能します（下のコンポーネントに関する節を参照）。
+Note that the template.jsp include is wrapped in a `div` element that contains the `ng-controller` directive. この構造により、DOM コンテンツをコントローラーとリンクできます。このため、クライアント側で自身をレンダリングするページは失敗しますが、同じようにレンダリングする個々のコンポーネントは正常に機能します（下のコンポーネントに関する節を参照）。
 
 ```xml
 <div ng-controller="<c:out value="${controllerNameStripped}"/>">
@@ -87,11 +87,11 @@ SPA として、このレイアウトテンプレートページは単に ng-vie
  <div ng-view ng-class="transition"></div>
 ```
 
-angularルートサービスは、この要素を使用して、現在のページ（template.jsp に含まれる）のオーサリング可能なコンテンツを含む、アプリ内の各ページのコンテンツを表示します。
+The Angular route service uses this element to display the contents of every page in the app, including the authorable contents of the current page (contained in template.jsp).
 
 body.jsp ファイルには、header.jsp および footer.jsp が空の状態でインクルードされています。どのページにも静的コンテンツを提供する場合には、アプリでこれらのスクリプトをオーバーライドできます。
 
-最後に、JavaScript クライアントライブラリが &lt;body> 要素には、サーバー上で生成される 2 つの特別な JS ファイルが含まれます。 *&lt;page name=&quot;&quot;>*.angular-app-module.js および *&lt;page name=&quot;&quot;>*.angular — アプリ — コントローラ.js.
+Finally, javascript clientlibs are included at the bottom of the &lt;body> element including two special JS files that are generated on the server: *&lt;page name>*.angular-app-module.js and *&lt;page name>*.angular-app-controllers.js.
 
 ### angular-app-module.js.jsp {#angular-app-module-js-jsp}
 
@@ -105,7 +105,7 @@ ng-app="<c:out value='${applicationName}'/>"
 
 また、`AppController` 変数をスコープに公開するトップレベルのコントローラーを `wcmMode` という名前で定義し、コンテンツ同期更新ペイロードを取得する URI を設定します。
 
-最後に、このモジュールは、Angularの\$routeProvider への設定エントリとして含め、各ページのルートフラグメントの内容を (angular-route-fragment.js セレクターおよび拡張を介して ) 繰り返し処理し、レンダリングします。 つまり、\$routeProvider は、特定のパスが要求されたときにレンダリングするコンテンツをアプリに伝えます。
+最後に、このモジュールは、Angularの\$routeProvider への設定エントリとして含め、各ページのルートフラグメントの内容を (angular-route-fragment.js セレクターおよび拡張を介して ) 繰り返し処理し、レンダリングします。 In other words, the \$routeProvider tells the app which content to render when a given path is requested.
 
 ### angular-route-fragment.js.jsp {#angular-route-fragment-js-jsp}
 
@@ -154,7 +154,7 @@ controller.js.jsp スクリプトは、ページごとにコントローラー�
 
 ### template.jsp {#template-jsp}
 
-最初に body.jsp の節で導入された、template.jsp には、ページの parsys が含まれています。 公開モードでは、このコンテンツは直接参照されます ( &lt;page-path>.template.html) を読み込み、\$routeProvider に設定された templateUrl を介してSPAに読み込まれます。
+最初に body.jsp の節で導入された、template.jsp には、ページの parsys が含まれています。 In publish mode, this content is referenced directly (at &lt;page-path>.template.html) and loaded into the SPA via the templateUrl configured on the \$routeProvider.
 
 このスクリプトの parsys は、任意のタイプのコンポーネントを受け入れるように設定できます。ただし、（SPA ではなく）従来の Web サイト向けにビルドされたコンポーネントを扱うときには注意が必要です。例えば、基盤画像コンポーネントは、アプリ内部にあるアセットを参照するように設計されていないため、トップレベルアプリページでのみ正しく機能します。
 
@@ -306,7 +306,7 @@ www/
 
 ### .cordova {#cordova}
 
-これは、現在の OS 設定によっては表示されない隠しディレクトリです。このディレクトリが含まれるアプリフックを変更する予定がある場合に、このディレクトリが表示されるように OS を設定する必要があります。
+これは、現在の OS 設定によっては表示されない隠しディレクトリです。You should configure your OS so that this directory is visible if you plan on modifying the app hooks that it contains.
 
 #### .cordova/hooks/ {#cordova-hooks}
 
@@ -322,7 +322,7 @@ after-prepare ディレクトリには、 `copy_resource_files.js` ファイル�
 
 #### .cordova/hooks/before_platform_add/ {#cordova-hooks-before-platform-add}
 
-before_platform_add ディレクトリには、 `install_plugins.js` ファイル。 このスクリプトは、Cordova プラグイン識別子のリストを繰り返し処理して、まだ使用可能でないことが検出されたプラグインをインストールします。
+The before_platform_add directory contains the `install_plugins.js` file. このスクリプトは、Cordova プラグイン識別子のリストを繰り返し処理して、まだ使用可能でないことが検出されたプラグインをインストールします。
 
 この方法では、Maven を呼び出すたびに、プラグインをバンドルしてAEMにインストールする必要はありません `content-package:install` コマンドが実行されます。 別の方法で SCM システムにファイルをチェックインする場合には、バンドルとインストールの作業が繰り返し発生します。
 

@@ -12,7 +12,7 @@ exl-id: de97e6f7-25bf-462b-b67d-0d3fbd86a321
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '263'
-ht-degree: 61%
+ht-degree: 91%
 
 ---
 
@@ -28,9 +28,9 @@ ht-degree: 61%
 タスクの詳細ページをカスタマイズするには：
 
 1. [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)に従います。
-1. 追加情報を表示するには、対応するキーと値のペアを `translation.json` ～にファイルを送る `todo`ブロック > `details`ブロック > `app`ブロック > [ `required`ブロック].
+1. 追加の情報を表示するには、対応するキーと値のペアを`todo`ブロック／`details`ブロック／`app`ブロック／[ `required` ブロック] にある `translation.json` ファイルに追加してください。
 
-   この [ `required`ブロック] は、タスク情報のタスクブロック、プロセス情報のプロセスブロック、保留中のタスク情報の現在の保留中のタスクブロックなど、使用可能なブロックを指します。
+   [ `required`ブロック]は、タスク情報の task ブロック、プロセス情報の process ブロック、および保留中のタスク情報の currentpendingtask ブロックなど、使用可能なブロックを指します。
 
    たとえば、タスクの詳細ページに必要なルート選択に関する情報を追加するには、以下のキーと値のペアを task ブロックに追加することができます。
 
@@ -57,7 +57,7 @@ ht-degree: 61%
 
 1. `/libs/ws/js/runtime/templates/taskdetails.html` を `/apps/ws/js/runtime/templates/taskdetails.html` にコピーします。
 
-   新しい情報の追加先 `/apps/ws/js/runtime/templates/taskdetails.html`. 次に例を示します。
+   新しい情報を `/apps/ws/js/runtime/templates/taskdetails.html` に追加します。次は例です。
 
    ```css
    <div class="detailsContainer">
@@ -80,10 +80,10 @@ ht-degree: 61%
 
 1. /apps/ws/js/registry.js を開いて編集します。
 
-   検索と置換 `text!/lc/libs/ws/js/runtime/templates/taskdetails.html` と `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`.
+   `text!/lc/libs/ws/js/runtime/templates/taskdetails.html` を検索して `text!/lc/apps/ws/js/runtime/templates/taskdetails.html` で置き換えます。
 
 >[!NOTE]
 >
 >AEM Forms Workspace の「**開始プロセス**」タブで作成したタスクでタスクの詳細ページをカスタマイズするには、新しい情報をに追加します。 `/apps/ws/js/runtime/templates/startprocess.html`.
 >
->詳細ページに追加された情報に新しいスタイルを追加するには、 *ユーザーインターフェイスの変更* セクション [Workspace のカスタマイズ](/help/forms/using/changing-locale-user-interface.md).
+>詳細ページで追加した情報に新しいスタイルを追加するには、[ワークスペースのカスタマイズ](/help/forms/using/changing-locale-user-interface.md)にある&#x200B;*ユーザーインターフェイスの変更*&#x200B;セクションを使用して CSS ファイルを変更してください。

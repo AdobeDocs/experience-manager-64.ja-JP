@@ -8,7 +8,7 @@ exl-id: e2ab924b-53cb-4011-8c0a-9e8e59dd2f16
 source-git-commit: d750c852b6367d753d18be57c8910bf5671fd5e8
 workflow-type: tm+mt
 source-wordcount: '625'
-ht-degree: 14%
+ht-degree: 19%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Manager Assets は、コンテンツベロシティを通じて
 * [Assets サイズ設定ガイド](assets-sizing-guide.md)
 Assets 実装の予測を描く場合は、アセットのストレージ、CPU、メモリ、IO、ネットワークスループットに関して十分なリソースが確保されていることを確認することが重要です。 これらのアイテムのサイジングには、システムに読み込まれたアセットの数を理解しておく必要があります。このガイドには、導入に必要なインフラストラクチャとリソースの見積もりに効率的な指標を決定するのに役立つベストプラクティスが含まれています [!DNL Experience Manager] アセットとサイズ調整ツール。
 * [アセット移行ガイド](assets-migration-guide.md)
-既存のシステムからにアセットを移行する場合 [!DNL Experience Manager] Assets では、移行プロセスを合理化するためにいくつかの手順を検討する必要があります。 移行ガイドには、アセットをに取り込むために実行するタスクに関するベストプラクティスが含まれています [!DNL Experience Manager] 段階的に これには、メタデータの適用、レンディションの生成、公開へのアセットのアクティベートが含まれます。
+既存のシステムからにアセットを移行する場合 [!DNL Experience Manager] Assets では、移行プロセスを合理化するためにいくつかの手順を検討する必要があります。 この移行ガイドには、アセットを [!DNL Experience Manager] に段階的に移行するタスクのベストプラクティスが記載されています。これには、メタデータの適用、レンディションの生成、公開へのアセットのアクティベートが含まれます。
 * [Assets のネットワークに関する考慮事項](assets-network-considerations.md)
 処理時 [!DNL Experience Manager] デプロイメント、ネットワークトポロジの理解は、ネットワークのパフォーマンスを理解し、渋滞地点を特定し、期待されるユーザーエクスペリエンスを説明するうえで重要です。 Assets ネットワークに関する考慮事項ドキュメントでは、 [!DNL Experience Manager] アセットのデプロイメント。
 * [Assets 監視ガイド](assets-monitoring-best-practices.md)
@@ -33,7 +33,7 @@ Assets 実装の予測を描く場合は、アセットのストレージ、CPU�
 * （廃止） [Assets オフロードガイド](assets-offloading-best-practices.md)
 での大きなファイルの処理と実行中のワークフローの処理 [!DNL Experience Manager] アセットは、CPU、メモリ、I/O リソースを大量に消費する可能性があります。 これらのタスクをオフロードすると、CPU、メモリ、および IO のオーバーヘッドを削減できます。 Assets オフロードガイドには、Assets オフロードの推奨される使用例およびベストプラクティスが記載されています。
 * [[!DNL Experience Manager] デスクトップアプリケーションのベストプラクティス](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app-best-practices.html)
-   [!DNL Experience Manager] デスクトップアプリケーションは、デジタルアセット管理 (DAM) ソリューションとデスクトップをつなぎ、 [!DNL Experience Manager] Web UI をデスクトップに直接配置できます。 [!DNL Experience Manager]デスクトップアプリケーションの使いやすいワークフローは、デスクトップのオペレーティングシステムから提供されるネットワーク共有テクノロジにより有効化されます。このガイドでは、の主な機能と推奨される使用方法を説明します [!DNL Experience Manager] デスクトップアプリケーション。
+   [!DNL Experience Manager] デスクトップアプリケーションは、デジタルアセット管理 (DAM) ソリューションとデスクトップをつなぎ、 [!DNL Experience Manager] Web UI をデスクトップに直接配置できます。 [!DNL Experience Manager]デスクトップアプリケーションの使いやすいワークフローは、デスクトップのオペレーティングシステムから提供されるネットワーク共有テクノロジにより有効化されます。このガイドには、[!DNL Experience Manager] デスクトップアプリケーションの主要な機能と推奨される使用例が記載されています。
 * [[!DNL Experience Manager] とCreative Cloud統合のベストプラクティス](aem-cc-integration-best-practices.md)
 以下を [!DNL Experience Manager] Creative Cloudを使用したデプロイメントを複数の方法で実行できます。 ベストプラクティスに従って統合ワークフローおよびアセット転送ワークフローを効率化すると、効率を最大化することができます。このガイドには、の統合に関するベストプラクティスが含まれています [!DNL Experience Manager] Adobe Creative Cloudの Assets
 * （廃止） [[!DNL Experience Manager] Creative Cloudフォルダー共有のベストプラクティス](aem-cc-folder-sharing-best-practices.md)

@@ -1,5 +1,5 @@
 ---
-title: 資格情報サービス Java API QuickStart(SOAP)
+title: Credential サービス Java API QuickStart（SOAP）
 seo-title: Credential Service Java API QuickStart(SOAP)
 description: 資格情報サービス Java API を使用して、資格情報を読み込んだり、削除したりします。
 seo-description: Use the Credential Service Java API to import and delete credentials.
@@ -14,31 +14,31 @@ exl-id: a81b2360-9d17-46c7-9443-51b366b0724a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '224'
-ht-degree: 0%
+ht-degree: 95%
 
 ---
 
-# 資格情報サービス Java API クイックスタート (SOAP) {#credential-service-java-api-quickstart-soap}
+# Credential サービス Java API クイックスタート（SOAP） {#credential-service-java-api-quickstart-soap}
 
-Credential サービスで Java API Quick Start(SOAP) を使用できます。
+Credential サービスで Java API Quick Start（SOAP）を使用できます。
 
-[クイックスタート（SOAP モード）:Java API を使用した資格情報の読み込み](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した資格情報のインポート](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
 
-[クイックスタート（SOAP モード）:Java API を使用した資格情報の削除](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した資格情報の削除](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「 AEM forms によるプログラミング」のクイックスタートは、JBoss および Windows オペレーティングシステムにデプロイされる FormsServer に基づいています。 ただし、Unix などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります。 詳しくは、 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「 AEM Forms によるプログラミング」のクイックスタートは、JBoss および Windows オペレーティングシステムにデプロイされる Forms Server に基づいています。ただし、Unix などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 >[!NOTE]
 >
 >Web サービスを使用して Credential サービスの操作を実行することはできません。
 
-## クイックスタート（SOAP モード）:Java API を使用した資格情報の読み込み {#quick-start-soap-mode-importing-credentials-using-the-java-api}
+## クイックスタート（SOAP モード）：Java API を使用した資格情報のインポート {#quick-start-soap-mode-importing-credentials-using-the-java-api}
 
-次のコードの例では、という名前のファイルに基づいて秘密鍵証明書を読み込みます *cred.p12*. 秘密鍵証明書の読み込みに使用するエイリアスの値は、 `Secure`. ( [Trust Manager API を使用した資格情報の読み込み](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api).)
+次のコードの例では、*cred.p12* という名前のファイルに基づいて資格情報をインポートします。資格情報のインポートに使用するエイリアスの値は `Secure` です。（[Trust Manager API を使用した資格情報のインポート](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api)を参照。）
 
 ```as3
  /* 
@@ -137,9 +137,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定された API を使用し
  
 ```
 
-## クイックスタート（SOAP モード）:Java API を使用した資格情報の削除 {#quick-start-soap-mode-deleting-credentials-using-the-java-api}
+## クイックスタート（SOAP モード）：Java API を使用した資格情報の削除 {#quick-start-soap-mode-deleting-credentials-using-the-java-api}
 
-次のコードの例では、エイリアス値に基づいて秘密鍵証明書を削除します *secure*. ( [Trust Manager API を使用した資格情報の削除](/help/forms/developing/credentials.md#deleting-credentials-by-using-the-trust-manager-api).)
+次のコードの例では、エイリアス値 *secure* に基づいて資格情報を削除します。（[Trust Manager API を使用した資格情報の削除](/help/forms/developing/credentials.md#deleting-credentials-by-using-the-trust-manager-api)を参照。）
 
 ```as3
  /* 

@@ -320,7 +320,7 @@ SolrCloud モードまたはスタンドアロンモードのどちらかのイ�
 
    * Install.sh -v 5 -d /tmp/solr-5.4.0 -c /tmp/solr-5.4.0/server/solr/collection1
 
-**注意**：
+**メモ**：
 
 * インストールスクリプトは、新しいバージョンをインストールする前に、&quot;.orig&quot;を追加して schema.xml と solrconfig.xml をバックアップします。
 

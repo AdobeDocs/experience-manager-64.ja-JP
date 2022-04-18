@@ -8,7 +8,7 @@ exl-id: 0abdfe87-d932-41dd-b1e6-9f5fa5b924fe
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '628'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
@@ -66,7 +66,7 @@ ht-degree: 18%
 
 1. 内 [!DNL Experience Manager] インターフェイスクリック **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL Web コンソール]**.
 1. を開きます。 **[!UICONTROL Adobe CQ DAM 非同期ジョブの削除がスケジュールされました]** タスク。
-1. 完了したタスクを削除するまでの日数のしきい値と、詳細を履歴に保持するタスクの最大数を指定します。 変更内容を保存します。
+1. 完了したタスクを削除するまでの日数のしきい値と、詳細を履歴に保持するタスクの最大数を指定します。 変更を保存します。
 
    ![非同期タスクのパージをスケジュールするための設定](assets/purge_job.png)
 
@@ -76,7 +76,7 @@ ht-degree: 18%
 
 1. 内 [!DNL Experience Manager] インターフェイスクリック **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL Web コンソール]**.
 1. 次の [!UICONTROL Web コンソール]、 **[!UICONTROL 非同期削除操作ジョブの処理]** 設定。
-1. 内 **[!UICONTROL アセット数のしきい値]** ボックスに、アセット、フォルダーまたは参照を非同期的に削除するしきい値を指定します。 変更内容を保存します。
+1. 内 **[!UICONTROL アセット数のしきい値]** ボックスに、アセット、フォルダーまたは参照を非同期的に削除するしきい値を指定します。 変更を保存します。
 
    ![アセットを削除するタスクのしきい値の制限を設定](assets/delete_threshold.png)
 
@@ -86,12 +86,12 @@ ht-degree: 18%
 
 1. 内 [!DNL Experience Manager] インタフェース、 **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL Web コンソール]**.
 1. 次の [!UICONTROL Web コンソール]、 **[!UICONTROL 非同期移動操作ジョブ処理]** 設定。
-1. 内 **[!UICONTROL アセット/参照のしきい値数]** ボックスに、アセット、フォルダーまたは参照を非同期的に移動する際のしきい値を指定します。 変更内容を保存します。
+1. 内 **[!UICONTROL アセット/参照のしきい値数]** ボックスに、アセット、フォルダーまたは参照を非同期的に移動する際のしきい値を指定します。 変更を保存します。
 
    ![アセットを移動するタスクのしきい値の制限を設定](assets/move_threshold.png)
 
 >[!MORELIKETHIS]
 >
->* [メールのExperience Manager](/help/sites-administering/notification.md).
+>* [Experience Manager で電子メールを設定します](/help/sites-administering/notification.md)。
 >* [アセットメタデータの一括読み込みおよび書き出し](/help/assets/metadata-import-export.md)
 

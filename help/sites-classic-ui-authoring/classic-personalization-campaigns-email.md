@@ -1,5 +1,5 @@
 ---
-title: 電子メールマーケティング
+title: '電子メールマーケティング '
 seo-title: E-mail Marketing
 description: 電子メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成できるだけでなく、ニュースレターに固有の新しいコンテンツを追加できます。
 seo-description: E-mail marketing (for example, newsletters) are an important part of any marketing campaign as you use them to push content to your leads. In AEM, you can create newsletters from existing AEM content as well as add new content, specific to the newsletters.
@@ -13,16 +13,16 @@ exl-id: 5e97f7bd-d668-423d-9f65-7dcc8fb1943a
 source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
 source-wordcount: '1726'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
-# 電子メールマーケティング{#e-mail-marketing}
+# 電子メールマーケティング {#e-mail-marketing}
 
 >[!NOTE]
 >
 >Adobeは、AEM SMTP サービスから送信されるオープン/バウンス済みの E メールをさらに強化する予定はありません。\
->お勧めは、 [Adobe CampaignとAEMの統合を活用](/help/sites-administering/campaign.md).
+>[Adobe Campaign や、Adobe Campaign と AEM の統合環境を活用](/help/sites-administering/campaign.md)することをお勧めします。
 
 電子メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成できるだけでなく、ニュースレターに固有の新しいコンテンツを追加できます。
 
@@ -36,10 +36,10 @@ ht-degree: 94%
 
 このドキュメントでは、AEM でのニュースレターの作成の基本について説明します。電子メールマーケティングの使用方法について詳しくは、以下のドキュメントを参照してください。
 
-* [効果的なニュースレターのランディングページの作成](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-landingpage.md)
-* [購読の管理](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-subscriptions.md)
-* [電子メールサービスプロバイダーへの電子メールの公開](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-newsletters.md)
-* [バウンス（配信不能）電子メールの追跡](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-tracking-bounces.md)
+* [効果的なニュースレターのランディングページの作成 ](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-landingpage.md)
+* [購読の管理 ](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-subscriptions.md)
+* [メールサービスプロバイダーへのメールの公開](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-newsletters.md)
+* [バウンスメールの追跡](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-tracking-bounces.md)
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ ht-degree: 94%
 
 1. すぐに新しいダイアログが開きます。ここで、ニュースレターのプロパティを入力できます。
 
-   「**デフォルトの受信者リスト**」は、このニュースレターのタッチポイントを構成するので、必須フィールドです（リストについて詳しくは、[リストの使用](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)を参照してください）。
+   「**デフォルトの受信者リスト**」は、ニュースレターのタッチポイントを構成するので、必須のフィールドです（リストについて詳しくは、[リストの使用](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)を参照してください）。
 
    ![mcm_newnewnewsletterdialog](assets/mcm_newnewsletterdialog.png)
 
@@ -141,13 +141,13 @@ ht-degree: 94%
 
    ![mc_newsletter_testvariables](assets/mc_newsletter_testvariables.png)
 
-## 他の電子メールクライアントでのニュースレターのテスト {#testing-newsletters-in-different-e-mail-clients}
+## 様々なメールクライアントでのニュースレターのテスト {#testing-newsletters-in-different-e-mail-clients}
 
 >[!NOTE]
 >
->ニュースレターを送信する前に、 Day CQ Link Externalizer の OSGi 設定を次の場所で確認します。 `http://localhost:4502/system/console/configMgr`.
+>ニュースレターを送信する前に、`http://localhost:4502/system/console/configMgr` で Day CQ Link Externalizer の OSGi 設定を確認してください。
 >
->デフォルトでは、このパラメーターの値は `localhost:4502` となります。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
+>デフォルトでは、このパラメーターの値は `localhost:4502` です。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
 
 共通の電子メールクライアントを切り替えて、リードに対してニュースレターがどのように表示されるかを確認します。デフォルトでは、ニュースレターは電子メールクライアントが選択されていない状態で開きます。
 
@@ -168,7 +168,7 @@ ht-degree: 94%
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. その他の電子メールクライアントについて確認するには、この手順を繰り返します。
+1. 確認するその他のメールクライアントについて、この手順を繰り返します。
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
@@ -226,9 +226,9 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->ニュースレターを送信する前に、 Day CQ Link Externalizer の OSGi 設定を次の場所で確認します。 `http://localhost:4502/system/console/configMgr`.
+>ニュースレターを送信する前に、`http://localhost:4502/system/console/configMgr` で Day CQ Link Externalizer の OSGi 設定を確認してください。
 >
->デフォルトでは、このパラメーターの値は `localhost:4502` となります。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
+>デフォルトでは、このパラメーターの値は `localhost:4502` です。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
 
 >[!NOTE]
 >
@@ -242,9 +242,9 @@ ht-degree: 94%
 
    >[!NOTE]
    >
-   >送信する前に、[設定をカスタマイズ](#customizing-newsletter-settings)して、ニュースレターの件名と発信元の電子メールアドレスをカスタマイズしてあることを確認します。
+   >送信する前に、ニュースレターの件名と発信元のメールアドレスが、[設定のカスタマイズ](#customizing-newsletter-settings)を使用してカスタマイズされていることを確認します。
    >
-   >送信する前に、ニュースレターの[フライトテスト](#flight-testing-newsletters)をおこなうことをお勧めします。
+   >送信する前に、ニュースレターの[フライトテスト](#flight-testing-newsletters)を行うことをお勧めします。
 
 1. ニュースレターの上部にある「**送信**」をクリックします。ニュースレターの送信ウィザードが開きます。
 
@@ -268,7 +268,7 @@ ht-degree: 94%
 
    >[!NOTE]
    >
-   >送信する前に、[設定をカスタマイズ](#customizing-newsletter-settings)して、ニュースレターの件名と発信元の電子メールアドレスをカスタマイズしてあることを確認します。リストから送信する場合、ニュースレターはテストできません。ニュースレターから送信する場合は、[フライトテスト](#flight-testing-newsletters)を実行できます。
+   >送信する前に、ニュースレターの件名と発信元のメールアドレスが、[設定のカスタマイズ](#customizing-newsletter-settings)を使用してカスタマイズされていることを確認します。リストから送信する場合、ニュースレターはテストできません。ニュースレターから送信する場合は、[フライトテスト](#flight-testing-newsletters)を実行できます。
 
 1. ニュースレターの送信先であるリードリストの横にあるチェックボックスをオンにします。
 

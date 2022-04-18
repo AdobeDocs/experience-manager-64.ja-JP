@@ -13,7 +13,7 @@ exl-id: 20197226-09d5-4ac6-b4cb-0793576a56cf
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '149'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -25,4 +25,4 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Scaffolding がありますが、 [mode](/help/sites-authoring/author-environment-tools.md#page-modes) 利用可能な場合、基礎のメンテナンスと作成、および基礎からの新しいページの作成は、クラシック UI で行います。 詳しくは、クラシック UI オーサリングドキュメントの「[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)」を参照してください。
+>基礎[モード](/help/sites-authoring/author-environment-tools.md#page-modes)を使用できますが、基礎のメンテナンスおよび作成は、基礎からの新しいページの作成と同様に、クラシック UI で行ないます。詳しくは、クラシック UI オーサリングドキュメントの[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)を参照してください。

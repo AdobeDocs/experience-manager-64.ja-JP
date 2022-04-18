@@ -20,7 +20,7 @@ ht-degree: 100%
 
 # PDF の書き出しの変換設定の変更 {#modifying-the-pdf-export-conversion-settings}
 
-以下の手順で、PDF、EPS、DOC、TXT、RTF、XML、HTML の各ファイルの書き出しに使用される変換設定を変更します。デフォルトでは、PDF ファイルでは、Adobe AcrobatProfessional または AcrobatStandard で設定されたデフォルトの「名前を付けて保存」の設定が使用されます。例えば、PDF ファイルを EPS に変換するための Acrobat のデフォルトの「名前を付けて保存」の設定によって、PDF ファイルの 1 ページだけが EPS に変換されます。
+以下の手順で、PDF、EPS、DOC、TXT、RTF、XML、HTML の各ファイルの書き出しに使用される変換設定を変更します。デフォルトでは、PDF ファイルでは、Adobe Acrobat Professional または Acrobat Standard で設定されたデフォルトの「名前を付けて保存」の設定が使用されます。例えば、PDF ファイルを EPS に変換するための Acrobat のデフォルトの「名前を付けて保存」の設定によって、PDF ファイルの 1 ページだけが EPS に変換されます。
 
 >[!NOTE]
 >

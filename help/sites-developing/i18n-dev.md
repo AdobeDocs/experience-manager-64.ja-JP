@@ -13,7 +13,7 @@ exl-id: f3f931db-7085-4fb1-8723-db3f18febaaf
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1100'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ Java および JavaScript API を使用することにより、以下のタイ�
 
 ## Java および JSP コードでの文字列の国際化 {#internationalizing-strings-in-java-and-jsp-code}
 
-この `com.day.cq.i18n` Java パッケージを使用すると、ローカライズされた文字列を UI に表示できます。 この `I18n` クラスは `get` AEM辞書からローカライズされた文字列を取得するメソッド。 `get` メソッドの必須パラメーターは、英語の文字列リテラルのみです。英語は UI のデフォルトの言語です。次に、`Search` という単語をローカライズする例を示します。
+`com.day.cq.i18n` Java パッケージを使用すると、ローカライズされた文字列を UI で表示できます。`I18n` クラスには、AEM の辞書からローカライズされた文字列を取得する `get` メソッドが用意されています。`get` メソッドの必須パラメーターは、英語の文字列リテラルのみです。英語は UI のデフォルトの言語です。次に、`Search` という単語をローカライズする例を示します。
 
 `i18n.get("Search");`
 
@@ -70,7 +70,7 @@ I18n i18n = new I18n(resourceBundle);
 
 #### 文字列の国際化 {#internationalizing-a-string}
 
-以下を使用： `get` メソッド `I18n` 文字列を国際化するオブジェクト。 `get` メソッドの必須パラメーターは、国際化する文字列のみです。文字列は、トランスレーターの辞書の文字列と対応します。get メソッドは、辞書内の文字列を調べ、現在使用されている言語の翻訳を返します。
+`I18n` オブジェクトの `get` メソッドを使用して、文字列を国際化します。`get` メソッドの必須パラメーターは、国際化する文字列のみです。文字列は、トランスレーターの辞書の文字列と対応します。get メソッドは、辞書内の文字列を調べ、現在使用されている言語の翻訳を返します。
 
 `get` メソッドの最初の引数は、次の規則に従ったものである必要があります。
 
@@ -84,7 +84,7 @@ i18n.get("Enter a search keyword");
 
 #### 翻訳のヒントの使用 {#using-translation-hints}
 
-辞書内で重複する文字列を識別できるようにするために、国際化される文字列の[翻訳のヒント](/help/sites-developing/i18n-translator.md#adding-changing-and-removing-strings)を指定します。2 つ目のオプションパラメーター ( `get` 翻訳のヒントを提供する方法。 翻訳のヒントは、辞書の項目のコメントプロパティと正確に一致させる必要があります。
+辞書内で重複する文字列を識別できるようにするために、国際化される文字列の[翻訳のヒント](/help/sites-developing/i18n-translator.md#adding-changing-and-removing-strings)を指定します。翻訳のヒントを指定するには、`get` メソッドの 2 つ目のオプションパラメーターを使用します。翻訳のヒントは、辞書の項目のコメントプロパティと正確に一致させる必要があります。
 
 例えば、文字列 `Request` が動詞と名詞としてそれぞれ 1 回ずつ、計 2 回辞書に記載されているとします。次のコードでは、`get` メソッドの引数として翻訳のヒントが記述されています。
 
@@ -94,9 +94,9 @@ i18n.get("Request","A noun, as in a request for a web page");
 
 #### ローカライズされるセンテンスへの変数の追加 {#including-variables-in-localized-sentences}
 
-ローカライズされる文字列に変数を追加し、センテンスに文脈に応じた意味を持たせます。例えば、Web アプリケーションにログインした後、ホームページに「Welcome back Administrator.  You have 2 messages in your inbox.」ページのコンテキストに応じて、ユーザー名とメッセージ数が決定されます。
+ローカライズされる文字列に変数を追加し、センテンスに文脈に応じた意味を持たせます。例えば、Web アプリケーションにログインした後、ホームページに「Welcome back Administrator. You have 2 messages in your inbox.」ページのコンテキストに応じて、ユーザー名とメッセージ数が決定されます。
 
-[辞書内では](/help/sites-developing/i18n-translator.md#adding-changing-and-removing-strings)、変数は括弧で囲まれたインデックスとして文字列に表示されます。変数の値を `get` メソッド。 引数は翻訳のヒントの次に置かれ、インデックスは引数の順番と一致します。
+[辞書内では](/help/sites-developing/i18n-translator.md#adding-changing-and-removing-strings)、変数は括弧で囲まれたインデックスとして文字列に表示されます。変数の値は `get` メソッドの引数として指定します。引数は翻訳のヒントの次に置かれ、インデックスは引数の順番と一致します。
 
 ```xml
 i18n.get("Welcome back {0}. You have {1} messages.", "user name, number of messages", user.getDisplayName(), numItems); 
@@ -117,17 +117,17 @@ i18n.get("Welcome back {0}. You have {1} messages.", "user name, number of messa
 
 ### Javascript コードでの文字列の国際化 {#internationalizing-strings-in-javascript-code}
 
-Javascript API を利用して、クライアント側の文字列をローカライズできます。例： [Java と JSP](#internationalizing-strings-in-java-and-jsp-code) コードを使用すると、JavaScript API を使用して、ローカライズする文字列を識別し、ローカリゼーションのヒントを提供し、ローカライズする文字列に変数を含めることができます。
+Javascript API を利用して、クライアント側の文字列をローカライズできます。[Java および JSP](#internationalizing-strings-in-java-and-jsp-code) コードと同様に、Javascript API を利用することで、ローカライズ対象の文字列を識別したり、翻訳のヒントを指定したり、ローカライズする文字列に変数を追加したりできます。
 
-`granite.utils`[ クライアントライブラリフォルダー](/help/sites-developing/clientlibs.md)には、Javascript API が用意されています。この API を使用するには、ページにこのクライアントライブラリフォルダーを含めます。ローカリゼーション関数では、 `Granite.I18n` 名前空間。
+`granite.utils` [クライアントライブラリフォルダー](/help/sites-developing/clientlibs.md)には、Javascript API が用意されています。この API を使用するには、ページにこのクライアントライブラリフォルダーを含めます。ローカリゼーション関数は、`Granite.I18n` 名前空間を使用します。
 
-ローカライズされた文字列を表示する前に、 `Granite.I18n.setLocale` 関数に置き換えます。 この関数には、引数としてロケールの言語コードが必要です。
+ローカライズ対象の文字列を指定する前に、`Granite.I18n.setLocale` 関数を使用してロケールを設定する必要があります。この関数には、引数としてロケールの言語コードが必要です。
 
 ```
 Granite.I18n.setLocale("fr");
 ```
 
-ローカライズされた文字列を表示するには、 `Granite.I18n.get` 関数：
+ローカライズ対象の文字列を指定するには、`Granite.I18n.get` 関数を使用します。
 
 ```
 Granite.I18n.get("string to localize");
@@ -146,7 +146,7 @@ Granite.I18n.get("string to localize", [variables], "localization hint");
 * 2 つ目のパラメーターは、文字列リテラルに挿入する値の配列です。
 * 3 つ目のパラメーターは、翻訳のヒントです。
 
-次の例では、JavaScript を使用して「Welcome back Administrator.  You have 2 messages in your inbox.」という文をローカライズします。
+次の例では、JavaScript を使用して「Welcome back Administrator. You have 2 messages in your inbox.」という文をローカライズします。
 
 ```
 Granite.I18n.setLocale("fr");
@@ -155,7 +155,7 @@ Granite.I18n.get("Welcome back {0}. You have {1} new messages in your inbox.", [
 
 ### JCR ノードの文字列の国際化 {#internationalizing-strings-from-jcr-nodes}
 
-UI 文字列は、ほとんどの場合、JCR ノードのプロパティに基づいています。例えば、ページの `jcr:title` プロパティは通常、ページコードの `h1` 要素のコンテンツとして使用されます。この `I18n` クラスは `getVar` これらの文字列をローカライズする方法です。
+UI 文字列は、ほとんどの場合、JCR ノードのプロパティに基づいています。例えば、ページの `jcr:title` プロパティは通常、ページコードの `h1` 要素のコンテンツとして使用されます。`I18n` クラスには、こうした文字列をローカライズするための `getVar` メソッドが用意されています。
 
 次の例の JSP スクリプトは、リポジトリから `jcr:title` プロパティを取得し、ページにローカライズされた文字列を表示します。
 
@@ -166,7 +166,7 @@ UI 文字列は、ほとんどの場合、JCR ノードのプロパティに基�
 
 #### JCR ノードの翻訳のヒントの指定 {#specifying-translation-hints-for-jcr-nodes}
 
-[Java API の翻訳のヒント](#using-translation-hints)と同様に、辞書内の重複する文字列を識別できるようにするために翻訳のヒントを指定できます。この翻訳のヒントは、国際化されるプロパティを含むノードのプロパティとして指定します。hint プロパティの名前は、国際化されたプロパティ名の名前と `_commentI18n` サフィックス：
+[Java API の翻訳のヒント](#using-translation-hints)と同様に、辞書内の重複する文字列を識別できるようにするために翻訳のヒントを指定できます。この翻訳のヒントは、国際化されるプロパティを含むノードのプロパティとして指定します。ヒントプロパティの名前は、国際化されたプロパティの名前と `_commentI18n` サフィックスで構成されます。
 
 `${prop}_commentI18n`
 

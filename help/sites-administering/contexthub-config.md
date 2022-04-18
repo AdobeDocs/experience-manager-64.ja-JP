@@ -13,7 +13,7 @@ exl-id: 6ba1e011-e18d-4e2a-a47c-85a4962cc83c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1842'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ ContextHub は、AEM のインストールで、デフォルトで有効にな�
 
 >[!NOTE]
 >
->[AEM 6.4 でのリポジトリの再構築に伴う](/help/sites-deploying/repository-restructuring.md) 次の場所から変更された ContextHub 設定の場所： `/etc/cloudsettings` 移動先：
+>[AEM 6.4 でのリポジトリの再構築に伴い](/help/sites-deploying/repository-restructuring.md)、ContextHub 構成の場所が `/etc/cloudsettings` から次のように変更されました。
 >
 > * `/libs/settings/cloudsettings`
 > * `/conf/global/settings/cloudsettings`
@@ -51,7 +51,7 @@ ContextHub は、AEM のインストールで、デフォルトで有効にな�
 
 Adobe Granite ContextHub OSGi サービスを設定して、ページで [ContextHub UI](/help/sites-authoring/ch-previewing.md) を表示または非表示にします。このサービスの PID は、`com.adobe.granite.contexthub.impl.ContextHubImpl.` です。
 
-サービスを設定するには、 [Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) または [リポジトリ内の JCR ノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository):
+このサービスは、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリ内の JCR ノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を使用して設定できます。
 
 * **Web コンソール：** UI を表示するには、Show UI プロパティを選択します。UI を非表示にするには、Hide UI プロパティを消去します。
 * **JCR ノード：** UI を表示するには、`com.adobe.granite.contexthub.show_ui` ブール値プロパティを `true` に設定します。UI を非表示にするには、プロパティを `false` に設定します。
@@ -103,7 +103,7 @@ UI モジュールのプロパティには、モジュール固有のプロパ�
 | [contexthub.base](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) | 汎用の UI モジュールタイプ | UI モジュールのプロパティで設定されます |
 | [contexthub.browserinfo](/help/sites-developing/ch-samplemodules.md#contexthub-browserinfo-ui-module-type) | ブラウザーに関する情報が表示されます | surferinfo |
 | [contexthub.datetime](/help/sites-developing/ch-samplemodules.md#contexthub-datetime-ui-module-type) | 日付と時間の情報が表示されます | datetime |
-| [contexthub.device](/help/sites-developing/ch-samplemodules.md#contexthub-device-ui-module-type) | クライアントデバイスを表示する | emulators |
+| [contexthub.device](/help/sites-developing/ch-samplemodules.md#contexthub-device-ui-module-type) | クライアントデバイスが表示されます。 | emulators |
 | [contexthub.location](/help/sites-developing/ch-samplemodules.md#contexthub-location-ui-module-type) | クライアントの緯度と経度、およびマップ上の位置が表示されます。位置は変更できます。 | geolocation |
 | [contexthub.screen-orientation](/help/sites-developing/ch-samplemodules.md#contexthub-screen-orientation-ui-module-type) | デバイスの画面の向きが表示されます（横置きまたは縦置き） | emulators |
 | [contexthub.tagcloud](/help/sites-developing/ch-samplemodules.md#contexthub-tagcloud-ui-module-type) | ページのタグに関する統計が表示されます | tagcloud |
@@ -143,14 +143,14 @@ AEM には、ストアのベースにできる次のサンプルのストア候�
 | ストアの種類 | 説明 |
 |---|---|
 | [aem.segmentation](/help/sites-developing/ch-samplestores.md#aem-segmentation-sample-store-candidate) | 解決済みおよび未解決の ContextHub セグメントを格納します。ContextHub SegmentManager からセグメントを自動的に取得します |
-| [aem.resolvedsegments](/help/sites-developing/ch-samplestores.md#aem-resolvedsegments-sample-store-candidate) | 現在までに解決済みのセグメントを格納します。ContextHub SegmentManager サービスをリッスンして、ストアを自動的に更新します |
+| [aem.resolvedsegments](/help/sites-developing/ch-samplestores.md#aem-resolvedsegments-sample-store-candidate) | 現在までに解決済みのセグメントを格納します。ContextHub SegmentManager サービスをリッスンしてストアを自動的に更新します。 |
 | [contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) | ブラウザーの場所の緯度と経度を格納します。 |
-| [contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) | ブラウザーの場所の現在の日付、時刻、季節を格納します |
+| [contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) | ブラウザーの場所の日付、時間、季節を格納します。 |
 | [granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) | 多数のデバイスのプロパティと機能を定義し、現在のクライアントデバイスを検出します |
-| [contexthub.generic-jsonp](/help/sites-developing/ch-samplestores.md#contexthub-generic-jsonp-sample-store-candidate) | JSONP サービスからデータを取得して保存します |
+| [contexthub.generic-jsonp](/help/sites-developing/ch-samplestores.md#contexthub-generic-jsonp-sample-store-candidate) | JSONP サービスからデータを取得して格納します。 |
 | [granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) | 現在のユーザーのプロファイルデータを格納します |
 | [contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) | デバイス情報、ブラウザーの種類、画面の向きなど、クライアントに関する情報を格納します |
-| [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) | ページタグとタグ数を格納します |
+| [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) | ページのタグとタグの数を格納します。 |
 
 1. Experience Manager レールで、ツール／サイト／ContextHub をクリックまたはタップします。
 1. デフォルトの設定コンテナをクリックまたはタップします。
@@ -256,7 +256,7 @@ CRXDE Lite を使用して、`debug` プロパティを **true** に設定しま
 
 >[!NOTE]
 >
->ContextHub 設定が従来のパスの下に残っている場合は、 `debug property` が `/libs/settings/cloudsettings/legacy/contexthub`.
+>ContextHub 設定が従来のパスの下に残っている場合は、 `debug property` を設定する場所は `/libs/settings/cloudsettings/legacy/contexthub` になります。
 
 ### サイレントモード {#silent-mode}
 
@@ -273,18 +273,18 @@ CRXDE Lite を使用して、`debug` プロパティを **true** に設定しま
 
 [AEM へのアップグレード](/help/sites-deploying/upgrade.md)が実行されると、ContextHub の設定がバックアップされて安全な場所に格納されます。アップグレード中、デフォルトの ContextHub の設定がインストールされ、既存の設定が置換されます。加えられた変更や追加を保持するにはバックアップが必要です。
 
-ContextHub 設定は、 `contexthub` を次のノードの下に追加します。
+ContextHub 構成は、次のノードの下の `contexthub` という名前のフォルダーに保存されます。
 
 * `/conf/global/settings/cloudsettings`
 * `/conf/<tenant>/settings/cloudsettings`
 
-アップグレード後、バックアップは、 `contexthub` 以下のノードに、
+アップグレード後、バックアップは、次の名前のノードの下にある `contexthub` という名前のフォルダーに保存されます。
 
 `/conf/global/settings/cloudsettings/default-pre-upgrade_yyyymmdd_xxxxxxx` か `/conf/<tenant>/settings/cloudsettings/default-pre-upgrade_yyyymmdd_xxxxxxx` のどちらかにする必要があります。
 
-この `yyyymmdd` ノード名の一部は、アップグレードが実行された日付です。
+ノード名の `yyyymmdd` の部分は、アップグレードが実行された日付になります。
 
-ContextHub 設定を復元するには、CRXDE Liteを使用して、ストア、UI モード、UI モジュールを表すノードを、以下の場所からコピーします `default-pre-upgrade_yyyymmdd_xxxxxx` ノードを以下に追加します。
+ContextHub の設定を復元するには、CRXDE Lite を使用してストア、UI モード、UI モジュールを表すノードを `default-pre-upgrade_yyyymmdd_xxxxxx` ノードの下から次の下にコピーします。
 
 * `/conf/global/settings/cloudsettings` または
 * `/conf/<tenant>/settings/cloudsettings`

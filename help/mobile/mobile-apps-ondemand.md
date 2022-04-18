@@ -41,7 +41,7 @@ AEM 作成者は、AEM Mobile On-Demand Services を使用してアプリを作�
 
 **AEM Mobile On-demand Services アプリの AEM コンテンツのオーサリング**&#x200B;には、以下のアクションが含まれます。
 
-* [AEM Mobile アプリケーションダッシュボード](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
+* [AEM Mobile アプリケーションのダッシュボード](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
 * [アプリケーションの作成および設定アクション](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)
 * [クラウド設定](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
 * [コンテンツ管理](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
@@ -54,7 +54,6 @@ AEM 作成者は、AEM Mobile On-Demand Services を使用してアプリを作�
 >
 >* [テンプレート](/help/sites-developing/templates.md)
 >* [コンポーネント](/help/sites-developing/components.md)
-
 >
 
 

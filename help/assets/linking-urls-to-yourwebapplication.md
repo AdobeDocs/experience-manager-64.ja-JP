@@ -15,7 +15,7 @@ role: User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1272'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -181,7 +181,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
    | 使用しているビデオ配信プロトコル | 使用するプロトコルセレクター |
    |---|---|
-   | HTTP <br> HTTP（セキュアでないビデオ配信）を使用している場合は、前にコピーしたビデオサービス URL 値で https を http に変更してください。 | `public/` |
+   | HTTP<br> HTTP（セキュアでないビデオ配信）を使用している場合は、前にコピーしたビデオサービス URL 値の https を http に変更してください。 | `public/` |
    | HTTPS | `public-ssl/` |
 
 1. Dynamic Media で処理される AEM のビデオアセットのフルパスをコピーします。コピーしたビデオアセットのパスは後の手順で必要になります。

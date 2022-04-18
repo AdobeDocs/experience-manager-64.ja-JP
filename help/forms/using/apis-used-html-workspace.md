@@ -16,7 +16,7 @@ ht-degree: 100%
 
 ---
 
-# AEM Forms ワークスペースで使用する 各種 API {#apis-used-in-aem-forms-workspace}
+# AEM Forms ワークスペースで使用する各種 API {#apis-used-in-aem-forms-workspace}
 
 AEM Forms ワークスペースでは次の API が使用されています。
 
@@ -107,7 +107,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>TaskManager の送信 API を使用してタスクに関連付けられたフォームデータ（文字列として渡された）を送信します。TaskManager の送信 API を呼び出さないフレックスフォームに使用されます。</td> 
   </tr>
   <tr>
-   <td>保存</td> 
+   <td>save</td> 
    <td>ProcessManagementTaskService</td> 
    <td>保存</td> 
    <td>タスクをサーバーに保存します。</td> 
@@ -131,7 +131,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>タスクのすべての添付ファイルおよびメモを取得します。</td> 
   </tr>
   <tr>
-   <td>共有</td> 
+   <td>share</td> 
    <td>ProcessManagementTaskService</td> 
    <td>共有</td> 
    <td>別のユーザーとタスクを共有します。別のユーザーはタスクを要求してタスクの所有者になることができます。</td> 
@@ -167,9 +167,9 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>タスクをロックします。これにより、共有されている場合は別のユーザーが要求できなくなります。</td> 
   </tr>
   <tr>
-   <td>拒否</td> 
+   <td>reject</td> 
    <td>ProcessManagementTaskService</td> 
-   <td>拒否</td> 
+   <td>却下する</td> 
    <td>タスクを前の所有者に返します。</td> 
   </tr>
   <tr>
@@ -355,7 +355,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>removeProperty</td> 
    <td>WorkspacePropertyService</td> 
-   <td>次を削除します。</td> 
+   <td>delete</td> 
    <td>ユーザーのワークスペースプロパティを削除します。</td> 
   </tr>
   <tr>

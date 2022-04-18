@@ -1,5 +1,5 @@
 ---
-title: プロジェクトの管理 - ベストプラクティスチェックリスト
+title: プロジェクトの管理 ― ベストプラクティスチェックリスト
 seo-title: Managing Projects - Best Practices Checklist
 description: 'Adobe Experience Manager（AEM）実装プロジェクトの管理には、計画と理解が必要です。プロジェクトチェックリストは、プロジェクトを遂行する際のベストプラクティスをまとめたものです。プロジェクトのライフサイクルの全フェーズを案内し、現在のステータスを全体的に監視します。 '
 seo-description: Managing a project to implement Adobe Experience Manager (AEM) requires planning and understanding. The Project Checklists are intended as a set of best practices for project delivery. They guide you through all phases of the project life cycle and provide high level monitoring of your current status.
@@ -13,11 +13,11 @@ exl-id: 1699b24f-cf2a-419b-a2f9-be294fa3591f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '3261'
-ht-degree: 92%
+ht-degree: 99%
 
 ---
 
-# プロジェクトの管理 - ベストプラクティスチェックリスト{#managing-projects-best-practices-checklist}
+# プロジェクトの管理 ― ベストプラクティスチェックリスト{#managing-projects-best-practices-checklist}
 
 Adobe Experience Manager（AEM）実装プロジェクトの管理では、（プロジェクトの実装前および実装中の）問題点とそれに関連する必要な決断を認識するために、計画を立てて理解する必要があります。
 
@@ -30,11 +30,11 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
 * ドキュメント。直接[チェックリスト](/help/managing/best-practices-checklist.md)に基づいて、以下の詳細を説明しています。
 
-   * [プロジェクトハートビート](#project-heartbeat-dashboard) 分析。
-   * [ロール別ステータス](#status-by-role) 概要。
+   * [プロジェクトのハートビート](#project-heartbeat-dashboard)の分析
+   * [役割別のステータス](#status-by-role)の概要
    * [フェーズおよびマイルストーン](#phases-and-milestones)。
    * [主要なペルソナ](#persona)および各（関連）段階でのペルソナの関与。
-   * A [用語集](/help/managing/best-practices-glossary.md) の [必要なドキュメントと成果物](#required-documents-and-deliverables).
+   * [必須ドキュメントと成果物](#required-documents-and-deliverables)の[用語集](/help/managing/best-practices-glossary.md)
 
 * [詳細情報](/help/managing/best-practices-further-reference.md)。特定の分野に関する詳細を提供します。
 
@@ -62,7 +62,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
 プロジェクト計画は個別の（上位レベルの）フェーズに分類されます。
 
-フェーズごとに独自のマイルストーンが含まれます。各 [ペルソナ](#persona) （または役割）関連するマイルストーンと、定義された成果物の作成に必要なドキュメントが一覧表示されます。
+フェーズごとに独自のマイルストーンが含まれます。[ペルソナ](#persona)（役割）ごとに、関連するマイルストーンと、定義された成果物の作成に必要なドキュメントが一覧表示されます。
 
 >[!NOTE]
 >
@@ -181,10 +181,10 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
    * サブシステム
    * サードパーティのシステム
    * インターフェイス（ハードウェア、ソフトウェアおよび人間の操作）
-   * 各環境のサーバ参照 [技術要件](/help/sites-deploying/technical-requirements.md) および [ハードウェアのサイズ設定のガイドライン](/help/managing/hardware-sizing-guidelines.md)
+   * 各環境のサーバー（[技術要件](/help/sites-deploying/technical-requirements.md)および[ハードウェアのサイジングのガイドライン](/help/managing/hardware-sizing-guidelines.md)を参照）
    * 各環境用のプロセス（デプロイメントやメンテナンスの要件など）
    * メンテナンスアクティビティ（データストア GC、TarPM の最適化など）
-   * [](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)Dispatcher のキャッシング
+   * [Dispatcher](https://helpx.adobe.com/jp/experience-manager/brand-portal/user-guide.html) のキャッシング
    * [公開/作成者共有のクラスター化](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)
    * クライアント側のパフォーマンス（JavaScript の圧縮、結合、CSS スプライト、HTTP リクエストの合計数など）
 
@@ -211,7 +211,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
    システムの統合には、以下の計画（および実装）が必要です。
 
    * すべてのサブシステムおよび[ソリューションの統合](/help/sites-administering/integration.md)をどのようにして 1 つのまとまったシステムとして動作させるか
-   * サードパーティ製システムの統合方法と共に、オフライン/オンライン、クライアント側/ブラウザー側、サードパーティシステムがダウンした場合のフォールオーバー処理など、特別な考慮事項も含まれます。
+   * サードパーティのシステムをどのように統合するか（オフラインかオンラインか、クライアント側かブラウザー側か、サードパーティのシステムがダウンした時のフェイルオーバー処理などの特別な考慮も必要）
 
 * **テスト概念**
 
@@ -249,11 +249,11 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
    次に例を示します。
 
-   * を持つ役割（グループ）のリスト `read`/ `write` 各
-   * パブリッシュ環境に影響を与える権限の使用の定義例： `replicate`
-   * 最小限の権限を持つユーザーの場合は、ワークフローを定義する必要があります
-   * のユーザー `editor` グループは次の条件を満たしてはなりません `admin` 権利も含まない `administrators` グループ
-   詳しくは、 [ユーザー管理とセキュリティ](/help/sites-administering/security.md).
+   * 役割の一覧（グループ）とそれぞれの `read`／`write` アクセス権限の定義
+   * パブリッシュ環境に影響を及ぼす権限の使用の定義（`replicate` など）
+   * 最小限の権限を持つユーザーの場合、ワークフローを定義する必要があります。
+   * `editor` グループのユーザーは、`admin` の権利を持つことも、`administrators` グループに属することもできません。
+   詳しくは、[ユーザー管理とセキュリティ](/help/sites-administering/security.md)を参照してください。
 
 * **監視とメンテナンス**
 
@@ -287,7 +287,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
          * 問題追跡システム（Jira など）
          * IDE（Eclipse など）
          * ビルド管理ツール（Maven など）
-         * 継続的統合のためのツール；例えば、Jenkins
+         * 継続的統合のためのツール（Jenkins など）
          * バージョン管理のためのツール（GIT や SVN など）
          * ビルドアーティファクトのリポジトリマネージャー（Archiva や Nexus など）
    * サードパーティソフトウェアの統合と依存関係
@@ -312,7 +312,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
    * デプロイメントのサイクル
    * サードパーティソフトウェアの統合と依存関係
    * セキュリティのセットアップ
-   * ベースラインパフォーマンスの検証は、 [Tough Day のテスト](/help/sites-developing/tough-day.md) 実稼動環境で
+   * 実稼動セットアップで [Tough Day テスト](/help/sites-developing/tough-day.md)を実行して検証されたベースラインパフォーマンス
    * パフォーマンステストの要件（[品質保証のベストプラクティス](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)を参照）
 
 * **統合**
@@ -552,7 +552,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
 ## 必須ドキュメントと成果物 {#required-documents-and-deliverables}
 
-チェックリストは **必須ドキュメント** および **成果物** を設定します。
+チェックリストは、各マイルストーンの&#x200B;**必須ドキュメント**&#x200B;および&#x200B;**成果物**&#x200B;をカバーしています。
 
 * この 2 つの間には、1:1 の関係はありません。例えば、複数の必須ドキュメントのグループが 1 つの成果物になる場合もあります。
 * 同じマイルストーンの間に、あるペルソナからの成果物が、別のペルソナの必須ドキュメントになる場合もあります。
@@ -561,7 +561,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
 **必須ドキュメント**&#x200B;は、適切なペルソナが自身の成果物を生成する際に必要になります。
 
-各 **必須ドキュメント** ペルソナは、次を示す必要があります。
+**必須ドキュメント**&#x200B;ごとに、ペルソナは以下を示す必要があります。
 
 * **Y/N**：必須ドキュメントを受け取ったかどうか。
 * **1-3**：受け取ったドキュメントの品質表示。
@@ -570,11 +570,11 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
 
 マイルストーンごとに、適切なペルソナが特定のドキュメントを提供します。そのため、各自が特定のマイルストーンに対する自身の責任を認識しています。
 
-各 **成果物** ペルソナは、次を示す必要があります。
+**成果物**&#x200B;ごとに、ペルソナは以下を示す必要があります。
 
 * **Y/N**：成果物が完成したかどうか。
 
-成果物は多くの場合 **必須ドキュメント** 現在のマイルストーンか、それ以降のマイルストーンのどちらか。
+成果物は、多くの場合、現在のマイルストーンまたは後続のマイルストーンの&#x200B;**必須ドキュメント**&#x200B;として使用されます。
 
 ## 関連するベストプラクティス {#related-best-practices}
 
@@ -607,4 +607,4 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、（�
       * [HTML テンプレート言語（HTL）](https://helpx.adobe.com/jp/experience-manager/htl/user-guide.html)
 
 * 関連ドキュメント
-   * Adobe Experience Cloud - [Adobe Experience Cloud の計画](https://helpx.adobe.com/marketing-cloud/how-to/planning.html)
+   * Adobe Experience Cloud - [Adobe Experience Cloud の計画](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html?lang=ja)

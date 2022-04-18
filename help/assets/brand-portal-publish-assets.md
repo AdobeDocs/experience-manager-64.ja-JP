@@ -1,6 +1,6 @@
 ---
 title: Brand Portal へのフォルダーの公開
-description: アセットをBrand Portalに公開および非公開にする方法を説明します。
+description: Brand Portal へのアセットの公開および非公開の方法を説明します。
 contentOwner: VG
 feature: Brand Portal
 role: User
@@ -8,7 +8,7 @@ exl-id: 6b78124d-4022-452f-8d0f-b667de337bf4
 source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
 source-wordcount: '403'
-ht-degree: 44%
+ht-degree: 64%
 
 ---
 
@@ -32,7 +32,7 @@ Adobe Experience Manager Assets 管理者は、にアセットを公開できま
 
    ![publish2bp-2](assets/publish2bp-2.png)
 
-2. アセットをBrand Portalに公開するには、次の 2 つのオプションを使用できます。
+2. アセットを Brand Portal に公開するには、次の 2 つのオプションを使用します。
    * [アセットを直ちに公開する](#publish-now)
    * [アセットを後で公開](#publish-later)
 
@@ -40,11 +40,11 @@ Adobe Experience Manager Assets 管理者は、にアセットを公開できま
 
 選択したアセットを Brand Portal に公開するには、次のいずれかを実行します。
 
-* ツールバーで「**[!UICONTROL クイック公開]**」を選択します。次に、メニューから、 **[!UICONTROL Brand Portalに公開]**.
+* ツールバーで「**[!UICONTROL クイック公開]**」を選択します。次に、メニューで「**[!UICONTROL Brand Portal に公開]**」を選択します。
 
 * ツールバーで「**[!UICONTROL 公開を管理]**」を選択します。
 
-   1. 次に、 **[!UICONTROL アクション]** 選択 **[!UICONTROL Brand Portalに公開]**、および **[!UICONTROL スケジュール]** 選択 **[!UICONTROL 今すぐ]**. タップまたはクリック **[!UICONTROL 次へ].**
+   1. 次に、**[!UICONTROL アクション]**&#x200B;から「**[!UICONTROL Brand Portal に公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;から「**[!UICONTROL 今すぐ]**」を選択します。タップまたはクリック **[!UICONTROL 次へ].**
 
    2. 内 **[!UICONTROL 範囲]**&#x200B;をクリックし、選択を確定してをタップまたはクリックします。 **[!UICONTROL Brand Portalに公開]**.
 
@@ -54,8 +54,8 @@ Adobe Experience Manager Assets 管理者は、にアセットを公開できま
 
 アセットを Brand Portal に公開するスケジュールを後の日時に設定するには、次の手順を実行します。
 
-1. 公開するアセットまたはフォルダーを選択したら、「 」を選択します。 **[!UICONTROL 公開を管理]** 上部のツールバーから。
-2. オン **[!UICONTROL 公開を管理]** ページ、選択 **[!UICONTROL Brand Portalに公開]** から **[!UICONTROL アクション]** を選択し、 **[!UICONTROL 後で]** から **[!UICONTROL スケジュール]**.
+1. 公開するアセットまたはフォルダーを選択したら、上部のツールバーから&#x200B;**[!UICONTROL 公開を管理]**&#x200B;を選択します。
+2. **[!UICONTROL 公開を管理]**&#x200B;ページで、**[!UICONTROL アクション]**&#x200B;から「**[!UICONTROL Brand Portal に公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;から「**[!UICONTROL 後で]**」を選択します。
 
    ![publishlaterbp-1](assets/publishlaterbp-1.png)
 

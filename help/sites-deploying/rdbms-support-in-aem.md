@@ -14,7 +14,7 @@ exl-id: 89523bb4-e4c4-469c-802b-6fe27c816a2e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '700'
-ht-degree: 67%
+ht-degree: 86%
 
 ---
 
@@ -40,7 +40,7 @@ AEM でのリレーショナルデータベースのサポートレベルにつ�
 
 リポジトリは、`DocumentNodeStoreService` OSGi サービスを設定することで作成されます。このサービスは、MongoDB に加えてリレーショナルデータベース永続性もサポートするように拡張されています。
 
-このサービスが動作するためには、AEM でデータソースを設定する必要があります。これは、 `org.apache.sling.datasource.DataSourceFactory.config` ファイル。 ローカル設定内の OSGi バンドルとは別に、対応するデータベースの JDBC ドライバを指定する必要があります。
+このサービスが動作するためには、AEM でデータソースを設定する必要があります。この設定は、`org.apache.sling.datasource.DataSourceFactory.config` ファイルを通して行われます。ローカル設定内の OSGi バンドルとは別に、対応するデータベースの JDBC ドライバを指定する必要があります。
 
 JDBC ドライバ用の OSGi バンドルの作成手順については、Apache Sling Web サイトの[こちらのドキュメント](https://wiki.eclipse.org/Create_and_Export_MySQL_JDBC_driver_bundle)を参照してください。
 
@@ -54,7 +54,7 @@ JDBC ドライバ用の OSGi バンドルの作成手順については、Apache
 
 1. データベースのデーモンが起動しており、AEM で使用するためのアクティブなデータベースがあることを確認します。
 1. AEM 6.3 jar をインストールディレクトリにコピーします。
-1. という名前のフォルダーを作成します。 `crx-quickstart\install` をインストールディレクトリに追加します。
+1. インストールディレクトリ内に `crx-quickstart\install` というフォルダーを作成します。
 1. ドキュメントノードストアを設定するために、この `crx-quickstart\install` ディレクトリ内に、次の名前の設定ファイルを作成します。
 
    * `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`
@@ -77,7 +77,7 @@ JDBC ドライバ用の OSGi バンドルの作成手順については、Apache
       * ダウンロードした ZIP アーカイブから抽出したバンドルを参照して選択します。
       * 確認する **Oracle社の MySQLcom.mysql.jdbc 用 JDBC ドライバ** がアクティブで、起動します。
 
-1. 最後に、AEMを `crx3` および `crx3rdb` 実行モード：
+1. 最後に、`crx3` および `crx3rdb` 実行モードで AEM を起動します。
 
    ```java
    java -jar quickstart.jar -r crx3,crx3rdb
@@ -91,17 +91,17 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 
 * `datasource.name:`データソース名。デフォルトは、`oak` です。
 
-* `url:` JDBC で使用する必要があるデータベースの URL 文字列。 データベースタイプごとに独自の URL 文字列の形式が設定されています。詳しくは、後述の [URL 文字列の形式](/help/sites-deploying/rdbms-support-in-aem.md#url-string-formats)を参照してください。
+* `url:` JDBC で使用する必要のあるデータベースの URL 文字列。データベースタイプごとに独自の URL 文字列の形式が設定されています。詳しくは、後述の [URL 文字列の形式](/help/sites-deploying/rdbms-support-in-aem.md#url-string-formats)を参照してください。
 
-* `driverClassName:` JDBC ドライバーのクラス名。 これは、使用するデータベースと、その後接続に必要なドライバによって異なります。 AEMでサポートされるすべてのデータベースのクラス名を次に示します。
+* `driverClassName:` JDBC ドライバーのクラス名。これは、使用するデータベースと、その後接続に必要なドライバーによって異なります。AEM でサポートされるすべてのデータベースのクラス名を次に示します。
 
-   * `org.postgresql.Driver` （PostgreSQL の場合）
-   * `com.ibm.db2.jcc.DB2Driver` （DB2 用）
-   * `oracle.jdbc.OracleDriver` oracle
+   * `org.postgresql.Driver`（PostgreSQL の場合）
+   * `com.ibm.db2.jcc.DB2Driver`（DB2 用の場合）
+   * `oracle.jdbc.OracleDriver`（Oracle の場合）
    * `com.mysql.jdbc.Driver`（MySQL および MariaDB、試行用）
-   * c `om.microsoft.sqlserver.jdbc.SQLServerDriver` (Microsoft SQL Server（試行用）用 )
+   * c`om.microsoft.sqlserver.jdbc.SQLServerDriver`（Microsoft SQL Server の場合）（試行用）
 
-* `username:` データベースが実行されるユーザー名。
+* `username:` データベースを実行するユーザー名。
 
 * `password:` データベースのパスワード。
 
@@ -109,13 +109,13 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 
 データソース設定では、使用する必要のあるデータベースタイプに応じて、異なる URL 文字列の形式を使用します。以下に、AEM で現在サポートされているデータベース向けの形式を一覧で示します。
 
-* `jdbc:postgresql:databasename` （PostgreSQL の場合）
+* `jdbc:postgresql:databasename`（PostgreSQL の場合）
 
-* `jdbc:db2://localhost:port/databasename` （DB2 用）
-* `jdbc:oracle:thin:localhost:port:SID` oracle
+* `jdbc:db2://localhost:port/databasename`（DB2 用の場合）
+* `jdbc:oracle:thin:localhost:port:SID`（Oracle の場合）
 * `jdbc:mysql://localhost:3306/databasename`（MySQL および MariaDB、試行用）
 
-* `jdbc:sqlserver://localhost:1453;databaseName=name` (Microsoft SQL Server（試行用）用 )
+*  `jdbc:sqlserver://localhost:1453;databaseName=name`（Microsoft SQL Server の場合）（試行用）
 
 ## 既知の制限事項 {#known-limitations}
 

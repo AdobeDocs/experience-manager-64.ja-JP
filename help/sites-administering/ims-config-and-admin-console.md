@@ -13,7 +13,7 @@ exl-id: 38bbad03-aead-43d3-a28c-cc716955ddfb
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1749'
-ht-degree: 83%
+ht-degree: 91%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 83%
 
 AEM 6.4.3.0 では、AEMインスタンスと、Adobe IMS(Identity Management System) ベースの認証に対するAdmin Consoleサポートが、 **AEM Managed Services** 顧客。
 
-AEM がアドミンコンソールをオンボーディングしたことにより、AEM Managed Servicesのお客様は 1 つのコンソールですべての Experience Cloud ユーザーを管理できます。AEMインスタンスに関連付けられた製品プロファイルにユーザーとグループを割り当てて、特定のインスタンスにログインできるようにすることができます。
+AEM がアドミンコンソールをオンボーディングしたことにより、AEM Managed Servicesのお客様は 1 つのコンソールですべての Experience Cloud ユーザーを管理できます。ユーザーとグループは AEM インスタンスに関連付けられている製品プロファイルに割り当てることができ、特定のインスタンスにログインできます。
 
 ## 主なハイライト {#key-highlights}
 
@@ -41,7 +41,7 @@ AEM がアドミンコンソールをオンボーディングしたことによ�
 
 ## アーキテクチャ {#architecture}
 
-IMS 認証は、AEM と Adobe IMS エンドポイントの間で OAuth プロトコルを使用して機能します。ユーザーが IMS に追加され、Adobe Identity を持つようになると、IMS 資格情報を使用して AEM Managed Services インスタンスにログインできます。
+IMS 認証は、AEM と Adobe IMS エンドポイントの間で OAuth プロトコルを使用して機能します。ユーザーが IMS に追加され、Adobe ID を持つようになると、IMS 資格情報を使用して AEM Managed Services インスタンスにログインできます。
 
 ユーザーログインフローを以下に示します。ユーザーは IMS にリダイレクトされ、オプションで SSO 検証のためにカスタマー IDP にリダイレクトされてから、AEM にリダイレクトされます。
 
@@ -67,17 +67,17 @@ AEM Managed Servicesのお客様は、既に組織がプロビジョニングさ
 1. システム管理者は、ドメインの所有権を確認するためにドメインを要求する（この例では acme.com）
 1. システム管理者はユーザーディレクトリを設定する
 1. システム管理者は、SSO 設定用に管理コンソールの ID プロバイダ（IDP）を設定する
-1. AEM 管理者は、通常どおりローカルグループ、権限、および特権を管理する。ユーザーとグループの同期を参照してください
+1. AEM 管理者は、通常どおりローカルグループ、権限および特権を管理します。ユーザーとグループの同期を参照してください。
 
 >[!NOTE]
 >
->IDP 設定を含む Adobe Identity Management Basics の詳細については、[このページ](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html)の記事を参照してください。
+>IDP 設定を含む、Adobe Identity Management Basics の詳細については、[このページ](https://helpx.adobe.com/jp/enterprise/using/set-up-identity.html)の記事を参照してください。
 >
 >Enterprise Administration と Admin Console の詳細については、[このページ](https://helpx.adobe.com/jp/enterprise/managing/user-guide.html)の記事を参照してください。
 
 ### アドミンコンソールへのユーザーのオンボード {#onboarding-users-to-the-admin-console}
 
-お客様の規模と好みに応じて、ユーザーをオンボードする方法は 3 つあります。
+ユーザーをオンボードする方法は、お客様の規模と好みに応じて 3 つあります。
 
 1. アドミンコンソールでユーザーとグループを手動作成する
 1. ユーザーと一緒に CSV ファイルをアップロードする
@@ -93,7 +93,7 @@ Analytics、Target、Creative Cloud などの他の Adobe 製品を管理する�
 
 #### アドミンコンソール UI でのファイルアップロード {#file-upload-in-the-admin-console-ui}
 
-ユーザー作成を簡単に処理するには、CSV ファイルをアップロードしてまとめて追加します。
+CSV ファイルをアップロードしてユーザーをまとめて登録すると、ユーザーの作成を簡単に処理できます。
 
 ![image2018-9-23_18-59-57](assets/image2018-9-23_18-59-57.png)
 
@@ -113,20 +113,20 @@ Analytics、Target、Creative Cloud などの他の Adobe 製品を管理する�
 
 [https://github.com/adobe-apiplatform/user-sync.py/releases/latest](https://github.com/adobe-apiplatform/user-sync.py/releases/latest)
 
-プレリリースバージョンの 2.4RC1 は、動的グループ作成サポートで利用でき、次の場所にあります。 [https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1)
+次の場所にあるプレリリースバージョンの 2.4RC1 は、動的グループの作成をサポートしています。[https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1)
 
 このリリースの主な機能は、Admin Console でユーザーのメンバーシップに合わせて新しい LDAP グループを動的にマッピングする機能と、動的なユーザーグループ作成です。
 
-新しいグループ機能の詳細については、次を参照してください。
+新しいグループ機能の詳細については、こちらを参照してください。
 
 [https://github.com/adobe-apiplatform/user-sync.py/blob/v2/docs/en/user-manual/advanced_configuration](https://github.com/adobe-apiplatform/user-sync.py/blob/v2/docs/en/user-manual/advanced_configuration.md#additional-group-options)
 
 >[!NOTE]
 >
->ユーザー同期ツールの詳細については、[ドキュメントページ](https://adobe-apiplatform.github.io/user-sync.py/en/)を参照してください。
+>ユーザー同期ツールについて詳しくは、[ドキュメントページ](https://adobe-apiplatform.github.io/user-sync.py/en/)を参照してください。
 >
 >
->ユーザー同期ツールは、[ここ](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html)に説明されている手順を使用して、Adobe I/O クライアント UMAPI として登録する必要があります。
+>ユーザー同期ツールでは、[ここ](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html)に説明されている手順を使用して、Adobe I/O クライアント UMAPI として登録する必要があります。
 >
 >Adobe I/O コンソールのドキュメントは[ここ](https://www.adobe.io/apis/cloudplatform/console.html)を参照してください。
 >
@@ -145,19 +145,19 @@ Analytics、Target、Creative Cloud などの他の Adobe 製品を管理する�
 
 ![screen_shot_2018-09-17at105804pm](assets/screen_shot_2018-09-17at105804pm.png)
 
-この例では、*AEM-MS-Onboard* 組織は、Stage、Prod など、さまざまなトポロジと環境にまたがる 32 のインスタンスがあります。
+この例では、*AEM-MS-Onboard* 組織には、ステージング、実稼働など、さまざまなトポロジと環境にまたがる 32 のインスタンスがあります。
 
 ![screen_shot_2018-09-17at105517pm](assets/screen_shot_2018-09-17at105517pm.png)
 
-詳細を確認してインスタンスを識別できます。
+詳細を確認するとインスタンスを識別できます。
 
 ![screen_shot_2018-09-17at105601pm](assets/screen_shot_2018-09-17at105601pm.png)
 
-各製品コンテキストインスタンスの下に、関連付けられた製品プロファイルがあります。この製品プロファイルは、ユーザーおよびグループにアクセス権を割り当てるために使用されます。
+各製品コンテキストのインスタンスの下に、関連する製品プロファイルがあります。この製品プロファイルは、ユーザーおよびグループにアクセス権を割り当てるために使用されます。
 
 ![image2018-9-18_7-48-50](assets/image2018-9-18_7-48-50.png)
 
-この製品プロファイルの下に追加されたすべてのユーザーおよびグループは、以下の例に示すように、そのインスタンスにログインできます。
+この製品プロファイルの下に追加されたすべてのユーザーおよびグループは、次の例に示すように、そのインスタンスにログインできます。
 
 ![screen_shot_2018-09-17at105623pm](assets/screen_shot_2018-09-17at105623pm.png)
 
@@ -181,7 +181,7 @@ AEM では引き続き、管理ユーザーのローカルログインをサポ�
 
 アドミンコンソールの初期設定中にフェデレーテッド IDP が設定される場合、ユーザーは SSO 用のカスタマー IDP にリダイレクトされます。
 
-以下の例では、IDP は Okta です。
+次の例では、IDP は Okta です。
 
 ![screen_shot_2018-09-17at115734pm](assets/screen_shot_2018-09-17at115734pm.png)
 
@@ -193,13 +193,13 @@ AEM では引き続き、管理ユーザーのローカルログインをサポ�
 
 別の認証方式を使用していて、現在 IMS に移行されている既存の AEM インスタンスの場合、移行手順が必要です。
 
-AEMリポジトリ内の既存のユーザー（LDAP または SAML 経由でローカルに作成）は、User Migration Utility を使用して、IDP として IMS を指すように移行できます。
+AEM リポジトリ内の既存ユーザー（LDAP または SAML を介してローカルに提供される）は、IDP がユーザー移行ユーティリティを使用しているため、IMS を指すように移行できます。
 
 このユーティリティは、IMS プロビジョニングの一部として AMS チームによって実行されます。
 
 ### AEM での権限と ACL の管理 {#managing-permissions-and-acls-in-aem}
 
-アクセス制御と権限は、引き続きAEMで管理されます。これをおこなうには、IMS からのユーザーグループ ( 以下の例ではAEM-GRP-008) と、権限とアクセス制御が定義されているローカルグループを分離します。 IMS から同期されたユーザーグループは、ローカルグループに割り当てられ、権限を継承することができます。
+アクセス制御とアクセス許可は引き続き AEM で管理されます。これは、IMS からのユーザーグループ（以下の例では AEM-GRP-008）と、アクセス許可とアクセス制御が定義されているローカルグループの分離を使用して実現できます。IMS から同期されたユーザーグループは、ローカルグループに割り当てられ、権限を継承することができます。
 
 以下の例では、同期グループをローカル *Dam_Users* グループに追加しています。
 

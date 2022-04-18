@@ -122,7 +122,7 @@ MySQL コネクタを別途入手し、インストールする必要があり�
 1. Web コンソールを使用して、バンドルをインストールして起動します。
 
    * 例： http://localhost:4502/system/console/bundles
-   *  **`Install/Update`**
+   * 選択 **`Install/Update`**
    * ダウンロードした ZIP アーカイブから抽出したバンドルを参照し、選択します。
    * 確認する *Oracle社の MySQLcom.mysql.jdbc 用 JDBC ドライバ* がアクティブで、アクティブでない場合は開始（またはログを確認）
 
@@ -131,7 +131,7 @@ MySQL コネクタを別途入手し、インストールする必要があり�
    * 例： http://localhost:4502/system/console/configMgr
    * 場所 `Day Commons JDBC Connections Pool` 設定
    * 選択して開く
-   *  `Save`
+   * 選択 `Save`
 
 1. すべてのオーサーインスタンスとパブリッシュインスタンスで、手順 3 と 4 を繰り返します。
 
@@ -381,9 +381,9 @@ AEM 6.2 以前の場合と同様に、キー資料をリポジトリに保存す
 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) を使用して、次の手順を実行します。
 
 * 参照先 [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
-* 選択 `/etc/key`
+* 「`/etc/key`」を選択します。
 * open `Replication` タブ
-* 選択 `Replicate`
+* 「`Replicate`」を選択します。
 
 * [Granite 暗号バンドルを更新します。](#refresh-the-granite-crypto-bundle)
 
@@ -431,8 +431,8 @@ Apache HTTP サーバーを使用する場合は、すべての関連エント�
 
 Dispatcher を使用する場合は、次の説明を参照してください。
 
-* AEM [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html) ドキュメント
-* [Dispatcher のインストール](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html)
+* AEM [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) ドキュメント
+* [Dispatcher のインストール](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-install.html)
 * [Communities 用の Dispatcher の設定](dispatcher.md)
 * [既知の問題](troubleshooting.md#dispatcher-refetch-fails)
 

@@ -15,7 +15,7 @@ role: Admin,User,Developer
 source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
 source-wordcount: '638'
-ht-degree: 93%
+ht-degree: 95%
 
 ---
 
@@ -27,9 +27,9 @@ CDN を使用して Dynamic Media アセットをキャッシュすることで�
 
 **CDN にキャッシュされたコンテンツを無効化するには、次の手順を実行します。**
 
-1. Dynamic Media Classicデスクトップアプリケーションにログインします。
+1. Dynamic Media Classic デスクトップアプリケーションにサインインします。
 
-   [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app)
+   [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=ja#system-requirements-dmc-app)
 
    資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 

@@ -8,7 +8,7 @@ exl-id: 05bbf89a-4cf5-49bb-aea8-a585c641eda2
 source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
 workflow-type: tm+mt
 source-wordcount: '1409'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
@@ -98,7 +98,7 @@ Exchangeable image file format（Exif）は、デジタル写真で最も一般�
 
 Exif の主な制限は、BMP、GIF、PNG などの一般的な画像ファイル形式ではサポートされないことです。
 
-Exif で定義されるメタデータフィールドは、通常、テクニカルなもので、記述メタデータ管理では使用が制限されています。この理由で [!DNL Experience Manager Assets] は、Exif プロパティのマッピングを [共通のメタデータスキーマ](metadata-schemas.md) と [XMP](xmp-writeback.md).
+Exif で定義されるメタデータフィールドは、通常、テクニカルなもので、記述メタデータ管理では使用が制限されています。このため、[!DNL Experience Manager Assets] は Exif プロパティのマッピングを、[共通のメタデータスキーマ](metadata-schemas.md)と [XMP](xmp-writeback.md) に提供します。
 
 ### その他のメタデータ {#other-metadata}
 

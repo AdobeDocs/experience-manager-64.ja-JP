@@ -1,5 +1,5 @@
 ---
-title: Distiller Service Java API QuickStart(SOAP)
+title: Distiller サービス Java API クイックスタート (SOAP)
 seo-title: Distiller Service Java API QuickStart(SOAP)
 description: Distiller Service Java API を使用して、PostScript ファイルをPDFドキュメントに変換します。
 seo-description: Use the Distiller Service Java API to convert a PostScript file to a PDF document.
@@ -14,25 +14,25 @@ exl-id: 0d7cdb60-e892-4644-8a72-a8068ca2e224
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '185'
-ht-degree: 0%
+ht-degree: 83%
 
 ---
 
-# Distiller Service Java API クイックスタート (SOAP) {#distiller-service-java-api-quickstart-soap}
+# Distiller サービス Java API クイックスタート (SOAP) {#distiller-service-java-api-quickstart-soap}
 
-Distiller®サービスで Java API クイックスタート (SOAP) を使用できます。
+Distiller® サービスで Java API クイックスタート（SOAP）を使用できます。
 
-[クイックスタート（SOAP モード）:Java API を使用した PostScript ファイルからPDFドキュメントへの変換](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用して PostScript ファイルから PDF ドキュメントに変換](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「AEM forms によるプログラミング」のクイックスタートは、JBoss Application Server とMicrosoft Windows オペレーティングシステムにデプロイされるForms Server に基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 詳しくは、 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>「AEM Forms によるプログラミング」に記載したクイックスタートは、JBoss Application Server と Microsoft Windows オペレーティングシステムにデプロイされる Forms Server に基づくものです。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
-## クイックスタート（SOAP モード）:Java API を使用した PostScript ファイルからPDFドキュメントへの変換 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
+## クイックスタート（SOAP モード）：Java API を使用して PostScript ファイルから PDF ドキュメントに変換 {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
 
-次のコードの例では、PostScript ファイル (*Loan.ps*) を、という名前のPDFファイルに変換します。 *Loan.pdf*. ( [PostScript を変換してPDFドキュメントに](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents).)
+次のコードの例では、PostScript ファイル (*Loan.ps*) を、という名前のPDFファイルに変換します。 *Loan.pdf*. （[PostScript を PDF ドキュメントに変換する](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents)を参照してください）。
 
 ```as3
  /* 

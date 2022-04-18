@@ -13,7 +13,7 @@ exl-id: 1323ee60-c80c-4eed-b3e5-aa0f0c07e6ee
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 68%
+ht-degree: 89%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 68%
 
 ## 6.5 へのアップグレードまでにおこなう変更 {#prior-to-upgrade}
 
-### カスタムアダプティブビデオエンコーディング設定  {#custom-adaptive-video-encoding-configurations}
+### カスタムアダプティブビデオのエンコーディング設定  {#custom-adaptive-video-encoding-configurations}
 
 <table> 
  <tbody>
@@ -48,13 +48,13 @@ ht-degree: 68%
    <td><p>次の移行スクリプトを使用して、新しい場所に移行できます：</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>または、AEM UI で設定を編集すると、変更内容が新しい場所に保存されます。</p> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
+   <td><strong>メモ</strong></td> 
    <td>該当なし<br /> </td> 
   </tr>
  </tbody>
 </table>
 
-### Dynamic Media (DMS7) クラウド設定 {#dynamic-media-dms-cloud-configuration}
+### Dynamic Media（DMS7）クラウド設定 {#dynamic-media-dms-cloud-configuration}
 
 <table> 
  <tbody>
@@ -81,7 +81,7 @@ ht-degree: 68%
  </tbody>
 </table>
 
-### Dynamic Media(DM Hybrid)Cloud Service設定 {#cloudserviceconfiguration}
+### Dynamic Media（DM ハイブリッド）クラウドサービス設定 {#cloudserviceconfiguration}
 
 <table> 
  <tbody>
@@ -104,7 +104,7 @@ ht-degree: 68%
  </tbody>
 </table>
 
-### Dynamic Media - YouTubeCloud Service設定  {#youtubecloudserviceconfiguration}
+### Dynamic Media - YouTube クラウドサービス設定  {#youtubecloudserviceconfiguration}
 
 <table> 
  <tbody>
@@ -118,10 +118,10 @@ ht-degree: 68%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>1. YouTube からすべての動画を非公開にする<br /> 2.新しい TouchUI を使用したYouTube設定の作成 ( <code>/conf</code>) 古い場所からすべてのチャネルをコピーするを含む<br /> 3. すべての動画を YouTube に公開しなおします。</p> <p>このワークフローにより、新しいYouTube URL が生成されます。 新規のタッチ UI YouTube 設定を作成する前に非公開にしないと、再作成されたチャンネルは機会があれば再度公開されるため、プロパティの下に複数の YouTube URL が表示されます。つまり、プロパティの下に不要なURLが表示されていることになります。</p> </td> 
+   <td><p>1. YouTube からすべての動画を非公開にする<br /> 2.古い場所からすべてのチャネルをコピーするなど、新規のタッチ UI を使用して（<code>/conf</code> から） YouTube 設定を作成します。<br /> 3.すべての動画を YouTube に公開しなおします。</p> <p>このワークフローにより、新しい YouTube URL が生成されます。新規のタッチ UI YouTube 設定を作成する前に非公開にしないと、再作成されたチャンネルは機会があれば再度公開されるため、プロパティの下に複数の YouTube URL が表示されます。つまり、プロパティの下に不要なURLが表示されていることになります。</p> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
+   <td><strong>メモ</strong></td> 
    <td>該当なし<br /> </td> 
   </tr>
  </tbody>

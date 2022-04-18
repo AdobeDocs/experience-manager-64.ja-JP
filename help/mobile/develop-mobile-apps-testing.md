@@ -13,7 +13,7 @@ exl-id: 2a70f322-2540-471e-8a8e-6d48889cf94a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1025'
-ht-degree: 82%
+ht-degree: 83%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 市場には幅広いデバイスが投入され、リリースされ続けていることから、アプリのテストが非常に重要になっています。機能やユーザビリティがアプリストアで低評価を受ける可能性がありますが、欠陥が 1 つでもあればアプリのアンインストールという結果になり得ます。テストの計画と品質保証には細心の注意を払う必要があります。次のリンクでは、自分の環境の確認や、テストケース、テストのタイプ、仮定、お客様の関与などの定義といった、全般的に対処が必要な多くのトピックを取り上げています。また、テスト作業に役立つツールについても説明しています。内部ツール（例： ） [ホッブス](/help/sites-developing/hobbes.md)は、Web ベースの UI テストに役立ちます。 [Tough Day](/help/sites-developing/tough-day.md) では、シミュレートされた負荷でインスタンスに応力を与えることができます。 テスト環境に Selenium などのサードパーティツールが既に搭載されている場合には、それを使用することもできます。
 
@@ -70,7 +70,7 @@ ht-degree: 82%
 * SeleniumGrid では、ノード全体をテスト対象にして並列テストを実行できます。
 * Selenium IDE により、テストケース作成の負担が軽減されます。
 
-詳しくは、 [https://www.seleniumhq.org/](https://www.seleniumhq.org/).
+詳しくは、[https://www.seleniumhq.org/](https://www.seleniumhq.org/) を参照してください。
 
 **Testdroid**
 

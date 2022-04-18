@@ -14,15 +14,15 @@ exl-id: e9e53b6d-6403-4d37-bac1-efaff0317f34
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '640'
-ht-degree: 62%
+ht-degree: 98%
 
 ---
 
 # HTML5 フォームのカスタム外観の作成 {#create-custom-appearances-in-html-forms}
 
-Mobile Forms でカスタムウィジェットをプラグインできます。外観フレームワークを使用することで、既存の jQuery ウィジェットの拡張や、独自のカスタムウィジェットの開発を行うことができます。XFA エンジンは様々なウィジェットを使用します。詳しくは、 [アダプティブフォームとHTML5 フォームの外観フレームワーク](/help/forms/using/introduction-widgets.md) を参照してください。
+Mobile Forms でカスタムウィジェットをプラグインできます。外観フレームワークを使用することで、既存の jQuery ウィジェットの拡張や、独自のカスタムウィジェットの開発を行うことができます。XFA エンジンは様々なウィジェットを使用します。詳しくは、[アダプティブフォームおよび HTML5 フォームの外観フレームワーク](/help/forms/using/introduction-widgets.md)を参照してください。
 
-![デフォルトとカスタムウィジェットの例](assets/custom-widgets.jpg)
+![デフォルトおよびカスタムウェジェットの例](assets/custom-widgets.jpg)
 **図：** *デフォルトとカスタムウィジェットの例*
 
 ## HTML5 Forms でのカスタムウィジェットの統合 {#integrating-custom-widgets-with-html-forms}
@@ -33,7 +33,7 @@ Mobile Forms でカスタムウィジェットをプラグインできます。�
 
 ### ウィジェットを作成します {#create-a-widget}
 
-HTML5 forms は、新しいウィジェットを作成するために拡張できるウィジェットフレームワークの実装を提供します。 この実装は jQuery ウィジェット *abstractWidget* です。これを拡張して新しいウィジェットを作成することができます。新しいウィジェットは、以下に記述する関数を拡張 / 上書きすることによって機能させることができます。
+HTML5 Forms には、新しいウィジェットを作成するために拡張可能なウィジェットフレームワークの実装が提供されています。この実装は jQuery ウィジェット *abstractWidget* です。これを拡張して新しいウィジェットを作成することができます。新しいウィジェットは、以下に記述する関数を拡張 / 上書きすることによって機能させることができます。
 
 <table> 
  <tbody> 
@@ -43,19 +43,19 @@ HTML5 forms は、新しいウィジェットを作成するために拡張で�
   </tr> 
   <tr> 
    <td>render</td> 
-   <td>レンダリング関数は、ウィジェットのデフォルト HTML 要素のための jQuery オブジェクトを返します。デフォルトの HTML 要素は、フォーカス可能タイプとします。例えば、&lt;a&gt;、&lt;input&gt;、&lt;li&gt; などです。返された要素は $userControl として使用されます。$userControl が上記の制約を指定した場合、AbstractWidget クラスの関数は期待どおりに動作します。それ以外の場合は、一部の一般的な API（フォーカス、クリック）に変更が必要になります。 </td> 
+   <td>レンダリング関数は、ウィジェットのデフォルト HTML 要素のための jQuery オブジェクトを返します。デフォルトの HTML 要素は、フォーカス可能タイプとします。例えば、&lt;a&gt;、&lt;input&gt;、&lt;li&gt; などです。返された要素は $userControl として使用されます。$userControl は上記の制約を指定し、次に AbstractWidget クラスの関数が期待通りに機能します。そうでない場合、一部の一般的な API（フォーカス、クリック）は変更を必要とします。 </td> 
   </tr> 
   <tr> 
    <td>getEventMap</td> 
-   <td>HTML イベントを XFA イベントに変換するマップを返します。<br /> {<br /> ぼかし：XFA_EXIT_EVENT,<br /> }<br /> この例では、ぼかしがHTMLイベントで、XFA_EXIT_EVENT が対応する XFA イベントであることを示しています。 </td> 
+   <td>HTML イベントを XFA イベントに変換するマップを返します。<br /> {<br /> blur: XFA_EXIT_EVENT,<br /> }<br /> この例は、blur が HTML イベントであり、XFA_EXIT_EVENT が対応する XFA イベントであることを示しています。 </td> 
   </tr> 
   <tr> 
    <td>getOptionsMap</td> 
-   <td>オプションの変更時に実行すべきアクションの詳細を提供するマップを返します。キーはウィジェットに提供されるオプションで、値はそのオプションの変更が検出されるたびに呼び出される関数です。 ウィジェットは、すべての一般的なオプション（value と displayValue を除く）のハンドラーを提供します</td> 
+   <td>オプションの変更時に実行すべきアクションの詳細を提供するマップを返します。キーはウィジェットに提供されるオプションです。値はそのオプションの変更が検出されたときに毎回呼び出される関数です。ウィジェットは、すべての一般的なオプション（value と displayValue を除く）のハンドラーを提供します</td> 
   </tr> 
   <tr> 
    <td>getCommitValue</td> 
-   <td>ウィジェットフレームワークは、ウィジェットの値が XFAModel に保存されたときに（例えば textField の exit イベント時に）毎回この関数を読み込みます。実装は、ウィジェットに保存された値を返す必要があります。 ハンドラーには、オプションの新しい値が提供されます。</td> 
+   <td>ウィジェットフレームワークは、ウィジェットの値が XFAModel に保存されたときに（例えば textField の exit イベント時に）毎回この関数を読み込みます。実装は、ウィジェットに保存された値を返す必要があります。ハンドラーには、オプションの新しい値が与えられます。</td> 
   </tr> 
   <tr> 
    <td>showValue</td> 
@@ -68,7 +68,7 @@ HTML5 forms は、新しいウィジェットを作成するために拡張で�
  </tbody> 
 </table>
 
-独自のウィジェットを作成するには、上記で作成されたプロファイルに、上書きされた関数と新しく追加された関数を含む JavaScript ファイルの参照を含めます。例えば、 *sliderNumericFieldWidget* は数値フィールド用のウィジェットです。 ヘッダーセクション内のプロファイルでウィジェットを使用するには、次の行を含めます。
+独自のウィジェットを作成するには、上記で作成されたプロファイルに、上書きされた関数と新しく追加された関数を含む JavaScript ファイルの参照を含めます。例えば、*sliderNumericFieldWidget* は数値フィールドのためのウィジェットです。ヘッダーセクション内のプロファイルでウィジェットを使用するには、次の行を含めます。
 
 ```
 window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
@@ -76,7 +76,7 @@ window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
 
 ### XFA スクリプティングエンジンでのカスタムウィジェットの登録 {#register-custom-widget-with-xfa-scripting-engine-nbsp}
 
-カスタムウィジェットコードの準備が整ったら、 `registerConfig`の API [Form Bridge](/help/forms/using/form-bridge-apis.md). それは widgetConfigObject を入力として受け取ります。
+カスタムウィジェットのコードが準備されたら、[Form Bridge](/help/forms/using/form-bridge-apis.md) の `registerConfig` API を使用して、スクリプトエンジンにウィジェットを登録します。それは widgetConfigObject を入力として受け取ります。
 
 ```
 window.formBridge.registerConfig("widgetConfig",
@@ -99,10 +99,10 @@ window.formBridge.registerConfig("widgetConfig",
 }*
 ```
 
-ここで、「identifier」は、特定のフィールド、特定のタイプの一連のフィールド、またはすべてのフィールドを表す jQuery CSS セレクターです。 以下に、様々なケースでの識別子の値を示します。
+ここで「identifier」は、特定のフィールド、特定のタイプの一連のフィールド、またはすべてのフィールドを現す jQuery CSS セレクターです。以下には、さまざまなケースでの識別子の値が記載されています。
 
 | 識別子のタイプ | 識別子 | 説明 |
 |---|---|---|
 | fieldname の名前を持つ特定のフィールド | 識別子:&quot;div.fieldname&quot; | 「fieldname」の名前を持つすべてのフィールドはウィジェットの使用によりレンダリングされます。 |
-| タイプ「type」のすべてのフィールド（type は NumericField、DateField など）： | 識別子:&quot;div.type&quot; | Timefield と DateTimeField の場合、タイプは textfield です。これらのフィールドはサポートされていません。 |
-| すべてのフィールド | 識別子：&quot;div.field&quot; |  |
+| 「type」タイプのすべてのフィールド（ここで type は NumericField、DateField などです。）： | 識別子:&quot;div.type&quot; | Timefield と DateTimeField の場合、これらのフィールドはまだサポートされていないため、タイプは textfield です。 |
+| すべてのフィールド | 識別子：「div.field」 |  |

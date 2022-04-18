@@ -67,7 +67,7 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 | メッセージリスト | [メッセージ](configure-messaging.md) |
 | Q&amp;A | [質問と回答](working-with-qna.md) |
 | クイック検索 | [検索](search.md) |
-| 評価 | [評価](rating.md) |
+| レーティング | [レーティング](rating.md) |
 | 関連する質問 | [質問と回答](working-with-qna.md) |
 | レビュー | [レビュー](reviews.md) |
 | レビューの概要 (表示) | [レビュー](reviews.md) |

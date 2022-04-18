@@ -21,7 +21,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 テンプレートはページを作成するための雛形として使用され、選択した範囲内で使用できるコンポーネントを定義します。テンプレートは、そこから作成されるページと同じ構造を持つノードの階層ですが、実際のコンテンツは含みません。
 
@@ -62,14 +62,13 @@ ht-degree: 89%
 >
 >* [テンプレート](/help/sites-developing/templates.md)
 >* [コンポーネント](/help/sites-developing/components.md)
-
 >
 
 
 テンプレートとコンポーネントについての基本的な知識が得られたら、次のリソースを参照してください。
 
 * [テンプレートとコンポーネントの作成および追加](/help/mobile/mobile-ondemand-app-templates.md)
-* [コンテンツのプロパティを使用したコンテンツの書き出し](/help/mobile/on-demand-content-properties-exporting.md)
+* [コンテンツのプロパティを使用したコンテンツのエクスポート](/help/mobile/on-demand-content-properties-exporting.md)
 * [ベストプラクティス](/help/mobile/best-practices-aem-mobile.md)
 * [AEM Mobile コンテンツサービスの開発](/help/mobile/developing-content-services.md)
 

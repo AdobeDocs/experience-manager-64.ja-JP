@@ -13,7 +13,7 @@ exl-id: 3f55a02c-2733-4f69-8112-7c6c4c98938c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '558'
-ht-degree: 38%
+ht-degree: 42%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 38%
 
 開発者向けの詳細な情報は、[タグの重要事項](tag.md)を参照してください。
 
-詳しくは、 [タグの管理](../../help/sites-administering/tags.md) タグの作成と管理、およびタグが適用されるコンテンツについて説明します。
+タグの作成および管理や、タグが適用されるコンテンツについては、[タグの管理](../../help/sites-administering/tags.md)を参照してください。
 
 ## Social タグクラウドの追加 {#adding-a-social-tag-cloud}
 
@@ -78,9 +78,9 @@ ht-degree: 38%
 
 * **[!UICONTROL タイトルの完全なパスを表示]**&#x200B;オンにすると、適用されたタグごとに、親タグと名前空間のタイトルが表示されます。
 
-   次に例を示します。
+   次は例です。
 
-   * チェック: `Geometrixx Media: Gadgets / Cars`
+   * チェック済み: `Geometrixx Media: Gadgets / Cars`
    * 未チェック: `Cars`
 
    シンプルなタグの場合は、表示に違いは現れません。

@@ -13,7 +13,7 @@ exl-id: 482c5889-d756-428b-bf0c-38c372e3c8b6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -30,9 +30,9 @@ Adobe Campaign は、あらゆるオンラインチャネルとオフライン�
 
 * [Adobe Campaign 6.1 との統合](/help/sites-administering/campaignonpremise.md)
 * [Adobe Campaign Standard との統合](/help/sites-administering/campaignstandard.md)
-* [電子メールテンプレートのベストプラクティス](/help/sites-administering/best-practices-for-email-templates.md)
+* [メールテンプレートのベストプラクティス](/help/sites-administering/best-practices-for-email-templates.md)
 * [Adobe Campaign 統合に関するトラブルシューティング](/help/sites-administering/troubleshooting-campaignintegration.md)
 
 >[!NOTE]
 >
->関連するAEM Community の記事を確認するには、以下を参照してください。 [Adobe Experience ManagerとAdobe Campaign Standardの統合によるニューレターの作成](https://helpx.adobe.com/jp/experience-manager/using/aem_campaign.html).
+>関連する AEM コミュニティの記事を確認するには、「[Adobe Experience Manager と Adobe Campaign Standard を統合してニュースレターを作成する](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja&amp;CID=RedirectAEMCommunityKautuk)」を参照してください。

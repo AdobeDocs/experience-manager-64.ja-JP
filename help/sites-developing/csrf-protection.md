@@ -13,7 +13,7 @@ exl-id: 533c348e-517f-4d70-a89c-bfc87f71a633
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 60%
+ht-degree: 100%
 
 ---
 
@@ -31,18 +31,18 @@ ht-degree: 60%
 
 ### 依存関係 {#dependencies}
 
-に依存する任意のコンポーネント `granite.jquery` 依存関係は、CSRF 保護フレームワークのメリットを自動的に受けます。 どのコンポーネントでも該当しない場合は、 `granite.csrf.standalone` このフレームワークを使用する前に、
+`granite.jquery` 依存関係を信頼する任意のコンポーネント は、CSRF 保護フレームワークのメリットを自動的に受けます。どのコンポーネントにも当てはまらない場合、このフレームワークを使用するには `granite.csrf.standalone` への依存関係を宣言する必要があります。
 
 ### 暗号鍵のレプリケーション {#replicating-crypto-keys}
 
-トークンを利用するには、 `/etc/keys/hmac` バイナリをデプロイメント内のすべてのインスタンスに追加します。 HMAC 鍵をすべてのインスタンスにコピーするには、鍵を格納するパッケージを作成し、パッケージマネージャーを使用してすべてのインスタンスにインストールする方法が便利です。
+トークンを利用するには、デプロイメント内のすべてのインスタンスに `/etc/keys/hmac` バイナリをレプリケーションする必要があります。HMAC 鍵をすべてのインスタンスにコピーするには、鍵を格納するパッケージを作成し、パッケージマネージャーを使用してすべてのインスタンスにインストールする方法が便利です。
 
 >[!NOTE]
 >
->CSRF 対策フレームワークを使用するには、必要な[ディスパッチャー設定の変更](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)をおこなってください。
+>CSRF 対策フレームワークを使用するには、必要な[ディスパッチャー設定の変更](https://helpx.adobe.com/jp/experience-manager/brand-portal/user-guide.html)を行ってください。
 
 >[!NOTE]
 >
->Web アプリケーションでマニフェストキャッシュを使用する場合は、必ず「**&amp;ast;**」がマニフェストに追加されます。 詳しくは、こちらの[リンク](https://www.w3.org/TR/offline-webapps/)を参照してください。
+>Web アプリケーションでマニフェストキャッシュを使用する場合、トークンがオフラインで CSRF トークンの生成を呼び出さないように、「**&amp;ast;**」をマニフェストに追加してください。詳しくは、こちらの[リンク](https://www.w3.org/TR/offline-webapps/)を参照してください。
 >
->CSRF 攻撃とその軽減方法について詳しくは、[OWASP のクロスサイトリクエストフォージェリに関するページ](https://owasp.org/www-community/attacks/csrf)を参照してください。
+>CSRF 攻撃とその対策について詳しくは、[クロスサイトリクエストフォージェリに関する OWASP のページ](https://owasp.org/www-community/attacks/csrf)を参照してください。

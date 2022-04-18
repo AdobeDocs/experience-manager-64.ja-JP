@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ## AEM 6.4 リリースノート {#aem-64-release-notes}
 
-[AEM 6.4 の最新の新機能については、リリースノートを参照してください。](/help/release-notes/home.md)
+[AEM 6.4 の最近の新機能については、リリースノートを参照してください。](/help/release-notes/home.md)
 
 ## AEM 6.4 チュートリアルビデオ {#aem-64-tutorial-videos}
 

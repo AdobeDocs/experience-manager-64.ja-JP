@@ -13,11 +13,11 @@ exl-id: 84db73b0-1bc3-4c39-9bc2-0840e24832b0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '285'
-ht-degree: 78%
+ht-degree: 88%
 
 ---
 
-# ベストプラクティス{#best-practices}
+# ベストプラクティス {#best-practices}
 
 オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
 
@@ -53,13 +53,13 @@ ht-degree: 78%
   </tr>
   <tr>
    <td>ダイナミックイメージング</td> 
-   <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">ダイナミックイメージングのベストプラクティス</a></td> 
+   <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging のベストプラクティス</a></td> 
    <td><p>Dynamic Media機能を使用している場合、またはDynamic Mediaとの統合時に、最適な結果を得るために画像をシャープにする方法と、画質を最適化する最適な方法について説明します。</p> </td> 
   </tr>
   <tr>
-   <td>多言語のアセット</td> 
+   <td>多言語の Assets</td> 
    <td><a href="/help/assets/best-practices-for-translating-assets-efficiently.md">翻訳のベストプラクティス</a></td> 
-   <td>AEM のアセットの効率的な翻訳に関するベストプラクティスを示します。</td> 
+   <td>AEM Assets の効率的な翻訳に関するベストプラクティスを説明します。</td> 
   </tr>
  </tbody>
 </table>
@@ -70,8 +70,8 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
 
 |  |  |  |
 |---|---|---|
-| オーサリングツール | [オーサー環境とツール](/help/sites-authoring/author-environment-tools.md) | ページの作成に使用するツールの概要を示します。 |
-| ページの整理 | [ページの作成と整理](/help/sites-authoring/managing-pages.md) | 命名規則を含む、ページの最適な整理方法の概要を説明します。 |
+| オーサリングツール | [オーサー環境とツール](/help/sites-authoring/author-environment-tools.md) | ページのオーサリングに使用されるツールの概要を説明します。 |
+| ページの整理 | [ページの作成と整理](/help/sites-authoring/managing-pages.md)。 | 命名規則を含む、ページの最適な整理方法の概要を説明します。 |
 
 ## Forms {#forms}
 

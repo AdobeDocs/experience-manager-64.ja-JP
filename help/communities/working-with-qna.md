@@ -115,7 +115,7 @@ Q&amp;A（質問と回答）フォーラム機能は、コミュニティメン�
 
 * **[!UICONTROL モデレートのしきい値]**&#x200B;メンバーが質問または回答に何回フラグを設定したらモデレーターに通知するかを指定します。初期設定は 1 （1 回）です。
 
-* **[!UICONTROL フラグ付けの制限]**&#x200B;質問または回答に何回フラグが設定されたら、公開表示から非公開にするかを指定します。-1 に設定した場合、フラグ付きの質問や回答が公開表示から非表示にされることはありません。 それ以外の場合は、この数はモデレートのしきい値以上にする必要があります。 初期設定は 5 です。
+* **[!UICONTROL フラグ付けの制限]**&#x200B;質問または回答に何回フラグが設定されたら、公開表示から非公開にするかを指定します。-1 に設定した場合、フラグ付きの質問や回答が公開表示から非表示にされることはありません。 それ以外の場合は、この数はモデレートのしきい値以上にする必要があります。 デフォルトは 5 です。
 
 #### 「タグフィールド」タブ {#tag-field-tab}
 
@@ -134,14 +134,14 @@ Q&amp;A（質問と回答）フォーラム機能は、コミュニティメン�
 
 * **[!UICONTROL 並べ替え基準]**
 許可されている並べ替えの選択項目をすべてオンにします。 
-`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`」を選択します。デフォルトは `Newest, Oldest, Last Updated` です。
+`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked` で使用される様々なキャッシュに配分されます。デフォルトは `Newest, Oldest, Last Updated` です。
 
 * **[!UICONTROL デフォルトとして設定]**&#x200B;プルダウンして、オンになっている並べ替えオプションのいずれかを選択し、デフォルトとして表示されるようにします。初期設定は です。 
 `Newest`
 
 * **[!UICONTROL Analytics 並べ替えの時間オプションの選択]**
 プルダウンして次のいずれかを選択 
-`All, Last 24 Hours, Last 7 Days, Last 30 Days`」を選択します。デフォルトは `All` です。
+`All, Last 24 Hours, Last 7 Days, Last 30 Days` で使用される様々なキャッシュに配分されます。デフォルトは `All` です。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 

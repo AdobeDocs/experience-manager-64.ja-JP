@@ -13,7 +13,7 @@ exl-id: 11b791f6-b14f-4f50-a64a-27a9501adeb7
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -62,7 +62,7 @@ AEM のメインコンソールが一覧表示されます。
 
 次に例を示します。
 
-* アクセスを制限するには **ツール**、読み取りアクセスを削除
+* **ツール**&#x200B;へのアクセスを制限するには、読み取りアクセス権を次の場所から削除します。
 
    `/libs/wcm/core/content/misc`
 
@@ -72,7 +72,7 @@ AEM のメインコンソールが一覧表示されます。
 
 ![cq_welcomescreensidebar](assets/cq_welcomescreensidebar.png)
 
-このリンクは、次のパスの下にノードが存在し、読み取りアクセス権があるかどうかに基づいています。**
+このリンクは、次のパスの下にノードが存在し、読み取りアクセス権があるかどうかに基づいています&#x200B;*。*
 
 `/libs/cq/core/content/welcome`
 
@@ -163,25 +163,25 @@ AEM のメインコンソールが一覧表示されます。
 
 リンクを表すノードへの読み取りアクセス権を削除することによって、特定のユーザーまたはグループからリンクを非表示にできます。
 
-* リソース — 次へのアクセスを削除します。
+* リソース - 次の場所へのアクセス権を削除します。
 
    `/libs/cq/core/content/welcome/resources/<link-target>`
 
-* ドキュメント — 次へのアクセスを削除：
+* ドキュメント - 次の場所へのアクセス権を削除します。
 
    `/libs/cq/core/content/welcome/docs/<link-target>`
 
-* 機能 — 次へのアクセスを削除：
+* 機能 - 次の場所へのアクセス権を削除します。
 
    `/libs/cq/core/content/welcome/features/<link-target>`
 
 次に例を示します。
 
-* リンク先を削除するには **レポート**、読み取りアクセスを削除
+* **レポート**&#x200B;へのリンクを削除するには、次の場所から読み取りアクセス権を削除します。
 
    `/libs/cq/core/content/welcome/resources/reports`
 
-* リンク先を削除するには **パッケージ**、読み取りアクセスを削除
+* **パッケージ**&#x200B;へのリンクを削除するには、次の場所から読み取りアクセス権を削除します。
 
    `/libs/cq/core/content/welcome/features/packages`
 
@@ -189,16 +189,15 @@ AEM のメインコンソールが一覧表示されます。
 
 ### リンク選択の仕組み {#link-selection-mechanism}
 
-In `/libs/cq/core/components/welcome/welcome.jsp` 使用は次のもので構成されます： [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)：プロパティを持つノードに対してクエリを実行します。
+`/libs/cq/core/components/welcome/welcome.jsp` では、次のプロパティを持つノードに対してクエリを実行する [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html) を使用します。
 
-* `jcr:mixinTypes` 値： `cq:Console`
+* `jcr:mixinTypes`（値：`cq:Console`）
 
 >[!NOTE]
 >
 >既存のリストを表示するには、次のクエリーを実行します。
 >
 >* `select * from cq:Console`
-
 >
 
 
@@ -208,6 +207,6 @@ In `/libs/cq/core/components/welcome/welcome.jsp` 使用は次のもので構成
 
 [リンク選択メカニズム](#link-selection-mechanism)を使用して、独自のカスタム項目をリンクのリストに追加できます。
 
-カスタム項目をリストに追加するには、 `cq:Console` mixin をウィジェットまたはリソースに追加します。 次のプロパティを定義することによって、追加をおこないます。
+`cq:Console` Mixin をウィジェットまたはリソースに追加することで、カスタム項目をリストに追加できます。次のプロパティを定義することによって、追加をおこないます。
 
-* `jcr:mixinTypes` 値： `cq:Console`
+* `jcr:mixinTypes`（値：`cq:Console`）

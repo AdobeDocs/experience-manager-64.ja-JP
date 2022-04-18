@@ -1,7 +1,7 @@
 ---
-title: コンポーネントへのAdobe Analyticsトラッキングの追加
+title: コンポーネントへの Adobe Analyticsトラッキングの追加
 seo-title: Adding Adobe Analytics Tracking to Components
-description: コンポーネントへのAdobe Analyticsトラッキングの追加
+description: コンポーネントへの Adobe Analyticsトラッキングの追加
 seo-description: null
 uuid: 447b140c-678c-428d-a1c9-ecbdec75cd42
 contentOwner: User
@@ -13,17 +13,17 @@ exl-id: f3926a15-4378-464f-968f-661745af117c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1263'
-ht-degree: 46%
+ht-degree: 100%
 
 ---
 
-# コンポーネントへのAdobe Analyticsトラッキングの追加{#adding-adobe-analytics-tracking-to-components}
+# コンポーネントへの Adobe Analyticsトラッキングの追加{#adding-adobe-analytics-tracking-to-components}
 
-## ページコンポーネントへのAdobe Analyticsモジュールの追加 {#including-the-adobe-analytics-module-in-a-page-component}
+## Adobe Analytics モジュールをページコンポーネントに含める {#including-the-adobe-analytics-module-in-a-page-component}
 
-ページテンプレートコンポーネント ( 例： `head.jsp, body.jsp`)ContextHub とAdobe Analytics統合（これは統合の一部）を読み込むために、JSP インクルードが必要です。 すべてに、読み込み JavaScript ファイルが含まれます。
+ページテンプレートコンポーネント（`head.jsp, body.jsp` など）に ContextHub および Adobe Analytics 統合（クラウドサービスの一部）を読み込むには、JSP インクルードが必要です。どちらのインクルードでも JavaScript ファイルを読み込みます。
 
-ContextHub エントリは、 `<head>` タグの代わりに、Cloud Servicesを `<head>` そして `</body>` セクション；例：
+ContextHub エントリは `<head>` タグのすぐ下に含めるようにし、Cloud Services は `<head>` の中、および `</body>` セクションの前に含めるようにしてください。例：
 
 ```xml
 <head>
@@ -38,11 +38,11 @@ ContextHub エントリは、 `<head>` タグの代わりに、Cloud Servicesを
 </body>
 ```
 
-この `contexthub` スクリプトの後に挿入する `<head>` 要素によって ContextHub 機能がページに追加されます。
+`<head>` 要素の直後に挿入する `contexthub` スクリプトは、そのページに ContextHub 機能を追加します。
 
-この `cloudservices` スクリプトを `<head>` そして `<body>` 「 」セクションは、ページに追加されたクラウドサービス設定に適用されます。 ( ページで複数のCloud Services設定を使用する場合、ContextHub jsp とCloud Servicesjsp を 1 回だけ含める必要があります )。
+`<head>` と `<body>` セクションに追加する `cloudservices` スクリプトはページに追加されたクラウドサービス設定に適用されます（そのページで複数のクラウドサービス設定を使用する場合も、ContextHub の JSP と Cloud Services の JSP は一度だけ追加する必要があります）。
 
-Adobe Analyticsフレームワークをページに追加すると、 `cloudservices` スクリプトは、次の例のように、Adobe Analytics関連の javascript およびクライアント側ライブラリへの参照を生成します。
+Adobe Analytics フレームワークをページに追加すると、`cloudservices` スクリプトは、次の例のように、Adobe Analytics 関連の javascript およびクライアント側ライブラリへの参照を生成します。
 
 ```xml
 <div class="sitecatalyst cloudservice">
@@ -114,56 +114,56 @@ Geometrixx Outdoors をはじめ、すべての AEM サンプルサイトには�
 
 ### sitecatalystAfterCollect イベント {#the-sitecatalystaftercollect-event}
 
-この `cloudservices` スクリプトトリガー `sitecatalystAfterCollect` イベント：
+`cloudservices` スクリプトは、`sitecatalystAfterCollect` イベントを呼び出します。
 
 ```
 $CQ(document).trigger("sitecatalystAfterCollect");
 ```
 
-このイベントは、ページの追跡が完了したことを示すために呼び出されます。このページに対して追加の追跡操作を実行する場合は、ドキュメント読み込みイベントやドキュメント準備完了イベントではなく、このイベントをリスンする必要があります。の使用 `sitecatalystAfterCollect` イベントは、衝突やその他の予期しない動作を避けます。
+このイベントは、ページの追跡が完了したことを示すために呼び出されます。このページに対して追加の追跡操作を実行する場合は、ドキュメント読み込みイベントやドキュメント準備完了イベントではなく、このイベントをリスンする必要があります。`sitecatalystAfterCollect` イベントを使用すると、衝突やその他の予期せぬ動作を回避できます。
 
 >[!NOTE]
 >
->この `/libs/cq/analytics/clientlibs/sitecatalyst/sitecatalyst.js` ライブラリには、Adobe Analytics `s_code.js` ファイル。
+>`/libs/cq/analytics/clientlibs/sitecatalyst/sitecatalyst.js` ライブラリには、Adobe Analytics `s_code.js` ファイルからのコードが含まれます。
 
-## カスタムコンポーネントのAdobe Analyticsトラッキングの実装 {#implementing-adobe-analytics-tracking-for-custom-components}
+## カスタムコンポーネントの Adobe Analytics トラッキングの実装 {#implementing-adobe-analytics-tracking-for-custom-components}
 
-AEMコンポーネントがAdobe Analyticsフレームワークとやり取りできるようにします。 次に、Adobe Analyticsがコンポーネントデータを追跡するようにフレームワークを設定します。
+AEM コンポーネントが Adobe Analytics フレームワークとやり取りできるようにします。 次に、 Adobe Analytics がコンポーネントデータを追跡するようにフレームワークを設定します。
 
-Adobe Analyticsフレームワークとやり取りするコンポーネントは、フレームワークの編集時にサイドキックに表示されます。 コンポーネントをフレームワークにドラッグすると、コンポーネントのプロパティが表示され、Adobe Analyticsのプロパティにマッピングできます。 ( [基本トラッキングのためのフレームワークの設定](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework).)
+フレームワークを編集する際に、Adobe Analytics フレームワークとやり取りするコンポーネントがサイドキックに表示されます。このコンポーネントをフレームワークにドラッグすると、コンポーネントのプロパティが表示され、Adobe Analytics のプロパティにマップできるようになります（[基本トラッキングのためのフレームワークのセットアップ](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework)を参照してください）。
 
-コンポーネントにという名前の子ノードがある場合、コンポーネントはAdobe Analyticsフレームワークとやり取りできます `analytics`. `analytics` ノードには以下のプロパティがあります。
+コンポーネントは、`analytics` という子ノードを持つ場合に Adobe Analytics フレームワークとやり取りできます。`analytics` ノードには以下のプロパティがあります。
 
-* `cq:trackevents`:コンポーネントが公開する CQ イベントを識別します。 （カスタムイベントを参照）。
-* `cq:trackvars`:Adobe Analyticsのプロパティにマッピングされる CQ 変数に名前を付けます。
+* `cq:trackevents`：コンポーネントが公開する CQ イベントを識別します。（カスタムイベントを参照）。
+* `cq:trackvars`：Adobe Analytics のプロパティにマップされる CQ 変数に名前を付けます。
 * `cq:componentName`：サイドキックに表示されるコンポーネントの名前。
-* `cq:componentGroup`:コンポーネントを含むサイドキック内のグループ。
+* `cq:componentGroup`：コンポーネントを含むサイドキック内のグループ。
 
-コンポーネントの JSP のコードによって、追跡を呼び出し、追跡対象のデータを定義する Javascript がページに追加されます。JavaScript で使用されるイベント名とデータ名は、 `analytics` ノードのプロパティ。
+コンポーネントの JSP のコードによって、追跡を呼び出し、追跡対象のデータを定義する Javascript がページに追加されます。Javascript で使用されるイベント名とデータ名は、`analytics` ノードのプロパティの対応する値と一致している必要があります。
 
 * ページの読み込み時にイベントデータを追跡するには、data-tracking 属性を使用します（[ページの読み込み時のカスタムイベントの追跡](/help/sites-developing/extending-analytics.md#tracking-custom-events-on-page-load)を参照）。
 * ユーザーがページの機能とやり取りするときにイベントデータを追跡するには、CQ_Analytics.record 関数を使用します（[ページの読み込み後のカスタムイベントの追跡](/help/sites-developing/extending-analytics.md#tracking-custom-events-after-page-load)を参照）。
 
-これらのデータトラッキングメソッドを使用する場合、Adobe Analytics統合モジュールは、Adobe Analyticsへの呼び出しを自動的に実行して、イベントとデータを記録します。
+これらの data-tracking メソッドを使用すると、Adobe Analytics 統合モジュールはイベントとデータを記録するための Adobe Analytics への呼び出しを自動的に実行します。
 
 ### 例：topnav クリック数の追跡 {#example-tracking-topnav-clicks}
 
-基盤 topnav コンポーネントを拡張し、Adobe Analyticsがページ上部のナビゲーションリンクのクリックを追跡できるようにします。 ナビゲーションリンクがクリックされると、Adobe Analyticsはクリックされたリンクと、そのリンクがクリックされたページを記録します。
+Adobe Analytics がページ上部にあるナビゲーションリンクのクリック数を追跡するように、基盤となる topnav コンポーネントを拡張します。ナビゲーションリンクがクリックされると、Adobe Analytics はクリックされたリンクと、クリックされたリンクがあるページを記録します。
 
 以降の手順をおこなうには、以下のタスクを終えている必要があります。
 
 * CQ アプリケーションの作成。
-* Adobe Analytics設定とAdobe Analytics Framework を作成しました。
+* Adobe Analytics 設定と Adobe Analytics フレームワーク を作成しました。
 
 #### topnav コンポーネントのコピー {#copy-the-topnav-component}
 
 topnav コンポーネントを CQ アプリケーションにコピーします。この手順では、アプリケーションが CRXDE Lite で設定されている必要があります。
 
-1. を右クリックします。 `/libs/foundation/components/topnav` ノードを選択し、「コピー」をクリックします。
+1. `/libs/foundation/components/topnav` ノードを右クリックして、「コピー」をクリックします。
 1. アプリケーションフォルダーの下の Components フォルダーを右クリックして、「貼り付け」をクリックします。
 1. 「すべて保存」をクリックします。
 
-#### Topnav とAdobe Analytics Framework の統合 {#integrating-topnav-with-the-adobe-analytics-framework}
+#### Topnav と Adobe Analytics フレームワークの統合 {#integrating-topnav-with-the-adobe-analytics-framework}
 
 topnav コンポーネントを設定し、追跡するイベントとデータを定義するように JSP ファイルを編集します。
 
@@ -289,13 +289,13 @@ topnav.jsp ファイルの内容は次のようになります。
 
 >[!NOTE]
 >
->多くの場合、ContextHub からのデータを追跡することが望ましいです。 JavaScript を使用してこの情報を取得する方法について詳しくは、 [ContextHub の値へのアクセス](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub).
+>ContextHub データの追跡が推奨される場合がしばしばあります。この情報を Javascript を使用して取得する方法については、[ContextHub の値へのアクセス](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub)を参照してください。
 
 #### サイドキックへの追跡コンポーネントの追加 {#adding-the-tracking-component-to-sidekick}
 
-フレームワークに追加できるように、Adobe Analyticsでの追跡を有効にするコンポーネントをサイドキックに追加します。
+フレームワークに追加できるように、Adobe Analytics を使用して追跡できるコンポーネントをサイドキックに追加します。
 
-1. Adobe Analytics設定からAdobe Analyticsフレームワークを開きます。 （[http://localhost:4502/etc/cloudservices/sitecatalyst.html](http://localhost:4502/etc/cloudservices/sitecatalyst.html)）。
+1. Adobe Analytics 設定から Adobe Analytics フレームワークを開きます。([http://localhost:4502/etc/cloudservices/sitecatalyst.html](http://localhost:4502/etc/cloudservices/sitecatalyst.html))
 1. サイドキックでデザインボタンをクリックします。
 
    ![](do-not-localize/chlimage_1.png)
@@ -309,26 +309,26 @@ topnav.jsp ファイルの内容は次のようになります。
 
 #### topnav コンポーネントのフレームワークへの追加 {#adding-the-topnav-component-to-your-framework}
 
-topnav コンポーネントをAdobe Analyticsフレームワークにドラッグし、コンポーネント変数とイベントをAdobe Analytics変数とイベントにマッピングします。 ( [基本トラッキングのためのフレームワークの設定](/help/sites-administering/adobeanalytics-connect.md).)
+topnav コンポーネントを Adobe Analytics フレームワークにドラッグし、コンポーネントの変数とイベントを Adobe Analytics の変数とイベントにマップします（[基本トラッキングのためのフレームワークのセットアップ](/help/sites-administering/adobeanalytics-connect.md)を参照してください）。
 
 ![chlimage_1-1](assets/chlimage_1-1.png)
 
-topnav コンポーネントが、Adobe Analyticsフレームワークと統合されました。 ページにコンポーネントを追加する際に、上部のナビゲーションバーの項目をクリックすると、トラッキングデータがAdobe Analyticsに送信されます。
+topnav コンポーネントが Adobe Analytics フレームワークと統合されました。コンポーネントをページに追加すると、上部ナビゲーションバーの項目のクリックによって、追跡データが Adobe Analytics に送信されます。
 
-### s.products データのAdobe Analyticsへの送信 {#sending-s-products-data-to-adobe-analytics}
+### s.products データの Adobe Analytics への送信 {#sending-s-products-data-to-adobe-analytics}
 
-コンポーネントは、Adobe Analyticsに送信される s.products 変数のデータを生成できます。 s.products 変数に貢献するようにコンポーネントをデザインします。
+コンポーネントは、Adobe Analytics に送信される s.products 変数用のデータを生成できます。s.products 変数に影響を与えるようにコンポーネントをデザインします。
 
 * 特定の構造の `product` という値を記録します。
-* のデータメンバーを公開します `product` Adobe Analyticsフレームワーク内でAdobe Analytics変数にマッピングできるように、値を指定します。
+* Adobe Analytics フレームワークの Adobe Analytics 変数にマップできるように、`product` 値を持つデータメンバーを公開します。
 
-Adobe Analytics s.products 変数は次の構文を使用します。
+Adobe Analytics の s.products 変数は、次の構文を使用します。
 
 ```
 s.products="category;product;quantity;price;eventY={value}|eventZ={value};evarA={value}|evarB={value}"
 ```
 
-Adobe Analytics統合モジュールは、 `s.products` 変数を `product` AEMコンポーネントが生成する値。 この `product` AEMコンポーネントが生成する javascript の値は、次の構造を持つ値の配列です。
+Adobe Analytics 統合モジュールは、AEM コンポーネントが生成する `product` 値を使用して、`s.products` 変数を組み立てます。AEM コンポーネントが生成する Javascript の `product` 値は、次の構造を持つ値の配列です。
 
 ```
 "product": [{
@@ -351,9 +351,9 @@ Adobe Analytics統合モジュールは、 `s.products` 変数を `product` AEM�
 
 >[!NOTE]
 >
->イベントが製品値に関連付けられていない場合、Adobe Analyticsは `prodView` イベントを設定します。
+>product 値と関連付けられているイベントがない場合、Adobe Analytics はデフォルトで `prodView` イベントを使用します。
 
-この `analytics` コンポーネントのノードは、 `cq:trackvars` プロパティ：
+コンポーネントの `analytics` ノードは、`cq:trackvars` プロパティを使用して変数名を公開する必要があります。
 
 * product.category
 * product.sku
@@ -440,6 +440,6 @@ e コマースモジュールには、s.products 変数データを生成する�
 
 #### トラッキングコールのサイズの制限 {#limiting-the-size-of-tracking-calls}
 
-一般的に、Web ブラウザーでは GET リクエストのサイズが制限されます。CQ の product と SKU の値はリポジトリのパスなので、複数の値を含む product 配列はリクエストサイズの制限を超えることがあります。したがって、コンポーネントでは `product` 各 `CQ_Analytics.record function`. 追跡する必要がある項目数が制限を超える可能性がある場合は、複数の関数を作成します。
+一般的に、Web ブラウザーでは GET リクエストのサイズが制限されます。CQ の product と SKU の値はリポジトリのパスなので、複数の値を含む product 配列はリクエストサイズの制限を超えることがあります。そのため、コンポーネントで各 `CQ_Analytics.record function` の `product` 配列内の項目数を制限する必要があります。追跡する必要がある項目数が制限を超える可能性がある場合は、複数の関数を作成します。
 
 例えば、e コマースの submitorder コンポーネントでは、1 つのコール内の `product` 項目数が 4 に制限されています。カートに 5 つ以上の製品が含まれると、このコンポーネントは複数の `CQ_Analytics.record` 関数を生成します。

@@ -13,7 +13,7 @@ exl-id: 46d0765d-fb77-4332-8fbb-5bd2abcd6806
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '424'
-ht-degree: 33%
+ht-degree: 59%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 33%
 
 >[!CAUTION]
 >
->このコンポーネントは、プロジェクトレベルのカスタマイズが必要ない限り、すぐに使用できる状態では機能しなくなりました。
+>このコンポーネントは、広範なプロジェクトレベルのカスタマイズをしない限り、標準搭載の状態では使用できなくなりました。
 
 ## ビデオプロファイルの設定 {#configure-video-profiles}
 
@@ -35,7 +35,7 @@ HTML5 要素に使用するビデオプロファイルの定義が必要にな�
 
 また、ビデオコンポーネントのデザインと、 [!UICONTROL 再生], [!UICONTROL Flash]、および [!UICONTROL 詳細].
 
-## FFmpeg のインストールとAEMの設定 {#install-ffmpeg}
+## FFmpeg のインストールと AEM の設定 {#install-ffmpeg}
 
 ビデオコンポーネントは、からダウンロードできるビデオの適切なトランスコードに、サードパーティのオープンソース製品 FFmpeg を使用します。 [https://ffmpeg.org/](https://ffmpeg.org/). FFmpeg をインストールした後、特定のオーディオコーデックと特定のランタイムオプションを使用するようにAEMを設定する必要があります。
 
@@ -70,7 +70,7 @@ HTML5 要素に使用するビデオプロファイルの定義が必要にな�
 **AEMを設定するには**:
 
 1. Web ブラウザーで [!UICONTROL CRXDE Lite] を開きます。([http://localhost:4502/crx/de](http://localhost:4502/crx/de))
-1. を選択します。 `/libs/settings/dam/video/format_aac/jcr:content` ノードに追加し、ノードのプロパティが次のようになっていることを確認します。
+1. `/libs/settings/dam/video/format_aac/jcr:content` ノードを選択し、ノードのプロパティが次のようになっていることを確認します。
 
    * audioCodec：
 
@@ -84,7 +84,7 @@ HTML5 要素に使用するビデオプロファイルの定義が必要にな�
        -flags +loop -me_method umh -g 250 -qcomp 0.6 -qmin 10 -qmax 51 -qdiff 4 -bf 16 -b_strategy 1 -i_qfactor 0.71 -cmp chroma -subq 8 -me_range 16 -coder 1 -sc_threshold 40 -b-pyramid normal -wpredp 2 -mixed-refs 1 -8x8dct 1 -fast-pskip 1 -keyint_min 25 -refs 4 -trellis 1 -direct-pred 3 -partitions i8x8,i4x4,p8x8,b8x8
       ```
 
-1. 設定をカスタマイズするには、 `/apps/settings/` ノードを開き、以下に同じ構造を移動します。 `/conf/global/settings/` ノード。 では編集できません `/libs` ノード。 例えば、パスをオーバーレイするには、次のように指定します。 `/libs/settings/dam/video/fullhd-bp`、で作成します。 `/conf/global/settings/dam/video/fullhd-bp`.
+1. 設定をカスタマイズするには、 `/apps/settings/` ノードにオーバーレイを作成し、同じ構造を `/conf/global/settings/` ノードの下に移動します。`/libs` ノードで編集することはできません。例えば、パス `/libs/settings/dam/video/fullhd-bp` をオーバーレイするには、`/conf/global/settings/dam/video/fullhd-bp` で作成します。
 
    >[!NOTE]
    >
@@ -94,4 +94,4 @@ HTML5 要素に使用するビデオプロファイルの定義が必要にな�
 
 >[!NOTE]
 >
->OOTB ワークフローモデルは、AEMインスタンスをアップグレードしても保持されません。 Adobeでは、OOTB ワークフローモデルを編集する前にコピーすることをお勧めします。 例えば、 DAM アセットの更新モデルの FFmpeg トランスコーディング手順を編集する前に、 OOTB DAM アセットの更新モデルをコピーして、アップグレード前に存在したビデオプロファイル名を選択します。 次に、 `/apps` OOTB モデルに対するカスタムの変更をAEMで取得できるようにするノードです。
+>OOTB ワークフローモデルは、AEMインスタンスをアップグレードしても保持されません。 Adobeでは、OOTB ワークフローモデルを編集する前にコピーすることをお勧めします。 例えば、DAM アセットの更新モデルの FFmpeg トランスコーディング手順を修正する前に OOTB DAM アセットの更新モデルをコピーして、アップグレード前に存在していたビデオプロファイル名を選択します。その後、`/apps` ノードをオーバーレイして、AEM で OOTB モデルへのカスタム変更を取得できます。

@@ -13,7 +13,7 @@ exl-id: b2814b0d-e843-4aba-8c74-a3be0a96f726
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '407'
-ht-degree: 87%
+ht-degree: 95%
 
 ---
 
@@ -66,7 +66,7 @@ ht-degree: 87%
 ## JBoss への Java オプションの追加 {#add-java-options-to-jboss}
 
 1. JBoss アプリケーションサーバーを停止します。
-1. を開きます。 *[appserver root]*/bin/run.bat (Windows) または run.sh （Linux または UNIX）をエディターに追加し、必要に応じて任意の Java オプションを追加します。
+1. *[appserver root]*/bin/run.bat（Windows）または run.sh（Linux または UNIX）をエディターで開き、必要に応じて Java オプションを追加します。
 1. サーバーを再起動します。
 
 ## WebLogic への Java オプションの追加 {#add-java-options-to-weblogic}
@@ -74,9 +74,9 @@ ht-degree: 87%
 1. 「 https:// 」と入力して WebLogic 管理コンソールを起動します。[ホスト名]:[ポート]/console （Web ブラウザーの URL 行）
 1. WebLogic Server ドメインに対して作成したユーザー名とパスワードを入力し、「Log In」をクリックします。「Change Center」で、「Lock &amp; Edit」をクリックします。
 1. 「Domain Structure」で、Environment／Servers をクリックし、右側のウィンドウで、管理対象サーバー名をクリックします。
-1. 次の画面で、「Configuration」タブ／「Server Start」タブをクリックします。
-1. 「Arguments」ボックスで、現在の内容の末尾に必要な引数を付加します。例えば、次を追加します。 `Dadobe.healthmonitor.enabled=false` ヘルスモニターを無効にします。
-1. 「Save」をクリックし、「Activate Changes」をクリックします。
+1. 次の画面で、「設定タブ」、「サーバー起動」タブをクリックします。
+1. 「Arguments」ボックスで、現在の内容の末尾に必要な引数を付加します。例えば、‑ `Dadobe.healthmonitor.enabled=false` を追加すると、ヘルスモニターが無効になります。
+1. 「保存」をクリックし、「変更をアクティベート」をクリックします。
 1. WebLogic 管理対象サーバーを再起動します。
 
 ## WebSphere への Java オプションの追加 {#add-java-options-to-websphere}
@@ -89,6 +89,6 @@ ht-degree: 87%
 
 1. 右側のウィンドウで、サーバー名をクリックします。
 1. 「Server Infrastructure」で、Java and forms workflow／Process Definition をクリックします。
-1. 「Additional Properties」で、「Java Virtual Machine」をクリックします。
+1. 「その他のプロパティ」で「Java 仮想マシン」をクリックします。
 1. 「Generic JVM arguments」ボックスに、必要な引数を入力します。
 1. 「OK」または「Apply」をクリックし、「Save directly to the master configuration」をクリックします。

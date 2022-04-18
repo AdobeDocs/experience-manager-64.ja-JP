@@ -13,7 +13,7 @@ exl-id: 9a3857fd-4f62-4293-950b-75626e4dcf50
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '326'
-ht-degree: 93%
+ht-degree: 95%
 
 ---
 
@@ -61,7 +61,7 @@ AEM サイトと ExactTarget の統合については、[ExactTarget との統�
 
 Facebook および Twitter は広く普及しているソーシャルネットワーキングサービスです。AEM と Facebook および Twitter の統合によって、組織が所有しているデジタル資産に Facebook または Twitter のログインオプションを付けて、プロファイル情報に基づいてユーザーエクスペリエンスをパーソナライズすることができます。マーケティング担当者は、プロファイル情報を他のソースのデータ（顧客関係管理システムや Web サイトのプロファイルなど）と組み合わせて、統一されたユーザービューを作成することもできます。
 
-詳しくは、 [ソーシャルログイン](/help/communities/social-login.md) を参照してください。
+詳しくは、[ソーシャルログイン](/help/communities/social-login.md)を参照してください。
 
 ## その他のプロバイダーとの統合 {#integrating-with-other-providers}
 

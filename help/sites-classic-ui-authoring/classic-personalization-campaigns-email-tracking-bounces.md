@@ -1,5 +1,5 @@
 ---
-title: バウンス（配信不能）電子メールの追跡
+title: 'バウンス（配信不能）電子メールの追跡 '
 seo-title: Tracking Bounced Emails
 description: 多数のユーザーにニュースレターを送信する場合、一般的に、リスト内に無効な電子メールアドレスが一部含まれています。それらのアドレスにニュースレターを送信すると、配信不能として戻ってきます。AEM にはそうしたバウンスを管理する機能があり、バウンスカウンターの設定値を超えると、それらのアドレスへのニュースレターの送信を停止できます。
 seo-description: When you send a newsletter to many users, there are usually some invalid emails addresses in the list. Sending newsletters to those addresses bounce back. AEM is capable of managing those bounces and can stop sending newsletters to those addresses after the configured bounce counter is exceeded.
@@ -13,21 +13,21 @@ exl-id: 3be35bb8-3485-42a6-8195-c3e95d097856
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '711'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
-# バウンス（配信不能）電子メールの追跡{#tracking-bounced-emails}
+# バウンス（配信不能）電子メールの追跡 {#tracking-bounced-emails}
 
 >[!NOTE]
 >
->Adobeは、AEM SMTP サービスによって送信される開封済み/バウンス済み電子メールの追跡をさらに強化する予定はありません。
+>アドビは、AEM SMTP サービスによって送信される開封済みまたはバウンス済みのメールの追跡をさらに強化する予定はありません。
 >
->お勧めは、 [Adobe CampaignとAEMの統合を活用](/help/sites-administering/campaign.md).
+>[Adobe Campaign や、Adobe Campaign と AEM の統合環境を活用](/help/sites-administering/campaign.md)することをお勧めします。
 
-多数のユーザーにニュースレターを送信する場合、一般的に、リスト内に無効な電子メールアドレスが一部含まれています。それらのアドレスにニュースレターを送信すると、配信不能として戻ってきます。AEM にはそうしたバウンスを管理する機能があり、バウンスカウンターの設定値を超えると、それらのアドレスへのニュースレターの送信を停止できます。デフォルトでは、バウンス率は 3 ですが、設定可能です。
+多数のユーザーにニュースレターを送信する場合、一般的に、リスト内に無効な電子メールアドレスが一部含まれています。それらのアドレスにニュースレターを送信すると、配信不能として戻ってきます。AEM にはそうしたバウンスを管理する機能があり、バウンスカウンターの設定値を超えると、それらのアドレスへのニュースレターの送信を停止できます。デフォルトではバウンス率は 3 になっていますが、設定可能です。
 
-AEM でバウンス電子メールを追跡するには、バウンス電子メールが受信される既存のメールボックス（通常は、ニュースレターの送信元を示す「送信元」の電子メールアドレス）をポーリングするように AEM をセットアップする必要があります。AEM はこのインボックスをポーリングし、ポーリング設定で指定されたパスの下のすべての電子メールを読み込みます。次に、ワークフローが実行され、users 内のバウンス電子メールアドレスが検索され、それに応じて、ユーザーの bounceCounter プロパティの値が更新されます。設定された最大バウンス数を超えると、そのユーザーはニュースレターのリストから削除されます。
+AEM でバウンス電子メールを追跡するには、バウンス電子メールが受信される既存のメールボックス（通常は、ニュースレターの送信元を示す「送信元」の電子メールアドレス）をポーリングするように AEM をセットアップする必要があります。AEM はこのインボックスをポーリングし、ポーリング設定で指定されたパスの下のすべてのメールを読み込みます。次に、ワークフローが実行され、users 内のバウンス電子メールアドレスが検索され、それに応じて、ユーザーの bounceCounter プロパティの値が更新されます。設定された最大バウンス数を超えると、そのユーザーはニュースレターのリストから削除されます。
 
 ## Feed Importer の設定 {#configuring-the-feed-importer}
 
@@ -45,15 +45,15 @@ AEM でバウンス電子メールを追跡するには、バウンス電子メ�
 
    すべての設定で、ポーリング URL 内に以下に関する情報が必要です。
 
-   `username`: 接続のために使用するユーザー名
+   `username`：接続のために使用するユーザー名
 
-   `password`: 接続のために使用するパスワード
+   `password`：接続のために使用するパスワード
 
    また、プロトコルによっては、特定の設定を指定することができます。
 
    **POP3 設定のプロパティ：**
 
-   `pop3.leave.on.server`:メッセージをサーバーに残すかどうかを定義します。 サーバーにメッセージを残す場合は true を、そうでない場合は false を設定します。デフォルトは true です。
+   `pop3.leave.on.server`：サーバー上にメッセージを残すかどうかを定義します。サーバーにメッセージを残す場合は true を、そうでない場合は false を設定します。デフォルトは true です。
 
    **POP3 の例：**
 
@@ -65,9 +65,9 @@ AEM でバウンス電子メールを追跡するには、バウンス電子メ�
 
    検索するフラグを設定できます。
 
-   `imap.flag.SEEN`：新規/未表示のメッセージの場合は false を、既読のメッセージの場合は true を設定
+   `imap.flag.SEEN`：新規または未読のメッセージには false を、既読のメッセージには true を設定します。
 
-   詳しくは、 [https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html](https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html) フラグの完全なリストを参照してください。
+   フラグの詳細なリストについては、[https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html](https://java.sun.com/products/javamail/javadocs/javax/mail/Flags.Flag.html) を参照してください。
 
    **IMAP の例：**
 
@@ -84,9 +84,9 @@ AEM でバウンス電子メールを追跡するには、バウンス電子メ�
 
 ニュースレターサービスを設定するには：
 
-1. OSGi コンソール ( ) で、 `<host>:<port>/system/console/configMgr` をクリックし、 **MCM ニュースレター**.
+1. `<host>:<port>/system/console/configMgr` の OSGi コンソールで、「**MCM ニュースレター**」に移動します。
 
-1. サービスを設定して、終了したら変更を保存します。
+1. サービスを設定して、完了したら変更内容を保存します。
 
    ![chlimage_1-1](assets/chlimage_1-1.png)
 

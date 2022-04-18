@@ -10,7 +10,7 @@ exl-id: 248c5adf-23e9-463f-9f29-869ae2426c22
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '902'
-ht-degree: 96%
+ht-degree: 99%
 
 ---
 
@@ -141,24 +141,24 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
   </tr> 
   <tr> 
    <td>host_prefix</td> 
-   <td>オーサーサーバーの URL。例： https://10.41.42.66:4502<br /> </td> 
+   <td>オーサーサーバーの URL。例えば、https://10.41.42.66:4502<br /> です。 </td> 
   </tr> 
   <tr> 
    <td>publish_prefix</td> 
-   <td>パブリッシュサーバーの URL。例： https://10.41.42.66:4503</td> 
+   <td>パブリッシュサーバーの URL。例えば、https://10.41.42.66:4503 です。</td> 
   </tr> 
  </tbody> 
 </table>
 
 ## 電子メール通知におけるカスタムメタデータの使用 {#using-custom-metadata-in-an-email-notification}
 
-電子メール通知ではカスタムメタデータを使用することもできます。カスタムメタデータには、システム生成メタデータに加えて追加情報が含まれています。例えば、データベースから取得したポリシーの詳細などです。ECMAScript または OSGi バンドルを使用して、crx-repository にカスタムメタデータを追加できます。
+電子メール通知ではカスタムメタデータを使用することもできます。カスタムメタデータには、システム生成メタデータに加えて追加情報が含まれています。例えば、データベースから取得したポリシーの詳細などです。ECMAScript バンドルまたは OSGi バンドルを使用して、カスタムデータを crx-repository に追加することができます。
 
 ### ECMAScript を使用したカスタムメタデータの追加  {#use-ecmascript-to-add-custom-metadata}
 
-[ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) はスクリプト言語です。この言語は、クライアント側のスクリプト作成とサーバーアプリケーションに使用されます。次の手順を実行して、ECMAScrip を使用して電子メールテンプレートにカスタムメタデータを追加します。
+[ECMAScript](https://ja.wikipedia.org/wiki/ECMAScript) はスクリプト言語です。この言語は、クライアント側のスクリプト作成とサーバーアプリケーションに使用されます。次の手順を実行して、ECMAScript を使用して電子メールテンプレートにカスタムメタデータを追加します。
 
-1. 管理者アカウントを使用して CRX DE にログインします。URL は `https://[server]:[port]/crx/de/index.jsp` です
+1. 管理者アカウントを使用して CRX DE にログインします。URL は `https://[server]:[port]/crx/de/index.jsp` です。
 
 1. /apps/fd/dashboard/scripts/metadataScripts に移動します。拡張子が .ecma のファイルを作成します。例えば、usermetadata.ecma です。
 
@@ -184,7 +184,7 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
 
 1. （オプション）スクリプトのタイトルの指定：
 
-   タイトルを自分で指定しない場合、カスタムメタデータフィールドには、ECMAScript ファイルの完全なパスが表示されます。次の手順を実行して、スクリプトに意味のあるタイトルを指定します。
+   タイトルを自分で指定しない場合、カスタムメタデータフィールドには、ECMAScript ファイルの完全なパスが表示されます。次の手順で、スクリプトに有意のタイトルを指定します。
 
    1. スクリプトノードを拡張します。**[!UICONTROL jcr:content]** ノードを右クリックしてから、「**[!UICONTROL Mixins]**」をクリックします。
    1. Mixin を編集ダイアログに mix:title と入力して、「**+**」をクリックします。

@@ -14,7 +14,7 @@ exl-id: 4ecb6e10-1d6b-4065-917f-e86215687e29
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '963'
-ht-degree: 90%
+ht-degree: 98%
 
 ---
 
@@ -57,30 +57,30 @@ ht-degree: 90%
 
 * 新しいページの作成後も、そのページとテンプレートの間に動的接続が維持されます。つまり、テンプレートの構造に対する変更は、そのテンプレートを使用して作成されるすべてのページに反映されます（初期コンテンツに対する変更は反映されません）。
 * デザインプロパティを保持するには、テンプレートエディターから編集できるコンテンツポリシーを使用します（ページエディター内のデザインモードは使用しません）。
-* 次の場所に保存されます。 `/conf`
+* `/conf` に保存されます。
 * 詳しくは、[編集可能テンプレート](/help/sites-developing/page-templates-editable.md)を参照してください。
 
 >[!NOTE]
 >
->AEMコミュニティの記事では、編集可能なテンプレートを使用してExperience Managerサイトを開発する方法を説明しています。詳しくは、 [編集可能なテンプレートを使用したAdobe Experience Manager 6.4 Web サイトの作成](https://helpx.adobe.com/jp/experience-manager/using/first_aem64_website.html).
+>AEM コミュニティの記事の[編集可能テンプレートを使用した Adobe Experience Manager 6.4 の web サイトの作成](https://helpx.adobe.com/experience-manager/using/first_aem64_website.html)では、編集可能テンプレートを使用して Experience Manager サイトを開発する方法を説明しています。
 
 ### 静的テンプレート {#static-templates}
 
-静的テンプレート:
+静的テンプレート：
 
 * 開発者が定義および設定する必要があります。
-* これはAEMの元のテンプレートシステムで、多くのバージョンで使用できました。
+* これは AEM のオリジナルのテンプレートシステムで、多くのバージョンで使用されています。
 * 作成されるページと同じ構造のノード階層を含んでいますが、実際のコンテンツはありません。
 * 新しいページはテンプレートをコピーして作成されるので、動的接続は存在しません。
 * デザインプロパティを保持するには、[デザインモード](/help/sites-authoring/default-components-designmode.md)を使用します。
-* 次の場所に保存されます。 `/apps`
+* `/apps` に保存されます
 * 詳しくは、[静的テンプレート](/help/sites-developing/page-templates-static.md)を参照してください。
 
 >[!NOTE]
 >
->AEM 6.4 以降では、静的テンプレートの使用はベストプラクティスとは見なされません。 その代わりに編集可能テンプレートを使用してください。
+>AEM 6.4 以降では、静的テンプレートの使用はベストプラクティスとは見なされていません。その代わりに編集可能テンプレートを使用してください。
 >
->[AEM Modernization](modernization-tools.md) ツールは、静的テンプレートから編集可能テンプレートに移行するのに役立ちます。
+>[AEM 最新化](modernization-tools.md)ツールは、静的テンプレートから編集可能テンプレートへの移行に役立ちます。
 
 ### 使用可能なテンプレート {#template-availability}
 
@@ -93,9 +93,8 @@ ht-degree: 90%
 >* プロパティは `cq:allowedTemplates` のみ
 >
 >* サイトのルートにのみ
-
 >
->例については、 We.Retail を参照してください。 `/content/we-retail/jcr:content`
+>例えば、We.Retail `/content/we-retail/jcr:content` を参照してください。
 >
 >プロパティ `allowedPaths`、`allowedParents`、`allowedChildren` をテンプレートに配置して、より高度なルールを定義することもできます。ただし、可能な場合、許可されるテンプレートをさらに制限する必要がある場合は、サイトのサブセクションでさらに `cq:allowedTemplates` プロパティを定義する方が&#x200B;*はるかに*&#x200B;簡単です。
 >

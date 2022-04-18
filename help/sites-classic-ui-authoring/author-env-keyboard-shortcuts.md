@@ -43,10 +43,9 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr> 
    <td>コンソール</td> 
    <td><strong><code>Shift-Double-Click</code></strong><br /> （必要なページ上で）</td> 
-   <td>ページを新しいウィンドウで開きます。<br />
-<strong>注意：</strong>これは、「<a href="/help/sites-classic-ui-authoring/author-env-user-props.md">ユーザープロパティ</a>」が「単一ウィンドウ」に設定されている場合に動作します。「複数ウィンドウ」に設定されている場合は、これがデフォルトの動作となります。</td> 
+   <td>ページを新しいウィンドウで開きます。<br /> <strong>注：</strong>これは、「<a href="/help/sites-classic-ui-authoring/author-env-user-props.md">ユーザープロパティ</a>」が「単一ウィンドウ」に設定されている場合に動作します。「複数ウィンドウ」に設定されている場合は、これがデフォルトの動作となります。</td> 
   </tr> 
  </tbody> 
 </table>
 
-[ページエディター](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)を使用してページのオーサリングをおこなう際には、デスクトップユーザー向けの様々なキーボードショートカットも利用できます。
+[ページエディター](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)を使用してページのオーサリングを行う際には、デスクトップユーザー向けの様々なキーボードショートカットも利用できます。

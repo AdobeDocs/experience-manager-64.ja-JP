@@ -8,19 +8,19 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 discoiquuid: 6a7e5472-cb57-4c78-b183-7c6dcac11a4e
-source-git-commit: 75312539136bb53cf1db1de03fc0f9a1dca49791
+exl-id: e900d93e-f7cd-4a0d-a866-7fc6c7882797
+source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 81%
 
 ---
 
-
 # コンテンツサービス{#content-services}
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 >[!CAUTION]
 >
@@ -52,4 +52,3 @@ AEM Mobile Content Services は、AEMで管理されるコンテンツをリク�
 
 * リポジトリ内のモデル
 * レンダリングと配信
-

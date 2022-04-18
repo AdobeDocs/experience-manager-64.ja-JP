@@ -13,13 +13,13 @@ exl-id: 40890db3-240c-4021-967a-b6b3eb1d4b7c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '652'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
 # 共有キューの設定{#configuring-shared-queues}
 
-共有キューでは、ユーザーキューを効率的に設定および管理できます。ユーザーキューは 1 人のユーザーに割り当てられたすべてのタスクです。詳しくは、[タスクリスト](https://help.adobe.com/en_US/livecycle/11.0/WorkspaceHelp/WS92d06802c76abadb-2b6ab502126beb6ba2f-7ffc.2.html)を参照してください。組織のニーズに従って、ユーザーキューを割り当て、割り当て解除、再割り当てすることができます。共有キューは次の 2 つの方法で管理できます。
+共有キューでは、ユーザーキューを効率的に設定および管理できます。ユーザーキューは 1 人のユーザーに割り当てられたすべてのタスクです。詳しくは、[タスクリスト](https://help.adobe.com/ja_JP/livecycle/11.0/WorkspaceHelp/WS92d06802c76abadb-2b6ab502126beb6ba2f-7ffc.2.html)を参照してください。組織のニーズに従って、ユーザーキューを割り当て、割り当て解除、再割り当てすることができます。共有キューは次の 2 つの方法で管理できます。
 
 **ユーザーへのアクセスを管理**
 

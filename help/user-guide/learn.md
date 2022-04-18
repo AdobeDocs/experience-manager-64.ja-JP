@@ -17,7 +17,7 @@ ht-degree: 96%
 
 ## AEM Sites {#aem-sites}
 
-AEM Sites は、Adobe Experience Manager 内のコンテンツ管理システムです。Web サイト、モバイルサイト、オンサイト画面にわたるデジタルエクスペリエンスを一元的に作成、管理および配信して、世界中から利用でき個人的にも関連性が高い魅力的なエクスペリエンスにすることができます。詳しくは、[こちら](http://www.adobe.com/marketing-cloud/enterprise-content-management/web-cms.html)または [機能についての新しいビデオチュートリアル](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-4-sites.html)をご覧ください。
+AEM Sites は、Adobe Experience Manager 内のコンテンツ管理システムです。Web サイト、モバイルサイト、オンサイト画面にわたるデジタルエクスペリエンスを一元的に作成、管理および配信して、世界中から利用でき個人的にも関連性が高い魅力的なエクスペリエンスにすることができます。詳しくは、[こちら](http://www.adobe.com/jp/marketing-cloud/enterprise-content-management/web-cms.html)または [機能についての新しいビデオチュートリアル](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-4-sites.html)をご覧ください。
 
 ## AEM Assets {#aem-assets}
 
@@ -44,11 +44,11 @@ Screens は、Adobe Experience Manager 機能であり、包括的なデジタ�
 
 ## AEM Communities {#aem-communities}
 
-Communities は、Adobe Experience Manager 機能であり、フォーラム、ユーザーグループ、学習リソースのほか、顧客、従業員およびブランドにとって価値のあるその他のソーシャル機能を含んだオンラインコミュニティエクスペリエンスを作成するのに役立ちます。[詳細情報を参照してください。](http://www.adobe.com/marketing-cloud/enterprise-content-management/social-community-cms.html)
+Communities は、Adobe Experience Manager 機能であり、フォーラム、ユーザーグループ、学習リソースのほか、顧客、従業員およびブランドにとって価値のあるその他のソーシャル機能を含んだオンラインコミュニティエクスペリエンスを作成するのに役立ちます。[詳細情報を参照してください。](http://www.adobe.com/jp/marketing-cloud/enterprise-content-management/social-community-cms.html)
 
 ## AEM Livefyre {#aem-livefyre}
 
-AEM Livefyre は、まったく新しい Adobe Experience Manager 機能であり、Web 上で共有されるあらゆるリソースを活用して、斬新かつ高品質なコンテンツのフローを独自のサイトで作成できます。詳しくは、[こちら](http://www.adobe.com/marketing-cloud/enterprise-content-management/ugc-content-platform.html)を参照するか、[アドビのガイド](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)を直接参照してください。
+AEM Livefyre は、まったく新しい Adobe Experience Manager 機能であり、Web 上で共有されるあらゆるリソースを活用して、斬新かつ高品質なコンテンツのフローを独自のサイトで作成できます。詳しくは、[こちら](http://www.adobe.com/jp/marketing-cloud/enterprise-content-management/ugc-content-platform.html)を参照するか、[アドビのガイド](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/)を直接参照してください。
 
 ## AEM の基盤 {#aem-foundation}
 

@@ -13,7 +13,7 @@ exl-id: 4cd44f33-1bf9-4ec6-868f-0db60bfc56c0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '362'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 74%
 |---|---|
 | annogen | [Apache](#apache) |
 | axiom-api | [Apache](#apache) |
-| 公理界 | [Apache](#apache) |
+| axiom-dom | [Apache](#apache) |
 | axiom-impl | [Apache](#apache) |
 | axis2-adb | [Apache](#apache) |
 | axis2-kernel | [Apache](#apache) |
@@ -40,9 +40,9 @@ ht-degree: 74%
 | commons-httpclient | [Apache](#apache) |
 | commons-io | [Apache](#apache) |
 | commons-lang | [Apache](#apache) |
-| 同時 | [同時](#concurrent) （パブリックドメイン） |
+| Concurrent | [Concurrent](#concurrent)（パブリックドメイン） |
 | geronimo-activation_1.1_spec | [Apache](#apache) |
-| ジェロニモ —stax-api_1.0_spec | [Apache](#apache) |
+| geronimo-stax-api_1.0_spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
 | jackrabbit-jcr2spi | [Apache](#apache) |
 | jackrabbit-jcr-commons | [Apache](#apache) |
@@ -51,7 +51,7 @@ ht-degree: 74%
 | jaxen | BSD |
 | log4j | [Apache](#apache) |
 | lucene-core | [Apache](#apache) |
-| 新着 | [Apache](#apache) |
+| neethi | [Apache](#apache) |
 | slf4j-api | [SLF4J.ORG](#slf-j-org) |
 | slf4j-jdk14 | [SLF4J.ORG](#slf-j-org) |
 | stax-api | [Apache](#apache) |
@@ -59,7 +59,7 @@ ht-degree: 74%
 | wstx-asl | [Apache](#apache) |
 | xalan | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-apis | [Apache](#apache) （パブリックドメインおよび W3C ソフトウェアライセンスの対象となる部分が含まれます） |
+| xml-apis | [Apache](#apache)（パブリックドメインおよび W3C ソフトウェアライセンスの対象となる部分が含まれます） |
 | XmlSchema | [Apache](#apache) |
 
 ## CRX のサードパーティのライブラリの概要 {#overview-of-crx-rd-party-libraries}
@@ -73,7 +73,7 @@ ht-degree: 74%
  </colgroup> 
  <tbody> 
   <tr> 
-   <td>ファイル名</td> 
+   <td>Filename</td> 
    <td> 
     <code>
       License 
@@ -97,7 +97,7 @@ ht-degree: 74%
   </tr> 
   <tr> 
    <td>concurrent-1.3.4.jar</td> 
-   <td><a href="#concurrent">同時</a></td> 
+   <td><a href="#concurrent">Concurrent</a></td> 
   </tr> 
   <tr> 
    <td>derby-10.1.2.1.jar</td> 
@@ -194,7 +194,7 @@ ht-degree: 74%
   </tr> 
   <tr> 
    <td>portlet-api-1.0.jar</td> 
-   <td><a href="#apache">Sun ポートレット</a></td> 
+   <td><a href="#apache">Sun Portlet</a></td> 
   </tr> 
   <tr> 
    <td>servletapi-2.3.jar</td> 

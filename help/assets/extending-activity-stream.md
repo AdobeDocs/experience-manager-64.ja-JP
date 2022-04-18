@@ -8,13 +8,13 @@ exl-id: c25a4da7-1c58-41cf-9ff6-c094b50208e6
 source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
 workflow-type: tm+mt
 source-wordcount: '272'
-ht-degree: 66%
+ht-degree: 80%
 
 ---
 
 # Assets とアクティビティストリームの統合 {#integrating-assets-with-activity-stream}
 
-Adobe Experience Manager Assets のユーザーは、アセットの作成、アップロード、削除など、様々な操作を実行します。 ユーザーが何を実行かについて履歴を提供できるよう、これらのアクションを記録することができます。この節では、 [!DNL Experience Manager] および設定方法 [!DNL Experience Manager] 特定のイベントを記録するために。
+Adobe Experience Manager Assets のユーザーは、アセットの作成、アップロード、削除など、様々な操作を実行します。 ユーザーが何を実行かについて履歴を提供できるよう、これらのアクションを記録することができます。この節では、[!DNL Experience Manager] の記録機能と、特定のイベントを記録するための [!DNL Experience Manager] の設定方法について説明します。
 
 ## パフォーマンスに関する考慮事項とデフォルトの動作 {#performance-considerations-and-default-behavior}
 
@@ -42,7 +42,7 @@ Adobe Experience Manager Assets のユーザーは、アセットの作成、ア
 
 ## 設定 [!DNL Assets] イベントの記録 {#configuring-aem-assets-events-recording}
 
-この [Web コンソール](/help/sites-deploying/configuring-osgi.md) は、 [!DNL Assets] イベントレコーダーの調整。 次の手順で [!DNL Assets] イベントレコーダー：次の手順に従います。
+[Web コンソール](/help/sites-deploying/configuring-osgi.md)から、 Event Recorder のチューニングにアクセスできます。[!DNL Assets]次の手順で [!DNL Assets] イベントレコーダー：次の手順に従います。
 
 1. **[!UICONTROL Web コンソール]**&#x200B;に移動します。
 

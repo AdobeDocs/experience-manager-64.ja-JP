@@ -88,7 +88,7 @@ ht-degree: 57%
       * **タイトル**：Alt Comment **
       * **説明**：Alternative comment style **
       * **スーパータイプ**：social/commons/components/hbs/comments/comment **
-      * **グループ**: `*.hidden*`
+      * **グループ**：`*.hidden*`
    * 「**[!UICONTROL 次へ]**」を選択します。
    * 「**[!UICONTROL 次へ]**」を選択します。
    * 「**[!UICONTROL 次へ]**」を選択します。
@@ -120,7 +120,7 @@ ht-degree: 57%
       * To `/apps/custom/components/comments`
    * カスタムコメントコンポーネントを含めるように変更します（75 行目まで）。
 
-      * 置換 `{{include this resourceType='social/commons/components/hbs/comments/comment'}}`
+      * Replace `{{include this resourceType='social/commons/components/hbs/comments/comment'}}`
       * を次のタグに置換します。`{{include this resourceType='/apps/custom/components/comments/comment'}}`
 
 
@@ -202,7 +202,7 @@ SCF コンポーネントを拡張（上書き）する場合、resourceType は
 * グローバルナビゲーションから
 
    * 選択 **[!UICONTROL ツール/導入/レプリケーション]**
-   *  `Activate Tree`
+   * 選択 `Activate Tree`
    * 設定 `Start Path`:から `/apps/custom`
    * オフ `Only Modified`
    * 選択 `Activate`ボタン

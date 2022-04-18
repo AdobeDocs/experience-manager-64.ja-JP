@@ -13,7 +13,7 @@ exl-id: 5145b6ab-588a-458f-946f-b730ae319f61
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1675'
-ht-degree: 88%
+ht-degree: 97%
 
 ---
 
@@ -27,7 +27,7 @@ SPA エディターには、AEM 内で SPA をサポートするための包括�
 >
 >シングルページアプリケーション (SPA) エディター機能には、 [AEM 6.4 service pack 2](/help/release-notes/sp-release-notes.md) 以降
 >
->SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
+>SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトで有効なソリューションです。
 
 ## はじめに {#introduction}
 
@@ -40,13 +40,13 @@ AEM の SPA サポートにより、シン JS レイヤーが導入されまし�
 AEM の SPA について詳しくは、次のドキュメントを参照してください。
 
 * SPA の技術要件に関する [SPA ブループリント](/help/sites-developing/spa-blueprint.md)
-* シンプルな SPA のクイックツアーについては、[AEM での SPA の利用](/help/sites-developing/spa-getting-started-react.md)を参照してください。
+* シンプルな SPA のクイックツアーについては、[AEM での SPA 仕様の手引き](/help/sites-developing/spa-getting-started-react.md)を参照してください。
 
 ## デザイン {#design}
 
 SPA のページコンポーネントは、JSP ファイルまたは HTL ファイルを介して子コンポーネントの HTML 要素を提供しません。この処理は SPA フレームワークに委任されます。子コンポーネントまたはモデルの表現は、JCR から JSON データ構造として取得されます。次に、その構造に従って、SPA コンポーネントがページに追加されます。この動作により、ページコンポーネントのボディの初期構成が、SPA 以外のコンポーネントの場合とは違う構成になります。
 
-### ページモデルの管理    {#page-model-management}
+### ページモデルの管理  {#page-model-management}
 
 ページモデルの解決と管理は、指定の `PageModel` ライブラリに委任されます。SPA エディターで初期化とオーサリングを行うには、SPA でこのページモデルライブラリを使用する必要があります。このページモデルライブラリは、`aem-react-editable-components` npm によって AEM のページコンポーネントに間接的に提供されます。ページモデルは、AEM と SPA 間のインタープリターであるので、常に存在している必要があります。ページを作成したら、ページエディターとの通信を可能にするために、`cq.authoring.pagemodel.messaging` ライブラリを追加する必要があります。
 
@@ -82,7 +82,7 @@ SPA と AEM 間のインタラクションのフローは、SPA エディター�
 
 ### SPA エディターの基本的なワークフロー {#basic-spa-editor-workflow}
 
-SPA エディターの主な要素に留意すると、AEM 内での SPA 編集ワークフローの概要は、作成者の観点では次のようになります。
+SPA エディターの主な要素に留意すると、AEM 内での SPA 編集の高度なワークフローは、作成者の観点では次のようになります。
 
 ![untitled1](assets/untitled1.gif)
 
@@ -103,11 +103,10 @@ SPA エディターの主な要素に留意すると、AEM 内での SPA 編集�
 >* SPA は常にその表示を担当している
 >* SPA エディターは SPA 自体から切り離されている
 >* 実稼働環境（パブリッシュ）では SPA エディターは読み込まれない
-
 >
 
 
-### クライアントサーバー型のページ編集ワークフロー {#client-server-page-editing-workflow}
+### クライアントサーバーのページ編集ワークフロー {#client-server-page-editing-workflow}
 
 下図は、SPA を編集する際のクライアントとサーバーのインタラクションの概要をより詳しく説明したものです。
 
@@ -187,7 +186,7 @@ SPA エディターの主な要素に留意すると、AEM 内での SPA 編集�
 
 ## 要件と制限事項 {#requirements-limitations}
 
-作成者がページエディターを使用して SPA のコンテンツを編集できるようにするには、AEM SPA Editor SDK とやり取りする SPA アプリケーションを実装する必要があります。詳しくは、 [AEMでのSPAの概要](/help/sites-developing/spa-getting-started-react.md) ドキュメントを参照してください。
+作成者がページエディターを使用して SPA のコンテンツを編集できるようにするには、AEM SPA Editor SDK とやり取りする SPA アプリケーションを実装する必要があります。動作させるために必要な基本的な知識については、[AEM での SPA の概要](/help/sites-developing/spa-getting-started-react.md)を参照してください。
 
 ### サポートされているフレームワーク {#supported-frameworks}
 
@@ -204,22 +203,22 @@ AEM SPA Editor SDK で動作する他の SPA フレームワークを追加で�
 
 ### 複数のセレクターの使用 {#multiple-selectors}
 
-追加のカスタムセレクターを定義し、AEM SPA SDK 用に開発された SPA の一部として使用することができます。ただし、このサポートでは、 `model` セレクターは最初のセレクターで、拡張は `.json` as [JSON エクスポーターで必要です。](json-exporter-components.md#multiple-selectors)
+カスタムセレクターの定義を追加すると、AEM SPA SDK 用に開発された SPA の一部として使用することができます。ただし、これをサポートするには、`model` セレクターを最初のセレクターにし、[JSON Exporter の要件](json-exporter-components.md#multiple-selectors)に応じて拡張子を `.json` にする必要があります。
 
 ### テキストエディターの要件 {#text-editor-requirements}
 
 SPA で作成したテキストコンポーネントのインプレースエディタを使用する場合は、追加の設定が必要です。
 
-1. テキスト HTML を含んだコンテナラッパー要素に（任意の）属性を設定します。WKND ジャーナルのサンプルコンテンツの場合、これは `<div>` 要素と、使用されているセレクターが `data-rte-editelement`.
+1. テキスト HTML を含んだコンテナラッパー要素に（任意の）属性を設定します。WKND Journal サンプルコンテンツでは、`<div>` 要素がこれに該当し、`data-rte-editelement` がセレクターとして使用されています。
 1. 対応する AEM テキストコンポーネントの `cq:InplaceEditingConfig` で、そのセレクター（例：`data-rte-editelement` など）を指す設定 `editElementQuery` を指定します。これにより、HTML テキストを折り返す HTML 要素をエディターが把握できます。
 
-この処理の例については、 [WKND Journal のサンプルコンテンツです。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
+この処理の例については、[WKND Journal サンプルコンテンツ](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)を参照してください。
 
-リッチテキストエディターの `editElementQuery` プロパティと設定について詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)を参照してください。
+`editElementQuery` プロパティとリッチテキストエディターの設定について詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)を参照してください。
 
 ### 制限事項 {#limitations}
 
-AEM SPA Editor SDK は、AEM 6.4 Service Pack 2 で導入されました。 Adobeで完全にサポートされ、新機能として、引き続き機能強化と拡張がおこなわれます。 次のAEM機能は、SPA Editor ではまだ対応していません。
+AEM SPA Editor SDK は、AEM 6.4 サービスパック 2 で導入されました。AEM SPA Editor SDK はアドビで完全にサポートされており、新機能として機能強化と拡張が続けられています。次のAEM機能は、SPA Editor ではまだ対応していません。
 
 * ターゲットモード
 * ContextHub

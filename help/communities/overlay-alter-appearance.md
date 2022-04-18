@@ -26,9 +26,9 @@ comment.hbs スクリプトは、各コメントの全体的なHTMLを作成し�
 投稿された各コメントの横のアバターを表示しないようにするには：
 
 1. コピー `comment.hbs`から `libs`から `apps`
-   1.  `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
+   1. 選択 `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
    1. 選択 **[!UICONTROL コピー]**
-   1.  `/apps/social/commons/components/hbs/comments/comment`
+   1. 選択 `/apps/social/commons/components/hbs/comments/comment`
    1. 選択 **[!UICONTROL 貼り付け]**
 1. オーバーレイを開く `comment.hbs`
    * ノードをダブルクリック  `comment.hbs`in `/apps/social/commons/components/hbs/comments/comment folder`

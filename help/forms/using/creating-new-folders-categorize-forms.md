@@ -13,7 +13,7 @@ exl-id: 6c989701-10c7-466e-b3e5-008a6d377574
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '393'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ AEM Forms では、フォルダーのタイトルを変更できます。タイ�
 
 1. `https://<server>:<port>/aem/forms.html` で、AEM Forms ユーザーインターフェイスにログインします。
 1. フォルダーを作成する場所に移動します。
-1. 次をクリック： ![aem6forms_add](assets/aem6forms_add.png) アイコンをクリックし、 **[!UICONTROL フォルダーを作成]**.
+1. ツールバーの ![aem6forms_add](assets/aem6forms_add.png) アイコンをクリックし、「**[!UICONTROL フォルダーを作成]**」を選択します。
 
 1. 以下の詳細を入力します。
 
@@ -53,6 +53,6 @@ AEM Forms では、フォルダーのタイトルを変更できます。タイ�
 ### フォルダータイトルの編集 {#edit-the-folder-title-br}
 
 1. タイトルを編集するフォルダーを選択します。
-1. 編集をクリックします。 ![aem6forms_edit](assets/aem6forms_edit.png) アイコンをクリックします。
+1. ツールバーで、編集 ![aem6forms_edit](assets/aem6forms_edit.png) アイコンをクリックします。
 1. 新しいタイトルを入力します。テキストフィールドは、フォルダータイトルの現在の値で自動入力されます。それを新しい値に変更できます。
 1. 「**[!UICONTROL 送信]」をクリックします。**

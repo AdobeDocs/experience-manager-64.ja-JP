@@ -1,5 +1,5 @@
 ---
-title: ページパフォーマンスの分析
+title: 'ページパフォーマンスの分析 '
 seo-title: Analyzing Page Performance
 description: コンテンツインサイトページを使用して、作成しているページのパフォーマンスを分析します。
 seo-description: Use the Content Insight page to analyze the performance of the page that you are authoring
@@ -13,11 +13,11 @@ exl-id: dc24edaf-ca1d-4a6b-a2dc-86677267e18d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '662'
-ht-degree: 95%
+ht-degree: 97%
 
 ---
 
-# ページパフォーマンスの分析{#analyzing-page-performance}
+# ページパフォーマンスの分析 {#analyzing-page-performance}
 
 [コンテンツインサイト](/help/sites-authoring/content-insights.md)ページを開き、作成しているページのパフォーマンスを分析しますレポート期間を設定して分析を絞り込みます。
 
@@ -81,11 +81,11 @@ SEO の推奨レポートを使用して、検索エンジンでのページの�
 
 ![chlimage_1-252](assets/chlimage_1-252.png)
 
-SEO の推奨のステータスは、まだ完了していないタスクがいつ作成されたかを示します。
+SEO の推奨のステータスは、タスクが作成されたものの、まだ完了していないことを示します。
 
 ![chlimage_1-253](assets/chlimage_1-253.png)
 
-作成されると、タスクがユーザーのタスクリストに表示されます。タスクについて詳しくは、 [タスクの操作](/help/sites-authoring/task-content.md).
+作成されると、タスクがユーザーのタスクリストに表示されます。タスクについては、[タスクの使用](/help/sites-authoring/task-content.md)を参照してください。
 
 次の手順を使用して、SEO の推奨のタスクを作成します。
 

@@ -13,7 +13,7 @@ exl-id: 65346618-e5a6-43d0-a2b3-698268d3cf64
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1163'
-ht-degree: 64%
+ht-degree: 100%
 
 ---
 
@@ -40,16 +40,16 @@ Web アプリケーションのインストール、サーバーの設定、サ�
 
 ## 概要 {#general-description}
 
-### アプリケーションサーバーにAEMをインストールする際のデフォルトの動作 {#default-behaviour-when-installing-aem-in-an-application-server}
+### アプリケーションサーバーに AEM をインストールするときのデフォルトの動作 {#default-behaviour-when-installing-aem-in-an-application-server}
 
 AEM は、単一の war ファイルとしてデプロイされます。
 
 デプロイすると、デフォルトで次のようになります。
 
 * 実行モードは `author`
-* インスタンス（リポジトリ、Felix OSGI 環境、バンドルなど） が `${user.dir}/crx-quickstart`場所 `${user.dir}` は現在の作業ディレクトリで、crx-quickstart へのこのパスは `sling.home`
+* インスタンス（リポジトリ、Felix OSGI 環境、バンドルなど） は `${user.dir}/crx-quickstart` にインストールされます。`${user.dir}` は現在の作業ディレクトリです。crx-quickstart へのこのパスは `sling.home` と呼ばれます。
 
-* コンテキストルートは、war ファイル名です。例： `aem-6`
+* コンテキストルートは war ファイル名（例：`aem-6`） 
 
 #### 設定 {#configuration}
 
@@ -57,7 +57,7 @@ AEM は、単一の war ファイルとしてデプロイされます。
 
 * 実行モード：デプロイメント前に、AEM war ファイルの `sling.run.modes` ファイルで `WEB-INF/web.xml` パラメーターを設定
 
-* ：デプロイメント前に、AEM war ファイルの `sling.home` ファイルで `WEB-INF/web.xml`sling.home パラメーターを設定
+* sling.home：デプロイメント前に、AEM war ファイルの `WEB-INF/web.xml` ファイルで `sling.home` パラメーターを設定
 
 * コンテキストルート：AEM war ファイル名を変更
 
@@ -74,30 +74,30 @@ AEM は、単一の war ファイルとしてデプロイされます。
 
 すべてがインストールされているかどうかは、次の手順で確認します。
 
-* `error.log` ファイルを追跡して、すべてのコンテンツがインストールされていることを確認
-* 見る `/system/console` すべてのバンドルがインストールされている
+* `error.log` ファイルに対して「テール」を実行して、すべてのコンテンツがインストールされていることを確認
+* `/system/console` を調べて、すべてのバンドルがインストールされていることを確認
 
 #### 同じアプリケーションサーバーに 2 つのインスタンス {#two-instances-on-the-same-application-server}
 
 デモンストレーション目的で、オーサーインスタンスとパブリッシュインスタンスを 1 つのアプリケーションサーバーにインストールすることが適切な場合があります。そのためには、次の手順を実行します。
 
 1. パブリッシュインスタンスの sling.home 変数と sling.run.modes 変数を変更します。
-1. AEM war ファイルからWEB-INF/web.xmlファイルを解凍します。
+1. AEM war ファイルから WEB-INF/web.xml ファイルを展開します。
 1. sling.home パラメーターを別のパス（絶対パスと相対パスが指定可能）に変更します。
-1. パブリッシュインスタンスに対して、 sling.run.modes を publish に変更します。
-1. web.xml ファイルを再パックします。
-1. war ファイルの名前を変更し、異なる名前を付けます。例えば、1 つは aemauthor.war に、もう 1 つは aempublish.war に名前を変更します。
-1. メモリ設定を大きくします。例えば、デフォルトのAEMインスタンスの場合は、次のように使用します。-Xmx3072m
+1. sling.run.modes を、パブリッシュインスタンス用に publish に変更します。
+1. web.xml ファイルを再圧縮します。
+1. war ファイルの名前を、別々の名前になるように変更します。例えば、一方を aemauthor.war に、もう一方を aempublish.war に変更します。
+1. 高めのメモリ設定を使用します。例えば、デフォルトの AEM インスタンスの場合は、-Xmx3072m などを使用します。
 1. 2 つの Web アプリケーションをデプロイします。
 1. デプロイ後に、2 つの Web アプリケーションを停止します。
-1. オーサーインスタンスとパブリッシュインスタンスの両方で、 sling.properties ファイルで、プロパティ felix.service.urlhandlers=false が false に設定されていることを確認します（デフォルトでは true に設定されています）。
+1. オーサーインスタンスとパブリッシュインスタンスの両方で、sling.properties ファイルで property felix.service.urlhandlers=false が false に設定されていると仮定します（デフォルトでは true に設定）。
 1. 2 つの Web アプリケーションを再度起動します。
 
 ## アプリケーションサーバーのインストール手順 {#application-servers-installation-procedures}
 
 ### WebSphere 8.5 {#websphere}
 
-デプロイ前に、上記の[概要](#general-description)を読んでください。
+デプロイメントの前に、上記の[概要](#general-description)をお読みください。
 
 **サーバーの準備**
 
@@ -105,18 +105,18 @@ AEM は、単一の war ファイルとしてデプロイされます。
 
    * AEM でユーザーを認証する方法の 1 つは、WebSphere サーバーのグローバル管理セキュリティを無効にすることです。これを行うには、Security／Global Security で「Enable administrative security」チェックボックスを解除し、保存して、サーバーを再起動します。
 
-* set `"JAVA_OPTS= -Xmx2048m"`
-* コンテキストルート = / を使用して AEM をインストールする場合は、まず既存のデフォルト Web アプリケーションのコンテキストルートを変更する必要があります。
+* `"JAVA_OPTS= -Xmx2048m"` を設定
+* コンテキストルート = / を使用して AEM をインストールする場合は、まず既存のデフォルト web アプリケーションのコンテキストルートを変更する必要があります
 
-**AEM Web アプリケーションのデプロイ**
+**AEM web アプリケーションのデプロイ**
 
 * AEM war ファイルをダウンロードします。
 * 必要に応じて、web.xml で設定します（上記の「概要」を参照）。
 
-   * WEB-INF/web.xmlファイルを解凍します。
+   * WEB-INF/web.xml ファイルを解凍
    * sling.run.modes パラメーターを publish に変更
-   * sling.home の初期パラメーターのコメントを解除し、必要に応じてこのパスを設定します。
-   * web.xml ファイルを再パック
+   * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定
+   * web.xml ファイルを再圧縮
 
 * AEM war ファイルをデプロイします。
 
@@ -126,15 +126,15 @@ AEM は、単一の war ファイルとしてデプロイされます。
 
 #### JBoss EAP 6.3.0／6.4.0 {#jboss-eap}
 
-デプロイ前に、上記の[概要](#general-description)を読んでください。
+デプロイメントの前に、上記の[概要](#general-description)をお読みください。
 
 **JBoss サーバーの準備**
 
-設定ファイルにメモリ引数を設定します ( 例： `standalone.conf`)
+設定ファイル（`standalone.conf` など）でメモリ引数を設定
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-deployment-scanner を使用してAEM web アプリケーションをインストールする場合は、 `deployment-timeout,` そういうわけで `deployment-timeout` 属性をインスタンスの xml ファイルに含める ( 例： `configuration/standalone.xml)`:
+deployment-scanner を使用して AEM web アプリケーションをインストールする場合は、`deployment-timeout,` の値を増やすことをお勧めします。そのためには、インスタンスの xml ファイル（`configuration/standalone.xml)` など）で `deployment-timeout` 属性を設定してください。
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -142,60 +142,60 @@ deployment-scanner を使用してAEM web アプリケーションをインス�
 </subsystem>
 ```
 
-**AEM Web アプリケーションのデプロイ**
+**AEM web アプリケーションのデプロイ**
 
-* AEM Web アプリケーションを JBoss 管理コンソールにアップロードします。
+* JBoss 管理コンソールで AEM web アプリケーションをアップロードします。
 
-* AEM Web アプリケーションを有効にします。
+* AEM web アプリケーションを有効にします。
 
 #### Oracle WebLogic 12.1.3／12.2 {#oracle-weblogic}
 
-デプロイ前に、上記の[概要](#general-description)を読んでください。
+デプロイメントの前に、上記の[概要](#general-description)をお読みください。
 
 管理サーバーが 1 つだけのシンプルなサーバーレイアウトを使用します。
 
 **WebLogic Server の準備**
 
-* In `${myDomain}/config/config.xml`security-configuration セクションに次を追加します。
+* `${myDomain}/config/config.xml` で、security-configuration セクションに以下を追加します。
 
-   * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>` 見る [https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd) 正しい位置の場合（デフォルトでは、セクションの最後に位置付けることは ok）
+   * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>`正確な位置については、[https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd) を参照してください（デフォルトではセクションの最後に追加すれば問題ありません）。
 
 * VM メモリ設定の値を増やします。
 
-   * open `${myDomain}/bin/setDomainEnv.cmd` (resp .sh)WLS_MEM_ARGS を検索し、例えば set を設定します。 `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
-   * WebLogic Server の再起動
+   * `${myDomain}/bin/setDomainEnv.cmd`（resp .sh）を開いて WLS_MEM_ARGS を検索し、設定します（例：set `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`）
+   * WebLogic Server を再起動します。
 
-* で作成 `${myDomain}` パッケージフォルダーと cq フォルダー内、およびその中に Plan フォルダーがある
+* `${myDomain}` に packages フォルダーを作成し、その中に cq フォルダー、その中に Plan フォルダーを作成します。
 
-**AEM Web アプリケーションのデプロイ**
+**AEM web アプリケーションのデプロイ**
 
 * AEM war ファイルをダウンロードします。
-* AEM war ファイルを${myDomain}/packages/cq フォルダーに配置します。
-* での設定 `WEB-INF/web.xml` 必要に応じて（上記の「一般説明」を参照）
+* AEM war ファイルを the ${myDomain}/packages/cq フォルダー内に配置します。
+* 必要に応じて、`WEB-INF/web.xml` で設定します（上記の「概要」を参照）。
 
-   * 解凍 `WEB-INF/web.xml`ファイル
+   * `WEB-INF/web.xml`ファイルを解凍します
    * sling.run.modes パラメーターを publish に変更
-   * sling.home の初期パラメーターのコメントを解除し、必要に応じてこのパスを設定します（一般的な説明を参照）。
-   * web.xml ファイルを再パック
+   * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定します（「概要」を参照）。
+   * web.xml ファイルを再圧縮
 
 * AEM war ファイルをアプリケーションとしてデプロイします（他の設定にはデフォルト設定を使用）。
 * インストールには時間がかかる場合があります。
 * 上記の「概要」で説明した方法で、インストールが完了したことを確認します（error.log を追跡するなど）。
-* コンテキストルートは、WebLogic の Web アプリケーションの「Configuration」タブで変更できます `/console`
+* コンテキストルートは、WebLogic `/console` の web アプリケーションの「設定」タブで変更できます。
 
 #### Tomcat 8／8.5 {#tomcat}
 
-デプロイ前に、上記の[概要](#general-description)を読んでください。
+デプロイ前に、上記の[概要](#general-description)をお読みください。
 
 * **Tomcat サーバーの準備**
 
    * VM メモリ設定の値を増やします。
 
-      * In `bin/catalina.bat` ( 応答 `catalina.sh` unix の場合 ) 次の設定を追加します。
+      * `bin/catalina.bat`（Unix の場合は `catalina.sh`）に、次の設定を追加します。
       * `set "JAVA_OPTS= -Xmx2048m`
-   * Tomcat では、インストール時に管理者もマネージャもアクセスできません。 そのため、手動で編集する必要があります `tomcat-users.xml` 次のアカウントへのアクセスを許可するには：
+   * Tomcat では、インストール時に管理者もマネージャもアクセスできません。 そのため、次のアカウントへのアクセスを許可するには `tomcat-users.xml` を手動で編集する必要があります。
 
-      * `tomcat-users.xml` を編集して、admin および manager のアクセスを含めます。設定は次の例のようになります。
+      * `tomcat-users.xml` を編集して、管理者およびマネージャーのアクセスを含めます。設定は次の例のようになります。
 
       ```xml
         <?xml version='1.0' encoding='utf-8'?>
@@ -217,7 +217,7 @@ deployment-scanner を使用してAEM web アプリケーションをインス�
       * ROOT Web アプリケーションを停止してデプロイ解除します。
       * Tomcat の webapps フォルダーで ROOT.war フォルダーの名前を変更します。
       * Web アプリケーションを再度起動します。
-   * manager-gui を使用して AEM Web アプリケーションをインストールする場合は、アップロードファイルの最大サイズを増やす必要があります。デフォルトで許可されているアップロードサイズは 50 MB のみです。これに対して、マネージャ Web アプリケーションの web.xml を開き、
+   * manager-gui を使用して AEM Web アプリケーションをインストールする場合は、アップロードファイルの最大サイズを増やす必要があります。デフォルトで許可されているアップロードサイズは 50 MB のみです。これに対して、マネージャー web アプリケーションの web.xml を開き、
 
       `webapps/manager/WEB-INF/web.xml`
 
@@ -235,15 +235,15 @@ deployment-scanner を使用してAEM web アプリケーションをインス�
 
 
 
-* **AEM Web アプリケーションのデプロイ**
+* **AEM web アプリケーションのデプロイ**
 
    * AEM war ファイルをダウンロードします。
    * 必要に応じて、web.xml で設定します（上記の「概要」を参照）。
 
-      * WEB-INF/web.xmlファイルを解凍します。
+      * WEB-INF/web.xml ファイルを解凍
       * sling.run.modes パラメーターを publish に変更
-      * sling.home の初期パラメーターのコメントを解除し、必要に応じてこのパスを設定します。
-      * web.xml ファイルを再パック
+      * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定
+      * web.xml ファイルを再圧縮
    * AEM war ファイルは、ルート Web アプリケーションとしてデプロイする場合は ROOT.war に名前を変更し、aemauthor をコンテキストルートとする場合は aemauthor.war などに名前を変更します。
    * ファイルを Tomcat の webapps フォルダーにコピーします。
    * AEM がインストールされるまで待ちます。

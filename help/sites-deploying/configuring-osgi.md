@@ -14,33 +14,33 @@ exl-id: 977d07d2-36cf-4799-bcfe-991cf89a612a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1971'
-ht-degree: 58%
+ht-degree: 98%
 
 ---
 
 # OSGi の設定{#configuring-osgi}
 
-[OSGi は、Adobe Experience Manager（AEM）の技術スタックにおける基本要素です。AEM の複合バンドルおよびそれらの設定を制御するために使用します。](https://www.osgi.org/)
+[OSGi](https://www.osgi.org/) は、Adobe Experience Manager（AEM）の技術スタックにおける基本要素です。AEM の複合バンドルおよびそれらの設定を制御するために使用します。
 
-OSGi は標準化されたプリミティブを提供し、小さく再利用が可能で連携機能に優れたコンポーネントを組み合わせてアプリケーションを構築することを可能にします。これらのコンポーネントからアプリケーションを作成し、デプロイすることができます。**
+OSGi は標準化されたプリミティブを提供し、小さく再利用が可能で連携機能に優れたコンポーネントを組み合わせてアプリケーションを構築することを可能にします。これらのコンポーネントからアプリケーションを作成し、デプロイすることができます&#x200B;*。*
 
-これにより、 バンドルの管理が容易になり、バンドルを個別に停止、インストール、開始できます。相互依存関係は自動的に処理されます。各 OSGi コンポーネント ( [OSGi の仕様](https://www.osgi.org/Specifications/HomePage)) は、様々なバンドルの 1 つに含まれています。
+これにより、 バンドルの管理が容易になり、バンドルを個別に停止、インストール、開始できます。相互依存関係は自動的に処理されます。各 OSGi コンポーネント ( [OSGi の仕様](https://www.osgi.org/Specifications/HomePage)を参照) は、様々なバンドルの 1 つに含まれています。
 
 これらのバンドルの設定は、次のいずれかの方法で管理できます。
 
 * [Adobe CQ Web コンソール](#osgi-configuration-with-the-web-console)を使用
 * [設定ファイル](#osgi-configuration-with-configuration-files)を使用
-* 設定 [content-nodes ( `sling:OsgiConfig`) をリポジトリ内に追加します。](#osgi-configuration-in-the-repository)
+* [リポジトリ内のコンテンツノード（`sling:OsgiConfig`）](#osgi-configuration-in-the-repository)を設定
 
-いずれの方法も使用できますが、主に[実行モード](/help/sites-deploying/configure-runmodes.md)に関連して、次のようなわずかな違いがあります。
+いずれの方法も使用できますが、主に[実行モード](/help/sites-deploying/configure-runmodes.md)に関連する、次のようなわずかな違いがあります。
 
 * [Adobe CQ Web コンソール](#osgi-configuration-with-the-web-console)
 
-   * Web コンソールは、OSGi 設定用の標準インターフェイスです。様々なプロパティを編集する UI が用意されています。この UI では、定義済みリストから使用可能な値を選択できます。
+   * Web コンソールは OSGi 設定の標準インターフェイスです。様々なプロパティを編集するための UI が提供されており、事前に定義されているリストから設定可能な値を選択できます。
 
       そのため、最も簡単に使用できます。
 
-   * Web コンソールでおこなわれた設定は、現在のインスタンスにすぐに適用されます。現在の実行モードや、今後の実行モードの変更には関係ありません。
+   * Web コンソールで行われた設定は、現在のインスタンスにすぐに適用されます。現在の実行モードや、今後の実行モードの変更には関係ありません。
 
 * [設定ファイル](#osgi-configuration-with-configuration-files)
 
@@ -50,7 +50,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 * [リポジトリ内のコンテンツノード（sling:osgiConfig）](#osgi-configuration-in-the-repository)
 
    * CRXDE Lite を使用した手動による設定が必要です。
-   * の命名規則により、 `sling:OsgiConfig` ノードを使用すると、設定を特定の [実行モード](/help/sites-deploying/configure-runmodes.md). 同じリポジトリに複数の実行モードの設定を保存することもできます。
+   * `sling:OsgiConfig` ノードの命名規則により、設定を特定の[実行モード](/help/sites-deploying/configure-runmodes.md)に関連付けることができます。同じリポジトリに複数の実行モードの設定を保存することもできます。
    * 適切な設定がすぐに適用されます（実行モードに依存）。
 
 使用するメソッドに関わらず、次のことが可能です。
@@ -62,7 +62,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 >[!NOTE]
 >
->特定の重要な設定について詳しくは、[、OSGi 設定](/help/sites-deploying/osgi-configuration-settings.md)を参照してください。。
+>特定の重要な設定について詳しくは、[OSGi 設定の指定](/help/sites-deploying/osgi-configuration-settings.md)を参照してください。
 
 ## Web コンソールでの OSGi 設定 {#osgi-configuration-with-the-web-console}
 
@@ -72,7 +72,7 @@ AEM の [Web コンソール](/help/sites-deploying/web-console.md)は、バン�
 
 >[!NOTE]
 >
->Web コンソールで行った変更は、次の名前でリポジトリに保存されます。 [設定ファイル](#osgi-configuration-with-configuration-files). このファイルをコンテンツパッケージに含めておき、将来のインストールで再利用することができます。
+>Web コンソールで加えた変更は、[設定ファイル](#osgi-configuration-with-configuration-files)としてリポジトリ内に保存されます。このファイルをコンテンツパッケージに含めておき、将来のインストールで再利用することができます。
 
 >[!NOTE]
 >
@@ -84,11 +84,11 @@ Web コンソールで設定を更新するには：
 
 1. 次のいずれかの方法で、Web コンソールの「**設定**」タブにアクセスします。
 
-   * **ツール／運営**&#x200B;メニューのリンクから Web コンソールを開きます。コンソールにログインした後、次のドロップダウンメニューを使用できます。
+   * **ツール／運営**&#x200B;メニューのリンクから Web コンソールを開きます。コンソールにログインしたら、次のドロップダウンメニューを使用できます。
 
       **OSGi >**
 
-   * ダイレクト URL例：
+   * ダイレクト URL 例：
 
       `http://localhost:4502/system/console/configMgr`
    リストが表示されます。
@@ -96,27 +96,27 @@ Web コンソールで設定を更新するには：
 1. 次のいずれかの方法で、設定するバンドルを選択します。
 
    * 該当するバンドルの「**編集**」アイコンをクリック
-   * 該当するバンドルの&#x200B;**名前**&#x200B;をクリック
+   * 該当するバンドルの「**名前**」をクリック
 
-1. ダイアログが開きます。ここでは、必要に応じて編集できます。例えば、 **ログレベル** から `INFO`:
+1. ダイアログが開きます。必要に応じて編集します。例えば「**ログレベル**」を `INFO` に設定します。
 
    ![chlimage_1-140](assets/chlimage_1-140.png)
 
    >[!NOTE]
    >
-   >更新内容は、[設定ファイル](#osgi-configuration-with-configuration-files)としてリポジトリ内に保存されます。後でこれらを見つけるには（例えば、別のインスタンスで使用するためにコンテンツパッケージに含める場合）、永続的な ID( `PID`) をクリックします。
+   >更新内容は、[設定ファイル](#osgi-configuration-with-configuration-files)としてリポジトリ内に保存されます。後で必要になったときに探し出せるようにするために（コンテンツパッケージに含めて別のインスタンスで使用できるようにする場合など）、永続 ID（`PID`）をメモしておく必要があります。
 
 1. 「**保存**」をクリックします。
 
-   変更内容は、関連する OSGi 設定にすぐに適用され、再起動は不要です。
+   変更内容は、実行しているシステムの関連する OSGi 設定にすぐに適用されます。再起動は不要です。
 
    >[!NOTE]
    >
-   >これで、 [設定ファイル](#osgi-configuration-with-configuration-files);例えば、別のインスタンスで使用するためにコンテンツパッケージに含める場合などです。
+   >これで関連する[設定ファイル](#osgi-configuration-with-configuration-files)を見つけられるようになります。例えば、コンテンツパッケージに含めて別のインスタンスで使用できるようにする場合などがあります。
 
 ## 設定ファイルでの OSGi 設定 {#osgi-configuration-with-configuration-files}
 
-Web コンソールを使用して行った設定の変更は、設定ファイル ( `.config`) の下：
+Web コンソールで行った設定変更は、設定ファイル（`.config`）としてリポジトリ内の次の場所に保存されます。
 
 `/apps`
 
@@ -124,7 +124,7 @@ Web コンソールを使用して行った設定の変更は、設定ファイ�
 
 >[!NOTE]
 >
->設定ファイルの形式は非常に具体的です。詳しくは、 [Sling Apache ドキュメント](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format) 詳細はこちら。
+>設定ファイルは特殊な形式になっています（詳しくは [Sling Apache のドキュメント](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format)を参照してください）。
 >
 >そのため、実際の変更は Web コンソールを使用しておこない、設定ファイルが作成、維持されるようにすることをお勧めします。
 
@@ -135,7 +135,7 @@ Web コンソールには、リポジトリのどの場所に変更が保存さ�
 1. **ツール**&#x200B;メニューの「**クエリー**」を選択します。
 1. **タイプ**&#x200B;が `SQL` のクエリーを送信して、更新した設定の PID を検索します。
 
-   例えば、**Apache Felix OSGi Management Console** の永続識別子（PID）は次のとおりです。
+   例えば、**Apache Felix OSGi マネージメントコンソール**&#x200B;の永続 ID（PID）は次のとおりです。
 
    `org.apache.felix.webconsole.internal.servlet.OsgiManager`
 
@@ -161,19 +161,19 @@ Web コンソールには、リポジトリのどの場所に変更が保存さ�
 
 Web コンソールを使用するほかに、リポジトリで設定の詳細を定義することもできます。これにより、様々な実行モードを簡単に設定できます。
 
-これらの設定は、 `sling:OsgiConfig` 参照するシステムのリポジトリ内のノード。 これらのノードは OSGi 設定を反映し、OSGi 設定に対するユーザーインターフェイスを形成します。 設定データを更新するには、ノードのプロパティを更新します。
+これらの設定は、システムが参照するリポジトリ内の `sling:OsgiConfig` ノードを作成することによって行います。これらのノードは OSGi 設定を反映し、OSGi 設定に対するユーザーインターフェイスを形成します。設定データを更新するには、ノードのプロパティを更新します。
 
-リポジトリ内の設定データを変更すると、Web コンソールを使用して変更がおこなわれた場合と同様に、適切な検証と整合性チェックをおこなって、変更が関連する OSGi 設定に直ちに適用されます。 これは、 `/libs/` から `/apps/`.
+リポジトリ内の設定データを変更すると、Web コンソールで変更した場合と同様に、適切な検証と整合性チェックが行われ、関連する OSGi 設定に変更が直ちに適用されます。これは、設定を `/libs/` から `/apps/` へコピーするアクションの場合も当てはまります。
 
-同じ設定パラメーターが複数の場所に配置される場合があるので、システムでは次の処理がおこなわれます。
+同じ設定パラメーターを複数の場所に配置できるので、システムでは次の処理が行われます。
 
-* タイプのすべてのノードを検索 `sling:OsgiConfig`
+* タイプが `sling:OsgiConfig` のすべてのノードを検索
 * サービス名に従ってフィルター処理
 * 実行モードに従ってフィルター処理
 
 >[!NOTE]
 >
->[特定のインスタンスのためだけにリポジトリベースの設定を定義する方法](https://helpx.adobe.com/experience-manager/kb/RunModeDependentConfigAndInstall.html)も参照してください。
+>[特定のインスタンスのためだけにリポジトリベースの設定を定義する方法](https://helpx.adobe.com/jp/experience-manager/kb/RunModeDependentConfigAndInstall.html)も参照してください。
 
 ### リポジトリへの新しい設定の追加 {#adding-a-new-configuration-to-the-repository}
 
@@ -181,36 +181,36 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
 新しい設定をリポジトリに追加するには、以下を知っておく必要があります。
 
-1. この **永続 ID** (PID) サービス。
+1. サービスの **永続 ID**（PID）。
 
-   参照先 **設定** Web コンソールの「 」フィールド。 この名前は、バンドル名の後 ( または **設定情報** をページの下部に向かって )、
+   Web コンソールの「**設定** 」フィールドを参照します。この名前は、バンドル名の後に括弧でくくって（またはページの下部に向かって&#x200B;**設定情報**&#x200B;に）表示されます。
 
-   例えば、ノードを作成します。 `com.day.cq.wcm.core.impl.VersionManagerImpl.` 設定する **AEM WCM Version Manager**.
+   例えば、`com.day.cq.wcm.core.impl.VersionManagerImpl.` ノードを作成して、**AEM WCM バージョンマネージャー**&#x200B;を設定します。
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
-1. 特定の [実行モード](/help/sites-deploying/configure-runmodes.md) が必要です。フォルダーを作成します。
+1. 特定の[実行モード](/help/sites-deploying/configure-runmodes.md)が必要かどうか。次のようにフォルダーを作成します。
 
-   * `config`  — すべての実行モード用
-   * `config.author`  — オーサー環境用
-   * `config.publish`  — パブリッシュ環境用
-   * `config.<run-mode>`  — 適宜
+   * `config` - すべての実行モード用
+   * `config.author` - オーサー環境用
+   * `config.publish` - パブリッシュ環境用
+   * `config.<run-mode>` - 適宜
 
-1. Whether a **設定** または **ファクトリ設定** が必要です。
-1. 設定する個々のパラメーター。再作成が必要な既存のパラメータ定義を含めます。
+1. **設定**&#x200B;または&#x200B;**ファクトリ設定**&#x200B;が必要かどうか。
+1. 設定する個々のパラメーター。再作成が必要な既存のパラメーター定義を含めます。
 
    Web コンソールの個々のパラメーターフィールドを参照します。 名前は、各パラメーターに対して角括弧で囲まれて表示されます。
 
    例えば、プロパティを作成します。
-   `versionmanager.createVersionOnActivation` 設定する **アクティベーション時にバージョンを作成**.
+   `versionmanager.createVersionOnActivation` で **アクティベーション時にバージョンを作成**&#x200B;を設定します。
 
    ![chlimage_1-142](assets/chlimage_1-142.png)
 
-1. に既に設定が存在しますか？ `/libs`?インスタンス内のすべての設定をリストするには、 **クエリ** ツールをCRXDE Liteして次の SQL クエリを送信します。
+1. `/libs` に既に設定が存在しますか？インスタンス内のすべての設定をリストするには、CRXDELite の&#x200B;**クエリ**&#x200B;ツールを使用して、次の SQL クエリを送信します。
 
    `select * from sling:OsgiConfig`
 
-   その場合は、この設定をにコピーできます。 ` /apps/<yourProject>/`新しい場所にカスタマイズされます。
+   その場合は、この設定を ` /apps/<yourProject>/` にコピーすると、新しい場所にカスタマイズされます。
 
 #### リポジトリでの設定の作成 {#creating-the-configuration-in-the-repository}
 
@@ -220,30 +220,30 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
    ` /apps/<yourProject>`
 
-1. 既存のものがない場合は、 `config` フォルダー ( `sling:Folder`):
+1. 存在しない場合は、`config` フォルダーを作成します（`sling:Folder`）。
 
    * `config` - すべての実行モードに該当
-   * `config.<run-mode>`  — 特定の実行モードに固有
+   * `config.<run-mode>` - 特定の実行モードに固有
 
 1. このフォルダーの下に、次の設定でノードを作成します。
 
-   * 型：`sling:OsgiConfig`
-   * 名前：永続 ID(PID)
+   * タイプ：`sling:OsgiConfig`
+   * 名前：永続 ID（PID）
 
-      例えば、AEM WCM Version Manager の場合は、 `com.day.cq.wcm.core.impl.VersionManagerImpl`
+      例えば、AEM WCM Version Manager の場合は `com.day.cq.wcm.core.impl.VersionManagerImpl` を使用します
    >[!NOTE]
    >
-   >ファクトリ設定を追加する場合 `-<identifier>` を名前に追加します。
+   >ファクトリ設定を作成する場合は、`-<identifier>` を名前に付加します。
    >
    >例： `org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
    >
-   >ここで、 `<identifier>` は、インスタンスを識別するフリーテキストに置き換えられます（この情報は省略できません）。例：
+   >`<identifier>` の部分は、インスタンスを識別するフリーテキストに置き換えます（この情報は省略できません）。次に例を示します。
    >
    >`org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
 1. 設定するパラメーターごとに、このノードでプロパティを作成します。
 
-   * 名前：Web コンソールに表示されるパラメーター名名前は、フィールドの説明の最後に角括弧で囲まれて表示されます。 例： `Create Version on Activation` use `versionmanager.createVersionOnActivation`
+   * 名前：Web コンソールに表示される名前。名前は、フィールドの説明の最後に角括弧で囲んで表示されます。例： `Create Version on Activation` では `versionmanager.createVersionOnActivation` を使用
    * タイプ：適宜。
    * 値：必要に応じて。
 
@@ -255,7 +255,7 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
 >[!CAUTION]
 >
->`/libs` パス内のものは一切変更しないでください。
+>`/libs` パス内は一切変更しないでください。
 
 >[!CAUTION]
 >
@@ -267,13 +267,13 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
 次の優先順位を使用します。
 
-1. 以下のリポジトリノード `/apps/*/config...`.次のタイプ `sling:OsgiConfig` またはプロパティファイル。
+1. `/apps/*/config...` の下のリポジトリノード。タイプ `sling:OsgiConfig` またはプロパティファイル。
 
-1. タイプのリポジトリノード `sling:OsgiConfig` under `/libs/*/config...`. （標準定義）
+1. `/libs/*/config...` の下にある、タイプ `sling:OsgiConfig` のリポジトリノード。（標準定義）
 
-1. 任意 `.config` から `<*cq-installation-dir*>/crx-quickstart/launchpad/config/...`. ローカル・ファイル・システム上で
+1. `<*cq-installation-dir*>/crx-quickstart/launchpad/config/...` からの任意の `.config` ファイル。ローカルファイルシステム上。
 
-つまり、 `/libs` は、 `/apps`.
+これは、`/libs` 内の汎用設定は、`/apps` 内のプロジェクト固有の設定によってマスクできるということを意味します。
 
 ### 実行時の優先順位 {#resolution-order-at-runtime}
 
@@ -282,8 +282,8 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 その後、次の優先順位が適用されます。
 
 1. Web コンソールでの設定変更が、実行時に優先されるので、すぐに有効になります。
-1. での設定の変更 `/apps` すぐに有効になります。
-1. での設定の変更 `/libs` は、 `/apps`.
+1. `/apps` での設定変更がすぐに有効になります。
+1. `/apps` で設定によってマスクされない限り、`/libs` での設定変更がすぐに有効になります。
 
 ### 複数の実行モードの解決 {#resolution-of-multiple-run-modes}
 
@@ -293,36 +293,38 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
 このようなフォルダー内の設定は、起動時に定義されている実行モードにすべての実行モードが一致した場合に適用されます。
 
-例えば、インスタンスが実行モードで開始した場合、 `author,dev,emea`、設定ノード `/apps/*/config.emea`, `/apps/*/config.author.dev/` および `/apps/*/config.author.emea.dev/` が適用され、設定ノードが `/apps/*/config.author.asean/` および `/config/author.dev.emea.noldap/` が適用されない。
+例えば、インスタンスが実行モード `author,dev,emea` で起動された場合は、`/apps/*/config.emea`、`/apps/*/config.author.dev/`、`/apps/*/config.author.emea.dev/` の設定ノードが適用され、`/apps/*/config.author.asean/` および `/config/author.dev.emea.noldap/` の設定ノードは適用されません。
 
 同じ PID に複数の設定が該当する場合は、一致する実行モードの数が最も大きい設定が適用されます。
 
 例えば、インスタンスが実行モードで開始した場合、 `author,dev,emea`と `/apps/*/config.author/` および `/apps/*/config.emea.author/` 設定を定義する\
 `com.day.cq.wcm.core.impl.VersionManagerImpl`、 `/apps/*/config.emea.author/` が適用されます。
 
-このルールの精度は PID レベルです。\
-で同じ PID の一部のプロパティを定義することはできません。 `/apps/*/config.author/` の `/apps/*/config.emea.author/` と同じ PID の\
-一致する実行モードの数が最も多い設定は、PID 全体に対して有効です。
+このルールの精度は PID レベルです。
+\
+つまり、`/apps/*/config.author/` で同じ PID の一部のプロパティと、`/apps/*/config.emea.author/` で同じ PID のより具体的なプロパティを定義することはできません。
+\
+一致する実行モードの数が最も多い設定は、PID 全体に対して効果的です。
 
 ### 標準設定 {#standard-configurations}
 
 以下のリストは、リポジトリで使用できる（標準インストールの）設定の一部を示しています。
 
-* 作成者 — AEM WCM フィルター：
+* 作成者 - AEM WCM フィルター：
 
    `libs/wcm/core/config.author/com.day.cq.wcm.core.WCMRequestFilter`
 
-* 公開 — AEM WCM フィルター：
+* 公開 - AEM WCM フィルター：
 
    `libs/wcm/core/config.publish/com.day.cq.wcm.core.WCMRequestFilter`
 
-* 公開 — AEM WCM ページ統計：
+* 公開 - AEM WCM ページ統計：
 
    `libs/wcm/core/config.publish/com.day.cq.wcm.core.stats.PageViewStatistics`
 
 >[!NOTE]
 >
->これらの設定はに存在するので、 `/libs` これらを直接編集することはできず、アプリケーション領域 ( `/apps`) をクリックします。
+>これらの設定は `/libs` 内にあるので、直接編集はせず、アプリケーション領域（`/apps`）にコピーしてからカスタマイズしてください。
 
 インスタンスに含まれるすべての設定ノードをリストするには、CRXDE Lite の&#x200B;**クエリ**&#x200B;機能を使用して、次の SQL クエリを送信します。
 
@@ -330,11 +332,11 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
 ### 設定の永続性 {#configuration-persistence}
 
-* Web コンソールを使用して設定を変更した場合、（通常は）次の場所にリポジトリに書き込まれます。
+* Web コンソールを使用して設定を変更した場合、（通常は）リポジトリの次の場所に書き込まれます。
 
    `/apps/{somewhere}`
 
-   * デフォルト `{somewhere}` が `system/config` 設定が
+   * デフォルトでは、`{somewhere}` は `system/config` なので、設定は次の場所に書き込まれます。
 
       `/apps/system/config`
 
@@ -346,7 +348,7 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
       `/apps/foo/config/someconfig`
 
-* 変更された設定 `admin` 次に保存： `*.config` 次の場所のファイル：
+* `admin` によって変更された設定は、次の場所の下の `*.config` ファイルに保存されます。
 
    ```
       /crx-quickstart/launchpad/config
@@ -360,7 +362,7 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
          `../crx/org/apache/felix/webconsole/internal/servlet/OsgiManager.config`
 
-      * CRX Sling Client Repository
+      * CRX Sling クライアントレポジトリ
 
          `../com/day/crx/sling/client/impl/CRXSlingClientRepository/<pid-nr>.config`
 

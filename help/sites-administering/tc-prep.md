@@ -14,7 +14,7 @@ exl-id: 1a7fe230-093b-4d2b-95cb-f9479c0febe5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '681'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 97%
 
 * `<language-code>`サポートされている言語コードは、ISO-639-1 で定義されている 2 文字のコード（例：`en`）です。
 
-* `<language-code>_<country-code>` または `<language-code>-<country-code>`サポートされている国コードは、ISO 3166 で定義されている小文字または大文字の 2 文字コードです。例： `en_US`, `en_us`, `en_GB`, `en-gb`.
+* `<language-code>_<country-code>` または `<language-code>-<country-code>` サポートされている国コードは、ISO 3166 で定義されている小文字または大文字 2 文字のコードです（例：`en_US`、`en_us`、`en_GB`、`en-gb`）。
 
 グローバルサイト用に選択した構造に従って、どちらかの形式を使用できます。例えば、Geometrixx サイトのフランス語の言語コピーのルートページの「名前」プロパティは `fr` になります。「名前」プロパティは、リポジトリ内の page ノードの名前として使用されます。そのため、このプロパティによってページのパスが指定されます（http://localhost:4502/content/geometrixx/fr.html）。
 

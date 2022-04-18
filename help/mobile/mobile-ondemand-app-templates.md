@@ -20,7 +20,7 @@ ht-degree: 80%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 AEM Mobile On-Demand には、完全に設定されたアプリテンプレート、記事テンプレートおよび記事コンポーネントが用意されています。
 
@@ -155,5 +155,5 @@ AEMテンプレートに従って、任意のデフォルトのプロパティ�
 
 ### 次の手順 {#the-next-steps}
 
-* [コンテンツのプロパティを使用したコンテンツの書き出し](/help/mobile/on-demand-content-properties-exporting.md)
+* [コンテンツのプロパティを使用したコンテンツのエクスポート](/help/mobile/on-demand-content-properties-exporting.md)
 * [モバイルとコンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md)

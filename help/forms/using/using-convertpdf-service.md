@@ -1,5 +1,5 @@
 ---
-title: Convert PDF サービス
+title: ConvertPDF サービス
 seo-title: ConvertPDF Service
 description: 'AEM Forms の Convert PDF サービスを使用して、PDF ドキュメントを PostScript ファイルや画像ファイルに変換します。 '
 seo-description: Use AEM Forms ConvertPDF service to convert PDF documents to PostScript or image files.
@@ -12,7 +12,7 @@ exl-id: a6fe7794-3c31-4706-9e23-fe63a506b0bc
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '398'
-ht-degree: 91%
+ht-degree: 92%
 
 ---
 
@@ -29,7 +29,7 @@ Convert PDF サービスを使用すると、次のタスクを実行できま�
 
 ## サービスのプロパティの設定 {#properties}
 
-AEM コンソールにある **AEMFD Convert PDF サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。AEMコンソールのデフォルト URL は、 `https://[host]:[port]/system/console/configMgr`.
+AEM コンソールにある **AEMFD Convert PDF サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。AEM コンソールのデフォルト URL は `https://[host]:[port]/system/console/configMgr` です。
 
 ## サービスの使用 {#using-the-service}
 

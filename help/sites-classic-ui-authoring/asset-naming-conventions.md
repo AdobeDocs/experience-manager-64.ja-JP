@@ -1,7 +1,7 @@
 ---
 title: アセットの命名規則のテスト
 seo-title: Naming conventions for assets
-description: リポジトリのノードは、Java コンテンツリポジトリーの命名規則の対象です。ただし、Adobe Experience Manager によってアセットノード名に追加の規則が課せられます。
+description: リポジトリーのノードは、Java コンテンツリポジトリーの命名規則の対象です。ただし、アセットノード名には Adobe Experience Manager によって追加の規則が課せられます。
 seo-description: Nodes in the repository are subject to naming conventions of the Java Content Repository. However, Adobe Experience Manager imposes further conventions for the name of asset nodes.
 uuid: 6b622a60-90e8-461e-9b67-42c11c7038f9
 contentOwner: Chris Bohnert
@@ -13,13 +13,13 @@ exl-id: 3dc38c37-f2a0-44f5-90f6-fee8c6f84ff4
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '128'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
-# アセットの命名規則 テスト{#naming-conventions-for-assets-testing}
+# アセットの命名規則のテスト{#naming-conventions-for-assets-testing}
 
-リポジトリのノードは、[Java コンテンツリポジトリ](/help/sites-developing/the-basics.md#java-content-repository)の命名規則の対象です。ただし、Adobe Experience Manager によってアセットノード名に追加の規則が課せられます。
+リポジトリーのノードは、[Java コンテンツリポジトリー](/help/sites-developing/the-basics.md#java-content-repository)の命名規則の対象です。ただし、アセットノード名には Adobe Experience Manager によって追加の規則が課せられます。
 
 ## クラシック UI {#classic-ui}
 
@@ -36,4 +36,4 @@ ht-degree: 97%
    * A～Z
    * 0～9
    * _（アンダースコア）
-   * `-` （ダッシュ/マイナス）
+   * `-`（ダッシュ／マイナス）

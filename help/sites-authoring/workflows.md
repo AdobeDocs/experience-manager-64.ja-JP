@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# ワークフローの操作{#working-with-workflows}
+# ワークフローの操作 {#working-with-workflows}
 
 AEM ワークフローでは、（1 つ以上の）ページおよびアセットで実行される一連の手順を自動化できます。
 
@@ -34,5 +34,5 @@ AEM ワークフローでは、（1 つ以上の）ページおよびアセッ�
 
 参考資料：
 
-* [ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md)
-* [ワークフローへの参加](/help/sites-authoring/workflows-participating.md)
+* [ページへのワークフローの適用 ](/help/sites-authoring/workflows-applying.md)
+* [ワークフローへの参加 ](/help/sites-authoring/workflows-participating.md)

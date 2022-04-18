@@ -13,13 +13,13 @@ exl-id: d0cdb15d-196a-44e3-bd98-91588b6979ab
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1572'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
 # AEM 6.4 における Sites リポジトリの再構築{#sites-repository-restructuring-in-aem}
 
-親の説明に従って [AEM 6.4 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md) このページでは、AEM 6.4 にアップグレードするお客様は、このページを使用して、AEM Sitesソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
+親の [AEM 6.4 のリポジトリ再構築](/help/sites-deploying/repository-restructuring.md)に記載されているように、AEM 6.4 にアップグレードするユーザーは、このページを使用して、AEM Sites ソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。一部の変更は AEM 6.4 アップグレードプロセス中に作業が必要ですが、それ以外は 6.5 アップグレードまで延期できます。
 
 **6.4 へのアップグレード時におこなう変更**
 
@@ -28,7 +28,7 @@ ht-degree: 72%
 **6.5 へのアップグレードまでにおこなう変更**
 
 * [Adobe Analytics クライアントライブラリ](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#adobe-analytics-client-libraries)
-* [クラシックな Microsoft Word から Web ページへのデザイン](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#classic-microsoft-word-to-web-page-designs)
+* [クラシックな Microsoft Word から web ページへのデザイン](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#classic-microsoft-word-to-web-page-designs)
 * [モバイルデバイスエミュレーター設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#mobile-device-emulator-configurations)
 * [Multi-site Manager のブループリント設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-blueprint-configurations)
 * [Multi-site Manager のロールアウト設定](/help/sites-deploying/sites-repository-restructuring-in-aem-6-4.md#multi-site-manager-rollout-configurations)
@@ -58,16 +58,16 @@ ht-degree: 72%
    <td><strong>再構築の手引き</strong></td> 
    <td><p>新規または変更された ContextHub セグメントが AEM で編集されるのではなく、ソース管理で編集されることを意図している場合は、それらを新しい場所に移行する必要があります。</p> 
     <ol> 
-     <li>新規または変更された ContextHub セグメントを以前の場所から適切な新しい場所 (/<code>apps</code>, <code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>)</li> 
-     <li>以前の場所の ContextHub セグメントへの参照を、移行された新しい場所の ContextHub セグメントに更新します (<code>/apps</code>, <code>/conf/global</code>, <code>/conf/&lt;tenant&gt;</code>) をクリックします。</li> 
-    </ol> <p>次の QueryBuilder クエリは、以前の場所内の ContextHub セグメントへのすべての参照を探します。<br /> <br /> <code class="code">path=/content
+     <li>新規または変更された ContextHub セグメントを以前の場所から適切な新しい場所（/<code>apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code> のいずれか）にコピー</li> 
+     <li>以前の場所の ContextHub Segments への参照を、新しい場所（<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code> のいずれか）の移行された ContextHub Segments に更新します。</li> 
+    </ol> <p>次の QueryBuilder クエリは、以前の場所内の ContextHub セグメントへのすべての参照を検索します。<br /> <br /> <code class="code">path=/content
        property=cq:segments
        property.operation=like
-       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> これは、 <a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEM QueryBuilder Debugger UI</a>. これはトラバースクエリなので、実稼動環境に対して実行しないでください。また、必要に応じてトラバーサル制限を調整してください。</p> </td> 
+       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> これは <a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEM QueryBuilder Debugger UI</a> を使用して実行できます。これは走査クエリであるため、実稼働環境に対して実行しないでください。また、必要に応じて走査制限を調整してください。</p> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
-   <td><p>以前の場所に保存されている ContextHub セグメントは、<strong>AEM／パーソナライゼーション／オーディエンス</strong>に読み取り専用として表示されます。</p> <p>AEMで ContextHub セグメントを編集可能にするには、新しい場所 (<code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>) をクリックします。 AEMで作成された新しい ContentHub セグメントは、新しい場所 (<code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>) をクリックします。</p> <p>AEM Sitesのページプロパティでは、以前の場所 (<code>/etc</code>) または単一の新しい場所 (<code>/apps</code>, <code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>) が選択されている場合は、それに応じて ContextHub セグメントを移行する必要があります。</p> <p>AEM 参照サイトからの未使用の ContextHub セグメントは削除でき、新しい場所に移行されません。</p> 
+   <td><strong>メモ</strong></td> 
+   <td><p>以前の場所に保存されている ContextHub セグメントは、<strong>AEM／パーソナライズ機能／オーディエンス</strong>に読み取り専用として表示されます。</p> <p>ContextHub セグメントを AEM で編集可能にする場合は、それらを新しい場所（<code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>）に移行する必要があります。AEM で作成された新しい ContentHub セグメントは、新しい場所（<code>/conf/global</code> または <code>/conf/&lt;tenant&gt;</code>）に保持されます。</p> <p>AEM Sites ページのプロパティでは、以前の場所（<code>/etc</code>）または単一の新しい場所（<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code> のいずれか）しか選択できないため、それに応じて ContextHub セグメントを移行する必要があります。</p> <p>AEM 参照サイトからの未使用の ContextHub セグメントは削除でき、新しい場所に移行されません。</p> 
     <ul> 
      <li>/etc/segmentation/geometrixx/</li> 
      <li>/etc/segmentation/geometrixx-outdoors</li> 
@@ -106,7 +106,7 @@ ht-degree: 72%
     </ol> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
+   <td><strong>注</strong></td> 
    <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 <code>cq:ClientLIbraryFolder</code> ノードを検索し、カテゴリプロパティを調べます.</p> 
     <ul> 
      <li><code>/libs/cq/analytics/clientlibs/sitecatalyst/appmeasurement</code></li> 
@@ -119,7 +119,7 @@ ht-degree: 72%
  </tbody>
 </table>
 
-### クラシックな Microsoft Word から Web ページへのデザイン {#classic-microsoft-word-to-web-page-designs}
+### クラシックな Microsoft Word から web ページへのデザイン {#classic-microsoft-word-to-web-page-designs}
 
 <table> 
  <tbody>
@@ -135,18 +135,18 @@ ht-degree: 72%
    <td><strong>再構築の手引き</strong></td> 
    <td><p>SCM で管理されており、実行時にデザインダイアログから書き込まれていないデザインの場合：</p> 
     <ol> 
-     <li>以前の場所から新しい場所 (<code>/apps</code>) をクリックします。</li> 
-     <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank"> を使用して、デザイン内の CSS、JavaScript、静的リソースを</a>クライアントライブラリ<code>allowProxy = true</code>に変換します。</li> 
+     <li>デザインを以前の場所から新しい場所（<code>/apps</code>）にコピーします。</li> 
+     <li><code>allowProxy = true</code> を使用して、デザイン内の CSS、JavaScript、静的リソースを<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">クライアントライブラリ</a>に変換します。</li> 
      <li>cq:designPath プロパティの以前の場所への参照を更新します。</li> 
      <li>以前の場所を参照しているページを更新して、新規のクライアントライブラリカテゴリを使用します（これにはページ実装コードの更新が必要です）。</li> 
-     <li>AEM Dispatcher のルールを更新して、 <code>/etc.clientlibs/</code> プロキシサーブレット。</li> 
+     <li><code>/etc.clientlibs/</code> プロキシサーブレットを介したクライアントライブラリの提供を許可するように AEM Dispatcher のルールを更新します。</li> 
     </ol> <p>SCM で管理されておらず、実行時にデザインダイアログで変更されたデザインの場合：</p> 
     <ul> 
-     <li>次の場所からオーサー可能なデザインを移動しない <code>/etc</code>.</li> 
+     <li>オーサリング可能なデザインを <code>/etc</code> から移動しないでください。</li> 
     </ul> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
+   <td><strong>メモ</strong></td> 
    <td>該当なし<br /> </td> 
   </tr>
  </tbody>
@@ -168,8 +168,8 @@ ht-degree: 72%
    <td><strong>再構築の手引き</strong></td> 
    <td>新しいモバイルデバイスエミュレーター設定は、新しい場所に移行する必要があります。
     <ol> 
-     <li>新しいモバイルデバイスエミュレーター設定を以前の場所から新しい場所 (<code>/apps</code>, <code>/conf/global</code>, <code>/conf/&lt;tenant&gt;</code>) をクリックします。</li> 
-     <li>これらのモバイルデバイスエミュレーター設定に依存するAEM Sitesページの場合、ページの <span class="code">
+     <li>新規のモバイルデバイスエミュレータ設定を以前の場所から新しい場所（<code>/apps</code>、<code>/conf/global</code>、<code>/conf/&lt;tenant&gt;</code> のいずれか）にコピーします。</li> 
+     <li>これらのモバイルデバイスエミュレーター設定に依存する AEM Sites ページの場合、ページの <span class="code"> をアップデートします。 
        <code>
         jcr
        </code>
@@ -179,18 +179,18 @@ ht-degree: 72%
        <code>
         deviceGroups
        </code> = String[ mobile/groups/responsive ]</span></li> 
-     <li>これらのモバイルデバイスエミュレーター設定に依存する編集可能なテンプレートに対して、編集可能なテンプレートを更新し、 <span class="code">
+     <li>モバイルデバイスエミュレータの設定に依存する編集可能なテンプレートについては、編集可能なテンプレートで <span class="code"> への参照を新しい場所にアップデートします。
        <code>
         cq
        </code>:
        <code>
         deviceGroups
-       </code></span> を「新しい場所」に追加します。</li> 
+       </code></span></li> 
     </ol> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
-   <td><p>モバイルデバイスエミュレータ設定の解決は、次の順序でおこなわれます。</p> 
+   <td><strong>メモ</strong></td> 
+   <td><p>モバイルデバイスエミュレータ設定の解決は、次の順序で行われます。</p> 
     <ol> 
      <li><code>/conf/&lt;tenant&gt;/settings/mobile</code></li> 
      <li><code>/conf/global/settings/mobile</code></li> 
@@ -202,7 +202,7 @@ ht-degree: 72%
  </tbody>
 </table>
 
-### Multi-site Manager のブループリント設定 {#multi-site-manager-blueprint-configurations}
+### マルチサイトマネージャーのブループリント設定 {#multi-site-manager-blueprint-configurations}
 
 <table> 
  <tbody>
@@ -212,19 +212,19 @@ ht-degree: 72%
   </tr>
   <tr>
    <td><strong>新しい場所</strong></td> 
-   <td><p><code>/apps/msm</code> （顧客のブループリント設定）</p> <p><code>/libs/msm</code> （Screens、Commerce の標準ブループリント設定）</p> </td> 
+   <td><p><code>/apps/msm</code> （カスタマーブループリント設定）</p> <p><code>/libs/msm</code> （Screens、Commerce のための標準ブループリント設定）</p> </td> 
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>新規または変更された Multi-site Manager ブループリント設定は、新しい場所 (<code>/apps</code>) をクリックします。</p> 
+   <td><p>新規または変更されたマルチサイトマネージャーのブループリント設定は、新しい場所（<code>/apps</code>）に移行する必要があります。</p> 
     <ol> 
-     <li>新規または変更された Multi-site Manager ブループリント設定を以前の場所から新しい場所 (<code>/apps</code>) をクリックします。</li> 
-     <li>移行した Multi-site Manager のブループリント設定を以前の場所から削除します。</li> 
+     <li>新規または変更されたマルチサイトマネージャーのブループリント設定を以前の場所から新しい場所（<code>/apps</code>）にコピーします。</li> 
+     <li>移行したマルチサイトマネージャーのブループリント設定を以前の場所から削除します。</li> 
     </ol> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
-   <td><p>Multi-site Manager で提供されるすべてのAEMのブループリント設定は、 <code>/libs</code>.</p> <p>コンテンツは Multi-site Manager のブループリント設定を参照していないため、調整するコンテンツ参照はありません。</p> </td> 
+   <td><strong>メモ</strong></td> 
+   <td><p>AEM が提供するマルチサイトマネージャーのブループリント設定はすべて、<code>/libs</code> の新しい場所にあります。</p> <p>コンテンツは Multi-site Manager のブループリント設定を参照していないため、調整するコンテンツ参照はありません。</p> </td> 
   </tr>
  </tbody>
 </table>
@@ -243,14 +243,14 @@ ht-degree: 72%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td> 
-   <td><p>新規または変更された Multi-Site Manager のロールアウト設定は、新しい場所に移行する必要があります。</p> 
+   <td><p>新規または変更されたマルチサイトマネージャーのロールアウト設定は、新しい場所に移行する必要があります。</p> 
     <ol> 
-     <li>新規または変更された Multi-site Manager のロールアウト設定を以前の場所から新しい場所 (<code>/apps</code>) をクリックします。</li> 
-     <li>AEMページ上の参照を、以前の場所の Multi-site Manager ロールアウト設定に更新し、新しい場所 (<code>/libs</code> または <code>/apps</code>) をクリックします。</li> 
-    </ol> <p>移行した Multi-site Manager のロールアウト設定を以前の場所から削除します。</p> </td> 
+     <li>新規または変更したマルチサイトマネージャーのロールアウト設定を以前の場所から新しい場所（<code>/apps</code>）にコピーします。</li> 
+     <li>AEM ページで、以前の場所にあるマルチサイトマネージャーのロールアウト設定への参照をすべて、新しい場所（<code>/libs</code> または <code>/apps</code>）の対応する場所を指すように更新します。</li> 
+    </ol> <p>移行したマルチサイトマネージャーのロールアウト設定を以前の場所から削除します。</p> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
+   <td><strong>メモ</strong></td> 
    <td>移行した Multi-site Manager のロールアウト設定を以前の場所から削除しないと、ロールアウトオプションが AEM 作成者に重複して表示されます。</td> 
   </tr>
  </tbody>
@@ -278,10 +278,10 @@ ht-degree: 72%
     </ol> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
-   <td><p>新規または変更されたページイベント通知電子メールテンプレートは、以下の新しい場所に移行する必要があります。 <code>/apps</code>:</p> 
+   <td><strong>メモ</strong></td> 
+   <td><p>新規または変更されたページイベント通知メールテンプレートは、<code>/apps</code> 下の新しい場所に移行する必要があります。</p> 
     <ol> 
-     <li>新規または変更されたページイベント通知電子メールテンプレートを以前の場所から新しい場所 (<code>/apps</code>) をクリックします。</li> 
+     <li>新規または変更されたページイベント通知メールテンプレートを以前の場所から新しい場所（<code>/apps</code>）にコピーします。</li> 
      <li>移行したページイベント通知電子メールテンプレートを以前の場所からすべて削除します。</li> 
     </ol> </td> 
   </tr>
@@ -299,10 +299,10 @@ ht-degree: 72%
   <tr>
    <td><strong>新しい場所</strong></td> 
    <td><p><span class="code">/libs/settings/
-      <code>
+      <code>
        wcm
       </code>/template-types/scaffolding/scaffolding</span></p> <p><span class="code">/apps/settings/
-      <code>
+      <code>
        wcm
       </code>/template-types/scaffolding/scaffolding</span></p> </td> 
   </tr>
@@ -311,7 +311,7 @@ ht-degree: 72%
    <td>以前の場所の下に作成された基礎モードは、従来の基礎モードフレームワークを使用するため、新しい場所に移行できません。新しい場所に合わせるには、サポートされている基礎モードフレームワークを使用して、従来の基礎モードを再開発する必要があります。</td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
+   <td><strong>メモ</strong></td> 
    <td>該当なし<br /> </td> 
   </tr>
  </tbody>
@@ -337,7 +337,7 @@ ht-degree: 72%
     </ul> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
+   <td><strong>メモ</strong></td> 
    <td>存在しない <code>grid_base.less</code> ファイルを参照すると、ページのレイアウトモードとテンプレートエディターが機能せず、ページレイアウトが中断されます。</td> 
   </tr>
  </tbody>
@@ -359,18 +359,18 @@ ht-degree: 72%
    <td><strong>再構築の手引き</strong></td> 
    <td><p>SCM で管理されており、実行時にデザインダイアログから書き込まれていないデザインの場合：</p> 
     <ol> 
-     <li>以前の場所から新しい場所 (<code>/apps</code>) をクリックします。</li> 
-     <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank"> を使用して、デザイン内の CSS、JavaScript、静的リソースを</a>クライアントライブラリ<code>allowProxy = true</code>に変換します。</li> 
-     <li><code>cq:designPath</code>AEM／Sites／カスタムサイトページ／ページのプロパティ／詳細タブ／デザインフィールド<strong>で </strong> プロパティの以前の場所への参照を更新します。</li> 
+     <li>デザインを以前の場所から新しい場所（<code>/apps</code>）にコピーします。</li> 
+     <li><code>allowProxy = true</code> を使用して、デザイン内の CSS、JavaScript、静的リソースを<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">クライアントライブラリ</a>に変換します。</li> 
+     <li><strong>AEM／Sites／カスタムサイトページ／ページのプロパティ／詳細タブ／デザインフィールド</strong>で <code>cq:designPath</code> プロパティの以前の場所への参照を更新します。</li> 
      <li>以前の場所を参照しているページを更新して、新規のクライアントライブラリカテゴリを使用します（これにはページ実装コードの更新が必要です）。</li> 
-     <li>AEM Dispatcher のルールを更新して、 <code>/etc.clientlibs/</code> プロキシサーブレット。</li> 
+     <li><code>/etc.clientlibs/</code> プロキシサーブレットを介したクライアントライブラリの提供を許可するように AEM Dispatcher のルールを更新します。</li> 
     </ol> <p>SCM で管理されておらず、実行時にデザインダイアログで変更されたデザインの場合：</p> 
     <ul> 
-     <li>次の場所からオーサー可能なデザインを移動しない <code>/etc</code>.</li> 
+     <li>オーサリング可能なデザインを <code>/etc</code> から移動しないでください。</li> 
     </ul> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
+   <td><strong>メモ</strong></td> 
    <td>推奨されるアプローチは、デザインの代わりに構造コンテンツとポリシーを使用する編集可能なテンプレートを使用して AEM Sites とページを構築することです。</td> 
   </tr>
  </tbody>
@@ -400,7 +400,7 @@ ht-degree: 72%
     </ul> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
+   <td><strong>メモ</strong></td> 
    <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 cq:ClientLIbraryFolder ノードを検索し、カテゴリプロパティを調べます:</p> 
     <ul> 
      <li><code>/libs/cq/searchpromote/clientlibs/searchpromote</code></li> 
@@ -439,7 +439,7 @@ ht-degree: 72%
     </ul> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
+   <td><strong>メモ</strong></td> 
    <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 cq:ClientLIbraryFolder ノードを検索し、カテゴリプロパティを調べます:</p> 
     <ul> 
      <li><code>/libs/cq/testandtarget/clientlibs/testandtarget/testandtarget</code></li> 
@@ -480,8 +480,8 @@ ht-degree: 72%
     </ul> </td> 
   </tr>
   <tr>
-   <td><strong>備考</strong></td> 
-   <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 <code>cq:ClientLIbraryFolder</code> ノードを検索し、カテゴリプロパティを調べます:</p> 
+   <td><strong>注</strong></td> 
+   <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 <code>cq:ClientLIbraryFolder</code> ノードを検索し、categories プロパティを調べます。</p> 
     <ul> 
      <li><code>/libs/wcm/foundation/clientlibs/accessibility</code></li> 
      <li><code>/libs/wcm/foundation/clientlibs/main</code></li> 

@@ -21,7 +21,7 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 アプリコンテンツを管理するには、[開発者](#developer)、コンテンツ[作成者](#author)および[管理者](#administrator)が連携して作業する必要があります。作成者は、アプリ開発者が生成したテンプレートおよびコンポーネントに基づいて、ページを操作します。
 
@@ -106,4 +106,4 @@ AEM 管理者&#x200B;**&#x200B;は、開発者や App Store 再送信を必要�
 管理者および開発者の役割と責任について詳しくは、以下のリソースを参照してください。
 
 * [AEM と Adobe PhoneGap Enterprise での開発](/help/mobile/developing-in-phonegap.md)
-* [AEM での Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)
+* [AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)

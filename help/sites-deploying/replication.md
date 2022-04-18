@@ -14,7 +14,7 @@ exl-id: b4a56f59-dc5e-40c3-a024-ee9df10949d8
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '3577'
-ht-degree: 72%
+ht-degree: 93%
 
 ---
 
@@ -53,19 +53,19 @@ ht-degree: 72%
 
 一部の機能は、ユーザーに対してパブリッシュインスタンス上でのデータ入力を許可します。
 
-状況によっては、このデータをオーサー環境に返してそこから別のパブリッシュ環境へ再分配するために、リバースレプリケーションという種類のレプリケーションが必要になることがあります。セキュリティ上の考慮事項により、パブリッシュからオーサー環境へのトラフィックは厳密に制御する必要があります。
+状況によっては、このデータをオーサー環境に返してそこから別のパブリッシュ環境へ再分配するために、リバースレプリケーションという種類のレプリケーションが必要になることがあります。セキュリティ上の問題を考慮し、パブリッシュ環境からオーサー環境へのトラフィックは厳密に制御する必要があります。
 
 リバースレプリケーションでは、オーサー環境を参照するパブリッシュ環境内のエージェントを使用します。このエージェントが、データをアウトボックスに配置します。このアウトボックスは、オーサー環境のレプリケーションリスナーに対応付けられています。リスナーはアウトボックスをポーリングして、入力されているすべてのデータを収集し、必要に応じて配布します。これにより、オーサー環境がすべてのトラフィックを確実に制御できるようになります。
 
 その他の場合、例えばフォーラム、ブログ、コメント、レビューなどのコミュニティ機能では、パブリッシュ環境に入力されるユーザー生成コンテンツ（UGC）の量が多いので、AEM インスタンス間の効率的な同期をレプリケーションで実現することは難しくなります。
 
-AEM [コミュニティ](/help/communities/overview.md) UGC にレプリケーションを使用しない。 代わりに、コミュニティのデプロイメントには UGC 用の共通ストアが必要です ( [コミュニティコンテンツストレージ](/help/communities/working-with-srp.md)) をクリックします。
+AEM [Communities](/help/communities/overview.md) では、UGC にレプリケーションを使用しません。その代わりに、Communities のデプロイメントでは UGC 用の共通ストアが必要になります（[コミュニティコンテンツのストレージ](/help/communities/working-with-srp.md)を参照）。
 
 ## レプリケーション（デフォルト） {#replication-out-of-the-box}
 
 AEM の標準インストールに含まれている Geometrixx Web サイトを使用して、レプリケーションの仕組みを見ていきましょう。
 
-この例に従ってデフォルトのレプリケーションエージェントを使用するには、次の手順を実行する必要があります [AEMをインストール](/help/sites-deploying/deploy.md) 次を使用：
+この例に従ってデフォルトのレプリケーションエージェントを使用するには、次の環境を使用して [AEM をインストール](/help/sites-deploying/deploy.md)する必要があります。
 
 * オーサー環境（ポート `4502`）
 * パブリッシュ環境（ポート `4503`）
@@ -78,9 +78,8 @@ AEM の標準インストールに含まれている Geometrixx Web サイトを
 >
 >事実上、以下はデフォルトで無効になっています（AEM 6.1 以降）。
 >
->* 作成者のエージェント：リバースレプリケーションエージェント (publish_reverse)
->* Agents on publish : Reverse Replication (outbox)
-
+>* オーサー環境のエージェント：リバースレプリケーションエージェント（publish_reverse）
+>* パブリッシュ環境のエージェント：リバースレプリケーション（outbox）
 >
 >エージェントまたはキューのステータスを確認するには、**ツール**&#x200B;コンソールを使用します。\
 >[レプリケーションエージェントの監視](#monitoring-your-replication-agents)を参照してください。
@@ -114,11 +113,11 @@ AEM の標準インストールに含まれている Geometrixx Web サイトを
 
 * [デフォルトエージェント](#replication-author-to-publish)  — オーサーからパブリッシュへのレプリケーションに使用します。
 
-* Dispatcher フラッシュ — Dispatcher キャッシュの管理に使用されます。詳しくは、 [オーサリング環境からの Dispatcher キャッシュの無効化](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment) および [パブリッシュインスタンスからの Dispatcher キャッシュの無効化](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance) を参照してください。
+* Dispatcher フラッシュ — Dispatcher キャッシュの管理に使用されます。詳しくは、 [オーサリング環境からの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-the-authoring-environment) および [パブリッシュインスタンスからの Dispatcher キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-a-publishing-instance) を参照してください。
 
-* [リバースレプリケーション](#replicating-from-publish-to-author)  — パブリッシュからオーサーへのレプリケーションに使用します。 Reverse replication is not used for Communities features, such as forums, blogs, and comments. It is effectively disabled as the outbox is not enabled. Use of reverse replication would require custom configuration.
+* [リバースレプリケーション](#replicating-from-publish-to-author)  — パブリッシュからオーサーへのレプリケーションに使用します。 リバースレプリケーションは、フォーラム、ブログ、コメントなどのコミュニティ機能には使用されません。アウトボックスが有効化されていないので、事実上、この機能は無効になっています。リバースレプリケーションを使用するには、カスタム設定が必要になります。
 
-* 静的エージェント — 「ノードの静的表現をファイルシステムに保存するエージェント」です。 例えば、デフォルト設定では、コンテンツページと DAM アセットは、 `/tmp`(HTMLまたは適切なアセット形式 ) 詳しくは、 `Settings` および `Rules` タブを使用して設定を行います。 これは、ページがアプリケーションサーバーから直接要求される場合に、コンテンツを確認できるようにするためのエージェントです。これは特殊なエージェントであり、（おそらく）ほとんどのインスタンスでは必要ありません。
+* 静的エージェント — 「ノードの静的表現をファイルシステムに保存するエージェント」です。 例えば、デフォルト設定では、コンテンツページと DAM アセットが `/tmp` に HTML または適切なアセット形式として格納されます。設定については、`Settings` タブと `Rules` タブを参照してください。これは、ページがアプリケーションサーバーから直接要求される場合に、コンテンツを確認できるようにするためのエージェントです。これは特殊なエージェントであり、（おそらく）ほとんどのインスタンスでは必要ありません。
 
 ## レプリケーションエージェント - 設定パラメーター {#replication-agents-configuration-parameters}
 
@@ -134,7 +133,7 @@ AEM の標準インストールに含まれている Geometrixx Web サイトを
 
    このレプリケーションエージェントの用途の説明です。
 
-* **有効**
+* **Enabled**
 
    現在レプリケーションエージェントが有効かどうかを示します。
 
@@ -168,7 +167,7 @@ AEM の標準インストールに含まれている Geometrixx Web サイトを
 
    >[!CAUTION]
    >
-   >オーサー環境におけるエージェントの場合、このアカウントには、レプリケーションしたすべてのパスに対する読み取りアクセス権が必要です。**
+   >オーサー環境におけるエージェントの場合、このアカウントには、レプリケーションしたすべてのパスに対する読み取りアクセス権が必要です&#x200B;*。*
 
    >[!CAUTION]
    >
@@ -182,9 +181,9 @@ AEM の標準インストールに含まれている Geometrixx Web サイトを
 
    ログメッセージに使用する詳細レベルを指定します。
 
-   * `Error`:エラーのみがログに記録されます
-   * `Info`: errors, warnings and other informational messages will be logged
-   * `Debug`:詳細の概要は、主にデバッグ目的でメッセージで使用されます
+   * `Error`：エラーだけがログに記録されます。
+   * `Info`：エラー、警告およびその他の情報メッセージがログに記録されます。
+   * `Debug`：主にデバッグを目的として、高いレベルの詳細がメッセージで使用されます。
 
    デフォルト: `Info`
 
@@ -194,7 +193,7 @@ AEM の標準インストールに含まれている Geometrixx Web サイトを
 
 * **エイリアスの更新**
 
-   このオプションを選択すると、Dispatcher へのエイリアスまたはバニティーパスの無効化要求が有効になります。また、 [Dispatcher フラッシュエージェントの設定](/help/sites-deploying/replication.md#configuring-a-dispatcher-flush-agent).
+   このオプションを選択すると、Dispatcher へのエイリアスまたはバニティーパスの無効化要求が有効になります。[Dispatcher フラッシュエージェントの設定](/help/sites-deploying/replication.md#configuring-a-dispatcher-flush-agent) も参照してください。
 
 ### トランスポート {#transport}
 
@@ -204,12 +203,12 @@ AEM の標準インストールに含まれている Geometrixx Web サイトを
 
    次に例を示します。
 
-   * デフォルトエージェントのレプリケート先 `http://localhost:4503/bin/receive`
-   * A Dispatcher Flush agent may replicate to `http://localhost:8000/dispatcher/invalidate.cache`
+   * デフォルトエージェントによるレプリケーション先：`http://localhost:4503/bin/receive`
+   * Dispatcher フラッシュエージェントによるレプリケーション先：`http://localhost:8000/dispatcher/invalidate.cache`
 
    ここで指定するプロトコル（HTTP または HTTPS）によってトランスポート方法が決まります。
 
-   Dispatcher フラッシュエージェントの場合、URI プロパティは、パスベースの仮想ホストエントリを使用してファームを区別する場合にのみ使用されます。このフィールドを使用して、無効にするファームをターゲット設定します。 例えば、ファーム #1 の仮想ホストは `www.mysite.com/path1/*` で、ファーム #2 の仮想ホストは `www.mysite.com/path2/*` です。この場合、`/path1/invalidate.cache` の URL を使用して最初のファームをターゲット設定し、`/path2/invalidate.cache` を使用して 2 つ目のファームをターゲット設定できます。
+   Dispatcher フラッシュエージェントの場合、「URI」プロパティは、パスに基づく virtualhost エントリを使用してファームを区別する場合にのみ使用されます。このフィールドを使用して、無効にするファームをターゲット設定してください。例えば、ファーム #1 の仮想ホストは `www.mysite.com/path1/*` で、ファーム #2 の仮想ホストは `www.mysite.com/path2/*` です。この場合、`/path1/invalidate.cache` の URL を使用して最初のファームをターゲット設定し、`/path2/invalidate.cache` を使用して 2 つ目のファームをターゲット設定できます。
 
 * **ユーザー**
 
@@ -289,8 +288,8 @@ AEM の標準インストールに含まれている Geometrixx Web サイトを
 
    必要に応じてこれらを使用して、ハンドルまたはパスのフラッシュ時に使用するアクションを指定します。サブパラメーターは動的です。
 
-   * `{action}` レプリケーションアクションを示します
-   * `{path}` パスを示します
+   * `{action}` はレプリケーションアクションを示します
+   * `{path}` はパスを示します
 
    これらは、要求に関連するパスまたはアクションで置き換えられるので、ハードコーディングする必要はありません。
 
@@ -358,7 +357,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
 >[!NOTE]
 >
->Dispatcher がオーサーインスタンスまたはパブリッシュインスタンスの HTTP 要求を処理する場合は、レプリケーションエージェントからの HTTP 要求に PATH ヘッダーが含まれている必要があります。次の手順に加えて、クライアントヘッダーの Dispatcher のリストに PATH ヘッダーを追加する必要があります（[/clientheaders（クライアントヘッダー）](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)に関するページを参照してください）。[](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)
+>Dispatcher がオーサーインスタンスまたはパブリッシュインスタンスの HTTP 要求を処理する場合は、レプリケーションエージェントからの HTTP 要求に PATH ヘッダーが含まれている必要があります。次の手順に加えて、クライアントヘッダーの Dispatcher のリストに PATH ヘッダーを追加する必要があります（[/clientheaders（クライアントヘッダー）](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja-JP)に関するページを参照してください）。[](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)
 
 1. AEM の「**ツール**」タブにアクセスします。
 1. 「**レプリケーション**」（フォルダーを開くための左側のウィンドウ）をクリックします。
@@ -368,7 +367,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
    ![chlimage_1-145](assets/chlimage_1-145.png)
 
-1. 指定した値は、デフォルトのインストールで十分である必要があります。変更を加えた場合は、 **OK** それらを保存する ( [レプリケーションエージェント — 設定パラメーター](#replication-agents-configuration-parameters) 個々のパラメーターの詳細を参照 )。
+1. デフォルトのインストールに適した値を指定する必要があります。値を変更したら、「**OK**」をクリックして値を保存します（個々のパラメーターについて詳しくは、[レプリケーションエージェント - 設定パラメーター](#replication-agents-configuration-parameters)を参照してください）。
 
 >[!NOTE]
 >
@@ -384,12 +383,12 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
 通常、パブリッシュ環境は DMZ にあるので、コンテンツをオーサー環境に戻すには、オーサーインスタンスから接続を開始する必要があります。そのためには、次のものを使用します。
 
-* コンテンツが配置されているパブリッシュ環境のアウトボックス&#x200B;**
+* コンテンツが配置されているパブリッシュ環境の&#x200B;*アウトボックス*
 * 新しいコンテンツ用のアウトボックスを定期的にポーリングする、オーサー環境のエージェント（publish）
 
 >[!NOTE]
 >
->For AEM [Communities](/help/communities/overview.md), replication is not used for user generated content on a publish instance. See [Community Content Storage](/help/communities/working-with-srp.md).
+>AEM [Communities](/help/communities/overview.md) では、パブリッシュインスタンス上のユーザー生成コンテンツにレプリケーションを使用しません。[コミュニティコンテンツのストレージ](/help/communities/working-with-srp.md)を参照してください。
 
 そのためには、次のものが必要です。
 
@@ -399,7 +398,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
 ![chlimage_1-146](assets/chlimage_1-146.png)
 
-**パブリッシュ環境（アウトボックス）のリバースレプリケーションエージェント** これは「アウトボックス」として機能するパッシブ要素です。 User input is placed here, from where it is collected by the agent in the author environment.
+**パブリッシュ環境（アウトボックス）のリバースレプリケーションエージェント** これは「アウトボックス」として機能する受動的な要素です。 オーサー環境でエージェントが収集する場所から、ユーザー入力がここに配置されます。
 
 ![chlimage_1-9](assets/chlimage_1-9.jpeg)
 
@@ -409,7 +408,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 >
 >コンテンツのみがレプリケートされます。ユーザーデータ（ユーザー、ユーザーグループ、ユーザープロファイル）はレプリケートされません。
 >
->複数のパブリッシュインスタンス間でユーザーデータを同期するには、 [ユーザーの同期](/help/sites-administering/sync.md).
+>複数のパブリッシュインスタンス間でユーザーデータを同期させるには、[ユーザーの同期](/help/sites-administering/sync.md)を有効化します。
 
 インストール時には、localhost のポート 4503 で実行されているパブリッシュインスタンスにコンテンツをレプリケートするデフォルトエージェントが既に設定されています。
 
@@ -428,10 +427,10 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
       * 「**有効**」をアクティブにします。
       * 「**説明**」を入力します。
       * 「**再試行遅延**」を `60000` に設定します。
-      * を **シリアル化の種類** as `Default`.
+      * **シリアル化のタイプ**&#x200B;は`Default`のままにします。
    * 「**トランスポート**」タブで、次のように設定します。
 
-      * 新しいパブリッシュインスタンスに必要な URI を入力します。例：
+      * 新しいパブリッシュインスタンスに必要な URI を入力します。次に例を示します。 
 
          `http://localhost:4504/bin/receive`.
 
@@ -445,7 +444,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
 更新された内容は、前述の手順で設定したすべてのパブリッシュインスタンスに表示されます。
 
-If you encounter any problems, you can check the logs on the author instance. 必要な詳細レベルに応じて、 **ログレベル** から `Debug` の使用 **エージェント設定** ダイアログを開きます。
+問題が発生した場合は、オーサーインスタンスでログを確認できます。 必要な詳細レベルに応じて、前述の **エージェント設定** ダイアログを使用して、**ログレベル** を `Debug` に設定することもできます。
 
 >[!NOTE]
 >
@@ -464,7 +463,7 @@ If you encounter any problems, you can check the logs on the author instance. �
 
 1. AEM の「**ツール**」タブを開きます。
 1. 「**導入**」をクリックします。
-1. Select **Replication** and then **Agents on publish**.
+1. **レプリケーション**&#x200B;を選択した後、**パブリッシュ環境のエージェント**&#x200B;を選択してください。
 1. **Dispatcher フラッシュ**&#x200B;項目をダブルクリックして、概要を開きます。
 1. 「**編集**」をクリックします。**エージェントの設定**&#x200B;ダイアログが開きます。
 
@@ -472,18 +471,18 @@ If you encounter any problems, you can check the logs on the author instance. �
 
       * 「**有効**」をアクティブにします。
       * 「**説明**」を入力します。
-      * を **シリアル化の種類** as `Dispatcher Flush`または、新しいエージェントを作成する場合はそのように設定します。
-      * （オプション）を選択します。 **エイリアスの更新** Dispatcher に対するエイリアスまたはバニティーパスの無効化要求を有効にする。
+      * **シリアル化のタイプ**&#x200B;を `Dispatcher Flush` のままにするか、またはエージェントを新規作成する場合に同様の設定を行います。
+      * （オプション）**エイリアスの更新**&#x200B;を選択して、Dispatcher に対するエイリアスまたはバニティーパスの無効化要求を有効にします。
    * 「**トランスポート**」タブで、次のように設定します。
 
-      * Enter the required URI for the new publish instance; for example,
+      * 新しいパブリッシュインスタンスに必要な URI を入力します。次に例を示します。 
 
          `http://localhost:80/dispatcher/invalidate.cache`.
 
       * レプリケーションに使用する、サイト固有のユーザーアカウントを入力します。
       * 必要に応じて、その他のパラメーターを設定できます。
 
-   Dispatcher フラッシュエージェントの場合、URI プロパティは、パスベースの仮想ホストエントリを使用してファームを区別する場合にのみ使用されます。このフィールドを使用して、無効にするファームをターゲット設定します。 例えば、ファーム #1 の仮想ホストは `www.mysite.com/path1/*` で、ファーム #2 の仮想ホストは `www.mysite.com/path2/*` です。この場合、`/path1/invalidate.cache` の URL を使用して最初のファームをターゲット設定し、`/path2/invalidate.cache` を使用して 2 つ目のファームをターゲット設定できます。
+   Dispatcher フラッシュエージェントの場合、「URI」プロパティは、パスに基づく virtualhost エントリを使用してファームを区別する場合にのみ使用されます。このフィールドを使用して、無効にするファームをターゲット設定してください。例えば、ファーム #1 の仮想ホストは `www.mysite.com/path1/*` で、ファーム #2 の仮想ホストは `www.mysite.com/path2/*` です。この場合、`/path1/invalidate.cache` の URL を使用して最初のファームをターゲット設定し、`/path2/invalidate.cache` を使用して 2 つ目のファームをターゲット設定できます。
 
    >[!NOTE]
    >
@@ -506,17 +505,17 @@ If you encounter any problems, you can check the logs on the author instance. �
 
 >[注意!]
 >
->レプリケーションエージェントの作成は、 `/etc/replication` リポジトリの場所。 関連する ACL を正しく処理するには、これが必要です。 ツリーの別の場所にレプリケーションエージェントを作成すると、許可されていないアクセスが発生する場合があります。
+>レプリケーションエージェントの作成は、`/etc/replication` リポジトリの場所でのみサポートされます。 関連する ACL を正しく処理するには、これが必要です。ツリーの別の場所にレプリケーションエージェントを作成すると、不正アクセスにつながる可能性があります。
 
 CRXDE Lite を使用して、レプリケーションエージェントの様々なパラメーターを設定できます。
 
-次に移動した場合： `/etc/replication` 次の 3 つのノードが表示されます。
+`/etc/replication` に移動すると、次の 3 つのノードがあります。
 
 * `agents.author`
 * `agents.publish`
 * `treeactivation`
 
-2 人は `agents` 適切な環境に関する構成情報を保持し、その環境が実行中の場合にのみアクティブになります。 例： `agents.publish` は、パブリッシュ環境でのみ使用されます。 次のスクリーンショットは、AEM WCM に含まれる、オーサー環境のパブリッシュエージェントを示しています。
+2 つの `agents` は、適切な環境に関する設定情報を保持し、その環境が実行中の場合にのみアクティブになります。 例えば、`agents.publish` は、パブリッシュ環境でのみ使用されます。 次のスクリーンショットは、AEM WCM に含まれる、オーサー環境のパブリッシュエージェントを示しています。
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -557,28 +556,28 @@ CRXDE Lite を使用して、レプリケーションエージェントの様々
 
 ## バッチレプリケーション {#batch-replication}
 
-The batch replication does not replicate individual pages or assets, but waits for the fist threshold of the two, based on time or size, to be triggered.
+バッチレプリケーションは、個々のページやアセットをレプリケートしませんが、時間やサイズに基づいて、2 つの最初のしきい値がトリガーされるのを待ちます。
 
-It then packs all replication items into a package, which is then replicated as one single file to the publisher.
+次に、すべてのレプリケーション項目を 1 つのパッケージに圧縮し、単一のファイルとしてパブリッシャーにレプリケートします。
 
-発行者は、すべての項目を解凍し、保存して作成者に報告します。
+パブリッシャーは、すべての項目を展開し、保存して作成者に報告します。
 
 ### バッチレプリケーションの設定 {#configuring-batch-replication}
 
 1. `http://serveraddress:serverport/siteadmin` に移動します。
-1. Press the **[!UICONTROL Tools]** icon in the uppper side of the screen
-1. 左側のナビゲーションレールから、に移動します。 **[!UICONTROL レプリケーション — 作成者のエージェント]** をクリックし、 **[!UICONTROL デフォルトエージェント]**.
-   * また、デフォルトのパブリッシュレプリケーションエージェントに直接アクセスするには、 `http://serveraddress:serverport/etc/replication/agents.author/publish.html`
-1. Press the **[!UICONTROL Edit]** button above the replication queue.
-1. In the following window, go to the **[!UICONTROL Batch]** tab:
+1. 画面の上側にある&#x200B;**[!UICONTROL ツール]**&#x200B;アイコンを押します。
+1. 左側のナビゲーションレールから、**[!UICONTROL レプリケーション - 作成者のエージェント]**&#x200B;に移動し、「**[!UICONTROL デフォルトエージェント]**」をダブルクリックします。
+   * また、直接 `http://serveraddress:serverport/etc/replication/agents.author/publish.html` に移動して、デフォルトのパブリッシュレプリケーションエージェントに到達することもできます。
+1. レプリケーションキューの上にある「**[!UICONTROL 編集]**」ボタンを押します。
+1. 次のウィンドウで、「 **[!UICONTROL バッチ]**」タブに移動します。
    ![batchreplication](assets/batchreplication.png)
 1. エージェントを設定します。
 
 ### パラメーター {#parameters}
 
-* `[!UICONTROL Enable Batch Mode]`  — バッチレプリケーションモードを有効または無効にします
-* `[!UICONTROL Max Wait Time]`  — バッチリクエストが開始されるまでの最大待機時間（秒）。 デフォルト値は 2 秒です。
-* `[!UICONTROL Trigger Size]`  — このサイズ制限に達すると、バッチレプリケーションを開始します（MB 単位）。 デフォルト値は 5 MB です。
+* `[!UICONTROL Enable Batch Mode]` - バッチレプリケーションモードを有効または無効にします
+* `[!UICONTROL Max Wait Time]` - バッチリクエストが開始されるまでの最大待機時間（秒単位）。デフォルト値は 2 秒です。
+* `[!UICONTROL Trigger Size]` - このサイズの上限に達したときにバッチレプリケーションを開始します に到達した（MB 単位）。 デフォルトは 5MB です。
 
 ## その他のリソース {#additional-resources}
 

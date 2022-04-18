@@ -13,7 +13,7 @@ exl-id: 9eeb3203-e27a-4960-a4ec-58dd9dd098a2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '861'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ UI はモバイルデバイスとデスクトップデバイスの両方に対�
 
 ヘッダーバーにはグローバル要素が表示されます。
 
-* ロゴと、現在使用している特定の製品/ソリューションAEMの場合は、グローバルナビゲーションへのリンクも形成されます。
+* ロゴおよび現在使用している特定の製品またはソリューション（AEM の場合は、グローバルナビゲーションへのリンクにもなります）
 * 検索
 * ヘルプリソースにアクセスするためのアイコン
 * その他のソリューションにアクセスするためのアイコン
@@ -90,7 +90,7 @@ UI はモバイルデバイスとデスクトップデバイスの両方に対�
 
 エディターフレームによって編集機能が実現されます。
 
-エディターフレームは、すべてのページオーサリング要素のためのコンテナ（抽象）です。**&#x200B;コンテンツフレームの上にあり、以下が含まれます。
+エディターフレームは、すべてのページオーサリング要素のためのコンテナ（抽象）です。コンテンツフレームの上にあり、以下が含まれます&#x200B;*。*
 
 * 上部のツールバー
 * サイドパネル
@@ -166,6 +166,6 @@ AEM には、編集、プレビュー、注釈など、ページオーサリン�
 
 ## その他の情報 {#further-information}
 
-タッチ操作対応 UI に関する概念について詳しくは、この記事を参照してください。 [AEMタッチ操作対応 UI の概念](/help/sites-developing/touch-ui-concepts.md).
+タッチ操作対応 UI に関する概念について詳しくは、[AEM タッチ操作対応 UI の概念](/help/sites-developing/touch-ui-concepts.md)の記事を参照してください。
 
-技術情報について詳しくは、 [JS ドキュメントセット](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) タッチ操作対応ページエディター用。
+技術情報について詳しくは、タッチ操作対応ページエディター用の [JS ドキュメントセット](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)を参照してください。

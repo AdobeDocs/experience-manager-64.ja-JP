@@ -12,20 +12,20 @@ exl-id: 42671435-e0f0-41db-af83-182b01742954
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '101'
-ht-degree: 41%
+ht-degree: 100%
 
 ---
 
 # タスクのタブのカスタマイズ {#customizing-tabs-for-a-task}
 
-タブ名はカスタマイズできます `Start Process` コンポーネント `Start Process` Uber ビューと `Task Details` コンポーネント `ToDo` Uber ビュー。
+`Start Process` Uber ビューの `Start Process` コンポーネントと `ToDo` Uber ビューの `Task Details` コンポーネントのタブ名をカスタマイズできます。
 
 1. 「[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」に従います。
-1. の値を変更 `tabname`内 `translation.json` ファイル。
+1. `translation.json` ファイルにある `tabname` の値を変更します。
 
-   例えば、 `/apps/ws/locales/en-US/translation.json` 英語の場合は次のようになります。
+   たとえば、英語の場合は `/apps/ws/locales/en-US/translation.json` を次のように変更します。
 
-   * 開始プロセスで開始されたタスクに対して、次のスニペットを使用します。 `"startprocess" : {}` ブロック
+   * 開始プロセスで開始したタスクの場合は、`"startprocess" : {}` ブロックから次のスニペットを使用します。
 
    ```
    "tabname" : {
@@ -36,7 +36,7 @@ ht-degree: 41%
            }
    ```
 
-   * TODO のタスクの場合は、次のスニペットを使用します。 `"todo" : {}` ブロック
+   * To-do のタスクの場合は、`"todo" : {}` ブロックから次のスニペットを使用します。
 
    ```
    "tabname" : {

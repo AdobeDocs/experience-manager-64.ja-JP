@@ -21,7 +21,7 @@ ht-degree: 30%
 
 検索機能は、フォーラムなど他の様々な機能と連携して、コンテンツを検索できるようにします。
 
-コミュニティメンバーが入力した投稿 ( ユーザー生成コンテンツ (UGC) と呼ばれる ) を検索する機能を追加する場合、次の 2 つの要素があります。 [ `Search`](#search-features) および [ `Search Results`](#search-results).
+When adding the ability to search posts entered by community members, referred to as user generated content (UGC), there are two components: [ `Search`](#search-features) and [ `Search Results`](#search-results).
 
 を含むページ `Search Results` コンポーネントは、検索と結果の表示の両方をサポートします。
 
@@ -33,17 +33,17 @@ ht-degree: 30%
 
 ### 検索をページに追加 {#add-search-to-a-page}
 
-を追加するには、以下を実行します。 `Search` コンポーネントをオーサリングモードでページに追加する場合は、コンポーネントブラウザーを使用して `Communities / Search` をクリックし、ページ上の適切な場所にドラッグします。 の使用 `Search` には 2 番目のページが必要です `Search Results.`
+を追加するには、以下を実行します。 `Search` コンポーネントをオーサリングモードでページに追加する場合は、コンポーネントブラウザーを使用して `Communities / Search` をクリックし、ページ上の適切な場所にドラッグします。 Use of `Search` requires a second page for the `Search Results.`
 
-必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
+For necessary information, visit [Communities Components Basics](basics.md).
 
-必要なクライアント側ライブラリの場合、 `cq.social.hbs.search`を含める場合は、次のようになります。 `Search` コンポーネントが表示されます。
+When the required client-side library, `cq.social.hbs.search`, is included, this is how the `Search` component will appear.
 
 ![chlimage_1-373](assets/chlimage_1-373.png)
 
 ### 追加した検索を設定 {#configure-the-added-search}
 
-配置された `Search` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
+Select the placed `Search` component to access and select the `Configure` icon which opens the edit dialog.
 
 ![chlimage_1-374](assets/chlimage_1-374.png)
 
@@ -69,7 +69,7 @@ ht-degree: 30%
 
 コンポーネントを探し、ページ上の位置にドラッグします。検索コンポーネントとは異なり、2 番目のページは不要です。同じページに結果が表示されるからです。
 
-Web サイト内の別の場所で検索を使用する場合、この 1 つのページには `Search Results` は `Result Page` の任意の、またはすべてのインスタンスに対して `Search`.
+If using Search elsewhere within the website, this one page with `Search Results` may be configured to be the `Result Page` for any or all instances of `Search`.
 
 必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
 
@@ -83,7 +83,7 @@ Web サイト内の別の場所で検索を使用する場合、この 1 つの�
 
 ![chlimage_1-377](assets/chlimage_1-377.png)
 
-以下 **[!UICONTROL 検索結果の設定]** 」タブで指定する場合、訪問者がクエリを入力したときに検索に含めるパスを指定できます。
+Under the **[!UICONTROL Search Result Settings]** tab, it is possible to specify what paths are included in the search when a query is entered by a visitor.
 
 ![chlimage_1-378](assets/chlimage_1-378.png)
 

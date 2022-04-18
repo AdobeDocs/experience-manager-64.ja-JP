@@ -20,7 +20,7 @@ ht-degree: 2%
 
 [コンテンツフラグメント](/help/assets/content-fragments.md) は、次に基づいています： [コンテンツフラグメントモデル](/help/assets/content-fragments-models.md). これらのモデルは、 [要素](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) 様々なデータタイプの
 
-Various data types are available out-of-the-box, including single-line text, multi-line rich text, numerical fields, boolean selectors, dropdown menu options, date and time, and others. AEMユーザーは、対応するフラグメントの編集上の意図に基づいてデータタイプを選択できます。 これにより、を通じて単純なテキストモデルを、様々な種類のコンテンツを持つ複雑なモデルや関連するフラグメントオーサリングエクスペリエンスに対応できます。
+1 行テキスト、複数行リッチテキスト、数値フィールド、ブールセレクター、ドロップダウンメニューオプション、日付と時刻など、様々なデータタイプが標準で使用できます。 AEMユーザーは、対応するフラグメントの編集上の意図に基づいてデータタイプを選択できます。 これにより、を通じて単純なテキストモデルを、様々な種類のコンテンツを持つ複雑なモデルや関連するフラグメントオーサリングエクスペリエンスに対応できます。
 
 データタイプは [ノードプロパティの組み合わせ](#properties) ～で開催される [リポジトリ内の特定の場所](#locations-in-the-repository). 独自の [データタイプ](#creating-your-data-type) および [fieldProperties](#creating-your-own-fieldproperties-property).
 
@@ -42,7 +42,7 @@ Various data types are available out-of-the-box, including single-line text, mul
 
 >[!CAUTION]
 >
->`/libs` パス内のものは一切変更しないでください。
+>`/libs` パス内は一切変更しないでください。
 >
 >次回のアップグレード時、またはサービスまたは修正パックのインストール時に変更される可能性がある項目。
 
@@ -69,11 +69,11 @@ Various data types are available out-of-the-box, including single-line text, mul
 
 * ` [fieldProperties](#fieldproperties)`
 
-   An array that represents the configuration properties for each data type.
+   各データ型の設定プロパティを表す配列。
 
 * `fieldResourceType`
 
-   コンテンツフラグメントでデータタイプをレンダリングするために使用される Sling リソースタイプ。 様々な方法（単純なテキスト入力や複数行のテキスト入力など）でレンダリングできるデータ型の場合、このプロパティは、すべてのリソース型を含む配列として作成する必要があります。 The `renderasfield` property will be added automatically to `fieldProperties` to let the user choose the resource type they need to add to the model,
+   コンテンツフラグメントでデータタイプをレンダリングするために使用される Sling リソースタイプ。 様々な方法（単純なテキスト入力や複数行のテキスト入力など）でレンダリングできるデータ型の場合、このプロパティは、すべてのリソース型を含む配列として作成する必要があります。 この `renderasfield` プロパティは `fieldProperties` モデルに追加する必要のあるリソースタイプをユーザーが選択できるようにするには、
 
 * `fieldPropResourceType`
 
@@ -90,7 +90,7 @@ Various data types are available out-of-the-box, including single-line text, mul
 
 * `fieldTitle`
 
-   このデータ型のタイトルを定義するプロパティ。 For example, **Single line text** for a `textfield` component, **Multi line text** for a multifield component.
+   このデータ型のタイトルを定義するプロパティ。 例： **1 行のテキスト** の `textfield` コンポーネント **複数行テキスト** マルチフィールドコンポーネントの場合。
 
 * `valueType`
 
@@ -98,11 +98,11 @@ Various data types are available out-of-the-box, including single-line text, mul
 
 * `renderType`
 
-   これは、データタイプの内部表現です。 これは、 `valueType` を UI コンポーネントに追加します。 See [Mappings](#mappings).
+   これは、データタイプの内部表現です。 これは、 `valueType` を UI コンポーネントに追加します。 詳しくは、 [マッピング](#mappings).
 
 * `listOrder`
 
-   各データ型には、リスト内での順序を表す値が必要です。 これは、モデルエディターの保存時に、様々なフィールド（ドラッグ&amp;ドロップで追加/移動）の正しい順序を保証するために使用されます。 この値は整数にする必要があります。昇順で順序付けされた数値を割り当てることをお勧めします。 When creating a new data type it is best to assign the value based on the last data type in the list (the highest value of `listOrder` value present in the data types).
+   各データ型には、リスト内での順序を表す値が必要です。 これは、モデルエディターの保存時に、様々なフィールド（ドラッグ&amp;ドロップで追加/移動）の正しい順序を保証するために使用されます。 この値は整数にする必要があります。昇順で順序付けされた数値を割り当てることをお勧めします。 新しいデータ型を作成する場合、リストの最後のデータ型 ( `listOrder` の値がデータ型に存在する場合 )。
 
 #### マッピング {#mappings}
 
@@ -134,14 +134,14 @@ Various data types are available out-of-the-box, including single-line text, mul
    <td>数値</td> 
   </tr> 
   <tr> 
-   <td>ブール値</td> 
+   <td>ブール演算式</td> 
    <td>ブール値</td> 
    <td>ブール値</td> 
   </tr> 
   <tr> 
    <td>日時</td> 
    <td>カレンダー</td> 
-   <td>時刻</td> 
+   <td>time</td> 
   </tr> 
   <tr> 
    <td>列挙</td> 
@@ -198,11 +198,11 @@ Various data types are available out-of-the-box, including single-line text, mul
 
 * `maptopropertyfield`
 
-   This component adds the `Name` field in the properties, giving an identifier to the selected component of a data type. すべてのデータ型に存在する必要があります。
+   このコンポーネントは、 `Name` フィールドに値を入力し、データ型の選択したコンポーネントに識別子を付与する。 すべてのデータ型に存在する必要があります。
 
 * `maxlengthfield`
 
-   これは、 `maxLength` このプロパティを受け取るデータ型で使用するプロパティです。 For example, with **Single Line Text**, **Number**, etc.
+   これは、 `maxLength` このプロパティを受け取るデータ型で使用するプロパティです。 例えば、を使用します。 **1 行のテキスト**, **数値**&#x200B;など
 
 * `multieditorfield`
 
@@ -210,7 +210,7 @@ Various data types are available out-of-the-box, including single-line text, mul
 
 * `mvfields`
 
-   Component that adds all the hidden fields needed for a multifield component to work. 例えば、 **1 行のテキスト** データタイプ。 これは、マルチフィールドとしてレンダリングされるすべてのコンポーネントに対して追加する必要があります。
+   マルチフィールドコンポーネントの動作に必要なすべての非表示フィールドを追加するコンポーネント。 例えば、 **1 行のテキスト** データタイプ。 これは、マルチフィールドとしてレンダリングされるすべてのコンポーネントに対して追加する必要があります。
 
 * `numbertypefield`
 
@@ -257,7 +257,7 @@ Various data types are available out-of-the-box, including single-line text, mul
 
 その後、 [データタイプを使用](#using-your-data-type).
 
-You can also [create your own `fieldProperties`](#creating-your-own-fieldproperties-property).
+また、 [独自の `fieldProperties`](#creating-your-own-fieldproperties-property).
 
 ### ノード構造の作成 {#creating-the-node-structure}
 
@@ -284,7 +284,7 @@ You can also [create your own `fieldProperties`](#creating-your-own-fieldpropert
 
 1. の下 `/items` 新しいデータ型を表す新しいノードを追加できます。
 
-   * Node Type: `nt:unstructured`
+   * ノードタイプ： `nt:unstructured`
    * &quot;プロパティ：参照 [データタイプのプロパティの定義](#defining-the-properties-for-your-data-type)
 
 ### データタイプのプロパティの定義 {#defining-the-properties-for-your-data-type}
@@ -295,7 +295,7 @@ You can also [create your own `fieldProperties`](#creating-your-own-fieldpropert
    * `fieldPropResourceType`
    * `fieldViewResourceType`
 
-   これらは、データタイプのコンポーネントのレンダリング方法を定義します。 They can be any component; including your own custom components (need a matching set of ` [fieldProperties](#fieldproperties)`).
+   これらは、データタイプのコンポーネントのレンダリング方法を定義します。 任意のコンポーネントを指定できます。独自のカスタムコンポーネントを含める ( 一致する ` [fieldProperties](#fieldproperties)`) をクリックします。
 
    これらのプロパティを適切な値で、データ型のノードに定義します。
 

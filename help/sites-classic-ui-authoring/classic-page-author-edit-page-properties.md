@@ -1,5 +1,5 @@
 ---
-title: ページプロパティの編集
+title: 'ページプロパティの編集 '
 seo-title: Editing Page Properties
 description: ページのプロパティは、ページの性質によって異なることがあります。例えば、ページによってはライブコピーに接続されていたり、接続されずにライブコピー情報が必要に応じて利用可能な場合があります。
 seo-description: Properties of a page can vary depending on the nature of the page. For example some pages might be connected to a live copy while others are not and the live copy information will be available as appropriate.
@@ -13,11 +13,11 @@ exl-id: 6969dc5e-f7fa-495e-8ddf-8123ca2bc9a6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '763'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
-# ページプロパティの編集{#editing-page-properties}
+# ページプロパティの編集 {#editing-page-properties}
 
 ページに必要なプロパティを定義できます。これらはページの特性に応じて異なることがあります。例えば、ページによってはライブコピーに接続されていたり、接続されずにライブコピー情報が必要に応じて利用可能な場合があります。
 
@@ -81,7 +81,7 @@ ht-degree: 96%
 
    このページのバニティ URL を入力できます。これによって、短くて意味のわかりやすい URL を付けることができます。
 
-   例えば、バニティー URL が w に設定されている場合、 `elcome`パス/で識別されるページに `v1.0/startpage`（Web サイトの場合） `ttp://example.com,` その後 `ttp://example.com/welcome`は h のバニティー URL です。 `ttp://example.com/content/v1.0/startpage`
+   例えば、バニティ URL を web サイト h`ttp://example.com,` のパス /`v1.0/startpage` で特定されるページへの w`elcome` に設定した場合、h`ttp://example.com/welcome` は h`ttp://example.com/content/v1.0/startpage` のバニティ URL になります。
 
    >[!CAUTION]
    >
@@ -163,7 +163,7 @@ ht-degree: 96%
 
 * **権限**（タッチ操作向け UI）
 
-   [有効な権限を表示し、新しい権限を追加します](/help/sites-administering/user-group-ac-admin.md)。
+   [有効な権限を表示し、新しい権限を追加](/help/sites-administering/user-group-ac-admin.md)します。
 
 ### ブループリント {#blueprint}
 
@@ -181,7 +181,7 @@ ht-degree: 96%
 
 * **サインアップページ**、**オフラインページ**&#x200B;など、サイト全体にわたる機能を提供するページへのリンクを指定します。
 
-## ページプロパティの編集 {#editing-page-properties-2}
+## ページプロパティの編集  {#editing-page-properties-2}
 
 ### 特定のページのページプロパティの編集 {#editing-page-properties-for-a-specific-page}
 

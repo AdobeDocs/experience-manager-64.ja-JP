@@ -13,15 +13,15 @@ exl-id: d3125110-1098-413b-ba09-50c182797d27
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '218'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 # AEM Forms Workspace では利用できない Flex Workspace の機能 {#features-of-flex-workspace-not-available-in-aem-forms-workspace}
 
-AEM Forms workspace は新しいワークスペースです。 AEM Forms Workspace では利用できない Flex ベース Workspace のいくつかの機能を以下に示します。
+AEM Forms Workspace は全く新しいワークスペースです。AEM Forms Workspace では利用できない Flex ベース Workspace のいくつかの機能を以下に示します。
 
-* ようこそページは使用できません。Workspace にログインする際に表示される最初のページとして、開始プロセス、TODO、追跡、およびお気に入りページを設定することができます。
+* ようこそページは使用できません。Workspace にログインする際に表示される最初のページとして、開始プロセスページ、TODO ページ、トラッキングページ、およびお気に入りページを設定することができます。
 * システムイベントのメッセージと通知は AEM Forms Workspace には表示されません。メッセージに対応するすべての設定（「メッセージ通知表示時間」など）も、AEM Forms Workspace では適用できません。
 * 表示の編成が変更され、スタートポイントおよびタスクについて、カードとリスト表示の違いがなくなりました。
 * AEM Forms Workspace ではカードとリスト表示の違いがなくなったので、TODO、履歴、および環境設定内の「列見出しを管理」に対する設定は利用できなくなりました。

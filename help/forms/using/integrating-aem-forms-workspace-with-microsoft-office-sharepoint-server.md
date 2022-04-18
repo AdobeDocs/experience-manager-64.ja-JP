@@ -12,7 +12,7 @@ exl-id: 43149456-8ff8-4ce1-9c51-1d950f60ff5d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '555'
-ht-degree: 78%
+ht-degree: 85%
 
 ---
 
@@ -20,16 +20,17 @@ ht-degree: 78%
 
 **- 要件**
 
-**前提条件に関する知識**
-AEM Forms Workspace をSharePoint Server に追加する前に、適切な権限でSharePoint Server にアクセスでき、Workspace にアクセスするための URL を知っている必要があります。 以下の手順では、SharePoint Server に精通していることを前提としています。SharePoint Server 内の Web パーツの詳細については、「Windows SharePoint Services 内の Webパーツ」を参照してください。
+**必要な知識**
+AEM Forms Workspace を SharePoint Server に追加するに当たり、SharePoint Server への適切なアクセス権を持っている必要があります。また、Workspace にアクセスするための URL を把握している必要もあります。以下の手順では、SharePoint Server に精通していることを前提としています。SharePoint Server 内の Web パーツの詳細については、「Windows SharePoint Services 内の Webパーツ」を参照してください。
 
-**ユーザレベル**&#x200B;初心者
+**ユーザレベル**
+初心者
 
 AEM Forms Workspace は、Microsoft Office SharePoint Server（たとえば、Microsoft Office SharePoint Server 2007）で Web パーツとして使用することができます。ユーザーは、Web ブラウザから SharePoint Server に接続することで、AEM Forms Workspace にアクセスすることができます。これにより、統一されたユーザー経験を用意することができます。この記事では、AEM Forms Workspace を Microsoft Office SharePoint Server 内で Web パーツとして表示するための、基本的な手順を説明します。この記事で説明される手順を実行することで、統一されたユーザー経験を用意することができます。これにより、SharePoint Server に接続する各ユーザーに対して、同じポートから AEM Forms Workspace にアクセス可能な環境を提供できます。
 
 >[!NOTE]
 >
->この資料に記載されている手順は、Microsoft SharePoint Server 2007 に特有のものです。また、他のサポート対象バージョンの Microsoft SharePoint についても、HTML Workspace と統合することができます。
+>この資料に記載されている手順は、Microsoft SharePoint Server 2007 に特有のものです。また、他のサポート対象バージョンの Microsoft SharePoint も、HTML Workspace と統合することができます。
 
 ## AEM Forms Workspace に Microsoft Office SharePoint Server 2007 を統合する {#integrate-aem-forms-workspace-with-microsoft-office-sharepoint-server}
 
@@ -42,7 +43,7 @@ AEM Forms Workspace は、Microsoft Office SharePoint Server（たとえば、Mi
    >SharePoint サーバーにおけるデフォルトのポート番号は 44299 です。ポート番号は、SharePoint Server のインストール構成によって異なります。
 
 1. Web ページの右上で「**サイトの操作**」をクリックし、「**ページの編集**」を選択します。
-1. 次をクリック： **Web パーツの追加** 」ボタンをクリックします。
+1. 「**Web パーツの追加**」ボタンをクリックします。
 1. 「その他」の下に表示される「Web パーツの追加：Web ページダイアログ」のダイアログボックスで、「**ページビューアの Web パーツ**」を選択し、「**追加**」をクリックします。
 1. 「ページビューアの Web パーツ」ボックスで「**編集**」をクリックし、「**共有 Web パーツの変更**」を選択します。
 
@@ -50,7 +51,7 @@ AEM Forms Workspace は、Microsoft Office SharePoint Server（たとえば、Mi
    >
    >手順 3 でクリックした「**Web パーツの追加**」ボタンの下に「ページビューアの Web パーツ」ボックスが表示されます（次の図 1 を参照）。
 
-   ![Microsoft Office SharePoint サーバーの「ページビューアの Web パーツ」ボックス。](assets/page-viewer-web-part-box-in-microsoft-office-sharepoint-server.png)
+   ![Microsoft Office SharePoint Server の「ページビューアの web パーツ」ボックス。](assets/page-viewer-web-part-box-in-microsoft-office-sharepoint-server.png)
 
    **図：** *Microsoft Office SharePointサーバーの [ ページビューアの Web パーツ ] ボックス*
 

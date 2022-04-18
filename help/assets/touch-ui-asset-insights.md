@@ -8,7 +8,7 @@ exl-id: a9604b09-1c83-4c1e-aff7-13107b898cb3
 source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
 source-wordcount: '793'
-ht-degree: 66%
+ht-degree: 74%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 66%
 
 アセットインサイトがアセットの使用状況統計を Web サイトから取得するためには、アセットの埋め込みコードを Web サイトのコードに組み込む必要があります。
 
-アセットインサイトでアセットの使用状況統計を表示できるようにするには、最初に [!DNL Adobe Analytics] からのレポートデータをフェッチするようにこの機能を設定します。詳しくは、[アセットインサイトの設定](touch-ui-configuring-asset-insights.md)を参照してください。オンプレミスのインストールでこの機能を使用するには、を購入します。 [!DNL Adobe Analytics] 別途ライセンスします。 のお客様 [!DNL Managed Services] 受信 [!DNL Analytics] ～に付随するライセンス [!DNL Experience Manager]. 詳しくは、 [Managed Services製品説明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html).
+アセットインサイトでアセットの使用状況統計を表示できるようにするには、最初に [!DNL Adobe Analytics] からのレポートデータをフェッチするようにこの機能を設定します。詳しくは、[アセットインサイトの設定](touch-ui-configuring-asset-insights.md)を参照してください。オンプレミスのインストールでこの機能を使用するには、別途 [!DNL Adobe Analytics] ライセンスを購入します。[!DNL Managed Services] のユーザーには、[!DNL Experience Manager] に [!DNL Analytics] ライセンスがバンドルされています。詳しくは、[Managed Services 製品説明](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)を参照してください。
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ ht-degree: 66%
    * **[!UICONTROL アセット]**：アセットが、コレクションまたは複合アセットに含まれた回数
    * **[!UICONTROL Web およびモバイル]**：アセットが Web サイトまたはアプリに含まれた回数
    * **[!UICONTROL ソーシャル]**：アセットが Adobe Social や Adobe Campaign などのソリューションで使用された回数
-   * **[!UICONTROL 電子メール]**：アセットが電子メールキャンペーンで使用された回数
+   * **[!UICONTROL 電子メール]**：アセットがメールキャンペーンで使用された回数
 
    ![usage_statistics](assets/usage_statistics.png)
 
@@ -61,7 +61,7 @@ ht-degree: 66%
    >
    >「ソリューション」セクションのデータとは異なり、「パフォーマンス統計」セクションには最新のデータが表示されます。
 
-1. パフォーマンスデータを得るために Web サイトに組み込んだアセットの埋め込みコードを取得するには、アセットのサムネールの下の「**[!UICONTROL 埋め込みコードの取得]**」をクリックします。サードパーティの Web ページに埋め込みコードを組み込む方法について詳しくは、 [Web ページでのページトラッカーと埋め込みコードの使用](touch-ui-using-page-tracker.md).
+1. パフォーマンスデータを得るために web サイトに組み込んだアセットの埋め込みコードを取得するには、アセットのサムネールの下の「**[!UICONTROL 埋め込みコードの取得]**」をクリックします。サードパーティの Web ページに埋め込みコードを組み込む方法について詳しくは、 [Web ページでのページトラッカーと埋め込みコードの使用](touch-ui-using-page-tracker.md).
 
    ![chlimage_1-303](assets/chlimage_1-303.png)
 
@@ -75,7 +75,7 @@ ht-degree: 66%
 
 ## バックグラウンドジョブのスケジュール設定 {#scheduling-background-job}
 
-アセットインサイトは、Adobe Analyticsレポートスイートからアセットの使用状況データを定期的に取得します。 デフォルトでは、Assets Insights は、24 時間おきの午前 2 時にバックグラウンドジョブを実行してデータを取得します。 この間隔と時刻は、「**[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]**」サービスを Web コンソールで設定して変更できます。
+アセットインサイトは、Adobe Analytics レポートスイートから定期的にアセットの使用状況データを取得します。デフォルトでは、アセットインサイトはデータを取得するためのバックグラウンドジョブを 24 時間おきに午前 2 時に実行します。この間隔と時刻は、**[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** サービスを Web コンソールで設定して変更できます。
 
 1. 次をタップします。 [!DNL Experience Manager] ロゴをクリックし、に移動します。 **[!UICONTROL ツール/操作/ Web コンソール]**.
 1. **[!UICONTROL Adobe CQ DAM Asset Performance Report Sync Job]** サービス設定を開きます。

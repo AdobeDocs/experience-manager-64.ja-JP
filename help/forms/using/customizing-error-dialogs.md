@@ -12,17 +12,17 @@ exl-id: e45f7f79-a5c3-439c-bf6c-7b14590cd3fc
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '148'
-ht-degree: 46%
+ht-degree: 100%
 
 ---
 
 # エラーダイアログのカスタマイズ {#customizing-error-dialogs}
 
-AEM Forms Workspace では、エラーダイアログをカスタマイズすることができます。を実行します。 [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md) 次の手順に従って、エラーダイアログをカスタマイズします。
+AEM Forms Workspace では、エラーダイアログをカスタマイズすることができます。[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)を実行して次の手順に従い、エラーダイアログをカスタマイズします。
 
 ## テキストのカスタマイズ {#customizing-text}
 
-1. 内 `/apps/ws/locales/en-US/translation.json` ファイル、 `wserror` をカスタマイズされた値に追加します。 次に例を示します。
+1. `/apps/ws/locales/en-US/translation.json` ファイルで、`wserror` の値をカスタマイズした値に変更します。次に例を示します。
 
    ```
    "wserror" : {
@@ -49,7 +49,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 
 ## CSS のカスタマイズ {#customizing-css}
 
-1. 次のスニペットを `/apps/ws/css/newStyle.css` ファイル：
+1. `/apps/ws/css/newStyle.css` ファイルに次のスニペットを追加することによって、ダイアログ、ヘッダー、コンテンツ領域、フットバー、フットバーボタンおよびその他の関連項目を更新することができます。
 
    ```css
    /*-------- Error Dialog -------------------------------------------------------------------------------------------------------------------*/
@@ -184,7 +184,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
    }
    ```
 
-1. 足のバーボタンのスパンに対して、 `.error-dialog` および `.foot-bar` ボタンは複合リストから広がります。 この変更を行うには、次を newStyle.css ファイルに追加します。
+1. フットバーボタン範囲については、`.error-dialog` および `.foot-bar` ボタン範囲を複合リストから分離します。この変更を行うには、次を newStyle.css ファイルに追加します。
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -219,7 +219,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 
 >[!NOTE]
 >
->追加の画像を参照している場合は、それらをの下の目的の階層に追加します。 `/apps/ws/images`.
+>追加の画像を参照している場合は、それらを `/apps/ws/images` の下で任意の階層に追加します。
 
 ## 例 {#examples}
 

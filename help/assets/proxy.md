@@ -1,6 +1,6 @@
 ---
 title: Assets のプロキシ開発
-description: 'プロキシは [!DNL Experience Manager] プロキシワーカーを使用してジョブを処理するインスタンス。 設定方法 [!DNL Experience Manager] プロキシ、サポートされている操作、プロキシコンポーネント、およびカスタムプロキシワーカーの開発方法について説明します。 '
+description: 'プロキシは、プロキシワーカーを使用してジョブを処理する  [!DNL Experience Manager]  インスタンスです。 [!DNL Experience Manager] プロキシ、サポートされている操作、プロキシコンポーネントを設定する方法、カスタムプロキシワーカーを開発する方法について説明します。 '
 contentOwner: AG
 feature: Asset Processing
 role: Admin, Architect
@@ -8,7 +8,7 @@ exl-id: c7511326-697e-4749-ab46-513cdbaa00d8
 source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
 source-wordcount: '882'
-ht-degree: 65%
+ht-degree: 75%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Manager Assets では、プロキシを使用して、特定の
 
 プロキシは、特定の（場合によっては別の）ものです [!DNL Experience Manager] ジョブの処理と結果の作成を担当するプロセッサーとしてプロキシワーカーを使用するインスタンス。 プロキシワーカーは、幅広いタスクに使用できます。の場合、 [!DNL Experience Manager] アセットプロキシ — 内でレンダリングするアセットの読み込みに使用できます。 [!DNL Experience Manager] アセット。 例えば、[IDS プロキシワーカー](indesign.md)は、InDesign Server を使用して、 Assets 内で使用できるようにファイルを処理します。[!DNL Experience Manager]
 
-プロキシが別の [!DNL Experience Manager] このインスタンスを使用すると、 [!DNL Experience Manager] オーサリングインスタンス。 デフォルトでは、 [!DNL Experience Manager] Assets は、同じ JVM（プロキシ経由で外部化）でアセット処理タスクを実行し、 [!DNL Experience Manager] オーサリングインスタンス。
+プロキシが個別の [!DNL Experience Manager] インスタンスである場合は、[!DNL Experience Manager] オーサリングインスタンスの負荷の軽減に役立ちます。デフォルトでは、 [!DNL Experience Manager] Assets は、同じ JVM（プロキシ経由で外部化）でアセット処理タスクを実行し、 [!DNL Experience Manager] オーサリングインスタンス。
 
 ## プロキシ（HTTP アクセス） {#proxy-http-access}
 
@@ -28,7 +28,7 @@ Adobe Experience Manager Assets では、プロキシを使用して、特定の
 
 * `job`
 
-   **要件**：パラメーター `jobevent` をシリアル化されたバリューマップとして設定する必要があります。これは、 `Event` （ジョブプロセッサ用）
+   **要件**：パラメーター `jobevent` をシリアル化されたバリューマップとして設定する必要があります。ジョブプロセッサー用の `Event` の作成に使用します。
 
    **結果**：新しいジョブが追加されます。成功した場合、一意のジョブ ID が返されます。
 
@@ -39,7 +39,7 @@ curl -u admin:admin -F":operation=job" -F"someproperty=xxxxxxxxxxxx"
 
 * `result`
 
-   **要件**:パラメーター `jobid` を設定する必要があります。
+   **要件**：パラメーター `jobid` を設定する必要があります。
 
    **結果**：ジョブプロセッサーによって作成されたノードの JSON 表現が返されます。
 
@@ -104,13 +104,13 @@ API の使用例を以下に示します。
  proxyJobService.removeJob(jobId);
 ```
 
-### クラウドサービス設定 {#cloud-service-configurations}
+### クラウドサービスの設定 {#cloud-service-configurations}
 
 >[!NOTE]
 >
 >プロキシ API の参考ドキュメントは、[`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/commons/proxy/package-summary.html) にあります。
 
-プロキシとプロキシワーカーの両方の設定は、クラウドサービスの設定を通じて使用できます。クラウドサービスの設定は、 [!DNL Experience Manager] Assets **ツール** コンソールまたは `/etc/cloudservices/proxy`. 各プロキシワーカーは、以下にノードを追加する必要があります。 `/etc/cloudservices/proxy` 作業者固有の構成の詳細 ( 例： `/etc/cloudservices/proxy/workername`) をクリックします。
+プロキシとプロキシワーカーの両方の設定は、クラウドサービスの設定を通じて使用できます。クラウドサービスの設定は、 [!DNL Experience Manager] Assets **ツール** コンソールまたは `/etc/cloudservices/proxy`. 各プロキシワーカーは、 ワーカーに固有の設定の詳細 （例： `/etc/cloudservices/proxy/workername`）で、`/etc/cloudservices/proxy` にノードを追加するように想定されています。
 
 >[!NOTE]
 >

@@ -107,7 +107,7 @@ ht-degree: 51%
 名前空間は先行入力検索で簡単に検索できます。例：
 
 * &#39;tut&#39;と入力します
-*  `Tutorial`
+* 選択 `Tutorial`
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 

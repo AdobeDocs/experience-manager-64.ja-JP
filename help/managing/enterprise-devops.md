@@ -13,7 +13,7 @@ exl-id: 7d1145e8-d7f7-4cc7-9dd9-ee8ce04e43d4
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '989'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -62,7 +62,7 @@ Adobe Experience Manager（AEM）のデプロイメントは通常、次のよ�
 
 ### 品質保証 {#quality-assurance}
 
-この環境は、品質保証チームが包括的に [テスト](/help/sites-developing/test-plan.md) 新しいシステムデザインと機能の両方。 適切なコンテンツを持つオーサー環境とパブリッシュ環境の両方を含み、完全なテストを実施するために必要なすべてのサービスを提供する必要があります。
+品質保証チームは、この環境を使用して、新しいシステムのデザインと機能を包括的に[テスト](/help/sites-developing/test-plan.md)できます。適切なコンテンツを持つオーサー環境とパブリッシュ環境の両方を含み、完全なテストを実施するために必要なすべてのサービスを提供する必要があります。
 
 ### ステージング {#staging}
 

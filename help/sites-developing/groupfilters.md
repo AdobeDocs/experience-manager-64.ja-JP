@@ -14,7 +14,7 @@ exl-id: abbbf606-aff2-44b4-b16e-ceb54997115f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '802'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 86%
 
 デバイスグループフィルターは、[com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスを実装する OSGi コンポーネントです。この実装クラスをデプロイすると、デバイスグループ設定に使用可能なフィルターサービスが提供されます。
 
-この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。したがって、Java クラスの例では `@Component`および `@Service` 注釈。 このクラスの構造は次のとおりです。
+この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。そのため、サンプルの Java クラスでは `@Component` と `@Service` のアノテーションを使用します。このクラスの構造は次のとおりです。
 
 ```java
 package com.adobe.example.myapp;
@@ -74,7 +74,7 @@ public class myDeviceGroupFilter implements DeviceGroupFilter {
 
 ### フィルターの名前と説明の指定 {#providing-the-filter-name-and-description}
 
-`getTitle` メソッドと `getDescription` メソッドは、それぞれフィルターの名前と説明を返します。次のコードは、最も単純な実装を示しています。
+`getTitle` メソッドと `getDescription` メソッドは、それぞれフィルター名と説明を返します。次のコードは、最も単純な実装を示しています。
 
 ```java
 public String getDescription() {
@@ -105,17 +105,17 @@ boolean cssSupport = true;
 cssSupport = NumberUtils.toInt(capabilities.get(DeviceSpecsConstants.DSPEC_XHTML_SUPPORT_LEVEL)) > 1;
 ```
 
-この `org.apache.commons.lang.math` パッケージは `NumberUtils` クラス。
+`org.apache.commons.lang.math` パッケージは `NumberUtils` クラスを提供します。
 
 >[!NOTE]
 >
->AEM にデプロイされる WURFL™ データベースには、フィルター条件として使用する機能が含まれます（[デバイスの検出に関するページ](/help/sites-developing/mobile.md#server-side-device-detection)を参照）。
+>AEM にデプロイされる WURFL™ データベースには、フィルター条件として使用する機能が含まれます（[デバイスの検出](/help/sites-developing/mobile.md#server-side-device-detection)を参照）。
 
 ### 画面サイズ用のサンプルフィルター {#example-filter-for-screen-size}
 
 以下に示すサンプルの DeviceGroupFilter 実装では、デバイスの物理サイズが最小要件を満たしているかどうかを判断します。このフィルターは、タッチデバイスグループに精度を追加します。アプリケーション UI のボタンのサイズは、画面の物理サイズに関係なく同じにしてください。他の項目（テキストなど）のサイズは変更できます。フィルターを使用すると、UI 要素のサイズを制御する特定の CSS を動的に選択できます。
 
-このフィルターを適用すると、 `physical_screen_height` および `physical_screen_width` WURFL™プロパティ名。
+このフィルターは、`physical_screen_height` と `physical_screen_width` の WURFL™ プロパティ名に対してサイズ基準を適用します。
 
 ```java
 package com.adobe.example.myapp;
@@ -164,11 +164,11 @@ public class ScreenSizeLarge implements DeviceGroupFilter {
 }
 ```
 
-getTitle メソッドが返す値 String は、デバイスグループのプロパティのドロップダウンリストに表示されます。
+getTitle メソッドが返す文字列値は、デバイスグループのプロパティのドロップダウンリストに表示されます。
 
 ![filteraddtogroup](assets/filteraddtogroup.png)
 
-getTitle メソッドと getDescription メソッドが返す値 String は、デバイスグループの概要ページの下部に表示されます。
+getTitle メソッドと getDescription メソッドが返す文字列値は、デバイスグループの概要ページの下部に表示されます。
 
 ![filterdescription](assets/filterdescription.png)
 
@@ -182,13 +182,13 @@ getTitle メソッドと getDescription メソッドが返す値 String は、�
 * Apache Felix Maven Bundle Plugin：バンドルとマニフェストを作成します。
 * Apache Felix Maven SCR Plugin：コンポーネント記述子ファイルを作成し、service-component マニフェストヘッダーを設定します。
 
-**依存関係:**
+**依存関係：**
 
-* `cq-wcm-mobile-api-5.5.2.jar`:DeviceGroup および DeviceGroupFilter インターフェイスを提供します。
+* `cq-wcm-mobile-api-5.5.2.jar`：DeviceGroup インターフェイスと DeviceGroupFilter インターフェイスを提供します。
 
 * `org.apache.felix.scr.annotations.jar`：Component アノテーションと Service アノテーションを提供します。
 
-DeviceGroup インターフェイスと DeviceGroupFilter インターフェイスは、 Day Communique 5 WCM Mobile API バンドルに含まれています。Felix 注釈は、Apache Felix Declarative Services バンドルに含まれています。この JAR ファイルは、パブリック・リポジトリからAdobeできます。
+DeviceGroup インターフェイスと DeviceGroupFilter インターフェイスは Day Communique 5 WCM Mobile API バンドルに含まれています。Felix アノテーションは Apache Felix Declarative Services バンドルに含まれています。この JAR ファイルはアドビの公開リポジトリから入手できます。
 
 この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。このバージョンが環境にデプロイされているバンドルのバージョンであることを確認するには、アドビの Web コンソール（[http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)）を使用してください。
 
@@ -257,4 +257,4 @@ DeviceGroup インターフェイスと DeviceGroupFilter インターフェイ�
 </project>
 ```
 
-アドビの公開リポジトリを使用するには、[Content Package Maven Plugin の入手](/help/sites-developing/vlt-mavenplugin.md)の節に記載されているプロファイルを maven 設定ファイルに追加してください。
+アドビの公開リポジトリを使用するには、[Content Package Maven Plugin の入手](/help/sites-developing/vlt-mavenplugin.md)の節で指定されているプロファイルを Maven 設定ファイルに追加してください。

@@ -1,5 +1,5 @@
 ---
-title: リファラーフィルターを「空の値を許可」に設定
+title: リファラーフィルターの「空の値を許可」への設定
 seo-title: Setting Your Referrer Filter to Allow Empty
 description: このページでは、リファラーフィルターについて説明します。AEM Mobile アプリケーションビューアで AEM オーサーインスタンス上のアプリを表示できるようにするには、HTML リファラーフィルターが「空の値を許可」に設定する必要があります。
 seo-description: Follow this page to learn about Referrer Filter. In order to allow the AEM Mobile Application Viewer to view apps on your Author instance, you'll need to set your HTML referrer filter to 'allow empty'.
@@ -17,11 +17,11 @@ ht-degree: 88%
 
 ---
 
-# リファラーフィルターを「空の値を許可」に設定{#setting-your-referrer-filter-to-allow-empty}
+# リファラーフィルターの「空の値を許可」への設定{#setting-your-referrer-filter-to-allow-empty}
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 AEM Mobile アプリケーションビューアで AEM オーサーインスタンス上のアプリを表示できるようにするには、HTML リファラーフィルターが「空の値を許可」に設定する必要があります。
 

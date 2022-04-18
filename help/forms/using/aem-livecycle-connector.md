@@ -13,7 +13,7 @@ exl-id: f40674c1-a1dd-41ef-8a19-82ece3103bcc
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '1006'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/form
 
 プロパティは説明がなくても分かりますが、重要なプロパティは次のとおりです。
 
-* **サーバー URL** - LiveCycle Server への URL を指定します。LiveCycleとAEMが https 経由で通信する場合は、次の JVM を使用してAEMを起動します
+* **サーバー URL** - LiveCycle Server への URL を指定します。LiveCycle と AEM の間で HTTPS を経由して通信する場合、次の JVM で AEM を起動
 
    ```
    argument 
@@ -52,9 +52,9 @@ AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/form
 1. 各サービスがクライアントクラスを提供します。サービスを開始するには、サービスのクライアントインスタンスを作成します。
 1. サービスを開始し、結果を処理します。
 
-AEM LiveCycle Connector は、標準的な OSGi の方法を使ってアクセスできる OSGi サービスとしてこれらのクライアントインスタンスを公開して、フローを簡素化します。LiveCycleコネクタには次の機能があります。
+AEM LiveCycle Connector は、標準的な OSGi の方法を使ってアクセスできる OSGi サービスとしてこれらのクライアントインスタンスを公開して、フローを簡素化します。LiveCycle コネクターには、以下の機能が用意されています。
 
-* OSGi サービスとしてのクライアントインスタンス：OSGi バンドルとしてパッケージ化されたクライアントは、 [Document Services リスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) 」セクションに入力します。 各クライアント jar は、OSGi Service Registry を使用する OSGi サービスとしてクライアントインスタンスを登録します。
+* OSGi サービスとしてのクライアントインスタンス：OSGI バンドルとしてパッケージ済みのクライアントは、「[ドキュメントサービスリスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)」セクションに一覧表示されます。各クライアント jar は、OSGi Service Registry を使用する OSGi サービスとしてクライアントインスタンスを登録します。
 * ユーザー資格情報の伝播：LiveCycle サーバーに接続するために必要な接続の詳細情報は、一元的に管理されます。
 * ServiceClientFactory サービス：プロセスを開始するために、クライアントアプリケーションは ServiceClientFactory インスタンスにアクセスできます。
 
@@ -82,7 +82,7 @@ AEM LiveCycle Connector は、標準的な OSGi の方法を使ってアクセ�
    </dependency>
    ```
 
-   サービスを開始するには、サービスに対応する Maven 依存性を追加します。依存性のリストについて詳しくは、「[Document Service リスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)」を参照してください。例えば、GeneratePDFサービスの場合は、次の依存関係を追加します。
+   サービスを開始するには、サービスに対応する Maven 依存性を追加します。依存性のリストについて詳しくは、「[Document Service リスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)」を参照してください。例えば、Generate PDF サービスの場合は、次の依存関係を追加します。
 
    ```xml
    <dependency>
@@ -116,7 +116,7 @@ AEM LiveCycle Connector は、標準的な OSGi の方法を使ってアクセ�
                );
    ```
 
-   上記のコードスニペットでは、ドキュメントを PDF に変換するために GeneratePdfServiceClient の createPDF API を開始します。次のコードを使用し、JSP で同じ呼び出しを実行できます。主な違いは、次のコードが Sling ScriptHelper を使用して GeneratePdfServiceClient にアクセスする点です。
+   上記のコードスニペットでは、ドキュメントを PDF に変換するために GeneratePdfServiceClient の createPDF API を開始します。次のコードを使用し、JSP で同じ呼び出しを実行できます。主な違いは、次のコードでは Sling ScriptHelper を使用して GeneratePdfServiceClient にアクセスする点です。
 
    ```java
    <%@ page import="com.adobe.livecycle.generatepdf.client.GeneratePdfServiceClient" %>

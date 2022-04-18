@@ -13,7 +13,7 @@ exl-id: f3c03562-aaeb-4d43-aee1-d92d661ee329
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '227'
-ht-degree: 70%
+ht-degree: 92%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 70%
 
 ![screen_shot_2018-03-23at111956](assets/screen_shot_2018-03-23at111956.png)
 
-クラシック UI バージョンを持つすべてのコンソールを `/libs/cq/core/content/nav` を個別に再度有効にすることで、 **クラシック UI** オプションを選択すると、コンソールアイコンにマウスを置いたときに、再びポップアップが表示されます。
+各コンソールのクラシック UI バージョンは `/libs/cq/core/content/nav` にあり、個別に再有効化できます。それぞれのクラシック UI を有効にすれば、コンソールアイコンの上にマウスを移動したときに、「**クラシック UI**」オプションが再度ポップアップするようになります。
 
 以下の例では、サイトコンソールのクラシック UI を再有効化しています。
 
@@ -39,7 +39,7 @@ ht-degree: 70%
 
    `/libs/cq/core/content/nav/sites`
 
-1. を使用したオーバーレイの作成 **ノードをオーバーレイ** オプション；例：
+1. 「**オーバーレイノード**」オプションを使用してオーバーレイを作成します。次に例を示します。
 
    * **パス**: `/apps/cq/core/content/nav/sites`
    * **オーバーレイの場所**: `/apps/`

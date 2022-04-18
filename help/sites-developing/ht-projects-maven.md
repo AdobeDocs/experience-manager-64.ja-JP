@@ -5,7 +5,7 @@ exl-id: 6ae0e387-468b-4cea-9e3f-0816d67b7621
 source-git-commit: cda63b9ece88d8172fa4d9817e315c9cff88c224
 workflow-type: tm+mt
 source-wordcount: '151'
-ht-degree: 50%
+ht-degree: 94%
 
 ---
 
@@ -17,8 +17,8 @@ AEM 6.4 は、オンプレミス実装と AMS 実装の最新の AEM プロジ�
 >
 >詳しくは、以下を参照してください。
 >
->* この [AEM Project Structure](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) 最新のAEMプロジェクトの構造化方法に関するAEMas a Cloud Serviceドキュメントの記事です。
->* この [AEM Project Archetype](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html) アーキタイプを使用して新しいAEMプロジェクトを開始する方法に関するドキュメントです。
->* この [Adobeコンテンツパッケージ Maven プラグイン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html#developer-tools) AEMアプリケーションのデプロイ方法に関するAEMas a Cloud Serviceドキュメントの記事です。
+>* 最新の AEM プロジェクトの構造化方法について詳しくは、AEM as a Cloud Service ドキュメントの [AEM プロジェクトの構造](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)に関する記事を参照してください。
+>* アーキタイプを使用して新しい AEM プロジェクトを開始する方法について詳しくは、[AEM プロジェクトのアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)に関するドキュメントを参照してください。
+>* AEM アプリケーションのデプロイ方法について詳しくは、AEM as a Cloud Service ドキュメントの [Adobe Content Package Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html#developer-tools) に関する記事を参照してください。
 >
->3 つのドキュメントはすべてAEM 6.4 に適用されます。
+>3 つのドキュメントはすべて AEM 6.4 に適用されます。

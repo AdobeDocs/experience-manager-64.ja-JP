@@ -12,7 +12,7 @@ exl-id: c6243a1f-8f8f-48dc-af3b-b165f451ce73
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '276'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 77%
 
 AEM Forms ではアダプティブフォームをドラフトとして保存できます。ドラフト機能により、ユーザーは作業中のフォームを維持することができます。これにより、ユーザーはデバイスを問わずいつでもフォームに記入および送信できます。
 
-デフォルトでは、AEM Formsはドラフトと送信に関連付けられたユーザーデータをパブリッシュインスタンスの `/content/forms/fp` ノード。
+デフォルトでは、AEM Forms はドラフトと送信に関連付けられたユーザーデータを `/content/forms/fp` ノードのパブリッシュインスタンスに保存します。
 
 ただし、AEM Forms ポータルコンポーネントは、ドラフトおよび送信用のユーザーデータの保存の実装をカスタマイズするデータサービスを提供します。例えば、組織に現在実装されているデータストアにデータを保存することができます。
 
@@ -30,10 +30,10 @@ AEM Forms ではアダプティブフォームをドラフトとして保存で�
 
 ## 前提条件 {#prerequisites}
 
-* 有効にする [Forms portal コンポーネント](/help/forms/using/enabling-forms-portal-components.md)
-* の作成 [フォームポータルページ](/help/forms/using/creating-form-portal-page.md)
-* 有効にする [フォームポータル用アダプティブフォーム](/help/forms/using/draft-submission-component.md)
-* 学ぶ [カスタムストレージの実装の詳細](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* [フォームポータルコンポーネント](/help/forms/using/enabling-forms-portal-components.md)を有効にする
+* [フォームポータルページ](/help/forms/using/creating-form-portal-page.md)の作成
+* [フォームポータル用アダプティブフォーム](/help/forms/using/draft-submission-component.md)を有効にする
+* [カスタムストレージの実装の詳細](/help/forms/using/draft-submission-component.md#customizing-the-storage)を学ぶ
 
 ## ドラフトデータサービス {#draft-data-service}
 
@@ -84,7 +84,7 @@ public interface DraftAFDataService {
 
 ## 送信データサービス {#submission-data-service}
 
-ユーザー送信データのストレージをカスタマイズするには、 `SubmittedAFDataService` インターフェイス。
+ユーザーの送信データのストレージをカスタマイズするには、`SubmittedAFDataService` インターフェイスのすべてのメソッドに対して実装を指定する必要があります。
 
 メソッドとその引数の説明を、次のインターフェイスのコードサンプルに示します。
 

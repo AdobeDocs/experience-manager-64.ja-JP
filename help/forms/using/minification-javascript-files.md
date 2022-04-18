@@ -13,7 +13,7 @@ exl-id: 8394151e-e9cf-4f68-97a3-ba1d1dd6a2d2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -23,13 +23,13 @@ ht-degree: 83%
 
 セマンティックの変更のための縮小コードを生成するには、次の手順に従います。
 
-1. コピー `client-html/src/main/webapp/js` ファイルシステムの src-package から
+1. src-package の `client-html/src/main/webapp/js` を filesystem にコピーします。
 
    >[!NOTE]
    >
    >パッケージに関する詳細については、「[AEM Forms Workspace のカスタマイズの概要](/help/forms/using/introduction-customizing-html-workspace.md)」を参照してください。
 
-1. でパスを更新 `main.js` 追加/更新されたモデル/ビューの場合は、client-html/src/main/webapp/js の下に配置されます。
+1. モデルやビューの追加または更新の場合は、client-html/src/main/webapp/js の下にある `main.js` のパスを更新します。
 
    たとえば、新しい Sharequeue モデル、mySharequeue を追加する場合は、
 
@@ -41,7 +41,7 @@ ht-degree: 83%
    sharequeuemodel : pathprefix + 'runtime/myModels/mySharequeue',
    ```
 
-1. 更新 `registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` エイリアスの変更や追加が `main.js`.
+1. エイリアスの変更や追加が `main.js` にある場合は、`registry-config.xml, located at client-html/src/main/webapp/js/resource_generator,` をアップデートします。
 
    たとえば、新しい Sharequeue モデル、mySharequeue を追加する場合は、
 

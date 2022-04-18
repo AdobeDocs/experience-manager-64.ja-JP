@@ -13,7 +13,7 @@ exl-id: 93cdc2db-e8a6-478b-a511-53e0688ebc4d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '93'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -23,5 +23,5 @@ ht-degree: 74%
 
 削除されたドメインと同じ名前でドメインを作成すると、削除されたドメインがその情報と共に復元されます。DefaultDom ドメインは削除できません。
 
-1. 管理コンソールで、 **[!UICONTROL [ 設定 ] > [ ユーザ管理 ] > [ ドメイン管理 ]]**.
-1. 削除するドメインのチェックボックスを選択し、 **[!UICONTROL 削除]**&#x200B;をクリックし、 **[!UICONTROL OK]**.
+1. 管理コンソールで、**[!UICONTROL 設定／User Management／ドメインの管理]**&#x200B;をクリックします。
+1. 削除するドメインのチェックボックスをオンにして **[!UICONTROL 削除]** をクリックし、「**[!UICONTROL OK]**」をクリックします。

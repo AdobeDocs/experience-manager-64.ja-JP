@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Manager 6.4 リリースノート
+title: Adobe Experience Manager 6.4 のリリースノート
 seo-title: AEM 6.4 Release Notes
 description: AEM リリースノートでは、AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています。
 seo-description: The AEM Release Notes cover important information about the latest release of AEM, including what's new, supported platforms, deprecated and removed features, and known issues.
@@ -7,18 +7,18 @@ exl-id: e6ebd0ba-674e-406f-a3ac-98ac9518226e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '373'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
-# Adobe Experience Manager 6.4 リリースノート
+# Adobe Experience Manager 6.4 のリリースノート
 
 AEM リリースノートでは、AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています。
 
-## 主なAEM記事
+## 主な AEM 記事
 
 * [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
-* [最近のドキュメントの更新](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
+* [最近のドキュメントのアップデート](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
 * [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.4 ユーザーガイド
@@ -46,11 +46,11 @@ AEM リリースノートでは、AEM の最新リリースに関する重要な
 * [コアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
-* [AEM コミュニティフォーラム](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja#home)
+* [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)
 
 ## 著作権、ライセンス、免責事項 {#copyright-licenses-and-disclaimers}
 
-詳しくは、 [https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/jp/legal/terms/enterprise-licensing.html)
+詳しくは、[https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/jp/legal/terms/enterprise-licensing.html) を参照してください。
 
-サードパーティライセンスの通知： [https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/products/eula/third_party/)
+サードパーティライセンスの告知：[https://www.adobe.com/jp/products/eula/third_party/](https://www.adobe.com/jp/products/eula/third_party/)

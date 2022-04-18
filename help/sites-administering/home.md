@@ -1,21 +1,21 @@
 ---
 title: AEM 6.4 管理ユーザーガイド
 seo-title: AEM 6.4 Administering User Guide
-description: AEM管理
+description: AEM 管理
 seo-description: AEM administering
 exl-id: 74ffdd0a-681c-498e-a4a4-5ab88fd4f58f
 source-git-commit: 657bb7df01a7b8e03d39c3bda868d87253b81b2a
 workflow-type: tm+mt
 source-wordcount: '323'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
 # AEM 6.4 管理ユーザーガイド
 
-このガイドでは、すべてのAEM管理タスクについて説明します。
+このガイドでは、すべての AEM 管理タスクについて説明します。
 
-##  に関する主要な記事 
+## 主要な記事 
 
 * [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
 * [AEM 6.4 リリースノート](/help/release-notes/home.md)
@@ -48,5 +48,5 @@ ht-degree: 97%
 * [コアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
-* [AEM コミュニティフォーラム](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja#home)
+* [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)

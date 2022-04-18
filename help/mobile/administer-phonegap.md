@@ -1,5 +1,5 @@
 ---
-title: AEM での Adobe PhoneGap Enterprise のコンテンツの管理
+title: AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理
 seo-title: Administering Content for Adobe PhoneGap Enterprise with AEM
 description: このページは、Adobe PhoneGap Enterprise を管理するためのランディングページとして参照できます。
 seo-description: This page serves as landing page for administering Adobe PhoneGap Enterprise.
@@ -17,7 +17,7 @@ ht-degree: 59%
 
 ---
 
-# AEM での Adobe PhoneGap Enterprise のコンテンツの管理 {#administering-content-for-adobe-phonegap-enterprise-with-aem}
+# AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理 {#administering-content-for-adobe-phonegap-enterprise-with-aem}
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ AEM Mobileアプリケーションを構築するには、 [モバイルアプ�
 
 1. [ユーザーとグループを設定します。](/help/mobile/configure-users-groups.md)
 1. [リファラーフィルターを「空の値を許可」に設定します。](/help/mobile/setting-referrer-filter-empty.md)
-1. [Adobe PhoneGap Build クラウドサービスの設定](/help/mobile/configure-phonegap-build-cloud.md)
+1. [Adobe PhoneGap Build の設定](/help/mobile/configure-phonegap-build-cloud.md)
 1. [Adobe Analytics クラウドサービスを設定します。](/help/mobile/configure-adobe-mobile-cloud-service.md)
 
 コンテンツサービスについて詳しくは、 [コンテンツサービスの管理](/help/mobile/developing-content-services.md).

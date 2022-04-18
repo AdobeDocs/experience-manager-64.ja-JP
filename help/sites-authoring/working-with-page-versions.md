@@ -1,5 +1,5 @@
 ---
-title: ページバージョンの処理
+title: 'ページバージョンの処理 '
 seo-title: Working with Page Versions
 description: ページのバージョンを作成、比較および復元します
 seo-description: Create, compare, and restore versions of a page
@@ -13,11 +13,11 @@ exl-id: 2df7c08f-db17-4666-ba39-e81cc2e656d7
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1075'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
-# ページバージョンの処理{#working-with-page-versions}
+# ページバージョンの使用{#working-with-page-versions}
 
 バージョン管理では、特定の時点でのページの「スナップショット」が作成されます。バージョン管理を使用すると、以下の操作を実行できます。
 
@@ -78,7 +78,6 @@ ht-degree: 96%
 >* 最初のバージョン（1.0 など）を復元します。
 >* 新しいバージョンを再度作成します。
 >* 生成されるラベルおよびノードの名前は 1.0.0、1.0.1、1.0.2 などです。
-
 >
 
 
@@ -112,7 +111,7 @@ ht-degree: 96%
    >
    >プレビューで問題が発生した場合は、ページの[タイムライン](/help/sites-authoring/basic-handling.md#timeline)を調べて、ページを移動したかどうかを確認します。
 
-## バージョンと現在のページとの比較 {#comparing-a-version-with-current-page}
+## 特定のバージョンと現在のページとの比較 {#comparing-a-version-with-current-page}
 
 以前のバージョンを現在のページと比較するには、次の手順を実行します。
 
@@ -166,4 +165,4 @@ ht-degree: 96%
 
 >[!CAUTION]
 >
->タイムワープは、作成者にコンテンツの理解と作成を支援するツールとして設計されています。 監査ログや法的な目的のためのものではありません。
+>タイムワープは、作成者によるコンテンツの把握と作成を支援するツールとして設計されています。監査ログや法的な目的のためのものではありません。

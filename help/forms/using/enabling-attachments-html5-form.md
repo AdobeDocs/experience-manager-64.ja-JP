@@ -13,7 +13,7 @@ exl-id: 82a843c4-5cb2-4f5e-ad4d-cf2e9ea6cdb8
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '319'
-ht-degree: 61%
+ht-degree: 78%
 
 ---
 
@@ -35,7 +35,7 @@ HTML5フォームでは、添付ファイルをアップロード、プレビュ
    >
    >Microsoft Internet Explorer 9 では、指定された制限を超えたサイズのファイルを添付できます。これは既知の問題です。
 
-1. 以下を使用： [メタデータエディター](/help/forms/using/manage-form-metadata.md) をクリックして、上記でHTML5 のフォーム用に作成したカスタムプロファイルを選択します。
+1. [メタデータエディター](/help/forms/using/manage-form-metadata.md)を使用して、上記で HTML5 のフォームのために作成したカスタムプロファイルを選択します。
 1. カスタムプロファイルを使用してフォームテンプレートをレンダリングすると、添付ファイルアイコンがフォームツールバーの上に表示されます。
 
    >[!NOTE]
@@ -54,10 +54,10 @@ HTML5フォームでは、添付ファイルをアップロード、プレビュ
 
 ## 添付ファイル送信フォーマット {#attachment-submission-format}
 
-添付ファイルが有効である場合、HTML5フォームはマルチパート形式のデータを送信します。マルチパート送信データには 2 つの部分があります **dataXml** および **添付ファイル**.
+添付ファイルが有効である場合、HTML5フォームはマルチパート形式のデータを送信します。マルチパート形式で送信するデータには&#x200B;**dataXml**&#x200B;および&#x200B;**添付ファイル**&#x200B;の2つの部分があります。
 
 >[!NOTE]
 >
->後方互換性の場合、 `mfAllowAttachments`オプションがオフの場合、HTML5 forms はマルチパートデータを送信しません。 単純なデータ xml を **application/xml** 形式
+>下位互換性については、`mfAllowAttachments` オプションがオフになっている場合、HTML5 フォームはマルチパート形式のデータを送信しません。**application/xml**&#x200B;形式の単純なデータ xml を送信します。
 
 mfAllowAttachments フラグがオンになっている場合、[送信サービスのプロキシサービス](/help/forms/using/service-proxy.md)もまたマルチパート形式のデータを dataXml と添付ファイルと共に投稿します。

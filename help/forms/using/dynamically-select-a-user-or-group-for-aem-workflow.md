@@ -1,7 +1,7 @@
 ---
 title: AEM Forms 中心のワークフローステップのためのユーザーまたはグループの動的な選択
 seo-title: Dynamically select a user or group for AEM Forms-centric workflow steps
-description: '実行時に AEM Forms ワークフローのユーザーまたはグループを選択する方法について説明します。 '
+description: '実行時に AEM Forms Workflow のユーザーまたはグループを選択する方法について説明します。 '
 seo-description: Learn how to select a user or group for an AEM Forms workflow at the runtime.
 uuid: 19dcbda4-61af-40b3-b10b-68a341373410
 content-type: troubleshooting
@@ -11,17 +11,17 @@ exl-id: c63e6e5c-c4c9-45b8-8401-87ee37a30c97
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '920'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
 # AEM Forms 中心のワークフローステップのためのユーザーまたはグループの動的な選択 {#dynamically-select-a-user-or-group-for-aem-forms-centric-workflow-steps}
 
-実行時に AEM Forms ワークフローのユーザーまたはグループを選択する方法について説明します。
+実行時に AEM Forms Workflow のユーザーまたはグループを選択する方法について説明します。
 
 大規模な組織では、プロセスのユーザーを動的に選択する必要があります。例えば、お客様に対応するフィールドエージェントを、お客様とエージェントの近さを基準として選択します。このようなシナリオで、エージェントは動的に選択されます。
 
-タスクの割り当て手順とAdobe Sign手順 [OSGi 上のForms中心のワークフロー](/help/forms/using/aem-forms-workflow.md) ユーザーを動的に選択するオプションを提供します。 ECMAScript または OSGi バンドルを使用して、タスクの割り当て手順の担当者を動的に選択したり、ドキュメントに署名手順の署名者を選択したりできます。
+[OSGi における Forms Workflow](/help/forms/using/aem-forms-workflow.md) のタスクの割り当て手順および Adobe Sign 手順では、ユーザーを動的に選択するオプションが用意されています。ECMAScript バンドルまたは OSGi バンドルを使用して、タスクの割り当て手順の担当者を動的に選択したり、ドキュメントに署名手順の署名者を選択したりできます。
 
 ## ECMAScript を使用したユーザーまたはグループの動的な選択 {#use-ecmascript-to-dynamically-select-a-user-or-group}
 
@@ -51,7 +51,7 @@ ECMAScript はスクリプト言語です。この言語は、クライアント
 
       ![script](assets/script.png)
 
-### ユーザーまたはグループを動的に選択するためのサンプル ECMAScripts {#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group}
+### ユーザーまたはグループを動的に選択するためのサンプル ECMAScript {#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group}
 
 以下のサンプル ECMAScript では、タスクの割り当て手順に担当者を動的に選択します。このスクリプトでは、ユーザーはペイロードのパスに基づいて選択されます。このスクリプトを使用する前に、スクリプトに記述されているすべてのユーザーが AEM に存在することを確認してください。スクリプトに記述されているユーザーが AEM に存在しない場合、関連するプロセスが失敗する可能性があります。
 
@@ -232,7 +232,7 @@ function getAdobeSignRecipients() {
 
 1. バンドルを AEM Forms サーバーにアップロードします。AEM パッケージマネージャーを使用して、バンドルを AEM Forms サーバーに読み込むことができます。
 
-バンドルを読み込むと、Adobe Sign やタスクの割り当て手順で、ユーザーまたはグループを動的に選択する Java オプションを使用できるようになります。
+バンドルをインポートすると、Adobe Sign 手順やタスクの割り当て手順で、ユーザーまたはグループを動的に選択する Java インターフェイスを選択できるようになります。
 
 ### ユーザーまたはグループを動的に選択するためのサンプル Java コード {#sample-java-code-to-dynamically-choose-a-user-or-a-group}
 

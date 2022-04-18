@@ -13,7 +13,7 @@ exl-id: 890e98af-0491-4b59-9a9b-6c245db54f0f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 79%
 
    >[!NOTE]
    >
-   >WebDAV アクセスの詳細については、 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
+   >WebDAV アクセスの詳細については、 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/jp/crx/current/how_to/webdav_access.html) を参照してください。
 
 1. 次のスタイルを追加することによって、/apps/ws/css/newStyle.css にあるスタイルシートの新しいロゴ画像を参照します。
 

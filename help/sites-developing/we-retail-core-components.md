@@ -13,7 +13,7 @@ exl-id: b77d0e6b-3005-4dba-8e88-70b4d04b1eba
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '537'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -29,17 +29,17 @@ ht-degree: 81%
 
 1. コンポーネントコンソールでレールを開くと、特定のコンポーネントグループをフィルタリングできます。コアコンポーネントは以下の場所にあります。
 
-   * `.core-wcm`:標準のコアコンポーネント
-   * `.core-wcm-form`:フォーム送信コアコンポーネント
+   * `.core-wcm`：標準コアコンポーネント
+   * `.core-wcm-form`：フォーム送信コアコンポーネント
 
-   選択 `.core-wcm`.
+   `.core-wcm` を選択します。
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
 1. すべてのコアコンポーネントの名前が **v1** になっています。これは、このコアコンポーネントの最初のバージョンであることを示しています。将来的には、定期的にバージョンがリリースされます。これは、AEM とバージョンの互換性があり、簡単にアップグレードできるので、最新機能を利用することができます。
 1. **Text (v1)** をクリックします。
 
-   以下を見てください。 **リソースタイプ** コンポーネントの `/apps/core/wcm/components/text/v1/text`. コアコンポーネントは、以下にあります。 `/apps/core/wcm/components` およびは、コンポーネントごとにバージョン管理されます。
+   コンポーネントの&#x200B;**リソースタイプ**&#x200B;が `/apps/core/wcm/components/text/v1/text` であることを確認します。コアコンポーネントは `/apps/core/wcm/components` の下にあり、コンポーネントごとにバージョン管理されます。
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
@@ -48,11 +48,11 @@ ht-degree: 81%
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
 1. コンポーネントコンソールに戻ります。**We.Retail** グループをフィルタリングし、**テキスト**&#x200B;コンポーネントを選択します。
-1. 以下を見てください。 **リソースタイプ** 以下で期待されるとおりにコンポーネントを指す `/apps/weretail` しかし **リソースのスーパータイプ** は、コアコンポーネントを指します。 `/apps/core/wcm/components/text/v1/text`.
+1. **リソースタイプ**&#x200B;が `/apps/weretail` 下の想定したコンポーネントを指していることを確認します。ただし、**リソースのスーパータイプ**&#x200B;は元のコアコンポーネント `/apps/core/wcm/components/text/v1/text` を指しています。
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
-1. 次をクリック： **ライブ使用状況** タブをクリックして、このコンポーネントが現在使用されているページを確認します。 最初の&#x200B;**ありがとう**&#x200B;ページをクリックしてページを編集します。
+1. 「**ライブ使用状況**」タブをクリックして、このコンポーネントが現在使用されているページを表示します。最初の&#x200B;**ありがとう**&#x200B;ページをクリックしてページを編集します。
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
@@ -66,7 +66,7 @@ ht-degree: 81%
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
-1. 継承をキャンセルしてテキストコンポーネントを選択すると、さらに多くのオプションを使用できるようになります。「**編集**」をクリックします。
+1. 継承をキャンセルしてテキストコンポーネントを選択すると、さらに多くのオプションを使用できるようになります。「編集」をクリックします。
 
    ![chlimage_1-169](assets/chlimage_1-169.png)
 
@@ -87,6 +87,6 @@ ht-degree: 81%
 
 ## その他の情報 {#further-information}
 
-コアコンポーネントについて詳しくは、オーサリングドキュメントの[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)でコアコンポーネントの概要を参照し、開発者用ドキュメントの[コアコンポーネントの開発](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)で技術的な概要を参照してください。
+コアコンポーネントについて詳しくは、オーサリングドキュメントの[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)でコアコンポーネント機能の概要を参照し、開発者用ドキュメントの[コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)で技術的な概要を参照してください。
 
-また、[編集可能テンプレート](/help/sites-developing/we-retail-editable-templates.md)も詳しく調査することをお勧めします。オーサリングドキュメントを参照してください [ページテンプレートの作成](/help/sites-authoring/templates.md) または開発者ドキュメントページ [テンプレート — 編集可能](/help/sites-developing/page-templates-editable.md) 詳しくは、編集可能テンプレートの詳細を参照してください。
+また、[編集可能テンプレート](/help/sites-developing/we-retail-editable-templates.md)も詳しく調査することをお勧めします。編集可能テンプレートについて詳しくは、オーサリングドキュメントの[ページテンプレートの作成](/help/sites-authoring/templates.md)または開発者用ドキュメントのページ[テンプレート - 編集可能](/help/sites-developing/page-templates-editable.md)を参照してください。

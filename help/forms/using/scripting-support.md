@@ -14,7 +14,7 @@ exl-id: 2194bbbb-22d9-4422-aefb-9651fd795ca3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '3894'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 97%
    <td>ユーザーの操作に応じて変更される前のフィールドのコンテンツを指定します。この値は「元に戻す」と同様に、再び呼び出すことができます。</td> 
    <td><p>ドロップダウンリストとリストボックスでは機能しません。次の場合、<code>PrevText </code> は正常に機能しません。</p> 
     <ul> 
-     <li>iPadの数値フィールドに一部の特殊文字キー ( 例：$、(、)、&amp;、@など ) を入力すると、 </li> 
+     <li>iPad の数値フィールド上で一部の特殊文字キー（たとえば、$、（,）、&amp;、@ など）を入力した場合、および </li> 
      <li>日付フィールド（カレンダーをとおして日付が入力される場合）<br /> </li> 
     </ul> <p>スクリプトによる値の設定はサポートされていません。</p> </td> 
   </tr> 
@@ -48,7 +48,7 @@ ht-degree: 97%
   <tr> 
    <td><code>newtext</code></td> 
    <td>ユーザーの操作に応じて変更された後のフィールドのコンテンツを指定します。</td> 
-   <td><p>この <code>newText</code> 次の場合、プロパティは適切に機能しません。</p> 
+   <td><p><code>newText</code> プロパティは、次の場合は正しく機能しません。</p> 
     <ul> 
      <li>テキストを選択置換するとき。</li> 
      <li>テキストの削除、コピー、およびペーストするとき。</li> 
@@ -63,7 +63,7 @@ ht-degree: 97%
   <tr> 
    <td>change</td> 
    <td>ユーザーがフィールドに入力したり貼り付けたりした直後の値を表します。 </td> 
-   <td><p>次の場合、change プロパティは正しく機能しません。</p> 
+   <td><p>change プロパティは、次の場合は正しく機能しません。</p> 
     <ul> 
      <li>テキストを選択置換するとき。</li> 
      <li>テキストの削除、コピー、およびペーストするとき。</li> 
@@ -85,7 +85,7 @@ ht-degree: 97%
  </tbody> 
 </table>
 
-### $ホスト {#host}
+### $host {#host}
 
 <table> 
  <tbody> 
@@ -97,12 +97,12 @@ ht-degree: 97%
   <tr> 
    <td><code>apptype</code></td> 
    <td>ホストのアプリケーションタイプを返します。クライアントアプリケーションのみで使用できます。</td> 
-   <td>戻り値 <code>HTML 5</code>.</td> 
+   <td><code>HTML 5</code> を返します。</td> 
   </tr> 
   <tr> 
    <td><code>name</code></td> 
    <td>現在のアプリケーションの名前を返します。</td> 
-   <td>ブラウザー名とそのバージョンを返します。例えば、Chrome ブラウザーでは、返される値は次のようになります。 <code>Chrome &lt;version&gt;.</code></td> 
+   <td>ブラウザー名とそのバージョンを返します。たとえば、Chrome ブラウザーでは、返される値は次の通りです。 <code>Chrome &lt;version&gt;.</code></td> 
   </tr> 
   <tr> 
    <td><code>numPages</code></td> 
@@ -218,8 +218,8 @@ ht-degree: 97%
   </tr> 
   <tr> 
    <td><code>fillcolor</code></td> 
-   <td>このフィールドの背景色の値を指定します。別々に border.fill.presence プロパティを visible に設定する必要があります。</td> 
-   <td>それはフィールドのデフォルトの色を正しく返しません。</td> 
+   <td>このフィールドの背景色の値を指定します。別途、border.fill.presence プロパティを visible に設定する必要があります。</td> 
+   <td>フィールドのデフォルトの色を正しく返しません。</td> 
   </tr> 
   <tr> 
    <td><code>border</code></td> 
@@ -238,8 +238,8 @@ ht-degree: 97%
   </tr> 
   <tr> 
    <td><code>borderColor</code></td> 
-   <td>このフィールドの境界線の色の値を指定します。別々に border.edge.presence プロパティを visible に設定する必要があります。</td> 
-   <td>それはフィールドのデフォルトの境界線の色を正しく返しません。</td> 
+   <td>このフィールドの境界線の色の値を指定します。別途、border.edge.presence プロパティを visible に設定する必要があります。</td> 
+   <td>フィールドのデフォルトの境界線の色を正しく返しません。</td> 
   </tr> 
   <tr> 
    <td><code>length</code></td> 
@@ -425,13 +425,13 @@ ht-degree: 97%
    <td>なし</td> 
   </tr> 
   <tr> 
-   <td>境界線</td> 
+   <td>border</td> 
    <td>border オブジェクトは、オブジェクトを囲む境界線を表します。</td> 
    <td>なし</td> 
   </tr> 
   <tr> 
    <td>borderColor</td> 
-   <td>このフィールドの境界線の色の値を指定します。別々に border.edge.presence プロパティを visible に設定する必要があります。</td> 
+   <td>このフィールドの境界線の色の値を指定します。別途、border.edge.presence プロパティを visible に設定する必要があります。</td> 
    <td>なし</td> 
   </tr> 
   <tr> 
@@ -507,7 +507,7 @@ ht-degree: 97%
    <td>現在のオブジェクトのすべての子オブジェクトのリストを返します。</td> 
    <td> 
     <ul> 
-     <li>xfa.nodes, desc に対してはサポートされていません</li> 
+     <li>xfa.nodes、desc ではサポートされていません。</li> 
      <li>PDF と HTML に対してレポートされるノード数は異なります。 </li> 
     </ul> </td> 
   </tr> 
@@ -522,7 +522,7 @@ ht-degree: 97%
    <td>なし</td> 
   </tr> 
   <tr> 
-   <td>index</td> 
+   <td>索引</td> 
    <td>類似名、範囲内、子のような関係のノードのコレクションにおける、このノードの位置を返します。</td> 
    <td>なし</td> 
   </tr> 
@@ -773,7 +773,7 @@ ht-degree: 97%
    <td><strong>例外</strong></td> 
   </tr> 
   <tr> 
-   <td>境界線</td> 
+   <td>ボーダー</td> 
    <td>border オブジェクトは、checkButton オブジェクトを囲む境界線を表します。 </td> 
    <td>変更はモデルに反映され、スクリプティングに使用できますが、HTML 要素には同期されません。したがって、変更は UI には反映されません。<br /> </td> 
   </tr> 
@@ -790,7 +790,7 @@ ht-degree: 97%
    <td><strong>例外</strong></td> 
   </tr> 
   <tr> 
-   <td>境界線</td> 
+   <td>ボーダー</td> 
    <td>border オブジェクトは、choiceList オブジェクトを囲む境界線を表します。</td> 
    <td> </td> 
   </tr> 
@@ -801,7 +801,7 @@ ht-degree: 97%
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| 境界線 | border オブジェクトは、dateTimeEdit オブジェクトを囲む境界線を表します。 |  |
+| ボーダー | border オブジェクトは、dateTimeEdit オブジェクトを囲む境界線を表します。 |  |
 
 ## 画像 {#image}
 
@@ -829,13 +829,13 @@ ht-degree: 97%
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| 境界線 | border オブジェクトは、imageEdit オブジェクトを囲む境界線を表します。 |  |
+| ボーダー | border オブジェクトは、imageEdit オブジェクトを囲む境界線を表します。 |  |
 
 ## numericEdit {#numericedit}
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| 境界線 | border オブジェクトは、オブジェクトを囲む境界線を表します。 | なし |
+| ボーダー | border オブジェクトは、オブジェクトを囲む境界線を表します。 | なし |
 
 ## object {#object}
 
@@ -903,7 +903,7 @@ ht-degree: 97%
    <td>なし</td> 
   </tr> 
   <tr> 
-   <td>境界線</td> 
+   <td>ボーダー</td> 
    <td>このフィールドを囲む境界線を指定します。</td> 
    <td>なし</td> 
   </tr> 
@@ -1017,7 +1017,7 @@ ht-degree: 97%
  </tbody> 
 </table>
 
-## 境界線 {#border}
+## ボーダー {#border}
 
 <table> 
  <tbody> 
@@ -1151,7 +1151,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
    <td>if (a&gt;b) then 2 endif</td> 
   </tr> 
   <tr> 
-   <td>「</td> 
+   <td>while</td> 
    <td><br type="_moz" /> </td> 
    <td>while (i lt 5) do i = i + 1 endwhile</td> 
   </tr> 
@@ -1180,7 +1180,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
    1. Abs()
    1. Avg()
    1. Ceil()
-   1. 回数()
+   1. Count()
    1. Floor()
    1. Max()
    1. Min()
@@ -1216,7 +1216,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
    1. Ppmt()
    1. Pv()
    1. Rate()
-   1. 用語()
+   1. Term()
 
 1. **論理関数**
 
@@ -1233,7 +1233,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
    1. Len()
    1. Lower()
    1. Ltrim()
-   1. 置換()
+   1. Replace()
    1. Right()
    1. Rtrim()
    1. Space()
@@ -1244,7 +1244,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
 
 1. **日付と時間**
 
-   1. 日付()
+   1. Date()
    1. num2date()
    1. DateFmt()
 
@@ -1328,7 +1328,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   <tr> 
    <td>app.formsVersion</td> 
    <td>ビューアフォームソフトウェアのバージョン番号。スクリプトで下位互換性を保つ場合、このプロパティを確認して、ソフトウェアの新しいバージョンにあるオブジェクト、プロパティ、またはメソッドが使用できるかどうかを特定します。</td> 
-   <td>常に 11.001 です。</td> 
+   <td>常に 11.001。</td> 
   </tr> 
   <tr> 
    <td>app.language</td> 
@@ -1343,14 +1343,14 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
 次のクライアント側の XFA イベントがサポートされていません。
 
 * Initialize
-* Validate（検証）
+* Validate
 * Calculate
-* クリック
-*  と入力します。
+* Click
+* Enter
 * Exit
-* 変更点
+* Change
 * ValidationState
 
 >[!NOTE]
 >
->HTML5 フォームはクライアント側（ブラウザー）でレンダリングされます。サーバー側のスクリプトではなく、クライアント側の **validate** スクリプトおよび **calculate** スクリプトの使用をお勧めします。
+>HTML5 フォームはクライアントサイド（ブラウザー）でレンダリングされます。サーバーサイドのスクリプトではなく、クライアントサイドの **validate** スクリプトと **calculate** スクリプトを使用することをお勧めします。

@@ -19,7 +19,7 @@ ht-degree: 79%
 
 # ページへのSearch&amp;Promote機能の追加{#adding-search-promote-features-to-your-page}
 
-Web サイトに Search&amp;Promote 機能を統合するには、Search&amp;Promote コンポーネントを使用してページに次の機能を追加します。
+web サイトに Search&amp;Promote 機能を統合するには、Search&amp;Promote コンポーネントを使用してページに次の機能を追加します。
 
 * キーワード検索
 * 検索結果のページ
@@ -30,4 +30,4 @@ Search&amp;Promote 機能は、AEM の管理者が有効にしている場合に
 
 >[!NOTE]
 >
->ページへの Search&amp;Promote 機能追加について詳しくは、クラシック UI オーサリングドキュメントに記載されています。詳しくは、 [ページへの Search&amp;Promote 機能の追加](/help/sites-classic-ui-authoring/classic-feature-search-promote.md) を参照してください。
+>ページへの Search&amp;Promote 機能追加について詳しくは、クラシック UI オーサリングドキュメントに記載されています。See [Adding Search &amp; Promote features to your page](/help/sites-classic-ui-authoring/classic-feature-search-promote.md) for more information.

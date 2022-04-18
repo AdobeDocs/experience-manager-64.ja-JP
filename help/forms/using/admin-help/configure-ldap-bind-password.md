@@ -13,7 +13,7 @@ exl-id: eaa2c889-d116-4209-9063-0c0b32dd8849
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 90%
 セキュリティ上の問題を防ぐため、書き出された設定ファイル（config.xml）のバインドパスワードフィールドは設定されていません。設定ファイルを別のシステムに読み込む前に、このパスワードを設定してください。このパスワードは、データベースに格納されている既存のパスワードよりも優先されます。パスワードが null の場合は、既存の null 以外のパスワード値が優先されます。
 
 1. 管理コンソールで、設定／User Management／設定／既存の設定ファイルの読み込みと書き出しをクリックします。
-1. 現在の設定をファイルに書き出すには、「書き出し」をクリックして設定ファイルを別の場所に保存します。
-1. ファイル内で、 `Domains` > *[ドメイン名]* > `DirectoryConfigs` > `LDAPGroupConfig` ノード。 以下に例を示します。
+1. ファイルに現在の設定をエクスポートするには、「エクスポート」をクリックして別の場所に設定ファイルを保存します。
+1. ファイル内で、`Domains`／*[自分のドメイン名]*／`DirectoryConfigs`／`LDAPGroupConfig` ノードを探します。次は例です。
 
    ```as3
     <node name="LDAPGroupConfig"> 
@@ -36,9 +36,9 @@ ht-degree: 90%
         </map>
    ```
 
-   `bindpassword` の値部分に値を入力して変更を保存します。
+   `bindpassword` の値を入力して変更を保存します。
 
-1. ファイル内で、 `Domains` > *[ドメイン名]* > `DirectoryConfigs` > `LDAPGroupConfig` > `LDAPUserConfig` ノード。 以下に例を示します。
+1. ファイル内で、`Domains`／*[自分のドメイン名]*／`DirectoryConfigs`／`LDAPGroupConfig`／`LDAPUserConfig` ノードを探します。次は例です。
 
    ```as3
     <node name="LDAPUserConfig"> 
@@ -51,7 +51,7 @@ ht-degree: 90%
         </map>
    ```
 
-   `bindpassword` の値部分に値を入力して変更を保存します。
+   `bindpassword` の値を入力して変更を保存します。
 
-1. 更新したファイルを読み込むには、User Management で、設定／既存の設定ファイルの読み込みと書き出しをクリックします。
-1. 「参照」をクリックしてファイルを探し、「読み込み」をクリックして「OK」をクリックします。
+1. 更新したファイルをインポートするには、User Management で、「設定ファイルのインポートとエクスポート」をクリックします。
+1. 「参照」をクリックしてファイルを探し、「インポート」をクリックして「OK」をクリックします。

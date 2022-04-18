@@ -13,7 +13,7 @@ exl-id: d4f7f94c-11f2-47c7-84ad-115aa5f2a06e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '161'
-ht-degree: 80%
+ht-degree: 92%
 
 ---
 
@@ -26,7 +26,7 @@ AEM SPA エディター SDK フレームワーク用の NPM モジュールに�
 >[!NOTE]
 >シングルページアプリケーション (SPA) エディター機能には、 [AEM 6.4 service pack 2](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html) 以降
 >
->SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
+>SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトで有効なソリューションです。
 
 * [コンポーネントのマッピング](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [ページモデルマネージャー](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)

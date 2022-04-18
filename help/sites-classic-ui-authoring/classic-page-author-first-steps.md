@@ -1,5 +1,5 @@
 ---
-title: 作成者がおこなう最初の手順
+title: 作成者が行う最初の手順
 seo-title: First Steps for Authors
 description: ここでは、Adobe Experience Manager（AEM）でコンテンツのオーサリングを開始する際に使用する主なタスクの概要について説明します。
 seo-description: This section gives you an overview of the main tasks that you will be using when starting to author content with Adobe Experience Manager (AEM).
@@ -13,19 +13,19 @@ exl-id: 88976f08-c003-4b8f-87c5-38b592fc9921
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '416'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
-# 作成者がおこなう最初の手順{#first-steps-for-authors}
+# 作成者がおこなう最初の手順 {#first-steps-for-authors}
 
 ここでは、Adobe Experience Manager（AEM）で[コンテンツのオーサリングを開始する](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)際に使用する主なタスクの概要について説明します。
 
 次の内容について説明します。
 
-* [はじめに](#getting-started):最初のページを作成して公開するために必要なイベントの基本的なシーケンスについて詳しく説明します。
+* [はじめに](#getting-started)：初めてページを作成して公開するために必要になる基本的な一連のイベントについて、詳しく説明します。
 
-* [その他のアクション](#further-actions):その後に、オーサリング時に使用できるその他の多くのアクションについて説明します。
+* [その他のアクション](#further-actions)：オーサリング時に使用できるその他の様々なアクションについて説明します。
 
 ## はじめに {#getting-started}
 
@@ -57,7 +57,7 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 * [ページのロック](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#locking-a-page)
 * [ページのロック解除](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#unlocking-a-page)
 
-### ページの公開 {#publishing-a-page}
+### ページの公開  {#publishing-a-page}
 
 ページの編集が完了したら、Web サイトへの訪問者がコンテンツを閲覧できるように、[ページを公開（またはアクティベート）](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10)します。
 

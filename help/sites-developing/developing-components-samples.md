@@ -14,7 +14,7 @@ exl-id: c205046f-9e60-4010-9ae3-be7d02d45248
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '217'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,6 @@ ht-degree: 97%
 >
 >* [開発者モード](/help/sites-developing/developer-mode.md)
 >* [Hobbes.js ライブラリをベースとしてテストを自動化するためのフレームワーク](/help/sites-developing/hobbes.md)
-
 >
 
 

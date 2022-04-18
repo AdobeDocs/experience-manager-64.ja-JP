@@ -1,5 +1,5 @@
 ---
-title: Designer での Page Zero コンテンツの変更
+title: Designer でのページゼロコンテンツの変更
 seo-title: Changing Page Zero content in Designer
 description: XFA PDF を Adobe 以外の PDF ビューアで表示するとき、Page Zero に表示されるメッセージを変更する方法をご存知ですか。
 seo-description: Do you know how you can change the message displayed on Page Zero of an XFA PDF when viewing it in a non-Adobe PDF viewer?

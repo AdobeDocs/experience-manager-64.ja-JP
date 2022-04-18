@@ -13,7 +13,7 @@ exl-id: fc044a4e-0037-405f-8c26-b388c6a98733
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '280'
-ht-degree: 40%
+ht-degree: 42%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 40%
       * ラベルを入力： `comments`
       * タイトルを入力： `Comments`
       * 説明を入力： `List of comments without showing avatars`
-      * スーパータイプ： `social/commons/components/comments`
+      * スーパータイプ：`social/commons/components/comments`
       * グループを入力： `Communities`
       * クリック **[!UICONTROL 次へ]** 次まで **[!UICONTROL OK]**
 1. 選択 `comments` ノード
@@ -62,7 +62,7 @@ ht-degree: 40%
       * ラベルを入力： `comment`
       * タイトルを入力： `Comment`
       * 説明を入力： `A comment instance without avatars`
-      * スーパータイプ： `social/commons/components/comments/comment`
+      * スーパータイプ：`social/commons/components/comments/comment`
       * グループを入力： `.hidden`
       * クリック **[!UICONTROL 次へ]** 次まで **[!UICONTROL OK]**
    * 「**[!UICONTROL すべて保存]**」を選択します。
@@ -70,7 +70,7 @@ ht-degree: 40%
    * ノードを選択 `/apps/social/commons/components/hbs/comments/comments.jsp`
    * 選択 **[!UICONTROL 削除]**
 1. デフォルトの comment.jsp を削除します。
-   * ノードを選択 `/apps/social/commons/components/hbs/comments/comment/comment.jsp`
+   *  ノードを選択します`/apps/social/commons/components/hbs/comments/comment/comment.jsp`
    * 選択 **[!UICONTROL 削除]**
    * 「**[!UICONTROL すべて保存]**」を選択します。
 
@@ -80,18 +80,17 @@ ht-degree: 40%
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
-
 >
 
 
 オーバーレイ自体 `Type`（プロパティ） `sling:resourceType`) は、/apps に見つからないコンテンツが/libs 内で検索されるように、相対的な自己参照である必要があります。
 * 名前：`sling:resourceType`
-* 型：`String`
+* タイプ：`String`
 * 値：`social/commons/components/hbs/comments`
 
 1. 緑を選択 `[+] Add`
    * 名前：`sling:resourceType`
-   * 型：`String`
+   * タイプ：`String`
    * 値：`social/commons/components/hbs/comments/comment`
 1. 緑を選択 `[+] Add`
    * 「**[!UICONTROL すべて保存]**」を選択します。

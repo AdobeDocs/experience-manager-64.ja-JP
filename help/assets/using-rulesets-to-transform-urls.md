@@ -11,7 +11,7 @@ role: Admin,User,Developer
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '762'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -60,7 +60,7 @@ Dynamic Media のコンテキストで、XML ベースのシステムを使用�
 
 **XML ルールセットをデプロイするには：**
 
-1. ログイン先 [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app).
+1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)にサインインします。
 
    資格情報とログインは、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 

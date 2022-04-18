@@ -15,7 +15,7 @@ ht-degree: 97%
 
 # ツールコンソール{#tools-consoles}
 
-**ツール**&#x200B;コンソールを使用して、Web サイト、デジタルアセット、およびコンテンツリポジトリのその他の要素の管理に役立つ、数多くの専用ツールにアクセスできます。現時点では、お使いの UI に応じて 2 種類の&#x200B;**ツール**&#x200B;コンソールを選択できます。
+**ツール** コンソールを使用して、web サイト、デジタルアセット、およびコンテンツリポジトリのその他の要素の管理に役立つ、数多くの専用ツールにアクセスできます。現時点では、お使いの UI に応じて 2 種類の&#x200B;**ツール**&#x200B;コンソールを選択できます。
 
 * [ツール - クラシック UI](#tools-classic-ui)
 * [ツール - タッチ操作向け UI](#tools-touch-optimized-ui)
@@ -40,12 +40,12 @@ ht-degree: 97%
    <td><a href="/help/sites-developing/client-context.md">ClientContext</a> はユーザーデータを動的にまとめたコレクションを表します。デフォルトの Marketing Cloud 設定はここに保持されます。<br /> </td> 
   </tr> 
   <tr> 
-   <td>クラウドサービスの設定<br /> </td> 
+   <td>クラウドサービス設定<br /> </td> 
    <td> </td> 
    <td><a href="/help/sites-administering/marketing-cloud.md">Adobe Marketing Cloud との統合</a>に関連する設定を保持します。</td> 
   </tr> 
   <tr> 
-   <td><a href="/help/sites-administering/ecommerce.md">コマース</a></td> 
+   <td><a href="/help/sites-administering/ecommerce.md">Commerce</a></td> 
    <td> </td> 
    <td>インポーターと様々な製品データにアクセスできます。</td> 
   </tr> 
@@ -223,7 +223,7 @@ ht-degree: 97%
   </tr> 
   <tr> 
    <td> </td> 
-   <td><a href="/help/sites-authoring/task-content.md">インボックス</a></td> 
+   <td><a href="/help/sites-authoring/task-content.md">インボックス </a></td> 
    <td>インボックス項目を管理します。</td> 
   </tr> 
   <tr> 
@@ -328,7 +328,7 @@ ht-degree: 97%
   </tr> 
   <tr> 
    <td> </td> 
-   <td>ドキュメント</td> 
+   <td>ドキュメント化</td> 
    <td>Web Experience Management のドキュメントを表示します。<br /> </td> 
   </tr> 
   <tr> 

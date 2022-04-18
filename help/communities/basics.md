@@ -77,7 +77,7 @@ ht-degree: 67%
 
 オーサリングに関する情報：
 
-* [タグの使用](../../help/sites-authoring/tags.md)
+* [タグの使用 ](../../help/sites-authoring/tags.md)
 
 管理に関する情報：
 

@@ -14,7 +14,7 @@ exl-id: bd29e81d-eb4a-4764-96f2-84e091836a8a
 source-git-commit: 40a4e01eea3e20fda6d0b2c8af985f905039e320
 workflow-type: tm+mt
 source-wordcount: '923'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 90%
 
 Granite には JCR API 仕様の CRX リポジトリ実装が組み込まれているので、独自のユーザー管理とグループ管理が使用されます。
 
-これらのアカウントは、 [AEMアカウント](/help/sites-administering/security.md) また、Granite 管理でおこなったアカウントの変更は、アカウントが [AEM Users コンソール](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console) ( 例： `http://localhost:4502/useradmin`) をクリックします。 AEMユーザーコンソールから、権限やその他のAEMの詳細を管理することもできます。
+これらのアカウントは [AEM アカウント](/help/sites-administering/security.md)の基礎であり、Granite の管理を使用して行ったアカウントの変更は、[AEM ユーザーコンソール](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)（例：`http://localhost:4502/useradmin`）からそのアカウントへのアクセスがあった場合に反映されます。AEM ユーザーコンソールでは、権限やその以外の AEM 独自の事項を管理することもできます。
 
 Granite ユーザー管理コンソールとグループ管理コンソールは、どちらもタッチ操作向け UI の&#x200B;**[ツール](/help/sites-administering/tools-consoles.md)**&#x200B;コンソールから利用できます。
 
@@ -68,7 +68,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
       ユーザーアカウントの一意の ID です。必須で、スペースは使用不可です。
 
-   * **電子メールアドレス**
+   * **メールアドレス**
    * **パスワード**
 
       パスワードは必須です。
@@ -77,29 +77,29 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
       パスワードの確認用として必須です。
 
-   * **firstName**
-   * **姓**
+   * **名前（名）**
+   * **名前（姓）**
    * **電話番号**
    * **役職**
    * **番地**
    * **モバイル**
-   * **City**
+   * **市区町村**
    * **郵便番号**
-   * **country**
-   * **状態**
+   * **国**
+   * **都道府県**
    * **タイトル**
    * **性別**
-   * **について**
+   * **詳細**
    * **アカウント設定**
 
       * **ステータス**
-アカウントに次のいずれかのフラグを設定できます 
-**アクティブ** または **非アクティブ**.
+アカウントには 
+**アクティブ**&#x200B;または **非アクティブ**&#x200B;のフラグを設定できます。
    * **写真**
 
       ここで、アバターとして使用する写真をアップロードできます。
 
-      使用可能なファイルタイプ： `.jpg .png .tif .gif`
+      使用できるファイルタイプ：`.jpg .png .tif .gif`
 
       推奨サイズ： `240x240px`
 
@@ -222,7 +222,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
 1. **グループ設定を編集**&#x200B;フォームが開きます。
 
-   グループ ID は元の ID と同じですが、先頭にはが付きます。 `Copy of`.ID にスペースを含めることはできないので、これを編集する必要があります。 その他の詳細は元の情報とすべて同じです。
+   グループ ID は元の ID と同じですが、先頭には `Copy of` が付きます。ID にスペースを含めることはできないので、これを編集する必要があります。その他の詳細は元の情報とすべて同じです。
 
    [新規グループの追加](#adding-a-new-group)の場合と同様に、詳細を編集して保存できます。
 

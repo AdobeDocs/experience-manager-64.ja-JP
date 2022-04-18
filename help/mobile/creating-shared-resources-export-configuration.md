@@ -1,5 +1,5 @@
 ---
-title: 共有リソースの書き出し設定の作成
+title: 共有リソースのエクスポート設定の作成
 seo-title: Creating Shared Resources Export Configuration
 description: このページでは、Adobe Experience Manager（AEM）から共有リソースを書き出して AEM Mobile にアップロードする手順の詳細について説明します。
 seo-description: Follow this page to learn about exporting shared resources from Adobe Experience Manager (AEM) for upload to AEM Mobile.
@@ -17,11 +17,11 @@ ht-degree: 67%
 
 ---
 
-# 共有リソースの書き出し設定の作成{#creating-shared-resources-export-configuration}
+# 共有リソースのエクスポート設定の作成{#creating-shared-resources-export-configuration}
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 >[!CAUTION]
 >
@@ -46,7 +46,6 @@ AEM Mobile のユーザーは、コンテンツ同期を使用して、ライブ
 >* サンプルコンテンツをインストールしていること
 >* AEM インスタンスを実行していること
 >* カスタムコンテキストや異なるポートを設定していないこと
-
 >
 
 

@@ -67,7 +67,7 @@ Forms ワークフローでは、ユーザーは人間中心のプロセスを�
     <ul>
      <li><p>ユーザー ID またはタスク ID によるタスクの検索</p></li>
     </ul></td> 
-   <td><p><a href="/help/forms/using/admin-help/tasks.md#working-with-tasks">タスクの使用</a></p></td> 
+   <td><p><a href="/help/forms/using/admin-help/tasks.md#working-with-tasks">タスクの操作</a></p></td> 
   </tr> 
   <tr>
    <td><p>停止した操作のエラー</p></td> 
@@ -76,7 +76,7 @@ Forms ワークフローでは、ユーザーは人間中心のプロセスを�
      <li><p>停止したすべての操作とそのエラーの表示</p></li>
      <li><p>停止した操作の再試行または終了</p></li>
     </ul></td> 
-   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">停止した操作および停止したブランチの使用</a></p></td> 
+   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">停止した操作やブランチの扱い</a></p></td> 
   </tr> 
   <tr>
    <td><p>停止したブランチのエラー</p></td> 
@@ -85,7 +85,7 @@ Forms ワークフローでは、ユーザーは人間中心のプロセスを�
      <li><p>停止したすべてのブランチとそのエラーの表示</p></li>
      <li><p>停止したブランチの再試行</p></li>
     </ul></td> 
-   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">停止した操作および停止したブランチの使用</a></p></td> 
+   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">停止した操作やブランチの扱い</a></p></td> 
   </tr> 
   <tr>
    <td><p>不在</p></td> 

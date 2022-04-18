@@ -13,13 +13,13 @@ exl-id: 646146b1-55bf-4d13-ba3d-2e9bdfd8d8af
 source-git-commit: c408d1072722fe4419e351b4f8bf257cf2e5a8a2
 workflow-type: tm+mt
 source-wordcount: '628'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
 # 非表示条件の使用{#using-hide-conditions}
 
-非表示の条件を使用して、コンポーネントリソースをレンダリングするかどうかを決定できます。その一例として、テンプレート作成者が[テンプレートエディター](/help/sites-authoring/templates.md)でコアコンポーネントの[リストコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/list.html)を設定し、子ページに基づいてリストを作成するオプションを無効にすることを決定する場合があります。デザインダイアログでこのオプションを無効にすると、リストコンポーネントのレンダリング時に非表示の条件が評価され、子ページを表示するオプションが表示されないようにプロパティが設定されます。
+非表示の条件を使用して、コンポーネントリソースをレンダリングするかどうかを決定できます。その一例として、テンプレート作成者が[テンプレートエディター](/help/sites-authoring/templates.md)でコアコンポーネントの[リストコンポーネント](https://helpx.adobe.com/jp/experience-manager/core-components/using/list.html)を設定し、子ページに基づいてリストを作成するオプションを無効にすることを決定する場合があります。デザインダイアログでこのオプションを無効にすると、リストコンポーネントのレンダリング時に非表示の条件が評価され、子ページを表示するオプションが表示されないようにプロパティが設定されます。
 
 ## 概要 {#overview}
 

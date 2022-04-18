@@ -8,7 +8,7 @@ exl-id: ff739a17-188e-4779-8820-9e4d9b7031d0
 source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
 source-wordcount: '424'
-ht-degree: 86%
+ht-degree: 88%
 
 ---
 
@@ -74,4 +74,4 @@ Dynamic Media は、パフォーマンスが最適化されスケーラビリテ
 * ICO
 * ICN
 
-詳しくは、 [画像トランスコーディングライブラリ](imaging-transcoding-library.md).
+詳しくは、[画像トランスコーディングライブラリ](imaging-transcoding-library.md)を参照してください。

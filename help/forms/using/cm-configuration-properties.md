@@ -13,13 +13,13 @@ exl-id: 102e4f39-192e-4cc1-a249-4b6bc641919d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '845'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 # Correspondence Management設定プロパティ {#correspondence-management-configuration-properties}
 
-これらのプロパティを設定するには、ブラウザーで次の URL を開きます。 `https://<server>:<port>/<contextPath>/system/console/configMgr` を選択し、 **Correspondence Management 設定**.
+これらのプロパティを設定するには、ブラウザーで URL `https://<server>:<port>/<contextPath>/system/console/configMgr` を開き、**Correspondence Management 設定** を選択してください。
 
 Correspondence Management には以下の設定プロパティがあります。
 
@@ -155,13 +155,13 @@ Correspondence Management には以下の設定プロパティがあります。
    <td><p>日付の表示形式</p> </td> 
    <td><p>データのロケール固有表示を指定します</p> </td> 
    <td><p>locale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=truelocale=de_DE; dateFormat=dd-MM-yyyy; numberDecimalSeparator=,; numberGroupSeparator=.; numberUseGroupSeparator=truelocale=fr_FR; dateFormat=dd-MM-yyyy; numberDecimalSeparator=,; numberGroupSeparator= ; numberUseGroupSeparator=truelocale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=true</p> </td> 
-   <td><p>--</p> </td> 
+   <td><p>—</p> </td> 
   </tr> 
   <tr> 
    <td><p>日付の編集形式</p> </td> 
    <td><p>データの編集形式これは、データを文字列として書き込む、または文字列から解析する場合に使用されます</p> </td> 
    <td><p>locale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.;numberGroupSeparator=,;numberUseGroupSeparator=true</p> </td> 
-   <td>--<p> </p> </td> 
+   <td>—<p> </p> </td> 
   </tr> 
   <tr> 
    <td><p>「発行」でレターインスタンスを管理</p> </td> 
@@ -274,7 +274,7 @@ Correspondence Management には以下の設定プロパティがあります。
   <tr> 
    <td>一時フォルダー</td> 
    <td>一時フォルダーの場所</td> 
-   <td>acm.tpmフォルダー</td> 
+   <td>acm.tpmFolder</td> 
    <td> </td> 
   </tr> 
   <tr> 
@@ -286,13 +286,13 @@ Correspondence Management には以下の設定プロパティがあります。
   <tr> 
    <td>互換性オプション</td> 
    <td>フォーマットの互換性オプション、configname:configvalueは、コンマで区切られています。</td> 
-   <td>acm.compatibilityオプション</td> 
+   <td>acm.compatibilityOptions</td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td><p>Debug ディレクトリ </p> <p> </p> </td> 
-   <td>デバッグのファイルシステムフォルダーの場所。ディレクトリが <code>exists</code>, no debug dumps will be generated.</td> 
-   <td>acm.debugディレクトリ</td> 
+   <td>デバッグのファイルシステムフォルダーの場所。ディレクトリが<code>exists</code>（存在しない）場合、デバッグダンプは生成されません。</td> 
+   <td>acm.debugDirectory</td> 
    <td> </td> 
   </tr> 
  </tbody> 

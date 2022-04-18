@@ -8,11 +8,11 @@ exl-id: f360abaf-a812-46ed-a160-ff569b6bec1c
 source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
 source-wordcount: '1114'
-ht-degree: 91%
+ht-degree: 93%
 
 ---
 
-# [!DNL Adobe Stock] での [!DNL Adobe Experience Manager Assets] アセットの使用  {#use-adobe-stock-assets-in-aem-assets}
+# [!DNL Adobe Experience Manager Assets] での [!DNL Adobe Stock] アセットの使用 {#use-adobe-stock-assets-in-aem-assets}
 
 [!DNL Adobe Stock] エンタープライズプランと [!DNL Experience Manager Assets] を統合すると、[!DNL Experience Manager] の強力なアセット管理機能を使用して、ライセンスが必要なアセットをクリエイティブプロジェクトやマーケティングプロジェクトに幅広く活用できます。
 
@@ -20,7 +20,7 @@ ht-degree: 91%
 
 ## 前提条件 {#prerequisites}
 
-この統合を利用するには、[Adobe Stock エンタープライズプラン](https://stockenterprise.adobe.com/)と、最新の Service Pack 2 を展開した 6.4 が必要です。[!DNL Experience Manager]の場合 [!DNL Experience Manager] 6.4 サービスパックの詳細は、次を参照してください [リリースノート](/help/release-notes/sp-release-notes.md).
+この統合を利用するには、[Adobe Stock エンタープライズプラン](https://stockenterprise.adobe.com/jp/)と、最新の Service Pack 2 を展開した 6.4 が必要です。[!DNL Experience Manager]の場合 [!DNL Experience Manager] 6.4 サービスパックの詳細は、次を参照してください [リリースノート](/help/release-notes/sp-release-notes.md).
 
 ## [!DNL Experience Manager] と [!DNL Adobe Stock] の統合  {#integrate-aem-and-adobe-stock}
 
@@ -45,7 +45,7 @@ ht-degree: 91%
 
 ### [!DNL Adobe Stock] での [!DNL Experience Manager] 設定の作成  {#create-adobe-stock-configuration-in-aem}
 
-1. 内 [!DNL Experience Manager] ユーザーインターフェイス、に移動する **[!UICONTROL ツール]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**.
+1. [!DNL Experience Manager] ユーザーインターフェイスで、**[!UICONTROL ツール]**／ **[!UICONTROL Cloud Services]** ／ **[!UICONTROL Adobe Stock]** に移動します。
 1. 「**[!UICONTROL 作成]**」をクリックして設定を作成し、その設定を既存の IMS 設定に関連付けます。環境パラメーターとして「`PROD`」を選択します。
 1. 「**[!UICONTROL ライセンスが必要なアセットのパス]**」フィールドの場所をそのまま残します。この場所を [!DNL Adobe Stock] アセットを保存する場所に変更しないでください。
 1. すべての必須プロパティを追加して作成を完了します。「**[!UICONTROL 保存して閉じる]**」をクリックします。
@@ -65,7 +65,7 @@ ht-degree: 91%
 
 *図：を検索 [!DNL Adobe Stock] アセットとフィルターの結果 [!DNL Experience Manager] インターフェイス。*
 
-**A.**[!DNL Adobe Stock] 指定された ID のアセットと類似しているアセットを検索します。**B.** 選択した形状や向きと一致するアセットを検索します。**C.** サポートされているアセットタイプのいずれかを検索します。**D.** フィルターウィンドウを開く／折りたたみます。**E.** 選択したアセットのライセンスを取得して に保存します。[!DNL Experience Manager]**F.**[!DNL Experience Manager] アセットを透かし付きで に保存します。**G.**[!DNL Adobe Stock] 選択したアセットと類似したアセットを Web サイトで調べます。**H.**[!DNL Adobe Stock] 選択したアセットを Web サイトに表示します。**I.** 検索結果から選択したアセットの数。**J.** カード表示とリスト表示を切り替えます。
+**A.** [!DNL Adobe Stock] ID が指定されているアセットと類似しているアセットを検索します。**B.** 選択した形状や向きと一致するアセットを検索します。**C.** サポートされているアセットタイプのいずれかを検索します。**D.** フィルターウィンドウを開く／折りたたみます。**E.** 選択したアセットのライセンスを取得して [!DNL Experience Manager] に保存します。**F.** アセットを透かし付きで [!DNL Experience Manager] に保存します。**G.** 選択したアセットと類似したアセットを [!DNL Adobe Stock] の web サイトで調べます。**H.** 選択したアセットを [!DNL Adobe Stock] の web サイトに表示します。**I.** 検索結果から選択したアセットの数。**J.** カード表示とリスト表示を切り替えます。
 
 ### アセットの検索 {#find-assets}
 
@@ -123,7 +123,7 @@ ht-degree: 91%
 
 >[!MORELIKETHIS]
 >
->* [の使用に関するビデオチュートリアル [!DNL Adobe Stock] を持つアセット [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html?lang=ja)
+>* [ [!DNL Experience Manager Assets] での  [!DNL Adobe Stock]  アセットの使用について説明するビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html?lang=ja)
 >* [[!DNL Adobe Stock] エンタープライズプランのヘルプ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-stock-enterprise.ug.html)
 >* [[!DNL Adobe Stock] FAQ](https://helpx.adobe.com/jp/stock/faq.html)
 

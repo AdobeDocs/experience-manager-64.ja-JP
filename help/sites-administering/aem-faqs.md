@@ -10,7 +10,7 @@ exl-id: 76110cf4-0fd8-4203-b256-c0818a1b64d2
 source-git-commit: edba9586711ee5c0e5549dbe374226e878803178
 workflow-type: tm+mt
 source-wordcount: '1527'
-ht-degree: 55%
+ht-degree: 69%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 55%
 ### バイナリレスディストリビューションを有効にする方法を教えてください。 {#how-do-i-enable-binary-less-distribution}
 
 バイナリレスディストリビューションを有効にするには、共有 BLOB ストアと共にデプロイします。\
-次を確認します。 `useBinaryReferences` プロパティを、ファクトリ PID( `org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*)* エージェントが使用している
+エージェントが使用しているファクトリ PID（`org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*）* を含む OSGI 設定の `useBinaryReferences` プロパティを確認します。
 
 ### AEM Sites コンソールでページ階層を移動する際のエラーメッセージのカスタマイズ方法を教えてください。 {#how-can-i-customize-the-error-messages-while-navigating-page-hierarchy-in-aem-sites-console}
 
@@ -39,16 +39,16 @@ ht-degree: 55%
 
 ### 言語コピーを作成する際に AEM で Content-Authors の権限を有効にする方法を教えてください。 {#how-to-enable-permissions-while-creating-language-copy-for-content-authors-in-aem}
 
-言語コピー機能を作成するには、content-authors に次の権限が必要です： `/content/projects` 場所。
+言語コピー機能を作成するには、content-authors が `/content/projects` の場所に対する権限を持つ必要があります。
 
-作成者がプロジェクトの管理も必要な場合は、次の回避策で作成者を `project-administrators` グループ化します。
+プロジェクトの作成者が管理もおこなう場合は、回避策として、その作成者を `project-administrators` グループに追加します。
 
 ### プロジェクトの言語コピーを作成する際に形式を変更する方法を教えてください。 {#how-to-change-the-format-while-creating-language-copy-for-a-project}
 
 翻訳プロジェクトを作成する前に、ルート内部に言語ルートおよび言語コピーを作成します。
 
 例：\
-に言語ルートを作成します。 `/content/geometrixx` 名前は次のとおりです `fr_LU` ( また、フランス語（ルクセンブルグ）というタイトル )。 次に、参照パネルからページの言語コピーを作成し、に移動します。 `Create structure only` オプション `Create & Translate`. 最後に、翻訳プロジェクトを作成し、言語コピーを翻訳ジョブに追加します。
+に言語ルートを作成します。 `/content/geometrixx` 名前は次のとおりです `fr_LU` ( また、フランス語（ルクセンブルグ）というタイトル )。 次に、参照パネルからページの言語コピーを作成し、`Create & Translate` 内の `Create structure only` オプションに移動します。最後に、翻訳プロジェクトを作成し、言語コピーを翻訳ジョブに追加します。
 
 詳しくは、次の追加リソースを参照してください。
 
@@ -57,7 +57,7 @@ ht-degree: 55%
 
 ### ログイン試行や ACL／権限の変更といった AEM の機能を監査する方法を教えてください。 {#how-to-audit-aem-capabilities-such-as-login-attempts-and-acl-or-permission-changes}
 
-トラブルシューティングと監査の質を高めるために、管理に関係する変更を記録する機能が追加されました。デフォルトでは、情報は `error.log` ファイル。 監視を容易にするために、この情報を別のログファイルにリダイレクトすることをお勧めします。\
+トラブルシューティングと監査の質を高めるために、管理に関係する変更を記録する機能が追加されました。デフォルトでは、`error.log` ファイルに情報が記録されます。監視を容易にするために、この情報を別のログファイルにリダイレクトすることをお勧めします。\
 出力を別のログファイルにリダイレクトする方法については、[AEM でのユーザー管理操作を監査する方法](/help/sites-administering/audit-user-management-operations.md)を参照してください。
 
 ### デフォルトの SSL を有効にする方法を教えてください。 {#how-to-enable-ssl-by-default}
@@ -68,15 +68,15 @@ Adobe Experience Manager（AEM）6.4 には SSL ウィザードが付属し、Je
 
 ### AEM のコンテンツサービスをモバイルアプリから使用する場合に推奨されるアーキテクチャは何ですか。理想的には React Native ですか。 {#what-is-the-recommended-architecture-when-using-aem-s-content-services-from-a-mobile-app-ideally-react-native}
 
-コンテンツサービスは Sling モデルに基づいており、AEM開発者は、書き出される各コンポーネントに対して Sling モデルポジションを提供する必要があります。
+AEM のコンテンツサービスは Sling Model に基づきます。AEM デベロッパーは、書き出される各コンポーネントに Sling Model pojo を提供する必要があります。
 
 AEM コンテンツサービスを React アプリケーションから使用する方法については、[AEM コンテンツサービスの使用準備](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/content-services-tutorial-use.html)のチュートリアルを参照してください。
 
-また、開発者がコンポーネントのツリーを書き出す場合は、 `ComponentExporter` および `ContainerExporter` インターフェイスと `ModelFactory` 子コンポーネントを繰り返し処理し、そのモデル表現を返します。 以下のリソースを参照してください。
+また、デベロッパーがコンポーネントのツリーを書き出す場合は、`ComponentExporter` および `ContainerExporter` インターフェイスを実装し、`ModelFactory` を使用して子コンポーネントに対して反復処理を行ってモデル表現を返すこともできます。以下のリソースを参照してください。
 
 [1] [Adobe-Marketing-Cloud/aem-core-wcm-components](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/blob/master/bundles/core/src/main/java/com/adobe/cq/wcm/core/components/internal/models/v1/PageImpl.java#L245)
 
-[2] [Apache Sling ::Sling モデル](https://sling.apache.org/documentation/bundles/models.html)
+[2] [Apache Sling :: Sling Models](https://sling.apache.org/documentation/bundles/models.html)
 
 ### AEM 6.4 のサーベイポップアップを無効にする方法を教えてください。 {#how-to-disable-aem-survey-pop-up}
 
@@ -84,13 +84,13 @@ AEM コンテンツサービスを React アプリケーションから使用す
 
 ### AEM 6.4 にアップグレードするための主な機能を説明しているリソースを教えてください。 {#is-there-a-good-resource-that-highlights-the-key-features-for-upgrading-to-aem}
 
-参照： [AEMをアップグレードする理由について](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/upgrade-aem-article-understand.html) ここでは、お客様がAdobe Experience Managerの最新バージョンへのアップグレードを検討する際の主な機能の大まかな分類について説明します。
+参照： [AEMをアップグレードする理由について](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html) ここでは、お客様がAdobe Experience Managerの最新バージョンへのアップグレードを検討する際の主な機能の大まかな分類について説明します。
 
 ### PorterStem フィルターを使用するAEMインスタンスの設定方法は？ {#how-to-configure-an-aem-instance-to-use-the-porterstem-filter}
 
 PorterStem フィルタは、英語用の Porter Stemming Algorithm を適用します。 結果は、Snowball Porter Stemer を *language=&quot;英語&quot;* 引数。 しかし、このステマーは Java で直接コード化され、Snowball に基づいていません。 保護された単語のリストは受け付けられず、英語のテキストにのみ適しています。
 
-Oak は、AEMで使用する Lucene 提供のアナライザ設定要素のセットを公開します。 フィルターの使用方法については、 **Apache Oak アナライザー** in [シンプルな検索実装ガイド](https://helpx.adobe.com/experience-manager/kt/sites/using/search-tutorial-develop.html).
+Oak は、AEMで使用する Lucene 提供のアナライザ設定要素のセットを公開します。 フィルターの使用方法については、 **Apache Oak アナライザー** in [シンプルな検索実装ガイド](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html).
 
 ### 完全なインデックス再作成の実行方法は？ {#how-to-perform-a-full-re-indexing}
 
@@ -137,12 +137,11 @@ Assets Insights を設定して、Activation(DTM) を介してデプロイされ
 
 ### アドミンコンソールをカスタマイズする方法を教えてください。 {#how-to-customize-admin-consoles}
 
-AEMは、オーサリングインスタンスのコンソールとページオーサリング機能をカスタマイズできる様々なメカニズムを提供しています。
-カスタムコンソールを作成し、コンソールのデフォルト表示をカスタマイズする方法については、 [コンソールのカスタマイズ](/help/sites-developing/customizing-consoles-touch.md).
+AEM には、オーサーインスタンスのコンソールおよびページオーサリング機能をカスタマイズできる様々な仕組みが用意されています。カスタムコンソールを作成し、コンソールのデフォルト表示をカスタマイズする方法については、 [コンソールのカスタマイズ](/help/sites-developing/customizing-consoles-touch.md).
 
 ### CoralUI 2 と CoralUI 3 ベースのコンポーネントの違いを教えてください。 {#what-is-the-difference-between-coralui-and-coralui-based-components}
 
-Granite UI Foundation の新しい Sling コンポーネントセットが Coral3 用に作成され、次の場所に配置されます。 [/libs/granite/ui/components/coral/foundation にコピーします。](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html)CoralUI 2 ベースのコンポーネント用と CoralUI 3 ベースのコンポーネント用のセットが1 つずつあります。新しいセットは、古いセットをただコピーして貼り付けたものではなく、（合理化、廃止予定の機能を削除するなど）クリーンアップしたものです。そのため、ページは CoralUI 3 ベースまたは CoralUI 2 ベースのいずれかのセットのみを使用することをお勧めします。
+Granite UI Foundation の Sling コンポーネントの新しいセットが Coral3 用に作成され、[/libs/granite/ui/components/coral/foundation にあります。](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html)CoralUI 2 ベースのコンポーネント用と CoralUI 3 ベースのコンポーネント用のセットが1 つずつあります。新しいセットは、古いセットをただコピーして貼り付けたものではなく、（合理化、廃止予定の機能を削除するなど）クリーンアップしたものです。そのため、ページは CoralUI 3 ベースまたは CoralUI 2 ベースのいずれかのセットのみを使用することをお勧めします。
 
 詳しくは、 [CoralUI 3 ベースへの移行ガイド](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html).
 
@@ -158,9 +157,9 @@ Granite UI Foundation の新しい Sling コンポーネントセットが Coral
 
 AEMオンプレミスソフトウェアと Adobe Managed Services の詳細については、次のリソースを参照してください。
 
-* [Adobe Experience Manager On-premise Software](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)
+* [Adobe Experience Manager On-premise Software](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)
 
-* [Adobe Experience Manager Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)
+* [Adobe Experience Manager Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)
 
 ### 顧客はページやアセットのデフォルトプロパティをどのように拡張できますか？ {#how-to-extend-default-properties-page-or-asset}
 

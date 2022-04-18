@@ -13,7 +13,7 @@ exl-id: 5e2960f2-b172-48a7-bba3-4561a5f9c7bc
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '316'
-ht-degree: 72%
+ht-degree: 89%
 
 ---
 
@@ -28,11 +28,11 @@ AEM Forms では、各ユーザーの役割や職務に応じて、ルールエ�
 ## ルールエディターにアクセスできるユーザーグループの指定 {#specify-user-groups-that-can-access-rule-editor}
 
 1. 管理者として AEM Forms にログインします。
-1. オーサーインスタンスで、 ![adobeexperiencemanager](assets/adobeexperiencemanager.png)Adobe Experience Manager /ツール ![ハンマー](assets/hammer.png) /操作/ Web コンソール。 新しいウィンドウに Web コンソールが表示されます。
+1. オーサーインスタンスで、![adobeexperiencemanager](assets/adobeexperiencemanager.png)Adobe Experience Manager／ツール![ハンマー](assets/hammer.png)／操作／Web コンソール をクリックしてください。新しいウィンドウに web コンソールが表示されます。
 
    ![1](assets/1.png)
 
-1. Web コンソールウィンドウで、を探して、 **[!UICONTROL アダプティブフォームとインタラクティブ通信の Web チャネル設定]**. **[!UICONTROL アダプティブフォームとインタラクティブ通信の Web チャネル設定]** ダイアログが表示されます。 値を変更せずに、「**[!UICONTROL 保存]**」をクリックします。
+1. Web コンソールウィンドウで、**[!UICONTROL アダプティブフォームとインタラクティブ通信の web チャネル設定]**&#x200B;を探してクリックします。**[!UICONTROL アダプティブフォームおよびインタラクティブ通信 web チャネルの設定]**&#x200B;ダイアログが表示されます。値を変更せずに、「**[!UICONTROL 保存]**」をクリックします。
 
    これにより、CRX リポジトリに /apps/system/config/com.adobe.aemds.guide.service.impl.AdaptiveFormConfigurationServiceImpl.config ファイルが作成されます。
 
@@ -41,7 +41,7 @@ AEM Forms では、各ユーザーの役割や職務に応じて、ルールエ�
 
    `af.ruleeditor.custom.groups=["RuleEditorsUserGroup"]`
 
-   複数のグループに対してアクセスを有効にするには、コンマ区切り値のリストを指定します。
+   複数のグループにアクセスを有効にするには、コンマ区切りの値のリストを指定します。
 
    `af.ruleeditor.custom.groups=["RuleEditorsUserGroup", "PermittedUserGroup"]`
 

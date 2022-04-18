@@ -13,7 +13,7 @@ exl-id: 19ec5c00-eae5-4e7f-9dc5-c7a88b06fd2a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1010'
-ht-degree: 79%
+ht-degree: 80%
 
 ---
 
@@ -40,24 +40,24 @@ AEM Sites 6.4 の機能強化について詳しくは、以下を参照してく
 ### コンポーネントとテンプレートの開発 {#component-amp-template-development}
 
 * プロジェクトアーキタイプ 13 以上（[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/releases) を参照）。
-* HTL バージョン 1.3.1（[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/htl-spec/releases/tag/1.3.1) を参照）。
-* コアコンポーネント 2.0.4 以上（[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases) を参照）。
+* HTL バージョン 1.3.1 については、[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/htl-spec/releases/tag/1.3.1) を参照してください。
+* コアコンポーネント 2.0.4 以上については、[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases) を参照してください。
 * スタイルシステム
 
    * CSS クラスをコンポーネントに割り当て、ページエディターでユーザーが UI からスタイルのサブセットから選択できるようにするまったく新しい概念が追加されました。
    * コンポーネントの周辺に表示される HTML 要素名（&lt;main> や &lt;aside> など）を定義できるようになりました。
 
-* レイアウトコンテナのグリッドシステム（[GitHub](https://github.com/Adobe-Marketing-Cloud/aem-responsivegrid) を参照）。
+* レイアウトコンテナのグリッドシステムについては、[GitHub](https://github.com/Adobe-Marketing-Cloud/aem-responsivegrid) を参照してください。
 * テンプレートエディターとポリシー
 
    * ポリシーでは、コンポーネントごと、コンテナごと、テンプレートごとのスタイルシステム設定をサポートするようになりました。
    * 編集可能なコンポーネントでのテンプレートレイアウト定義のサポートが改善されました。
 
-* 参照サイト We.Retail 3.0（[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) を参照）。
+* 参照サイト We.Retail 3.0 については、[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) を参照してください。
 
 >[!CAUTION]
 >
->AEMには、既存のカスタムコードとの互換性を最大限に高めるために、jQuery ライブラリのバージョン1.12.4が含まれています。 セキュリティに関する既知の問題に対処するため、アドビによる修正がおこなわれました。
+>AEM には、既存のカスタムコードとの互換性を最大限に高めるために、jQuery ライブラリのバージョン 1.12.4 が含まれています。セキュリティに関する既知の問題に対処するため、アドビによる修正がおこなわれました。
 
 ### コンテンツフラグメントとエディター {#content-fragments-amp-editor}
 

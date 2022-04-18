@@ -13,7 +13,7 @@ exl-id: 8c205d1d-d17e-4810-8ef9-a8bdcd9aa1c2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '573'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -29,9 +29,9 @@ AEM Forms では、User Management にまだ存在していないユーザーの
 1. 認証プロバイダーは、秘密鍵証明書を検証します。
 1. 認証プロバイダーは、次に、ユーザーが User Management データベースに存在するかどうかを確認します。可能性のある結果を次に示します。
 
-   **存在する：** ユーザーが現在でロックが解除されている場合、User Management は認証成功を返します。 これに対して、ユーザーが登録されていないか、またはロックされている場合、User Management は認証失敗を返します。
+   **存在する：**&#x200B;ユーザーが登録されており、ロックされていない場合、User Management は認証成功を返します。これに対して、ユーザーが登録されていないか、またはロックされている場合、User Management は認証失敗を返します。
 
-   **次が存在しません：** User Management は認証失敗を返します。
+   **存在しない：** User Management は認証失敗を返します。
 
    **無効：** User Management は認証失敗を返します。
 
@@ -104,7 +104,7 @@ public Boolean assign(User user);
 
 1. 認証データを持つ `UserProvisioningBO` オブジェクトを作成し、秘密鍵証明書マップに配置します。
 1. `UserProvisioningBO` によって返されるドメイン情報に基づいて、ドメインの登録された `IdentityCreator` および `AssignmentProvider` を取得して呼び出します。
-1. 呼び出し `IdentityCreator`. 正常な `AuthResponse` が返される場合、秘密鍵証明書マップから `UserInfo` を抽出します。ユーザー作成後のグループ／ロールアサインおよびその他の後処理のために `AssignmentProvider` に渡します。
+1. `IdentityCreator`を呼び出します。 正常な `AuthResponse` が返される場合、秘密鍵証明書マップから `UserInfo` を抽出します。ユーザー作成後のグループ／ロールアサインおよびその他の後処理のために `AssignmentProvider` に渡します。
 1. ユーザーが正常に作成されると、成功としてユーザーのログイン試行を返します。
 1. ハイブリッドドメインの場合、認証プロバイダーに提供された認証データからユーザー情報を引き出します。この情報が正常に取得されると、ユーザーがオンザフライで作成されます。
 

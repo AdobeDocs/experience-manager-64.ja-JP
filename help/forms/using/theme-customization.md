@@ -13,7 +13,7 @@ exl-id: fb1e0bec-c943-4468-920d-8ef360a01365
 source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
 source-wordcount: '223'
-ht-degree: 55%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 55%
 
 HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms アプリケーションに組織固有の明確なルック＆フィールを提供することができます。たとえば、タスクまたはスタートポイントの背景色や高さを変更できます。次のことを変更する手順を、以下に例で示します。
 
-* 説明の代わりに手順を表示する
+* 説明の代わりに手順を表示
 * 表示ルート数
 * 背景諧調色
 
@@ -29,17 +29,17 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
 
 1. プロジェクトを開きます。
 
-   * iOSの場合は、を開きます。 `Capture.xcodeproj` Xcode 内
+   * iOS の場合、Xcode で `Capture.xcodeproj` を開きます。
    * Android の場合、Eclipse で Android プロジェクトを開きます。
-   * Windows の場合は、を開きます。 `MWSWindows.sln` Visual Studio 内。
+   * Windows の場合、Visual Studio で `MWSWindows.sln` を開きます。
 
 1. テンプレートフォルダーに移動します。
 
-   * Xcode で、 **Capture > www > wsmobile > js > runtime > templates** フォルダー。
-   * Eclipse で、 **assets > www > wsmobile > js > runtime > templates** フォルダー。
-   * Visual Studio で、 **MWSWindows > www > wsmobile > js > runtime > templates** フォルダー。
+   * Xcode では、**Capture／www／wsmobile／js／runtime／templates** フォルダーに移動します。
+   * Eclipse では、**assets／www／wsmobile／js／runtime／templates** フォルダーに移動します。
+   * Visual Studio では、**MWSWindows／www／wsmobile／js／runtime／templates** フォルダーに移動します。
 
-1. を開きます。 `template.html` ファイルを編集します。
+1. `template.html` ファイルを開いて編集します。
 1. 次の文字列を探します。
 
    ```
@@ -50,7 +50,7 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
                  <%} else 
    ```
 
-   次で置き換えます。 `<%`.
+   `<%` に置き換えます。
 
 1. `template.html` ファイル内の次のコードを探します。
 
@@ -74,13 +74,13 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
 
 1. css フォルダーに移動します。
 
-   * Xcode で、 **Capture > www > wsmobile > css**.
-   * Eclipse で、に移動します。 **assets > www > wsmobile > css**.
-   * Visual Studio で、に移動します。 **MWSWindows > www > wsmobile > css**.
+   * Xcode では、**Capture／www／wsmobile／css** に移動します。
+   * Eclipse では、**assets／www／wsmobile／css** に移動します。
+   * Visual Studio では、**MWSWindows／www／wsmobile／css** に移動します。
 
-1. を開きます。 `_style.css` ファイルを編集します。
-1. 背景画像の場合は、 `#323232` から `#fff`.
-1. 変更を保存して閉じます `_style.css` ファイル。
+1. `_style.css` ファイルを開いて編集します。
+1. 背景画像は、`#323232` を `#fff` に変更します。
+1. 変更を保存し、`_style.css` ファイルを閉じます。
 1. AEM Forms アプリケーションを開きます。
 
    AEM Forms アプリケーションには、説明の代わりに手順が表示されるようになっています。

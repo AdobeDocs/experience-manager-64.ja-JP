@@ -13,7 +13,7 @@ exl-id: 210cb5f2-cc5c-4664-b324-5c6f70f7b593
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '729'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -23,17 +23,17 @@ ht-degree: 80%
 
 ## AEM Forms Workspace パッケージをインストールできない {#unable-to-install-aem-forms-workspace-package}
 
-パッチをインストールした後、AEM Forms Workspace を開きます。リソースが見つかりませんエラーが発生した場合は、CRX パッケージマネージャーを開き、 `adobe-lc-workspace-pkg-<version>.zip` パッケージ。
+パッチをインストールした後、AEM Forms Workspace を開きます。「リソースが見つかりません」というエラーが発生した場合は、CRX Package Manager を開いて、`adobe-lc-workspace-pkg-<version>.zip` パッケージを再インストールします。
 
-パッケージのインストール中にエラーが発生した場合 `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`で、次の手順を実行します。
+パッケージをインストールするときに、「`javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`」というエラーが発生した場合は、次の手順を実行します。
 
-1. CRX DE Lite にログインします。デフォルトの URL は `https://[localhost]:[port]/lc/crx/de/index.jsp`
+1. CRX DE Lite にログインします。デフォルトの URL は、`https://[localhost]:[port]/lc/crx/de/index.jsp` です。
 1. 次のノードを削除します。
 
    `/home/groups/P/PERM_WORKSPACE_USER`
 
-1. Package Manager に移動します。デフォルトの URL は、`https://[localhost]:[port]/lc/crx/packmgr/index.jsp.`
-1. を検索してインストールする `adobe-lc-workspace-pkg-[version].zip` パッケージ。
+1. Package Manager に移動します。デフォルトの URL は、`https://[localhost]:[port]/lc/crx/packmgr/index.jsp.` です。
+1. `adobe-lc-workspace-pkg-[version].zip` パッケージを検索してインストールします。
 1. アプリケーションサーバーを再起動します。
 
 ## AEM Forms Workspace のログ {#aem-forms-workspace-nbsp-logging}
@@ -42,11 +42,11 @@ ht-degree: 80%
 
 AEM Forms Workspace では次の操作が可能です。
 
-* 特定のコンポーネントファイルに関するログ情報を取得するには、 `/log/<ComponentFile>/<LogLevel>` をクリックし、 `Enter`. 特定のログレベルにおけるコンポーネントファイルのすべてのログ情報は、コンソールに印刷されます。
+* 特定のコンポーネントファイルについてのログ情報を取得するには、URL に `/log/<ComponentFile>/<LogLevel>` を付け加えて `Enter` キーを押します。特定のログレベルにおけるコンポーネントファイルのすべてのログ情報は、コンソールに印刷されます。
 
-* すべてのコンポーネントファイルのログ情報を取得するには、を追加します。 `/log/all/trace` をクリックし、 `Enter`.
+* すべてのコンポーネントファイルについてのログ情報を取得するには、URL に `/log/all/trace` を付け加えて `Enter` キーを押します。
 
-* ログ形式： `<Component file> <Date>:<Time>: <Log Level> : <Log Message>`
+* ログ形式：`<Component file> <Date>:<Time>: <Log Level> : <Log Message>`
 
 >[!NOTE]
 >
@@ -149,17 +149,17 @@ AEM Forms Workspace では次の操作が可能です。
 * INFO
 * DEBUG
 * TRACE
-* オフ
+* OFF
 
 ## ブラウザーへの情報のデバッグ {#debugging-information-for-browsers}
 
 スクリプトおよびスタイルは異なるブラウザーにデバッグすることができます。
 
-* **IE でのデバッグ**:IE でAEM Forms Workspace をデバッグするには、以下を参照してください。 [https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx).
+* **IE でのデバッグ**：AEM Forms Workspace を IE でデバッグするには、[https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/ja-jp/library/hh772704(v=vs.85).aspx) を参照してください。
 
-* **Chrome でのデバッグ**:Chrome でデバッガーを開くには、次のショートカットを使用します。Ctrl + Shift + I。詳しくは、以下を参照してください。 [https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html).
+* **Chrome でのデバッグ**：Chrome でデバッガーを開くには、Ctrl+Shift+I のショートカットキーを使用します。詳しくは、[https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html) を参照してください。
 
-* **Firefox でのデバッグ**：複数のアドオンを Firefox でスクリプトおよびスタイルのデバッグに使用することができます。例えば、Firebug はこのようなデバッグユーティリティの 1 つです ([https://getfirebug.com](https://getfirebug.com)) をクリックします。
+* **Firefox でのデバッグ**：複数のアドオンを Firefox でスクリプトおよびスタイルのデバッグに使用することができます。例えば、Firebug はデバッグユーティリティの 1 つです（[https://getfirebug.com](https://getfirebug.com)）。
 
 ## FAQ {#faqs}
 

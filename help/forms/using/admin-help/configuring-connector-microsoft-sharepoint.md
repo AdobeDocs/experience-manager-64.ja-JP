@@ -13,7 +13,7 @@ exl-id: 9bd396a3-5da9-4355-ad76-e7132ac8aed8
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 60%
+ht-degree: 100%
 
 ---
 
@@ -24,19 +24,19 @@ Connector for Microsoft SharePoint は、AEM Forms と Microsoft SharePoint 間�
 1. 管理コンソールで、サービス／Connector for Microsoft SharePoint をクリックします。
 1. SharePoint Server の次の設定を指定します。
 
-   **SharePoint Server ホスト名：** SharePointサーバー上の Web アプリケーションのホスト名ポート番号（形式） `[hostname]:[port]`.
+   **SharePoint サーバーホスト名**：SharePoint サーバー上の eb アプリケーションのホスト名ポート番号（`[hostname]:[port]` の形式）。
 
-   **ユーザー名：** SharePointサーバーへの接続に使用するユーザーアカウント。
+   **ユーザー名**：SharePoint サーバーへの接続に使用するユーザーアカウントのパスワード。
 
-   **パスワード：** SharePointサーバーへの接続に使用するユーザーアカウントのパスワード
+   **パスワード**：SharePoint サーバーへの接続に使用するユーザーアカウントのパスワード。
 
-   **ドメイン名：** SharePointサーバーが存在するドメイン。
+   **ドメイン名**：SharePoint サーバーがあるドメイン。
 
 1. 「保存」をクリックします。
 
 ## Microsoft SharePoint Configuration サービス {#microsoft-sharepoint-configuration-service}
 
-Microsoft SharePoint設定サービス `(MSSharePointConfigService)` 他のユーザーとしての権限を持つAEM forms ユーザーに対して、資格情報を指定できます。 他のユーザーとしての権限については、「[Connector for Microsoft SharePoint の設定](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)」を参照してください。`MSSharePointConfigService` の設定を指定するには、次の手順を実行します。
+Microsoft SharePoint Configuration サービス（`(MSSharePointConfigService)`）を使用して、他のユーザーとしての権限（仮想権限）を持つ AEM Forms ユーザー用に秘密鍵証明書を指定できます。他のユーザーとしての権限については、「[Connector for Microsoft SharePoint の設定](https://help.adobe.com/ja_JP/AEMForms/6.1/SharePointConfig/index.html)」を参照してください。`MSSharePointConfigService` の設定を指定するには、次の手順を実行します。
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／サービスの管理をクリックします。
 1. サービスのリストに移動して、`MSSharePointConfigService` をクリックします。

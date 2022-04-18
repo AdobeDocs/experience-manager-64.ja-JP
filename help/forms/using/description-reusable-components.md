@@ -13,13 +13,13 @@ exl-id: 2790a2d3-444a-4c13-99b0-ea31923fc547
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1231'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
 # 再利用可能なコンポーネントの説明 {#description-of-reusable-components}
 
-AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-html-ws-components-web.md) 特定の [フォルダー構造](/help/forms/using/folder-structure.md) (CRX™内 ) 各コンポーネントは、フォルダー構造内の指定場所にあるモデル、表示、およびテンプレートファイル、他のコンポーネントファイルの JavaScript™ 依存関係、コンポーネントがリッスンするイベント、および AEM Forms Workspace 内でこれらのイベントをトリガーする JapaScript オブジェクトを持ちます。再利用可能なコンポーネントの完全なリストと、構成ファイル名および依存関係をここに示します。
+AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-html-ws-components-web.md)コンポーネントで構成されており、これらのコンポーネントは CRX™ 内の固有の[フォルダー構造](/help/forms/using/folder-structure.md)内に整理されています。各コンポーネントには、フォルダー構造内の指定場所にあるモデル、表示、テンプレートファイル、他のコンポーネントファイルの JavaScript™ 依存関係、コンポーネントがリッスンするイベント、および AEM Forms Workspace 内でこれらのイベントをトリガーする JavaScript オブジェクトがあります。 再利用可能なコンポーネントの完全なリストを、それらの構成ファイル名と依存関係と共に、以下に示します。
 
 ## TaskList {#tasklist}
 
@@ -55,7 +55,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
     </ul></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td> 
     <ul> 
      <li><p>filterSelected - tasklist モデル</p></li> 
@@ -99,7 +99,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
     </ul></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td> 
     <ul> 
      <li><p>submitComplete - タスクモデル</p></li> 
@@ -138,7 +138,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>該当なし</p></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td> 
     <ul> 
      <li><p>取得済み - tasklist モデル </p></li> 
@@ -210,7 +210,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>該当なし</p></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td> 
     <ul> 
      <li><p>取得済み - tasklist モデル </p></li> 
@@ -298,7 +298,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
     </ul> </td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p> </td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p> </td> 
    <td> 
     <ul> 
      <li><p>転送済み - タスクモデル</p> </li> 
@@ -352,7 +352,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
     </ul></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td> 
     <ul> 
      <li><p>allStartpointsFetched - categorylist モデル </p></li> 
@@ -395,7 +395,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
     </ul></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td> 
     <ul> 
      <li><p>変更済み - カテゴリモデル </p></li> 
@@ -443,7 +443,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
     </ul></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td> 
     <ul> 
      <li><p>category:selected - categorylist モデル </p></li> 
@@ -482,7 +482,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>タスクモデル</p></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td><p>変更 - startpoint モデル </p></td> 
   </tr> 
  </tbody> 
@@ -526,7 +526,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
     </ul> </td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p> </td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p> </td> 
    <td> 
     <ul> 
      <li><p>category:selected - categorylist モデル</p> </li> 
@@ -576,7 +576,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>processname モデル</p></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td> 
     <ul> 
      <li><p>追加 - processnamelist モデル </p></li> 
@@ -616,7 +616,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>processinstancelist モデル</p></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td><p>変更 - processname モデル </p></td> 
   </tr> 
  </tbody> 
@@ -647,7 +647,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>processname モデル</p></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td> 
     <ul> 
      <li><p>processname:selected - processnamelist モデル </p></li> 
@@ -686,7 +686,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>tasklist モデル</p></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td><p>変更 - processinstance モデル </p></td> 
   </tr> 
  </tbody> 
@@ -721,7 +721,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
     </ul></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td> 
     <ul> 
      <li><p>processname:selected - processnamelist モデル </p></li> 
@@ -761,7 +761,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>usersearch ビュー</p> </td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p> </td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p> </td> 
    <td> 
     <ul> 
      <li><p>outOfOfficeSettingsFetched - outofoffice モデル</p> </li> 
@@ -802,7 +802,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>usersearch ビュー</p> </td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p> </td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p> </td> 
    <td> 
     <ul> 
      <li><p>queueAccessGranted - sharequeue モデル</p> </li> 
@@ -846,7 +846,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>該当なし</p></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td> 
     <ul> 
      <li><p>preferencesFetched - uisettings モデル </p></li> 
@@ -920,7 +920,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>該当なし</p> </td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p> </td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p> </td> 
    <td> 
     <ul> 
      <li>userImageUrlFetched - userinfo モデル</li> 
@@ -960,7 +960,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>該当なし</p></td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p></td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p></td> 
    <td><p>newWsError - wserror モデル </p></td> 
   </tr> 
  </tbody> 
@@ -991,7 +991,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>該当なし</p> </td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p> </td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p> </td> 
    <td> 
     <ul> 
      <li>principalSearched - principalsearch モデル</li> 
@@ -1026,7 +1026,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>該当なし</p> </td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p> </td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p> </td> 
    <td><p>templateFetched- searchtemplate モデル</p> </td> 
   </tr> 
  </tbody> 
@@ -1057,7 +1057,7 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td><p>searchtemplate モデル</p> </td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p> </td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p> </td> 
    <td><p>change - searchtemplatelist モデル</p> </td> 
   </tr> 
  </tbody> 
@@ -1088,8 +1088,8 @@ AEM Forms Workspace は、 [再利用可能な](/help/forms/using/integrating-ht
    <td>該当なし<br /> </td> 
   </tr> 
   <tr> 
-   <td><p>リスンされたイベント ( イベント名 —トリガー)</p> </td> 
-   <td><p>searchTemplate:selected - searchtemplate モデル</p> </td> 
+   <td><p>リスンされているイベント（イベント名 – トリガー）</p> </td> 
+   <td><p>searchTemplate:selected - searchtemplate モデル</p> </td> 
   </tr> 
  </tbody> 
 </table>

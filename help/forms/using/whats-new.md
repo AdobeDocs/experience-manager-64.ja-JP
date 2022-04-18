@@ -82,7 +82,7 @@ AEM Formsには、インタラクティブ通信用の標準のテーマが含�
 
 ![chart-2](assets/chart-2.png) ![チャート](assets/chart.png)
 
-詳しくは、 [インタラクティブ通信でのグラフの使用](/help/forms/using/chart-component-interactive-communications.md).
+詳しくは、[インタラクティブ通信内でグラフを使用する](/help/forms/using/chart-component-interactive-communications.md)を参照してください。
 
 ### 付属のデータコネクタを使用してドキュメントにデータを取り込む {#out-of-the-box-data-connectors-to-prefill-documents}
 
@@ -90,7 +90,7 @@ AEM Formsには、インタラクティブ通信用の標準のテーマが含�
 
 ![fdm_ad](assets/fdm_ad.png)
 
-詳しくは、「[フォームデータモデルの使用](/help/forms/using/using-form-data-model.md)」を参照してください。
+詳しくは、[フォームデータモデルの使用](/help/forms/using/using-form-data-model.md)を参照してください。
 
 ### ドキュメントフラグメントエディターの機能強化 {#enhanced-document-fragment-editor}
 
@@ -124,7 +124,7 @@ AEM Formsには、インタラクティブ通信用の標準のテーマが含�
 
 同様に、既存のフォームデータモデル内でエンティティと子プロパティを作成し、そのエンティティとプロパティを、データソース内の対応するエンティティとプロパティに後から連結することができます。
 
-詳しくは、「[フォームデータモデルの作成](/help/forms/using/create-form-data-models.md)」を参照してください。
+詳しくは、[フォームデータモデルの作成](/help/forms/using/create-form-data-models.md)を参照してください。
 
 ### 計算済みプロパティの作成 {#create-computed-properties}
 
@@ -198,7 +198,7 @@ Document Security を使用すると、サポートされる形式で保存し�
 
 ## サポートされているプラットフォーム {#supported-platforms}
 
-サポート対象のオペレーティングシステム、アプリケーションサーバー、データベース、データベースドライバー、JDK サーバー、LDAP サーバー、電子メールサーバーを自由に組み合わせて、AEM Forms をセットアップすることができます。サポートされるプラットフォームの主な変更点を次に示します。
+サポート対象のオペレーティングシステム、アプリケーションサーバー、データベース、データベースドライバー、JDK サーバー、LDAP サーバー、電子メールサーバーを自由に組み合わせて、AEM Forms をセットアップすることができます。サポート対象のプラットフォームに関する主な変更点を以下に示します。
 
 <table> 
  <tbody> 

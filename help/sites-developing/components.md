@@ -13,7 +13,7 @@ exl-id: 3444d7df-fc43-4383-87b0-0f00fef116bc
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '595'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -31,8 +31,8 @@ ht-degree: 82%
 * AEM システム内であれば、どの場所でも実行できます。特定のコンポーネントにおいてのみ実行できるようにすることもできます。
 * 標準化されたユーザーインターフェイスがあります。
 * 設定可能な編集動作があります。
-* Granite UI コンポーネントに基づくサブ要素を使用して構築されたダイアログボックスを使用する
-* を使用して開発されている [HTL](https://helpx.adobe.com/jp/experience-manager/htl/user-guide.html) （推奨）または JSP。
+* Granite UI コンポーネントに基づくサブ要素を使用して構築されたダイアログボックスを使用します。
+* [HTL](https://helpx.adobe.com/jp/experience-manager/htl/user-guide.html)（推奨）または JSP を使用して作成できます。
 * デフォルトの機能を拡張するカスタマイズされたコンポーネントを作成するために開発できます。
 
 コンポーネントはモジュールなので、次のことができます。
@@ -46,14 +46,14 @@ ht-degree: 82%
 
 * リソースタイプです。
 * 特定の機能を完全に実現するスクリプトのコレクションです。
-* で機能できる *隔離*:AEM内またはポータル内のいずれかを意味します。
+* *単独で*（AEM 内またはポータル内で）機能できます。
 
 ## AEM 内の既成のコンポーネント {#out-of-the-box-components-within-aem}
 
 AEM には、次のような包括的な機能を提供する、](/help/sites-authoring/default-components.md)すぐに使用できる様々なコンポーネント[が付属しています。
 
 * 段落システム ( `parsys`)
-* ページ ( `responsivegrid`  — タッチ操作対応 UI のみ )
+* ページ（`responsivegrid` - タッチ操作対応 UI のみ）
 * テキスト
 * 画像（説明テキスト付き）
 * ツールバー
@@ -67,15 +67,15 @@ AEM には、次のような包括的な機能を提供する、](/help/sites-au
 * [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
 * [基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)
 
-**コアコンポーネント** はAEM 6.3 で導入され、柔軟で機能豊富なオーサリング機能を提供します。 この [We.Retail 参照サイト](/help/sites-developing/we-retail.md) コアコンポーネントの使用方法と、コンポーネント開発の現在のベストプラクティスを示します。
+**コアコンポーネント**&#x200B;は、AEM 6.3 で導入され、柔軟で豊富なオーサリング機能を提供します。[We.Retail 参照サイト](/help/sites-developing/we-retail.md)では、コアコンポーネントがどのように使用できるかや、コンポーネント開発の現在のベストプラクティスについて説明しています。
 
-**基盤コンポーネント**&#x200B;は、多くのバージョンの AEM で使用でき、標準 AEM インストールでそのまま使用できます。現在もサポートされていますが、ほとんどは非推奨となり、拡張はおこなわれなくなり、従来のテクノロジーに基づいています。
+**基盤コンポーネント**&#x200B;は、多くのバージョンの AEM で使用でき、標準 AEM インストールでそのまま使用できます。引き続きサポートされていますが、従来のテクノロジーに基づいており、多くの機能が非推奨になっているほか、今後は機能強化が行われません。
 
 >[!NOTE]
 >
 >[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)は、コンポーネントデザインおよび開発の現在のベストプラクティスを示し、リファレンス実装として提供されます。
 >
->[AEM Modernization Tools](modernization-tools.md) は、コアコンポーネントへの移行に役立ちます。
+>[AEM 最新化ツール](modernization-tools.md)が、コアコンポーネントへの移行に役立ちます。
 
 ### 利用可能なコンポーネントの表示 {#viewing-available-components}
 
@@ -95,7 +95,7 @@ AEM インスタンスで利用可能なすべてのコンポーネントの概�
 
 ## その他のリソース {#further-reading}
 
-以下のページでは、これらのコンポーネント（およびその他のコンポーネント）の開発に関する詳細を説明します。
+上述のコンポーネント（およびその他のコンポーネント）の開発について詳しくは、以下のページを参照してください。
 
 * [AEM コンポーネント - 基本](/help/sites-developing/components-basics.md)
 * [AEM コンポーネントの開発](/help/sites-developing/developing-components.md)

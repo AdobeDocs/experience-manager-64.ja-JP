@@ -13,7 +13,7 @@ role: User
 source-git-commit: af8a4d73d530c9438ff63a1b200be2d6e97c232c
 workflow-type: tm+mt
 source-wordcount: '5972'
-ht-degree: 79%
+ht-degree: 83%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 79%
 
 ビデオが終了すると、コールトゥアクション（CTA）を促すために、画像を使用して、すべてのサービスの概要が表示されます。顧客は、ここで欲しい商品をタップすることもできます。このような実用的で具体的なエクスペリエンスにより、顧客エンゲージメントとコンバージョンが向上します。
 
-[インタラクティブ画像](interactive-images.md)も参照してください。
+[インタラクティブ画像](interactive-images.md) も参照してください。
 
 ## インタラクティブビデオの使用例 {#interactive-video-in-action}
 
@@ -35,7 +35,7 @@ ht-degree: 79%
 
 <!-- There was a link here that showed the video frame of an interactive video and when the reader clicked the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
 
-![インタラクティブでショッパブルなビデオのフレーム](assets/chlimage_1-126.png) *インタラクティブでショッパブルなビデオからのビデオフレームキャプチャ。*
+![インタラクティブなショッパブルビデオのフレーム](assets/chlimage_1-126.png) *インタラクティブなショッパブルビデオからのビデオフレームキャプチャ。*
 
 >[!NOTE]
 >
@@ -47,10 +47,10 @@ ht-degree: 79%
 
 ## アドビカスタマーサクセスウェビナー {#adobe-customer-success-webinar}
 
-「Experience Manager Assetsでのインタラクティブビデオ、リンク共有、YouTube共有の使用」ウェビナーでは、インタラクティブビデオとその他の機能を使用して、コンバージョンに基づくイベントをビデオマーケティングコンテンツに関連付ける方法について説明します。
+「Experience Manager Assets でのインタラクティブビデオの使用、リンク共有および YouTube での共有」ウェビナーでは、インタラクティブビデオなどの機能を使用して、コンバージョン誘導イベントをビデオマーケティングコンテンツと連動させる方法を解説しています。
 
 >[!NOTE]
-[Experience Manager Assetsでのインタラクティブビデオ、リンク共有、YouTube共有の使用](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/).
+[Experience Manager Assets でのインタラクティブビデオ、リンク共有、YouTube 共有の使用](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/)。
 
 ## クイックスタート：インタラクティブビデオ {#quick-start-interactive-videos}
 
@@ -73,7 +73,7 @@ ht-degree: 79%
    *この手順は、次のすべてに当てはまる場合にのみ必要です*:
 
    * クイックビューをトリガーして、ビデオにインタラクティブ機能を追加する。
-   * Experience Managerの実装では *not* e コマース統合フレームワークを使用して、IBM® WebSphere® Commerce、Elastic Path、hybris、Intershop などの e コマースソリューションからExperience Managerに製品データを取り出します。 詳しくは、 [Experience Manager Assetsの e コマースの概念](/help/sites-administering/concepts.md).
+   * e コマースソリューション（IBM WebSphere® Commerce、Elastic Path、hybris、Intershop など）から Adobe Experience Manager に製品データを取り出すために、Adobe Experience Manager の実装が e コマース統合フレームワークを使用して&#x200B;*いない*。[Experience Manager Assetsの e コマースの概念](/help/sites-administering/concepts.md)を参照してください。
 
 1. **（オプション）インタラクティブビデオのビューアプリセットの作成** - プレーヤーを構成する様々なコンポーネント（ビデオスクラバーやインタラクティブサムネールなど）の外観と動作をカスタマイズします。
 
@@ -104,8 +104,9 @@ ht-degree: 79%
 >[!NOTE]
 このタスクが必要になるのは次に該当する場合のみです。
 * クイックビューをトリガーして、ビデオにインタラクティブ機能を追加する。
-* Experience Managerの実装では *not* e コマース統合フレームワークを使用して、IBM® WebSphere® Commerce、Elastic Path、hybris、Intershop などの e コマースソリューションからExperience Managerに製品データを取り出します。 詳しくは、 [Experience Manager Assetsの e コマースの概念](/help/sites-administering/concepts.md).
-Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使用している場合は、このタスクをスキップして次のタスクに進みます。
+* e コマースソリューション（IBM WebSphere® Commerce、Elastic Path、hybris、Intershop など）から Adobe Experience Manager に製品データを取り出すために、Adobe Experience Manager の実装が e コマース統合フレームワークを使用して&#x200B;*いない*。[Experience Manager Assetsの e コマースの概念](/help/sites-administering/concepts.md)を参照してください。
+>
+Experience Manager の実装で eCommerce を使用している場合は、このタスクをスキップして次のタスクに進みます。
 
 最初に、インタラクティブビデオの作成プロセス中に製品サムネールを対応する製品クイックビューにマッピングできるように、既存のクイックビューの実装で使用している動的変数を特定します。
 
@@ -134,7 +135,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
 ブラウザーでネットワーク監視をオンにして、ページ上でクイックビューをトリガーします。
 
-次に、ネットワークログ内でクイックビューの Ajax URL を見つけ、記録された URL を今後の分析のためにコピーします。通常、クイックビューをトリガーすると、サーバーに送信される多数のリクエストがあります。 クイックビューの Ajax URL は通常、そのリスト内の最初のほうにあります。この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
+次に、ネットワークログ内でクイックビューの Ajax URL を見つけ、記録された URL を今後の分析のためにコピーします。通常、クイックビューをトリガーすると、多数のリクエストがサーバーに送信されます。クイックビューの Ajax URL は通常、そのリスト内の最初のほうにあります。この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
 
 このプロセスの実行中は、製品カテゴリや製品タイプが異なる、Web サイトの様々な領域にアクセスすることが重要です。なぜなら、クイックビュー URL には、ある特定の Web サイトカテゴリに共通するが、Web サイトの異なる領域にアクセスした場合にのみ変化する部分が存在する場合があるからです。
 
@@ -214,7 +215,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 * datafeed/glassware-233916550.json
 * datafeed/glassware-233916597.json
 
-サーバー呼び出しを見ると、製品固有の情報がリクエストパスにのみ存在することがわかります。 また、クエリ文字列がまったく使用されていないこと、2 つの異なるタイプのデータが含まれることもわかります。
+これらのサーバーコールを見ると、製品固有の情報はリクエストパスにしか存在しないことがわかります。また、クエリ文字列がまったく使用されていないこと、2 つの異なるタイプのデータが含まれることもわかります。
 
 * 最初のタイプは、candles、cushions、furniture、glassware です。これは「製品カテゴリ」と呼ばれます。
 * 2 つ目のタイプは製品コード（233916597 など）です。これは「製品 SKU」と考えることができます。
@@ -287,7 +288,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
    * 次をタップします。 **[!UICONTROL 再生]** ボタンをクリックして、ビデオを再生できます。 取り上げたい特定の製品、サービスまたは詳細が表示されたら、ツールバーの「**[!UICONTROL セグメントを追加]**」をタップします。ビデオの最後に達するまで繰り返します。
 
-      追加した各時間セグメントに 1 つ以上のサムネール画像を割り当て、それらのサムネールを、顧客が購入するクイックビュー製品ページや詳細情報の Web ページにリンクします。
+      追加した各時間セグメントに 1 つまたは複数のサムネール画像を割り当て、それらのサムネールにリンクを設定し、顧客が購入するためのクイックビュー製品ページや詳細情報のための web ページにアクセスできるようにします。
 
    * 次をタップします。 **[!UICONTROL 再生]** ボタンをクリックして、ビデオを再生できます。 取り上げたい特定の製品、サービスまたは詳細が表示されたら、「**[!UICONTROL 一時停止]**」をタップします。「**[!UICONTROL セグメントを追加]**」をタップします。
 
@@ -587,11 +588,11 @@ Adobe Experience Manager Sites のユーザーである場合は、インタラ�
 
 インタラクティブビデオが手順 1 と（部分的に）手順 2 を置き換えます。それに加えて、ユーザーがインタラクティブビデオ内のサムネールをクリックしたときに、そのユーザー操作がビューアによって処理されます。ビューアは、Adobe Experience Manager に以前に追加されたすべてのサムネールデータを含む Web ページに、イベントを返します。
 
-このようなイベントハンドラーでは、フロントエンドコードは次の処理を実行します。
+そのようなイベントハンドラーでは、フロントエンドコードは次の処理を実行します。
 
 * インタラクティブビデオから送出されるイベントをリッスンします。
 * サムネールデータに基づいてクイックビュー URL を作成します。
-* バックエンドからクイックビューを読み込み、画面上の表示用にレンダリングするプロセスを起動します。
+* バックエンドからクイックビューを読み込み、表示用に画面にレンダリングするプロセスをトリガーします。
 
 また、インタラクティブビデオビューアでは、全画面操作モードもサポートされます。全画面表示でエンドユーザーがサムネールをクリックすると、クイックビューがトリガーされます。この機能を実現するためには、クイックビューモーダルダイアログボックスがビューアのコンテナにアタッチされるようにフロントエンドコードを変更します。ドキュメントの Body またはビューアが全画面モードになっているときに使用できないその他の Web ページ要素を追加しないでください。このジョブを実行するコードは、ビューアがページに読み込まれた後で送信されるもう 1 つのビューアコールバックをリッスンします。
 

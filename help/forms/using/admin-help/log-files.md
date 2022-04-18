@@ -13,7 +13,7 @@ exl-id: acce13aa-864c-4999-be5c-6d49b99d5459
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 56%
+ht-degree: 65%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 56%
 
 実行時や起動時のエラーなどのイベントは、アプリケーションサーバーのログファイルに記録されます。アプリケーションサーバーへのデプロイ中に問題が発生した場合には、ログファイルを参照して問題を見つけることができます。ログファイルは、テキストエディターを使用して開くことができます。
 
-(JBoss) 次のログファイルが `*[appserver root]*/server/*[server]*/log` ディレクトリ：
+（JBoss）次のログファイルが `*[appserver root]*/server/*[server]*/log` ディレクトリにあります。
 
 * boot.log
 * server.log.*[yyyy-mm-dd]*

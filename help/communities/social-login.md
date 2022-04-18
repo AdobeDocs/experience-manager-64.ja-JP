@@ -148,7 +148,7 @@ AEM Communitiesプロバイダーは、 [AdobeGranite OAuth Application and Prov
 編集が必要な場合は、それぞれの AEM パブリッシュインスタンスで次の設定をします。
 
 1. 管理者権限でサインインします。
-1. 次に移動： [Web コンソール](../../help/sites-deploying/configuring-osgi.md).例：http://localhost:4503/system/console/configMgr
+1. 次に移動： [Web コンソール](../../help/sites-deploying/configuring-osgi.md). 例：http://localhost:4503/system/console/configMgr
 1. AEM Communities Facebook OAuth Provider を見つけます。
 1. 鉛筆アイコンを選択して編集用に開きます。
 
@@ -411,7 +411,7 @@ Facebook または Twitter アプリ用に作成されたインスタンスを�
 
       (*必須*) クラウドサービスの作成時に提供されたアプリケーション秘密鍵。
 
-   * **[!UICONTROL 対象範囲]**
+   * **[!UICONTROL 範囲]**
 
       (*オプション*) 許可される内容の追加範囲は、プロバイダーから求めることができます。 デフォルトで、ソーシャル認証とプロファイルデータの提供に必要な権限が範囲に含まれています。
 
@@ -451,7 +451,7 @@ OAuth 認証ハンドラーの設定ごとに、インスタンスに 2 つの�
    * ノード/oak:index の下
    * ノード ntBaseLucene を選択
    * 選択 **[!UICONTROL コピー]**
-   *  `/oak:index`
+   * 選択 `/oak:index`
    * 選択 **[!UICONTROL 貼り付け]**
    * ntBaseLucene のコピーを ntBaseLucene-oauth に名前変更
 
@@ -469,7 +469,7 @@ OAuth 認証ハンドラーの設定ごとに、インスタンスに 2 つの�
    * ノード oauthid-123xxxx のプロパティを変更します。
 
       * **[!UICONTROL 名前]**:oauthid-123xxxx
-   * 「**[!UICONTROL すべて保存]**」を選択します。
+   * **[!UICONTROL すべて保存]** を選択します。
 
 
 **&amp;ast;** の **名前** oauthid-*123*，置換 *123* facebook ***アプリ ID*** またはTwitter ***消費者 (API) キー*** これは、 **クライアント ID** 内 [AdobeGranite OAuth Application and Provider](social-login.md#adobe-granite-oauth-application-and-provider)設定。

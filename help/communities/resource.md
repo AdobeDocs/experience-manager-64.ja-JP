@@ -31,7 +31,7 @@ ht-degree: 56%
    ![chlimage_1-199](assets/chlimage_1-199.png)
    ![chlimage_1-200](assets/chlimage_1-200.png)
 * イネーブルメントリソースを追加するコミュニティサイトを選択します。
-   *  `Enablement Tutorial`
+   * 選択 `Enablement Tutorial`
 * メニューから、 ` Create`
 * 選択 **[!UICONTROL リソース]**
 
@@ -155,7 +155,7 @@ Enablement Tutorial のリソースのリストに戻ります。
 >
 >学習パスと同じレベルのリソースのみを選択できます。例えば、グループ内に作成された学習パスには、グループレベルのリソースのみを使用できます。コミュニティサイト内に作成された学習パスには、そのサイト内のリソースを追加できます。
 
-* 「**[!UICONTROL 送信]**」を選択します。
+* **[!UICONTROL 送信]**&#x200B;を選択します。
 
 ![chlimage_1-214](assets/chlimage_1-214.png) ![chlimage_1-215](assets/chlimage_1-215.png)
 

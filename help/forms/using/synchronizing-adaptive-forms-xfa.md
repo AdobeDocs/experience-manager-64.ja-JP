@@ -1,5 +1,5 @@
 ---
-title: アダプティブフォームと XFA フォームテンプレートとの同期
+title: アダプティブフォームと XFA フォームテンプレートの同期
 seo-title: Synchronizing Adaptive Forms with XFA Form Templates
 description: アダプティブフォームと XFA/XDP ファイルとの同期
 seo-description: Synchronizing Adaptive forms with XFA/XDP files.
@@ -12,15 +12,15 @@ exl-id: 014c735e-84f8-4cdb-979e-bfab24b3f666
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1155'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
-# アダプティブフォームと XFA フォームテンプレートとの同期 {#synchronizing-adaptive-forms-with-xfa-form-templates}
+# アダプティブフォームと XFA フォームテンプレートの同期 {#synchronizing-adaptive-forms-with-xfa-form-templates}
 
 ## はじめに {#introduction}
 
-XFA フォームテンプレート ( `*.XDP` ファイル ) です。 この方法では既存の XFA フォームが再利用でき、投資効率が得られます。アダプティブフォームの作成に XFA フォームテンプレートを使用する方法については、次の手順を参照してください。 [テンプレートに基づくアダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p).
+XFA フォームテンプレート（`*.XDP` ファイル）に基づいてアダプティブフォームを作成することができます。この方法では既存の XFA フォームが再利用でき、投資効率が得られます。XFA フォームテンプレートを使用したアダプティブフォームの作成方法については、「[テンプレートに基づくアダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p)」を参照してください。
 
 XDP ファイルのフィールドをアダプティブフォームで再利用することができます。これらのフィールドは、バインドされたフィールドと呼ばれます。バインドされたフィールドのプロパティ（スクリプト、ラベル、表示形式など）は、XDP ファイルからコピーされます。これらのプロパティには、値をオーバーライドできるものもあります。
 
@@ -42,7 +42,7 @@ AEM Forms のオーサリング環境では、XFA フォーム（左）からア
 
 ## サンプルパッケージ {#sample-package}
 
-この記事では、更新された XFA フォームテンプレートを使用したアダプティブフォームの同期方法を、例を使って示しています。例で使用されているアセットは、この記事の「[ダウンロード](/help/forms/using/synchronizing-adaptive-forms-xfa.md#p-downloads-p)」セクションからダウンロードできるパッケージに含まれています。
+この記事では、更新された XFA フォームテンプレートを使用したアダプティブフォームの同期方法を、例を使って示しています。例で使用しているアセットは、この記事の「[ダウンロード](/help/forms/using/synchronizing-adaptive-forms-xfa.md#p-downloads-p)」の節からダウンロードできるパッケージに含まれています。
 
 パッケージをアップロードすると、これらのアセットが AEM Forms UI に表示されます。
 
@@ -52,7 +52,7 @@ AEM Forms のオーサリング環境では、XFA フォーム（左）からア
 
 1. `sample-form.xdp`：例として使用されている XFA フォームテンプレート
 
-1. `sample-xfa-af`：sample-form.xdp ファイルを基にしたアダプティブフォームただし、このアダプティブフォームにはフィールドは含まれていません。次の手順で、このアダプティブフォームにコンテンツを追加します。
+1. `sample-xfa-af`：sample-form.xdp ファイルに基づくアダプティブフォームただし、このアダプティブフォームにはフィールドは含まれていません。次の手順で、このアダプティブフォームにコンテンツを追加します。
 
 ### アダプティブフォームへのコンテンツの追加 {#add-content-to-adaptive-form-br}
 
@@ -87,7 +87,7 @@ XDP ファイルが更新されると、XDP ファイルに基づいてアダプ
 
 ## アダプティブフォームと最新の XDP ファイルとの同期 {#synchronizing-adaptive-forms-with-the-latest-xdp-file}
 
-XDP ファイルと同期されていないアダプティブフォームが次回作成用に開かれたときに、次のメッセージが表示されます：**このアダプティブフォームのスキーマ / フォームテンプレートは更新されました。`Click Here`(新しいバージョンでリベースするために使用)。**
+XDP ファイルと同期していないアダプティブフォームを次回、作成用に開くと、**このアダプティブフォームのスキーマ / フォームテンプレートは更新されました`Click Here`というメッセージが表示されます（新しいバージョンでリベースするために使用）。**
 
 メッセージをクリックすると、アダプティブフォーム内のフィールドが XDP ファイル内の対応するフィールドと同期されます。
 
@@ -99,13 +99,13 @@ XDP ファイルと同期されていないアダプティブフォームが次�
 
 XDP ファイルからアダプティブフォームにコピーされたプロパティは、作成者によってアダプティブフォーム内で（コンポーネントダイアログから）明示的に上書きされたプロパティを除き、すべて更新されます。更新されたプロパティのリストは、サーバーログで見ることができます。
 
-サンプルのアダプティブフォームのプロパティを更新するには、リンク ( `"Click Here"`) を含める必要があります。 TextField1 のタイトルが、**Text Field** から **My Text Field** に変更されます。
+例にあるアダプティブフォームのプロパティを更新するには、メッセージ内の「`"Click Here"`」のラベルが付いたリンクをクリックします。TextField1 のタイトルが、**Text Field** から **My Text Field** に変更されます。
 
 ![update-property](assets/update-property.png)
 
 >[!NOTE]
 >
->AF Numeric Field というラベルは、コンポーネントのプロパティダイアログでこのプロパティを上書きしたので、変更されませんでした。詳しくは、 [アダプティブフォームにコンテンツを追加する](#p-add-content-to-adaptive-form-br-p).
+>AF Numeric Field のラベルが変更されなかったのは、「[アダプティブフォームへのコンテンツの追加](#p-add-content-to-adaptive-form-br-p)」で説明したとおり、コンポーネントプロパティダイアログでこのプロパティを上書きしたためです。
 
 ### XDP ファイルからアダプティブフォームへの新しいフィールドの追加 {#adding-new-fields-from-xdp-file-to-adaptive-form-nbsp}
 
@@ -115,7 +115,7 @@ XDP ファイルからアダプティブフォームにコピーされたプロ�
 
 ### XDP ファイルから削除されたフィールド {#deleted-fields-in-xdp-file}
 
-アダプティブフォームに以前コピーされたフィールドが XDP ファイルから削除されている場合には、XDP ファイルにフィールドが存在しないというエラーメッセージが作成者モード内で表示されます。そのような場合には、アダプティブフォームから手動でそのフィールドを削除するか、またはコンポーネントダイアログで `bindRef` プロパティを消去します。
+アダプティブフォームに以前コピーされたフィールドが XDP ファイルから削除されている場合には、XDP ファイルにフィールドが存在しないというエラーメッセージが作成者モード内で表示されます。その場合は、アダプティブフォームから手動でそのフィールドを削除するか、コンポーネントダイアログで `bindRef` プロパティを消去します。
 
 次の手順では、この記事で使われている例の中のアセットに対してこの方法を使用する流れを説明します。
 

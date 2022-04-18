@@ -1,7 +1,7 @@
 ---
-title: ページの公開
+title: 'ページの公開 '
 seo-title: Publishing Pages
-description: ページの公開
+description: 'ページの公開 '
 seo-description: null
 uuid: 1222859d-ef8d-462e-a125-b76e6cfec26d
 contentOwner: Chris Bohnert
@@ -9,15 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8f2714bc-9d6c-4e6f-97a1-3b4f977348c5
-source-git-commit: d01eee7602945b8d3cb3ad004ccf5ad6cbc4c73c
+exl-id: 3de608f3-569f-438d-8ce7-24e82e5c1ec6
+source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
 workflow-type: tm+mt
 source-wordcount: '1680'
-ht-degree: 90%
+ht-degree: 99%
 
 ---
 
-
-# ページの公開{#publishing-pages}
+# ページの公開 {#publishing-pages}
 
 オーサー環境でコンテンツを作成およびレビューした後は、[公開 Web サイト（パブリッシュ環境）でコンテンツを利用できるようにする](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)ことが目標となります。
 
@@ -36,7 +36,7 @@ ht-degree: 90%
    >  公開／非公開と同義です。
 >
 >* **レプリケート／レプリケーション**
-   >  ユーザーのコメントを公開またはリバースレプリケートする場合など、環境間でのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を表す技術用語です。
+   >  公開やユーザーコメントのリバースレプリケーションの際などに行われる、環境間でのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を表す技術用語です。
 >
 
 
@@ -47,11 +47,10 @@ ht-degree: 90%
 >* ワークフローがトリガーされ、公開リクエストの適切なユーザーに通知されます。
 >* この[ワークフローは、開発チームによってカスタマイズされている](/help/sites-developing/workflows-models.md)ことがあります。
 >* ワークフローがトリガーされたことを通知するメッセージが少しの間表示されます。
-
 >
 
 
-## ページの公開 {#publishing-pages-2}
+## ページの公開  {#publishing-pages-2}
 
 場所に応じて、次から公開できます。
 
@@ -90,7 +89,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->エディターから[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)でアクセスしたページは公開できません。エディターでは、実際のパスでアクセスしたページにのみ、公開オプションが使用可能です。
+>エディターで[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)を使用してアクセスしたページは公開できません。 エディターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
 
 ### コンソールからの公開 {#publishing-from-the-console}
 
@@ -142,7 +141,7 @@ ht-degree: 90%
 
    「**次へ**」をクリックして次に進みます。
 
-1. 公開を管理ウィザードの次の手順で、 **範囲**&#x200B;を使用すると、子ページを含めたり、参照を含めたりするなど、公開/非公開の範囲を定義できます。
+1. 公開を管理ウィザードの次の手順の&#x200B;**範囲**&#x200B;では、子ページを含めたり、参照を含めたりするなど、公開／非公開の範囲を定義できます。
 
    ![screen_shot_2018-03-21at153354](assets/screen_shot_2018-03-21at153354.png)
 
@@ -162,9 +161,9 @@ ht-degree: 90%
 
    「**子を含める**」をクリックすると、次のことができるダイアログが開きます。
 
-   * 直近の子のみを含める.
-   * 変更されたページのみを含める.
-   * 既に公開済みのページのみを含める.
+   * 直近の子のみを含める。
+   * 変更されたページのみを含める。
+   * 既に公開済みのページのみを含める。
 
    「**追加**」をクリックして、選択オプションに基づいて公開または非公開にするページのリストに子ページを追加します。「**キャンセル**」をクリックすると、選択がキャンセルされ、ウィザードに戻ります。
 
@@ -196,7 +195,7 @@ ht-degree: 90%
 
    >[!NOTE]
    >
-   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。詳しくは、 [このページの前のメモ](/help/sites-authoring/publishing-pages.md) 公開権限に関しては [ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md) および [ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md) 」を参照してください。
+   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。詳しくは、公開権限に関する[このページの前述の注意事項](/help/sites-authoring/publishing-pages.md)、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md)を参照してください。
 
    リソースは、トリガーされたワークフローでグループ化され、それぞれに次のオプションがあります。
 
@@ -223,7 +222,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->エディターから[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)でアクセスしたページは非公開にはできません。エディターでは、実際のパスでアクセスしたページにのみ、公開オプションが使用可能です。
+>エディターで[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)を使用してアクセスしたページは、非公開にすることができません。エディターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
 
 ### コンソールから非公開にする {#unpublishing-from-the-console}
 
@@ -267,7 +266,7 @@ ht-degree: 90%
 
    「**公開済みの参照**」オプションを使用して、公開する参照を確認することもできます。
 
-1. [通常どおりに公開を管理ウィザードを続行します](#manage-publication) をクリックして、ツリーの公開または非公開を完了します。
+1. [通常どおりに公開を管理ウィザードを続行](#manage-publication)して、ツリーの公開または非公開を完了します。
 
 ## 公開ステータスの判別 {#determining-publication-status}
 
@@ -286,4 +285,3 @@ ht-degree: 90%
 * （ページ編集時の）[ページ情報メニュー](/help/sites-authoring/author-environment-tools.md#page-information)
 
    ![screen_shot_2018-03-21at154456](assets/screen_shot_2018-03-21at154456.png)
-

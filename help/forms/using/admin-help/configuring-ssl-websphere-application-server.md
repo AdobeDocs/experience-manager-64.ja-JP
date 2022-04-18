@@ -13,7 +13,7 @@ exl-id: 653daaa4-9e35-40eb-a61e-274109f5f0d2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1227'
-ht-degree: 92%
+ht-degree: 96%
 
 ---
 
@@ -33,8 +33,8 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 1. ルートユーザーとしてログインします。
 1. コマンドプロンプトに次のコマンドを入力して、新しいユーザーを作成します。
 
-   * （Linux および Sun Solaris） `useradd`
-   * (IBM AIX) `mkuser`
+   * （Linux および Sun Solaris）`useradd`
+   * （IBM AIX）`mkuser`
 
 1. コマンドプロンプトで `passwd` と入力して、新しいユーザーのパスワードを設定します。
 1. （Linux および Solaris）コマンドプロンプトでパラメーターを付けずに `pwconv` と入力して、シャドーパスワードファイルを作成します。
@@ -51,13 +51,13 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 ### WebSphere 用の Windows ユーザーの作成 {#create-a-windows-user-for-websphere}
 
 1. 管理者ユーザーアカウントを使用して Windows にログインします。
-1. 「**スタート／コントロールパネル／管理ツール／コンピュータ管理／ローカルユーザーとグループ**&#x200B;を選択します。
+1. **スタート／コントロールパネル／管理ツール／コンピュータ管理／ローカルユーザーとグループ**&#x200B;を選択します。
 1. ユーザーを右クリックして「**New User**」を選択します。
 1. 該当するボックスにユーザー名とパスワードを入力し、必要に応じて他のボックスの情報も入力します。
 1. 「**User Must Change Password At Next Login**」の選択を解除し、「**Create**」をクリックして「**Close**」をクリックします。
 1. 「**Users**」をクリックし、作成したユーザーを右クリックして「**Properties**」を選択します。
 1. 「**Member Of**」タブをクリックして、「**Add**」をクリックします。
-1. 「選択するオブジェクト名を入力してください」ボックスに、`Administrators` と入力し、「名前の確認」をクリックしてグループ名が正しいことを確認します。
+1. 「選択するオブジェクト名を入力」ボックスに `Administrators` と入力し、「名前の確認」をクリックしてグループ名が正しいことを確認します。
 1. 「**OK**」をクリックしてから、「**OK**」を再びクリックします。
 1. 「**スタート／コントロールパネル／管理ツール／ローカルセキュリティポリシー／ローカルポリシー**」を選択します。
 1. 「ユーザー権利の割り当て」をクリックし、「オペレーティングシステムの一部として機能」を右クリックして、「プロパティ」を選択します。
@@ -72,21 +72,21 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 1. 「Administrative」セキュリティで、「**Administrative user roles**」を選択します。
 1. 「追加」をクリックして次の手順を実行します。
 
-   1. タイプ **&amp;ast;** をクリックし、「検索」をクリックします。
+   1. 検索ボックスに「**&amp;ast;**」と入力し、「検索」をクリックします。
    1. ロールの下の「**Administrator**」をクリックします。
    1. 新規作成したユーザーを「Mapped to role」に追加し、「Administrator」にマッピングします。
 
 1. 「**OK**」をクリックして変更を保存します。
 1. WebSphere プロファイルを再起動します。
 
-##  管理セキュリティの有効化 {#enable-administrative-security}
+## 管理セキュリティの有効化 {#enable-administrative-security}
 
 1. WebSphere 管理コンソールで「**Security／Global Security**」を選択します。
 1. 「**Security Configuration Wizard**」をクリックします。
 1. 「**Enable Application Security**」チェックボックスが有効になっていることを確認します。「**次へ**」をクリックします。
 1. **Federated Repositories** を選択し、「**Next**」をクリックします。
 1. 設定する資格情報を指定し、「**Next**」をクリックします。
-1. 「**Finish**」をクリックします。
+1. 「**終了**」をクリックします。
 1. WebSphere プロファイルを再起動します。
 
    WebSphere はデフォルトのキーストアと信頼ストアを使用して起動します。
@@ -143,8 +143,8 @@ https で始まる URL を変換するには、その URL の署名者証明書�
 1. WebSphere Administrative Console で、「Signer certificates」に移動し、Security／SSL Certificate and Key Management／Key Stores and Certificates／NodeDefaultTrustStore／Signer Certificates をクリックします。
 1. 「Retrieve From Port」をクリックし、次のタスクを実行します。
 
-   * 「Host」ボックスに URL を入力します。例： `www.paypal.com`.
-   * 「Port」ボックスに、`443` と入力します。このポートがデフォルトの SSL ポートです。
+   * 「Host」ボックスに URL を入力します。例えば、`www.paypal.com` と入力します。
+   * 「ポート」ボックスに、`443` と入力します。このポートがデフォルトの SSL ポートです。
    * 「Alias」ボックスに別名を入力します。
 
 1. 「Retrieve Signer Information」をクリックし、情報が取得されたことを確かめます。
@@ -158,7 +158,7 @@ https で始まる URL を変換するには、その URL の署名者証明書�
 
 ## 動的ポートの設定 {#configuring-dynamic-ports}
 
-IBM WebSphere では、グローバルセキュリティが有効な場合、ORB.init() への複数の呼び出しは許可されません。永続的な制限については、https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704を参照してください。
+IBM WebSphere では、グローバルセキュリティが有効な場合、ORB.init() への複数の呼び出しは許可されません。永続的な制限については、https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704 を参照してください。
 
 動的ポートを設定し、問題を解決するには、次の手順を実行してください。
 
@@ -172,10 +172,10 @@ IBM WebSphere では、グローバルセキュリティが有効な場合、ORB
    * `CSIV2_SSL_SERVERAUTH_LISTENER_ADDRESS`
    * `CSIV2_SSL_MUTUALAUTH_LISTENER_ADDRESS`
 
-## sling.properties ファイルを構成します。 {#configure-the-sling-properties-file}
+## sling.properties ファイルを設定します。 {#configure-the-sling-properties-file}
 
 1. 開く [aem-forms_root]\crx-repository\launchpad\sling.propertiesファイルを編集します。
-1. を `sling.bootdelegation.ibm` プロパティと追加 `com.ibm.websphere.ssl.*`をその値フィールドに追加します。 更新されたフィールドは次のようになります。
+1. `sling.bootdelegation.ibm` プロパティを見つけてその値フィールドに `com.ibm.websphere.ssl.*` を追加します。更新されたフィールドは次のようになります。
 
    ```as3
    sling.bootdelegation.ibm=com.ibm.xml.*, com.ibm.websphere.ssl.*

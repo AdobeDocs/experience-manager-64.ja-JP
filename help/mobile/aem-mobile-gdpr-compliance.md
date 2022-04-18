@@ -10,7 +10,7 @@ exl-id: 2b73e843-690b-4cf3-9b8f-936b70c84406
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '692'
-ht-degree: 85%
+ht-degree: 89%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 85%
 
 >[!IMPORTANT]
 >
->以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制に適用できます。（GDPR、CCPA など）
+>以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に適用できます。
 
 ## AEM Mobile の GDPR サポート {#aem-mobile-gdpr-support}
 
@@ -28,7 +28,7 @@ AEM Mobile は、GDPR コンプライアンスの義務に関してお客様を�
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-アドビのデジタルパブリッシング製品（AEM Mobile の先行製品）では、アドビによる GDPR 対応の取り組みをサポートしています。[https://www.adobe.com/jp/privacy/general-data-protection-regulation.html](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html) を参照してください。以下では、アドビと協力して GDPR 要求を開始する方法など、Digital Publishing Suite 製品における GDPR 関連機能のサポートの詳細について説明します。
+アドビのデジタルパブリッシング製品（AEM Mobile の先行製品）では、アドビによる GDPR 対応の取り組みをサポートしています。[https://www.adobe.com/jp/privacy/general-data-protection-regulation.html](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html?lang=ja) を参照してください。以下では、アドビと協力して GDPR 要求を開始する方法など、Digital Publishing Suite 製品における GDPR 関連機能のサポートの詳細について説明します。
 
 AEM Mobile と以前の Digital Publishing Suite 製品を混同しないように、以下から Digital Publishing Suite 製品にログインできるようになっています。
 

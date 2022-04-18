@@ -13,7 +13,7 @@ exl-id: 7961efc6-4b11-423a-871d-7b37e3f36781
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '130'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -21,8 +21,8 @@ ht-degree: 95%
 
 出力ストリームをエンコードするための文字セットを指定できます。
 
-1. 管理コンソールで、 **[!UICONTROL サービス/出力]**.
-1. 「国際化対応」の「文字セット」リストで、文字セットを選択します。この設定は、API 経由で指定される `TransformationFormat` と `PrintFormat` の値によって異なります。リストにない文字セットを指定するには、「カスタム」を選択し、表示されたボックスでエンコーディング値を指定します。
+1. 管理コンソールで、**[!UICONTROL サービス／Output]** をクリックします。
+1. 「国際化対応」の「文字セット」リストで、文字セットを選択します。この設定は、API 経由で指定する `TransformationFormat` と `PrintFormat` の値によって異なります。リストにない文字セットを指定するには、「カスタム」を選択し、表示されたボックスでエンコーディング値を指定します。
 
    `TransformationFormat` が PDF か PDF/A である場合、または `PrintFormat` が PCL、PostScript、Zebra Label、IPL、DPL、TPCL、GenericColorPCL または GenericPSLevel3 である場合、特定の文字セットのみがサポートされます。
 

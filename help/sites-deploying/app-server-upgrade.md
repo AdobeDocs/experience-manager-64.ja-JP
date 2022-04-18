@@ -14,7 +14,7 @@ exl-id: 1c72093e-82c8-49ad-bd3c-d61904aaab28
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '504'
-ht-degree: 95%
+ht-degree: 97%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 95%
 
 1. 次の操作をおこなって、sling.properties ファイル内の必要なプロパティを削除します。
 
-   1. 次の場所にあるファイルを開きます。 `crx-quickstart/launchpad/sling.properties`
+   1. `crx-quickstart/launchpad/sling.properties` に置かれたファイルを開きます。
    1. 次のプロパティを削除してファイルを保存します。
 
       1. `sling.installer.dir`
@@ -71,8 +71,8 @@ ht-degree: 95%
 1. 不要なファイルとフォルダーを削除します。具体的に削除する必要のある項目は次のとおりです。
 
    * **launchpad/startup フォルダー**：ターミナルで次のコマンドを実行して削除できます。`rm -rf crx-quickstart/launchpad/startup`
-   * この **base.jar ファイル**: `find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
-   * この **BootstrapCommandFile_timestamp.txt ファイル**: `rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
+   * **base.jar ファイル**：`find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
+   * **BootstrapCommandFile_timestamp.txt ファイル**：`rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
 
 1. 新しく移行された segmentstore を適切な場所にコピーします。
 
@@ -121,7 +121,7 @@ ht-degree: 95%
    jar xvf aem-quickstart-6.3.0.war
    ```
 
-1. 内容を抽出したら、**WEB-INF** フォルダーに移動して `web.xml` ファイルを編集し、実行モードを変更します。XML での実行モードの設定場所を探すには、`sling.run.modes` 文字列を検索します。見つかったら、コードの次の行で実行モードを変更します。デフォルトでは、author に設定されています。
+1. 内容を抽出したら、**WEB-INF** フォルダーに移動して ファイルを編集し、実行モードを変更します。`web.xml`XML での実行モードの設定場所を探すには、`sling.run.modes` 文字列を検索します。見つかったら、コードの次の行で実行モードを変更します。デフォルトでは、author に設定されています。
 
    ```shell
    <param-value >author</param-value>

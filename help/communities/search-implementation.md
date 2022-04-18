@@ -112,13 +112,13 @@ AEM プラットフォーム検索用に Oak インデックスが自動的に�
 | 読み取り | *ブール型* |
 | influence | *ブール型* |
 | attachments | *ブール型* |
-| sentiment | 長整数&#x200B;** |
+| sentiment | *Long* |
 | flagged | *ブール型* |
 | added | *日付* |
 | modifiedDate | *日付* |
-| state | *String* |
+| ステート | *String* |
 | userIdentifier | *文字列* |
-| replies | 長整数&#x200B;** |
+| replies | *Long* |
 | jcr:title | *文字列* |
 | jcr:description | *文字列* |
 | sling:resourceType | *文字列* |
@@ -150,12 +150,12 @@ Solr は、スキーマを使用するクエリー言語の一例です。
 |---|---|
 | _b | *ブール型* |
 | _dt | *Calendar* |
-| _d | 倍精度浮動小数点&#x200B;** |
-| _tl | 長整数&#x200B;** |
-| _s | *文字列* |
+| _d | *倍精度浮動小数点* |
+| _tl | *Long* |
+| _秒 | *文字列* |
 | _t | *テキスト* |
 
-**備考:**
+**メモ：**
 
 * *テキスト* はトークン化された文字列です。 *文字列* がではありません。 用途 *テキスト* fuzy（より似た）検索用。
 

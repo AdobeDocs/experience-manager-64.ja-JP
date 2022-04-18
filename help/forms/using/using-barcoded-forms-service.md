@@ -12,7 +12,7 @@ exl-id: 47d16792-c418-45fe-aa79-e66876d6d352
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1023'
-ht-degree: 92%
+ht-degree: 98%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 92%
 
 ## 概要 {#overview}
 
-Barcoded Forms サービスは、バーコードの電子画像からデータを抽出するサービスです。このサービスでは、少なくとも 1 つのバーコードを含んだ TIFF ファイルおよび PDF ファイルを入力として受け取り、バーコードデータを抽出します。バーコードデータは、XML、区切られた文字列、JavaScript で作成されたカスタム形式など、様々な形式で作成されます。
+Barcoded Forms サービスは、バーコードの電子画像からデータを抽出するサービスです。このサービスは、入力として 1 つまたは複数のバーコードを含んだ TIFF ファイルや PDF ファイルを受け取り、バーコードデータを抽出します。バーコードデータは、XML、区切られた文字列、JavaScript で作成されたカスタム形式など、様々な形式で作成されます。
 
 Barcoded Forms サービスは、スキャンされた TIFF または PDF ドキュメントとして提供される以下の&#x200B;**二次元**&#x200B;コードをサポートします。
 
@@ -28,7 +28,7 @@ Barcoded Forms サービスは、スキャンされた TIFF または PDF ドキ
 * Data Matrix
 * QR Code
 
-また、スキャンされた TIFF または PDF ドキュメントとして提供される以下の&#x200B;**一次元**&#x200B;コードをサポートします。
+このサービスはまた、スキャンされた TIFF または PDF ドキュメントとして提供される以下の&#x200B;**一次元**&#x200B;コードもサポートします。
 
 * Codabar
 * Code 128
@@ -43,7 +43,7 @@ Barcoded Forms サービスを使用すると、次のタスクを実行でき�
 
 Barcoded Forms サービスは、画像に含まれる各バーコードを検索してデコードし、データを抽出します。バーコードデータは、（必要に応じてエンティティエンコードを使用して）XML ドキュメントの content 要素として返されます。例えば、次の図は、2 つのバーコードを含んだフォームをスキャンした TIFF 画像です。
 
-![](assets/example.png)
+![例](assets/example.png)
 
 Barcoded Forms サービスは、バーコードのデコード後、次の XML ドキュメントを返します。
 
@@ -94,7 +94,7 @@ Barcoded Forms サービスは、バーコードのデコード後、次の XML 
 
 ### バーコードフォームを使用するワークフロー {#workflows-that-use-barcoded-forms}
 
-フォーム作成者は、Designer を使用してインタラクティブなバーコードフォームを作成します（[Designer ヘルプ](https://www.adobe.com/go/learn_aemforms_designer_63)を参照）。ユーザーが Adobe Reader または Acrobat でバーコードフォームに入力すると、バーコードは自動的に更新され、フォームデータがエンコードされます。
+フォーム作成者は、Designer を使用してインタラクティブなバーコードフォームを作成します（「[Designer ヘルプ](https://www.adobe.com/go/learn_aemforms_designer_63_jp)」を参照）。ユーザーが Adobe Reader または Acrobat でバーコードフォームに入力すると、バーコードは自動的に更新され、フォームデータがエンコードされます。
 
 Barcoded Forms サービスは、紙面上のデータを電子的なフォーマットに移行させる場合に役立ちます。例えば、バーコードフォームに記入して印刷した後で、その印刷出力をスキャンし、Barcoded Forms サービスへの入力として使用できます。
 
@@ -127,11 +127,11 @@ BCF API を使用するときは、次の制限事項に考慮してください
 * このサービスは、Adobe Reader または Acrobat を使用して保存された、2D バーコードを含む AcroForms および静的フォームを完全にサポートします。ただし、1D バーコードの場合は、フォームを統合するか、フォームを変換してスキャンされた PDF または TIFF ドキュメントとして提供してください。
 * 動的 XFA フォームは完全にサポートされているわけではありません。動的フォーム内の 1D および 2D バーコードを正しくデコードするには、フォームを統合するか、フォームを変換してスキャンされた PDF または TIFF ドキュメントとして提供してください。
 
-また、サービスは前記の制限事項に触れない限り、サポートされているコードが使用されていれば、どのようなバーコードでもデコードできます。インタラクティブなバーコードフォームの作成方法について詳しくは、 [Designer ヘルプ](https://www.adobe.com/go/learn_aemforms_designer_63).
+また、サービスは前記の制限事項に触れない限り、サポートされているコードが使用されていれば、どのようなバーコードでもデコードできます。インタラクティブなバーコードフォームの作成方法について詳しくは、[Designer ヘルプ](https://www.adobe.com/go/learn_aemforms_designer_63)を参照してください。
 
 ## サービスのプロパティの設定 {#configureproperties}
 
-AEM コンソールにある **AEMFD Barcoded Forms サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。AEMコンソールのデフォルト URL は、 `https://[host]:[port]/system/console/configMgr`.
+AEM コンソールにある **AEMFD Barcoded Forms サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。AEM コンソールのデフォルト URL は `https://[host]:[port]/system/console/configMgr` です。
 
 ## サービスの使用 {#using}
 
@@ -143,7 +143,7 @@ Barcoded Forms サービスには次の 2 つの API があります。
 
 ### JSP またはサーブレットを使用した BCF サービスの使用 {#using-bcf-service-with-a-jsp-or-servlets}
 
-次のサンプルコードは、ドキュメント内のバーコードをデコードし、出力 XML をディスクに保存します。
+次のサンプルコードはドキュメント内のバーコードをデコードして、Output XML をディスクに保存します。
 
 ```java
 <%@ page import="java.util.List,
@@ -234,7 +234,7 @@ Barcoded Forms サービスには次の 2 つの API があります。
 
 ワークフローから Barcoded Forms サービスを実行することは、JSP またはサーブレットからサービスを実行することに似ています。唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントオブジェクトが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。
 
-ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。次に、Document オブジェクトは、指定された ResourceResolver オブジェクトを使用して、リポジトリからコンテンツを読み取ります。
+ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。続いて、Document オブジェクトは渡された ResourceResolver オブジェクトを使用してリポジトリからコンテンツを読み込みます。
 
 次のサンプルワークフロープロセスは、ドキュメント内のバーコードをデコードして結果をディスクに保存します。コードは ECMAScript で記述され、ドキュメントはワークフローペイロードとして渡されます。
 

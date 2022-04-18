@@ -14,7 +14,7 @@ exl-id: 8eba690a-797a-4ba9-b178-11f8c011239f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1409'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 95%
 オーサーインスタンスとパブリッシュインスタンスの秘密鍵および公開証明書が必要です。
 
 * pkcs#12 または JKS 形式の秘密鍵を含める必要があります。
-* 証明書は pkcs#12 形式または JKS 形式で含める必要があります。また、「CER」形式の証明書も Granite Truststore に追加できます。
+* 証明書は、pkcs#12 または JKS 形式で格納されている必要があります。また、「CER」形式の証明書を Granite Truststore に追加することもできます。
 * 自己署名証明書または認定された CA が署名した証明書を使用できます。
 
 ### JKS 形式 {#jks-format}
@@ -211,7 +211,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
 
 ## パブリッシュでの HTTP サービスの設定 {#configure-the-http-service-on-publish}
 
-Granite キーストアへのアクセス時に HTTPS を使用するように、パブリッシュインスタンス上で Apache Felix Jetty Based HTTP Service のプロパティを設定します。サービスの PID は、 `org.apache.felix.http`.
+発行インスタンスで Apache Felix Jetty ベースの HTTP サービスプロパティを設定して、発行インスタンスが Granite キーストアにアクセスする際に HTTPS を使用するようにします。サービスの PID は `org.apache.felix.http` です。
 
 次の表は、Web コンソールを使用する場合に設定する必要のある OSGi のプロパティを示しています。
 

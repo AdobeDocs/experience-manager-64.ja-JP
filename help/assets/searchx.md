@@ -8,7 +8,7 @@ exl-id: d68c735f-2699-4923-a7e7-4d1356eae335
 source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
 source-wordcount: '820'
-ht-degree: 79%
+ht-degree: 84%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Manager Assets の検索機能を拡張できます。 すぐ�
 
 >[!CAUTION]
 >
->現在 [!DNL Experience Manager] 6.4、クラシック UI は非推奨（廃止予定）となりました。 お知らせについては、[廃止される機能および削除された機能](../release-notes/deprecated-removed-features.md)を参照してください。タッチ対応 UI を使用することをお勧めします。カスタマイズについては、[検索ファセット](search-facets.md)を参照してください。
+>[!DNL Experience Manager] 6.4 以降、クラシック UI は廃止されます。お知らせについては、[廃止される機能および削除された機能](../release-notes/deprecated-removed-features.md)を参照してください。タッチ対応 UI を使用することをお勧めします。カスタマイズについては、[検索ファセット](search-facets.md)を参照してください。
 
 ## オーバーレイ {#overlaying}
 
@@ -49,7 +49,7 @@ Adobe Experience Manager Assets の検索機能を拡張できます。 すぐ�
 
 [!DNL Experience Manager] Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みの一連の述語が付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
-既存の述語の使用に加えて、 [!DNL Experience Manager] 開発者は、 [Query Builder API](/help/sites-developing/querybuilder-api.md).
+[!DNL Experience Manager] デベロッパーは、既存の述語を使用するだけでなく、[Query Builder API](/help/sites-developing/querybuilder-api.md) を使用して独自の述語を作成することもできます。
 
 カスタム述語を作成するには、[ウィジェットフレームワーク](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/widgets-api/index.html)に関する基本的な知識が必要です。
 
@@ -262,7 +262,7 @@ Adobe Experience Manager Assets の検索機能を拡張できます。 すぐ�
 | プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルトは `fulltext` |
-| searchCallback | Function | イベントで検索をトリガーするコールバック `keyup`. デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback | 関数 | イベント `keyup` で検索をトリガーするためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
@@ -279,7 +279,7 @@ Adobe Experience Manager Assets の検索機能を拡張できます。 すぐ�
 | predicateName | 文字列 | 述語の名前。デフォルトは `path` |
 | rootPath | 文字列 | 述語のルートパス。デフォルトは `/content/dam` |
 | pathFieldPredicateName | 文字列 | デフォルトは `folder` |
-| showFlatOption | Boolean | チェックボックスを表示するフラグ `search in subfolders`. デフォルトは true です |
+| showFlatOption | Boolean | チェックボックス `search in subfolders` を表示するフラグ。デフォルトは true です |
 
 ### DatePredicate {#datepredicate}
 
@@ -305,4 +305,4 @@ Adobe Experience Manager Assets の検索機能を拡張できます。 すぐ�
 
 アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。[!DNL Experience Manager] Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みのレンズのセットが付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
-既存のレンズの使用に加えて、 [!DNL Experience Manager] 開発者は、独自のレンズを作成することもできます。
+[!DNL Experience Manager] 開発者は、既存のレンズを使用するだけでなく、独自のレンズを作成することもできます。

@@ -13,7 +13,7 @@ exl-id: 38bae0d7-9544-42d0-9766-45c66f254e5c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '836'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -21,13 +21,13 @@ ht-degree: 92%
 
 >[!IMPORTANT]
 >
->以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制に適用できます。（GDPR、CCPA など）
+>以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に適用できます。
 
 データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018 年 5 月に発効します。
 
 AEM Sites は、GDPR コンプライアンスの義務に関してお客様を支援する準備ができています。このページでは、AEM Sites での GDPR 要求の処理手順について詳しく説明します。プライベートデータの格納場所や、それらのデータを手動で、またはコードを使用して削除する方法について説明します。
 
-詳しくは、[アドビプライバシーセンターの GDPR ページ](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html)を参照してください。
+詳しくは、[アドビプライバシーセンターの GDPR ページ](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html?lang=ja)を参照してください。
 
 >[!NOTE]
 >
@@ -45,13 +45,13 @@ AEM Sites コンポーネントはデフォルトでは、訪問者から入力�
 
 ## オプトイン／オプトアウト {#opt-in-opt-out}
 
-AEMに [cookie オプトアウトサービス](/help/sites-developing/cookie-optout.md) を使用して、ユーザーのオプトイン/オプトアウトを管理できます。
+AEM に含まれる [cookie オプトアウトサービス](/help/sites-developing/cookie-optout.md)を使用すれば、ユーザーのオプトイン／オプトアウトを管理できます。
 
 ## Analytics によるインサイトの拡張 {#enhanced-insights-by-analytics}
 
 AEM Sitesには、Adobe Analytics On-demand サービス内の機能を使用した、Analytics によるインサイトの拡張との統合（オプション）が含まれています。
 
-Adobe Analytics に関連する GDPR データサブジェクトリクエストの管理についての詳細は、[Adobe Analytics と GDPR](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html) を参照してください。
+Adobe Analytics に関連する GDPR データサブジェクトリクエストの管理についての詳細は、[Adobe Analytics と GDPR](https://docs.adobe.com/content/help/ja-JP/analytics/admin/data-governance/an-gdpr-overview.html) を参照してください。
 
 ## Target によるパーソナライゼーションの拡張 {#enhanced-personalization-by-target}
 
@@ -61,7 +61,7 @@ Adobe Target に関連する GDPR データサブジェクトリクエストの�
 
 ## ContextHub {#contexthub}
 
-AEMは、 [ContextHub](/help/sites-developing/contexthub.md). ContextHub を使用する場合、訪問者固有のデータがブラウザー内に格納され、そのデータに基づいてルールベースのパーソナライゼーションが実行されます。
+AEM には、[ContextHub](/help/sites-developing/contexthub.md) を使用するオプションのデータレイヤーが用意されています。ContextHub を使用する場合、訪問者固有のデータがブラウザー内に格納され、そのデータに基づいてルールベースのパーソナライゼーションが実行されます。
 
 この訪問者データはデフォルトでは AEM に格納されません。ブラウザー内でパーソナライゼーションに関する決定を行うためのルールが、AEM からデータレイヤーに送信されます。
 
@@ -81,7 +81,7 @@ AEMは、 [ContextHub](/help/sites-developing/contexthub.md). ContextHub を使�
 * Web サイトの GDPR に関連する利用条件を Web サイトの訪問者に表示して、訪問者が以下をおこなえるようにする必要があります。
 
    * 同意
-   * 拒否
+   * reject
    * 以前の選択の変更
 
 * サイト訪問者がサイトの利用条件に同意する場合は、次のようにして、ContextHub のオプトアウト Cookie を削除する必要があります。

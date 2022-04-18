@@ -14,7 +14,7 @@ exl-id: 0c80ee60-d2dd-49ad-a283-81fdb1fd201e
 source-git-commit: 31d6111a82a3cbfef22970d05280b0d3fd1c0de7
 workflow-type: tm+mt
 source-wordcount: '258'
-ht-degree: 89%
+ht-degree: 96%
 
 ---
 
@@ -36,7 +36,7 @@ AEM は、いくつかのアプリケーション開発用 API を提供しま�
 
 * [Editor Core JavaScript API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)
 
-AEM シングルページアプリケーション（SPA）エディター SDK フレームワーク JavaScript API リファレンス：
+AEM シングルページアプリケーション（SPA）Editor SDK Framework JavaScript API リファレンス：
 
 * [コンポーネントのマッピング](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [ページモデルマネージャー](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
@@ -48,8 +48,8 @@ AEM 配信およびコンテンツ管理 API
 * コアコンポーネント（JSON）
 
    * [JSON エクスポーター](/help/sites-developing/json-exporter.md)
-   * [コンポーネントの JSON 書き出しの有効化](/help/sites-developing/json-exporter-components.md)
-   * 詳しくは、[開発ユーザーガイド』の「コンポーネント」セクション](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js)を参照してください。
+   * [コンポーネントの JSON エクスポートの有効化](/help/sites-developing/json-exporter-components.md)
+   * 詳しくは、[『開発ユーザーガイド』の「コンポーネント」節](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js)を参照してください。
 
 * [AEM Assets HTTP API](/help/assets/mac-api-assets.md)
 

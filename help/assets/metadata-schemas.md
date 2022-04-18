@@ -8,7 +8,7 @@ exl-id: 82f42bb3-2c01-407c-a41b-9abe7be4660e
 source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
 source-wordcount: '2524'
-ht-degree: 80%
+ht-degree: 81%
 
 ---
 
@@ -47,8 +47,8 @@ In [!DNL Experience Manager Assets]の場合、メタデータスキーマは、
 |  | <ul><li> [!UICONTROL application]</li></ul> | application/pdf、application/zip など、MIME タイプが「application」のアセットのスキーマフォーム。 <br>[!UICONTROL pdf]:サブタイプ pdf のアセットのスキーマフォーム。 |
 |  | <ul><li>[!UICONTROL video]</li></ul> | video/avi、video/mp4 など、MIME タイプが「video」のアセットのスキーマフォーム。 |
 | [!UICONTROL collection] |  | コレクションのスキーマフォーム |
-| [!UICONTROL contentfragment] |  | コンテンツフラグメントのスキーマフォーム。 |
-| [!UICONTROL forms] |  | このスキーマフォームは、次に関連します。 [Adobe Experience Manager Forms](/help/forms/home.md). |
+| [!UICONTROL contentfragment] |  | コンテンツフラグメント用のスキーマフォームです。 |
+| [!UICONTROL Forms] |  | このスキーマフォームは [Adobe Experience Manager Forms](/help/forms/home.md) に関連するものです。 |
 
 >[!NOTE]
 >
@@ -286,8 +286,7 @@ In [!DNL Experience Manager Assets]の場合、メタデータスキーマは、
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-1. （オプション）`http://[server]:[port]/system/console/components/`にアクセスします。`com.day.cq.dam.core.impl.MissingMetadataNotificationJob` コンポーネントを設定して有効にします。このコンポーネントはデフォルトで無効になっています。頻度を設定します。 [!DNL Experience Manager] アセット上のメタデータの有効性をチェックします。
-この設定により、`hasValidMetadata` プロパティがアセットの jcr:content に追加されます。このプロパティを使用すると、 [!DNL Experience Manager] では、検索の結果をフィルタリングできます。
+1. （オプション）`http://[server]:[port]/system/console/components/`にアクセスします。`com.day.cq.dam.core.impl.MissingMetadataNotificationJob` コンポーネントを設定して有効にします。このコンポーネントはデフォルトで無効になっています。アセット上にあるメタデータの妥当性を [!DNL Experience Manager] がチェックする頻度を設定します。この設定により、`hasValidMetadata` プロパティがアセットの jcr:content に追加されます。このプロパティを使用すると、 [!DNL Experience Manager] では、検索の結果をフィルタリングできます。
 
 >[!NOTE]
 >

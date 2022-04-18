@@ -11,7 +11,7 @@ exl-id: e09d2d59-41f0-4cf2-bcf3-ec3dbc3b8474
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '647'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 4%
 
 ### その他のリリース情報 {#additional-release-information}
 
-instagramの非ビジネスユーザーアカウントからのコンテンツの集計に影響する更新により、お客様に代わってコメントを投稿したり、作成者からの返信を自動的に確認したりできなくなりました。 [詳しくはここをクリック](https://developers.facebook.com/blog/post/2018/04/04/facebook-api-platform-product-changes/).
+instagramの非ビジネスユーザーアカウントからのコンテンツの集計に影響する更新により、お客様に代わってコメントを投稿したり、作成者からの返信を自動的に確認したりできなくなりました。 詳しくは、[こちら](https://developers.facebook.com/blog/post/2018/04/04/facebook-api-platform-product-changes/)を参照してください。
 
 >[!NOTE]
 >

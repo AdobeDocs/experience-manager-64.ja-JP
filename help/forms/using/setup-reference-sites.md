@@ -12,7 +12,7 @@ exl-id: 9c5d956c-06bc-4428-afcd-02b4f81b802f
 source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
 source-wordcount: '2911'
-ht-degree: 46%
+ht-degree: 47%
 
 ---
 
@@ -82,7 +82,7 @@ AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の�
    <td><p>リファレンスサイトの使用例では、異なるトランザクションの電子メールを配信しています。この設定は、電子メールでニュースレターを配信する場合に必要になります。この設定により、URL と画像でパブリッシュインスタンスが参照されるようになります。 </p> </td> 
   </tr> 
   <tr> 
-   <td><a href="#cqmail">Day CQ 電子メールサービスを設定する</a></td> 
+   <td><a href="#cqmail">Day CQ メールサービスの設定</a></td> 
    <td>オーサーとパブリッシュ</td> 
    <td>電子メールによる通信を行う場合は、この設定が必要になります。</td> 
   </tr> 
@@ -175,7 +175,7 @@ AEMで、 **Externalizer** は、事前に設定された DNS でパスの前に
 1. オーサーインスタンスとパブリッシュインスタンスの両方で、「ドメイン」フィールドにローカルサーバーの URL が指定されていることを確認します。
 1. 「**[!UICONTROL 保存]**」をタップします。すべてのサービスが再開されるまで待ちます。
 
-## Day CQ 電子メールサービスの設定 {#cqmail}
+## Day CQ メールサービスの設定 {#cqmail}
 
 リファレンスサイトの実装では、ユーザーがフォームに入力して送信した場合に電子メールをサンプルユーザーに送信する必要があります。Day CQ 電子メールサービスを設定して SMTP サービスの詳細を指定することにより、顧客に対して電子メールを自動的に送信することができます。詳しくは、「[電子メール通知の設定](/help/sites-administering/notification.md)」を参照してください。
 
@@ -195,7 +195,7 @@ AEMで、 **Externalizer** は、事前に設定された DNS でパスの前に
 We.Finance リファレンスサイトの電子メールテンプレートには、電子メール内で使用するカスタマイズされた各種リンクが用意されています。これらのリンクには、プレースホルダーが `${placeholder}`. プレースホルダーは、電子メールの送信前に実際の値に置き換えられます。AEM のデフォルトの XSS 保護設定では、HTML コンテンツ内の URL に波括弧（**{ }**）を使用できません。ただし、パブリッシュインスタンスで以下の手順を実行することにより、デフォルトの設定を上書きすることができます。
 
 1. `/libs/cq/xssprotection/config.xml` を `/apps/cq/xssprotection/config.xml` にコピーします。
-1. 次を開きます： `/apps/cq/xssprotection/config.xml`.
+1. `/apps/cq/xssprotection/config.xml`を開きます。
 1. 内 `common-regexps` セクションで、 `onsiteURL` 次のように入力し、ファイルを保存します。
 
    `<regexp name="onsiteURL" value="([\p{L}\p{N}\\\.\#@\$\{\}%\+&;\-_~,\?=/!\*\(\)]*|\#(\w)+)"/>`
@@ -319,7 +319,7 @@ AEM FormsとMicrosoft Dynamics 間の通信を有効にするように、AEM For
 1. に移動します。 **/conf/global/settings/cloudconfigs/fdm/roi-rest/jcr:content/swaggerFile** swagger ファイルを開きます。
 1. 環境に応じて、ホストとポートの設定を更新します。
 1. 設定を保存します。
-1. (**オーサーインスタンスのみ**) に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL データソース]** > **[!UICONTROL global]**. 選択 **[!UICONTROL roi-rest]** とタップします。 **[!UICONTROL プロパティ]**. タップ **[!UICONTROL 認証設定]** および設定 **[!UICONTROL 認証タイプ]** から **[!UICONTROL 基本認証]**. 指定 `admin`/ `admin`サービスにアクセスするためのユーザー名/パスワード。 「**[!UICONTROL 保存して閉じる]**」をタップします。
+1. (**オーサーインスタンスのみ**) に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL データソース]** > **[!UICONTROL global]**. 選択 **[!UICONTROL roi-rest]** とタップします。 **[!UICONTROL プロパティ]**. タップ **[!UICONTROL 認証設定]** および設定 **[!UICONTROL 認証タイプ]** から **[!UICONTROL 基本認証]**. 指定 `admin`/ `admin`サービスにアクセスするためのユーザー名/パスワード。 **[!UICONTROL 保存して閉じる]**&#x200B;をタップします。
 
 ## Marketing Cloudとの統合 {#integrate-with-marketing-cloud}
 
@@ -372,7 +372,7 @@ AEM Forms を Adobe Analytics に統合することで、フォームやドキ�
 1. Target アカウントに関連付けるクライアントコード、電子メール、パスワードを指定します。API タイプをとして選択します。 **[!UICONTROL REST]**.
 1. 「**[!UICONTROL Adobe Target に接続]**」をクリックします。Target アカウントが正常に設定されたら、「 **[!UICONTROL OK]**. パッケージ化された設定に Target フレームワークが含まれていることを確認できます。
 
-1. https://&lt; に移動します。*hostname*>:&lt;*ポート*>/system/console/configMgr.
+1. https://&lt;*hostname*>:&lt;*port*>/system/console/configMgr にアクセスします。
 
 1. 「**[!UICONTROL AEM Forms Target の設定]**」をクリックします。
 1. Target フレームワークを選択します。
@@ -384,7 +384,7 @@ AEM Forms を Adobe Analytics に統合することで、フォームやドキ�
 
 ## 次の手順 {#next-step}
 
-これで、リファレンスサイトを利用するための設定がすべて完了しました。リファレンスサイトのワークフローと手順についての詳細は以下を参照してください。
+これで、 リファレンスサイトを利用するための設定がすべて完了しました。リファレンスサイトのワークフローと手順についての詳細は以下を参照してください。
 
 * [We.Finance リファレンスサイトのチュートリアル](/help/forms/using/finance-reference-site-walkthrough.md)
 * [We.Gov リファレンスサイトのチュートリアル](/help/forms/using/gov-reference-site-walkthrough.md)

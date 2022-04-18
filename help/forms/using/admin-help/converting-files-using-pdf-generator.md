@@ -14,7 +14,7 @@ exl-id: 3eecff45-405f-482f-b0de-acf6557a7813
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1117'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ PDF Generator により Acrobat 5.0 またはそれ以降で作成される PDF 
 
 ドキュメントのメタデータには、Acrobat のドキュメントのプロパティダイアログボックスの「説明」タブで表示される情報も含まれます（ただし、その情報だけではありません）。「説明」タブで行われた変更は、ドキュメントのメタデータに反映されます。ドキュメントのメタデータは、サードパーティの製品を使用して拡張したり、変更したりできます。
 
-Adobe Extensible Metadata Platform（XMP）は、パブリッシングワークフロー間でのドキュメントのメタデータの作成、処理および交換を標準化する共通の XML フレームワークを Adobe アプリケーションに提供します。ドキュメントのメタデータの XML ソースコードは XMP 形式で保存および読み込むことができるので、様々なドキュメント間でメタデータを簡単に共有できるようになります。XMP ファイルについて詳しくは、「[Extensible Metadata Platform（XMP）](https://www.adobe.com/products/xmp/)」および「[Adobe XMP Developer Center](https://www.adobe.com/devnet/xmp.html)」を参照してください。
+Adobe Extensible Metadata Platform（XMP）は、パブリッシングワークフロー間でのドキュメントのメタデータの作成、処理および交換を標準化する共通の XML フレームワークを Adobe アプリケーションに提供します。ドキュメントのメタデータの XML ソースコードは XMP 形式で保存および読み込むことができるので、様々なドキュメント間でメタデータを簡単に共有できるようになります。XMP ファイルについて詳しくは、「[Extensible Metadata Platform（XMP）](https://www.adobe.com/jp/products/dimension.html/)」および「[Adobe XMP Developer Center](https://www.adobe.com/devnet/xmp.html)」を参照してください。
 
 Acrobat では、XMP ファイルを作成できます。
 
@@ -103,13 +103,13 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 1. 「PDF ファイルの書き出し先」リストで、PDF ファイルの書き出し先の形式を選択します。
 1. 「タイムアウト時間の指定」ボックスに、アプリケーションがタイムアウトになるまでの待機時間を入力します。デフォルト値は 270 秒です。
 
-   ファイル変換時に「変換時間」に表示される値は、ここで指定する値よりも長くなる場合があります。「変換時間」の値には、スレッドまたはプロセスの待機時間、ファイルの変換時間、およびフォールバックコンバーターにかかる時間（該当する場合）なども含まれています。時刻. 「タイムアウト時間の指定」の値は、ファイルの変換にかかる正確な時間です。
+   ファイル変換時に「変換時間」に表示される値は、ここで指定する値よりも長くなる場合があります。「変換時間」の値には、スレッドまたはプロセスの待機時間、ファイルの変換時間、およびフォールバックコンバーターにかかる時間（該当する場合）なども含まれています。時刻。「タイムアウト時間の指定」の値は、ファイルの変換にかかる正確な時間です。
 
-1. （オプション） **カスタムプリフライトプロファイルを指定** オプションを選択し、「参照」をクリックして、 [カスタムプリフライトプロファイル](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html). プリフライトプロファイルは、ドキュメントをPDFアーカイブ (PDF/A) 形式に変換する場合にのみ使用します。
+1. （オプション）**カスタム Preflight プロファイルを指定する**&#x200B;オプションで「参照」をクリックし、[カスタム Preflight プロファイル](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)を選択します。Preflight プロファイルは、ドキュメントを PDF アーカイブ（PDF/A）形式に変換する際にのみ使用されます。  
 1. 「書き出し」をクリックします。変換が終了すると、書き出されたファイルへのリンクが表示されます。
 1. 変換されたファイルを表示するには、そのリンクをクリックします。
 
-## PDF の最適化 （Windows のみ） {#optimize-a-pdf}
+## PDF の最適化（Windows のみ） {#optimize-a-pdf}
 
 PDF Generator では、PDF ファイルのサイズを低減することができます。
 

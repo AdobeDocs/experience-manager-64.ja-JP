@@ -28,7 +28,7 @@ Adobe Experience Manager(AEM)Mobile は、AEM Assets、Sites、Screens、Workflo
 AEM Mobile では、複数の方法でアプリを作成できます。以下の方法でアプリを作成できます。
 
 * [AEM Mobile On-Demand Services のコンテンツの管理](/help/mobile/aem-mobile.md)
-* [AEM での Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)
+* [AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)
 
 >[!NOTE]
 >

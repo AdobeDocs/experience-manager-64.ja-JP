@@ -9,7 +9,7 @@ user-guide-description: デジタルアセットを作成、管理、配信お�
 source-git-commit: 35aea0e087334a1c1e6a708f2182bd9dee799dc0
 workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 75%
+ht-degree: 82%
 
 ---
 
@@ -17,10 +17,10 @@ ht-degree: 75%
 # Assets ガイド {#assets}
 
 + [Assets ユーザーガイド](home.md)
-+ [AEM 6.4 Assets リリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/assets.html)
++ [AEM 6.4 Assets リリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/release-notes.html?lang=ja)
 + [DAM について](assets.md)
 + [ユーザーエクスペリエンスの改善](ux-improvements.md)
-+ [アセットのベストプラクティス](best-practices-for-assets.md)
++ [Assets のベストプラクティス](best-practices-for-assets.md)
 + AEM Assetsを使用 {#using}
    + [AEM Assetsホームページエクスペリエンス](assets-home-page.md)
    + [AEM でのアセットの検索](search-assets.md)
@@ -32,11 +32,11 @@ ht-degree: 75%
    + [アセットを処理](assets-workflow.md)
    + [画像マップの追加](image-maps.md)
    + [MSM を使用したアセットの再利用](reuse-assets-using-msm.md)
-+ Dynamic Media{#dynamic}
++ Dynamic Media {#dynamic}
    + [Experience League 提供の Dynamic Media ニュースレターアーカイブ](dynamic-media-newsletter.md)
    + [Dynamic Media のセットアップ](administering-dynamic-media.md)
    + [Dynamic Media の操作](dynamic-media.md)
-   + [Dynamic Media の設定 - Scene7モード](config-dms7.md)
+   + [Dynamic Media の設定 - Scene7 モード](config-dms7.md)
    + [Dynamic Media - ハイブリッドモードの設定](config-dynamic.md)
    + [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
    + [Dynamic Media アセットの管理](managing-assets.md)
@@ -72,7 +72,7 @@ ht-degree: 75%
    + [CDN にキャッシュされたコンテンツの無効化](invalidate-cdn-cached-content.md)
    + [一括アセット移行用の機能パック18912のインストール](bulk-ingest-migrate.md)
    + [セレクターの操作](working-with-selectors.md)
-+ アセットを拡張 {#extending}
++ Assets の拡張 {#extending}
    + [アセットのカスタマイズと拡張](extending-assets.md)
    + [メディアハンドラーとワークフローを使用したアセットの処理](media-handlers.md)
    + [Assets の検索機能の拡張](searchx.md)
@@ -92,19 +92,19 @@ ht-degree: 75%
    + [メタデータ、画像およびビデオを処理するためのプロファイル](processing-profiles.md)
    + [カスケードメタデータ](cascading-metadata.md)
    + [アセットエディターページの作成と設定](assets-finder-editor.md)
-   + [Assets サイズ設定ガイド](assets-sizing-guide.md)
+   + [Assets サイジングガイド](assets-sizing-guide.md)
    + [メタデータのスキーマに関する参照情報](meta-ref.md)
    + [アセットを効率的に翻訳するためのベストプラクティス](best-practices-for-translating-assets-efficiently.md)
    + [Assets パフォーマンスチューニングガイド](performance-tuning-guidelines.md)
    + [メタデータの編集と追加](meta-edit.md)
-   + [アセット移行ガイド](assets-migration-guide.md)
+   + [Assets 移行ガイド](assets-migration-guide.md)
    + [XMP メタデータ](xmp.md)
    + [Assets のネットワークに関する考慮事項](assets-network-considerations.md)
    + [AEM Assets と AEM Media Library との比較](medialibrary.md)
    + [PDFラスタライザの使用](aem-pdf-rasterizer.md)
    + [アセットのアップロード制限の設定](configuring-asset-upload-restrictions.md)
    + [AEM と Creative Cloud の統合のベストプラクティス](aem-cc-integration-best-practices.md)
-   + [Adobeアセットリンクの設定](configure-asset-link.md)
+   + [Adobe Asset Link の設定](configure-asset-link.md)
    + [AEM AssetsとInDesignサーバーの統合](indesign.md)
    + [メタデータプロファイル](metadata-profiles.md)
    + [アセットのデジタル著作権管理](drm.md)
@@ -139,7 +139,7 @@ ht-degree: 75%
    + [コンテンツフラグメント - 削除に関する考慮事項](content-fragments-delete.md)
    + [コンテンツフラグメント - Markdown](content-fragments-markdown.md)
    + [コンテンツフラグメントの翻訳プロジェクトの作成](creating-translation-projects-for-content-fragments.md)
-+ アセットを管理 {#managing}
++ アセットの管理 {#managing}
    + [タッチ対応 UI を使用したアセットの管理](managing-assets-touch-ui.md)
    + [複数のアセットとコレクションの管理](managing-multiple-assets.md)
    + [アセットセレクター](asset-selector.md)
@@ -167,6 +167,6 @@ ht-degree: 75%
    + [スマートコンテンツサービスのトレーニングガイドライン](smart-tags-training-guidelines.md)
    + [ビデオレンディション](video-renditions.md)
 + 他のソリューションとの統合 {#integrations}
-   + [との統合 [!DNL Adobe Workfront]](workfront-integrations.md)
-   + [インストール [!DNL enhanced connector] 対象 [!DNL Workfront]](workfront-connector-install.md)
-   + [設定 [!DNL enhanced connector] 対象 [!DNL Workfront]](workfront-connector-configure.md)
+   + [ [!DNL Adobe Workfront] との統合](workfront-integrations.md)
+   + [ [!DNL Workfront] への  [!DNL enhanced connector]  のインストール](workfront-connector-install.md)
+   + [ [!DNL Workfront] への  [!DNL enhanced connector]  の設定](workfront-connector-configure.md)

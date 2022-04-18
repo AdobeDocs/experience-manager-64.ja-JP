@@ -1,5 +1,5 @@
 ---
-title: オーサー環境の操作
+title: 'オーサー環境の操作 '
 seo-title: Working with the Author Environment
 description: オーサー環境では、オーサリングに関連するタスク（ページオーサリングおよびアセットの管理を含む）と、Web サイトのコンテンツの生成および管理の際に必要な管理タスクを実行できます。
 seo-description: The author environment allows you to perform tasks related to authoring (including page authoring and managing assets) and administering tasks you need when generating and maintaining the content on your website.
@@ -13,23 +13,23 @@ exl-id: 8421a092-6e99-4c05-9647-c0cc76667c85
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
-# オーサー環境の操作{#working-with-the-author-environment}
+# オーサー環境の操作 {#working-with-the-author-environment}
 
 >[!NOTE]
 >
->以下のドキュメントでは、クラシック UI に焦点を当てています。最新のタッチ操作対応 UI でのオーサリングについて詳しくは、 [標準オーサリングドキュメント](/help/assets/assets.md).
+>以下のドキュメントでは、クラシック UI に焦点を当てています。最新のタッチ操作対応 UI でのオーサリングについて詳しくは、[標準オーサリングのドキュメント](/help/assets/assets.md)を参照してください。
 
 オーサー環境では、以下に関連するタスクを実行できます。
 
-* [オーサリング](/help/sites-authoring/author.md) ( [ページオーサリング](/help/sites-authoring/qg-page-authoring.md) および [アセットの管理](/help/assets/assets.md))
+* [オーサリング](/help/sites-authoring/author.md)（[ページオーサリング](/help/sites-authoring/qg-page-authoring.md)と[アセットの管理](/help/assets/assets.md)を含みます）
 
-* Web サイトでのコンテンツの生成および管理の際に必要になる[管理](/help/sites-administering/administer-best-practices.md)タスク
+* web サイトでのコンテンツの生成および管理の際に必要になる[管理](/help/sites-administering/administer-best-practices.md)タスク
 
-これらの操作のために次の 2 つのグラフィカルユーザーインターフェイスが提供されており、最近のすべてのブラウザーからアクセスできます。
+これらの操作のために次の 2 つのグラフィカルユーザーインターフェイスが提供されており、最新のすべてのブラウザーからアクセスできます。
 
 1. クラシック UI
 
@@ -40,12 +40,12 @@ ht-degree: 85%
    * 以下のドキュメントでは、このクラシック UI に焦点を当てています。最新のタッチベースの UI でのオーサリングについて詳しくは、[標準オーサリングのドキュメント](/help/sites-authoring/author.md)を参照してください。
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
-1. タッチ操作向け UI
+1. タッチ操作対応 UI
 
    * これは AEM の最新の標準 UI です。
    * 灰色を基調としており、クリーンでフラットなインターフェイスになっています。
    * タッチデバイスとデスクトップデバイスの両方で使用できるようにデザインされています（タッチ操作向けに最適化されています）。ルックアンドフィールはすべてのデバイスで同じですが、[リソースの表示と選択](/help/sites-authoring/basic-handling.md)の操作がやや異なります（タップとクリックの違い）。
-   * 詳しくは、 [標準オーサリングドキュメント](/help/sites-authoring/author.md) タッチベースの UI を使用したオーサリング方法の詳細。 以下のドキュメントでは、クラシック UI に焦点を当てています。
+   * タッチベースの UI を使用したオーサリング方法について詳しくは、[標準オーサリングのドキュメント](/help/sites-authoring/author.md)を参照してください。以下のドキュメントでは、クラシック UI に焦点を当てています。
 
    * デスクトップ：
    ![chlimage_1-150](assets/chlimage_1-150.png)

@@ -15,7 +15,7 @@ exl-id: ff305c6d-c11e-4e1c-b262-4802b4f54592
 source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
 workflow-type: tm+mt
 source-wordcount: '2313'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +41,7 @@ REST API を使用すると、JSON で送信される応答を使用した HTTP 
 
 >[!NOTE]
 >
->AEM Gem セッションを参照 [AEM querybuilder で検索フォームがより簡単に](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-search-forms-using-querybuilder.html) を参照してください。
+>Query Builder の概要について詳しくは、AEM Gem セッションの [AEM QueryBuilder で容易になった Forms の検索](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-search-forms-using-querybuilder.html)を参照してください。
 
 ## サンプルクエリ {#sample-queries}
 
@@ -137,7 +137,7 @@ AEM 6.0 SP2 の時点では、数値を使用してカスタムの最大結果�
 
 例えば、この UI は以下の手法に適応できます。
 
-* 合計ヒット数の正確なカウント ([SearchResult.getTotalMatches()](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/result/SearchResult.html#gettotalmatches) または querybuilder.json 応答の合計 ) が 100 以下である。
+* 100 以下の合計ヒット数の正確な数（[SearchResult.getTotalMatches()](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/result/SearchResult.html#gettotalmatches) または querybuilder.json 応答の合計）を取得して表示します。
 * `guessTotal` を 100 に設定して、Query Builder への呼び出しを作成します。
 
 * 応答は、以下のような結果になる可能性があります。
@@ -214,11 +214,11 @@ group.1_path=/content/geometrixx/en/company/management
 group.2_path=/content/geometrixx/en/company/bod
 ```
 
-このクエリでは、クエリ内のサブ式を区切る役目を果たす「グループ&#x200B;**」（`group`）を使用しているので、標準の表記法よりも多くの括弧が含まれています。例えば、前の例は、次のように、よりわかりやすいスタイルで表現することができます。
+このクエリでは、クエリ内のサブ式を区切る役目を果たす「*グループ*」（`group`）を使用しているので、標準の表記法よりも多くの括弧が含まれています。例えば、前の例は、次のように、よりわかりやすいスタイルで表現することができます。
 
 `"Management" and ("/content/geometrixx/en/company/management" or "/content/geometrixx/en/company/bod")`
 
-例にあるグループの内部では、`path` 述語が複数回使用されています。述語の 2 つのインスタンスを区別して並べ替えるには（一部の述語では順序が必要）、述語にプレフィックスを付ける必要があります。 *N* `_ where`*N* は、順序インデックスです。 前の例では、こうして得られた述語は、`1_path` および `2_path` です。
+例にあるグループの内部では、`path` 述語が複数回使用されています。この述語の 2 つのインスタンスの区別と順序付け（一部の述語では順序付けが必要です）を行う場合は、述語にプレフィックス *N* を付けます。`_ where`*N* は順序を表すインデックスです。前の例では、こうして得られた述語は、`1_path` および `2_path` です。
 
 `p` 内の `p.or` は特殊な区切り文字で、後に続くもの（このケースでは `or`）がグループの&#x200B;*パラメーター*&#x200B;であることを示します。これは、グループのサブ述語（`1_path` など）とは対照的です。
 
@@ -340,7 +340,7 @@ p.properties=sling:resourceType jcr:primaryType
 p.nodedepth=n
 ```
 
-を指定します。`n` は、クエリが返すレベルの数です。子ノードを返すには、そのノードをプロパティセレクターで指定する必要があります
+を指定します。`n` は、クエリが返すレベルの数です。子ノードが返されるようにするには、プロパティセレクターでそのように指定する必要があります。
 
 ```
 p.hits=full
@@ -363,9 +363,9 @@ p.nodedepth=5
 
 [`PredicateEvaluator` クラスの Javadoc](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html) も参照してください。これらのクラスの Javadoc ドキュメントには、使用できるプロパティのリストが含まれています。
 
-クラス名のプレフィックス ( 例：「 `similar`」内 [`SimilarityPredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/SimilarityPredicateEvaluator.html)) は *主な財産* クラスの このプロパティは、クエリ内で使用する述語の名前（小文字で使用）でもあります。
+クラス名のプレフィックス（例えば [`SimilarityPredicateEvaluator`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/SimilarityPredicateEvaluator.html) の &quot;`similar`&quot; など）は、クラスの&#x200B;*プリンシパルプロパティ*&#x200B;です。このプロパティは、クエリ内で使用する述語の名前（小文字で使用）でもあります。
 
-このようなプリンシパルプロパティの場合は、クエリを短縮し、「 `similar=/content/en`&quot;完全修飾バリアント&quot; `similar.similar=/content/en`&quot;. 完全修飾形式は、クラスのプリンシパルプロパティではないすべてのプロパティに対して使用する必要があります。
+このようなプリンシパルプロパティの場合は、クエリを短縮して、完全修飾したバリアント `similar.similar=/content/en` の代わりに `similar=/content/en` を使用できます。完全修飾形式は、クラスのプリンシパルプロパティではないすべてのプロパティに対して使用する必要があります。
 
 ## Query Builder API の使用例 {#example-query-builder-api-usage}
 
@@ -425,7 +425,7 @@ p.nodedepth=5
 
 >[!NOTE]
 >
->QueryBuilder API を使用する OSGi バンドルを作成し、その OSGi バンドルを Adobe Experience Manager アプリケーション内で使用する方法については、[Query Builder API を使用する Adobe CQ OSGi バンドルの作成](https://helpx.adobe.com/experience-manager/using/using-query-builder-api.html)を参照してください。
+>QueryBuilder API を使用する OSGi バンドルを作成し、その OSGi バンドルを Adobe Experience Manager アプリケーション内で使用する方法については、[Query Builder API を使用する Adobe CQ OSGi バンドルの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja&amp;CID=RedirectAEMCommunityKautuk)を参照してください。
 
 同じクエリが、Query Builder（JSON）サーブレットを使用して HTTP を介して実行されます。
 
@@ -433,7 +433,7 @@ p.nodedepth=5
 
 ## クエリの保存と読み込み {#storing-and-loading-queries}
 
-クエリはリポジトリーに保存して後で使用することができます。この `QueryBuilder` は、「 `storeQuery` メソッドのシグネチャは次のとおりです。
+クエリはリポジトリーに保存して後で使用することができます。`QueryBuilder` には、次のシグネチャを持つ `storeQuery` メソッドがあります。
 
 ```java
 void storeQuery(Query query, String path, boolean createFile, Session session) throws RepositoryException, IOException;
@@ -467,7 +467,7 @@ Query Builder のクエリを試してみたり、デバッグしたりする場
 
 `http://localhost:4502/bin/querybuilder.json?path=/tmp`
 
-( `path=/tmp` は単なる例です )。
+（`path=/tmp` は、一例です）。
 
 ### デバッグに関する一般的な推奨事項 {#general-debugging-recommendations}
 
@@ -477,14 +477,14 @@ Query Builder のクエリを試してみたり、デバッグしたりする場
 
 * QueryBuilder の DEBUG ログを有効にして、基になる説明可能な XPath クエリを取得します。
 
-   * https://に移動します。&lt;serveraddress>:&lt;serverport>/system/console/slinglog に保存します。 **DEBUG** に、`com.day.cq.search.impl.builder.QueryImpl` の新しいロガーを作成します。
+   * https://&lt;serveraddress>:&lt;serverport>/system/console/slinglog に移動します。**DEBUG** に、`com.day.cq.search.impl.builder.QueryImpl` の新しいロガーを作成します。
 
 * 上述のクラスで DEBUG を有効にすると、Query Builder で生成された XPath がログに表示されます。
 * 関連する QueryBuilder クエリのログエントリから XPath クエリをコピーします。以下に例を示します。
 
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
 
-* XPath クエリを次に貼り付けます。 [クエリの説明を実行](/help/sites-administering/operations-dashboard.md#explain-query) クエリプランを取得するための XPath
+* クエリ計画を取得する XPath として、XPath クエリを「[クエリの説明を実行](/help/sites-administering/operations-dashboard.md#explain-query)」に貼り付けます。
 
 ### Query Builder Debugger を使用して説明可能な XPath を取得する {#obtain-explain-able-xpath-via-the-query-builder-debugger}
 
@@ -496,14 +496,14 @@ Query Builder のクエリを試してみたり、デバッグしたりする場
 
 * QueryBuilder の DEBUG ログを有効にして、基になる説明可能な XPath クエリを取得します。
 
-   * https://に移動します。&lt;serveraddress>:&lt;serverport>/system/console/slinglog に保存します。 **DEBUG** に、`com.day.cq.search.impl.builder.QueryImpl` の新しいロガーを作成します。
+   * https://&lt;serveraddress>:&lt;serverport>/system/console/slinglog に移動します。**DEBUG** に、`com.day.cq.search.impl.builder.QueryImpl` の新しいロガーを作成します。
 
 * 上述のクラスで DEBUG を有効にすると、Query Builder で生成された XPath がログに表示されます。
 * 関連する QueryBuilder クエリのログエントリから XPath クエリをコピーします。以下に例を示します。
 
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "Geometrixx") or jcr:contains(jcr:content/@cq:tags, "Geometrixx"))]`
 
-* XPath クエリを次に貼り付けます。 [クエリの説明を実行](/help/sites-administering/operations-dashboard.md#explain-query) クエリプランを取得するための XPath
+* クエリ計画を取得する XPath として、XPath クエリを「[クエリの説明を実行](/help/sites-administering/operations-dashboard.md#explain-query)」に貼り付けます。
 
 **Query Builder Debugger を使用して説明可能な XPath を取得する**
 
@@ -514,7 +514,7 @@ Query Builder のクエリを試してみたり、デバッグしたりする場
 1. Query Builder Debugger で Query Buidler クエリを指定します。
 1. 検索を実行します。
 1. 生成された XPath を取得します。
-1. XPath クエリを XPath として Explain Query に貼り付け、クエリプランを取得します
+1. クエリ計画を取得する XPath として、XPath クエリを「クエリの説明を実行」に貼り付けます。
 
 >[!NOTE]
 >
@@ -530,7 +530,7 @@ QueryBuilder でクエリをデバッグする方法の概要については、�
 
 >[!NOTE]
 >
->ロガーの設定については、の節で説明します。 [独自のロガーおよびライターの作成](/help/sites-deploying/configure-logging.md#creating-your-own-loggers-and-writers).
+>ロガーの設定については、[独自のロガーとライターの作成](/help/sites-deploying/configure-logging.md#creating-your-own-loggers-and-writers)の節で説明します。
 
 テストおよびデバッグの際に、記述されたクエリを実行したときの Query Builder 実装のログ出力（情報レベル）：
 

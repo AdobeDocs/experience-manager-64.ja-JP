@@ -15,13 +15,13 @@ role: Admin,User
 source-git-commit: a750c5425e33c2a115aab581b71862c1d30cf166
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 69%
+ht-degree: 81%
 
 ---
 
 # Dynamic Media でのホットリンク保護の有効化 {#activating-hotlink-protection-in-dynamic-media}
 
-ホットリンクは、サードパーティの Web サイトで HTML コードを使用して自社 Web サイト内の画像を表示する場合におこなわれます。訪問者のブラウザーが自社サーバーから画像に直接アクセスするので、画像が要求されるたびに帯域幅が消費されます。ホットリンク *保護* は、他の Web サイトが Web ページ上の画像、CSS、JavaScript に直接リンクするのを防ぐための方法です。 このような保護により、Dynamic Media アカウントでの不要な帯域幅使用を減らすことができます。
+ホットリンクは、サードパーティの Web サイトで HTML コードを使用して自社 Web サイト内の画像を表示する場合におこなわれます。訪問者のブラウザーが自社サーバーから画像に直接アクセスするので、画像が要求されるたびに帯域幅が消費されます。ホットリンク&#x200B;*保護*&#x200B;は、自社 web サイト上の画像、CSS、JavaScript などに他の web サイトが直接リンクできないようにするための方法です。このような保護により、Dynamic Media アカウントでの不要な帯域幅使用を減らすことができます。
 
 [Adobeカスタマーサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja#support) は、CDN レベルでリファラーフィルターを設定し、ドメインに許可された Web サイトにのみDynamic Mediaコンテンツを提供できるようにします。
 

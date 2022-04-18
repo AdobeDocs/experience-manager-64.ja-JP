@@ -1,7 +1,7 @@
 ---
 title: AEM Mobile のコンテンツパーソナライゼーション
 seo-title: AEM Mobile content personalization
-description: 'このページでは、AEM 作成者が Adobe Target を利用することでモバイルアプリのコンテンツをパーソナライズできる、AEM Mobile のコンテンツパーソナライゼーション機能について説明します。 '
+description: このページでは、AEM 作成者が Adobe Target を利用することでモバイルアプリのコンテンツをパーソナライズできる、AEM Mobile のコンテンツパーソナライゼーション機能について説明します。
 seo-description: Follow this page to learn about AEM Mobile content personalization feature that allows AEM authors to personalize mobile app content by leveraging Adobe Target.
 uuid: 9078edd1-8399-485f-8a63-a07e766f7ef9
 contentOwner: User
@@ -9,13 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: c9c818dc-c5c4-4a96-94fe-9dc9fe75705b
-source-git-commit: 64090e3c7cf722f44968467c51291a11aeeec237
+exl-id: 8b7a9edc-b7b1-4b31-9a6f-7f79aea7a960
+source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 49%
 
 ---
-
 
 # AEM Mobile のコンテンツパーソナライゼーション{#aem-mobile-content-personalization}
 
@@ -279,7 +279,7 @@ head.html と body.html の例については、 [AEM Mobile Hybrid Reference Ap
 
 mbox ごとに、 **cq-targeting** が追加され、アプリケーション開発者は、使用するカスタムコードを好みに応じて作成し、使用できます。 この [AEM Mobile Hybrid Reference App](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) には、cq-targeting 属性を使用するAngularディレクティブの例があります。 コンテンツの置き換えの概念と実行方法は、モバイルアプリケーションの開発者次第です。 AEM /etc/clientlibs/mobileapps/js/mobileapps.js経由で配信される Mobile SDK で、Adobeターゲティングサービスを呼び出す API を提供します。 アプリケーションのデザインに従って呼び出しをおこなうタイミングを指定するのは、アプリケーション開発者次第です。
 
-## 次のステップ? {#what-s-next}
+## 次の手順? {#what-s-next}
 
 1. [AEM Mobile アプリを使ってみる](/help/mobile/starting-aem-phonegap-app.md)
 1. [アプリのコンテンツを管理する](/help/mobile/phonegap-manage-app-content.md)

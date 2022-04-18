@@ -13,7 +13,7 @@ exl-id: 2bbcc8d0-c1c7-4901-836f-44b8a2153a46
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 53%
+ht-degree: 62%
 
 ---
 
@@ -24,7 +24,7 @@ Web サイトから Adobe Search&amp;Promote サービスを呼び出すには�
 1. クラウドの URL を指定します。
 1. Search&amp;Promote サービスへの接続を設定します。
 1. Search&amp;Promoteコンポーネントの追加先 [!UICONTROL サイドキック].
-1. コンポーネントを使用して、コンテンツを作成します（[Web ページへの Search&amp;Promote 機能の追加](/help/sites-authoring/search-and-promote.md)を参照）。
+1. コンポーネントを使用して、コンテンツを作成します。（[Web ページへの Search&amp;Promote 機能の追加](/help/sites-authoring/search-and-promote.md)を参照）。
 1. バナーをページに追加します。バナー画像は、Search&amp;Promote データの影響を受けます。
 1. Search&amp;Promote サービスが使用するサイトマップを生成します。
 
@@ -34,17 +34,16 @@ Web サイトから Adobe Search&amp;Promote サービスを呼び出すには�
 >
 >* 3.x は [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) のように設定します。
 >* 4.x は [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) のように設定します。
-
 >
 
 
 ## Search&amp;Promote サービス URL の変更 {#changing-the-search-promote-service-url}
 
-Search&amp;Promoteサービス用に設定されるデフォルトの URL は、 `https://searchandpromote.omniture.com/px/`. 別のサービスを使用するには、OSGi コンソールを使用して別の URL を指定します。
+Search&amp;Promote サービス用に設定されるデフォルト URL は、`https://searchandpromote.omniture.com/px/` です。別のサービスを使用するには、OSGi コンソールを使用して別の URL を指定します。
 
 **Search&amp;Promoteサービス URL を変更するには**:
 
-1. を開きます。 [!UICONTROL OSGi] コンソールを開き、 **[!UICONTROL 設定]** タブをクリックします。 （[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）。
+1. を開きます。 [!UICONTROL OSGi] コンソールを開き、 **[!UICONTROL 設定]** タブをクリックします。 ([http://localhost:4502/system/console/configMgr.](http://localhost:4502/system/console/configMgr))
 
 1. 次をクリック： **[!UICONTROL Day CQSearch&amp;Promote設定]** 項目。
 1. 内 **[!UICONTROL リモートサーバー URI]** テキストフィールドに URL を入力し、 **[!UICONTROL 保存]**.
@@ -71,7 +70,7 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
 
 1. を入力します。 **[!UICONTROL タイトル]** ページ作成者が認識できる独自の **[!UICONTROL 名前]**&#x200B;次に、 **[!UICONTROL 作成]**.
 
-   また、新しく作成した設定が、**[!UICONTROL クラウドサービスダッシュボード]**&#x200B;の Adobe Search&amp;Promote リスト項目の「**[!UICONTROL 利用可能な設定]**」の下に表示されます。
+   また、新しく作成した設定が、**[!UICONTROL Cloud Services ダッシュボード]**&#x200B;の Adobe Search&amp;Promote リスト項目の「**[!UICONTROL 利用可能な設定]**」の下に表示されます。
 
    ![chlimage_1-410](assets/chlimage_1-410.png)
 
@@ -86,7 +85,7 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
    >
    >[https://searchandpromote.omniture.com/center/](https://searchandpromote.omniture.com/center/)
    >
-   >有効な Seach&amp;Promote 資格情報（電子メール／パスワード）を使用します。
+   >有効な Seach&amp;Promote 認証情報（メール／パスワード）を使用します。
    >
    >ブラウザーのアドレスバーに URL が表示されます。 次のようになります。
    >
@@ -110,15 +109,15 @@ Search&amp;Promoteアカウントがアジアまたはヨーロッパにある�
 
 **データセンターを設定するには**:
 
-1. Web コンソール ( ) に移動します。 `http://localhost:4502/system/console/configMgr/com.day.cq.searchpromote.impl.SearchPromoteServiceImpl`
+1. Web コンソール（`http://localhost:4502/system/console/configMgr/com.day.cq.searchpromote.impl.SearchPromoteServiceImpl`）にアクセスします。
 
    ![chlimage_1-411](assets/chlimage_1-411.png)
 
 1. サーバーの場所に応じて、URI を次のいずれかに変更します。
 
-   * 北米： [https://center.atomz.com/px/](https://center.atomz.com/px/)
-   * EMEA: [https://center.lon5.atomz.com/px/](https://center.lon5.atomz.com/px/)
-   * APAC: [https://center.sin2.atomz.com/px/](https://center.sin2.atomz.com/px/)
+   * 北米：[https://center.atomz.com/px/](https://center.atomz.com/px/)
+   * EMEA：[https://center.lon5.atomz.com/px/](https://center.lon5.atomz.com/px/)
+   * APAC：[https://center.sin2.atomz.com/px/](https://center.sin2.atomz.com/px/)
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 
@@ -130,7 +129,7 @@ In [!UICONTROL デザイン] モード、編集 **[!UICONTROL 額]** コンポ�
 
 ## ページで使用する Search&amp;Promote サービスの指定 {#specifying-the-search-promote-service-that-your-pages-use}
 
-特定の Search&amp;Promote サービスを使用できるように、Web ページを設定します。Search&amp;Promote コンポーネントは、自動的にホストページのサービスを使用します。
+特定の Search&amp;Promote サービスを使用できるように、web ページを設定します。Search&amp;Promote コンポーネントは、自動的にホストページのサービスを使用します。
 
 ページの Search&amp;Promote プロパティを設定すると、すべての子ページが設定を継承します。必要に応じて、継承された設定を上書きするように子ページを設定できます。
 
@@ -152,11 +151,11 @@ In [!UICONTROL デザイン] モード、編集 **[!UICONTROL 額]** コンポ�
 
 ## 製品フィード {#product-feed}
 
-Search&amp;Promote統合により、次の操作を実行できます。
+Search&amp;Promote の統合により、次の操作を実行できます。
 
 * 以下を使用： [!UICONTROL e コマース] 基になるリポジトリ構造とコマースプラットフォームとは独立した API。
 * 以下を利用する： [!UICONTROL インデックスコネクタ] XML 形式の製品フィードを提供するSearch&amp;Promoteの機能。
 * 以下を利用する： [!UICONTROL リモート制御] 製品フィードのオンデマンドリクエストまたはスケジュール済みリクエストを実行するSearch&amp;Promoteの機能。
-* 様々なSearch&amp;Promoteアカウントのフィード生成（クラウドサービス設定として設定）。
+* クラウドサービス設定として指定された、様々な Search&amp;Promote アカウント用のフィードを生成する。
 
-詳しくは、 [製品フィード](/help/sites-administering/product-feed.md).
+詳しくは、[製品フィード](/help/sites-administering/product-feed.md)を参照してください。

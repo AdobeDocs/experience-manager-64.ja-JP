@@ -11,7 +11,7 @@ role: Admin,User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1295'
-ht-degree: 87%
+ht-degree: 89%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 87%
 * 使用可能な Dynamic Media 機能パックよりも先に、AEM 6.4 累積修正パック（CFP）がインストールされていることを確認します。**
 * オプションの機能パック 18912 がインストールされていることを確認します。
 
-   このオプションの機能パックは、FTP サポート用、またはDynamic Media ClassicからDynamic Mediaにアセットを移行する場合に使用します。
+   このオプションの機能パックは、FTP サポートが必要な場合や、Dynamic Media Classic から Dynamic Media にアセットを移行する場合に使用します。
 
 * クラウドサービスのユーザーインターフェイスに移動して、「**[!UICONTROL 利用可能な設定]**」の下に割り当てられたアカウントが表示されることを確認します。
 * 次を確認します。 **[!UICONTROL Dynamic Media Asset Activation (scene7)]** レプリケーションエージェントが有効になっています。

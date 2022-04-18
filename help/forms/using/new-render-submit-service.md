@@ -12,7 +12,7 @@ exl-id: 24ece56a-fc59-410f-b38a-46637c4dc45e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '901'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -86,7 +86,7 @@ newHTMLFormURL = `generateFormURL` API を呼び出した後で返された URL
 
 出力 - `outputDocument`
 
-プロセスが `outputDocument`から `inputDocument`～から取り出される `taskContext`.
+プロセスは、`outputDocument` を `taskContext` から取得した `inputDocument` に設定します。
 
 ## デフォルトのレンダリングまたは送信プロセス、およびアクションプロファイル {#default-render-or-submit-processes-and-action-profiles}
 
@@ -109,16 +109,16 @@ newHTMLFormURL = `generateFormURL` API を呼び出した後で返された URL
 Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブラウザーは NPAPI ベースのプラグインを徐々にサポートしなくなっています。モバイルフォームのレンダリングを PDF から HTML に変更するには、次の手順を実行します。
 
 1. 有効なユーザーとして Workbench にログインします。
-1. 選択 **ファイル** > **アプリの取得**.
+1. **File**／**Get Applications** を選択します。
 
    Get Applications ダイアログが表示されます。
 
-1. モバイルフォームのレンダリングを変更するアプリケーションを選択し、 **OK**.
+1. モバイルフォームのレンダリングを変更する対象のアプリケーションを選択し、「**OK**」をクリックします。
 1. レンダリングを変更する対象のプロセスを開きます。
 1. 対象のスタートポイント／タスクを開き、「Presentation &amp; Data」セクションに移動して、「**Manage Action Profiles**」をクリックします。
 
-   アクションプロファイルの管理ダイアログが表示されます。
-1. デフォルトのレンダリングプロファイル設定をPDFからHTMLに変更し、 **OK**.
+   Manage Action Profiles ダイアログが表示されます。
+1. デフォルトのレンダリングプロファイル設定を PDF から HTML に変更し、「**OK**」をクリックします。
 1. プロセスをチェックインします。
 1. 手順を繰り返して、他のプロセスのレンダリングを変更します。
 1. 変更したプロセスに関連するアプリケーションをデプロイします。
@@ -129,7 +129,7 @@ Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブ�
 
 アクションプロファイルに関するよくある質問の一部を次に示します。
 
-![gen_question_b_20](assets/gen_question_b_20.png) **どのレンダリング/送信プロセスが初期状態で使用できますか？**
+![gen_question_b_20](assets/gen_question_b_20.png) **どのようなレンダリング/ 送信プロセスが追加設定なしで使用できますか？**
 
 * Guide のレンダリング（Guide は推奨されていません）
 * Render Form Guide
@@ -140,23 +140,23 @@ Adobe Acrobat および Adobe Acrobat Reader のプラグインを含め、ブ�
 
 および同等の送信プロセス。
 
-![gen_question_b_20](assets/gen_question_b_20.png) **どのアクションプロファイルが標準で使用できますか？**
+![gen_question_b_20](assets/gen_question_b_20.png) **どのようなアクションプロファイルが追加設定なしで使用できますか？**
 
 XDP フォームの場合：
 
 * デフォルト（新しい「デフォルトのレンダリング / 送信」プロセスを使用したレンダリング / 送信）
 
-![gen_question_b_20](assets/gen_question_b_20.png) **フォームをデバイス上でHTMLに、デスクトップ上でPDFにレンダリングするには、プロセスデザイナーは何を行う必要がありますか？**
+![gen_question_b_20](assets/gen_question_b_20.png) **フォームをデバイス上では HTML およびデスクトップ上では PDF にレンダリングされるようにするには、プロセスデザイナーは何を行う必要がありますか？**
 
 何も必要ありません。デフォルトのアクションプロファイルが自動的に選択されて、レンダリングのモードも同じく自動的に対処されます。
 
-![gen_question_b_20](assets/gen_question_b_20.png) **フォームをデスクトップ上でHTMLにレンダリングするには、何をおこなう必要がありますか？**
+![gen_question_b_20](assets/gen_question_b_20.png) **フォームをデスクトップ上で HTML にレンダリングされるようにするには、何を行う必要がありますか？**
 
 ユーザーは、デフォルトプロファイルで HTML ラジオボタンを選択する必要があります。
 
-![gen_question_b_20](assets/gen_question_b_20.png) **デフォルトのアクションプロファイル動作を変更すると、アップグレードに何らかの影響がありますか？**
+![gen_question_b_20](assets/gen_question_b_20.png) **デフォルトのアクションプロファイルの動作を変更すると、アップグレードに何らかの影響がありますか？**
 
-はい。デフォルトのアクションプロファイルに関連付けられた以前のレンダリングと送信サービスは異なるため、それらは既存のフォームのカスタマイズとして処理されます。クリック時 **[!UICONTROL デフォルトに戻す]**&#x200B;の場合は、代わりにデフォルトのレンダリングサービスと送信サービスが設定されます。
+はい。デフォルトのアクションプロファイルに関連付けられた以前のレンダリングと送信サービスは異なるため、それらは既存のフォームのカスタマイズとして処理されます。「**[!UICONTROL デフォルトを復元]**」をクリックすると、デフォルトのレンダリングと送信サービスが代わりに設定されます。
 
 既存のレンダリングまたは送信 PDF Form サービスを変更した場合またはカスタムサービス（たとえば custom1）を作成した場合、HTML レンダリングに対して同じ機能を使用したいとします。新しいレンダリングまたは送信サービス（custom2）を置き換えて、これらに同様のカスタマイズを適用する必要があります。そこで、レンダリングまたは送信の custom1 の代わりに、custom2 サービスを使用して XDP を開始するようにアクションプロファイルを変更します。
 

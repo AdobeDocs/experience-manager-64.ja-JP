@@ -13,7 +13,7 @@ exl-id: 88f692de-f88b-4459-97e9-73506bf87525
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1863'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 95%
 
 AEM Forms は、AEM Forms リポジトリをデータソースとして使用します。AEM Forms リポジトリにはアプリケーションアセットが格納されます。また実行時に、サービスは、自動化されたビジネスプロセスの実行の一環として、リポジトリからアセットを取得できます。
 
-実行中の AEM Forms モジュールの数や、アプリケーションにアクセスしている同時ユーザーの数によっては、これらのデータソースへのアクセス負荷が大きくなる場合があります。データソースへのアクセスは、接続プールを使用して最適化できます。「接続プール」**&#x200B;は、アプリケーションやサーバーオブジェクトがデータベースへのアクセスを必要とするたびに生じる、新しいデータベース接続の作成に伴うオーバーヘッドを回避するために使用される技術です。通常、接続プールは Web ベースのアプリケーションおよびエンタープライズアプリケーションで使用されます。また、アプリケーションサーバーによって処理されるのが一般的ですが、必ずしもそれだけに限定されません。
+実行中の AEM Forms モジュールの数や、アプリケーションにアクセスしている同時ユーザーの数によっては、これらのデータソースへのアクセス負荷が大きくなる場合があります。データソースへのアクセスは、接続プールを使用して最適化できます。「*接続プール*」は、アプリケーションやサーバーオブジェクトがデータベースへのアクセスを必要とするたびに生じる、新しいデータベース接続の作成に伴うオーバーヘッドを回避するために使用される技術です。通常、接続プールは Web ベースのアプリケーションおよびエンタープライズアプリケーションで使用されます。また、アプリケーションサーバーによって処理されるのが一般的ですが、必ずしもそれだけに限定されません。
 
 接続を使い切らないように接続プールのパラメーターを適切に設定することが重要です。接続が足りなくなった場合、アプリケーションのパフォーマンスが低下する可能性があります。
 
@@ -45,12 +45,12 @@ WebLogic Server 管理コンソールでは、ドメイン内の JDBC データ�
    * 「Capacity Increment」
    * 「Statement Cache Size」
 
-1. 「Save」をクリックし、「Activate Changes」をクリックします。
+1. 「保存」をクリックし、「変更をアクティベート」をクリックします。
 1. WebLogic 管理対象サーバーを再起動します。
 
 ### SQLServer に対する WebLogic の接続プールの設定 {#configure-connection-pool-settings-for-weblogic-for-sqlserver}
 
-1. 「Change Center」で、「Lock &amp; Edit」をクリックします。
+1. Change Center で、「Lock &amp; Edit」をクリックします。
 1. 「Domain Structure」で、Services／JDBC／Data Sources をクリックし、右側のウィンドウの「EDC_DS」をクリックします。
 1. 次の画面で、「Configuration」タブ／Connection Pool をクリックして、以下のボックスに値を入力します。
 
@@ -59,7 +59,7 @@ WebLogic Server 管理コンソールでは、ドメイン内の JDBC データ�
    * 「Capacity Increment」
    * 「Statement Cache Size」
 
-1. 「Save」をクリックし、「Activate Changes」をクリックします。
+1. 「保存」をクリックし、「変更をアクティベート」をクリックします。
 1. WebLogic 管理対象サーバーを再起動します。
 
 ### DB2 に対する WebSphere の接続プールの設定 {#configure-connection-pool-settings-for-websphere-for-db2}
@@ -107,7 +107,7 @@ AEM Forms に送信して処理するドキュメントのサイズがデフォ�
 
    >[!NOTE]
    >
-   >JEE 環境上のAEM Formsと、OSGi バンドル上のAEM Formsが JEE 環境上に含まれるAEM Formsの場合、「ドキュメント最大インラインサイズ」プロパティの値は同じである必要があります。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
+   >ドキュメント最大インラインサイズプロパティの値は、JEE 環境上の AEM Forms と、JEE 環境上の OSGi バンドルを含む AEM Forms 上の AEM Forms と同一である必要があります。この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
 
 1. 次のシステムプロパティでアプリケーションサーバーを再起動します。
 
@@ -157,14 +157,14 @@ JVM 最大ヒープサイズは、50 MB 単位で増やす必要があり、合�
 
 Configuration Manager を実行しているとき、またはコマンドラインユーティリティ *ejbdeploy* を使用して Enterprise JavaBeans（EJB）デプロイコードを生成しようとしているときに、OutOfMemory エラーが発生した場合は、JVM に割り当てるメモリを増やします。
 
-1. で ejbdeploy スクリプトを編集します。 *[appserver root]*/deploytool/itp/ディレクトリ：
+1. *[appserver root]*/deploytool/itp/ ディレクトリの ejbdeploy スクリプトを編集します。
 
-   * (Windows) `ejbdeploy.bat`
-   * （Linux および UNIX） `ejbdeploy.sh`
+   * Windows：`ejbdeploy.bat`
+   * Linux および UNIX：`ejbdeploy.sh`
 
-1. 次を検索： `-Xmx256M` パラメーターを設定し、次のように大きい値に変更します。 `-Xmx1024M`.
-1.  ファイルを保存します。
-1. `ejbdeploy` コマンドを実行するか、または Configuration Manager を使用して再デプロイします。
+1. `-Xmx256M` パラメーターを検索して、値を現在のものより高い値に変更します（`-Xmx1024M` など）。
+1. ファイルを保存します。
+1. `ejbdeploy` コマンドを実行するか、Configuration Manager を使用して再デプロイします。
 
 ## LDAP を使用した Windows Server 2003 のパフォーマンスの向上 {#improving-windows-server-2003-performance-with-ldap}
 
@@ -175,13 +175,13 @@ Configuration Manager を実行しているとき、またはコマンドライ�
 ### 接続プールを使用するための Windows Server の設定 {#configure-your-windows-server-for-connection-pooling}
 
 1. スタート／ファイル名を指定して実行をクリックし、「名前」ボックスに `regedit` と入力して「OK」をクリックし、レジストリエディターを起動します。
-1. レジストリキーに移動します。 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
+1. レジストリキー `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters` に移動します。
 1. レジストリエディターの右側のウィンドウで、TcpTimedWaitDelay という値の名前を探します。値の名前が表示されない場合は、メニューバーから編集／新規／DWORD 値を選択して名前を追加します。
-1. 「名前」ボックスにフラグメント名として「`TcpTimedWaitDelay`
+1. 「名前」ボックスに `TcpTimedWaitDelay` と入力します。
 
    >[!NOTE]
    >
-   >点滅するカーソルが表示されない場合、 `New Value #` ボックス内で、右パネル内を右クリックし、「名前を変更」を選択し、「名前」ボックスにと入力します。 `TcpTimedWaitDelay`*.*
+   >点滅するカーソルと `New Value #` がボックス内に表示されない場合は、右側のパネル内を右クリックし、「名前の変更」を選択して、「名前」ボックスに `TcpTimedWaitDelay`*と入力します。*
 
 1. MaxUserPort、MaxHashTableSize および MaxFreeTcbs の値について、手順 4 を繰り返します。
 1. 右側のウィンドウ内をダブルクリックし、TcpTimedWaitDelay 値を設定します。「表記」で「10 進」を選択し、「値のデータ」ボックスに `30` と入力します。

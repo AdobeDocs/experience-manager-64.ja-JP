@@ -13,13 +13,13 @@ exl-id: ccb792f7-e837-4790-818f-e2c446328e71
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '247'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
 # We.Retail のレスポンシブレイアウトの使用{#trying-out-responsive-layout-in-we-retail}
 
-すべての We.Retail ページは、レスポンシブデザインを実装するためにレイアウトコンテナコンポーネントを使用します。 レイアウトコンテナは、レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズおよび形式に従ってレイアウトを再編成できます。このコンポーネントは、 **レイアウト** モードを使用して、デバイスに応じたレスポンシブレイアウトを作成および編集できます。
+We.Retail のすべてのページでは、レスポンシブデザインを実装するためにレイアウトコンテナコンポーネントが使用されています。レイアウトコンテナは、レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズおよび形式に従ってレイアウトを再編成できます。このコンポーネントを、ページエディターの&#x200B;**レイアウト**&#x200B;モードと組み合わせて使用すると、デバイスに依存するレスポンシブレイアウトを作成および編集できます。
 
 ## 試してみる {#trying-it-out}
 
@@ -27,7 +27,7 @@ ht-degree: 74%
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html
 
-1. **プレビュー**&#x200B;に切り替えて、Web サイトの訪問者に表示されるページを確認します。記事「Aloha spirits in Norther Norway」**&#x200B;のコンテンツまでスクロールダウンします。
+1. **プレビュー**&#x200B;に切り替えて、Web サイトの訪問者に表示されるページを確認します。記事「*Aloha spirits in Norther Norway*」のコンテンツまでスクロールダウンします。
 
    ![chlimage_1-178](assets/chlimage_1-178.png)
 
@@ -47,4 +47,4 @@ ht-degree: 74%
 
 ## その他の情報 {#further-information}
 
-詳しくは、オーサリングドキュメントを参照してください。 [レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md) または管理者ドキュメント [レイアウトコンテナとレイアウトモードの設定](/help/sites-administering/configuring-responsive-layout.md) 」を参照してください。
+技術的な詳細については、オーサリングドキュメントの[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)または管理者向けドキュメントの[レイアウトコンテナとレイアウトモードの設定](/help/sites-administering/configuring-responsive-layout.md)を参照してください。

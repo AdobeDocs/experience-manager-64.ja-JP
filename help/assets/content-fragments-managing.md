@@ -121,7 +121,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->これらの多くは、[Assets](managing-assets-touch-ui.md) や [ デスクトップアプリケーション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)に対する標準的なアクションです。
+>これらの多くは、[Assets](managing-assets-touch-ui.md) や [ デスクトップアプリケーション](https://helpx.adobe.com/jp/experience-manager/desktop-app/aem-desktop-app.html)に対する標準的なアクションです。
 
 ## フラグメントエディターを開く {#opening-the-fragment-editor}
 
@@ -253,7 +253,6 @@ ht-degree: 98%
 >* すべてのアセットの標準機能
 >* タイムラインで追加
 >* フラグメントアセットに関連付けられる
-
 >
 >注釈（コンテンツフラグメント用）は次のとおりです。
 >

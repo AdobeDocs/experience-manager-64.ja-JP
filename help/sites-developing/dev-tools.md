@@ -13,7 +13,7 @@ exl-id: 3c18feab-97a6-49f2-96be-7e7458199f5d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '392'
-ht-degree: 60%
+ht-degree: 88%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 60%
 
 JCR、Apache Sling または AEM のアプリケーションを開発するために、以下のツールセットが用意されています。
 
-* 一組の [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) と WebDAV。 CRXDE Lite は CRX／AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Lite を使用すると、ファイル（.jsp、.java など）、フォルダー、テンプレート、コンポーネント、ダイアログ、ノード、プロパティおよびバンドルを作成、編集することができ、さらに SVN によるロギングや統合が可能です。
+* [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) と WebDAV で構成されたツールセット。CRXDE Lite は CRX／AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Lite を使用すると、ファイル（.jsp、.java など）、フォルダー、テンプレート、コンポーネント、ダイアログ、ノード、プロパティおよびバンドルを作成、編集することができ、さらに SVN によるロギングや統合が可能です。
 
    CRX/AEMサーバーに直接アクセスできない場合、標準のコンポーネントと Java バンドルを拡張または変更してアプリケーションを開発する場合、または専用のデバッガー、コード補完および構文ハイライトが必要ない場合に、CRXDE Liteをお勧めします。
 
-* 統合開発環境で構成される 1 つのセット ( 例： [Eclipse](/help/sites-developing/howto-projects-eclipse.md) または [IntelliJ](/help/sites-developing/ht-intellij.md))、ビルドツール ( 例： [Apache Maven](/help/sites-developing/ht-projects-maven.md)) は、Adobeがリポジトリをファイルシステム（バージョン管理システムなど）にマッピングするために開発した FileVault です。Subversion)、バグトラッカーシステム ( 例：Jira)：中央依存関係管理システム ( 例：Apache Archiva) とビルド自動化システム ( 例：Apache Continuum)。
+* 統合開発環境（例：[Eclipse](/help/sites-developing/howto-projects-eclipse.md) または [IntelliJ](/help/sites-developing/ht-intellij.md)）、ビルドツール（例：[Apache Maven](/help/sites-developing/ht-projects-maven.md)）、リポジトリをファイルシステムにマッピングするために開発された FileVault、バージョン管理システム（例：Subversion）、バグ追跡システム（例：JIRA）、依存関係中央管理システム（例：Apache Archiva）およびビルド自動化システム（例：Apache Continuum）から構成されたツールセット。
 
    このセットアップで、アプリケーション（コンテンツ、コード、設定）をあらゆる開発環境とプロセスに完全に統合できます。リポジトリのファイルシステムは FileVault によって様々な要素間のリンクで表わされ、前述のすべての開発ツールでファイルを操作できます。
 
@@ -59,5 +59,5 @@ AEM には開発に役立つその他のツールが付属しています。
 
 >[!NOTE]
 >
->新しいAEMプロジェクトを開始する際には、次のチュートリアルが参考になる場合があります。\
->[AEM Sitesの概要第 1 部 — プロジェクトの設定](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html)
+>新しい AEM プロジェクトを開始する際には、次のチュートリアルが参考になる場合があります。\
+>[AEM Sites の概要（第 1 章）- プロジェクトの設定](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html)

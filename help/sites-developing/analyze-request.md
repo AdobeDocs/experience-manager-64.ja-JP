@@ -13,7 +13,7 @@ exl-id: 8582bbca-c11a-4880-88ba-da22e0301dba
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 27%
+ht-degree: 100%
 
 ---
 
@@ -21,32 +21,32 @@ ht-degree: 27%
 
 ## ダウンロード {#download}
 
-このスクリプトは、 `access.log` 後で処理するための読み取り可能なレポートを生成するファイル。
+このスクリプトは、`access.log` ファイルの分析を簡易化し、後の処理で役立つようにわかりやすいレポートを生成します。
 
 [ファイルを入手](assets/analyse-access.sh)
 
 ## 説明 {#description}
 
-このスクリプトは、 `access.log` 後で処理するための読み取り可能なレポートを生成するファイル。
+このスクリプトは、`access.log` ファイルの分析を簡易化し、後の処理で役立つようにわかりやすいレポートを生成します。
 
 このスクリプトは、リクエストの全体番号、GET 対 POST、リクエスト配信の推移など多くのデータを生成します。
 
-出力は Markdown 構文になっているので、pandoc などのツールを使用してPDFに変換したり、Markdown ビューアなどのプラグインを使用してブラウザーに表示したりすると、より簡単になります。
+出力は Markdown 構文で記述されるので、Pandoc などのツールを使用して PDF に容易に変換できます。また、Markdown ビューアなどのプラグインを使用すれば、ブラウザーに出力を容易に表示することもできます。
 
-コマンドラインで提供されたカスタムパスを分析できます。
+コマンドラインで指定されるカスタムパスも分析できます。
 
-ファイル内のコメントから、その実行方法を示すコメントを取得します。
+実行方法を示すファイル内のコメントを参照します。
 
-CQ を分析 `access.log` 様々な情報を推定し、Markdown の出力を生成する `stdout`.
+CQ `access.log` を分析して様々な情報を推測し、Markdown 出力を `stdout` で生成します。
 
 ## 使用方法 {#usage}
 
 `./analyse-access.sh access.log.2013-&ast;`
 
-コマンドラインで分析する追加のカスタムパスを指定できます。
+コマンドラインにカスタムパスを追加して、詳細に分析することもできます。
 
 `/analyse-access.sh access.log.2013-&ast; /my/custom/path/1 /my/custom/path/2`
 
-出力は、単純な配管で保存できます
+出力はシンプルなパイプ処理で保存できます。
 
 `./analyse-access.sh access.log.2013-&ast; | tee yr2013.md`

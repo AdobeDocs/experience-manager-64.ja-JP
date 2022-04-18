@@ -9,7 +9,7 @@ exl-id: 8c41dba4-bedc-4747-b67d-fd89d71c8b2c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '537'
-ht-degree: 81%
+ht-degree: 89%
 
 ---
 
@@ -32,14 +32,14 @@ ht-degree: 81%
 
 ## Assets {#assets}
 
-Dynamic Media機能やDynamic Media Classic統合を含む、Assets に関するベストプラクティスについては、次のトピックで説明します。
+Dynamic Media 機能や Dynamic Media Classic 統合などの、Assets のベストプラクティスについては、次のトピックで説明されています。
 
 <table> 
  <tbody>
   <tr>
-   <td>Assets の様々な領域でのベストプラクティスにより、負荷時のシステムの安定性とパフォーマンスを向上</td> 
+   <td>負荷時のシステムの安定性とパフォーマンスを向上を実現するための Assets における様々な領域でのベストプラクティス</td> 
    <td><a href="/help/assets/organize-assets.md">Assets のベストプラクティス</a></td> 
-   <td>Assets に関する様々な領域でのベストプラクティスガイドへのリンクが含まれています。 これらのガイドを確認すると、エンタープライズアセット管理システムを構築および管理する知識を習得し、そのツールを利用できるようになります。</td> 
+   <td>Assets に関する様々な領域でのベストプラクティスガイドへのリンクが記載されています。 これらのガイドを確認すると、エンタープライズアセット管理システムを構築および管理する知識を習得し、そのツールを利用できるようになります。</td> 
   </tr>
   <tr>
    <td>コンテンツの整理方法（フォルダー階層）</td> 

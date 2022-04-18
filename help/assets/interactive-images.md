@@ -15,23 +15,23 @@ role: User
 source-git-commit: cdee53ea75faa2e6d1a1ec6ca7aa8bf8b8840e46
 workflow-type: tm+mt
 source-wordcount: '4247'
-ht-degree: 79%
+ht-degree: 80%
 
 ---
 
 # インタラクティブ画像 {#interactive-images}
 
-「ショッパブル」ホットスポットを画像にドラッグドロップすることで、静的な画像をリッチで魅力的なエクスペリエンスに簡単に変えることができます。ショッパブルホットスポットは、製品やサービスに関する追加情報と、販売に直結する「買い物かごに追加」機能や「購入」機能を組み合わせています。顧客はこれらのホットスポットをタップして、製品やサービスに直接リンクしたり、買い物かごに追加したり、Web ページにリンクしたりできます。 直接的なエクスペリエンス（これらのエクスペリエンスにより、Web サイトでの顧客エンゲージメントとコンバージョンが増加します）。
+「ショッパブル」ホットスポットを画像にドラッグドロップすることで、静的な画像を、顧客にとってリッチで魅力的なエクスペリエンスに簡単に変えることができます。ショッパブルホットスポットは、製品やサービスに関する追加情報と、販売に直結する「買い物かごに追加」機能や「購入」機能を組み合わせています。顧客はこれらのホットスポットをタップして、製品やサービスに直接リンクしたり、買い物かごに追加したり、Web ページにリンクしたりできます。 直接的なエクスペリエンス（これらのエクスペリエンスにより、Web サイトでの顧客エンゲージメントとコンバージョンが増加します）。
 
 次に、クイックビューポップアップを含むショッパブルバナーを示します。モデルの上の円（「ホットスポット」）をタップすると、クイックビューがアクティブになります。
 
 ![chlimage_1-368](assets/chlimage_1-368.png)
 
-この Web ページの実際のインタラクティブ画像は、次の URL から参照してください。
+この web ページの実際のインタラクティブ画像は、次の URL から参照してください。
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html?lang=ja](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html?lang=ja)
 
-## インタラクティブ画像バナーの作成方法 {#watch-how-interactive-image-banners-are-created}
+## インタラクティブ画像バナーの作成方法をご覧ください。 {#watch-how-interactive-image-banners-are-created}
 
 [インタラクティブ画像バナーの作成方法](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner)を示す 10 分 33 秒のガイドをご覧ください。ここでは、インタラクティブ画像バナーのプレビュー、編集、配信方法も説明します。
 
@@ -81,7 +81,6 @@ ht-degree: 79%
 >
 >* クイックビューをトリガーして、画像にインタラクティブ機能を追加する。
 >* eコマースソリューション&#x200B;*（* IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
-
 >
 >AEM の実装で AEM eCommerce を使用している場合は、このタスクをスキップして次のタスクに進みます。
 
@@ -120,7 +119,7 @@ AEM Assets 内でバナー画像にホットスポットを追加する場合は
 
 このプロセスの実行中は、様々な製品カテゴリや製品タイプが含まれる Web サイトの様々な領域にアクセスすることが重要です。なぜなら、クイックビュー URL には、ある特定の Web サイトカテゴリに共通するが、Web サイトの異なる領域にアクセスした場合にのみ変化する部分が存在する場合があるからです。
 
-単純なケースでは、クイックビュー URL 内で変化する唯一の部分が製品 SKU となります。その場合、SKU の値が、ホットスポットをバナー画像に追加するために必要になる唯一のデータです。
+最も単純なケースでは、クイックビュー URL 内で変化する唯一の部分が製品 SKU となります。その場合、SKU の値が、ホットスポットをバナー画像に追加するために必要になる唯一のデータです。
 
 一方、複雑なケースでは、クイックビュー URL に SKU 以外の様々な要素が含まれます（カテゴリ ID、カラーコード、サイズコードなど）。その場合、各要素は AEM Assets のショッパブルインタラクティブ画像機能において、ホットスポットデータ定義内の個別の変数になります。
 
@@ -200,7 +199,7 @@ AEM Assets 内でバナー画像にホットスポットを追加する場合は
 1. 内 **[!UICONTROL リッチメディアタイプ]** プルダウンメニューで、「 **[!UICONTROL インタラクティブ画像]**.
 1. 「**作成**」をタップします。
 1. の **[!UICONTROL ビューアプリセットを編集]** ページで、 **[!UICONTROL 外観]** タブをクリックします。
-1. 次のいずれかの操作を行います。
+1. 次のいずれかの操作をおこないます。
 
    * 画像で使用する独自のホットスポット画像をアップロードするには、 **[!UICONTROL アセットピッカー]** アイコン内 **[!UICONTROL コンテンツを選択]** ページで、使用するホットスポット画像の場所に移動して選択し、 **[!UICONTROL チェックマーク]** アイコンが表示されます。
    * 定義済みのホットスポット画像を選択するには、 **[!UICONTROL ホットスポットギャラリー]** アイコンホットスポットギャラリーパレットで、使用するホットスポット画像をタップします。
@@ -362,7 +361,7 @@ AEM Sites のユーザーである場合は、インタラクティブメディ�
 <img class="img-responsive" width="100%" title="Hero Image 2" alt="Hero Image 2" src="images/shoppable-banner.jpg">
 ```
 
-統合は、`IMG` タグを削除して AEM Assets からコピーした埋め込みコードに置き換えるだけで簡単にできます。次の URL で結果を確認できます。これは、3 つの円のホットスポットを含むページ上でショッパブルインタラクティブ画像を表示します。
+統合は、`IMG` タグを削除して AEM Assets からコピーした埋め込みコードに置き換えるだけで簡単にできます。以下の URL を確認すると、ページ上に 3 つの円のホットスポットを伴うショッパブルインタラクティブ画像が表示されています。
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html?lang=ja](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html?lang=ja)
 
@@ -404,7 +403,7 @@ AEM Sites のユーザーである場合は、インタラクティブメディ�
 
 * ショッパブルインタラクティブ画像から送出されるイベントをリッスンします。
 * ホットスポットデータに基づいてクイックビュー URL を作成します。
-* バックエンドからクイックビューを読み込み、画面上の表示用にレンダリングするプロセスを起動します。
+* バックエンドからクイックビューを読み込み、表示用に画面にレンダリングするプロセスをトリガーします。
 
 AEM Assets によって返される埋め込みコードには、次のハイライトされたコードのように、既にすぐに使用可能なイベントハンドラーがコメントアウトされた状態で含まれています。
 

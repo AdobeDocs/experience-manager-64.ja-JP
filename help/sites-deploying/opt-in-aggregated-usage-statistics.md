@@ -13,7 +13,7 @@ exl-id: f3cfa30a-ca15-48db-bacf-1aebbd0ad458
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '298'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
@@ -27,13 +27,13 @@ AEM とのやり取りの状況に関する統計情報をアドビに送信す�
 
 >[!NOTE]
 >
->様々なデータ保護およびプライバシー規制があります。例えば、GDPR や CCPA などが含まれます。 AEM Sitesは、お客様がデータ保護やプライバシーコンプライアンスに関する義務を果たすのを支援する準備が整っています。 このページでは、集計した使用状況の統計の収集をオプトイン（またはオプトアウト）する手順を説明します。
+>GDPR や CCPA など、様々なデータ保護およびプライバシー規制があります。AEM Sites では、データ保護やプライバシーコンプライアンスに関する義務をお客様が果たすのを支援する準備が整っています。 このページでは、集計した使用状況の統計の収集をオプトイン（またはオプトアウト）する手順を説明します。
 >
->詳しくは、 [Adobeプライバシーセンター](https://www.adobe.com/jp/privacy.html).
+>詳しくは、[アドビのプライバシーセンター](https://www.adobe.com/jp/privacy.html)も参照してください。
 
 >[!NOTE]
 >
->また、 [Web コンソール](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) AEMオプトイン画面でオプトインオプションを選択しない場合もあります。
+>また、[web コンソール](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console)を使用するか、AEM オプトイン画面でオプトインオプションを選択しないことで、いつでもオプトアウトすることができます。
 
 ## タッチ UI を使用したオプトイン {#opt-in-by-using-the-touch-ui}
 
@@ -57,11 +57,11 @@ AEM を初めて起動したときに、タッチ UI を次のように使用し
 
 Web コンソールを次のように使用してオプトイン（またはオプトアウト）することができます。
 
-1. AEMナビゲーション画面で、 **ツール** その後 **運用**.
+1. AEM ナビゲーション画面で、**ツール**／**操作** の順にクリックします。
 
-   ![usage_statisticshopsdashboard](assets/usage_statisticsopsdashboard.png)
+   ![usage_statisticsopsdashboard](assets/usage_statisticsopsdashboard.png)
 
-1. 「操作」ウィンドウで、 **Web コンソール**.
+1. 操作ウィンドウで「**Web コンソール**」をクリックします。
 
    ![usage_statisticswebconsole](assets/usage_statisticswebconsole.png)
 
@@ -70,7 +70,7 @@ Web コンソールを次のように使用してオプトイン（またはオ�
 
    ![usage_statisticscollectedit](assets/usage_statisticscollectionedit.png)
 
-1. を選択します。 **有効** チェックボックス。 または、使用状況の統計の収集をオプトアウトする場合は、このチェックボックスの選択を解除できます。
+1. 「**Enabled**」チェックボックスをオンにします。または、使用状況の統計の収集をオプトアウトする場合は、このチェックボックスをオフにします。
 
    ![usage_statisticsselect](assets/usage_statisticsselect.png)
 

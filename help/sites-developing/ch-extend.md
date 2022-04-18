@@ -13,7 +13,7 @@ exl-id: 15b17bed-3422-43cf-b1af-91d9e0c5dfcb
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '650'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -51,7 +51,7 @@ myStoreCandidate = function(){};
 ContextHub.Utils.inheritance.inherit(myStoreCandidate,ContextHub.Store.PersistedStore);
 ```
 
-実際には、カスタムストア候補は追加の関数を定義するか、ストアの初期設定を上書きします。いくつかの[サンプルストア候補](/help/sites-developing/ch-samplestores.md)が、`/libs/granite/contexthub/components/stores` の下にあるリポジトリーにインストールされています。これらのサンプルを参考にするには、CRXDE Lite を使用して JavaScript ファイルを開きます。
+実際には、カスタムストア候補は追加の関数を定義するか、ストアの初期設定を上書きします。いくつかの[サンプルストア候補](/help/sites-developing/ch-samplestores.md)が、`/libs/granite/contexthub/components/stores` の下にあるリポジトリにインストールされています。これらのサンプルを参考にするには、CRXDE Lite を使用して JavaScript ファイルを開きます。
 
 ### ContextHub ストア候補の登録 {#registering-a-contexthub-store-candidate}
 
@@ -72,13 +72,13 @@ ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
 
 [ContextHub に付属してインストールされる](/help/sites-developing/ch-samplemodules.md) UI モジュールタイプが要件を満たさない場合は、カスタム UI モジュールタイプを作成できます。UI モジュールタイプを作成するには、`ContextHub.UI.BaseModuleRenderer` クラスを拡張して `ContextHub.UI` に登録し、新しい UI モジュールレンダラーを作成します。
 
-UI モジュールレンダラーを作成するには、UI モジュールをレンダリングするロジックを格納する `Class` オブジェクトを作成します。少なくとも、このクラスは次のアクションを実行する必要があります。
+UI モジュールレンダラーを作成するには、UI モジュールをレンダリングするロジックを格納している `Class` オブジェクトを作成します。少なくとも、このクラスは次のアクションを実行する必要があります。
 
 * `ContextHub.UI.BaseModuleRenderer` クラスを拡張します。このクラスは、すべての UI モジュールレンダラーのベースとなる実装です。`Class` オブジェクトは、このクラスが拡張されていることを示すために使用する `extend` というプロパティを定義します。
 
 * デフォルトの設定を指定します。`defaultConfig` プロパティを作成します。このプロパティは、[`contexthub.base`](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) UI モジュール用に定義されているプロパティと、必要なその他すべてのプロパティを含むオブジェクトです。
 
-のソース `ContextHub.UI.BaseModuleRenderer` は/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js にあります。  レンダラーを登録するには、[`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) クラスの `ContextHub.UI` メソッドを使用します。モジュールタイプの名前を指定する必要があります。管理者がこのレンダラーをベースとして UI モジュールを作成する場合は、この名前を指定します。
+`ContextHub.UI.BaseModuleRenderer` のソースは、/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js にあります。レンダラーを登録するには、[`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) クラスの `ContextHub.UI` メソッドを使用します。モジュールタイプの名前を指定する必要があります。管理者がこのレンダラーをベースとして UI モジュールを作成する場合は、この名前を指定します。
 
 レンダラークラスを作成し、自己実行型匿名関数に登録します。次の例は、contexthub.browserinfo UI モジュールのソースコードをベースとしています。この UI モジュールは、`ContextHub.UI.BaseModuleRenderer` クラスのシンプルな拡張です。
 

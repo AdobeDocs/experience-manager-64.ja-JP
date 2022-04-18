@@ -1,5 +1,5 @@
 ---
-title: ページの差分
+title: 'ページの差分 '
 seo-title: Page Diff
 description: ページの差分表示を使用すると、2 つのページを並べて比較し、差分を強調表示できます。
 seo-description: The page diff feature allows for the convenient side-by-side comparison of two pages with their differences highlighted.
@@ -17,7 +17,7 @@ ht-degree: 95%
 
 ---
 
-# ページの差分{#page-diff}
+# ページの差分 {#page-diff}
 
 ## はじめに {#introduction}
 
@@ -77,15 +77,15 @@ ht-degree: 95%
 
 ### 全画面表示および終了 {#fullscreen-and-exiting}
 
-特定のコンテンツに集中するために、並列比較による差分表示のいずれかの「側」の全画面表示アイコンをクリックして、それをフルブラウザーウィンドウに拡大することができます。
+特定のコンテンツに集中するには、並列比較による差分表示のいずれかの「サイド」の全画面表示アイコンをクリックすると、ブラウザーの全画面に拡大することができます。
 
 ![](do-not-localize/chlimage_1-24.png)
 
-選択された側がウィンドウ全体に表示されますが、バーは上部に残るので、2 枚のページを切り替えることができます。
+選択されたサイドが画面全体に表示されますが、バーは上部に残るので、2 枚のページを切り替えることができます。
 
 ![chlimage_1-356](assets/chlimage_1-356.png)
 
-また全画面表示終了アイコンをクリックして、全画面表示を閉じることができます。
+また全画面表示を終了するアイコンをクリックして、全画面表示を閉じることができます。
 
 ![](do-not-localize/chlimage_1-25.png)
 

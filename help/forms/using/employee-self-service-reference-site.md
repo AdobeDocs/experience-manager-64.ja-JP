@@ -15,7 +15,7 @@ ht-degree: 83%
 
 ---
 
-# 従業員セルフサービス リファレンスサイトのチュートリアル {#employee-self-service-reference-site-walkthrough}
+# 従業員セルフサービスリファレンスサイトのチュートリアル {#employee-self-service-reference-site-walkthrough}
 
 ## 前提条件 {#prerequisite}
 

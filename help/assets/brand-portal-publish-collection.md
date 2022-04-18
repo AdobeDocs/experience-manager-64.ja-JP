@@ -8,7 +8,7 @@ exl-id: c2c6759e-f763-405e-9e45-5a90b9d32df2
 source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
 source-wordcount: '323'
-ht-degree: 41%
+ht-degree: 62%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 41%
 
 Adobe Experience Manager Assets 管理者は、コレクションを [!DNL Experience Manager Assets Brand Portal] 組織のインスタンス。 ただし、最初に Assets を Brand Portal と統合する必要があります。詳しくは [ Assets と Brand Portal の連携の設定](configure-aem-assets-with-brand-portal.md)を参照してください。
 
-その後、Assets 内の元のコレクションに変更を加えても、そのコレクションを再度公開するまで、変更はBrand Portalに反映されません。 この特性により、作業中の変更がBrand Portalでは利用できなくなります。 管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
+その後、 Assets でオリジナルのコレクションに変更を加えても、そのコレクションを再び公開しない限り変更内容は Brand Portal に反映されません。このため、作業中の変更が Brand Portal に提供されることがありません。管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ Adobe Experience Manager Assets 管理者は、コレクションを [!DNL Exper
 
 ## コレクションを非公開にする {#unpublish-collections}
 
-Assets からBrand Portalに公開したコレクションを非公開にできます。 元のコレクションを非公開にすると、そのコピーはBrand Portalのユーザーは使用できなくなります。
+ Assets から Brand Portal へ公開したコレクションを非公開にすることができます。元のコレクションを非公開にすると、Brand Portal のユーザーはそのコピーを使用できなくなります。
 
 1. コレクションコンソールから、 [!DNL Assets] インスタンスを選択し、非公開にするコレクションを選択します。
 

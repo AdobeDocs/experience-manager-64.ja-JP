@@ -18,7 +18,7 @@ ht-degree: 100%
 
 ---
 
-# ローンチの編集{#editing-launches}
+# ローンチの編集 {#editing-launches}
 
 ## ローンチページの編集 {#editing-launch-pages}
 
@@ -45,7 +45,7 @@ ht-degree: 100%
 
 ## ローンチページとそのソースページの比較 {#comparing-a-launch-page-to-its-source-page}
 
-おこなった変更を追跡するために、ローンチを&#x200B;**参照**&#x200B;で表示して、ローンチページをそのソースページと比較することができます。
+行った変更を追跡するために、ローンチを&#x200B;**参照**&#x200B;で表示して、ローンチページをそのソースページと比較することができます。
 
 1. **サイト**&#x200B;コンソールで、[ローンチのソースページに移動してそれを選択します](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
 1. **[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開いて、「**ローンチ**」を選択します。
@@ -99,6 +99,6 @@ ht-degree: 100%
 
 ## ページのローンチステータスの確認 {#discovering-the-launch-status-of-a-page}
 
-「参照」タブから特定のローンチを選択すると、ステータスが表示されます（[「参照」のローンチ（Sites コンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)を参照）。
+「参照」タブから特定のローンチを選択すると、ステータスが表示されます（[「参照」のローンチ（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)を参照）。
 
 ![chlimage_1-97](assets/chlimage_1-97.png)

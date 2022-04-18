@@ -14,7 +14,7 @@ exl-id: 183ed9c6-6a9a-4932-8405-5ae2c6fac1ec
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '827'
-ht-degree: 84%
+ht-degree: 95%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 84%
 
 ## AEM 6.2 Forms または AEM 6.3 Forms から AEM 6.4 Forms へのアップグレード {#upgrade-aem-forms-62-63-to-64}
 
-AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグレードすることができます。以下の操作を実行します。
+AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグレードすることができます。次の手順を実行します。
 
 1. 既存の AEM インスタンスを AEM 6.4 にアップグレードします。手順は次のとおりです。
 
@@ -39,13 +39,13 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
 
       `chmod -R 755 ../crx-quickstart`
 
-   1. AEMインスタンスをAEM 6.3 にアップグレードします。詳しい手順については、 [AEM 6.4 へのアップグレード](/help/sites-deploying/upgrade.md).
+   1. AEM インスタンスを AEM 6.3 にアップグレードします。詳しい手順については、[AEM 6.4 Forms へのアップグレード](/help/sites-deploying/upgrade.md)を参照してください。
 
       次の手順に進む前に、ServiceEvent REGISTERED および ServiceEvent UNREGISTERED メッセージが &lt;crx-repository>/error.log ファイルに出現しなくなるまで待ちます。
 
       >[!NOTE]
       >
-      >サーバーが起動して実行した後、いくつかの AEM Forms バンドルはインストール状態のままです。バンドルの数はインストールごとに異なる可能性があります。これらのバンドルの状態は無視しても問題はありません。バンドルは次の場所に表示されます。 `https://[server]:[port]/system/console/`.
+      >サーバーが起動して実行した後、いくつかの AEM Forms バンドルはインストール状態のままです。バンドルの数はインストールごとに異なる可能性があります。これらのバンドルの状態は無視しても問題はありません。バンドルは `https://[server]:[port]/system/console/` にリストされます。
 
 
 1. AEM Forms アドオンパッケージのインストール. 手順は次のとおりです。
@@ -54,12 +54,12 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
    1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
    1. 「**[!UICONTROL フィルター]**」セクションで、
       1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
-      1. パッケージのバージョンとタイプを選択します。 また、 **[!UICONTROL ダウンロードを検索]** 」オプションを使用して結果をフィルターします。
-   1. 使用するオペレーティングシステムに適したパッケージ名をタップし、「 」を選択します。 **[!UICONTROL 使用許諾契約書に同意する]**&#x200B;をタップし、 **[!UICONTROL ダウンロード]**.
-   1. [パッケージマネージャー](https://docs.adobe.com/content/help/ja/experience-manager-65/administering/contentmanagement/package-manager.html)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
-   1. パッケージを選択し、 **[!UICONTROL インストール]**.
+      1. パッケージのバージョンとタイプを選択します。 「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
+   1. お使いのオペレーティングシステムに適したパッケージの名前をタップし、「**[!UICONTROL EULA 利用規約に同意する]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
+   1. [パッケージマネージャー](https://docs.adobe.com/content/help/ja/experience-manager-65/administering/contentmanagement/package-manager.html)を開き、「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
+   1. パッケージを選択して、「**[!UICONTROL インストール]**」をクリックします。
 
-      また、 [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) 記事。
+      「[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)」記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
 
       >[!NOTE]
       >
@@ -76,7 +76,7 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
 
    * **移行ユーティリティの実行**
 
-      移行ユーティリティにより、以前のバージョンのアダプティブフォームや対応する管理アセットが AEM 6.4 Forms で使用できるようになります。このユーティリティは、AEM Software Distribution からダウンロードできます。 移行ユーティリティの詳しい設定方法と使用方法については、[移行ユーティリティ](/help/forms/using/migration-utility.md)に関する説明を参照してください。
+      移行ユーティリティにより、以前のバージョンのアダプティブフォームや対応する管理アセットが AEM 6.4 Forms で使用できるようになります。このユーティリティは、AEM ソフトウェア配布からダウンロードできます。 移行ユーティリティの詳しい設定方法と使用方法については、[移行ユーティリティ](/help/forms/using/migration-utility.md)に関する説明を参照してください。
 
       [ドラフト統合とコンポーネント送信のサンプル](integrate-draft-submission-database.md)をデータベースで使用して旧バージョンのアップグレードを行う場合は、アップグレードの実行後に、以下の SQL クエリを実行してください。
 
@@ -92,7 +92,7 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
       WHERE `key` = 'dataType'
       ```
 
-   * **(AEM 6.2 Formsまたは以前のバージョンからのアップグレードのみの場合 )Adobe Signの再設定**
+   * **Adobe Sign の再設定（AEM 6.2 Forms 以前のバージョンをアップグレードする場合のみ）**
 
       Adobe Sign を以前のバージョンの AEM Forms で設定してある場合は、AEM Cloud サービスから Adobe Sign を再設定します。詳細については、「[Adobe Sign を AEM Forms に統合する](/help/forms/using/adobe-sign-integration-adaptive-forms.md)」を参照してください。
 

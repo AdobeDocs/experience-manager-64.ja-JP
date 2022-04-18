@@ -13,7 +13,7 @@ exl-id: 04075ed1-3a52-4371-aa4e-0c3d61c878ef
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '313'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 >[!NOTE]
 >
->次の表で、 **ショートカット** 列の Ctrl キーと Command キーの両方がmacOSで機能します。
+>以下の表の&#x200B;**ショートカット**&#x200B;列のキーの組み合わせは、macOS では Ctrl キーと Cmd キーの両方で動作します。
 
 >[!NOTE]
 >
@@ -31,7 +31,6 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 >
 >* Windows：Ctrl キーを押しながら必要なコンポーネントをクリックします。
 >* Mac：Cmd キーを押しながら必要なコンポーネントをクリックします。
-
 >
 
 
@@ -47,22 +46,22 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr> 
    <td>編集モード</td> 
    <td><code>Ctrl-z</code></td> 
-   <td>最後におこなった変更操作を取り消す.</td> 
+   <td>最後の変更を取り消します。</td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td><code>Ctrl-y</code></td> 
-   <td>最後におこなった変更操作をやり直す.</td> 
+   <td>最後の変更をやり直します。</td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td><strong><code>Shift-Click</code></strong></td> 
-   <td>複数の段落を選択する.</td> 
+   <td>複数の段落を選択します。</td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td><strong><code>Ctrl-Click</code></strong></td> 
-   <td>複数の段落を選択する.</td> 
+   <td>複数の段落を選択します。</td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -72,7 +71,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr> 
    <td> </td> 
    <td><strong><code>Ctrl-X</code></strong></td> 
-   <td>選択した段落をカットします。<strong><br />注意：</strong>カットされた段落は、新しい位置に貼り付けられるまでは非表示になります。</td> 
+   <td>選択した段落をカットします。<strong><br />注：</strong>カットされた段落は、新しい位置に貼り付けられるまでは非表示になります。</td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -97,8 +96,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr> 
    <td> </td> 
    <td><strong><code>Alt-right-click</code></strong></td> 
-   <td>デフォルト（ブラウザー）のコンテキストメニューを強制的に表示します。<br />
-<strong>注意：</strong>AEM のコンテキストメニューはクラシック UI にのみ表示されます。</td> 
+   <td>デフォルト（ブラウザー）のコンテキストメニューを強制的に表示します。<br /><strong>注意：</strong>AEM のコンテキストメニューはクラシック UI にのみ表示されます。</td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -168,7 +166,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   </tr> 
   <tr> 
    <td>編集モード</td> 
-   <td>URL に次のサフィックスを設定します。<br /> <code>?debugClientLibs=true</code><br /> その後、次を使用します。<br /> <strong><code>Ctrl-Shift-U</code></strong></td> 
+   <td>URL に次のサフィックスを設定します。<br /> <code>?debugClientLibs=true</code><br /> 次に、以下を使用します。<br /> <strong><code>Ctrl-Shift-U</code></strong></td> 
    <td>ページ読み込みのタイミングの統計を確認します。</td> 
   </tr> 
  </tbody> 

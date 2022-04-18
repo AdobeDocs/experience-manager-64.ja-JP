@@ -12,7 +12,7 @@ exl-id: 364dd7f3-9009-440e-8aff-28e2dac08fe7
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1278'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ ROI を最大化するには、顧客がサービスをどのように利用し�
 
 ## ソリューション {#the-solution}
 
-AEM Formsとの統合 [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html) ソリューション — [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html) および [Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html)  — フォームのパフォーマンスを監視および分析するのに役立ち、コンバージョン率の向上につながるエクスペリエンスを実験して特定できます。
+AEM Forms は、[Adobe Marketing Cloud](https://www.adobe.com/jp/marketing-cloud.html) ソリューション（[Adobe Analytics](https://www.adobe.com/jp/marketing-cloud/web-analytics.html) と[Adobe Target](https://www.adobe.com/jp/marketing-cloud/testing-targeting.html)）に統合されているため、フォームのパフォーマンスをモニタリングして分析し、コンバージョン率を上げるためのエクスペリエンスを開発することができます。
 
 ## ワークフロー {#the-workflow}
 
@@ -68,11 +68,11 @@ AEM Formsとの統合 [Adobe Marketing Cloud](https://www.adobe.com/marketing-cl
 1. AEM で AEM Forms Analytics Configuration サービスを設定
 1. AEM でフォームの Analytics を有効化
 
-詳細な手順については、 [アダプティブフォームの分析とレポートの設定](/help/forms/using/configure-analytics-forms-documents.md).
+手順について詳しくは、[アダプティブフォームの分析とレポートの設定](/help/forms/using/configure-analytics-forms-documents.md)を参照してください。
 
 **Target の設定**
 
-アダプティブフォームで A/B テストを作成して実行するには、AEM Formsで Target を設定します ( [AEM Formsでの Target の設定と統合](/help/forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p).
+アダプティブフォームで A/B テストを作成および実行するには、[AEM Forms での Target の設定と統合](/help/forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p)を参考にして AEM Forms で Target を設定してください。
 
 #### 手順 2：分析レポートの表示 {#step-view-analytics-report-br}
 

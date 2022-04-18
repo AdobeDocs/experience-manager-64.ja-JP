@@ -8,7 +8,7 @@ exl-id: 1b931fef-eed0-4758-993d-cdf8d478fb6f
 source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
 source-wordcount: '1939'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -190,7 +190,7 @@ ht-degree: 96%
 
    ![chlimage_1-83](assets/chlimage_1-83.png)
 
-   詳しくは、 [翻訳ジョブのステータスの監視](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job).
+   詳しくは、[翻訳ジョブのステータスの監視](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)を参照してください。
 
 1. 翻訳が完了すると、ステータスが「レビューへの準備完了」に変更されます。Assets UI に移動し、翻訳済みアセットそれぞれのプロパティページを開き、翻訳されたメタデータを表示します。
 
@@ -203,7 +203,7 @@ ht-degree: 96%
 
 ### 新しい翻訳プロジェクトを作成 {#create-a-new-translation-project-1}
 
-このオプションを使用すると、言語コピーを更新する一連のアセットに対して翻訳プロジェクトが作成されます。
+このオプションを使用すると、言語コピーを更新するアセットのセットについて翻訳プロジェクトが作成されます。
 
 1. Assets UI で、アセットを追加したソースフォルダーを選択します。
 1. **[!UICONTROL 参照]**&#x200B;パネルを開き、「**[!UICONTROL コピー]**」の下の「**[!UICONTROL 言語コピー]**」をクリックまたはタップして言語コピーのリストを表示します。

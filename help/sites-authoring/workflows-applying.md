@@ -1,5 +1,5 @@
 ---
-title: ページへのワークフローの適用
+title: 'ページへのワークフローの適用 '
 seo-title: Applying Workflows to Pages
 description: オーサリングでは、ワークフローを呼び出して、ページにアクションを実行することができます。複数のワークフローを適用することもできます。
 seo-description: When authoring, you can invoke workflows to take action on your pages; it is also possible to apply more than one workflow..
@@ -17,13 +17,14 @@ ht-degree: 100%
 
 ---
 
-# ページへのワークフローの適用{#applying-workflows-to-pages}
+# ページへのワークフローの適用 {#applying-workflows-to-pages}
 
 オーサリングでは、ワークフローを呼び出して、ページにアクションを実行することができます。複数のワークフローを適用することもできます。
 
 ワークフローを適用する際には、次の情報を指定します。
 
 * 適用されるワークフロー。
+
 
    （AEM 管理者によって割り当てられた、アクセス権限がある）任意のワークフローを適用できます。
 
@@ -40,7 +41,7 @@ ht-degree: 100%
 >関連トピック：
 >
 >* [DAM アセットにワークフローを適用する方法](/help/assets/assets-workflow.md)
->* [プロジェクトワークフローの操作](/help/sites-authoring/projects-with-workflows.md)
+>* [プロジェクトワークフローの操作](/help/sites-authoring/projects-with-workflows.md)。
 >
 
 
@@ -48,7 +49,7 @@ ht-degree: 100%
 >
 >AEM 管理者は[他のいくつかの方法を使用してワークフローを開始できます](/help/sites-administering/workflows-starting.md)。
 
-## サイトコンソールからのワークフローの開始 {#starting-a-workflow-from-the-sites-console}
+## Sites コンソールからのワークフローの開始 {#starting-a-workflow-from-the-sites-console}
 
 ワークフローは以下のいずれかから開始できます。
 
@@ -59,7 +60,7 @@ ht-degree: 100%
 
 * [ワークフローの作成ウィザードでワークフロー詳細を指定](#specifying-workflow-details-in-the-create-workflow-wizard)
 
-### サイトツールバーからのワークフローの開始 {#starting-a-workflow-from-the-sites-toolbar}
+### Sites ツールバーからのワークフローの開始 {#starting-a-workflow-from-the-sites-toolbar}
 
 **サイト**&#x200B;コンソールのツールバーからワークフローを開始できます。
 
@@ -106,10 +107,9 @@ ht-degree: 100%
    * **パッケージタイトル**
 
       * 識別を容易にするために、パッケージのタイトルを指定できます。
-
    >[!NOTE]
    >
-   >ワークフローがマルチリソースサポートのために設定されており、複数のリソースが選択されている場合は、**ワークフローパッケージを維持**&#x200B;オプションが使用できます。[](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)
+   >ワークフローが[マルチリソースサポート](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)のために設定されており、複数のリソースが選択されている場合は、**ワークフローパッケージを維持**&#x200B;オプションが使用できます。
 
    完了したら、「**次へ**」を使用して続行します。
 
@@ -124,9 +124,9 @@ ht-degree: 100%
 
          ダイアログが開いて、以下のものに従って選択を絞り込むことができます。
 
-         * 直近の子のみを含める.
-         * 変更されたページのみを含める.
-         * 既に公開済みのページのみを含める.
+         * 直近の子のみを含める。
+         * 変更されたページのみを含める。
+         * 既に公開済みのページのみを含める。
 
          指定された子は、ワークフローが適用されるリソースのリストに追加されます。
 

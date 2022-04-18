@@ -88,7 +88,7 @@ css.txt の内容を次のように設定します。：
 * 名前：**`embed`**
 * 型：**`String`**
 
-* クリック **`Multi`**
+* Click **`Multi`**
 * 値：**`cq.social.scf`**
 
    *&lt;enter> ダイアログがポップアップ表示されます*
@@ -129,7 +129,7 @@ include ステートメントは、 `<head>` セクション `<html>` スクリ�
 
 1. 使用 **[!UICONTROL CRXDE Lite]**&#x200B;を選択します。 **`/libs/foundation/components/page/headlibs.jsp`**
 1. 右クリックして「 」を選択します。 **[!UICONTROL コピー]** （または、ツールバーから「コピー」を選択します）。
-1.  **`/apps/an-scf-sandbox/components/playpage`**
+1. 選択 **`/apps/an-scf-sandbox/components/playpage`**
 1. 右クリックして「 」を選択します。 **[!UICONTROL 貼り付け]** （または、ツールバーから「貼り付け」を選択します）。
 1. ダブルクリック **`headlibs.jsp`** 開ける
 1. ファイルの末尾に次の行を追加します。

@@ -1,5 +1,5 @@
 ---
-title: オファーの作成と管理
+title: 'オファーの作成と管理 '
 seo-title: Creating and Managing Offers
 description: アクティビティエクスペリエンスで使用するオファーを作成するには、オファーコンソールを使用します。
 seo-description: Use the Offers console to create offers that you can use in activity experiences
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# オファーの作成と管理{#creating-and-managing-offers}
+# オファーの作成と管理 {#creating-and-managing-offers}
 
 [アクティビティエクスペリエンスで使用](/help/sites-authoring/content-targeting-touch.md)するオファーを作成するには、オファーコンソールを使用します。複数のエクスペリエンスが同じオファーを必要とする場合は、オファーコンソールでオファーを作成すると時間の短縮になります。
 

@@ -1,5 +1,5 @@
 ---
-title: Adobe Target クラウドサービスの設定
+title: Adobe Target Cloud Service の設定
 seo-title: Configuring Adobe Target Cloud Service
 description: このページでは、ユーザーおよびグループに対して適切な権限のセットを取得し、クラウドサービスを作成し、アクティビティ用にアプリケーションを設定して、最終的にコンテンツを生成する方法について説明します。
 seo-description: Follow this page to understand how to get right set of permissions for users and groups, creating cloud services, configuring the application for the activity, and finally generating the content.
@@ -17,7 +17,7 @@ ht-degree: 44%
 
 ---
 
-# Adobe Target クラウドサービスの設定 {#configuring-adobe-target-cloud-service}
+# Adobe Target Cloud Service の設定 {#configuring-adobe-target-cloud-service}
 
 >[!NOTE]
 >

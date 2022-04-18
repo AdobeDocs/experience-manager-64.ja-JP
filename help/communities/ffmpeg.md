@@ -41,7 +41,7 @@ FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしている�
 
    システム内の任意のディレクトリから FFmpeg を実行できるはずです。
 
-   * 例： `ffmpeg -version`
+   * 例：`ffmpeg -version`
 
 ## FFmpeg トランスコーディングサービスの設定 {#configure-ffmpeg-transcoding-service}
 

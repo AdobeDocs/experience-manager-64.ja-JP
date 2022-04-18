@@ -171,8 +171,8 @@ MongoDB 共通ストアをテストおよび検証するために、パブリッ
 
    * Solr ダッシュボードを参照します。 [http://localhost:8983/solr/](http://localhost:8983/solr/)
    * ユーザー `core selector` 選択 `collection1`
-   *  `Query`
-   *  `Execute Query`
+   * 選択 `Query`
+   * 選択 `Execute Query`
 
    ![chlimage_1-194](assets/chlimage_1-194.png)
 

@@ -13,13 +13,13 @@ exl-id: 8b83e8d2-09ad-4010-a69a-2af1907a1ca6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '429'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 # コンポーネント{#components}
 
-Adobe Experience Manager（AEM）には、すぐに使用できる様々なコンポーネントが付随しており、Web サイト作成者は包括的な機能を使用できます。これらの機能は、[ページの編集時](/help/sites-authoring/editing-content.md)に使用でき、フィルタリングのために主な機能領域（コンポーネントグループと呼ばれます）でグループ化されています。
+Adobe Experience Manager（AEM）には、すぐに使用できる様々なコンポーネントが付随しており、Web サイト作成者は包括的な機能を使用できます。これらの機能は、[ページの編集](/help/sites-authoring/editing-content.md)時に使用でき、フィルタリングのために主な機能領域（コンポーネントグループと呼ばれます）でグループ化されています。
 
 コンポーネントは、[ページの編集](/help/sites-authoring/editing-content.md)時に使用できます。フィルター処理のために、コンポーネントは主要な機能領域（コンポーネントグループ）によってグループ化されます。
 
@@ -41,9 +41,9 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 * [コンテンツの編集 - 全画面表示モード](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
 ページへのコンポーネントの追加について詳しくは、[ページのコンテンツの編集](/help/sites-authoring/editing-content.md)を参照してください。\
-コンポーネントは、コンポーネントグループと呼ばれる様々なカテゴリに従って並べ替えられます。このようなコンポーネントグループの例を次に示します。
+コンポーネントは、コンポーネントグループと呼ばれる様々なカテゴリーに従って並べ替えられます。このようなコンポーネントグループの例を次に示します。
 
-* **We.Retail**：[We.Retail 参照実装](/help/sites-developing/we-retail.md)で使用するためにプロキシ設定されコアコンポーネントが含まれています。
+* **We.Retail**：[We.Retail 参照実装](/help/sites-developing/we-retail.md)で使用するためにプロキシ設定されたコアコンポーネントが含まれています。
 
 * **We.Retail コマース**：カートや商品グリッドなどのコマースコンポーネントが含まれています。
 
@@ -59,9 +59,9 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 
 * [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) - コアコンポーネントは柔軟かつ機能豊富なオーサリング機能を提供します。ページを作成するうえで不可欠なコンテンツタイプが用意されています。
 
-* [コミュニティ](/help/communities/author-communities.md) - コンポーネントには、Web サイトのインタラクティブな機能（フォーラムやコメントなど）が用意されています。これらのコンポーネントの多くは、 [コミュニティサイト](/help/communities/overview.md) が作成されました。
+* [コミュニティ](/help/communities/author-communities.md) - コンポーネントには、web サイトのインタラクティブな機能（フォーラムやコメントなど）が用意されています。このコンポーネントの多くは[コミュニティサイト](/help/communities/overview.md)の作成時に追加されます。
 
-* [e コマース](/help/sites-administering/ecommerce.md) - AEMの e コマース機能には、様々なコンポーネントも含まれています。実際の使用方法は、使用しているコマースエンジンによって異なります。
+* [e コマース](/help/sites-administering/ecommerce.md) - AEM の e コマース機能にも様々なコンポーネントが含まれています。実際の使用方法は、使用しているコマースエンジンによって異なります。
 
 ### コンポーネントの設定 {#configuring-components}
 

@@ -12,13 +12,13 @@ exl-id: ad669f3b-2bda-4c41-8032-cf25a192ce12
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '939'
-ht-degree: 40%
+ht-degree: 95%
 
 ---
 
 # HTML5 フォームの Form Bridge API {#form-bridge-apis-for-html-forms}
 
-Form Bridge API を使用して、XFA ベースのHTML5 フォームとアプリケーションの間の通信チャネルを開くことができます。 Form Bridge API は **接続** 接続を作成する API。
+各種 Form Bridge API を使用すると、XFA ベースの HTML5 フォームとお使いのアプリケーション間の通信チャネルを開くことができます。これらの Form Bridge API では接続作成用の&#x200B;**接続** API を使用できます。
 
 **接続** API はハンドラーを引数として受け入れます。XFA ベースの接続 5 フォームと Form Bridge 間の接続が正常にHTMLされると、ハンドルが呼び出されます。
 
@@ -46,17 +46,17 @@ window.addEventListener("FormBridgeInitialized",
 スクリプティングライブラリのバージョン番号を返す
 
 * **入力**：なし
-* **出力**:スクリプトライブラリのバージョン番号
+* **出力**：スクリプティングライブラリのバージョン番号
 * **エラー**：なし
 
-**isConnected()** フォームの状態が初期化されたかどうかを確認します
+**isConnected()** フォーム状態が初期化されたかを確認
 
 * **入力**：なし
-* **出力**: **True** （XFA フォーム状態が初期化されている場合）
+* **出力**：XFA フォーム状態が初期化された場合 **true**
 
 * **エラー**：なし
 
-**connect(handler, context)** FormBridge に接続し、接続が確立され、フォーム状態が初期化された後に関数を実行します
+**connect(handler, context)**： FormBridge への接続を確立し、接続を確立してフォーム状態が初期化された後に関数を実行
 
 * **必要情報**:
 
@@ -66,36 +66,36 @@ window.addEventListener("FormBridgeInitialized",
 * **出力**：なし
 * **エラー**：なし
 
-**getDataXML(options)** 現在のフォームデータを XML 形式で返します
+**getDataXML(options)**： 現在のフォームデータを XML 形式で返す
 
 * **必要情報:**
 
    * **options：**&#x200B;次のプロパティが含まれている JavaScript オブジェクト。
 
       * **error**：エラーハンドラー関数
-      * **success**：サクセスハンドラー関数。 この関数には *data* プロパティに XML が含まれているオブジェクトが渡されます。
+      * **success**：サクセスハンドラー関数. この関数には *data* プロパティに XML が含まれているオブジェクトが渡されます。
       * **context**：*success*&#x200B;関数のコンテキスト（this）の設定対象オブジェクト
-      * **validationChecker**:サーバーから受信した検証エラーを確認するためにを呼び出す関数。 検証関数にはエラー文字列の配列が渡されます。
-      * **formState**:データ XML を返す必要がある XFA フォームの JSON 状態。 指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
+      * **validationChecker**：サーバーから受信した検証エラーを確認するために呼び出す関数検証関数にはエラー文字列の配列が渡されます。
+      * **formState**：XML のデータを返す必要がある XFA フォームの JSON 状態指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**registerConfig(configName, config)** ユーザー/ポータル固有の設定を FormBridge に登録します。 これらの設定はデフォルト設定をオーバーライドします。サポートされている設定は config セクションで指定されています。
+**registerConfig(configName, config)**： ユーザー / ポータル固有の設定を FormBridge に登録します。 これらの設定はデフォルト設定をオーバーライドします。サポートされている設定は config セクションで指定されています。
 
 * **必要情報:**
 
-   * **configName:** 上書きする設定の名前
+   * **configName：**&#x200B;オーバーライドする設定の名前
 
-      * **widgetConfig:** ユーザーがフォーム内のデフォルトのウィジェットをカスタムウィジェットで上書きすることを許可します。 設定は次のようにオーバーライドされます。
+      * **widgetConfig：**&#x200B;フォーム内のデフォルトウィジェットをカスタムウィジェットでオーバーライドするのをユーザーに許可します。設定は次のようにオーバーライドされます。
 
          formBridge.registerConfig(&quot;widgetConfig&quot;:{/&amp;ast;configuration&amp;ast;/})
 
-      * **pagingConfig:** 最初のページのみをレンダリングするというデフォルトの動作をユーザーが上書きできるようにします。 設定は次のようにオーバーライドされます。
+      * **pagingConfig：**&#x200B;最初のページのみがレンダリングされるデフォルト動作をオーバーライドするのをユーザーに許可します。設定は次のようにオーバーライドされます。
 
          window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true | false>, shrinkPageDisabled: &lt;true | false> }).
 
-      * **LoggingConfig:** ユーザーがログのレベルを上書きしたり、カテゴリのログを無効にしたり、ログコンソールを表示するかサーバーに送信するかを指定したりできます。 設定は次のようにオーバーライドできます。
+      * **LoggingConfig：**&#x200B;ユーザーがログのレベル、あるカテゴリのログの無効化、またはログコンソールを表示するかサーバーに送信するかをオーバーライドすることを可能にします。設定は次のようにオーバーライドできます。
 
       ```css
       formBridge.registerConfig{  
@@ -109,7 +109,7 @@ window.addEventListener("FormBridgeInitialized",
         }
       ```
 
-      * **SubmitServiceProxyConfig:** ユーザーが送信を登録し、プロキシサービスをロガーすることを許可します。
+      * **SubmitServiceProxyConfig：**&#x200B;ユーザーが送信を登録し、プロキシサービスをロギングできるようにします。
 
          ```css
          window.formBridge.registerConfig("submitServiceProxyConfig",  
@@ -127,71 +127,71 @@ window.addEventListener("FormBridgeInitialized",
 
 * **エラー**：なし
 
-**hideFields(fieldArray)** fieldArray で SOM 式が提供されているフィールドを非表示にします。 指定フィールドの presence プロパティを invisible に設定します
+**hideFields(fieldArray)**：fieldArray で SOM 式が提供されるフィールドを非表示にします。指定フィールドの presence プロパティを invisible に設定します
 
 * **必要情報:**
 
-   * **fieldArray:** 非表示にするフィールドの SOM 式の配列
+   * **fieldArray：**&#x200B;非表示にするフィールドの SOM 式の配列
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**showFields(fieldArray)** fieldArray で SOM 式が提供されるフィールドを表示します。 提供されたフィールドの presence プロパティを visible に設定します
+**showFields(fieldArray)**：fieldArray で SOM 式が提供されるフィールドを表示します。提供されたフィールドの presence プロパティを visible に設定します
 
 * **必要情報:**
 
-   * **fieldArray:** 表示するフィールドの SOM 式の配列
+   * **fieldArray：**&#x200B;表示するフィールドの SOM 式の配列
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**hideSubmitButtons()** フォーム内のすべての送信ボタンを非表示にします
+**hideSubmitButtons()**：フォーム内のすべての送信ボタンを非表示にします
 
 * **入力**：なし
 * **出力**：なし
 * **エラー**：フォーム状態が初期化されていない場合、例外をスローする
 
-**getFormState()** フォームの状態を表す JSON を返します
+**getFormState()**：フォームステートを表す JSON を返します
 
 * **入力：**&#x200B;なし
-* **出力：** 現在のフォーム状態を表す JSON を含むオブジェクト ( *データ* プロパティ。
+* **出力：** *data* プロパティに現在のフォームデータを表す JSON が含まれているオブジェクト。
 
 * **エラー**：なし
 
-**restoreFormState(options)** options オブジェクトで指定された JSON 状態からフォーム状態を復元します。 状態が適用され、操作の完了後にサクセスまたはエラーハンドラーが呼び出されます。
+**restoreFormState(options)**：options オブジェクトに提供された JSON ステートからフォームステートを復元します。状態が適用され、操作の完了後にサクセスまたはエラーハンドラーが呼び出されます。
 
 * **必要情報:**
 
-   * **オプション：** 次のプロパティを含む JavaScript オブジェクト。
+   * **options：**&#x200B;次のプロパティが含まれている JavaScript オブジェクト。
 
       * **error**：エラーハンドラー関数
       * **success**：サクセスハンドラー関数
-      * **context**:のコンテキスト (this) の対象となるオブジェクト *成功* 関数が設定されている
-      * **formState**: フォームの JSON ステート。フォームが JSON 状態に復元されます。
+      * **context**：*success*&#x200B;関数のコンテキスト（this）の設定対象オブジェクト
+      * **formState**: フォームの JSON ステート。フォームは JSON ステートに復元されます。
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**setFocus (som)** SOM 式で指定されたフィールドにフォーカスを設定
+**setFocus (som)**：SOM 式で指定されたフィールドにフォーカスを移します。
 
-* **入力：** フォーカスを設定するフィールドの SOM 式
+* **入力：**&#x200B;フォーカスを設定するフィールドの SOM 式
 * **出力：**&#x200B;なし
 * **エラー：** SOM 式が間違っている場合、例外をスローする
 
-**setFieldValue (som, value)** 指定された SOM 式のフィールドの値を設定
+**setFieldValue (som, value)**：提供された SOM 式のフィールドの値を設定します
 
 * **必要情報:**
 
-   * **som：**&#x200B;フィールドの SOM 式が含まれている配列。フィールドの値を設定する SOM 式。
-   * **値：** で提供された SOM 式に対応する値を含む配列 **som** 配列。 値のデータ型が fieldType と異なる場合、値は変更されません。
+   * **som：**&#x200B;フィールドの SOM 式が含まれている配列。フィールドの値を設定するための SOM 式。
+   * **value：** **SOM** 配列で提供された SOM 式に対応する値が含まれている配列。値のデータタイプが fieldType と同じでない場合、値は変更されません。
 
 * **出力：**&#x200B;なし
-* **エラー：** SOM 式が正しくない場合に例外をスロー
+* **エラー：** SOM 式が間違っている場合、例外をスローします
 
-**getFieldValue (som)** 指定された SOM 式のフィールドの値を返します
+**getFieldValue (som)**：提供された SOM 式のフィールドの値を返します
 
-* **入力：** 値を取得する必要があるフィールドの SOM 式を含む配列
-* **出力：** 結果を配列として含むオブジェクト ( **データ** プロパティ。
+* **入力：**&#x200B;値を取得する必要のあるフィールドの SOM 式が含まれている配列
+* **出力：**&#x200B;結果が配列として **data** プロパティに含まれているオブジェクト
 
 * **エラー**：なし
 
@@ -208,7 +208,7 @@ if(a.errors) {
 }
 ```
 
-**getFieldProperties(som, property)** SOM 式で指定されたフィールドの指定されたプロパティの値のリストを取得
+**getFieldProperties(som, property)** SOM 式で指定されたフィールドの提供されたプロパティの値リストを取得
 
 * **必要情報:**
 
@@ -219,13 +219,13 @@ if(a.errors) {
 
 * **エラー**：なし
 
-**setFieldProperties(som, property, values)** SOM 式で指定されたすべてのフィールドの指定されたプロパティの値を設定します
+**setFieldProperties(som, property, values)**： SOM 式で指定されたすべてのフィールドの提供されたプロパティの値を設定
 
 * **必要情報:**
 
-   * **som:** 値を設定する必要があるフィールドの SOM 式を含む配列
+   * **som：**&#x200B;値の設定が要求されるフィールドの SOM 式が含まれている配列
    * **property：**&#x200B;値の設定が要求されるプロパティ
-   * **値：** SOM 式で指定されたフィールドの指定されたプロパティの値を含む配列
+   * **value：** SOM 式で指定されたフィールドの提供されたプロパティの値が含まれている配列
 
 * **出力：**&#x200B;なし
 * **エラー**：なし

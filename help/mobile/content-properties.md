@@ -21,7 +21,7 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 記事、バナーおよびコレクションは、AEM では cq:Pages として表されます。
 
@@ -50,7 +50,7 @@ ht-degree: 49%
 | dps-shortAbstract | 文字列 |  |
 | dps-department | 文字列 |  |
 | dps-category | 文字列 |  |
-| dps-keywords | String[] |  |
+| dps-keywords | 文字列[] |  |
 | dps-internalKeywords | 文字列[] |  |
 | dps-importance | 文字列[] | {&quot;low&quot;, &quot;normal&quot;, &quot;high&quot;} からの重要度 |
 
@@ -60,7 +60,7 @@ ht-degree: 49%
 |---|---|---|
 | dps-author | 文字列 |  |
 | dps-authorURL | 文字列 |  |
-| dps-hideFromBrowsePage | ブール値 |  |
+| dps-hideFromBrowsePage | ブール演算式 |  |
 | dps-access | 文字列 | {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} からの ProtectedAccess |
 | **Social** |  |  |
 | dps-socialShareURL | 文字列 |  |
@@ -80,8 +80,8 @@ ht-degree: 49%
 |--- |--- |--- |
 | dps-productId | 文字列 |  |
 | dps-readingPosition | 文字列 | {&quot;reset&quot;,&quot;retain&quot;} から |
-| dps-horizontalSwipe | ブール値 |  |
-| dps-allowDownload | ブール値 |  |
+| dps-horizontalSwipe | ブール演算式 |  |
+| dps-allowDownload | ブール演算式 |  |
 | dps-openDefault | 文字列 | {&quot;browsePage&quot;,&quot;contentView&quot;} から |
 | dps-layout | 文字列 |  |
 
@@ -91,7 +91,7 @@ ht-degree: 49%
 
 | ノード名 | タイプ | デフォルト値または期待値 | 説明 |
 |--- |--- |--- |--- |
-| 画像 | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
+| image | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
 
 ### エンティティ {#entities}
 

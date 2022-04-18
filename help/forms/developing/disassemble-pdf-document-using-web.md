@@ -1,7 +1,7 @@
 ---
-title: Web サービス API を使用したPDFドキュメントの分解
+title: Web サービス API を使用したPDFドキュメントの分割
 seo-title: Disassemble a PDF document usingthe web service API
-description: Assembler サービス API を使用したPDFドキュメントの分解
+description: Assembler サービス API を使用したPDFドキュメントの分割
 seo-description: Disassemble a PDF document using the Assembler Service API
 uuid: d6283dc5-e333-49d0-abde-1d390662f4fe
 contentOwner: admin
@@ -14,81 +14,81 @@ exl-id: ea6a05ff-d8d8-4a4f-b1aa-e09670e40ba7
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '704'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Web サービス API を使用したPDFドキュメントのディスアセンブリ {#disassemble-a-pdf-document-usingthe-web-service-api}
+# Web サービス API を使用した PDF ドキュメントの分割 {#disassemble-a-pdf-document-usingthe-web-service-api}
 
-Assembler Service API（Web サービス）を使用してPDFドキュメントを分解します。
+Assembler サービス API（web サービス）を使用して PDF ドキュメントを分割します。
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 サービス参照を設定する際は、次の WSDL 定義を必ず使用してください。 `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。サービスリファレンスを設定する際は、WSDL の定義 `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1` を必ず使用してください。 
 
    >[!NOTE]
    >
-   >置換 `localhost` を、AEM Formsをホストするサーバーの IP アドレスに設定します。
+   >`localhost` を、AEM Forms をホストするサーバーの IP アドレスに置き換えます。
 
-1. Assembler クライアントをPDFします。
+1. PDF Assembler クライアントを作成します。
 
-   * の作成 `AssemblerServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
-   * の作成 `AssemblerServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をAEM Formsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/AssemblerService?blob=mtom`) をクリックします。 を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます。
-   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `AssemblerServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
-   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
-   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
+   * デフォルトのコンストラクターを使用して、`AssemblerServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`AssemblerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `AssemblerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * フィールドにAEM forms ユーザー名を割り当てます。 `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
-      * 対応するパスワード値をフィールドに割り当てます。 `AssemblerServiceClient.ClientCredentials.UserName.Password`.
-      * 定数値を割り当て `HttpClientCredentialType.Basic` フィールドに `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 定数値を割り当て `BasicHttpSecurityMode.TransportCredentialOnly` フィールドに `BasicHttpBindingSecurity.Security.Mode`.
+      * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 既存の DDX ドキュメントを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、DDX ドキュメントを保存するために使用されます。
-   * の作成 `System.IO.FileStream` オブジェクトを指定します。 DDX ドキュメントのファイルの場所と、ファイルを開くモードを表す string 値を渡します。
-   * コンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクト。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリーム長を渡す。
-   * 次の項目に `BLOB` オブジェクトを割り当てる `MTOM` プロパティにバイト配列の内容を入力します。
+   * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、DDX ドキュメントを保存するために使用されます。
+   * コンストラクタを呼び出して `System.IO.FileStream` オブジェクトを作成します。DDX ドキュメントのファイルの場所を表す文字列値と、ファイルを開くモードを表す文字列値を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
+   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
+   * `MTOM` プロパティにバイト配列の内容を割り当てることによって、`BLOB` オブジェクトにデータを入力します。
 
-1. ディスアセンブリするPDFドキュメントを参照します。
+1. 分割する PDF ドキュメントを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、入力PDF・ドキュメントを格納するために使用します。 この `BLOB` オブジェクトが `invokeOneDocument` を引数として。
-   * の作成 `System.IO.FileStream` オブジェクトを指定します。
-   * コンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクト。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッドを使用し、読み込むバイト配列、開始位置、ストリーム長を渡す。
-   * 次の項目に `BLOB` オブジェクトを割り当てる `MTOM` フィールドはバイト配列の内容です。
-   * の作成 `MyMapOf_xsd_string_To_xsd_anyType` オブジェクト。 このコレクションオブジェクトは、ディスアセンブリするPDFを保存するために使用されます。
-   * の作成 `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクト。
-   * キー名を表す string 値を `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `key` フィールドに入力します。 この値は、DDX ドキュメントで指定されたPDFソース要素の値と一致する必要があります。
-   * を `BLOB` オブジェクトを指定し、PDFドキュメントを `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `value` フィールドに入力します。
-   * を `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを `MyMapOf_xsd_string_To_xsd_anyType` オブジェクト。 を呼び出す `MyMapOf_xsd_string_To_xsd_anyType` オブジェクト&#39; `Add` メソッドを使用して、 `MyMapOf_xsd_string_To_xsd_anyType` オブジェクト。
+   * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、入力 PDF ドキュメントを格納するために使用します。 この `BLOB` オブジェクトは引数として `invokeOneDocument` に渡されます。
+   * コンストラクタを呼び出し、入力 PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
+   * バイト配列の内容を `MTOM` フィールドに割り当てることで、`BLOB` オブジェクトにデータを入力します。
+   * `MyMapOf_xsd_string_To_xsd_anyType` オブジェクトを作成します。このコレクションオブジェクトは、ディスアセンブルする PDF を保存するために使用されます。
+   * `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。
+   * キー名を表す文字列値を `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `key` フィールドに割り当てます。この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致している必要があります。
+   * PDF ドキュメントを格納する `BLOB` オブジェクトを、`MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `value` フィールドに割り当てます。
+   * `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを `MyMapOf_xsd_string_To_xsd_anyType` オブジェクトに追加します。`MyMapOf_xsd_string_To_xsd_anyType` オブジェクトの `Add` メソッドを呼び出して、`MyMapOf_xsd_string_To_xsd_anyType` オブジェクトを渡します。
 
 1. 実行時オプションを設定します。
 
-   * の作成 `AssemblerOptionSpec` コンストラクタを使用して実行時オプションを格納するオブジェクト。
-   * に属するデータメンバーに値を割り当てて、ビジネス要件を満たすようにランタイムオプションを設定する `AssemblerOptionSpec` オブジェクト。 例えば、エラーが発生した場合にジョブの処理を続行するように Assembler サービスに指示するには、 `false` から `AssemblerOptionSpec` オブジェクトの `failOnError` フィールドに入力します。
+   * ランタイムオプションを格納する `AssemblerOptionSpec` オブジェクトをコンストラクタで作成します。
+   * `AssemblerOptionSpec` オブジェクトに属するデータメンバーに値を割り当てることで、ビジネス要件を満たす実行時オプションを設定します。例えば、エラーが発生してもジョブの処理を続行するよう Assembler サービスに指示するには、`AssemblerOptionSpec` オブジェクトの `failOnError` フィールドに `false` を割り当てます。
 
-1. PDF文書の分解
+1. PDF ドキュメントを分割します。
 
-   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを使用して、次の値を渡します。
+   `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを呼び出して、次の値を渡します。
 
-   * A `BLOB` オブジェクトドキュメントを分解する DDX ドキュメントを表すPDF
-   * この `MyMapOf_xsd_string_To_xsd_anyType` 分解するPDF・ドキュメントを含むオブジェクト
-   * An `AssemblerOptionSpec` 実行時のオプションを指定するオブジェクト
+   * PDF ドキュメントをディスアセンブルする DDX ドキュメントを表す `BLOB` オブジェクト
+   * ディスアセンブルする PDF ドキュメントを含む `MyMapOf_xsd_string_To_xsd_anyType` オブジェクト
+   * 実行時オプションを指定する `AssemblerOptionSpec` オブジェクト
 
-   この `invokeDDX` メソッドは、 `AssemblerResult` ジョブの結果と発生した例外を含むオブジェクト。
+   `invokeDDX` メソッドは、ジョブの結果および発生した例外を含む `AssemblerResult` オブジェクトを返します。
 
-1. 分解したPDF文書を保存します。
+1. 分割した PDF ドキュメントを保存します。
 
-   新しく作成したPDF・ドキュメントを取得するには、次の操作を実行します。
+   新しく作成した PDF ドキュメントを取得するには、次の操作を実行します。
 
-   * 次にアクセス： `AssemblerResult` オブジェクトの `documents` フィールド ( `Map` 分解されたPDF文書を含むオブジェクト。
-   * 反復処理 `Map` オブジェクトを使用して各結果ドキュメントを取得します。 次に、その配列メンバの `value` から `BLOB`.
-   * PDFドキュメントを表すバイナリデータを、そのドキュメントにアクセスして抽出します `BLOB` オブジェクトの `MTOM` プロパティ。 これは、バイトの配列を返し、PDF・ファイルに書き出すことができます。
+   * `AssemblerResult` オブジェクトの `documents` フィールド（ディスアセンブリされた PDF ドキュメントを含む `Map` オブジェクト）にアクセスします。
+   * `Map`オブジェクトを反復処理して、各結果ドキュメントを取得します。次に、その配列メンバーの`value`を`BLOB`にキャストします。
+   * `BLOB`オブジェクトの`MTOM`プロパティにアクセスして、PDF ドキュメントを表すバイナリデータを抽出します。これにより、PDF ファイルに書き出すことができるバイト配列が返されます。
 
 **関連トピック**
 
-[プログラムによるPDFドキュメントの分解](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)
+[プログラムによる PDF ドキュメントの分割](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)
 
-[MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

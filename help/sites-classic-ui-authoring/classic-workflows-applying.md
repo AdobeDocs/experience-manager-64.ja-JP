@@ -1,5 +1,5 @@
 ---
-title: ページへのワークフローの適用
+title: 'ページへのワークフローの適用 '
 seo-title: Applying Workflows to Pages
 description: ワークフローは、Web サイトコンソールから、またはページの編集中にはサイドキックから開始できます。
 seo-description: Workflows can be started from either the Websites console or, when editing a page, from Sidekick.
@@ -13,18 +13,19 @@ exl-id: f10680e5-e8ae-49a0-ae52-3aa1f22b2d3e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
-# ページへのワークフローの適用{#applying-workflows-to-pages}
+# ページへのワークフローの適用 {#applying-workflows-to-pages}
 
 ワークフローを適用する際には、次の情報を指定します。
 
 * 適用されるワークフロー。
 
+
    （AEM 管理者によって割り当てられた、アクセス権限がある）任意のワークフローを適用できます。
-* 省略可能：
+* オプション：
 
    * ユーザーがワークフローを開始した理由に関する情報を提供するコメント。
    * ユーザーのインボックス内のワークフローインスタンスの特定に役立つタイトル。
@@ -37,13 +38,13 @@ ht-degree: 85%
 
 ワークフローは、Web サイトコンソールから、またはページの編集中にはサイドキックから開始できます。
 
-この **ステータス** 列 **Web サイト** コンソールは、ワークフローがページに適用されたかどうかを示します。
+**Web サイト**&#x200B;コンソールの「**ステータス**」列は、ワークフローがページに適用されているかどうかを示します。
 
-![workflowstatus](assets/workflowstatus.png)
+![WorkflowStatus](assets/workflowstatus.png)
 
 ### Web サイトコンソールからのワークフローの開始 {#starting-a-workflow-from-the-websites-console}
 
-1. Web サイトコンソールを開きます。（[http://localhost:4502/siteadmin](http://localhost:4502/siteadmin)）
+1. Web サイトコンソールを開きます。([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin))
 1. Web サイトツリーで、ワークフローを適用するページの親を選択します。
 1. ページリストで、ページを選択して「ワークフロー」をクリックします。
 1. ワークフローを開始ダイアログで、適用するワークフローを選択します。必要に応じて、コメントとタイトルを入力します。その後、「開始」をクリックします。
@@ -53,7 +54,7 @@ ht-degree: 85%
 1. Web サイトコンソールを開きます。
 1. 必要なページを開きます。
 1. サイドキックの「ワークフロー」タブを選択します。
-1. を展開します。 **ワークフロー** ダイアログで、 **ワークフロー** 必要に応じて、 **ワークフロータイトル** および **コメント**.
+1. **ワークフロー**&#x200B;ダイアログを展開して「**ワークフロー**」を選択し、必要に応じて、**ワークフロータイトル**&#x200B;と&#x200B;**コメント**&#x200B;を入力します。
 
    ![workflowstartsidekick](assets/workflowstartsidekick.png)
 

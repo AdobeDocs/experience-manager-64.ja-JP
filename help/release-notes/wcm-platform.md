@@ -13,7 +13,7 @@ exl-id: 6f131247-d35e-4298-958f-35b94ff08c58
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '719'
-ht-degree: 80%
+ht-degree: 82%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 80%
 
 ## 変更について {#list-of-changes}
 
-### リポジトリ {#repository}
+### リポジトリー {#repository}
 
 * Oak セグメント Tar マイクロカーネル
 
@@ -39,8 +39,7 @@ ht-degree: 80%
 
 >[!CAUTION]
 >
->* AEM 6.3 以降の新しいバージョンの Oak セグメント Tar では、リポジトリを移行する必要があります。この手順は、古いバージョンの TarMK からアップグレードする場合、または別のタイプの格納機能から新しい Segment Tar に切り替える場合に必須です。新しい Segment Tar のメリットについて詳しくは、[Oak Segment Tar への移行に関する FAQ](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar) を参照してください。
-
+>* AEM 6.3 以降の新しいバージョンの Oak Segment Tar では、リポジトリを移行する必要があります。この手順は、古いバージョンの TarMK からアップグレードする場合、または別のタイプの格納機能から新しい Segment Tar に切り替える場合に必須です。新しい Segment Tar のメリットについて詳しくは、[Oak Segment Tar への移行に関する FAQ](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar) を参照してください。
 >
 
 
@@ -71,7 +70,6 @@ ht-degree: 80%
 >[!CAUTION]
 >
 >* クラシック UI の機能がさらに強化される予定はありません。AEM 6.4 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。クラシック UI は非推奨の間も完全にサポートされ続けます [詳細を表示](/help/sites-deploying/ui-recommendations.md).
-
 >
 
 
@@ -81,7 +79,7 @@ ht-degree: 80%
 * 配布トランスポートでの OAuth 2.0 認証をサポートしています。
 * VLT パッケージの場合のパフォーマンスが向上しました。
 
-### 監視 {#monitoring}
+### モニタリング {#monitoring}
 
 * 新しい「システム概要」には、パフォーマンスに関するすべてのシステムステータスとアクティビティのスナップショットが表示されます
 * 以下の新しいヘルスチェックが用意されています。
@@ -89,7 +87,7 @@ ht-degree: 80%
    * 大きい Lucene インデックスの検出
    * 非同期インデックス作成のヘルス
    * 大きい Lucene インデックス
-   * クエリパフォーマンス
+   * クエリーパフォーマンス
    * クエリトラバーサルの制限
    * 同期済みのクロック
    * システムメンテナンス - リビジョンクリーンアップ

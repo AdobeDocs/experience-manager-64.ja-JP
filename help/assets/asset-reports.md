@@ -8,7 +8,7 @@ exl-id: 6f03ee04-d2e2-47e6-892b-50fad3043a28
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '1061'
-ht-degree: 89%
+ht-degree: 93%
 
 ---
 
@@ -28,10 +28,10 @@ ht-degree: 89%
 
 レポートを生成するには、次の点を確認します。
 
-* 有効にする [!UICONTROL Day CQ DAM Event Recorder] サービス **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL Web コンソール]**.
-* レポートの対象となるアクティビティまたはイベントを選択します。 例えば、ダウンロードしたアセットに関するレポートを生成するには、「 [!UICONTROL ダウンロードされたアセット（ダウンロード済み）].
+* **[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;から [!UICONTROL Day CQ DAM Event Recorder] サービスを有効にします。
+* レポートの対象となるアクティビティまたはイベントを選択します。例えば、ダウンロードしたアセットに関するレポートを生成するには、「 [!UICONTROL ダウンロードされたアセット（ダウンロード済み）]」を選択します。
 
-![Web コンソールでのアセットレポートの有効化](assets/reports-config-day-cq-dam-event-recorder.png)
+![Web コンソールでアセットレポートを有効にします](assets/reports-config-day-cq-dam-event-recorder.png)
 
 ## レポートの生成 {#generate-reports}
 

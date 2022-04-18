@@ -1,5 +1,5 @@
 ---
-title: コレクション、スニペット、スニペットテンプレートのマルチテナント機能
+title: コレクション、スニペットおよびスニペットテンプレートのマルチテナント
 description: 不正なアクセスを防ぐため、顧客組織に基づいて CRX リポジトリのコンテンツを分離します。
 contentOwner: AG
 feature: Collections
@@ -8,11 +8,11 @@ exl-id: d00a671a-6707-4941-868d-fa13510b7b60
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '230'
-ht-degree: 33%
+ht-degree: 43%
 
 ---
 
-# コレクション、スニペット、スニペットテンプレートのマルチテナント機能 {#multi-tenancy-for-collections-snippets-and-snippet-templates}
+# コレクション、スニペットおよびスニペットテンプレートのマルチテナント {#multi-tenancy-for-collections-snippets-and-snippet-templates}
 
 マルチテナント機能を使用すると、組織プレフィックスと組織 ID に基づいて CRX のコンテンツを隔離し、他の組織のユーザーによるコンテンツへの不正アクセスを防止できます。
 
@@ -28,7 +28,7 @@ Adobe Experience Manager（AEM）Assets では、組織のデータは、組織�
 
 * コレクション
 * 公開コレクション
-* カタログ（ページの追加/選択ウィザードを含む）
+* カタログ（ページの追加／選択ウィザードを含む）
 * テンプレート
 * スニペットテンプレート
-* Lightbox
+* ライトボックス

@@ -105,9 +105,8 @@ ht-degree: 42%
 >
 >* `setInboxPath`()
 >* `setSentItemsPath`()
-
 >
->次に例を示します。
+>次は例です。
 >
 >
 ```

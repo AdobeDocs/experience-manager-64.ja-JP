@@ -8,11 +8,11 @@ exl-id: 31da9f3d-460a-4b71-9ba0-7487f1b159cb
 source-git-commit: 63a4304a1a10f868261eadce74a81148026390b6
 workflow-type: tm+mt
 source-wordcount: '1772'
-ht-degree: 58%
+ht-degree: 64%
 
 ---
 
-# アセット移行ガイド {#assets-migration-guide}
+# Assets 移行ガイド {#assets-migration-guide}
 
 アセットを AEM に移行する際には、いくつかの手順を考慮する必要があります。現在のホームからアセットやメタデータを抽出する方法は、実装間で大きく異なるので、このドキュメントの範囲外です。 代わりに、このドキュメントでは、これらのアセットをAEMに取り込み、メタデータを適用し、レンディションを生成し、アセットをアクティベートまたは公開する方法について説明します。
 
@@ -29,20 +29,19 @@ ht-degree: 58%
 >* ACS Commons の Bulk Workflow Manager
 >* ACS Commons の Fast Action Manager
 >* 合成ワークフロー
-
 >
 >このソフトウェアはオープンソースで、[Apache v2 License](https://adobe-consulting-services.github.io/pages/license.html) が適用されます。質問や問題を報告するには、それぞれ [ [!DNL Experience Manager] ACS ツール](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)と [ [!DNL Experience Manager] ACS Commons に関する GitHub の問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)を利用してください。
 
-## 移行先 [!DNL Experience Manager] {#migrate-to-aem}
+## [!DNL Experience Manager] への移行 {#migrate-to-aem}
 
-アセットの移行先 [!DNL Experience Manager] にはいくつかの手順が必要で、段階的なプロセスと見なす必要があります。 移行のフェーズは次のとおりです。
+[!DNL Experience Manager] にアセットを移行するにはいくつかの手順を経る必要があるので、フェーズ別に処理することをお勧めします。移行のフェーズは次のとおりです。
 
-1. ワークフローを無効化する。
-1. タグを読み込む。
-1. アセットを取り込む。
-1. レンディションを処理する。
-1. アセットをアクティベートする。
-1. ワークフローを有効化する。
+1. ワークフローの無効化.
+1. タグの読み込み.
+1. アセットの取り込み.
+1. レンディションの処理.
+1. アセットのアクティベート.
+1. ワークフローを有効化する.
 
 ![chlimage_1-223](assets/chlimage_1-223.png)
 
@@ -84,15 +83,15 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 必要に応じてワークフローを設定したら、次の 2 つの方法でワークフローを実行できます。
 
 1. 最も簡単なアプローチは、[ACS Commons の Bulk Workflow Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html) です。このツールを使用すると、クエリを実行し、クエリの結果をワークフローを通じて処理します。バッチサイズを設定するオプションも用意されています。
-1. [ACS Commons の Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) は[合成ワークフロー](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)と組み合わせて使用できます。この方法はより複雑ですが、 [!DNL Experience Manager] ワークフローエンジンを使用して、サーバーリソースの使用を最適化しています。 さらに、Fast Action Manager はサーバーリソースを動的に監視し、システムに配置された読み込みをスロットリングすることでパフォーマンスを大幅に向上します。サンプルスクリプトは ACS Commons の機能ページに記載されています。
+1. [ACS Commons の Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) は[合成ワークフロー](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)と組み合わせて使用できます。このアプローチはより複雑ですが、[!DNL Experience Manager] ワークフローエンジンのオーバーヘッドを削除し、サーバーリソースの使用を最適化します。さらに、Fast Action Manager はサーバーリソースを動的に監視し、システムに配置された読み込みをスロットリングすることでパフォーマンスを大幅に向上します。サンプルスクリプトは ACS Commons の機能ページに記載されています。
 
 ### アセットのアクティベート {#activate-assets}
 
-パブリッシュ層のあるデプロイメントでは、アセットをパブリッシュファームにアクティベートする必要があります。アドビは 1 つ以上のパブリッシュインスタンスを実行することを推奨していますが、すべてのアセットを 1 つのパブリッシュインスタンスにレプリケートして、そのインスタンスをクローンする方法が最も効率的です。多数のアセットをアクティベートするときは、ツリーのアクティベートを実行した後に、干渉する必要が生じる場合があります。理由は次のとおりです。アクティベーションを実行すると、項目が Sling ジョブ/イベントキューに追加されます。 このキューのサイズがだいたい 40,000 項目を超えると、処理速度が劇的に低下します。このキューのサイズが 100,000 項目を超えると、システムの安定性に影響を及ぼします。
+パブリッシュ層のあるデプロイメントでは、アセットをパブリッシュファームにアクティベートする必要があります。アドビは 1 つ以上のパブリッシュインスタンスを実行することを推奨していますが、すべてのアセットを 1 つのパブリッシュインスタンスにレプリケートして、そのインスタンスをクローンする方法が最も効率的です。多数のアセットをアクティベートするときは、ツリーのアクティベートを実行した後に、干渉する必要が生じる場合があります。理由は、アクティベートをトリガーするときに、Sling のジョブやイベントキューに項目が追加されるからです。このキューのサイズがだいたい 40,000 項目を超えると、処理速度が劇的に低下します。このキューのサイズが 100,000 項目を超えると、システムの安定性に影響を及ぼします。
 
 この問題を回避するには、[Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) を使用してアセットのレプリケートを管理します。これは Sling キューを使用することなく動作し、オーバーヘッドを減らすほか、ワークロードをスロットルしてサーバーのオーバーロードを防ぎます。レプリケーションの管理に FAM を使用する例は、この機能のドキュメントページに記載しています。
 
-アセットをパブリッシュファームに移行するその他のオプションは、[vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) または [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) を使用する方法です。これらは Jackrabbit の一部のツールとして提供されます。もう 1 つのオプションは、にオープンソースのツールを使用することです [!DNL Experience Manager] ～と呼ばれる基盤 [Grabbit](https://github.com/TWCable/grabbit)は、vit よりも高いパフォーマンスを発揮すると言われています。
+アセットをパブリッシュファームに移行するその他のオプションは、[vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) または [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) を使用する方法です。これらは Jackrabbit の一部のツールとして提供されます。[!DNL Experience Manager] インフラストラクチャにオープンソースツール [Grabbit](https://github.com/TWCable/grabbit) を使用する方法もあります。vlt よりも高いパフォーマンスを発揮すると言われています。
 
 これらのアプローチで注意すべき点は、オーサーインスタンス上でアセットがアクティベートされていると表示されないことです。アセットのアクティベート状態を正しくフラグ設定するには、アセットをアクティベート済みとマークする別のスクリプトも実行する必要があります。
 
@@ -100,7 +99,7 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 >
 >アドビは Grabbit を管理およびサポートしません。
 
-### 公開を複製 {#clone-publish}
+### パブリッシュをクローン化する {#clone-publish}
 
 アセットがアクティベートされたら、パブリッシュインスタンスをクローンしてデプロイメントに必要なコピーを必要な分だけ作成できます。サーバーのクローンは比較的簡単ですが、いくつか重要な手順があります。パブリッシュをクローンするには：
 
@@ -112,7 +111,7 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 1. 環境を開始します。
 1. オーサー環境にあるすべてのレプリケーションエージェントが正しいパブリッシュインスタンスを指す、または新しいインスタンスの Dispatcher のフラッシュエージェントが新しい環境の正しい Dispatcher を参照するように設定を更新します。
 
-### ワークフローの有効化 {#enable-workflows}
+### ワークフローを有効化する {#enable-workflows}
 
 移行が完了したら、レンディションの生成とメタデータの抽出をサポートするように DAM の更新アセットワークフローのランチャーを再度有効化し、稼動中のシステムが日常的に使用できるようにします。
 
@@ -129,10 +128,10 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 1. アセットを移行：1 つのアセットからアセットを移動する場合に推奨されるツールは 2 つあります。 [!DNL Experience Manager] インスタンスから別のインスタンスへ：
 
    * **Vault リモートコピー**&#x200B;または `vlt rcp`を使用すると、ネットワークをまたいで vlt を使用できます。 移動元と移動先のディレクトリを指定すると、vit がすべてのリポジトリデータを一方のインスタンスからダウンロードし、もう一方に読み込みます。vt rcp については、[https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html) に記載されています。
-   * **Grabbit**[!DNL Experience Manager]。Time Warner Cable が の実装のために開発した、オープンソースのコンテンツ同期ツールです。継続的なデータストリームを使用するので、vlt rcp と比較して待ち時間が少なく、vlt rcp の 2 倍から 10 倍高速であると言われています。また、Grabbit はデルタコンテンツのみの同期をサポートし、最初の移行パスが完了した後に加えられた変更を同期できます。
+   * **Grabbit**：Time Warner Cable が自社の [!DNL Experience Manager] 実装のために開発したオープンソースのコンテンツ同期ツールです。継続的なデータストリームを使用するので、vlt rcp と比較して待ち時間が少なく、vlt rcp の 2 倍から 10 倍高速であると言われています。また、Grabbit はデルタコンテンツのみの同期をサポートし、最初の移行パスが完了した後に加えられた変更を同期できます。
 
 1. アセットのアクティベート：手順に従って、 [アセットのアクティベート](#activate-assets) AEMへの最初の移行については、を参照してください。
 
-1. 公開の複製：新しい移行と同様に、1 つのパブリッシュインスタンスを読み込んでクローンを作成する方が、両方のノードでコンテンツをアクティブ化するよりも効率的です。 [パブリッシュインスタンスのクローン](#clone-publish)を参照してください。
+1. パブリッシュをクローン化する：新規の移行の場合と同様に、1 つのパブリッシュインスタンスを読み込んでクローン化する方が、両方のノードでコンテンツを有効にするよりも効率的です。[パブリッシュインスタンスのクローン](#clone-publish)を参照してください。
 
 1. ワークフローの有効化：移行が完了したら、レンディションの生成とメタデータの抽出をサポートするように DAM アセットの更新ワークフローのランチャーを再度有効にし、稼動中のシステムが日常的に使用できるようにします。

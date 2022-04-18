@@ -11,7 +11,7 @@ role: Admin,User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '3068'
-ht-degree: 74%
+ht-degree: 75%
 
 ---
 
@@ -119,7 +119,7 @@ Dynamic Media には、最高の閲覧エクスペリエンスを実現できる
 
 他のアセットタイプへの高度な処理パラメーターの定義については、[アセット処理の設定](config-dms7.md#configuring-asset-processing)を参照してください。
 
-ビデオプロファイルの作成が完了したら、1 つ以上のフォルダーに適用します。
+ビデオプロファイルの作成が完了したら、そのプロファイルを 1 つまたは複数のフォルダーに適用してください。
 
 **アダプティブストリーミング用のDynamic Mediaビデオエンコーディングプロファイルを作成するには**:
 
@@ -160,8 +160,8 @@ Dynamic Media には、最高の閲覧エクスペリエンスを実現できる
 
 実行しているモードに応じて、サポートされるビデオ形式のコーデックは次のようになります。
 
-* Dynamic Media-Scene7モード：H.264 (.mp4)
-* Dynamic Media — ハイブリッドモード：H.264(.mp4)、WebM
+* Dynamic Media-Scene7 モード：H.264（.mp4）
+* Dynamic Media- ハイブリッドモード：H.264（.mp4）、WebM
 
 [アダプティブストリーミング用のビデオエンコーディングプロファイルの作成](#creating-a-video-encoding-profile-for-adaptive-streaming)も参照してください。
 
@@ -169,7 +169,7 @@ Dynamic Media には、最高の閲覧エクスペリエンスを実現できる
 
 他のアセットタイプへの高度な処理パラメーターの定義については、[アセット処理の設定](config-dms7.md#configuring-asset-processing)を参照してください。
 
-ビデオプロファイルの作成が完了したら、1 つ以上のフォルダーに適用します。
+ビデオプロファイルの作成が完了したら、そのプロファイルを 1 つまたは複数のフォルダーに適用してください。
 
 **プログレッシブストリーミング用のDynamic Mediaビデオエンコーディングプロファイルを作成するには：**
 

@@ -1,7 +1,7 @@
 ---
-title: データ保護およびデータプライバシーに関する規制 — Adobe Experience Manager Readiness
+title: データ保護とデータプライバシーに関する規制 - Adobe Experience Manager の対応
 seo-title: Adobe Experience Manager Readiness for Data Protection and Data Privacy Regulations; such as GDPR, CCPA, etc
-description: '様々なデータ保護およびデータプライバシー規則に対する Adobe Experience Manager のサポートについて説明します。これには、EU 一般データ保護規則（GDPR）、カリフォルニア州消費者プライバシー法、および新しい AEM プロジェクトを実装する際に準拠する方法が含まれます。 '
+description: '様々なデータ保護およびデータプライバシー規則に対する Adobe Experience Manager のサポートについて説明します。これには、EU 一般データ保護規則（GDPR）、カリフォルニア州消費者プライバシー法および新規 AEM プロジェクトを実装する際に準拠する方法が含まれます。 '
 seo-description: Learn about Adobe Experience Manager support for the various Data Protection and Data Privacy Regulations; including the EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act and how to comply when implementing a new AEM project.
 uuid: c443aa47-0766-4280-b0f2-b5b06534ffba
 contentOwner: aheimoz
@@ -13,11 +13,11 @@ exl-id: 46ad04b1-a660-4cdd-8649-5cdb00dbcae3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '927'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
-# データ保護およびデータプライバシーに関する規制に対するAdobe Experience Managerの対応 {#aem-readiness-for-data-protection-and-data-privacy-regulations}
+# データ保護およびデータプライバシーに関する規制に対する Adobe Experience Manager の対応 {#aem-readiness-for-data-protection-and-data-privacy-regulations}
 
 >[!WARNING]
 >
@@ -33,7 +33,7 @@ ht-degree: 81%
 
 >[!CAUTION]
 >
->ここで説明する詳細は、Adobe Experience Managerに限定されています。
+>ここで説明する詳細は、Adobe Experience Manager に限定されます。
 >
 >別のアドビオンデマンドサービスからのデータは、関連するプライバシー要求とともに、そのサービスでの対応が必要となります。
 >
@@ -41,7 +41,7 @@ ht-degree: 81%
 
 ## はじめに {#introduction}
 
-Adobe Experience Managerのインスタンスと、それらで実行されるアプリケーションは、お客様が所有および操作します。
+Adobe Experience Manager のインスタンスと、それらで実行されるアプリケーションは、Adobe のお客様によって所有され、運用されています。
 
 その結果、GDPR、CCPA などのデータ保護規制は、主に顧客の責任となります。
 
@@ -61,7 +61,7 @@ Adobe Experience Managerのインスタンスと、それらで実行される�
 
 4. データの販売のオプトアウト。
 
-Adobe Experience Managerの場合：
+Adobe Experience Manager の場合：
 
 * インスタンスと、それらに対して実行されるアプリケーションは、顧客が所有および運用します。
 
@@ -79,19 +79,19 @@ Adobe Experience Managerの場合：
 
    * アドビは、顧客のプライバシー管理者や AEM 管理者向けのドキュメントや手順を提供し、プライバシー規制に関連するリクエストを手動で実行できるようにします。
 
-Adobeは、Adobe Experience Managerのアクセス、削除およびオプトアウトに関連するプライバシーリクエストを処理する手順を提供しています。 場合によっては、自動化に役立つように、顧客が開発したポータルまたはスクリプトから呼び出すことができる API が存在します。
+Adobe は、Adobe Experience Manager のアクセス、削除、オプトアウトに関するプライバシーリクエストを処理する手順を提供しています。場合によっては、自動化に役立つように、顧客が開発したポータルまたはスクリプトから呼び出すことができる API が存在します。
 
 次の図に、プライバシーリクエストワークフローを示します（Adobe Experience Manager 6.5 を使用した例）。
 
 ![データ保護とプライバシー](assets/data-protection-and-privacy-01.png)
 
-## Adobe Experience Managerと規制対応 {#aem-and-regulatory-readiness}
+## Adobe Experience Manager と規制への対応 {#aem-and-regulatory-readiness}
 
-AEMの製品領域については、以下の節を参照してください。
+AEM の製品範囲に関する規制ドキュメントについては、以下の節を参照してください。
 
 ## AEM の基盤 {#aem-foundation}
 
-詳しくは、 [AEM Foundation のデータ保護およびプライバシーリクエストの処理](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md).
+[AEM 基盤のデータ保護およびプライバシーリクエストの処理](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)を参照してください。
 
 ## 集計した使用状況の統計の収集を AEM でオプトインする方法 {#aem-opting-into-aggregate-usage-statistics-collection}
 
@@ -99,19 +99,19 @@ AEMの製品領域については、以下の節を参照してください。
 
 ## AEM Sites {#aem-sites}
 
-詳しくは、 [AEM Sites — データ保護とプライバシー対応。](/help/sites-administering/gdpr-compliance-sites.md)
+[AEM Sites - データ保護とプライバシー対応](/help/sites-administering/gdpr-compliance-sites.md)を参照してください。
 
 ## AEM Commerce {#aem-commerce}
 
-詳しくは、 [AEM Commerce — データ保護とプライバシー対応](/help/sites-administering/gdpr-compliance-commerce.md).
+[AEM Commerce - データ保護とプライバシー対応](/help/sites-administering/gdpr-compliance-commerce.md)を参照してください。
 
 ## AEM Mobile {#aem-mobile}
 
-詳しくは、 [AEM Mobile — データ保護とプライバシー対応](/help/mobile/aem-mobile-gdpr-compliance.md).
+[AEM Mobile - データ保護とプライバシー対応](/help/mobile/aem-mobile-gdpr-compliance.md)を参照してください。
 
 ## Adobe Target および Adobe Analytics との AEM 統合 {#aem-integration-with-adobe-target-adobe-analytics}
 
-これらのAdobe Experience Manager統合は、データ保護およびプライバシー（GDPR や CCPA など）に対応したサービスと共におこなわれます。 Adobe Target や Adobe Analytics の個人データは、統合に関連して AEM に保存されません。
+これらの Adobe Experience Manager 統合は、データ保護およびプライバシー（GDPR や CCPA など）に対応したサービスと共に行われます。 Adobe Target や Adobe Analytics の個人データは、統合に関連して AEM に保存されません。
 詳しくは、次のセクションを参照してください。
 
 * [Adobe Target - プライバシーの概要](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/privacy.html?lang=ja)
@@ -128,7 +128,7 @@ AEM Communities は[デフォルトの API](/help/communities/user-ugc-managemen
 
 AEM Forms に含まれるコンポーネントやワークフローは、ビジネスプロセスの調整やデジタルトランザクションの実行のためにデータをキャプチャ、処理および格納します。コンポーネントごとに異なるデータストアが使用されますが、コンポーネントをカスタムデータストアと統合することも可能です。次のドキュメントでは、コンポーネントのデータ保護およびプライバシー（GDPR や CCPA など）ワークフローをサポートするためのユーザーデータへのアクセスと処理に関する手順とガイドラインを説明します。
 
-* [Forms ポータル](/help/forms/using/forms-portal-handling-user-data.md)
+* [フォームポータル](/help/forms/using/forms-portal-handling-user-data.md)
 * [Correspondence Management](/help/forms/using/correspondence-management-handling-user-data.md)
 * [Adobe Sign との統合](/help/forms/using/integration-adobe-sign-handling-user-data.md)
 * [OSGi でのフォームに特化したワークフロー](/help/forms/using/forms-workflow-osgi-handling-user-data.md)

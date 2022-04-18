@@ -1,5 +1,5 @@
 ---
-title: コンテンツフラグメントを使用したページのオーサリング
+title: 'コンテンツフラグメントを使用したページのオーサリング '
 seo-title: Page Authoring with Content Fragments
 description: コンテンツフラグメントは、ページから独立したアセットとして作成および管理されます。これによりチャネルに依存しないコンテンツを、様々なバリエーションで作成できます。
 seo-description: Content fragments are created and managed as page-independent assets. They allow you to create channel-neutral content, together with variations.
@@ -18,9 +18,9 @@ ht-degree: 100%
 
 ---
 
-# コンテンツフラグメントを使用したページのオーサリング{#page-authoring-with-content-fragments}
+# コンテンツフラグメントを使用したページのオーサリング {#page-authoring-with-content-fragments}
 
-Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments.md)として作成および管理されます。
+Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセットとして作成および管理](/help/assets/content-fragments.md)されます。
 
 これによりチャネルに依存しないコンテンツを、様々なバリエーション（チャネル固有）で作成できます。その後、コンテンツページをオーサリングする際に、これらのフラグメントとそれらのバリエーションを使用できます。
 

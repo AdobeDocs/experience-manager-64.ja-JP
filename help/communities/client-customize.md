@@ -12,7 +12,7 @@ discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 exl-id: 3e005993-d96b-4c7c-83b3-37f733218c3d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1262'
 ht-degree: 57%
 
 ---
@@ -168,7 +168,7 @@ SCF の clientlib は、カテゴリ名内の「author」の存在のみが異�
 
 * /etc/clientlibs/social/hbs/&lt;component name>
 
-次に例を示します。
+次は例です。
 
 * クライアントフォルダーノード：/etc/clientlibs/social/hbs/forum
 * Categories プロパティ：cq.social.hbs.forum
@@ -187,7 +187,7 @@ SCF の clientlib は、カテゴリ名内の「author」の存在のみが異�
 
 * /libs/social/&lt;feature>/components/hbs/&lt;component name>/clientlibs
 
-次に例を示します。
+次は例です。
 
 * クライアントフォルダーノード：/libs/social/forum/hbs/forum/clientlibs
 * Categories プロパティ：cq.social.author.hbs.forum

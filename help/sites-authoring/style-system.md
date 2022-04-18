@@ -1,5 +1,5 @@
 ---
-title: スタイルシステム
+title: 'スタイルシステム '
 seo-title: Style System
 description: スタイルシステムを使用すると、テンプレート作成者がコンポーネントのコンテンツポリシーのスタイルクラスを定義し、コンテンツ作成者がページでのコンポーネントの編集時にそのスタイルクラスを選択できます。これらのスタイルは、1 つのコンポーネントの別の視覚的バリエーションとして使用することができるので、コンポーネントがより柔軟で扱いやすいものになります。
 seo-description: The Style System allows a template author to define style classes in the content policy of a component so that a content author is able to select them when editing the component on a page. These styles can be alternative visual variations of a component, making it more flexible.
@@ -12,11 +12,11 @@ exl-id: 8d7282dd-1e21-4862-af04-0daaea431e2c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1314'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
-# スタイルシステム{#style-system}
+# スタイルシステム {#style-system}
 
 スタイルシステムを使用すると、テンプレート作成者がコンポーネントのコンテンツポリシーのスタイルクラスを定義し、コンテンツ作成者がページでのコンポーネントの編集時にそのスタイルクラスを選択できます。これらのスタイルは、1 つのコンポーネントの別の視覚的バリエーションとして使用することができるので、コンポーネントがより柔軟で扱いやすいものになります。
 
@@ -130,7 +130,7 @@ ht-degree: 98%
 
 ### 編集ダイアログの「スタイル」タブを有効にする {#enable-styles-tab-edit}
 
-AEMバージョン 6.4.7.0 以降では、編集ダイアログのオプションの「スタイル」タブが使用できるようになりました。 「デザインダイアログ」タブとは異なり、編集ダイアログのタブは、スタイルシステムが機能するのに必須ではなく、コンテンツ作成者がスタイルを設定するためのオプションの代替インターフェイスです。
+AEM バージョン 6.4.7.0 で、編集ダイアログのオプションとして「スタイル」タブが利用できるようになりました。 「デザインダイアログ」タブとは異なり、編集ダイアログのタブは、スタイルシステムが機能するのに必須ではなく、コンテンツ作成者がスタイルを設定するためのオプションの代替インターフェイスです。
 
 編集ダイアログのタブは、デザインダイアログのタブと同様の方法で組み込むことができます。
 
