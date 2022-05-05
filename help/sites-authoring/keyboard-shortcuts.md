@@ -10,10 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 exl-id: 8249fd48-38af-4bf7-8dcc-2f63db6750b6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: beb6e3ccc5cbef044f8b91d327c0361c881ccd72
 workflow-type: tm+mt
 source-wordcount: '378'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 >[!NOTE]
 >
->AEM キーボードショートカットに必要な[修飾子キー](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys)は、オペレーティングシステムによって異なります。
+>AEM キーボードショートカットに必要な[修飾キー](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys)は、オペレーティングシステムによって異なります。
 
 ## キーボードショートカット {#keyboard-shortcuts}
 
@@ -41,7 +41,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 | コンソール | `?` | キーボードショートカットヘルプ |
 |  | `/` | [検索](/help/sites-authoring/search.md)を呼び出す |
 |  | `Alt+`&lt;`Number`> | 表示する[レールセレクター](/help/sites-authoring/basic-handling.md#rail-selector)オプションを切り替える |
-|  | ` | レールを非表示 |
+|  | ``` ` ``` | レールを非表示 |
 |  | `e` | 編集 |
 |  | `p` | プロパティ |
 |  | `m` | 移動 |
@@ -52,7 +52,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 Windows の[修飾子キー](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys)を使用したキーの組み合わせがリストされています。
 
-[ページエディター](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)を使用してページのオーサリングをおこなう際には、デスクトップユーザー向けの様々なキーボードショートカットも利用できます。
+[ページエディター](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)を使用してページのオーサリングを行う際には、デスクトップユーザー向けの様々なキーボードショートカットも利用できます。
 
 ## OS 特有の修飾子キー {#os-specific-modifier-keys}
 
