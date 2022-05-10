@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Asset Management,Renditions
 role: User,Admin
 exl-id: ee25fe8f-36fb-42b3-9f90-0ea77bc02e2f
-source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
+source-git-commit: cc47644419f7b7f4f1f00bb848050aa4a98efa09
 workflow-type: tm+mt
-source-wordcount: '1635'
-ht-degree: 59%
+source-wordcount: '1645'
+ht-degree: 82%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 59%
 | サポートレベル | 説明 |
 |:---:|---|
 | ✓ | サポート対象 |
-| * | アドオン機能により対応 |
+| &#42; | アドオン機能により対応 |
 | − | 適用なし |
 
 ## ラスターイメージ形式 {#supported-raster-image-formats}
@@ -46,11 +46,11 @@ ht-degree: 59%
 | PICT |  |  |  |  |  |  | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ |  |  |  |
 
-**‡** 結合された画像は、画像ファイルからPSDされます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+**‡** 結合された画像は、画像ファイルからPSDされます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像とは異なる場合があります。
 
 Dynamic Media機能でサポートされるラスター画像形式は次のとおりです。
 
-| 形式 | アップロード<br> （入力形式） | 作成<br> 画像<br> プリセット<br> （出力形式） | プレビュー<br> 動的<br> rendition | 配信<br> 動的<br> rendition | ダウンロード<br> 動的<br> rendition |
+| 形式 | アップロード<br>（入力形式） | 画像<br>プリセット<br>の作成<br>（出力形式） | 動的<br>レンディション<br>のプレビュー | 動的<br>レンディション<br>の配信 | 動的<br>レンディション<br>のダウンロード |
 |---|:---:|:---:|:---:|:---:|:---:|
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -66,13 +66,13 @@ Dynamic Media機能でサポートされるラスター画像形式は次のと�
 | PICT | ✓ |  |  |  |  |
 | PSB |  |  |  |  |  |
 
-**‡** 結合された画像は、画像ファイルからPSDされます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+**‡** 結合された画像は、画像ファイルからPSDされます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像とは異なる場合があります。
 
 上記の情報に加えて、以下を考慮してください。
 
-* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick](best-practices-for-imagemagick.md) を設定してください。サードパーティツールを統合して追加機能を有効にするには、 [コマンドラインベースのメディアハンドラー](media-handlers.md#command-line-based-media-handler).
+* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick を設定](best-practices-for-imagemagick.md)してください。サードパーティ製のツールを統合して追加機能を有効にするには、[コマンドラインベースのメディアハンドラー](media-handlers.md#command-line-based-media-handler)を参照してください。
 
-* PSB ファイル形式が PSB ファイルに追加された場合、メタデータの書き戻しが機能します。 `NComm` ハンドラ
+* PSB ファイル形式でのメタデータの書き戻しは、`NComm` ハンドラーに追加すると機能するようになります。
 
 * EPS ファイルの動的レンディションのプレビューと生成に Dynamic Media を使用するには、[Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)を参照してください。
 
@@ -82,7 +82,7 @@ Dynamic Media機能でサポートされるラスター画像形式は次のと�
 
 次のリストは、次に示すラスターイメージファイル形式のサブタイプを示しています。 *not* Dynamic Mediaでサポートされています。
 
-関連トピック [Dynamic Mediaでサポートされていないファイル形式を検出する](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html).
+関連トピック [Dynamic Mediaでサポートされていないファイル形式を検出する](https://helpx.adobe.com/jp/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html).
 
 * 100 MB を超える IDAT チャンクサイズを持つ PNG ファイル。
 * PSB ファイル。
@@ -95,11 +95,11 @@ Dynamic Media機能でサポートされるラスター画像形式は次のと�
 
 Adobe PDF Rasterizer ライブラリは、サイズが大きくコンテンツが多い Adobe Illustrator ファイルおよび PDF ファイルの高品質のサムネールとプレビューを生成します。次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
 
-* 処理にリソースを大量に消費する、コンテンツを集中的に消費する AI/PDFファイル。
+* 処理でリソースに負担がかかる、コンテンツ集約型の AI ファイルや PDF ファイル。
 * AI／PDF ファイル。デフォルトではサムネールは生成されません。
 * Pantone Matching System（PMS）カラーを使用した AI ファイル.
 
-詳しくは、 [Rasterizer のPDF](aem-pdf-rasterizer.md).
+[PDF ラスタライザーの使用](aem-pdf-rasterizer.md)を参照してください。
 
 ## 画像トランスコーディングライブラリ {#supported-image-transcoding-library}
 
@@ -107,7 +107,7 @@ Adobe画像トランスコーディングライブラリは、エンコーディ
 
 画像トランスコーディングライブラリは、JPG/JPEG、PNG（8 ビットおよび 16 ビット）、GIF、BMP、TIFF/圧縮TIFF(32 ビットTIFFファイルおよび PTIFF ファイルを除く )、ICO および ICN の MIME タイプをサポートします。
 
-詳しくは、 [画像トランスコーディングライブラリ](imaging-transcoding-library.md).
+[画像トランスコーディングライブラリ](imaging-transcoding-library.md)を参照してください。
 
 ## Camera Raw {#supported-camera-raw}
 
@@ -115,9 +115,9 @@ Adobe Camera Rawライブラリは、 [!DNL Assets] ：生の画像を取り込�
 
 ## ドキュメント形式 {#supported-document-formats}
 
-アセット管理機能でサポートされるドキュメント形式は次のとおりです。
+アセット管理機能でサポートしているドキュメント形式は、次のとおりです。
 
-| 形式 | ストレージ | メタデータ<br> 管理 | Fulltext<br> 抽出 | メタデータ<br> 抽出 | サムネール<br> 生成 | サブアセット<br> 抽出 | メタデータ<br> 書き戻し |
+| 形式 | ストレージ | メタデータ<br> 管理 | Fulltext<br> 抽出 | メタデータ<br> 抽出 | サムネールの<br>生成 | サブアセット<br> 抽出 | メタデータ<br> 書き戻し |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ |
 | DOC | ✓ | ✓ | ✓ | ✓ |  |  |  |
@@ -140,13 +140,13 @@ Adobe Camera Rawライブラリは、 [!DNL Assets] ：生の画像を取り込�
 
 Dynamic Mediaの機能でサポートされるドキュメント形式は次のとおりです。
 
-| 形式 | アップロード<br> （入力形式） | 作成<br> 画像<br> プリセット<br> （出力形式） | プレビュー<br> 動的<br> rendition | 配信<br> 動的<br> rendition | ダウンロード<br> 動的<br> rendition |
+| 形式 | アップロード<br>（入力形式） | 画像<br>プリセット<br>の作成<br>（出力形式） | 動的<br>レンディション<br>のプレビュー | 動的<br>レンディション<br>の配信 | 動的<br>レンディション<br>のダウンロード |
 |---|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ |  |  |  |  |
 | DOC |  |  |  |  |  |
 | DOCX |  |  |  |  |  |
 | ODT |  |  |  |  |  |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) （下記の注意を参照） | ✓ | ✓ | ✓ | ✓ | ✓ |
 | HTML |  |  |  |  |  |
 | RTF |  |  |  |  |  |
 | TXT |  |  |  |  |  |
@@ -161,35 +161,39 @@ Dynamic Mediaの機能でサポートされるドキュメント形式は次の�
 | QXP |  |  |  |  |  |
 | ePub |  |  |  |  |  |
 
-上記の機能に加えて、次のことを考慮してください。
+>[!NOTE]
+>
+>安全なPDFの場合、アップロードのみがサポートされます。
+
+上記の機能に加えて、次を考慮する必要があります。
 
 * PDF ファイルの動的レンディションの生成に Dynamic Media を使用するには、[Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)を参照してください。
 
 * AI ファイルの動的レンディションのプレビューと生成に Dynamic Media を使用するには、[Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)を参照してください。
 
-* Dynamic Mediaを使用して INDD ファイルの動的レンディションを生成するには、 [InDesign(INDD) ファイル形式](../assets/managing-image-presets.md#indesign-indd-file-format).
+* INDD ファイルの動的レンディションの生成に Dynamic Media を使用するには、[InDesign（INDD）ファイル形式](../assets/managing-image-presets.md#indesign-indd-file-format)を参照してください。
 
 ## マルチメディア形式 {#supported-multimedia-formats}
 
 | 形式 | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | FFMPEG トランスコーディング |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| AAC | ✓ | ✓ |  | - | * |
-| MIDI | ✓ | ✓ |  | - | * |
-| 3GP | ✓ | ✓ |  | - | * |
-| MP3 | ✓ | ✓ | ✓ | - | * |
-| MPG | ✓ | ✓ |  | - | * |
-| OGA | ✓ | ✓ |  | - | * |
-| OGG | ✓ | ✓ |  | - | * |
-| RA | ✓ | ✓ |  | - | * |
-| WAV | ✓ | ✓ |  | - | * |
-| WMA | ✓ | ✓ |  | - | * |
-| DVI | ✓ | ✓ |  | * | * |
-| FLV | ✓ | ✓ |  | * | * |
-| M4V | ✓ | ✓ |  | * | * |
-| MPEG | ✓ | ✓ |  | * | * |
-| OGV | ✓ | ✓ |  | * | * |
-| MOV | ✓ | ✓ |  | * | * |
-| WMV | ✓ | ✓ |  | * | * |
+| AAC | ✓ | ✓ |  | - | &#42; |
+| MIDI | ✓ | ✓ |  | - | &#42; |
+| 3GP | ✓ | ✓ |  | - | &#42; |
+| MP3 | ✓ | ✓ | ✓ | - | &#42; |
+| MPG | ✓ | ✓ |  | - | &#42; |
+| OGA | ✓ | ✓ |  | - | &#42; |
+| OGG | ✓ | ✓ |  | - | &#42; |
+| RA | ✓ | ✓ |  | - | &#42; |
+| WAV | ✓ | ✓ |  | - | &#42; |
+| WMA | ✓ | ✓ |  | - | &#42; |
+| DVI | ✓ | ✓ |  | &#42; | &#42; |
+| FLV | ✓ | ✓ |  | &#42; | &#42; |
+| M4V | ✓ | ✓ |  | &#42; | &#42; |
+| MPEG | ✓ | ✓ |  | &#42; | &#42; |
+| OGV | ✓ | ✓ |  | &#42; | &#42; |
+| MOV | ✓ | ✓ |  | &#42; | &#42; |
+| WMV | ✓ | ✓ |  | &#42; | &#42; |
 | SWF | ✓ | ✓ |  |  |  |
 
 ## Dynamic Mediaトランスコード用の入力ビデオ形式 {#supported-input-video-formats-for-dynamic-media-transcoding}
@@ -225,7 +229,7 @@ Dynamic Mediaの機能でサポートされるドキュメント形式は次の�
 | TAR | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | ZIP **†** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-**†** 結合された画像は、画像ファイルからPSDされます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。を使用して作成された ZIP アーカイブ `Deflate64` AEMでは、アルゴリズムのサポートが制限されています。 アーカイブ操作とアーカイブ解除操作はサポートされていません。 アップロード、参照、ダウンロードなどの操作はサポートされています。
+**†** 結合された画像は、画像ファイルからPSDされます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像とは異なる場合があります。を使用して作成された ZIP アーカイブ `Deflate64` AEMでは、アルゴリズムのサポートが制限されています。 アーカイブ操作とアーカイブ解除操作はサポートされていません。 アップロード、参照、ダウンロードなどの操作はサポートされています。
 
 ## その他のサポートされる形式 {#other-supported-formats}
 
@@ -244,18 +248,18 @@ Dynamic Mediaの機能でサポートされるドキュメント形式は次の�
 
 ## サポートされる MIME タイプ {#supported-mime-types}
 
-デフォルトでは、 [!DNL Experience Manager] は、ファイル拡張子を使用してファイルタイプを検出します。 [!DNL Experience Manager] は、ファイルの内容からこれを検出できます。 後者の場合は、「 [!UICONTROL コンテンツから MIME を検出] オプション [!UICONTROL Day CQ DAM Mime Type Service] 内 [!DNL Experience Manager] Web コンソール。
+デフォルトでは、[!DNL Experience Manager] は、ファイル拡張子を使用してファイルタイプを検出します。[!DNL Experience Manager] は、ファイルのコンテンツからこれを検出できます。後者の場合、[!DNL Experience Manager] web コンソールの「[!UICONTROL Day CQ DAM Mime Type Service]」で「[!UICONTROL Detect MIME from content]」オプションを選択します。
 
 サポートされる MIME タイプのリストは、次の場所にあるCRXDE Liteで利用できます。 `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`.
 
 | ファイル拡張子 | MIME タイプ／インターネットメディアタイプ | デフォルトの jobParam 値 | 許可される jobParam 値 |
 |---|---|---|---|
-| 画像 | image/s7asset | `usmAmount=1.75&usmRadius=0.2`<br>`&usmThreshold=2&usmMonochrome=0&` | デフォルトの jobParam は、すべての画像の MIME タイプのアセットに適用されます。<ul><li>[knockoutBackgroundOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-knockout-background-options.html)</li><li>[manualCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-manual-crop-options.html)</li><li>[autoColorCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-color-crop-options.html)</li><li>[autoTransparentCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-transparent-crop-options.html)</li><li>[colorManagementOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-color-management-options.html)</li><li>[autoSetCreationOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-set-creation-options.html)</li><li>[emailSetting](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/sting-constants/r-email-settings.html)</li><li>[xmpKeywords](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-xmp-keywords.html)</li><li>[unsharpMaskOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-unsharp-mask-options.html)</li></ul> |
-| 3G2 | video/3gpp2 |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
+| 画像 | image/s7asset | `usmAmount=1.75&usmRadius=0.2`<br>`&usmThreshold=2&usmMonochrome=0&` | デフォルトの jobParam は、すべての画像の MIME タイプのアセットに適用されます。<ul><li>[knockoutBackgroundOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-knockout-background-options.html?lang=ja)</li><li>[manualCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-manual-crop-options.html?lang=ja)</li><li>[autoColorCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-color-crop-options.html?lang=ja)</li><li>[autoTransparentCropOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-transparent-crop-options.html?lang=ja)</li><li>[colorManagementOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-color-management-options.html?lang=ja)</li><li>[autoSetCreationOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-auto-set-creation-options.html?lang=ja)</li><li>[emailSetting](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/sting-constants/r-email-settings.html?lang=ja)</li><li>[xmpKeywords](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-xmp-keywords.html?lang=ja)</li><li>[unsharpMaskOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-unsharp-mask-options.html?lang=ja)</li></ul> |
+| 3G2 | video/3gpp2 |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html?lang=ja) |
 | 3GP | video/3gpp |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | AAC | audio/x-aac |  |  |
 | AFM | application/x-font-type1 |  |  |
-| AI | application/postscript | `aiprocess=Rasterize&airesolution=150`<br>`&aicolorspace=Auto&aialpha=false` | <ul><li>[postScriptOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-post-script-options.html)</li><li> [illustratorOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-illustrator-options.html)</li></ul> |
+| AI | application/postscript | `aiprocess=Rasterize&airesolution=150`<br>`&aicolorspace=Auto&aialpha=false` | <ul><li>[postScriptOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-post-script-options.html?lang=ja)</li><li> [illustratorOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-illustrator-options.html?lang=ja)</li></ul> |
 | AIFF | audio/x-aiff |  |  |
 | AVI | video/x-msvideo |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | BMP | image/bmp |  |  |
@@ -282,19 +286,19 @@ Dynamic Mediaの機能でサポートされるドキュメント形式は次の�
 | MTS | model/vnd.mts |  |  |
 | OGV | video/ogg |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
 | OTF | application/x-font-otf |  |  |
-| PDF | application/pdf | `pdfprocess=Rasterize&resolution=150`<br>`&colorspace=Auto&pdfbrochure=false`<br>`&keywords=false&links=false` | [pdfOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-options.html) |
+| PDF | application/pdf | `pdfprocess=Rasterize&resolution=150`<br>`&colorspace=Auto&pdfbrochure=false`<br>`&keywords=false&links=false` | [pdfOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-options.html?lang=ja) |
 | PFB | application/x-font-type1 |  |  |
 | PFM | application/x-font-type1 |  |  |
 | PICT | image/x-pict |  |  |
 | PNG | image/png |  |  |
 | PPT | application/vnd.ms-powerpoint |  |  |
 | PS | application/postscript | `psprocess=Rasterize&psresolution=150`<br>`&pscolorspace=Auto&psalpha=false`<br>`&psextractsearchwords=false`<br>`&aiprocess=Rasterize&airesolution=150`<br>`&aicolorspace=Auto&aialpha=false` | <ul><li>[postScriptOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-post-script-options.html)</li><li>[illustratorOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-illustrator-options.html)</li></ul> |
-| PSD | image/vnd.adobe.photoshop | `process=None&layerNaming=Layername`<br>`&anchor=Center&createTemplate=false`<br>`&extractText=false&extendLayers=false` | <ul><li>[photoshopOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-options.html)</li><li>[photoshopLayerOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-layer-options.html)</li></ul> |
+| PSD | image/vnd.adobe.photoshop | `process=None&layerNaming=Layername`<br>`&anchor=Center&createTemplate=false`<br>`&extractText=false&extendLayers=false` | <ul><li>[photoshopOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-options.html)</li><li>[photoshopLayerOptions](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-photoshop-layer-options.html?lang=ja)</li></ul> |
 | RTF | application/rtf |  |  |
 | SVG | image/svg+xml |  |  |
 | SWF | application/x-shockwave-flash |  |  |
 | TAR | application/x-tar |  |  |
-| TIF / TIFF | image/tiff |  |  |
+| TIF／TIFF | image/tiff |  |  |
 | TTC | application/x-font-ttf |  |  |
 | TTF | application/x-font-ttf |  |  |
 | VOB | video/dvd |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html) |
@@ -308,6 +312,6 @@ Dynamic Mediaの機能でサポートされるドキュメント形式は次の�
 
 >[!MORELIKETHIS]
 >
->* [MIME タイプベースの Assets/Dynamic Media Classicアップロードジョブパラメーターサポートの有効化](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
->* [アップロードジョブパラメーターサポートの MIME タイプベースの設定](config-dynamic.md).
+>* [MIME タイプベースの Assets／Dynamic Media Classic アップロードジョブパラメーターサポートの有効化](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support).
+>* [アップロードジョブパラメーターサポートの MIME タイプベースの設定](config-dynamic.md)を参照してください。
 

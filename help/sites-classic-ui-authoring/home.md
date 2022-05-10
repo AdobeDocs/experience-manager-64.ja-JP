@@ -1,21 +1,21 @@
 ---
-title: AEM 6.4 Classic UI オーサリングユーザーガイド
+title: AEM 6.4 クラシック UI オーサリングユーザーガイド
 seo-title: AEM 6.4 Classic UI Authoring User Guide
-description: 'このガイドでは、クラシック UI でのAEMでのオーサリングの概念について説明します。 '
+description: このガイドでは、従来のユーザーインタフェイスを使用した AEM でのオーサリングの概念を説明します。
 seo-description: Covers the concepts of authoring in AEM in the classic UI.
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+exl-id: 56522aaf-9a8d-48b8-b748-3b57d5e9c8ef
+source-git-commit: a01f94ddcd84c4d3f7769d6a55fbfcbef131dc57
 workflow-type: tm+mt
 source-wordcount: '347'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
+# AEM 6.4 クラシック UI オーサリングユーザーガイド
 
-# AEM 6.4 Classic UI オーサリングユーザーガイド
+このガイドでは、従来のユーザーインタフェイスを使用した AEM でのオーサリングの概念を説明します。
 
-このガイドでは、クラシック UI でのAEMでのオーサリングの概念について説明します。
-
-## 主なAEM記事
+## 主な AEM 記事
 
 * [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
 * [AEM 6.4 リリースノート](/help/release-notes/home.md)
@@ -46,7 +46,7 @@ ht-degree: 87%
 * [Dispatcher ユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL ユーザーガイド](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)
 * [コアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=ja)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
-* [AEM コミュニティフォーラム](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja#home)
+* [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)

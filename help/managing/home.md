@@ -1,21 +1,21 @@
 ---
 title: AEM 6.4 管理ユーザーガイド
 seo-title: AEM 6.4 Managing User Guide
-description: 'このガイドでは、AEMプロジェクトを正常に管理する方法について説明します '
+description: 'このガイドでは、AEM プロジェクトを正常に管理する方法について説明します。 '
 seo-description: Covers how to manage an AEM project successfully
 exl-id: 4fa34d1f-c41e-4b9b-98d3-8c364a60776d
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: a01f94ddcd84c4d3f7769d6a55fbfcbef131dc57
 workflow-type: tm+mt
 source-wordcount: '335'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
 # AEM 6.4 管理ユーザーガイド
 
-このガイドでは、AEMプロジェクトを正常に管理する方法について説明します
+このガイドでは、AEM プロジェクトを正常に管理する方法について説明します。
 
-## 主なAEM記事
+## 主な AEM 記事
 
 * [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
 * [AEM 6.4 リリースノート](/help/release-notes/home.md)
@@ -26,7 +26,7 @@ ht-degree: 86%
 
 | ユーザーガイド | 説明 |
 |--- |---|
-| [リリースノート](/help/release-notes/home.md) | AEMの最新リリースに関する重要な情報（新機能、サポートされるプラットフォーム、廃止される機能および削除された機能、既知の問題など）を提供します |
+| [リリースノート](/help/release-notes/home.md) | AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています |
 | [Assets ユーザーガイド](/help/assets/home.md) | デジタルアセットを作成、管理、配信および最適化する方法について説明します。 |
 | [Forms ユーザーガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、公開、更新の方法について説明します。 |
 | [Communities ユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |
@@ -46,7 +46,7 @@ ht-degree: 86%
 * [Dispatcher ユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL ユーザーガイド](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)
 * [コアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=ja)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
-* [AEM コミュニティフォーラム](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja#home)
+* [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)

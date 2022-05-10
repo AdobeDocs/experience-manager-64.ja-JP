@@ -1,21 +1,21 @@
 ---
 title: AEM 6.4 オーサリングユーザーガイド
 seo-title: AEM 6.4 Authoring User Guide
-description: 'このガイドでは、AEM でのオーサリングの概念を説明します。 '
+description: このガイドでは、AEM でのオーサリングの概念を説明します。
 seo-description: Explains the concepts of authoring in AEM.
-source-git-commit: 501a6c470113d249646f4424a19ee215a82b032d
+exl-id: c507de40-d840-4457-ae40-59c81afbe7aa
+source-git-commit: a01f94ddcd84c4d3f7769d6a55fbfcbef131dc57
 workflow-type: tm+mt
 source-wordcount: '333'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
-
 
 # AEM 6.4 オーサリングユーザーガイド
 
 このガイドでは、AEM でのオーサリングの概念を説明します。
 
-## 主なAEM記事
+## 主な AEM 記事
 
 * [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
 * [AEM 6.4 リリースノート](/help/release-notes/home.md)
@@ -46,7 +46,7 @@ ht-degree: 99%
 * [Dispatcher ユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL ユーザーガイド](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)
 * [コアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=ja))
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
-* [AEM コミュニティフォーラム](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja#home)
+* [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)
