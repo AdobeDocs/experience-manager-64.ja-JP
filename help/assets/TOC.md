@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
-source-git-commit: 35aea0e087334a1c1e6a708f2182bd9dee799dc0
+source-git-commit: 675e98231e53bb9771446c33d9d8ec8968531014
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '646'
 ht-degree: 82%
 
 ---
@@ -48,6 +48,7 @@ ht-degree: 82%
    + [Dynamic Media ビデオプロファイル](video-profiles.md)
    + [Dynamic Media 画像プロファイル](image-profiles.md)
    + [スマートイメージング](imaging-faq.md)
+   + [クライアントサイドデバイスのピクセル比によるスマートイメージング](client-side-dpr.md)
    + [ビデオ](s7-video.md)
    + [コンテンツの HTTP/2 配信](http2.md)
    + [Dynamic Media アセットの配信](delivering-dynamic-media-assets.md)
