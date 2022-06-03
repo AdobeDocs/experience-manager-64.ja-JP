@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media画像プリセットの管理
+title: Dynamic Media 画像プリセットの管理
 description: Dynamic Mediaの画像プリセットの理解と、画像プリセットの作成、変更、管理方法について説明します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -9,14 +9,14 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 exl-id: 3a666efe-1592-4425-82f5-c4d9343f65da
 feature: Image Presets
 role: Admin,User
-source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
+source-git-commit: 78e187855845046071bc7f22cd7d491d48568336
 workflow-type: tm+mt
 source-wordcount: '3835'
-ht-degree: 79%
+ht-degree: 82%
 
 ---
 
-# Dynamic Media画像プリセットの管理 {#managing-image-presets}
+# Dynamic Media 画像プリセットの管理 {#managing-image-presets}
 
 画像プリセットを使用すると、AEM Assets は異なるサイズや異なる形式の画像、あるいは動的に生成された他の画像プロパティを設定した画像を動的に配信できます。各画像プリセットは、画像表示用のサイズやフォーマットに関するコマンドの事前定義済みコレクションを表します。画像プリセットの作成時には、画像配信用のサイズを選択します。またフォーマットコマンドも選択し、表示対象画像の配信時に画像の見た目が最適化されるようにします。
 
@@ -30,7 +30,7 @@ ht-degree: 79%
 >
 >スマートイメージングは、既存の画像プリセットで機能し、配信の直前にインテリジェンスを使用して、ブラウザーまたはネットワークの接続速度に基づいて画像のファイルサイズをさらに低減します。詳しくは、[スマートイメージング](imaging-faq.md)を参照してください。
 
-## Dynamic Mediaの画像プリセットについて {#understanding-image-presets}
+## Dynamic Media 画像プリセットを理解する {#understanding-image-presets}
 
 画像プリセットは、ソフトウェアマクロと同様に、サイズとフォーマットに関するコマンドの事前定義済みのコレクションで、名前を付けて保存されます。 画像プリセットの仕組みを理解するために、Web サイトで各商品画像を、デスクトップ配信用とモバイル配信用に異なるサイズ、異なる形式および圧縮率で表示する必要があるとします。
 
@@ -40,7 +40,7 @@ ht-degree: 79%
 
 管理者が画像プリセットを作成できます。画像プリセットを作成する際に、最初から作業を始めることも、既存のプリセットから始めて新しい名前で保存することもできます。
 
-## Dynamic Media画像プリセットの管理 {#managing-image-presets-1}
+## Dynamic Media 画像プリセットの管理 {#managing-image-presets-1}
 
 AEMで画像プリセットを管理するには、AEMのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップして次の場所に移動します。 **[!UICONTROL アセット/画像プリセット]**.
 
@@ -71,11 +71,11 @@ Adobe Illustrator のファイル形式は PDF のバリアントです。AEM As
 
 サブアセットは、`DAM Update Asset` ワークフロー全体で `Create Sub Asset process` コンポーネントによって作成されます。ワークフローにこのプロセスコンポーネントを表示するには、**[!UICONTROL ツール／ワークフロー／モデル／DAM アセットの更新／編集]**&#x200B;をタップします。
 
-[複数ページファイルのページの表示](/help/assets/managing-linked-subassets.md#view-pages-of-a-multi-page-file)も参照してください。
+「[複数ページファイルのページの表示](/help/assets/managing-linked-subassets.md#view-pages-of-a-multi-page-file)」も参照してください。
 
   サブアセットまたはページは、アセットを開き、コンテキストメニューをタップし、「**[!UICONTROL サブアセット]**」または「**[!UICONTROL ページ]**」を選択して表示できます。サブアセットは実在のアセットです。つまり、PDF ページは `Create Sub Asset` ワークフローコンポーネントによって抽出されます。その後それらは `page1.pdf` や `page2.pdf` などとして、メインアセットの下に保存されます。保存されると、それらは&#x200B;**[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローで処理されます。
 
-  Dynamic Media を使用して AI、EPS または PDF ファイルの動的レンディションを表示および生成するには、次の処理ステップが必要です。
+Dynamic Media を使用して AI、EPS または PDF ファイルの動的レンディションを表示および生成するには、次の処理ステップが必要です。
 
 1. 内 **[!UICONTROL DAM アセットの更新]** ワークフロー、 **[!UICONTROL PDF/AI 画像プレビューレンディションをラスタライズ]** プロセスコンポーネントが、設定された解像度を使用して元のアセットの最初のページをラスタライズし、 `cqdam.preview.png` レンディション。
 
@@ -83,7 +83,7 @@ Adobe Illustrator のファイル形式は PDF のバリアントです。AEM As
 
 >[!NOTE]
 >
->内 **[!UICONTROL DAM アセットの更新]** ワークフロー、 **[!UICONTROL EPSサムネール]** step はEPSファイルのサムネールを生成します。
+>**[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローの **[!UICONTROL EPS サムネール]** ステップで、EPS ファイルのサムネールが生成されるようになりました。
 
 ### PDF/AI/EPS アセットのメタデータプロパティ {#pdf-ai-eps-asset-metadata-properties}
 
@@ -140,7 +140,7 @@ Adobe Illustrator のファイル形式は PDF のバリアントです。AEM As
 
 ### InDesign（INDD）ファイル形式 {#indesign-indd-file-format}
 
-INDD 形式の取り込みをサポートし、これらのファイル形式の動的レンディションを生成する場合、画像プリセットを作成する前に次の情報を確認することをお勧めします。
+INDD 形式の取り込みをサポートし、このファイル形式の動的レンディションを生成する場合、画像プリセットを作成する前に次の情報を確認することをお勧めします。
 
 InDesign ファイルでは、Adobe InDesign サーバーが AEM に統合されている場合にのみサブアセットが抽出されます。参照元のアセットは、メタデータに基づいてリンクされます。リンク設定に InDesign Server は不要です。ただし、リンクが InDesign ファイルと参照元のアセットの間に作成されるには、InDesign ファイルが処理される前に参照元のアセットが AEM 内に存在する必要があります。
 
@@ -192,7 +192,6 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 >* EPSファイルのサムネールサイズは、 **[!UICONTROL EPSサムネール]** ステップ、 **[!UICONTROL 引数]** 下のタブ **[!UICONTROL サムネール]**.
 >
 >* ビデオのサムネールサイズは「**[!UICONTROL 引数]**」の下にある「**[!UICONTROL 処理]**」タブの **[!UICONTROL FFmpeg サムネール]**&#x200B;のステップで設定します。
-
 >
 
 
@@ -211,7 +210,7 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 
 1. 「**[!UICONTROL 保存]**」をタップしてワークフローに対する変更を保存します。
 
-### 表示されるDynamic Media画像プリセット数の増減 {#increasing-or-decreasing-the-number-of-image-presets-that-display}
+### 表示される Dynamic Media 画像プリセット数の増減 {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
 作成した画像プリセットは、アセットをプレビューする際の動的レンディションとして使用できます。AEM で、**[!UICONTROL 詳細表示／レンディション]**&#x200B;からアセットを表示すると、様々な動的レンディションが表示されます。表示されるレンディション数の制限を増減させることができます。
 
@@ -232,7 +231,7 @@ Dynamic Media 統合では、以下のスクリプトが使用されます。
 
 ### Dynamic Media画像プリセットの作成 {#creating-image-presets}
 
-Dynamic Mediaの画像プリセットを作成すると、プレビューまたは公開時に、これらの設定を任意の画像に適用できます。
+Dynamic Media 画像プリセットの作成によって、プレビューや公開の際に任意の画像に設定を適用できます。
 
 >[!NOTE]
 >
@@ -241,7 +240,7 @@ Dynamic Mediaの画像プリセットを作成すると、プレビューまた�
 AI、PDF および EPS 形式の取り込みをサポートし、これらのファイル形式の動的レンディションを生成する場合、画像プリセットを作成する前に次の情報を確認することをお勧めします。\
 [Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式](#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)を参照してください。
 
-INDD 形式の取り込みをサポートし、これらのファイル形式の動的レンディションを生成する場合、画像プリセットを作成する前に次の情報を確認することをお勧めします。[InDesign（INDD）ファイル形式](#indesign-indd-file-format)を参照してください。
+INDD 形式の取り込みをサポートし、このファイル形式の動的レンディションを生成する場合、画像プリセットを作成する前に次の情報を確認することをお勧めします。[InDesign（INDD）ファイル形式](#indesign-indd-file-format)を参照してください。
 
 >[!NOTE]
 >
@@ -250,7 +249,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 **Dynamic Media画像プリセットを作成するには：**:
 
 1. AEM で、AEM ロゴをタップして、グローバルナビゲーションコンソールにアクセスします。
-1. 次をタップします。 **[!UICONTROL ツール]** アイコンをクリックし、 **[!UICONTROL アセット/画像プリセット]**.
+1. 「**[!UICONTROL ツール]**」アイコンをタップし、**[!UICONTROL アセット／画像プリセット]**&#x200B;に移動します。
 1. 「**[!UICONTROL 作成]**」をタップします。
 
    ![chlimage_1-496](assets/chlimage_1-496.png)
@@ -287,7 +286,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 * **[!UICONTROL 形式]** (**[!UICONTROL 基本]** タブ ) — 選択 **[!UICONTROL JPEG]** または要件を満たす別の形式を使用できます。すべての Web ブラウザーは、JPEG画像形式をサポートしています。小さいファイルサイズと画質のバランスが取れています。ただし、JPEG形式の画像は非可逆圧縮方式を使用しているので、圧縮設定が低すぎると不要な画像アーティファクトが発生する可能性があります。 このため、アドビは圧縮品質を 75 に設定することをお勧めします。この設定は、画質と小さなファイルサイズのバランスが取れた設定です。
 * **[!UICONTROL シンプルシャープを有効にする]**  — 選択しない **[!UICONTROL シンプルシャープを有効にする]** （このシャープフィルターでは、アンシャープマスク設定よりも細かく制御できません）。
-* **[!UICONTROL シャープ：再サンプリングモード]**  — 選択 **[!UICONTROL バイキュービック法]**.
+* **[!UICONTROL シャープ：再サンプリングモード]**  — 選択 **[!UICONTROL シャープ 2]**.
 
 #### 「基本」タブオプション  {#basic-tab-options}
 
@@ -405,7 +404,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
   </tr>
   <tr>
    <td><strong>画像の修飾子</strong></td>
-   <td><p>UI で使用できる共通の画像設定のほか、Dynamic Media では「<strong>画像の修飾子</strong>」フィールドで画像の詳細を多数指定できます。これらのパラメーターは、<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html">Image Server プロトコルのコマンドリファレンス（英語）</a>で定義されています。</p> <p>重要：API にリストされている次の関数はサポートされていません。</p>
+   <td><p>UI で使用できる共通の画像設定のほか、Dynamic Media では「<strong>画像の修飾子</strong>」フィールドで画像の詳細を多数指定できます。これらのパラメーターは、<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=ja">Image Server プロトコルのコマンドリファレンス（英語）</a>で定義されています。</p> <p>重要：API にリストされている次の関数はサポートされていません。</p>
     <ul>
      <li>基本的なテンプレートコマンドおよびテキストレンダリングコマンド：<code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> および <code>textPs=</code></li>
      <li>ローカライゼーションコマンド：<code>locale=</code> および <code>req=xlate</code></li>
@@ -430,7 +429,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 >
 >一部の画像の修飾子は、[AEM で使用できません](#advanced-tab-options)。
 
-* [op_invert](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-invert.html) - それぞれの色成分を、画像の効果が反対になるように逆転させます。
+* [op_invert](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-invert.html?lang=ja) - それぞれの色成分を、画像の効果が反対になるように逆転させます。
 
    ```xml
    &op_invert=1
@@ -438,7 +437,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
    ![chlimage_1-499](assets/chlimage_1-499.png)
 
-* [op_blur](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-blur.html) - 画像にぼかしフィルターを適用します。
+* [op_blur](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-blur.html?lang=ja) - 画像にぼかしフィルターを適用します。
 
    ```xml
    &op_blur=25
@@ -454,7 +453,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
    ![chlimage_1-501](assets/chlimage_1-501.png)
 
-* [op_brightness](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-brightness.html) - 明るさを増減させます。
+* [op_brightness](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-brightness.html?lang=ja) - 明るさを増減させます。
 
    ```xml
    &op_brightness=75
@@ -462,7 +461,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
    ![chlimage_1-502](assets/chlimage_1-502.png)
 
-* [opac](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-opac.html) - 画像の不透明度を調節します。前景の不透明度を減らすことができます。
+* [opac](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-opac.html?lang=ja) - 画像の不透明度を調節します。前景の不透明度を減らすことができます。
 
    ```xml
    opac=50
@@ -475,14 +474,14 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 **画像プリセットを編集するには：**:
 
 1. AEM で、AEM ロゴをタップして、グローバルナビゲーションコンソールにアクセスします。
-1. 次をタップします。 **[!UICONTROL ツール]** アイコンをクリックし、 **[!UICONTROL アセット/画像プリセット]**.
+1. 「**[!UICONTROL ツール]**」アイコンをタップし、**[!UICONTROL アセット／画像プリセット]**&#x200B;に移動します。
 
    ![chlimage_1-504](assets/chlimage_1-504.png)
 
 1. プリセットを選択し、をタップします。 **[!UICONTROL 編集]**.
 1. の **[!UICONTROL 画像プリセットを編集]** ページで、必要な変更を行い、をタップします。 **[!UICONTROL 保存]**.
 
-## Dynamic Media画像プリセットの公開 {#publishing-image-presets}
+## Dynamic Media 画像プリセットを公開する {#publishing-image-presets}
 
 Dynamic Media - ハイブリッドモードを実行している場合、画像プリセットを手動で公開する必要があります。
 
@@ -491,14 +490,14 @@ Dynamic Media - Scene7モードを実行している場合、画像プリセッ�
 **Dynamic Media — ハイブリッドモードで画像プリセットを公開するには：**:
 
 1. AEM で、AEM ロゴをタップして、グローバルナビゲーションコンソールにアクセスします。
-1. 次をタップします。 **[!UICONTROL ツール]** アイコンをクリックし、 **[!UICONTROL アセット/画像プリセット]**.
+1. 「**[!UICONTROL ツール]**」アイコンをタップし、**[!UICONTROL アセット／画像プリセット]**&#x200B;に移動します。
 1. 画像プリセットのリストから目的の画像プリセットを 1 つ以上選択し、をタップします。 **[!UICONTROL 公開]**.
 1. 画像プリセットが公開されると、ステータスが非公開から公開済みに変更されます。
 
    ![chlimage_1-505](assets/chlimage_1-505.png)
 
-## Dynamic Media画像プリセットの削除 {#deleting-image-presets}
+## ダイナミックメディア画像プリセットを削除 {#deleting-image-presets}
 
 1. AEM で、AEM ロゴをタップして、グローバルナビゲーションコンソールにアクセスします。
-1. 次をタップします。 **[!UICONTROL ツール]** アイコンをクリックし、 **[!UICONTROL アセット/画像プリセット]**.
+1. 「**[!UICONTROL ツール]**」アイコンをタップし、**[!UICONTROL アセット／画像プリセット]**&#x200B;に移動します。
 1. プリセットを選択し、をタップします。 **[!UICONTROL 削除]**. プリセットを削除してよいか確認するメッセージが表示されます。「**[!UICONTROL 削除]**」をタップします。
