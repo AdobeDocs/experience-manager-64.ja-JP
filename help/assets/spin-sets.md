@@ -8,10 +8,10 @@ content-type: reference
 exl-id: 47cb6d40-a5c4-4f6a-9794-bd2eddfaa7d0
 feature: Spin Sets
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 5d4d0c86a9d9e3eaaaca1e795260e8e49567ea73
 workflow-type: tm+mt
-source-wordcount: '1843'
-ht-degree: 67%
+source-wordcount: '1923'
+ht-degree: 66%
 
 ---
 
@@ -28,6 +28,14 @@ ht-degree: 67%
 >[!NOTE]
 >
 >アセットユーザーインターフェイスについて詳しくは、[タッチ UI を使用したアセットの管理](managing-assets-touch-ui.md)を参照してください。
+
+スピンセットを作成する場合、Adobeでは次のベストプラクティスを推奨し、次の制限を適用します。
+
+| 制限タイプ | ベストプラクティス | 実装された制限 |
+| --- | --- | --- |
+| 2D セットあたりの最大行数/列数 | 1 セットあたり 12～18 個の画像 | 1000 |
+
+関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
 
 ## クイックスタート：スピンセット {#quick-start-spin-sets}
 
@@ -103,9 +111,17 @@ ht-degree: 67%
 >
 >[バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用してスピンセットを自動的に作成することもできます。
 >
->バッチセットは、アセットの取り込みの一環として IPS(Image Production System) で作成され、Dynamic Media - Scene7モードでのみ使用できます。
+>バッチセットは IPS（Image Production System）によってアセット取り込みの一環として作成され、Dynamic Media - Scene7 モードでのみ使用できます。
 >
 >[Dynamic Media - Scene7 モードの設定](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)の「画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成」を参照してください。
+
+スピンセットを作成する場合、Adobeでは次のベストプラクティスを推奨し、次の制限を適用します。
+
+| 制限タイプ | ベストプラクティス | 実装された制限 |
+| --- | --- | --- |
+| 2D セットあたりの最大行数/列数 | 1 セットあたり 12～18 個の画像 | 1000 |
+
+関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
 
 **スピンセットを作成するには：**
 

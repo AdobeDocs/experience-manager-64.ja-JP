@@ -12,10 +12,10 @@ discoiquuid: e00e7cc9-b777-4f9e-906d-824bcb2bbd41
 exl-id: af3f95aa-a162-4212-a20a-68b5a0e72d6d
 feature: Image Sets
 role: User
-source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
+source-git-commit: 5d4d0c86a9d9e3eaaaca1e795260e8e49567ea73
 workflow-type: tm+mt
-source-wordcount: '2052'
-ht-degree: 81%
+source-wordcount: '2166'
+ht-degree: 78%
 
 ---
 
@@ -36,6 +36,15 @@ ht-degree: 81%
 >[!NOTE]
 >
 >アセットユーザーインターフェイスについて詳しくは、[タッチ UI を使用したアセットの管理](managing-assets-touch-ui.md)を参照してください。
+
+画像セットを作成する際、Adobeでは次のベストプラクティスを推奨し、次の制限を適用します。
+
+| アセット — 制限タイプ | ベストプラクティス | 実装された制限 | 制限の変更 2022 年 12 月 31 日 |
+| --- | --- | --- | --- |
+| **画像セット**  — セットあたりの重複アセット数 | 重複なし | 100 | 20 |
+| **画像セット** - 1 セットあたりの最大画像数 | 1 セットあたり 5～10 個の画像 | 1000 |
+
+関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
 
 ## クイックスタート：画像セット {#quick-start-image-sets}
 
@@ -128,6 +137,15 @@ ht-degree: 81%
 >[!NOTE]
 >
 >画像セットは、 `,` （コンマ）を使用して、ファイル名に含めることができます。
+
+画像セットを作成する際、Adobeでは次のベストプラクティスを推奨し、次の制限を適用します。
+
+| アセット — 制限タイプ | ベストプラクティス | 実装された制限 | 制限の変更 2022 年 12 月 31 日 |
+| --- | --- | --- | --- |
+| **画像セット**  — セットあたりの重複アセット数 | 重複なし | 100 | 20 |
+| **画像セット** - 1 セットあたりの最大画像数 | 1 セットあたり 5～10 個の画像 | 1000 |
+
+関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
 
 **画像セットを作成するには**:
 
