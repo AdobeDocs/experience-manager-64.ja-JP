@@ -11,7 +11,7 @@ role: Admin
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '648'
-ht-degree: 93%
+ht-degree: 98%
 
 ---
 
@@ -109,7 +109,7 @@ ht-degree: 93%
    + [概念 ](concepts.md)
    + [汎用 e コマースの管理](generic.md)
    + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
-   + [SAP Commerce Cloud](sap-commerce-cloud.md)
+   + [SAP Commerce Cloud ](sap-commerce-cloud.md)
    + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
    + [AEM Commerce - GDPR 対応](gdpr-compliance-commerce.md)
 + 統合 {#integration}
@@ -136,7 +136,7 @@ ht-degree: 93%
    + [Adobe Dynamic Tag Management との統合](dtm.md)
    + [Adobe Analytics および Adobe Target との統合のオプトイン](opt-in.md)
    + [AEM ポータルとポートレット](aem-as-portal.md)
-   + [Dynamic Media Classicとの統合](scene7.md)
+   + [ Dynamic Media Classic との統合](scene7.md)
    + [AEM Livefyre のレシピ](aem-livefyre-recipes.md)
    + [統合に関する問題のトラブルシューティング](troubleshooting-integration-issues.md)
    + [BrightEdge Content Optimizer との結合](brightedge.md)
@@ -155,10 +155,10 @@ ht-degree: 93%
    + [エクスペリエンスフラグメントとのTarget 統合](experience-fragments-target.md)
 + ベストプラクティス {#bestpractices}
    + [ベストプラクティス](administer-best-practices.md)
-   + [翻訳のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-64/administering/introduction/tc-bp.html)
-   + [MSM のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-64/administering/introduction/msm-best-practices.html)
+   + [翻訳のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-64/administering/introduction/tc-bp.html?lang=ja)
+   + [MSM のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-64/administering/introduction/msm-best-practices.html?lang=ja)
    + [AEM Sites - GDPR 対応](gdpr-compliance-sites.md)
-   + [AEM の基盤での GDPR 要求の処理](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/handling-gdpr-requests-for-aem-platform.html)
+   + [AEM の基盤での GDPR 要求の処理](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/handling-gdpr-requests-for-aem-platform.html?lang=ja)
    + [AEM Commerce - GDPR 対応](https://experienceleague.adobe.com/docs/experience-manager-64/administering/ecommerce/gdpr-compliance-commerce.html)
 + コンテンツ管理 {#contentmanagement}
    + [パッケージの使用方法](package-manager.md)

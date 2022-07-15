@@ -11,12 +11,12 @@ role: Architect
 source-git-commit: 35aea0e087334a1c1e6a708f2182bd9dee799dc0
 workflow-type: tm+mt
 source-wordcount: '370'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
 
-# AEM 6.4 デプロイユーザーガイド {#deploying}
+# AEM 6.4 の導入ユーザーガイド {#deploying}
 
 + [デプロイユーザーガイド](home.md)
 + AEM プラットフォームの概要 {#introduction}
@@ -56,7 +56,7 @@ ht-degree: 93%
    + [ジョブのオフロード](offloading.md)
    + [シングルサインオン](single-sign-on.md)
    + [リソースマッピング](resource-mapping.md)
-   + [HTTP over SSL の有効化](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/ssl-by-default.html)
+   + [HTTP over SSL の有効化](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/ssl-by-default.html?lang=ja)
    + [整合性チェックとトラバーサルチェック](consistency-check.md)
    + [パフォーマンスガイドライン](performance-guidelines.md)
    + [パフォーマンスの最適化](configuring-performance.md)
@@ -89,7 +89,7 @@ ht-degree: 93%
    + [AEM 6.4 での Dynamic Media リポジトリの再構築](dynamicmedia-repository-restructuring-in-aem-6-4.md)
    + [AEM 6.4 における Forms リポジトリの再構築](forms-repository-restructuring-in-aem-6-4.md)
    + [AEM 6.4 における e コマースリポジトリの再構築](ecommerce-repository-restructuring-in-aem-6-4.md)
-   + [6.4 における AEM Communities のリポジトリ再構築](communities-repository-restructuring-in-aem-6-4.md)
+   + [AEM Communities 6.4 におけるリポジトリの再構築](communities-repository-restructuring-in-aem-6-4.md)
 + e コマース {#ecommerce}
    + [e コマースの概要](ecommerce.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
