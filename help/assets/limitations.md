@@ -1,16 +1,17 @@
 ---
 title: Dynamic Mediaの制限
-description: '画像セットやスピンセットを作成したり、画像をアップロードしたりする際の、ベストプラクティスと適用される制限について説明します。PDF また、Dynamic Media Viewers でサポートされていない Web ブラウザーとオペレーティングシステムの組み合わせについても説明します。 '
+description: 画像セットやスピンセットを作成したり、画像をアップロードしたりする際の、ベストプラクティスと適用される制限について説明します。PDF また、Dynamic Media Viewers でサポートされていない Web ブラウザーとオペレーティングシステムの組み合わせについても説明します。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/Dynamic-Media-Classic
 geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Viewers,Image Sets,Spin Sets,eCatalog
 role: User
-source-git-commit: 77b2643c91092a9a08b67fb5ad06a96a79f4deea
+exl-id: 0269ff24-582b-40f8-95e3-3ff4ac3a792f
+source-git-commit: efe93bcf60e0b71fded10ccb77da38c789e08ef9
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 7%
+source-wordcount: '254'
+ht-degree: 5%
 
 ---
 
@@ -20,11 +21,10 @@ ht-degree: 7%
 
 このトピックには、次の節が含まれます。
 
-* アセットタイプに関するDynamic Mediaのベストプラクティスと適用される制限
+* [アセットタイプに関するDynamic Mediaのベストプラクティスと適用される制限](#best-practice-enforced-limits)
+* [Dynamic Media Viewers でサポートされていない Web ブラウザーとオペレーティングシステムの組み合わせ](#unsupported-browser-os)
 
-<!-- * Unsupported web browser and operating system combinations for Dynamic Media Viewers -->
-
-## アセットタイプに関するDynamic Mediaのベストプラクティスと適用される制限
+## アセットタイプに関するDynamic Mediaのベストプラクティスと適用される制限 {#best-practice-enforced-limits}
 
 Adobeでは、ページ抽出用にスピンセットや画像セットを作成したり、PDFをアップロードしたりする際に、次のベストプラクティスを推奨し、次の制限を適用します。
 
@@ -36,21 +36,18 @@ Adobeでは、ページ抽出用にスピンセットや画像セットを作成
 | **スピンセット** - 2D セットあたりの最大行数/列数 | 1 セットあたり 12～18 個の画像 | 1000 | 適用なし |
 | **PDF**  — 抽出対象となるPDFの最大ページ数 |  | 5000（新しいアップロード用） | 100( すべてのPDF) |
 
-<!-- NO PDF UPLOAD OPTION IN AEMaaCS | **PDF** - Maximum number of pages for a PDF to be considered for extraction |  | 5000 (for new uploads) | 100 | -->
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 
+## Dynamic Media Viewers でサポートされていない Web ブラウザーとオペレーティングシステムの組み合わせ {#unsupported-browser-os}
 
-
-<!-- ## Unsupported web browser and operating system combinations for Dynamic Media Viewers
-
-Dynamic Media Viewers do not support following combinations of web browser and operating system.
+Dynamic Mediaビューアでは、次の Web ブラウザーとオペレーティングシステムの組み合わせはサポートされていません。
 
 * Internet Explorer 11 + Windows 7
 * Internet Explorer 11 + Windows 8.1
 * Internet Explorer 11 + Windows Phone 8.1
-* Internet Explorer 11 + Windows Phone 8.1 Update
+* Internet Explorer 11 + Windows Phone 8.1 の更新
 * Safari 6 + iOS 6.0.1
 * Safari 7 + iOS 7.1
-* Safari 7 + macOS X 10.9 Mavericks
+* Safari 7 + OS X 10.9 Mavericks
 * Safari 8 + iOS 8.4
-* Safari 8 + macOS X 10.10 Yosemite -->
+* Safari 8 + OS X 10.10 ヨセミテ
