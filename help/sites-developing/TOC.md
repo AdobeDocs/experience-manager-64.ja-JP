@@ -116,7 +116,7 @@ ht-degree: 96%
       + [コンポーネントマッピングの動的モデルSPA の場合](spa-dynamic-model-to-component-mapping.md)
       + [SPA モデルルーティング](spa-routing.md)
       + [SPA と Adobe Experience Platform Launch の統合](spa-launch.md)
-      + [SPA およびサーバーサイドレンダリング](spa-ssr.md)
+      + [SPA およびサーバーサイドレンダリング ](spa-ssr.md)
       + [SPA 参照資料](spa-reference-materials.md)
    + [HTTP API](https://experienceleague.adobe.com/docs/experience-manager-64/assets/extending/mac-api-assets.html?lang=ja)
    + [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments.html)

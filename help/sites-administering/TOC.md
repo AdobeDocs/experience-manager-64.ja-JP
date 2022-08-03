@@ -116,7 +116,7 @@ ht-degree: 98%
    + [サードパーティのサービスとの統合](third-party-services.md)
    + [Salesforce との統合](salesforce.md)
    + [Adobe Target との統合](target.md)
-   + [Livefyre との統合](livefyre.md)
+   + [Livefyre との統合 ](livefyre.md)
    + [Adobe Analytics との統合](adobeanalytics.md)
    + [Adobe Analytics への接続とフレームワークの作成](adobeanalytics-connect.md)
    + [Adobe Analytics のリンクトラッキングの設定](adobeanalytics-link.md)
