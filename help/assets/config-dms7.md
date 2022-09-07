@@ -8,9 +8,9 @@ content-type: reference
 exl-id: b0f0c6e4-77c8-40db-a9f4-699d1a633571
 feature: Configuration,Scene7 Mode
 role: Admin,User,Developer
-source-git-commit: 4fdb290ddd7493a7ddbe399ebb76189718cff989
+source-git-commit: a045c70f8cbfa03295c4fcbfbb2df1831c3f7292
 workflow-type: tm+mt
-source-wordcount: '5614'
+source-wordcount: '5619'
 ht-degree: 66%
 
 ---
@@ -93,8 +93,8 @@ Experience ManagerDynamic Mediaを 6.3 から 6.4 にアップグレードする
 
       >[!IMPORTANT]
       >
-      >Experience ManagerのインスタンスでサポートされるDynamic MediaCloud Servicesは 1 つだけです。複数の設定を追加しないでください。 1 つのExperience Managerインスタンス上の複数のDynamic Media設定 _not_ Adobeでサポートまたは推奨。<!-- CQDOC-19579 and CQDOC-19612 -->
-   * **[!UICONTROL 会社のルートフォルダーのパス]**
+      >Experience ManagerのインスタンスでサポートされるDynamic MediaCloud Servicesは 1 つだけです。複数の設定を追加しないでください。 1 つのExperience Managerインスタンス上の複数のDynamic Media設定 *not* Adobeでサポートまたは推奨。<!-- CQDOC-19579 and CQDOC-19612 -->
+   * **[!UICONTROL 会社のルートフォルダのパス]**  — 会社のルートフォルダーパス。
    * **[!UICONTROL アセットを公開]** - 「**[!UICONTROL 即時]**」オプションは、アセットがアップロードされると、システムによってアセットが取り込まれ、URL／埋め込みがすぐに提供されることを意味します。アセットを公開するためにユーザーが操作する必要はありません。オプション **[!UICONTROL アクティベーション時]** とは、URL/埋め込みリンクが提供される前に、最初にアセットを明示的に公開する必要があることを意味します。
    * **[!UICONTROL プレビューサーバーを保護]** - セキュアなレンディションプレビューサーバーへの URL パスを指定できます。つまり、レンディションが生成されると、Experience Manager は、リモート Dynamic Media レンディションに安全にアクセスしてプレビューできます（バイナリが Experience Manager インスタンスに送り返されることはありません）。
 
