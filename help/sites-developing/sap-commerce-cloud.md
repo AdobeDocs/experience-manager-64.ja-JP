@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 96dc0c1a-b21d-480a-addf-c3d0348bd3ad
 exl-id: fa5b9b61-7dba-42e0-8fbd-4a96617569d8
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
 workflow-type: tm+mt
-source-wordcount: '2313'
-ht-degree: 99%
+source-wordcount: '2310'
+ht-degree: 98%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 99%
 * 買い物かご
 * チェックアウト
 
-検索のために、AEM 検索、e コマースシステムの検索、サードパーティ検索（Search&amp;Promote など）、またはこれらを組み合わせた検索をおこなうための、統合フックが提供されています。
+検索には、AEM検索、e コマースシステムの検索、サードパーティ検索またはその組み合わせを使用できる統合フックが提供されます。
 
 ## e コマースエンジンの選択 {#ecommerce-engine-selection}
 
@@ -257,7 +257,7 @@ content
       shirt-l
 ```
 
-最後に、製品データを使用するための要件はありません。 すべての製品データをカタログ内のリファレンスの配下に配置できますが、実際には、すべての製品データを複製せずに複数のカタログを用意することはできません。
+最後に、製品データを使用するための要件はありません。すべての製品データをカタログ内のリファレンスの配下に配置できますが、実際には、すべての製品データを複製せずに複数のカタログを用意することはできません。
 
 **API**
 

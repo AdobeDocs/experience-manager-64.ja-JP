@@ -10,9 +10,9 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 619de2e4-d7bd-4ca6-9763-1efa8b2dec05
 exl-id: ba604611-03cb-4f97-8ff6-1a559b52263b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
 workflow-type: tm+mt
-source-wordcount: '2850'
+source-wordcount: '2848'
 ht-degree: 99%
 
 ---
@@ -111,7 +111,7 @@ JS、CSS またはテーマライブラリをフィルタリングするため�
 
 クライアントライブラリフォルダーには次の項目が含まれます。
 
-* JS／CSS ソースファイル（いずれかまたは両方） を結合します。
+* JS／CSS ソースファイル（いずれかまたは両方）を結合します。
 * 画像ファイルなど、CSS スタイルをサポートするリソース。
 
    **メモ：**&#x200B;サブフォルダーを使用してソースファイルを整理できます。
@@ -312,12 +312,13 @@ body {
 | `/libs/cq/analytics/widgets` | `!touch` |
 | `/libs/cq/analytics/widgets/themes/default` | `!touch` |
 | `/libs/cq/cloudserviceconfigs/widgets` | `!touch` |
-| `/libs/cq/searchpromote/widgets` | `!touch` |
-| `/libs/cq/searchpromote/widgets/themes/default` | `[`*値なし*`]` |
 | `/libs/cq/touch/widgets` | `touch` |
 | `/libs/cq/touch/widgets/themes/default` | `touch` |
 | `/libs/cq/ui/widgets` | `!touch` |
 | `/libs/cq/ui/widgets/themes/default` | `!touch` |
+
+<!-- Search&Promote was end of life September 1, 2022. | `/libs/cq/searchpromote/widgets` | `!touch` | -->
+<!-- Search&Promote was end of life September 1, 2022. | `/libs/cq/searchpromote/widgets/themes/default` |`[`*no value*`]`| -->
 
 ## プリプロセッサーの使用 {#using-preprocessors}
 

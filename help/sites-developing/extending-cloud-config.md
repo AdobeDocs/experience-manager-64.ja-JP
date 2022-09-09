@@ -1,15 +1,15 @@
 ---
-title: クラウドサービス設定
+title: クラウドサービスの設定
 description: 既存のインスタンスを拡張して、独自の設定を作成できます。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: extending-aem
 content-type: reference
 exl-id: d2b8503e-8ac1-4617-ad76-b05d1e80a6b6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 72%
+source-wordcount: '564'
+ht-degree: 100%
 
 ---
 
@@ -27,8 +27,8 @@ ht-degree: 72%
 * 設定（プロパティや段落など）は、親から継承される。
 * パスによって、分析ノードから参照される。
 * 簡単に拡張できる。
-* 次のような複雑な設定に対応する柔軟性がある [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics).
-* 依存関係のサポート ( 例： [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) プラグインには [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 設定 )。
+* [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) など、より複雑な設定に対応できる柔軟性がある。
+* 依存関係のサポート（例：[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) プラグインには [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 設定）。
 
 ## 構造 {#structure}
 
@@ -38,9 +38,9 @@ ht-degree: 72%
 
 設定のタイプごとに、テンプレートとコンポーネントが提供されます。これによって、カスタマイズしてから大部分のニーズを満たせる設定テンプレートを作成できます。
 
-新しいサービスの設定を行うには、次の操作が必要です。
+新しいサービス用の設定を行うには：
 
-* ～にサービスページを作る
+* 次の場所にサービスページを作成します。
 
    `/etc/cloudservices`
 
@@ -106,7 +106,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 
 ### コンテンツモデル {#content-model}
 
-コンテンツモデルは、 `cq:Page` 以下：
+コンテンツモデルは、次の場所の下に `cq:Page` として保存されます。
 
 `/etc/cloudservices/<service-name>(/*)`
 
@@ -117,7 +117,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 /etc/cloudservices/service-name/config/inherited-config
 ```
 
-設定はサブノードの下に保存されます。 `jcr:content`.
+設定は、サブノード `jcr:content` の下に保存されます。
 
 * ダイアログで定義される固定プロパティは、`jcr:node` に直接保存する必要があります。
 * （`parsys` または `iparsys` を使用する）動的要素は、サブノードを使用してコンポーネントデータを保存します。
@@ -137,7 +137,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 ### AEM の統合 {#aem-integration}
 
-使用可能なサービスのリストは、 **Cloud Services** タブ **ページプロパティ** ダイアログ ( を継承するすべてのページの `foundation/components/page` または `wcm/mobile/components/page`) をクリックします。
+使用可能なサービスが、（`foundation/components/page` または `wcm/mobile/components/page` から継承されたいずれかのページの）**ページのプロパティ**&#x200B;ダイアログの「**クラウドサービス**」タブに一覧表示されます。
 
 このタブでは以下についても表示されます。
 
@@ -148,7 +148,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 サービスのユーザー資格情報を保存する際は、すべてのパスワードを暗号化する必要があります。
 
-非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。このフィールドには注釈が必要です `@Encrypted` プロパティ名に例： `password` フィールドの名前は次のように書き込まれます。
+非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。このフィールドでは、プロパティ名にアノテーション `@Encrypted` が必要です。すなわち、`password` フィールドの場合、名前は次のようになります。
 
 `password@Encrypted`
 
@@ -160,7 +160,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 >[!NOTE]
 >
->デフォルトでは、 `EcryptionPostProcessor` 暗号化のみ `POST` に対するリクエスト `/etc/cloudservices`.
+>デフォルトでは、`EcryptionPostProcessor` は、`/etc/cloudservices` に対する `POST` リクエストのみを暗号化します。
 
 #### サービスページの jcr:content ノード用の追加プロパティ {#additional-properties-for-service-page-jcr-content-nodes}
 
@@ -172,7 +172,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
   </tr> 
   <tr> 
    <td>componentReference</td> 
-   <td>コンポーネントへの参照パスをページに自動的に含めます。<br />追加機能および JS インクルージョンに使用されます。<br /> これには、ページ上のコンポーネントが含まれます。<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> が含まれる ( 通常は <code>body</code> タグ ) を使用します。<br /> Analytics および Target の場合は、これを使用して、訪問者の行動を追跡する JavaScript 呼び出しなどの追加機能を含めます。</td> 
+   <td>コンポーネントへの参照パスをページに自動的に含めます。<br />追加機能および JS インクルージョンに使用されます。<br /> このプロパティには、<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> が（通常は <code>body</code> タグの前に）含まれるページ上のコンポーネントが含まれます。<br /> Analytics および Target の場合、このプロパティを使用して、訪問者の行動を追跡する JavaScript 呼び出しなどの追加機能を含めます。</td> 
   </tr> 
   <tr> 
    <td>description</td> 
@@ -216,7 +216,6 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 * [トラッカースニペット](/help/sites-administering/external-providers.md)（Google、WebTrends など）
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
-* [Search&amp;Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote)
 * [Dynamic Media](/help/sites-administering/marketing-cloud.md#integrating-with-scene)
 
 >[!NOTE]

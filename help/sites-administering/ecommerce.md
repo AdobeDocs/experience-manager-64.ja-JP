@@ -1,7 +1,7 @@
 ---
 title: e コマース
 seo-title: eCommerce
-description: 'AEM e コマースフレームワークは、特定のブランド用に構築され、顧客ごとにパーソナライズされたショッピングエクスペリエンスを、Web、モバイル、ソーシャルという各種タッチポイントにまたがって提供するために役立ちます。 '
+description: AEM e コマースフレームワークは、特定のブランド用に構築され、顧客ごとにパーソナライズされたショッピングエクスペリエンスを、Web、モバイル、ソーシャルという各種タッチポイントにまたがって提供するために役立ちます。
 seo-description: AEM eCommerce helps marketers deliver branded, personalized shopping experiences across web, mobile, and social touchpoints.
 uuid: 14af7a3a-7211-4a56-aeef-1603128d5d8a
 contentOwner: Guillaume Carlino
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 68799110-8183-40fe-be4f-2a7c7a7b3018
 feature: Commerce Integration Framework
 exl-id: 3c046e16-5f54-4a16-aa5b-256b679808fa
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 100%
+source-wordcount: '756'
+ht-degree: 99%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 * [概念 ](/help/sites-administering/concepts.md)
 * [管理（汎用）](/help/sites-administering/generic.md)
-* [SAP Commerce Cloud](/help/sites-administering/sap-commerce-cloud.md)
+* [SAP Commerce Cloud ](/help/sites-administering/sap-commerce-cloud.md)
 * [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
 * [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
 
@@ -36,7 +36,7 @@ ht-degree: 100%
 | 製品カタログ | - AEMでの製品インポーター、エディター、キャッシュ <br>- AEM またはプロキシページを含む通常のカタログ | - 製品のインポートなし <br>- 汎用テンプレート <br> - コネクタを介したオンデマンドデータ |
 | スケーラビリティ | - 数億個までの製品をサポート可能（ユースケースによって異なる） <br> - Dispatcher でのキャッシュ | - ボリューム制限なし <br>- Dispatcher または CDN でのキャッシュ |
 | 標準化されたデータモデル | 不可 | あり。Magento GraphQL スキーマ |
-| 入手方法 | はい：<br> - SAP Commerce Cloud（AEM 6.4 と Hybris 5（デフォルト）をサポートし、Hybris 4 との互換性を維持するように更新された拡張機能）<br>- Salesforce Commerce Cloud（AEM 6.4 をサポートする オープンソースコネクタ） | あり。GitHub 経由のオープンソース。<br>Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり） |
+| 入手方法 | 可：<br> - SAP Commerce Cloud（AEM 6.4 と Hybris 5（デフォルト）をサポートし、Hybris 4 との互換性を維持するように更新された拡張機能）<br>- Salesforce Commerce Cloud（AEM 6.4 をサポートする オープンソースコネクタ） | GitHub を通じてオープンソースで使用可能。<br>Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり） |
 | 用途 | 限定的なユースケース：小規模で静的なカタログのインポートが必要なシナリオの場合 | ほとんどの使用例で好ましいソリューション |
 
 e コマースフレームワークは、商品情報管理（PIM）と連動して、オンラインストアでの商品の販売に焦点を合わせた Web サイトの以下のアクティビティを扱います。
@@ -90,7 +90,7 @@ AEM e コマースフレームワークは、以下の機能を提供します�
 
    * AEM 検索
    * e コマースシステムの検索
-   * サードパーティの検索（Search&amp;Promote など）
+   * サードパーティ検索
    * またはこれらの組み合わせ
 
    ![chlimage_1-151](assets/chlimage_1-151.png)

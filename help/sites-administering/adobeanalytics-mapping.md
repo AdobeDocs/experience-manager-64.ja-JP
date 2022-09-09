@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 2a9be3b7-b325-4d74-a5bc-8d24db491920
 exl-id: 04adbbc9-9e4c-4c64-aab1-20b17bd75bb5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
 workflow-type: tm+mt
-source-wordcount: '1455'
-ht-degree: 94%
+source-wordcount: '1443'
+ht-degree: 93%
 
 ---
 
@@ -42,7 +42,7 @@ Adobe Analytics に送信するデータを収集するフレームワークに�
 
    ![aa-13](assets/aa-13.png)
 
-   デフォルトのコンポーネントグループには、「**一般**」、「**コマース**」、「**コミュニティ**」、「**Search&amp;Promote**」および「**その他**」があります。AEM インスタンスは、異なるグループおよびコンポーネントを表示するように設定されていることがあります。
+   デフォルトのコンポーネントグループは複数あります。 **一般**, **コマース**, **コミュニティ**、および **その他**. AEM インスタンスは、異なるグループおよびコンポーネントを表示するように設定されていることがあります。
 
 1. Adobe Analytics 変数をコンポーネントで定義された変数にマッピングするには、**Analytics 変数**&#x200B;をコンテンツファインダーからトラッキングコンポーネントのフィールドにドラッグします。たとえば、 `Page Name (pageName)` を `pagedata.title` にドラッグします。
 
@@ -122,10 +122,6 @@ RSID が選択されている場合、その RSID に属するすべての変数
    >[!NOTE]
    >
    >一度に 1 つのフィルターのみアクティブにできます。
-
-   >[!NOTE]
-   >
-   >Search&amp;Promote 変数も「コンバージョン」セクションに属しています。
 
    1. また、リストには検索機能があり、検索フィールドに入力されたテキストに従って要素をフィルタリングします。
    1. リストの要素の検索中にフィルターオプションを有効にした場合、表示される結果も、アクティブなボタンに従ってフィルタリングされます。

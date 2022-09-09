@@ -8,9 +8,9 @@ breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 feature: Administering
 role: Admin
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: 7eaa338be262d953abc045ab88432507021734ca
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '641'
 ht-degree: 98%
 
 ---
@@ -132,7 +132,6 @@ ht-degree: 98%
    + [Adobe Campaign Standard との統合](campaignstandard.md)
    + [Flash ビューアのサポート終了に関する通知](flash-viewers-eol.md)
    + [Adobe Creative Cloud との統合](https://docs.adobe.com/content/help/ja-JP/experience-manager-64/assets/administer/aem-cc-integration-best-practices.html)
-   + [製品フィード](product-feed.md)
    + [Adobe Dynamic Tag Management との統合](dtm.md)
    + [Adobe Analytics および Adobe Target との統合のオプトイン](opt-in.md)
    + [AEM ポータルとポートレット](aem-as-portal.md)
@@ -150,7 +149,6 @@ ht-degree: 98%
    + [手動での Adobe Target との統合の設定](target-configuring.md)
    + [Adobe Target との統合の前提条件](target-requirements.md)
    + [Adobe Classifications](adobeanalytics-classifications.md)
-   + [Adobe Search&amp;Promote との統合](search-and-promote.md)
    + [ソリューション統合](integration.md)
    + [エクスペリエンスフラグメントとのTarget 統合](experience-fragments-target.md)
 + ベストプラクティス {#bestpractices}

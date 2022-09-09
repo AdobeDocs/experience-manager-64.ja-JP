@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ad80505f-116e-43f1-8d93-ffe6e8b1ac46
 feature: Commerce Integration Framework
 exl-id: 614815ef-6fe3-4b06-9c56-bc9fee127825
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
 workflow-type: tm+mt
-source-wordcount: '2986'
+source-wordcount: '2912'
 ht-degree: 99%
 
 ---
@@ -254,7 +254,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 1. 編集アイコンをタップまたはクリックします。
 1. 「**追加**」までスクロールします。
 
-   ![chlimage_1-329](assets/chlimage_1-329.png)
+   ![chlimage_329-1](assets/chlimage_1-329.png)
 
 1. 「**追加**」をタップまたはクリックします。新しいアセットのプレースホルダーが表示されます。
 1. 「**変更**」をタップまたはクリックすると、アセットを選択できるダイアログが表示されます。
@@ -345,16 +345,16 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
    それぞれに応じて商品情報が公開または非公開になります。
 
-### 製品フィード {#product-feed}
+<!-- Search&Promote was end of life September 1, 2022. ### Product Feed {#product-feed} -->
 
-Search&amp;Promote 統合を使用すると、次のことができます。
+<!-- Search&Promote was end of life September 1, 2022. The Search&Promote integration allows you to: -->
 
-* 基になるリポジトリ構造やコマースプラットフォームと関係なく、e コマース API を使用する。
-* Search&amp;Promote のインデックスコネクタ機能を利用して、XML 形式で製品フィードを提供する。
-* Search&amp;Promote のリモート制御機能を利用して、製品フィードのオンデマンドリクエストまたはスケジュール済みリクエストを実行する。
-* クラウドサービス設定として指定された、様々な Search&amp;Promote アカウント用のフィードを生成する。
+<!-- Search&Promote was end of life September 1, 2022. * use the eCommerce API, independently of the underlying repository structure and commerce platform. -->
+<!-- Search&Promote was end of life September 1, 2022. * leverage the Index Connector feature of Search&Promote to provide a product feed in XML format. -->
+<!-- Search&Promote was end of life September 1, 2022. * leverage the Remote Control feature of Search&Promote to perform on-demand or scheduled requests of the product feed -->
+<!-- Search&Promote was end of life September 1, 2022. * feed generation for different Search&Promote accounts, configured as cloud services configurations. -->
 
-詳しくは、[製品フィード](/help/sites-administering/product-feed.md)を参照してください。
+<!-- Search&Promote was end of life September 1, 2022. For more information, read [Product Feed](/help/sites-administering/product-feed.md). -->
 
 ### 商品アップデート用のイベントハンドラー {#event-handler-for-product-updates}
 
@@ -393,11 +393,11 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
 1. フルスクリーンアイコンをクリックします。
 
-   ![chlimage_1-330](assets/chlimage_1-330.png)
+   ![chlimage_330-1](assets/chlimage_1-330.png)
 
 1. ローンチマップアイコンをクリックします。
 
-   ![chlimage_1-331](assets/chlimage_1-331.png)
+   ![chlimage_331-1](assets/chlimage_1-331.png)
 
 1. 形状アイコンのいずれかをクリックします。
 
@@ -411,7 +411,7 @@ Search&amp;Promote 統合を使用すると、次のことができます。
    >
    >または、商品パスを直接入力できます。商品パスは、バリアントレベルではなく商品レベルである必要があります。
 
-   ![chlimage_1-332](assets/chlimage_1-332.png)
+   ![chlimage_332-1](assets/chlimage_1-332.png)
 
 1. 確認アイコンを 2 回クリックしてから、「フルスクリーンを終了」をクリックします。
 1. ページ上でコンポーネントの横の任意の場所をクリックします。ページが更新され、画像の上に次の記号が表示されます。
@@ -433,15 +433,15 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
 1. コンポーネントをクリックして、設定アイコンをクリックします。
 
-   ![chlimage_1-334](assets/chlimage_1-334.png)
+   ![chlimage_334-1](assets/chlimage_1-334.png)
 
 1. 下にスクロールします。「**カートへ追加**」タブがあります。
 
-   ![chlimage_1-335](assets/chlimage_1-335.png)
+   ![chlimage_335-1](assets/chlimage_1-335.png)
 
 1. 「**カートへ追加**」タブをクリックします。3 つの設定オプションを使用できます。
 
-   ![chlimage_1-336](assets/chlimage_1-336.png)
+   ![chlimage_336-1](assets/chlimage_1-336.png)
 
 1. 完了アイコンをクリックします。
 
@@ -465,18 +465,18 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
 1. リストから「**カタログを作成**」を選択すると、カタログを作成ウィザードが表示されます。
 
-   ![chlimage_1-337](assets/chlimage_1-337.png)
+   ![chlimage_337-1](assets/chlimage_1-337.png)
 
 1. 必要なカタログのブループリントに移動します。
 1. 「**選択**」ボタンをタップまたはクリックし、必要なカタログのブループリントをタップまたはクリックします。
 1. 「**次へ**」をタップまたはクリックします。
 
-   ![chlimage_1-338](assets/chlimage_1-338.png)
+   ![chlimage_338-1](assets/chlimage_1-338.png)
 
 1. 「**タイトル**」と「**名前**」を入力します。
 1. 「**作成**」ボタンをタップまたはクリックします。カタログが作成され、ダイアログが表示されます。
 
-   ![chlimage_1-339](assets/chlimage_1-339.png)
+   ![chlimage_339-1](assets/chlimage_1-339.png)
 
 1. 「**完了**」ボタンをタップまたはクリックすると、サイトコンソールに戻り、カタログを表示することができます。
 
