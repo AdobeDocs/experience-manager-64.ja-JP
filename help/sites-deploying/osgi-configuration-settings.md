@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ccddb2cd-8e67-43aa-a495-8996ad349761
 feature: Configuring
 exl-id: 5c07c773-53a3-41fd-860a-da0cb14f8bc6
-source-git-commit: b2888dd2d523488b416550d5826f8cf077a25e32
+source-git-commit: 5e6376f84b69022aec078d9f2f9163aaa8a0a37c
 workflow-type: tm+mt
-source-wordcount: '3483'
+source-wordcount: '3459'
 ht-degree: 97%
 
 ---
@@ -250,8 +250,6 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 * **Script User**：このオプションのプロパティでは、スクリプトの読み取りに使用するリポジトリユーザーアカウントを指定できます。アカウントを指定しない場合は、`admin` ユーザーがデフォルトで使用されます。
 
 * **Default Extensions**：デフォルトの動作が使用される拡張子のリストです。つまり、リソースタイプの最後のパスセグメントをスクリプト名として使用できます。
-
-**Day Commons GFX Font Helper**：グラフィックのレンダリング時に、DrawText を使用してテキストを埋め込むことができます。そのために、独自のフォントをインストールすることも可能です。
 
 * プロジェクト固有のフォントを検索する「**Font Path**」を定義します。
 
