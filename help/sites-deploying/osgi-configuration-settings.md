@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: ccddb2cd-8e67-43aa-a495-8996ad349761
 feature: Configuring
 exl-id: 5c07c773-53a3-41fd-860a-da0cb14f8bc6
-source-git-commit: 5e6376f84b69022aec078d9f2f9163aaa8a0a37c
+source-git-commit: b06865e213fd20ed328104642eda812d4dfe43ed
 workflow-type: tm+mt
-source-wordcount: '3459'
-ht-degree: 97%
+source-wordcount: '3461'
+ht-degree: 96%
 
 ---
 
@@ -287,7 +287,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 >[!CAUTION]
 >
->「**Minify**」または「**Gzip**」の設定を変更する場合は、`/var/clientlibs` の内容も削除する必要があります。これはキャッシュバージョンの clientlibs であり、次回の要求時に再構築されます。
+>次のいずれかの設定を変更する場合 **縮小** または **Gzip** また、clientlibs キャッシュのコンテンツを削除する必要があります。 詳しくは、 [ナレッジベース記事](https://helpx.adobe.com/ca/experience-manager/kb/How-to-force-a-recompilation-of-all-Sling-scripts-jsps-java-sightly-on-AEM-6-4.html) 」を参照してください。
 
 >[!NOTE]
 >
