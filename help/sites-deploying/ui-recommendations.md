@@ -1,7 +1,7 @@
 ---
 title: 顧客向けのユーザーインターフェイスの推奨事項
 seo-title: User Interface Recommendations for Customers
-description: 'クラシックユーザーインターフェイスおよびタッチ操作向けユーザーインターフェイスに関連する推奨事項のリスト。 '
+description: クラシックユーザーインターフェイスおよびタッチ操作向けユーザーインターフェイスに関連する推奨事項のリスト。
 seo-description: A list of recommendations related to the classic and touch-optimized user interfaces.
 uuid: c661fb10-4dbc-4f8b-93be-3e77af1ad095
 contentOwner: User
@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 42bf42cb-0c6c-4390-8170-2c540c4d3ed3
 exl-id: 1e5172d9-47a3-4d73-b749-166e201f4eef
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '777'
 ht-degree: 97%
 
 ---
@@ -129,5 +129,4 @@ AEM 6.3 でのタッチ操作向け UI の機能強化について詳しくは�
 
 * [タッチ操作向け UI のページオーサリングのカスタマイズ](/help/sites-developing/customizing-page-authoring-touch.md)（サンプルコードを含む）。
 
-* [タッチ操作向けカスタマイズでの AEM Gem セッション](https://docs.adobe.com/content/ddc/jp/gems/user-interface-customization-for-aem-6.html)。
 * [Granite UI ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)。

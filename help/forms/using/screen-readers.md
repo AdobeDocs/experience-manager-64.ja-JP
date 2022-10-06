@@ -10,10 +10,10 @@ topic-tags: hTML5_forms
 discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
 feature: Mobile Forms
 exl-id: c27eb771-d390-4534-8e67-f1277550e760
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 69%
+source-wordcount: '337'
+ht-degree: 94%
 
 ---
 
@@ -25,7 +25,7 @@ HTML5 フォームは標準の HTML 構成を使用して、これらのフォ�
 
 ## アクセシビリティの標準 {#accessibility-standards}
 
-HTML5 フォームは既知の例外を含むアクセシビリティのリハビリテーション法第 508 条に準拠します。詳しくは、[HTML5 フォームの VPAT](http://wwwimages.adobe.com/content/dam/acom/en/accessibility/compliance/pdfs/livecycle-mobile-forms-es4-section-508-vpat.pdf) を参照してください。
+HTML5 フォームは既知の例外を含むアクセシビリティのリハビリテーション法第 508 条に準拠します。詳しくは、[HTML5 フォームの VPAT](https://www.adobe.com/content/dam/cc1/en/accessibility/compliance/pdfs/adobe-livecycle-es4-section-508-vpat-portfolio.pdf) を参照してください。
 
 ## HTML5 フォーム向けに認定されたスクリーンリーダー {#certified-screen-readers-for-html-forms}
 
@@ -34,15 +34,15 @@ HTML5 フォームは既知の例外を含むアクセシビリティのリハ�
 
 ### JAWS {#jaws}
 
-すべてのデフォルトのキーストロークとショートカットは HTML5 フォームで機能します。JAWS の使用の詳細は、次を参照してください： [https://www.freedomscientific.com/jaws-hq.asp](https://www.freedomscientific.com/jaws-hq.asp).
+すべてのデフォルトのキーストロークとショートカットは HTML5 フォームで機能します。JAWS の使用について詳しくは、[https://www.freedomscientific.com/jaws-hq.asp](https://www.freedomscientific.com/products/software/jaws/) にアクセスしてください。
 
 ### VoiceOver {#voiceover}
 
-HTML5 フォームは VoiceOver のすべてのデフォルトのキーストロークとジェスチャーをサポートします。VoiceOver の設定と使用について詳しくは、 [https://www.apple.com/accessibility/voiceover/](https://www.apple.com/accessibility/voiceover/).
+HTML5 フォームは VoiceOver のすべてのデフォルトのキーストロークとジェスチャーをサポートします。VoiceOver の設定と使用について詳しくは、[https://www.apple.com/accessibility/voiceover/](https://www.apple.com/accessibility/voiceover/) を参照してください。
 
 ## 既知の問題 {#known-issues}
 
-* **（Internal Explorer 9 のみ）** HTML5 フォームでは、ページはオンデマンドで（動的に）読み込まれます。 オンデマンドのページ読み込みは、スクリーンリーダーの機能で問題が生じます。スクリーンリーダーのフォーカスがページの最後のフィールドにあり、ユーザーが Tab キーを押した場合、フォーカスを次のページの最初のフィールドに設定する代わりに、フォームの最初のページの最初のフィールドに戻します。
+* **（Internal Explorer 9 のみ）** HTML5 フォームでは、ページはオンデマンドで（動的に）読み込まれます。オンデマンドのページ読み込みは、スクリーンリーダーの機能で問題が生じます。スクリーンリーダーのフォーカスがページの最後のフィールドにあり、ユーザーが、次のページの最初のフィールドにフォーカスを設定する代わりに Tab キーを押したときは、スクリーンリーダーはフォームの最初のページの最初のフィールドにフォーカスを戻します。
 * **（Internal Explorer 9 のみ）** HTML5 フォームの日付選択のコントロールはキーボードで完全にアクセスできません。日付選択のコントロールで、上向き／下向き矢印キーを複数回押した場合、日付選択のコントロールが閉じて、フォーカスが次／最後のフィールドに移動します。 
 
 * VoiceOver は、iPad safari では日付ウィジェットで矢印キーを検出できません。

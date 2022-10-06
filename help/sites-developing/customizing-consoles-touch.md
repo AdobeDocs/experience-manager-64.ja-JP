@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 221ed05b-855d-4dc2-9df6-12fdeabb157a
 exl-id: 31bced35-4845-40d1-9bfd-5c75d54e1a83
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 76%
+source-wordcount: '678'
+ht-degree: 97%
 
 ---
 
@@ -27,11 +27,11 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 * Clientlibs
 
-   clientlibs を使用すると、デフォルトの実装を拡張して新しい機能を実現し、標準の関数、オブジェクト、メソッドを再利用できます。 カスタマイズする際、独自のクライアントライブラリを `/apps.` 例えば、カスタムコンポーネントに必要なコードを保持できます。
+   クライアントライブラリを使用すると、デフォルトの実装を拡張して新しい機能を実現しながら、標準の関数、オブジェクト、メソッドを再利用できます。カスタマイズするときに、独自の clientlib を `/apps.` に作成して、カスタムコンポーネントに必要なコードを保持するといった操作が可能です。
 
 * オーバーレイ
 
-   オーバーレイはノード定義に基づいており、 `/libs`) を `/apps`) をクリックします。 Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
+   オーバーレイオーバーレイはノード定義に基づいており、（`/libs`にある）標準の機能に、（`/apps`にある）カスタマイズした独自機能を重ねることができます。Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
 
 これらをさまざまな方法で使用して、AEM コンソールを拡張できます。一部については、以降で（大まかに）説明します。
 
@@ -42,9 +42,8 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >* [クライアントライブラリ](/help/sites-developing/clientlibs.md)の使用と作成
 >* [オーバーレイ](/help/sites-developing/overlays.md)の使用と作成
 >* [Granite](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)
-
 >
->このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html) でも説明しています。
+>このトピックについては、[AEM Gems セッション - User interface customization for AEM 6.0](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-user-interface-customization-for-aem6.html) でも説明しています。
 
 >[!CAUTION]
 >
@@ -54,7 +53,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. 必要な項目（内に存在）を再作成します。 `/libs`) `/apps`
+>1. 必要な項目（`/libs`内に存在）を、`/apps`の下で再作成します。
 >
 >1. `/apps` 内で変更作業をおこないます。
 
@@ -291,7 +290,7 @@ You can find the code of this page on GitHub
 
    `jcr:content/body/content/header/items/default/items/create/items/createsite/rendercondition`
 
-   このノードのプロパティを使用すると、 `groups` 特定のアクションを実行できる例： `administrators`
+   このノードのプロパティを使用して、特定のアクションを実行できる `groups`（`administrators` など）を定義できます。
 
 <!-- Needs a review by Engineering -->
 <!--
@@ -364,7 +363,7 @@ You can restrict access to a navigation option using ACLs:
 
 >[!NOTE]
 >
->この機能は、テキストフィールドの列に対して最適化されています。他のデータタイプの場合、 `cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer` in `/apps`.
+>この機能は、テキストフィールドの列に対して最適化されています。その他のデータタイプに対しては、`/apps` の `cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer` をオーバーレイできます。
 
 <!-- Needs a review by Engineering -->
 <!--
@@ -380,7 +379,7 @@ You can find the code of this page on GitHub
 
 1. 使用可能な列のリストをオーバーレイします。
 
-   * ノード上：
+   * ノードの場合：
 
       `/apps/wcm/core/content/common/availablecolumns`
 
@@ -389,7 +388,7 @@ You can find the code of this page on GitHub
 
 1. 省略可能：
 
-   * 追加データをプラグインする場合は、 ` [PageInforProvider](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)` と
+   * 追加データを挿入する場合は、以下を持つ ` [PageInforProvider](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)` を記述する必要があります。
 
       `pageInfoProviderType` property.
    例として、（GitHub から）以下に添付するクラス／バンドルを参照してください。

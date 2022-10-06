@@ -6,10 +6,10 @@ seo-description: Resources for best practices, troubleshooting and training for 
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 exl-id: ba222869-1268-481d-b342-27ea12b15999
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
 workflow-type: tm+mt
-source-wordcount: '427'
-ht-degree: 100%
+source-wordcount: '409'
+ht-degree: 96%
 
 ---
 
@@ -24,8 +24,7 @@ ht-degree: 100%
 
 AEM コミュニティは、提案や共同作業からサンプルワークフロー、チュートリアル、コンテンツコード例を常に生み出しています。
 
-* AEM 6.4 のチュートリアルとビデオの完全なリストについては、[こちら](https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-4-videos.html)を参照してください。
-* AEM コミュニティのハウツー記事の完全なリストについては、[こちら](https://helpx.adobe.com/jp/experience-manager/topics/how-to.html)を参照してください。
+* AEM 6.4 のチュートリアルとビデオの完全なリストについては、[こちら](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html#videos-and-tutorials)を参照してください。
 * AEM ナレッジベース記事の完全なリストについては、[こちら](https://helpx.adobe.com/jp/experience-manager/kb/index/full_kb_list.html)を参照してください。
 
 ## AEM のベストプラクティス {#best-practices}
@@ -46,9 +45,9 @@ AEM は、組織で様々用途で使用でき、会社全体に幅広く機能�
 * [AEM Forms はじめに](/help/forms/using/introduction-aem-forms.md)
 * [AEM Mobile はじめに](/help/mobile/getting-started-aem-mobile.md)
 * [AEM Communities はじめに](/help/communities/getting-started.md)
-* [AEM Livefyre はじめに](https://answers.livefyre.com/developers/getting-started/)
+* [AEM Livefyre はじめに](https://experienceleague.adobe.com/docs/livefyre/implementation/getting-started/c-getting-started.html)
 
-また、新しい WKND チュートリアルも用意しています、これは、[AEM を使用して初めて Web サイトを作成する手順を示すガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)であると同時に、AEM が主要な構築ブロックとなっている[アドビのデジタル基盤ソリューションをデプロイする手順](https://helpx.adobe.com/marketing-cloud/how-to/digital-foundation.html)も示します。
+また、新しい WKND チュートリアルも用意しています、これは、[AEM を使用して初めて Web サイトを作成する手順を示すガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)であると同時に、AEM が主要な構築ブロックとなっている[アドビのデジタル基盤ソリューションをデプロイする手順](https://experienceleague.adobe.com/#courses)も示します。
 
 ## AEM の推奨デプロイメント {#deployments}
 

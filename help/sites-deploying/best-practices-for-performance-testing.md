@@ -3,17 +3,11 @@ title: パフォーマンステストのベストプラクティス
 seo-title: Best Practices for Performance Testing
 description: この記事では、パフォーマンステストに関する全体的な戦略と使用する方法を概説するほか、そのプロセスのために使用できるいくつかのツールを紹介します。
 seo-description: This article outlines the overall strategies and methodologies used for performance testing as well as some of the tools that are available to assist in the process.
-uuid: ab8720d6-b864-4d00-9e07-2e1699cfe7db
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.4/SITES
-content-type: reference
-topic-tags: best-practices
-discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: 8d0863be-108d-49d8-8243-ea5e404ed64c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
 workflow-type: tm+mt
-source-wordcount: '1893'
-ht-degree: 100%
+source-wordcount: '1892'
+ht-degree: 99%
 
 ---
 
@@ -76,7 +70,7 @@ ht-degree: 100%
 
 **タッチ UI の開発者モード**
 
-AEM 6 のタッチ操作向け UI の新機能の 1 つに、開発者モードがあります。作成者が編集モードとプレビューモードを切り替えられるのと同じように、開発者はオーサー UI で開発者モードに切り替えて、ページ上の各コンポーネントのレンダリング時間の確認と、エラーのスタックトレースの確認ができます。開発者モードについて詳しくは、こちらの [CQ Gems のプレゼンテーション](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html)を参照してください。
+AEM 6 のタッチ操作向け UI の新機能の 1 つに、開発者モードがあります。作成者が編集モードとプレビューモードを切り替えられるのと同じように、開発者はオーサー UI で開発者モードに切り替えて、ページ上の各コンポーネントのレンダリング時間の確認と、エラーのスタックトレースの確認ができます。開発者モードについて詳しくは、こちらの [CQ Gems のプレゼンテーション](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html)を参照してください。
 
 **rlog.jar を使用したリクエストログの解読**
 
@@ -140,7 +134,7 @@ Google の PageSpeed ツールは、ページパフォーマンスに関する�
 * エラーログを見てエラーや警告を調べます。詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
 * メモリや CPU の使用状況のなどシステムのハードウェアリソースを監視します。これらのリソースが、パフォーマンスボトルネックの原因になっていることがよくあります。
 * キャッシュを最大限に確保するために、ページのアーキテクチャと、URL パラメーターの使用を最小限に抑えるための仕組みを最適化します。
-* [パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)と [Performance tuning tips ](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) のドキュメントに従ってください。
+* [パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)と [Performance tuning tips](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) のドキュメントに従ってください。
 
 * オーサーインスタンスでの特定のページやコンポーネントの編集に問題がある場合は、タッチ UI の開発者モードを使用して、問題のあるページを調べてください。そうすることで、ページ上の各コンテンツ領域の内訳とそれぞれの読み込み時間がわかります。
 * サイト上のすべての JS と CSS を最小限にします。具体的な方法については、こちらの[ブログ投稿](https://blogs.adobe.com/foxes/enable-js-and-css-minification/)を参照してください。

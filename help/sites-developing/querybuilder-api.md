@@ -3,19 +3,11 @@ title: Query Builder API
 seo-title: Query Builder API
 description: アセット共有の Query Builder の機能は、Java API と REST API を通して公開されます。
 seo-description: The functionality of the Asset Share Query Builder is exposed through a Java API and a REST API.
-uuid: 6928c3e9-96a1-44ad-9785-350d95f1869a
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.4/SITES
-topic-tags: platform
-content-type: reference
-discoiquuid: 7965b7ef-dec4-441a-a012-daf1d60df0fb
-pagetitle: Query Builder API
-tagskeywords: querybuilder
 exl-id: ff305c6d-c11e-4e1c-b262-4802b4f54592
-source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
+source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
 workflow-type: tm+mt
-source-wordcount: '2313'
-ht-degree: 100%
+source-wordcount: '2312'
+ht-degree: 99%
 
 ---
 
@@ -33,15 +25,15 @@ REST API を使用すると、JSON で送信される応答を使用した HTTP 
 
 >[!NOTE]
 >
->QueryBuilder API は JCR API を使用して構築されています。また、OSGi バンドル内から JCR API を使用して、Adobe Experience Manager JCR をクエリすることもできます。詳しくは、[JCR API を使用した Adobe Experience Manager データのクエリ](https://helpx.adobe.com/jp/experience-manager/using/querying-experience-manager-data-using1.html)を参照してください。
+>QueryBuilder API は JCR API を使用して構築されています。また、OSGi バンドル内から JCR API を使用して、Adobe Experience Manager JCR をクエリすることもできます。詳しくは、[JCR API を使用した Adobe Experience Manager データのクエリ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=ja)を参照してください。
 
 ## Gem セッション {#gem-session}
 
-[AEM Gems](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-index.html) は、アドビの専門家が提供する、Adobe Experience Manager を技術的に深く掘り下げた一連のセッションです。Query Builder 専用のこのセッションは、ツールを大まかに把握したり使用したりするのに非常に便利です。
+[AEM Gems](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/overview.html) は、アドビの専門家が提供する、Adobe Experience Manager を技術的に深く掘り下げた一連のセッションです。Query Builder 専用のこのセッションは、ツールを大まかに把握したり使用したりするのに非常に便利です。
 
 >[!NOTE]
 >
->Query Builder の概要について詳しくは、AEM Gem セッションの [AEM QueryBuilder で容易になった Forms の検索](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-search-forms-using-querybuilder.html)を参照してください。
+>Query Builder の概要について詳しくは、AEM Gem セッションの [AEM QueryBuilder で容易になった Forms の検索](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html)を参照してください。
 
 ## サンプルクエリ {#sample-queries}
 

@@ -10,16 +10,16 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 exl-id: dfc6a660-e6b3-4395-a555-f4cf8f3fed91
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
 workflow-type: tm+mt
 source-wordcount: '1188'
-ht-degree: 92%
+ht-degree: 98%
 
 ---
 
 # パフォーマンスツリー{#performance-tree}
 
-## 対象範囲 {#scope}
+## 範囲 {#scope}
 
 以下の図は、パフォーマンスの問題をトラブルシューティングするために実行する必要がある手順のガイダンスを示しています。読みやすくするために、これは 5 つのセクションに分けられています。
 
@@ -66,34 +66,34 @@ ht-degree: 92%
    <td><p>ブラウザーで標準 HTTP 要求分析を使用して、要求フローを分析できます。Chrome でこの手順を実行する方法の詳細は、以下を参照してください。<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading</a><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing"><br /> https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing</a><br /> </p> </td> 
   </tr> 
   <tr> 
-   <td><strong>ステップ 2</strong></td> 
+   <td><strong>手順 2</strong></td> 
    <td>要求の送信元は外部ホストですか</td> 
    <td>ブラウザーで標準 HTTP 要求分析を使用して、要求フローを分析できます。Chrome でこの手順を実行する方法は、上記のリンクを参照してください。<br /> </td> 
   </tr> 
   <tr> 
-   <td><strong>ステップ 3</strong></td> 
+   <td><strong>手順 3</strong></td> 
    <td>要求をキャッシュに保存できますか</td> 
    <td>キャッシュ可能な要求の詳細および一般的な Dispatcher のパフォーマンス最適化に関するアドバイスは、<a href="/help/sites-deploying/configuring-performance.md#optimizing-performance-when-using-the-dispatcher">Dispatcher のパフォーマンス最適化</a>を参照してください。</td> 
   </tr> 
   <tr> 
-   <td><strong>ステップ 4</strong></td> 
-   <td>要求の送信元は Dispatcher ですか</td> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#debugging">Dispatcher のデバッグドキュメント</a>を参照して、要求が正しくキャッシュされているか確認してください。<br /> </p> </td> 
+   <td><strong>手順 4</strong></td> 
+   <td>要求の送信元は Dispatcher ですか。</td> 
+   <td><p><a href="https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html#debugging">Dispatcher のデバッグドキュメント</a>を確認して、要求が正しくキャッシュされているか確認してください。<br /> </p> </td> 
   </tr> 
   <tr> 
-   <td><strong>ステップ 5</strong></td> 
-   <td>Dispatcher は AEM を使用して各要求を認証しようとしていますか</td> 
-   <td>Dispatcher が、キャッシュされたリソースを配信する前に、認証のために <code>HEAD</code> 要求を AEM に送信しているかどうか確認します。これをおこなうには、AEM の <code>HEAD</code> で <code>access.log</code> 要求を確認します。詳しくは、<a href="/help/sites-deploying/configure-logging.md">ログ</a>を参照してください。<br /> </td> 
+   <td><strong>手順 5</strong></td> 
+   <td>Dispatcher は AEM を使用して各要求を認証しようとしていますか。</td> 
+   <td>Dispatcher が、キャッシュされたリソースを配信する前に、認証のために <code>HEAD</code> 要求を AEM に送信しているかどうか確認します。これを行うには、AEM の <code>HEAD</code> で <code>access.log</code> 要求を確認します。詳しくは、<a href="/help/sites-deploying/configure-logging.md">ログ</a>を参照してください。<br /> </td> 
   </tr> 
   <tr> 
-   <td><strong>ステップ 6</strong></td> 
+   <td><strong>手順 6</strong></td> 
    <td>Dispatcher の地理的なロケーションがユーザーから遠く離れていますか</td> 
    <td>Dispatcher をユーザーの近くに移動します。</td> 
   </tr> 
   <tr> 
    <td><strong>手順 7</strong></td> 
-   <td>Dispatcher のネットワークレイヤーに問題はありませんか</td> 
-   <td><br /> ネットワークレイヤーで、飽和および遅延の問題がないかどうかを調べます。<p> </p> </td> 
+   <td>Dispatcher のネットワークレイヤーに問題はありませんか。</td> 
+   <td><br /> ネットワークレイヤーで、輻輳や遅延の問題がないかどうかを調べます。<p> </p> </td> 
   </tr> 
   <tr> 
    <td><strong>手順 8</strong></td> 
@@ -108,7 +108,7 @@ ht-degree: 92%
   <tr> 
    <td><strong>手順 10 および 29</strong></td> 
    <td>ネットワークレイヤーを調査します</td> 
-   <td><p>ネットワークレイヤーで、飽和および遅延の問題がないかどうかを調べます。</p> <p>オーサー層の場合は、遅延が 100 ミリ秒を超えないことが推奨されます。</p> <p>パフォーマンスの最適化に関するヒントについて詳しくは、<a href="https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html">このページ</a>を参照してください。</p> </td> 
+   <td><p>ネットワークレイヤーで、輻輳や遅延の問題がないかどうかを調べます。</p> <p>オーサー層の場合は、遅延が 100 ミリ秒を超えないことが推奨されます。</p> <p>パフォーマンスの最適化に関するヒントについて詳しくは、<a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">このページ</a>を参照してください。</p> </td> 
   </tr> 
   <tr> 
    <td><strong>手順 11</strong></td> 
@@ -133,7 +133,7 @@ ht-degree: 92%
   <tr> 
    <td><strong>手順 15</strong></td> 
    <td>処理に時間のかかる要求を見つけます</td> 
-   <td><p><code>request.log</code> を分析するか、<code>rlog.jar</code> を使用して、処理に時間のかかる要求を確認できます。</p> <p>rlog.jar の使用方法について詳しくは、このページを参照してください。</p> <p><a href="/help/sites-deploying/monitoring-and-maintaining.md#using-rlog-jar-to-find-requests-with-long-duration-times">rlog.jar を使用した所要時間の長い要求の検索</a>を参照してください。<br /> </p> <p> </p> </td> 
+   <td><p><code>request.log</code> を分析するか、<code>rlog.jar</code> を使用すると、処理に時間のかかる要求を確認できます。</p> <p>rlog.jar の使用方法について詳しくは、このページを参照してください。</p> <p><a href="/help/sites-deploying/monitoring-and-maintaining.md#using-rlog-jar-to-find-requests-with-long-duration-times">rlog.jar を使用した所要時間の長い要求の検索</a>を参照してください。<br /> </p> <p> </p> </td> 
   </tr> 
   <tr> 
    <td><strong>手順 16</strong></td> 
@@ -142,7 +142,7 @@ ht-degree: 92%
   </tr> 
   <tr> 
    <td><strong>手順 17</strong></td> 
-   <td>プロファイリングで処理に時間のかかるメソッドを見つけます</td> 
+   <td>プロファイリングで処理に時間のかかるメソッドを見つける</td> 
    <td> </td> 
   </tr> 
   <tr> 
@@ -152,8 +152,8 @@ ht-degree: 92%
   </tr> 
   <tr> 
    <td><strong>手順 19</strong></td> 
-   <td>CPU 100 ％</td> 
-   <td><a href="/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance">https://helpx.adobe.com/experience-manager/6-3/sites-deploying/monitoring-and-maintaining.html#MonitoringPerformance</a></td> 
+   <td>CPU 100％</td> 
+   <td><a href="/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance">https://helpx.adobe.com/jp/experience-manager/6-3/sites-deploying/monitoring-and-maintaining.html#MonitoringPerformance</a></td> 
   </tr> 
   <tr> 
    <td><strong>手順 20</strong></td> 
@@ -187,7 +187,7 @@ ht-degree: 92%
     <ul> 
      <li><a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">パフォーマンスチューニングのヒント</a></li> 
      <li><a href="/help/sites-deploying/configuring-performance.md#configuring-for-performance">パフォーマンスの設定</a></li> 
-     <li><a href="https://www.slideshare.net/jukka/repository-performance-tuning">Repository Performance Tuning</a></li> 
+     <li><a href="https://www.slideshare.net/jukka/repository-performance-tuning">リポジトリのパフォーマンスの調整</a></li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -198,7 +198,7 @@ ht-degree: 92%
      <li><a href="/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing">ワークフローの同時処理</a></li> 
      <li><a href="/help/sites-deploying/configuring-performance.md#configure-the-queue-for-a-specific-workflow">特定のワークフロー用のキューの設定</a></li> 
      <li><a href="/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances">ワークフローインスタンスの定期的なパージ</a></li> 
-     <li><a href="/help/sites-developing/workflows.md#transient-workflows">一時的ワークフロー</a><br /> </li> 
+     <li><a href="/help/sites-developing/workflows.md#transient-workflows">一時的なワークフロー</a><br /> </li> 
     </ul> <p> </p> </td> 
   </tr> 
   <tr> 
@@ -228,21 +228,21 @@ ht-degree: 92%
   </tr> 
   <tr> 
    <td><strong>手順 31</strong></td> 
-   <td>Dispatcher の前で CDN を使用します</td> 
-   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">CDN での Dispatcher の使用</a><br /> </td> 
+   <td>Dispatcher の前で CDN を使用する</td> 
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja#using-dispatcher-with-a-cdn">CDN での Dispatcher の使用</a><br /> </td> 
   </tr> 
   <tr> 
    <td><strong>手順 32</strong></td> 
-   <td>Dispatcher レベルでセッション管理を使用して AEM サーバーをオフロードします</td> 
-   <td><p><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement">セキュアセッションの有効化</a></p> </td> 
+   <td>Dispatcher レベルでセッション管理を使用して AEM サーバーをオフロードする</td> 
+   <td><p><a href="https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement">セキュアセッションの有効化</a></p> </td> 
   </tr> 
   <tr> 
    <td><strong>手順 33</strong></td> 
-   <td>要求をキャッシュ可能にします</td> 
+   <td>リクエストをキャッシュ可能にする</td> 
    <td> 
     <ol> 
-     <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html">一般的な Dispatcher 設定</a></li> 
-     <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache">Dispatcher キャッシュの設定</a></li> 
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja">一般的な Dispatcher 設定</a></li> 
+     <li><a href="https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache">Dispatcher キャッシュの設定</a></li> 
     </ol> <p>キャッシュ率を向上させるには、要求をキャッシュ可能にします（Dispatcher のベストプラクティス）。</p> <p>また、キャッシュ設定を最適化するために、以下の設定も考慮してください。<br /> </p> 
     <ol> 
      <li>GET 以外の HTTP 要求にキャッシュなしルールを設定する</li> 
@@ -259,26 +259,26 @@ ht-degree: 92%
   <tr> 
    <td><strong>手順 35</strong></td> 
    <td>Dispatcher を設定します</td> 
-   <td><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html">Dispatcher の設定</a><br /> </td> 
+   <td><a href="https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html">Dispatcher の設定</a><br /> </td> 
   </tr> 
   <tr> 
    <td><strong>手順 36</strong></td> 
    <td>キャッシュの無効化を確認します</td> 
    <td><br /> 
     <ul> 
-     <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment">オーサー層のキャッシュ無効化</a></li> 
-     <li><a href="https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance">パブリッシュ層のキャッシュ無効化</a></li> 
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-the-authoring-environment">オーサー層のキャッシュ無効化</a></li> 
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=ja#invalidating-dispatcher-cache-from-a-publishing-instance">パブリッシュ層のキャッシュ無効化</a></li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td><strong>手順 37 および 38</strong></td> 
    <td>読み込みに時間がかかる</td> 
-   <td><a href="https://docs.adobe.com/ddc/ja/gems/aem-web-performance.html">AEM Web パフォーマンスに関する Gem セッションを参照してください。</a><br /> </td> 
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">AEM Web パフォーマンスに関する Gem セッション</a><br />を参照してください。 </td> 
   </tr> 
   <tr> 
    <td><strong>手順 39</strong></td> 
    <td>事前接続を使用して接続オーバーヘッドを減らします</td> 
-   <td>上記の Gem セッションを参照してください。また、W3c にも preconnect に関する記載があります。<a href="https://www.w3.org/TR/resource-hints/#dfn-preconnect"> https://www.w3.org/TR/resource-hints/#dfn-preconnect</a></td> 
+   <td>上記の Gem セッションを参照してください。また、W3c にも preconnect に関する記載があります。 <a href="https://www.w3.org/TR/resource-hints/#dfn-preconnect">https://www.w3.org/TR/resource-hints/#dfn-preconnect</a></td> 
   </tr> 
   <tr> 
    <td><strong>手順 40 および 41</strong><br /> </td> 
@@ -288,17 +288,17 @@ ht-degree: 92%
   <tr> 
    <td><strong>手順 45<br /> および 47</strong><br /> </td> 
    <td>HTTP/2 の使用</td> 
-   <td>手順 37、38 および 39 の Gem セッションを参照してください。また、 <a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">この</a> HTTP/2 サポートに関するフォーラム投稿<br /> </td> 
+   <td>手順 37、38 および 39 の Gem セッションを参照してください。HTTP/2 サポートに関する<a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">こちら</a>のフォーラムへの投稿も参照してください。<br /> </td> 
   </tr> 
   <tr> 
    <td><strong>手順 49</strong></td> 
    <td>ペイロードのサイズを縮小します</td> 
-   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Gzip を有効化</a>して、<a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">画像サイズを縮小します</a>。<br /> </td> 
+   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Gzip を有効化</a>して、<a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">画像サイズを縮小します</a>。<br /> </td> 
   </tr> 
   <tr> 
    <td><strong>手順 42 および 43</strong></td> 
    <td>Keep-Alive</td> 
-   <td><p>接続を再利用するために、異なる複数の要求に <code>Keep-Alive</code> ヘッダーが存在しますか。存在しない場合は、要求ごとに別の接続が確立され、不要なオーバーヘッドが発生します。（ブラウザーでの標準 HTTP 要求分析）</p> <p><a href="/help/sites-administering/proxy-jar.md">プロキシサーバーツール</a>で、Keep-Alive 接続を確認できます。<br /> </p> </td> 
+   <td><p>接続を再利用する別のリクエストに <code>Keep-Alive</code> ヘッダーが存在しますか。存在しない場合は、要求ごとに別の接続が確立され、不要なオーバーヘッドが発生します。（ブラウザーでの標準 HTTP 要求分析）</p> <p><a href="/help/sites-administering/proxy-jar.md">プロキシサーバーツール</a>で、Keep-Alive 接続を確認できます。<br /> </p> </td> 
   </tr> 
   <tr> 
    <td><strong>手順 44</strong></td> 
@@ -313,7 +313,7 @@ ht-degree: 92%
      <li>リソースの連結（画像、CSS スプライト、JSON など）<br /> </li> 
      <li>clientlibs の埋め込み 
       <ol> 
-       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">クライアントライブラリフォルダーの作成</a> - 「埋め込みを使用した要求の最小化」の見出しを参照してください。</li> 
+       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">クライアントライブラリフォルダーの作成</a> -「埋め込みを使用したリクエストの最小化」の見出しを参照してください</li> 
       </ol> </li> 
     </ol> </td> 
   </tr> 
@@ -325,7 +325,7 @@ ht-degree: 92%
   <tr> 
    <td><strong>手順 50 および 51</strong></td> 
    <td>JS コードがブロックされています</td> 
-   <td><a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">https://docs.adobe.com/ddc/en/gems/aem-web-performance.html</a></td> 
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">AEM web パフォーマンス</a></td> 
   </tr> 
  </tbody> 
 </table>

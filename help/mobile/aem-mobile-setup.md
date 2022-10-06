@@ -1,7 +1,7 @@
 ---
 title: AEM Mobile のセットアップ
 seo-title: AEM Mobile SetUp
-description: 'このページでは、AEM Mobile のセットアップをおこない、ユーザーが AEM 内でコンテンツを作成および管理できるようにする方法について説明します。このページは、AEM インスタンスをクラウドベースの AEM Mobile On-demand Services アカウントおよびプロジェクトと統合する詳細について説明します。 '
+description: このページでは、AEM Mobile のセットアップをおこない、ユーザーが AEM 内でコンテンツを作成および管理できるようにする方法について説明します。このページは、AEM インスタンスをクラウドベースの AEM Mobile On-demand Services アカウントおよびプロジェクトと統合する詳細について説明します。
 seo-description: Follow this page for setting up AEM Mobile and thus allowing the user to create and manage the content within AEM. This page provides information on integrating the AEM instance with the cloud-based AEM Mobile On-Demand Services account and project(s).
 uuid: 03bf5b56-7750-4f76-b079-43761367655a
 contentOwner: User
@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: administering-on-demand-services-app
 discoiquuid: 393cf504-917e-4bf6-9a8b-b7a5bd862c65
 exl-id: 8f608465-7d0d-48d2-8105-ee2d4ceb727a
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '943'
 ht-degree: 71%
 
 ---
@@ -35,9 +35,9 @@ AEM を使用して AEM Mobile アプリ用のコンテンツを作成するに�
 
 AEM Mobile のセットアップを始めるには、以下の作業が必要です。
 
-* **API キーのリクエスト**:On-Demand Services API にアクセスするには、API キーをリクエストする必要があります。 API キーをリクエストするには、[PDF フォーム](https://helpx.adobe.com/jp/digital-publishing-solution/help/integrating-dps.html)に記入します。入力したフォームをAdobe開発者サポートに送信します。 [wwds@adobe.com](mailto:wwds@adobe.com)
+* **API キーのリクエスト**:On-Demand Services API にアクセスするには、API キーをリクエストする必要があります。 API キーをリクエストするには、[PDF フォーム](https://helpx.adobe.com/jp/digital-publishing-solution/help/integrating-dps.html)に記入します。入力したフォームをAdobe Developerサポートに送信します。 [wwds@adobe.com](mailto:wwds@adobe.com)
 
-* **デバイス ID とデバイストークンの生成**:API キーを受け取ったら、デバイス ID とデバイストークンを生成できます。 に移動します。 [https://aex.aemmobile.adobe.com](https://aex.aemmobile.adobe.com/) 次の操作を実行します。
+* **デバイス ID とデバイストークンの生成**:API キーを受け取ったら、デバイス ID とデバイストークンを生成できます。 aex.aemmobile.adobe.com に移動し、次の操作を実行します。
 
    * API キーを提供します。
    * 以下の権限で AEM Mobile プロジェクトに追加した Adobe ID でログインします（プロジェクト作成手順については以下を参照してください）。
@@ -85,11 +85,11 @@ AEM Mobile 統合が正しく機能するには、設定手順を完了する必
    1. **（必須）** 必須フィールドを入力：
 
       1. クライアント ID
-      1. クライアントの秘密鍵
+      1. クライアントの秘密鍵.
    1. **（オプション）** 既存の値を編集します。
 
 
-1. 変更内容を保存します。
+1. 変更を保存します。
 1. 次に設定の例を示します。
 
 ![chlimage_1-53](assets/chlimage_1-53.png)
@@ -117,8 +117,8 @@ AEM Mobile 統合が正しく機能するには、設定手順を完了する必
 AEM Mobile アプリの開発では、3 つの異なる役割が存在します。
 
 * 管理者
-* 開発者
-* 作成者
+* デベロッパー
+* オーサー
 
 アプリの作成やコンテンツの作成および公開など、様々な権限を持つロールの作成について詳しくは、 [ユーザー・ロールの作成とアクセス権の付与](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) (AEM Mobileヘルプ )
 

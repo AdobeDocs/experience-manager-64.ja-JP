@@ -1,14 +1,14 @@
 ---
 title: ' [!DNL Adobe Experience Manager] でのデジタルアセットのメタデータ管理'
-description: メタデータのタイプと方法について説明します [!DNL Adobe Experience Manager Assets] は、アセットのメタデータを管理して、アセットの分類と整理を容易におこなえるようにします。 [!DNL Experience Manager] を使用すると、メタデータに基づいてアセットを自動的に整理および処理できます。
+description: メタデータのタイプについて、および  [!DNL Adobe Experience Manager Assets]  を使用してアセットのメタデータを管理してアセットの分類と整理を容易にする方法について説明します。 [!DNL Experience Manager]  を使用すると、メタデータに基づいてアセットを自動的に整理および処理できます。
 contentOwner: AG
 feature: Tagging, Metadata
 role: Architect, Leader
 exl-id: 05bbf89a-4cf5-49bb-aea8-a585c641eda2
-source-git-commit: fc725206728e238ab9da1fb30cee8fb407257b62
+source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
 workflow-type: tm+mt
-source-wordcount: '1409'
-ht-degree: 97%
+source-wordcount: '1410'
+ht-degree: 99%
 
 ---
 
@@ -157,7 +157,7 @@ Exif で定義されるメタデータフィールドは、通常、テクニカ
 ### 印刷固有のメタデータ {#print-specific-metadata}
 
 * PDF および PDF/X - Adobe PDF およびサードパーティのアプリケーション。
-* PRISM - [Publishing Requirements for Industry Standard Metadata](http://www.prismstandard.org/specifications/)。
+* PRISM - [Publishing Requirements for Industry Standard Metadata](https://idealliance.org/specifications/prism-metadata/)。
 * XMP - [!DNL Extensible Metadata Platform]。
 * `xmpPG` - ページテキストの XMP メタデータ。
 
