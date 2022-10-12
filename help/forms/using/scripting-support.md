@@ -11,10 +11,10 @@ topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 feature: Mobile Forms
 exl-id: 2194bbbb-22d9-4422-aefb-9651fd795ca3
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: aa70ce1b05353e0d6f234c59df673486c8fa5082
 workflow-type: tm+mt
 source-wordcount: '3894'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -1158,12 +1158,12 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   <tr> 
    <td>for</td> 
    <td><br type="_moz" /> </td> 
-   <td>for i = 100 downto 1 <br /> do s = s + i endfor</td> 
+   <td>for i = 100 downto 1<br /> do s = s + i endfor</td> 
   </tr> 
   <tr> 
    <td>for each</td> 
    <td><br type="_moz" /> </td> 
-   <td>for each i in (1, 2, 3) <br /> do s = s + i endfor</td> 
+   <td>for each i in (1, 2, 3)<br /> do s = s + i endfor</td> 
   </tr> 
   <tr> 
    <td>関数の宣言</td> 
@@ -1353,4 +1353,4 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
 
 >[!NOTE]
 >
->HTML5 フォームはクライアントサイド（ブラウザー）でレンダリングされます。サーバーサイドのスクリプトではなく、クライアントサイドの **validate** スクリプトと **calculate** スクリプトを使用することをお勧めします。
+>HTML5 フォームはクライアントサイド（ブラウザー）でレンダリングされます。クライアント側を使用することをお勧めします **validate** および **calculate** スクリプトを使用します。
