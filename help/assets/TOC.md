@@ -9,7 +9,7 @@ user-guide-description: デジタルアセットを作成、管理、配信お�
 source-git-commit: 5d4d0c86a9d9e3eaaaca1e795260e8e49567ea73
 workflow-type: tm+mt
 source-wordcount: '649'
-ht-degree: 81%
+ht-degree: 82%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 81%
    + [Dynamic Media ビデオプロファイル](video-profiles.md)
    + [Dynamic Media 画像プロファイル](image-profiles.md)
    + [スマートイメージング](imaging-faq.md)
-   + [クライアントサイドデバイスのピクセル比によるスマートイメージング](client-side-dpr.md)
+   + [クライアントサイドのデバイスピクセル比（DPR）を使用したスマートイメージング](client-side-dpr.md)
    + [ビデオ](s7-video.md)
    + [コンテンツの HTTP/2 配信](http2.md)
    + [Dynamic Media アセットの配信](delivering-dynamic-media-assets.md)
@@ -132,7 +132,7 @@ ht-degree: 81%
    + [Brand Portal へのコレクションの公開](brand-portal-publish-collection.md)
    + [Brand Portal へのフォルダーの公開](brand-portal-publish-folder.md)
 + コンテンツフラグメント {#fragments}
-   + [コンテンツフラグメントの操作](content-fragments.md)
+   + [コンテンツフラグメントの使用方法](content-fragments.md)
    + [コンテンツフラグメントの管理](content-fragments-managing.md)
    + [コンテンツフラグメントモデル](content-fragments-models.md)
    + [バリエーション - フラグメントコンテンツのオーサリング](content-fragments-variations.md)
