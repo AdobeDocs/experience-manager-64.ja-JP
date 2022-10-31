@@ -13,7 +13,7 @@ exl-id: 274b3a33-3267-41ee-bdcd-351787152570
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '642'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
@@ -42,27 +42,27 @@ IntelliJ で AEM の開発を開始するには、次の手順を実行する必
 
 ### Maven に基づく AEM プロジェクトの設定 {#set-up-your-aem-project-based-on-maven}
 
-次に、 [Apache Maven を使用したAEMプロジェクトの構築方法](/help/sites-developing/ht-projects-maven.md).
+次に、[Apache Maven を使用して AEM プロジェクトをビルドする方法](/help/sites-developing/ht-projects-maven.md)に記載されている手順に従って、Maven を使用してプロジェクトを設定します。
 
-IntelliJ IDEA でAEMプロジェクトの操作を開始するには、 [5 分ではじめに](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) で十分です。
+IntelliJ IDEA で AEM プロジェクトを使用するには、[5 分で完了する作業準備](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)で説明する基本設定を行ってください。
 
 ### IntelliJ IDEA 用の JSP サポートの準備 {#prepare-jsp-support-for-intellij-idea}
 
 IntelliJ IDEA では JSP との連携もサポートされます。サポートされる項目の例を次に示します。
 
 * タグライブラリのオートコンプリート
-* ～によって定義された物体への意識 `<cq:defineObjects />` および `<sling:defineObjects />`
+* `<cq:defineObjects />` と `<sling:defineObjects />` で定義されたオブジェクトの認知
 
-これが機能するには、 [JSP の使用方法](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) in [Apache Maven を使用したAEMプロジェクトの構築方法](/help/sites-developing/ht-projects-maven.md).
+サポートを有効にするには、[Apache Maven を使用して AEM プロジェクトをビルドする方法](/help/sites-developing/ht-projects-maven.md)の [JSP を使用する方法](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)に記載されている手順に従います。
 
 ### Maven プロジェクトの読み込み {#import-the-maven-project}
 
-1. を開きます。 **インポート** IntelliJ IDEA のダイアログ
+1. 次の手順を使用して、IntelliJ IDEA で&#x200B;**読み込み**&#x200B;ダイアログを開きます。
 
-   * 選択 **プロジェクトを読み込み** まだプロジェクトを開いていない場合は、ようこそ画面で
-   * 選択 **ファイル —> プロジェクトを読み込み** メインメニューから
+   * プロジェクトを開いていない場合は、ようこそ画面の「**プロジェクトを読み込む**」を選択します。
+   * メインメニューから&#x200B;**ファイル／プロジェクトをインポート**&#x200B;を選択します。
 
-1. Import ダイアログで、プロジェクトの POM ファイルを選択します。
+1. 読み込みダイアログで、プロジェクトの POM ファイルを選択します。
 
    ![chlimage_1-45](assets/chlimage_1-45.png)
 
@@ -70,7 +70,7 @@ IntelliJ IDEA では JSP との連携もサポートされます。サポート�
 
    ![chlimage_1-46](assets/chlimage_1-46.png)
 
-1. 次のダイアログで、 **次へ** および **完了**.
+1. 以降のダイアログで繰り返し「**次へ**」をクリックし、最後に「**終了**」をクリックします。
 1. これで、IntelliJ IDEA を使用した AEM 開発用の設定は完了です。
 
    ![chlimage_1-47](assets/chlimage_1-47.png)
@@ -88,30 +88,30 @@ IntelliJ IDEA を使用して JSP をデバッグするには、次の手順を�
 
 デバッグ用の JSP を検索する場所を IntelliJ IDEA で認識する必要があります。IDEA では `content-package-maven-plugin` 設定を解釈できないので、これを手動で設定する必要があります。
 
-1. に移動します。 **ファイル —> プロジェクト構造**
-1. を選択します。 **コンテンツ** モジュール
-1. クリック **+** モジュールのリストの上にあるを選択し、 **Web**
-1. 「Web リソースディレクトリ」として、 `content/src/main/content/jcr_root subdirectory` の名前を指定します。
+1. **ファイル／プロジェクト構造**&#x200B;に移動します。
+1. 「**コンテンツ**」モジュールを選択します。
+1. モジュールのリストの上にある「**+**」をクリックして、「**Web**」を選択します。
+1. 「Web リソースディレクトリ」として、以下のスクリーンショットに示すように、プロジェクトの `content/src/main/content/jcr_root subdirectory` を選択します。
 
 ![chlimage_1-48](assets/chlimage_1-48.png)
 
 #### JSR45 サポートプラグインのインストール {#install-the-jsr-support-plugin}
 
-1. 次に移動： **プラグイン** IntelliJ IDEA 設定のウィンドウ
-1. 次に移動： **JSR45 統合** プラグインを使用し、横のチェックボックスをオンにします。
-1. クリック **適用**
+1. IntelliJ IDEA 設定の&#x200B;**プラグイン**&#x200B;ウィンドウに移動します。
+1. 「**JSR45 Integration**」プラグインに移動して、その横にあるチェックボックスをオンにします。
+1. 「**適用**」をクリックします。
 1. 再起動するよう要求されたら、IntelliJ IDEA を再起動します。
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
 #### デバッグプロファイルの設定 {#configure-a-debug-profile}
 
-1. に移動します。 **実行/設定を編集**
-1. ヒット **+** を選択し、 **JSR45 リモート**
-1. 設定ダイアログで、「 」を選択します。 **設定** 次の **アプリケーションサーバー** 汎用サーバーの設定
+1. **実行／設定を編集**&#x200B;に移動します。
+1. 「**+**」をクリックして「**JSR45 Remote**」を選択します。
+1. 設定ダイアログで、「**アプリケーションサーバー**」の横にある「**設定**」を選択して、Generic サーバーを設定します。
 1. デバッグの開始時にブラウザーを開く場合は、開始ページを適切な URL に設定します。
-1. すべてを削除 **起動前** vlt 自動同期を使用する場合はタスク、使用しない場合は適切な Maven タスクを設定します
-1. の **起動/接続** パネル、必要に応じてポートを調整
+1. vlt autosync を使用する場合は、「**起動前**」タスクをすべて削除します。使用しない場合は、適切な Maven タスクを設定します。
+1. **スタートアップ／接続**&#x200B;ウィンドウで、必要に応じてポートを調整します。
 1. IntelliJ IDEA が処理するコマンドライン引数をコピーします。
 
 ![chlimage_1-50](assets/chlimage_1-50.png) ![chlimage_1-51](assets/chlimage_1-51.png)
@@ -143,7 +143,7 @@ CQ_JVM_OPTS="$CQ_JVM_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,su
 
 これで、AEM における JSP のデバッグ用の設定はすべて完了です。
 
-1. 選択 **Run -> Debug -> Your Debug Profile**
+1. **実行／デバッグ／デバッグプロファイル**&#x200B;を選択します。
 1. コンポーネントのコードにブレークポイントを設定します。
 1. ブラウザーでページにアクセスします。
 
