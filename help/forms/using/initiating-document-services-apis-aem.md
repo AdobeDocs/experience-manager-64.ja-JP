@@ -1,5 +1,5 @@
 ---
-title: 'AEM ワークフローからの Document Services API の開始 '
+title: AEM ワークフローからの Document Services API の開始
 seo-title: Initiate Document Services APIs from AEM Workflow
 description: DDX または指定された入力で AEM Document Services を呼び出す方法について説明します。PDF を PDF/A に変換する方法も参照してください。
 seo-description: Learn how to invoke AEM Document services on DDX or supplied inputs. Also see hwo to convert PDF to PDF/A

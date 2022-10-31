@@ -312,7 +312,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
     <ul> 
      <li>コードキャッシュのフラッシュが有効な Java 7 でインスタンスが実行されている場合、警告ステータスを返します</li> 
      <li>Java 7 でインスタンスが実行されていて、予約済みコードキャッシュのサイズが最小しきい値よりも少ない（デフォルト値は 90MB）場合、警告ステータスを返します</li> 
-    </ul> <p><code>minimum.code.cache.size</code> しきい値は設定可能です。バグについて詳しくは、<a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">このページ</a>を参照してください。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a> です。</p> </td> 
+    </ul> <p><code>minimum.code.cache.size</code> しきい値は設定可能です。<a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">バグについて詳しくは、</a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">このページ</a>を参照してください。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a> です。</p> </td> 
   </tr> 
   <tr> 
    <td>リソース検索パスエラー</td> 

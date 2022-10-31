@@ -1,5 +1,5 @@
 ---
-title: ページのオーサリングのクイックガイド
+title: ページオーサリングのクイックガイド
 seo-title: Quick Guide to Authoring Pages
 description: オーサリングページのコンテンツの主なアクションに関する概要レベルのクイックガイドです
 seo-description: A quick, high-level guide to the key actions of authoring page content
@@ -13,11 +13,11 @@ exl-id: c63e44e7-cc89-4fa0-8ba4-460d682df601
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1538'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
-# ページのオーサリングのクイックガイド{#quick-guide-to-authoring-pages}
+# ページオーサリングのクイックガイド{#quick-guide-to-authoring-pages}
 
 ここでは、AEM でページコンテンツをオーサリングする際の主なアクションについて、概要レベルのクイックガイドとなる手順を示します。
 
@@ -29,7 +29,7 @@ ht-degree: 96%
 AEM によるオーサリングについて詳しくは、以下を参照してください。
 
 * [作成者が行う最初の手順](/help/sites-authoring/first-steps.md)
-* [オーサー環境の操作](/help/sites-authoring/author-environment-tools.md)
+* [オーサー環境の操作 ](/help/sites-authoring/author-environment-tools.md)
 
 ## クイックヒント {#a-few-quick-hints}
 
@@ -39,11 +39,11 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 * **作成**
 
-   * このボタンは多くのコンソールで使用できます。表示されるオプションはコンテキストに依存するので、シナリオによって変わることがあります。
+   * このボタンは多くのコンソールで使用できます。表示されるオプションはコンテキストに依存するため、シナリオによって変わることがあります。
 
 * フォルダー内のページの並べ替え
 
-   * これは[リスト表示](/help/sites-authoring/basic-handling.md#list-view)でおこなえます。変更内容は他の表示にも反映されます。
+   * これは[リスト表示](/help/sites-authoring/basic-handling.md#list-view)で実行できます。変更内容が適用され、別の形式で表示できます。
 
 * UI の変更
 
@@ -232,7 +232,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
-* コンソールからページを非公開にする場合は、「**公開を管理**」オプションからのみおこなうことができます。このオプションは、ツールバーでのみ使用できます（クイックアクションからは使用できません）。
+* コンソールからページを非公開にする場合は、「**公開を管理**」オプションからのみ行うことができます。このオプションは、ツールバーでのみ使用できます（クイックアクションからは使用できません）。
 
    「**ページを非公開にする**」オプションは、エディターの&#x200B;**ページ情報**&#x200B;メニューから引き続き使用できます。
 
@@ -297,7 +297,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    ![screen_shot_2018-03-21at161507](assets/screen_shot_2018-03-21at161507.png)
 
-1. 「**保存するバージョン**」を選択し、「**作成**」を選択します。
+1. 「**バージョンとして保存**」を選択し、「**作成**」を選択します。
 
 ## ページのバージョンの復元と比較 {#restoring-comparing-a-version-of-your-page}
 

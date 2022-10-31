@@ -1,6 +1,6 @@
 ---
 title: 基本的なデジタルアセット管理での Media Library の使用
-description: '"[!DNL Experience Manager Assets] とMedia Library（アセット管理）'
+description: 「[!DNL Experience Manager Assets] とアセット管理用の Media Library」
 contentOwner: AG
 feature: Asset Management
 role: Architect,Leader
@@ -8,7 +8,7 @@ exl-id: f0afdae4-5777-464c-9203-e9d19c6d62f6
 source-git-commit: d9cfb5376210234b3b05877509c273c52d9cecf3
 workflow-type: tm+mt
 source-wordcount: '536'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ Define what is not included
 
 # 基本的なアセット管理での Media Library の使用 {#manage-assets-using-media-library}
 
-[!DNL Adobe Experience Manager] プラットフォームには、アセットを管理するための様々な機能が用意されています。Media Library を使用すると、少数のアセットをリポジトリーにアップロードし、Web ページで検索して使用し、アセットに対して簡単なアセット管理タスクを実行できます。
+[!DNL Adobe Experience Manager] プラットフォームには、アセットを管理するための様々な機能が用意されています。Media Library を使用すると、少数のアセットをリポジトリにアップロードし、Web ページで検索して使用し、アセットに対して簡単なアセット管理タスクを実行できます。
 
 Media Library は、[!DNL Adobe Experience Manager Sites] ライセンスを補完する軽量のデジタルアセット管理（DAM）ソリューションです。[!DNL Sites] は、Web コンテンツ管理（WCM）ソリューションです。Media Library は、Experience Manager のすべての機能と連携します。
 
@@ -71,7 +71,7 @@ Media Library 機能を使用するには、デフォルトの [!DNL Experience 
 * コンテンツファインダーを使用した [!DNL Sites] ページへのアセットの追加
 * [!DNL Content Fragments] の使用
 * [!DNL Content Fragments] と参照先のメディアアセットに対する HTTP REST および GraphQL API の使用（Sites ライセンスの下で）
-* Marketing Cloud との統合
+* Experience Cloud との統合
 * アセット管理ユーザーインターフェイスのカスタマイズと拡張
 * クエリビルダー（API）にアクセスして検索機能を拡張
 * 静的タグの作成
@@ -86,7 +86,7 @@ As per PM, we must avoid stating such a list, as we don't have a list that makes
 
 >[!IMPORTANT]
 >
->DAM の高度なユースケースの多くは、[!DNL Experience Manager Assets] で処理されます。Media Library ライセンスでは、Media Library を使用して、記載されているユースケースのみを実行することができます。ユースケースがリストに表示されていない場合は、Media Library ライセンスで使用しないでください。質問がある場合は、アドビカスタマーサポートまでお問い合わせください。
+>DAM の高度なユースケースの多くは、[!DNL Experience Manager Assets] で処理されます。Media Library ライセンスでは、Media Library を使用して、記載されているユースケースのみを実行することができます。ユースケースがリストに表示されていない場合は、Media Library ライセンスで使用しないでください。質問がある場合は、アドビカスタマーサポートまで問い合わせください。
 
 なお、[!DNL Assets] ライセンスがなければ、スマートタグ、[!DNL Asset] リンク、[!DNL Asset] セレクター、一括タグ付け、アセットワークフローの変更、Media Library にアクセスするための標準 [!DNL Adobe Experience Manager] ユーザーインターフェイスは使用できません。
 

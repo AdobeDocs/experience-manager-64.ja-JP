@@ -1,5 +1,5 @@
 ---
-title: 'アダプティブフォームのオーサリングの概要 '
+title: アダプティブフォームのオーサリングの概要
 seo-title: Introduction to authoring adaptive forms
 description: AEM Forms は、アダプティブフォームをオーサリングするための、強力かつ使い方が簡単なインターフェイスを提供します。これには、フォームを構築するために使用できる多くのコンポーネントとツールが含まれています。
 seo-description: AEM Forms provide easy-to-use yet powerful interface for authoring adaptive forms. It provides a host of components and tools that you can use to build forms.
@@ -363,7 +363,7 @@ I. **[!UICONTROL 親]**：コンポーネントの親を選択できます。例
 * guideRootPanel
 * アダプティブフォームコンテナ
 
-J. **その他**： 選択したコンポーネントの操作について、さらにオプションを提供します。
+J. **その他**：選択したコンポーネントの操作について、さらにオプションを提供します。
 
 * SOM 式を表示
 * パネルをフラグメントとして保存（パネルのみ）

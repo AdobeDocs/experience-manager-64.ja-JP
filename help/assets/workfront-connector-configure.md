@@ -7,13 +7,13 @@ exl-id: dcf90a29-59a9-40d1-b8ee-56d327072b3e
 source-git-commit: 6f9a682f441c1087558f86da65e092e549f75a17
 workflow-type: tm+mt
 source-wordcount: '1714'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
 # [!DNL Workfront for Experience Manager enhanced connector] の設定 {#assets-integration-overview}
 
-[!DNL Adobe Experience Manager] で管理者アクセス権を持つユーザーは拡張コネクタをインストール後に設定します。 インストール手順については、[コネクタのインストール](/help/assets/workfront-integrations.md)を参照してください。
+[!DNL Adobe Experience Manager] で管理者アクセス権を持つユーザーは拡張コネクタをインストール後に設定します。インストール手順については、[コネクタのインストール](/help/assets/workfront-integrations.md)を参照してください。
 
 >[!IMPORTANT]
 >
@@ -21,9 +21,9 @@ ht-degree: 97%
 >
 >* アドビは、このコネクターを冗長にする[!DNL Adobe Workfront]および [!DNL Adobe Experience Manager] の更新をリリースする可能性があります。この場合、お客様はこのコネクターの使用から移行する必要が生じることがあります。
 >
->* Adobeは、拡張コネクタバージョン 1.7.4 以降をサポートしています。 以前のプレリリースおよびカスタムバージョンはサポートされていません。 拡張コネクタのバージョンを確認するには、 `digital.hoodoo` の左側のペインで使用可能なグループ [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja).
+>* アドビでは、拡張コネクタバージョン 1.7.4 以降をサポートしています。以前のプレリリースバージョンやカスタムバージョンはサポートされていません。拡張コネクタのバージョンを確認するには、 `digital.hoodoo` の左側のペインで使用可能なグループ [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja).
 >
->* 詳しくは、[Workfront for Experience Manager Assets 拡張コネクタに関するパートナー認定試験](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html)を参照してください。試験について詳しくは、 [試験ガイド](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
+>* 詳しくは、[Workfront for Experience Manager Assets 拡張コネクタに関するパートナー認定試験](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html)を参照してください。試験について詳しくは、[試験ガイド](https://express.adobe.com/page/Tc7Mq6zLbPFy8/)を参照してください。
 
 
 ## イベント購読の設定 {#event-subscriptions}
@@ -53,9 +53,9 @@ ht-degree: 97%
 ### リンクされたフォルダー構造の設定 {#linked-folder-structure}
 
 1. クラウドサービスの「プロジェクトにリンクされたフォルダー」タブに移動します。
-1. リンクされたフォルダーの親パス：DAM 内で、リンクされたフォルダーを作成するフォルダーを選択します。 空のままにすると、デフォルトで /content/dam に設定されます。Workfront ツールのメタデータスキーマと Workfront リンクフォルダーのメタデータスキーマが、選択したフォルダーに適用されていることを確認します。
+1. リンクされたフォルダーの親パス：DAM 内で、リンクされたフォルダーを作成するフォルダーを選択します。空のままにすると、デフォルトで /content/dam に設定されます。Workfront ツールのメタデータスキーマと Workfront リンクフォルダーのメタデータスキーマが、選択したフォルダーに適用されていることを確認します。
 1. リンクされたフォルダー構造：コンマ区切り値を入力します。各値は `DE:<some-project-custom-form-field>`、Portfolio、プログラム、年、名前または「リテラル文字列値」（最後の 1 つには引用符がいります）のいずれかです。現在は、Portfolio、プログラム、年、DE:プロジェクトの種類、名前に設定されています。
-1. Workfront のフォルダーのタイトルに構造内のすべてのフォルダーを含める必要がある場合は、「フォルダー構造名を使用して Workfront でリンクされたフォルダーのタイトルを作成」チェックボックスをオンにする必要があります。 それ以外の場合は、最後のフォルダーのタイトルになります。
+1. Workfront のフォルダーのタイトルに構造内のすべてのフォルダーを含める必要がある場合は、「フォルダー構造名を使用して Workfront でリンクされたフォルダーのタイトルを作成」チェックボックスをオンにする必要があります。それ以外の場合は、最後のフォルダーのタイトルになります。
 1. サブフォルダーのマルチフィールドでは、リンクされたフォルダーの子フォルダーとして作成するフォルダーのリストを指定できます。
 1. プロジェクトのステータス：リンクされたフォルダーを作成するためにプロジェクトを設定する必要があるステータスを選択します。
 1. ポートフォリオを使用してプロジェクトにリンクフォルダーを作成：リンクされたフォルダーを作成するためにプロジェクトが属する必要のあるポートフォリオのリスト。この一覧を空のままにして、すべてのプロジェクトポートフォリオのリンクフォルダーを作成します。
@@ -121,7 +121,7 @@ Adobe Workfront ドキュメントとアセット間のメタデータマッピ�
 * `aem-mapped-property` は次になることができます。
 
    * リテラル値。これらは引用符で囲む必要があります。
-   * AEM プロパティ。 この参照は、ワークフローペイロードに対する相対参照にする必要があります。
+   * AEM プロパティ。この参照は、ワークフローペイロードに対する相対参照にする必要があります。
    * 名前付きの値。これらは角括弧で囲む必要があります。
    * 上記の 3 つの項目を連結したもの。`{+}` を使用して指定します。
    * 値を `{replace(<value>,”old-char”,”new-char”)}` で囲むことによる上記の 3 つの項目の変更。
@@ -195,6 +195,6 @@ Experience Manager のワークフローエディターで、[!UICONTROL Workfro
 
 ## Workfront ドキュメントのカスタムフォームのアップデート {#subscribe-workfront-doc-custom-form-updates}
 
- [!DNL Workfront] ドキュメントカスタムフォームで変更を購入するには、「**[!UICONTROL 詳細]**」タブで関連オプションを選択します。 これらのアップデートを購入すると、[!DNL Workfront] ドキュメントカスタムフォームの対応するフィールドが変更されたときに、マップされた [!DNL Experience Manager] メタデータフィールドがアップデートされます。
+ [!DNL Workfront] ドキュメントカスタムフォームで変更を購入するには、「**[!UICONTROL 詳細]**」タブで関連オプションを選択します。これらのアップデートを購入すると、[!DNL Workfront] ドキュメントカスタムフォームの対応するフィールドが変更されたときに、マップされた [!DNL Experience Manager] メタデータフィールドがアップデートされます。
 
 ![[!DNL Experience Manager]](/help/assets/assets/wf-custom-form-update.png) での Workfront ドキュメントカスタムフォームのアップデート設定

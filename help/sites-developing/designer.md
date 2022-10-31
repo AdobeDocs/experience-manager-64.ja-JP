@@ -13,7 +13,7 @@ exl-id: 8a4fc7c7-03bc-44db-93f1-dbd76fc9dbd7
 source-git-commit: 9ae048ca2811a56c5d6f0b2415fcfcccc4384dbf
 workflow-type: tm+mt
 source-wordcount: '362'
-ht-degree: 43%
+ht-degree: 100%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 43%
 
 >[!CAUTION]
 >
->この記事では、クラシック UI に基づく Web サイトの作成方法について説明します。 アドビでは、[AEM Sites の開発の手引き](/help/sites-developing/getting-started.md)で詳しく説明しているように、Web サイトに最新の AEM テクノロジーを利用することをお勧めします。
+>この記事では、クラシック UI を使用して web サイトを作成する方法について説明します。アドビでは、[AEM Sites の開発の手引き](/help/sites-developing/getting-started.md)で詳しく説明しているように、web サイトに最新の AEM テクノロジーを利用することをお勧めします。
 
-デザイナーは、 [クラシック UI](/help/release-notes/touch-ui-features-status.md) AEMの
+Designer は、AEM の[クラシック UI](/help/release-notes/touch-ui-features-status.md) を使用した web サイトのデザインを作成するために使用します。
 
 >[!NOTE]
 >
@@ -31,13 +31,13 @@ ht-degree: 43%
 
 ## デザイナーの使用 {#using-the-designer}
 
-デザインは、 **デザイン** セクション **ツール** タブ：
+デザインは、「**ツール**」タブの **designs** セクションで定義できます。
 
 ![screen_shot_2012-02-01at30237pm](assets/screen_shot_2012-02-01at30237pm.png)
 
 ここで、デザインの格納に必要な構造を作成し、必要なカスケーディングスタイルシート（CSS）および画像をアップロードできます。
 
-デザインは、以下の場所に格納されます。 `/apps/<your-project>`. Web サイトに使用するデザインへのパスは、 `cq:designPath` プロパティ `jcr:content` ノード。
+デザインは、`/apps/<your-project>`の下に格納されます。Web サイトに使用するデザインへのパスは、ノードの `cq:designPath`プロパティ`jcr:content`で指定します。
 
 ![chlimage_1-74](assets/chlimage_1-74.png)
 
@@ -49,21 +49,22 @@ ht-degree: 43%
 
 デザインを実現するには、以下が必要です。
 
-**CSS**  — カスケーディングスタイルシートは、ページ上の特定の領域の形式を定義します。
+**CSS** - カスケーディングスタイルシート（CSS）は、ページの特定の領域の書式を定義します。
 
-**画像**  — 背景、ボタンなどの機能に使用する画像。
+
+**画像** - 背景、ボタンなどの機能に使用するすべての画像。
 
 ### Web サイトをデザインする際の考慮事項 {#considerations-when-designing-your-website}
 
-Web サイトを開発する際は、画像と CSS ファイルをの下に保存することを強くお勧めします。 `/apps/<your-project>` 次のスニペットで説明するように、現在のデザインに基づいてリソースを参照できます。
+Web サイトを開発するときは、画像や CSS ファイルを `/apps/<your-project>` の下に格納し、以下のスニペットで記述されているように、現在のデザインに基づいてリソースを参照できるようにすることを強くお勧めします。
 
 ```xml
 <%= currentDesign.getPath() + "/static/img/icon.gif %>
 ```
 
-前述の例には、次のようないくつかの利点があります。
+前述の例には、次のようなメリットがあります。
 
 * 別々のデザインパスを使用しているサイトごとに、コンポーネントのルックアンドフィールを変化させることができます。
-* Web サイトの再設計は、サイトのルートにある別のノードにデザインパスを指すことで、 `design/v1` から `design/v2.`
+* `design/v1`から`design/v2.`のように、デザインパスをサイトのルートにある別のノードに変更することにより、web サイトのデザインを簡単に変更できます。
 
-* `/etc/designs` および `/content` は、ブラウザーが外部ユーザーの保護を目にする唯一の外部 URL で、ユーザーの下に何があるかを知るためのものです `/apps` ツリー。 上記の URL の利点は、アセットの公開をいくつかの異なる場所に制限するので、システム管理者がより高いセキュリティを設定するのに役立ちます。
+* ブラウザーから見える外部 URL は `/etc/designs` および `/content` のみなので、`/apps` ツリーの下に何があるかに興味を抱く外部ユーザーから保護することができます。前述の URL のメリットは、システム管理者がより高いセキュリティを設定する際にも役立ちます。アセットを公開する範囲を、少数の場所に制限しているからです。

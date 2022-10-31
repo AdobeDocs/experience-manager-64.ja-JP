@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームで Adobe Sign を使用する
 seo-title: Using Adobe Sign in an adaptive form
-description: 'アダプティブフォームで電子署名（Adobe Sign）ワークフローを有効にすると、署名ワークフローが自動化され、単一署名プロセスと複数署名プロセスが簡素化されるほか、モバイルデバイスでフォームを電子的に署名できるようになります。 '
+description: アダプティブフォームで電子署名（Adobe Sign）ワークフローを有効にすると、署名ワークフローが自動化され、単一署名プロセスと複数署名プロセスが簡素化されるほか、モバイルデバイスでフォームを電子的に署名できるようになります。
 seo-description: Enable e-signature (Adobe Sign) workflows for an adaptive form to automate signing workflows, simplify single and multi-signature processes, and to electronically sign forms from mobile devices.
 uuid: 9c65dc44-c1a5-44df-8659-6efbe347575b
 contentOwner: khsingh
@@ -129,7 +129,7 @@ Adobe Sign には、アダプティブフォーム上に配置できるさまざ
 
    **A.** Adobe Signフィールドを選択して追加します。 **B.** Adobe Signブロックを全画面表示に展開します。
 
-1. 「**Adobe Sign フィールド** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png)」アイコンをタップします。 Adobe Sign のフィールドの選択オプションと追加オプションが表示されます。
+1. 「**Adobe Sign フィールド** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png)」アイコンをタップします。Adobe Sign のフィールドの選択オプションと追加オプションが表示されます。
 
    を展開します。 **タイプ** ドロップダウンフィールドでAdobe Signフィールドを選択し、「完了」をタップします。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコンをクリックして、選択したフィールドをAdobe Signブロックに追加します。 「**タイプ**」ドロップダウンフィールドには、「署名」タイプ、「署名者の情報」タイプ、「データフィールド」タイプが表示されます。Adobe Sign が AEM Forms に統合されている場合、「タイプ」ドロップダウンボックスに表示されているフィールド以外のフィールドは使用できません。Adobe Sign フィールドについて詳しくは、[Adobe Sign のドキュメント](https://helpx.adobe.com/jp/sign/using/field-types.html)を参照してください。
 
@@ -227,7 +227,7 @@ Adobe Sign フィールドをアダプティブフォームに追加したら、
 
    **A.** Adobe Signフィールドを選択して追加します。 **B.** Adobe Signブロックを全画面表示に展開します。
 
-1. 「**Adobe Sign フィールド** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png)」アイコンをタップします。 Adobe Sign のフィールドの選択オプションと追加オプションが表示されます。
+1. 「**Adobe Sign フィールド** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png)」アイコンをタップします。Adobe Sign のフィールドの選択オプションと追加オプションが表示されます。
 
    を展開します。 **タイプ** 選択するドロップダウンフィールド **電子署名** 「完了」をタップします。 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) アイコンをクリックして、選択したフィールドをAdobe Signブロックに追加します。
 

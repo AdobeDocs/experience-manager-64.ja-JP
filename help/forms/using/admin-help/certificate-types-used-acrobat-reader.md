@@ -1,5 +1,5 @@
 ---
-title: 'Acrobat Reader DC Extensions で使用される証明書の種類 '
+title: Acrobat Reader DC Extensions で使用される証明書の種類
 seo-title: Certificate types used by Acrobat Reader DC extensions
 description: Acrobat Reader DC Extensions で使用される証明書の種類について説明します。
 seo-description: Learn about the certificate types used by Acrobat Reader DC extensions.

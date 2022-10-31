@@ -24,7 +24,7 @@ QueryBuilder の REST インターフェイスを使用するか、QueryBuilder 
 
 カスタムレポートを追加する前に、次のテンプレート手順を実行します。
 
-1. カスタムレポートで使用するデータは、プロセスレポートで使用可能である必要があります。 データを確実に使用できるようにするには、cron ジョブをスケジュールするか、プロセスレポート UI で「**[同期](https://helpx.adobe.com/jp/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** 」オプションを使用します。
+1. カスタムレポートで使用するデータは、プロセスレポートで使用可能である必要があります。データを確実に使用できるようにするには、cron ジョブをスケジュールするか、プロセスレポート UI で「**[同期](https://helpx.adobe.com/jp/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** 」オプションを使用します。
 1. URL リクエスト（目的のクエリをカプセル化）は、適切なクエリ結果オブジェクトを返す必要があります。クエリを作成するには、[QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) の REST インターフェイスを使用して、QueryBuilder API を使用して OSGi サービスを作成します。動的クエリや静的クエリを作成できます。
 
 1. 結果を表示するカスタムユーザーインターフェイスを作成します。スタンドアロンのユーザーインターフェイスを作成したり、結果を既存のプロセスレポート UI と統合したりできます。
@@ -428,7 +428,7 @@ public class PeriodicProcessVolume {
 
 1. `/apps` ノードに CRX ノードを作成し、適切なアクセス権限を付与します。（PERM_PROCESS_REPORTING_USER）
 1. `/content` ノードにレンダラーを定義します。
-1. 手順 1 で作成した HTML に JSP ファイルまたはノードファイルを追加します。 また、CSS ファイルを追加することもできます。
+1. 手順 1 で作成した HTML に JSP ファイルまたはノードファイルを追加します。また、CSS ファイルを追加することもできます。
 
    ![JSP ファイルと CSS ファイルを含むサンプルノード](assets/nodewithjspandcss.png)
 
@@ -639,15 +639,15 @@ response.setCharacterEncoding("utf-8");
 
    * **ID** - レポートの独自の ID 番号を指定します。
    * **名前** - レポートの名前を指定します。名前が UI に表示されます。
-   * **リンク** - 個別の UI のレンダラーへの相対リンクを指定します。 リンクは手順 1 で作成します。
-   * **説明** - レポートの 1 行の説明を指定します。 説明フィールドは空のままにすることができます。
-   * **アイコン** - レポートを画像で表す画像を指定します。 アイコンフィールドは空のままにすることができます。
+   * **リンク** - 個別の UI のレンダラーへの相対リンクを指定します。リンクは手順 1 で作成します。
+   * **説明** - レポートの 1 行の説明を指定します。説明フィールドは空のままにすることができます。
+   * **アイコン** - レポートを画像で表す画像を指定します。アイコンフィールドは空のままにすることができます。
 
    ![ノードのプロパティ](assets/nodeproperties.png)
 
    ノードのプロパティ
 
-1. レポート UI は、プロセスレポート UI に統合されています。 UI を統合すると、更新された UI は次の画像のようになります。
+1. レポート UI は、プロセスレポート UI に統合されています。UI を統合すると、更新された UI は次の画像のようになります。
 
    ![新しく追加されたカスタムレポートのユーザーインターフェイス](assets/sample-ui-screen-shot-1.png)
 

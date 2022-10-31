@@ -1,7 +1,7 @@
 ---
 title: ノードの作成
 seo-title: Create Nodes
-description: 'コメントシステムのオーバーレイ '
+description: コメントシステムのオーバーレイ
 seo-description: Overlay the comments system
 uuid: 802ae28b-9989-4c2c-b466-ab76a724efd3
 contentOwner: User
@@ -13,7 +13,7 @@ exl-id: fc044a4e-0037-405f-8c26-b388c6a98733
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '280'
-ht-degree: 42%
+ht-degree: 43%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 42%
    * **[!UICONTROL 作成／コンポーネントを作成...]** を選択します。
       * ラベルを入力： `comments`
       * タイトルを入力： `Comments`
-      * 説明を入力： `List of comments without showing avatars`
+      * 説明を入力: `List of comments without showing avatars`
       * スーパータイプ：`social/commons/components/comments`
       * グループを入力： `Communities`
       * クリック **[!UICONTROL 次へ]** 次まで **[!UICONTROL OK]**
@@ -61,7 +61,7 @@ ht-degree: 42%
 
       * ラベルを入力： `comment`
       * タイトルを入力： `Comment`
-      * 説明を入力： `A comment instance without avatars`
+      * 説明を入力: `A comment instance without avatars`
       * スーパータイプ：`social/commons/components/comments/comment`
       * グループを入力： `.hidden`
       * クリック **[!UICONTROL 次へ]** 次まで **[!UICONTROL OK]**

@@ -13,7 +13,7 @@ exl-id: f39910cf-1875-43fc-bfb5-259b9d8f135d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '88'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 94%
 
 Sling Binding はほとんどの場合、サービスにアクセスする方法として適切ではありません。代わりに、*@Reference* または *@Inject* 注釈を使用してください。
 
-## Java コードでの Thread.interrupt の回避 {#avoid-thread-interrupt-in-java-code}
+## Java コードで Thread.interrupt を使用しない {#avoid-thread-interrupt-in-java-code}
 
 *Thread.interrupt* を不適切なタイミングで呼び出すと、Lucene ファイルや永続キャッシュファイルを含め、ファイルが閉じられることがあるので、危険です。
 

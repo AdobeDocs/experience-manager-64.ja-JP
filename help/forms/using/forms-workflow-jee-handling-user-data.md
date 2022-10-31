@@ -26,7 +26,7 @@ AEM Forms JEE ワークフローには、ビジネスプロセスを設計、作
 * 監視フォルダーの使用
 * 電子メールの使用
 
-AEM Forms JEE ワークフロープロセスの作成について詳しくは、[Workbench ヘルプ](https://helpx.adobe.com/jp/content/dam/help/en/experience-manager/6-4/forms/pdf/WorkbenchHelp.pdf)を参照してください。
+AEM Forms JEE ワークフロープロセスの作成について詳しくは、[Workbench ヘルプ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-4/forms/pdf/WorkbenchHelp.pdf)を参照してください。
 
 ## ユーザーデータとデータストア {#user-data-and-data-stores}
 

@@ -8,7 +8,7 @@ exl-id: b0d62dd3-1868-4d73-95f7-3d6c3ff474d9
 source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
 source-wordcount: '230'
-ht-degree: 57%
+ht-degree: 66%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Manager Assets が [!DNL Experience Manager] Adobe Analyticsの
 
    ![chlimage_1-210](assets/chlimage_1-210.png)
 
-1. 「**[!UICONTROL インサイト設定]**」カードをクリックします。
+1. 「**[!UICONTROL Insights 設定]**」カードをクリックします。
 1. ウィザードで、データセンターを選択し、会社名、ユーザー名、パスワードなどの資格情報を指定します。
 
    ![chlimage_1-211](assets/insights_config2.png)
@@ -35,7 +35,7 @@ Adobe Experience Manager Assets が [!DNL Experience Manager] Adobe Analyticsの
 
 ## ページトラッカー {#page-tracker}
 
- Analytics アカウントを設定すると、ページトラッカーコードが生成されます。アセットインサイトでの追跡を有効にするには [!DNL Experience Manager] サードパーティの Web サイトで使用されるアセットの場合は、Web サイトコードにページトラッカーコードを含めます。 でのページトラッカーユーティリティの使用 [!DNL Experience Manager] ページトラッカーコードを生成するアセット。 サードパーティの Web サイトにページトラッカーコードを組み込む方法について詳しくは、[Web ページでのページトラッカーと埋め込みコードの使用](touch-ui-using-page-tracker.md)を参照してください。
+ Analytics アカウントを設定すると、ページトラッカーコードが生成されます。サードパーティの web サイトで使用される [!DNL Experience Manager] アセットをアセットインサイトで追跡できるようにするには、web サイトコードにページトラッカーコードを組み込みます。でのページトラッカーユーティリティの使用 [!DNL Experience Manager] ページトラッカーコードを生成するアセット。 サードパーティの Web サイトにページトラッカーコードを組み込む方法について詳しくは、[Web ページでのページトラッカーと埋め込みコードの使用](touch-ui-using-page-tracker.md)を参照してください。
 
 1. AEMで、 **[!UICONTROL ツール/アセット]**.
 

@@ -13,11 +13,11 @@ exl-id: d56fa6ba-6ac7-4d4f-968b-075f4f13957c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1657'
-ht-degree: 87%
+ht-degree: 98%
 
 ---
 
-# JMX コンソールを使用したサービスの統合{#integrating-services-with-the-jmx-console}
+# JMX コンソールを使用したサービスの統合 {#integrating-services-with-the-jmx-console}
 
 JMX コンソールを使用してサービスを管理する MBean を作成し、デプロイします。管理タスクを実行できるよう、サービス属性および操作を公開します。
 
@@ -25,7 +25,7 @@ JMX コンソールの使用については、[JMX コンソールを使用し�
 
 ## Felix および CQ5 の JMX フレームワーク {#the-jmx-framework-in-felix-and-cq}
 
-Apache Felix プラットフォーム上で、MBean を OSGi サービスとしてデプロイします。MBean サービスが OSGi Service Registry に登録されると、Aries JMX Whiteboard モジュールは MBean を MBean サーバーに自動的に登録します。 すると、公開属性および操作を公開する JMX コンソールに MBean が表示されます。
+Apache Felix プラットフォーム上で、MBean を OSGi サービスとしてデプロイします。MBean サービスを OSGi サービスレジストリに登録すると、Aries JMX Whiteboard モジュールがその MBean を自動的に MBean サーバーに登録します。これにより、公開属性および操作を公開する JMX コンソールに MBean が表示されます。
 
 ![jmxwhiteboard](assets/jmxwhiteboard.png)
 
@@ -48,7 +48,7 @@ CQ5 または CRX リソースを管理するために作成する MBean は、j
 注釈を管理インターフェイスに追加して、MBean メタデータを指定します。この情報は、デプロイされている実装クラスごとに JMX コンソールに表示されます。以下の注釈を使用できます（詳しくは、[com.adobe.granite.jmx.annotation に関する JavaDoc](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html) を参照してください）。
 
 * **Description：** MBean クラスまたはメソッドの説明を提供します。クラスの宣言に対して使用する場合、MBean の JMX コンソールページに説明が表示されます。メソッドに対して使用する場合、対応する属性または操作のテキストにマウスポインターを置くと、説明が表示されます。
-* **Impact：**&#x200B;メソッドの影響。有効なパラメーター値は、 [javax.management.MBeanOperationInfo](https://docs.oracle.com/javase/1.5.0/docs/api/javax/management/MBeanOperationInfo.html).
+* **Impact：**&#x200B;メソッドの影響。有効なパラメーター値は、[javax.management.MBeanOperationInfo](https://docs.oracle.com/javase/1.5.0/docs/api/javax/management/MBeanOperationInfo.html) によって定義されるフィールドです。
 
 * **Name：**&#x200B;操作パラメーターに対して表示する名前を指定します。この注釈を使用して、インターフェイスで使用されているメソッドパラメーターの実際の名前をオーバーライドします。
 * **OpenTypeInfo：** JMX コンソールでの複合データまたは表形式データの表示に使用するクラスを指定します。Open MBean と併用します。
@@ -59,13 +59,13 @@ CQ5 または CRX リソースを管理するために作成する MBean は、j
 クラスは、インターフェイスに追加した注釈を利用する Dynamic MBean を作成するために指定します。
 
 * **AnnotatedStandardMBean：** javax.management.StandardMBean クラスのサブクラスで、注釈メタデータを JMX コンソールに自動的に提供します。
-* **OpenAnnotatedStandardMBean:** OpenTypeInfo 注釈を使用する OpenMbean を作成するための AnnotatedStandardMBean クラスのサブクラスです。
+* **OpenAnnotatedStandardMBean：** AnnotatedStandardMBean クラスのサブクラスで、OpenTypeInfo 注釈を利用する Open Mbean を作成するためのものです。
 
 ### MBean のデプロイ {#developing-mbeans}
 
 一般的に、MBean は管理する OSGi サービスを表したものです。Felix プラットフォーム上で、他の Java サーバープラットフォームにデプロイする場合と同様に MBean を作成します。主な違いは、注釈を使用して以下の MBean 情報を指定できる点です。
 
-* 管理インターフェイス：getter、setter および is メソッドを使用して属性を定義します。他のいずれかの公開メソッドを使用して操作を定義します。注釈を使用して BeanInfo オブジェクトのメタデータを提供します。
+* 管理インターフェイス：getter、setter および is メソッドを使用して属性を定義します。他のいずれかの公開メソッドを使用して操作を定義します。注釈を使用して、BeanInfo オブジェクトのメタデータを入力します。
 * MBean クラス：管理インターフェイスを実装します。インターフェイス上で注釈を処理できるように、AnnotatedStandardMBean クラスを拡張します。
 
 次のサンプル MBean は、CRX リポジトリに関する情報を提供します。このインターフェイスは、Description 注釈を使用して JMX コンソールに情報を提供します。
@@ -138,15 +138,15 @@ MBean を OSGi サービスとして登録すると、MBean サーバーに自�
 
 OSGi 関連メタデータ以外にも、Aries JMX Whiteboard モジュールが MBean を MBean サーバーに登録するために必要な次のメタデータを提供する必要があります。
 
-* **DynamicMBean インターフェイスの名前：** MBean サービスが `javax.management.DynamicMBea`n インターフェイス。 この宣言によって、このサービスが MBean サービスであることが Aries JMX Whiteboard モジュールに通知されます。
+* **DynamicMBean インターフェイス名：** MBean サービスが `javax.management.DynamicMBea`n インターフェイスを実装することを宣言します。この宣言によって、サービスが MBean サービスであることが Aries JMX Whiteboard モジュールに通知されます。
 
-* **MBean ドメインおよびキーのプロパティは次のとおりです。** Felix では、この情報を MBean の OSGi サービスのプロパティとして提供します。 これは、通常、 `javax.management.ObjectName` オブジェクト。
+* **MBean ドメインおよびキーのプロパティ：** Felix 上で、この情報を MBean の OSGi サービスのプロパティとして提供します。これは、通常 `javax.management.ObjectName` オブジェクトの MBean サーバーに提供する情報と同じです。
 
 MBean が単一のサービスを表している場合、必要な MBean サービスのインスタンスは 1 つだけです。この場合、Felix SCR Maven プラグインを使用していれば、MBean 実装クラスに Apache Felix Service Component Runtime（SCR）注釈を使用して、JMX 関連メタデータを指定できます。複数の MBean インスタンスをインスタンス化するために、MBean の OSGi サービスの登録を実行する別のクラスを作成できます。この場合、JMX 関連メタデータは実行時に生成されます。
 
 **単一の MBean**
 
-デザイン時にすべての属性と操作を定義できる MBean は、MBean 実装クラスの SCR 注釈を使用してデプロイできます。次の例では、`value` 注釈の `Service` 属性によって、サービスが `DynamicMBean` インターフェイスを実装することを宣言しています。`name` 注釈の `Property` 属性は、JMX ドメインおよびキーのプロパティを指定します。
+デザイン時にすべての属性と操作を定義できる MBean は、MBean 実装クラスの SCR 注釈を使用してデプロイできます。次の例では、`Service` 注釈の `value` 属性によって、サービスが `DynamicMBean` インターフェイスを実装することを宣言しています。`Property` 注釈の `name` 属性は、JMX ドメインおよびキーのプロパティを指定します。
 
 #### SCR 注釈を使用した MBean 実装クラス {#mbean-implementation-class-with-scr-annotations}
 
@@ -188,7 +188,7 @@ public class ExampleMBeanImpl extends AnnotatedStandardMBean implements ExampleM
 
 **複数の MBean サービスインスタンス**
 
-1 つの管理対象サービスの複数インスタンスを管理するには、対応する MBean サービスのインスタンスを複数作成します。さらに、管理対象インスタンスの開始または終了時に、MBean サービスインスタンスを作成または削除する必要があります。MBean マネージャークラスを作成して、実行時に MBean サービスをインスタンス化し、サービスのライフサイクルを管理できます。
+1 つの管理対象サービスの複数インスタンスを管理するには、対応する MBean サービスのインスタンスを複数作成します。さらに、管理対象インスタンスの開始または終了時に、MBean サービスインスタンスを作成または削除する必要があります。MBean マネージャークラスを作成して、実行時に MBean サービスをインスタンス化し、サービスのライフサイクルを管理することができます。
 
 BundleContext を使用して、MBean を OSGi サービスとして登録します。JMX 関連の情報を、 `BundleContext.registerService` メソッド。
 
@@ -230,7 +230,7 @@ WorkflowMBeanManagerImpl には、コンポーネントアクティベーショ�
 
 JMX コンソールに、ドメインが com.adobe.example、タイプが workflow_model、プロパティがワークフローモデル設定ノードのパスである MBean メタデータが表示されます。
 
-![jmxworkflowbean](assets/jmxworkflowmbean.png)
+![jmxworkflowmbean](assets/jmxworkflowmbean.png)
 
 ### サンプル MBean {#the-example-mbean}
 

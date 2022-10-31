@@ -13,17 +13,17 @@ exl-id: 669e2509-e563-46ff-b01c-3f05ec196df5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '519'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
 # パーソナライズとコンテンツのターゲティング {#personalization}
 
-## パーソナライズとコンテンツのターゲティング {#personalization-and-content-targeting}
+## パーソナライゼーションとコンテンツのターゲティング {#personalization-and-content-targeting}
 
 AEM には、ターゲットとなるコンテンツをオーサリングして、パーソナライズされたエクスペリエンスを提供するためのツールのフレームワークが用意されています。
 
-## ターゲットモード {#targeting-mode}
+## ターゲティングモード {#targeting-mode}
 
 [AEM のターゲットモードを使用してターゲットコンテンツをオーサリングします。](/help/sites-authoring/content-targeting-touch.md)ターゲットモードと Target コンポーネントは、マーケティングアクティビティのエクスペリエンス用コンテンツを作成するためのツールを提供します。
 
@@ -31,11 +31,11 @@ AEM には、ターゲットとなるコンテンツをオーサリングして�
 
 アクティビティは、マーケティング戦略を定義し、整理するためのものです。アクティビティは、ターゲットとするオーディエンスと、そのターゲット設定の適用期間から構成されます。
 
-例えば、We.Retail の商品カタログには、季節商品に注目を集めたティーザーが含まれています。 Summer Sports アクティビティは、このティーザーが夏季のターゲットとするマーケティングセグメントを定義します。
+たとえば、We.Retail の商品カタログには、季節商品に注目したティーザーが掲載されています。Summer Sports アクティビティは、このティーザーが夏季のターゲットとするマーケティングセグメントを定義します。
 
 アクティビティは、ページが使用する[ターゲティングエンジン](/help/sites-authoring/personalization.md#targeting-engine)も識別します。
 
-ブランドのアクティビティを作成および管理するには、[アクティビティコンソール](/help/sites-authoring/activitylib.md)を使用します。[ターゲットコンテンツをオーサリング](/help/sites-authoring/content-targeting-touch.md)するときに、アクティビティを作成することもできます。
+ブランドのアクティビティを作成および管理するには、[アクティビティコンソール](/help/sites-authoring/activitylib.md)を使用します。[ターゲットコンテンツをオーサリング](/help/sites-authoring/content-targeting-touch.md)する際に、アクティビティを作成することもできます。
 
 ## エクスペリエンス {#experiences}
 
@@ -43,7 +43,7 @@ AEM には、ターゲットとなるコンテンツをオーサリングして�
 
 オーディエンスは、AEM または Adobe Target で作成されたマーケティングセグメントをベースとします。訪問者が Web ページを開くと、そのページのロジックによってオーディエンスが判断され、そのオーディエンス向けに作成されたコンテンツが表示されます。
 
-例えば、あるアクティビティが「30 歳以上の女性」と「30 歳未満の女性」という 2 つの異なるオーディエンス用のエクスペリエンスを定義するものとします。We.Retail Web サイトの Women&#39;s ページには、エクスペリエンスごとに異なる製品が表示されます。
+例えば、あるアクティビティが「30 歳以上の女性」と「30 歳未満の女性」という 2 つの異なるオーディエンス用のエクスペリエンスを定義するものとします。We.Retail の女性向けページでは、エクスペリエンスごとに異なる商品が表示されます。
 
 1 つのアクティビティに複数のエクスペリエンスを定義できます。[アクティビティコンソール](/help/sites-authoring/activitylib.md#adding-editing-an-activity-using-the-activities-console)または[ターゲットモード](/help/sites-authoring/content-targeting-touch.md#adding-and-removing-experiences-using-targeting-mode)を使用して、アクティビティにエクスペリエンスを追加できます。
 
@@ -51,7 +51,7 @@ AEM には、ターゲットとなるコンテンツをオーサリングして�
 
 オファーは、それぞれのエクスペリエンスでページ上に表示されるコンテンツです。オーディエンス向けコンテンツの効果を最大限に高めるには、異なるエクスペリエンスに異なるオファーを使用します。
 
-例えば、We.Retail サンプル Web サイトの Women&#39;s ページでは、オファーをティーザー画像として使用し、ページの上部に表示することができます。 30 歳以上の女性向けエクスペリエンスと、30 歳未満の女性向けエクスペリエンスには、それぞれ異なるオファーをティーザーとして使用します。
+たとえば、We.Retail サンプル Web サイトの女性向けページでは、オファーをティーザー画像として使用して、ページ上部に表示することができます。30 歳以上の女性向けエクスペリエンスと、30 歳未満の女性向けエクスペリエンスには、それぞれ異なるオファーをティーザーとして使用します。
 
 複数のエクスペリエンスで使用できるオファーを作成するには、[オファーコンソール](/help/sites-authoring/offerlib.md)を使用します。[ターゲットコンテンツをオーサリング](/help/sites-authoring/content-targeting-touch.md)するときは、単一エクスペリエンス用のオファーを作成するか、オファーライブラリからオファーを追加します。
 
@@ -70,4 +70,4 @@ Adobe Target ターゲティングエンジンを使用すると、ページの�
 * このターゲティングエンジンを使用する場合、エクスペリエンスのオーディエンス定義には Adobe Target から読み込んだセグメントを使用します。
 * Adobe Target エンジンを使用するアクティビティは、[Target と同期](/help/sites-authoring/activitylib.md#synchronizing-activities-with-adobe-target)します。
 
-このエンジンは、 [Adobe Targetと統合](/help/sites-administering/opt-in.md).
+このエンジンを使用できるのは、[Adobe Target と統合](/help/sites-administering/opt-in.md)している場合のみです。

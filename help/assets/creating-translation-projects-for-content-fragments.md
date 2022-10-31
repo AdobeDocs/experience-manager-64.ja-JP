@@ -15,13 +15,13 @@ role: User
 source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
 source-wordcount: '968'
-ht-degree: 84%
+ht-degree: 98%
 
 ---
 
 # コンテンツフラグメントの翻訳プロジェクトの作成 {#creating-translation-projects-for-content-fragments}
 
-Adobe Experience Manager (AEM) Assets は、アセットに加えて、 [コンテンツフラグメント](content-fragments.md) （バリエーションを含む）。 コンテンツフラグメントで言語コピーワークフローを実行するために追加の最適化は必要ありません。各ワークフローで、コンテンツフラグメント全体が翻訳のために送信されます。
+Adobe Experience Manager（AEM）Assets は、アセットだけでなく、[コンテンツフラグメント](content-fragments.md)（バリエーションも含む）の言語コピーワークフローをサポートします。コンテンツフラグメントで言語コピーワークフローを実行するために追加の最適化は必要ありません。各ワークフローで、コンテンツフラグメント全体が翻訳のために送信されます。
 
 コンテンツフラグメントで実行できるワークフロータイプは、アセットで実行できるワークフロータイプと同じです。また、ワークフロータイプごとに使用できるオプションも、アセット用の対応するワークフロータイプで使用できるものと同じです。
 
@@ -39,16 +39,16 @@ Adobe Experience Manager (AEM) Assets は、アセットに加えて、 [コン�
 
 「作成と翻訳」ワークフローには、次のオプションがあります。各オプションに関連する手順は、アセットの対応するオプションに関連する手順と似ています。
 
-* 構造のみを作成：手順については、 [アセットの構造のみを作成](translation-projects.md#create-structure-only).
-* 新しい翻訳プロジェクトを作成します。手順については、 [アセットの新しい翻訳プロジェクトを作成します](translation-projects.md#create-a-new-translation-project).
-* 既存の翻訳プロジェクトに追加：手順については、 [アセットの既存の翻訳プロジェクトに追加](translation-projects.md#add-to-existing-translation-project).
+* 構造のみを作成：手順は、[構造のみを作成（アセット）](translation-projects.md#create-structure-only)を参照してください。
+* 新しい翻訳プロジェクトを作成：手順は、[新しい翻訳プロジェクトを作成（アセット）](translation-projects.md#create-a-new-translation-project)を参照してください。
+* 既存の翻訳プロジェクトに追加：手順は、[既存の翻訳プロジェクトに追加（アセット）](translation-projects.md#add-to-existing-translation-project)を参照してください。
 
 ## 言語コピーを更新ワークフロー {#update-language-copies-workflow}
 
 「言語コピーを更新」ワークフローには、次のオプションがあります。各オプションに関連する手順は、アセットの対応するオプションに関連する手順と似ています。
 
-* 新しい翻訳プロジェクトを作成します。手順については、 [アセットの新しい翻訳プロジェクトを作成します](translation-projects.md#create-a-new-translation-project) （更新ワークフロー）。
-* 既存の翻訳プロジェクトに追加：手順については、 [アセットの既存の翻訳プロジェクトに追加](translation-projects.md#add-to-existing-translation-project) （更新ワークフロー）。
+* 新しい翻訳プロジェクトを作成：手順は、[新しい翻訳プロジェクトを作成（アセット）](translation-projects.md#create-a-new-translation-project)（更新ワークフロー）を参照してください。
+* 既存の翻訳プロジェクトに追加：手順は、[既存の翻訳プロジェクトに追加（アセット）](translation-projects.md#add-to-existing-translation-project)（更新ワークフロー）を参照してください。
 
 フラグメントの一時的な言語コピーを作成することもできます。方法は、アセットの一時的なコピーを作成する場合と同様です。詳しくは、[一時的な言語コピーの作成（アセット）](translation-projects.md#creating-temporary-language-copies)を参照してください。
 
@@ -61,7 +61,7 @@ Adobe Experience Manager (AEM) Assets は、アセットに加えて、 [コン�
 混在メディアが含まれているコンテンツフラグメントを翻訳できるようにするには、最初に、コンテンツフラグメントに関連付けられたインラインアセットとコレクションの翻訳が可能になるように、デフォルトの翻訳フレームワークを編集します。
 
 1. 次をクリックまたはタップします。 [!DNL Experience Manager] ロゴをクリックし、に移動します。 **[!UICONTROL ツール/導入/Cloud Services]**.
-1. 場所 **[!UICONTROL 翻訳の統合]** under **[!UICONTROL Adobe Marketing Cloud]**&#x200B;をクリックし、次をクリックします。 **[!UICONTROL 設定を表示]**.
+1. **[!UICONTROL Adobe Marketing Cloud]** の下にある「**[!UICONTROL 翻訳統合]**」を見つけ、「**[!UICONTROL 設定を表示]**」をクリックまたはタップします。
 
    ![chlimage_1-444](assets/chlimage_1-444.png)
 
@@ -110,7 +110,7 @@ Adobe Experience Manager (AEM) Assets は、アセットに加えて、 [コン�
 
    ![chlimage_1-455](assets/chlimage_1-455.png)
 
-1. クリックまたはタップ **[!UICONTROL 作成と翻訳]** パネルの下部から、 **[!UICONTROL 作成と翻訳]** ダイアログ。
+1. パネルの下部にある「**[!UICONTROL 作成と翻訳]**」をクリックまたはタップして&#x200B;**[!UICONTROL 作成と翻訳]**&#x200B;ダイアログを表示します。
 
    ![chlimage_1-456](assets/chlimage_1-456.png)
 
@@ -153,7 +153,7 @@ Adobe Experience Manager (AEM) Assets は、アセットに加えて、 [コン�
 
    コレクションのコンテンツのみが翻訳されていることがわかります。コレクション自体は翻訳されていません。
 
-1. 翻訳後の関連アセットのパスに移動します。翻訳済みアセットがターゲット言語ルートの下に保存されていることを確認します。
+1. 翻訳後の関連アセットのパスに移動します。翻訳後のアセットがターゲット言語ルートの下に保存されていることを確認します。
 
    ![chlimage_1-466](assets/chlimage_1-466.png)
 

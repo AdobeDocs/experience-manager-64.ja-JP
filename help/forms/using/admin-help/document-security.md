@@ -1,5 +1,5 @@
 ---
-title: 'Document Security について '
+title: Document Security について
 seo-title: About document security
 description: Document Security を使用して、事前定義の機密設定を作成、保存および適用し、情報を安全に配布する方法について説明します。
 seo-description: Learn how you can create, store, and apply predefined confidentiality settings, and distribute your information safely using document security.

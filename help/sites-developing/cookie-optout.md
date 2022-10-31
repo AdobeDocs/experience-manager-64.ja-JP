@@ -110,7 +110,7 @@ Cookie の使用の同意が得られていないことを示す Cookie がユ�
 
 **パラメーター**
 
-* cookieName：文字列。 Cookie の名前。
+* cookieName：文字列。Cookie の名前。
 
 **戻り値**
 

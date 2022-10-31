@@ -1,7 +1,7 @@
 ---
 title: Document Security によって保護された PDF ドキュメントを AEM で検索可能にする
 seo-title: Enable AEM to search document security protected PDF documents
-description: 'ネイティブ AEM 検索を有効にし、DRM 保護された PDF ドキュメントで全テキストの検索を実行する方法について説明します。  '
+description: ネイティブ AEM 検索を有効にし、DRM 保護された PDF ドキュメントで全テキストの検索を実行する方法について説明します。
 seo-description: Learn how to enable native AEM search to perform full-text search on DRM protected PDF documents.
 uuid: c743cda3-252f-4c1f-8d94-e6d26d91dcd8
 contentOwner: khsingh
@@ -56,7 +56,7 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 1. AEM web コンソールを開きます。URL は `https://[server]:[port]/system/console/configMgr` です。。
 1. **Adobe LiveCycle Client SDK Bundle** を探して開きます。次の各フィールドの値を指定します。
 
-   * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS 経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEE キーストアファイル上の Forms のパス> のパラメータで AEM サーバーを再起動します。
+   * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS 経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEE キーストアファイル上の AEM Forms のパス> のパラメータで AEM サーバーを再起動します。
    * **サービス名**：指定されたサービスの一覧に RightsManagementService を追加します。
    * **ユーザー名**：AEM サーバーからの呼び出しの開始に使用される JEE 上の AEM Forms アカウントのユーザー名を指定します。指定したアカウントは、JEE サーバー上の AEM Forms で Document Services を開始することができる権限が付与されている必要があります。
    * **パスワード**：Username フィールドに表示される JEE 上の AEM Forms アカウントのパスワードを指定します。

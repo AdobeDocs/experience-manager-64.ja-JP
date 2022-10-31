@@ -13,13 +13,13 @@ exl-id: efbb9a9e-0ddf-49f2-bcb8-14cd0c6de5ee
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '229'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
 # インターフェイスのカラースキーム変更 {#changing-the-color-scheme-of-the-interface}
 
-AEM Forms Workspace ユーザーインターフェイス部分のカラースキームを必要に合わせて変更できます。代表的なカラースキームのカスタマイズの例を以下にいくつか示します。この記事で説明する手順に加えて、 [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md).
+AEM Forms Workspace ユーザーインターフェイス部分のカラースキームを必要に合わせて変更できます。代表的なカラースキームのカスタマイズの例を以下にいくつか示します。この記事の手順に加えて、「[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」を参照してください。
 
 ## トップナビゲーションバー {#top-navigation-bar}
 
@@ -32,7 +32,7 @@ AEM Forms Workspace 上部のナビゲーションバーを更新するには：
 
    >[!NOTE]
    >
-   >WebDAV アクセスの詳細については、 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
+   >WebDAV アクセスの詳細については、 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/jp/crx/current/how_to/webdav_access.html) を参照してください。
 
 1. 次のスタイルを追加することによって、/apps/ws/css/newStyle.css にある新しい背景画像を参照します。
 
@@ -55,8 +55,8 @@ AEM Forms Workspace 上部のナビゲーションバーを更新するには：
 
 ## カテゴリコンポーネント {#category-component}
 
-カテゴリコンポーネントは、左パネルでタスクのさまざまなカテゴリを表示します。 色を変更するには、 `.category` 要素に含める必要があります。
+カテゴリコンポーネントは、左パネルでタスクのさまざまなカテゴリを表示します。この色を変更するには、CSS ファイルの`.category`要素で、背景色を定義します。
 
 ## タスクコンポーネント {#task-component}
 
-タスクは、TaskList コンポーネントと呼ばれる中央のパネルに表示されます。色を変更するには、スタイルシートの.task セレクターに関連付けられたスタイルを変更します。
+タスクは、TaskList コンポーネントと呼ばれる中央のパネルに表示されます。色を変更するには、スタイルシートにある .task セレクターに関連付けられたスタイルを変更します。

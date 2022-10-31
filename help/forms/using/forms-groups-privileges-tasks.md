@@ -70,10 +70,10 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td><p>FDM 作成者</p> </td> 
+   <td><p>fdm-authors</p> </td> 
    <td>
     <ul> 
-     <li>フォームデータモデルを作成および変更する</li> 
+     <li>フォームデータモデルを作成および変更</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -84,11 +84,11 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td><p>ワークフロー編集者</p> </td> 
+   <td><p>workflow-editors</p> </td> 
    <td>
     <ul> 
      <li>インボックスアプリケーションを作成する</li> 
-     <li>ワークフローモデルを作成する</li> 
+     <li>ワークフローモデルを作成</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -100,7 +100,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td>FD 管理者</td> 
+   <td>fd-administrators</td> 
    <td>
     <ul> 
      <li>PDF Generator を設定する</li> 

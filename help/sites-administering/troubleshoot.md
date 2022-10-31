@@ -13,7 +13,7 @@ exl-id: 34b509d5-4e80-4229-b155-40004856e87e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '547'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -78,9 +78,9 @@ ht-degree: 84%
 
 ### Sling Thread Dumper の使用 {#using-sling-thread-dumper}
 
-1. を開きます。 **AEM Web コンソール**;例： `http://localhost:4502/system/console/`.
+1. **AEM web コンソール**&#x200B;を開きます（例：`http://localhost:4502/system/console/`）。
 
-1. を選択します。 **スレッド** under **ステータス** タブをクリックします。
+1. **ステータス**&#x200B;タブの下の&#x200B;**スレッド**&#x200B;を選択します。
 
 ![screen_shot_2012-02-13at43925pm](assets/screen_shot_2012-02-13at43925pm.png)
 
@@ -88,7 +88,7 @@ ht-degree: 84%
 
 1. AEM Java インスタンスの PID（プロセス ID）を確認します。
 
-   例えば、 `ps -ef` または `jps`.
+   例えば、`ps -ef` や `jps` を使用できます。
 
 1. 実行:
 
@@ -98,7 +98,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->スレッドダンプをログファイルに追加するには、 `>>` 出力リダイレクト：
+>`>>` 出力リダイレクトを使用すると、ログファイルにスレッドダンプを追加できます。
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
@@ -109,20 +109,20 @@ ht-degree: 84%
 AEM WCM 用の機能を開発する場合は、JCR セッションが開かれる可能性があります（データベース接続を開く処理に相当します）。開かれたセッションが閉じられないと、システムで以下の症状が発生する可能性があります。
 
 * システムの速度が低下する。
-* CacheManager の多くを確認できます。resize ログファイル内のすべてのエントリ；次の数値 (size=&lt;x>) はキャッシュの数を示し、各セッションは複数のキャッシュを開きます。
+* 多数の CacheManager を確認できます（ログファイル内の resizeAll エントリ）。次の数値（size=&lt;x>）はキャッシュ数を示しており、各セッションが複数のキャッシュを開きます。
 * システムのメモリが不足することがある（重大度に応じて数時間後、数日後、数週間後に発生）。
 
-閉じられていないセッションを分析して、セッションを閉じていないコードを特定するには、ナレッジベースの記事[閉じられていないセッションの分析](https://helpx.adobe.com/crx/kb/AnalyzeUnclosedSessions.html)を参照してください。
+閉じられていないセッションを分析して、セッションを閉じていないコードを特定するには、ナレッジベースの記事[閉じられていないセッションの分析](https://helpx.adobe.com/jp/crx/kb/AnalyzeUnclosedSessions.html)を参照してください。
 
 ### Adobe Experience Manager Web コンソールの使用 {#using-the-adobe-experience-manager-web-console}
 
 発生する可能性のある問題の初期の兆候を OSGi バンドルのステータスで確認することもできます。
 
-1. を開きます。 **AEM Web コンソール**;例： `http://localhost:4502/system/console/`.
+1. **AEM web コンソール**&#x200B;を開きます（例：`http://localhost:4502/system/console/`）。
 
-1. 選択 **バンドル** under **OSGI** タブをクリックします。
+1. **OSGI** タブの下の&#x200B;**バンドル**&#x200B;を選択します。
 
-1. 次の項目を確認します。
+1. チェック項目:
 
    * バンドルのステータス。「Inactive」または「Unsatisfied」と表示されているバンドルがある場合は、そのバンドルを停止してから再起動してください。問題が解決しない場合は、他の方法を使用した詳細な調査が必要になる可能性があります。
    * いずれかのバンドルで依存関係が失われていないかどうか。個々のバンドル名（リンク）をクリックすると、詳細を確認できます（問題が発生していない場合の例を次に示します）。

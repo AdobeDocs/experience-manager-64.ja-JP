@@ -20,7 +20,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単に作成できます。PhoneGap と連携することで、そのコンテンツを利用するユーティリティアプリを作成できます。コンテンツ同期を使用すると、アプリにバンドルするページのバージョン管理されたアーカイブを作成できます。
 
@@ -30,7 +30,7 @@ AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単�
 
 Adobe PhoneGap と連携して AEM Mobile を使用するには、以下のリソースが役立ちます。
 
-* [AEM でのモバイルアプリの開発](/help/mobile/developing-mobile-applications.md)
+* [AEM でのモバイルアプリケーションの開発](/help/mobile/developing-mobile-applications.md)
 * [モバイルとコンテンツ同期](/help/mobile/phonegap-contentsync.md)
 * [ページテンプレート](/help/mobile/phonegap-apps-arch-page-templates.md)
 
@@ -49,4 +49,4 @@ Adobe PhoneGap と連携して AEM Mobile を使用するには、以下のリ�
 管理者および開発者の役割と責任について詳しくは、以下のリソースを参照してください。
 
 * [AEM での Adobe PhoneGap Enterprise 向けのオーサリング](/help/mobile/phonegap.md)
-* [AEM での Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)
+* [AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)

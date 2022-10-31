@@ -1,7 +1,7 @@
 ---
 title: Designer のインストールと設定
 seo-title: Installing and configuring Designer
-description: 'WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。ここでは、スタンドアロンの Designer をインストールする方法について説明します。  '
+description: WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。ここでは、スタンドアロンの Designer をインストールする方法について説明します。
 seo-description: Designer is available as a stand-alone installer and is also bundled with Workbench. Learn how to install stand-alone Designer.
 uuid: 46f4a640-092c-46db-a0b2-8e25501a00b9
 contentOwner: gtalwar
@@ -32,6 +32,6 @@ WorkBench にバンドルされている Designer は、スタンドアロンの
 1. setup.exe をダブルクリックして Designer のインストーラーを起動します。
 1. 先に進んでユーザーの詳細とユーザー情報画面のシリアル番号を入力します。
 1. 使用許諾契約に同意する場合は、「次へ」をクリックして先に進みます。
-1. （オプション）Designer を選択した場所にインストールする場合は、既定のインストールパスを変更します。 「次へ」をクリックします。
+1. （オプション）Designer を選択した場所にインストールする場合は、既定のインストールパスを変更します。「次へ」をクリックします。
 1. 設定を変更するには、「戻る」をクリックします。Designer をインストールするには、「インストール」をクリックします。
 1. インストールが完了したら、「完了」をクリックします。

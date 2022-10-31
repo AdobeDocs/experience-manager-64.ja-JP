@@ -8,7 +8,7 @@ exl-id: f41ab750-5780-42ae-a131-5bc748280215
 source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
 source-wordcount: '552'
-ht-degree: 44%
+ht-degree: 65%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 44%
 
 Adobe Experience Manager Assets 管理者は、アセットやフォルダーをに公開できます [!DNL Experience Manager Assets Brand Portal] 組織のインスタンス（または公開ワークフローを後の日時にスケジュール）を作成する必要があります。 ただし、最初に [!DNL Experience Manager Assets] と [!DNL Brand Portal]. 詳しくは、 [設定 [!DNL Experience Manager Assets] Brand Portal](configure-aem-assets-with-brand-portal.md).
 
-アセットまたはフォルダーを公開すると、Brand Portalのユーザーがそのアセットまたはフォルダーを使用できるようになります。
+アセットまたはフォルダーを公開すると、Brand Portal のユーザーが使用できるようになります。
 
 その後、 [!DNL Assets]を使用した場合、アセットまたはフォルダーを再公開するまで、変更はBrand Portalに反映されません。 このため、作業中の変更が Brand Portal に提供されることがありません。管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
 
@@ -32,20 +32,20 @@ Adobe Experience Manager Assets 管理者は、アセットやフォルダーを
 
    選択したフォルダーを Brand Portal に公開するには、次のいずれかを実行します。
 
-   * ツールバーで「**[!UICONTROL クイック公開]**」を選択します。次に、メニューから、 **[!UICONTROL Brand Portalに公開]**.
+   * ツールバーで「**[!UICONTROL クイック公開]**」を選択します。次に、メニューで「**[!UICONTROL Brand Portal に公開]**」を選択します。
    * ツールバーで「**[!UICONTROL 公開を管理]**」を選択します。
 
-3. 次に、 **[!UICONTROL アクション]** 選択 **[!UICONTROL Brand Portalに公開]**、および **[!UICONTROL スケジュール]** 選択 **[!UICONTROL 今すぐ]**. 「**[!UICONTROL 次へ]」をタップします。**
+3. 次に、**[!UICONTROL アクション]**&#x200B;から「**[!UICONTROL Brand Portal に公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;から「**[!UICONTROL 今すぐ]**」を選択します。「**[!UICONTROL 次へ]」をタップします。**
 4. 内 **[!UICONTROL 範囲]**&#x200B;をクリックし、選択を確定してをタップします。 **[!UICONTROL Brand Portalに公開]**.
 
    フォルダーが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。Brand Portal のインターフェイスにログインして、公開されたフォルダーを確認します。
 
    **フォルダーを後で公開**
 
-   アセットフォルダーのBrand Portalへの公開ワークフローを後の日時にスケジュールするには：
+   次のように、アセットフォルダーの Brand Portal ワークフローへの公開を、後の日時でスケジュールします。
 
-   1. 公開するアセット/フォルダーを選択したら、「 」を選択します。 **[!UICONTROL 公開を管理]** 上部のツールバーから。
-   2. オン **[!UICONTROL 公開を管理]** ページ、選択 **[!UICONTROL Brand Portalに公開]** から **[!UICONTROL アクション]** を選択し、 **[!UICONTROL 後で]** から **[!UICONTROL スケジュール]**.
+   1. 公開するアセットまたはフォルダーを選択したら、上部のツールバーから「**[!UICONTROL 公開を管理]**」を選択します。
+   2. **[!UICONTROL 公開を管理]**&#x200B;ページで、**[!UICONTROL アクション]**&#x200B;から「**[!UICONTROL Brand Portal に公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;から「**[!UICONTROL 後で]**」を選択します。
 
       ![publishlaterbp](assets/publishlaterbp.png)
 
@@ -77,7 +77,7 @@ Brand Portal へのフォルダーの公開をすぐに取り消すことも、�
 
    ![confirm-unpublish](assets/confirm-unpublish.png)
 
-   **後でBrand Portalから非公開にする**
+   **Brand Portal への公開を後で取り消し**
 
    Brand Portal へのフォルダーの公開を停止するスケジュールを未来の日時で設定するには、次のようにします。
 
@@ -91,4 +91,4 @@ Brand Portal へのフォルダーの公開をすぐに取り消すことも、�
 
 >[!NOTE]
 >
->Brand Portalに対してアセットを公開/非公開にする手順は、フォルダーに対する対応する手順と似ています。
+>Brand Portal に対してアセットを公開または非公開にする手順は、フォルダーの場合の手順と同様です。

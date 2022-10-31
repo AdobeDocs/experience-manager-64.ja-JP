@@ -13,7 +13,7 @@ exl-id: 7933efeb-618a-4c38-8e5e-593be8ebb00c
 source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
 source-wordcount: '2625'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 90%
 サーバー設定ページから、forms ワークフローの様々な設定にアクセスできます。
 
 * **電子メールの設定**：電子メールの送信に加えて、それらのメールに使用される電子メールサーバーを設定することができます（[電子メールの設定](configuring-server-settings.md#configuring-email-settings)を参照）。
-* **タスク通知の設定**：エンドユーザーおよびグループに、タスクに関する電子メール通知で送信されるメッセージを有効化、無効化または変更することができます（[ユーザーおよびグループへの通知の設定](configuring-server-settings.md#configuring-notifications-for-users-and-groups)を参照）。
-* **管理者通知の設定**：管理タスクについての電子メール通知で送信されるメッセージを有効化、無効化または変更することができます（[管理者への通知の設定](configuring-server-settings.md#configuring-notifications-for-administrators)を参照）。
+* **タスク通知の設定**：エンドユーザーおよびグループに、タスクに関する電子メール通知で送信されるメッセージを有効化、無効化または変更することができます。（[ユーザーおよびグループへの通知の設定](configuring-server-settings.md#configuring-notifications-for-users-and-groups)を参照してください）。
+* **管理者通知の設定**：管理タスクについての電子メール通知で送信されるメッセージを有効化、無効化または変更することができます。（[管理者への通知の設定](configuring-server-settings.md#configuring-notifications-for-administrators)を参照）。
 
 ## 電子メールの設定 {#configuring-email-settings}
 
@@ -57,7 +57,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 
 >[!NOTE]
 >
->Flex Workspace は、AEM forms のリリースで非推奨（廃止予定）となりました。
+>AEM Forms のリリースでは Flex Workspace は廃止されています。
 
 デフォルトでは、AEM forms によって送信される電子メールは Flex Workspace（JEE 上の AEM forms では廃止されています）へのリンクを含みます。AEM forms によって送信される電子メールが AEM Forms Workspace へのリンクを含むように設定できます。Flex Workspace（JEE 上の AEM forms では廃止されています）を上回る AEM Forms Workspace のメリットについて詳しくは、こちらの[記事](/help/forms/using/features-html-workspace-available-flex.md)を参照してください。
 
@@ -79,7 +79,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 * タスクの割り当て
 * デッドライン
 
-グループへの電子メール通知を生成するには、User Management でそのグループの電子メールアドレスを指定します<!--Fix broken link See Setting up and organizing users -->forms ワークフローによって電子メール通知がグループに送信されると、そのグループ内の、電子メールアドレスが指定されている各メンバーがその電子メール通知を受け取ります。電子メール通知を受信したグループのメンバーがタスクを要求する場合、その電子メール通知に記載されている要求リンクをクリックして、Workspace のタスクの詳細ページを開く必要があります。メンバーは、このページから、作業項目を要求または要求して開くことができます。
+グループへの電子メール通知を生成するには、User Management でそのグループの電子メールアドレスを指定します<!--Fix broken link See Setting up and organizing users -->Forms Workflow によって電子メール通知がグループに送信されると、そのグループ内の、電子メールアドレスが指定されている各メンバーがその電子メール通知を受け取ります。電子メール通知を受信したグループのメンバーがタスクを要求する場合、その電子メール通知に記載されている要求リンクをクリックして、Workspace のタスクの詳細ページを開く必要があります。メンバーは、このページから、作業項目を要求または要求して開くことができます。
 
 >[!NOTE]
 >
@@ -193,17 +193,17 @@ forms ワークフローが、管理者に送信される電子メール通知�
 >
 >AEM Forms のリリースでは Flex Workspace は廃止されています。
 
-ソリューションがクラスター環境にデプロイされている場合は、 `@@notification-host@@` クラスターアドレスを指定します。
+ソリューションをクラスター環境にデプロイする場合は、`@@notification-host@@` をクラスターアドレスに置き換えます。
 
-`<`*ポート* `>` は、アプリケーションサーバーの HTTP リスナーのポート番号です。 サポートされるアプリケーションサーバーのデフォルトの HTTP リスナーポートは、以下のとおりです。
+`<`*PORT* `>` はアプリケーションサーバーの HTTP リスナーのポート番号です。サポートされるアプリケーションサーバーのデフォルトの HTTP リスナーポートは、以下のとおりです。
 
 **JBoss：** 8080
 
-**OracleWebLogic Server:** 7001
+**Oracle WebLogic Server：** 7001
 
-**IBM WebSphere:** 9080
+**IBM WebSphere：** 9080
 
-これらの URL を正しく機能させるには、 `<`*ポート* `>` お使いの環境に適したポート番号を持つ
+これらの URL を正しく機能させるには、`<`*PORT* `>` を環境に適したポート番号に置き換えます。
 
 >[!NOTE]
 >
@@ -211,27 +211,27 @@ forms ワークフローが、管理者に送信される電子メール通知�
 
 ### 変数選択 {#variable-picker}
 
-変数選択リストには便利な変数があり、「件名」ボックスまたは「通知テンプレート」ボックスにドラッグアンドドロップできます。「件名」ボックスまたは「通知テンプレート」ボックスにドロップした変数は、両側に 2 つの@記号が付いた、実際の forms ワークフロー変数名に変わります。例： `@@taskid@@`.
+変数選択リストには便利な変数があり、「件名」ボックスまたは「通知テンプレート」ボックスにドラッグアンドドロップできます。「件名」ボックスまたは「通知テンプレート」ボックスに変数をドロップすると、実際の Forms ワークフローの変数名の両端に 2 つの @ 記号が付いたものに変わります（「`@@taskid@@`.@@」など）。
 
 ユーザーまたはグループへのリマインダー、タスクの割り当て、およびデッドラインの場合、「件名」ボックスと「通知テンプレート」ボックスで以下の変数を使用できます。
 
-**説明** Workbench 内のプロセスのユーザー手順（開始点、Assign Task 操作、または Assign Multiple Tasks 操作）で定義された Description プロパティの内容。
+**description** Workbench 内のプロセスのユーザー手順で定義された説明プロパティの内容。ユーザー手順は、開始ポイント、タスクの割り当て操作、または複数のタスクの割り当て操作です。
 
-**説明** Workbench のプロセスのユーザーステップで定義される Task Instructions プロパティの内容。
+**instructions** Workbench 内のプロセスのユーザー手順で定義された、タスクの手順プロパティの内容。
 
-**notification-host** AEM forms アプリケーションサーバーのホスト名です。
+**notification-host** AEM Forms アプリケーションサーバーのホスト名。
 
 **process-name** プロセスの名前。
 
-**operation-name** ステップの名前。
+**operation-name** 手順の名前。
 
-**タスク** 現在のタスクの一意の ID です。
+**taskid** 現在のタスクの一意の ID。
 
-**アクション** 受信者がクリックできる有効なルート（承認、拒否など）の番号付きリストを生成します。
+**actions** 受信者がクリックできる有効なルート（承認、却下など）の番号付きリストを作成します。
 
-また、グループリマインダー、グループタスクの割り当ておよびグループのデッドラインの場合、次の変数も使用できます。
+グループリマインダー、グループタスクの割り当て、グループのデッドラインの場合、次の変数も使用できます。
 
-**group-name** 作業項目を割り当てるグループの名前。
+**group-name** 作業項目に割り当てられたグループの名前。
 
 >[!NOTE]
 >
@@ -239,21 +239,21 @@ forms ワークフローが、管理者に送信される電子メール通知�
 
 停止したブランチの場合は、次の変数を「件名」ボックスおよび「通知テンプレート」ボックスで使用できます。
 
-**branch-id** ブランチの識別子。
+**branch-id** 分岐の識別子。
 
 **process-id** プロセスインスタンスの識別子。
 
-**notification-host** AEM forms アプリケーションサーバーのホスト名です。
+**notification-host** AEM Forms アプリケーションサーバーのホスト名。
 
 停止した操作の場合は、次の変数を「件名」ボックスおよび「通知テンプレート」ボックスで使用できます。
 
 **action-id** 操作の識別子。
 
-**branch-id** ブランチの識別子。
+**branch-id** 分岐の識別子。
 
 **process-id** プロセスインスタンスの識別子。
 
-**notification-host** AEM forms アプリケーションサーバーのホスト名です。
+**notification-host** AEM Forms アプリケーションサーバーのホスト名。
 
 ### 「件名」ボックスでの変数の使用 {#using-a-variable-in-the-subject-box}
 
@@ -261,7 +261,7 @@ forms ワークフローが、管理者に送信される電子メール通知�
 
 `Please complete task @@taskid@@`
 
-タスク 376 が割り当てられる場合、ユーザーは次の件名の電子メールを受け取ります。
+タスク 376 が割り当てられると、ユーザーは次の件名のメールを受け取ります。
 
 `Please complete task 376`
 

@@ -1,6 +1,6 @@
 ---
-title: '"[!DNL Experience Manager Assets] のホームページエクスペリエンス"'
-description: ' Assets のホームページをカスタマイズして、アセットに関する最近のアクティビティのスナップショットを始め、有益なスタートアップスクリーンエクスペリエンスを実現できます。'
+title: "[!DNL Experience Manager Assets] のホームページエクスペリエンス"
+description: Assets のホームページをカスタマイズして、アセットに関する最近のアクティビティのスナップショットを始め、有益なスタートアップスクリーンエクスペリエンスを実現できます。
 contentOwner: AG
 feature: Developer Tools,Asset Management
 role: Admin,User

@@ -131,7 +131,7 @@ Github から communities-srp-tools プロジェクトを取得します。
 * プレフィックス `community`
 * 続いて [一意のサイト id](#community-unique-site-id)
 
-例：`community-engage-x0e11-members`。
+（例：`community-engage-x0e11-members`）。
 
 ### イネーブルメントアセット {#enablement-assets}
 

@@ -8,7 +8,7 @@ exl-id: d80562f7-071c-460a-9c68-65f48d36fbd9
 source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
 workflow-type: tm+mt
 source-wordcount: '1674'
-ht-degree: 46%
+ht-degree: 64%
 
 ---
 
@@ -16,12 +16,12 @@ ht-degree: 46%
 
 Adobe Experience Manager Assets では、次のものを使用します。
 
-* プロキシ：特定の処理タスクのロードを分配するために使用します。プロキシは [!DNL Experience Manager] プロキシワーカーと通信して特定のタスクを実行し、他のタスクを実行するインスタンス [!DNL Experience Manager] インスタンスを使用して結果を配信します。
+* プロキシ：特定の処理タスクのロードを分配するために使用します。プロキシとは、プロキシワーカーと通信して特定のタスクを実行し、他の [!DNL Experience Manager] インスタンスと通信して結果を送信する [!DNL Experience Manager] インスタンスです。
 * プロキシワーカー：特定のタスクを定義し管理するために使用します。
 
 これらは様々な作業をカバーできます。例えば、Adobe InDesign Serverを使用してファイルを処理する場合です。
 
-ファイルをに完全にアップロードするには [!DNL Experience Manager] プロキシとしてAdobe InDesignで作成したアセットが使用されます。 このプロキシはプロキシワーカーを使用して Adobe InDesign Server と通信します。Adobe InDesign Server ではメタデータを抽出し、 Assets 用の様々なレンディションを生成するための[スクリプト](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting)が実行されます。[!DNL Experience Manager]プロキシワーカーは、InDesign Serverと [!DNL Experience Manager] インスタンスがクラウド設定に含まれています。
+ファイルをに完全にアップロードするには [!DNL Experience Manager] プロキシとしてAdobe InDesignで作成したアセットが使用されます。 このプロキシはプロキシワーカーを使用して Adobe InDesign Server と通信します。Adobe InDesign Server ではメタデータを抽出し、 Assets 用の様々なレンディションを生成するための[スクリプト](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)が実行されます。[!DNL Experience Manager]プロキシワーカーは、InDesign Serverと [!DNL Experience Manager] インスタンスがクラウド設定に含まれています。
 
 >[!NOTE]
 >
@@ -33,7 +33,6 @@ Adobe Experience Manager Assets では、次のものを使用します。
 >* [InDesign Server](https://www.adobe.com/jp/products/indesignserver.html)\
    >  このエンジンを使用すれば、InDesign での作成物に基づいてドキュメントをプログラムによって自動生成できます。このエンジンは、[ExtendScript](https://www.adobe.com/jp/devnet/scripting.html) エンジンへのインターフェイスを提供するサービスとして動作します。\
    >  スクリプトは、JavaScript に似たExtendScriptで記述されます。 Adobe InDesignスクリプトについて詳しくは、 [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
-
 >
 
 
@@ -43,7 +42,7 @@ InDesign Serverは、 [!DNL Experience Manager] アセットをInDesign( `.indd`
 
 >[!NOTE]
 >
->以前のバージョンの [!DNL Experience Manager] はXMPとサムネールを抽出でき、現在はすべてのメディアを抽出できます。
+>以前のバージョンの [!DNL Experience Manager] では XMP とサムネールを抽出できましたが、現在はすべてのメディアを抽出できるようになりました。
 
 1. 次をアップロード： `.indd` ～に提出する [!DNL Experience Manager] アセット。
 1. フレームワークにより、コマンドスクリプトが SOAP（Simple Object Access Protocol）経由で InDesign Server に送信されます。
@@ -116,7 +115,7 @@ InDesign Serverは、 [!DNL Experience Manager] アセットをInDesign( `.indd`
 * [メディア抽出](#media-extraction)
 * [ページ抽出](#page-extraction)
 
-このワークフローは、様々なオーサーインスタンス上で設定に合わせて調整できるデフォルト値が設定されています ( これは標準ワークフローなので、詳しくは、 [ワークフローの編集](/help/sites-developing/workflows-models.md#configuring-a-workflow-step)) をクリックします。 デフォルト値（SOAP ポートを含む）を使用する場合は、設定は不要です。
+このワークフローには、様々な作成者インスタンス上の設定に合わせて変更できるデフォルト値が設定されています（これは標準ワークフローであり、詳しい情報は[ワークフローの編集](/help/sites-developing/workflows-models.md#configuring-a-workflow-step)に記載されています）。デフォルト値（SOAP ポートを含む）を使用する場合は、設定は不要です。
 
 設定後、にInDesignファイルをアップロード [!DNL Experience Manager] アセットは（通常の方法のいずれかによって）アセットを処理し、様々なレンディションを準備するために必要なワークフローをトリガーします。 `.indd`[!DNL Experience Manager] ファイルを Assets にアップロードし、IDS で作成された各種レンディションが  の下にあることを確認して、設定をテストしてください。`<*your_asset*>.indd/Renditions`
 
@@ -130,9 +129,9 @@ InDesign Serverは、 [!DNL Experience Manager] アセットをInDesign( `.indd`
 
 メディア抽出の引数とスクリプトパス
 
-* **ExtendScript Library**:これは、他のスクリプトに必要な単純な http get/post メソッドライブラリです。
+* **ExtendScript ライブラリ**：他のスクリプトに必要とされる単純な http get/post メソッドライブラリです。
 
-* **スクリプトを拡張**:ここで様々なスクリプトの組み合わせを指定できます。 InDesign サーバーで独自のスクリプトを実行する場合は、`/apps/settings/dam/indesign/scripts` にスクリプトを保存します。
+* **スクリプトを拡張**：ここで複数のスクリプトの組み合わせを指定できます。InDesign サーバーで独自のスクリプトを実行する場合は、`/apps/settings/dam/indesign/scripts` にスクリプトを保存します。
 
    InDesign・スクリプトの詳細は、 [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
 
@@ -140,13 +139,13 @@ InDesign Serverは、 [!DNL Experience Manager] アセットをInDesign( `.indd`
 >
 >ExtendScript ライブラリは変更しないでください。ライブラリは、Sling との通信に必要な HTTP 機能を提供します。 この設定では、Adobe InDesign Serverに送信してそこで使用するライブラリを指定します。
 
-この `ThumbnailExport.jsx` メディア抽出ワークフローステップで実行されるスクリプトにより、サムネールのレンディションがJPG形式で生成されます。 このレンディションは、サムネールを処理ワークフローステップで使用され、 [!DNL Experience Manager].
+メディア抽出ワークフロー手順で実行される `ThumbnailExport.jsx` スクリプトにより、サムネールのレンディションを JPG 形式で生成します。このレンディションはサムネール処理ワークフロー手順で使用され、[!DNL Experience Manager] で要求される静的レンディションを生成します。
 
 サムネールを処理ワークフローステップは、異なるサイズの静的レンディションを生成するように設定できます。デフォルト値は、 [!DNL Experience Manager] Assets UI 最後に、画像プレビューレンディションを削除ワークフローステップで不要になった .jpg 形式のサムネールレンディションが削除されます。
 
 #### ページ抽出 {#page-extraction}
 
-これにより、 [!DNL Experience Manager] ページを抽出します。 抽出ハンドラーが、レンディション（現時点では HTML または IDML）からデータを抽出するために使用されます。このデータを元に、PageBuilder を使用してページが作成されます。
+抽出された要素から [!DNL Experience Manager] ページを作成します。抽出ハンドラーが、レンディション（現時点では HTML または IDML）からデータを抽出するために使用されます。このデータを元に、PageBuilder を使用してページが作成されます。
 
 カスタマイズするには、**ページ抽出**&#x200B;ステップの「**[!UICONTROL 引数]**」タブを編集します。
 
@@ -154,15 +153,15 @@ InDesign Serverは、 [!DNL Experience Manager] アセットをInDesign( `.indd`
 
 * **ページ抽出ハンドラー**:ドロップダウンリストから、使用するハンドラーを選択します。 抽出ハンドラーは、関連する `RenditionPicker`（`ExtractionHandler` API を参照）によって選択された特定のレンディションに対して動作します。デフォルトでは、IDML 書き出し抽出ハンドラーを使用できます。 これは、 `IDML` レンディションを MediaExtract ステップで生成しました。
 
-* **ページ名**:結果ページに割り当てる名前を指定します。空白の場合、名前は「page」（「page」が既に存在する場合は派生形）になります。
+* **ページ名**：生成されるページに割り当てる名前を指定します。空白にした場合、名前は「page」（「page」が既に存在する場合は、その派生形）になります。
 
-* **ページタイトル**:結果ページに割り当てるタイトルを指定します。
+* **ページタイトル**：生成されるページに割り当てるタイトルを指定します。
 
 * **ページルートパス**:結果ページのルート位置へのパス。 空白のままにした場合、アセットのレンディションを保持しているノードが使用されます。
 
-* **ページテンプレート**:ページの生成時に使用するテンプレート。
+* **ページテンプレート**：ページの生成時に使用するテンプレート。
 
-* **ページデザイン**:ページの生成時に使用するページデザイン。
+* **ページデザイン**：ページの生成時に使用するページデザイン。
 
 ### InDesign Server のプロキシワーカーの設定 {#configuring-the-proxy-worker-for-indesign-server}
 
@@ -187,7 +186,7 @@ InDesign Serverは、 [!DNL Experience Manager] アセットをInDesign( `.indd`
 InDesign Serverと [!DNL Experience Manager] は別のホスト上にあるか、これらのアプリケーションの一方または両方がデフォルトポートで動作していません。を構成してください。 **Day CQ Link Externalizer** をクリックして、InDesign Serverのホスト名、ポート、およびコンテンツパスを設定します。
 
 1. `https://[AEM_server]:[port]/system/console/configMgr` の URL で Configuration Manager にアクセスします。
-1. 設定の場所 **[!UICONTROL Day CQ Link Externalizer]**. クリック **[!UICONTROL 編集]** をクリックして開きます。
+1. **[!UICONTROL Day CQ Link Externalizer]** の設定を探します。「**[!UICONTROL 編集]**」をクリックして開きます。
 1. Link Externalizer の設定は、 [!DNL Experience Manager] デプロイメントと [!DNL InDesign Server]. 用途 **[!UICONTROL ドメイン]** ホスト名と [!DNL Adobe InDesign Server]. 画面に表示される手順に従ってください。「**[!UICONTROL 保存]**」をクリックします。
 
    ![Link externalizer 設定](assets/link-externalizer-config.png)
@@ -230,7 +229,7 @@ IDS 並列ジョブ数を設定するには：
    >
    >また、`com.day.cq.dam.ids.impl.IDSPoolImpl.name``max.errors.to.blacklist` 設定の下のパラメーターに正の値を設定します。このパラメーターは、IDS をジョブハンドラーリストから除外するまでのジョブ再試行回数を指定します。
    >
-   >デフォルトでは、設定可能な (`retry.interval.to.whitelist.name`) 時間（分単位）、IDS ワーカーの再検証。 ワーカーがオンラインである場合は、ブロックリストから削除されます。
+   >デフォルトでは、設定可能な（`retry.interval.to.whitelist.name`）時間（分単位）が経過した後で、IDS ワーカーが再検証されます。ワーカーがオンラインである場合は、ブロックリストから削除されます。
 
 <!-- TBD: Make updates to configurations for allow and block list after product updates are done. See CQ-4298427.
 -->
@@ -245,7 +244,7 @@ InDesign Server 10.0 以降では、次の手順を実行してマルチセッ�
 
 >[!NOTE]
 >
->の場合 [!DNL InDesign Server] ～との統合 [!DNL Assets]統合に必要なセッションサポート機能はシングルコアシステムではサポートされていないので、マルチコアプロセッサーを使用してください。
+>[!DNL Assets] に [!DNL InDesign Server] を統合する場合、統合に必要なセッションサポート機能はシングルコアのシステムではサポートされていないので、マルチコアのプロセッサーを使用してください。
 
 ## Experience Manager資格情報の設定 {#configure-aem-credentials}
 

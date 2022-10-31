@@ -21,7 +21,7 @@ ht-degree: 30%
 
 次の目的 [拡張](client-customize.md#extensions) デフォルトのコンポーネントは、特定の用途でのコンポーネントの外観や動作を変更することです。
 
-コンポーネントへのパスは一意で、デフォルトのコンポーネントをスーパーリソースタイプとして参照します。 There is less risk as the scope is limited compared to the global scope of a component overlay.
+コンポーネントへのパスは一意で、デフォルトのコンポーネントをスーパーリソースタイプとして参照します。 コンポーネントオーバーレイのグローバルスコープと比較して、スコープが制限されるので、リスクが少なくなります。
 
 >[!NOTE]
 >
@@ -29,11 +29,11 @@ ht-degree: 30%
 
 ## 例 {#example}
 
-Suppose the header for the comment component must display with an alternate appearance on one site of the AEM instance, while appearing with the default display on another site. Instead of overlaying the default comment, which changes the comment component for all instances, a better solution is to ensure there are multiple comment components available for use on various sites.
+コメントコンポーネントのヘッダーが、AEMインスタンスの 1 つのサイトで別の外観で表示され、別のサイトではデフォルトの表示で表示される必要があるとします。 すべてのインスタンスのコメントコンポーネントを変更するデフォルトのコメントをオーバーレイする代わりに、様々なサイトで使用できる複数のコメントコンポーネントを確実に使用する方法をお勧めします。
 
-この解決策を実装するには、既存のコンポーネントを拡張（上書き）する新しいコンポーネントを作成し、Handlebars スクリプトを変更します。The area of the site that uses the new comments can use the extended one, while the sites that use the default appearance remain unaffected.
+この解決策を実装するには、既存のコンポーネントを拡張（上書き）する新しいコンポーネントを作成し、Handlebars スクリプトを変更します。新しいコメントを使用するサイトの領域は拡張されたものを使用できますが、デフォルトの外観を使用するサイトは影響を受けません。
 
-コメントコンポーネントは実際には、コメントシステムを構成する 2 つのコンポーネントのうちの 1 つです。Thus, there are two components to extend: *comments* and *comment*. 編集するスクリプトは、「コメント」コンポーネントの `header.hbs` ファイルを、親 *コメント* コンポーネント（コメントシステム）は、作成者が実際にページに追加するものです。
+コメントコンポーネントは実際には、コメントシステムを構成する 2 つのコンポーネントのうちの 1 つです。そのため、次の 2 つのコンポーネントを拡張できます。 *コメント* および *コメント*. 編集するスクリプトは、「コメント」コンポーネントの `header.hbs` ファイルを、親 *コメント* コンポーネント（コメントシステム）は、作成者が実際にページに追加するものです。
 
 コメントを拡張するには、次の手順を実行する必要があります。
 

@@ -8,7 +8,7 @@ exl-id: 72b5e053-9307-4333-84e5-d4cc2b6bdecc
 source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
 workflow-type: tm+mt
 source-wordcount: '300'
-ht-degree: 62%
+ht-degree: 65%
 
 ---
 
@@ -37,9 +37,9 @@ ht-degree: 62%
 | [開発ユーザーガイド](/help/sites-developing/home.md) | の構築方法を学ぶ [!DNL Experience Manager]  インスタンス。 |
 | [ユーザーガイドの管理](/help/managing/home.md) | このガイドでは、 [!DNL Experience Manager]  プロジェクトが正常に完了しました。 |
 | [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
-| [[!DNL Experience Manager]  Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | このガイドでは、ユーザー生成コンテンツを Livefyre と共有する方法について説明します。 |
+| [[!DNL Experience Manager]  Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html?lang=ja) | このガイドでは、ユーザー生成コンテンツを Livefyre と共有する方法について説明します。 |
 
-## キー [!DNL Experience Manager]  リソース
+## 主要な [!DNL Experience Manager] リソース
 
 * [[!DNL Experience Manager]  チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html?lang=ja)
 * [Dispatcher ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)
@@ -48,4 +48,4 @@ ht-degree: 62%
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=ja)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja#recommended/solutions/experience-manager)
-* [[!DNL Experience Manager]  コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?lang=ja)
+* [[!DNL Experience Manager]  コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)

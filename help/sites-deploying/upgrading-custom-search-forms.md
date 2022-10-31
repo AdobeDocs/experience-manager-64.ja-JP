@@ -18,7 +18,7 @@ ht-degree: 100%
 
 ---
 
-# カスタム検索フォームのアップグレード{#upgrading-custom-search-forms}
+# カスタム検索フォームのアップグレード {#upgrading-custom-search-forms}
 
 AEM 6.2 では、カスタマイズされた検索フォームのリポジトリ内の保存場所が変更されました。アップグレード時に、6.1 での保存場所
 

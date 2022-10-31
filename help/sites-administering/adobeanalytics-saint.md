@@ -1,7 +1,7 @@
 ---
 title: リダイレクト (SAINT書き出し )
 seo-title: redirect (SAINT Exporter)
-description: 'null'
+description: null
 seo-description: null
 uuid: 15f28f78-b411-40c9-9fb5-8129bea27687
 contentOwner: aheimoz

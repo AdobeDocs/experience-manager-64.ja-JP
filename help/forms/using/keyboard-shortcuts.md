@@ -13,7 +13,7 @@ exl-id: 08cf95bc-3417-48d4-9df2-5bd56797bc5d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1147'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -34,17 +34,17 @@ ht-degree: 78%
 | 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl+Y&amp;ast; |
 | 複数のコンポーネントを選択する | Shift キーを押しながらクリック | Shift キーを押しながらクリック |
 | 選択したコンポーネントをコピーする | Ctrl + C | Ctrl+C&amp;ast; |
-| 選択した 1 つ以上のコンポーネントを切り取る切り取ったコンポーネントは、新しい位置に貼り付けられるまで表示されません。 | Ctrl + X | Ctrl+X&amp;ast; |
-| コンポーネントを貼り付け | Ctrl + V | Ctrl + V |
+| 選択した 1 つ以上のコンポーネントを切り取る（カットしたコンポーネントは、新しい場所にペーストするまで非表示になりません）。 | Ctrl + X | Ctrl+X&amp;ast; |
+| 1 つ以上のコンポーネントをペーストする | Ctrl + V | Ctrl + V |
 | 選択した 1 つ以上のコンポーネントを削除する | Ctrl + Del | Ctrl+Del&amp;ast; |
 | 選択した 1 つ以上のコンポーネントを削除する | Ctrl + Backspace | Ctrl+Backspace&amp;ast; |
 | プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + B | Ctrl+B&amp;ast; |
-| プレビューモードでリッチテキストエディターコンポーネントを使用している場合にテキストを斜体にする | Ctrl + I | Ctrl+I&amp;ast; |
+| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを斜体にする | Ctrl + I | Ctrl+I&amp;ast; |
 | プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + U | Ctrl+U&amp;ast; |
 
 >[!NOTE]
 >
->「&amp;ast;」でマークされたショートカットは、Mac OS の Ctrl キーと Command キーの両方で動作します。
+>「&amp;ast;」が付いている Mac OS のショートカットキーは、Ctrl キーだけでなく、Command キーでも機能します。
 
 >[!NOTE]
 >
@@ -52,7 +52,6 @@ ht-degree: 78%
 >
 >* Windows：Ctrl キーを押しながら、目的のコンポーネントをクリックします。
 >* MAC OS：Command キーを押しながら、目的のコンポーネントをクリックします。
-
 >
 
 
@@ -64,32 +63,32 @@ ht-degree: 78%
 | テーマで選択したコンポーネントのプロパティブラウザーを閉じる | Ctrl + Alt + W | Command + Alt + W |
 | 最後におこなった変更操作を取り消す | Ctrl + Z | Ctrl+Z&amp;ast; |
 | 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl+Y&amp;ast; |
-| テーマで選択したコンポーネントの変更をプロパティブラウザーに保存する | Ctrl + S | Ctrl+S&amp;ast; |
+| テーマで選択したコンポーネントの変更内容をプロパティブラウザーに保存する | Ctrl + S | Ctrl+S&amp;ast; |
 
 >[!NOTE]
 >
->「&amp;ast;」でマークされたショートカットは、Mac OS の Ctrl キーと Command キーの両方で動作します。
+>「&amp;ast;」が付いている Mac OS のショートカットキーは、Ctrl キーだけでなく、Command キーでも機能します。
 
 ## コンテンツブラウザー  {#contentbrowser}
 
 | **アクション** | **Windows のショートカットキー** | **Mac OS のショートカットキー** |
 |---|---|---|
-| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを展開する | Ctrl + A ですべてのアコーディオンを選択し、右向き矢印で展開します。 | Command + A ですべてのアコーディオンを選択し、右向き矢印で展開します。 |
-| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを折りたたむ | Ctrl + A ですべてのアコーディオンを選択し、左向き矢印で折りたたむ | Command + A ですべてのアコーディオンを選択し、左向き矢印で折りたたむ |
-| 選択したアコーディオンをフォームオブジェクトツリーで展開する | 右向き矢印 | 右向き矢印 |
-| 選択したアコーディオンをフォームオブジェクトツリーで折りたたむ | 左向き矢印 | 左向き矢印 |
-| フォームオブジェクトツリーで次の項目を選択する | 下向き矢印 | 下向き矢印 |
+| フォーカスが当たっている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを展開する | Ctrl + A ですべてのアコーディオンを選択し、右矢印キーで展開 | Command + A ですべてのアコーディオンを選択し、右矢印キーで展開 |
+| フォーカスしている場合に、コンテンツブラウザーのフォームオブジェクトツリーですべてのアコーディオンを折りたたむ | Ctrl + A ですべてのアコーディオンを選択し、左矢印キーで折りたたむ | Command + A ですべてのアコーディオンを選択し、左矢印キーで折りたたむ |
+| 選択したアコーディオンをフォームオブジェクトツリーで展開する | 右矢印キー | 右矢印キー |
+| 選択したアコーディオンをフォームオブジェクトツリーで折りたたむ | 左矢印キー | 左矢印キー |
+| フォームオブジェクトツリーで次の項目を選択する | 下矢印キー | 下矢印キー |
 | フォームオブジェクトツリーで前の項目を選択する | 上向き矢印 | 上向き矢印 |
 
-[1] Windows の場合は Ctrl +右矢印キー、Mac OS の場合は Command +右矢印キーを置き換えます。\
-[2] Windows の場合は Ctrl +左矢印キー、Mac OS の場合は Command +左矢印キーを置き換えます。
+[1] Windows の場合は Ctrl + 右矢印キー、Mac OS の場合は Command + 右矢印キーを使用することもできます。\
+[2] Windows の場合は Ctrl + 左矢印キー、Mac OS の場合は Command + 左矢印キーを使用することもできます。
 
 ## Correspondence Management {#correspondence-management}
 
 このセクションでは、Correspondence Management のテキストエディターで使用できる各種キーボードとアクセシビリティのショートカットキーについて説明します。これらのショートカットキーを使用して、以下の操作を行うことができます。
 
-* の作成または編集 [テキスト](document-fragments.md) アセット
-* 関連する編集アイコン ( ![edittextmodule](assets/edittextmodule.png)) [通信の作成](/help/forms/using/create-correspondence.md).
+* [テキスト](document-fragments.md)アセットの作成と編集
+* [通信の作成時](/help/forms/using/create-correspondence.md)に関連する編集アイコン（![edittextmodule](assets/edittextmodule.png)）をタップしてからテキストモジュールを編集する。
 
 ### テキストの選択とカーソルの移動 {#text-selection-and-moving-the-cursor-around}
 
@@ -317,7 +316,7 @@ ht-degree: 78%
    <th><strong>Mac OS のショートカットキー</strong></th> 
   </tr>
   <tr>
-   <td><p>テキストを貼り付ける </p> </td> 
+   <td><p>テキストをペーストする </p> </td> 
    <td><p>Ctrl + V / Shift + Insert</p> </td> 
    <td>Command + V</td> 
   </tr>
@@ -334,7 +333,7 @@ ht-degree: 78%
  </tbody>
 </table>
 
-### フォーマ {#formatting}
+### フォーマット {#formatting}
 
 <table> 
  <tbody>
@@ -354,7 +353,7 @@ ht-degree: 78%
    <td>Command + I</td> 
   </tr>
   <tr>
-   <td><p>文字に下線を引く </p> </td> 
+   <td><p>レターに下線を付ける </p> </td> 
    <td><p>Ctrl + Alt + U / Ctrl + U</p> </td> 
    <td>Command + U</td> 
   </tr>

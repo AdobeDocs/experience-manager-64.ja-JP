@@ -14,7 +14,7 @@ exl-id: 357d5f23-3e75-44e3-905f-4efe960858bf
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '716'
-ht-degree: 63%
+ht-degree: 68%
 
 ---
 
@@ -50,7 +50,7 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
       バージョンの期間がこの値を超えると、リポジトリからパージされます。
 
-* の [バージョンのパージメンテナンスタスク](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks). バージョンのパージメンテナンスタスクをスケジュールして、古いバージョンを自動的に削除できます。その結果、バージョンのパージツールを手動で使用する必要性を最小限に抑えることができます。
+* [バージョンパージのメンテナンスタスク](/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks)。バージョンのパージメンテナンスタスクをスケジュールして、古いバージョンを自動的に削除できます。これにより、バージョンのパージツールを手動で実行する必要性を最小限に抑えることができます。
 
 >[!CAUTION]
 >
@@ -104,11 +104,11 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
 ### 保持オプションの組み合わせ {#combining-retention-options}
 
-どのバージョンを保持するかを定義するオプション ( `maxAgeDays`, `maxNumberVersions`, `minNumberVersions`) を含め、必要に応じて組み合わせることができます。
+どのバージョンを保持するかを定義するオプション（`maxAgeDays`、`maxNumberVersions`、`minNumberVersions`）は、要件に応じて組み合わせることができます。
 
 保持するバージョン数の最大数と、保持する最も古いバージョンを組み合わせて定義する場合の例：
 
-* 次のように設定し、
+* 設定:
 
    * `maxNumberVersions` = 7
    * `maxAgeDays` = 30
@@ -124,7 +124,7 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
 保持するバージョン数の最大数と最小数、および保持する最も古いバージョンを組み合わせて定義する場合の例：
 
-* 次のように設定し、
+* 設定:
 
    * `maxNumberVersions` = 3
    * `maxAgeDays` = 30

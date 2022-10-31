@@ -1,5 +1,5 @@
 ---
-title: デバイスの機能へのアクセス
+title: デバイス機能へのアクセス
 seo-title: Access Device Features
 description: このページでは、デバイスの機能にアクセスする AEM コンポーネントのビルドについて説明します。AEM PhoneGap Kitchen Sink GitHub リポジトリは、多数のコア Cordova API の使用法を示す、機能 AEM アプリを開発者に提供します。
 seo-description: Follow this page to learn about building AEM components that access device features. The AEM PhoneGap Kitchen Sink Github repository provides developers with a functional AEM app that illustrates the use of a number of core Cordova APIs.
@@ -17,11 +17,11 @@ ht-degree: 63%
 
 ---
 
-# デバイスの機能へのアクセス{#access-device-features}
+# デバイス機能へのアクセス{#access-device-features}
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 ## デバイスの機能にアクセスする AEM コンポーネントのビルド {#building-aem-components-that-access-device-features}
 

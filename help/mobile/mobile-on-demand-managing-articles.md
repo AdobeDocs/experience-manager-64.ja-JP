@@ -21,7 +21,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 コンテンツ管理アクションは、アプリケーション内で記事を作成および管理するのに役立つ構築ブロックです。アプリケーション内の記事に対して、以下のアクションが実行されます。
 
@@ -36,7 +36,6 @@ ht-degree: 89%
 >* [デザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)
 >
 >* [記事の管理](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-articles.html)
-
 >
 
 

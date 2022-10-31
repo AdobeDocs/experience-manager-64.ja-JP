@@ -1,7 +1,7 @@
 ---
-title: 'デザインモードでのコンポーネントの設定 '
+title: デザインモードでのコンポーネントの設定
 seo-title: Configuring Components in Design Mode
-description: 'デザインモードでのコンポーネントの設定 '
+description: デザインモードでのコンポーネントの設定
 seo-description: null
 uuid: b9c9792d-4398-446d-8767-44d4e7ce9a2e
 contentOwner: Chris Bohnert

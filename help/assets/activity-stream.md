@@ -1,6 +1,6 @@
 ---
 title: タイムラインのアクティビティストリーム
-description: 'この記事では、アセットのアクティビティログをタイムラインに表示する方法について説明します。 '
+description: この記事では、アセットのアクティビティログをタイムラインに表示する方法について説明します。
 contentOwner: AG
 feature: Asset Management
 role: User,Admin
@@ -8,7 +8,7 @@ exl-id: 52fa2d59-177f-49ca-a480-7213ce0ca7d7
 source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
 source-wordcount: '211'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
 

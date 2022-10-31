@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームからフォームデータモデルサービスを呼び出すための API
 seo-title: API to invoke form data model service from adaptive forms
-description: 'アダプティブフォームフィールド内から WSDL で記述された、Web サービスを呼び出す API について説明します。 '
+description: アダプティブフォームフィールド内から WSDL で記述された、Web サービスを呼び出す API について説明します。
 seo-description: Explains the invokeWebServices API that you can use to invoke web services written in WSDL from within an adaptive form field.
 uuid: 40561086-e69d-4e6a-9543-1eb2f54cd836
 products: SG_EXPERIENCEMANAGER/6.4/FORMS

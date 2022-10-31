@@ -1,7 +1,7 @@
 ---
 title: Barcoded Forms サービス
 seo-title: Using AEM Forms Barcoded Forms Service
-description: 'AEM Forms Barcoded Forms サービスを使用すると、バーコードの電子画像からデータを抽出することができます。 '
+description: AEM Forms Barcoded Forms サービスを使用すると、バーコードの電子画像からデータを抽出することができます。
 seo-description: Use AEM Forms Barcoded Forms service to extract data from electronic images of barcodes.
 uuid: 96e0a1e6-3f53-4fea-85c2-4de3cff52d73
 content-type: reference

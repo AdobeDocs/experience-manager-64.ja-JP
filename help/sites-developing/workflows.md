@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# ワークフローの作成と拡張{#developing-and-extending-workflows}
+# ワークフローの作成と拡張 {#developing-and-extending-workflows}
 
 AEM には、ワークフローモデルを作成し、ワークフローステップを開発し、プログラムによってワークフローとやり取りするためのツールやリソースが用意されています。
 

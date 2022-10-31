@@ -1,7 +1,7 @@
 ---
 title: アプリの詳細な構造
 seo-title: The Anatomy of an App
-description: 'このページでは、アプリ用に作成する /libs/mobileapps/components/angular/ng-page コンポーネントに基づくページコンポーネントについて説明します（ローカルサーバー上の CRXDE Lite）。 '
+description: このページでは、アプリ用に作成する /libs/mobileapps/components/angular/ng-page コンポーネントに基づくページコンポーネントについて説明します（ローカルサーバー上の CRXDE Lite）。
 seo-description: This page provides description of the page components that you create for your app are based on the /libs/mobileapps/components/angular/ng-page component (CRXDE Lite on a local server).
 uuid: 4c1a74c1-85af-4a79-b723-e9fbfc661d35
 contentOwner: User

@@ -107,7 +107,7 @@ ht-degree: 100%
 
 * [同期](/help/sites-administering/msm.md#rollout-and-synchronize)
 
-   * ライブコピーを同期して、ソースからライブコピーに変更をプルします。
+   * ライブコピーを同期して、ソースからライブコピーに変更内容をプルします。
 
 * [リセット](/help/sites-administering/msm-livecopy.md#resetting-a-live-copy-page)
 

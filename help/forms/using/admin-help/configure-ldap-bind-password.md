@@ -1,7 +1,7 @@
 ---
 title: LDAP バインドパスワードの設定
 seo-title: Configure the LDAP bind password
-description: '設定ファイルを別のシステムに読み込む前にバインドパスワードを設定する方法について説明します。 '
+description: 設定ファイルを別のシステムに読み込む前にバインドパスワードを設定する方法について説明します。
 seo-description: Learn how to configure the bind password field before you import the configuration file into another system.
 uuid: 1ab1907c-8b55-4b6f-bd5b-49f22d78b8a8
 contentOwner: admin

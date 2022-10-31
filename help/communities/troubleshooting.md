@@ -50,7 +50,7 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 したがって、RelativeTimeFormat() API を使用するコードを次のように変更する必要があります。
 
 * 送信元: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
-* 次の操作を行います。`final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
+* To: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
 
 障害は、オーサー環境とパブリッシュ環境で異なります。オーサー環境では、エラーは表示されず、フォーラムトピックが表示されないだけです。パブリッシュ環境では、ページにエラーが表示されます。
 

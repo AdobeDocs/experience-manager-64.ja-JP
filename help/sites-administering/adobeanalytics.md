@@ -42,7 +42,7 @@ Adobe Analytics と AEM の統合により、Web ページのアクティビテ�
 
 >[!NOTE]
 >
->方法については、[DTM を使用した AEM と Adobe Target および Adobe Analytics の統合（英語）](https://helpx.adobe.com/jp/experience-manager/using/integrate-digital-marketing-solutions.html)も参照してください。
+>方法については、[DTM を使用した AEM と Adobe Target および Adobe Analytics の統合（英語）](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja)も参照してください。
 
 ## その他の情報 {#further-information}
 

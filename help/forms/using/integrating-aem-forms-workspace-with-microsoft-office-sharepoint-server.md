@@ -1,7 +1,7 @@
 ---
 title: AEM Forms Workspace に Microsoft Office SharePoint Server を統合する
 seo-title: Integrating AEM forms workspace with Microsoft Office SharePoint Server
-description: 'AEM Forms Workspace に Microsoft Office SharePoint Server を統合することができます。 '
+description: AEM Forms Workspace に Microsoft Office SharePoint Server を統合することができます。
 seo-description: You can integrate AEM forms workspace with Microsoft Office SharePoint Server.
 uuid: d43396d4-117f-47ea-91e4-10ee96107bc8
 content-type: reference

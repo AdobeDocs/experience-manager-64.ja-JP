@@ -13,11 +13,11 @@ exl-id: 8469b063-ea22-4706-ad02-1477d5f9d6c5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1157'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
-# AEM forms データの回復 {#recovering-the-aem-forms-data}
+# AEM Forms データの回復 {#recovering-the-aem-forms-data}
 
 ここでは、AEM forms データの回復に必要な手順について説明します。[バックアップと回復に関する考慮事項](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md#special-considerations-for-backup-and-recovery)も参照してください。
 
@@ -69,15 +69,15 @@ AEM Forms は、以下の障害から安全な方法で回復します。
    >
    >/restore ディレクトリが既に存在する場合、それをバックアップし、最新データを含む /backup ディレクトリを名前変更する前に削除します。
 
-   * (JBoss) 名前の変更 `[appserver root]/server/[server]/svcnative/DocumentStorage/backup` 移動先：
+   * （JBoss）`[appserver root]/server/[server]/svcnative/DocumentStorage/backup` を次に変更：
 
       `[appserver root]/server/[server]/svcnative/DocumentStorage/restore`
 
-   * (WebLogic) 名前の変更 `[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage/backup` 移動先：
+   * （WebLogic）`[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage/backup` を次に変更：
 
       `[appserverdomain]/[server]/adobe/AEMformsserver/DocumentStorage/restore`.
 
-   * (WebSphere) 名前の変更 `[appserver root]/installedApps/adobe/[server]/DocumentStorage/backup` 移動先：
+   * （WebSphere）`[appserver root]/installedApps/adobe/[server]/DocumentStorage/backup` を次に変更：
 
       `[appserver root]/installedApps/adobe/[server]/DocumentStorage/restore`.
 
@@ -108,11 +108,11 @@ AEM Forms は、以下の障害から安全な方法で回復します。
       クラスター環境での復元については、[クラスター環境でのバックアップと復元の方策](/help/forms/using/admin-help/strategy-backup-restore-clustered-environment.md#strategy-for-backup-and-restore-in-a-clustered-environment)を参照してください。
 
 1. java.io.temp ディレクトリまたは Adobe temp ディレクトリに作成された AEM forms の一時ファイルをすべて削除します。
-1. AEM forms を起動します ( [サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))<!-- BROKEN LINK and the application server(s) (see [Maintaining the Application Server](/forms/using/admin-help/topics/maintaining-the-application-server.md))-->.
+1. AEM Forms を起動します（[サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)を参照）<!-- BROKEN LINK and the application server(s) (see [Maintaining the Application Server](/forms/using/admin-help/topics/maintaining-the-application-server.md))-->。
 
 ## 回復中の GDS の場所の変更 {#changing-the-gds-location-during-recovery}
 
-GDS を元の場所とは異なる場所に復元する場合は、LCSetGDS スクリプトを実行して GDS を新しい場所に設定します。スクリプトは `[aem-forms root]\sdk\misc\Foundation\SetGDSCommandline` フォルダー。 スクリプトは、次の 2 つのパラメーターを取ります。 `defaultGDS` および `newGDS`. スクリプトの実行方法については、同フォルダー内の `ReadMe.txt` ファイルを参照してください。
+GDS を元の場所とは異なる場所に復元する場合は、LCSetGDS スクリプトを実行して GDS を新しい場所に設定します。スクリプトは `[aem-forms root]\sdk\misc\Foundation\SetGDSCommandline` フォルダーにあります。このスクリプトでは `defaultGDS` と `newGDS` の 2 つのパラメーターを使用します。スクリプトの実行方法については、同フォルダー内の `ReadMe.txt` ファイルを参照してください。
 
 >[!NOTE]
 >

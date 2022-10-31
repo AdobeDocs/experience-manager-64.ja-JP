@@ -1,5 +1,5 @@
 ---
-title: 'AEM Managed Services に対する Adobe IMS 認証およびアドミンコンソールのサポート '
+title: AEM Managed Services に対する Adobe IMS 認証およびアドミンコンソールのサポート
 seo-title: Adobe IMS Authentication and Admin Console Support for AEM Managed Services
 description: AEMでのAdmin Consoleの使用方法を説明します。
 seo-description: Learn how to use the Admin Console in AEM.

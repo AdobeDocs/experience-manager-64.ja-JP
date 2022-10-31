@@ -44,7 +44,7 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
       * ドラフトセクション：/libs/fd/fp/draftsTemplate
       * 送信セクション：/libs/fd/fp/submissionsTemplate
-   * Link コンポーネント：&quot;/libs/fd/fp/formTemplate&quot;
+   * Link コンポーネント：&quot;/libs/fd/fp/linkTemplate&quot;
 
    レイアウトテンプレートを選択する際に表示したいタイトルを追加します。
 
@@ -94,7 +94,7 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
 様々なフォームポータルコンポーネントは、リスト表示に使える排他的な OOTB メタデータのセットを提供します。
 
-### Search &amp; Listerコンポーネント {#search-amp-lister-component}
+### Search &amp; Lister コンポーネント {#search-amp-lister-component}
 
 * **タイトル：**&#x200B;フォームのタイトル
 * **名前**：フォーム名（多くの場合、タイトルと同じです）
@@ -145,13 +145,13 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
 *注意：*
 
-1. ドラフト&amp;送信コンポーネントの下のドラフトセクションにある削除のオプションについては、CCS クラスを &quot;__FP_deleteDraft&quot; と名付けます。さらに、対応するドラフトのドラフト ID である値 **${draftID}** を持つ属性 &quot;draftID&quot; を含めます。
+1. ドラフト&amp;送信コンポーネントの下のドラフトセクションにある削除のオプションについては、CSS クラスを &quot;__FP_deleteDraft&quot; と名付けます。さらに、対応するドラフトのドラフト ID である値 **${draftID}** を持つ属性 &quot;draftID&quot; を含めます。
 
 1. ドラフトと送信を開くためのリンクを作成する際に、次の項目を指定できます。 **$path.html** を **href** 属性を設定します。
 
 ![ドラフトと送信ノード](assets/raw-image-with-index.png)
 
-**A**. コンテナの要素
+**A**.コンテナの要素
 
 **B.** 固定階層のある「path」メタデータで、各フォームに保存されたサムネールを取得します。
 
@@ -173,7 +173,7 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 ## 関連記事
 
 * [フォームポータルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
-* [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)
+* [フォームポータルページの作成 ](/help/forms/using/creating-form-portal-page.md)
 * [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)

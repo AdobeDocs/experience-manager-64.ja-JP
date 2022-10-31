@@ -13,11 +13,11 @@ exl-id: 83e73a5d-c6fa-426a-8476-78769ae7a8c1
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1447'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
-# ContextHub でのセグメント化の設定{#configuring-segmentation-with-contexthub}
+# ContextHub でのセグメント化の設定 {#configuring-segmentation-with-contexthub}
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ ht-degree: 96%
 
 サイト訪問者についてこれまでに収集した情報と、達成する目標に応じて、ターゲットコンテンツに必要なセグメントと戦略を定義する必要があります。
 
-このようなセグメントを使用して、訪問者に特定のターゲットコンテンツを提供します。このコンテンツは、 [パーソナライズ](/help/sites-authoring/personalization.md) を参照してください。 ここで定義された[アクティビティ](/help/sites-authoring/activitylib.md)は、任意のページに追加できます。また、専用のコンテンツを適用できる訪問者セグメントを定義できます。
+このようなセグメントを使用して、訪問者に特定のターゲットコンテンツを提供します。このコンテンツは、web サイトの「[パーソナライズ機能](/help/sites-authoring/personalization.md)」セクションで管理されます。ここで定義した[アクティビティ](/help/sites-authoring/activitylib.md)は、任意のページに追加でき、専用のコンテンツを適用できる訪問者セグメントを指定できます。
 
 AEM では、ユーザーエクスペリエンスを簡単にパーソナライズできます。また、セグメント定義の結果を検証することもできます。
 
@@ -35,7 +35,7 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
 
 [オーディエンス](/help/sites-authoring/managing-audiences.md)コンソールは、ContextHub または ClientContext のセグメントを管理したり、Adobe Target アカウントのオーディエンスを管理したりする目的で使用します。このドキュメントでは、ContextHub のセグメントの管理について取り上げます。[ClientContext セグメント](/help/sites-administering/campaign-segmentation.md)および Adobe Target セグメントについては、それぞれ関連するドキュメントを参照してください。
 
-セグメントにアクセスするには、グローバルナビゲーションで&#x200B;**ナビゲーション／パーソナライズ機能／オーディエンス**&#x200B;を選択します。
+セグメントにアクセスするには、グローバルナビゲーションで「**ナビゲーション／パーソナライズ機能／オーディエンス**」を選択します。
 
 ![chlimage_1-310](assets/chlimage_1-310.png)
 
@@ -47,7 +47,7 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
 
 コンポーネントブラウザーを使用すると、**AND** および **OR** コンテナを追加してセグメントロジックを定義してから、別のコンポーネントを追加してプロパティや値を比較できます。また、スクリプトやその他のセグメントを参照して選択条件を定義する（[新しいセグメントの作成](#creating-a-new-segment)を参照）ことによって、セグメントの選択シナリオを正確に定義できます。
 
-ステートメント全体が true と評価されると、セグメントは解決されます。複数のセグメントを適用可能な場合、**ブースト**&#x200B;係数も使用されます。詳しくは、 [新しいセグメントの作成](#creating-a-new-segment) 詳細は [ブースト係数。](/help/sites-administering/campaign-segmentation.md#boost-factor)
+ステートメント全体が true と評価されると、セグメントは解決されます。複数のセグメントを適用可能な場合、**ブースト**&#x200B;係数も使用されます。[ブースト係数](/help/sites-administering/campaign-segmentation.md#boost-factor)について詳しくは、「[新しいセグメントの作成](#creating-a-new-segment)」を参照してください。
 
 >[!CAUTION]
 >
@@ -61,11 +61,11 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
  <tbody> 
   <tr> 
    <td>コンテナ AND<br /> </td> 
-   <td>AND ブール演算値<br /> </td> 
+   <td>AND ブール演算子<br /> </td> 
   </tr> 
   <tr> 
    <td>コンテナ OR<br /> </td> 
-   <td>OR ブール演算値</td> 
+   <td>OR ブール演算子</td> 
   </tr> 
  </tbody> 
 </table>
@@ -164,11 +164,11 @@ AND および OR コンテナコンポーネントを使用すると、AEM で�
 
 30 才～ 59 才の男性
 
-または
+OR
 
 30 才～ 59 才の女性
 
-最初に、OR コンテナコンポーネントをデフォルトの AND コンテナ内に配置します。OR コンテナ内に 2 つの AND コンテナを追加し、その両方にプロパティまたは参照コンポーネントを追加できます。
+最初に、OR コンテナコンポーネントをデフォルトの AND コンテナ内に配置します。OR コンテナ内に 2 つの AND コンテナを追加し、それらの両方にプロパティまたは参照コンポーネントを追加できます。
 
 ![screen_shot_2012-02-02at105145am](assets/screen_shot_2012-02-02at105145am.png)
 

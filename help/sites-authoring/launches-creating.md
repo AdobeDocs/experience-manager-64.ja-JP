@@ -1,7 +1,7 @@
 ---
 title: ローンチの作成
 seo-title: Creating Launches
-description: '今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるように、ローンチを作成できます。 '
+description: 今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるように、ローンチを作成できます。
 seo-description: You can create a launch to enable the updating of a new version of existing web pages for future activation.
 uuid: c1a32710-8189-4a2e-bf2f-428ab30d48c8
 contentOwner: Chris Bohnert
@@ -14,13 +14,13 @@ exl-id: 4b9d2f5f-aae7-4366-b6a6-a8277155cee9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '986'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
-# ローンチの作成{#creating-launches}
+# ローンチの作成 {#creating-launches}
 
-ローンチを作成し、今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるようにします。ローンチを作成する際は、タイトルとソースページを指定します。
+ローンチを作成し、既存の web ページの新しいバージョンを更新して後でアクティブ化できるようにします。ローンチを作成する際は、タイトルとソースページを指定します。
 
 * タイトルは[参照](/help/sites-authoring/author-environment-tools.md#references)レールに表示されます。作成者はそこからローンチにアクセスして作業できます。
 * デフォルトで、ソースページの子ページがローンチに含まれています。希望に応じて、ソースページのみを使用することもできます。
@@ -84,11 +84,11 @@ ht-degree: 98%
    * **ローンチタイトル**：ローンチの名前。作成者にとって意味のある名前にしてください。
    * **既存のコンテンツを使用**：元のコンテンツを使用してローンチを作成します。
    * **新しいテンプレートを使用してページを置き換える**：詳しくは、[新しいテンプレートでのローンチの作成](#create-launch-with-new-template)を参照してください。
-   * **ソースページのライブデータを継承**：ソースページに変更があったときにローンチページのコンテンツを自動的に更新する場合は、このオプションを選択します。このオプションは、ローンチを [ライブコピー](/help/sites-administering/msm.md).
+   * **ソースページのライブデータを継承**：ソースページに変更があったときにローンチページのコンテンツを自動的に更新する場合は、このオプションを選択します。このオプションは、ローンチを[ライブコピー](/help/sites-administering/msm.md)にすることでこれを達成します。
 
       デフォルトでは、このオプションが選択されています。
 
-   * **ローンチ日**：ローンチコピーがアクティベートされる日付と時間（「**実稼動準備完了**」フラグによって変わります。[ローンチ - イベントの順序](/help/sites-authoring/launches.md#launches-the-order-of-events)を参照してください）。
+   * **ローンチ日**：ローンチコピーがアクティベートされる日時（「**実稼動準備完了**」フラグによって変わります。[ローンチ - イベントの順序](/help/sites-authoring/launches.md#launches-the-order-of-events)を参照してください）。
 
    ![chlimage_1-227](assets/chlimage_1-227.png)
 
@@ -97,7 +97,7 @@ ht-degree: 98%
    （「**完了**」を使用して）コンソールを戻す場合、次のいずれかからローンチを確認（およびアクセス）できます。
 
    * [**ローンチ**&#x200B;コンソール](/help/sites-authoring/launches.md#the-launches-console)
-   * [**サイト**&#x200B;コンソールの「**参照**」](/help/sites-authoring/launches.md#launches-in-references-sites-console)
+   * **Sites** コンソールの&#x200B;[**参照**](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 
 ### 新しいテンプレートでのローンチの作成 {#create-launch-with-new-template}
 
@@ -111,10 +111,10 @@ ht-degree: 98%
 
 ![chlimage_1-228](assets/chlimage_1-228.png)
 
-これを選択すると、次の処理がおこなわれます。
+これを選択すると、次の処理が行われます。
 
-* 使用可能なその他のオプションが更新されます。
-* 必要なテンプレートを選択できる、新しいステップを含みます。
+* 使用可能なその他のオプションを更新します。
+* 必須のテンプレートを選択できる新しいステップを含みます。
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
@@ -164,7 +164,7 @@ ht-degree: 98%
 
 * サムネールをタップまたはクリックして、ローンチを選択します。
 * ツールバーが表示されたら、「削除」を選択します。
-* アクションを確定します。
+* アクションを確認します。
 
 >[!CAUTION]
 >

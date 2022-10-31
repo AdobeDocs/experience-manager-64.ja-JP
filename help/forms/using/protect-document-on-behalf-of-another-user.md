@@ -11,7 +11,7 @@ exl-id: 76f25e65-1bc3-4801-998c-40ff533393e2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '383'
-ht-degree: 89%
+ht-degree: 93%
 
 ---
 
@@ -19,18 +19,18 @@ ht-degree: 89%
 
 AEM Forms Document Security Java SDK には、別のユーザーの代わりにユーザーアカウントを使用してドキュメントを保護する API セットが用意されています。ドキュメントの編集権限を取得する必要はありません。これらの API は、ワークフロープロセスで使用することも、プログラム内でドキュメントサービスとして使用することもできます。新しく導入された API は以下のとおりです。
 
-* **protectDocumentUse** の代わりにポリシーをドキュメントに適用する ProtectDocument API です
+* **protectDocumentUse** protectDocument API では、別のユーザーアカウントを使用する代わりに、ポリシーをドキュメントに適用することができます。
 
-   別のユーザーアカウント。 ポリシーを適用するためのユーザーアカウントの権限は、ドキュメントの保護に制限されたままになります。ドキュメントを開いて表示するための権限が付与されることはありません。RMSecureDocumentResult protectDocument(Document inDoc, String documentName, String policySetName, String policyName, RMLocale locale, boolean bExactMatchForNames)
+   別のユーザーアカウント。ポリシーを適用するためのユーザーアカウントの権限は、ドキュメントの保護に制限されたままになります。ドキュメントを開いて表示するための権限が付与されることはありません。RMSecureDocumentResult protectDocument(Document inDoc, String documentName, String policySetName, String policyName, RMLocale locale, boolean bExactMatchForNames)
 
-* **createLicenseUse** createLicense API では、別のユーザーアカウントを使用する代わりに、ポリシーのライセンスを作成することができます。 PublishLicenseDTO createLicense(String policyId, String documentName, boolean logSecureDocEvent)
+* **createLicenseUse** createLicense API では、別のユーザーアカウントを使用する代わりに、ポリシーのライセンスを作成することができます。PublishLicenseDTO createLicense(String policyId, String documentName, boolean logSecureDocEvent)
 * **protectDocumentWithCoverPageUse** protectDocumentWithCoverPage API では、別のユーザーの代わりにポリシーを適用して、ドキュメントにカバーページを追加することができます。ポリシーを適用するためのユーザーアカウントの権限は、ドキュメントの保護に制限されたままになります。ドキュメントを開いて表示するための権限が付与されることはありません。RMSecureDocumentResult protectDocumentWithCoverPage(Document inDoc, String documentName, String policySetName, String policyName, Document coverDoc, boolean bExactMatchForNames)
 
 ## API を使用して別のユーザーの代わりにドキュメントを保護する {#using-the-apis-to-protect-a-document-on-behalf-of-another-user}
 
 次の手順を実行して、別のユーザーの代わりにドキュメントを保護します。ドキュメントの編集権限を取得する必要はありません。
 
-1. ポリシーセットを作成します。 例えば、PolicySet1 を作成します。
+1. ポリシーセットを作成します。例えば、PolicySet1 を作成します。
 1. 新規作成されたポリシーセットにポリシーを作成します。例えば、PolicySet1 に Policy1 を作成します。
 1. Rights Managemen エンドユーザーの役割を持つユーザーを作成します。例えば、User1 を作成します。Policy1 を使用して、新しく作成されたユーザーに保護されたドキュメントを表示する権限を付与します。
 1. 新しい役割を作成します。例えば、Role1 を作成します。新しく作成された役割にサービスを起動する権限を付与します。新しく作成された役割でユーザーを作成します。例えば、User2 を作成します。User2 または管理者権限を使用して SDK 接続を作成し、protectDocument サービスを起動できます。

@@ -1,7 +1,7 @@
 ---
 title: モバイルアプリのページテンプレート
 seo-title: Page Templates for Mobile Apps
-description: 'このページでは、モバイルアプリのページテンプレートについて説明します。 '
+description: このページでは、モバイルアプリのページテンプレートについて説明します。
 seo-description: Follow this page to learn about page templates for mobile apps.
 uuid: ef469796-10f5-44f4-a5c7-25025ca192b0
 contentOwner: User

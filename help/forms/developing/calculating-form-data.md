@@ -104,11 +104,11 @@ Forms サービスでは、ユーザーがフォームに入力した値を計�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 **Forms Client API オブジェクトの作成**
 
-Forms Service Client API 操作をプログラムで実行する前に、Forms サービスクライアントを作成する必要があります。 Java API を使用している場合は、`FormsServiceClient` オブジェクトを作成します。Forms web サービス API を使用している場合は、`FormsServiceService` オブジェクトを作成します。
+Forms Service Client API 操作をプログラムで実行する前に、Forms サービスクライアントを作成する必要があります。Java API を使用している場合は、`FormsServiceClient` オブジェクトを作成します。Forms web サービス API を使用している場合は、`FormsServiceService` オブジェクトを作成します。
 
 **計算スクリプトを含むフォームの取得**
 
@@ -151,7 +151,7 @@ Forms API（Java）を使用してフォームデータを計算します。
    *  `FormsServiceClient` オブジェクトの `processFormSubmission` メソッドを呼び出して、次の値を渡します。
 
       * フォームデータを含む `com.adobe.idp.Document` オブジェクト。
-      * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。 `CONTENT_TYPE` 環境変数に 1 つまたは複数の値を指定して、処理するコンテンツタイプを指定する必要があります。例えば、XML データと PDF データを処理するには、このパラメーターに文字列値「`CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`」を指定します。
+      * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。`CONTENT_TYPE` 環境変数に 1 つまたは複数の値を指定して、処理するコンテンツタイプを指定する必要があります。例えば、XML データと PDF データを処理するには、このパラメーターに文字列値「`CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`」を指定します。
       * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`）。
       * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
 
@@ -195,7 +195,7 @@ Forms API（web サービス）を使用してフォームデータを計算し�
    * `java.io.InputStream` オブジェクトの内容を `java.io.ByteArrayOutputStream` オブジェクトにコピーします。
    * `java.io.ByteArrayOutputStream` オブジェクトの `toByteArray` メソッドを呼び出してバイト配列を作成します。
    *  `setBinaryData` メソッドを呼び出してバイト配列を引数として渡すことによって、`BLOB` オブジェクトに入力します。
-   * コンストラクターを使用して `RenderOptionsSpec` オブジェクトを作成します。 `RenderOptionsSpec` オブジェクトの `setLocale` メソッドを呼び出してロケール値を指定する文字列値を渡すことによって、ロケール値を設定します。
+   * コンストラクターを使用して `RenderOptionsSpec` オブジェクトを作成します。`RenderOptionsSpec` オブジェクトの `setLocale` メソッドを呼び出してロケール値を指定する文字列値を渡すことによって、ロケール値を設定します。
    * `FormsServiceClient` オブジェクトの `processFormSubmission` メソッドを呼び出して、次の値を渡します。
 
       * フォームデータを格納する `BLOB` オブジェクト。
@@ -207,7 +207,7 @@ Forms API（web サービス）を使用してフォームデータを計算し�
       * メソッドによって設定される空の `BLOBHolder` オブジェクト。
       * メソッドによって設定される空の `BLOBHolder` オブジェクト。
       * メソッドによって設定される空の `javax.xml.rpc.holders.ShortHolder` オブジェクト。
-      * メソッドによって設定される空の `MyArrayOf_xsd_anyTypeHolder` オブジェクト。 このパラメーターは、フォームと共に送信される添付ファイルを保存するために使用されます。
+      * メソッドによって設定される空の `MyArrayOf_xsd_anyTypeHolder` オブジェクト。このパラメーターは、フォームと共に送信される添付ファイルを保存するために使用されます。
       * 送信したフォームを使用して、このメソッドで入力される空の `FormsResultHolder` オブジェクト。
 
       `processFormSubmission` メソッドで、フォーム送信の結果を `FormsResultHolder` パラメーターに入力します。`processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。

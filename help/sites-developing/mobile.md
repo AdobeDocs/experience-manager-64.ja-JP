@@ -383,7 +383,7 @@ AEM は `BrowserMap` に基づくデバイスのクライアントサイド検�
 
 ### 代替リンクの設定 {#providing-alternate-links}
 
-`PageVariantsProvider` OSGi サービスは、同じファミリーに属するサイトに対して代替リンクを生成できます。 サービスが考慮するサイトを設定するには、サイトのルートから `jcr:content` ノードに `cq:siteVariant` ノードを追加する必要があります。
+`PageVariantsProvider` OSGi サービスは、同じファミリーに属するサイトに対して代替リンクを生成できます。サービスが考慮するサイトを設定するには、サイトのルートから `jcr:content` ノードに `cq:siteVariant` ノードを追加する必要があります。
 
 `cq:siteVariant` ノードには以下のプロパティが必要です。
 

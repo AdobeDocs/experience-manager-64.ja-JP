@@ -1,7 +1,7 @@
 ---
 title: ローンチ
 seo-title: Launches
-description: ローンチを作成し、今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるようにします。ローンチを作成するとき、タイトルとソースページを指定します。
+description: ローンチを作成し、既存の web ページの新しいバージョンを更新して後でアクティブ化できるようにします。ローンチを作成するとき、タイトルとソースページを指定します。
 seo-description: Create a launch to enable the updating of a new version of existing web pages for future activation. When you create a Launch, you specify a title and the source page.
 uuid: b1952b6c-fc44-4e39-80ba-9380a6c66b8c
 contentOwner: Alison Heimoz
@@ -13,11 +13,11 @@ exl-id: e1e5dc83-2f9c-4c8d-a031-5ded3f1316a1
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
-# ローンチ{#launches}
+# ローンチ {#launches}
 
 ローンチを使用すると、今後のリリース用にコンテンツを効率的に開発できます。
 
@@ -25,12 +25,12 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->立ち上げの背後にある理論は、次の項で詳しく述べられています。 [起動回数](/help/sites-authoring/launches.md) （標準のオーサリングドキュメント）。
+>ローンチの背後にある考え方について詳しくは、標準のオーサリングドキュメントの[ローンチ](/help/sites-authoring/launches.md)を参照してください。
 >
->クラシック UI でのローンチの使用に関する情報については、次のドキュメントで、 [ローンチの作成](/help/sites-classic-ui-authoring/classic-launches-creating.md), [ローンチの編集](/help/sites-classic-ui-authoring/classic-launches-editing.md)、および [ローンチの昇格](/help/sites-classic-ui-authoring/classic-launches-promoting.md).
+>クラシック UI でのローンチの使用に関する具体的な情報については、[ローンチの作成](/help/sites-classic-ui-authoring/classic-launches-creating.md)、[ローンチの編集](/help/sites-classic-ui-authoring/classic-launches-editing.md)、および[ローンチの昇格](/help/sites-classic-ui-authoring/classic-launches-promoting.md)と共に、以下のドキュメントに記載されています。
 
 >[!CAUTION]
 >
->クラシック UI では、1 つのローンチに対して複数のソースブランチを持つことはできません。
+>クラシック UI では、1 つのローンチに複数のソース分岐を使用するとはできません。
 
-ローンチコンソールには、を使用して直接アクセスできます。 [http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)
+ローンチコンソールには、[http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html) から直接アクセスできます。

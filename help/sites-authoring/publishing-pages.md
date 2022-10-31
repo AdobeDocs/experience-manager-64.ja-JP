@@ -1,7 +1,7 @@
 ---
-title: 'ページの公開 '
+title: ページの公開
 seo-title: Publishing Pages
-description: 'ページの公開 '
+description: ページの公開
 seo-description: null
 uuid: 1222859d-ef8d-462e-a125-b76e6cfec26d
 contentOwner: Chris Bohnert
@@ -89,7 +89,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->エディターで[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)を使用してアクセスしたページは公開できません。 エディターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
+>エディターで[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)を使用してアクセスしたページは公開できません。エディターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
 
 ### コンソールからの公開 {#publishing-from-the-console}
 

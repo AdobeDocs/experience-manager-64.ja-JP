@@ -25,7 +25,7 @@ ht-degree: 100%
 
 1. 静的テンプレートを使用するページでは、次の手順を実行します。
 
-   1. ページのヘッダーで、![canvas-drop-down](assets/canvas-drop-down.png)>**Design** をタップすると、デザインモードでページが表示されます。
+   1. ページのヘッダーで、![canvas-drop-down](assets/canvas-drop-down.png) > **Design** をタップすると、デザインモードでページが表示されます。
    1. 任意の（青色の境界線の付いている）コンポーネントをタップしてから「![フィールドレベル](assets/field-level.png)」をタップし、現在のコンポーネントが含まれている段落システムを選択します。
    1. 段落システムで「![settings_icon](assets/settings_icon.png)」をタップして段落システムの編集ダイアログを開きます。
    1. **[!UICONTROL 許可されたコンポーネント]**&#x200B;のリストから、**[!UICONTROL Document Services]** コンポーネントと **[!UICONTROL Document Services Predicates]** コンポーネントのチェックボックスをオンにします。「**[!UICONTROL OK]**」をタップします。
@@ -44,7 +44,7 @@ ht-degree: 100%
 ## 関連記事
 
 * [フォームポータルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
-* [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)
+* [フォームポータルページの作成 ](/help/forms/using/creating-form-portal-page.md)
 * [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)

@@ -137,7 +137,7 @@ Scene7ビデオの閲覧にScene7ビデオコンポーネントの使用をお�
 | アプローチ | HTML5 における最優先のアプローチです。Flash は HTML5 以外のフォールバックでのみ使用されます。 | ほとんどのデスクトップでは Flash です。HTML5 はモバイルとタブレットで使用されます。 |
 | 配信 | プログレッシブ | アダプティブストリーミング |
 | 追跡 | はい | はい |
-| 拡張性 | 対応 | はい ( [HTML5 Viewer SDK API ドキュメント](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)) |
+| 拡張性 | はい | はい ( [HTML5 Viewer SDK API ドキュメント](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)) |
 | モバイルビデオ | はい | はい |
 
 ### 設定 {#setting-up}

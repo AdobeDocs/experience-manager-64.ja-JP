@@ -113,7 +113,7 @@ Adobeでは、Dynamic Media Classicのターゲットフォルダー内のアセ
    ![chlimage_1-77](assets/chlimage_1-77.png)
 
 1. Web ページで、ページの目的の場所に Dynamic Media Classic（Scene7）コンポーネントを追加します。
-1. コンテンツファインダーから、デジタルアセットをコンポーネントにドラッグします。 次へのリンクが表示されます： **[!UICONTROL Dynamic Media Classic Publication ステータスの確認]**.
+1. コンテンツファインダーから、デジタルアセットをコンポーネントにドラッグします。次へのリンクが表示されます： **[!UICONTROL Dynamic Media Classic Publication ステータスの確認]**.
 
    >[!NOTE]
    >
@@ -132,7 +132,7 @@ Adobeでは、Dynamic Media Classicのターゲットフォルダー内のアセ
 AEMでは、次のDynamic Media Classicコンポーネントを使用できます。
 
 * ズーム
-* フライアウト（ズーム）
+* フライアウト (ズーム)
 * 画像テンプレート
 * 画像
 * ビデオ
@@ -320,7 +320,7 @@ Dynamic Media Classic ビデオコンポーネントでアダプティブビデ�
 
 Dynamic Media Classicのコンテンツブラウザーを使用すると、Dynamic Media ClassicのコンテンツをAEMで直接表示できます。 コンテンツブラウザーにアクセスするには、コンテンツファインダーで、タッチ操作向けユーザーインターフェイスの「**[!UICONTROL Dynamic Media Classic]**」またはクラシックインターフェイスの&#x200B;**[!UICONTROL S7]**&#x200B;アイコンを選択します。どちらのユーザーインターフェイスを使用しても、機能は同じです。
 
-設定が複数ある場合、AEM では既定で[デフォルト設定](/help/sites-administering/scene7.md#configuring-a-default-configuration)が表示されます。 Dynamic Media Classic コンテンツブラウザーのドロップダウンメニューで、別の設定を直接選択できます。
+設定が複数ある場合、AEM では既定で[デフォルト設定](/help/sites-administering/scene7.md#configuring-a-default-configuration)が表示されます。Dynamic Media Classic コンテンツブラウザーのドロップダウンメニューで、別の設定を直接選択できます。
 
 >[!NOTE]
 >
@@ -339,7 +339,7 @@ Dynamic Media Classicのコンテンツブラウザーを使用すると、Dynam
 
 Dynamic Media Classicでコンテンツを参照するには、 **[!UICONTROL S7]** タブをクリックします。
 
-設定を選択することで、現在アクセスしている設定を変更することができます。 フォルダーは、選択する設定に応じて変わります。
+設定を選択することで、現在アクセスしている設定を変更することができます。フォルダーは、選択する設定に応じて変わります。
 
 ![chlimage_1-92](assets/chlimage_1-92.png)
 

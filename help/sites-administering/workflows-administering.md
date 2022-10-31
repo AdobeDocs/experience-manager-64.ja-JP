@@ -13,7 +13,7 @@ exl-id: 70d4117b-5e49-46e4-a0b8-f56cf985536e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '818'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->この [JMX コンソール](/help/sites-administering/jmx-console.md#workflow-maintenance) には、その他のワークフローメンテナンス操作が用意されています。
+>[JMX コンソール](/help/sites-administering/jmx-console.md#workflow-maintenance)を使用すると、追加のワークフローメンテナンス操作を行うことができます。
 
 ワークフローの管理用に、次の各種コンソールが用意されています。[グローバルナビゲーション](/help/sites-authoring/basic-handling.md#global-navigation)を使用して&#x200B;**ツール**&#x200B;パネルを開き、その後「**ワークフロー**」を選択します。
 
@@ -101,7 +101,7 @@ ht-degree: 95%
 
 有効期間とステータスに応じてワークフローインスタンスをパージするように **Adobe Granite のワークフローのパージ設定**&#x200B;を設定します。また、すべてのモデルまたは特定のモデルのワークフローインスタンスをパージすることもできます。
 
-また、様々な条件を満たすワークフローインスタンスをパージするために、サービスの設定を複数作成することもできます。例えば、予想していた時間よりも大幅に実行時間の長い特定のワークフローモデルのインスタンスをパージする設定を作成します。さらに、リポジトリのサイズを最小限に抑えるために、特定の日数が経過した後に完了したワークフローをすべてパージするもう 1 つの設定を作成します。
+また、様々な条件を満たすワークフローインスタンスをパージするために、サービスの設定を複数作成することもできます。例えば、予想していた時間よりも大幅に実行時間の長い特定のワークフローモデルのインスタンスをパージする設定を作成します。さらに、リポジトリーのサイズを最小限に抑えるために、特定の日数が経過した後に完了したワークフローをすべてパージするもう 1 つの設定を作成します。
 
  サービスを設定するには、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)を使用するか、[リポジトリに OSGi 設定を追加](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)します。次の表では、どちらの方法でも必要になるプロパティについて説明しています。
 
@@ -151,13 +151,13 @@ ht-degree: 95%
 
 ## インボックスの最大サイズの設定 {#setting-the-maximum-size-of-the-inbox}
 
-インボックスの最大サイズは、 **AdobeGranite Workflow Service**、 [Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) または [リポジトリに OSGi 設定を追加します。](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 次の表では、どちらの方法でも設定するプロパティについて説明しています。
+インボックスの最大サイズは、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)を使用して **Adobe Granite Workflow Service** を設定する、または[リポジトリに OSGi 設定を追加](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)することで設定できます。次の表では、どちらの方法でも設定するプロパティについて説明しています。
 
 >[!NOTE]
 >
 >リポジトリーに設定を追加する場合のサービス PID は次のとおりです。
 >
->`com.adobe.granite.workflow.core.WorkflowSessionFactory`
+>`com.adobe.granite.workflow.core.WorkflowSessionFactory`。
 
 | プロパティ名（Web コンソール） | OSGi のプロパティ名 |
 |---|---|

@@ -1,7 +1,7 @@
 ---
 title: JSON スキーマを使用したアダプティブフォームの作成
 seo-title: Creating adaptive forms using JSON Schema
-description: 'アダプティブフォームではフォームモデルとして JSON スキーマを使用できるため、アダプティブフォームの作成に既存の JSON スキーマを活用できます。 '
+description: アダプティブフォームではフォームモデルとして JSON スキーマを使用できるため、アダプティブフォームの作成に既存の JSON スキーマを活用できます。
 seo-description: Adaptive forms can use JSON schema as form model, allowing you to leverage existing JSON schemas to create adaptive forms.
 uuid: e73b4b4c-6ad7-4400-b776-5892549970c3
 topic-tags: develop
@@ -12,7 +12,7 @@ exl-id: 42c41625-7441-479c-bd07-7e96e867cc0a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1207'
-ht-degree: 82%
+ht-degree: 86%
 
 ---
 
@@ -319,7 +319,7 @@ JSON スキーマの例を示します。
 
 ## JSON スキーマ定義でのフィールドの事前設定 {#pre-configuring-fields-in-json-schema-definition}
 
-以下を使用して、 **aem:afProperties** プロパティを使用して、カスタムのアダプティブフォームコンポーネントにマッピングするための「 JSON スキーマ」フィールドを事前設定します。 以下に例を示します。
+**aem:afProperties** プロパティを使用して JSON スキーマのフィールドを事前構成し、カスタムのアダプティブフォームコンポーネントにマップできます。以下に例を示します。
 
 ```
 {
@@ -341,7 +341,7 @@ JSON スキーマの例を示します。
 
 ## アダプティブフォームコンポーネントで許容される値の制限 {#limit-acceptable-values-for-an-adaptive-form-component}
 
-JSON スキーマ要素に次の制限を追加して、アダプティブフォームコンポーネントで使用できる値を制限することができます。
+JSON スキーマの要素に次の制限を追加して、アダプティブフォームコンポーネントで許容される値を制限できます。
 
 <table> 
  <tbody> 
@@ -419,7 +419,7 @@ JSON スキーマ要素に次の制限を追加して、アダプティブフォ
    <td><p>文字のシーケンスを指定します。文字が指定されたパターンに適合すると、コンポーネントはその文字を受け入れます。</p> <p>この pattern プロパティは、対応するアダプティブフォームコンポーネントの検証パターンにマッピされます。</p> </td> 
    <td> 
     <ul> 
-     <li>XSD スキーマにマッピングされるすべてのアダプティブフォームコンポーネント </li> 
+     <li>XSD スキーマにマップされるすべてのアダプティブフォームコンポーネント </li> 
     </ul> </td> 
   </tr> 
   <tr> 

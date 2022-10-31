@@ -94,7 +94,7 @@ ht-degree: 72%
 * **[!UICONTROL 「設定」タブ：]**
 
    * 表示名 = `Participation Board`
-   *  `checked` の下）で、次の手順をおこないます。
+   *  `checked`：
 
       * バッジ
       * バッジ名
@@ -118,7 +118,7 @@ ht-degree: 72%
 * **[!UICONTROL 「設定」タブ：]**
 
    * 表示名 = `Expertise Board`
-   *  `checked` の下）で、次の手順をおこないます。
+   *  `checked`：
 
       * バッジ
       * ユーザーアバター

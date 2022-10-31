@@ -12,7 +12,7 @@ exl-id: ea21b47f-25fc-48cb-a5dc-d0433146b40d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '269'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
@@ -28,18 +28,18 @@ ht-degree: 57%
 
 ## カスタムパネルレイアウトの作成 {#creating-a-custom-panel-layout}
 
-1. 場所に移動します。 `/crx/de`.
-1. 次の場所からパネルレイアウトをコピーする `/libs/fd/af/layouts/panel` ( 例： `tabbedPanelLayout`) から `/apps` ( 例： `/apps/af-custom-layout`) をクリックします。
-1. コピーしたレイアウトの名前をに変更します。 `customPanelLayout`. ノードのプロパティを変更する `qtip` および `jcr:description`. 例えば、次のように変更します。 `Custom layout - Toggle tabs`.
+1. 場所 `/crx/de` に移動します。
+1. パネルレイアウトを場所 `/libs/fd/af/layouts/panel` （例えば、`tabbedPanelLayout` ）から `/apps` （例えば、`/apps/af-custom-layout`）にコピーします。
+1. コピーしたレイアウトの名前を `customPanelLayout` に変更します。ノード `qtip` および `jcr:description` のプロパティを変更します。例えば、それらを `Custom layout - Toggle tabs` に変更します。
 
 ![カスタムパネルレイアウトの CRX DE スナップショット](assets/custom.png)
 
 >[!NOTE]
 >
->プロパティの設定 `guideComponentType`値に `fd/af/layouts/panel` は、レイアウトがパネルレイアウトであることを判別します。
+>プロパティ `guideComponentType` の値を `fd/af/layouts/panel` に設定すると、レイアウトがパネルレイアウトになります。
 
-1. ファイル名を変更 `tabbedPanelLayout.jsp` 新しいレイアウトの下で、customPanelLayout.jsp.
-1. 新しいスタイルおよび動作を追加するには、`etc` ノードでクライアントライブラリを作成します。例えば、/etc/af-custom-layout-clientlib の場所で、ノード client-library を作成します。 このノードにカテゴリのプロパティ af.panel.custom を設定します。このプロパティには次の .css ファイルと .js ファイルがあります。
+1. 新しいレイアウトにあるファイル `tabbedPanelLayout.jsp` の名前を customPanelLayout.jsp に変更します。
+1. 新しいスタイルおよび動作を追加するには、`etc` ノードでクライアントライブラリを作成します。例えば、/etc/af-custom-layout-clientlib でノードクライアントライブラリを作成します。このノードにカテゴリのプロパティ af.panel.custom を設定します。このプロパティには次の .css ファイルと .js ファイルがあります。
 
    ```css
    /** CSS defining new styles used by custom layout **/
@@ -111,9 +111,9 @@ ht-degree: 57%
    });
    ```
 
-1. 外観と動作を強化するには、 `client library`.
+1. アピアランスと動作を強化するには、`client library` を追加します。
 
-   さらに、.jps ファイルに含まれるスクリプトのパスを更新します。例えば、 `customPanelLayout.jsp` ファイルの内容は次のとおりです。
+   さらに、.jps ファイルに含まれるスクリプトのパスを更新します。例えば、`customPanelLayout.jsp` ファイルを次のように更新します。
 
    ```
    <%-- jsp encapsulating navigator container and panel container divs --%>
@@ -142,7 +142,7 @@ ht-degree: 57%
    </div>
    ```
 
-   この `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp` ファイル：
+   `/apps/af-custom-layout/customPanelLayout/defaultNavigatorLayout.jsp` ファイル：
 
    ```
    <%-- jsp governing the navigation part --%>
@@ -200,7 +200,7 @@ ht-degree: 57%
 
 1. オーサリングモードでアダプティブフォームを開きます。定義したパネルレイアウトがパネルレイアウト設定用のリストに追加されます。
 
-   ![カスタムパネルレイアウトがパネルレイアウトリストに表示される](assets/auth-layt.png) ![カスタムパネルレイアウトを使用したアダプティブフォームのスクリーンショット](assets/s1.png) ![カスタムレイアウトの切り替え機能を示すスクリーンショット](assets/s2.png)
+   ![パネルレイアウトリストに表示されたカスタムパネルレイアウト](assets/auth-layt.png) ![カスタムパネルレイアウトを使用したアダプティブフォームのスクリーンショット](assets/s1.png) ![カスタムレイアウトの切り替え機能を示したスクリーンショット](assets/s2.png)
 
 カスタムパネルレイアウトとカスタムパネルレイアウトを使用したアダプティブフォームのサンプル ZIP ファイル。
 

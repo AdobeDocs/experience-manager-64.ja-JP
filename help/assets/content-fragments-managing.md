@@ -1,7 +1,7 @@
 ---
 title: コンテンツフラグメントの管理
 seo-title: Managing Content Fragments
-description: コンテンツフラグメントは Assets として保存されるので、主に Assets コンソールから管理します。
+description: コンテンツフラグメントは アセットとして保存されるので、主にアセットコンソールから管理します。
 seo-description: Content Fragments are stored as Assets, so are primarily managed from the Assets console.
 uuid: 0659cf03-b4e8-4b8b-bec7-0082f980115a
 contentOwner: Alison Heimoz
@@ -25,7 +25,7 @@ ht-degree: 98%
 >
 >一部のコンテンツフラグメント機能には、 [AEM 6.4 Service Pack 2(6.4.2.0) 以降](/help/release-notes/sp-release-notes.md).
 
-コンテンツフラグメントは **[!UICONTROL Assets]** として保存されるので、主に **[!UICONTROL Assets]** コンソールから管理します。
+コンテンツフラグメントは **[!UICONTROL アセット]** として保存されるので、主に **[!UICONTROL アセット]** コンソールから管理します。
 
 >[!NOTE]
 >

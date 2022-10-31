@@ -137,7 +137,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
 
 | **プロパティ** | **タイプ** | **説明** |
 |---|---|---|
-| badgingRules | String[] | [バッジルール](#badging-rules)の配列リスト |
+| badgingRules | 文字列[] | [バッジルール](#badging-rules)の配列リスト |
 | scoringRules | 文字列[] | [スコアルール](#scoring-rules)の配列リスト |
 
 >[!NOTE]
@@ -215,7 +215,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
   <tr> 
    <th>プロパティ</th> 
    <th>タイプ</th> 
-   <th> 値の説明</th> 
+   <th> 値 説明</th> 
   </tr> 
   <tr> 
    <td><i><code>VERB</code></i></td> 
@@ -255,7 +255,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
   </tr> 
   <tr> 
    <td><code>scoringType</code></td> 
-   <td>文字列</td> 
+   <td>String</td> 
    <td> 
     <ul> 
      <li>オプションです。スコアエンジンを指定します。</li> 
@@ -301,7 +301,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
 
       /etc/community/scoring/rules/subrules/member-is-moderated
 
-**備考:**
+**メモ：**
 
 * 両方 `rules`および `sub-rules` ノードのタイプは cq:Page です。
 
@@ -354,7 +354,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
   <tr> 
    <th>プロパティ</th> 
    <th>タイプ</th> 
-   <th>値の説明</th> 
+   <th>値 説明</th> 
   </tr> 
   <tr> 
    <td>thresholds</td> 
@@ -387,7 +387,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
 * /etc/community/badging/rules/comments-badging
 * /etc/community/badging/rules/forums-badging
 
-**備考:**
+**メモ：**
 
 * `rules` のノードは、cq:Page タイプです。
 * `rules` は、リポジトリ内の誰でも読み取れる場所に配置する必要があります。
@@ -428,11 +428,10 @@ cURL -i -XPOST-H *ヘッダー* -u *signin * -F *operation * -F *badge * *member
 >
 >* オーサーインスタンスを参照する場合、 [トンネルサービス](users.md#tunnel-service) 有効
 >* わかりにくく、ランダムな名前である可能性があります。詳しくは、 [セキュリティチェックリスト](../../help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) 許可可能 ID に関して
-
 >
 
 
-### 例えば、次のような問題です。 {#examples}
+### 例： {#examples}
 
 #### モデレーターバッジの割り当て {#assign-a-moderator-badge}
 
@@ -471,9 +470,9 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | **動詞** | **説明** |
 |---|---|
 | POST | メンバーがカレンダーイベントを作成する |
-| ADD | メンバーがカレンダーイベントについてコメントする |
+| 追加 | メンバーがカレンダーイベントについてコメントする |
 | UPDATE | メンバーのカレンダーイベントまたはコメントが編集される |
-| DELETE | メンバーのカレンダーイベントまたはコメントが削除される |
+| 削除 | メンバーのカレンダーイベントまたはコメントが削除される |
 
 **[コメントコンポーネント](comments.md)** SocialEvent `topic`=  = com/adobe/cq/social/comment
 
@@ -482,7 +481,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | POST | メンバーがコメントを作成する |
 | 追加 | メンバーがコメントに返信する |
 | 更新 | メンバーのコメントが編集される |
-| DELETE | メンバーのコメントが削除される |
+| 削除 | メンバーのコメントが削除される |
 
 **[ファイルライブラリコンポーネント](file-library.md)** SocialEvent `topic`=  = com/adobe/cq/social/fileLibrary
 
@@ -491,7 +490,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | POST | メンバーがフォルダーを作成する |
 | ATTACH | メンバーがファイルをアップロードする |
 | 更新 | メンバーがフォルダーまたはファイルを更新する |
-| DELETE | メンバーがフォルダーまたはファイルを削除する |
+| 削除 | メンバーがフォルダーまたはファイルを削除する |
 
 **[フォーラムコンポーネント](forum.md)** SocialEvent `topic`=  = com/adobe/cq/social/forum
 
@@ -500,7 +499,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | POST | メンバーがフォーラムトピックを作成する |
 | 追加 | メンバーがフォーラムトピックに返信する |
 | 更新 | メンバーのフォーラムトピックまたは返信が編集される |
-| DELETE | メンバーのフォーラムトピックまたは返信が削除される |
+| 削除 | メンバーのフォーラムトピックまたは返信が削除される |
 
 **[ジャーナルコンポーネント](blog-feature.md)** SocialEvent `topic`=  = com/adobe/cq/social/journal
 
@@ -509,7 +508,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | POST | メンバーがブログ記事を作成する |
 | 追加 | メンバーがブログ記事にコメントする |
 | 更新 | メンバーのブログ記事またはコメントが編集される |
-| DELETE | メンバーのブログ記事またはコメントが削除される |
+| 削除 | メンバーのブログ記事またはコメントが削除される |
 
 **[Q&amp;A コンポーネント](working-with-qna.md)** SocialEvent `topic` = com/adobe/cq/social/qna
 
@@ -520,7 +519,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | 更新 | メンバーの Q&amp;A の質問または回答が編集される |
 | SELECT | メンバーの回答が選択される |
 | UNSELECT | メンバーの回答の選択が解除される |
-| DELETE | メンバーの Q&amp;A の質問または回答が削除される |
+| 削除 | メンバーの Q&amp;A の質問または回答が削除される |
 
 **[レビューコンポーネント](reviews.md)** SocialEvent `topic`=  = com/adobe/cq/social/review
 
@@ -528,7 +527,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 |---|---|
 | POST | メンバーがレビューを作成する |
 | 更新 | メンバーのレビューが編集される |
-| DELETE | メンバーのレビューが削除される |
+| 削除 | メンバーのレビューが削除される |
 
 **[評価コンポーネント](rating.md)**
 SocialEvent `topic`= com/adobe/cq/social/tally/rating
@@ -599,7 +598,7 @@ SocialEvent `topic`= com/adobe/cq/social/tally/voting
    * 選択 **[!UICONTROL 複数]**
    * 選択 **[!UICONTROL 追加]**
    * `/etc/community/badging/rules/forums-badging` と入力します。
-   *  `+`
+   * 選択 `+`
    * `/etc/community/badging/rules/comments-badging` と入力します。
    * 「**[!UICONTROL OK]**」を選択します。
 
@@ -610,7 +609,7 @@ SocialEvent `topic`= com/adobe/cq/social/tally/voting
    * 選択 **[!UICONTROL 複数]**
    * 選択 **[!UICONTROL 追加]**
    * `/etc/community/scoring/rules/forums-scoring` と入力します。
-   *  `+`
+   * 選択 `+`
    * `/etc/community/scoring/rules/comments-scoring` と入力します。
    * 「**[!UICONTROL OK]**」を選択します。
 
@@ -629,7 +628,7 @@ SocialEvent `topic`= com/adobe/cq/social/tally/voting
 
    * **名前**：`allowBadges`
    * **型**：`Boolean`
-   * **値**: `true`
+   * **値**：`true`
 
 ![chlimage_1-371](assets/chlimage_1-371.png)
 

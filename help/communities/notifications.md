@@ -108,7 +108,7 @@ A [ウィザードが作成したコミュニティサイト](sites-console.md) 
 
 ![chlimage_1-258](assets/chlimage_1-258.png)
 
-### 電子メール通知 {#email-notifications}
+### メール通知 {#email-notifications}
 
 電子メールチャネルを有効にすると、メンバーは、Web 上のコンテンツへのリンクが記載されている電子メールを受信します。
 

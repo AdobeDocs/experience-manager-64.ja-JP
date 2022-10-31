@@ -1,5 +1,5 @@
 ---
-title: 'アクティビティの管理 '
+title: アクティビティの管理
 seo-title: Managing Activities
 description: アクティビティコンソールでは、ブランドのマーケティングアクティビティを作成、整理、管理できます。次のことができます。
 seo-description: The Activities console enables you to create, organize, and manage the marketing activities of your brands
@@ -13,7 +13,7 @@ exl-id: 269eee08-5fca-4621-a56e-93db9361fa64
 source-git-commit: 1c9da35f65b6b9edacc3d5529ee80e7be94495d2
 workflow-type: tm+mt
 source-wordcount: '2001'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -96,7 +96,7 @@ ht-degree: 96%
 
 アクティビティを追加するには：
 
-1. アクティビティを作成するブランドをクリックまたはタップし、「 」をクリックまたはタップします **作成** その後 **アクティビティを作成**. 編集する場合は、アクティビティを選択し、「 」をクリックまたはタップします **編集**.
+1. アクティビティを作成するブランドをクリックまたはタップして、「**作成**」、「**アクティビティを作成**」の順にクリックまたはタップします。編集する場合は、アクティビティを選択し、「**編集**」をクリックまたはタップします。
 1. 以下の情報を指定して、「**次へ**」をクリックまたはタップします。
 
    * アクティビティ名。

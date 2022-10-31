@@ -1,7 +1,7 @@
 ---
 title: ConvertPDF サービス
 seo-title: ConvertPDF Service
-description: 'AEM Forms の Convert PDF サービスを使用して、PDF ドキュメントを PostScript ファイルや画像ファイルに変換します。 '
+description: AEM Forms の Convert PDF サービスを使用して、PDF ドキュメントを PostScript ファイルや画像ファイルに変換します。
 seo-description: Use AEM Forms ConvertPDF service to convert PDF documents to PostScript or image files.
 uuid: 7fa94c8c-485b-4a77-bcd3-ed716e3cf316
 content-type: reference

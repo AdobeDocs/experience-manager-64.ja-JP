@@ -1,5 +1,5 @@
 ---
-title: 'オーサー環境の操作 '
+title: オーサー環境の操作
 seo-title: Working with the Author Environment
 description: オーサー環境では、オーサリングに関連するタスク（ページオーサリングおよびアセットの管理を含む）と、Web サイトのコンテンツの生成および管理の際に必要な管理タスクを実行できます。
 seo-description: The author environment allows you to perform tasks related to authoring (including page authoring and managing assets) and administering tasks you need when generating and maintaining the content on your website.

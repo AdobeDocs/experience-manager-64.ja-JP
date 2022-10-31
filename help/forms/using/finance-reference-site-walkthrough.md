@@ -1,7 +1,7 @@
 ---
 title: We.Finance リファレンスサイトのチュートリアル
 seo-title: We.Finance reference site walkthrough
-description: 'We.Finance リファレンスサイトを参照し、そのサイトがどのような仕組みを実装しているか確認しましょう。We.Finance は、AEM Forms の特長および主要機能の紹介を目的とするサンプル実装です。 '
+description: We.Finance リファレンスサイトを参照し、そのサイトがどのような仕組みを実装しているか確認しましょう。We.Finance は、AEM Forms の特長および主要機能の紹介を目的とするサンプル実装です。
 seo-description: Explore the We.Finance reference site and understand how it has been implemented. We.Finance is a sample implementation to showcase key features and functionalities of AEM Forms.
 uuid: cbcedba4-6151-475d-b6c2-9859e0382768
 content-type: reference
@@ -12,7 +12,7 @@ exl-id: 17e8c644-ee17-496c-a781-a295a4796cb9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '9201'
-ht-degree: 63%
+ht-degree: 65%
 
 ---
 
@@ -101,7 +101,7 @@ Sarah がモバイルデバイスからクレジットカードの申込フォ�
 
 * XSD スキーマに基づいている。
 * スタイル設定は We Finance Theme A を使用し、レイアウトは We.Finance テンプレートを使用して構築されている。また、フォームのヘッダー部分にはモバイルナビゲーション用のパネルタイトルが表示されないレイアウトが採用されています。モバイルデバイスから開くと、プログレッシブモバイルレイアウトが表示されます。 このテンプレートは、 `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance` テーマは `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/we-finance-theme-a/jcr:content`.
-* フォームデータモデルサービスを呼び出すためのアダプティブフォームルールが含まれ、ログインしたユーザーのユーザー詳細を事前入力する。また、サービスを呼び出す際は、フォームに入力した社会保険番号や電子メールアドレスにより、情報が事前入力されます。フォームデータモデルとそのサービスは、次の場所で確認できます。 `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* フォームデータモデルサービスを呼び出すためのアダプティブフォームルールが含まれ、ログインしたユーザーのユーザー詳細を事前入力する。また、サービスを呼び出す際は、フォームに入力した社会保険番号や電子メールアドレスにより、情報が事前入力されます。フォームデータモデルとそれらのサービスは、次の場所で確認できます。 `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
 * さまざまなアダプティブフォームコンポーネントを使用して入力内容を取得し、ユーザーレスポンスに適合する。HTML5 入力タイプをサポートする電子メールなどのコンポーネントも使用します。
 * 署名ステップコンポーネントを使用して、入力が完了したフォームを表示し、フォーム上で電子署名を行うことができる。
 * 「Save my progress」ボタンをクリックすると、ユーザーに対して一意の ID が生成され、AEM リポジトリのノード内に一部入力済みの申込フォームが下書きとして保存される。また、同じアクションによって、申込フォームの下書きを含むノードへのリンクを電子メールで送信する許可を求めるダイアログが表示されます。確認ダイアログの「Send mail」ボタンをクリックすると、下書きを含むノードへのリンクを持つ電子メールが自動送信されます。
@@ -167,7 +167,7 @@ OSGi 上の AEM Forms によって Forms 中心のワークフローが提供さ
 
 #### 実際の動作確認 {#see-it-yourself-2}
 
-we.finance サイトのAEMインボックス (https://&lt;) にアクセスできます。*hostname*>:&lt;*PublishPort*>/content/we-finance/global/en.html. ページで、をタップします。 **[!UICONTROL ログイン]**&#x200B;を選択し、 **[!UICONTROL 担当者としてログイン]** チェックボックスに移動し、次を使用してAEMインボックスにログインします。 `grios/password` を Gloria Rios のユーザー名/パスワードとして設定し、クレジットカードの申し込みを承認します。 Forms 中心のワークフロータスクにAEM Inbox を使用する方法については、 [AEM Inbox でのFormsアプリケーションとタスクの管理](/help/forms/using/manage-applications-inbox.md).
+we.finance サイトのAEMインボックス (https://&lt;) にアクセスできます。*hostname*>:&lt;*PublishPort*>/content/we-finance/global/en.html. ページで、をタップします。 **[!UICONTROL ログイン]**&#x200B;を選択し、 **[!UICONTROL 担当者としてログイン]** チェックボックスに移動し、次を使用してAEMインボックスにログインします。 `grios/password` を Gloria Rios のユーザー名/パスワードとして設定し、クレジットカードの申し込みを承認します。 Forms 中心のワークフロータスクで AEM インボックスを使用する方法について詳しくは、「[AEM インボックスでの Forms アプリケーションとタスクの管理](/help/forms/using/manage-applications-inbox.md)」を参照してください。
 
 ![inbox-1](assets/inbox-1.png)
 
@@ -272,7 +272,7 @@ Analytics レポートを閲覧および検討したい方のために、リフ�
 1. 左側のディレクトリ構造でテストデータが選択されます。
 1. 選択されたファイルをダブルクリックして、右側のパネルにファイルのコンテンツを開きます。
 1. シードデータファイル内のすべてのコンテンツをコピーします。
-1. CRXDE で、次の場所に移動します。 `/content/dam/formsanddocuments/we-finance/cc-app/jcr:content/analyticsdatanode/lastsevendays`
+1. CRXDE で、`/content/dam/formsanddocuments/we-finance/cc-app/jcr:content/analyticsdatanode/lastsevendays` に移動します。
 1. 内 **[!UICONTROL analyticsdata]** ～の下のフィールド **[!UICONTROL プロパティ]**」で、コピーしたシードデータファイルの内容を貼り付けます。
 
 1. 選択 **クレジットカードの申請** アダプティブフォームを開き、 **[!UICONTROL Analytics レポート]** を使用して、シードデータを含むレポートを生成する必要があります。
@@ -322,6 +322,7 @@ AEM Formsサーバーで Target を設定するには、 [AEM Formsでの Target
 
 A/B テストを終了するには、レポートダッシュボードの「**A/B テストを終了**」ボタンをクリックします。ここで、一方のエクスペリエンスを公表するように求めるダイアログが表示されます。推奨結果を選択し、A/B テストの終了を確認します。
 
+
 エクスペリエンス A を優れていると判断した場合は、A/B テストの終了後は、エクスペリエンス A のみが Chrome ユーザーを含むすべてのオーディエンスに配信されます。
 
 ## 住宅ローン申し込みのチュートリアル {#home-mortgage-application-walkthrough}
@@ -352,7 +353,7 @@ Sarah Rose は家を購入する計画を立て、住宅ローンのプランを
 
 ローンページにある住宅ローン計算機は、AEM サイトページのアダプティブフォームに埋め込まれています。次の場所で編集モードでローンページを確認できます： `https://[authorHost]:[authorPort]/editor.html/content/we-finance/global/en/loan-landing-page.html`.
 
-埋め込まれた住宅ローン計算機はアダプティブフォームです。これは、計算機フィールドに入力されたローンの詳細に基づいて、ルールを使用して EMI 総額を算出します。アダプティブフォームは次の場所で確認できます。 `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/hm-calc.html`.
+埋め込まれた住宅ローン計算機はアダプティブフォームです。これは、計算機フィールドに入力されたローンの詳細に基づいて、ルールを使用して EMI 総額を算出します。アダプティブフォームは `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/hm-calc.html` で確認できます。
 
 #### 実際の動作確認 {#see-it-yourself-5}
 
@@ -443,7 +444,7 @@ OSGi 上の AEM Forms によって Forms 中心のワークフローが提供さ
 
 AEMインボックスには、https://&lt; からアクセスできます。***hostname***>:&lt;***AuthorPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html. Gloria Rios のユーザー名とパスワード（`grios/password`）と、John Doe のユーザー名とパスワード（`jdoe/jdoe`）をそれぞれ使用して AEM インボックスにログインし、住宅ローンの申し込みワークフローを参照します。
 
-Forms 中心のワークフロータスクにAEM Inbox を使用する方法については、 [AEM Inbox でのFormsアプリケーションとタスクの管理](/help/forms/using/manage-applications-inbox.md).
+Forms 中心のワークフロータスクで AEM インボックスを使用する方法について詳しくは、「[AEM インボックスでの Forms アプリケーションとタスクの管理](/help/forms/using/manage-applications-inbox.md)」を参照してください。
 
 ### Sarah がウェルカムキットを受信 {#sarah-receives-the-welcome-kit}
 
@@ -525,7 +526,7 @@ Analytics レポートを閲覧および検討したい方のために、リフ�
 1. 左側のディレクトリ構造でテストデータが選択されます。
 1. 選択されたファイルをダブルクリックして、右側のパネルでファイルのコンテンツを開きます。
 1. シードデータファイル内のすべてのコンテンツをコピーします。
-1. CRXDE で、次の場所に移動します。 `/content/dam/formsanddocuments/we-finance/hm-app/jcr:content/analyticsdatanode/lastsevendays`
+1. CRXDE で、`/content/dam/formsanddocuments/we-finance/hm-app/jcr:content/analyticsdatanode/lastsevendays` に移動します。
 1. 「プロパティ」の下の analyticsdata フィールドに、コピーしたシードデータファイルの内容を貼り付けます。
 1. 住宅ローン申し込みフォームの分析レポートを再度生成します。 シードデータが含まれたレポートが表示されます。
 
@@ -576,6 +577,7 @@ AEM Formsサーバーで Target を設定するには、 [AEM Formsでの Target
 
 A/B テストを終了するには、レポートダッシュボードの「**A/B テストを終了**」ボタンをクリックします。ここで、一方のエクスペリエンスを公表するように求めるダイアログが表示されます。推奨結果を選択し、A/B テストの終了を確認します。
 
+
 エクスペリエンス A を優れていると判断した場合は、A/B テストの終了後は、エクスペリエンス A のみが Chrome ユーザーを含むすべてのオーディエンスに配信されます。
 
 ## Microsoft Dynamics を使用した住宅ローンの申し込みのチュートリアル {#home-mortgage-application-walkthrough-with-microsoft-dynamics}
@@ -601,7 +603,7 @@ Sarah Rose は家を購入する計画を立て、住宅ローンのプランを
 
 ローンページにある住宅ローン計算機は、AEM サイトページのアダプティブフォームに埋め込まれています。次の場所で編集モードでローンページを確認できます： `https://[authorHost]:[authorPort]/editor.html/content/we-finance/global/en/loan-landing-page.html`.
 
-埋め込まれた住宅ローン計算機はアダプティブフォームです。これは、計算機フィールドに入力されたローンの詳細に基づいて、ルールを使用して EMI 総額を算出します。アダプティブフォームは次の場所で確認できます。 `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/ms-dynamics/home-mortgage-calculator.html`.
+埋め込まれた住宅ローン計算機はアダプティブフォームです。これは、計算機フィールドに入力されたローンの詳細に基づいて、ルールを使用して EMI 総額を算出します。アダプティブフォームは `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/ms-dynamics/home-mortgage-calculator.html` で確認できます。
 
 #### 実際の動作確認 {#see-it-yourself-10}
 
@@ -704,7 +706,7 @@ Sarah がモバイルデバイスから申込書を送信した場合は、次�
 * XSD スキーマ、`insurance.xsd` に基づいている。
 * スタイルに保険テーマを使用して構築されており、フォームのヘッダー部分にはモバイルナビゲーション用のパネルタイトルが表示されないレイアウトが採用されている。モバイルデバイスから開くと、プログレッシブモバイルレイアウトが表示されます。 このテンプレートは、 `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance` テーマは `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/insurance/jcr:content`.
 
-* フォームデータモデルサービスを呼び出すためのアダプティブフォームルールが含まれ、ログインしたユーザーのユーザー詳細を事前入力する。また、サービスを呼び出す際は、フォームに入力した社会保険番号や電子メールアドレスにより、情報が事前入力されます。フォームデータモデルとそのサービスは、次の場所で確認できます。 `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* フォームデータモデルサービスを呼び出すためのアダプティブフォームルールが含まれ、ログインしたユーザーのユーザー詳細を事前入力する。また、サービスを呼び出す際は、フォームに入力した社会保険番号や電子メールアドレスにより、情報が事前入力されます。フォームデータモデルとそれらのサービスは、次の場所で確認できます。 `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
 * さまざまなアダプティブフォームコンポーネントを使用して入力内容を取得し、ユーザーレスポンスに適合する。HTML5 入力タイプをサポートする電子メールなどのコンポーネントも使用します。
 * 「Save my progress」ボタンをクリックすると、ユーザーに対して一意の ID が生成され、AEM リポジトリのノード内に一部入力済みの申込フォームが下書きとして保存される。また、同じアクションによって、申込フォームの下書きを含むノードへのリンクを電子メールで送信する許可を求めるダイアログが表示されます。確認ダイアログの「Send mail」ボタンをクリックすると、下書きを含むノードへのリンクを持つ電子メールが自動送信されます。
 * AEM ワークフローを起動する送信アクションを使用して、住宅保険の承認ワークフローをトリガーする。このフォームで使用されるワークフローは、次の場所で確認できます。 `https://[host]:[Port]/editor.html/conf/global/settings/workflow/models/we-finance-insurance-workflow.html`
@@ -725,7 +727,7 @@ Sarah がモバイルデバイスから申込書を送信した場合は、次�
 
 電子メールで受信したニュースレターの「**Apply now**」ボタンをクリックします。または、に移動します。 `https://[publishHost]:[publishPort]/content/we-finance/global/en/all-forms.html` をクリックし、 **[!UICONTROL 適用]** 保険申し込みの。 「Social Security Number」フィールドで `123456789` を指定します。プロンプトが表示されたら、ユーザー名とパスワードに `srose/srose` と入力してログインします。
 
-詳細を入力し、アダプティブフォームの各種コンポーネントを確認して、申込書を送信します。 アダプティブフォームは次の場所で確認できます。 `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/insurance/application-for-insurance.html`.
+詳細を入力し、アダプティブフォームの各種コンポーネントを確認して、申込書を送信します。 アダプティブフォームは `https://[authorHost]:[authorPort]/editor.html/content/forms/af/we-finance/insurance/application-for-insurance.html` で確認できます。
 
 ### We.Finance 社が申し込みを承認し、Sarah が契約書に署名 {#we-finance-approves-the-application-and-a-contract-is-signed}
 
@@ -753,7 +755,7 @@ Frank は Correspondence Management を使用して、住宅保険の保険契�
 
 #### 実際の動作確認 {#see-it-yourself-13}
 
-以下の操作を実行します。
+次の手順を実行します。
 
 1. AEM Inbox に移動し、 `https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html`を使用して、にログインします。 `grios/grios` Gloria のペルソナのユーザー名パスワードとして。 Sarah の住宅保険の申し込みを承認します。
 
@@ -848,7 +850,7 @@ We.Finance の自動保険申し込みシナリオには、次のペルソナが
 * Sarah Rose（We.Finance 社の顧客）
 * We.Finance 社の保険代理店、Conrad Simms 氏
 
-Sarah Rose は We.Finance 社の既存の顧客で、自動保険契約を購入しています。今は保険の更新の時期だ。 We.Finance 社の保険代理店である Conrad Simms 氏が、Sarah に対し、保険契約の更新に関するリマインダーを送信します。 リマインダーの E メールには、PDFの更新の詳細と、インタラクティブ通信の Web バージョンへのリンクが含まれています。 インタラクティブ通信は、モバイルに適したレスポンシブデザインを備えています。 Sarah は任意のデバイスでインタラクティブ通信を開くことができ、インタラクティブ通信は基になるデバイスの画面サイズに合わせてリフローします。 インタラクティブPDFのバージョン（E メールに添付）は、オフラインでの読み取りに役立ちます。
+Sarah Rose は We.Finance 社の既存の顧客で、自動保険ポリシーを購入しています。現在、彼女は保険ポリシーの更新時期を迎えています。We.Finance 社の保険代理店である Conrad Simms 氏が、Sarah に対し、保険契約の更新に関するリマインダーを送信します。 リマインダーの E メールには、PDFの更新の詳細と、インタラクティブ通信の Web バージョンへのリンクが含まれています。 インタラクティブ通信は、モバイルに適したレスポンシブデザインを備えています。 Sarah は任意のデバイスでインタラクティブ通信を開くことができ、インタラクティブ通信は基になるデバイスの画面サイズに合わせてリフローします。 インタラクティブPDFのバージョン（E メールに添付）は、オフラインでの読み取りに役立ちます。
 
 Sarah は電子メールに記載された指示に従い、プロセスを正常に更新します。 次の画像は、自動保険申し込みのチュートリアルのワークフローを示しています。  ![auto-insurance-application-wackthlue](assets/auto-insurance-application-walkthrough.png)
 
@@ -881,7 +883,7 @@ Conrad を使用してAEMインスタンスにログインし、自動保険の�
 また、このリファレンスサイトでは、Microsoft Dynamics をフォームデータモデルのデータソースとして使用するインタラクティブ通信も提供します。 自動保険の案内用にインタラクティブ通信を設定するには、次の手順を実行します。
 
 1. https://にログインします。[作成者]:[ポート]/crx/de を管理者として設定します。
-1. を開きます。 `/apps/we-finance/components/ccrui/ccrui.jsp`ファイル。
+1. `/apps/we-finance/components/ccrui/ccrui.jsp` ファイルを開きます。
 1. 値を `FormFieldRequestParameter`から `/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal-dynamics`
 1. 「**すべて保存**」をタップします。リファレンスサイトは、MS Dynamics をデータソースとして使用するインタラクティブ通信を使用するように構成されます。
 
@@ -893,11 +895,11 @@ Conrad を使用してAEMインスタンスにログインし、自動保険の�
 
 ![agent_ui_email-1](assets/agent_ui_email-1.png)
 
-### Sarah は We.Finance 社から保険契約の更新通知を受信し、更新を決める {#sarah-receives-an-insurance-policy-renewal-communication-from-we-finance-and-decides-to-renew}
+### Sarah は We.Finance 社から保険ポリシーの更新通知を受信し、更新を決めます {#sarah-receives-an-insurance-policy-renewal-communication-from-we-finance-and-decides-to-renew}
 
 Sarah は、自動保険契約が期限切れになることを通知する We.Finance 社の添付ファイルを含む電子メールを受信します。 添付ファイルは、自動保険契約の更新の詳細を印刷したバージョンです。
 
-Sarah がクリック **今すぐ更新** 自動保険レターの Web 版に転送されます。 この手紙の上に、Sarah はポリシーが期限切れになるまでの残り日数が見つかります。 このページでは、Sarah の保険契約の詳細（保険番号、支払額、割引オファーやロイヤルティ報酬など）の概要が表示されます。 Sarah が再度クリック **今すぐ更新** ポリシーの下に
+Sarah がクリック **今すぐ更新** 自動保険レターの Web 版に転送されます。 この手紙の上に、Sarah はポリシーが期限切れになるまでの残り日数が見つかります。 このページでは、Sarah の保険契約の詳細（保険番号、支払額、割引オファーやロイヤルティ報酬など）の概要が表示されます。 Sarah はポリシーの下部の&#x200B;**今すぐ更新する**&#x200B;を再度クリックします。
 
 ![自動保険更新メール](assets/auto-insurance-renewal-email.png)
 
@@ -909,9 +911,9 @@ Sarah がクリック **今すぐ更新** 自動保険レターの Web 版に転
 
 #### 実際の動作確認  {#see-it-yourself-19}
 
-PDF が添付された電子メールを受信します。PDFは、自動保険レターの印刷版です。 クリック **今すぐ更新** をクリックして、ポリシーの web バージョンにアクセスします。 個人情報とポリシーの詳細を確認し、 **今すぐ更新**. 支払い用にアダプティブフォームが表示されます。
+PDF が添付された電子メールを受信します。PDFは、自動保険レターの印刷版です。 「**今すぐ更新する**」をクリックしてポリシーの Web 版にアクセスします。個人情報とポリシーの詳細を確認し、 **今すぐ更新**. 支払い用にアダプティブフォームが表示されます。
 
-この **今すぐ更新** ボタンをクリックすると、Sarah はポリシーの web バージョンに移動します。 次の URL にアクセスできます。
+電子メールの「**今すぐ更新する**」ボタンをクリックすると、Sarah はポリシーの Web 版にリダイレクトされます。次の URL にアクセスできます。
 
 https://[publishServer]:[publishPort]/content/document.html?schema=fdm&amp;documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&amp;customerId=900001
 
@@ -919,17 +921,17 @@ https://[publishServer]:[publishPort]/content/document.html?schema=fdm&amp;docum
 
 ### Sarah が支払いページを開き、支払いを行い、処理を完了します {#sarah-opens-the-payment-page-and-makes-the-payment-and-completes-the-process}
 
-Sarah が「 **今すぐ更新** インタラクティブ通信の web バージョンで、支払いページが開きます。 Sarah は、自分のレコードと共に、ポリシー番号と有効期限を再確認します。 ページの右側で、Sarah は、合計金額に対して 10%のプレミアム割引を使用して、更新の支払いの概要を確認します。 Sarah がクレジットカードの詳細を入力し、クリックします **支払いを行う**.
+Sarah が「 **今すぐ更新** インタラクティブ通信の web バージョンで、支払いページが開きます。 Sarah は、自分の記録と照らし合わせて、ポリシー番号と有効期限を再確認します。ページの右側で契約更新の支払いの概要を確認します。合計金額からプレミアム割引として 10％ 差し引かれていることがわかります。Sarah はクレジットカードの詳細を入力し、**支払う**&#x200B;をクリックします。
 
 ![payment-adaptive-form](assets/payment-adaptive-form.png)
 
 #### 仕組み  {#how-it-works-22}
 
-「今すぐ更新」ボタンをクリックすると、支払いページに移動します。 支払いページはアダプティブフォームです。 Sarah はクレジットカードの詳細を入力し、クリックします **送信**. クレジットカードでの支払い処理が完了し、アダプティブフォームに設定された「ありがとうございます」メッセージが画面に表示されます。
+「今すぐ更新」ボタンをクリックすると、支払いページが表示されます。支払いページはアダプティブフォームです。Sarah はクレジットカードの詳細を入力し、クリックします **送信**. クレジットカードでの支払い処理が完了し、アダプティブフォームに設定された「ありがとうございます」メッセージが画面に表示されます。
 
 #### 実際の動作確認  {#see-it-yourself-20}
 
-「**今すぐ更新する**」をクリックして支払いページにアクセスします。クレジットカード情報を入力し、 **支払いを行う。** オーサリングインスタンスの支払いページには、次の場所でアクセスできます。
+「**今すぐ更新する**」をクリックして支払いページにアクセスします。クレジットカード情報を入力し、「**支払う」をクリックします。** オーサリングインスタンスの支払いページには、次の場所でアクセスできます。
 
 https://[authorServer]:[authorPort]/content/document.html?documentId=/content/forms/af/we-finance/credit-card/ccbillpayment.html&amp;schema=fdm&amp;customerId=900001
 

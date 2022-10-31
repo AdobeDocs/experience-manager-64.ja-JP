@@ -1,6 +1,6 @@
 ---
-title: '"コンテンツの再利用：マルチサイトマネージャーとライブコピー"'
-seo-title: 'Reusing Content: Multi Site Manager and Live Copy'
+title: "コンテンツの再利用：マルチサイトマネージャーとライブコピー"
+seo-title: "Reusing Content: Multi Site Manager and Live Copy"
 description: ライブコピーとマルチサイトマネージャーを使用してコンテンツを再利用する方法について説明します。
 seo-description: Learn about reusing content with Live Copies and the Multi Site Manager.
 uuid: 9f955226-8fc9-4357-b90c-c6896b0dc4b4

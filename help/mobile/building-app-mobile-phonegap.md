@@ -1,7 +1,7 @@
 ---
 title: モバイルアプリケーションのビルド
 seo-title: Building Mobile Applications
-description: 'このページでは、GitHub から利用できるコードを使用してモバイルアプリケーションをビルドする方法を詳しく説明します。アプリケーションをビルドし、デバイスやシミュレーターにインストールして、テストを実行したり、App Store に公開したりできます。PhoneGap コマンドラインインターフェイスを使用してアプリケーションをローカルでビルドすることも、PhoneGap Build を使用してクラウドでビルドすることもできます。 '
+description: このページでは、GitHub から利用できるコードを使用してモバイルアプリケーションをビルドする方法を詳しく説明します。アプリケーションをビルドし、デバイスやシミュレーターにインストールして、テストを実行したり、App Store に公開したりできます。PhoneGap コマンドラインインターフェイスを使用してアプリケーションをローカルでビルドすることも、PhoneGap Build を使用してクラウドでビルドすることもできます。
 seo-description: This page provides a complete step-by-step article on how to build a mobile application using code available from GitHub is available here.Build your application to install to a device or simulator for testing or for publishing to app stores. You can build applications locally using the PhoneGap Command Line Interface, or in the cloud using PhoneGap Build.
 uuid: 1ff6fe1a-24cc-4973-a2cd-8d356bc649b0
 contentOwner: User

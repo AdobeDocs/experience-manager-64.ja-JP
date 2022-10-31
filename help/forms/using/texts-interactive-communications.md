@@ -1,7 +1,7 @@
 ---
 title: インタラクティブ通信内のテキスト
 seo-title: Text in Interactive Communications
-description: 'ここでは、インタラクティブ通信で使用するテキストドキュメントフラグメントの作成方法と編集方法について説明します。インタラクティブ通信の作成では 4 種類のドキュメントフラグメントが使用されますが、テキストフラグメントはそのうちの 1 つです。他の 3 つは、条件フラグメント、リストフラグメント、レイアウトフラグメントです。  '
+description: ここでは、インタラクティブ通信で使用するテキストドキュメントフラグメントの作成方法と編集方法について説明します。インタラクティブ通信の作成では 4 種類のドキュメントフラグメントが使用されますが、テキストフラグメントはそのうちの 1 つです。他の 3 つは、条件フラグメント、リストフラグメント、レイアウトフラグメントです。
 seo-description: Creating and editing text document fragments to be used in Interactive Communications
 uuid: b2188d34-14f9-4c4e-bbe0-a2e763ed2958
 topic-tags: interactive-communications

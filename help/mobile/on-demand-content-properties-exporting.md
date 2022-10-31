@@ -1,5 +1,5 @@
 ---
-title: コンテンツのプロパティを使用したコンテンツの書き出し
+title: コンテンツのプロパティを使用したコンテンツのエクスポート
 seo-title: Using Content Properties to Export Content
 description: 以下のページでは、アプリのプロパティとノードについて説明します。
 seo-description: The following page shows App Properties and Nodes.
@@ -17,7 +17,7 @@ ht-degree: 27%
 
 ---
 
-# コンテンツのプロパティを使用したコンテンツの書き出し{#using-content-properties-to-export-content}
+# コンテンツのプロパティを使用したコンテンツのエクスポート{#using-content-properties-to-export-content}
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ ht-degree: 27%
   </tr>
   <tr>
    <td>dps-projectId</td>
-   <td>文字列</td>
+   <td>String</td>
    <td><p>このアプリがリンク/バインドされている Mobile On-Demand プロジェクトの ID/URI。</p> <p>この関連付けは、作成者が関連する Mobile On-DemandCloud Serviceで使用可能なプロジェクトのリストからプロジェクトを選択すると、接続を管理タイルを使用して設定されます。</p> </td>
   </tr>
   <tr>
@@ -89,5 +89,5 @@ ht-degree: 27%
 以下を使用できます。 ***コンテンツプロパティ*** コンテンツを作成します。 記事および共有リソースの作成と書き出しについては、以下のリソースを参照してください。
 
 * [コンテンツのプロパティ](/help/mobile/content-properties.md)
-* [記事の書き出し設定の作成](/help/mobile/creating-article-export-configuration.md)
-* [共有リソースの書き出し設定の作成](/help/mobile/creating-shared-resources-export-configuration.md)
+* [記事のエクスポート設定の作成](/help/mobile/creating-article-export-configuration.md)
+* [共有リソースのエクスポート設定の作成](/help/mobile/creating-shared-resources-export-configuration.md)

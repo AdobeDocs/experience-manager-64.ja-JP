@@ -134,7 +134,7 @@ ht-degree: 2%
    <td>数値</td> 
   </tr> 
   <tr> 
-   <td>ブール演算式</td> 
+   <td>ブール値</td> 
    <td>ブール値</td> 
    <td>ブール値</td> 
   </tr> 
@@ -144,7 +144,7 @@ ht-degree: 2%
    <td>time</td> 
   </tr> 
   <tr> 
-   <td>列挙</td> 
+   <td>定義済みリスト</td> 
    <td>string/long</td> 
    <td>列挙</td> 
   </tr> 

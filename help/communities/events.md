@@ -34,9 +34,9 @@ ht-degree: 71%
 | **動詞** | **説明** |
 |---|---|
 | POST | メンバーがカレンダーイベントを作成する |
-| ADD | メンバーがカレンダーイベントについてコメントする |
+| 追加 | メンバーがカレンダーイベントについてコメントする |
 | UPDATE | メンバーのカレンダーイベントまたはコメントが編集される |
-| DELETE | メンバーのカレンダーイベントまたはコメントが削除される |
+| 削除 | メンバーのカレンダーイベントまたはコメントが削除される |
 
 [コメントコンポーネント](essentials-comments.md) SocialEvent `topic`=  = com/adobe/cq/social/comment
 
@@ -45,7 +45,7 @@ ht-degree: 71%
 | POST | メンバーがコメントを作成する |
 | 追加 | メンバーがコメントに返信する |
 | 更新 | メンバーのコメントが編集される |
-| DELETE | メンバーのコメントが削除される |
+| 削除 | メンバーのコメントが削除される |
 
 [ファイルライブラリコンポーネント](essentials-file-library.md) SocialEvent `topic`=  = com/adobe/cq/social/fileLibrary
 
@@ -54,7 +54,7 @@ ht-degree: 71%
 | POST | メンバーがフォルダーを作成する |
 | ATTACH | メンバーがファイルをアップロードする |
 | 更新 | メンバーがフォルダーまたはファイルを更新する |
-| DELETE | メンバーがフォルダーまたはファイルを削除する |
+| 削除 | メンバーがフォルダーまたはファイルを削除する |
 
 [フォーラムコンポーネント](essentials-forum.md) SocialEvent `topic`=  = com/adobe/cq/social/forum
 
@@ -63,7 +63,7 @@ ht-degree: 71%
 | POST | メンバーがフォーラムトピックを作成する |
 | 追加 | メンバーがフォーラムトピックに返信する |
 | 更新 | メンバーのフォーラムトピックまたは返信が編集される |
-| DELETE | メンバーのフォーラムトピックまたは返信が削除される |
+| 削除 | メンバーのフォーラムトピックまたは返信が削除される |
 
 [ジャーナルコンポーネント](blog-developer-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/journal
 
@@ -72,7 +72,7 @@ ht-degree: 71%
 | POST | メンバーがブログ記事を作成する |
 | 追加 | メンバーがブログ記事にコメントする |
 | 更新 | メンバーのブログ記事またはコメントが編集される |
-| DELETE | メンバーのブログ記事またはコメントが削除される |
+| 削除 | メンバーのブログ記事またはコメントが削除される |
 
 [Q&amp;A コンポーネント](qna-essentials.md) SocialEvent `topic` = com/adobe/cq/social/qna
 
@@ -83,7 +83,7 @@ ht-degree: 71%
 | 更新 | メンバーの Q&amp;A の質問または回答が編集される |
 | SELECT | メンバーの回答が選択される |
 | UNSELECT | メンバーの回答の選択が解除される |
-| DELETE | メンバーの Q&amp;A の質問または回答が削除される |
+| 削除 | メンバーの Q&amp;A の質問または回答が削除される |
 
 [レビューコンポーネント](reviews-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/review
 
@@ -91,7 +91,7 @@ ht-degree: 71%
 |---|---|
 | POST | メンバーがレビューを作成する |
 | 更新 | メンバーのレビューが編集される |
-| DELETE | メンバーのレビューが削除される |
+| 削除 | メンバーのレビューが削除される |
 
 [評価コンポーネント](rating-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/tally
 

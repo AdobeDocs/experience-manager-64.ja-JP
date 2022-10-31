@@ -14,7 +14,7 @@ exl-id: f146cb2f-ee77-4c99-8dff-446cdb3a7797
 source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
 workflow-type: tm+mt
 source-wordcount: '2168'
-ht-degree: 77%
+ht-degree: 98%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 77%
 
 ## /etc に対する変更のバックアップ {#backup-changes-etc}
 
-アップグレードプロセスは、既存のコンテンツや設定を `/apps` および `/libs` リポジトリ内のパス。 ( `/etc` パス（Context Hub 設定を含む）は、多くの場合、アップグレード後にこれらの変更を再適用する必要があります。 アップグレードでは、マージできない変更のバックアップコピーが作成されます。 `/var`アップグレードを開始する前に、これらの変更を手動でバックアップすることをお勧めします。
+アップグレードプロセスは、リポジトリの `/apps` パスおよび `/libs` パスの下にある既存のコンテンツおよび設定のメンテナンスやマージに役立ちます。Context Hub 設定など、`/etc` パスに加えられた変更は、多くの場合、アップグレード後に再適用する必要があります。アップグレードにより、マージできない変更のバックアップコピーが `/var` の下に作成されますが、アップグレードを開始する前にこれらの変更を手動でバックアップすることをお勧めします。
 
 ## quickstart.properties ファイルの生成 {#generate-quickstart-properties}
 
@@ -58,7 +58,7 @@ jar ファイルから AEM を起動すると、`quickstart.properties` の下�
 
 `WorkflowPurgeTask` タスクおよび `com.day.cq.audit.impl.AuditLogMaintenanceTask` タスクには個別の OSGi 設定が必要であり、この設定がない場合は機能しません。アップグレード前タスクの実行中にこれらのタスクが失敗した場合に最も考えられる原因は、設定がないことです。そのため、これらのタスク用の OSGi 設定を追加するか、これらのタスクを実行しない場合はアップグレード前の最適化タスクリストからこれらのタスクを削除する必要があります。ワークフローのパージタスクの設定については、[ワークフローインスタンスの管理](/help/sites-administering/workflows-administering.md)を参照し、監査ログのメンテナンスタスクの設定については、[AEM 6 での監査ログのメンテナンス](/help/sites-administering/operations-audit-log.md)を参照してください。
 
-CQ 5.6 でのワークフローおよび監査ログのパージと AEM 6.0 での監査ログのパージについては、[ワークフローおよび監査ノードのパージ](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html)を参照してください。
+CQ 5.6 でのワークフローおよび監査ログのパージと AEM 6.0 での監査ログのパージについては、[ワークフローおよび監査ノードのパージ](https://helpx.adobe.com/jp/experience-manager/kb/howtopurgewf.html)を参照してください。
 
 ## アップグレード前のタスクのインストール、設定および実行 {#install-configure-run-pre-upgrade-tasks}
 
@@ -103,7 +103,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
   <tr> 
    <td><strong>タスク</strong></td> 
    <td><strong>実行モード</strong></td> 
-   <td><strong>備考</strong></td> 
+   <td><strong>メモ</strong></td> 
   </tr> 
   <tr> 
    <td><code>TarIndexMergeTask</code></td> 
@@ -122,12 +122,12 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
   </tr> 
   <tr> 
    <td><code>WorkflowPurgeTask</code></td> 
-   <td>crx2 ／ crx3</td> 
+   <td>crx2/crx3</td> 
    <td>実行前に、Adobe Granite のワークフローのパージ設定 OSGi を設定する必要があります。</td> 
   </tr> 
   <tr> 
    <td><code>GenerateBundlesListFileTask</code></td> 
-   <td>crx2 ／ crx3</td> 
+   <td>crx2/crx3</td> 
    <td> </td> 
   </tr> 
   <tr> 
@@ -145,7 +145,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
 
 >[!CAUTION]
 >
->`DataStoreGarbageCollectionTask` を使用した場合、マークアンドスイープフェーズを含むデータストアガベージコレクション操作が呼び出されます。共有データストアを使用するデプロイメントでは、別のインスタンスによって参照される項目が削除されないように、再設定するかインスタンスを適切に準備します。そのためには、このアップグレード前のタスクをトリガーする前に、すべてのインスタンスに対してマークフェーズを手動で実行する必要がある場合があります。
+>`DataStoreGarbageCollectionTask` を使用する場合、マークアンドスイープフェーズでデータストアガベージコレクション操作を呼び出します。共有データストアを使用するデプロイメントでは、別のインスタンスによって参照される項目が削除されないように、再設定するかインスタンスを適切に準備します。そのためには、このアップグレード前のタスクをトリガーする前に、すべてのインスタンスに対してマークフェーズを手動で実行する必要がある場合があります。
 
 ### アップグレード前のヘルスチェックのデフォルトの設定 {#default-configuration-of-the-pre-upgrade-health-checks}
 
@@ -163,10 +163,10 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
 
 以下の手順で MBean にアクセスできます。
 
-1. JMX コンソール ( ) に移動します。 *https://serveraddress:serverport/system/console/jmx*
+1. JMX コンソール（*https://serveraddress:serverport/system/console/jmx*）に移動
 1. 「**PreUpgradeTasks**」を検索し、結果をクリックします。
 
-1. 「**Operations**」セクションからメソッドを選択し、次のウィンドウで「**Invoke**」を選択します。
+1. 「**操作**」セクションからメソッドを選択し、次のウィンドウで「**呼び出し**」を選択します。
 
 `PreUpgradeTasksMBeanImpl` によって公開されている使用可能なすべてのメソッドのリストを以下に示します。
 
@@ -189,18 +189,18 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
   </tr> 
   <tr> 
    <td><code>runAllPreUpgradeTasks()</code></td> 
-   <td>アクション ：</td> 
+   <td>アクション</td> 
    <td>リスト内のすべてのアップグレード前のメンテナンスタスクを実行します。</td> 
   </tr> 
   <tr> 
    <td><code>runPreUpgradeTask(preUpgradeTaskName)</code></td> 
-   <td>アクション ：</td> 
+   <td>アクション</td> 
    <td>パラメーターで指定された名前を持つアップグレード前のメンテナンスタスクを実行します。</td> 
   </tr> 
   <tr> 
    <td><code>isRunAllPreUpgradeTaskRunning()</code></td> 
    <td>ACTION_INFO</td> 
-   <td>次の項目をチェックします。 <code>runAllPreUpgradeTasksmaintenance</code> タスクは現在実行中です。</td> 
+   <td><code>runAllPreUpgradeTasksmaintenance</code> タスクが現在実行されているかどうかを確認します。</td> 
   </tr> 
   <tr> 
    <td><code>getAnyPreUpgradeTaskRunning()</code></td> 
@@ -209,22 +209,22 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
   </tr> 
   <tr> 
    <td><code>getPreUpgradeTaskLastRunTime(preUpgradeTaskName)</code></td> 
-   <td>アクション ：</td> 
+   <td>アクション</td> 
    <td>パラメーターで指定された名前を持つアップグレード前のメンテナンスタスクの正確な実行時間を表示します。</td> 
   </tr> 
   <tr> 
    <td><code>getPreUpgradeTaskLastRunState(preUpgradeTaskName)</code></td> 
-   <td>アクション ：</td> 
+   <td>アクション</td> 
    <td>パラメーターで指定された名前を持つアップグレード前のメンテナンスタスクの最終実行状態を表示します。</td> 
   </tr> 
   <tr> 
    <td><code>runAllPreUpgradeHealthChecks(shutDownOnSuccess)</code></td> 
-   <td>アクション ：</td> 
-   <td><p>すべてのアップグレード前のヘルスチェックを実行し、そのステータスを次の名前のファイルに保存 <code>preUpgradeHCStatus.properties</code> sling ホームパスに配置されている この <code>shutDownOnSuccess</code> パラメーターが <code>true</code>を指定した場合、AEMインスタンスはシャットダウンされますが、アップグレード前のヘルスチェックのステータスがすべて OK の場合に限られます。</p> <p>properties ファイルは今後のアップグレードの前提条件として使用され、<br />アップグレード前のヘルスチェックの実行に失敗した場合は、<br />アップグレードプロセスが停止されます。アップグレード前のヘルスチェックの結果を無視して<br />アップグレードを開始する場合は、このファイルを削除できます。</p> </td> 
+   <td>アクション</td> 
+   <td><p>すべてのアップグレード前のヘルスチェックを実行して、sling ホームパスにある <code>preUpgradeHCStatus.properties</code> というファイルにそれらのステータスを保存します。<code>shutDownOnSuccess</code> パラメーターが <code>true</code> に設定されていると、AEM インスタンスがシャットダウンされますが、これはすべてのアップグレード前のヘルスチェックのステータスが OK の場合のみです。</p> <p>properties ファイルは今後のアップグレードの前提条件として使用され、<br />アップグレード前のヘルスチェックの実行に失敗した場合は、<br />アップグレードプロセスが停止されます。アップグレード前のヘルスチェックの結果を無視して<br />アップグレードを開始する場合は、このファイルを削除できます。</p> </td> 
   </tr> 
   <tr> 
    <td><code>detectUsageOfUnavailableAPI(aemVersion)</code></td> 
-   <td>アクション ：</td> 
+   <td>アクション</td> 
    <td>指定された AEM バージョンにアップグレードしたときに適合しない<br />すべての読み込み済みパッケージをリストします。ターゲットの AEM バージョンは、<br />パラメーターとして指定する必要があります。</td> 
   </tr> 
  </tbody> 
@@ -237,7 +237,6 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
 >* JMX コンソール
 >* JMX に接続する外部アプリケーション
 >* cURL
-
 >
 
 
@@ -247,9 +246,9 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
 >
 >この手順は、AEM 5 バージョンからアップグレードする場合にのみ必要です。以前の AEM 6 バージョンからのアップグレードの場合は、完全にスキップできます。
 
-カスタムの方法 `LoginModules` は、リポジトリレベルでの認証用に設定されていますが、Apache Oak では基本的に変更されています。
+カスタム `LoginModules` がリポジトリレベルで認証設定される方法は、Apache Oak で根本的に変更されました。
 
-CRX2 を使用していた旧バージョンの AEM では、`repository.xml` ファイルで設定をおこないましたが、AEM 6 以降では、Web コンソールを使用して、Apache Felix JAAS Configuration Factory サービスで設定をおこないます。
+CRX2 を使用していた旧バージョンの AEM では、`repository.xml` ファイルで設定をおこないましたが、AEM 6 以降では、web コンソールを使用して、Apache Felix JAAS Configuration Factory サービスで設定をおこないます。
 
 そのため、既存の設定を無効にして、アップグレード後、Apache Oak 用に再作成する必要があります。
 
@@ -316,13 +315,13 @@ CRX3 インスタンスでリビジョンクリーンアップを実行した後
 >
 >このアップグレード前のメンテナンスタスクは、次の場合にのみ必要です。
 >
->* AEM 6.3 より前のAEMバージョンからアップグレードします
->* アップグレード中に以下に示すエラーが発生しました。
+>* AEM 6.3 より前の AEM バージョンからアップグレードしている
+>* アップグレード中に以下に示すエラーが発生した
 
 
-サービスユーザーが古いAEMバージョンで、通常のユーザーとして適切にタグ付けされていない場合があります。
+サービスユーザーが以前の AEM バージョンで、通常のユーザーとして適切にタグ付けされていない場合があります。
 
-この場合、アップグレードは次のようなメッセージで失敗します。
+この場合、アップグレードは失敗し、次のようなメッセージが表示されます。
 
 ```
 ERROR [Apache Sling Repository Startup Thread] com.adobe.granite.repository.impl.SlingRepositoryManager Exception in a SlingRepositoryInitializer, SlingRepository service registration aborted
@@ -334,8 +333,8 @@ java.lang.RuntimeException: Unable to create service user [communities-utility-r
 この問題を回避するには、必ず次の手順を実行してください。
 
 * 実稼動トラフィックからインスタンスを分離する
-* 問題の原因となるユーザーのバックアップを作成します。 これは、パッケージマネージャーから実行できます。 詳しくは、 [パッケージの操作方法](/help/sites-administering/package-manager.md).
-* 問題の原因となっているユーザーを削除します。 以下は、このカテゴリに該当する可能性のあるユーザーのリストです。
+* 問題の原因となるユーザーのバックアップを作成する。バックアップの作成は、パッケージマネージャーから実行できます。詳しくは、 [パッケージの操作方法](/help/sites-administering/package-manager.md).
+* 問題の原因となっているユーザーを削除する以下は、このカテゴリに該当する可能性のあるユーザーのリストです。
    * dynamic-media-replication
    * communities-ugc-writer
    * communities-utility-reader
@@ -345,18 +344,18 @@ java.lang.RuntimeException: Unable to create service user [communities-utility-r
 
 ## 必要に応じてデータベーススキーマをアップグレード {#upgrade-the-database-schema-if-needed}
 
-通常、基になる Apache Oak スタックAEMが永続化に使用するデータベーススキーマのアップグレードは、必要に応じておこないます。
+通常、AEM が永続化に使用する基になる Apache Oak スタックは、 必要に応じてデータベーススキーマのアップグレードに対処します。
 
-ただし、スキーマを自動的にアップグレードできない場合が考えられます。 これらは、ほとんどの場合、権限が非常に限られたユーザーでデータベースが実行されている高いセキュリティ環境です。 この場合、AEMは引き続き古いスキーマを使用します。
+ただし、スキーマを自動的にアップグレードできない場合が考えられます。これらは、ほとんどの場合、権限が非常に限られたユーザーでデータベースが実行されている高いセキュリティ環境です。 この場合、AEM は引き続き古いスキーマを使用します。
 
 この問題が発生しないようにするには、次の手順に従ってスキーマをアップグレードする必要があります。
 
-1. アップグレードする必要があるAEMインスタンスをシャットダウンします。
-1. データベーススキーマをアップグレードします。 これを実現するために必要なツールを確認するには、データベースのタイプに関するドキュメントを参照してください。
+1. アップグレードする必要がある AEM インスタンスをシャットダウンします。
+1. データベーススキーマをアップグレードします。これを実現するために必要なツールを確認するには、データベースのタイプに関するドキュメントを参照してください。
 
-   Oak でのスキーマのアップグレードの処理方法について詳しくは、 [Apache Web サイトのこのページ](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade).
+   Oak でのスキーマのアップグレードの処理方法について詳しくは、Apache Web サイトで[このページ](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade)を参照してください。
 
-1. AEMのアップグレードを続行します。
+1. AEM のアップグレードを続行します。
 
 ## ログファイルのローテーション {#rotate-log-files}
 

@@ -1,5 +1,5 @@
 ---
-title: 'UI の選択 '
+title: UI の選択
 seo-title: Selecting your UI
 description: AEM で使用するインターフェイスを設定します
 seo-description: Configure which interface you will use to work in AEM

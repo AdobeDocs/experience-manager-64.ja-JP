@@ -1,5 +1,5 @@
 ---
-title: 'ドメインの追加 '
+title: ドメインの追加
 seo-title: Adding domains
 description: ドメインの管理設定を使用してエンタープライズドメイン、ローカルドメイン、またはハイブリッドドメインを追加する方法と、ドメイン名と ID に関する一般的な考慮事項について説明します。
 seo-description: Learn how to add an enterprise, local, or hybrid domain using Domain Management settings and general considerations for domain names and IDs.

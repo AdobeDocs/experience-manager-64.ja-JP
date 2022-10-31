@@ -13,7 +13,7 @@ exl-id: b5681fe5-69ba-4fc0-95e3-6ffdcdd95382
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '369'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ AEM Forms サーバーがオンラインのときは、デフォルトでは、1
 
 **アプリケーションを手動で同期するには**
 
-「同期」ボタンをタップします。 ![sync-app](assets/sync-app.png) ホーム画面の右下隅に
+ホーム画面の右下にある「同期」ボタン ![sync-app](assets/sync-app.png) をタップしてください。
 
 **同期頻度を変更するには**
 
@@ -44,6 +44,6 @@ AEM Forms サーバーがオンラインのときは、デフォルトでは、1
 ### 技術仕様 {#technical-specifications}
 
 * AEM Forms サーバーへのオフラインアプリケーションデータの送信のメインロジックは runtime/offline/util/offline.js に含まれます。
-* .js で、processOfflineSubmittedSavedTasks(...) 関数への呼び出しによって、保存済み／送信済みタスクをサーバーに送信します。 同期処理でのエラーや競合も処理されます。 タスクの送信に失敗すると、アプリケーションのタスクは失敗としてマークされます。 さらに、タスクは Outbox に残ります。
+* .js で、processOfflineSubmittedSavedTasks(...) 関数への呼び出しによって、保存済み／送信済みタスクをサーバーに送信します。同期処理でのエラーや競合も処理されます。タスクの送信に失敗すると、アプリケーションのタスクは失敗としてマークされます。さらに、タスクは Outbox に残ります。
 * syncSubmittedTask() および syncSavedTask() 関数は、個別のタスクに操作を実行します。
 * ユーザーがサーバーへのオフライン状態の同期またはバックグラウンドスレッドによる自動同期を選択した後、タスクリストコンポーネントによって、processOfflineSubmittedSavedTasks() 関数への呼び出しが開始されます。

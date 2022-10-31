@@ -11,7 +11,7 @@ role: User
 source-git-commit: 77b2643c91092a9a08b67fb5ad06a96a79f4deea
 workflow-type: tm+mt
 source-wordcount: '1923'
-ht-degree: 66%
+ht-degree: 69%
 
 ---
 
@@ -29,13 +29,13 @@ ht-degree: 66%
 >
 >アセットユーザーインターフェイスについて詳しくは、[タッチ UI を使用したアセットの管理](managing-assets-touch-ui.md)を参照してください。
 
-スピンセットを作成する場合、Adobeでは次のベストプラクティスを推奨し、次の制限を適用します。
+スピンセットを作成する場合、アドビでは次のベストプラクティスを推奨し、次の制限を適用します。
 
-| 制限タイプ | ベストプラクティス | 制限が適用されました |
+| 制限タイプ | ベストプラクティス | 適用される制限 |
 | --- | --- | --- |
-| 2D セットあたりの最大行数/列数 | 1 セットあたり 12～18 個の画像 | 1000 |
+| 2D セットあたりの最大行数と最大列数 | 1 セットあたり 12～18 個の画像 | 1000 |
 
-関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
+[Dynamic Media の制限](/help/assets/limitations.md)も参照してください。
 
 ## クイックスタート：スピンセット {#quick-start-spin-sets}
 
@@ -115,13 +115,13 @@ ht-degree: 66%
 >
 >[Dynamic Media - Scene7 モードの設定](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)の「画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成」を参照してください。
 
-スピンセットを作成する場合、Adobeでは次のベストプラクティスを推奨し、次の制限を適用します。
+スピンセットを作成する場合、アドビでは次のベストプラクティスを推奨し、次の制限を適用します。
 
-| 制限タイプ | ベストプラクティス | 制限が適用されました |
+| 制限タイプ | ベストプラクティス | 適用される制限 |
 | --- | --- | --- |
-| 2D セットあたりの最大行数/列数 | 1 セットあたり 12～18 個の画像 | 1000 |
+| 2D セットあたりの最大行数と最大列数 | 1 セットあたり 12～18 個の画像 | 1000 |
 
-関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
+[Dynamic Media の制限](/help/assets/limitations.md)も参照してください。
 
 **スピンセットを作成するには：**
 

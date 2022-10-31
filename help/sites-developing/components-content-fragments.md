@@ -14,7 +14,7 @@ exl-id: 516c1561-5c13-4301-8009-9b021087cec7
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '932'
-ht-degree: 82%
+ht-degree: 98%
 
 ---
 
@@ -28,19 +28,19 @@ ht-degree: 82%
 
 >[!CAUTION]
 >
->フラグメントエディターで使用する実際のコンポーネントは、まだ変更される可能性があるので、拡張または変更することはお勧めしません。
+>実際のコンポーネントはまだ変更される可能性があるので、拡張または変更は推奨されません。
 
-詳しくは、 [コンテンツフラグメント管理 API — クライアント側](/help/sites-developing/customizing-content-fragments.md#the-content-fragment-management-api-client-side).
+[コンテンツフラグメント管理 API - クライアントサイド](/help/sites-developing/customizing-content-fragments.md#the-content-fragment-management-api-client-side)を参照してください。
 
 ## ページオーサリング用コンポーネント {#components-for-page-authoring}
 
 >[!CAUTION]
 >
->[コンテンツフラグメントコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)が推奨されます。詳しくは、[コアコンポーネントの開発](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)を参照してください。
+>[コンテンツフラグメントコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)が推奨されます。詳しくは、[コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)を参照してください。
 >
 >この節では、コンテンツフラグメント用に提供されるオリジナル コンテンツについて説明します（**一般**&#x200B;グループの&#x200B;**コンテンツフラグメント**）。
 
-Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments.md)として作成および管理されます。コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。[その後、コンテンツページをオーサリングする際に、これらのフラグメントとそのバリエーションを使用できます](/help/sites-authoring/content-fragments.md).また、既存のコンテンツフラグメントアセットを使用する場合は、 [アセットブラウザーからページにドラッグする](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page) （基盤コンポーネントの画像など、他のアセットベースのコンポーネントに関して）。 既製のコンテンツフラグメントコンポーネントには、参照されているコンテンツフラグメントの[要素](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment)が 1 つだけ表示されます。コンポーネントダイアログを使用して、 [要素、バリエーションおよびフラグメントの段落の範囲](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment) を選択します。
+Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセットとして作成および管理](/help/assets/content-fragments.md)されます。コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。[作成したコンテンツフラグメント（とそのバリエーション）は、コンテンツページのオーサリング時に使用できます](/help/sites-authoring/content-fragments.md)。また、既存のコンテンツフラグメントアセットを、画像コンポーネントなどの他のアセットベースのコンポーネントと同様に、[アセットブラウザーからページにドラッグ](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)して使用することもできます。既製のコンテンツフラグメントコンポーネントには、参照されているコンテンツフラグメントの[要素](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment)が 1 つだけ表示されます。ページ上に表示する[要素、バリエーションおよびフラグメント段落の範囲](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment)は、コンポーネントダイアログで定義できます。
 
 >[!NOTE]
 >
@@ -60,7 +60,7 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
 * `fileReference`
 
-タッチ操作対応 UI のエディター のみ、コンテンツフラグメントコンポーネントを完全にサポートします。これには、次のクライアントライブラリが含まれます。
+コンテンツフラグメントコンポーネントを完全にサポートするのは、タッチ操作対応 UI のエディターのみです。これには、以下のクライアントライブラリが含まれます。
 
 * `cq.authoring.editor.plugin.cfm`
 
@@ -102,9 +102,9 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 既製のコンテンツフラグメントコンポーネントを拡張のブループリントとして使用するときは、次のルールを守ってください。
 
 * HTL レンダリングスクリプトと関連 POJO を再利用して、中間コンテンツ機能の実装方法を確認します。
-* コンテンツフラグメントノードを再利用します。 `cq:editConfig`
+* コンテンツフラグメントノード `cq:editConfig` を再利用します。
 
-   * この `afterinsert`/ `afteredit`/ `afterdelete` リスナーは、JS イベントのトリガーに使用されます。 これらのイベントを `cq.authoring.editor.plugin.cfm` クライアントライブラリで処理して、関連コンテンツをサイドパネルに表示します。
+   *  `afterinsert`／`afteredit`／`afterdelete` リスナーを使用して JS イベントを呼び出します。これらのイベントを `cq.authoring.editor.plugin.cfm` クライアントライブラリで処理して、関連コンテンツをサイドパネルに表示します。
    * コンテンツフラグメントアセットのドラッグをサポートするように `cq:dropTargets` を設定します。
    * ページエディターでコンテンツフラグメントのオーサリングをサポートするように `cq:inplaceEditing` を設定します。フラグメントのインプレースエディターは `cq.authoring.editor.plugin.cfm` クライアントライブラリで定義され、クイックリンクによって現在の[要素／バリエーション](/help/assets/content-fragments.md#constituent-parts-of-a-content-fragment)を[フラグメントエディター](/help/assets/content-fragments-variations.md)で開けるようにします。
 
@@ -112,11 +112,11 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
 コンテンツフラグメント管理では、初期レンダリング処理を使用してページの最終的な HTML 出力を生成します。これは、コンテンツフラグメントコンポーネントによって内部で使用されますが、参照ページ上の参照フラグメントを更新するバックグラウンド処理でも使用されます。
 
-内部では、このレンダリングに Sling Rewriter を使用します。それぞれの設定は、次の場所にあります。 `/libs/dam/config/rewriter/cfm` 必要に応じて調整できます。 詳しくは、 [Apache Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) を参照してください。
+内部では、このレンダリングに Sling Rewriter を使用します。各設定は `/libs/dam/config/rewriter/cfm` にあり、必要に応じて調整できます。詳しくは、[Apache Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) を参照してください。
 
-既成の設定は、次の変換サービスを使用します。
+既製の設定は、次の変換サービスを使用します。
 
-* `transformer-cfm-payloadfilter`  — 取得用 `body` 部分 ( `<body>...</body>`) をフラグメントのHTMLのみ
+* `transformer-cfm-payloadfilter` - フラグメントの HTML の `body` 部分（`<body>...</body>`）の取得用のみ
 
 * `transformer-cfm-parfilter` - 段落範囲が指定されている場合に、不要な段落を除外します（コンテンツフラグメントコンポーネントで実行可能）
 * `transformer-cfm-assetprocessor` - フラグメントに埋め込まれたアセットのリストを取得するために内部で使用されます

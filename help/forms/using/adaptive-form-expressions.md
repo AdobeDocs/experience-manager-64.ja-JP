@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームの式
 seo-title: Adaptive Form Expressions
-description: 'アダプティブフォームの数式を使って自動検証や演算を追加したり、セクションの可視性をオン/オフに切り替えたりします。 '
+description: アダプティブフォームの数式を使って自動検証や演算を追加したり、セクションの可視性をオン/オフに切り替えたりします。
 seo-description: Use adaptive forms expressions to add automatic validation, calculation, and turn visibility of a section on or off.
 uuid: 4f33c10f-e862-4113-9d5a-67e6208e1e66
 products: SG_EXPERIENCEMANAGER/6.4/FORMS

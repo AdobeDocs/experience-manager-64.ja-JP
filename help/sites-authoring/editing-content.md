@@ -1,5 +1,5 @@
 ---
-title: 'ページのコンテンツの編集 '
+title: ページのコンテンツの編集
 seo-title: Editing Page Content
 description: ページを作成したら、必要な変更をおこなうためにコンテンツを編集できます
 seo-description: Once your page is created you can edit the content to make the updates you require

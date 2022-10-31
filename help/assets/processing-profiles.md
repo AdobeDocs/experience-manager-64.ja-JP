@@ -11,7 +11,7 @@ exl-id: 78d76b4f-a46c-4ffc-b772-ed925eb8e34c
 source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
 source-wordcount: '1374'
-ht-degree: 92%
+ht-degree: 94%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->適用先 *Dynamic Media - Scene7モード* のみ [!DNL Experience Manager] 6.4.7.0 以降。
+> 6.4.7.0 以降の *Dynamic Media ー Scene7 mode* にのみ適用されます。[!DNL Experience Manager]
 
 後で変更した既存の処理プロファイルがあるフォルダー内のアセットを再処理できます。
 
@@ -55,8 +55,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Dynamic Media Classic から AEM へのアセットの一括移行を実行する場合は、Dynamic Media サーバー上で移行レプリケーションエージェントを有効にする必要があります。移行が完了したら、このエージェントを必ず無効にします。
-再処理ワークフローが期待どおりに動作するように、Dynamic Media サーバー上で移行公開エージェントを無効にする必要があります。
+>Dynamic Media Classic から AEM へのアセットの一括移行を実行する場合は、Dynamic Media サーバー上で移行レプリケーションエージェントを有効にする必要があります。移行が完了したら、このエージェントを必ず無効にします。再処理ワークフローが期待どおりに動作するように、Dynamic Media サーバー上で移行公開エージェントを無効にする必要があります。
 
 <!-- Batch size is the number of assets that are amalgamated into a single IPS (Dynamic Media’s Image Production System) job. When you run the Scene7: Reprocess Assets workflow, the job is triggered on IPS. The number of IPS jobs that are triggered is based on the total number of assets in the folder, divided by the batch size. For example, suppose you had a folder with 150 assets and a batch size of 50. In this case, three IPS jobs are triggered. The assets are updated when the entire batch size (50 in our example) is processed in IPS. The job then moves onto the next IPS job and so on until complete. If you increase the batch size, you may notice a longer delay with assets getting updated. -->
 
@@ -104,7 +103,7 @@ ht-degree: 92%
 
    ![Scene7 バッチアップロードコンポーネント](/help/assets/assets-dm/reprocess-assets8.png)
 
-1. の **[!UICONTROL Scene7 — ステップのプロパティへのバッチアップロード]** ダイアログボックスで、次の設定を行います。
+1. **[!UICONTROL Scene7 へのバッチアップロード ー ステップのプロパティ]**&#x200B;ダイアログボックスで、以下の設定をおこないます。
    * 「**[!UICONTROL タイトル]**」および「**[!UICONTROL 説明]**」テキストフィールドに、必要に応じて、ジョブの新しいタイトルと説明を入力します。
    * ハンドラーが次のステップに進む場合は、「**[!UICONTROL ハンドラー処理の設定]**」を選択します。
    * 「**[!UICONTROL タイムアウト]**」フィールドに、外部プロセスのタイムアウト（秒）を入力します。

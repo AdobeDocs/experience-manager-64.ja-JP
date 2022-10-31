@@ -13,7 +13,7 @@ exl-id: 637ec80e-320f-4cf7-b09a-9f3cbf47bb63
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -39,14 +39,14 @@ contexthub.base UI モジュールタイプは、その他すべての UI モジ
 * **ポップオーバーのコンテンツ：** UI モジュールをクリックまたはタップするとポップオーバーに表示されるコンテンツを指定します。
 * **全画面モード：**&#x200B;全画面モードを許可するかどうかを制御します。
 
-ソースコードは/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js にあります。
+ソースコードは、/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js にあります。
 
 ### 設定 {#configuration}
 
 contexthub.base UI モジュールは、JSON 形式の JavaScript オブジェクトを使用して設定します。UI モジュールの機能を設定するには、次のいずれかのプロパティを含めます。
 
 * **image：**&#x200B;アイコンとして表示する画像への URL。
-* **icon：**[Coral UI アイコン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)クラスの名前。icon プロパティと image プロパティの両方に値を指定した場合は、image が使用されます。
+* **icon：** [Coral UI アイコン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)クラスの名前。icon プロパティと image プロパティの両方に値を指定した場合は、image が使用されます。
 
 * **title：** UI モジュールのタイトル。タイトルは、ポインターを UI モジュールアイコンに合わせると表示されます。
 * **fullscreen：** UI モジュールが全画面モードをサポートするかどうかを示すブール値。全画面をサポートする場合は `true`、全画面モードを許可しない場合は `false` を使用します。
@@ -63,7 +63,7 @@ contexthub.base UI モジュールは、JSON 形式の JavaScript オブジェ�
 
 * **listType：**&#x200B;ポップオーバーリスト項目に使用するスタイル。次のいずれかの値を使用します。
 
-   * checkmark
+   * チェックマーク
    * チェックボックス
    * radio
 
@@ -92,7 +92,7 @@ contexthub.browserinfo UI モジュールは、クライアント Web ブラウ�
 
 ![chlimage_1-77](assets/chlimage_1-77.png)
 
-この UI モジュールのソースコードは、/libs/granite/contexthub/components/modules/browserinfo にあります。 contexthub.browserinfo は contexthub.base UI モジュールを拡張したものですが、追加の関数を上書きまたは提供しません。この実装は、ブラウザー情報をレンダリングするためのデフォルトの設定を提供します。
+この UI モジュールのソースコードは、/libs/granite/contexthub/components/modules/browserinfo にあります。contexthub.browserinfo は contexthub.base UI モジュールを拡張したものですが、追加の関数を上書きまたは提供しません。この実装は、ブラウザー情報をレンダリングするためのデフォルトの設定を提供します。
 
 ### 設定 {#configuration-1}
 
@@ -115,7 +115,7 @@ contexthub.datetime UI モジュールは、[contexthub.datetime](/help/sites-de
 
 このモジュールは、ストア内の日時を変更できるポップオーバーフォームを提供します。
 
-contexthub.datetime UI モジュールのソースは/libs/granite/contexthub/components/modules/datetime にあります。
+contexthub.datetime UI モジュールのソースは、/libs/granite/contexthub/components/modules/datetime にあります。
 
 ### 設定 {#configuration-2}
 

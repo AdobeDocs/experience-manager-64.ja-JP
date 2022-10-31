@@ -1,6 +1,6 @@
 ---
 title: Dynamic Mediaのビデオプロファイル
-description: 'Dynamic Mediaには、事前に定義されたアダプティブビデオエンコーディングプロファイルが付属しています。 標準搭載のこのプロファイルの設定は、顧客に可能な限り最高のビデオ表示エクスペリエンスを提供するように最適化されています。 '
+description: Dynamic Mediaには、事前に定義されたアダプティブビデオエンコーディングプロファイルが付属しています。 標準搭載のこのプロファイルの設定は、顧客に可能な限り最高のビデオ表示エクスペリエンスを提供するように最適化されています。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: administering

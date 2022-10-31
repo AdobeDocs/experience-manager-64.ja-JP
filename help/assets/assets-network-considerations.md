@@ -8,7 +8,7 @@ exl-id: f8f9d86f-a5e3-46ac-8d96-c2e44eac9c93
 source-git-commit: cc6de21180c9fff74f7d64067db82f0c11ac9333
 workflow-type: tm+mt
 source-wordcount: '999'
-ht-degree: 80%
+ht-degree: 86%
 
 ---
 
@@ -21,17 +21,17 @@ ht-degree: 80%
 * クライアントデバイス（コンピューター、モバイル、タブレットなど）からネットワークへの接続性
 * 企業ネットワークのトポロジ
 * 企業ネットワークおよび [!DNL Experience Manager] 環境
-* のトポロジ [!DNL Experience Manager] 環境
+* [!DNL Experience Manager] 環境のトポロジ
 * の同時消費者を定義 [!DNL Experience Manager] ネットワークインターフェイス
 * 定義済みの [!DNL Experience Manager] インスタンス
 
-## クライアントデバイスからネットワークへの接続性 {#connectivity-from-the-client-device-to-the-corporate-network}
+## クライアントデバイスから企業ネットワークへの接続性 {#connectivity-from-the-client-device-to-the-corporate-network}
 
 まず、個々のクライアントデバイスと企業ネットワークの接続性を図解します。この段階では、複数のユーザーが同じポイントにアクセスする、Wi-Fi 接続などの共有リソースや、アセットをアップロードおよびダウンロードするイーサネットスイッチを特定します。
 
 ![chlimage_1-353](assets/chlimage_1-353.png)
 
-クライアントデバイスは、共有 Wi-Fi、共有スイッチへのイーサネット、VPN など、様々な方法で企業ネットワークに接続します。このネットワークの渋滞地点を特定して理解することは、Assets の計画を立て、ネットワークを変更するうえで重要です。
+クライアントデバイスは共有 Wi-Fi、共有スイッチへのイーサネット、VPN など、様々な方法で企業ネットワークに接続します。このネットワークの渋滞地点を特定して理解することは、Assets の計画を立て、ネットワークを変更するうえで重要です。
 
 この図の左上では、3 つのデバイスが 48 Mbps Wi-Fi アクセスポイントを共有しています。すべてのデバイスで同時にアップロードすると、Wi-Fi ネットワークの帯域幅がデバイス間で共有されます。システム全体として比較すると、ユーザーはこの分割されたチャネルを介する 3 つのクライアントにつき、異なる渋滞地点に直面する可能性があります。
 
@@ -47,7 +47,7 @@ ht-degree: 80%
 
 図では、企業ネットワーク内で使用されているアップリンクの速度が、通常使用されるものよりも高速になっています。これらのパイプは共有リソースです。共有スイッチが処理するクライアント数が 50 と想定されている場合、ここが渋滞地点となる可能性があります。最初の図では、2 台のコンピューターのみがその特定の接続を共有しています。
 
-## 企業ネットワークからインターネットにアップリンクし、 [!DNL Experience Manager] 環境 {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
+## 企業ネットワークと [!DNL Experience Manager] 環境からのインターネットへのアップリンク {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
@@ -63,11 +63,11 @@ ht-degree: 80%
 
 このサンプル図より、6 台のデバイスが 10 Mbps の概念的なチャネルを共有していると結論付けることができます。使用しているアセットのサイズによっては、これではユーザーの期待に応えるには不十分である可能性があります。
 
-## のトポロジ [!DNL Experience Manager] 環境 {#topology-of-the-aem-environment}
+## [!DNL Experience Manager] 環境のトポロジ {#topology-of-the-aem-environment}
 
 ![chlimage_1-356](assets/chlimage_1-356.png)
 
-トポロジの設計 [!DNL Experience Manager] 環境では、システム構成と、ユーザー環境内でのネットワークの接続方法に関する詳細な知識が必要です。
+[!DNL Experience Manager] 環境のトポロジを設計するには、システム設定、ユーザー環境内でネットワークがどのように接続されているかについて詳しく理解している必要があります。
 
 このサンプルシナリオには、5 台のサーバーと 1 台の S3 バイナリストアで構成され、Dynamic Media が設定されたパブリッシュファームがあります。
 
@@ -75,7 +75,7 @@ Dispatcher は、100 Mbps の接続を 2 つのエンティティ ( 外部と [!
 
 この [!DNL Experience Manager] インスタンスは、1 Gbps の接続を複数のサービスと共有します。 ネットワークトポロジの観点では、これは単一のチャネルを異なるサービスで共有することと同じです。
 
-クライアントデバイスから [!DNL Experience Manager] インスタンスの最も小さな渋滞地点は、10Mbit エンタープライズファイアウォールのスロットルのようです。 これらの値は、 [Assets サイズ設定ガイド](assets-sizing-guide.md) をクリックして、ユーザーエクスペリエンスを決定します。
+クライアントデバイスから [!DNL Experience Manager] インスタンスの最も小さな渋滞地点は、10Mbit エンタープライズファイアウォールのスロットルのようです。 [Assets サイジングガイド](assets-sizing-guide.md)のサイズ計算ツールでこれらの値を使用して、ユーザーエクスペリエンスを判定できます。
 
 ## 定義済みの [!DNL Experience Manager] インスタンス {#defined-workflows-of-the-aem-instance}
 
@@ -89,7 +89,7 @@ Dispatcher は、100 Mbps の接続を 2 つのエンティティ ( 外部と [!
 * アセットやメタデータが変更されたときに実行するワークフローやイベント
 * アセットを読み取る手順
 
-考慮すべき項目は次のとおりです。
+考慮すべき項目は次の通りです。
 
 * XMP メタデータの読み／書き戻し
 * 自動アクティベートおよびレプリケート

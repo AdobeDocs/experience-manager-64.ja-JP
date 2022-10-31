@@ -1,7 +1,7 @@
 ---
 title: 既存のドメインの編集と変換
 seo-title: Editing and converting existing domains
-description: 'ドメインの管理ページから既存のドメインの設定を変更する方法について説明します。既存のエンタープライズドメインをハイブリッドドメインに（またはその逆に）変換します。 '
+description: ドメインの管理ページから既存のドメインの設定を変更する方法について説明します。既存のエンタープライズドメインをハイブリッドドメインに（またはその逆に）変換します。
 seo-description: Learn how to change the settings for existing domains from the Domain Management page. Convert an existing enterprise domain to a hybrid domain or vice versa.
 uuid: 4cc9547e-b4ec-4588-b1cf-18720f06149a
 contentOwner: admin

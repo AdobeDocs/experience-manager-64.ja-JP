@@ -100,7 +100,7 @@ Web ページに数行の JavaScript を挿入することで、アダプティ�
 1. 埋め込まれたコードで、
 
    * `options.path` 変数の値をアダプティブフォームのパブリッシュ URL のパスに変更します。AEM サーバーがコンテキストパス上で実行されている場合は、その URL にコンテキストパスが含まれるようにします。例えば、上記のコードとアダプティブフォームは同じ aem forms サーバー上に存在するので、この例ではアダプティブフォーム/content/forms/af/locbasic.htmlのコンテキストパスを使用します。
-   * `options.dataRef` を URL と一緒に渡す属性に置き換えます。dataRef 変数を使用して、[アダプティブフォームに事前にデータを取り込む](/help/forms/using/prepopulate-adaptive-form-fields.md)ことができます。  
+   * `options.dataRef` を URL と一緒に渡す属性に置き換えます。dataRef 変数を使用して、[アダプティブフォームに事前にデータを取り込む](/help/forms/using/prepopulate-adaptive-form-fields.md)ことができます。 
    * `options.themePath` をアダプティブフォームで設定されたテーマ以外のテーマへのパスと置き換えます。また、リクエストの属性を使用してテーマのパスを指定することができます。
    * `CSS_Selector` は、アダプティブフォームが埋め込まれているフォームコンテナの CSS セレクターです。例えば、上の例では、.customafsection CSS クラスが CSS セレクターです。
 

@@ -311,7 +311,7 @@ CRXDE Lite を開くには、スタートアップスクリーンから **CRXDE 
  https://<<i>host</i>>:<<i>port</i>>/crx/de/index.jsp
 ```
 
-次は例です。\
+次に例を示します。\
 `http://localhost:4502/crx/de/index.jsp` ``
 
 ![installcq_crxdelite](assets/installcq_crxdelite.png)
@@ -324,7 +324,7 @@ Adobe CQ web コンソールにアクセスするには、ようこそ画面か�
  https://<<i>host</i>>:<<i>port</i>>/system/console
 ```
 
-次は例です。\
+次に例を示します。\
 `http://localhost:4502/system/console`\
 または「Bundles」ページの\
 `http://localhost:4502/system/console/bundles`

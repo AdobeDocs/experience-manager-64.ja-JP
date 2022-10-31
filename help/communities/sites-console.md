@@ -263,7 +263,7 @@ ht-degree: 47%
 
 * **[!UICONTROL コンテンツが非表示になるまでのフラグ設定しきい値]**
 
-   0 より大きい場合は、トピックまたは投稿に何回フラグが設定された後に、その投稿が公開ビューで非表示になるかを指定する必要があります。 -1 に設定した場合、フラグ付きのトピックまたは投稿が公開表示から非表示になることはありません。 初期設定は 5 です。
+   0 より大きい場合は、トピックまたは投稿に何回フラグが設定された後に、その投稿が公開ビューで非表示になるかを指定する必要があります。 -1 に設定した場合、フラグ付きのトピックまたは投稿が公開表示から非表示になることはありません。 デフォルトは 5 です。
 
 #### Analytics  {#analytics}
 
@@ -476,7 +476,7 @@ ht-degree: 47%
 * [タグ](#tagging)
 * [モデレート](#moderation)
 * [メンバーの役割](#roles)
-* [分析](#analytics)
+* [Analytics](#analytics)
 * [翻訳](#translation)
 
 ### サムネイルの変更 {#modify-thumbnail}
@@ -536,6 +536,7 @@ UGC はサイトパッケージに含まれていません。
 >[ソーシャルログインを許可：Facebook](#user-management) が有効な場合は、以下に示すユーザーグループが作成された後に、
 >
 >* community-*&lt;site-name>*-*&lt;uid>*-members
+>
 が作成され、適用される [Facebook cloud service](social-login.md#createafacebookcloudservice) は、このグループにユーザーを追加するように設定する必要があります。
 
 ## 認証エラーの設定 {#configure-for-authentication-error}

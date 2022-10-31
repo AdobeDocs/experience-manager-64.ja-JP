@@ -12,7 +12,7 @@ exl-id: ef9352c7-c164-4cbf-8f18-5b97aa5f56be
 source-git-commit: 977ada5fefe476c7cd2fe1470eb024a517a681d2
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 70%
+ht-degree: 94%
 
 ---
 
@@ -24,16 +24,16 @@ ht-degree: 70%
 >
 >この概念について参照すると、スタートポイント、スタートプロセス、フォームという用語が区別なく使用される場合があります。
 
-AEM Formsアプリからプロセスを開始するには、タイプの開始点が必要です **Workspace** を設定します。 また、 **[!UICONTROL Mobile Workspace に表示]** オプションを使用します。
+AEM Forms アプリケーションからプロセスを開始するには、プロセスで&#x200B;**ワークスペース**&#x200B;タイプのスタートポイントが必要です。また、 **[!UICONTROL Mobile Workspace に表示]** オプションを使用します。
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
 **Workbench で定義されたプロセスを開始するには**
 
 1. AEM Forms アプリケーションで使用可能なスタートポイントを表示するには、[ホーム画面](/help/forms/using/home-screen.md)に移動してください。
-1. の **[!UICONTROL ホーム]** screen( デフォルトは **[!UICONTROL すべてのForms]** リストが表示されます。
+1. デフォルトでは、**[!UICONTROL ホーム]**&#x200B;画面に「**[!UICONTROL すべてのフォーム]**」リストが表示されます。
 
-   スタートポイントはフォームに関連付けられています。リスト内でスタートポイントに関連付けられたフォームをタップして開きます。
+   スタートポイントはフォームに関連付けられています。リストでスタートポイントに関連付けられているフォームをタップして開きます。
 
    スタートポイントに関連付けられているフォームが開きます。
 
@@ -41,7 +41,7 @@ AEM Formsアプリからプロセスを開始するには、タイプの開始�
 
    「[添付ファイル](/help/forms/using/add-attachments.md)」ボタンを使用して、このタスクに注釈を追加できます。
 
-1. フォームに入力した後、 **送信** 」ボタンをクリックします。
+1. フォームを入力したら、「**送信**」ボタンをタップします。
 
 アプリケーションがオフラインの場合、フォームとそのデータは Outbox フォルダーに保存されます。
 

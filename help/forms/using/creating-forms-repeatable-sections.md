@@ -1,7 +1,7 @@
 ---
 title: 繰り返し可能なセクションを使用したフォームの作成
 seo-title: Creating forms with repeatable sections
-description: '繰り返し可能なセクションとは、フォームに動的に追加または削除できるパネルのことです。  '
+description: 繰り返し可能なセクションとは、フォームに動的に追加または削除できるパネルのことです。
 seo-description: Repeatable sections are panels that can be dynamically added or removed to a form.
 uuid: c3fa2aa4-a6b4-458e-8534-138e075290b1
 products: SG_EXPERIENCEMANAGER/6.4/FORMS

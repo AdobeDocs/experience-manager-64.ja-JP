@@ -1,5 +1,5 @@
 ---
-title: '''チュートリアル：アダプティブフォームの作成'''
+title: 'チュートリアル：アダプティブフォームの作成'
 seo-title: Create an adaptive form
 description: このチュートリアルでは、アダプティブフォームの作成方法、レイアウトの設定、プレビューの表示方法について説明します。また、送信操作の設定方法についても説明します。
 seo-description: Learn to create, layout, and preview an adaptive form. Also, learn to configure submit actions.
@@ -36,7 +36,7 @@ ht-degree: 97%
 
 このチュートリアルの最後に、以下のようなフォームにアクセスするためのリンクがあります。
 
-    [ ![](do-not-localize/form-preview-mobile.gif)](assets/form-preview-mobile.gif)
+    [ ! [](do-not-localize/form-preview-mobile.gif)](assets/form-preview-mobile.gif)
 
 ## 手順 1：アダプティブフォームを作成する {#step-create-the-adaptive-form}
 
@@ -67,7 +67,7 @@ AEM Forms には、アダプティブフォーム上で情報を表示するた�
 
 [ファイルを入手](assets/logo.png)
 
-1. ![treeexpandall](assets/treeexpandall.png) から&#x200B;**フッター**&#x200B;コンポーネントをアダプティブフォームにドラッグします。この時点で、フォームは以下のように表示されます。   
+1. ![treeexpandall](assets/treeexpandall.png) から&#x200B;**フッター**&#x200B;コンポーネントをアダプティブフォームにドラッグします。この時点で、フォームは以下のように表示されます。 
 
    ![adaptive-form-with-headers-and-footers](assets/adaptive-form-with-headers-and-footers.png)
 
@@ -162,13 +162,13 @@ AEM Forms には、アダプティブフォーム上で情報を表示するた�
 
 アダプティブフォームの「送信」ボタンをタップすると、送信アクションがトリガーされます。送信アクションを使用して、フォームデータをローカルリポジトリに保存したり、フォームデータを REST エンドポイントに送信したり、フォームデータを電子メールとして送信したりすることができます。アダプティブフォームには、そのほかにも、すぐに使用できる送信アクションがいくつか用意されています。詳しくは、「[送信アクションの設定](/help/forms/using/configuring-submit-actions.md)」を参照してください。
 
-以下の手順により、フォームのメール送信アクションとデモ送信アクションを設定することができます。  
+以下の手順により、フォームのメール送信アクションとデモ送信アクションを設定することができます。 
 
 1. 電子メールサーバーを設定します。詳しくは、「[電子メール通知の設定](/help/sites-administering/notification.md)」を参照してください。
 
    /content/help/en/experience-manager/6-4/sites-administering/notification.html
 
-1. コンテンツブラウザーで「**フォームコンテナ**」をタップしてから「![cmppr](assets/cmppr.png)」をタップします。画面左側にプロパティブラウザーが表示されます。  
+1. コンテンツブラウザーで「**フォームコンテナ**」をタップしてから「![cmppr](assets/cmppr.png)」をタップします。画面左側にプロパティブラウザーが表示されます。 
 1. **送信**／**送信アクション**&#x200B;に移動します。「**電子メールを送信**」を選択します。次の値を指定し、「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。
 
    | プロパティ | 値 |

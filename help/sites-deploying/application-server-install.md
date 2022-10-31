@@ -13,7 +13,7 @@ exl-id: 65346618-e5a6-43d0-a2b3-698268d3cf64
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1163'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -47,7 +47,7 @@ AEM は、単一の war ファイルとしてデプロイされます。
 デプロイすると、デフォルトで次のようになります。
 
 * 実行モードは `author`
-* インスタンス（リポジトリ、Felix OSGI 環境、バンドルなど） は `${user.dir}/crx-quickstart` にインストールされます。`${user.dir}` は現在の作業ディレクトリです。crx-quickstart へのこのパスは `sling.home` と呼ばれます。
+* インスタンス（リポジトリ、Felix OSGI 環境、バンドルなど）は `${user.dir}/crx-quickstart` にインストールされます。`${user.dir}` は現在の作業ディレクトリです。crx-quickstart へのこのパスは `sling.home` と呼ばれます。
 
 * コンテキストルートは war ファイル名（例：`aem-6`） 
 
@@ -178,7 +178,7 @@ deployment-scanner を使用して AEM web アプリケーションをインス�
    * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定します（「概要」を参照）。
    * web.xml ファイルを再圧縮
 
-* AEM war ファイルをアプリケーションとしてデプロイします（他の設定にはデフォルト設定を使用）。
+* AEM war ファイルをデプロイします。 をアプリケーションとして（他の設定ではデフォルト設定を使用）
 * インストールには時間がかかる場合があります。
 * 上記の「概要」で説明した方法で、インストールが完了したことを確認します（error.log を追跡するなど）。
 * コンテキストルートは、WebLogic `/console` の web アプリケーションの「設定」タブで変更できます。
@@ -193,7 +193,7 @@ deployment-scanner を使用して AEM web アプリケーションをインス�
 
       * `bin/catalina.bat`（Unix の場合は `catalina.sh`）に、次の設定を追加します。
       * `set "JAVA_OPTS= -Xmx2048m`
-   * Tomcat では、インストール時に管理者もマネージャもアクセスできません。 そのため、次のアカウントへのアクセスを許可するには `tomcat-users.xml` を手動で編集する必要があります。
+   * Tomcat では、インストール時に管理者もマネージャもアクセスできません。そのため、次のアカウントへのアクセスを許可するには `tomcat-users.xml` を手動で編集する必要があります。
 
       * `tomcat-users.xml` を編集して、管理者およびマネージャーのアクセスを含めます。設定は次の例のようになります。
 

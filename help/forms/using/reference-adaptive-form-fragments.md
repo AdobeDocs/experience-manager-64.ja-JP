@@ -1,7 +1,7 @@
 ---
 title: 参照用のアダプティブフォームフラグメント
 seo-title: Reference adaptive form fragments
-description: 'AEM Forms には、フォームをすばやく作成するためにアセットとして使用できるアダプティブフォームフラグメントが用意されています。 '
+description: AEM Forms には、フォームをすばやく作成するためにアセットとして使用できるアダプティブフォームフラグメントが用意されています。
 seo-description: AEM Forms provides adaptive form fragments that you can use as assets to create a form quickly.
 uuid: af3ab863-e895-4fac-84f4-0a77a66f5094
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -11,15 +11,15 @@ exl-id: cceea4d1-8fc2-4118-b22e-91f27e69c7e4
 source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
 source-wordcount: '414'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
 # 参照用のアダプティブフォームフラグメント {#reference-adaptive-form-fragments}
 
-[アダプティブフォームフラグメント](/help/forms/using/adaptive-form-fragments.md)は、フォームの作成時に使用できるフィールドのグループまたはフィールドのグループを含むパネルです。これを使用してフォームを簡単にすばやく作成できます。サイドバーのアセットブラウザーを使用してアダプティブフォームフラグメントをフォームにドラッグ&amp;ドロップし、フォームエディターで編集することができます。
+[アダプティブフォームフラグメント](/help/forms/using/adaptive-form-fragments.md)は、フォームの作成時に使用できるフィールドのグループまたはフィールドのグループを含むパネルです。これを使用してフォームを簡単にすばやく作成できます。サイドバーのアセットブラウザーを使用して、アダプティブフォームフラグメントをフォームにドラッグ＆ドロップし、それをフォームエディターで編集できます。
 
-アダプティブフォームの作成者の場合、 [AEM Formsアドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html). 次のフラグメントが含まれています。
+アダプティブフォームの作成者を対象に、[AEM Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)で参照用のフラグメントが提供されています。次のフラグメントが含まれています。
 
 * アドレス
 * 連絡先情報
@@ -32,7 +32,7 @@ ht-degree: 86%
 * 利用条件
 * 署名付き利用条件
 
-パッケージをインストールすると、Forms &amp; Documents の下に参照用フラグメントを含む Reference Fragments フォルダーが作成されます。パッケージのインストールについては、 [パッケージの操作方法](/help/sites-administering/package-manager.md).
+パッケージをインストールすると、Forms &amp; Documents の下に参照用フラグメントを含む Reference Fragments フォルダーが作成されます。パッケージのインストールについては、[パッケージの作業方法](/help/sites-administering/package-manager.md)を参照してください。
 
 ![すべてのフラグメントが表示されている](assets/ootb-frags.png)
 

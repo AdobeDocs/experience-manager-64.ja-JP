@@ -13,7 +13,7 @@ exl-id: 68fe3f97-ded8-4223-b4b9-02704077e37e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -26,10 +26,10 @@ AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセス
 * 選択した言語でローカライズされたヘルプを指定する場合。
 * カスタマイズされた Workspace にカスタマイズされたヘルプコンテンツを指定する場合。
 
-オンラインドキュメントの URL を更新するには、「[カスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」の後に以下の手順に従います。
+オンラインドキュメントの URL を更新するには、「[カスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」の後に以下の手順を実行します。
 
-1. を `userinfo.html` ファイルから `/libs/ws/js/runtime/templates` から `/apps/ws/js/runtime/templates`.
-1. 変更点:
+1. `userinfo.html` ファイルを `/libs/ws/js/runtime/templates` から `/apps/ws/js/runtime/templates` にコピーします。
+1. 変更点：
 
    ```
    <ul class="helpmenu">
@@ -50,4 +50,4 @@ AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセス
 1. 以下の操作を実行します。
 
    1. /apps/ws/js/registry.js を開いて編集します。
-   1. 検索と置換 `text!/lc/libs/ws/js/runtime/templates/userinfo.html` と `text!/lc/apps/ws/js/runtime/templates/userinfo.html`.
+   1. `text!/lc/libs/ws/js/runtime/templates/userinfo.html` を検索して `text!/lc/apps/ws/js/runtime/templates/userinfo.html` に置換します。

@@ -1,6 +1,6 @@
 ---
 title: メタデータのスキーマに関する参照情報
-description: 'Dublin Core、IPTC などのメタデータのスキーマを含め、アセットメタデータを記述する際の標準規則を学習します。 '
+description: Dublin Core、IPTC などのメタデータのスキーマを含め、アセットメタデータを記述する際の標準規則を学習します。
 contentOwner: AG
 feature: Metadata
 role: User,Admin

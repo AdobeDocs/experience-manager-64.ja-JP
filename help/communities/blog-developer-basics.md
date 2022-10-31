@@ -43,7 +43,7 @@ AEM 6.1 Communities 以降、ブログはコミュニティアクティビティ
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
-   <td>不可</td> 
+   <td>いいえ</td> 
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td> 
@@ -68,7 +68,7 @@ AEM 6.1 Communities 以降、ブログはコミュニティアクティビティ
 
 | **resourceType** | social/journal/components/hbs/sidebar |
 |---|---|
-| [**インクルード可能**](scf.md#add-or-include-a-communities-component) | 不可 |
+| [**インクルード可能**](scf.md#add-or-include-a-communities-component) | いいえ |
 | [**clientllibs**](clientlibs.md) | cq.social.hbs.journal_sidebar |
 | **テンプレート** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
@@ -97,7 +97,7 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-次のページを参照してください。
+以下を参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
 * [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例

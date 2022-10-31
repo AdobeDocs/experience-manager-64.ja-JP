@@ -1,5 +1,5 @@
 ---
-title: '"チュートリアル：フォームデータモデルの作成 "'
+title: "チュートリアル：フォームデータモデルの作成 "
 seo-title: Create Form Data Model Tutorial
 description: AEM Forms のデータ統合モジュールにより、AEM ユーザープロファイル、RESTful Web サービス、SOAP ベースの Web サービス、OData サービス、リレーショナルデータベースなど、様々なバックエンドデータソースを使用してフォームデータモデルを作成することができます。MySQL データベースをデータソースとして設定し、フォームデータモデルを作成、設定、およびテストする方法について説明します。
 seo-description: AEM Forms data integration module allows you to create a form data model from disparate backend data sources such as AEM user profile, RESTful web services, SOAP-based web services, OData services, and relational databases. Learn how to configure MySQL database as data source, create, configure, and test a form data model.

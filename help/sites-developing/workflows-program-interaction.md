@@ -9,7 +9,7 @@ exl-id: da06850a-c4d5-44dd-b572-771e3b2a66c5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2015'
-ht-degree: 56%
+ht-degree: 99%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 56%
 
 ## ワークフロー Java API の使用 {#using-the-workflow-java-api}
 
-ワークフロー Java API は、[`com.adobe.granite.workflow`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/package-summary.html) パッケージといくつかのサブパッケージで構成されます。この API の最も重要な構成要素は、`com.adobe.granite.workflow.WorkflowSession` クラスです。`WorkflowSession` クラスは、デザイン時と実行時に、次のワークフローオブジェクトへのアクセスを可能にします。
+ワークフロー Java API は、[`com.adobe.granite.workflow`](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/package-summary.html) パッケージといくつかのサブパッケージで構成されます。この API の最も重要な構成要素は、`com.adobe.granite.workflow.WorkflowSession` クラスです。`WorkflowSession` クラスは、デザイン時と実行時に、次のワークフローオブジェクトへのアクセスを可能にします。
 
 * ワークフローモデル
 * 作業項目
@@ -37,14 +37,14 @@ ht-degree: 56%
 
 | 機能 | オブジェクト |
 |---|---|
-| ワークフローへのアクセス | [`WorkflowSession`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html) |
-| ワークフローインスタンスの実行とクエリー | [`Workflow`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html)</br>[`WorkItem`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkItem.html)</br>[`WorkflowData`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html) |
-| ワークフローモデルの管理 | [`WorkflowModel`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowModel.html)</br>[`WorkflowNode`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowNode.html)</br>[`WorkflowTransition`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowTransition.html) |
-| ワークフロー内（またはそれ以外）のノードに関する情報 | [`WorkflowStatus`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) |
+| ワークフローへのアクセス | [`WorkflowSession`](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html) |
+| ワークフローインスタンスの実行とクエリ | [`Workflow`](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/Workflow.html)</br>[`WorkItem`](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkItem.html)</br>[`WorkflowData`](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html) |
+| ワークフローモデルの管理 | [`WorkflowModel`](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowModel.html)</br>[`WorkflowNode`](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowNode.html)</br>[`WorkflowTransition`](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/model/WorkflowTransition.html) |
+| ワークフロー内（または外）のノードに関する情報 | [`WorkflowStatus`](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) |
 
 ## ECMA スクリプトでのワークフローオブジェクトの取得 {#obtaining-workflow-objects-in-ecma-scripts}
 
-[スクリプトの設置](/help/sites-developing/the-basics.md#locating-the-script)で説明したように、AEM は、サーバー側 ECMA スクリプトを実行する ECMA スクリプトエンジンを（Apache Sling を通じて）提供します。[`org.apache.sling.scripting.core.ScriptHelper`](https://sling.apache.org/apidocs/sling5/org/apache/sling/scripting/core/ScriptHelper.html) クラスは、`sling` 変数としてスクリプトで直ちに使用できます。
+[スクリプトの設置](/help/sites-developing/the-basics.md#locating-the-script)で説明したように、AEM は、サーバーサイドの ECMA スクリプトを実行する ECMA スクリプトエンジンを（Apache Sling を通じて）提供します。[`org.apache.sling.scripting.core.ScriptHelper`](https://sling.apache.org/apidocs/sling5/org/apache/sling/scripting/core/ScriptHelper.html) クラスは、`sling` 変数としてスクリプトで直ちに使用できます。
 
 `ScriptHelper` クラスは、`SlingHttpServletRequest` へのアクセスを可能にします。これを使用することによって、最終的に `WorkflowSession` オブジェクトを取得できます。以下に例を示します。
 
@@ -54,26 +54,26 @@ var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(P
 
 ## ワークフロー REST API の使用 {#using-the-workflow-rest-api}
 
-ワークフローコンソールでは、REST API を大量に利用します。このページでは、ワークフローの REST API について説明します。
+ワークフローコンソールでは REST API がよく使用されるので、ここでは、ワークフロー用の REST API について説明します。
 
 >[!NOTE]
 >
->curl コマンドラインツールを使用すると、Workflow REST API を使用して、ワークフローオブジェクトにアクセスし、インスタンスのライフサイクルを管理できます。 このページの例では、curl コマンドラインツールから REST API を使用する方法を示します。
+>curl コマンドラインツールでは、ワークフロー REST API を使用して、ワークフローオブジェクトにアクセスし、インスタンスのライフサイクルを管理できます。このページの例では、curl コマンドラインツールから REST API を使用する方法を示します。
 
 REST API では、次のアクションがサポートされています。
 
-* ワークフローサービスを開始または停止
+* サービスの開始または停止
 * ワークフローモデルの作成、更新、削除
 * [ワークフローインスタンスの起動、休止、再開、終了](/help/sites-administering/workflows.md#workflow-status-and-actions)
 * 作業項目の完了、委任
 
 >[!NOTE]
 >
->Web 開発用の Firefox の拡張機能である Firebug を使用すると、コンソールの操作時に HTTP トラフィックを追跡できます。例えば、`POST` リクエストにより AEM サーバーに送信されたパラメーターと値を確認できます。
+>Web 開発用の Firefox の拡張機能である Firebug を使用すると、コンソールの操作時に HTTP トラフィックを追跡できます。例えば、`POST` リクエストで AEM サーバーに送信されたパラメーターと値を確認できます。
 
-このページでは、AEMが localhost のポートで実行されていると想定しています。 `4502` インストールコンテキストが `/`&quot; （ルート）と呼ばれます。 実際のインストール状況が異なる場合は、HTTP リクエストが適用される URI を実際の状況に合わせて変更してください。
+このページでは、AEM がローカルホストのポート `4502` で動作しており、インストールコンテキストが「`/`」（ルート）であると想定しています。実際のインストール状況が異なる場合は、HTTP リクエストが適用される URI を実際の状況に合わせて変更してください。
 
-`GET` リクエストに対応するレンダリングは JSON レンダリングです。の URL `GET` が `.json` 拡張子。例：
+`GET` リクエストに対応するレンダリングは JSON レンダリングです。`GET` の URL の拡張子は、次のように `.json` となる必要があります。
 
 `http://localhost:4502/etc/workflow.json`
 
@@ -95,7 +95,7 @@ REST API では、次のアクションがサポートされています。
   </tr> 
   <tr> 
    <td><code>POST</code></td> 
-   <td><p>新しいワークフローインスタンスを作成します。パラメーターを以下に示します。<br /> - <code>model</code>:各ワークフローモデルの ID (URI)<br /> - <code>payloadType</code>:ペイロードのタイプを含む ( 例： <code>JCR_PATH</code> または URL)。<br /> ペイロードはパラメーターとして送信されます <code>payload</code>. A <code>201</code> (<code>CREATED</code>) 応答が返され、新しいワークフローインスタンスリソースの URL が格納された場所ヘッダーが返されます。</p> </td> 
+   <td><p>新しいワークフローインスタンスを作成します。パラメーターを以下に示します。<br /> - <code>model</code>：各ワークフローモデルの ID（URI）<br /> - <code>payloadType</code>：ペイロードのタイプを含む（例： <code>JCR_PATH</code> または URL）。<br /> ペイロードはパラメーター <code>payload</code> として送信されます。新しいワークフローインスタンスリソースの URL を格納したロケーションヘッダーを持つ <code>201</code>（<code>CREATED</code>）の応答が返されます。</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -108,7 +108,7 @@ REST API では、次のアクションがサポートされています。
 
 | HTTP リクエストメソッド | アクション |
 |---|---|
-| `GET` | 使用可能なワークフローインスタンスとその状態 ( `RUNNING`, `SUSPENDED`, `ABORTED` または `COMPLETED`) |
+| `GET` | 使用可能なワークフローインスタンスとその状態（`RUNNING`、`SUSPENDED`、`ABORTED`、`COMPLETED` のいずれか）をリストします。 |
 
 #### ID によるワークフローインスタンスの管理 {#managing-a-workflow-instance-by-its-id}
 
@@ -128,7 +128,7 @@ REST API では、次のアクションがサポートされています。
   </tr> 
   <tr> 
    <td><code>POST</code></td> 
-   <td>インスタンスの状態を変更します。新しい状態がパラメーターとして送信されます <code>state</code> とは、次のいずれかの値を持つ必要があります。 <code>RUNNING</code>, <code>SUSPENDED</code>または <code>ABORTED</code>.<br /> 新しい状態にアクセスできない場合（終了したインスタンスを休止する場合など）、 <code>409</code> (<code>CONFLICT</code>) 応答がクライアントに送り返されます。</td> 
+   <td>インスタンスの状態を変更します。新しい状態がパラメーター <code>state</code> として送信されます。状態は <code>RUNNING</code>、<code>SUSPENDED</code>、<code>ABORTED</code> のいずれかの値でなければなりません。<br />新しい状態にアクセスできない場合（強制終了したインスタンスを休止にするなど）は、<code>409</code>（<code>CONFLICT</code>）の応答がクライアントに返されます。</td> 
   </tr> 
  </tbody> 
 </table>
@@ -151,12 +151,12 @@ REST API では、次のアクションがサポートされています。
   </tr> 
   <tr> 
    <td><code>POST</code></td> 
-   <td>新しいワークフローモデルを作成します. パラメーター <code>title</code> が送信されると、指定されたタイトルで新しいモデルが作成されます。 JSON モデル定義をパラメーターとして添付する <code>model</code> 指定された定義に従って、新しいワークフローモデルを作成します。<br /> A <code>201</code> 応答 (<code>CREATED</code>) は、新しいワークフローモデルリソースの URL を含む場所ヘッダーと共に返されます。<br /> 同じことが、モデル定義が <code>modelfile</code>.<br /> どちらの場合も <code>model</code> および <code>modelfile</code> パラメータ、名前を付けた追加パラメータ <code>type</code> シリアル化形式を定義するには、が必要です。 新しいシリアル化フォーマットは、OSGI API を使用して統合できます。標準の JSON シリアライザーは、ワークフローエンジンに付属しています。そのタイプは JSON です。フォーマットの例は、以下を参照してください。</td> 
+   <td>新しいワークフローモデルを作成します.パラメーター <code>title</code> を送信すると、指定されたタイトルで新しいモデルが作成されます。JSON モデル定義をパラメーター <code>model</code> として付加すると、指定された定義に応じて新しいワークフローモデルが作成されます。<br />新しいワークフローモデルリソースの URL を格納したロケーションヘッダーを持つ <code>201</code> の応答（<code>CREATED</code>）が返されます。<br /> モデル定義を <code>modelfile</code> というファイルパラメーターとして付加した場合も同じことが起こります。<br /> <code>model</code> パラメーターと <code>modelfile</code> パラメーターのどちらの場合も、シリアル化フォーマットを定義するには、<code>type</code> という追加パラメーターが必要です。新しいシリアル化フォーマットは、OSGI API を使用して統合できます。標準の JSON シリアライザーは、ワークフローエンジンに付属しています。そのタイプは JSON です。フォーマットの例は、以下を参照してください。</td> 
   </tr> 
  </tbody> 
 </table>
 
-例：ブラウザーで、 `http://localhost:4502/etc/workflow/models.json` は、次のような json 応答を生成します。
+例：ブラウザーで `http://localhost:4502/etc/workflow/models.json` へのリクエストをおこなうと、次のような JSON 応答が生成されます。
 
 ```
 [
@@ -222,7 +222,7 @@ REST API では、次のアクションがサポートされています。
 
 `http://localhost:4502*{uri}*`
 
-ここで、 `*{uri}*` は、リポジトリ内のモデルノードへのパスです。
+ここで、`*{uri}*` はリポジトリ内のモデルノードへのパスです。
 
 <table> 
  <tbody> 
@@ -232,24 +232,24 @@ REST API では、次のアクションがサポートされています。
   </tr> 
   <tr> 
    <td><code>GET</code></td> 
-   <td>を取得します <code>HEAD</code> モデルのバージョン（定義とメタデータ）。</td> 
+   <td>モデル（定義とメタデータ）の <code>HEAD</code> バージョンを取得します。</td> 
   </tr> 
   <tr> 
    <td><code>PUT</code></td> 
-   <td>を更新します。 <code>HEAD</code> モデルのバージョン（新しいバージョンを作成します）。<br /> モデルの新しいバージョンの完全なモデル定義は、という名前のパラメーターとして追加する必要があります。 <code>model</code>. さらに、 <code>type</code> 新しいモデルを作成する際にはパラメーターが必要で、値を持つ必要があります。 <code>JSON</code>.<br /> </td> 
+   <td>モデルの <code>HEAD</code> バージョンを更新します（新しいバージョンを作成します）。<br /> モデルの新しいバージョンのすべてのモデル定義を <code>model</code> というパラメーターとして追加する必要があります。さらに、新しいモデルの作成時には <code>type</code> パラメーターが必要で、値は <code>JSON</code> にする必要があります。<br /> </td> 
   </tr> 
   <tr> 
    <td><code>POST</code></td> 
-   <td>PUT の場合と同じ動作です。AEMウィジェットがサポートされていないので、必要です <code>PUT</code> 操作。</td> 
+   <td>PUT の場合と同じ動作です。AEM ウィジェットは <code>PUT</code> 操作をサポートしていないので、これが必要になります。</td> 
   </tr> 
   <tr> 
    <td><code>DELETE</code></td> 
-   <td>モデルを削除します。ファイアウォール/プロキシの問題を解決するには、 <code>POST</code> を含む <code>X-HTTP-Method-Override</code> 値を持つヘッダーエントリ <code>DELETE</code> は、 <code>DELETE</code> リクエスト。</td> 
+   <td>モデルを削除します。ファイアウォールやプロキシの問題を解決するために、値 <code>DELETE</code> の <code>X-HTTP-Method-Override</code> ヘッダーエントリを含む <code>POST</code> も <code>DELETE</code> リクエストとして受け入れられます。</td> 
   </tr> 
  </tbody> 
 </table>
 
-例：ブラウザーで、 `http://localhost:4502/var/workflow/models/publish_example.json` は `json` 次のコードに似た応答を返します。
+例：ブラウザーで `http://localhost:4502/var/workflow/models/publish_example.json` へのリクエストをおこなうと、次のコードのような `json` 応答が返されます。
 
 ```shell
 {
@@ -355,7 +355,7 @@ REST API では、次のアクションがサポートされています。
   </tr> 
   <tr> 
    <td><code>POST</code></td> 
-   <td>URI がパラメーターとして送信される作業項目を完了します <code>item</code> に従って、ワークフローインスタンスを、パラメーターで定義された次のノードに進めます。 <code>route</code> または <code>backroute</code> 一歩下がる時に<br /> パラメーター <code>delegatee</code> が送信されると、パラメーターで識別される作業項目が送信されます。 <code>item</code> は指定した参加者に委任されます。</td> 
+   <td>URI がパラメーター <code>item</code> として送信される作業項目を完了し、一致するワークフローインスタンスを次のノードに進めます。次のノードは、パラメーター <code>route</code>（1 ステップ戻る場合はパラメーター「<code>backroute</code>」）によって定義されます。<br /> パラメーター <code>delegatee</code> を送信した場合は、パラメーター <code>item</code> によって識別される作業項目が、指定された参加者に委任されます。 </td> 
   </tr> 
  </tbody> 
 </table>
@@ -368,7 +368,7 @@ REST API では、次のアクションがサポートされています。
 
 | HTTP リクエストメソッド | アクション |
 |---|---|
-| `GET` | インボックスのデータ（定義とメタデータ）を取得します `WorkItem` は、ID で識別されます。 |
+| `GET` | ID によって識別されるインボックスの `WorkItem` のデータ（定義とメタデータ）を取得します。 |
 
 ## 例 {#examples}
 
@@ -386,7 +386,7 @@ curl を使用した例：
 curl -u admin:admin http://localhost:4502/etc/workflow/instances.RUNNING.json
 ```
 
-この `uri` 結果に表示されるは、インスタンスとして使用できます `id` 他のコマンドで例：
+結果に表示される `uri` は、他のコマンドでインスタンス `id` として使用することができます。その例を以下に示します。
 
 ```shell
 [
@@ -396,18 +396,18 @@ curl -u admin:admin http://localhost:4502/etc/workflow/instances.RUNNING.json
 
 >[!NOTE]
 >
->この `curl` コマンドは、任意の [ワークフローのステータス](/help/sites-administering/workflows.md#workflow-status-and-actions) 代わりに `RUNNING`.
+>この `curl` コマンドは、`RUNNING` の代わりに任意の [ワークフローステータス](/help/sites-administering/workflows.md#workflow-status-and-actions) と使用することができます。
 
 ### ワークフローのタイトルを変更する方法 {#how-to-change-the-workflow-title}
 
-ワークフローコンソールの「**インスタンス**」タブに表示されている&#x200B;**ワークフローのタイトル**&#x200B;を変更するには、次のように `POST` コマンドを送信します。
+ワークフローコンソールの&#x200B;**インスタンス**&#x200B;タブに表示されている&#x200B;**ワークフローのタイトル**&#x200B;を変更するには、次のように `POST` コマンドを送信してください。
 
-* を: `http://localhost:4502/etc/workflow/instances/{id}`
+* 送信先：`http://localhost:4502/etc/workflow/instances/{id}`
 
 * 使用するパラメーター：
 
-   * `action`:値は次のとおりです。 `UPDATE`
-   * `workflowTitle`:ワークフローのタイトル
+   * `action`：値は必ず`UPDATE`にします。
+   * `workflowTitle`：ワークフローのタイトル
 
 #### ワークフローのタイトルを変更する方法 - curl を使用した REST {#how-to-change-the-workflow-title-rest-using-curl}
 
@@ -436,15 +436,15 @@ curl -u admin:admin http://localhost:4502/etc/workflow/models.json
 
 >[!NOTE]
 >
->関連トピック [ワークフローモデルの管理](#managing-workflow-models).
+>[ワークフローモデルの管理](#managing-workflow-models)も参照してください。
 
 ### WorkflowSession オブジェクトの取得 {#obtaining-a-workflowsession-object}
 
-この `com.adobe.granite.workflow.WorkflowSession` クラスはから適応可能です `javax.jcr.Session` オブジェクトまたは `org.apache.sling.api.resource.ResourceResolver` オブジェクト。
+`com.adobe.granite.workflow.WorkflowSession` クラスは、`javax.jcr.Session` オブジェクトまたは `org.apache.sling.api.resource.ResourceResolver` オブジェクトから適応させることができます。
 
 #### WorkflowSession オブジェクトの取得 - Java {#obtaining-a-workflowsession-object-java}
 
-JSP スクリプト（またはサーブレットクラスの Java コード）で、HTTP リクエストオブジェクトを使用して `SlingHttpServletRequest` オブジェクトを取得します。これにより、`ResourceResolver` オブジェクトへのアクセスが可能になります。を適応させる `ResourceResolver` 対して `WorkflowSession`.
+JSP スクリプト（またはサーブレットクラスの Java コード）で、HTTP リクエストオブジェクトを使用して `SlingHttpServletRequest` オブジェクトを取得します。これにより、`ResourceResolver` オブジェクトへのアクセスが可能になります。`ResourceResolver` オブジェクトを `WorkflowSession` に適応させます。
 
 ```java
 <%
@@ -460,7 +460,7 @@ WorkflowSession wfSession = slingReq.getResourceResolver().adaptTo(WorkflowSessi
 
 #### WorkflowSession オブジェクトの取得 - ECMA スクリプト {#obtaining-a-workflowsession-object-ecma-script}
 
-`sling``SlingHttpServletRequest` 変数を使用して、 オブジェクトの取得に使用する オブジェクトを取得します。`ResourceResolver`を適応させる `ResourceResolver` オブジェクトを `WorkflowSession` オブジェクト。
+`sling` 変数を使用して、`ResourceResolver` オブジェクトの取得に使用する `SlingHttpServletRequest` オブジェクトを取得します。`ResourceResolver` オブジェクトを `WorkflowSession` オブジェクトに適応させます。
 
 ```
 var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(Packages.com.adobe.granite.workflow.WorkflowSession);
@@ -475,31 +475,31 @@ var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(P
 
 例では以下を実行します。
 
-1. ID を持つモデルの作成 `/var/workflow/models/mymodel/jcr:content/model`) をクリックします。
+1. `/var/workflow/models/mymodel/jcr:content/model` ID を持つモデルを作成します。
 1. モデルを削除します。
 
 >[!NOTE]
 >
->モデルを削除すると、 `deleted` モデルの `metaData` 子ノードから `true`.
+>モデルを削除するには、モデルの `metaData` 子ノードの `deleted` プロパティを `true` に設定します。
 >
 >モデルを削除しても、モデルノードは削除されません。
 
 新しいモデルを作成する場合：
 
-* ワークフローモデルエディターでは、モデルが以下の特定のノード構造を使用する必要があります `/var/workflow/models`. モデルの親ノードはタイプである必要があります `cq:Page` 持つ `jcr:content` 次のプロパティ値を持つノード。
+* ワークフローモデルエディターでは、モデルが `/var/workflow/models` の下で特定のノード構造を使用している必要があります。モデルの親ノードは、以下のプロパティ値の `jcr:content` ノードを持つ `cq:Page` タイプである必要があります。
 
-   * `sling:resourceType`: `cq/workflow/components/pages/model`
-   * `cq:template`: `/libs/cq/workflow/templates/model`
+   * `sling:resourceType`：`cq/workflow/components/pages/model`
+   * `cq:template`：`/libs/cq/workflow/templates/model`
 
    モデルを作成する際は、まずこの `cq:Page` ノードを作成し、その `jcr:content` ノードを model ノードの親として使用する必要があります。
 
-* この `id` 一部のメソッドでモデルを識別するために必要な引数は、リポジトリ内の model ノードの絶対パスです。
+* 一部のメソッドがモデルの識別に必要とする `id` 引数は、リポジトリ内の model ノードの絶対パスです。
 
    `/var/workflow/models/<*model_name>*/jcr:content/model`
 
    >[!NOTE]
    >
-   >詳しくは、 [すべてのワークフローモデルのリストを作成する方法](#how-to-list-all-workflow-models).
+   >[すべてのワークフローモデルをリストする方法](#how-to-list-all-workflow-models)を参照してください。
 
 #### ワークフローモデルの作成、読み取り、削除 - Java {#creating-reading-or-deleting-workflow-models-java}
 
@@ -555,15 +555,15 @@ curl -u admin:admin -X DELETE http://localhost:4502/etc/workflow/models/{id}
 
 ### ワークフローの状態の確認時のシステムワークフローの除外 {#filtering-out-system-workflows-when-checking-workflow-status}
 
-以下を使用して、 [WorkflowStatus API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) ：ノードのワークフローステータスに関する情報を取得します。
+[WorkflowStatus API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) を使用して、ノードのワークフローステータスに関する情報を取得できます。
 
-各種メソッドには次のパラメーターがあります。
+各種メソッドには以下のパラメーターがあります。
 
 `excludeSystemWorkflows`
 
-このパラメーターは、 `true` をクリックして、関連する結果からシステムワークフローを除外する必要があることを示します。
+このパラメーターを `true` に設定すると、関連する結果からシステムワークフローを除外することができます。
 
-あなた [OSGi 設定を更新できます。](/help/sites-deploying/configuring-osgi.md) **AdobeGranite ワークフロー PayloadMapCache** ワークフローを指定する `Models` をシステムワークフローと見なします。 デフォルト（実行時）のワークフローモデルを以下に示します。
+`Models` ワークフローがシステムワークフローであると見なされるように指定する、**Adobe Granite Workflow PayloadMapCache** という [OSGi 設定を更新](/help/sites-deploying/configuring-osgi.md)できます。デフォルト（実行時）のワークフローモデルを以下に示します。
 
 * `/var/workflow/models/scheduled_activation/jcr:content/model`
 * `/var/workflow/models/scheduled_deactivation/jcr:content/model`
@@ -648,7 +648,7 @@ wfSession.terminateWorkflow(workflow);
 
    >[!NOTE]
    >
-   >詳しくは、 [実行中のすべてのワークフローのリストを取得する方法](#how-to-get-a-list-of-all-running-workflows-with-their-ids) を使用して、特定のステータスのインスタンスを一覧表示するためのもの。
+   >特定のステータスのインスタンスを一覧表示する方法については、[実行中のすべてのワークフローとその ID のリストを取得する方法](#how-to-get-a-list-of-all-running-workflows-with-their-ids)を参照してください。
 
 * **ワークフローの休止**
 
@@ -806,9 +806,9 @@ wfSession.complete(workItem, routes.get(0));
 
 ### ワークフローイベントのリスン {#listening-for-workflow-events}
 
-OSGi イベントフレームワークを使用して、[`com.adobe.granite.workflow.event.WorkflowEvent` クラスが定義するイベントをリスンします。](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/event/WorkflowEvent.html)このクラスは、イベントの対象に関する情報を取得するのに役立ついくつかのメソッドも提供します。例えば、`getWorkItem` メソッドは、イベントに関与する作業項目の `WorkItem` オブジェクトを返します。
+OSGi イベントフレームワークを使用して、[`com.adobe.granite.workflow.event.WorkflowEvent`](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/event/WorkflowEvent.html) クラスが定義するイベントをリッスンします。このクラスは、イベントの対象に関する情報を取得するのに役立ついくつかのメソッドも提供します。例えば、`getWorkItem` メソッドは、イベントに関与する作業項目の `WorkItem` オブジェクトを返します。
 
-次のサンプルコードでは、ワークフローイベントをリスンし、イベントのタイプに応じてタスクを実行するサービスを定義しています。
+以下のサンプルコードでは、ワークフローイベントをリッスンし、イベントのタイプに応じてタスクを実行するサービスを定義しています。
 
 ```java
 package com.adobe.example.workflow.listeners;

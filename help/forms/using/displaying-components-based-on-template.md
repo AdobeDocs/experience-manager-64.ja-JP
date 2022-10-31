@@ -13,7 +13,7 @@ exl-id: a4cee2e6-a56f-4355-8176-b3ed7478a775
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '352'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 62%
 
 ## テンプレートのコンテンツポリシーの変更 {#changing-the-content-policy-of-a-template}
 
-テンプレートを作成すると、そのテンプレートはの下に作成されます。 `/conf` をコンテンツリポジトリに追加します。 で作成したフォルダーに基づいて `/conf` ディレクトリ、テンプレートのパス： `/conf/<your-folder>/settings/wcm/templates/<your-template>`.
+作成したテンプレートは、コンテンツリポジトリの `/conf` に保存されます。テンプレートのパスは、`/conf` ディレクトリに作成したフォルダーに基づいて、`/conf/<your-folder>/settings/wcm/templates/<your-template>` になります。
 
 テンプレートのコンテンツポリシーに基づいてサイドバーにコンポーネントを表示するには、次の手順を実行します。
 
@@ -35,7 +35,7 @@ ht-degree: 62%
 
    例：`/conf/<your-folder>/`
 
-1. CRXDE で、次の場所に移動します。 `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/`
+1. CRXDE で、`/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/` に移動します。
 
    コンポーネントのグループを選択するためには、新しいコンテンツポリシーが必要です。新しいポリシーを作成するには、デフォルトのポリシーをコピーして貼り付け、名前を変更します。
 
@@ -45,19 +45,19 @@ ht-degree: 62%
 
    ![デフォルトのポリシーをコピー](assets/crx-default1.png)
 
-1. 作成する新しいポリシーを選択し、 **コンポーネント** プロパティを右側のパネルにタイプ `string[]`.
+1. 作成した新しいポリシーを選択し、右側のパネルにあるタイプが `string[]` の **components** プロパティを選択します。
 
-   components プロパティを選択して開くと、components を編集ダイアログが表示されます。components を編集ダイアログでは、「**+**」および「**-**」ボタンを使用して、コンポーネントグループを追加または削除できます。作成者が使用するコンポーネントを含むコンポーネントグループを追加できます。
+   components プロパティを選択して開くと、components を編集ダイアログが表示されます。components を編集ダイアログでは、「**+**」および「**-**」ボタンを使用して、コンポーネントグループを追加または削除できます。作成者が使用するコンポーネントのフォームを含むコンポーネントグループを追加できます。
 
    ![ポリシーのコンポーネントを追加または削除](assets/add-components-list1.png)
 
-   コンポーネントグループを追加した後、 **OK** 一覧を更新するには、次に **すべて保存** をクリックし、CRXDE アドレスバーの上に表示されます。
+   コンポーネントグループを追加した後、「**OK**」をクリックしてリストを更新し、CRXDE アドレスバーの上にある「**すべて保存**」をクリックして更新します。
 
-1. テンプレートで、コンテンツポリシーをデフォルトから、作成した新しいポリシーに変更します。( `myPolicy` （この例では）。
+1. テンプレートで、コンテンツポリシーをデフォルトから、作成した新しいポリシーに変更します。（この例では `myPolicy` です。）
 
-   ポリシーを変更するには、CRXDE でに移動します。 `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/guideContainer/rootPanel/items`.
+   ポリシーを変更するには、CRXDE で `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/guideContainer/rootPanel/items` に移動します。
 
-   内 `cq:policy` プロパティ、変更 `default` を新しいポリシー名 ( `myPolicy`) をクリックします。
+   `cq:policy` プロパティで、`default` を新しいポリシー名（`myPolicy`）に変更します。
 
    ![更新されたテンプレートコンテンツポリシー](assets/updated-policy.png)
 

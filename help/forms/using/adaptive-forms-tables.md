@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームにおける表
 seo-title: Tables in adaptive forms
-description: 'AEM Forms の表コンポーネントでは、モバイルレイアウトにレスポンシブなアダプティブフォームで表を作成することができ、XDP 表コンポーネントも使用することができます。 '
+description: AEM Forms の表コンポーネントでは、モバイルレイアウトにレスポンシブなアダプティブフォームで表を作成することができ、XDP 表コンポーネントも使用することができます。
 seo-description: The Table component in AEM Forms lets you create tables in adaptive forms that are responsive to mobile layouts, and also allows using XDP table components.
 uuid: 604cd51f-2a47-4410-b414-9cb13fe63713
 products: SG_EXPERIENCEMANAGER/6.4/FORMS

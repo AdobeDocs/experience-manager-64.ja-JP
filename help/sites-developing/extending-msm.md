@@ -128,7 +128,7 @@ public LiveAction createAction(Resource resource) throws WCMException {
 
 `execute` オブジェクトの `LiveAction` メソッドのパラメーターとして、以下のオブジェクトを指定します。
 
-* ライブコピーのソースを表す [`Resource`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) オブジェクト。
+* ライブコピーのソースを表す [`Resource`](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) オブジェクト。
 * ライブコピーのターゲットを表す `Resource` オブジェクト。
 * ライブコピーの [`LiveRelationship`](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/LiveRelationship.html) オブジェクト。
 * 値 `autoSave` は、`LiveAction` がリポジトリに対しておこなわれた変更を保存する必要があることを示します。

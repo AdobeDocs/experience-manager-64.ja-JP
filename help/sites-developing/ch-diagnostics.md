@@ -13,7 +13,7 @@ exl-id: 31926737-1a06-4fb9-b851-665095954875
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '474'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ ContextHub の診断ページには、作成されたストアおよび UI モ�
 
 >[!NOTE]
 >
->ContextHub 設定が従来のパスの下にまだ存在する場合、診断ページの場所は「 `http://<host>:<port>/libs/settings/cloudsettings/legacy/contexthub.diagnostics.html`.
+>ContextHub 設定が従来のパスの下にまだ存在する場合、診断ページの場所は `http://<host>:<port>/libs/settings/cloudsettings/legacy/contexthub.diagnostics.html` となります。
 
 ## ストア {#stores}
 
@@ -65,8 +65,8 @@ URL セクションには、次の ContextHub 機能へのリンクが含まれ�
 
 * **設定エディター**：ストア、UI モードおよび UI モジュールを設定できる [ContextHub 設定ページ](/help/sites-administering/contexthub-config.md)を開きます。
 
-* **ContextHub モジュールの設定：** /etc/cloudsettings/default/contexthub.config.kernel.js ファイルを開きます。このファイルには、ContextHub ストア設定の JavaScript オブジェクト表現が格納されています。
-* **ContextHub UI の設定：** /etc/cloudsettings/default/contexthub.config.ui.js ファイルを開きます。このファイルには、ContextHub UI モード設定の JavaScript オブジェクト表現が格納されています。
-* **kernel.js:** /etc/cloudsettings/default/contexthub.kernel.js ファイルを開きます。このファイルには、ContextHub フレームワークを実装するクライアントライブラリのソースコード、セグメントエンジン、ストアタイプが格納されています。
-* **ui.js:** /etc/cloudsettings/default/contexthub.ui.js ファイルを開きます。このファイルには、ContextHub UI および UI モジュールタイプを実装するクライアントライブラリのソースコードが含まれています。
-* **style.css:** /etc/cloudsettings/default/contexthub.styles.css ファイルを開きます。このファイルには、ContextHub UI および UI モジュールの CSS スタイルが格納されています。
+* **ContextHub モジュールの設定：**/etc/cloudsettings/default/contexthub.config.kernel.js ファイルを開きます。このファイルには、ContextHub ストア設定の JavaScript オブジェクト表現が格納されています。
+* **ContextHub UI の設定：**/etc/cloudsettings/default/contexthub.config.ui.js ファイルを開きます。このファイルには、ContextHub UI モード設定の JavaScript オブジェクト表現が格納されています。
+* **kernel.js：**/etc/cloudsettings/default/contexthub.kernel.js ファイルを開きます。このファイルには、ContextHub フレームワークおよびセグメントエンジン、ストアタイプを実装するクライアントライブラリのソースコードが格納されています。
+* **ui.js：**/etc/cloudsettings/default/contexthub.ui.js ファイルを開きます。このファイルには、ContextHub UI および UI モジュールタイプを実装するクライアントライブラリのソースコードが格納されています。
+* **style.css：**/etc/cloudsettings/default/contexthub.styles.css ファイルを開きます。このファイルには、ContextHub UI および UI モジュールの CSS スタイルが格納されています。

@@ -13,7 +13,7 @@ exl-id: 245e1c28-f702-4300-81cf-5139db9d95ec
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '918'
-ht-degree: 62%
+ht-degree: 80%
 
 ---
 
@@ -26,7 +26,7 @@ AEM は以下の両方をサポートします。
 
 >[!NOTE]
 >
->* [WCAG 2.0 クイックガイド](/help/managing/qg-wcag.md)
+>* [WCAG 2.0 のクイックガイド](/help/managing/qg-wcag.md)
 >* [アクセス可能なコンテンツ（WCAG 2.0 適合）の作成](/help/sites-authoring/creating-accessible-content.md)
 
 
@@ -40,11 +40,11 @@ RTE は、タッチ操作対応 UI とクラシック UI の両方から、様�
 
 * この **テキスト** タッチ操作対応 UI のコンポーネント：
 
-   ![タッチ操作対応 UI のフルスクリーンモードのテキストコンポーネント (RTE)。](assets/chlimage_1-206.png)
+   ![タッチ操作対応 UI のフルスクリーンモードのテキストコンポーネント（RTE）](assets/chlimage_1-206.png)
 
 * クラシック UI の&#x200B;**テキスト**&#x200B;コンポーネント：
 
-   ![クラシック UI のテキストコンポーネントの編集ダイアログ（RTE）。](assets/chlimage_1-207.png)
+   ![クラシック UI のテキストコンポーネントの編集ダイアログ（RTE）](assets/chlimage_1-207.png)
 
 >[!NOTE]
 >
@@ -52,7 +52,6 @@ RTE は、タッチ操作対応 UI とクラシック UI の両方から、様�
 >
 >* [プラグインとその機能](/help/sites-administering/rich-text-editor.md#aboutplugins)
 >* [プラグインとその機能 — タッチ操作対応 UI](/help/sites-administering/rich-text-editor.md#aboutplugins)
-
 >
 
 
@@ -67,7 +66,7 @@ RTE 設定の完全な手順は、[リッチテキストエディターの設定
 
 CRXDE Lite の該当する `rtePlugins` サブブランチ内でプラグインを設定することにより（以下の図を参照）、そのプラグインのすべての機能または特定の機能をアクティベートできます。
 
-![CRXDE Lite で rtePlugin の例を表示。](assets/chlimage_1-208.png)
+![CRXDE Lite で rtePlugin の例を表示](assets/chlimage_1-208.png)
 
 ### 例 - RTE 選択フィールドで使用可能な段落書式を設定 {#example-specifying-paragraph-formats-available-in-rte-selection-field}
 
@@ -85,11 +84,11 @@ CRXDE Lite の該当する `rtePlugins` サブブランチ内でプラグイン�
    * クラシック UI の「**書式**」フィールド（ドロップダウンセレクター）を使用。
 
 
-段落書式オプションを介して RTE で構造要素を使用できるので、AEM はアクセス可能なコンテンツの開発に適した基礎を提供します。コンテンツ作成者は、RTE を使用してフォントのサイズや色、その他の関連する属性を書式設定できないので、インライン書式設定は作成できません。代わりに、見出しなどの該当する構造要素を選択し、「スタイル」オプションから選択されたグローバルスタイルを使用する必要があります。これにより、独自のスタイルシートで閲覧するユーザーにとってはマークアップがクリーンになり、オプションも多くなるほか、コンテンツの構造が正確になります。
+段落書式オプションを介して RTE で構造要素を使用できるので、AEM はアクセシブルなコンテンツの開発に適した基盤を提供します。コンテンツ作成者は、RTE を使用してフォントのサイズや色、その他の関連する属性を書式設定できないので、インライン書式設定は作成できません。代わりに、見出しなどの該当する構造要素を選択し、「スタイル」オプションから選択されるグローバルスタイルを使用する必要があります。これにより、独自のスタイルシートで閲覧するユーザーにとってはマークアップがクリーンになり、オプションも多くなるほか、コンテンツの構造が正確になります。
 
 ## ソース編集機能の使用 {#use-of-the-source-edit-feature}
 
-コンテンツ作成者が、RTE を使用して作成された HTML ソースコードを調査および調整することが必要になる場合があります。例えば、WCAG 2.0 を確実に準拠するため、RTE 内で作成されたコンテンツの一部で追加のマークアップが必要となることがあります。これをおこなうには、RTE の[ソースの編集](/help/sites-administering/rich-text-editor.md#aboutplugins)オプションを使用します。次の項目を指定できます。 [ `sourceedit` の機能 `misctools` プラグイン](/help/sites-administering/rich-text-editor.md#aboutplugins).
+コンテンツ作成者が、RTE を使用して作成された HTML ソースコードを調査および調整することが必要になる場合があります。例えば、WCAG 2.0 を確実に準拠するため、RTE 内で作成されたコンテンツの一部で追加のマークアップが必要となることがあります。これを行うには、RTE の[ソースの編集](/help/sites-administering/rich-text-editor.md#aboutplugins)オプションを使用します。[`sourceedit` 機能は `misctools` プラグイン](/help/sites-administering/rich-text-editor.md#aboutplugins)で指定できます。
 
 >[!CAUTION]
 >
@@ -97,15 +96,15 @@ CRXDE Lite の該当する `rtePlugins` サブブランチ内でプラグイン�
 
 ## 追加の HTML 要素および属性のサポートの追加 {#adding-support-for-additional-html-elements-and-attributes}
 
-AEM のアクセシビリティ機能をさらに拡張するには、RTE に基づく既存のコンポーネント（**テキスト**&#x200B;コンポーネントや&#x200B;**テーブル**&#x200B;コンポーネント）を、要素や属性を追加して拡張することができます。
+AEM のアクセシビリティ機能をさらに拡張するには、RTE に基づく既存のコンポーネント（**テキスト**&#x200B;コンポーネントや&#x200B;**テーブル**&#x200B;コンポーネントなど）を、要素や属性を追加して拡張することができます。
 
-以下の手順は、 **テーブル** を持つコンポーネント **キャプション** 支援テクノロジーユーザーにデータテーブルに関する情報を提供する要素：
+以下の手順では、支援テクノロジーのユーザーにデータテーブルに関する情報を提供する&#x200B;**キャプション**&#x200B;要素で&#x200B;**テーブル**&#x200B;コンポーネントを拡張する方法について説明します。
 
 ### 例 - テーブルのプロパティダイアログへのキャプションの追加 {#example-adding-the-caption-to-the-table-properties-dialog}
 
-のコンストラクター内 `TablePropertiesDialog`をクリックし、キャプションの編集に使用するテキスト入力フィールドを追加します。 注意： `itemId` は、次のように設定する必要があります `caption` （つまり、DOM 属性の名前）内容を自動的に処理します。
+`TablePropertiesDialog` のコンストラクターで、キャプションの編集に使用するテキスト入力フィールドを追加します。`itemId` は、コンテンツを自動的に処理するために、`caption`（つまり、DOM 属性の名前）に設定する必要がある点に注意してください。
 
-In **テーブル** DOM 要素に対する属性を明示的に設定または削除する必要があります。 この値は、 `config` オブジェクト。 DOM 属性は、 `CQ.form.rte.Common` メソッド ( `com` は `CQ.form.rte.Common`) を使用して、ブラウザーの実装時に一般的な問題を回避します。
+In **テーブル** DOM 要素に対する属性を明示的に設定または削除する必要があります。 値は、`config` オブジェクトのダイアログによって渡されます。DOM 属性は、ブラウザーの実装に伴う一般的な落とし穴を回避するために、対応する `CQ.form.rte.Common` メソッド（`com` は `CQ.form.rte.Common` のショートカット）を使用して、設定／削除する必要があります。
 
 >[!NOTE]
 >
@@ -113,12 +112,12 @@ In **テーブル** DOM 要素に対する属性を明示的に設定または�
 
 ### 手順説明 {#step-by-step-instructions}
 
-1. 開始CRXDE Lite。 例： [http://localhost:4502/crx/de/](http://localhost:4502/crx/de/)
+1. CRXDE Lite を開始します。例：[http://localhost:4502/crx/de/](http://localhost:4502/crx/de/)
 1. コピー：
 
    `/libs/cq/ui/widgets/source/widgets/form/rte/commands/Table.js`
 
-   リダイレクト先は次のとおりです。
+   コピー先：
 
    `/apps/cq/ui/widgets/source/widgets/form/rte/commands/Table.js`
 
@@ -130,15 +129,15 @@ In **テーブル** DOM 要素に対する属性を明示的に設定または�
 
    `/libs/cq/ui/widgets/source/widgets/form/rte/plugins/TablePropertiesDialog.js`
 
-   リダイレクト先は次のとおりです。
+   コピー先：
 
-   `/apps/cq/ui/widgets/source/widgets/form/rte/plugins/TablePropertiesDialog.js`
+   `/apps/cq/ui/widgets/source/widgets/form/rte/plugins/TablePropertiesDialog.js`。
 
 1. 次のファイルを編集用に開きます（ダブルクリックで開く）。
 
    `/apps/cq/ui/widgets/source/widgets/form/rte/plugins/TablePropertiesDialog.js`
 
-1. `constructor` メソッドで、
+1. `constructor` メソッドで、次の行を読み込む前に：
 
    ```
    var dialogRef = this;
@@ -158,9 +157,9 @@ In **テーブル** DOM 要素に対する属性を明示的に設定または�
 
 1. 次のファイルを開きます。
 
-   `/apps/cq/ui/widgets/source/widgets/form/rte/commands/Table.js`.
+   `/apps/cq/ui/widgets/source/widgets/form/rte/commands/Table.js`。
 
-1. 次のコードを `transferConfigToTable` メソッド：
+1. `transferConfigToTable` メソッドの最後に次のコードを追加します。
 
    ```
    /**
@@ -199,10 +198,10 @@ In **テーブル** DOM 要素に対する属性を明示的に設定または�
 
 >[!NOTE]
 >
->プレーンテキストフィールドは、キャプション要素の値に使用できる入力タイプとは異なります。 キャプションの値を `getValue()` メソッドを使用できます。
+>キャプション要素の値に使用できる入力タイプは、プレーンテキストフィールドだけではありません。キャプションの値を `getValue()` メソッドを使用できます。
 >
 >追加の要素および属性用に編集機能を追加するには、以下の両方を確認します。
 >
->* この `itemId` プロパティを適切な DOM 属性 (`TablePropertiesDialog`) をクリックします。
+>* 対応する各フィールドの `itemId` プロパティが適切な DOM 属性の名前（`TablePropertiesDialog`）に設定されていること。
 >* DOM 要素で属性が設定／削除されていること（`Table`）。
 

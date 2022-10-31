@@ -1,7 +1,7 @@
 ---
 title: プロジェクトの管理 ― ベストプラクティスチェックリスト
 seo-title: Managing Projects - Best Practices Checklist
-description: 'Adobe Experience Manager（AEM）実装プロジェクトの管理には、計画と理解が必要です。プロジェクトチェックリストは、プロジェクトを遂行する際のベストプラクティスをまとめたものです。プロジェクトのライフサイクルの全フェーズを案内し、現在のステータスを全体的に監視します。 '
+description: Adobe Experience Manager（AEM）実装プロジェクトの管理には、計画と理解が必要です。プロジェクトチェックリストは、プロジェクトを遂行する際のベストプラクティスをまとめたものです。プロジェクトのライフサイクルの全フェーズを案内し、現在のステータスを全体的に監視します。
 seo-description: Managing a project to implement Adobe Experience Manager (AEM) requires planning and understanding. The Project Checklists are intended as a set of best practices for project delivery. They guide you through all phases of the project life cycle and provide high level monitoring of your current status.
 uuid: 61b45b1b-af0b-4b1b-9a52-6767611fc1ab
 contentOwner: User

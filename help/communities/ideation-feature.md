@@ -130,14 +130,14 @@ ht-degree: 63%
 
 * **[!UICONTROL 並べ替え基準]**
 許可されている並べ替えの選択項目をすべてオンにします。 
-`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked` で使用される様々なキャッシュに配分されます。デフォルトは `Newest, Oldest, Last Updated` です。
+`Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked` を使用して作成します。デフォルトは `Newest, Oldest, Last Updated` です。
 
 * **[!UICONTROL デフォルトとして設定]**&#x200B;プルダウンして、オンになっている並べ替えオプションのいずれかを選択し、デフォルトとして表示されるようにします。初期設定は です。 
 `Newest`.
 
 * **[!UICONTROL Analytics 並べ替えの時間オプションの選択]**
 プルダウンして次のいずれかを選択 
-`All, Last 24 Hours, Last 7 Days, Last 30 Days` で使用される様々なキャッシュに配分されます。デフォルトは `All` です。
+`All, Last 24 Hours, Last 7 Days, Last 30 Days` を使用して作成します。デフォルトは `All` です。
 
 ## サイト訪問者のエクスペリエンス {#site-visitor-experience}
 

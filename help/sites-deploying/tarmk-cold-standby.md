@@ -309,7 +309,7 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
    ```
 
 1. ロードバランサーに新しいプライマリを追加します。
-1. 新しいスタンバイインスタンスを作成して起動します。詳しくは、前述の [ AEM TarMK コールドスタンバイセットアップの作成](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)を参照してください。
+1. 新しいスタンバイインスタンスを作成して起動します。詳しくは、前述の [AEM TarMK コールドスタンバイセットアップの作成](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)を参照してください。
 
 ## コールドスタンバイセットアップへのホットフィックスの適用 {#applying-hotfixes-to-a-cold-standby-setup}
 

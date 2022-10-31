@@ -1,7 +1,7 @@
 ---
 title: モバイルクイックスタート
 seo-title: Mobile Quickstart
-description: 'このページでは、AEM Verify アプリについて説明します。AEM Verify アプリを利用すると、あらゆる iOS または Android モバイルデバイス上で AEM モバイルアプリケーションをすばやく簡単に実行できます。 '
+description: このページでは、AEM Verify アプリについて説明します。AEM Verify アプリを利用すると、あらゆる iOS または Android モバイルデバイス上で AEM モバイルアプリケーションをすばやく簡単に実行できます。
 seo-description: Follow this page to learn about AEM Verify app. The AEM Verify app is a quick and an easy way to run your AEM mobile applications on any iOS or Android mobile device.
 uuid: afae4b9d-f835-4d83-b758-39a0d7741510
 contentOwner: User

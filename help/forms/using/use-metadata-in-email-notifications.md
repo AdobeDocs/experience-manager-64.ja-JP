@@ -1,5 +1,5 @@
 ---
-title: '電子メール通知におけるメタデータの使用 '
+title: 電子メール通知におけるメタデータの使用
 seo-title: Use metadata in an email notification
 description: メタデータを使用したフォームワークフローの電子メール通知の情報の作成
 seo-description: Use metadata to populate information in a forms workflow email notification

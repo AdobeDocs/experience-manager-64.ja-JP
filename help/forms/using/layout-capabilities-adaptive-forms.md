@@ -12,7 +12,7 @@ exl-id: 887e88c6-4c2b-4ef3-b268-8956fdb4535f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1143'
-ht-degree: 76%
+ht-degree: 89%
 
 ---
 
@@ -52,16 +52,16 @@ Adobe Experience Manager（AEM）では、簡単に使用できるアダプテ�
 
 フォーム作成者は、ルートパネルを含めたアダプティブフォームの各パネルにレイアウトを関連付けることができます。
 
-パネルレイアウトは`/libs/fd/af/layouts/panel`から利用できます。
+パネルレイアウトは `/libs/fd/af/layouts/panel` の場所で利用できます。
 
-![アダプティブフォームのルートパネルのパネルレイアウトのリスト](assets/layouts.png)
+![アダプティブフォームのルートパネルに使用できるパネルレイアウトのリスト](assets/layouts.png)
 **図：** *アダプティブフォームのパネルレイアウトのリスト*
 
-### レスポンシブ - ナビゲーションなしですべて 1 ページに配置 {#responsive-everything-on-one-page-without-navigation-br}
+### レスポンシブ - ナビゲーションなしですべてを 1 ページに {#responsive-everything-on-one-page-without-navigation-br}
 
 このパネルレイアウトを使用すると、特別なナビゲーションなしでレイアウトをデバイスの画面サイズに合うように調整するレスポンシブレイアウトを作成できます。
 
-このレイアウトを使用すると、複数の **[!UICONTROL パネルアダプティブフォーム]** コンポーネントは、パネル内で次々に作成されます。
+このレイアウトを使用すると、複数の&#x200B;**[!UICONTROL パネルのアダプティブフォーム]**&#x200B;コンポーネントをパネル内に順番に配置することができます。
 
 ![レスポンシブレイアウトを使用したフォームの小画面での表示例](assets/responsive_layout_seen_on_small_screen.png)
 
@@ -75,7 +75,7 @@ Adobe Experience Manager（AEM）では、簡単に使用できるアダプテ�
 
 このパネルレイアウトを使用すると、フォーム上にガイド付きのナビゲーションが提供できます。例えば、ユーザーを 1 手順ずつガイドしながらフォーム内の必須情報を取得したい場合、このレイアウトを使用します。
 
-以下を使用： `Panel adaptive form` パネル内でのステップバイステップのナビゲーションを提供するコンポーネント。 このレイアウトを使用すると、現在の手順を完了しない限りユーザーは次の手順に進めません。
+`Panel adaptive form` コンポーネントを使用して、パネル内のステップバイステップのナビゲーションを提供します。このレイアウトを使用すると、現在の手順を完了しない限りユーザーは次の手順に進めません。
 
 ```
 window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpression)
@@ -91,7 +91,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ### アコーディオンデザインのレイアウト {#layout-for-accordion-design}
 
-このレイアウトを使用すると、 `Panel adaptive form` アコーディオンスタイルナビゲーションを備えたパネルのコンポーネント。 また、このレイアウトを使用すると、繰り返し可能なパネルを作成できます。繰り返し可能なパネルを使用すれば、必要に応じて動的にパネルを追加したり削除することができます。パネルの繰り返しの最小数、最大数を定義することができます。また、パネル内の項目に入力される情報に応じて動的にパネルのタイトルを決定することができます。
+このレイアウトを使用すると、アコーディオンスタイルのナビゲーションを備えたパネルに `Panel adaptive form` コンポーネントを配置できます。また、このレイアウトを使用すると、繰り返し可能なパネルを作成できます。繰り返し可能なパネルを使用すれば、必要に応じて動的にパネルを追加したり削除することができます。パネルの繰り返しの最小数、最大数を定義することができます。また、パネル内の項目に入力される情報に応じて動的にパネルのタイトルを決定することができます。
 
 最小化したパネルのタイトルにエンドユーザーが提供した値を表示するために、サマリ式を使用することができます。
 
@@ -101,7 +101,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ### タブ付きレイアウト - タブを左側に表示 {#tabbed-layout-tabs-appear-on-the-left}
 
-このレイアウトを使用すると、 `Panel adaptive form` タブナビゲーション付きのパネル内のコンポーネント タブはパネルコンテンツの左側に配置されます。
+このレイアウトを使用すると、タブ付きナビゲーションのパネルに `Panel adaptive form` コンポーネントを配置できます。タブはパネルコンテンツの左側に配置されます。
 
 ![タブ付きレイアウトでタブ左側表示](assets/tabbed_layout_left.png)
 
@@ -109,7 +109,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ### タブ付きレイアウト - タブを上に表示 {#tabbed-layout-tabs-appear-on-the-top}
 
-このレイアウトを使用すると、 `Panel adaptive form` タブナビゲーションを備えたパネル内のコンポーネント。 タブはパネルコンテンツの上に配置されます。
+このレイアウトを使用すると、タブ付きナビゲーションのパネルに `Panel adaptive form` コンポーネントを配置できます。タブはパネルコンテンツの上に配置されます。
 
 ![タブを上に表示したアダプティブフォームのタブ付きレイアウト](assets/tabbed_layout_top.png)
 
@@ -127,7 +127,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 **図：** *アダプティブフォームのモバイルレイアウトのリスト*
 
-モバイルレイアウトを使用している場合、フォームメニューを使用して様々なフォームパネルにアクセスできます。このメニューを使用するには、次のアイコンをタップします ![aem6forms_form_menu](assets/aem6forms_form_menu.png) アイコン
+モバイルレイアウトを使用する場合、![aem6forms_form_menu](assets/aem6forms_form_menu.png) アイコンをタップすると、各種フォームパネルにアクセスできるフォームメニューを使用できます。
 
 ### フォームのヘッダー部分にパネルタイトルを表示するレイアウト {#layout-with-panel-titles-in-the-form-header}
 
@@ -147,13 +147,13 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ## ツールバーレイアウト {#toolbar-layouts}
 
-ツールバーレイアウトは、アダプティブフォームに追加するアクションボタンの位置と表示を制御します。 このレイアウトはフォームレベルまたは各パネルレベルで追加できます。
+ツールバーレイアウトはアダプティブフォームに追加するアクションボタンの配置および表示をコントロールします。このレイアウトはフォームレベルまたは各パネルレベルで追加できます。
 
 ![ボタンのレイアウトをコントロールするアダプティブフォームのツールバーレイアウトのリスト](assets/toolbar-layouts.png)
 
 **図：** *アダプティブフォームのツールバーレイアウトのリスト*
 
-ツールバーレイアウトは、 `/libs/fd/af/layouts/toolbar` 場所。 アダプティブフォームには、デフォルトで次のツールバーレイアウトが用意されています。
+ツールバーレイアウトは `/libs/fd/af/layouts/toolbar` の場所で使用できます。アダプティブフォームではデフォルトで次のツールバーレイアウトを使用できます。
 
 ### ツールバーのデフォルトレイアウト {#default-layout-for-toolbar}
 

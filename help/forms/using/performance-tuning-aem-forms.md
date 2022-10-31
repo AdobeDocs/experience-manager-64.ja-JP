@@ -13,7 +13,7 @@ exl-id: bc750571-08a5-414c-aed5-4e839f6695ae
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '866'
-ht-degree: 81%
+ht-degree: 96%
 
 ---
 
@@ -48,7 +48,7 @@ AEM Forms のデフォルトキャッシュ設定は、最適なパフォーマ�
 
 ## JVM パラメーター {#jvm-parameters}
 
-最適なパフォーマンスを得るには、次の JVM を使用することをお勧めします `init` 設定する引数 `Java heap` および `PermGen`.
+最適なパフォーマンスを得るために、次の JVM `init` 引数を使用して、`Java heap` と `PermGen` を設定することを推奨します。
 
 ```java
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -Xms8192m
@@ -59,7 +59,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 >[!NOTE]
 >
->推奨設定は、Windows 2008 R2 8 Core およびOracleHotSpot 1.7（64 ビット）JDK 用で、システム構成に従って拡大または縮小する必要があります。
+>推奨設定は、Windows 2008 R2 8 コアおよび Oracle HotSpot 1.7 (64 ビット) JDK を対象とし、ご使用のシステム構成に従ってスケールアップまたはスケールダウンする必要があります。
 
 ## Web サーバーの使用 {#using-a-web-server}
 
@@ -69,7 +69,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 >[!NOTE]
 >
->次の手順は、Apache Web Server 2.0 32 ビット以外のサーバーには適用されません。 その他のサーバーに固有の手順については、対応する製品ドキュメントを参照してください。
+>次の手順は Apache Web Server 2.0 32 ビット以外のサーバーには適用されません。その他のサーバーに固有の手順については、対応する製品ドキュメントを参照してください。
 
 次の手順では、Apache Web サーバーで圧縮を有効にするために必要な変更を示します。
 
@@ -81,7 +81,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 Apache は HTTP プロトコルを使用して CRX と情報をやり取りできます。HTTP を使用した場合に最適化される設定になっています。
 
-1. 次のモジュール設定を `APACHE_HOME/conf/httpd.conf` ファイル。
+1. `APACHE_HOME/conf/httpd.conf` ファイル内で次のモジュール設定をコメント解除します。
 
    ```java
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -91,18 +91,18 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
    >[!NOTE]
    >
-   >Linux の場合、デフォルト `APACHE_HOME` が `/etc/httpd/`.
+   >Linux の場合、デフォルトの `APACHE_HOME` は `/etc/httpd/` です。
 
 1. crx のポート 4502 のプロキシを設定します。
 
-   次の設定をに追加します。 `APACHE_HOME/conf/httpd.conf` 設定ファイル。
+   次の設定を `APACHE_HOME/conf/httpd.conf` 設定ファイルに追加します。
 
    ```java
    ProxyPass / https://<server>:4502/
    ProxyPassReverse / https://<server>:4502/
    ```
 
-1. 圧縮を有効化します。次の設定をに追加します。 `APACHE_HOME/conf/httpd.conf` 設定ファイル。
+1. 圧縮を有効化します。次の設定を `APACHE_HOME/conf/httpd.conf` 設定ファイルに追加します。
 
    **HTML5 フォームの場合**
 
@@ -148,13 +148,13 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
 * AEM のインストールディレクトリ。このディレクトリ全体を除外できない場合は、以下の項目を除外してください。
 
-   * [AEMインストールディレクトリ]\crx-repository\temp
-   * [AEMインストールディレクトリ]\crx-repository\repository
-   * [AEMインストールディレクトリ]\crx-repository\launchpad
+   * [AEM インストールディレクトリ]\crx-repository\temp
+   * [AEM インストールディレクトリ]\crx-repository\repository
+   * [AEM インストールディレクトリ]\crx-repository\launchpad
 
 * アプリケーションサーバーの一時ディレクトリ。デフォルトの場所は以下のとおりです。
 
-   * (JBoss) [AEMインストールディレクトリ]\jboss\standalone\tmp
+   * (Jboss) [AEM インストールディレクトリ]\jboss\standalone\tmp
    * Weblogic - \Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
    * Websphere - \Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
 
@@ -167,10 +167,11 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 * **（JEE 上の AEM Forms のみ）** AEM Forms サーバーのログファイルと一時ディレクトリ。デフォルトの場所は以下のとおりです。
 
    * サーバーログ — `[AEM Forms installation directory]\Adobe\AEM forms\[app-server]\server\all\logs`
-   * 一時ディレクトリ — [AEM Formsインストールディレクトリ]\temp
+   * 一時ディレクトリ - [AEM Forms インストールディレクトリ]\temp
 
 >[!NOTE]
 >
 >* GDS と一時ディレクトリに別の場所を使用している場合は、AdminUI( ) を開きます。 `https://[server]:[port]/adminui)`に移動します。 **「ホーム」>「設定」>「コアシステム設定」>「コア設定」** をクリックして、使用中の場所を確認します。
-* 推奨ディレクトリを除外した後でもAEM Formsサーバーのパフォーマンスが低下した場合は、Java 実行可能ファイル (java.exe) も除外します。
+* 上記のディレクトリを除外しても AEM Forms サーバーのパフォーマンスが改善されない場合は、Java 実行可能ファイル（java.exe）も除外してください。
+>
 

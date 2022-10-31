@@ -16,7 +16,7 @@ ht-degree: 98%
 
 ---
 
-# アダプティブフォームの A/B テストの作成と管理 {#create-and-manage-a-b-test-for-adaptive-forms}
+# アダプティブフォームの A/B テストの作成と管理  {#create-and-manage-a-b-test-for-adaptive-forms}
 
 ## 概要 {#overview-br}
 

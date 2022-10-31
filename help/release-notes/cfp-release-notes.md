@@ -7,7 +7,7 @@ exl-id: a63e77a3-da48-4072-bc75-c4c41a2f62a3
 source-git-commit: 1d5d2ef3840a40df7c3b223c7b5835e41553e9f1
 workflow-type: tm+mt
 source-wordcount: '4693'
-ht-degree: 35%
+ht-degree: 36%
 
 ---
 
@@ -48,10 +48,10 @@ Adobe Experience Manager 6.4.8.4 では、次の問題が修正されていま�
 * Experience Managerサービスパック 6.4.8.2 のインストール後、ユーザーはコンテンツフラグメントモデルを編集できず、次のエラーが発生します。
 
    `Uncaught TypeError: Cannot read property 'debounce' of undefined` (NPR-35312)
-* ユーザーがログアウトボタンをクリックしても、そのユーザーはパッケージマネージャーからログアウトされません。 (NPR-35161)
+* ユーザーがログアウトボタンをクリックしても、そのユーザーはパッケージマネージャーからログアウトされません。 （NPR-35161）
 * Experience Manager6.4.x からExperience Manager6.4.8.3 にアップグレードした後、「公開を管理」を使用してページを公開できない。 （CQ-4312511）
-* ブループリントの子ページを元の場所に戻すと、cq:liveSyncConfig 設定はライブコピーの子ページから削除されません。 (NPR-35900)
-* ライブコピーを含むブループリントを前後に移動すると、最初の移動のみが機能し、失敗してエラーメッセージは表示されません。 (NPR-35899)
+* ブループリントの子ページを元の場所に戻すと、cq:liveSyncConfig 設定はライブコピーの子ページから削除されません。 （NPR-35900）
+* ライブコピーを含むブループリントを前後に移動すると、最初の移動のみが機能し、失敗してエラーメッセージは表示されません。 （NPR-35899）
 
 
 ### [!DNL Assets] {#assets-6484}
@@ -136,7 +136,7 @@ Adobe Experience Manager 6.4.8.3 では、次の問題が修正されていま�
 
 * 画像プリセット設定で、オプション [!UICONTROL JPGの色度ダウンサンプリングを有効にする] が [!DNL Experience Manager]の場合、変更は [!DNL Dynamic Media] (NPR-34284)。
 * [!UICONTROL ビューアプリセットエディター]で [!UICONTROL PanoramicImage/PanoramicImage_VR] プリセットを編集するとき、`PanoramicView` コンポーネントの `PANORAMICVIEW_AUTOROTATE` 修飾子のラベルを使用できません（CQ-4302043）。
-* 次のビデオを非公開にする： [!DNL Experience Manager] では、設定済みのDynamic Media Classicでアダプティブビデオセットを非公開にしません。 （CQ-4304405）。
+* 次のビデオを非公開にする： [!DNL Experience Manager] では、設定済みのDynamic Media Classicでアダプティブビデオセットを非公開にしません。 (CQ-4304405).
 
 #### プラットフォーム {#platform-6483}
 
@@ -207,7 +207,7 @@ Adobe Experience Manager 6.4.8.2 では、次の問題が修正されていま�
 
 * `RolloutConfigManagerFactoryImpl` がロールアウト設定を読み込めない場合、見つからない設定の読み込みを試みない。 キャッシュされた設定を返す （NPR-34091）。
 * テキストコアコンポーネントで、ソース HTML 編集オプションを使用した後に、`em` タグからクラスが削除されます（NPR-34080）。
-* Experience Manager 6.2 から Experience Manager 6.5 にアップグレードすると、静的テンプレートの Parsys コンポーネントが正しく表示されない。 Parsys コンポーネントの高さが 0 に設定され、その中のコンポーネントが表示されない（NPR-34044）。
+* Experience Manager 6.2 から Experience Manager 6.5 にアップグレードすると、静的テンプレートの Parsys コンポーネントが正しく表示されない。Parsys コンポーネントの高さが 0 に設定され、その中のコンポーネントが表示されない（NPR-34044）。
 * テンプレートエディター内の許可されたコンポーネントに対して、ラベル情報が表示されない (NPR-33908)。
 
    ![レイアウトコンテナにラベルがありません](assets/33908_missing_labels.png)
@@ -266,7 +266,7 @@ Adobe Experience Manager 6.4.8.2 では、次の問題が修正されていま�
 
 #### 統合 {#integrations-6482}
 
-* の値 `library_path` 生成時には考慮されません [!DNL Adobe Launch] 移行元のライブラリのライブラリ URL [!DNL Adobe Dynamic Tag Management]. また、移行されたライブラリは、 [!DNL Adobe Launch] ライブラリ。 （NPR-34238）。
+* の値 `library_path` 生成時には考慮されません [!DNL Adobe Launch] 移行元のライブラリのライブラリ URL [!DNL Adobe Dynamic Tag Management]. また、移行されたライブラリは、 [!DNL Adobe Launch] ライブラリ。 (NPR-34238).
 * クラウドサービスから継承されたプロパティは、ページプロパティの更新時に保持されません (NPR-33865)。
 
 #### ユーザーインターフェイス {#ui-6482}
@@ -391,7 +391,7 @@ Adobe Experience Manager 6.4.8.1 では、次の問題が修正されました�
 
 * `sling:match` マップエントリが `/etc/maps` の下に作成されている場合、[!DNL Sling] フィルターが呼び出されない（NPR-33308）。
 * ページを非アクティブ化すると、すべてのフラッシュエージェントがトリガーされる (NPR-32941)。
-* を使用する場合、 `ScriptProcessor` JavaScript ライブラリを縮小する API。ログファイルに、JavaScript コードが厳密モードに準拠していないことを示すエラーメッセージが表示されます。 API には、厳密モードを有効または無効にするオプションは用意されていません。 （NPR-32746）。
+* を使用する場合、 `ScriptProcessor` JavaScript ライブラリを縮小する API。ログファイルに、JavaScript コードが厳密モードに準拠していないことを示すエラーメッセージが表示されます。 API には、厳密モードを有効または無効にするオプションは用意されていません。 (NPR-32746).
 * SQL クエリが長時間（例えば 7 時間）実行されると、AEMは応答を停止する (NPR-33043)。
 
 #### ユーザーインターフェイス {#ui-6481}
@@ -522,7 +522,7 @@ AEM 6.4.8.4 には、Dynamic Mediaビューア (5.10.1) の新しいバージョ
 >AEM Forms を使用していない場合はスキップしてください。AEM Forms の修正は、個別のアドオンパッケージを介して配信されます。
 
 1. AEM Cumulative Fix Pack がインストールされていることを確認します。
-1. 次のリストにある対応する forms アドオンパッケージをダウンロードします。 [AEM Formsリリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates) ご使用のオペレーティングシステム用。
+1. 次のリストにある対応する forms アドオンパッケージをダウンロードします。 [AEM Formsリリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) ご使用のオペレーティングシステム用。
 1. フォームアドオンパッケージをインストールします。詳しくは、 [AEM forms アドオンパッケージのインストール](https://docs.adobe.com/content/help/en/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
 
 ### AEM Forms JEE インストーラーのインストール {#install-aem-forms-jee-installer}
@@ -535,7 +535,7 @@ AEM Forms JEE の累積インストーラーのインストールとデプロイ
 
 >[!NOTE]
 >
->JEE 上のExperience Manager Formsの累積インストーラーをインストールした後、最新のFormsアドオンパッケージをインストールし、次の場所からFormsアドオンパッケージを削除します。 `crx-repository\install` フォルダーを開き、サーバーを再起動します。
+>JEE 上の Experience Manager Forms の累積インストーラーをインストールした後、最新の Forms アドオンパッケージをインストールし、`crx-repository\install` フォルダーから Forms アドオンパッケージを開き、サーバーを再起動します。
 
 ### Uber Jar {#uber-jar}
 

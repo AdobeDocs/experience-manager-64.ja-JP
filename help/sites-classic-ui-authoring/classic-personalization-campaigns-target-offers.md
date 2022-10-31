@@ -13,11 +13,11 @@ exl-id: ca9c6fd1-7f2e-4c99-ba6e-0a064274ac24
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
-# Target オファー{#target-offers}
+# Target オファー {#target-offers}
 
 ## Test&amp;Target オファーのエクスペリエンスの作成 {#creating-a-test-target-offer-experience}
 
@@ -27,7 +27,7 @@ ht-degree: 70%
    ![](do-not-localize/chlimage_1-11.png)
 
 1. 「**新規...**」をクリックします。
-1. 次の項目を指定できます。 **タイトル**, **名前** 作成するエクスペリエンスのタイプ。この場合、Test&amp;Target オファーです。
+1. 「**タイトル**」、「**名前**」および作成するエクスペリエンスのタイプ（この例では、「Test&amp;Target のオファー」）を指定できます。
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
@@ -35,8 +35,8 @@ ht-degree: 70%
 
    >[!NOTE]
    >
-   >Test&amp;Target のエクスペリエンスは、この時点で MCM のリストに表示されていません。「キャンペーン」の下の **Web サイト**&#x200B;コンソールからアクセスできます。
+   >Test&amp;Target のエクスペリエンスは、この時点で MCM のリストに表示されていません。「キャンペーン」の下の **web サイト**&#x200B;コンソールからアクセスできます。
 
 ## Adobe Target との統合 {#integrating-with-adobe-target}
 
-詳しくは、 [Adobeとの統合](/help/sites-administering/target.md) [ターゲット](/help/sites-administering/target.md) 詳細はこちら。
+詳しくは、[Adobe](/help/sites-administering/target.md) [Target](/help/sites-administering/target.md) との統合を参照してください。

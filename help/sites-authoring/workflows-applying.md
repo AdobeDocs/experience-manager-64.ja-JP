@@ -1,5 +1,5 @@
 ---
-title: 'ページへのワークフローの適用 '
+title: ページへのワークフローの適用
 seo-title: Applying Workflows to Pages
 description: オーサリングでは、ワークフローを呼び出して、ページにアクションを実行することができます。複数のワークフローを適用することもできます。
 seo-description: When authoring, you can invoke workflows to take action on your pages; it is also possible to apply more than one workflow..

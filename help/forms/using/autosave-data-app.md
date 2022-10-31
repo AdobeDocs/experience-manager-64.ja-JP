@@ -1,7 +1,7 @@
 ---
 title: AEM Forms アプリケーションで自動保存を使用
 seo-title: Using autosave in AEM Forms app
-description: 'データの損失を防ぐために AEM Forms アプリケーションの自動保存機能を使用する方法について学びます。 '
+description: データの損失を防ぐために AEM Forms アプリケーションの自動保存機能を使用する方法について学びます。
 seo-description: Learn how to use autosave feature in AEM Forms app that lets you avoid data loss.
 uuid: f18ab6b4-dd4a-4dcb-88e6-e349777d47ea
 contentOwner: sashanka

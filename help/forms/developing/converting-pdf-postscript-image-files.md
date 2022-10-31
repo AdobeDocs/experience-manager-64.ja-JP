@@ -70,7 +70,7 @@ PostScript ファイルに変換する PDF ドキュメントを参照します�
 
 PDF ドキュメントを PostScript ファイルに変換する際に、作成する PostScript タイプを指定する実行時オプションを定義できます。例えば、レベル 3 の PostScript ファイルを定義できます。
 
-通常、生成される PostScript ファイルは、入力 PDF ドキュメントのサイズを反映します。`ShrinkToFit` オプション（ページに合わせて PostScript ファイルの出力を縮小する）を選択した場合、入力 PDF ドキュメントと生成された PostScript ファイルの間に違いはありません。`ShrinkToFit` オプションは、入力 PDF ドキュメントよりも小さいページサイズで出力することを選択した場合にのみ有効になります。 小さいページサイズを選択するには、`PageSize` オプションを定義します。また、`RotateAndCenter`オプションを `true` に設定して、正しい PostScript 出力を取得することをお勧めします。
+通常、生成される PostScript ファイルは、入力 PDF ドキュメントのサイズを反映します。`ShrinkToFit` オプション（ページに合わせて PostScript ファイルの出力を縮小する）を選択した場合、入力 PDF ドキュメントと生成された PostScript ファイルの間に違いはありません。`ShrinkToFit` オプションは、入力 PDF ドキュメントよりも小さいページサイズで出力することを選択した場合にのみ有効になります。小さいページサイズを選択するには、`PageSize` オプションを定義します。また、`RotateAndCenter`オプションを `true` に設定して、正しい PostScript 出力を取得することをお勧めします。
 
 同様に、`ExpandToFit` オプション（ページに合わせて PostScript ファイルの出力を拡張する）を選択した場合、入力 PDF ドキュメントよりも大きいページサイズで出力するように選択した場合にのみ有効になります。大きいページサイズを選択するには、`PageSize` オプションを定義します。また、`RotateAndCenter` オプションを `true` に設定して、正しい PostScript 出力を取得することをお勧めします。
 
@@ -119,7 +119,7 @@ Convert PDF サービス API（Java）を使用して、PDF ドキュメント�
 1. 変換の実行時オプションを設定します。
 
    * コンストラクターを呼び出して `ToPSOptionsSpec` オブジェクトを作成します。
-   * `ToPSOptionsSpec` オブジェクトに属する適切なメソッドを呼び出して、実行時オプションを設定します。 例えば、作成される PostScript レベルを定義するには、 `ToPSOptionsSpec` オブジェクトの `setPsLevel` メソッドを呼び出して、 PostScript レベルを指定する `PSLevel` 列挙値を渡します。設定できるすべての実行時の値について詳しくは、 [AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `ToPSOptionsSpec` クラスリファレンスを参照してください。
+   * `ToPSOptionsSpec` オブジェクトに属する適切なメソッドを呼び出して、実行時オプションを設定します。例えば、作成される PostScript レベルを定義するには、 `ToPSOptionsSpec` オブジェクトの `setPsLevel` メソッドを呼び出して、 PostScript レベルを指定する `PSLevel` 列挙値を渡します。設定できるすべての実行時の値について詳しくは、 [AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `ToPSOptionsSpec` クラスリファレンスを参照してください。
 
 1. PDF ドキュメントを PostScript ファイルに変換します。
 

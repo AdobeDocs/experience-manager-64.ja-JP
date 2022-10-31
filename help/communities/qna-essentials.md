@@ -31,14 +31,14 @@ ht-degree: 57%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component">インクルード可能</a></td> 
-   <td>不可</td> 
+   <td>いいえ</td> 
   </tr>
   <tr>
    <td> <a href="clientlibs.md">clientllibs</a></td> 
    <td>cq.ckeditor<br /> cq.social.hbs.voting<br /> cq.social.hbs.qna</td> 
   </tr>
   <tr>
-   <td> templates</td> 
+   <td> テンプレート</td> 
    <td> /libs/social/qna/components/hbs/qnaforum/qnaforum.hbs<br /> /libs/social/qna/components/hbs/qnaforum/activity-title.hbs</td> 
   </tr>
   <tr>
@@ -75,7 +75,7 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-次のページを参照してください。
+以下を参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
 * [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例

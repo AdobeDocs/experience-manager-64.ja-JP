@@ -13,7 +13,7 @@ exl-id: 4d968f7e-bb6f-4c7a-b266-02f53797908c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '121'
-ht-degree: 91%
+ht-degree: 90%
 
 ---
 
@@ -31,7 +31,7 @@ AEM Communities では、デジタルチャネルと対面チャネルにまた�
 
 * [初期セットアップ](enablement-setup.md)
 
-* [イネーブルメントのための新しいコミュニティサイトの作成](enablement-create-site.md)
+* [新しいコミュニティサイトの作成 有効化](enablement-create-site.md)
 
 * [リソースの作成と割り当て](resource.md)
 

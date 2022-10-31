@@ -1,7 +1,7 @@
 ---
 title: AEM Mobile - GDPR 対応
 seo-title: AEM Mobile - GDPR Readiness
-description: '"AEM Mobile - GDPR 対応"'
+description: "AEM Mobile - GDPR 対応"
 seo-description: null
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
@@ -32,7 +32,7 @@ AEM Mobile は、GDPR コンプライアンスの義務に関してお客様を�
 
 AEM Mobile と以前の Digital Publishing Suite 製品を混同しないように、以下から Digital Publishing Suite 製品にログインできるようになっています。
 
-[https://digitalpublishing.acrobat.com/ja/welcome.html](https://digitalpublishing.acrobat.com/ja/welcome.html)
+[https://digitalpublishing.acrobat.com/welcome.html](https://digitalpublishing.acrobat.com/welcome.html)
 
 ### GDPR 要求の開始 {#initiating-a-gdpr-request}
 

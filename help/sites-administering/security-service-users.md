@@ -18,7 +18,7 @@ ht-degree: 100%
 
 ---
 
-# AEM のサービスユーザー{#service-users-in-aem}
+# AEM のサービスユーザー {#service-users-in-aem}
 
 ## 概要 {#overview}
 

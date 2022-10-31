@@ -124,7 +124,7 @@ ht-degree: 63%
 
 プロファイルをフォルダーに適用する以外に、フォルダーをグローバルに適用して、 [!DNL Experience Manager] 任意のフォルダー内のアセットには、選択したプロファイルが適用されます。 メタデータプロファイルをグローバルに適用するには、次の手順に従います。
 
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * に移動します。 `https://[aem_server]:[port]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` 適切なプロファイルを適用し、をタップまたはクリックします。 **[!UICONTROL 保存]**.
 

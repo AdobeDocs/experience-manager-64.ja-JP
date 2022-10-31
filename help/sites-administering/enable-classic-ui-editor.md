@@ -1,5 +1,5 @@
 ---
-title: 編集者
+title: エディター
 seo-title: Editor
 description: クラシック UI エディターへの切り替え方法について説明します。
 seo-description: Learn how to switch back to the Classic UI Editor.
@@ -13,11 +13,11 @@ exl-id: 04a9c595-9a73-4a8a-99ae-c2292882338f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '102'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
-# 編集者{#editor}
+# エディター{#editor}
 
 エディターからクラシック UI に切り替える機能は、デフォルトで無効になっています。
 
@@ -29,11 +29,11 @@ ht-degree: 90%
 
    `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
 
-   例：
+   次に例を示します。
 
    `http://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui](http://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
 
-1. を使用したオーバーレイの作成 **ノードをオーバーレイ** オプション；例：
+1. 「**オーバーレイノード**」オプションを使用してオーバーレイを作成します。次に例を示します。
 
    * **パス**: `/apps/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
    * **オーバーレイの場所**: `/apps/`

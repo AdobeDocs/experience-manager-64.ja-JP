@@ -8,7 +8,7 @@ exl-id: 7694c68d-0a17-4052-8fbe-9bf45b229e81
 source-git-commit: bc27dee618ee57dc188c7f35a1af4d1dba80cf1b
 workflow-type: tm+mt
 source-wordcount: '2225'
-ht-degree: 45%
+ht-degree: 54%
 
 ---
 
@@ -37,7 +37,7 @@ Experience Manager Assets内では次のメディアハンドラーを使用で�
 | [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/plain |
 | [!UICONTROL PdfHandler] | com.day.cq.dam.handler.standard.pdf.PdfHandler | <ul><li>application/pdf</li><li>application/illustrator</li></ul> |
 | [!UICONTROL JpegHandler] | com.day.cq.dam.core.impl.handler.JpegHandler | image/jpeg |
-| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>重要</b> - MP3 ファイルをアップロードすると、 [サードパーティのライブラリを使用して処理](https://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html). MP3 に可変ビットレート (VBR) がある場合、ライブラリは不正確な近似長を計算します。 |
+| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>重要</b> - アップロードされた MP3 ファイルは [サードパーティのライブラリを使用して処理](https://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html)されます。MP3 に可変ビットレート（VBR）がある場合、ライブラリは不正確なおおよその長さを計算します。 |
 | [!UICONTROL ZipHandler] | com.day.cq.dam.handler.standard.zip.ZipHandler | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
 | [!UICONTROL PictHandler] | com.day.cq.dam.handler.standard.pict.PictHandler | image/pict |
 | [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> image/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> image/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
@@ -54,7 +54,7 @@ Experience Manager Assets内では次のメディアハンドラーを使用で�
 
 以下のようにアクティブなメディアハンドラーを表示できます。
 
-1. ブラウザーで、`http://localhost:4502/system/console/components` です。
+1. ブラウザーで、`http://localhost:4502/system/console/components` に移動します。
 1. リンク `com.day.cq.dam.core.impl.store.AssetStoreImpl` をクリックします。
 1. すべてのアクティブなメディアハンドラーリストが表示されます。次に例を示します。
 
@@ -76,7 +76,7 @@ Experience Managerには、アセットを処理するためのデフォルト�
 
 メディアハンドラーを有効または無効にするための手順
 
-1. ブラウザーで、`https://<host>:<port>/system/console/components` です。
+1. ブラウザーで、`https://<host>:<port>/system/console/components` に移動します。
 1. メディアハンドラーの名前の横にある「**[!UICONTROL Disable]**」をクリックします。例：`com.day.cq.dam.handler.standard.mp3.Mp3Handler`
 1. ページを更新します。メディアハンドラーの横に、無効であることを示すアイコンが表示されます。
 1. メディアハンドラーを有効にするには、メディアハンドラーの名前の横にある「**[!UICONTROL Enable]**」をクリックします。
@@ -107,7 +107,7 @@ Experience Managerには、アセットを処理するためのデフォルト�
 * `com.day.cq.dam.core.AbstractAssetHandler` クラス：その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` クラス：
    * その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。さらに、サブアセットの抽出についてよく使用される機能も提供します。
-   * 実装を開始する最善の方法は、最も多くの点に対応し、適切なデフォルト動作を提供している付属の抽象実装から継承することです。com.day.cq.dam.core.AbstractAssetHandler クラス。
+   * 実装を開始するための最適な方法は、最も多くの点について対応し、適切なデフォルト動作を提供している付属の抽象実装から継承することです。それが com.day.cq.dam.core.AbstractAssetHandler クラスです。
    * このクラスには、抽象的なサービス記述子が用意されています。そのため、このクラスから継承し、maven-sling-plugin を使用する場合、inherit フラグを true に設定する必要があります。
 
 次のメソッドを実装する必要があります。
@@ -138,27 +138,27 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 
 1. Eclipse で、 `myBundle` Maven プロジェクト：
 
-   1. メニューバーで、 **[!UICONTROL ファイル/新規/その他]**.
+   1. メニューバーで、**[!UICONTROL ファイル／新規／その他]**&#x200B;をクリックします。
    1. ダイアログボックスで、Maven フォルダーを展開し、「Maven プロジェクト」を選択して、 **[!UICONTROL 次へ]**.
    1. 次を確認します。 **[!UICONTROL 単純なプロジェクトの作成]** ボックスと **[!UICONTROL デフォルトの Workspace の場所を使用]** ボックスに移動し、 **[!UICONTROL 次へ]**.
    1. 次の値で Maven プロジェクトを定義します。
 
       * Group Id：com.day.cq5.myhandler
-      * Artifact Id：myBundle
+      * アーティファクト Id：myBundle
       * 名前：マイExperience Managerバンドル
       * 説明：これは私のExperience Manager束です
-   1. 「**[!UICONTROL Finish]**」をクリックします。
+   1. 「**[!UICONTROL 終了]**」をクリックします。
 
 
 1. Java™コンパイラをバージョン 1.5 に設定します。
 
-   1. を右クリックします。 `myBundle` プロジェクトで、「プロパティ」を選択します。
+   1. `myBundle` プロジェクトを右クリックし、プロパティを選択してください。
    1. 「Java™ Compiler」を選択し、次のプロパティを 1.5 に設定します。
 
       * Compiler compliance level
       * Generated .class files compatibility
       * Source compatibility
-   1. 「**[!UICONTROL OK]**」をクリックします。ダイアログウィンドウで、「Yes」をクリックします。
+   1. 「**[!UICONTROL OK]**」をクリックします。ダイアログウィンドウで、「はい」をクリックします。
 
 
 1. pom.xml ファイルのコードを以下のコードで書き換えます。
@@ -280,14 +280,14 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 
 1. パッケージの作成 `com.day.cq5.myhandler` Java™クラスを含む `myBundle/src/main/java`:
 
-   1. myBundle の下で右クリックします。 `src/main/java`、「新規」、「パッケージ」の順に選択します。
-   1. 名前を付ける `com.day.cq5.myhandler` 「完了」をクリックします。
+   1. myBundle の下の `src/main/java` を右クリックし、「新規」、「パッケージ」の順に選択してください。
+   1. `com.day.cq5.myhandler` という名前を付け、「終了」をクリックしてください。
 
 1. Java™クラスの作成 `MyHandler`:
 
    1. Eclipse で、 `myBundle/src/main/java`、右クリック `com.day.cq5.myhandler` 「パッケージ」、「新規」、「クラス」の順に選択します。
    1. ダイアログウィンドウで、「Java™ Class MyHandler」という名前を付け、「完了」をクリックします。 MyHandler.java ファイルが作成され、このファイルが開きます。
-   1. In `MyHandler.java` 既存のコードを次のコードに置き換えて、変更を保存します。
+   1. `MyHandler.java` で、既存のコードを以下のコードに置き換えてから、変更内容を保存してください。
 
    ```java
    package com.day.cq5.myhandler; 
@@ -432,17 +432,17 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 1. Java™クラスをコンパイルし、バンドルを作成します。
 
    1. myBundle プロジェクトを右クリックし、「 」を選択します。 **[!UICONTROL 実行ユーザー]**&#x200B;を、 **[!UICONTROL Maven インストール]**.
-   1. バンドル `myBundle-0.0.1-SNAPSHOT.jar` （コンパイルされたクラスを含む）は、 `myBundle/target`.
+   1. バンドル `myBundle-0.0.1-SNAPSHOT.jar`（コンパイル済みのクラスが含まれる）が `myBundle/target` の下に作成されます。
 
-1. CRX Explorer で、以下にノードを作成します。 `/apps/myApp`. 名前= `install`, Type = `nt:folder`.
-1. バンドルをコピーします。 `myBundle-0.0.1-SNAPSHOT.jar` そして下に保存し `/apps/myApp/install` （WebDAV など）。 これで、新しいテキストハンドラがExperience Managerでアクティブになります。
-1. ブラウザーで、Apache Felix Web Management Console を開きます。「コンポーネント」タブを選択し、デフォルトのテキストハンドラーを無効にします `com.day.cq.dam.core.impl.handler.TextHandler`.
+1. CRX Explorer で、以下にノードを作成します。 `/apps/myApp`. 名前 = `install`、タイプ = `nt:folder`。
+1. バンドル `myBundle-0.0.1-SNAPSHOT.jar` をコピーしてから、`/apps/myApp/install` の下に保存してください（WebDAV などを使用）。これで、新しいテキストハンドラがExperience Managerでアクティブになります。
+1. ブラウザーで、Apache Felix Web Management Console を開きます。コンポーネントタブを選択し、デフォルトのテキストハンドラー `com.day.cq.dam.core.impl.handler.TextHandler` を無効にしてください。
 
 ## コマンドラインベースのメディアハンドラー {#command-line-based-media-handler}
 
 Experience Managerを使用すると、ワークフロー内で任意のコマンドラインツールを実行して、アセットを変換し（ImageMagick など）、新しいレンディションをアセットに追加できます。 Experience Managerサーバーをホストするディスクにコマンドラインツールをインストールし、ワークフローにプロセスステップを追加して設定します。 呼び出されたプロセス ( `CommandLineProcess`、は、特定の MIME タイプに従ってフィルタリングし、新しいレンディションに基づいて複数のサムネールを作成します。
 
-次の変換を自動的に実行し、内で保存できます [!DNL Experience Manager Assets]:
+以下の変換を自動的に実行し、[!DNL Experience Manager Assets] 内に保存することができます。
 
 * [ImageMagick](https://www.imagemagick.org/script/index.php) および [Ghostscript](https://www.ghostscript.com/) を使用した EPS および AI 変換
 * [FFmpeg](https://ffmpeg.org/) を使用した FLV ビデオのトランスコーディング
@@ -479,7 +479,7 @@ Experience Managerを使用すると、ワークフロー内で任意のコマ�
    >
    >Windows®の一部のバージョン (Windows® SE など ) では、convert コマンドは、Windows®インストールに含まれるネイティブな変換ユーティリティと競合するので、実行に失敗します。 このような場合は、画像ファイルをサムネールに変換するために使用する ImageMagick ユーティリティの完全パスを指定します。例： `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
 
-1. ツールが正しく実行されているかどうかを確認するには、作業ディレクトリにJPGイメージを追加して、コマンドを実行します `convert <image-name>.jpg -flip <image-name>-flipped.jpg` コマンドライン上で
+1. このツールが正しく実行されていることを確認するには、JPG 画像を作業ディレクトリに追加して、コマンド `convert <image-name>.jpg -flip <image-name>-flipped.jpg` をコマンドラインで実行します。
 
    反転画像がディレクトリに追加されます。
 
@@ -495,19 +495,19 @@ Experience Managerを使用すると、ワークフロー内で任意のコマ�
 
 変更したワークフローをテストするには、`/content/dam` にアセットを追加します。
 
-1. ファイルシステムで、選択したTIFFイメージを取得します。 名前を `myImage.tiff` に変更し、WebDAV などを使用して、`/content/dam` にコピーします。
+1. ファイルシステムで、任意の TIFF 画像を取得します。名前を `myImage.tiff` に変更し、WebDAV などを使用して、`/content/dam` にコピーします。
 1. **[!UICONTROL CQ5 DAM]** コンソール（例：`http://localhost:4502/libs/wcm/core/content/damadmin.html`）を開きます。
 1. アセット `myImage.tiff` を開き、反転画像と 3 つのサムネールが作成されたことを確認します。
 
 #### CommandLineProcess プロセスステップの設定 {#configuring-the-commandlineprocess-process-step}
 
-ここでは、**[!UICONTROL の]**&#x200B;プロセス引数`CommandLineProcess`を設定する方法について説明します。値を [!UICONTROL プロセスの引数] コンマを使用し、値を空白で始めないでください。
+この節では、**[!UICONTROL の]**&#x200B;プロセス引数`CommandLineProcess`を設定する方法について説明します。値を [!UICONTROL プロセスの引数] コンマを使用し、値を空白で始めないでください。
 
 | 引数のフォーマット | 説明 |
 |---|---|
 | mime:&lt;mime-type> | オプション引数。アセットの MIME タイプが引数の MIME タイプと同じ場合にプロセスが適用されます。 <br>複数の MIME タイプを定義できます。 |
 | tn:&lt;width>:&lt;height> | オプション引数。プロセスにより、引数で定義されたサイズのサムネールが作成されます。<br>複数のサムネールを定義できます。 |
-| cmd: &lt;command> | 実行するコマンドを定義します。 この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>次の変数を使用して、コマンドを作成できます。<br>`${filename}`:入力ファイルの名前（例：original.jpg） <br> `${file}`:入力ファイルの完全パス名 ( 例： /tmp/cqdam0816.tmp/original.jpg ) <br> `${directory}`:入力ファイルのディレクトリ ( 例： /tmp/cqdam0816.tmp ) <br>`${basename}`:拡張子なしの入力ファイル名（例：original） <br>`${extension}`:入力ファイルの拡張子（例：jpg） |
+| cmd: &lt;command> | 実行するコマンドを定義します。 この構文はコマンドラインツールによって異なります。1 つのコマンドのみを定義できます。<br>次の変数を使用して、コマンドを作成できます。<br>`${filename}`：入力ファイルの名前（例：original.jpg） <br> `${file}`:入力ファイルの完全パス名 ( 例： /tmp/cqdam0816.tmp/original.jpg ) <br> `${directory}`:入力ファイルのディレクトリ ( 例： /tmp/cqdam0816.tmp ) <br>`${basename}`:拡張子なしの入力ファイル名（例：original） <br>`${extension}`:入力ファイルの拡張子（例：jpg） |
 
 例えば、ImageMagick がExperience Managerサーバーをホストするディスクにインストールされていて、 **CommandLineProcess** 実装として、次の値を **プロセスの引数**:
 

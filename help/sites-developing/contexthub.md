@@ -13,7 +13,7 @@ exl-id: 0a6b815a-5055-4c44-96d1-ff238b4285f3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '286'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -27,9 +27,9 @@ ContextHub は、コンテキストデータを保存、操作および表示す
 
 >[!CAUTION]
 >
->で使用されるサンプルの ContextHub 設定を含むパス [We.Retail 参照実装](/help/sites-developing/we-retail.md) ( `/libs/settings/cloudsettings/legacy`) は、独自の設定を作成する際の参照としてのみ使用する必要があります。
+>[We.Retail 参照実装](/help/sites-developing/we-retail.md)で使用される ContextHub 設定のサンプルを含むパス（`/libs/settings/cloudsettings/legacy`）は、独自の設定を作成する際の参考としてご利用ください。
 >
->プロジェクト内では、独自の ContextHub 設定として使用しないでください。
+>独自の ContextHub 設定としてプロジェクトで使用しないでください。
 
 ## 永続性 {#persistence}
 

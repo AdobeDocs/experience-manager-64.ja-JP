@@ -391,7 +391,7 @@ AEM 内では、コンポーネントは多くの場合、リソースのコン�
 
 S`tring pageName = currentPage.getName();`
 
-currentPage は現在のページオブジェクトです。ページオブジェクトの操作方法について詳しくは、[Javadocs](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) を参照してください。
+currentPage は現在のページオブジェクトです。ページオブジェクトの操作方法について詳しくは、[Javadocs](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) を参照してください。
 
 **ページマネージャー** - ページマネージャーは、ページレベルの操作方法を提供するインターフェイスです。
 
@@ -399,7 +399,7 @@ currentPage は現在のページオブジェクトです。ページオブジ�
 
 Page myPage = pageManager.getContainingPage(myResource);
 
-pageManager はページマネージャーオブジェクト、myResource はリソースオブジェクトです。ページマネージャーで提供される方法について詳しくは、[Javadocs](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html) を参照してください。
+pageManager はページマネージャーオブジェクト、myResource はリソースオブジェクトです。ページマネージャーで提供される方法について詳しくは、[Javadocs](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html) を参照してください。
 
 ## リポジトリー内の構造 {#structure-within-the-repository}
 

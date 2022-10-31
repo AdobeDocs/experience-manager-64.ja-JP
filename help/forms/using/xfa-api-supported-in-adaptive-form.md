@@ -12,7 +12,7 @@ exl-id: 86596819-8108-409e-af14-4634e8a1959d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '683'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -117,15 +117,15 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
   </tr>
   <tr>
    <td><p>presence </p> </td> 
-   <td><p>アダプティブフォームの visible プロパティにマッピング済み。 表示式を使用して上書きできます。</p> </td> 
+   <td><p>アダプティブフォームの Visible プロパティにマッピング済みです。表示式を使用して上書きできます。</p> </td> 
   </tr>
   <tr>
    <td><p>access </p> </td> 
-   <td><p>アダプティブフォームの enabled プロパティにマッピング済み。 アクセス式を使用して上書きできます。</p> </td> 
+   <td><p>アダプティブフォームの Enabled プロパティにマッピング済みです。アクセス式を使用して上書きできます。</p> </td> 
   </tr>
   <tr>
    <td><p>Accessibility: role </p> </td> 
-   <td><p>アダプティブフォームの role プロパティにマッピング済み。</p> </td> 
+   <td><p>アダプティブフォームの Role プロパティにマッピング済みです。</p> </td> 
   </tr>
   <tr>
    <td><p>Accessibility: speakPriority </p> </td> 
@@ -137,11 +137,11 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
   </tr>
   <tr>
    <td><p>Accessibility: toolTip </p> </td> 
-   <td><p>アダプティブフォームの short description プロパティにマッピング済み。</p> </td> 
+   <td><p>アダプティブフォームの Short Description プロパティにマッピング済みです。</p> </td> 
   </tr>
   <tr>
    <td><p>caption<em>（すべてのフィールドの種類）</em></p> </td> 
-   <td><p>アダプティブフォームの Title プロパティにマッピング済み。</p> </td> 
+   <td><p>アダプティブフォームの Title プロパティにマッピング済みです。</p> </td> 
   </tr>
   <tr>
    <td><p>displayFormat<em>（すべてのフィールドの種類）</em></p> </td> 

@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームおよび HTML5 フォームの外観フレームワーク
 seo-title: Appearance framework for adaptive and HTML5 forms
-description: 'Mobile Forms はフォームテンプレートを HTML5 フォームとしてレンダリングします。これらのフォームは jQuery、Backbone.js および Underscore.js ファイルを外観、およびスクリプティングの有効化のために使用します。 '
+description: Mobile Forms はフォームテンプレートを HTML5 フォームとしてレンダリングします。これらのフォームは jQuery、Backbone.js および Underscore.js ファイルを外観、およびスクリプティングの有効化のために使用します。
 seo-description: Mobile Forms render Form Templates as HTML5 forms. These forms use jQuery, Backbone.js and Underscore.js files for the appearance and to enable scripting.
 uuid: 183b8d71-44fc-47bf-8cb2-1cf920ffd23a
 content-type: reference
@@ -12,7 +12,7 @@ exl-id: 272d3ec1-7f92-4f4a-9e98-954136b20b27
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1170'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -52,11 +52,11 @@ ht-degree: 87%
   </tr>
   <tr>
    <td>screenReaderText</td> 
-   <td>スクリーンリーダーはこの値を使用して、フィールドについての情報を読み上げます。フォームが値を提供し、その値を上書きできます。<br /> </td> 
+   <td>スクリーンリーダーはこの値を使用して、フィールドについての情報を読み上げます。フォームは値を提供し、その値を上書きできます。<br /> </td> 
   </tr>
   <tr>
    <td>tabIndex</td> 
-   <td>フォームのタブシーケンスにおけるフィールドの位置フォームのデフォルトのタブ順序を変更する場合にのみ、tabIndex を上書きします。</td> 
+   <td>フォームのタブシーケンスにおけるフィールドの位置フォームのデフォルトタブの順序を変更する場合にのみ、tabIndex を上書きします。</td> 
   </tr>
   <tr>
    <td>role</td> 
@@ -134,10 +134,10 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
   </tr>
   <tr>
    <td>click : function()</td> 
-   <td>フィールドにフォーカスを置き、XFA_CLICK_EVENT を呼び出します。</td> 
+   <td>フォーカスをフィールドに移し、XFA_CLICK_EVENT を呼び出します。</td> 
   </tr>
   <tr>
-   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage:文字列 </em>エラーを表す<br /> <em>errorType:文字列 ("warning"/"error")</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td> 
+   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>erorrMessage: string </em>representing the error<br /> <em>errorType: string (“warning”/”error”)</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td> 
    <td>エラーメッセージとエラータイプをウィジェットに送信します。ウィジェットはエラーを表示します。</td> 
   </tr>
   <tr>
@@ -149,7 +149,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 
 ## フィールドのタイプに固有のオプション {#options-specific-to-type-of-field}
 
-すべてのカスタムウィジェットは上記の仕様に準拠する必要があります。異なるフィールドの機能を使用するには、ウィジェットがその特定のフィールドのガイドラインに従う必要があります。
+すべてのカスタムウィジェットは上記の仕様に準拠する必要があります。異なるフィールドの機能を使用するには、ウィジェットはその特定のフィールドのガイドラインに準拠する必要があります。
 
 ### TextEdit: Text Field {#textedit-text-field}
 
@@ -214,8 +214,8 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
    <th>説明</th> 
   </tr>
   <tr>
-   <td><p>addItem:<em> function(itemValues)<br /> itemValues:表示と保存の値を含むオブジェクト <br /> {sDisplayVal: &lt;displayvalue&gt;, sSaveVal: &lt;save value=""&gt;}</em></p> </td> 
-   <td>リストに項目を追加します。</td> 
+   <td><p>addItem:<em> function(itemValues)<br /> itemValues：display と save の値が含まれているオブジェクト <br /> {sDisplayVal: &lt;displayValue&gt;, sSaveVal: &lt;save Value&gt;}</em></p> </td> 
+   <td>アイテムをリストに追加します。</td> 
   </tr>
   <tr>
    <td>deleteItem<em>: function(nIndex)<br /> nIndex：リストから削除する項目のインデックス<br /> </em><br /> <br /> </td> 
@@ -248,15 +248,15 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
   </tr>
   <tr>
    <td>値</td> 
-   <td><p>値の配列（オン／オフ／中間）。</p> <p>これは、checkButton のさまざまなステートのための値の配列です。 values[0] はステートがオンのときの値です。values[1] はステートがオフのときの値です。<br />values[2] はステートが中間のときの値です。 値配列の長さは、state オプションの値と同じです。<br /> </p> </td> 
+   <td><p>値の配列（オン／オフ／中間）。</p> <p>これは、checkButton のさまざまなステートのための値の配列です。 values[0] はステートがオンのときの値です。values[1] はステートがオフのときの値です。<br />values[2] はステートが中間のときの値です。値配列の長さは、state オプションの値と同じです。<br /> </p> </td> 
   </tr>
   <tr>
    <td>states</td> 
-   <td><p>許可される状態の数。 </p> <p>アダプティブフォームの場合は 2 つ（オン、オフ）、HTML5 フォームの場合は 3 つ（オン、オフ、中立）です。</p> </td> 
+   <td><p>許可される状態の数。 </p> <p>アダプティブフォームの場合は 2 つ（オン、オフ）、HTML5 フォームの場合は 3 つ（オン、オフ、中間）です。</p> </td> 
   </tr>
   <tr>
    <td>state</td> 
-   <td><p>要素の現在の状態です。</p> <p>アダプティブフォームの場合は 2 つ（オン、オフ）、HTML5 フォームの場合は 3 つ（オン、オフ、中立）です。</p> </td> 
+   <td><p>要素の現在の状態です。</p> <p>アダプティブフォームの場合は 2 つ（オン、オフ）、HTML5 フォームの場合は 3 つ（オン、オフ、中間）です。</p> </td> 
   </tr>
  </tbody>
 </table>

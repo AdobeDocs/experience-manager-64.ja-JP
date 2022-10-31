@@ -1,7 +1,7 @@
 ---
 title: 一般リリースノート（Adobe Experience Manager 6.4）
 seo-title: Release Notes
-description: 'Adobe Experience Manager 6.4 のノートでは、リリース情報、新機能情報、インストール方法および詳細な変更リストを提供します。 '
+description: Adobe Experience Manager 6.4 のノートでは、リリース情報、新機能情報、インストール方法および詳細な変更リストを提供します。
 seo-description: Adobe Experience Manager 6.4 notes outlining the release information, what's new, how to install and detailed change lists.
 uuid: 5a220301-2727-4078-ba19-4a2dbf9657f4
 contentOwner: msm-service
@@ -25,8 +25,8 @@ ht-degree: 82%
 |---|---|
 | バージョン | 6.4 |
 | 種類 | メジャーリリース |
-| 一般公開日 | 2018年4月4日（PT） |
-| 推奨される更新 | 詳しくは、 [AEMのリリースと更新](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html?lang=ja) |
+| 一般公開日 | 2018年4月04日（PT） |
+| 推奨される更新 | 詳しくは、 [AEMのリリースと更新](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html) |
 
 ### 参考情報 {#trivia}
 
@@ -89,7 +89,7 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 詳しくは、[このドキュメントページ](/help/sites-deploying/indexing-via-the-oak-run-jar.md)を参照してください。
 
-#### 監視 {#monitoring}
+#### モニタリング {#monitoring}
 
 * 新しい [システム概要](/help/sites-administering/operations-dashboard.md#system-overview) は、パフォーマンス関連のすべてのシステムステータスとアクティビティのスナップショットビューを提供します。
 * インデックス作成、クエリー、メンテナンスに関する一連の[ヘルスチェック](/help/sites-administering/operations-dashboard.md#health-checks)が新しく用意されています。 
@@ -131,7 +131,7 @@ Sling Model Exporter とコアコンポーネントに対する様々な機能�
 
 AEM 6.4 で次世代のコンポーネントモデルへの転換が完了します。AEM 6.3 で導入されたコアコンポーネントの概念にスタイルシステムが加わって、新規サイトの作成や既存サイトの拡張を効率的におこなえるようになりました。
 
-新しいコンポーネントモデルの最善の活用方法については、[AEM Sites の開発の手引き - WKND チュートリアル](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)を参照されることをお勧めします。
+新しいコンポーネントモデルの最善の活用方法については、[AEM Sites の開発の手引き - WKND チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)を参照されることをお勧めします。
 
 #### Screens アドオン {#screens-add-on}
 

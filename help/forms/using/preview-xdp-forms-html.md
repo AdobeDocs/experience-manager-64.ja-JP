@@ -12,7 +12,7 @@ exl-id: f855d3f9-cf3c-4883-b82b-d607250c3dae
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '795'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -30,9 +30,9 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 ### Apache Sling Authentication Service の設定 {#configure-apache-sling-authentication-service}
 
-1. に移動します。 `https://[server]:[port]/system/console/configMgr` OSGi または
+1. OSGi で実行されている AEM Forms では `https://[server]:[port]/system/console/configMgr`、
 
-   `https://[server]:[port]/lc/system/console/configMgr` (JEE 上で動作するAEM Forms)
+   JEE で実行されている AEM Forms では `https://[server]:[port]/lc/system/console/configMgr` に移動します。
 
 1. **Apache Sling Authentication Service** 設定を探してクリックし、編集モードで開きます。 
 
@@ -42,7 +42,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
       * -/content/xfaforms
       * -/etc/clientlibs
-   * OSGi での AEM Forms
+   * OSGi 上の AEM Forms
 
       * -/content/xfaforms
       * -/etc/clientlibs/fd/xfaforms
@@ -56,12 +56,12 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 ### 保護モードの無効化 {#disable-protected-mode}
 
-[保護モード](/help/forms/using/get-xdp-pdf-documents-aem.md)は、デフォルトで有効になっています。実稼働環境の場合、このモードを有効のままにしてください。開発環境でこのモードを無効にすると、Designer で HTML5 フォームのプレビューを表示することができます。無効にするには、次の手順を実行します。
+[保護モード](/help/forms/using/get-xdp-pdf-documents-aem.md)は、デフォルトで有効になっています。実稼働環境の場合、このモードを有効のままにしてください。開発環境でこのモードを無効にすると、Designer で HTML5 フォームのプレビューを表示することができます。このモードを無効にするには、以下の手順を実行します。
 
 1. 管理者として AEM Web コンソールにログインします。
 
-   * OSGi 上のAEM Formsの URL が `https://[server]:[port]/system/console/configMgr`
-   * JEE 上のAEM Formsの URL は `https://[server]:[port]/lc/system/console/configMgr`
+   * OSGi 上の AEM Forms の URL：`https://[server]:[port]/system/console/configMgr`
+   * JEE 上の AEM Forms の URL：`https://[server]:[port]/lc/system/console/configMgr`
 
 1. **[!UICONTROL Mobile Forms の設定]**&#x200B;を編集用に開きます。
 1. 「**[!UICONTROL 保護モード]**」オプションの選択を解除して「**[!UICONTROL 保存]**」をクリックします。
@@ -69,11 +69,11 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 ### AEM Forms サーバーの詳細の指定 {#provide-details-of-aem-forms-server}
 
 1. Designer で、**ツール**／**オプション**&#x200B;に移動します。
-1. 「オプション」ウィンドウで、「 **サーバーオプション** ページで、以下の詳細を入力し、 **OK**.
+1. オプションウィンドウで&#x200B;**サーバーオプション**&#x200B;ページを選択し、次の詳細を提供して「**OK**」をクリックします。
 
    * **Server URL**：AEM Forms サーバーの URL です。
    * **HTTP port number**：AEM サーバーポート。デフォルト値は 4502 です。
-   * **HTMLプレビューのコンテキスト：** XFA フォームのレンダリング用のプロファイルのパス。 次のデフォルトのプロファイルを使用して、Designer でフォームをプレビューします。 ただし、カスタムプロファイルへのパスを指定することもできます。
+   * **HTML Preview Context：** XFA フォームのレンダリングに使用するプロファイルのパス。Designer でのフォームのプレビューには、次のプロファイルがデフォルトで使用されています。ただし、カスタムプロファイルへのパスを指定することもできます。
 
       * `/content/xfaforms/profiles/default.html` (OSGi 上の AEM Forms)
       * `/lc/content/xfaforms/profiles/default.html` (JEE 上の AEM Forms)
@@ -82,13 +82,13 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
       * `/aem/forms` (OSGi 上の AEM Forms)
       * `/lc/forms` (JEE 上の AEM Forms)
 
-   **注：***サーバーが起動および実行されていることを確認してください。HTMLプレビューは、CRX サーバーに接続し、*&#x200B;生成&#x200B;*プレビュー。*
+   **注：***サーバーが起動および実行されていることを確認してください。HTML プレビューは、プレビューを*&#x200B;生成&#x200B;*するために CRX サーバーに接続します。*
 
    ![AEM Forms Designer のオプション ](assets/server_options.png)
 
    AEM Forms Designer のオプション
 
-1. フォームをHTMLでプレビューするには、 **プレビューHTML** タブをクリックします。
+1. フォームを HTML でプレビューするには、「**HTML プレビュー**」タブをクリックします。
 
    >[!NOTE]
    >
@@ -102,7 +102,7 @@ Designer での XDP フォームの HTML プレビューの生成を有効にす
 
 Designer では、サンプル XML データを使用してフォームをプレビューおよびテストすることができます。フォームが正しくレンダリングされるよう、フォームをサンプルデータで頻繁にテストすることをお勧めします。
 
-サンプルデータがない場合には、Designer で自動生成するか、または独自に作成することができます。[フォームのプレビュー用にサンプルデータを自動生成するには](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7efe.2)および[フォームのプレビュー用にサンプルデータを作成するには](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7eff.2)も参照してください。
+サンプルデータがない場合には、Designer で自動生成するか、または独自に作成することができます。[フォームのプレビュー用にサンプルデータを自動生成するには](https://help.adobe.com/ja_JP/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7efe.2)および[フォームのプレビュー用にサンプルデータを作成するには](https://help.adobe.com/ja_JP/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7eff.2)も参照してください。
 
 サンプルデータソースを使用してフォームをテストすると、データとフィールドがマップされていること、および繰り返しサブフォームが指定どおりに繰り返されることを確認できます。各オブジェクトに結合されたデータを表示するにあたり適切なスペースが確保された、バランスのよいフォームレイアウトを作成できます。
 
@@ -116,4 +116,4 @@ Designer では、サンプル XML データを使用してフォームをプレ
 
 AEM Forms では、リポジトリにあるフォームやドキュメントをプレビューすることができます。プレビューを使用すると、エンドユーザーによって使用される際にどのように見え、作動するのかを明確に理解できます。
 
-[**サポートへのお問い合わせ**](https://www.adobe.com/account/sign-in.supportportal.html)
+[**サポートへのお問い合わせ**](https://www.adobe.com/jp/account/sign-in.supportportal.html)

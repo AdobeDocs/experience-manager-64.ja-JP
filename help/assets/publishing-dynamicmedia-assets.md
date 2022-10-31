@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media アセットの公開
-description: これらのアセットの HTTP/2 配信を含むDynamic Mediaアセットの公開方法。
+description: Dynamic Media アセットの公開方法 これらのアセットの HTTP/2 配信を含む
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: dynamic-media
@@ -11,7 +11,7 @@ role: User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '409'
-ht-degree: 95%
+ht-degree: 97%
 
 ---
 
@@ -37,7 +37,6 @@ ht-degree: 95%
 >
 >* アセットの URL を使用するためには、そのアセットを公開する必要があります。アセットが公開されていない場合、URL をコピーして Web ブラウザーに貼り付けても機能しません。
 >* ライブ配信をするには、画像プリセットおよびビューアプリセットをアクティベートして公開する必要があります。
-
 >
 
 

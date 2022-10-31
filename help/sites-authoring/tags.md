@@ -1,5 +1,5 @@
 ---
-title: 'タグの使用 '
+title: タグの使用
 seo-title: Using Tags
 description: タグを使用すると、Web サイト内のコンテンツをすばやく簡単に分類できます。
 seo-description: Tags are a quick and easy method of classifying content within a website

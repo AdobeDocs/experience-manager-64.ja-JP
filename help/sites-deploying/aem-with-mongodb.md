@@ -1,7 +1,7 @@
 ---
 title: MongoDB を備えた AEM
 seo-title: AEM with MongoDB
-description: 'MongoDB を備えた AEM を正常にデプロイするために必要なタスクと考慮事項について学習します。 '
+description: MongoDB を備えた AEM を正常にデプロイするために必要なタスクと考慮事項について学習します。
 seo-description: Learn about the tasks and considerations needed for a successful AEM with MongoDB deployment.
 uuid: 51c463aa-d467-4857-8fff-e5f81d694145
 contentOwner: User

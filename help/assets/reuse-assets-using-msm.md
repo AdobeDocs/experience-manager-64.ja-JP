@@ -9,13 +9,13 @@ exl-id: a8e9f8de-ca84-4107-8f73-2fc75eeae1f1
 source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
 source-wordcount: '3159'
-ht-degree: 93%
+ht-degree: 95%
 
 ---
 
 # MSM for を使用したアセットの再利用[!DNL Assets] {#reuse-assets-using-msm-for-assets}
 
-でのマルチサイトマネージャ (MSM) 機能 [!DNL Adobe Experience Manager] を使用すると、一度作成し、複数の Web サイトで再利用したコンテンツを再利用できます。 MSM for [!DNL Assets] 機能。 MSM for [!DNL Assets] を使用すると、次のことが可能になります。
+[!DNL Adobe Experience Manager] のマルチサイトマネージャー（MSM）機能を使用すると、一度作成したコンテンツを複数の web サイトで再利用できます。これと同じ機能が、MSM for [!DNL Assets] 機能としてデジタルアセットにも使用できます。MSM for [!DNL Assets] を使用すると、次のことが可能になります。
 
 * 一度アセットを作成した後、そのアセットのコピーを作成して、サイトの他の領域で再利用する。
 * 複数のコピーを同期させ、元のプライマリコピーの変更を子コピーにプッシュする。
@@ -23,7 +23,7 @@ ht-degree: 93%
 
 ## 前提条件 {#msm-prerequisites}
 
-MSM を [!DNL Assets]、少なくとも [!DNL Experience Manager] 6.4 サービスパック 5. 詳しくは、 [最新のサービスパックのリリースノート](/help/release-notes/sp-release-notes.md).
+MSM for [!DNL Assets] を使用するには、少なくとも [!DNL Experience Manager] 6.4 サービスパック 5 をインストールしてください。詳しくは、[最新のサービスパックのリリースノート](/help/release-notes/sp-release-notes.md)を参照してください。
 
 ## 利点と概念の理解 {#understand-benefits-concepts}
 

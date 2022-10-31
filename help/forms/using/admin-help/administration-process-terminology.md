@@ -13,7 +13,7 @@ exl-id: 86f8d51c-a479-4940-b3c2-4b54a67f7450
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '180'
-ht-degree: 85%
+ht-degree: 88%
 
 ---
 
@@ -28,4 +28,4 @@ forms ワークフローを効率的に管理するには、以下の用語と�
 * プロセスダイアグラムのステップの 1 つで、Workbench ではプロセスダイアグラムのアイコンで表されます。
 * 「*タスク*」は、ユーザーに割り当てられたアクションです。タスクが実行し、操作が実行されると、ユーザーサービスによってユーザーにタスクが割り当てられます。
 
-これらの用語について詳しくは、「[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63)」を参照してください。
+これらの用語について詳しくは、「[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)」を参照してください。

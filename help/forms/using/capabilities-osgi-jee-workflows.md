@@ -1,5 +1,5 @@
 ---
-title: 'OSGi 上のフォームベース AEM ワークフローおよび AEM Forms JEE ワークフローのアクションと機能 '
+title: OSGi 上のフォームベース AEM ワークフローおよび AEM Forms JEE ワークフローのアクションと機能
 seo-title: Actions and capabilities of Form-centric AEM Workflows on OSGi and AEM Forms JEE workflows
 description: AEM Inbox とHTMLWorkspace でサポートされるアクションの違い、OSGi 上の Forms 中心のAEM Workflows とAEM Forms JEE ワークフローでサポートされる機能の違い、AEM Inbox とAEM Formsアプリの機能の違いについて詳しく説明します。
 seo-description: Learn more about the differences in actions supported by AEM Inbox and HTML Workspace, differences in capabilities supported by Form-centric AEM Workflows on OSGi and AEM Forms JEE Workflows, and differences between AEM Inbox and AEM Forms app features.
@@ -154,8 +154,8 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>電子署名（Adobe Sign）</td> 
-   <td>サポート <sup>[1]</sup></td> 
-   <td>サポート <sup>[5]</sup></td> 
+   <td>サポート対象 <sup>[1]</sup></td> 
+   <td>サポート対象 <sup>[5]</sup></td> 
   </tr>
   <tr>
    <td>タスクとフォームアプリケーションの管理</td> 
@@ -164,13 +164,13 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>ドキュメントサービス</td> 
-   <td>サポート <sup>[3]</sup></td> 
-   <td>サポート <sup>[3]</sup></td> 
+   <td>サポート対象 <sup>[3]</sup></td> 
+   <td>サポート対象 <sup>[3]</sup></td> 
   </tr>
   <tr>
    <td>完了したタスクをアダプティブフォームまたは PDF ドキュメントとしてレンダリング</td> 
    <td>サポート対象</td> 
-   <td>サポート対象 [4]</td> 
+   <td>サポート対象[4]</td> 
   </tr>
   <tr>
    <td>Correspondence Management との統合</td> 
@@ -204,12 +204,12 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>HTML5 フォーム、インタラクティブ PDF フォーム、フォームセット<br /> </td> 
-   <td>サポートなし<br /> </td> 
+   <td>サポート対象外<br /> </td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
    <td>プロセスレポート</td> 
-   <td>サポートなし<br /> </td> 
+   <td>サポート対象外<br /> </td> 
    <td>サポート対象<br /> </td> 
   </tr>
   <tr>
@@ -259,7 +259,7 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>サードパーティアプリケーションとの統合</td> 
-   <td>サポート <sup>[6]</sup></td> 
+   <td>サポート対象 <sup>[6]</sup></td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
@@ -294,7 +294,7 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>ワークフローからの Web サービスの呼び出し</td> 
-   <td>サポート <sup>[6]</sup></td> 
+   <td>サポート対象 <sup>[6]</sup></td> 
    <td>サポート対象</td> 
   </tr>
   <tr>

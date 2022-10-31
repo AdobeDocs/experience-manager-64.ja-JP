@@ -199,7 +199,7 @@ AEM Communitiesプロバイダーは、 [AdobeGranite OAuth Application and Prov
    * **[!UICONTROL Update User]**&#x200B;オンにすると、ログインするたびにリポジトリ内のユーザーデータが更新され、プロファイルの変更やリクエストされた追加データが反映されます。デフォルト値はオフです。
 
 
-#### 次の手順 {#next-steps}
+#### 次のステップ {#next-steps}
 
 続いて以下の手順をおこないますが、この手順は Facebook でも Twitter でも共通です。
 
@@ -321,7 +321,7 @@ AEM Communities設定は、 [AdobeGranite OAuth Application and Provider](#adobe
 
       オンにすると、ログインするたびにリポジトリ内のユーザーデータが更新され、プロファイルの変更やリクエストされた追加データが反映されます。デフォルト値はオフです。
 
-#### 次の手順 {#next-steps-1}
+#### 次のステップ {#next-steps-1}
 
 続いて以下の手順をおこないますが、この手順は Facebook でも Twitter でも共通です。
 

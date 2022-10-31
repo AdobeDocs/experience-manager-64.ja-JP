@@ -1,7 +1,7 @@
 ---
-title: HTTP トークンを使用した SSO 認証を実行するFlash Builderアプリケーションの作成
+title: HTTP トークンを使用した SSO 認証を実行する Flash Builder アプリケーションの作成
 seo-title: Creating Flash Builder applicationsthat perform SSO authentication using HTTP tokens
-description: HTTP トークンを使用してシングルサインオン (SSO) 認証を実行するFlash Builderを使用してクライアントアプリケーションを作成します。 操作のユーザーを 1 回認証し、その認証を使用して複数のAEM Forms操作を実行します。
+description: HTTP トークンを使用してシングルサインオン（SSO）認証を実行する Flash Builder を使用し、クライアントアプリケーションを作成してください。操作のユーザーを 1 回認証し、その認証を使用して複数の AEM Forms 操作を実行してください。
 seo-description: Create a client application using Flash Builder that performs single-sign on (SSO) authentication using HTTP tokens. Authenticate a user for an operation once and use that authentication to perform multiple AEM Forms operations.
 uuid: 273db00a-a665-4e52-88fa-4fca06d05f8c
 contentOwner: admin
@@ -14,113 +14,113 @@ exl-id: e4e99b9d-3023-4b9b-9c93-be04c7a871ee
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1782'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# HTTP トークンを使用した SSO 認証を実行するFlash Builderアプリケーションの作成 {#creating-flash-builder-applicationsthat-perform-sso-authentication-using-http-tokens}
+# HTTP トークンを使用した SSO 認証を実行する Flash Builder アプリケーションの作成 {#creating-flash-builder-applicationsthat-perform-sso-authentication-using-http-tokens}
 
-HTTP トークンを使用してシングルサインオン (SSO) 認証を実行するFlash Builderを使用して、クライアントアプリケーションを作成できます。 例えば、Web ベースのアプリケーションを作成する場合、Flash Builderを使用します。 次に、アプリケーションに異なるビューが含まれ、各ビューが異なるAEM Forms操作を呼び出すとします。 各Forms操作でユーザーを認証する代わりに、ユーザーが 1 回認証できるログインページを作成できます。 認証が完了すると、ユーザーは再度認証をおこなわなくても複数の操作を呼び出すことができます。 例えば、ユーザーが Workspace( または別のFormsアプリケーション ) にログインした場合、ユーザーは再認証する必要はありません。
+HTTP トークンを使用してシングルサインオン（SSO）認証を実行する Flash Builder を使用し、クライアントアプリケーションを作成できます。例えば、Flash Builder を使用して web ベースのアプリケーションを作成する場合を考えてみましょう。次に、アプリケーションに異なるビューが含まれ、各ビューが異なる AEM Forms 操作を呼び出すと仮定します。各 Forms 操作でユーザーを認証する代わりに、1 回でユーザーを認証できるログインページを作成できます。認証が完了すると、ユーザーは再度認証を行わなくても複数の操作を呼び出すことができます。例えば、ユーザーがワークスペース（または別の Forms アプリケーション）にログインした場合、そのユーザーを再認証する必要はありません。
 
-クライアントアプリケーションには SSO 認証を実行するために必要なアプリケーションロジックが含まれていますが、AEM forms User Management は実際のユーザー認証を実行します。 HTTP トークンを使用してユーザーを認証するために、クライアントアプリケーションは Authentication Manager サービスの `authenticateWithHTTPToken` 操作。 User Management では、HTTP トークンを使用してユーザーを認証できます。 その後のAEM Formsへのリモートまたは Web サービス呼び出しでは、認証用の資格情報を渡す必要はありません。
+クライアントアプリケーションには SSO 認証を実行するために必要なアプリケーションロジックが含まれていますが、AEM Forms User Management は実際のユーザー認証を実行します。HTTP トークンを使用してユーザーを認証するために、クライアントアプリケーションは Authentication Manager サービスの `authenticateWithHTTPToken` 操作を実行します。User Management は、HTTP トークンを使用してユーザーを認証できます。その後の AEM Forms へのリモートまたは web サービス呼び出しでは、認証用の資格情報を渡す必要はありません。
 
 >[!NOTE]
 >
->この節を読む前に、Remoting を使用したAEM Formsの呼び出しに関する詳細を理解しておくことをお勧めします。 ( [AEM Forms Remoting を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
+>この節を読む前に、Remoting を使用した AEM Forms の呼び出しに関する詳細を理解しておくことをお勧めします。（[AEM Forms Remoting を使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)を参照。）
 
-次のAEM Formsの短時間のみ有効なプロセス。 `MyApplication/EncryptDocument`は、SSO を使用してユーザーが認証された後に呼び出されます。 ( このプロセスの入力値や出力値などについて詳しくは、 [短時間のみ有効なプロセスの例](/help/forms/developing/aem-forms-processes.md).)
+次の AEM Forms の短時間のみ有効なプロセスは `MyApplication/EncryptDocument` と呼ばれ、SSO を使用してユーザーが認証された後に呼び出されます。（このプロセスの入力値や出力値などについて詳しくは、[短時間のみ有効なプロセスの例](/help/forms/developing/aem-forms-processes.md)を参照。）
 
 ![cf_cf_encryptdocumentprocess2](assets/cf_cf_encryptdocumentprocess2.png)
 
 >[!NOTE]
 >
->このプロセスは、既存の AEM Forms プロセスに基づいていません。このプロセスを呼び出す方法を説明するコード例に従うには、という名前のプロセスを作成します。 `MyApplication/EncryptDocument` workbench の使用 （[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照。）
+>このプロセスは、既存の AEM Forms プロセスに基づいていません。このプロセスを呼び出す方法を説明するコード例に従うには、ワークベンチを使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照。）
 
-Flash Builderを使用して構築されたクライアントアプリケーションは、 `/um/login` および `/um/logout`. つまり、クライアントアプリケーションは、 `/um/login` 起動時にユーザーのステータスを判断する URL。 次に、User Manager はユーザーステータスで応答します。 クライアントアプリケーションと User Manager セキュリティサーブレットは、HTTP を使用して通信します。
+Flash Builder を使用して構築されたクライアントアプリケーションは、`/um/login` および `/um/logout` で設定された User Manager のセキュリティサーブレットとやり取りします。つまり、クライアントアプリケーションは、 起動時に `/um/login` の URL へリクエストを送り、ユーザーのステータスを判断します。次に、User Manager はユーザーステータスで応答します。クライアントアプリケーションと User Manager のセキュリティサーブレットは、HTTP を使用して通信します。
 
 **リクエストの形式**
 
 セキュリティサーブレットには、次の入力変数が必要です。
 
-* `um_no_redirect`  — この値は、 `true`. この変数は、User Manager セキュリティサーブレットに対しておこなわれたすべての要求に付随します。 また、セキュリティサーブレットは、Flex クライアントや他の Web アプリケーションからの受信リクエストを区別するのに役立ちます。
-* `j_username`  — この値は、ログインフォームで指定されたユーザーのログイン識別子の値です。
-* `j_password`  — この値は、ログインフォームで指定されたユーザーの対応するパスワードです。
+* `um_no_redirect` - この値は、`true` である必要があります。この変数は、User Manager セキュリティサーブレットに対して行われたすべての要求に付随します。これはまたセキュリティサーブレットが、Flex クライアントや他の web アプリケーションからの受信リクエストを区別するのに役立ちます。
+* `j_username` - この値は、ログインフォームで指定されたユーザーのログイン識別子の値です。
+* `j_password` - この値は、ログインフォームで指定されたユーザーの対応するパスワードです。
 
-この `j_password` の値は、資格情報リクエストに対してのみ必要です。 パスワードの値が指定されていない場合、セキュリティサーブレットは、使用しているアカウントが既に認証されているかどうかを確認します。 その場合は、次の手順を実行できます。ただし、セキュリティサーブレットは、ユーザーを再度認証しません。
+この `j_password` の値は、資格情報リクエストに対してのみ必要です。パスワードの値が指定されていない場合、セキュリティサーブレットは、使用しているアカウントが既に認証されているかどうかを確認します。その場合は、作業を継続できます。ただし、セキュリティサーブレットは、再認証を行いません。
 
 >[!NOTE]
 >
->i18n を適切に処理するには、これらの値がPOST形式であることを確認します。
+>i18n を適切に処理するには、これらの値が POST 形式であることを確認してください。
 
-**応答の形式**
+**応答形式**
 
-次の場所に設定されたセキュリティサーブレット： `/um/login` ～を使って応答する `URLVariables` 形式 この形式では、コンテンツタイプの出力は text/plain です。 出力には、名前と値のペアをアンパサンド (&amp;) 文字で区切って含めます。 応答には次の変数が含まれます。
+`/um/login` に設定されたセキュリティサーブレットは、`URLVariables` 形式を使って応答します。この形式では、コンテンツタイプの出力は text/plain です。出力には、名前と値のペアをアンパサンド (&amp;) 文字で区切って含めます。応答には次の変数が含まれます。
 
-* `authenticated`  — 値は、 `true` または `false`.
-* `authstate`  — この値には、次のいずれかの値を含めることができます。
+* `authenticated` - 値は、`true` または `false` です。
+* `authstate` - この値には、次のいずれかの値を含めることができます。
 
-   * `CREDENTIAL_CHALLENGE`  — この状態は、User Manager がどの方法でもユーザーの ID を特定できないことを示します。 認証を行うには、ユーザーのユーザー名とパスワードが必要です。
-   * `SPNEGO_CHALLENGE` — この状態は `CREDENTIAL_CHALLENGE`.
-   * `COMPLETE`  — この状態は、User Manager がユーザーを認証できることを示します。
-   * `FAILED`  — この状態は、User Manager がユーザーを認証できなかったことを示します。 この状態への応答として、flex クライアントはユーザーにエラーメッセージを表示できます。
-   * `LOGGED_OUT`  — この状態は、ユーザーが正常にログアウトしたことを示します。
+   * `CREDENTIAL_CHALLENGE` - この状態は、User Manager がどの方法でもユーザーの ID を特定できないことを示します。認証を行うには、ユーザーのユーザー名とパスワードが必要です。
+   * `SPNEGO_CHALLENGE` - この状態は `CREDENTIAL_CHALLENGE` と同じ扱いになります。
+   * `COMPLETE` - この状態は、User Manager がユーザーを認証できることを示します。
+   * `FAILED` - この状態は、User Manager がユーザーを認証できなかったことを示します。この状態への応答として、Flex クライアントはユーザーにエラーメッセージを表示できます。
+   * `LOGGED_OUT` - この状態は、ユーザーが正常にログアウトしたことを示します。
 
-* `assertionid`  — 状態が `COMPLETE` ユーザーの `assertionId` の値です。 クライアントアプリケーションは、 `AuthResult` を設定します。
+* `assertionid` - 状態が `COMPLETE` の場合、ユーザーの `assertionId` の値を含みます。クライアントアプリケーションは、ユーザーのために `AuthResult` を取得できます。
 
 **ログインプロセス**
 
-クライアントアプリケーションの起動時に、 `/um/login` セキュリティサーブレット。 例えば、`https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true` のようになります。要求が User Manager セキュリティサーブレットに到達すると、次の手順が実行されます。
+クライアントアプリケーションの起動時に、 `/um/login` セキュリティサーブレットに対して POST リクエストを行うことができます。例えば、`https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true` のようになります。リクエストが User Manager セキュリティサーブレットに到達すると、次の手順が実行されます。
 
-1. 次の名前の cookie を検索します。 `lcAuthToken`. ユーザーが既に別のFormsアプリケーションにログインしている場合、この cookie が表示されます。 Cookie が見つかった場合は、その内容が検証されます。
-1. ヘッダーベースの SSO が有効な場合、サーブレットは設定済みのヘッダーを探してユーザーの ID を判断します。
-1. SPNEGO が有効な場合、サーブレットは SPNEGO を開始しようとし、ユーザーの ID を判断しようとします。
+1. `lcAuthToken` という名前の Cookie を検索します。ユーザーが既に別の Forms アプリケーションにログインしている場合、この Cookie が表示されます。Cookie が見つかった場合は、そのコンテンツは検証されます。
+1. ヘッダーベースの SSO が有効な場合、サーブレットは設定済みのヘッダーを探してユーザーの ID を決定します。
+1. SPNEGO が有効な場合、サーブレットは SPNEGO を開始を試み、ユーザーの ID 決定を試みます。
 
-セキュリティサーブレットがユーザーに一致する有効なトークンを見つけた場合、セキュリティサーブレットを使用して先に進み、 `authstate=COMPLETE`. それ以外の場合、セキュリティサーブレットは `authstate=CREDENTIAL_CHALLENGE`. 次のリストで、これらの値を説明します。
+セキュリティサーブレットがユーザーに一致する有効なトークンを見つけた場合、セキュリティサーブレットはユーザーを続行させ、`authstate=COMPLETE` で応答します。それ以外の場合、セキュリティサーブレットは `authstate=CREDENTIAL_CHALLENGE` で応答します。次のリストで、これらの値を説明します。
 
-* `Case authstate=COMPLETE`:ユーザーが認証され、 `assertionid` 値には、ユーザーのアサーション識別子が含まれます。 この段階で、クライアントアプリケーションはAEM Formsに接続できます。 この URL 用に設定されたサーブレットは、 `AuthResult` を呼び出して `AuthenticationManager.authenticate(HttpRequestToken)` メソッド。 この `AuthResult` インスタンスは、user manager コンテキストを作成し、セッションに保存できます。
-* `Case authstate=CREDENTIAL_CHALLENGE`:セキュリティサーブレットがユーザーの資格情報を必要とすることを示します。 応答として、クライアントアプリケーションはログイン画面をユーザーに表示し、取得した資格情報をセキュリティサーブレットに送信できます ( 例： `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true&j_username=administrator&j_password=password)`. 認証に成功した場合、セキュリティサーブレットは `authstate=COMPLETE`.
+* `Case authstate=COMPLETE`：ユーザーが認証され、`assertionid` 値には、ユーザーのアサーション識別子が含まれます。この段階で、クライアントアプリケーションは AEM Forms に接続できます。この URL 用に設定されたサーブレットは、`AuthenticationManager.authenticate(HttpRequestToken)` メソッドを呼び出して、ユーザーの `AuthResult` を取得できます。`AuthResult` インスタンスは、User Manager コンテキストを作成し、セッションに保存できます。
+* `Case authstate=CREDENTIAL_CHALLENGE`：セキュリティサーブレットがユーザーの資格情報を必要とすることを示します。応答として、クライアントアプリケーションはログイン画面をユーザーに表示し、取得した資格情報をセキュリティサーブレットに送信できます（例： `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true&j_username=administrator&j_password=password)`）。認証に成功した場合、セキュリティサーブレットは `authstate=COMPLETE` で応答します。
 
-それでも認証が成功しない場合、セキュリティサーブレットは `authstate=FAILED`. この値に応答するために、クライアントアプリケーションはメッセージを表示して、資格情報を再度取得できます。
+それでも認証が成功しない場合、セキュリティサーブレットは`authstate=FAILED`で応答をします。この値に応答するために、クライアントアプリケーションでメッセージが表示され、資格情報を再度取得します。
 
 >[!NOTE]
 >
->While `authstate=CREDENTIAL_CHALLENGE`クライアントは、取得した秘密鍵証明書をPOST形式でセキュリティサーブレットに送信することをお勧めします。
+>`authstate=CREDENTIAL_CHALLENGE` の間は、クライアントが取得した資格情報を POST 形式でセキュリティサーブレットに送信することをお勧めします。
 
 **ログアウトプロセス**
 
-クライアントアプリケーションがログアウトする際に、次の URL に要求を送信できます。
+クライアントアプリケーションがログアウトする際に、次の URL にリクエストを送信できます。
 
 `https://<your_serverhost>:<your_port>/um/logout?um_no_redirect=true`
 
-このリクエストを受け取ると、User Manager セキュリティサーブレットによって `lcAuthToken` cookie と応答します。 `authstate=LOGGED_OUT`. この値を受け取ったクライアントアプリケーションは、クリーンアップタスクを実行できます。
+このリクエストを受け取ると、User Manager セキュリティサーブレットは `lcAuthToken` Cookie を削除し、`authstate=LOGGED_OUT` と応答します。この値を受け取ったクライアントアプリケーションは、クリーンアップタスクを実行できます。
 
-## SSO を使用してAEM forms ユーザーを認証するクライアントアプリケーションの作成 {#creating-a-client-application-that-authenticates-aem-forms-users-using-sso}
+## SSO を使用した AEM Forms ユーザーを認証するクライアントアプリケーションの作成 {#creating-a-client-application-that-authenticates-aem-forms-users-using-sso}
 
-SSO 認証を実行するクライアントアプリケーションの作成方法を示すために、サンプルのクライアントアプリケーションが作成されます。 次の図は、SSO を使用してユーザーを認証するためにクライアントアプリケーションが実行する手順を示しています。
+SSO 認証を実行するクライアントアプリケーションの作成方法を示すために、サンプルのクライアントアプリケーションが作成されます。次の図は、SSO を使用してユーザーを認証するためにクライアントアプリケーションが実行する手順を示しています。
 
 ![cf_cf_flexsso](assets/cf_cf_flexsso.png)
 
-前述の図は、クライアント・アプリケーションの起動時に発生するアプリケーション・フローを示しています。
+前述の図は、クライアントアプリケーションの起動時に発生するアプリケーションフローを示しています。
 
-1. クライアントアプリケーションは、 `applicationComplete` イベント。
-1. への呼び出し `ISSOManager.singleSignOn` が作成されました。 クライアントアプリケーションは、User Manager セキュリティサーブレットに要求を送信します。
-1. セキュリティサーブレットがユーザーを認証する場合、 `ISSOManager` ディスパッチ `SSOEvent.AUTHENTICATION_SUCCESS`. 応答として、クライアントアプリケーションにはメインページが表示されます。 この例では、メインページが MyApplication/EncryptDocument という名前のAEM Formsの短時間のみ有効なプロセスを呼び出します。
-1. セキュリティサーブレットがユーザーが有効かどうかを判断できない場合は、アプリケーションはユーザー資格情報を再度要求します。 この `ISSOManager` クラスが `SSOEvent.AUTHENTICATION_REQUIRED` イベント。 クライアントアプリケーションにログインページが表示されます。
-1. ログインページで指定された資格情報が `ISSOManager.login` メソッド。 認証が成功した場合は、手順 3 に進みます。 それ以外の場合は、 `SSOEvent.AUTHENTICATION_FAILED` イベントがトリガーされます。 クライアントアプリケーションにログインページと適切なエラーメッセージが表示されます。
+1. クライアントアプリケーションは、`applicationComplete` イベントをトリガーします。
+1. `ISSOManager.singleSignOn` への呼び出しが実行されました。クライアントアプリケーションは、User Manager セキュリティサーブレットにリクエストを送信します。
+1. セキュリティサーブレットがユーザーを認証する場合、`ISSOManager` は `SSOEvent.AUTHENTICATION_SUCCESS` をディスパッチします。応答として、クライアントアプリケーションにメインページが表示されます。この例では、メインページが MyApplication/EncryptDocument という名前の AEM Forms の短時間のみ有効なプロセスを呼び出します。
+1. セキュリティサーブレットがユーザーが有効かどうかを判断できない場合は、アプリケーションはユーザー資格情報を再度要求してください。`ISSOManager` クラスは `SSOEvent.AUTHENTICATION_REQUIRED` イベントをディスパッチします。クライアントアプリケーションにログインページが表示されます。
+1. ログインページで提供された資格情報が `ISSOManager.login` メソッドに送信されます。認証が成功した場合は、ステップ 3 に進みます。それ以外の場合は、`SSOEvent.AUTHENTICATION_FAILED` イベントがトリガーされます。クライアントアプリケーションにログインページと適切なエラーメッセージが表示されます。
 
 ### クライアントアプリケーションの作成 {#creating-the-client-application}
 
 クライアントアプリケーションは、次のファイルで構成されます。
 
-* `SSOStandalone.mxml`:クライアントアプリケーションを表すメインのMXMLファイル。 ( [SSOStandalone.mxml ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-ssostandalone-mxml-file).)
-* `um/ISSOManager.as`:シングルサインオン (SSO) に関連する操作を公開します。 ( [ISSOManager.as ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-issomanager-as-file).)
-* `um/SSOEvent.as`:この `SSOEvent` は、SSO 関連のイベントに対してディスパッチされます。 ( [SSOEvent.as ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-ssoevent-as-file).)
-* `um/SSOManager.as`:SSO 関連の操作を管理し、適切なイベントをディスパッチします。 ( [SSOManager.as ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-ssomanager-as-file).)
-* `um/UserManager.as`:WSDL を使用して Authentication Manager サービスを呼び出すアプリケーションロジックが含まれます。 ( [UserManager.as ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-usermanager-as-file).)
-* `views/login.mxml`:ログイン画面を表します。 ( [login.mxml ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-login-mxml-file).)
-* `views/logout.mxml`:ログアウト画面を表します。 ( [logout.mxml ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-logout-mxml-file).)
-* `views/progress.mxml`:進行状況ビューを表します。 ( [progress.mxml ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-progress-mxml-file).)
-* `views/remoting.mxml`:リモート処理を使用して MyApplication/EncryptDocument という名前のAEM Formsの短時間のみ有効なプロセスを呼び出すビューを表します。 ( [remoting.mxml ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-remoting-mxml-file).)
+* `SSOStandalone.mxml`：クライアントアプリケーションを表すメインの MXML ファイルです。（[SSOStandalone.mxml ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-ssostandalone-mxml-file)を参照）。
+* `um/ISSOManager.as`：シングルサインオン（SSO）に関連する操作を公開します。（[ISSOManager.as ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-issomanager-as-file)を参照。）
+* `um/SSOEvent.as`：`SSOEvent` は、SSO 関連のイベントに対してディスパッチされます。（[SSOEvent.as ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-ssoevent-as-file)を参照。）
+* `um/SSOManager.as`：SSO 関連の操作を管理し、適切なイベントをディスパッチします。（[SSOManager.as ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-ssomanager-as-file)を参照。）
+* `um/UserManager.as`：WSDL を使用して Authentication Manager サービスを呼び出すアプリケーションロジックが含まれます。（[UserManager.as ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-usermanager-as-file)を参照。）
+* `views/login.mxml`：ログイン画面を表します。（[login.mxml ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-login-mxml-file)を参照。）
+* `views/logout.mxml`：ログアウト画面を表します。（[logout.mxml ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-logout-mxml-file)を参照。）
+* `views/progress.mxml`：進行状況ビューを表します。（[progress.mxml ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-progress-mxml-file)を参照。）
+* `views/remoting.mxml`：リモート処理を使用して MyApplication/EncryptDocument という名前の AEM Forms の短時間のみ有効なプロセスを呼び出すビューを表します。（[remoting.mxml ファイルの作成](creating-flash-builder-applications-perform.md#creating-the-remoting-mxml-file)を参照。）
 
 次の図は、クライアントアプリケーションを視覚的に表したものです。
 
@@ -128,11 +128,11 @@ SSO 認証を実行するクライアントアプリケーションの作成方�
 
 >[!NOTE]
 >
->um と views という名前の 2 つのパッケージがあることに注意してください。 クライアントアプリケーションを作成する場合は、ファイルを適切なパッケージに配置する必要があります。 また、adobe-remoting-provider.swc ファイルをプロジェクトのクラスパスに追加してください。 ( [AEM Forms Flexライブラリファイルの取り込み](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file).)
+>um と views という名前の 2 つのパッケージがあることに注意してください。クライアントアプリケーションを作成する場合は、ファイルを適切なパッケージに配置することを確認します。また、adobe-remoting-provider.swc ファイルをプロジェクトのクラスパスに追加することを確認します。（[AEM Forms Flex ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)を参照。）
 
 ### SSOStandalone.mxml ファイルの作成 {#creating-the-ssostandalone-mxml-file}
 
-次のコードは、SSOStandalone.mxml ファイルを表しています。
+次のコードは、SSOStandalone.mxml ファイルを表します。
 
 ```as3
  <?xml version="1.0" encoding="utf-8"?> 
@@ -249,7 +249,7 @@ SSO 認証を実行するクライアントアプリケーションの作成方�
 
 ### ISSOManager.as ファイルの作成 {#creating-the-issomanager-as-file}
 
-次のコードは、ISSOManager.as ファイルを表しています。
+次のコードは、ISSOManager.as ファイルを表します。
 
 ```as3
  package um 
@@ -300,7 +300,7 @@ SSO 認証を実行するクライアントアプリケーションの作成方�
 
 ### SSOEvent.as ファイルの作成 {#creating-the-ssoevent-as-file}
 
-次のコードは、SSOEvent.as ファイルを表しています。
+次のコードは、SSOEvent.as ファイルを表します。
 
 ```as3
  package um 
@@ -372,7 +372,7 @@ SSO 認証を実行するクライアントアプリケーションの作成方�
 
 ### SSOManager.as ファイルの作成 {#creating-the-ssomanager-as-file}
 
-次のコードは、SSOManager.as ファイルを表しています。
+次のコードは、SSOManager.as ファイルを表します。
 
 ```as3
  package um 
@@ -536,7 +536,7 @@ SSO 認証を実行するクライアントアプリケーションの作成方�
 
 ### UserManager.as ファイルの作成 {#creating-the-usermanager-as-file}
 
-次のコードは、UserManager.as ファイルを表しています。
+次のコードは、UserManager.as ファイルを表します。
 
 ```as3
  package um 
@@ -602,7 +602,7 @@ SSO 認証を実行するクライアントアプリケーションの作成方�
 
 ### login.mxml ファイルの作成 {#creating-the-login-mxml-file}
 
-次のコードは、login.mxml ファイルを表しています。
+次のコードは、 login.mxml ファイルを表します。
 
 ```as3
  <?xml version="1.0" encoding="utf-8"?> 
@@ -645,7 +645,7 @@ SSO 認証を実行するクライアントアプリケーションの作成方�
 
 ### logout.mxml ファイルの作成 {#creating-the-logout-mxml-file}
 
-次のコードは、 logout.mxml ファイルを表しています。
+次のコードは、 logout.mxml ファイルを表します。
 
 ```as3
  <?xml version="1.0" encoding="utf-8"?> 
@@ -658,7 +658,7 @@ SSO 認証を実行するクライアントアプリケーションの作成方�
 
 ### progress.mxml ファイルの作成 {#creating-the-progress-mxml-file}
 
-次のコードは、progress.mxml ファイルを表しています。
+次のコードは、progress.mxml ファイルを表します。
 
 ```as3
  <?xml version="1.0" encoding="utf-8"?> 
@@ -670,7 +670,7 @@ SSO 認証を実行するクライアントアプリケーションの作成方�
 
 ### remoting.mxml ファイルの作成 {#creating-the-remoting-mxml-file}
 
-次のコードは、 `MyApplication/EncryptDocument` プロセス。 ドキュメントがプロセスに渡されるので、セキュアなドキュメントをAEM Formsに渡すアプリケーションロジックは、このファイルに格納されます。 ( [リモート処理を使用してプロセスを呼び出すための安全なドキュメントの受け渡し](/help/forms/developing/invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting).)
+次のコードは、`MyApplication/EncryptDocument` プロセスを呼び出す remoting.mxml ファイルを表します。ドキュメントがプロセスに渡されるので、セキュアなドキュメントを AEM Forms に渡すためのアプリケーションロジックは、このファイルに配置されます。（[リモート処理を使用したプロセスを呼び出すためのセキュアなドキュメントの受け渡し](/help/forms/developing/invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)を参照。）
 
 ```as3
  <?xml version="1.0" encoding="utf-8"?> 
@@ -868,11 +868,11 @@ SSO 認証を実行するクライアントアプリケーションの作成方�
 
 ### 追加情報 {#additional-information}
 
-次の節では、クライアントアプリケーションと User Manager セキュリティサーブレット間の通信に関する詳細を説明します。
+次の節では、クライアントアプリケーションと User Manager セキュリティサーブレット間の通信に関する追加詳細を説明します。
 
-### 新しい認証が発生します {#a-new-authentication-occurs}
+### 新しい認証が発生 {#a-new-authentication-occurs}
 
-この場合、ユーザーは初めてクライアントアプリケーションからAEM Formsにログインしようとします。 （ユーザーに関する以前のセッションは存在しません）。 内 `applicationComplete` イベント、 `SSOManager.singleSignOn` メソッドが呼び出され、User Manager に要求が送信されます。
+この状況で、ユーザーはクライアントアプリケーションから AEM Forms に初めてログインしようとします。（このユーザーが関与する以前のセッションは存在しません。）`applicationComplete` イベントでは、`SSOManager.singleSignOn` メソッドが呼び出され、User Manager にリクエストが送信されます。
 
 `GET /um/login?um%5Fno%5Fredirect=true HTTP/1.1`
 
@@ -882,7 +882,7 @@ User Manager セキュリティサーブレットは、次の値で応答しま�
 
 `authenticated=false&authstate=CREDENTIAL_CHALLENGE`
 
-この値に対する応答として、 `SSOEvent.AUTHENTICATION_REQUIRED` の値がディスパッチされます。 その結果、クライアントアプリケーションはユーザーに対してログイン画面を表示します。 資格情報が User Manager セキュリティサーブレットに送り返されます。
+この値に対する応答として、`SSOEvent.AUTHENTICATION_REQUIRED` の値がディスパッチされます。その結果、クライアントアプリケーションはユーザーに対してログイン画面を表示します。資格情報が User Manager セキュリティサーブレットに送り返されます。
 
 `GET /um/login?um%5Fno%5Fredirect=true&j%5Fusername=administrator&j%5Fpassword=password HTTP/1.1`
 
@@ -894,22 +894,22 @@ User Manager セキュリティサーブレットは、次の値で応答しま�
  authenticated=true&authstate=COMPLETE&assertionid=53630BC8-F6D4-F588-5D5B-4668EFB2EC7A
 ```
 
-その結果、 `authstate=COMPLETE the SSOEvent.AUTHENTICATION_SUCCESS` がディスパッチされます。 クライアントアプリケーションは、必要に応じてさらに処理を実行できます。 例えば、ユーザーが認証された日時を追跡するログを作成できます。
+その結果、 `authstate=COMPLETE the SSOEvent.AUTHENTICATION_SUCCESS` がディスパッチされます。クライアントアプリケーションは、必要に応じてさらに処理を実行できます。例えば、ユーザーが認証された日時を追跡するログを作成できます。
 
 ### ユーザーは既に認証済みです {#the-user-is-already-authenticated}
 
-この場合、ユーザーは既にAEM Formsにログインし、クライアントアプリケーションに移動しています。 クライアントアプリケーションは、起動時に User Manager セキュリティサーブレットに接続します。
+この場合、ユーザーは既に AEM Forms にログインしており、次にクライアントアプリケーションに移動します。クライアントアプリケーションは、起動時に User Manager セキュリティサーブレットに接続します。
 
 ```as3
  GET /um/login?um%5Fno%5Fredirect=true HTTP/1.1 
  Cookie: JSESSIONID=A4E0BCC2DD4BCCD3167C45FA350BD72A; lcAuthToken=53630BC8-F6D4-F588-5D5B-4668EFB2EC7A
 ```
 
-ユーザーは既に認証されているので、User Manager Cookie が存在し、User Manager セキュリティサーブレットに送信されます。 次にサーブレットが `assertionId` の値を指定し、値が有効かどうかを検証します。 有効な場合は、 `authstate=COMPLETE` が返されます。 それ以外の場合 `authstate=CREDENTIAL_CHALLENGE` が返されます。 一般的な応答を次に示します。
+ユーザーは既に認証されているので、User Manager Cookie が存在し、User Manager セキュリティサーブレットに送信されます。次にサーブレットが `assertionId` の値を取得し、値が有効かどうかを検証します。有効な場合は、`authstate=COMPLETE` が返されます。それ以外の場合は、`authstate=CREDENTIAL_CHALLENGE` が返されます。一般的な応答を次に示します。
 
 ```as3
  HTTP/1.1 200 OK 
         authenticated=true&authstate=COMPLETE&assertionid=53630BC8-F6D4-F588-5D5B-4668EFB2EC7A
 ```
 
-この場合、ユーザーにはログイン画面が表示されず、直接ようこそ画面が表示されます。
+この場合、ユーザーにはログイン画面が表示されず、代わりに、直接ようこそ画面が表示されます。

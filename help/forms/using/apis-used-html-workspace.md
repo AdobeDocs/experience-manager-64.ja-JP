@@ -331,7 +331,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>getTaskOfDirectReport<br /> </td> 
    <td>ProcessManagementTeamTasksService</td> 
-   <td>getTaskOfDirectReport</td> 
+   <td>getDirectReportTask</td> 
    <td>ログインしたマネージャーの指定された直接レポートのタスクを返します。</td> 
   </tr>
   <tr>

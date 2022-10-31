@@ -1,5 +1,5 @@
 ---
-title: AEM Mobile アプリケーションダッシュボード
+title: AEM Mobile アプリケーションのダッシュボード
 seo-title: AEM Mobile Application Dashboard
 description: アプリケーションおよびモバイルアプリのコンテンツは、AEM Mobile アプリケーションダッシュボードまたはコントロールセンターから管理できます。このページでは、この機能について詳しく見ていきます。
 seo-description: You can manage your application and mobile app content from AEM Mobile Application Dashboard or the Control Center. Follow this page to learn more.
@@ -17,11 +17,11 @@ ht-degree: 84%
 
 ---
 
-# AEM Mobile アプリケーションダッシュボード {#aem-mobile-application-dashboard}
+# AEM Mobile アプリケーションのダッシュボード {#aem-mobile-application-dashboard}
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 アプリケーションおよびモバイルアプリのコンテンツは、AEM Mobile アプリケーションダッシュボードまたはコントロールセンターから管理できます。
 
@@ -79,7 +79,7 @@ ht-degree: 84%
 
 この **バナーを管理** タイルを使用すると、バナーのコンテンツを管理できます。 バナーでは以下の情報が表示されます。
 
-* 画像
+* image
 * **タイトル**：バナーの名前
 * **変更**：AEM で最後に変更された日付
 * **アップロード済み**：AEM から最後にアップロードされた日付

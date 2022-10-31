@@ -1,7 +1,7 @@
 ---
 title: HTML5 フォーム のデバッグ
 seo-title: Debugging HTML5 forms
-description: 'この文書では、既知の問題をトラブルシューティングするための手順をリストしています。 '
+description: この文書では、既知の問題をトラブルシューティングするための手順をリストしています。
 seo-description: The document list steps to troubleshoot various known issues.
 uuid: df1835aa-6033-4ecb-97c8-4c3b7b96b943
 contentOwner: robhagat

@@ -1,6 +1,6 @@
 ---
-title: '"DB2 データベース：週単位のプロセス実行"'
-seo-title: 'DB2 database: Running a process weekly'
+title: "DB2 データベース：毎週プロセスを実行"
+seo-title: "DB2 database: Running a process weekly"
 description: AEM Forms DB2 データベースのパフォーマンスを向上させる方法について説明します。
 seo-description: See how you can improve the performance of your AEM forms DB2 database.
 uuid: 36070087-c250-41df-a841-aa922e777697

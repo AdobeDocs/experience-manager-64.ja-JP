@@ -15,11 +15,11 @@ exl-id: 72ead30c-648d-43ad-9826-9c8945a8860d
 source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
 source-wordcount: '1829'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
-# AEM Forms のアセットとドキュメントの移行 {#migrate-aem-forms-assets-and-documents}
+# AEM Forms のアセットとドキュメントの移行  {#migrate-aem-forms-assets-and-documents}
 
 移行ユーティリティを実行すると、[アダプティブフォームのアセット](/help/forms/using/introduction-forms-authoring.md)、[クラウドの設定](/help/sites-developing/extending-cloud-config.md)、[Correspondence Management のアセット](/help/forms/using/cm-overview.md) が、旧バージョンの AEM Forms で使用されていた形式から、AEM 6.4 Forms で使用される形式に変換されます。移行ユーティリティを実行すると、以下の項目が移行されます。
 
@@ -71,7 +71,7 @@ Correspondence Management のアセットを移行する場合は、以下の点
 
 移行ユーティリティを実行した後で、アセットに変更を加えたり、アセットを作成したりします。移行ユーティリティは、アセットの変更や作成後に実行しないことをお勧めします。移行プロセスの実行中は、Correspondence Management アセットまたはアダプティブフォームアセットのユーザーインターフェイスが開いていないことを確認してください。
 
-初めて移行ユーティリティを実行すると、次のパスと名前でログが作成されます。 `\[aem-installation-directory]\cq-quickstart\logs\aem-forms-migration.log`. それ以降は、移行ユーティリティを実行するたびに、Correspondence Management とアダプティブフォームの移行に関する情報（アセットの移行に関する情報など）がこのログファイルに記録されます。
+移行ユーティリティをはじめて実行する場合、`\[aem-installation-directory]\cq-quickstart\logs\aem-forms-migration.log` というパスと名前でログが作成されます。それ以降は、移行ユーティリティを実行するたびに、Correspondence Management とアダプティブフォームの移行に関する情報（アセットの移行に関する情報など）がこのログファイルに記録されます。
 
 >[!NOTE]
 >

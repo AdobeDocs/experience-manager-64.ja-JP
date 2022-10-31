@@ -12,7 +12,7 @@ discoiquuid: b074ebfa-2894-4a2d-aa8e-28168049971a
 exl-id: 8ad5ce3e-c5dd-48d7-8812-43172eda36cc
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '994'
 ht-degree: 36%
 
 ---
@@ -138,7 +138,7 @@ ht-degree: 36%
 
 * **[!UICONTROL フラグ付けの制限]**
 
-   コメントに何回フラグを設定したら、公開ビューで非表示にするかを指定します。 この数は **[!UICONTROL モデレートのしきい値]**. 初期設定は 5 です。
+   コメントに何回フラグを設定したら、公開ビューで非表示にするかを指定します。 この数は **[!UICONTROL モデレートのしきい値]**. デフォルトは 5 です。
 
 ### 「並べ替え設定」タブ {#sort-settings-tab}
 

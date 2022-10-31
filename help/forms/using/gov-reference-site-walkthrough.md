@@ -1,7 +1,7 @@
 ---
-title: We.Gov リファレンスサイトのチュートリアル
+title: We.Gov リファレンスサイトの チュートリアル
 seo-title: We.Gov reference site walkthrough
-description: '行政が AEM Forms を使用して個人情報を管理している方法については、We.Gov リファレンスサイトのチュートリアルを参照してください。 '
+description: 行政が AEM Forms を使用して個人情報を管理している方法については、We.Gov リファレンスサイトのチュートリアルを参照してください。
 seo-description: See the We.Gov reference site walkthrough to understand how AEM Forms helps governments manage individual information.
 uuid: 348f9067-28b5-47ed-8e83-0dbadeff0854
 content-type: reference
@@ -12,11 +12,11 @@ exl-id: c8ebd18b-fa24-4264-bd17-f553a2a784d9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2717'
-ht-degree: 73%
+ht-degree: 74%
 
 ---
 
-# We.Gov リファレンスサイトのチュートリアル {#we-gov-reference-site-walkthrough}
+# We.Gov リファレンスサイトの チュートリアル {#we-gov-reference-site-walkthrough}
 
 ## 必要条件 {#pre-requisite}
 
@@ -47,7 +47,7 @@ We.Gov 機関は申込を受信します。機関側で申込の査定が行わ�
 
 ![workflow_aem_gov_2](assets/workflow_aem_gov_2.png)
 
-このシナリオでは、以下の人物が登場します。
+このシナリオでは、次の人物が登場します。
 
 * Sarah Rose（チャイルドサポートの申込を行う養親）
 * Joe（養子）
@@ -83,7 +83,7 @@ Sarah の適格性は、ルールエディターによって作成された適�
 
 ### 実際の動作確認 {#see-it-yourself}
 
-ブラウザーで、を開きます。 `https://<hostname>:<PublishPort>/content/we-gov/en.html`. We.Gov サイトで、「Child Support」（チャイルドサポート）をクリックします。「Child Support」（チャイルドサポート）ページで、「Check Your Eligibility」（適格性を確認）をクリックします。
+ブラウザーで、`https://<hostname>:<PublishPort>/content/we-gov/en.html` を開きます。We.Gov サイトで、「Child Support」（チャイルドサポート）をクリックします。「Child Support」（チャイルドサポート）ページで、「Check Your Eligibility」（適格性を確認）をクリックします。
 
 ルールを表示するには：
 
@@ -119,7 +119,7 @@ We.Gov サイトにおけるチャイルドサポートフォームにはアダ�
 
 >[!NOTE]
 >
->resume-from-email ワークフローは、ログインしているユーザーでのみ機能します。リファレンスサイトのシナリオでは、ユーザー Sarah Rose が追加されていることを確認します。Sarah のログイン資格情報は次のとおりです。 `srose/password`.
+>resume-from-email ワークフローは、ログインしているユーザーでのみ機能します。リファレンスサイトのシナリオでは、ユーザー Sarah Rose が追加されていることを確認します。Sarah のログイン資格情報は `srose/password` です。
 
 ![mob1](assets/mob1.png)
 
@@ -220,7 +220,7 @@ Sarah がチャイルドサポート申込を入力して送信すると、申�
 
 ### 実際の動作確認 {#see-it-yourself-2}
 
-ページを開く `https://<hostname***>:<PublishPort>/content/we-gov/en.html`. ページで、をタップします。 **[!UICONTROL ログイン]**&#x200B;を選択し、 **[!UICONTROL 担当者としてログイン]** 」チェックボックスをオンにし、Gloria Rios のユーザー名/パスワードとして grios/password を使用してAEM inbox にログインします。 チャイルドサポートアプリケーションが表示されます。 Forms 中心のワークフロータスクにAEM Inbox を使用する方法については、 [AEM Inbox でのFormsアプリケーションとタスクの管理](/help/forms/using/manage-applications-inbox.md).
+ページを開く `https://<hostname***>:<PublishPort>/content/we-gov/en.html`. ページで、をタップします。 **[!UICONTROL ログイン]**&#x200B;を選択し、 **[!UICONTROL 担当者としてログイン]** 」チェックボックスをオンにし、Gloria Rios のユーザー名/パスワードとして grios/password を使用してAEM inbox にログインします。 チャイルドサポートアプリケーションが表示されます。 Forms 中心のワークフロータスクで AEM インボックスを使用する方法について詳しくは、「[AEM インボックスでの Forms アプリケーションとタスクの管理](/help/forms/using/manage-applications-inbox.md)」を参照してください。
 
 ![We.Gov リファレンスサイトの Gloria のインボックス](assets/gloria-inbox.png)
 

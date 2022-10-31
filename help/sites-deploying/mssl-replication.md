@@ -1,7 +1,7 @@
 ---
 title: 相互 SSL を使用したレプリケーション
 seo-title: Replicating Using Mutual SSL
-description: 'オーサーインスタンスのレプリケーションエージェントが相互 SSL（MSSL）を使用してパブリッシュインスタンスに接続するように AEM を設定する方法について学習します。MSSL を使用しすると、レプリケーションエージェントとパブリッシュインスタンスの HTTP サービスは証明書を使用して互いに認証します。 '
+description: オーサーインスタンスのレプリケーションエージェントが相互 SSL（MSSL）を使用してパブリッシュインスタンスに接続するように AEM を設定する方法について学習します。MSSL を使用しすると、レプリケーションエージェントとパブリッシュインスタンスの HTTP サービスは証明書を使用して互いに認証します。
 seo-description: Learn how to configure AEM so that a replication agent on the author instance uses mutual SSL (MSSL) to connect with the publish instance. Using MSSL, the replication agent and the HTTP service on the publish instance use certificates to authenticate each other.
 uuid: f4bc5e61-a58c-4fd2-9a24-b31e0c032c15
 contentOwner: User

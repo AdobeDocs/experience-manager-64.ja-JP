@@ -1,7 +1,7 @@
 ---
-title: AEM の基盤での GDPR 要求の処理
+title: AEM 基盤における GDPR 要件の取り扱い
 seo-title: Handling GDPR Requests for the AEM Foundation
-description: AEM の基盤での GDPR 要求の処理
+description: AEM 基盤における GDPR 要件の取り扱い
 seo-description: null
 uuid: d470061c-bbcf-4d86-9ce3-6f24a764ca39
 contentOwner: sarchiz
@@ -10,25 +10,25 @@ exl-id: dcd67a1e-b20f-4ed4-b154-dd250cbd8320
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '435'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
-# AEM の基盤での GDPR 要求の処理{#handling-gdpr-requests-for-the-aem-foundation}
+# AEM 基盤における GDPR 要件の取り扱い{#handling-gdpr-requests-for-the-aem-foundation}
 
 >[!IMPORTANT]
 >
->以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制に適用できます。（GDPR、CCPA など）
+>以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に適用できます。
 
-## AEM Foundation の GDPR サポート {#aem-foundation-gdpr-support}
+## AEM 基盤の GDPR サポート {#aem-foundation-gdpr-support}
 
-AEM Foundation レベルでは、保存される個人データはユーザープロファイルです。 したがって、この記事では主に、GDPR のアクセス要求と削除要求にそれぞれ対処できるように、ユーザープロファイルのアクセス方法と削除方法について説明します。
+AEM 基盤のレベルでは、保存される個人データはユーザープロファイルです。そのため、この記事では主に、GDPR のアクセスリクエストと削除リクエストに対処できるように、ユーザープロファイルのアクセス方法と削除方法について説明します。
 
 ## ユーザープロファイルへのアクセス {#accessing-a-user-profile}
 
 ### 手動の手順 {#manual-steps}
 
-1. を参照して、ユーザー管理コンソールを開きます。 **[!UICONTROL 設定 — セキュリティ — ユーザー]** または直接参照して `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
+1. **[!UICONTROL 設定／セキュリティ／ユーザー]**&#x200B;を参照するか、または `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html` を直接参照して、ユーザー管理コンソールを開きます。
 
    ![useradmin2](assets/useradmin2.png)
 
@@ -36,7 +36,7 @@ AEM Foundation レベルでは、保存される個人データはユーザー�
 
    ![usersearch](assets/usersearch.png)
 
-1. 最後に、ユーザープロファイルをクリックして開き、「**[!UICONTROL 詳細]**」タブの下で情報を確認します。
+1. 最後に、ユーザープロファイルをクリックして開き、「**[!UICONTROL 詳細]**」タブで情報を確認します。
 
    ![userprofile_small](assets/userprofile_small.png)
 
@@ -59,9 +59,9 @@ curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/aut
      {"authorizables":[{"type":"user","authorizableId_xss":"cavery","authorizableId":"cavery","name_xss":"Carlene Avery","name":"Carlene Avery","home":"/home/users/we-retail/DSCP-athB1NYLBXvdTuN"}],"total":1}
 ```
 
-*ユーザーデータを取得する*
+*ユーザーデータの取得*
 
-上記のコマンドから返された JSON ペイロードの home プロパティに含まれているノードパスを使用：
+上記のコマンドで返された JSON ペイロードの home プロパティに含まれているノードパスの使用
 
 ```shell
 curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN/profile.-1.json'
@@ -86,30 +86,30 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-40-58](assets/image2018-2-6_1-40-58.png)
 
-   次に、ユーザーインターフェイスは、プロファイルカードにロックを追加してグレーアウトすることで、ユーザーがアクティベートを解除されたことを示します。
+   次のように、プロファイルカードがグレーアウトされてロックが追加されるので、ユーザーのアクティベートが解除されたことがわかります。
 
    ![disableduser](assets/disableduser.png)
 
 ### ユーザープロファイル情報の削除 {#delete-user-profile-information}
 
-1. CRXDE Liteにログインし、 `[!UICONTROL userId]`:
+1. CRXDE Lite にログインし、`[!UICONTROL userId]` を検索します。
 
    ![image2018-2-6_1-57-11](assets/image2018-2-6_1-57-11.png)
 
-1. 以下にあるユーザーノードを開きます。 `[!UICONTROL /home/users]` デフォルト：
+1. `[!UICONTROL /home/users]` にデフォルトで配置されているユーザーノードを開きます。
 
    ![image2018-2-6_1-58-25](assets/image2018-2-6_1-58-25.png)
 
 1. プロファイルノードとそのすべての子ノードを削除します。プロファイルノードには、AEM のバージョンに応じて以下の 2 種類の形式があります。
 
-   1. 以下のデフォルトのプライベートプロファイル `[!UICONTROL /profile]`
-   1. `[!UICONTROL /profiles]`(AEM 6.4 を使用して作成された新しいプロファイル用 )
+   1. `[!UICONTROL /profile]` のデフォルトの非公開プロファイル
+   1. `[!UICONTROL /profiles]`（AEM 6.4 を使用して作成された新しいプロファイル用）
 
    ![image2018-2-6_2-0-4](assets/image2018-2-6_2-0-4.png)
 
 ### HTTP API {#http-api-1}
 
-以下の手順では `curl`コマンドラインツールを使用して、**[!UICONTROL cavery]** `userId` を持つユーザーを無効化し、デフォルト位置にあるそのユーザーのプロファイルを削除する方法を示しています。
+以下の手順では、`curl` コマンドラインツールを使用して **[!UICONTROL cavery]** `userId` を持つユーザーを無効化し、デフォルトの場所にあるそのユーザーのプロファイルを削除する方法を示します。
 
 * *ユーザーホームの検索*
 

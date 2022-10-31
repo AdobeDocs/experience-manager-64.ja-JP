@@ -1,7 +1,7 @@
 ---
 title: Document Security サーバーのインストールと設定
 seo-title: Installing and configuring the document security server
-description: 'Document Security を使用すると、サポートされる形式で保存した情報を安全に配布できます。許可されたユーザーのみが保護されたドキュメントにアクセスできます。 '
+description: Document Security を使用すると、サポートされる形式で保存した情報を安全に配布できます。許可されたユーザーのみが保護されたドキュメントにアクセスできます。
 seo-description: Use document security to safely distribute any information that you have saved in a supported format. Only authorized users can access protected documents.
 uuid: 04c67a84-01ad-45b7-a590-822b1c067d52
 contentOwner: khsingh
@@ -25,11 +25,11 @@ Adobe Experience Manager Forms の Document Security を使用して、許可さ
 
 ポリシーは Document Security に保存されます。クライアントアプリケーションを使用してそのポリシーをドキュメントに適用します。ドキュメントにポリシーを適用すると、ドキュメントに含まれる情報は、ポリシーで指定されている機密設定で保護されます。ポリシーで保護されたドキュメントを、ポリシーで許可された受信者に配布できます。
 
-また、Document Security は、ドキュメントの保護、保護されたドキュメントの表示、保護されたドキュメントのインデックス作成を行うためのクライアント、ビューア、およびインデクサーも提供します。 Document Security について詳しくは、 [Document Security について](/help/forms/using/admin-help/document-security.md)を参照してください。
+また、Document Security は、ドキュメントの保護、保護されたドキュメントの表示、保護されたドキュメントのインデックス作成を行うためのクライアント、ビューア、およびインデクサーも提供します。Document Security について詳しくは、 [Document Security について](/help/forms/using/admin-help/document-security.md)を参照してください。
 
 ## デプロイメントトポロジ  {#deployment-topology}
 
-Document Security 機能は、JEE 上の AEM Forms でのみ使用できます。 JEE 上の AEM Forms のインスタンスが 1 つ必要です。 必要に応じて、AEM Forms サーバーのクラスターまたはファームを作成することもできます。 次のトポロジは、Document Security 機能を実行するための指標トポロジです。 トポロジーについて詳しくは、「[AEM Forms のアーキテクチャとデプロイメントトポロジー](aem-forms-architecture-deployment.md)」を参照してください。
+Document Security 機能は、JEE 上の AEM Forms でのみ使用できます。JEE 上の AEM Forms のインスタンスが 1 つ必要です。必要に応じて、AEM Forms サーバーのクラスターまたはファームを作成することもできます。次のトポロジは、Document Security 機能を実行するための指標トポロジです。トポロジーについて詳しくは、「[AEM Forms のアーキテクチャとデプロイメントトポロジー](aem-forms-architecture-deployment.md)」を参照してください。
 
 <!--fix above link-->
 
@@ -58,7 +58,7 @@ Document Security 機能は、JEE 上の AEM Forms でのみ使用できます�
 
    >[!NOTE]
    >
-   >JEE Configuration Manager 上での AEM Forms モジュール選択画面で、「Document Security」オプションを選択します。 「Document Security」オプションでは、他のモジュールを選択する必要はありません。
+   >JEE Configuration Manager 上での AEM Forms モジュール選択画面で、「Document Security」オプションを選択します。「Document Security」オプションでは、他のモジュールを選択する必要はありません。
 
 ## 次の手順 {#next-steps}
 

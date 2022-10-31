@@ -279,7 +279,7 @@ head.html と body.html の例については、 [AEM Mobile Hybrid Reference Ap
 
 mbox ごとに、 **cq-targeting** が追加され、アプリケーション開発者は、使用するカスタムコードを好みに応じて作成し、使用できます。 この [AEM Mobile Hybrid Reference App](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) には、cq-targeting 属性を使用するAngularディレクティブの例があります。 コンテンツの置き換えの概念と実行方法は、モバイルアプリケーションの開発者次第です。 AEM /etc/clientlibs/mobileapps/js/mobileapps.js経由で配信される Mobile SDK で、Adobeターゲティングサービスを呼び出す API を提供します。 アプリケーションのデザインに従って呼び出しをおこなうタイミングを指定するのは、アプリケーション開発者次第です。
 
-## 次の手順? {#what-s-next}
+## 次のステップ? {#what-s-next}
 
 1. [AEM Mobile アプリを使ってみる](/help/mobile/starting-aem-phonegap-app.md)
 1. [アプリのコンテンツを管理する](/help/mobile/phonegap-manage-app-content.md)

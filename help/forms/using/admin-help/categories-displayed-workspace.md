@@ -1,5 +1,5 @@
 ---
-title: 'Workspace に表示されるカテゴリの管理 '
+title: Workspace に表示されるカテゴリの管理
 seo-title: Managing the categories displayed in Workspace
 description: Workspace で、ユーザーが開始できるプロセスは、左側にあるナビゲーションウィンドウのカテゴリに表示されます。Workspace に表示されるこれらのカテゴリの管理方法について説明します。
 seo-description: In Workspace, the processes that a user can start are displayed in categories in the left navigation pane. Learn how you can manage these categories displayed in Workspace.
@@ -13,7 +13,7 @@ exl-id: 5a2bd0ea-2c5e-4e0c-aff1-dba06be6a5b7
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '481'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -23,9 +23,9 @@ Workspace で、ユーザーが開始できるプロセスは、左側にある�
 
 カテゴリ名を指定する際には、Workspace のナビゲーションウィンドウに適切に表示されるように名前を作成します。デフォルトでは、左側のナビゲーションウィンドウの幅は、210 ピクセル（約 24 文字）に固定されています。指定したカテゴリ名が長すぎて左側のナビゲーションウィンドウの固定幅に収まらない場合、名前の後ろの部分が切り捨てられます。完全な名前は、その上にマウスポインターを置いた場合にのみ表示されます。切り捨てられるカテゴリ名は作成しないようにしてください。以下に、適切な長さのカテゴリ名と切り捨てられるカテゴリ名の例を示します。
 
-**適合するカテゴリ名：** 出席と休暇
+**サイズに合うカテゴリ名：** Attendance &amp; Leave
 
-**切り捨てられたカテゴリ名：** 出欠（米国）
+**切り捨てられるカテゴリ名：** Attendance &amp; Leave（米国）
 
 Workspace では、通常、カテゴリ内のプロセスは、カードとして開始プロセスページに表示されます。通常、カテゴリの画面には 1 度に 6 つのカードを表示できます。他のカードを表示するには、スクロールする必要があります。スクロールするとプロセスを見つけにくくなるので、各カテゴリのプロセスの数を 6 つ、または解像度に応じて、スクロールせずに画面に表示できるプロセス数に制限してください。
 

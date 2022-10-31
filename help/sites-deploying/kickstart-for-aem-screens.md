@@ -1,7 +1,7 @@
 ---
 title: （リダイレクト）キックスタートガイド
 seo-title: (Redirect)Kickstart Guide
-description: 'null'
+description: null
 seo-description: null
 uuid: 745b98e6-54ba-44e2-8710-3332391d1ea0
 contentOwner: jsyal

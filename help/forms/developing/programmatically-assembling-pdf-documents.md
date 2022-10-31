@@ -93,7 +93,7 @@ Assembler 操作をプログラムで実行する前に、Assembler クライア
 
 **既存の DDX ドキュメントの参照**
 
-DDX ドキュメントを参照して、PDF ドキュメントをアセンブリする必要があります。 例えば、このセクションで紹介した DDX ドキュメントについて考えてみましょう。 この DDX ドキュメントは、2 つの PDF ドキュメントを 1 つの PDF ドキュメントに統合するよう Assembler サービスに指示します。
+DDX ドキュメントを参照して、PDF ドキュメントをアセンブリする必要があります。例えば、このセクションで紹介した DDX ドキュメントについて考えてみましょう。 この DDX ドキュメントは、2 つの PDF ドキュメントを 1 つの PDF ドキュメントに統合するよう Assembler サービスに指示します。
 
 **入力 PDF ドキュメントの参照**
 
@@ -107,7 +107,7 @@ map.pdf ファイルと dorictions.pdf ファイルの両方をコレクショ�
 
 **実行時オプションを設定**
 
-ジョブの実行中に Assembler サービスの動作を制御する実行時オプションを設定できます。例えば、エラーが発生した場合にジョブの処理を続行するよう Assembler サービスに指示するオプションを設定できます。 設定できる実行時オプションについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `AssemblerOptionSpec` のクラス参照を確認してください。
+ジョブの実行中に Assembler サービスの動作を制御する実行時オプションを設定できます。例えば、エラーが発生した場合にジョブの処理を続行するよう Assembler サービスに指示するオプションを設定できます。設定できる実行時オプションについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `AssemblerOptionSpec` のクラス参照を確認してください。
 
 **入力 PDF ドキュメントのアセンブリ**
 

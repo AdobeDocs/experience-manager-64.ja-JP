@@ -1,7 +1,7 @@
 ---
 title: インタラクティブ通信とレターのインライン条件と繰り返し構造
 seo-title: Inline condition and repeat in Interactive Communications and letters
-description: 'インタラクティブ通信とレターでインライン条件と繰り返し構造を使用すると、コンテキストに応じて変化する、適切に構造化された通信を作成することができます。 '
+description: インタラクティブ通信とレターでインライン条件と繰り返し構造を使用すると、コンテキストに応じて変化する、適切に構造化された通信を作成することができます。
 seo-description: Using inline condition and repeat in Interactive Communications and letters, you can create communications that are highly contextual and well structured.
 uuid: 16e38929-f81b-4582-9daf-6c756a4390e9
 content-type: reference

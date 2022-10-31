@@ -41,7 +41,7 @@ CRXDE Lite は、AEM サーバーに直接アクセスできない場合、す�
 CRXDE Lite の使用を開始するには、次の手順に従ってください。
 
 1. AEM をインストールします。
-1. ブラウザーに、 https://と入力します。`<host>`:`<port>`/crx/de. デフォルトでは、 `http://localhost:4502/crx/de`.
+1. ブラウザーに、 https://と入力します。`<host>`:`<port>`/crx/de. デフォルトでは `http://localhost:4502/crx/de` です。
 1. **ユーザー名**&#x200B;と&#x200B;**パスワード**&#x200B;を入力します。デフォルト値は、それぞれ`admin`と`admin`です。
 
 1. 「**OK**」をクリックします。

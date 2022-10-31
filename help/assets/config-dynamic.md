@@ -908,7 +908,7 @@ Dynamic Media は、[有効にした後](#enabling-dynamic-media)、すぐに標
   <tr> 
    <td>defaultpix</td> 
    <td>300,300</td> 
-   <td><p>デフォルトの表示サイズ. サーバーによって、返信画像がこの幅と高さ以内になるように制限されます（要求で wid=、hei= または scl= を使用して表示サイズが明示的に指定されていない場合）。</p> <p>幅と高さ（ピクセル単位）。 0 以上の 2 つの整数で指定し、コンマで区切ります。一方または両方の値を 0 に設定すると、制限なしのまま維持されます。ネストされたリクエストまたは埋め込まれたリクエストに対しては適用されません。</p> <p>画像サービス API の <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html?lang=ja">DefaultPix</a> も参照してください。</p> <p>ただし、通常はビューアプリセットまたは画像プリセットを使用してアセットを配信します。DefaultPix はビューアプリセットや画像プリセットを使用していないアセットに適用されます。</p> </td> 
+   <td><p>デフォルトの表示サイズ.サーバーによって、返信画像がこの幅と高さ以内になるように制限されます（要求で wid=、hei= または scl= を使用して表示サイズが明示的に指定されていない場合）。</p> <p>幅と高さ（ピクセル単位）。 0 以上の 2 つの整数で指定し、コンマで区切ります。一方または両方の値を 0 に設定すると、制限なしのまま維持されます。ネストされたリクエストまたは埋め込まれたリクエストに対しては適用されません。</p> <p>画像サービス API の <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html?lang=ja">DefaultPix</a> も参照してください。</p> <p>ただし、通常はビューアプリセットまたは画像プリセットを使用してアセットを配信します。DefaultPix はビューアプリセットや画像プリセットを使用していないアセットに適用されます。</p> </td> 
   </tr> 
   <tr> 
    <td>defaultthumbpix</td> 
@@ -928,12 +928,12 @@ Dynamic Media は、[有効にした後](#enabling-dynamic-media)、すぐに標
   <tr> 
    <td>maxpix</td> 
    <td>2000,2000</td> 
-   <td><p>返信画像のサイズ制限. クライアントに返される返信画像の最大の幅と高さ。</p> <p>返信画像の幅または高さが attribute::MaxPix よりも大きくなるリクエストに対しては、サーバーからエラーが返ります。</p> <p>画像サービス API の <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=ja">MaxPix</a> も参照してください。</p> </td> 
+   <td><p>返信画像のサイズ制限.クライアントに返される返信画像の最大の幅と高さ。</p> <p>返信画像の幅または高さが attribute::MaxPix よりも大きくなるリクエストに対しては、サーバーからエラーが返ります。</p> <p>画像サービス API の <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=ja">MaxPix</a> も参照してください。</p> </td> 
   </tr> 
   <tr> 
    <td>resmode</td> 
    <td>SHARP2</td> 
-   <td><p>デフォルトの再サンプリングモード. 画像データの拡大縮小に使用するデフォルトの再サンプリングおよび補間属性を指定します。</p> <p>resMode= が要求内で指定されていない場合に使用されます。</p> <p>使用できる値は BILIN、BICUB、SHARP2 です。</p> <p>列挙。bilin の場合は 2、bicub の場合は 3、sharp2 補間モードの場合は 4 に設定します。最も良い結果を得るには sharp2 を使用してください。</p> <p>画像サービス API の <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html?lang=ja">ResMode</a> も参照してください。</p> </td> 
+   <td><p>デフォルトの再サンプリングモード.画像データの拡大縮小に使用するデフォルトの再サンプリングおよび補間属性を指定します。</p> <p>resMode= が要求内で指定されていない場合に使用されます。</p> <p>使用できる値は BILIN、BICUB、SHARP2 です。</p> <p>列挙。bilin の場合は 2、bicub の場合は 3、sharp2 補間モードの場合は 4 に設定します。最も良い結果を得るには sharp2 を使用してください。</p> <p>画像サービス API の <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html?lang=ja">ResMode</a> も参照してください。</p> </td> 
   </tr> 
   <tr> 
    <td>resolution</td> 

@@ -1,7 +1,7 @@
 ---
 title: サンドボックスコンテンツの開発
 seo-title: Develop Sandbox Content
-description: 'コンテンツの開発 '
+description: コンテンツの開発
 seo-description: Develop content
 uuid: ca046cf8-f6cd-41a1-97c8-74a86fbe9cd2
 contentOwner: User

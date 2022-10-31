@@ -128,9 +128,9 @@ ht-degree: 49%
 
 | **プロパティ** | **タイプ** | **値の説明** |
 |---------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| badgingPath | String[] | （必須）badgingLevels の数までのバッジ画像の複数値文字列。 バッジ画像のパスを指定するときは、最も高いレベルのエキスパートに授与するものを最初に指定する必要があります。badgingLevels で指定された値よりもバッジの数が少ない場合、足りない部分には配列内の最終要素のバッジが使用されます。例：/etc/community/badging/images/expert-badge/jcr:content/expert.png |
+| badgingPath | 文字列[] | （必須）badgingLevels の数までのバッジ画像の複数値文字列。 バッジ画像のパスを指定するときは、最も高いレベルのエキスパートに授与するものを最初に指定する必要があります。badgingLevels で指定された値よりもバッジの数が少ない場合、足りない部分には配列内の最終要素のバッジが使用されます。例：/etc/community/badging/images/expert-badge/jcr:content/expert.png |
 | badgingLevels | Long | （オプション）与える専門知識のレベルを指定します。 例えば、エキスパートとほぼエキスパート（2 つのバッジ）が必要な場合は、値を 2 に設定します。 badgingLevel は、badgingPath プロパティにリストされるエキスパート関連のバッジ画像の数に対応している必要があります。 初期設定は 1 です。 |
-| badgingType | 文字列 | （必須）スコアリングエンジンを「basic」または「advanced」として識別します。 &quot;advanced&quot;に設定し、それ以外の場合、デフォルトは&quot;basic&quot;です。 |
+| badgingType | String | （必須）スコアリングエンジンを「basic」または「advanced」として識別します。 &quot;advanced&quot;に設定し、それ以外の場合、デフォルトは&quot;basic&quot;です。 |
 | scoringRules | 文字列[] | （オプション）バッジルールを、リストされたスコアルールで識別されるスコアイベントに制限する複数値の文字列。例：/etc/community/scoring/rules/adv-comments-scoringDefault は、制限なしです。 |
 
 ## このリリースに含まれるルールとバッジ {#included-rules-and-badge}
@@ -179,7 +179,7 @@ ht-degree: 49%
 
       /etc/community/scoring/rules/sub rules/adv-voting-rule-owner
 
-**備考:**
+**メモ：**
 
 * 両方 `rules`および `sub-rules` ノードはタイプです `cq:Page`
 * `subRules` は String 型の属性です[] 規則の `jcr:content` ノード
@@ -194,7 +194,7 @@ ht-degree: 49%
 * /etc/community/badging/rules/adv-comments-badging
 * /etc/community/badging/rules/adv-forums-badging
 
-**備考:**
+**メモ：**
 
 * `rules` ノードはタイプです `cq:Page`
 * `rules` は、リポジトリ内の誰でも読み取れる場所に配置する必要があります。

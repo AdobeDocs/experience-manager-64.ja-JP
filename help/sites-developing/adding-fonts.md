@@ -13,23 +13,23 @@ exl-id: f29868e3-d05c-4898-94d1-0c77ab6b72eb
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 61%
+ht-degree: 100%
 
 ---
 
 # グラフィックレンダリング用のフォントの追加{#adding-fonts-for-graphic-rendering}
 
-AEM では、コンテンツから動的に取得したテキストを取り込んだグラフィックを生成できます。
+AEM では、コンテンツから動的に取得したテキストを取り込んだグラフィックを生成できます.
 
 その際に、独自のフォントを読み込んで使用することもできます。
 
-現時点で、Java プラットフォームのすべての実装で [TrueType](https://en.wikipedia.org/wiki/Truetype) フォントがサポートされています。
+現時点で、Java プラットフォームのすべての実装で [TrueType](https://ja.wikipedia.org/wiki/TrueType) フォントがサポートされています。
 
-1. CRXDE Liteを開き、プロジェクトアプリケーションフォルダーに移動します。
+1. CRXDE Lite を開き、次の場所にあるプロジェクトアプリケーションフォルダーに移動します。
 
    `/apps/<your-project>/`
 
-1. の下 `/apps/<your-project>/` 新しいノードを作成します。
+1. `/apps/<your-project>/` の下に、新しいノードを作成してください。
 
    * **名前**：`fonts`
    * **型**：`sling:Folder`
@@ -40,12 +40,12 @@ AEM では、コンテンツから動的に取得したテキストを取り込�
 
    >[!NOTE]
    >
-   >リポジトリ内のフォントファイルにはサフィックスが必要です `*.ttf` または `*.TTF`.
+   >リポジトリ内のフォントファイルのサフィックスは、`*.ttf` または `*.TTF` である必要があります。
 
-1. を更新します。 [OSGi 設定](/help/sites-deploying/configuring-osgi.md) / [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md).フォントフォルダーにパスを追加します。例： `/apps/<your-project>/fonts`.
+1. [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md) の [OSGi 設定](/help/sites-deploying/configuring-osgi.md)を更新します。フォントフォルダーへのパス（`/apps/<your-project>/fonts`）を追加します。
 
-1. CRXDE Lite に戻ります。これで、 `.fontlist` 読み込んだフォントの名前を含むフォルダー内のノード。
+1. CRXDE Lite に戻ります。読み込んだフォントの名前を含むフォルダー内に、`.fontlist`ノードが表示されます。
 
    これらのフォントは、今後 Java API で使用できます。
 
-Java API でのフォントの使用方法について詳しくは、[Java API の Font クラスに関するドキュメント](https://download.oracle.com/javase/6/docs/api/java/awt/Font.html)を参照してください。
+Java API でのフォントの使用方法について詳しくは、[Java API の Font クラスに関するドキュメント](https://docs.oracle.com/javase/6/docs/api/java/awt/Font.html)を参照してください。

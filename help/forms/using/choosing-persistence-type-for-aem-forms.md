@@ -1,7 +1,7 @@
 ---
 title: AEM Forms のインストールに永続性タイプを選択する
 seo-title: Choosing a persistence type for an AEM Forms installation
-description: '永続性タイプを選択することをお勧めします。これにより、効率的で拡張性の高い AEM Forms 環境を構築することができます。 '
+description: 永続性タイプを選択することをお勧めします。これにより、効率的で拡張性の高い AEM Forms 環境を構築することができます。
 seo-description: Choose a persistence type wisely. It helps you build an efficient and scale able AEM Forms environment.
 uuid: 1c692502-5039-4757-9358-1772772b3904
 content-type: reference

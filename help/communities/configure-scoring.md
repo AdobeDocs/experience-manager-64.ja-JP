@@ -222,7 +222,6 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
    >  /etc/community/scoring/rules/site2/forums-scoring
 >
 >* 異なる AEM Sites にはそれぞれ一意のバッジ画像を作成します。
-
 >
 
 

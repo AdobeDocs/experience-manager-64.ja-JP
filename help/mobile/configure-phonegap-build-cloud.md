@@ -1,5 +1,5 @@
 ---
-title: Adobe PhoneGap Build クラウドサービスの設定
+title: Adobe PhoneGap Build の設定
 seo-title: Configure your Adobe PhoneGap Build Cloud Service
 description: このページでは、クラウドサービスの設定と、PhoneGap Build を使用したアプリケーションのビルドについて説明します。
 seo-description: Follow this page for configuring the cloud services and building your application with PhoneGap build.
@@ -17,7 +17,7 @@ ht-degree: 77%
 
 ---
 
-# Adobe PhoneGap Build クラウドサービスの設定 {#configure-your-adobe-phonegap-build-cloud-service}
+# Adobe PhoneGap Build の設定 {#configure-your-adobe-phonegap-build-cloud-service}
 
 >[!NOTE]
 >

@@ -13,7 +13,7 @@ exl-id: 6d52babc-9477-4528-9c25-35cb729f5d78
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1943'
-ht-degree: 92%
+ht-degree: 93%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 92%
 * フォームエレメント
 * フォーム終了
 
-これらはすべて、一連のデフォルトで実現されます [フォームコンポーネント](/help/sites-authoring/default-components.md)：標準のAEMインストールで使用できます。
+これらはすべて、標準の AEM インストールで利用できるデフォルトの一連の[フォームコンポーネント](/help/sites-authoring/default-components.md)を使用して実現されます。
 
 フォームで使用する[新しいコンポーネントを開発する](/help/sites-developing/developing-components-samples.md)ほかに、次のこともできます。
 
@@ -119,7 +119,7 @@ ht-degree: 92%
    * `componentGroup` - `.hidden` として定義
    * オプション：
 
-      * `jcr:title` - 選択したタイトルを指定します。これは、ドロップダウン選択リストに表示されます。 設定されていない場合は、ノード名が表示されます
+      * `jcr:title` - 選択したタイトルを指定します。これは、ドロップダウン選択リストに表示されます。設定されていない場合は、ノード名が表示されます
       * `jcr:description` - 任意の説明を入力します
 
 1. フォルダーにダイアログノードを作成します。
@@ -225,7 +225,7 @@ ht-degree: 92%
    * `constraintMessage` - フォームの送信時に、制約に照らしてフィールドが無効な場合に表示されるカスタマイズされたメッセージ
    * 省略可能：
 
-      * `jcr:title` - 選択したタイトルを指定します。これは選択リストに表示されます。 設定されていない場合は、ノード名が表示されます
+      * `jcr:title` - 選択したタイトルを指定します。これは選択リストに表示されます。設定されていない場合は、ノード名が表示されます
       * `hint` - ユーザーに向けたフィールドの使用方法に関する追加情報
 
 1. このフォルダー内には、少なくとも次のどちらかのスクリプトが必要です。
@@ -280,7 +280,7 @@ ht-degree: 92%
 * 演算子
 * フィールドの値と比較する値
 
-例えば、タイトル `Receive email notifications?`* *を持つラジオグループコンポーネントは `Yes` および `No` ラジオボタンを含みます。 「`Email Address`」というタイトルのテキストフィールドコンポーネントは、次の条件を使用しているので、「`Yes`」を選択した場合に表示されます。
+例えば、タイトル `Receive email notifications?`* * を持つラジオグループコンポーネントは `Yes` および `No` ラジオボタンを含みます。「`Email Address`」というタイトルのテキストフィールドコンポーネントは、次の条件を使用しているので、「`Yes`」を選択した場合に表示されます。
 
 ![showhidecondition](assets/showhidecondition.png)
 

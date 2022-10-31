@@ -77,7 +77,7 @@ AEM Sites 6.4 の機能強化について詳しくは、以下を参照してく
    * 新しいコンテンツフラグメントコンポーネントをコアコンポーネントの一部として追加。[GitHub](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/tree/master/extension/contentfragment/content/src/content/jcr_root/apps/core/wcm/extension/components/contentfragment/v1/contentfragment) でコードを参照してください。
    * Sling Model Exporter を介した JSON 出力でのコンテンツサービスのサポート
 
-### エクスペリエンスフラグメント {#experience-fragments}
+### エクスペリエンスフラグメント  {#experience-fragments}
 
 * エクスペリエンスフラグメント構築ブロックが導入され、コンポーネントのグループ化とバリエーション内での容易な参照により、エクスペリエンスフラグメントバリエーション間のコンテンツの再利用が促進されます。
 * 参照レールを通じて、翻訳プロジェクトにエクスペリエンスフラグメントを追加できるようになりました。

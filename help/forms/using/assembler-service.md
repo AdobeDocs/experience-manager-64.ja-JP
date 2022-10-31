@@ -12,7 +12,7 @@ exl-id: 3997b034-fa24-4366-b22f-0abf2b6d1e64
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2139'
-ht-degree: 95%
+ht-degree: 96%
 
 ---
 
@@ -276,7 +276,7 @@ Assembler サービスを使用して PDF ドキュメントをディスアセ�
 
 ### しおりに基づいたソースドキュメントの分割 {#divide-a-source-document-based-on-bookmarks}
 
-以下の図では、DocA は複数の結果ドキュメントに分割されています。ページ上の第 1 レベル 1 のブックマークは、新しい結果ドキュメントの開始を示します。
+以下のイラストでは、DocA が複数の結果ドキュメントに分割されています。ページの初めのレベル 1 のブックマークで、新しい結果ドキュメントの開始が示されています。
 
 ![しおりに基づくソースドキュメントを複数のドキュメントに分割する](assets/as_intro_pdfsfrombookmarks.png)
 **図：** *しおりに基づくソースドキュメントを複数のドキュメントに分割する*

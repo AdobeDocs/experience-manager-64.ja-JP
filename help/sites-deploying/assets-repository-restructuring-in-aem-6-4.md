@@ -13,7 +13,7 @@ exl-id: 3d5bbf95-bd1e-453b-b487-517a56fe727f
 source-git-commit: cda63b9ece88d8172fa4d9817e315c9cff88c224
 workflow-type: tm+mt
 source-wordcount: '1113'
-ht-degree: 90%
+ht-degree: 92%
 
 ---
 
@@ -116,7 +116,7 @@ ht-degree: 90%
      <li>デザインを以前の場所から <code>/apps</code> 内の新しい場所にコピーします。</li> 
      <li><code>allowProxy = true</code> を使用して、デザイン内の CSS、JavaScript、静的リソースを<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">クライアントライブラリ</a>に変換します。</li> 
      <li><strong>AEM／DAM 管理／アセット共有ページ／ページのプロパティ／詳細タブ／デザインフィールド</strong>を使用して、<code>cq:designPath</code> プロパティで以前の場所への参照を更新します。</li> 
-     <li>以前の場所を参照しているすべてのページを更新して、新しいクライアントライブラリカテゴリを使用します。これには、ページ実装コードを更新する必要があります。</li> 
+     <li>以前の場所を参照しているページを更新して、新規のクライアントライブラリカテゴリを使用します。これにはページ実装コードの更新が必要です。</li> 
      <li>Dispatcher ルールを更新して、<code>/etc.clientlibs/</code> プロキシサーブレット経由でクライアントライブラリを提供できるようにします。</li> 
     </ol> <p>SCM で管理されておらず、実行時にデザインダイアログで変更されるデザインの場合は、オーサリング可能なデザインを <code>/etc</code> から移動しないでください。</p> </td> 
   </tr> 

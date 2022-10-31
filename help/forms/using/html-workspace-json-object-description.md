@@ -12,7 +12,7 @@ exl-id: 8c7e1ee2-0f7f-427e-aca2-d4bf523fd7f1
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2109'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -77,7 +77,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
    | categoryId | 金 | スタートポイントが属するカテゴリの ID が含まれます。 |
    | description | 金 | スタートポイントの説明が含まれます。 |
    | 名前 | 金 | スタートポイントの名前が含まれます。 |
-   | serializedImageTicket | 金 | スタートポイントに対応するイメージチケットが含まれます。この画像チケットは、サーバーからスタートポイントの画像を取得するために、スタートポイントの imageUrl フィールドで使用されます。 |
+   | serializedImageTicket | 金 | スタートポイントに対応するイメージチケットが含まれます。このイメージチケットは、サーバーからスタートポイントのイメージを取得するために、スタートポイントの imageUrl フィールドで使用されます。 |
    | serviceName | 金 | スタートポイントのサービスの名前が含まれます。 |
    | startpointId | 金 | スタートポイントの ID が含まれます。 |
    | isFavorite | T | スタートポイントがお気に入りであるかどうかを示します。スタートポイントがお気に入りである場合は true、そうでない場合は false です。 |
@@ -413,7 +413,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>type</td> 
    <td>金</td> 
-   <td>キューのタイプが含まれます。<br />0 - ユーザーキュー<br />1.共有キュー<br />2.グループキュー<br type="_moz" /> </td> 
+   <td>キューのタイプが含まれます。<br />0 - ユーザーキュー<br />1.共有キュー.<br />2.グループキュー<br type="_moz" /> </td> 
   </tr>
   <tr>
    <td>query</td> 
@@ -442,7 +442,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>dateRanges<br type="_moz" /> </td> 
    <td>金</td> 
-   <td>ユーザーの不在スケジュールの配列オブジェクトが含まれます。各スケジュールオブジェクトで、 startDate フィールドにスケジュールの開始日が含まれ、 endDate フィールドにスケジュールの終了日が含まれます。 スケジュールで endDate が null の場合は、ユーザーが不在スケジュールの終了日をスケジュールしていないことを意味します。<br type="_moz" /> </td> 
+   <td>ユーザーの不在スケジュールの配列オブジェクトが含まれます。各スケジュールオブジェクトには、startDate フィールドにスケジュールの開始日、endDate フィールドにスケジュールの終了日が含まれます。スケジュールの endDate が null の場合は、ユーザーが不在スケジュールの終了日をスケジュールしていないことを意味します。<br type="_moz" /> </td> 
   </tr>
   <tr>
    <td>isNoPrimaryDesignate<br type="_moz" /> </td> 
@@ -462,7 +462,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>processSpecificDesignates<br type="_moz" /> </td> 
    <td>金</td> 
-   <td>プロセス固有の不在時の連絡先のオブジェクトの配列が含まれます。各プロセス固有の指定オブジェクトでは、processName にプロセスの名前が含まれ、対応するプロセスにユーザーが割り当てられていない場合は isNotDesignated が true で、対応するプロセスにユーザーが割り当てられていない場合は userDesignated が null です。<br type="_moz" /> </td> 
+   <td>プロセス固有の不在時の連絡先のオブジェクトの配列が含まれます。各プロセス固有の指定のオブジェクトには、processName （プロセスの名前）、 isNotDesignated （ユーザーが対応するプロセスに割り当てられていない場合は true）、および userDesignated （ユーザーが割り当てられていない場合はヌルで、割り当てられている場合は対応するプロセスに割り当てられたユーザーの詳細）が含まれます。<br type="_moz" /> </td> 
   </tr>
   <tr>
    <td>processes<br type="_moz" /> </td> 
@@ -541,7 +541,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>processVariables<br type="_moz" /> </td> 
    <td>金</td> 
-   <td>プロセス変数のオブジェクトの配列。各プロセス変数オブジェクトには、プロセス変数の名前、プロセス変数の値、プロセス変数の型の値を含む名前が含まれます。<br type="_moz" /> </td> 
+   <td>プロセス変数のオブジェクトの配列。各プロセス変数オブジェクトは、name（プロセス変数の名前）、value（プロセス変数の値）、type（プロセス変数のタイプ）を含みます。<br type="_moz" /> </td> 
   </tr>
   <tr>
    <td>tasklist<br type="_moz" /> </td> 
@@ -730,7 +730,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>権限<br type="_moz" /> </td> 
    <td>金</td> 
-   <td>添付ファイルに関連付けられた権限。allowRead フィールドは読み取り権限用、 allowWrite は書き込み権限用、 allowDelete は削除権限用です。<br type="_moz" /> </td> 
+   <td>添付ファイルに関連付けられた権限。allowRead フィールドは読み取り権限、allowWrite は書き込み権限、allowDelete は削除権限用です。<br type="_moz" /> </td> 
   </tr>
   <tr>
    <td>サイズ<br type="_moz" /> </td> 
@@ -745,7 +745,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>type<br type="_moz" /> </td> 
    <td>金</td> 
-   <td>Type はファイルの添付ファイル、Type はメモの注記です。<br type="_moz" /> </td> 
+   <td>タイプは、ファイルの場合は attachment で、メモの場合は note です。<br type="_moz" /> </td> 
   </tr>
   <tr>
    <td>formattedCreationDate<br type="_moz" /> </td> 

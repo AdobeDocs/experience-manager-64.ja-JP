@@ -261,7 +261,7 @@ ht-degree: 92%
 
    ![xf-authoring-13-icon](assets/xf-authoring-13-icon.png)
 
-   次は例です。
+   次に例を示します。
 
    ![xf-authoring-13](assets/xf-authoring-13.png)
 

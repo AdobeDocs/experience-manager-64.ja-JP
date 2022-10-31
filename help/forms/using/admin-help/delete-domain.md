@@ -1,7 +1,7 @@
 ---
-title: 'ドメインの削除 '
+title: ドメインの削除
 seo-title: Delete a domain
-description: 'ドメインの管理ページを使用して、ドメインを削除する、または既存のドメインを古い情報としてマークする方法について説明します。 '
+description: ドメインの管理ページを使用して、ドメインを削除する、または既存のドメインを古い情報としてマークする方法について説明します。
 seo-description: Learn how to use the Domain Management page to delete a domain or to mark an existing domain as obsolete.
 uuid: 0d1f9835-3e28-41d3-a3b1-e36d95384328
 contentOwner: admin

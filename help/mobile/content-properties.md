@@ -1,7 +1,7 @@
 ---
 title: コンテンツのプロパティとノード
 seo-title: Content Properties and Nodes
-description: 'このページでは、コンテンツのプロパティとノードについて説明します。  '
+description: このページでは、コンテンツのプロパティとノードについて説明します。
 seo-description: Follow this page to learn about content properties and nodes.
 uuid: 2dad52c8-5b6c-4b90-8498-62217a9a27fc
 contentOwner: User
@@ -33,7 +33,7 @@ ht-degree: 49%
 
 | **プロパティ名** | **タイプ** | **デフォルト値または期待値** | **説明** |
 |---|---|---|---|
-| dps-id | 文字列 |  | AEM Mobileに割り当てられ、AEMによって保存され、AEM MobileにアップロードまたはAEM Mobileから読み込まれた後にによって割り当てられ、 |
+| dps-id | String |  | AEM Mobileに割り当てられ、AEMによって保存され、AEM MobileにアップロードまたはAEM Mobileから読み込まれた後にによって割り当てられ、 |
 | dps-resourceType | 文字列 | dps:Article | dps:Banner | dps:Collection | エンティティタイププロパティ |
 | dps-version | 文字列 |  | AEM Mobileエンティティのバージョン（aem-id の完全な内部にも含まれる） |
 | dps-lastSynced | 日付 |  | AEM MobileからAEMへの最後の同期/インポート日 |
@@ -60,7 +60,7 @@ ht-degree: 49%
 |---|---|---|
 | dps-author | 文字列 |  |
 | dps-authorURL | 文字列 |  |
-| dps-hideFromBrowsePage | ブール演算式 |  |
+| dps-hideFromBrowsePage | ブール値 |  |
 | dps-access | 文字列 | {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} からの ProtectedAccess |
 | **Social** |  |  |
 | dps-socialShareURL | 文字列 |  |
@@ -80,8 +80,8 @@ ht-degree: 49%
 |--- |--- |--- |
 | dps-productId | 文字列 |  |
 | dps-readingPosition | 文字列 | {&quot;reset&quot;,&quot;retain&quot;} から |
-| dps-horizontalSwipe | ブール演算式 |  |
-| dps-allowDownload | ブール演算式 |  |
+| dps-horizontalSwipe | ブール値 |  |
+| dps-allowDownload | ブール値 |  |
 | dps-openDefault | 文字列 | {&quot;browsePage&quot;,&quot;contentView&quot;} から |
 | dps-layout | 文字列 |  |
 

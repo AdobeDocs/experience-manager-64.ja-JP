@@ -1,7 +1,7 @@
 ---
 title: 通し番号を使用したドキュメントのアセンブリ
 seo-title: Assembling Documents Using Bates Numbering
-description: '通し番号を使用して、Java および web サービス API を使用して PDF ドキュメントをアセンブリします。 '
+description: 通し番号を使用して、Java および web サービス API を使用して PDF ドキュメントをアセンブリします。
 seo-description: Use Bates numbering to assemble PDF documents using the Java and Web Service API.
 uuid: 28d5faeb-6915-41a2-b6a0-78d255df024f
 contentOwner: admin
@@ -92,7 +92,7 @@ Assembler 操作をプログラムで実行する前に、Assembler サービス
 
 **既存の DDX ドキュメントの参照**
 
-DDX ドキュメントを参照して、PDF ドキュメントをアセンブリする必要があります。 例えば、このセクションで紹介した DDX ドキュメントについて考えてみましょう。 個別ページの ID を含む PDF ドキュメントをアセンブリするには、DDX ドキュメントに `BatesNumber` 要素を含める必要があります。
+DDX ドキュメントを参照して、PDF ドキュメントをアセンブリする必要があります。例えば、このセクションで紹介した DDX ドキュメントについて考えてみましょう。 個別ページの ID を含む PDF ドキュメントをアセンブリするには、DDX ドキュメントに `BatesNumber` 要素を含める必要があります。
 
 **参照入力 PDF ドキュメント**
 

@@ -1,7 +1,7 @@
 ---
 title: アプリを管理タイル
 seo-title: Manage App Tile
-description: 'このページでは、アプリケーションの詳細を変更できるアプリダッシュボードのアプリを管理タイルについて説明します。 '
+description: このページでは、アプリケーションの詳細を変更できるアプリダッシュボードのアプリを管理タイルについて説明します。
 seo-description: Follow this page to learn about the Manage App Tile on the app dashboard that provides the ability to modify details about the Application.
 uuid: bde75ecd-8694-427c-9b16-2c4ab2fd4d8b
 contentOwner: User
@@ -21,7 +21,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 アプリダッシュボードの&#x200B;**アプリを管理**&#x200B;タイルでは、アプリケーションに関する詳細を変更できます。詳細ページを開くには、アプリを管理タイルの詳細リンクをクリックします。アプリを管理ページから、PhoneGap アプリケーション設定 (config.xml) 設定を編集し、様々なアプリケーションストアに送信するためのアプリケーションを準備できます。
 
@@ -169,4 +169,4 @@ AEM アプリの重要な機能の 1 つは、モバイルアプリケーショ�
 管理者および開発者の役割と責任について詳しくは、以下のリソースを参照してください。
 
 * [AEM と Adobe PhoneGap Enterprise での開発](/help/mobile/developing-in-phonegap.md)
-* [AEM での Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)
+* [AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)

@@ -1,7 +1,7 @@
 ---
 title: PDF ドキュメントのアセンブリ
 seo-title: Assembling PDF Documents
-description: Assembler サービスを使用して、複数のPDFドキュメントを 1 つのPDFドキュメントに組み立てたり、1 つのPDFドキュメントを複数のPDFドキュメントに分解したりします。
+description: Assembler サービスを使用して、複数の PDF ドキュメントを 1 つの PDF ドキュメントに組み立てたり、1 つの PDF ドキュメントを複数の PDF ドキュメントに分解したりします。
 seo-description: Use the Assembler service to assemble multiple PDF documents into one PDF document or disassemble one PDF document into multiple PDF documents.
 uuid: 0789feea-1bbc-4acd-9ad7-ddf4d05e1c68
 contentOwner: admin
@@ -15,7 +15,7 @@ exl-id: d89bac8d-67e6-4442-845b-e358cbe0a568
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
@@ -23,10 +23,10 @@ ht-degree: 4%
 
 **Assembler サービスについて**
 
-Assembler サービスは、複数のPDFドキュメントを 1 つのPDFドキュメントに組み立てたり、1 つのPDFドキュメントを複数のPDFドキュメントに分解したりできます。 Assembler サービスでは、ページサイズの変更やコンテンツの回転など、様々な方法でドキュメントを操作できます。 ヘッダー、フッター、目次などの追加のコンテンツを挿入したり、注釈、添付ファイル、しおりなどの既存のコンテンツを保持、読み込み、書き出したりできます。
+Assembler サービスでは、複数の PDF ドキュメントを 1 つの PDF ドキュメントに組み立てたり、1 つの PDF ドキュメントを複数の PDF ドキュメントに分解したりできます。Assembler サービスでは、ページサイズの変更やコンテンツの回転など、様々な方法でドキュメントを操作できます。ヘッダー、フッター、目次などの追加のコンテンツを挿入したり、注釈、添付ファイル、ブックマークなどの既存のコンテンツを保持、インポート、エクスポートしたりできます。
 
-LiveCycleES 8.0 以降では、Assembler サービスでPDFパッケージのサポートが利用できます。
+LiveCycleES 8.0 以降では、Assembler サービスで PDF パッケージのサポートが利用できます。
 
 >[!NOTE]
 >
->Assembler サービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
+>Assembler サービスについて詳しくは、[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。

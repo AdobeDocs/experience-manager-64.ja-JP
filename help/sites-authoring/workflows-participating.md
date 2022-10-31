@@ -13,11 +13,11 @@ exl-id: 7b645497-ddbf-403c-9e78-5e845f6bda50
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1515'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
-# ワークフローへの参加{#participating-in-workflows}
+# ワークフローへの参加 {#participating-in-workflows}
 
 ワークフローには通常、ページまたはアセットでユーザーがアクティビティを実行する必要があるステップが含まれています。ワークフローでアクティビティを実行するユーザーまたはグループを選択し、その人物やグループに作業項目を割り当てます。ユーザーは通知を受け取り、次の適切なアクションを取ることができます。
 
@@ -73,7 +73,7 @@ ht-degree: 100%
 
 次のいずれかで参加者ステップを完了できます。
 
-* [インボックス](#completing-a-participant-step-inbox)
+* [インボックス ](#completing-a-participant-step-inbox)
 * [ページエディター](#completing-a-participant-step-page-editor)
 * [タイムライン](#completing-a-participant-step-timeline)
 * [詳細を表示するためにワークフロー項目を開く](#opening-a-workflow-item-to-view-details-and-take-actions)とき
@@ -113,7 +113,7 @@ ht-degree: 100%
 
    ![wf-67](assets/wf-67.png)
 
-1. 「**次へ**」を選択してアクションを確定します。
+1. 「**次へ**」を選択して、アクションを確定します。
 
 ### 参加者ステップの委任 {#delegating-a-participant-step}
 
@@ -132,7 +132,7 @@ ht-degree: 100%
 
 参加者ステップは次のいずれかから委任できます。
 
-* [インボックス](#delegating-a-participant-step-inbox)
+* [インボックス ](#delegating-a-participant-step-inbox)
 * [ページエディター](#delegating-a-participant-step-page-editor)
 * [タイムライン](#delegating-a-participant-step-timeline)
 * [詳細を表示するためにワークフロー項目を開く](#opening-a-workflow-item-to-view-details-and-take-actions)とき
@@ -165,7 +165,7 @@ ht-degree: 100%
 
    ![wf-69](assets/wf-69.png)
 
-1. 新しい担当者を指定します。
+1. 新しい割り当て先を指定します。
 
    ![wf-68](assets/wf-68.png)
 
@@ -182,7 +182,7 @@ ht-degree: 100%
 
 以下のいずれかから参加者ステップで前のステップを実行することができます。
 
-* [インボックス](#performing-step-back-on-a-participant-step-inbox)
+* [インボックス ](#performing-step-back-on-a-participant-step-inbox)
 * [ページエディター](#performing-step-back-on-a-participant-step-page-editor)
 * [タイムライン](#performing-step-back-on-a-participant-step-timeline)
 * [詳細を表示するためにワークフロー項目を開く](#opening-a-workflow-item-to-view-details-and-take-actions)とき
@@ -236,7 +236,7 @@ ht-degree: 100%
 
    ![wf-73](assets/wf-73.png)
 
-   [ワークフローステージ](/help/sites-developing/workflows.md#workflow-stages)がモデルのために設定されている場合は、これらに従って進捗を表示できます。
+   [ワークフローステージ](/help/sites-developing/workflows.md#workflow-stages)がモデルに設定されている場合は、これらに従って進行状況を表示できます。
 
    ![wf-107](assets/wf-107.png)
 
@@ -246,7 +246,7 @@ ht-degree: 100%
 
 以下のいずれかから作業項目の詳細を開くことができます。
 
-* [インボックス](#performing-step-back-on-a-participant-step-inbox)
+* [インボックス ](#performing-step-back-on-a-participant-step-inbox)
 * [ページエディター](#performing-step-back-on-a-participant-step-page-editor)
 
 #### ワークフロー詳細を開く - インボックス {#opening-workflow-details-inbox}

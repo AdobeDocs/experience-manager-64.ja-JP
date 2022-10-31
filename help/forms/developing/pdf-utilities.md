@@ -1,7 +1,7 @@
 ---
-title: PDF・ユーティリティの操作
+title: PDF ユーティリティの操作
 seo-title: Working with PDF Utilities
-description: Utilities サービスを使用して、PDFと XDP ファイル形式の間での変換、PDFドキュメントのプロパティの設定と取得、XMPメタデータの操作をおこないます。
+description: PDF Utilities サービスを使用して、PDFと XDP のファイル形式の変換、PDF ドキュメントのプロパティの設定と取得、XMP メタデータの操作を行います。
 seo-description: Use the PDF Utilities service to convert between PDF and XDP file formats, set and retrieve PDF document properties, and manipulate XMP metadata.
 uuid: a2ea2359-c547-4f1b-b6ca-f276f816e36a
 contentOwner: admin
@@ -11,495 +11,495 @@ topic-tags: operations
 discoiquuid: d816bf2e-5236-4084-b7c4-c32b72cdff97
 role: Developer
 exl-id: 1fdabd73-ee74-426b-b815-68022ea27c4e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: ''
 workflow-type: tm+mt
 source-wordcount: '2565'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# PDF・ユーティリティの操作 {#working-with-pdf-utilities}
+# PDF ユーティリティの操作 {#working-with-pdf-utilities}
 
-**Utilities サービスについてPDF**
+**PDF Utilities サービスについて**
 
-PDFユーティリティサービスは、PDF形式と XDP ファイル形式の変換、PDFドキュメントプロパティの設定と取得、XMPメタデータの操作をおこなうことができます。 例えば、PDFドキュメントを別の形式に変換する前にそのプロパティを調べて、変換用に呼び出すサービス操作を判断すると便利です。
+PDF Utilities サービスを使用すると、PDF と XDP のファイル形式の変換、PDF ドキュメントのプロパティの設定と取得、XMP メタデータの操作を行うことができます。例えば、PDF ドキュメントを別の形式に変換する前にプロパティを調べておくと、変換用に呼び出すサービス操作を判断するのに役立ちます。
 
-次のタスクは、Experience Utilities サービスを使用してPDFできます。
+PDF Utilities サービスを使用して、次のタスクを行うことができます。
 
-* PDFドキュメントを XDP ドキュメントに変換します。
-* XDP ドキュメントをPDFドキュメントに変換 ( [XDP ドキュメントからPDFドキュメントへの変換](pdf-utilities.md#converting-xdp-documents-into-pdf-documents).)
-* PDFドキュメントのプロパティを取得します。 ( [PDFドキュメントのプロパティの取得](pdf-utilities.md#retrieving-pdf-document-properties).)
-* PDFドキュメントを保存し、Web 表示用に最適化します。 ( [PDFドキュメントの保存モードの設定](pdf-utilities.md#setting-pdf-document-save-modes).)
-
->[!NOTE]
->
->Utilities サービスの詳細については、「PDF・ユーティリティ」を参照してください。 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
-
-## PDFドキュメントの XDP ドキュメントへの変換 {#converting-pdf-documents-into-xdp-documents}
-
-PDFユーティリティ Java および Web サービス API を使用して、PDFドキュメントを XDP ドキュメントにプログラム的に変換できます。
+* PDF ドキュメントを XDP ドキュメントに変換する。
+* XDP ドキュメントを PDF ドキュメントに変換する（[XDP ドキュメントから PDF ドキュメントへの変換](pdf-utilities.md#converting-xdp-documents-into-pdf-documents)を参照してください）。
+* PDF ドキュメントのプロパティを取得する（[PDF ドキュメントのプロパティの取得](pdf-utilities.md#retrieving-pdf-document-properties)を参照してください）。
+* PDF ドキュメントを保存して、高速な web 表示用に最適化する（[PDF ドキュメントの保存モードの設定](pdf-utilities.md#setting-pdf-document-save-modes)を参照してください）。
 
 >[!NOTE]
 >
->Utilities サービスの詳細については、「PDF・ユーティリティ」を参照してください。 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
+>PDF Utilities サービスについて詳しくは、「[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)」を参照してください。
+
+## PDF ドキュメントの XDP ドキュメントへの変換 {#converting-pdf-documents-into-xdp-documents}
+
+PDF Utilities Java および web サービス API を使用すると、プログラムで PDF ドキュメントを XDP ドキュメントに変換できます。
+
+>[!NOTE]
+>
+>PDF Utilities サービスについて詳しくは、「[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)」を参照してください。
 
 ### 手順の概要 {#summary-of-steps}
 
-PDFドキュメントを XDP ドキュメントに変換するには、次の手順を実行します。
+PDF ドキュメントを XDP ドキュメントに変換するには、次の手順を実行します。
 
 1. プロジェクトファイルを含めます。
 1. PDFUtilityService クライアントを作成します。
-1. 「Conversion to XDP conversion」PDFを呼び出します。
+1. PDF を XDP に変換する操作を呼び出します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-**PDFUtilityService クライアントの作成**
+**PDFUtilityService クライアントを作成**
 
-プログラムによって Utilities 操作をPDFする前に、PDFUtilityService クライアントを作成する必要があります。 Java API を使用する場合は、 `PDFUtilityServiceClient` オブジェクト。 Web サービス API では、これは、 `PDFUtilityServiceService` オブジェクト。
+プログラムで PDF Utilities 操作を実行する前に、PDFUtilityService クライアントを作成する必要があります。Java API では、`PDFUtilityServiceClient` オブジェクトを作成して行います。Web サービス API では、`PDFUtilityServiceService` オブジェクトを使用して行います。
 
-**「Invoke to XDP conversion」PDFを呼び出します**
+**PDF を XDP に変換する操作を呼び出す**
 
-サービスクライアントを作成した後で、このPDFを XDP 変換操作に呼び出すことができます。
+サービスクライアントを作成したら、PDF を XDP に変換する操作を呼び出すことができます。
 
-**関連トピック**
+**関連情報**
 
-[Java API を使用したPDFドキュメントの XDP ドキュメントへの変換](pdf-utilities.md#convert-pdf-documents-into-xdp-documents-using-the-java-api)
+[Java API を使用して PDF ドキュメントを XDP ドキュメントに変換する](pdf-utilities.md#convert-pdf-documents-into-xdp-documents-using-the-java-api)
 
-[Web サービス API を使用してPDFドキュメントを XDP ドキュメントに変換する](pdf-utilities.md#convert-pdf-documents-into-xdp-documents-using-the-web-service-api)
+[Web サービス API を使用して PDF ドキュメントを XDP ドキュメントに変換する](pdf-utilities.md#convert-pdf-documents-into-xdp-documents-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[接続プロパティを設定する](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Java API を使用したPDFドキュメントの XDP ドキュメントへの変換 {#convert-pdf-documents-into-xdp-documents-using-the-java-api}
+### Java API を使用して PDF ドキュメントを XDP ドキュメントに変換する {#convert-pdf-documents-into-xdp-documents-using-the-java-api}
 
-PDFユーティリティ API(Java) を使用して、PDFドキュメントを XDP ドキュメントに変換します。
+PDF Utilities API(Java) を使用して、PDF ドキュメントを XDP ドキュメントに変換します。
 
 1. プロジェクトファイルを含める
 
-   Java プロジェクトのクラスパスに、adobe-pdfutility-client.jar などのクライアント JAR ファイルを含めます。
+   adobe-livecycle-client.jar などのクライアント JAR ファイルを、Java プロジェクトのクラスパスに含めます。
 
 1. PDFUtilityService クライアントの作成
 
-   の作成 `PDFUtilityServiceClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` 接続プロパティを含むオブジェクト。
+   コンストラクターを使用し、接続プロパティを含む `ServiceClientFactory` オブジェクトを渡すことにより、`PDFUtilityServiceClient` オブジェクトを作成します。
 
-1. 「Invoke to XDP conversion」PDFを呼び出します
+1. PDF を XDP に変換する操作を呼び出す
 
-   変換を実行するには、 `PDFUtilityServiceClient` オブジェクトの `convertPDFtoXDP` メソッドを使用して `com.adobe.idp.Document` オブジェクトファイルを表すPDF。 このメソッドは、 `com.adobe.idp.Document` 新しく作成された XDP ファイルを表すオブジェクト。
+   コンバージョンを実行するには、 `PDFUtilityServiceClient` オブジェクトの `convertPDFtoXDP` メソッドを呼び出して PDF ファイルを表す `com.adobe.idp.Document` オブジェクトを渡します。このメソッドは、新しく作成された XDP ファイルを表す `com.adobe.idp.Document` オブジェクトを返します。
 
-**関連トピック**
+**関連情報**
 
-[PDFドキュメントの XDP ドキュメントへの変換](pdf-utilities.md#converting-pdf-documents-into-xdp-documents)
+[PDF ドキュメントの XDP ドキュメントへの変換](pdf-utilities.md#converting-pdf-documents-into-xdp-documents)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[接続プロパティを設定する](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Web サービス API を使用してPDFドキュメントを XDP ドキュメントに変換する {#convert-pdf-documents-into-xdp-documents-using-the-web-service-api}
+### Web サービス API を使用して PDF ドキュメントを XDP ドキュメントに変換する {#convert-pdf-documents-into-xdp-documents-using-the-web-service-api}
 
-PDFユーティリティ API（Web サービス）を使用して、PDFドキュメントを XDP ドキュメントに変換します。
+PDF Utilities API（web サービス）を使用して、PDF ドキュメントを XDP ドキュメントに変換します。
 
 1. プロジェクトファイルを含める
 
-   * Utilities サービスの WSDL ファイルを使用するMicrosoft .NET クライアントPDFを作成します。
+   * PDF Utilities サービスの WSDL ファイルを使用する、Microsoft .NET クライアントアセンブリを作成します。
    * Microsoft .NET クライアントアセンブリを参照します。
 
 1. PDFUtilityService クライアントの作成
 
-   の作成 `PDFUtilityServiceService` オブジェクトを指定します。
+   プロキシクラスのコンストラクターを使用して、`PDFUtilityServiceService` オブジェクトを作成します。
 
-1. 「Invoke to XDP conversion」PDFを呼び出します
+1. PDF を XDP に変換する操作を呼び出す
 
-   を呼び出す `PDFUtilityServiceService` オブジェクトの `convertPDFtoXDP` メソッドを使用して `BLOB` オブジェクトファイルを表すPDF。 このメソッドは、 `BLOB` 新しく作成された XDP ファイルを表すオブジェクト。
+   `PDFUtilityServiceService` オブジェクトの `convertPDFtoXDP` メソッドを呼び出して、PDF ファイルを表す `BLOB` オブジェクトに渡します。このメソッドは、新しく作成された XDP ファイルを表す `BLOB` オブジェクトを返します。
 
-**関連トピック**
+**関連情報**
 
-[PDFドキュメントの XDP ドキュメントへの変換](pdf-utilities.md#converting-pdf-documents-into-xdp-documents)
+[PDF ドキュメントの XDP ドキュメントへの変換](pdf-utilities.md#converting-pdf-documents-into-xdp-documents)
 
-[Base64 エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-[Base64 エンコーディングを使用する.NET クライアントアセンブリの作成](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
+[Base64 エンコーディングを使用する .NET クライアントアセンブリの作成](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
-## XDP ドキュメントからPDFドキュメントへの変換 {#converting-xdp-documents-into-pdf-documents}
+## XDP ドキュメントから PDF ドキュメントへの変換 {#converting-xdp-documents-into-pdf-documents}
 
-PDFユーティリティ Java および Web サービス API を使用して、XDP ドキュメントをプログラムでPDFドキュメントに変換できます。
+PDF Utilities Java および web サービス API を使用すると、プログラムで XDP ドキュメントを PDF ドキュメントに変換できます。
 
 >[!NOTE]
 >
->Utilities サービスの詳細については、「PDF・ユーティリティ」を参照してください。 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
+>PDF Utilities サービスについて詳しくは、「[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)」を参照してください。
 
 ### 手順の概要 {#summary_of_steps-1}
 
-XDP ドキュメントを変換ドキュメントにPDFするには、次の手順を実行します。
+XDP ドキュメントを PDF ドキュメントに変換するには、次の手順を実行します。
 
 1. プロジェクトファイルを含めます。
 1. PDFUtilityService クライアントを作成します。
-1. 「XDP to Conversion」操作を呼び出してPDFを変換します。
+1. XDP を PDF に変換する操作を呼び出します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-**PDFUtilityService クライアントの作成**
+**PDFUtilityService クライアントを作成**
 
-プログラムによって Utilities 操作をPDFする前に、PDFUtilityService クライアントを作成する必要があります。 Java API を使用する場合は、 `PDFUtilityServiceClient` オブジェクト。 Web サービス API では、これは、 `PDFUtilityServiceService` オブジェクト。
+プログラムで PDF Utilities 操作を実行する前に、PDFUtilityService クライアントを作成する必要があります。Java API では、`PDFUtilityServiceClient` オブジェクトを作成して行います。Web サービス API では、`PDFUtilityServiceService` オブジェクトを使用して行います。
 
-**「XDP to Conversion」操作を呼び出してPDFを変換**
+**XDP を PDF に変換する操作を呼び出す**
 
-サービスクライアントを作成した後で、XDP を呼び出して変換PDFを設定できます。
+サービスクライアントを作成したら、XDP を PDF に変換する操作を呼び出すことができます。
 
-**関連トピック**
+**関連情報**
 
-[Java API を使用して XDP ドキュメントをPDFドキュメントに変換する](pdf-utilities.md#convert-xdp-documents-into-pdf-documents-using-the-java-api)
+[Java API を使用して XDP ドキュメントを PDF ドキュメントに変換する](pdf-utilities.md#convert-xdp-documents-into-pdf-documents-using-the-java-api)
 
-[Web サービス API を使用した XDP ドキュメントのPDFドキュメントへの変換](pdf-utilities.md#converting-xdp-documents-into-pdf-documents-using-the-web-service-api)
+[Web サービス API を使用して XDP ドキュメントを PDF ドキュメントに変換する](pdf-utilities.md#converting-xdp-documents-into-pdf-documents-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[接続プロパティを設定する](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Java API を使用して XDP ドキュメントをPDFドキュメントに変換する {#convert-xdp-documents-into-pdf-documents-using-the-java-api}
+### Java API を使用して XDP ドキュメントを PDF ドキュメントに変換する {#convert-xdp-documents-into-pdf-documents-using-the-java-api}
 
-XDP ドキュメントをPDFドキュメントに変換するには、PDFユーティリティ API(Java) を使用します。
+XDP ドキュメントを PDF ドキュメントに変換するには、PDF Utilities API (Java) を使用します。
 
 1. プロジェクトファイルを含める
 
-   Java プロジェクトのクラスパスに、adobe-pdfutility-client.jar などのクライアント JAR ファイルを含めます。
+   adobe-livecycle-client.jar などのクライアント JAR ファイルを、Java プロジェクトのクラスパスに含めます。
 
 1. PDFUtilityService クライアントの作成
 
-   の作成 `PDFUtilityServiceClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` 接続プロパティを含むオブジェクト。
+   コンストラクターを使用して、接続プロパティを含む `ServiceClientFactory` オブジェクトを渡すことにより、`PDFUtilityServiceClient` オブジェクトを作成します。
 
-1. 「XDP to Conversion」操作を呼び出してPDFを変換
+1. XDP を PDF に変換する操作を呼び出す
 
-   変換を実行するには、 `PDFUtilityServiceClient` オブジェクトの `convertXDPtoPDF` メソッドを使用して `com.adobe.idp.Document` XDP ファイルを表すオブジェクト。 このメソッドは、 `com.adobe.idp.Document` 新しく作成されたPDFファイルを表すオブジェクト。
+   変換を実行するには、`PDFUtilityServiceClient` オブジェクトの `convertXDPtoPDF` メソッドを呼び出して、XDP ファイルを表す `com.adobe.idp.Document` オブジェクトに渡します。このメソッドは、新しく作成された PDF ファイルを表す `com.adobe.idp.Document` オブジェクトを返します。
 
-**関連トピック**
+**関連情報**
 
-[XDP ドキュメントからPDFドキュメントへの変換](pdf-utilities.md#converting-xdp-documents-into-pdf-documents)
+[XDP ドキュメントから PDF ドキュメントへの変換](pdf-utilities.md#converting-xdp-documents-into-pdf-documents)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[接続プロパティを設定する](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Web サービス API を使用した XDP ドキュメントのPDFドキュメントへの変換 {#converting-xdp-documents-into-pdf-documents-using-the-web-service-api}
+### Web サービス API を使用して XDP ドキュメントを PDF ドキュメントに変換する {#converting-xdp-documents-into-pdf-documents-using-the-web-service-api}
 
-XDP ドキュメントをPDFドキュメントに変換するには、PDFユーティリティ API（Web サービス API）を使用します。
+XDP ドキュメントを PDF ドキュメントに変換するには、PDF Utilities API（web サービス API）を使用します。
 
 1. プロジェクトファイルを含める
 
-   * Utilities サービスの WSDL ファイルを使用するMicrosoft .NET クライアントPDFを作成します。
+   * PDF Utilities サービスの WSDL ファイルを使用する、Microsoft .NET クライアントアセンブリを作成します。
    * Microsoft .NET クライアントアセンブリを参照します。
 
 1. PDFUtilityService クライアントの作成
 
-   の作成 `PDFUtilityServiceService` オブジェクトを指定します。
+   プロキシクラスのコンストラクターを使用して、`PDFUtilityServiceService` オブジェクトを作成します。
 
-1. 「XDP to Conversion」操作を呼び出してPDFを変換
+1. XDP を PDF に変換する操作を呼び出す
 
-   変換を実行するには、 `PDFUtilityServiceService` オブジェクトの `convertXDPtoPDF` メソッドを使用して `BLOB` XDP ファイルを表すオブジェクト。 このメソッドは、 `BLOB` 新しく作成されたPDFファイルを表すオブジェクト。
+   変換を実行するには、`PDFUtilityServiceService` オブジェクトの `convertXDPtoPDF` メソッドを呼び出して、XDP ファイルを表す `BLOB` オブジェクトに渡します。このメソッドは、新しく作成された PDF ファイルを表す `BLOB` オブジェクトを返します。
 
-**関連トピック**
+**関連情報**
 
-[XDP ドキュメントからPDFドキュメントへの変換](pdf-utilities.md#converting-xdp-documents-into-pdf-documents)
+[XDP ドキュメントから PDF ドキュメントへの変換](pdf-utilities.md#converting-xdp-documents-into-pdf-documents)
 
-[Base64 エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-[Base64 エンコーディングを使用する.NET クライアントアセンブリの作成](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
+[Base64 エンコーディングを使用する .NET クライアントアセンブリの作成](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
-## PDFドキュメントのプロパティの取得 {#retrieving-pdf-document-properties}
+## PDF ドキュメントのプロパティの取得 {#retrieving-pdf-document-properties}
 
-PDFユーティリティ Java および Web サービス API を使用すると、ドキュメントを読むのに必要な入力可能なフォームかAcrobat最小バージョンかなど、PDFドキュメントのプロパティをプログラムで取得できます。
+PDF Utilities Java および web サービス API を使用すると、PDF ドキュメントのプロパティをプログラムで取得できます。プロパティからは、ドキュメントが入力可能なフォームであるか、ドキュメントを読むのに必要な最小バージョンの Acrobat であるかなどがわかります。
 
 >[!NOTE]
 >
->Utilities サービスの詳細については、「PDF・ユーティリティ」を参照してください。 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)
+>PDF Utilities サービスについて詳しくは、「[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)」を参照してください。
 
 ### 手順の概要 {#summary_of_steps-2}
 
-PDF・ドキュメントのプロパティを取得するには、次の手順を実行します。
+PDF ドキュメントのプロパティを取得するには、次の手順を実行します。
 
 1. プロジェクトファイルを含めます。
 1. PDFUtilityService クライアントを作成します。
-1. プロパティ取得操作を呼び出します。
+1. プロパティを取得する操作を呼び出します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-**PDFUtilityService クライアントの作成**
+**PDFUtilityService クライアントを作成**
 
-プログラムによって Utilities 操作をPDFする前に、PDFUtilityService クライアントを作成する必要があります。 Java API を使用する場合は、 `PDFUtilityServiceClient` オブジェクト。 Web サービス API では、これを `PDFUtilityServiceService` オブジェクト。
+プログラムで PDF Utilities 操作を実行する前に、PDFUtilityService クライアントを作成する必要があります。Java API では、`PDFUtilityServiceClient` オブジェクトを作成して行います。Web サービス API では、`PDFUtilityServiceService` オブジェクトを使用して行います。
 
-**プロパティ取得操作を呼び出す**
+**プロパティを取得する操作を呼び出す**
 
-サービスクライアントを作成した後で、プロパティ取得操作を呼び出すことができます。
+サービスクライアントを作成したら、プロパティを取得する操作を呼び出すことができます。
 
-**関連トピック**
+**関連情報**
 
-[Java API を使用してPDFドキュメントのプロパティを取得する](pdf-utilities.md#retrieve-pdf-document-properties-using-the-java-api)
+[Java API を使用して PDF ドキュメントのプロパティを取得する](pdf-utilities.md#retrieve-pdf-document-properties-using-the-java-api)
 
-[Web サービス API を使用してPDFドキュメントのプロパティを取得する](pdf-utilities.md#retrieve-pdf-document-properties-using-the-web-service-api)
+[Web サービス API を使用して PDF ドキュメントのプロパティを取得する](pdf-utilities.md#retrieve-pdf-document-properties-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Java API を使用してPDFドキュメントのプロパティを取得する {#retrieve-pdf-document-properties-using-the-java-api}
+### Java API を使用して PDF ドキュメントのプロパティを取得する {#retrieve-pdf-document-properties-using-the-java-api}
 
-PDFユーティリティ API(Java) を使用して、PDFドキュメントのプロパティを取得します。
+PDF Utilities API (Java) を使用して、PDF ドキュメントのプロパティを取得します。
 
 1. プロジェクトファイルを含める
 
-   Java プロジェクトのクラスパスに、adobe-pdfutility-client.jar などのクライアント JAR ファイルを含めます。
+   adobe-livecycle-client.jar などのクライアント JAR ファイルを、Java プロジェクトのクラスパスに含めます。
 
 1. PDFUtilityService クライアントの作成
 
-   の作成 `PDFUtilityServiceClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` 接続プロパティを含むオブジェクト。
+   コンストラクターを使用して、接続プロパティを含む `ServiceClientFactory` オブジェクトを渡すことにより、`PDFUtilityServiceClient` オブジェクトを作成します。
 
 1. プロパティ取得操作を呼び出す
 
    変換を実行するには、 `PDFUtilityServiceClient` オブジェクトの `getPDFProperties` メソッドを使用して、以下を渡します。
 
-   * A `com.adobe.idp.Document` オブジェクトドキュメントを表すPDF。
-   * A `PDFPropertiesOptionSpec` 評価するプロパティを含むオブジェクト。
+   * PDF ドキュメントを表す `com.adobe.idp.Document` オブジェクト。
+   * 評価されるプロパティを含む `PDFPropertiesOptionSpec` オブジェクト。
 
-   このメソッドは、 `PDFPropertiesResult` クエリの結果を格納するオブジェクト。
+   メソッドは、クエリの結果を含む `PDFPropertiesResult` オブジェクトを返します。
 
-**関連トピック**
+**関連項目**
 
-[PDFドキュメントのプロパティの取得](pdf-utilities.md#retrieving-pdf-document-properties)
+[PDF ドキュメントのプロパティの取得](pdf-utilities.md#retrieving-pdf-document-properties)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Web サービス API を使用してPDFドキュメントのプロパティを取得する {#retrieve-pdf-document-properties-using-the-web-service-api}
+### Web サービス API を使用して PDF ドキュメントのプロパティを取得する {#retrieve-pdf-document-properties-using-the-web-service-api}
 
-PDFユーティリティ Web サービス API を使用して、PDFドキュメントのプロパティを取得します。
+PDF Utilities web サービス API を使用して、PDF ドキュメントのプロパティを取得します。
 
 1. プロジェクトファイルを含める
 
-   * Utilities サービスの WSDL ファイルを使用するMicrosoft .NET クライアントPDFを作成します。
+   * PDF Utilities サービスの WSDL ファイルを使用する、Microsoft .NET クライアントアセンブリを作成します。
    * Microsoft .NET クライアントアセンブリを参照します。
 
 1. PDFUtilityService クライアントの作成
 
-   の作成 `PDFUtilityServiceService` オブジェクトを指定します。
+   プロキシクラスコンストラクターを使用して、`PDFUtilityServiceService` オブジェクトを作成します。
 
 1. プロパティ取得操作を呼び出す
 
    変換を実行するには、 `PDFUtilityServiceService` オブジェクトの `getPDFProperties` メソッドを使用して、以下を渡します。
 
-   * A `BLOB` オブジェクトドキュメントを表すPDF。
-   * A `PDFPropertiesOptionSpec` 評価するプロパティを含むオブジェクト。
+   * PDF ドキュメントを表す `BLOB` オブジェクト。
+   * 評価されるプロパティを含む `PDFPropertiesOptionSpec` オブジェクト。
 
-   このメソッドは、 `PDFPropertiesResult` クエリの結果を格納するオブジェクト。
+   メソッドは、クエリの結果を含む `PDFPropertiesResult` オブジェクトを返します。
 
-**関連トピック**
+**関連項目**
 
-[PDFドキュメントのプロパティの取得](pdf-utilities.md#retrieving-pdf-document-properties)
+[PDF ドキュメントのプロパティの取得](pdf-utilities.md#retrieving-pdf-document-properties)
 
-[Base64 エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-[Base64 エンコーディングを使用する.NET クライアントアセンブリの作成](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
+[Base64 エンコーディングを使用する .NET クライアントアセンブリの作成](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
-## PDFドキュメントの保存モードの設定 {#setting-pdf-document-save-modes}
+## PDF ドキュメントの保存モードを設定する {#setting-pdf-document-save-modes}
 
-Utilities サービスの Java および Web サービスの API を使用して、PDFドキュメントの保存モードをプログラムで設定することができます。 PDFUtilities サービスを使用して保存モードを設定する場合、PDFUtilities サービスは保存モードのみを設定し、実際にはPDFドキュメントを保存しません。 PDFドキュメントは、別のサービス操作に渡されたときに保存されます。 たとえば、Encryption Utilities サービスを使用して特定のPDF・モードを設定し、Encryption サービスに渡すことができます。この場合、PDF・ドキュメントは実際に保存および暗号化されます。
+PDF Utilities サービスの Java および web サービス API を使用して、PDF ドキュメントの保存モードをプログラムで設定することができます。PDF Utilities サービスを使用して保存モードを設定する場合、PDF Utilities サービスは保存モードのみを設定し、実際には PDF ドキュメントを保存しません。PDF ドキュメントは、別のサービス操作に渡されたときに保存されます。例えば、PDF Utilities サービスを使用して特定の保存モードを設定し、Encryption サービスに渡すことができます。この場合、PDF ドキュメントは実際に保存され暗号化されます。
 
 >[!NOTE]
 >
->Utilities サービスの詳細については、「PDF・ユーティリティ」を参照してください。 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
+>PDF Utilities サービスについて詳しくは、「[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)」を参照してください。
 
 ### 手順の概要 {#summary_of_steps-3}
 
-保存オプションをPDF・ドキュメントに設定するには、次の手順を実行します。
+PDF ドキュメントの保存オプションを設定するには、次の手順を実行します。
 
 1. プロジェクトファイルを含めます。
 1. PDFUtilityService クライアントを作成します。
 1. 保存モードを設定します。
 1. 保存操作を呼び出します。
-1. 別の操作にPDFドキュメントを渡します。
+1. PDF ドキュメントを別の操作に渡します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-**PDFUtilityService クライアントの作成**
+**PDFUtilityService クライアントを作成**
 
-プログラムによって Utilities 操作をPDFする前に、PDFUtilityService クライアントを作成する必要があります。 Java API を使用する場合は、 `PDFUtilityServiceClient` オブジェクト。 Web サービス API では、これを `PDFUtilityServiceService` オブジェクト。
+プログラムで PDF Utilities 操作を実行する前に、PDFUtilityService クライアントを作成する必要があります。Java API では、`PDFUtilityServiceClient` オブジェクトを作成して行います。Web サービス API では、`PDFUtilityServiceService` オブジェクトを使用してこれを実現します。
 
-**保存モードの設定**
+**保存モードを設定**
 
-次の保存オプションのいずれかを選択できます。
+次のいずれかの保存オプションを指定できます。
 
-* `INCREMENTAL`:保存に要する時間を減らすために増分的に保存する
-* `FAST_WEB_VIEW`:高速な Web 表示用に保存
-* `FULL`:完全保存を使用して（最適化を行わずに）保存するには
+* `INCREMENTAL`：増分を保存して保存にかかる時間を短縮する
+* `FAST_WEB_VIEW`：web 表示を高速化するために保存する
+* `FULL`：完全保存（最適化なしでの保存）を使用する
 
-**「save style」操作を呼び出す**
+**スタイル保存操作を呼び出す**
 
-サービスクライアントを作成した後で、プロパティ取得操作を呼び出すことができます。
+サービスクライアントを作成したら、プロパティを取得する操作を呼び出すことができます。
 
-**PDFドキュメントを別のAEM Forms操作に渡す**
+**PDF ドキュメントを別の AEM Forms の操作に渡す**
 
-Save Utilities サービスが指定した保存モードを設定したら、PDFドキュメントを別のAEM Forms操作に渡します。 その操作から返されたPDFドキュメントは、指定されたモードで保存されます。 例えば、Utilities サービスを使用してPDF `FAST_WEB_VIEW` モードにしてから、PDFドキュメントを Encryption サービスの `encryptUsingPassword` を指定した場合、返されたPDFドキュメントはパスワードで暗号化され、 `FAST_WEB_VIEW` モード。
+指定の保存モードを PDF Utilities サービスで設定したら、PDF ドキュメントを別の AEM Forms の操作に渡します。その操作から返された PDF ドキュメントは、指定したモードで保存されます。例えば、PDF Utilities サービスで `FAST_WEB_VIEW` モードに設定して、PDF ドキュメントを暗号化サービスの `encryptUsingPassword` に渡すと、返される PDF ドキュメントはパスワードを付けて暗号化してから `FAST_WEB_VIEW` モードで保存されます。
 
 >[!NOTE]
 >
->このセクションに関連付けられているクイックスタートでは、 `FAST_WEB_VIEW` モードにしてから、PDFドキュメントを Encryption サービスの `encryptUsingPassword` 操作。
+>このセクションに関連するクイックスタートでは、 `FAST_WEB_VIEW` モードに設定して、PDF ドキュメントを暗号化サービスの `encryptUsingPassword` 操作に渡します。
 
-**関連トピック**
+**関連情報**
 
-[Java API を使用してPDFドキュメントの保存オプションを設定する](pdf-utilities.md#set-pdf-document-save-options-using-the-java-api)
+[PDF ドキュメントの保存オプションを Java API を使用して設定する](pdf-utilities.md#set-pdf-document-save-options-using-the-java-api)
 
-[Web サービス API を使用してPDFドキュメントの保存オプションを設定する](pdf-utilities.md#set-pdf-document-save-options-using-the-web-service-api)
+[PDF ドキュメントの保存オプションを web サービス API を使用して設定する](pdf-utilities.md#set-pdf-document-save-options-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[接続プロパティを設定する](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[パスワードを使用したPDFドキュメントの暗号化](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)
+[パスワードを使用した PDF ドキュメントの暗号化](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password)
 
-### Java API を使用してPDFドキュメントの保存オプションを設定する {#set-pdf-document-save-options-using-the-java-api}
+### PDF ドキュメントの保存オプションを Java API を使用して設定する {#set-pdf-document-save-options-using-the-java-api}
 
-PDFユーティリティ API(Java) を使用して、PDFドキュメントの保存オプションを設定します。
+PDF Utilities API（Java）を使用して、PDF ドキュメントの保存オプションを設定します。
 
 1. プロジェクトファイルを含める
 
-   Java プロジェクトのクラスパスに、adobe-pdfutility-client.jar などのクライアント JAR ファイルを含めます。
+   adobe-livecycle-client.jar などのクライアント JAR ファイルを、Java プロジェクトのクラスパスに含めます。
 
 1. PDFUtilityService クライアントの作成
 
-   の作成 `PDFUtilityServiceClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` 接続プロパティを含むオブジェクト。
+   コンストラクターを使用して、接続プロパティを含む `ServiceClientFactory` オブジェクトを渡すことにより、`PDFUtilityServiceClient` オブジェクトを作成します。
 
 1. 保存モードの設定
 
-   * コンストラクタを使用して `PDFUtilitySaveMode` オブジェクトを作成します。
-   * を呼び出して、保存モードを設定します。 `PDFUtilitySaveMode` オブジェクトの `setSaveStyle` メソッドを使用し、保存モードを指定する string 値を渡す。 例えば、Web 表示を高速化するために保存するには、 `FAST_WEB_VIEW`.
+   * コンストラクターを使用して `PDFUtilitySaveMode` オブジェクトを作成します。
+   * `PDFUtilitySaveMode` オブジェクトの `setSaveStyle` メソッドを呼び出して、保存モードを指定する文字列値を渡すことにより、保存モードを設定します。例えば、web 表示を高速化するために保存するには、`FAST_WEB_VIEW` を渡します。
 
-1. 「save style」操作を呼び出す
+1. スタイル保存操作を呼び出す
 
-   を呼び出す `PDFUtilityServiceClient` オブジェクトの `setSaveMode` メソッドを使用して、次の値を渡します。
+   `PDFUtilityServiceClient` オブジェクトの `setSaveMode` メソッドを呼び出して、次の値を渡します。
 
-   * A `com.adobe.idp.Document` オブジェクトドキュメントを表すPDF。
-   * A `PDFUtilitySaveMode` 使用する保存スタイルを含むオブジェクト。
-   * 以前の設定を上書きするかどうかを決定するために使用される Boolean 値です。
+   * PDF ドキュメントを表す `com.adobe.idp.Document` オブジェクト。
+   * 使用する保存スタイルを含む `PDFUtilitySaveMode` オブジェクト。
+   * 以前の設定を上書きするかどうかを指定するブール値。
 
-   このメソッドは、 `com.adobe.idp.Document` 指定した保存スタイルを使用して書式設定されたオブジェクト。
+   このメソッドは、指定した保存スタイルで書式設定された `com.adobe.idp.Document` オブジェクトを返します。
 
-1. PDFドキュメントを別のAEM Forms操作に渡す
+1. PDFドキュメントを別の AEM Forms の操作に渡す
 
-   * 返された `com.adobe.idp.Document` オブジェクトを別のAEM Forms操作に移動します。
+   * 返された `com.adobe.idp.Document` オブジェクトを別の AEM Forms の操作に渡します。
 
-**関連トピック**
+**関連情報**
 
-[PDFドキュメントの保存モードの設定](pdf-utilities.md#setting-pdf-document-save-modes)
+[PDF ドキュメントの保存モードを設定する](pdf-utilities.md#setting-pdf-document-save-modes)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
+[接続プロパティを設定する](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Web サービス API を使用してPDFドキュメントの保存オプションを設定する {#set-pdf-document-save-options-using-the-web-service-api}
+### PDF ドキュメントの保存オプションを web サービス API を使用して設定する {#set-pdf-document-save-options-using-the-web-service-api}
 
-PDF・ユーティリティ AP（Web サービス）を使用して、PDF・ドキュメントの保存オプションを設定します。
+PDF Utilities AP（web サービス）を使用して、PDF ドキュメントの保存オプションを設定します。
 
 1. プロジェクトファイルを含める
 
-   * Utilities サービスの WSDL ファイルを使用するMicrosoft .NET クライアントPDFを作成します。
+   * PDF Utilities サービスの WSDL ファイルを使用する、Microsoft .NET クライアントアセンブリを作成します。
    * Microsoft .NET クライアントアセンブリを参照します。
 
 1. PDFUtilityService クライアントの作成
 
-   の作成 `PDFUtilityServiceService` オブジェクトを指定します。
+   プロキシクラスコンストラクターを使用して、`PDFUtilityServiceService` オブジェクトを作成します。
 
 1. 保存モードの設定
 
-   * コンストラクタを使用して `PDFUtilitySaveMode` オブジェクトを作成します。
-   * 保存モードを設定するには、 `PDFUtilitySaveMode` オブジェクトの `saveStyle` 保存モードを指定するメソッド。 例えば、Web 表示を高速化するために保存するには、次のように指定します。 `FAST_WEB_VIEW`.
+   * コンストラクターを使用して `PDFUtilitySaveMode` オブジェクトを作成します。
+   * 保存モードを設定するには、保存モードを指定する `PDFUtilitySaveMode` オブジェクトの `saveStyle` メソッドに文字列値を割り当てます。例えば、web 表示を高速化するために保存するには、`FAST_WEB_VIEW` を指定します。
 
-1. 「save style」操作を呼び出す
+1. スタイル保存操作を呼び出す
 
-   を呼び出す `PDFUtilityServiceService` オブジェクトの `setSaveMode` メソッドを使用して、次の値を渡します。
+   `PDFUtilityServiceService` オブジェクトの `setSaveMode` メソッドを呼び出して、次の値を渡します。
 
-   * A `BLOB` オブジェクトドキュメントを表すPDF。
-   * A `PDFUtilitySaveMode` 使用する保存スタイルを含むオブジェクト。
-   * 以前の設定を上書きするかどうかを決定するために使用される Boolean 値です。
+   * PDF ドキュメントを表す `BLOB` オブジェクト。
+   * 使用する保存スタイルを含む `PDFUtilitySaveMode` オブジェクト。
+   * 以前の設定を上書きするかどうかを指定するブール値。
 
-   このメソッドは、 `BLOB` 指定した保存スタイルを使用して書式設定されたオブジェクト。 その後、そのオブジェクトをPDF文書として保存できます。
+   このメソッドは、指定した保存スタイルを使用して書式設定された `BLOB` オブジェクトを返します。その後、そのオブジェクトを PDF ドキュメントとして保存できます。
 
-1. PDFドキュメントを別のForms操作に渡す
+1. PDF ドキュメントを別の Forms 操作に渡します
 
-   * 返された `BLOB` オブジェクトを別のAEM Forms操作に移動します。
+   * 返された `BLOB` オブジェクトを別の AEM Forms 操作に渡します。
 
-**関連トピック**
+**関連情報**
 
-[PDFドキュメントの保存モードの設定](pdf-utilities.md#setting-pdf-document-save-modes)
+[PDF ドキュメントの保存モードを設定する](pdf-utilities.md#setting-pdf-document-save-modes)
 
-[Base64 エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
-[Base64 エンコーディングを使用する.NET クライアントアセンブリの作成](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
+[Base64 エンコーディングを使用する .NET クライアントアセンブリの作成](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)
 
-## PDFドキュメントの不要化 {#sanitizing-pdf-documents}
+## PDF ドキュメントの不要部分を削除 {#sanitizing-pdf-documents}
 
-PDFユーティリティ Java API を使用して、プログラムによってPDFドキュメントを XDP ドキュメントに変換できます。
+PDF Utilities Java API を使用して、PDF ドキュメントを XDP ドキュメントにプログラムで変換できます。
 
 >[!NOTE]
 >
->Utilities サービスの詳細については、「PDF・ユーティリティ」を参照してください。 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
+>PDF Utilities サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ### 手順の概要 {#summary_of_steps-4}
 
-PDF・ドキュメントの不要部分を削除するには、次の手順に従います。
+PDF ドキュメントの不要部分を削除するには、次の手順に従います。
 
 1. プロジェクトファイルを含めます。
 1. PDFUtilityService クライアントを作成します。
-1. サニタイズ操作を呼び出します。
+1. 不要部分を削除する操作を呼び出します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成するには、必要な JAR ファイルを含めます。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成するには、必要な JAR ファイルを含めます。
 
 **PDFUtilityService クライアントの作成**
 
-プログラムによってサニタイズ操作を実行する前に、PDFUtilityService クライアントを作成する必要があります。 Java API を使用する場合は、 `PDFUtilityServiceClient` オブジェクト。
+プログラムで不要部分を削除する操作を実行する前に、PDFUtilityService クライアントを作成する必要があります。Java API を使用する場合は、`PDFUtilityServiceClient` オブジェクトの作成により実行できます。
 
-**「Invoke to XDP conversion」PDFを呼び出します**
+**PDF を XDP に変換する操作を呼び出します**
 
-サービスクライアントを作成した後で、サニタイズ化操作を呼び出すことができます。
+サービスクライアントを作成したら、不要部分を削除する操作を呼び出すことができます。
 
-**関連トピック**
+**関連項目**
 
-[Java API を使用したPDFドキュメントの XDP ドキュメントへの変換](pdf-utilities.md#convert-pdf-documents-into-xdp-documents-using-the-java-api)
+[Java API を使用して PDF ドキュメントを XDP ドキュメントに変換する](pdf-utilities.md#convert-pdf-documents-into-xdp-documents-using-the-java-api)
 
-[Web サービス API を使用してPDFドキュメントを XDP ドキュメントに変換する](pdf-utilities.md#convert-pdf-documents-into-xdp-documents-using-the-web-service-api)
+[Web サービス API を使用して PDF ドキュメントを XDP ドキュメントに変換する](pdf-utilities.md#convert-pdf-documents-into-xdp-documents-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Java API を使用してPDFドキュメントを不要にする {#sanitize-pdf-documents-using-the-java-api}
+### Java API を使用してPDFドキュメントを削除する {#sanitize-pdf-documents-using-the-java-api}
 
-Java(Autilities API) を使用して、ドキュメントの不要PDFを削除します。
+PDF Utilities API (Java) を使用して、ドキュメントをサニタイズします。
 
 1. プロジェクトファイルを含める
 
-   Java プロジェクトのクラスパスに、adobe-pdfutility-client.jar などのクライアント JAR ファイルを含めます。
+   adobe-pdfutility-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
 1. PDFUtilityService クライアントの作成
 
-   の作成 `PDFUtilityServiceClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` 接続プロパティを含むオブジェクト。
+   コンストラクターを使用し、接続プロパティを含む `ServiceClientFactory` オブジェクトを渡すことにより、`PDFUtilityServiceClient` オブジェクトを作成します。
 
-1. 「Invoke to XDP conversion」PDFを呼び出します
+1. PDF を XDP に変換する操作を呼び出す
 
-   変換を実行するには、 `PDFUtilityServiceClient` オブジェクトの `convertPDFtoXDP` メソッドを使用して `com.adobe.idp.Document` オブジェクトファイルを表すPDF。 このメソッドは、 `com.adobe.idp.Document` 新しく作成された XDP ファイルを表すオブジェクト。
+   コンバージョンを実行するには、 `PDFUtilityServiceClient` オブジェクトの `convertPDFtoXDP` メソッドを呼び出して PDF ファイルを表す `com.adobe.idp.Document` オブジェクトを渡します。このメソッドは、新しく作成された XDP ファイルを表す `com.adobe.idp.Document` オブジェクトを返します。
 
-**関連トピック**
+**関連項目**
 
-[PDFドキュメントの不要化](/help/forms/developing/pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
+[PDFドキュメントのサニタイズ](/help/forms/developing/pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

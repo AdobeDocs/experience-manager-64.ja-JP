@@ -13,7 +13,7 @@ exl-id: f60beaae-4082-4165-8a37-9d9c94e360b2
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '240'
-ht-degree: 67%
+ht-degree: 94%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 67%
 
 この記事では、**AEM DS Settings Service** の設定方法について説明します。この設定は、次のような場合に使用できます。
 
-* Correspondence Management 内
+* Correspondence Management では
 
    * AEM Forms ワークフローを設定する場合
    * ドラフトまたは送信のリモート保存にフォームポータルを使用する場合
@@ -30,13 +30,13 @@ ht-degree: 67%
 
 次の手順に従って、「**[!UICONTROL AEM DS 設定]**」を構成します。
 
-1. 次の URL を使用して、パブリッシュインスタンスで Configuration Manager を開きます。
+1. 次の URL で、パブリッシュインスタンスにある Configuration Manager を開きます。
 
    *http://localhost:port/system/console/configMgr*.
 
    ![aem_web_configuration_console](assets/aem_web_configuration_console.png)
 
-1. 内 **[!UICONTROL Adobe Experience Manager Web コンソール設定]** ウィンドウを開き、 **[!UICONTROL AEM DS 設定]** オプション。
+1. **[!UICONTROL Adobe Experience Manager web コンソール設定]**&#x200B;ウィンドウで、「**[!UICONTROL AEM DS 設定]**」オプションを見つけてクリックします。
 
    ![ds_settings](assets/ds_settings.png)
 
@@ -46,9 +46,9 @@ ht-degree: 67%
 
 1. 次の情報をそれぞれのフィールドに追加します。
 
-   **[!UICONTROL 処理サーバー URL]**:処理サーバーは、FormsまたはAEMワークフローをトリガーする必要があるサーバーです。 これは、AEM オーサーインスタンスの URL または他のサーバー URL（つまり、http://localhost:port/）と同じである可能性があります。
+   **[!UICONTROL 処理サーバー URL]**：処理サーバーは、Forms または AEM ワークフローをトリガーする必要のあるサーバーです。これは、AEM オーサーインスタンスの URL または他のサーバー URL（つまり、http://localhost:port/）と同じである可能性があります。
 
-   **[!UICONTROL 処理サーバーのユーザー名]**:ワークフローユーザーのユーザー名 [使用されているサーバー URL に基づく]
+   **[!UICONTROL 処理サーバーのユーザー名]**：ワークフローユーザーのユーザー名は、[使用するサーバー URL に基づいています]
 
    **[!UICONTROL 処理サーバーのパスワード]**：ワークフローユーザーのパスワード
 

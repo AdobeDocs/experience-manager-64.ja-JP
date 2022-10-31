@@ -14,7 +14,7 @@ exl-id: 3b1100ed-44c6-4c09-aec4-9e6670234567
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
 
 >[!CAUTION]
 >
->セグメントノードストアの PID が org.apache.jackrabbit.oak から変更されました。**plugins** AEM 6.3 のAEM 6 から org.apache.jackrabbit.oak.segment.SegmentNodeStoreService の以前のバージョンでは、.segment.SegmentNodeStoreService です。この変更を反映するには、必要な設定の調整をおこなってください。
+>セグメントノードストアの PID は、以前のバージョンの AEM 6 の org.apache.jackrabbit.oak.**plugins**.segment.SegmentNodeStoreService から、AEM 6.3 では org.apache.jackrabbit.oak.segment.SegmentNodeStoreService に変更されました。この変更が反映されるように、必要な設定を調整してください。
 
 デフォルトでは、AEM 6 は Tar ストレージを使用して、デフォルトの設定オプションによって、ノードおよびバイナリを保存します。ストレージ設定を手動でおこなうには、次の手順に従ってください。
 
@@ -46,7 +46,7 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
 
    `java -jar cq-quickstart-6.jar -unpack`
 
-1. という名前のフォルダーを作成します。 `crx-quickstart\install` をインストールディレクトリに追加します。
+1. インストールディレクトリ内に `crx-quickstart\install` というフォルダーを作成します。
 
 1. 新しく作成したフォルダー内に `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg` というファイルを作成します。
 
@@ -69,10 +69,10 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
    `java -jar cq-quickstart-6.jar -unpack`
 
 1. MongoDB がインストールされていること、および `mongod` のインスタンスが実行されていることを確認します。詳しくは、[MongoDB のインストール](https://docs.mongodb.org/manual/installation/)を参照してください。
-1. という名前のフォルダーを作成します。 `crx-quickstart\install` をインストールディレクトリに追加します。
+1. インストールディレクトリ内に `crx-quickstart\install` というフォルダーを作成します。
 1. ノードストアを設定します。使用する設定の名前を持つ設定ファイルを `crx-quickstart\install` ディレクトリに作成します。
 
-   ドキュメントノードストア (AEM MongoDB ストレージ実装の基盤 ) では、 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.cfg`
+   ドキュメントノードストア（AEM の MongoDB ストレージ実装の基盤）では、`org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.cfg` というファイルを使用します。
 
 1. ファイルを編集し、設定オプションを設定します。以下のオプションが利用できます。
 
@@ -90,14 +90,14 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
    java -jar cq-quickstart-6.jar -r crx3,crx3mongo
    ```
 
-   ここで、 **`-r`** はバックエンドの実行モードです。 この例では、MongoDB サポートを指定して起動します。
+   **`-r`** はバックエンドの実行モードです。この例では、MongoDB サポートを指定して起動します。
 
 #### Transparent Huge Pages の無効化 {#disabling-transparent-huge-pages}
 
 Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ管理アルゴリズムが使用されます。AEM はきめ細かい読み取りと書き込みを実行しますが、THP は大規模な操作に最適化されています。この理由から、Tar と Mongo の両方のストレージで THP を無効にすることをお勧めします。アルゴリズムを無効にするには、次の手順に従います。
 
-1. を開きます。 `/etc/grub.conf` ファイルを選択します。
-1. 次の行を **grub.conf** ファイル：
+1. `/etc/grub.conf` ファイルを任意のテキストエディターで開きます。
+1. **grub.conf** ファイルに次の行を追加します。
 
    ```
    transparent_hugepage=never
@@ -119,12 +119,11 @@ Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ�
 >
 >さらに、次の資料も参考にできます。
 >
->* Red Hat Linux での Transparent Huge Pages に関する詳細は、以下を参照してください [記事](https://access.redhat.com/solutions/46111).
->* Linux のチューニングのヒントについては、次を参照してください。 [記事](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html).
-
+>* Red Hat Linux 上の Transparent Huge Pages について詳しくは、こちらの[記事](https://access.redhat.com/solutions/46111)を参照してください。
+>* Linux のチューニングのヒントについては、こちらの[記事](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)を参照してください。
 >
 
 
 ## リポジトリのメンテナンス {#maintaining-the-repository}
 
-リポジトリが更新されるたびに、新しいコンテンツのリビジョンが作成されます。その結果、更新するたびにリポジトリのサイズが大きくなります。 リポジトリのサイズが無制限に増大しないように、古いリビジョンをクリーンアップして、ディスクリソースを解放する必要があります。このメンテナンス機能は、リビジョンクリーンアップと呼ばれます。リビジョンのクリーンアップメカニズムは、古いデータをリポジトリから削除して、ディスク領域を再利用します。 リビジョンクリーンアップについて詳しくは、[リビジョンクリーンアップのページ](/help/sites-deploying/revision-cleanup.md)を参照してください。
+リポジトリが更新されるたびに、新しいコンテンツのリビジョンが作成されます。その結果、更新のたびにリポジトリのサイズが大きくなります。リポジトリのサイズが無制限に増大しないように、古いリビジョンをクリーンアップして、ディスクリソースを解放する必要があります。このメンテナンス機能は、リビジョンクリーンアップと呼ばれます。リビジョンクリーンアップのメカニズムによって、ディスク領域を再利用するために、リポジトリから古いデータが削除されます。リビジョンクリーンアップについて詳しくは、[リビジョンクリーンアップのページ](/help/sites-deploying/revision-cleanup.md)を参照してください。

@@ -10,7 +10,7 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 exl-id: 39ecacda-2941-4b57-a001-e7ad1349723c
-source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
+source-git-commit: ''
 workflow-type: tm+mt
 source-wordcount: '1619'
 ht-degree: 98%

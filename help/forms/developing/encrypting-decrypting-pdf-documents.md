@@ -30,7 +30,7 @@ ht-degree: 100%
 * 証明書で PDF ドキュメントを暗号化します。（[証明書による PDF ドキュメントの暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)を参照してください）。
 * PDF ドキュメントからパスワードベースの暗号化を削除します。（[パスワード暗号化を削除](encrypting-decrypting-pdf-documents.md#removing-password-encryption)を参照してください）。
 * PDF ドキュメントから証明書ベースの暗号化を削除します。（[証明書ベースの暗号化の削除](encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption)を参照してください）。
-* 他のサービス操作を実行できるように、PDF ドキュメントのロックを解除します。例えば、パスワードで暗号化された PDF ドキュメントのロックが解除された後に、デジタル署名を適用できます。 （[暗号化された PDF ドキュメントのロック解除](encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents)を参照してください）。
+* 他のサービス操作を実行できるように、PDF ドキュメントのロックを解除します。例えば、パスワードで暗号化された PDF ドキュメントのロックが解除された後に、デジタル署名を適用できます。（[暗号化された PDF ドキュメントのロック解除](encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents)を参照してください）。
 * 保護された PDF ドキュメントの暗号化のタイプを決定します。（[暗号化タイプの決定](encrypting-decrypting-pdf-documents.md#determining-encryption-type)を参照してください）。
 
    >[!NOTE]
@@ -140,7 +140,7 @@ PDF ドキュメントを暗号化する際に、保護されたドキュメン�
    * コンストラクターを使用して `PasswordEncryptionOptionSpec` オブジェクトを作成します。
    * `PasswordEncryptionOptionSpec` オブジェクトの `setEncryptOption` メソッドを呼び出し、暗号化するドキュメントリソースを指定する `PasswordEncryptionOption` 列挙値を渡すことによって、暗号化する PDF ドキュメントリソースを指定します。例えば、メタデータと添付ファイルを含む PDF ドキュメント全体を暗号化するには、`PasswordEncryptionOption.ALL` と指定します。
    * `ArrayList` コンストラクターを使用して、暗号化の権限を保存する `java.util.List` オブジェクトを作成します。
-   * `java.util.List` オブジェクトの `add` メソッドを呼び出し、設定する権限に対応する列挙値を渡すことにより、権限を指定してください。 例えば、ユーザーが PDF ドキュメント内のデータをコピーできる権限を設定するには、`PasswordEncryptionPermission.PASSWORD_EDIT_COPY`と指定してください。（設定する権限ごとに、このステップを繰り返します）。
+   * `java.util.List` オブジェクトの `add` メソッドを呼び出し、設定する権限に対応する列挙値を渡すことにより、権限を指定してください。例えば、ユーザーが PDF ドキュメント内のデータをコピーできる権限を設定するには、`PasswordEncryptionPermission.PASSWORD_EDIT_COPY`と指定してください。（設定する権限ごとに、このステップを繰り返します）。
    * `PasswordEncryptionOptionSpec` オブジェクトの `setCompatability` メソッドを呼び出し、Acrobat の互換性レベルを指定する列挙値を渡して、Acrobat の互換性オプションを指定します。例えば、`PasswordEncryptionCompatability.ACRO_7` と指定できます。
    * パスワードの値を指定します。この値を使用すると、`PasswordEncryptionOptionSpec` オブジェクトの `setDocumentOpenPassword` メソッドを呼び出し、開くパスワードを表す文字列値を渡すことによって、ユーザーが暗号化された PDF ドキュメントを開くことができます。
    * プライマリパスワードの値を指定します。この値を使用すると、`PasswordEncryptionOptionSpec` オブジェクトの `setPermissionPassword` メソッドを呼び出し、プライマリパスワードを表す文字列値を渡すことによって、ユーザーが暗号化された PDF ドキュメントから暗号化を削除することができます。
@@ -222,7 +222,7 @@ PDF ドキュメントを暗号化する際に、保護されたドキュメン�
 1. 暗号化された PDF ドキュメントを PDF ファイルとして保存します。
 
    * `System.IO.FileStream` オブジェクトを作成するには、このオブジェクトのコンストラクターを呼び出し、保護された PDF ドキュメントのファイルの場所を表す文字列の値を渡します。
-   * `encryptPDFUsingPassword` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列を生成します。
+   * `encryptPDFUsingPassword` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列を生成します。
    * コンストラクターを使用して `System.IO.BinaryWriter` オブジェクトを渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
    * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
 
@@ -283,7 +283,7 @@ PDF ドキュメントを暗号化する際に、保護されたドキュメン�
 
 **暗号化クライアント API オブジェクトを作成**
 
-プログラムによって暗号化サービスの操作を実行するには、暗号化サービスクライアントを作成する必要があります。Java Encryption Service API を使用している場合は、`EncrytionServiceClient` オブジェクトを作成します。 Web サービス暗号化サービス API を使用している場合は、`EncryptionServiceService` オブジェクトを作成します。
+プログラムによって暗号化サービスの操作を実行するには、暗号化サービスクライアントを作成する必要があります。Java Encryption Service API を使用している場合は、`EncrytionServiceClient` オブジェクトを作成します。Web サービス暗号化サービス API を使用している場合は、`EncryptionServiceService` オブジェクトを作成します。
 
 **暗号化する PDF ドキュメントを取得**
 
@@ -449,7 +449,7 @@ Encryption API（Web サービス）を使用して、PDF ドキュメントを�
 1. 暗号化された PDF ドキュメントを PDF ファイルとして保存します。
 
    * `System.IO.FileStream` オブジェクトを作成するには、このオブジェクトのコンストラクターを呼び出し、保護された PDF ドキュメントのファイルの場所を表す文字列の値を渡します。
-   * `encryptPDFUsingCertificates` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクトの `binaryData` データメンバーの値を取得して、バイト配列を生成します。
+   * `encryptPDFUsingCertificates` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `binaryData` データメンバーの値を取得して、バイト配列を生成します。
    * コンストラクターを使用して `System.IO.BinaryWriter` オブジェクトを渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
    * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
 
@@ -481,7 +481,7 @@ Encryption API（Web サービス）を使用して、PDF ドキュメントを�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
@@ -493,19 +493,19 @@ Encryption API（Web サービス）を使用して、PDF ドキュメントを�
 
 **暗号化サービスクライアントの作成**
 
-プログラムによって暗号化サービスの操作を実行するには、暗号化サービスクライアントを作成する必要があります。Java Encryption Service API を使用している場合は、`EncrytionServiceClient` オブジェクトを作成します。 Web サービス Encryption Service API を使用している場合は、`EncryptionServiceService` オブジェクトを作成します。
+プログラムによって暗号化サービスの操作を実行するには、暗号化サービスクライアントを作成する必要があります。Java Encryption Service API を使用している場合は、`EncrytionServiceClient` オブジェクトを作成します。Web サービス Encryption Service API を使用している場合は、`EncryptionServiceService` オブジェクトを作成します。
 
 **暗号化された PDF ドキュメントを取得**
 
-証明書ベースの暗号化を削除するには、暗号化された PDF ドキュメントを取得する必要があります。 暗号化されていない PDF ドキュメントから暗号化を削除しようとすると、例外がスローされます。 同様に、パスワードで暗号化されたドキュメントから証明書ベースの暗号化を削除しようとすると、例外がスローされます。
+証明書ベースの暗号化を削除するには、暗号化された PDF ドキュメントを取得する必要があります。暗号化されていない PDF ドキュメントから暗号化を削除しようとすると、例外がスローされます。同様に、パスワードで暗号化されたドキュメントから証明書ベースの暗号化を削除しようとすると、例外がスローされます。
 
 **暗号化を削除**
 
-暗号化された PDF ドキュメントから証明書ベースの暗号化を削除するには、暗号化された PDF ドキュメントと、PDF ドキュメントの暗号化に使用されたキーに対応する秘密鍵の両方が必要です。 暗号化された PDF ドキュメントから証明書ベースの暗号化を削除する際に、秘密鍵のエイリアス値が指定されます。公開鍵についての詳細情報に関しては、[証明書を使用した PDF ドキュメントの暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)を参照してください。
+暗号化された PDF ドキュメントから証明書ベースの暗号化を削除するには、暗号化された PDF ドキュメントと、PDF ドキュメントの暗号化に使用されたキーに対応する秘密鍵の両方が必要です。暗号化された PDF ドキュメントから証明書ベースの暗号化を削除する際に、秘密鍵のエイリアス値が指定されます。公開鍵についての詳細情報に関しては、[証明書を使用した PDF ドキュメントの暗号化](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates)を参照してください。
 
 >[!NOTE]
 >
->秘密鍵は AEM Forms Trust Store に保存されます。 証明書が配置されると、エイリアス値が指定されます。
+>秘密鍵は AEM Forms Trust Store に保存されます。証明書が配置されると、エイリアス値が指定されます。
 
 **PDF ドキュメントを保存**
 
@@ -654,7 +654,7 @@ PDF ドキュメントからパスワードベースの暗号化を削除する�
 
 **暗号化サービスクライアントの作成**
 
-プログラムによって暗号化サービスの操作を実行するには、暗号化サービスクライアントを作成する必要があります。Java Encryption Service API を使用している場合は、`EncrytionServiceClient` オブジェクトを作成します。 Web サービス Encryption Service API を使用している場合は、`EncryptionServiceService` オブジェクトを作成します。
+プログラムによって暗号化サービスの操作を実行するには、暗号化サービスクライアントを作成する必要があります。Java Encryption Service API を使用している場合は、`EncrytionServiceClient` オブジェクトを作成します。Web サービス Encryption Service API を使用している場合は、`EncryptionServiceService` オブジェクトを作成します。
 
 **暗号化された PDF ドキュメントを取得**
 
@@ -789,7 +789,7 @@ Encryption API（web サービス）を使用して、パスワードベース�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
 
 次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
@@ -801,7 +801,7 @@ Encryption API（web サービス）を使用して、パスワードベース�
 
 **暗号化サービスクライアントの作成**
 
-プログラムによって暗号化サービスの操作を実行するには、暗号化サービスクライアントを作成する必要があります。Java Encryption Service API を使用している場合は、`EncrytionServiceClient` オブジェクトを作成します。 Web サービス Encryption Service API を使用している場合は、`EncryptionServiceService` オブジェクトを作成します。
+プログラムによって暗号化サービスの操作を実行するには、暗号化サービスクライアントを作成する必要があります。Java Encryption Service API を使用している場合は、`EncrytionServiceClient` オブジェクトを作成します。Web サービス Encryption Service API を使用している場合は、`EncryptionServiceService` オブジェクトを作成します。
 
 **暗号化された PDF 文書の取得**
 
@@ -966,7 +966,7 @@ PDF ドキュメントを保護する暗号化のタイプを判断するには�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
@@ -978,7 +978,7 @@ PDF ドキュメントを保護する暗号化のタイプを判断するには�
 
 **サービスクライアントの作成**
 
-プログラムによって暗号化サービスの操作を実行するには、暗号化サービスクライアントを作成する必要があります。Java Encryption Service API を使用している場合は、`EncrytionServiceClient` オブジェクトを作成します。 Web サービス Encryption Service API を使用している場合は、`EncryptionServiceService` オブジェクトを作成します。
+プログラムによって暗号化サービスの操作を実行するには、暗号化サービスクライアントを作成する必要があります。Java Encryption Service API を使用している場合は、`EncrytionServiceClient` オブジェクトを作成します。Web サービス Encryption Service API を使用している場合は、`EncryptionServiceService` オブジェクトを作成します。
 
 **暗号化された PDF ドキュメントを取得**
 

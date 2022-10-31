@@ -12,7 +12,7 @@ discoiquuid: bf4e7809-8def-4647-aaa6-3ac36865511f
 exl-id: 5aae7744-73cc-472b-a4e6-ecd88284b70c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1302'
 ht-degree: 49%
 
 ---
@@ -113,7 +113,7 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 
 * **[!UICONTROL モデレートのしきい値]**&#x200B;メンバーがレビューに何回フラグを設定したらモデレーターに通知するかを指定します。初期設定は 1 回 (1) です。
 
-* **[!UICONTROL フラグ付けの制限]**&#x200B;レビューに何回フラグが設定されたら、公開表示から非公開にするかを指定します。この数は **[!UICONTROL モデレートのしきい値]**. 初期設定は 5 です。
+* **[!UICONTROL フラグ付けの制限]**&#x200B;レビューに何回フラグが設定されたら、公開表示から非公開にするかを指定します。この数は **[!UICONTROL モデレートのしきい値]**. デフォルトは 5 です。
 
 ### レビューの概要（表示）をページに追加 {#adding-a-review-summary-display-to-a-page}
 

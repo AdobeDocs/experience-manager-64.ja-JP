@@ -16,7 +16,7 @@ role: Admin,User
 source-git-commit: 877eade71c2ec57ff534ba2649275111c5326d75
 workflow-type: tm+mt
 source-wordcount: '4220'
-ht-degree: 78%
+ht-degree: 80%
 
 ---
 
@@ -24,12 +24,12 @@ ht-degree: 78%
 
 Dynamic Mediaのビューアプリセットは、ユーザーがコンピューターの画面やモバイルデバイスでリッチメディアアセットを表示する方法を決定する一連の設定です。 管理者は、ビューアプリセットを作成できます。設定は、幅広いビューア設定オプションで使用できます。例えば、ビューアの表示サイズやズームの動作を変更できます。
 
-独自のHTML5 ビューアプリセットの作成とカスタマイズについて詳しくは、AdobeDynamic Media *HTML5 Viewer SDK API ドキュメント*. この SDK は、SDK 自体に組み込まれている IS パブリッシュサーバーで使用できます。ライブラリバージョンごとに、専用の SDK ドキュメントが付属しています。
+HTML5 ビューアーのプリセットを独自に作成およびカスタマイズする方法については、Adobe Dynamic Media の *HTML5 Viewer SDK API ドキュメント*&#x200B;を参照してください。この SDK は、SDK 自体に組み込まれている IS パブリッシュサーバーで使用できます。ライブラリバージョンごとに、専用の SDK ドキュメントが付属しています。
 
-パス: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
-例： 3.10 SDK: [https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
+パス：`<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`\
+たとえば、3.10 SDK の場合：[https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
 
-関連トピック [AdobeDynamic Mediaビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html).
+[Adobe Dynamic Media ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html?lang=ja)も参照してください。
 
 ここでは、ビューアプリセットを作成、編集および管理する方法について説明します。アセットをプレビューする際は、いつでもビューアプリセットを適用できます。詳しくは、[ビューアプリセットの適用](viewer-presets.md)を参照してください。
 
@@ -103,7 +103,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
 次の表に、Dynamic Mediaに付属する事前定義済みの標準提供ビューアプリセットを示します。
 
-関連トピック [ライブデモ](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html).
+[ライブデモ](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)も参照してください。
 
 ビューアでサポートされている Web ブラウザーとオペレーティングシステムのバージョンについては、ビューアのリリースノートに記載されています。
 
@@ -123,7 +123,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 | Carousel_Dotted_light | カルーセルセット | html5_carouselviewer_dotted_light.css |
 | Carousel_Numeric_dark | カルーセルセット | html5_carouselviewer_numeric_dark.css |
 | Carousel_Numeric_light | カルーセルセット | html5_carouselviewer_numeric_light.css |
-| Flyout | フライアウトズーム | html5_flyoutviewer.css |
+| フライアウト | フライアウトズーム | html5_flyoutviewer.css |
 | ImageSet_dark | 画像セット | html5_zoomviewer_dark.css |
 | ImageSet_light | 画像セット | html5_zoomviewer_light.css |
 | InlineMixedMedia_dark | 混在メディア | html5_inlinemixedmediaviewer_dark.css |
@@ -254,7 +254,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
 **パネル内の画像サムネールのディスプレイモードについて**
 
-インタラクティブビデオのビューアプリセットを作成または編集する際に、どのビューアプリセットを選択するかを指定できます **[!UICONTROL ディスプレイモード]** 選択時に使用する設定 `InteractiveSwatches` から **[!UICONTROL 選択したコンポーネント]** 下のプルダウンメニュー **[!UICONTROL 動作]** タブをクリックします。 選択するディスプレイモードは、ビデオの再生中にサムネールを表示する方法とタイミングに影響します。次のいずれかを選択できます。 `segment`表示モード（デフォルト）または `continuous`表示モード。
+インタラクティブビデオのビューアプリセットを作成または編集する際に、どのビューアプリセットを選択するかを指定できます **[!UICONTROL ディスプレイモード]** 選択時に使用する設定 `InteractiveSwatches` から **[!UICONTROL 選択したコンポーネント]** 下のプルダウンメニュー **[!UICONTROL 動作]** タブをクリックします。 選択するディスプレイモードは、ビデオの再生中にサムネールを表示する方法とタイミングに影響します。`segment`ディスプレイモード（デフォルト）または `continuous` ディスプレイモードを選択できます。
 
 | ディスプレイモード | 説明 |
 |---|---|
@@ -313,7 +313,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 1. AEMの左上隅にあるAEMロゴをタップし、左側のレールでをタップします。 **[!UICONTROL ツール/アセット/ビューアプリセット]**.
 1. の **[!UICONTROL ビューアプリセット]** ページの **[!UICONTROL 都道府県]** 列ヘッダーで、切り替えをタップして、ビューアプリセットをアクティベートまたはアクティベート解除します。
 
-   アクティベートされたビューアプリセットには、（青いボックスで）右側にトグルしたアイコンが示されます。アクティベート解除されたビューアプリセットには、（薄いグレーのボックスで）左側にトグルしたアイコンが示されます。
+   アクティベートされたビューアプリセットには、右側の青いボックスに切替スイッチが表示されます。アクティベート解除されたビューアプリセットには、左側の薄いグレーのボックスに切替スイッチが表示されます。
 
 ## Dynamic Mediaビューアプリセットの公開 {#publishing-viewer-presets}
 

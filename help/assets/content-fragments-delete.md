@@ -15,7 +15,7 @@ role: User
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '460'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
 
@@ -95,6 +95,6 @@ ht-degree: 96%
 
 `add` および `modify` 権限も、CRXDE Lite で管理することができます。また、ユーザー管理コンソールを使用して管理することもできます。
 
-例えば、`remove` グループの `content-authors-no-delete` 権限の定義は次のようになります。
+例えば、`remove` グループの権限 `content-authors-no-delete` の定義は次のようになります。
 
 ![cf-delete-03](assets/cf-delete-03.png)
