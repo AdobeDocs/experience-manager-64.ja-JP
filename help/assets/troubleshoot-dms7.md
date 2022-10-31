@@ -9,7 +9,7 @@ exl-id: d8cc94b0-eacf-4e76-bd50-7934bbc28c92
 feature: Troubleshooting
 role: Admin,User
 mini-toc-levels: 3
-source-git-commit: 39518ffbbcd1368cff02c356246dc5b430cc14d6
+source-git-commit: 48e75239b9934ebe6c3c0d4f76b7990372646f23
 workflow-type: tm+mt
 source-wordcount: '1395'
 ht-degree: 90%
@@ -45,7 +45,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
 
 | **プロパティ** | **例** | **説明** |
 |---|---|---|
-| `<object_node>/jcr:content/metadata/dam:scene7ID` | `a|364266` | ノードが Dynamic Media にリンクされていることを示す全般的インジケーター。 |
+| `<object_node>/jcr:content/metadata/dam:scene7ID` | `a\|364266` | ノードが Dynamic Media にリンクされていることを示す全般的インジケーター。 |
 | `<object_node>/jcr:content/metadata/dam:scene7FileStatus` | **[!UICONTROL PublishComplete]** またはエラーテキスト | Dynamic Media へのアセットアップロードのステータス。 |
 | `<object_node>/jcr:content/metadata/dam:scene7File` | `myCompany/myAssetID` | Dynamic Media のリモートアセットへの URL を生成するには、これを入力する必要があります。 |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | `success` か `failed:<error text>` のどちらかにする必要があります。 | セット（スピンセット、画像セットなど）、画像プリセット、ビューアプリセット、アセットの画像マップの更新、編集された画像などの同期ステータス。 |
