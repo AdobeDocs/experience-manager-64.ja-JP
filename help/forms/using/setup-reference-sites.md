@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 2feb4a9c-57ad-4c6b-a572-0047bc409bbb
 exl-id: 9c5d956c-06bc-4428-afcd-02b4f81b802f
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '2911'
-ht-degree: 47%
+ht-degree: 42%
 
 ---
 
@@ -29,16 +29,16 @@ AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の�
 * データを統合して各種のデータソースに接続し、データをフォームに事前に取り込み、フォームデータモデル経由でフォームを送信。
 * ビジネスの各種プロセスとワークフローを自動化するためのフォームワークフロー。
 * 高度なユーザーデータ管理および処理機能。
-* アダプティブフォームに安全に署名して送信するための Adobe Sign との統合。
+* Acrobat Signとの統合により、アダプティブフォームに安全に署名して送信することができます。
 * ターゲットを設定したレコメンデーションを提供し、フォームからの ROI を最大化する A/B テストを実行するための Adobe Target との統合。
 * フォームとキャンペーンのパフォーマンスを計測し、十分な情報を得た上で意志決定を行うための Adobe Analytics との統合。
 * フォーム入力の操作性が向上。
 
 リファレンスサイトには、独自のアセットを作成するためのテンプレートとして使用可能なアセットが用意されています。これらのアセットは、繰り返し使用することができます。
 
-* アダプティブフォームに安全に署名して送信するための Adobe Sign との統合。
+* Acrobat Signとの統合により、アダプティブフォームに安全に署名して送信することができます。
 
-* アダプティブフォームに安全に署名して送信するための Adobe Sign との統合。
+* Acrobat Signとの統合により、アダプティブフォームに安全に署名して送信することができます。
 
 ## リファレンスサイトの設定手順と前提条件 {#prerequisites-and-steps-to-set-up-reference-sites}
 
@@ -50,9 +50,9 @@ AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の�
 
 * **SMTP サービス** 任意の SMTP サービスを使用することができます。
 
-* **Adobe Sign開発者アカウントとAdobe Sign API アプリケーション**
+* **Acrobat Sign開発者アカウントとAcrobat Sign API アプリケーション**
 
-   デジタル署名機能を使用するには、Adobe Sign開発者アカウントが必要です。 詳しくは、「[Adobe Sign](https://acrobat.adobe.com/jp/ja/why-adobe/developer-form.html)」を参照してください。
+   デジタル署名機能を使用するには、Acrobat Sign開発者アカウントが必要です。 詳しくは、 [Acrobat Sign](https://acrobat.adobe.com/jp/ja/why-adobe/developer-form.html).
 
 * AEM Formsと統合するMicrosoft Dynamics 365 の実行中のインスタンス。 リファレンスサイトを実行するには、サンプルデータをMicrosoft Dynamics インスタンスに読み込んで、リファレンスサイトで使用されるインタラクティブ通信に事前に入力します。
 * Formsアドオンパッケージを含むAEM 6.4 の実行インスタンス。 詳しくは、「[AEM Forms のインストールと設定](installing-configuring-aem-forms-osgi.md)」を参照してください。
@@ -74,7 +74,7 @@ AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の�
   <tr> 
    <td><a href="#ssl">SSL の設定</a></td> 
    <td>オーサーとパブリッシュ<br /> </td> 
-   <td>Adobe Sign とのセキュアな通信を行うために、SSL 経由の HTTP を有効にします。</td> 
+   <td>Acrobat Signとの安全な通信のために、HTTP over SSL を有効にします。</td> 
   </tr> 
   <tr> 
    <td><p><a href="#externalizer">Day CQ Link Externalizer の設定</a></p> </td> 
@@ -112,12 +112,12 @@ AEM Forms のリファレンスサイトでは、以下に示す AEM Forms の�
    <td>AEM FormsとMicrosoft Dynamics 間の通信を有効にするように、AEM Formsで OAuth クラウドサービスを設定します。 </td> 
   </tr> 
   <tr> 
-   <td><a href="#scheduler">Adobe Sign スケジューラーの設定</a></td> 
+   <td><a href="#scheduler">Acrobat Sign Scheduler の設定</a></td> 
    <td>オーサーとパブリッシュ<br /> </td> 
    <td>ステータスを 2 秒間隔で確認するようにスケジューラーの設定を変更します。</td> 
   </tr> 
   <tr> 
-   <td><a href="#sign-service">リファレンスサイトの Adobe Sign クラウドサービスの設定</a></td> 
+   <td><a href="#sign-service">参照サイトの設定Acrobat SignCloud Service</a></td> 
    <td>オーサーとパブリッシュ<br /> </td> 
    <td>リファレンスサイトパッケージに付属している設定を、有効な資格情報で設定し直す必要があります。</td> 
   </tr> 
@@ -144,7 +144,7 @@ AEM Formsのインストールとデプロイ ( [OSGi へのAEM Formsのイン�
 
 ## SSL の設定 {#ssl}
 
-Adobe Sign サーバーとの通信を行うには、SSL を設定する必要があります。詳細な手順については、 [HTTP over SSL の有効化](/help/sites-administering/ssl-by-default.md).
+Acrobat Signサーバーと通信するには、SSL 設定が必要です。 詳細な手順については、 [HTTP over SSL の有効化](/help/sites-administering/ssl-by-default.md).
 
 >[!CAUTION]
 >
@@ -274,33 +274,33 @@ AEM FormsとMicrosoft Dynamics 間の通信を有効にするように、AEM For
 1. 入力リクエストセクションで、顧客 ID の値を「900001」と指定し、 **[!UICONTROL テスト]**. 「出力」セクションには、顧客 ID 900001のMicrosoft Dynamics から取得したレコードが表示されます。
 1. パブリッシュインスタンスで手順 1～6 を繰り返します。
 
-## Adobe Sign スケジューラーの設定 {#scheduler}
+## Acrobat Sign Scheduler の設定 {#scheduler}
 
 オーサーインスタンスとパブリッシュインスタンスの両方で以下の手順を実行します。
 
 1. AEM Web Configuration コンソール ( ) に移動します。 `https://[server]:[host]/system/console/configMgr`.
-1. 検索とタップ **[!UICONTROL Adobe Sign Configuration Service]** をクリックして、設定用に開きます。
+1. 検索とタップ **[!UICONTROL Acrobat Sign Configuration Service]** をクリックして、設定用に開きます。
 1. 設定 **[!UICONTROL ステータス更新スケジューラの式]** as **0 0/2 &amp;ast;&amp;ast;&amp;ast;?**.
 
    >[!NOTE]
    >
-   >上記のようにスケジューラーを設定すると、Adobe Sign サービスのステータスが 2 分間隔で確認されます。
+   >上記のスケジューラー設定は、2 分ごとにAcrobat Signサービスのステータスを確認します。
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 
-## リファレンスサイトの Adobe Sign クラウドサービスの設定 {#sign-service}
+## リファレンスサイトのAcrobat Sign Cloud Service の設定 {#sign-service}
 
 オーサーインスタンスとパブリッシュインスタンスの両方で以下の手順を実行します。
 
-1. に移動します。 **[!UICONTROL ツール/Cloud Services/ Adobe Sign /グローバル]**. 選択 **[!UICONTROL AEM Formsリファレンスサイトの署名]** とタップします。 **[!UICONTROL プロパティ]**.
+1. に移動します。 **[!UICONTROL ツール/Cloud Services/ Acrobat Sign /グローバル]**. 選択 **[!UICONTROL AEM Formsリファレンスサイトの署名]** とタップします。 **[!UICONTROL プロパティ]**.
 
    >[!CAUTION]
    >
-   >https://[ホスト]:[ssl_port]/mnt/overlay/adobesign/cloudservices/adobesign/properties.html URL が、Adobe Sign API アプリケーションの OAuth 設定のリダイレクト URL リストに追加されます。
+   >https://[ホスト]:[ssl_port]/mnt/overlay/adobesign/cloudservices/adobesign/properties.html URL が、Acrobat Sign API アプリケーションの OAuth 設定のリダイレクト URL リストに追加されます。
 
-1. クライアント ID と、Adobe Sign アプリケーション OAuth 設定の秘密鍵を指定します。
-1. （オプション） **[!UICONTROL 添付ファイルにAdobe Signも有効にする]** オプションを選択し、をタップします。 **[!UICONTROL Adobe Signに接続]**. この操作により、アダプティブフォームの添付ファイルが、署名用に送信された対応する Adobe Sign ドキュメントに添付されます。
-1. タップ **[!UICONTROL Adobe Signに接続]** Adobe Signの資格情報を使用してログインします。
+1. クライアント ID とAcrobat Signアプリケーション OAuth 設定の秘密鍵を指定します。
+1. （オプション） **[!UICONTROL 添付ファイルにAcrobat Signも有効にする]** オプションを選択し、をタップします。 **[!UICONTROL Acrobat Signに接続]**. アダプティブフォームに添付されたファイルが、署名用に送信された対応するAcrobat Signドキュメントに追加されます。
+1. タップ **[!UICONTROL Acrobat Signに接続]** Acrobat Signの資格情報を使用してログインします。
 
 ## フォーム共通設定サービスの構成 {#anonymous}
 

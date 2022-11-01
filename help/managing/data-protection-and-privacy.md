@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4/MANAGING
 topic-tags: grdp, introduction
 discoiquuid: 93e71efe-c1c6-4d83-9b57-6c70f7bc0b80
 exl-id: 46ad04b1-a660-4cdd-8649-5cdb00dbcae3
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '927'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -130,7 +130,7 @@ AEM Forms に含まれるコンポーネントやワークフローは、ビジ�
 
 * [フォームポータル](/help/forms/using/forms-portal-handling-user-data.md)
 * [Correspondence Management](/help/forms/using/correspondence-management-handling-user-data.md)
-* [Adobe Sign との統合](/help/forms/using/integration-adobe-sign-handling-user-data.md)
+* [Acrobat Signとの統合](/help/forms/using/integration-adobe-sign-handling-user-data.md)
 * [OSGi でのフォームに特化したワークフロー](/help/forms/using/forms-workflow-osgi-handling-user-data.md)
 * [Forms JEE のワークフロー](/help/forms/using/forms-workflow-jee-handling-user-data.md)（AEM Forms JEE のみ）
 * [Document Security](/help/forms/using/document-security-handling-user-data.md)（AEM Forms JEE のみ）

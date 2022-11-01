@@ -11,10 +11,10 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 role: Admin
 exl-id: 183ed9c6-6a9a-4932-8405-5ae2c6fac1ec
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '827'
-ht-degree: 95%
+ht-degree: 90%
 
 ---
 
@@ -92,9 +92,9 @@ AEM 6.2 Forms と AEM 6.3 Forms の場合、AEM 6.4 Forms へ直接アップグ�
       WHERE `key` = 'dataType'
       ```
 
-   * **Adobe Sign の再設定（AEM 6.2 Forms 以前のバージョンをアップグレードする場合のみ）**
+   * **(AEM 6.2 Formsまたは以前のバージョンからのアップグレードのみの場合 )Acrobat Signの再設定**
 
-      Adobe Sign を以前のバージョンの AEM Forms で設定してある場合は、AEM Cloud サービスから Adobe Sign を再設定します。詳細については、「[Adobe Sign を AEM Forms に統合する](/help/forms/using/adobe-sign-integration-adaptive-forms.md)」を参照してください。
+      以前のバージョンのAEM FormsでAcrobat Signを設定していた場合は、AEM Cloud Services からAcrobat Signを再設定します。 詳しくは、 [Acrobat SignとAEM Formsの統合](/help/forms/using/adobe-sign-integration-adaptive-forms.md).
 
    * **分析機能とレポートの再設定（バージョン 6.2 以前の AEM Forms をアップグレードする場合のみ）** 
 

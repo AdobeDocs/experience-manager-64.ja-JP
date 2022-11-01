@@ -10,7 +10,7 @@ topic-tags: publish
 content-strategy: max-2018
 discoiquuid: 7dd08e81-5df6-4522-9f8c-48b4bba8927b
 exl-id: 1afef311-c1e6-48ec-ae23-dbd553a99ac6
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '1413'
 ht-degree: 98%
@@ -19,11 +19,11 @@ ht-degree: 98%
 
 # フォームとドキュメントの公開と非公開 {#publishing-and-unpublishing-forms-and-documents}
 
-AEM Forms では、フォームを簡単に作成、公開、および非公開できます。AEM Forms の詳細については、[フォーム管理の概要](/help/forms/using/introduction-managing-forms.md)を参照してください。
+AEM Forms では、フォームを簡単に作成し、公開したり非公開にしたりできます。AEM Forms の詳細については、[フォーム管理の概要](/help/forms/using/introduction-managing-forms.md)を参照してください。
 
-AEM Forms サーバーは 2 つのインスタンス（オーサーとパブリッシュ）を提供します。オーサーインスタンスは、フォームのアセットとリソースを作成し管理するためのものです。パブリッシュインスタンスは、エンドユーザーに対して使用可能なアセットや関連リソースを保持するためのものです。XDP フォームと PDF フォームはオーサーモードで読み込むことができます。詳しくは、 [AEM Formsでの XDP およびPDFドキュメントの取得](/help/forms/using/get-xdp-pdf-documents-aem.md).
+AEM Forms サーバーは 2 つのインスタンス（オーサーとパブリッシュ）を提供します。オーサーインスタンスは、フォームのアセットとリソースを作成し管理するためのものです。パブリッシュインスタンスは、エンドユーザーに対して使用可能なアセットや関連リソースを保持するためのものです。XDP フォームと PDF フォームはオーサーモードで読み込むことができます。詳しくは、[AEM Forms での XDP および PDF ドキュメントの取得](/help/forms/using/get-xdp-pdf-documents-aem.md)を参照してください。
 
-## サポートされているアセットタイプ  {#supported-assets-nbsp}
+## サポートしているアセット {#supported-assets-nbsp}
 
 AEM Forms では、次のアセットタイプをサポートしています。
 
@@ -44,9 +44,9 @@ AEM Forms では、次のアセットタイプをサポートしています。
 アダプティブフォームには、自動的に公開されない構成、設定、カスタマイズが含まれる場合があります。アダプティブフォームを発行する前に、以下のリソースを発行またはアクティブ化することをお勧めします。
 
 * 編集可能なアダプティブフォームテンプレート
-* Adobe Sign、Typekit、reCAPTCHA、フォームデータモデルのクラウドサービスの構成
+* Acrobat Sign、Typekit、reCAPTCHA、およびフォームデータモデルのCloud Service設定
 * その他のクラウドサービスの設定は、ユーザーが管理者権限を保有している場合にのみアクティブ化されます。
-* カスタマイズ。以下のようなものが含まれます。
+* カスタマイズ. 以下のようなものが含まれます。
 
    * カスタムレイアウト
    * カスタム外観
@@ -99,7 +99,7 @@ AEM Forms では、次のアセットタイプをサポートしています。
 
    アセットの発行後に、Forms Portal を使用して、すべてのアセットを Web ページに表示できます。詳細については、「[ポータル上のフォーム発行について](/help/forms/using/introduction-publishing-forms.md)」を参照してください。
 
-## すべての Correspondence Management アセットを公開する {#publish-all-the-correspondence-management-assets}
+## すべての Correspondence Management アセットの公開 {#publish-all-the-correspondence-management-assets}
 
 AEM Forms では、サーバー上のすべての Correspondence Management アセットを 1 度で公開します。公開済みのアセットには、すべての Correspondence Management アセットと関連する依存性が含まれます。
 
@@ -155,7 +155,7 @@ AEM Forms では、フォームとドキュメントでアセットの公開と�
    >
    >選択されているアセットだけが非公開になり、子アセットと参照されているアセットは非公開にはなりません。
 
-## アセットまたはレターを以前に公開したバージョンに戻す {#revert-an-asset-or-letter-to-the-previously-published-version}
+## アセットまたはレターを以前の公開済みバージョンに戻す {#revert-an-asset-or-letter-to-the-previously-published-version}
 
 アセットまたはレターを編集して公開するたびに、アセットまたはレターのバージョンが作成されます。アセットまたはレターを、以前に公開したバージョンに戻すことができます。アセットまたはドキュメントの現在のバージョンに対して誰かが誤った操作をした場合、バージョンの巻き戻しが必要になることがあります。
 
@@ -184,7 +184,7 @@ AEM Forms では、フォームとドキュメントでアセットの公開と�
 
    >[!NOTE]
    >
-   >選択されているアセットだけが削除され、従属アセットは削除されません。アセットの参照を確認するには、![参照](assets/references.png) をタップしてからアセットを選択します。
+   >選択されているアセットだけが削除され、従属アセットは削除されません。アセットの参照を確認するには、 ![参照](assets/references.png) をタップしてからアセットを選択します。
    >
    >削除しようとしているアセットが別のアセットの子アセットである場合、削除されません。そのようなアセットを削除するには、別のアセットからのそのアセットへの参照を削除してから再度実行します。
 

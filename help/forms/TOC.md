@@ -8,7 +8,7 @@ user-guide-title: Adobe Experience Manager 6.4 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 35aea0e087334a1c1e6a708f2182bd9dee799dc0
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '3729'
 ht-degree: 97%
@@ -119,7 +119,7 @@ ht-degree: 97%
       + [Forms の JEE ワークフロー](using/forms-workflow-jee-handling-user-data.md)
       + [Forms ポータル](using/forms-portal-handling-user-data.md)
       + [Correspondence Management](using/correspondence-management-handling-user-data.md)
-      + [Adobe Sign との統合](/help/forms/using/integration-adobe-sign-handling-user-data.md)
+      + [Acrobat Signとの統合](/help/forms/using/integration-adobe-sign-handling-user-data.md)
       + [Document Security](/help/forms/using/document-security-handling-user-data.md)
    + AEM Forms 環境の堅牢化 {#hardening-aem-forms-environment}
       + [OSGi 環境における AEM Forms のセキュリティの強化](using/hardening-securing-aem-forms-environment.md)
@@ -161,7 +161,7 @@ ht-degree: 97%
 + アダプティブフォーム - 高度なオーサリング {#adaptive-forms-advanced-authoring}
    + [JSON スキーマを使用したアダプティブフォームの作成](using/adaptive-form-json-schema-form-model.md)
    + [XML スキーマを使ったアダプティブフォームの作成](using/adaptive-form-xml-schema-form-model.md)
-   + [アダプティブフォームで Adobe Sign を使用する](using/working-with-adobe-sign.md)
+   + [アダプティブフォームでのAcrobat Signの使用](using/working-with-adobe-sign.md)
    + [テーマの作成および使用](using/themes.md)
    + [アダプティブフォームのルールエディタ－](using/rule-editor.md)
    + [アダプティブフォームからフォームデータモデルサービスを呼び出すための API](using/invoke-form-data-model-services.md)
@@ -181,7 +181,7 @@ ht-degree: 97%
    + [アダプティブフォームのテスト自動化](using/calvin.md)
    + [アダプティブフォームのスタイル構成](using/styling-constructs-adaptive-forms.md)
    + [アダプティブフォームと XFA フォームテンプレートとの同期](using/synchronizing-adaptive-forms-xfa.md)
-   + [Adobe Sign の AEM Forms への統合](using/adobe-sign-integration-adaptive-forms.md)
+   + [Acrobat SignとAEM Formsの統合](using/adobe-sign-integration-adaptive-forms.md)
    + [フォームのアセットのレビューの作成と管理](using/create-reviews-forms.md)
    + [アダプティブフォームの標準検証エラーメッセージ](using/standard-validation-error-messages-adaptive-forms.md)
 + インタラクティブコミュニケーション {#interactive-communications}

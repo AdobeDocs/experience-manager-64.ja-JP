@@ -10,10 +10,10 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 266634ab-21d3-4aac-acfa-b799a7485507
 exl-id: ba65e853-d69a-4341-93c3-5628c60c403b
-source-git-commit: 7f80933dfe8439bbd57ef85ece96399f7ec39f64
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '1073'
-ht-degree: 47%
+ht-degree: 46%
 
 ---
 
@@ -46,7 +46,7 @@ Microsoft Edge をブラウザーとして使用している場合：
 * 選択 **[!UICONTROL 常にオフ]**.
 * ブラウザーを再起動します。
 
-## Platform {#platform}
+## プラットフォーム {#platform}
 
 * **操作ダッシュボード：**&#x200B;バックアップファイルに .zip 拡張子がない場合、プログレスバーが表示されない。（GRANITE-10713）
 * **HTL:** パッケージ宣言の末尾に空白文字がある Java Use オブジェクトが、SightlyJavaCompilerService をフリーズする (GRANITE-20836)
@@ -102,7 +102,7 @@ Microsoft Edge をブラウザーとして使用している場合：
 ### インストールとデプロイメント
 
 * （AEM Forms JEE の場合のみ）設定マネージャーの実行中に JBoss アプリケーションサーバーをブートストラップすると、EJB 呼び出しおよびブートストラップの失敗エラーが返される。ただし、それらは無視できます（参照番号 CQ-4229793）
-* AEM Formsを起動すると、 `SAX Security Manager could not be setup` 警告が表示されます。 （CQ-4297403）
+* AEM Forms を起動すると、`SAX Security Manager could not be setup` 警告が表示されます。（CQ-4297403）
 
 ### インタラクティブコミュニケーション
 
@@ -133,9 +133,9 @@ Microsoft Edge をブラウザーとして使用している場合：
 
 （CQ-4238462）
 
-### Adobe Sign との統合
+### Acrobat Sign統合
 
-* Adobe Sign スケジューラーが断続的に機能しなくなるので、署名中のフォームが送信に移動しない。問題を解決するには、 **Apache Sling Scheduler のサポート** AEM web コンソール (https://) からバンドル&#x200B;[*server*]:[*ポート*]/system/console/bundles に置き換えます。
+* Acrobat Signスケジューラーが断続的に動作を停止するので、フォームの保留中の署名は送信に移動しません。 問題を解決するには、 **Apache Sling Scheduler のサポート** AEM web コンソール (https://) からバンドル&#x200B;[*server*]:[*ポート*]/system/console/bundles に置き換えます。
 
 ### アダプティブフォームの作成
 

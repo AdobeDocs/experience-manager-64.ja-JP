@@ -9,10 +9,10 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 0c64940c-273d-4f23-afcb-38bf54cddd36
-source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '4108'
-ht-degree: 99%
+ht-degree: 97%
 
 ---
 
@@ -185,9 +185,9 @@ Adaptive forms では、ユーザー指定のデータを処理するために�
 * デフォルトの送信アクションが実際のユースケースに適していない場合は、カスタム送信アクションを作成できます。詳しくは、[アダプティブフォーム向けのカスタム送信アクションの作成](/help/forms/using/custom-submit-action-form.md)を参照してください。
 * サーバーサイドの検証を含めて、無効なデータ送信を防ぎます。
 
-アダプティブフォームで Adobe Sign の複数署名機能を活用できます。アダプティブフォームで Adobe Sign を設定する際は、以下を考慮してください。詳しくは、[アダプティブフォームでの Adobe Sign の使用](/help/forms/using/working-with-adobe-sign.md)を参照してください。
+アダプティブフォームでAcrobat Signの複数署名操作を活用することができます。 アダプティブフォームでAcrobat Signを設定する際は、以下の点を考慮してください。 詳しくは、 [アダプティブフォームでのAcrobat Signの使用](/help/forms/using/working-with-adobe-sign.md).
 
-* Adobe Sign が有効になっているアダプティブフォームは、すべての署名者がフォームに署名するまで送信されません。すべての署名者によりフォームが署名されるまで、フォームは「保留中の署名」状態で表示されます。
+* Acrobat Sign対応のアダプティブフォームは、すべての署名者がフォームに署名した後でのみ送信されます。 すべての署名者によりフォームが署名されるまで、フォームは「保留中の署名」状態で表示されます。
 * フォーム内署名機能を設定する、または送信時に署名者を署名ページにリダイレクトすることができます。
 * 連続署名または並列署名のどちらか適している方を設定します。
 

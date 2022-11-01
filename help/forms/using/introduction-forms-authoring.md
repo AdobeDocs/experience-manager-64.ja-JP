@@ -10,10 +10,10 @@ topic-tags: introduction, author
 discoiquuid: c7a1d13e-cb61-4082-8ae7-7f5eee9e0a51
 feature: Adaptive Forms
 exl-id: 62f1ddd3-9fc2-49dd-b588-0c3520e1cdd2
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '3045'
-ht-degree: 95%
+ht-degree: 94%
 
 ---
 
@@ -109,12 +109,12 @@ XML スキーマおよび JSON スキーマは、組織内のバックエンド�
    <th><strong>機能</strong></th> 
   </tr> 
   <tr> 
-   <td>Adobe Sign ブロック</td> 
-   <td>Adobe Sign を使用して署名する際に入力するフィールドのプレースホルダーを含むテキストブロックを追加します。</td> 
+   <td>Acrobat Sign Block</td> 
+   <td>Acrobat Signを使用して署名する際に入力するフィールドのプレースホルダーを含むテキストブロックを追加します。</td> 
   </tr> 
   <tr> 
    <td>ボタン</td> 
-   <td>ボタンを追加します。ボタンは、保存、リセット、進む、戻るなどのアクションを実行するように設定できます。</td> 
+   <td>ボタンを追加します。ボタンは、保存、リセット、進む、戻るなどのアクションを実行するように設定できます.</td> 
   </tr> 
   <tr> 
    <td>Captcha</td> 
@@ -154,7 +154,7 @@ XML スキーマおよび JSON スキーマは、組織内のバックエンド�
   </tr> 
   <tr> 
    <td>ファイル添付</td> 
-   <td><p>サポートされるドキュメントを参照してフォームに添付するためのボタンを追加します。</p> <p><strong>注：</strong>添付ファイルコンポーネントの場合、Adobe Sign が有効になっているアダプティブフォームで、事前に定義されたファイル形式のセットを使用することができます。詳しくは、「<a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html">サポートされているファイル形式</a>」を参照してください。</p> </td> 
+   <td><p>サポートされるドキュメントを参照してフォームに添付するためのボタンを追加します。</p> <p><strong>注意： </strong>添付ファイルコンポーネントでは、Acrobat Sign対応のアダプティブフォームで、事前に定義された一連のファイル形式をサポートしています。 詳しくは、「<a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html">サポートされているファイル形式</a>」を参照してください。</p> </td> 
   </tr> 
   <tr> 
    <td>ファイル添付リスト</td> 

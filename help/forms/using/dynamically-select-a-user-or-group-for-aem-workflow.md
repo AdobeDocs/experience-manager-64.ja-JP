@@ -8,10 +8,10 @@ content-type: troubleshooting
 topic-tags: publish
 discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
 exl-id: c63e6e5c-c4c9-45b8-8401-87ee37a30c97
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '920'
-ht-degree: 100%
+ht-degree: 84%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 大規模な組織では、プロセスのユーザーを動的に選択する必要があります。例えば、お客様に対応するフィールドエージェントを、お客様とエージェントの近さを基準として選択します。このようなシナリオで、エージェントは動的に選択されます。
 
-[OSGi における Forms Workflow](/help/forms/using/aem-forms-workflow.md) のタスクの割り当て手順および Adobe Sign 手順では、ユーザーを動的に選択するオプションが用意されています。ECMAScript バンドルまたは OSGi バンドルを使用して、タスクの割り当て手順の担当者を動的に選択したり、ドキュメントに署名手順の署名者を選択したりできます。
+タスクの割り当て手順とAcrobat Sign手順 [OSGi 上のForms中心のワークフロー](/help/forms/using/aem-forms-workflow.md) ユーザーを動的に選択するオプションを提供します。 ECMAScript バンドルまたは OSGi バンドルを使用して、タスクの割り当て手順の担当者を動的に選択したり、ドキュメントに署名手順の署名者を選択したりできます。
 
 ## ECMAScript を使用したユーザーまたはグループの動的な選択 {#use-ecmascript-to-dynamically-select-a-user-or-group}
 
@@ -73,11 +73,11 @@ var path = workflowData.getPayload().toString();
 }
 ```
 
-次のサンプル ECMAScript では、Adobe Sign 手順に担当者を動的に選択します。以下のスクリプトを使用する前に、スクリプトに記述されているユーザー情報（電子メールアドレスと電話番号）が正しいことを確認してください。スクリプトに記述されているユーザー情報が正しくない場合、関連するプロセスが失敗する可能性があります。
+以下のサンプル ECMAScript は、Acrobat Signの手順の担当者を動的に選択します。 以下のスクリプトを使用する前に、スクリプトに記述されているユーザー情報（電子メールアドレスと電話番号）が正しいことを確認してください。スクリプトに記述されているユーザー情報が正しくない場合、関連するプロセスが失敗する可能性があります。
 
 >[!NOTE]
 >
->Adobe Sign で ECMAScript を使用する場合、スクリプトは /apps/fd/workflow/scripts/adobesign/ にある必要があります。また、ユーザーのリストを返す getAdobeSignRecipients という名前の関数が含まれている必要があります。
+>Acrobat Sign用の ECMAScript を使用する場合、スクリプトは/apps/fd/workflow/scripts/adobesign/の crx-repository に配置され、ユーザーのリストを返すために getAdobeSignRecipients という名前の関数が必要です。
 
 ```
 function getAdobeSignRecipients() {
@@ -116,7 +116,7 @@ function getAdobeSignRecipients() {
 
 ## ユーザーまたはグループを動的に選択するための Java インターフェイスの使用 {#use-java-interface-to-dynamically-choose-a-user-or-group}
 
-[RecipientInfoSpecifier](https://helpx.adobe.com/jp/experience-manager/6-4/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java インターフェースを使用して、Adobe Sign やタスクの割り当て手順にユーザーまたはグループを動的に選択することができます。[RecipientInfoSpecifier](https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java インターフェイスを使用する OSGi バンドルを作成して、AEM Forms サーバーにデプロイできます。これにより、AEM ワークフローのタスクの割り当ておよび Adobe Sign コンポーネントで、オプションを選択できるようになります。
+以下を使用して、 [RecipientInfoSpecifier](https://helpx.adobe.com/jp/experience-manager/6-4/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Acrobat Signおよびタスクの割り当て手順でユーザーまたはグループを動的に選択する Java インターフェイス。 [RecipientInfoSpecifier](https://helpx.adobe.com/experience-manager/6-4/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java インターフェイスを使用する OSGi バンドルを作成して、AEM Forms サーバーにデプロイできます。これにより、AEM Workflow のタスクの割り当てコンポーネントとAcrobat Signコンポーネントで、このオプションを選択できるようになります。
 
 以下のコードサンプルをコンパイルするには、[AEM Forms Client SDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) jar および [granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) ファイルが必要です。これらの jar ファイルを、外部依存として OSGi バンドルプロジェクトに追加します。OSGi バンドルの作成には、任意の Java IDE を使用できます。以下の手順では、Eclipse を使用して OSGi バンドルを作成します。
 
@@ -232,11 +232,11 @@ function getAdobeSignRecipients() {
 
 1. バンドルを AEM Forms サーバーにアップロードします。AEM パッケージマネージャーを使用して、バンドルを AEM Forms サーバーに読み込むことができます。
 
-バンドルをインポートすると、Adobe Sign 手順やタスクの割り当て手順で、ユーザーまたはグループを動的に選択する Java インターフェイスを選択できるようになります。
+バンドルが読み込まれると、Acrobat Signとタスクの割り当ての手順で、ユーザーまたはグループを動的に選択するための Java インターフェイスを選択するオプションがで使用できるようになります。
 
 ### ユーザーまたはグループを動的に選択するためのサンプル Java コード {#sample-java-code-to-dynamically-choose-a-user-or-a-group}
 
-以下のサンプル Java コードでは、Adobe Sign 手順に担当者を動的に選択します。OSGi バンドルのコードを使用します。以下のコードを使用する前に、コードに記述されているユーザー情報（電子メールアドレスと電話番号）が正しいことを確認してください。コードに記述されているユーザー情報が正しくない場合、関連するプロセスが失敗する可能性があります。
+以下のサンプルコードは、Acrobat Sign手順の担当者を動的に選択します。 OSGi バンドルのコードを使用します。以下のコードを使用する前に、コードに記述されているユーザー情報（電子メールアドレスと電話番号）が正しいことを確認してください。コードに記述されているユーザー情報が正しくない場合、関連するプロセスが失敗する可能性があります。
 
 ```java
 /*************************************************************************

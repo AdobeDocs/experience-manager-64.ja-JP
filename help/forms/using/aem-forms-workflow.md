@@ -1,18 +1,18 @@
 ---
 title: OSGi 上の Forms 中心のワークフロー
-seo-title: Rapidly build adaptive forms-based processes, automate document services operations, and use Adobe Sign with AEM workflows
-description: AEM Forms Workflow を使用することで、レビューや承認の自動化と迅速な構築、ドキュメントサービス（PDF ドキュメントの別のフォーマットへの変換など）の開始、Adobe Sign 署名ワークフローの統合などを行うことができます。
-seo-description: Use AEM Forms Workflow to automate and rapidly build review and approvals, to start document services (For example, to convert a PDF document to another format), integrate with Adobe Sign signature workflow, and more.
+seo-title: Rapidly build adaptive forms-based processes, automate document services operations, and use Acrobat Sign with AEM workflows
+description: AEM Forms Workflow を使用して、レビューと承認の自動化と迅速な構築を行い、ドキュメントサービスを開始する ( 例えば、PDFドキュメントを別の形式に変換する場合 )、Acrobat Sign署名ワークフローなどと統合します。
+seo-description: Use AEM Forms Workflow to automate and rapidly build review and approvals, to start document services (For example, to convert a PDF document to another format), integrate with Acrobat Sign signature workflow, and more.
 uuid: 46be7ec6-d5cc-498a-9484-e66a29527064
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: document_services, publish
 discoiquuid: f8df5fa3-3843-4110-a46d-9a524d2657cd
 noindex: true
 exl-id: fa39a4e8-ae22-4356-8935-44fdf1f4f609
-source-git-commit: 251000ec9a67e5175c708d558c3c71a2061a1c9e
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '2866'
-ht-degree: 98%
+ht-degree: 93%
 
 ---
 
@@ -26,13 +26,13 @@ ht-degree: 98%
 
 ## OSGi 上の Forms 中心のワークフローの導入 {#introduction-to-forms-centric-workflow-on-osgi}
 
-AEM ワークフローを使用することで、アダプティブフォームベースのワークフローをすばやく構築することができます。これらのワークフローをレビューや承認、ビジネスプロセスフローに使用して、ドキュメントサービスを開始したり、Adobe Sign 署名ワークフローと統合したり、また類似の操作を行うことができます。例えば、クレジットカードの申請処理、従業員の休暇承認ワークフロー、フォームの PDF ドキュメントとしての保存などです。さらに、これらのワークフローは組織内やネットワークファイアウォール全体で使用することができます。
+AEM ワークフローを使用することで、アダプティブフォームベースのワークフローをすばやく構築することができます。これらのワークフローは、レビューと承認、ビジネスプロセスフローに使用して、ドキュメントサービスを開始し、Acrobat Sign署名ワークフローと統合したり、同様の操作をおこなうことができます。 例えば、クレジットカードの申請処理、従業員の休暇承認ワークフロー、フォームの PDF ドキュメントとしての保存などです。さらに、これらのワークフローは組織内やネットワークファイアウォール全体で使用することができます。
 
 OSGi での Forms 中心のワークフローを使用すると、JEE スタックに本格的なプロセス管理機能をインストールしなくても、OSGi スタックで様々なタスクのワークフローを迅速に構築およびデプロイできます。ワークフローの開発と管理では、従来の AEM ワークフロー機能と AEM インボックス機能が使用されます。ワークフローにより、複数のソフトウェアシステム、ネットワーク、部門、組織にわたる実際のビジネスプロセスを自動化するための基礎が構築されます。
 
 これらのワークフローは一度設定すると、手動でトリガーして定義済みプロセスを完了することも、ユーザーによるフォームまたは [Correspondence Management](/help/forms/using/cm-overview.md) レターの送信時にワークフローをプログラムで実行することもできます。この拡張 AEM ワークフロー機能により、2 つの類似した機能を AEM Forms で使用することができます。デプロイメントを計画する際に、どちらの機能を使用するかを決める必要があります。OSGi での Forms 中心の AEM ワークフローと JEE での Process Management の[比較](/help/forms/using/capabilities-osgi-jee-workflows.md)を参照してください。さらに、デプロイメントトポロジーについては、「[AEM Forms のアーキテクチャとデプロイメントトポロジー](/help/forms/using/aem-forms-architecture-deployment.md)」を参照してください。
 
-OSGi 上の Forms 中心のワークフローは、[AEM インボックス](/help/sites-authoring/inbox.md)を拡張し、AEM ワークフローエディターに追加のコンポーネント（手順）を提供することで、AEM Forms 中心のワークフローをサポートします。拡張 AEM インボックスは、[AEM Forms ワークスペース](/help/forms/using/introduction-html-workspace.md)と同様の機能を持ちます。人間中心のワークフロー（承認やレビューなど）とともに AEM ワークフローを使用して、[ドキュメントサービス](/help/sites-developing/workflows-step-ref.md)に関する操作（PDF の生成など）と、Adobe Sign による電子署名処理を自動化することができます。
+OSGi 上の Forms 中心のワークフローは、[AEM インボックス](/help/sites-authoring/inbox.md)を拡張し、AEM ワークフローエディターに追加のコンポーネント（手順）を提供することで、AEM Forms 中心のワークフローをサポートします。拡張 AEM インボックスは、[AEM Forms ワークスペース](/help/forms/using/introduction-html-workspace.md)と同様の機能を持ちます。人間中心のワークフロー（承認、レビューなど）の管理に加え、AEMワークフローを使用して自動化できます [ドキュメントサービス](/help/sites-developing/workflows-step-ref.md)関連する操作 ( 例えば、PDFの生成 ) および電子署名 (Acrobat Sign) ドキュメント。
 
 次の図は、OSGi 上の Forms 中心のワークフローを作成、実行、監視するためのエンドツーエンドの手順を示します。
 
@@ -43,7 +43,7 @@ OSGi 上の Forms 中心のワークフローは、[AEM インボックス](/hel
 * ワークフローは、実世界のビジネスのプロセスを表すものです。実世界のビジネスプロセスを維持し、そのビジネスプロセスの参加者のリストを準備しましょう。また、ワークフローの作成を開始する前にコラテラル（アダプティブフォーム、PDF ドキュメントなど）を準備しましょう。
 * ワークフローには複数のステージが含まれることがあります。これらのステージは、AEM インボックスに表示され、ワークフローの進捗を分かりやすくします。ビジネスプロセスを論理ステージに分割します。
 * AEM ワークフローのタスクの割り当て手順で、電子メール通知をユーザーまたは担当者に送信するように設定することができます。これにより、[電子メール通知を有効にする](#configure-email-service)ことができます。
-* ワークフローでは、電子署名に Adobe Sign も使用することができます。ワークフローで Adobe Sign を使用する予定がある場合、ワークフローで使用する前に [AEM Forms 用の Adobe Sign の設定](/help/forms/using/adobe-sign-integration-adaptive-forms.md)を行う必要があります。
+* ワークフローでは、電子署名にAcrobat Signを使用することもできます。 ワークフローでAcrobat Signを使用する予定がある場合、 [AEM Forms用のAcrobat Signの設定](/help/forms/using/adobe-sign-integration-adaptive-forms.md) ワークフローで使用する前に。
 
 ## ワークフローモデルの作成 {#create-a-workflow-model}
 
@@ -57,11 +57,11 @@ AEM には、提供されているワークフロー手順を使用してワー�
 
 ### 承認およびレビューワークフローのモデルの作成 {#create-a-model-for-an-approval-and-review-workflow}
 
-承認およびレビューワークフローは、判断に人間の介入を必要とするタスクに使用されます。次の例では、金融機関本部で記入される住宅ローン申し込み用のワークフローモデルを作成します。アプリケーションが記入されると、承認に送信されます。その後、承認されたアプリケーションは申込者に送信され、Adobe Sign を使用した電子署名が求められます。
+承認およびレビューワークフローは、判断に人間の介入を必要とするタスクに使用されます。次の例では、金融機関本部で記入される住宅ローン申し込み用のワークフローモデルを作成します。アプリケーションが記入されると、承認に送信されます。その後、承認された申請は、Acrobat Signを使用して電子署名を申請する申請者に送信されます。
 
 サンプルは、下記に添付されたパッケージとしてご利用いただけます。パッケージマネージャーを使ってサンプルをインポートしてインストールします。また、アプリケーションのワークフローモデルを手動で作成するには、次の手順を実行します。
 
-この例では、金融機関の担当者が記入する住宅ローン申し込みのためのワークフローモデルを作成します。アプリケーションが記入されると、承認に送信されます。その後、承認されたアプリケーションはお客様に送信され、Adobe Sign を使用した電子署名が求められます。パッケージマネージャーを使ってサンプルを読み込んでインストールできます。
+この例では、金融機関の担当者が記入する住宅ローン申し込みのためのワークフローモデルを作成します。アプリケーションが記入されると、承認に送信されます。その後、承認済みのアプリケーションが、Acrobat Signを使用した電子署名用にお客様に送信されます。 パッケージマネージャーを使ってサンプルを読み込んでインストールできます。
 
 [ファイルを入手](assets/example-mortgage-loan-application.zip)
 

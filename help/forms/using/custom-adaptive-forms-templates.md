@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: customization
 discoiquuid: c6115b64-e06f-4b5e-b7f9-876553c7627f
 exl-id: 83f978ca-d451-4d27-820f-3620331285cf
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '1145'
-ht-degree: 98%
+ht-degree: 96%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 98%
 AEM QuickStart では、次のアダプティブフォームテンプレートを提供します。
 
 * 基本：タブが左側にあるレイアウトを使用して複数タブのアダプティブフォームを作成し、任意の順序でタブにアクセスできます。
-* 基本（Adobe Sign 付き）：複数のタブとウィザードを使用してフォームを作成します。タブが左側にあるレイアウトを使用し、任意の順序でタブにアクセスできるようにします。署名と検証には Adobe Document Cloud eSign サービスを使用します。
+* Acrobat Signの基本：複数のタブとウィザードを含むフォームを作成できます。 タブが左側にあるレイアウトを使用し、任意の順序でタブにアクセスできるようにします。署名と検証には Adobe Document Cloud eSign サービスを使用します。
 * 空白のテンプレート：ヘッダー、フッター、初期コンテンツのないフォームを作成します。テキストボックス、ボタン、画像などのコンポーネントを追加できます。空白テンプレートでは、[AEM サイトページに埋め込む](/help/forms/using/embed-adaptive-form-aem-sites.md)ことができるフォームを作成します。
 
 これらのテンプレートでは、`sling:resourceType` プロパティが、対応するページのコンポーネントに設定されています。ページコンポーネントは、アダプティブフォームのコンテナを含む CQ ページをレンダリングすることでアダプティブフォームをレンダリングします。

@@ -9,10 +9,10 @@ topic-tags: installing
 discoiquuid: 1bb8360c-5543-484e-9712-590822211298
 role: Admin
 exl-id: 45b0fb99-9f7f-47e6-a4de-4db321867f8f
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '1799'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 100%
 
 AEM Forms は、エンドユーザーからデータを取得するためのアダプティブフォーム、HTML5 フォームおよび PDF フォームのフォームセットを提供します。また、Web ページ上の利用可能なすべてのフォームを一覧表示し、フォームの使用状況を分析して対象ユーザーを絞るためのツールも提供します。これらの機能は、AEM Forms のアドオンパッケージに含まれています。アドオンパッケージは、AEM のオーサーインスタンスまたはパブリッシュインスタンスに展開されます。
 
-**アダプティブフォーム：**&#x200B;インタラクティブで魅力的なこのフォームは、デバイスの画面サイズに基づいて外観を変更できます。また、アダプティブフォームは Adobe Analytics、Adobe Sign および Adobe Target と統合できます。これにより、人口統計やその他の機能に基づいて、パーソナライズされたフォームとプロセス志向のエクスペリエンスをユーザーに提供できます。さらに、アダプティブフォームを Adobe Sign に統合することも可能です。
+**アダプティブフォーム：**&#x200B;インタラクティブで魅力的なこのフォームは、デバイスの画面サイズに基づいて外観を変更できます。アダプティブFormsは、Adobe Analytics、Acrobat Sign、Adobe Targetとも統合できます。 これにより、人口統計やその他の機能に基づいて、パーソナライズされたフォームとプロセス志向のエクスペリエンスをユーザーに提供できます。また、アダプティブフォームをAcrobat Signと統合することもできます。
 
 **PDF フォーム**&#x200B;は、ピクセルパーフェクトな印刷と、PDF 文書内でのデジタル情報取得に適しています。デジタルアバターでは、Adobe Acrobat または Acrobat Reader を使用して PDF フォームを入力できます。このフォームを Web サイト上でホストするか、フォームポータルを使用して AEM サイト上に一覧表示できます。また、このフォームを添付ファイルとして他のユーザーに電子メールで送ることもできます。PDF フォームはデスクトップ環境に最適です。
 
@@ -107,7 +107,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 ## インストール後の設定 {#post-installation-configurations}
 
-AEM Forms には、いくつかの必須およびオプションの設定があります。必須の設定には、BouncyCastle ライブラリおよびシリアル化エージェントの設定が含まれます。オプションの設定には、ディスパッチャー、フォームポータル、Adobe Sign、Adobe Analytics および Adobe Target の設定が含まれます。
+AEM Forms には、いくつかの必須およびオプションの設定があります。必須の設定には、BouncyCastle ライブラリおよびシリアル化エージェントの設定が含まれます。オプションの設定には、Dispatcher、Forms Portal、Acrobat Sign、Adobe Analytics、Adobe Targetの設定が含まれます。
 
 ### インストール後の必須の設定 {#mandatory-post-installation-configurations}
 
@@ -185,13 +185,13 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 
-#### Adobe Sign の設定 {#configure-adobe-sign}
+#### Acrobat Signの設定 {#configure-adobe-sign}
 
-Adobe Sign により、アダプティブフォームの電子署名ワークフローを有効にすることができます。電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
+Acrobat Signを使用すると、アダプティブフォームの電子署名ワークフローが有効になります。 電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
 
-Adobe Sign とアダプティブフォームの一般的なシナリオでは、サービスを申し込むためのアダプティブフォームをユーザーが入力します。例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームの入力、送信、署名を行うと、サービスプロバイダーにそのフォームが送信され、追加の処理が実行されます。サービスプロバイダーは受信した申込フォームを確認し、Adobe Sign を使用してそのフォームを承認します。これに類似した電子署名ワークフローを有効にするには、Adobe Sign を AEM Forms に統合します。
+一般的なAcrobat Signおよびアダプティブフォームのシナリオでは、ユーザーはアダプティブフォームに入力してサービスを申し込みます。 例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームの入力、送信、署名を行うと、サービスプロバイダーにそのフォームが送信され、追加の処理が実行されます。サービスプロバイダーは、申し込みを確認し、Acrobat Signを使用して申し込みを承認済みとマークします。 同様の電子署名ワークフローを有効にするには、Acrobat SignとAEM Formsを統合します。
 
-AEM Forms で Adobe Sign を使用するには、「[Adobe Sign を AEM Forms に統合する](/help/forms/using/adobe-sign-integration-adaptive-forms.md)」を参照してください。
+AEM FormsでAcrobat Signを使用するには、 [Acrobat SignとAEM Formsの統合](/help/forms/using/adobe-sign-integration-adaptive-forms.md).
 
 #### Adobe Analytics の設定 {#configure-adobe-analytics}
 

@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: introduction
 discoiquuid: 0c1b6ad7-9d25-41dc-b1fe-a4cb9366c259
 exl-id: 17e8c644-ee17-496c-a781-a295a4796cb9
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '9201'
-ht-degree: 65%
+ht-degree: 64%
 
 ---
 
@@ -116,7 +116,7 @@ Sarah がモバイルデバイスからクレジットカードの申込フォ�
 * [ルールエディター](/help/forms/using/rule-editor.md)
 * [テーマ](/help/forms/using/themes.md)
 * [データ統合](/help/forms/using/data-integration.md)
-* [アダプティブフォームで Adobe Sign を使用する](/help/forms/using/working-with-adobe-sign.md)
+* [アダプティブフォームでのAcrobat Signの使用](/help/forms/using/working-with-adobe-sign.md)
 * [OSGi 上の Forms 中心のワークフロー](/help/forms/using/aem-forms-workflow.md)
 
 ### 実際の動作確認 {#a-see-it-yourself}
@@ -159,7 +159,7 @@ Sarah によって送信されたクレジットカード申込書を、We.Finan
 
 Sarah がクレジットカードの申込フォームにすべて記入して送信すると、Forms ワークフローがトリガーされ、Gloria の AEM インボックスにタスクが作成されます。
 
-OSGi 上の AEM Forms によって Forms 中心のワークフローが提供され、アダプティブフォームに基づいたワークフローを構築できます。これらのワークフローをレビューや承認、ビジネスプロセスフローに使用して、ドキュメントサービスを開始したり、Adobe Sign 署名ワークフローと統合したりすることができます。詳しくは、[OSGi での Forms 中心のワークフローを参照してください](/help/forms/using/aem-forms-workflow.md)。
+OSGi 上の AEM Forms によって Forms 中心のワークフローが提供され、アダプティブフォームに基づいたワークフローを構築できます。これらのワークフローは、レビューと承認、ビジネスプロセスフロー、ドキュメントサービスの開始、Acrobat Sign署名ワークフローとの統合などに使用できます。 詳しくは、[OSGi での Forms 中心のワークフローを参照してください](/help/forms/using/aem-forms-workflow.md)。
 
 次の画像では、クレジットカード申込書を処理してその PDF 出力を生成する AEM ワークフローを図式化して説明しています。
 
@@ -405,7 +405,7 @@ Sarah が住宅ローン計算機に入力した情報に基づいて、いく�
 * [ルールエディター](/help/forms/using/rule-editor.md)
 * [テーマ](/help/forms/using/themes.md)
 * [データ統合](/help/forms/using/data-integration.md)
-* [アダプティブフォームで Adobe Sign を使用する](/help/forms/using/working-with-adobe-sign.md)
+* [アダプティブフォームでのAcrobat Signの使用](/help/forms/using/working-with-adobe-sign.md)
 * [OSGi 上の Forms 中心のワークフロー](/help/forms/using/aem-forms-workflow.md)
 
 #### 実際の動作確認 {#see-it-yourself-6}
@@ -434,7 +434,7 @@ Gloria はタスクを開き、「Need More Info」をクリックして、行�
 
 Sarah が住宅ローンの申込フォームにすべて記入して送信すると、Forms ワークフローがトリガーされ、Gloria の AEM インボックスにタスクが作成されます。Gloria が申込書を確認して追加の情報をリクエストしたため、タスクは John Doe に割り当てられます。John Doe が ID を添付して申込書を再度送信すると、申込書は Gloria に割り当てられます。これは、住宅ローンの申し込みに関連する AEM ワークフローで定義されています。
 
-OSGi 上の AEM Forms によって Forms 中心のワークフローが提供され、アダプティブフォームに基づいたワークフローを構築できます。これらのワークフローをレビューや承認、ビジネスプロセスフローに使用して、ドキュメントサービスを開始したり、Adobe Sign 署名ワークフローと統合したりすることができます。詳しくは、[OSGi での Forms 中心のワークフローを参照してください](/help/forms/using/aem-forms-workflow.md)。
+OSGi 上の AEM Forms によって Forms 中心のワークフローが提供され、アダプティブフォームに基づいたワークフローを構築できます。これらのワークフローは、レビューと承認、ビジネスプロセスフロー、ドキュメントサービスの開始、Acrobat Sign署名ワークフローとの統合などに使用できます。 詳しくは、[OSGi での Forms 中心のワークフローを参照してください](/help/forms/using/aem-forms-workflow.md)。
 
 以下の図は、住宅ローンの申し込みに関連する AEM ワークフローを図式化したものです。
 
@@ -706,7 +706,7 @@ Sarah がモバイルデバイスから申込書を送信した場合は、次�
 * XSD スキーマ、`insurance.xsd` に基づいている。
 * スタイルに保険テーマを使用して構築されており、フォームのヘッダー部分にはモバイルナビゲーション用のパネルタイトルが表示されないレイアウトが採用されている。モバイルデバイスから開くと、プログレッシブモバイルレイアウトが表示されます。 このテンプレートは、 `https://[host]:[Port]/libs/wcm/core/content/sites/templates.html/conf/we-finance` テーマは `https://[host]:[Port]/editor.html/content/dam/formsanddocuments-themes/we-finance/insurance/jcr:content`.
 
-* フォームデータモデルサービスを呼び出すためのアダプティブフォームルールが含まれ、ログインしたユーザーのユーザー詳細を事前入力する。また、サービスを呼び出す際は、フォームに入力した社会保険番号や電子メールアドレスにより、情報が事前入力されます。フォームデータモデルとそれらのサービスは、次の場所で確認できます。 `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
+* フォームデータモデルサービスを呼び出すためのアダプティブフォームルールが含まれ、ログインしたユーザーのユーザー詳細を事前入力する。また、サービスを呼び出す際は、フォームに入力した社会保険番号や電子メールアドレスにより、情報が事前入力されます。フォームデータモデルとそのサービスは、次の場所で確認できます。 `https://[host]:[Port]/aem/forms.html/content/dam/formsanddocuments-fdm`.
 * さまざまなアダプティブフォームコンポーネントを使用して入力内容を取得し、ユーザーレスポンスに適合する。HTML5 入力タイプをサポートする電子メールなどのコンポーネントも使用します。
 * 「Save my progress」ボタンをクリックすると、ユーザーに対して一意の ID が生成され、AEM リポジトリのノード内に一部入力済みの申込フォームが下書きとして保存される。また、同じアクションによって、申込フォームの下書きを含むノードへのリンクを電子メールで送信する許可を求めるダイアログが表示されます。確認ダイアログの「Send mail」ボタンをクリックすると、下書きを含むノードへのリンクを持つ電子メールが自動送信されます。
 * AEM ワークフローを起動する送信アクションを使用して、住宅保険の承認ワークフローをトリガーする。このフォームで使用されるワークフローは、次の場所で確認できます。 `https://[host]:[Port]/editor.html/conf/global/settings/workflow/models/we-finance-insurance-workflow.html`
@@ -720,7 +720,7 @@ Sarah がモバイルデバイスから申込書を送信した場合は、次�
 * [ルールエディター](/help/forms/using/rule-editor.md)
 * [テーマ](/help/forms/using/themes.md)
 * [データ統合](/help/forms/using/data-integration.md)
-* [アダプティブフォームで Adobe Sign を使用する](/help/forms/using/working-with-adobe-sign.md)
+* [アダプティブフォームでのAcrobat Signの使用](/help/forms/using/working-with-adobe-sign.md)
 * [OSGi 上の Forms 中心のワークフロー](/help/forms/using/aem-forms-workflow.md)
 
 #### 実際の動作確認 {#see-it-yourself-12}

@@ -8,10 +8,10 @@ contentOwner: khsingh
 topic-tags: publish
 discoiquuid: 4c7ba430-25b2-4ba2-a5eb-4edaed0d599a
 exl-id: 6172d936-9348-4f3f-a437-6465dd156f3b
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '878'
-ht-degree: 86%
+ht-degree: 82%
 
 ---
 
@@ -153,7 +153,7 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
    <td>サポート対象</td> 
   </tr>
   <tr>
-   <td>電子署名（Adobe Sign）</td> 
+   <td>電子署名 (Acrobat Sign)</td> 
    <td>サポート対象 <sup>[1]</sup></td> 
    <td>サポート対象 <sup>[5]</sup></td> 
   </tr>
@@ -325,7 +325,7 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
 1. AEM Forms の OSGi AEM ワークフローを実行してモニターするには、AEM インボックスにアクセスする必要があります。AEM Forms JEE ワークフローを実行してモニターするには、HTML Workspace にアクセスする必要があります。
 1. ネイティブの AEM Forms ドキュメントサービスは、OSGi 上のフォーム中心の AEM ワークフローと AEM Forms JEE ワークフローの両方で使用することができます。AEM ワークフローでは、OSGi 上のフォーム中心の AEM ワークフローと AEM Forms JEE ワークフローに対して、ネイティブのドキュメントサービスが使用されます。
 1. AEM Forms JEE ワークフローでレンダリングできるのは、アダプティブフォームだけです。アダプティブフォームを PDF ドキュメントとしてレンダリングすることはできません。
-1. AEM Forms JEE ワークフローには、Adobe Sign 用の独立したステップは存在しません。AEM Forms JEE ワークフローに対して、Adobe Sign が有効になっているアダプティブフォームを使用する必要があります。詳しくは、[Adobe Sign のドキュメント](/help/forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component)を参照してください。
+1. AEM forms JEE ワークフローには、Acrobat Sign用の個別の手順はありません。 AEM forms JEE ワークフローに対して、Acrobat Sign対応のアダプティブフォームが必要です。 詳しくは、 [Acrobat Signドキュメント](/help/forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component).
 1. [フォームデータモデルサービスを呼び出し](/help/forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p)する手順を使用して、Web サービスのサービスを呼び出し、サードパーティアプリケーションからデータを投稿または取得できます。
 1. [メールの送信](/help/forms/using/aem-forms-workflow-step-reference.md#send-email-step)手順を使用して、メールを送信できます。
 
