@@ -5,10 +5,10 @@ description: コンテンツフラグメントモデルは、カスタマイズ�
 seo-description: Content Fragment Models can be customized and extended.
 page-status-flag: de-activated
 uuid: 5bcfb5d8-37d4-4a0e-882d-bc8a1bac6ba7
-contentOwner: aheimoz
+contentOwner: AEM Docs
 discoiquuid: 208225ee-9052-4a45-9cfd-f8d27d4d70ed
 noindex: true
-source-git-commit: b61c20c65ceade0153f5cd04fbedfd02e919d483
+source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 13%

@@ -4,14 +4,14 @@ seo-title: Creating and Synchronizing Live Copies
 description: ライブコピーを作成および同期する方法について説明します。
 seo-description: Learn how to create and synchronize Live Copies.
 uuid: f6f410d4-8c72-48b7-a217-afd6076b512d
-contentOwner: Alison Heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 161b591b-5871-4b5f-9c63-823b6e67b1fd
 feature: Multi Site Manager
 exl-id: 13d044bd-fa61-4e24-ac1d-69a6f10847a4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
 workflow-type: tm+mt
 source-wordcount: '4006'
 ht-degree: 98%

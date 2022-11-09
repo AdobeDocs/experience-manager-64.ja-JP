@@ -4,7 +4,7 @@ seo-title: Creating Translation Projects for Content Fragments
 description: コンテンツフラグメントを翻訳する方法について説明します。
 seo-description: Learn how to translate content fragments.
 uuid: 23176e70-4003-453c-af25-6499a5ed3f6d
-contentOwner: heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: managing-assets
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: d2decc31-a04b-4a8e-bb19-65f21cf7107e
 exl-id: 4b9fd241-82db-466e-95bd-6d212717801d
 feature: Content Fragments
 role: User
-source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
+source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 98%

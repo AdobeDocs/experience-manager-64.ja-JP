@@ -4,14 +4,14 @@ seo-title: Components for Content Fragments
 description: AEM のコンテンツフラグメントは、ページから独立したアセットとして作成および管理されます
 seo-description: AEM content fragments are created and managed as page-independent assets
 uuid: 289ed9cb-9531-43a9-b0d8-a3499e2e9ee5
-contentOwner: Alison Heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 topic-tags: components
 content-type: reference
 discoiquuid: 76b63c7c-f7ea-46be-8d10-6c1a30af2e2b
 pagetitle: Components for Content Fragments
 exl-id: 516c1561-5c13-4301-8009-9b021087cec7
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
 workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 98%

@@ -4,13 +4,13 @@ seo-title: Launches
 description: ローンチを作成し、既存の web ページの新しいバージョンを更新して後でアクティブ化できるようにします。ローンチを作成するとき、タイトルとソースページを指定します。
 seo-description: Create a launch to enable the updating of a new version of existing web pages for future activation. When you create a Launch, you specify a title and the source page.
 uuid: b1952b6c-fc44-4e39-80ba-9380a6c66b8c
-contentOwner: Alison Heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 4f62078d-b5b0-4eb9-bd9b-7647a093dec2
 exl-id: e1e5dc83-2f9c-4c8d-a031-5ded3f1316a1
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 100%

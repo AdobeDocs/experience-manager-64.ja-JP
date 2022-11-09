@@ -4,7 +4,7 @@ seo-title: Working with Content Fragments
 description: コンテンツフラグメントを使用すると、ページに依存しないコンテンツの設計、作成、キュレーションおよび使用がいかに可能になるか、学習します。
 seo-description: Learn how Content Fragments allow you to design, create, curate and use page-independent content.
 uuid: aa5acda2-4c20-4fe7-929d-6c065b252cf2
-contentOwner: Alison Heimoz
+contentOwner: AEM Docs
 topic-tags: content-fragments
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 22ae0d3a-083f-40e4-bf4a-7a755ae9e312
 exl-id: e2804707-7b75-4fae-937e-9e258481878f
 feature: Content Fragments
 role: User
-source-git-commit: 5d523aa135e02b7d06241188c3b4a1d4502f4204
+source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
 workflow-type: tm+mt
 source-wordcount: '1984'
 ht-degree: 98%
@@ -88,8 +88,7 @@ AEM コアコンポーネントの JSON 書き出し機能と共にこの構造�
 >**コンテンツフラグメント**&#x200B;と&#x200B;**[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)**&#x200B;は、AEM 内の異なる機能です。
 >
 >* **コンテンツフラグメント**&#x200B;は、主にテキストや関連画像などの編集コンテンツです。これは、デザインやレイアウトを含まない純粋なコンテンツです。
->* **エクスペリエンスフラグメント**&#x200B;は完全にレイアウトされたコンテンツであり、Web ページのフラグメントです。
-
+>* **エクスペリエンスフラグメント**&#x200B;は完全にレイアウトされたコンテンツであり、web ページのフラグメントです。
 >
 >エクスペリエンスフラグメントには、コンテンツフラグメントの形式でコンテンツを含めることができますが、その逆はできません。
 >
@@ -299,7 +298,7 @@ AEM コアコンポーネントの JSON 書き出し機能と共にこの構造�
 
 ## 使用例 {#example-usage}
 
-フラグメントと、その要素およびバリエーションを一緒に使用して、複数のチャネルに対応する明解なコンテンツを作成できます。フラグメントを設計するときは、何をどこで使用するかを考慮する必要があります。
+フラグメントと、その要素およびバリエーションを一緒に使用して、複数のチャネルに対応した一貫性のあるコンテンツを作成できます。フラグメントを設計するときは、何をどこで使用するかを考慮する必要があります。
 
 ### We.Retail サンプル {#we-retail-sample}
 

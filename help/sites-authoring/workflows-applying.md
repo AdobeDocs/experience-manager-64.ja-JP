@@ -4,13 +4,13 @@ seo-title: Applying Workflows to Pages
 description: オーサリングでは、ワークフローを呼び出して、ページにアクションを実行することができます。複数のワークフローを適用することもできます。
 seo-description: When authoring, you can invoke workflows to take action on your pages; it is also possible to apply more than one workflow..
 uuid: 8a1d16f8-69fc-4e3a-b72a-b799ea381024
-contentOwner: Alison Heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 8556d20a-99bd-4942-b7b8-2db69f64e67c
 exl-id: 05c52802-adfd-4b5f-a273-d6a261a00659
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 100%

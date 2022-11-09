@@ -4,7 +4,7 @@ seo-title: Variations - Authoring Fragment Content
 description: バリエーションでは、フラグメントのコンテンツをオーサリングし、目的に応じてそのコンテンツのバリエーションを作成できます（必要な場合）。
 seo-description: Variations allow you to author content for the fragment, then create variations of that content according to purpose (if required).
 uuid: affccda0-be5f-47d2-85b6-8701b77ac932
-contentOwner: Alison Heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: content-fragments
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 1cdb2dfc-623b-44cf-9a7b-98cfabbb1d0c
 exl-id: 15a5fdc9-2878-4f95-83ee-02a2899aeb43
 feature: Content Fragments
 role: User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
 workflow-type: tm+mt
 source-wordcount: '1738'
 ht-degree: 97%
@@ -200,7 +200,6 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 >* [ドイツ語 (de)、ソフトウェア配布から](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
 >* [イタリア語 (it)（ソフトウェア配布から）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
 >* [スペイン語 (es)（ソフトウェア配布版）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
-
 >
 
 
@@ -271,7 +270,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 >[画像](content-fragments.md#fragments-with-visual-assets)は様々な方法でフラグメントやページに追加できます。
 
 1. 画像を追加したい位置にカーソルを置きます。
-1. **[!UICONTROL アセットを挿入]**&#x200B;アイコンを使用して、検索ダイアログを開きます。
+1. **[!UICONTROL アセットを挿入]** アイコンを使用して、検索ダイアログを開きます。
 
    ![cf-insertasset-icon](assets/cf-insertasset-icon.png)
 
@@ -303,8 +302,8 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 1. フラグメントを開き、サイドパネルが表示されていることを確認します。
 1. サイドパネルのアイコンバーから「**[!UICONTROL バリエーション]**」を選択します。
 1. 「**[!UICONTROL バリエーションを作成]**」を選択します。
-1. ダイアログが開きます。新しいバリエーションの&#x200B;**[!UICONTROL タイトル]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;を指定します。
-1. 「**[!UICONTROL 追加]**」を選択します。フラグメントの&#x200B;**[!UICONTROL プライマリ]**&#x200B;が新しいバリエーションにコピーされ、[編集](#editing-a-variation)用に開かれます。
+1. ダイアログが開きます。新しいバリエーションの **[!UICONTROL タイトル]** と **[!UICONTROL 説明]** を指定します。
+1. 「**[!UICONTROL 追加]**」を選択します。フラグメントの **[!UICONTROL プライマリ]** が新しいバリエーションにコピーされ、 [編集](#editing-a-variation) 用に開かれます。
 
    >[!NOTE]
    >
@@ -357,7 +356,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
 >[!CAUTION]
 >
->同期を使用できるのは、変更内容を&#x200B;***プライマリ**からバリエーションに*&#x200B;コピーする場合のみです。
+>同期を使用できるのは、変更内容&#x200B;*を&#x200B;**プライマリ**からバリエーションに*&#x200B;コピーする場合のみです。
 >
 >バリエーションの現在の要素のみが同期されます。
 >

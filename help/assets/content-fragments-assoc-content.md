@@ -4,7 +4,7 @@ seo-title: Associated Content
 description: 関連コンテンツによって関連性がわかり、フラグメントをページに追加するときに、（オプションで）アセットをフラグメントと一緒に使用できるようになります。
 seo-description: Associated content provides the connection so that assets can be (optionally) used with the fragment when it is added to a content page.
 uuid: 1bc1eefa-7a7c-43be-a8a8-0d153d60c5c4
-contentOwner: Alison Heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
 topic-tags: content-fragments
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: 09536869-3806-4b89-adfd-68f408298c55
 exl-id: af4f25d4-a784-47fe-bca4-75c8d373f7d2
 feature: Content Fragments
 role: User
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 94%

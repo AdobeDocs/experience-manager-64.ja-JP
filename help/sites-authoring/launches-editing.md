@@ -4,14 +4,14 @@ seo-title: Editing Launches
 description: ページ（またはページのセット）にローンチを作成したら、ページのローンチコピーのコンテンツを編集できます。
 seo-description: After creating a launch for your page (or set of pages) you can edit the content in the launch copy of the page(s).
 uuid: 851bcbbe-1dff-457f-a3bc-468ace9b4ac4
-contentOwner: Alison Heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: a28539fc-c1dd-43bf-a47b-5f158c5611a7
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 9f208b13-08eb-4305-b712-379e9b9b041e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 3358f6b8b492ff2b5858867a1f48a57b06944b1e
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 100%
