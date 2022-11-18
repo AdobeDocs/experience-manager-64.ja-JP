@@ -10,10 +10,10 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: 448ad337-d4bb-4603-a27b-77da93feadbd
 exl-id: ce9a1c1f-a37b-4765-b87e-5b2359312cfe
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 98%
+source-wordcount: '536'
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ JSON 書き出しは、[Sling Model](https://sling.apache.org/documentation/bund
 
 >[!NOTE]
 >
->Sling Model の使用例については、[AEM での Sling Model Exporter の開発](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html)の記事を参照してください。
+>Sling Model の使用例については、[AEM での Sling Model Exporter の開発](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=ja)の記事を参照してください。
 
 Sling Model の実装クラスに次のような注釈を付ける必要があります。
 
@@ -78,7 +78,7 @@ Model インターフェイスには、シリアル化されるメソッドを�
 
 ## 例 {#example}
 
-コアコンポーネントでは、JSON 書き出しが[コアコンポーネントのリリース 1.1.0](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) からサポートされており、参照として使用できます。
+コアコンポーネントでは、JSON 書き出しが[コアコンポーネントのリリース 1.1.0](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) からサポートされており、参照として使用できます。
 
 例えば、画像コアコンポーネントの Sling Model 実装とその注釈されたインターフェイスを参照してください。
 
@@ -93,9 +93,9 @@ GitHub のコード
 
 詳しくは、以下を参照してください。
 
-* [Assets ユーザーガイドのコンテンツフラグメントに関するトピック](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
+* [Assets ユーザーガイドのコンテンツフラグメントに関するトピック](https://helpx.adobe.com/jp/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
 
 * [コンテンツフラグメントモデル](/help/assets/content-fragments-models.md)
 * [コンテンツフラグメントを使用したオーサリング](/help/sites-authoring/content-fragments.md)
 * [コンテンツサービス用の JSON エクスポーター](/help/sites-developing/json-exporter.md)
-* [コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
+* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)

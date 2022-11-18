@@ -4,9 +4,9 @@ description: Adobe Experience Manager 6.4 Cumulative Fix Packs 固有のリリ�
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: a63e77a3-da48-4072-bc75-c4c41a2f62a3
-source-git-commit: 1d5d2ef3840a40df7c3b223c7b5835e41553e9f1
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '4693'
+source-wordcount: '4681'
 ht-degree: 36%
 
 ---
@@ -105,7 +105,7 @@ AEM 6.4.8.3 は、AEM 6.4 Service Pack 8 に依存する Cumulative Fix Pack (CF
 
 AEM 6.4.8.3 では、組み込みリポジトリ (Apache Jackrabbit Oak) がバージョン 1.8.23 に更新されています。
 
-CFP と他のタイプのリリースについて詳しくは、 [AEM Update リリースの提供に関する定義](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
+CFP と他のタイプのリリースについて詳しくは、 [AEM Update リリースの提供に関する定義](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
 
 Adobe Experience Manager 6.4.8.3 では、次の問題が修正されています。
 
@@ -199,7 +199,7 @@ AEM 6.4.8.2 は、AEM 6.4 Service Pack 8 に依存する Cumulative Fix Pack (CF
 
 AEM 6.4.8.2 では、組み込みリポジトリ (Apache Jackrabbit Oak) がバージョン 1.8.22 に更新されます。
 
-CFP と他のタイプのリリースについて詳しくは、 [AEM Update リリースの提供に関する定義](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
+CFP と他のタイプのリリースについて詳しくは、 [AEM Update リリースの提供に関する定義](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
 
 Adobe Experience Manager 6.4.8.2 では、次の問題が修正されています。
 
@@ -345,7 +345,7 @@ AEM 6.4.8.1 の主な特徴は次のとおりです。
 * Adobe Experience Managerとのパッケージ共有の統合を削除しました。
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.8.21 に更新しました。
 
-CFP と他のタイプのリリースについて詳しくは、 [AEM Update リリースの提供に関する定義](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
+CFP と他のタイプのリリースについて詳しくは、 [AEM Update リリースの提供に関する定義](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/update-release-vehicle-definitions.html)
 
 Adobe Experience Manager 6.4.8.1 では、次の問題が修正されました。
 
@@ -523,7 +523,7 @@ AEM 6.4.8.4 には、Dynamic Mediaビューア (5.10.1) の新しいバージョ
 
 1. AEM Cumulative Fix Pack がインストールされていることを確認します。
 1. 次のリストにある対応する forms アドオンパッケージをダウンロードします。 [AEM Formsリリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) ご使用のオペレーティングシステム用。
-1. フォームアドオンパッケージをインストールします。詳しくは、 [AEM forms アドオンパッケージのインストール](https://docs.adobe.com/content/help/en/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
+1. フォームアドオンパッケージをインストールします。詳しくは、 [AEM forms アドオンパッケージのインストール](https://experienceleague.adobe.com/docs/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
 
 ### AEM Forms JEE インストーラーのインストール {#install-aem-forms-jee-installer}
 
@@ -563,7 +563,7 @@ Maven プロジェクトで Uber Jar を使用するには、[Uber Jar の使用
 | 領域 | 機能 | 代替手段 | バージョン |
 |---|---|---|---|
 | Assets | サブアセットのタグアクションを管理 | 代替機能はありません | AEM 6.4.2.0 |
-| Assets と Adobe Creative Cloud の統合 | [AEM／Creative Cloud フォルダー共有](https://docs.adobe.com/content/help/ja/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html)は、クリエイティブユーザーに AEM のアセットへのアクセスを提供する方法として、AEM 6.2 で導入されました。Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが大幅に向上し、Photoshop、InDesign、Illustrator 内から AEM のアセットへの直接アクセスが強化されています。アドビは、このフォルダー共有機能をさらに強化する予定はありません。この機能はAEMに含まれますが、お客様には代わりの機能を使用することを強くお勧めします。 | AdobeAsset Link またはデスクトップアプリケーション 詳細については、[AEM Creative Cloud の統合](/help/assets/aem-cc-integration-best-practices.md)記事を参照してください。 | AEM 6.4.4.0 |
+| Assets と Adobe Creative Cloud の統合 | [AEM／Creative Cloud フォルダー共有](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html)は、クリエイティブユーザーに AEM のアセットへのアクセスを提供する方法として、AEM 6.2 で導入されました。Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが大幅に向上し、Photoshop、InDesign、Illustrator 内から AEM のアセットへの直接アクセスが強化されています。アドビは、このフォルダー共有機能をさらに強化する予定はありません。この機能はAEMに含まれますが、お客様には代わりの機能を使用することを強くお勧めします。 | AdobeAsset Link またはデスクトップアプリケーション 詳細については、[AEM Creative Cloud の統合](/help/assets/aem-cc-integration-best-practices.md)記事を参照してください。 | AEM 6.4.4.0 |
 
 ## 既知の問題 {#known-issues}
 
@@ -595,4 +595,4 @@ AEM 6.4.8.4 に含まれているコンテンツパッケージの一覧
 以下のサイトは既存ユーザーのみが参照できます。アクセス権が必要な既存ユーザーの方は、アドビのアカウントマネージャーまでお問い合わせください。
 
 * [licensing.adobe.com からの製品ダウンロード](https://licensing.adobe.com/)
-* [カスタマーサポートに連絡](https://docs.adobe.com/content/help/ja-JP/customer-one/using/home.html)
+* [カスタマーサポートに連絡](https://experienceleague.adobe.com/docs/customer-one/using/home.html?lang=ja)

@@ -10,9 +10,9 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 397b3267-1437-4263-963c-9d68ccc928ab
 exl-id: 3f2cb2f9-2a4e-4c5d-b937-b693f27e11da
-source-git-commit: 55e904cb24bac68c0b1bbea59786cb4c0c711d61
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1641'
 ht-degree: 60%
 
 ---
@@ -105,7 +105,7 @@ AEM 6.4 は、アセットレポートに関する次の大幅な機能強化を
 
 ## AEM デスクトップアプリケーション {#aem-desktop-app}
 
-AEMデスクトップアプリケーションは、AEM 6.4 と互換性があるバージョン 1.8 に更新されました。AEMデスクトップアプリケーションの変更の完全なリストは、専用の [AEM desktop app リリースノート](https://docs.adobe.com/content/help/ja/experience-manager-desktop-app/using/release-notes.html) 文書。\
+AEMデスクトップアプリケーションは、AEM 6.4 と互換性があるバージョン 1.8 に更新されました。AEMデスクトップアプリケーションの変更の完全なリストは、専用の [AEM desktop app リリースノート](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=ja) 文書。\
 AEM 6.3 のリリース以降のAEMデスクトップアプリケーションのハイライトの一覧を次に示します。
 
 * フォルダー階層をバックグラウンドでアップロードする機能。
@@ -117,8 +117,8 @@ AEM 6.3 のリリース以降のAEMデスクトップアプリケーションの
 
 ドキュメントとベストプラクティスについては、次のドキュメントを参照してください。
 
-* [ユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)：アプリケーションを操作するエンドユーザーを対象としています。
-* [インストールガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/install-upgrade.html)( AEMとAEMデスクトップアプリケーションを連携させるためのセットアップを行う管理者向け )
+* [ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)：アプリケーションを操作するエンドユーザーを対象としています。
+* [インストールガイド](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/install-upgrade.html)( AEMとAEMデスクトップアプリケーションを連携させるためのセットアップを行う管理者向け )
 
 ## 階層ストレージ {#tiered-storage}
 

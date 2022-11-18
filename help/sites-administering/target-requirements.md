@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: a84fd0ab-0bcd-48cf-bba3-fb29308fa0f8
 exl-id: f47e5c6a-ed52-4493-83bd-73e5e693d117
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 80%
+source-wordcount: '522'
+ht-degree: 96%
 
 ---
 
@@ -32,7 +32,7 @@ AEM と Adobe Target を統合するには、有効な Adobe Target アカウン
 >統合を使用するには、Target チームによってご自身のアカウントも有効にされている必要があります。
 >
 >
->そうでない場合は、[Adobe Target カスタマーケア](https://docs.adobe.com/content/help/en/target/using/cmp-resources-and-contact-information.html)にご連絡ください。
+>そうでない場合は、[Adobe Target カスタマーケア](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html)にご連絡ください。
 
 ## Target レプリケーションエージェントの有効化 {#enabling-the-target-replication-agent}
 
@@ -45,23 +45,23 @@ Test &amp; Target [レプリケーションエージェント](/help/sites-deplo
 
    >[!NOTE]
    >
-   >Test &amp; Target レプリケーションエージェントを設定する場合、URI は、「**トランスポート**」タブでデフォルトで **tnt:///** に設定されています。この URI を次で置き換えない **https://admin.testandtarget.omniture.com**.
+   >Test &amp; Target レプリケーションエージェントを設定する場合、URI は、「**トランスポート**」タブでデフォルトで **tnt:///** に設定されています。この URI を **https://admin.testandtarget.omniture.com** に置換しないでください。
    >
-   >**tnt:///** を使用して接続をテストしようとすると、エラーが発生することに注意してください。この URI は内部でのみ使用され、では使用しないので、これは期待された動作です。 **接続をテスト**.
+   >**tnt:///** を使用して接続をテストしようとすると、エラーが発生することに注意してください。これは想定されている動作です。この URI は内部でのみ使用されるべきものであり、**接続をテスト**&#x200B;では使用すべきではありません。
 
 ## アクティビティ設定ノードの保護 {#securing-the-activity-settings-node}
 
 権限のないユーザーがアクセスできないように、パブリッシュインスタンスでアクティビティ設定ノード **cq:ActivitySettings** を保護する必要があります。アクティビティ設定ノードには、Adobe Target へのアクティビティの同期を処理するサービスのみがアクセスできるようにしてください。
 
-この **cq:ActivitySettings** ノードは、CRXDE lite の下の `/content/campaigns/*nameofbrand*`* *activitys jcr:content ノードの下で、* 例： `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`. このノードは、コンポーネントのターゲティング後にのみ作成されます。
+**cq:ActivitySettings** ノードは、*アクティビティ jcr:content ノードの下*&#x200B;の `/content/campaigns/*nameofbrand*`* の下の CRXDE Lite で利用できます（例：`/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`）。このノードは、コンポーネントのターゲティング後にのみ作成されます。
 
-この **cq:ActivitySettings** アクティビティの jcr:content の下のノードは、次の ACL で保護されています。
+アクティビティの jcr:content の下にある **cq:ActivitySettings** ノードは、次の ACL によって保護されています。
 
 * すべて拒否（全員）
 * &quot;target-activity-authors&quot; に jcr:read,rep:write を許可（デフォルトで作成者はこのグループのメンバー）
 * &quot;targetservice&quot; に jcr:read,rep:write を許可
 
-これらの設定により、権限を持たないユーザーがノードプロパティにアクセスできなくなります。オーサーインスタンスとパブリッシュインスタンスの両方で同じ ACL を使用します。詳しくは、 [ユーザー管理とセキュリティ](/help/sites-administering/security.md) を参照してください。
+これらの設定により、権限を持たないユーザーがノードプロパティにアクセスできなくなります。オーサーインスタンスとパブリッシュインスタンスの両方で同じ ACL を使用します。詳しくは、[ユーザー管理とセキュリティ](/help/sites-administering/security.md)を参照してください。
 
 ## AEM Externalizer の設定 {#configuring-the-aem-externalizer}
 
@@ -69,7 +69,7 @@ Adobe Target でアクティビティを編集する場合、AEM オーサーノ
 
 AEM Externalizer を設定するには：
 
-1. OSGi Web コンソール ( ) に移動します。 **https://&lt;server>:&lt;port>/system/console/configMgr.**
+1. **https://&lt;server>:&lt;port>/system/console/configMgr** の OSGi Web コンソールに移動します。
 1. **Day CQ Link Externalizer** を探し、オーサーノードのドメインを入力します。
 
    ![chlimage_1-120](assets/chlimage_1-120.png)

@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.4/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 9890d045-cead-4d70-b797-95319284e0d8
 exl-id: 7317fd2f-9756-4231-b343-ea808ea159ec
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2617'
 ht-degree: 91%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 AEM Mobile アプリケーション開発プロセスでは、さまざまな専門知識を持つユーザーがモバイルアプリケーション開発に寄与することが認められています。次のプロセスマップは、コンテンツ作成者およびアプリケーション開発者がタスクを実行する一般的な順序を示しています。
 
@@ -79,7 +79,7 @@ AEM で作成するモバイルアプリケーションのルートページは�
 その他の（オプションの）タブは、ビルドクラウドサービス向けで、Adobe Mobile Services SDK プラグインをアプリに統合する場合に使用します。
 
 * ビルド：ここでは、「設定を管理」をクリックし、build.phonegap.com ビルドサービスを設定します。次に、ドロップダウンから、新規に作成した PhoneGap Build クラウドサービスを選択できます。
-* 分析：「設定を管理」をクリックし、[Adobe Mobile Services SDK](https://docs.adobe.com/content/help/en/mobile-services/using/manage-app-settings-ug/configuring-app/download-sdk.html) クラウドサービスを設定します。ドロップダウンから、モバイルアプリに統合する新しく作成したモバイルサービスを選択できるようになります。
+* 分析：「設定を管理」をクリックし、[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/manage-app-settings-ug/configuring-app/download-sdk.html) クラウドサービスを設定します。ドロップダウンから、モバイルアプリに統合する新しく作成したモバイルサービスを選択できるようになります。
 
 >[!NOTE]
 >
@@ -190,7 +190,7 @@ AEM パブリッシュインスタンスのコンテンツ同期キャッシュ�
 
 ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
-1. 「次へ」をクリックします。
+1. 次へをクリックします。
 1. アプリの「ID」および「タイトル」を指定します。ただし、「名前」および「説明」も含めることをお勧めします。
 
    1. また、AEM アセットを参照して、PNG（サポートされている PhoneGap アイコン形式）をアイコンとして提供することもできます。

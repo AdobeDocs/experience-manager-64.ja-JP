@@ -2,10 +2,10 @@
 title: Adobe Content Package Maven Plugin
 description: Content Package Maven Plugin を使用した AEM アプリケーションのデプロイについて説明します
 exl-id: 106a677b-7c89-4fbc-bb96-eaa3dfa71b58
-source-git-commit: cda63b9ece88d8172fa4d9817e315c9cff88c224
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 35%
+source-wordcount: '157'
+ht-degree: 94%
 
 ---
 
@@ -13,14 +13,14 @@ ht-degree: 35%
 
 パッケージデプロイメントおよび管理タスクを Maven プロジェクトに組み込むには、Adobe Content Package Maven Plugin を使用します。
 
-構築されたパッケージのAEMへのデプロイメントは、Adobeの Content Package Maven プラグインによって実行され、AEM Package Manager を使用して通常実行されるタスクを自動化できます。
+構築したパッケージは、Adobe Content Package Maven プラグインで AEM にデプロイされます。その結果、通常は AEM パッケージマネージャーを使用して実行する以下のタスクを自動化できるようになります。
 
 >[!TIP]
 >
 >詳しくは、以下を参照してください。
 >
->* この [Adobeコンテンツパッケージ Maven プラグイン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html#developer-tools) AEMアプリケーションのデプロイ方法に関するAEMas a Cloud Serviceドキュメントの記事です。
->* この [AEM Project Structure](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) 最新のAEMプロジェクトの構造化方法に関するAEMas a Cloud Serviceドキュメントの記事です。
->* この [AEM Project Archetype](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html) アーキタイプを使用して新しいAEMプロジェクトを開始する方法に関するドキュメントです。
+>* AEM アプリケーションのデプロイ方法については、AEM as a Cloud Service ドキュメントの [Adobe Content Package Maven プラグイン](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html#developer-tools)の記事を参照してください。
+>* 最新の AEM プロジェクトを構造化する方法については、AEM as a Cloud Service ドキュメントの [AEM プロジェクト構造](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=ja)の記事を参照してください。
+>* アーキタイプを使用して新しい AEM プロジェクトを開始する方法については、[AEM プロジェクトのアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)のドキュメントを参照してください。
 >
->3 つのドキュメントはすべてAEM 6.4 に適用されます。
+>3 つのドキュメントはすべて AEM 6.4 に適用されます。

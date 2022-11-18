@@ -1,14 +1,14 @@
 ---
 title: AEM Assets と Brand Portal の連携の設定
-description: 'AEM AssetsとBrand Portalを連携させて、アセットとコレクションをBrand Portalに公開する方法を説明します。 '
+description: アセットおよびコレクションを Brand Portal に公開するために AEM Assets を Brand Portal と統合する方法について説明します。
 contentOwner: VG
 feature: Brand Portal
 role: Admin
 exl-id: cde35555-259f-4d16-999f-2b93d597b8a5
-source-git-commit: a50cd2b50191b86ac27cc228944c6c9e917b08cb
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '1646'
-ht-degree: 51%
+source-wordcount: '1642'
+ht-degree: 68%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Experience Manager Assets とBrand Portalの連携は、 [!DNL Adobe I/O]:
 >
 >既存のレガシー OAuth Gateway 設定を引き続き使用することをお勧めします。レガシー OAuth Gateway 設定に問題が発生した場合は、既存の設定を削除し、 [!DNL Adobe I/O].
 
-このヘルプでは、次の 2 つの使用例について説明します。
+このヘルプでは、次の 2 つのユースケースについて説明します。
 
 * [新しい設定](#configure-new-integration-64):新しいBrand Portalユーザーで、Brand Portalを使用してAEM Assetsオーサーインスタンスを設定する場合は、で新しい設定を作成できます。 [!DNL Adobe I/O].
 * [設定をアップグレード](#upgrade-integration-64):旧来の OAuth Gateway でBrand Portalを使用してAEM Assetsオーサーインスタンスを設定している既存のBrand Portalユーザーの場合は、既存の設定を削除し、で新しい設定を作成することをお勧めします。 [!DNL Adobe I/O].
@@ -47,25 +47,25 @@ AEM Assets と Brand Portal の連携を設定するには以下が必要です�
 * Brand Portal テナント URL
 * Brand Portal テナントの IMS 組織に対するシステム管理者権限を持つユーザー
 
-[AEM 6.4 をダウンロードしてインストールする](#aemquickstart)
+[AEM 6.4 のダウンロードとインストール](#aemquickstart)
 
 [最新の AEM サービスパックをダウンロードしてインストールする](#servicepack)
 
-### AEM 6.4 をダウンロードしてインストールする {#aemquickstart}
+### AEM 6.4 のダウンロードとインストール {#aemquickstart}
 
-AEMオーサーインスタンスを設定するには、AEM 6.4 を使用することをお勧めします。 AEM が稼働していない場合は、以下の場所から AEM をダウンロードしてください。
+AEMオーサーインスタンスを設定するには、AEM 6.4 を使用することをお勧めします。AEM が稼働していない場合は、以下の場所から AEM をダウンロードしてください。
 
-* 既にAEMを使用している場合は、からAEM 6.4 をダウンロードしてください。 [Adobeライセンス Web サイト](http://licensing.adobe.com).
+* 既に AEM を使用している場合は、[アドビライセンス Web サイト](http://licensing.adobe.com)から AEM 6.4 をダウンロードしてください。
 
-* Adobeの [Adobeパートナートレーニングプログラム](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) AEM 6.4 をリクエストするには、以下を実行します。
+* アドビパートナーの場合は、[アドビパートナートレーニングプログラム](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)から AEM 6.4 をリクエストしてください。
 
-AEM をダウンロードしたら、「[デプロイメントと保守](https://helpx.adobe.com/jp/experience-manager/6-4/sites/deploying/using/deploy.html#defaultlocalinstall)」の説明に従い、AEM オーサーインスタンスの設定を行ってください。
+AEM をダウンロードしたら、[デプロイメントと保守](https://helpx.adobe.com/jp/experience-manager/6-4/sites/deploying/using/deploy.html#defaultlocalinstall)の説明に従い、AEM オーサーインスタンスの設定を行ってください。
 
 ### 最新の AEM サービスパックをダウンロードしてインストールする {#servicepack}
 
-詳しい手順については、を参照してください。
+説明については、次を参照してください。
 
-* [AEM 6.4 Service Pack リリースノート](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)
+* [AEM 6.4 サービスパックリリースノート](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes/sp-release-notes.html)
 
 **カスタマーサポートに連絡** 最新のAEMパッケージまたは Service Pack が見つからない場合。
 
@@ -81,7 +81,7 @@ AEM AssetsとBrand Portalを初めて設定する場合は、以下の手順を�
 
 >[!NOTE]
 >
->AEM Assetsのオーサーインスタンスは、1 つのBrand Portalテナントでのみ設定できます。
+>AEM Assets オーサーインスタンスは、1 つの Brand Portal テナントとの連携のみ設定する必要があります。
 
 ### IMS 設定の作成 {#create-ims-configuration}
 
@@ -245,7 +245,7 @@ Brand Portal クラウドサービス設定を作成するには、以下の手�
 
 1. 各テナントに対して 4 つのレプリケーションエージェントが作成されます。
 
-   Brand Portalテナントのレプリケーションエージェントを見つけます。
+   Brand Portal テナントのレプリケーションエージェントを見つけます。
 
    レプリケーションエージェントの URL をクリックします。
 
@@ -254,7 +254,7 @@ Brand Portal クラウドサービス設定を作成するには、以下の手�
 
    >[!NOTE]
    >
-   >レプリケーションエージェントは並行して動作し、ジョブの配布を均等に共有するので、公開速度が元の速度の 4 倍に増えます。 クラウドサービスを設定した後は、複数のアセットを並行して公開できるように、デフォルトで有効化されるレプリケーションエージェントを有効にするために追加の設定は必要ありません。
+   >レプリケーションエージェントは並行して動作し、ジョブを均等に分配するので、公開の速度が元の速度の 4 倍に向上します。Cloud Service を設定した後、レプリケーションエージェントを有効にするために追加の設定は必要ありません。レプリケーションエージェントはデフォルトでアクティベートされ、複数のアセットを並行して公開できるようになります。
 
 1. AEM AssetsオーサーとBrand Portalの間の接続を確認するには、 **[!UICONTROL 接続をテスト]**.
 
@@ -271,14 +271,14 @@ Brand Portal クラウドサービス設定を作成するには、以下の手�
    >
    >どのレプリケーションエージェントも無効にしないでください。一部のアセットのレプリケーションが失敗する可能性があります。
    >
-   >タイムアウトエラーを避けるために、4 つのレプリケーションエージェントすべてが設定されていることを確認します。 詳しくは、 [Brand Portalへの並列公開に関する問題のトラブルシューティング](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
+   >タイムアウトエラーを避けるために、4 つのレプリケーションエージェントすべてが設定されていることを確認します。[Brand Portal への並列公開における問題のトラブルシューティング](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html?lang=ja#connection-timeout)を参照してください。
 
 Brand PortalがAEM Assetsオーサーインスタンスで正常に設定されました。 次の操作が可能になっています。
 
 * [AEM Assets から Brand Portal へのアセットの公開](../assets/brand-portal-publish-assets.md)
 * [AEM Assets から Brand Portal へのフォルダーの公開](../assets/brand-portal-publish-folder.md)
 * [AEM Assets から Brand Portal へのコレクションの公開](../assets/brand-portal-publish-collection.md)
-* [アセットソーシングの設定](https://docs.adobe.com/content/help/ja/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) Brand PortalユーザーがアセットをAEM Assetsに投稿および公開できるようにする。
+* [アセットソーシングの設定](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=ja) Brand PortalユーザーがアセットをAEM Assetsに投稿および公開できるようにする。
 
 ## 設定のアップグレード {#upgrade-integration-64}
 
@@ -290,7 +290,7 @@ Brand PortalがAEM Assetsオーサーインスタンスで正常に設定され�
 
 ### 実行中のジョブの検証 {#verify-jobs}
 
-変更を加える前に、AEM Assetsオーサーインスタンスで公開ジョブが実行されていないことを確認してください。 そのためには、4 つのレプリケーションエージェントをすべて検証し、キューが理想的/空であることを確認できます。
+変更を加える前に、AEM Assets オーサーインスタンスで公開ジョブが実行されていないことを確認してください。そのためには、4 つのレプリケーションエージェントをすべて検証し、キューが理想的/空であることを確認できます。
 
 1. AEM Assetsオーサーインスタンスにログインします。
 
@@ -304,9 +304,9 @@ Brand PortalがAEM Assetsオーサーインスタンスで正常に設定され�
 
    ![](assets/test-integration2.png)
 
-1. Brand Portalテナントのレプリケーションエージェントを見つけます。
+1. Brand Portal テナントのレプリケーションエージェントを見つけます。
 
-   次を確認します。 **キューは待機中です** すべてのレプリケーションエージェントに対して、アクティブな公開ジョブはありません。
+   すべてのレプリケーションエージェントに対して **キューが待機中**&#x200B;で、アクティブな公開ジョブがないことを確認します。
 
    ![](assets/test-integration3.png)
 
@@ -316,7 +316,7 @@ Brand PortalがAEM Assetsオーサーインスタンスで正常に設定され�
 
 * 4 つのレプリケーションエージェントをすべて削除
 * クラウドサービスを削除
-* MACユーザーを削除
+* MAC ユーザーを削除
 
 既存の設定を削除するには、次の手順を実行します。
 
@@ -324,7 +324,7 @@ Brand PortalがAEM Assetsオーサーインスタンスで正常に設定され�
 
    デフォルトの URL:http:// localhost:4502/crx/de/index.jsp
 
-1. に移動します。 `/etc/replications/agents.author` Brand Portalテナントの 4 つのレプリケーションエージェントをすべて削除します。
+1. `/etc/replications/agents.author` に移動して、Brand Portal テナントの 4 つのレプリケーションエージェントをすべて削除します。
 
    ![](assets/delete-replication-agent.png)
 
@@ -332,7 +332,7 @@ Brand PortalがAEM Assetsオーサーインスタンスで正常に設定され�
 
    ![](assets/delete-cloud-service.png)
 
-1. に移動します。 `/home/users/mac` をクリックし、 **Macユーザー** Brand Portalテナントの
+1. `/home/users/mac` に移動して、Brand Portalテナントの **Macユーザー**&#x200B;を削除します。
 
    ![](assets/delete-mac-user.png)
 

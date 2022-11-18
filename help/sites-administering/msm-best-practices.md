@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 04344537-7485-40a9-ad14-804ba448f1e2
 feature: Multi Site Manager
 exl-id: f23a1c62-0191-4b5b-90be-d66d51e38f83
-source-git-commit: 3ee650d0810a03878b4b0a58708ea3600fa28ff2
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1522'
 ht-degree: 99%
 
 ---
@@ -45,7 +45,7 @@ MSM は、コンテンツのデプロイメントを自動化するための設�
 >また、[参照コンポーネント](/help/sites-authoring/default-components-foundation.md#reference)を使用して、単一のページまたは段落を再利用することもできます。ただし、次の点に注意してください。
 >
 >* MSM のほうが柔軟性が高く、同期するコンテンツや同期のタイミングを詳細に制御できます。
->* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)は基礎コンポーネントよりも推奨されています。
+>* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)は基礎コンポーネントよりも推奨されています。
 >
 
 

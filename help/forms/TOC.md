@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.4 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '3729'
+source-wordcount: '3721'
 ht-degree: 97%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 97%
 
 + [AEM 6.4 Forms ユーザーガイド](home.md)
 + リリースノート {#release-notes-new-features}
-   + [リリースノート](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/forms.html)
+   + [リリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/forms.html)
    + [新機能の概要](using/whats-new.md)
-   + [非推奨（廃止予定）の機能](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/deprecated-removed-features.html)
+   + [非推奨（廃止予定）の機能](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html?lang=ja)
 + はじめに {#getting-started}
    + [AEM Forms の概要](using/introduction-aem-forms.md)
    + [アダプティブフォームのオーサリングの概要](using/introduction-forms-authoring.md)
@@ -573,8 +573,8 @@ ht-degree: 97%
    + [プロセスレポートのアドホッククエリ](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md)
    + [トラブルシューティングプロセスのレポート](/help/forms/using/process-reporting/troubleshooting-process-management.md)
 + 開発者向けリファレンス {#developer-reference}
-   + [開発者の基本事項](https://docs.adobe.com/content/help/ja-JP/experience-manager-64/developing/home.html)
-   + [HTML テンプレート言語](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)
+   + [開発者の基本事項](https://experienceleague.adobe.com/docs/experience-manager-64/developing/home.html)
+   + [HTML テンプレート言語](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja)
    + [アダプティブフォームをデバッグするための AEM プラグイン。](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-4/forms/javadocs/index.html)
    + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/experience-manager/6-4/forms/ProgramLC/javadoc/index.html)

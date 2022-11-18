@@ -6,9 +6,9 @@ seo-description: An overview of the essential capabilities of AEM 6.4
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 exl-id: f4dea584-3cd1-4d9f-ae3c-2573726dde95
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '123'
 ht-degree: 100%
 
 ---
@@ -37,15 +37,11 @@ Adobe Managed Services クラウドデプロイメントなど、[Adobe Experien
 
 ## AEM Screens {#aem-screens}
 
-[動的でインタラクティブなエクスペリエンスを公開するデジタルサイネージソリューションについて説明します](https://docs.adobe.com/content/help/ja/experience-manager-screens/user-guide/aem-screens-introduction.html)。
+[動的でインタラクティブなエクスペリエンスを公開するデジタルサイネージソリューションについて説明します](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=ja)。
 
 ## AEM Communities {#aem-communities}
 
 [フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。](/help/communities/home.md)
-
-## AEM Livefyre {#aem-livefyre}
-
-[ユーザー作成コンテンツを AEM Livefyre と共有します。](https://docs.adobe.com/content/help/ja/livefyre/using/home.html)
 
 ## AEM Mobile {#aem-mobile}
 

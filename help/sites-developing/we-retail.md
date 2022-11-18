@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: f50150af-deff-4c29-bfe0-1cfc67b29d51
 exl-id: 66c19394-9d2f-4bdd-9c17-f0ec8090f0b4
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '749'
 ht-degree: 100%
 
 ---
@@ -39,7 +39,7 @@ We.Retail は、AEM の標準的な参照実装として、AEM の最も強力�
 | [HTML テンプレート言語](https://helpx.adobe.com/jp/experience-manager/htl/user-guide.html) | すべてのコンポーネントが HTL に基づいています。 |  |
 | [e コマース機能](/help/sites-developing/ecommerce.md) | 製品カタログを特徴としています。 |  |
 | [コミュニティサイト](/help/communities/overview.md) | 訪問者がコミュニティでのディスカッションに参加したりブログを読んだりできるようにします。 |  |
-| [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) | すべてのコンポーネントが新しいコアコンポーネントに基づいており、使いやすく、設定変更も手早くおこなえます。 | [試してみる](/help/sites-developing/we-retail-core-components.md) |
+| [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) | すべてのコンポーネントが新しいコアコンポーネントに基づいており、使いやすく、設定変更も手早くおこなえます。 | [試してみる](/help/sites-developing/we-retail-core-components.md) |
 | [コンテンツフラグメント](/help/assets/content-fragments.md) | We.Retail エクスペリエンスのセクションは、コンテンツフラグメントによってコンテンツを再利用する方法を示します。 | [試してみる](/help/sites-developing/we-retail-content-fragments.md) |
 | [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md) | エクスペリエンスフラグメントは、ページ内で参照できるコンテンツおよびレイアウトを含む 1 つ以上のコンポーネントのグループです。 | [試してみる](/help/sites-developing/we-retail-experience-fragments.md) |
 

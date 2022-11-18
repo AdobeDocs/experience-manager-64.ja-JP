@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.4
 contentOwner: alba
 discoiquuid: d445bcfb-7712-472f-bfb4-a8811c2bc4f1
 exl-id: e09d2d59-41f0-4cf2-bcf3-ec3dbc3b8474
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 5%
+source-wordcount: '643'
+ht-degree: 7%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 5%
 * 既存の製品カタログを Livefyre にシームレスに統合して、サイトでのユーザーエンゲージメントやコンバージョンを促進し、ショッパブルな UGC エクスペリエンスを提供します。
 * AEM Commerce 製品カタログの項目を編集または削除し、Livefyre で変更を自動的に更新します。
 
-インストールに関するヘルプについては、 [Livefyre との統合](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html).
+インストールに関するヘルプについては、 [Livefyre との統合](https://experienceleague.adobe.com/docs/experience-manager-64/administering/integration/livefyre.html?lang=ja-JP).
 
 ### その他のリリース情報 {#additional-release-information}
 
@@ -62,7 +62,7 @@ instagramの非ビジネスユーザーアカウントからのコンテンツ�
 #### 新機能または改善点 {#new-feature-or-improvement}
 
 * Livefyre で権限リクエストソーシャルアカウントを設定する前に、UGC を検索する機能を追加しました。 ソーシャルアカウントを設定して権限をリクエストするか、コンテンツを所有している場合は権限リクエストを上書きする必要があります。
-* InstagramとTwitter [UGC 権限リクエストワークフロー](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html) は、最新の API に準拠するように更新されました。
+* InstagramとTwitter [UGC 権限リクエストワークフロー](https://experienceleague.adobe.com/docs/experience-manager-64/administering/integration/livefyre.html) は、最新の API に準拠するように更新されました。
 * 権限ステータスと適切なアクションが、権限リクエスト画面に表示されます。
 
 #### バグ修正 {#bug-fixes}

@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 exl-id: a2a299b5-a15a-47d9-a9d8-83f45917d080
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '462'
 ht-degree: 100%
 
 ---
@@ -32,7 +32,7 @@ AEM 開発プロジェクトを開始する前に、まず、次のベストプ�
 * [コードの落とし穴](/help/sites-developing/code-pitfalls.md)
 * [JCR 統合](/help/sites-developing/jcr-integration.md)
 * [OSGi バンドル](/help/sites-developing/osgi-bundles.md)
-* [Java API のベストプラクティス](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
+* [Java API のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html?lang=ja)
 
 ### ベストプラクティスに関する追加情報 {#additional-best-practices-information}
 

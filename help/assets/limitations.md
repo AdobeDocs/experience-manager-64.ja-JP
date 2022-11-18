@@ -8,9 +8,9 @@ geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: 0269ff24-582b-40f8-95e3-3ff4ac3a792f
-source-git-commit: 50d4228ab922a5e09eabd0f718b6712db5b86bde
+source-git-commit: 1ba7f15afbb8dc74499ea57bd775473b5ef650ef
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '279'
 ht-degree: 79%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 79%
 
 | アセット - 制限タイプ | ベストプラクティス | 適用される制限 | 2022年12月31日（PT）の制限に変更 |
 | --- | --- | --- | --- |
-| **画像** - 画像あたりのスマート切り抜き数 | 5 | 100 | 20 |
+| **画像** - 画像あたりのスマート切り抜き数 | 5 | 100 | 適用なし |
 | **すべてのセット** - 1 セットあたりの重複アセット数 | 重複なし | 20 | 適用なし |
 | **すべてのセット** - 1 セットあたりの最大アセット数 | 1 セットあたり 5～10 個の画像 | 1000 | 適用なし |
 | **スピンセット** - 2D セットあたりの最大行数／列数 | 1 セットあたり 12～18 個の画像 | 1000 | 適用なし |

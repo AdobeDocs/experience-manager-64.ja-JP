@@ -10,9 +10,9 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 2dbe18c1-8d79-4685-911b-3c6fe87d7e2c
 exl-id: 6ec7f037-3582-49ce-9297-6acd01283949
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '139'
 ht-degree: 100%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 100%
 
 WKND SPA チュートリアルでは、プロジェクトのセットアップからアプリケーションのルーティングまで、AEM で編集可能な、独自の単一ページのアプリケーションを構築する例について、エンドツーエンドで説明しています。
 
-* [AEM SPA Editor と Angular の使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-angular-tutorial/overview.html)
-* [AEM SPA Editor と React の使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-react-tutorial/overview.html)
+* [AEM SPA Editor と Angular の使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html?lang=ja)
+* [AEM SPA Editor と React の使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html?lang=ja)
 
 AEM の SPA プロジェクトを始める前に、[AEM 対応 SPA の開発](/help/sites-developing/spa-architecture.md)のドキュメントも必ずお読みください。

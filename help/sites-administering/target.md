@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 454854f8-6053-406c-888d-f427777bf570
 exl-id: 10c40e33-e62f-451f-b5d4-e34081f4340e
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '598'
 ht-degree: 100%
 
 ---
@@ -68,7 +68,7 @@ Target に統合するには、次のタスクを実行します。
 
 AEM と Adobe Target を統合するには、Adobe Target、AEM アクティビティの管理、AEM オーディエンスの管理に関する知識が必要です。以下を十分理解している必要があります。
 
-* Adobe Target（[Adobe Target のドキュメント](https://docs.adobe.com/content/help/ja-JP/target/using/target-home.translate.html)を参照）
+* Adobe Target（[Adobe Target のドキュメント](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja)を参照）
 * AEM アクティビティコンソール（[アクティビティの管理](/help/sites-authoring/activitylib.md)を参照）。
 * AEM オーディエンス（[オーディエンスの管理](/help/sites-authoring/managing-audiences.md)を参照）
 

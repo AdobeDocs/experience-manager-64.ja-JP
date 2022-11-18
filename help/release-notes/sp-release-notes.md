@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.4
 topic-tags: release-notes
 discoiquuid: 93067308-e275-490f-8d78-ae79e046059c
 exl-id: d0da9390-2167-47ee-82fd-8c81d8d68a3e
-source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '21547'
-ht-degree: 29%
+source-wordcount: '21517'
+ht-degree: 28%
 
 ---
 
@@ -88,7 +88,7 @@ AEM 6.4.8.0 は、新機能、お客様からリクエストされた主な機�
 
 * バージョン履歴 URL は、アセットプロパティページの「参照元」フィールドに表示される（NPR-31889）。
 
-* 「公開を管理」ページのBrand Portalで、公開済みフォルダーのサブフォルダーに対して非公開にする。(NPR-31835)
+* 公開を管理ページのBrand Portalで、公開済みフォルダーのサブフォルダーに対して非公開にする。(NPR-31835)
 
 * Scene7クラウド設定がプライベートフォルダーに配置されている場合、Dynamic Mediaビデオエンコードがアップロードに失敗する `/conf` の代わりに `/conf/global` (NPR-31779)。
 
@@ -1291,7 +1291,7 @@ AEM 6.4.2.0 の主な特徴は次のとおりです。
 * MongoDB Enterprise 3.6 のサポートを追加しました。
 * サイトページエディターでは、React で作成されたコンテキスト内編集と、React で作成されたクライアントサイドコンポーネントとの組み合わせに対するAngularをサポートしています。 <a href="../sites-developing/spa-walkthrough.md">AEM SPA Editor JS SDK</a>.
 * コンテンツフラグメントの機能強化：テキストフィールドに注釈を付ける機能と、バージョンを並べて比較する機能が追加されました。
-* 追加済み [Adobe Stockとの統合](/help/assets/aem-assets-adobe-stock.md) AEMのユーザーインターフェイスから直接、Adobe Stockアセットの検索、プレビュー、保存、ライセンス取得をおこなえるようにします。 詳しくは、 [AEM AssetsでのAdobe Stock Assets の使用](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/assets/creative-workflows/adobe-stock.html).
+* 追加済み [Adobe Stockとの統合](/help/assets/aem-assets-adobe-stock.md) AEMのユーザーインターフェイスから直接、Adobe Stockアセットの検索、プレビュー、保存、ライセンス取得をおこなえるようにします。 詳しくは、 [AEM AssetsでのAdobe Stock Assets の使用](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html?lang=ja).
 * アセットでは、動的な条件付きメタスキーマのサポートと、アセットフォルダーのメタデータスキーマを設定する機能が追加されました。
 * フォルダーのサムネールの作成/更新機能を有効/無効にする設定を各コンポーネントに追加しました。
 * ページオーサリング時の画像エディターの機能強化。
@@ -1338,7 +1338,7 @@ AEM 6.4.2.0 の主な特徴は次のとおりです。
 * オン/オフ時間は crx/de に保存されますが、ページプロパティ UI コンソールで同じものを取得しません。 NPR-25154：CQ-4243431 のホットフィックス
 * [ スタイルシステム ] は、ダイアログの初期プロパティ値を壊します。 NPR-25648：CQ-4250073 のホットフィックス
 * cq:htmlTag ノードで cq:tagName プロパティを定義する場合、コンポーネントが JSP を介して含まれている場合、タグ名は考慮されません。 NPR-24154：CQ-4244120 のホットフィックス
-* ネストされた parsys コンポーネントの場合、デザインを満たす最初の（ネストされたパスが最も少ない）部分が、複数の使用可能なコンポーネントから常に適用されます。詳しくは、[デザインパスの解決](https://docs.adobe.com/content/help/ja/experience-manager-64/developing/platform/templates/page-templates-static.html)を参照してください。NPR-24973：CQ-4246276 のホットフィックス
+* ネストされた parsys コンポーネントの場合、デザインを満たす最初の（ネストされたパスが最も少ない）部分が、複数の使用可能なコンポーネントから常に適用されます。詳しくは、[デザインパスの解決](https://experienceleague.adobe.com/docs/experience-manager-64/developing/platform/templates/page-templates-static.html)を参照してください。NPR-24973：CQ-4246276 のホットフィックス
 * RTE コンポーネントにテキストを貼り付けると、ポップアップダイアログが表示されますが、正しくレンダリングされません。 NPR-24895：CQ-4245901 のホットフィックス
 * (RTE) 必須フィールドインジケーターに関するパフォーマンスの問題。 NPR-24894：CQ-4241895 のホットフィックス
 * （ページコンポーネント）Parsys にコンポーネントを追加すると、右から切り抜かれ、デバイスのフレーム幅から出ます。 NPR-25536：CQ-4238224 のホットフィックス
@@ -1553,7 +1553,7 @@ AEM 6.4.2.0 フォームの主なハイライトは次のとおりです。
 * ユーザーが複数のサービスで同じ WSDL ファイルを使用できる機能を追加しました。
 * サポートされていないタイムスタンプパターンが日付選択ドロップダウンから削除されました。
 * OSGI での xfaf および pdf のアンダーレイのサポートが追加されました。
-* を使用するためのサポートを追加しました。 [トランザクションレポート機能](https://docs.adobe.com/content/help/en/experience-manager-64/forms/transaction-reports/transaction-reports-overview.html) オンプレミスデプロイメントで実行します。
+* を使用するためのサポートを追加しました。 [トランザクションレポート機能](https://experienceleague.adobe.com/docs/experience-manager-64/forms/transaction-reports/transaction-reports-overview.html) オンプレミスデプロイメントで実行します。
 * 条件ルールエディターで子 var を表示しないコードを追加しました。
 
 **Forms アドオンパッケージ**
@@ -1656,17 +1656,17 @@ AEM 6.4.2.0 フォームの主なハイライトは次のとおりです。
 
 **Assets**
 
-* 追加済み [Adobe Stockとの統合](/help/assets/aem-assets-adobe-stock.md) AEMのユーザーインターフェイスから直接、Adobe Stockアセットの検索、プレビュー、保存、ライセンス取得をおこなえるようにします。 詳しくは、 [AEM Assets でのAdobe Stock Assets の使用](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/creative-workflows/adobe-stock.html). NPR-15779：CQ-30857 のホットフィックス
+* 追加済み [Adobe Stockとの統合](/help/assets/aem-assets-adobe-stock.md) AEMのユーザーインターフェイスから直接、Adobe Stockアセットの検索、プレビュー、保存、ライセンス取得をおこなえるようにします。 詳しくは、 [AEM Assets でのAdobe Stock Assets の使用](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html). NPR-15779：CQ-30857 のホットフィックス
 * 動的な条件付きメタスキーマのサポートが追加されました。 詳しくは、 [カスケードメタデータ](/help/assets/cascading-metadata.md). NPR-25189：CQ-4237413 のホットフィックス
 * コンテンツフラグメントで「アセットのダウンロード」オプションが有効になりました。 詳しくは、 [アセットレポート](/help/assets/asset-reports.md). NPR-25186：CQ-4237410 のホットフィックス
 * アセットフォルダーのメタデータスキーマを設定する機能。 詳しくは、 [フォルダーメタデータスキーマ](/help/assets/folder-metadata-schema.md) そしてそれを参照して [設定](#configuration-settings-required-for-npr) AEM 6.4.2.0 のインストール後 NPR-21268：CQ-4221574 のホットフィックス
 
 **サイト**
 
-* 削除権限を持たずにコンテンツフラグメントを編集することを許可します。 詳しくは、 [コンテンツフラグメントのカスタマイズと拡張](https://docs.adobe.com/content/help/en/experience-manager-64/assets/fragments/content-fragments-delete.html). NPR-25793：CQ-4248750 のホットフィックス
-* コンテンツフラグメントに注釈を付ける機能が追加されました。 詳しくは、 [バリエーション — オーサリングフラグメント](https://docs.adobe.com/content/help/en/experience-manager-64/assets/fragments/content-fragments-variations.html#annotating-a-content-fragment). NPR-25188：CQ-4235336 のホットフィックス
-* バージョン管理：コンテンツフラグメントを並べて比較します。 詳しくは、 [コンテンツフラグメントの管理](https://docs.adobe.com/content/help/en/experience-manager-64/assets/fragments/content-fragments-managing.html#comparing-fragment-versions). NPR-25187：CQ-4237412 のホットフィックス
-* AEM 6.4.2.0 にバックポートされた画像エディターの機能強化。詳しくは、 [画像エディター](https://docs.adobe.com/content/help/ja-JP/experience-manager-64/developing/components/image-editor.html). NPR-24467
+* 削除権限を持たずにコンテンツフラグメントを編集することを許可します。 詳しくは、 [コンテンツフラグメントのカスタマイズと拡張](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments-delete.html). NPR-25793：CQ-4248750 のホットフィックス
+* コンテンツフラグメントに注釈を付ける機能が追加されました。 詳しくは、 [バリエーション — オーサリングフラグメント](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments-variations.html#annotating-a-content-fragment). NPR-25188：CQ-4235336 のホットフィックス
+* バージョン管理：コンテンツフラグメントを並べて比較します。 詳しくは、 [コンテンツフラグメントの管理](https://experienceleague.adobe.com/docs/experience-manager-64/assets/fragments/content-fragments-managing.html#comparing-fragment-versions). NPR-25187：CQ-4237412 のホットフィックス
+* AEM 6.4.2.0 にバックポートされた画像エディターの機能強化。詳しくは、 [画像エディター](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/image-editor.html). NPR-24467
 
 **OSGi バンドルおよびコンテンツパッケージが含まれています**
 
@@ -1900,7 +1900,7 @@ AEM 6.4.1.0 はAEM 6.4 GA 上にインストールできます。 サービス�
 
 **DAM — スマートタグ**
 
-* 導入 [拡張スマートタグ](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/enhanced-smart-tags.html). NPR-21951
+* 導入 [拡張スマートタグ](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/enhanced-smart-tags.html). NPR-21951
 
 **Forms**
 
@@ -1908,7 +1908,7 @@ AEM Forms の修正は、このリリースで提供されるアドオンパッ�
 
 AEM Forms の主なハイライトは次のとおりです。
 
-* AEM Formsの紹介 [トランザクションレポート機能](https://docs.adobe.com/content/help/en/experience-manager-64/forms/transaction-reports/transaction-reports-overview.html) AEM Formsデプロイメント上で、送信済みフォーム、処理済みドキュメント、レンダリング済みドキュメントなどのトランザクションの数を追跡し、保持する。 製品の使用状況に関するインサイトを提供し、ビジネスユーザーがデジタル処理の量を理解するのに役立ちます。
+* AEM Formsの紹介 [トランザクションレポート機能](https://experienceleague.adobe.com/docs/experience-manager-64/forms/transaction-reports/transaction-reports-overview.html) AEM Formsデプロイメント上で、送信済みフォーム、処理済みドキュメント、レンダリング済みドキュメントなどのトランザクションの数を追跡し、保持する。 製品の使用状況に関するインサイトを提供し、ビジネスユーザーがデジタル処理の量を理解するのに役立ちます。
 * XML フォームに対するPDF/UA のサポートを有効にしました。
 * Clientlib に allowProxy = true を追加しました。 **aemfd.ccm.channel.contentpage**
 * コードが更新され、等しくなく「次を含む」として詳細なタイトル検索ができるようになりました。
@@ -2066,12 +2066,12 @@ AEM Forms の主なハイライトは次のとおりです。
 
 **Assets**
 
-* 拡張スマートタグの機能が追加されました。 詳しくは、 [拡張スマートタグ](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/enhanced-smart-tags.html). NPR-21951：CQ-4234883 のホットフィックス
+* 拡張スマートタグの機能が追加されました。 詳しくは、 [拡張スマートタグ](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/enhanced-smart-tags.html). NPR-21951：CQ-4234883 のホットフィックス
 * InDesignにAEM Assets References が導入されました。 詳しくは、 [InDesign内のAEM Assets References](/help/assets/managing-linked-subassets.md). NPR-23386
 
 **サイト**
 
-* （ページオーサリング）画像エディターの機能強化。 詳しくは、 [画像エディター](https://docs.adobe.com/content/help/en/experience-manager-64/developing/components/image-editor.html). NPR-24267：CQ-4245502 のホットフィックス
+* （ページオーサリング）画像エディターの機能強化。 詳しくは、 [画像エディター](https://experienceleague.adobe.com/docs/experience-manager-64/developing/components/image-editor.html). NPR-24267：CQ-4245502 のホットフィックス
 
 **含まれている OSGi バンドルとコンテンツパッケージ**
 
@@ -2172,7 +2172,7 @@ B. [パッケージマネージャーからの HTTP API](/help/sites-administeri
 
 1. AEM Service Pack がインストールされていることを確認してください。
 1. 次のリストにある対応する forms アドオンパッケージをダウンロードします。 [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) ご使用のオペレーティングシステム用。
-1. フォームアドオンパッケージをインストールします。詳しくは、 [AEM forms アドオンパッケージのインストール](https://docs.adobe.com/content/help/en/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
+1. フォームアドオンパッケージをインストールします。詳しくは、 [AEM forms アドオンパッケージのインストール](https://experienceleague.adobe.com/docs/experience-manager-64/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html#install-aem-forms-add-on-package).
 
 ### AEM Forms JEE インストーラーのインストール {#install-aem-forms-jee-installer}
 
@@ -2227,7 +2227,7 @@ Maven プロジェクトで Uber Jar を使用するには、[Uber Jar の使用
 | 領域 | 機能 | 代替手段 | バージョン |
 |---|---|---|---|
 | Assets | サブアセットのタグアクションを管理 | 代替機能はありません | AEM 6.4.2.0 |
-| Assets と Adobe Creative Cloud の統合 | [AEM／Creative Cloud フォルダー共有](https://docs.adobe.com/content/help/en/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html)は、クリエイティブユーザーに AEM のアセットへのアクセスを提供する方法として、AEM 6.2 で導入されました。Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが大幅に向上し、Photoshop、InDesign、Illustrator 内から AEM のアセットへの直接アクセスが強化されています。アドビは、このフォルダー共有機能をさらに強化する予定はありません。この機能はAEMに含まれますが、お客様には代わりの機能を使用することを強くお勧めします。 | AdobeAsset Link またはデスクトップアプリケーション 詳細については、[AEM Creative Cloud の統合](/help/assets/aem-cc-integration-best-practices.md)記事を参照してください。 | AEM 6.4.4.0 |
+| Assets と Adobe Creative Cloud の統合 | [AEM／Creative Cloud フォルダー共有](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/aem-cc-folder-sharing-best-practices.html)は、クリエイティブユーザーに AEM のアセットへのアクセスを提供する方法として、AEM 6.2 で導入されました。Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが大幅に向上し、Photoshop、InDesign、Illustrator 内から AEM のアセットへの直接アクセスが強化されています。アドビは、このフォルダー共有機能をさらに強化する予定はありません。この機能はAEMに含まれますが、お客様には代わりの機能を使用することを強くお勧めします。 | AdobeAsset Link またはデスクトップアプリケーション 詳細については、[AEM Creative Cloud の統合](/help/assets/aem-cc-integration-best-practices.md)記事を参照してください。 | AEM 6.4.4.0 |
 
 ### 既知の問題 {#known-issues}
 
@@ -2273,4 +2273,4 @@ AEM 6.4.8.0 に含まれているコンテンツパッケージの一覧
 
 * [licensing.adobe.com での製品のダウンロード](https://licensing.adobe.com/)。
 * 製品の追加機能に関する[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)上のアップデート、パッチ、パッケージ。
-* [Admin Console 経由でのカスタマーサポート](https://adminconsole.adobe.com/)。詳しくは、[新しいアドビカスタマーサポートエクスペリエンス](https://docs.adobe.com/content/help/ja-JP/customer-one/using/home.html)を参照してください。
+* [Admin Console 経由でのカスタマーサポート](https://adminconsole.adobe.com/)。詳しくは、[新しいアドビカスタマーサポートエクスペリエンス](https://experienceleague.adobe.com/docs/customer-one/using/home.html?lang=ja)を参照してください。

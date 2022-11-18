@@ -10,10 +10,10 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 30d25772-0df7-468e-bcbd-c6fb2e962662
 exl-id: 89e45231-885a-4d35-839b-2b50239503ad
-source-git-commit: cc31f2fa2f79154749776260f7621f6631e9db4a
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '1776'
-ht-degree: 80%
+source-wordcount: '1774'
+ht-degree: 79%
 
 ---
 
@@ -145,7 +145,7 @@ AEM が標準で Angular および React SPA フレームワークをサポー�
 >[We.Retail ジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)はデモの目的でのみ使用され、推奨される Adobe I/O Runtime の代わりに、Node.js を単純な例として使用します。この例は、どのプロジェクト作業にも使用しないでください。
 
 >[!NOTE]
->AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
+>AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
 
 ## Node.js の使用 {#using-node-js}
 

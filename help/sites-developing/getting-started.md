@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: introduction
 discoiquuid: 54e48abc-be75-4477-83fa-bd74d5b995af
 exl-id: 82554eb8-34a0-4877-b92c-56ee662dda97
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 84%
+source-wordcount: '253'
+ht-degree: 95%
 
 ---
 
@@ -27,9 +27,9 @@ AEM の開発が初めての方や、ベストプラクティスの情報が必�
 
 ## WKND 開発者向けチュートリアル {#wknd-developer-tutorial}
 
-チュートリアルを利用できます [ここ](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) または下の画像をクリックしてください。
+チュートリアルを利用できます [ここ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja) または下の画像をクリックしてください。
 
-[![画像をクリック](assets/screen_shot_2018-11-23at152453.png)](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+[![画像をクリック](assets/screen_shot_2018-11-23at152453.png)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
 ## 中心概念 {#core-concepts}
 
@@ -38,11 +38,11 @@ AEM の開発が初めての方や、ベストプラクティスの情報が必�
 * [HTL](https://helpx.adobe.com/jp/experience-manager/htl/user-guide.html)
 * [Sling Model](https://sling.apache.org/documentation/bundles/models.html)
 * [タッチ UI](/help/sites-developing/touch-ui-concepts.md)
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 * [編集可能なテンプレート](/help/sites-developing/page-templates-editable.md)
 
 まずチュートリアルを済ませてから、上記の概念の詳細に進んでください。
 
 ## 次の手順 {#next-steps}
 
-完了したら、 [チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)ドキュメントを確認する [AEMの中心概念](/help/sites-developing/the-basics.md) AEMの基盤となるテクノロジーと開発枠組みの一部をより深く理解できるようにするため。
+[チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)が完了したら、[AEM の中心概念](/help/sites-developing/the-basics.md)に関するドキュメントを確認し、AEM の基本テクノロジーや開発手法についての理解を深めることをお勧めします。

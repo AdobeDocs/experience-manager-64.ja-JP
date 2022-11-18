@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 6abadd53-dab1-4e3b-84d8-10374e8a305c
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '2185'
-ht-degree: 99%
+source-wordcount: '2179'
+ht-degree: 97%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->AEM 6.3 では、Target ライブラリファイル [AT.JS](https://docs.adobe.com/content/help/jp/target/using/implement-target/client-side/mbox-implement/mbox-download.html) を選択できます。このファイルは、Adobe Target 用の新しい実装ライブラリであり、通常の web 実装と単一ページアプリケーションの両方に使用できるように設計されています。
+>AEM 6.3 では、Target ライブラリファイル [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html) を選択できます。このファイルは、Adobe Target 用の新しい実装ライブラリであり、通常の web 実装と単一ページアプリケーションの両方に使用できるように設計されています。
 >
 >AT.js は、mbox.js ライブラリと比較して、いくつかの点で改善されています。
 >
@@ -98,7 +98,7 @@ ht-degree: 99%
 オプトインウィザードを使用せずに手動で Adobe Target と統合します。
 
 >[!NOTE]
-Target ライブラリファイル [AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html) は、Adobe Target 用の新しい実装ライブラリであり、通常の ｗeb 実装と単一ページアプリケーションの両方に使用できるように設計されています。mbox.js の代わりに AT.js をクライアントライブラリとして使用することをお勧めします。
+Target ライブラリファイル [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html) は、Adobe Target 用の新しい実装ライブラリであり、通常の ｗeb 実装と単一ページアプリケーションの両方に使用できるように設計されています。mbox.js の代わりに AT.js をクライアントライブラリとして使用することをお勧めします。
 AT.js は、mbox.js ライブラリと比較して、いくつかの点で改善されています。
 * Web 実装のページ読み込み時間が改善されています。
 * セキュリティが改善されています。
@@ -200,7 +200,7 @@ Target クラウド設定を設定したら、Target フレームワークを追
 
 ### アクティビティと Target クラウド設定の関連付け  {#associating-activities-with-the-target-cloud-configuration}
 
-[AEM アクティビティ](/help/sites-authoring/activitylib.md)を Target クラウド設定に関連付け、アクティビティを [Adobe Target](https://docs.adobe.com/content/help/jp/target/using/experiences/offers/manage-content.html) にミラーリングできるようにします。
+[AEM アクティビティ](/help/sites-authoring/activitylib.md)を Target クラウド設定に関連付け、アクティビティを [Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) にミラーリングできるようにします。
 
 >[!NOTE]
 使用可能なアクティビティの種類は、次のオプションによって決まります。

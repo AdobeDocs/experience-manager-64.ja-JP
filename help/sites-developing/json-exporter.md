@@ -1,7 +1,7 @@
 ---
 title: コンテンツサービス用の JSON エクスポーター
 seo-title: JSON Exporter for Content Services
-description: 'AEM コンテンツサービスは、Web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。AEM コンテンツサービスにより、あらゆるクライアントで使用できる標準化された方法で、従来の AEM Web ページとは異なるチャネルにコンテンツを配信できます。 '
+description: AEM コンテンツサービスは、Web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。AEM コンテンツサービスにより、あらゆるクライアントで使用できる標準化された方法で、従来の AEM Web ページとは異なるチャネルにコンテンツを配信できます。
 seo-description: AEM Content Services are designed to generalize the description and delivery of content in/from AEM beyond a focus on web pages. They provide the delivery of content to channels that are not traditional AEM web pages, using standardized methods that can be consumed by any client.
 uuid: be6457b1-fa9c-4f3b-b219-01a4afc239e7
 contentOwner: User
@@ -10,10 +10,10 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
 exl-id: ead4306a-6337-4dae-8839-14fada0ae0e5
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 95%
+source-wordcount: '441'
+ht-degree: 100%
 
 ---
 
@@ -27,15 +27,15 @@ AEM コンテンツサービスにより、あらゆるクライアントで使�
 * ネイティブモバイルアプリケーション
 * AEM の外部の他のチャネルおよびタッチポイント
 
-構造化コンテンツを使用するコンテンツフラグメントでは、JSON エクスポーターを使用して、任意の AEM ページのコンテンツを JSON データモデル形式で配信することで、コンテンツサービスを提供できます。その後、コンテンツを独自のアプリケーションで使用することができます。
+構造化コンテンツを使用するコンテンツフラグメントでは、JSON エクスポーターを使用して、任意の AEM ページのコンテンツを JSON データモデル形式で配信することで、コンテンツサービスを提供できます。その後、独自のアプリケーションでコンテンツを使用できるようになります。
 
 >[!NOTE]
 >
->ここで説明する機能は、すべてのコアコンポーネントで使用できます。 [コアコンポーネントのリリース 1.1.0](https://docs.adobe.com/content/docs/en/core-components/v1.html).
+>ここで説明する機能は、[コアコンポーネントのリリース 1.1.0](https://experienceleague.adobe.com/docs/?lang=ja) 以降のすべてのコンポーネントで使用できます。
 
 ## JSON エクスポーターとコンテンツフラグメントコアコンポーネント {#json-exporter-with-content-fragment-core-components}
 
-AEM JSON エクスポーターを使用すると、任意の AEM ページのコンテンツを JSON データモデル形式で配信できます。その後、コンテンツを独自のアプリケーションで使用することができます。
+AEM JSON エクスポーターを使用すると、任意の AEM ページのコンテンツを JSON データモデル形式で配信できます。その後、独自のアプリケーションでコンテンツを使用できるようになります。
 
 AEM 内では、セレクター `model` と `.json` 拡張機能を使用して配信をおこないます。
 
@@ -91,16 +91,16 @@ AEM 内では、セレクター `model` と `.json` 拡張機能を使用して�
 
 * AEM と JSON：
 
-   * [JSON 形式のページ情報の取得](/help/sites-developing/pageinfo.md)
+   * [JSON 形式でページ情報を取得](/help/sites-developing/pageinfo.md)
 
 ## 関連ドキュメント {#related-documentation}
 
 詳しくは、以下を参照してください。
 
-* [Assets ユーザーガイドのコンテンツフラグメントに関するトピック](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
+* [Assets ユーザーガイドのコンテンツフラグメントに関するトピック](https://experienceleague.adobe.com/docs/experience-manager-64/assets/home.html?lang=ja)
 
 * [コンテンツフラグメントモデル](/help/assets/content-fragments-models.md)
 * [コンテンツフラグメントを使用したオーサリング](/help/sites-authoring/content-fragments.md)
 * [コンポーネントの JSON 書き出しの有効化](/help/sites-developing/json-exporter-components.md)
 
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
+* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)および[コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)

@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 36ea97a4-4e13-4e89-866b-495f3c30cb94
 role: Admin
 exl-id: cb2f61df-73bb-47f7-86ce-feda4772c8d0
-source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '2778'
+source-wordcount: '2764'
 ht-degree: 54%
 
 ---
@@ -65,7 +65,7 @@ Adobe Analytics を AEM Communities と連携させ、サポートされるコ�
 
 Analytics をコミュニティ機能と連携するよう設定するには、アカウント担当者と協力して Adobe Analytics アカウントと[レポートスイート](#adobe-analytics-report-suite-for-video-reporting)をセットアップする必要があります。設定が完了したら、次の情報を利用できるようになります。
 
-* name（会社名）
+* 会社名
 
    Adobe Analyticsアカウントに関連付けられている会社
 * ユーザー名
@@ -88,25 +88,25 @@ Analytics をコミュニティ機能と連携するよう設定するには、�
 
 ## ビデオレポートのための Adobe Analytics レポートスイート {#adobe-analytics-report-suite-for-video-reporting}
 
-Adobe Marketing Cloud の [Report Suite Manager](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)を設定すると、コミュニティサイトでコミュニティ機能のレポートを提供できるように、Analytics レポートスイートを設定できます。
+Adobe Marketing Cloud の [Report Suite Manager](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html)を設定すると、コミュニティサイトでコミュニティ機能のレポートを提供できるように、Analytics レポートスイートを設定できます。
 
-にサインインする [Adobe Marketing Cloud](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/home.html) と [会社名とユーザ名](analytics.md#prerequisites)を使用する場合、以下の項目を含む新しいレポートスイートまたは既存のレポートスイートを設定できます。
+にサインインする [Adobe Marketing Cloud](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html) と [会社名とユーザ名](analytics.md#prerequisites)を使用する場合、以下の項目を含む新しいレポートスイートまたは既存のレポートスイートを設定できます。
 
-* [11 個のコンバージョン変数](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)（evar）
+* [11 個のコンバージョン変数](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html)（evar）
 
    * **`evar1`** 経由 **`evar11`** 有効
    * 既存の eVar を転用（名前を変更）したり、新しい eVar を作成してコミュニティ機能に使用したりできます。
 
-* [7 個の成功イベント](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/success-events/success-event.html)（event）
+* [7 個の成功イベント](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/success-events/success-event.html)（event）
 
    * **`event1`** 経由 **`event7`** 有効
-   * タイプ **`Counter`**
+   * 型 **`Counter`**
 
       * **string not required****`Counter (no subrelations)`**
    * 既存のイベントを転用（名前を変更）したり、新しいイベントを作成してコミュニティ機能に使用したりできます
 
 
-* [ビデオ管理](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)
+* [ビデオ管理](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)
 
    * ビデオレポートコンソール
 
@@ -114,7 +114,7 @@ Adobe Marketing Cloud の [Report Suite Manager](https://docs.adobe.com/content/
       * 保存を選択
    * ビデオコア測定コンソール
 
-      *  `Use Solution Variables`
+      * 選択 `Use Solution Variables`
       * 保存を選択
 
 
@@ -128,7 +128,6 @@ Adobe Marketing Cloud の [Report Suite Manager](https://docs.adobe.com/content/
 >
 >* **`evar1`** から **`evar11`** まで
 >* **`event1`** から **`event7`** まで
-
 >
 >**次に、コミュニティサイトが公開される前に、** Analytics がコミュニティサイトに対して有効になっている場合に、Analytics 変数に自動的にマッピングされたAEM変数を移動して、既存のマッピングを復元することが重要です。
 >
@@ -187,7 +186,7 @@ Video Heartbeat Analytics が有効になっている場合、ビデオプレー
 
 * **[!UICONTROL テンプレート]**
 
-    `Adobe Analytics Configuration`
+   選択 `Adobe Analytics Configuration`
 
 * 「**[!UICONTROL 作成]**」を選択します。
    * 設定ページを起動して開きます `Analytics Settings` ダイアログ
@@ -268,7 +267,7 @@ Adobe Analytics への基本的な接続を正しく設定したら、コミュ�
 
 * **[!UICONTROL テンプレート]**
 
-    `Adobe Analytics Framework`
+   選択 `Adobe Analytics Framework`
 
 * 「**[!UICONTROL 作成]**」を選択します。
 
@@ -456,7 +455,6 @@ Communities の ever および event がレポートスイート内の既存の�
 >
 >* **`evar1`** から **`evar11`** まで
 >* **`event1`** から **`event7`** まで
-
 >
 >**次に、コミュニティサイトが公開される前に、** 既存のマッピングを復元し、（Analytics がコミュニティサイトで有効になっている場合に）自動的にマッピングされた Communities AEM変数を他の Analytics 変数に移動することが重要です。 この再マッピングは、すべてのコミュニティコンポーネントで一貫している必要があります。
 >
@@ -545,10 +543,10 @@ Analytics が有効なコミュニティサイトが公開されると、プラ�
 
 ## Analytics でのユーザーデータの管理 {#manage-user-data-in-analytics}
 
-Adobe Analytics は、ユーザーデータのアクセス、書き出し、削除をおこなう API を提供しています。詳しくは、[アクセス要求および削除要求の送信](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html)を参照してください。
+Adobe Analytics は、ユーザーデータのアクセス、書き出し、削除をおこなう API を提供しています。詳しくは、[アクセス要求および削除要求の送信](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html)を参照してください。
 
 ## リソース {#resources}
 
-* Adobe Marketing Cloud：[Analytics ヘルプとリファレンス](https://docs.adobe.com/content/help/en/analytics/landing/home.html)
+* Adobe Marketing Cloud：[Analytics ヘルプとリファレンス](https://experienceleague.adobe.com/docs/analytics/landing/home.html)
 * AEM: [Adobe Analyticsとの統合](../../help/sites-administering/adobeanalytics.md)
 * AEM: [Analytics と外部プロバイダー](../../help/sites-administering/external-providers.md)

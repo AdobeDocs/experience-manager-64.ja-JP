@@ -10,9 +10,9 @@ topic-tags: release-notes
 content-type: reference
 discoiquuid: 2be468e7-2b4e-4e04-881b-b9bdd1f55e57
 exl-id: ee034595-2d2a-4887-86c4-6bf0770da6a2
-source-git-commit: 722a82c1048105c18d59dfc35815548f9b7eace4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '2751'
+source-wordcount: '2729'
 ht-degree: 82%
 
 ---
@@ -117,7 +117,7 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 **[コンテンツフラグメント](/help/assets/content-fragments.md)**
 
-ビジュアルな[コンテンツモデル](/help/assets/content-fragments-models.md)エディターと新しい[設定可能なコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/content-fragment-component.html)が AEM 6.4 で新たに導入され、コンテンツサービスに組む込む HTML 出力と JSON を柔軟に生成できるようになりました。
+ビジュアルな[コンテンツモデル](/help/assets/content-fragments-models.md)エディターと新しい[設定可能なコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)が AEM 6.4 で新たに導入され、コンテンツサービスに組む込む HTML 出力と JSON を柔軟に生成できるようになりました。
 
 **エクスペリエンスフラグメント**
 
@@ -137,7 +137,7 @@ AEM 6.4 で次世代のコンポーネントモデルへの転換が完了しま
 
 デジタルサイネージやキオスクネットワークを含む、すべてのマーケティングチャネルにわたって一貫したメッセージを配信することは、AEM Screensの略です。 AEM 6.4 では、Microsoft Windows および Google Chrome OS ハードウェアでサイネージプレーヤーを実行できるようになりました。さらに、リモートデバイス管理およびスケジュール（チャネルグループ）の機能強化もおこなわれています。
 
-Screens のアップデートについて詳しくは、 [AEM Screens User Guide](https://docs.adobe.com/content/help/ja/experience-manager-screens/user-guide/aem-screens-introduction.html).
+Screens のアップデートについて詳しくは、 [AEM Screens User Guide](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=ja).
 
 ### Experience Manager Communities {#experience-manager-communities}
 
@@ -195,9 +195,9 @@ Creative Cloud エンタープライズ版の Adobe Asset Link を使用する�
 
 **AEM デスクトップアプリケーション**
 
-AEMデスクトップアプリケーションが、AEM 6.4 と互換性のあるバージョン 1.8 に更新されました。AEMデスクトップアプリケーションの変更の完全なリストは、専用の [AEM desktop app リリースノート](https://docs.adobe.com/content/help/ja/experience-manager-desktop-app/using/release-notes.html) 文書。
+AEMデスクトップアプリケーションが、AEM 6.4 と互換性のあるバージョン 1.8 に更新されました。AEMデスクトップアプリケーションの変更の完全なリストは、専用の [AEM desktop app リリースノート](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=ja) 文書。
 
-AEM 6.3 リリース以降に導入された機能改善としては、フォルダー階層をバックグラウンドでアップロードできる機能、アセットのバックグラウンド操作を監視するための新しい UI、キャッシュ、ネットワーク、ログインの機能強化、全般的な安定性向上などがあります。ドキュメントには[ベストプラクティスガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-desktop-app/using/using.html)も含まれています。
+AEM 6.3 リリース以降に導入された機能改善としては、フォルダー階層をバックグラウンドでアップロードできる機能、アセットのバックグラウンド操作を監視するための新しい UI、キャッシュ、ネットワーク、ログインの機能強化、全般的な安定性向上などがあります。ドキュメントには[ベストプラクティスガイド](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)も含まれています。
 
 **Adobe Sensei Services**
 
@@ -219,7 +219,7 @@ AEM 6.3 リリース以降に導入された機能改善としては、フォル
 
 **Brand Portal**
 
-メタデータ、レポート、デジタル著作権、ログイン操作、およびアセット配布での公開のパフォーマンスに関して様々な機能強化がおこなわれています。新しい機能強化については、 [AEM Assets Brand Portalの新機能](https://docs.adobe.com/content/help/ja/experience-manager-brand-portal/using/introduction/whats-new.html).
+メタデータ、レポート、デジタル著作権、ログイン操作、およびアセット配布での公開のパフォーマンスに関して様々な機能強化がおこなわれています。新しい機能強化については、 [AEM Assets Brand Portalの新機能](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=ja).
 
 #### Dynamic Media アドオン {#dynamic-media-add-on}
 
@@ -263,7 +263,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 使用している AEM 6.4 インスタンスを Livefyre と統合できます。Livefyre と AEM の統合方法については、以下を参照してください。
 
-* [Livefyre との統合](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html)
+* [Livefyre との統合](https://experienceleague.adobe.com/docs/experience-manager-64/administering/integration/livefyre.html?lang=ja-JP)
 
 ### 顧客中心開発の強化 {#leverage-customer-focused-development}
 
@@ -279,7 +279,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 * スタンドアロンのクイックスタート：cq-quickstart-6.4.0.jar
 * アプリケーションサーバーのクイックスタート：cq-quickstart-6.4.0.war
-* 様々な Web サーバーおよびプラットフォーム向けの Dispatcher 4.3.1 以降。 詳しくは、 [ダウンロードリンク](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/release-notes.html).
+* 様々な Web サーバーおよびプラットフォーム向けの Dispatcher 4.3.1 以降。 詳しくは、 [ダウンロードリンク](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=ja-JP).
 * Eclipse IDE 用プラグイン。 [詳細を表示およびダウンロード](/help/sites-developing/aem-eclipse.md).
 
 * Brackets Code Editor の拡張機能。 [詳細を表示およびダウンロード](/help/sites-developing/aem-brackets.md).
@@ -302,7 +302,7 @@ AEM 6.4 Forms では、いくつかの新機能と機能強化が加えられて
 
 **Assets**
 
-* Adobe Experience Managerデスクトップアプリ ([詳細を表示](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/using.html) および [ダウンロード](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html))
+* Adobe Experience Managerデスクトップアプリ ([詳細を表示](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) および [ダウンロード](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html))
 
 * 強化された PDF Rasterizer を追加するためのパッケージ（[詳細](/help/assets/aem-pdf-rasterizer.md)および[ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/product/assets/aem-assets-pdf-rasterizer-pkg)）
 
@@ -377,4 +377,4 @@ Adobe Experience Manager 6.4 についての情報は、[廃止および削除�
 
 * [licensing.adobe.com での製品のダウンロード](https://licensing.adobe.com/)。
 * 製品の追加機能に関する[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)上のアップデート、パッチ、パッケージ。
-* [Admin Console 経由でのカスタマーサポート](https://adminconsole.adobe.com/)。詳しくは、[新しいアドビカスタマーサポートエクスペリエンス](https://docs.adobe.com/content/help/ja-JP/customer-one/using/home.html)を参照してください。
+* [Admin Console 経由でのカスタマーサポート](https://adminconsole.adobe.com/)。詳しくは、[新しいアドビカスタマーサポートエクスペリエンス](https://experienceleague.adobe.com/docs/customer-one/using/home.html?lang=ja)を参照してください。

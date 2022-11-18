@@ -6,9 +6,9 @@ seo-description: An overview of how to implement AEM 6.4
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.4/SITES
 exl-id: e8434d46-b169-4408-85e7-b619c6f7b877
-source-git-commit: a01f94ddcd84c4d3f7769d6a55fbfcbef131dc57
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '108'
+source-wordcount: '102'
 ht-degree: 100%
 
 ---
@@ -21,11 +21,11 @@ AEM 開発者の場合は、[AEM での開発の概要](/help/sites-developing/h
 
 ## AEM 用のコアコンポーネント {#core-components-for-aem}
 
-[作成者がコンテンツを容易に作成できる、拡張可能なコアコンポーネントを使用します。](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+[作成者がコンテンツを容易に作成できる、拡張可能なコアコンポーネントを使用します。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 
 ## AEM 用の HTL（HTML テンプレート言語） {#htl-for-aem}
 
-[HTML テンプレート言語を使用して AEM 向けに開発します。](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)
+[HTML テンプレート言語を使用して AEM 向けに開発します。](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja)
 
 ## AEM 用の Cloud Manager {#cloud-manager-for-aem}
 
@@ -33,4 +33,4 @@ AEM 開発者の場合は、[AEM での開発の概要](/help/sites-developing/h
 
 ## Dispatcher 設定 {#dispatcher-configuration}
 
-[AEM で Dispatcher を設定します](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)。
+[AEM で Dispatcher を設定します](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)。

@@ -10,10 +10,10 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 3f4c17cf-6f77-4a87-b27b-f13a6a976523
 exl-id: 7b9f21eb-22f6-42f7-8dc7-770601ef51fc
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '2151'
-ht-degree: 81%
+source-wordcount: '2149'
+ht-degree: 93%
 
 ---
 
@@ -27,17 +27,17 @@ ht-degree: 81%
 >
 >シングルページアプリケーション (SPA) エディター機能には、AEM 6.4 Service Pack 2 以降が必要です。
 >
->SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
+>SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトで有効なソリューションです。
 
 ## AEM プロジェクトアーキタイプ {#aem-project-archetype}
 
-AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
+AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
 
 ## AEM 向け SPA 開発原則 {#spa-development-principles-for-aem}
 
 AEM で単一ページアプリケーションを開発する場合、フロントエンド開発者は SPA を作成する際に標準的なベストプラクティスを順守するものと想定します。次の一般的なベストプラクティスには AEM 固有の原則はほぼなく、フロントエンド開発者がそれに従うことで、SPA は [AEM とコンテンツオーサリング機能](/help/sites-developing/spa-walkthrough.md#content-editing-experience-with-spa)と共に機能します。
 
-* **[移植性](/help/sites-developing/spa-architecture.md#portability) -** 他のコンポーネントと同様に、コンポーネントは可能な限り移動可能な状態で構築する必要があります。 SPAは、移動可能で再利用可能なコンポーネントを使用して構築し、コンテンツ構造を参照する静的パスを避ける必要があります。
+* **[移植性](/help/sites-developing/spa-architecture.md#portability) -**&#x200B;通常のあらゆるコンポーネントと同様に、コンポーネントは、移植性を可能な限り維持しながら構築する必要があります。SPAは、移動可能で再利用可能なコンポーネントを使用して構築し、コンテンツ構造を参照する静的パスを避ける必要があります。
 * **[AEM Drives サイト構造](/help/sites-developing/spa-architecture.md#aem-drives-site-structure)**  — フロントエンド開発者はコンポーネントを作成し、内部構造を所有しますが、AEMを利用してサイトのコンテンツ構造を定義します。
 * **[動的レンダリング](/help/sites-developing/spa-architecture.md#dynamic-rendering) -** すべてのレンダリングは動的である必要があります。
 * **[動的ルーティング](#dynamic-routing) -** SPAはルーティングを担当し、AEMはリッスンしてそれに基づいてコンポーネントデータを取得します。 どのルーティングも動的である必要があります。
@@ -119,15 +119,15 @@ SPA では、コンテンツの動的レンダリングのみに依存する必�
 
 1. **SDK が提供するコンテナを使用して、コンポーネントを画面に配置します。**
 
-   AEMは、使用するページと段落のシステムコンポーネントを提供します。
+    AEM を使用すると、ページと段落のシステムコンポーネントを使用できます。
 
 1. **各 JS コンポーネントに AEM コンポーネントを作成します。**
 
-   AEMコンポーネントは、ダイアログと JSON 出力を定義します。
+   AEM コンポーネントは、ダイアログと JSON の出力を定義します。
 
 ## フロントエンド開発者向けの説明 {#instructions-for-front-end-developers}
 
-フロントエンド開発者にAEM用のSPAを作成させる主な作業は、コンポーネントとその JSON モデルについて合意することです。
+フロントエンド開発者が AEM 用の SPA の作成に従事する際の主な仕事は、コンポーネントとその JSON モデルについて合意することです。
 
 AEM 用の SPA を開発する際に、フロントエンド開発者が実行する必要のある手順の概要を次に示します。
 
@@ -143,7 +143,7 @@ AEM 用の SPA を開発する際に、フロントエンド開発者が実行�
 
 1. **コンポーネントの `render()` メソッドを実装する**
 
-   フロントエンド開発者は、 `render()` メソッドを使用して、 `cqModel` プロパティ。 これにより、DOM と、ページに挿入される HTML フラグメントが出力されます。これは、React でアプリを作成する標準的な方法です。
+   フロントエンド開発者は、自由に `render()` メソッドを実装し、`cqModel` プロパティのフィールドを使用できます。これにより、DOM と、ページに挿入される HTML フラグメントが出力されます。これは、React でアプリを作成する標準的な方法です。
 
 1. **`MapTo()`** を使用してコンポーネントを AEM リソースタイプにマッピングする
 
@@ -171,7 +171,7 @@ AEM 用の SPA を開発する際に、フロントエンド開発者が実行�
 
 ## AEM 非依存 {#aem-agnostic}
 
-これらのコードブロックは、React およびAngularコンポーネントが、AdobeやAEM固有のものを必要としないことを示します。
+これらのコードブロックは、React コンポーネントと Angular コンポーネントが、Adobe や AEM に固有のものを必要としていないことを示してします。
 
 * JavaScript コンポーネント内にあるものはすべて、AEM 非依存です。
 * AEM に固有なことは、JS コンポーネントを MapTo ヘルパーを使用して AEM コンポーネントにマッピングする必要がある点です。
@@ -185,8 +185,8 @@ AEM 用の SPA を開発する際に、フロントエンド開発者が実行�
 
 `MapTo` の使用法と AEM 向け SPA の構築の概要について詳しくは、選択したフレームワークの概要を参照してください。
 
-* [AEMでSPAを使い始める — React](/help/sites-developing/spa-getting-started-react.md)
-* [AEMでのSPAの概要 —Angular](/help/sites-developing/spa-getting-started-angular.md)
+* [React を使用した AEM での SPA の概要](/help/sites-developing/spa-getting-started-react.md)
+* [AEM での SPA の概要 - Angular](/help/sites-developing/spa-getting-started-angular.md)
 
 ## AEM のアーキテクチャと SPA {#aem-architecture-and-spas}
 
@@ -230,10 +230,10 @@ AEM 用の SPA を開発する際に、フロントエンド開発者が実行�
 
 ## 次の手順 {#next-steps}
 
-AEMでのシンプルなSPAの構造と仕組みの概要については、両方の入門ガイドを参照してください。 [React](/help/sites-developing/spa-getting-started-react.md) および [Angular](/help/sites-developing/spa-getting-started-angular.md).
+AEM でのシンプルな SPA の構造と仕組みの概要については、[React](/help/sites-developing/spa-getting-started-react.md) および [Angular](/help/sites-developing/spa-getting-started-angular.md) 両方の入門ガイドを参照してください。
 
-独自のSPAを作成する手順については、 [AEM SPA Editor 使用の手引き — WKND イベントチュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html).
+独自の SPA を作成する手順については、[AEM SPA Editor の使用の手引き - WKND イベントチュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)を参照してください。
 
-動的モデルとコンポーネントのマッピング、およびAEMのSPA内での動作について詳しくは、この記事を参照してください [SPAの動的モデルとコンポーネントのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
+動的モデルとコンポーネントのマッピング、および AEM の SPA 内での動作について詳しくは、[SPA の動的モデルとコンポーネントのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)の記事を参照してください。
 
-AEMに React やAngular以外のフレームワーク用にSPAを実装する場合や、AEM用SPA SDK の仕組みを詳しく知りたい場合は、 [SPA Blueprint](/help/sites-developing/spa-blueprint.md) 記事。
+React や Angular 以外のフレームワーク用に AEM の SPA を実装する場合や、AEM 用 SPA SDK の仕組みを詳しく知りたい場合は、[SPA ブループリント](/help/sites-developing/spa-blueprint.md)の記事を参照してください。

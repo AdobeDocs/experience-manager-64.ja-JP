@@ -8,9 +8,9 @@ breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: Developing
 role: Developer
-source-git-commit: 35aea0e087334a1c1e6a708f2182bd9dee799dc0
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '884'
 ht-degree: 96%
 
 ---
@@ -73,7 +73,7 @@ ht-degree: 96%
       + [開発（汎用）](generic.md)
       + [SAP Commerce Cloud を使用した開発](sap-commerce-cloud.md)
 + コンポーネント{#components}
-   + [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+   + [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
    + [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/siteandpage/style-system.html?lang=ja)
    + [コンポーネントの概要](components.md)
    + [AEM コンポーネント - 基本](components-basics.md)

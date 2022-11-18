@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
 exl-id: 0aefe8c0-662e-4177-a369-feab174fa510
-source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
+source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 81%
+source-wordcount: '414'
+ht-degree: 100%
 
 ---
 
@@ -23,10 +23,10 @@ ht-degree: 81%
 
 様々な値が存在する可能性があるので、ページプロパティの一括編集はデフォルトでは有効になっていません。明示的に許可する（有効にする）必要があります。一括編集できるようにページプロパティを定義する場合は、次のような避けられない影響を考慮する必要があります。
 
-* ページタイトルなど、通常は一意なフィールドがあります。1 つの値が適用される場合に、そのようなフィールドの一括編集を有効にして意味があるかどうかを判断する必要があります。
+* ページタイトルのように、通常は一意なフィールドがあります。1 つの値を適用した場合に、そのようなフィールドの一括編集を有効にして意味があるかどうかを判断する必要があります。
 * 特定のフィールドには、複数の値を持たせることができます。そのためには、レンダリング時に意味のある表現が必要です。
 
-   例えば、「公開準備完了」を示すチェックボックスが表示されます。 一括編集の前に、いくつかの値が含まれる場合があります（例：準備完了、レビュー中、処理中）。
+   例えば、「公開準備完了」を示すチェックボックス。これには、一括編集の前にいくつかの値を持つ場合があります（例：準備完了、レビュー中、処理中）。
 
 >[!CAUTION]
 >
@@ -35,13 +35,12 @@ ht-degree: 81%
 >* クラシック UI では使用できません。
 >* ライブコピー内のページでは使用できません。
 >* リソースタイプが同じページでのみ使用できます。
-
 >
 
 
 >[!NOTE]
 >
->一括編集はアセットに対しても使用できます。これは非常に似ていますが、いくつかの点で異なります。詳しくは、 [複数のアセットのプロパティの編集](/help/assets/managing-multiple-assets.md) を参照してください。アセットの一括メタデータエディターで、 [スキーマエディター](/help/assets/metadata-schemas.md).
+>一括編集はアセットに対しても使用できます。操作はよく似ていますが、いくつかの点が異なります。詳しくは、[複数のアセットのプロパティの編集](/help/assets/managing-multiple-assets.md)を参照してください。[スキーマエディター](/help/assets/metadata-schemas.md)を使用すると、アセット用の一括メタデータエディターでフィールドをカスタマイズできます。
 
 ## フィールドの有効化 {#enabling-a-field}
 
@@ -55,11 +54,10 @@ ht-degree: 81%
 >* `/libs/granite/ui/components/foundation/form/datepicker`
 >* `/libs/granite/ui/components/foundation/form/pathbrowser`
 >* `/libs/granite/ui/components/foundation/form/checkbox`
-
 >
 
 
-フィールドは、（テンプレートではなく）ページコンポーネントで有効化します。**
+フィールドは、（テンプレートではなく）ページコンポーネントで有効化します&#x200B;*。*
 
 1. CRXDE Lite（または同等のメソッド）を使用して、ページコンポーネントを開きます。
 
@@ -67,14 +65,14 @@ ht-degree: 81%
 
    >[!NOTE]
    >
-   >この例では、コアコンポーネントがインスタンスにインストールされ、インスタンスが We.Retail サンプルコンテンツと共に実行されていることを想定しています。詳しくは、[コアコンポーネントのドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を参照してください。
+   >この例では、コアコンポーネントがインスタンスにインストールされ、インスタンスが We.Retail サンプルコンテンツと共に実行されていることを想定しています。詳しくは、[コアコンポーネントのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を参照してください。
 
-1. 内の必須フィールドに移動します。 `cq:dialog` 定義。
+1. `cq:dialog` 定義内の必要なフィールドに移動します。
 1. フィールドノードで次のプロパティを定義します。
 
    * **名前**：`allowBulkEdit`
    * **型**：`Boolean`
-   * **値**: `true`
+   * **値**：`true`
 
    例えば、標準的なページの[基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)の場合：
 
@@ -92,7 +90,7 @@ ht-degree: 81%
    >
    >設定およびその他の変更に推奨される方法は次のとおりです。
    >
-   >    1. 必要な項目（内に存在）を再作成します。 `/libs`) `/apps`
+   >    1. 必要な項目（`/libs`内に存在）を、`/apps`の下で再作成します。
    >    1. `/apps` 内で変更作業をおこないます。
 
 
