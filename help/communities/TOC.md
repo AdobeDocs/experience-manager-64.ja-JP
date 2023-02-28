@@ -46,7 +46,7 @@ ht-degree: 99%
    + [イネーブルメント機能の設定](enablement.md)
    + [メッセージングの設定](messaging.md)
    + [コミュニティコンテンツのモデレート](moderate-ugc.md)
-   + [電子メールの設定](email.md)
+   + [メールの設定](email.md)
    + [コミュニティの通知](notifications.md)
    + [コミュニティの購読](subscriptions.md)
    + [コミュニティのスコアとバッジ](implementing-scoring.md)

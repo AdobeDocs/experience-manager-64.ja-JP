@@ -341,10 +341,10 @@ ht-degree: 97%
    + [フォームとドキュメントの公開と非公開](using/publishing-unpublishing-forms.md)
    + [API を使用した Web ページ上のフォームの一覧表示](using/listing-forms-webpage-using-apis.md)
    + [発行済みフォームへのアクセスと入力](using/accessing-filling-published-forms.md)
-   + [電子メールによるフォーム送信確認の送信](using/form-submission-receipt-via-email.md)
+   + [メールによるフォーム送信確認の送信](using/form-submission-receipt-via-email.md)
    + [監視フォルダーの作成または設定](using/creating-configure-watched-folder.md)
-   + [タスクの割り当て手順におけるカスタムの電子メールテンプレートの使用](using/use-custom-email-template-assign-task-step.md)
-   + [電子メール通知におけるメタデータの使用](using/use-metadata-in-email-notifications.md)
+   + [タスクの割り当て手順におけるカスタムのメールテンプレートの使用](using/use-custom-email-template-assign-task-step.md)
+   + [メール通知におけるメタデータの使用](using/use-metadata-in-email-notifications.md)
 + Forms ポータル {#use-forms-portal}
    + [フォームポータルコンポーネントのテンプレートをカスタマイズする](using/customizing-templates-forms-portal-components.md)
    + [フォームポータルコンポーネントの有効化](using/enabling-forms-portal-components.md)
@@ -445,7 +445,7 @@ ht-degree: 97%
       + [サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md)
    + エンドポイントの管理 {#manage-endpoints}
       + [エンドポイントの追加、有効化、変更または削除](/help/forms/using/admin-help/adding-enabling-modifying-or-removing.md)
-      + [電子メールエンドポイントの設定](/help/forms/using/admin-help/configuring-email-endpoints.md)
+      + [メールエンドポイントの設定](/help/forms/using/admin-help/configuring-email-endpoints.md)
       + [リモートエンドポイントの設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md)
       + [監視フォルダーエンドポイントの設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)
       + [タスクマネージャーエンドポイントの設定](/help/forms/using/admin-help/configuring-task-manager-endpoints.md)
@@ -573,7 +573,7 @@ ht-degree: 97%
    + [プロセスレポートのアドホッククエリ](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md)
    + [トラブルシューティングプロセスのレポート](/help/forms/using/process-reporting/troubleshooting-process-management.md)
 + 開発者向けリファレンス {#developer-reference}
-   + [開発者の基本事項](https://experienceleague.adobe.com/docs/experience-manager-64/developing/home.html)
+   + [開発者の基本事項](https://experienceleague.adobe.com/docs/experience-manager-64/developing/home.html?lang=ja)
    + [HTML テンプレート言語](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja)
    + [アダプティブフォームをデバッグするための AEM プラグイン。](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-4/forms/javadocs/index.html)
