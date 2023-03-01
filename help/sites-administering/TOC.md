@@ -8,9 +8,9 @@ breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 feature: Administering
 role: Admin
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: 9dcaf2538e5f968b25ce4f643ac307eff295d07d
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '633'
 ht-degree: 98%
 
 ---
@@ -116,7 +116,6 @@ ht-degree: 98%
    + [サードパーティのサービスとの統合](third-party-services.md)
    + [Salesforce との統合](salesforce.md)
    + [Adobe Target との統合](target.md)
-   + [Livefyre との統合 ](livefyre.md)
    + [Adobe Analytics との統合](adobeanalytics.md)
    + [Adobe Analytics への接続とフレームワークの作成](adobeanalytics-connect.md)
    + [Adobe Analytics のリンクトラッキングの設定](adobeanalytics-link.md)
@@ -136,7 +135,6 @@ ht-degree: 98%
    + [Adobe Analytics および Adobe Target との統合のオプトイン](opt-in.md)
    + [AEM ポータルとポートレット](aem-as-portal.md)
    + [ Dynamic Media Classic との統合](scene7.md)
-   + [AEM Livefyre のレシピ](aem-livefyre-recipes.md)
    + [統合に関する問題のトラブルシューティング](troubleshooting-integration-issues.md)
    + [BrightEdge Content Optimizer との結合](brightedge.md)
    + [メールテンプレートのベストプラクティス](best-practices-for-email-templates.md)
