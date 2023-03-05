@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6696c325-d188-41c8-a39f-c8ae7f339fe8
 exl-id: 9a779cde-dfdf-4d70-a452-5e7d12bf3f28
-source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
+source-git-commit: 79ff6834acd2bc1105bbea798d946cd7354474d5
 workflow-type: tm+mt
 source-wordcount: '1819'
-ht-degree: 94%
+ht-degree: 93%
 
 ---
 
@@ -116,7 +116,7 @@ AEM Managed Services は、デジタルエクスペリエンス管理のため�
 
 AEM Managed Services を使用すれば、次のようなメリットを享受できます。
 
-**市場投入までの時間の短縮：** Adobe Managed Services の柔軟なクラウドインフラストラクチャにより、組織は成功するデジタルエクスペリエンスを迅速に計画し、立ち上げ、最適化することができます。アドビは、追加の資本、ハードウェア、ソフトウェアを必要とせずにクラウドアーキテクチャを管理し、アドビのカスタマーサクセスエンジニアは、AEM アーキテクチャ、プロビジョニング、バックエンドアプリケーションへの接続のカスタマイズ、および実稼働のベストプラクティスをサポートします。
+**市場投入までの時間の短縮：** Adobe Managed Services の柔軟なクラウドインフラストラクチャにより、組織は成功するデジタルエクスペリエンスを迅速に計画し、立ち上げ、最適化することができます。Adobeは、追加の資本、ハードウェア、ソフトウェアを必要とせずにクラウドアーキテクチャを管理し、AdobeのカスタマーサクセスエンジニアがAEMのアーキテクチャ、プロビジョニング、バックエンドアプリへの接続と運用開始のベストプラクティスを支援します。
 
 **より高い性能：** 99.5％、99.9％、99.95％、および 99.99％ の 4 つのサービス可用性オプションで、ビジネスに信頼性の高いデジタル体験を提供します。さらに、自動バックアップとマルチモードの障害復旧モデルが、信頼性と危機管理性の確保をサポートします。
 
@@ -318,4 +318,4 @@ AEM が起動し、Web ブラウザーが適切なページに自動的にリダ
 * [AEM プラットフォームの概要](/help/sites-deploying/platform.md)
 * [パフォーマンスガイドライン](/help/sites-deploying/performance-guidelines.md)
 * [AEM Mobile 使用の手引き](/help/mobile/getting-started-aem-mobile.md)
-* [AEM Screens とは](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [AEM Screens とは](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=ja)
