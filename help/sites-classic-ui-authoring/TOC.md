@@ -67,7 +67,7 @@ ht-degree: 96%
    + [ランディングページ](classic-personalization-campaigns-landingpage.md)
    + [Target オファー](classic-personalization-campaigns-target-offers.md)
    + [Marketing Campaign Manager の使用 ](classic-personalization-campaigns-mktg-manager.md)
-   + [電子メールマーケティング ](classic-personalization-campaigns-email.md)
+   + [メールマーケティング ](classic-personalization-campaigns-email.md)
    + [バウンスメールの追跡](classic-personalization-campaigns-email-tracking-bounces.md)
    + [キャンペーンの設定 ](classic-personalization-campaigns-setting-up-your.md)
    + [メールサービスプロバイダーへのメールの公開](classic-personalization-campaigns-email-newsletters.md)
