@@ -12,10 +12,10 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 exl-id: 895103c8-df58-40f0-85d6-e29637edce53
 feature: Image Profiles
 role: Admin,User
-source-git-commit: c413f31498cdccf8ceea4afc225c570a40ba1819
+source-git-commit: 1bda0ff04752dec663f251d28a4274599fd0e17d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2885'
+ht-degree: 82%
 
 ---
 
@@ -51,14 +51,14 @@ ht-degree: 0%
 **イメージプロファイルでのスマート切り抜きの定義に関するガイドライン**
 スマート切り抜きの使用状況を制御し、切り抜きの処理時間や保存に最適化するには、次のガイドラインおよびヒントをAdobeが推奨します。
 
-* スマート切り抜きを適用する画像アセットには、50 x 50 ピクセル以上のスマート切り抜きが適用される必要があります。 &lt;!-- CQDOC-20087>
-* 重複したスマート切り抜きのサイズを含むイメージプロファイルは許可されていません。 &lt;!-- CQDOC-20087>
-* スマート切り抜きオプションが設定された重複した名前付きイメージプロファイルは、許可されていません。 &lt;!-- CQDOC-20087>
+* スマート切り抜きを適用する画像アセットには、50 x 50 ピクセル以上のスマート切り抜きが適用される必要があります。 <!-- CQDOC-20087 -->
+* 重複したスマート切り抜きのサイズを含むイメージプロファイルは許可されていません。 <!-- CQDOC-20087 -->
+* スマート切り抜きオプションが設定された重複した名前付きイメージプロファイルは、許可されていません。 <!-- CQDOC-20087 -->
 * すべてのフォルダーまたはすべてのアセットに適用される共通のスマート切り抜きプロファイルの代わりに、特定のフォルダーおよびサブフォルダーに対して、ページごと/アセットタイプごとのイメージプロファイルを作成します。
 * サブフォルダーに適用するイメージプロファイルは、フォルダーに適用されるイメージプロファイルよりも優先されます。
 * 画像あたり 10～15 のスマート切り抜きを行い、画面の比率と処理時間に合わせて最適化するのが理想的です。
 <!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
-* Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages.-->
+* Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages. -->
 
 2 つの画像切り抜きオプションから選択できます。また、カラーおよび画像スウォッチの作成を自動化するか、ターゲットの解像度をまたいで切り抜きコンテンツを保持するかを選択することもできます。
 
