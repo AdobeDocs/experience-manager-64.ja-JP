@@ -12,7 +12,7 @@ exl-id: 6ae70f02-a86d-4514-abc5-1ed08e484852
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1119'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -64,7 +64,7 @@ ht-degree: 100%
       >`<panelName>.instanceManager.instances[<instanceNumber>].<fieldname>`
       >
       >
-      >例えば、テキストボックス付きの繰り返し可能パネルを持つアダプティブフォームを作成するとします。このフォームに 3 つの繰り返し可能テキストボックスを事前入力するには、以下の xml が必要です。
+      >例えば、繰り返し可能なパネルにテキストボックスが付いたアダプティブフォームを作成したとします。 このフォームに 3 つの繰り返し可能テキストボックスを事前入力するには、以下の xml が必要です。
       >
       >
       >`<panel1><textbox1>AA1</panel1></textbox1>`
@@ -118,7 +118,7 @@ ht-degree: 100%
 1. サブフォームの繰り返し回数の最大値を指定する場合は、「最大値」を選択して、関連するボックスに数値を入力します。「最大値」に値を入力しなければ、サブフォームの繰り返し回数は無制限になります。
 1. サブフォームの繰り返し回数をデータ量に関係なく指定する場合は、「初期値」オプションを選択して、関連するボックスに数値を入力します。このオプションを選択した場合は、データが使用できないときやデータ項目が指定された「初期値」の値より少ないときにも、フォーム上に空のサブフォームインスタンスが配置されます。
 1. 親サブフォームにボタンを 2 つ追加します。ひとつはインスタンスの追加に、もうひとつは繰り返し可能なサブフォームのインスタンスの削除に使用します。詳しい手順については、「[アクションの作成](https://help.adobe.com/ja_JP/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c74572b5612a87ca2b56-8000.2.html#WS107c29ade9134a2c-1f74d86012a87d4fe55-8000.2)」を参照してください。
-1. ここで、アダプティブフォームにフォームテンプレートをリンクします。詳しい手順については、「[テンプレートに基づくアダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-a-template)」を参照してください。
+1. 次に、フォームテンプレートをアダプティブフォームにリンクします。 詳細な手順については、 [テンプレートに基づくアダプティブフォームの作成](/help/forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-a-template).
 1. 手順 9 で作成したボタンを使用して、サブフォームを追加および削除します。
 
 添付の .zip ファイルには、繰り返し可能なサブフォーラムのサンプルが含まれています。
@@ -127,7 +127,7 @@ ht-degree: 100%
 
 ## XML スキーマ（XSD）の繰り返し設定の使用  {#using-repeat-settings-of-an-xml-schema-xsd-br}
 
-XML スキーマ、または任意の複合タイプエレメントの minOccurs および maxOccurs プロパティから、繰り返し可能なパネルを作成できます。「[XML Schema をフォームモデルとして使用する場合のアダプティブフォームの作成](/help/forms/using/adaptive-form-xml-schema-form-model.md)」を参照してください。
+XML スキーマ、または任意の複合タイプエレメントの minOccurs および maxOccurs プロパティから、繰り返し可能なパネルを作成できます。XML スキーマについて詳しくは、 [XML スキーマをフォームモデルとして使用してアダプティブフォームを作成する](/help/forms/using/adaptive-form-xml-schema-form-model.md).
 
 以下のコードでは、`SampleType` パネルで minOccurs および maxOccurs プロパティが使用されています。
 

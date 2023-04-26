@@ -1,7 +1,7 @@
 ---
 title: インストール時の admin パスワードの設定
 seo-title: Configure the Admin Password on Installation
-description: AEM のインストール時に admin パスワードを変更する方法について説明します。
+description: AEMのインストール時に管理者パスワードを変更する方法を説明します。
 seo-description: Learn how to change the Admin Password on AEM Installation.
 uuid: 06da9890-ed63-4fb6-88d5-fd0e16bc4ceb
 contentOwner: User
@@ -13,7 +13,7 @@ exl-id: 6dd289ee-13fd-46be-82cd-aa69852397c9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 96%
+ht-degree: 24%
 
 ---
 
@@ -21,37 +21,37 @@ ht-degree: 96%
 
 ## 概要 {#overview}
 
-バージョン 6.3 以降の AEM では、新しいインスタンスのインストール時にコマンドラインを使用して admin パスワードを設定できます。
+バージョン 6.3 以降では、AEMを使用すると、新しいインスタンスをインストールする際にコマンドラインを使用して管理者パスワードを設定できます。
 
-それ以前のバージョンの AEM では、admin アカウントのパスワードと各種コンソールのパスワードをインストール終了後に変更する必要がありました。
+以前のバージョンのAEMでは、管理者アカウントのパスワードと他の様々なコンソールのパスワードをインストール後に変更する必要がありました。
 
-この機能により、AEM インスタンスのインストール時にリポジトリおよび Servlet Engine 用の新しい admin パスワードを設定できるようになり、後で手動で設定する必要がなくなりました。
+この機能により、AEMインスタンスのインストール中にリポジトリとサーブレットエンジンの新しい管理者パスワードを設定できる機能が追加され、後で手動で設定する必要がなくなります。
 
 >[!CAUTION]
 >
->ただし、この機能は Felix コンソールには対応しておらず、このコンソールのパスワードについては手動で変更する必要があります。詳しくは、関連する[セキュリティチェックリストの節](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts)を参照してください。
+>この機能では、Felix コンソールは対象外で、パスワードを手動で変更する必要があります。 詳しくは、 [セキュリティチェックリストセクション](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts).
 
 ## 使用方法 {#how-do-i-use-it}
 
-この機能は、ファイルシステムエクスプローラーで JAR をダブルクリックする代わりに、コマンドラインから AEM をインストールする場合に自動的にトリガーされます。
+この機能は、ファイルシステムエクスプローラーから JAR をダブルクリックするのではなく、コマンドラインを使用してAEMをインストールする場合に自動的にトリガーされます。
 
-コマンドラインから AEM インスタンスを実行するための一般的な構文は次のとおりです。
+コマンドラインからAEMインスタンスを実行するための一般的な構文は次のとおりです。
 
 ```shell
 java -jar aem6.3.jar
 ```
 
-コマンドラインからインスタンスを実行する際には、インストールプロセスの途中で admin パスワードの変更オプションが提示されます。
+コマンドラインからインスタンスを実行すると、インストールプロセス中に admin パスワードを変更するオプションが表示されます。
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
 >[!NOTE]
 >
->admin パスワードの変更を求めるメッセージは、新しい AEM インスタンスのインストール時にのみ表示されます。
+>管理者パスワードの変更を求めるプロンプトは、新しいAEMインスタンスのインストール時にのみ表示されます。
 
 ## -nointeractive フラグの使用 {#using-the-nointeractive-flag}
 
-プロパティファイルでパスワードを指定することもできます。これは、 `-nointeractive` ～と組み合わされた旗 `-Dadmin.password.file` システムプロパティ。
+プロパティファイルからパスワードを指定することもできます。 これは、 `-nointeractive` ～と組み合わされた旗 `-Dadmin.password.file` システムプロパティ。
 
 次に例を示します。
 

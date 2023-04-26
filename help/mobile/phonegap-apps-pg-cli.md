@@ -1,7 +1,7 @@
 ---
 title: PhoneGap CLI によるアプリの開発
 seo-title: Developing Apps with PhoneGap CLI
-description: このページでは、PhoneGap CLI によるアプリの開発について説明します。
+description: このページでは、PhoneGap CLI を使用したアプリの開発について説明します。
 seo-description: Follow this page to learn about developing apps with PhoneGap CLI.
 uuid: 9a66171d-19af-40db-9c07-f5dd9561e1b5
 contentOwner: User
@@ -13,7 +13,7 @@ exl-id: 7f2fcebb-1769-481a-b4df-b891053b08b6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '696'
-ht-degree: 90%
+ht-degree: 4%
 
 ---
 
@@ -21,29 +21,29 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-開発者は、開発環境を設定しておくと、デバイス上またはエミュレーター内でいつでもアプリを実行できます。
+開発環境を設定している場合は、開発者として、いつでもデバイス上またはエミュレーター内でアプリケーションを実行できます。
 
-次のサンプルを実行するには、Xcode 搭載の OSx を実行しているシステム（Mac）か、Android SDK がインストールされた Mac／Win／Linux システムが必要です。
+次の例を実行するには、Xcode で OSx(Mac) を実行するシステムか、Android SDK がインストールされたMac/Win/Linux システムが必要です。
 
-## 開発環境のブートストラップ {#bootstrap-your-development-environment}
+## Bootstrap環境 {#bootstrap-your-development-environment}
 
 [PhoneGap CLI の設定](https://docs.phonegap.com/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
 
-iOS の場合：iPhone および iPad 向けに開発するには、Apple の Xcode IDE が必要です。
+iOSの場合：iPhone および iPad 向けの開発をおこなうには、Apple Xcode IDE を使用する必要があります。
 
 * 無料でダウンロードできます [ここ](https://developer.apple.com/xcode/downloads/).
 * [PhoneGap iOS platform ガイド](https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide)
 
-Android の場合：Android 向けに開発するには、Google の Android Studio IDE が必要です。
+Android の場合：iPhone および iPad 向けの開発を行うには、Googleの Android Studio IDE が必要です。
 
 * 無料でダウンロードできます [ここ](https://developer.android.com/sdk/index.html).
-* [PhoneGap Android プラットフォームのガイド](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
+* [PhoneGap Android プラットフォームガイド](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
 
 ## ソースのダウンロード {#download-the-source}
 
-開発環境を正常にブートストラップしたら、AEM アプリのビルドタイルからソースをダウンロードします。
+開発環境を正常にブーストラップしたら、AEM App Build タイルからソースをダウンロードします。
 
 * 「PhoneGap Buildタイル」ドロップダウンの山形をクリックします。
 
@@ -56,22 +56,22 @@ Android の場合：Android 向けに開発するには、Google の Android Stu
 
 >[!NOTE]
 >
->開発ソースにはアプリの最新状態が含まれていますが、ステージングされていない変更も含まれています。アプリストアベンダーに提出するリリース候補をビルドするには、ステージングソースを使用します。
+>開発ソースには、非ステージ化された変更が含まれ、アプリの最新の状態が含まれます。 アプリストアベンダーに送信するリリース候補を構築するには、ステージングソースを使用します。
 >
->まだアプリをステージングしていない場合には、「ステージング」を選択するとステージングワークフローが実行されます（ヒント：これにより、AppStore および Google PlayStore で使用可能な PhoneGap エンタープライズ版 Viewer アプリにステージング済みアプリとして表示されるようになります）。
+>アプリをステージングしない場合、「ステージング」を選択すると、ステージングワークフローがトリガーされます ( ヒント：これは、AppStore とGoogle PlayStore で使用できる PhoneGap Enterprise Viewer App にステージング済みアプリとして表示されます。
 
-* 「ダウンロード」をクリックし、コンピューターに ZIP を保存します。
-* ダウンロードした zip ファイルをワークスペースに抽出します。
+* 「ダウンロード」をクリックし、ZIP をローカルマシンに保存します。
+* ダウンロードした zip ファイルをワークスペースに展開します。
 
-## （ソースからの）アプリのビルドおよび読み込み {#build-and-load-the-app-from-source}
+## （ソースから）アプリをビルドして読み込む {#build-and-load-the-app-from-source}
 
-PhoneGap CLI では、プラットフォームプロジェクトの作成、ソースのコンパイルおよびアプリのデプロイを単一のコマンドで実行できます。
+PhoneGap CLI は、プラットフォームプロジェクトの作成、ソースのコンパイル、1 つのコマンドでのアプリのデプロイを行うことができます。
 
 >[!NOTE]
 >
->これらすべての手順を個別に行うことができます。[PhoneGap CLI のドキュメント](https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/)を参照してください。
+>これらの手順はすべて個別に実行できます。詳しくは、 [PhoneGap CLI ドキュメント](https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/).
 
-1. PhoneGap CLI をインストール済みであることを確認してください（上記を参照）。
+1. PhoneGap CLI をインストール済みであることを確認します。上記を参照してください。
 1. コンソール（またはターミナル）ウィンドウで、抽出したソースのルートディレクトリに移動します。
 1. 以下のコマンドを入力します。
 
@@ -85,41 +85,41 @@ phonegap run ios
 
 >[!NOTE]
 >
->この時点で問題が発生した場合には、基本に戻ってトラブルシューティングしてください。
+>この時点で問題が発生した場合は、基本に戻ってトラブルシューティング —
 >
->1. 新規フォルダーを作成します（mkdir test）。
->1. この新規フォルダーに移動します（cd test）。
+>1. 新しいフォルダーを作成します（mkdir テスト）
+>1. この新しいフォルダーに移動します（cd テスト）
 >1. 「phonegap create helloWorld」を実行します。
->1. helloWorld に移動します（cd helloWorld）。
+>1. helloWorld(cd helloWorld) に移動します。
 >1. 「phonegap run android」を実行します（または上記のように android を ios に置き換えます）。
->1. エミュレーターが開いて、新規に作成した PhoneGap アプリが実行されます。ネイティブへの JavaScript ブリッジが動作している場合には、「Device Ready」と表示されます。
+>1. 新しく作成した PhoneGap アプリを実行するとエミュレーターが開き、ネイティブへの JavaScript ブリッジが動作している場合は「Device Ready」と表示されます。
 
 >
->この場合、PhoneGap CLI 開発環境は正しく稼動していることになります。
+>これにより、PhoneGap CLI 開発環境が起動し、正しく動作していることを確認します。
 
-## Safari および iOS デバッグでの JavaScript のデバッグ {#debug-javascripts-with-safari-and-ios-debug}
+## Safari およびIOSデバッグでの JavaScript のデバッグ {#debug-javascripts-with-safari-and-ios-debug}
 
-Web アプリケーションの場合と同じように、Safari の開発者向けツールを使用してアプリの JavaScript をデバッグできます。
+Web アプリケーションの場合と同様に、Safari の開発者ツールを使用して、アプリの JavaScript をデバッグできます。
 
-## Safari 開発者向けツールの使用可能化 {#enable-safari-developer-tools}
+## Safari 開発者ツールの有効化 {#enable-safari-developer-tools}
 
-開発者向けツールを使用可能にするには：
+開発者ツールを有効にするには：
 
 * Safari の環境設定を開きます。
 
-   * メニューバーで「Safari」をクリックします。
-   * 「環境設定」をクリックします。
+   * メニューバーで Safari をクリックします。
+   * 環境設定をクリック
 
-* 環境設定ウィンドウで「詳細」をクリックします。
+* 「プリファレンス」ウィンドウで「詳細」をクリックします。
 
 ![chlimage_1-47](assets/chlimage_1-47.png)
 
 * 「メニューバーに開発メニューを表示」をオンにします。
-* 環境設定ウィンドウを閉じます。
+* 「プリファレンス」ウィンドウを閉じます。
 
-## iOS への Safari の接続 {#connect-safari-to-ios}
+## Safari をiOSに接続 {#connect-safari-to-ios}
 
-iOS デバイスまたはエミュレーターに Safari を接続できます。
+Safari は、iOSデバイスまたはエミュレーターに接続できます。
 
 * コンソールウィンドウで、抽出したソースのルートディレクトリに移動します。
 * 次のコマンドを入力して、デバイスまたはエミュレーターでアプリを起動します。
@@ -132,32 +132,32 @@ phonegap run <platform> --device
 phonegap run <platform> --emulator
 ```
 
-* Safari を開きます。
-* メニューバーで「開発」をクリックします。
-* iOS シミュレーターサブメニューを選択します。
+* Safari を開く
+* メニューバーの「開発」をクリックします。
+* 「 iOS Simulator 」サブメニューを選択します。
 * home.html をクリックします。
 
 ![chlimage_1-48](assets/chlimage_1-48.png)
 
 ## Safari の Web インスペクタでの JavaScript のデバッグ {#debug-javascript-with-safari-s-web-inspector}
 
-ソースの任意の場所にブレークポイントを設定できます。エミュレーターまたはデバイスと対話する場合、設定したブレークポイントでアプリの実行が停止します。アプリをステップ単位で実行して、変数の値を調べることができます。
+ソースの任意の場所にブレークポイントを設定できます。 エミュレーターまたはデバイスとやり取りする場合、アプリの実行はこれらのブレークポイントで停止します。 実行を順を追って進め、変数内の値を調べることができます。
 
-* Web インスペクタウィンドウで「リソース」をクリックします。
-* ソースツリーを移動し、目的のソースファイルをクリックします。
-* 隣接する行番号をクリックして、ブレークポイントを追加します。
-* デバイスまたはエミュレーターと対話します。
+* [Web インスペクタ ] ウィンドウで [ リソース ] をクリックします。
+* ソースツリーに移動し、目的のソースファイルをクリックします。
+* 隣の行番号をクリックして、ブレークポイントを追加します。
+* デバイスまたはエミュレーターとやり取りする
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
-* コントロールボタンを使用してメソッドの実行、ステップオーバー、ステップインおよびステップアウトを続行します。
+* コントロールボタンを使用して、メソッドの実行、ステップオーバー、ステップインおよびステップアウトを続行します。
 
 ![](do-not-localize/chlimage_1-4.png)
 
 >[!NOTE]
 >
->変数の値を表示するには、現在のメソッドにマウスのカーソルを置きます。
+>変数の値を確認するには、現在のメソッドで、マウスにマウスポインターを置きます。
 
 ## 次の手順 {#the-next-steps}
 
-PhoneGap CLI によるアプリの開発について学習したら、[デバイスの機能へのアクセス](/help/mobile/phonegap-access-device-features.md)を参照してください。
+PhoneGap CLI を使用したアプリの開発について詳しくは、 [デバイスの機能へのアクセス](/help/mobile/phonegap-access-device-features.md).

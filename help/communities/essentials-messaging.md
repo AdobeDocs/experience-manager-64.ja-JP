@@ -1,7 +1,7 @@
 ---
 title: メッセージングの基本事項
 seo-title: Messaging Essentials
-description: メッセージングコンポーネントの概要
+description: メッセージコンポーネントの概要
 seo-description: Messaging component overview
 uuid: 53711f4d-6bbc-4be9-aefe-4e75a81cd67f
 contentOwner: Guillaume Carlino
@@ -13,13 +13,13 @@ exl-id: c6ad3c2b-8776-4ec4-99da-ab73ecc61153
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '387'
-ht-degree: 42%
+ht-degree: 5%
 
 ---
 
 # メッセージングの基本事項 {#messaging-essentials}
 
-このページでは、メッセージングコンポーネントを使用してメッセージング機能を Web サイトに組み込む方法の詳細をまとめています。
+このページでは、メッセージングコンポーネントを使用して Web サイトにメッセージング機能を組み込む方法について詳しく説明します。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -75,7 +75,7 @@ ht-degree: 42%
    <td>/libs/social/messaging/components/hbs/messagebox/clientlibs/messagebox.css</td> 
   </tr> 
   <tr> 
-   <td><strong>プロパティ</strong></td> 
+   <td><strong>properties</strong></td> 
    <td>詳しくは、 <a href="configure-messaging.md">メッセージの設定</a></td> 
   </tr> 
   <tr> 
@@ -85,7 +85,7 @@ ht-degree: 42%
  </tbody> 
 </table>
 
-[クライアント側のカスタマイズ](client-customize.md)も参照してください。
+関連トピック [クライアント側のカスタマイズ](client-customize.md)
 
 ## サーバー側の基本事項 {#essentials-for-server-side}
 
@@ -93,9 +93,9 @@ ht-degree: 42%
 
 * [メッセージングクライアント API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) （SCF コンポーネント用）
 
-* [メッセージング API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html)（サービス用）
+* [メッセージング API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html) サービスの
 
-* [メッセージングエンドポイント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
+* [メッセージエンドポイント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
@@ -106,7 +106,7 @@ ht-degree: 42%
 >* `setInboxPath`()
 >* `setSentItemsPath`()
 >
->次に例を示します。
+>例：
 >
 >
 ```
@@ -116,7 +116,7 @@ ht-degree: 42%
 
 ### コミュニティサイト {#community-site}
 
-ウィザードを使用して作成したコミュニティサイト構造には、選択したメッセージング機能が含まれています。詳しくは、 `User Management` 設定 [コミュニティサイトコンソール](sites-console.md#user-management).
+ウィザードを使用して作成したコミュニティサイト構造には、メッセージング機能が含まれます。 詳しくは、 `User Management` 設定 [コミュニティサイトコンソール](sites-console.md#user-management).
 
 ### サンプルコード：メッセージ受信通知 {#sample-code-message-received-notification}
 
@@ -124,13 +124,13 @@ ht-degree: 42%
 
 次の例は、 `message sent` イベントを送信し、 `Day CQ Mail Service`.
 
-サーバー側サンプルスクリプトを試すには、開発環境と OSGi バンドルのビルド機能が必要です。
+サーバー側のサンプルスクリプトを試すには、開発環境と OSGi バンドルを構築する機能が必要です。
 
 1. 管理者としてにログインします。 ` [CRXDE|Lite](http://localhost:4502/crx/de)`
 1. の作成 `bundle node`in `/apps/engage/install` 任意の名前を持つ
 
    * **[!UICONTROL 記号名]**:com.engage.media.social.messaging.MessagingNotification
-   * ****&#x200B;名前：Getting Started Tutorial Message Notificaton
+   * **[!UICONTROL 名前]**:使用の手引きチュートリアルのメッセージ通知
    * **[!UICONTROL 説明]**:ユーザーがメッセージを受信したときに電子メール通知を送信するサンプルサービス
    * **[!UICONTROL パッケージ]**: `com.engage.media.social.messaging.notification`
 

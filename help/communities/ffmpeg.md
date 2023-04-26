@@ -1,7 +1,7 @@
 ---
 title: コミュニティのための FFmpeg
 seo-title: FFmpeg for Communities
-description: コミュニティのための FFmpeg をインストールおよび設定する方法
+description: コミュニティ用の FFmpeg のインストールと設定の方法
 seo-description: How to install and configure FFmpeg for Communities
 uuid: ef2f821c-70e9-4889-a8d7-a93b10a1d428
 contentOwner: Janice Kendall
@@ -14,7 +14,7 @@ exl-id: 9ed54ee3-3509-4a43-a710-90f4543ccaf3
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '305'
-ht-degree: 61%
+ht-degree: 3%
 
 ---
 
@@ -22,18 +22,18 @@ ht-degree: 61%
 
 ## 概要 {#overview}
 
-FFmpeg は、オーディオとビデオの変換およびストリーミングのためのソリューションです。インストールすると、[ビデオアセット](../../help/sites-authoring/default-components-foundation.md#video)の適切なトランスコーディングと AEM Communities のイネーブルメント 能に使用できます。
+FFmpeg は、オーディオとビデオの変換とストリーミングを行うソリューションで、インストール時に、 [ビデオアセット](../../help/sites-authoring/default-components-foundation.md#video) と AEM Communities のイネーブルメント機能を使用します。
 
-FFmpeg は、オーサー環境で、アップロードしたイネーブルメントリソースのメタデータを取得したり、イネーブルメントリソースの一覧に表示するサムネイルを生成するときに使用します。
+FFmpeg は、オーサー環境でアップロードされたイネーブルメントリソースのメタデータを取得し、イネーブルメントリソースのリストに表示するサムネールを生成するために使用されます。
 
 ## FFmpeg のインストール {#installing-ffmpeg}
 
-FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしているサーバーにインストールする必要があります。
+AEMをホストするサーバーに FFmpeg をインストールする必要があります *作成者* インスタンス。
 
 1. に移動します。 [https://www.ffmpeg.org](https://www.ffmpeg.org/)
-1. 特定の環境用（Macintosh、Windows または Linux）の FFmpeg の最新バージョンをダウンロードします。
+1. お使いの環境（Macintosh、Windows または Linux）向けの最新バージョンの FFmpeg をダウンロードします。
 
-   * 古いバージョンにはセキュリティ脆弱性があるので、FFmpeg を最新の状態に保つことが重要です。
+   * FFmpeg を最新の状態に保つことが重要です。古いバージョンのセキュリティの脆弱性が原因です。
 
 1. OS の手順に従って FFmpeg をインストールします。
 
@@ -43,13 +43,13 @@ FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしている�
 
    * 例：`ffmpeg -version`
 
-## FFmpeg トランスコーディングサービスの設定 {#configure-ffmpeg-transcoding-service}
+## FFmpeg トランスコーディングサービスを設定 {#configure-ffmpeg-transcoding-service}
 
-デフォルトでは、FFmpeg をインストールすると、DAM アセットの更新のワークフロー定義どおりに複数のレンディションが設定されます（トランスコーディング）。
+デフォルトでは、FFmpeg がインストールされている場合、DAM アセットの更新ワークフロー定義に従って、複数のレンディションが設定（トランスコーディング）されます。
 
-トランスコーディングは CPU を集中的に使用するので、対象レンディションのリストを変更することを推奨します。ほとんどの場合、トランスコードは必要ありません。
+トランスコーディングは CPU を大量に消費するので、ターゲットレンディションのリストを変更することをお勧めします。 ほとんどの場合、トランスコードは必要ありません。
 
-DAM アセットの更新のワークフローを変更するには（この例ではトランスコーディングをオフにするには）、次のようにします。
+DAM アセットの更新ワークフローを変更し、この例でトランスコードをオフにするには、次の手順を実行します。
 
 * 管理者権限でオーサーインスタンスにサインイン
 * グローバルナビゲーションから： **[!UICONTROL ツール/ワークフロー/モデル]**

@@ -1,7 +1,7 @@
 ---
 title: カスタムポータルにおける通信を作成の UI の統合
 seo-title: Integrating Create Correspondence UI with your custom portal
-description: 通信の作成 UI とカスタムポータルを統合する方法について説明します。
+description: 通信の作成 UI をカスタムポータルに統合する方法を説明します
 seo-description: Learn how to integrate create correspondence UI with your custom portal
 uuid: 4ae9c5fb-bb9d-46d8-be84-455f386ab443
 content-type: reference
@@ -13,7 +13,7 @@ exl-id: 8b1bbd85-66ba-4e96-917a-d768d84a417f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '478'
-ht-degree: 86%
+ht-degree: 19%
 
 ---
 
@@ -21,13 +21,13 @@ ht-degree: 86%
 
 ## 概要 {#overview}
 
-ここでは、通信を作成のソリューションをお使いの環境に統合する方法の詳細を説明します。
+この記事では、通信を作成ソリューションを環境に統合する方法について詳しく説明します。
 
 ## URL ベースの呼び出し {#url-based-invocation}
 
-通信を作成アプリケーションをカスタムポータルから呼び出す 1 つの方法として、次の要求パラメーターを持つ URL を準備する方法が挙げられます。
+カスタムポータルから通信を作成アプリケーションを呼び出す方法の 1 つは、次の要求パラメーターを使用して URL を準備することです。
 
-* レターテンプレートの識別子（cmLetterId パラメーターを使用）、またはレターテンプレートの名前（cmLetterName パラメーターを使用） 
+* レターテンプレートの識別子（cmLetterId パラメータを使用）またはレターテンプレートの名前（cmLetterName パラメータを使用）
 
 * 目的のデータソースから取得した XML データの URL（cmDataUrl パラメーターを使用）。
 
@@ -38,17 +38,17 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->この呼び出し方法は安全ではありません。必要なパラメーターが URL に明示される GET 要求として渡されるからです。
+>このような呼び出し方法では、必要なパラメーターが URL で同じ（明確に表示される）を公開することで、GETリクエストとして渡されるので、安全ではありません。
 
 >[!NOTE]
 >
->通信を作成アプリケーションを呼び出す前に、データを保存、アップロードして、指定された dataURL で通信を作成の UI を呼び出します。この処理は、カスタムポータル自体で実行されるか、または異なるバックエンドプロセスで実行される可能性があります。
+>通信を作成アプリケーションを呼び出す前に、データを保存してアップロードし、指定された dataURL で通信を作成 UI を呼び出します。 これは、カスタムポータル自体から実行することも、別のバックエンドプロセスを通じて実行することもできます。
 
 ## インラインデータベースの呼び出し {#inline-data-based-invocation}
 
-通信を作成アプリケーションを呼び出すもう 1 つの（より安全な）方法は、次の場所の URL にヒットするだけで済みます。 `https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html`：通信を作成アプリケーションをPOSTリクエストとして呼び出すためのパラメーターとデータを送信する際に（エンドユーザーに対して非表示にする）。 つまり、通信を作成アプリケーションの XML データを（cmData パラメーターを使用して、同じ要求の一部として）インラインで渡すことができることも意味します。これは、前述のアプローチでは、不可能で、理想的ではありませんでした。
+通信を作成アプリケーションを呼び出すもう 1 つの（より安全な）方法は、次の場所の URL にヒットするだけで済みます。 `https://[server]:[port]/[contextPath]/aem/forms/createcorrespondence.html`：通信を作成アプリケーションをPOSTリクエストとして呼び出すためのパラメーターとデータを送信する際に（エンドユーザーに対して非表示にする）。 つまり、以前のアプローチでは不可能で、理想的ではなかった、同じリクエストの一環として、通信を作成アプリケーションの XML データをインラインで渡すことができます。
 
-### レターを指定するパラメーター {#parameters-for-specifying-letter}
+### レターを指定するためのパラメーター {#parameters-for-specifying-letter}
 
 <table> 
  <tbody>
@@ -65,19 +65,19 @@ ht-degree: 86%
   <tr>
    <td>cmLetterName</td> 
    <td>文字列</td> 
-   <td><p>レターテンプレートの識別子。 </p> <p>サーバー上に同じ名前の CM 文字が複数存在する場合、URL の cmLetterName パラメーターによって「名前に複数の文字が使用されています」というエラーがスローされます。このような場合、URL には cmLetterName の代わりに cmLetterId パラメーターを使用します。</p> </td> 
+   <td><p>レターテンプレートの識別子。 </p> <p>1 台のサーバー上に同じ名前の CM 文字が複数存在する場合、URL で cmLetterName パラメーターを使用すると、「名前が付いた複数の文字が存在します」というエラーがスローされます。 その場合、URL に cmLetterName ではなく cmLetterId パラメータを使用します。</p> </td> 
   </tr>
   <tr>
    <td>cmLetterId</td> 
    <td>文字列</td> 
-   <td>レターテンプレートの名前です。</td> 
+   <td>レターテンプレートの名前。</td> 
   </tr>
  </tbody>
 </table>
 
-テーブル中のパラメーターの順序が、レターの読み込みに使用されるパラメーターの優先順位を指定します。
+テーブル内のパラメーターの順序は、レターの読み込みに使用するパラメーターの優先順位を指定します。
 
-### XML データソースを指定するパラメーター {#parameters-for-specifying-the-xml-data-source}
+### XML データソースを指定するためのパラメーター {#parameters-for-specifying-the-xml-data-source}
 
 <table> 
  <tbody>
@@ -89,7 +89,7 @@ ht-degree: 86%
   <tr>
    <td>cmDataUrl<br /> </td> 
    <td>URL</td> 
-   <td>cq、ftp、http、file などの基本的なプロトコルを使用してソースファイルから取得する XML データです。<br /> </td> 
+   <td>cq、ftp、http、file などの基本的なプロトコルを使用したソースファイルからの XML データ。<br /> </td> 
   </tr>
   <tr>
    <td>cmLetterInstanceId</td> 
@@ -99,12 +99,12 @@ ht-degree: 86%
   <tr>
    <td>cmUseTestData</td> 
    <td>ブール値</td> 
-   <td>データディクショナリに添付されたテストデータを再利用します。</td> 
+   <td>データディクショナリに添付されたテストデータを再利用する。</td> 
   </tr>
  </tbody>
 </table>
 
-テーブル中のパラメーターの順序が、XML データの読み込みに使用されるパラメーターの優先順位を指定します。
+テーブル内のパラメーターの順序は、XML データの読み込みに使用するパラメーターの優先順位を指定します。
 
 ### その他のパラメーター {#other-parameters}
 
@@ -118,12 +118,12 @@ ht-degree: 86%
   <tr>
    <td>cmPreview<br /> </td> 
    <td>ブール値</td> 
-   <td>「True」に設定されている場合、レターをプレビューモードで開きます<br /> </td> 
+   <td>True に設定すると、レターがプレビューモードで開きます<br /> </td> 
   </tr>
   <tr>
    <td>ランダム</td> 
    <td>Timestamp</td> 
-   <td>ブラウザーのキャッシュに関する問題を解決します。</td> 
+   <td>ブラウザーのキャッシュの問題を解決するには、以下を実行します。</td> 
   </tr>
  </tbody>
 </table>

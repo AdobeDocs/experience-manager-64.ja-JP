@@ -14,7 +14,7 @@ exl-id: b8488a39-44dd-4e6c-b3f0-857d67c79385
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '17032'
-ht-degree: 99%
+ht-degree: 97%
 
 ---
 
@@ -213,7 +213,7 @@ Signature API（Web サービス）を使用して署名フィールドを追加
 
 ## 署名フィールド名の取得 {#retrieving-signature-field-names}
 
-署名または認証する PDF ドキュメント内のすべての署名フィールドの名前を取得できます。PDF ドキュメント内の署名フィールド名が分からない場合や、名前を検証したい場合に、プログラムによって名前を取得することができます。Signature サービスは、`form1[0].grantApplication[0].page1[0].SignatureField1[0]` のような署名フィールドの完全修飾名を返します。
+署名または認証する署名ドキュメント内のすべてのPDFフィールドの名前を取得できます。 PDFドキュメント内の署名フィールド名が不明な場合や、名前を検証する場合は、プログラムを使用して名前を取得できます。 Signature サービスは、`form1[0].grantApplication[0].page1[0].SignatureField1[0]` のような署名フィールドの完全修飾名を返します。
 
 >[!NOTE]
 >
@@ -526,7 +526,7 @@ Signature API（web サービス）を使用して署名フィールドを変更
 
    >[!NOTE]
    >
-   >設定可能なすべてのシード値ディクショナリの値を表示するには、`PDFSeedValueOptionSpec` クラスレファレンスを参照してください。（[AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en) を参照してください）。
+   >設定可能なすべてのシード値ディクショナリの値を表示するには、`PDFSeedValueOptionSpec` クラスレファレンスを参照してください。（[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) を参照してください）。
 
 1. 署名フィールドの変更
 
@@ -553,9 +553,9 @@ Signature API（web サービス）を使用して署名フィールドを変更
 
 ## PDF ドキュメントの電子署名 {#digitally-signing-pdf-documents}
 
-デジタル署名を PDF ドキュメントに適用して、一定レベルのセキュリティを提供できます。デジタル署名は、手書きの署名と同様に、署名者が自分自身を識別し、ドキュメントに関するステートメントを作成する手段を提供します。ドキュメントの電子署名に使用されている技術は、署名者と受信者の両方が、何に署名されているのかを明確にし、その署名によりドキュメントに変更がないことを確認するのに役立ちます。
+デジタル署名を PDF ドキュメントに適用して、一定レベルのセキュリティを提供できます。デジタル署名は、手書きの署名と同様に、署名者が自分自身を識別し、ドキュメントに関するステートメントを作成する手段を提供します。ドキュメントに電子署名を行う技術は、署名者と受信者の両方が、何が署名されたかを明確にし、ドキュメントが署名後に変更されなかったことを確認するのに役立ちます。
 
-PDF ドキュメントは、公開鍵を用いて署名されます。署名者は公開鍵と秘密鍵の 2 つの鍵を持っています。秘密鍵はユーザーの秘密鍵証明書に格納されています。秘密鍵証明書は署名するときに使用可能になっている必要があります。公開鍵はユーザーの秘密鍵証明書に格納されています。秘密鍵証明書は、受信者が署名を検証するために使用可能になっている必要があります。失効した証明書に関する情報は、認証機関から配布される証明書失効リスト（CRL）およびオンライン証明書ステータスプロトコル（OCSP）応答内にあります。署名が行われた時間は、タイムスタンプ局として知られる信頼できるソースから取得されます。
+PDFドキュメントは、公開鍵技術によって署名されます。 署名者には、次の 2 つのキーがあります。公開鍵と秘密鍵 秘密鍵はユーザーの秘密鍵証明書に格納されています。秘密鍵証明書は署名するときに使用可能になっている必要があります。公開鍵はユーザーの秘密鍵証明書に格納されています。秘密鍵証明書は、受信者が署名を検証するために使用可能になっている必要があります。失効した証明書に関する情報は、証明機関 (CA) から配布された証明書失効リスト (CRL) およびオンライン証明書ステータスプロトコル (OCSP) 応答に含まれています。 署名時刻は、タイムスタンプ機関と呼ばれる、信頼できるソースから取得できます。
 
 >[!NOTE]
 >
@@ -725,7 +725,7 @@ Signature API（Java）を使用した PDF ドキュメントのデジタル署�
    * 署名者の証明書に対して失効確認を実行するかどうかを指定する `java.lang.Boolean` オブジェクト。
    * オンライン証明書ステータスプロトコル（OCSP）サポートの設定を格納する `OCSPOptionSpec` オブジェクト。失効確認を実行しない場合、このパラメーターは使用されず、`null` を指定できます。
    * 証明書失効リスト（CRL）の環境設定を保存する `CRLPreferences` オブジェクトです。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
-   * タイムスタンププロバイダー（TSP）がサポートする環境設定を格納する `TSPPreferences` オブジェクト。このパラメーターはオプションで、`null` にすることができます。詳しくは、[AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
+   * タイムスタンププロバイダー（TSP）がサポートする環境設定を格納する `TSPPreferences` オブジェクト。このパラメーターはオプションで、`null` にすることができます。詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
 
    `sign` メソッドは、署名済み PDF ドキュメントを表す `com.adobe.idp.Document` オブジェクトを返します。
 
@@ -791,7 +791,7 @@ Signature API（web サービス）を使用した PDF ドキュメントのデ�
    * 署名者の連絡先情報を表す文字列値です。
    * デジタル署名の外観を制御する `PDFSignatureAppearanceOptions` オブジェクト。例えば、このオブジェクトを使用して、デジタル署名にカスタムロゴを追加できます。
    * 署名者の証明書に対して失効確認を実行するかどうかを指定する `System.Boolean` オブジェクト。失効確認を実行すると、署名に埋め込まれます。デフォルトは、`false` です。
-   * オンライン証明書ステータスプロトコル（OCSP）サポートの環境設定を格納する `OCSPOptionSpec` オブジェクト。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。このオブジェクトについて詳しくは、[AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
+   * オンライン証明書ステータスプロトコル（OCSP）サポートの環境設定を格納する `OCSPOptionSpec` オブジェクト。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。このオブジェクトについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
    * 証明書失効リスト（CRL）の環境設定を保存する `CRLPreferences` オブジェクト。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
    * タイムスタンププロバイダー（TSP）がサポートする環境設定を保存する `TSPPreferences` オブジェクト。このパラメーターはオプションで、`null` を設定することもできます。
 
@@ -1038,7 +1038,7 @@ Forms and Signature API（web サービス）を使用して、インタラク�
    * 署名者の連絡先情報を表す文字列値です。
    * デジタル署名の外観を制御する `PDFSignatureAppearanceOptions` オブジェクト。例えば、このオブジェクトを使用して、デジタル署名にカスタムロゴを追加できます。
    * 署名者の証明書に対して失効確認を実行するかどうかを指定する `System.Boolean` オブジェクト。失効確認を実行すると、署名に埋め込まれます。デフォルトは、`false` です。
-   * オンライン証明書ステータスプロトコル（OCSP）サポートの環境設定を格納する `OCSPPreferences` オブジェクト。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。このオブジェクトについて詳しくは、[AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
+   * オンライン証明書ステータスプロトコル（OCSP）サポートの環境設定を格納する `OCSPPreferences` オブジェクト。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。このオブジェクトについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
    * 証明書失効リスト（CRL）の環境設定を保存する `CRLPreferences` オブジェクト。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
    * タイムスタンププロバイダー（TSP）がサポートする環境設定を保存する `TSPPreferences` オブジェクト。このパラメーターはオプションで、`null` を設定することもできます。
 
@@ -1059,11 +1059,11 @@ Forms and Signature API（web サービス）を使用して、インタラク�
 
 ## PDF ドキュメントの認証 {#certifying-pdf-documents}
 
-認証署名と呼ばれる特定のタイプの署名によって PDF ドキュメントを認証することで、PDF ドキュメントを保護することができます。認証署名は、以下の方法で電子署名と区別されます。
+認証済みPDFと呼ばれる特定の種類の署名を使用して認証することで、署名ドキュメントを保護できます。 認証署名は、次の点でデジタル署名と区別されます。
 
-* 認証署名は PDF ドキュメントに適用される最初の署名です。つまり、認証署名が適用されるときは、ドキュメント内の他の署名フィールドは未署名でなければいけません。認証署名は 1 つの PDF ドキュメントにつき 1 つです。PDF ドキュメントを署名および認証するには、署名の前に認証を行う必要があります。PDF ドキュメントの認証後、他の署名フィールドに電子署名を行うことができます。
-* ドキュメントの作成者または発信者は、認証署名を無効にすることなく、特定の方法でドキュメントの変更が可能になるように指定することができます。例えば、フォームへの入力やコメント入力を許可するドキュメントなどがあります。作成者が特定の変更を許可しない設定を行った場合は、その方法でのドキュメントの変更は Acrobat によって制限されます。別のアプリケーションを使用するなどしてそのような変更が行われた場合は、認証署名は無効となり、Acrobat はユーザーがドキュメントを開いた際に警告を発します。（未認証の署名では、変更を防ぐことはできません。また、通常の編集操作では元の署名は無効になりません。）
-* 署名時に、ドキュメントのコンテンツにあいまいさや誤解をもたらす可能性のある、特定の種類のコンテンツをスキャンします。例えば、注釈により、認証される対象を把握するために重要なページ上のテキストが隠れてしまう場合があります。そのようなコンテンツに関する、説明（法的証明）を提供することができます。
+* 認証署名は PDF ドキュメントに適用される最初の署名です。つまり、認証署名が適用されるときは、ドキュメント内の他の署名フィールドは未署名でなければいけません。認証署名は 1 つの PDF ドキュメントにつき 1 つです。PDF ドキュメントを署名および認証するには、署名の前に認証を行う必要があります。署名ドキュメントを認証した後、PDFフィールドに電子署名を行うことができます。
+* ドキュメントの作成者または作成者は、認証された署名を無効にすることなく、特定の方法でドキュメントを変更できるように指定できます。 例えば、フォームへの入力やコメント入力を許可するドキュメントなどがあります。作成者が特定の変更を許可しない設定を行った場合は、その方法でのドキュメントの変更は Acrobat によって制限されます。別のアプリケーションの使用などによる変更がおこなわれた場合、認証署名は無効になり、Acrobatはユーザーがドキュメントを開いたときに警告を発します。 （未認証の署名の場合、変更は防止されず、通常の編集操作で元の署名が無効になることはありません）。
+* 署名時に、文書の内容をあいまいにしたり誤解を招く可能性のある特定の種類のコンテンツを文書にスキャンします。 例えば、注釈により、認証される対象を把握するために重要なページ上のテキストが隠れてしまう場合があります。このようなコンテンツに関する説明（法的証明）を提供できます。
 
 Signature サービス Java API や Signature web サービス API を使用して、プログラムによって PDF ドキュメントを認証できます。PDF ドキュメントを認証する際は、Credential サービスに存在するセキュリティ証明書を参照する必要があります。セキュリティ証明書について詳しくは、ご使用のアプリケーションサーバーに応じた *AEM Forms のインストールとデプロイ*&#x200B;ガイドを参照してください。
 
@@ -1187,7 +1187,7 @@ Signature API（Java）を使用して PDF ドキュメントを認証するに�
    * 署名を無効にするアクションの説明を提供する文字列値です。
    * 署名者の証明書に対して失効確認を実行するかどうかを指定する `java.lang.Boolean` オブジェクトです。失効確認を実行すると、署名に埋め込まれます。デフォルトは、`false` です。
    * 認証される署名フィールドをロックするかどうかを指定する `java.lang.Boolean` オブジェクトです。署名フィールドをロックすると、このフィールドは読み取り専用としてマークされ、プロパティは変更できません。また、必要な権限を持たないユーザーはこのフィールドをクリアできません。デフォルトは、`false` です。
-   * オンライン証明書ステータスプロトコル（OCSP）サポートの環境設定を格納する `OCSPPreferences` オブジェクト。失効確認を実行しない場合、このパラメーターは使用されず、`null` を指定できます。このオブジェクトについて詳しくは、[AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
+   * オンライン証明書ステータスプロトコル（OCSP）サポートの環境設定を格納する `OCSPPreferences` オブジェクト。失効確認を実行しない場合、このパラメーターは使用されず、`null` を指定できます。このオブジェクトについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
    * 証明書失効リスト（CRL）の環境設定を保存する `CRLPreferences` オブジェクトです。失効確認が実行されない場合、このパラメーターは使用されず、`null` を指定できます。
    * タイムスタンププロバイダー（TSP）サポートの環境設定を格納する `TSPPreferences` オブジェクト。例えば、`TSPPreferences` オブジェクトを作成した後、`TSPPreferences` オブジェクトの `setTspServerURL` メソッドを呼び出して、TSP サーバーの URL を設定できます。このパラメーターはオプションで、`null` にすることができます。詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
@@ -1283,7 +1283,7 @@ Signature API（web サービス）を使用して PDF ドキュメントを認�
 
 ## デジタル署名の検証 {#verifying-digital-signatures}
 
-電子署名を検証することで、署名された PDF ドキュメントに変更がなく、電子署名が有効であることを確認することができます。デジタル署名の検証では、署名のステータスや、署名者の ID などのプロパティを確認することができます。電子署名を信用する前に、検証することをおすすめします。電子署名を検証する際、電子署名を含む PDF ドキュメントを参照します。
+電子署名を検証することで、署名された PDF ドキュメントに変更がなく、電子署名が有効であることを確認することができます。デジタル署名の検証では、署名のステータスや、署名者の ID などのプロパティを確認することができます。デジタル署名を信頼する前に、検証することをお勧めします。 デジタル署名を検証する場合は、デジタルPDFを含む署名ドキュメントを参照します。
 
 署名者の ID が不明であるとします。Acrobat で PDF ドキュメントを開くと、次の図に示すように、署名者の ID が不明であることを示す警告メッセージが表示されます。
 
@@ -1337,9 +1337,9 @@ PDF ドキュメントの署名を検証するときに署名サービスが使�
 * 失効確認
 * タイムスタンプ値
 
-これらのオプションを設定する際に、検証時刻を指定できます。例えば、現在の時刻（バリデーターのコンピューター上の時刻）を選択し、現在の時刻を使用するように指定できます。さまざまな時間値の詳細については、[AEM FormsAPI リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `VerificationTime` 列挙値を参照してください。
+これらのオプションを設定する際に、検証時刻を指定できます。例えば、現在の時刻（バリデーターのコンピューター上の時刻）を選択し、現在の時刻を使用するように指定できます。さまざまな時間値の詳細については、[AEM FormsAPI リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `VerificationTime` 列挙値を参照してください。
 
-また、検証プロセスの一環として失効確認を実行するかどうかを指定することもできます。例えば、失効確認を実行して、証明書が失効しているかどうかを判断できます。失効確認オプションについて詳しくは、[AEM Forms APIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `RevocationCheckStyle`列挙値を参照してください。
+また、検証プロセスの一環として失効確認を実行するかどうかを指定することもできます。例えば、失効確認を実行して、証明書が失効しているかどうかを判断できます。失効確認オプションについて詳しくは、[AEM Forms APIリファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `RevocationCheckStyle`列挙値を参照してください。
 
 証明書の失効チェックを実行するには、`CRLOptionSpec` オブジェクトを使用して、証明書失効リスト（CRL）サーバーへの URL を指定します。ただし、CRL サーバーへの URL を指定しない場合、署名サービスは証明書から URL を取得します。
 
@@ -1367,7 +1367,7 @@ Signature サービスでは、デフォルトにより、検証時刻を経過�
 
 >[!NOTE]
 >
->署名の検証時に必要なその他の値については、[AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
+>署名の検証時に必要なその他の値については、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
 
 **署名のステータスの判断**
 
@@ -1561,9 +1561,9 @@ PDF ドキュメント内のすべての署名を検証する際に Signature �
 * 失効確認
 * タイムスタンプ値
 
-これらのオプションを設定する際に、検証時刻を指定できます。例えば、現在の時刻（バリデーターのコンピューター上の時刻）を選択し、現在の時刻を使用するように指定できます。さまざまな時間値の詳細については、[AEM FormsAPI リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `VerificationTime` 列挙値を参照してください。
+これらのオプションを設定する際に、検証時刻を指定できます。例えば、現在の時刻（バリデーターのコンピューター上の時刻）を選択し、現在の時刻を使用するように指定できます。さまざまな時間値の詳細については、[AEM FormsAPI リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `VerificationTime` 列挙値を参照してください。
 
-また、検証プロセスの一環として失効確認を実行するかどうかを指定することもできます。例えば、失効確認を実行して、証明書が失効しているかどうかを判断できます。失効確認オプションについて詳しくは、[AEM Forms APIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `RevocationCheckStyle`列挙値を参照してください。
+また、検証プロセスの一環として失効確認を実行するかどうかを指定することもできます。例えば、失効確認を実行して、証明書が失効しているかどうかを判断できます。失効確認オプションについて詳しくは、[AEM Forms APIリファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `RevocationCheckStyle`列挙値を参照してください。
 
 証明書に対して失効確認を実行するには、`CRLOptionSpec` オブジェクトを使用して証明書失効リスト（CRL）サーバーへの URL を指定します。ただし、CRL サーバーへの URL を指定しない場合、Signature サービスが証明書から URL を取得します。
 

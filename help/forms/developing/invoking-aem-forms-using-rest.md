@@ -14,13 +14,13 @@ exl-id: 82770ac6-aafc-44b9-82fb-6f193bb3a128
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2492'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
 # REST リクエストを使用した AEM Forms の呼び出し {#invoking-aem-forms-using-rest-requests}
 
-Representational State Transfer（REST）要求で呼び出せるように、Workbench で作成したプロセスを設定できます。REST 要求は HTML ページから送信されます。つまり、REST リクエストを使用して、Web ページから直接 Forms プロセスを呼び出すことができます。例えば、web ページの新しいインスタンスを開くことができます。次に、Forms プロセスを呼び出し、HTTP POST リクエストで送信されたデータを含む、レンダリングされた PDF ドキュメントを読み込むことができます。
+Workbench で作成されたプロセスは、Representational State Transfer(REST) 要求を通じて呼び出せるように設定できます。 REST リクエストは、HTMLページから送信されます。 つまり、REST リクエストを使用して、Web ページから直接 Forms プロセスを呼び出すことができます。例えば、web ページの新しいインスタンスを開くことができます。次に、Forms プロセスを呼び出し、HTTP POST リクエストで送信されたデータを含む、レンダリングされた PDF ドキュメントを読み込むことができます。
 
 2 種類のHTML クライアントが存在します。最初の HTML クライアントは、JavaScript で記述された AJAX クライアントです。2 つ目のクライアントは、送信ボタンを含む HTML フォームです。HTML ベースのクライアントアプリケーションは、REST クライアントとして使用できる唯一のクライアントではありません。HTTP リクエストをサポートするクライアントアプリケーションは、REST 呼び出しを使用してサービスを呼び出すことができます。例えば、PDF フォームからの REST 呼び出しを使用して、サービスを呼び出すことができます。（[Acrobat からの MyApplication／EncryptDocument プロセスの呼び出し](#rest-invocation-examples)を参照。）
 
@@ -289,11 +289,11 @@ REST を使用すると、*MyApplication/EncryptDocument* という名前の短�
 
 >[!NOTE]
 >
->このプロセスは、AEM Forms の既存のプロセスに基づいたものではありません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照してください）。
+>このプロセスは、AEM Forms の既存のプロセスに基づいたものではありません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください）。
 
 このプロセスを呼び出すと、次のアクションが実行されます。
 
-1. プロセスに渡された保護されていない PDF ドキュメントを取得します。このアクションは `SetValue` 操作に基づいています。このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
+1. プロセスに渡されたPDFドキュメントを取得します。 このアクションは `SetValue` 操作に基づいています。このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
 1. PDF ドキュメントをパスワードで暗号化します。このアクションは `PasswordEncryptPDF` 操作に基づいています。パスワードで暗号化された PDF ドキュメントは、`outDoc` という名前のプロセス変数として返されます。
 
    このプロセスが REST リクエストを使用して呼び出されると、暗号化された PDF ドキュメントが web ブラウザーに表示されます。PDF ドキュメントを表示する前に、パスワードを指定します（セキュリティが無効になっていない場合）。次の HTML コードは、 `MyApplication/EncryptDocument` プロセスへの REST 呼び出しリクエストを表しています。

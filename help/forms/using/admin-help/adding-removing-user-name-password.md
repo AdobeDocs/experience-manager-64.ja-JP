@@ -1,7 +1,7 @@
 ---
 title: ユーザー名とパスワードの秘密鍵証明書の追加と削除
 seo-title: Adding and removing user name and password credentials
-description: ユーザー名とパスワードの秘密鍵証明書を追加および削除する方法を学習します。
+description: ユーザー名とパスワードの資格情報を追加および削除する方法について説明します。
 seo-description: Learn how to add and remove user name and password credentials.
 uuid: f1d083b5-ba48-4b02-b40b-969f03732e36
 contentOwner: admin
@@ -13,15 +13,15 @@ exl-id: 67537323-e9c8-4eec-bcec-dc5bac4b623c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '150'
-ht-degree: 100%
+ht-degree: 68%
 
 ---
 
 # ユーザー名とパスワードの秘密鍵証明書の追加と削除 {#adding-and-removing-user-name-and-password-credentials}
 
-Trust Store の管理ページから、Forms サービスが SOAP レベルのセキュリティで要求を受け取る際に使用するユーザー名とパスワードの秘密鍵証明書を追加および削除できます。
+Trust Store の管理ページでは、SOAP レベルのセキュリティで要求を受け取ったときにFormsサービスで使用されるユーザー名とパスワードの資格情報を追加および削除できます。
 
-## ユーザー名とパスワードの秘密鍵証明書の追加 {#add-a-user-name-and-password-credential}
+## ユーザー名とパスワードの資格情報の追加 {#add-a-user-name-and-password-credential}
 
 1. 管理コンソールで、**[!UICONTROL 設定／Trust Store の管理／ユーザーとパスワードの秘密鍵証明書]**&#x200B;をクリックして、「**[!UICONTROL 追加]**」をクリックします。
 1. 「**[!UICONTROL プロファイル名]**」ボックスに、秘密鍵証明書の名前を入力します。

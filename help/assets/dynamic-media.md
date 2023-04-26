@@ -15,15 +15,15 @@ role: Admin,User
 source-git-commit: 2bbc7e2a6b3aa36a7c2803d12ba402a5739c9a5c
 workflow-type: tm+mt
 source-wordcount: '416'
-ht-degree: 90%
+ht-degree: 68%
 
 ---
 
 # Dynamic Media の操作 {#working-with-dynamic-media}
 
-[Dynamic Media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のマスターアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
+[Dynamic Media](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html) は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Mediaでは、一連のマスターアセットを使用して、グローバルで拡張性に優れ、パフォーマンスが最適化されたネットワークを通じて、リッチコンテンツの複数のバリエーションをリアルタイムで生成し、配信します。
 
-ダイナミックメディアは、ズーム、360 度スピン、ビデオなどのインタラクティブな閲覧エクスペリエンスを提供します。ダイナミックメディアは Adobe Experience Manager デジタルアセット管理（AEM アセット）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡易化し、効率化します。
+Dynamic Media は、ズーム、360 度スピン、ビデオなど、インタラクティブな表示エクスペリエンスを提供します。Dynamic Media はAdobe Experience Managerのデジタルアセット管理 (Assets) ソリューションのワークフローを独自に組み込むことで、デジタルキャンペーン管理プロセスを簡素化し、合理化します。
 
 <!-- DEAD ARTICLE >[!NOTE]
 >
@@ -31,9 +31,9 @@ ht-degree: 90%
 
 ## Dynamic Media の機能 {#what-you-can-do-with-dynamic-media}
 
-Dynamic Media では、公開前のアセットを管理できます。一般的なアセットの操作方法については、[デジタルアセットの操作](managing-assets-touch-ui.md)で詳しく説明しています。一般的なトピックには、アセットのアップロード、ダウンロード、編集、公開と、プロパティの表示、編集、アセットの検索が含まれます。
+Dynamic Mediaを使用すると、アセットを公開する前に管理できます。 アセットの一般的な使用方法について詳しくは、 [デジタルアセットの操作](managing-assets-touch-ui.md). 一般的なトピックには、アセットのアップロード、ダウンロード、編集、公開と、プロパティの表示、編集、アセットの検索が含まれます。
 
-Dynamic Media 限定の機能は次のとおりです。
+Dynamic Media のみの機能には次のものが含まれます。
 
 * [カルーセルバナー](carousel-banners.md)
 * [画像セット](image-sets.md)

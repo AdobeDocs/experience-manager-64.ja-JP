@@ -1,7 +1,7 @@
 ---
 title: Dynamic Media でのホットリンク保護の有効化
 seo-title: Activating hotlink protection in Dynamic Media
-description: Dynamic Media でホットリンク保護を有効化する方法について説明します。
+description: Dynamic Mediaでホットリンク保護を有効にする方法に関する情報です。
 seo-description: Information on how to activate hotlink protection in Dynamic Media.
 uuid: 5f93bc27-5edd-4143-8701-87896c52f0af
 contentOwner: Rick Brough
@@ -15,7 +15,7 @@ role: Admin,User
 source-git-commit: a750c5425e33c2a115aab581b71862c1d30cf166
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 81%
+ht-degree: 52%
 
 ---
 
@@ -25,4 +25,4 @@ ht-degree: 81%
 
 [Adobeカスタマーサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja#support) は、CDN レベルでリファラーフィルターを設定し、ドメインに許可された Web サイトにのみDynamic Mediaコンテンツを提供できるようにします。
 
-ホットリンク保護を機能させるには、アドビ製品にバンドルされた CDN を使用する必要があります。ホットリンク保護を有効化するには、Dynamic Media アカウントの設定変更を要求するサポートチケットを管理者が作成する必要があります。ホットリンク保護を有効化するための追加費用は発生しません。
+ホットリンク保護を使用するには、Adobeにバンドルされた CDN を使用する必要があります。 ホットリンク保護を有効にするには、管理者がサポートチケットを作成して、Dynamic Mediaアカウントに対する設定の変更をリクエストする必要があります。 ホットリンク保護を有効にするための追加費用は発生しません。

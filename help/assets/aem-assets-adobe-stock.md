@@ -8,7 +8,7 @@ exl-id: f360abaf-a812-46ed-a160-ff569b6bec1c
 source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
 source-wordcount: '1114'
-ht-degree: 93%
+ht-degree: 90%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 93%
 
 ## 前提条件 {#prerequisites}
 
-この統合を利用するには、[Adobe Stock エンタープライズプラン](https://stockenterprise.adobe.com/jp/)と、最新の Service Pack 2 を展開した 6.4 が必要です。[!DNL Experience Manager]の場合 [!DNL Experience Manager] 6.4 サービスパックの詳細は、次を参照してください [リリースノート](/help/release-notes/sp-release-notes.md).
+統合には、 [エンタープライズAdobe Stockプラン](https://stockenterprise.adobe.com/jp/) および [!DNL Experience Manager] 6.4（少なくとも Service Pack 2 がデプロイされている場合） の場合 [!DNL Experience Manager] 6.4 サービスパックの詳細は、次を参照してください [リリースノート](/help/release-notes/sp-release-notes.md).
 
 ## [!DNL Experience Manager] と [!DNL Adobe Stock] の統合  {#integrate-aem-and-adobe-stock}
 
@@ -33,8 +33,8 @@ ht-degree: 93%
 ### IMS 設定の作成 {#create-an-ims-configuration}
 
 1. [!DNL Experience Manager] ユーザーインターフェイスで、**[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL Adobe IMS 設定]**&#x200B;に移動します。「**[!UICONTROL 作成]**」をクリックし、**[!UICONTROL クラウドソリューション]**／**[!UICONTROL Adobe Stock]** を選択します。
-1. 既存の証明書を再使用するか、「**[!UICONTROL 新しい証明書を作成]**」を選択します。
-1. 「**[!UICONTROL 証明書を作成]**」をクリックします。証明書を作成したら、公開鍵をダウンロードします。「**[!UICONTROL 次へ]**」をクリックします。必要な値をすぐに指定する場合は、[!UICONTROL Adobe IMS テクニカルアカウント設定]画面を開いたままにします。
+1. 既存の証明書を再利用するか、「 」を選択します **[!UICONTROL 新しい証明書を作成]**.
+1. 「**[!UICONTROL 証明書を作成]**」をクリックします。公開鍵を作成したら、ダウンロードします。 「**[!UICONTROL 次へ]**」をクリックします。必要な値をすぐに指定する場合は、[!UICONTROL Adobe IMS テクニカルアカウント設定]画面を開いたままにします。
 1. [アドビ開発者コンソール](https://console.adobe.io)にアクセスします。自身のアカウントに、統合するために必要な、組織の管理者権限があることを確認します。
 1. 「**[!UICONTROL 新しいプロジェクトを作成]**」をクリックし、「**[!UICONTROL API を追加]**」をクリックします。使用可能な API のリストから **[!UICONTROL Adobe Stock]** を選択します。「[!UICONTROL OAUTH 2.0 Web]」を選択します。
 1. 「**[!UICONTROL デフォルトのリダイレクト URI]**」と「**[!UICONTROL リダイレクト URI パターン]**」の値を指定します。「**[!UICONTROL 設定済み API を保存]**」をクリックします。生成された ID と秘密鍵をコピーします。
@@ -48,7 +48,7 @@ ht-degree: 93%
 1. [!DNL Experience Manager] ユーザーインターフェイスで、**[!UICONTROL ツール]**／ **[!UICONTROL Cloud Services]** ／ **[!UICONTROL Adobe Stock]** に移動します。
 1. 「**[!UICONTROL 作成]**」をクリックして設定を作成し、その設定を既存の IMS 設定に関連付けます。環境パラメーターとして「`PROD`」を選択します。
 1. 「**[!UICONTROL ライセンスが必要なアセットのパス]**」フィールドの場所をそのまま残します。この場所を [!DNL Adobe Stock] アセットを保存する場所に変更しないでください。
-1. すべての必須プロパティを追加して作成を完了します。「**[!UICONTROL 保存して閉じる]**」をクリックします。
+1. 必要なプロパティをすべて追加して、作成を完了します。 「**[!UICONTROL 保存して閉じる]**」をクリックします。
 1. アセットのライセンスを取得できる [!DNL Experience Manager] ユーザーまたはグループを追加します。
 
 >[!NOTE]

@@ -13,7 +13,7 @@ exl-id: 8da27ef5-bb61-4246-8a13-96a60188ebbb
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '284'
-ht-degree: 100%
+ht-degree: 84%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 AEM Repo ツールは、FTP に相当するコマンドラインを使用してローカルファイルシステムと AEM サーバーの間で JCR コンテンツを転送するためのシンプルなソリューションです。AEM Repo ツールは、[Jackrabbit FileVault ツール](/help/sites-developing/ht-vlttool.md)に似ていますが、より高速で依存関係が最小限であり、シンプルな bash スクリプトです。
 
-このツールは、開発者によるファイルの転送をシンプルにします。また、IntelliJ および Eclipse と統合して開発をより効率的にできます。
+このツールは、開発者向けのファイルの転送を簡素化し、IntelliJ と Eclipse に統合して開発をより効率的にすることもできます。
 
 ## 概要 {#overview}
 
@@ -31,7 +31,7 @@ AEM Repo ツールは、FTP に相当するコマンドラインを使用して�
 
 >[!CAUTION]
 >
->AEM Repo ツールは、指定したファイル全体またはディレクトリを常に上書きすることに注意してください。
+>AEM Repo Tool は常に、指定されたファイルまたはディレクトリ全体を上書きします。
 
 ## ダウンロードとドキュメント {#download-and-documentation}
 

@@ -8,7 +8,7 @@ exl-id: 637c57ae-55a6-4032-9821-b55839b3e567
 source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
 source-wordcount: '403'
-ht-degree: 67%
+ht-degree: 47%
 
 ---
 
@@ -37,7 +37,7 @@ Adobe Experience Manager Assets でCamera Rawサポートを有効にするに�
 
 1. 「**[!UICONTROL Web に対応した画像]**」タブの&#x200B;**[!UICONTROL リストをスキップ]**&#x200B;フィールドで、`audio/mpeg, video/(.*), image/dng, image/x-raw-(.*)` を指定します。
 
-   ![小児](assets/chlimage_1-335.png)
+   ![chlimage](assets/chlimage_1-335.png)
 
 1. サイドパネルから、 **[!UICONTROL Camera Raw/DNG ハンドラー]** 下のステップ **[!UICONTROL サムネールの作成]** 手順
 
@@ -69,12 +69,12 @@ Adobe Experience Manager Assets でCamera Rawサポートを有効にするに�
 
 *図：画像に軽量な編集を行うには、「 」オプションを使用します*
 
-Camera Raw 画像に対する編集を保存すると、その画像に対して、新しいレンディション「`AdjustedPreview.jpg`」が生成されます。Camera Raw 以外の画像タイプの場合は、変更内容がすべてのレンディションに反映されます。
+編集内容をCamera Rawの画像に保存した後、新しいレンディションが作成されます。 `AdjustedPreview.jpg` が画像用に生成されます。 Camera Raw以外の他の画像タイプの場合、変更はすべてのレンディションに反映されます。
 
-## ベストプラクティス、既知の問題、および制限 {#best-practices}
+## ベストプラクティス、既知の問題および制限事項 {#best-practices}
 
 この機能には次の制限があります。
 
-* この機能は JPEG レンディションのみをサポートします。これは、Windows 64 ビット、Mac OS および RHEL 7.x でサポートされます。
-* メタデータの書き戻しは、RAW および DNG 形式ではサポートされていません。
-* Camera Raw ライブラリには、一度に処理できる合計ピクセルに関する制限があります。現在、最初に検出された条件に応じて、ファイルの長辺で最大 65000 ピクセルまたは 512 MP を処理できます。
+* この機能は JPEG レンディションのみをサポートします。Windows 64 ビット、Mac OS、および RHEL 7.x でサポートされています。
+* RAW および DNG 形式では、メタデータの書き戻しはサポートされていません。
+* Camera Rawのライブラリには、一度に処理できるピクセルの合計数に関する制限があります。 現在、最初に検出された条件に応じて、ファイルの長辺で最大 65000 ピクセルまたは 512 MP を処理できます。

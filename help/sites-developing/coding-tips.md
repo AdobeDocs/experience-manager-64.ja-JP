@@ -1,7 +1,7 @@
 ---
 title: コーディングのヒント
 seo-title: Coding Tips
-description: AEM のコーディングのヒント
+description: AEMのコーディングに関するヒント
 seo-description: Tips for coding for AEM
 uuid: 1bb1cc6a-3606-4ef4-a8dd-7c08a7cf5189
 contentOwner: User
@@ -13,13 +13,13 @@ exl-id: edc06f41-d0ee-45b0-b2f9-a8fa80e6a8d2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '867'
-ht-degree: 100%
+ht-degree: 83%
 
 ---
 
 # コーディングのヒント{#coding-tips}
 
-## 可能な限り taglib または HTL を使用する {#use-taglibs-or-htl-as-much-as-possible}
+## 可能な限り taglibs または HTL を使用 {#use-taglibs-or-htl-as-much-as-possible}
 
 スクリプトレットを JSP に含めると、コード内の問題のデバッグが難しくなります。さらに、スクリプトレットを JSP に含めると、ビジネスロジックを表示レイヤーから切り離すことが難しくなり、単一責任の原則および MVC 設計パターンに違反することになります。
 
@@ -38,10 +38,10 @@ AEM のコードベースでは、次のような規則が使用されます。
 * インターフェイスの複数の実装には `<Variant><Interface>` という名前を付けます（`JcrReader` や `FileSystemReader` など）。
 * 抽象ベースクラスには `Abstract<Interface>` または `Abstract<Variant><Interface>` という名前を付けます。
 * パッケージには `com.adobe.product.module` という名前を付けます。それぞれの Maven アーティファクトまたは OSGi バンドルには独自のパッケージが必要です。
-* Java 実装は、その API の下の impl パッケージに配置します。
+* Java の実装は、API の下の impl パッケージに配置されます。
 
 
-これらの規則を必ずお客様の実装に適用しなければならないというわけではありませんが、コードをメンテナンスしやすい状態に維持できるように、規則を定義してそれに準拠することが重要です。
+これらの規則は、必ずしもお客様の実装に適用する必要はありませんが、コードを維持できるように、規則を定義し、それに従うことが重要です。
 
 名前を見れば、その目的が明らかになるようにすることが理想的です。名前が明確さに欠けるかどうかを判断するための一般的なコードテストは、変数やメソッドの目的を説明するコメントの有無です。
 
@@ -52,17 +52,17 @@ AEM のコードベースでは、次のような規則が使用されます。
    <td><p><strong>明確</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>int d; //elapsed time in days</p> </td> 
+   <td><p>int d;//経過時間（日数）</p> </td> 
    <td><p>int elapsedTimeInDays;</p> </td> 
   </tr> 
   <tr> 
-   <td><p>//get tagged images<br /> public List getItems() {}</p> </td> 
+   <td><p>//タグ付き画像を取得<br /> public List getItems() {}</p> </td> 
    <td><p>public List getTaggedImages() {}</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-### 繰り返しを避ける  {#don-t-repeat-yourself}
+### 繰り返しをしない  {#don-t-repeat-yourself}
 
 DRY（Don&#39;t repeat yourself）は、同じコードセットを繰り返してはならないということです。これは、文字列リテラルなどにも該当します。コードが重複していると、変更が必要な箇所を探し出して削除しなければならない場合に不具合が生じる可能性があります。
 
@@ -78,9 +78,9 @@ API が廃止された場合は常に、廃止された API を使用するの�
 
 作成者によって指定されない文字列は、JSP/Java の *I18n.get()* および JavaScript の *CQ.I18n.get()* を使用して AEM の i18n ディクショナリへの呼び出しでラップする必要があります。実装が見つからなかった場合、この実装は渡された文字列を返すので、プライマリ言語で機能を実装した後でローカリゼーションを柔軟に実装できます。
 
-### 安全のためにリソースパスをエスケープする {#escape-resource-paths-for-safety}
+### 安全のためのリソースパスのエスケープ {#escape-resource-paths-for-safety}
 
-JCR のパスにスペースを使用することはできませんが、スペースが使用されていても、コードが中断しないようにする必要があります。Jackrabbit では、*escape()* および *escapePath()* メソッドを含む Text ユーティリティクラスを提供しています。JSP については、Granite UI が *granite:encodeURIPath() EL* 関数を公開しています。
+JCR 内のパスにスペースを含めることはできませんが、スペースが含まれていると、コードが壊れないようにする必要があります。 Jackrabbit では、*escape()* および *escapePath()* メソッドを含む Text ユーティリティクラスを提供しています。JSP については、Granite UI が *granite:encodeURIPath() EL* 関数を公開しています。
 
 ### XSS API や HTL を使用して、クロスサイトスクリプティング攻撃を防ぐ {#use-the-xss-api-and-or-htl-to-protect-against-cross-site-scripting-attacks}
 
@@ -92,12 +92,12 @@ Java コードについては、AEM では、メッセージをログに記録�
 
 * ERROR：コードが中断され、処理を続行できない場合。これは多くの場合、予期しない例外の結果として発生します。通常は、これらのシナリオにスタックトレースを含めると役立ちます。
 * WARN：正しく動作していない部分があるが、処理は続行できる場合。これは多くの場合、*PathNotFoundException* など、予期された例外の結果です。
-* INFO：システムを監視する際に役立つ情報。これがデフォルトであり、ほとんどのお客様の環境でこの設定がそのまま使用されることに留意してください。したがって、あまり使用しないでください。
-* DEBUG：処理に関するより詳細な情報。サポートを受けながら問題をデバッグする際に役立ちます。
-* TRACE：メソッドの開始／終了など、最も詳細な情報。これは通常、開発者のみが使用します。
+* INFO：システムを監視する際に役立つ情報。これがデフォルトであり、ほとんどのお客様の環境でこの設定がそのまま使用されることに留意してください。したがって、過度に使用しないでください。
+* デバッグ：処理に関する低レベルの情報。 サポートに関する問題をデバッグする際に役立ちます。
+* TRACE:最下位レベルの情報（開始/終了メソッドなど）。 これは通常、開発者のみが使用します。
 
 JavaScript の場合は、開発時にのみ console.log を使用し、リリース前にすべてのログステートメントを削除する必要があります&#x200B;*。*
 
-### カーゴカルトプログラミングを避ける {#avoid-cargo-cult-programming}
+### カーゴカルトプログラミングの回避 {#avoid-cargo-cult-programming}
 
 内容を理解せずに、コードをコピーしないでください。確信がないときには必ず、明確でないモジュールや API の経験が豊富な人物に確認するのが最善です。

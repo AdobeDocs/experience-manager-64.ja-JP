@@ -1,7 +1,7 @@
 ---
 title: Communities 用の推奨トポロジ
 seo-title: Recommended Topologies for Communities
-description: ユーザー生成コンテンツ（UGC）の処理への取り組み方
+description: ユーザー生成コンテンツ (UGC) の処理に近づく方法
 seo-description: How to approach the handling of user-generated content (UGC)
 uuid: 4bc1c423-0ba9-4f2e-b11c-4d6824f45641
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: 0bdb3063-7333-487b-947f-3fe29c6a6eef
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '549'
-ht-degree: 44%
+ht-degree: 10%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 44%
 
 AEM Communities 6.1 以降では、サイト訪問者（メンバー）がパブリッシュ環境から送信したユーザー生成コンテンツ (UGC) を処理するための独自のアプローチが採用されています。
 
-この手法は、一般的にオーサー環境から管理されるサイトコンテンツを AEM プラットフォームで処理する方法とは根本的に異なります。
+この方法は、通常オーサー環境から管理されるサイトコンテンツをAEMプラットフォームが処理する方法とは根本的に異なります。
 
-AEM プラットフォームではオーサー環境からパブリッシュ環境にサイトコンテンツをレプリケートするノードストアを使用し、AEM Communities では UGC のために単一の共通ストアを使用します。UGC はレプリケートされません。
+AEMプラットフォームは、オーサーからパブリッシュにサイトコンテンツをレプリケートするノードストアを使用します。一方、AEM Communitiesは、レプリケートされない UGC に対して、単一の共通ストアを使用します。
 
-共通の UGC ストアの場合は、[ストレージリソースプロバイダー（SRP）](working-with-srp.md)を選択する必要があります。推奨される選択肢は次のとおりです。
+共通の UGC ストアの場合は、 [ストレージリソースプロバイダー (SRP)](working-with-srp.md). 推奨される選択肢は次のとおりです。
 
 * [DSRP - リレーショナルデータベースストレージリソースプロバイダー](dsrp.md)
 * [MSRP - MongoDB ストレージリソースプロバイダー](msrp.md)
@@ -33,29 +33,29 @@ AEM プラットフォームではオーサー環境からパブリッシュ環�
 
 もう 1 つの SRP オプション [JSRP - JCR ストレージリソースプロバイダー](jsrp.md)は、オーサー環境とパブリッシュ環境の両方にアクセスするための共通の UGC ストアをサポートしていません。
 
-共通ストアが必要な場合は、次のトポロジが推奨されます。
+共通のストアが必要な場合は、次の推奨トポロジが必要になります。
 
 >[!NOTE]
 >
 >AEM Communities、 [UGC はレプリケートされません](working-with-srp.md#ugc-never-replicated).
 >
->デプロイメントに[共通ストア](working-with-srp.md)がない場合、UGC は入力された AEM パブリッシュインスタンスまたはオーサーインスタンスのいずれかにのみ表示されます。
+>デプロイメントに [共通店](working-with-srp.md)に設定されている場合、UGC は、入力されたAEMパブリッシュインスタンスまたはオーサーインスタンスでのみ表示されます。
 
 >[!NOTE]
 >
->AEM プラットフォームについて詳しくは、[推奨されるデプロイメント](../../help/sites-deploying/recommended-deploys.md)と[AEM プラットフォームの概要](../../help/sites-deploying/data-store-config.md)を参照してください。
+>AEMプラットフォームについて詳しくは、 [推奨されるデプロイメント](../../help/sites-deploying/recommended-deploys.md) および [AEM Platform の概要](../../help/sites-deploying/data-store-config.md).
 
-## 実稼動について {#for-production}
+## 実稼動用 {#for-production}
 
 UGC の共通ストアの確立は不可欠です。したがって、基になるデプロイメントは、共通ストアをサポートする能力に依存します。
 
-2 つの例を示します。
+次の 2 つの例を示します。
 
 1) 予想される UGC の量が多く、ローカルの MongoDB インスタンスが可能な場合は、次の選択肢が選択されます [MSRP](msrp.md).
 
 2) ページコンテンツの最適なパフォーマンスを得るには、 [パブリッシュファーム](../../help/sites-deploying/recommended-deploys.md#tarmk-farm) および [ASRP](asrp.md) は、比較的簡単な操作で UGC の最適なスケーリングを提供します。
 
-どちらの場合も、任意の OAK マイクロカーネルを基にデプロイできます。
+どちらの場合も、任意の OAK マイクロカーネルに基づいたデプロイメントを行うことができます。
 
 適切な共通ストアを選択するには、固有の [特性](working-with-srp.md#characteristics-of-srp-options) 各
 
@@ -63,28 +63,28 @@ Oak マイクロカーネルの詳細については、 [推奨されるデプ�
 
 ### TarMK パブリッシュファーム {#tarmk-publish-farm}
 
-次に、トポロジがパブリッシュファームの場合に重要な関連トピックを示します。
+トポロジがパブリッシュファームの場合、重要な関連トピックは次のとおりです。
 
 * [ユーザー同期](sync.md)
 * [ユーザーとユーザーグループの管理](users.md)
 
-### 推奨：DSRP、MSRP または ASRP {#recommended-dsrp-msrp-or-asrp}
+### 推奨：DSRP、MSRP、ASRP {#recommended-dsrp-msrp-or-asrp}
 
-| マイクロカーネル | サイト CONTENTREPOSITORY | ユーザー生成コンテンツリポジトリ | ストレージリソースプロバイダー | 共通ストア |
+| MicroKernel | サイト CONTENTREPOSITORY | ユーザー生成コンテンツリポジトリ | ストレージリソースプロバイダ | 共通ストア |
 |-------------|------------------------|----------------------------------|---------------------------|---------------|
-| 任意 | JCR | MySQL | DSRP | はい |
-| 任意 | JCR | MongoDB | MSRP | はい |
-| 任意 | JCR | Adobeオンデマンドストレージ | ASRP | はい |
+| いずれか | JCR | MySQL | DSRP | はい |
+| いずれか | JCR | MongoDB | MSRP | はい |
+| いずれか | JCR | Adobeオンデマンドストレージ | ASRP | はい |
 
 ### JSRP {#jsrp}
 
 
-| デプロイメント | サイト CONTENTREPOSITORY | ユーザー生成コンテンツリポジトリ | ストレージリソースプロバイダー | 共通ストア |
+| デプロイメント | サイト CONTENTREPOSITORY | ユーザー生成コンテンツリポジトリ | ストレージリソースプロバイダ | 共通ストア |
 |----------------------|------------------------|----------------------------------|---------------------------|---------------------------------|
 | TarMK ファーム（デフォルト） | JCR | JCR | JSRP | いいえ |
-| Oak クラスター | JCR | JCR | JSRP | 「はい（パブリッシュ環境のみ）」 |
+| Oak クラスタ | JCR | JCR | JSRP | 「はい（パブリッシュ環境のみ）」 |
 
-## 開発について {#for-development}
+## 開発用 {#for-development}
 
 非実稼動環境の場合、 [JSRP](jsrp.md) は、1 つのオーサーインスタンスと 1 つのパブリッシュインスタンスを使用して開発環境を簡単に設定できるようにします。
 

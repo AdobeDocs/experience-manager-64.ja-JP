@@ -8,7 +8,7 @@ exl-id: ed01143c-b516-44f8-aceb-ad2e3f0106b2
 source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
 source-wordcount: '319'
-ht-degree: 77%
+ht-degree: 64%
 
 ---
 
@@ -31,10 +31,10 @@ Adobe Experience Manager Assets では、画像に電子透かしを追加して
    >
    >[!UICONTROL 透かしを追加]手順は、[!UICONTROL サムネールを処理]手順の前の任意の位置に配置します。
 
-1. 「**[!UICONTROL 透かしを追加]**」ステップを開いて、プロパティを表示します。
-1. 「**[!UICONTROL 引数]**」タブで、各種フィールド（テキスト、フォントタイプ、サイズ、カラー、位置、向きなど）に有効な値を指定します。変更を確定するには、「**[!UICONTROL 完了]**」をクリックしてください。
+1. を開きます。 **[!UICONTROL 透かしを追加]** ステップを使用してプロパティを表示します。
+1. 内 **[!UICONTROL 引数]** 「 」タブで、各種フィールドに有効な値（テキスト、フォントタイプ、サイズ、色、位置、向きなど）を指定します。 変更を確定するには、「**[!UICONTROL 完了]**」をクリックしてください。
 
-   ![Assets における「透かしを追加」ステップの引数の指定](assets/arguments_add_watermark_aem_assets.png)
+   ![Assets の透かしを追加ステップで引数を指定します。](assets/arguments_add_watermark_aem_assets.png)
 
 1. 透かしステップを追加した **[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローを保存します。
 1. [!DNL Experience Manager] ユーザーインターフェイスから、サンプルアセットをアップロードします。透かしは、フォントサイズ、色などと共に、上記の手順で設定した位置に表示されます。

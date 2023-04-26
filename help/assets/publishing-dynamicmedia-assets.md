@@ -11,7 +11,7 @@ role: User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '409'
-ht-degree: 97%
+ht-degree: 68%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 97%
 
 [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)も参照してください。
 
-[Web ページへのビデオビューアの埋め込み](embed-code.md)も参照してください。
+関連トピック [Web ページへのビデオビューアの埋め込み。](embed-code.md)
 
 >[!NOTE]
 >
@@ -40,10 +40,10 @@ ht-degree: 97%
 >
 
 
-一連のアセットを公開する方法について詳しくは、[アセットの公開](managing-assets-touch-ui.md)を参照してください。
+セットまたはアセットの公開について詳しくは、 [アセットを公開します。](managing-assets-touch-ui.md)
 
 ## Dynamic Media アセットの HTTP/2 配信 {#http-delivery-of-dynamic-media-assets}
 
-AEM は現在、HTTP/2 上でのすべての Dynamic Media コンテンツ（画像とビデオ）の配信をサポートしています。つまり、画像やビデオの公開済み URL や埋め込みコードは、ホストされるアセットを受け取るアプリケーションとの統合に使用できます。その公開済みアセットは、その後、HTTP/2 プロトコルで配信されます。この配信方法により、ブラウザーとサーバーの通信が向上し、すべての Dynamic Media アセットの応答時間と読み込み時間が短くなります。
+AEMは、HTTP/2 経由でのすべてのDynamic Mediaコンテンツ（画像とビデオ）の配信をサポートするようになりました。 つまり、画像やビデオの公開済み URL または埋め込みコードを、ホストされているアセットを受け入れる任意のアプリケーションと統合できるようになります。 その公開済みアセットは、HTTP/2 プロトコルを使用して配信されます。 この配信方法を使用すると、ブラウザーとサーバーの通信方法が改善され、すべてのDynamic Mediaアセットの応答時間と読み込み時間が向上します。
 
 詳しくは、[コンテンツの HTTP/2 配信に関する FAQ](/help/sites-administering/scene7-http2faq.md) を参照してください。

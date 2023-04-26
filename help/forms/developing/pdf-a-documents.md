@@ -280,7 +280,7 @@ Java API を使用して PDF/A の準拠を判断します。
 
    * コンストラクターを使用して `PDFAValidationOptionSpec` オブジェクトを作成します。
    * `PDFAValidationOptionSpec` オブジェクトの `setCompliance` メソッドを呼び出し、`PDFAValidationOptionSpec.Compliance.PDFA_1B` を渡して、準拠レベルを設定します。
-   * `PDFAValidationOptionSpec` オブジェクトの `setLogLevel` メソッドを呼び出し、トラッキングレベルを指定する文字列値を渡して、情報トラッキングレベルを指定します。例えば、値 `FINE` を渡します。様々な値について詳しくは、 [AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `setLogLevel` メソッドを参照してください。
+   * `PDFAValidationOptionSpec` オブジェクトの `setLogLevel` メソッドを呼び出し、トラッキングレベルを指定する文字列値を渡して、情報トラッキングレベルを指定します。例えば、値 `FINE` を渡します。様々な値について詳しくは、 [AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `setLogLevel` メソッドを参照してください。
 
 1. PDF ドキュメントに関する情報を取得
 

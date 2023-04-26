@@ -15,13 +15,13 @@ exl-id: fa543e13-f920-4b77-9762-36f115261e8c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1645'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
 # 暗号化された PDF ドキュメントのアセンブリ {#assembling-encrypted-pdf-documents}
 
-Assembler サービスを使用して、PDF ドキュメントをパスワードで暗号化できます。PDF ドキュメントがパスワードを使用して暗号化されている場合、Adobe Reader または Acrobat で PDF ドキュメントを表示するには、パスワードを指定する必要があります。パスワードを使用して PDF ドキュメントを暗号化するには、PDF ドキュメントの暗号化に必要な暗号化要素の値を DDX ドキュメントに含める必要があります。
+Assembler サービスを使用して、PDF ドキュメントをパスワードで暗号化できます。PDFドキュメントがパスワードで暗号化された後、ユーザーは、Adobe ReaderまたはAcrobatでPDFドキュメントを表示するために、パスワードを指定する必要があります。 PDFドキュメントをPDFで暗号化するには、パスワードドキュメントの暗号化に必要な暗号化要素の値が DDX ドキュメントに含まれている必要があります。
 
 この説明では、次の DDX ドキュメントが使用されていると仮定します。
 

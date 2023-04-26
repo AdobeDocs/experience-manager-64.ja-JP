@@ -9,13 +9,13 @@ exl-id: 537f6fe5-011b-4d4a-ac71-71708fd72b85
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '324'
-ht-degree: 100%
+ht-degree: 92%
 
 ---
 
 # AEM コミュニティ {#the-aem-community}
 
-## AEM コミュニティとは {#what-is}
+## AEMコミュニティとは {#what-is}
 
 AEM コミュニティには世界中の何千ものメンバーが参加しています。メンバーは、Experience Manager を初めて利用する人から熟練したエキスパート開発者や管理者まで、多岐にわたります。ここでは、AEM 機能に関する質問から開発に関する質問まで対応します。内外のエキスパートユーザーとともに定期的なエキスパートセッションを開催して、サンプル、記事、チュートリアルの作成を支援しています。
 

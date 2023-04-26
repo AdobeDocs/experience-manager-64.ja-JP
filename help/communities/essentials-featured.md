@@ -1,7 +1,7 @@
 ---
 title: おすすめコンテンツの基本事項
 seo-title: Featured Content Essentials
-description: おすすめコンテンツの使用
+description: フィーチャコンテンツの操作
 seo-description: Working with feature content
 uuid: b376828a-1431-4d16-ad6b-b23a3ea62a75
 contentOwner: User
@@ -13,15 +13,15 @@ exl-id: 4805db0f-18d2-4bbc-a4d6-eaafa7a4c152
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '106'
-ht-degree: 83%
+ht-degree: 12%
 
 ---
 
 # おすすめコンテンツの基本事項 {#featured-content-essentials}
 
-このページでは、おすすめコンテンツを使用するための基本的な情報について説明します。
+このページでは、おすすめコンテンツを扱う際に必要な情報を紹介します。
 
-フォーラム上部への投稿のピン留めとは異なり、この機能では、コミュニティサイト内のすべての場所でコンテンツを強調表示できます。
+フォーラムの上部に投稿を固定するのとは異なり、この機能を使用すると、コミュニティサイト内の任意の場所でコンテンツをハイライト表示できます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -32,7 +32,7 @@ ht-degree: 83%
    <td>social/commons/components/hbs/featuredcontent</td> 
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td> 
    <td>いいえ</td> 
   </tr>
   <tr>

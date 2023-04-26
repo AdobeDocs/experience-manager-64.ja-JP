@@ -1,7 +1,7 @@
 ---
 title: ContextHub ストア候補のサンプル
 seo-title: Sample ContextHub Store Candidates
-description: ContextHub には、ソリューションで利用できるサンプルストア候補がいくつか用意されています
+description: ContextHub には、ソリューションで使用できるサンプルストア候補がいくつか用意されています
 seo-description: ContextHub provides several sample store candidates that you can use in your solutions
 uuid: feccd813-6077-4e87-a96e-d451114e5527
 contentOwner: User
@@ -13,17 +13,17 @@ exl-id: 776ceb9f-f835-4dbb-9100-f456a36b6dcd
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 100%
+ht-degree: 68%
 
 ---
 
 # ContextHub ストア候補のサンプル{#sample-contexthub-store-candidates}
 
-ContextHub には、ソリューションで利用できるサンプルストア候補がいくつか用意されています。各サンプルでは次の情報が提供されます。
+ContextHub には、ソリューションで使用できるサンプルストア候補がいくつか用意されています。 各サンプルについて、次の情報が提供されます。
 
-* 学習用に参照できるソースコードの場所。
+* 学習目的で開くことのできるソースコードの場所。
 * ストア候補から作成するストアの設定方法。
-* アクセスするためのストアデータの構造。
+* ストアデータの構造は、アクセスできるようにする方法です。
 
 >[!WARNING]
 >
@@ -31,7 +31,7 @@ ContextHub には、ソリューションで利用できるサンプルストア
 
 ## aem.segmentation サンプルストア候補 {#aem-segmentation-sample-store-candidate}
 
-解決済みおよび未解決の ContextHub セグメント用のストア。ContextHub SegmentManager からセグメントを自動的に取得します.
+解決された ContextHub セグメントと未解決の ContextHub セグメントを保存します。 ContextHub SegmentManager からセグメントを自動的に取得します.
 
 ### ソースの場所 {#source-location-segmentation}
 
@@ -43,7 +43,7 @@ aem.segmentation ストア候補は、[`ContextHub.Store.PersistedJSONPStore`](/
 
 ### 設定 {#configuration-segmentation}
 
-aem.segmentation ストアを作成する場合、詳細な設定をする必要はありません。デフォルトの設定によって、ContextHub セグメント定義の場所が指定されます。
+aem.segmentation ストアを作成する場合、詳細な設定をする必要はありません。 デフォルトの設定によって、ContextHub セグメント定義の場所が指定されます。
 
 ```xml
 {
@@ -57,7 +57,7 @@ aem.segmentation ストアを作成する場合、詳細な設定をする必要
 
 ## contexthub.geolocation サンプルストア候補 {#contexthub-geolocation-sample-store-candidate}
 
-contexthub.geolocation サンプルストア候補は、Google マップを使用して、クライアントの位置に関する情報を取得し、格納します。
+contexthub.geolocation サンプルストア候補は、Googleマップを使用して、クライアントの場所に関する情報を取得し、格納します。
 
 ### ソースの場所 {#source-location-geolocation}
 
@@ -241,7 +241,7 @@ contexthub.geolocation ストア候補は、[`ContextHub.Store.PersistedStore`](
 
 ### データ項目 {#data-items-emulators}
 
-このストアのデータツリーは、次の例のようになります。
+ストアのデータツリーは、次の例のようになります。
 
 ```xml
 {
@@ -327,7 +327,7 @@ contexthub.datetime ストア候補は、[`ContextHub.Store.PersistedJSONPStore`
 
 ### 設定 {#configuration-profile}
 
-次のデフォルトの設定を使用します。この設定は変更しないでください。
+次のデフォルト設定が使用されます。 この設定は変更しないでください。
 
 ```xml
 {

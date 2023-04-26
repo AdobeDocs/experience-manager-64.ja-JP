@@ -1,7 +1,7 @@
 ---
 title: ドラフトおよび送信データサービスのカスタマイズ
 seo-title: Customizing Draft and Submission data services
-description: デフォルトでは、AEM Forms はドラフトと送信済みのアダプティブフォームをパブリッシュインスタンスのデフォルトのノードに保存します。ただし、AEM Forms のドラフトと送信データサービスを設定することにより、ドラフトおよび送信済みアダプティブフォームのストレージをカスタマイズできます。
+description: AEM Formsはデフォルトで、ドラフトと送信済みのアダプティブフォームをパブリッシュインスタンスのデフォルトのノードに保存します。 ただし、AEM Formsのドラフトと送信データサービスを設定して、ドラフトと送信済みのアダプティブフォームのストレージをカスタマイズすることはできます。
 seo-description: AEM Forms, by default, stores draft and submitted adaptive forms in a default node on the Publish instance. However, you can configure the draft and submission data services of AEM Forms to customize the storage of draft and submitted adaptive forms.
 uuid: c3ec1708-3b11-4142-93f0-1cffb6643f34
 content-type: reference
@@ -12,7 +12,7 @@ exl-id: c6243a1f-8f8f-48dc-af3b-b165f451ce73
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '276'
-ht-degree: 100%
+ht-degree: 55%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-AEM Forms ではアダプティブフォームをドラフトとして保存できます。ドラフト機能により、ユーザーは作業中のフォームを維持することができます。これにより、ユーザーはデバイスを問わずいつでもフォームに記入および送信できます。
+AEM Formsを使用すると、アダプティブフォームをドラフトとして保存できます。 ドラフト機能を使用すると、ユーザーは作業中のフォームを維持できます。 その後、ユーザーは任意のデバイスからいつでもフォームに入力して送信できます。
 
 デフォルトでは、AEM Forms はドラフトと送信に関連付けられたユーザーデータを `/content/forms/fp` ノードのパブリッシュインスタンスに保存します。
 
-ただし、AEM Forms ポータルコンポーネントは、ドラフトおよび送信用のユーザーデータの保存の実装をカスタマイズするデータサービスを提供します。例えば、組織に現在実装されているデータストアにデータを保存することができます。
+ただし、AEM Formsポータルコンポーネントは、ドラフトと送信用のユーザーデータの保存の実装をカスタマイズできるデータサービスを提供します。 例えば、組織に現在実装されているデータストアにデータを保存することができます。
 
-ユーザーデータのストレージをカスタマイズするには、[ドラフトデータ](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p)および[送信データ](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p)サービスを参照してください。
+ユーザーデータのストレージをカスタマイズするには、 [下書きデータ](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p) および [送信データ](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p) サービス。
 
 ## 前提条件 {#prerequisites}
 

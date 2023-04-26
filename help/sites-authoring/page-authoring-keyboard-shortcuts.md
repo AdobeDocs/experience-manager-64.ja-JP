@@ -13,17 +13,17 @@ exl-id: 15734120-16b2-4c51-a387-d3d4508eb0b7
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '221'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 
 # ページ編集時のキーボードショートカット{#keyboard-shortcuts-when-editing-pages}
 
-AEM 全体で様々なキーボードショートカットを利用できます。キーボードショートカットは、ページの編集時や、[コンソールの使用](/help/sites-authoring/keyboard-shortcuts.md)に適用されます。
+AEM 全体で様々なキーボードショートカットを利用できます。ページの編集時に適用されるものと、 [コンソールの使用](/help/sites-authoring/keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->AEM キーボードショートカットに必要な[修飾子キー](/help/sites-authoring/page-authoring-keyboard-shortcuts.md#os-specific-modifier-keys)は、オペレーティングシステムによって異なります。
+>AEM キーボードショートカットに必要な[修飾キー](/help/sites-authoring/page-authoring-keyboard-shortcuts.md#os-specific-modifier-keys)は、オペレーティングシステムによって異なります。
 
 ## キーボードショートカットの編集 {#editing-keyboard-shortcuts}
 

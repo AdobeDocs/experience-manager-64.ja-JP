@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームからフォームデータモデルサービスを呼び出すための API
 seo-title: API to invoke form data model service from adaptive forms
-description: アダプティブフォームフィールド内から WSDL で記述された、Web サービスを呼び出す API について説明します。
+description: アダプティブフォームフィールド内から WSDL で記述された Web サービスを呼び出すために使用できる invokeWebServices API について説明します。
 seo-description: Explains the invokeWebServices API that you can use to invoke web services written in WSDL from within an adaptive form field.
 uuid: 40561086-e69d-4e6a-9543-1eb2f54cd836
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
@@ -12,7 +12,7 @@ exl-id: 0653b0e4-a697-472a-8093-5ed48ede3c75
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '351'
-ht-degree: 91%
+ht-degree: 55%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 91%
 
 ## 概要 {#overview}
 
-AEM Forms を使用すると、アダプティブフォームフィールド内からフォームデータモデルで構成されたサービスを呼び出すことで、フォーム作成者はフォームへの記入作業を簡略化および強化することができます。データモデルサービスを呼び出すには、ビジュアルエディターでルールを作成するか、[ルールエディター](/help/forms/using/rule-editor.md)のコードエディターの `guidelib.dataIntegrationUtils.executeOperation` API を使用して JavaScript を指定します。
+AEM Formsを使用すると、フォーム作成者は、フォームデータモデルで設定されたサービスをアダプティブフォームフィールド内から呼び出すことで、フォームの入力操作をさらに簡素化し、強化することができます。 データモデルサービスを呼び出すには、ビジュアルエディターでルールを作成するか、[ルールエディター](/help/forms/using/rule-editor.md)のコードエディターの `guidelib.dataIntegrationUtils.executeOperation` API を使用して JavaScript を指定します。
 
 このドキュメントでは、`guidelib.dataIntegrationUtils.executeOperation` API を使用して JavaScript を記述してサービスを呼び出す方法に焦点を当てています。
 
@@ -32,7 +32,7 @@ AEM Forms を使用すると、アダプティブフォームフィールド内�
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 ```
 
-この API には以下のパラメーターが必要です。
+API には次のパラメーターが必要です。
 
 | パラメーター | 説明 |
 |---|---|
@@ -40,7 +40,7 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 | `inputs` | サービス操作に値が入力されるフォームオブジェクトを指定する構造 |
 | `outputs` | サービス操作によって返される値を使用して入力されるフォームオブジェクトを指定する構造 |
 
-`guidelib.dataIntegrationUtils.executeOperation` API の構造は、サービス操作の詳細を指定します。この構造の構文は以下のとおりです。
+`guidelib.dataIntegrationUtils.executeOperation` API の構造は、サービス操作の詳細を指定します。構造の構文は次のとおりです。
 
 ```
 var operationInfo = {
@@ -58,7 +58,7 @@ outputFieldN
 }
 ```
 
-API 構造は、サービス操作の以下の詳細を指定します。
+API 構造では、サービス操作に関する次の詳細を指定します。
 
 <table> 
  <tbody> 
@@ -68,19 +68,19 @@ API 構造は、サービス操作の以下の詳細を指定します。
   </tr> 
   <tr> 
    <td><code>forDataModelId</code></td> 
-   <td>フォームデータモデルへのリポジトリパスをその名前も含めて指定する</td> 
+   <td>名前を含むフォームデータモデルのリポジトリパスを指定します</td> 
   </tr> 
   <tr> 
    <td><code>operationName</code></td> 
-   <td>実行するサービス操作の名前を指定する</td> 
+   <td>実行するサービス操作の名前を指定します</td> 
   </tr> 
   <tr> 
    <td><code>input</code></td> 
-   <td>1 つ以上のフォームオブジェクトをサービス操作の入力引数にマップする</td> 
+   <td>1 つ以上のフォームオブジェクトをサービス操作の入力引数にマッピングする</td> 
   </tr> 
   <tr> 
    <td>出力</td> 
-   <td>1 つ以上のフォームオブジェクトをサービス操作からの出力値にマップしてフォームフィールドを埋め込む<br /> </td> 
+   <td>1 つ以上のフォームオブジェクトをサービス操作からの出力値にマップして、フォームフィールドに入力します<br /> </td> 
   </tr> 
  </tbody> 
 </table>

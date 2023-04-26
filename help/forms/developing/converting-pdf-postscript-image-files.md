@@ -14,7 +14,7 @@ exl-id: 4afed537-1694-4187-8968-608f49116c2e
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2795'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 **Convert PDF サービスについて**
 
-Convert PDF サービスは、PDF ドキュメントを PostScript および多数の画像形式（JPEG、JPEG 2000、PNG および TIFF）に変換します。PDF ドキュメントの PostScript への変換は、PostScript プリンターでの無人のサーバーベース印刷に便利です。PDF ドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDF ドキュメントをマルチページ TIFF ファイルに変換する方法が実用的です。
+Convert PDF サービスは、PDF ドキュメントを PostScript および多数の画像形式（JPEG、JPEG 2000、PNG および TIFF）に変換します。PDFドキュメントを PostScript に変換すると、PostScript プリンターでの無人サーバーベースの印刷に便利です。 PDFドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDFドキュメントを複数ページTIFFファイルに変換すると便利です。
 
 Convert PDF サービスを使用して、以下のタスクを実行できます。
 
@@ -119,7 +119,7 @@ Convert PDF サービス API（Java）を使用して、PDF ドキュメント�
 1. 変換の実行時オプションを設定します。
 
    * コンストラクターを呼び出して `ToPSOptionsSpec` オブジェクトを作成します。
-   * `ToPSOptionsSpec` オブジェクトに属する適切なメソッドを呼び出して、実行時オプションを設定します。例えば、作成される PostScript レベルを定義するには、 `ToPSOptionsSpec` オブジェクトの `setPsLevel` メソッドを呼び出して、 PostScript レベルを指定する `PSLevel` 列挙値を渡します。設定できるすべての実行時の値について詳しくは、 [AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `ToPSOptionsSpec` クラスリファレンスを参照してください。
+   * `ToPSOptionsSpec` オブジェクトに属する適切なメソッドを呼び出して、実行時オプションを設定します。例えば、作成される PostScript レベルを定義するには、 `ToPSOptionsSpec` オブジェクトの `setPsLevel` メソッドを呼び出して、 PostScript レベルを指定する `PSLevel` 列挙値を渡します。設定できるすべての実行時の値について詳しくは、 [AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `ToPSOptionsSpec` クラスリファレンスを参照してください。
 
 1. PDF ドキュメントを PostScript ファイルに変換します。
 
@@ -242,7 +242,7 @@ PDF ドキュメントをサポートされている任意のタイプに変換�
 
 **実行時オプションを設定**
 
-画像形式や解像度の値など、実行時オプションを設定する必要があります。実行時の値について詳しくは、[AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `ToImageOptionsSpec` のクラス参照を参照してください。
+画像形式や解像度の値など、実行時オプションを設定する必要があります。実行時の値について詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `ToImageOptionsSpec` のクラス参照を参照してください。
 
 **PDF を画像に変換**
 

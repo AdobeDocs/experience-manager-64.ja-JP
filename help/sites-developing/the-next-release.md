@@ -1,7 +1,7 @@
 ---
 title: 次期リリース
 seo-title: The next release...
-description: 次期リリースがほぼ常に予定され、現行の実装の最終段階に開始されることもあります
+description: 後続のリリースはほぼ常に予想され、現在の実装の最終段階で開始することもできます。
 seo-description: A subsequent release is nearly always foreseen, and can even start during the final stages of the current implementation
 uuid: 6ae213fb-1bd3-464c-bfd0-14ddceaee11e
 contentOwner: Guillaume Carlino
@@ -13,19 +13,19 @@ exl-id: 706ffc8b-3004-4413-aeb5-d97c0da78040
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '151'
-ht-degree: 100%
+ht-degree: 48%
 
 ---
 
 # 次期リリース{#the-next-release}
 
-1 つのプロジェクトを実装しただけでプロセスが終了することはほとんどありません。次期リリースが（ほぼ）常に予定され、現行の実装の最終段階に開始されることもあります。
+プロジェクトの実装がプロセスの終わりになることはほとんどありません。 その後のリリースは（ほぼ）常に予想され、現在の実装の最終段階で開始することもできます。
 
-いずれにしても、次期リリースを次のように計画することは有効です。
+いずれの場合でも、次のリリースの計画を立てると、次の方法で作業を進めると便利です。
 
 * テストケースを注意深く文書化して保存し、参照したり、できれば再利用したりできるようにします。
 * 次期リリースの回帰テストとして使用できるテストの開発。
-* テストプロセスの経験によって自身または顧客が得た情報を照合します。
+* テストプロセスの経験を通じて得た情報を照合する。
 
    これは、次期リリースの要件の作成に役立つ場合があります。例えば、テスト中に製品の顧客経験が増加したとします。
 

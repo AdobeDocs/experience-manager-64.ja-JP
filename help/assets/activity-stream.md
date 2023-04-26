@@ -8,7 +8,7 @@ exl-id: 52fa2d59-177f-49ca-a480-7213ce0ca7d7
 source-git-commit: 1679bbab6390808a1988cb6fe9b7692c3db31ae4
 workflow-type: tm+mt
 source-wordcount: '211'
-ht-degree: 86%
+ht-degree: 81%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 86%
 
 この機能は、タイムラインにアセットのアクティビティログを表示します。[!DNL Adobe Experience Manager Assets] で以下のアセット関連操作を実行すると、アクティビティストリーム機能により、タイムラインが更新され、そのアクティビティが反映されます。
 
-アクティビティストリームでログに記録される操作は次のとおりです。
+次の操作がアクティビティストリームに記録されます。
 
 * 作成
 * 削除
@@ -24,7 +24,7 @@ ht-degree: 86%
 * 公開
 * 非公開
 * 承認
-* 拒否
+* 非承認
 * 移動
 
 タイムラインに表示されるアクティビティログは、ログファイルが格納されている CRX の `/var/audit/com.day.cq.dam/content/dam` から取得されます。

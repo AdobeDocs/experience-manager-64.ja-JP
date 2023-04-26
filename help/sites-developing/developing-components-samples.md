@@ -1,21 +1,21 @@
 ---
 title: AEM コンポーネントの開発 - コードサンプル
 seo-title: Developing AEM Components - Code Samples
-description: この節では、AEM 用に独自のコンポーネントを作成する方法の例を示します。
+description: この節では、AEM用に独自のコンポーネントを作成する方法の例をいくつか示します。
 seo-description: This section provides some examples on how to create your own components for AEM.
 exl-id: c205046f-9e60-4010-9ae3-be7d02d45248
 source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
 workflow-type: tm+mt
 source-wordcount: '217'
-ht-degree: 96%
+ht-degree: 58%
 
 ---
 
 # AEM コンポーネントの開発 - コードサンプル{#developing-aem-components-code-samples}
 
-この節では、AEM 用に独自のコンポーネントを作成する方法の例を示します。
+この節では、AEM用に独自のコンポーネントを作成する方法の例をいくつか示します。
 
-基本となる概念については、以下を参照してください。
+基になる概念については、以下を参照してください。
 
 * [AEM コンポーネント - 基本](/help/sites-developing/components-basics.md)
 * [AEM コンポーネントの開発](/help/sites-developing/developing-components.md)
@@ -42,11 +42,11 @@ GitHub のコード
 
 >[!NOTE]
 >
->このコードサンプルは、[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションに関連しています。
+>このコードサンプルは、AEM Gems セッション ( [ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html).
 
 ## 関連リソース {#related-resources}
 
-### 新しいアクションをコンポーネントツールバーに追加 {#add-new-action-to-a-component-toolbar}
+### コンポーネントツールバーに新しいアクションを追加する {#add-new-action-to-a-component-toolbar}
 
 ページエディターの編集レイヤーを使用して、新しいアクションをコンポーネントツールバーに追加できます。
 
@@ -54,6 +54,6 @@ GitHub のコード
 
 ### コンテンツフラグメントのカスタマイズと拡張 {#customizing-and-extending-content-fragments}
 
-標準のコンテンツフラグメントコンポーネントを拡張して、機能を追加できます。
+標準のコンテンツフラグメントコンポーネントを拡張して機能を追加することもできます。
 
 詳しくは、[コンテンツフラグメントのカスタマイズと拡張](/help/sites-developing/customizing-content-fragments.md)を参照してください。

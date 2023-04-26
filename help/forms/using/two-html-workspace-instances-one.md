@@ -1,7 +1,7 @@
 ---
 title: 2 つの AEM Forms ワークプレースインスタンスを 1 つのサーバー上にホストする
 seo-title: Hosting two AEM Forms workspace instances on one server
-description: LC 管理者が HTML WS をカスタマイズして 2 つのインスタンスを 1 つのサーバーにホストし、異なる URL を使ってアクセスできるようにする方法。
+description: LC 管理者がHTMLWS をカスタマイズして、異なる URL を介してアクセス可能な単一のサーバー上で 2 つのインスタンスをホストする方法。
 seo-description: How LC administrators can customize HTML WS to host two instances on a single server accessible via different URLs.
 uuid: 0584f512-6b92-4418-b71c-93605cfa1927
 content-type: reference
@@ -12,23 +12,23 @@ exl-id: ef2ad8e1-5007-4587-97ca-cf21070be9a6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '299'
-ht-degree: 100%
+ht-degree: 50%
 
 ---
 
 # 2 つの AEM Forms ワークプレースインスタンスを 1 つのサーバー上にホストする {#hosting-two-aem-forms-workspace-instances-on-one-server}
 
-AEM Forms のデフォルトのインストールと設定では、1 つの AEM Forms ワークスペースのみがサーバー上で使用できます。ただし、AEM Forms ワークスペースの 2 つの異なるインスタンスを 1 つの AEM Forms サーバーにホストしたい場合があります。これら 2 つのインスタンスは異なる URL によってアクセス可能です。
+AEM Formsのデフォルトのインストールと設定では、1 つのAEM Forms Workspace のみをサーバー上で使用できます。 ただし、場合によっては、AEM Forms Workspace の 2 つの異なるインスタンスを 1 つのAEM Formsサーバー上でホストする必要があります。 2 つのインスタンスは、異なる URL でアクセスできます。
 
-AEM Forms 管理者はワークスペースをカスタマイズして、2 つの異なる URL を作成し、 2 つのワークスペースを同じサーバー上で使用できるようにします。このカスタマイズ記事では、 2 つのワークスペースが `https://[server]:[port]/lc/ws` と `https://[server]:[port]:/lc/ws2`でアクセスできることを前提としています。
+AEM Formsの管理者は、ワークスペースをカスタマイズして 2 つの異なる URL を作成し、2 つのワークスペースを同じサーバーで使用できるようにします。 このカスタマイズ記事では、 2 つのワークスペースが `https://[server]:[port]/lc/ws` と `https://[server]:[port]:/lc/ws2`でアクセスできることを前提としています。
 
-以下の手順に従って AEM Forms ワークスペースを設定します。
+次の手順に従って、AEM Forms Workspace を設定します。
 
-1. AEM Forms ワークスペースの dev パッケージをサーバーにインストールします。作成方法については、[dev パッケージ](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を参照してください。
+1. サーバーにAEM Forms Workspace の dev パッケージをインストールします。 詳しくは、 [開発パッケージ](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を参照してください。
 1. `https://[server]:[port]/lc/crx/de/index.jsp` にアクセスして、管理者として CRXDE Lite にログインします。
-1. /content の node ws をコピーし、それを /content にペーストします。node の名前を ws2 に変更します。「**[!UICONTROL すべて保存]**」をクリックします。このノードのプロパティで、`sling:resourceType` の値を ws2 に変更します。「**[!UICONTROL すべて保存]**」をクリックします。
+1. ノード ws を/content にコピーし、/content に貼り付けます。 ノード名を ws2 に変更します。 「**[!UICONTROL すべて保存]**」をクリックします。このノードのプロパティで、`sling:resourceType` の値を ws2 に変更します。「**[!UICONTROL すべて保存]**」をクリックします。
 
-1. /libs にあるフォルダー ws を /apps にペーストします。このフォルダーの名前を ws2 に変更します。「**[!UICONTROL すべて保存]**」をクリックします。
+1. /libs からフォルダー ws をコピーし、/apps に貼り付けます。 フォルダーの名前を ws2 に変更します。 「**[!UICONTROL すべて保存]**」をクリックします。
 1. `GET.jsp` にある `/apps/ws2` で、次のコード変更を行います。次を
 
    ```
@@ -89,7 +89,7 @@ AEM Forms 管理者はワークスペースをカスタマイズして、2 つ�
 
 1. 新しいワークスペースの`pdf.html`に参照するには、 `startprocess.html`にある`pdf.html`と`WsNextAdapter.swf`、および`/apps/ws2/js/runtime/templates`で`taskdetails.html`と`processinstancehistory.html` のパスを変更します。
 
-1. `/etc/map/ws`フォルダーをコピーし、`/etc/map`にペーストします。この新しいフォルダーの名前を ws2 に変更します。「すべて保存」をクリックします。
+1. `/etc/map/ws`フォルダーをコピーし、`/etc/map`にペーストします。新しいフォルダーの名前を ws2 に変更します。 「すべて保存」をクリックします。
 
 1. `ws2`のプロパティで、`sling:redirect`の値を`content/ws2`に変更します。
 

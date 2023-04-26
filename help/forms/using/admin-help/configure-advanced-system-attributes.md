@@ -1,7 +1,7 @@
 ---
 title: 詳細なシステム属性の設定
 seo-title: Configure advanced system attributes
-description: システム属性の詳細設定ページを使用して、ファイルの書き出し、編集、読み込みを行うことなく、設定ファイルの特定の設定を変更します。
+description: '[ システム属性の詳細設定 ] ページを使用すると、ファイルの書き出し、編集、読み込みを行わずに、設定ファイル内の特定の設定を変更できます。'
 seo-description: Use the Configure Advanced System Attributes page to modify certain settings in the configuration file without the need to export, edit, and import the file.
 uuid: 6bcfbaa9-f492-46aa-97d2-00fc3e67d0d7
 contentOwner: admin
@@ -13,13 +13,13 @@ exl-id: f47c543d-6136-482b-915f-b4e13f83fa69
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '475'
-ht-degree: 100%
+ht-degree: 88%
 
 ---
 
 # 詳細なシステム属性の設定 {#configure-advanced-system-attributes}
 
-システム属性の詳細設定ページを使用して、ファイルの書き出し、編集、読み込みを行うことなく、設定ファイルの特定の設定を変更します。（[設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)を参照）。
+[ システム属性の詳細設定 ] ページを使用すると、ファイルの書き出し、編集、読み込みを行わずに、設定ファイル内の特定の設定を変更できます。 ( [設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).)
 
 1. 管理コンソールで、**[!UICONTROL 設定／User Management／設定／システム属性の詳細設定]**&#x200B;をクリックしてください。
 1. （オプション）次のセッション属性を変更します。

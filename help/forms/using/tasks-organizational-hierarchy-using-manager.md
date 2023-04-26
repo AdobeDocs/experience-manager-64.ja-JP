@@ -1,7 +1,7 @@
 ---
 title: マネージャービューを使用した組織階層でのタスクの管理
 seo-title: Managing tasks in an organizational hierarchy using Manager View
-description: マネージャーや組織のトップが AEM Forms ワークスペースの「TODO」タブで直属および直属ではない部下のタスクにアクセスして作業する方法。
+description: 管理者や組織の責任者がAEM Forms Workspace の「TODO」タブで直属および直属の部下のタスクにアクセスし、作業する方法。
 seo-description: How managers and organization heads can access and work on the tasks of their direct and indirect reports in the To-do tab in AEM Forms workspace.
 uuid: a44d5a64-c03a-4337-8577-b121e6202449
 contentOwner: robhagat
@@ -13,13 +13,13 @@ exl-id: 28877528-2f91-4ee0-b9d8-c7df364ed803
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '344'
-ht-degree: 100%
+ht-degree: 40%
 
 ---
 
 # マネージャービューを使用した組織階層でのタスクの管理 {#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
 
-AEM Forms ワークスペースで、マネージャーは階層のメンバー（直属または直属ではない部下）に割り当てられたタスクにアクセスし、さまざまなアクションを実行できるようになりました。タスクは、AEM Forms ワークスペースの「TODO」タブで利用できます。直属の部下のタスクでサポートされているアクションを以下に示します。
+AEM Forms Workspace で、管理者は、階層内の任意のユーザーに割り当てられたタスク（直属または直属の部下）にアクセスし、様々なアクションを実行できるようになりました。 タスクは、AEM Forms Workspace の「TODO」タブで使用できます。 ダイレクトレポートのタスクでサポートされるアクションは次のとおりです。
 
 **転送** 直属のタスクを任意のユーザーに転送します。
 
@@ -29,10 +29,10 @@ AEM Forms ワークスペースで、マネージャーは階層のメンバー�
 
 **拒否**&#x200B;他のユーザーによって直属に転送されたタスクを拒否します。このオプションは、他のユーザーによって直属のユーザーに転送されたタスクで使用できます。
 
-AEM Forms は、ユーザーのアクセスをアクセス制御（ACL）を持つユーザーのタスクのみに制限しています。そのようなチェックを行うことで、ユーザーは自分がアクセス許可を持つタスクのみを取得できることを確認します。サードパーティの Web サービスと実装を使用して階層を定義すると、組織はマネージャーと直属の部下をニーズに合うようにカスタマイズできます。
+AEM Formsは、ユーザーのアクセスを、ユーザーがアクセス制御 (ACL) を持つタスクのみに制限します。 このようなチェックを行うと、ユーザーはアクセス権限を持つタスクのみを取得できます。 サードパーティの Web サービスと実装を使用して階層を定義する場合、組織は、ニーズに合わせてマネージャーとダイレクトレポートの定義をカスタマイズできます。
 
 1. DSC を作成します。詳細については、「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63_jp)」ガイドの「AEM Forms のコンポーネントの開発」トピックを参照してください。
-1. DSC で、階層管理の新しい SPI を定義して、AEM Forms ユーザー内の直属の部下と階層を定義します。Java™ コードスニペットのサンプルを以下に示します。
+1. DSC で、階層管理の新しい SPI を定義して、AEM Formsユーザー内の直接レポートおよび階層を定義します。 Java™コードスニペットのサンプルを以下に示します。
 
    ```as3
    public class MyHierarchyMgmtService 
@@ -67,7 +67,7 @@ AEM Forms は、ユーザーのアクセスをアクセス制御（ACL）を持�
    }
    ```
 
-1. component.xml ファイルを作成します。spec-id が以下のコードスニペットと同じである必要があることを確認してください。再利用できるサンプルコードスニペットを以下に示します。
+1. component.xml ファイルを作成します。 spec-id が以下のコードスニペットと同じである必要があります。 再利用可能なサンプルコードスニペットを以下に示します。
 
    ```as3
    <component xmlns="https://adobe.com/idp/dsc/component/document"> 
@@ -111,10 +111,10 @@ AEM Forms は、ユーザーのアクセスをアクセス制御（ACL）を持�
    </component>
    ```
 
-1.  Workbench を介して DSC をデプロイします。再起動 `ProcessManagementTeamTasksService` サービス。
+1. Workbench を通じて DSC をデプロイします。 再起動 `ProcessManagementTeamTasksService` サービス。
 1. ブラウザーを更新するか、ユーザーでログアウトまたはログインをし直す必要があります。
 
-次の画面は、直属の部下のタスクへのアクセスと利用可能なアクションを示しています。
+次の画面は、直属の部下のタスクへのアクセスと使用可能なアクションを示しています。
 
 ![cu_manager_view](assets/cu_manager_view.png)
 

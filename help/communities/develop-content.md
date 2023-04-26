@@ -13,7 +13,7 @@ exl-id: ad2bb8d0-d446-4bc0-8e1d-a0ad196cc206
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '38'
-ht-degree: 100%
+ht-degree: 26%
 
 ---
 
@@ -21,6 +21,6 @@ ht-degree: 100%
 
 **[⇐ clientlib の追加](add-clientlibs.md)**
 
-この時点で、[We-Retail コミュニティ](../../help/sites-developing/we-retail.md)、[コミュニティコンポーネントガイド](components-guide.md)および[機能の基本事項](essentials.md)を参照しながら、サンドボックスのコミュニティ機能を試すことができます。
+この時点で、を使用すると同時に、サンドボックスのコミュニティ機能を調べることができます [We-Retail コミュニティ](../../help/sites-developing/we-retail.md)、 [コミュニティコンポーネントガイド](components-guide.md) および [機能の基本事項](essentials.md) 参照用。
 
 **[⇐ clientlib の追加](add-clientlibs.md)**

@@ -1,7 +1,7 @@
 ---
 title: Query Builder 用のカスタム述語エバリュエーターの実装
 seo-title: Implementing a Custom Predicate Evaluator for the Query Builder
-description: Query Builder を使用すると、コンテンツリポジトリへのクエリを簡単に実行できます
+description: Query Builder を使用すると、コンテンツリポジトリに簡単にクエリを実行できます
 seo-description: The Query Builder offers an easy way of querying the content repository
 uuid: 5b599b60-a149-4425-b7ac-7fbe7e048bca
 contentOwner: Guillaume Carlino
@@ -13,23 +13,23 @@ exl-id: afa7f346-fefa-4faa-bf2d-7480a7e5a5ee
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '774'
-ht-degree: 95%
+ht-degree: 72%
 
 ---
 
 # Query Builder 用のカスタム述語エバリュエーターの実装{#implementing-a-custom-predicate-evaluator-for-the-query-builder}
 
-ここでは、カスタム述語エバリュエーターを実装して、[Query Builder](/help/sites-developing/querybuilder-api.md) を拡張する方法について説明します。
+この節では、 [Query Builder](/help/sites-developing/querybuilder-api.md) カスタム述語エバリュエーターを実装する。
 
 ## 概要 {#overview}
 
-[Query Builder](/help/sites-developing/querybuilder-api.md) を使用すると、コンテンツリポジトリへのクエリを簡単に実行できます。AEMには、データの処理に役立つ一連の述語エバリュエーターが付属しています。
+この [Query Builder](/help/sites-developing/querybuilder-api.md) は、コンテンツリポジトリに対して簡単にクエリを実行する方法を提供します。 AEMには、データの処理に役立つ一連の述語エバリュエーターが付属しています。
 
-しかし、カスタム述語エバリュエーターを実装することによって、複雑さを軽減し、セマンティックを向上させて、クエリを単純化することができます。
+ただし、複雑さを軽減し、より良いセマンティックを確保するカスタム述語エバリュエーターを実装することで、クエリを簡略化することもできます。
 
-他にも、カスタム述語では、以下のような XPath では直接実行できないことも実行できます。
+また、カスタム述語は、XPath で直接実行できない他の操作も実行できます。例えば、次の操作を行います。
 
-* 何らかのサービスの何らかのデータの検索
+* 一部のサービスからのデータの検索
 * 計算に基づくカスタムフィルタリング
 
 >[!NOTE]
@@ -51,7 +51,7 @@ GitHub のコード
 
 述語エバリュエーターは、クエリの制約を定義する特定の述語を評価します。
 
-特定の JCR クエリに対する高度な検索制約（&quot;width > 200&quot; など）を、実際のコンテンツモデルに合わせてマッピングします（例：metadata/@width > 200）。ノードを手動でフィルタリングして、制約をチェックすることもできます。
+高レベルの検索制約（「幅 > 200」など）を、実際のコンテンツモデルに合う特定の JCR クエリ ( 例：metadata/@width > 200) にマッピングします。 ノードを手動でフィルタリングして、制約をチェックすることもできます。
 
 >[!NOTE]
 >
@@ -105,7 +105,7 @@ replic.action=Activate
 
 >[!NOTE]
 >
->Maven を使用した新しい AEM プロジェクトの設定については、[Apache Maven を使用した AEM プロジェクトの構築方法](/help/sites-developing/ht-projects-maven.md)で説明されています。
+>Maven を使用した新しいAEMプロジェクトの設定については、次のドキュメントを参照してください。 [Apache Maven を使用してAEMプロジェクトを構築する方法](/help/sites-developing/ht-projects-maven.md).
 
 まず、プロジェクトの Maven 依存関係を更新する必要があります。`PredicateEvaluator` は `cq-search` アーティファクトの一部なので、Maven の pom ファイルに追加する必要があります。
 
@@ -147,7 +147,7 @@ pom.xml
 
    src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java
 
-   次のスニペットは、[ユニファイド diff 形式](https://en.wikipedia.org/wiki/Diff#Unified_format)での違いを示しています
+   次のスニペットは、[ユニファイド diff 形式](https://ja.wikipedia.org/wiki/Diff#.E3.83.A6.E3.83.8B.E3.83.95.E3.82.A1.E3.82.A4.E3.83.89.E5.BD.A2.E5.BC.8F_.28Unified_format.29)での違いを示しています
 
 
 ```

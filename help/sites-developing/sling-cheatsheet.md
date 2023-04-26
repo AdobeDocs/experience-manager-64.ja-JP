@@ -13,7 +13,7 @@ exl-id: 405f615f-84d0-4e28-ab75-dd5375116c6c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '10'
-ht-degree: 100%
+ht-degree: 60%
 
 ---
 

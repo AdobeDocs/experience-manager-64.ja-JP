@@ -1,7 +1,7 @@
 ---
 title: Communities のデプロイ
 seo-title: Deploying Communities
-description: AEM Communities のデプロイ方法
+description: AEM Communitiesのデプロイ方法
 seo-description: How to deploy AEM Communities
 uuid: 1f7faf1a-a339-4eaa-b728-b9110cb350a8
 contentOwner: msm-service
@@ -13,7 +13,7 @@ exl-id: 0b7496f0-0b3c-4d12-a659-d95744157f14
 source-git-commit: a70f874ad7fcae59ee4c6ec20e23ffb2e339590b
 workflow-type: tm+mt
 source-wordcount: '2180'
-ht-degree: 34%
+ht-degree: 4%
 
 ---
 
@@ -21,29 +21,29 @@ ht-degree: 34%
 
 ## 前提条件 {#prerequisites}
 
-* [AEM 6.4 プラットフォーム](../../help/sites-deploying/deploy.md)
+* [AEM 6.4 Platform](../../help/sites-deploying/deploy.md)
 
-* AEM Communities のライセンス
+* AEM Communitiesライセンス
 
 * オプションのライセンス：
 
    * [Adobe Analytics for Communities の機能](analytics.md)
-   * [MongoDB for MSRP](msrp.md)
-   * [Adobe Cloud for ASRP](asrp.md)
+   * [MSRP 用 MongoDB](msrp.md)
+   * [ASRP 用Adobeクラウド](asrp.md)
 
 ## インストールチェックリスト {#installation-checklist}
 
-**[AEM プラットフォーム](../../help/sites-deploying/deploy.md#what-is-aem)**&#x200B;用
+**の [AEM platform](../../help/sites-deploying/deploy.md#what-is-aem)**
 
 * 最新のインストール [AEM 6.4 の更新](#aem-updates)
 
 * デフォルトのポート (4502、4503) を使用しない場合は、 [レプリケーションエージェントの設定](#replication-agents-on-author)
-* [暗号鍵のレプリケーション](#replicate-the-crypto-key)
+* [暗号鍵を複製する](#replicate-the-crypto-key)
 * グローバル化を支援する場合、 [自動翻訳の設定](../../help/sites-administering/translation.md)
 
    （開発用のサンプル設定が用意されています）
 
-**[Communities 機能](overview.md)**&#x200B;用
+**の [コミュニティ機能](overview.md)**
 
 * をデプロイする場合 [パブリッシュファーム](../../help/sites-deploying/recommended-deploys.md#tarmk-farm), [主なパブリッシャーの特定](#primary-publisher)
 
@@ -57,26 +57,26 @@ ht-degree: 34%
 
       * [MongoDB のインストールと設定](msrp.md#mongodb-configuration)
       * [Solr を設定](solr.md)
-      * [MSRP の選択](srp-config.md)
+      * [MSRP を選択](srp-config.md)
    * リレーショナルデータベース SRP の場合 [(DSRP)](dsrp.md)
 
       * [MySQL 用の JDBC ドライバーのインストール](#jdbc-driver-for-mysql)
       * [DSRP 用の MySQL のインストールと設定](dsrp-mysql.md)
       * [Solr を設定](solr.md)
-      * [DSRP の選択](srp-config.md)
+      * [DSRP を選択](srp-config.md)
    * AdobeSRP の場合 [(ASRP)](asrp.md)
 
       * プロビジョニングについては、アカウント担当者にお問い合わせください。
-      * [ASRP の選択](srp-config.md)
+      * [ASRP を選択](srp-config.md)
    * JCR SRP の場合 [(JSRP)](jsrp.md)
 
       * 共有 UGC ストアではありません：
 
-         * UGC のレプリケーションなし
-         * UGC はそれが入力された AEM インスタンスまたはクラスターでのみ表示
+         * UGC はレプリケートされません
+         * UGC は、入力されたAEMインスタンスまたはクラスター上でのみ表示されます
       * デフォルトは JSRP です。
 
-   イネーブルメント機能&#x200B;**[用](overview.md#enablement-community)**
+   の **[イネーブルメント機能](overview.md#enablement-community)**
 
    * [FFmpeg のインストールと設定](ffmpeg.md)
    * [MySQL 用の JDBC ドライバーのインストール](#jdbc-driver-for-mysql)
@@ -90,26 +90,26 @@ ht-degree: 34%
 
 ## 最新リリース {#latest-releases}
 
-AEM 6.4 Communities GA には Communities パッケージが含まれています。 AEM 6.4 [Communities](/help/release-notes/release-notes.md#experience-manager-communities) のアップデートについて詳しくは、[AEM 6.4 リリースノート](/help/release-notes/release-notes.md#release-information)を参照してください。
+AEM 6.4 Communities GA には Communities パッケージが含まれています。 AEM 6.4 の更新について知るには [コミュニティ](/help/release-notes/release-notes.md#experience-manager-communities)、を参照してください。 [AEM 6.4 リリースノート](/help/release-notes/release-notes.md#release-information).
 
-### AEM 6.4 のアップデート {#aem-updates}
+### AEM 6.4 の更新 {#aem-updates}
 
-AEM 6.3 以降、Communities のアップデートは、AEM 累積修正パックおよびサービスパックの一部として提供されています。
+AEM 6.3 以降、Communities の更新はAEM Cumulative Fix Packs および Service Pack の一部として提供されます。
 
 AEM 6.4 の最新の更新については、 [Adobe Experience Manager 6.4 累積修正パックおよびサービスパック](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html).
 
 ### バージョン履歴 {#version-history}
 
-AEM 6.4 以降、AEM Communities 機能およびホットフィックスは、AEM Communities 累積修正パックおよびサービスパックの一部として提供されます。したがって、独立した機能パックは提供されません。
+AEM 6.4 以降と同様に、AEM Communitiesの機能とホットフィックスは、AEM Communitiesの累積修正パックおよびサービスパックの一部です。 したがって、別の機能パックはありません。
 
 ### MySQL 用 JDBC ドライバー {#jdbc-driver-for-mysql}
 
-以下の 2 つの Communities 機能で MySQL データベースを使用しています。
+2 つのコミュニティ機能で MySQL データベースを使用します。
 
 * の場合 [実施可能](enablement.md):SCORM アクティビティと学習者の記録
 * の場合 [DSRP](dsrp.md):ユーザー生成コンテンツ (UGC) の保存
 
-MySQL コネクタを別途入手し、インストールする必要があります。
+MySQL コネクタを取得し、別途インストールする必要があります。
 
 必要な手順は次のとおりです。
 
@@ -123,7 +123,7 @@ MySQL コネクタを別途入手し、インストールする必要があり�
 
    * 例： http://localhost:4502/system/console/bundles
    * 選択 **`Install/Update`**
-   * ダウンロードした ZIP アーカイブから抽出したバンドルを参照し、選択します。
+   * ダウンロードした ZIP アーカイブから抽出したバンドルを参照して選択
    * 確認する *Oracle社の MySQLcom.mysql.jdbc 用 JDBC ドライバ* がアクティブで、アクティブでない場合は開始（またはログを確認）
 
 1. JDBC の設定後に既存のデプロイメントにインストールする場合は、Web コンソールから JDBC 設定を再保存して、JDBC を新しいコネクタに再バインドします。
@@ -137,25 +137,25 @@ MySQL コネクタを別途入手し、インストールする必要があり�
 
 バンドルのインストールに関する詳細は、 [Web コンソール](/help/sites-deploying/web-console.md#bundles) ページ。
 
-#### 例：インストール済みの MySQL コネクタバンドル {#example-installed-mysql-connector-bundle}
+#### 例：MySQL Connector バンドルがインストールされている {#example-installed-mysql-connector-bundle}
 
 ![chlimage_1-410](assets/chlimage_1-410.png)
 
 ### SCORM パッケージ {#scorm-package}
 
-Shareable Content Object Reference Model（SCORM）は、e ラーニングの標準規格と仕様をまとめた参照モデルです。SCORM では、コンテンツを転送可能な ZIP ファイルにパッケージ化する方法も定義されています。
+SCORM(Shareable Content Object Reference Model) は、e ラーニングの標準と仕様の集まりです。 また、SCORM では、コンテンツを転送可能な ZIP ファイルにパッケージ化する方法も定義します。
 
-AEM Communities SCORM エンジンは[イネーブルメント](overview.md#enablement-community)機能で必要になります。AEM Communities 6.4 バージョンでサポートされる SCORM パッケージは次のとおりです。
+AEM Communities SCORM エンジンは、 [実施可能](overview.md#enablement-community) 機能。 AEM Communities 6.4 バージョンでサポートされる SCORM パッケージは次のとおりです。
 
-* **[cq -social- scorm -package、バージョン 1.2.11](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-pkg)**. この SCORM パッケージは、AEM 6.4 Communities の全バージョンでサポートされています。
+* **[cq -social- scorm -package、バージョン 1.2.11](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-pkg)**. この SCORM パッケージは、すべてのAEM 6.4 Communities バージョンでサポートされています。
 
 * **[cq -social- scorm -package、バージョン 2.2.2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg)** 次を含む [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) エンジン。 この SCORM パッケージは、AEM 6.4.2.x Communities 以降でサポートされます。
 
-SCORM エンジンの新規インストールの場合、次のパッケージが含まれます。 [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) ( [  cq -social- scorm -package、バージョン 2.2.2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg)) を使用する必要があります。 それによって、SCORM 2017 でサポートされているラーニングリソースを再生できます。
+SCORM エンジンの新規インストールの場合、次のパッケージが含まれます。 [SCORM 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/) ( [  cq -social- scorm -package、バージョン 2.2.2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg)) を使用する必要があります。 SCORM 2017 でサポートされる学習リソースを再生できます。
 
 <!--This section used to be an accordion until converted to straight Markdown. When accordions are enabled, revert-->
 
-### SCORM パッケージを初めてインストールする場合
+### SCORM パッケージを初めてインストールするには
 
 1. のインストール **[cq-social-scorm-package，バージョン 2.2.2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq640%2Fsocial%2Fscorm%2Fcq-social-scorm-2017-pkg).**
 1. ダウンロード **`/libs/social/config/scorm/database_scormengine_data.sql`** cq インスタンスから、mysql サーバーで実行して、アップグレードされた scormEngineDB スキーマを作成します。
@@ -176,25 +176,25 @@ SCORM エンジンの新規インストールの場合、次のパッケージ�
 1. パッケージのダウンロード元 `/libs/social/config/scorm/ScormEngine.zip` 同じものを抽出します。
 1. に移動します。 **インストーラー** 抽出したディレクトリのフォルダ。
 1. 更新 `SystemDatabaseConnectionString` を `scorm db connection url` ファイル内 **[!UICONTROL EngineInstall.xml]**.
-1. 次のコマンドを使用して、Installer フォルダー内で mysql スキーマアップグレードツールを実行します。
+1. 次のコマンドを使用して、Installer フォルダー内の mysql スキーマアップグレードツールを実行します。
 
    `java -Dlogback.configurationFile=logback.xml -cp "lib/*" RusticiSoftware.ScormContentPlayer.Logic.Upgrade.ConsoleApp EngineInstall.xml`
-1. `engine_upgrade.log` ファイルを監視して、エラーとスキーマアップグレードステータスを確認します。
+1. 監視 `engine_upgrade.log` ファイルに含まれる必要があります。
 1. 追加 `/content/communities/scorm/RecordResults` in **[!UICONTROL 除外されたパス]** 次のプロパティを CSRF フィルターで使用 `https://<hostname>:<port>/system/console/configMgr` （発行者）
 
-### SCORM ロギング {#scorm-logging}
+### SCORM ログ {#scorm-logging}
 
-インストールすると、すべてのイネーブルメントアクティビティがシステムコンソールに詳細にロギングされます。
+インストールすると、すべてのイネーブルメントアクティビティがシステムコンソールに完全に記録されます。
 
 必要に応じて、ログレベルを `RusticiSoftware.*` パッケージ。
 
 ログの操作については、 [監査レコードとログファイルの操作](../../help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files).
 
-### AEM の高度な MLS {#aem-advanced-mls}
+### 高度な MLS のAEM {#aem-advanced-mls}
 
-SRP コレクション（MSRP または DSRP）で高度な多言語検索（MLS）をサポートするには、カスタムスキーマと Solr 設定に加えて、新しい Solr プラグインが必要です。必要な項目はすべて、ダウンロード可能な zip ファイルにパッケージ化されます。
+高度な多言語検索 (MLS) をサポートする SRP コレクション（MSRP または DSRP）については、カスタムスキーマと Solr 設定に加えて、新しい Solr プラグインが必要です。 必要な項目はすべて、ダウンロード可能な zip ファイルにパッケージ化されます。
 
-高度な MLS のダウンロード（「phasetwo」ともいう）は、アドビのリポジトリから入手できます。
+高度な MLS のダウンロード（「phasetwo」とも呼ばれます）は、Adobeリポジトリから入手できます。
 
 * AEM-SOLR-MLS-phasetwo
 
@@ -207,11 +207,11 @@ SRP コレクション（MSRP または DSRP）で高度な多言語検索（MLS
 
 ### パッケージ共有へのリンクについて {#about-links-to-package-share}
 
-**Adobe AEM クラウドでのパッケージの表示**
+**パッケージはAdobeAEM Cloud で表示**
 
 このページのパッケージへのリンクでは、共有をパッケージ化するので、AEMの実行インスタンスは必要ありません。 `adobeaemcloud.com`. パッケージが表示可能な間は、 `Install`ボタンは、パッケージをAdobe・ホスト・サイトにインストールするためのものです。 ローカルのAEMインスタンスにインストールする場合は、「 」を選択します。 `Install`はエラーを引き起こします。
 
-**ローカルの AEM インスタンスにインストールする方法**
+**ローカルのAEMインスタンスにインストールする方法**
 
 に表示されるパッケージをインストールするには `adobeaemcloud.com` ローカルのAEMインスタンス上で、まずパッケージをローカルディスクにダウンロードする必要があります。
 
@@ -232,29 +232,29 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ (UGC
 
 共通ストアは、パブリッシュ環境で UGC のモデレートと分析をサポートし、 [複製](sync.md) UGC の
 
-* [コミュニティコンテンツストア](working-with-srp.md)：AEM communities の SRP ストレージオプションについて説明します。
+* [コミュニティコンテンツストア](working-with-srp.md):AEM communities の SRP ストレージオプションについて説明します。
 
-* [推奨されるトポロジ](topologies.md)：使用例や SRP オプションに応じて使用するトポロジについて説明します。
+* [推奨されるトポロジ](topologies.md):使用例と SRP の選択に応じて使用するトポロジについて説明します。
 
 ## アップグレード {#upgrading}
 
-以前のバージョンの AEM から AEM 6.4 プラットフォームにアップグレードするときは、「AEM 6.4 へのアップグレード」をお読みください。
+以前のバージョンのAEMからAEM 6.4 プラットフォームにアップグレードする場合は、 AEM 6.4 へのアップグレードをお読みください。
 
-プラットフォームのアップグレードについてだけでなく、[AEM Communities 6.4 へのアップグレード](upgrade.md)もお読みいただき、Communities の変更について学習してください。
+プラットフォームのアップグレードに加えて、 [AEM Communities 6.4 へのアップグレード](upgrade.md) コミュニティの変更について学ぶには
 
 ## 設定 {#configurations}
 
-### プライマリパブリッシャー {#primary-publisher}
+### プライマリ発行者 {#primary-publisher}
 
 選択したデプロイメントが [パブリッシュファーム](topologies.md#tarmk-publish-farm)その場合、1 つのAEMパブリッシュインスタンスを **`primary publisher`** に依存する機能など、すべてのインスタンスで発生しないアクティビティに対して **通知** または **Adobe Analytics**.
 
 デフォルトでは、 `AEM Communities Publisher Configuration` OSGi 設定は、 **`Primary Publisher`** チェックボックスをオンにして、パブリッシュファーム内のすべてのパブリッシュインスタンスがプライマリとして自己識別されるようにします。
 
-したがって、すべてのセカンダリパブリッシュインスタンスの設定を編集して、「」チェックボックスをオフにする必要があります。******`Primary Publisher`**
+したがって、次の操作が必要です。 **すべてのセカンダリパブリッシュインスタンスで設定を編集** チェックを外す **`Primary Publisher`** チェックボックス。
 
 ![chlimage_1-411](assets/chlimage_1-411.png)
 
-パブリッシュファーム内の他のすべての（セカンダリ）パブリッシュインスタンスについて、以下をおこないます。
+パブリッシュファーム内のその他（セカンダリ）パブリッシュインスタンスの場合：
 
 * 管理者権限でログイン
 * 次にアクセス： [web コンソール](../../help/sites-deploying/configuring-osgi.md)
@@ -266,7 +266,7 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ (UGC
 * 「 **[!UICONTROL プライマリ発行者]** ボックス
 * 選択 **[!UICONTROL 保存]**
 
-### オーサー環境でのレプリケーションエージェント {#replication-agents-on-author}
+### オーサー環境のレプリケーションエージェント {#replication-agents-on-author}
 
 レプリケーションは、コミュニティグループなど、パブリッシュ環境で作成されたサイトコンテンツに対して使用され、 [トンネルサービス](#tunnel-service-on-author).
 
@@ -274,7 +274,7 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ (UGC
 
 他のユーザーが適切な権限を持つには、そのユーザーをメンバーとして `administrators` ユーザーグループ ( `Communities Administrators`) をクリックします。
 
-オーサー環境には 2 つのレプリケーションエージェントがあり、正しく設定するにはトランスポート設定が必要です。
+オーサー環境には 2 つのレプリケーションエージェントがあり、トランスポート設定を正しく設定する必要があります。
 
 * 作成者のレプリケーションコンソールにアクセス
 
@@ -282,8 +282,8 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ (UGC
 
 * 両方のエージェントに対して同じ手順を実行します。
 
-   * **デフォルトエージェント（publish）**
-   * **リバースレプリケーションエージェント（publish reverse）**
+   * **デフォルトエージェント (publish)**
+   * **リバースレプリケーションエージェント（パブリッシュリバース）**
 
       1. エージェントを選択
       1. 選択 **[!UICONTROL 編集]**
@@ -291,13 +291,13 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ (UGC
       1. ポートでない場合 `4503`、 **[!UICONTROL URI]** 正しいポートを指定するには
       1. ユーザーでない場合 `admin`、 **[!UICONTROL ユーザー]** および **[!UICONTROL パスワード]** メンバを指定するには `administrators` ユーザーグループ
 
-以下の画像は、ポートを 4503 から 6103 に変更した結果を示しています。
+次の図は、ポートを 4503 から 6103 に変更した結果を示しています。
 
-#### デフォルトエージェント（publish） {#default-agent-publish}
+#### デフォルトエージェント (publish) {#default-agent-publish}
 
 ![chlimage_1-412](assets/chlimage_1-412.png)
 
-#### リバースレプリケーションエージェント（publish reverse） {#reverse-replication-agent-publish-reverse}
+#### リバースレプリケーションエージェント（パブリッシュリバース） {#reverse-replication-agent-publish-reverse}
 
 ![chlimage_1-413](assets/chlimage_1-413.png)
 
@@ -326,13 +326,13 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ (UGC
 
 ![chlimage_1-414](assets/chlimage_1-414.png)
 
-### 暗号鍵のレプリケーション {#replicate-the-crypto-key}
+### 暗号鍵のレプリケート {#replicate-the-crypto-key}
 
-AEM Communities には、すべての AEM サーバーインスタンスで同じ暗号鍵を使用する必要がある機能が 2 つあります。以下が該当します。 [Analytics](analytics.md) および [ASRP](asrp.md).
+AEM Communitiesには 2 つの機能があり、すべてのAEMサーバーインスタンスで同じ暗号化キーを使用する必要があります。 以下が該当します。 [Analytics](analytics.md) および [ASRP](asrp.md).
 
 AEM 6.3 以降では、鍵の素材はファイルシステムに保存され、リポジトリには保存されなくなりました。
 
-オーサー環境から他のすべてのインスタンスに鍵の素材をコピーするには、以下の操作をおこなう必要があります。
+オーサーインスタンスから他のすべてのインスタンスに主要資料をコピーするには、次の操作が必要です。
 
 * コピーする主要な素材を含むAEMインスタンス（通常はオーサーインスタンス）にアクセスします
 
@@ -364,9 +364,9 @@ AEM 6.3 以降では、鍵の素材はファイルシステムに保存され、
 
 >[!CAUTION]
 >
->既に暗号鍵に基づいて別のセキュリティ機能が設定されている場合、暗号鍵のレプリケーションをおこなうと設定が破損する可能性があります。サポートが必要な場合は、 [カスタマーケアに問い合わせる](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html).
+>暗号鍵に基づく別のセキュリティ機能が既に設定されている場合は、暗号鍵をレプリケートすると設定に損害が生じる可能性があります。 サポートが必要な場合は、 [カスタマーケアに問い合わせる](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html).
 
-#### リポジトリのレプリケーション {#repository-replication}
+#### リポジトリレプリケーション {#repository-replication}
 
 AEM 6.2 以前の場合と同様に、キー資料をリポジトリに保存する場合は、各AEMインスタンスの初回起動時に（初期リポジトリを作成する）次のシステムプロパティを指定することで、保持できます。
 
@@ -376,20 +376,20 @@ AEM 6.2 以前の場合と同様に、キー資料をリポジトリに保存す
 >
 >重要なのは、 [オーサー環境のレプリケーションエージェント](#replication-agents-on-author) が正しく設定されている。
 
-リポジトリに鍵の素材が格納されるので、オーサー環境から他のインスタンスへ暗号鍵をレプリケーションする方法は次のようになります。
+リポジトリに保存されたキー材料を使用して、オーサーから他のインスタンスに暗号キーをレプリケートする方法は次のとおりです。
 
-[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) を使用して、次の手順を実行します。
+使用 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md):
 
 * 参照先 [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
 * 「`/etc/key`」を選択します。
 * open `Replication` タブ
 * 「`Replicate`」を選択します。
 
-* [Granite 暗号バンドルを更新します。](#refresh-the-granite-crypto-bundle)
+* [Granite Crypto バンドルを更新します。](#refresh-the-granite-crypto-bundle)
 
 ![chlimage_1-415](assets/chlimage_1-415.png)
 
-#### Granite 暗号バンドルの更新 {#refresh-the-granite-crypto-bundle}
+#### Granite 暗号バンドルを更新します。 {#refresh-the-granite-crypto-bundle}
 
 * 各パブリッシュインスタンスで、 [Web コンソール](../../help/sites-deploying/configuring-osgi.md)
 
@@ -406,7 +406,7 @@ AEM 6.2 以前の場合と同様に、キー資料をリポジトリに保存す
 
 ### Apache HTTP サーバー {#apache-http-server}
 
-Apache HTTP サーバーを使用する場合は、すべての関連エントリで正しいサーバー名を使用していることを確認してください。
+Apache HTTP サーバーを使用している場合は、関連するすべてのエントリに対して正しいサーバー名を使用していることを確認します。
 
 特に、正しいサーバー名を使用するように注意してください。 `localhost`、 `RedirectMatch`.
 
@@ -429,7 +429,7 @@ Apache HTTP サーバーを使用する場合は、すべての関連エント�
 
 ### Dispatcher {#dispatcher}
 
-Dispatcher を使用する場合は、次の説明を参照してください。
+Dispatcher を使用する場合は、以下を参照してください。
 
 * AEM [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) ドキュメント
 * [Dispatcher のインストール](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-install.html)
@@ -438,7 +438,7 @@ Dispatcher を使用する場合は、次の説明を参照してください。
 
 ## 関連するコミュニティドキュメント {#related-communities-documentation}
 
-* コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理およびメッセージングの設定については、[コミュニティサイトの管理](administer-landing.md)を参照してください。
+* 訪問 [コミュニティサイトの管理](administer-landing.md) コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理、メッセージングの設定について説明します。
 
 * 訪問 [コミュニティの開発](communities.md) ソーシャルコンポーネントフレームワーク (SCF) と、コミュニティのコンポーネントと機能のカスタマイズについて説明します。
 

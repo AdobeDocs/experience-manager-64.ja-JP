@@ -1,6 +1,6 @@
 ---
 title: Brand Portal へのフォルダーの公開
-description: Brand Portal へのフォルダーの公開および非公開の方法を説明します。
+description: フォルダーをBrand Portalに公開および非公開にする方法を説明します。
 contentOwner: VG
 feature: Brand Portal
 role: User
@@ -8,7 +8,7 @@ exl-id: f41ab750-5780-42ae-a131-5bc748280215
 source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
 source-wordcount: '552'
-ht-degree: 65%
+ht-degree: 51%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Manager Assets 管理者は、アセットやフォルダーを
 
 2. **フォルダーを今すぐ公開**
 
-   選択したフォルダーを Brand Portal に公開するには、次のいずれかを実行します。
+   選択したフォルダーをBrand Portalに公開するには、次のいずれかの操作を行います。
 
    * ツールバーで「**[!UICONTROL クイック公開]**」を選択します。次に、メニューで「**[!UICONTROL Brand Portal に公開]**」を選択します。
    * ツールバーで「**[!UICONTROL 公開を管理]**」を選択します。
@@ -38,7 +38,7 @@ Adobe Experience Manager Assets 管理者は、アセットやフォルダーを
 3. 次に、**[!UICONTROL アクション]**&#x200B;から「**[!UICONTROL Brand Portal に公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;から「**[!UICONTROL 今すぐ]**」を選択します。「**[!UICONTROL 次へ]」をタップします。**
 4. 内 **[!UICONTROL 範囲]**&#x200B;をクリックし、選択を確定してをタップします。 **[!UICONTROL Brand Portalに公開]**.
 
-   フォルダーが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。Brand Portal のインターフェイスにログインして、公開されたフォルダーを確認します。
+   フォルダーが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。Brand Portalインターフェイスにログインして、公開されたフォルダーを確認します。
 
    **フォルダーを後で公開**
 
@@ -59,17 +59,17 @@ Adobe Experience Manager Assets 管理者は、アセットやフォルダーを
 
 Brand Portalに公開されているアセットフォルダーを削除するには、次の場所から非公開にします。 [!DNL Experience Manager] オーサーインスタンス。 元のフォルダーを非公開にすると、Brand Portal ユーザーはそのコピーを使用できなくなります。
 
-Brand Portal へのフォルダーの公開をすぐに取り消すことも、取り消しのスケジュールを未来の日時で設定することもできます。Brand Portal へのアセットフォルダーを非公開にするには、次の手順を実行します。
+すばやくBrand Portalからフォルダーを非公開にするか、後でフォルダーをスケジュールするかのオプションがあります。 Brand Portal へのアセットフォルダーを非公開にするには、次の手順を実行します。
 
 1. 次の [!DNL Assets] ～とのインターフェース [!DNL Experience Manager]  オーサーインスタンス、非公開にするフォルダーを選択します。
 
    ![publish2bp-1](assets/publish2bp-1.png)
 
-2. ツールバーで「**[!UICONTROL 公開を管理]**」をタップまたはクリックします。
+2. ツールバーのをタップまたはクリックします。 **[!UICONTROL 公開を管理]**.
 
-3. **Brand Portal への公開を今すぐ取り消し**
+3. **今すぐBrand Portalから非公開にする**
 
-   Brand Portal へのフォルダーの公開をすぐに取り消すには、次のようにします。
+   目的のフォルダーをBrand Portalからすばやく非公開にするには、次の手順を実行します。
 
    1. オン **[!UICONTROL 公開を管理]** ページ、元 **[!UICONTROL アクション]** 選択 **[!UICONTROL Brand Portalから非公開]** およびから **[!UICONTROL スケジュール]** 選択 **[!UICONTROL 今すぐ]**.
    2. タップまたはクリック **[!UICONTROL 次へ].**

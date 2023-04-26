@@ -1,7 +1,7 @@
 ---
 title: Android Studio プロジェクトのセットアップと Android アプリの作成
 seo-title: Set up the Android studio project and build the Android app
-description: Android Studio プロジェクトのセットアップ手順と AEM Forms アプリケーションのインストーラーの作成手順
+description: Android Studio プロジェクトを設定し、AEM Formsアプリ用のインストーラーを構築する手順です
 seo-description: Steps to set up the Android Studio project and build the installer for the AEM Forms app
 uuid: 4c966cdc-d0f5-4b5b-b21f-f11e8a35ec8a
 content-type: reference
@@ -12,7 +12,7 @@ exl-id: a797ec42-e6bf-457e-91d7-0430b4671a68
 source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 98%
+ht-degree: 85%
 
 ---
 
@@ -24,10 +24,10 @@ AEM Forms では、AEM Forms アプリケーションの完全なソースコー
 
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行してください。
 
-1. [ソフトウェア配布](https://experience.adobe.com/jp/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
+1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
 1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
-1. 「**[!UICONTROL フィルター]**」セクションで、
-   1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
+1. 内 **[!UICONTROL フィルター]** セクション：
+   1. 選択 **[!UICONTROL Forms]** から **[!UICONTROL 解決策]** 」ドロップダウンリストから選択できます。
    2. パッケージのバージョンとタイプを選択します。「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
 1. お使いのオペレーティングシステムに適したパッケージの名前をタップし、「**[!UICONTROL EULA 利用規約に同意する]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
 1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き、「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
@@ -43,9 +43,9 @@ AEM Forms アプリケーションソースを入手するには、以下の手�
 
 ## 標準的な AEM Forms アプリケーションの構築 {#set-up-the-xcode-project}
 
-1. Android™ Studio でプロジェクトを設定し、署名 ID を指定するには、以下の手順を実行します。
+1. 次の手順を実行して、Android™ Studio でプロジェクトを設定し、署名 ID を指定します。
 
-   設定済みの Android™ Studio がインストールされているマシンにログインします。
+   Android™ Studio がインストールおよび設定されているマシンにログインします。
 
 1. ダウンロードした `adobe-lc-mobileworkspace-src-<version>.zip` アーカイブを次の場所にコピーします。
 
@@ -86,7 +86,7 @@ AEM Forms アプリケーションソースを入手するには、以下の手�
 
    **Windows® ユーザーの場合：** %HOMEPATH%¥Projects¥MobileWorkspace¥src¥android
 
-1. プロジェクトの読み込みが完了すると、ポップアップが表示されます。このポップアップには、Android™ プラグインの Gradle を更新するためのオプションが表示されます。要件に応じて、適切なボタンをクリックします。
+1. プロジェクトが読み込まれると、Android™プラグイン Gradle を更新するためのオプションがポップアップ表示されます。 必要に応じて、適切なボタンをクリックします。
 
    ![dontremindmeagainforthisproject](assets/dontremindmeagainforthisproject.png)
 

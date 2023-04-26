@@ -1,7 +1,7 @@
 ---
 title: コミュニティグループの基本事項
 seo-title: Community Group Essentials
-description: コミュニティサイトを動的に作成する
+description: コミュニティサイトの動的な作成
 seo-description: Creating community sites dynamically
 uuid: 168e7aeb-6e9a-468d-8ac4-274007cea252
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: 357a130a-af60-4e86-9161-5dc7056aa052
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '418'
-ht-degree: 43%
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 43%
 
 コミュニティグループ機能を使用すると、パブリッシュ環境およびオーサー環境から許可されたユーザーがコミュニティサイト内でサブコミュニティを動的に作成できます。
 
-Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降、別のグループ内でグループをネストできるようになりました。
+コミュニティの時点 [機能パック 1](deploy-communities.md#latestfeaturepack)の場合、グループを他のグループ内にネストすることが可能です
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -95,14 +95,14 @@ Communities [機能パック 1](deploy-communities.md#latestfeaturepack) 以降�
 
 ### ネストされたグループ {#nested-groups}
 
-Communities [FP1](deploy-communities.md#latestfeaturepack) 以降では、グループテンプレートにグループ機能を追加することができ、ネストされたグループ（サブコミュニティ）が許可されます。
+コミュニティの時点 [FP1](deploy-communities.md#latestfeaturepack)を使用すると、グループ機能をグループテンプレート内に組み込むことができ、ネストされたグループ（サブコミュニティ）に対して使用できます。
 
-コミュニティサイトまたはグループテンプレートにグループ機能が含まれる場合、以下の操作が可能です。
+コミュニティサイトまたはグループテンプレートにグループ機能が含まれている場合は、次の操作が可能です。
 
 * オーサー環境にサブコミュニティを作成する
 * 許可するように設定されている場合は、パブリッシュ環境でグループを作成します。
 
-オーサー環境でグループを作成するときは、まずコミュニティサイトを公開してから、グループを公開する必要があります。コミュニティサイトを公開すると、ACL が設定されているサブコミュニティのメンバーグループを作成せずに、グループのページが公開されます。 したがって、制限付き（シークレット）グループは、グループが明示的に公開されるまで表示される場合があります。
+オーサー環境でグループを作成する場合は、まずコミュニティサイトを公開し、次にグループを公開する必要があります。 コミュニティサイトを公開すると、ACL が設定されているサブコミュニティのメンバーグループを作成せずに、グループのページが公開されます。 したがって、制限付き（シークレット）グループは、グループが明示的に公開されるまで表示される場合があります。
 
 ## リンクと関連情報 {#links-and-related-information}
 

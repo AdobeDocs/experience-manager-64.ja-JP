@@ -1,5 +1,5 @@
 ---
-title: Assets の検索機能の拡張
+title: Assets 検索の拡張
 description: の検索機能の拡張 [!DNL Experience Manager] 標準搭載のアセット以外は、文字列でアセットを検索します。
 contentOwner: AG
 feature: Search
@@ -8,11 +8,11 @@ exl-id: d68c735f-2699-4923-a7e7-4d1356eae335
 source-git-commit: a778c3bbd0e15bb7b6de2d673b4553a7bd146143
 workflow-type: tm+mt
 source-wordcount: '820'
-ht-degree: 84%
+ht-degree: 48%
 
 ---
 
-# Assets の検索機能の拡張 {#extending-assets-search}
+# Assets 検索の拡張 {#extending-assets-search}
 
 Adobe Experience Manager Assets の検索機能を拡張できます。 すぐに使える [!DNL Experience Manager] Assets は、文字列でアセットを検索します。
 
@@ -22,7 +22,7 @@ Adobe Experience Manager Assets の検索機能を拡張できます。 すぐ�
 
 >[!CAUTION]
 >
->[!DNL Experience Manager] 6.4 以降、クラシック UI は廃止されます。お知らせについては、[廃止される機能および削除された機能](../release-notes/deprecated-removed-features.md)を参照してください。タッチ対応 UI を使用することをお勧めします。カスタマイズについては、[検索ファセット](search-facets.md)を参照してください。
+>[!DNL Experience Manager] 6.4 以降、クラシック UI は廃止されます。発表については、 [廃止および削除された機能](../release-notes/deprecated-removed-features.md). タッチ操作対応 UI を使用することをお勧めします。 カスタマイズについては、 [検索ファセット](search-facets.md).
 
 ## オーバーレイ {#overlaying}
 
@@ -32,7 +32,7 @@ Adobe Experience Manager Assets の検索機能を拡張できます。 すぐ�
 
 >[!NOTE]
 >
->デフォルトでは、/`apps` 配下のディレクトリ構造は存在しないので、新たに作成する必要があります。ノードのタイプが、/`libs` 配下のノードのタイプと一致するようにしてください。
+>デフォルトでは、/の下のディレクトリ構造です。 `apps` が存在しないので、作成する必要があります。 ノードのタイプが、/以下のタイプと一致することを確認します。 `libs`.
 
 ## タブの追加 {#adding-tabs}
 
@@ -45,7 +45,7 @@ Adobe Experience Manager Assets の検索機能を拡張できます。 すぐ�
    >
    >2 つ目の siteadminsearchpanel を作成する場合は、必ず `id` プロパティを使用して、フォームの競合を防ぎます。
 
-## カスタムの述語の作成 {#creating-custom-predicates}
+## カスタム述語の作成 {#creating-custom-predicates}
 
 [!DNL Experience Manager] Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みの一連の述語が付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
@@ -55,12 +55,12 @@ Adobe Experience Manager Assets の検索機能を拡張できます。 すぐ�
 
 ベストプラクティスは、既存の述語をコピー後に変更することです。サンプルの述語は、 `/libs/cq/search/components/predicates`.
 
-### 例：シンプルなプロパティ述語の作成 {#example-build-a-simple-property-predicate}
+### 例：単純なプロパティ述語の作成 {#example-build-a-simple-property-predicate}
 
-プロパティ述語の作成手順
+プロパティの述語を作成するには：
 
 1. プロジェクトディレクトリにコンポーネントフォルダーを作成します。例： `/apps/geometrixx/components/titlepredicate`.
-1. ページの URL の末尾に `content.xml`:
+1. 追加 `content.xml`:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -143,20 +143,20 @@ Adobe Experience Manager Assets の検索機能を拡張できます。 すぐ�
    ```
 
 1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDE で、ノードを追加します `cq:editConfig` プライマリタイプ `cq:EditConfig`. 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として **DELETE** のみを設定します。
-1. ブラウザーを開き、サンプルページ（`press.html` など）でデザインモードに切り替えて、述語段落システムの新しいコンポーネント（「**左揃え**」など）を有効にします。
+1. ブラウザー、およびサンプルページ ( 例： `press.html`) デザインモードに切り替えて、述語段落システム用の新しいコンポーネントを有効にします ( 例： **left**) をクリックします。
 
-1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。「**Predicates**」列にコンポーネントを挿入し、「**Diamond**」などの検索語句を入力して、虫眼鏡アイコンをクリックして検索を開始します。
+1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。コンポーネントを **述語** 列に検索語を入力し、例えば、 **ひし形** 拡大鏡をクリックして検索を開始します。
 
    >[!NOTE]
    >
-   >検索時は、大文字と小文字の違いを含めて、語句を正確に入力してください。
+   >検索時は、大文字と小文字を含め、語句を正確に入力してください。
 
-### 例：シンプルなグループ述語の作成 {#example-build-a-simple-group-predicate}
+### 例：単純なグループ述語の構築 {#example-build-a-simple-group-predicate}
 
-グループ述語の作成手順
+グループ述語を作成するには：
 
 1. プロジェクトディレクトリにコンポーネントフォルダーを作成します。例： `/apps/geometrixx/components/picspredicate`.
-1. ページの URL の末尾に `content.xml`:
+1. 追加 `content.xml`:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -170,7 +170,7 @@ Adobe Experience Manager Assets の検索機能を拡張できます。 すぐ�
        componentGroup="Search"/>
    ```
 
-1. ページの URL の末尾に `titlepredicate.jsp`:
+1. 追加 `titlepredicate.jsp`:
 
    ```java
    <%--
@@ -250,59 +250,59 @@ Adobe Experience Manager Assets の検索機能を拡張できます。 すぐ�
    ```
 
 1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDE で、ノードを追加します `cq:editConfig` プライマリタイプ `cq:EditConfig`. 段落を削除できるよう、値を複数設定できるプロパティ `cq:actions` を追加し、値として `DELETE` のみを設定します。
-1. ブラウザーを開き、サンプルページ（`press.html` など）でデザインモードに切り替えて、述語段落システムの新しいコンポーネント（「**左揃え**」など）を有効にします。
+1. ブラウザー、およびサンプルページ ( 例： `press.html`) デザインモードに切り替えて、述語段落システム用の新しいコンポーネントを有効にします ( 例： **left**) をクリックします。
 1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。「**Predicates**」列にコンポーネントを挿入します。
 
 ### インストール済みの述語ウィジェット {#installed-predicate-widgets}
 
-事前設定済みの ExtJS ウィジェットでは次の述語が使用可能です。
+事前設定済みの ExtJS ウィジェットとして、次の述語を使用できます。
 
 ### FulltextPredicate {#fulltextpredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | String | 述語の名前。デフォルトは `fulltext` |
+| predicateName | String | 述語の名前。 デフォルトは `fulltext` |
 | searchCallback | 関数 | イベント `keyup` で検索をトリガーするためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | 文字列 | 述語の名前。デフォルトは `property` |
-| propertyName | 文字列 | JCR プロパティの名前。デフォルトは `jcr:title` |
-| defaultValue | 文字列 | 事前設定されるデフォルト値 |
+| predicateName | String | 述語の名前。 デフォルトは `property` |
+| propertyName | String | JCR プロパティの名前。 デフォルトは `jcr:title` |
+| defaultValue | String | 事前入力されたデフォルト値。 |
 
 ### PathPredicate {#pathpredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | 文字列 | 述語の名前。デフォルトは `path` |
-| rootPath | 文字列 | 述語のルートパス。デフォルトは `/content/dam` |
-| pathFieldPredicateName | 文字列 | デフォルトは `folder` |
-| showFlatOption | Boolean | チェックボックス `search in subfolders` を表示するフラグ。デフォルトは true です |
+| predicateName | String | 述語の名前。 デフォルトは `path` |
+| rootPath | String | 述語のルートパス。 デフォルトは `/content/dam` |
+| pathFieldPredicateName | String | デフォルトは `folder` |
+| showFlatOption | Boolean | チェックボックス `search in subfolders` を表示するフラグ。デフォルトは true です。 |
 
 ### DatePredicate {#datepredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | 文字列 | 述語の名前。デフォルトは `daterange` |
-| propertyname | 文字列 | JCR プロパティの名前。デフォルトは `jcr:content/jcr:lastModified` |
-| defaultValue | 文字列 | 事前設定されるデフォルト値 |
+| predicateName | String | 述語の名前。 デフォルトは `daterange` |
+| propertyname | String | JCR プロパティの名前。 デフォルトは `jcr:content/jcr:lastModified` |
+| defaultValue | String | 事前入力されたデフォルト値 |
 
 ### OptionsPredicate {#optionspredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| title | 文字列 | 最上部のタイトルを追加します |
-| predicateName | 文字列 | 述語の名前。デフォルトは `daterange` |
-| propertyname | 文字列 | JCR プロパティの名前。デフォルトは `jcr:content/metadata/cq:tags` |
-| collapse | 文字列 | 折りたたみのレベル。デフォルトは `level1` |
-| triggerSearch | ブール値 | チェック時の検索を呼び出すためのフラグ。デフォルトは false です |
-| searchCallback | 関数 | 検索を呼び出すためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
-| searchTimeoutTime | Number | タイムアウト。この時間を過ぎると searchCallback が呼び出されます。デフォルトは 800ms です |
+| title | String | トップタイトルを追加します |
+| predicateName | String | 述語の名前。 デフォルトは `daterange` |
+| propertyname | String | JCR プロパティの名前。 デフォルトは `jcr:content/metadata/cq:tags` |
+| 折りたたみ | String | 折りたたみのレベル。 デフォルトは `level1` |
+| triggerSearch | Boolean | チェック時に検索をトリガーするフラグ。 デフォルトは false です。 |
+| searchCallback | 関数 | 検索をトリガーするコールバック。 デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
+| searchTimeoutTime | Number | searchCallback が実行される前のタイムアウト。 デフォルトは 800 ms です。 |
 
 ## 検索結果のカスタマイズ {#customizing-search-results}
 
-アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。[!DNL Experience Manager] Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みのレンズのセットが付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
+アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。[!DNL Experience Manager] Assets には、アセット共有ページのカスタマイズに使用できる、事前定義済みのレンズのセットが付属しています。 この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
 [!DNL Experience Manager] 開発者は、既存のレンズを使用するだけでなく、独自のレンズを作成することもできます。

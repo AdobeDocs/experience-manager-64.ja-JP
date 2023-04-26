@@ -1,7 +1,7 @@
 ---
 title: アプリのテンプレートとコンポーネント
 seo-title: App Templates and Components
-description: このページでは、アプリのテンプレートとコンポーネントについて説明します。テンプレートの構造について詳しく説明します。
+description: このページでは、アプリのテンプレートとコンポーネントについて説明します。 テンプレートの構造に関する詳細情報が提供されます。
 seo-description: Follow this page to learn about App Templates and Components. It provides detailed information on the structure of templates.
 uuid: ba2fd91b-de5a-4f39-a976-5455f9983669
 contentOwner: User
@@ -13,7 +13,7 @@ exl-id: 5480ac38-f651-4211-94f6-c588fb44ad55
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '405'
-ht-degree: 89%
+ht-degree: 8%
 
 ---
 
@@ -21,44 +21,44 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-テンプレートはページを作成するための雛形として使用され、選択した範囲内で使用できるコンポーネントを定義します。テンプレートは、そこから作成されるページと同じ構造を持つノードの階層ですが、実際のコンテンツは含みません。
+テンプレートは、ページの作成に使用され、選択した範囲内で使用できるコンポーネントを定義します。 テンプレートは、作成するページと同じ構造を持ち、実際のコンテンツを持たないノードの階層です。
 
-テンプレートごとに、使用可能なコンポーネントが提示されます。
+各テンプレートには、使用可能なコンポーネントが選択されて表示されます。
 
-* テンプレートは[コンポーネント](/help/sites-developing/components.md)で構成されています。
-* コンポーネントによって使用され、アクセスが許可されるウィジェットを使用して、コンテンツがレンダリングされます。
+* テンプレートは [コンポーネント](/help/sites-developing/components.md);
+* コンポーネントはウィジェットを使用し、ウィジェットにアクセスできます。ウィジェットはコンテンツのレンダリングに使用されます。
 
 >[!NOTE]
 >
 >CRXDE Liteを使用したAEMアプリケーションの開発方法については、 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
-テンプレートはページの基礎です。
+テンプレートは、ページの基盤です。
 
-ページを作成するには、テンプレート（ノードツリーの **/apps/&lt;myapp>/templates/&lt;mytemplate>**）をサイトツリーの対応する位置にコピーする必要があります。「**Web サイト**」タブを使用してページを作成する場合も、この処理が行われます。
+ページを作成するには、テンプレートをコピーする必要があります (node-tree) **/apps/&lt;myapp>/templates/&lt;mytemplate>**) を site-tree 内の対応する位置にドラッグします。ページが **Web サイト** タブをクリックします。
 
-このコピー処理により、ページには、初期コンテンツ（通常はトップレベルコンテンツのみ）と sling:resourceType プロパティ、ページのレンダリングに使用するページコンポーネントのパス（子ノード jcr:content に含まれるすべてのもの）ができます。
+また、このコピーアクションは、ページの初期コンテンツ（通常はトップレベルコンテンツのみ）と、ページのレンダリングに使用されるページコンポーネントのパス（子ノード jcr:content 内のすべて）を示す sling:resourceType プロパティも提供します。
 
 ## テンプレートの構造 {#structure-of-a-template}
 
-以下の 2 つの側面について考慮する必要があります。
+考慮すべき 2 つの側面があります。
 
 * テンプレート自体の構造
-* テンプレート使用時に作成されるコンテンツの構造
+* テンプレートを使用する際に作成されるコンテンツの構造
 
-テンプレートは **cq:Template** タイプのノードの下に作成されます。
+テンプレートは、タイプのノードの下に作成されます **cq:Template**.
 
-様々なプロパティを設定できます。具体例は以下のとおりです。
+特に、様々なプロパティを設定できます。
 
-* **jcr:title** - テンプレートのタイトル。ページ作成時にダイアログに表示されます。
-* **jcr:description** - テンプレートの説明。ページ作成時にダイアログに表示されます。
+* **jcr:title**  — テンプレートのタイトル。は、ページの作成時にダイアログに表示されます。
+* **jcr:description**  — テンプレートの説明。は、ページの作成時にダイアログに表示されます。
 
-このノードには、*jcr:content（cq:PageContent）*&#x200B;ノードが含まれます。jcr:content ノードは、生成されるページのコンテンツノードの基礎として使用されます。このノードは、*sling:resourceType* を使用して、新しいページの実際のコンテンツのレンダリングに使用されるコンポーネントを参照します。
+このノードには次が含まれます *jcr:content (cq:PageContent)* 結果ページのコンテンツノードの基礎として使用されるノードこの参照は、 *sling:resourceType*：新しいページの実際のコンテンツのレンダリングに使用するコンポーネント。
 
 >[!NOTE]
 >
->AEM におけるテンプレートとコンポーネントの基礎については、以下のリソースを参照してください。
+>AEMのテンプレートとコンポーネントの基本については、以下のリソースを参照してください。
 >
 >* [テンプレート](/help/sites-developing/templates.md)
 >* [コンポーネント](/help/sites-developing/components.md)
@@ -70,7 +70,7 @@ ht-degree: 89%
 * [テンプレートとコンポーネントの作成および追加](/help/mobile/mobile-ondemand-app-templates.md)
 * [コンテンツのプロパティを使用したコンテンツのエクスポート](/help/mobile/on-demand-content-properties-exporting.md)
 * [ベストプラクティス](/help/mobile/best-practices-aem-mobile.md)
-* [AEM Mobile コンテンツサービスの開発](/help/mobile/developing-content-services.md)
+* [AEM Mobile Content Services の開発](/help/mobile/developing-content-services.md)
 
 ### その他のリソース {#additional-resources}
 

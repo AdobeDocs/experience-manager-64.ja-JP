@@ -1,7 +1,7 @@
 ---
 title: カスタムクラウドサービスの作成
 seo-title: Creating a Custom Cloud Service
-description: デフォルトのクラウドサービスを、カスタムクラウドサービスタイプで拡張することができます
+description: デフォルトのCloud Servicesセットは、カスタムCloud Service型で拡張できます
 seo-description: The default set of Cloud Services can be extended with custom Cloud Service types
 uuid: b105a0c1-b68c-4f57-8e3b-561c8051a08e
 contentOwner: User
@@ -13,17 +13,17 @@ exl-id: dc3e5d4d-ff8b-4394-9bfc-aceee6f269a5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '418'
-ht-degree: 100%
+ht-degree: 76%
 
 ---
 
 # カスタムクラウドサービスの作成{#creating-a-custom-cloud-service}
 
-デフォルトのクラウドサービスを、カスタムクラウドサービスタイプで拡張することができます。これにより、カスタムマークアップを構造的な方法でページに挿入できます。この手法は、Google Analytics や Chartbeat など、主としてサードパーティの分析プロバイダーに使用されます。Cloud Services は、親ページから子ページに継承されますが、任意のレベルで継承を中断できます。
+デフォルトのCloud Servicesセットは、カスタムCloud Serviceタイプで拡張できます。 これにより、構造化された方法でページにカスタムマークアップを挿入できます。 この手法は、Google Analytics や Chartbeat など、主としてサードパーティの分析プロバイダーに使用されます。Cloud Services は、親ページから子ページに継承されますが、任意のレベルで継承を中断できます。
 
 >[!NOTE]
 >
->ここで紹介する手順は、Google Analytics を使用して新しいクラウドサービスを作成する場合の例です。この内容がそのまま実際のユースケースに当てはまるとは限りません。
+>この新しいCloud Service作成の詳しい手順ガイドは、Google Analyticsの使用例です。 すべてがユースケースに当てはまらない場合があります。
 
 1. CRXDE Lite で、`/apps` の下に新しいノードを作成します。
 
@@ -124,8 +124,8 @@ ht-degree: 100%
    * **プロパティ**：
 
       * **名前**：`fieldLabel`
-      * **種類**：string
-      * **値**：アカウント ID
+      * **タイプ**:文字列
+      * **値**:アカウント ID
 
       * **名前**：`fieldDescription`
       * **型**：`String`
@@ -215,5 +215,5 @@ ht-degree: 100%
    「**Google Analytics 設定**」を選択し、「**作成**」をクリックします。
 
 1. **アカウント ID**（例：`AA-11111111-1`）を入力します。「**OK**」をクリックします。
-1. ページに移動し、「**クラウドサービス**」タブで、新たに作成された設定をページプロパティに追加します。
-1. このページにカスタムマークアップが追加されます。
+1. ページに移動し、新しく作成した設定をページプロパティの **Cloud Services** タブをクリックします。
+1. ページにはカスタムマークアップが追加されます。

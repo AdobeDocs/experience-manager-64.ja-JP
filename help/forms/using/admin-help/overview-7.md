@@ -1,7 +1,7 @@
 ---
 title: Forms 設定の基本事項
 seo-title: Basics of configuring forms
-description: インタラクティブなデータキャプチャアプリケーションの作成に役立つ、様々な Forms サービスについて説明します。
+description: インタラクティブなデータキャプチャアプリケーションを作成するのに役立つ様々なフォームサービスについて説明します。
 seo-description: Learn about the various forms services that help you create interactive data capture applications.
 uuid: f495c170-2d17-45b0-b09d-22cce101131e
 contentOwner: admin
@@ -13,20 +13,20 @@ exl-id: 616cd550-c3bd-4daf-887d-0470f1b08389
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '201'
-ht-degree: 100%
+ht-degree: 6%
 
 ---
 
 # Forms 設定の基本事項 {#basics-of-configuring-forms}
 
-Forms サービスを使用すると、通常は Designer で作成されるフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャクライアントアプリケーションを作成できます。フォーム作成者は、次に示す様々な形式で Forms サービスによってレンダリングされる、単一のフォームデザインを作成します。
+Formsサービスを使用すると、通常 Designer で作成されるフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャクライアントアプリケーションを作成できます。 フォーム作成者は、Formsサービスが様々な形式でレンダリングする単一のフォームデザインを作成します。
 
-* Adobe Reader 内またはブラウザー内の PDF
-* XHTML 1.0 に準拠したレンダリングを含む様々なブラウザー環境での HTML
-* Adobe Flash Player をサポートする様々なブラウザー環境での form ガイド
+* Adobe ReaderまたはブラウザーでのPDFとして
+* XHTML 1.0 に準拠したレンダリングを含む、様々なブラウザー環境でのHTMLとして
+* をフォームガイドとして使用します。これは、AdobeFlash Playerをサポートする様々なブラウザ環境で使用されます。
 
-Forms サービスについて詳しくは、「[サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)」を参照してください。
+Formsサービスについて詳しくは、 [サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
 
-管理コンソールの Forms ページを使用して、Forms サービスの動作を設定できます。これらの設定はサービスのすべての呼び出しに適用されます。AEM forms SDK を通じて送信されたパラメーターは、管理コンソールで指定された設定よりも優先されます。ただし、影響を受けるのは特定の呼び出しだけです。
+管理コンソールのFormsページを使用して、Formsサービスの動作を設定できます。 これらの設定は、サービスのすべての呼び出しに適用されます。 AEM forms SDK を通じて送信されるパラメーターは、管理コンソールで設定された設定より優先されます。ただし、影響を受けるのは特定の呼び出しのみです。
 
-管理コンソールで Forms 設定を変更した後で、「保存」をクリックします。サーバーを再起動しなくても、変更が反映されます。ただし、キャッシュモード設定を指定すると Forms サービスの停止および再起動が必要な場合があります（[サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)を参照してください）。
+管理コンソールでForms設定を変更したら、「保存」をクリックします。 変更を有効にするために、サーバーを再起動する必要はありません。 ただし、キャッシュモードの設定を行う場合は、Formsサービスの停止と再起動が必要になる場合があります。 ( [サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services).)

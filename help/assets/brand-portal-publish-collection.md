@@ -1,6 +1,6 @@
 ---
 title: Brand Portal へのコレクションの公開
-description: Brand Portal を対象としたコレクションの公開および非公開の方法を学びます。
+description: コレクションをBrand Portalに公開および非公開にする方法を説明します。
 contentOwner: VG
 feature: Brand Portal
 role: User
@@ -8,7 +8,7 @@ exl-id: c2c6759e-f763-405e-9e45-5a90b9d32df2
 source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
 source-wordcount: '323'
-ht-degree: 62%
+ht-degree: 49%
 
 ---
 
@@ -26,16 +26,16 @@ Adobe Experience Manager Assets 管理者は、コレクションを [!DNL Exper
 
 ## Brand Portal へのコレクションの公開 {#publish-a-collection-to-brand-portal}
 
-1. Assets UI で、 [!DNL Experience Manager] ロゴ 次に、**[!UICONTROL ナビゲーション]**&#x200B;ページで&#x200B;**[!UICONTROL アセット／コレクション]**&#x200B;に移動します。
+1. Assets UI で、 [!DNL Experience Manager] ロゴ 次に、に移動します。 **[!UICONTROL アセット/コレクション]** から **[!UICONTROL ナビゲーション]** ページ。
 2. コレクションコンソールで、Brand Portalに公開するコレクションを選択します。
 
    ![select_collection](assets/select_collection.png)
 
-3. ツールバーで「**[!UICONTROL Brand Portal に公開]**」をタップまたはクリックします。
+3. ツールバーのをタップまたはクリックします。 **[!UICONTROL Brand Portalに公開]**.
 
    ![publish_to_bp_icon](assets/publish_to_bp_icon.png)
 
-4. 確認ダイアログで「**[!UICONTROL 公開]**」をタップまたはクリックします。
+4. 確認ダイアログで、をタップまたはクリックします。 **[!UICONTROL 公開]**.
 5. 確認メッセージを閉じます。
 6. 管理者として Brand Portal にログインします。公開したコレクションがコレクションインターフェイスで利用できます。
 
@@ -53,5 +53,5 @@ Adobe Experience Manager Assets 管理者は、コレクションを [!DNL Exper
 
    ![remove_from_bp_icon](assets/remove_from_bp_icon.png)
 
-3. 確認ダイアログで「**[!UICONTROL 非公開]**」をタップまたはクリックします。
+3. ダイアログで、「 」をタップまたはクリックします。 **[!UICONTROL 非公開]**.
 4. 確認メッセージを閉じます。コレクションが Brand Portal インターフェイスから削除されます。

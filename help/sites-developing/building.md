@@ -14,13 +14,13 @@ exl-id: b3b0f505-3d7d-493d-a37b-abc8a365f95b
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '875'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
 # AEM アプリケーションへのタグ付けの構築{#building-tagging-into-an-aem-application}
 
-カスタム AEM アプリケーション内のタグまたは拡張タグをプログラムで操作するために、このページでは、次の使用方法を説明します。
+このページでは、カスタムAEMアプリケーション内のタグや拡張タグをプログラムで操作する目的で、
 
 * [タグ付け API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/package-summary.html)
 
@@ -31,7 +31,7 @@ ht-degree: 100%
 タグに関する関連情報については、次を参照してください。
 
 * タグの作成と管理、およびタグが適用されているコンテンツについては、「[タグの管理](/help/sites-administering/tags.md)」を参照してください。
-* コンテンツのタグ付けについては、[タグの使用](/help/sites-authoring/tags.md)を参照してください。
+* [タグの使用](/help/sites-authoring/tags.md) コンテンツのタグ付けについて詳しくは、を参照してください。
 
 ## タグ付け API の概要 {#overview-of-the-tagging-api}
 

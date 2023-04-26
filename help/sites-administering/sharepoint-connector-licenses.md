@@ -1,7 +1,7 @@
 ---
 title: SharePoint Connector のライセンス、著作権情報および免責事項
 seo-title: SharePoint Connector Licenses, Copyright Notices, and Disclaimers
-description: SharePoint Connector のライセンス、著作権情報および免責事項について説明します。
+description: SharePoint Connector のライセンス、著作権情報、免責事項について説明します。
 seo-description: Learn about SharePoint Connector Licenses, Copyright Notices and Disclaimers.
 uuid: fba2c8ad-c6f3-484e-87b6-ddc426f7087a
 contentOwner: User
@@ -13,17 +13,17 @@ exl-id: 4cd44f33-1bf9-4ec6-868f-0db60bfc56c0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '362'
-ht-degree: 100%
+ht-degree: 61%
 
 ---
 
 # SharePoint Connector のライセンス、著作権情報および免責事項{#sharepoint-connector-licenses-copyright-notices-and-disclaimers}
 
-この節では、Day JCR Connector for MS SharePoint に関して明示的に記載する必要があるすべてのライセンス、著作権情報および免責事項について説明します。
+この節では、Day JCR Connector for MS SharePointに関連して明示的に記載する必要があるすべてのライセンス、著作権に関する通知、免責事項を示します。
 
-## Connector のサードパーティのライブラリの概要 {#overview-of-connector-rd-party-libraries}
+## コネクタのサードパーティライブラリの概要 {#overview-of-connector-rd-party-libraries}
 
-以下の表に、SharePoint Connector のコアライブラリ内で使用されるサードパーティのライブラリ、およびそれらに適用されるライセンス、著作権情報または免責事項を示します。
+次の表に、SharePoint Connector コアライブラリ内で使用されるサードパーティライブラリと、それらのライブラリでカバーされるライセンス、著作権情報、免責事項を示します。
 
 | ライブラリ | ライセンスタイプ |
 |---|---|
@@ -62,9 +62,9 @@ ht-degree: 100%
 | xml-apis | [Apache](#apache)（パブリックドメインおよび W3C ソフトウェアライセンスの対象となる部分が含まれます） |
 | XmlSchema | [Apache](#apache) |
 
-## CRX のサードパーティのライブラリの概要 {#overview-of-crx-rd-party-libraries}
+## CRX サードパーティライブラリの概要 {#overview-of-crx-rd-party-libraries}
 
-以下の表に、CRX 内で使用されるサードパーティのライブラリ、およびそれらに適用されるライセンス、著作権情報、または免責事項を記載します。
+次の表に、CRX 内で使用されるサードパーティのライブラリと、それらが適用されるライセンス、著作権情報、免責事項を示します。
 
 <table> 
  <colgroup> 
@@ -154,9 +154,9 @@ ht-degree: 100%
  </tbody> 
 </table>
 
-## CQSE のサードパーティのライブラリの概要 {#overview-of-cqse-rd-party-libraries}
+## CQSE サードパーティライブラリの概要 {#overview-of-cqse-rd-party-libraries}
 
-以下の表に、Communiqué Servlet Engine 内で使用されるサードパーティのライブラリ、およびそれらに適用されるライセンス、著作権情報、または免責事項を記載します。
+次の表に、Communiqué Servlet Engine 内で使用されるサードパーティのライブラリと、それらが適用されるライセンス、著作権情報、免責事項を示します。
 
 <table> 
  <colgroup> 
@@ -425,7 +425,7 @@ ht-degree: 100%
      limitations under the License.
 ```
 
-## 同時 {#concurrent}
+## Concurrent {#concurrent}
 
 ```xml
      All classes are released to the public domain and may be used for any
@@ -769,7 +769,7 @@ ht-degree: 100%
      WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-## Sun ポートレット {#sun-portlet}
+## Sun Portlet {#sun-portlet}
 
 ```xml
      SPECIFICATION LEAD IS WILLING TO LICENSE THIS

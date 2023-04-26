@@ -9,13 +9,13 @@ exl-id: 7566e1bc-8571-4b3c-b420-4324026bd4dd
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '875'
-ht-degree: 97%
+ht-degree: 23%
 
 ---
 
 # ツールコンソール{#tools-consoles}
 
-**ツール** コンソールを使用して、web サイト、デジタルアセット、およびコンテンツリポジトリのその他の要素の管理に役立つ、数多くの専用ツールにアクセスできます。現時点では、お使いの UI に応じて 2 種類の&#x200B;**ツール**&#x200B;コンソールを選択できます。
+**ツール** コンソールを使用して、web サイト、デジタルアセット、およびコンテンツリポジトリのその他の要素の管理に役立つ、数多くの専用ツールにアクセスできます。現在、には 2 種類のフレーバーがあります **ツール** コンソールは、使用している UI に応じて異なります。
 
 * [ツール - クラシック UI](#tools-classic-ui)
 * [ツール - タッチ操作向け UI](#tools-touch-optimized-ui)
@@ -32,132 +32,132 @@ ht-degree: 97%
   <tr> 
    <td><a href="/help/sites-administering/msm.md">MSM コントロールセンター</a></td> 
    <td> </td> 
-   <td>複数のサイトを統合管理するための場所です。</td> 
+   <td>複数のサイトを一元管理する。</td> 
   </tr> 
   <tr> 
    <td>ClientContext 設定<br /> </td> 
    <td> </td> 
-   <td><a href="/help/sites-developing/client-context.md">ClientContext</a> はユーザーデータを動的にまとめたコレクションを表します。デフォルトの Marketing Cloud 設定はここに保持されます。<br /> </td> 
+   <td>この <a href="/help/sites-developing/client-context.md">ClientContext</a> は、ユーザーデータを動的に組み立てたコレクションを表します。 デフォルトの Marketing Cloud 設定はここに保持されます。<br /> </td> 
   </tr> 
   <tr> 
    <td>クラウドサービス設定<br /> </td> 
    <td> </td> 
-   <td><a href="/help/sites-administering/marketing-cloud.md">Adobe Marketing Cloud との統合</a>に関連する設定を保持します。</td> 
+   <td>関連する設定を保持 <a href="/help/sites-administering/marketing-cloud.md">Adobe Marketing Cloudとの統合</a>.</td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-administering/ecommerce.md">Commerce</a></td> 
    <td> </td> 
-   <td>インポーターと様々な製品データにアクセスできます。</td> 
+   <td>インポーターや様々な製品データへのアクセスを提供します。</td> 
   </tr> 
   <tr> 
-   <td>DAM - デジタル著作権管理<br /> </td> 
+   <td>DAM -Digital Rights Management<br /> </td> 
    <td> </td> 
-   <td>デジタル著作権情報とライセンスにアクセスできます。</td> 
+   <td>デジタル著作権情報とライセンスへのアクセスを提供します。</td> 
   </tr> 
   <tr> 
-   <td>DAM - ヘルスチェック<br /> </td> 
+   <td>DAM - Health Checker<br /> </td> 
    <td> </td> 
-   <td>比較 <code>/var/dam</code> および <code>/content/dam</code> およびが<br /> 不整合がある場合は、 その後で、リスト内のファイルとフォルダーを同期または削除できます。フォルダー比較用のノードタイプを Web コンソールで設定できます。</td> 
+   <td>比較 <code>/var/dam</code> および <code>/content/dam</code> およびが<br /> 不整合がある場合は、 リストに表示されたファイルやフォルダーは、同期または削除できます。 フォルダー比較のノードタイプは Web コンソールで設定できます。</td> 
   </tr> 
   <tr> 
-   <td>DAM - Adobe Indesign<br /> </td> 
+   <td>DAM -AdobeIndesign<br /> </td> 
    <td> </td> 
-   <td>Adobe Indesign と共に使用するスクリプトです。</td> 
+   <td>AdobeIndesign と組み合わせて使用するスクリプト。</td> 
   </tr> 
   <tr> 
-   <td>DAM - ビデオプロファイル<br /> </td> 
+   <td>DAM — ビデオプロファイル<br /> </td> 
    <td> </td> 
-   <td>ffmpeg のトランスコーディング用に設定可能なプロファイルです。</td> 
+   <td>ffmpeg トランスコーディング用に設定可能なプロファイル。</td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-administering/dashboards.md">ダッシュボード</a></td> 
    <td> </td> 
-   <td>レポートダッシュボードを作成できます。これらのダッシュボードのカスタマイズ可能な方法を使用して、統合されたデータを表示するページを定義できます。</td> 
+   <td>レポートダッシュボードを作成できます。統合データを表示するページを定義するためのカスタマイズ可能な方法を提供します。</td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-developing/designer.md">デザイン</a></td> 
    <td> </td> 
-   <td>定義済みのデザイン（使用するグラフィックと css ファイルを含む）のリストを保持します。</td> 
+   <td>使用するグラフィックや CSS ファイルなど、定義されたデザインのリストを保持します。</td> 
   </tr> 
   <tr> 
    <td>カスタムドキュメント</td> 
    <td> </td> 
-   <td>ドキュメントとオンラインヘルプを拡張する場合に使用します。</td> 
+   <td>ドキュメントおよびオンラインヘルプを拡張する際に使用します。</td> 
   </tr> 
   <tr> 
-   <td>フォームの送信</td> 
+   <td>フォーム送信</td> 
    <td> </td> 
-   <td>受信済みのフォームの送信のリストを保持します。</td> 
+   <td>受信したフォーム送信のリストを保持します。</td> 
   </tr> 
   <tr> 
-   <td>インポーター - <a href="/help/sites-administering/bulk-editor.md">バルクエディター</a></td> 
+   <td>インポーター — <a href="/help/sites-administering/bulk-editor.md">バルクエディター</a></td> 
    <td> </td> 
-   <td>項目を検索して一括編集できます。また、リポジトリに対するコンテンツの（一括）書き出し／読み込みをおこなうこともできます。</td> 
+   <td>項目を検索して一括編集できます。 また、リポジトリに（一括で）コンテンツを書き出したり読み込んだりすることもできます。</td> 
   </tr>
   <tr> 
-   <td>インポーター - フィードインポーター</td> 
+   <td>インポーター — フィードインポーター</td> 
    <td> </td> 
-   <td><p>フィードインポーターは、外部ソースからリポジトリにコンテンツを繰り返し読み込むためのフレームワークです。フィードインポーターという概念は、指定の間隔でリモートリソースをポーリングして解析し、リモートリソースのコンテンツを表すノードをコンテンツリポジトリに作成するためのものです。</p> </td> 
+   <td><p>フィードインポーターは、外部ソースからリポジトリにコンテンツを繰り返し読み込むためのフレームワークです。 フィードインポーターの考え方は、指定した間隔でリモートリソースをポーリングして解析し、リモートリソースのコンテンツを表すノードをコンテンツリポジトリ内に作成することです。</p> </td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-administering/external-link-checker.md">外部リンクチェック</a></td> 
    <td> </td> 
-   <td>AEM インスタンス内のコンテンツページをすべてスキャンして、外部リンクをチェックします。有効なリンクと無効なリンクのリストが表示されます。</td> 
+   <td>AEMインスタンス内のすべてのコンテンツページをスキャンし、外部リンクを確認します。 有効なリンクと無効なリンクのリストが表示されます。</td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-authoring/mobile.md">モバイル</a></td> 
    <td> </td> 
-   <td>モバイルデバイス用にデザインされた Web サイトの作成を支援します。</td> 
+   <td>モバイルデバイス向けに設計された Web サイトを作成できます。</td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-administering/msm.md">MSM</a></td> 
    <td> </td> 
-   <td>多言語および多国籍のコンテンツを処理し、統一したブランドの確立とコンテンツのローカライズの間のバランスを取るのに役立ちます。</td> 
+   <td>多言語および多国籍のコンテンツを処理し、一元化されたブランディングとローカライズされたコンテンツのバランスを取るのに役立ちます。</td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-administering/notification.md">通知</a></td> 
    <td> </td> 
-   <td>通知テンプレートです。</td> 
+   <td>通知テンプレート。</td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-administering/package-manager.md">パッケージ</a></td> 
    <td> </td> 
-   <td>AEM WCM 用に読み込まれたパッケージを表示するパッケージマネージャーへの代替リンクです。CRX のパッケージマネージャーに表示される情報に類似しています。</td> 
+   <td>AEM WCM 用に読み込まれたパッケージを表示する、パッケージマネージャーへの代替リンク。 CRX のパッケージマネージャーに表示される情報と同様です。</td> 
   </tr> 
   <tr> 
-   <td>レプリケーション - <a href="/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents">レプリケーションエージェント</a></td> 
+   <td>レプリケーション — <a href="/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents">レプリケーションエージェント</a></td> 
    <td> </td> 
-   <td>ページを公開する際に、オーサー環境からパブリッシュ環境にデータをレプリケーションするために使用します。または、ユーザーのコメントをパブリッシュ環境からオーサー環境に戻すリバースレプリケーションで使用します。</td> 
+   <td>ページの公開時にオーサーからパブリッシュにデータをレプリケートするため、またはリバースレプリケーションを使用して、パブリッシュ環境からオーサーにユーザーのコメントを返すために使用します。</td> 
   </tr> 
   <tr> 
-   <td>インポーター - <a href="/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree">ツリーをアクティベート</a></td> 
+   <td>インポーター — <a href="/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree">ツリーをアクティベート</a></td> 
    <td> </td> 
-   <td>「Web サイト」タブから、個々のページをアクティベートできます。多数のコンテンツページを入力または更新した場合、これらのページがすべて同じルートページの下にあれば、ツリー全体を 1 回の操作で簡単にアクティベートできます。また、ドライランを実行してアクティベートをエミュレートし、アクティベートされたページをハイライト表示することもできます。</td> 
+   <td>「 Web サイト」タブから、個々のページをアクティベートできます。 大量のコンテンツページを入力または更新した場合（すべて同じルートページの下に配置されている）、ツリー全体を 1 回の操作で簡単にアクティブ化できます。 また、ドライランを実行してアクティベートをエミュレートし、アクティベートするページをハイライトすることもできます。</td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-administering/reporting.md">レポート</a></td> 
    <td> </td> 
-   <td>AEM にはカスタマイズ用の様々なレポートが用意されています。レポートをカスタマイズしたり、独自のレポートを作成したりできます。</td> 
+   <td>AEMには、様々なカスタマイズされたレポートが用意されており、カスタマイズされたレポートを作成したり、独自のレポートを作成したりできます。</td> 
   </tr> 
   <tr> 
-   <td><a href="/help/sites-authoring/scaffolding.md">デフォルトページの基礎モード</a></td> 
+   <td><a href="/help/sites-authoring/scaffolding.md">デフォルトページ基礎モード</a></td> 
    <td> </td> 
-   <td>基礎モードを使用すると、ページに必要な構造を反映したフィールドを使用してフォーム（基礎）を作成し、このフォームを使用して必要な構造に基づいたページを簡単に作成できます。</td> 
+   <td>基礎モードを使用すると、ページに必要な構造を反映したフィールドを持つフォーム（スキャフォールド）を作成し、このフォームを使用して、この構造に基づくページを簡単に作成できます。</td> 
   </tr> 
   <tr> 
-   <td>セキュリティ - <a href="/help/sites-administering/notification.md">セルフサービス設定</a> </td> 
+   <td>セキュリティ — <a href="/help/sites-administering/notification.md">セルフサービス設定 </a> </td> 
    <td> </td> 
-   <td>アカウントの作成やパスワードのリセットをおこなったときにユーザーが自動的に受信する電子メールを設定したり、リセットされたパスワードを確認したりできます。</td> 
+   <td>アカウントの作成時やパスワードのリセット時にユーザーが自動的に受け取る電子メールを設定したり、リセットされたパスワードを確認したりできます。</td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-administering/campaign-segmentation.md">セグメント化</a></td> 
    <td> </td> 
-   <td>サイトにアクセスする訪問者は、様々な関心と目的を持っています。その目的を理解し、期待に応えることが、オンラインマーケティングを成功させるための重要な要因となります。セグメント化によって訪問者の詳細を分析し、特徴付けることが成功の実現に役立ちます。<br /> </td> 
+   <td>サイト訪問者がサイトに来訪したときの興味や目標は異なります。 これらの目標を理解し、期待を満たすことは、オンラインマーケティングの重要な成功要因です。 セグメント化によって訪問者の詳細を分析し、特徴付けることが成功の実現に役立ちます。<br /> </td> 
   </tr> 
   <tr> 
    <td><a href="/help/communities/working-with-srp.md">socialconfig</a></td> 
    <td> </td> 
-   <td>デフォルトの SRP 設定。<a href="/help/communities/srp-config.md">ストレージ設定</a>コンソールを参照してください。</td> 
+   <td>デフォルトの SRP 設定。 詳しくは、 <a href="/help/communities/srp-config.md">ストレージ設定</a> コンソール。</td> 
   </tr> 
   <tr> 
    <td>taskmanagement</td> 
@@ -165,29 +165,29 @@ ht-degree: 97%
    <td>このエントリに関連するアクティブな機能はありません。</td> 
   </tr> 
   <tr> 
-   <td>tenants</td> 
+   <td>テナント</td> 
    <td> </td> 
    <td>このエントリに関連するアクティブな機能はありません。</td> 
   </tr> 
   <tr> 
-   <td>バージョン管理 - <a href="/help/sites-deploying/version-purging.md">バージョンのパージ</a></td> 
+   <td>バージョン管理 — <a href="/help/sites-deploying/version-purging.md">バージョンをパージ</a></td> 
    <td> </td> 
    <td>必要に応じてページのバージョンをパージできます。</td> 
   </tr> 
   <tr> 
    <td>仮想リポジトリ</td> 
    <td> </td> 
-   <td>ワークスペースのマウント機能を使用して仮想リポジトリを設定できます。これにより、JCR に対応したコンテンツアプリケーションにおいて、CRX と JCR コネクターに基づく JCR コンテンツインフラストラクチャに簡単にアクセスできるようになります。</td> 
+   <td>ワークスペースマウント機能を使用して仮想リポジトリを設定し、CRX および JCR コネクタに基づく JCR コンテンツインフラストラクチャへのアクセスをシンプルにする JCR 対応コンテンツアプリケーションを提供できます。</td> 
   </tr> 
   <tr> 
    <td>監視ワード</td> 
    <td> </td> 
-   <td>使用されなくなりました。<a href="/help/communities/moderate-ugc.md#watchwords">コミュニティのコンテンツのモデレート</a>を参照してください。</td> 
+   <td>非推奨. 詳しくは、 <a href="/help/communities/moderate-ugc.md#watchwords">コミュニティコンテンツのモデレート</a></td> 
   </tr> 
   <tr> 
    <td><a href="/help/sites-administering/workflows.md">ワークフロー</a></td> 
    <td> </td> 
-   <td>ワークフローは、編集プロセスをサポートするページまたはデジタルアセットに対する一連のアクションを制御します。</td> 
+   <td>ワークフローは、任意の編集プロセスをサポートするページやデジタルアセットに対する一連のアクションを制御します。</td> 
   </tr> 
  </tbody> 
 </table>
@@ -214,7 +214,7 @@ ht-degree: 97%
   <tr> 
    <td> </td> 
    <td><a href="/help/sites-authoring/launches.md">ローンチ</a></td> 
-   <td>マーケティングローンチを管理します。</td> 
+   <td>マーケティングローンチを管理</td> 
   </tr> 
   <tr> 
    <td>タスク</td> 
@@ -224,7 +224,7 @@ ht-degree: 97%
   <tr> 
    <td> </td> 
    <td><a href="/help/sites-authoring/task-content.md">インボックス </a></td> 
-   <td>インボックス項目を管理します。</td> 
+   <td>インボックスの項目を管理します。</td> 
   </tr> 
   <tr> 
    <td>運用</td> 
@@ -244,12 +244,12 @@ ht-degree: 97%
   <tr> 
    <td> </td> 
    <td><a href="https://helpx.adobe.com/cloud-manager/using/using-cloud-manager.html">Cloud Services</a></td> 
-   <td>Adobe Marketing Cloud に接続します。</td> 
+   <td>Adobe Marketing Cloud に接続.</td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td><a href="/help/sites-administering/workflows.md">ワークフロー</a></td> 
-   <td>ワークフローをモデル化および管理します。</td> 
+   <td>モデルと管理のワークフロー.</td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -259,7 +259,7 @@ ht-degree: 97%
   <tr> 
    <td> </td> 
    <td><a href="/help/sites-administering/reporting.md">レポート</a></td> 
-   <td>カスタムレポートを作成および監視します。<br /> </td> 
+   <td>カスタムレポートを作成および監視.<br /> </td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -274,22 +274,22 @@ ht-degree: 97%
   <tr> 
    <td> </td> 
    <td><a href="/help/sites-developing/developing-with-crxde-lite.md">CRXDE Lite</a></td> 
-   <td>Web ベースの IDE を使用してアプリケーションを開発します。</td> 
+   <td>Web ベースの IDE を使用してアプリケーションを開発.</td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td><a href="/help/sites-administering/package-manager.md">パッケージ</a></td> 
-   <td>アプリケーションをパッケージ化および共有します。</td> 
+   <td>アプリケーションをパッケージ化および共有.</td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td><a href="/help/sites-administering/package-manager.md#package-share">パッケージ共有</a></td> 
-   <td>アドビおよびコミュニティからアプリケーションをダウンロードします。<br /> </td> 
+   <td>アドビおよびコミュニティからアプリケーションをダウンロード.<br /> </td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td><a href="/help/sites-deploying/offloading.md#administering-topologies">トポロジブラウザー</a></td> 
-   <td>インスタンストポロジを表示します。</td> 
+   <td>インスタンストポロジを表示.</td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -299,12 +299,12 @@ ht-degree: 97%
   <tr> 
    <td> </td> 
    <td><a href="/help/sites-deploying/monitoring-and-maintaining.md#backups">バックアップ</a></td> 
-   <td>バックアップタスクを実行します。</td> 
+   <td>バックアップタスクを実行.</td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td>Web コンソール<br /> </td> 
-   <td>アプリケーションプラットフォームを設定および管理します。</td> 
+   <td>アプリケーションプラットフォームを設定および管理.</td> 
   </tr> 
   <tr> 
    <td> </td> 
@@ -314,12 +314,12 @@ ht-degree: 97%
   <tr> 
    <td> </td> 
    <td>ユーザー</td> 
-   <td>ユーザーを管理します。</td> 
+   <td>ユーザーを管理.</td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td>グループ</td> 
-   <td>グループを管理します。</td> 
+   <td>グループを管理.</td> 
   </tr> 
   <tr> 
    <td>外部リソース<br /> </td> 
@@ -329,16 +329,16 @@ ht-degree: 97%
   <tr> 
    <td> </td> 
    <td>ドキュメント化</td> 
-   <td>Web Experience Management のドキュメントを表示します。<br /> </td> 
+   <td>Web Experience Management のマニュアルを表示.<br /> </td> 
   </tr> 
   <tr> 
    <td> </td> 
    <td>開発者リソース</td> 
-   <td>開発者向けリソースおよびダウンロードです。</td> 
+   <td>開発者向けリソースおよびダウンロード.</td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->上述のオプションのいくつかは実際にはクラシック UI にリンクしています。
+>上記のオプションの一部は、実際にはクラシック UI にリンクします。

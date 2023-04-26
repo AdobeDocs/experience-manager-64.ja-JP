@@ -31,7 +31,7 @@ QueryBuilder の REST インターフェイスを使用するか、QueryBuilder 
 
 ## QueryBuilder の REST インターフェイスの使用 {#using-the-rest-interface-of-the-querybuilder}
 
-CRX QueryBuilder REST インターフェイスは、Java API と REST API を介してアセット共有 QueryBuilder の機能を表示します。次の手順を実行する前に [CRX QueryBuilder REST インターフェイス](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)の使用方法を学びます。
+CRX QueryBuilder REST インターフェイスは、Java API と REST API を介してアセット共有 QueryBuilder の機能を表示します。次の手順を実行する前に [CRX QueryBuilder REST インターフェイス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の使用方法を学びます。
 
 1. URL `https://[server]:[port]/lc/bin/querybuilder.json` を参照 
 
@@ -49,7 +49,7 @@ CRX QueryBuilder REST インターフェイスは、Java API と REST API を介
 
 ## QueryBuilder API を使用したサービスの作成  {#creating-a-service-using-query-builder-api-nbsp}
 
-QueryBuilder API を使用してサービスを作成するための前提条件は、[CQ OSGI バンドルの作成と導入](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)および [QueryBuilder API の使用](https://docs.adobe.com/docs/en/cq/current/dam/customizing_and_extendingcq5dam/query_builder.html)です。
+QueryBuilder API を使用してサービスを作成するための前提条件は、[CQ OSGI バンドルの作成と導入](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)および [QueryBuilder API の使用](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)です。
 
 1. 適切な注釈で OSGi サービスを作成します。QueryBuilder にアクセスするには、次を使用します。
 
@@ -632,7 +632,7 @@ response.setCharacterEncoding("utf-8");
 
 ## 既存のプロセスレポート UI へのレポート UI の統合  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
-結果を表示するための個別の UI を作成するための前提条件は [Sling の基本](https://wem.help.adobe.com/enterprise/ja_jp/10-0/wem/developing/the_basics.html)、[CRX ノードの作成](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node)および適切な[アクセス権限](https://docs.adobe.com/docs/en/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)です。
+結果を表示するための個別の UI を作成するための前提条件は [Sling の基本](https://wem.help.adobe.com/enterprise/ja_jp/10-0/wem/developing/the_basics.html)、[CRX ノードの作成](https://docs.adobe.com/docs/jp/crx/current/developing/development_tools/developing_with_crxde_lite.html#Creating%20a%20Node)および適切な[アクセス権限](https://docs.adobe.com/docs/jp/crx/current/developing/development_tools/developing_with_crxde_lite.html#Access%20Control)です。
 
 1. 別の UI を作成します。詳しくは、 [別の UI の作成](#creating-a-separate-ui-nbsp) 」セクションに入力します。
 1. `/content/process-reporting-runtime/custom-reports` プラグイン可能なすべてのレポート用ノードに、子 `nt:unstructured` ノードを作成します。

@@ -1,7 +1,7 @@
 ---
 title: API ガイド
 seo-title: API Guides
-description: アプリケーション開発用に AEM によって提供される API のドキュメント
+description: アプリケーション開発用にAEMが提供する API に関するドキュメント
 seo-description: Documentation for the APIs that AEM provides for developing applications
 uuid: 4ace24c8-8bdf-4c68-b21d-ad2c03cf7362
 contentOwner: Guillaume Carlino
@@ -14,19 +14,19 @@ exl-id: 0c80ee60-d2dd-49ad-a283-81fdb1fd201e
 source-git-commit: 31d6111a82a3cbfef22970d05280b0d3fd1c0de7
 workflow-type: tm+mt
 source-wordcount: '258'
-ht-degree: 96%
+ht-degree: 64%
 
 ---
 
 # API ガイド{#api-guides}
 
-AEM は、いくつかのアプリケーション開発用 API を提供します。以下は、AEM によってサポートされる API の ドキュメントです。
+AEMは、アプリケーションを開発するための API をいくつか提供しています。 次のリストは、AEMでサポートされている API のドキュメントを示しています。
 
 * [Adobe AEM 6.4.0 API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html)
 
 * [API の違い](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/diff-previous/changes.html)
 
-* [Granite UI（タッチ操作対応）API ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)
+* [Granite UI（タッチ操作対応）API ドキュメント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html)
 
 * [Coral UI ガイド](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
 
@@ -43,13 +43,13 @@ AEM シングルページアプリケーション（SPA）Editor SDK Framework J
 * [React 編集可能コンポーネント](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 * [編集可能な Angular コンポーネント](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
-AEM 配信およびコンテンツ管理 API
+AEM Delivery およびコンテンツ管理 API:
 
-* コアコンポーネント（JSON）
+* コアコンポーネント (JSON)
 
    * [JSON エクスポーター](/help/sites-developing/json-exporter.md)
    * [コンポーネントの JSON エクスポートの有効化](/help/sites-developing/json-exporter-components.md)
-   * 詳しくは、[『開発ユーザーガイド』の「コンポーネント」節](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js)を参照してください。
+   * 詳しくは、[『開発ユーザーガイド』の「コンポーネント」節](https://helpx.adobe.com/experience-manager/6-4/sites/developing/user-guide.html?topic=/experience-manager/6-4/sites/developing/morehelp/components.ug.js)を参照してください。
 
 * [AEM Assets HTTP API](/help/assets/mac-api-assets.md)
 

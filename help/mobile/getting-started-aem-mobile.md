@@ -1,7 +1,7 @@
 ---
 title: AEM Mobile 使用の手引き
 seo-title: Getting Started with AEM Mobile
-description: このページは、AEM Mobile のランディングページとなります。このページでは、アプリ作成の 3 つの異なる方法の概要について説明します。
+description: このページは、AEM Mobileのランディングページとして機能します。 アプリを作成する 3 つの異なる方法について学ぶには、このページを出発点として参照してください。
 seo-description: This page serves as a landing page for AEM Mobile. Follow this page as a starting point to learn about the three different ways for creating apps.
 uuid: a5398216-f9bb-4009-a9f8-a4f0135db67c
 contentOwner: User
@@ -13,7 +13,7 @@ exl-id: 3c9d856e-4f94-4295-9f30-d675110016b7
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '206'
-ht-degree: 74%
+ht-degree: 5%
 
 ---
 
@@ -21,18 +21,18 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 >[!CAUTION]
 >
->AEM 6.2 または 6.3 から AEM 6.4 に移行する既存の AEM Mobile アプリユーザーは、[PackageShare からパッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-mobile-package)をダウンロードすれば、AEM Mobile アプリを引き続き使用できます。ただし、AEM 6.4 の新規インストールは、AEM Mobile アプリ機能をサポートしていません。
+>AEM 6.2 または 6.3 からAEM 6.4 に移行する既存のAEM Mobile Apps のお客様は、引き続き、 [パッケージ共有からのパッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/compatpack/aem-mobile-package). ただし、AEM 6.4 の新規インストールでは、AEM Mobile Apps 機能はサポートされません。
 
-Adobe Experience Manager(AEM)Mobile は、AEM Assets、Sites、Screens、Workflow、User Manager、Commerce およびFormsを活用する、Adobe Experience Managerマルチチャネルデジタルプラットフォームに含まれています。 AEM Mobile では非常に柔軟なデプロイメントが可能で、様々なコンテンツソースを利用できます。
+Adobe Experience Manager(AEM)Mobile は、AEM Assets、Sites、Screens、Workflow、User Manager、Commerce およびFormsを活用する、Adobe Experience Managerマルチチャネルデジタルプラットフォームに含まれています。 AEM Mobileは、優れた展開の柔軟性を備え、企業が様々なコンテンツソースを使用できるようにします。
 
-AEM Mobile では、複数の方法でアプリを作成できます。以下の 3 つの方法でアプリを作成できます。
+AEM Mobileには、アプリを作成する複数の方法が用意されています。 アプリを作成する 3 つの方法は次のとおりです。
 
-* **[On-Demand Services を使用（AEM あり）](/help/mobile/getting-started-aem-mobile-on-demand.md)**
-* **[On-Demand Services を使用（AEM なし）](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html)**
+* **[AEMでの On-Demand Services の使用](/help/mobile/getting-started-aem-mobile-on-demand.md)**
+* **[AEMを使用しない On-Demand Services の使用](https://helpx.adobe.com/digital-publishing-solution/topics.html)**
 * **[AEMでのAdobe PhoneGap Enterprise の使用](/help/mobile/getting-started-aem-mobile-phonegap.md)**
 
 >[!NOTE]

@@ -1,7 +1,7 @@
 ---
 title: Analytics 用のサーバーサイドのページネーミングの実装
 seo-title: Implementing Server-Side Page Naming for Analytics
-description: Adobe Analytics は、s.pageName プロパティを使用してページを一意に識別し、そのページのために収集されたデータを関連付けます
+description: Adobe Analyticsは、s.pageName プロパティを使用して、ページを一意に識別し、ページ用に収集されたデータを関連付けます
 seo-description: Adobe Analytics uses the s.pageName property to uniquely identify pages and to associate the data that is collected for the pages
 uuid: 37b92099-0cce-4b2d-b55c-928f636dbd7e
 contentOwner: User
@@ -13,7 +13,7 @@ exl-id: e45b56e9-2fd1-4c29-9384-350e1376c193
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '858'
-ht-degree: 100%
+ht-degree: 78%
 
 ---
 
@@ -51,18 +51,18 @@ CQ 変数をフレームワークの `s.pageName` プロパティにマッピン
 >
 >DefaultPageNameProvider サービスは、サービスランキングとして 100 を使用します。
 
-## Analytics レポートにおける連続性の維持 {#maintaining-continuity-in-analytics-reporting}
+## Analytics レポートでの継続性の維持 {#maintaining-continuity-in-analytics-reporting}
 
-ページの分析データに関するすべての履歴を維持するには、一度も変更されたことがないページに使用される s.pageName プロパティの値が必要です。ただし、基盤ページコンポーネントが定義する分析プロパティは簡単に変更できます。例えば、ページを移動すると `pagedata.path` の値が変更され、レポート履歴の連続性が途切れて、次のようなことが起こります。
+ページの分析データの完全な履歴を保持するには、ページに使用される s.pageName プロパティの値が変更されない必要があります。 ただし、基盤ページコンポーネントで定義される分析プロパティは簡単に変更できます。 例えば、ページを移動すると `pagedata.path` の値が変更され、レポート履歴の連続性が途切れて、次のようなことが起こります。
 
-* 前のパスで収集されたデータは、このページと関連付けられなくなります。
-* 以前に他のページが使用していたパスを別のページが使用する場合は、後から使用するほうのページがそのパスのデータを継承します。
+* 以前のパスで収集されたデータは、ページに関連付けられなくなります。
+* 別のページが、別のページが 1 回使用したパスを使用している場合、そのパスのデータは異なるページに継承されます。
 
 レポートの連続性を保証するには、`s.pageName` の値に以下の性質を持たせる必要があります。
 
-* 一意性。
-* 安定性。
-* 人間にとっての可読性。
+* 固有.
+* 安定しています。
+* 人間が読み取り可能
 
 例えば、カスタムページコンポーネントに、作成者がページの一意の ID を指定するために使用するページプロパティ（`s.pageProperties` プロパティの値として使用されるもの）を含めることができます。
 
@@ -76,9 +76,9 @@ CQ 変数をフレームワークの `s.pageName` プロパティにマッピン
 
 ### Analytics ページ名プロバイダーサービスの実装 {#implementing-an-analytics-page-name-provider-service}
 
-`com.day.cq.analytics.sitecatalyst.AnalyticsPageNameProvider` インターフェイスを OSGi サービスとして実装し、`s.pageName` プロパティの値を取得するロジックをカスタマイズします。サイトページ分析およびコンテンツインサイトでこのサービスを使用して、Analytics からレポートデータを取得します。
+`com.day.cq.analytics.sitecatalyst.AnalyticsPageNameProvider` インターフェイスを OSGi サービスとして実装し、`s.pageName` プロパティの値を取得するロジックをカスタマイズします。サイトページ分析およびコンテンツインサイトでは、このサービスを使用して Analytics からレポートデータを取得します。
 
-AnalyticsPageNameProvider インターフェイスで定義されている次の 2 つのメソッドを実装する必要があります。
+AnalyticsPageNameProvider インターフェイスは、実装が必要な次の 2 つのメソッドを定義します。
 
 * `getPageName`：`s.pageName` プロパティとして使用する値を表す `String` 値を返します。
 
@@ -91,9 +91,9 @@ AnalyticsPageNameProvider インターフェイスで定義されている次の
 * ページの `Resource` オブジェクト。
 * ページの `ResourceResolver` オブジェクト。
 
-このクラスは、ページ名の setter も提供します。
+このクラスは、ページ名のセッターも提供します。
 
-### サンプル AnalyticsPageNameProvider 実装 {#example-analyticspagenameprovider-implementation}
+### AnalyticsPageNameProvider の実装例 {#example-analyticspagenameprovider-implementation}
 
 以下に示すサンプル `AnalyticsPageNameProvider` 実装は、以下のようなカスタムページコンポーネントをサポートしています。
 
@@ -122,7 +122,7 @@ public String getPageName(AnalyticsPageNameContext context) {
     }
 ```
 
-以下に示す getResource メソッドの実装は、ページの Resource オブジェクトを返します。
+次に示す getResource メソッドの実装は、ページの Resource オブジェクトを返します。
 
 ```java
      public Resource getResource(AnalyticsPageNameContext context) {
@@ -154,7 +154,7 @@ public String getPageName(AnalyticsPageNameContext context) {
     }
 ```
 
-以下のコードは、サービスを設定する SCR アノテーションを含む、クラス全体を表します。デフォルトのサービスをオーバーライドするサービスランキングが 200 であることに注意してください。
+次のコードは、サービスを設定する SCR 注釈を含む、クラス全体を表しています。 サービスのランキングは、デフォルトのサービスを上書きする 200 です。
 
 ```java
 /*************************************************************************

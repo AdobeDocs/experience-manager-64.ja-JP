@@ -9,7 +9,7 @@ role: Admin,User
 source-git-commit: 79ff6834acd2bc1105bbea798d946cd7354474d5
 workflow-type: tm+mt
 source-wordcount: '1077'
-ht-degree: 92%
+ht-degree: 93%
 
 ---
 
@@ -53,7 +53,7 @@ Experience LeagueによるDynamic Mediaニュースレターは、Dynamic Media�
    * Dynamic Media Classic のオンデマンドのスキルビルダー Web セミナーの視聴
    * Online Adobe Summit 2020 の Dynamic Media セッションを表示
    * 無料の Dynamic Media Classic 監査の詳細
-   * Meet `Jon Monroe`(Adobeカスタマーソリューション担当シニアプログラムマネージャー )
+   * アドビカスタマーソリューションの担当シニアプログラムマネージャー、`Jon Monroe` を紹介します。
 
 * **[2020 年 2 月、第 2 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_02_2020_Feb.html?lang=ja)**
 

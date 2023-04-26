@@ -1,7 +1,7 @@
 ---
 title: レプリケーションのトラブルシューティング
 seo-title: Troubleshooting Replication
-description: この記事では、レプリケーションに関する問題のトラブルシューティング方法について説明します。
+description: この記事では、レプリケーションの問題のトラブルシューティング方法に関する情報を提供します。
 seo-description: This article provides information on how to troubleshoot replication issues.
 uuid: 7c3fdaad-0916-4159-a26c-17ff8c6617fe
 contentOwner: Guillaume Carlino
@@ -14,29 +14,29 @@ exl-id: e83317bb-e69c-4e2c-92f8-4f613786e7ae
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1270'
-ht-degree: 94%
+ht-degree: 36%
 
 ---
 
 # レプリケーションのトラブルシューティング{#troubleshooting-replication}
 
-このページでは、レプリケーションに関する問題のトラブルシューティング方法について説明します。
+このページでは、レプリケーションの問題のトラブルシューティング方法に関する情報を提供します。
 
 ## 問題 {#problem}
 
-レプリケーション（順方向のレプリケーション）が何らかの原因で失敗する
+何らかの理由で、レプリケーション（非リバースレプリケーション）が失敗している。
 
 ## 解決方法 {#resolution}
 
-レプリケーションが失敗するのには様々な原因があります。ここでは、これらの問題を分析する際に採用できるアプローチについて説明します。
+レプリケーションが失敗する理由は様々です。 この記事では、これらの問題を分析する際に取る可能性のあるアプローチについて説明します。
 
-**「アクティベート」ボタンをクリックすると、レプリケーションがトリガーされますか。トリガーされない場合は、次の操作をおこないます。**
+**「アクティブ化」ボタンをクリックしたときに、レプリケーションがトリガーされますか。 そうでない場合は、次の操作を行います。**
 
 1. /crx/explorer (CQ5.5) に移動し、管理者としてログインします。
-1. 「Content Explorer」を開きます。
-1. ノード /bin/replicate または /bin/replicate.json が存在するかを確認します。ノードが存在する場合は、削除して保存します。
+1. 「Content Explorer」を開く
+1. ノード/bin/replicate または/bin/replicate.jsonが存在するかどうかを確認します。 ノードが存在する場合は、そのノードを削除して保存します。
 
-**レプリケーションがレプリケーションエージェントのキュー内で待機している状態ですか。**
+**レプリケーションはレプリケーションエージェントキューでキューに入っていますか。**
 
 確認するには、/etc/replication/agents.author.html に移動し、レプリケーションエージェントをクリックします。
 
@@ -54,25 +54,25 @@ ht-degree: 94%
 
    1. https://に移動します。&lt;host>:&lt;port>/crx にログインし、管理者ユーザーとしてログインします。 CQ5.5 で、https://に移動します。&lt;host>:&lt;port>/crx/explorer を使用します。
    1. 「Content Explorer」をクリックします。
-   1. Content Explorer ウィンドウの右上にある虫眼鏡ボタンをクリックすると、検索ダイアログがポップアップします。
+   1. 「Content Explorer」ウィンドウで、ウィンドウの右上にある虫眼鏡のボタンをクリックすると、検索ダイアログがポップアップ表示されます。
    1. 「XPath」ラジオボタンを選択します。
    1. 「Query」ボックスに、次のクエリを入力します。 /jcr:root/var/eventing/jobs//element(&amp;ast;,slingevent:Job) order by @slingevent:created
    1. 「検索」をクリックします。
-   1. 検索結果の上位の項目が、最新の Sling イベントジョブです。各ジョブをクリックして、キューの一番上に表示されるものと同じ、動きのないレプリケーションを見つけます。
+   1. 結果では、上位の項目は最新の Sling イベンティングジョブです。 それぞれをクリックし、キューの上部に表示される内容に一致する、停止したレプリケーションを見つけます。
 
-1. Sling イベントフレームワークジョブのキューに問題が発生している可能性があります。/system/console の org.apache.sling.event バンドルを再起動してみます。
-1. ジョブの処理が完全に無効になっている可能性があります。Felix コンソールの「Sling Eventing」タブで確認できます。Apache Sling Eventing (JOB PROCESSING IS DISABLED!) と表示されるか確認します。
+1. Sling イベンティングフレームワークのジョブキューに問題がある可能性があります。 /system/console で org.apache.sling.event バンドルを再起動してみてください。
+1. ジョブ処理が完全にオフになっている可能性があります。 Sling Eventing Tab の Felix コンソールで確認できます。 「Apache Sling Eventing （JOB PROCESSING が無効になっています。）」と表示されるかどうかを確認します。
 
-   * 表示される場合は、Felix コンソールの「Configuration」タブで Apache Sling Job Event Handler を確認します。「Job processing Enabled」チェックボックスがチェックされていない場合があります。このチェックボックスがチェックされているのに「job processing is disabled」と表示される場合は、ジョブの処理を無効にしているオーバーレイが /apps/system/config にないか確認します。osgi:config ノードを作成し、jobmanager.enabled のブール値を true にして、アクティベートを開始したらキューにジョブが残っていないかを再確認します。
+   * 有効な場合は、Felix コンソールの「Configuration」タブで「Apache Sling Job Event Handler」をオンにします。 [ ジョブ処理が有効 ] チェックボックスがオフになっている可能性があります。 このオプションをオンにしても「ジョブ処理が無効です」と表示される場合は、ジョブ処理を無効にするオーバーレイが/apps/system/config の下に存在するかどうかを確認します。 boolean 値を true に設定して jobmanager.enabled の osgi:config ノードを作成し、アクティベーションが開始したかどうか、およびキューにジョブがなくなったかどうかを再確認します。
 
-1. また、DefaultJobManager 設定に不整合がある状態になる場合もあります。OSGi コンソール経由で「Apache Sling Job Event Handler」を手動で変更したユーザーがいる場合にこのような事態になります（例えば、「Job Processing Enabled」プロパティを無効にした後に再度有効にして、設定を保存した場合）。
+1. また、DefaultJobManager 構成に一貫性のない状態が発生する場合もあります。 この問題は、ユーザーが OSGiconsole で「Apache Sling Job Event Handler」設定を手動で変更した場合に発生する可能性があります（例えば、「Job Processing Enabled」プロパティを無効にして再度有効にし、設定を保存します）。
 
-   * この時点で、crx-quickstart/launchpad/config/org/apache/sling/event/impl/jobs/DefaultJobManager.config に保存されている DefaultJobManager 設定に不整合がある状態になります。さらに、「Apache Sling Job Event Handler」プロパティで「Job Processing Enabled」がチェックされた状態でも、いずれかのユーザーが「Sling Eventing」タブに移動すると、「JOB PROCESSING IS DISABLED」というメッセージが表示され、レプリケーションが動作しません。
+   * この時点で、crx-quickstart/launchpad/config/org/apache/sling/event/impl/jobs/DefaultJobManager.configに保存されている DefaultJobManager 設定が不整合な状態になります。 また、「Apache Sling Job Event Handler」プロパティで「Job Processing Enabled」がチェック状態になっている場合でも、「Sling Eventing」タブに移動すると、「JOB PROCESSING IS DISABLED」というメッセージが表示され、レプリケーションは機能しません。
    * この問題を解決するには、OSGi コンソールの「Configuration」ページに移動して、「Apache Sling Job Event Handler」設定を削除する必要があります。次に、クラスターのマスターノードを再起動して、設定を整合性のある状態に戻します。この操作によって問題が修正され、レプリケーションが再び動作を開始します。
 
 **replication.log の作成**
 
-すべてのレプリケーションログを、個別のログファイルに DEBUG レベルで追加するように設定すると、場合によっては非常に便利です。次の手順を実行します。
+すべてのレプリケーションログを別のログファイルの DEBUG レベルで追加するように設定すると非常に役立つ場合があります。 次の手順を実行します。
 
 1. に移動します。 `https://host:port/system/console/configMgr` 管理者としてログインします。
 1. Apache Sling Logging Logger ファクトリを探して、ファクトリ設定の右側の「**+**」ボタンをクリックしてインスタンスを作成します。新しいログロガーが作成されます。
@@ -82,33 +82,33 @@ ht-degree: 94%
    * ログファイルのパス： *（CQ5.4 および 5.3）* ../logs/replication.log *(CQ5.5)* logs/replication.log
    * カテゴリ：com.day.cq.replication
 
-1. 問題が何らかの形で Sling イベントまたはジョブに関連する疑いがある場合は、この Java パッケージをカテゴリ org.apache.sling.event に追加することもできます。
+1. 問題が何らかの形で sling eventing/jobs に関連していると思われる場合は、次のカテゴリにこの java パッケージを追加することもできます。org.apache.sling.event
 
-### レプリケーションエージェントキューの一時停止  {#pausing-replication-agent-queue}
+### レプリケーションエージェントキューを一時停止中  {#pausing-replication-agent-queue}
 
-オーサーシステムの負荷を軽減するために、レプリケーションキューを無効にせずに一時停止することが適している場合があります。現在、これをおこなう唯一の方法は、無効なポートを一時的に設定することです。5.4 以降は、レプリケーションエージェントキューに一時停止ボタンが表示されますが、一部の制限があります。
+オーサーシステムの負荷を減らすために、無効にせずにレプリケーションキューを一時停止するのが適している場合があります。 現在、これは、無効なポートを一時的に設定するハッキングによってのみ可能です。 5.4 以降では、レプリケーションエージェントキューに一時停止ボタンが表示されるようになりましたが、いくつかの制限があります
 
-1. 状態が永続化されません。そのため、サーバーまたはレプリケーションバンドルを再起動すると、実行中の状態に戻ります。
-1. 一時停止は短い期間（他のスレッドによるレプリケーションを含むアクティビティがなくなってから 1 時間）アイドル状態になりますが、長い期間は不可能です。スレッドのアイドル状態を防ぐ機能が Sling にあるからです。基本的には、ジョブキュースレッドが長い期間未使用の状態であるかを確認し、そうである場合はクリーンアップサイクルを開始します。クリーンアップサイクルによってスレッドが停止するので、一時停止されている設定が消失します。ジョブは永続化されるので、新しいスレッドを開始してキューを処理します。このキューには、一時停止設定の詳細情報がありません。そのため、キューが実行状態になります。
+1. 状態は保持されません。つまり、サーバーまたはレプリケーションバンドルを再起動すると、実行状態に戻ります。
+1. 一時停止は、より短い期間（他のスレッドによるレプリケーションを使用するアクティビティがなかった後、OOB 1 時間）アイドル状態で、長時間はアイドル状態になりません。 スレッドがアイドル状態になるのを避ける機能が sling に存在するからです。 基本的に、ジョブキュースレッドが長時間使用されていないかどうかを確認します。使用している場合は、クリーンアップサイクルを開始します。 クリーンアップサイクルにより、スレッドが停止し、一時停止した設定が失われます。 ジョブは永続化されるので、一時停止された設定の詳細を持たないキューを処理するための新しいスレッドを開始します。 このキューは、実行状態に変わります。
 
-### ユーザーのアクティベート時にページ権限がレプリケートされない {#page-permissions-are-not-replicated-on-user-activation}
+### ユーザーアクティベーションでページ権限がレプリケートされません {#page-permissions-are-not-replicated-on-user-activation}
 
 ページ権限は、ユーザーに付与されるのではなく、アクセス権が付与されるノードに保存されるので、レプリケートされません。
 
-ページ権限は一般的にオーサーからパブリッシュにレプリケートするべきではなく、デフォルトではレプリケートされません。これは、これらの 2 つの環境でアクセス権が異なる必要があるためです。そのため、パブリッシュではオーサーとは別に ACL を設定することが推奨されます。
+一般的に、ページ権限は、オーサーからパブリッシュにレプリケートしないでください。デフォルトではレプリケートされません。 これは、これら 2 つの環境でアクセス権が異なる必要があるためです。 したがって、オーサーとは別に、パブリッシュに ACL を設定することをお勧めします。
 
-### オーサーからパブリッシュに名前空間情報をレプリケーションするときにレプリケーションキューがブロックされました {#replication-queue-blocked-when-replicating-namespace-information-from-author-to-publish}
+### オーサーからパブリッシュに名前空間情報をレプリケートする際にレプリケーションキューがブロックされました {#replication-queue-blocked-when-replicating-namespace-information-from-author-to-publish}
 
-場合によっては、オーサーインスタンスからパブリッシュインスタンスに名前空間情報をレプリケーションしようとすると、レプリケーションキューがブロックされます。これは、レプリケーションユーザーが `jcr:namespaceManagement` 権限を持っていないために起こります。この問題を回避するには、次のことを確認してください。
+オーサーインスタンスからパブリッシュインスタンスに名前空間情報をレプリケートしようとすると、レプリケーションキューがブロックされる場合があります。 これは、レプリケーションユーザーが `jcr:namespaceManagement` 権限を持っていないために起こります。この問題を回避するには、次のことを確認してください。
 
 * レプリケーションユーザー（「[トランスポート](/help/sites-deploying/replication.md#replication-agents-configuration-parameters)」タブ／ユーザーで設定）はパブリッシュインスタンス上にも存在します。
 * ユーザーは、コンテンツがインストールされているパスで読み取りと書き込みの権限を持っています。
 * ユーザーはリポジトリレベルで `jcr:namespaceManagement` 権限を持っています。次のようにして権限を付与できます。
 
 1. CRX/DE（`http://localhost:4502/crx/de/index.jsp`）に管理者としてログインします。
-1. 「**アクセス制御**」タブをクリックします。
-1. 「**リポジトリ**」を選択します。
-1. 「**エントリを追加**」（プラスアイコン）をクリックします。
+1. をクリックします。 **アクセス制御** タブをクリックします。
+1. 選択 **リポジトリ**.
+1. クリック **エントリを追加** （プラスアイコン）。
 1. ユーザーの名前を入力します。
 1. 権限リストから `jcr:namespaceManagement` を選択します。
 1. 「OK」をクリックします。

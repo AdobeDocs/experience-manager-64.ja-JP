@@ -1,7 +1,7 @@
 ---
 title: リクエスト分析スクリプト
 seo-title: Request Analysis Script
-description: このリクエスト分析スクリプトは、access.log ファイルの分析を簡易化し、後の処理で役立つようにわかりやすいレポートを生成します。
+description: リクエスト分析スクリプトは、access.log ファイルの分析を容易にし、後で処理するための読み取り可能なレポートを生成するように作成されます
 seo-description: The request analysis script is made to ease the analysis of the access.log files producing a readable report for later processing
 uuid: 24eff3c6-5748-46f3-a30c-4a3a6427ce1d
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: 8582bbca-c11a-4880-88ba-da22e0301dba
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 100%
+ht-degree: 87%
 
 ---
 

@@ -8,7 +8,7 @@ exl-id: d80562f7-071c-460a-9c68-65f48d36fbd9
 source-git-commit: cc9b6d147a93688e5f96620d50f8fc8b002e2d0d
 workflow-type: tm+mt
 source-wordcount: '1674'
-ht-degree: 64%
+ht-degree: 44%
 
 ---
 
@@ -21,18 +21,18 @@ Adobe Experience Manager Assets では、次のものを使用します。
 
 これらは様々な作業をカバーできます。例えば、Adobe InDesign Serverを使用してファイルを処理する場合です。
 
-ファイルをに完全にアップロードするには [!DNL Experience Manager] プロキシとしてAdobe InDesignで作成したアセットが使用されます。 このプロキシはプロキシワーカーを使用して Adobe InDesign Server と通信します。Adobe InDesign Server ではメタデータを抽出し、 Assets 用の様々なレンディションを生成するための[スクリプト](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)が実行されます。[!DNL Experience Manager]プロキシワーカーは、InDesign Serverと [!DNL Experience Manager] インスタンスがクラウド設定に含まれています。
+ファイルをに完全にアップロードするには [!DNL Experience Manager] プロキシとしてAdobe InDesignで作成したアセットが使用されます。 プロキシワーカーを使用してAdobe InDesign Server( ここでは [スクリプト](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) を実行してメタデータを抽出し、 [!DNL Experience Manager] アセット。 プロキシワーカーは、InDesign Serverと [!DNL Experience Manager] インスタンスがクラウド設定に含まれています。
 
 >[!NOTE]
 >
->Adobe InDesign は次の 2 製品で構成されます。
+>Adobe InDesignは 2 つの製品として提供されます。
 >
 >* [InDesign](https://www.adobe.com/jp/products/indesign.html)\
    >  印刷やデジタル配信のためのページレイアウトをデザインできます。
 >
 >* [InDesign Server](https://www.adobe.com/jp/products/indesignserver.html)\
    >  このエンジンを使用すれば、InDesign での作成物に基づいてドキュメントをプログラムによって自動生成できます。このエンジンは、[ExtendScript](https://www.adobe.com/jp/devnet/scripting.html) エンジンへのインターフェイスを提供するサービスとして動作します。\
-   >  スクリプトは、JavaScript に似たExtendScriptで記述されます。 Adobe InDesignスクリプトについて詳しくは、 [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
+   >  スクリプトは、JavaScript に似たExtendScriptで記述されます。 Adobe InDesignスクリプトについて詳しくは、 [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/jp/devnet/indesign/documentation.html#idscripting).
 >
 
 
@@ -50,11 +50,11 @@ InDesign Serverは、 [!DNL Experience Manager] アセットをInDesign( `.indd`
    このコマンドスクリプトは、次のことを実行します。
 
    * の取得 `.indd` ファイル。
-   * InDesign Server コマンドを実行します。
+   * InDesign Serverコマンドを実行：
 
-      * 構造、テキストおよびすべてのメディアファイルが抽出されます。
-      * PDF と JPG のレンディションが生成されます。
-      * HTML と IDML のレンディションが生成されます。
+      * 構造、テキストおよびメディアファイルが抽出されます。
+      * PDFとJPGのレンディションが生成される。
+      * HTMLと IDML レンディションが生成されます。
    * 結果のファイルをに投稿します。 [!DNL Experience Manager] アセット。
 
    >[!NOTE]
@@ -73,7 +73,7 @@ InDesign Serverは、 [!DNL Experience Manager] アセットをInDesign( `.indd`
    * 抽出したテキストとファイルは、 [!DNL Experience Manager] アセット。
    * すべてのレンディションは、 [!DNL Experience Manager] アセット内のアセット。
 
-## InDesign Server と の統合[!DNL Experience Manager] {#integrating-the-indesign-server-with-aem}
+## とのInDesign Server [!DNL Experience Manager] {#integrating-the-indesign-server-with-aem}
 
 で使用するInDesign Serverを統合するには [!DNL Experience Manager] Assets と、プロキシを設定した後は、次の操作が必要です。
 
@@ -84,27 +84,27 @@ InDesign Serverは、 [!DNL Experience Manager] アセットをInDesign( `.indd`
 
 1. [InDesign Server のプロキシワーカー](#configuring-the-proxy-worker-for-indesign-server)を設定します。
 
-### InDesign Server のインストール {#installing-the-indesign-server}
+### InDesign Server {#installing-the-indesign-server}
 
 で使用するInDesign Serverをインストールして開始するには [!DNL Experience Manager]:
 
-1. Adobe InDesign Server をダウンロードしてインストールします。
+1. Adobe InDesign Serverをダウンロードしてインストールします。
 
    >[!NOTE]
    >
    >InDesign Server（CS6 以降）。
 
-1. 必要に応じて、InDesign Server インスタンスの設定をカスタマイズできます。
+1. 必要に応じて、InDesign Serverインスタンスの設定をカスタマイズできます。
 
 1. コマンドラインから、サーバーを起動します。
 
    `<*ids-installation-dir*>/InDesignServer.com -port 8080`
 
-   SOAP プラグインがポート 8080 でリスンする状態でサーバーが起動されます。すべてのログメッセージと出力がコマンドウィンドウに直接書き込まれます。
+   これにより、SOAP プラグインでポート 8080 をリッスンしてサーバーが起動します。 すべてのログメッセージと出力は、コマンドウィンドウに直接書き込まれます。
 
    >[!NOTE]
    >
-   >ファイルに出力メッセージを保存してリダイレクトを使用する場合は、例えば Windows の場合は次のように実行します。
+   >出力メッセージをファイルに保存する場合は、リダイレクトを使用します。例えば、Windows の場合、次のようになります。
    >
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
@@ -141,11 +141,11 @@ InDesign Serverは、 [!DNL Experience Manager] アセットをInDesign( `.indd`
 
 メディア抽出ワークフロー手順で実行される `ThumbnailExport.jsx` スクリプトにより、サムネールのレンディションを JPG 形式で生成します。このレンディションはサムネール処理ワークフロー手順で使用され、[!DNL Experience Manager] で要求される静的レンディションを生成します。
 
-サムネールを処理ワークフローステップは、異なるサイズの静的レンディションを生成するように設定できます。デフォルト値は、 [!DNL Experience Manager] Assets UI 最後に、画像プレビューレンディションを削除ワークフローステップで不要になった .jpg 形式のサムネールレンディションが削除されます。
+サムネールを処理ワークフローステップは、異なるサイズの静的レンディションを生成するように設定できます。デフォルト値は、 [!DNL Experience Manager] Assets UI 最後に、画像プレビューレンディションを削除ワークフローステップで、.jpg サムネールレンディションが不要になったので削除されます。
 
 #### ページ抽出 {#page-extraction}
 
-抽出された要素から [!DNL Experience Manager] ページを作成します。抽出ハンドラーが、レンディション（現時点では HTML または IDML）からデータを抽出するために使用されます。このデータを元に、PageBuilder を使用してページが作成されます。
+抽出された要素から [!DNL Experience Manager] ページを作成します。抽出ハンドラーは、レンディション ( 現在のHTMLまたは IDML) からデータを抽出するために使用されます。 このデータは、その後、PageBuilder を使用してページを作成するために使用されます。
 
 カスタマイズするには、**ページ抽出**&#x200B;ステップの「**[!UICONTROL 引数]**」タブを編集します。
 
@@ -167,13 +167,13 @@ InDesign Serverは、 [!DNL Experience Manager] アセットをInDesign( `.indd`
 
 >[!NOTE]
 >
->ワーカーは、プロキシインスタンス上にあります。
+>ワーカーはプロキシインスタンス上に存在します。
 
-1. 「ツール」コンソールの左側のウィンドウで、「**[!UICONTROL クラウドサービス設定]**」を展開します。次に、「**[!UICONTROL クラウドプロキシ設定]**」を展開します。
+1. ツールコンソールで、を展開します。 **[!UICONTROL Cloud Services設定]** をクリックします。 次に、 **[!UICONTROL クラウドプロキシ設定]**.
 
 1. 「**[!UICONTROL IDS ワーカー]**」をダブルクリックし、開いて設定します。
 
-1. 「**[!UICONTROL 編集]**」をクリックして設定ダイアログを開き、必要な設定を定義します。
+1. クリック **[!UICONTROL 編集]** 設定ダイアログを開き、必要な設定を定義するには、次の手順を実行します。
 
    ![proxy_idsworkerconfig](assets/proxy_idsworkerconfig.png)
 
@@ -187,7 +187,7 @@ InDesign Serverと [!DNL Experience Manager] は別のホスト上にあるか�
 
 1. `https://[AEM_server]:[port]/system/console/configMgr` の URL で Configuration Manager にアクセスします。
 1. **[!UICONTROL Day CQ Link Externalizer]** の設定を探します。「**[!UICONTROL 編集]**」をクリックして開きます。
-1. Link Externalizer の設定は、 [!DNL Experience Manager] デプロイメントと [!DNL InDesign Server]. 用途 **[!UICONTROL ドメイン]** ホスト名と [!DNL Adobe InDesign Server]. 画面に表示される手順に従ってください。「**[!UICONTROL 保存]**」をクリックします。
+1. Link Externalizer の設定は、 [!DNL Experience Manager] デプロイメントと [!DNL InDesign Server]. 用途 **[!UICONTROL ドメイン]** ホスト名と [!DNL Adobe InDesign Server]. 画面に表示される指示に従います。 「**[!UICONTROL 保存]**」をクリックします。
 
    ![Link externalizer 設定](assets/link-externalizer-config.png)
 
@@ -197,12 +197,12 @@ IDS の並列ジョブ処理を有効にすることができます。
 
 まず、InDesign Server が処理できる並列ジョブの最大数（`x`）を決定する必要があります。
 
-* 単一のマルチプロセッサーマシンでは、InDesign Server が処理できる並列ジョブの最大数（x）は、IDS を実行するプロセッサー数から 1 を減算した数です。
-* 複数のマシンで IDS を実行する場合は、すべてのマシンで使用可能なプロセッサーの総数を把握して、そこからマシン総数を減算する必要があります。
+* 1 台のマルチプロセッサマシンで、InDesign Serverが処理できる並列ジョブの最大数 (x) は、IDS を実行するプロセッサの数より 1 少ない。
+* 複数のマシンで IDS を実行する場合は、使用可能なプロセッサの総数（つまりすべてのマシン）をカウントし、マシンの総数を減算する必要があります。
 
-IDS 並列ジョブ数を設定するには：
+並列 IDS ジョブ数を設定するには：
 
-1. Felix Console の「**[!UICONTROL Configurations]**」タブを開きます。次に URL の例を挙げます。
+1. を開きます。 **[!UICONTROL 設定]** Felix コンソールのタブ例：
 
    `http://localhost:4502/system/console/configMgr`
 
@@ -219,7 +219,7 @@ IDS 並列ジョブ数を設定するには：
 1. AdobeCS6 以降のマルチセッションサポートを有効にするには、 `enable.multisession.name` 下のチェックボックス `com.day.cq.dam.ids.impl.IDSJobProcessor.name configuration`.
 1. の作成 [プール &lt; `*x*>` IDS ワーカー設定に SOAP エンドポイントを追加することによる IDS ワーカー](#configuring-the-proxy-worker-for-indesign-server).
 
-   複数のマシンで InDesign Server を実行している場合は、マシンあたりのプロセッサー数から 1 を減算した数の SOAP エンドポイントを各マシンに追加します。
+   複数のマシンがInDesign Serverを実行している場合は、各マシンに SOAP エンドポイント（マシンごとのプロセッサ数 —1）を追加します。
 
    >[!NOTE]
    >
@@ -252,4 +252,4 @@ InDesign Server 10.0 以降では、次の手順を実行してマルチセッ�
 
 1. `/etc/cloudservices/proxy.html` にアクセスします。
 1. ダイアログで、新しいユーザー名とパスワードを指定します。
-1. この資格情報を保存します。
+1. 資格情報を保存します。

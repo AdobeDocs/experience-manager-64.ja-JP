@@ -9,7 +9,7 @@ exl-id: 2da4c0b3-119e-436e-9f03-f794283e9a37
 source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
 source-wordcount: '784'
-ht-degree: 89%
+ht-degree: 74%
 
 ---
 
@@ -21,26 +21,26 @@ ht-degree: 89%
 
 HTTP/2 によりブラウザーとサーバーの通信が改善され、必要な処理能力を抑えながら情報をより高速に転送できます。
 
-HTTP/2 とその利点については、次の Web サイトで簡潔に説明されています。
+次の Web サイトでは、HTTP/2 とその利点について簡単かつ簡単に説明します。
 
 [https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/](https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/)
 
 ## コンテンツ配信を HTTP/2 に移行する主なメリット  {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
-パフォーマンスがどれくらい向上するかは、Web サイトのコード、Dynamic Media の使用方法、消費者のデバイス、画面と場所などに応じて異なります。
+パフォーマンスの向上は、Web サイトのコード、Dynamic Mediaの使用方法、消費者のデバイス、画面、場所などの要因によって大きく異なります。
 
 アドビ独自のテストでは、以下の結果が出ています。
 
-* 画像の場合、デバイスおよびブラウザーに応じて、応答時間が 7％～28％向上しました。パフォーマンスの向上は、iOS デバイスにおいて最も顕著でした。
+* 画像の場合、デバイスおよびブラウザーに応じて、応答時間が 7％～28％向上しました。パフォーマンスの最も顕著な向上は、iOSデバイスでした。
 * ビューアの場合、読み込み時間のパフォーマンスが 15％向上しました。
 
-以下のデモは、HTTP/1 と HTTP/2 の読み込みの差異を示しています。
+次のデモは、HTTP/1 と HTTP/2 の読み込みの違いを示しています。
 
 [https://http2.akamai.com/demo](https://http2.akamai.com/demo)
 
-## HTTP/2 に切り替えるには {#am-i-eligible-to-switch-over-to-http}
+## HTTP/2 に切り替える資格はありますか？ {#am-i-eligible-to-switch-over-to-http}
 
-HTTP/2 を使用するには、以下の要件を満たしている必要があります。
+HTTP/2 を使用するには、次の要件を満たす必要があります。
 
 * リッチメディアリクエストにセキュア HTTPS を使用している。
 * アドビ製品にバンドルされたコンテンツ配信ネットワーク（CDN）を Dynamic Media Classic ライセンスの一部として使用している。
@@ -53,17 +53,17 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 1. [Admin Console を使用してサポートケースを作成](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)し、HTTP/2 に切り替えるように要求する必要があります。自動的には切り替わりません。
 1. サポートケースには、次の情報を記入してください。
 
-   * 主要連絡先名、電子メールおよび電話番号。
+   * 主要連絡先名、メールおよび電話番号。
    * HTTP/2 への切り替えが必要なすべてのドメイン。つまり、`images.company.com` または `mycompany.scene7.com`。
 
-      ドメインを見つけるには、 [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app). 次に、 **[!UICONTROL 「設定」>「アプリケーション設定」>「一般設定」]**. ラベルの付いたフィールドを探します **[!UICONTROL 公開先サーバー名。]**
+      ドメインを見つけるには、 [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=ja#system-requirements-dmc-app). 次に、 **[!UICONTROL 「設定」>「アプリケーション設定」>「一般設定」]**. ラベルの付いたフィールドを探します **[!UICONTROL 公開先サーバー名。]**
    **[!UICONTROL 設定／アプリケーション設定／一般設定]**&#x200B;をクリックします。「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。
 
-   * リッチメディアリクエストについて、セキュリティで保護された HTTPS を使用していることを確認します。
-   * 直接的関係で管理するのではなく、アドビを介して CDN を使用していることを確認します。
+   * リッチメディアリクエストにセキュアな HTTPS を使用していることを確認します。
+   * 直接の関係で管理されていない、Adobeを通じて CDN を使用していることを確認します。
    * 専用ドメインを使用していることを確認します。つまり、`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` などの汎用の Dynamic Media ドメインではなく、`images.company.com` または `mycompany.scene7.com` です。
 
-      ドメインを見つけるには、 [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app). 次に、 **[!UICONTROL 「設定」>「アプリケーション設定」>「一般設定」]**. **[!UICONTROL 公開先サーバー名というラベルの付いたフィールドを見つけます。]**&#x200B;現在、汎用の Dynamic Media ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
+      ドメインを見つけるには、 [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=ja#system-requirements-dmc-app). 次に、 **[!UICONTROL 「設定」>「アプリケーション設定」>「一般設定」]**. **[!UICONTROL 公開先サーバー名というラベルの付いたフィールドを見つけます。]**&#x200B;現在、汎用の Dynamic Media ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
    1. テクニカルサポートによって、リクエストの送信順に基づいて HTTP/2 の顧客待機リストに追加されます。
    1. アドビでリクエストを処理する準備が整うと、サポートから連絡があり、移行についての調整および完了予定日の設定がおこなわれます。
    1. 完了後に通知があり、HTTP/2 への正常な切り替えを確認できます。
@@ -82,7 +82,7 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 
 HTTP/2 への切り替えには、新しい CDN 設定への移行が伴うので、CDN でキャッシュがクリアされます。
 
-キャッシュが再作成されるまで、キャッシュされていないコンテンツはアドビの元のサーバーに直接アクセスして取得されます。このため、元のサーバーからリクエストをプルするときに許容できるパフォーマンスが維持されるように、アドビでは一度に少数の顧客の移行を処理するよう計画します。
+キャッシュされていないコンテンツは、キャッシュが再構築されるまで、Adobeの元のサーバーに直接ヒットします。 このため、元のサーバーからリクエストをプルするときに許容できるパフォーマンスが維持されるように、アドビでは一度に少数の顧客の移行を処理するよう計画します。
 
 ## URL または Web サイトが HTTP/2 でアクティベートされていることを確認する方法 {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 

@@ -1,7 +1,7 @@
 ---
 title: エラーダイアログのカスタマイズ
 seo-title: Customizing error dialogs
-description: LiveCycle AEM Forms Workspace のエラーダイアログをカスタマイズして、異なるエラー説明を追加する方法。
+description: 異なるフォルト説明を追加するためにLiveCycleAEM Forms Workspace のエラーダイアログをカスタマイズする方法。
 seo-description: How-to customize the error dialogs of LiveCycle AEM Forms workspace to add different fault descriptions.
 uuid: 5ed1da68-bd5b-4a36-9a14-9d61733237e6
 content-type: reference
@@ -12,7 +12,7 @@ exl-id: e45f7f79-a5c3-439c-bf6c-7b14590cd3fc
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '148'
-ht-degree: 100%
+ht-degree: 79%
 
 ---
 
@@ -45,7 +45,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 
    >[!NOTE]
    >
-   >対応するキーと値のペアをすべてのサポートされている言語に追加します。
+   >対応するキーと値のペアを、サポートされるすべての言語に追加します。
 
 ## CSS のカスタマイズ {#customizing-css}
 

@@ -1,7 +1,7 @@
 ---
 title: タスクのタブのカスタマイズ
 seo-title: Customizing tabs for a task
-description: LiveCycle AEM Forms Workspace でタスクのタブ名をカスタマイズする方法。
+description: LiveCycleAEM Forms Workspace でタスクのタブ名をカスタマイズする方法。
 seo-description: How-to customize the names of the tabs for your tasks, in LiveCycle AEM Forms workspace.
 uuid: 77eabb63-f8ea-4ec0-8a41-b51c65cdecc0
 content-type: reference
@@ -12,7 +12,7 @@ exl-id: 42671435-e0f0-41db-af83-182b01742954
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '101'
-ht-degree: 100%
+ht-degree: 85%
 
 ---
 

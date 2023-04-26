@@ -13,13 +13,13 @@ exl-id: 6b8b19ae-eb3b-46d5-ab44-18c43d11aa61
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '101'
-ht-degree: 36%
+ht-degree: 5%
 
 ---
 
 # 割り当て機能 {#assignments-feature}
 
-コンポーネントブラウザーのコミュニティグループにあるイネーブルメント割り当てコンポーネントと[イネーブルメントカタログ](catalog.md)コンポーネントは、[イネーブルメントコミュニティ](overview.md#enablement-community)のコンポーネントです。
+イネーブルメントの割り当てと [実施可能カタログ](catalog.md) コンポーネントブラウザーのコミュニティグループにあるコンポーネントは、 [実施可能コミュニティ](overview.md#enablement-community).
 
 イネーブルメントの割り当てコンポーネントを使用すると、現在サインインしているコミュニティメンバー（学習者）が、割り当てられたメンバーにアクセスできます [イネーブルメントリソース](resources.md).
 

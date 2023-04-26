@@ -1,7 +1,7 @@
 ---
 title: JavaScript ファイルの縮小
 seo-title: Minification of the JavaScript files
-description: AEM Forms Workspace をカスタマイズした後で JS ファイルを Web 用に最適化するための縮小コードを生成する手順。
+description: AEM Forms Workspace のカスタマイズ後に縮小コードを生成して Web 用の JS ファイルを最適化するための手順です。
 seo-description: Instructions to generate minified code after AEM Forms workspace customizations to optimize the JS files for the web.
 uuid: ad91e380-a988-4740-9534-e09657e0322a
 contentOwner: robhagat
@@ -13,15 +13,15 @@ exl-id: 8394151e-e9cf-4f68-97a3-ba1d1dd6a2d2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 100%
+ht-degree: 40%
 
 ---
 
 # JavaScript ファイルの縮小 {#minification-of-the-javascript-files}
 
-縮小では、ソースコードから余白、復帰改行、コメントなどの冗長文字を削除します。これにより、コードのサイズが削減されてパフォーマンスが向上します。縮小は機能に影響しませんが、コードの可読性を削減します。
+縮小により、ソースコードから、空白、新しい行、コメントなどの冗長な文字が削除されます。 これにより、コードのサイズが小さくなるので、パフォーマンスが向上します。 縮小化は機能に影響を与えませんが、コードの読みやすさが低下します。
 
-セマンティックの変更のための縮小コードを生成するには、次の手順に従います。
+セマンティックの変更用に縮小コードを生成するには、次の手順に従います。
 
 1. src-package の `client-html/src/main/webapp/js` を filesystem にコピーします。
 
@@ -59,17 +59,17 @@ ht-degree: 100%
                service="service"/>
    ```
 
-1. client-html/src/main/webapp/js/minifier で、コマンド：
+1. client-html/src/main/webapp/js/minifier で、次のコマンドを実行します。
 
    ```shell
    mvn clean install
    ```
 
-   これにより、client-html/src/main/webapp/js の下に縮小された main.js と registry.js と共に縮小されたファイルのフォルダーが生成されます。
+   client-html/src/main/webapp/js の下に、main.js と registry.js の縮小化されたフォルダー minified-files が生成されます。
 
 >[!NOTE]
 >
->縮小は 64 ビット VM でのみ機能します。
+>縮小は 64 ビット JVM でのみ機能します。
 
 >[!NOTE]
 >

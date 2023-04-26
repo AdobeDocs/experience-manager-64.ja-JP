@@ -1,7 +1,7 @@
 ---
 title: 実稼動準備モードでの AEM の実行
 seo-title: Running AEM in Production Ready Mode
-description: 実稼動準備モードで AEM を実行する方法について説明します。
+description: 実稼動準備モードでAEMを実行する方法を説明します。
 seo-description: Learn how to run AEM in Production Ready Mode.
 uuid: f48c8bae-c72f-4772-967e-f1526f096399
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: 2ab55a72-2eb2-49dc-8716-0a8a4d0c4b73
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '383'
-ht-degree: 100%
+ht-degree: 80%
 
 ---
 
@@ -25,7 +25,7 @@ AEM 6.1 では、アドビは実稼動環境においてデプロイメント用
 
 >[!NOTE]
 >
->実用的な理由から、AEM の実稼動準備モードはインスタンスの保護に必要な大部分のタスクにのみ対応しているので、実稼動環境で運用を開始する前に[セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を確認しておくことを強くお勧めします。
+>実際的な理由により、AEM実稼動準備モードは、インスタンスの保護に必要なタスクの大部分のみをカバーするので、 [セキュリティチェックリスト](/help/sites-administering/security-checklist.md) 実稼動環境での運用を開始する前に、以下を実行してください。
 >
 >また、AEM を実稼動準備モードを実行すると CRXDE Lite へのアクセスが無効になります。デバッグのためにアクセスする必要がある場合は、[AEM での CRXDE Lite の有効化](/help/sites-administering/enabling-crxde-lite.md)を参照してください。
 
@@ -47,7 +47,7 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 
 具体的には、AEM を実稼動準備モードで実行すると、次の設定が変更されます。
 
-1. 実稼動準備モードでは、**CRXDE サポートバンドル**（`com.adobe.granite.crxde-support`）がデフォルトで無効になります。このバンドルは、アドビの Maven 公開リポジトリからいつでもインストールできます。AEM 6.1 に必要なバージョンは 3.0.0 です。
+1. 実稼動準備モードでは、**CRXDE サポートバンドル**（`com.adobe.granite.crxde-support`）がデフォルトで無効になります。パブリック Maven リポジトリから、いつでもAdobeにインストールできます。 AEM 6.1 ではバージョン 3.0.0 が必要です。
 
 1. **Apache Sling Simple WebDAV Access To Repositories**（`org.apache.sling.jcr.webdav`）バンドルは&#x200B;**オーサー**&#x200B;インスタンスでのみ使用できます。
 
@@ -69,9 +69,9 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 
 | **設定** | **作成者** | **公開** |
 |---|---|---|
-| TXT rendition | disabled | 無効 |
-| HTML rendition | 無効 | 無効 |
-| JSON rendition | enabled | 有効 |
-| XML rendition | 無効 | 無効 |
+| TXT レンディション | 無効 | 無効 |
+| HTMLレンディション | 無効 | 無効 |
+| JSON レンディション | enabled | enabled |
+| XML レンディション | 無効 | 無効 |
 | json.maximumresults | 1000 | 100 |
-| Auto Index | 無効 | 無効 |
+| 自動インデックス | 無効 | 無効 |

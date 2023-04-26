@@ -1,7 +1,7 @@
 ---
 title: 評価の使用
 seo-title: Using Ratings
-description: 評価コンポーネントをページに追加
+description: 評価コンポーネントのページへの追加
 seo-description: Adding a Rating component to a page
 uuid: a986970b-1221-4648-9a69-410f4480e0ae
 contentOwner: msm-service
@@ -13,7 +13,7 @@ exl-id: 1de28140-5334-4ca2-a476-5ad253809808
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '206'
-ht-degree: 36%
+ht-degree: 5%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 36%
 
 この `Rating`コンポーネントは、スタンドアロンで、または他のコミュニティ機能と組み合わせて使用されます。 このコンポーネントを使用すると、サインインしたコミュニティメンバーは、コンテンツを評価して意見を表明できます。
 
-## 評価をページに追加 {#adding-a-rating-to-a-page}
+## ページへの評価の追加 {#adding-a-rating-to-a-page}
 
 を追加するには、以下を実行します。 `Rating`コンポーネントをオーサリングモードでページに追加する場合は、 `Communities / Rating` をクリックし、ページ上の適切な位置（メンバーが評価する機能を基準とした位置など）にドラッグします。
 
@@ -37,22 +37,22 @@ ht-degree: 36%
 
 ![chlimage_1-494](assets/chlimage_1-494.png)
 
-「**[!UICONTROL テキストとラベル]**」タブでは、評価の内部識別子を指定できます。
+以下 **[!UICONTROL テキストとラベル]** 」タブでは、評価の内部識別子を指定します。
 
 ![chlimage_1-495](assets/chlimage_1-495.png)
 
 **[!UICONTROL 集計名]**
 (*必須*) `Rating`このインスタンスを一意に識別する リポジトリの有効なノード名を指定する必要があります。
 
-## サイト訪問者のエクスペリエンス {#site-visitor-experience}
+## サイト訪問者エクスペリエンス {#site-visitor-experience}
 
 ### メンバー {#members}
 
-1 人のメンバーが付けられる評価は 1 つだけです。メンバーは、いつでも評価を変更できます。
+メンバーごとに 1 つの評価のみが許可されます。 会員は、いつでも評価を変更することができます。
 
 ### 匿名 {#anonymous}
 
-匿名での評価投稿はサポートされていません。サイト訪問者が参加するには、登録（メンバーになる）してサインインする必要があります。
+匿名での評価の投稿はサポートされていません。 サイト訪問者が参加するには、登録（メンバーになる）してサインインする必要があります。
 
 ## 追加情報 {#additional-information}
 

@@ -1,7 +1,7 @@
 ---
 title: ビデオコンポーネントの設定
 seo-title: Configure the Video component
-description: ビデオコンポーネントの設定方法について説明します。
+description: ビデオコンポーネントの設定方法を説明します。
 seo-description: Learn how to configure the Video Component.
 uuid: f4755a13-08ea-4096-a951-46a590f8d766
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: 46d0765d-fb77-4332-8fbb-5bd2abcd6806
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '424'
-ht-degree: 59%
+ht-degree: 39%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 59%
 
 この [ビデオコンポーネント](/help/sites-authoring/default-components-foundation.md#video) では、事前定義済みの標準 (OOTB) ビデオ要素をページに配置できます。
 
-適切なトランスコードをおこなうには、管理者が [FFmpeg のインストールとAEMの設定](#install-ffmpeg) 個別に。 HTML5 要素と共に使用するために[ビデオプロファイルを設定](#configure-video-profiles)することもできます。
+適切なトランスコードをおこなうには、管理者が [FFmpeg のインストールとAEMの設定](#install-ffmpeg) 個別に。 また、 [ビデオプロファイルの設定](#configure-video-profiles) HTML5 要素で使用
 
 >[!CAUTION]
 >
@@ -29,7 +29,7 @@ ht-degree: 59%
 
 ## ビデオプロファイルの設定 {#configure-video-profiles}
 
-HTML5 要素に使用するビデオプロファイルの定義が必要になる場合があります。ここで選択したものは順番に使用されます。アクセスするには、[デザインモード](/help/sites-authoring/default-components-designmode.md)（クラシック UI のみ）を使用して「**[!UICONTROL プロファイル]**」タブを選択します。
+HTML5 の要素に使用するビデオプロファイルを定義できます。 ここで選択したものは順番に使用されます。アクセスするには、[デザインモード](/help/sites-authoring/default-components-designmode.md)（クラシック UI のみ）を使用し、「**[!UICONTROL プロファイル]**」タブを選択します。
 
 ![chlimage_1-317](assets/chlimage_1-317.png)
 
@@ -43,12 +43,12 @@ HTML5 要素に使用するビデオプロファイルの定義が必要にな�
 
 * **Windows の場合：**
 
-   1. `ffmpeg.zip` というコンパイル済みバイナリをダウンロードします。
+   1. コンパイル済みバイナリを次のようにダウンロードします。 `ffmpeg.zip`
    1. フォルダーに解凍します。
    1. システム環境変数の設定 `PATH` から `<*your-ffmpeg-locatio*n>\bin`
    1. AEM を再起動します。
 
-* **Mac OS X：**
+* **Mac OS X の場合：**
 
    1. Xcode ([https://developer.apple.com/technologies/tools/xcode.html](https://developer.apple.com/technologies/tools/xcode.html))
    1. XQuartz/X11 をインストールします。
@@ -59,7 +59,7 @@ HTML5 要素に使用するビデオプロファイルの定義が必要にな�
 
       `FFmpeg` は、 `PATH` AEMはコマンドラインを使用してこれを取得できます。
 
-* **OS X 10.6 用のコンパイル済みバージョンの使用：**
+* **OS X 10.6 用のプリコンパイル版を使用する場合：**
 
    1. コンパイル済みバージョンをダウンロードします。
    1. 次の場所に抽出します。 `/usr/local` ディレクトリ。
@@ -72,7 +72,7 @@ HTML5 要素に使用するビデオプロファイルの定義が必要にな�
 1. Web ブラウザーで [!UICONTROL CRXDE Lite] を開きます。([http://localhost:4502/crx/de](http://localhost:4502/crx/de))
 1. `/libs/settings/dam/video/format_aac/jcr:content` ノードを選択し、ノードのプロパティが次のようになっていることを確認します。
 
-   * audioCodec：
+   * audioCodec:
 
       ```
        aac
@@ -88,9 +88,9 @@ HTML5 要素に使用するビデオプロファイルの定義が必要にな�
 
    >[!NOTE]
    >
-   >変更が必要なプロパティだけでなく、プロファイルノード全体をオーバーレイ／編集してください。そのようなリソースは SlingResourceMerger 経由で解決されません。
+   >変更が必要なプロパティだけでなく、プロファイルノード全体をオーバーレイして編集します。 このようなリソースは、SlingResourceMerger を介して解決されません。
 
-1. いずれかのプロパティを変更した場合は、「**[!UICONTROL すべて保存]**」をクリックします。
+1. いずれかのプロパティを変更した場合、 **[!UICONTROL すべて保存]**.
 
 >[!NOTE]
 >

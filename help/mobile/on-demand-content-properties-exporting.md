@@ -1,7 +1,7 @@
 ---
 title: コンテンツのプロパティを使用したコンテンツのエクスポート
 seo-title: Using Content Properties to Export Content
-description: 以下のページでは、アプリのプロパティとノードについて説明します。
+description: 以下のページに、アプリのプロパティとノードを示します。
 seo-description: The following page shows App Properties and Nodes.
 uuid: 73f1832f-e457-47d0-a0e1-80af90897d31
 contentOwner: User
@@ -13,7 +13,7 @@ exl-id: 27aa405d-2388-4f91-85d0-1a8709e0d5d0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 27%
+ht-degree: 11%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 アプリは、 *cq:Pages* AEMの
 
@@ -50,7 +50,7 @@ ht-degree: 27%
   </tr>
   <tr>
    <td>dps-projectId</td>
-   <td>String</td>
+   <td>文字列</td>
    <td><p>このアプリがリンク/バインドされている Mobile On-Demand プロジェクトの ID/URI。</p> <p>この関連付けは、作成者が関連する Mobile On-DemandCloud Serviceで使用可能なプロジェクトのリストからプロジェクトを選択すると、接続を管理タイルを使用して設定されます。</p> </td>
   </tr>
   <tr>
@@ -76,7 +76,7 @@ ht-degree: 27%
   <tr>
    <td>pge-dashboard-config</td>
    <td>String:Path</td>
-   <td>ダッシュボード設定のパス。 パスは、必要に応じてカスタムのダッシュボード設定にリダイレクトできます。</td>
+   <td>ダッシュボード設定のパス。 パスは、必要に応じて、カスタムダッシュボード設定にリダイレクトできます。</td>
   </tr>
   <tr>
    <td>sling:resourceType</td>
@@ -86,8 +86,8 @@ ht-degree: 27%
  </tbody>
 </table>
 
-以下を使用できます。 ***コンテンツプロパティ*** コンテンツを作成します。 記事および共有リソースの作成と書き出しについては、以下のリソースを参照してください。
+以下を使用できます。 ***コンテンツプロパティ*** コンテンツを作成します。 記事と共有リソースを作成および書き出すには、次のリソースを参照してください。
 
-* [コンテンツのプロパティ](/help/mobile/content-properties.md)
+* [コンテンツプロパティ](/help/mobile/content-properties.md)
 * [記事のエクスポート設定の作成](/help/mobile/creating-article-export-configuration.md)
 * [共有リソースのエクスポート設定の作成](/help/mobile/creating-shared-resources-export-configuration.md)

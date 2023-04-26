@@ -1089,7 +1089,7 @@ Repository サービス API（Java）を使用してリソースをロックし�
 
 1. リソースのロックの解除
 
-   `ResourceRepositoryClient` オブジェクトの `unlockResource` メソッドを呼び出し、リソースの URI をパラメーターとして渡します。詳しくは、[AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
+   `ResourceRepositoryClient` オブジェクトの `unlockResource` メソッドを呼び出し、リソースの URI をパラメーターとして渡します。詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
 
 **関連トピック**
 

@@ -12,7 +12,7 @@ role: User
 source-git-commit: 50d6ca4d7ead2b132f185590554d00c518fab996
 workflow-type: tm+mt
 source-wordcount: '3519'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -209,7 +209,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 1. [Admin Console を使用して、新しいサポートケースの作成を開始します](https://helpx.adobe.com/jp/enterprise/using/support-for-experience-cloud.html)。
 1. サポートケースには、次の情報を記入してください。
 
-   * 主要連絡先の氏名、電子メールアドレス、電話番号。
+   * 主要連絡先の氏名、メールアドレス、電話番号。
 
    * 次のスマートイメージング機能のうち、どれ（1 つ以上）をアカウントで有効にするかを指定します。
       * WebP
@@ -218,7 +218,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
       * PNG から非可逆 AVIF または非可逆 WebP への変換
    * スマートイメージングを有効にするすべてのドメイン（`images.company.com` や `mycompany.scene7.com`）。
 
-      ドメインを探すには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社情報アカウントまたはアカウントにログインします。
+      ドメインを探すには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、会社情報アカウントまたはアカウントにログインします。
 
       **[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 一般設定]**&#x200B;に移動します。
 
@@ -228,7 +228,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
    * `s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` などの汎用ドメインではなく、`images.company.com` や `mycompany.scene7.com` などの専用ドメインを使用していることを確認します。
 
-      ドメインを探すには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社情報アカウントまたはアカウントにログインします。
+      ドメインを探すには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、会社情報アカウントまたはアカウントにログインします。
 
       **[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 一般設定]**&#x200B;に移動します。
 
@@ -271,11 +271,11 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
    * macOS では、デベロッパーパネルの「**[!UICONTROL ネットワーク]**」タブで、「**[!UICONTROL キャッシュを無効にする]**」を選択します。
 
 1. コンテンツタイプが適切な形式に変換されるのを監視します。次のスクリーンショットは、Chrome 上で PNG 画像が動的に WebP に変換されているのを示しています。ドメインで AVIF が有効になっている場合は、コンテンツタイプに AVIF が表示されることも期待できます。
-1. このテストを、様々なブラウザーやユーザー条件で繰り返します。
+1. 異なるブラウザーおよびユーザー条件で、このテストを繰り返します。
 
 >[!NOTE]
 >
->すべての画像が変換されるわけではありません。スマートイメージングは、変換がパフォーマンスを向上させる可能性があるかどうかを判断します。予期されるパフォーマンスゲインがない場合や、形式が JPEG や PNG でない場合、画像は変換されません。
+>一部の画像が変換されるわけではありません。 スマートイメージングは、変換がパフォーマンスを向上させる可能性があるかどうかを判断します。予期されるパフォーマンスゲインがない場合や、形式が JPEG や PNG でない場合、画像は変換されません。
 
 ![image2017-11-14_15398](/help/assets/assets/image2017-11-14_15398.png)
 

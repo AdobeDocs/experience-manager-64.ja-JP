@@ -1,7 +1,7 @@
 ---
 title: 外観の変更
 seo-title: Alter the Appearance
-description: スクリプトの変更
+description: スクリプトを変更
 seo-description: Modify the script
 uuid: 6930381b-74c1-4e63-9621-621dbedbc25e
 contentOwner: User
@@ -13,7 +13,7 @@ exl-id: 01a20578-56c3-41b3-8a0e-281104af2481
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 48%
+ht-degree: 4%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 48%
 
 comment.hbs スクリプトは、各コメントの全体的なHTMLを作成します。
 
-投稿された各コメントの横のアバターを表示しないようにするには：
+投稿された各コメントの横にアバターを表示しないには、次のようにします。
 
 1. コピー `comment.hbs`から `libs`から `apps`
    1. 選択 `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
@@ -39,7 +39,7 @@ comment.hbs スクリプトは、各コメントの全体的なHTMLを作成し�
            <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
    ```
 
-行を削除するか、「&lt;!--」と「-->」で囲んでコメントアウトします。また、アバターがあった場所を視覚的に示すインジケーターとして、文字「xxx」が追加されています。
+行を削除するか、&#39;で囲みます&lt;!> — 」と「 —>」でコメントアウトします。 また、アバターがあった場所を視覚的に示すインジケーターとして、文字「xxx」が追加されています。
 
 ```xml
 <!-- do not display avatar with comment
@@ -47,13 +47,13 @@ comment.hbs スクリプトは、各コメントの全体的なHTMLを作成し�
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-## オーバーレイのレプリケート {#replicate-the-overlay}
+## オーバーレイの複製 {#replicate-the-overlay}
 
 レプリケーションツールを使用して、オーバーレイされたコメントコンポーネントをパブリッシュインスタンスにプッシュします。
 
 >[!NOTE]
 >
->より強固なレプリケーション形式は、パッケージマネージャーでパッケージを作成し、それを[アクティベート](../../help/sites-administering/package-manager.md#replicating-packages)することです。パッケージはエクスポートおよびアーカイブできます。
+>より堅牢なレプリケーション形式は、パッケージマネージャーでパッケージを作成し、 [有効化](../../help/sites-administering/package-manager.md#replicating-packages) それは。 パッケージはエクスポートおよびアーカイブできます。
 
 グローバルナビゲーションから、 **[!UICONTROL ツール/導入/レプリケーション]** その後 **[!UICONTROL ツリーをアクティベート]**.
 
@@ -61,10 +61,10 @@ comment.hbs スクリプトは、各コメントの全体的なHTMLを作成し�
 
 ![chlimage_1-42](assets/chlimage_1-42.png)
 
-## 結果の表示 {#view-results}
+## 結果を表示 {#view-results}
 
 パブリッシュインスタンスに管理者 ( http://localhost:4503/crx/deなど ) としてログインした場合は、オーバーレイされたコンポーネントが存在することを確認できます。
 
-ログアウトして `aaron.mcdonald@mailinator.com/password` として再ログインし、ページを更新した場合は、投稿されたコメントはアバターと一緒には表示されなくなっており、代わりに単純な「xxx」が表示されることがわかります。
+ログアウトし、再ログインした場合 `aaron.mcdonald@mailinator.com/password` ページを更新すると、投稿されたコメントがアバターと共に表示されなくなり、代わりに単純な「xxx」が表示されます。
 
 ![chlimage_1-43](assets/chlimage_1-43.png)

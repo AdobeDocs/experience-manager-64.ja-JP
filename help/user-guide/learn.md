@@ -9,7 +9,7 @@ exl-id: 5cb966c3-1e19-47c8-a691-067f6d4680c0
 source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
 workflow-type: tm+mt
 source-wordcount: '396'
-ht-degree: 92%
+ht-degree: 95%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 92%
 
 ## AEM Sites {#aem-sites}
 
-AEM Sites は、Adobe Experience Manager 内のコンテンツ管理システムです。Web サイト、モバイルサイト、オンサイト画面にわたるデジタルエクスペリエンスを一元的に作成、管理および配信して、世界中から利用でき個人的にも関連性が高い魅力的なエクスペリエンスにすることができます。詳しくは、[こちら](https://business.adobe.com/products/experience-manager/sites/web-content-management.html)または [機能についての新しいビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)をご覧ください。
+AEM Sites は、Adobe Experience Manager 内のコンテンツ管理システムです。Web サイト、モバイルサイト、オンサイト画面にわたるデジタルエクスペリエンスを一元的に作成、管理および配信して、世界中から利用でき個人的にも関連性が高い魅力的なエクスペリエンスにすることができます。詳しくは、[こちら](https://business.adobe.com/products/experience-manager/sites/web-content-management.html)または [機能についての新しいビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=ja)をご覧ください。
 
 ## AEM Assets {#aem-assets}
 
@@ -44,12 +44,12 @@ Screens は、Adobe Experience Manager 機能であり、包括的なデジタ�
 
 ## AEM Communities {#aem-communities}
 
-Communities は、Adobe Experience Manager 機能であり、フォーラム、ユーザーグループ、学習リソースのほか、顧客、従業員およびブランドにとって価値のあるその他のソーシャル機能を含んだオンラインコミュニティエクスペリエンスを作成するのに役立ちます。[詳細情報を参照してください。](https://business.adobe.com/products/experience-manager/sites/aem-sites.html)
+Communities は、Adobe Experience Manager 機能であり、フォーラム、ユーザーグループ、学習リソースのほか、顧客、従業員およびブランドにとって価値のあるその他のソーシャル機能を含んだオンラインコミュニティエクスペリエンスを作成するのに役立ちます。[詳細情報を参照してください。](https://business.adobe.com/jp/products/experience-manager/sites/aem-sites.html)
 
 ## AEM Livefyre {#aem-livefyre}
 
-AEM Livefyre は、まったく新しい Adobe Experience Manager 機能であり、Web 上で共有されるあらゆるリソースを活用して、斬新かつ高品質なコンテンツのフローを独自のサイトで作成できます。詳しくは、[こちら](https://business.adobe.com/products/experience-manager/sites/aem-sites.html)を参照するか、[アドビのガイド](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html)を直接参照してください。
+AEM Livefyre は、まったく新しい Adobe Experience Manager 機能であり、Web 上で共有されるあらゆるリソースを活用して、斬新かつ高品質なコンテンツのフローを独自のサイトで作成できます。詳しくは、[こちら](https://business.adobe.com/jp/products/experience-manager/sites/aem-sites.html)を参照するか、[アドビのガイド](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html)を直接参照してください。
 
 ## AEM の基盤 {#aem-foundation}
 
-Adobe Experience Manager 6.4 の基盤と Managed Services デプロイメントモデルについて詳しくは、[こちら](/help/sites-deploying/home.md)を参照するか、[このリリースの機能を紹介する新しいビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)をご覧ください。
+Adobe Experience Manager 6.4 の基盤と Managed Services デプロイメントモデルについて詳しくは、[こちら](/help/sites-deploying/home.md)を参照するか、[このリリースの機能を紹介する新しいビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=ja)をご覧ください。

@@ -1,7 +1,7 @@
 ---
 title: メッセージングの設定
 seo-title: Configuring Messaging
-description: Communities のメッセージング
+description: コミュニティのメッセージ
 seo-description: Communities messaging
 uuid: 35d98667-a82e-4ed1-b6a1-1ffbbe1d08b5
 contentOwner: Janice Kendall
@@ -14,7 +14,7 @@ exl-id: 0e906f67-b908-4c41-b243-e4f90100ce5d
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '724'
-ht-degree: 30%
+ht-degree: 4%
 
 ---
 
@@ -22,11 +22,11 @@ ht-degree: 30%
 
 ## 概要 {#overview}
 
-AEM Communities のメッセージング機能を使用すると、サインイン済みのサイト訪問者（メンバー）が互いにメッセージを送信できます。このメッセージには、サイトにサインインしているときにアクセス可能です。
+AEM Communitiesのメッセージ機能を使用すると、サインインしているサイト訪問者（メンバー）が、サイトにサインインしたときにアクセス可能なメッセージを相互に送信できます。
 
-コミュニティサイトのメッセージングを有効にするには、[コミュニティサイトの作成](sites-console.md)中にチェックボックスをオンにします。
+コミュニティサイトのメッセージは、 [コミュニティサイトの作成](sites-console.md).
 
-このページでは、デフォルト設定と可能な調整についての情報を紹介します。
+このページには、デフォルト設定と可能な調整に関する情報が表示されます。
 
 開発者向けの追加情報については、 [メッセージの基本事項](essentials-messaging.md).
 
@@ -36,9 +36,9 @@ AEM Communities のメッセージング機能を使用すると、サインイ�
 
 を使用して作成されたコミュニティサイトの場合 [コミュニティサイトコンソール](sites-console.md)、サービスのインスタンスは既に存在し、インボックスはに設定されています `/mail/community/inbox`.
 
-### コミュニティのメッセージング操作サービス {#community-messaging-operations-service}
+### コミュニティメッセージング操作サービス {#community-messaging-operations-service}
 
-以下に示すとおり、[サイト作成ウィザード](sites-console.md)で作成されたサイトには、サービスの設定があります。設定の横にある鉛筆アイコンを選択すると、設定を表示または編集できます。
+以下に示すように、 [サイト作成ウィザード](sites-console.md). 設定の横にある鉛筆アイコンを選択すると、設定を表示または編集できます。
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
@@ -62,7 +62,7 @@ AEM Communities のメッセージング機能を使用すると、サインイ�
 
 * **[!UICONTROL 配信エラーを通知]**
 オンにすると、メッセージの配信が一部の受信者に失敗した場合に送信者に通知します。 初期設定は です。 
-*checked*.
+*チェック済み*.
 
 * **[!UICONTROL 配信送信者 ID の失敗]**
 配信に失敗したメッセージに表示される送信者の名前。 初期設定は です。 
@@ -72,10 +72,12 @@ AEM Communities のメッセージング機能を使用すると、サインイ�
 配信に失敗したメッセージテンプレートのルートへの絶対パス。 初期設定は です。 
 */etc/notification/messaging/default*.
 
-* **[!UICONTROL maxRetries.name]**&#x200B;配信に失敗したメッセージの再送を試行する回数です。初期設定は です。 
+* **[!UICONTROL maxRetries.name]**
+配信に失敗したメッセージの再送を試みる回数。 初期設定は です。 
 *3*.
 
-* **[!UICONTROL minWaitBetweenRetries.name]**&#x200B;送信に失敗したメッセージの再送を試行するまでの間隔（秒数）です。デフォルトは「*100 *（秒）」です。
+* **[!UICONTROL minWaitBetweenRetries.name]**
+送信に失敗した場合にメッセージを再送信しようとするまでの待機秒数。 デフォルトは「*100 *（秒）」です。
 
 * **[!UICONTROL 更新プールのサイズをカウント]**
 カウントの更新に使用する同時スレッドの数。 初期設定は です。 
@@ -89,25 +91,28 @@ AEM Communities のメッセージング機能を使用すると、サインイ�
 (
 *必須*) ユーザーのノードを基準としたパス (/home/users/*ユーザー名*)、 **`senditems`** フォルダー。 パスの末尾にスラッシュ「/」を付けることはできません。 デフォルトはです。 */mail/sentitems* .
 
-* **[!UICONTROL supportAttachments.name]**&#x200B;オンにすると、ユーザーがメッセージに添付ファイルを追加できるようになります。初期設定は です。 
-*オン*.
+* **[!UICONTROL supportAttachments.name]**
+オンにすると、ユーザーはメッセージに添付ファイルを追加できます。 初期設定は です。 
+*チェック済み*.
 
-* **[!UICONTROL batchSize.name]**&#x200B;大規模な受信者グループへの送信時に一括送信処理するメッセージの数です。初期設定は です。 
+* **[!UICONTROL batchSize.name]**
+多数の受信者グループに送信する際に、1 回の送信でまとめるメッセージの数。 初期設定は です。 
 *100*.
 
-* **[!UICONTROL maxTotalAttachmentSize.name]**「supportAttachments」をオンにすると、この値によりすべての添付ファイルの最大許容合計サイズ（バイト単位）が指定されます。初期設定は です。 
+* **[!UICONTROL maxTotalAttachmentSize.name]**
+supportAttachments がオンになっている場合、この値はすべての添付ファイルの最大許容合計サイズ（バイト単位）を指定します。 初期設定は です。 
 *104857600* (100 MB)。
 
 * **[!UICONTROL attachmentTypeBlocklist.name]**
 ファイルブロックリスト拡張子の。先頭に「 」が付く
-****」というプレフィックス付き）のブラックリストです。選択しなブロックリストに加えるい場合、拡張機能は許可されます。 拡張機能は、「 」を使用して追加または削除できます&#x200B;**+**&#39;および&#39;**-**&#39;アイコン。 デフォルトはです。 *デフォルト*.
+****「 」（システムによって却下されます） 選択しなブロックリストに加えるい場合、拡張機能は許可されます。 拡張機能は、「 」を使用して追加または削除できます&#x200B;**+**&#39;および&#39;**-**&#39;アイコン。 デフォルトはです。 *デフォルト*.
 
 * **[!UICONTROL allowedAttachmentTypes.name]**
 
    **(*アクションが必要です*)** ファ許可リストイル拡張子の ( 拡張子の逆ブロックリスト)。 すべてのファイル拡張子を許可するには、「 」を使用しまブロックリストに加えるす（拡張子は許可されません）。**-**「 」アイコンを使用して、1 つの空のエントリを削除します。
 
 * **[!UICONTROL serviceSelector.name]**
-(*必須*) サービスが呼び出される絶対パス（エンドポイント）（仮想リソース）です。 選択したパスのルートは、 *実行パス* OSGi 設定の設定 [ `Apache Sling Servlet/Script Resolver and Error Handler`](http://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)例： `/bin/`, `/apps/`、および `/services/`. サイトのメッセージング機能でこの設定を選択するには、このエンドポイントが **`Service selector`** の値 `Message List and Compose Message components` ( [メッセージ機能](configure-messaging.md)) をクリックします。 初期設定は */bin/messaging* です。
+(*必須*) サービスが呼び出される絶対パス（エンドポイント）（仮想リソース）です。 選択したパスのルートは、 *実行パス* OSGi 設定の設定 [ `Apache Sling Servlet/Script Resolver and Error Handler`](http://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)例： `/bin/`, `/apps/`、および `/services/`. サイトのメッセージング機能でこの設定を選択するには、このエンドポイントが **`Service selector`** の値 `Message List and Compose Message components` ( [メッセージ機能](configure-messaging.md)) をクリックします。 デフォルトはです。 */bin/messaging* .
 
 * **[!UICONTROL fieldAllowlist.name]**
 用途 
@@ -123,6 +128,6 @@ AEM Communities のメッセージング機能を使用すると、サインイ�
 
 問題をトラブルシューティングする 1 つの方法は、 [ログにメッセージをデバッグする。](../../help/sites-administering/troubleshooting.md)
 
-[個々のサービス用のロガーとライター](../../help/sites-deploying/configure-logging.md#loggers-and-writers-for-individual-services)も参照してください。
+関連トピック [個々のサービス用のロガーとライター](../../help/sites-deploying/configure-logging.md#loggers-and-writers-for-individual-services).
 
 監視するパッケージは次のとおりです。 `com.adobe.cq.social.messaging`.

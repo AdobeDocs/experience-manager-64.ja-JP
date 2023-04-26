@@ -1,7 +1,7 @@
 ---
 title: 整合性チェックとトラバーサルチェック
 seo-title: Consistency and Traversal Checks
-description: 整合性チェックとトラバーサルチェックの実行方法について説明します。
+description: 整合性チェックとトラバーサルチェックの実行方法を説明します。
 seo-description: Learn how to perform consistency and traversal checks.
 uuid: 0304e378-7c60-4bf5-9052-d01149d2a6df
 contentOwner: User
@@ -13,7 +13,7 @@ exl-id: 67dfa0f7-24ac-41ae-83c9-3bb1a8656502
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '156'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 

@@ -13,15 +13,15 @@ exl-id: 20c16e96-2ba8-4f2d-8cfa-8cd804e3441f
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '95'
-ht-degree: 76%
+ht-degree: 10%
 
 ---
 
 # リーダーボードの基本事項 {#leaderboard-essentials}
 
-このページでは、リーダーボード機能の操作に関する基本情報をまとめています。
+このページでは、リーダーボード機能の操作に関する基本情報を示します。
 
-リーダーボードコンポーネントをページに追加する前に、[コミュニティのスコアとバッジ](implementing-scoring.md)を設定する必要があります。関連トピック [スコアとバッジの基本事項](configure-scoring.md).
+ページにリーダーボードコンポーネントを含める前に、 [コミュニティのスコアとバッジ](implementing-scoring.md). 関連トピック [スコアとバッジの基本事項](configure-scoring.md).
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -32,7 +32,7 @@ ht-degree: 76%
    <td>social/gamification/components/hbs/leaderboard</td> 
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td> 
    <td>いいえ</td> 
   </tr>
   <tr>

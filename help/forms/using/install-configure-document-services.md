@@ -1,7 +1,7 @@
 ---
 title: ドキュメントサービスのインストールと設定
 seo-title: Installing and configuring document services
-description: AEM Forms ドキュメントサービスをインストールして、PDF ドキュメントを作成、アセンブル、配布、アーカイブし、デジタル署名を追加してドキュメントへのアクセスを制限し、バーコード化されたフォームをデコードしましょう。
+description: AEM Forms Document Services をインストールして、PDFドキュメントを作成、アセンブリ、配布、アーカイブし、電子署名を追加してドキュメントへのアクセスを制限し、バーコードフォームをデコードします。
 seo-description: Install AEM Forms document services to create, assemble, distribute, archive PDF documents, add digital signatures to limit access to documents, and decode barcoded forms.
 uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
@@ -11,13 +11,13 @@ exl-id: b3eea94d-87f1-49b3-aabc-cdb32629ef20
 source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
 source-wordcount: '4249'
-ht-degree: 100%
+ht-degree: 65%
 
 ---
 
 # ドキュメントサービスのインストールと設定 {#installing-and-configuring-document-services}
 
-AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、アーカイブ、ドキュメントへのアクセスを制限するためのデジタル署名の追加、バーコード化されたフォームのデコードなど、様々なドキュメントレベルの操作を実現する一連の OSGi サービスを提供します。これらのサービスは、AEM Forms のアドオンパッケージに含まれており、ドキュメントサービスと総称されます。利用可能なドキュメントサービスのリストとその主な機能は次のとおりです。
+AEM Formsは、PDFドキュメントを作成、組み立て、配布、アーカイブするサービス、ドキュメントへのアクセスを制限する電子署名の追加、バーコードフォームのデコードなど、様々なドキュメントレベルの操作を実行する一連の OSGi サービスを提供します。 これらのサービスは、AEM Formsアドオンパッケージに含まれています。 これらのサービスをまとめて、ドキュメントサービスと呼びます。 使用可能なドキュメントサービスとその主な機能のリストを次に示します。
 
 * **Assembler サービス：** PDF ドキュメントや XDP ドキュメントの結合、並べ替えおよび拡張と、PDF ドキュメントに関する情報の取得を実行できます。PDF ドキュメントを PDF/A 規格に変換して検証することもできます。また、PDF フォーム、XML フォームを PDF/A-1b、PDF/A-2b および PDFA/A-3b に変換することもできます。詳しくは、[Assembler サービス](/help/forms/using/assembler-service.md)を参照してください。
 
@@ -27,7 +27,7 @@ AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、ア
 
 * **DocAssurance サービス：**&#x200B;ドキュメントの暗号化と復号、使用権限の追加による Adobe Reader の機能拡張、ドキュメントへのデジタル署名の追加を実行できます。DocAssurance サービスには、3 つのサービス（署名、暗号化、Reader 拡張機能）があります。詳しくは、[DocAssurance サービス](/help/forms/using/overview-aem-document-services.md)を参照してください。
 
-* **Encryption サービス：**&#x200B;ドキュメントの暗号化と復号を実行できます。ドキュメントを暗号化すると、その内容は判読できなくなります。許可されたユーザーはドキュメントを解読して、コンテンツにアクセスできます。詳しくは、[Encryption サービス](/help/forms/using/overview-aem-document-services.md#encryption-service)を参照してください。
+* **Encryption サービス：**&#x200B;ドキュメントの暗号化と復号を実行できます。ドキュメントが暗号化されると、その内容が読み取れなくなります。 許可されたユーザーは、ドキュメントを復号化して、コンテンツにアクセスできます。 詳しくは、[Encryption サービス](/help/forms/using/overview-aem-document-services.md#encryption-service)を参照してください。
 
 * **Forms サービス：**&#x200B;通常 Forms Designer で作成されたフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャを行うクライアントアプリケーションを作成できます。Forms サービスは、作成したあらゆるフォームデザインを PDF ドキュメントとして処理します。詳しくは、[ Forms サービス](/help/forms/using/forms-service.md)を参照してください。
 
@@ -37,19 +37,19 @@ AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、ア
 
 * **Reader Extension サービス：**&#x200B;使用権限を追加して Adobe Reader の機能を拡張することで、組織内でインタラクティブな PDF ドキュメントを容易に共有できます。このサービスにより、PDF ドキュメントを Adobe Reader で開いた場合には使用できない機能（ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など）が有効になります。詳しくは、[Reader Extension サービス](/help/forms/using/overview-aem-document-services.md#reader-extension-service)を参照してください。
 
-* **Signature サービス：** AEM サーバーでデジタル署名とドキュメントを処理できます。例えば、通常、Signature サービスは次のような状況で使用されます。
+* **Signature サービス：** AEM サーバーでデジタル署名とドキュメントを処理できます。例えば、通常、Signature サービスは次の状況で使用されます。
 
-   * Acrobat または Adobe Reader でフォームを開くユーザーにフォームが送信される前に、AEM サーバーでフォームが認証される場合。
-   * Acrobat または Adobe Reader を使用してフォームに追加された署名が、AEM サーバーで検証される場合。
-   * AEM サーバーが公証人に代わってフォームに署名する場合。
+   * AEMサーバーは、AcrobatまたはAdobe Readerを使用して開くユーザーにフォームが送信される前に、フォームを認証します。
+   * AEMサーバーは、AcrobatまたはAdobe Readerを使用してフォームに追加された署名を検証します。
+   * AEMサーバーは公証人に代わってフォームに署名します。
 
-   Signature サービスは、Trust Store に格納されている証明書および秘密鍵証明書にアクセスします詳しくは、[Signature サービス](/help/forms/using/aem-document-services-programmatically.md)を参照してください。
+   Signature サービスは、Trust Store に保存されている証明書と秘密鍵証明書にアクセスします。 詳しくは、[Signature サービス](/help/forms/using/aem-document-services-programmatically.md)を参照してください。
 
 AEM Forms は強力なエンタープライズクラスのプラットフォームであり、ドキュメントサービスは AEM Forms の機能の 1 つです。機能の完全な一覧については、「[AEM Forms の概要](/help/forms/using/introduction-aem-forms.md)」を参照してください。
 
 ## デプロイメントトポロジ {#deployment-topology}
 
-AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。通常、AEM Forms ドキュメントサービスを実行するには、1 つの AEM インスタンス（オーサーインスタンスまたはパブリッシュインスタンス）があれば十分です。AEM Forms ドキュメントサービスを実行するには、次のトポロジをお勧めします。トポロジについて詳しくは、「[AEM Forms のアーキテクチャとデプロイメントトポロジ](/help/forms/using/aem-forms-architecture-deployment.md)」を参照してください。
+AEM Formsアドオンパッケージは、AEMにデプロイされたアプリケーションです。 通常、AEM Forms Document Services を実行するには、1 つのAEMインスタンス（オーサーまたはパブリッシュ）のみが必要です。 AEM Forms Document Services を実行するには、次のトポロジを使用することをお勧めします。 トポロジについて詳しくは、「[AEM Forms のアーキテクチャとデプロイメントトポロジ](/help/forms/using/aem-forms-architecture-deployment.md)」を参照してください。
 
 ![AEM Forms のアーキテクチャとデプロイメントトポロジ](do-not-localize/document-services.png)
 
@@ -59,19 +59,19 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 ## システム要件 {#system-requirements}
 
-AEM Forms ドキュメントサービスのインストールおよび設定に進む前に、次のことを確認する必要があります。
+AEM Forms Document Services のインストールと設定を開始する前に、次の点を確認してください。
 
 * ハードウェアとソフトウェアのインフラが正しく設定されていること。サポート対象のハードウェアとソフトウェアの一覧について詳しくは、「[技術要件](/help/sites-deploying/technical-requirements.md)」を参照してください。
 
-* AEM インスタンスのインストールパスに空白が含まれていないこと。
-* AEM インスタンスが稼働していること。AEM の用語では、「インスタンス」とは、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。通常、AEM Forms ドキュメントサービスを実行するには、1 つの AEM インスタンス（オーサーインスタンスまたはパブリッシュインスタンス）があれば十分です。
+* AEMインスタンスのインストールパスに空白が含まれていません。
+* AEMインスタンスが起動し、実行中です。 AEM の用語では、「インスタンス」とは、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。通常、AEM Forms Document Services を実行するには、1 つのAEMインスタンス（オーサーまたはパブリッシュ）のみ必要です。
 
-   * **オーサー：**&#x200B;コンテンツを作成、アップロード、編集し、Web サイトを管理する AEM インスタンス。公開する準備ができたコンテンツは、パブリッシュインスタンスにレプリケートされます。
-   * **パブリッシュ：**&#x200B;発行されたコンテンツをインターネットまたは社内ネットワークを通じて公開する AEM インスタンス。
+   * **作成者**:コンテンツの作成、アップロード、編集、Web サイトの管理に使用されるAEMインスタンス。 公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
+   * **公開**:公開されたコンテンツをインターネットまたは内部ネットワーク経由で公開するAEMインスタンス。
 
-* メモリ要件が満たされていること。AEM Forms アドオンパッケージでは、次が必要です。
+* メモリ要件を満たしています。 AEM Forms アドオンパッケージでは、次が必要です。
 
-   * Microsoft Windows ベースのインストールの場合、15 GB の一時的な空きスペースが必要です。
+   * 15 GB の一時領域 (Microsoft Windows ベースのインストール用 )
    * Unix ベースのインストールの場合、6 GB の一時的な空きスペースが必要です。
 
 * PDF Generator を使用して Microsoft Windows や Linux で変換を実行するには、必要なクライアントソフトウェアをインストールする必要があります。
@@ -88,7 +88,7 @@ AEM Forms ドキュメントサービスのインストールおよび設定に�
 
 ### UNIX ベースのオペレーティングシステムの追加要件 {#extrarequirements}
 
-Unix ベースのオペレーティングシステムを使用する場合は、それぞれのオペレーティングシステムのインストールメディアから、次のパッケージをインストールしてください。
+UNIX ベースのオペレーティングシステムを使用している場合は、各オペレーティングシステムのインストールメディアから次のパッケージをインストールします。
 
 <table> 
  <tbody> 
@@ -167,13 +167,13 @@ Unix ベースのオペレーティングシステムを使用する場合は、
  </tbody> 
 </table>
 
-* **（PDF Generator のみ）** 32 ビット版の libcurl、libcrypto および libssl ライブラリをインストールし、以下のシンボリックリンクを作成します。シンボリックリンクは、それぞれのライブラリの最新バージョンを指すようにします。
+* **(PDF発生器のみ )**) 32 ビット版の libcurl、libcrypto および libssl ライブラリをインストールし、以下のシンボリックリンクを作成します。 シンボリックリンクは、それぞれのライブラリの最新バージョンを指すようにします。
 
    * /usr/lib/libcurl.so
    * /usr/lib/libcrypto.so
    * /usr/lib/libssl.so
 
-* **（PDF Generator のみ）** PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換するため、WebKit および PhantomJS の各ルートをサポートしています。PhantomJS ルートの変換を有効にするには、下記の 64 ビットライブラリをインストールします。通常、これらのライブラリは既にインストールされています。不足しているライブラリがあれば、手動でインストールします。
+* **（PDF Generator のみ）** PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換するため、WebKit および PhantomJS の各ルートをサポートしています。PhantomJS ルートの変換を有効にするには、以下に示す 64 ビットライブラリをインストールします。 一般に、これらのライブラリは既にインストールされています。 不足しているライブラリがあれば、手動でインストールします。
 
    * linux-gate.so.1
    * libz.so.1
@@ -191,7 +191,7 @@ Unix ベースのオペレーティングシステムを使用する場合は、
 
 ## プリインストール設定 {#preinstallationconfigurations}
 
-「プリインストール設定」節に記載されている設定は、PDF Generator サービスにのみ適用されます。PDF Generator サービスを設定していない場合は、「プリインストール設定」節をスキップできます。
+プリインストール設定の節に記載されている設定は、Configuration Generator サービスにのみPDFできます。 Configuration Generator サービスを設定していない場合は、PDF前の設定の節をスキップできます。
 
 ### Adobe Acrobat とサードパーティ製アプリケーションのインストール {#install-adobe-acrobat-and-third-party-applications}
 
@@ -199,17 +199,17 @@ PDF Generator サービスを使用して、Microsoft Word、Microsoft Excel、M
 
 >[!NOTE]
 >
->* Adobe Acrobat、Microsoft Word、Excel および Powerpoint は、Microsoft Windows でのみ使用できます。UNIX ベースのオペレーティングシステムを使用している場合は、OpenOffice をインストールすることで、リッチテキストファイルやサポートされている Microsoft Office ファイルを PDF ドキュメントに変換します。
+>* Adobe Acrobat、Microsoft Word、Excel および PowerPoint は、Microsoft Windows でのみ使用できます。 UNIX ベースのオペレーティングシステムを使用している場合は、OpenOffice をインストールして、リッチテキストファイルとサポートされているMicrosoft Office ファイルをPDFドキュメントに変換します。
 >* PDF Generator サービスを使用できるすべてのユーザーに対して、Adobe Acrobat およびサードパーティソフトウェアのインストール後に表示されるすべてのダイアログボックスを閉じます。
 >* インストールされているすべてのソフトウェアを少なくとも 1 回起動します。PDF Generator サービスを使用するように設定されているすべてのユーザーに対して、すべてのダイアログボックスを解除します。
 >
 
 
-Acrobat をインストールしてから、Microsoft Word を開きます。「**Acrobat**」タブで「**PDFを作成**」をクリックし、マシン上にある .doc または .docx のファイルを PDF ドキュメントに変換します。変換が成功すれば、AEM Forms が PDF Generator サービスで Acrobat を使用する準備が整います。
+Acrobatをインストールしたら、Microsoft Word を開きます。 「**Acrobat**」タブで「**PDFを作成**」をクリックし、マシン上にある .doc または .docx のファイルを PDF ドキュメントに変換します。変換が成功すれば、AEM Forms が PDF Generator サービスで Acrobat を使用する準備が整います。
 
 ### 環境変数の設定 {#setup-environment-variables}
 
-32 ビットおよび 64 ビットの Java Development Kit、サードパーティアプリケーション、Adobe Acrobat の環境変数を設定します。環境変数には、対応するアプリケーションを起動する際に使用する実行ファイルの絶対パスを含める必要があります。以下の表に、いくつかのアプリケーション用の環境変数を例示します。
+32 ビットおよび 64 ビットの Java Development Kit、サードパーティアプリケーション、Adobe Acrobatの環境変数を設定します。 環境変数には、対応するアプリケーションを起動する際に使用する実行ファイルの絶対パスを含める必要があります。以下の表に、いくつかのアプリケーション用の環境変数を例示します。
 
 <table> 
  <tbody> 
@@ -221,12 +221,12 @@ Acrobat をインストールしてから、Microsoft Word を開きます。「
   <tr> 
    <td><p><strong>JDK（64 ビット）</strong></p> </td> 
    <td><p>JAVA_HOME</p> </td> 
-   <td><p>C:¥Program Files¥Java¥jdk1.8.0_74</p> </td> 
+   <td><p>C:\Program Files\Java\jdk1.8.0_74</p> </td> 
   </tr> 
   <tr> 
    <td><p><strong>JDK（32 ビット）</strong></p> </td> 
    <td><p>JAVA_HOME_32</p> </td> 
-   <td><p>C:¥Program Files (x86)¥Java¥jdk1.8.0_74</p> </td> 
+   <td><p>C:\Program Files (x86)\Java\jdk1.8.0_74</p> </td> 
   </tr> 
   <tr> 
    <td><p><strong>Adobe Acrobat</strong></p> </td> 
@@ -251,8 +251,8 @@ Acrobat をインストールしてから、Microsoft Word を開きます。「
 >* すべての環境変数とそれぞれのパスでは、大文字と小文字が区別されます。
 >* JAVA_HOME、JAVA_HOME_32、Acrobat_PATH（Windows のみ）は、必須の環境変数です。
 >* 環境変数 OpenOffice_PATH は、実行ファイルではなく、インストールフォルダーのパスに設定します。
->* Word、PowerPoint、Excel、Project などの Microsoft Office アプリケーション、または AutoCAD については、環境変数を設定する必要はありません。これらのアプリケーションがサーバーにインストールされている場合は、Generate PDF サービスが自動的にこれらのアプリケーションを起動します。
->* UNIX ベースのプラットフォームでは、OpenOffice を /root としてインストールします。OpenOffice が root としてインストールされていないと、PDF Generator サービスは OpenOffice ドキュメントを PDF ドキュメントに変換できません。OpenOffice を非 root ユーザーとしてインストールして実行する必要がある場合は、非 root ユーザーに sudo 権限を与えます。
+>* Word、PowerPoint、Excel、Project などの Microsoft Office アプリケーション、または AutoCAD については、環境変数を設定する必要はありません。これらのアプリケーションがサーバーにインストールされている場合、GeneratePDFサービスは自動的にこれらのアプリケーションを開始します。
+>* UNIX ベースのプラットフォームでは、OpenOffice を/root としてインストールします。 OpenOffice がルートとしてインストールされていない場合、OpenOffice ドキュメントをPDFドキュメントに変換できません。PDFドキュメント OpenOffice を非 root ユーザーとしてインストールして実行する必要がある場合は、非 root ユーザーに sudo 権限を与えます。
 >* UNIX ベースのプラットフォームで OpenOffice を使用している場合は、以下のコマンドを実行して PATH 変数を設定します。
 >
 >  `export OpenOffice_PATH=/opt/openoffice.org4`
@@ -264,7 +264,7 @@ Acrobat をインストールしてから、Microsoft Word を開きます。「
 
 1. java.security ファイルのコピーを作成します。ファイルのデフォルトの場所は次のとおりです。`[WebSphere_installation_directory]\Appserver\java_[version]\jre\lib\security`
 1. コピーした java.security ファイルを開いて編集します。
-1. デフォルトの SSL ソケットファクトリを、デフォルトの IBM WebSphere ファクトリではなく JSSE2 ファクトリを使用するように変更します。
+1. デフォルトの SSL ソケットファクトリを、デフォルトのIBM WebSphere ファクトリの代わりに JSSE2 ファクトリを使用するように変更します。
 
    **デフォルトの内容：**
 
@@ -287,35 +287,35 @@ Acrobat をインストールしてから、Microsoft Word を開きます。「
    #ssl.ServerSocketFactory.provider=com.ibm.websphere.ssl.protocol.SSLServerSocketFactory
    ```
 
-1. AEM Forms サーバーが更新した java.security ファイルを使用できるようにするには、AEM Forms サーバーの開始時に次の java 引数を追加します。
+1. AEM Formsサーバーの起動時に、AEM Formsサーバーが更新された java.security ファイルを使用できるようにするには、次の java 引数を追加します。
 
    `-Djava.security.properties= [path of newly created Java.security file].`
 
 ### （Windows のみ）Ink サービスと Handwriting サービスのインストールの設定 {#configure-install-ink-and-handwriting-service}
 
-Microsoft Windows Server を実行している場合、インクおよび手書きサービスを設定します。サービスを使うには、Microsoft Office のインキング機能を使用する Microsoft PowerPoint ファイルを開くことが必要です。
+Microsoft Windows Server を実行している場合は、インクおよび手書きサービスを構成します。 Microsoft Office のインキング機能を使用するMicrosoft PowerPoint ファイルを開くには、次のサービスが必要です。
 
-1. サーバーマネージャーを開きます。クイック起動バーの&#x200B;**[!UICONTROL サーバーマネージャー]**&#x200B;アイコンをクリックします。
+1. サーバーマネージャを開きます。 次をクリック： **[!UICONTROL サーバーマネージャ]** アイコンをクイックローンチトレイに表示します。
 1. **[!UICONTROL 機能]**&#x200B;メニューで「**[!UICONTROL 機能を追加]**」をクリックします。「**[!UICONTROL インクおよび手書きサービス]**」のチェックボックスを選択します。
 1. 「**[!UICONTROL 機能の選択]**」ダイアログボックスで「**[!UICONTROL インクおよび手書きサービス]**」が選択されます。「**[!UICONTROL インストール]**」をクリックしてサービスをインストールします。
 
 ### （Windows のみ）Microsoft Office のファイル制限機能の設定 {#configure-the-file-block-settings-for-microsoft-office}
 
-Microsoft Office のセキュリティセンターの設定を変更して、PDF Generator サービスが古いバージョンの Microsoft Office で作成されたファイルを変換できるようにします。
+Microsoft Office のセキュリティセンターの設定を変更し、PDFジェネレーターサービスがMicrosoft Office の古いバージョンで作成されたファイルを変換できるようにします。
 
-1. Microsoft Office のアプリケーションを開きます。例えば、Microsoft Word などです。「**[!UICONTROL ファイル]**」／「**[!UICONTROL オプション]**」に移動します。オプションのダイアログボックスが表示されます。
+1. Microsoft Office アプリケーションを開きます。 例えば、Microsoft Word です。 「**[!UICONTROL ファイル]**」／「**[!UICONTROL オプション]**」に移動します。オプションのダイアログボックスが表示されます。
 
-1. 「**[!UICONTROL セキュリティ センター]**」をクリックし、「**[!UICONTROL セキュリティ センターの設定]**」をクリックします。
-1. 「**[!UICONTROL セキュリティ センターの設定]**」で、「**[!UICONTROL ファイル制限機能の設定]**」をクリックします。
+1. クリック **[!UICONTROL トラストセンター]**&#x200B;をクリックし、 **[!UICONTROL セキュリティセンターの設定]**.
+1. 内 **[!UICONTROL セキュリティセンターの設定]**&#x200B;をクリックし、 **[!UICONTROL ファイルブロック設定]**.
 1. PDF Generator サービスで PDF ドキュメントへの変換を許可するファイルタイプについて、「**[!UICONTROL ファイルタイプ]**」リストで「**[!UICONTROL 開く]**」チェックボックスをオフにします。
 
 ### （Windows のみ）プロセスレベルのトークンを置き換える権限の付与 {#grant-the-replace-a-process-level-token-privilege}
 
-アプリケーションサーバーを起動したユーザーアカウントは、「**プロセス レベル トークンの置き換え**」権限が必要です。ローカルシステムアカウントには、デフォルトで「**プロセス レベル トークンの置き換え**」権限があります。ローカル管理グループのユーザーが運用しているサーバーでは、権限は明示的に付与されなければなりません。次の手順を実行して権限を付与します：
+アプリケーションサーバーの起動に使用するユーザーアカウントには、 **プロセスレベルトークンの置き換え** 権限 ローカルシステムアカウントに **プロセスレベルトークンの置き換え** デフォルトでは権限です。 Local Administrators グループのユーザーと共に実行するサーバーに対しては、明示的に権限を付与する必要があります。 次の手順を実行して権限を付与します。
 
 1. Microsoft Windows のグループポリシーエディターを開きます。グループポリシーエディターを開くには、「**[!UICONTROL スタート]**」をクリックしてスタートの検索ボックスに **gpedit.msc** と入力し、「**[!UICONTROL グループポリシーエディター]**」をクリックします。
-1. **[!UICONTROL ローカル コンピューター ポリシー]**／**[!UICONTROL コンピューターの構成]**／**[!UICONTROL Windows の設定]**／**[!UICONTROL セキュリティの設定]**／**[!UICONTROL ローカル ポリシー]**／**[!UICONTROL ユーザー権利の割り当て]**&#x200B;に移動して、**[!UICONTROL Administrators グループが含まれるように「プロセス レベル トークンの置き換え]**」ポリシーを編集します。
-1. 「プロセス レベル トークンの置き換え」エントリにユーザーを追加します。
+1. に移動します。 **[!UICONTROL ローカルコンピューターポリシー]** > **[!UICONTROL コンピュータの構成]** > **[!UICONTROL Windows 設定]** > **[!UICONTROL セキュリティ設定]** > **[!UICONTROL ローカルポリシー]** > **[!UICONTROL ユーザー権限の割り当て]** をクリックし、 **[!UICONTROL プロセスレベルトークンの置き換え]** ポリシーを作成し、 Administrators グループを含めます。
+1. 「プロセスレベルトークンの置き換え」エントリにユーザーを追加します。
 
 ### （Windows のみ）管理者以外のユーザーに対する PDF Generator サービスの有効化 {#enable-the-pdf-generator-service-for-non-administrators}
 
@@ -332,18 +332,18 @@ Microsoft Office のセキュリティセンターの設定を変更して、PDF
 1. スライダーを「通知しない」レベルに設定します。完了したら、コマンドウィンドウを閉じ、システム構成ウィンドウを閉じます。
 1. レジストリ設定で UAC が 0（ゼロ）に設定されていることを検証します。検証するには、以下の手順を実行します。
 
-   1. Microsoft は、レジストリを変更する前にバックアップをとっておくことを推奨しています。詳しい手順については、「[Windows でのレジストリのバックアップと復元方法](https://support.microsoft.com/ja-jp/help/322756)」を参照してください。
-   1. Microsoft Windows のレジストリエディターを開きます。レジストリエディターを開くには、「スタート／ファイル名を指定して実行」に移動し、「regedit」と入力して「OK」をクリックします。
+   1. Microsoftは、レジストリを変更する前に、レジストリをバックアップすることをお勧めします。 詳しい手順については、「[Windows でのレジストリのバックアップと復元方法](https://support.microsoft.com/ja-jp/help/322756)」を参照してください。
+   1. Microsoft Windows レジストリエディターを開きます。 レジストリエディターを開くには、「スタート／ファイル名を指定して実行」に移動し、「regedit」と入力して「OK」をクリックします。
    1. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\` に移動します。EnableLUA の値が 0（ゼロ）に設定されていることを確認します。
-   1. **EnableLUA** の値が 0（ゼロ）に設定されていることを確認します。値が 0 に設定されていない場合は、0 に変更します。レジストリエディターを終了します。
+   1. **EnableLUA** の値が 0（ゼロ）に設定されていることを確認します。値が 0 でない場合は、値を 0 に変更します。 レジストリエディターを閉じます。
 
 1. コンピューターを再起動します。
 
 ### （Windows のみ）エラーレポートサービスの無効化 {#disable-error-reporting-service}
 
-Windows Server で PDF Generator サービスを使用してドキュメントを PDF に変換しているとき、実行ファイルに問題が見つかったためファイルを閉じる必要があると Windows Server で報告される場合があります。ただし、PDF 変換はバックグラウンドで続行されるため、影響を与えません。
+Windows Server で PDF Generator サービスを使用してドキュメントを PDF に変換しているとき、実行ファイルに問題が見つかったためファイルを閉じる必要があると Windows Server で報告される場合があります。ただし、バックグラウンドで継続されるので、PDFの変換には影響しません。
 
-エラーを受信しないようにするために、Windows エラー報告を無効にすることができます。エラーレポート機能を無効にする手順について詳しくは、[https://technet.microsoft.com/ja-jp/library/cc754364.aspx](https://technet.microsoft.com/ja-jp/library/cc754364.aspx) を参照してください。
+エラーを受け取らないようにするには、Windows エラーレポートを無効にします。 エラーレポート機能を無効にする手順について詳しくは、[https://technet.microsoft.com/ja-jp/library/cc754364.aspx](https://technet.microsoft.com/ja-jp/library/cc754364.aspx) を参照してください。
 
 ### （Windows のみ）HTML から PDF への変換の設定 {#configure-html-to-pdf-conversion}
 
@@ -355,7 +355,7 @@ PDF Generator サービスは、HTML ファイルを PDF ドキュメントに�
 
 ### （UNIX ベースのプラットフォームのみ）HTML から PDF への変換用の追加設定  {#extra-configurations-for-html-to-pdf-conversion}
 
-UNIX ベースのプラットフォーム上の PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換するため、WebKit および PhantomJS の各ルートをサポートしています。HTML から PDF への変換を有効にするには、以下から目的の変換ルートに該当する設定を行います。
+UNIX ベースのプラットフォームでは、PDFジェネレーターサービスは、HTMLファイルをPDFドキュメントに変換する WebKit および PhantomJS ルートをサポートしています。 HTMLからPDFへの変換を有効にするには、目的の変換ルートに適した次の設定を実行します。
 
 ### （UNIX ベースのプラットフォームのみ）Unicode フォントのサポートの有効化（WebKit のみ） {#enable-support-for-unicode-fonts-webkit-only}
 
@@ -367,13 +367,13 @@ Unicode フォントを、使用しているシステムに応じて、次のい
 * /usr/X11R6/lib/X11/fonts/truetype
 * /usr/X11R6/lib/X11/fonts/TrueType
 * /usr/X11R6/lib/X11/fonts/TTF
-* /usr/openwin/lib/X11/fonts/TrueType（Solaris）
+* /usr/openwin/lib/X11/fonts/TrueType (Solaris)
 
 >[!NOTE]
 >
->* RedHat Enterprise Linux 6.x 以降で courier フォントは使用できません。courier フォントをインストールするには、font-ibm-type1-1.0.3.zip アーカイブをダウンロードしてください。/usr/share/fonts でアーカイブを抽出します。/usr/share/X11/fonts から /usr/share/fonts へのシンボリックリンクを作成します。
->* Html2PdfSvc/bin と /usr/share/fonts のディレクトリから、.lstフォントのキャッシュをすべて削除します。
->* /usr/lib/X11/fonts および /usr/share/fonts ディレクトリが存在することを確認してください。このディレクトリが存在しない場合は、ln コマンドを使用して /usr/share/X11/fonts から /usr/lib/X11/fonts へのシンボリックリンク、さらに /usr/share/fonts から /usr/share/X11/fonts への別のシンボリックリンクを作成します。また、courier フォントが使用可能であることを /usr/lib/X11/fonts で確認してください。。
+>* RedHat Enterprise Linux 6.x 以降では、courier フォントは使用できません。 courier フォントをインストールするには、 font-ibm-type1-1.0.3.zip アーカイブをダウンロードします。 /usr/share/fonts にあるアーカイブを抽出します。 /usr/share/X11/fonts から/usr/share/fonts へのシンボリックリンクを作成します。
+>* Html2PdfSvc/bin ディレクトリと/usr/share/fonts ディレクトリからすべての.lst フォントキャッシュファイルを削除します。
+>* /usr/lib/X11/fonts ディレクトリと/usr/share/fonts ディレクトリが存在することを確認します。 ディレクトリが存在しない場合は、ln コマンドを使用して/usr/share/X11/fonts から/usr/lib/X11/fonts へのシンボリックリンクを作成し、/usr/share/fonts から/usr/share/X11/fonts への別のシンボリックリンクを作成します。 また、courier フォントが/usr/lib/X11/fonts で使用可能であることを確認してください。
 >* すべてのフォント（Unicode および非 Unicode）が /usr/share/fonts または /usr/share/X11/fonts ディレクトリで使用できることを確認してください。
 >* PDF Generator サービスを非 root ユーザーとして実行する場合は、すべてのフォントディレクトリへの読み取りおよび書き込みアクセス権を非 root ユーザーに与えます。
 >* 新しいフォントをフォントフォルダーにインストールしたときは、AEM Forms インスタンスを再起動してください。
@@ -382,12 +382,12 @@ Unicode フォントを、使用しているシステムに応じて、次のい
 
 ## AEM Forms アドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
-AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、AEM Forms ドキュメントサービスおよびその他の AEM Forms 機能が含まれています。次の手順を実行してパッケージをインストールします。
+AEM Formsアドオンパッケージは、AEMにデプロイされたアプリケーションです。 このパッケージには、AEM Forms Document Services およびその他のAEM Forms機能が含まれています。 次の手順を実行してパッケージをインストールします。
 
 1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
 1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
-1. 「**[!UICONTROL フィルター]**」セクションで、
-   1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
+1. 内 **[!UICONTROL フィルター]** セクション：
+   1. 選択 **[!UICONTROL Forms]** から **[!UICONTROL 解決策]** 」ドロップダウンリストから選択できます。
    2. パッケージのバージョンとタイプを選択します。「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
 1. お使いのオペレーティングシステムに適したパッケージの名前をタップし、「**[!UICONTROL EULA 利用規約に同意する]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
 1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き、「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
@@ -395,7 +395,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
    [AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
 
-1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**その際、すぐにサーバーを停止しないでください。** AEM Forms サーバーを停止する前に、ServiceEvent REGISTERED メッセージと ServiceEvent UNREGISTERED メッセージが `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log ファイルに表示されなくなり、ログファイルが安定した状態になるまで待ってください。
+1. パッケージのインストールが完了したら、AEM インスタンスを再起動します。**サーバーをすぐに停止しないでください。** AEM Forms サーバーを停止する前に、ServiceEvent REGISTERED メッセージと ServiceEvent UNREGISTERED メッセージが `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log ファイルに表示されなくなり、ログファイルが安定した状態になるまで待ってください。
 
 ## インストール後の設定 {#post-installation-configurations}
 
@@ -427,7 +427,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
    >[!NOTE]
    >
-   >アドビ システムズ社以外が提供しているフォントを使用するユーザーの権利は、それらのフォントを所有する会社が提供する使用許諾契約書に拘束されるもので、アドビソフトウェアを使用するための使用許諾契約書は適用されません。アドビ システムズ社以外が提供しているフォントをアドビソフトウェアで使用する前に、適用される、アドビ システムズ社以外の使用許諾契約書すべてに準拠していることを確認してください。特に、サーバー環境でフォントを使用する際は注意が必要です。
+   >アドビ システムズ社以外が提供しているフォントを使用するユーザーの権利は、それらのフォントを所有する会社が提供する使用許諾契約書に拘束されるもので、アドビソフトウェアを使用するための使用許諾契約書は適用されません。Adobeでは、Adobe以外のフォントをAdobeソフトウェアで使用する前に、特にサーバー環境でのAdobeの使用に関して、適用されるすべての非フォント使用許諾契約に準拠していることを確認することをお勧めします。
    > 新しいフォントをフォントフォルダーにインストールしたときは、AEM Forms インスタンスを再起動してください。
 
 ### PDF Generator サービスを実行するためのローカルユーザーアカウントの設定  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
@@ -448,7 +448,7 @@ PDF Generator サービスを実行するには、ローカルユーザーのア
 
 1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL Forms]**／**[!UICONTROL PDF Generator を設定]**&#x200B;に移動します。デフォルトの URL は http://localhost:4502/libs/fd/pdfg/config/ui.html です。
 
-   「**[!UICONTROL 一般的な設定]**」タブを開いて、自分の環境に合わせて次のフィールドの値を変更します。
+   を開きます。 **[!UICONTROL 一般設定]** 「 」タブをタブに移動し、環境に応じて次のフィールドの値を変更します。
 
 <table> 
  <tbody> 
@@ -458,18 +458,18 @@ PDF Generator サービスを実行するには、ローカルユーザーのア
    <td>デフォルト値</td> 
   </tr> 
   <tr> 
-   <td>Server Conversion Timeout</td> 
+   <td>サーバーコンバージョンタイムアウト</td> 
    <td>PDFG 変換は、サーバー変換タイムアウトで定義された秒数の間アクティブになります</td> 
    <td>270 秒<br /> </td> 
   </tr> 
   <tr> 
-   <td>PDFG Cleanup Scan Seconds</td> 
-   <td>変換後操作を実行するために必要な秒数<br /> </td> 
+   <td>PDFG クリーンアップスキャン秒</td> 
+   <td>変換後の操作の実行に必要な秒数。<br /> </td> 
    <td>3600 秒</td> 
   </tr> 
   <tr> 
-   <td>Job Expiration Seconds</td> 
-   <td>PDF Generator サービスが変換を実行できる期間。「Job Expiration Seconds」の値が「PDFG Cleanup Scan Seconds」の値よりも大きいことを確認してください。</td> 
+   <td>ジョブ有効期限秒</td> 
+   <td>Conversion Generator サービスでPDFを実行できる期間。 「Job Expiration Seconds」の値が「PDFG Cleanup Scan Seconds」の値よりも大きいことを確認してください。</td> 
    <td>7200 秒</td> 
   </tr> 
  </tbody> 
@@ -480,11 +480,11 @@ PDF Generator サービスを実行するには、ローカルユーザーのア
 Microsoft Windows では、PDF Generator サービスは Adobe Acrobat を使用して、サポートしているファイル形式を PDF ドキュメントに変換します。以下の手順を実行して、Adobe Acrobat を PDF Generator サービスに設定します。
 
 1. Acrobat を開き、「**[!UICONTROL 編集]**」／「**[!UICONTROL 環境設定]**」／「**[!UICONTROL Updater]**」を選択します。「アップデートの有無をチェック」で「**[!UICONTROL アップデートを自動的にインストール]**」のチェックを解除し、「**[!UICONTROL OK]**」をクリックします。Acrobat を終了します。
-1. システム上の PDF ドキュメントをダブルクリックします。Acrobat の初回起動時に、ログインのダイアログボックス、スタートアップスクリーンおよび EULA が表示されます。PDF Generator を使用できるすべてのユーザーに対して、このダイアログボックスを閉じます。
+1. システム上の PDF ドキュメントをダブルクリックします。Acrobatを初めて起動すると、ログイン、ようこそ画面、EULA のダイアログボックスが表示されます。 Generator を使用するように設定されているすべてのユーザーに対して、これらのPDFボックスを閉じます。
 1. PDF Generator ユーティリティのバッチファイルを実行して、Adobe Acrobat を PDF Generator サービス用に設定します。
 
    1. [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) を開き、`adobe-aemfd-pdfg-common-pkg-[version].zip` ファイルをパッケージマネージャーからダウンロードします。
-   1. ダウンロードした.zip ファイルを解凍します。管理者権限でコマンドプロンプトを開きます。
+   1. ダウンロードした.zip ファイルを解凍します。 管理権限でコマンドプロンプトを開きます。
    1. `[extracted-zip-file]\jcr_root\etc\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\scripts` ディレクトリに移動します。次のバッチファイルを実行します。
 
       `Acrobat_for_PDFG_Configuration.bat`
@@ -505,9 +505,9 @@ Microsoft Windows では、PDF Generator サービスは Adobe Acrobat を使用
 
 ### （Windows のみ）HTML から PDF への変換のためのプライマリルートの設定 {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
-PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換する複数のルート（Webkit、Acrobat WebCapture（Windows のみ）および PhantomJS）を提供します。アドビでは、PhantomJS ルートを使用することを推奨しています。動的コンテンツを処理する機能を持ち、32 ビットライブラリと 32 ビット JDK に依存せず、追加フォントを必要としないからです。また、PhantomJS ルートでは、変換を実行するために sudo または root アクセスは必要ありません。
+PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換する複数のルート（Webkit、Acrobat WebCapture（Windows のみ）および PhantomJS）を提供します。アドビでは、PhantomJS ルートを使用することを推奨しています。動的コンテンツを処理する機能を持ち、32 ビットライブラリと 32 ビット JDK に依存せず、追加フォントを必要としないからです。また、PhantomJS ルートは、変換を実行するために sudo または root アクセスを必要としません。
 
-HTML から PDF への変換のデフォルトの主要ルートは WebKit です。変換ルートを変更するには：
+HTMLからPDFへの変換のデフォルトの主ルートは Webkit です。 変換ルートを変更するには：
 
 1. AEM オーサーインスタンスで、「**[!UICONTROL ツール]**」／「**[!UICONTROL フォーム]**」／「**[!UICONTROL PDF Generator を設定]**」に移動します。
 
@@ -515,26 +515,26 @@ HTML から PDF への変換のデフォルトの主要ルートは WebKit で�
 
 ### グローバル Trust Store の初期化 {#intialize-global-trust-store}
 
-Trust Store の管理では、電子署名の検証および証明書認証のために、サーバーで信頼される証明書の読み込み、編集および削除を行うことができます。証明書はいくつでも読み込みと書き出しを行うことができます。証明書が読み込まれたら、信頼設定および Trust Store の種類を編集できます。Trust Store を初期化するには、以下の手順を実行します。
+Trust Store の管理を使用すると、電子署名と証明書認証の検証のために、サーバーで信頼する証明書の読み込み、編集、削除を行うことができます。 任意の数の証明書を読み込み、書き出すことができます。 証明書が読み込まれたら、信頼設定と Trust Store の種類を編集できます。 Trust Store を初期化するには、以下の手順を実行します。
 
 1. AEM Forms インスタンスに管理者としてログインします。
 1. **[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL Trust Store]** に移動します。
 1. 「**[!UICONTROL Trust Store を作成]**」をクリックします。パスワードを設定して「**[!UICONTROL 保存]**」をタップします。
 
-### Reader 拡張機能および Encription サービス用の証明書を設定します。 {#set-up-certificates-for-reader-extension-and-encryption-service}
+### 証明書拡張およびReaderサービス用の証明書を設定する {#set-up-certificates-for-reader-extension-and-encryption-service}
 
-DocAssurance サービスは PDF ドキュメントに使用権限を適用できます。PDF ドキュメントに使用権限を適用するには、証明書を設定します。
+DocAssurance サービスは、使用権限をPDFドキュメントに適用できます。 PDF ドキュメントに使用権限を適用するには、証明書を設定します。
 
 証明書を設定する前に、次が揃っていることを確認します。
 
-* 証明書ファイル（.pfx）。
+* 証明書ファイル (.pfx)。
 
-* 証明書ファイルとともに提供する秘密鍵パスワード。
+* 証明書と共に提供された秘密鍵のパスワード。
 
 * 秘密鍵のエイリアス。Java keytool コマンドを実行し、秘密鍵エイリアスを表示します。
    `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
-* キーストアファイルのパスワード。アドビの Reader Extensions 証明書を使用している場合、Keystore ファイルのパスワードは常に秘密鍵のパスワードと同一です。
+* キーストアファイルのパスワード。 アドビの Reader Extensions 証明書を使用している場合、Keystore ファイルのパスワードは常に秘密鍵のパスワードと同一です。
 
 証明書を設定するには、以下の手順を実行します。
 
@@ -553,12 +553,12 @@ DocAssurance サービスは PDF ドキュメントに使用権限を適用で�
 
 ### AES-256 を有効にする {#enable-aes}
 
-PDF ファイルに AES 256 暗号化を使用するには、Java Cryptography Extension（JCE）Unlimited Strength Jurisdiction Policy ファイルを入手し、インストールします。jre/lib/security フォルダーの local_policy.jar と US_export_policy.jar ファイルを置き換えます。例えば、Sun JDK を使用している場合、ダウンロードしたファイルを `[JAVA_HOME]/jre/lib/security` フォルダーにコピーします。
+PDFファイルに AES 256 暗号化を使用するには、Java Cryptography Extension(JCE)Unlimited Strength Jurisdiction Policy ファイルを取得してインストールします。 jre/lib/security フォルダーの local_policy.jar ファイルと US_export_policy.jar ファイルを置き換えます。 例えば、Sun JDK を使用している場合、ダウンロードしたファイルを `[JAVA_HOME]/jre/lib/security` フォルダーにコピーします。
 
-Assembler サービスは、Reader Extensions サービス、Signature サービス、Forms サービス、Output サービスに依存します。次の手順を実行し、必要なサービスが起動および実行していることを確認します。
+Assembler サービスは、Reader拡張サービス、Signature サービス、Formsサービス、Output サービスに依存します。 次の手順を実行して、必要なサービスが起動および実行されていることを確認します。
 
 1. 管理者として URL `https://'[server]:[port]'/system/console/bundles` にログインします。
-1. 次のサービスを検索し、サービスが起動および実行していることを確認します。
+1. 次のサービスを検索し、サービスが起動および実行されていることを確認します。
 
 <table> 
  <tbody> 
@@ -587,9 +587,9 @@ Assembler サービスは、Reader Extensions サービス、Signature サービ
 
 ## 既知の問題とトラブルシューティング {#known-issues-and-troubleshooting}
 
-* 入力用 zip ファイルにファイル名が 2 バイト文字の HTML ファイルが含まれている場合、HTML から PDF への変換は失敗します。この問題を回避するには、HTML ファイルに名前を付けるときに 2 バイト文字を使用しないようにします。
+* zip 形式の入力ファイルにファイル名が 2 バイト文字のHTMLファイルが含まれている場合、HTMLからPDFへの変換は失敗します。 この問題を回避するには、HTML・ファイルに名前を付ける際に 2 バイト文字を使用しないでください。
 
-* UNIX ベースのオペレーティングシステムでは、以下を実行して不足しているライブラリを見つけます。
+* UNIX ベースのオペレーティング・システムで、次の手順を実行して、見つからないライブラリを検索します。
 
 1. `[crx-repository]/bedrock/svcnative/HtmlToPdfSvc/bin/` に移動します。
 
@@ -605,7 +605,7 @@ Assembler サービスは、Reader Extensions サービス、Signature サービ
 
 ## 次の手順 {#next-steps}
 
-これで、AEM Forms ドキュメントサービスの動作環境が用意できました。ドキュメントサービスは、以下で使用できます。  
+作業中のAEM Forms Document Services 環境がある。 ドキュメントサービスは、以下で使用できます。  
 
 * [OSGi 上の Forms 中心のワークフロー](/help/forms/using/aem-forms-workflow.md)
 * [監視フォルダー](/help/forms/using/watched-folder-in-aem-forms.md)

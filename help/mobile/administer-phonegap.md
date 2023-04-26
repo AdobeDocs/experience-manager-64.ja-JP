@@ -1,7 +1,7 @@
 ---
 title: AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理
 seo-title: Administering Content for Adobe PhoneGap Enterprise with AEM
-description: このページは、Adobe PhoneGap Enterprise を管理するためのランディングページとして参照できます。
+description: このページは、Adobe PhoneGap Enterprise を管理するためのランディングページとして機能します。
 seo-description: This page serves as landing page for administering Adobe PhoneGap Enterprise.
 uuid: 31bda96a-bc35-4f04-9107-7d575c04d761
 contentOwner: msm-service
@@ -13,7 +13,7 @@ exl-id: ad66445b-0c83-48d0-880f-14ab2dce3716
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '374'
-ht-degree: 59%
+ht-degree: 7%
 
 ---
 
@@ -21,22 +21,22 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 An ***AEM administrator*** は、作成ウィザードを使用して新しいアプリを作成するか、既存のアプリを読み込むことで、AEM Mobileカタログに新しいアプリを追加します。 AEM Mobileを使用して新しいアプリを作成するAEM管理者 *作成ウィザード* 通常は、あらかじめ用意されている参照サンプルから目的のアプリテンプレートを 1 つ選択するか、（ほとんどの場合は） *AEM開発者。*
 
-HTML5 および PhoneGap を使用してモバイルアプリケーションをビルドしたら、コマンドセンター内でそのアプリケーションを管理できます。もちろん、コマンドセンターでは Cordova WebView を使用してネイティブアプリ向けの HTML5 コンテンツも管理できます（PhoneGap プラグインを利用すれば、ネイティブの機能にアクセスできます）。
+HTML5 と PhoneGap を使用してモバイルアプリケーションを構築したら、コマンドセンター内で管理できます。 もちろん、Cordova Webviews を使用して、ネイティブアプリのHTML5 コンテンツをコマンドセンターで管理することもできます（PhoneGap プラグインがネイティブ機能にアクセスできるように）。
 
-AEM アプリコントロールセンターでは、モバイルアプリケーションをビルドしてデプロイし、モバイルアプリケーションを公開する前にアプリケーションメタデータを作成および編集できます。また、アプリケーションストアへの提出プロセスをやり直すことなく、最新の関連するコンテンツを共同で管理して頻繁に公開できます。さらに、アプリケーションのライフサイクルおよび使用状況の指標を分析して、顧客コンバージョンおよびブランドロイヤルティを高めることができます。
+AEM Apps Control Center を使用すると、モバイルアプリの作成とデプロイ、アプリのメタデータの作成と編集を行い、アプリストアの送信プロセスを再訪問することなく、新規で関連性の高いコンテンツを共同でキュレーションして頻繁に公開できます。
 
 AEM Mobileアプリケーションを構築するには、 [モバイルアプリケーションの構築](/help/mobile/building-app-mobile-phonegap.md) ページを開発者向けセクションに表示します。
 
-環境を設定し、コントロールセンターを開始するには：
+環境を設定し、コントロールセンターで作業を開始するには、次の手順に従います。
 
-1. [ユーザーとグループを設定します。](/help/mobile/configure-users-groups.md)
-1. [リファラーフィルターを「空の値を許可」に設定します。](/help/mobile/setting-referrer-filter-empty.md)
+1. [ユーザーとグループを設定する](/help/mobile/configure-users-groups.md)
+1. [リファラーフィルターを設定して空を許可します](/help/mobile/setting-referrer-filter-empty.md)
 1. [Adobe PhoneGap Build の設定](/help/mobile/configure-phonegap-build-cloud.md)
-1. [Adobe Analytics クラウドサービスを設定します。](/help/mobile/configure-adobe-mobile-cloud-service.md)
+1. [Adobe Analytics Cloud Service の設定](/help/mobile/configure-adobe-mobile-cloud-service.md)
 
 コンテンツサービスについて詳しくは、 [コンテンツサービスの管理](/help/mobile/developing-content-services.md).
 
@@ -46,7 +46,7 @@ AEM Mobileアプリケーションを構築するには、 [モバイルアプ�
 
 ## その他のリソース {#additional-resources}
 
-作成者および開発者の役割と責任について詳しくは、以下のリソースを参照してください。
+作成者と開発者の役割と責任について詳しくは、以下のリソースを参照してください。
 
-* [AEM と Adobe PhoneGap Enterprise での開発](/help/mobile/developing-in-phonegap.md)
-* [AEM での Adobe PhoneGap Enterprise 向けオーサリング](/help/mobile/phonegap.md)
+* [AEMを使用したAdobe PhoneGap Enterprise 向け開発](/help/mobile/developing-in-phonegap.md)
+* [AEMでのAdobe PhoneGap Enterprise 向けのオーサリング](/help/mobile/phonegap.md)

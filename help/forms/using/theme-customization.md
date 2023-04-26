@@ -1,7 +1,7 @@
 ---
 title: テーマのカスタマイズ
 seo-title: Theme Customization
-description: AEM Forms アプリケーションのテーマのカスタマイズ方法
+description: AEM Formsアプリのテーマをカスタマイズする方法。
 seo-description: How to customize the theme of your AEM Forms app.
 uuid: 36632e67-1cc6-416d-ae80-d84bbabab4bd
 contentOwner: robhagat
@@ -13,17 +13,17 @@ exl-id: fb1e0bec-c943-4468-920d-8ef360a01365
 source-git-commit: 2208d23985ebd913b6aa9dee3bf16ce7529a8fa6
 workflow-type: tm+mt
 source-wordcount: '223'
-ht-degree: 100%
+ht-degree: 68%
 
 ---
 
 # テーマのカスタマイズ {#theme-customization}
 
-HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms アプリケーションに組織固有の明確なルック＆フィールを提供することができます。たとえば、タスクまたはスタートポイントの背景色や高さを変更できます。次のことを変更する手順を、以下に例で示します。
+HTMLコードと CSS ファイルをカスタマイズして、AEM Formsアプリに組織固有の独自のルックアンドフィールを提供できます。 例えば、タスクや Startpoint の背景色や高さを変更できます。 次の例に、変更手順を示します。
 
 * 説明の代わりに手順を表示
 * 表示ルート数
-* 背景諧調色
+* 背景のグラデーションの色
 
 ## 手順 {#steps}
 
@@ -81,6 +81,6 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
 1. `_style.css` ファイルを開いて編集します。
 1. 背景画像は、`#323232` を `#fff` に変更します。
 1. 変更を保存し、`_style.css` ファイルを閉じます。
-1. AEM Forms アプリケーションを開きます。
+1. AEM Formsアプリを開きます。
 
-   AEM Forms アプリケーションには、説明の代わりに手順が表示されるようになっています。
+   AEM Formsアプリに、説明ではなく手順が表示されるようになりました。

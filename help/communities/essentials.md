@@ -13,17 +13,17 @@ exl-id: bde29d3a-8bc8-4c30-b764-a2fa1ac34069
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 70%
+ht-degree: 26%
 
 ---
 
 # コンポーネントおよび機能の基本事項 {#component-function-and-feature-essentials}
 
-サイト訪問者が AEM Communities の機能を使用し、コンテンツを投稿するには、事前にメンバー登録し、[コミュニティサイト](overview.md#communitiessites)にログインする必要があります。このように [コミュニティサイトテンプレート](sites.md)（コミュニティサイトの場所） [作成済み](sites-console.md)は、ログイン機能に加え、ユーザープロファイル、メッセージング、検索、モデレート、翻訳を含むように設計されています。
+AEM Communitiesの機能を使用するには、サイト訪問者がメンバーになり、 [コミュニティサイト](overview.md#communitiessites) コンテンツを投稿できるようになります。 このように [コミュニティサイトテンプレート](sites.md)（コミュニティサイトの場所） [作成済み](sites-console.md)は、ログイン機能に加え、ユーザープロファイル、メッセージング、検索、モデレート、翻訳を含むように設計されています。
 
 コミュニティサイトは、 [コミュニティグループ機能](functions.md#groups-function) 選択したコミュニティサイトテンプレートに含まれています。
 
-次のリンクをクリックすると、コミュニティのコンポーネントおよび機能に関する基本情報にアクセスできます。
+コミュニティのコンポーネント、機能、機能に関する重要な情報へのリンクを次に示します。
 
 ## 基本コンポーネント {#base-components}
 
@@ -36,7 +36,7 @@ ht-degree: 70%
    * [投票](essentials-voting.md)
    * *投票（利用不可）*
 
-## 機能のあるコンポーネント {#components-with-functions}
+## 関数を持つコンポーネント {#components-with-functions}
 
 * [アクティビティストリーム](essentials-activities.md)
 * [割り当て](essentials-assignments.md)
@@ -50,7 +50,7 @@ ht-degree: 70%
 * [グループ](essentials-groups.md)
 * [アイディエーション](ideation.md)
 * [リーダーボード](leaderboard.md)
-* [質問と回答](qna-essentials.md) `(QnA)`
+* [質問と答え](qna-essentials.md) `(QnA)`
 
 ## 機能 {#features}
 
@@ -67,16 +67,16 @@ ht-degree: 70%
 
 * [タグ付け](tag.md)
 
-## Javadoc {#javadocs}
+## Javadocs {#javadocs}
 
-[オンライン javadoc](../../help/sites-developing/reference-materials.md) には、AEM 6.3 リリースで使用できる API が反映されています。\
+この [オンライン javadoc](../../help/sites-developing/reference-materials.md) AEM 6.3 リリースで使用可能な API を反映しています。\
 コミュニティ API は、 `com.adobe.cq.social.*` パッケージ。
 
-各[機能パック](deploy-communities.md#latestfeaturepack)に対し、javadoc jar が提供されます。詳しくは、[Communities 用 Maven の使用](maven.md#javadocs)を参照してください。
+各 [機能パック](deploy-communities.md#latestfeaturepack)の場合、javadoc jar が使用可能になります。 詳しくは、 [コミュニティでの Maven の使用](maven.md#javadocs).
 
 ## 追加情報 {#additional-information}
 
-* [ソーシャルコンポーネントフレームワーク（SCF）](scf.md)
+* [ソーシャルコンポーネントフレームワーク (SCF)](scf.md)
 
    * [クライアント側のカスタマイズ](client-customize.md)
    * [サーバー側のカスタマイズ](server-customize.md)

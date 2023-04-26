@@ -9,15 +9,15 @@ exl-id: 8c41dba4-bedc-4747-b67d-fd89d71c8b2c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '537'
-ht-degree: 89%
+ht-degree: 49%
 
 ---
 
 # ベストプラクティス{#best-practices}
 
-ベストプラクティスでは、AEM を可能な限り効率的かつ効果的に開発、管理または使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
+ベストプラクティスでは、AEMをできるだけ効率的かつ効果的に開発、管理または使用する方法について説明します。 このトピックのリストは、AEMの様々な領域で増えています。
 
-次の領域について、ベストプラクティスに関するドキュメントが提供されています。
+次の領域に、ベストプラクティスに関するドキュメントが用意されています。
 
 * [Assets](#assets)
 * [Sites](#sites)
@@ -28,7 +28,7 @@ ht-degree: 89%
 * [開発のベストプラクティス](/help/sites-developing/best-practices.md)
 * [デプロイのベストプラクティス](/help/sites-deploying/best-practices.md)
 
-以降の表では、特定のドキュメントの説明とリンクを示します。
+以下の表では、特定のドキュメントについて説明し、リンクします。
 
 ## Assets {#assets}
 
@@ -44,17 +44,17 @@ Dynamic Media 機能や Dynamic Media Classic 統合などの、Assets のベス
   <tr>
    <td>コンテンツの整理方法（フォルダー階層）</td> 
    <td><a href="/help/assets/organize-assets.md">ファイル管理のベストプラクティス</a></td> 
-   <td>ビデオ、メタデータ、画像処理が常にフォルダーに適用されるので、処理プロファイルの多くはフォルダーに基づいています。このベストプラクティスドキュメントでは、フォルダー階層の定義およびセットアップ方法について説明します。フォルダー階層は、コンテンツの処理方法に大きく影響します。 </td> 
+   <td>ビデオ、メタデータ、画像処理は常にフォルダーに適用されるので、処理プロファイルの多くはフォルダーベースです。 このベストプラクティスドキュメントでは、フォルダー階層を定義して設定する方法を説明します。階層は、コンテンツの処理方法に大きな影響を与えるので、この階層を定義して設定する方法を説明します。 </td> 
   </tr>
   <tr>
    <td>Dynamic Media ClassicとAEMの統合</td> 
    <td><a href="/help/sites-administering/scene7.md#best-practices-for-integrating-scene-with-aem">Dynamic Media ClassicとAEMの統合のベストプラクティス</a></td> 
-   <td><p>ポーリングインポーターを有効にすべき状況、統合を試す方法およびコンテンツブラウザーを使用すべき状況とアセットに直接アップロードすべき状況について説明します。</p> </td> 
+   <td><p>ポーリングインポーターをオンにするタイミング、統合を推進するテスト方法、およびコンテンツブラウザーを使用するタイミングと Assets への直接アップロードを使用するタイミングについて説明します。</p> </td> 
   </tr>
   <tr>
    <td>画像プリセットオプション</td> 
    <td><a href="/help/assets/managing-image-presets.md#understanding-image-presets">画像プリセット</a>の概要および<a href="/help/assets/managing-image-presets.md#image-preset-options">画像プリセットのベストプラクティス</a></td> 
-   <td><a href="/help/assets/managing-image-presets.md">画像プリセットの管理</a>に関するドキュメントの一部として、これらのトピックでは画像プリセットの概要と、画像プリセットのオプションの選択に関するベストプラクティスについて説明します。</td> 
+   <td>に関するドキュメントの一部として <a href="/help/assets/managing-image-presets.md">画像プリセットの管理</a>以下のトピックでは、画像プリセットの概要と、画像プリセットオプションの選択に関するベストプラクティスについて説明します。</td> 
   </tr>
   <tr>
    <td>Dynamic MediaとDynamic Media Classicの直接統合</td> 
@@ -64,21 +64,21 @@ Dynamic Media 機能や Dynamic Media Classic 統合などの、Assets のベス
  </tbody>
 </table>
 
-## サイト {#sites}
+## Sites {#sites}
 
-Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
+Web サイトコンテンツの管理とオーサリングには、次に示すベストプラクティスがあります。
 
 <table> 
  <tbody>
   <tr>
    <td>GDPR コンプライアンス</td> 
    <td><a href="/help/sites-administering/gdpr-compliance-sites.md">AEM Sites GDPR コンプライアンス</a></td> 
-   <td>データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018 年 5 月に発効します。AEM Sites は、GDPR に準拠しています。このページでは、AEM Sites での GDPR 要求の処理手順について詳しく説明します。プライベートデータの格納場所や、それらのデータを手動で、またはコードを使用して削除する方法について説明します。</td> 
+   <td>データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018 年 5 月に発効します。AEM Sitesは GDPR に準拠しています。 このページでは、AEM Sitesで GDPR 要求を処理する手順を説明します。 プライベートデータの格納場所や、それらのデータを手動で、またはコードを使用して削除する方法について説明します。</td> 
   </tr>
   <tr>
-   <td>インスタンスのデフォルト UI の定義</td> 
+   <td>インスタンスのデフォルト UI を定義します。</td> 
    <td><p><a href="/help/sites-authoring/select-ui.md#configuring-the-default-ui-for-your-instance">個別の例に合わせたデフォルト UI の設定</a></p> </td> 
-   <td>AEM には、タッチ操作向け UI とクラシック UI という 2 つの UI があります。ここでは、インスタンスのデフォルト UI の定義方法について詳しく説明します。</td> 
+   <td>AEMには次の 2 つの UI があります。タッチ操作向けとクラシック。 この節では、インスタンスのデフォルト UI を定義する方法について説明します。</td> 
   </tr>
   <tr>
    <td>マルチサイト管理</td> 
@@ -88,7 +88,7 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
   <tr>
    <td>コンテンツの翻訳</td> 
    <td><a href="/help/sites-administering/tc-bp.md">翻訳のベストプラクティス</a></td> 
-   <td>複数言語に対応したサイトを計画および実装するためのベストプラクティスです。</td> 
+   <td>多言語サイトの計画と実装に関するベストプラクティス。</td> 
   </tr>
   <tr>
    <td>ユーザー管理</td> 

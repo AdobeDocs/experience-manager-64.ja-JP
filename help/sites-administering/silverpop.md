@@ -1,7 +1,7 @@
 ---
 title: Silverpop Engage との統合
 seo-title: Integrating with Silverpop Engage
-description: AEM と Silverpop Engage を統合する方法について説明します。
+description: AEMを Silverpop Engage と統合する方法を説明します
 seo-description: Learn how to integrate AEM with Silverpop Engage
 uuid: dfff7aaf-5264-4763-995f-5647f565c03b
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: 3148ba52-4464-4f3e-8741-645cd7a1c970
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 100%
+ht-degree: 48%
 
 ---
 
@@ -21,43 +21,43 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->既製の AEM は Silverpop と&#x200B;**統合できません**。[Silverpop の統合パッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content)をパッケージ共有からダウンロードしてインスタンスにインストールする必要があります。パッケージをインストールしたら、このドキュメントの説明に従って設定してください。
+>Silverpop 統合は、 **not** すぐに使用できます。 次をダウンロードする必要があります： [Silverpop 統合パッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content) パッケージ共有からインスタンスにインストールします。 パッケージをインストールしたら、このドキュメントの説明に従って設定できます。
 
 AEM を Silverpop Engage と統合すると、AEM で作成したメールを Silverpop を使用して管理および送信できます。また、AEM ページ上の AEM フォームを使用して、Silverpop のリード管理機能を使用できます。
 
-この統合によって次の機能を使用できるようになります。
+統合により、次の機能を利用できます。
 
-* AEM で電子メールを作成し、配信用に Silverpop に公開する機能。
-* AEM フォームのアクションを設定して、Silverpop サブスクライバーを作成する機能。
+* 電子メールをAEMで作成し、配布用に Silverpop に公開する機能。
+* AEMフォームのアクションを設定して Silverpop 購読者を作成する機能。
 
-Silverpop Engage が設定されると、Silverpop Engage にニュースレターまたは電子メールを発行できます。
+Silverpop Engage が設定されると、Silverpop Engage にニュースレターまたはメールを発行できます。
 
 ## Silverpop 設定の作成 {#creating-a-silverpop-configuration}
 
-Silverpop 設定は、**クラウドサービス**、**ツール**&#x200B;または **API エンドポイント**&#x200B;で追加できます。すべての方法をここで説明します。
+Silverpop 設定は、**クラウドサービス**、**ツール**&#x200B;または **API エンドポイント**&#x200B;で追加できます。この節では、すべてのメソッドについて説明します。
 
 ### クラウドサービスを使用した Silverpop の設定 {#configuring-silverpop-via-cloudservices}
 
-Silverpop 設定をクラウドサービスで設定するには：
+Cloud Servicesで Silverpop 設定を作成するには：
 
 1. AEM で、**ツール**／**デプロイメント**／**クラウドサービス**&#x200B;をタップまたはクリックします。（または `https://<hostname>:<port>/etc/cloudservices.html` に直接アクセスします。）
 1. サードパーティのサービスで、「**Silverpop Engage**」、「**設定**」の順にクリックします。Silverpop 設定ウィンドウが開きます。
 
    >[!NOTE]
    >
-   >Silverpop Engage のパッケージをパッケージ共有からダウンロードしない限り、Silverpop Engage をサードパーティのサービスのオプションとして使用できません。
+   >Silverpop Engage は、パッケージ共有からパッケージをダウンロードしない限り、サードパーティのサービスのオプションとして使用できません。
 
 1. タイトルを入力し、オプションで名前を入力して、「**作成**」をクリックします。Silverpop 設定ウィンドウが開きます。
-1. ユーザー名、パスワードを入力し、API エンドポイントをドロップダウンリストから選択します。
-1. 「**Silverpop に接続」をクリックします。**&#x200B;接続に成功したら、成功ダイアログが表示されます。「**OK**」をクリックしてウィンドウを閉じます。「**Silverpop Engage に移動**」をクリックすることで、Silverpop に移動できます。
+1. ユーザー名とパスワードを入力し、ドロップダウンリストから API エンドポイントを選択します。
+1. クリック **Silverpop に接続します。** 接続に成功すると、成功ダイアログが表示されます。 「**OK**」をクリックしてウィンドウを閉じます。「**Silverpop Engage に移動**」をクリックすることで、Silverpop に移動できます。
 1. Silverpop が設定されました。「**編集**」をクリックして、この設定を編集できます。
-1. また、Silverpop Engage フレームワークは、タイトルおよび名前（オプション）を提供することで、パーソナライズされたアクション用に設定できます。「作成」をクリックすると、既に設定された Silverpop 接続のフレームワークを作成します。
+1. さらに、Silverpop Engage フレームワークは、タイトルと名前（オプション）を指定することで、パーソナライズされたアクション用に設定できます。 「作成」をクリックすると、既に設定済みの Silverpop 接続用のフレームワークが正常に作成されます。
 
-   読み込まれたデータ拡張列は、後で AEM コンポーネントの「**テキストおよびパーソナライゼーション**」で使用できます。
+   読み込まれたデータ拡張列は、後でAEMコンポーネントで使用できます。 **テキストとパーソナライゼーション**.
 
 ### ツールを使用した Silverpop の設定 {#configuring-silverpop-via-tools}
 
-Silverpop 設定をツールで設定するには：
+ツールで Silverpop 設定を作成するには：
 
 1. AEM で、**ツール**／**デプロイメント**／**クラウドサービス**&#x200B;をタップまたはクリックします。または、`https://<hostname>:<port>/misadmin#/etc` にアクセスして直接移動します。
 1. **ツール**／**クラウドサービス設定**／**Silverpop Engage** を選択します。
@@ -65,19 +65,19 @@ Silverpop 設定をツールで設定するには：
 
    ![chlimage_1-44](assets/chlimage_1-44.jpeg)
 
-1. **タイトル**&#x200B;を入力し、オプションで&#x200B;**名前**&#x200B;を入力して、「**作成**」をクリックします。
-1. 前述の手順 4 で示した設定情報を入力します。その手順に従って、Silverpop の設定を完了します。
+1. 次を入力します。 **タイトル** オプションで **名前**&#x200B;をクリックし、 **作成**.
+1. 前の手順 4 で説明した設定情報を入力します。 この手順に従って、Silverpop の設定を完了します。
 
 ### 複数の設定の追加 {#adding-multiple-configurations}
 
 複数の設定を追加するには：
 
-1. ようこそページで、「**クラウドサービス**」をクリックし、「**Silverpop Engage**」をクリックします。「**設定を表示**」ボタンをクリックします（1 つ以上の Silverpop 設定が利用可能な場合に表示されます）。利用可能なすべての設定が一覧表示されます。
-1. 「利用可能な設定」の横にある「**+**」記号をクリックします。**設定を作成**&#x200B;ウィンドウが開きます。前述の設定手順に従って新しい設定を作成します。
+1. ようこそページで、 **Cloud Services** をクリックし、 **Silverpop Engage**. 「**設定を表示**」ボタンをクリックします（1 つ以上の Silverpop 設定が利用可能な場合に表示されます）。使用可能なすべての設定が表示されます。
+1. 次をクリック： **+** [ 利用可能な設定 ] の横に記号を付けます。 これにより、 **設定を作成** ウィンドウ 前の設定手順に従って、新しい設定を作成します。
 
 ### Silverpop に接続するための API エンドポイントの設定 {#configuring-api-end-points-for-connecting-to-silverpop}
 
-現在、AEM には 6 つの保護されていないエンドポイント（Engage 1～6）があります。Silverpop は、2 つの新しいエンドポイントと、既存のものを変更した接続エンドポイントを提供します。
+現在、AEMには、セキュリティで保護されていないエンドポイントが 6 つあります（エンゲージ 1 ～ 6）。 Silverpop で、既存のエンドポイントに対して、2 つの新しいエンドポイントと変更された接続エンドポイントを提供するようになりました。
 
 API エンドポイントを設定するには：
 
@@ -111,6 +111,6 @@ API エンドポイントを設定するには：
    | sp-e5 | https://api.engage5.silverpop.com/XMLAPI | https://api5.silverpop.com |
    | sp-e6 | https://api.pilot.silverpop.com/XMLAPI | https://api6.silverpop.com |
 
-1. 「**すべて保存**」をクリックします。これで、AEM は、保護されたエンドポイントで Silverpop と接続する準備ができました。
+1. 「**すべて保存**」をクリックします。AEMは、セキュアなエンドポイントで Silverpop に接続する準備が整いました。
 
    ![chlimage_1-45](assets/chlimage_1-45.jpeg)

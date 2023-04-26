@@ -1,7 +1,7 @@
 ---
 title: Dynamic Media アセットの配信
 seo-title: Delivering Dynamic Media Assets
-description: Dynamic Media アセットの配信方法を学習します
+description: Dynamic Media アセットの配信方法について説明します
 seo-description: Learn how to deliver dynamic media assets
 uuid: e87754a9-4c34-4658-9971-cd7ceb26523f
 contentOwner: Rick Brough
@@ -15,20 +15,20 @@ role: User
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '317'
-ht-degree: 91%
+ht-degree: 44%
 
 ---
 
 # Dynamic Media アセットの配信 {#delivering-dynamic-media-assets}
 
-ビデオでも画像でも、Dynamic Media アセットの配信方法は、Web サイトの実装方法によって異なります。
+ビデオと画像の両方の Dynamic Media アセットの配信方法は、Web サイトの実装方法によって異なります。
 
-Dynamic Media を使用する場合、次の複数のオプションがあります。
+Dynamic Mediaでは、次の複数のオプションを使用できます。
 
-* Web サイトが AEM 上にホストされている場合は、Dynamic Media アセットを直接ページに追加します。
+* Web サイトがAEM上でホストされている場合、Dynamic Media アセットをページに直接追加する必要があります。
 * Web サイトが AEM 上にない場合は、次のいずれかの方法を選択します。
 
-   * ビデオまたは画像を Web サイトに埋め込みます。
+   * Web サイトへのビデオまたは画像の埋め込み。
    * Web アプリケーションに URL をリンクします。ビデオプレーヤーをポップアップウィンドウまたはモーダルウィンドウとして配信する場合には、リンク機能を使用します。
    * レスポンシブサイトの場合は、[最適化された画像を配信できます。](responsive-site.md)
 
@@ -50,6 +50,6 @@ Dynamic Media を使用する場合、次の複数のオプションがありま
 
 ## Dynamic Media アセットの HTTP/2 配信 {#http-delivery-of-dynamic-media-assets}
 
-AEM は現在、HTTP/2 上でのすべての Dynamic Media コンテンツ（画像とビデオ）の配信をサポートしています。つまり、画像やビデオの公開済み URL や埋め込みコードは、ホストされるアセットを受け取るアプリケーションとの統合に使用できます。その公開済みアセットは、その後、HTTP/2 プロトコルで配信されます。この配信方法により、ブラウザーとサーバーの通信が向上し、すべての Dynamic Media アセットの応答時間と読み込み時間が短くなります。
+AEMは、HTTP/2 経由でのすべてのDynamic Mediaコンテンツ（画像とビデオ）の配信をサポートするようになりました。 つまり、画像やビデオの公開済み URL または埋め込みコードを、ホストされているアセットを受け入れる任意のアプリケーションと統合できるようになります。 その公開済みアセットは、HTTP/2 プロトコルを使用して配信されます。 この配信方法を使用すると、ブラウザーとサーバーの通信方法が改善され、すべてのDynamic Mediaアセットの応答時間と読み込み時間が向上します。
 
-詳しくは、[コンテンツの HTTP/2 配信に関する FAQ](/help/sites-administering/scene7-http2faq.md) を参照してください。
+詳しくは、 [コンテンツの HTTP/2 配信に関するよくある質問](/help/sites-administering/scene7-http2faq.md) を参照してください。

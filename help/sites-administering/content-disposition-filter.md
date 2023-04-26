@@ -13,17 +13,17 @@ exl-id: bb022f6b-938b-4421-8860-4c22aecf5b85
 source-git-commit: 8cc85728be93d58e3aaee69c96f59ee98d5484a1
 workflow-type: tm+mt
 source-wordcount: '239'
-ht-degree: 89%
+ht-degree: 73%
 
 ---
 
 # Content Disposition フィルター {#content-disposition-filter}
 
-Content Disposition フィルターは、SVG ファイルへの XSS 攻撃に対するセキュリティ機能です。
+コンテンツの配置フィルターは、SVGファイルに対する XSS 攻撃に対するセキュリティ機能です。
 
-インストールが完了すると、フィルターはすべてのアセットへのアクセスをブロックします。例えば、オンラインで PDF を表示することができなくなります。このセクションでは、必要に応じてフィルターを設定する方法について説明します。
+インストールが完了すると、フィルターはすべてのアセットへのアクセスをブロックします。 例えば、オンラインで PDF を表示することができなくなります。この節では、必要に応じてフィルターを設定する方法について説明します。
 
-## Content Disposition フィルターの設定 {#configure-content-disposition-filter}
+## Content Disposition フィルタの設定 {#configure-content-disposition-filter}
 
 次の項目を表示すると、 [GitHub の Apache Sling Content Disposition Filter。](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java)
 

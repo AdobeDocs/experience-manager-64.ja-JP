@@ -1,7 +1,7 @@
 ---
 title: MongoDB をデモ用に設定する方法
 seo-title: How to Setup MongoDB for Demo
-description: 1 つのオーサーインスタンスと 1 つのパブリッシュインスタンス用に MSRP をセットアップする方法
+description: 1 つのオーサーインスタンスと 1 つのパブリッシュインスタンスに対して MSRP を設定する方法
 seo-description: How to setup MSRP for one author instance and one publish instance
 uuid: d2035a9e-f05c-4f90-949d-7cdae9646750
 contentOwner: Janice Kendall
@@ -14,7 +14,7 @@ exl-id: e32fc619-6226-48c6-bbd7-1910963d1036
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '825'
-ht-degree: 56%
+ht-degree: 2%
 
 ---
 
@@ -24,11 +24,11 @@ ht-degree: 56%
 
 このチュートリアルでは、の設定方法について説明します [MSRP](msrp.md) 対象 *1 人の作者* インスタンスと *1 つの公開* インスタンス。
 
-このセットアップを終えると、ユーザー生成コンテンツ（UGC）のフォワードまたはリバースレプリケーションをおこなわずに、オーサー環境とパブリッシュ環境の両方からコミュニティコンテンツにアクセスできるようになります。
+この設定により、ユーザー生成コンテンツ (UGC) を転送またはリバースレプリケートする必要なく、オーサー環境とパブリッシュ環境の両方からコミュニティコンテンツにアクセスできるようになります。
 
-この設定は、開発用やデモ用の環境など、*非実稼動*&#x200B;環境に適しています。
+この設定は、次の場合に適しています。 *非実稼動* 環境（開発やデモ用など）。
 
-**実稼動環境では、以下のことが必要です。****
+**A *実稼動* 環境は次のようにする必要があります。**
 
 * レプリカセットで MongoDB を実行する
 * SolrCloud を使用
@@ -60,32 +60,32 @@ ht-degree: 56%
    * 定義されたデータディレクトリのパスは、 &lt;mongo-dbpath>
 
 
-* MongoDB は AEM と同じホストか、リモートで実行できます。
+* MongoDB は、AEMと同じホストで実行するか、リモートで実行できます
 
-### MongoDB を起動します。 {#start-mongodb}
+### MongoDB を起動 {#start-mongodb}
 
-* &lt;mongo-install>/bin/mongod --dbpath &lt;mongo-dbpath>
+* &lt;mongo-install>/bin/mongod —dbpath &lt;mongo-dbpath>
 
-すると MongoDB サーバーが起動します。使用されるデフォルトポートは 27017 です。
+これにより、デフォルトのポート27017を使用して MongoDB サーバーが起動します。
 
-* Mac では、起動引数「ulimit -n 2048」を使用して ulimit を増やします。
+* Macの場合、開始引数「ulimit -n 2048」で ulimit を増やします。
 
 >[!NOTE]
 >
 >MongoDB が起動している場合 *後* AEM, **再起動** すべて **AEM** インスタンスが MongoDB に正しく接続されるようにします。
 
-### 実稼動デモのオプション：MongoDB レプリカセットのセットアップ {#demo-production-option-setup-mongodb-replica-set}
+### デモ実稼動オプション：MongoDBレプリカセットの設定 {#demo-production-option-setup-mongodb-replica-set}
 
-以下のコマンドは、ローカルホストに 3 つのノードを持つレプリカセットの設定例です。
+次のコマンドは、ローカルホストで 3 つのノードを持つレプリカセットを設定する例です。
 
-* bin/mongod --port 27017 --dbpath data --replSet rs0&amp;
+* bin/mongod —port 27017 —dbpath data —replSet rs0&amp;
 * bin/mongo
 
    * cfg = {&quot;_id&quot;:&quot;rs0&quot;,&quot;version&quot;:1,&quot;members&quot;: [{&quot;_id&quot;:0,&quot;host&quot;:&quot;127.0.0.1:27017&quot;}]}
    * rs.initiate(cfg)
 
-* bin/mongod --port 27018 --dbpath data1 --replSet rs0&amp;
-* bin/mongod --port 27019 --dbpath data2 --replSet rs0&amp;
+* bin/mongod —port 27018 —dbpath data1 —replSet rs0&amp;
+* bin/mongod —port 27019 —dbpath data2 —replSet rs0&amp;
 * bin/mongo
 
    * rs.add(&quot;127.0.0.1:27018&quot;)
@@ -100,7 +100,7 @@ ht-degree: 56%
 
    * 任意の OS に適しています
    * バージョン 4.10 またはバージョン 5 を使用
-   * Solr には Java 1.7 以降が必要です。
+   * Solr には Java 1.7 以降が必要です
 
 * 基本設定
 
@@ -108,48 +108,48 @@ ht-degree: 56%
    * サービスは不要
    * インストールされた Solr フォルダーは、 &lt;solr-install>
 
-### AEM Communities のための Solr の設定 {#configure-solr-for-aem-communities}
+### AEM Communities用 Solr の設定 {#configure-solr-for-aem-communities}
 
-MSRP のための Solr コレクションをデモ目的で設定するには、以下の 2 点を決定する必要があります（詳しくは、主なドキュメントへのリンクを選択してください）。
+デモ用に MSRP 用の Solr コレクションを設定するには、次の 2 つの決定をおこなう必要があります（詳しくは、メインドキュメントへのリンクを選択してください）。
 
 1. スタンドアロンで Solr を実行するか、 [SolrCloud モード](msrp.md#solrcloudmode)
 1. インストール [標準](msrp.md#installingstandardmls) または [詳細](msrp.md#installingadvancedmls) 多言語検索 (MLS)
 
-### スタンドアロンの Solr {#standalone-solr}
+### スタンドアロン Solr {#standalone-solr}
 
-Solr を実行する方法は、バージョンとインストール方法によって異なる場合があります。詳しくは、公式ドキュメントである [Solr リファレンスガイド](https://archive.apache.org/dist/lucene/solr/ref-guide/)を参照してください。
+Solr を実行する方法は、インストールのバージョンと方法によって異なる場合があります。 この [Solr リファレンスガイド](https://archive.apache.org/dist/lucene/solr/ref-guide/) は、権限を持つドキュメントです。
 
-ここでは簡単に、バージョン 4.10 を使用して、Solr をスタンドアロンモードで起動します。
+簡単にするために、バージョン 4.10 を例として使用し、Solr をスタンドアロンモードで起動します。
 
-* cd to &lt;solrinstall>/example
+* cd に移動 &lt;solrinstall>/example
 * java -jar start.jar
 
-これにより、Solr HTTP サーバーが起動します。使用されるデフォルトポートは 8983 です。Solr コンソールを参照し、Solr コンソールを試しに開くことができます。
+これにより、デフォルトポート 8983 を使用して Solr HTTP サーバーが起動します。 Solr コンソールを参照して、テスト用の Solr コンソールを取得できます。
 
-* デフォルトの Solr コンソール：[http://localhost:8983/solr/](http://localhost:8983/solr/)
+* デフォルトの Solr コンソール： [http://localhost:8983/solr/](http://localhost:8983/solr/)
 
 >[!NOTE]
 >
->Solr コンソールが使用できない場合は、&lt;solrinstall>/example/logs にあるログを確認します。SOLR が解決できない特定のホスト名 ( 例：&quot;user-macbook-pro&quot;) です。
-その場合、このホスト名の新しいエントリ（127.0.0.1 user-macbook-pro など）を使用して etc/hosts ファイルを更新します。すると Solr が適切に起動します。
+>Solr コンソールが使用できない場合は、以下のログを確認します。 &lt;solrinstall>/example/logs. SOLR が解決できない特定のホスト名 ( 例：&quot;user-macbook-pro&quot;) です。
+その場合は、etc/hosts ファイルをこのホスト名の新しいエントリ（例：127.0.0.1 user-macbook-pro）で更新すると、Solr が正しく起動します。
 
 ### SolrCloud {#solrcloud}
 
-非常に基本的な（実稼動用ではない）solrCloud のセットアップを実行するには、以下のコマンドで Solr を起動します。
+非常に基本的な（実稼動ではない）solrCloud 設定を実行するには、次の設定で solr を起動します。
 
 * java -Dbootstrap_confdir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar
 
-##  MongoDB を共通ストアとして指定 {#identify-mongodb-as-common-store}
+## MongoDB を共通ストアとして識別します。 {#identify-mongodb-as-common-store}
 
-AEM オーサーインスタンスとパブリッシュインスタンスを起動します（必要な場合）。
+必要に応じて、オーサーインスタンスとパブリッシュAEMインスタンスを起動します。
 
-AEM が MongoDB を起動する前に実行されている場合、AEM インスタンスを再起動する必要があります。
+MongoDB が起動する前にAEMが実行されていた場合は、AEMインスタンスを再起動する必要があります。
 
-詳しくは、[MSRP - MongoDB 共通ストア](msrp.md)の手順に従ってください。
+メインドキュメントページの手順に従います。 [MSRP - MongoDB 共通ストア](msrp.md)
 
 ## テスト {#test}
 
-MongoDB 共通ストアをテストおよび検証するために、パブリッシュインスタンスにコメントを投稿して、オーサーインスタンスでそのコメントを表示し、さらに MongoDB と Solr で UGC を表示します。
+MongoDB 共通ストアをテストおよび検証するには、パブリッシュインスタンスにコメントを投稿して、オーサーインスタンスに表示し、MongoDB と Solr で UGC を表示します。
 
 1. パブリッシュインスタンスで、 [コミュニティコンポーネントガイド](http://localhost:4503/content/community-components/en/comments.html) ページを開き、コメントコンポーネントを選択します。
 1. サインインしてコメントを投稿：
@@ -161,7 +161,7 @@ MongoDB 共通ストアをテストおよび検証するために、パブリッ
 
    ![chlimage_1-192](assets/chlimage_1-192.png)
 
-   注意：オーサーインスタンスの *asipath* の下には JCR ノードがありますが、これらは SCF フレームワーク用のものです。実際の UGC は JCR には含まれず、MongoDB に含まれます。
+   注意：JCR ノードは *asipath* オーサー環境では、これらは SCF フレームワーク用です。 実際の UGC は JCR には含まれず、MongoDB に含まれます。
 
 1. mongodb での UGC の表示 **[!UICONTROL コミュニティ/コレクション/コンテンツ]**
 
@@ -178,7 +178,7 @@ MongoDB 共通ストアをテストおよび検証するために、パブリッ
 
 ## トラブルシューティング {#troubleshooting}
 
-### UGC が表示されない {#no-ugc-appears}
+### UGC が表示されません {#no-ugc-appears}
 
 1. MongoDB がインストールされ、正しく実行されていることを確認します。
 

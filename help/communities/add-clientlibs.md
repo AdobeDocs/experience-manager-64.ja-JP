@@ -13,17 +13,17 @@ exl-id: 9b8c3d1c-a9b1-4dde-9044-46c8f2b22c22
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '699'
-ht-degree: 59%
+ht-degree: 3%
 
 ---
 
 # clientlib の追加 {#add-clientlibs}
 
-## ClientLibraryFolder（clientlibs）の追加 {#add-a-clientlibraryfolder-clientlibs}
+## ClientLibraryFolder(clientlibs) の追加 {#add-a-clientlibraryfolder-clientlibs}
 
-`clientlibs` という名前の ClientLibraryFolder を作成し、ここに、サイトのページをレンダリングするために使用される JS および CSS を格納します。
+という名前の ClientLibraryFolder を作成します。 `clientlibs`サイトのページをレンダリングするために使用される JS と CSS を含む
 
-このクライアントライブラリに指定する `categories` プロパティの値は、clientlib をコンテンツページから直接含めたり、その他の clientlib に埋め込んだりする場合に使用される識別子です。
+この `categories`このクライアントライブラリに与えられるプロパティ値は、コンテンツページからこの clientlib を直接含めたり、他の clientlib に埋め込んだりするために使用される識別子です。
 
 1. 使用 **[!UICONTROL CRXDE Lite]**、展開 `/etc/designs`
 
@@ -32,19 +32,19 @@ ht-degree: 59%
    * 名前：`clientlibs`
    * 型：`cq:ClientLibraryFolder`
 
-1. 「**[!UICONTROL OK]**」をクリックします。
+1. クリック **[!UICONTROL OK]**
 
 ![chlimage_1-220](assets/chlimage_1-220.png)
 
-新しい **[!UICONTROL ノードの「]**&#x200B;プロパティ`clientlibs`」タブで、**`categories`** プロパティを入力します。
+内 **[!UICONTROL プロパティ]** 新しい `clientlibs` ノードに、 **`categories`** プロパティ：
 
 * 名前：**[!UICONTROL categories]**
 * タイプ：**[!UICONTROL String]**
-* 値：**[!UICONTROL apps.an-scf-sandbox]**
+* 値： **[!UICONTROL apps.an-scf-sandbox]**
 * クリック **[!UICONTROL 追加]**
 * クリック **[!UICONTROL すべて保存]**
 
-注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要：プレースホルダーを追加 `js.txt` および `css.txt` ファイル。 （正式には cq:ClientLibraryFolder ではありません。）
+注意：categories 値の前に「apps」を付けます。 は、「所有アプリケーション」が/libs ではなく/apps フォルダー内にあることを識別する規則です。  重要：プレースホルダーを追加 `js.txt` および `css.txt` ファイル。 （正式には cq:ClientLibraryFolder ではありません。）
 
 
 1. 右クリック **`/etc/designs/an-scf-sandbox/clientlibs`**
@@ -58,9 +58,9 @@ ht-degree: 59%
 
 ![chlimage_1-221](assets/chlimage_1-221.png)
 
-css.txt および js.txt の最初の行によって、後述のファイルのリストが見つかる基本の場所が特定されます。
+css.txt と js.txt の最初の行は、以下のファイルのリストを検索する基本の場所を示します。
 
-css.txt の内容を次のように設定します。：
+css.txt の内容を次のように設定してみます。
 
 ```
 #base=.
@@ -75,15 +75,15 @@ css.txt の内容を次のように設定します。：
 
 `}`
 
-## SCF clientlib の埋め込み {#embed-scf-clientlibs}
+## SCF Clientlibs を埋め込む {#embed-scf-clientlibs}
 
-**[!UICONTROL ノードの「]**&#x200B;プロパティ`clientlibs`」タブで、複数値の String プロパティ **[!UICONTROL embed]** を入力します。これにより、必要な [SCF コンポーネントのクライアント側ライブラリ (clientlibs)](client-customize.md#clientlibs-for-scf). このチュートリアルでは、コミュニティコンポーネントに必要な clientlib の多くを追加します。
+内 **[!UICONTROL プロパティ]** タブ `clientlibs` ノードで、複数値の String プロパティを入力します。 **[!UICONTROL 埋め込み]**. これにより、必要な [SCF コンポーネントのクライアント側ライブラリ (clientlibs)](client-customize.md#clientlibs-for-scf). このチュートリアルでは、コミュニティコンポーネントに必要な clientlib の多くを追加します。
 
-ページごとにダウンロードされる clientlib の利点とサイズ／スピードに関する考慮事項があるので、このアプローチが実稼動サイトでの使用に適している場合もあれば、そうでない場合もある点に&#x200B;**注意してください**。
+**注意** 各ページにダウンロードされる clientlib の利便性とサイズ/速度に関する考慮事項があるので、実稼動サイトで使用する方法にはこの方法が望ましい場合とそうでない場合があります。
 
-1 つのページで 1 つの機能のみを使用する場合は、&lt;% ui:includeClientLib categories=cq.social.hbs.forum&quot; %> など、その機能の完全な clientlib をページに直接含めることができます。
+1 つのページで 1 つの機能のみを使用する場合は、その機能の完全な clientlib を &lt;% ui:includeClientLib categories=cq.social.hbs.forum&quot; %> のように、直接ページに含めることができます。
 
-ここでは、それらをすべて挿入するので、オーサー clientlib である、より基本的な SCF clientlib が適しています。
+この場合、すべてを含めるので、作成者の clientlib であるより基本的な SCF clientlibs を選択します。
 
 * 名前：**`embed`**
 * 型：**`String`**
@@ -101,7 +101,7 @@ css.txt の内容を次のように設定します。：
    * **`cq.social.author.hbs.rating`**
    * **`cq.social.author.hbs.reviews`**
    * **`cq.social.author.hbs.voting`**
-   * 「**[!UICONTROL OK]**」をクリックします。
+   * クリック **[!UICONTROL OK]**
 
 * クリック **[!UICONTROL すべて保存]**
 
@@ -111,15 +111,15 @@ css.txt の内容を次のように設定します。：
 
 ![chlimage_1-223](assets/chlimage_1-223.png)
 
-## playpage テンプレートに clientlibs を含める {#include-clientlibs-in-playpage-template}
+## PlayPage テンプレートに clientlibs を含める {#include-clientlibs-in-playpage-template}
 
 を含めずに、 `apps.an-scf-sandbox` 必要な JavaScript とスタイルが使用できないので、ページの ClientLibraryFolder カテゴリ、SCF コンポーネントは機能しないか、スタイル設定されません。
 
-例えば、clientlibs を挿入しなかった場合、SCF コメントコンポーネントは、スタイルが設定されていない状態で表示されます。
+例えば、clientlibs を含めないと、SCF コメントコンポーネントはスタイル設定されていない状態で表示されます。
 
 ![chlimage_1-224](assets/chlimage_1-224.png)
 
-apps.an-scf-sandbox clientlibs を含めると、SCF コメントコンポーネントは、スタイルが設定された状態で表示されます。
+apps.an-scf-sandbox clientlibs を含めると、SCF コメントコンポーネントのスタイルが表示されます。
 
 ![chlimage_1-225](assets/chlimage_1-225.png)
 
@@ -149,17 +149,17 @@ include ステートメントは、 `<head>` セクション `<html>` スクリ�
 <ui:includeClientLib categories="apps.an-scf-sandbox"/>
 ```
 
-Web サイトをブラウザーに読み込み、背景が青の網掛けでないかどうかを確認します。
+ブラウザーに Web サイトを読み込み、背景が青の影でないかどうかを確認します。
 
 [http://localhost:4502/content/an-scf-sandbox/en/play.html](http://localhost:4502/content/an-scf-sandbox/en/play.html)
 
 ![chlimage_1-226](assets/chlimage_1-226.png)
 
-## これまでの作業内容の保存 {#saving-your-work-so-far}
+## これまでの作業の保存 {#saving-your-work-so-far}
 
-この時点で、必要最低限のサンドボックスが作成されているので、パッケージとして保存します。保存しておくと、操作中にリポジトリが破損してもう一度やり直したい場合に、サーバーの電源をオフにし、フォルダー crx-quickstart/ の名前変更または削除をおこなった後、サーバーの電源をオンにし、ここで保存したパッケージをアップロードしてインストールすることができます。つまり、これらの最も基本的な手順を繰り返さなくて済みます。
+この時点では、最小限のサンドボックスが存在し、再生中にリポジトリが破損し、再起動したい場合は、サーバーをオフにし、crx-quickstart/フォルダーの名前を変更または削除し、サーバーをオンにし、この保存済みパッケージをアップロードしてインストールし、最も基本的な手順を繰り返す必要がありません。
 
-すぐに操作してみたい場合は、[サンプルページの作成](create-sample-page.md)チュートリアルにこのパッケージがあります。
+このパッケージは、 [サンプルページの作成](create-sample-page.md) 飛び込んで遊び始めるのを待ちきれない人のためのチュートリアル！
 
 パッケージを作成するには：
 
@@ -169,10 +169,10 @@ Web サイトをブラウザーに読み込み、背景が青の網掛けでな�
 
    * パッケージ名: `an-scf-sandbox-minimal-pkg`
    * バージョン: `0.1`
-   * グループ：&lt;デフォルトのまま>
-   * 「**[!UICONTROL OK]**」をクリックします。
+   * グループ： &lt;leave as=&quot;&quot; default=&quot;&quot;>
+   * クリック **[!UICONTROL OK]**
 
-* 「**[!UICONTROL 編集]**」をクリックします。
+* クリック **[!UICONTROL 編集]**
 
    * 選択 **[!UICONTROL フィルター]** タブ
 

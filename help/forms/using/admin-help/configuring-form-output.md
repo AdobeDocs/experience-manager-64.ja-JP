@@ -1,7 +1,7 @@
 ---
 title: フォーム出力の設定
 seo-title: Configuring form output
-description: フォーム出力を設定する方法について説明します。
+description: フォーム出力の設定方法を説明します。
 seo-description: Learn how to configure form output.
 uuid: 70aad14e-c845-4ef3-a751-ad8860d5d505
 contentOwner: admin
@@ -13,32 +13,32 @@ exl-id: b19cae88-a549-41ba-b4a6-4b065a995296
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '228'
-ht-degree: 100%
+ht-degree: 41%
 
 ---
 
 # フォーム出力の設定{#configuring-form-output}
 
-## Web ブラウザーに返す HTML 出力の形式の指定 {#specify-the-type-of-html-output-returned-to-the-web-browser}
+## Web ブラウザーに返されるHTML出力のタイプを指定します {#specify-the-type-of-html-output-returned-to-the-web-browser}
 
-1. 管理コンソールで、サービス／Forms をクリックします。
-1. 「Form 出力」の「出力形式」で次のどちらかのオプションを選択します。
+1. 管理コンソールで、サービス/Forms をクリックします。
+1. 「フォーム出力」の「出力タイプ」リストで、次のいずれかのオプションを選択します。
 
-   **フル HTML：**&#x200B;すべての HTML タグを含む形（完全な HTML ページ）でフォームをレンダリングします。これがデフォルト値です。
+   **フルHTML:** 完全なHTMLタグ（完全なタグページ）内でフォームをレンダリングするには、次の手順に従います。HTML。 この値がデフォルトです。
 
    **Body のみ：** `<BODY>` タグの範囲（完全な HTML ページではない）でフォームを処理します。
 
 1. 「保存」をクリックします。
 
-## PDF コンテンツのレンダリング位置の指定 {#specify-the-location-where-pdf-content-is-rendered}
+## PDFコンテンツがレンダリングされる場所を指定 {#specify-the-location-where-pdf-content-is-rendered}
 
-1. 「Form 出力」の「レンダリング位置」リストで次のいずれかのオプションを選択します。
+1. 「フォーム出力」の「レンダリング先」リストで、次のいずれかのオプションを選択します。
 
-   **クライアント：** Adobe Acrobat または Adobe Reader 内で PDF フォームをレンダリングします。クライアント側でレンダリングを行うと AEM Forms のパフォーマンスが向上します。ただし、これは PDFForm 変換にのみ適用されます。
+   **クライアント：** Adobe AcrobatまたはAdobe Reader内でPDF formsをレンダリングするには： クライアントサイドレンダリングを使用すると、AEM forms のパフォーマンスが向上し、PDFForm 変換にのみ適用されます。
 
-   **サーバー：**&#x200B;アプリケーションサーバーで PDF フォームをレンダリングします。
+   **サーバー：** アプリケーションPDF forms上でアプリケーションをレンダリングする。
 
-   **自動：** XDP ファイルの `dynamicRender` 設定値の示す位置で PDF フォームをレンダリングします。これがデフォルト値です。
+   **自動：** XDP ファイルの `dynamicRender` 設定値の示す位置で PDF フォームをレンダリングします。この値がデフォルトです。
 
 1. 「保存」をクリックします。
 
@@ -47,7 +47,7 @@ ht-degree: 100%
 この機能を有効にするには、次の手順を実行します。
 
 1. 管理コンソールにログインします。
-1. **サービス**／**Forms** をクリックします。
+1. に移動します。 **サービス** > **フォーム**.
 1. 「出力形式」で「Body のみ」を指定します。
 1. 設定を保存します。
 1. HTML コードの head セクションで JavaScript 変数 __CUSTOM_SCRIPTS_VERSION を宣言し、その値を 1 に設定します。

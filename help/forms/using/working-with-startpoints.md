@@ -1,7 +1,7 @@
 ---
 title: スタートポイントの使用
 seo-title: Working with Startpoints
-description: Workbench で定義されたモバイルデバイスからAEM Forms プロセスを操作する手順。
+description: Workbench で定義されたモバイルデバイスからAEM Formsプロセスを操作する手順です。
 seo-description: Steps to work with a AEM Forms process from your Mobile device defined in Workbench.
 uuid: 9c51ce52-e7ba-43d3-a85c-67067f680ccb
 content-type: reference
@@ -12,13 +12,13 @@ exl-id: ef9352c7-c164-4cbf-8f18-5b97aa5f56be
 source-git-commit: 977ada5fefe476c7cd2fe1470eb024a517a681d2
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 94%
+ht-degree: 54%
 
 ---
 
 # スタートポイントの使用 {#working-with-startpoints}
 
-スタートポイントは Workbench で作成されたプロセスを呼び出します。これはフォームの送信時にプロセスを呼び出すフォームに関連付けられています。プロセスについて理解するには、「[Geometrixx Finance リファレンスサイトのチュートリアル](/help/forms/using/finance-reference-site-walkthrough.md)」を参照してください。
+スタートポイントは Workbench で作成されたプロセスを呼び出します。これはフォームの送信時にプロセスを呼び出すフォームに関連付けられています。詳しくは、 [Geometrixxファイナンスリファレンスサイトのチュートリアル](/help/forms/using/finance-reference-site-walkthrough.md) プロセスを理解するために。
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ AEM Forms アプリケーションからプロセスを開始するには、プ�
 
 **Workbench で定義されたプロセスを開始するには**
 
-1. AEM Forms アプリケーションで使用可能なスタートポイントを表示するには、[ホーム画面](/help/forms/using/home-screen.md)に移動してください。
+1. AEM Formsアプリで使用可能な Startpoint を表示するには、に移動します。 [ホーム画面](/help/forms/using/home-screen.md).
 1. デフォルトでは、**[!UICONTROL ホーム]**&#x200B;画面に「**[!UICONTROL すべてのフォーム]**」リストが表示されます。
 
    スタートポイントはフォームに関連付けられています。リストでスタートポイントに関連付けられているフォームをタップして開きます。
@@ -43,8 +43,8 @@ AEM Forms アプリケーションからプロセスを開始するには、プ�
 
 1. フォームを入力したら、「**送信**」ボタンをタップします。
 
-アプリケーションがオフラインの場合、フォームとそのデータは Outbox フォルダーに保存されます。
+アプリがオフラインの場合、フォームとそのデータは Outbox フォルダーに保存されます。
 
-アプリケーションがオンラインの場合、タスクは AEM Forms Server と同期され、プロセスで指定されたユーザーに割り当てられます。
+アプリがオンラインの場合、タスクはAEM Formsサーバーと同期され、プロセスで指定されたユーザーに割り当てられます。
 
-タスクリスト内のタスクを実行するには、「[タスクを開く](/help/forms/using/open-task.md)」を参照してください。
+タスクリスト内のタスクを操作するには、 [タスクを開く](/help/forms/using/open-task.md).

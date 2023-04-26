@@ -13,7 +13,7 @@ exl-id: 85a367fe-a124-42af-ae3e-fe4d10425ea1
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '355'
-ht-degree: 49%
+ht-degree: 23%
 
 ---
 
@@ -21,26 +21,26 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-記事、バナーおよびコレクションは、AEM では cq:Pages として表されます。
+記事、バナー、コレクションは、AEMでは cq:Pages として表されます。
 
-これらは、すべての cq:Pages に共通するプロパティを共有するとともに、以下に示す Adobe Experience Manager（AEM）Mobile On-Demand Services のメタデータおよび統合をサポートする他のプロパティも備えています。
+これらは、任意の cq:Page で見つかる共通のプロパティに加えて、Adobe Experience Manager(AEM)Mobile On-Demand サービスのメタデータおよび統合サポートプロパティを表す他のいくつかの共通のプロパティを共有します。
 
-以下の表では、コンテンツのプロパティとノードについて説明します。
+次の表に、コンテンツのプロパティとノードを示します。
 
-## 共通統合プロパティ {#common-integration-properties}
+## 共通の統合プロパティ {#common-integration-properties}
 
 | **プロパティ名** | **タイプ** | **デフォルト値または期待値** | **説明** |
 |---|---|---|---|
-| dps-id | String |  | AEM Mobileに割り当てられ、AEMによって保存され、AEM MobileにアップロードまたはAEM Mobileから読み込まれた後にによって割り当てられ、 |
+| dps-id | 文字列 |  | AEM Mobileに割り当てられ、AEMによって保存され、AEM MobileにアップロードまたはAEM Mobileから読み込まれた後にによって割り当てられ、 |
 | dps-resourceType | 文字列 | dps:Article | dps:Banner | dps:Collection | エンティティタイププロパティ |
 | dps-version | 文字列 |  | AEM Mobileエンティティのバージョン（aem-id の完全な内部にも含まれる） |
 | dps-lastSynced | 日付 |  | AEM MobileからAEMへの最後の同期/インポート日 |
 | dps-lastUploaded | 日付 |  | AEMからAEM Mobileへの最後のアップロード日 |
 | dps-lastUploadedBy | String:userid |  | AEMからAEM Mobileへの最後のアップロード要求を実行した id ユーザー |
 
-## コアメタデータプロパティ {#core-metadata-properties}
+## コアメタデータのプロパティ {#core-metadata-properties}
 
 | プロパティ名 | タイプ | デフォルト値または期待値 |
 |--- |--- |--- |
@@ -62,7 +62,7 @@ ht-degree: 49%
 | dps-authorURL | 文字列 |  |
 | dps-hideFromBrowsePage | ブール値 |  |
 | dps-access | 文字列 | {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} からの ProtectedAccess |
-| **Social** |  |  |
+| **ソーシャル** |  |  |
 | dps-socialShareURL | 文字列 |  |
 | dps-articleText | 文字列 |  |
 | dps-url | 文字列 |  |

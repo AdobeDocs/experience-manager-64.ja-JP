@@ -1,7 +1,7 @@
 ---
 title: イネーブルメントのための AEM Communities 使用の手引き
 seo-title: Getting Started with AEM Communities for Enablement
-description: イネーブルメントコミュニティのセットアップ方法のチュートリアル
+description: イネーブルメントコミュニティの設定方法に関するチュートリアル
 seo-description: Tutorial on how to set up an enablement community
 uuid: 25b43ee4-6fdd-496c-94fe-daf1d300aecb
 contentOwner: Janice Kendall
@@ -13,17 +13,17 @@ exl-id: 4d968f7e-bb6f-4c7a-b266-02f53797908c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '121'
-ht-degree: 90%
+ht-degree: 20%
 
 ---
 
 # イネーブルメントのための AEM Communities 使用の手引き  {#getting-started-with-aem-communities-for-enablement}
 
-AEM Communities では、デジタルチャネルと対面チャネルにまたがる一貫したエクスペリエンスの構築をサポートするために、様々なイネーブルメントリソースや割り当て済みコンテンツや動的なレコメンデーションを活用して、従業員や顧客のイネーブルメントを促進することができます。こうしたリソースやコンテンツは、エンゲージメントを強化するためのソーシャルコミュニティ内で提供されます。
+AEM Communitiesは、ソーシャルコミュニティ内で提供されるイネーブルメントリソース、割り当て済みコンテンツ、動的なレコメンデーションを使用して、従業員や顧客間でのイネーブルメントを容易にし、デジタルチャネルや対面チャネルで一貫したエクスペリエンスを作成します。
 
-以下は、デモ用または開発用の[イネーブルメントコミュニティ](overview.md#enablement-community)を素早くセットアップする方法のチュートリアルです。
+次に、 [実施可能コミュニティ](overview.md#enablement-community) デモや開発の目的で
 
-[エンゲージメントコミュニティ](overview.md#engagement-community)を素早く設定する方法のチュートリアルについては、[AEM Communities 使用の手引き](getting-started.md)を参照してください。
+をすばやく設定する方法のチュートリアルについては、 [エンゲージメントコミュニティ](overview.md#engagement-community)，訪問 [AEM Communitiesの概要](getting-started.md).
 
 >[!NOTE]
 >

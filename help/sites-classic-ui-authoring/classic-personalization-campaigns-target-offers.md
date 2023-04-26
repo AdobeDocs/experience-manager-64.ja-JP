@@ -1,7 +1,7 @@
 ---
 title: Target オファー
 seo-title: Target offers
-description: Target オファーの作成
+description: ターゲットオファーの作成
 seo-description: Create target offers
 uuid: 88206181-9708-454a-a22a-05e3fc0247c2
 contentOwner: User
@@ -13,20 +13,20 @@ exl-id: ca9c6fd1-7f2e-4c99-ba6e-0a064274ac24
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 100%
+ht-degree: 63%
 
 ---
 
 # Target オファー {#target-offers}
 
-## Test&amp;Target オファーのエクスペリエンスの作成 {#creating-a-test-target-offer-experience}
+## Test&amp;Target オファーエクスペリエンスの作成 {#creating-a-test-target-offer-experience}
 
-1. 新しいキャンペーンを左側のペインで選択するか、右側のペインでダブルクリックします。
-1. 次のアイコンを使用して、リスト表示を選択します。
+1. 左側のウィンドウで新しいキャンペーンを選択するか、右側のウィンドウで新しいキャンペーンをダブルクリックします。
+1. 次のアイコンを使用してリスト表示を選択します。
 
    ![](do-not-localize/chlimage_1-11.png)
 
-1. 「**新規...**」をクリックします。
+1. クリック **新規…**
 1. 「**タイトル**」、「**名前**」および作成するエクスペリエンスのタイプ（この例では、「Test&amp;Target のオファー」）を指定できます。
 
    ![chlimage_1-139](assets/chlimage_1-139.png)

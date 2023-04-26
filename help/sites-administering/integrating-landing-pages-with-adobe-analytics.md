@@ -1,7 +1,7 @@
 ---
 title: ランディングページと Adobe Analytics の統合
 seo-title: Integrating Landing Pages with Adobe Analytics
-description: ランディングページと Adobe Analytics を統合する方法について説明します。
+description: ランディングページをAdobe Analyticsと統合する方法を説明します。
 seo-description: Learn how to integrate landing pages with Adobe Analytics.
 uuid: 8f6672d1-497f-4ccb-b3cc-f6120fc467ba
 contentOwner: msm-service
@@ -13,7 +13,7 @@ exl-id: 2923ae94-375a-4c44-a08f-f992eb08000a
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '376'
-ht-degree: 100%
+ht-degree: 81%
 
 ---
 
@@ -36,12 +36,12 @@ AEM で、サイドキックに表示される&#x200B;**コールトゥアクシ
 
 ![chlimage_1-21](assets/chlimage_1-21.jpeg)
 
-### Adobe Analytics へのランディングページコンポーネントのマッピング {#mapping-landing-page-components-to-adobe-analytics}
+### ランディングページコンポーネントのAdobe Analyticsへのマッピング {#mapping-landing-page-components-to-adobe-analytics}
 
-ランディングページコンポーネントを Adobe Analytics にマッピングするには：
+ランディングページコンポーネントをAdobe Analyticsにマッピングするには：
 
-1. Adobe Analytics 設定を作成し、新しいフレームワークを作成したら、ドロップダウンメニューから適切なレポートスイートを選択します。この結果、Adobe Analytics の変数が取得され、コンテンツファインダーに表示されます。
-1. コールトゥアクション（CTA）コンポーネントを、サイドキックからページ中央のマッピング領域の適切な場所にドラッグ＆ドロップします。
+1. Adobe Analytics 設定を作成し、新しいフレームワークを作成したら、ドロップダウンメニューから適切なレポートスイートを選択します。その結果、Adobe Analytics変数が取得され、コンテンツファインダーに表示されます。
+1. 必要に応じて、サイドキックからページ中央のマッピング領域に、コールトゥアクション (CTA) コンポーネントをドラッグ&amp;ドロップします。
 
 <table> 
  <tbody>
