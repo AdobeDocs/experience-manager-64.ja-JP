@@ -1,7 +1,7 @@
 ---
 title: ベストプラクティス
 seo-title: Best Practices
-description: AEM を可能な限り効率的かつ効果的に使用する方法です
+description: 可能な限り効率的かつ最も効果的にAEMを使用する方法
 seo-description: How to use AEM in the most efficient and most effective way possible
 uuid: b3044cdf-8ca4-4012-b290-11f73c0cb1bf
 contentOwner: Chris Bohnert
@@ -13,15 +13,15 @@ exl-id: 84db73b0-1bc3-4c39-9bc2-0840e24832b0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '285'
-ht-degree: 88%
+ht-degree: 41%
 
 ---
 
 # ベストプラクティス {#best-practices}
 
-オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
+オーサリングのベストプラクティスでは、AEMをできるだけ効率的かつ効果的に使用する方法について説明しています。 このトピックのリストは、AEMの様々な領域で増えています。
 
-次の領域について、ベストプラクティスに関するドキュメントが提供されています。
+次の領域に、ベストプラクティスに関するドキュメントが用意されています。
 
 * [Assets](#assets)
 * [Sites](#sites)
@@ -33,11 +33,11 @@ ht-degree: 88%
 * [開発のベストプラクティス](/help/sites-developing/best-practices.md)
 * [デプロイのベストプラクティス](/help/sites-deploying/best-practices.md)
 
-以降の表では、特定のドキュメントの説明とリンクを示します。
+以下の表では、特定のドキュメントについて説明し、リンクします。
 
 ## Assets {#assets}
 
-ダイナミックメディア機能および Scene 7 統合を含むアセットのベストプラクティスは、次のトピックで説明しています。
+Dynamic Media 機能や Scene7 統合を含む、Assets に関するベストプラクティスについては、次のトピックで説明します。
 
 <table> 
  <tbody>
@@ -49,10 +49,10 @@ ht-degree: 88%
   <tr>
    <td>ビデオエンコーディング</td> 
    <td><a href="/help/assets/video.md#best-practices-for-encoding-videos">エンコーディングのベストプラクティス</a></td> 
-   <td>ソースビデオファイルのエンコーディングに関するベストプラクティスのヒントを示します。</td> 
+   <td>ソースビデオファイルのエンコーディングに関するベストプラクティスのヒントを説明します。</td> 
   </tr>
   <tr>
-   <td>ダイナミックイメージング</td> 
+   <td>Dynamic Imaging</td> 
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging のベストプラクティス</a></td> 
    <td><p>Dynamic Media機能を使用している場合、またはDynamic Mediaとの統合時に、最適な結果を得るために画像をシャープにする方法と、画質を最適化する最適な方法について説明します。</p> </td> 
   </tr>
@@ -64,9 +64,9 @@ ht-degree: 88%
  </tbody>
 </table>
 
-## サイト {#sites}
+## Sites {#sites}
 
-Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
+Web サイトコンテンツの管理とオーサリングには、次に示すベストプラクティスがあります。
 
 |  |  |  |
 |---|---|---|
@@ -77,5 +77,5 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
 
 |  |  |  |
 |---|---|---|
-| アダプティブフォーム | [アダプティブフォームの操作のベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) | アダプティブフォームの設定、オーサリングおよびカスタマイズのベストプラクティスについて説明します。 |
-| HTML5 のフォーム | [HTML5 フォームのデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) | HTML5 フォームのレイアウトおよびデザインの作業でのベストプラクティスについて説明します。 |
+| アダプティブフォーム | [アダプティブフォームの操作のベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) | アダプティブフォームの設定、オーサリング、カスタマイズに関するベストプラクティスについて説明します。 |
+| HTML5 のフォーム | [Forms5 を設計する際のベストプラクティスHTML](/help/forms/using/best-practices-for-html5-forms.md) | レイアウト 5 フォームのレイアウトとデザインに関するベストプラクティスについてHTMLします。 |

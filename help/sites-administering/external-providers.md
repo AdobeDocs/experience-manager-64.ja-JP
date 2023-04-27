@@ -1,7 +1,7 @@
 ---
 title: Analytics と外部プロバイダー
 seo-title: Analytics with External Providers
-description: Analytics と外部プロバイダーについて説明します。
+description: 外部プロバイダーとの Analytics について説明します。
 seo-description: Learn about Analytics with External Providers.
 uuid: bea8ec38-a190-46f9-a5fa-8d65321fdf20
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: 6d906c2b-c8bc-4d54-9887-8aaeb6cc83d3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '442'
-ht-degree: 77%
+ht-degree: 70%
 
 ---
 
@@ -21,14 +21,14 @@ ht-degree: 77%
 
 Analytics は、Web サイトがどのように使用されているかに関する、重要で興味深い情報を提供できます。
 
-次のような標準の様々な設定を、適切なサービスとの統合に使用できます。
+様々な標準提供の設定が、次のような適切なサービスとの統合で利用できます。
 
 * [Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * [Adobe Target](/help/sites-administering/target.md)
 
-また、**汎用分析スニペット**&#x200B;の独自のインスタンスを設定して、新しいサービス設定を定義できます。
+また、 **汎用 Analytics スニペット** をクリックして、新しいサービス設定を定義します。
 
-情報は、Web ページに追加されるコードの小さなスニペットを使用して収集されます。次に例を示します。
+その後、情報は、Web ページに追加されるコードの小さなスニペットを使用して収集されます。 次に例を示します。
 
 >[!CAUTION]
 >
@@ -46,19 +46,19 @@ _gaq.push(['_trackPageview']);
 })();
 ```
 
-このようなスニペットを使用して、データを収集しレポートを生成できます。収集される実際のデータは、プロバイダーおよび実際に使用されるスニペットによって異なります。統計の例には次が含まれます。
+このようなスニペットを使用すると、データを収集してレポートを生成できます。 収集される実際のデータは、プロバイダーと、使用する実際のコードスニペットによって異なります。 統計の例を次に示します。
 
-* 経時的な訪問者数
-* 訪問ページ数
-* 使用された検索語句
+* 長期間の訪問者数
+* 訪問したページ数
+* 使用する検索語句
 * ランディングページ
 
 >[!CAUTION]
 >
->Geometrixxアウトドアデモサイトは、ページプロパティで指定された属性が HTML ソースコード ( `</html>` endtag) を `js` スクリプト
+>Geometrixx-Outdoors デモサイトは、ページプロパティで提供した属性が、対応する `js` スクリプトの HTML ソースコード（`</html>` 終了タグのすぐ上）に追加されます。
 >
 >
->自分の `/apps` デフォルトのページコンポーネント ( `/libs/foundation/components/page`) を使用する場合は、 `js` スクリプトは、例えば、 `cq/cloudserviceconfigs/components/servicescomponents`または同様のメカニズムを使用している必要があります。
+>独自の `/apps` がデフォルトページコンポーネント（`/libs/foundation/components/page`）から継承しない場合、ユーザー（またはその開発者）が対応する `js` スクリプトが含まれていること（例えば、`cq/cloudserviceconfigs/components/servicescomponents` が含まれているか、同様のメカニズムが使用されているか）を確認する必要があります。
 >
 >
 >これをしないと、どのサービス（汎用、Analytics、Target など）も機能しません。
@@ -99,15 +99,15 @@ _gaq.push(['_trackPageview']);
 
 1. 「**OK**」をクリックして保存します。
 
-1. 「**クラウドサービス**」タブに戻されます。この **汎用分析スニペット** がメッセージと共にリストされました。 `Configuration reference missing`. ドロップダウンリストを使用して、具体的なサービスインスタンス（例：google-analytics）を選択します。
+1. 「**クラウドサービス**」タブに戻されます。**汎用分析スニペット**&#x200B;が、`Configuration reference missing` のメッセージと共に表示されます。ドロップダウンリストを使用して、具体的なサービスインスタンス（例：google-analytics）を選択します。
 
    ![analytics_selectspecificservice](assets/analytics_selectspecificservice.png)
 
 1. 「**OK**」をクリックして保存します。
 
-   これで、ページのページソースを表示すると、スニペットが表示されるようになりました。
+   これで、ページのページソースを表示した場合に、スニペットを表示できます。
 
-   適切な期間が経過した後、収集された統計が表示できるようになります。
+   適切な期間が経過すると、収集された統計を表示できます。
 
    >[!NOTE]
    >

@@ -1,7 +1,7 @@
 ---
 title: アセットの操作
 seo-title: Working with Assets
-description: オーサー環境とツールでは、ページの編集中にアセットを検索して使用するためのコンテンツファインダーの使用について説明しています。AEM Assets では、次のような他のアセット操作方法を使用できます。
+description: オーサー環境とツールのセクションでは、ページの編集中にアセットを検索して使用するためのコンテンツファインダーの使用について説明しています。AEM Assetsでは、他のアセット操作方法を使用できます。
 seo-description: The Author Environment and Tools section provides information about using Content Finder to find and use assets when editing pages. AEM Assets provides other methods for working with assets.
 uuid: 65d1e593-9957-45b7-8831-45055aa41a1d
 contentOwner: Chris Bohnert
@@ -13,14 +13,14 @@ exl-id: 535d2a9f-852c-48ea-89ec-31de3a891666
 source-git-commit: 82f31577e41e1cd484ee3a8d22bbc11756ff23a2
 workflow-type: tm+mt
 source-wordcount: '80'
-ht-degree: 90%
+ht-degree: 88%
 
 ---
 
-# アセットの操作{#working-with-assets}
+# アセットの操作 {#working-with-assets}
 
-[オーサー環境とツール](/help/sites-authoring/author-environment-tools.md)では、ページの編集中にアセットを検索して使用するためのコンテンツファインダーの使用について説明しています。AEM Assets では、次のような他のアセット操作方法を使用できます。
+[オーサー環境とツール](/help/sites-authoring/author-environment-tools.md)のセクションでは、ページの編集中にアセットを検索して使用するための[!UICONTROL コンテンツファインダー]の使用について説明しています。AEM Assets では、次のような他のアセット操作方法を使用できます。
 
-* [ページへのDynamic Media Classic機能の追加](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
+* [ページへの Dynamic Media Classic 機能の追加](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
 * [Dynamic Media の操作](/help/sites-classic-ui-authoring/dynamic-media-assets.md)
 * [アセットの命名規則](/help/sites-classic-ui-authoring/asset-naming-conventions.md)

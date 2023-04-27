@@ -1,7 +1,7 @@
 ---
 title: オーサー環境の操作
 seo-title: Working with the Author Environment
-description: オーサー環境では、オーサリングに関連するタスク（ページオーサリングおよびアセットの管理を含む）と、Web サイトのコンテンツの生成および管理の際に必要な管理タスクを実行できます。
+description: オーサー環境を使用すると、Web サイト上のコンテンツを生成および管理する際に必要なオーサリング（ページのオーサリングおよび管理を含む）および管理タスクに関連するタスクを実行できます。
 seo-description: The author environment allows you to perform tasks related to authoring (including page authoring and managing assets) and administering tasks you need when generating and maintaining the content on your website.
 uuid: ebeaa2c3-05b0-4108-8e84-69b9ba48cfbe
 contentOwner: Chris Bohnert
@@ -13,7 +13,7 @@ exl-id: 8421a092-6e99-4c05-9647-c0cc76667c85
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 100%
+ht-degree: 55%
 
 ---
 
@@ -33,18 +33,18 @@ ht-degree: 100%
 
 1. クラシック UI
 
-   * この UI は長年、常に AEM で使用可能でした。
-   * 緑色を基調としています。
-   * デスクトップデバイス向けに設計されています。
-   * もうメンテナンスはおこなわれていません。
-   * 以下のドキュメントでは、このクラシック UI に焦点を当てています。最新のタッチベースの UI でのオーサリングについて詳しくは、[標準オーサリングのドキュメント](/help/sites-authoring/author.md)を参照してください。
+   * この UI は、長年にわたってAEMで使用されてきました。
+   * 緑色が多い。
+   * これはデスクトップデバイスで使用するように設計されています。
+   * メンテナンスは終了しました。
+   * 次のドキュメントでは、このクラシック UI に焦点を当てています。 最新のタッチベース UI でのオーサリングについて詳しくは、 [標準オーサリングドキュメント](/help/sites-authoring/author.md).
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
 1. タッチ操作対応 UI
 
-   * これは AEM の最新の標準 UI です。
-   * 灰色を基調としており、クリーンでフラットなインターフェイスになっています。
-   * タッチデバイスとデスクトップデバイスの両方で使用できるようにデザインされています（タッチ操作向けに最適化されています）。ルックアンドフィールはすべてのデバイスで同じですが、[リソースの表示と選択](/help/sites-authoring/basic-handling.md)の操作がやや異なります（タップとクリックの違い）。
+   * これは、最新の標準AEM UI です。
+   * 主にグレーで、クリーンでフラットなインターフェースを備えています。
+   * タッチデバイスとデスクトップデバイスの両方で使用できるように設計されています（タッチ操作向けに最適化）。 ルックアンドフィールはすべてのデバイスで同じですが、[リソースの表示と選択](/help/sites-authoring/basic-handling.md)の操作がやや異なります（タップとクリックの違い）。
    * タッチベースの UI を使用したオーサリング方法について詳しくは、[標準オーサリングのドキュメント](/help/sites-authoring/author.md)を参照してください。以下のドキュメントでは、クラシック UI に焦点を当てています。
 
    * デスクトップ：

@@ -13,7 +13,7 @@ exl-id: 46ad04b1-a660-4cdd-8649-5cdb00dbcae3
 source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
 source-wordcount: '923'
-ht-degree: 99%
+ht-degree: 78%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 99%
 >
 >別のアドビオンデマンドサービスからのデータは、関連するプライバシー要求とともに、そのサービスでの対応が必要となります。
 >
->詳しくは、[アドビのプライバシーセンター](https://www.adobe.com/privacy.html)を参照してください。
+>詳しくは、[アドビのプライバシーセンター](https://www.adobe.com/jp/privacy.html)を参照してください。
 
 ## はじめに {#introduction}
 
@@ -93,9 +93,9 @@ AEM の製品範囲に関する規制ドキュメントについては、以下�
 
 [AEM 基盤のデータ保護およびプライバシーリクエストの処理](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)を参照してください。
 
-## 集計した使用状況の統計の収集を AEM でオプトインする方法 {#aem-opting-into-aggregate-usage-statistics-collection}
+## AEM Opting Into Aggregate Usage Statistics Collection {#aem-opting-into-aggregate-usage-statistics-collection}
 
-[集計した使用状況の統計の収集](/help/sites-deploying/opt-in-aggregated-usage-statistics.md)を参照してください。
+詳しくは、 [集計された使用状況の統計の収集](/help/sites-deploying/opt-in-aggregated-usage-statistics.md).
 
 ## AEM Sites {#aem-sites}
 
@@ -120,18 +120,18 @@ AEM の製品範囲に関する規制ドキュメントについては、以下�
 
 ## AEM Communities {#aem-communities}
 
-AEM Communities は[デフォルトの API](/help/communities/user-ugc-management-service.md) を通じて、データのポータビリティ権、アクセス権および削除権をデータ主体に提供します。これらの API を使用すれば、ユーザー生成コンテンツの一括削除や一括書き出し、および許可可能 ID で識別されたユーザーアカウントの無効化が可能となります。ただし、CRXDE Lite でユーザーノードを削除してユーザーアカウントを永続的に削除することもできるので、システムからの容易なオプトアウト、という要求に応えることができます。
+AEM Communitiesは、データの移植性、アクセス権、および [標準搭載の API](/help/communities/user-ugc-management-service.md). これらの API を使用すると、ユーザー生成コンテンツの一括削除および一括書き出しが可能になり、許可可能 ID を使用して識別されたユーザーアカウントが無効になります。 ただし、CRXDE Lite内のユーザーノードを削除することで、ユーザーアカウントの恒久的な削除を実現でき、システムから簡単なオプトアウトの必要性に対処します。
 
-さらに AEM Communities では、一括モデレーションコンソールを通じて「プライバシーバイデザイン」が実現されます。このコンソールでは、権限を持つメンバーがユーザーの貢献や詳細を検索および削除できます。メンバー管理コンソールを使用すれば、制限を設けてある貢献者の参加を禁止することさえできます。このコンソールではさらに、データ主体が自身の作成した貢献を削除することもできます。
+さらに、AEM Communitiesは一括モデレートコンソールを使用して設計に基づいてプライバシーを提供し、権限を持つメンバーがユーザーの投稿と詳細を検索および削除できるようにします。 メンバー管理コンソールを使用すると、投稿者を禁止するポイントに制限できます。 さらに、データ主体に対し、データ主体が作成した投稿の削除を許可します。
 
 ## AEM Forms {#aem-forms}
 
-AEM Forms に含まれるコンポーネントやワークフローは、ビジネスプロセスの調整やデジタルトランザクションの実行のためにデータをキャプチャ、処理および格納します。コンポーネントごとに異なるデータストアが使用されますが、コンポーネントをカスタムデータストアと統合することも可能です。次のドキュメントでは、コンポーネントのデータ保護およびプライバシー（GDPR や CCPA など）ワークフローをサポートするためのユーザーデータへのアクセスと処理に関する手順とガイドラインを説明します。
+AEM Formsには、ビジネスプロセスを調整し、デジタルトランザクションを完了させるために、データをキャプチャ、処理、保存するコンポーネントとワークフローが含まれています。 コンポーネントが異なれば、使用するデータストアも異なり、カスタムデータストアとの統合も可能です。 次のドキュメントでは、コンポーネントのデータ保護およびプライバシー（GDPR や CCPA など）ワークフローをサポートするためのユーザーデータへのアクセスと処理に関する手順とガイドラインを説明します。
 
 * [フォームポータル](/help/forms/using/forms-portal-handling-user-data.md)
 * [Correspondence Management](/help/forms/using/correspondence-management-handling-user-data.md)
 * [Acrobat Signとの統合](/help/forms/using/integration-adobe-sign-handling-user-data.md)
 * [OSGi でのフォームに特化したワークフロー](/help/forms/using/forms-workflow-osgi-handling-user-data.md)
-* [Forms JEE のワークフロー](/help/forms/using/forms-workflow-jee-handling-user-data.md)（AEM Forms JEE のみ）
-* [Document Security](/help/forms/using/document-security-handling-user-data.md)（AEM Forms JEE のみ）
-* [ユーザー管理](/help/forms/using/user-management-handling-user-data.md)（AEM Forms JEE のみ）
+* [Forms JEE ワークフロー](/help/forms/using/forms-workflow-jee-handling-user-data.md) (AEM Forms JEE のみ )
+* [Document Security](/help/forms/using/document-security-handling-user-data.md) (AEM Forms JEE のみ )
+* [ユーザー管理](/help/forms/using/user-management-handling-user-data.md) (AEM Forms JEE のみ )

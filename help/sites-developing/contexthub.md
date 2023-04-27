@@ -13,7 +13,7 @@ exl-id: 0a6b815a-5055-4c44-96d1-ff238b4285f3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '286'
-ht-degree: 100%
+ht-degree: 64%
 
 ---
 
@@ -37,24 +37,24 @@ ContextHub ストアは、コンテキストデータをクライアント上に
 
 個々の ContextHub ストアは、事前定義されたストアタイプのインスタンスです。
 
-* ContextHub には、いくつかの[ストアタイプのサンプル](/help/sites-developing/ch-samplestores.md)が用意されています。
-* AEM コンソールを使用して[ストアを作成](/help/sites-administering/contexthub-config.md#creating-a-contexthub-store)します。
+* ContextHub には、次の機能が用意されています。 [サンプルストアタイプ](/help/sites-developing/ch-samplestores.md).
+* AEMコンソールを使用して [ストアを作成](/help/sites-administering/contexthub-config.md#creating-a-contexthub-store).
 * デベロッパーは、[カスタムストアタイプを作成](/help/sites-developing/ch-extend.md#creating-custom-store-candidates)できます。
-* 開発者は、JavaScript を使用して[ストアデータにアクセス](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores)できます。
+* 開発者が実行できる操作 [ストアデータにアクセス](/help/sites-developing/ch-adding.md#interacting-with-contexthub-stores) JavaScript を使用。
 
 ## セグメント化 {#segmentation}
 
-ContextHub には、セグメントの管理や、現在のコンテキストで解決されるセグメントの判断をするセグメント化エンジンが含まれています。いくつかのセグメントが定義されています。JavaScript API を使用して、[解決されたセグメントを判断](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments)できます。
+ContextHub には、セグメントを管理し、現在のコンテキストに対して解決されるセグメントを決定するセグメント化エンジンが含まれています。 複数のセグメントが定義されています。 JavaScript API を使用すると、 [解決されたセグメントを決定](/help/sites-developing/ch-adding.md#determining-resolved-contexthub-segments).
 
 ## プレゼンテーション {#presentation}
 
-マーケティング担当者と作成者は、[ContextHub ツールバー](/help/sites-authoring/ch-previewing.md)を使用してストアデータを表示および操作し、ページのオーサリング時にユーザーエクスペリエンスをシミュレートできます。このツールバーは、ContextHub ストアへのアクセスを提供する UI モジュールのグループで構成されています。
+マーケティング担当者と作成者は、[ContextHub ツールバー](/help/sites-authoring/ch-previewing.md)を使用してストアデータを表示および操作し、ページのオーサリング時にユーザーエクスペリエンスをシミュレートできます。ツールバーは、ContextHub ストアへのアクセスを提供する UI モジュールのグループで構成されます。
 
 各 ContextHub UI モジュールは、事前定義されたモジュールタイプのインスタンスです。
 
-* ContextHub には、いくつかの[モジュールタイプのサンプル](/help/sites-developing/ch-samplemodules.md)が用意されています。
-* AEM コンソールを使用して [UI モジュールを追加](/help/sites-administering/contexthub-config.md#adding-a-ui-module)し、[UI モードにグループ化](/help/sites-administering/contexthub-config.md#adding-a-ui-mode)します。
+* ContextHub には、次の機能が用意されています。 [サンプルモジュールタイプ](/help/sites-developing/ch-samplemodules.md).
+* AEMコンソールを使用して [UI モジュールの追加](/help/sites-administering/contexthub-config.md#adding-a-ui-module)、および [UI モードでグループ化](/help/sites-administering/contexthub-config.md#adding-a-ui-mode).
 
-* 開発者は、[カスタムモジュールタイプを作成](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types)できます。
+* 開発者が実行できる操作 [カスタムモジュールタイプの作成](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types).
 
-開発者は、[ContextHub コンポーネントをページに追加](/help/sites-developing/ch-adding.md)する必要があります。
+開発者は、 [ページに ContextHub コンポーネントを追加する](/help/sites-developing/ch-adding.md).

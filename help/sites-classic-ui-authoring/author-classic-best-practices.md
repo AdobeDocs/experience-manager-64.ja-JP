@@ -1,7 +1,7 @@
 ---
 title: ベストプラクティス
 seo-title: Best Practices
-description: オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
+description: オーサリングのベストプラクティスでは、AEMをできるだけ効率的かつ効果的に使用する方法について説明しています。 このトピックのリストは、AEMの様々な領域で増えています。
 seo-description: Authoring best practices describe how to use AEM in the most efficient and most effective way possible. This growing list of topics includes a variety of areas in AEM.
 uuid: d1f58335-0aa6-4b35-bdcd-cf6051bd1439
 contentOwner: Chris Bohnert
@@ -12,16 +12,16 @@ discoiquuid: a715c372-3d05-4119-9d2b-41bca0b16b19
 source-git-commit: 425f1e6288cfafc3053877a43fa0a20fd5d2f3ac
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 69%
+ht-degree: 44%
 
 ---
 
 
-# ベストプラクティス{#best-practices}
+# ベストプラクティス {#best-practices}
 
-オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
+オーサリングのベストプラクティスでは、AEMをできるだけ効率的かつ効果的に使用する方法について説明しています。 このトピックのリストは、AEMの様々な領域で増えています。
 
-次の領域について、ベストプラクティスに関するドキュメントが提供されています。
+次の領域に、ベストプラクティスに関するドキュメントが用意されています。
 
 * [Assets](#assets)
 * [Sites](#sites)
@@ -33,11 +33,11 @@ ht-degree: 69%
 * [開発のベストプラクティス](/help/sites-developing/best-practices.md)
 * [デプロイのベストプラクティス](/help/sites-deploying/best-practices.md)
 
-以降の表では、特定のドキュメントの説明とリンクを示します。
+以下の表では、特定のドキュメントについて説明し、リンクします。
 
 ## Assets {#assets}
 
-ダイナミックメディア機能および Scene 7 統合を含むアセットのベストプラクティスは、次のトピックで説明しています。
+Dynamic Media 機能や Scene7 統合を含む、Assets に関するベストプラクティスについては、次のトピックで説明します。
 
 <table> 
  <tbody>
@@ -49,29 +49,29 @@ ht-degree: 69%
   <tr>
    <td>ビデオエンコーディング</td> 
    <td><a href="/help/assets/video.md#best-practices-for-encoding-videos">エンコーディングのベストプラクティス</a></td> 
-   <td>ソースビデオファイルのエンコーディングに関するベストプラクティスのヒントを示します。</td> 
+   <td>ソースビデオファイルのエンコーディングに関するベストプラクティスのヒントを説明します。</td> 
   </tr>
   <tr>
-   <td>ダイナミックイメージング</td> 
-   <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">ダイナミックイメージングのベストプラクティス</a></td> 
+   <td>Dynamic Imaging</td> 
+   <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging のベストプラクティス</a></td> 
    <td><p>Dynamic Media機能を使用している場合、またはDynamic Mediaとの統合時に、最適な結果を得るために画像をシャープにする方法と、画質を最適化する最適な方法について説明します。 </p> </td> 
   </tr>
   <tr>
-   <td>多言語のアセット</td> 
+   <td>多言語の Assets</td> 
    <td><a href="/help/assets/best-practices-for-translating-assets-efficiently.md">翻訳のベストプラクティス</a></td> 
-   <td>AEM のアセットの効率的な翻訳に関するベストプラクティスを示します。</td> 
+   <td>AEM Assets の効率的な翻訳に関するベストプラクティスを説明します。</td> 
   </tr>
  </tbody>
 </table>
 
-## サイト {#sites}
+## Sites {#sites}
 
-Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
+Web サイトコンテンツの管理とオーサリングには、次に示すベストプラクティスがあります。
 
-オーサリング： [オーサー環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md)  — ページの作成方法の概要を説明します。
+オーサリング：[オーサー環境とツール](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) - ページの作成方法の概要について説明します。
 
 ## Forms {#forms}
 
-アダプティブフォーム： [アダプティブフォームの操作のベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md)  — アダプティブフォームの設定、オーサリング、カスタマイズに関するベストプラクティスについて説明します。
+アダプティブフォーム：[アダプティブフォームの操作のベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) - アダプティブフォームの設定、オーサリングおよびカスタマイズのベストプラクティスについて説明します。
 
-HTML5 フォーム： [Forms5 を設計する際のベストプラクティスHTML](/help/forms/using/best-practices-for-html5-forms.md)  — レイアウト 5 フォームのレイアウトとデザインに関するベストプラクティスをHTMLします。
+HTML5 フォーム：[HTML5 のデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) - HTML5 フォームのレイアウトおよびデザインの作業でのベストプラクティスについて説明します。

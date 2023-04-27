@@ -1,7 +1,7 @@
 ---
-title: Adobe Mobile Services クラウドサービスの設定
+title: Adobe Mobile Services Cloud Service の設定
 seo-title: Configure your Adobe Mobile Services Cloud Service
-description: このページでは、Adobe Mobile Services クラウドサービスの設定について説明します。
+description: このページでは、Mobile Services のAdobeCloud Serviceを設定します。
 seo-description: Follow this page to configure your Adobe Mobile Services Cloud Service.
 uuid: 21fe5b24-dc4d-4ee4-9e7f-ed4783baf276
 contentOwner: User
@@ -14,23 +14,23 @@ exl-id: 360c0ba9-ea49-495c-86d0-6d1db3f806a5
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 43%
+ht-degree: 5%
 
 ---
 
-# Adobe Mobile Services クラウドサービスの設定 {#configure-your-adobe-mobile-services-cloud-service}
+# Adobe Mobile Services Cloud Service の設定 {#configure-your-adobe-mobile-services-cloud-service}
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 この **モバイル指標タイル** コマンドセンターでは、モバイルアプリケーションのリアルタイム分析を提供します。
 
-[Adobe Mobile Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) SDK は、PhoneGap プラグインを通じて使用できます。指標は、デバイスが接続されるまで収集され、デバイス上でキャッシュされます。その時点で、データがAdobeの Mobile Services クラウドにプッシュされ、レポートと分析がおこなわれます。
+この [Adobeモバイル分析](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) SDK は、PhoneGap プラグインを通じて使用できるようになります。 指標は、デバイスが接続されるまで収集され、デバイス上でキャッシュされます。その時点で、データがAdobeの Mobile Services クラウドにプッシュされ、レポートと分析がおこなわれます。
 
-Adobe Mobile Analytics SDK は、次の機能を提供します。
+AdobeMobile Analytics SDK は、次の機能を提供します。
 
-1. **モバイルチャネルに関するデータ収集** - すべての主要オペレーティングシステム上のモバイル Web サイトおよびアプリに関して総合的なデータを収集します。
+1. **モバイルチャネルのデータ収集**  — すべての主要なオペレーティングシステム上のモバイル Web サイトやアプリの包括的なデータを収集します。
 1. **モバイルエンゲージメント分析**  — モバイルアプリ、Web サイトまたはビデオ内でのユーザーエンゲージメントを把握します。これには、消費者がチャネルを起動する頻度、チャネルから購入するかどうかなどが含まれます。
 1. **モバイルアプリのダッシュボードとレポート**  — アプリやアプリストア指標のライフサイクル指標を含む使用状況レポートを取得します。ユーザー、起動回数、平均セッション長、リテンション長、クラッシュ回数のトレンドを確認できます。
 1. **モバイルキャンペーン分析** - SMS、モバイル検索広告、モバイルディスプレイ広告、QR コードなど、モバイル固有のキャンペーンの効果を定量化します。
@@ -39,15 +39,15 @@ Adobe Mobile Analytics SDK は、次の機能を提供します。
 
 >[!CAUTION]
 >
->**指標を分析**&#x200B;タイルは、クラウドサービスを設定している場合にのみダッシュボードに表示されます。
+>この **指標を分析** タイルは、クラウドサービスを設定済みの場合にのみ、ダッシュボードに表示されます。
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
-AEM コマンドセンター指標タイル
+AEMコマンドセンター指標タイル
 
-## クラウドサービスの設定 {#configuring-the-cloud-service}
+## Cloud Service {#configuring-the-cloud-service}
 
-Adobe Mobile Services 分析を利用するには、Adobe Analytics アカウント情報を使用して AEM Mobile Analytics クラウドサービスを設定する必要があります。
+Mobile Services Analytics を活用するには、AEM Mobile Analytics CloudAdobeをAdobe Analyticsアカウント情報で設定する必要があります。
 
 1. 右上のアイコンをクリックして、「 **Cloud Services** タイルをアプリダッシュボードから削除します。
 
@@ -59,22 +59,22 @@ Adobe Mobile Services 分析を利用するには、Adobe Analytics アカウン
 
 1. 既存の設定を **Mobile Services** または選択 **設定を作成** 新しいものを作成するには
 
-   新しい設定で、「**Mobile Services のプロパティ**」を入力し、「**検証**」をクリックします。
+   新しい設定の場合は、 **Mobile Services プロパティ**&#x200B;をクリックし、**確認します。**
 
    ![chlimage_1-25](assets/chlimage_1-25.png)
 
-   認証情報が検証された場合、 **検証** ボタンの変更 **検証済み**. 「**Mobile Services アプリを選択**」から Mobile Services アプリを選択できます。
+   認証情報が検証された場合、 **検証** ボタンの変更 **検証済み**. 次の中からモバイルサービスアプリを選択できます。 **モバイルアプリサービスを選択**.
 
    クリック **送信** を参照してください。
 
    ![chlimage_1-26](assets/chlimage_1-26.png)
 
-1. クラウド設定をおこなったら、ダッシュボードで設定を表示できます。
+1. クラウド設定をセットアップすると、ダッシュボードにも同じ設定が表示されます。
 
    ![chlimage_1-27](assets/chlimage_1-27.png)
 
    >[!NOTE]
    >
-   >クラウド設定をおこなったら、アプリダッシュボードの&#x200B;**指標を分析**&#x200B;タイルを表示できます。
+   >クラウド設定を行うと、 **指標を分析** アプリダッシュボードにタイルを表示します。
 
    ![chlimage_1-28](assets/chlimage_1-28.png)

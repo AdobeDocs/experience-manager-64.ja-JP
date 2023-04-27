@@ -13,7 +13,7 @@ exl-id: 741043c7-2ebb-455d-8163-a246b874a7b3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '301'
-ht-degree: 99%
+ht-degree: 54%
 
 ---
 
@@ -25,21 +25,21 @@ ht-degree: 99%
 
 これらの命名規則は、以下のような様々なレベルで実装されます。
 
-* JcrUtil：[JCR ユーティリティ](#jcr-utilities)の AEM 実装。
+* JcrUtil:のAEM実装 [JCR ユーティリティ](#jcr-utilities).
 * ページマネージャー：[ページマネージャー](#page-manager)は、ページレベルの操作用のメソッドを提供します。
-* 使用する UI：
+* 使用されている UI に応じて、次の手順を実行します。
 
    * [標準のタッチ操作対応 UI](#standard-ui)
    * [クラシック UI](#classic-ui)
 
 ### JCR ユーティリティ {#jcr-utilities}
 
-[JcrUtil](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html) は JCR ユーティリティの AEM 実装です。名前の検証では特に、文字マッピングと次の点が確認されます。
+[JcrUtil](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html) は、JCR ユーティリティのAEM実装です。 名前の検証に特に関心があるのは、文字マッピングを制御し、次の検証を行う点です。
 
 * `isValidName`
 
-   * 名前が空でなく、有効な文字のみが含まれるかどうかを確認します。
-   * 推奨される名前が有効かどうかを確認するのに使用できます。
+   * 名前が空でなく、有効な文字のみを含んでいるかどうかをチェックします。
+   * 提案された名前が有効かどうかを確認するために使用できます。
 
 * `createValidName`
 
@@ -48,30 +48,30 @@ ht-degree: 99%
 
 ### ページマネージャー {#page-manager}
 
-[ページマネージャー](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)は、[JCRUtil](#jcr-utilities) に基づいて、ページレベル操作用のメソッドを提供します。
+[ページマネージャー](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)は、[JCRUtil](#jcr-utilities) に基づいて、ページレベル操作用のメソッドを提供します。
 
 ### 標準 UI {#standard-ui}
 
-標準のタッチ操作対応 UI：
+標準のタッチ操作対応 UI は次のとおりです。
 
-* 次のいずれかの場合、ページマネージャーによって課せられる制約に従って名前が確認されます。
+* 次のいずれかの場合に、PageManager が課した制限に従って名前を検証します。
 
-   * ノード名に変換されるようにページタイトルが提供されている。
-   * 明示的なノード名が提供されている。
+   * ノード名に変換するために、ページタイトルが指定されます。
+   * 明示的なノード名が提供されています
 
 ### クラシック UI {#classic-ui}
 
-クラシック UI にはさらに厳しい制約があります。
+クラシック UI にはより厳しい制限が課されています。
 
-* 名前が有効と判断されるのは、明示的なノード名が次のいずれかの場合です。
+* 次のいずれかの場合に、明示的なノード名を検証します。
 
-   * ノード名に変換されるようにページタイトルが提供されている。
-   * 明示的なノード名が提供されている。
+   * ノード名に変換するために、ページタイトルが指定されます。
+   * 明示的なノード名が提供されています
 
 * 有効な文字（`PageManagerImpl` によって他の文字の使用が許可されていても、クラシック UI でページを作成する場合は、次の文字のみが有効です）。
 
-   * a～z
-   * A～Z
-   * 0～9
+   * &#39;a&#39; ～ &#39;z&#39;
+   * &#39;A&#39; ～ &#39;Z&#39;
+   * &#39;0&#39; ～ &#39;9&#39;
    * _（アンダースコア）
-   * `-` （ダッシュ/マイナス）
+   * `-`（ダッシュ／マイナス）

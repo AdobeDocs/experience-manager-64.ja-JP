@@ -1,7 +1,7 @@
 ---
 title: Adobe Classifications
 seo-title: Adobe Classifications
-description: Adobe Classifications について説明します。
+description: Adobe分類の詳細。
 seo-description: Learn about Adobe Classifications.
 uuid: 57fb59f4-da90-4fe7-a5b1-c3bd51159a16
 contentOwner: User
@@ -13,47 +13,47 @@ exl-id: 25e58c68-5c67-4894-9a54-1717d90d7831
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '573'
-ht-degree: 99%
+ht-degree: 37%
 
 ---
 
-# Adobe分類{#adobe-classifications}
+# Adobe Classifications{#adobe-classifications}
 
-Adobe Classifications は、分類データをスケジュールに従って [Adobe Analytics](/help/sites-administering/adobeanalytics.md) にエクスポートします。SAINT Exporter は、**com.adobe.cq.scheduled.exporter.Exporter** の実装です。
+Adobe Classifications は、分類データをスケジュールに従って [Adobe Analytics](/help/sites-administering/adobeanalytics.md) にエクスポートします。エクスポーターは、 **com.adobe.cq.scheduled.exporter.Exporter**.
 
-これを設定するには：
+次の手順で設定します。
 
-1. **ツール／クラウドサービス**&#x200B;で「**Adobe Analytics**」セクションに移動します。
-1. 新しい設定を追加します。「**Adobe Analytics 分類**」設定テンプレートが「**Adobe Analytics フレームワーク**」設定の下に表示されます。「**タイトル**」と「**名前**」を必要に応じて指定します。
+1. 次の場所に移動： **ツール/クラウドサービス** から **Adobe Analytics** 」セクションに入力します。
+1. 新しい設定を追加します。 次のように表示されます。 **Adobe Analytics Classifications** 設定テンプレートが **Adobe Analytics Framework** 設定。 を指定します。 **タイトル** および **名前** 必要に応じて：
 
    ![aa-25](assets/aa-25.png)
 
-1. 「**作成**」をクリックして、設定を指定します。
+1. クリック **作成** をクリックして設定を行います。
 
    ![chlimage_1](assets/chlimage_1.png)
 
-   プロパティには、次が含まれています。
+   プロパティには次のものがあります。
 
    | **フィールド** | **説明** |
    |---|---|
-   | Enabled | 「**はい**」を選択すると、Adobe Classifications の設定が有効になります。 |
-   | 競合時に上書き | 「**はい**」を選択すると、データの競合が上書きされます。デフォルトでは、これは「**いいえ**」に設定されています。 |
-   | 削除処理 | 「**はい**」に設定すると、書き出された後に処理したノードが削除されます。デフォルトは、「**False**」です。 |
-   | ジョブの書き出しに関する説明 | Adobe Classifications ジョブの説明を入力します。 |
+   | Enabled | 選択 **はい** をクリックして、Adobeの分類設定を有効にします。 |
+   | 競合時に上書き | 選択 **はい** データの競合を上書きする場合はを選択します。 デフォルトでは、これはに設定されています。 **いいえ**. |
+   | 削除実行  | 次に設定した場合： **はい**：書き出し後に処理されたノードを削除します。 デフォルトはです。 **False**. |
+   | ジョブの書き出しに関する説明 | 分類ジョブの説明をAdobeします。 |
    | 通知電子メール | Adobe Classifications の通知用のメールアドレスを入力します。 |
-   | レポートスイート | 読み込みジョブを実行するレポートスイートを入力します。 |
-   | データセット | 読み込みジョブを実行するデータセット関連 ID を入力します。 |
+   | レポートスイート | インポートジョブを実行するレポートスイートを入力します。 |
+   | データセット | インポートジョブを実行するデータセット関係 ID を入力します。 |
    | 変換サービス | ドロップダウンメニューから、変換サービスの実装を選択します。 |
    | データソース | データコンテナのパスに移動します。 |
-   | スケジュールを書き出し | 書き出すスケジュールを選択します。デフォルトは 30 分ごとです。 |
+   | スケジュールを書き出し | エクスポートのスケジュールを選択します。 デフォルトは 30 分ごとです。 |
 
-1. 「**OK**」をクリックして設定を保存します。
+1. クリック **OK** 設定を保存します。
 
 ## ページサイズの変更 {#modifying-page-size}
 
-レコードは、ページで処理されます。デフォルトでは、Adobe Classifications はページサイズが 1,000 のページを作成します。
+レコードはページで処理されます。 デフォルトでは、Adobe Classifications はページサイズが 1,000 のページを作成します。
 
-Adobe Classifications の定義に従い、ページの最大サイズは 25,000 に設定ができます（Felix コンソールから変更可）。エクスポート中に、Adobe Classifications はソースノードをロックして、同時変更を防ぎます。ノードは、書き出し後、エラー時またはセッション終了時にロックを解除されます。
+Adobe Classifications の定義に従い、ページの最大サイズは 25,000 に設定ができます（Felix コンソールから変更可）。エクスポート中に、Adobe Classifications はソースノードをロックして、同時変更を防ぎます。ノードは、書き出し後、エラー時、またはセッションが閉じられたときに、ロックが解除されます。
 
 ページサイズを変更するには：
 
@@ -61,15 +61,15 @@ Adobe Classifications の定義に従い、ページの最大サイズは 25,000
 
    ![aa-26](assets/aa-26.png)
 
-1. 「**書き出しページサイズ**」を必要に応じて更新し、**保存**&#x200B;をクリックします。
+1. を更新します。 **書き出しページサイズ** 必要に応じて、「 」をクリックします。 **保存**.
 
 ## SAINTDefaultTransformer {#saintdefaulttransformer}
 
 >[!NOTE]
 >
->Adobe Classifications は、以前は SAINT Exporter と呼ばれていました。
+>Adobe分類は、以前はSAINTエクスポータと呼ばれていました。
 
-SAINT Exporter は、変換サービスを使用して、書き出しデータを特別な形式に変換できます。Adobe Classifications では、Transformer インターフェイスを実装するサブインターフェイス `SAINTTransformer<String[]>` が提供されています。このインターフェイスは、データタイプを SAINT API で使用される `String[]` に制限し、マーカーインターフェイスで対応するサービスを検索して選択するために使用されます。
+エクスポータは、変換サービスを使用して、書き出しデータを特定の形式に変換できます。 Adobe Classifications では、Transformer インターフェイスを実装するサブインターフェイス `SAINTTransformer<String[]>` が提供されています。このインターフェイスは、データタイプを SAINT API で使用される `String[]` に制限し、マーカーインターフェイスで対応するサービスを検索して選択するために使用されます。
 
 デフォルト実装の SAINTDefaultTransformer では、書き出しソースの子リソースは、keys というプロパティ名と values というプロパティ値を持つレコードとして扱われます。**キー**&#x200B;列は、最初の列として自動的に追加され、その値がノード名になります。名前空間プロパティ（：を含む）は無視されます。
 
@@ -79,19 +79,19 @@ SAINT Exporter は、変換サービスを使用して、書き出しデータ�
 
    * 1 `nt:unstructured`
 
-      * Product = ﻿﻿My Product Name (String)
-      * Price = 120.90 (String)
-      * Size = M (String)
+      * Product = My Product Name (String)
+      * Price = 120.90（文字列）
+      * サイズ= M（文字列）
       * Color = black (String)
       * Color^Code = 101 (String)
 
-**SAINT ヘッダーおよびレコード：**
+**SAINTヘッダーとレコード：**
 
 | **キー** | **製品** | **価格** | **サイズ** | **カラー** | **Color^Code** |
 |---|---|---|---|---|---|
-| 1 | My Product Name | 120.90 | M | 黒 | 101 |
+| 1 | 製品名 | 120.90 | M | black | 101 |
 
-プロパティには、次が含まれています。
+プロパティには次のものがあります。
 
 <table> 
  <tbody> 
@@ -100,40 +100,40 @@ SAINT Exporter は、変換サービスを使用して、書き出しデータ�
    <td><strong>説明</strong></td> 
   </tr> 
   <tr> 
-   <td>transformer</td> 
-   <td>SAINTTransformer 実装のクラス名</td> 
+   <td>変圧器</td> 
+   <td>SAINTransformer 実装のクラス名</td> 
   </tr> 
   <tr> 
    <td>email</td> 
-   <td>通知用の電子メールアドレス。</td> 
+   <td>通知用電子メールアドレス。</td> 
   </tr> 
   <tr> 
    <td>reportsuites</td> 
-   <td>読み込みジョブを実行するレポートスイート ID。 </td> 
+   <td>インポートジョブを実行するレポートスイート ID。 </td> 
   </tr> 
   <tr> 
-   <td>dataset</td> 
-   <td>読み込みジョブを実行するデータセット関連 ID。 </td> 
+   <td>データセット</td> 
+   <td>インポートジョブを実行するデータセット関係 ID。 </td> 
   </tr> 
   <tr> 
    <td>description</td> 
    <td>ジョブの説明。<br /> </td> 
   </tr> 
   <tr> 
-   <td>overwrite</td> 
-   <td>データの競合を上書きするためのフラグ。デフォルトは <strong>false</strong> です。</td> 
+   <td>上書き</td> 
+   <td>データの競合を上書きするフラグ。 デフォルトはです。 <strong>false</strong>.</td> 
   </tr> 
   <tr> 
    <td>checkdivisions</td> 
-   <td>レポートスイートの互換性をチェックするためのフラグ。デフォルトは <strong>true</strong> です。</td> 
+   <td>レポートスイートの互換性を確認するフラグ。 デフォルトはです。 <strong>true</strong>.</td> 
   </tr> 
   <tr> 
    <td>deleteprocessed</td> 
-   <td>処理したノードを書き出し後に削除するためのフラグ。デフォルトは <strong>false</strong> です。</td> 
+   <td>書き出し後に処理されたノードを削除するフラグ。 デフォルトはです。 <strong>false</strong>.</td> 
   </tr> 
  </tbody> 
 </table>
 
-## Adobe Classifications による書き出しの自動化 {#automating-adobe-classifications-export}
+## Adobe分類の書き出しの自動化 {#automating-adobe-classifications-export}
 
-独自のワークフローを作成することで、新しい読み込みのたびにそのワークフローが開始され、構造の正しい適切なデータが **/var/export/** に作成されて Adobe Classifications に書き出すことができるようになります。
+独自のワークフローを作成し、新しいインポートを実行すると、に適切で正しく構造化されたデータが作成されます。 **/var/export/** 分類に書き出せるようにするAdobe。

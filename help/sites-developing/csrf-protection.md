@@ -1,7 +1,7 @@
 ---
 title: CSRF 対策フレームワーク
 seo-title: The CSRF Protection Framework
-description: このフレームワークでは、トークンを利用して、クライアントの要求が正当なものであることを保証します
+description: このフレームワークでは、トークンを使用して、クライアントの要求が正当なものであることを保証します
 seo-description: The framework makes use of tokens to guarantee that the client request is legitimate
 uuid: 7cb222ba-fc7a-46ee-8b49-a5f39a53580b
 contentOwner: Guillaume Carlino
@@ -13,19 +13,19 @@ exl-id: 533c348e-517f-4d70-a89c-bfc87f71a633
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 100%
+ht-degree: 69%
 
 ---
 
-# CSRF 対策フレームワーク{#the-csrf-protection-framework}
+# CSRF 対策フレームワーク {#the-csrf-protection-framework}
 
-アドビでは、Apache Sling Referrer Filter 以外にも、この種の攻撃を防ぐための新しい CSRF 対策フレームワークを用意しています。
+Apache Sling Referrer Filter に加えて、Adobeは、この種の攻撃から保護する新しい CSRF 保護フレームワークも提供します。
 
-このフレームワークでは、トークンを利用して、クライアントの要求が正当なものであることを保証します。トークンは、フォームがクライアントに送信されるときに生成され、フォームがサーバーに返されるときに検証されます。
+このフレームワークでは、トークンを使用して、クライアントの要求が正当なものであることを保証します。 トークンは、フォームがクライアントに送信されるときに生成され、フォームがサーバーに送り返されると検証されます。
 
 >[!NOTE]
 >
->パブリッシュインスタンスでは、匿名ユーザーのトークンはありません。
+>匿名ユーザーのパブリッシュインスタンスにはトークンがありません。
 
 ## 要件 {#requirements}
 

@@ -1,7 +1,7 @@
 ---
 title: AEM アプリケーション用の設定
 seo-title: Configuring for AEM Apps
-description: AEM アプリケーションの設定方法について説明します。
+description: AEM Apps の設定方法を説明します。
 seo-description: Learn how to configure AEM Apps.
 uuid: ab9acd93-da7f-4bb7-8d26-224044899068
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: 593a588c-02f1-4b48-ac57-9348d6652bcc
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 100%
+ht-degree: 92%
 
 ---
 

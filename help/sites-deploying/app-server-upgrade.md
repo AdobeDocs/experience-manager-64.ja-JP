@@ -1,7 +1,7 @@
 ---
 title: アプリケーションサーバーのインストール環境のアップグレード手順
 seo-title: Upgrade Steps for Application Server Installations
-description: アプリケーションサーバーからデプロイされる AEM のインスタンスのアップグレード方法について説明します。
+description: アプリケーションサーバーを介してデプロイされるAEMのインスタンスをアップグレードする方法について説明します。
 seo-description: Learn how to upgrade instances of AEM that are deployed via Application Servers.
 uuid: df3fa715-af4b-4c81-b2c5-130fbc82f395
 contentOwner: sarchiz
@@ -14,7 +14,7 @@ exl-id: 1c72093e-82c8-49ad-bd3c-d61904aaab28
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '504'
-ht-degree: 97%
+ht-degree: 39%
 
 ---
 
@@ -22,15 +22,15 @@ ht-degree: 97%
 
 ここでは、アプリケーションサーバーインストール用の AEM を更新するために必要になる手順を説明します。
 
-この手順では、どの例でも JBoss をアプリケーションサーバーとして使用し、有効な AEM のバージョンが既にデプロイされているものとします。ここでは、**AEM バージョン 5.6 から 6.3** へのアップグレードについて説明します。
+この手順の例では、JBoss をアプリケーションサーバーとして使用し、AEMの動作中のバージョンが既にデプロイされていることを示します。 ここでは、**AEM バージョン 5.6 から 6.3** へのアップグレードについて説明します。
 
-1. 最初に、JBoss を起動します。ほとんどの状況で、`standalone.sh` 起動スクリプトを実行することで起動できます。そのためには、ターミナルから次のコマンドを実行します。
+1. まず、JBoss を起動します。 ほとんどの場合、これをおこなうには、 `standalone.sh` ターミナルから次のコマンドを実行して、起動スクリプトを実行します。
 
    ```shell
    jboss-install-folder/bin/standalone.sh
    ```
 
-1. AEM 5.6 が既にデプロイされている場合は、次のコマンドを実行してバンドルが正常に動作していることを確認します。
+1. AEM 5.6 が既にデプロイされている場合は、次のコマンドを実行して、バンドルが正しく機能していることを確認します。
 
    ```shell
    wget https://<serveraddress:port>/cq/system/console/bundles
@@ -52,7 +52,7 @@ ht-degree: 97%
 
    >[!NOTE]
    >
-   >この例では、oak-repository は、新しく変換されたリポジトリが配置される一時ディレクトリです。この手順を実行する前に、crx2oak.jar が最新バージョンであることを確認してください。
+   >この例では、oak-repository は、新しく変換されたリポジトリが配置される一時ディレクトリです。 この手順を実行する前に、最新の crx2oak.jar のバージョンがあることを確認してください。
 
 1. 次の操作をおこなって、sling.properties ファイル内の必要なプロパティを削除します。
 
@@ -68,35 +68,35 @@ ht-degree: 97%
       1. `jre-*`
       1. `sling.run.mode.install.options`
 
-1. 不要なファイルとフォルダーを削除します。具体的に削除する必要のある項目は次のとおりです。
+1. 不要になったファイルとフォルダーを削除します。 具体的に削除する必要がある項目は次のとおりです。
 
-   * **launchpad/startup フォルダー**：ターミナルで次のコマンドを実行して削除できます。`rm -rf crx-quickstart/launchpad/startup`
+   * この **launchpad/startup フォルダー**. ターミナルで次のコマンドを実行して削除できます。`rm -rf crx-quickstart/launchpad/startup`
    * **base.jar ファイル**：`find crx-quickstart/launchpad -type f -name "org.apache.sling.launchpad.base.jar*" -exec rm -f {} \`
    * **BootstrapCommandFile_timestamp.txt ファイル**：`rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
 
-1. 新しく移行された segmentstore を適切な場所にコピーします。
+1. 新しく移行した segmentstore を適切な場所にコピーします。
 
    ```shell
    mv crx-quickstart/oak-repository/segmentstore crx-quickstart/repository/segmentstore
    ```
 
-1. datastore もコピーします。
+1. データストアもコピーします。
 
    ```shell
    mv crx-quickstart/repository/repository/datastore crx-quickstart/repository/datastore
    ```
 
-1. 次に、アップグレード後の新しいインスタンスで使用する OSGi 設定を格納するためのフォルダーを作成する必要があります。具体的には、install というフォルダーを **crx-quickstart** の下に作成する必要があります。
+1. 次に、新しくアップグレードされたインスタンスで使用される OSGi 設定を格納するフォルダーを作成する必要があります。 具体的には、 install という名前のフォルダーを以下の場所に作成する必要があります。 **crx-quickstart**.
 
-1. 次に、AEM 6.3 で使用されるノードストアとデータストアを作成します。そのためには、次の名前を持つ 2 つのファイルを **crx-quickstart\install** の下に作成します。
+1. 次に、AEM 6.3 で使用するノードストアとデータストアを作成します。これをおこなうには、次の名前を持つ 2 つのファイルをの下に作成します。 **crx-quickstart\install**:
 
    * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg`
 
    * `org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.cfg`
 
-   この 2 つのファイルにより、AEM が TarMK ノードストアとファイルデータストアを使用するように設定されます。
+   これら 2 つのファイルは、TarMK ノードストアとファイルデータストアを使用するようにAEMを設定します。
 
-1. 設定ファイルを編集し、使用できる状態にします。具体的には、次のように編集します。
+1. 設定ファイルを編集して、使用可能にします。 具体的には、
 
    * 次の行を **org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config**:
 
@@ -109,13 +109,13 @@ ht-degree: 97%
        minRecordLength=4096
       ```
 
-1. 次のコマンドを実行して crx2 実行モードを削除します。
+1. 次のコマンドを実行して、crx2 実行モードを削除します。
 
    ```shell
    find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf {} \
    ```
 
-1. 今度は、AEM 6.3 war ファイル内の実行モードを変更する必要があります。変更するには、まず AEM 6.3 war を格納する一時フォルダーを作成します。次の例のフォルダー名は、**temp** です。war ファイルをコピーしたら、temp フォルダー内で次のコマンドを実行して、内容を抽出します。
+1. 今度は、AEM 6.3 war ファイル内の実行モードを変更する必要があります。変更するには、まず AEM 6.3 war を格納する一時フォルダーを作成します。この例では、フォルダーの名前は次のようになります。 **temp**. war ファイルをコピーしたら、temp フォルダー内で次のコマンドを実行して、内容を抽出します。
 
    ```shell
    jar xvf aem-quickstart-6.3.0.war
@@ -127,7 +127,7 @@ ht-degree: 97%
    <param-value >author</param-value>
    ```
 
-1. 上述の author という値を変更し、実行モードを author,crx3,crx3tar に設定します。最終的なコードブロックは次のようになります。
+1. 上記の author 値を変更し、実行モードを次のように設定します。author,crx3,crx3tar コードの最終ブロックは次のようになります。
 
    ```
    <init-param>

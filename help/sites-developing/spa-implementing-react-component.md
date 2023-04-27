@@ -13,15 +13,15 @@ exl-id: da0e076b-afb7-4ebe-8e5e-48c00750e453
 source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
 source-wordcount: '558'
-ht-degree: 97%
+ht-degree: 90%
 
 ---
 
-# SPA への React コンポーネントの実装{#implementing-a-react-component-for-spa}
+# SPA への React コンポーネントの実装 {#implementing-a-react-component-for-spa}
 
-単一ページアプリケーション（SPA）により、Web サイトのユーザーに魅力的なエクスペリエンスを提供することができます。開発者は SPA フレームワークを使用してサイトを構築したいと考え、作成者はそうして構築されたサイトのコンテンツを AEM 内でシームレスに編集したいと考えています。
+単一ページアプリケーション（SPA）により、Web サイトのユーザーに魅力的なエクスペリエンスを提供することができます。開発者はSPAフレームワークを使用してサイトを構築できるようにしたいと考え、作成者はSPAフレームワークを使用して構築されたサイトのコンテンツをAEM内でシームレスに編集したいと考えています。
 
-SPA オーサリング機能には、AEM 内で SPA をサポートするための包括的なソリューションが用意されています。この記事では、AEM SPA Editor で動作するように既存のシンプルな React コンポーネントを適応させる方法の例を示します。
+SPAオーサリング機能は、AEM内でSPAをサポートするための包括的なソリューションを提供します。 この記事では、AEM SPA Editor で動作するように既存のシンプルな React コンポーネントを適応させる方法の例を示します。
 
 >[!NOTE]
 >シングルページアプリケーション (SPA) エディター機能には、AEM 6.4 Service Pack 2 以降が必要です。

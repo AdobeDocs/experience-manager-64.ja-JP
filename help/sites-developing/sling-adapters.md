@@ -1,7 +1,7 @@
 ---
 title: Sling アダプターの使用
 seo-title: Using Sling Adapters
-description: Sling には、Adaptable インターフェイスを実装するオブジェクトを適切に変換するアダプターパターンが用意されています
+description: Sling には、Adaptable インターフェイスを実装するオブジェクトを簡単に翻訳するためのアダプターパターンが用意されています
 seo-description: Sling offers an Adapter pattern to conveniently translate objects that implement the Adaptable interface
 uuid: 07f66a33-072d-49e1-8e67-8b80a6a9072a
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: 7780d04d-418e-494c-85c3-76bef5f35690
 source-git-commit: 31d6111a82a3cbfef22970d05280b0d3fd1c0de7
 workflow-type: tm+mt
 source-wordcount: '1717'
-ht-degree: 93%
+ht-degree: 77%
 
 ---
 
@@ -47,14 +47,14 @@ Node node = resource.adaptTo(Node.class);
 
 `adaptTo()` は null を返す場合があります。
 
-これには様々な理由がありますが、その一部は次のとおりです。
+これには、次のような様々な理由があります。
 
-* 実装がターゲットタイプをサポートしていない
-* このケースを処理するアダプターファクトリがアクティブでない（サービスの参照が見つからないなどの理由で）
-* 内部的な条件が合わなかった
+* この実装はターゲットの種類をサポートしていません
+* このケースを処理するアダプターファクトリはアクティブではありません ( 例： サービス参照が見つからないため )
+* 内部条件に失敗しました
 * サービスを利用できない
 
-null のケースを問題なく処理することが重要です。JSP レンダリングでは、JSP の問題によってコンテンツの一部が空になる場合に、その問題が受容されることもあります。
+null ケースを適切に処理することが重要です。 JSP レンダリングの場合、JSP の失敗がコンテンツの一部になる場合は、JSP の失敗が許容されることがあります。
 
 ### キャッシュ {#caching}
 
@@ -62,7 +62,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
 
 このキャッシュ処理は、すべての `AdapterFactory` ベースのケースで実行されます。
 
-ただし、汎用的なルールは存在せず、オブジェクトが新しいインスタンスである場合も既存のインスタンスである場合もあります。したがって、いずれの動作にも依存することはできません。重要なのは、特に `AdapterFactory` 内部において、このシナリオでオブジェクトが再利用可能であるということです。
+ただし、一般的なルールはありません。オブジェクトは、新しいインスタンスでも既存のインスタンスでもかまいません。 つまり、どちらの動作にも依存できません。 重要なのは、特に `AdapterFactory` 内部において、このシナリオでオブジェクトが再利用可能であるということです。
 
 ### 仕組み {#how-it-works}
 
@@ -113,8 +113,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
   </tr> 
   <tr> 
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/PersistableValueMap.html">PersistableValueMap</a></td> 
-   <td>このリソースが JCR ノードベースのリソースであり、ユーザーがそのノードのプロパティを変更する権限を持っている場合。<br />
-注意：複数の永続化可能マップでは値は共有されません。</td> 
+   <td>このリソースが JCR ノードベースのリソースであり、ユーザーがそのノードのプロパティを変更する権限を持っている場合。<br /> 注意：複数の永続化可能マップは、値を共有しません。</td> 
   </tr> 
   <tr> 
    <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html">InputStream</a></td> 
@@ -166,7 +165,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
   </tr> 
   <tr> 
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/preferences/Preferences.html">環境設定</a></td> 
-   <td>現在のユーザーの環境設定（このリソースリゾルバーが JCR ベースのリソースリゾルバーである場合、JCR セッションに基づいたもの）。</td> 
+   <td>現在のユーザーの環境設定（このリソースリゾルバーが JCR ベースのリソースリゾルバーである場合の JCR セッションに基づく）。</td> 
   </tr> 
   <tr> 
    <td><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/preferences/PreferencesService.html">PreferencesService</a></td> 
@@ -198,7 +197,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
   <tr> 
    <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/org/xml/sax/ContentHandler.html">ContentHandler</a><br />
 （XML）</td> 
-   <td>この応答が Sling リライター応答である場合。</td> 
+   <td>これが Sling リライター応答の場合。</td> 
   </tr> 
  </tbody> 
 </table>
@@ -210,7 +209,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
 <table> 
  <tbody> 
   <tr> 
-   <td><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html">Resource</a><br /> </td> 
+   <td><a href="https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html">Resource</a><br /> </td> 
    <td>ページのリソース。</td> 
   </tr> 
   <tr> 
@@ -218,7 +217,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
    <td>ラベル付きリソース（== this）。</td> 
   </tr> 
   <tr> 
-   <td><a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">ノード</a></td> 
+   <td><a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">Node</a></td> 
    <td>ページのノード。</td> 
   </tr> 
   <tr> 
@@ -230,7 +229,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
 
 [**Component**](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/components/Component.html) は次の項目に適応します。
 
-| [リソース](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | コンポーネントのリソース。 |
+| [Resource](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | コンポーネントのリソース。 |
 |---|---|
 | [LabeledResource](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/LabeledResource.html) | ラベル付きリソース（== this）。 |
 | [Node](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | コンポーネントのノード。 |
@@ -241,7 +240,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
 <table> 
  <tbody> 
   <tr> 
-   <td><a href="https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html">Resource</a><a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html"><br /> </a></td> 
+   <td><a href="https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html">Resource</a><a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html"><br /> </a></td> 
    <td>テンプレートのリソース。</td> 
   </tr> 
   <tr> 
@@ -249,7 +248,7 @@ null のケースを問題なく処理することが重要です。JSP レン�
    <td>ラベル付きリソース（== this）。</td> 
   </tr> 
   <tr> 
-   <td><a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">ノード</a></td> 
+   <td><a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">Node</a></td> 
    <td>このテンプレートのノード。</td> 
   </tr> 
   <tr> 
@@ -261,28 +260,28 @@ null のケースを問題なく処理することが重要です。JSP レン�
 
 #### セキュリティ {#security}
 
-[**Authorizable**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/security/Authorizable.html)、[**User**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/security/User.html) および [**Group**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/security/Group.html) は次の項目に適応します。
+[**Authorizable**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/security/Authorizable.html), [**ユーザー**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/security/User.html) および [**グループ**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/security/Group.html) に適応します。
 
-| [ノード](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | ユーザーまたはグループのホームノードを返します。 |
+| [Node](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | ユーザーまたはグループのホームノードを返します。 |
 |---|---|
-| [ReplicationStatus](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/ReplicationStatus.html) | ユーザーまたはホームノードのレプリケーションステータスを返します。 |
+| [ReplicationStatus](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/replication/ReplicationStatus.html) | ユーザーまたはグループのホームノードのレプリケーションステータスを返します。 |
 
 #### DAM {#dam}
 
 [**Asset**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/Asset.html) は次の項目に適応します。
 
-| [リソース](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | アセットのリソース。 |
+| [Resource](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | アセットのリソース。 |
 |---|---|
-| [ノード](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | アセットのノード。 |
+| [Node](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | アセットのノード。 |
 | ... | アセットのリソースが適応可能なすべての項目。 |
 
 #### タグ付け {#tagging}
 
 [**Tag**](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/Tag.html) は次の項目に適応します。
 
-| [リソース](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | タグのリソース。 |
+| [Resource](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/Resource.html) | タグのリソース。 |
 |---|---|
-| [ノード](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | タグのノード。 |
+| [Node](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | タグのノード。 |
 | ... | タグのリソースが適応可能なすべての項目。 |
 
 #### その他 {#other}

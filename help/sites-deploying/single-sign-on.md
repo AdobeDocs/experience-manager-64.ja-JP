@@ -1,7 +1,7 @@
 ---
 title: シングルサインオン
 seo-title: Single Sign On
-description: AEM インスタンスに対するシングルサインオン（SSO）を設定する方法について学習します。
+description: AEMインスタンスのシングルサインオン (SSO) を設定する方法を説明します。
 seo-description: Learn how to configure Single Sign On (SSO) for an AEM instance.
 uuid: b8dcb28e-4604-4da5-b8dd-4e1e2cbdda18
 contentOwner: User
@@ -14,36 +14,36 @@ exl-id: ae7e8ce6-7bdd-462b-8939-361c122317b3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '740'
-ht-degree: 100%
+ht-degree: 49%
 
 ---
 
 # シングルサインオン {#single-sign-on}
 
-シングルサインオン（SSO）は、ユーザーが認証の資格情報（ユーザー名、パスワードなど）を一度入力すれば、その後は複数のシステムにアクセスできるようにするものです。個別のシステム（信頼された認証として知られる）が認証を実行し、Adobe Experience Manager に対してユーザーの資格情報を提供します。Adobe Experience Manager がそのユーザーのアクセス権を確認し、適用します（つまり、ユーザーがアクセスを許可されているリソースを決定します）。
+シングルサインオン (SSO) を使用すると、ユーザーは認証資格情報（ユーザー名やパスワードなど）を 1 回入力した後で、複数のシステムにアクセスできます。 別のシステム（信頼された認証子）が認証を実行し、Experience Managerにユーザーの資格情報を提供します。 Experience Managerは、ユーザーのアクセス権限を確認および強制します（つまり、ユーザーがアクセスできるリソースを決定します）。
 
 SSO 認証ハンドラーサービス（`com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`）は、信頼された認証が提供する認証結果を処理します。SSO 認証ハンドラーは、次の順序で特別な属性の値として ssid（SSO 識別子）を検索します。
 
-1. 要求ヘッダー
-1. cookie
-1. 要求パラメーター
+1. リクエストヘッダー
+1. Cookie
+1. リクエストパラメーター
 
-値が見つかった場合は、検索を終了し、その値を使用します。
+値が見つかると、検索が終了し、この値が使用されます。
 
-以下の 2 つのサービスについて、この ssid が格納された属性の名前を認識できるように設定します。
+次の 2 つのサービスを設定して、ssid を保存している属性の名前を認識します。
 
-* ログインモジュール
-* SSO 認証サービス
+* ログインモジュール。
+* SSO 認証サービス。
 
 両方のサービスに同じ属性名を指定する必要があります。属性は `Repository.login` に提供される `SimpleCredentials` が含められます。属性の値は無関係で無視されます。単に存在していることが重要で検証されます。
 
 ## SSO の設定 {#configuring-sso}
 
-AEM インスタンス用に SSO を設定するには、[SSO Authentication Handler](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler) を設定する必要があります。
+AEMインスタンスの SSO を設定するには、 [SSO 認証ハンドラ](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
 
 1. AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
-   例えば、NTLM の場合は以下のように設定します。
+   例えば、NTLM セットの場合は、次のようになります。
 
    * **パス：**&#x200B;必要に応じて設定します（`/` など）。
    * **ヘッダー名**：`LOGON_USER`
@@ -68,17 +68,17 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 
 >[!CAUTION]
 >
->SSO を設定した場合は、ユーザーが直接 AEM にアクセスできないようにしてください。
+>SSO が設定されている場合は、ユーザーがAEMに直接アクセスできないことを確認してください。
 >
->SSO システムのエージェントを実行する Web サーバー経由でアクセスするようにユーザーに要求します。そうすることで、ユーザーが AEM から信頼されるためのヘッダー、cookie またはパラメーターを直接送信できなくなります。そのような情報が外部から送信された場合に、エージェントでフィルターがかかるからです。
+>SSO システムのエージェントを実行する Web サーバーをユーザーが経由するように求めることで、ユーザーが直接、ヘッダー、Cookie、またはパラメータを送信して、AEMが信頼できるようにすることはできません。
 >
->Web サーバーを経由せずに AEM インスタンスに直接アクセスできるユーザーは、別の既知のユーザーのヘッダー、cookie またはパラメーターを送信することで、そのユーザーとして行動できます。
+>Web サーバーを経由せずにAEMインスタンスに直接アクセスできるユーザーは、名前がわかっている場合は、ヘッダー、Cookie またはパラメーターを送信することで、任意のユーザーとしての役割を果たすことができます。
 >
->ヘッダー、cookie および要求パラメーターの名前についても、SSO 設定で必要となるものだけを設定するようにしてください。
+>また、ヘッダー、cookie、要求パラメーター名については、SSO 設定に必要なものだけを設定します。
 
 >[!NOTE]
 >
->シングルサインオンは、多くの場合、[LDAP](/help/sites-administering/ldap-config.md) と共に使用されます。
+>シングルサインオンは、多くの場合、 [LDAP](/help/sites-administering/ldap-config.md).
 
 >[!NOTE]
 >
@@ -97,11 +97,11 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 >
 >* **匿名アクセス**&#x200B;を無効にする
 >
->* **統合 Windows 認証**&#x200B;を有効にします。
+>* 有効 **統合 Windows 認証**
 >
 
 
-Felix コンソールの「**Authenticator**」オプションを使用すると、コンテンツツリーのすべてのセクションに適用される認証ハンドラーを確認できます。次に例を示します。
+コンテンツツリーの任意のセクションに適用されている認証ハンドラーを確認するには、 **認証子** Felix コンソールのオプション例：
 
 `http://localhost:4502/system/console/slingauth`
 
@@ -159,13 +159,13 @@ Transfer-Encoding: chunked
 
 >[!NOTE]
 >
->ブラウザーで要求パラメーターを使用したときは、HTML の一部だけが（CSS なしで）表示されます。これは、HTML からの要求はすべて要求パラメーターなしでおこなわれるからです。
+>ブラウザーでリクエストパラメーターを使用すると、一部のHTMLのみが表示されます（CSS は表示されません）。 これは、リクエストパラメーターがない状態でHTMLからのすべてのリクエストがおこなわれるからです。
 
-## AEM サインアウトリンクの削除 {#removing-aem-sign-out-links}
+## AEMログアウトリンクの削除 {#removing-aem-sign-out-links}
 
-SSO を使用する場合、サインインとサインアウトは外部で処理されるので、AEM 独自のサインアウトリンクは不要であり、削除する必要があります。
+SSO を使用する場合、ログインとログアウトは外部で処理されるので、AEM独自のサインアウトリンクは使用できなくなり、削除する必要があります。
 
-ようこそ画面のサインアウトリンクは以下の手順で削除できます。
+ようこそ画面のログアウトリンクは、次の手順で削除できます。
 
 1. `/libs/cq/core/components/welcome/welcome.jsp` を `/apps/cq/core/components/welcome/welcome.jsp` にオーバーレイします
 1. jsp の以下の部分を削除します。

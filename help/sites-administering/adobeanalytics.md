@@ -1,7 +1,7 @@
 ---
 title: Adobe Analytics との統合
 seo-title: Integrating with Adobe Analytics
-description: AEM と Adobe Analytics を統合する方法について説明します。
+description: AEMとAdobe Analyticsを統合する方法について説明します。
 seo-description: Learn how to integrate AEM with Adobe Analytics.
 uuid: 8329d891-1897-46f6-80ee-40244b079c0e
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: ca11bfcd-06d1-4ca9-9069-afa91d8a6610
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '290'
-ht-degree: 94%
+ht-degree: 82%
 
 ---
 
@@ -42,7 +42,7 @@ Adobe Analytics と AEM の統合により、Web ページのアクティビテ�
 
 >[!NOTE]
 >
->方法については、[DTM を使用した AEM と Adobe Target および Adobe Analytics の統合（英語）](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja)も参照してください。
+>ハウツー記事も参照してください。 [DTM を使用したAEMとAdobe TargetおよびAdobe Analyticsの統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja).
 
 ## その他の情報 {#further-information}
 

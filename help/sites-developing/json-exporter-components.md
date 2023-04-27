@@ -13,7 +13,7 @@ exl-id: ce9a1c1f-a37b-4765-b87e-5b2359312cfe
 source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
 source-wordcount: '536'
-ht-degree: 100%
+ht-degree: 75%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 100%
 
 JSON 書き出しは、[Sling Model](https://sling.apache.org/documentation/bundles/models.html) と [Sling Model Exporter](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130) フレームワーク（それ自体が [Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)に依存）に基づいています。
 
-つまり、JSON を書き出す必要がある場合、コンポーネントには Sling Model が必要です。そのため、次の 2 つの手順に従って、コンポーネントで JSON 書き出しを有効にする必要があります。
+つまり、JSON を書き出す必要がある場合、コンポーネントに Sling モデルが必要です。 したがって、任意のコンポーネントで JSON 書き出しを有効にするには、次の 2 つの手順に従う必要があります。
 
 * [コンポーネントに Sling Model を定義する](/help/sites-developing/json-exporter-components.md#define-a-sling-model-for-the-component)
 * [Sling Model インターフェイスに注釈を付ける](#annotate-the-sling-model-interface)
@@ -52,7 +52,7 @@ Sling Model の実装クラスに次のような注釈を付ける必要があ�
 
 >[!NOTE]
 >
->Jackson 注釈は通常 Sling Model クラスレベルではなく、Model インターフェイスレベルで指定されます。これは、JSON 書き出しがコンポーネント API の一部とみなされるようにするためです。
+>Jackson 注釈は、通常、Sling Model クラスレベルではなく、Model インターフェイスレベルで指定されます。 これは、JSON 書き出しがコンポーネント API の一部と見なされるようにするためです。
 
 >[!NOTE]
 >
@@ -74,11 +74,11 @@ JSON エクスポーターフレームワークで認識されるようにする
 
 対応する Sling Model インターフェイス（`MyComponent`）には、[Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)を使用して注釈が付けられ、どのように書き出し（シリアル化）が行われるかが定義されます。
 
-Model インターフェイスには、シリアル化されるメソッドを定義するために適切に注釈を付ける必要があります。デフォルトでは、getter の通常の命名規則に準拠するすべてのメソッドがシリアル化され、JSON プロパティ名が getter 名からそのまま派生されます。これを回避または上書きするには、`@JsonIgnore` または `@JsonProperty` を使用して JSON プロパティの名前を変更します。
+モデルインターフェイスに適切な注釈を付けて、シリアル化するメソッドを定義する必要があります。 デフォルトでは、getter の通常の命名規則に従うすべてのメソッドがシリアル化され、JSON プロパティ名はゲッター名から自然に派生します。 これを回避または上書きするには、`@JsonIgnore` または `@JsonProperty` を使用して JSON プロパティの名前を変更します。
 
 ## 例 {#example}
 
-コアコンポーネントでは、JSON 書き出しが[コアコンポーネントのリリース 1.1.0](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) からサポートされており、参照として使用できます。
+コアコンポーネントは、リリース以降、JSON 書き出しをサポートしています [コアコンポーネントの 1.1.0](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) とは、参照として使用できます。
 
 例えば、画像コアコンポーネントの Sling Model 実装とその注釈されたインターフェイスを参照してください。
 
@@ -98,4 +98,4 @@ GitHub のコード
 * [コンテンツフラグメントモデル](/help/assets/content-fragments-models.md)
 * [コンテンツフラグメントを使用したオーサリング](/help/sites-authoring/content-fragments.md)
 * [コンテンツサービス用の JSON エクスポーター](/help/sites-developing/json-exporter.md)
-* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)
+* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)および[コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)

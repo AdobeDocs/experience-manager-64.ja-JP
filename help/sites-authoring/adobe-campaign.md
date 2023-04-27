@@ -1,7 +1,7 @@
 ---
 title: Adobe Campaign の使用
 seo-title: Working with Adobe Campaign
-description: Adobe Campaign は、あらゆるオンラインチャネルとオフラインチャネルをまたいでキャンペーンのパーソナライズと配信をおこなうための一連のソリューションです
+description: Adobe Campaignは、オンラインおよびオフラインのあらゆるチャネルにわたってキャンペーンをパーソナライズし、実施するための一連のソリューションです
 seo-description: Adobe Campaign is a set of solutions that lets you personalize and deliver campaigns across all of your online and offline channels
 uuid: 1f7b48e2-9ec2-4ee8-b017-78c9d2cac48e
 contentOwner: Guillaume Carlino
@@ -13,15 +13,15 @@ exl-id: d27a8e93-e6d5-4e3f-bbec-cbddd0e60359
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '126'
-ht-degree: 100%
+ht-degree: 40%
 
 ---
 
-# Adobe Campaign の使用{#working-with-adobe-campaign}
+# Adobe Campaign の使用 {#working-with-adobe-campaign}
 
-Adobe Campaign は、あらゆるオンラインチャネルとオフラインチャネルをまたいでキャンペーンのパーソナライズと配信をおこなうためのソリューションです。
+Adobe Campaignは、オンラインおよびオフラインのあらゆるチャネルにわたってキャンペーンをパーソナライズし、実施するための一連のソリューションです。
 
-このドキュメントでは、Adobe Campaign を使用する方法について説明します。
+このドキュメントでは、Adobe Campaignの操作方法について説明します。
 
 * Adobe Campaign Classic
 * Adobe Campaign Standard（サブスクリプション形式のソリューション）
@@ -30,12 +30,12 @@ Adobe Campaign は、あらゆるオンラインチャネルとオフライン�
 
 * [Adobe Campaign Classic および Adobe Campaign Standard の使用](/help/sites-authoring/campaign.md)
 * [Adobe Campaign コンポーネント](/help/sites-authoring/adobe-campaign-components.md)
-* [AEM での Adobe Campaign フォームの作成](/help/sites-authoring/adobe-campaign-forms.md)
-* [Adobe Campaign のターゲット設定](/help/sites-authoring/target-adobe-campaign.md)
+* [AEM での Adobe Campaign フォームの作成 ](/help/sites-authoring/adobe-campaign-forms.md)
+* [Adobe Campaign のターゲット設定 ](/help/sites-authoring/target-adobe-campaign.md)
 
-前もって [AEM と Adobe Campaign を統合](/help/sites-administering/campaign.md)している必要があります。
+以前 [Adobe Campaignと統合されたAEM](/help/sites-administering/campaign.md).
 
-さらに、統合をカスタマイズする場合は、次のトピックを参照してください。
+また、統合をカスタマイズする場合は、次のトピックを参照してください。
 
-* [カスタム拡張の作成](/help/sites-developing/extending-campaign-extensions.md)
+* [カスタム拡張機能の作成](/help/sites-developing/extending-campaign-extensions.md)
 * [カスタムフォームマッピングの作成](/help/sites-developing/extending-campaign-form-mapping.md)

@@ -11,7 +11,7 @@ role: Admin
 source-git-commit: 9dcaf2538e5f968b25ce4f643ac307eff295d07d
 workflow-type: tm+mt
 source-wordcount: '633'
-ht-degree: 98%
+ht-degree: 96%
 
 ---
 
@@ -130,7 +130,7 @@ ht-degree: 98%
    + [関連するコミュニティ記事](related-community-articles.md)
    + [Adobe Campaign Standard との統合](campaignstandard.md)
    + [Flash ビューアのサポート終了に関する通知](flash-viewers-eol.md)
-   + [Adobe Creative Cloud との統合](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/aem-cc-integration-best-practices.html?lang=ja)
+   + [Adobe Creative Cloudとの統合](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/aem-cc-integration-best-practices.html?lang=ja)
    + [Adobe Dynamic Tag Management との統合](dtm.md)
    + [Adobe Analytics および Adobe Target との統合のオプトイン](opt-in.md)
    + [AEM ポータルとポートレット](aem-as-portal.md)
@@ -148,7 +148,7 @@ ht-degree: 98%
    + [Adobe Target との統合の前提条件](target-requirements.md)
    + [Adobe Classifications](adobeanalytics-classifications.md)
    + [ソリューション統合](integration.md)
-   + [エクスペリエンスフラグメントとのTarget 統合](experience-fragments-target.md)
+   + [エクスペリエンスフラグメントとの Target 統合](experience-fragments-target.md)
 + ベストプラクティス {#bestpractices}
    + [ベストプラクティス](administer-best-practices.md)
    + [翻訳のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-64/administering/introduction/tc-bp.html?lang=ja)
@@ -157,8 +157,8 @@ ht-degree: 98%
    + [AEM の基盤での GDPR 要求の処理](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/handling-gdpr-requests-for-aem-platform.html?lang=ja)
    + [AEM Commerce - GDPR 対応](https://experienceleague.adobe.com/docs/experience-manager-64/administering/ecommerce/gdpr-compliance-commerce.html)
 + コンテンツ管理 {#contentmanagement}
-   + [パッケージの使用方法](package-manager.md)
-   + [アセットのワークフローオフローダー](workflow-offloader.md)
+   + [パッケージの操作方法](package-manager.md)
+   + [Assets Workflow Offloader](workflow-offloader.md)
    + [タグの管理](tags.md)
    + [ページエクスポーター](page-exporter.md)
    + [クラシック UI のタグ付けコンソール](classic-console.md)

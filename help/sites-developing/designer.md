@@ -1,7 +1,7 @@
 ---
 title: デザインとデザイナー
 seo-title: Designs and the Designer
-description: Web サイト用に、また AEM で、デザインの作成が必要になります。その場合はデザイナーを使用します
+description: Web サイト用のデザインを作成し、AEMでデザイナーを使用して作成する必要があります
 seo-description: You will need to create a design for your website and in AEM, you do so by using the Designer
 uuid: b880ab49-8bea-4925-9b7b-e911ebda14ee
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: 8a4fc7c7-03bc-44db-93f1-dbd76fc9dbd7
 source-git-commit: 9ae048ca2811a56c5d6f0b2415fcfcccc4384dbf
 workflow-type: tm+mt
 source-wordcount: '362'
-ht-degree: 100%
+ht-degree: 75%
 
 ---
 
@@ -27,7 +27,7 @@ Designer は、AEM の[クラシック UI](/help/release-notes/touch-ui-features
 
 >[!NOTE]
 >
->Web アクセシビリティについて詳しくは、[AEM と Web アクセシビリティのガイドライン](/help/managing/web-accessibility.md)を参照してください。
+>Web アクセシビリティについて詳しくは、 [AEMと Web アクセシビリティのガイドライン](/help/managing/web-accessibility.md).
 
 ## デザイナーの使用 {#using-the-designer}
 
@@ -43,11 +43,11 @@ Designer は、AEM の[クラシック UI](/help/release-notes/touch-ui-features
 
 >[!NOTE]
 >
->デザインモードのページ上でおこなわれたすべての変更は、サイトのデザインノードの下に保持され、同じデザインを持つすべてのページに自動的に適用されます。
+>デザインモードでページに対して行われた変更はすべて、サイトのデザインノードの下に保持され、同じデザインを持つすべてのページに自動的に適用されます。
 
 ## 必要なもの {#what-you-will-need}
 
-デザインを実現するには、以下が必要です。
+デザインを実現するには、次が必要です。
 
 **CSS** - カスケーディングスタイルシート（CSS）は、ページの特定の領域の書式を定義します。
 

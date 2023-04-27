@@ -1,7 +1,7 @@
 ---
 title: ページプロパティのビューのカスタマイズ
 seo-title: Customizing Views of Page Properties
-description: どのページにも、必要に応じて編集できる一連のプロパティがあります
+description: 各ページには、必要に応じて編集できる一連のプロパティがあります
 seo-description: Every page has a set of properties that you can edit as required
 uuid: cbfca6e6-cb9e-43b1-8889-09a7cc9f8a51
 contentOwner: User
@@ -13,7 +13,7 @@ exl-id: 25dad368-8227-424d-960b-1664d8e20a21
 source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
 source-wordcount: '479'
-ht-degree: 98%
+ht-degree: 84%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 98%
 
 * 編集ビューでは表示（例：**プロパティを表示**）
 
-変更が必要な場合は、フィールドを明確に設定する必要があります。それには適切なノードプロパティを使用します。
+変更が必要な場合は、フィールドを具体的に設定する必要があります。 これは、次の適切なノードプロパティを使用しておこないます。
 
 * 作成ビューで利用できるページプロパティ（例：**ページを作成**&#x200B;ウィザード）：
 
@@ -51,11 +51,11 @@ ht-degree: 98%
 
 >[!TIP]
 >
->ページプロパティのカスタマイズ方法については、「[ページプロパティの拡張チュートリアルl](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html) 」を参照してください。
+>ページプロパティのカスタマイズ方法については、「[ページプロパティの拡張チュートリアルl](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html?lang=ja) 」を参照してください。
 
 ## ページプロパティの設定 {#configuring-your-page-properties}
 
-ページコンポーネントのダイアログを設定し、適切なノードプロパティを適用することによって、表示するフィールドを設定することもできます。
+また、ページコンポーネントのダイアログを設定し、適切なノードプロパティを適用することで、使用可能なフィールドを設定できます。
 
 例えば、デフォルトでは、[**ページを作成**&#x200B;ウィザード](/help/sites-authoring/managing-pages.md#creating-a-new-page)には「**その他のタイトルと説明**」の下にグループ化されたフィールドが表示されます。これらのフィールドを非表示にするには、次のように設定します。
 
@@ -107,9 +107,9 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->ライブコピーと一緒に使用するページプロパティを設定する場合、詳しくは、[ページプロパティに対する MSM ロックの設定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui)を参照してください。
+>ライブコピーで使用するページプロパティを設定する場合は、 [ページプロパティに対する MSM ロックの設定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) を参照してください。
 
-## ページプロパティの設定サンプル {#sample-configuration-of-page-properties}
+## ページプロパティの設定例 {#sample-configuration-of-page-properties}
 
 この例では、[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) のダイアログ差分比較の手法を示しており、[`sling:orderBefore`](/help/sites-developing/sling-resource-merger.md#properties) が使用されています。`cq:showOnCreate` と `cq:hideOnEdit` の両方を使用することも説明されています。
 

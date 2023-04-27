@@ -1,7 +1,7 @@
 ---
 title: イベント追跡の拡張
 seo-title: Extending Event Tracking
-description: AEM Analytics では、Web サイトでのユーザーインタラクションを追跡できます
+description: AEM Analytics を使用すると、Web サイトでのユーザーのインタラクションを追跡できます
 seo-description: AEM Analytics allows you to track user interaction on your website
 uuid: 722798ac-4043-4918-a6df-9eda2c85020b
 contentOwner: User
@@ -13,15 +13,15 @@ exl-id: 8df6b48f-b1a8-4294-a52e-dc17ab65606c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 98%
+ht-degree: 74%
 
 ---
 
 # イベント追跡の拡張{#extending-event-tracking}
 
-AEM Analytics では、Web サイトでのユーザーインタラクションを追跡できます。開発者は次の作業が必要になる場合があります。
+AEM Analytics を使用すると、Web サイトでのユーザーのインタラクションを追跡できます。 開発者は、次の作業が必要になる場合があります。
 
-* 訪問者がコンポーネントとどのようなやり取りをおこなっているかの追跡。これを行うには、[カスタムイベント](#custom-events)を使用します。
+* 訪問者がコンポーネントとどのようにやり取りしているかを追跡します。 これを行うには、[カスタムイベント](#custom-events)を使用します。
 * [ContextHub の値へのアクセス](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub)。
 * [レコードのコールバックの追加](#adding-record-callbacks)。
 
@@ -33,9 +33,9 @@ AEM Analytics では、Web サイトでのユーザーインタラクション�
 
 ## カスタムイベント {#custom-events}
 
-カスタムイベントはページ内の特定のコンポーネントの可用性に依存する要素を追跡します。これにはテンプレート特有のイベントも含まれます。ページコンポーネントは別のコンポーネントとして扱われています。
+カスタムイベントは、ページ上の特定のコンポーネントの可用性に依存するあらゆるものを追跡します。 また、ページコンポーネントは別のコンポーネントとして扱われるので、テンプレートに固有のイベントも含まれます。
 
-### ページの読み込み時のカスタムイベントの追跡 {#tracking-custom-events-on-page-load}
+### ページ読み込み時のカスタムイベントの追跡 {#tracking-custom-events-on-page-load}
 
 これを行うには、疑似属性 `data-tracking`（下位互換性のために、古いレコード属性がまだサポートされています）を使用します。これは任意の HTML タグに追加できます。
 
@@ -112,6 +112,6 @@ ContextHub の利用開始の通知を受けるには、`ContextHub.eventing.on(
 
 関数 `CQ_Analytics.registerBeforeCallback(callback,rank)` と `CQ_Analytics.registerAfterCallback(callback,rank)` を使用して、before コールバックと after コールバックを登録します。
 
-どちらの関数も、先頭の引数では関数を、2 番目の引数ではランクを受け取ります。このランクによって、コールバックの実行順序が決定されます。
+両方の関数は、最初の引数として関数を取り、2 番目の引数としてランクを取ります。この関数は、コールバックの実行順序を示します。
 
-コールバックが false を返す場合、実行チェーンの後続のコールバックは実行されません。
+コールバックが false を返した場合、実行チェーン内の以降のコールバックは実行されません。

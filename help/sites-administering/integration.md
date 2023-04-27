@@ -1,7 +1,7 @@
 ---
 title: ソリューション統合
 seo-title: Solutions Integration
-description: AEM でのソリューション統合について説明します。
+description: AEMでのソリューションの統合について詳しくは、こちらを参照してください。
 seo-description: Learn more about Solutions Integration in AEM.
 uuid: 3bf56b1b-284d-4f14-8974-0a595ece5028
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: 1ee7ccbd-8654-4d03-8a67-2c41863ae951
 source-git-commit: af7bced72b8043d4460b575dc62c64f188575452
 workflow-type: tm+mt
 source-wordcount: '112'
-ht-degree: 100%
+ht-degree: 37%
 
 ---
 
@@ -25,11 +25,11 @@ ht-degree: 100%
 * [カタログ作成機能](/help/sites-administering/catalog-producer.md)
 * [SharePoint コネクター](/help/sites-administering/sharepoint-connector.md)
 
-AEM と他のアドビサービスまたはサードパーティのサービスの統合については、次の情報を参照してください。
+AEMと他のAdobeやサードパーティのサービスとの統合について、次の情報を参照できます。
 
 >[!NOTE]
 >
->統合でカスタムプロキシ設定を使用している場合、AEM には 3.x API を使用する機能と 4.x API を使用する機能があるので、両方の HTTP クライアントプロキシを設定する必要があります。
+>統合と共にカスタムプロキシ設定を使用する場合、AEMの一部の機能は 3.x API を使用し、他の一部は 4.x API を使用するので、両方の HTTP クライアントプロキシを設定する必要があります。
 >
 >* 3.x は [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) のように設定します。
 >* 4.x は [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) のように設定します。

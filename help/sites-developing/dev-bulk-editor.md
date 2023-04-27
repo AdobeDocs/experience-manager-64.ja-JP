@@ -1,7 +1,7 @@
 ---
 title: Bulk Editor の開発
 seo-title: Developing the Bulk Editor
-description: タグ付けにより、コンテンツを分類および整理できます
+description: タグ付けを使用すると、コンテンツを分類および整理できます
 seo-description: Tagging allows content to be categorized and organized
 uuid: 3cd04c52-5bdb-47f6-9fa3-d7a4937e8e20
 contentOwner: Guillaume Carlino
@@ -13,25 +13,25 @@ exl-id: a0094d45-70f9-4616-ab61-1087a2b2ea15
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1837'
-ht-degree: 100%
+ht-degree: 51%
 
 ---
 
 # Bulk Editor の開発{#developing-the-bulk-editor}
 
-ここでは、Bulk Editor ツールを開発する方法と、Bulk Editor に基づく製品リストコンポーネントを拡張する方法について説明します。
+この節では、バルクエディターツールの開発方法と、バルクエディターに基づく製品リストコンポーネントの拡張方法について説明します。
 
-## Bulk Editor のクエリパラメーター {#bulk-editor-query-parameters}
+## バルクエディタークエリパラメーター {#bulk-editor-query-parameters}
 
-Bulk Editor を操作するときに、特定の設定で Bulk Editor を呼び出すために URL に追加できるクエリパラメーターがいくつかあります。製品リストコンポーネントなどで、Bulk Editor を常に特定の設定で使用するには、  （/libs/wcm/core/components/bulkeditor にある）bulkeditor.jsp を変更するか、特定の設定でコンポーネントを作成する必要があります。クエリパラメーターを使用した変更は、永続的ではありません。
+Bulk Editor を操作する際には、URL に追加して、特定の設定で Bulk Editor を呼び出すためのクエリパラメーターがいくつかあります。 製品リストコンポーネントなどで、Bulk Editor を常に特定の設定で使用するには、   bulkeditor.jsp （/libs/wcm/core/components/bulkeditor にあります）または特定の設定でコンポーネントを作成します。 クエリパラメーターを使用して行った変更は、永続的ではありません。
 
 例えば、ブラウザーの URL に次のように入力するとします。
 
 `https://<servername><port_number>/etc/importers/bulkeditor.html?rootPath=/content/geometrixx/en&queryParams=geometrixx&initialSearch=true&hrp=true`
 
-「hrp=true」によってフィールドが非表示になるので、Bulk Editor は「**ルートパス**」フィールドなしで表示されます。パラメーター「hrp=false」を使用すると、フィールドが表示されます（デフォルト値）。
+バルクエディターは、 **ルートパス** 「hrp=true」のフィールドは、フィールドを非表示にします。 パラメーター hrp=false の場合、フィールドが表示されます（デフォルト値）。
 
-以下に Bulk Editor のクエリパラメーターリストを示します。
+次に、Bulk Editor クエリパラメーターのリストを示します。
 
 >[!NOTE]
 >
@@ -162,20 +162,20 @@ Bulk Editor を操作するときに、特定の設定で Bulk Editor を呼び�
  </tbody> 
 </table>
 
-### Bulk Editor ベースのコンポーネントの作成：製品リストコンポーネント {#developing-a-bulk-editor-based-component-the-product-list-component}
+### バルクエディターベースのコンポーネントの開発：製品リストコンポーネント {#developing-a-bulk-editor-based-component-the-product-list-component}
 
-ここでは、Bulk Editor の使用方法の概要について説明します。また、Bulk Editor に基づく既存の Geometrixx コンポーネントである製品リストコンポーネントについても説明します。
+この節では、バルクエディターの使用方法の概要と、バルクエディターに基づく既存のGeometrixxコンポーネントの説明を示します。製品リストコンポーネント
 
-製品リストコンポーネントを使用すると、ユーザーがデータのテーブルを表示および編集できます。例えば、製品リストコンポーネントを使用して、カタログの商品を表現できます。情報は標準的な HTML テーブルで表示され、編集は BulkEditor ウィジェットを含む&#x200B;**編集**&#x200B;ダイアログで実行されます。（この Bulk Editor は、  /etc/importers/bulkeditor.html またはツールメニューからアクセスできるものとまったく同じです）。製品リストコンポーネントは、特定の制限された Bulk Editor 機能を使用するように設定されています。バルクエディターのすべての部分（またはバルクエディターから派生したコンポーネント）を設定できます。
+製品リストコンポーネントを使用すると、ユーザーはデータのテーブルを表示および編集できます。 例えば、製品リストコンポーネントを使用して、カタログ内の製品を表すことができます。 情報は標準的な HTML テーブルで表示され、編集は BulkEditor ウィジェットを含む&#x200B;**編集**&#x200B;ダイアログで実行されます。（この Bulk Editor は、   /etc/importers/bulkeditor.htmlまたはツールメニューから )。 製品リストコンポーネントは、特定の限られたバルクエディター機能用に設定されています。 バルクエディターのすべての部分（またはバルクエディターから派生したコンポーネント）を設定できます。
 
-Bulk Editor を使用すると、行の追加、変更、削除、フィルターおよび書き出し、変更内容の保存および複数行の読み込みをおこなうことができます。各行は、製品リストコンポーネントインスタンス以下の 1 つのノードとして格納されます。すべてのセルは、各ノードのプロパティです。これはデザインの選択として簡単に変更できます。例えば、リポジトリの他の場所にノードを格納することもできます。クエリサーブレットの役割は、表示するノードリストを返すことです。検索パスは製品リストインスタンスとして定義されます。
+Bulk Editor を使用すると、行の追加、変更、削除、フィルタリングおよびエクスポート、変更の保存、一連の行のインポートをおこなうことができます。 すべての行は、製品リストコンポーネントインスタンス自体の下にノードとして保存されます。 すべてのセルは、各ノードのプロパティです。これは設計の選択肢で、簡単に変更できます。例えば、リポジトリ内の別の場所にノードを保存できます。 クエリサーブレットの役割は、表示するノードのリストを返すことです。検索パスは、製品リストインスタンスとして定義されます。
 
 製品リストコンポーネントのソースコードは、  /apps/geometrixx/components/productlist は、他のすべての AEM コンポーネントと同様に複数のパーツで構成されています。
 
-* HTML レンダリング。このレンダリングは JSP ファイル（/apps/geometrixx/components/productlist/productlist.jsp）で実行されます。JSP は現在の製品リストコンポーネントのサブノードを読み取り、HTML テーブルの行として各サブノードを表示します。
-* 編集ダイアログは、バルクエディター設定を定義する場所です。コンポーネントのニーズに合わせてダイアログを設定します。使用可能な列およびグリッドまたは検索で実行できるアクション。すべての設定プロパティについて詳しくは、[Bulk Editor の設定プロパティ](#bulk-editor-configuration-properties)を参照してください。
+* HTMLレンダリング：レンダリングは JSP ファイル (/apps/geometrixx/components/productlist/productlist.jsp) で行われます。 JSP は、現在の製品リストコンポーネントのサブノードを読み取り、それぞれをHTMLテーブルの行として表示します。
+* 編集ダイアログは、バルクエディター設定を定義する場所です。コンポーネントのニーズに合わせてダイアログを設定します。使用可能な列およびグリッドまたは検索で実行できるアクション。詳しくは、 [バルクエディターの設定プロパティ](#bulk-editor-configuration-properties) を参照してください。
 
-以下はダイアログのサブノードの XML 表現です。
+次に、ダイアログサブノードの XML 表現を示します。
 
 ```xml
         <editor
@@ -266,7 +266,7 @@ Bulk Editor を使用すると、行の追加、変更、削除、フィルタ�
         </editor>
 ```
 
-### Bulk Editor の設定プロパティ {#bulk-editor-configuration-properties}
+### バルクエディターの設定プロパティ {#bulk-editor-configuration-properties}
 
 バルクエディターのすべての部分が設定可能です。次の表に、バルクエディターのすべての設定プロパティを示します。
 
@@ -278,7 +278,7 @@ Bulk Editor を使用すると、行の追加、変更、削除、フィルタ�
   </tr> 
   <tr> 
    <td>rootPath</td> 
-   <td>検索のルートパス</td> 
+   <td>検索ルートパス</td> 
   </tr> 
   <tr> 
    <td>queryParams</td> 
@@ -286,31 +286,31 @@ Bulk Editor を使用すると、行の追加、変更、削除、フィルタ�
   </tr> 
   <tr> 
    <td>contentMode</td> 
-   <td>true の場合は、コンテンツモードが有効（プロパティを検索結果ノードではなく jcr:content ノードで読み取り）</td> 
+   <td>True に設定すると、コンテンツモードが有効になります。プロパティは、検索結果ノードではなく、jcr:content ノードで読み取られます。</td> 
   </tr> 
   <tr> 
    <td>colsValue</td> 
-   <td>検索対象プロパティ（チェックボックスとして表示される colsSelection で選択した値）</td> 
+   <td>検索されたプロパティ（チェックボックスとして表示される colsSelection の値がチェックされます）</td> 
   </tr> 
   <tr> 
    <td>extraCols</td> 
-   <td>追加の検索対象プロパティ（コンマ区切りでテキストフィールドに表示）</td> 
+   <td>追加の検索済みプロパティ（コンマ区切りのテキストフィールドで表示）</td> 
   </tr> 
   <tr> 
    <td>initialSearch</td> 
-   <td>true の場合は、ページの読み込み時にクエリーを実行</td> 
+   <td>True を指定して、ページの読み込み時にクエリを実行</td> 
   </tr> 
   <tr> 
    <td>colsSelection</td> 
-   <td>検索対象プロパティの選択（チェックボックスとして表示）</td> 
+   <td>検索されたプロパティの選択（チェックボックスとして表示）</td> 
   </tr> 
   <tr> 
    <td>showGridOnly</td> 
-   <td>true の場合は、グリッドのみを表示し、検索パネルは非表示（必ず initialSearch を true に設定）</td> 
+   <td>True を指定すると、グリッドのみが表示され、検索パネルは表示されません（必ず initialSearch を true に設定してください）。</td> 
   </tr> 
   <tr> 
    <td>searchPanelCollapsed</td> 
-   <td>true の場合は、デフォルトで検索パネルを折りたたみ</td> 
+   <td>デフォルトで検索パネルを折りたたむ場合は True を指定します</td> 
   </tr> 
   <tr> 
    <td>hideRootPath</td> 
@@ -318,7 +318,7 @@ Bulk Editor を使用すると、行の追加、変更、削除、フィルタ�
   </tr> 
   <tr> 
    <td>hideQueryParams</td> 
-   <td>クエリーフィールドを非表示</td> 
+   <td>クエリフィールドを非表示</td> 
   </tr> 
   <tr> 
    <td>hideContentMode</td> 
@@ -330,59 +330,59 @@ Bulk Editor を使用すると、行の追加、変更、削除、フィルタ�
   </tr> 
   <tr> 
    <td>hideExtraCols</td> 
-   <td>任意選択の列フィールドを非表示</td> 
+   <td>余分な列フィールドを非表示にする</td> 
   </tr> 
   <tr> 
    <td>hideSearchButton</td> 
-   <td>検索ボタンを非表示</td> 
+   <td>検索ボタンを非表示にする</td> 
   </tr> 
   <tr> 
    <td>hideSaveButton</td> 
-   <td>保存ボタンを非表示</td> 
+   <td>保存ボタンを非表示にする</td> 
   </tr> 
   <tr> 
    <td>hideExportButton</td> 
-   <td>書き出しボタンを非表示</td> 
+   <td>書き出しボタンを非表示にする</td> 
   </tr> 
   <tr> 
    <td>hideImportButton</td> 
-   <td>読み込みボタンを非表示</td> 
+   <td>「読み込み」ボタンを非表示にする</td> 
   </tr> 
   <tr> 
    <td>hideResultNumber</td> 
-   <td>グリッドの検索結果番号テキストを非表示</td> 
+   <td>グリッドの検索結果番号のテキストを非表示にする</td> 
   </tr> 
   <tr> 
    <td>hideInsertButton</td> 
-   <td>グリッドの挿入ボタンを非表示</td> 
+   <td>グリッドの挿入ボタンを非表示にする</td> 
   </tr> 
   <tr> 
    <td>hideDeleteButton</td> 
-   <td>グリッドの削除ボタンを非表示</td> 
+   <td>グリッドの削除ボタンを非表示にする</td> 
   </tr> 
   <tr> 
    <td>hidePathCol</td> 
-   <td>グリッドの「パス」列を非表示</td> 
+   <td>グリッドの「パス」列を非表示にする</td> 
   </tr> 
   <tr> 
    <td>queryURL</td> 
-   <td>クエリーサーブレットへのパス</td> 
+   <td>クエリサーブレットへのパス</td> 
   </tr> 
   <tr> 
    <td>exportURL</td> 
-   <td>書き出しサーブレットへのパス</td> 
+   <td>書き出しサーブレットのパス</td> 
   </tr> 
   <tr> 
    <td>importURL</td> 
-   <td>読み込みサーブレットへのパス</td> 
+   <td>サーブレットを読み込むパス</td> 
   </tr> 
   <tr> 
    <td>insertedResourceType</td> 
-   <td>行が挿入されるとノードに追加されるリソースタイプ</td> 
+   <td>行の挿入時にノードに追加されるリソースタイプ</td> 
   </tr> 
   <tr> 
    <td>saveButton</td> 
-   <td>保存ボタンウィジェット設定</td> 
+   <td>ボタンウィジェット設定を保存</td> 
   </tr> 
   <tr> 
    <td>searchButton</td> 
@@ -390,15 +390,15 @@ Bulk Editor を使用すると、行の追加、変更、削除、フィルタ�
   </tr> 
   <tr> 
    <td>exportButton</td> 
-   <td>書き出しボタンウィジェット設定</td> 
+   <td>書き出しボタンのウィジェット設定</td> 
   </tr> 
   <tr> 
    <td>importButton</td> 
-   <td>読み込みボタンウィジェット設定</td> 
+   <td>読み込みボタンウィジェットの設定</td> 
   </tr> 
   <tr> 
    <td>searchPanel</td> 
-   <td>検索パネルウィジェット設定</td> 
+   <td>検索パネルのウィジェット設定</td> 
   </tr> 
   <tr> 
    <td>grid</td> 
@@ -410,7 +410,7 @@ Bulk Editor を使用すると、行の追加、変更、削除、フィルタ�
   </tr> 
   <tr> 
    <td>colModel</td> 
-   <td>グリッドの列モデル設定</td> 
+   <td>グリッド列モデルの設定</td> 
   </tr> 
   <tr> 
    <td>rootPathInput</td> 
@@ -434,36 +434,36 @@ Bulk Editor を使用すると、行の追加、変更、削除、フィルタ�
   </tr> 
   <tr> 
    <td>colsMetadata</td> 
-   <td>列のメタデータ設定です。以下のプロパティを設定できます（列のすべてのセルに適用されます）。<br /> 
+   <td>列のメタデータ設定。 可能なプロパティは次のとおりです（列のすべてのセルに適用されます）。 <br /> 
     <ul> 
-     <li>cellStyle：HTML スタイル </li> 
-     <li>cellCls：CSS クラス </li> 
-     <li>readOnly：true の場合は、値を変更できません。 </li> 
-     <li>checkbox：true の場合は、列のすべてのセルをチェックボックス（true／false 値）として定義します。 </li> 
-     <li>forcedPosition：グリッド内での列の位置を指定する整数値（0 ～列 -1 の数）<p><br /> </p> </li> 
+     <li>cellStyle:html スタイル </li> 
+     <li>cellCls:css クラス </li> 
+     <li>readOnly:値を変更できない場合に true </li> 
+     <li>チェックボックス：true：列のすべてのセルをチェックボックス（true/false 値）として定義します。 </li> 
+     <li>forcedPosition:グリッド内の列を配置する必要がある場所を指定する整数値（0 ～列数 —1）<p><br /> </p> </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
 </table>
 
-### 列メタデータ設定 {#columns-metadata-configuration}
+### 列のメタデータ設定 {#columns-metadata-configuration}
 
-列ごとに以下を設定できます。
+各列に対して、次のようにを設定できます。
 
 * 表示プロパティ：html スタイル、CSS クラスおよび読み取り専用
 
 * チェックボックス
-* 強制位置
+* 強制的な位置
 
-CSS および読み取り専用の列
+CSS 列と読み取り専用列
 
-Bulk Editor には以下の 3 つの列の設定があります。
+Bulk Editor には次の 3 つの列設定があります。
 
-* セル CSS クラス名（cellCls）：設定する列の各セルに追加される CSS クラス名。
-* セルスタイル（cellStyle）：設定する列の各セルに追加される HTML スタイル。
-* 読み取り専用（readOnly）：設定する列の各セルに読み取り専用が設定されます。
+* セルの CSS クラス名 (cellCls):設定した列の各セルに追加される CSS クラス名。
+* セルのスタイル (cellStyle):設定済み列の各セルに追加されるHTMLスタイル。
+* 読み取り専用 (readOnly):読み取り専用は、設定した列の各セルに対して設定されます。
 
-設定は以下のように定義する必要があります。
+設定は、次のように定義する必要があります。
 
 ```
 "colsMetadata": {
@@ -475,7 +475,7 @@ Bulk Editor には以下の 3 つの列の設定があります。
 }
 ```
 
-次の例は、productlist コンポーネント（/apps/geometrixx/components/productlist/dialog/items/editor/colsMetadata）にあります。
+次の例は、productlist コンポーネント (/apps/geometrixx/components/productlist/dialog/items/editor/colsMetadata) にあります。
 
 ```xml
             <colsMetadata jcr:primaryType="nt:unstructured">
@@ -512,23 +512,23 @@ Bulk Editor には以下の 3 つの列の設定があります。
 
 **チェックボックス**
 
-checkbox 設定プロパティを true に設定すると、その列のすべてのセルがチェックボックスとしてレンダリングされます。ボックスがオンの場合は **true** がサーバーの Save サーブレットに送信され、オフの場合は **false** が送信されます。ヘッダーメニューで、**すべてを選択**&#x200B;または **なしを選択**&#x200B;することもできます。これらのオプションは、選択したヘッダーがチェックボックス列のヘッダーの場合に有効になります。
+checkbox configuration プロパティが true に設定されている場合、列のすべてのセルがチェックボックスとしてレンダリングされます。 ボックスがオンの場合は **true** がサーバーの Save サーブレットに送信され、オフの場合は **false** が送信されます。ヘッダーメニューで、**すべてを選択**&#x200B;または **なしを選択**&#x200B;することもできます。これらのオプションは、選択したヘッダーがチェックボックス列のヘッダーの場合に有効になります。
 
-前の例で、selection 列には、checkbox=&quot;true&quot; のチェックボックスのみが含まれます。
+前の例では、選択列には、checkbox=&quot;true&quot;のチェックボックスのみが含まれています。
 
-**強制された位置**
+**強制位置**
 
-強制された位置メタデータ forcedPosition を使用すると、グリッド内での列の位置を指定できます。0 が先頭位置で、&lt;列の数>-1 が最終位置です。その他の値は無視されます。
+強制位置メタデータ forcedPosition を使用すると、列をグリッド内のどこに配置するかを指定できます。0 が最初で、 &lt;number of=&quot;&quot; columns=&quot;&quot;>-1 が最後の位置です。 その他の値は無視されます。
 
-前の例で、selection 列は forcedPosition=&quot;0&quot; の最初の列です。
+前の例では、選択列は forcedPosition=&quot;0&quot;の最初の列です。
 
 ### クエリサーブレット {#query-servlet}
 
 デフォルトでは、クエリサーブレットは `/libs/wcm/core/components/bulkeditor/json.java` にあります。別のパスを設定するとデータを取得できます。
 
-Query サーブレットには、GQL クエリおよび返す列を受信し、結果を計算し、結果を JSON ストリームとして Bulk Editor に送信するという機能があります。
+クエリサーブレットは、次のように動作します。GQL クエリと返す列を受け取り、結果を計算し、結果を JSON ストリームとしてバルクエディターに返します。
 
-製品リストコンポーネントの場合、Query サーブレットに送信される 2 つのパラメーターは以下のとおりです。
+製品リストコンポーネントの場合、クエリサーブレットに送信される 2 つのパラメーターは次のようになります。
 
 * クエリ：「path:/content/geometrixx/en/customers/jcr:content/par/productlist Cube」
 * cols：「Selection,ProductId,ProductName,Color,CatalogCode,SellingSku」
@@ -554,9 +554,9 @@ Query サーブレットには、GQL クエリおよび返す列を受信し、�
 
 クエリサーブレットを拡張すると、複雑な継承モデルを返したり、特定の論理場所に保存されたノードを返したりすることができます。クエリサーブレットを使用すると、あらゆる種類の複雑な計算を実行できます。リポジトリ内の複数ノードの集計がグリッドに行で表示されます。この場合、これらの行の変更と保存は、Save サーブレットで管理する必要があります。
 
-### 保存サーブレット {#save-servlet}
+### サーブレットを保存 {#save-servlet}
 
-バルクエディターのデフォルト設定では、各行が 1 つのノードであり、各行のレコードにそのノードのパスが格納されます。バルクエディターは、行とノードの間のリンクを jcr パスを介して保持します。ユーザーがグリッドを編集すると、すべての変更のリストが作成されます。ユーザーが「**保存**」をクリックすると、更新されたプロパティ値と共に POST クエリが各パスに送信されます。これは Sling の基本的な概念であり、各セルがノードのプロパティである限り適切に機能します。ただし、クエリサーブレットで継承を計算するように実装している場合は、クエリサーブレットが返すプロパティは別のノードから継承される可能性があるので、このモデルは機能しません。
+バルクエディターのデフォルト設定では、各行が 1 つのノードであり、各行のレコードにそのノードのパスが格納されます。バルクエディターは、行とノードの間のリンクを jcr パスを介して保持します。ユーザーがグリッドを編集すると、すべての変更のリストが作成されます。ユーザーが **保存**&#x200B;に設定すると、POSTクエリが、更新されたプロパティ値と共に各パスに送信されます。 これは Sling の基本的な概念であり、各セルがノードのプロパティである限り適切に機能します。ただし、クエリサーブレットで継承を計算するように実装している場合は、クエリサーブレットが返すプロパティは別のノードから継承される可能性があるので、このモデルは機能しません。
 
 変更は、各ノードに直接反映されるのではなく、保存ジョブを行う 1 つのサーブレットに反映される、というのが保存サーブレットの概念です。これにより、そのサーブレットで変更を分析することができ、そのプロパティを適切なノードに保存できます。
 

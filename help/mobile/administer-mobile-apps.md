@@ -1,7 +1,7 @@
 ---
 title: モバイルアプリ
 seo-title: Mobile Apps
-description: モバイルアプリ用のコンテンツの管理を開始するには、このページをお読みください。
+description: このページでは、モバイルアプリ用コンテンツの管理の概要について説明します。
 seo-description: Follow this page to get started with administering content for mobile apps.
 uuid: 0ef31513-b720-46cb-b162-35883ae48912
 contentOwner: msm-service
@@ -13,7 +13,7 @@ exl-id: c5aa2311-e7c4-4a7c-a525-6ce8611baaa0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '131'
-ht-degree: 64%
+ht-degree: 10%
 
 ---
 
@@ -21,13 +21,13 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-Adobe Experience Manager(AEM)Mobile は、AEM Assets、Sites、Screens、Workflow、User Manager、Commerce およびFormsを活用する、Adobe Experience Managerマルチチャネルデジタルプラットフォームに含まれています。 AEM Mobile では非常に柔軟なデプロイメントが可能で、様々なコンテンツソースを利用できます。
+Adobe Experience Manager(AEM)Mobile は、AEM Assets、Sites、Screens、Workflow、User Manager、Commerce およびFormsを活用する、Adobe Experience Managerマルチチャネルデジタルプラットフォームに含まれています。 AEM Mobileは、優れた展開の柔軟性を備え、企業が様々なコンテンツソースを使用できるようにします。
 
-AEM Mobile では、複数の方法でアプリを作成できます。以下の方法でアプリを作成できます。
+AEM Mobileには、アプリを作成する複数の方法が用意されています。 を使用してアプリを作成する様々な方法を次に示します。
 
-* [AEM Mobile On-Demand Services のコンテンツの管理](/help/mobile/aem-mobile.md)
+* [AEM Mobile On-demand Servicesのコンテンツの管理](/help/mobile/aem-mobile.md)
 * [AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)
 
 >[!NOTE]

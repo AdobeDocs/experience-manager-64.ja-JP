@@ -5,7 +5,7 @@ exl-id: 2fe0dad7-fc78-4aac-afa3-79a278008453
 source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
 source-wordcount: '1308'
-ht-degree: 52%
+ht-degree: 24%
 
 ---
 
@@ -13,10 +13,10 @@ ht-degree: 52%
 
 アドビでは、製品の機能を絶えず評価して、常に後方互換性を慎重に考慮しながら、古い機能を作成し直したり、より近代的な機能に置き換えて、お客様にとっての全体的な価値を向上させています。
 
-近い将来おこなわれる AEM 機能の削除や置換を通知するため、次のルールが適用されます。
+AEM機能の差し迫った削除/置き換えを伝達するために、次の規則が適用されます。
 
 1. まず、非推奨（廃止予定）の発表がおこなわれます。非推奨（廃止予定）の機能は引き続き使用できますが、それ以上の機能強化はおこなわれません。
-1. 廃止された機能の削除は、早ければ、次のメジャーリリースでおこなわれます。削除の実際の目標期日を通知します。
+1. 非推奨（廃止予定）の機能は、以下のメジャーリリースで最も早く削除されます。 削除の実際の目標期日を通知します。
 
 このプロセスにより、機能が実際に削除されるまでに、廃止される機能の新しいバージョンまたは後継機能にお客様が実装を合わせるためのリリースサイクルが少なくとも 1 回あります。
 
@@ -30,12 +30,12 @@ ht-degree: 52%
 
 | 領域 | 機能 | 代替手段 |
 |---|---|---|
-| UI | クラシック UI の機能がさらに強化される予定はありません。AEM 6.4 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。クラシック UI は廃止中は引き続き完全にサポートされます。 <ul> <li>`/libs/cq/core/content/welcome.html` </li> <li> `/siteadmin` </li> <li> `/damadmin` </li> <li> `/mcmadmin` </li> <li> `/inbox` </li> <li> `/tagging` </li> <li> `/cf#` (ページエディター) </li><li> `/libs/launches/content/admin.html` </li> <li> `/libs/cq/workflow/content/console.html` </li> </ul> | 新しい AEM UI に切り替えることをお勧めします。 |
-| コンポーネント | 以下の基盤コンポーネントの機能がさらに強化される予定はありません。AEM 6.4 には基盤コンポーネントが含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。基盤コンポーネントは、廃止中も引き続き完全にサポートされます。 <ul> <li> foundation/components/account/accountname </li> <li> foundation/components/account/actions </li> <li> foundation/components/account/passwordreset </li> <li> foundation/components/account/requestconfirmation </li> <li> foundation/components/adaptiveimage </li> <li> foundation/components/assetsharepage </li> <li> foundation/components/breadcrumb </li> <li> foundation/components/form/creditcard </li> <li> foundation/components/listchildren </li> <li> foundation/components/login </li> <li> foundation/components/logo </li> <li> foundation/components/mobilefooter </li> <li> foundation/components/mobileimage </li> <li> foundation/components/mobilelist </li> <li> foundation/components/mobilelogo </li> <li> foundation/components/mobilereference </li> <li> foundation/components/mobiletextimage </li> <li> foundation/components/mobiletopnav </li> <li> foundation/components/search </li> <li> foundation/components/sitemap </li> <li> foundation/components/table </li> <li> foundation/components/toolbar </li> <li> foundation/components/topnav </li> <li> foundation/components/userinfo </li> </ul> | 今後のプロジェクトには、コアコンポーネントを使用することをお勧めします。既存のサイトを変更する必要はありません。 |
-| コンポーネント | 以下の基盤コンポーネントの機能がさらに強化される予定はありません。AEM 6.4 には基盤コンポーネントが含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。基盤コンポーネントは、廃止中も引き続き完全にサポートされます。 <ul><li>foundation/components/timing</li></ul> | Adobeは、代替サービスを提供する予定はありません。 |
+| UI | Adobeは、クラシック UI をさらに強化する予定はありません。 AEM 6.4 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用できます。 クラシック UI は廃止中は引き続き完全にサポートされます。 <ul> <li>`/libs/cq/core/content/welcome.html` </li> <li> `/siteadmin` </li> <li> `/damadmin` </li> <li> `/mcmadmin` </li> <li> `/inbox` </li> <li> `/tagging` </li> <li> `/cf#` (ページエディター) </li><li> `/libs/launches/content/admin.html` </li> <li> `/libs/cq/workflow/content/console.html` </li> </ul> | 新しいAEM UI を使用するように切り替えることをお勧めします。 |
+| コンポーネント | Adobeでは、以下に示す基盤コンポーネントの機能強化は予定されていません。 AEM 6.4 には基盤コンポーネントが含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。基盤コンポーネントは、廃止中も引き続き完全にサポートされます。 <ul> <li> foundation/components/account/accountname </li> <li> foundation/components/account/actions </li> <li> foundation/components/account/passwordreset </li> <li> foundation/components/account/requestconfirmation </li> <li> foundation/components/adaptiveimage </li> <li> foundation/components/assetsharepage </li> <li> foundation/components/breadcrumb </li> <li> foundation/components/form/creditcard </li> <li> foundation/components/listchildren </li> <li> foundation/components/login </li> <li> foundation/components/logo </li> <li> foundation/components/mobilefooter </li> <li> foundation/components/mobileimage </li> <li> foundation/components/mobilelist </li> <li> foundation/components/mobilelogo </li> <li> foundation/components/mobilereference </li> <li> foundation/components/mobiletextimage </li> <li> foundation/components/mobiletopnav </li> <li> foundation/components/search </li> <li> foundation/components/sitemap </li> <li> foundation/components/table </li> <li> foundation/components/toolbar </li> <li> foundation/components/topnav </li> <li> foundation/components/userinfo </li> </ul> | 将来のプロジェクトでは、コアコンポーネントを使用することをお勧めします。 既存のサイトを変更する必要はありません。 |
+| コンポーネント | Adobeでは、以下に示す基盤コンポーネントの機能強化は予定されていません。 AEM 6.4 には基盤コンポーネントが含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。基盤コンポーネントは、廃止中も引き続き完全にサポートされます。 <ul><li>foundation/components/timing</li></ul> | Adobeは、代替サービスを提供する予定はありません。 |
 | ポータルDirector | ポータルDirectorは、ポートレットを介したAEMコンテンツのサードパーティサーバーでのホストを可能にする一連の機能です。 Adobeでは、以下の場所にあるポータルDirector機能をさらに強化する予定はありません。 AEM 6.4 には Portal Directorが含まれており、以前のリリースからアップグレードするお客様は、そのまま使用できます。 ポータルダイレクトは非推奨の間も、引き続き完全にサポートされます。 <ul><li>/libs/portal/director</li></ul> | Adobeは、代替サービスを提供する予定はありません。 |
 | ポートレットコンポーネント | /foundation/components/portlet の下のポートレットコンポーネントは、AEM内の JSR ポートレットをコンポーネントとしてホストできます。 Adobeでは、ポートレットコンポーネント機能をさらに強化する予定はありません。 AEM 6.4 にはポートレットコンポーネントが含まれており、以前のリリースからアップグレードしたお客様は、そのまま使用できます。 ポートレットコンポーネントは廃止中も完全にサポートされます。 | Adobeは、代替サービスを提供する予定はありません。 |
-| Forms | Adobe Central 製品がサポートされなくなったので、Adobe Central Migration Bridge サービスのサポートは廃止されました。 | 代替機能はありません |
+| Forms | CentralAdobeはサポートされなくなったので、AdobeCentral Migration Bridge サービスのサポートは廃止されました。 | 代替機能はありません |
 | Forms | Query および OperationOptions での JSONObject の使用は廃止されました。 次の API は非推奨（廃止予定）となりました。 <ul><li>`setArguments(JSONObject arguments)`</li><li> `JSONObject getArguments()`</li><li>`OperationOptions(String operationId, JSONObject arguments)`</li><li>`JSONObject getArguments()`</li><li> `void setArguments(JSONObject arguments)`</li></ul> | 以下を使用： `IValueMap` API |
 | Forms | 廃止された Central Migration Bridge サービスです。 | 代替機能は提供されていません。 |
 | Assets | Assets のオフロードは、AEM 6.4 以降で非推奨となりました。 |  |
@@ -151,16 +151,16 @@ ht-degree: 52%
 | 領域 | 機能 | 代替手段 |
 |---|---|---|
 | [!DNL Experience Cloud] との統合 | [!DNL Adobe I/O] 経由での設定を使用して、アセットを [!DNL Experience Cloud] と同期できます。[!DNL Adobe Experience Cloud] は、以前は [!DNL Adobe Marketing Cloud] と呼ばれていました。 | クエリがある場合は、 [Adobeカスタマーサポート](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja#support). |
-| Analytics の Activity Map | AEM に組み込まれている Activity Map のバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。この [Adobe Analyticsが提供する ActivityMap プラグイン](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=ja) 現在はを使用する必要があります。 |
-| Components-Forms | フォームキャプチャ（foundation/components/form/captcha） | Google の ReCaptcha コンポーネントを代わりに使用します。 |
-| コンポーネント | Slideshow（foundation/components/slideshow） | 代替機能はありません |
-| コンポーネント | Flash（foundation/components/flash） | 代替機能はありません |
-| コンポーネント | ビデオコンポーネントでの SWF ファイルの再生はサポートされなくなりました。 （foundation/components/video） | Flash ベースでないビデオ形式を使用します。 |
-| コンポーネント | 製品テーブル（commerce/components/product_table） | 代替機能はありません |
-| タスク管理 | クラシック UI タスク管理（/libs/cq/taskmanagement/content/taskmanager.html） | 6.0 以降、廃止されました。ワークフロー UI に統合されている新しいタスク管理機能を使用します。 |
-| ワークフロー | 5.6 から 6.2 までで使用された通知 UI （/libs/cq/workflow/content/notifications.html） | ワークフローインボックス（/aem/inbox） |
-| Forms | PDF Generator を使用して PDF を PDF/E-1 形式に書き出す機能は削除されました。 | PDFジェネレーターは、PDF/A-1a/b、PDF/A-2a/b、PDF/A-3a/b 形式へのPDFの書き出しを引き続きサポートしています。 |
-| Forms | ドキュメントフラグメント内では画像がサポートされなくなりました。 | インタラクティブコミュニケーションでは、印刷および Web チャネルで画像を直接使用できます。 |
+| AnalyticsActivity Map | AEMに含まれるActivity Mapのバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。この [Adobe Analyticsが提供する ActivityMap プラグイン](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=ja) 現在はを使用する必要があります。 |
+| Components-Forms | フォームキャプチャ (foundation/components/form/captcha) | 代わりに、Googleによる ReCaptcha コンポーネントを使用します。 |
+| コンポーネント | スライドショー (foundation/components/slideshow) | 代替機能はありません |
+| コンポーネント | Flash(foundation/components/flash) | 代替機能はありません |
+| コンポーネント | ビデオコンポーネントでのSWFファイルの再生のサポートを削除しました (foundation/components/video) | Flash ベースでないビデオ形式を使用します。 |
+| コンポーネント | 製品テーブル (commerce/components/product_table) | 代替機能はありません |
+| タスク管理 | クラシック UI タスク管理 (/libs/cq/taskmanagement/content/taskmanager.html) | 6.0 以降で廃止されました。ワークフロー UI と組み合わされた新しいタスク管理を使用してください。 |
+| ワークフロー | 5.6 ～ 6.2 の間で使用される通知 UI (/libs/cq/workflow/content/notifications.html) | ワークフローインボックス/aem/inbox |
+| Forms | PDFジェネレーターを使用したPDF/E-1 形式へのExport PDFは削除されました。 | PDFジェネレーターは、PDF/A-1a/b、PDF/A-2a/b、PDF/A-3a/b 形式へのPDFの書き出しを引き続きサポートしています。 |
+| Forms | ドキュメントフラグメント内の画像のサポートが削除されました。 | インタラクティブ通信には、印刷チャネルと Web チャネルで画像を直接使用する機能が用意されています。 |
 | Forms | アウトオブプレースアップグレード | アウトオブプレースアップグレードを実行するサポートは利用できません |
 | Forms | TarMK から DocumentMK への移行のサイドグレード | 古いシステムからデータを書き出し、新しいセットアップシステムに読み込むことができます。 詳しい手順については、 JEE 上のAEM Formsのアップグレードドキュメントを参照してください |
 | Forms | JEE 上のAEM Forms 32 ビット版のインストーラーは使用できません。 | Adobeは、JEE 32 ビット版のインストーラーでAEM Formsの出荷を停止しました。 64 ビットインストーラーを引き続き使用して、JEE 上のAEM Formsをインストールできます。 |
@@ -171,9 +171,9 @@ ht-degree: 52%
 | Forms | AEM Designer での Flash フィールドのサポートを削除しました。 AEM Designer では、フォームで使用される Flash フィールドを編集できません。 | 以前のバージョンでリリースされたAEM Designer を使用して、このようなフォームを編集できます。 |
 | Communities | Captcha 検証のサポートが削除されました。 | 検証には、カスタム Captcha 統合 (Googleによる reCAPTCHA など ) を使用します。 |
 
-## 次期リリースに関する予告 {#pre-announcement-for-next-release}
+## 次期リリースの事前発表 {#pre-announcement-for-next-release}
 
-次の表は、非推奨（廃止予定）ではないが、お客様に影響を与える可能性のある、将来のリリースに関する変更のリストを示しています。 計画を立てる際の参考情報としてご覧ください。
+次の表は、非推奨（廃止予定）ではないが、お客様に影響を与える可能性のある、将来のリリースに関する変更のリストを示しています。 これらは、計画のために提供されます。
 
 | 領域 | 機能 | お知らせ |
 |---|---|---|

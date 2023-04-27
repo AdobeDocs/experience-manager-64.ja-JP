@@ -1,7 +1,7 @@
 ---
 title: Adobe Analytics のビデオトラッキングの設定
 seo-title: Configuring Video Tracking for Adobe Analytics
-description: SiteCatalyst のビデオトラッキングの設定について説明します。
+description: SiteCatalyst用のビデオトラッキングの設定について説明します。
 seo-description: Learn about configuring video tracking for SiteCatalyst.
 uuid: c72d2d59-915d-4af1-aeb9-821915979571
 contentOwner: User
@@ -13,13 +13,13 @@ exl-id: 24dd0d05-6327-47e2-a3d1-6ed40af06783
 source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
 source-wordcount: '1752'
-ht-degree: 93%
+ht-degree: 72%
 
 ---
 
 # Adobe Analytics のビデオトラッキングの設定 {#configuring-video-tracking-for-adobe-analytics}
 
-ビデオイベントの追跡には、いくつかの方式を使用できます。そのうち 2 つは古いバージョンの Adobe Analytics 用のレガシーオプションで、レガシーマイルストーンとレガシー秒と呼ばれます。
+ビデオイベントの追跡には、いくつかの方法を使用できます。そのうち 2 つは古いバージョンのAdobe Analyticsのレガシーオプションです。 従来のオプションは次のとおりです。レガシーマイルストーンおよびレガシー秒。
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ ht-degree: 93%
 
    * 以降の節の例では、設定には **my-sc-configuration**、フレームワークには **videofw** という名前を使用します。
 
-1. フレームワークページで RSID を選択し、「使用状況」を「すべて」に設定します。（[http://localhost:4502/cf#/etc/cloudservices/sitecatalyst/videoconf/videofw.html](http://localhost:4502/cf#/etc/cloudservices/sitecatalyst/videoconf/videofw.html)）。
+1. フレームワークページで RSID を選択し、「使用状況」を「すべて」に設定します。([http://localhost:4502/cf#/etc/cloudservices/sitecatalyst/videoconf/videofw.html](http://localhost:4502/cf#/etc/cloudservices/sitecatalyst/videoconf/videofw.html))
 1. サイドキックの「一般」コンポーネントカテゴリから、ビデオコンポーネントをフレームワークにドラッグします。
 1. トラッキング方式を選択します。
 
@@ -54,15 +54,15 @@ ht-degree: 93%
 
 ## マイルストーン {#milestones}
 
-マイルストーン方式では、ビデオに関する大部分の情報を追跡します。高度なカスタマイズが可能で、設定が容易です。
+マイルストーン方式では、ビデオに関する最も多くの情報を追跡し、高度にカスタマイズ可能で、簡単に設定できます。
 
-マイルストーン方式を使用するには、時間ベースの追跡オフセットを指定して、マイルストーンを定義します。ビデオの再生がマイルストーンを通過すると、そのイベントを追跡するためにページが Adobe Analytics を呼び出します。定義したマイルストーンごとに、Adobe Analytics プロパティにマッピングできる CQ 変数が作成されます。これらの CQ 変数の名前には、次の形式を使用します。
+マイルストーン方式を使用するには、時間に基づく追跡オフセットを指定して、マイルストーンを定義します。 ビデオの再生がマイルストーンを通過すると、そのイベントを追跡するためにページが Adobe Analytics を呼び出します。定義したマイルストーンごとに、Adobe Analytics プロパティにマッピングできる CQ 変数が作成されます。これらの CQ 変数の名前は、次の形式を使用します。
 
 ```shell
 eventdata.events.milestoneXX
 ```
 
-XX というサフィックスは、マイルストーンを定義する追跡オフセットです。例えば、4、8、16、20 および 28 秒の追跡オフセットを指定すると、以下の CQ 変数が生成されます。
+XX サフィックスは、マイルストーンを定義する追跡オフセットです。 例えば、4、8、16、20 および 28 秒の追跡オフセットを指定すると、以下の CQ 変数が生成されます。
 
 * `eventdata.events.milestone4`
 * `eventdata.events.milestone8`
@@ -129,13 +129,13 @@ XX というサフィックスは、マイルストーンを定義する追跡�
 >
 >DAM で編集するビデオを開き、 **タイトル** メタデータフィールドを目的の名前に変更します。
 
-1. 「オフセットを追跡」ボックスで、トラッキング方式としてマイルストーンを選択してから、秒単位の追跡オフセットのコンマ区切りリストを入力します。例えば、次の値はビデオの開始から 4、8、16、20 および 28 秒後にマイルストーンを定義します。
+1. トラッキング方法として「マイルストーン」を選択した後、「オフセットを追跡」ボックスに、トラッキングオフセットのコンマ区切りリストを秒単位で入力します。 例えば、次の値では、ビデオの開始後の 4、8、16、20、28 秒でマイルストーンを定義しています。
 
    ```xml
    4,8,16,20,24
    ```
 
-   オフセット値は、0 より大きい整数でなければなりません。デフォルト値は `10,25,50,75` です。
+   オフセット値は、0 より大きい整数にする必要があります。 デフォルト値は `10,25,50,75` です。
 
 1. CQ 変数を Adobe Analytics プロパティにマッピングするには、CQ 変数の横のコンテンツファインダーから Adobe Analytics プロパティをコンポーネント上にドラッグします。
 
@@ -237,23 +237,23 @@ Adobe Analytics のデータ追跡例では、4、8、16、20 および 24 の�
 
 *これは Adobe Analytics への&#x200B;**3 回目の呼び出**しです。*
 
-* *prop1 と eVar1 には が格納されている`a.media.name;`*
+* *prop1 とeVar1 に含まれる`a.media.name;`*
 * *セグメントが表示されたことによって event1 が送信された*
 * *再生時間 = 4 で event2 が送信された*
 * *eventdata.events.milestone8 に到達したことによって event11 送信された*
 * *（eventdata.events.a.media.view がトリガーされなかったので）prop2～4 は送信されない*
 
-## 非レガシーマイルストーン {#non-legacy-milestones}
+## レガシー以外のマイルストーン {#non-legacy-milestones}
 
-非レガシーマイルストーン方式は、マイルストーン方式によく似ていますが、マイルストーンを計測の長さの割合に基づいて定義する点が異なります。次の点は共通です。
+非レガシーマイルストーン方式は、マイルストーン方式に似ていますが、マイルストーンは、トラックの長さの割合を使用して定義される点が異なります。 一般には次のようなものがあります。
 
 * ビデオの再生がマイルストーンを通過すると、そのイベントを追跡するためにページが Adobe Analytics を呼び出します。
 * Adobe Analytics プロパティとのマッピング用に定義される [CQ 変数の静的セット](#milestones)。
 * 定義したマイルストーンごとに、コンポーネントが Adobe Analytics プロパティにマッピングできる CQ 変数を作成します。
 
-これらの CQ 変数の名前には、次の形式を使用します。
+これらの CQ 変数の名前は、次の形式を使用します。
 
-XX というサフィックスは、マイルストーンを定義する計測の長さの割合です。例えば、10、25、50 および 75 という割合を指定すると、以下の CQ 変数が生成されます。
+XX サフィックスは、マイルストーンを定義するトラックの長さのパーセンテージです。 例えば、10、25、50、75 の割合を指定すると、次の CQ 変数が生成されます。
 
 * `eventdata.events.milestone10`
 * `eventdata.events.milestone25`
@@ -264,13 +264,13 @@ XX というサフィックスは、マイルストーンを定義する計測�
 eventdata.events.milestoneXX
 ```
 
-1. 「オフセットを追跡」ボックスで、トラッキング方式として非レガシーマイルストーンを選択してから、計測の長さの割合のコンマ区切りリストを入力します。例えば、次のデフォルト値は計測の長さの 10、25、50 および 75% でマイルストーンを定義します。
+1. 追跡方法として非レガシーマイルストーンを選択した後、「オフセットを追跡」ボックスに、追跡の長さの割合のコンマ区切りリストを入力します。 例えば、次のデフォルト値では、トラックの長さの 10、25、50、75%でマイルストーンを定義しています。
 
    ```xml
    10,25,50,75
    ```
 
-   オフセット値は、0 より大きい整数でなければなりません。
+   オフセット値は、0 より大きい整数にする必要があります。
 
 1. CQ 変数を Adobe Analytics プロパティにマッピングするには、CQ 変数の横のコンテンツファインダーから Adobe Analytics プロパティをコンポーネント上にドラッグします。
 
@@ -285,11 +285,11 @@ eventdata.events.milestoneXX
 
 >[!NOTE]
 >
->「追跡オフセット」フィールドには、1～100 の整数を含むコンマ区切りリストのみを指定できます。
+>「追跡オフセット」フィールドでは、1 ～ 100 の整数を含むコンマ区切りリストのみを使用できます。
 
-1. 追跡オフセットを設定します。
+1. トラックオフセットを設定します。
 
-   * 例：10,50,75,100
+   * e.g.10,50,75,100
 
    また、Adobe Analytics に送信される情報は、大きくはカスタマイズできません。マッピングに使用できる変数は次の 3 つだけです。
 
@@ -316,7 +316,7 @@ eventdata.events.milestoneXX
 
 1. これらの変数を prop1～3 にマッピングします。
 
-   呼び出しの中の&#x200B;**その他の関連情報**&#x200B;は、**pev3** という&#x200B;**ひとつ**&#x200B;の変数に連結されて送信されます。
+   この **関連情報の残り** を呼び出すと、次に連結されます： **1 つ** 名前の付いた変数 **pev3**.
 
    この例を使用した Adobe Analytics への&#x200B;**呼び出しサンプル**&#x200B;は、DigitalPulse Debugger では次のように表示されます。
 
@@ -337,10 +337,10 @@ eventdata.events.milestoneXX
 
 1. 追跡オフセットを任意の秒数に設定します。
 
-   * 例：6
+   * 例： 6
    >[!NOTE]
    >
-   >「追跡オフセット」フィールドに指定できるのは、0 より大きい整数だけです。
+   >「オフセットを追跡」フィールドに指定できるのは、0 より大きい整数のみです
 
    Adobe Analytics に送信される情報のカスタマイズには、制限があります。マッピングに使用できる変数は次の 3 つだけです。
 
@@ -367,14 +367,14 @@ eventdata.events.milestoneXX
 
 1. これらの変数を prop1、prop2 および prop3 にマッピングします。
 
-   呼び出しの中の&#x200B;**その他の関連情報**&#x200B;は、**pev3** という&#x200B;**ひとつ**&#x200B;の変数に連結されて送信されます。
+   この **関連情報の残り** を呼び出すと、次に連結されます： **1 つ** 名前の付いた変数 **pev3**.
 
    この例を使用した Adobe Analytics への呼び出しは、DigitalPulse Debugger では次のように表示されます。
 
    ![lseconds](assets/lseconds.png)
 
-   *この呼び出しは、前述のレガシーマイルストーン呼び出しと同じです。**[こちら](/help/sites-administering/adobeanalytics.md)**の pev3 に関する情報を参照してください。*
+   *この呼び出しは、上記のレガシーマイルストーン呼び出しに似ています。 pev3 の情報を参照してください&#x200B;**[指定された](/help/sites-administering/adobeanalytics.md)**.*
 
-**このチュートリアルで使用しているリファレンス：**
+**このチュートリアルで使用する参照：**
 
 [0] [https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/setup/setup-overview.html](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/setup/setup-overview.html)

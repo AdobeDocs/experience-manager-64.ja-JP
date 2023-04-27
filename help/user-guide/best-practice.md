@@ -9,15 +9,15 @@ exl-id: ba222869-1268-481d-b342-27ea12b15999
 source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
 workflow-type: tm+mt
 source-wordcount: '409'
-ht-degree: 96%
+ht-degree: 82%
 
 ---
 
 # AEM 6.4 ベストプラクティス {#aem-64-best-practices}
 
-## AEM のトレーニングまたは教育について詳しく知るには、どこを参照すればよいですか。 {#training}
+## AEMのトレーニングや教育に関する詳細はどこで確認できますか。 {#training}
 
-アドビには、AEM から最高の結果を得るのに役立つ、多数の主要なリソースがあります。
+Adobeには、AEMを最大限に活用するための主なリソースが多数用意されています。
 
 * アドビの公式 AEM トレーニングカタログについては、[こちら](https://training.adobe.com/training/current-courses.html#solution=adobeExperienceManager&amp;p=1)を参照してください。
 * AEM の認定資格取得を目指す方は、アドビの AEM 公式認定資格の完全なガイドについては、[こちら](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager)を参照してください。
@@ -39,7 +39,7 @@ AEM コミュニティは、提案や共同作業からサンプルワークフ�
 
 ## 様々な AEM 機能の「はじめに」ガイド {#getting-started}
 
-AEM は、組織で様々用途で使用でき、会社全体に幅広く機能を提供できます。まずは、「はじめに」ガイドを参照してください。
+AEMは組織で多くの用途を提供し、企業全体で機能を提供できる幅が広くなっています。 最初の手順を掘り下げたい場合は、入門ガイドを参照してください。
 
 * [AEM Platform と Sites の概要](/help/sites-deploying/deploy.md#getting-started)
 * [AEM Forms はじめに](/help/forms/using/introduction-aem-forms.md)

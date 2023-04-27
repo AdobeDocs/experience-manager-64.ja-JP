@@ -11,7 +11,7 @@ role: Architect
 source-git-commit: 35aea0e087334a1c1e6a708f2182bd9dee799dc0
 workflow-type: tm+mt
 source-wordcount: '370'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 100%
    + [パフォーマンスの最適化](configuring-performance.md)
    + [アセットパフォーマンスガイド](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/performance-tuning-guidelines.html?lang=ja)
    + [設定方法に関する記事](ht-deploy.md)
-   + [Geometrixx サイトの削除](removing-the-geometrixx-sites.md)
+   + [Geometrixxサイトの削除](removing-the-geometrixx-sites.md)
    + [Web コンソールの設定](configuring-web-console.md)
 + AEM 6.4 へのアップグレード {#upgrading}
    + [AEM 6.4 へのアップグレード](upgrade.md)

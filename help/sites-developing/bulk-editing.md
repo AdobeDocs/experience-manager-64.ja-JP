@@ -13,15 +13,15 @@ exl-id: 0aefe8c0-662e-4177-a369-feab174fa510
 source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
 source-wordcount: '414'
-ht-degree: 100%
+ht-degree: 62%
 
 ---
 
 # ページプロパティの一括編集のためのページの設定 {#configuring-your-page-for-bulk-editing-of-page-properties}
 
-[ページプロパティの一括編集](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages)を使用すると、複数のページのプロパティを一度に編集できます。
+[ページプロパティの一括編集](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) では、複数のページのプロパティを一度に編集できます。
 
-様々な値が存在する可能性があるので、ページプロパティの一括編集はデフォルトでは有効になっていません。明示的に許可する（有効にする）必要があります。一括編集できるようにページプロパティを定義する場合は、次のような避けられない影響を考慮する必要があります。
+異なる値が存在する可能性があるので、ページプロパティはデフォルトでは一括編集が有効になっていません。 明示的に許可（有効）する必要があります。 一括編集で使用できるようにページプロパティを定義する場合は、次のような特定の影響を考慮する必要があります。
 
 * ページタイトルのように、通常は一意なフィールドがあります。1 つの値を適用した場合に、そのようなフィールドの一括編集を有効にして意味があるかどうかを判断する必要があります。
 * 特定のフィールドには、複数の値を持たせることができます。そのためには、レンダリング時に意味のある表現が必要です。
@@ -34,7 +34,7 @@ ht-degree: 100%
 >
 >* クラシック UI では使用できません。
 >* ライブコピー内のページでは使用できません。
->* リソースタイプが同じページでのみ使用できます。
+>* 同じリソースタイプを持つページでのみ使用できます。
 >
 
 
@@ -46,7 +46,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->特定のフィールドには、複数の値を持たせることができます。そのためには、レンダリング時に意味のある表現が必要です。このため、次のフィールドタイプのみを有効にしてください。
+>特定のフィールドには、複数の値を持たせることができます。そのためには、レンダリング時に意味のある表現が必要です。このため、次のフィールドタイプのみを有効にする必要があります。
 >
 >* `/libs/granite/ui/components/foundation/form/textfield`
 >* `/libs/granite/ui/components/foundation/form/textarea`
@@ -59,13 +59,13 @@ ht-degree: 100%
 
 フィールドは、（テンプレートではなく）ページコンポーネントで有効化します&#x200B;*。*
 
-1. CRXDE Lite（または同等のメソッド）を使用して、ページコンポーネントを開きます。
+1. CRXDE Lite（または同等の方法）を使用して、ページコンポーネントを開きます。
 
    例：`/apps/core/wcm/components/page/v1/page`
 
    >[!NOTE]
    >
-   >この例では、コアコンポーネントがインスタンスにインストールされ、インスタンスが We.Retail サンプルコンテンツと共に実行されていることを想定しています。詳しくは、[コアコンポーネントのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を参照してください。
+   >この例では、コアコンポーネントがインスタンスにインストールされていることを前提としています。これは、インスタンスが We.Retail サンプルコンテンツと共に実行されている場合です。 詳しくは、 [コアコンポーネントのドキュメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) を参照してください。
 
 1. `cq:dialog` 定義内の必要なフィールドに移動します。
 1. フィールドノードで次のプロパティを定義します。

@@ -1,7 +1,7 @@
 ---
 title: AEM JCR へのプログラムからのアクセス方法
 seo-title: How to programmatically access the AEM JCR
-description: Adobe Marketing Cloud の構成要素の AEM リポジトリ内にあるノードおよびプロパティをプログラムで変更できます
+description: Adobe Marketing Cloudの一部であるAEMリポジトリ内のノードおよびプロパティをプログラムで変更できます
 seo-description: You can programmatically modify nodes and properties located within the AEM repository, which is part of the Adobe Marketing Cloud
 uuid: 2051d03f-430a-4cae-8f6d-e5bc727d733f
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: f2317fd5-df64-4042-b17e-0e0506161b90
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '591'
-ht-degree: 100%
+ht-degree: 85%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Marketing Cloud に搭載されている Adobe CQ リポジトリ内にあ
 
 >[!NOTE]
 >
->この開発向けの記事では、外部 Java アプリケーションから Adobe CQ JCR を変更します。これに対して、OSGi バンドル内から JCR API を使用して JCR を変更することもできます。詳しくは、[Java コンテンツリポジトリへの CQ データの永続化](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)を参照してください。
+>この開発記事では、外部 Java アプリケーションからAdobe CQ JCR を変更します。 これに対し、JCR API を使用して、OSGi バンドル内から JCR を変更できます。 詳しくは、[Java コンテンツリポジトリへの CQ データの永続化](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)を参照してください。
 
 >[!NOTE]
 >
@@ -31,9 +31,9 @@ Adobe Marketing Cloud に搭載されている Adobe CQ リポジトリ内にあ
 
 >[!NOTE]
 >
->JCR Query API を使用して Adobe CQ JCR へのクエリーを実行する方法については、[JCR API を使用した Adobe Experience Manager データのクエリー](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=ja)を参照してください。
+>JCR Query API を使用してAdobe CQ JCR に対してクエリを実行する方法については、 [JCR API を使用したAdobe Experience Managerデータのクエリ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=ja).
 
-## Repository インスタンスの作成 {#create-a-repository-instance}
+## リポジトリインスタンスの作成 {#create-a-repository-instance}
 
 リポジトリに接続して接続を確立するには様々な方法がありますが、この開発向け記事では、`org.apache.jackrabbit.commons.JcrUtils` クラスに属する静的メソッドを使用します。このメソッドの名前は `getRepository` です。このメソッドは、Adobe CQ サーバーの URL を表す文字列パラメーターを受け取ります。例えば、`http://localhost:4503/crx/server` のように指定します。
 
@@ -50,7 +50,7 @@ Repository repository = JcrUtils.getRepository("http://localhost:4503/crx/server
 
 `SimpleCredentials` オブジェクトを作成するには、コンストラクターを使用して、以下の文字列値を渡します。
 
-* ユーザー名
+* ユーザー名。
 * 対応するパスワード
 
 2 番目のパラメーターを渡す場合は、String オブジェクトの `toCharArray` メソッドを呼び出します。以下のコードは、`javax.jcr.Sessioninstance` を返す `login` メソッドを呼び出す方法を示しています。

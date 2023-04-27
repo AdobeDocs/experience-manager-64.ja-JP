@@ -1,7 +1,7 @@
 ---
 title: AEM での Sling Resource Merger の使用
 seo-title: Using the Sling Resource Merger in AEM
-description: Sling Resource Merger は、リソースのアクセスとマージのためのサービスを提供します
+description: Sling Resource Merger は、リソースにアクセスおよびマージするためのサービスを提供します
 seo-description: The Sling Resource Merger provides services to access and merge resources
 uuid: 0a28fdc9-caea-490b-8f07-7c4a6b802e09
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: 4ddbdba8-073b-42ed-b4c9-d97d20b4739b
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1254'
-ht-degree: 99%
+ht-degree: 85%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 99%
 
 ## 目的 {#purpose}
 
-Sling Resource Merger は、リソースのアクセスとマージのためのサービスを提供します. Sling Resource Merger は、次の両方に対して差分メカニズムを提供します。
+Sling Resource Merger は、リソースのアクセスとマージのためのサービスを提供します.次の両方に対して差分（差分）メカニズムを提供します。
 
-* [設定済みの検索パス](/help/sites-developing/overlays.md#configuring-the-search-paths)を使用するリソースの&#x200B;**[オーバーレイ](/help/sites-developing/overlays.md)**。
+* **[オーバーレイ](/help/sites-developing/overlays.md)** を使用するリソースの [設定済みの検索パス](/help/sites-developing/overlays.md#configuring-the-search-paths).
 
 * リソースタイプ階層を（**プロパティを通じて）使用するタッチ操作対応 UI のコンポーネントダイアログ（**）の`cq:dialog`オーバーライド`sling:resourceSuperType`。
 
@@ -35,9 +35,9 @@ Sling Resource Merger を使用すると、リソースやプロパティのオ�
 
 >[!CAUTION]
 >
->Sling Resource Merger および関連する手法は、[Granite](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html) に対してのみ使用できます。これはつまり、標準のタッチ操作対応 UI でのみ使用できるという意味です。特に、この方法で定義された特定のオーバーライドは、コンポーネントのタッチ操作対応ダイアログに対してのみ適用できます。
+>Sling Resource Merger および関連する手法は、[Granite](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/granite-ui/api/index.html) に対してのみ使用できます。これは、標準のタッチ操作対応 UI にのみ適していることを意味します。特に、この方法で定義された上書きは、コンポーネントのタッチ操作対応ダイアログにのみ適用できます。
 >
->その他の領域（タッチ操作対応コンポーネントやクラシック UI の他の側面を含む）のオーバーレイ／オーバーライドでは、適切なノードと構造を元の場所からカスタマイズの定義先にコピーします。
+>その他の領域（タッチ操作対応コンポーネントやクラシック UI のその他の側面を含む）のオーバーレイ/オーバーライドでは、適切なノードと構造を元の場所からカスタマイズの定義先にコピーします。
 
 ### AEM の目的 {#goals-for-aem}
 
@@ -62,9 +62,9 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. 必要な項目（内に存在）を再作成します。 `/libs`) `/apps`
+>1. 必要な項目（`/libs`内に存在）を、`/apps`の下で再作成します。
 >
->1. `/apps` 内で変更作業をおこないます。
+>1. `/apps` 内で変更作業を行います。
 
 >
 
@@ -141,9 +141,9 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 
 ### ユースケース {#use-cases}
 
-オーバーレイを標準の機能と合わせることで、次の操作が可能になります。
+これらは、標準の機能と組み合わせて、次の操作を実行できます。
 
-* **プロパティの追加**
+* **プロパティを追加する**
 
    `/libs` 定義に存在しないプロパティが `/apps` オーバーレイ／オーバーライドで必要になった場合に、プロパティを追加できます。
 
@@ -178,17 +178,17 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 
    `/libs` 内に定義されているノードとその子について、`/apps` オーバーレイ／オーバーライドで新しい設定が必要な場合は、再定義を行います。
 
-   1. 次のアクションを両方実行します。
+   1. 次のアクションを組み合わせます。
 
-      1. ノードの子を非表示にします（そのノードのプロパティは維持されます）。
-      1. プロパティを再定義します。
+      1. ノードの子の非表示（ノードのプロパティは維持）
+      1. プロパティ/プロパティの再定義
 
-* **プロパティの非表示**
+* **プロパティを非表示にする**
 
    `/libs` 内に定義されているプロパティが、`/apps` オーバーレイ／オーバーライドでは不要な場合に、プロパティを非表示にできます。
 
    1. `/apps` 内に、対応するノードを作成します。
-   1. `String` 型または `String[]` 型の `sling:hideProperties` プロパティを作成します。これを使用して、非表示にする（無視する）プロパティを指定します。ワイルドカードを使用することもできます。次に例を示します。
+   1. `String` 型または `String[]` 型の `sling:hideProperties` プロパティを作成します。非表示/無視するプロパティを指定します。 ワイルドカードも使用できます。 次に例を示します。
 
       * `*`
       * `["*"]`
@@ -234,11 +234,11 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 
 ### コードからの Sling Resource Merger の呼び出し {#invoking-the-sling-resource-merger-from-your-code}
 
-Sling Resource Merger には 2 つのカスタムリソースプロバイダーが含まれています。1 つはオーバーレイ用、もう 1 つはオーバーライド用です。それぞれはコード内でマウントポイントを使用して呼び出すことができます。
+Sling Resource Merger には、オーバーレイ用とオーバーライド用の 2 つのカスタムリソースプロバイダーが含まれています。 それぞれは、マウントポイントを使用して、コード内で呼び出すことができます。
 
 >[!NOTE]
 >
->リソースにアクセスするときは、適切なマウントポイントを使用することが推奨されます。
+>リソースにアクセスする場合は、適切なマウントポイントを使用することをお勧めします。
 >
 >適切なマウントポイントを使用すれば、Sling Resource Merger が確実に呼び出され、完全にマージされたリソースが確実に返されます（`/libs` からレプリケートする必要がある構造が低減します）。
 
@@ -262,7 +262,7 @@ Sling Resource Merger には 2 つのカスタムリソースプロバイダー�
 
 ### 使用例 {#example-of-usage}
 
-以下のページで、一部の例が紹介されています。
+以下に、いくつかの例を示します。
 
 * オーバーレイ：
 

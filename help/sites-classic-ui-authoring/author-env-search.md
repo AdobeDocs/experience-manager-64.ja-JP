@@ -13,17 +13,17 @@ exl-id: 9c1d8969-6aa6-41b9-a797-3e6431475fc6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '470'
-ht-degree: 87%
+ht-degree: 50%
 
 ---
 
-# 検索{#search-features}
+# 検索 {#search-features}
 
 AEM のオーサー環境は、リソースタイプに応じて、コンテンツを検索するための様々なメカニズムを提供します。
 
 >[!NOTE]
 >
->オーサー環境外では、[Query Builder](/help/sites-developing/querybuilder-api.md) や [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) など、他の検索メカニズムも使用できます。
+>オーサー環境の外部では、検索用のメカニズム ( [Query Builder](/help/sites-developing/querybuilder-api.md) および [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 ## 検索の基本 {#search-basics}
 
@@ -31,12 +31,12 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 
 ![chlimage_1-140](assets/chlimage_1-140.png)
 
-検索パネルを使用すると、Web サイトのすべてのページに対して検索を実行できます。次のフィールドとウィジェットが含まれます。
+検索パネルを使用すると、すべての web サイトページにわたって検索できます。次のフィールドとウィジェットが含まれます。
 
-* **フルテキスト**：指定したテキストを検索します。
-* **前後に変更**：特定の日付の期間に変更されたページのみを検索します。
-* **テンプレート**：指定したテンプレートに基づいたページのみを検索します。
-* **タグ**：指定したタグを持つページのみを検索します。
+* **Fulltext**:指定したテキストを検索
+* **前後に変更**:特定の日付の間に変更されたページのみを検索します
+* **テンプレート**:指定したテンプレートに基づくページのみを検索
+* **タグ**:指定したタグを持つページのみを検索
 
 >[!NOTE]
 >
@@ -48,52 +48,51 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 >* [正規表現](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Regexp_Searches)
 >* [フィールドグループ](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Field_Grouping)
 >* [ブースト](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
-
 >
 
 
-検索を実行するには、ペイン下部にある「**検索**」をクリックします。検索基準を消去するには、「**リセット**」をクリックします。
+「 **検索** をクリックします。 クリック **リセット** をクリックして、検索条件をクリアします。
 
 ## フィルター {#filter}
 
-様々な場所でフィルターを設定（およびクリア）してビューのドリルダウンおよび洗練をおこなうことができます。
+様々な場所でフィルターを設定（およびクリア）して、表示をドリルダウンして絞り込むことができます。
 
 ![chlimage_1-141](assets/chlimage_1-141.png)
 
-## 検索および置換 {#find-and-replace}
+## 検索と置換 {#find-and-replace}
 
-**Web サイト**&#x200B;コンソールの「**検索と置換**」メニューオプションでは、Web サイトの特定のセクション内で特定の文字列を持つ複数のインスタンスを検索して置換できます。
+内 **Web サイト** コンソールを **検索と置換** メニューオプションを使用すると、web サイトの特定のセクション内で、1 つの文字列を複数インスタンスで検索および置換できます。
 
-1. 検索と置換操作を実行するルートページまたはフォルダーを選択します。
-1. **ツール**／**検索と置換**&#x200B;を選択します。
+1. 検索および置換アクションを実行するルートページまたはフォルダーを選択します。
+1. 選択 **ツール** その後 **検索と置換**:
 
    ![screen_shot_2012-02-15at120346pm](assets/screen_shot_2012-02-15at120346pm.png)
 
-1. **検索と置換**&#x200B;ダイアログでは、次の操作を実行できます。
+1. この **検索と置換** ダイアログでは次の操作を実行します。
 
-   * 検索操作を開始するルートパスを確認します。
-   * 検索する語句を指定します。
-   * 置換後の語句を指定します。
-   * 検索で大文字と小文字を区別するかどうかを指定します。
-   * 完全に一致する語句のみを検索するかどうかを指定します（指定しなければ、サブ文字列も検索されます）。
+   * 検索アクションを開始するルートパスを確認します。
+   * 見つかる用語を定義します
+   * 置き換える用語を定義します。
+   * 検索で大文字と小文字を区別する必要があるかどうかを示します
+   * 単語全体のみを検出するかどうかを示します（それ以外の場合は、部分文字列も検索されます）。
 
-   クリック **プレビュー** に、語句が見つかった場所を示します。置き換える特定のインスタンスを選択またはクリアできます。
+   「**プレビュー**」リストをクリックすると、語句が見つかった場所が表示されます。特定のインスタンスを選択／選択解除して置換できます。
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
 
-1. 「**置換**」をクリックすると、すべてのインスタンスが置換されます。この操作の確認が求められます。
+1. クリック **置換** すべてのインスタンスを実際に置き換える この操作の確認が求められます。
 
-検索と置換サーブレットのデフォルトのスコープには、以下のプロパティが含まれます。
+検索と置換のサーブレットのデフォルトスコープには、次のプロパティが含まれています。
 
 * `jcr:title`
 * `jcr:description`
 * `jcr:text`
 * `text`
 
-スコープは、Apache Felix Web Management Console( 例： `http://localhost:4502/system/console/configMgr`) をクリックします。 選択 `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` 必要に応じて、範囲を設定します。
+このスコープは、Apache Felix Web Management Console（例：`http://localhost:4502/system/console/configMgr`）を使用して変更できます。`CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` を選択し、必要に応じてスコープを設定します。
 
 >[!NOTE]
 >
->標準の AEM インストールでは、検索と置換の検索機能に Lucene が使用されます。
+>標準のAEMインストールでは、検索と置換は Lucene を検索機能に使用します。
 >
->Lucene では長さが 16 K までの文字列プロパティにインデックスが作成されます。この長さを超える文字列は検索されません。
+>Lucene は最大 16 k の文字列プロパティのインデックスを作成します。 これを超える文字列は検索されません。

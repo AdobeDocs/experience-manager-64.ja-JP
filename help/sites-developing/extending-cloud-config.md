@@ -9,24 +9,24 @@ exl-id: d2b8503e-8ac1-4617-ad76-b05d1e80a6b6
 source-git-commit: bbc13d64a33d9033e04fb4f37d60bcfe223be337
 workflow-type: tm+mt
 source-wordcount: '564'
-ht-degree: 100%
+ht-degree: 57%
 
 ---
 
 # クラウドサービス設定{#cloud-service-configurations}
 
-設定は、サービス設定を保存するためのロジックと構造を提供するようにデザインされています。
+設定は、サービス設定を保存するためのロジックと構造を提供するように設計されています。
 
 既存のインスタンスを拡張して、独自の設定を作成できます。
 
 ## 概念  {#concepts}
 
-設定の作成に用いられる原則は、以下の概念に基づいています。
+設定の開発に使用する原則は、次の概念に基づいています。
 
-* サービスやアダプターを使用して、設定を取得する。
-* 設定（プロパティや段落など）は、親から継承される。
-* パスによって、分析ノードから参照される。
-* 簡単に拡張できる。
+* サービス/アダプタは、構成を取得するために使用されます。
+* 設定（例：プロパティ/段落）は親から継承されます。
+* パスで Analytics ノードから参照されます。
+* 容易に拡張可能。
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) など、より複雑な設定に対応できる柔軟性がある。
 * 依存関係のサポート（例：[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) プラグインには [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 設定）。
 
@@ -44,7 +44,7 @@ ht-degree: 100%
 
    `/etc/cloudservices`
 
-* この下に次のコンポーネントを作成します。
+* 次の場合：
 
    * 設定テンプレート
    * 設定コンポーネント
@@ -63,7 +63,7 @@ ht-degree: 100%
 
 ### テンプレート {#template}
 
-テンプレートは、次のベーステンプレートを拡張します。
+テンプレートは、基本テンプレートを拡張します。
 
 `cq/cloudserviceconfigs/templates/configpage`
 
@@ -90,7 +90,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 
 ### コンポーネント {#components}
 
-コンポーネントは、次のベースコンポーネントを拡張します。
+コンポーネントは、次の基本コンポーネントを拡張する必要があります。
 
 `cq/cloudserviceconfigs/templates/configpage`
 
@@ -139,16 +139,16 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 使用可能なサービスが、（`foundation/components/page` または `wcm/mobile/components/page` から継承されたいずれかのページの）**ページのプロパティ**&#x200B;ダイアログの「**クラウドサービス**」タブに一覧表示されます。
 
-このタブでは以下についても表示されます。
+「 」タブには次の項目も表示されます。
 
 * サービスを有効にできる場所へのリンク
-* パスフィールドから設定（サービスのサブノード）を選択する
+* パスフィールドから設定（サービスのサブノード）を選択します
 
 #### パスワードの暗号化 {#password-encryption}
 
-サービスのユーザー資格情報を保存する際は、すべてのパスワードを暗号化する必要があります。
+サービスのユーザー資格情報を保存する場合は、すべてのパスワードを暗号化する必要があります。
 
-非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。このフィールドでは、プロパティ名にアノテーション `@Encrypted` が必要です。すなわち、`password` フィールドの場合、名前は次のようになります。
+これを行うには、非表示のフォームフィールドを追加します。 このフィールドでは、プロパティ名にアノテーション `@Encrypted` が必要です。すなわち、`password` フィールドの場合、名前は次のようになります。
 
 `password@Encrypted`
 
@@ -172,7 +172,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
   </tr> 
   <tr> 
    <td>componentReference</td> 
-   <td>コンポーネントへの参照パスをページに自動的に含めます。<br />追加機能および JS インクルージョンに使用されます。<br /> このプロパティには、<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> が（通常は <code>body</code> タグの前に）含まれるページ上のコンポーネントが含まれます。<br /> Analytics および Target の場合、このプロパティを使用して、訪問者の行動を追跡する JavaScript 呼び出しなどの追加機能を含めます。</td> 
+   <td>ページに自動的に含まれるコンポーネントへの参照パス。<br /> これは、追加機能および JS インクルージョンに使用されます。<br /> このプロパティには、<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> が（通常は <code>body</code> タグの前に）含まれるページ上のコンポーネントが含まれます。<br /> Analytics および Target の場合、このプロパティを使用して、訪問者の行動を追跡する JavaScript 呼び出しなどの追加機能を含めます。</td> 
   </tr> 
   <tr> 
    <td>description</td> 
@@ -184,11 +184,11 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
   </tr> 
   <tr> 
    <td>ranking</td> 
-   <td>一覧表示に使用するサービスランキング。</td> 
+   <td>リストに使用するサービスランキング。</td> 
   </tr> 
   <tr> 
    <td>selectableChildren</td> 
-   <td>ページのプロパティダイアログに設定を表示するためのフィルター。</td> 
+   <td>設定をページのプロパティダイアログに表示するためのフィルター。</td> 
   </tr> 
   <tr> 
    <td>serviceUrl</td> 
@@ -204,16 +204,16 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
   </tr> 
   <tr> 
    <td>visible</td> 
-   <td>ページのプロパティダイアログでの表示／非表示。デフォルトでは表示（オプション）。</td> 
+   <td>ページプロパティダイアログでの表示デフォルトで表示（オプション）</td> 
   </tr> 
  </tbody> 
 </table>
 
 ### ユースケース {#use-cases}
 
-デフォルトでは、以下のサービスが提供されます。
+これらのサービスは、デフォルトで提供されています。
 
-* [トラッカースニペット](/help/sites-administering/external-providers.md)（Google、WebTrends など）
+* [トラッカースニペット](/help/sites-administering/external-providers.md) (Google、WebTrends など )
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
 * [Dynamic Media](/help/sites-administering/marketing-cloud.md#integrating-with-scene)

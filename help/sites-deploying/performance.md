@@ -1,7 +1,7 @@
 ---
 title: パフォーマンスとスケーラビリティ
 seo-title: Performance & Scalability
-description: 'このホワイトペーパーでは、AEM におけるスケーラビリティの確保の仕方に加えて、パフォーマンス指標とディザスタリカバリ機能について説明します。  '
+description: このホワイトペーパーでは、AEMに拡張性を組み込む方法と、パフォーマンス指標および災害復旧機能について説明します。
 seo-description: This white paper discusses the ways scalability has been built into AEM along with performance indicators and disaster recovery features.
 uuid: 709ed651-534d-4b80-8f9b-ac99669f6f61
 contentOwner: User
@@ -13,13 +13,13 @@ exl-id: e2015e30-9f42-431b-a384-e25047e4e83c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '72'
-ht-degree: 100%
+ht-degree: 61%
 
 ---
 
 # パフォーマンスとスケーラビリティ{#performance-scalability}
 
-## ホワイトペーパー：AEM Scalability, Performance, and Disaster Recovery（AEM スケーラビリティ、パフォーマンスおよびディザスタリカバリ） {#white-paper-aem-scalability-performance-and-disaster-recovery}
+## ホワイトペーパー：AEMの拡張性、パフォーマンス、災害復旧 {#white-paper-aem-scalability-performance-and-disaster-recovery}
 
 このホワイトペーパーでは、Adobe Experience Manager におけるスケーラビリティの確保の仕方に加えて、卓越したパフォーマンス指標と優れたディザスタリカバリ機能について説明します。
 

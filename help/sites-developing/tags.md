@@ -1,7 +1,7 @@
 ---
 title: タグ付け
 seo-title: Tagging
-description: タグ付けにより、コンテンツを分類および整理できます
+description: タグ付けを使用すると、コンテンツを分類および整理できます
 seo-description: Tagging allows content to be categorized and organized
 uuid: fbbce525-ebc4-484b-bec9-2d68314cf15a
 contentOwner: Guillaume Carlino
@@ -14,7 +14,7 @@ exl-id: 634fecc8-5132-4e8f-a2dd-7e8c9b74c79b
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 100%
+ht-degree: 92%
 
 ---
 

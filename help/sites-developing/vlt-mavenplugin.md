@@ -9,7 +9,7 @@ ht-degree: 94%
 
 ---
 
-# Adobeコンテンツパッケージ Maven プラグイン {#adobe-content-package-maven-plugin}
+# Adobe Content Package Maven Plugin {#adobe-content-package-maven-plugin}
 
 パッケージデプロイメントおよび管理タスクを Maven プロジェクトに組み込むには、Adobe Content Package Maven Plugin を使用します。
 

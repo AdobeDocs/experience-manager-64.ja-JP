@@ -1,7 +1,7 @@
 ---
 title: リソースマッピング
 seo-title: Resource Mapping
-description: リソースマッピングを使用してリダイレクト、バニティー URL および AEM 用の仮想ホストを定義する方法について説明します。
+description: リソースマッピングを使用して、AEMのリダイレクト、バニティー URL および仮想ホストを定義する方法について説明します。
 seo-description: Learn how to define redirects, vanity URLs and virtual hosts for AEM by using resource mapping.
 uuid: 33de7e92-8144-431b-badd-e6a667cd78e1
 contentOwner: User
@@ -14,20 +14,20 @@ exl-id: 81dddbab-1a9e-49ee-b2a5-a8e4de3630d1
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 90%
+ht-degree: 60%
 
 ---
 
 # リソースマッピング{#resource-mapping}
 
-リソースマッピングは、リダイレクト、バニティー URL および AEM 用の仮想ホストを定義するために使用します。
+リソースマッピングは、AEMのリダイレクト、バニティー URL および仮想ホストを定義するために使用されます。
 
-例えば、これらのマッピングを使用すると次のことが可能です。
+例えば、これらのマッピングを使用して、次のことをおこなうことができます。
 
 * すべてのリクエストに `/content` というプレフィックスを付けて、web サイトの訪問者に内部構造が表示されないようにする。
 * Web サイトの `/content/en/gateway` ページへのリクエストがすべて `https://gbiv.com/` にリダイレクトされるように、リダイレクトを定義する。
 
-HTTP マッピングの一例として、[localhost:4503 に対するすべての要求に /content](#configuring-an-internal-redirect-to-content) というプレフィックスを指定します。このようなマッピングを使用すると、Web サイトの訪問者に対して内部構造を非表示にすることができます。例えば、次のページにアクセスできます。
+1 つの可能な HTTP マッピング [には、localhost:4503 に対するすべての要求の前に/content が付加されます。](#configuring-an-internal-redirect-to-content). このようなマッピングを使用すると、Web サイトの訪問者に対して内部構造を非表示にすることができます。例えば、次のページの場合は、
 
 `localhost:4503/content/geometrixx/en/products.html`
 
@@ -45,9 +45,9 @@ HTTP マッピングの一例として、[localhost:4503 に対するすべて�
 >
 >詳しくは、Sling のドキュメントと「[Mappings for Resource Resolution](https://sling.apache.org/site/resources.html)」と「[Resources](https://sling.apache.org/site/mappings-for-resource-resolution.html)」を参照してください。
 
-## マッピング定義の確認 {#viewing-mapping-definitions}
+## マッピング定義の表示 {#viewing-mapping-definitions}
 
-マッピングでは 2 つのリストが作成されます。JCR Resource Resolver は、これらのリストを（トップダウン）評価して一致項目を探します。
+このマッピングは、JCR Resource Resolver が（トップダウン）評価して一致を見つける 2 つのリストを形成します。
 
 これらのリストは、Felix コンソールの **JCR ResourceResolver** オプション（例：`https://<host>:<port>/system/console/jcrresolver`）で（設定情報と一緒に）確認できます。
 
@@ -57,8 +57,7 @@ HTTP マッピングの一例として、[localhost:4503 に対するすべて�
 
 * 設定テスト
 
-   
-URL またはリソースパスを入力できます。「**Resolve**」または「**Map**」をクリックして、システムによるエントリの変換方法を確認します。
+   URL またはリソースパスを入力できます。 クリック **解決** または **マップ** をクリックして、エントリの変換方法を確認します。
 
 * **Resolver Map Entries**
 URL をリソースにマップするために ResourceResolver.resolve メソッドが使用するエントリのリストです。
@@ -66,11 +65,11 @@ URL をリソースにマップするために ResourceResolver.resolve メソ�
 * **Mapping Map Entries**
 リソースパスを URL にマップするために ResourceResolver.map メソッドが使用するエントリのリストです。
 
-2 つのリストには、アプリケーションでデフォルトとして定義されたエントリを含む様々なエントリが表示されます。これらのエントリの目的は、多くの場合、ユーザーのために URL を簡略化することです。
+2 つのリストには、アプリケーションでデフォルトとして定義されたエントリを含む、様々なエントリが表示されます。 多くの場合、ユーザーの URL を簡素化することを目的としています。
 
-リストでは、**パターン**（要求に適合する正規表現）と&#x200B;**リプレースメント**（適用するリダイレクトを定義します）がペアになっています。
+リストはペア a **パターン**&#x200B;の場合は、リクエストに一致する正規表現と **代替手段** これは、適用するリダイレクトを定義します。
 
-例えば、次のパターンがあるとします。
+例えば、次のような場合です。
 
 **パターン** `^[^/]+/[^/]+/welcome$`
 
@@ -92,9 +91,9 @@ URL をリソースにマップするために ResourceResolver.resolve メソ�
 >
 >正規表現の定義方法について説明したリソースは多数あります（例：[https://www.regular-expressions.info/](https://www.regular-expressions.info/)）。
 
-## AEM でのマッピング定義の作成 {#creating-mapping-definitions-in-aem}
+## AEMでのマッピング定義の作成 {#creating-mapping-definitions-in-aem}
 
-AEM の標準インストールには、次のフォルダーがあります。
+AEMの標準インストールでは、次のフォルダーを検索できます。
 
 `/etc/map/http`
 

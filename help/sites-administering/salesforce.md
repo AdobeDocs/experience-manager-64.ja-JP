@@ -1,7 +1,7 @@
 ---
 title: Salesforce との統合
 seo-title: Integrating with Salesforce
-description: AEM と Salesforce の統合について説明します。
+description: AEMと Salesforce の統合について説明します。
 seo-description: Learn about integrating AEM with Salesforce.
 uuid: db3b25f3-b680-4054-a8db-4161d4c86201
 contentOwner: Guillaume Carlino
@@ -13,54 +13,54 @@ exl-id: 4c09699a-c7ae-48ee-9423-87ff35b1e9d9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1496'
-ht-degree: 87%
+ht-degree: 31%
 
 ---
 
 # Salesforce との統合{#integrating-with-salesforce}
 
-Salesforce と AEM を統合すると、リード管理機能を実現でき、Salesforce が標準提供している既存の機能を利用できます。AEM からリード情報を Salesforce に送信するように設定したり、Salesforce から直接データにアクセスするコンポーネントを作成できます。
+Salesforce とAEMの統合は、リード管理機能を提供し、Salesforce が提供する既存の機能を活用します。 リードを Salesforce に投稿し、Salesforce から直接データにアクセスするコンポーネントを作成するようにAEMを設定できます。
 
-AEM と Salesforce との双方向で拡張可能な統合により、次のことが可能になります。
+AEMと Salesforce の双方向で拡張可能な統合により、次のことが可能になります。
 
-* 組織のデータを十分に活用、更新して、カスタマーエクスペリエンスを強化する。
-* マーケティングとセールスアクティビティを結び付ける。
-* 組織の Salesforce データストアのデータを自動的に送受信する。
+* 組織でデータを完全に使用および更新して、顧客体験を強化する。
+* マーケティングからセールス活動へのエンゲージメント。
+* Salesforce データストアからデータを自動的に送受信する組織。
 
-このドキュメントは次の内容について説明します。
+このドキュメントでは、次の点について説明します。
 
-* Salesforce クラウドサービスを設定する方法（AEM を Salesforce と連携するよう設定）
-* Salesforce のリード情報や連絡先情報を ClientContext やパーソナライゼーションで使用する方法
-* Salesforce のワークフローモデルを使用して、AEM ユーザーをリードとして Salesforce に送信する方法
-* Salesforce のデータを表示するコンポーネントを作成する方法
+* SalesforceCloud Servicesの設定方法 (AEMを Salesforce と統合するように設定 )。
+* ClientContext での Salesforce リード/連絡先情報の使用方法と、パーソナライゼーションの使用方法。
+* Salesforce ワークフローモデルを使用して、AEMユーザーをリードとして salesforce に投稿する方法。
+* Salesforce のデータを表示するコンポーネントの作成方法。
 
-## AEM を Salesforce と連携するよう設定 {#configuring-aem-to-integrate-with-salesforce}
+## Salesforce と統合するAEMの設定 {#configuring-aem-to-integrate-with-salesforce}
 
-AEM を Salesforce と連携するよう設定するには、まず Salesforce でリモートアクセスアプリケーションを設定する必要があります。次に、このリモートアクセスアプリケーションを指すように Salesforce クラウドサービスを設定します。
+AEMと Salesforce を統合するように設定するには、まず Salesforce でリモートアクセスアプリケーションを設定する必要があります。 次に、このリモートアクセスアプリケーションを指すように Salesforce クラウドサービスを設定します。
 
 >[!NOTE]
 >
->Salesforce に無料の開発者アカウントを作成できます。
+>Salesforce で無料の開発者アカウントを作成できます。
 
-AEM を Salesforce と連携するよう設定するには、次の手順を実行します。
+Salesforce と統合するAEMを設定するには：
 
 1. AEM で「**クラウドサービス**」に移動します。「サードパーティのサービス」で、「**Salesforce**」の「**今すぐ設定**」をクリックします。
 
    ![chlimage_1-84](assets/chlimage_1-84.png)
 
-1. 新しい設定（例：**developer**）を作成します。
+1. 新しい設定を作成します。例： **開発者**.
 
    >[!NOTE]
    >
-   >新しい設定は、新しいページ（**http://localhost:4502/etc/cloudservices/salesforce/developer.html**）にリダイレクトします。これは、Salesforce でリモートアクセスアプリケーションを作成するときに「Callback URL」で指定する必要がある値とまったく同じ値です。これらの値が一致しなければなりません。
+   >新しい設定は、新しいページにリダイレクトされます。 **http://localhost:4502/etc/cloudservices/salesforce/developer.html**. これは、Salesforce でリモートアクセスアプリケーションを作成する際にコールバック URL で指定する必要がある値とまったく同じです。 これらの値が一致しなければなりません。
 
-1. Salesforce アカウントにログインします ( ログインしていない場合は、 [https://developer.force.com](https://developer.force.com).)
-1. Salesforce で、に移動します。 **作成** > **アプリ** 行く **接続済みアプリ** ( 以前のバージョンの salesforce では、ワークフローは **デプロイ** > **リモートアクセス**) をクリックします。
+1. Salesforce アカウントにログインします（アカウントがない場合は [https://developer.force.com](https://developer.force.com) で作成します）。
+1. Salesforce で、**Create**／**Apps** に移動して、「**Connected Apps**」を表示します（以前のバージョンの Salesforce では **Deploy**／**Remote Access**）。
 1. 「**New**」をクリックして、AEM と Salesforce を接続します。
 
    ![chlimage_1-85](assets/chlimage_1-85.png)
 
-1. 「**Connected App Name**」、「**API Name**」および「**Contact Email**」を入力します。「**Enable OAuth Settings**」チェックボックスをオンにして、「**Callback URL**」を入力し、OAuth 範囲（フルアクセスなど）を追加します。コールバック URL は次のようになります。 `http://localhost:4502/etc/cloudservices/salesforce/developer.html`
+1. 次を入力します。 **接続されたアプリ名**, **API 名**、および **連絡先メール**. を選択します。 **OAuth 設定を有効にする** チェックボックスに **コールバック URL** OAuth 範囲（フルアクセスなど）を追加します。 コールバック URL は以下のようになります。`http://localhost:4502/etc/cloudservices/salesforce/developer.html`
 
    設定に合わせてサーバー名／ポート番号およびページ名を変更します。
 
@@ -72,64 +72,64 @@ AEM を Salesforce と連携するよう設定するには、次の手順を実�
 
    >[!NOTE]
    >
-   >Salesforce でリモートアクセスアプリケーションがアクティベートされるまで、数分（最大 15 分）待たなければならないことがあります。
+   >Salesforce のリモートアクセスアプリケーションがアクティブ化されるまで、数分（最大 15 分）待つ必要が生じる場合があります。
 
-1. AEM で「**クラウドサービス**」に移動し、前の手順で作成した Salesforce 設定（例：**developer**）に移動します。「**編集**」をクリックし、salesforce.com から顧客鍵と顧客秘密鍵を入力します。
+1. AEMで、に移動します。 **Cloud Services** 前に作成した salesforce 設定（例： ）に移動します。 **開発者**) をクリックします。 クリック **編集** salesforce.com から顧客キーと顧客秘密鍵を入力します。
 
    ![chlimage_1-23](assets/chlimage_1-23.jpeg)
 
-   | ログイン URL | Salesforce の認証エンドポイントです。この値はあらかじめ設定されており、ほとんどの場合に役に立ちます。 |
+   | ログイン URL | これは Salesforce 認証エンドポイントです。 この値は事前入力されており、ほとんどの場合に役立ちます。 |
    |---|---|
-   | 顧客鍵 | salesforce.com のリモートアクセスアプリケーション登録ページから取得した値を入力します。 |
-   | 顧客秘密鍵 | salesforce.com のリモートアクセスアプリケーション登録ページから取得した値を入力します。 |
+   | 顧客キー | salesforce.com のリモートアクセスアプリケーション登録ページから取得した値を入力します |
+   | 顧客秘密鍵 | salesforce.com のリモートアクセスアプリケーション登録ページから取得した値を入力します |
 
-1. 「**Salesforce に接続**」をクリックして接続します。Salesforce から、この環境が Salesforce に接続することを許可するように求められます。
+1. クリック **Salesforce に連携** 接続するには Salesforce は、設定から Salesforce への接続を許可するように要求します。
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
    AEM に、正常に接続されたことを示す確認ダイアログが表示されます。
 
-1. Web サイトのルートページに移動して、「**ページプロパティ**」をクリックします。次に、 **Cloud Services** とを追加します。 **Salesforce** 正しい設定（例： ）を選択します。 **開発者**) をクリックします。
+1. Web サイトのルートページに移動して、「**ページプロパティ**」をクリックします。「**クラウドサービス**」を選択し、「**Salesforce**」を追加して、正しい設定（例：**developer**）を選択します。
 
    ![chlimage_1-89](assets/chlimage_1-89.png)
 
-   これで、リード情報を Salesforce に送信するワークフローモデルを使用したり、Salesforce のデータにアクセスするコンポーネントを作成できるようになりました。
+   これで、ワークフローモデルを使用して、リードを Salesforce に投稿し、Salesforce のデータにアクセスするコンポーネントを作成できます。
 
-## AEM ユーザーを Salesforce のリードとして書き出し {#exporting-aem-users-as-salesforce-leads}
+## AEMユーザーを Salesforce リードとしてエクスポート中 {#exporting-aem-users-as-salesforce-leads}
 
-AEM ユーザーを Salesforce のリードとして書き出す場合は、リードを Salesforce に送信するようにワークフローを設定する必要があります。
+AEMユーザーを Salesforce のリードとしてエクスポートする場合は、リードを Salesforce に投稿するようにワークフローを設定する必要があります。
 
-AEM ユーザーを Salesforce のリードとして書き出すには、次の手順を実行します。
+AEMユーザーを Salesforce リードとしてエクスポートするには：
 
-1. Salesforce ワークフロー ( ) に移動します。 `http://localhost:4502/workflow` ワークフローを右クリック **Salesforce.com エクスポート** をクリックし、 **開始**.
+1. `http://localhost:4502/workflow` で、「**Salesforce.com でのエクスポート**」ワークフローを右クリックし、「**開始**」をクリックして、この Salesforce ワークフローに移動します。
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. リードとして作成する AEM ユーザーをこのワークフローの「**ペイロード**」として選択します（ホーム／ユーザー）。**givenName**、**familyName** などの情報を格納しているユーザーのプロファイルノードを選択してください。これらの情報は、Salesforce のリードの **FirstName** フィールドと **LastName** フィールドにマッピングされます。
+1. リードとして作成するAEMユーザーを **ペイロード** このワークフロー（ホーム/ユーザー）の場合。 ユーザーのプロファイルノードは、次のような情報が含まれているので、必ず選択してください。 **givenName**, **familyName**&#x200B;など。Salesforce リードの **名** および **姓** フィールド。
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
    >[!NOTE]
    >
-   >このワークフローを開始する前に、必須フィールドを設定します。AEM のリードノードには、Salesforce に公開する前に設定しておく必要がある必須フィールドがいくつかあります。以下が該当します。 **givenName**, **familyName**, **会社**&#x200B;および **電子メール**. AEM ユーザーと Salesforce のリードのマッピングの詳細なリストは、[AEM ユーザーと Salesforce のリードのマッピング設定](#mapping-configuration-between-aem-user-and-salesforce-lead)を参照してください。
+   >このワークフローを開始する前に、必須フィールドを設定します。AEM のリードノードには、Salesforce に公開する前に設定しておく必要がある必須フィールドがいくつかあります。必須フィールドは、**givenName**、**familyName**、**company** および **email** です。AEM ユーザーと Salesforce のリードのマッピングの詳細なリストは、[AEM ユーザーと Salesforce のリードのマッピング設定](#mapping-configuration-between-aem-user-and-salesforce-lead)を参照してください。
 
-1. 「**OK**」をクリックします。ユーザー情報が salesforce.com に書き出されます。書き出されたユーザー情報は、salesforce.com で確認できます。
+1. 「**OK**」をクリックします。ユーザ情報が salesforce.com にエクスポートされます。 salesforce.com で確認できます。
 
    >[!NOTE]
    >
-   >リードが読み込まれたかどうかがエラーログに記録されます。詳細については、エラーログを確認してください。
+   >エラーログに、リードがインポートされたかどうかが示されます。 詳しくは、エラーログを確認してください。
 
-### Salesforce.com での書き出しワークフローの設定 {#configuring-the-salesforce-com-export-workflow}
+### Salesforce.com 書き出しワークフローの設定 {#configuring-the-salesforce-com-export-workflow}
 
-正しい Salesforce.com の設定に合わせたり、その他の変更をおこなうために、Salesforce.com での書き出しワークフローを設定しなければならないことがあります。
+正しい Salesforce.com 設定に合わせたり、他の変更を行うには、Salesforce.com 書き出しワークフローを設定する必要がある場合があります。
 
-Salesforce.com での書き出しワークフローを設定するには、次の手順を実行します。
+Salesforce.com の書き出しワークフローを設定するには：
 
 1. `http://localhost:4502/cf#/etc/workflow/models/salesforce-com-export.html.` に移動します。
 
    ![chlimage_1-24](assets/chlimage_1-24.jpeg)
 
-1. Salesforce.com の書き出しステップを開き、 **引数** 」タブをクリックし、正しい設定を選択して、 **OK**. さらに、Salesforce で削除されたリードをワークフローで再作成する場合は、このチェックボックスをオンにします。
+1. 「Salesforce.com でのエクスポート」ステップを開き、「**引数**」タブを選択し、正しい設定を選択して「**OK**」をクリックします。さらに、Salesforce で削除されたリードをワークフローで再作成する場合は、このチェックボックスをオンにします。
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
@@ -139,10 +139,10 @@ Salesforce.com での書き出しワークフローを設定するには、次�
 
 ### AEM ユーザーと Salesforce のリードのマッピング設定 {#mapping-configuration-between-aem-user-and-salesforce-lead}
 
-AEMユーザーと Salesforce リードの間の現在のマッピング設定を表示または編集するには、設定マネージャを開きます。 `https://<hostname>:<port>/system/console/configMgr` およびを検索します。 **Salesforce リードマッピング設定**.
+AEM ユーザーと Salesforce リードの現在のマッピング設定を表示または編集するには、Configuration Manager（`https://<hostname>:<port>/system/console/configMgr`）を開いて「**Salesforce Lead Mapping Configuration**」を検索します。
 
-1. 「 **Web コンソール** または直接 `https://<hostname>:<port>/system/console/configMgr.`
-1. を検索 **Salesforce リードマッピング設定**.
+1. 「**Web コンソール**」をクリックするか、直接 `https://<hostname>:<port>/system/console/configMgr.` にアクセスして Configuration Manager を開きます。
+1. 「**Salesforce Lead Mapping Configuration**」を検索します。
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
@@ -150,23 +150,23 @@ AEMユーザーと Salesforce リードの間の現在のマッピング設定�
 
 ## Salesforce ClientContext Store の設定 {#configuring-salesforce-client-context-store}
 
-Salesforce ClientContext Store には、AEM で既に使用可能な情報ではなく、現在ログインしているユーザーに関する追加情報が表示されます。この追加情報は、ユーザーと Salesforce の接続に基づいて、Salesforce から取得されます。
+Salesforce クライアントコンテキストストアには、AEM内で既に利用可能な情報よりも、現在ログインしているユーザーに関する追加情報が表示されます。 ユーザーと Salesforce の連携に応じて、この追加情報を Salesforce から取り込みます。
 
-この情報を取得するには、次の設定をおこなう必要があります。
+これをおこなうには、次の設定をおこなう必要があります。
 
-1. Salesforce Connect コンポーネントを使用して、AEM ユーザーと Salesforce ID をリンクします。
-1. Salesforce プロフィールデータを ClientContext ページに追加して、表示するプロパティを設定します。
-1. （オプション）Salesforce ClientContext Store のデータを使用するセグメントを作成します。
+1. Salesforce Connect コンポーネントを使用して、AEMユーザーを Salesforce ID にリンクします。
+1. Salesforce プロファイルデータを ClientContext ページに追加し、表示するプロパティを設定します。
+1. （オプション）Salesforce Client Context Store のデータを使用するセグメントを作成します。
 
-### AEM ユーザーと Salesforce ID のリンク {#linking-an-aem-user-with-a-salesforce-id}
+### AEMユーザーと Salesforce ID のリンク {#linking-an-aem-user-with-a-salesforce-id}
 
-AEM ユーザーを ClientContext に読み込むには、AEM ユーザーと Salesforce ID をマッピングする必要があります。実際のシナリオでは、検証済みの既知のユーザーデータに基づいてリンクをおこないます。デモンストレーションのために、この手順では **Salesforce Connect** コンポーネントを使用します。
+ClientContext に読み込むには、AEMユーザーを Salesforce ID にマッピングする必要があります。 実際のシナリオでは、既知のユーザーデータに基づいてリンクし、検証をおこないます。 デモ目的で、この手順では、 **Salesforce Connect** コンポーネント。
 
-1. AEM で Web サイトに移動してログインし、サイドキックから **Salesforce Connect** コンポーネントをドラッグアンドドロップします。
+1. AEMで Web サイトに移動し、ログインして、 **Salesforce Connect** サイドキックからコンポーネントを選択します。
 
    >[!NOTE]
    >
-   >**Salesforce Connect** コンポーネントを使用できない場合は、**デザイン**&#x200B;ビューに切り替えてこのコンポーネントを選択し、**編集**&#x200B;ビューで使用できるようにします。
+   >この **Salesforce Connect** コンポーネントを使用できません。次に移動します。 **デザイン** 表示して選択し、で使用できるようにします。 **編集** 表示
 
    ![chlimage_1-25](assets/chlimage_1-25.jpeg)
 
@@ -176,9 +176,9 @@ AEM ユーザーを ClientContext に読み込むには、AEM ユーザーと Sa
 
    >[!NOTE]
    >
-   >このコンポーネントはデモンストレーション専用です。実際のシナリオでは、ユーザーとリードをリンクまたは照合する別のプロセスがあります。
+   >このコンポーネントは、デモ目的でのみ使用します。 実際のシナリオでは、ユーザーをリードとリンク/マッチングする別のプロセスが存在します。
 
-1. コンポーネントをページにドラッグしたら、開いて設定します。設定、連絡先のタイプ、Salesforce のリードまたは連絡先を選択して、「**OK**」をクリックします。
+1. ページ上にコンポーネントをドラッグした後、開いて設定します。 設定、連絡先のタイプ、Salesforce のリードまたは連絡先を選択し、 **OK**.
 
    ![chlimage_1-96](assets/chlimage_1-96.png)
 
@@ -186,11 +186,11 @@ AEM ユーザーを ClientContext に読み込むには、AEM ユーザーと Sa
 
    ![chlimage_1-97](assets/chlimage_1-97.png)
 
-### Salesforce データの ClientContext への追加 {#adding-salesforce-data-to-client-context}
+### ClientContext への Salesforce データの追加 {#adding-salesforce-data-to-client-context}
 
-Salesforce のユーザーデータを ClientContext に読み込んで、パーソナライゼーションに使用できます。
+ClientContext で Salesforce からユーザーデータを読み込み、パーソナライゼーションに使用できます。
 
-1. 拡張する ClientContext を開くには、次のように移動します。 `http://localhost:4502/etc/clientcontext/default/content.html.`
+1. 例えば `http://localhost:4502/etc/clientcontext/default/content.html.` に移動して、拡張したいクライアントコンテキストを開きます。
 
    ![chlimage_1-26](assets/chlimage_1-26.jpeg)
 
@@ -198,7 +198,7 @@ Salesforce のユーザーデータを ClientContext に読み込んで、パー
 
    ![chlimage_1-27](assets/chlimage_1-27.jpeg)
 
-1. コンポーネントをダブルクリックして開きます。「**項目を追加**」を選択し、ドロップダウンリストからプロパティを選択します。必要なプロパティを追加して、「**OK**」を選択します。
+1. コンポーネントをダブルクリックして開きます。 選択 **項目を追加** をクリックし、ドロップダウンリストからプロパティを選択します。 必要な数のプロパティを追加して、「 」を選択します。 **OK**.
 
    ![chlimage_1-98](assets/chlimage_1-98.png)
 
@@ -206,28 +206,28 @@ Salesforce のユーザーデータを ClientContext に読み込んで、パー
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-### Salesforce ClientContext Store のデータを使用するセグメントの作成 {#building-a-segment-using-data-from-salesforce-client-context-store}
+### Salesforce Client Context Store のデータを使用したセグメントの作成 {#building-a-segment-using-data-from-salesforce-client-context-store}
 
-Salesforce ClientContext Store のデータを使用するセグメントを作成できます。次の手順を実行します。
+Salesforce Client Context Store のデータを使用するセグメントを構築できます。 次の手順を実行します。
 
-1. AEMのセグメントに移動するには、 **ツール** > **セグメント化** または [http://localhost:4502/miscadmin#/etc/segmentation](http://localhost:4502/miscadmin#/etc/segmentation).
-1. Salesforce のデータを含めるようにセグメントを作成または更新します。詳しくは、[セグメント化](/help/sites-administering/campaign-segmentation.md)を参照してください。
+1. **ツール**／**セグメント化**&#x200B;に移動するか、[http://localhost:4502/miscadmin#/etc/segmentation](http://localhost:4502/miscadmin#/etc/segmentation) に移動して、AEM のセグメント化に移動します。
+1. セグメントを作成または更新して、Salesforce のデータを含めます。 詳しくは、 [セグメント化](/help/sites-administering/campaign-segmentation.md).
 
 ## リードの検索 {#searching-leads}
 
-AEM には、特定の条件に従って Salesforce のリードを検索する、サンプルの検索コンポーネントが付属しています。このコンポーネントは、Salesforce REST API を使用して Salesforce オブジェクトを検索する方法を説明するものです。ページを Salesforce 設定にリンクして、salesforce.com への呼び出しをトリガーする必要があります。
+AEMには、指定した条件に従って Salesforce 内のリードを検索する、サンプルの検索コンポーネントが付属しています。 このコンポーネントでは、Salesforce REST API を使用して Salesforce オブジェクトを検索する方法を示します。 salesforce.com への呼び出しをトリガーするには、ページを Salesforce 設定にリンクする必要があります。
 
 >[!NOTE]
 >
->これは、Salesforce REST API を使用して Salesforce オブジェクトをクエリする方法を説明するサンプルコンポーネントです。これをサンプルとして使用し、ニーズに基づいてさらに複雑なコンポーネントを作成します。
+>これは、Salesforce REST API を使用して Salesforce オブジェクトに対してクエリを実行する方法を示すサンプルコンポーネントです。 これを例として使用し、ニーズに基づいて、より複雑なコンポーネントを作成します。
 
-このコンポーネントを使用するには、次の手順を実行します。
+このコンポーネントを使用するには：
 
-1. この設定を使用するページに移動します。ページプロパティを開き、「**クラウドサービス」を選択します。**「**サービスを追加**」をクリックし、「**Salesforce**」および適切な設定を選択して、「**OK**」をクリックします。
+1. この設定を使用するページに移動します。 ページのプロパティを開き、「 」を選択します。 **Cloud Services。** クリック **サービスを追加** を選択し、 **Salesforce** をクリックし、適切な設定を行って、 **OK**.
 
    ![chlimage_1-28](assets/chlimage_1-28.jpeg)
 
-1. Salesforce 検索コンポーネントをページにドラッグします（コンポーネントは有効になっているものとします。コンポーネントを有効にするには、デザインモードに切り替えて、適切な領域に追加します）。
+1. Salesforce 検索コンポーネントを（有効になっている場合）ページにドラッグします。 有効にするには、デザインモードに移動し、適切な領域に追加します。
 
    ![chlimage_1-29](assets/chlimage_1-29.jpeg)
 

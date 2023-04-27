@@ -1,7 +1,7 @@
 ---
 title: 受け入れとサインオフ
 seo-title: Acceptance and Sign-off
-description: 受け入れテストは、プロジェクトが顧客の要件を満たし、顧客がプロジェクトを承認することを検証するために使用される、テストの特別なカテゴリです。
+description: 受け入れテストは、プロジェクトが顧客の要件を満たし、顧客がプロジェクトを受け入れることを検証するために使用される、特別なカテゴリのテストです
 seo-description: Acceptance Tests are a special category of test used to verify that the project fulfils the customer's requirements and that the customer accepts the project
 uuid: 6bdd2a99-d141-43ef-9102-99e65aba02d3
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: e6dd95d2-9444-40e6-a83a-2c4f9e4cfcef
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '107'
-ht-degree: 95%
+ht-degree: 62%
 
 ---
 
@@ -22,11 +22,11 @@ ht-degree: 95%
 これまでに述べたように、[受け入れテスト](/help/sites-developing/planning.md)は、次の点を検証するための特別なカテゴリのテストです。
 
 * プロジェクトは顧客の要件を満たします。
-* 顧客がプロジェクトを承認する。
+* 顧客がプロジェクトを承認します。
 
 これらは、顧客およびプロジェクトマネージャーが定義する必要があります。最終的な請求に関わることが多いので、特に重要です。
 
-この理由から、次の対応が必要です。
+この理由から、次の条件を満たす必要があります。
 
 * 可能な限り早く定義します。
 * 必要に応じて更新します。

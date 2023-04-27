@@ -14,15 +14,15 @@ exl-id: 4ecb6e10-1d6b-4065-917f-e86215687e29
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '963'
-ht-degree: 98%
+ht-degree: 80%
 
 ---
 
 # テンプレート{#templates}
 
-テンプレートは、AEM の様々な場面で使用されます。
+テンプレートは、AEMの様々なポイントで使用されます。
 
-* [ページの作成時にテンプレートを選択](#templates-pages)します。このテンプレートは、新しいページのベースとして使用されます。テンプレートは、作成されるページの構造、初期コンテンツおよび使用可能な[コンポーネント](/help/sites-authoring/default-components.md)（デザインプロパティ）を定義します。
+* 条件 [テンプレートを選択する必要があるページの作成](#templates-pages);これは、新しいページのベースとして使用されます。 テンプレートは、結果ページの構造、初期コンテンツ、および [コンポーネント](/help/sites-authoring/default-components.md) 使用可能（デザインプロパティ）
 
 * [コンテンツフラグメントの作成時にテンプレートを選択](#templates-content-fragments)します。このテンプレートは、構造、初期要素およびバリエーションを定義します。
 
@@ -33,9 +33,9 @@ ht-degree: 98%
 * [コンテンツフラグメントテンプレート](/help/sites-developing/content-fragment-templates.md)
 * [アダプティブテンプレートレンダリング](/help/sites-developing/templates-adaptive-rendering.md)
 
-## テンプレート - ページ {#templates-pages}
+## テンプレート — ページ {#templates-pages}
 
-現在、AEM には、ページ作成用として 2 つの基本的なタイプのテンプレートが用意されています。
+AEMには、ページを作成するための 2 つの基本的なタイプのテンプレートが用意されています。
 
 >[!NOTE]
 >
@@ -45,11 +45,11 @@ ht-degree: 98%
 
 編集可能テンプレートは、AEMを使用した開発のベストプラクティスと考えられるようになりました。
 
-編集可能テンプレートのメリットは次のとおりです。
+編集可能テンプレートの利点は次のとおりです。
 
-* 作成者が[作成](/help/sites-authoring/templates.md#creating-a-new-template-template-author)および[編集](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)できます。
+* 可能 [作成済み](/help/sites-authoring/templates.md#creating-a-new-template-template-author) および [編集済み](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) 作成者によって
 
-* テンプレートを使用して作成される任意のページで、以下の項目を定義できます。
+* テンプレートで作成されたすべてのページで以下を定義できるようにが導入されました。
 
    * 構造
    * 初期コンテンツ
@@ -70,8 +70,8 @@ ht-degree: 98%
 
 * 開発者が定義および設定する必要があります。
 * これは AEM のオリジナルのテンプレートシステムで、多くのバージョンで使用されています。
-* 作成されるページと同じ構造のノード階層を含んでいますが、実際のコンテンツはありません。
-* 新しいページはテンプレートをコピーして作成されるので、動的接続は存在しません。
+* 静的テンプレートは、作成するページと同じ構造を持ち、実際のコンテンツを持たないノードの階層です。
+* 新しいページを作成するためにコピーされます。その後、動的接続は存在しません。
 * デザインプロパティを保持するには、[デザインモード](/help/sites-authoring/default-components-designmode.md)を使用します。
 * `/apps` に保存されます
 * 詳しくは、[静的テンプレート](/help/sites-developing/page-templates-static.md)を参照してください。
@@ -138,6 +138,6 @@ ht-degree: 98%
 
 テンプレート階層に関する制約などをさらに追加する場合は、テンプレートの `allowedParents/allowedChildren` プロパティを使用できます。その後、テンプレート T から作成されたページが、テンプレート T から作成されたページと親子である必要があることを明示的に指定できます。
 
-## テンプレート - コンテンツフラグメント {#templates-content-fragments}
+## テンプレート — コンテンツフラグメント {#templates-content-fragments}
 
-詳しくは、[コンテンツフラグメントテンプレート](/help/sites-developing/content-fragment-templates.md)を参照してください。
+詳しくは、 [コンテンツフラグメントテンプレート](/help/sites-developing/content-fragment-templates.md) を参照してください。

@@ -13,24 +13,24 @@ exl-id: 997040d4-cf8f-4240-8423-a98d562aae02
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '196'
-ht-degree: 55%
+ht-degree: 76%
 
 ---
 
-# UI の選択{#selecting-your-ui}
+# UI の選択 {#selecting-your-ui}
 
-タッチ操作対応 UI はクラシック UI より優先されるので、クラシック UI を使用し続けるには、AEMインスタンスのユーザーまたは管理者がアクティブな決定を下す必要があります。 クラシック UI はメンテナンスされなくなったので、オーサリングユーザーがクラシック UI からタッチ操作対応 UI の同等の UI に切り替えるだけで済みません。
+タッチ操作向け UI はクラシック UI より優先されるので、クラシック UI の使用を続行するには、AEM インスタンスのユーザーまたは管理者が自発的に決定する必要があります。クラシック UI のサポートは既に終了しています。そのため、オーサリングユーザーはクラシック UI からタッチ対応 UI の同等の機能に簡単に切り替えることはできません。
 
-オーサリングユーザーが使用しやすいように、タッチ対応 UI は必要に応じてクラシック UI に切り替えることができます。詳しくは、標準オーサリングのドキュメントの [UI の選択](/help/sites-authoring/select-ui.md)を参照してください。
+オーサリングユーザーが使用しやすいように、タッチ対応 UI は必要に応じてクラシック UI に切り替えることができます。詳しくは、 [UI の選択](/help/sites-authoring/select-ui.md) 詳しくは、標準のオーサリングドキュメントを参照してください。
 
 >[!NOTE]
 >
 >以前のバージョンからアップグレードされたインスタンスでは、ページオーサリング用にクラシック UI が保持されます。
 >
->アップグレード後、ページオーサリングは自動的にタッチ操作対応 UI に切り替わりませんが、次を使用して設定できます： [OSGi 設定](/help/sites-deploying/configuring-osgi.md) の **WCM オーサリング UI モードサービス** ( `AuthoringUIMode` サービス )。 [エディターの UI 上書き](#uioverridesfortheeditor)を参照してください。
+>アップグレード後、ページオーサリングが自動的にタッチ対応 UI に切り替わることはありませんが、**WCM オーサリング UI モードサービス**（`AuthoringUIMode` サービス）の [OSGi 設定](/help/sites-deploying/configuring-osgi.md)を使用すると、その切り替えを設定できます。[エディターの UI 上書き](#uioverridesfortheeditor)を参照してください。
 
-## ユーザーのインスタンス用のデフォルト UI の設定 {#configuring-the-default-ui-for-your-instance}
+## インスタンスのデフォルト UI の設定 {#configuring-the-default-ui-for-your-instance}
 
-システム管理者は、[ルートマッピング](/help/sites-deploying/osgi-configuration-settings.md#daycqrootmapping)を使用して、起動時およびログイン時に表示される UI を設定できます。
+システム管理者は、起動時とログイン時に表示される UI を、 [ルートマッピング](/help/sites-deploying/osgi-configuration-settings.md#daycqrootmapping).
 
-この設定はユーザーデフォルトまたはセッション設定によって上書きできます。
+この設定は、ユーザーの既定値またはセッション設定で上書きできます。

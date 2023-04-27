@@ -1,7 +1,7 @@
 ---
 title: SharePoint コネクター
 seo-title: SharePoint Connector
-description: Microsoft SharePoint 2010 および Microsoft SharePoint 2013 用 Day JCR コネクター（バージョン 4.0）
+description: Microsoft SharePoint 2010 およびMicrosoft SharePoint 2013、バージョン 4.0 用の Day JCR Connector。
 seo-description: Learn about the Sharepoint Connector in AEM.
 uuid: 2f3b90f9-ec6b-4808-bbd4-20e67b6a7573
 contentOwner: User
@@ -13,25 +13,25 @@ exl-id: cdb45bec-81d7-4356-ac55-5b6a40b35433
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1601'
-ht-degree: 92%
+ht-degree: 48%
 
 ---
 
 # SharePoint コネクター{#sharepoint-connector}
 
-Microsoft SharePoint 2010 および Microsoft SharePoint 2013 用 Day JCR コネクター（バージョン 4.0）
+Microsoft SharePoint 2010 およびMicrosoft SharePoint 2013、バージョン 4.0 用の Day JCR Connector。
 
 この記事では、Microsoft SharePoint 2010 および Microsoft SharePoint 2013 バージョン 4.0用の Adobe JCR コネクタの詳細をまとめています。
 
-SharePoint コネクターでは次の基本機能がサポートされています。
+SharePointコネクタは、次の基本機能をサポートしています。
 
-* SharePoint からのコンテンツおよびメタデータの読み取り.
-* ネイティブな SharePoint 認証および承認を適用することによる、アクセスされるコンテンツの SharePoint セキュリティ設定の確認
-* コンテンツファインダーを使用したコンテンツ統合
-* 外部リソースなどの AEM コンポーネントを使用した SharePoint 画像およびビデオの表示
-* SharePoint と AEM Assets の同期
+* SharePoint からのコンテンツおよびメタデータの読み取り。
+* ネイティブのSharePoint認証および承認を適用して、アクセスされたコンテンツのSharePointセキュリティ設定を確認する
+* コンテンツファインダーを使用したコンテンツの統合
+* 外部リソースなどのAEMコンポーネントを使用したSharePointの画像およびビデオの表示
+* SharePointとAEM Assetsの同期
 
-これらの機能はすべて、ネイティブな SharePoint Web サービスを SharePoint のコンテンツおよびサービスへのインターフェイスとして使用して実装されています。
+すべての機能は、SharePointのコンテンツおよびサービスへのインターフェイスとしてネイティブのSharePoint Web サービスを使用して実装されます。
 
 >[!NOTE]
 >
@@ -41,27 +41,27 @@ SharePoint コネクターでは次の基本機能がサポートされていま
 
 ## 概要 {#getting-started}
 
-コネクターを導入する際には、次の作業をおこなってください。
+コネクタの使用を開始するには、次の手順を実行します。
 
 * Java 7 以降がインストールされていることを確認します。
-* パッケージ共有からコネクターパッケージ配布ファイルをダウンロードします。
-* *cq-quickstart-6.4.0.jar* ファイルが格納されたディレクトリに有効な *license.properties* ファイルをコピーします。
+* パッケージ共有からコネクタパッケージ配布ファイルをダウンロードします。
+* 有効な *license.properties* ファイルを、 *cq-quickstart-6.4.0.jar* ファイル。
 
-* .jar ファイルをダブルクリックまたはタップして AEM を起動するか、コマンドラインから AEM を起動します。
-* パッケージマネージャーからコネクターパッケージをインストールします。
-* コネクターオプションを設定します。
+* .jar ファイルをダブルクリックまたはタップしてAEMを起動するか、コマンドラインから起動します。
+* パッケージマネージャーからコネクタパッケージをインストールします。
+* コネクタオプションを設定します。
 
-## SharePoint コネクターのインストール {#installing-sharepoint-connector}
+## SharePointコネクタのインストール {#installing-sharepoint-connector}
 
-このコネクターは、インストールが容易なコンテンツパッケージとして提供されています。パッケージマネージャーを使用してパッケージをインストールし、SharePointサーバー URL を設定します\
+コネクタは、容易なインストールを容易にするコンテンツパッケージです。 パッケージマネージャーを使用してパッケージをインストールし、SharePointサーバー URL を設定します\
 およびその他の設定オプションを使用できます。 SharePoint コンテンツは AEM リポジトリに格納されています。
 
 ### インストール要件 {#installation-requirements}
 
-このコネクターを使用するための要件は次のとおりです。
+コネクタには、次が必要です。
 
 * Java Runtime Environment 1.7 以降
-* ネットワークから SharePoint Web サービスを使用できること
+* SharePoint Web サービスはネットワークを通じて利用可能
 * SharePoint サーバーの URL
 * CRX および SharePoint リポジトリに対するユーザー資格情報と権限
 * [サポートされているプラットフォーム](#supported-platforms)
@@ -70,18 +70,18 @@ SharePointコネクタはからのダウンロードに使用できます。 [�
 
 ### サポートされているプラットフォーム {#supported-platforms}
 
-このコネクターでは次のプラットフォームがサポートされています。
+コネクタでは、次の機能をサポートしています。
 
-* AEM バージョン：
+* AEMバージョン：
 
-   * AEM 6.4、6.3
+   * AEM 6.4, 6.3
 
-* Microsoft SharePoint バージョン：
+* Microsoft SharePointバージョン：
 
-   * Microsoft Office SharePoint Server（MOSS）2010
-   * Microsoft Office SharePoint Server（MOSS）2013
+   * Microsoft Office SharePoint Server (MOSS) 2010
+   * Microsoft Office SharePoint Server (MOSS) 2013
 
-* コネクターのカスタムデプロイメント（OEM、特殊要件、認証方式のカスタマイズ）のサポートが必要な場合は、製品を使用している地域のアドビオフィスまでお問い合わせください。
+* コネクタのカスタム展開（OEM、特別な要件、カスタマイズされた認証方法）のサポートが必要な場合は、地域のAdobeオフィスにお問い合わせください。
 
 >[!NOTE]
 >
@@ -89,16 +89,16 @@ SharePointコネクタはからのダウンロードに使用できます。 [�
 
 ### 標準インストール {#standard-installation}
 
-AEM パッケージ共有は、製品の機能、例およびホットフィックスを配布するために使用されています。詳しくは、 [パッケージ共有ドキュメント](/help/sites-administering/package-manager.md#package-share).
+AEM Package Share は、製品の機能、例、ホットフィックスの配布に使用されます。 詳しくは、 [パッケージ共有ドキュメント](/help/sites-administering/package-manager.md#package-share).
 
-AEMのようこそページでパッケージ共有にアクセスするには、をタップまたはクリックします。 **ツール** 次に、 **パッケージ共有**. 会社の電子メールアドレスを含む有効なAdobe IDが必要です。 また、アカウントへのログイン後に、パッケージ共有へのアクセスを申請してください。
+AEMのようこそページでパッケージ共有にアクセスするには、をタップまたはクリックします。 **ツール** 次に、 **パッケージ共有**. 会社の電子メールアドレスを含む有効なAdobe IDが必要です。 また、アカウントにログインした後で、パッケージ共有へのアクセスを申請します。
 
-#### AEM との統合 {#integrating-with-aem}
+#### AEMとの統合 {#integrating-with-aem}
 
-コネクターのコンテンツパッケージをインストールするには：
+コネクタコンテンツパッケージをインストールするには、以下を実行します。
 
-1. アドビサポートチケットを作成して、コネクターの機能パックを要求します。
-1. パッケージが使用可能になったらそれをダウンロードし、対象の AEM インスタンスでパッケージマネージャーを開きます。
+1. Adobeサポートチケットを開き、コネクタ featurepack をリクエストします。
+1. パッケージが使用可能になったら、そのパッケージをダウンロードし、AEMインスタンス用のパッケージマネージャーを開きます。
 1. パッケージ説明ページで&#x200B;**インストール**&#x200B;をタップまたはクリックします。
 1. **パッケージをインストール**&#x200B;ダイアログで、**インストール**&#x200B;をタップまたはクリックします。
 
@@ -110,25 +110,25 @@ AEMのようこそページでパッケージ共有にアクセスするには�
 
 SharePoint コネクターのインストール後、そのコネクター用にアプリケーションおよび SharePoint レイヤーを設定します。
 
-SharePoint リポジトリが JCR に準拠するように SharePoint サーバーの URL を設定します。追加のパラメーターを使用して、SharePoint サーバーとの接続を設定します。また、SharePoint コネクターでの認証を設定します。
+SharePoint リポジトリが JCR に準拠するように SharePoint サーバーの URL を設定します。追加のパラメーターを設定して、SharePointサーバーとの接続を設定できます。 さらに、SharePointコネクタで認証を設定します。
 
-### SharePoint サーバーとの接続の設定 {#configuring-the-connection-with-the-sharepoint-server}
+### SharePointサーバーとの接続の設定 {#configuring-the-connection-with-the-sharepoint-server}
 
 SharePoint サーバーの URL および高度なオプションを設定するには、次の手順を実行します。
 
 1. OSGi Management コンソール（[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）に移動します。
 1. **Day JCR Connector for Microsoft Sharepoint** バンドルを探します。
 1. 設定値を編集.
-1. 「**Workspaces**」の値として SharePoint サーバーの URL を設定します。
+1. SharePointサーバーの URL を **Workspaces**.
 1. 「**保存**」をタップまたはクリックします。
 
 ![chlimage_1-81](assets/chlimage_1-81.png)
 
-「Workspaces」および「Default Workspace Name」パラメーター：
+「Workspaces」および「デフォルトのワークスペース名」のパラメーター：
 
-コネクターによってデフォルトで公開される JCR ワークスペースは 1 つです。このワークスペースで公開される SharePoint サーバーは、「Sharepoint Server URL」設定パラメーターを使用して設定します。
+デフォルトでは、コネクタは単一の JCR ワークスペースを公開します。 このワークスペースで公開されるSharePointサーバーは、「Sharepoint Server URL」設定パラメーターを使用して設定されます。
 
- コネクターは複数のワークスペースに対して設定することもできます。この場合、各ワークスペースは、それによって公開されるそれぞれの SharePoint サーバーの URL に関連付けられます。ワークスペースを追加するには、「Workspaces」パラメーターにワークスペース定義を追加します。ワークスペース定義の形式は次のとおりです。\
+ コネクターは複数のワークスペースに対して設定することもできます。この場合、各ワークスペースは、ワークスペースを通じて公開される各SharePointサーバーの URL に関連付けられます。 ワークスペースを追加するには、Workspaces パラメーターにワークスペース定義を追加します。 ワークスペース定義の形式は次のとおりです。\
 `<name>`= `<url>` 条件\
 `<name>` は JCR ワークスペースの名前で、\
 `<url>` は、そのワークスペースのSharePointサーバーの URL です。
@@ -155,36 +155,36 @@ AEM でバンドルを許可リストに追加するには、次の手順を実�
 
 認証関連のパラメーターについて詳しくは、[認証](/help/sites-administering/sharepoint-connector.md#configuring-authentication)を参照してください。
 
-### SharePoint 設定の検証 {#verifying-the-sharepoint-setup}
+### SharePoint の設定を確認しています {#verifying-the-sharepoint-setup}
 
-コネクターを設定した後、次の点を検証してください。
+コネクタを設定したら、次の点を確認します。
 
-* SharePoint サーバーが実行されており、コネクターインスタンスから Web サービスにアクセスできること
-* SharePoint ユーザー資格情報が有効であり、ユーザーが必要な SharePoint 権限を持っていること
-* コネクターが適切にインストールおよび設定されていること
+* SharePointサーバーが実行され、Web サービスにコネクタインスタンスからアクセスできる
+* SharePointユーザーの資格情報は有効で、ユーザーに必要なSharePoint権限があります
+* コネクタが正しくインストールされ、設定されている
 
-### SharePoint サーバーとの DAM 同期の設定 {#configuring-dam-sync-with-the-sharepoint-server}
+### SharePointサーバーとの DAM 同期の設定 {#configuring-dam-sync-with-the-sharepoint-server}
 
-SharePoint Assets を AEM と同期するには、次の手順を実行します。
+SharePoint Assets をAEMと同期するには、次の手順を実行します。
 
 1. OSGi Management Console（[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）に移動します。
-1. 「Default DAMAssetSynchronization」サービスを探します。
+1. 「Default DAMAssetSynchronization」サービスを検索します。
 1. 設定値を編集.
-1. SharePoint サイトへのアクセス権を持つユーザーのユーザー名とそれに対応するパスワードを設定します。
+1. ユーザー名と、SharePointサイトへのアクセス権を持つユーザーに対応する「パスワード」を設定します。
 1. 「保存」をクリックします。
 
-DAM 同期サービスを有効にします（デフォルトでは無効になっています）。
+DAM 同期サービスを有効にします。このサービスはデフォルトで無効になっています。
 
 1. OSGi web コンソールのコンポーネント（[http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)）に移動します。
-1. 「com.day.cq.dam.jcrconnectors.impl.AssetSynchronizationService」を探します。
-1. 「Enable」をクリックします。
+1. 「com.day.cq.dam.jcrconnectors.impl.AssetSynchronizationService」を検索します。
+1. 「有効」をクリックします。
 
-オプションで、異なる同期サイクル間の同期遅延を設定できます。
+必要に応じて、異なる同期サイクル間の同期遅延を設定できます。
 
 1. OSGi Management Console（[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）に移動します。
-1. 「DAY CQ DAM JCR Connector Asset Synchronization Service」を探します。
+1. 「DAY CQ DAM JCR Connector Asset Synchronization Service」を検索します。
 1. 設定値を編集.
-1. 「Synchronization Period」（秒単位）の値を設定します。
+1. 同期期間の値を秒単位で設定します。
 1. 「保存」をクリックします。
 
 ### 認証の設定 {#configuring-authentication}
@@ -194,25 +194,25 @@ SharePoint ではクラシック認証方式と要求ベースの認証方式を
 * 基本
 * フォームベース
 
-特に、次の認証タイプを使用できます。
+特に、次の種類の認証を使用できます。
 
-* クラシック-基本
-* クラシック-フォームベース
-* 要求-基本
-* 要求-フォームベース
+* Classic-Basic
+* クラシック —Formsベース
+* 請求 — 基本
+* 請求 —Formsベース
 
 Microsoft SharePoint 2010 および Microsoft SharePoint 2013 のバージョン 4.0 用 AEM JCR Connector は、次のモードで動作する要求ベースの認証 (Microsoftが推奨 ) をサポートしています。
 
-* **基本／NTLM 認証**：コネクターでの最初の接続試行では、基本認証が使用されます。基本認証が使用できない場合は、NTLM ベースの認証に切り替えられます。
-* **フォームベースの認証**：SharePoint では、ユーザーがログインフォーム（通常は web ページ）に入力した資格情報に基づいてユーザーの検証が行われます。認証された要求にはシステムによってトークンが発行されます。このトークンには、後続要求で ID の再確立に使用されるキーが含まれています。
+* **基本/NTLM 認証**:コネクタは、まず基本認証を使用して接続を試みます。 使用できない場合は、NTLM ベースの認証に切り替わります。
+* **フォームベースの認証**：SharePoint では、ユーザーがログインフォーム（通常は web ページ）に入力した資格情報に基づいてユーザーの検証が行われます。システムは、後続の要求の ID を再確立するためのキーを含む認証済み要求に対してトークンを発行します。
 
-**フォームベースの認証の設定**
+**Formsベースの認証の設定**
 
 [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles) に移動します。
 
 1. OSGI／設定をクリックします。
-1. 「Day JCR Connector for Microsoft Sharepoint」を探します。
-1. 「Edit the configuration values」をクリックします。
+1. 「Day JCR Connector for Microsoft Sharepoint」を検索
+1. 「設定値を編集」をクリックします。
 1. 「Sharepoint Connection Factory」の値として「com.day.crx.spi.sharepoint.security.FormsBasedAuthenticationConnectionFactory」を設定します。
 1. 「**保存**」をクリックします。
 
@@ -220,15 +220,15 @@ Microsoft SharePoint 2010 および Microsoft SharePoint 2013 のバージョン
 
 1. [トークン認証を無効にします](#disable-token-authentication)。
 1. [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles) に移動します。
-1. OSGI／Configuration をクリックします。
-1. **Day JCR Connector for Microsoft Sharepoint** を探します。
+1. OSGI/Configuration をクリックします。
+1. を検索 **Day JCR Connector for Microsoft Sharepoint**.
 1. 「`Edit the configuration values`」をクリックします。
 1. 「Sharepoint Connection Factory」の値として「`com.day.crx.spi.sharepoint.security.WindowsAuthenticationConnectionFactory`」を設定します。
 1. 「**保存**」をクリックします。
 
 コネクターから SharePoint コンテンツにアクセスできるのは、AEM と SharePoint の両方で認証されたユーザーのみです。
 
-認証用のコネクター拡張を使用してカスタム認証モジュールを作成することもできます。例えば、AEM ユーザーによるアクセスを特定の SharePoint ユーザーにマッピングできます。SharePoint ユーザーに対応する AEM ユーザーを作成して（ユーザー名とパスワードが一致する必要があります）、コネクターインスタンスにマッピングされた SharePoint コンテンツを確認できるようにします。
+また、認証にコネクタ拡張機能を使用して、カスタム認証モジュールを作成することもできます。例えば、AEMユーザーによるアクセスを特定のSharePointユーザーにマッピングします。 SharePointユーザーに対応するAEMユーザー（ユーザー名とパスワードが一致する必要があります）を作成して、コネクタインスタンスにマッピングされたSharePointコンテンツを確認できるようにします。
 
 AEM でユーザーを作成するには、以下の手順に従います。
 
@@ -238,23 +238,23 @@ AEM でユーザーを作成するには、以下の手順に従います。
 1. 「ユーザー」をクリックします。
 1. クリック **ユーザーを作成**
 1. ユーザー ID(SharePointでアクセス権を持つユーザー名 ) を入力します
-1. 対応するパスワードを指定します。
-1. 緑色のチェックマークをクリックして、ユーザーを作成します。
+1. 対応するパスワードを入力
+1. 緑のチェックマークをクリックして、ユーザを作成します。
 
-admin グループにユーザーを追加するには：
+管理者グループにユーザーを追加するには：
 
-1. グループ管理に移動します。
+1. グループ管理に移動
 1. 「a」ノードをクリックします。
-1. 「administrators」をクリックします。
+1. 「管理者」をクリックします
 1. 上で作成したユーザー ID を前のテキストボックスに入力します。 **参照** ボタン
-1. 緑色のチェックマークをクリックして、admin グループにユーザーを追加します。
+1. 緑のチェックマークをクリックして、ユーザを管理グループに追加します。
 
 ### トークン認証の無効化 {#disable-token-authentication}
 
 1. パッケージ `basic auth` をダウンロードし、インストールします。`zip` をパッケージ共有から削除します。
 
 1. クイックスタートを閉じます。
-1. ファイル *\crx-quickstart\repository\repository.xml* を開きます。
+1. ファイルを開きます。 *\crx-quickstart\repository\repository.xml*.
 1. タグ `<LoginModule class="com.day.crx.core.CRXLoginModule"> ... </LoginModule>.` を検索
 1. ステップ 4 で示したタグ内に、タグ `<param name="disableTokenAuth" value="true"/>` を挿入します。
 1. xml ファイルを保存して閉じます。

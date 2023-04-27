@@ -1,7 +1,7 @@
 ---
 title: クラウド設定
 seo-title: Cloud Configuration
-description: On-Demand アプリをクラウド設定に関連付けることで、Adobe Experience Manager（AEM）は、双方向のリンクを確立し、Mobile On-Demand にホストされたプロジェクトと直接通信できます。このページでは、この機能について詳しく見ていきます。
+description: On-Demand アプリをクラウド設定に関連付けると、Adobe Experience Manager(AEM) は双方向リンクを確立することで、Mobile On-Demand がホストするプロジェクトと直接通信できます。 このページでは、この機能について詳しく見ていきます。
 seo-description: Associating an On-Demand App to a Cloud Configuration allows Adobe Experience Manager (AEM) to communicate directly with a Mobile On-Demand hosted project by establishing a two way link. Follow this page to learn more.
 uuid: f377f2af-864b-43df-9d42-4a5fd6cd70d5
 contentOwner: User
@@ -13,7 +13,7 @@ exl-id: eff852b0-99cd-4242-bac8-992ee10401e2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '408'
-ht-degree: 85%
+ht-degree: 8%
 
 ---
 
@@ -21,13 +21,13 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-On-Demand アプリをクラウド設定に関連付けることで、Adobe Experience Manager（AEM）は、双方向のリンクを確立し、Mobile On-Demand にホストされたプロジェクトと直接通信できます。アプリを Mobile On-Demand プロジェクトにリンクすることにより、記事、バナー、コレクションなどのコンテンツの作成を AEM 内で実行できるだけでなく、そのコンテンツを Mobile On-Demand に提供できます。
+On-Demand アプリをクラウド設定に関連付けると、Adobe Experience Manager(AEM) は双方向リンクを確立することで、Mobile On-Demand がホストするプロジェクトと直接通信できます。 アプリを Mobile On-Demand プロジェクトにリンクすることで、AEM内で記事、バナー、コレクションなどのコンテンツ作成を実行できるだけでなく、そのコンテンツを Mobile On-Demand に提供することができます。
 
-そこからコンテンツの公開、プレビュー、管理をおこなえます。また、既存の Mobile On-Demand コンテンツを AEM に読み込み、コンテンツの編集をおこなうこともできます。
+ここから、コンテンツの公開、プレビュー、管理が可能になります。 また、既存の Mobile On-Demand コンテンツをAEMに読み込み、コンテンツ編集を実行することもできます。
 
-## クラウド設定の実行 {#setting-up-cloud-configuration}
+## クラウド設定のセットアップ {#setting-up-cloud-configuration}
 
 >[!CAUTION]
 >
@@ -35,52 +35,52 @@ On-Demand アプリをクラウド設定に関連付けることで、Adobe Expe
 >
 >詳しくは、 [AEM Mobile On-demand Servicesの設定](/help/mobile/aem-mobile-setup.md) （管理の節）。
 
-Mobile On-Demand クラウドサービスを設定するには、アプリダッシュボードの&#x200B;**接続を管理**&#x200B;タイルの右上隅にある歯車をクリックします。
+Mobile On-DemandCloud Servicesを設定するには、 **接続を管理** タイルをアプリダッシュボードから削除します。
 
-アプリダッシュボードや、利用できるタイルについて理解している必要があります。詳しくは、[AEM Mobile アプリケーションダッシュボード](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
+アプリのダッシュボードと使用可能なタイルについて理解している必要があります。 詳しくは、 [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) を参照してください。
 
 ### クラウド設定へのリンクの設定 {#setting-up-link-to-cloud-configuration}
 
 >[!CAUTION]
 >
->On-Demand クライアントおよびクラウドを設定済みであることを確認します。
+>既存の On-Demand クライアントおよびクラウド設定があることを確認します。
 >
 >詳しくは、 [AEM Mobile On-demand Servicesの設定](/help/mobile/aem-mobile-setup.md) （管理の節）。
 
-以下に、クラウド設定へのリンクの設定手順について説明します。
+次の手順で、クラウド設定へのリンクを設定します。
 
-1. 「**モバイル**」で「**アプリ**」を選択し、カタログから Mobile On-Demand アプリを選択します。
+1. 送信者 **モバイル**&#x200B;選択 **アプリ** 次に、カタログから Mobile On-Demand アプリを作成します。
 1. の歯車アイコンをクリックします。 **接続を管理** タイル。
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. 既存の設定を入力するか、「**設定のタイトル**」、「**デバイス ID**」および「**デバイストークン**」を入力して新しい設定を作成します。
+1. 既存の設定を入力するか、 **設定のタイトル**, **デバイス ID**、および **デバイストークン**.
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
-1. 「**デバイス ID**」および「**デバイストークン**」を確認したら、リストから On-Demand プロジェクトを選択します。
+1. 一度 **デバイス ID** および **デバイストークン** が検証されている場合は、リストから On-Demand プロジェクトを選択します。
 
    「**送信**」をクリックします。
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-   **接続を管理**&#x200B;タイルにクラウド設定が表示されます。
+   この **接続を管理** タイルにクラウド設定が表示されます。
 
    ![chlimage_1-68](assets/chlimage_1-68.png)
 
    >[!CAUTION]
    >
-   >ダッシュボードでプロジェクトを切り替え、このアプリを関連付けるプロジェクトを変更しようとすると、以下のようにコンテンツの整合性の問題についての警告が表示されます。
+   >このアプリが関連付けられているプロジェクトを変更しようとすると、ダッシュボードでプロジェクトを切り替える際に、次の図に示すように、コンテンツの整合性に関する警告が表示されます。
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
 ### 次の手順 {#the-next-steps}
 
-アプリのクラウド設定が完了したら、コンテンツの管理について以下のリソースを参照してください。
+アプリのクラウド設定を完了したら、次のコンテンツ管理リソースを参照してください。
 
 * [記事の管理](/help/mobile/mobile-on-demand-managing-articles.md)
 * [バナーの管理](/help/mobile/mobile-on-demand-managing-banners.md)
 * [コレクションの管理](/help/mobile/mobile-on-demand-managing-collections.md)
 * [共有リソースのアップロード](/help/mobile/mobile-on-demand-shared-resources.md)
-* [コンテンツの公開／非公開](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
+* [コンテンツの公開/非公開](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
 * [プリフライトによるプレビュー](/help/mobile/aem-mobile-manage-ondemand-services.md)

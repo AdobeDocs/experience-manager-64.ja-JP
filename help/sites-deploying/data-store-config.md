@@ -1,7 +1,7 @@
 ---
 title: AEM 6 でのノードストアとデータストアの設定
 seo-title: Configuring node stores and data stores in AEM 6
-description: ノードストアとデータストアを設定する方法およびデータストアのガベージコレクションを実行する方法を学習します。
+description: ノードストアとデータストアの設定方法、およびデータストアのガベージコレクションの実行方法について説明します。
 seo-description: Learn how to configure node stores and data stores and how to perform data store garbage collection.
 uuid: b6bb43c7-23e9-428a-b977-6d4e246e714e
 contentOwner: User
@@ -15,30 +15,30 @@ exl-id: 89b8e8a7-103b-472e-8c29-3b6e5b7273b1
 source-git-commit: 28bfeff17c8f753f4f0d3f23a0e3843f159060cc
 workflow-type: tm+mt
 source-wordcount: '3406'
-ht-degree: 98%
+ht-degree: 68%
 
 ---
 
-# AEM 6 でのノードストアとデータストアの設定{#configuring-node-stores-and-data-stores-in-aem}
+# AEM 6 でのノードストアとデータストアの設定 {#configuring-node-stores-and-data-stores-in-aem}
 
 ## はじめに {#introduction}
 
-Adobe Experience Manager（AEM）では、バイナリデータをコンテンツノードとは別に格納できます。バイナリデータはデータストアに格納され、コンテンツノードはノードストアに格納されます。
+Adobe Experience Manager(AEM) では、バイナリデータをコンテンツノードとは独立して保存できます。 バイナリデータはデータストアに格納され、コンテンツノードはノードストアに格納されます。
 
-データストアとノードストアはどちらも OSGi 設定を使用して設定できます。各 OSGi 設定は、永続識別子（PID）を使用して参照されます。
+データストアとノードストアは、OSGi 設定を使用して設定できます。 各 OSGi 設定は、永続的な識別子 (PID) を使用して参照されます。
 
-## 設定手順 {#configuration-steps}
+## 設定の手順 {#configuration-steps}
 
 ノードストアとデータストアの両方を設定するには、次の手順を実行します。
 
-1. AEM クイックスタート JAR ファイルを AEM のインストールディレクトリにコピーします。
+1. AEM quickstart JAR ファイルをインストールディレクトリにコピーします。
 1. インストールディレクトリ内に `crx-quickstart/install` フォルダーを作成します。
 1. 最初に、ノードストアを設定します。そのためには、使用するノードストアオプションの名前を持つ設定ファイルを `crx-quickstart/install` ディレクトリに作成します。
 
    例えば、ドキュメントノードストア（AEM の MongoMK 実装の基盤）では、`org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config` ファイルを使用します。
 
 1. ファイルを編集し、設定オプションを設定します。
-1. 使用するデータストアの PID を持つ設定ファイルを作成します。ファイルを編集し、設定オプションを設定します。
+1. 使用するデータストアの PID を持つ設定ファイルを作成します。 ファイルを編集し、設定オプションを設定します。
 
    >[!NOTE]
    >
@@ -46,19 +46,19 @@ Adobe Experience Manager（AEM）では、バイナリデータをコンテン�
 
 1. AEM を起動します。
 
-## ノードストアの設定 {#node-store-configurations}
+## ノードストア設定 {#node-store-configurations}
 
 >[!CAUTION]
 >
->新しいバージョンの Oak では、OSGi 設定ファイルについて新しい命名スキームと形式を採用しています。新しい命名スキームでは、設定ファイルの名前に **.config** を付けることが規定されています。また、新しい形式では、値を型指定することが規定されています。[こちら](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format)を参照してください。
+>新しいバージョンの Oak では、OSGi 設定ファイルの命名方式と形式が新しく採用されています。 新しい命名スキームでは、設定ファイルの名前を指定する必要があります **.config** 新しい形式では、型指定する値が必要で、は [ここに記載されています](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format).
 >
 >古いバージョンの Oak からアップグレードする場合は必ず、`crx-quickstart/install` フォルダーのバックアップを最初に作成してください。アップグレード後、アップグレードしたインストール環境にフォルダーの内容を復元し、設定ファイルの拡張子を **.cfg** から **.config** に変更します。
 >
->**AEM 5.x** のインストール環境からのアップグレードに備えてこの記事をお読みになっている場合は、[アップグレード](https://docs.adobe.com/jp/content/docs/ja/aem/6-0/deploy/upgrade.html)に関するドキュメントを先に参照してください。
+>この記事を読んで、 **AEM 5.x** インストール時に、 [アップグレード](https://docs.adobe.com/jp/content/docs/ja/aem/6-0/deploy/upgrade.html) 最初にドキュメントを作成します。
 
 ### セグメントノードストア {#segment-node-store}
 
-セグメントノードストアは、AEM6 におけるアドビの TarMK 実装の基盤です。このストアでは、`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService` という PID を設定に使用します。
+セグメントノードストアは、AEM6 におけるAdobeの TarMK 実装の基礎です。 このストアでは、`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService` という PID を設定に使用します。
 
 >[!CAUTION]
 >
@@ -90,7 +90,7 @@ customBlobStore=B"true"
 
 * `mongouri`：Mongo データベースに接続するために必要な [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) です。デフォルトは `mongodb://localhost:27017` です
 
-* `db`：Mongo データベースの名前です。デフォルト値は **Oak** です。ただし、新しい AEM 6 のインストールでは、デフォルトのデータベース名として **aem-author** が使用されます。
+* `db`：Mongo データベースの名前です。デフォルトはです。 **Oak** . ただし、新しいAEM 6 のインストールでは、 **aem-author** をデフォルトのデータベース名として使用します。
 
 * `cache`：キャッシュサイズ（MB 単位）です。これは DocumentNodeStore で使用される様々なキャッシュに分散されます。デフォルトは `256` です。
 
@@ -115,11 +115,11 @@ customBlobStore=B"false"
 
 多数のバイナリを処理する場合は、最大限のパフォーマンスを確保するために、デフォルトのノードストアではなく外部のデータストアを使用することをお勧めします。
 
-例えば、プロジェクトで多数のメディアアセットが必要な場合は、それらをファイルデータストアまたは S3 データストアに格納すると、MongoDB 内に直接格納するよりも迅速にアセットにアクセスできます。
+例えば、プロジェクトで大量のメディアアセットが必要な場合は、ファイルまたは S3 データストアにアクセスすると、MongoDB 内に直接保存するよりも高速にアクセスできます。
 
-ファイルデータストアを使用すると、MongoDB よりもパフォーマンスが向上します。多数のアセットがある場合は、Mongo のバックアップと復元の処理速度も低下します。
+ファイルデータストアは MongoDB よりも高いパフォーマンスを提供します。また、多数のアセットがある場合は、Mongo のバックアップおよび復元操作も遅くなります。
 
-各種データストアと設定の詳細については後述します。
+様々なデータストアおよび設定の詳細については、以下で説明します。
 
 >[!NOTE]
 >
@@ -139,7 +139,7 @@ customBlobStore=B"false"
 
 >[!NOTE]
 >
->NAS を使用して共有ファイルデータストアを格納する場合は、パフォーマンスの問題を回避するために、必ず高性能のデバイスのみを使用してください。
+>NAS を使用して共有ファイルのデータストアを保存する場合は、パフォーマンスの問題を回避するために、必ず高パフォーマンスのデバイスのみを使用してください。
 
 ## Amazon S3 データストア {#amazon-s-data-store}
 
@@ -149,7 +149,7 @@ S3 データストア機能を有効にするには、S3 データストアコ�
 
 >[!NOTE]
 >
->TarMK を選択して AEM 6.4 を使用する場合、デフォルトでは、`FileDataStore` にバイナリが格納されます。S3 データストアと共に TarMK を使用するには、以下のように、`crx3tar-nofds` 実行モードを使用して AEM を起動する必要があります。
+>TarMK でAEM 6.4 を使用する場合、デフォルトでは、バイナリは `FileDataStore`. S3 データストアと共に TarMK を使用するには、以下のように、`crx3tar-nofds` 実行モードを使用して AEM を起動する必要があります。
 
 ```shell
 java -jar aem6.4.jar -r crx3tar-nofds
@@ -184,7 +184,7 @@ java -jar aem6.4.jar -r crx3tar-nofds
 
    >[!NOTE]
    >
-   >クラスターセットアップでは、前述の手順をクラスターのすべてのノードで 1 ノードずつ実行してください。また、すべてのノードで必ず同じ S3 設定を使用してください。
+   >クラスタ設定では、クラスタのすべてのノードで 1 つずつ上記の手順を実行します。 また、すべてのノードで同じ S3 設定を使用するようにしてください。
 
 1. ファイルを編集し、設定に必要な設定オプションを追加します。
 1. AEM を起動します。
@@ -203,14 +203,14 @@ java -jar aem6.4.jar -r crx3tar-nofds
 
    >[!NOTE]
    >
-   >上述のファイル名は例として使用しているだけであり、他の名前である場合もあります。
+   >上記のファイル名は説明用にのみ使用され、確定的ではありません。
 
 1. [アドビリポジトリ](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.s3connector/)から最新バージョンの 1.8.x 機能パックをダウンロードします。
 1. 機能パックの内容を別のフォルダーに展開して、`jcr_root/libs/system/install/15` に移動します。
 1. jar ファイルを AEM インストールフォルダーの **&lt;aem-install>**/crx-quickstart/install/15 にコピーします。
 1. AEM を起動して、コネクタの機能を確認します。
 
-次のオプションを指定して設定ファイルを使用できます。
+設定ファイルは、次のオプションと共に使用できます。
 
 * accessKey：AWS アクセスキーです。
 * secretKey：AWS 秘密アクセスキーです。**注意：** 次の場合に `accessKey` または `secretKey` が指定されていない場合、 [IAM ロール](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) は認証に使用されます。
@@ -272,7 +272,7 @@ java -jar aem6.4.jar -r crx3tar-nofds
 >
 >`S3DataStore`、`CachingFileDataStore` および `AzureDataStore` のデータストア実装では、ローカルファイルシステムのキャッシュがサポートされています。`CachingFileDataStore` の実装は、データストアがネットワークファイルシステム（NFS）上にある場合に便利です。
 
-古いキャッシュ実装（Oak 1.6 より前）からアップグレードする場合は、ローカルファイルシステムのキャッシュディレクトリの構造に違いがあります。古いキャッシュ構造では、ダウンロードされたファイルとアップロードされたファイルの両方がキャッシュパスの直下に置かれていました。新しい構造では、ダウンロードとアップロードが分離され、キャッシュパス配下にある `upload` と `download` という名前の 2 つのディレクトリに格納されます。アップグレードプロセスはシームレスに行われ、保留中のアップロードがある場合はアップロードがスケジュールされ、キャッシュ内にダウンロード済みファイルがある場合は初期化時にキャッシュに配置されます。
+古いキャッシュ実装（Oak 1.6 より前）からアップグレードする場合、ローカルファイルシステムのキャッシュディレクトリの構造に違いがあります。 古いキャッシュ構造では、ダウンロードされたファイルとアップロードされたファイルの両方がキャッシュパスの直下に配置されていました。 新しい構造では、ダウンロードとアップロードが分離され、キャッシュパス配下にある `upload` と `download` という名前の 2 つのディレクトリに格納されます。アップグレードプロセスはシームレスに行われ、保留中のアップロードがある場合はアップロードがスケジュールされ、キャッシュ内にダウンロード済みファイルがある場合は初期化時にキャッシュに配置されます。
 
 oak-run の「`datastorecacheupgrade`」コマンドを使用して、キャッシュをオフラインでアップグレードすることもできます。このコマンドの実行方法について詳しくは、oak-run モジュールの [README](https://svn.apache.org/repos/asf/jackrabbit/oak/trunk/oak-run/README.md) を参照してください。
 
@@ -284,20 +284,20 @@ oak-run の「`datastorecacheupgrade`」コマンドを使用して、キャッ�
 
 **非同期アップロード**
 
-キャッシュでは、データストアへの非同期アップロードがサポートされています。ファイルは（ファイルシステム上の）キャッシュでローカルにステージングされ、非同期ジョブでファイルのアップロードが開始されます。非同期アップロードの数は、ステージングキャッシュのサイズによって制限されます。ステージングキャッシュのサイズは、`stagingSplitPercentage` パラメーターを使用して設定します。このパラメーターでは、ステージングキャッシュに使用するキャッシュサイズの割合（％）を定義します。また、ダウンロードで使用可能なキャッシュの割合は、 **(100 - `stagingSplitPercentage`)&amp;ast;`cacheSize`**.
+キャッシュは、データストアへの非同期アップロードをサポートします。 ファイルが（ファイルシステム上の）キャッシュ内でローカルにステージングされ、非同期ジョブがファイルのアップロードを開始します。 非同期アップロードの数は、ステージングキャッシュのサイズによって制限されます。 ステージングキャッシュのサイズは、`stagingSplitPercentage` パラメーターを使用して設定します。このパラメーターでは、ステージングキャッシュに使用するキャッシュサイズの割合（％）を定義します。また、ダウンロードで使用可能なキャッシュの割合は、 **(100 - `stagingSplitPercentage`)&amp;ast;`cacheSize`**.
 
 非同期アップロードはマルチスレッドです。スレッドの数は、`uploadThreads` パラメーターを使用して設定します。
 
-アップロードが完了すると、ファイルはメインダウンロードキャッシュに移動します。ステージングキャッシュのサイズが制限を超えると、それまでの非同期アップロードが完了して、ステージングキャッシュ内の領域を再び使用できるようになるまで、ファイルは同期的にデータストアにアップロードされます。アップロードされたファイルは、定期ジョブによってステージング領域から削除されます。定期ジョブの間隔は、`stagingPurgeInterval` パラメーターで設定します。
+アップロードが完了すると、ファイルはメインのダウンロードキャッシュに移動されます。 ステージングキャッシュのサイズが上限を超えると、前回の非同期アップロードが完了し、ステージングキャッシュで領域が再び使用できるようになるまで、ファイルはデータストアに同期してアップロードされます。 アップロードされたファイルは、定期ジョブによってステージング領域から削除されます。定期ジョブの間隔は、`stagingPurgeInterval` パラメーターで設定します。
 
 （ネットワークの障害などが原因で）失敗したアップロードは再試行キューに配置され、定期的に再試行されます。再試行間隔は、`stagingRetryInterval parameter` パラメーターを使用して設定します。
 
-### Amazon S3 によるバイナリなしのレプリケーションの設定 {#configuring-binaryless-replication-with-amazon-s}
+### Amazon S3 でのバイナリレスレプリケーションの設定 {#configuring-binaryless-replication-with-amazon-s}
 
-S3 によるバイナリなしのレプリケーションを設定するには、次の手順を実行する必要があります。
+S3 でバイナリレスレプリケーションを設定するには、次の手順が必要です。
 
-1. オーサーインスタンスとパブリッシュインスタンスをインストールし、それらが正しく開始されたことを確認します。
-1. *http://localhost:4502/etc/replication/agents.author/publish.html* ページを開いて、レプリケーションエージェントの設定に移動します。
+1. オーサーインスタンスとパブリッシュインスタンスをインストールし、正しく起動していることを確認します。
+1. 次のページを開いて、レプリケーションエージェントの設定に移動します。 *http://localhost:4502/etc/replication/agents.author/publish.html*.
 1. 「**設定**」セクションの「**編集**」ボタンを押します。
 1. 「**シリアル化の種類**」オプションを「**バイナリなし**」に変更します。
 
@@ -305,11 +305,11 @@ S3 によるバイナリなしのレプリケーションを設定するには�
 
    *http://localhost:4503/bin/receive?sling:authRequestLogin=1&amp;binaryless=true*
 
-1. オーサーインスタンスとパブリッシュインスタンスをすべて再起動して、変更を有効にします。
+1. すべてのオーサーインスタンスとパブリッシュインスタンスを再起動して、変更を有効にします。
 
-### S3 と MongoDB を使用したクラスターの作成 {#creating-a-cluster-using-s-and-mongodb}
+### S3 および MongoDB を使用したクラスターの作成 {#creating-a-cluster-using-s-and-mongodb}
 
-1. 次のコマンドを使用して CQ クイックスタートを展開します。
+1. 次のコマンドを使用して、CQ クイックスタートを解凍します。
 
    `java -jar cq-quickstart.jar -unpack`
 
@@ -320,25 +320,25 @@ S3 によるバイナリなしのレプリケーションを設定するには�
    * *org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService*。*config*
    * *org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore*。*config*
 
-   ファイルを作成したら、必要に応じて設定オプションを追加します。
+   ファイルを作成した後、必要に応じて設定オプションを追加します。
 
-1. S3 データストアで必要な、前述の 2 つのバンドルをインストールします。
+1. 前述のように、S3 データストアに必要な 2 つのバンドルをインストールします。
 1. MongoDB がインストールされていること、および `mongod` のインスタンスが実行されていることを確認します。
 1. 次のコマンドを使用して AEM を起動します。
 
    `java -Xmx1024m -XX:MaxPermSize=256M -jar cq-quickstart.jar -r crx3,crx3mongo`
 
-1. 2 つ目の AEM インスタンスについて手順 1 ～ 4 を繰り返します。
-1. 2 つ目の AEM インスタンスを起動します。
+1. 2 つ目のAEMインスタンスに対して、手順 1 ～ 4 を繰り返します。
+1. 2 つ目のAEMインスタンスを起動します。
 
 #### 共有データストアの設定 {#configuring-a-shared-data-store}
 
-1. まず、データストアを共有するために必要なデータストア設定ファイルを各インスタンスで作成します。
+1. 最初に、データストアを共有するために必要な各インスタンスに、次のようなデータストア設定ファイルを作成します。
 
    * `FileDataStore` を使用する場合、`org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config` という名前のファイルを作成し、`<aem-install>/crx-quickstart/install` フォルダーに格納します。
    * S3 をデータストアとして使用する場合、前述のように `rg.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` という名前のファイルを `<aem-install>/crx-quickstart/install` フォルダーに作成します。
 
-1. 同じデータストアを指すようにデータストア設定ファイルを各インスタンスで変更します。詳しくは、[こちらの記事](/help/sites-deploying/data-store-config.md#data-store-configurations)を参照してください。
+1. 各インスタンスのデータストア設定ファイルを変更して、同じデータストアを指すようにします。 詳しくは、 [この記事](/help/sites-deploying/data-store-config.md#data-store-configurations).
 1. インスタンスのクローンが既存のサーバーから作成された場合、リポジトリーがオフラインになっている間に、最新の oak-run ツールを使用して新しいインスタンスの `clusterId` を削除する必要があります。実行する必要があるコマンドは次のとおりです。
 
    ```xml
@@ -355,30 +355,30 @@ S3 によるバイナリなしのレプリケーションを設定するには�
    >
    >[https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/)
    >
-   >AEM インストールで使用している Oak バージョンに応じて、様々なバージョンのツールを使用する必要があることに注意してください。ツールを使用する前に、以下のバージョン要件を確認してください。
+   >AEMのインストールで使用する Oak バージョンに応じて、異なるバージョンのツールを使用する必要があります。 ツールを使用する前に、以下のバージョン要件のリストを確認してください。
    >
    >* Oak バージョン **1.2.x** については、Oak-run **1.2.12 以降**&#x200B;を使用します
    >* **上述のものよりも新しい** Oak バージョンについては、AEM インストールの Oak コアと一致するバージョンの oak-run を使用します。
 
 
-1. 最後に、設定を検証します。そのためには、データストアを共有する各リポジトリによってデータストアに追加された一意のファイルを探す必要があります。ファイルの形式は `repository-[UUID]` です。UUID は、個々のリポジトリーの一意の識別子です。
+1. 最後に、設定を検証します。 これをおこなうには、共有している各リポジトリがデータストアに追加した一意のファイルを探す必要があります。 ファイルの形式は `repository-[UUID]` です。UUID は、個々のリポジトリーの一意の識別子です。
 
-   つまり、正しい設定には、データストアを共有するリポジトリと同じ数の一意のファイルがあります。
+   したがって、適切な設定には、データストアを共有するリポジトリと同じ数の一意のファイルを含める必要があります。
 
-   ファイルは、データストアに応じて別々に格納されます。
+   ファイルの保存方法は、データストアに応じて異なります。
 
    * `FileDataStore` の場合、データストアフォルダーのルートパスにファイルが作成されます。
    * `S3DataStore` の場合、設定済みの S3 バケットの `META` フォルダーにファイルが作成されます。
 
 ## Azure データストア {#azure-data-store}
 
-Microsoft の Azure ストレージサービスにデータを格納するように AEM を設定できます。このストアでは、`org.apache.jackrabbit.oak.plugins.blob.datastore.AzureDataStore.config` という PID を設定に使用します。
+AEMは、Microsoft Azure ストレージサービスにデータを格納するように設定できます。 このストアでは、`org.apache.jackrabbit.oak.plugins.blob.datastore.AzureDataStore.config` という PID を設定に使用します。
 
 Azure データストア機能を有効にするには、Azure コネクタを含む機能パックをダウンロードしてインストールする必要があります。[アドビリポジトリー](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/)にアクセスし、1.6.x バージョンの機能パックの中から最新バージョン（com.adobe.granite.oak.azureblobconnector-1.6.3.zip など）をダウンロードします。
 
 >[!NOTE]
 >
->TarMK を選択して AEM 6.4 を使用する場合、デフォルトでは、FileDataStore にバイナリが格納されます。Azure データストアと共に TarMK を使用するには、次のように、`crx3tar-nofds` 実行モードを使用して AEM を起動する必要があります。
+>TarMK でAEM 6.4 を使用する場合、デフォルトでは、バイナリは FileDataStore に格納されます。 Azure データストアと共に TarMK を使用するには、次のように、`crx3tar-nofds` 実行モードを使用して AEM を起動する必要があります。
 
 ```shell
 java -jar aem6.4.jar -r crx3tar-nofds
@@ -403,7 +403,7 @@ java -jar aem6.4.jar -r crx3tar-nofds
 1. 設定ファイルを編集し、設定に必要な設定オプションを追加します。
 1. AEM を起動します。
 
-次のオプションを指定して設定ファイルを使用できます。
+設定ファイルは、次のオプションと共に使用できます。
 
 * azureSas=&quot;&quot;：コネクタのバージョン 1.6.3 で、Azure Shared Access Signature（SAS）のサポートが追加されました。**SAS とストレージ資格情報の両方が設定ファイルに存在する場合は、SAS が優先されます。** SAS について詳しくは、[公式ドキュメント](https://docs.microsoft.com/ja-jp/azure/storage/common/storage-dotnet-shared-access-signature-part-1)を参照してください。「=」文字は必ず、「\=」のようにエスケープしてください。
 
@@ -411,8 +411,8 @@ java -jar aem6.4.jar -r crx3tar-nofds
 * accessKey=&quot;&quot;：ストレージアカウント名です。Microsoft Azure の認証資格情報について詳しくは、[公式ドキュメント](https://azure.microsoft.com/ja-jp/documentation/articles/storage-create-storage-account)を参照してください。
 
 * secretKey=&quot;&quot;：ストレージアクセスキーです。「=」文字は必ず、「\=」のようにエスケープしてください。
-* container=&quot;&quot;：Microsoft Azure の Blob ストレージコンテナ名です。コンテナは、一連の Blob をグループ化したものです。詳しくは、[公式ドキュメント](https://msdn.microsoft.com/ja-jp/library/dd135715.aspx)を参照してください。
-* maxConnections=&quot;&quot;：操作ごとの同時要求の数です。デフォルト値は 1 です。
+* container=&quot;&quot;:Microsoft Azure BLOB ストレージコンテナ名。 コンテナは、一連の BLOB をグループ化したものです。 詳しくは、 [公式ドキュメント](https://msdn.microsoft.com/ja-jp/library/dd135715.aspx).
+* maxConnections=&quot;&quot;:操作ごとの同時リクエスト数。 デフォルト値は 1 です。
 * maxErrorRetry=&quot;&quot;：要求ごとの再試行回数です。デフォルト値は 3 です。
 * socketTimeout=&quot;&quot;：要求に使用するタイムアウト間隔（ミリ秒単位）です。デフォルト値は 5 分です。
 
@@ -444,8 +444,8 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 データストアのガベージコレクションを実行する手順は次のとおりです。
 
 1. JMX コンソール（*https://&lt;serveraddress:port>/system/console/jmx*）に移動します。
-1. **RepositoryManagement** を検索します。見つかった Repository Manager の MBean をクリックして、使用可能なオプションを表示します。
-1. ページの末尾までスクロールして、「**startDataStoreGC(boolean markOnly)**」リンクをクリックします。
+1. 検索 **RepositoryManagement。** Repository Manager MBean を見つけたら、それをクリックして使用可能なオプションを表示します。
+1. ページの最後までスクロールし、 **startDataStoreGC(boolean markOnly)** リンク。
 1. 次に示すダイアログで `markOnly` パラメーターに `false` と入力して、「**Invoke**」をクリックします。
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
@@ -454,11 +454,11 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
    >
    >`markOnly` パラメーターは、ガベージコレクションのスイープフェーズを実行するかどうかを示します。
 
-## 共有データストアにおけるデータストアのガベージコレクション {#data-store-garbage-collection-for-a-shared-data-store}
+## 共有データストアのデータストアのガベージコレクション {#data-store-garbage-collection-for-a-shared-data-store}
 
 >[!NOTE]
 >
->クラスターまたは共有データストア設定（Mongo または Segment Tar を使用）でガベージコレクションを実行すると、特定の Blob ID を削除できないことについての警告がログに表示されることがあります。これは、以前のガベージコレクションで削除された Blob ID が、その ID が削除されたことを知らない他のクラスターまたは共有ノードによって誤って再度参照されることが原因で発生します。その結果、前回の実行時に既に削除された ID を、ガベージコレクションで再度削除しようとするので、警告がログに記録されます。この動作はパフォーマンスや機能に影響しません。
+>（Mongo または Segment Tar を使用した）クラスター化または共有データストアの設定でガベージコレクションを実行すると、特定の BLOB ID を削除できないことに関する警告がログに表示される場合があります。 これは、以前のガベージコレクションで削除された Blob ID が、その ID が削除されたことを知らない他のクラスターまたは共有ノードによって誤って再度参照されることが原因で発生します。その結果、前回の実行時に既に削除された ID を、ガベージコレクションで再度削除しようとするので、警告がログに記録されます。この動作は、パフォーマンスや機能には影響しません。
 
 新しいバージョンの AEM では、複数のリポジトリによって共有されるデータストアでもガベージコレクションを実行できます。共有データストアでデータストアのガベージコレクションを実行できるようにするには、次の手順に従います。
 
@@ -467,9 +467,9 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 
    ![chlimage_1-123](assets/chlimage_1-123.png)
 
-1. 前述の手順がすべてのインスタンスで完了したら、**いずれかの**&#x200B;インスタンスからデータストアのガベージコレクションを再び実行します。
+1. 上記の手順をすべてのインスタンスで完了したら、次の手順でデータストアのガベージコレクションを再実行します。 **任意** インスタンスの次の数に達します。
 
-   1. JMX コンソールに移動して、Repository Manager の Mbean を選択します。
-   1. 「**startDataStoreGC(boolean markOnly)**」リンクをクリックします。
+   1. JMX コンソールに移動し、「Repository Manager Mbean」を選択します。
+   1. をクリックします。 **startDataStoreGC(boolean markOnly) をクリックします。** リンク。
    1. 次のダイアログで、`markOnly` パラメーターに再度 `false` を入力してください。
    これにより、以前に使用したマークフェーズで見つかったすべてのファイルを照合して、未使用の残りのファイルがデータストアから削除されます。

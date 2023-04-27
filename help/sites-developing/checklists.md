@@ -1,7 +1,7 @@
 ---
 title: チェックリスト
 seo-title: Checklists
-description: 次のチェックリストに、テストでの主な問題を示します。
+description: 次のチェックリストは、主なテストの問題の一部を示しています
 seo-description: The following checklist highlights some of the main testing issues
 uuid: 0456c98c-779f-415d-9641-b17ac141698b
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: addb71f8-d042-4b14-8775-f15ab9fa5b6b
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '157'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 

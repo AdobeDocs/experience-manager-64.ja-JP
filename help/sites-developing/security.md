@@ -1,29 +1,29 @@
 ---
 title: セキュリティ
 seo-title: Security
-description: アプリケーションのセキュリティは、開発フェーズから始まります
+description: 開発フェーズ中にアプリケーションのセキュリティが開始
 seo-description: Application Security starts during the development phase
 exl-id: 22c48f8c-38df-4c9b-88cf-67f6ae46e7e1
 source-git-commit: 70d86d2a8c9654a52a2d2c4a000cc101c54a4552
 workflow-type: tm+mt
 source-wordcount: '426'
-ht-degree: 86%
+ht-degree: 61%
 
 ---
 
 # セキュリティ{#security}
 
-アプリケーションのセキュリティは、開発フェーズから始まります。アドビでは、次のセキュリティベストプラクティスを実施することをお勧めします。
+アプリケーションのセキュリティは、開発フェーズで開始します。 Adobeでは、次のセキュリティのベストプラクティスを適用することをお勧めします。
 
-## リクエストセッションの使用 {#use-request-session}
+## リクエストセッションを使用 {#use-request-session}
 
-権限の最小化の原則に従い、Adobeでは、すべてのリポジトリアクセスを、ユーザー要求にバインドされたセッションと適切なアクセス制御を使用して行うことをお勧めします。
+最小権限の原則に従って、アドビでは、リポジトリへのすべてのアクセスを、ユーザー要求と適切なアクセス制御にバインドされたセッションを使用して行うことをお勧めします。
 
-## クロスサイトスクリプティング（XSS）に対する保護 {#protect-against-cross-site-scripting-xss}
+## クロスサイトスクリプティング (XSS) に対するProtect {#protect-against-cross-site-scripting-xss}
 
-クロスサイトスクリプティング（XSS）を利用することにより、攻撃者は他のユーザーが表示する Web ページにコードを埋め込むことができます。このセキュリティ脆弱性が悪意のある Web ユーザーに悪用され、アクセス制御が擦り抜けられる可能性があります。
+クロスサイトスクリプティング (XSS) を使用すると、攻撃者は他のユーザーが閲覧した Web ページにコードを挿入できます。 このセキュリティ脆弱性は、悪意のある Web ユーザーによって悪用され、アクセス制御をバイパスする可能性があります。
 
-AEM では、ユーザーが提供するコンテンツをすべて出力時にフィルタリングする原則を適用しています。XSS を回避することは、開発時にもテスト時にも第一優先となります。
+AEMは、ユーザーが指定したすべてのコンテンツを出力時にフィルタリングする原則を適用します。 開発とテストの両方で、XSS の防止が最も優先されます。
 
 AEM が提供する XSS 保護メカニズムは、[OWASP（The Open Web Application Security Project）](https://www.owasp.org/)が提供する [AntiSamy Java ライブラリ](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project)に基づいています。デフォルトの AntiSamy 構成は、次の場所にあります。
 
@@ -37,15 +37,15 @@ AEM が提供する XSS 保護メカニズムは、[OWASP（The Open Web Applica
 
 また、[Apache 対応の mod_security](https://www.modsecurity.org) などの web アプリケーションファイアウォールを使用すると、デプロイメント環境のセキュリティを高い信頼性で一元的に制御でき、以前は検出されなかったクロスサイトスクリプティング攻撃に対する保護も可能になります。
 
-## クラウドサービス情報へのアクセス {#access-to-cloud-service-information}
+## Cloud Service情報へのアクセス {#access-to-cloud-service-information}
 
 >[!NOTE]
 >
 >インスタンスの保護に必要なクラウドサービス情報用の ACL と OSGi 設定は、[実稼動準備モード](/help/sites-administering/production-ready.md)の一部として自動化されます。つまり、設定の変更を手動で行う必要はありませんが、設定されていることをデプロイメントの運用を開始する前に確認しておくことをお勧めします。
 
-[AEM インスタンスを Adobe Marketing Cloud と統合する](/help/sites-administering/marketing-cloud.md)場合は、[クラウドサービス設定](/help/sites-developing/extending-cloud-config.md)を使用します。これらの設定に関する情報は、収集された統計と共にリポジトリに格納されます。この機能を使用する場合は、この情報に適用されるデフォルトのセキュリティが要件に対応しているかどうかを確認することをお勧めします。
+次の場合： [AEMインスタンスとAdobe Marketing Cloudの統合](/help/sites-administering/marketing-cloud.md) 次を使用 [Cloud Service設定](/help/sites-developing/extending-cloud-config.md). これらの設定に関する情報は、収集された統計と共にリポジトリに保存されます。 この機能を使用する場合は、この情報に対するデフォルトのセキュリティが要件に一致するかどうかを確認することをお勧めします。
 
-webservicesupport モジュールは、統計と設定情報を次の場所に書き込みます。
+webservicesupport モジュールは、次の場所に統計情報と設定情報を書き込みます。
 
 `/etc/cloudservices`
 
@@ -57,4 +57,4 @@ webservicesupport モジュールは、統計と設定情報を次の場所に�
 
 ## クロスサイトリクエストフォージェリ攻撃からの保護 {#protect-against-cross-site-request-forgery-attacks}
 
-CSRF 攻撃を軽減するためにAEMが採用しているセキュリティメカニズムについて詳しくは、 [Sling Referrer Filter](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery) セキュリティチェックリストの項及び [CSRF Protection Framework のドキュメント](/help/sites-developing/csrf-protection.md).
+CSRF 攻撃を軽減するために AEM で採用されているセキュリティメカニズムについて詳しくは、セキュリティチェックリストの [Sling リファラーフィルター](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery)の節と、[CSRF 対策フレームワークのドキュメント](/help/sites-developing/csrf-protection.md)を参照してください。

@@ -10,7 +10,7 @@ exl-id: dcd67a1e-b20f-4ed4-b154-dd250cbd8320
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '435'
-ht-degree: 100%
+ht-degree: 88%
 
 ---
 
@@ -75,8 +75,8 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 ### ユーザーの無効化 {#disable-user}
 
-1. 前述のように、ユーザー管理コンソールを開き、目的のユーザーを検索します。
-1. ユーザーの上にマウスポインターを置き、選択アイコンをクリックします。プロファイルがグレーに変わり、選択されたことが示されます。
+1. 前述のように、ユーザー管理コンソールを開き、該当するユーザーを検索します。
+1. ユーザーの上にマウスポインターを置いて、選択アイコンをクリックします。 プロファイルがグレーに変わり、選択されたことが示されます。
 
 1. 上部のメニューの「無効にする」ボタンをクリックして、このユーザーを無効にします。
 
@@ -100,7 +100,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-58-25](assets/image2018-2-6_1-58-25.png)
 
-1. プロファイルノードとそのすべての子ノードを削除します。プロファイルノードには、AEM のバージョンに応じて以下の 2 種類の形式があります。
+1. プロファイルノードとそのすべての子ノードを削除します。 プロファイルノードには、AEMのバージョンに応じて、次の 2 つの形式があります。
 
    1. `[!UICONTROL /profile]` のデフォルトの非公開プロファイル
    1. `[!UICONTROL /profiles]`（AEM 6.4 を使用して作成された新しいプロファイル用）
@@ -111,7 +111,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 以下の手順では、`curl` コマンドラインツールを使用して **[!UICONTROL cavery]** `userId` を持つユーザーを無効化し、デフォルトの場所にあるそのユーザーのプロファイルを削除する方法を示します。
 
-* *ユーザーホームの検索*
+* *ユーザーホームの検出*
 
 ```shell
 curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/authorizables.json?query={"condition":[{"named":"cavery"}]}'

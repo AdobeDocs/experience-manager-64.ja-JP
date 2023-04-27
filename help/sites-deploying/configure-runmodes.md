@@ -1,7 +1,7 @@
 ---
 title: 実行モード
 seo-title: Run Modes
-description: 実行モードを使用して、固有の目的に合わせて AEM インスタンスを調整する方法を学習します。
+description: 実行モードを使用して、特定の目的に合わせてAEMインスタンスを調整する方法を説明します。
 seo-description: Learn how to tune your AEM instance for specific purposes by using run modes.
 uuid: 8a0c6e5c-4fae-43e2-b745-eee58f346ceb
 contentOwner: User
@@ -14,21 +14,21 @@ exl-id: c27e74d6-3093-4c0e-a724-92ce920fe75c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '747'
-ht-degree: 73%
+ht-degree: 64%
 
 ---
 
 # 実行モード{#run-modes}
 
-実行モードを使用すると、オーサーまたはパブリッシュ、テスト、開発、イントラネットなど、特定の目的に合わせて AEM インスタンスを調整できます。
+実行モードを使用すると、特定の目的に合わせてAEMインスタンスを調整できます。例えば、オーサーまたはパブリッシュ、テスト、開発、イントラネットなどです。
 
 以下の操作を実行できます。
 
-* [各実行モードに対する設定パラメーターのコレクションを定義する](#defining-configuration-properties-for-a-run-mode).
+* [各実行モードに対する設定パラメーターのコレクションを定義する](#defining-configuration-properties-for-a-run-mode)。
 
-   すべての実行モードに対して基本的な設定パラメーターのセットが適用され、特定の環境の目的に合わせて追加のセットを調整できます。 これらは必要に応じて適用されます。
+   すべての実行モードに対して基本的な設定パラメーターのセットが適用され、特定の環境の目的に合わせて追加のセットを調整できます。これらは必要に応じて適用されます。
 
-* [特定のモード用にインストールする追加のバンドルを定義します](#defining-additional-bundles-to-be-installed-for-a-run-mode)。
+* [特定のモード用にインストールする追加のバンドルを定義する](#defining-additional-bundles-to-be-installed-for-a-run-mode)。
 
 設定および定義はすべて 1 つのリポジトリに格納され、**実行モード**&#x200B;を設定することによってアクティベートされます。
 
@@ -45,19 +45,19 @@ ht-degree: 73%
 
 これらは相互に排他的な実行モードの 2 つのペアです。例えば、次のことが可能です。
 
-* 次のいずれかを定義 `author` または `publish`（両方同時にではない）
+* `author` または `publish` を定義できますが、両方を同時に定義することはできません。
 
-* 結合 `author` どちらか `samplecontent` または `nosamplecontent` （両方ではありません）。
+* `author` を `samplecontent` または `nosamplecontent` と組み合わせることができますが、両方と組み合わせることはできません。
 
 >[!CAUTION]
 >
->上記のいずれかの実行モード（author、publish、samplecontent、nosamplecontent）を使用するときは、インストール時に使用する値が、そのインストールの全期間&#x200B;**&#x200B;の実行モードを定義します。
+>上記のいずれかの実行モード（author、publish、samplecontent、nosamplecontent）を使用するときは、インストール時に使用する値が、そのインストールの全期間の実行モードを定義します&#x200B;*。*
 >
->これらの実行モードは、インストール後は変更できません&#x200B;**。
+>これらの実行モードは、インストール後は変更できません&#x200B;*。*
 
 ## カスタマイズされた実行モード {#customized-run-modes}
 
-独自のカスタマイズされた実行モードも作成できます。これらを組み合わせて次のようなシナリオに対応できます。
+独自にカスタマイズした実行モードを作成することもできます。 これらを組み合わせて、次のようなシナリオをカバーできます。
 
 * `author` + `development`
 
@@ -67,29 +67,29 @@ ht-degree: 73%
 
 * `publish` + `intranet`
 
-* 必要に応じて使用
+* 必要に応じて
 
 カスタマイズされた実行モードは、起動のたびに選択することもできます。
 
-## samplecontent および nosamplecontent の使用 {#using-samplecontent-and-nosamplecontent}
+## samplecontent と nosamplecontent の使用 {#using-samplecontent-and-nosamplecontent}
 
-これらのモードでは、サンプルコンテンツの使用を制御できます。サンプルコンテンツは、クイックスタートの構築前に定義され、パッケージや設定を含めることができます。
+これらのモードを使用すると、サンプルコンテンツの使用を制御できます。 サンプルコンテンツは、クイックスタートのビルド前に定義され、パッケージ、設定などを含めることができます。
 
 * `samplecontent` 実行モードでは、サンプルコンテンツがインストールされます（デフォルトモード）。
 
 * `nosamplecontent` モードでは、サンプルコンテンツはインストールされません。
 
-nosamplecontent 実行モードは、実稼働インストール用に設計されています。
+nosamplecontent 実行モードは、実稼動インストール用に設計されています。
 
 ## 実行モードの設定プロパティの定義 {#defining-configuration-properties-for-a-run-mode}
 
-特定の実行モードに使用する設定プロパティの値をまとめてリポジトリに保存できます。
+特定の実行モードで使用される設定プロパティの値のコレクションをリポジトリに保存できます。
 
 実行モードは、フォルダー名のサフィックスで示されます。これにより、すべての設定を 1 つのリポジトリに格納できます。次に例を示します。
 
 * `config`
 
-   すべての実行モードに適用可能
+   すべての実行モードに適用される
 
 * `config.author`
 
@@ -97,21 +97,21 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
 * `config.publish`
 
-   公開実行モードに使用
+   パブリッシュ実行モードに使用
 
 * `config.<run-mode>`
 
-   該当する実行モードに使用されます。例：config
+   該当する実行モードに使用（config など）
 
-これらのフォルダー内で個々の設定ノードを定義する方法、および複数の実行モードの組み合わせに関する設定を作成する方法について詳しくは、[リポジトリでの OSGi 設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を参照してください。
+詳しくは、 [リポジトリ内の OSGi 設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) これらのフォルダー内で個々の設定ノードを定義する方法と、複数の実行モードの組み合わせに対する設定を作成する方法について詳しくは、を参照してください。
 
 >[!NOTE]
 >
->[インストール実行モード](#installation-run-modes)（オーサーなど）に関しては、インストール後は実行モードを変更できません。ただし、個々の設定プロパティの変更は、再起動時に有効になります。
+>の場合 [インストール実行モード](#installation-run-modes) （例：author）インストール後に実行モードを変更することはできません。 ただし、個々の設定プロパティに対する変更は、の再起動時に有効になります。
 
-## 特定の実行モード用にインストールする追加のバンドルの定義 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
+## 実行モード用にインストールする追加のバンドルの定義 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
-特定の実行モード用にインストールする必要がある追加のバンドルも指定できます。 これらの定義に関しては、インストールフォルダーを使用してバンドルが格納されます。 繰り返しになりますが、実行モードはプレフィックスで示されます。
+特定の実行モード用にインストールする必要がある追加のバンドルも指定できます。これらの定義に関しては、インストールフォルダーを使用してバンドルが保持されます。繰り返しになりますが、実行モードはプレフィックスで示されます。
 
 * `install.author`
 * `install.publish`
@@ -120,7 +120,7 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
 ## 特定の実行モードでの CQ の起動 {#starting-cq-with-a-specific-run-mode}
 
-複数の実行モードの設定を定義した場合は、起動時にどれを使用するかを定義する必要があります。使用する実行モードを指定する方法は複数あります。優先順位は次のとおりです。
+複数の実行モードの設定を定義した場合は、起動時に使用する設定を定義する必要があります。 使用する実行モードを指定する方法はいくつかあります。解決の順序は次のとおりです。
 
 1. [ ](#using-the-sling-properties-file)
 1. [ ](#using-the-r-option)
@@ -128,7 +128,7 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
 1. [ファイル名検出](#filename-detection-renaming-the-jar-file)
 
-アプリケーションサーバーを使用している場合は、[web.xml](#defining-the-run-mode-in-web-xml-with-application-server) で実行モードを定義することもできます。
+アプリケーションサーバーを使用している場合は、[web.xml で実行モードを定義](#defining-the-run-mode-in-web-xml-with-application-server)することもできます。
 
 ### sling.properties ファイルの使用 {#using-the-sling-properties-file}
 
@@ -138,13 +138,13 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
    `<cq-installation-dir>/crx-quickstart/conf/sling.properties`
 
-1. 次のプロパティを追加します。次に、作成者向けの例を示します。
+1. 次のプロパティを追加します。この例は、オーサーの場合です。
 
    `sling.run.modes=author`
 
 ### -r オプションの使用 {#using-the-r-option}
 
-カスタム実行モードは、 `-r` オプションを使用して、クイックスタートを起動する際に使用します。 例えば、次のコマンドを使用して、実行モードを dev に設定したAEMインスタンスを起動します。&quot;
+カスタム実行モードは、クイックスタート起動時に`-r`オプションを使用することで起動することができます。例えば、次のコマンドを使用して、実行モードを dev `` に設定したAEMインスタンスを起動してください。
 
 ```shell
 java -jar cq-56-p4545.jar -r dev
@@ -154,18 +154,18 @@ java -jar cq-56-p4545.jar -r dev
 
 起動スクリプトのシステムプロパティを使用して実行モードを指定できます。
 
-* 例えば、次の例では、米国内の実稼動パブリッシュインスタンスとしてインスタンスを起動します。
+* 例えば、US にある実稼働のパブリッシュインスタンスとしてインスタンスを起動するには、以下を使用します。
 
    `-Dsling.run.modes=publish,prod,us`
 
 ### ファイル名検出 - jar ファイルの名前変更 {#filename-detection-renaming-the-jar-file}
 
-次の 2 つのインストール実行モードは、インストール前にインストール jar ファイルの名前を変更することで有効化できます。
+インストール前にインストール jar ファイルの名前を変更することにより、次の 2 つのインストール実行モードをアクティベートできます。
 
 * publish
-* 作成者
+* author
 
-jar ファイルでは、次の命名規則を使用する必要があります。
+jar ファイルでは、命名規則を使用する必要があります。
 
 `cq5-<run-mode>-p<port-number>`
 
@@ -173,9 +173,9 @@ jar ファイルでは、次の命名規則を使用する必要があります�
 
 `cq5-publish-p4503`
 
-### web.xml での実行モードの定義（アプリケーションサーバー使用時） {#defining-the-run-mode-in-web-xml-with-application-server}
+### web.xml での実行モードの定義（アプリケーションサーバーを使用） {#defining-the-run-mode-in-web-xml-with-application-server}
 
-アプリケーションサーバーを使用している場合は、
+アプリケーションサーバーを使用している場合は、次のプロパティも設定できます。
 
 `sling.run.modes`
 

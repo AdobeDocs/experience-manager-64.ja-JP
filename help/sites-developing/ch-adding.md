@@ -1,7 +1,7 @@
 ---
 title: ページへの ContextHub の追加とストアへのアクセス
 seo-title: Adding ContextHub to Pages and Accessing Stores
-description: ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、ContextHub をページに追加します
+description: ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、ContextHub をページに追加します。
 seo-description: Add ContextHub to your pages to enable the ContextHub features and to link to the ContextHub Javascript libraries
 uuid: ade37960-21c4-4d64-a525-68f0d199f955
 contentOwner: User
@@ -13,19 +13,19 @@ exl-id: 99efe308-bf8a-41ad-8203-b57fce20820c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1008'
-ht-degree: 96%
+ht-degree: 53%
 
 ---
 
 # ページへの ContextHub の追加とストアへのアクセス {#adding-contexthub-to-pages-and-accessing-stores}
 
-ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、ContextHub をページに追加します
+ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、ContextHub をページに追加します。
 
-ContextHub JavaScript API を使用すると、ContextHub が管理するコンテキストデータにアクセスできます。このページでは、コンテキストデータにアクセスおよび操作するための API の主な機能について簡単に説明します。詳細情報とコードのサンプルは、API リファレンスドキュメントへのリンクから確認できます。
+ContextHub JavaScript API を使用すると、ContextHub が管理するコンテキストデータにアクセスできます。このページでは、コンテキストデータにアクセスして操作するための API の主な機能について簡単に説明します。 詳細情報とコードのサンプルは、API リファレンスドキュメントへのリンクから確認できます。
 
 ## ページコンポーネントへの ContextHub の追加 {#adding-contexthub-to-a-page-component}
 
-ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、ページの `head` セクションに ContextHub コンポーネントを含めます。ページコンポーネントの JSP コードは、次の例のようになります。
+ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、 `head` 」セクションに追加します。 ページコンポーネントの JSP コードは、次の例のようになります。
 
 ```xml
 <head>
@@ -33,34 +33,34 @@ ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリ�
 </head>
 ```
 
-ContextHub ツールバーをプレビューモードで表示するかどうかも設定する必要があります。[ContextHub UI の表示／非表示](/help/sites-administering/contexthub-config.md#showing-and-hiding-the-contexthub-ui)を参照してください。
+また、ContextHub ツールバーをプレビューモードで表示するかどうかを設定する必要があります。 詳しくは、 [ContextHub UI の表示と非表示](/help/sites-administering/contexthub-config.md#showing-and-hiding-the-contexthub-ui).
 
 ## ContextHub ストアについて {#about-contexthub-stores}
 
-コンテキストデータを保持するには、ContextHub ストアを使用します。ContextHub には、すべてのストアタイプの基礎となる次のタイプのストアが用意されています。
+ContextHub ストアを使用して、コンテキストデータを保持します。 ContextHub には、すべてのストアタイプの基盤となる次のタイプのストアが用意されています。
 
 * [PersistedStore](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)
 * [SessionStore](/help/sites-developing/contexthub-api.md#contexthub-store-sessionstore)
 * [JSONPStore](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)
 * [PersistedJSONPStore](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)
 
-すべてのストアタイプは、[`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core) クラスの拡張です。新しいストアタイプの作成については、[カスタムストアの作成](/help/sites-developing/ch-extend.md#creating-custom-store-candidates)を参照してください。ストアタイプのサンプルについては、[ContextHub ストア候補のサンプル](/help/sites-developing/ch-samplestores.md)を参照してください。
+すべてのストアタイプは、[`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core) クラスの拡張です。新しいストアタイプの作成について詳しくは、 [カスタムストアの作成](/help/sites-developing/ch-extend.md#creating-custom-store-candidates). サンプルのストアタイプについて詳しくは、 [ContextHub ストア候補のサンプル](/help/sites-developing/ch-samplestores.md).
 
 ### 永続モード {#persistence-modes}
 
-ContextHub ストアは、次のいずれかの永続モードを使用します。
+ContextHub ストアでは、次の永続モードのいずれかを使用します。
 
-* **ローカル：** HTML5 localStorage を使用してデータを保持します。ローカルストレージは、セッションをまたがってブラウザー上に保持されます。
-* **セッション：** HTML5 sessionStorage を使用してデータを保持します。セッションストレージは、ブラウザーセッションが持続する間、保持され、すべてのブラウザーウィンドウで使用可能です。
-* **Cookie：**&#x200B;ブラウザーのデータストレージ用 cookie のネイティブサポートを使用します。cookie データは、HTTP 要求としてサーバーとの間で送受信されます。
+* **ローカル：** HTML5 localStorage を使用してデータを保持します。 ローカルストレージは、セッションをまたいでブラウザーに保持されます。
+* **セッション：** HTML5 sessionStorage を使用してデータを保持します。 セッションストレージは、ブラウザーセッションの間保持され、すべてのブラウザーウィンドウで使用できます。
+* **cookie:** データストレージに対するブラウザーの cookie のネイティブサポートを使用します。 Cookie データは、HTTP リクエストでサーバーとの間で送信されます。
 * **Window.name：** window.name プロパティを使用してデータを保持します。
 * **メモリ：** JavaScript オブジェクトを使用してデータを保持します。
 
-デフォルトでは、ContextHub は「ローカル」永続モードを使用します。ブラウザーが HTML5 localStorage をサポートまたは許可していない場合は、「セッション」永続モードが使用されます。ブラウザーが HTML5 sessionStorage をサポートまたは許可していない場合は、「Window.name」永続モードが使用されます。
+デフォルトでは、Context Hub はローカル永続化モードを使用します。 ブラウザーが localStorage5 をサポートしていない場合、または許可していない場合は、HTMLの永続性が使用されます。 ブラウザーが sessionStorage をサポートしていないか、許可していない場合は、Window.name persistence が使用されます。
 
 ### ストアデータ {#store-data}
 
-ストアデータは内部的にツリー構造を形成しており、値をプライマリタイプまたは複合オブジェクトとして追加できます。複合オブジェクトをストアに追加すると、オブジェクトのプロパティがデータツリーにブランチを形成します。例えば、次の複合オブジェクトを location という名前の空のストアに追加します。
+内部的には、データをツリー構造に格納し、値をプライマリ型または複雑なオブジェクトとして追加できます。 複雑なオブジェクトをストアに追加すると、オブジェクトプロパティはデータツリー内にブランチを形成します。 例えば、次の複合オブジェクトを location という名前の空のストアに追加します。
 
 ```xml
 Object {
@@ -89,7 +89,7 @@ Object {
             |- elevation
 ```
 
-ツリー構造は、ストア内のデータ項目をキーと値のペアとして定義します。上記の例では、キー `/number` が値 `321` に対応し、キー `/data/country` が値 `Switzerland` に対応しています。
+ツリー構造は、ストア内のデータ項目をキーと値のペアとして定義します。 上記の例では、キー `/number` が値 `321` に対応し、キー `/data/country` が値 `Switzerland` に対応しています。
 
 ### オブジェクトの操作 {#manipulating-objects}
 
@@ -108,7 +108,7 @@ ContextHub には、JavaScript オブジェクトを操作するための [`Cont
 * [addAllItems](/help/sites-developing/contexthub-api.md#addallitems-tree-options)
 * [getTree](/help/sites-developing/contexthub-api.md#gettree-includeinternals)
 
-個々のデータ項目は、一連のキーと値のペアとして保存されます。値を保存および取得するには、対応するキーを指定します。
+個々のデータ項目は、キーと値のペアのセットとして保存されます。 値を保存および取得するには、対応するキーを指定します。
 
 * [getItem](/help/sites-developing/contexthub-api.md#getitem-key)
 * [setItem](/help/sites-developing/contexthub-api.md#setitem-key-value-options)
@@ -117,9 +117,9 @@ ContextHub には、JavaScript オブジェクトを操作するための [`Cont
 
 >[!NOTE]
 >
->ContextHub は、デフォルトでは、パブリッシュサーバーを使用した現在のログインを認識しません。そうしたユーザーは ContextHub では「匿名」と見なされます。
+>ContextHub は、デフォルトでは、パブリッシュサーバーで現在ログインしていることを認識せず、そのようなユーザーは ContextHub では「匿名」と見なされます。
 >
->[We.Retail 参照サイト](/help/sites-developing/we-retail.md)に実装したプロファイルストアを読み込むことで、ContextHub でログインユーザーを識別できます。[GitHub で関連するコード](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/blob/master/ui.apps/src/main/content/jcr_root/apps/weretail/components/structure/header/clientlib/js/utilities.js)を参照してください。
+>ContextHub で [We.Retail 参照サイト](/help/sites-developing/we-retail.md). 詳しくは、 [GitHub で関連するコードはこちら](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/blob/master/ui.apps/src/main/content/jcr_root/apps/weretail/components/structure/header/clientlib/js/utilities.js).
 
 ### ContextHub のイベンティング {#contexthub-eventing}
 
@@ -133,40 +133,40 @@ ContextHub JavaScript API には、ブラウザー cookie を処理するため�
 
 ContextHub のセグメントエンジンを使用して、現在のコンテキストで解決された登録済みセグメントを特定できます。解決されたセグメントを取得するには、[`ContextHub.SegmentEngine.SegmentManager`](/help/sites-developing/contexthub-api.md#contexthub-segmentengine-segmentmanager) クラスの getResolvedSegments 関数を使用します。その後で、`getName` クラスの `getPath` 関数または [`ContextHub.SegmentEngine.Segment`](/help/sites-developing/contexthub-api.md#contexthub-segmentengine-segment) 関数を使用して、セグメントをテストします。
 
-### インストール済みのセグメント {#installed-segments}
+### インストール済みセグメント {#installed-segments}
 
 ContextHub のセグメントは、`/conf/we-retail/settings/wcm/segments` ノードの下にインストールされます。
 
-* female（女性）
-* female-over-30（30 歳より上の女性）
-* female-under-30（30 歳より下の女性）
-* male（男性）
-* male-over-30（30 歳より上の男性）
+* 女性
+* 30 歳以上の女性
+* 30 歳未満の女性
+* 男性
+* 30 歳以上の男性
 * male-under-30（30 歳より下の男性）
-* order-value-75-to-100（注文額が 75 ～ 100）
-* order-value-over-100（注文額が 100 より上）
-* over-30（30 歳より上）
+* order-value-75-to-100
+* order-value-over-100
+* 30 を超える
 * summer（夏）
-* summer-female（夏 - 女性）
-* summer-female-over-30（夏 - 30 歳より上の女性）
-* summer-female-under-30（夏 - 30 歳より下の女性）
-* summer-male（夏 - 男性）
-* summer-male-over-30（夏 - 30 歳より上の男性）
-* summer-male-under-30（夏 - 30 歳より下の男性）
-* under-30（30 歳より下）
+* summer-female
+* summer-female-over-30（夏 — 30 歳より上の女性）
+* summer-female-under-30（夏 — 30 歳より下の女性）
+* summer-male
+* summer-male-over-30（夏 — 30 歳より上の男性）
+* summer-male-under-30（夏 — 30 歳より下の男性）
+* 30 歳未満
 * winter（冬）
-* winter-female（冬 - 女性）
-* winter-female-over-30（冬 - 30 歳より上の女性）
-* winter-female-under-30（冬 - 30 歳より下の女性）
-* winter-male（冬 - 男性）
-* winter-male-over-30（冬 - 30 歳より上の男性）
-* winter-male-under-20（冬 - 20 歳より下の男性）
+* winter-female（冬 — 女性）
+* winter-female-over-30（冬 — 30 歳より上の女性）
+* winter-female-under-30（冬 — 30 歳より下の女性）
+* winter-male（冬 — 男性）
+* winter-male-over-30（冬 — 30 歳より上の男性）
+* winter-male-under-20（冬 — 20 歳より下の男性）
 
 これらのセグメントの解決に使用されるルールを要約すると次のようになります。
 
-* 女性か男性かは、`gender`profile[ ストアの ](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) データ項目から判断されます。
+* 女性か男性かは、 `gender` データ項目 [profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) ストア。
 
-* 年齢は、profile ストアの age データ項目から判断されます。
+* 年齢は、プロファイルストアの年齢データ項目から判断されます。
 * シーズンは、 [位置情報](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) store 、および surferinfo ストアの月のデータ項目です。
 
 >[!WARNING]
@@ -177,7 +177,7 @@ ContextHub のセグメントは、`/conf/we-retail/settings/wcm/segments` ノ�
 
 開発時に役立つ詳細なデバッグメッセージをログに記録するように、Adobe Granite ContextHub OSGi サービス（PID = `com.adobe.granite.contexthub.impl.ContextHubImpl`）を設定します。
 
-サービスを設定するには、 [Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) または [リポジトリ内の JCR ノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository):
+このサービスは、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリ内の JCR ノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を使用して設定できます。
 
 * Web コンソール：デバッグメッセージをログに記録するには、Debug プロパティを選択します。
 * JCR ノード：デバッグメッセージをログに記録するには、`com.adobe.granite.contexthub.debug` ブールプロパティを `true` に設定します。
