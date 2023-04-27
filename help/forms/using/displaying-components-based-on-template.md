@@ -1,7 +1,7 @@
 ---
 title: 使用するテンプレートに基づいたコンポーネントの表示
 seo-title: Displaying components based on the template used
-description: フォームの作成時に、選択したテンプレートに基づいて、サイドバーのコンポーネントを有効にする方法について説明します。
+description: フォームを作成する際に、選択したテンプレートに基づいてサイドバーのコンポーネントを有効にする方法を学びます。
 seo-description: When you create a form, learn how you can enable components in the sidebar based on the template selected.
 uuid: 4e87f400-fb45-413d-9be8-72edbe99f210
 contentOwner: sashanka
@@ -13,13 +13,13 @@ exl-id: a4cee2e6-a56f-4355-8176-b3ed7478a775
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '352'
-ht-degree: 100%
+ht-degree: 63%
 
 ---
 
 # 使用するテンプレートに基づいたコンポーネントの表示 {#displaying-components-based-on-the-template-used}
 
-フォーム作成者は、[テンプレート](/help/forms/using/template-editor.md)を使用してアダプティブフォームを作成する際、テンプレートポリシーに基づいて、特定のコンポーネントを表示して使用できます。テンプレートコンテンツポリシーを指定することにより、フォームの作成中にフォーム作成者に表示されるコンポーネントのグループを選択できます。
+フォーム作成者が [テンプレート](/help/forms/using/template-editor.md)を使用すると、フォーム作成者は、テンプレートポリシーに基づいて特定のコンポーネントを表示し、使用することができます。 テンプレートコンテンツポリシーを指定して、フォーム作成者がフォームの作成時に表示するコンポーネントのグループを選択できます。
 
 ## テンプレートのコンテンツポリシーの変更 {#changing-the-content-policy-of-a-template}
 
@@ -37,7 +37,7 @@ ht-degree: 100%
 
 1. CRXDE で、`/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/` に移動します。
 
-   コンポーネントのグループを選択するためには、新しいコンテンツポリシーが必要です。新しいポリシーを作成するには、デフォルトのポリシーをコピーして貼り付け、名前を変更します。
+   コンポーネントのグループを選択するには、新しいコンテンツポリシーが必要です。 新しいポリシーを作成するには、デフォルトのポリシーをコピー&amp;ペーストし、名前を変更します。
 
    デフォルトコンテンツポリシーのパス： `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
 
@@ -47,7 +47,7 @@ ht-degree: 100%
 
 1. 作成した新しいポリシーを選択し、右側のパネルにあるタイプが `string[]` の **components** プロパティを選択します。
 
-   components プロパティを選択して開くと、components を編集ダイアログが表示されます。components を編集ダイアログでは、「**+**」および「**-**」ボタンを使用して、コンポーネントグループを追加または削除できます。作成者が使用するコンポーネントのフォームを含むコンポーネントグループを追加できます。
+   コンポーネントプロパティを選択して開くと、コンポーネントを編集ダイアログが表示されます。 コンポーネントを編集ダイアログでは、 **+** および **-** ボタン 作成者が使用するコンポーネントのフォームを含むコンポーネントグループを追加できます。
 
    ![ポリシーのコンポーネントを追加または削除](assets/add-components-list1.png)
 

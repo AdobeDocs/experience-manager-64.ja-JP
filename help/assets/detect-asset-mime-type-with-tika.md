@@ -8,7 +8,7 @@ exl-id: 6c9e53e9-5e54-4816-9431-41e796340d1e
 source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
 source-wordcount: '194'
-ht-degree: 10%
+ht-degree: 29%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 10%
 
 通常、Adobe Experience Manager Assets は、アップロードするアセットの MIME タイプをファイル拡張子から検出します。 Apache Tika を使用してアセットをアップロードする場合、 [!DNL Experience Manager] Assets は、アップロード操作中に、ファイル拡張子ではなくコンテンツストリームから MIME タイプを検出します。
 
-この機能はデフォルトでは無効になっています。この機能を有効にするには、 **Day CQ DAM MIME Type** サービスを Configuration Manager から取得します。
+この機能はデフォルトでは無効になっています。この機能を有効にするには、Configuration Manager で **Day CQ DAM Mime タイプ**&#x200B;サービスを設定してください。
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ ht-degree: 10%
 1. に移動します。 `https://[AEM_server]:[port]/system/console/configMgr` をクリックして、Configuration Manager Web コンソールを開きます。
 1. サービスのリストから、 **[!UICONTROL Day CQ DAM Mime Type Service]** 次に、 **[!UICONTROL 編集]** アイコンをクリックし、編集モードで開きます。
 
-1. を選択します。 **[!UICONTROL コンテンツから MIME を検出]** アップロードされたアセットの解析を有効にして、ファイル拡張子を無視しながら MIME タイプを判断するオプション。 デフォルトでは、このオプションはオフになっています。
+1. アップロードされたアセットの解析を有効にし、ファイルの拡張子を無視して MIME タイプを検出するには、「**[!UICONTROL コンテンツから MIME タイプを検出]**」オプションを選択してください。デフォルトでは、このオプションはオフになっています。
 
    ![chlimage_1-333](assets/chlimage_1-333.png)
 

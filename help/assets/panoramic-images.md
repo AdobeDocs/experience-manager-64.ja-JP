@@ -1,6 +1,6 @@
 ---
 title: パノラマ画像
-description: Dynamic Media でのパノラマ画像の使用方法を学習します。
+description: Dynamic Mediaでパノラマ画像を使用する方法を説明します。
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -11,7 +11,7 @@ role: User
 source-git-commit: 0120fe1303aa3b7f5aa7db39eaf40ff127f2e338
 workflow-type: tm+mt
 source-wordcount: '581'
-ht-degree: 42%
+ht-degree: 31%
 
 ---
 
@@ -19,15 +19,15 @@ ht-degree: 42%
 
 ここでは、パノラマ画像ビューアを使用して球パノラマ画像をレンダリングし、室内、物件、場所、風景などをあらゆる角度から見ることができる臨場感あふれる体験を提供する方法について説明します。
 
-[ビューアプリセットの管理](managing-viewer-presets.md)も参照してください。
+関連トピック [ビューアプリセットの管理](managing-viewer-presets.md).
 
 ![panoramic-image2](assets/panoramic-image2.png)
 
 ## パノラマ画像ビューアで使用するアセットのアップロード {#uploading-assets-for-use-with-the-panoramic-image-viewer}
 
-アップロードするアセットが、パノラマ画像ビューアで使用する球パノラマ画像として適格となるには、アセットが以下の一方または両方の条件を満たしている必要があります。
+アップロードするアセットが、パノラマ画像ビューアで使用する球体パノラマ画像として認められるためには、アセットが次のいずれかまたは両方を満たしている必要があります。
 
-* 縦横比が 2 である必要があります。
+* 縦横比が 2 である。
 
    デフォルトの縦横比設定である 2 を **[!UICONTROL CRXDE Lite]** 次の場所に移動します。
 
@@ -43,19 +43,19 @@ ht-degree: 42%
 
 パノラマ画像ビューアがAEM内で正しく動作するようにするには、パノラマ画像ビューアプリセットをDynamic Media ClassicおよびDynamic Media Classic固有のメタデータと同期して、ビューアプリセットが JCR で更新されるようにする必要があります。 これをおこなうには、次の方法でDynamic Media Classicを設定します。
 
-1. [Dynamic Media Classicデスクトップアプリケーションへのログイン](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app) 会社アカウントごとに
+1. [Dynamic Media Classicデスクトップアプリケーションへのログイン](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=ja#system-requirements-dmc-app) 会社アカウントごとに
 
-1. ページの右上隅付近で、**[!UICONTROL 設定／アプリケーション設定／公開設定／Image Server]** をクリックします。
+1. ページの右上隅にある「 **[!UICONTROL 設定/アプリケーション設定/公開設定/Image Server]**.
 1. の **[!UICONTROL Image Server 公開]** ページの **[!UICONTROL 公開コンテキスト]** 上部付近のドロップダウンメニューで、「 **[!UICONTROL 画像サービング]**.
 
 1. 同じ **[!UICONTROL Image Server 公開]** ページで、見出しを探します。 **[!UICONTROL 要求属性]**.
 1. 以下 **[!UICONTROL 要求属性]** 見出し、場所 **[!UICONTROL 返信画像のサイズ制限]**. 次に、 **[!UICONTROL 幅]** および **[!UICONTROL 高さ]** フィールドで指定する場合、パノラマ画像に使用できる最大画像サイズを大きくします。
 
-   Dynamic Media Classicの上限は 25,000,000 ピクセルです。 縦横比が 2:1 の画像に対する最大許容サイズは 7000 x 3500 です。 ただし、通常のデスクトップ画面の場合、4096 x 2048 ピクセルで十分です。
+   Dynamic Media Classic には、25,000,000 ピクセルという制限があります。縦横比が 2:1 の画像の最大許容サイズは 7000 x 3500 です。ただし、通常のデスクトップ画面の場合、4096 x 2048 ピクセルで十分です。
 
    >[!NOTE]
    >
-   >許容される最大画像サイズ以内の画像のみがサポートされます。サイズ制限を超える画像を要求すると、403 応答が生成されます。
+   >許容される最大画像サイズ以内の画像のみがサポートされます。サイズ制限を超える画像に対するリクエストに対しては、403 応答が返されます。
 
 1. 以下 **[要求属性]** 見出しには、次の操作を行います。
 
@@ -68,19 +68,19 @@ ht-degree: 42%
 
 1. 右下隅でをタップします。 **[!UICONTROL 閉じる]**.
 
-### パノラマメディア コンポーネントのトラブルシューティング {#troubleshooting-the-panoramic-media-wcm-component}
+### パノラマメディアコンポーネントのトラブルシューティング {#troubleshooting-the-panoramic-media-wcm-component}
 
 画像を **[!UICONTROL パノラマメディア]** WCM のコンポーネントが折りたたまれ、コンポーネントプレースホルダーが折りたたまれた場合、次のトラブルシューティングをおこなうことができます。
 
-* 403 Forbidden エラーが発生する場合は、要求された画像のサイズが大きすぎることが原因となっている可能性があります。以下を確認します。 *返信画像のサイズ制限* の設定 [Dynamic Media Classicの設定](#configuring-dynamic-media-classic-scene).
+* 403 Forbidden エラーが発生した場合は、要求された画像サイズが大きすぎることが原因である可能性があります。 以下を確認します。 *返信画像のサイズ制限* の設定 [Dynamic Media Classicの設定](#configuring-dynamic-media-classic-scene).
 
 * の *無効なロック* ( アセットまたは *解析エラー* ページに表示された場合は、 **[!UICONTROL 要求の難読化モード]** および **[!UICONTROL リクエストロックモード]** をクリックして、これらが無効になっていることを確認します。
 * 汚染されたキャンバスエラーの場合は、 **[!UICONTROL ルールセット定義ファイルのパスと CTN の無効化]** を設定します。
-* サポートされている制限を超えるサイズの画像を要求した後に画質が大幅に低下した場合は、**[!UICONTROL JPEG エンコード属性／画質]**&#x200B;の設定が空でないことを確認します。一般的な **[!UICONTROL 品質]** フィールドが `95`. 設定は、 **[!UICONTROL Image Server 公開]** ページ。 ページにアクセスするには、 [Dynamic Media Classicの設定](#configuring-dynamic-media-classic-scene).
+* サポートされている制限を超えるサイズの画像リクエストの後、画質が非常に低くなった場合は、 **[!UICONTROL JPEGエンコーディング属性/画質]** の設定が空ではありません。 「**[!UICONTROL 画質]**」フィールドの一般的な設定は、`95` です。設定は、 **[!UICONTROL Image Server 公開]** ページ。 ページにアクセスするには、 [Dynamic Media Classicの設定](#configuring-dynamic-media-classic-scene).
 
 ## パノラマ画像のプレビュー {#previewing-panoramic-images}
 
-詳しくは、[アセットのプレビュー](previewing-assets.md)を参照してください。
+詳しくは、 [アセットのプレビュー](previewing-assets.md).
 
 ## パノラマ画像の公開 {#publishing-panoramic-images}
 

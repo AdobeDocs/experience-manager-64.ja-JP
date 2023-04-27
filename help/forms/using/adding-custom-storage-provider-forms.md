@@ -1,7 +1,7 @@
 ---
 title: ドラフトと送信コンポーネントのカスタムストレージ
 seo-title: Custom storage for drafts and submissions component
-description: ドラフトおよび送信用のユーザーデータの保存場所をカスタマイズする方法を説明します。
+description: ドラフトと送信に関するユーザーデータのストレージをカスタマイズする方法を参照してください。
 seo-description: See how to customize the storage of user data for drafts and submissions.
 uuid: ac2e80ee-a9c7-44e6-801e-fe5a840cb7f8
 content-type: reference
@@ -13,7 +13,7 @@ exl-id: 22f78940-de5f-4e16-b1f8-c3762d81802b
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '311'
-ht-degree: 100%
+ht-degree: 51%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-AEM Forms ではフォームをドラフトとして保存できます。ドラフト機能により、作業中のフォームを維持できるようになります。任意のデバイスから後でフォームを完成させて、送信できます
+AEM Formsでは、フォームをドラフトとして保存できます。 ドラフト機能を使用すると、作業中のフォームを維持できます。このフォームを後から入力して、任意のデバイスから送信することができます。
 
-デフォルトでは、AEM Forms はフォームのドラフトと送信に関連付けられたユーザーデータをパブリッシュインスタンスの `/content/forms/fp` ノードに保存します。さらに、AEM Forms ポータルコンポーネントではデータサービスを使用でき、これを使用するとドラフトと送信のユーザーデータの保存の実装をカスタマイズできます。例えば、ユーザーデータをデータストアに保存できます。
+デフォルトでは、AEM Forms はフォームのドラフトと送信に関連付けられたユーザーデータをパブリッシュインスタンスの `/content/forms/fp` ノードに保存します。また、AEM Formsポータルコンポーネントはデータサービスを提供し、これを使用して、ドラフトと送信用のユーザーデータの保存の実装をカスタマイズできます。 例えば、ユーザーデータをデータストアに格納できます。
 
 ## 前提条件  {#prerequisites}
 
@@ -184,7 +184,7 @@ public interface SubmitDataService {
 }
 ```
 
-フォームポータルでは、UUID（Universally Unique Identifier）の概念を使用して、ドラフトや送信済みフォームそれぞれに一意の ID を生成します。自分の一意の ID を作成することもできます。FPKeyGeneratorService インターフェースを実装して、メソッドをオーバーライドし、カスタムの論理を開発してドラフトや送信済みフォームそれぞれに一意の ID を生成することができます。また、カスタム ID 生成の実装のサービスランクを 0 より高く設定します。これにより、デフォルトの実装ではなくカスタムの実施が確実に使用されるようになります。
+Forms Portal では、UUID(Universally Unique Identifier) の概念を使用して、ドラフトおよび送信されたフォームごとに一意の ID を生成します。 独自の一意の ID を生成することもできます。 FPKeyGeneratorService インターフェースを実装して、メソッドをオーバーライドし、カスタムの論理を開発してドラフトや送信済みフォームそれぞれに一意の ID を生成することができます。また、カスタム ID 生成実装のサービスランクを 0 より大きく設定します。 これにより、デフォルトの実装の代わりにカスタム実装が必ず使用されるようになります。
 
 ```java
 public interface FPKeyGeneratorService {
@@ -199,7 +199,7 @@ public interface FPKeyGeneratorService {
 }
 ```
 
-上記のコードを使用して生成したカスタム ID のサービスの順位付けを上げるには、以下の注釈を使用します。
+以下の注釈を使用して、上記のコードで生成されたカスタム ID のサービスランキングを上げることができます。
 
 `@Properties(value = { @Property(name = "service.ranking", intValue = 15) } )`
 

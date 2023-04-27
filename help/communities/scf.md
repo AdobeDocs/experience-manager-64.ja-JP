@@ -1,7 +1,7 @@
 ---
 title: ソーシャルコンポーネントフレームワーク
 seo-title: Social Component Framework
-description: ソーシャルコンポーネントフレームワーク（SCF）によって、コミュニティコンポーネントの設定、カスタマイズおよび拡張のプロセスが簡素化されます
+description: ソーシャルコンポーネントフレームワーク (SCF) を使用すると、コミュニティコンポーネントの設定、カスタマイズ、拡張を簡単におこなうことができます
 seo-description: The social component framework (SCF) simplifies the process of configuring, customizing, and extending Communities components
 uuid: 23b4418d-b91c-46fc-bf42-1154ef79fe5a
 contentOwner: msm-service
@@ -13,13 +13,13 @@ exl-id: 9264c888-a583-40eb-9178-273146f8a12b
 source-git-commit: a70f874ad7fcae59ee4c6ec20e23ffb2e339590b
 workflow-type: tm+mt
 source-wordcount: '1488'
-ht-degree: 52%
+ht-degree: 1%
 
 ---
 
 # ソーシャルコンポーネントフレームワーク {#social-component-framework}
 
-ソーシャルコンポーネントフレームワーク（SCF）によって、サーバー側とクライアント側の両方で、コミュニティコンポーネントの設定、カスタマイズおよび拡張のプロセスが簡素化されます。
+ソーシャルコンポーネントフレームワーク (SCF) を使用すると、サーバー側とクライアント側の両方で Communities コンポーネントを設定、カスタマイズ、拡張するプロセスが簡単になります。
 
 フレームワークの利点：
 
@@ -30,25 +30,25 @@ ht-degree: 52%
 * **アクセス可能**:HTTP API は、任意のクライアント（モバイルアプリを含む）からの投稿をサポートしています
 * **ポータブル**:あらゆるテクノロジーで構築された Web ページに統合/埋め込み
 
-インタラクティブな[コミュニティコンポーネントガイド](components-guide.md)を使用して、オーサーまたはパブリッシュインスタンスについて確認してください。
+インタラクティブを使用してオーサーインスタンスまたはパブリッシュインスタンスで参照する [コミュニティコンポーネントガイド](components-guide.md).
 
 ## 概要 {#overview}
 
-SCF では、コンポーネントは SocialComponent POJO、Handlebars JS テンプレート（コンポーネントをレンダリングするため）および CSS（コンポーネントのスタイルを設定するため）で構成されます。
+SCF では、コンポーネントは、SocialComponent POJO、Handlebars JS テンプレート（コンポーネントをレンダリングする）、および CSS（コンポーネントのスタイルを設定する）で構成されます。
 
-Handlebars JS テンプレートでは、モデル／ビュー JS コンポーネントを拡張して、クライアントでのコンポーネントとのユーザーインタラクションを処理できます。
+Handlebars JS テンプレートは、モデル/ビュー JS コンポーネントを拡張して、クライアント上のコンポーネントとのユーザーインタラクションを処理できます。
 
-コンポーネントがデータの変更をサポートする必要がある場合は、従来の Web アプリケーションでのモデル／データオブジェクトと同様のデータの編集／保存をサポートするために、SocialComponent API の実装を記述できます。また、操作リクエストの処理、ビジネスロジックの実行、およびモデル/データオブジェクトでの API の呼び出しを行うために、操作（コントローラー）と操作サービスを追加できます。
+データの変更をサポートする必要があるコンポーネントの場合は、従来の Web アプリケーションのモデル/データオブジェクトと同様に、データの編集/保存をサポートするように、SocialComponent API の実装を記述できます。 また、操作リクエストの処理、ビジネスロジックの実行、およびモデル/データオブジェクトでの API の呼び出しを行うために、操作（コントローラー）と操作サービスを追加できます。
 
-クライアントが必要とするデータをビューレイヤーまたは HTTP クライアントに提供するために、SocialComponent API を拡張できます。
+SocialComponent API を拡張して、ビューレイヤーまたは HTTP クライアントに対してクライアントが必要とするデータを提供できます。
 
-### クライアントに対するページのレンダリング方法 {#how-pages-are-rendered-for-client}
+### クライアント用のページのレンダリング方法 {#how-pages-are-rendered-for-client}
 
 ![chlimage_1-25](assets/chlimage_1-25.png)
 
-### コンポーネントのカスタマイズおよび拡張 {#component-customization-and-extension}
+### コンポーネントのカスタマイズと拡張 {#component-customization-and-extension}
 
-コンポーネントをカスタマイズまたは拡張するには、今後のリリースへのアップグレードプロセスを簡素化する /apps ディレクトリに対してオーバーレイおよび拡張のみを記述します。
+コンポーネントをカスタマイズまたは拡張するには、オーバーレイと拡張のみを/apps ディレクトリに書き込み、将来のリリースへのアップグレードプロセスを簡素化します。
 
 * スキニング用
    * 次の項目のみ [CSS で編集が必要](client-customize.md#skinning-css)
@@ -67,23 +67,23 @@ Handlebars JS テンプレートでは、モデル／ビュー JS コンポー�
 
 ## サーバー側フレームワーク {#server-side-framework}
 
-このフレームワークでは、サーバー上の機能にアクセスし、クライアントとサーバー間のインタラクションをサポートするための API が提供されます。
+このフレームワークは、サーバー上の機能にアクセスし、クライアントとサーバーの間のインタラクションをサポートする API を提供します。
 
 ### Java API {#java-apis}
 
-Java API では、継承またはサブクラス化が容易な抽象クラスおよびインターフェイスが提供されます。
+Java API は、簡単に継承またはサブクラス化される抽象クラスおよびインターフェイスを提供します。
 
-メインクラスについては、[サーバー側のカスタマイズ](server-customize.md)ページで説明します。
+メインクラスは、 [サーバー側のカスタマイズ](server-customize.md) ページ。
 
 訪問 [ストレージリソースプロバイダの概要](srp.md) を参照してください。
 
 ### HTTP API {#http-api}
 
-HTTP API によって、PhoneGap アプリ、ネイティブアプリ、その他の統合およびマッシュアップについて、カスタマイズの容易さとクライアントプラットフォームの選択がサポートされます。さらに、HTTP API を使用すると、コミュニティサイトをクライアントなしでサービスとして実行できるので、フレームワークコンポーネントを任意のテクノロジーで構築された任意の Web ページに統合できます。
+HTTP API は、PhoneGap アプリ、ネイティブアプリ、その他の統合やマッシュアップ用に、カスタマイズの容易さとクライアントプラットフォームの選択をサポートします。 さらに、HTTP API を使用すると、コミュニティサイトをクライアントなしでサービスとして実行できるので、フレームワークコンポーネントを任意のテクノロジーで構築された任意の Web ページに統合できます。
 
-### HTTP API - GET 要求 {#http-api-get-requests}
+### HTTP API -GETリクエスト {#http-api-get-requests}
 
-すべての SocialComponent に対して、フレームワークによって HTTP ベースの API エンドポイントが提供されます。このエンドポイントにアクセスするには、「.social.json」セレクターと拡張子を使用してGETリクエストをリソースに送信します。 Sling を使用して、要求が `DefaultSocialGetServlet`.
+すべての SocialComponent に対して、フレームワークは HTTP ベースの API エンドポイントを提供します。 このエンドポイントにアクセスするには、「.social.json」セレクターと拡張子を使用してGETリクエストをリソースに送信します。 Sling を使用して、要求が `DefaultSocialGetServlet`.
 
 ：
 `DefaultSocialGetServlet`
@@ -96,25 +96,25 @@ HTTP API によって、PhoneGap アプリ、ネイティブアプリ、その�
 
 **`GET Request`**
 
-デフォルトの GET Servlet が、SocialComponent がカスタマイズ可能な JSON で応答する .social.json 要求をリスニングします。
+デフォルトのGETサーブレットは、SocialComponent がカスタマイズ可能な JSON を使用して応答する.social.json 要求をリッスンします。
 
 ![chlimage_1-26](assets/chlimage_1-26.png)
 
-### HTTP API - POST 要求 {#http-api-post-requests}
+### HTTP API -POSTリクエスト {#http-api-post-requests}
 
-GET（読み取り）操作に加え、コンポーネントに対するその他の操作（作成、更新、削除など）を可能にするエンドポイントパターンがフレームワークによって定義されます。これらのエンドポイントは、入力を受け入れ、HTTP ステータスコードまたは JSON 応答オブジェクトを使用して応答する HTTP API です。
+GET（読み取り）操作に加えて、フレームワークは、作成、更新、削除など、コンポーネントに対する他の操作を有効にするエンドポイントパターンを定義します。 これらのエンドポイントは、入力を受け入れ、HTTP ステータスコードまたは JSON 応答オブジェクトを使用して応答する HTTP API です。
 
-このフレームワークエンドポイントパターンにより、CUD 操作は拡張、再利用およびテストが可能になります。
+このフレームワークエンドポイントパターンにより、CUD 操作が拡張可能で、再利用可能で、テスト可能になります。
 
 **`POST Request`**
 
-SocialComponent 操作ごとに Sling POST :operation があります。各操作のビジネスロジックとメンテナンスコードは、HTTP API を通じて、または OSGi サービスとして他の場所からアクセスできる OperationService にラップされます。 前/後のアクションに対するプラグ可能な操作拡張をサポートするフックが提供されます。
+SlingPOST:operation は、すべての SocialComponent 操作に対して存在します。 各操作のビジネスロジックとメンテナンスコードは、HTTP API を通じて、または OSGi サービスとして他の場所からアクセスできる OperationService にラップされます。 前/後のアクションに対するプラグ可能な操作拡張をサポートするフックが提供されます。
 
 ![chlimage_1-27](assets/chlimage_1-27.png)
 
-### ストレージリソースプロバイダー（SRP） {#storage-resource-provider-srp}
+### ストレージリソースプロバイダー (SRP) {#storage-resource-provider-srp}
 
-[コミュニティコンテンツストア](working-with-srp.md)に格納された UGC の処理については、以下を参照してください。
+に保存された UGC の処理について学ぶには、以下を実行します。 [コミュニティコンテンツストア](working-with-srp.md)を参照してください。
 
 * [ストレージリソースプロバイダの概要](srp.md)  — 概要とリポジトリ使用の概要
 * [SRP と UGC の基本事項](srp-and-ugc.md) - SRP API ユーティリティメソッドと例
@@ -122,48 +122,48 @@ SocialComponent 操作ごとに Sling POST :operation があります。各操�
 
 ### サーバー側のカスタマイズ {#server-side-customizations}
 
-サーバー側のコミュニティコンポーネントのビジネスロジックおよび動作のカスタマイズについて詳しくは、[サーバー側のカスタマイズ](server-customize.md)を参照してください。
+訪問 [サーバー側のカスタマイズ](server-customize.md) サーバー側のコミュニティコンポーネントのビジネスロジックと動作のカスタマイズに関する情報。
 
 ## Handlebars JS テンプレート言語 {#handlebars-js-templating-language}
 
 新しいフレームワークの顕著な変更の 1 つは、 [Handlebars JS](https://handlebarsjs.com/) テンプレート言語 (HBS)：サーバークライアントレンダリング用の一般的なオープンソーステクノロジーです。
 
-HBS スクリプトは、単純で、ロジックがなく、サーバーとクライアントの両方でコンパイルされ、オーバーレイやカスタマイズが容易であり、HBS ではクライアント側のレンダリングがサポートされているのでクライアント UX と自然にバインドします。
+HBS スクリプトはシンプルでロジックがなく、サーバーとクライアントの両方でコンパイルし、オーバーレイとカスタマイズが容易で、HBS はクライアント側のレンダリングをサポートしているので、クライアント UX と自然にバインドされます。
 
-このフレームワークでは、SocialComponent の開発に便利な複数の [Handlebars ヘルパー](handlebars-helpers.md)が提供されます。
+このフレームワークには、次のような機能が用意されています。 [Handlebars ヘルパー](handlebars-helpers.md) これは、SocialComponents を開発する際に役立ちます。
 
-サーバーで、Sling は GET 要求を解決するときに、要求への応答に使用されるスクリプトを識別します。スクリプトが HBS テンプレート (.hbs) の場合、Sling は要求を Handlebars エンジンに委任します。 次に、Handlebars Engine は、適切な SocialComponentFactory から SocialComponent を取得し、コンテキストを構築し、HTMLをレンダリングします。
+サーバー上で、Sling がGETリクエストを解決すると、そのリクエストの応答に使用されるスクリプトが識別されます。 スクリプトが HBS テンプレート (.hbs) の場合、Sling は要求を Handlebars エンジンに委任します。 次に、Handlebars Engine は、適切な SocialComponentFactory から SocialComponent を取得し、コンテキストを構築し、HTMLをレンダリングします。
 
 ### アクセス制限なし {#no-access-restriction}
 
-Handlebars（HBS）テンプレートファイル（.hbs）は、.jsp および .html テンプレートファイルに似ていますが、クライアントブラウザーとサーバーの両方でレンダリングに使用できる点が異なります。そのため、クライアント側テンプレートを要求するクライアントブラウザーは、.hbs ファイルをサーバーから受け取ります。
+Handlebars(HBS) テンプレートファイル (.hbs) は、.jsp および.html テンプレートファイルに似ていますが、クライアントブラウザーとサーバーの両方でレンダリングに使用できます。 したがって、クライアント側テンプレートを要求するクライアントブラウザーは、サーバーから.hbs ファイルを受け取ります。
 
-これには、sling 検索パス内のすべての HBS テンプレート（/libs/ または /apps の下の .hbs ファイル）を、オーサーまたはパブリッシュから任意のユーザーが取得できる必要があります。
+これには、Sling 検索パス内のすべての HBS テンプレート（/libs/または/apps 下の任意の.hbs ファイル）を、オーサーまたはパブリッシュから任意のユーザーが取得できる必要があります。
 
-.hbs ファイルへの HTTP アクセスは禁止できません。
+.hbs ファイルへの HTTP アクセスは禁止されていない可能性があります。
 
-### コミュニティコンポーネントの追加またはインクルード {#add-or-include-a-communities-component}
+### コミュニティコンポーネントの追加または追加 {#add-or-include-a-communities-component}
 
-ほとんどのコミュニティコンポーネントは、Sling アドレス可能リソースとして追加する必要があります。**&#x200B;一部のコミュニティコンポーネントは、 *含む* を既存のリソース以外としてテンプレートに追加し、ユーザー生成コンテンツ (UGC) を書き込む場所を動的に組み込み、カスタマイズできるようにします。
+ほとんどのコミュニティコンポーネントは、 *追加済み* Sling アドレス可能リソースとして。 一部のコミュニティコンポーネントは、 *含む* を既存のリソース以外としてテンプレートに追加し、ユーザー生成コンテンツ (UGC) を書き込む場所を動的に組み込み、カスタマイズできるようにします。
 
 どちらの場合も、コンポーネントの [必要なクライアントライブラリ](clientlibs.md) は、も存在する必要があります。
 
-**コンポーネントの追加**
+**コンポーネントを追加**
 
-コンポーネントの追加は、コンポーネントブラウザー（サイドキック）からページにオーサー編集モードでドラッグされたときなどに、リソース（コンポーネント）のインスタンスを追加するプロセスです。
+コンポーネントの追加とは、コンポーネントブラウザー（サイドキック）から作成者編集モードでページにドラッグした場合など、リソース（コンポーネント）のインスタンスを追加するプロセスを指します。
 
-結果は、同位ノードの下の JCR 子ノードであり、これは Sling アドレス可能です。
+結果は、par ノードの下の JCR 子ノード（Sling アドレス可能）になります。
 
-**コンポーネントのインクルード**
+**コンポーネントを含める**
 
 コンポーネントを含めると、 [「存在しない」リソース](srp.md#for-non-existing-resources-ners) （JCR ノードなし）をテンプレート内に追加します（スクリプト言語の使用など）。
 
 AEM 6.1 以降では、コンポーネントが追加される代わりに動的に含まれる場合、コンポーネントのプロパティをオーサー*デザイン*モードで編集できます。
 
-一部の AEM Communities コンポーネントのみを動的にインクルードできます。次のようになります。
+動的に含めることができるのは、一部のAEM Communitiesコンポーネントのみです。 次のようになります。
 
 * [コメント](essentials-comments.md)
-* [評価](rating-basics.md)
+* [レーティング](rating-basics.md)
 * [レビュー](reviews-basics.md)
 * [投票](essentials-voting.md)
 
@@ -173,7 +173,7 @@ AEM 6.1 以降では、コンポーネントが追加される代わりに動的
 
 `{{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}`
 
-**JSP** を使用する場合、リソースはタグ [cq:include](../../help/sites-developing/taglib.md#lt-cq-include) を使用してインクルードされます。
+**JSP を使用する場合**&#x200B;の場合、リソースはタグを使用して [cq:include](../../help/sites-developing/taglib.md#lt-cq-include):
 
 ```
 <cq:include path="votes" 
@@ -182,23 +182,23 @@ AEM 6.1 以降では、コンポーネントが追加される代わりに動的
 
 >[!NOTE]
 >
->コンポーネントを、テンプレートに追加またはインクルードせずに、ページに動的に追加するには、[コンポーネントのサイドローディング](sideloading.md)を参照してください。
+>テンプレートにコンポーネントを追加または追加する代わりに、ページに動的に追加するには、 [コンポーネントのサイドロード](sideloading.md).
 
 ### Handlebars ヘルパー {#handlebars-helpers}
 
-SCF で使用できるカスタムヘルパーのリストおよび説明については、[SCF Handlebars ヘルパー](handlebars-helpers.md)を参照してください。
+詳しくは、 [SCF Handlebars ヘルパー](handlebars-helpers.md) SCF で使用可能なカスタムヘルパーの一覧と説明。
 
 ## クライアント側フレームワーク {#client-side-framework}
 
-### モデル - ビュー JavaScript フレームワーク {#model-view-javascript-framework}
+### Model-View JavaScript フレームワーク {#model-view-javascript-framework}
 
-このフレームワークには、リッチでインタラクティブなコンポーネントの開発を促進するために、[Backbone.js](https://www.backbonejs.org/)（モデル - ビュー JavaScript フレームワーク）という拡張が含まれています。オブジェクト指向の特性は、拡張可能/再利用可能なフレームワークをサポートします。 クライアントとサーバー間の通信は、HTTP API を使用して簡単になります。
+フレームワークには、 [Backbone.js](https://www.backbonejs.org/)：モデル表示の JavaScript フレームワークで、リッチでインタラクティブなコンポーネントの開発を容易にします。 オブジェクト指向の特性は、拡張可能/再利用可能なフレームワークをサポートします。 クライアントとサーバー間の通信は、HTTP API を使用して簡単になります。
 
 このフレームワークでは、サーバー側の Handlebars テンプレートを利用して、クライアント用にコンポーネントをレンダリングします。 モデルは、HTTP API によって生成された JSON 応答に基づいています。 ビューは、Handlebars テンプレートによって生成されるHTMLに結合され、インタラクティビティを提供します。
 
 ### CSS の規則 {#css-conventions}
 
-CSS クラスの定義と使用に推奨される規則を以下に示します。
+CSS クラスを定義および使用する際の推奨規則を次に示します。
 
 * 明確に名前空間化された CSS クラスセレクター名を使用し、「heading」、「image」などの汎用名を使用しないでください。
 * 特定のクラスセレクタースタイルを定義して、CSS スタイルシートがページ上の他の要素やスタイルとうまく連携するようにします。 例：`.social-forum .topic-list .li { color: blue; }`
@@ -206,21 +206,21 @@ CSS クラスの定義と使用に推奨される規則を以下に示します�
 
 ### クライアント側のカスタマイズ {#client-side-customizations}
 
-クライアント側でのコミュニティコンポーネントの外観と動作をカスタマイズするには、以下に関する情報が含まれている[クライアント側のカスタマイズ](client-customize.md)を参照してください。
+クライアント側のコミュニティコンポーネントの外観と動作をカスタマイズするには、 [クライアント側のカスタマイズ](client-customize.md)（次の情報を含む）:
 
 * [オーバーレイ](client-customize.md#overlays)
-* [拡張](client-customize.md#extensions)
-* [HTML マークアップ](client-customize.md#htmlmarkup)
-* [CSS のスキンの適用](client-customize.md#skinning-css)
+* [拡張子](client-customize.md#extensions)
+* [HTMLマークアップ](client-customize.md#htmlmarkup)
+* [CSS のスキニング](client-customize.md#skinning-css)
 * [JavaScript の拡張](client-customize.md#extending-javascript)
-* [SCF の clientlib](client-customize.md#clientlibs-for-scf)
+* [SCF の clientlibs](client-customize.md#clientlibs-for-scf)
 
 ## 機能とコンポーネントの基本事項 {#feature-and-component-essentials}
 
-開発者にとっての基本情報が、[機能とコンポーネントの基本事項](essentials.md)の節で説明されています。
+開発者向けの重要な情報については、 [機能とコンポーネントの基本事項](essentials.md) 」セクションに入力します。
 
-開発者向けの追加情報については、[コーディングのガイドライン](code-guide.md)の節を参照してください。
+開発者に関する追加情報については、 [コーディングのガイドライン](code-guide.md) 」セクションに入力します。
 
 ## トラブルシューティング {#troubleshooting}
 
-一般的な課題および既知の問題が、[トラブルシューティング](troubleshooting.md)の節で説明されています。
+一般的な問題と既知の問題については、 [トラブルシューティング](troubleshooting.md) 」セクションに入力します。

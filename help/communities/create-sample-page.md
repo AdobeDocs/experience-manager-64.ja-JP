@@ -13,38 +13,38 @@ exl-id: 00ac29fb-cc8f-4dd9-a261-839a4bf664c2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '411'
-ht-degree: 72%
+ht-degree: 6%
 
 ---
 
 # サンプルページの作成 {#create-a-sample-page}
 
-AEM Communities 6.1 以降では、サンプルページを作成する最も簡単な方法は、1 つのページ機能のみで構成されるシンプルなコミュニティサイトを作成することです。
+AEM 6.1 Communities 以降、サンプルページを作成する最も簡単な方法は、単に Page 機能で構成されるシンプルなコミュニティサイトを作成することです。
 
-この場合、[オーサリング用にコンポーネントを有効](basics.md#accessing-communities-components)にできるように parsys コンポーネントが含まれます。
+これにより、parsys コンポーネントが含まれ、 [オーサリング用コンポーネントの有効化](basics.md#accessing-communities-components).
 
-サンプルコンポーネントを調査するためのもう 1 つのオプションは、[コミュニティコンポーネントガイド](components-guide.md)で提示される機能を使用することです。
+サンプルコンポーネントを調査するもう 1 つの方法は、 [コミュニティコンポーネントガイド](components-guide.md).
 
-## コミュニティサイトの作成 {#create-a-community-site}
+## コミュニティサイトを作成 {#create-a-community-site}
 
-これは、[AEM Communities の使用の手引き](getting-started.md)に記載されている新しいサイトの作成とよく似ています。
+これは、 [AEM Communitiesの概要](getting-started.md).
 
-主な違いは、このチュートリアルでは、[ページ機能](functions.md#page-function)のみを含む新しいコミュニティサイトテンプレートを作成して、他の機能がないシンプルなコミュニティサイトを作成する点です（ただし、すべてのコミュニティサイトの基礎となる、あらかじめ接続された機能は含まれます）。
+主な違いは、このチュートリアルでは、 [ページ関数](functions.md#page-function) 他の機能を使用しないシンプルなコミュニティサイトを作成する場合（すべてのコミュニティサイトに基本的な有線化済み機能以外）。
 
 ### 新しいサイトテンプレートの作成 {#create-new-site-template}
 
-初めに、シンプルな[コミュニティサイトテンプレート](sites.md)を作成します。
+作業を開始するには、シンプルな [コミュニティサイトテンプレート](sites.md).
 
 オーサーインスタンスのグローバルナビゲーションから、を選択します。 **[!UICONTROL ツール/コミュニティ/サイトテンプレート]**.
 
 ![chlimage_1-82](assets/chlimage_1-82.png)
 
-*  `Create button`
+* 選択 `Create button`
 * 基本情報
 
    * `Name`:単一ページテンプレート
    * `Description`:単一の Page 関数で構成されるテンプレートです。
-   * 選択 `Enabled`
+   * 「`Enabled`」を選択します。
 
 ![chlimage_1-83](assets/chlimage_1-83.png)
 
@@ -54,14 +54,14 @@ AEM Communities 6.1 以降では、サンプルページを作成する最も簡
    * 「構成関数の詳細」に、次のように入力します。
 
       * `Title`:単一ページ
-      * `URL`: page
+      * `URL`: ページ
 
 ![chlimage_1-84](assets/chlimage_1-84.png)
 
 * 選択 **`Save`** （設定用）
 * 選択 **`Save`** サイトテンプレート用
 
-### 新しいコミュニティサイトの作成 {#create-new-community-site}
+### 新しいコミュニティサイトを作成 {#create-new-community-site}
 
 次に、シンプルなサイトテンプレートに基づいて新しいコミュニティサイトを作成します。
 
@@ -71,13 +71,13 @@ AEM Communities 6.1 以降では、サンプルページを作成する最も簡
 
 * 選択 **`Create`** アイコン
 
-* 手順 `1 - Site Template`
+* ステップ `1 - Site Template`
 
    * `Title`:シンプルなコミュニティサイト
    * `Description`:コミュニティサイトは、実験用の単一のページで構成されます。
    * `Community Site Root: (leave blank)`
    * `Community Site Base Language: English`
-   * `Name`: sample
+   * `Name`:サンプル
 
       * url = http://localhost:4502/content/sites/sample
    * `Template`:選択 `Single Page Template`
@@ -85,17 +85,17 @@ AEM Communities 6.1 以降では、サンプルページを作成する最も簡
 
 ![chlimage_1-86](assets/chlimage_1-86.png)
 
-*  `Next`
-* 手順 `2 - Design`
+* 選択 `Next`
+* ステップ `2 - Design`
 
    * 任意のデザインを選択
 
-*  `Next`
-*  `Next`
+* 選択 `Next`
+* 選択 `Next`
 
    （すべてのデフォルト設定を受け入れる）
 
-*  `Create`
+* 選択 `Create`
 
 ![chlimage_1-87](assets/chlimage_1-87.png)
 
@@ -103,20 +103,20 @@ AEM Communities 6.1 以降では、サンプルページを作成する最も簡
 
 ![chlimage_1-88](assets/chlimage_1-88.png)
 
-[コミュニティサイトコンソール](sites-console.md)から、「発行」アイコンを選択して、サイトを http://localhost:4503（デフォルト）に公開します。
+次の [コミュニティサイトコンソール](sites-console.md)で、サイトを公開する公開アイコンを選択します ( デフォルトではhttp://localhost:4503に設定されています )。
 
-## オーサー環境でのサイトの編集モードでのオープン {#open-the-site-on-author-in-edit-mode}
+## オーサー環境で編集モードでサイトを開く {#open-the-site-on-author-in-edit-mode}
 
 ![chlimage_1-89](assets/chlimage_1-89.png)
 
-「サイトを開く」アイコンを選択して、編集モードでサイトを表示します。
+「サイトを開く」アイコンを選択して、サイトを編集モードで表示します。
 
 URL は次のようになります [http://localhost:4502/editor.html/content/sites/sample/en.html](http://localhost:4502/editor.html/content/sites/sample/en.html)
 
 ![chlimage_1-90](assets/chlimage_1-90.png)
 
-シンプルなホームページでは、コミュニティ機能とテンプレートを介してあらかじめ接続された機能を確認し、コミュニティコンポーネントの追加や設定を試してみることができます。
+簡単なホームページでは、コミュニティの機能やテンプレートを通じて事前に接続されている内容を確認し、コミュニティコンポーネントの追加や設定を行うことができます。
 
-## パブリッシュ環境でのサイトの表示 {#view-site-on-publish}
+## 公開時にサイトを表示 {#view-site-on-publish}
 
-ページを公開したら、[パブリッシュインスタンス](http://localhost:4503/content/sites/sample/en.html)でページを開いて、匿名のサイト訪問者、サインインしたメンバーまたは管理者として機能を確認します。オーサー環境に表示される「管理」リンクは、管理者がログインしない限り、パブリッシュ環境には表示されません。
+ページを公開したら、 [発行インスタンス](http://localhost:4503/content/sites/sample/en.html) を使用して、匿名のサイト訪問者、サインインしているメンバー、または管理者としての機能を試すことができます。 オーサー環境に表示される「管理」リンクは、管理者がログインしない限り、パブリッシュ環境には表示されません。

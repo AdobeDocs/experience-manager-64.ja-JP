@@ -1,7 +1,7 @@
 ---
 title: Designer のインストールと設定
 seo-title: Installing and configuring Designer
-description: WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。ここでは、スタンドアロンの Designer をインストールする方法について説明します。
+description: WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。スタンドアロン Designer のインストール方法を説明します。
 seo-description: Designer is available as a stand-alone installer and is also bundled with Workbench. Learn how to install stand-alone Designer.
 uuid: 46f4a640-092c-46db-a0b2-8e25501a00b9
 contentOwner: gtalwar
@@ -15,7 +15,7 @@ exl-id: 9791ffd5-04c4-4eed-8e99-b390e539197d
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '142'
-ht-degree: 91%
+ht-degree: 80%
 
 ---
 
@@ -23,14 +23,14 @@ ht-degree: 91%
 
 WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。Designer 用のスタンドアロンインストーラーを使用する場合は、次の手順に従います。
 
-1. Designer のインストーラーをダウンロードする方法については、Adobe サポートまでお問い合わせください。
+1. Adobeサポートに連絡して、Designer インストーラーをダウンロードしてください。
 
    >[!NOTE]
    >
    >旧バージョンの Designer がインストールされている場合は、そのバージョンをアンインストールしてから、以下の手順を実行してください。
 
-1. setup.exe をダブルクリックして Designer のインストーラーを起動します。
-1. 先に進んでユーザーの詳細とユーザー情報画面のシリアル番号を入力します。
+1. setup.exe をダブルクリックして、Designer インストーラーを起動します。
+1. 続行して、「パーソナライズ機能」画面で詳細とシリアル番号を入力します。
 1. 使用許諾契約に同意する場合は、「次へ」をクリックして先に進みます。
 1. （オプション）Designer を選択した場所にインストールする場合は、既定のインストールパスを変更します。「次へ」をクリックします。
 1. 設定を変更するには、「戻る」をクリックします。Designer をインストールするには、「インストール」をクリックします。

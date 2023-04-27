@@ -1,7 +1,7 @@
 ---
 title: HTML5 フォームのための CSS スタイルの作成
 seo-title: Creating CSS styles for HTML5 forms
-description: 'HTML フォーム要素と関連付けられている CSS クラスを変更して、HTML5 フォームの外観を変更する方法について説明します。 '
+description: HTMLフォーム要素に関連付けられた CSS クラスを変更して、HTML5 フォームの外観を変更する方法を説明します。
 seo-description: Learn how to change the appearance of HTML5 forms by modifying the CSS class associated with the HTML form element.
 uuid: 43c689b4-243c-43de-a8be-1eef10d75295
 contentOwner: robhagat
@@ -14,21 +14,21 @@ exl-id: 9e381e71-63ff-41ab-a6ec-9f92447b65a0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '812'
-ht-degree: 87%
+ht-degree: 33%
 
 ---
 
 # HTML5 フォームのための CSS スタイルの作成 {#creating-css-styles-for-html-forms}
 
-XFA ベースのフォームテンプレートの HTML5 レンダリングは、さまざまな HTML 要素で構成されています。これらの要素は一定の順序で整列されます。すべての要素には、適切に定義された CSS クラスがあります。これらの CSS クラスを使用して、要素の外観を選択し変更することができます。
+XFA ベースのフォームテンプレートのHTML5 レンディションは、複数のHTML要素で構成されます。 これらの要素は、順に並べられます。 すべての要素には、適切に定義された CSS クラスがあります。 これらの CSS クラスを使用して、要素の外観を選択および変更できます。
 
 >[!NOTE]
 >
->CSS クラスで、幅、高さ、境界線厚さ、上、左、右、下、パディング、マージン、およびその他の位置とサイズの属性は変更しないでください。位置とサイズの属性を変更すると、フォームのレイアウトが変わります。
+>CSS クラスで、width、height、border-thickness、top、left、right、bottom、padding、margin、およびその他の position 属性と size 属性の値を変更しないでください。 位置およびサイズの属性を変更すると、フォームのレイアウトが変更されます。
 
-## 要素の CSS クラス {#css-classes-nbsp-for-elements-nbsp}
+## 要素の CSS クラス  {#css-classes-nbsp-for-elements-nbsp}
 
-すべての要素には、適切に定義された CSS クラスがあります。これらのクラスを変更して、要素の外観を変更することができます。フィールド要素と描画要素を除くすべての要素は、2 つの CSS クラス（Type クラスと Name クラス）を持ちます。
+すべての要素には、適切に定義された CSS クラスが含まれています。 これらのクラスを変更して、要素の外観を変更できます。 フィールド要素と描画要素を除くすべての要素は、2 つの CSS クラス（Type クラスと Name クラス）を持ちます。
 
 * **Type クラス**&#x200B;は XFA フィールドのタイプを表します。`type` クラスをオーバーライドして、特定タイプのすべての要素のスタイルを変更できます。
 
@@ -36,21 +36,21 @@ XFA ベースのフォームテンプレートの HTML5 レンダリングは、
 
 >[!NOTE]
 >
->一部の XFA 要素には名前がありません。そのようなコンポーネントのスタイルを変更するには、その特定タイプのすべてのコンポーネントを変更してください。
+>一部の XFA 要素には名前がありません。 このようなコンポーネントのスタイルを変更するには、その特定のタイプのすべてのコンポーネントを修正します。
 
-AEM Forms Designer で名付けられていないページでは、HTML5 フォームのページはページ番号順に名付けられます。例えば、2 ページからなる HTML5 フォームの場合、ページは Page1 および Page2 と名付けられます。
+AEM Forms Designer で名前が指定されていないページの場合、HTML5 フォームのページの名前は、ページ番号の増加順に付けられます。 例えば、2 ページからなる HTML5 フォームの場合、ページは Page1 および Page2 と名付けられます。
 
-## Field 要素 {#field-element}
+## フィールド要素 {#field-element}
 
-Field 要素にはネストされた要素が 2 つ（widget と caption）あります。
+field 要素には、ネストされた 2 つの要素が含まれます。ウィジェットとキャプション。
 
-**Widget 要素**
+**ウィジェット要素**
 
-Widget 要素にはユーザーとやりとりするためのユーザーインターフェイス要素が含まれています。これには 3 つの CSS クラスがあります。
+widget 要素には、ユーザーとやり取りするためのユーザーインターフェイス要素が含まれています。 それには 3 つの CSS クラスがあります。
 
-* **Widget**:すべてのウィジェットにこのクラスがあります。
-* **名前**:AEMに付属しているすべてのウィジェットには、ウィジェット名のクラスが含まれています。 カスタムウィジェットの場合、ウィジェット開発者はウィジェット名クラスを提供します。
-* **type**:すべてのウィジェットにはユーザーインターフェイス要素があります。 このクラスは、ユーザーインターフェイス要素のタイプを定義します。
+* **Widget**：すべてのウィジェットにこのクラスがあります。
+* **name**：AEM とともに出荷されたすべてのウィジェットにはウィジェット名のクラスがあります。カスタムウィジェットでは、ウィジェット開発者がウィジェット名のクラスを提供します。
+* **type**：すべてのウィジェットにはユーザーインターフェイス要素があります。このクラスはユーザーインターフェイス要素のタイプを定義します。
 
 ```xml
 <!--field with caption-->
@@ -69,9 +69,9 @@ Widget 要素にはユーザーとやりとりするためのユーザーイン�
 </div>
 ```
 
-type と name クラスの他に、フィールドコンポーネントにも **subtype** という名前の追加の CSS クラスがあります。subtype はそれがどのフィールドのタイプであるかを識別します。例：NumericField、DateField、TextField。subtype クラスはオーバーライドして、subtype のタイプであるすべてのフィールドのスタイル設定を変更できます。
+type クラスと name クラスの他に、フィールドコンポーネントにも、という名前の追加の CSS クラスが含まれます **サブタイプ**. サブタイプは、どのフィールドのタイプかを示します（例： NumericField、DateField、TextField）。 subtype クラスをオーバーライドして、subtype 型のすべてのフィールドのスタイル設定を変更できます。
 
-## 異なるコンポーネントに対する CSS クラス {#css-classes-for-different-components}
+## 異なるコンポーネントの CSS クラス {#css-classes-for-different-components}
 
 <table> 
  <tbody> 
@@ -82,33 +82,33 @@ type と name クラスの他に、フィールドコンポーネントにも **
   </tr> 
   <tr> 
    <td>ページ</td> 
-   <td>page</td> 
-   <td>ユーザー定義の名前<br />または<br />Page&lt;pageNumber&gt;（デフォルト）</td> 
+   <td>ページ</td> 
+   <td>ユーザー定義名<br /> または<br /> ページ&lt;pagenumber&gt; （デフォルト）</td> 
   </tr> 
   <tr> 
    <td>コンテンツ領域</td> 
    <td>contentarea</td> 
-   <td>ユーザー定義の名前</td> 
+   <td>ユーザー定義名</td> 
   </tr> 
   <tr> 
    <td>サブフォーム</td> 
-   <td>サブフォーム</td> 
-   <td>ユーザー定義の名前</td> 
+   <td>subform</td> 
+   <td>ユーザー定義名</td> 
   </tr> 
   <tr> 
-   <td>排他グループ</td> 
+   <td>除外グループ</td> 
    <td>exclgroup</td> 
-   <td>ユーザー定義の名前</td> 
+   <td>ユーザー定義名</td> 
   </tr> 
   <tr> 
    <td>図面</td> 
    <td>draw</td> 
-   <td>ユーザー定義の名前</td> 
+   <td>ユーザー定義名</td> 
   </tr> 
   <tr> 
    <td>フィールド</td> 
    <td>field</td> 
-   <td>ユーザー定義の名前</td> 
+   <td>ユーザー定義名</td> 
   </tr> 
   <tr> 
    <td>キャプション</td> 
@@ -118,16 +118,16 @@ type と name クラスの他に、フィールドコンポーネントにも **
   <tr> 
    <td>ウィジェット</td> 
    <td>widget</td> 
-   <td>ウィジェット開発者が定義します（ユーザー定義のウィジェットに関しては、以下のセクションの表を参照してください）</td> 
+   <td>ウィジェット開発者が定義します（ユーザー定義のウィジェットの場合は、次の節の表を参照してください）。</td> 
   </tr> 
  </tbody> 
 </table>
 
 ## 異なるフィールドに対する CSS クラス {#css-classes-for-different-fields}
 
-AEM Forms Designer はフォームで NumericField、DecimalField、および Date Field などの異なるタイプのフィールドをサポートしています。HTML ですべてのこれらのフィールドには上記の CSS クラスがあります。また、それらにはフィールドのタイプによっては、いくつかの追加のクラスがあります。
+AEM Forms Designer は、NumericField、DecimalField、Date Field など、様々な種類のフィールドをフォームでサポートしています。 HTML内のこれらのフィールドには、上記の CSS クラスがすべて含まれています。 また、フィールドのタイプに応じて、いくつかの追加のクラスが含まれます。
 
-すべてのフィールドには UI 要素を示す、関連するウィジェットがあります。各フィールドのクラス、および各フィールドに関連するウィジェットを以下に示します。
+各フィールドには、UI 要素を表す関連ウィジェットがあります。 各フィールドのクラスと各フィールドに関連付けられたウィジェットを以下に示します。
 
 <table> 
  <tbody> 
@@ -146,56 +146,56 @@ AEM Forms Designer はフォームで NumericField、DecimalField、および Da
    <td>input type=button<br type="_moz" /> </td> 
   </tr> 
   <tr> 
-   <td>チェックボタン<br type="_moz" /> </td> 
+   <td>CheckButton<br type="_moz" /> </td> 
    <td>checkboxfield<br /> </td> 
    <td>XfaCheckBox<br type="_moz" /> </td> 
    <td>checkboxfieldwidget<br type="_moz" /> </td> 
    <td>input type=checkbox<br type="_moz" /> </td> 
   </tr> 
   <tr> 
-   <td>日付フィールド<br type="_moz" /> </td> 
+   <td>DateField<br type="_moz" /> </td> 
    <td>datefield<br type="_moz" /> </td> 
    <td>dateField<br type="_moz" /> </td> 
    <td>datefieldwidget<br type="_moz" /> </td> 
    <td>inputtype = text<br type="_moz" /> </td> 
   </tr> 
   <tr> 
-   <td>日時フィールド<br type="_moz" /> </td> 
+   <td>DateTimeField<br type="_moz" /> </td> 
    <td>textfield<br type="_moz" /> </td> 
    <td>textField<br type="_moz" /> </td> 
    <td>textfieldwidget</td> 
    <td>inputtype = text<br type="_moz" /> </td> 
   </tr> 
   <tr> 
-   <td>10 進数フィールド<br type="_moz" /> </td> 
+   <td>DecimalField<br type="_moz" /> </td> 
    <td>numericfield<br type="_moz" /> </td> 
    <td>numericInput<br type="_moz" /> </td> 
    <td>numericfieldwidget<br type="_moz" /> </td> 
    <td>inputtype = text<br type="_moz" /> </td> 
   </tr> 
   <tr> 
-   <td>ドロップダウンリスト<br type="_moz" /> </td> 
+   <td>DropDown<br type="_moz" /> </td> 
    <td>choicelist<br type="_moz" /> </td> 
    <td>dropDownListWidget<br type="_moz" /> </td> 
    <td>choicelistwidget<br type="_moz" /> </td> 
-   <td>select</td> 
+   <td>「」を選択します</td> 
   </tr> 
   <tr> 
-   <td>リストボックス<br type="_moz" /> </td> 
+   <td>ListBox<br type="_moz" /> </td> 
    <td>choicelist<br type="_moz" /> </td> 
    <td>listBoxWidget<br type="_moz" /> </td> 
    <td>choicelistwidget<br type="_moz" /> </td> 
    <td>ol</td> 
   </tr> 
   <tr> 
-   <td>数値フィールド<br type="_moz" /> </td> 
+   <td>NumericField<br type="_moz" /> </td> 
    <td>numericfield<br type="_moz" /> </td> 
    <td>numericInput<br type="_moz" /> </td> 
    <td>numericfieldwidget<br type="_moz" /> </td> 
    <td>inputtype = text<br type="_moz" /> </td> 
   </tr> 
   <tr> 
-   <td>パスワードフィールド<br type="_moz" /> </td> 
+   <td>PasswordField<br type="_moz" /> </td> 
    <td>passwordfield<br type="_moz" /> </td> 
    <td>defaultWidget<br type="_moz" /> </td> 
    <td>passwordfieldwidget<br type="_moz" /> </td> 
@@ -209,14 +209,14 @@ AEM Forms Designer はフォームで NumericField、DecimalField、および Da
    <td>input type=radio<br type="_moz" /> </td> 
   </tr> 
   <tr> 
-   <td>テキストフィールド<br type="_moz" /> </td> 
+   <td>TextField<br type="_moz" /> </td> 
    <td>textfield<br type="_moz" /> </td> 
    <td>textField<br type="_moz" /> </td> 
    <td>textfieldwidget<br type="_moz" /> </td> 
    <td>inputtype = text<br type="_moz" /> </td> 
   </tr> 
   <tr> 
-   <td>時間フィールド<br type="_moz" /> </td> 
+   <td>TimeField<br type="_moz" /> </td> 
    <td>textfield<br type="_moz" /> </td> 
    <td>textField<br type="_moz" /> </td> 
    <td>textfieldwidget<br type="_moz" /> </td> 
@@ -227,27 +227,27 @@ AEM Forms Designer はフォームで NumericField、DecimalField、および Da
 
 ## 異なる Draw 要素に対する CSS クラス {#css-classes-for-different-draw-elements}
 
-AEM Forms Designer を使用して、テキスト、画像など、スタティックの描画要素を挿入できます。それぞれの描画要素に対し、別の CSS クラスがそれらの要素に関連しています。描画要素の CSS クラスのリストを以下に示します。それぞれの描画要素には、それに関連する draw クラスがあります。
+AEM Forms Designer を使用して、テキストや画像などの静的な描画要素を挿入できます。 各描画要素に対して、別々の CSS クラスがその要素に関連付けられます。 描画要素の CSS クラスのリストを以下に示します。 すべての描画要素には、それに関連付けられた描画クラスがあります。
 
 | **描画タイプ** | **CSS クラス** |
 |---|---|
 | テキスト | text |
-| 画像 | 画像 |
-| 長方形 | rectangle |
-| 線 | line |
+| 画像 | image |
+| 長方形 | 長方形 |
+| Line | 線 |
 
-## フォームにおける他の部分のスタイル設定 {#styling-other-parts-of-the-form}
+## フォームの他の部分のスタイル設定 {#styling-other-parts-of-the-form}
 
-HTMLフォームでの UI コンポーネントの外観に加えて、インラインエラー、インライン警告、検証エラーのあるフィールドなどの要素のスタイルを変更できます。
+HTML フォームでの UI コンポーネントの外観の以外に、インラインエラー、インライン警告および検証エラーのあるフィールドなどの要素のスタイルを変更できます。
 
 `Styling Inline Errors`
 
-フィールドの検証によりエラーが発生した場合、フィールドがアクティブのときにインラインエラーが表示されます。インラインエラーのスタイルを変更するには、CSS ID **error-msg** をオーバーライドします。
+フィールドの検証でエラーが発生した場合、フィールドがアクティブなときにインラインエラーが表示されます。 インラインエラーのスタイルを変更するには、CSS ID を上書きします **error-msg**.
 
 `Styling Inline Warnings`
 
-フィールドの検証により警告が発生した場合、フィールドがアクティブのときにインライン警告が表示されます。これらのインライン警告のスタイルを変更するには、CSS ID **warning-msg** をオーバーライドします。
+フィールドの検証で警告が発生した場合、フィールドがアクティブなときはインライン警告が表示されます。 これらのインライン警告のスタイルを変更するには、CSS ID を上書きします **warning-msg**.
 
 `Styling Fields with Validation Errors`
 
-フィールドの検証に失敗すると、ウィジェットのスタイルが変更されます。このスタイルの変更は、CSS クラスを適用しておこないます **widgetError** をウィジェットコンポーネントに追加します。 デフォルトのスタイル設定を変更するには、 **widgetError** クラス。
+フィールドの検証に失敗すると、ウィジェットのスタイルが変更されます。このスタイルの変更はウィジェットコンポーネントに **widgetError **&#x200B;の CSS クラスを適用することにより実施されます。デフォルトのスタイル設定を変更するには、**widgetError** クラスをオーバーライドします。

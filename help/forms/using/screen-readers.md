@@ -13,24 +13,24 @@ exl-id: c27eb771-d390-4534-8e67-f1277550e760
 source-git-commit: 51358642a2fa8f59f3f5e3996b0c37269632c4cb
 workflow-type: tm+mt
 source-wordcount: '337'
-ht-degree: 94%
+ht-degree: 55%
 
 ---
 
 # HTML5 フォーム向けのスクリーンリーダー {#screen-readers-for-html-forms}
 
-HTML5 フォームコンポーネントは XFA フォームテンプレートを HTML5 形式にレンダリングします。すべての標準の HTML5 をサポートするブラウザーはこれらのフォームをレンダリングできます。PDF と HTML5 フォーム同士で似たようなデータ取得の経験をサポートするために、PDF フォームのレイアウトは HTML5 フォームで保持されます。
+HTML5 フォームコンポーネントは、XFA フォームテンプレートをHTML5 形式にレンダリングします。 これらのフォームは、HTML5 をサポートするすべての標準ブラウザーでレンダリングできます。 PDFフォームとHTML5 フォームで同様のデータキャプチャエクスペリエンスをサポートするために、PDF formsのレイアウトはHTML5 フォームでも保持されます。
 
-HTML5 フォームは標準の HTML 構成を使用して、これらのフォームとともに通常の HTML のアクセシビリティツールを使用できるようにします。フォームがアクセシビリティを備えたフォームに関するベストプラクティスに従ってデザインされた場合、サポートされているスクリーンリーダーのどれとでも機能します。さらに、そのようなフォームはキーボードナビゲーションに対応しています。
+HTML5 フォームは標準のHTML構成を使用し、これらのフォームでHTMLの通常のアクセシビリティツールを使用できます。 アクセシブルなフォームのベストプラクティスに従ってデザインされたフォームは、サポートされているスクリーンリーダーで動作します。 また、このようなフォームはキーボード操作に対して有効になります。
 
-## アクセシビリティの標準 {#accessibility-standards}
+## アクセシビリティ標準 {#accessibility-standards}
 
-HTML5 フォームは既知の例外を含むアクセシビリティのリハビリテーション法第 508 条に準拠します。詳しくは、[HTML5 フォームの VPAT](https://www.adobe.com/content/dam/cc1/en/accessibility/compliance/pdfs/adobe-livecycle-es4-section-508-vpat-portfolio.pdf) を参照してください。
+HTML5 フォームは、既知の例外を除くアクセシビリティのために、508 条に準拠します。 詳しくは、 [HTML5 フォームの VPAT](https://www.adobe.com/content/dam/cc1/en/accessibility/compliance/pdfs/adobe-livecycle-es4-section-508-vpat-portfolio.pdf) 」を参照してください。
 
-## HTML5 フォーム向けに認定されたスクリーンリーダー {#certified-screen-readers-for-html-forms}
+## 認定済みのスクリーンリーダー (HTML5 フォーム用 ) {#certified-screen-readers-for-html-forms}
 
-* Microsoft Windows の JAWS 14.0
-* Mac OS X と iPad の VoiceOver
+* Microsoft Windows 上の JAWS 14.0
+* Mac OS X とiPadでの VoiceOver
 
 ### JAWS {#jaws}
 

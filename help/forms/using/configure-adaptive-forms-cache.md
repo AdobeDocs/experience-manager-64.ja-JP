@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームのキャッシュの設定
 seo-title: Configure adaptive forms cache
-description: アダプティブフォームのキャッシュは、アダプティブフォームおよびアダプティブドキュメント向けに設計されています。これは、クライアント側のアダプティブフォームまたはドキュメントのレンダリングの時間を短縮する目的で、アダプティブフォームとアダプティブドキュメントをキャッシュします。
+description: アダプティブフォームのキャッシュは、アダプティブフォームとアダプティブドキュメント用に特別に設計されています。 クライアント上でのアダプティブフォームまたはドキュメントのレンダリングに要する時間を短縮する目的で、アダプティブフォームおよびアダプティブドキュメントをキャッシュします。
 seo-description: The adaptive forms cache is designed specifically for adaptive forms and documents. It caches adaptive forms and adaptive documents with the objective of reducing the time required to render an adaptive form or document on the client.
 uuid: 3bd4e405-1eab-4e02-95cd-eb6ac25d18e3
 content-type: reference
@@ -13,17 +13,17 @@ exl-id: 6a610e9d-beec-486d-b1d2-78b5fec44c52
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 100%
+ht-degree: 58%
 
 ---
 
 # アダプティブフォームのキャッシュの設定 {#configure-adaptive-forms-cache}
 
-キャッシュは、データへのアクセスにかかる時間を短縮し、遅延を削減して I／O 速度を改善するメカニズムです。アダプティブフォームのキャッシュは、アダプティブフォームの HTML コンテンツと JSON の構造のみを保存し、事前入力されたデータは保存しません。これにより、クライアント側のアダプティブフォームまたはドキュメントのレンダリングの時間を短縮します。キャッシュは、アダプティブフォーム向けに設定されており、アダプティブドキュメントもサポートします。 
+キャッシュは、データへのアクセスにかかる時間を短縮し、遅延を削減して I／O 速度を改善するメカニズムです。アダプティブフォームのキャッシュには、アダプティブフォームのHTMLコンテンツと JSON 構造のみが保存されます。事前入力されたデータは保存されません。 これにより、クライアント上でアダプティブフォームやドキュメントをレンダリングするのに必要な時間を短縮できます。 アダプティブフォーム専用に設計され、アダプティブドキュメントもサポートします。
 
 >[!NOTE]
 >
->アダプティブフォームのキャッシュを使用するときは、AEM Dispatcher を使用してアダプティブフォームまたはアダプティブドキュメントのクライアントライブラリ（CSS および JavaScript）をキャッシュします。
+>アダプティブフォームのキャッシュを使用する場合は、AEM Dispatcher を使用してアダプティブフォームまたはアダプティブドキュメントのクライアントライブラリ（CSS および JavaScript）をキャッシュします。
 
 >[!NOTE]
 >

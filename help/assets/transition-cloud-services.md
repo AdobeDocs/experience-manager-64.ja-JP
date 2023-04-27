@@ -8,7 +8,7 @@ exl-id: 87883a3f-db95-41f4-b0aa-cdaeb7e6f555
 source-git-commit: 1e3cd6ce3138113721183439f7cfb9daed6e0e58
 workflow-type: tm+mt
 source-wordcount: '395'
-ht-degree: 97%
+ht-degree: 86%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Manager では、選択した翻訳プロバイダーのクラ�
 
 翻訳クラウドサービスをアセットフォルダーに直接適用すると、翻訳ワークフローの作成または変更時に翻訳サービスを設定する必要がなくなります。
 
-1. Assets UI から翻訳サービスを適用するフォルダーを選択します。
+1. Assets UI で、翻訳サービスを適用するフォルダーを選択します。
 1. ツールバーの「**[!UICONTROL プロパティ]**」アイコンをクリックまたはタップして、**[!UICONTROL フォルダーのプロパティ]**&#x200B;ページを表示します。
 
    ![chlimage_1-215](assets/chlimage_1-215.png)

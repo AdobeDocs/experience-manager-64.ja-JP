@@ -1,7 +1,7 @@
 ---
 title: アクティビティのトレンド
 seo-title: Activity Trends
-description: コミュニティのアクティビティリストコンポーネントをページに追加
+description: コミュニティアクティビティリストコンポーネントをページに追加する
 seo-description: Adding a Community Activity List component to a page
 uuid: 6a030340-0e69-432a-98f1-3effb2b97136
 contentOwner: msm-service
@@ -13,7 +13,7 @@ exl-id: a2cb9738-98a5-4ea6-8d5a-a6c0aa04cd32
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '349'
-ht-degree: 37%
+ht-degree: 8%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 37%
 
 この `Community Activity List` コンポーネントを使用すると、メンバーによる投稿およびビュー、およびコンテンツの投稿とビューに関するトレンド情報を追加できます。
 
-ドキュメントのこのセクションでは、以下の内容について説明します。
+ドキュメントのこの節では、
 
 * の追加 `Community Activity List` コンポーネントを [コミュニティサイト](overview.md#community-sites)
 
@@ -33,25 +33,25 @@ ht-degree: 37%
 
 のデータ `Community Activity List` は、Adobe Analyticsがコミュニティサイトに対してライセンスを取得し、設定されている場合にのみ使用できます。
 
-[コミュニティ機能のための Analytics の設定](analytics.md)を参照してください。
+詳しくは、 [コミュニティ機能用の Analytics 設定](analytics.md).
 
-## コミュニティのアクティビティリストをページに追加 {#adding-a-community-activity-list-to-a-page}
+## コミュニティアクティビティリストをページに追加する {#adding-a-community-activity-list-to-a-page}
 
 を追加するには、以下を実行します。 `Community Activity List` コンポーネントをオーサリングモードでページに追加する場合は、 `Communities / Community Activity List` をクリックし、ページ上の適切な場所にドラッグします。
 
 必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
 
-コミュニティサイトのページに初めて配置されたとき、コンポーネントは次のように表示されます。
+コミュニティサイトのページに最初に配置したとき、コンポーネントは次のように表示されます。
 
 ![chlimage_1-227](assets/chlimage_1-227.png)
 
-## コミュニティのアクティビティリストの設定  {#configuring-community-activity-list}
+## コミュニティアクティビティリストの設定  {#configuring-community-activity-list}
 
 配置された `Community Activity List` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
 
 ![chlimage_1-228](assets/chlimage_1-228.png)
 
-「**[!UICONTROL コメント]**」タブでは、アップロードしたファイルに対するコメントを表示するかどうかと、その方法を指定します。
+以下 **[!UICONTROL コメント]** タブで、アップロードされたファイルのコメントを表示するかどうかと表示方法を指定します。
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
@@ -69,7 +69,7 @@ ht-degree: 37%
 
    データの上に表示する説明的なタイトル（例： ） `Trending Content`.
 
-   初期設定では、タイトルはありません。
+   初期設定ではタイトルはありません。
 
 * **[!UICONTROL 表示数]**
 
@@ -85,7 +85,7 @@ ht-degree: 37%
    * `Follows`
    * `Likes`
 
-   初期設定は「ビュー」です。
+   初期設定は Views です。
 
 * **[!UICONTROL 期間]**
 
@@ -103,17 +103,17 @@ ht-degree: 37%
 
    特定のブログなど、サイトのサブセットに対するアクティビティの範囲を設定できます。
 
-   初期設定は、コミュニティサイト全体です。
+   デフォルトはコミュニティサイト全体です。
 
 * **[!UICONTROL メンバー数の集計]**
 
-   オフ（オフ）にすると、最上位の投稿のみがカウントされます。 例えば、コンテキストがルートページ（デフォルト）の場合、 `Activity Type`/ `Posts`コンテンツをルートページに投稿できないので、アクティビティは表示されません。 オンにすると、すべての下位のページがカウントに含まれます。
+   オフ（オフ）にすると、最上位の投稿のみがカウントされます。 例えば、コンテキストがルートページ（デフォルト）の場合、 `Activity Type`/ `Posts`コンテンツをルートページに投稿できないので、アクティビティは表示されません。 オンにすると、すべての下位のページのカウントが含まれます。
 
    初期設定はオンです。
 
-## 4 つのコンポーネントがあるページの例 {#example-page-with-components}
+## 4 つのコンポーネントを含むページの例 {#example-page-with-components}
 
-**上位の訪問者**&#x200B;の設定：タイプ = メンバー、アクティビティタイプ = ビュー
+**上位の訪問者** config:タイプ=メンバー、アクティビティタイプ=ビュー
 
 **上位の寄稿者** config:タイプ=メンバー、アクティビティタイプ=投稿
 

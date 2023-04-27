@@ -13,15 +13,15 @@ exl-id: 310d9086-36b6-42ea-835f-c77d75e880cb
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 62%
+ht-degree: 13%
 
 ---
 
 # 割り当ての基本事項 {#assignments-essentials}
 
-このページでは、[イネーブルメントコミュニティ](overview.md#enablement-community)サイトの割り当て機能の操作に関する基本情報をまとめています。
+このページでは、の割り当て機能を使用する際に必要な情報を示します。 [実施可能コミュニティ](overview.md#enablement-community) サイト。
 
-割り当て機能を使用すると、イネーブルメントコミュニティのメンバーに実施可能リソースおよびイネーブルメント学習パスを割り当てることができます。
+割り当て機能は、イネーブルメントコミュニティのメンバーにイネーブルメントリソースと学習パスを割り当てる機能です。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -32,7 +32,7 @@ ht-degree: 62%
    <td>social/enablement/components/hbs/myassigned</td> 
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td> 
    <td>いいえ</td> 
   </tr>
   <tr>
@@ -54,28 +54,28 @@ ht-degree: 62%
  </tbody>
 </table>
 
-### 完了ステータスと成功ステータス {#completion-and-success-status}
+### 完了および成功ステータス {#completion-and-success-status}
 
-完了ステータスと成功ステータスは、割り当てのレポートおよびステータスバナーで使用されます。
+完了ステータスと成功ステータスは、レポートや割り当てのステータスバナーで使用されます。
 
-完了ステータス：
+完了ステータス :
 
 * 割り当てなし
-* 開始されていません（新規）
+* 未開始（新規）
 * 処理中
 * 完了
 
-成功ステータス：
+成功ステータス:
 
 * 不明
 * パス
 * 失敗
 
-完了ステータスと成功ステータスの組み合わせとして有効なものは以下に限られます。
+完了ステータスと成功ステータスの組み合わせとして使用できるのは、次のみです。
 
 | **完了** | **成功** |
 |---|---|
-| 開始されていません | 不明 |
+| 未開始 | 不明 |
 | 処理中 | 不明 |
 | 完了 | パス |
 | 完了 | 失敗 |

@@ -1,7 +1,7 @@
 ---
 title: 認証評価の順序の変更
 seo-title: Change the order of evaluation for authentication
-description: AEM Forms が複数の認証プロバイダーを評価する順序を変更できます。
+description: AEM forms が複数の認証プロバイダーを評価する順序を変更できます。
 seo-description: You can change the order in which AEM forms evaluates multiple authentication providers.
 uuid: c2693e5b-cf09-4bb8-815a-2b20ebf6eea0
 contentOwner: admin
@@ -13,17 +13,17 @@ exl-id: cac16c50-a85d-4e40-a590-8a0a52be893c
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '147'
-ht-degree: 100%
+ht-degree: 59%
 
 ---
 
 # 認証評価の順序の変更 {#change-the-order-of-evaluation-for-authentication}
 
-複数の認証プロバイダーを設定した場合、AEM forms による認証評価の順序を変更できます。認証評価の順序は、config.xml ファイルに一覧表示される認証プロバイダーの順序によって決まります。
+複数の認証プロバイダーを設定した場合、AEM forms が認証を評価する順序を変更できます。 認証評価の順序は、config.xml ファイルにリストされる認証プロバイダーの順序によって決まります。
 
 1. 管理コンソールで、設定／User Management／設定／既存の設定ファイルの読み込みと書き出しをクリックします。
 1. ファイルに現在の設定をエクスポートするには、「エクスポート」をクリックして別の場所に設定ファイルを保存します。
-1. ファイルから、以下のノードを検索します。
+1. ファイル内で次のノードを探します。
 
    ```as3
     <node name="AuthSchemes"> 

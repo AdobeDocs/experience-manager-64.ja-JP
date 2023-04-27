@@ -14,7 +14,7 @@ exl-id: 79091a75-2669-453f-9560-e58bfffa3487
 source-git-commit: e608249c3f95f44fdc14b100910fa11ffff5ee32
 workflow-type: tm+mt
 source-wordcount: '7872'
-ht-degree: 97%
+ht-degree: 95%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 97%
 
 **Generate PDF サービスについて**
 
-Generate PDF サービスは、ネイティブファイル形式を PDF に変換します。また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。
+GeneratePDFサービスは、ネイティブファイル形式をPDFに変換します。 また、PDF を他のファイル形式に変換し、PDF ドキュメントのサイズを最適化します。
 
-Generate PDF サービスは、以下のファイル形式を PDF に変換する際にネイティブアプリケーションを使用します。特に説明がない限り、これらのアプリケーションはドイツ語版、フランス語版、英語版および日本語版のみサポートされています。*Windows のみ*&#x200B;は、Windows Server® 2003 および Windows Server 2008 のみをサポートしています。
+GeneratePDFサービスは、ネイティブアプリケーションを使用して、次のファイル形式をPDFに変換します。 特に指示のない限り、これらのアプリケーションはドイツ語、フランス語、英語および日本語バージョンのみサポートされます。 *Windows のみ*&#x200B;は、Windows Server® 2003 および Windows Server 2008 のみをサポートしています。
 
 * Microsoft Office 2003 および 2007：DOC、DOCX、RTF、TXT、XLS、XLSX、PPT、PPTX、VSD、MPP、MPPX、XPS および PUB を変換（Windows のみ）
 
@@ -48,29 +48,29 @@ Generate PDF サービスは、以下のファイル形式を PDF に変換す�
 
 * FM を変換する Adobe FrameMaker® 7.2 および 8（Windows のみ）
 * PMD、PM6、P65、PM を変換する Adobe PageMaker® 7.0（Windows のみ）
-* サードパーティのアプリケーションによってサポートされているネイティブ形式（アプリケーションに固有のセットアップファイルの開発が必要）（Windows のみ）
+* サードパーティアプリケーションでサポートされるネイティブ形式（アプリケーション固有のセットアップファイルの開発が必要）（Windows のみ）
 
-Generate PDF サービスでは、次の標準ベースのファイル形式を PDF に変換します。
+GeneratePDFサービスは、次の標準ベースのファイル形式をPDFに変換します。
 
-* ビデオファイル形式：SWF、FLV（Windows のみ）
-* 画像ファイル形式：JPEG、JPG、JP2、J2Kí、JPC、J2C、GIF、BMP、TIFF、TIF、PNG、JPF
-* HTML（Windows、Sun™ Solaris™ および Linux®）
+* ビデオ形式：SWF、FLV（Windows のみ）
+* 画像形式：JPEG,JPG, JP2, J2Kí, JPC, J2C,GIF, BMP,TIFF, TIF, PNG, JPF
+* HTML(Windows、Sun™ Solaris™および Linux®)
 
-Generate PDF サービスでは、PDF を次のファイル形式に変換します（Windows のみ）：
+GeneratePDFサービスは、PDFを次のファイル形式に変換します（Windows のみ）。
 
-* EPS（Encapsulated PostScript）
+* Encapsulated PostScript (EPS)
 * HTML 3.2
-* CSS 1.0 を使用した HTML 4.01
-* DOC（Microsoft Word format）
+* HTML4.01 と CSS 1.0
+* DOC(Microsoft Word 形式 )
 * RTF
-* テキスト（アクセス可能およびプレーンの両方）
+* テキスト（アクセシブルとプレーンの両方）
 * XML
 * DeviceRGB カラースペースのみを使用する PDF/A-1a
 * DeviceRGB カラースペースのみを使用する PDF/A-1b
 
-Generate PDF サービスを使用するには、以下の管理タスクを実行する必要があります。
+GeneratePDFサービスでは、次の管理タスクを実行する必要があります。
 
-* 必要なネイティブアプリケーションを、AEM Forms をホストするコンピューター上にインストールする
+* AEM Formsをホストするコンピューターに必要なネイティブアプリケーションをインストールする
 * AEM Forms をホストするコンピューターに Adobe Acrobat Professional または Acrobat Pro Extended 9.2 をインストールします
 * インストール後のセットアップタスクを実行します
 

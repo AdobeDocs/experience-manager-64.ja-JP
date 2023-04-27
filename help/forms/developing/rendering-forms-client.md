@@ -1,7 +1,7 @@
 ---
-title: クライアントでのFormsのレンダリング
+title: クライアント側でのフォームのレンダリング
 seo-title: Rendering Forms at the Client
-description: AcrobatまたはAdobe Readerのクライアント側レンダリング機能を使用して、PDFコンテンツの配信を最適化し、Formsサービスのネットワーク読み込み処理機能を改善します。
+description: Acrobat や Adobe Reader のクライアントサイドレンダリング機能を使用して、PDF コンテンツの配信を最適化し、Forms サービスのネットワーク負荷への対応力を向上させます。。
 seo-description: Optimize the delivery of PDF content and improve the Forms service’s ability to handle network load by using the client-side rendering capability of Acrobat or Adobe Reader.
 uuid: 09bcc23d-28b0-473a-87f1-bc17e87620f4
 contentOwner: admin
@@ -15,131 +15,131 @@ exl-id: 641452e6-bf7e-4af4-a4f9-6e5627db9fca
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1684'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# クライアントでのFormsのレンダリング {#rendering-forms-at-the-client}
+# クライアント側でのフォームのレンダリング {#rendering-forms-at-the-client}
 
-## クライアントでのFormsのレンダリング {#rendering-forms-at-the-client-inner}
+## クライアント側でのフォームのレンダリング {#rendering-forms-at-the-client-inner}
 
-AcrobatまたはAdobe Readerのクライアント側レンダリング機能を使用すると、PDFコンテンツの配信を最適化し、Formsサービスがネットワーク読み込みを処理する機能を向上できます。 このプロセスは、クライアントでのフォームのレンダリングと呼ばれます。 クライアントでフォームをレンダリングするには、クライアントデバイス（通常は Web ブラウザー）でAcrobat 7.0 またはAdobe Reader 7.0 以降を使用する必要があります。
+Acrobat や Adobe Reader のクライアントサイドレンダリング機能を利用して、PDF コンテンツの配信を最適化し、Forms サービスのネットワーク負荷への対応力を向上させることができます。この処理をクライアントでのレンダリングといいます。クライアントでフォームをレンダリングするには、クライアントデバイス（通常は web ブラウザー）が Acrobat 7.0 または Adobe Reader 7.0 以降を使用している必要があります。
 
-サーバーサイドスクリプトの実行によって生成されたフォームへの変更は、ルートサブフォームに `restoreState` 属性 `auto`. この属性について詳しくは、 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
+サーバーサイドのスクリプト実行によるフォームの変更は、ルートサブフォームに `restoreState` 属性が `auto` に設定されていない限り、クライアントで表示されるフォームには反映されません。この属性の詳細情報については、[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_jp) を参照してください。
 
 >[!NOTE]
 >
->Formsサービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
+>AEM Forms サービスについて詳しくは、[Forms 用サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ### 手順の概要 {#summary-of-steps}
 
-クライアントでフォームをレンダリングするには、次のタスクを実行します。
+クライアントでフォームをレンダリングするには、以下の作タスクを実行します。
 
 1. プロジェクトファイルを含めます。
 1. Forms Client API オブジェクトを作成します。
 1. クライアントレンダリングの実行時オプションを設定します。
 1. クライアントでフォームをレンダリングします。
-1. フォームをクライアントの Web ブラウザーに書き込みます。
+1. クライアントの web ブラウザーにフォームを書き込みます。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 **Forms Client API オブジェクトの作成**
 
-Forms Service Client API 操作をプログラムで実行する前に、Formsサービスクライアントを作成する必要があります。 Java API を使用している場合は、 `FormsServiceClient` オブジェクト。 Forms Web サービス API を使用している場合は、 `FormsService` オブジェクト。
+Forms Service Client API 操作をプログラムで実行する前に、Forms サービスクライアントを作成する必要があります。Java API を使用している場合は、`FormsServiceClient` オブジェクトを作成します。Forms web サービス API を使用している場合は、`FormsService`オブジェクトを作成してください。
 
-**クライアントレンダリングの実行時オプションを設定する**
+**クライアントレンダリングの実行時オプションを設定**
 
-クライアントでフォームをレンダリングする場合は、クライアントでフォームをレンダリングするために、クライアントレンダリングの実行時オプションを設定する必要があります。その際には、 `RenderAtClient` 実行時のオプション `true`. その結果、フォームはレンダリング先のクライアントデバイスに配信されます。 If `RenderAtClient` が `auto` （デフォルト値）を指定した場合、フォームデザインは、フォームをクライアントでレンダリングするかどうかを決定します。 フォームデザインは、編集可能なレイアウトを含むフォームデザインにする必要があります。
+クライアントでフォームをレンダリングするには、`RenderAtClient` 実行時オプションを `true` に設定することにより、クライアントレンダリングの実行時オプションを設定する必要があります。この結果、フォームがレンダリングされたクライアントデバイスに配信されます。`RenderAtClient` が `auto`（デフォルト値）の場合、フォームデザインがクライアントでレンダリングされるかどうかを決定します。編集可能なレイアウトを持つフォームデザインが要求されます。
 
-オプションで設定できるランタイムオプションは、 `SeedPDF` オプション。 この `SeedPDF` 「 」オプションは、PDFコンテナ ( シードPDFドキュメント ) とフォームデザインと XML データを組み合わせたものです。 フォームデザインと XML データの両方がAcrobatまたはAdobe Readerに配信され、フォームがレンダリングされます。 この `SeedPDF` オプションは、クライアントコンピューターにフォーム内で使用されるフォントがない場合に使用できます。例えば、エンドユーザーがフォーム所有者が使用するライセンスを持つフォントを使用するライセンスを持っていない場合などです。
+設定可能な実行時オプションとして、`SeedPDF` オプションがあります。`SeedPDF` オプションは、PDF コンテナ（シード PDF ドキュメント）を、フォームデザインと XML データとに組み合わせます。フォームのデザインと XML データの両方が Acrobat または Adobe Reader に配信され、そこでフォームがレンダリングされます。`SeedPDF` オプションは、フォームで使用されているフォントをクライアントコンピュータが持っていない場合に使用できます。例えば、フォームの所有者が使用ライセンスを持っているフォントに対して、エンドユーザーが使用ライセンスを持っていない場合などです。
 
-Designer を使用して、シードPDFファイルとして使用するシンプルなダイナミックPDFファイルを作成できます。 このタスクを実行するには、次の手順が必要です。
+Designer を使用して、シード PDF ファイルとして使用するための、シンプルなダイナミック PDF ファイルを作成することができます。このタスクを行うには、以下の手順が必要です。
 
-1. フォントをシードフォントファイル内に埋め込む必要があるかどうかをPDFします。 シードPDFファイルには、レンダリングされるフォームに必要な追加のフォントが含まれている必要があります。 フォントをシードPDFファイルに埋め込む場合は、フォント使用許諾契約に違反しないようにしてください。 Designer では、フォントを法的に埋め込むことができるかどうかを指定できます。 保存すると、フォームに埋め込むことができないフォントがある場合、Designer は埋め込むことができないフォントの一覧を示すメッセージを表示します。 このメッセージは、静的メッセージドキュメントの場合は Designer にPDFされません。
-1. Designer でシードPDFファイルを作成する場合は、少なくともメッセージを含むテキストフィールドを追加することをお勧めします。 このメッセージは、Adobe Readerの以前のバージョンのユーザーに対し、ドキュメントの表示にAcrobat 7.0 以降またはAdobe Reader 7.0 以降が必要であると述べている必要があります。
-1. シードPDFファイルを動的PDFファイルとして保存し、PDFファイル名の拡張子を付けます。
+1. シード PDF ファイル内にフォントを埋め込む必要があるかどうかを判断します。シード PDF ファイルには、レンダリングするフォームに必要なフォントを追加する必要があります。シード PDF ファイルにフォントを埋め込む場合、フォントのライセンス契約に違反していないことを確認してください。Designer では、合法的にフォントを埋め込むことができるかどうかを判断することができます。保存時に、フォームに埋め込めないフォントがある場合、Designer は埋め込めないフォントのリストをメッセージで表示します。このメッセージは、静的な PDF ドキュメントの場合は Designer に表示されません。
+1. Designer でシード PDF ファイルを作成する場合、最低限、メッセージを含むテキストフィールドを追加することを推奨します。Adobe Reader の旧バージョンを使用するユーザーに対しては、ドキュメントを表示するには Acrobat 7.0 以降、または Adobe Reader 7.0 以降が必要であることを示すメッセージが表示されます。
+1. シード PDF ファイルを、PDF ファイル名の拡張子をつけてダイナミック PDF ファイルとして保存します。
 
 >[!NOTE]
 >
->クライアント上でフォームをレンダリングする場合、シードPDFの実行時オプションを定義する必要はありません。 シードPDFを指定しない場合、Formsサービスはシェル pdf を作成します。この pdf は、COS オブジェクトは含まれず、実際の XDP コンテンツが埋め込まれたPDFラッパーを含みます。 この節の手順では、シードPDFの実行時オプションは設定しません。 COS オブジェクトの詳細については、『 Adobe PDF Reference 』ガイドを参照してください。
+>クライアントでフォームをレンダリングするために、シード PDF 実行時オプションを定義する必要はありません。シード PDF を指定しない場合、Forms サービスは、COS オブジェクトを含まないシェル PDF を作成しますが、これは実際の XDP のコンテンツを内部に埋め込んだ PDF ラッパーを含んでいます。この節の手順では、シード PDF 実行時オプションは設定しません。COS オブジェクトについては、Adobe PDF リファレンスガイドを参照してください。
 
 **クライアントでフォームをレンダリング**
 
-クライアントでフォームをレンダリングするには、フォームをレンダリングするクライアントレンダリングの実行時オプションがアプリケーションロジックに含まれていることを確認する必要があります。
+クライアントでフォームをレンダリングするには、クライアントレンダリングの実行時オプションが、フォームをレンダリングするアプリケーションロジックに含まれていることを確認する必要があります。
 
-**フォームデータストリームをクライアント Web ブラウザーに書き込む**
+**フォームデータストリームをクライアントの web ブラウザーに書き込む**
 
-Formsサービスはフォームデータストリームを作成します。このデータストリームは、クライアントの Web ブラウザーに書き込む必要があります。 クライアント Web ブラウザーに書き込まれると、フォームはAcrobat 7.0 またはAdobe Reader 7.0 以降でレンダリングされ、ユーザーに対して表示されます。
+Forms サービスは、クライアントの web ブラウザーに書き込むフォームデータストリームを作成します。クライアントの web ブラウザーに書き込まれると、フォームは Acrobat 7.0 または Adobe Reader 7.0 以降でレンダリングされ、ユーザーに対して表示されます。
 
 **関連トピック**
 
-[Java API を使用してクライアントでフォームをレンダリングする](#render-a-form-at-the-client-using-the-java-api)
+[Java API を使用したクライアントでのフォームのレンダリング](#render-a-form-at-the-client-using-the-java-api)
 
-[Web サービス API を使用してクライアントでフォームをレンダリングする](#render-a-form-at-the-client-using-the-web-service-api)
+[Web サービス API を使用したクライアントでのフォームのレンダリング](#render-a-form-at-the-client-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms Service API クイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms サービス API のクイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[Forms Service にドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)
+[Forms サービスにドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)
 
-[Formsをレンダリングする Web アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
+[Forms をレンダリングする web アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-### Java API を使用してクライアントでフォームをレンダリングする {#render-a-form-at-the-client-using-the-java-api}
+### Java API を使用したクライアントでのフォームのレンダリング {#render-a-form-at-the-client-using-the-java-api}
 
-Forms API(Java) を使用して、クライアントでフォームをレンダリングします。
+Forms API (Java) を使用して、クライアントでフォームをレンダリングするには、以下の手順に従います。
 
 1. プロジェクトファイルを含める
 
-   Java プロジェクトのクラスパスに、adobe-forms-client.jar などのクライアント JAR ファイルを含めます。
+   adobe-forms-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
 1. Forms Client API オブジェクトの作成
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * の作成 `FormsServiceClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
+   * コンストラクターを使用して `ServiceClientFactory` オブジェクトを渡し、`FormsServiceClient` オブジェクトを作成します。
 
-1. クライアントレンダリングの実行時オプションを設定する
+1. クライアントレンダリング実行時オプションを設定する
 
    * コンストラクタを使用して `PDFFormRenderSpec` オブジェクトを作成します。
-   * を `RenderAtClient` を呼び出すことによる実行時オプション `PDFFormRenderSpec` オブジェクトの `setRenderAtClient` メソッドを使用して enum 値を渡す `RenderAtClient.Yes`.
+   * `RenderAtClient` 実行時オプションを設定するには、`PDFFormRenderSpec` オブジェクトの `setRenderAtClient` メソッドを呼び出し、列挙値 `RenderAtClient.Yes` を渡します。
 
-1. クライアントでフォームをレンダリング
+1. クライアントでフォームをレンダリングする
 
-   を呼び出す `FormsServiceClient` オブジェクトの `renderPDFForm` メソッドを使用して、次の値を渡します。
+   `FormsServiceClient` オブジェクトの `renderPDFForm` メソッドを呼び出し、次の値を渡します。
 
-   * ファイル名拡張子を含むフォームデザイン名を指定する string 値。 AEM Formsアプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定してください。 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * A `com.adobe.idp.Document` フォームに結合するデータを含むオブジェクト。 データを結合しない場合は、空の `com.adobe.idp.Document` オブジェクト。
-   * A `PDFFormRenderSpec` クライアントでフォームをレンダリングするために必要な実行時のオプションを格納するオブジェクト。
-   * A `URLSpec` フォームをレンダリングするためにFormsサービスで必要な URI 値を含むオブジェクト。
-   * A `java.util.HashMap` 添付ファイルを保存するオブジェクト。 これはオプションのパラメーターで、 `null` フォームにファイルを添付しない場合。
+   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。AEM Forms アプリケーションの一部であるフォームデザインを参照する場合は、`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` のように完全なパスを指定します。
+   * フォームと統合するデータを含む `com.adobe.idp.Document` オブジェクトです。データを統合しない場合、空の `com.adobe.idp.Document` オブジェクトを渡します。
+   * クライアントでフォームをレンダリングするために必要な実行時オプションを格納する `PDFFormRenderSpec` オブジェクトです。
+   * フォームを表示するために Forms サービスが必要とする URI の値を含む `URLSpec` オブジェクトです。
+   * 添付ファイルを保存する `java.util.HashMap` オブジェクトです。オプションのパラメーターです。フォームにファイルを添付しない場合は `null` を指定できます。
 
-   この `renderPDFForm` メソッドは、 `FormsResult` クライアントの Web ブラウザーに書き込む必要があるフォームデータストリームを含むオブジェクト。
+   `renderPDFForm` メソッドは、クライアントの Web ブラウザーに書き込む必要のあるフォームデータストリームを含む `FormsResult` オブジェクトを返します。
 
-1. フォームデータストリームをクライアント Web ブラウザーに書き込む
+1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
-   * の作成 `com.adobe.idp.Document` を呼び出すことによってオブジェクトを取得 `FormsResult` オブジェクト `getOutputContent` メソッド。
-   * のコンテンツタイプを取得する `com.adobe.idp.Document` オブジェクトを呼び出す `getContentType` メソッド。
-   * を `javax.servlet.http.HttpServletResponse` を呼び出すことによるオブジェクトのコンテンツタイプ `setContentType` メソッドを使用して、 `com.adobe.idp.Document` オブジェクト。
-   * の作成 `javax.servlet.ServletOutputStream` オブジェクトを使用します。オブジェクトは、 `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッド。
-   * の作成 `java.io.InputStream` を呼び出すことによってオブジェクトを取得 `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッド。
-   * バイト配列を作成し、 `InputStream` オブジェクトの `read` メソッドを使用し、バイト配列を引数として渡す。
-   * を呼び出す `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッド。
+   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトを作成します。
+   * `getContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定するには、`setContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを渡します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに書き込むために使用される `javax.servlet.ServletOutputStream` オブジェクトを作成します。
+   * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出すことによって `java.io.InputStream` オブジェクトを作成します。
+   * `InputStream` オブジェクトの `read` メソッドを呼び出してバイト配列を引数として渡すことによって、バイト配列を作成してフォームデータストリームを入力します。
+   * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 
-[クイックスタート（SOAP モード）:Java API を使用してクライアントでフォームをレンダリングする](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使ったクライアントでのフォームのレンダリング](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Web サービス API を使用してクライアントでフォームをレンダリングする {#render-a-form-at-the-client-using-the-web-service-api}
+### Web サービス API を使用したクライアントでのフォームのレンダリング {#render-a-form-at-the-client-using-the-web-service-api}
 
-Forms API（Web サービス）を使用して、クライアントでフォームをレンダリングします。
+Forms API（Webサービス）を使用して、クライアントでフォームをレンダリングするには：
 
 1. プロジェクトファイルを含める
 
@@ -148,41 +148,41 @@ Forms API（Web サービス）を使用して、クライアントでフォー�
 
 1. Forms Client API オブジェクトの作成
 
-   の作成 `FormsService` オブジェクトを選択し、認証値を設定します。
+   `FormsService` オブジェクトを作成して、認証値を設定します。
 
-1. クライアントレンダリングの実行時オプションを設定する
+1. クライアントレンダリング実行時オプションを設定する
 
    * コンストラクタを使用して `PDFFormRenderSpec` オブジェクトを作成します。
-   * を `RenderAtClient` を呼び出すことによる実行時オプション `PDFFormRenderSpec` オブジェクトの `setRenderAtClient` メソッドと文字列値を渡す `RenderAtClient.Yes`.
+   * `RenderAtClient` 実行時オプションを設定するには、`PDFFormRenderSpec` オブジェクトの `setRenderAtClient` メソッドを呼び出し、文字列値 `RenderAtClient.Yes` を渡します。
 
-1. クライアントでフォームをレンダリング
+1. クライアントでフォームをレンダリングする
 
-   を呼び出す `FormsService` オブジェクトの `renderPDFForm` メソッドを使用して、次の値を渡します。
+   `FormsService` オブジェクトの `renderPDFForm` メソッドを呼び出し、次の値を渡します。
 
-   * ファイル名拡張子を含むフォームデザイン名を指定する string 値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定してください。 `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * A `BLOB` フォームに結合するデータを含むオブジェクト。 データを結合しない場合は、 `null`. ( [編集可能なレイアウトを使用したFormsの事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
-   * A `PDFFormRenderSpec` クライアントでフォームをレンダリングするために必要な実行時のオプションを格納するオブジェクト。
-   * A `URLSpec` Formsサービスで必要な URI 値を格納するオブジェクト。
-   * A `java.util.HashMap` 添付ファイルを保存するオブジェクト。 これはオプションのパラメーターで、 `null` フォームにファイルを添付しない場合。
-   * 空 `com.adobe.idp.services.holders.BLOBHolder` メソッドによって設定されるオブジェクト。 このパラメーターは、レンダリングされたPDFフォームを保存するために使用されます。
-   * 空 `javax.xml.rpc.holders.LongHolder` メソッドによって設定されるオブジェクト。 （この引数は、フォームのページ数を保存します）。
-   * 空 `javax.xml.rpc.holders.StringHolder` メソッドによって設定されるオブジェクト。 （この引数はロケール値を格納します）。
-   * 空 `com.adobe.idp.services.holders.FormsResultHolder` この操作の結果を格納するオブジェクト。
+   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定してください。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
+   * フォームと結合するデータを含む `BLOB` オブジェクトです。データを結合しない場合は、`null` を渡します。（[流動レイアウトによるフォームの事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md)を参照してください）。
+   * クライアントでフォームのレンダリングに必要な実行時オプションを格納する `PDFFormRenderSpec` オブジェクトです。
+   * Forms サービスで必要とされる URI 値を含む `URLSpec` オブジェクトです。
+   * 添付ファイルを保存する `java.util.HashMap` オブジェクト。これはオプションのパラメーターで、 フォームにファイルを添付しない場合に、`null`を指定します。
+   * メソッドによって入力される空の `com.adobe.idp.services.holders.BLOBHolder` オブジェクトです。このパラメーターは、レンダリングされた PDF フォームを格納するために使用されます。
+   * メソッドによって入力される空の `javax.xml.rpc.holders.LongHolder` オブジェクトです。（この引数は、フォームのページ数を保存します）。
+   * メソッドによって設定される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。（この引数はロケール値を格納します）。
+   * この操作の結果を格納する空の `com.adobe.idp.services.holders.FormsResultHolder` オブジェクト。
 
-   この `renderPDFForm` メソッドによって `com.adobe.idp.services.holders.FormsResultHolder` オブジェクト。クライアント Web ブラウザーに書き込む必要があるフォームデータストリームを含む最後の引数値として渡されます。
+   `renderPDFForm` メソッドは、最後の引数値として渡される `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトに、クライアント web ブラウザーに書き込む必要のあるフォームデータストリームを入力します。
 
-1. フォームデータストリームをクライアント Web ブラウザーに書き込む
+1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
-   * の作成 `FormResult` オブジェクトを作成するには、 `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトの `value` データメンバー。
-   * の作成 `BLOB` を呼び出してフォームデータを含むオブジェクト `FormsResult` オブジェクトの `getOutputContent` メソッド。
-   * のコンテンツタイプを取得する `BLOB` オブジェクトを呼び出す `getContentType` メソッド。
-   * を `javax.servlet.http.HttpServletResponse` を呼び出すことによるオブジェクトのコンテンツタイプ `setContentType` メソッドを使用して、 `BLOB` オブジェクト。
-   * の作成 `javax.servlet.ServletOutputStream` オブジェクトを使用します。オブジェクトは、 `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッド。
-   * バイト配列を作成し、 `BLOB` オブジェクトの `getBinaryData` メソッド。 このタスクは、 `FormsResult` オブジェクトをバイト配列に変換します。
-   * を呼び出す `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを使用して、フォームデータストリームをクライアント Web ブラウザーに送信します。 バイト配列を `write` メソッド。
+   * `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトの `value` データメンバーの値を取得して、`FormResult` オブジェクトを作成します。
+   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、フォームデータを含む `BLOB` オブジェクトを作成します。
+   * `getContentType` メソッドを呼び出して、`BLOB` オブジェクトのコンテンツタイプを取得します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定するには、`setContentType` メソッドを呼び出して、`BLOB` オブジェクトのコンテンツタイプを渡します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに書き込むために使用される `javax.servlet.ServletOutputStream` オブジェクトを作成します。
+   * バイト配列を作成し、`BLOB` オブジェクトの `getBinaryData` メソッドを呼び出して入力します。このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 
-[クライアントでのFormsのレンダリング](#rendering-forms-at-the-client)
+[クライアント側でのフォームのレンダリング](#rendering-forms-at-the-client)
 
-[Base64 エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)

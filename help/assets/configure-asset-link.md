@@ -111,7 +111,7 @@ Experience Manager を手動で設定するには：
    >
    >Bearer トークンで認証される各リクエストには、Adobe IMS への 3 回の呼び出し、ユーザーの同期、Experience Manager でのログイントークンの作成のオーバーヘッドが発生します。このオーバーヘッドを解決するために、Adobe Asset Link は、Experience Manager からの応答で返されたログイントークンをキャプチャし、後続のリクエストと共に送信します。このプロセスを機能させるには、Bearer 認証ハンドラーの相対的な優先度を調整する必要があります。
 
-1. （オプション）Experience Manager ユーザーの電子メール ID に大文字のドメイン名または大文字と小文字を混在させたドメイン名がある場合は、Experience Manager web コンソールで、**[!UICONTROL Adobe Granite ACP プラットフォーム設定]**&#x200B;の&#x200B;**[!UICONTROL ユーザーのロックを小文字に変更]**&#x200B;を選択します。
+1. （オプション）Experience Manager ユーザーのメール ID に大文字のドメイン名または大文字と小文字を混在させたドメイン名がある場合は、Experience Manager web コンソールで、**[!UICONTROL Adobe Granite ACP プラットフォーム設定]**&#x200B;の&#x200B;**[!UICONTROL ユーザーのロックを小文字に変更]**&#x200B;を選択します。
 
 ## ビジネスプロファイルへの移行後の追加の設定 {#configure-migration-activity}
 
@@ -285,7 +285,7 @@ Adobe Asset Link の設定時や使用時に問題が発生した場合は、次
 
 * デプロイメント環境が前提条件を満たしていることを確認します。特に、適切な機能パックまたはパッケージがインストールされていることを確認します。
 * 組織のパートナーまたはシステムインテグレーターに問い合わせてください。
-* Creative Cloud ユーザーが、チェックアウトされたアセットを確認できない場合は、電子メール ID でドメイン名の大文字と小文字を確認します。修正方法については、[手動設定](#manual-configuration)を参照してください。
+* Creative Cloud ユーザーが、チェックアウトされたアセットを確認できない場合は、メール ID でドメイン名の大文字と小文字を確認します。修正方法については、[手動設定](#manual-configuration)を参照してください。
 * 詳しくは、[Asset Link のトラブルシューティング](https://helpx.adobe.com/jp/enterprise/kb/asset-link-troubleshooting.html)を参照してください。
 
 

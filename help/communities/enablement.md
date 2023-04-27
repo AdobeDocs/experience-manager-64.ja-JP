@@ -1,7 +1,7 @@
 ---
 title: イネーブルメント機能の設定
 seo-title: Configuring Enablement Features
-description: Communities でイネーブルメント機能を設定します
+description: コミュニティでのイネーブルメント機能の設定
 seo-description: Configure enablement features in Communities
 uuid: 27be3128-1a7d-412e-99a9-6e3b3b0aec1c
 contentOwner: Janice Kendall
@@ -14,7 +14,7 @@ exl-id: 01cfc774-8ae1-48c0-a7e3-5836c4b39bff
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '440'
-ht-degree: 58%
+ht-degree: 9%
 
 ---
 
@@ -22,39 +22,43 @@ ht-degree: 58%
 
 ## 概要 {#overview}
 
-イネーブルメント機能では、[イネーブルメントコミュニティ](overview.md#enablement-community)を作成できます。
+イネーブルメント機能を使用すると、 [実施可能コミュニティ](overview.md#enablement-community).
 
 * この機能を実稼動環境で使用するには、追加のライセンスが必要です。
 
-イネーブルメント機能を使用するには、次の必要があります。
+イネーブルメント機能を使用するには、以下が必要です。
 
-以下をインストールします。
+次のインストール：
 
-* **SCORM** Sharable Content Object Reference Model（SCORM）は、e ラーニングの規格と仕様を集めたものです。SCORM では、コンテンツを転送可能な ZIP ファイルにパッケージ化する方法も定義されています。
+* **SCORM**
+Sharable Content Object Reference Model(SCORM) は、e ラーニングの標準と仕様の集まりです。 また、SCORM では、コンテンツを転送可能な ZIP ファイルにパッケージ化する方法も定義します。
 
-* **MySQL** MySQL は、主に、イネーブルメントリソースの SCORM 追跡データおよびレポートデータや、ビデオの再生状況の追跡用テーブルを格納するために使用されるリレーショナルデータベースです。イネーブルメント機能パックで SCORM を使用するには、MySQL JDBC ドライバが必要です。
+* **MySQL**
+MySQL は、主にイネーブルメントの SCORM 追跡データとレポートデータに使用されるリレーショナルデータベースと、ビデオの進行状況を追跡するためのテーブルです。 イネーブルメント機能パック用の SCORM には、MySQL JDBC ドライバが必要です。
 
-* **FFmpeg** FFmpeg はオーディオとビデオの変換およびストリーミングのためのソリューションです。インストールすると、[ビデオアセット](../../help/sites-authoring/default-components-foundation.md#video)の適切なトランスコーディングに使用できます。イネーブルメントコミュニティでは、オーサー環境で、アップロードしたリソースのメタデータを取得したり、リソースの一覧に表示するサムネイルを生成するときに FFmpeg を使用します。
+* **FFmpeg**
+FFmpeg は、オーディオとビデオの変換とストリーミングを行うソリューションで、インストール時に、 [ビデオアセット](../../help/sites-authoring/default-components-foundation.md#video). イネーブルメントコミュニティの場合、オーサー環境では、アップロードされたリソースのメタデータを取得したり、リソースのリスト時に表示するサムネールを生成したりするのに使用されます。
 
-以下をセットアップします。
+設定：
 
 * **コミュニティマネージャー**
 イネーブルメントコミュニティの場合、 
 `Community Enablement Managers` ユーザーグループには、 `*Community Site* Enablement Manager`（権限には、コンテンツの作成、割り当て、パブリッシュ環境でのメンバー管理などが含まれます）
 
-オプションで以下を設定します。
+オプション設定：
 
-* **Adobe Analytics** Adobe Analytics と統合することで、包括的なレポート機能が追加され、また Analytics に Video Heartbeat を追加できます。
+* **Adobe Analytics**
+Adobe Analyticsとの統合により、包括的なレポート機能が追加され、Analytics へのビデオハートビート追加がサポートされます。
 
 * **Dispatcher**
 
 ## 設定手順 {#configuration-steps}
 
-イネーブルコミュニティに必要な手順を以下に示します。
+イネーブルメントコミュニティに必要な手順を次に示します。
 
-各手順は、必要な詳細が記されたドキュメントにリンクしています。
+各手順は、必要な詳細を提供するドキュメントにリンクしています。
 
-**すべてのオーサー／パブリッシュインスタンスで、次の手順を実行します。**
+**すべてのオーサー/パブリッシュインスタンスで、次の操作を実行します。**
 
 1. **[MySQL 用の JDBC ドライバーのインストール](deploy-communities.md#jdbc-driver-for-mysql)**
 Web コンソール（バンドル）を使用：インストール *http://localhost:4502/system/console/bundles*
@@ -64,20 +68,20 @@ Web コンソール（バンドル）を使用：インストール *http://loca
 パッケージマネージャを使用： 
 *http://localhost:4502/crx/packmgr/*
 
-**任意のサーバーで、次の手順を実行します。**
+**任意のサーバー上：**
 
-1. **[MySQL、MySQL Workbench をインストール](mysql.md)**
+1. **[MySQL、MySQL Workbench のインストール](mysql.md)**
 
 1. **[MySQL データベースのインストール](mysql.md#database-setup)**
 オーサーインスタンスからダウンロードした SQL スクリプトを実行
 \
    MySQL Workbench の使用
 
-**オーサーインスタンスをホストしている同じサーバーで、次の手順を実行します。**
+**オーサーインスタンスをホストする同じサーバー上：**
 
-1. **[FFmpeg をインストール](ffmpeg.md)**
+1. **[FFmpeg のインストール](ffmpeg.md)**
 
-**すべてのオーサー／パブリッシュインスタンスで、次の手順を実行します。**
+**すべてのオーサー/パブリッシュインスタンスで、次の操作を実行します。**
 
 1. **[JDBC 接続プールの設定](mysql.md#configure-jdbc-connections)**
 Web コンソール (configMgr) を使用： 
@@ -91,7 +95,7 @@ Web コンソール (configMgr) を使用：
 Web コンソール (configMgr) を使用： 
 *http://localhost:4502/system/console/configMgr*
 
-**オーサーインスタンスで、次の手順を実行します。**
+**オーサーインスタンス上：**
 
 1. (*オプション*) **[Analytics サービスの設定](analytics.md)**
 ツール/デプロイメント/Cloud Servicesコンソールを使用します。 
@@ -109,9 +113,9 @@ Web コンソール (configMgr) を使用：
 
    * 次のグループにメンバーを追加します：
 
-      * コミュニティイネーブルメントマネージャー
+      * コミュニティイネーブルメントマネージャ
       * コミュニティ管理者
 
 ## Dispatcher {#dispatcher}
 
-デプロイメントに次の条件が含まれる場合 [AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)イネーブルメント機能を正しく動作させるには、 `clientheader`および `filter`セクションは変更が必要です。 [コミュニティのための Dispatcher の設定](dispatcher.md#enablement)を参照してください。
+デプロイメントに次の条件が含まれる場合 [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)イネーブルメント機能を正しく動作させるには、 `clientheader`および `filter`セクションは変更が必要です。 詳しくは、 [コミュニティ用の Dispatcher の設定](dispatcher.md#enablement).

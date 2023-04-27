@@ -1,7 +1,7 @@
 ---
 title: AEM Forms Android アプリケーションの構築
 seo-title: Build the AEM Forms Android app
-description: Android Studio プロジェクトを設定し、Android 向け AEM Forms アプリケーションの .apk ファイルを構築するための手順
+description: Android Studio プロジェクトを設定し、Android 用AEM Formsアプリ用の.apk ファイルを構築する手順です
 seo-description: Steps to set up the Android Studio project and build the .apk file for the AEM Forms app for Android
 uuid: 2e140aaf-5be5-4d5d-9941-9d1f4bf2debd
 content-type: reference
@@ -12,7 +12,7 @@ exl-id: dbeed62e-eff1-47bc-b6da-cad543295170
 source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
 source-wordcount: '715'
-ht-degree: 95%
+ht-degree: 77%
 
 ---
 
@@ -30,10 +30,10 @@ AEM Forms アプリケーションのソースコードパッケージは `adobe
 
 `adobe-aemfd-forms-app-src-pkg-<version>.zip` ファイルをダウンロードするには、次の手順を実行します。
 
-1. [ソフトウェア配布](https://experience.adobe.com/jp/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
+1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
 1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
-1. 「**[!UICONTROL フィルター]**」セクションで、
-   1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
+1. 内 **[!UICONTROL フィルター]** セクション：
+   1. 選択 **[!UICONTROL Forms]** から **[!UICONTROL 解決策]** 」ドロップダウンリストから選択できます。
    2. パッケージのバージョンとタイプを選択します。「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
 1. お使いのオペレーティングシステムに適したパッケージの名前をタップし、「**[!UICONTROL EULA 利用規約に同意する]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
 1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き、「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
@@ -47,9 +47,9 @@ AEM Forms アプリケーションのソースコードパッケージは `adobe
 
 ## 環境変数の設定 {#set-environment-variable-android}
 
-AEM Forms アプリケーションの構築プロセスを開始する前に、次の環境変数を設定します。
+AEM Formsアプリのビルドプロセスを開始する前に、次の環境変数を設定します。
 
-* JAVA_HOME 環境変数を、ローカルファイルシステム上の JDK ソフトウェアの場所に設定します。例：C:\Program Files\Java\jdk1.8.0_181
+* JAVA_HOME 環境変数を、ローカル・ファイル・システム上の JDK ソフトウェアの場所に設定します。 例： C:\Program Files\Java\jdk1.8.0_181
 * `ANDROID_SDK_ROOT` システム環境変数を、Android の SDK の場所に設定します。例： C:\Users\username\AppData\Local\Android\Sdk
 * `Path` システム環境変数を、Android の platform-tools フォルダーおよび tools フォルダーに含めるように設定します。例：C:\Users\username\AppData\Local\Android\Sdk\platform-tools and C:\Users\username\AppData\Local\Android\Sdk\tools
 
@@ -62,9 +62,9 @@ adobe-lc-mobileworkspace-src-&lt;version>.zip ファイルをローカルファ
 
 ### Android Studio を使用した AEM Forms アプリケーションの構築 {#using-android-studio}
 
-Android Studio を使用して AEM Forms アプリケーションを構築するには、次の手順を実行します。
+Android Studio を使用してAEM Formsアプリを構築するには、次の手順を実行します。
 
-1. お使いのマシンで Android Studio アプリケーションを起動します。
+1. 自分のマシンで Android Studio アプリケーションを起動します。
 1. 「**Open an existing Android Studio project**」をクリックします。既存のプロジェクトを開くダイアログボックスが自動的に表示されない場合は、**File**／**Open** を選択します。
 1. ローカルファイルシステム上の *adobe-lc-mobileworkspace-src-&lt;version>.zip/android* に移動し、「**OK**」をクリックします。
 
@@ -81,13 +81,13 @@ Android Studio を使用して AEM Forms アプリケーションを構築する
    * [テーマのカスタマイズ](/help/forms/using/theme-customization.md)
    * [ジェスチャのカスタマイズ](/help/forms/using/gesture-customization.md)
 
-   アプリケーションを適切にカスタマイズした後、.apk ファイルを生成して配布できます。
+   アプリに適切なカスタマイズを適用したら、配布用に.apk ファイルを生成できます。
 
 ### Android Studio を使用した .apk ファイルの生成 {#generate-apk-android-studio}
 
-Android Studio を使用して .apk ファイルを生成するには、次の手順を実行します。
+Android Studio を使用して.apk ファイルを生成するには、次の手順を実行します。
 
-1. お使いのマシンで Android Studio アプリケーションを起動します。
+1. 自分のマシンで Android Studio アプリケーションを起動します。
 1. 「**Open an existing Android Studio project**」を選択します。既存のプロジェクトを開くダイアログボックスが自動的に表示されない場合は、**File**／**Open** を選択します。
 1. ローカルファイルシステム上の *adobe-lc-mobileworkspace-src-&lt;version>.zip/android* に移動し、「**OK**」をクリックします。
 

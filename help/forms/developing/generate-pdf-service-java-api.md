@@ -1,7 +1,7 @@
 ---
-title: PDFサービス Java API QuickStart(SOAP) を生成
+title: PDF サービス Java API クイックスタート（SOAP）を生成
 seo-title: Generate PDF Service Java API QuickStart(SOAP)
-description: GeneratePDFサービスを使用して、Microsoft Word ドキュメントをPDFドキュメントに変換し、HTMLコンテンツをPDFドキュメントに変換し、Java API を使用してPDFドキュメントを RTF ファイルに変換します。
+description: Generate PDF サービスを使用して、Microsoft Word ドキュメントを PDF ドキュメントに変換し、HTML コンテンツを PDF ドキュメントに変換し、Java API を使用して PDF ドキュメントを RTF ファイルに変換します。
 seo-description: Use the Generate PDF service to convert a Microsoft Word document to a PDF document, convert HTML content to a PDF document, convert a PDF document to an RTF file using the Java API.
 uuid: f8c4a476-de5e-440a-b419-0bd1d7fde5ca
 contentOwner: admin
@@ -14,29 +14,29 @@ exl-id: 897be9a1-a2e7-469f-8c60-2ede787cef29
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '324'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# GeneratePDFサービス Java API クイックスタート (SOAP) {#generate-pdf-service-java-api-quickstart-soap}
+# Generate PDF サービス Java API クイックスタート（SOAP） {#generate-pdf-service-java-api-quickstart-soap}
 
-Generate Generate Service で Java API Quick Start(SOAP) を使用できるPDF。
+Java API クイックスタート（SOAP）は Generate PDF サービスで使用できます。
 
-[クイックスタート（SOAP モード）:Java API を使用したMicrosoft Word ドキュメントのPDFドキュメントへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用して Microsoft Word ドキュメントを PDF ドキュメントに変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAP モード）:Java API を使用したHTMLコンテンツのPDFドキュメントへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用して HTML コンテンツを PDF ドキュメントに変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAP モード）:Java API（SOAP モード）を使用したPDFドキュメントから RTF ファイルへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode)
+[クイックスタート（SOAP モード）：Java API（SOAP モード）を使用して PDF ドキュメントを RTF ファイルに変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「 AEM Formsのプログラミング」にあるクイックスタートは、JBoss Application Server とMicrosoft Windows オペレーティングシステムにデプロイされるForms Server に基づいています。 ただし、UNIX などの別のオペレーティング・システムを使用している場合は、Windows 固有のパスを、該当するオペレーティング・システムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 詳しくは、 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>『AEM Forms によるプログラミング』にあるクイックスタートは、JBoss アプリケーションサーバーと Microsoft Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
-## クイックスタート（SOAP モード）:Java API を使用したMicrosoft Word ドキュメントのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}
+## クイックスタート（SOAP モード）：Java API を使用して Microsoft Word ドキュメントを PDF ドキュメントに変換 {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}
 
-次のコードの例では、という名前の Word ファイルを変換します。 *Loan.doc* 次の名前のPDF文書に *Loan.pdf*. ( [Word 文書の変換，PDF文書](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents).)
+次のコードの例では、*Loan.doc* という名前の Word ファイルを *Loan.pdf* という名前の PDF ドキュメントに変換します（[Word ドキュメントを PDF ドキュメントへに変換](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents)を参照してください）。
 
 ```as3
  /* 
@@ -148,9 +148,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定された API を使用し
  }
 ```
 
-## クイックスタート（SOAP モード）:Java API を使用したHTMLコンテンツのPDFドキュメントへの変換 {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}
+## クイックスタート（SOAP モード）：Java API を使用して HTML コンテンツを PDF ドキュメントに変換 {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}
 
-次の Java コードの例では、https://www.adobe.comにあるHTMLコンテンツを、という名前のPDFドキュメントに変換します。 *AdobeHTML.pdf*. ( [HTML文書をPDF文書に変換](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents).)
+次の Java コードの例では、https://www.adobe.com にある HTML コンテンツを、*AdobeHTML.pdf* という名前の PDF ドキュメントに変換します（[HTML ドキュメントを PDF ドキュメントに変換](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents)を参照してください）。
 
 ```as3
  /* 
@@ -254,9 +254,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定された API を使用し
  }
 ```
 
-## クイックスタート（SOAP モード）:Java API（SOAP モード）を使用したPDFドキュメントから RTF ファイルへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}
+## クイックスタート（SOAP モード）：Java API（SOAP モード）を使用して PDF ドキュメントを RTF ファイルに変換 {#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}
 
-次のコードの例では、という名前のPDF文書を変換します。 *Loan.pdf* 次の名前の RTF ドキュメントに *Loan.rtf*. ( [PDFドキュメントを非画像形式に変換中](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats).)
+次のコードの例では、*Loan.pdf* という名前の PDF ドキュメントを *Loan.rtf* という名前の RTF ドキュメントに変換します（[PDF ドキュメントを非画像形式に変換](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats)を参照してください）。
 
 ```as3
  /* 

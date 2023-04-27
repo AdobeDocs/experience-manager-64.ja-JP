@@ -13,17 +13,17 @@ exl-id: ddd2bd98-b375-4d1e-b9d1-5efc3dbca398
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '319'
-ht-degree: 58%
+ht-degree: 3%
 
 ---
 
 # レビューの基本事項 {#reviews-essentials}
 
-この機能は、連携して動作する 2 つのコンポーネント（レビューとレビュー概要）で構成されます。
+この機能は、連携する 2 つのコンポーネントで構成されます。レビューとレビューの概要。
 
 レビューは、 [コメントシステム](essentials-comments.md) 1 つ以上の [評価](rating-basics.md) （集計）コンポーネント
 
-匿名でのレビュー投稿はサポートされていません。サイトの訪問者は、レビューを追加するには、登録してサインインする必要があります。 サインインした訪問者（メンバー）は、いつでもレビューを更新できます。
+レビューの匿名投稿はサポートされていません。 サイトの訪問者は、レビューを追加するには、登録してサインインする必要があります。 サインインした訪問者（メンバー）は、いつでもレビューを更新できます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -36,8 +36,8 @@ ht-degree: 58%
    <td>social/reviews/components/hbs/reviews</td> 
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
-   <td>はい - プロパティは<i>デザイン</i>モードで編集可能</td> 
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td> 
+   <td>はい — でプロパティを編集できます <i>デザイン </i>mode</td> 
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientllibs</strong></a></td> 
@@ -58,11 +58,11 @@ ht-degree: 58%
  </tbody>
 </table>
 
-### レビュー概要 {#review-summary}
+### レビューの概要 {#review-summary}
 
 | **resourceType** | social/reviews/components/hbs/summary |
 |---|---|
-| [**インクルード可能**](scf.md#add-or-include-a-communities-component) | はい — プロパティは*デザイン*モードで編集可能です |
+| [**包含可能な**](scf.md#add-or-include-a-communities-component) | はい — プロパティは*デザイン*モードで編集可能です |
 | [**clientllibs**](client-customize.md#clientlibs-for-scf) | cq.social.hbs.reviews |
 | **テンプレート** | /libs/social/reviews/components/hbs/summary/summary.hbs |
 | **css** | /libs/social/reviews/components/hbs/reviews/clientlibs/review.css |
@@ -72,24 +72,24 @@ ht-degree: 58%
 
 ## サーバー側の基本事項 {#essentials-for-server-side}
 
-* [レビュー API](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/review/client/api/package-summary.html)
+* [API を確認](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/review/client/api/package-summary.html)
 
-* [レビューエンドポイント](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/review/client/endpoints/package-summary.html)
+* [エンドポイントを確認](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/review/client/endpoints/package-summary.html)
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿されたレビュー（UGC）へのアクセス {#accessing-posted-reviews-ugc}
+### 投稿されたレビュー (UGC) へのアクセス {#accessing-posted-reviews-ugc}
 
-UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。\
-[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
+UGC は、モデレートの標準的な方法の 1 つを使用してモデレートする必要があります。\
+詳しくは、 [ユーザー生成コンテンツのモデレート](moderate-ugc.md).
 
-AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)を使用する際に、選択されたストレージオプション（ASRP、MSRP、JSRP など）に関係なく、プログラムによって UGC にアクセスする必要があります。
+AEM 6.1 Communities 以降では、 [共通店](working-with-srp.md) UGC の場合は、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、プログラムで UGC にアクセスできます。
 
-**リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
+**リポジトリ内の UGC の場所と形式は、警告なしで変更される場合があります**.
 
 以下を参照してください。
 
-* [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
+* [ストレージリソースプロバイダの概要](srp.md)  — 概要とリポジトリ使用の概要
 * [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例
 * [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングガイドライン
-* [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
+* [SocialUtils リファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします

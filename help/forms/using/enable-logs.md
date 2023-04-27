@@ -1,7 +1,7 @@
 ---
 title: HTML5 フォーム内でのログの有効化
 seo-title: Enable logging for HTML5 forms
-description: ロガーユーティリティはフォームのログを可能にし、フォーム関連の問題のデバッグに役立ちます。
+description: ロガーユーティリティは、フォームのログを有効にし、フォーム関連の問題をデバッグするのに役立ちます。
 seo-description: The logger utility enables logging for a form and helps you debug form-related issues.
 uuid: d6279092-57f3-4fc6-b41b-9caf65459d4d
 contentOwner: robhagat
@@ -14,44 +14,44 @@ exl-id: c7953d1b-a332-4138-b744-516f3881cd4d
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '627'
-ht-degree: 71%
+ht-degree: 55%
 
 ---
 
-# HTML5フォーム内でのログの有効化 {#enable-logging-for-html-forms}
+# HTML5 フォーム内でのログの有効化 {#enable-logging-for-html-forms}
 
-ロガーユーティリティを設定することで、HTML5フォームでログの作成を開始することができます。ロガーユーティリティにはいくつかのレベルがあり、要件に応じてレベルを設定することができます。HTML5フォームは、サーバーコンポーネントとクライアントコンポーネントから構成されています。両方のコンポーネントに対してログを設定できます。 
+ロガーユーティリティを設定して、HTML5 forms のログの作成を開始できます。 ロガーユーティリティには様々なレベルがあり、必要に応じてレベルを設定できます。 HTML5 フォームには、サーバーとクライアントのコンポーネントが含まれています。 両方のコンポーネントに対してログを設定できます。 
 
-## サーバー側のログの設定 {#configuring-server-side-logging}
+## サーバー側ログの設定 {#configuring-server-side-logging}
 
-次の手順を実行して、サーバーサイドログを構成します。
+次の手順を実行して、サーバー側ログを設定します。
 
-1. `https://[server]:[port]/system/console/configMgr` にアクセスします。を探して開きます。 *Apace Sling ログロガー設定* オプション。 ダイアログボックスが表示されます。
+1. `https://[server]:[port]/system/console/configMgr` に移動します。*Apace Sling ロギングロガー設定* オプションを探して開きます。ダイアログボックスが表示されます。
 
-   ![ Apace Sling ロギングのロガー設定オプションのダイアログボックス](assets/logconfig.png)
+   ![Apace Sling ロギングのロガー設定オプションのダイアログボックス](assets/logconfig.png)
 
    Apace Sling ロギングロガー設定オプション
 
 1. **ログレベル**&#x200B;を&#x200B;**デバッグ**&#x200B;に変更します。 
 
-1. の名前とパスを指定します。 **ログファイル**.
+1. **ログファイル**&#x200B;のパスと名前を指定します。
 
    >[!NOTE]
    >
-   >HTML5 フォームログディレクトリ内にログを生成する場合は、ファイル名の前に ../logs/ を追加します。
+   >HTML5 Forms ログディレクトリ内にログを生成する場合は、ファイル名の前に ../logs/ を追加します。
 
-1. **Logger** を HTMLFormsPerfLogger **に変更します。**「**保存**」をクリックします。
+1. **ロガー**&#x200B;を **HTMLFormsPerfLogger に変更します。**「**保存**」をクリックします。
 
-## クライアントロギングの設定 {#configuring-client-logging}
+## クライアントログの設定 {#configuring-client-logging}
 
-次の方法により、HTML5 フォームのクライアント側のロギングを有効にできます。
+次の方法を使用して、HTML5 フォームでクライアント側のログを有効にすることができます。
 
 * `log` という名前の要求パラメーターの使用
 * CQ Configuration Manager の使用
 
-### 要求パラメーターの使用によるログの有効化 {#enabling-logging-using-request-parameter}
+### リクエストパラメーターを使用したログの有効化 {#enabling-logging-using-request-parameter}
 
-この方法を使用して、特定の要求に対するログを生成できます。要求パラメーターの名前は **log** です。ログ URL は次のとおりです。
+この方法を使用すると、特定のリクエストのログを生成できます。 リクエストパラメーターの名前は **ログ**. ログ URL は次のとおりです。
 
 `https://<server>:<port>/content/xfaforms/profiles/test.html?contentRoot=<path of the folder containing form xdp>&template=<name of the xdp>&log=<log configuration>.`
 
@@ -67,20 +67,20 @@ ht-degree: 71%
   </tr> 
   <tr> 
    <td>1</td> 
-   <td>ログはブラウザーの<strong>コンソール</strong>に送信されます。</td> 
+   <td>ログはブラウザーに送信されます <strong>コンソール</strong></td> 
   </tr> 
   <tr> 
    <td>2</td> 
-   <td>ログはクライアント側の JavaScript オブジェクトに収集され、<strong>サーバー</strong>にポストできます。 </td> 
+   <td>ログはクライアント側の JavaScript オブジェクトで収集され、に投稿できます。 <strong>サーバー</strong> </td> 
   </tr> 
   <tr> 
    <td>3</td> 
-   <td>両方の上記のオプション<br /> </td> 
+   <td>上記のオプションの両方<br /> </td> 
   </tr> 
  </tbody> 
 </table>
 
-#### ログのレベル {#log-levels}
+#### ログレベル {#log-levels}
 
 <table> 
  <tbody> 
@@ -94,23 +94,23 @@ ht-degree: 71%
   </tr> 
   <tr> 
    <td>1</td> 
-   <td>FATAL<br type="_moz" /> </td> 
+   <td>致命的<br type="_moz" /> </td> 
   </tr> 
   <tr> 
    <td>2</td> 
-   <td>ERROR<br type="_moz" /> </td> 
+   <td>エラー <br type="_moz" /> </td> 
   </tr> 
   <tr> 
    <td>3</td> 
-   <td>WARN<br type="_moz" /> </td> 
+   <td>警告<br type="_moz" /> </td> 
   </tr> 
   <tr> 
    <td>4</td> 
-   <td>INFO<br type="_moz" /> </td> 
+   <td>情報<br type="_moz" /> </td> 
   </tr> 
   <tr> 
    <td>5</td> 
-   <td>DEBUG<br type="_moz" /> </td> 
+   <td>デバッグ<br type="_moz" /> </td> 
   </tr> 
   <tr> 
    <td>6</td> 
@@ -118,7 +118,7 @@ ht-degree: 71%
   </tr> 
   <tr> 
    <td>7</td> 
-   <td>ALL<br type="_moz" /> </td> 
+   <td>すべて<br type="_moz" /> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -132,12 +132,12 @@ ht-degree: 71%
    <th>説明</th> 
   </tr> 
   <tr> 
-   <td>がない場合、</td> 
-   <td>xfa （スクリプティングエンジン関連ログ）</td> 
+   <td>a</td> 
+   <td>xfa（スクリプティングエンジン関連のログ）</td> 
   </tr> 
   <tr> 
    <td>b</td> 
-   <td>xfaView （レイアウトエンジン関連ログ）<br type="_moz" /> </td> 
+   <td>xfaView （レイアウトエンジン関連のログ）<br type="_moz" /> </td> 
   </tr> 
   <tr> 
    <td>c</td> 
@@ -146,9 +146,9 @@ ht-degree: 71%
  </tbody> 
 </table>
 
-#### ログの設定 {#log-configuration}
+#### ログ設定 {#log-configuration}
 
-ログ URL では、ログ設定クエリーの文字列パラメーターは次のとおりに定義します。
+ログ URL では、ログ設定クエリー文字列パラメーターは次のように定義されます。
 
 `{destination}-{a level}-{b level}-{c level}`
 
@@ -157,54 +157,54 @@ ht-degree: 71%
 <table> 
  <tbody> 
   <tr> 
-   <th>ログの設定</th> 
-   <th>詳細</th> 
+   <th>ログ設定</th> 
+   <th>説明</th> 
   </tr> 
   <tr> 
    <td>2-a4-b5-c6<br type="_moz" /> </td> 
-   <td>保存場所：Server<br /> xfa レベル：INFO<br /> xfaView レベル：DEBUG<br /> xfaPerf レベル： TRACE</td> 
+   <td>宛先：サーバー<br /> xfa レベル：情報<br /> xfaView レベル：デバッグ<br /> xfaPerf レベル：TRACE</td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->a（xfa）、b（xfaView）、および c（xfaPerf）のそれぞれのログカテゴリに対するデフォルトログレベルは 2（エラー）です。そのため、ログ設定 2-b6 では、異なるカテゴリのログレベルは：\
->a (xfa):2 （デフォルトレベルのエラー）\
->b (xfaView):6 ( ユーザー指定TRACE)\
->a (xfaPerf):2 （デフォルトレベルのエラー）
+>各ログカテゴリ a(xfa)、b(xfaView) および c(xfaPerf) のデフォルトのログレベルは 2(ERROR) です。 したがって、ログ設定の場合は次のようになります。2-b6（異なるカテゴリのログレベルは次のとおりです）。\
+>a（xfa）：2（デフォルトレベルのエラー）\
+>b（xfaView）：6（ユーザー指定トレース）\
+>a（xfaPerf）：2（デフォルトレベルのエラー）
 
 ### Configuration Manager の使用によるログの有効化 {#enabling-logging-using-configuration-manager}
 
-ログを有効にするために Configuration Manager を使用すると、ログが再び無効になるまで、レンダリング要求ごとにログが生成されます。
+ログを有効化するために Configuration Manager を使用すると、ログが再び無効化されるまで、すべてのレンダリング要求に対してログが生成されます。
 
-1. CQ Configuration Manager( ) にログインします。 `https://[server]:[port]/system/console/configMgr` 管理者の資格情報を使用してログインします。
-1. **「LC Forms Configurations」**&#x200B;を探してクリックします。
-1. 「Debug Options」テキストボックスで、前のセクションで説明されたとおりにログ設定を入力します。例：**2-a4-b5-c6**
+1. CQ Configuration Manager に `https://[server]:[port]/system/console/configMgr` でログインし、管理者の資格情報でログインしてください。
+1. を検索してクリックします。 **モバイルForms設定**.
+1. 前の節で説明したように、「 Debug Options 」テキストボックスにログ設定を入力します。次に例を示します。 **2-a4-b5-c6**
 
    ![Forms 設定](assets/forms_configuration.png)
 
    Forms 設定
 
-## ログのアップロード {#uploading-logs}
+## ログのアップロード中 {#uploading-logs}
 
-宛先が 1 として設定されている場合、すべてのクライアントスクリプトのログメッセージはコンソールに送信されます。管理者がサーバーログと共にこれらのログを必要とする場合は、宛先レベルを 2 に設定します。 このレベルでは、すべてのログはクライアント側の JS オブジェクトに収集され、フォームがデフォルトのプロファイルでレンダリングされる場合は、 **ログを送信** ボタンが **既存のフィールドをハイライト** 」ボタンをクリックします。 ユーザーがリンクをクリックすると、収集したすべてのログがサーバーに投稿され、サーバー上の設定済みエラーログファイルに記録されます。
+宛先が 1 に設定されている場合、すべてのクライアントスクリプトログメッセージがコンソールに送信されます。 管理者がサーバーログと供にこれらのログを必要とする場合は、出力先レベルを 2 に設定します。このレベルでは、すべてのログはクライアント側の JS オブジェクトに収集されて、フォームがデフォルトプロファイルでレンダリングされる場合、ツールバーの&#x200B;**既存のフィールドのハイライト**&#x200B;ボタンの左に&#x200B;**ログを送信**&#x200B;ボタンが表示されます。ユーザーがリンクをクリックすると、収集されたすべてのログはサーバーに投稿され、サーバー上の設定されたエラーログファイルに記録されます。
 
 デフォルトでは、すべての情報が /crx-repository/logs/ ディレクトリに保存されている error.log ファイルに追加されます。
 
-ログファイルの場所と名前を変更するには、次の操作を実行します。
+ログファイルの場所と名前を変更するには、次の手順を実行します。
 
-1. 管理者として「Configuration Manager」にログインします。Configuration Manager のデフォルトの URL は、 `https://[*Server*]:[*Port*]/system/console/configMgr`.
-1. **「Apace Sling ロギングロガー設定」**&#x200B;をクリックします。ダイアログボックスが表示されます。
+1. 管理者として「 Configuration Manager」にログインします。Configuration Manager のデフォルトの URL は、`https://[*Server*]:[*Port*]/system/console/configMgr` です。
+1. クリック **Apache Sling Logging Logger Configuration**. ダイアログボックスが表示されます。
 
    ![logconfig-1](assets/logconfig-1.png)
 
 1. **ログレベル**&#x200B;をデバッグに変更します。 
 
-1. パスと名前を指定 **ログファイル**.
+1. **ログファイル**&#x200B;のパスと名前を指定します。
 
    >[!NOTE]
    >
    >他のログファイルが保存されている同じディレクトリにログを作成するには、Log Files プロパティで ../logs/&lt;filename> を指定します。
 
-1. を **ロガー** から **HTMLFormsPerfLogger** をクリックし、 **保存**.
+1. **Logger** を **HTMLFormsPerfLogger** に変更し、「**保存**」をクリックします。

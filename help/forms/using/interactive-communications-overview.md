@@ -12,7 +12,7 @@ exl-id: 386fc8b2-c92d-4731-8445-1bb6af54fd98
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '506'
-ht-degree: 69%
+ht-degree: 57%
 
 ---
 
@@ -22,20 +22,20 @@ ht-degree: 69%
 
 ![](do-not-localize/correspondence-management.png)
 
-Interactive Communications は、ビジネス通信、ドキュメント、声明書、福利厚生通知、マーケティングメール、請求、ウェルカムキットなど、安全でパーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。
+インタラクティブ通信を使用すると、業務上の書簡、ドキュメント、取引明細書、給付金通知、マーケティング用メール、請求書、ウェルカムキットなど、様々な通信記録の作成と配信を、カスタマイズされた安全な方法で一元的に管理できます。
 
 ## 主な機能 {#key-capabilities}
 
-以下に、インタラクティブ通信の主要な機能を示します。
+インタラクティブ通信の主な機能は次のとおりです。
 
-* すぐに使用できる、フォームデータモデルとの統合機能が付属しています。この機能により、バックエンドのデータベースと、MS® Dynamics などの CRM システムに簡単にアクセスすることができます。
-* 印刷チャネルと Web チャネル用の統合オーサリングインターフェイスが用意されています。このインターフェイスにより、印刷チャネルから Web チャネルを自動的に生成することができます。
-* 印刷チャネルと Web チャネルでグラフを使用して、視覚的に分かりやすい形式で情報を表現することができます。
-* ドキュメントフラグメントで、ルールエディターとフォームデータモデルを使用することができます。
-* エージェントのユーザーインターフェイスに、インタラクティブ通信の印刷と Web プレビューが表示されます
+* すぐに使用できるフォームデータモデルとの統合により、バックエンドデータベースや MS® Dynamics などの他の CRM システムへのアクセスを簡単かつ合理化できます。
+* 印刷チャネルと Web チャネル用の統合オーサリングインターフェイス。印刷チャネルから Web チャネルを自動生成できます。
+* 印刷や Web で、分かりやすい視覚的な形式で情報を表示するグラフ
+* ドキュメントフラグメントは、ルールエディターとフォームデータモデルをサポートしています
+* エージェント UI で、インタラクティブ通信の印刷プレビューと web プレビューを表示できます。
 * ドラッグアンドドロップ操作でコンポーネントを配置し、印刷チャネルと Web チャネルを短時間で作成することができます。
 
-## サンプルの使用例 {#sample-use-case}
+## 使用例 {#sample-use-case}
 
 この [クレジットカードのお客様向けのウェルカムキット](/help/forms/using/finance-reference-site-walkthrough.md#credit-card-application-walkthrough) 使用例の例は、インタラクティブ通信の機能を示しています。
 
@@ -45,36 +45,36 @@ Interactive Communications は、ビジネス通信、ドキュメント、声�
 
 ### ワークフロー {#workflow}
 
-インタラクティブ通信を作成するには、 [構築ブロック](#buildingblocks) インタラクティブ通信の準備が整ったら、次の手順を実行します。
+インタラクティブ通信を作成するには、インタラクティブ通信の[構築ブロック](#buildingblocks)を準備してから、以下の手順を実行する必要があります。
 
-1. 選択して [インタラクティブ通信の作成](/help/forms/using/create-interactive-communication.md).
+1. 「[インタラクティブ通信の作成](/help/forms/using/create-interactive-communication.md)」を選択します。
 
-1. [フォームデータモデル](/help/forms/using/data-integration.md)、事前入力サービス、[印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)を指定します。印刷チャネルから Web チャネルを生成することもできます。
+1. [フォームデータモデル](/help/forms/using/data-integration.md)、事前入力サービス、[印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)を指定します。プリントチャンネルから web チャンネルを生成することもできます。
 
-1. の使用 [ドラッグ&amp;ドロップインターフェイス](/help/forms/using/introduction-interactive-communication-authoring.md)必要に応じて、ドキュメントフラグメント、画像、コンポーネントをインタラクティブ通信の印刷チャネルと Web チャネルに追加します。
-1. 追加したコンポーネントのプロパティを設定します。例えば、以下のようなコンポーネントがあります。
+1. 必要に応じて[ドラッグ＆ドロップ方式のインターフェイス](/help/forms/using/introduction-interactive-communication-authoring.md)を使用して、ドキュメントフラグメント、画像、コンポーネントを、インタラクティブ通信のプリントチャンネルと web チャンネルに追加します。
+1. 挿入されるコンポーネントのプロパティを設定します。次に例を示します。
 
    1. 画像
-   1. [テーブル](/help/forms/using/create-interactive-communication.md#tables) （レイアウトフラグメントを含む）
+   1. [テーブル](/help/forms/using/create-interactive-communication.md#tables)（レイアウトフラグメントを含む）
    1. [グラフ](/help/forms/using/chart-component-interactive-communications.md)
    1. [ドキュメントフラグメント](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
 1. 印刷チャネルと Web チャネルのプレビューを表示し、必要に応じてインタラクティブ通信を編集します。
-1. エージェントはエージェント UI を使用して、インタラクティブ通信を受信者または後処理に送信するための[準備](/help/forms/using/prepare-send-interactive-communication.md)を行います。
+1. エージェントはエージェント UI を使用して [インタラクティブ通信の準備](/help/forms/using/prepare-send-interactive-communication.md) 受信者/後処理に送信するために使用します。
 
 ### 構築ブロック {#buildingblocks}
 
-インタラクティブ通信を作成するために必要な構築ブロックを以下に示します。
+インタラクティブ通信の作成に必要な構築ブロックを次に示します。
 
 * [フォームデータモデル](/help/forms/using/data-integration.md)
 * [印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)
 * [ドキュメントフラグメント](/help/forms/using/document-fragments.md)
 * 画像
-* [テーマ](/help/forms/using/themes.md) （Web チャネル用）
+* Web チャンネル用の[テーマ](/help/forms/using/themes.md)
 
 ## インタラクティブ通信と Correspondence Management の比較 {#interactive-communications-vs-correspondence-management}
 
-インタラクティブ通信は、顧客とのコミュニケーションを作成するためのデフォルトの推奨される方法です。 AEM 6.3 Forms または AEM 6.2 Forms で作成したレターを引き続き使用する場合は、[互換性パッケージをインストールする必要があります](/help/forms/using/compatibility-package.md)。次に、インタラクティブ通信の機能とレターの機能の比較を示します。
+インタラクティブ通信は、顧客通信を作成するためのデフォルトの方法です。顧客通信を作成する場合は、インタラクティブ通信を使用することをお勧めします。AEM 6.3 Forms または AEM 6.2 Forms で作成したレターを引き続き使用する場合は、[互換性パッケージをインストールする必要があります](/help/forms/using/compatibility-package.md)。以下の表に、インタラクティブ通信の機能とレターの機能の違いを示します。
 
 <table> 
  <tbody>
@@ -89,47 +89,47 @@ Interactive Communications は、ビジネス通信、ドキュメント、声�
    <td>印刷出力</td> 
   </tr>
   <tr>
-   <td>スキーマ</td> 
+   <td>Schema</td> 
    <td>フォームデータモデル </td> 
    <td>データディクショナリ </td> 
   </tr>
   <tr>
    <td>ローカリゼーション</td> 
-   <td>フォームデータモデルではサポートされていない</td> 
-   <td>データディクショナリでサポートされている</td> 
+   <td>フォームデータモデルではサポートされていません</td> 
+   <td>データディクショナリでサポートされています</td> 
   </tr>
   <tr>
    <td>ルールエディター</td> 
    <td>
     <ul> 
-     <li>テキストと条件でルールエディターを使用して、インライン条件を作成できる</li> 
-     <li>インタラクティブ通信エディターで、Web チャネルのコンポーネントにルールを適用できる</li> 
+     <li>インライン条件を作成するためのテキストおよび条件サポートのルールエディター</li> 
+     <li>インタラクティブ通信エディターは、Web チャネルのコンポーネントに対するルールの適用をサポートしています</li> 
     </ul> </td> 
-   <td>条件式を作成するための UI はない</td> 
+   <td>条件式を作成するための UI がありません</td> 
   </tr>
   <tr>
    <td>オーサリング</td> 
-   <td>ドラッグアンドドロップ方式のインターフェイスを使用して、印刷チャネルと Web チャネルを作成できる</td> 
-   <td>ドラッグ&amp;ドロップメカニズムなし </td> 
+   <td>印刷チャネルと Web チャネルを構築するためのドラッグ&amp;ドロップインターフェイス</td> 
+   <td>ドラッグ＆ドロップ機能はない </td> 
   </tr>
   <tr>
    <td>グラフ</td> 
-   <td>印刷チャネルと Web チャネルでグラフがサポートされている</td> 
-   <td>サポートされていない</td> 
+   <td>印刷チャネルと Web チャネルでサポートされるグラフ</td> 
+   <td>サポート対象外</td> 
   </tr>
   <tr>
    <td>テーマ</td> 
-   <td>テーマを使用して Web チャネルのスタイルを設定できる</td> 
-   <td>テーマはサポートされていない</td> 
+   <td>テーマを使用して Web チャネルのスタイルを設定</td> 
+   <td>テーマをサポートしていません</td> 
   </tr>
   <tr>
    <td>監査とバージョン管理</td> 
-   <td>サポートされていない</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
-   <td>下書きとインスタンスの管理</td> 
-   <td>サポートされていない</td> 
+   <td>ドラフトとインスタンスの管理</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
@@ -139,12 +139,12 @@ Interactive Communications は、ビジネス通信、ドキュメント、声�
   </tr>
   <tr>
    <td>エージェント署名</td> 
-   <td>サポートされていない</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
   <tr>
    <td>リモート関数</td> 
-   <td>サポートされていない</td> 
+   <td>サポート対象外</td> 
    <td>サポート対象</td> 
   </tr>
  </tbody>

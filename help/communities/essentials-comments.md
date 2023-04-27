@@ -13,7 +13,7 @@ exl-id: 3d5396b5-10e5-49bc-aa11-5a3df93d70c3
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '352'
-ht-degree: 56%
+ht-degree: 5%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 56%
 
 このページでは、コメントシステム（コメントコンポーネント）の操作に関する基本事項と、メンバーがコメントや返信を投稿したときに生成されるユーザー生成コンテンツ (UGC) を管理するためのオプションを提供します。
 
-個々の投稿がそれぞれ単一のコメントコンポーネントで表されるように、コメントシステムが確立されます。ページに含まれるコメントシステムです。 コメントシステムは、呼び出されると個々のコメントを作成します。
+コメントコンポーネントは、個々の投稿がコメントコンポーネント（単数）で表されるようにコメントシステムを確立します。 ページに含まれるコメントシステムです。 コメントシステムは、呼び出されると個々のコメントを作成します。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -32,8 +32,8 @@ ht-degree: 56%
    <td> social/commons/components/hbs/comments</td> 
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
-   <td>はい - プロパティは<i>デザイン</i>モードで編集可能</td> 
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td> 
+   <td>はい — でプロパティを編集できます <i>デザイン </i>mode</td> 
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>Clientlibs</strong></a></td> 
@@ -56,11 +56,11 @@ ht-degree: 56%
 
 [クライアント側のカスタマイズ](client-customize.md)
 
-### ページごとに 1 つのインスタンス {#one-instance-per-page}
+### 1 ページにつき 1 つのインスタンス {#one-instance-per-page}
 
-ページネーションをおこなう場合、およびキャッシュやリンクのために URL を使用する場合は、コメントシステムごとに一意の URL を使用する必要があります。したがって、1 ページにつき 1 つのコメントシステムのインスタンスのみを使用できます。
+ページネーションおよびキャッシュやリンクに URL を使用する場合、コメントシステムごとに一意の URL を指定する必要があります。 したがって、1 ページにつき 1 つのコメントシステムのインスタンスのみを使用できます。
 
-その他の機能には、コメントシステムが既に含まれています。以下のとおりです。
+その他の機能には、既にコメントシステムが含まれています。 以下が該当します。
 
 * [ブログ](blog-developer-basics.md)
 * [Calendar](calendar-basics-for-developers.md)
@@ -71,11 +71,11 @@ ht-degree: 56%
 
 ### フラグ設定理由リスト {#flag-reason-list}
 
-フラグ設定理由リストは、アプリケーションに flagreasonlist.hbs を追加して内容を上書きすることによってカスタマイズできます。
+フラグ設定の理由リストは、アプリに flagreasonlist.hbs を追加して、内の内容を上書きすることでカスタマイズできます
 
 * /libs/social/commons/components/hbs/comments/comment/flagreasonlist.hbs
 
-これは、コメントシステムのすべての拡張コンポーネントに適用されます。
+これは、コメントシステムを拡張するすべてのコンポーネントに適用されます。
 
 ## サーバー側の基本事項 {#essentials-for-server-side}
 
@@ -85,14 +85,14 @@ ht-degree: 56%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿されたコメント（UGC）へのアクセス {#accessing-posted-comments-ugc}
+### 投稿されたコメント (UGC) へのアクセス {#accessing-posted-comments-ugc}
 
-UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。\
-[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
+UGC は、モデレートの標準的な方法の 1 つを使用してモデレートする必要があります。\
+詳しくは、 [ユーザー生成コンテンツのモデレート](moderate-ugc.md).
 
-AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)を使用する際に、選択されたストレージオプション（ASRP、MSRP、JSRP など）に関係なく、プログラムによって UGC にアクセスする必要があります。
+AEM 6.1 Communities 以降では、 [共通店](working-with-srp.md) UGC の場合は、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、プログラムで UGC にアクセスできます。
 
-**リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
+**リポジトリ内の UGC の場所と形式は、警告なしで変更される場合があります**.
 
 以下を参照してください。
 

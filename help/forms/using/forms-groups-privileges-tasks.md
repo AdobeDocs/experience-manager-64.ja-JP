@@ -1,7 +1,7 @@
 ---
 title: OSGi 上の AEM Forms のグループと権限
 seo-title: AEM Forms on OSGi Groups and Privileges
-description: ユーザーをグループに割り当てることによる OSGi 上の AEM Forms の管理
+description: ユーザーをグループに割り当てて、OSGi 上でAEM Formsを管理する
 seo-description: Assign users to the groups to manage AEM Forms on OSGi
 uuid: 9ebb3a4e-4c0e-4105-921f-58077fc45281
 contentOwner: anujkapo
@@ -14,17 +14,17 @@ exl-id: a79e863e-c316-422e-a565-b0ffdeffcc00
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '254'
-ht-degree: 99%
+ht-degree: 30%
 
 ---
 
 # OSGi 上の AEM Forms のグループと権限 {#aem-forms-on-osgi-groups-and-privileges}
 
-ユーザーをグループに割り当てることによる OSGi 上の AEM Forms の管理
+ユーザーをグループに割り当てて、OSGi 上でAEM Formsを管理する
 
-AEM では、[グループを作成](/help/sites-administering/user-group-ac-admin.md#group-administration)してそのグループにポリシーと[ユーザー](/help/sites-administering/user-group-ac-admin.md#user-administration)を割り当てることができます。これらのポリシーは、グループに含まれるユーザーの権限を制御します。
+以下が可能です。 [グループを作成](/help/sites-administering/user-group-ac-admin.md#group-administration) およびポリシーを割り当てます。 [ユーザー](/help/sites-administering/user-group-ac-admin.md#user-administration) をAEMのグループに追加します。 これらのポリシーは、グループに属するユーザーの権限を制御します。
 
-[AEM Forms アドオンパッケージ](/help/forms/using/installing-configuring-aem-forms-osgi.md)をインストールすると、この記事に記載されている forms-user や forms-power-user などのグループは、自動的に割り当て可能になります。次の表に、ユーザーが OSGi 上の AEM Forms でグループの割り当てに基づいて実行できるタスクを示します。
+インストール後 [AEM Formsアドオンパッケージ](/help/forms/using/installing-configuring-aem-forms-osgi.md)この記事に記載されているグループ（ forms-user や forms-power-user など）は、自動的に割り当てに使用できます。 次の表に、ユーザーが OSGi 上の AEM Forms でグループの割り当てに基づいて実行できるタスクを示します。
 
 <table> 
  <tbody>
@@ -36,30 +36,30 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
    <td>forms-user <sup>[1]</sup></td> 
    <td>
     <ul> 
-     <li>アダプティブフォームを作成、プレビュー、パブリッシュ、送信する</li> 
-     <li>インタラクティブ通信とドキュメントフラグメントを作成、プレビュー、パブリッシュする</li> 
-     <li>AEM インスタンスにアセットをアップロードする</li> 
-     <li>テーマを作成する</li> 
+     <li>アダプティブフォームの作成、プレビュー、公開、送信</li> 
+     <li>インタラクティブ通信とドキュメントフラグメントを作成、プレビュー、公開する</li> 
+     <li>アセットのAEMインスタンスへのアップロード</li> 
+     <li>テーマを作成</li> 
     </ul> </td> 
   </tr>
   <tr>
    <td>forms-power-users</td> 
    <td>
     <ul> 
-     <li>アダプティブフォームを作成、プレビュー、パブリッシュ、送信する</li> 
-     <li>インタラクティブ通信とドキュメントフラグメントを作成、プレビュー、パブリッシュする</li> 
+     <li>アダプティブフォームの作成、プレビュー、公開、送信</li> 
+     <li>インタラクティブ通信とドキュメントフラグメントを作成、プレビュー、公開する</li> 
      <li>コードエディターを使用してアダプティブフォームのスクリプトを作成する</li> 
-     <li>スクリプトを含むアセットをアップロードする</li> 
-     <li>テーマを作成する</li> 
-     <li>XDP を含むパッケージを読み込む</li> 
+     <li>スクリプトを含むアセットのアップロード</li> 
+     <li>テーマを作成</li> 
+     <li>XDP を含むパッケージのインポート</li> 
     </ul> </td> 
   </tr>
   <tr>
    <td>forms-submission-reviewers</td> 
    <td>
     <ul> 
-     <li>送信されたフォームをレビューする</li> 
-     <li>送信されたフォームを承認または拒否する</li> 
+     <li>送信をレビュー</li> 
+     <li>送信を承認または却下</li> 
     </ul> </td> 
   </tr>
   <tr>
@@ -80,14 +80,14 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
    <td>cm-user-agent</td> 
    <td>
     <ul> 
-     <li>エージェント UI を使用して Correspondence Management レターまたはインタラクティブ通信にアクセスする</li> 
+     <li>エージェント UI を使用して Correspondence Management レターまたはインタラクティブ通信にアクセス</li> 
     </ul> </td> 
   </tr>
   <tr>
    <td><p>workflow-editors</p> </td> 
    <td>
     <ul> 
-     <li>インボックスアプリケーションを作成する</li> 
+     <li>インボックスアプリケーションの作成</li> 
      <li>ワークフローモデルを作成</li> 
     </ul> </td> 
   </tr>
@@ -95,21 +95,21 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
    <td>workflow-user</td> 
    <td>
     <ul> 
-     <li>AEM インボックスアプリケーションを使用する</li> 
-     <li>ワークフローインスタンスを管理する</li> 
+     <li>AEMインボックスアプリケーションの使用</li> 
+     <li>ワークフローインスタンスを管理</li> 
     </ul> </td> 
   </tr>
   <tr>
    <td>fd-administrators</td> 
    <td>
     <ul> 
-     <li>PDF Generator を設定する</li> 
-     <li>監視フォルダーを設定する</li> 
+     <li>PDF Generator を設定</li> 
+     <li>監視フォルダーを設定</li> 
      <li>ワークフローアプリケーションを管理する</li> 
     </ul> </td> 
   </tr>
  </tbody>
 </table>
 
-1. forms-user グループ権限を持つユーザーは、アダプティブフォームのスクリプトを書くことができません。
+1. forms-user グループ権限を持つユーザーは、アダプティブフォームのスクリプトを作成できません。
 1. template-authors グループ権限を持つユーザーは、テンプレートのスクリプトを書くことができません。

@@ -1,7 +1,7 @@
 ---
 title: コミュニティコンポーネントの OSGi イベント
 seo-title: OSGi Events for Communities Components
-description: 非同期リスナーを呼び出す OSGi イベントが送信されます
+description: OSGi イベントが送信され、非同期リスナーをトリガーにできます。
 seo-description: OSGi events are sent that can trigger asynchronous listeners
 uuid: 317e2add-689d-4c99-ae38-0703b6649cb7
 contentOwner: msm-service
@@ -13,7 +13,7 @@ exl-id: 3f7d1b95-729a-4c55-af96-efdb9617d333
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '665'
-ht-degree: 71%
+ht-degree: 7%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 71%
 
 ## 概要 {#overview}
 
-メンバーがコミュニティ機能と対話する際には、通知やゲーミフィケーション（スコアおよびバッジ）のような非同期リスナーを呼び出す OSGi イベントが送信されます。
+メンバーが Communities 機能とやり取りすると、通知やゲーミフィケーション（スコアやバッジ）などの非同期リスナーをトリガーする OSGi イベントが送信されます。
 
 コンポーネントの [SocialEvent](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) インスタンスは、イベントを `actions`それは `topic`. SocialEvent には、 `verb`アクションに関連付けられている。 ここに *n-1* ～間の関係 `actions`および `verbs`.
 
@@ -29,94 +29,104 @@ ht-degree: 71%
 
 ## トピックと動詞 {#topics-and-verbs}
 
-[カレンダーコンポーネント](calendar-basics-for-developers.md) SocialEvent `topic`=  = com/adobe/cq/social/calendar
+[カレンダーコンポーネント](calendar-basics-for-developers.md)
+SocialEvent `topic`= com/adobe/cq/social/calendar
 
 | **動詞** | **説明** |
 |---|---|
 | POST | メンバーがカレンダーイベントを作成する |
-| 追加 | メンバーがカレンダーイベントについてコメントする |
-| UPDATE | メンバーのカレンダーイベントまたはコメントが編集される |
-| 削除 | メンバーのカレンダーイベントまたはコメントが削除される |
+| 追加 | カレンダーイベントに対するメンバーのコメント |
+| 更新 | メンバーのカレンダーイベントまたはコメントが編集されました |
+| 削除 | メンバーのカレンダーイベントまたはコメントが削除されました |
 
-[コメントコンポーネント](essentials-comments.md) SocialEvent `topic`=  = com/adobe/cq/social/comment
-
-| **動詞** | **説明** |
-|---|---|
-| POST | メンバーがコメントを作成する |
-| 追加 | メンバーがコメントに返信する |
-| 更新 | メンバーのコメントが編集される |
-| 削除 | メンバーのコメントが削除される |
-
-[ファイルライブラリコンポーネント](essentials-file-library.md) SocialEvent `topic`=  = com/adobe/cq/social/fileLibrary
+[コメントコンポーネント](essentials-comments.md)
+SocialEvent `topic`= com/adobe/cq/social/comment
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがフォルダーを作成する |
-| ATTACH | メンバーがファイルをアップロードする |
-| 更新 | メンバーがフォルダーまたはファイルを更新する |
-| 削除 | メンバーがフォルダーまたはファイルを削除する |
+| POST | メンバーがコメントを作成 |
+| 追加 | メンバーがコメントに返信しました |
+| 更新 | メンバーのコメントが編集されます |
+| 削除 | メンバーのコメントが削除されます |
 
-[フォーラムコンポーネント](essentials-forum.md) SocialEvent `topic`=  = com/adobe/cq/social/forum
-
-| **動詞** | **説明** |
-|---|---|
-| POST | メンバーがフォーラムトピックを作成する |
-| 追加 | メンバーがフォーラムトピックに返信する |
-| 更新 | メンバーのフォーラムトピックまたは返信が編集される |
-| 削除 | メンバーのフォーラムトピックまたは返信が削除される |
-
-[ジャーナルコンポーネント](blog-developer-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/journal
+[ファイルライブラリコンポーネント](essentials-file-library.md)
+SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがブログ記事を作成する |
-| 追加 | メンバーがブログ記事にコメントする |
-| 更新 | メンバーのブログ記事またはコメントが編集される |
-| 削除 | メンバーのブログ記事またはコメントが削除される |
+| POST | メンバーがフォルダーを作成 |
+| 添付 | メンバーはファイルをアップロードします |
+| 更新 | メンバーがフォルダーまたはファイルを更新 |
+| 削除 | メンバーがフォルダまたはファイルを削除 |
 
-[Q&amp;A コンポーネント](qna-essentials.md) SocialEvent `topic` = com/adobe/cq/social/qna
-
-| **動詞** | **説明** |
-|---|---|
-| POST | メンバーが Q&amp;A の質問を作成する |
-| 追加 | メンバーが Q&amp;A の回答を作成する |
-| 更新 | メンバーの Q&amp;A の質問または回答が編集される |
-| SELECT | メンバーの回答が選択される |
-| UNSELECT | メンバーの回答の選択が解除される |
-| 削除 | メンバーの Q&amp;A の質問または回答が削除される |
-
-[レビューコンポーネント](reviews-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/review
+[フォーラムコンポーネント](essentials-forum.md)
+SocialEvent `topic`= com/adobe/cq/social/forum
 
 | **動詞** | **説明** |
 |---|---|
-| POST | メンバーがレビューを作成する |
-| 更新 | メンバーのレビューが編集される |
-| 削除 | メンバーのレビューが削除される |
+| POST | メンバーがフォーラムトピックを作成します |
+| 追加 | フォーラムトピックに返信するメンバー |
+| 更新 | メンバーのフォーラムのトピックまたは返信が編集されます |
+| 削除 | メンバーのフォーラムトピックまたは返信が削除されました |
 
-[評価コンポーネント](rating-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/tally
-
-| **動詞** | **説明** |
-|---|---|
-| ADD RATING | メンバーのコンテンツの評価が上がった |
-| REMOVE RATING | メンバーのコンテンツの評価が下がった |
-
-[投票コンポーネント](essentials-voting.md) SocialEvent `topic`=  = com/adobe/cq/social/tally
+[ジャーナルコンポーネント](blog-developer-basics.md)
+SocialEvent `topic`= com/adobe/cq/social/journal
 
 | **動詞** | **説明** |
 |---|---|
-| ADD VOTING | メンバーのコンテンツに賛成票が投じられた |
-| REMOVE VOTING | メンバーのコンテンツに反対票が投じられた |
+| POST | メンバーがブログ記事を作成します |
+| 追加 | メンバーがブログ記事にコメントを投稿 |
+| 更新 | メンバーのブログ記事またはコメントが編集されます |
+| 削除 | メンバーのブログ記事またはコメントが削除されました |
 
-**モデレート対応コンポーネント** SocialEvent `topic`=  = com/adobe/cq/social/moderation
+[Q&amp;A コンポーネント](qna-essentials.md)
+SocialEvent `topic` = com/adobe/cq/social/qna
 
 | **動詞** | **説明** |
 |---|---|
-| DENY | メンバーのコンテンツが拒否される |
-| FLAG-AS-INAPPROPRIATE | メンバーのコンテンツにフラグが付けられる |
-| UNFLAG-AS-INAPPROPRIATE | メンバーのコンテンツのフラグが解除される |
-| ACCEPT | メンバーのコンテンツがモデレーターにより承認される |
-| CLOSE | メンバーがコメントの編集と返信を閉じる |
-| OPEN | メンバーがコメントを再度開く |
+| POST | メンバーが Q&amp;A 質問を作成 |
+| 追加 | メンバーが Q&amp;A 回答を作成 |
+| 更新 | メンバーの Q&amp;A の質問または回答が編集されます |
+| 選択 | メンバーの回答が選択されています |
+| 選択解除 | メンバーの回答が選択解除されました |
+| 削除 | メンバーの Q&amp;A の質問または回答が削除されます |
+
+[レビューコンポーネント](reviews-basics.md)
+SocialEvent `topic`= com/adobe/cq/social/review
+
+| **動詞** | **説明** |
+|---|---|
+| POST | メンバーがレビューを作成 |
+| 更新 | メンバーのレビューが編集されます |
+| 削除 | メンバーのレビューが削除されます |
+
+[評価コンポーネント](rating-basics.md)
+SocialEvent `topic`= com/adobe/cq/social/tally
+
+| **動詞** | **説明** |
+|---|---|
+| 評価を追加 | メンバーのコンテンツが評価されました |
+| 評価を削除 | メンバーのコンテンツが評価を下げました |
+
+[投票コンポーネント](essentials-voting.md)
+SocialEvent `topic`= com/adobe/cq/social/tally
+
+| **動詞** | **説明** |
+|---|---|
+| 投票を追加 | メンバーのコンテンツが投票に参加しました |
+| 投票を削除 | メンバーのコンテンツが投票で否決されました |
+
+**モデレートが有効なコンポーネント**
+SocialEvent `topic`= com/adobe/cq/social/moderation
+
+| **動詞** | **説明** |
+|---|---|
+| 拒否 | メンバーのコンテンツが拒否されました |
+| 「不適切」のフラグ | メンバーのコンテンツにフラグが設定されています |
+| 不適切としてフラグ解除 | メンバーの内容にフラグが設定解除されました |
+| ACCEPT | メンバーのコンテンツがモデレーターによって承認されました |
+| 閉じる | メンバーが編集と返信に対するコメントを閉じる |
+| 開く | メンバーがコメントを再度開く |
 
 ## カスタムコンポーネントのイベント {#events-for-custom-components}
 
@@ -126,9 +136,9 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->カスタム拡張が製品の既存の実装よりも低いランクで登録されていることを確認します。
+>カスタム拡張機能が、製品内の既存の実装よりも低いランクで登録されていることを確認します。
 
-### カスタムコンポーネントイベントの疑似コード {#pseudo-code-for-custom-component-event}
+### カスタムコンポーネントイベントの擬似コード {#pseudo-code-for-custom-component-event}
 
 [org.osgi.service.event.Event](https://osgi.org/javadoc/r4v41/org/osgi/service/event/Event.html);\
 [com.adobe.cq.social.scf.core.SocialEvent](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html);\
@@ -229,15 +239,15 @@ public class RecipeEvent extends SocialEvent<RecipeEvent.RecipeActions> {
 }
 ```
 
-## アクティビティストリームデータをフィルターするサンプルの EventListener {#sample-eventlistener-to-filter-activity-stream-data}
+## アクティビティストリームデータをフィルタリングする EventListener の例 {#sample-eventlistener-to-filter-activity-stream-data}
 
-アクティビティストリームに現れる内容を変更するために、イベントをリスニングできます。
+アクティビティストリームに表示される内容を変更する目的で、イベントをリッスンできます。
 
-次の疑似コードのサンプルでは、コメントコンポーネントの DELETE イベントをアクティビティストリームから削除します。
+次の擬似コードのサンプルを使用すると、コメントコンポーネントのDELETEイベントをアクティビティストリームから削除できます。
 
-### EventListener の疑似コード {#pseudo-code-for-eventlistener}
+### EventListener の擬似コード {#pseudo-code-for-eventlistener}
 
-[最新の機能パック](deploy-communities.md#latestfeaturepack)が必要です。
+必要 [最新の機能パック](deploy-communities.md#latestfeaturepack).
 
 ```java
 package my.company.comments;

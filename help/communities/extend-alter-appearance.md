@@ -13,23 +13,23 @@ exl-id: 358b70b8-8122-4eda-baa7-d9a58d6901f9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '268'
-ht-degree: 77%
+ht-degree: 4%
 
 ---
 
-# 外観の変更 (HBS) {#alter-the-appearance-hbs}
+# 外観の変更（HBS） {#alter-the-appearance-hbs}
 
-カスタムコメントシステムのコンポーネントがアプリケーションディレクトリ（/apps）に配置され、デフォルトのコメントシステムおよびカスタムモデル／ビューを参照する resourceSuperType が登録されたので、実装を変更できるようになりました。
+アプリケーションディレクトリ (/apps) 内のカスタムコメントシステムのコンポーネントが配置され、resourceSuperType がデフォルトのコメントシステムとカスタムのモデル/ビューを参照するので、実装を変更できます。
 
-簡単なデモのために、ビジュアル機能（コメントを投稿するサインインユーザーについて表示されるアバター）を削除します。
+シンプルなデモの場合、ビジュアル機能（コメントを投稿するサインインユーザーに表示されるアバター）は削除されます。
 
 >[!NOTE]
 >
->拡張を使用するには、影響を受ける Web サイト内のコメントシステムのインスタンス（/content）によって、その resourceType がカスタムコメントシステムであるように設定される必要があります。
+>この拡張機能を利用するには、影響を受ける Web サイト内のコメントシステムのインスタンス (/content) で、その resourceType をカスタムコメントシステムに設定する必要があります。
 
 ## HBS スクリプトの変更 {#modify-the-hbs-scripts}
 
-[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) を使用して、次の手順を実行します。
+使用 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md):
 
 * 開く [/apps/custom/components/comments/comment/comment.hbs](http://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
@@ -51,25 +51,25 @@ ht-degree: 77%
        -->
       ```
 
-* 「**すべて保存**」を選択します。
+* 選択 **すべて保存**
 
-## カスタムアプリのレプリケート {#replicate-custom-app}
+## カスタムアプリをレプリケート {#replicate-custom-app}
 
-アプリケーションを変更した後で、カスタムコンポーネントを再レプリケートする必要があります。
+アプリケーションを変更した後、カスタムコンポーネントを再レプリケートする必要があります。
 
 その方法の 1 つは、
 
 * メインメニューから
 
    * 選択 **[!UICONTROL [ ツール ] > [ 操作 ] > [ レプリケーション ]]**
-   *  `Activate Tree`
+   * 選択 `Activate Tree`
    * 設定 `Start Path`:から `/apps/custom`
    * オフ `Only Modified`
    * 選択 `Activate` ボタン
 
-## 公開済みサンプルページでの変更されたコメントの表示 {#view-modified-comment-on-published-sample-page}
+## 公開済みサンプルページで変更済みコメントを表示 {#view-modified-comment-on-published-sample-page}
 
-パブリッシュインスタンスで[エクスペリエンスを続行](extend-sample-page.md#publish-sample-page)すると、同じユーザーとしてサインインしたまま、パブリッシュ環境でページを更新してアバターを削除する変更を表示できます。
+[エクスペリエンスの継続](extend-sample-page.md#publish-sample-page) パブリッシュインスタンスでは、同じユーザーとしてサインインしたままで、パブリッシュ環境でページを更新して、アバターを削除するための変更を表示できます。
 
 ![chlimage_1-81](assets/chlimage_1-81.png)
 

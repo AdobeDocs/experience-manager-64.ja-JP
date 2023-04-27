@@ -28,7 +28,7 @@ ht-degree: 92%
 
 [QuickStart：Java API を使用した監視フォルダーエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
 
-[クイックスタート：Java API を使用した電子メールエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)
+[クイックスタート：Java API を使用したメールエンドポイントの追加](endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)
 
 [クイックスタート：Java API を使用してリモートエンドポイントを追加する](endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
 
@@ -384,9 +384,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート：Java API を使用した電子メールエンドポイントの追加 {#quickstart-adding-an-email-endpoint-using-the-java-api}
+## クイックスタート：Java API を使用したメールエンドポイントの追加 {#quickstart-adding-an-email-endpoint-using-the-java-api}
 
-次の Java コードの例では、電子メールエンドポイントを *MyApplication/EncryptDocument* という名前のサービスに追加します（[メールエンドポイントの追加](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints)を参照）。
+次の Java コードの例では、メールエンドポイントを *MyApplication/EncryptDocument* という名前のサービスに追加します（[メールエンドポイントの追加](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints)を参照）。
 
 >[!NOTE]
 >

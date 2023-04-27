@@ -1,7 +1,7 @@
 ---
 title: バッジコンソール
 seo-title: Badges Console
-description: Communities のバッジコンソールを使用すると、バッジを獲得（授与された）したとき、またはコミュニティで特定の役割についた（割り当てられた）ときにメンバーに表示できるカスタムバッジを追加できます
+description: コミュニティのバッジコンソールを使用すると、獲得（授与）時またはコミュニティで特定の役割を担う（割り当てられた）時に、メンバーに表示できるカスタムバッジを追加できます
 seo-description: The Communities Badges console lets you add custom badges that can be displayed for members when earned (awarded) or when they take on a specific role in the community (assigned)
 uuid: 9eeba240-f0d4-4937-baba-8bac0e0b2a36
 contentOwner: Janice Kendall
@@ -14,7 +14,7 @@ exl-id: b6aa9d73-4e20-446a-a1fc-78f8968d6844
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '287'
-ht-degree: 61%
+ht-degree: 6%
 
 ---
 
@@ -22,11 +22,11 @@ ht-degree: 61%
 
 ## バッジについて {#about-badges}
 
-Communities のバッジコンソールでは、バッジを獲得（授与された）したとき、またはコミュニティで特定の役割についた（割り当てられた）ときにメンバーに表示できるカスタムバッジを追加できます
+コミュニティのバッジコンソールを使用すると、獲得（授与）時またはコミュニティで特定の役割を担う（割り当てられた）時に、メンバーに対して表示できるカスタムバッジを追加できます。
 
 ### バッジの表示 {#badge-visibility}
 
-現在、コミュニティメンバーが獲得するバッジ、またはコミュニティメンバーに割り当てられるバッジは、次の場所にメンバーの名前とアバターとともに表示されます。
+現在、コミュニティメンバーが獲得したバッジや割り当てられたバッジは、その名前とアバターと共に以下の場所に表示されます。
 
 * プロファイル
 * [フォーラム](forum.md)
@@ -34,19 +34,19 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 * [リーダーボード](enabling-leaderboard.md)
 * [アイディエーション](ideation-feature.md)
 
-オーサー環境でバッジコンソールに接続するには
+オーサー環境でバッジコンソールに移動するには、次の手順を実行します。
 
 * グローバルナビゲーションから： **[!UICONTROL ツール/コミュニティ/バッジ]**
 
-このコンソールでは、現在利用可能なバッジが表示され、新しいバッジを追加できます。
+このコンソールには、現在使用可能なバッジと、新しいバッジを追加できるバッジが表示されます。
 
 ![chlimage_1-242](assets/chlimage_1-242.png)
 
 ## バッジを作成 {#create-badge}
 
-バッジを作成するには、適度に小さい画像（高さが 26 から 32 ピクセルの 72 dpi）をアップロードし、名前を入力します。バッジの画像は、リポジトリ ( ) の `/etc/community/badging/images` とは、パブリッシュ環境に自動的にレプリケートされます。
+バッジは、適切に小さい画像（高さが 26～32 ピクセルの 72dpi）をアップロードし、名前を付けて作成します。 バッジの画像は、リポジトリ ( ) の `/etc/community/badging/images` とは、パブリッシュ環境に自動的にレプリケートされます。
 
-パブリッシュ環境がパブリッシャーのファームである場合、[ユーザーの同期](sync.md)を設定する必要があります。
+パブリッシュ環境がパブリッシャーのファームである場合は、次の設定が必要です。 [ユーザー同期](sync.md).
 
 ![chlimage_1-243](assets/chlimage_1-243.png)
 
@@ -70,4 +70,4 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 スコアルールとバッジルールの設定について詳しくは、 [スコアとバッジ](implementing-scoring.md).
 
-メンバーのバッジの管理については、[メンバーコンソール](members.md)を参照してください。
+メンバーのバッジの管理については、 [メンバーコンソール](members.md).

@@ -1,7 +1,7 @@
 ---
-title: 'Acrobat Reader DC Extensions で使用するタイムアウト値の設定 '
+title: Acrobat Reader DC Extensions で使用するタイムアウト値の設定
 seo-title: Setting timeout values for use with Acrobat Reader DC extensions
-description: Acrobat Reader DC Extensions で使用するタイムアウト値の設定方法について説明します。
+description: Acrobat Reader DC拡張機能で使用するタイムアウト値を設定する方法について説明します。
 seo-description: Learn how to set timeout values for use with Acrobat Reader DC extensions.
 uuid: d6d072a0-0a30-417a-98b1-df8b4ff8f911
 contentOwner: admin
@@ -13,24 +13,24 @@ exl-id: e7de9971-3eac-4248-8709-0da7dd709d1b
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '172'
-ht-degree: 83%
+ht-degree: 36%
 
 ---
 
 # Acrobat Reader DC Extensions で使用するタイムアウト値の設定  {#setting-timeout-values-for-use-with-acrobat-reader-dc-extensions}
 
-Acrobat Reader DC Extensions で多数の PDF ファイルを処理している場合は、以下のタイムアウト値を適切に設定して、ジョブがタイムアウトして失敗するのを防ぎます。
+Acrobat Reader DC拡張機能の多くのPDFファイルで作業する場合は、ジョブのタイムアウトと失敗を防ぐために、次のタイムアウト値が適切に設定されていることを確認してください。
 
 **ドキュメント廃棄タイムアウト：**
 
-この値は管理コンソールで設定できます。設定／コアシステム設定／設定を選択し、「デフォルトのドキュメント廃棄タイムアウト」に値を指定します。
+この値は管理コンソールで設定できます。 設定/コアシステム設定/設定をクリックし、「デフォルトのドキュメント廃棄タイムアウト」の値を指定します。
 
-**User Manager AEM forms のタイムアウト：** この値は、config.xml ファイルを編集することで設定できます。 管理コンソールで、設定／User Management／設定／既存の設定ファイルの読み込みと書き出しをクリックし、「書き出し」をクリックします。書き出された config.xml ファイルを開き、次の行を編集します。
+**User Manager AEM Forms のタイムアウト：**&#x200B;この値を設定するには、config.xml ファイルを編集してください。管理コンソールで、設定/User Management/設定/設定ファイルの読み込みと書き出しをクリックし、「書き出し」をクリックします。 書き出された config.xml ファイルを開き、次の行を編集します。
 
 &lt;entry key=&quot;assertionValidityInMinutes&quot; value=&quot;600&quot;/>
 
 &lt;entry key=&quot;SessionTimeout&quot; value=&quot;600&quot;/>
 
-config.xml ファイルを保存し、再び管理コンソールに読み込みます。
+config.xml ファイルを保存し、管理コンソールに再度読み込みます。
 
-**アプリケーションサーバーセッションタイムアウト：** この値は、アプリケーションサーバーで設定できます。 詳しくは、アプリケーションサーバーに付属するマニュアルを参照してください。
+**アプリケーションサーバーセッションタイムアウト：**&#x200B;この値は、アプリケーションサーバーで設定できます。詳しくは、アプリケーションサーバーに付属するマニュアルを参照してください。

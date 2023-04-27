@@ -1,7 +1,7 @@
 ---
 title: コメントページの作成
 seo-title: Create Comments Page
-description: コメントページの表示
+description: コメントページを表示
 seo-description: View Comments page
 uuid: 1f043133-51c6-41e8-bbdb-d9fd7780136b
 contentOwner: User
@@ -13,7 +13,7 @@ exl-id: d975c32f-77c7-4203-b828-41f492adcfa2
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '57'
-ht-degree: 57%
+ht-degree: 12%
 
 ---
 

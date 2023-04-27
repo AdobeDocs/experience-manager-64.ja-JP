@@ -1,7 +1,7 @@
 ---
 title: おすすめコンテンツ機能
 seo-title: Featured Content Feature
-description: 'おすすめコンテンツ機能を使用すると、サインインしているサイト訪問者がコンテンツに注目します '
+description: おすすめコンテンツ機能を使用すると、サインインしたサイト訪問者がコンテンツを強調表示できます
 seo-description: The Featured Content feature lets signed-in site visitors highlight content
 uuid: 7a2ff570-01bb-46fb-8d66-3b47e2efa72e
 contentOwner: msm-service
@@ -13,7 +13,7 @@ exl-id: a0dcffed-1040-4d6d-b8e9-3bbe5f30deb4
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '336'
-ht-degree: 59%
+ht-degree: 8%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 59%
 
 ## はじめに {#introduction}
 
-おすすめコンテンツ機能は、パブリッシュ環境にサインインしているサイト訪問者（コミュニティメンバー）が以下のコンテンツに注目する領域を提供します。
+おすすめコンテンツ機能を使用すると、パブリッシュ環境でサインインしたサイト訪問者（コミュニティメンバー）がコンテンツをハイライト表示できる領域が提供されます。
 
 * [ブログ](blog-feature.md)
 * [カレンダー](calendar.md)
@@ -29,22 +29,22 @@ ht-degree: 59%
 * [アイデア](ideation-feature.md)
 * [Q&amp;A](working-with-qna.md)
 
-コンテンツにおすすめとしてフラグを設定すると、このコンポーネント内に一覧表示されるようになります。特定のランディングページまたは領域にこのコンポーネントを配置し、コミュニティメンバーの注目を簡単に集めることができます。
+コンテンツにおすすめとしてフラグが設定されると、このコンポーネント内に一覧表示されます。このコンポーネントは、コミュニティメンバーの注目を集めやすい特定のランディングページや領域に配置できます。
 
-コンテンツをおすすめに設定する機能は、コンポーネントごとに許可または禁止できます。
+コンテンツを特集する機能は、コンポーネントごとに許可または禁止できます。
 
-ドキュメントのこのセクションでは、以下の内容について説明します。
+ドキュメントのこの節では、
 
 * コミュニティサイトにおすすめコンテンツを追加する
 * の設定 `Featured Content`コンポーネント
 
-## おすすめコンテンツをページに追加 {#adding-featured-content-to-a-page}
+## ページへのおすすめコンテンツの追加 {#adding-featured-content-to-a-page}
 
 を追加するには、以下を実行します。 `Featured Content` コンポーネントをオーサリングモードでページに追加する場合は、コンポーネントブラウザーを使用して
 
 * `Communities / Featured Content`
 
-コンポーネントを探し、ページ上のおすすめコンテンツを表示する位置にドラッグします。
+をドラッグし、ページ上の特集コンテンツが表示される場所に配置します。
 
 必要な情報については、 [コミュニティコンポーネントの基本](basics.md).
 
@@ -60,18 +60,20 @@ ht-degree: 59%
 
 ### 「設定」タブ {#settings-tab}
 
-「**[!UICONTROL 設定]**」タブの下で、おすすめに設定するコンテンツを指定します。
+以下 **[!UICONTROL 設定]** 「 」タブで、機能するコンテンツを指定します。
 
-* **[!UICONTROL 表示名]**&#x200B;おすすめコンテンツのリストのタイトル。例： 
-`Featured Questions` または `Featured Ideas`. デフォルトはです。 `Featured Content` 空のままの場合は。
+* **[!UICONTROL 表示名]**
+おすすめコンテンツのリストのタイトル。 例： 
+`Featured Questions`または `Featured Ideas`。デフォルトはです。 `Featured Content` 空のままの場合は。
 
 * **[!UICONTROL おすすめコンテンツの場所]**
 
    *（必須）* 機能するコンテンツを含むページを参照します（そのページのコンポーネントは、「おすすめコンテンツを許可」に設定する必要があります）。 例：`/content/sites/engage/en/forum`
 
-* **[!UICONTROL 最大表示数]**&#x200B;表示するおすすめコンテンツの最大数。初期設定は 5 です。
+* **[!UICONTROL 表示の制限]**
+表示するおすすめコンテンツの最大数。 デフォルトは 5 です。
 
-## サイト訪問者のエクスペリエンス {#site-visitor-experience}
+## サイト訪問者エクスペリエンス {#site-visitor-experience}
 
 コンテンツにおすすめコンテンツのフラグを設定する機能には、モデレーター権限が必要です。
 
@@ -89,6 +91,6 @@ ht-degree: 59%
 
 ## 追加情報 {#additional-information}
 
-開発者向けの詳細情報は、[おすすめコンテンツ](essentials-featured.md)ページを参照してください。
+詳しくは、 [おすすめコンテンツ](essentials-featured.md) 開発者向けのページ
 
-コンテンツへのおすすめフラグの設定について詳しくは、[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
+コンテンツをおすすめとしてフラグ設定する方法については、 [ユーザー生成コンテンツのモデレート](moderate-ugc.md).

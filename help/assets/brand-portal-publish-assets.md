@@ -8,7 +8,7 @@ exl-id: 6b78124d-4022-452f-8d0f-b667de337bf4
 source-git-commit: de5632ff0ee87a4ded88e792b57e818baf4c01a3
 workflow-type: tm+mt
 source-wordcount: '403'
-ht-degree: 64%
+ht-degree: 57%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Manager Assets 管理者は、にアセットを公開できま
 >
 >Adobeは、可能な限りピーク時以外の時間帯に、時間をずらして公開することを推奨し、 [!DNL Experience Manager] 作成者は過剰なリソースを占有しません。
 
-1. アセットコンソールで目的のアセットにマウスポインターを置き、クイックアクションから「**[!UICONTROL 公開]**」オプションを選択します。
+1. Assets コンソールで、目的のアセットの上にマウスポインターを置いて、「 」を選択します。 **[!UICONTROL 公開]** 」オプションを使用します。
 
    または、Brand Portal に公開するアセットを選択します。
 
@@ -48,7 +48,7 @@ Adobe Experience Manager Assets 管理者は、にアセットを公開できま
 
    2. 内 **[!UICONTROL 範囲]**&#x200B;をクリックし、選択を確定してをタップまたはクリックします。 **[!UICONTROL Brand Portalに公開]**.
 
-アセットが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。Brand Portal のインターフェイスにログインして、公開されたアセットを確認します。
+アセットが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。Brand Portalインターフェイスにログインして、公開済みのアセットを表示します。
 
 ## アセットを後で公開 {#publish-later}
 

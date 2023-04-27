@@ -1,7 +1,7 @@
 ---
 title: プロセスインスタンスのリストのカスタマイズ
 seo-title: Customizing the listing of process instances
-description: AEM Forms Workspace のプロセスインスタンスで表示されるプロパティをカスタマイズする方法。
+description: AEM Forms Workspace のプロセスインスタンスに表示されるプロパティをカスタマイズする方法。
 seo-description: How-to customize the properties displayed in process instance in AEM Forms workspace.
 uuid: 3b55d9b9-7f73-46dd-9eb6-42be218440a1
 content-type: reference
@@ -12,15 +12,15 @@ exl-id: e7b8206c-bac2-48a6-b353-d06bc73b29f9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '284'
-ht-degree: 79%
+ht-degree: 53%
 
 ---
 
 # プロセスインスタンスのリストのカスタマイズ {#customizing-the-listing-of-process-instances}
 
-プロセスインスタンスリストは、AEM Forms Workspace のトラッキングタブに表示されます。
+プロセスインスタンスのリストが、AEM Forms Workspace の「追跡」タブに表示されます。
 
-プロセスインスタンスリストで、各プロセスインスタンスに対して AEM Forms Workspace はそのインスタンスのいくつかのプロパティを表示します。次のプロパティが各プロセスインスタンスで使用できます。これらのプロパティは、プロセスインスタンスコンポーネントモデルの属性として保存され、そのビューとテンプレートで使用できます。
+プロセスインスタンスリストで、各プロセスインスタンスに対して、AEM Forms workspace にそのインスタンスのいくつかのプロパティが表示されます。 次のプロパティを各プロセスインスタンスで使用できます。これらのプロパティは、プロセスインスタンスのコンポーネントモデルに属性として格納されていて、表示やテンプレートで使用できます。
 
 <table> 
  <tbody> 
@@ -29,11 +29,11 @@ ht-degree: 79%
    <td><strong>コメント</strong></td> 
   </tr> 
   <tr> 
-   <td>description</td> 
+   <td>説明</td> 
    <td>プロセスインスタンスの説明。</td> 
   </tr> 
   <tr> 
-   <td>initiator</td> 
+   <td>イニシエータ</td> 
    <td>プロセスインスタンスのイニシエーターの名前。</td> 
   </tr> 
   <tr> 
@@ -50,7 +50,7 @@ ht-degree: 79%
   </tr> 
   <tr> 
    <td>processInstanceStatus</td> 
-   <td>0 = 起動済み<br /> 1 = 実行中<br /> 2 = 完了<br /> 3 = 完了中<br /> 4 = 終了<br /> 5 = 終了中<br /> 6 = 休止<br /> 7 = 休止中<br /> 8 = 休止解除中</td> 
+   <td>0 =開始済み<br /> 1 =実行中<br /> 2 =完了<br /> 3 =完了中<br /> 4 =終了<br /> 5 =終了中<br /> 6 =中断<br /> 7 =休止<br /> 8 =休止解除中</td> 
   </tr> 
   <tr> 
    <td>processName</td> 
@@ -62,31 +62,31 @@ ht-degree: 79%
   </tr> 
   <tr> 
    <td>processVariables</td> 
-   <td>プロセス変数のオブジェクトの配列。各プロセス変数オブジェクトは、<strong>名前</strong>（プロセス変数の名前）、<strong>値</strong>（プロセス変数の値）、および<strong>タイプ</strong>（プロセス変数のタイプ）を含みます。</td> 
+   <td>プロセス変数のオブジェクトの配列。 各プロセス変数オブジェクトには、 <strong>名前</strong> （プロセス変数の名前） <strong>値</strong> （プロセス変数の値）、<strong> type</strong> （プロセス変数の型）。</td> 
   </tr> 
  </tbody> 
 </table>
 
-**例:**
+**例：**
 
-次の手順で `description` プロセスインスタンスカード内のプロセスインスタンスのプロパティで、次の手順を実行します。
+プロセスインスタンスのカードにプロセスインスタンスの `description` プロパティを表示するには、次の手順を実行します。
 
-1. [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)に従います。
+1. 「[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」に従います。
 1. 以下の操作を実行します。
 
    1. 存在しない場合は、/libs/ws/js/runtime/templates/processinstance.html を /apps/ws/js/runtime/templates/ にコピーします。「**すべて保存**」をクリックします。
-   1. processinstance.html に、class = &#39;processDescription&#39;を持つプロセス説明 div を追加します。
+   1. processinstance.html に class = &#39;processDescription&#39; を指定した div をプロセス説明として追加します。
 
    ```
    <div class="processDescription" title="<%= description%>"><%= description%></div>
    ```
 
-1. 以下の操作を実行します。
+1. 次を実行します。
 
    1. /apps/ws/js/registry.js を開いて編集します。
-   1. 検索と置換 `text!/lc/libs/ws/js/runtime/templates/processinstance.html`と `text!/lc/`**アプリ**/ws/js/runtime/templates/processinstance.html.
+   1. `text!/lc/libs/ws/js/runtime/templates/processinstance.html` を検索して `text!/lc/`**アプリ**/ws/js/runtime/templates/processinstance.html と置き換えます。
 
-1. 上記の変更には、次のようにしてスタイルシート /apps/ws/css/newStyle.css にエントリを追加することによって、CSS ファイルを更新する必要があります。
+1. 上記の変更を行うには、次のように、スタイルシート /apps/ws/css/newStyle.css にエントリを追加することによって、CSS ファイルを更新する必要があります。
 
    ```css
    .processinstance .processDescription {

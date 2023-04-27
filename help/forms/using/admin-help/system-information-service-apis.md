@@ -13,13 +13,13 @@ exl-id: 7eee8103-8d6c-4397-acaf-dd662cc09a56
 source-git-commit: dd996d0bb856b9140d420d03dec446a382d10acd
 workflow-type: tm+mt
 source-wordcount: '338'
-ht-degree: 73%
+ht-degree: 9%
 
 ---
 
 # システム情報サービス API {#system-information-service-apis}
 
-システム情報サービスは情報取得のために REST API のセットを提供します。次のテーブルは API に関する詳細を提供します。
+システム情報サービスは、情報を取得するための REST API のセットを提供します。 次の表に、API の詳細情報を示します。
 
 <table>
  <thead>
@@ -33,17 +33,17 @@ ht-degree: 73%
   <tr>
    <td><p>SystemInfo.properties</p></td> 
    <td><p>https://[server]:[port]/rest/services/SystemInfo.properties</p></td> 
-   <td><p>この API は <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API のラッパーです。それは現在の作業環境の設定を取得します。 </p></td> 
+   <td><p>この API は <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API。 現在の作業環境の設定を取得します。 </p></td> 
   </tr> 
   <tr>
    <td><p>SystemInfo.envVar</p></td> 
    <td><p>https://[server]:[port]/rest/services/ SystemInfo.envVar</p></td> 
-   <td><p>ホストのオペレーティングシステムにおけるすべての環境変数を取得します。 </p></td> 
+   <td><p>ホストオペレーティングシステムのすべての環境変数を取得します。 </p></td> 
   </tr> 
   <tr>
    <td><p>SystemInfo.logs</p></td> 
    <td><p>https://[server]:[port]/rest/services/ SystemInfo.logs</p></td> 
-   <td><p>アプリケーションのサーバーログを含む zip ファイルをダウンロードします。 </p></td> 
+   <td><p>アプリケーションサーバーログを含む zip ファイルをダウンロードします。 </p></td> 
   </tr> 
   <tr>
    <td><p>SystemInfo.config</p></td> 
@@ -53,12 +53,12 @@ ht-degree: 73%
   <tr>
    <td><p>SystemInfo.services</p></td> 
    <td><p>https://[server]:[port]/rest/services/ SystemInfo.services</p></td> 
-   <td><p>AEM Forms サービスのステータスと設定パラメーターを取得します。</p></td> 
+   <td><p>AEM forms サービスのステータスおよび設定パラメーターを取得します。</p></td> 
   </tr> 
   <tr>
    <td><p>SystemInfo.vitalDetails</p></td> 
    <td><p>https://[server]:[port]/rest/services/ SystemInfo.vitalDetails</p></td> 
-   <td><p>サーバー稼働時間、JVM 引数、システムメモリ、ヒープサイズ、オペレーティングシステム名、アクティブなスレッド数、およびスレッド数を取得します。 </p></td> 
+   <td><p>サーバー稼動時間、JVM 引数、システムメモリ、ヒープサイズ、オペレーティングシステム名、アクティブなスレッド数、およびスレッド数を取得します。 </p></td> 
   </tr> 
   <tr>
    <td><p>SystemInfo.coreSettings</p></td> 
@@ -82,31 +82,31 @@ ht-degree: 73%
   <tr>
    <td><p>SystemInfo.database</p></td> 
    <td><p>https://[server]:[port]/rest/services/ SystemInfo.database</p></td> 
-   <td><p>データベースに関する詳細を取得します。</p></td> 
+   <td><p>データベースに関する詳細な情報を取得します。</p></td> 
   </tr> 
   <tr>
    <td><p>SystemInfo.licenseInfo</p></td> 
    <td><p>https://[server]:[port]/rest/services/ SystemInfo.licenseInfo</p></td> 
-   <td><p>インストールされている AEM Forms コンポーネントのバージョンとライセンス情報を取得します。 </p></td> 
+   <td><p>インストールされているAEM forms コンポーネントのバージョンおよびライセンス情報を取得します。 </p></td> 
   </tr> 
   <tr>
    <td><p>SystemInfNo.serverConfig</p></td> 
    <td><p>https://[server]:[port]/rest/services/ SystemInfo.serverConfig</p></td> 
-   <td><p>ホストのアプリケーションサーバーの設定ファイルをダウンロードします。 </p></td> 
+   <td><p>ホストアプリケーションサーバーの設定ファイルをダウンロードします。 </p></td> 
   </tr> 
   <tr>
    <td><p>SystemInfo.threads?delay=[n]&amp;iterations=[n]</p></td> 
    <td><p>https://[server]:[port]/rest/services/ SystemInfo.threads?delay=[n]&amp;iterations=[n]</p></td> 
-   <td><p>アクティブなスレッドの数とスタックトレースを取得します。次のパラメーターを受け取ります。</p>
+   <td><p>アクティブなスレッドの数とスタックトレースを取得します。 次のパラメーターを受け入れます。</p>
     <ul>
-     <li><p>iterations= [n]: 繰り返し回数を指定します。n を数字と置き換えます。 </p></li>
-     <li><p>Delay= [n]: 次の回数を始める前に待機するミリ秒の数値を指定します。 </p></li>
+     <li><p>iterations= [n]:繰り返し回数を指定します。 n を数値で置き換えます。 </p></li>
+     <li><p>遅延= [n]:次の反復を開始する前に待機する時間（ミリ秒）を指定します。 </p></li>
     </ul><p></p></td> 
   </tr> 
   <tr>
    <td><p>SystemInfo.info</p></td> 
    <td><p>https://[server]:[port]/rest/services/ SystemInfo.info</p></td> 
-   <td><p>この API はすべてのシステム情報サービス API のラッパーです。内部的に、それはすべてのシステム情報 API を実行し、情報を zip 形式でダウンロードします。 </p><p><i><strong>注意</strong>：SystemInfo.info はアクティブなスレッドの数とスタックトレースを提供しません。 </i></p></td> 
+   <td><p>この API は、すべてのシステム情報サービス API のラッパーです。 内部的には、すべてのシステム情報 API を実行し、情報を zip 形式でダウンロードします。 </p><p><i><strong>注意</strong>：SystemInfo.info はアクティブなスレッドの数とスタックトレースを提供しません。 </i></p></td> 
   </tr> 
  </tbody> 
 </table>

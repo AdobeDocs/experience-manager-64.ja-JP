@@ -13,13 +13,13 @@ exl-id: cdf5e5d3-a78c-4f32-ad40-665876392a97
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '216'
-ht-degree: 66%
+ht-degree: 4%
 
 ---
 
 # カレンダーの基本事項 {#calendar-essentials}
 
-このページでは、カレンダー機能の操作に関する基本情報をまとめています。
+このページでは、カレンダー機能の使用に関する重要な情報を提供します。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -30,8 +30,8 @@ ht-degree: 66%
    <td>social/calendar/components/hbs/calendar</td> 
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
-   <td>不可</td> 
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td> 
+   <td>いいえ</td> 
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientllibs</strong></a></td> 
@@ -48,7 +48,7 @@ ht-degree: 66%
   </tr>
   <tr>
    <td><strong> properties</strong></td> 
-   <td><a href="calendar.md">カレンダーの使用</a>を参照</td> 
+   <td>参照 <a href="calendar.md">カレンダーの使用</a></td> 
   </tr>
  </tbody>
 </table>
@@ -67,15 +67,15 @@ ht-degree: 66%
 
 を含むコミュニティサイト構造 [カレンダー関数](functions.md#calendar-function) が設定されます。 `alendar`コンポーネント。 カレンダー関数は、 [権限を持つメンバーユーザーグループ](users.md#privileged-members-group).
 
-### カレンダー投稿（UGC）へのアクセス {#accessing-calendar-posts-ugc}
+### カレンダー投稿 (UGC) へのアクセス {#accessing-calendar-posts-ugc}
 
-AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)を使用する際に、選択されたストレージオプション（ASRP、MSRP、JSRP など）に関係なく、プログラムによって UGC にアクセスする必要があります。
+AEM 6.1 Communities 以降では、 [共通店](working-with-srp.md) UGC の場合は、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、プログラムで UGC にアクセスできます。
 
-**リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
+**リポジトリ内の UGC の場所と形式は、警告なしで変更される場合があります**.
 
-次のページを参照してください。
+以下を参照してください。
 
-* [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
+* [ストレージリソースプロバイダの概要](srp.md)  — 概要とリポジトリ使用の概要
 * [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例
 * [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングガイドライン
-* [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
+* [SocialUtils リファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします

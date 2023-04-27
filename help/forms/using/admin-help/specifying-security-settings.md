@@ -1,7 +1,7 @@
 ---
 title: セキュリティ設定の指定
 seo-title: Specifying security settings
-description: セキュリティ設定を指定する方法について説明します。
+description: セキュリティ設定の指定方法を説明します。
 seo-description: Learn how to specify security settings.
 uuid: 63ba7819-e4eb-4d28-8463-142ff4233a1e
 contentOwner: admin
@@ -13,16 +13,16 @@ exl-id: 0bda2e58-9470-48fa-a60b-04a1a32689bb
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '73'
-ht-degree: 91%
+ht-degree: 28%
 
 ---
 
 # セキュリティ設定の指定 {#specifying-security-settings}
 
-Forms で、XML 入力で外部エンティティを解決するかどうかを制御できます。デフォルトでは外部エンティティが解決されますが、この動作を変更して AEM Forms システムのセキュリティを高めることができます。
+Formsでは、XML 入力内の外部エンティティを解決するかどうかを制御できます。 デフォルトでは解決されますが、この動作を変更してAEM forms システムのセキュリティを高めることができます。
 
-**外部エンティティへの参照を含む XML データファイルを処理しないようにする**
+**外部エンティティへの参照を含む XML データファイルが処理されないようにする**
 
-1. 管理コンソールで、 **[!UICONTROL サービス/Forms]**.
+1. 管理コンソールで、**[!UICONTROL サービス／Forms]** をクリックします。
 1. 「外部エンティティを解決」チェックボックスをオフにします。
 1. 「**[!UICONTROL 保存]**」をクリックします。

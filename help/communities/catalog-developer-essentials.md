@@ -13,19 +13,19 @@ exl-id: 1e0a7cab-39b9-4c90-810c-c93fb76c3869
 source-git-commit: 9178c3a01e7f450d3794f41605fb3788231c88c0
 workflow-type: tm+mt
 source-wordcount: '358'
-ht-degree: 46%
+ht-degree: 6%
 
 ---
 
 # カタログの基本事項 {#catalog-essentials}
 
-このページでは、イネーブルメントコミュニティサイトのカタログ機能の操作に関する基本情報をまとめています。
+このページでは、イネーブルメントコミュニティサイトのカタログ機能を使用する際に必要な情報を紹介します。
 
-コミュニティサイトにカタログ機能が用意されている場合、コミュニティメンバーは、その機能を使用して、カタログに一覧表示された実施可能リソースを参照および選択できます。
+カタログ機能をコミュニティサイトに含めると、コミュニティメンバーはカタログに一覧表示されているイネーブルメントリソースを参照して選択できます。
 
 この [ `enablement catalog` コンポーネント](catalog.md) コミュニティメンバーが [イネーブルメントリソース](resources.md). AEMタグの使用は、カタログ内のイネーブルメントリソースの外観を管理するうえで重要な役割を果たします。
 
-[実施可能リソースのタグ付け](tag-resources.md)を参照してください。
+詳しくは、 [イネーブルメントリソースのタグ付け](tag-resources.md).
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -36,8 +36,8 @@ ht-degree: 46%
    <td>social/enablement/components/hbs/catalog</td> 
   </tr> 
   <tr> 
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
-   <td>不可</td> 
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td> 
+   <td>いいえ</td> 
   </tr> 
   <tr> 
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td> 
@@ -64,9 +64,9 @@ ht-degree: 46%
 
 を含むコミュニティサイト構造 [カタログ機能](functions.md#catalog-function)（設定済みを含む） `enablement catalog` コンポーネント。
 
-### 事前フィルター {#pre-filters}
+### プリフィルター {#pre-filters}
 
-コミュニティサイトにカタログ機能が追加されている場合、事前フィルターを指定することで、カタログに表示されるイネーブルメントリソースと学習パスを制限できます。これは、サイトのカタログリソースのインスタンスでプロパティを設定することでおこなわれます。
+カタログ機能がコミュニティサイトに追加された場合は、事前フィルターを指定することで、カタログに表示されるイネーブルメントリソースと学習パスを制限できます。 これは、サイトのカタログリソースのインスタンスでプロパティを設定することでおこなわれます。
 
 例 [イネーブルメントチュートリアル](getting-started-enablement.md):
 
@@ -86,7 +86,7 @@ ht-degree: 46%
 
       * 名前：`filters`
       * 型：`nt:unstructured`
-   * 「**[!UICONTROL すべて保存]**」を選択します。
+   * 選択 **[!UICONTROL すべて保存]**
 
 
 * 追加 `se_resource-tags` プロパティを `filters` ノード
@@ -96,7 +96,7 @@ ht-degree: 46%
 
       * 名前：`se_resource-tags`
       * タイプ：String
-      * 値：&lt;*TagID[ を入力](#pre-filter-tagids)>*
+      * 値： *&lt;enter a=&quot;&quot; span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />タグ ID](#pre-filter-tagids)>*[
       * 選択 **[!UICONTROL 複数]**
       * 選択 **[!UICONTROL 追加]**
 
@@ -106,9 +106,9 @@ ht-degree: 46%
 
 ![chlimage_1-189](assets/chlimage_1-189.png)
 
-#### 事前フィルター TagID {#pre-filter-tagids}
+#### タグ ID の事前フィルター {#pre-filter-tagids}
 
-プリフィルター [タグ ID](../../help/sites-developing/framework.md#tagid) は、イネーブルメントリソースに適用されるタグと完全に一致する必要があります。 これらは、サイトの `resources` フォルダーでプロパティ `se_resource-tags` の値として確認できます。
+プリフィルター [タグ ID](../../help/sites-developing/framework.md#tagid) は、イネーブルメントリソースに適用されるタグと完全に一致する必要があります。 これらは、 `resources` プロパティの値としてのサイトのフォルダー `se_resource-tags`.
 
 ![chlimage_1-190](assets/chlimage_1-190.png)
 

@@ -14,7 +14,7 @@ exl-id: e9d10d35-6a8d-497d-83f7-67ee6c22baed
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '2764'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -29,8 +29,8 @@ Form Data Integration サービスを使用すると、データを PDF フォ�
 
 フォームデータは、PDF フォームのタイプに応じて、次のいずれかの形式で存在します。
 
-* XFDF ファイル。Acrobat フォームデータ形式の XML バージョンです。
-* XDP ファイル。フォームフィールド定義を含む XML ファイルです。フォームフィールドデータと埋め込まれた PDF ファイルが含まれる場合もあります。Designer で生成された XDP ファイルは、埋め込み base-64 エンコード PDF ドキュメントを使用する場合にのみ利用できます。
+* XFDF ファイル。Acrobatフォームデータ形式の XML バージョンです。
+* XDP ファイル。フォームフィールドの定義を含む XML ファイルです。 また、フォームフィールドデータと埋め込まれたPDFファイルを含めることもできます。 Designer で生成された XDP ファイルは、埋め込み base-64 エンコード PDF ドキュメントを使用する場合にのみ利用できます。
 
 次のタスクは、Form Data Integration サービスを使用して実行できます。
 

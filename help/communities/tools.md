@@ -15,13 +15,13 @@ exl-id: de11be58-b576-4d06-b446-52b4013aae9a
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '102'
-ht-degree: 18%
+ht-degree: 4%
 
 ---
 
 # コミュニティツール {#communities-tools}
 
-オーサー環境でコミュニティツールコンソールにアクセスするには：
+オーサー環境でコミュニティツールコンソールにアクセスするには、次の手順に従います。
 
 * グローバルナビゲーションから： **[!UICONTROL ツール/コミュニティ]**
 

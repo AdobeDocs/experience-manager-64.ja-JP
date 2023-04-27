@@ -8,7 +8,7 @@ exl-id: cde35555-259f-4d16-999f-2b93d597b8a5
 source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
 source-wordcount: '1642'
-ht-degree: 68%
+ht-degree: 65%
 
 ---
 
@@ -59,7 +59,7 @@ AEMオーサーインスタンスを設定するには、AEM 6.4 を使用する
 
 * アドビパートナーの場合は、[アドビパートナートレーニングプログラム](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)から AEM 6.4 をリクエストしてください。
 
-AEM をダウンロードしたら、[デプロイメントと保守](https://helpx.adobe.com/jp/experience-manager/6-4/sites/deploying/using/deploy.html#defaultlocalinstall)の説明に従い、AEM オーサーインスタンスの設定を行ってください。
+AEM をダウンロードしたら、[デプロイとメンテナンス](https://helpx.adobe.com/jp/experience-manager/6-4/sites/deploying/using/deploy.html#defaultlocalinstall)の説明に従い、AEM オーサーインスタンスの設定を行ってください。
 
 ### 最新の AEM サービスパックをダウンロードしてインストールする {#servicepack}
 
@@ -260,7 +260,7 @@ Brand Portal クラウドサービス設定を作成するには、以下の手�
 
    ![](assets/test-integration4.png)
 
-1. テスト結果の一番下を見て、レプリケーションが成功したことを確認します。
+1. テスト結果の下部を見て、レプリケーションが成功したことを確認します。
 
    ![](assets/test-integration5.png)
 
@@ -269,7 +269,7 @@ Brand Portal クラウドサービス設定を作成するには、以下の手�
 
    >[!NOTE]
    >
-   >どのレプリケーションエージェントも無効にしないでください。一部のアセットのレプリケーションが失敗する可能性があります。
+   >いずれのレプリケーションエージェントも無効にしないでください。無効にすると、一部のアセットのレプリケーションが失敗する可能性があります。
    >
    >タイムアウトエラーを避けるために、4 つのレプリケーションエージェントすべてが設定されていることを確認します。[Brand Portal への並列公開における問題のトラブルシューティング](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html?lang=ja#connection-timeout)を参照してください。
 
@@ -353,8 +353,8 @@ Brand PortalがAEM Assetsオーサーインスタンスで正常に設定され�
    <li>Step text</li>
    -->
 
-レプリケーションが正常に終了したら、アセット、フォルダー、コレクションを Brand Portal に公開することができます。詳しくは、次を参照してください。
+レプリケーションが正常に終了したら、アセット、フォルダー、コレクションを Brand Portal に公開することができます。詳しくは、以下を参照してください。
 
 * [Brand Portal へのアセットの公開](brand-portal-publish-assets.md)
-* [アセットおよびフォルダーの Brand Portal への公開](brand-portal-publish-folder.md)
-* [Brand Portal へのコレクションの公開](brand-portal-publish-collection.md)
+* [Brand Portalへのアセットおよびフォルダーの公開](brand-portal-publish-folder.md)
+* [コレクションをBrand Portalに公開](brand-portal-publish-collection.md)

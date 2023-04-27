@@ -8,7 +8,7 @@ exl-id: 7694c68d-0a17-4052-8fbe-9bf45b229e81
 source-git-commit: bc27dee618ee57dc188c7f35a1af4d1dba80cf1b
 workflow-type: tm+mt
 source-wordcount: '2225'
-ht-degree: 54%
+ht-degree: 44%
 
 ---
 
@@ -32,12 +32,12 @@ Adobe Experience Manager Assets には、アセットを処理するためのデ
 
 Experience Manager Assets内では次のメディアハンドラーを使用でき、最も一般的な MIME タイプを処理できます。
 
-| ハンドラー名 | サービス名（システムコンソールでの名称） | サポートされる MIME タイプ |
+| ハンドラー名 | サービス名（システムコンソール内） | サポートされる MIME タイプ |
 |---|---|---|
 | [!UICONTROL TextHandler] | com.day.cq.dam.core.impl.handler.TextHandler | text/plain |
 | [!UICONTROL PdfHandler] | com.day.cq.dam.handler.standard.pdf.PdfHandler | <ul><li>application/pdf</li><li>application/illustrator</li></ul> |
 | [!UICONTROL JpegHandler] | com.day.cq.dam.core.impl.handler.JpegHandler | image/jpeg |
-| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>重要</b> - アップロードされた MP3 ファイルは [サードパーティのライブラリを使用して処理](https://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html)されます。MP3 に可変ビットレート（VBR）がある場合、ライブラリは不正確なおおよその長さを計算します。 |
+| [!UICONTROL Mp3Handler] | com.day.cq.dam.handler.standard.mp3.Mp3Handler | audio/mpeg<br><b>重要</b> - MP3 ファイルをアップロードすると、 [サードパーティのライブラリを使用して処理](https://www.zxdr.it/programmi/SistEvolBDD/LibJava/doc/de/vdheide/mp3/MP3File.html). MP3 に可変ビットレート（VBR）がある場合、ライブラリは不正確なおおよその長さを計算します。 |
 | [!UICONTROL ZipHandler] | com.day.cq.dam.handler.standard.zip.ZipHandler | <ul><li>application/java-archive </li><li> application/zip</li></ul> |
 | [!UICONTROL PictHandler] | com.day.cq.dam.handler.standard.pict.PictHandler | image/pict |
 | [!UICONTROL StandardImageHandler] | com.day.cq.dam.core.impl.handler.StandardImageHandler | <ul><li>image/gif </li><li> image/png </li> <li>application/photoshop </li> <li>image/jpeg </li><li> image/tiff </li> <li>image/x-ms-bmp </li><li> image/bmp</li></ul> |
@@ -45,14 +45,14 @@ Experience Manager Assets内では次のメディアハンドラーを使用で�
 | [!UICONTROL MSPowerPointHandler] | com.day.cq.dam.handler.standard.msoffice.MSPowerPointHandler | application/vnd.ms-powerpoint |
 | [!UICONTROL OpenOfficeHandler] | com.day.cq.dam.handler.standard.ooxml.OpenOfficeHandler | <ul><li>application/vnd.openxmlformats-officedocument.wordprocessingml.document</li><li> application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</li><li> application/vnd.openxmlformats-officedocument.presentationml.presentation</li></ul> |
 | [!UICONTROL EPubHandler] | com.day.cq.dam.handler.standard.epub.EPubHandler | application/epub+zip |
-| [!UICONTROL GenericAssetHandler] | com.day.cq.dam.core.impl.handler.GenericAssetHandler | アセットからデータを抽出するためのハンドラーが他に見つからなかった場合のフォールバック |
+| [!UICONTROL GenericAssetHandler] | com.day.cq.dam.core.impl.handler.GenericAssetHandler | アセットからデータを抽出する他のハンドラーが見つからなかった場合のフォールバック |
 
-すべてのハンドラーは以下のタスクを実行できます。
+すべてのハンドラーは、次のタスクを実行します。
 
-* アセットから使用できるすべてのメタデータを抽出する
+* アセットから使用可能なすべてのメタデータを抽出しています。
 * アセットからサムネール画像を作成する
 
-以下のようにアクティブなメディアハンドラーを表示できます。
+アクティブなメディアハンドラーを表示できます。
 
 1. ブラウザーで、`http://localhost:4502/system/console/components` に移動します。
 1. リンク `com.day.cq.dam.core.impl.store.AssetStoreImpl` をクリックします。
@@ -72,9 +72,9 @@ Experience Managerには、アセットを処理するためのデフォルト�
 
 ### メディアハンドラーの無効化／有効化 {#disabling-enabling-a-media-handler}
 
-メディアハンドラーを無効または有効にするには、Apache Felix Web Management Console を使用します。メディアハンドラーを無効にすると、そのアセットに対してメディアハンドラーのタスクは実行されません。
+メディアハンドラーは、Apache Felix Web Management Console を使用して無効または有効にできます。 メディアハンドラーが無効になっている場合、アセットに対してタスクは実行されません。
 
-メディアハンドラーを有効または無効にするための手順
+メディアハンドラーを有効/無効にするには：
 
 1. ブラウザーで、`https://<host>:<port>/system/console/components` に移動します。
 1. メディアハンドラーの名前の横にある「**[!UICONTROL Disable]**」をクリックします。例：`com.day.cq.dam.handler.standard.mp3.Mp3Handler`
@@ -83,9 +83,9 @@ Experience Managerには、アセットを処理するためのデフォルト�
 
 ### メディアハンドラーの作成 {#creating-a-new-media-handler}
 
-新しいメディアタイプをサポートしたり、アセットに対して特定のタスクを実行したりするには、メディアハンドラーを作成する必要があります。 ここでは、その進め方について説明します。
+新しいメディアタイプをサポートしたり、アセットに対して特定のタスクを実行したりするには、メディアハンドラーを作成する必要があります。 この節では、手順を説明します。
 
-#### 重要なクラスおよびインターフェイス {#important-classes-and-interfaces}
+#### 重要なクラスとインターフェイス {#important-classes-and-interfaces}
 
 実装を開始するための最適な方法は、最も多くの点について対応し、適切なデフォルト動作を提供している付属の抽象実装から継承することです。それが `com.day.cq.dam.core.AbstractAssetHandler` クラスです。
 
@@ -108,7 +108,7 @@ Experience Managerには、アセットを処理するためのデフォルト�
 * `com.day.cq.dam.core.AbstractSubAssetHandler` クラス：
    * その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。さらに、サブアセットの抽出についてよく使用される機能も提供します。
    * 実装を開始するための最適な方法は、最も多くの点について対応し、適切なデフォルト動作を提供している付属の抽象実装から継承することです。それが com.day.cq.dam.core.AbstractAssetHandler クラスです。
-   * このクラスには、抽象的なサービス記述子が用意されています。そのため、このクラスから継承し、maven-sling-plugin を使用する場合、inherit フラグを true に設定する必要があります。
+   * このクラスには、抽象的なサービス記述子が用意されています。したがって、このクラスから継承し、maven-sling-plugin を使用する場合、inherit フラグを true に設定する必要があります。
 
 次のメソッドを実装する必要があります。
 
@@ -126,7 +126,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 * `com.day.cq.dam.core.AbstractAssetHandler` クラス：その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` クラス：その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。さらに、サブアセットの抽出についてよく使用される機能も提供します。
 
-#### 例：特定の Text Handler の作成 {#example-create-a-specific-text-handler}
+#### 例：特定のテキストハンドラーを作成する {#example-create-a-specific-text-handler}
 
 この節では、透かし付きのサムネールを生成する特定のテキストハンドラを作成します。
 
@@ -143,7 +143,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
    1. 次を確認します。 **[!UICONTROL 単純なプロジェクトの作成]** ボックスと **[!UICONTROL デフォルトの Workspace の場所を使用]** ボックスに移動し、 **[!UICONTROL 次へ]**.
    1. 次の値で Maven プロジェクトを定義します。
 
-      * Group Id：com.day.cq5.myhandler
+      * グループ ID :com.day.cq5.myhandler
       * アーティファクト Id：myBundle
       * 名前：マイExperience Managerバンドル
       * 説明：これは私のExperience Manager束です
@@ -155,13 +155,13 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
    1. `myBundle` プロジェクトを右クリックし、プロパティを選択してください。
    1. 「Java™ Compiler」を選択し、次のプロパティを 1.5 に設定します。
 
-      * Compiler compliance level
-      * Generated .class files compatibility
-      * Source compatibility
+      * コンパイラのコンプライアンスレベル
+      * 生成された.class ファイルの互換性
+      * ソースの互換性
    1. 「**[!UICONTROL OK]**」をクリックします。ダイアログウィンドウで、「はい」をクリックします。
 
 
-1. pom.xml ファイルのコードを以下のコードで書き換えます。
+1. pom.xml ファイル内のコードを次のコードに置き換えます。
 
    ```xml
    <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
@@ -286,7 +286,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 1. Java™クラスの作成 `MyHandler`:
 
    1. Eclipse で、 `myBundle/src/main/java`、右クリック `com.day.cq5.myhandler` 「パッケージ」、「新規」、「クラス」の順に選択します。
-   1. ダイアログウィンドウで、「Java™ Class MyHandler」という名前を付け、「完了」をクリックします。 MyHandler.java ファイルが作成され、このファイルが開きます。
+   1. ダイアログウィンドウで、「Java™ Class MyHandler」という名前を付け、「完了」をクリックします。 Eclipse が MyHandler.java ファイルを作成して開きます。
    1. `MyHandler.java` で、既存のコードを以下のコードに置き換えてから、変更内容を保存してください。
 
    ```java
@@ -461,7 +461,7 @@ Experience Managerを使用すると、ワークフロー内で任意のコマ�
 * ステップの引数で定義されたコマンドを実行します。コマンドは、Experience Managerを実行するユーザーの権限を持つ一時ディレクトリ内で実行されます。
 * 結果をストリーミングサーバーのレンディションフォルダーにExperience Managerします。
 * 一時ディレクトリを削除します。
-* 指定した場合は、それらのレンディションに基づいてサムネールを作成します。サムネールの数とサイズは、ステップの引数で定義されます。
+* 指定した場合、これらのレンディションに基づいてサムネールを作成します。 サムネールの数とサイズは、ステップの引数で定義します。
 
 ### ImageMagick の使用例 {#an-example-using-imagemagick}
 
@@ -469,8 +469,8 @@ Experience Managerを使用すると、ワークフロー内で任意のコマ�
 
 この処理手順を実行するには、ImageMagick を使用します。 ImageMagick を、Experience Manager・サーバをホストするディスクにインストールします。
 
-1. ImageMagick のインストール. 詳しくは、 [ImageMagick のドキュメント](https://www.imagemagick.org/script/download.php) を参照してください。
-1. コマンドラインで `convert` を実行できるようにツールを設定します。
+1. ImageMagick をインストールします。 詳しくは、 [ImageMagick のドキュメント](https://www.imagemagick.org/script/download.php) を参照してください。
+1. ツールを設定して、 `convert` コマンドライン上で
 1. ツールが適切にインストールされているかどうかを確認するには、コマンド `convert -h` をコマンドラインで実行します。
 
    コンバートツールの使用可能なすべてのオプションが記載されたヘルプ画面が表示されます。

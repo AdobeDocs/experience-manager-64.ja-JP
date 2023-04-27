@@ -1,7 +1,7 @@
 ---
 title: タスクアクションのカスタマイズ
 seo-title: Customizing Task Actions
-description: タスクアクションの表示方法をカスタマイズしたり、アクションに画像のみを使用したり、ルートアクションに使用されている画像をカスタマイズすることができます。
+description: タスクアクションの外観をカスタマイズし、アクションにはイメージのみを使用し、ルートアクションに使用されるイメージをカスタマイズできます。
 seo-description: You can customize appearance of the task actions, use only images for actions, and customize the images used in route actions.
 uuid: f6aebcd5-beac-41bf-95bf-2c07d36afa8b
 content-type: reference
@@ -12,17 +12,17 @@ exl-id: 3534864b-3d1c-42ca-96a0-5becbfbc8ce6
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '293'
-ht-degree: 53%
+ht-degree: 56%
 
 ---
 
 # タスクアクションのカスタマイズ {#customizing-task-actions}
 
-AEM Forms Workspace で、ユーザーはタスクアクションをカスタマイズすることができます。タスクアクションをカスタマイズする前に、次の手順に従っていることを確認してください： [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md).
+AEM Forms Workspace で、ユーザーはタスクアクションをカスタマイズすることができます。タスクアクションをカスタマイズする前に、「[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」に一覧表示されている手順に従っていることを確認してください。
 
 ## テキストスタイルのカスタマイズ {#customizing-text-style}
 
-テキストスタイルをカスタマイズするには、次のコードスニペットを `/apps/ws/css/newStyle.css` ファイル：
+テキストスタイルをカスタマイズするには、`/apps/ws/css/newStyle.css` ファイルに次のコードスニペットを追加します。
 
 ```css
 /*-------- For Task Actions visible in task list task action popup ----------------------------------------------------*/
@@ -110,7 +110,7 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
 
 ## 画像のカスタマイズ {#customizing-images}
 
-画像をカスタマイズするには、次のコードスニペットを `/apps/ws/css/newStyle.css` ファイル。 次のコードスニペットは *lock* アクションの画像をカスタマイズします。
+画像をカスタマイズするには、次のコードスニペットを `/apps/ws/css/newStyle.css` ファイルに追加します。次のコードスニペットは、 *ロック* アクション：
 
 ```css
 #taskarea .taskActionsPopUp .lock, .task .taskActionsPopUp .lock{
@@ -120,7 +120,7 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
 
 >[!NOTE]
 >
->タスクリストおよびタスクの詳細アクションで異なる画像または異なる解像度の画像を表示するには、別々のスタイルを追加します。たとえば、&#39;lock&#39; アクションを変更するには、次のようにします。
+>「タスクリスト」および「タスクの詳細」アクションで、異なる画像や異なる解像度の画像を表示するための別々のスタイルを追加します。 例えば、「lock」アクションを変更するには、次のようにします。
 
 ```css
 #taskarea .taskActionsPopUp .lock{
@@ -131,15 +131,15 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
 }
 ```
 
-## アクションに画像のみを表示 {#showing-only-images-for-actions}
+## アクション用の画像のみの表示 {#showing-only-images-for-actions}
 
-アクションに画像のみを表示するには、ルートアクションで使用されているイメージをカスタマイズします。詳しくは、 [ルートアクションのイメージ](/help/forms/using/images-route-actions.md).
+アクションのイメージのみを表示するには、ルートアクションで使用されるイメージをカスタマイズします。 詳しくは、「[ルートアクションのイメージ](/help/forms/using/images-route-actions.md)」を参照してください。
 
-### タスクリストのタスクアクション ポップアップメニュー {#task-list-task-action-nbsp-pop-up-menu}
+### タスクリストタスクアクションポップアップメニュー {#task-list-task-action-nbsp-pop-up-menu}
 
-1. AEM Forms Workspace タスクリストのタスクアクションポップアップメニューのアイテムをカスタマイズするには、開発パッケージが必要です。開発パッケージの作成について詳しくは、 [AEM Forms Workspace コードを構築しています。](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
+1. AEM Forms Workspace のタスクリストタスクアクションポップアップメニューの項目をカスタマイズするには、開発パッケージが必要です。 開発パッケージを作成する方法については、[AEM Forms Workspace コードの構築](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)を参照してください。
 
-1. /libs/ws/js/runtime/templates/task.htmlをにコピーします。 `/apps/ws/js/runtime/templates/task.html`次のコードスニペットを置き換えます。
+1. /libs/ws/js/runtime/templates/task.html を `/apps/ws/js/runtime/templates/task.html` にコピーして次のコードスニペットに置き換えます。
 
    ```
    // Orignal code
@@ -212,7 +212,7 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
        </div>
    ```
 
-1. アンカータグに割り当てられている固定幅を `/apps/ws/css/newStyle.css` ファイル：
+1. `/apps/ws/css/newStyle.css` ファイルからアンカータグに割り当てられている固定幅を削除します。
 
    ```css
    .task .taskActionsPopUp ul{
@@ -264,9 +264,9 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
 
 ### タスクの詳細タスクアクションポップアップメニュー {#task-details-task-action-pop-up-menu}
 
-詳細タスクアクションポップアップメニューをカスタマイズするには、次の手順を実行します。
+次の手順を実行して詳細タスクアクションポップアップメニューをカスタマイズします。
 
-* /libs/ws/js/runtime/templates/taskdetails.htmlファイルを `/apps/ws/js/runtime/templates/` フォルダー：
+* /libs/ws/js/runtime/templates/taskdetails.html ファイルを `/apps/ws/js/runtime/templates/` フォルダーにコピーします。
 * テキストの代わりにアンカータグの内部にアイコンタグをカプセル化します。例えば、以下に示す新しいコードは、アンカータグ内にアイコンタグをカプセル化します。
 
 ```
@@ -358,8 +358,8 @@ AEM Forms Workspace で、ユーザーはタスクアクションをカスタマ
     </div>
 ```
 
-* /apps/ws/js/registry.js ファイルを開いて編集します。
+* /apps/ws/js/registry.jsファイルを編集用に開きます。
 * 次のテキストを探します。 `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
-* 検索したテキストを次のテキストに置き換えます。 `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`
+* そのテキストを次のテキストに置き換えます。`text!/lc/apps/ws/js/runtime/templates/taskdetails.html`
 
-[**サポートへのお問い合わせ**](https://www.adobe.com/account/sign-in.supportportal.html)
+[**サポートへのお問い合わせ**](https://www.adobe.com/jp/account/sign-in.supportportal.html)

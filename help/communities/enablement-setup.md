@@ -13,22 +13,22 @@ exl-id: 92c95cb5-fdbf-4200-89a8-10c768e4bc25
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '860'
-ht-degree: 54%
+ht-degree: 4%
 
 ---
 
 # イネーブルメントのための初期設定 {#initial-setup-for-enablement}
 
-## オーサーインスタンスおよびパブリッシュインスタンスの開始 {#start-author-and-publish-instances}
+## オーサーインスタンスとパブリッシュインスタンスを開始 {#start-author-and-publish-instances}
 
-開発用およびデモ用の場合、1 つのオーサーインスタンスと 1 つのパブリッシュインスタンスを実行する必要があります。
+開発およびデモの目的で、1 つのオーサーインスタンスと 1 つのパブリッシュインスタンスを実行する必要があります。
 
 基本のAEM [はじめに](../../help/sites-deploying/deploy.md#getting-started) 結果として生じる指示
 
-* オーサー環境（[localhost:4502](http://localhost:4502/) 上）
-* パブリッシュ環境（[localhost:4503](http://localhost:4503/) 上）
+* オーサー環境 [localhost:4502](http://localhost:4502/)
+* パブリッシュ環境を [localhost:4503](http://localhost:4503/)
 
-AEM Communities では、各環境を次の目的で使用します。
+AEM Communities、
 
 * オーサー環境は
 
@@ -45,43 +45,43 @@ AEM Communities では、各環境を次の目的で使用します。
 
 >[!NOTE]
 >
->AEM に馴染みがない場合は、[基本操作](../../help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](../../help/sites-authoring/qg-page-authoring.md)を参照してください。
+>AEMに詳しくない場合は、 [基本操作](../../help/sites-authoring/basic-handling.md) および [ページのオーサリングのクイックガイド](../../help/sites-authoring/qg-page-authoring.md).
 
-## Communities の最新リリースのインストール {#install-latest-communities-release}
+## 最新の Communities リリースをインストール {#install-latest-communities-release}
 
-このチュートリアルでは、[イネーブルメントコミュニティサイト](overview.md#enablement-community)を作成します。最新の機能パックがインストールされていることを確認するには、次のページにアクセスします。
+このチュートリアルでは、 [実施可能コミュニティサイト](overview.md#enablement-community). 最新の機能パックがインストールされていることを確認するには、次のページにアクセスします。
 
 * [最新リリース](deploy-communities.md#latest-releases)
 
-[エンゲージメントコミュニティサイト](overview.md#engagement-community)の作成に関するチュートリアルについては、[AEM Communities 使用の手引き](getting-started.md)を参照してください。
+を作成するチュートリアルの場合、 [エンゲージメントコミュニティサイト](overview.md#engagement-community)，訪問 [AEM Communitiesの概要](getting-started.md).
 
 ## イネーブルメント機能の設定 {#configure-enablement-features}
 
-このチュートリアルに従って操作するには、[イネーブルメントをインストールして設定](enablement.md)する必要があります。これには、MySQL や FFmpeg などのサードパーティの商品が必要です。
+このチュートリアルに従うには、とを正しくインストールする必要があります。 [有効化の設定](enablement.md):MySQL や FFmpeg などのサードパーティ製品が必要です。
 
 ## Analytics の設定 {#configure-analytics}
 
 条件 [Adobe Analyticsはコミュニティサイト用に設定されています](analytics.md)を使用する場合、詳しくは [レポート](reports.md) コミュニティメンバー（学習者）に割り当てられたイネーブルメントリソースと学習パスに基づいて生成されます。
 
-## 電子メール通知の設定 {#configure-email-for-notifications}
+## 電子メールで通知を設定する {#configure-email-for-notifications}
 
 通知機能。デフォルトでは、 `Communities Sites` コンソール。通知用の e メールチャネルを提供します。
 
-これを使用するには、電子メールをサイト用に適切に設定する必要があります。
+必要なのは、電子メールがサイトに対して適切に設定されるためです。
 
-[電子メールの設定](email.md)を参照してください。
+詳しくは、 [電子メールの設定](email.md).
 
 ## トンネルサービスの有効化 {#enable-the-tunnel-service}
 
-オーサー環境でコミュニティサイトを作成するときに、トンネルサービスを使用すると、パブリッシュ環境に登録されているユーザーおよびユーザーグループ（メンバー）の作成や管理と、信頼されているコミュニティメンバーへの役割の割り当て、学習者へのコンテンツの割り当てを実行できます。
+オーサー環境でコミュニティサイトを作成する場合、トンネルサービスを使用して、パブリッシュ環境（メンバー）に登録されたユーザーとユーザーグループの作成と管理、信頼できるコミュニティメンバーへの役割の割り当て、学習者へのコンテンツの割り当てをおこなえます。
 
-詳しくは、[ユーザーとユーザーグループの管理](users.md)を参照してください。
+詳しくは、 [ユーザーとユーザーグループの管理](users.md).
 
-トンネルサービスを有効にする簡単な手順については、[トンネルサービス](deploy-communities.md#tunnel-service-on-author)を参照してください。
+トンネルサービスを有効にする簡単な手順については、 [トンネルサービス](deploy-communities.md#tunnel-service-on-author).
 
-## チュートリアルタグの作成 {#create-tutorial-tags}
+## チュートリアルタグを作成 {#create-tutorial-tags}
 
-`Tutorial` のタグ名前空間を使用して、エンゲージメントチュートリアルとイネーブルメントチュートリアルに使用するタグを作成します。
+のタグ名前空間を使用して、エンゲージメントチュートリアルとイネーブルメントチュートリアルに使用するタグを作成します。 `Tutorial`.
 
 以下を使用： [タグ付けコンソール](../../help/sites-administering/tags.md#tagging-console) 次のタグを作成するには：
 
@@ -94,91 +94,91 @@ AEM Communities では、各環境を次の目的で使用します。
 
 ![chlimage_1-417](assets/chlimage_1-417.png)
 
-次に、以下の操作をおこないます。
+その後、
 
 1. [タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)
 1. [タグを公開](../../help/sites-administering/tags.md#publishing-tags)
 
-AEM Communities 入門チュートリアル用に作成したタグのサンプルパッケージ
+AEM CommunitiesはじめにのTutorials用に作成されたタグのサンプルパッケージ
 
 [ファイルを入手](assets/communities_tutorialtags-10.zip)
 
-## イネーブルメントメンバーおよびグループの作成 {#create-enablement-members-and-groups}
+## イネーブルメントメンバーとグループの作成 {#create-enablement-members-and-groups}
 
 イネーブルメントコミュニティサイトでは、サイト訪問者が [自己登録またはソーシャルログインを使用](sites-console.md#user-management).
 
 代わりに、 [トンネルサービス](#enable-the-tunnel-service) 有効、 [メンバーコンソール](members.md) は、パブリッシュ環境で新しいメンバーを登録するために使用されます。
 
-このチュートリアルでは、パブリッシュ環境で 3 人のメンバーを作成します。2 人のメンバーが学習パスに割り当てられるユーザーグループのメンバーになり、3 人目のメンバーがイネーブルメントリソースの連絡先になります。
+このチュートリアルでは、パブリッシュ環境で 3 つのメンバーを作成します。 2 人のメンバーが学習パスに割り当てられるユーザーグループのメンバーになり、3 人目のメンバーがイネーブルメントリソースの連絡先になります。
 
-さらに、4 人目のメンバーをオーサー環境で作成し、コミュニティ管理者およびコミュニティイネーブルメントマネージャーの役割を割り当てます。
+オーサー環境で 4 人目のユーザーが作成され、Communities Administrator と Community Enablement Manager の役割が割り当てられます。
 
 >[!NOTE]
 >
 >これらのメンバーは、 *イネーブルメントチュートリアル* コミュニティサイト。
 >
->後で作成する場合は、イネーブルメントチュートリアルメンバーグループのメンバーを作成するときに、これらのメンバーをメンバーグループに追加できます。**
+>後で作成した場合は、 *イネーブルメントチュートリアルメンバーグループ* メンバーの作成中に
 >
->または、これらのメンバーを後から[メンバーグループに割り当て](enablement-create-site.md#assignuserstocommunityenablemembersgroup)ます。
+>代わりに、後で、 [メンバーグループに割り当て済み](enablement-create-site.md#assignuserstocommunityenablemembersgroup).
 
-### Riley Taylor - 登録者 {#riley-taylor-enrollee}
+### Riley Taylor — 登録者 {#riley-taylor-enrollee}
 
-Community Ski Class という名前の学習者グループに追加される[メンバーを作成](members.md#create-new-member)します。
+[メンバーを作成](members.md#create-new-member) 学習者のグループ（Community Ski Class グループ）に追加される
 
 * **ID**:ライリー
-* **電子メール**：riley.taylor@mailinator.com
+* **電子メール**:riley.taylor@mailinator.com
 * **パスワード**：password
 * **パスワードを確認**:パスワード
-* **名**：Riley
+* **名**:ライリー
 * **姓**:テイラー
 
-### Sidney Croft - 登録者 {#sidney-croft-enrollee}
+### Sidney Croft — 登録者 {#sidney-croft-enrollee}
 
-「Community Ski Class」グループに追加される [2 人目のメンバーを作成](members.md#create-new-member)します。
+[2 つ目のメンバーを作成](members.md#create-new-member) Community Ski Class グループに追加される
 
 * **ID**:シドニー
-* **電子メール**：sidney.croft@mailinator.com
+* **電子メール**:sidney.croft@mailinator.com
 * **パスワード**：password
 * **パスワードを確認**:パスワード
-* **名**：Sidney
+* **名**:シドニー
 * **姓**:切り抜き
 
-### Quinn Harper - イネーブルメントリソースの連絡先およびモデレーター {#quinn-harper-enablement-resource-contact-and-moderator}
+### Quinn Harper — イネーブルメントリソース連絡先とモデレーター {#quinn-harper-enablement-resource-contact-and-moderator}
 
 [メンバーを作成](members.md#create-new-member) サイトの作成後にコミュニティサイトのメンバーグループに追加されるユーザー。 このメンバーシップにより、メンバーをイネーブルメントとして割り当てることができます [リソース連絡先](resources.md#settings) サイトのイネーブルメントリソースが作成されたとき。
 
 * **ID**:クイン
-* **電子メール**：quinn.harper@mailinator.com
+* **電子メール**:quinn.harper@mailinator.com
 * **パスワード**：password
 * **パスワードを確認**:パスワード
-* **名**：Quinn
+* **名**:クイン
 * **姓**:ハーパー
 
-### ユーザーグループを追加 - Community Ski Class {#add-a-user-group-community-ski-class}
+### ユーザーグループの追加 — Community Ski Class {#add-a-user-group-community-ski-class}
 
-Community Ski Class という名前の[新しいグループを追加](members.md#create-new-group)します。
+[新しいグループを追加](members.md#create-new-group) Community Ski Class という名前を付けました。
 
 * **ID**:community-ski-class
-* **名前**：Community Ski Class
+* **名前**:コミュニティスキークラス
 * **説明**:イネーブルメントリソースを割り当てるためのサンプルグループ
 * **メンバーをグループに追加** &#39;追加&#39;:
 
-   * riley
-   * sidney
+   * ライリー
+   * シドニー
 
 * 選択 **[!UICONTROL 保存]**
 
-### Community Ski Class のプロパティ {#community-ski-class-properties}
+### コミュニティ Ski クラスのプロパティ {#community-ski-class-properties}
 
 ![chlimage_1-418](assets/chlimage_1-418.png)
 
 >[!NOTE]
 >
->コミュニティサイトの作成中に、既存のメンバーおよびグループをコミュニティサイトのメンバーグループに追加できます。
+>コミュニティサイトの作成中に、既存のメンバーとグループをコミュニティサイトのメンバーグループに追加できます。
 
 ## コミュニティ管理者の役割 {#community-administrator-role}
 
-コミュニティ管理者グループのメンバーは、コミュニティサイトの作成、サイトの管理、メンバーの管理（コミュニティの利用を禁止可能）およびコンテンツのモデレートを実行できます。
+コミュニティ管理者グループのメンバーは、コミュニティサイトの作成、サイトの管理、メンバーの管理（コミュニティからのメンバーの禁止が可能）、コンテンツのモデレートをおこなうことができます。
 
 ### ユーザーを作成 {#create-user}
 
@@ -198,20 +198,20 @@ Community Ski Class という名前の[新しいグループを追加](members.m
 * 内 `Create New User` ダイアログ入力
 
    * **ID&amp;ast;**:シリウス
-   * **電子メールアドレス**：sirius.nilson@mailinator.com
+   * **電子メールアドレス**:sirius.nilson@mailinator.com
    * **パスワード (&amp;A);**:パスワード
    * **パスワードの確認 (&amp;A);**:パスワード
-   * **名**：Sirius
+   * **名**:シリウス
    * **姓 (&amp;A);**:ニルソン
 
-### コミュニティ管理者グループに対する Sirius の割り当て {#assign-sirius-to-community-administrators-group}
+### コミュニティ管理者グループに Sirius を割り当て {#assign-sirius-to-community-administrators-group}
 
 下にスクロールして `Add User to Groups`:
 
 * 「C」と入力して検索
 
-   *  `Community Administrators`
-   *  `Community Enablement Managers`
+   * 選択 `Community Administrators`
+   * 選択 `Community Enablement Managers`
 
 * 選択 **[!UICONTROL 保存]**
 

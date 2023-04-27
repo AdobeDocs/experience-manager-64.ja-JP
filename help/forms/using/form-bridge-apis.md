@@ -1,7 +1,7 @@
 ---
 title: HTML5 フォームの Form Bridge API
 seo-title: Form Bridge APIs for HTML5 forms
-description: 外部アプリケーションは FormBridge API を使用して XFA Mobile Form に接続します。API は親ウィンドウで FormBridgeInitialized イベントを送出します。
+description: 外部アプリケーションは、FormBridge API を使用して XFA Mobile Form に接続します。 API は親ウィンドウで FormBridgeInitialized イベントを発行します。
 seo-description: External applications use the FormBridge API to connect to the XFA Mobile Form. The API dispatches a FormBridgeInitialized event on the parent window.
 uuid: 0db22649-522b-4857-9ffd-826c52381d15
 content-type: reference
@@ -12,7 +12,7 @@ exl-id: ad669f3b-2bda-4c41-8032-cf25a192ce12
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '939'
-ht-degree: 95%
+ht-degree: 84%
 
 ---
 
@@ -43,7 +43,7 @@ window.addEventListener("FormBridgeInitialized",
 
 **getBridgeVersion()**
 
-スクリプティングライブラリのバージョン番号を返す
+スクリプトライブラリのバージョン番号を返します
 
 * **入力**：なし
 * **出力**：スクリプティングライブラリのバージョン番号
@@ -63,8 +63,8 @@ window.addEventListener("FormBridgeInitialized",
    * **handler**：Form Bridge が接続された後に実行する関数
    * **context**:*handler *関数のコンテキスト (this) が設定されるオブジェクト。
 
-* **出力**：なし
-* **エラー**：なし
+* **出力**:なし
+* **エラー**:なし
 
 **getDataXML(options)**： 現在のフォームデータを XML 形式で返す
 
@@ -73,15 +73,15 @@ window.addEventListener("FormBridgeInitialized",
    * **options：**&#x200B;次のプロパティが含まれている JavaScript オブジェクト。
 
       * **error**：エラーハンドラー関数
-      * **success**：サクセスハンドラー関数. この関数には *data* プロパティに XML が含まれているオブジェクトが渡されます。
-      * **context**：*success*&#x200B;関数のコンテキスト（this）の設定対象オブジェクト
+      * **success**：サクセスハンドラー関数。この関数には、 *データ* プロパティ。
+      * **context**:のコンテキスト (this) の対象となるオブジェクト *成功* 関数が設定されている
       * **validationChecker**：サーバーから受信した検証エラーを確認するために呼び出す関数検証関数にはエラー文字列の配列が渡されます。
       * **formState**：XML のデータを返す必要がある XFA フォームの JSON 状態指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**registerConfig(configName, config)**： ユーザー / ポータル固有の設定を FormBridge に登録します。 これらの設定はデフォルト設定をオーバーライドします。サポートされている設定は config セクションで指定されています。
+**registerConfig(configName, config)**： ユーザー / ポータル固有の設定を FormBridge に登録します。 これらの設定は、デフォルトの設定よりも優先されます。 サポートされる設定は、config セクションで指定します。
 
 * **必要情報:**
 
@@ -148,8 +148,8 @@ window.addEventListener("FormBridgeInitialized",
 **hideSubmitButtons()**：フォーム内のすべての送信ボタンを非表示にします
 
 * **入力**：なし
-* **出力**：なし
-* **エラー**：フォーム状態が初期化されていない場合、例外をスローする
+* **出力**:なし
+* **エラー**:フォームの状態が初期化されていない場合に例外をスローする
 
 **getFormState()**：フォームステートを表す JSON を返します
 
@@ -158,7 +158,7 @@ window.addEventListener("FormBridgeInitialized",
 
 * **エラー**：なし
 
-**restoreFormState(options)**：options オブジェクトに提供された JSON ステートからフォームステートを復元します。状態が適用され、操作の完了後にサクセスまたはエラーハンドラーが呼び出されます。
+**restoreFormState(options)**：options オブジェクトに提供された JSON ステートからフォームステートを復元します。状態が適用され、操作の完了後に成功またはエラーハンドラーが呼び出されます
 
 * **必要情報:**
 

@@ -1,7 +1,7 @@
 ---
 title: Dynamic Media のセットアップ
 seo-title: Setting Up Dynamic Media
-description: Dynamic Media をセットアップするには、Dynamic Media を設定して、画像やビューアのプリセットを管理する必要があります
+description: Dynamic Media を設定するには、Dynamic Media を設定し、画像とビューアプリセットを管理する必要があります
 seo-description: To set up dynamic media, you need to configure dynamic media and manage image and viewer presets
 uuid: bcd1f9ab-4201-4222-9e4a-ba82b3c7cd6c
 contentOwner: Rick Brough
@@ -13,27 +13,27 @@ role: Admin,User,Developer
 source-git-commit: 5d96c09ef764b02e08dcdf480da1ee18f4d9a30c
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 71%
+ht-degree: 46%
 
 ---
 
 # Dynamic Media のセットアップ {#setting-up-dynamic-media}
 
-[Dynamic Media ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)では、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信し、アセットを管理できます。これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のマスターアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
+[Dynamic Media ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)では、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信し、アセットを管理できます。これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Mediaでは、一連のマスターアセットを使用して、グローバルで拡張性に優れ、パフォーマンスが最適化されたネットワークを通じて、リッチコンテンツの複数のバリエーションをリアルタイムで生成し、配信します。
 
 >[!NOTE]
 >
->このドキュメントは、AEM に直接統合された Dynamic Media の機能について説明します。AEMに統合されたDynamic Media Classicを使用している場合は、 [Dynamic Media Classic統合ドキュメント](/help/sites-administering/scene7.md).
+>このドキュメントでは、AEMに直接統合されるDynamic Mediaの機能について説明します。 AEMに統合されたDynamic Media Classicを使用している場合は、 [Dynamic Media Classic統合ドキュメント](/help/sites-administering/scene7.md).
 >
 >詳しくは、 [二重使用シナリオ](/help/sites-administering/scene7.md#dual-use-scenario) Dynamic Media Classicと統合されたAEMをDynamic Mediaと共に使用したい場合に役立ちます。
 
-Dynamic Media の管理者には、次のトピックが参考になります。
+Dynamic Media の管理者は、次のトピックを参照してください。
 
 * [Dynamic Media-Scene7モードの設定](config-dms7.md)  — 新規のDynamic Mediaユーザーの場合は、この設定を使用します。
 * [Dynamic Media — ハイブリッドモードの設定](config-dynamic.md)  — 既存のDynamic Mediaのお客様がAEMをアップグレードする場合は、この設定を使用します。
 * [画像プリセットの管理](managing-image-presets.md)
 * [ビューアプリセットの管理](managing-viewer-presets.md)
-* [Dynamic Media のトラブルシューティング - Scene7モード](troubleshoot-dms7.md)
+* [Dynamic Media のトラブルシューティング - Scene7 モード](troubleshoot-dms7.md)
 
 次のトピックも参照してください。
 

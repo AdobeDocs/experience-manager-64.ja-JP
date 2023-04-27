@@ -1,7 +1,7 @@
 ---
 title: コミュニティの通知
 seo-title: Communities Notifications
-description: AEM Communities には、サインインしているコミュニティメンバーにとって興味深いイベントを表示する通知が用意されています
+description: AEM Communitiesには、サインインしたコミュニティメンバーに関心のあるイベントを表示する通知が用意されています
 seo-description: AEM Communities has notifications that display events of interest to the signed-in community member
 uuid: d6ef12f1-7367-49a5-b891-56800a38b2ab
 contentOwner: Janice Kendall
@@ -14,7 +14,7 @@ exl-id: f6c6619e-b386-4d34-9d17-654d7c97aedd
 source-git-commit: 3c050c33a384d586d74bd641f7622989dc1d6b22
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 47%
+ht-degree: 3%
 
 ---
 
@@ -22,15 +22,15 @@ ht-degree: 47%
 
 ## 概要 {#overview}
 
-AEM Communities には、サインインしているコミュニティメンバーにとって興味深いイベントを表示する通知セクションが用意されています。
+AEM Communitiesには、サインインしているコミュニティメンバーに関心のあるイベントを表示する通知セクションが用意されています。
 
-通知は[アクティビティ](essentials-activities.md)や[購読](subscriptions.md)と同様に、以下に基づいて生成されます。
+通知は、 [アクティビティ](essentials-activities.md) および [購読](subscriptions.md) 結果として
 
 * コンテンツを投稿するメンバー
 * 別のメンバーに従うことを選択したメンバー
 * 特定のトピック、記事、およびコンテンツの他のスレッドに従うことを選択したメンバー
 
-通知は以下の点でアクティビティや購読と異なります。
+通知とアクティビティおよびサブスクリプションの違いは、
 
 * 通知セクションへのリンクは、コミュニティサイトのヘッダーに常に存在します
    * アクティビティには [アクティビティストリーム機能](functions.md#activity-stream-function) コミュニティサイトの構造に含まれる
@@ -39,38 +39,38 @@ AEM Communities には、サインインしているコミュニティメンバ�
    * アクティビティは Web でのみ使用できます
    * 購読は E メールでのみ利用できます
 
-Communities [FP1](deploy-communities.md#latestfeaturepack) 以降、使用可能な通知チャネルは以下のとおりです。
+コミュニティの時点 [FP1](deploy-communities.md#latestfeaturepack)を使用する場合、使用可能な通知チャネルは次のとおりです。
 
 * Web チャネル ( `Notifications` リンク
 * E メールチャネル（E メールが正しく設定されている場合に使用可能）
 
-今後のチャネルとしてモバイルおよびデスクトップがあります。
+将来のチャネルはモバイルとデスクトップです。
 
 ### 要件 {#requirements}
 
-**電子メールの設定**
+**電子メールを設定**
 
 通知の電子メールチャネルを機能させるには、電子メールを設定する必要があります。
 
-電子メールを設定する手順については、[電子メールの設定](analytics.md)を参照してください。
+電子メールの設定手順については、 [電子メールの設定](analytics.md).
 
-**フォローの有効化**
+**フォローを有効にする**
 
-フォローを有効にするようにコンポーネントを設定する必要があります。次の機能を使用できます。 [ブログ](blog-feature.md), [フォーラム](forum.md), [Q&amp;A](working-with-qna.md), [カレンダー](calendar.md), [filelibrary](file-library.md)、および [コメント](comments.md).
+以下を有効にするには、コンポーネントを設定する必要があります。 次の機能を使用できます。 [ブログ](blog-feature.md), [フォーラム](forum.md), [Q&amp;A](working-with-qna.md), [カレンダー](calendar.md), [filelibrary](file-library.md)、および [コメント](comments.md).
 
-以下の点に注意してください。
+注意：
 
 * コミュニティ内で使用されるコンポーネント [サイトテンプレート](sites.md) および [グループテンプレート](tools-groups.md) は、既に次を許可するように設定されている可能性があります
 
 * メンバープロファイルは、他のメンバーがフォローできるように既に設定されています
 
-## フォローによる通知 {#notifications-from-following}
+## フォローからの通知 {#notifications-from-following}
 
 ![chlimage_1-254](assets/chlimage_1-254.png)
 
-「**フォロー**」ボタンを使用すると、エントリをアクティビティや購読、通知としてフォローできます。毎回 **フォロー** ボタンが選択されている場合、選択のオン/オフを切り替えることができます。 この `Email Subscriptions` 選択が存在するのは、設定時のみです。
+この **フォロー** ボタンを使用すると、エントリをアクティビティ、購読、通知としてフォローできます。 毎回 **フォロー** ボタンが選択されている場合、選択のオン/オフを切り替えることができます。 この `Email Subscriptions` 選択が存在するのは、設定時のみです。
 
-フォロー方法が選択されると、ボタンのテキストが「**フォロー中**」に変わります。 便宜上、 `Unfollow All` をクリックして、すべてのメソッドをオフにします。
+次のいずれかの方法を選択した場合、ボタンのテキストは **フォロー中**. 便宜上、 `Unfollow All` をクリックして、すべてのメソッドをオフにします。
 
 この **フォロー** ボタンが表示されます
 
@@ -82,19 +82,19 @@ Communities [FP1](deploy-communities.md#latestfeaturepack) 以降、使用可能
 
 ## 通知設定の管理 {#managing-notification-settings}
 
-通知ページから通知設定リンクを選択すると、各メンバーは通知の受信方法を管理することができます。
+「通知」ページから「通知設定」リンクを選択すると、各メンバーは通知の受信方法を管理できます。
 
-Web チャネルは常に有効になっています。
+Web チャネルは常に有効です。
 
 ![chlimage_1-255](assets/chlimage_1-255.png)
 
-電子メールチャネルでは、Web チャネルの場合と同様の設定が用意されていますが、別途適切な[電子メールの設定](email.md)が必要です。
+適切な [電子メールの設定](email.md)では、Web チャネルの場合と同じ設定を提供します。
 
-電子メールチャネルは、デフォルトでオフになっています。
+E メールチャネルは、デフォルトではオフになっています。
 
 ![chlimage_1-256](assets/chlimage_1-256.png)
 
-これはメンバーがオンにすることもできますが、それでも電子メールの設定によって決まります。
+メンバーがオンにしても、設定中の電子メールに依存します。
 
 ![chlimage_1-257](assets/chlimage_1-257.png)
 
@@ -110,6 +110,6 @@ A [ウィザードが作成したコミュニティサイト](sites-console.md) 
 
 ### メール通知 {#email-notifications}
 
-電子メールチャネルを有効にすると、メンバーは、Web 上のコンテンツへのリンクが記載されている電子メールを受信します。
+E メールチャネルが有効になると、メンバーは Web 上のコンテンツへのリンクを含む E メールを受け取ります。
 
 ![chlimage_1-259](assets/chlimage_1-259.png)

@@ -8,7 +8,7 @@ exl-id: 0d817cfa-ae06-442a-ad89-5fe619bb2eff
 source-git-commit: 8948bca63f1f5ec9d94ede2fb845ed01b4e23333
 workflow-type: tm+mt
 source-wordcount: '216'
-ht-degree: 69%
+ht-degree: 77%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 69%
 
 Adobe Experience Manager Assets を設定して、ユーザーがアップロードできるアセット（ファイル）のタイプを制限できます。 この機能により、望ましくない形式のアセットや悪意のあるファイルがユーザーによってアップロードされないようにすることができます。`Day CQ DAM Asset Upload Restriction` サービスを使用すると、ユーザーがアップロードできるファイルの種類を制御できます。デフォルトでは、 [!DNL Experience Manager] Assets を使用すると、すべての MIME タイプのアセットをアップロードできます。 ただし、アップロードを特定の MIME タイプのファイルのみに制限するようにサービスを設定できます。
 
-1. Configuration Manager Web コンソールを開くには、 `https://[AEM_server]:[port]/system/console/configMgr`.
+1. Configuration Manager web コンソールを開くには、 `https://[AEM_server]:[port]/system/console/configMgr` にアクセスしてください。
 1. **[!UICONTROL Day CQ DAM Asset Upload Restriction]** サービスを編集モードで開きます。デフォルトでは、「**Allow all MIME**」オプションがオンになっており、すべての MIME タイプのファイルのアップロードが許可されます。
 
    ![chlimage_1-378](assets/chlimage_1-378.png)

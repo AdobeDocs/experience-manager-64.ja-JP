@@ -1,7 +1,7 @@
 ---
-title: 非インタラクティブPDFドキュメントのアセンブリ
+title: 非インタラクティブ PDF ドキュメントの作成
 seo-title: Assembling Non-Interactive PDF Documents
-description: Java API および Web サービス API を使用して非インタラクティブPDFドキュメントを組み立てるには、非インタラクティブPDFフォームを入力として使用します。
+description: Java API および web サービス API を使用して非インタラクティブ PDF ドキュメントを作成するには、非インタラクティブ PDF フォームを入力として使用します。
 seo-description: Use a non-interactive PDF form as input to assemble a non-interactive PDF document using the Java API and Web Service API.
 uuid: 0c7adeb4-9a3a-4ec5-ba33-c3642928d4ea
 contentOwner: admin
@@ -15,13 +15,13 @@ exl-id: d4e40d68-781d-4fc8-8557-bf36462ca1d9
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '1775'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# 非インタラクティブPDFドキュメントのアセンブリ {#assembling-non-interactive-pdf-documents}
+# 非インタラクティブ PDF ドキュメントの作成 {#assembling-non-interactive-pdf-documents}
 
-非インタラクティブPDFドキュメントは、インタラクティブPDFフォームを入力として使用する際にアセンブリできます。 つまり、ユーザーがフィールドにデータを入力する際に使用できるフォームがあるとします。 そのフォームを Assembler サービスに渡すと、Assembler サービスがPDFドキュメントを返すので、ユーザーはフィールドにデータを入力できません。 このドキュメントは非インタラクティブPDFフォームです。 例えば、次の図に、インタラクティブなフォームを表す住宅ローン申し込みを示します。
+非インタラクティブ PDF ドキュメントは、インタラクティブ PDF フォームを入力として使用することで作成できます。つまり、ユーザーがフィールドにデータを入力できるフォームがあるとします。そのフォームを Assembler サービスに渡すと、ユーザーがフィールドにデータを入力できない PDF ドキュメントを Assembler サービスから受け取ることができます。このドキュメントが非インタラクティブ PDF フォームです。例えば、インタラクティブなフォームである住宅ローン申し込みフォームを次の図に示します。
 
 この説明では、次の DDX ドキュメントが使用されていると仮定します。
 
@@ -35,51 +35,51 @@ ht-degree: 2%
  </DDX>
 ```
 
-この DDX ドキュメント内では、 source 属性に値が割り当てられています `inDoc`. 1 つの入力PDFドキュメントのみが Assembler サービスに渡され、1 つのPDFドキュメントが返された場合、 `invokeOneDocument` 操作、値の割り当て `inDoc` をPDFソース属性に追加します。 を呼び出すとき `invokeOneDocument` 操作 `inDoc` 値は、DDX ドキュメントで指定する必要がある事前定義済みのキーです。
+この DDX ドキュメント内では、source 属性に値 `inDoc` が割り当てられていることに着目してください。Assembler サービスに渡す入力 PDF ドキュメントが 1 つのみで、返されるのも 1 つの PDF ドキュメントであり、`invokeOneDocument` 操作を呼び出す場合は、値 `inDoc` を PDF の source 属性に割り当てます。`invokeOneDocument` 操作を呼び出す際は、`inDoc` 値が、DDX ドキュメントに指定する必要がある事前定義済みキーです。
 
-これに対し、2 つ以上の入力PDFドキュメントを Assembler サービスに渡す場合は、 `invokeDDX` 操作。 この場合、 `source` 属性。
+これに対し、2 つ以上の入力 PDF ドキュメントを Assembler サービスに渡す場合は、`invokeDDX` 操作を呼び出すことができます。この場合は、入力 PDF ドキュメントのファイル名を `source` 属性に割り当てます。
 
-この DDX ドキュメントには、 `NoXFA` 要素：非インタラクティブなインタラクティブなドキュメントを返すよう Assembler サービスにPDFします。
+この DDX ドキュメントには `NoXFA` 要素が含まれており、この要素は Assembler サービスに非インタラクティブ PDF ドキュメントを返すよう指示します。
 
-Assembler サービスは、入力PDFドキュメントがAcrobatフォームまたは静的 XFA フォームに基づいている場合、AEM formsPDFに Output サービスを含めずに、非インタラクティブインストールドキュメントをアセンブリできます。 ただし、入力PDFドキュメントが動的な XFA フォームの場合、Output サービスはAEM forms インストール環境の一部である必要があります。 動的 XFA フォームのアセンブリ時にAEM forms インストールの一部として Output サービスを実行しない場合は、例外が発生します。 詳しくは、 [ドキュメント出力ストリームの作成](/help/forms/developing/creating-document-output-streams.md).
-
->[!NOTE]
->
->この節を読む前に、Assembler サービスを使用したPDFドキュメントの組み立てに関する知識を身に付けておくことをお勧めします。 このセクションでは、入力ドキュメントを含むコレクションオブジェクトの作成や、返されたコレクションオブジェクトから結果を抽出する方法の学習など、概念については説明しません。 ( [プログラムによるPDF文書の作成](/help/forms/developing/programmatically-assembling-pdf-documents.md).)
+Assembler サービスは、入力 PDF ドキュメントが Acrobat フォームまたは静的 XFA フォームに基づいていれば、Output サービスが AEM Forms インストール環境に含まれていなくても、非インタラクティブ PDF ドキュメントを作成することができます。ただし、入力 PDF ドキュメントが動的 XFA フォームの場合は、Output サービスが AEM Forms インストール環境に含まれている必要があります。動的 XFA フォームの作成時に Output サービスが AEM Forms インストール環境に含まれていない場合は、例外がスローされます。詳しくは、[ドキュメント Output ストリームの作成](/help/forms/developing/creating-document-output-streams.md)を参照してください。
 
 >[!NOTE]
 >
->Assembler サービスについて詳しくは、 [AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63).
+>このセクションを読む前に、Assembler サービスを使用した PDF ドキュメントのアセンブリに関する知識を身に付けておくことをお勧めします。このセクションでは、入力ドキュメントを含むコレクションオブジェクトの作成や、返されたコレクションオブジェクトから結果を抽出する方法の学習など、概念については説明しません（[プログラムによる PDF ドキュメントの作成](/help/forms/developing/programmatically-assembling-pdf-documents.md)を参照）。
 
 >[!NOTE]
 >
->DDX ドキュメントについて詳しくは、 [Assembler サービスと DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63).
+>Assembler サービスについて詳しくは、[AEM Formsサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+
+>[!NOTE]
+>
+>DDX ドキュメントについて詳しくは、[Assembler サービスと DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63)を参照してください。
 
 ## 手順の概要 {#summary-of-steps}
 
-非インタラクティブPDF・ドキュメントをアセンブリするには、次のタスクを実行します。
+非インタラクティブ PDF ドキュメントを作成するには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
-1. Assembler クライアントをPDFします。
+1. PDF Assembler クライアントを作成します。
 1. 既存の DDX ドキュメントを参照します。
-1. インタラクティブPDFドキュメントを参照します。
+1. インタラクティブ PDF ドキュメントを参照します。
 1. 実行時オプションを設定します。
-1. PDF文書を組み立てる。
-1. 非インタラクティブPDFドキュメントを保存します。
+1. PDF ドキュメントをアセンブリします。
+1. 非インタラクティブ PDF ドキュメントを保存します。
 
-**プロジェクトファイルを含める**
+**プロジェクトファイルのインクルード**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(AEM Formsを JBoss にデプロイする場合に必要 )
-* jbossall-client.jar(AEM Formsが JBoss にデプロイされている場合に必要 )
+* adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
+* jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Formsが JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Formsがデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
+AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。
 
 **Assembler クライアントの作成**
 
@@ -87,142 +87,142 @@ Assembler 操作をプログラムで実行する前に、Assembler サービス
 
 **既存の DDX ドキュメントの参照**
 
-DDX ドキュメントを参照して、アセンブリドキュメントをPDFする必要があります。 この DDX ドキュメントには `NoXFA` 要素：非インタラクティブなインタラクティブなドキュメントを返すよう Assembler サービスにPDFします。
+DDX ドキュメントを参照して、PDF ドキュメントをアセンブリする必要があります。この DDX ドキュメントには `NoXFA` 要素が含まれている必要があり、この要素は Assembler サービスに非インタラクティブ PDF ドキュメントを返すよう指示します。
 
-**インタラクティブPDFドキュメントの参照**
+**インタラクティブ PDF ドキュメントの参照**
 
-インタラクティブPDFドキュメントを参照して Assembler サービスに渡し、非インタラクティブPDFドキュメントに戻す必要があります。
+非インタラクティブ PDF ドキュメントを取得するには、インタラクティブ PDF ドキュメントを参照して Assembler サービスに渡す必要があります。
 
-**実行時オプションを設定**
+**実行時オプションの設定**
 
-ジョブの実行中に Assembler サービスの動作を制御する実行時オプションを設定できます。 例えば、エラーが発生した場合にジョブの処理を続行するよう Assembler サービスに指示するオプションを設定できます。
+ジョブを実行する際の Assembler サービスの動作を制御する実行時オプションを設定できます。例えば、エラーが発生した場合にジョブの処理を続行するよう Assembler サービスに指示するオプションを設定できます。
 
-**アセンブリPDF**
+**PDF ドキュメントの作成**
 
-Assembler サービスクライアントを作成し、DDX ドキュメントを参照し、インタラクティブPDFドキュメントを参照し、実行時オプションを設定したら、 `invokeOneDocument` 操作。 Assembler サービスに渡される入力PDFドキュメントは 1 つだけで、1 つのドキュメントが返されるので、 `invokeOneDocument` 対して `invokeDDX` 操作。
+Assembler サービスクライアントの作成、DDX ドキュメントの参照、インタラクティブ PDF ドキュメントの参照および実行時オプションの設定が完了したら、`invokeOneDocument` 操作を呼び出すことができます。Assembler サービスに渡す入力 PDF ドキュメントは 1 つだけで、返されるドキュメントも 1 つなので、`invokeDDX` 操作ではなく `invokeOneDocument` 操作を使用できます。
 
-**非インタラクティブPDFドキュメントを保存**
+**非インタラクティブ PDF ドキュメントの保存**
 
-Assembler サービスに 1 つのPDFドキュメントのみが渡された場合、Assembler サービスはコレクションオブジェクトではなく 1 つのドキュメントを返します。 つまり、 `invokeOneDocument` を指定すると、1 つのドキュメントが返されます。 この節で参照される DDX ドキュメントには、非インタラクティブPDFドキュメントを作成する手順が含まれているので、Assembler サービスは、PDFファイルとして保存できる非インタラクティブPDFドキュメントを返します。
+Assembler サービスに渡す PDF ドキュメントが 1 つのみであれば、コレクションオブジェクトではなく 1 つのドキュメントが Assembler サービスから返されます。つまり、`invokeOneDocument` 操作を呼び出すと、1 つのドキュメントが返されます。このセクションで参照している DDX ドキュメントには、非インタラクティブ PDF ドキュメントを作成する指示が含まれているので、Assembler サービスは、PDF ファイルとして保存できる非インタラクティブ PDF ドキュメントを返します。
 
 **関連トピック**
 
-[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[プログラムによるPDF文書の作成](/help/forms/developing/programmatically-assembling-pdf-documents.md)
+[PDF ドキュメントをプログラムで組み立てる](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
-## Java API を使用した非インタラクティブPDFドキュメントのアセンブリ {#assemble-a-non-interactive-pdf-document-using-the-java-api}
+## Java API を使用した非インタラクティブ PDF ドキュメントの作成 {#assemble-a-non-interactive-pdf-document-using-the-java-api}
 
-Assembler Service API(Java) を使用して、非インタラクティブPDFドキュメントをアセンブリします。
+Assembler サービス API（Java）を使用して、非インタラクティブ PDF ドキュメントを作成します。
 
 1. プロジェクトファイルを含めます。
 
-   Java プロジェクトのクラスパスに、adobe-assembler-client.jar などのクライアント JAR ファイルを含めます。
+   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
 1. Assembler クライアントを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * の作成 `AssemblerServiceClient` オブジェクトのコンストラクタを使用し、 `ServiceClientFactory` オブジェクト。
+   * コンストラクターを使用して `ServiceClientFactory` オブジェクトを渡すことにより、`AssemblerServiceClient` オブジェクトを作成します。
 
 1. 既存の DDX ドキュメントを参照します。
 
-   * の作成 `java.io.FileInputStream` コンストラクターを使用して DDX ファイルの場所を指定する string 値を渡すことによって DDX ドキュメントを表すオブジェクト。
+   * コンストラクタを使用し、DDX ファイルの場所を指定する文字列値を渡すことによって、その DDX ドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
-1. インタラクティブPDFドキュメントを参照します。
+1. インタラクティブ PDF ドキュメントを参照します。
 
-   * の作成 `java.io.FileInputStream` オブジェクトのコンストラクタを使用し、インタラクティブPDFドキュメントの場所を渡す。
-   * の作成 `com.adobe.idp.Document` オブジェクトを選択し、 `java.io.FileInputStream` オブジェクトドキュメントを含むPDF。 この `com.adobe.idp.Document` オブジェクトが `invokeOneDocument` メソッド。
+   * コンストラクターを使用し、インタラクティブ PDF ドキュメントの場所を渡すことにより、`java.io.FileInputStream` オブジェクトを作成します。
+   * `com.adobe.idp.Document` オブジェクトを作成し、PDF ドキュメントを含んだ `java.io.FileInputStream` オブジェクトを渡します。この `com.adobe.idp.Document` オブジェクトが `invokeOneDocument` メソッドに渡されます。
 
 1. 実行時オプションを設定します。
 
-   * の作成 `AssemblerOptionSpec` コンストラクタを使用して実行時オプションを格納するオブジェクト。
-   * に属するメソッドを呼び出して、ビジネス要件を満たすように実行時オプションを設定する `AssemblerOptionSpec` オブジェクト。 例えば、エラーが発生したときにジョブの処理を続行するように Assembler サービスに指示するには、 `AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドとパス `false`.
+   * コンストラクタを使用して、実行時オプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
+   * `AssemblerOptionSpec` オブジェクトに属するメソッドを呼び出して、ビジネス要件を満たすよう実行時オプションを設定します。例えば、エラーが発生してもジョブの処理を続行するよう Assembler サービスに指示するには、`AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドを呼び出して `false` を渡します。
 
-1. PDF文書を組み立てる。
+1. PDF ドキュメントをアセンブリします。
 
-   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeOneDocument` メソッドを使用して、次の値を渡します。
+   `AssemblerServiceClient` オブジェクトの `invokeOneDocument` メソッドを呼び出して、次の値を渡します。
 
-   * A `com.adobe.idp.Document` DDX ドキュメントを表すオブジェクト。 この DDX ドキュメントに値が含まれていることを確認してください `inDoc` (PDFソース要素用 )
-   * A `com.adobe.idp.Document` インタラクティブPDFドキュメントを格納するオブジェクト。
-   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` デフォルトのフォントやジョブログレベルを含む、実行時のオプションを指定するオブジェクト。
+   * DDX ドキュメントを表す `com.adobe.idp.Document` オブジェクト。この DDX ドキュメントに PDF ソース要素の値 `inDoc` が含まれていることを確認してください。
+   * インタラクティブ PDF ドキュメントを格納する `com.adobe.idp.Document` オブジェクト。
+   * デフォルトのフォントやジョブログレベルを含む、実行時のオプションを指定する `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` オブジェクト。
 
-   この `invokeOneDocument` メソッドは、 `com.adobe.idp.Document` 非インタラクティブPDFドキュメントを含むオブジェクト。
+   `invokeOneDocument` メソッドは、非インタラクティブ PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクトを返します。
 
-1. 非インタラクティブPDFドキュメントを保存します。
+1. 非インタラクティブ PDF ドキュメントを保存します。
 
-   * の作成 `java.io.File` オブジェクトにマッピングされ、ファイル名の拡張子が.pdf であることを確認します。
-   * を呼び出す `Document` オブジェクトの `copyToFile` メソッドを使用して、 `Document` オブジェクトをファイルに追加します。 必ず `Document` オブジェクト `invokeOneDocument` メソッドが返されました。
+   * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
+   * `Document` オブジェクトの `copyToFile` メソッドを呼び出して、`Document` オブジェクトのコンテンツをファイルにコピーします。`invokeOneDocument` メソッドが返した `Document` オブジェクトを使用していることを確認してください。
 
-* 「クイックスタート（SOAP モード）:Java API を使用した非インタラクティブPDFドキュメントのアセンブリ»
+* 「クイックスタート（SOAP モード）：Java API を使用した非インタラクティブ PDF ドキュメントのアセンブリ」
 
-## Web サービス API を使用した非インタラクティブPDFドキュメントのアセンブリ {#assemble-a-non-interactive-pdf-document-using-the-web-service-api}
+## Web サービス API を使用した非インタラクティブ PDF ドキュメントのアセンブリ {#assemble-a-non-interactive-pdf-document-using-the-web-service-api}
 
-Assembler Service API（Web サービス）を使用して、非インタラクティブPDFドキュメントをアセンブリします。
+Assembler Service API（web サービス）を使用して、非インタラクティブ PDF ドキュメントをアセンブリします。
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用するMicrosoft .NET プロジェクトを作成します。 次の WSDL 定義を使用していることを確認します。 `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
-   >置換 `localhost` を、AEM Formsをホストするサーバーの IP アドレスに設定します。
+   >`localhost` を、AEM Forms をホストするサーバーの IP アドレスに置換します。
 
 1. Assembler クライアントを作成します。
 
-   * の作成 `AssemblerServiceClient` オブジェクトのデフォルトのコンストラクタを使用します。
-   * の作成 `AssemblerServiceClient.Endpoint.Address` オブジェクトを `System.ServiceModel.EndpointAddress` コンストラクタ。 WSDL をAEM Formsサービスに渡す文字列値 ( 例： `http://localhost:8080/soap/services/AssemblerService?blob=mtom`) をクリックします。 を使用する必要はありません。 `lc_version` 属性。 この属性は、サービス参照を作成する際に使用されます。
-   * の作成 `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、 `AssemblerServiceClient.Endpoint.Binding` フィールドに入力します。 戻り値を `BasicHttpBinding` にキャストします。
-   * を `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` ～に向かって `WSMessageEncoding.Mtom`. この値は、MTOM が確実に使用されるようにします。
-   * 次のタスクを実行して、基本的な HTTP 認証を有効にします。
+   * デフォルトのコンストラクターを使用して `AssemblerServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`AssemblerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `AssemblerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * フィールドにAEM forms ユーザー名を割り当てます。 `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
-      * 対応するパスワード値をフィールドに割り当てます。 `AssemblerServiceClient.ClientCredentials.UserName.Password`.
-      * 定数値を割り当て `HttpClientCredentialType.Basic` フィールドに `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
-      * 定数値を割り当て `BasicHttpSecurityMode.TransportCredentialOnly` フィールドに `BasicHttpBindingSecurity.Security.Mode`.
+      * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 既存の DDX ドキュメントを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、DDX ドキュメントを保存するために使用されます。
-   * の作成 `System.IO.FileStream` オブジェクトを作成するには、コンストラクターを呼び出し、DDX ドキュメントのファイルの場所とファイルを開くモードを表す string 値を渡します。
-   * コンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクト。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取るバイト配列、開始位置、ストリーム長を渡します。
-   * 次の項目に `BLOB` オブジェクトを割り当てる `MTOM` フィールドにバイト配列の内容を入力します。
+   * コンストラクターを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、DDX ドキュメントの保存に使用されます。
+   * `System.IO.FileStream` オブジェクトを作成するには、そのコンストラクターを呼び出し、DDX ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   * `MTOM` フィールドにバイト配列のコンテンツを割り当てて、`BLOB`オ ブジェクトを入力します。
 
-1. インタラクティブPDFドキュメントを参照します。
+1. インタラクティブ PDF ドキュメントを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、入力PDF・ドキュメントを格納するために使用します。 この `BLOB` オブジェクトが `invokeOneDocument` を引数として。
-   * の作成 `System.IO.FileStream` オブジェクトを指定します。
-   * コンテンツを格納するバイト配列を作成します。 `System.IO.FileStream` オブジェクト。 バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティ。
-   * を呼び出して、バイト配列にストリームデータを入力します。 `System.IO.FileStream` オブジェクトの `Read` メソッド。 読み取るバイト配列、開始位置、ストリーム長を渡します。
-   * 次の項目に `BLOB` オブジェクトを割り当てる `MTOM` フィールドにバイト配列の内容を入力します。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、入力 PDF ドキュメントを格納するために使用します。この `BLOB` オブジェクトは引数として `invokeOneDocument` に渡されます。
+   * コンストラクターを呼び出し、入力 PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   * `MTOM` フィールドを割り当てることにより、`BLOB` オブジェクトにバイト配列の内容を入力します。
 
 1. 実行時オプションを設定します。
 
-   * の作成 `AssemblerOptionSpec` コンストラクタを使用して実行時オプションを格納するオブジェクト。
-   * に属するデータメンバーに値を割り当てて、ビジネス要件を満たすようにランタイムオプションを設定する `AssemblerOptionSpec` オブジェクト。 例えば、エラーが発生した場合にジョブの処理を続行するように Assembler サービスに指示するには、 `false` から `AssemblerOptionSpec` オブジェクトの `failOnError` データメンバー。
+   * ランタイムオプションを格納する `AssemblerOptionSpec` オブジェクトをコンストラクタで作成します。
+   * `AssemblerOptionSpec` オブジェクトに属するデータメンバーに値を割り当てることで、ビジネス要件に応じたランタイムオプションを設定します。例えば、エラーが発生したときに Assembler サービスにジョブの処理を継続するように指示するには、`AssemblerOptionSpec` オブジェクトの `failOnError` データメンバーに `false` を入力します。
 
-1. PDF文書を組み立てる。
+1. PDF ドキュメントをアセンブリします。
 
-   を呼び出す `AssemblerServiceClient` オブジェクトの `invokeOneDocument` メソッドを使用して、次の値を渡します。
+   `AssemblerServiceClient` オブジェクトの `invokeOneDocument` メソッドを呼び出し、次の値を渡します。
 
-   * A `BLOB` DDX ドキュメントを表すオブジェクト
-   * A `BLOB` インタラクティブPDF文書を表すオブジェクト
-   * An `AssemblerOptionSpec` 実行時のオプションを指定するオブジェクト
+   * DDX ドキュメントを表す `BLOB` オブジェクト
+   * インタラクティブ PDF ドキュメントを表す `BLOB` オブジェクト
+   * 実行時のオプションを指定する `AssemblerOptionSpec` オブジェクト
 
-   この `invokeOneDocument` メソッドは、 `BLOB` 非インタラクティブPDFドキュメントを含むオブジェクト。
+   `invokeOneDocument` メソッドは、非インタラクティブ PDF キュメントを含む `BLOB` オブジェクトを返します。
 
-1. 非インタラクティブPDFドキュメントを保存します。
+1. 非インタラクティブ PDF ドキュメントを保存します。
 
-   * の作成 `System.IO.FileStream` オブジェクトを開くには、コンストラクタを呼び出し、非インタラクティブPDFドキュメントのファイルの場所と、ファイルを開くモードを表す string 値を渡します。
-   * コンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクト `invokeOneDocument` メソッドが返されました。 バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` フィールドに入力します。
-   * の作成 `System.IO.BinaryWriter` オブジェクトのコンストラクタを呼び出し、 `System.IO.FileStream` オブジェクト。
-   * を呼び出して、バイト配列の内容をPDFファイルに書き込みます。 `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを使用してバイト配列を渡す。
+   * `System.IO.FileStream` オブジェクトを作成するには、そのコンストラクターを呼び出し、非インタラクティブ PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡します。
+   * `invokeOneDocument` メソッドから返された `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` フィールドの値を取得して、バイト配列に入力します。
+   * コンストラクターを呼び出し、`System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
+   *  `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列の内容を PDF ファイルに書き込みます。
 
-* 「クイックスタート (MTOM):Web サービス API を使用した非インタラクティブPDFドキュメントのアセンブリ」
+* 「クイックスタート（MTOM）：Web サービス API を使用した非インタラクティブ PDF ドキュメントのアセンブリ」
 
 **関連トピック**
 
-[MTOM を使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

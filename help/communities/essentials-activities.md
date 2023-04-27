@@ -1,7 +1,7 @@
 ---
 title: アクティビティストリームの基本事項
 seo-title: Activity Stream Essentials
-description: メンバーが実行した最近のアクティビティのリスト、または単一のコンテンツスレッドの最近のアクティビティのリスト
+description: メンバーが実行した最近のアクティビティのリスト、またはコンテンツの単一のスレッド上の最近のアクティビティのリスト
 seo-description: List of recent activites performed by a member or a list of recent activities on a single thread of content
 uuid: 6e4734bb-52a8-4670-b665-e640108b036e
 contentOwner: Guillaume Carlino
@@ -13,27 +13,27 @@ exl-id: 74dcbefa-e670-419b-af9b-b3d3c593ebaa
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '296'
-ht-degree: 72%
+ht-degree: 4%
 
 ---
 
 # アクティビティストリームの基本事項 {#activity-stream-essentials}
 
-フォーラムまたはブログへの投稿など、サインインしているコミュニティメンバーのアクティビティを 1 つのストリームにまとめ、アクティビティストリームコンポーネントの設定を使用して、さまざまな方法でフィルタリングしたり、表示したりできます。
+フォーラムやブログへの投稿など、サインインしたコミュニティメンバーのアクティビティは、ストリームに収集され、アクティビティストリームコンポーネントの設定を通じて、様々な方法でフィルタリングおよび表示できます。
 
-コミュニティメンバーが関心のある投稿や他のコミュニティメンバーをフォローしているときは、フォロー機能によって、別のアクティビティセットが追加されます。
+コミュニティメンバーが関心のある投稿や他のコミュニティメンバーの投稿をフォローする際に、フォロー機能は別のアクティビティのセットを追加します。
 
-どの[コミュニティサイト](overview.md#communitiessites)にも、サインインしているメンバーのユーザープロファイルページが用意されており、メンバーのアクティビティが同じ形式で表示されます。
+すべて [コミュニティサイト](overview.md#communitiessites) 同じ方法でメンバーアクティビティを表示するサインイン済みメンバーのユーザープロファイルページを含めます。
 
 ## 概念  {#concepts}
 
-アクティビティストリーム&#x200B;**&#x200B;とは、メンバーが行った最新のアクティビティ、またはフォーラムトピックやブログなどの単一のコンテンツスレッドで発生した最新のアクティビティをリストにしたものです。
+An *アクティビティストリーム* は、メンバーが実行した最近のアクティビティのリスト、またはフォーラムトピックやブログなどの単一のコンテンツスレッド上で最近実行されたアクティビティのリストです。
 
-メンバーは、別の個人やコンテンツをフォローすることによって、アクティビティストリームをフォローできます。
+メンバーは、別の個人またはコンテンツをフォローすることで、アクティビティストリームをフォローします。
 
-ニュースフィード&#x200B;**&#x200B;とは、メンバーがフォローしている複数のアクティビティストリームを単一のストリームに統合したものです。
+A *ニュースフィード* は、メンバーが続くアクティビティストリームを単一のストリームに結合したものです。
 
-[ソーシャルグラフ](essentials-socialgraph.md)とは、メンバー間のフォロー関係を表したものです。
+A [ソーシャルグラフ](essentials-socialgraph.md) は、あるメンバーと別のメンバーとの次の関係をキャプチャします。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -44,8 +44,8 @@ ht-degree: 72%
    <td>social/activitystreams/components/hbs/activitystreams</td> 
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td> 
-   <td>不可</td> 
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td> 
+   <td>いいえ</td> 
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td> 

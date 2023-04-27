@@ -1,7 +1,7 @@
 ---
 title: ルートアクションで使用されるイメージのカスタマイズ
 seo-title: Customize images used in route actions
-description: LiveCycle AEM Forms Workspace のルートアクションで使用されるイメージをカスタマイズする方法。
+description: LiveCycleAEM Forms Workspace のルートアクションで使用されるイメージをカスタマイズする方法。
 seo-description: How-to customize the images used in route actions in LiveCycle AEM Forms workspace.
 uuid: 42608376-587e-4b57-a9d5-8f9ebd981426
 content-type: reference
@@ -12,25 +12,25 @@ exl-id: 7b1f60e7-c8fa-43b6-bef4-88b42e7bbc36
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '308'
-ht-degree: 45%
+ht-degree: 74%
 
 ---
 
 # ルートアクションで使用されるイメージのカスタマイズ {#customize-images-used-in-route-actions}
 
-ルートアクションで使用されるイメージをカスタマイズするには、「[カスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」で説明されている手順を実行し、次にこの記事で説明する手順を実行します。
+ルートアクションで使用されるイメージをカスタマイズするには、 [カスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md) この記事で説明する手順が続きます。
 
 ## ルートアクションのイメージ {#images-for-route-actions}
 
-1. 次の場所の CSS に新しいルートアクションのイメージを定義するスタイルを追加します。
+1. 新しいルートアクション用に、次の場所にある CSS でイメージを定義するスタイルを追加します。
 
    `/apps/ws/css/newStyle.css`
 
-   例：という名前の新しいスタイルを追加します。 `myStyle1`次に示すように、画像ファイルをアップロードします。 `myStyleIcon1.png` から `/apps/ws/image`WebDAV クライアントを使用してフォルダーを作成します。
+   例えば、以下に示すように `myStyle1` という名前の新しいスタイルを追加し、WebDAV クライアントを使用して画像ファイル `myStyleIcon1.png` を `/apps/ws/image`s フォルダーにアップロードします。
 
    >[!NOTE]
    >
-   >WebDAV アクセスの詳細については、 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html).
+   >WebDAV アクセスについて詳しくは、[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/jp/crx/current/how_to/webdav_access.html) を参照してください。
 
    >[!NOTE]
    >
@@ -46,11 +46,11 @@ ht-degree: 45%
 
 ## タスクリストタスクアクションポップアップ {#task-list-task-action-popup}
 
-1. タスクリストアクションポップアップを作成します ( [AEM Forms Workspace コードの構築](introduction-customizing-html-workspace.md#building-html-workspace-code). これには、Dev パッケージを使用する必要があります。
+1. タスクリストアクションのポップアップを作成します。[AEM Forms Workspace コードのビルド](introduction-customizing-html-workspace.md#building-html-workspace-code)を参照してください。これには、Dev パッケージを使用する必要があります。
 
 1. `/libs/ws/js/runtime/templates/task.html` を `/apps/ws/js/runtime/templates/task.html` にコピーします。
 
-1. CSS スタイルの名前がサーバーからのルートアクション名と同じ場合は、 `/apps/ws/js/runtime/templates/task.html`:
+1. CSS スタイルの名前がサーバーからのルートアクションの名前と同じである場合は、`/apps/ws/js/runtime/templates/task.html` で以下のコードを変更します。
 
    ```
    <%if(routeList == null){%>
@@ -80,7 +80,7 @@ ht-degree: 45%
                <%}%>
    ```
 
-1. CSS スタイルの名前が、サーバーから取得したルートアクション名と異なる場合は、 `/apps/ws/js/runtime/templates/task.html`. これにより、`if-else` サーブレット条件のスタックを追加してルートアクション名でスタイルをマップします。
+1. CSS スタイルの名前がサーバーからのルートアクションの名前と異なる場合は、`/apps/ws/js/runtime/templates/task.html` で以下のコードを変更します。これにより、`if-else` サーブレット条件のスタックを追加してルートアクション名でスタイルをマップします。
 
 ```
 <%if(routeList == null){%>
@@ -120,7 +120,7 @@ To
 
 1. `/libs/ws/js/runtime/templates/taskdetails.html` を `/apps/ws/js/runtime/templates/taskdetails.html` にコピーします。
 
-1. CSS スタイルの名前がサーバーからのルートアクション名と同じ場合は、 `/apps/ws/js/runtime/templates/taskdetails.html`:
+1. CSS スタイルの名前がサーバーからのルートアクションの名前と同じである場合は、`/apps/ws/js/runtime/templates/taskdetails.html` で以下のコードを変更します。
 
    ```
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -140,7 +140,7 @@ To
                        <%}%>
    ```
 
-1. CSS スタイルの名前が、サーバーから取得したルートアクション名と異なる場合は、 `/apps/ws/js/runtime/templates/taskdetails.html`. これにより、`if-else` サーブレット条件のスタックを追加してルートアクション名でスタイルをマップします。
+1. CSS スタイルの名前がサーバーからのルートアクションの名前と異なる場合は、`/apps/ws/js/runtime/templates/taskdetails.html` で以下のコードを変更します。これにより、`if-else` サーブレット条件のスタックを追加してルートアクション名でスタイルをマップします。
 
    ```
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -168,8 +168,8 @@ To
                <%}%>
    ```
 
-1. 開く `/apps/ws/js/registry.js` 編集の際に、以下のテキストを探します。\
+1. `/apps/ws/js/registry.js` を編集用に開いて、以下のテキストを探します。\
    `"text!/lc/libs/ws/js/runtime/templates/taskdetails.html"`
 
-1. テキストを次のように置き換えます。\
+1. テキストを以下のテキストに置き換えます。\
    `"text!/lc/apps/ws/js/runtime/templates/taskdetails.html"`

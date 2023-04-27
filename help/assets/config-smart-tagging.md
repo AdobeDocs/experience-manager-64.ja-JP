@@ -18,14 +18,14 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->* スマートコンテンツサービスは、新しく使用できなくなりました [!DNL Experience Manager Assets] オンプレミス型の顧客。 既にこの機能を有効にしているオンプレミス版のお客様は、引き続きスマートコンテンツサービスを使用できます。
->* スマートコンテンツサービスは既存のユーザーが利用できます [!DNL Experience Manager Assets] Managed Servicesをご利用のお客様（この機能を既に有効にしています）。
->* 新規 [!DNL Experience Manager Assets] Managed Servicesのお客様は、この記事に記載されている手順に従ってスマートコンテンツサービスを設定できます。
+>* [!DNL Experience Manager Assets] オンプレミスの新規のお客様には、スマートコンテンツサービスをご利用いただけなくなりました。既にこの機能を有効にしているオンプレミス版のお客様は、引き続きスマートコンテンツサービスをご使用いただけます。
+>* スマートコンテンツ サービスは、この機能を既に有効にしている既存の [!DNL Experience Manager Assets] Managed Services のお客様にご利用いただけます。
+>* [!DNL Experience Manager Assets] Managed Services の新規のお客様は、この記事に記載されている手順に従ってスマートコンテンツサービスを設定してください。
 
 
-この記事では、スマートコンテンツサービスの設定に必要となる以下の主要なタスクについて詳しく説明します。バックエンドでは、 [!DNL Experience Manager] サーバーが、 [!DNL Adobe Developer Console] ゲートウェイを使用して、要求をスマートコンテンツサービスに転送する必要があります。
+この記事では、スマートコンテンツサービスの設定に必要な次の主要タスクについて詳しく説明します。 バックエンドでは、 [!DNL Experience Manager] サーバーが、 [!DNL Adobe Developer Console] ゲートウェイを使用して、要求をスマートコンテンツサービスに転送する必要があります。
 
-1. [ でスマートコンテンツサービス設定を作成して、公開鍵を生成します。](#obtain-public-certificate)[!DNL Experience Manager]OAuth 統合用の[公開証明書を取得します](#obtain-public-certificate)。
+1. [スマートコンテンツサービスの作成](#obtain-public-certificate) の設定 [!DNL Experience Manager] 公開鍵を生成する。 OAuth 統合用の[公開証明書を取得します](#obtain-public-certificate)。
 
 1. [Adobe 開発者コンソールで統合を作成](#create-adobe-i-o-integration)し、生成した公開鍵をアップロードします。
 
@@ -59,11 +59,11 @@ ht-degree: 78%
 
    **[!UICONTROL サービス URL]**: `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`
 
-   （例：`https://smartcontent.adobe.io/apac`）。次を指定できます。 `na`, `emea`、または `apac` :Experience Managerオーサーインスタンスがホストされる地域。
+   （例：`https://smartcontent.adobe.io/apac`）。Experience Manager オーサーインスタンスがホストされている地域として、`na`、`emea` または `apac` を指定することができます。
 
    >[!NOTE]
    >
-   >2022 年 9 月 1 日より前にExperience Manager管理サービスがプロビジョニングされている場合は、次のサービス URL を使用します。
+   >2022年9月1日（PT）より前に Experience Manager Managed Service がプロビジョニングされている場合は、次のサービス URL を使用します。
    >`https://mc.adobe.io/marketingcloud/smartcontent`
 
    **[!UICONTROL 認証サーバー]**: `https://ims-na1.adobelogin.com`
@@ -92,9 +92,9 @@ ht-degree: 78%
 
 1. [!DNL Experience Manager] デプロイメントに管理者としてログインします。**[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL ユーザー]**&#x200B;をクリックします。
 
-1. **[!UICONTROL dam-update-service]** ユーザーを見つけてクリックします。「**[!UICONTROL キーストア]**」タブをクリックします。
+1. を探して、 **[!UICONTROL dam-update-service]** ユーザー。 クリック **[!UICONTROL キーストア]** タブをクリックします。
 
-1. 証明書の有効期限が切れた既存の **[!UICONTROL similaritysearch]** キーストアを削除します。「**[!UICONTROL 保存して閉じる]**」をクリックします。
+1. 既存の **[!UICONTROL similaritysearch]** 期限切れの証明書を持つキーストア。 「**[!UICONTROL 保存して閉じる]**」をクリックします。
 
    ![キーストアの既存の similaritysearch エントリを削除して新しいセキュリティ証明書を追加](assets/smarttags_delete_similaritysearch_keystore.png)
 
@@ -104,7 +104,7 @@ ht-degree: 78%
 
 1. 公開証明書をダウンロードするには、「**[!UICONTROL OAuth 統合用の公開証明書をダウンロード]**」をクリックします。
 
-1. [https://console.adobe.io](https://console.adobe.io) にアクセスし、**[!UICONTROL 統合]**&#x200B;ページで既存のスマートコンテンツサービスに移動します。新しい証明書をアップロードします。詳しくは、[Adobe 開発者コンソール統合の作成](#create-adobe-i-o-integration)の手順を参照してください。
+1. アクセス [https://console.adobe.io](https://console.adobe.io) をクリックし、 **[!UICONTROL 統合]** ページ。 新しい証明書をアップロードします。 詳しくは、[Adobe 開発者コンソール統合の作成](#create-adobe-i-o-integration)の手順を参照してください。
 
 ## Adobe 開発者コンソール統合の作成 {#create-adobe-i-o-integration}
 
@@ -136,7 +136,7 @@ ht-degree: 78%
 
 1. [!DNL Experience Manager] で、**[!UICONTROL ツール／クラウドサービス／従来のクラウドサービス]**&#x200B;に移動して、[!UICONTROL クラウドサービス]コンソールを開きます。
 
-1. 「**[!UICONTROL アセットのスマートタグ]**」で、上記で作成した設定を開きます。サービスの設定ページで、「**[!UICONTROL 編集]**」をクリックします。
+1. 以下 **[!UICONTROL アセットのスマートタグ]**」で、上記で作成した設定を開きます。 サービス設定ページで、 **[!UICONTROL 編集]**.
 
 1. **[!UICONTROL AEM スマートコンテンツサービス]**&#x200B;ダイアログで、「**[!UICONTROL サービス URL]**」および「**[!UICONTROL 認証サーバー]**」フィールドに事前入力された値を使用します。
 
@@ -157,9 +157,9 @@ ht-degree: 78%
 
 1. **[!UICONTROL ツール／操作／Web コンソール]**&#x200B;に移動して、OSGi コンソールを開きます。**[!UICONTROL メイン／JMX]** をクリックします。
 
-1. 「**[!UICONTROL com.day.cq.dam.similaritysearch.internal.impl]**」をクリックします。**[!UICONTROL SimilaritySearch Miscellaneous Tasks]** が開きます。
+1. クリック **[!UICONTROL com.day.cq.dam.similaritysearch.internal.impl]**. **[!UICONTROL SimilaritySearch Miscellaneous Tasks]** が開きます。
 
-1. 「**[!UICONTROL validateConfigs()]**」をクリックします。**[!UICONTROL 設定を検証]**&#x200B;ダイアログで、「**[!UICONTROL 起動]**」をクリックします。
+1. クリック **[!UICONTROL validateConfigs()]**. **[!UICONTROL 設定を検証]**&#x200B;ダイアログで、「**[!UICONTROL 起動]**」をクリックします。
 
    同じダイアログに検証結果が表示されます。
 

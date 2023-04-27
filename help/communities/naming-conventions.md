@@ -1,7 +1,7 @@
 ---
 title: 命名規則
 seo-title: Naming Conventions
-description: Java パッケージ名内のハイフン
+description: Java パッケージ名でのハイフン
 seo-description: Hyphens in Java Package Name
 uuid: 48086e6c-c35b-4ffc-b216-d01feca7bf9a
 contentOwner: Guillaume Carlino
@@ -13,17 +13,17 @@ exl-id: f5a63642-9f2c-436f-bd40-4459545a0ddf
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '130'
-ht-degree: 51%
+ht-degree: 3%
 
 ---
 
 # 命名規則 {#naming-conventions}
 
-## Java パッケージ名内のハイフン {#hyphens-in-java-package-name}
+## Java パッケージ名でのハイフン {#hyphens-in-java-package-name}
 
-Java クラスの場所を作成する際には、パッケージ名がリポジトリフォルダーの場所のパッケージ名と一致しており、パス内のハイフンが適切にエスケープされている必要がある点に注意してください。
+Java クラスの場所を作成する場合、パッケージ名は、リポジトリフォルダーの場所と一致し、パス内のハイフンが適切にエスケープされる必要があります。
 
-AEM の開発では、リポジトリ項目の名前にハイフンを使用することが推奨されていますが、Java パッケージ名でハイフンを使用することはできません。
+AEMの開発では、リポジトリ項目の名前にハイフンを使用することが推奨されますが、ハイフンは Java パッケージ名内では無効です。
 
 基になる CRX プラットフォームでは、実際のアンダースコア「 」を区別できる必要があります。_&#39;およびハイフン&#39;-&#39; したがって、JCR では、ハイフンをその Unicode 値 (u002d) に置き換え、アンダースコア「 」でエスケープする必要があります_&#39;.
 

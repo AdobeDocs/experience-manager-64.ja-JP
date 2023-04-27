@@ -1,7 +1,7 @@
 ---
 title: フォルダー構造について
 seo-title: Understanding the folder structure
-description: AEM Forms Workspace ソースコードのフォルダー構造を理解してカスタマイズする方法。
+description: カスタマイズするAEM Forms Workspace ソースコードのフォルダー構造を理解する方法です。
 seo-description: How to understand the folder structure of AEM Forms workspace source code to customize.
 uuid: ee844f89-887e-4f07-9db3-389859baa374
 contentOwner: robhagat
@@ -13,28 +13,28 @@ exl-id: 192c436d-a507-4883-bd68-a6863a6664e0
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 62%
+ht-degree: 53%
 
 ---
 
 # フォルダー構造について {#understanding-the-folder-structure}
 
-AEM Forms Workspace は Backbone を使用して MVC アーキテクチャ上で設計されています。各コンポーネントは次のものに対してファイルを持ちます。
+AEM Forms Workspace コンポーネントは、Backbone を使用した MVC アーキテクチャ上で設計されています。 各コンポーネントには、次の用のファイルがあります。
 
-* ビジネスロジックを含むモデル 。
-* インターフェイスコントロールを含む HTML ファイルであるテンプレート。
-* コントローラークラスとしてテンプレートに対して動作する表示。
+* ビジネスロジックを含むモデル。
+* インターフェイスコントロールを含むHTMLファイルです。
+* テンプレートに対するコントローラクラスとして機能する表示。
 
-すべてのコンポーネントのアセットは、以下に示すフォルダー構造内に配置されています。アセットにアクセスするには、CRXDE Liteにログインし、 `/libs/ws/js/runtime/`.
+すべてのコンポーネントのアセットは、以下に説明するフォルダー構造に配置されます。 アセットにアクセスするには、CRXDE Lite にログインし、`/libs/ws/js/runtime/` を参照します。
 
-**モデル** バックボーンモデルが含まれます。
+**models**：バックボーンモデルが含まれます。
 
-**ビュー** バックボーンビューが含まれます。
+**views**：バックボーンビューが含まれます。
 
-**テンプレート** コンポーネントのHTMLテンプレートのみが含まれます。
+**templates**：コンポーネント用の HTML テンプレートのみが含まれます。
 
-**ルート** ユニバーサルルートを含みます。 routes 内部の Templates フォルダーには、HTML コードとコンポーネントへの参照が含まれます。
+**routes**：ユニバーサルルートが含まれます。routes 内部の Templates フォルダーには、HTML コードとコンポーネントへの参照が含まれます。
 
-**サービス** REST エンドポイントでAdobe Experience Managerサーバー API を呼び出すためのサービスインターフェイスが含まれます。
+**services**：REST エンドポイント上の Adobe Experience Manager サーバーの API を呼び出すためのサービスインターフェイスが含まれます。
 
-**util** 複数のコンポーネントで使用できる汎用ユーティリティが含まれます。
+**util**：複数のコンポーネントによって使用可能な一般ユーティリティが含まれます。

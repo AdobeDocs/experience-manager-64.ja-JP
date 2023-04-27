@@ -11,7 +11,7 @@ role: User
 source-git-commit: 0f4f8c2640629f751337e8611a2c8f32f21bcb6d
 workflow-type: tm+mt
 source-wordcount: '3721'
-ht-degree: 97%
+ht-degree: 94%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 97%
       + [チュートリアル：テンプレートの作成](using/create-templates-print-web.md)
       + [チュートリアル：インタラクティブ通信の作成](using/create-interactive-communication-tutorial.md)
    + AEM Forms リファレンス関連項目 {#aem-forms-reference-collaterals}
-      + [AEM Forms リファレンスサイトのセットアップおよび設定](using/setup-reference-sites.md)
+      + [AEM Formsリファレンスサイトのセットアップと設定](using/setup-reference-sites.md)
       + [We.Finance リファレンスサイトのチュートリアル](using/finance-reference-site-walkthrough.md)
       + [We.Gov リファレンスサイトの チュートリアル](using/gov-reference-site-walkthrough.md)
       + [従業員セルフサービスリファレンスサイトのチュートリアル](/help/forms/using/employee-self-service-reference-site.md)
@@ -64,13 +64,13 @@ ht-degree: 97%
       + [インタラクティブ通信をインストールして設定する](using/installing-configuring-intreactive-communication-correspondence-management.md)
    + AEM Forms の JEE へのインストール {#jee-installation}
       + [JEE 上の AEM Forms でサポートされているプラットフォーム](using/aem-forms-jee-supported-platforms.md)
-      + [JEE 上における AEM forms のインストールおよびデプロイ（JBoss Turnkey を使用）](http://www.adobe.com/go/learn_aemforms_installTurnkey_64_jp)
+      + [JEE 上における AEM Forms のインストールおよびデプロイ（JBoss Turnkey を使用）](http://www.adobe.com/go/learn_aemforms_installTurnkey_64)
       + [AEM Forms Document Security サーバーのインストールと設定](using/installing-and-configuring-the-document-security-server.md)
       + [AEM Forms のインストールの準備（シングルサーバー）](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64_jp)
       + [JEE 上の Adobe Experience Manager Forms のインストールおよびデプロイ（JBoss 版）](http://www.adobe.com/go/learn_aemforms_installJBoss_64_jp)
       + [JEE 上の AEM Forms のインストールおよびデプロイ（WebLogic 版）](http://www.adobe.com/go/learn_aemforms_installWebLogic_64_jp)
       + [JEE 上のAdobe Experience Manager Formsのインストールおよびデプロイ（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_64_jp)
-      + [AEM Forms ワークベンチのインストール ](http://help.adobe.com/ja_JP/AEMForms/6.1/InstallWorkbench/index.html)
+      + [AEM Forms ワークベンチのインストール ](http://help.adobe.com/en_US/AEMForms/6.1/InstallWorkbench/index.html)
       + [ Designer のインストールと設定](using/installing-configuring-designer.md)
       + [AEM Forms のインストールの準備（サーバークラスタ）](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_64_jp)
       + [JBoss クラスターでの JEE 上の Adobe Experience Manager Forms の設定](http://www.adobe.com/go/learn_aemforms_clusterJBoss_64_jp)
@@ -96,13 +96,13 @@ ht-degree: 97%
       + [JEE 上の Adobe Experience Manager Forms 用アップグレードのチェックリストと計画](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_64_jp)
       + [JEE 上の AEM 6.4 Forms へのアップグレード](using/upgrade-forms-jee.md)
       + [JEE 上の Adobe Experience Manager Forms へのアップグレード（JBoss 版）](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_64_jp)
-      + [LiveCycle ES4 SP1 から JEE 上の Adobe Experience Manager Forms へのアップグレード（JBoss 版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-jboss-livecycle.pdf)
+      + [LiveCycleES4 SP1 から JEE 上のAdobe Experience Manager Forms（JBoss 版）へのアップグレード](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-jboss-livecycle.pdf)
       + [JEE 上の AEM Forms への自動アップグレード（JBoss 版）](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_64_jp)
-      + [LiveCycle ES4 SP1 から JEE 上の Adobe Experience Manager Forms へのアップグレード（JBoss 自動インストールを使用）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-turnkey-livecycle.pdf)
+      + [LiveCycleES4 SP1 から JEE 上のAdobe Experience Manager Formsへのアップグレード（JBoss Turnkey 版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-turnkey-livecycle.pdf)
       + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebLogic 版）](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_64_jp)
-      + [LiveCycle ES4 SP1 から JEE 上の Adobe Experience Manager Forms へのアップグレード（WebLogic 版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-weblogic-livecycle.pdf)
+      + [LiveCycleES4 SP1 から JEE 上のAdobe Experience Manager Forms（WebLogic 版）へのアップグレード](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-weblogic-livecycle.pdf)
       + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_64_jp)
-      + [LiveCycle ES4 SP1 から JEE 上の Adobe Experience Manager Forms へのアップグレード（WebSphere 版）](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-websphere-livecycle.pdf)
+      + [LiveCycleES4 SP1 から JEE 上のAdobe Experience Manager Forms（WebSphere 版）へのアップグレード](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/pdf/upgrade-websphere-livecycle.pdf)
 + AEM Forms の管理 {#manage-administer-aem-forms}
    + [OSGi 上の AEM Forms のグループと権限](using/forms-groups-privileges-tasks.md)
    + [フォームを分類するための新しいフォルダーの作成](using/creating-new-folders-categorize-forms.md)
@@ -145,7 +145,7 @@ ht-degree: 97%
    + [リダイレクトページの設定](using/configuring-redirect-page.md)
    + [アクセシブルなアダプティブフォームの作成](using/creating-accessible-adaptive-forms.md)
    + [繰り返し可能なセクションを使用したフォームの作成](using/creating-forms-repeatable-sections.md)
-   + [AEM サイトページへのアダプティブフォームまたはインタラクティブ通信の埋め込み](using/embed-adaptive-form-aem-sites.md)
+   + [AEM Sites ページへのアダプティブフォームまたはインタラクティブ通信の埋め込み](using/embed-adaptive-form-aem-sites.md)
    + [外部 Web ページへのアダプティブフォームの埋め込み](using/embed-adaptive-form-external-web-page.md)
    + [アダプティブフォームコンポーネントのインラインスタイリング](using/inline-style-adaptive-forms.md)
    + [複数ステップのフォームシーケンスの概要](using/introduction-form-sequence.md)
@@ -207,8 +207,8 @@ ht-degree: 97%
    + [AEM Forms Workspace では利用できない Flex Workspace の機能](using/features-flex-workspace-available-html.md)
    + [Backbone インタラクション](using/backbone-interaction.md)
    + [再利用可能なコンポーネントの説明](using/description-reusable-components.md)
-   + [レンダラーのためのドキュメントの詳細](using/document-details-renderer.md)
-   + [Web アプリケーションでの AEM Forms Workspace コンポーネントの統合](using/integrating-html-ws-components-web.md)
+   + [レンダラーのドキュメントの詳細](using/document-details-renderer.md)
+   + [Web アプリケーションでの AEM Forms ワークスペースコンポーネントの統合](using/integrating-html-ws-components-web.md)
    + [新しいレンダリングと送信サービス](using/new-render-submit-service.md)
    + [フォルダー構造について](using/folder-structure.md)
    + [AEM Forms Workspace でのサードパーティアプリケーションの統合](using/integrating-correspondence-management-html-workspace.md)
@@ -222,8 +222,8 @@ ht-degree: 97%
    + [タスクの詳細ページのカスタマイズ](using/customizing-task-details-page.md)
    + [プロセスインスタンスのリストのカスタマイズ](using/customizing-listing-process-instances.md)
    + [タスクアクションのカスタマイズ](using/customizing-task-actions.md)
-   + [TODO リストでの追加のデータの表示](using/display-additional-data-in-todo-list.md)
-   + [サマリー URL でのタスク変数の取得](using/getting-task-variables-summary-url.md)
+   + [To Do リストでの追加データの表示](using/display-additional-data-in-todo-list.md)
+   + [サマリー URLでのタスク変数の取得](using/getting-task-variables-summary-url.md)
    + [ルートアクションで使用されるイメージのカスタマイズ](using/images-route-actions.md)
    + [JavaScript ファイルの縮小](using/minification-javascript-files.md)
    + [追跡テーブルのカスタマイズ](using/sorting-tracking-tables-add-columns.md)
@@ -232,7 +232,7 @@ ht-degree: 97%
    + [AEM Forms ワークスペースで使用する各種 API](using/apis-used-html-workspace.md)
    + [AEM Forms Workspace における既存のプロセスデータを使用した新しいプロセスの開始](using/initiating-new-process-existing-process.md)
    + [2 つの AEM Forms ワークプレースインスタンスを 1 つのサーバー上にホストする](using/two-html-workspace-instances-one.md)
-   + [インターフェイスのカラースキーム変更](using/changing-color-scheme-interface.md)
+   + [インターフェイスのカラースキームの変更](using/changing-color-scheme-interface.md)
    + [インターフェイスのフォントの変更](using/changing-font-interface.md)
    + [ブランディングのための組織ロゴの変更](using/changing-organization-logo-branding.md)
    + [タスクの概要ペインでの情報の表示](using/displaying-information-task-summary-pane.md)
@@ -244,8 +244,8 @@ ht-degree: 97%
    + [シングルサインオンとタイムアウトハンドラー](using/single-sign-timeout-handlers.md)
    + [HTML Workspace でのアダプティブフォームの使用](using/using-adaptive-form-html-workspace.md)
    + [AEM Forms Workspace に Microsoft Office SharePoint Server を統合する](using/integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server.md)
-   + [TODO リストの操作](using/todo-lists.md)
-   + [AEM Forms Workspace のトラブルシューティングガイドライン](using/troubleshooting-guidelines-html-workspace.md)
+   + [To Do リストの操作](using/todo-lists.md)
+   + [AEM Forms ワークスペースのトラブルシューティングガイドライン](using/troubleshooting-guidelines-html-workspace.md)
 + AEM Forms アプリケーション {#aem-forms-app}
    + [AEM Forms アプリケーションの概要](using/aem-forms-app.md)
    + [AEM Forms アプリケーションの環境設定](using/setup-environment-mobile-workspace.md)
@@ -347,7 +347,7 @@ ht-degree: 97%
    + [メール通知におけるメタデータの使用](using/use-metadata-in-email-notifications.md)
 + Forms ポータル {#use-forms-portal}
    + [フォームポータルコンポーネントのテンプレートをカスタマイズする](using/customizing-templates-forms-portal-components.md)
-   + [フォームポータルコンポーネントの有効化](using/enabling-forms-portal-components.md)
+   + [フォームポータルのコンポーネントの有効化](using/enabling-forms-portal-components.md)
    + [フォームポータルページの作成 ](using/creating-form-portal-page.md)
    + [フォームポータルで送信済みフォームを操作するための API](using/report-submitted-data-forms.md)
    + [ドラフトと送信コンポーネントのカスタムストレージ](using/adding-custom-storage-provider-forms.md)
@@ -447,7 +447,7 @@ ht-degree: 97%
       + [エンドポイントの追加、有効化、変更または削除](/help/forms/using/admin-help/adding-enabling-modifying-or-removing.md)
       + [メールエンドポイントの設定](/help/forms/using/admin-help/configuring-email-endpoints.md)
       + [リモートエンドポイントの設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md)
-      + [監視フォルダーエンドポイントの設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)
+      + [監視フォルダーのエンドポイントの設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)
       + [タスクマネージャーエンドポイントの設定](/help/forms/using/admin-help/configuring-task-manager-endpoints.md)
       + [エンドポイントの種類](/help/forms/using/admin-help/types-endpoints.md)
    + Acrobat Reader DC Extensions の設定 {#configure-acrobat-reader-dc-extensions}
@@ -475,7 +475,7 @@ ht-degree: 97%
       + [SSL 設定の概要](/help/forms/using/admin-help/overview-6.md)
       + [JBoss Application Server に対する SSL の設定](/help/forms/using/admin-help/configuring-ssl-jboss-application-server.md)
       + [Windows Vista での SSL の設定](/help/forms/using/admin-help/configuring-ssl-windows-vista.md)
-      + [WebLogic Server に対する SSL の設定](/help/forms/using/admin-help/configuring-ssl-weblogic-server.md)
+      + [WebLogic Server 用の SSL の設定](/help/forms/using/admin-help/configuring-ssl-weblogic-server.md)
       + [WebSphere Application Server に対する SSL の設定](/help/forms/using/admin-help/configuring-ssl-websphere-application-server.md)
    + Document Security の使用 {#work-with-document-security}
       + [Document Security について](/help/forms/using/admin-help/document-security.md)
@@ -507,7 +507,7 @@ ht-degree: 97%
       + [フォントを使用可能にする](/help/forms/using/admin-help/make-fonts-available.md)
       + [埋め込むフォントの指定](/help/forms/using/admin-help/specify-fonts-embed.md)
       + [セキュリティ設定の指定](/help/forms/using/admin-help/specify-security-settings.md)
-   + Forms ワークフローの設定{#configure-forms-workflow}
+   + Forms ワークフローの設定 {#configure-forms-workflow}
       + [管理およびプロセスの用語について](/help/forms/using/admin-help/administration-process-terminology.md)
       + [プロセスの管理](/help/forms/using/admin-help/processes.md)
       + [業務カレンダーの設定](/help/forms/using/admin-help/configuring-business-calendars.md)
@@ -579,7 +579,7 @@ ht-degree: 97%
    + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-4/forms/javadocs/index.html)
    + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/experience-manager/6-4/forms/ProgramLC/javadoc/index.html)
    + [HTML5 フォームの Form Bridge API](using/form-bridge-apis.md)
-   + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-4/forms/javascript-api/index.html)
+   + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-4/forms/javascript-api/index.html)
    + [Assembler サービスおよび DDX リファレンス](http://www.adobe.com/go/learn_aemforms_ddxRef_64_jp)
    + [Workbench ヘルプ](http://www.adobe.com/go/learn_aemforms_workbench_64_jp)
    + JEE 上の AEM Forms でのプログラミング {#programming-aem-forms-jee}

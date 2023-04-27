@@ -11,7 +11,7 @@ exl-id: db416cbc-27a7-4a2c-b4b3-43e8963faf22
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 29%
+ht-degree: 76%
 
 ---
 
@@ -23,85 +23,85 @@ ht-degree: 29%
 
 ## We.Finance リファレンスサイトのシナリオ  {#we-finance-reference-site-scenario}
 
-We.Finance サイトは、AEM Formsのインタラクティブ通信機能を学ぶのに役立つ金融サービスサイトです。
+We.Finance サイトは、AEM Forms のインタラクティブ通信機能の学習に役立つ金融サービスのサイトです。
 
-AEM forms とMicrosoft Dynamics との統合が、金融サービス会社での顧客体験をパーソナライズする方法を示す、We.Finance 自動保険の使用例に関する詳細なチュートリアルを読みます。 このインタラクティブなガイドは、金融会社での複雑なデジタル取引や顧客とのコミュニケーションの実装を容易にするように設計されています。
+We.Finance の自動保険ユースケースについて詳しくは、チュートリアルをお読みください。AEM Forms、および AEM Forms と Microsoft Dynamics との統合により、金融サービス会社で顧客体験をパーソナライズする方法をご理解いただけます。このインタラクティブなチュートリアルは、金融会社における複雑なデジタルトランザクションや、顧客とのコミュニケーションの実装を容易にすることを目的としています。
 
 **まず、ユースケースをご覧ください。**
 
-Sarah Rose は We.Finance 社の既存の顧客で、自動保険契約を購入しています。今は保険の更新の時期だ。 We.Finance 社の保険営業担当である Gloria Rios は、Sarah に契約の更新について通知します。Sarah は電子メールに記載されている手順に従い、プロセスを正常に完了します。
+Sarah Rose は We.Finance 社の既存の顧客で、自動保険ポリシーを購入しています。現在、彼女は保険ポリシーの更新時期を迎えています。We.Finance 社の保険代理店である Gloria Rios が、Sarah に対し、保険契約の更新に関するリマインダーを送信します。 Sarah は電子メールに記載された指示に従い、処理を正常に完了します。
 
 ## 自動保険申し込みのチュートリアル {#auto-insurance-application-walkthrough}
 
-We.Finance 自動保険の申し込みシナリオは、ユーザーに対する視覚的なナレーションであり、次の 2 つのペルソナに基づいています。
+We.Finance 社の自動保険申し込みのシナリオでは、次の 2 人の人物を使用して視覚的に説明します。
 
 * Sarah Rose（We.Finance 社の顧客）
-* Gloria Rios（We.Finance 社の保険営業担当）
+* Gloria Rios（We.Finance 社の保険代理店）
 
-### Gloria が We.Finance 社から保険契約の更新通知を送信する {#gloria-sends-an-insurance-policy-renewal-communication-from-we-finance}
+### Gloria が We.Finance 社から保険契約の更新に関する連絡を送信 {#gloria-sends-an-insurance-policy-renewal-communication-from-we-finance}
 
-Gloria がAEMインスタンスにログインし、「 」をクリックします。 **自動保険の更新** その後、 **エージェント UI を開きます。**&#x200B;クリックすると、Sarah Rose の保険証明書に保険証明書が事前入力されます。 Gloria がクリック&#x200B;**送信** 画面に「送信開始」と表示され、数秒後に「送信に成功しました」と表示されます。
+Gloria は AEM インスタンスにログインし、「 **自動保険更新**」をクリックしてから「**エージェント UI を開く**」をクリックします。クリックすると、Sarah Rose のポリシーの詳細が保険関連ドキュメントに表示されます。Gloria が「**送信**」をクリックすると、画面に「送信開始」メッセージが表示されたあと、数秒後に「送信完了」と表示されます。
 
-Sarah は「Your Auto Insurance Renewal」（自動保険更新）という件名の電子メールを受信します。
+Sarah は「自動保険更新」という件名のメールを受信します。
 
 ![agent_ui_email](assets/agent_ui_email.png)
 
 #### 実際の動作確認 {#see-it-yourself}
 
-に移動します。 **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents** > **We.Finance** > **自動保険**. を選択します。 **自動保険の更新** インタラクティブ通信とクリック **エージェント UI を開く**. エージェント UI でインタラクティブ通信が開きます。ポリシードキュメントが添付された電子メールを受け取る有効な電子メールアドレスを入力し、「送信」をクリックします。
+**Adobe Experience Manager** ／**フォーム** ／ **フォームとドキュメント** ／**We.Finance**／**自動保険**&#x200B;に移動します。を選択します。 **自動保険の更新** インタラクティブ通信とクリック **エージェント UI を開く**. エージェント UI でインタラクティブ通信が開きます。ポリシードキュメントが添付されたメールを受信するには、有効なメールアドレスを入力して「送信」をクリックします。
 
-Auto Insurance Renewal インタラクティブ通信には、 `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal.`
+`https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal.` から自動保険更新インタラクティブ通信に直接アクセスして確認することができます。
 
-### Sarah は We.Finance 社から保険契約の更新通知を受信し、更新を決める {#sarah-receives-an-insurance-policy-renewal-communication-from-we-finance-and-decides-to-renew}
+### Sarah は We.Finance 社から保険ポリシーの更新通知を受信し、更新を決めます {#sarah-receives-an-insurance-policy-renewal-communication-from-we-finance-and-decides-to-renew}
 
-Sarah は、We.Finance 社から添付ファイルを含む電子メールを受け取り、自動保険契約の期限が切れそうになっていることを通知します。 添付ファイルは、自動保険レターの印刷版です。
+Sarah は、We.Finance 社のファイルが添付されたメールを受信します。このメールには、自動保険ポリシーの期限が近づいていることが記載されています。添付ファイルは、印刷用の自動保険レターです。
 
-Sarah がクリック **今すぐ更新** Auto Insurance レターの Web 版にリダイレクトされます。 この手紙に加えて、Sarah はポリシーの有効期限が切れるまでの残り日数を見つけます。 このページでは、Sarah は保険契約の詳細（保険番号、支払期限、割引オファーやロイヤルティ報酬など）の基本的な概要を提供します。 Sarah が再度クリック **今すぐ更新** ポリシーの下に
+Sarah が「 **今すぐ更新する**」をクリックすると、自動保険レターの Web 版にリダイレクトされます。このレターの上部には、ポリシーの期限までの残り日数が表示されます。Sarah は、保険番号、支払い金額、割引キャンペーン、ロイヤルティ報酬など、保険ポリシーの詳細情報の概要をこのページで確認できます。Sarah はポリシーの下部の&#x200B;**今すぐ更新する**&#x200B;を再度クリックします。
 
 ![ref1](assets/ref1.png)
 
 #### 仕組み {#how-it-works}
 
-自動保険レターの Web および印刷出力は、インタラクティブ通信のマルチチャネル機能を使用して作成されます。
+自動保険レターの Web 版と印刷版は、インタラクティブ通信のマルチチャンネル機能を使用して作成されます。
 
-電子メールに含まれている「今すぐ更新する」ボタンは、自動保管更新の申し込みにリンクされます。これはパブリッシュインスタンス上のインタラクティブ通信です。
+電子メール内の「今すぐ更新する」ボタンは、Auto Insurance Renew アプリケーションにリンクされています。これは、パブリッシュインスタンス上のインタラクティブ通信です。
 
 #### 実際の動作確認 {#see-it-yourself-1}
 
-PDF が添付された電子メールを受信します。PDFは、自動保険レターの印刷版です。 クリック **今すぐ更新** をクリックして、ポリシーの web バージョンにアクセスします。 個人情報とポリシーの詳細を確認し、 **今すぐ更新** 別のインタラクティブ通信に移動します。
+添付のPDF。 PDF は自動保険レターの印刷版です。「**今すぐ更新する**」をクリックしてポリシーの Web 版にアクセスします。自分の個人情報やポリシーの詳細を確認し、**今すぐ更新する**&#x200B;をクリックすると、別のインタラクティブ通信が表示されます。
 
-この **今すぐ更新** ボタンをクリックすると、Sarah はポリシーの web バージョンに移動します。 次の URL にアクセスできます。
+メールの「**今すぐ更新する**」ボタンをクリックすると、Sarah はポリシーの Web 版にリダイレクトされます。次の URL にアクセスできます。
 
 `https://[authorServer]:[authorPort]/content/document.html?schema=fdm&documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&customerId=1`
 
-自動保険更新の詳細な概要を確認し、 **今すぐ更新** をクリックします。
+自動保険更新の詳細な概要を確認してからページ下部の&#x200B;**今すぐ更新する**&#x200B;をクリックします。
 
-### 支払いページの表示 {#sarah-reaches-the-payment-page}
+### Sarah は支払いページを表示します {#sarah-reaches-the-payment-page}
 
-We.Finance 社の支払いページが表示されます。Sarah は、自分のレコードと共に、ポリシー番号と有効期限を再確認します。 ページの右側で、Sarah は、合計金額に対して 10%のプレミアム割引を使用して、更新の支払いの概要を確認します。
+We.Finance 社の支払いページが表示されます。Sarah は、自分の記録と照らし合わせて、ポリシー番号と有効期限を再確認します。ページの右側で契約更新の支払いの概要を確認します。合計金額からプレミアム割引として 10％ 差し引かれていることがわかります。
 
 #### 仕組み {#how-it-works-1}
 
-「今すぐ更新」ボタンをクリックすると、支払いページに移動します。 支払いページはアダプティブフォームです。
+「今すぐ更新」ボタンをクリックすると、支払いページが表示されます。支払いページはアダプティブフォームです。
 
 #### 実際の動作確認 {#see-it-yourself-2}
 
 「**今すぐ更新する**」をクリックして支払いページにアクセスします。クレジットカード情報を入力し、 **支払いを行う。**
 
-オーサリングインスタンスの支払いページには、次の場所でアクセスできます。
+以下のオーサリングインスタンスから支払いページにアクセスすることができます。
 
 `https://[authorServer]:[authorPort]/content/document.html?documentId=/content/forms/af/we-finance/credit-card/ccbillpayment.html&schema=fdm&customerId=1`
 
-### Sarah は支払いを行ってプロセスを完了する {#sarah-makes-the-payment-and-completes-the-process}
+### Sarah は支払いを行ってプロセスを完了します {#sarah-makes-the-payment-and-completes-the-process}
 
-Sarah がクレジットカードの詳細を入力し、クリックします **支払いを行う**.
+Sarah はクレジットカードの詳細を入力し、**支払う**&#x200B;をクリックします。
 
 #### 仕組み {#how-it-works-2}
 
-Sarah がクレジットカードの詳細を入力して「送信」をクリックすると、クレジットカードによる支払い処理が行われ、アダプティブォームで設定された「ありがとうございます」メッセージが画面に表示されます。
+Sarah がクレジットカードの詳細を入力して「送信」をクリックすると、クレジットカードの支払いが処理され、アダプティブフォームで設定した「ありがとうございます」メッセージが画面に表示されます。
 
 #### 実際の動作確認 {#see-it-yourself-3}
 
-次の場所で「支払いを行う」をクリックした後、確認メッセージを表示できます：
+「支払う」をクリックすると、確認メッセージが以下の URL に表示されます。
 
 `https://[authorServer]:[authorPort]/content/forms/af/we-finance/credit-card/ccbillpayment/jcr:content/guideContainer.guideThankYouPage.html?owner=admin&status=Submitted`

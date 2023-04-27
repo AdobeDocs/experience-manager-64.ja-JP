@@ -15,21 +15,21 @@ role: Admin,User
 source-git-commit: 63a4304a1a10f868261eadce74a81148026390b6
 workflow-type: tm+mt
 source-wordcount: '388'
-ht-degree: 20%
+ht-degree: 17%
 
 ---
 
 # 一括アセット移行用の機能パック18912をインストールしています {#installing-feature-pack}
 
-機能パック18912のインストールは次のとおりです。 _オプション_.
+機能パック 18912 のインストールは&#x200B;_オプション_&#x200B;です。
 
-機能パック18912では、FTP を使用してアセットをDynamic Media - AEMの Scene7 モードに直接一括取り込むか、Dynamic Media ClassicからAEMのDynamic Media - Scene7モードにアセットを移行することができます。 機能パックは、次の場所から入手できます。 [Adobe Professional Services](https://www.adobe.com/jp/experience-cloud/consulting-services.html).
+機能パック18912では、FTP を使用してアセットをDynamic Media - AEMの Scene7 モードに直接一括取り込むか、Dynamic Media ClassicからAEMのDynamic Media - Scene7モードにアセットを移行することができます。 機能パックは、[Adobe プロフェッショナルサービス](https://www.adobe.com/jp/experience-cloud/consulting-services.html) から入手できます。
 
 >[!NOTE]
 >
 >機能パックを使用してDynamic Media ClassicからDynamic Media - AEMの Scene7 モードにアセットを一括移行することも、Dynamic Media Classicの FTP 機能を使用してアセットを一括移行することもできますが、Adobeでは *not* 複雑なので、この方法をお勧めします。
 >
->そのため、このような移行機能パックは次のようになります。 *のみ* を通じた移行プロジェクトの一環としてサポートされる [Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html).
+>そのため、このような移行機能パックは次のようになります。 *のみ* を通じた移行プロジェクトの一環としてサポートされる [Adobe Professional Services](https://www.adobe.com/jp/experience-cloud/consulting-services.html).
 
 この機能パックをインストールする前に、まずサービスユーザを作成し、その情報をAdobeに提供する必要があります。
 
@@ -38,8 +38,8 @@ ht-degree: 20%
 **一括アセット移行用の機能パック18912をインストールするには**,
 
 1. AEMインスタンスで、に移動します。 **[!UICONTROL [ ツール ] > [ セキュリティ ] > [ ユーザ ] > [ ユーザの作成 ]]**. このサービスユーザーは、 `/content/dam`.
-1. 「**[!UICONTROL ID]**」および「**[!UICONTROL パスワード]**」フィールドで、ユーザー名およびパスワードを入力します（例：`FTP User`）。この名前は、アセットを作成したユーザーとしてタイムラインに表示されます。アセットが FTP からアップロードされる場合、アセットは、FTP サーバーにアップロードされて AEM にプッシュされる際に作成されたと見なされます。
-1. 連絡先 [AdobeのExperience Managerカスタマーサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) 機能パック18912へのアクセス権をリクエストしてダウンロードします。 サポートに連絡する際には、次の情報が必要になる場合があります。
+1. 内 **[!UICONTROL ID]** および **[!UICONTROL パスワード]** フィールドに、ユーザー名とパスワードを入力します。例： `FTP User`. この名前は、アセットを作成したユーザーとしてタイムラインに表示されます。 アセットが FTP からアップロードされると、アセットは FTP サーバーにアップロードされ、AEMにプッシュされる際に作成されたと見なされます。
+1. [Experience Manager のアドビカスタマーサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)に連絡して、機能パック 18912 のダウンロードのためのアクセス権をリクエストしてください。サポートに連絡する際には、次の情報が必要になる場合があります。
 
    * オーサーインスタンスのサーバー IP アドレス。ポート番号（デフォルトでは、ポート番号は 4502）を含みます。
    * 前の手順で作成したAEMサービスのユーザー名とパスワード。

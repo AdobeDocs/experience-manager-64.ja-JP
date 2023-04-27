@@ -13,24 +13,24 @@ exl-id: f40fcfab-63e0-4e43-aac5-95426e3dd1fb
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 100%
+ht-degree: 26%
 
 ---
 
 # DB2 データベース：週単位のプロセス実行{#db-database-running-a-process-weekly}
 
-ご使用の AEM forms DB2 データベースの動作が遅くなり始めたら、週単位で以下のプロセスを実行することで、パフォーマンスが向上します。
+AEM forms DB2 データベースの実行が遅くなり始めた場合は、次のプロセスを週単位で実行すると、パフォーマンスが向上します。
 
 1. DB2 コントロールセンターを起動します。
 
-   （Windows）スタート／すべてのプログラム／IBM DB2／General Administration Tools／Control Center を選択します。
+   (Windows) スタート/プログラム/IBM DB2/General Administration Tools/Control Center を選択します。
 
    （Linux および UNIX）コマンドプロンプトから、`db2jcc` コマンドを入力します。
 
-1. DB2 コントロールセンターのオブジェクトツリーで、「All Databases」をクリックします。
-1. AEM Forms 用に作成したデータベースをクリックして、Tables フォルダーをクリックします。
-1. コンテンツウィンドウ内のデータベーステーブルをすべて選択し、それらを右クリックして「Run Statistics」を選択します。
-1. Statistics／Index Statistics に移動します。
-1. 「Collect Statistics For All Indexes」を選択し、「Collect Statistics For Indexes With Extended Detailed Statistics」を選択して、「OK」をクリックします。
+1. DB2 コントロールセンターのオブジェクトツリーで、[ すべてのデータベース ] をクリックします。
+1. AEM forms 用に作成したデータベースをクリックし、 Tables フォルダーをクリックします。
+1. コンテンツ・ペインですべてのデータベース・テーブルを選択し、右クリックして「統計の実行」を選択します。
+1. 統計/インデックス統計に移動します。
+1. 「すべてのインデックスに関する統計情報を収集」を選択し、「拡張された詳細な統計情報を含むインデックスに関する統計情報を収集」を選択して、「OK」をクリックします。
 
-プロセスが完了すると、メッセージが表示されます。メッセージを閉じます。
+プロセスが完了すると、メッセージが表示されます。 メッセージを閉じます。

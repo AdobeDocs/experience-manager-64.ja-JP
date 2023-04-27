@@ -13,7 +13,7 @@ exl-id: c2061de7-8627-4595-b96c-aa2d6abffddd
 source-git-commit: f8b19b6723d333e76fed111b9fde376b3bb13a1d
 workflow-type: tm+mt
 source-wordcount: '363'
-ht-degree: 35%
+ht-degree: 10%
 
 ---
 
@@ -27,12 +27,12 @@ AEM FormsとAcrobat Signの統合について詳しくは、 [アダプティブ
 
 ## ユーザーデータとデータストア {#data}
 
-Acrobat Sign対応のアダプティブフォームには署名者に関する情報が含まれており、アダプティブフォームによって収集された他のユーザーデータも含まれている場合があります。 Acrobat Signサービスは、契約内の署名を使用してユーザーデータを保存します。 契約は、AEM Forms Cloud Services で設定されたAcrobat Signサーバーに保存されます。 さらに、Forms Portal の送信アクションを使用するようにアダプティブフォームが構成されている場合、契約書のデータはフォームデータとともに Forms Portal のデータストアに格納されます。
+Acrobat Sign対応のアダプティブフォームには署名者に関する情報が含まれており、アダプティブフォームによって収集された他のユーザーデータも含まれている場合があります。 Acrobat Signサービスは、契約内の署名を使用してユーザーデータを保存します。 契約は、AEM Forms Cloud Services で設定されたAcrobat Signサーバーに保存されます。 さらに、Formsポータルの送信アクションを使用するようにアダプティブフォームが設定されている場合、契約書データはフォームデータと共にフォームポータルのデータストアに保存されます。
 
 ## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
 
-ユーザーデータは契約書内で収集されますが、いずれのサービステーブルにも保存されません。Acrobat Signを使用すると、管理者は、サービスで管理するデータの管理に関して、独自の選択肢を作成できます。 Acrobat Signサービスのプライバシー管理者は、要求者の電子メールアドレスに基づいて契約のリストを作成したり、契約を削除したりできます。
+ユーザーデータは契約内で収集されますが、どのサービステーブルにも保存されません。 Acrobat Signを使用すると、管理者は、サービスで管理するデータの管理に関して、独自の選択肢を作成できます。 Acrobat Signサービスのプライバシー管理者は、要求者の電子メールアドレスに基づいて契約のリストを作成したり、契約を削除したりできます。
 
 Acrobat Signは、参加者による契約の検索、および必要に応じて削除を可能にする Web アプリケーションを提供します。 詳しくは、 [Acrobat Sign — 機能：ユーザー情報の削除](https://helpx.adobe.com/jp/sign/help/adobesign_gdpr_user_deletion.html).
 
-Forms Portal の送信アクションを使用するように構成されているアダプティブフォームの契約書データも、Forms Portal のデータストアに格納されます。Forms Portal のデータストアにアクセスしてデータを削除する方法については、「[Forms Portal | ユーザーデータの処理](/help/forms/using/forms-portal-handling-user-data.md)」を参照してください。
+Formsポータル送信アクションを使用するように設定されたアダプティブフォームの契約データも、フォームポータルデータストアに保存されます。 フォームポータルのデータストアにアクセスしてデータを削除するには、 [Forms portal |ユーザーデータの処理](/help/forms/using/forms-portal-handling-user-data.md).

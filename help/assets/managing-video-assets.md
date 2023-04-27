@@ -1,6 +1,6 @@
 ---
 title: ビデオアセットの管理
-description: ビデオアセットをアップロード、プレビュー、注釈付け、公開する方法について説明します。
+description: ビデオアセットをアップロード、プレビュー、注釈、公開する方法について説明します。
 uuid: 56a8c221-409f-4605-97b1-a054dd2abfab
 contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.4/ASSETS
@@ -11,20 +11,20 @@ exl-id: eb652414-5b10-45af-a8b6-f1de649994c5
 source-git-commit: 937c9425e276f67486fba1d4563799fe68d35cc7
 workflow-type: tm+mt
 source-wordcount: '787'
-ht-degree: 45%
+ht-degree: 41%
 
 ---
 
 # ビデオアセットの管理 {#managing-video-assets}
 
-Adobe Experience Manager Assets でビデオアセットを管理および編集する方法について説明します。 また、Dynamic Media のライセンスをお持ちの場合は、[Dynamic Media のビデオに関するドキュメント](video.md)を参照してください。
+Adobe Experience Manager Assets でビデオアセットを管理および編集する方法について説明します。 また、Dynamic Mediaの使用をライセンスされている場合は、 [Dynamic Mediaビデオドキュメント](video.md).
 
 ## ビデオアセットのアップロードとプレビュー {#uploading-and-previewing-video-assets}
 
-[!DNL Experience Manager] Assets は、拡張子が MP4 のビデオアセットのプレビューを生成します。 アセットの形式が MP4 でない場合は、FFmpeg パックをインストールしてプレビューを生成します。 FFmpeg は、OGG タイプと MP4 タイプのビデオレンディションを作成します。 これらのレンディションは、 [!DNL Experience Manager] Assets ユーザーインターフェイス。
+[!DNL Experience Manager] Assets は、拡張子が MP4 のビデオアセットのプレビューを生成します。 アセットの形式が MP4 でない場合は、FFmpeg パックをインストールしてプレビューを生成します。FFmpeg は、OGG タイプと MP4 タイプのビデオレンディションを作成します。これらのレンディションは、 [!DNL Experience Manager] Assets ユーザーインターフェイス。
 
 1. デジタルアセットフォルダーまたはサブフォルダー内で、デジタルアセットを追加する場所に移動します。
-1. アセットをアップロードするには、ツールバーの「**[!UICONTROL 作成]**」をクリックまたはタップして、「**[!UICONTROL ファイル]**」を選択します。または、アセット領域に直接ドロップします。アップロード操作について詳しくは、[アセットのアップロード](managing-assets-touch-ui.md#uploading-assets)を参照してください。
+1. アセットをアップロードするには、「 」をクリックまたはタップします **[!UICONTROL 作成]** ツールバーで、「 **[!UICONTROL ファイル]**. または、アセット領域に直接ドロップします。 アップロード操作について詳しくは、[アセットのアップロード](managing-assets-touch-ui.md#uploading-assets)を参照してください。
 1. カード表示でビデオをプレビューするには、ビデオアセットの&#x200B;**[!UICONTROL 再生]**&#x200B;ボタンをタップします。
 
    ![chlimage_1-201](assets/chlimage_1-201.png)
@@ -43,8 +43,8 @@ Adobe Experience Manager Assets でビデオアセットを管理および編集
 
 に加えて [!DNL Experience Manager] Assets の設定で、大きなアセットをアップロードするには、次の設定を変更します。
 
-* トークンの有効期間を増やします。詳しくは、 [!UICONTROL AdobeGranite CSRF サーブレット] Web コンソールの `https://[aem_server]:[port]/system/console/configMgr`. 詳しくは、 [CSRF 保護](/help/sites-developing/csrf-protection.md).
-* Dispatcher の設定で `receiveTimeout` を増やします。詳しくは、[Adobe Experience Manager Dispatcher の設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)を参照してください。
+* トークンの有効期間を増やします。詳しくは、web コンソールの [!UICONTROL Adobe Granite CSRF サーブレット]を `https://[aem_server]:[port]/system/console/configMgr` で参照してください。詳しくは、[CSRF 保護](/help/sites-developing/csrf-protection.md)を参照してください。
+* Dispatcher の設定で `receiveTimeout` を増やします。詳しくは、[Adobe Experience Manager Dispatcher の設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#renders-options)を参照してください。
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Adobe Experience Manager Assets でビデオアセットを管理および編集
 1. の **[!UICONTROL Adobe Experience Manager Web コンソールバンドル]** ページの **[!UICONTROL 名前]** テーブルの列で、を探してタップします。 **[!UICONTROL AdobeGranite Workflow External Process Job Handler]**.
 1. 内 **[!UICONTROL AdobeGranite Workflow External Process Job Handler]** ページで、両方に秒を設定します。 **[!UICONTROL デフォルトのタイムアウト]** および **[!UICONTROL 最大タイムアウト]** フィールド `18000` （5 時間）
 1. 「**[!UICONTROL 保存]**」をタップします。
-1. AEM で、**[!UICONTROL ツール／ワークフロー／モデル]**&#x200B;をタップします。
+1. AEMで、 **[!UICONTROL ツール/ワークフロー/モデル]**.
 1. の **[!UICONTROL ワークフローモデル]** ページ、選択 **[!UICONTROL Dynamic Media Encode Video]**&#x200B;次に、 **[!UICONTROL 編集]**.
 1. の **[!UICONTROL ワークフロー]** ページで、をダブルタップします。 **[!UICONTROL Dynamic Mediaビデオサービスのプロセス]** コンポーネント。
 1. **[!UICONTROL ステップのプロパティ]**&#x200B;ダイアログボックスの「**[!UICONTROL 共通]**」タブにある「**[!UICONTROL 詳細設定]**」を展開します。
@@ -84,13 +84,13 @@ Adobe Experience Manager Assets でビデオアセットを管理および編集
 1. 次をタップします。 **[!UICONTROL プレビュー]** アイコンをクリックしてビデオを再生します。
 1. ビデオに注釈を付けるには、 **[!UICONTROL 注釈]** 」ボタンをクリックします。 注釈がビデオ内の特定の時点（フレーム）に追加されます。
 
-   注釈を付ける際に、キャンバスに描画して、その描画をコメントに含めることができます。コメントはAdobe Experience Manager Assets に自動的に保存されます。
+   注釈を付ける際に、キャンバスに描画して、その描画をコメントに含めることができます。 コメントはAdobe Experience Manager Assets に自動的に保存されます。
 
    ![chlimage_1-204](assets/chlimage_1-204.png)
 
    注釈ウィザードを終了するには、 **[!UICONTROL 閉じる]**.
 
-1. ビデオ内の特定のポイントにジャンプするには、テキストフィールドに時間（秒）を指定し、 **[!UICONTROL ジャンプ]**. 例えば、ビデオの最初の 秒をスキップするには、`20`テキストフィールドに 20 と入力します。
+1. ビデオ内の特定のポイントにジャンプするには、テキストフィールドに時間（秒）を指定し、 **[!UICONTROL ジャンプ]**. 例えば、ビデオの最初の 20 秒をスキップするには、 `20` 」と入力します。
 
    ![chlimage_1-205](assets/chlimage_1-205.png)
 

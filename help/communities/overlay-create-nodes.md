@@ -1,7 +1,7 @@
 ---
 title: ノードの作成
 seo-title: Create Nodes
-description: コメントシステムのオーバーレイ
+description: コメントシステムをオーバーレイ
 seo-description: Overlay the comments system
 uuid: 802ae28b-9989-4c2c-b466-ab76a724efd3
 contentOwner: User
@@ -13,17 +13,17 @@ exl-id: fc044a4e-0037-405f-8c26-b388c6a98733
 source-git-commit: bd94d3949f0117aa3e1c9f0e84f7293a5d6b03b4
 workflow-type: tm+mt
 source-wordcount: '280'
-ht-degree: 43%
+ht-degree: 12%
 
 ---
 
 # ノードの作成 {#create-nodes}
 
-最小限の数の必要なファイルを /libs から /apps にコピーし、/apps 内で変更することにより、コメントシステムをカスタムバージョンでオーバーレイします。
+必要最小限の数のファイルを/libs から/apps にコピーし、/apps で変更することで、コメントシステムをカスタムバージョンでオーバーレイします。
 
 >[!CAUTION]
 >
->再インストールやアップグレードをおこなうと、/libs フォルダーは削除されたり、置換されたりすることがありますが、/apps フォルダーの内容が変更されることはないので、/libs フォルダーの内容を編集することはありません。
+>/libs フォルダーの内容は編集されません。再インストールまたはアップグレードを行うと、/apps フォルダーの内容が変更されないまま/libs フォルダーが削除または置き換えられる可能性があります。
 
 使用 [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) オーサーインスタンスで、まず、/libs フォルダー内のオーバーレイされたコンポーネントへのパスと同じパスを/apps フォルダーに作成します。
 
@@ -36,19 +36,19 @@ ht-degree: 43%
 1. 参照先 [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
 1. 作成 `/apps/social` （まだ存在しない場合）
    * 選択 `/apps` ノード
-   * **[!UICONTROL 作成／フォルダー...]** を選択します。
+   * **[!UICONTROL 作成/フォルダー…]**
       * 名前を入力: `social`
 1. 選択 `social` ノード
-   * **[!UICONTROL 作成／フォルダー...]** を選択します。
+   * **[!UICONTROL 作成/フォルダー…]**
       * 名前を入力: `commons`
 1. 選択 `commons` ノード
-   * **[!UICONTROL 作成／フォルダー...]** を選択します。
+   * **[!UICONTROL 作成/フォルダー…]**
       * 名前を入力: `components`
 1. 選択 `components` ノード
-   * **[!UICONTROL 作成／フォルダー...]** を選択します。
+   * **[!UICONTROL 作成/フォルダー…]**.
       * 名前を入力: `hbs`
 1. 選択 `hbs` ノード
-   * **[!UICONTROL 作成／コンポーネントを作成...]** を選択します。
+   * **[!UICONTROL 作成/コンポーネントを作成…]**
       * ラベルを入力： `comments`
       * タイトルを入力： `Comments`
       * 説明を入力: `List of comments without showing avatars`
@@ -57,7 +57,7 @@ ht-degree: 43%
       * クリック **[!UICONTROL 次へ]** 次まで **[!UICONTROL OK]**
 1. 選択 `comments` ノード
 
-   * **[!UICONTROL 作成／コンポーネントを作成...]** を選択します。
+   * **[!UICONTROL 作成/コンポーネントを作成…]**
 
       * ラベルを入力： `comment`
       * タイトルを入力： `Comment`
@@ -65,14 +65,14 @@ ht-degree: 43%
       * スーパータイプ：`social/commons/components/comments/comment`
       * グループを入力： `.hidden`
       * クリック **[!UICONTROL 次へ]** 次まで **[!UICONTROL OK]**
-   * 「**[!UICONTROL すべて保存]**」を選択します。
+   * 選択 **[!UICONTROL すべて保存]**
 1. デフォルトの `comments.jsp`
    * ノードを選択 `/apps/social/commons/components/hbs/comments/comments.jsp`
    * 選択 **[!UICONTROL 削除]**
 1. デフォルトの comment.jsp を削除します。
    *  ノードを選択します`/apps/social/commons/components/hbs/comments/comment/comment.jsp`
    * 選択 **[!UICONTROL 削除]**
-   * 「**[!UICONTROL すべて保存]**」を選択します。
+   * 選択 **[!UICONTROL すべて保存]**
 
 >[!NOTE]
 >
@@ -93,6 +93,6 @@ ht-degree: 43%
    * タイプ：`String`
    * 値：`social/commons/components/hbs/comments/comment`
 1. 緑を選択 `[+] Add`
-   * 「**[!UICONTROL すべて保存]**」を選択します。
+   * 選択 **[!UICONTROL すべて保存]**
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
