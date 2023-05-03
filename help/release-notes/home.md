@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Manager 6.4 のリリースノート
+title: Adobe Experience Manager 6.4 リリースノート
 seo-title: AEM 6.4 Release Notes
 description: AEM リリースノートでは、AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています。
 seo-description: The AEM Release Notes cover important information about the latest release of AEM, including what's new, supported platforms, deprecated and removed features, and known issues.
@@ -11,7 +11,7 @@ ht-degree: 99%
 
 ---
 
-# Adobe Experience Manager 6.4 のリリースノート
+# Adobe Experience Manager 6.4 リリースノート
 
 AEM リリースノートでは、AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています。
 
